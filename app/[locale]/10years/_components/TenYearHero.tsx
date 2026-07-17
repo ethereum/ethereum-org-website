@@ -7,11 +7,8 @@ import Morpher from "@/components/Morpher/lazy"
 import TenYearBackgroundImage from "@/public/images/10-year-anniversary/10-year-background.png"
 import TenYearGraphicImage from "@/public/images/10-year-anniversary/10-year-graphic.png"
 
-const TenYearHero = async ({ locale }: { locale: string }) => {
-  const t = await getTranslations({
-    locale,
-    namespace: "page-10-year-anniversary",
-  })
+const TenYearHero = async () => {
+  const t = await getTranslations("page-10-year-anniversary")
 
   const WORDS = [
     t("page-10-year-censorship-resistance"),
@@ -35,21 +32,22 @@ const TenYearHero = async ({ locale }: { locale: string }) => {
           src={TenYearBackgroundImage}
           alt="" // decorative element
           className="max-h-[350px] object-cover"
-          priority
+          preload
+          sizes="(max-width: 1536px) 100vw, 1536px"
         />
         {/* CLIENT SIDE, lazy loaded */}
         <ParallaxImage
           src={TenYearGraphicImage}
           alt={t("page-10-year-anniversary-meta-title")}
-          className="absolute left-0 top-0 max-h-[350px] object-contain transition-transform duration-200 ease-out"
-          priority
+          className="absolute top-0 left-0 max-h-[350px] object-contain transition-transform duration-200 ease-out"
+          sizes="(max-width: 1536px) 100vw, 1536px"
         />
       </div>
       <p className="text-center text-3xl">
         {t("page-10-year-celebrating")}{" "}
         <span className="relative max-md:block md:w-fit">
           <span
-            className="select-none opacity-0 max-md:hidden"
+            className="opacity-0 select-none max-md:hidden"
             data-label="space-holder"
           >
             {WORDS[0]}

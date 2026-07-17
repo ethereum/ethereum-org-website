@@ -5,7 +5,7 @@ const Loading = () => (
     {Array.from({ length: 3 }).map((_, idx) => (
       <div
         key={idx}
-        className="w-full space-y-8 rounded-2xl border bg-background p-6"
+        className="w-full space-y-8 rounded-base border bg-background p-6"
       >
         <div className="flex items-center gap-2 py-1">
           <Skeleton className="size-8 rounded-full" />

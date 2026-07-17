@@ -1,7 +1,7 @@
 "use client"
 
 import { BaseHTMLAttributes } from "react"
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 import {
   Item,
   List,
@@ -45,7 +45,7 @@ const Menu = ({ ...props }: NavMenuProps) => {
                 <Trigger asChild>
                   <Button
                     className={cn(
-                      "relative whitespace-nowrap px-3 py-2 lg:px-4",
+                      "relative px-3 py-2 whitespace-nowrap lg:px-4",
                       isActive ? "text-primary" : "text-body",
                       "after:absolute after:inset-x-0 after:top-full after:h-4 after:content-['']"
                     )}

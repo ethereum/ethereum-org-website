@@ -4,6 +4,7 @@ description: In this tutorial we dissect a scam token to see some of the tricks 
 author: Ori Pomerantz
 tags: ["scam", "solidity", "erc-20", "javascript", "typescript"]
 skill: intermediate
+breadcrumb: Scam token tricks
 published: 2023-09-15
 lang: en
 ---
@@ -161,7 +162,7 @@ There are two potential red flags in this function.
 
 - The same issue we saw in `_transfer`, which is when `contract_owner` sends tokens they appear to come from `deployer`.
 
-### The fake events function `dropNewTokens` {#the-fake-events-function-dropNewTokens}
+### The fake events function `dropNewTokens` {#the-fake-events-function-dropnewtokens}
 
 Now we come to something that looks like an actual scam. I edited the function a bit for readability, but it's functionally equivalent.
 

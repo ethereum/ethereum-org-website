@@ -1,3 +1,5 @@
+import { fetchRetry } from "./fetchRetry"
+
 const COINGECKO_API_BASE_URL =
   "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category="
 const COINGECKO_API_URL_PARAMS = `&order=market_cap_desc&per_page=250&page=1&sparkline=false&x_cg_demo_api_key=${process.env.COINGECKO_API_KEY}`
@@ -23,7 +25,7 @@ export async function fetchStablecoinsData(): Promise<CoinGeckoCoinMarketRespons
 
   console.log("Starting Ethereum stablecoins data fetch from CoinGecko")
 
-  const response = await fetch(url)
+  const response = await fetchRetry(url)
 
   if (!response.ok) {
     const status = response.status

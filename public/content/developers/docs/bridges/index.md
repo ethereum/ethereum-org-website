@@ -105,7 +105,7 @@ If a dapp goes down the route of integrating a bridge or an aggregator, there ar
 
 To deploy a dapp on multiple chains, developers can use development platforms like [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Moralis](https://moralis.io/), etc. Typically, these platforms come with composable plugins that can enable dapps to go cross-chain. For instance, developers can use a deterministic deployment proxy offered by the [hardhat-deploy plugin](https://github.com/wighawag/hardhat-deploy).
 
-#### Examples:
+#### Examples: {#examples}
 
 - [How to build cross-chain dapps](https://moralis.io/how-to-build-cross-chain-dapps/)
 - [Building a Cross-Chain NFT Marketplace](https://youtu.be/WZWCzsB1xUE)
@@ -115,7 +115,7 @@ To deploy a dapp on multiple chains, developers can use development platforms li
 
 To monitor contract activity across chains, developers can use subgraphs and developer platforms like Tenderly to observe smart contracts in real-time. Such platforms also have tools that offer greater data monitoring functionality for cross-chain activities, such as checking for [events emitted by contracts](https://docs.soliditylang.org/en/v0.8.14/contracts.html?highlight=events#events), etc.
 
-#### Tools
+#### Tools {#tools}
 
 - [The Graph](https://thegraph.com/en/)
 - [Tenderly](https://tenderly.co/)

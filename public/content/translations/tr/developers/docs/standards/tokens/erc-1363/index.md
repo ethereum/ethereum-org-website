@@ -1,6 +1,6 @@
 ---
-title: "ERC-1363 Ödenebilir Jeton Standardı"
-description: "ERC-1363, transferlerden sonra alıcı bir sözleşmede veya onaylardan sonra harcayan bir sözleşmede, tümü tek bir işlemde olmak üzere özel mantık yürütmeyi destekleyen ERC-20 jetonları için bir genişletme arayüzüdür."
+title: "ERC-1363 Ödenebilir Token Standardı"
+description: "ERC-1363, transferlerden sonra bir alıcı sözleşmesinde veya onaylardan sonra bir harcayıcı sözleşmesinde özel mantık yürütmeyi tek bir işlem içinde destekleyen ERC-20 token'ları için bir uzantı arayüzüdür."
 lang: tr
 ---
 
@@ -8,64 +8,64 @@ lang: tr
 
 ### ERC-1363 nedir? {#what-is-erc1363}
 
-ERC-1363, transferlerden sonra alıcı bir sözleşmede veya onaylardan sonra harcayan bir sözleşmede, tümü tek bir işlemde olmak üzere özel mantık yürütmeyi destekleyen ERC-20 jetonları için bir genişletme arayüzüdür.
+ERC-1363, transferlerden sonra bir alıcı sözleşmesinde veya onaylardan sonra bir harcayıcı sözleşmesinde özel mantık yürütmeyi tek bir işlem içinde destekleyen ERC-20 token'ları için bir uzantı arayüzüdür.
 
-### ERC-20'den farkları {#erc20-differences}
+### ERC-20'den Farkları {#erc20-differences}
 
-`transfer`, `transferFrom` ve `approve` gibi standart ERC-20 işlemleri, ayrı bir işlem olmaksızın alıcı veya harcayan sözleşmesinde kod yürütülmesine izin vermez.
-Bu durum, kullanıcı arayüzü geliştirmede karmaşıklığa ve benimsenmesinde zorluğa neden olur çünkü kullanıcıların ilk işlemin yürütülmesini beklemesi ve ardından ikinci işlemi göndermesi gerekir.
-Ayrıca iki kez GAZ ödemeleri gerekir.
+Standart ERC-20 işlemleri olan `transfer`, `transferFrom` ve `approve`, ayrı bir işlem olmadan alıcı veya harcayıcı sözleşmesinde kod yürütülmesine izin vermez.
+Bu durum, kullanıcıların ilk işlemin yürütülmesini beklemesi ve ardından ikinci işlemi göndermesi gerektiğinden, kullanıcı arayüzü (UI) geliştirmede karmaşıklığa ve benimsemede zorluğa neden olur.
+Ayrıca iki kez Gaz ödemeleri gerekir.
 
-ERC-1363, misli jetonların eylemleri daha kolay gerçekleştirmesini ve herhangi bir zincir dışı dinleyici kullanmadan çalışmasını sağlar.
-Tek bir işlemde, bir transferden veya onaydan sonra bir alıcı veya harcayan sözleşmesinde geri arama yapılmasına olanak tanır.
+ERC-1363, misli (fungible) token'ların eylemleri daha kolay gerçekleştirmesini ve herhangi bir zincir dışı dinleyici kullanmadan çalışmasını sağlar.
+Bir transfer veya onaydan sonra, tek bir işlemde alıcı veya harcayıcı sözleşmesinde bir geri çağırma (callback) yapılmasına olanak tanır.
 
 ## Ön Koşullar {#prerequisites}
 
-Bu sayfayı daha iyi anlamak için önce şunları okumanızı öneririz:
+Bu sayfayı daha iyi anlamak için öncelikle şunları okumanızı öneririz:
 
-- [Jeton standartları](/developers/docs/standards/tokens/)
+- [Token standartları](/developers/docs/standards/tokens/)
 - [ERC-20](/developers/docs/standards/tokens/erc-20/)
 
 ## Gövde {#body}
 
-ERC-1363, ERC-20 jetonlarının `transfer`, `transferFrom` veya `approve` işlemlerinden sonra akıllı sözleşmelerle etkileşime girmesi için standart bir API sunar.
+ERC-1363, ERC-20 token'larının `transfer`, `transferFrom` veya `approve` sonrasında akıllı sözleşmelerle etkileşime girmesi için standart bir API sunar.
 
-Bu standart, jetonları transfer etmek için temel işlevsellik sağlar, ayrıca jetonların zincir üzerindeki başka bir üçüncü tarafça harcanabilmesi için onaylanmasına ve ardından alıcı veya harcayan sözleşmesinde bir geri arama yapılmasına olanak tanır.
+Bu standart, token'ları transfer etmek için temel işlevsellik sağlamanın yanı sıra, token'ların zincir içi başka bir üçüncü tarafça harcanabilmesi için onaylanmasına ve ardından alıcı veya harcayıcı sözleşmesinde bir geri çağırma yapılmasına olanak tanır.
 
-ERC-20 geri aramalarını kabul edebilen akıllı sözleşmeler için önerilen birçok kullanım alanı vardır.
+ERC-20 geri çağırmalarını kabul edebilen akıllı sözleşmelerin önerilen birçok kullanım alanı vardır.
 
-Örneğin:
+Örnekler şunlar olabilir:
 
-- **Kitle satışları**: gönderilen jetonlar anında ödül dağıtımını tetikler.
+- **Kitle Satışları (Crowdsales)**: gönderilen token'lar anında ödül tahsisini tetikler.
 - **Hizmetler**: ödeme, hizmet erişimini tek adımda etkinleştirir.
-- **Faturalar**: jetonlar faturaları otomatik olarak öder.
-- **Abonelikler**: yıllık ücretin onaylanması, ilk ayın ödemesi dahilinde aboneliği etkinleştirir.
+- **Faturalar**: token'lar faturaları otomatik olarak öder.
+- **Abonelikler**: yıllık ücretin onaylanması, ilk ayın ödemesiyle birlikte aboneliği etkinleştirir.
 
-Bu nedenlerle başlangıçta **"Ödenebilir Jeton"** olarak adlandırılmıştır.
+Bu nedenlerden dolayı başlangıçta **"Ödenebilir Token (Payable Token)"** olarak adlandırılmıştır.
 
-Geri arama davranışı, kullanım alanını daha da genişleterek şunlar gibi sorunsuz etkileşimleri mümkün kılar:
+Geri çağırma davranışı, kullanım alanını daha da genişleterek aşağıdaki gibi sorunsuz etkileşimlere olanak tanır:
 
-- **Hisseleme**: transfer edilen jetonlar bir hisseleme sözleşmesinde otomatik kilitlemeyi tetikler.
-- **Oylama**: alınan jetonlar bir yönetişim sisteminde oyları kaydeder.
-- **Takas**: jeton onayları, takas mantığını tek adımda etkinleştirir.
+- **Staking**: transfer edilen token'lar, bir staking sözleşmesinde otomatik kilitlemeyi tetikler.
+- **Oylama**: alınan token'lar, bir yönetişim sisteminde oyları kaydeder.
+- **Takas**: token onayları, takas mantığını tek bir adımda etkinleştirir.
 
-ERC-1363 jetonları, alınan bir transfer veya onaydan sonra bir geri aramanın yürütülmesini gerektiren tüm durumlarda belirli yardımcı programlar için kullanılabilir.
-ERC-1363, alıcının jetonları işleme yeteneğini doğrulayarak akıllı sözleşmelerde jeton kaybını veya jeton kilitlenmesini önlemek için de kullanışlıdır.
+ERC-1363 token'ları, bir transfer veya onay alındıktan sonra bir geri çağırmanın yürütülmesini gerektiren tüm durumlarda belirli faydalar için kullanılabilir.
+ERC-1363, alıcının token'ları işleme yeteneğini doğrulayarak akıllı sözleşmelerde token kaybını veya token kilitlenmesini önlemek için de yararlıdır.
 
-Diğer ERC-20 genişletme önerilerinin aksine ERC-1363, ERC-20 `transfer` ve `transferFrom` yöntemlerini geçersiz kılmaz ve ERC-20 ile geriye dönük uyumluluğu koruyarak uygulanacak arayüz kimliklerini tanımlar.
+Diğer ERC-20 uzantı tekliflerinin aksine ERC-1363, ERC-20'nin `transfer` ve `transferFrom` yöntemlerini geçersiz kılmaz ve ERC-20 ile geriye dönük uyumluluğu koruyarak uygulanacak arayüz kimliklerini (ID) tanımlar.
 
-[EIP-1363'den](https://eips.ethereum.org/EIPS/eip-1363):
+[EIP-1363](https://eips.ethereum.org/EIPS/eip-1363)'ten:
 
 ### Yöntemler {#methods}
 
-ERC-1363 standardını uygulayan akıllı sözleşmeler, `ERC1363` arayüzündeki tüm fonksiyonların yanı sıra `ERC20` ve `ERC165` arayüzlerini de **MUTLAKA** uygulamalıdır.
+ERC-1363 standardını uygulayan akıllı sözleşmeler, `ERC1363` arayüzündeki tüm işlevlerin yanı sıra `ERC20` ve `ERC165` arayüzlerini de uygulamak **ZORUNDADIR**.
 
 ```solidity
 pragma solidity ^0.8.0;
 
 /**
  * @title ERC1363
- * @dev Tek bir işlemde, `transfer` veya `transferFrom` sonrası alıcı bir sözleşmede kod yürütmeyi veya `approve` sonrası harcayan bir sözleşmede kod yürütmeyi destekleyen ERC-20 jetonları için bir genişletme arayüzü.
+ * @dev `transfer` veya `transferFrom` sonrasında bir alıcı Sözleşme üzerinde veya `approve` sonrasında bir harcayıcı Sözleşme üzerinde tek bir işlem içinde kod yürütmeyi destekleyen ERC-20 Token'ları için bir uzantı arayüzü.
  */
 interface ERC1363 is ERC20, ERC165 {
   /*
@@ -80,61 +80,61 @@ interface ERC1363 is ERC20, ERC165 {
    */
 
   /**
-   * @dev Çağıranın hesabından `to` adresine `value` miktarında jeton taşır
-   * ve ardından `to` üzerinde `ERC1363Receiver::onTransferReceived` fonksiyonunu çağırır.
-   * @param to Jetonların transfer edildiği adres.
-   * @param value Transfer edilecek jeton miktarı.
-   * @return Bir hata oluşmadığı sürece işlemin başarılı olduğunu gösteren bir boole değeri.
+   * @dev Çağırıcının hesabından `to` adresine `value` miktarında Token taşır
+   * ve ardından `to` üzerinde `ERC1363Receiver::onTransferReceived` çağırır.
+   * @param to Token'ların transfer edildiği adres.
+   * @param value transfer edilecek Token miktarı.
+   * @return Hata fırlatılmadığı sürece işlemin başarılı olduğunu belirten bir boolean değer.
    */
   function transferAndCall(address to, uint256 value) external returns (bool);
 
   /**
-   * @dev Çağıranın hesabından `to` adresine `value` miktarında jeton taşır
-   * ve ardından `to` üzerinde `ERC1363Receiver::onTransferReceived` fonksiyonunu çağırır.
-   * @param to Jetonların transfer edildiği adres.
-   * @param value Transfer edilecek jeton miktarı.
-   * @param data Belirtilen bir formatı olmayan, `to` adresine yapılan çağrıda gönderilen ek veriler.
-   * @return Bir hata oluşmadığı sürece işlemin başarılı olduğunu gösteren bir boole değeri.
+   * @dev Çağırıcının hesabından `to` adresine `value` miktarında Token taşır
+   * ve ardından `to` üzerinde `ERC1363Receiver::onTransferReceived` çağırır.
+   * @param to Token'ların transfer edildiği adres.
+   * @param value transfer edilecek Token miktarı.
+   * @param data Belirli bir formatı olmayan, `to` çağrısında gönderilen ek veri.
+   * @return Hata fırlatılmadığı sürece işlemin başarılı olduğunu belirten bir boolean değer.
    */
   function transferAndCall(address to, uint256 value, bytes calldata data) external returns (bool);
 
   /**
-   * @dev Ödenek mekanizmasını kullanarak `from` adresinden `to` adresine `value` miktarında jeton taşır
-   * ve ardından `to` üzerinde `ERC1363Receiver::onTransferReceived` fonksiyonunu çağırır.
-   * @param from Jetonların gönderileceği adres.
-   * @param to Jetonların transfer edildiği adres.
-   * @param value Transfer edilecek jeton miktarı.
-   * @return Bir hata oluşmadığı sürece işlemin başarılı olduğunu gösteren bir boole değeri.
+   * @dev İzin (allowance) mekanizmasını kullanarak `from` adresinden `to` adresine `value` miktarında Token taşır
+   * ve ardından `to` üzerinde `ERC1363Receiver::onTransferReceived` çağırır.
+   * @param from Token'ların gönderileceği adres.
+   * @param to Token'ların transfer edildiği adres.
+   * @param value transfer edilecek Token miktarı.
+   * @return Hata fırlatılmadığı sürece işlemin başarılı olduğunu belirten bir boolean değer.
    */
   function transferFromAndCall(address from, address to, uint256 value) external returns (bool);
 
   /**
-   * @dev Ödenek mekanizmasını kullanarak `from` adresinden `to` adresine `value` miktarında jeton taşır
-   * ve ardından `to` üzerinde `ERC1363Receiver::onTransferReceived` fonksiyonunu çağırır.
-   * @param from Jetonların gönderileceği adres.
-   * @param to Jetonların transfer edildiği adres.
-   * @param value Transfer edilecek jeton miktarı.
-   * @param data Belirtilen bir formatı olmayan, `to` adresine yapılan çağrıda gönderilen ek veriler.
-   * @return Bir hata oluşmadığı sürece işlemin başarılı olduğunu gösteren bir boole değeri.
+   * @dev İzin (allowance) mekanizmasını kullanarak `from` adresinden `to` adresine `value` miktarında Token taşır
+   * ve ardından `to` üzerinde `ERC1363Receiver::onTransferReceived` çağırır.
+   * @param from Token'ların gönderileceği adres.
+   * @param to Token'ların transfer edildiği adres.
+   * @param value transfer edilecek Token miktarı.
+   * @param data Belirli bir formatı olmayan, `to` çağrısında gönderilen ek veri.
+   * @return Hata fırlatılmadığı sürece işlemin başarılı olduğunu belirten bir boolean değer.
    */
   function transferFromAndCall(address from, address to, uint256 value, bytes calldata data) external returns (bool);
 
   /**
-   * @dev Çağıranın jetonları üzerinde `spender` için `value` miktarında jetonu ödenek olarak ayarlar
-   * ve ardından `spender` üzerinde `ERC1363Spender::onApprovalReceived` fonksiyonunu çağırır.
+   * @dev Çağırıcının Token'ları üzerinde `spender` için izin (allowance) olarak `value` miktarında Token ayarlar
+   * ve ardından `spender` üzerinde `ERC1363Spender::onApprovalReceived` çağırır.
    * @param spender Fonları harcayacak adres.
-   * @param value Harcanacak jeton miktarı.
-   * @return Bir hata oluşmadığı sürece işlemin başarılı olduğunu gösteren bir boole değeri.
+   * @param value Harcanacak Token miktarı.
+   * @return Hata fırlatılmadığı sürece işlemin başarılı olduğunu belirten bir boolean değer.
    */
   function approveAndCall(address spender, uint256 value) external returns (bool);
 
   /**
-   * @dev Çağıranın jetonları üzerinde `spender` için `value` miktarında jetonu ödenek olarak ayarlar
-   * ve ardından `spender` üzerinde `ERC1363Spender::onApprovalReceived` fonksiyonunu çağırır.
+   * @dev Çağırıcının Token'ları üzerinde `spender` için izin (allowance) olarak `value` miktarında Token ayarlar
+   * ve ardından `spender` üzerinde `ERC1363Spender::onApprovalReceived` çağırır.
    * @param spender Fonları harcayacak adres.
-   * @param value Harcanacak jeton miktarı.
-   * @param data Belirtilen bir formatı olmayan, `spender` adresine yapılan çağrıda gönderilen ek veriler.
-   * @return Bir hata oluşmadığı sürece işlemin başarılı olduğunu gösteren bir boole değeri.
+   * @param value Harcanacak Token miktarı.
+   * @param data Belirli bir formatı olmayan, `spender` çağrısında gönderilen ek veri.
+   * @return Hata fırlatılmadığı sürece işlemin başarılı olduğunu belirten bir boolean değer.
    */
   function approveAndCall(address spender, uint256 value, bytes calldata data) external returns (bool);
 }
@@ -155,58 +155,56 @@ interface ERC165 {
 }
 ```
 
-`transferAndCall` veya `transferFromAndCall` aracılığıyla ERC-1363 jetonlarını kabul etmek isteyen bir akıllı sözleşme, `ERC1363Receiver` arayüzünü **MUTLAKA** uygulamalıdır:
+`transferAndCall` veya `transferFromAndCall` aracılığıyla ERC-1363 token'larını kabul etmek isteyen bir akıllı sözleşme, `ERC1363Receiver` arayüzünü uygulamak **ZORUNDADIR**:
 
 ```solidity
 /**
- * @başlık ERC1363Receiver
- * @dev ERC-1363 jeton sözleşmelerinden `transferAndCall` veya `transferFromAndCall` desteklemek isteyen herhangi bir sözleşme için arayüz.
+ * @title ERC1363Receiver
+ * @dev ERC-1363 Token Sözleşmelerinden `transferAndCall` veya `transferFromAndCall` desteklemek isteyen herhangi bir Sözleşme için arayüz.
  */
 interface ERC1363Receiver {
   /**
-   * @dev ERC-1363 jetonları bu sözleşmeye `ERC1363::transferAndCall` veya `ERC1363::transferFromAndCall` aracılığıyla
-   * `operator` tarafından `from` adresinden transfer edildiğinde bu fonksiyon çağrılır.
+   * @dev ERC-1363 Token'ları bu Sözleşmeye `operator` tarafından `from` adresinden `ERC1363::transferAndCall` veya `ERC1363::transferFromAndCall` aracılığıyla transfer edildiğinde bu fonksiyon çağrılır.
    *
-   * NOT: Transferi kabul etmek için bu,
+   * NOT: transfer işlemini kabul etmek için bu fonksiyonun
    * `bytes4(keccak256("onTransferReceived(address,address,uint256,bytes)"))`
-   * (yani 0x88a7ca5c veya kendi fonksiyon seçicisi) döndürmelidir.
+   * (yani 0x88a7ca5c veya kendi fonksiyon seçicisi) döndürmesi gerekir.
    *
    * @param operator `transferAndCall` veya `transferFromAndCall` fonksiyonunu çağıran adres.
-   * @param from Jetonların transfer edildiği adres.
-   * @param value Transfer edilen jeton miktarı.
-   * @param data Belirtilen bir formatı olmayan ek veriler.
-   * @return Bir hata oluşmadığı sürece transfere izin verilirse `bytes4(keccak256("onTransferReceived(address,address,uint256,bytes)"))` döndürür.
+   * @param from Token'ların transfer edildiği kaynak adres.
+   * @param value transfer edilen Token miktarı.
+   * @param data Belirli bir formatı olmayan ek veri.
+   * @return Hata fırlatılmadığı sürece transfer işlemine izin veriliyorsa `bytes4(keccak256("onTransferReceived(address,address,uint256,bytes)"))`.
    */
   function onTransferReceived(address operator, address from, uint256 value, bytes calldata data) external returns (bytes4);
 }
 ```
 
-`approveAndCall` aracılığıyla ERC-1363 jetonlarını kabul etmek isteyen bir akıllı sözleşme, `ERC1363Spender` arayüzünü **MUTLAKA** uygulamalıdır:
+`approveAndCall` aracılığıyla ERC-1363 token'larını kabul etmek isteyen bir akıllı sözleşme, `ERC1363Spender` arayüzünü uygulamak **ZORUNDADIR**:
 
 ```solidity
 /**
- * @başlık ERC1363Spender
- * @dev ERC-1363 jeton sözleşmelerinden `approveAndCall` desteklemek isteyen herhangi bir sözleşme için arayüz.
+ * @title ERC1363Spender
+ * @dev ERC-1363 Token Sözleşmelerinden `approveAndCall` desteklemek isteyen herhangi bir Sözleşme için arayüz.
  */
 interface ERC1363Spender {
   /**
-   * @dev Bir ERC-1363 jeton `sahibi` bu sözleşmeyi `ERC1363::approveAndCall` aracılığıyla
-   * jetonlarını harcamak için onayladığında bu fonksiyon çağrılır.
+   * @dev Bir ERC-1363 Token `owner`ı, Token'larını harcaması için bu Sözleşmeye `ERC1363::approveAndCall` aracılığıyla onay verdiğinde bu fonksiyon çağrılır.
    *
-   * NOT: Onayı kabul etmek için bu,
+   * NOT: Onayı kabul etmek için bu fonksiyonun
    * `bytes4(keccak256("onApprovalReceived(address,uint256,bytes)"))`
-   * (yani 0x7b04a2d0 veya kendi fonksiyon seçicisi) döndürmelidir.
+   * (yani 0x7b04a2d0 veya kendi fonksiyon seçicisi) döndürmesi gerekir.
    *
-   * @param owner `approveAndCall` fonksiyonunu çağıran ve daha önce jetonlara sahip olan adres.
-   * @param value Harcanacak jeton miktarı.
-   * @param data Belirtilen bir formatı olmayan ek veriler.
-   * @return Bir hata oluşmadığı sürece onaya izin verilirse `bytes4(keccak256("onApprovalReceived(address,uint256,bytes)"))` döndürür.
+   * @param owner `approveAndCall` fonksiyonunu çağıran ve daha önce Token'lara sahip olan adres.
+   * @param value Harcanacak Token miktarı.
+   * @param data Belirli bir formatı olmayan ek veri.
+   * @return Hata fırlatılmadığı sürece onaya izin veriliyorsa `bytes4(keccak256("onApprovalReceived(address,uint256,bytes)"))`.
    */
   function onApprovalReceived(address owner, uint256 value, bytes calldata data) external returns (bytes4);
 }
 ```
 
-## Daha fazla kaynak {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
-- [ERC-1363: Ödenebilir Jeton Standardı](https://eips.ethereum.org/EIPS/eip-1363)
+- [ERC-1363: Ödenebilir Token Standardı](https://eips.ethereum.org/EIPS/eip-1363)
 - [ERC-1363: GitHub Deposu](https://github.com/vittominacori/erc1363-payable-token)

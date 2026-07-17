@@ -1,8 +1,8 @@
 "use client"
-
 import { useEffect, useState } from "react"
-import { motion } from "framer-motion"
 import { ChevronRight } from "lucide-react"
+import { motion } from "motion/react"
+import { useTranslations } from "next-intl"
 
 import { ChildOnlyProp } from "@/lib/types"
 import { DeveloperDocsLink } from "@/lib/interfaces"
@@ -12,7 +12,6 @@ import docLinks from "../data/developer-docs-links.yaml"
 import { HStack } from "./ui/flex"
 import { BaseLink, LinkProps } from "./ui/Link"
 
-import { useTranslation } from "@/hooks/useTranslation"
 export const dropdownIconContainerVariant = {
   open: {
     rotate: 90,
@@ -36,7 +35,7 @@ const innerLinksVariants = {
 
 const LinkContainer = ({ children }: ChildOnlyProp) => {
   return (
-    <HStack className="w-full justify-between py-2 pe-4 ps-8 hover:bg-background-highlight">
+    <HStack className="w-full justify-between py-2 ps-8 pe-4 hover:bg-background-highlight">
       {children}
     </HStack>
   )
@@ -60,7 +59,7 @@ export type NavLinkProps = {
 }
 
 const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
-  const { t } = useTranslation("page-developers-docs")
+  const t = useTranslations("page-developers-docs")
   const isLinkInPath =
     isTopLevel || path.includes(item.href) || path.includes(item.path)
   const [isOpen, setIsOpen] = useState<boolean>(isLinkInPath)
@@ -101,7 +100,7 @@ const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
           </motion.div>
         </LinkContainer>
         <motion.div
-          className="ms-4 text-sm font-normal leading-relaxed"
+          className="ms-4 text-sm leading-relaxed font-normal"
           key={item.id}
           animate={isOpen ? "open" : "closed"}
           variants={innerLinksVariants}
@@ -133,12 +132,12 @@ export interface SideNavProps {
 // of the given parent. Currently all `path` items default to open
 // and they only collapse when clicked on.
 const SideNav = ({ path }: SideNavProps) => {
-  const { t } = useTranslation("page-developers-docs")
+  const tCommon = useTranslations("common")
 
   return (
     <nav
-      className="sticky top-[4.75rem] hidden h-[calc(100vh-80px)] w-[calc((100%-1448px)/2+256px)] min-w-[256px] overflow-y-auto border-e bg-background pb-16 pt-8 shadow-[1px_0px_0px_rgba(0,0,0,0.1)] transition-transform duration-200 lg:block"
-      aria-label={t("common:nav-developers-docs")}
+      className="sticky top-19 h-[calc(100vh-80px)] w-[calc((100%-1448px)/2+256px)] min-w-64 overflow-y-auto border-e-2 bg-background pt-8 pb-16 transition-transform duration-200 max-lg:hidden"
+      aria-label={tCommon("nav-developers-docs")}
     >
       {docLinks.map((item, idx) => (
         <NavLink item={item} path={path} key={idx} isTopLevel />

@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/ethereum-in-30-minutes-vitalik-buterin/index.md",
+  "generatedAt": "2026-04-28T23:26:05.456Z",
+  "rootHash": "46631e7d4011",
+  "tree": {
+    "contentHash": "66926c1d4193",
+    "anchorHash": "90c86cb829a2",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "38499e912911",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "c010ade63b49",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "74c130b9bc91"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "8a4a4993c70b"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d166b49bc9f5"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "94e6f02a5aca"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bfac314fefdc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b1cc2e711844"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "178b326acc81"
+      },
+      "prose:1": {
+        "contentHash": "08bb3cadf821",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "03c888ce08c6"
+      },
+      "prose:2": {
+        "contentHash": "e04b1ae0fddc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "introduction-002": {
+        "contentHash": "2f762d316a1d",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "dc68115f55ec",
+        "children": {
+          "_label": {
+            "contentHash": "dc68115f55ec",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c0c066c2a9c5",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "decentralization-and-diversity-511": {
+        "contentHash": "0d61e183d3ba",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "a476f1967cfb",
+        "children": {
+          "_label": {
+            "contentHash": "a476f1967cfb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "d661001f7582",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "multiple-clients-and-robustness-1040": {
+        "contentHash": "600fce07f95b",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "99c9a5778033",
+        "children": {
+          "_label": {
+            "contentHash": "99c9a5778033",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ccf10bce61c2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "node-verification-and-scale-1506": {
+        "contentHash": "7a67586d9650",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "92dde2c76f9e",
+        "children": {
+          "_label": {
+            "contentHash": "92dde2c76f9e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "5fc31fcd24fa",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "l2-speeds-and-roadmaps-2033": {
+        "contentHash": "6d8d84adc894",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "21faa6856da7",
+        "children": {
+          "_label": {
+            "contentHash": "21faa6856da7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "e9c143acea6f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "casper-and-rollup-scaling-2527": {
+        "contentHash": "dcfe926e705a",
+        "anchorHash": "aaf3559f601a",
+        "labelHash": "1424f3a1c578",
+        "children": {
+          "_label": {
+            "contentHash": "1424f3a1c578",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "475c3f574a94",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "088fab64f514"
+          },
+          "prose:2": {
+            "contentHash": "3004275bd332",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "inline-code:0",
+          "prose:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "introduction-002",
+      "decentralization-and-diversity-511",
+      "multiple-clients-and-robustness-1040",
+      "node-verification-and-scale-1506",
+      "l2-speeds-and-roadmaps-2033",
+      "casper-and-rollup-scaling-2527"
+    ]
+  },
+  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+}

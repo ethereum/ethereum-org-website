@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import { cva, VariantProps } from "class-variance-authority"
+import { useTranslations } from "next-intl"
 import {
   EffectCards,
   Grid,
@@ -21,14 +22,6 @@ import { ChevronNext, ChevronPrev } from "@/components/Chevron"
 import { cn } from "@/lib/utils/cn"
 
 import { Button, type ButtonProps } from "./buttons/Button"
-
-import "swiper/css"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
-import "swiper/css/effect-cards"
-import "swiper/css/grid"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 const SwiperContainer = React.forwardRef<
   HTMLDivElement,
@@ -85,7 +78,7 @@ const SwiperPaginationDots = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "ui-swiper-pagination flex w-fit flex-row",
+      "ui-swiper-pagination flex w-fit flex-row gap-2",
       "[&_.swiper-pagination-bullet]:bg-primary-high-contrast",
       "[&_.swiper-pagination-bullet-active]:bg-primary-hover",
       className
@@ -112,12 +105,21 @@ SwiperNavContainer.displayName = "SwiperNavContainer"
 
 const SwiperNavigation = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->((props, ref) => (
+  React.HTMLAttributes<HTMLDivElement> & {
+    prevLabel?: string
+    nextLabel?: string
+  }
+>(({ prevLabel, nextLabel, ...props }, ref) => (
   <SwiperNavContainer ref={ref} {...props}>
-    <SwiperPrevButton data-testid="swiper-prev-button" />
+    <SwiperPrevButton
+      data-testid="swiper-prev-button"
+      aria-label={prevLabel ?? "Previous slide"}
+    />
     <SwiperPaginationDots data-testid="swiper-pagination-dots" />
-    <SwiperNextButton data-testid="swiper-next-button" />
+    <SwiperNextButton
+      data-testid="swiper-next-button"
+      aria-label={nextLabel ?? "Next slide"}
+    />
   </SwiperNavContainer>
 ))
 SwiperNavigation.displayName = "SwiperNavigation"
@@ -137,7 +139,7 @@ const variants = cva("!flex gap-y-6", {
 export type SwiperProps = SwiperReactProps & VariantProps<typeof variants>
 const Swiper = React.forwardRef<SwiperRef, SwiperProps>(
   ({ className, children, navigationPlacement, ...props }, ref) => {
-    const { t } = useTranslation("common")
+    const t = useTranslations("component-swiper")
     return (
       <SwiperReact
         ref={ref}
@@ -146,8 +148,8 @@ const Swiper = React.forwardRef<SwiperRef, SwiperProps>(
           prevEl: ".ui-swiper-button-prev",
         }}
         a11y={{
-          prevSlideMessage: t("previous"),
-          nextSlideMessage: t("next"),
+          prevSlideMessage: t("swiper-previous-slide"),
+          nextSlideMessage: t("swiper-next-slide"),
         }}
         pagination={{
           clickable: true,

@@ -1,12 +1,24 @@
-import { AppData, FileContributor } from "@/lib/types"
+import { AppCategory, AppData, FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  ethereumCommunityOrganization,
-  ethereumFoundationOrganization,
-} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd, slugify } from "@/lib/utils/url"
+
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
+
+// Map internal app categories to schema.org enumerated applicationCategory values
+// https://schema.org/applicationCategory
+const APPLICATION_CATEGORY_MAP: Record<AppCategory, string> = {
+  DeFi: "FinanceApplication",
+  Collectibles: "EntertainmentApplication",
+  Social: "SocialNetworkingApplication",
+  Gaming: "GameApplication",
+  Bridge: "UtilitiesApplication",
+  Productivity: "BusinessApplication",
+  Privacy: "SecurityApplication",
+  DAO: "BusinessApplication",
+}
 
 export default async function AppsAppJsonLD({
   locale,
@@ -28,21 +40,17 @@ export default async function AppsAppJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
         "@id": url,
         name: `Ethereum Apps - ${app.name}`,
         description: app.description,
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityOrganization],
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -66,20 +74,27 @@ export default async function AppsAppJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#applications` },
       },
       {
-        "@type": "SoftwareApplication",
+        "@type": "WebApplication",
         "@id": `${url}#applications`,
         name: app.name,
         description: app.description,
         url: app.url,
         image: app.image,
-        applicationCategory: app.category,
+        applicationCategory:
+          APPLICATION_CATEGORY_MAP[app.category] ?? "UtilitiesApplication",
         applicationSubCategory: app.subCategory.join(", "),
         operatingSystem: "Web Browser",
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+          availability: "https://schema.org/OnlineOnly",
+        },
         author: [
           {
             "@type": "Organization",

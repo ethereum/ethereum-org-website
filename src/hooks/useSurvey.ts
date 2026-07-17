@@ -7,7 +7,7 @@ import type { Lang } from "@/lib/types"
 
 import { SITE_URL } from "@/lib/constants"
 
-import { usePathname } from "@/i18n/routing"
+import { usePathname } from "@/i18n/navigation"
 
 export const useSurvey = (feedbackSubmitted: boolean) => {
   const locale = useLocale()

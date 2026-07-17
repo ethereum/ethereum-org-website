@@ -13,10 +13,7 @@ import {
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-export type CallToActionProps = Omit<
-  ButtonProps,
-  "children" | "content" | "variant" | "isSecondary"
-> & {
+export type CallToActionProps = Omit<ButtonProps, "children" | "content"> & {
   content: ReactNode
   matomo?: MatomoEventOptions
   index: number

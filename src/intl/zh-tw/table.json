@@ -1,7 +1,10 @@
 {
-  "table-active": "啟用中",
+  "table-active": "活躍",
+  "table-browser-engines": "瀏覽器引擎",
+  "table-desktop-platforms": "桌面平台",
   "table-filters": "篩選條件",
+  "table-mobile-platforms": "行動平台",
+  "table-reset-filters": "重設",
   "table-showing": "顯示",
-  "table-reset-filters": "重置",
-  "table-what-are-you-looking-for": "你要尋找什麼？"
+  "table-what-are-you-looking-for": "您在尋找什麼？"
 }

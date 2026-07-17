@@ -1,9 +1,10 @@
 ---
-title: "Bir Solidity akıllı sözleşmesinden ERC-20 jetonlarının transferleri ve onaylanması"
-description: "Solidity kullanarak ERC-20 jeton transferlerini ve onaylarını yöneten bir DEX akıllı sözleşmesi oluşturun."
+title: "Bir Solidity akıllı sözleşmesinden ERC-20 Token transferleri ve onayları"
+description: "Solidity kullanarak ERC-20 Token transferlerini ve onaylarını işleyen bir DEX akıllı sözleşmesi oluşturun."
 author: "jdourlens"
-tags: [ "akıllı kontratlar", "token'lar", "solidity", "erc-20" ]
+tags: ["akıllı sözleşmeler", "token'lar", "Solidity", "erc-20"]
 skill: intermediate
+breadcrumb: ERC-20 transferleri
 lang: tr
 published: 2020-04-07
 source: EthereumDev
@@ -11,16 +12,16 @@ sourceUrl: https://ethereumdev.io/transfers-and-approval-or-erc20-tokens-from-a-
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Önceki öğreticide, Ethereum blokzincirindeki [bir ERC-20 jetonunun Solidity'deki anatomisi](/developers/tutorials/understand-the-erc-20-token-smart-contract/) üzerine çalıştık. Bu makalede, bir akıllı sözleşmeyi bir jetonla etkileşime geçmek için Solidity diliyle nasıl kullanabileceğimizi göreceğiz.
+Önceki eğitimde Ethereum Blokzincir üzerinde [Solidity'de bir ERC-20 Token'ının anatomisini](/developers/tutorials/understand-the-erc-20-token-smart-contract/) incelemiştik. Bu makalede, Solidity dilini kullanarak bir Token ile etkileşime girmek için bir akıllı sözleşmeyi nasıl kullanabileceğimizi göreceğiz.
 
-Bu akıllı sözleşme için, bir kullanıcının yeni dağıtılan [ERC-20 jetonumuz](/developers/docs/standards/tokens/erc-20/) karşılığında ether takas edebileceği, deneme amaçlı bir merkeziyetsiz borsa oluşturacağız.
+Bu akıllı sözleşme için, bir kullanıcının yeni dağıttığımız [ERC-20 Token'ı](/developers/docs/standards/tokens/erc-20/) karşılığında Ether takas edebileceği gerçek bir sahte merkeziyetsiz borsa (DEX) oluşturacağız.
 
-Bu öğreticide, önceki öğreticide yazdığımız kodu temel olarak kullanacağız. Merkeziyetsiz borsamız (DEX), kurucusunda sözleşmenin bir örneğini oluşturacak ve aşağıdaki işlemleri gerçekleştirecektir:
+Bu eğitim için önceki eğitimde yazdığımız kodu temel olarak kullanacağız. DEX'imiz, kurucu (constructor) içinde sözleşmenin bir örneğini oluşturacak ve şu işlemleri gerçekleştirecektir:
 
-- jetonları ether ile takas etme
-- ether'ı jetonlar ile takas etme
+- Token'ları Ether ile takas etmek
+- Ether'i Token'lar ile takas etmek
 
-Merkeziyetsiz borsa kodumuza basit ERC20 kod tabanımızı ekleyerek başlayacağız:
+Basit ERC20 kod tabanımızı ekleyerek Merkeziyetsiz borsa kodumuza başlayacağız:
 
 ```solidity
 pragma solidity ^0.8.0;
@@ -100,7 +101,7 @@ contract ERC20Basic is IERC20 {
 
 ```
 
-Yeni DEX akıllı sözleşmemiz ERC-20'yi dağıtacak ve tüm arzı alacaktır:
+Yeni DEX akıllı sözleşmemiz ERC-20'yi dağıtacak ve sağlanan tüm arzı alacaktır:
 
 ```solidity
 contract DEX {
@@ -125,18 +126,18 @@ contract DEX {
 }
 ```
 
-Böylece artık kendi DEX'imiz var ve mevcut tüm jeton rezervine sahip. Sözleşmenin iki fonksiyonu vardır:
+Böylece artık DEX'imize sahibiz ve tüm Token rezervi mevcut. Sözleşmenin iki işlevi vardır:
 
-- `buy`: Kullanıcı ether gönderip karşılığında jeton alabilir
-- `sell`: Kullanıcı, ether'larını geri almak için jeton göndermeyi seçebilir
+- `buy`: Kullanıcı Ether gönderip karşılığında Token alabilir
+- `sell`: Kullanıcı Ether'i geri almak için Token göndermeye karar verebilir
 
-## Satın alma fonksiyonu {#the-buy-function}
+## Satın alma (buy) işlevi {#the-buy-function}
 
-`buy` fonksiyonunu kodlayalım. Öncelikle mesajın içerdiği ether miktarını kontrol etmemiz ve sözleşmelerin yeterli jetona sahip olduğunu ve mesajda bir miktar ether bulunduğunu doğrulamamız gerekecek. Sözleşme yeterli jetona sahipse, kullanıcıya ilgili sayıda jetonu gönderir ve `Bought` olayını yayar.
+Satın alma işlevini kodlayalım. İlk olarak mesajın içerdiği Ether miktarını kontrol etmemiz, sözleşmelerin yeterli Token'a sahip olduğunu ve mesajın bir miktar Ether içerdiğini doğrulamamız gerekecek. Sözleşme yeterli Token'a sahipse, kullanıcıya Token miktarını gönderecek ve `Bought` olayını (event) yayınlayacaktır.
 
-Bir hata durumunda `require` fonksiyonunu çağırırsak gönderilen ether'in doğrudan geri çevrileceğini ve kullanıcıya iade edileceğini unutmayın.
+Bir hata durumunda `require` işlevini çağırırsak, gönderilen Ether'in doğrudan geri alınacağını (revert) ve kullanıcıya geri verileceğini unutmayın.
 
-İşleri basitleştirmek için, 1 jetonu 1 Wei ile takas ediyoruz.
+İşleri basit tutmak için, sadece 1 Token'ı 1 Wei ile takas ediyoruz.
 
 ```solidity
 function buy() payable public {
@@ -149,37 +150,37 @@ function buy() payable public {
 }
 ```
 
-Satın alma işleminin başarılı olduğu durumda, işlemde iki olay görmeliyiz: Jeton `Transfer` olayı ve `Bought` olayı.
+Satın alma işleminin başarılı olması durumunda işlemde iki olay görmeliyiz: Token `Transfer` ve `Bought` olayı.
 
-![İşlemdeki iki olay: Transfer ve Bought](./transfer-and-bought-events.png)
+![Two events in the transaction: Transfer and Bought](./transfer-and-bought-events.png)
 
-## Satış fonksiyonu {#the-sell-function}
+## Satış (sell) işlevi {#the-sell-function}
 
-Satıştan sorumlu fonksiyon, öncelikle kullanıcının `approve` (onaylama) fonksiyonunu önceden çağırarak miktarı onaylamış olmasını gerektirecektir. Transferin onaylanması, DEX tarafından örneği oluşturulan ERC20Basic jetonunun kullanıcı tarafından çağrılmasını gerektirir. Bu, DEX'in `token` adlı ERC20Basic sözleşmesini dağıttığı adresi almak için önce DEX sözleşmesinin `token()` fonksiyonu çağrılarak sağlanabilir. Ardından, oturumumuzda bu sözleşmenin bir örneğini oluşturur ve `approve` fonksiyonunu çağırırız. Ardından DEX'in `sell` fonksiyonunu çağırabilir ve jetonlarımızı tekrar ether ile takas edebiliriz. Örneğin, etkileşimli bir brownie oturumunda bu şöyle görünür:
+Satıştan sorumlu işlev, ilk olarak kullanıcının önceden `approve` işlevini çağırarak miktarı onaylamasını gerektirecektir. Transferi onaylamak, DEX tarafından örneği oluşturulan ERC20Basic Token'ının kullanıcı tarafından çağrılmasını gerektirir. Bu, DEX'in `token` adlı ERC20Basic sözleşmesini dağıttığı Adresi almak için önce DEX sözleşmesinin `token()` işlevini çağırarak elde edilebilir. Ardından oturumumuzda bu sözleşmenin bir örneğini oluştururuz ve onun `approve` işlevini çağırırız. Daha sonra DEX'in `sell` işlevini çağırabilir ve Token'larımızı tekrar Ether ile takas edebiliriz. Örneğin, etkileşimli bir Brownie oturumunda bu şu şekilde görünür:
 
 ```python
-#### Etkileşimli brownie konsolunda Python...
+#### Etkileşimli Brownie konsolunda Python...
 
 # DEX'i dağıt
 dex = DEX.deploy({'from':account1})
 
-# ether'ı jetonla takas etmek için buy fonksiyonunu çağır
-# 1e18, wei cinsinden 1 ether'dir
+# Ether'i Token ile takas etmek için buy fonksiyonunu çağır
+# 1e18, Wei cinsinden 1 Ether'dir
 dex.buy({'from': account2, 1e18})
 
-# DEX sözleşmesi oluşturulurken dağıtılan
-# ERC20 jetonunun dağıtım adresini al
-# dex.token(), jetonun dağıtım adresini döndürür
+# ERC-20 Token için dağıtım Adresini al
+# DEX Sözleşmesi oluşturulurken dağıtılan
+# dex.token(), Token için dağıtılan Adresi döndürür
 token = ERC20Basic.at(dex.token())
 
-# jetonun approve fonksiyonunu çağır
-# dex adresini harcayıcı olarak onayla
-# ve jetonlarından ne kadarını harcamasına izin verildiğini belirt
+# Token'ın approve fonksiyonunu çağır
+# DEX Adresini harcayıcı olarak onayla
+# ve Token'larınızdan ne kadarını harcamasına izin verildiğini
 token.approve(dex.address, 3e18, {'from':account2})
 
 ```
 
-Ardından `sell` fonksiyonu çağrıldığında, çağıranın adresinden sözleşme adresine transferin başarılı olup olmadığını kontrol edecek ve ardından ether'i çağıranın adresine geri göndereceğiz.
+Ardından satış işlevi çağrıldığında, çağıran Adresten sözleşme Adresine yapılan transferin başarılı olup olmadığını kontrol edeceğiz ve ardından Ether'leri çağıran Adrese geri göndereceğiz.
 
 ```solidity
 function sell(uint256 amount) public {
@@ -192,17 +193,17 @@ function sell(uint256 amount) public {
 }
 ```
 
-Her şey yolunda giderse, işlemde 2 olay (`Transfer` ve `Sold`) görmeli ve jeton bakiyeniz ile ether bakiyenizin güncellendiğini görmelisiniz.
+Her şey çalışırsa, işlemde 2 olay (bir `Transfer` ve `Sold`) görmelisiniz ve Token bakiyeniz ile Ether bakiyeniz güncellenmiş olmalıdır.
 
-![İşlemdeki iki olay: Transfer ve Sold](./transfer-and-sold-events.png)
+![Two events in the transaction: Transfer and Sold](./transfer-and-sold-events.png)
 
 <Divider />
 
-Bu öğreticide, bir ERC-20 jetonunun bakiyesini ve harcama iznini (allowance) nasıl kontrol edeceğimizi ve ayrıca arayüzü kullanarak bir ERC20 akıllı sözleşmesinin `Transfer` ve `TransferFrom` fonksiyonlarını nasıl çağıracağımızı gördük.
+Bu eğitimden, bir ERC-20 Token'ının bakiyesini ve harcama iznini (allowance) nasıl kontrol edeceğimizi ve ayrıca arayüzü kullanarak bir ERC20 akıllı sözleşmesinin `Transfer` ve `TransferFrom` işlevlerini nasıl çağıracağımızı gördük.
 
-Bir işlem gerçekleştirdiğinizde, sözleşmenize yapılan [işlemlerin tamamlanmasını beklemek ve ayrıntılarını almak](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/) ve ABI'niz olduğu sürece [jeton transferleri veya diğer herhangi bir olay tarafından oluşturulan olayların kodunu çözmek](https://ethereumdev.io/how-to-decode-event-logs-in-javascript-using-abi-decoder/) için bir JavaScript öğreticimiz var.
+Bir işlem yaptıktan sonra, sözleşmenize yapılan [işlemleri beklemek ve bunlar hakkında ayrıntılı bilgi almak](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/) için bir JavaScript eğitimimiz ve ABI'ye sahip olduğunuz sürece [Token transferleri veya diğer olaylar tarafından oluşturulan olayları çözmek için bir eğitimimiz](https://ethereumdev.io/how-to-decode-event-logs-in-javascript-using-abi-decoder/) bulunmaktadır.
 
-Öğreticinin tam kodu aşağıdadır:
+İşte eğitimin tam kodu:
 
 ```solidity
 pragma solidity ^0.8.0;

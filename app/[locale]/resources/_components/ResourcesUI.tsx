@@ -11,7 +11,7 @@ export const DashboardBox = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
-    className={cn("overflow-hidden rounded-2xl border shadow-lg", className)}
+    className={cn("overflow-hidden rounded-base border shadow-lg", className)}
     {...props}
   />
 )
@@ -43,7 +43,7 @@ export const ResourceItem = ({
     <div className="w-full">
       <h3 className="text-md text-inherit">{title}</h3>
       <p className="text-inherit">{description}</p>
-      <Tag className="mt-1 rounded-full normal-case text-inherit">{href}</Tag>
+      <Tag className="mt-1 rounded-full text-inherit normal-case">{href}</Tag>
     </div>
   </Link>
 )
@@ -54,7 +54,7 @@ export const ResourcesContainer = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-      "overflow-hidden rounded-2xl border bg-[#ffffff] dark:bg-[#171717]",
+      "overflow-hidden rounded-base border bg-[#ffffff] dark:bg-[#171717]",
       className
     )}
     {...props}

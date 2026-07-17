@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "locale": "ur",
+  "translatedAt": "2026-06-08T07:40:54.065Z",
+  "englishManifestHash": "754163380681",
+  "placeholderOrder": [
+    "LINK-1c7f80"
+  ],
+  "placeholderMap": {
+    "LINK-1c7f80": {
+      "type": "link",
+      "values": {
+        "url": "/developers/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T07:40:54.065Z",
+      "status": "success"
+    }
+  }
+}

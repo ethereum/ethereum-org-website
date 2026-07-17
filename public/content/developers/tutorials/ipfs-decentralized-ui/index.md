@@ -4,6 +4,7 @@ description: This tutorial teaches the reader how to use IPFS to store the user 
 author: Ori Pomerantz
 tags: ["ipfs", "dapps", "frontend"]
 skill: beginner
+breadcrumb: IPFS for dapp UIs
 lang: en
 published: 2024-06-29
 ---
@@ -65,6 +66,10 @@ Once you have that installed (and the desktop IPFS working), you can go to [/ipf
 You cannot reliably delete IPFS files, so as long as you're modifying your user interface, it is probably best to either leave it centralized, or use [interplanetary name system (IPNS)](https://docs.ipfs.tech/concepts/ipns/#mutability-in-ipfs), a system that provides mutability on top of IPFS. Of course, anything that is mutable can be censored, in the case of IPNS by pressuing the person with the private key to which it corresponds.
 
 Additionally, some packages have a problem with IPFS, so if your web site is very complicated that may not be a good solution. And of course, anything that relies on server integration cannot be decentralized just by having the client side on IPFS.
+
+## Discoverability via ENS {#discoverability}
+
+If you point an ENS name (like vitalik.eth) to your website, it will be considered a fully decentralized webpage and will be automatically pinned by the [dweb3.wtf](https://dweb3.wtf) service, as well as made searchable through the [web3compass.net](https://web3compass.net) search engine, much like DuckDuckGo, Brave Search or Google does for the traditional web.
 
 ## Conclusion {#conclusion}
 

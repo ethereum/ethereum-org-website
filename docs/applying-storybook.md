@@ -2,7 +2,7 @@
 
 ## Overview
 
-StorybookJS is a UI tool for isolating UI components to visually test its styles and states.
+StorybookJS is a UI tool for isolating UI components to visually test their styles and states.
 
 This is great for checking the various iterations of a component in a sandbox versus scouring all the pages in a large scale project it is used to verify that the component is rendering properly.
 
@@ -10,7 +10,7 @@ You can also render pages if you need that level of visual testing.
 
 Storybook also gives you a library of addons provided by the team and the community to enhance the testing, including UX testing, A11y compliance, etc.
 
-Check out [Intro to Storybook](https://storybook.js.org/tutorials/intro-to-storybook/) to get an in-depth look on the workflow.
+Check out [Intro to Storybook](https://storybook.js.org/tutorials/intro-to-storybook/) to get an in-depth look at the workflow.
 
 ## Spinning up the Storybook server
 
@@ -18,7 +18,7 @@ It's as easy as running `pnpm storybook` to boot up a dedicated localhost to see
 
 ## Setting up a component's stories
 
-> 🚨 NOTE: This project uses Storybook v8.6+, using the Component Story Format v3 and the `satisfies` keyword to define the type of the meta object. The following documentation outlines preferences in setup as it relates to this version. You can refer to the [main docs](https://storybook.js.org/docs/get-started) if you need any additional details
+> 🚨 NOTE: This project uses Storybook v10.3+, using the Component Story Format v3 and the `satisfies` keyword to define the type of the meta object. The following documentation outlines preferences in setup as it relates to this version. You can refer to the [main docs](https://storybook.js.org/docs/get-started) if you need any additional details
 
 A Storybook "story" is an instance of a component in a certain state or with certain parameters applied to show an alternative version of the component.
 
@@ -35,27 +35,27 @@ src/
         └── // Any other files as applicable (utils, child components, useHook, etc.)
 ```
 
-The initial structure of each story file will look something like this (in typescript):
+The initial structure of each story file will look something like this (in TypeScript):
 
 ```tsx
 import ComponentA from "."
 
 const meta = {
   title: "ComponentA",
-  component: ComponentA
+  component: ComponentA,
 } satisfies Meta<typeof ComponentA>
 
 export default meta
 // Please use `typeof meta` for maximum type safety
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof meta>
 
 export const Basic: Story = {}
 ```
 
-- With the `title` option, we write this based on the groupings set by the Design System. Groupings are declared with forward slashes. (i.e., `Atoms / Form / Input`). See the Storybook docs for details on [Naming conventions](https://storybook.js.org/docs/7.0/react/writing-stories/naming-components-and-hierarchy)
+- With the `title` option, we write this based on the groupings set by the Design System. Groupings are declared with forward slashes. (i.e., `Atoms / Form / Input`). See the Storybook docs for details on [Naming conventions](https://storybook.js.org/docs/writing-stories/naming-components-and-hierarchy)
 - The `satisfies` TypeScript keyword is used with the `Meta` type for stricter type checking. This is particularly helpful to make sure required args are not missed. [Storybook Docs regarding `satisfies`](https://storybook.js.org/docs/writing-stories/typescript#using-satisfies-for-better-type-safety)
 - The use of `StoryObj` is to be able to typecheck the creation of a story as an object. This helps with prop inference.
-- We use `StoryObj<typeof meta>` in the event a required arg is provided in the `meta` object, to be applied to all stories in the file. This prevents type errors throwing at the story level for a required missing arg.
+- We use `StoryObj<typeof meta>` in the event a required arg is provided in the `meta` object, to be applied to all stories in the file. This prevents type errors from being thrown at the story level for a required missing arg.
 - If the story does not need any args or any custom rendering, it should be left as an empty object. Otherwise, use the `render` option to explicitly write the rendering of the story: i.e., `render: () => <Component />`
 
 Also, please view the Figma file for the [proposed structure for the Design System](https://www.figma.com/file/Ne3iAassyfAcJ0AlgqioAP/DS-to-storybook-structure?type=design&node-id=42%3A50&mode=design&t=RGkyouvTilzF42y0-1) to provide the correct groupings.
@@ -67,51 +67,54 @@ Should the component accept props on all or some renders, you can provide an `ar
 Let's say for a `Button` component with different style variants...
 
 ```tsx
+import { VStack } from "@/components/ui/flex"
+
 import Button from "."
 
 type ButtonType = typeof Button
 
 const meta = {
   title: "Atoms / Form / Button",
-  component: Button
+  component: Button,
 } satisfies Meta<ButtonType>
 
 export default meta
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof meta>
 
 export const Solid: Story = {
   args: {
-    variant: 'solid',
-    children: 'A Button'
-  }
+    variant: "solid",
+    children: "A Button",
+  },
 }
 export const Outline: Story = {
   args: {
-    variant: 'outline',
-    children: 'A Button'
-  }
+    variant: "outline",
+    children: "A Button",
+  },
 }
 
 /**
  * For practical purposes, if you are displaying different "variants",
  * they should be shown under one story, so they can be seen side-by-side in the GUI
  * for reviewers to easily compare.
- * This can also be done for various sizes or other like alterations
+ * This can also be done for various sizes or other similar alterations
  *
  * 🚨 If prop content is supplied directly to the component and the `args` prop is not used,
  * use `StoryObj` without a prop type. This is especially important when a story renders multiple versions
  * of the component.
  */
 
-// Assuming `solid` is the default variant in the Chakra theme config
+// `solid` is the default variant in the Button's cva config
+// (see `src/components/ui/buttons/Button.tsx`)
 export const Variants: StoryObj = {
   render: () => (
     <VStack>
       <Button>A Solid Button</Button>
       <Button variant="outline">An Outline Button</Button>
-      <Button variant="unstyled">An Unstyled Button</Button>
+      <Button variant="ghost">A Ghost Button</Button>
     </VStack>
-  )
+  ),
 }
 ```
 
@@ -142,13 +145,13 @@ The dashboard where you view each story has a number of different addons availab
 
 ![Screenshot of Storybook Dashboard for Ethereum.org](https://github.com/ethereum/ethereum-org-website/assets/65234762/7dea7692-6a6d-4f1c-b7cb-db177bcab44d)
 
-Outlined below are each area going from left to right in the selections.
+Outlined below are each of the areas going from left to right in the selections.
 
 | Toolbar above the preview                | Panel below the preview                                                                                                                                                                                                                                                    |
 | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1. Rerender preview                      | 1. Controls - allows you to interact with a component’s args (inputs) dynamically. Experiment with alternate configurations of the component to discover edge cases. See [Controls addon docs](https://storybook.js.org/docs/7.0/react/essentials/controls)                |
-| 2. Zoom In                               | 2. Actions (if applicable) - help you verify interactions produce the correct outputs via callbacks. See [Actions addon docs](https://storybook.js.org/docs/7.0/react/essentials/actions)                                                                                  |
-| 3. Zoom Out                              | 3. Interactions (if applicable) - In conjunction with the `play` function in a story object, this section allows you to simulate user interactions after the story renders. See [Interactions addon docs](https://storybook.js.org/docs/7.0/react/essentials/interactions) |
+| 1. Rerender preview                      | 1. Controls - allows you to interact with a component’s args (inputs) dynamically. Experiment with alternate configurations of the component to discover edge cases. See [Controls addon docs](https://storybook.js.org/docs/essentials/controls)                          |
+| 2. Zoom In                               | 2. Actions (if applicable) - help you verify interactions produce the correct outputs via callbacks. See [Actions addon docs](https://storybook.js.org/docs/essentials/actions)                                                                                            |
+| 3. Zoom Out                              | 3. Interactions (if applicable) - In conjunction with the `play` function in a story object, this section allows you to simulate user interactions after the story renders. See [Interactions addon docs](https://storybook.js.org/docs/writing-tests/interaction-testing) |
 | 4. Reset Zoom                            | 4. Accessibility provides visual A11y results for each story.<br><br>**NOTE**: To check accessibility for light and dark mode, you will need to toggle the mode, then rerender the preview to update the results.                                                          |
 | 5. Change background                     |
 | 6. Apply grid to preview                 |
@@ -169,14 +172,14 @@ When creating a story, Chromatic creates a "snapshot" of it and sets it as a bas
 
 Depending on the component, we might look for more than just one snapshot per story. In some cases, we might want multiple snapshots showing the story rendered at various viewport widths or in different languages, a combination of both, etc. These are referred to as [Story Modes](https://www.chromatic.com/docs/modes/). Examples of applicable components include the `Footer` and the `HubHero`.
 
-You will currently find the setup of these modes in [the `./storybook/modes.ts` file](../.storybook/modes.ts)
+You will currently find the setup of these modes in [the `.storybook/modes.ts` file](../.storybook/modes.ts)
 
-> Note: At this time we are only considering modes for viewport and languages. Color mode is not possible with the existing setup and is being investigated on making it available, should we want to use it.
+> Note: At this time we are only considering modes for viewport and languages. Color mode is not possible with the existing setup and is being investigated to make it available, should we want to use it.
 
 When using a mode at either the component level (all stories in a given file) or at the story level, they are supplied under the `chromatic` parameter.
 
 ```tsx
-import { Meta, StoryObj } from "@storybook/react"
+import { Meta, StoryObj } from "@storybook/nextjs"
 
 import { langViewportModes } from "../../../../.storybook/modes"
 
@@ -196,7 +199,7 @@ const meta = {
 } satisfies Meta<typeof ContentHeroComponent>
 ```
 
-In this example, we are supplying all the combinations of the languages and viewports together in snapshots. These will only be viewed in chromatic and cannot be seen when viewing storybook locally.
+In this example, we are supplying all the combinations of the languages and viewports together in snapshots. These will only be viewed in Chromatic and cannot be seen when viewing Storybook locally.
 
 If needs to be only a couple of options, you can write them like this:
 

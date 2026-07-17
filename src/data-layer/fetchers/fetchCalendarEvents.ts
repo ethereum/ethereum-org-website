@@ -3,6 +3,8 @@ import type {
   ReqCommunityEvent,
 } from "@/lib/interfaces"
 
+import { fetchRetry } from "./fetchRetry"
+
 export const FETCH_CALENDAR_EVENTS_TASK_ID = "fetch-calendar-events"
 
 /**
@@ -13,13 +15,13 @@ export async function fetchCalendarEvents(): Promise<CommunityEventsReturnType> 
   const apiKey = process.env.GOOGLE_API_KEY
   const calendarId = process.env.GOOGLE_CALENDAR_ID
 
-  const futureEventsReq = await fetch(
+  const futureEventsReq = await fetchRetry(
     `https://content.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&timeMin=${new Date().toISOString()}&maxResults=3&singleEvents=true&orderby=starttime`
   )
   const futureEvents = await futureEventsReq.json()
   const futureEventsReqData: ReqCommunityEvent[] = futureEvents.items
 
-  const pastEventsReq = await fetch(
+  const pastEventsReq = await fetchRetry(
     `https://content.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&timeMax=${new Date().toISOString()}&orderby=starttime`
   )
   const pastEvents = await pastEventsReq.json()

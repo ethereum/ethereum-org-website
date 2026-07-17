@@ -2,6 +2,8 @@ import type { GrowThePieData } from "@/lib/types"
 
 import { LAYER2_GROWTHEPIE_IDS } from "@/data/networks/growthepieIds"
 
+import { fetchRetry } from "./fetchRetry"
+
 export const FETCH_GROW_THE_PIE_TASK_ID = "fetch-grow-the-pie"
 
 type DataItem = {
@@ -24,7 +26,7 @@ export async function fetchGrowThePie(): Promise<GrowThePieData> {
 
   console.log("Starting GrowThePie data fetch")
 
-  const response = await fetch(url)
+  const response = await fetchRetry(url)
 
   if (!response.ok) {
     const status = response.status

@@ -59,13 +59,13 @@ The benefits of this network design are:
 
 The table below shows the functions of existing clients that can be delivered by the Portal Network, enabling users to access these functions on very low-resource devices.
 
-### The Portal Networks
+### The Portal Networks {#the-portal-networks}
 
-| Beacon light client | State network                | Transaction gossip  | History network |
-| ------------------- | ---------------------------- | ------------------- | --------------- |
-| Beacon chain light  | Account and contract storage | Lightweight mempool | Headers         |
-| Protocol data       |                              |                     | Block bodies    |
-|                     |                              |                     | Receipts        |
+| Beacon light client | State network                | Transaction gossip  | History network | Canonical Txn Index  |
+| ------------------- | ---------------------------- | ------------------- | --------------- | -------------------  |
+| Beacon chain light  | Account and contract storage | Lightweight mempool | Headers         | TxHash > Hash, Index |
+| Protocol data       |                              |                     | Block bodies    |                      |
+|                     |                              |                     | Receipts        |                      |
 
 ## Client diversity by default {#client-diversity-as-default}
 

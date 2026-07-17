@@ -1,5 +1,9 @@
 import { AppCategoryEnum, AppData } from "@/lib/types"
 
+import { uploadToS3 } from "@/data-layer/s3"
+
+import { fetchRetry } from "./fetchRetry"
+
 export const FETCH_APPS_TASK_ID = "fetch-apps"
 
 /**
@@ -23,7 +27,7 @@ export async function fetchApps(): Promise<Record<string, AppData[]>> {
   // First, get the spreadsheet metadata to see what sheets exist
   const metadataUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}?key=${googleApiKey}`
 
-  const metadataResponse = await fetch(metadataUrl)
+  const metadataResponse = await fetchRetry(metadataUrl)
 
   if (!metadataResponse.ok) {
     const errorText = await metadataResponse.text()
@@ -50,7 +54,7 @@ export async function fetchApps(): Promise<Record<string, AppData[]>> {
 
   console.log(`Found ${appCategorySheetNames.length} app category sheets`)
 
-  const appsOfTheWeek = await fetch(
+  const appsOfTheWeek = await fetchRetry(
     `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/App%20of%20the%20day!A2:C?majorDimension=ROWS&key=${googleApiKey}`
   )
 
@@ -67,7 +71,7 @@ export async function fetchApps(): Promise<Record<string, AppData[]>> {
   // Fetch and process data from each sheet
   for (const sheetName of appCategorySheetNames) {
     const dataUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}!A:Z?majorDimension=ROWS&key=${googleApiKey}`
-    const dataResponse = await fetch(dataUrl)
+    const dataResponse = await fetchRetry(dataUrl)
 
     if (!dataResponse.ok) {
       console.warn(
@@ -129,7 +133,7 @@ export async function fetchApps(): Promise<Record<string, AppData[]>> {
       .filter((app: AppData) => app.name && app.url) // Filter out apps without name or URL
       .filter((app: AppData) => app.ready === "true")
 
-    result[sheetName] = apps
+    result[sheetName] = await uploadAppImages(apps)
     console.log(`Processed ${apps.length} apps from ${sheetName}`)
   }
 
@@ -143,6 +147,21 @@ export async function fetchApps(): Promise<Record<string, AppData[]>> {
   )
 
   return result
+}
+
+async function uploadAppImages(apps: AppData[]): Promise<AppData[]> {
+  return Promise.all(
+    apps.map(async (app) => {
+      const image = app.image
+        ? ((await uploadToS3(app.image, "apps/logos")) ?? "")
+        : app.image
+      const bannerImage = app.bannerImage
+        ? ((await uploadToS3(app.bannerImage, "apps/banners")) ?? "")
+        : app.bannerImage
+
+      return { ...app, image, bannerImage }
+    })
+  )
 }
 
 // Helper function to map sheet names to AppCategoryEnum

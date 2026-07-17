@@ -1,16 +1,10 @@
 ---
-title: "Solidity'den diğer sözleşmelerle etkileşime geçme"
-description: "Mevcut bir sözleşmeden akıllı sözleşme dağıtma ve onunla etkileşim kurma"
+title: "Solidity'den diğer sözleşmelerle etkileşim kurun"
+description: "Mevcut bir sözleşmeden bir akıllı sözleşme nasıl dağıtılır ve onunla nasıl etkileşim kurulur"
 author: "jdourlens"
-tags:
-  [
-    "akıllı kontratlar",
-    "solidity",
-    "remix",
-    "dağıtma",
-    "birleştirilebilirlik"
-  ]
+tags: ["akıllı sözleşmeler", "Solidity", "Remix", "dağıtma", "birleştirilebilirlik"]
 skill: advanced
+breadcrumb: "Sözleşme etkileşimleri"
 lang: tr
 published: 2020-04-05
 source: EthereumDev
@@ -18,9 +12,9 @@ sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Önceki öğreticilerde [ilk akıllı sözleşmenizi nasıl dağıtacağınız](/developers/tutorials/deploying-your-first-smart-contract/) gibi pek çok şey öğrendik ve ona [değiştiricilerle erişimi kontrol etme](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) veya [Solidity'de hata yönetimi](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/) gibi bazı özellikler ekledik. Bu öğreticide mevcut bir sözleşmeden bir akıllı sözleşme dağıtmayı ve onunla etkileşim kurmayı öğreneceğiz.
+Önceki eğitimlerde [ilk akıllı sözleşmenizi nasıl dağıtacağınız](/developers/tutorials/deploying-your-first-smart-contract/) ve ona [değiştiricilerle erişimi kontrol etme](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) veya [Solidity'de hata işleme](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/) gibi bazı özellikleri nasıl ekleyeceğiniz hakkında çok şey öğrendik. Bu eğitimde, mevcut bir sözleşmeden bir akıllı sözleşmeyi nasıl dağıtacağımızı ve onunla nasıl etkileşim kuracağımızı öğreneceğiz.
 
-Bunun için bir fabrika oluşturarak herkesin kendi `Counter` akıllı sözleşmesine sahip olmasını sağlayan bir sözleşme yapacağız, adı `CounterFactory` olacak. İlk olarak, ilk `Counter` akıllı sözleşmemizin kodu:
+Herkesin kendi `Counter` akıllı sözleşmesine sahip olmasını sağlayan bir fabrika oluşturarak bir sözleşme yapacağız, adı `CounterFactory` olacak. İlk olarak, başlangıçtaki `Counter` akıllı sözleşmemizin kodu şöyledir:
 
 ```solidity
 pragma solidity 0.5.17;
@@ -33,12 +27,12 @@ contract Counter {
 
 
      modifier onlyOwner(address caller) {
-        require(caller == _owner, "Sözleşmenin sahibi siz değilsiniz");
+        require(caller == _owner, "You're not the owner of the contract");
         _;
     }
 
     modifier onlyFactory() {
-        require(msg.sender == _factory, "Fabrikayı kullanmanız gerekir");
+        require(msg.sender == _factory, "You need to use the factory");
         _;
     }
 
@@ -58,19 +52,19 @@ contract Counter {
 }
 ```
 
-Fabrikanın adresini ve sözleşme sahibinin adresini takip etmek için sözleşme kodunu biraz değiştirdiğimizi unutmayın. Başka bir sözleşmeden bir sözleşme kodu çağırdığınızda, `msg.sender` sözleşme fabrikamızın adresini gösterecektir. Diğer sözleşmelerle etkileşim kurmak için bir sözleşme kullanmak yaygın bir uygulama olduğundan, bu **anlaşılması gerçekten önemli bir noktadır**. Bu nedenle, karmaşık durumlarda göndericinin kim olduğuna dikkat etmelisiniz.
+Fabrikanın adresini ve sözleşme sahibinin adresini takip etmek için sözleşme kodunu biraz değiştirdiğimizi unutmayın. Başka bir sözleşmeden bir sözleşme kodu çağırdığınızda, msg.sender sözleşme fabrikamızın adresini referans alacaktır. Diğer sözleşmelerle etkileşim kurmak için bir sözleşme kullanmak yaygın bir uygulama olduğundan, bu **anlaşılması gerçekten önemli bir noktadır**. Bu nedenle karmaşık durumlarda gönderenin kim olduğuna dikkat etmelisiniz.
 
-Bunun için, durum değiştiren fonksiyonun yalnızca orijinal çağırıcıyı parametre olarak geçiren fabrika tarafından çağrılabilmesini sağlayan bir `onlyFactory` değiştiricisi de ekledik.
+Bunun için, durum değiştiren işlevin yalnızca orijinal arayanı bir parametre olarak geçirecek olan fabrika tarafından çağrılabildiğinden emin olan bir `onlyFactory` değiştiricisi de ekledik.
 
-Diğer tüm Sayaçları yönetecek olan yeni `CounterFactory`'mizin içine, bir sahibini kendi sayaç sözleşmesinin adresiyle ilişkilendirecek bir eşleme ekleyeceğiz:
+Diğer tüm Sayaçları (Counters) yönetecek olan yeni `CounterFactory` sözleşmemizin içine, bir sahibini kendi sayaç sözleşmesinin adresiyle ilişkilendirecek bir eşleme (mapping) ekleyeceğiz:
 
 ```solidity
 mapping(address => Counter) _counters;
 ```
 
-Ethereum'da, eşlemeler javascript'teki nesnelerin eşdeğeridir; A türünde bir anahtarı B türünde bir değere eşlemeyi sağlarlar. Bu durumda, bir sahibinin adresini onun Counter örneği ile eşleriz.
+Ethereum'da eşlemeler (mapping), JavaScript'teki nesnelerin eşdeğeridir; A türündeki bir anahtarı B türündeki bir değerle eşlemeyi sağlarlar. Bu durumda, bir sahibin adresini kendi Sayacının (Counter) örneğiyle eşliyoruz.
 
-Birisi için yeni bir Counter örneği oluşturmak şöyle görünür:
+Birisi için yeni bir Sayaç (Counter) örneği oluşturmak şu şekilde görünecektir:
 
 ```solidity
   function createCounter() public {
@@ -79,9 +73,9 @@ Birisi için yeni bir Counter örneği oluşturmak şöyle görünür:
   }
 ```
 
-Önce kişinin zaten bir `Counter`'ı olup olmadığını kontrol ederiz. Eğer bir `Counter`'ı yoksa, adresini `Counter` yapıcısına geçirerek yeni bir `Counter` örneği oluştururuz ve yeni oluşturulan örneği eşlemeye atarız.
+Önce kişinin zaten bir sayacı olup olmadığını kontrol ediyoruz. Eğer bir sayacı yoksa, adresini `Counter` kurucusuna geçirerek yeni bir sayaç örneği oluşturuyoruz ve yeni oluşturulan örneği eşlemeye atıyoruz.
 
-Belirli bir `Counter`'ın sayımını almak şöyle görünür:
+Belirli bir Sayacın (Counter) sayısını almak şu şekilde görünecektir:
 
 ```solidity
 function getCount(address account) public view returns (uint256) {
@@ -94,9 +88,9 @@ function getMyCount() public view returns (uint256) {
 }
 ```
 
-İlk fonksiyon, belirtilen adres için `Counter` sözleşmesinin mevcut olup olmadığını kontrol eder ve ardından örnekten `getCount` metodunu çağırır. İkinci fonksiyon olan `getMyCount`, `msg.sender`'ı doğrudan `getCount` fonksiyonuna geçirmek için kullanılan bir kısayoldur.
+İlk işlev, belirli bir adres için Sayaç (Counter) sözleşmesinin var olup olmadığını kontrol eder ve ardından örnekten `getCount` yöntemini çağırır. İkinci işlev olan `getMyCount`, msg.sender'ı doğrudan `getCount` işlevine geçirmek için sadece kısa bir yoldur.
 
-`increment` fonksiyonu oldukça benzerdir ancak orijinal işlem göndericisini `Counter` sözleşmesine iletir:
+`increment` işlevi oldukça benzerdir ancak orijinal işlem göndericisini `Counter` sözleşmesine geçirir:
 
 ```solidity
 function increment() public {
@@ -105,11 +99,11 @@ function increment() public {
   }
 ```
 
-Çok fazla kez çağrılırsa, `counter`'ımızın bir taşma hatasına maruz kalabileceğini unutmayın. Bu olası duruma karşı korunmak için [SafeMath kütüphanesini](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/) mümkün olduğunca kullanmalısınız.
+Çok fazla çağrılırsa, sayacımızın muhtemelen bir taşma kurbanı olabileceğini unutmayın. Bu olası durumdan korunmak için mümkün olduğunca [SafeMath kütüphanesini](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/) kullanmalısınız.
 
-Sözleşmemizi dağıtmak için hem `CounterFactory` hem de `Counter` kodunu sağlamanız gerekecektir. Örneğin Remix'te dağıtım yaparken `CounterFactory`'yi seçmeniz gerekecektir.
+Sözleşmemizi dağıtmak için hem `CounterFactory` hem de `Counter` kodunu sağlamanız gerekecektir. Örneğin Remix'te dağıtırken CounterFactory'yi seçmeniz gerekecektir.
 
-İşte kodun tamamı:
+İşte tam kod:
 
 ```solidity
 pragma solidity 0.5.17;
@@ -122,12 +116,12 @@ contract Counter {
 
 
      modifier onlyOwner(address caller) {
-        require(caller == _owner, "Sözleşmenin sahibi siz değilsiniz");
+        require(caller == _owner, "You're not the owner of the contract");
         _;
     }
 
     modifier onlyFactory() {
-        require(msg.sender == _factory, "Fabrikayı kullanmanız gerekir");
+        require(msg.sender == _factory, "You need to use the factory");
         _;
     }
 
@@ -172,8 +166,8 @@ contract CounterFactory {
 }
 ```
 
-Derleme işleminden sonra, Remix dağıtım bölümünde dağıtılacak fabrikayı seçeceksiniz:
+Derlemeden sonra, Remix dağıtma bölümünde dağıtılacak fabrikayı seçeceksiniz:
 
-![Remix'te dağıtılacak fabrikayı seçme](./counterfactory-deploy.png)
+![Selecting the factory to be deployed in Remix](./counterfactory-deploy.png)
 
-Ardından sözleşme fabrikanızla denemeler yapabilir ve değerin değiştiğini kontrol edebilirsiniz. Akıllı sözleşmeyi farklı bir adresten çağırmak isterseniz Remix'in `Hesap` seçimi bölümündeki adresi değiştirmeniz gerekir.
+Ardından sözleşme fabrikanızla oynayabilir ve değişen değeri kontrol edebilirsiniz. Akıllı sözleşmeyi farklı bir adresten çağırmak isterseniz, Remix'in Hesap (Account) seçiminden adresi değiştirmeniz gerekecektir.

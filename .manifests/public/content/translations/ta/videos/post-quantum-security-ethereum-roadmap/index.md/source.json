@@ -1,0 +1,265 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/post-quantum-security-ethereum-roadmap/index.md",
+  "generatedAt": "2026-04-29T06:00:14.777Z",
+  "rootHash": "0961f2ca122d",
+  "tree": {
+    "contentHash": "c2f50928ec06",
+    "anchorHash": "0edf79182569",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "0fbd2580c641",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "96fcd05adfd5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "f5ce62f9dcee"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "1f6f66b50790"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "acaf0e9c0def"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d21f85ea3816"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bfac314fefdc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "6f72c7925fad"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "9a28841c23f2"
+      },
+      "prose:1": {
+        "contentHash": "92e654bcc412",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "8e4535482341"
+      },
+      "prose:2": {
+        "contentHash": "80d1ac18e3a7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ef-progress-and-the-cultural-shift-012": {
+        "contentHash": "923aacf2822f",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "27f857874628",
+        "children": {
+          "_label": {
+            "contentHash": "27f857874628",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "99d5cc719dca",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "2026-strategy-and-priorities-430": {
+        "contentHash": "f3aac206d06b",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "ec623f9ec950",
+        "children": {
+          "_label": {
+            "contentHash": "ec623f9ec950",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "a54201274a91",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "why-post-quantum-matters-now-830": {
+        "contentHash": "cdfa9fa6e497",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "307886bcc7e6",
+        "children": {
+          "_label": {
+            "contentHash": "307886bcc7e6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "8fa9d4311c8e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "market-anxiety-and-institutional-response-1200": {
+        "contentHash": "25b97e0eddcb",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "fdc87b8ff8d4",
+        "children": {
+          "_label": {
+            "contentHash": "fdc87b8ff8d4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "9ea6765228d1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "nist-standards-and-vitaliks-walkaway-test-1600": {
+        "contentHash": "9e6d83e4fa68",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "5fdc8324cff8",
+        "children": {
+          "_label": {
+            "contentHash": "5fdc8324cff8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "5d1b943bbcbf",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "post-quantum-signature-schemes-1730": {
+        "contentHash": "01bd8f679d39",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "6cc6d22dce50",
+        "children": {
+          "_label": {
+            "contentHash": "6cc6d22dce50",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4a431af6b971",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-migration-challenge-2030": {
+        "contentHash": "1869e220102f",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "8f80f34b3297",
+        "children": {
+          "_label": {
+            "contentHash": "8f80f34b3297",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "90889ddf4452",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "performance-formal-verification-and-implementation-progress-2300": {
+        "contentHash": "2d9b71633114",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "14699658e935",
+        "children": {
+          "_label": {
+            "contentHash": "14699658e935",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "bc3c8ed8f017",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-full-roadmap-and-devnet-progress-2529": {
+        "contentHash": "c973bca85ab8",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "73af6968434f",
+        "children": {
+          "_label": {
+            "contentHash": "73af6968434f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "18dbc6d388b5",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "ef-progress-and-the-cultural-shift-012",
+      "2026-strategy-and-priorities-430",
+      "why-post-quantum-matters-now-830",
+      "market-anxiety-and-institutional-response-1200",
+      "nist-standards-and-vitaliks-walkaway-test-1600",
+      "post-quantum-signature-schemes-1730",
+      "the-migration-challenge-2030",
+      "performance-formal-verification-and-implementation-progress-2300",
+      "the-full-roadmap-and-devnet-progress-2529"
+    ]
+  },
+  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+}

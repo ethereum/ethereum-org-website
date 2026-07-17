@@ -1,0 +1,268 @@
+{
+  "version": 1,
+  "locale": "ar",
+  "translatedAt": "2026-06-08T11:28:57.660Z",
+  "englishManifestHash": "6c246dd9ea73",
+  "placeholderOrder": [
+    "LINK-7a6f64",
+    "LINK-f50767",
+    "LINK-d3df1f",
+    "LINK-458389",
+    "LINK-a21a82",
+    "LINK-33703e",
+    "LINK-e4c97e",
+    "HTMLTAG-33e054",
+    "LINK-1f74af",
+    "LINK-edc9a1",
+    "LINK-a4b4b9",
+    "LINK-3cfea7",
+    "LINK-b9f256",
+    "LINK-5c2ec8",
+    "LINK-80ee1e",
+    "LINK-5b71ef",
+    "LINK-4786f4",
+    "CODE-e19c38",
+    "CODE-643d81",
+    "LINK-913fe7",
+    "CODE-e19c38",
+    "CODE-e19c38",
+    "CODE-643d81",
+    "CODE-e19c38",
+    "CODE-e19c38",
+    "CODE-643d81",
+    "LINK-3c7df7",
+    "LINK-fc0100",
+    "LINK-cd3c9c",
+    "LINK-78afc4",
+    "LINK-ca0431",
+    "LINK-5015a5",
+    "LINK-217dab",
+    "LINK-7c1927",
+    "LINK-b1f3ba",
+    "LINK-1044df",
+    "LINK-3d6034",
+    "LINK-1e184e",
+    "LINK-afa23c",
+    "LINK-553335",
+    "LINK-c52b20"
+  ],
+  "placeholderMap": {
+    "HTMLTAG-33e054": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/decentralized-identity/#national-and-government-id"
+      }
+    },
+    "CODE-e19c38": {
+      "type": "inline-code",
+      "values": {
+        "content": "option B"
+      }
+    },
+    "CODE-643d81": {
+      "type": "inline-code",
+      "values": {
+        "content": "option A"
+      }
+    },
+    "LINK-7a6f64": {
+      "type": "link",
+      "values": {
+        "url": "http://people.csail.mit.edu/silvio/Selected%20Scientific%20Papers/Proof%20Systems/The_Knowledge_Complexity_Of_Interactive_Proof_Systems.pdf"
+      }
+    },
+    "LINK-f50767": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#blockchain"
+      }
+    },
+    "LINK-d3df1f": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#node"
+      }
+    },
+    "LINK-458389": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7503"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-33703e": {
+      "type": "link",
+      "values": {
+        "url": "/privacy/"
+      }
+    },
+    "LINK-e4c97e": {
+      "type": "link",
+      "values": {
+        "url": "/decentralized-identity/"
+      }
+    },
+    "LINK-1f74af": {
+      "type": "link",
+      "values": {
+        "url": "https://world.org/blog/world/world-id-faqs"
+      }
+    },
+    "LINK-edc9a1": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.semaphore.pse.dev/"
+      }
+    },
+    "LINK-a4b4b9": {
+      "type": "link",
+      "values": {
+        "url": "https://pse.dev/"
+      }
+    },
+    "LINK-3cfea7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/#onchain-scaling"
+      }
+    },
+    "LINK-b9f256": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/#offchain-scaling"
+      }
+    },
+    "LINK-5c2ec8": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#validity-proof"
+      }
+    },
+    "LINK-80ee1e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/zk-rollups"
+      }
+    },
+    "LINK-5b71ef": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/validium/"
+      }
+    },
+    "LINK-4786f4": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/zkevm/"
+      }
+    },
+    "LINK-913fe7": {
+      "type": "link",
+      "values": {
+        "url": "https://www.radicalxchange.org/wiki/plural-funding/"
+      }
+    },
+    "LINK-3c7df7": {
+      "type": "link",
+      "values": {
+        "url": "https://clr.fund/#/about/maci"
+      }
+    },
+    "LINK-fc0100": {
+      "type": "link",
+      "values": {
+        "url": "https://maci.pse.dev/"
+      }
+    },
+    "LINK-cd3c9c": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Zero-knowledge_proof#The_Ali_Baba_cave"
+      }
+    },
+    "LINK-78afc4": {
+      "type": "link",
+      "values": {
+        "url": "https://dl.acm.org/doi/10.1145/62212.62222"
+      }
+    },
+    "LINK-ca0431": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Secure_multi-party_computation"
+      }
+    },
+    "LINK-5015a5": {
+      "type": "link",
+      "values": {
+        "url": "https://zkproof.org/2021/06/30/setup-ceremonies/amp/"
+      }
+    },
+    "LINK-217dab": {
+      "type": "link",
+      "values": {
+        "url": "https://pse.dev/projects"
+      }
+    },
+    "LINK-7c1927": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/overviews/snarks-vs-starks"
+      }
+    },
+    "LINK-b1f3ba": {
+      "type": "link",
+      "values": {
+        "url": "https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/"
+      }
+    },
+    "LINK-1044df": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c"
+      }
+    },
+    "LINK-3d6034": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d"
+      }
+    },
+    "LINK-1e184e": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2021/01/26/snarks.html"
+      }
+    },
+    "LINK-afa23c": {
+      "type": "link",
+      "values": {
+        "url": "https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity"
+      }
+    },
+    "LINK-553335": {
+      "type": "link",
+      "values": {
+        "url": "https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction"
+      }
+    },
+    "LINK-c52b20": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ZK-card/zk-cards"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T11:28:57.660Z",
+      "status": "success"
+    }
+  }
+}

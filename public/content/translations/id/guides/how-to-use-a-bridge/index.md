@@ -1,73 +1,71 @@
 ---
-title: Cara bridge token ke layer 2
-description: Panduan yang menjelaskan cara memindahkan token dari Ethereum ke lapisan ke-2 menggunakan jembatan.
+title: Cara menjembatani token ke lapisan 2
+description: Panduan yang menjelaskan cara memindahkan token dari Ethereum ke lapisan 2 menggunakan jembatan.
 lang: id
 ---
 
-# Cara bridge token ke layer 2
+Jika ada banyak lalu lintas di Ethereum, biayanya bisa menjadi mahal. Salah satu solusi untuk ini adalah membuat "lapisan" baru: yaitu, jaringan berbeda yang beroperasi dengan cara yang mirip dengan Ethereum itu sendiri. Apa yang disebut lapisan 2 (l2) ini membantu mengurangi kemacetan dan biaya di Ethereum dengan memproses lebih banyak transaksi dengan biaya lebih rendah, dan hanya menyimpan hasilnya di Ethereum sesekali. Dengan demikian, lapisan 2 ini memungkinkan kita untuk bertransaksi dengan kecepatan yang meningkat dan biaya yang menurun. Banyak proyek kripto populer pindah ke lapisan 2 karena manfaat ini. Cara paling sederhana untuk memindahkan token dari Ethereum ke lapisan 2 adalah dengan menggunakan jembatan.
 
-Jika ada banyak lalu lintas di Ethereum, itu bisa menjadi mahal. Salah satu solusi untuk hal ini adalah dengan membuat "lapisan" baru: yaitu jaringan yang berbeda yang beroperasi dengan cara yang serupa dengan Ethereum itu sendiri. Lapisan ke-2 ini membantu mengurangi kemacetan dan biaya di Ethereum dengan memroses lebih banyak transaksi dengan biaya yang lebih rendah, dan hanya menyimpan hasilnya di Ethereum sesering mungkin. Dengan demikian, lapisan ke-2 ini memungkinkan kita untuk bertransaksi dengan kecepatan yang lebih tinggi dan biaya yang lebih rendah. Banyak proyek kripto populer yang berpindah ke lapisan ke-2 karena keuntungan-keuntungan ini. Cara paling sederhana untuk memindahkan token dari Ethereum ke lapisan ke-2 adalah dengan menggunakan jembatan.
+**Prasyarat:** 
 
-**Prasyarat:**
-
-- jika Anda memiliki dompet kripto, Anda dapat mengikuti tutorial ini: [Cara: "Mendaftarkan" akun Ethereum](/guides/how-to-register-an-ethereum-account/)
+- memiliki dompet kripto—jika Anda tidak memilikinya, ikuti panduan ini untuk [membuat akun Ethereum](/guides/how-to-create-an-ethereum-account/)
 - menambahkan dana ke dompet Anda
 
-## 1. Tentukan jaringan lapisan ke-2 mana yang ingin Anda gunakan
+## 1. Tentukan jaringan lapisan 2 mana yang ingin Anda gunakan {#1-determine-which-layer-2-network-you-want-to-use}
 
-Anda dapat mempelajari lebih lanjut tentang berbagai proyek dan tautan penting di halaman [lapisan ke-2](/layer-2/).
+Anda dapat mempelajari lebih lanjut tentang berbagai proyek dan tautan penting di [halaman lapisan 2](/layer-2/) kami.
 
-## 2. Buka jembatan yang dipilih
+## 2. Buka jembatan yang dipilih {#2-go-to-the-selected-bridge}
 
-Beberapa lapisan ke-2 yang populer adalah:
+Beberapa lapisan 2 yang populer adalah:
 
-- [Jembatan Arbitrum](https://bridge.arbitrum.io/?l2ChainId=42161)
+- [Jembatan Arbitrum](https://portal.arbitrum.io/bridge?l2ChainId=42161)
 - [Jembatan Optimism](https://app.optimism.io/bridge/deposit)
-- [Jembatan Boba network](https://gateway.boba.network/)
+- [Jembatan jaringan Boba](https://hub.boba.network/)
 
-## 3. Hubungkan ke jembatan dengan dompet Anda
+## 3. Hubungkan ke jembatan dengan dompet Anda {#3-connect-to-the-bridge-with-your-wallet}
 
-Pastikan dompet Anda terhubung ke jaringan Jaringan Utama Ethereum. Jika tidak, situs web akan secara otomatis meminta Anda untuk berpindah jaringan.
+Pastikan dompet Anda terhubung ke jaringan Mainnet Ethereum. Jika tidak, situs web akan secara otomatis meminta Anda untuk beralih jaringan.
 
-![Antarmuka umum untuk menjembatani token](./bridge1.png)
+![Common interface for bridging tokens](./bridge1.png)
 
-## 4. Tentukan jumlah dan pindahkan dana
+## 4. Tentukan jumlah dan pindahkan dana {#4-specify-the-amount-and-move-the-funds}
 
-Tinjau jumlah yang akan Anda dapatkan sebagai imbalan pada jaringan lapisan ke-2 dan biayanya untuk menghindari kejutan yang tidak menyenangkan.
+Tinjau jumlah yang akan Anda dapatkan sebagai imbalannya di jaringan lapisan 2 dan biayanya untuk menghindari kejutan yang tidak menyenangkan.
 
-![Antarmuka umum untuk menjembatani token](./bridge2.png)
+![Common interface for bridging tokens](./bridge2.png)
 
-## 5. Konfirmasikan transaksi di dompet Anda
+## 5. Konfirmasi transaksi di dompet Anda {#5-confirm-the-transaction-in-your-wallet}
 
-Anda harus membayar biaya dalam bentuk ETH untuk memproses transaksi.
+Anda harus membayar biaya (disebut [gas](/glossary/#gas)) dalam bentuk ETH untuk memproses transaksi.
 
-![Antarmuka umum untuk menjembatani token](./bridge3.png)
+![Common interface for bridging tokens](./bridge3.png)
 
-## 6. Tunggu hingga dana Anda dipindahkan
+## 6. Tunggu dana Anda dipindahkan {#6-wait-for-your-funds-to-be-moved}
 
 Proses ini seharusnya tidak memakan waktu lebih dari 10 menit.
 
-## 7. Tambahkan jaringan lapisan ke-2 yang dipilih ke dompet Anda (opsional)
+## 7. Tambahkan jaringan lapisan 2 yang dipilih ke dompet Anda (opsional) {#7-add-the-selected-layer-2-network-to-your-wallet-optional}
 
-Anda dapat menggunakan [chainlist.org](http://chainlist.org) untuk menemukan detail RPC jaringan. Setelah jaringan ditambahkan dan transaksi selesai, Anda akan melihat token di dompet Anda.
+Anda dapat menggunakan [chainlist.org](https://chainlist.org) untuk menemukan detail RPC jaringan. Setelah jaringan ditambahkan dan transaksi selesai, Anda akan melihat token di dompet Anda.
 <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Ingin mempelajari selengkapnya?</div>
+  <div>Ingin mempelajari lebih lanjut?</div>
   <ButtonLink href="/guides/">
-    Lihat panduan lainnya
+    Lihat panduan kami yang lain
   </ButtonLink>
 </AlertContent>
 </Alert>
 
-## Pertanyaan yang sering diajukan
+## Pertanyaan yang sering diajukan {#frequently-asked-questions}
 
-### Bagaimana jika saya memiliki dana di bursa?
+### Bagaimana jika saya memiliki dana di bursa? {#what-if-i-have-funds-on-an-exchange}
 
-Anda mungkin dapat menarik ke beberapa layer 2 langsung dari bursa. Lihat bagian "Memindahkan ke lapisan ke-2" pada [halaman Lapisan ke-2](/layer-2/) untuk informasi lebih lanjut.
+Anda mungkin dapat menarik dana ke beberapa lapisan 2 secara langsung dari bursa. Lihat bagian “Pindah ke lapisan 2” di [halaman Lapisan 2](/layer-2/) kami untuk informasi lebih lanjut.
 
-### Dapatkah saya kembali ke jaringan utama Ethereum setelah menjembatani token saya ke L2?
+### Bisakah saya kembali ke Mainnet Ethereum setelah saya menjembatani token saya ke l2? {#can-i-go-back-to-ethereum-mainnet-after-i-bridge-my-tokens-to-l2}
 
-Ya, Anda selalu dapat memindahkan dana kembali ke jaringan utama menggunakan jembatan yang sama.
+Ya, Anda selalu dapat memindahkan dana Anda kembali ke Mainnet menggunakan jembatan yang sama.

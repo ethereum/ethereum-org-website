@@ -35,10 +35,10 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-log_info() { echo -e "${GREEN}[INFO]${NC} $1"; }
-log_warn() { echo -e "${YELLOW}[WARN]${NC} $1"; }
-log_error() { echo -e "${RED}[ERROR]${NC} $1"; }
-log_dry() { echo -e "${BLUE}[DRY-RUN]${NC} Would run: $1"; }
+log_info() { echo -e "${GREEN}[INFO]${NC} $1" >&2; }
+log_warn() { echo -e "${YELLOW}[WARN]${NC} $1" >&2; }
+log_error() { echo -e "${RED}[ERROR]${NC} $1" >&2; }
+log_dry() { echo -e "${BLUE}[DRY-RUN]${NC} Would run: $1" >&2; }
 
 # Run a command, or just log it if in dry-run mode
 run_or_dry() {
@@ -227,7 +227,7 @@ cmd_version() {
   fi
 
   # Ensure we're working in the right directory
-  setup_worktree
+  setup_worktree >&2
 
   if [[ "$DRY_RUN" == "true" ]]; then
     # In dry-run, calculate what the new version would be without changing anything
@@ -245,13 +245,13 @@ cmd_version() {
     log_dry "git push origin dev --follow-tags"
   else
     log_info "Bumping $VERSION_TYPE version..."
-    run_in_workdir pnpm version "$VERSION_TYPE"
+    run_in_workdir pnpm version "$VERSION_TYPE" >&2
 
     NEW_VERSION=$(run_in_workdir node -p "require('./package.json').version")
     log_info "New version: v$NEW_VERSION"
 
     log_info "Pushing to origin with tags..."
-    run_in_workdir git push origin dev --follow-tags
+    run_in_workdir git push origin dev --follow-tags >&2
   fi
 
   echo "$NEW_VERSION"

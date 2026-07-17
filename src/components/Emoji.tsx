@@ -1,3 +1,5 @@
+"use client"
+
 import { ComponentProps } from "react"
 import dynamic from "next/dynamic"
 

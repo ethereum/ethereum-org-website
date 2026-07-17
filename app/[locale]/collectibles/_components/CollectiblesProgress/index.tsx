@@ -1,20 +1,20 @@
 "use client"
 
 import React from "react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import { Progress } from "@/components/ui/progress"
 
-import { type BadgeWithOwned } from "../CollectiblesContent"
+import { dateTimeFormat } from "@/lib/utils/date"
 
-import useTranslation from "@/hooks/useTranslation"
+import { type BadgeWithOwned } from "../CollectiblesContent"
 
 type CollectiblesProgressProps = {
   badges: BadgeWithOwned[]
 }
 
 const CollectiblesProgress = ({ badges }: CollectiblesProgressProps) => {
-  const { t } = useTranslation("page-collectibles")
+  const t = useTranslations("page-collectibles")
   const locale = useLocale()
 
   const currentYear = new Date().getFullYear().toString()
@@ -38,7 +38,7 @@ const CollectiblesProgress = ({ badges }: CollectiblesProgressProps) => {
       {contributorSinceYear < Infinity && (
         <p className="text-body-medium">
           {t("page-collectibles-contributing-since")}:{" "}
-          {new Intl.DateTimeFormat(locale, {
+          {dateTimeFormat(locale, {
             year: "numeric",
           }).format(new Date().setFullYear(contributorSinceYear))}
         </p>

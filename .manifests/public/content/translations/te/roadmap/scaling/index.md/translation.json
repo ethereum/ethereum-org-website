@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "locale": "te",
+  "translatedAt": "2026-06-19T23:43:14.418Z",
+  "englishManifestHash": "15aeef63fb5c",
+  "placeholderOrder": [
+    "LINK-5cc38f",
+    "HTMLTAG-f7c3e6",
+    "HTMLTAG-e13736",
+    "LINK-1a7aa6",
+    "LINK-7d83c0",
+    "LINK-5b5e86",
+    "LINK-379c70",
+    "LINK-b32d95",
+    "LINK-ce6188",
+    "LINK-a2e3ea",
+    "LINK-b86d5d",
+    "LINK-8db804",
+    "LINK-285fc6"
+  ],
+  "placeholderMap": {
+    "HTMLTAG-f7c3e6": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "ul"
+      }
+    },
+    "HTMLTAG-e13736": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "li"
+      }
+    },
+    "LINK-5cc38f": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2/#rollups"
+      }
+    },
+    "LINK-1a7aa6": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#validator"
+      }
+    },
+    "LINK-7d83c0": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#block"
+      }
+    },
+    "LINK-5b5e86": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/danksharding/"
+      }
+    },
+    "LINK-379c70": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/pbs"
+      }
+    },
+    "LINK-b32d95": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-availability"
+      }
+    },
+    "LINK-ce6188": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2"
+      }
+    },
+    "LINK-a2e3ea": {
+      "type": "link",
+      "values": {
+        "url": "https://l2beat.com/scaling/tvs"
+      }
+    },
+    "LINK-b86d5d": {
+      "type": "link",
+      "values": {
+        "url": "https://l2beat.com/scaling/summary"
+      }
+    },
+    "LINK-8db804": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#fraud-proof"
+      }
+    },
+    "LINK-285fc6": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/dencun/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T23:43:14.418Z",
+      "status": "success"
+    }
+  }
+}

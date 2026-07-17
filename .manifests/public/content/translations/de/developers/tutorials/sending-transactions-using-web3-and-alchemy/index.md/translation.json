@@ -1,0 +1,439 @@
+{
+  "version": 1,
+  "locale": "de",
+  "translatedAt": "2026-06-17T00:49:23.141Z",
+  "englishManifestHash": "abeabd1a0da0",
+  "placeholderOrder": [
+    "LINK-63b4bc",
+    "LINK-1e2240",
+    "LINK-65f5a1",
+    "LINK-754df5",
+    "LINK-84d76c",
+    "LINK-5c9ac9",
+    "CODE-e9cbb0",
+    "CODE-beee7c",
+    "CODE-4731fa",
+    "CODE-beee7c",
+    "CODE-4731fa",
+    "LINK-026b50",
+    "CODE-beee7c",
+    "LINK-885480",
+    "CODE-4731fa",
+    "LINK-055fc2",
+    "CODE-014e0f",
+    "CODE-4731fa",
+    "CODE-4731fa",
+    "LINK-8a50f3",
+    "LINK-dca13e",
+    "LINK-8d4123",
+    "LINK-4d6f08",
+    "LINK-d80c17",
+    "LINK-7f9ae6",
+    "LINK-303158",
+    "LINK-110d5d",
+    "LINK-9a5946",
+    "LINK-a6ccfd",
+    "LINK-d34211",
+    "LINK-76e312",
+    "CODE-21e721",
+    "CODEBLOCK-fcba10",
+    "LINK-dca13e",
+    "LINK-88f803",
+    "CODEBLOCK-a323be",
+    "CODE-e9cbb0",
+    "CODEBLOCK-065740",
+    "CODE-e9cbb0",
+    "CODE-e9cbb0",
+    "CODE-de21f6",
+    "CODE-5ce4be",
+    "LINK-9b6cf0",
+    "CODEBLOCK-490b36",
+    "HTMLTAG-cee394",
+    "CODE-76884f",
+    "CODE-e9cbb0",
+    "CODE-76884f",
+    "CODEBLOCK-5af9ce",
+    "CODE-78377b",
+    "LINK-364bc2",
+    "LINK-a4b1de",
+    "CODE-ce9225",
+    "CODE-663ea1",
+    "LINK-f03b13",
+    "CODE-cd4240",
+    "CODE-2fe840",
+    "LINK-619fbd",
+    "LINK-80b591",
+    "CODE-78377b",
+    "CODE-6a31b6",
+    "CODE-99f391",
+    "CODE-c52233",
+    "CODE-9f2eeb",
+    "CODE-9f2eeb",
+    "CODE-d21f08",
+    "LINK-80eb46",
+    "CODE-6f7915",
+    "CODEBLOCK-d12e41",
+    "LINK-c7daa7",
+    "CODE-a4de46",
+    "IMAGE-5a2d01",
+    "LINK-f975b1",
+    "LINK-9398ff"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-fcba10": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a323be": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-065740": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-490b36": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5af9ce": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d12e41": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "HTMLTAG-cee394": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://git-scm.com/docs/gitignore"
+      }
+    },
+    "CODE-e9cbb0": {
+      "type": "inline-code",
+      "values": {
+        "content": ".env"
+      }
+    },
+    "CODE-beee7c": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_sendTransaction"
+      }
+    },
+    "CODE-4731fa": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_sendRawTransaction"
+      }
+    },
+    "CODE-014e0f": {
+      "type": "inline-code",
+      "values": {
+        "content": "signTransaction(tx, private_key)"
+      }
+    },
+    "CODE-21e721": {
+      "type": "inline-code",
+      "values": {
+        "content": "cd"
+      }
+    },
+    "CODE-de21f6": {
+      "type": "inline-code",
+      "values": {
+        "content": "your-api-url"
+      }
+    },
+    "CODE-5ce4be": {
+      "type": "inline-code",
+      "values": {
+        "content": "your-private-key"
+      }
+    },
+    "CODE-76884f": {
+      "type": "inline-code",
+      "values": {
+        "content": "sendTx.js"
+      }
+    },
+    "CODE-78377b": {
+      "type": "inline-code",
+      "values": {
+        "content": "nonce"
+      }
+    },
+    "CODE-ce9225": {
+      "type": "inline-code",
+      "values": {
+        "content": "transaction"
+      }
+    },
+    "CODE-663ea1": {
+      "type": "inline-code",
+      "values": {
+        "content": "to"
+      }
+    },
+    "CODE-cd4240": {
+      "type": "inline-code",
+      "values": {
+        "content": "value"
+      }
+    },
+    "CODE-2fe840": {
+      "type": "inline-code",
+      "values": {
+        "content": "gas"
+      }
+    },
+    "CODE-6a31b6": {
+      "type": "inline-code",
+      "values": {
+        "content": "signedTx"
+      }
+    },
+    "CODE-99f391": {
+      "type": "inline-code",
+      "values": {
+        "content": "signTransaction"
+      }
+    },
+    "CODE-c52233": {
+      "type": "inline-code",
+      "values": {
+        "content": "PRIVATE_KEY"
+      }
+    },
+    "CODE-9f2eeb": {
+      "type": "inline-code",
+      "values": {
+        "content": "sendSignedTransaction"
+      }
+    },
+    "CODE-d21f08": {
+      "type": "inline-code",
+      "values": {
+        "content": "web3.utils.toHex(‘IPFS hash‘)"
+      }
+    },
+    "CODE-6f7915": {
+      "type": "inline-code",
+      "values": {
+        "content": "node sendTx.js"
+      }
+    },
+    "CODE-a4de46": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x31b98d14007bdee637298086988a0bbd31184523"
+      }
+    },
+    "IMAGE-5a2d01": {
+      "type": "image",
+      "values": {
+        "path": "./mempool.png"
+      }
+    },
+    "LINK-63b4bc": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/"
+      }
+    },
+    "LINK-1e2240": {
+      "type": "link",
+      "values": {
+        "url": "https://auth.alchemyapi.io/signup"
+      }
+    },
+    "LINK-65f5a1": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemy.com/reference/api-overview#with-a-browser-provider"
+      }
+    },
+    "LINK-754df5": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/nodes-as-a-service/"
+      }
+    },
+    "LINK-84d76c": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3"
+      }
+    },
+    "LINK-5c9ac9": {
+      "type": "link",
+      "values": {
+        "url": "https://metamask.io/"
+      }
+    },
+    "LINK-026b50": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.web3js.org/api/web3-eth/function/sendTransaction"
+      }
+    },
+    "LINK-885480": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction"
+      }
+    },
+    "LINK-055fc2": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.web3js.org/api/web3-eth-accounts/function/signTransaction"
+      }
+    },
+    "LINK-8a50f3": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.web3js.org/api/web3-eth/function/sendSignedTransaction"
+      }
+    },
+    "LINK-dca13e": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemy.com/reference/api-overview"
+      }
+    },
+    "LINK-8d4123": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries"
+      }
+    },
+    "LINK-4d6f08": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ethers.org/v5/"
+      }
+    },
+    "LINK-d80c17": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/gWuC7zB"
+      }
+    },
+    "LINK-7f9ae6": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemy.com/reference/transact-api-quickstart"
+      }
+    },
+    "LINK-303158": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemy.com/docs/alchemy-notify"
+      }
+    },
+    "LINK-110d5d": {
+      "type": "link",
+      "values": {
+        "url": "https://auth.alchemyapi.io/signup"
+      }
+    },
+    "LINK-9a5946": {
+      "type": "link",
+      "values": {
+        "url": "https://metamask.io/"
+      }
+    },
+    "LINK-a6ccfd": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemy.com/alchemy/guides/alchemy-for-macs"
+      }
+    },
+    "LINK-d34211": {
+      "type": "link",
+      "values": {
+        "url": "https://dashboard.alchemyapi.io/"
+      }
+    },
+    "LINK-76e312": {
+      "type": "link",
+      "values": {
+        "url": "https://www.sepoliafaucet.com/"
+      }
+    },
+    "LINK-88f803": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemy.com/docs/how-to-send-transactions-on-ethereum"
+      }
+    },
+    "LINK-9b6cf0": {
+      "type": "link",
+      "values": {
+        "url": "https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key"
+      }
+    },
+    "LINK-364bc2": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce"
+      }
+    },
+    "LINK-a4b1de": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount"
+      }
+    },
+    "LINK-f03b13": {
+      "type": "link",
+      "values": {
+        "url": "https://sepoliafaucet.com/"
+      }
+    },
+    "LINK-619fbd": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/guides/alchemy-notify#address-activity-1"
+      }
+    },
+    "LINK-80b591": {
+      "type": "link",
+      "values": {
+        "url": "https://ethgasstation.info/"
+      }
+    },
+    "LINK-80eb46": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#step-8-create-the-transaction"
+      }
+    },
+    "LINK-c7daa7": {
+      "type": "link",
+      "values": {
+        "url": "https://dashboard.alchemyapi.io/mempool"
+      }
+    },
+    "LINK-f975b1": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/A39JVCM"
+      }
+    },
+    "LINK-9398ff": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-and-alchemy"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T00:49:23.141Z",
+      "status": "success"
+    }
+  }
+}

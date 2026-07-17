@@ -1,0 +1,194 @@
+{
+  "version": 1,
+  "locale": "id",
+  "translatedAt": "2026-06-16T23:09:56.778Z",
+  "englishManifestHash": "399a8b76c63f",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-27d871",
+    "LINK-003603",
+    "LINK-a7be73",
+    "LINK-ab55fe",
+    "LINK-345e6c",
+    "LINK-66927d",
+    "CODEBLOCK-375a4e",
+    "CODEBLOCK-82eafb",
+    "LINK-0a4e14",
+    "LINK-9c1fcb",
+    "LINK-ceb569",
+    "LINK-8edbdc",
+    "LINK-6d59ee",
+    "LINK-408550",
+    "LINK-68994c",
+    "CODE-bc10a6",
+    "CODE-207a90",
+    "LINK-acab32",
+    "LINK-7fef0a",
+    "LINK-fdac47",
+    "LINK-fd35ef",
+    "LINK-67d175",
+    "LINK-4cc0b1",
+    "LINK-28567f",
+    "LINK-9ab296"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-375a4e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-82eafb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-bc10a6": {
+      "type": "inline-code",
+      "values": {
+        "content": "N = 3, M = 5"
+      }
+    },
+    "CODE-207a90": {
+      "type": "inline-code",
+      "values": {
+        "content": "N = 4, M = 7"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-27d871": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts/"
+      }
+    },
+    "LINK-003603": {
+      "type": "link",
+      "values": {
+        "url": "/smart-contracts/"
+      }
+    },
+    "LINK-a7be73": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts/"
+      }
+    },
+    "LINK-ab55fe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-345e6c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-66927d": {
+      "type": "link",
+      "values": {
+        "url": "https://unenumerated.blogspot.com/"
+      }
+    },
+    "LINK-0a4e14": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/languages/"
+      }
+    },
+    "LINK-9c1fcb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "LINK-ceb569": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/languages/"
+      }
+    },
+    "LINK-8edbdc": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/compiling/"
+      }
+    },
+    "LINK-6d59ee": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/composability/"
+      }
+    },
+    "LINK-408550": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/oracles/"
+      }
+    },
+    "LINK-68994c": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-2535"
+      }
+    },
+    "LINK-acab32": {
+      "type": "link",
+      "values": {
+        "url": "https://openzeppelin.com/contracts/"
+      }
+    },
+    "LINK-7fef0a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts"
+      }
+    },
+    "LINK-fdac47": {
+      "type": "link",
+      "values": {
+        "url": "https://forum.openzeppelin.com/c/general/16"
+      }
+    },
+    "LINK-fd35ef": {
+      "type": "link",
+      "values": {
+        "url": "https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract"
+      }
+    },
+    "LINK-67d175": {
+      "type": "link",
+      "values": {
+        "url": "https://chain.link/education/smart-contracts"
+      }
+    },
+    "LINK-4cc0b1": {
+      "type": "link",
+      "values": {
+        "url": "https://youtu.be/ZE2HxTmxfrI"
+      }
+    },
+    "LINK-28567f": {
+      "type": "link",
+      "values": {
+        "url": "https://updraft.cyfrin.io"
+      }
+    },
+    "LINK-9ab296": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/eip-1271-smart-contract-signatures/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T23:09:56.778Z",
+      "status": "success"
+    }
+  }
+}

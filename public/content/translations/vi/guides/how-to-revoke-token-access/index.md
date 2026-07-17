@@ -1,50 +1,48 @@
 ---
-title: "Cách thu hồi quyền truy cập hợp đồng thông minh vào tài sản tiền mã hóa của bạn"
-description: "Hướng dẫn thu hồi quyền truy cập token hợp đồng thông minh khai thác"
+title: "Cách thu hồi quyền truy cập của hợp đồng thông minh vào quỹ tiền mã hóa của bạn"
+description: "Hướng dẫn cách thu hồi quyền truy cập token của các hợp đồng thông minh có tính bóc lột"
 lang: vi
 ---
 
-# Cách thu hồi quyền truy cập hợp đồng thông minh vào tài sản tiền mã hóa của bạn
+Hướng dẫn này sẽ chỉ cho bạn cách xem danh sách tất cả các [hợp đồng thông minh](/glossary/#smart-contract) mà bạn đã cho phép truy cập vào quỹ của mình và cách hủy bỏ chúng.
 
-Hướng dẫn này sẽ chỉ cho bạn cách xem danh sách tất cả các [hợp đồng thông minh](/glossary/#smart-contract) mà bạn đã cho phép truy cập vào quỹ tiền của mình và cách hủy các quyền đó.
+Đôi khi, các nhà phát triển độc hại xây dựng các cửa hậu (backdoor) vào các hợp đồng thông minh, cho phép truy cập vào quỹ của những người dùng không hay biết khi họ tương tác với hợp đồng thông minh. Điều thường xảy ra là các nền tảng như vậy yêu cầu người dùng cấp quyền chi tiêu một **số lượng token không giới hạn** nhằm cố gắng tiết kiệm một lượng nhỏ [Gas](/glossary/#gas) trong tương lai, nhưng điều này đi kèm với rủi ro gia tăng.
 
-Đôi khi các nhà phát triển độc hại xây dựng cửa hậu vào các hợp đồng thông minh cho phép truy cập vào quỹ của những người dùng không biết tương tác với hợp đồng thông minh. Điều thường xảy ra là các nền tảng như vậy yêu cầu người dùng cho phép chi tiêu **một số lượng token không giới hạn** để tiết kiệm một lượng nhỏ [gas](/glossary/#gas) trong tương lai, nhưng điều này đi kèm với rủi ro gia tăng.
+Khi một nền tảng có quyền truy cập không giới hạn vào một token trên [ví](/glossary/#wallet) của bạn, họ có thể chi tiêu tất cả các token đó ngay cả khi bạn đã rút quỹ của mình từ nền tảng của họ về ví. Những kẻ xấu vẫn có thể truy cập vào quỹ của bạn và rút chúng về ví của họ mà bạn không còn cách nào để khôi phục.
 
-Khi một nền tảng có quyền truy cập không giới hạn vào token trên [ví](/glossary/#wallet) của bạn, họ có thể chi tiêu tất cả các token đó ngay cả khi bạn đã rút tiền từ nền tảng của họ vào ví của mình. Các tác nhân độc hại vẫn có thể truy cập tiền của bạn và rút chúng vào ví của họ mà không còn tùy chọn khôi phục nào cho bạn.
+Các biện pháp bảo vệ duy nhất là hạn chế sử dụng các dự án mới chưa được kiểm chứng, chỉ chấp thuận những gì bạn cần, hoặc thường xuyên thu hồi quyền truy cập. Vậy, bạn làm điều đó như thế nào?
 
-Các biện pháp bảo vệ duy nhất là hạn chế sử dụng các dự án mới chưa được kiểm tra, chỉ phê duyệt những gì bạn cần hoặc thường xuyên thu hồi quyền truy cập. Thế, bạn làm điều đó như thế nào?
+## Bước 1: Sử dụng các công cụ thu hồi quyền truy cập {#step-1-use-revoke-access-tools}
 
-## Bước 1: Sử dụng thu hồi các công cụ truy cập
-
-Một số trang web cho phép bạn xem và thu hồi các hợp đồng thông minh được kết nối với địa chỉ của bạn. Truy cập trang web và kết nối ví của bạn:
+Một số trang web cho phép bạn xem và thu hồi các hợp đồng thông minh được kết nối với địa chỉ của bạn. Hãy truy cập trang web và kết nối ví của bạn:
 
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Blockscout](https://eth.blockscout.com/apps/revokescout) (Ethereum)
-- [Revoke](https://revoke.cash/) (nhiều mạng)
-- [Unrekt](https://app.unrekt.net/) (nhiều mạng)
-- [EverRevoke](https://everrise.com/everrevoke/) (nhiều mạng)
+- [Blockscout](https://eth.blockscout.com/essential-dapps/revoke) (Ethereum)
+- [Revoke](https://revoke.cash/) (nhiều mạng lưới)
+- [Unrekt](https://app.unrekt.net/) (nhiều mạng lưới)
+- [EverRevoke](https://everrise.com/everrevoke/) (nhiều mạng lưới)
 
-## Bước 2: Kết nối ví của bạn
+## Bước 2: Kết nối ví của bạn {#step-2-connect-your-wallet}
 
-Once you are on the website, click on “Connect wallet”. Trang web sẽ nhắc bạn kết nối ví của mình.
+Khi bạn đang ở trên trang web, hãy nhấp vào “Connect wallet” (Kết nối ví). Trang web sẽ yêu cầu bạn kết nối ví của mình.
 
-. Bạn chỉ thấy các hợp đồng thông minh liên quan đến mạng đã chọn. Ví dụ, nếu bạn kết nối với Ethereum Mainnet, bạn chỉ thấy hợp đồng Ethereum, chứ không thấy hợp đồng từ các chuỗi khác như Polygon.
+Đảm bảo bạn sử dụng cùng một mạng lưới trên ví và trang web của mình. Bạn sẽ chỉ thấy các hợp đồng thông minh liên quan đến mạng lưới đã chọn. Ví dụ: nếu bạn kết nối với Mạng chính Ethereum, bạn sẽ chỉ thấy các hợp đồng Ethereum, không phải các hợp đồng từ các chuỗi khác như Polygon.
 
-## Bước 3: Chọn hợp đồng thông minh bạn thu hồi
+## Bước 3: Chọn một hợp đồng thông minh mà bạn muốn thu hồi {#step-3-select-a-smart-contract-you-wish-to-revoke}
 
-Bạn sẽ thấy tất cả các hợp đồng được phép truy cập vào token của bạn và hạn mức chi tiêu của chúng. Tìm hợp đồng mà bạn muốn chấm dứt.
+Bạn sẽ thấy tất cả các hợp đồng được phép truy cập vào các token của bạn và giới hạn chi tiêu của chúng. Hãy tìm hợp đồng mà bạn muốn chấm dứt.
 
-Nếu bạn không biết chọn hợp đồng nào, bạn có thể chấm dứt tất cả chúng. Điều này sẽ không tạo ra bất kì vấn đề gì cho bạn, nhưng bạn sẽ phải trao quyền mới lần tới bạn tương tác với bất kì hợp đồng này.
+Nếu bạn không biết nên chọn hợp đồng nào, bạn có thể thu hồi tất cả chúng. Điều này sẽ không gây ra bất kỳ vấn đề nào cho bạn, nhưng bạn sẽ phải cấp một bộ quyền mới vào lần tiếp theo bạn tương tác với bất kỳ hợp đồng nào trong số này.
 
-## Bước 4: Hủy truy cập vào quỹ của bạn
+## Bước 4: Thu hồi quyền truy cập vào quỹ của bạn {#step-4-revoke-access-to-your-funds}
 
-Một khi bạn bấm thu hồi, bạn sẽ thấy một giao dịch gợi ý mới trong ví của bạn. Điều này là bình thường. Bạn sẽ phải trả phí thì việc hủy bỏ mới thành công. Tùy thuộc vào mạng lưới mà quá trình sẽ tốn một hoặc vài phút để xử lí.
+Khi bạn nhấp vào thu hồi, bạn sẽ thấy một đề xuất giao dịch mới trong ví của mình. Điều này là hoàn toàn bình thường. Bạn sẽ phải trả phí để việc hủy bỏ thành công. Tùy thuộc vào mạng lưới, quá trình này có thể mất từ một đến vài phút để được xử lý.
 
-Chúng tôi khuyên bạn nên làm mới công cụ thu hồi sau vài phút và kết nối lại ví để kiểm tra lần nữa xem hợp đồng đã thu hồi có biến mất khỏi danh sách hay chưa.
+Chúng tôi khuyên bạn nên làm mới công cụ thu hồi sau vài phút và kết nối lại ví của bạn để kiểm tra kỹ xem hợp đồng đã bị thu hồi có biến mất khỏi danh sách hay không.
 
-<mark>Chúng tôi khuyên bạn không bao giờ cho phép các dự án truy cập không giới hạn vào token của bạn và hãy thường xuyên thu hồi mọi quyền chi tiêu token. Việc thu hồi quyền truy cập token sẽ không bao giờ dẫn đến mất tiền, đặc biệt nếu bạn sử dụng các công cụ được liệt kê ở trên.</mark>
+<mark>Chúng tôi khuyên bạn không bao giờ cho phép các dự án truy cập không giới hạn vào các token của mình và thường xuyên thu hồi tất cả quyền truy cập hạn mức token. Việc thu hồi quyền truy cập token sẽ không bao giờ dẫn đến mất quỹ, đặc biệt nếu bạn sử dụng các công cụ được liệt kê ở trên.</mark>
 
-<br />
+ <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
@@ -56,20 +54,20 @@ Chúng tôi khuyên bạn nên làm mới công cụ thu hồi sau vài phút v�
 </AlertContent>
 </Alert>
 
-## Những câu hỏi thường gặp
+## Các câu hỏi thường gặp {#frequently-asked-questions}
 
-### Việc thu hồi quyền truy cập token có chấm dứt Staking, góp chung, cho vay… hay không?
+### Việc thu hồi quyền truy cập token có đồng thời chấm dứt việc đặt cọc, góp vốn (pooling), cho vay, v.v. không? {#does-revoking-token-access-also-terminate-staking-pooling-lending-etc}
 
-Không, điều này sẽ không ảnh hưởng đến bất kỳ chiến lược [DeFi](/glossary/#defi) nào của bạn. Bạn sẽ vẫn giữ vị thế của mình và tiếp tục nhận phần thưởng,...
+Không, điều đó sẽ không ảnh hưởng đến bất kỳ chiến lược [tài chính phi tập trung (DeFi)](/glossary/#defi) nào của bạn. Bạn sẽ vẫn giữ nguyên các vị thế của mình và tiếp tục nhận được phần thưởng, v.v.
 
-### Ngắt kết nối ví khỏi một dự án có giống với việc xóa quyền sử dụng tiền của tôi không?
+### Việc ngắt kết nối ví khỏi một dự án có giống với việc xóa quyền sử dụng quỹ của tôi không? {#is-disconnecting-a-wallet-from-a-project-the-same-as-removing-permission-to-use-my-funds}
 
-Không, nếu bạn ngắt kết nối ví khỏi dự án, nhưng đã cấp quyền truy cập Token, thì nó vẫn có thể sử dụng những Token đó. Bạn phải thu hồi quyền truy cập lại.
+Không, nếu bạn ngắt kết nối ví của mình khỏi dự án, nhưng bạn đã cấp quyền hạn mức token, họ vẫn có thể sử dụng những token đó. Bạn cần phải thu hồi quyền truy cập đó.
 
-### Khi nào quyền hạn của hợp đồng sẽ hết hạn?
+### Khi nào quyền của hợp đồng sẽ hết hạn? {#when-will-the-contract-permission-expire}
 
-Quyền truy cập của hợp đồng không có ngày hết hạn. Nếu bạn trao quyền truy cập cho hợp đồng, chúng có thể được sử dụng, ngay cả khi đã nhiều năm kể từ ngày được trao quyền.
+Không có ngày hết hạn đối với các quyền của hợp đồng. Nếu bạn cấp quyền cho hợp đồng, chúng có thể được sử dụng, thậm chí nhiều năm sau khi được cấp.
 
-### Tại sao một số dự án cho phép quyền truy cập không giới hạn Token?
+### Tại sao các dự án lại thiết lập hạn mức token không giới hạn? {#why-do-projects-set-unlimited-token-allowance}
 
-Các dự án thường làm vậy để giảm số lượng yêu cầu, nghĩa là người dùng chỉ phải phê duyệt một lần và chỉ trả phí giao dịch một lần. Mặc dù tiện lợi, nhưng nó đầy rẫy nguy hiểm cho người dùng khi ủy quyền cẩu thả trên những trang chưa được kiểm chứng qua thời gian hoặc kiểm toán. Một số ví cho phép bạn tự giới hạn lượng Token phê duyệt để giảm rủi ro. Hãy kiểm tra nhà cung cấp ví để biết thêm thông tin.
+Các dự án thường làm điều này để giảm thiểu số lượng yêu cầu cần thiết, nghĩa là người dùng chỉ phải chấp thuận một lần và chỉ trả phí giao dịch một lần. Mặc dù tiện lợi, nhưng điều này có thể gây nguy hiểm cho người dùng nếu họ chấp thuận một cách bất cẩn trên các trang web chưa được kiểm chứng qua thời gian hoặc chưa được kiểm toán. Một số ví cho phép bạn hạn chế thủ công số lượng token được chấp thuận để giới hạn rủi ro của bạn. Hãy kiểm tra với nhà cung cấp ví của bạn để biết thêm thông tin.

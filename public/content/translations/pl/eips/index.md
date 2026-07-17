@@ -1,32 +1,31 @@
 ---
-title: Wniosek dotyczący ulepszenia Ethereum (EIP)
-description: Podstawowe informacje potrzebne do zrozumienia propozycji EIP
+title: Wprowadzenie do propozycji ulepszeń Ethereum (EIP)
+metaTitle: Propozycje ulepszeń Ethereum (EIP)
+description: Podstawowe informacje potrzebne do zrozumienia EIP
 lang: pl
 ---
 
-# Wprowadzenie do propozycji ulepszeń Ethereum (EIP) {#introduction-to-ethereum-improvement-proposals}
-
 ## Czym są EIP? {#what-are-eips}
 
-[Ethereum Improvement Proposals (EIPs)](https://eips.ethereum.org/) to normy określające potencjalne nowe funkcje lub procesy Ethereum. EIP zawierają specyfikacje techniczne proponowanych zmian i działają jako „źródło prawdy” dla społeczności. Ulepszenia sieci i normy jej stosowania są omawiane i rozwijane w ramach procesu EIP.
+[Propozycje ulepszeń Ethereum (EIP)](https://eips.ethereum.org/) to standardy określające potencjalne nowe funkcje lub procesy dla Ethereum. EIP zawierają specyfikacje techniczne proponowanych zmian i pełnią rolę „źródła prawdy” dla społeczności. Aktualizacje sieci i standardy aplikacji dla [Ethereum](/) są omawiane i rozwijane w ramach procesu EIP.
 
-Każdy w społeczności Ethereum ma możliwość stworzenia EIP. Wytyczne dotyczące pisania EIP są zawarte w [EIP-1](https://eips.ethereum.org/EIPS/eip-1). EIP powinna przede wszystkim zawierać zwięzłą specyfikację techniczną z niewielką ilością motywacji. Autor EIP jest odpowiedzialny za osiągnięcie konsensusu w społeczności i udokumentowanie odmiennych opinii. Ze względu na wysoką barierę techniczną związaną z wysłaniem dobrze sformatowanej propozycji EIP większość autorów EIP to zazwyczaj deweloperzy aplikacji lub protokołów.
+Każdy członek społeczności Ethereum ma możliwość utworzenia EIP. Wytyczne dotyczące pisania EIP są zawarte w [EIP-1](https://eips.ethereum.org/EIPS/eip-1). EIP powinien przede wszystkim zawierać zwięzłą specyfikację techniczną z krótkim uzasadnieniem. Autor EIP jest odpowiedzialny za osiągnięcie konsensusu w społeczności i udokumentowanie alternatywnych opinii. Biorąc pod uwagę wysoką barierę techniczną dla przesłania dobrze sformułowanego EIP, historycznie większość autorów EIP to zazwyczaj programiści aplikacji lub protokołu.
 
-## Dlaczego EIP mają znaczenia? {#why-do-eips-matter}
+## Dlaczego EIP są ważne? {#why-do-eips-matter}
 
-EIP odgrywają kluczową rolę w tym, jak zachodzą zmiany i są udokumentowane na Ethereum. Stanowią one dla ludzi drogę do zaproponowania, debaty i przyjęcia zmian. Istnieją [różne typy EIP](https://eips.ethereum.org/EIPS/eip-1#eip-types), w tym podstawowe EIP dotyczące zmian protokołu niskiego poziomu, które wpływają na konsensus i wymagają uaktualnienia sieci, takie jak [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), oraz prośby ERC dotyczące standardów aplikacji, takie jak [EIP-20](https://eips.ethereum.org/EIPS/eip-20) i [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
+EIP odgrywają kluczową rolę w tym, jak zmiany zachodzą i są dokumentowane w Ethereum. Są one sposobem na proponowanie, debatowanie i przyjmowanie zmian. Istnieją [różne typy EIP](https://eips.ethereum.org/EIPS/eip-1#eip-types), w tym główne EIP (core EIP) dla niskopoziomowych zmian protokołu, które wpływają na konsensus i wymagają aktualizacji sieci, takie jak [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), oraz ERC dla standardów aplikacji, takie jak [EIP-20](https://eips.ethereum.org/EIPS/eip-20) i [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
 
-Każde uaktualnienie sieci składa się z zestawu propozycji EIP, które muszą zostać zaimplementowane przez każdego [klienta Ethereum](/learn/#clients-and-nodes) w sieci. To znaczy, że aby utrzymać konsensus z innymi klientami w sieci głównej Ethereum, deweloperzy klientów muszą upewnić się, że wszyscy wdrożyli wymagane EIP.
+Każda aktualizacja sieci składa się z zestawu EIP, które muszą zostać zaimplementowane przez każdego [klienta Ethereum](/learn/#clients-and-nodes) w sieci. Oznacza to, że aby pozostać w konsensusie z innymi klientami w sieci głównej Ethereum, programiści klientów muszą upewnić się, że zaimplementowali wszystkie wymagane EIP.
 
-Wraz z dostarczeniem specyfikacji technicznej zmian, EIP są jednostką, wokół której odbywa się zarządzanie w Ethereum: każdy może zaproponować jeden, a następnie różni interesariusze w społeczności będą debatować, aby ustalić, czy powinien zostać przyjęty jako standard, czy włączony do aktualizacja sieci. Jako że EIP inne niż podstawowe nie muszą być przyjęte przez wszystkie aplikacje (na przykład można utworzyć zamienny token, który nie implementuje propozycji EIP-20), ale podstawowe EIP muszą być powszechnie przyjęte (ponieważ wszystkie węzły muszą się uaktualnić, aby pozostać częścią tej samej sieci), podstawowe EIP wymagają szerszego konsensusu w społeczności niż EIP inne niż podstawowe.
+Oprócz dostarczania specyfikacji technicznej dla zmian, EIP są jednostką, wokół której odbywa się zarządzanie w Ethereum: każdy może zaproponować EIP, a następnie różni interesariusze w społeczności będą debatować, aby ustalić, czy powinien on zostać przyjęty jako standard lub włączony do aktualizacji sieci. Ponieważ EIP inne niż główne (non-core EIP) nie muszą być przyjmowane przez wszystkie aplikacje (na przykład możliwe jest utworzenie tokena zamiennego, który nie implementuje EIP-20), ale główne EIP muszą być powszechnie przyjęte (ponieważ wszystkie węzły muszą zostać zaktualizowane, aby pozostać częścią tej samej sieci), główne EIP wymagają szerszego konsensusu w społeczności niż EIP inne niż główne.
 
 ## Historia EIP {#history-of-eips}
 
-[Repozytorium Github Ethereum Improvement Proposals (EIPs)](https://github.com/ethereum/EIPs) zostało stworzone w październiku 2015 r. Proces EIP opiera się na procesie [Bitcoin Improvement Proposals (BIP)](https://github.com/bitcoin/bips), który sam w sobie opiera się na [Python Enhancement Proposals (PEP)](https: //www.python.org/dev/peps/).
+Repozytorium [Ethereum Improvement Proposals (EIPs) na GitHub](https://github.com/ethereum/EIPs) zostało utworzone w październiku 2015 roku. Proces EIP opiera się na procesie [Bitcoin Improvement Proposals (BIPs)](https://github.com/bitcoin/bips), który z kolei opiera się na procesie [Python Enhancement Proposals (PEPs)](https://www.python.org/dev/peps/).
 
-Edytorzy EIP są zobowiązani do sprawdzania EIP pod względem poprawności technicznej, formatowania, pisowni, gramatyki oraz stylu kodu. Martin Becze, Vitalik Buterin, Gavin Wood i kilka innych osób było pierwszymi edytorami EIP od 2015 r. do końca 2016 r.
+Redaktorzy EIP mają za zadanie przeglądanie EIP pod kątem poprawności technicznej, problemów z formatowaniem oraz poprawianie pisowni, gramatyki i stylu kodu. Martin Becze, Vitalik Buterin, Gavin Wood i kilku innych byli pierwotnymi redaktorami EIP od 2015 do końca 2016 roku.
 
-Bieżącymi edytorami EIP są
+Obecni redaktorzy EIP to:
 
 - Alex Beregszaszi (@axic)
 - Gavin John (@Pandapip1)
@@ -34,7 +33,7 @@ Bieżącymi edytorami EIP są
 - Matt Garnett (@lightclient)
 - Sam Wilson (@SamWilsn)
 
-Emerytowani edytorzy EIP to
+Emerytowani redaktorzy EIP to:
 
 - Casey Detrio (@cdetrio)
 - Hudson Jameson (@Souptacular)
@@ -44,36 +43,35 @@ Emerytowani edytorzy EIP to
 - Nick Savers (@nicksavers)
 - Vitalik Buterin (@vbuterin)
 
-Jeśli chcesz zostać edytorem EPI, sprawdź [EIP-5069](https://eips.ethereum.org/EIPS/eip-5069).
+Jeśli chciałbyś zostać redaktorem EIP, sprawdź [EIP-5069](https://eips.ethereum.org/EIPS/eip-5069).
 
-Edytorzy EPI decydują, kiedy propozycja jest gotowa, aby stać się EIP, i pomagają autorom EPI w realizacji ich propozycji. [Ethereum Cat Herders](https://www.ethereumcatherders.com/) pomagają w organizowaniu spotkań edytorów EIP ze społecznością (patrz [EIPIP](https://github.com/ethereum-cat-herders/EIPIP)).
+Redaktorzy EIP decydują, kiedy propozycja jest gotowa, aby stać się EIP, i pomagają autorom EIP w posuwaniu ich propozycji naprzód. [Ethereum Cat Herders](https://www.ethereumcatherders.com/) pomagają organizować spotkania między redaktorami EIP a społecznością (zobacz [EIPIP](https://github.com/ethereum-cat-herders/EIPIP)).
 
-Pełny proces normalizacji wraz ze schematem jest opisany w [EIP-1](https://eips.ethereum.org/EIPS/eip-1)
+Pełny proces standaryzacji wraz ze schematem jest opisany w [EIP-1](https://eips.ethereum.org/EIPS/eip-1)
 
 ## Dowiedz się więcej {#learn-more}
 
-Jeśli chcesz dowiedzieć się więcej na temat EPI, sprawdź [witrynę internetową propozycji EPI](https://eips.ethereum.org/) i propozycję [EPI-1](https://eips.ethereum.org/EIPS/eip-1). Oto kilka przydatnych linków:
+Jeśli jesteś zainteresowany przeczytaniem więcej o EIP, sprawdź [stronę internetową EIP](https://eips.ethereum.org/) oraz [EIP-1](https://eips.ethereum.org/EIPS/eip-1). Oto kilka przydatnych linków:
 
 - [Lista wszystkich propozycji ulepszeń Ethereum](https://eips.ethereum.org/all)
 - [Opis wszystkich typów EIP](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 - [Opis wszystkich statusów EIP](https://eips.ethereum.org/EIPS/eip-1#eip-process)
 
-### Projekty edukacyjne dla społeczności {#community-projects}
+### Społecznościowe projekty edukacyjne {#community-projects}
 
-- [PEEPanEIP](https://www.youtube.com/playlist?list=PL4cwHXAawZxqu0PKKyMzG_3BJV_xZTi1F) — *PEEPanEIP to seria filmów edukacyjnych, która przedstawia propozycje ulepszeń Ethereum (EIP) oraz kluczowe cechy przyszłych uaktualnień.*
-- [EIPs For Nerds](https://ethereum2077.substack.com/t/eip-research) — *EIPs For Nerds zapewnia obszerne przeglądy różnych propozycji ulepszeń Ethereum (EIP) w stylu ELI5, w tym podstawowych EIP oraz EIP warstwy aplikacji/infrastruktury (ERC), mające edukować czytelników i kształtować konsensus wokół proponowanych zmian w protokole Ethereum.*
-- [EIPs.wtf](https://www.eips.wtf/) — *EIPs.wtf zapewnia dodatkowe informacje o propozycjach ulepszeń Ethereum (EIP), włącznie z ich statusem, szczegółami implementacji, powiązanymi żądaniami pull request oraz opiniami społeczności.*
-- [EIP.Fun](https://eipfun.substack.com/) — *EIP.Fun dostarcza najnowsze wiadomości o propozycjach ulepszeń Ethereum (EIP), aktualizacjach na temat spotkań EIP i nie tylko.*
-- [EIPs Insight](https://eipsinsight.com/) — *EIPs Insight to przedstawienie stanu procesu i statystyk propozycji ulepszeń Ethereum (EIP) zgodnie z informacjami zebranymi z różnych źródeł.*
+- [PEEPanEIP](https://www.youtube.com/playlist?list=PL4cwHXAawZxqu0PKKyMzG_3BJV_xZTi1F) — *PEEPanEIP to edukacyjna seria wideo, która omawia propozycje ulepszeń Ethereum (EIP) i kluczowe funkcje nadchodzących aktualizacji.*
+- [EIPs.wtf](https://www.eips.wtf/) — *EIPs.wtf dostarcza dodatkowych informacji na temat propozycji ulepszeń Ethereum (EIP), w tym ich statusu, szczegółów implementacji, powiązanych pull requestów i opinii społeczności.* 
+- [EIP.Fun](https://eipfun.substack.com/) — *EIP.Fun dostarcza najnowsze wiadomości na temat propozycji ulepszeń Ethereum (EIP), aktualizacje ze spotkań dotyczących EIP i wiele więcej.*
+- [EIPs Insight](https://eipsinsight.com/) — *EIPs Insight to reprezentacja stanu procesu propozycji ulepszeń Ethereum (EIP) i statystyk na podstawie informacji zebranych z różnych źródeł.*
 
-## Uczestnictwo {#participate}
+## Weź udział {#participate}
 
-Każdy może utworzyć EIP. Przed przesłaniem propozycji należy przeczytać [EIP-1](https://eips.ethereum.org/EIPS/eip-1), w której opisano proces EIP i sposób pisania EIP, a także zasięgnąć opinii na stronie [Ethereum Magicians](https://ethereum-magicians.org/), na której propozycje są najpierw omawiane ze społecznością przed złożeniem projektu.
+Każdy może utworzyć EIP. Przed przesłaniem propozycji należy przeczytać [EIP-1](https://eips.ethereum.org/EIPS/eip-1), który opisuje proces EIP i sposób pisania EIP, a także poprosić o opinie na forum [Ethereum Magicians](https://ethereum-magicians.org/), gdzie propozycje są najpierw omawiane ze społecznością przed przesłaniem wersji roboczej.
 
 ## Źródła {#references}
 
 <cite class="citation">
 
-Zawartość strony dostarczona w części z [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) przez Hudsona Jamesona
+Treść strony pochodzi częściowo z [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) autorstwa Hudsona Jamesona
 
 </cite>

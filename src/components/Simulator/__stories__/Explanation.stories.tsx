@@ -1,7 +1,7 @@
 import { pickBy } from "lodash"
 import type { SVGProps } from "react"
-import type { Meta, StoryObj } from "@storybook/react"
-import { fn } from "@storybook/test"
+import { fn } from "storybook/test"
+import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import { viewportModes } from "@/storybook/modes"
 

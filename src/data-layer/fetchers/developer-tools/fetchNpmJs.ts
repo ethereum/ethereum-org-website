@@ -1,6 +1,4 @@
-import { retry, sleep } from "@/lib/utils/fetch"
-
-import type { DeveloperTool } from "./utils"
+import { fetchRetry, sleep } from "@/data-layer/fetchers/fetchRetry"
 
 type ParsedNpmUrl = {
   packageName: string
@@ -37,7 +35,7 @@ async function fetchSinglePackageDownloads(
   packageName: string
 ): Promise<number | null> {
   try {
-    const response = await fetch(
+    const response = await fetchRetry(
       `https://api.npmjs.org/downloads/point/last-week/${encodeURIComponent(packageName)}`
     )
 
@@ -94,35 +92,32 @@ async function fetchBulkDownloads(
     const packageList = batch.join(",")
 
     try {
-      // Retry with exponential backoff (3 attempts: 0ms, 1s, 2s)
-      await retry(async () => {
-        const response = await fetch(
-          `https://api.npmjs.org/downloads/point/last-week/${packageList}`
+      const response = await fetchRetry(
+        `https://api.npmjs.org/downloads/point/last-week/${packageList}`
+      )
+
+      if (!response.ok) {
+        throw new Error(
+          `npm downloads API returned ${response.status} for unscoped batch`
         )
+      }
 
-        if (!response.ok) {
-          throw new Error(
-            `npm downloads API returned ${response.status} for unscoped batch`
-          )
-        }
+      const data = await response.json()
 
-        const data = await response.json()
-
-        // Handle single-package response: { downloads: number, package: string }
-        // vs multi-package response: { "pkg1": { downloads: n }, "pkg2": { downloads: m } }
-        if ("downloads" in data && "package" in data) {
-          results.set(data.package, data.downloads)
-        } else {
-          for (const [pkg, info] of Object.entries(data)) {
-            if (info && typeof info === "object" && "downloads" in info) {
-              results.set(pkg, (info as { downloads: number }).downloads)
-            }
+      // Handle single-package response: { downloads: number, package: string }
+      // vs multi-package response: { "pkg1": { downloads: n }, "pkg2": { downloads: m } }
+      if ("downloads" in data && "package" in data) {
+        results.set(data.package, data.downloads)
+      } else {
+        for (const [pkg, info] of Object.entries(data)) {
+          if (info && typeof info === "object" && "downloads" in info) {
+            results.set(pkg, (info as { downloads: number }).downloads)
           }
         }
-      })
+      }
     } catch (err) {
       console.error(
-        `Failed to fetch bulk npm downloads for batch ${i / BATCH_SIZE + 1} after retries:`,
+        `Failed to fetch bulk npm downloads for batch ${i / BATCH_SIZE + 1}:`,
         err
       )
       // Continue with next batch instead of failing entirely
@@ -137,33 +132,46 @@ async function fetchBulkDownloads(
   return results
 }
 
-export async function fetchNpmJs(
-  appData: DeveloperTool[]
-): Promise<DeveloperTool[]> {
+type ToolWithPackageUrls = {
+  packages: Array<string | { href: string }>
+} & Record<string, unknown>
+
+type ToolWithNpmData<T extends ToolWithPackageUrls> = Omit<T, "packages"> & {
+  packages: {
+    href: string
+    downloads?: number
+  }[]
+}
+
+export async function fetchNpmJs<T extends ToolWithPackageUrls>(
+  appData: T[]
+): Promise<ToolWithNpmData<T>[]> {
   // Collect all unique npm URLs and their package names
   const parsedUrls: ParsedNpmUrl[] = []
   const seenHrefs = new Set<string>()
 
   for (const app of appData) {
-    for (const repo of app.repos) {
-      if (seenHrefs.has(repo.href)) continue
-      seenHrefs.add(repo.href)
+    for (const pkgEntry of app.packages) {
+      const pkgUrl = typeof pkgEntry === "string" ? pkgEntry : pkgEntry.href
+      if (seenHrefs.has(pkgUrl)) continue
+      seenHrefs.add(pkgUrl)
 
-      const parsed = parseNpmUrl(repo.href)
+      const parsed = parseNpmUrl(pkgUrl)
       if (parsed) {
         parsedUrls.push(parsed)
       }
     }
   }
 
-  if (parsedUrls.length === 0) {
-    return appData
+  const downloadsMap = new Map<string, number>()
+  if (parsedUrls.length > 0) {
+    console.log(`Fetching npm downloads for ${parsedUrls.length} packages`)
+    const packageNames = parsedUrls.map((p) => p.packageName)
+    const fetchedMap = await fetchBulkDownloads(packageNames)
+    for (const [pkg, downloads] of fetchedMap) {
+      downloadsMap.set(pkg, downloads)
+    }
   }
-
-  console.log(`Fetching npm downloads for ${parsedUrls.length} packages`)
-
-  const packageNames = parsedUrls.map((p) => p.packageName)
-  const downloadsMap = await fetchBulkDownloads(packageNames)
 
   // Create lookup from original href to downloads
   const hrefToDownloads = new Map<string, number>()
@@ -180,10 +188,13 @@ export async function fetchNpmJs(
 
   // Enrich the existing data with downloads
   return appData.map((app) => ({
-    ...app,
-    repos: app.repos.map((repo) => {
-      const downloads = hrefToDownloads.get(repo.href)
-      return downloads !== undefined ? { ...repo, downloads } : repo
+    ...(app as Omit<T, "packages">),
+    packages: app.packages.map((pkgEntry) => {
+      const pkgUrl = typeof pkgEntry === "string" ? pkgEntry : pkgEntry.href
+      const downloads = hrefToDownloads.get(pkgUrl)
+      return downloads !== undefined
+        ? { href: pkgUrl, downloads }
+        : { href: pkgUrl }
     }),
   }))
 }

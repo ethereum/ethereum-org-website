@@ -2,13 +2,12 @@
 title: Account abstraction
 description: An overview of Ethereum's plans to make user accounts simpler and safer
 lang: en
+template: roadmap
 summaryPoints:
   - Account abstraction makes it much easier to build smart contract wallets
   - Smart contract wallets make it much easier to manage access to Ethereum accounts
   - Lost and exposed keys can be recovered using multiple backups
 ---
-
-# Account abstraction {#account-abstraction}
 
 Most existing users interact with [Ethereum](/) using **[externally owned accounts (EOAs)](/glossary/#eoa)**. This limits how users can interact with Ethereum. For example, it makes it difficult to do batches of transactions and requires users to always keep an ETH balance to pay transaction fees.
 
@@ -52,7 +51,7 @@ Gas management improves considerably. Applications can pay users' gas fees or al
 
 Currently, smart contract wallets are challenging to implement as they rely on complex code wrapping standard transactions. Ethereum can change this by allowing smart contracts to directly initiate transactions, embedding logic in Ethereum smart contracts rather than relying on external relayers.
 
-### EIP-4337: Account abstraction without protocol changes
+### EIP-4337: Account abstraction without protocol changes {#eip-4337-account-abstraction-without-protocol-changes}
 
 EIP-4337 enables native smart contract wallet support without modifying Ethereum's core protocol. It introduces `UserOperation` objects collected into transaction bundles by validators, simplifying wallet development. The EIP-4337 EntryPoint contract was deployed to Ethereum Mainnet on 1st March 2023 and has facilitated the creation of over 26 million smart wallets and 170 million UserOperations.
 

@@ -2,6 +2,7 @@
 
 import { type ReactNode, useEffect, useMemo, useState } from "react"
 import { useSearchParams } from "next/navigation"
+import { useTranslations } from "next-intl"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -22,15 +23,12 @@ import { Template } from "./Template"
 import type { PathId, SimulatorData } from "./types"
 import { getValidPathId, isValidPathId } from "./utils"
 
-import { usePathname, useRouter } from "@/i18n/routing"
-
 type SimulatorProps = {
   children: ReactNode
   data: SimulatorData
 }
 export const Simulator = ({ children, data }: SimulatorProps) => {
-  const router = useRouter()
-  const pathname = usePathname()
+  const t = useTranslations("component-wallet-simulator")
   const searchParams = useSearchParams()
 
   // Track step
@@ -45,8 +43,11 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
   // If pathId present, modal is open, else closed
   const isOpen = !!pathId
 
+  // Shallow history updates only: router.replace() serves same-pathname navs
+  // from the client cache, which restores the URL it was created with -- on a
+  // direct load that URL includes ?sim=, making the modal impossible to close
   const clearUrlParams = () => {
-    router.replace(pathname, { scroll: false })
+    window.history.replaceState(null, "", window.location.pathname)
   }
 
   // When simulator closed: log event, clear URL params and close modal
@@ -95,15 +96,10 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
   }
 
   const openPath = (id: PathId): void => {
-    // Set new pathId in navigation
-    router.replace(
-      {
-        pathname,
-        query: {
-          [PATH_ID_QUERY_PARAM]: id,
-        },
-      },
-      { scroll: false }
+    window.history.replaceState(
+      null,
+      "",
+      `${window.location.pathname}?${PATH_ID_QUERY_PARAM}=${id}`
     )
   }
 
@@ -129,11 +125,11 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
     if (!nextPathId) return null
     const { title, Icon } = data[nextPathId]
     return {
-      primaryText: "Start next lesson",
+      primaryText: t("sim-start-next-lesson"),
       secondaryText: title,
       Icon,
     }
-  }, [data, simulator])
+  }, [data, simulator, t])
 
   const logFinalCta = (): void => {
     trackCustomEvent({
@@ -146,7 +142,7 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
   return (
     <div
       id={SIMULATOR_ID}
-      className="grid w-full scroll-mt-[5rem] place-items-center scroll-smooth bg-gradient-to-r from-accent-a/10 to-accent-c/10 p-4 md:p-16 dark:bg-gradient-to-tr dark:from-primary/20 dark:from-20% dark:via-accent-a/20 dark:via-60% dark:to-accent-c/20 dark:to-95%"
+      className="grid w-full scroll-mt-[5rem] place-items-center scroll-smooth bg-linear-primary p-4 md:p-16"
     >
       <Flex className="w-full max-w-[1000px] items-center gap-16 bg-background px-4 py-8 text-center max-md:flex-col md:p-16 md:text-start md:max-lg:gap-8">
         {/* TEXT CONTENT */}
@@ -157,7 +153,7 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
             const sim = data[id]
             const pathSummary = {
               primaryText: sim.title,
-              secondaryText: "How to?",
+              secondaryText: t("sim-how-to"),
               Icon: sim.Icon,
             }
             return (

@@ -1,10 +1,8 @@
 ---
-title: "Davranış kuralları"
-description: "ethereum.org alanlarında ulaşmaya çalıştığımız temel standartlar."
+title: Davranış kuralları
+description: ethereum.org alanlarında ulaşmaya çalıştığımız temel standartlar.
 lang: tr
 ---
-
-# Davranış Kuralları {#code-of-conduct}
 
 ## Misyon {#mission}
 
@@ -12,66 +10,66 @@ Ethereum için en kapsamlı ve erişilebilir bilgi merkezini geliştirmek ve sü
 
 ## Değerler {#values}
 
-ethereum.org topluluğu şunlar olmaya çalışır:
+ethereum.org topluluğu şunları hedeflemektedir:
 
-- Eğitici ve herkesin Ethereum'u anlamasına yardımcı olmayı hedefleyen
-- Kapsayıcı
-- Erişilebilir
-- Topluluk odaklı
-- Ethereum'un temel teknolojisine ve kullanım alanlarına odaklı
-- Ethereum kavramlarına ve tasarım ilkelerine odaklı
+- eğitici, herkesin Ethereum'u anlamasına yardımcı olmayı amaçlayan
+- kapsayıcı
+- erişilebilir
+- topluluk odaklı
+- Ethereum'un temel teknolojisine ve kullanım durumlarına odaklanan
+- Ethereum kavramlarına ve tasarım ilkelerine odaklanan
 
 ## Ne değiliz {#what-we-are-not}
 
-- Ethereum Foundation web sitesi
-- Herhangi bir türde yatırımı veya vurgunculuğu teşvik eden bir platform
-- Bireysel projeleri veya kuruluşları öne çıkaran ya da destekleyen bir platform
-- Bir DEX, CEX veya başka herhangi bir finansal platform
-- Herhangi bir türde finansal ya da hukuki tavsiye veren bir platform
+- Ethereum Vakfı web sitesi
+- Yatırımları teşvik eden veya herhangi bir şekilde kâr amacı güden bir platform
+- Bireysel projeleri veya kuruluşları öne çıkaran veya destekleyen bir platform
+- Bir DEX, CEX veya başka herhangi bir finansal platform türü
+- Herhangi bir finansal veya yasal tavsiye veren bir platform
 
-## Davranış Kuralları {#code-of-conduct}
+## Davranış kuralları {#code-of-conduct-2}
 
 ### Taahhüt {#pledge}
 
-Açık katılım, ethereum.org anlayışının merkezindedir. Binlerce katkıda bulunanın desteğiyle sürdürülen bir web sitesi ve topluluğuz ve bu ancak sıcak ve katılımcı bir ortamı sürdürürsek mümkündür. Bu amaçla, bu siteye katkıda bulunanlar, tüm ethereum.org platformları ve topluluk alanlarında tüm katılımcılar için tacizden uzak bir ortam sağlamayı taahhüt eder. Ethereum.org topluluğu, yapıcı ve arkadaşça bir şekilde katılmak isteyen herkesi yaşı, engellilik durumu, etnik kökeni, cinsiyet özellikleri, cinsiyet kimliği, deneyim seviyesi, uzmanlık alanı, eğitim düzeyi, sosyo-ekonomik durumu, milliyeti, dış görünüşü, ırkı, dini veya çeşitliliğin herhangi bir diğer boyutundan bağımsız olarak memnuniyetle karşılar ve değer verir.
+Açık katılım, ethereum.org ahlakının temelidir. Biz, binlerce katkıda bulunan tarafından sürdürülen bir web sitesi ve topluluğuz ve bu ancak misafirperver, katılımcı bir ortamı sürdürürsek mümkündür. Bu amaçla, bu siteye katkıda bulunanlar, tüm ethereum.org platformlarında ve topluluk alanlarında tüm katılımcılar için tacizden uzak bir ortam sağlamayı taahhüt ederler. ethereum.org topluluğu; yaş, engellilik, etnik köken, cinsiyet özellikleri, cinsiyet kimliği, deneyim düzeyi, uzmanlık alanı, eğitim, sosyo-ekonomik durum, milliyet, kişisel görünüm, ırk, din veya çeşitliliğin diğer herhangi bir boyutuna bakılmaksızın yapıcı ve dostane bir şekilde katılmak isteyen herkesi memnuniyetle karşılar ve onlara değer verir.
 
 ### Kapsam {#scope}
 
-Bu Davranış Kuralları, tüm ethereum.org alanları (GitHub, Discord, Figma, Crowdin, X (eski adıyla Twitter) ve diğer çevrimiçi platformlar gibi) için geçerlidir. Ayrıca topluluğun buluşmalar, konferanslar ve etkinlikler gibi gerçek hayattaki halka açık alanlarda temsil edildiği durumlarda da geçerlidir.
+Bu Davranış Kuralları, tüm ethereum.org alanları (GitHub, Discord, Figma, Crowdin, X (eski adıyla Twitter) ve diğer çevrimiçi platformlar gibi) için geçerlidir ve ayrıca topluluğun buluşmalar, konferanslar ve etkinlikler gibi gerçek dünyadaki kamusal alanlarda temsil edildiği durumlarda da geçerlidir.
 
 ### Standartlarımız {#our-standards}
 
-Olumlu bir ortam yaratmaya katkıda bulunan davranışlara örnek olarak şunlar verilebilir:
+Olumlu bir ortam yaratmaya katkıda bulunan davranış örnekleri şunları içerir:
 
-- Sıcak ve kapsayıcı bir dil kullanmak
+- Misafirperver ve kapsayıcı bir dil kullanmak
 - Farklı bakış açılarına ve deneyimlere saygılı olmak
-- Yapıcı eleştiriyi olgunlukla kabul etmek ve/veya empati kurarak yöneltmek
+- Yapıcı eleştirileri nezaketle kabul etmek ve/veya empati kurarak sağlamak
 - Çatışmaları veya anlaşmazlıkları çözerken sakin ve profesyonel davranmak
 - Diğer topluluk üyelerine karşı empati ve hoşgörü göstermek
 - Topluluktaki yeni sesleri teşvik etmek ve duyurmak
 
-Katılımcıların kabul edilemez davranışlarına örnek olarak şunlar verilebilir:
+Katılımcılar tarafından sergilenen kabul edilemez davranış örnekleri şunları içerir:
 
-- Fiziksel şiddet, fiziksel şiddetle tehdit etmek veya her türlü fiziksel şiddeti teşvik etmek
-- Cinsel içerikli dil veya görseller kullanmak veya istenmeyen cinsel ilgi göstermek
-- Başka bir bireyin kimliğine bürünmek veya bir kişi ya da kuruluşla dürüst olmayan bir şekilde bağlantı iddia etmek
-- Trollemek, hakaret içeren/aşağılayıcı yorumlar ve kişisel veya siyasi saldırılar
-- Diğer topluluk üyelerini halka açık veya özel kanallarda taciz etmek
-- Açık izin olmaksızın, başkalarının fiziksel veya elektronik adres gibi özel bilgilerini yayınlamak
-- Sosyal mühendislik, dolandırıcılık veya diğer topluluk üyelerini farklı şekillerde manipüle etmek
-- Kişisel maddi veya maddi olmayan kazanç için yatırımların, jetonların, projelerin veya başka herhangi bir şeyin tanıtımını yapmak
-- Konu dışı içeriklerle sunucuları spam'lemek
-- Topluluk moderatörlerinden gelen istekleri veya uyarıları dikkate almamak
-- Profesyonel bir ortamda makul olarak uygunsuz kabul edilebilecek diğer davranışlarda bulunmak
+- Fiziksel şiddet, fiziksel şiddet tehdidi veya herhangi bir şekilde fiziksel şiddeti teşvik etmek
+- Cinselleştirilmiş dil veya görseller kullanmak ya da istenmeyen cinsel ilgi dayatmak
+- Başka bir bireyin kimliğine bürünmek veya başka bir şekilde bir birey veya kuruluşla dürüst olmayan bir şekilde bağlantı iddia etmek
+- Trolleme, aşağılayıcı/küçümseyici yorumlar ve kişisel veya siyasi saldırılar
+- Diğer topluluk üyelerini genel veya özel kanallarda taciz etmek
+- Açık izin olmadan fiziksel veya elektronik bir adres gibi başkalarının özel bilgilerini yayınlamak
+- Sosyal mühendislik, dolandırıcılık veya diğer topluluk üyelerini başka bir şekilde manipüle etmek
+- Kişisel maddi veya maddi olmayan kazanç için yatırımları, token'ları, projeleri veya başka herhangi bir şeyi teşvik etmek
+- Sunuculara konu dışı içeriklerle spam yapmak
+- Topluluk moderatörlerinin isteklerini veya uyarılarını dikkate almamak
+- Profesyonel bir ortamda makul olarak uygunsuz sayılabilecek diğer davranışlarda bulunmak
 
-### Bildirme {#reporting}
+### Bildirim {#reporting}
 
-Topluluk üyelerinin kendi kendilerini denetlemesine olanak tanımak amacıyla her şeyi açık ve halka açık kanallarda yapmaya çalıştığımız için, davranış kuralları ihlalleri normalde topluluk tarafından görülebilir olacaktır.
+Her şeyi açık, genel kanallarda yapmaya çalıştığımız ve topluluk üyelerinin kendi kendilerini denetlemelerine izin verdiğimiz için, davranış kurallarının ihlalleri normalde topluluk tarafından görülebilir olacaktır.
 
-Ancak dikkat edilmesi gerektiğini düşündüğünüz bir şey olursa, bunu moderasyon rolü olan birine (ör. discord rehberi) iletebilirsiniz, böylece onlar da durumu araştırmaya ve uygun karşılığı vermeye yardımcı olabilirler.
+Ancak, dikkate alınması gerektiğini düşündüğünüz bir şey olursa, araştırmaya ve uygun yanıtı uygulamaya yardımcı olabilmeleri için bunu moderasyon rolüne sahip biriyle (ör. discord rehberi) paylaşabilirsiniz.
 
-Bildirimde bulunurken, lütfen belirli örnekler ve zaman damgaları da dâhil olmak üzere mümkün olduğunca fazla ayrıntı ekleyin. Bu, adil bir sonuç alınmasını sağlamaya yardımcı olacaktır.
+Bildirimde bulunurken, lütfen belirli örnekler ve zaman damgaları da dahil olmak üzere mümkün olduğunca fazla ayrıntı ekleyin. Bu, adil bir sonuç elde edilmesine yardımcı olacaktır.
 
 ### Yaptırım {#enforcement}
 
-İhlalin ciddiyetine bağlı olarak, davranış kurallarını ihlal eden kişiler, ethereum.org topluluklarından uyarı, geçici yasak veya kalıcı yasak alabilirler.
+İhlalin ciddiyetine bağlı olarak, davranış kurallarını ihlal eden kişiler ethereum.org topluluklarından uyarılar, geçici yasaklamalar veya kalıcı yasaklamalar alabilirler.

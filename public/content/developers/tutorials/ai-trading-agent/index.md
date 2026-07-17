@@ -4,6 +4,7 @@ description: In this tutorial you learn how to make a simple AI trading agent. T
 author: Ori Pomerantz
 tags: ["AI", "trading", "agent", "python"]
 skill: intermediate
+breadcrumb: AI trading agent
 published: 2026-02-13
 lang: en
 sidebarDepth: 3

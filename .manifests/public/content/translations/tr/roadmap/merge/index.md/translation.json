@@ -1,0 +1,224 @@
+{
+  "version": 1,
+  "locale": "tr",
+  "translatedAt": "2026-06-19T23:41:27.151Z",
+  "englishManifestHash": "256c8a0080ae",
+  "placeholderOrder": [
+    "LINK-7557df",
+    "LINK-a21a82",
+    "LINK-d1cc3e",
+    "LINK-07eb0a",
+    "LINK-2655ce",
+    "LINK-1baecb",
+    "LINK-ee43a0",
+    "LINK-dd9e76",
+    "COMPONENT-f9d517",
+    "CODE-b64eec",
+    "CODE-b64eec",
+    "COMPONENT-2462cc",
+    "COMPONENT-03b2a8",
+    "HTMLTAG-030613",
+    "LINK-a1f74a",
+    "LINK-ebe6d6",
+    "COMPONENT-3fdce8",
+    "LINK-cdc605",
+    "COMPONENT-64a3ab",
+    "HTMLTAG-0e9c8f",
+    "LINK-3dc3d4",
+    "LINK-5996f4",
+    "COMPONENT-a59630",
+    "COMPONENT-42e9c6",
+    "LINK-8ee4c0",
+    "COMPONENT-dcc83d",
+    "LINK-5bf45f",
+    "LINK-1baecb",
+    "LINK-335470",
+    "LINK-f9bc7f"
+  ],
+  "placeholderMap": {
+    "COMPONENT-f9d517": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "id": "staking-node-operators"
+      }
+    },
+    "CODE-b64eec": {
+      "type": "inline-code",
+      "values": {
+        "content": "fee recipient"
+      }
+    },
+    "COMPONENT-2462cc": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "id": "node-operators"
+      }
+    },
+    "COMPONENT-03b2a8": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "id": "developers"
+      }
+    },
+    "HTMLTAG-030613": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer"
+      }
+    },
+    "COMPONENT-3fdce8": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "title": "Misconception: &quot;Running a node requires staking 32 ETH.&quot;"
+      }
+    },
+    "LINK-cdc605": {
+      "type": "link",
+      "values": {
+        "url": "/run-a-node/"
+      }
+    },
+    "COMPONENT-64a3ab": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "title": "Misconception: &quot;The Merge failed to reduced gas fees.&quot;"
+      }
+    },
+    "HTMLTAG-0e9c8f": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698"
+      }
+    },
+    "LINK-3dc3d4": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2/"
+      }
+    },
+    "LINK-5996f4": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "COMPONENT-a59630": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "title": "Misconception: &quot;Transactions were accelerated substantially by The Merge.&quot;"
+      }
+    },
+    "COMPONENT-42e9c6": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "title": "Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
+      }
+    },
+    "LINK-8ee4c0": {
+      "type": "link",
+      "values": {
+        "url": "/staking/withdrawals/"
+      }
+    },
+    "COMPONENT-dcc83d": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "title": "Misconception: &quot;Now that The Merge is complete, and withdrawals are enabled, stakers could all exit at once.&quot;"
+      }
+    },
+    "LINK-7557df": {
+      "type": "link",
+      "values": {
+        "url": "/ethereum-forks/#frontier"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-d1cc3e": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/beacon-chain/"
+      }
+    },
+    "LINK-07eb0a": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#mainnet"
+      }
+    },
+    "LINK-1baecb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/"
+      }
+    },
+    "LINK-2655ce": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-ee43a0": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge/issuance/"
+      }
+    },
+    "LINK-dd9e76": {
+      "type": "link",
+      "values": {
+        "url": "/security/#eth2-token-scam"
+      }
+    },
+    "LINK-a1f74a": {
+      "type": "link",
+      "values": {
+        "url": "/energy-consumption/"
+      }
+    },
+    "LINK-ebe6d6": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/"
+      }
+    },
+    "LINK-5bf45f": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming"
+      }
+    },
+    "LINK-335470": {
+      "type": "link",
+      "values": {
+        "url": "https://youtu.be/7ggwLccuN5s?t=101"
+      }
+    },
+    "LINK-f9bc7f": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T23:41:27.151Z",
+      "status": "success"
+    }
+  }
+}

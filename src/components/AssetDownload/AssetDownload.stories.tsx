@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import AssetDownload from "."
 
@@ -21,8 +21,8 @@ type Story = StoryObj<typeof meta>
 export const WithArtist: Story = {
   args: {
     title: "Ethereum hero",
-    alt: "Ethereum hero",
     image: hero,
+    perRow: 1,
     artistName: "Liam Cobb",
     artistUrl: "https://liamcobb.com/",
   },
@@ -30,9 +30,9 @@ export const WithArtist: Story = {
 
 export const BrandAsset: Story = {
   args: {
-    title: "ETH Diamond Glyph",
-    alt: "ETH Diamond Glyph",
+    title: "ETH diamond (gray)",
     image: ethDiamondBlack,
-    svgUrl: "/images/assets/svgs/eth-diamond-glyph.svg",
+    perRow: 3,
+    svgUrl: "/images/assets/svgs/eth-diamond-black.svg",
   },
 }

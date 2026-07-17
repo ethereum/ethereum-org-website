@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "locale": "ko",
+  "translatedAt": "2026-06-19T18:36:51.889Z",
+  "englishManifestHash": "7a640a4a1ddc",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-5521ad",
+    "LINK-133c8f",
+    "LINK-a2e07f",
+    "LINK-fe97b3",
+    "LINK-a1b58e",
+    "LINK-b1c08f",
+    "LINK-b1ab2c",
+    "LINK-1e5648",
+    "LINK-a17248",
+    "LINK-0373d3",
+    "LINK-51eca6",
+    "LINK-fa35df",
+    "LINK-912027"
+  ],
+  "placeholderMap": {
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-5521ad": {
+      "type": "link",
+      "values": {
+        "url": "https://youtu.be/ZHNrAXf3RDE?t=929"
+      }
+    },
+    "LINK-133c8f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client"
+      }
+    },
+    "LINK-a2e07f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/a16z/helios"
+      }
+    },
+    "LINK-fe97b3": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/go-ethereum/tree/master/beacon/light"
+      }
+    },
+    "LINK-a1b58e": {
+      "type": "link",
+      "values": {
+        "url": "https://nimbus.guide/el-light-client.html"
+      }
+    },
+    "LINK-b1c08f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ethportal.net/"
+      }
+    },
+    "LINK-a17248": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/"
+      }
+    },
+    "LINK-b1ab2c": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/verkle-trees/"
+      }
+    },
+    "LINK-1e5648": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/statelessness/"
+      }
+    },
+    "LINK-0373d3": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=EPZeFXau-RE"
+      }
+    },
+    "LINK-51eca6": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=85MeiMA4dD8"
+      }
+    },
+    "LINK-fa35df": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=ZHNrAXf3RDE"
+      }
+    },
+    "LINK-912027": {
+      "type": "link",
+      "values": {
+        "url": "https://snakecharmers.ethereum.org/the-winding-road-to-functional-light-clients/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T18:36:51.889Z",
+      "status": "success"
+    }
+  }
+}

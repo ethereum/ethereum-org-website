@@ -1,6 +1,6 @@
 import * as React from "react"
-import { Meta, StoryObj } from "@storybook/react"
-import { expect, fireEvent, waitFor, within } from "@storybook/test"
+import { expect, fireEvent, waitFor, within } from "storybook/test"
+import { Meta, StoryObj } from "@storybook/nextjs"
 
 import { Stack } from "../ui/flex"
 

@@ -1,5 +1,7 @@
 import { useLocale } from "next-intl"
 
+import { dateTimeFormat } from "@/lib/utils/date"
+
 type LocaleDateTimeProps = {
   utcDateTime: string
   hideDate?: boolean
@@ -45,7 +47,7 @@ const LocaleDateTime = ({
   }
   return (
     <time dateTime={utcDateTime}>
-      {new Intl.DateTimeFormat(locale, dateTimeOptions).format(date)}
+      {dateTimeFormat(locale, dateTimeOptions).format(date)}
     </time>
   )
 }

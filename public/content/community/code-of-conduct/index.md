@@ -4,8 +4,6 @@ description: The basic standards that we strive for across ethereum.org spaces.
 lang: en
 ---
 
-# Code of conduct {#code-of-conduct}
-
 ## Mission {#mission}
 
 To develop and maintain the most comprehensive and accessible knowledge hub for Ethereum.
@@ -29,7 +27,7 @@ The ethereum.org community strives to be:
 - A DEX, CEX or any other form of financial platform
 - A platform that gives financial or legal advice of any kind
 
-## Code of conduct {#code-of-conduct}
+## Code of conduct {#code-of-conduct-2}
 
 ### Pledge {#pledge}
 

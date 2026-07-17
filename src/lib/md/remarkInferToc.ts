@@ -1,6 +1,11 @@
-import type { BlockContent, DefinitionContent, ListItem } from "mdast"
+import type {
+  BlockContent,
+  DefinitionContent,
+  List,
+  ListItem,
+  Nodes,
+} from "mdast"
 import { toc } from "mdast-util-toc"
-import type { List, Nodes } from "mdast-util-toc/lib"
 import { visit } from "unist-util-visit"
 
 import type { IRemarkTocOptions, ToCNodeEntry, TocNodeType } from "@/lib/types"

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "locale": "it",
+  "translatedAt": "2026-06-08T08:14:26.585Z",
+  "englishManifestHash": "711485ab7e39",
+  "placeholderOrder": [
+    "LINK-70a6e5"
+  ],
+  "placeholderMap": {
+    "LINK-70a6e5": {
+      "type": "link",
+      "values": {
+        "url": "https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T08:14:26.585Z",
+      "status": "success"
+    }
+  }
+}

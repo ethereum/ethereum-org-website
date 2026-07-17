@@ -5,9 +5,10 @@ lang: en
 template: upgrade
 image: /images/upgrades/core.png
 alt: 
-summaryPoint1: The Beacon Chain introduced proof-of-stake to the Ethereum ecosystem.
-summaryPoint2: It was merged with the original Ethereum proof-of-work chain in September 2022.
-summaryPoint3: The Beacon Chain introduced the consensus logic and block gossip protocol which now secures Ethereum.
+summaryPoints:
+  - "The Beacon Chain introduced proof-of-stake to the Ethereum ecosystem."
+  - "It was merged with the original Ethereum proof-of-work chain in September 2022."
+  - "The Beacon Chain introduced the consensus logic and block gossip protocol which now secures Ethereum."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
@@ -74,7 +75,7 @@ Sharding can only safely enter the Ethereum ecosystem with a proof-of-stake cons
   Shard chains
 </ButtonLink>
 
-## Further Reading
+## Further reading {#further-reading}
 
 - [More on node architecture](/developers/docs/nodes-and-clients/node-architecture)
 - [More of proof-of-stake](/developers/docs/consensus-mechanisms/pos)

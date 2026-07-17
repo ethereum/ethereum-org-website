@@ -1,40 +1,37 @@
 ---
-title: "イーサリアム・ファウンデーション"
-description: "イーサリアムと関連技術をサポートする非営利団体であるイーサリアム・ファウンデーション(EF)について学びましょう。"
+title: イーサリアム財団
+description: イーサリアムおよび関連技術のサポートを目的とする非営利組織、イーサリアム財団（EF）について学びましょう。
 hideEditButton: true
 lang: ja
 ---
 
-# イーサリアム・ファウンデーションについて {#about-the-ethereum-foundation}
-
 <Logo/>
 
-[イーサリアム・ファウンデーション](http://ethereum.foundation/) (EF) は、[イーサリアム](/what-is-ethereum/)および関連技術をサポートする非営利団体です。
+[イーサリアム財団](https://ethereum.foundation/)（EF）は、[イーサリアム](/)エコシステムをサポートする非営利組織です。プロトコル開発への資金提供、エコシステムの成長支援、そしてイーサリアムの普及活動を行っています。
 
-EFは企業でも、伝統的な非営利団体でもありません。 彼らの役割はイーサリアムを制御またはリードすることではなく、イーサリアム関連技術の重要な開発に資金を提供する唯一の組織でもありません。 EFは、はるかに大きな[エコシステム](/community/)の一部です。
+EFは企業ではなく、従来の非営利組織でもありません。イーサリアムを管理・主導するものではなく、イーサリアム関連技術の重要な開発に資金を提供する唯一の組織でもありません。EFは、より広大な[エコシステム](/community/)の一部にすぎません。
 
-## イーサリアム・ファウンデーションのイニシアチブ {#ethereum-foundation-initiatives}
+## EFのマンデート {#ef-mandate}
 
-### エコシステム・サポート・プログラム {#ecosystem-support-program}
+EFのマンデートは、イーサリアムエコシステムに対する財団の目的、原則、およびコミットメントを定義しています。オンチェーンで公開されており、**検閲耐性、オープンソース、プライバシー、セキュリティ（CROPS）**を、妥協のない最優先事項としてEFが専念することを明記しています。
 
-[エコシステム・サポート・プログラム](https://esp.ethereum.foundation/)は、エコシステムの成長を加速させるために、広範なイーサリアムコミュニティ内のプロジェクトや団体に、資金的および非資金的な支援を提供するために存在します。 エコシステムサポートプログラムは、主に財政支援に焦点を当てた元のイーサリアム助成プログラムの拡大です。
+[イーサリアム財団のマンデートを読む](/foundation/mandate/)
 
-エコシステム・サポート・プログラム、過去の助成金受領者、および助成金申請プロセスに関する詳細は、[esp.ethereum.foundation](https://esp.ethereum.foundation/)をご覧ください。 また、[エコシステム・サポート・プログラムのブログ](https://blog.ethereum.org/category/ecosystem-support-program/)をご覧になったり、[@EF_ESP](https://twitter.com/EF_ESP)をフォローして、最新のニュースやお知らせを確認することもできます。
+## EFの活動内容 {#what-the-ef-does}
 
-### Devcon {#devcon}
+- **プロトコル開発** – クライアント開発、研究、アップグレード、[バグバウンティプログラム](/bug-bounty/)など、イーサリアムのコアプロトコルに取り組むチームをサポートします。
+- **エコシステムへの資金提供** – [エコシステムサポートプログラム](https://esp.ethereum.foundation/)を通じて、イーサリアム上で構築されるプロジェクトに助成金とサポートを提供します。
+- **研究** – 暗号技術、コンセンサス、スケーリング、プライバシー、セキュリティにわたる研究に資金を提供します。
 
-2014年より、イーサリアム・ファウンデーションは、すべてのイーサリアムデベロッパー、研究者、思想家、メーカーのための年次会議である開発者会議(Devcon)を開催しています。
+## プログラムとイニシアチブ {#programs-and-initiatives}
 
-初回から毎年開催されているカンファレンスのプレゼンテーションのビデオコンテンツには、[archive.devcon.org](https://archive.devcon.org/)からアクセスできます。
+- **[エコシステムサポートプログラム](https://esp.ethereum.foundation/)** – イーサリアム上で構築されるオープンソースプロジェクトに対する助成金とサポート
+- **[学術助成金](https://esp.ethereum.foundation/academic-grants)** – イーサリアム関連の学術研究のサポート
+- **[Devcon](https://devcon.org/)** – イーサリアムの開発者、研究者、ビルダー向けの年次カンファレンス
+- **[バグバウンティプログラム](/bug-bounty/)** – イーサリアムプロトコルの脆弱性を発見した際の報酬
 
-詳細については[devcon.org](https://devcon.org/)をご覧になるか、[Devconブログ](https://devcon.org/en/blogs/)をご確認ください。また、[@efdevcon](https://twitter.com/EFDevcon)をフォローして最新のお知らせを受け取ることもできます。
+## さらに学ぶ {#learn-more}
 
-### フェローシップ・プログラム {#fellowship-program}
-
-[イーサリアム・ファウンデーション・フェローシップ・プログラム](https://fellowship.ethereum.foundation/)は、文化、国籍、経済階級を超えた代表性の格差に対処するためのイニシアチブです。 フェローシッププログラムは、ユニークで才能のある個人を特定、サポートすることでイーサリアムとの関連性を確立し、Web3の将来を担うコミュニティや評価されていない人々に対して門戸を開くことによって、こうしたギャップを埋めていくことを目的としています。
-
-[詳細はfellowship.ethereum.foundationでご覧ください](https://fellowship.ethereum.foundation/)
-
-<br/>
-
-イーサリアム・ファウンデーションとその活動に関する詳細については、[ethereum.foundation](http://ethereum.foundation/)にアクセスするか、EFの最新ニュースやお知らせが掲載されている[イーサリアム・ファウンデーション・ブログ](https://blog.ethereum.org/)をご確認ください。
+- [ethereum.foundation](https://ethereum.foundation/) – EFの公式ウェブサイト
+- [EFブログ](https://blog.ethereum.org/) – ニュースと発表
+- [エコシステムサポートプログラム](https://esp.ethereum.foundation/) – 助成金とサポート

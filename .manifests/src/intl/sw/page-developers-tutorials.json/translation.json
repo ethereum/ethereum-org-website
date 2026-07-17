@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "locale": "sw",
+  "translatedAt": "2026-06-16T15:33:31.333Z",
+  "englishManifestHash": "45190abb6a6b",
+  "placeholderOrder": [
+    "HTML-TAG-0",
+    "HTML-TAG-1",
+    "ICU-VARIABLE-2"
+  ],
+  "placeholderMap": {
+    "HTML-TAG-0": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/contributing/content-resources/"
+      }
+    },
+    "HTML-TAG-1": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://git-scm.com/docs/gitignore"
+      }
+    },
+    "ICU-VARIABLE-2": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{count}"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T15:33:31.333Z",
+      "status": "success"
+    }
+  }
+}

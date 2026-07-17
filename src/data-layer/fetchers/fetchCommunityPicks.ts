@@ -1,5 +1,7 @@
 import type { CommunityPick } from "@/lib/types"
 
+import { fetchRetry } from "./fetchRetry"
+
 export const FETCH_COMMUNITY_PICKS_TASK_ID = "fetch-community-picks"
 
 /**
@@ -20,7 +22,7 @@ export async function fetchCommunityPicks(): Promise<CommunityPick[]> {
 
   console.log("Starting community picks data fetch from Google Sheets")
 
-  const response = await fetch(
+  const response = await fetchRetry(
     `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/community_picks!A:Z?majorDimension=ROWS&key=${googleApiKey}`
   )
 

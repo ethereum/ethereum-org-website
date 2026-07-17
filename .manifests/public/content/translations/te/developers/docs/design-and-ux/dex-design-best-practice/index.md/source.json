@@ -1,0 +1,420 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/design-and-ux/dex-design-best-practice/index.md",
+  "generatedAt": "2026-06-16T22:40:23.603Z",
+  "rootHash": "5e107715b054",
+  "tree": {
+    "contentHash": "2c9f5dd86bf6",
+    "anchorHash": "627bb840a551",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "05af8a856728",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "15b6bfcfb54c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:1": {
+        "contentHash": "8231e84befd7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "4be15a38ef43",
+        "anchorHash": "492478b77830"
+      },
+      "prose:2": {
+        "contentHash": "4f9a0538de3e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "basic-anatomy-of-a-dex": {
+        "contentHash": "e54a0b800b68",
+        "anchorHash": "72afb8253c4a",
+        "labelHash": "11a5ed288f38",
+        "children": {
+          "_label": {
+            "contentHash": "11a5ed288f38",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "bc4dea993575",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "7a6a429bbc9a",
+            "anchorHash": "30462e3a4083"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "image:0"
+        ]
+      },
+      "variations": {
+        "contentHash": "6fe3a0f594af",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "949500761d36",
+        "children": {
+          "_label": {
+            "contentHash": "949500761d36",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "6b3a1dae5a26",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "structure-of-the-main-form": {
+        "contentHash": "e1a47a56f200",
+        "anchorHash": "2c1e8f5f31e5",
+        "labelHash": "5c647750bcc5",
+        "children": {
+          "_label": {
+            "contentHash": "5c647750bcc5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "4ba8a9503031",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "6deeb3b82bf2",
+            "anchorHash": "475833559c84"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "image:0"
+        ]
+      },
+      "variations2": {
+        "contentHash": "5f298939daec",
+        "anchorHash": "4289a66dafef",
+        "labelHash": "949500761d36",
+        "children": {
+          "_label": {
+            "contentHash": "949500761d36",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "b6e7001c4a33",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "fb5af522ecfc",
+            "anchorHash": "dcbc2c477315"
+          },
+          "prose:2": {
+            "contentHash": "f2d46e6bd81c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "image:0",
+          "prose:2"
+        ]
+      },
+      "key-info-to-include": {
+        "contentHash": "26ff0f924fb9",
+        "anchorHash": "ea9e522cce85",
+        "labelHash": "92e2e79339b1",
+        "children": {
+          "_label": {
+            "contentHash": "92e2e79339b1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "6f642a4ef618",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "cc339f9aa66f",
+            "anchorHash": "4a7c064579df"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "image:0"
+        ]
+      },
+      "extra-info-to-include": {
+        "contentHash": "ed866f323c14",
+        "anchorHash": "3808ff874ea2",
+        "labelHash": "f4e9faa1bd36",
+        "children": {
+          "_label": {
+            "contentHash": "f4e9faa1bd36",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "a157159a1022",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "7e6d756aa0f4",
+            "anchorHash": "0adfc8ed1e4f"
+          },
+          "prose:3": {
+            "contentHash": "920214181cfb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:1": {
+            "contentHash": "ae1bfa940d74",
+            "anchorHash": "9b606f8677dc"
+          },
+          "prose:4": {
+            "contentHash": "2fecd8dd2c46",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "image:0",
+          "prose:3",
+          "image:1",
+          "prose:4"
+        ]
+      },
+      "design-options": {
+        "contentHash": "2445430ddec5",
+        "anchorHash": "7969befe33c9",
+        "labelHash": "d9aa9d29288e",
+        "children": {
+          "_label": {
+            "contentHash": "d9aa9d29288e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "e6591090f0b1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "structure": {
+            "contentHash": "2d0c385bbd9f",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "7203c2b3dad3",
+            "children": {
+              "_label": {
+                "contentHash": "7203c2b3dad3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "521a1fe4b6c9",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "component-style": {
+            "contentHash": "201914600e99",
+            "anchorHash": "e5daadac91cd",
+            "labelHash": "ba0e051ab990",
+            "children": {
+              "_label": {
+                "contentHash": "ba0e051ab990",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:6": {
+                "contentHash": "c51c1636cd5e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "image:0": {
+                "contentHash": "ec1da4661e97",
+                "anchorHash": "095c1ed44f72"
+              },
+              "image:1": {
+                "contentHash": "a1e7777b99c4",
+                "anchorHash": "a06fd494eede"
+              },
+              "image:2": {
+                "contentHash": "0717e2f9deba",
+                "anchorHash": "6cb6c7c656a5"
+              },
+              "image:3": {
+                "contentHash": "cb026a5548e3",
+                "anchorHash": "05e4f4d0ea06"
+              },
+              "image:4": {
+                "contentHash": "46ca5fc3b5f6",
+                "anchorHash": "65b780a9748c"
+              },
+              "image:5": {
+                "contentHash": "fa70340b6f34",
+                "anchorHash": "dad0bf821546"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:6",
+              "image:0",
+              "image:1",
+              "image:2",
+              "image:3",
+              "image:4",
+              "image:5"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "structure",
+          "component-style"
+        ]
+      },
+      "but-which-side-should-the-token-go-on": {
+        "contentHash": "fceffd90de62",
+        "anchorHash": "386d482276e7",
+        "labelHash": "5b60b01355b8",
+        "children": {
+          "_label": {
+            "contentHash": "5b60b01355b8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "56e2672afb9a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "020af0ccd7e8",
+            "anchorHash": "dbdb19161af4"
+          },
+          "prose:2": {
+            "contentHash": "94111c3ae484",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "image:0",
+          "prose:2"
+        ]
+      },
+      "button-behavior": {
+        "contentHash": "88fe5be27661",
+        "anchorHash": "f27f3e2836f8",
+        "labelHash": "72c29014f56b",
+        "children": {
+          "_label": {
+            "contentHash": "72c29014f56b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "0bf744acefcf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "4400efe79c9c",
+            "anchorHash": "fc591dfaa7a3"
+          },
+          "image:1": {
+            "contentHash": "6ad3ea6db19a",
+            "anchorHash": "471f62744be0"
+          },
+          "button-as-contextual-help": {
+            "contentHash": "0569c46b56fe",
+            "anchorHash": "25ab65f855ea",
+            "labelHash": "b6f124fbade6",
+            "children": {
+              "_label": {
+                "contentHash": "b6f124fbade6",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "8ec2dd393cb5",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "image:0": {
+                "contentHash": "f863d264e4cc",
+                "anchorHash": "117fe85394f0"
+              },
+              "image:1": {
+                "contentHash": "770943b5734f",
+                "anchorHash": "10c03d33b031"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "image:0",
+              "image:1"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "image:0",
+          "image:1",
+          "button-as-contextual-help"
+        ]
+      },
+      "build-your-own-with-this-figma-file": {
+        "contentHash": "10cad87cd565",
+        "anchorHash": "b9f5a26ee6aa",
+        "labelHash": "541741f50c78",
+        "children": {
+          "_label": {
+            "contentHash": "541741f50c78",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "42ea527674ea",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "0976a9a4b7aa",
+            "anchorHash": "3e5ce1ba9f26"
+          },
+          "prose:2": {
+            "contentHash": "164e2d7d58df",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "basic-anatomy-of-a-dex",
+      "variations",
+      "structure-of-the-main-form",
+      "variations2",
+      "key-info-to-include",
+      "extra-info-to-include",
+      "design-options",
+      "but-which-side-should-the-token-go-on",
+      "button-behavior",
+      "build-your-own-with-this-figma-file"
+    ]
+  },
+  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+}

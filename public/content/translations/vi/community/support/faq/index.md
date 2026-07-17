@@ -1,77 +1,76 @@
 ---
-title: "Những câu hỏi thường gặp"
-description: Common Ethereum questions about wallets, transactions, staking, and more.
+title: Các câu hỏi thường gặp
+description: Các câu hỏi phổ biến về Ethereum liên quan đến ví, giao dịch, đặt cọc và nhiều vấn đề khác.
 lang: vi
 ---
 
-# Những câu hỏi thường gặp {#faq}
+## Tôi đã gửi tiền mã hóa đến sai địa chỉ {#wrong-wallet}
 
-## I sent crypto to the wrong address {#wrong-wallet}
+Một giao dịch được gửi trên Ethereum là không thể đảo ngược. Thật không may, nếu bạn đã gửi ETH hoặc token đến sai ví, không có cách nào để đảo ngược giao dịch.
 
-Giao dịch ở trên Ethereum là không thể hoàn trả được. Unfortunately, if you sent ETH or tokens to the wrong wallet, there is no way to reverse the transaction.
+**Những gì bạn có thể làm:**
 
-**What you can do:**
+- **Nếu bạn biết chủ sở hữu của địa chỉ đó**, hãy liên hệ trực tiếp với họ và yêu cầu họ trả lại tiền
+- **Nếu địa chỉ thuộc về một sàn giao dịch hoặc dịch vụ đã biết**, hãy liên hệ với đội ngũ hỗ trợ của họ, vì họ có thể giúp đỡ
+- **Nếu bạn đã gửi token đến một địa chỉ hợp đồng**, hãy kiểm tra xem hợp đồng đó có chức năng rút tiền hoặc khôi phục hay không (điều này rất hiếm)
 
-- **If you know the owner of the address**, contact them directly and ask them to return the funds
-- **If the address belongs to an exchange or known service**, contact their support team, as they may be able to help
-- **If you sent tokens to a contract address**, check whether the contract has a withdrawal or recovery function (this is rare)
+Trong hầu hết các trường hợp, không có cách nào để lấy lại tiền. Không có tổ chức trung tâm, thực thể hay cá nhân nào sở hữu Ethereum, điều đó có nghĩa là không ai có thể đảo ngược các giao dịch. Luôn kiểm tra kỹ địa chỉ người nhận trước khi xác nhận.
 
-In most cases, there is no way to recover the funds. No central organization, entity, or person owns Ethereum, which means no one can reverse transactions. Always double-check the recipient address before confirming.
+## Tôi đã mất quyền truy cập vào ví của mình {#lost-wallet-access}
 
-## I lost access to my wallet {#lost-wallet-access}
+Các tùy chọn khôi phục của bạn phụ thuộc vào loại ví bạn sử dụng.
 
-Your recovery options depend on the type of wallet you use.
+### Nếu bạn có cụm từ hạt giống (cụm từ khôi phục) {#if-you-have-your-seed-phrase-recovery-phrase}
 
-### If you have your seed phrase (recovery phrase)
+Bạn có thể khôi phục ví của mình trong bất kỳ ứng dụng ví tương thích nào bằng cách sử dụng cụm từ hạt giống của bạn. Đây là lý do tại sao việc lưu trữ cụm từ hạt giống của bạn ngoại tuyến một cách an toàn là rất quan trọng. Hãy kiểm tra tài liệu của nhà cung cấp ví của bạn để biết hướng dẫn khôi phục.
 
-You can restore your wallet in any compatible wallet app using your seed phrase. This is why it is critical to keep your seed phrase stored safely offline. Check your wallet provider's documentation for restore instructions.
+### Nếu bạn đã làm mất cụm từ hạt giống {#if-you-have-lost-your-seed-phrase}
 
-### If you have lost your seed phrase
+Nếu không có cụm từ hạt giống hoặc khóa riêng tư, tiền của bạn không thể được khôi phục. Không ai, kể cả ethereum.org, có thể đặt lại mật khẩu của bạn hoặc khôi phục quyền truy cập vào một ví tự lưu ký.
 
-Without your seed phrase or private keys, your funds cannot be recovered. No one, including ethereum.org, can reset your password or restore access to a self-custody wallet.
+### Nếu tài khoản của bạn nằm trên một sàn giao dịch {#if-your-account-is-on-an-exchange}
 
-### If your account is on an exchange
-
-If your account is on a centralized exchange like Coinbase, Binance, or Kraken, contact the exchange's support team directly. They control accounts on their platform and may be able to help with password resets or account recovery.
+Nếu tài khoản của bạn nằm trên một sàn giao dịch tập trung như Coinbase, Binance hoặc Kraken, hãy liên hệ trực tiếp với đội ngũ hỗ trợ của sàn giao dịch. Họ kiểm soát các tài khoản trên nền tảng của họ và có thể giúp đặt lại mật khẩu hoặc khôi phục tài khoản.
 
 <Alert variant="warning">
 <AlertEmoji text=":shield:"/>
 <AlertContent>
 <AlertDescription>
 
-**Never share your seed phrase with anyone** claiming to help you recover your wallet. This is one of the most common scam tactics. No legitimate service will ever ask for your seed phrase.
+**Không bao giờ chia sẻ cụm từ hạt giống của bạn với bất kỳ ai** tự xưng là giúp bạn khôi phục ví. Đây là một trong những thủ đoạn lừa đảo phổ biến nhất. Không có dịch vụ hợp pháp nào sẽ yêu cầu cụm từ hạt giống của bạn.
+
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 <DocLink href="/guides/how-to-use-a-wallet/">
-  How to use a wallet
+  Cách sử dụng ví
 </DocLink>
 
-## My transaction is stuck or pending {#stuck-transaction}
+## Giao dịch của tôi bị kẹt hoặc đang chờ xử lý {#stuck-transaction}
 
-Transactions on Ethereum can get stuck when the gas fee you set was lower than what the network currently requires. Most wallets let you fix this:
+Các giao dịch trên Ethereum có thể bị kẹt khi phí gas bạn đặt thấp hơn mức mà mạng lưới hiện đang yêu cầu. Hầu hết các ví đều cho phép bạn khắc phục điều này:
 
-- **Speed up:** Resubmit the same transaction with a higher gas fee
-- **Cancel:** Send a 0 ETH transaction to your own address using the same nonce as the pending transaction
+- **Tăng tốc:** Gửi lại cùng một giao dịch với phí gas cao hơn
+- **Hủy:** Gửi một giao dịch 0 ETH đến địa chỉ của chính bạn bằng cách sử dụng cùng một nonce như giao dịch đang chờ xử lý
 
-### Helpful guides
+### Các hướng dẫn hữu ích {#helpful-guides}
 
-- [How to speed up or cancel a pending transaction on MetaMask](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
-- [Cách hủy các giao dịch Ethereum đang chờ xử lý](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
+- [Cách tăng tốc hoặc hủy một giao dịch đang chờ xử lý trên MetaMask](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
+- [Cách hủy các giao dịch đang chờ xử lý trên Ethereum](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-## Làm sao tôi có thể nhận phần thưởng tại các sự kiện cho / tặng Ethereum? Lừa đảo tặng phẩm {#giveaway-scam}
+## Làm cách nào để tôi yêu cầu nhận phần thưởng Ethereum của mình? {#giveaway-scam}
 
-Các sự kiện cho / tặng Ethereum là các trò lừa đảo được thiết kế để đánh cắp ETH của bạn. Do not be tempted by offers that seem too good to be true. If you send ETH to a giveaway address, you will not receive a giveaway, and you will not be able to recover your funds.
+Các chương trình tặng thưởng Ethereum là những trò lừa đảo được thiết kế để đánh cắp ETH của bạn. Đừng bị cám dỗ bởi những lời đề nghị có vẻ quá tốt để có thể là sự thật. Nếu bạn gửi ETH đến một địa chỉ tặng thưởng, bạn sẽ không nhận được phần thưởng nào và bạn sẽ không thể lấy lại tiền của mình.
 
-[Thông tin thêm về phòng chống lừa đảo](/security/#common-scams)
+[Tìm hiểu thêm về cách phòng chống lừa đảo](/security/#common-scams)
 
-## How do I stake ETH? {#how-to-stake}
+## Làm cách nào để tôi đặt cọc ETH? {#how-to-stake}
 
-Để trở thành một người vận hành nút xác thực, bạn phải Stake 32 ETH trong hợp đồng Ethereum và thiết lập một nút xác thực. You can also participate with less ETH through staking pools.
+Để trở thành một trình xác thực, bạn phải đặt cọc 32 ETH vào hợp đồng tiền gửi Ethereum và thiết lập một nút trình xác thực. Bạn cũng có thể tham gia với ít ETH hơn thông qua các nhóm đặt cọc.
 
-More information is available on our [staking pages](/staking/) and at [the staking launchpad](https://launchpad.ethereum.org/).
+Thông tin thêm có sẵn trên [các trang đặt cọc](/staking/) của chúng tôi và tại [bệ phóng đặt cọc](https://launchpad.ethereum.org/).
 
-## Làm sao để tôi đào Ethereum? Đào Ethereum {#mining-ethereum}
+## Làm cách nào để tôi khai thác Ethereum? {#mining-ethereum}
 
-Việc đào Ethereum không còn khả thi nữa. Mining was switched off when Ethereum moved from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glossary/#pos) during [The Merge](/roadmap/merge/) in September 2022. Giờ đây, thay vì thợ đào, Ethereum có các nút xác thực (validators). Bất kỳ ai cũng có thể [đặt cược](/glossary/#staking) ETH và nhận phần thưởng staking khi chạy phần mềm trình xác thực để bảo mật mạng lưới.
+Việc khai thác Ethereum không còn khả thi nữa. Việc khai thác đã bị tắt khi Ethereum chuyển từ [Bằng chứng công việc (PoW)](/glossary/#pow) sang [Bằng chứng cổ phần (PoS)](/glossary/#pos) trong sự kiện [The Merge](/roadmap/merge/) vào tháng 9 năm 2022. Giờ đây, thay vì các thợ đào, Ethereum có các trình xác thực. Bất kỳ ai cũng có thể [đặt cọc](/glossary/#staking) ETH và nhận phần thưởng đặt cọc khi chạy phần mềm trình xác thực để bảo mật mạng lưới.

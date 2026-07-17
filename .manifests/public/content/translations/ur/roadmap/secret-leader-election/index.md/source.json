@@ -1,0 +1,205 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/roadmap/secret-leader-election/index.md",
+  "generatedAt": "2026-06-08T10:40:56.835Z",
+  "rootHash": "77b423f0ac62",
+  "tree": {
+    "contentHash": "8a40ba09e0f8",
+    "anchorHash": "f5254d082b3a",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "9d1a2ca7f4a1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "60b0f3d1ed73",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:summaryPoints": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prose:4": {
+        "contentHash": "06138b2a5332",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "769e0b8515e3",
+        "anchorHash": "93c4e99645de"
+      },
+      "prose:5": {
+        "contentHash": "c68e201bfcb5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "inline-code:1": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "1f97d653b7ed"
+      },
+      "prose:6": {
+        "contentHash": "fd7ce6d466bd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "inline-code:2": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "1b16b1df538b"
+      },
+      "prose:7": {
+        "contentHash": "e35d7a5bf6b1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:3": {
+        "contentHash": "c670eaf67b34",
+        "anchorHash": "164f452ba69f"
+      },
+      "prose:8": {
+        "contentHash": "5a38ba4908b6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "secret-leader-election": {
+        "contentHash": "6374574c9bd1",
+        "anchorHash": "d0cc9f636934",
+        "labelHash": "07ef4b82cff3",
+        "children": {
+          "_label": {
+            "contentHash": "07ef4b82cff3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "2c153239201e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "d94dbada71dc",
+            "anchorHash": "5580ae9f02f9"
+          },
+          "prose:2": {
+            "contentHash": "d77937454ed8",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "secret-non-single-leader-election": {
+        "contentHash": "5d555aff0048",
+        "anchorHash": "3026e020eab8",
+        "labelHash": "96f11e7b01e2",
+        "children": {
+          "_label": {
+            "contentHash": "96f11e7b01e2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "2b9d9c77c156",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "8470dba67d6d"
+          },
+          "prose:4": {
+            "contentHash": "b48111c10c65",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "8ce86a6ae65d"
+          },
+          "prose:5": {
+            "contentHash": "171ebf0ff1d5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "7a0185bee08e"
+          },
+          "prose:6": {
+            "contentHash": "14f0fc590a52",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "inline-code:0",
+          "prose:4",
+          "inline-code:1",
+          "prose:5",
+          "inline-code:2",
+          "prose:6"
+        ]
+      },
+      "current-progress": {
+        "contentHash": "4ee96f42e21e",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "46814fcae9de",
+        "children": {
+          "_label": {
+            "contentHash": "46814fcae9de",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "df8c3a0b7cfa",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "41e5efb0d213",
+        "anchorHash": "68140dbe2957",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "d827a408ddb1",
+            "anchorHash": "d03cd45d99cf"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:summaryPoints",
+      "prose:4",
+      "link:0",
+      "prose:5",
+      "inline-code:1",
+      "prose:6",
+      "inline-code:2",
+      "prose:7",
+      "link:3",
+      "prose:8",
+      "secret-leader-election",
+      "secret-non-single-leader-election",
+      "current-progress",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

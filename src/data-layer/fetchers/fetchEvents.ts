@@ -1,9 +1,14 @@
 import type { EventItem, EventType, GeodeApiEventItem } from "@/lib/types"
 
-import { parseLocationToContinent } from "@/lib/utils/geography"
+import {
+  isOnlineLocation,
+  parseLocationToContinent,
+} from "@/lib/utils/geography"
 import { slugify } from "@/lib/utils/url"
 
 import { uploadToS3 } from "../s3"
+
+import { fetchRetry } from "./fetchRetry"
 
 export const FETCH_EVENTS_TASK_ID = "fetch-events"
 
@@ -44,7 +49,7 @@ function transformEvent(event: GeodeApiEventItem): EventItem {
     ...event,
     id: slugify(event.title),
     eventTypes: getEventTypes(event.tags),
-    isOnline: event.location.toLowerCase() === "online",
+    isOnline: isOnlineLocation(event.location),
     continent: parseLocationToContinent(event.location),
   }
 }
@@ -66,7 +71,7 @@ export async function fetchEvents(): Promise<EventItem[]> {
   console.log("Starting events data fetch from Geode Labs API")
 
   try {
-    const response = await fetch(`${url}?select=*`, {
+    const response = await fetchRetry(`${url}?select=*`, {
       headers: {
         apikey: key,
         Authorization: `Bearer ${key}`,

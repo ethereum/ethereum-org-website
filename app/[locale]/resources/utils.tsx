@@ -1,7 +1,4 @@
-import dynamic from "next/dynamic"
 import { getLocale, getTranslations } from "next-intl/server"
-
-import { Lang } from "@/lib/types"
 
 import BigNumber from "@/components/BigNumber"
 import SectionIconArrowsFullscreen from "@/components/icons/arrows-fullscreen.svg"
@@ -9,11 +6,13 @@ import SectionIconEthGlyph from "@/components/icons/eth-glyph.svg"
 import SectionIconEthWallet from "@/components/icons/eth-wallet.svg"
 import SectionIconHeartPulse from "@/components/icons/heart-pulse.svg"
 import SectionIconPrivacy from "@/components/icons/privacy.svg"
-import { Spinner } from "@/components/ui/spinner"
 
 import { formatSmallUSD } from "@/lib/utils/numbers"
-import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
+import {
+  SlotCountdownChart,
+  UpgradeCountdownFigure,
+} from "./_components/LazyImports"
 import type { DashboardBox, DashboardSection } from "./types"
 
 import { getEthPrice } from "@/lib/data"
@@ -55,38 +54,13 @@ import IconUltrasoundMoney from "@/public/images/resources/ultrasound-money.png"
 import IconVisaOnchainAnalytics from "@/public/images/resources/visa-onchain-analytcs.png"
 import IconWalletBeat from "@/public/images/resources/walletbeat.png"
 
-const SlotCountdownChart = dynamic(
-  () => import("./_components/SlotCountdown"),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="grid h-32 place-items-center">
-        <Spinner />
-      </div>
-    ),
-  }
-)
-
-const UpgradeCountdownFigure = dynamic(
-  () => import("./_components/UpgradeCountdown"),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="grid h-32 place-items-center">
-        <Spinner />
-      </div>
-    ),
-  }
-)
-
 export const getResources = async ({
   txCostsMedianUsd,
   totalBlobs,
   avgBlobFee,
 }): Promise<DashboardSection[]> => {
   const locale = await getLocale()
-  const t = await getTranslations({ locale, namespace: "page-resources" })
-  const localeForNumberFormat = getLocaleForNumberFormat(locale as Lang)
+  const t = await getTranslations("page-resources")
 
   // Fetch ETH price using the new data-layer function (already cached)
   const ethPrice = await getEthPrice()
@@ -104,7 +78,7 @@ export const getResources = async ({
           value: formatSmallUSD(
             // Converting value from wei to USD
             avgBlobFee * 1e-18 * ethPrice.value,
-            localeForNumberFormat
+            locale
           ),
         }
 
@@ -113,17 +87,14 @@ export const getResources = async ({
       ? { error: txCostsMedianUsd.error }
       : {
           ...txCostsMedianUsd,
-          value: formatSmallUSD(txCostsMedianUsd.value, localeForNumberFormat),
+          value: formatSmallUSD(txCostsMedianUsd.value, locale),
         }
 
   const networkBoxes: DashboardBox[] = [
     {
       title: t("page-resources-network-layer2-title"),
       metric: (
-        <BigNumber
-          className="items-center"
-          value={"value" in medianTxCost ? medianTxCost.value : "—"}
-        >
+        <BigNumber value={"value" in medianTxCost ? medianTxCost.value : "—"}>
           {t("page-resources-network-layer2-chart-label")}
         </BigNumber>
       ),
@@ -203,7 +174,6 @@ export const getResources = async ({
     },
     {
       title: t("page-resources-eth-asset-title"),
-      // TODO: Add RadialChart metric
       items: [
         {
           title: "Etherealize Dashboard",
@@ -227,7 +197,6 @@ export const getResources = async ({
     },
     {
       title: t("page-resources-gas-title"),
-      // TODO: Add metric
       items: [
         {
           title: "Etherscan Gas",
@@ -260,7 +229,6 @@ export const getResources = async ({
   const usingBoxes: DashboardBox[] = [
     {
       title: t("page-resources-defi-title"),
-      // TODO: Add big number metric
       items: [
         {
           title: "DeFi Llama",
@@ -284,7 +252,6 @@ export const getResources = async ({
     },
     {
       title: t("page-resources-stablecoins-title"),
-      // TODO: Add big number metric
       items: [
         {
           title: "stablecoins.wtf",
@@ -311,7 +278,6 @@ export const getResources = async ({
     },
     {
       title: t("page-resources-nft-title"),
-      // TODO: Add bar chart metric
       items: [
         {
           title: "Etherscan - Top NFT",
@@ -419,11 +385,10 @@ export const getResources = async ({
       title: t("page-resources-blobs-title"),
       metric: (
         <div className="flex gap-4">
-          <BigNumber className="items-center" value={totalBlobs}>
+          <BigNumber value={totalBlobs}>
             {t("page-resources-blobs-metric-total-label")}
           </BigNumber>
           <BigNumber
-            className="items-center"
             value={"value" in avgBlobFeeUsd ? avgBlobFeeUsd.value : "—"}
           >
             {t("page-resources-blobs-metric-fee-label")}
@@ -450,7 +415,6 @@ export const getResources = async ({
   const resilienceBoxes: DashboardBox[] = [
     {
       title: t("page-resources-nodes-title"),
-      // TODO: Add big number metric
       items: [
         {
           title: "Node Watch",
@@ -544,7 +508,6 @@ export const getResources = async ({
   const privacySecurityBoxes: DashboardBox[] = [
     {
       title: t("page-resources-relays-title"),
-      // TODO: Add big number metric
       items: [
         {
           title: "Beaconchain Relays",
@@ -569,7 +532,6 @@ export const getResources = async ({
     },
     {
       title: t("page-resources-mev-title"),
-      // TODO: Add big number metric
       items: [
         {
           title: "MEV-Boost Dashboard",

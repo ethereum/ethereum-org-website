@@ -16,7 +16,7 @@ Bạn nên có hiểu biết tốt về tất cả các chủ đề nền tảng
 
 ## Plasma là gì?
 
-Plasma là một khuôn khổ để cải thiện khả năng mở rộng trong các chuỗi khối công khai như Ethereum. Như được mô tả trong [sách trắng Plasma](http://plasma.io/plasma.pdf) ban đầu, các chuỗi Plasma được xây dựng trên một chuỗi khối khác (được gọi là "chuỗi gốc"). Mỗi "chuỗi con" kéo dài từ chuỗi gốc và thường được quản lý bởi một hợp đồng thông minh được triển khai trên chuỗi mẹ.
+Plasma là một khuôn khổ để cải thiện khả năng mở rộng trong các chuỗi khối công khai như Ethereum. Như được mô tả trong [sách trắng Plasma](https://plasma.io/plasma.pdf) ban đầu, các chuỗi Plasma được xây dựng trên một chuỗi khối khác (được gọi là "chuỗi gốc"). Mỗi "chuỗi con" kéo dài từ chuỗi gốc và thường được quản lý bởi một hợp đồng thông minh được triển khai trên chuỗi mẹ.
 
 Hợp đồng Plasma hoạt động, cùng với các chức năng khác, như một [cầu nối](/developers/docs/bridges/) cho phép người dùng di chuyển tài sản giữa Mạng chính Ethereum và chuỗi Plasma. Mặc dù điều này làm cho chúng tương tự như [các chuỗi bên](/developers/docs/scaling/sidechains/), các chuỗi plasma được hưởng lợi — ít nhất là ở một mức độ nào đó — từ tính bảo mật của Mạng chính Ethereum. Điều này không giống như các chuỗi bên hoàn toàn chịu trách nhiệm về tính bảo mật của chúng.
 

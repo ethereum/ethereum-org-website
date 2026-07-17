@@ -1,0 +1,22 @@
+{
+  "page-title": "Licencias de código abierto",
+  "page-description": "Descubre las licencias de código abierto, los requisitos de cumplimiento y cómo elegir la adecuada.",
+  "hero-cta-primary": "Comenzar",
+  "hero-cta-secondary": "Ver comparación de licencias",
+  "stat-label-projects": "Proyectos de código abierto rastreados",
+  "stat-label-contributors": "Colaboradores activos en todo el mundo",
+  "banner-text": "¿Eres nuevo en el código abierto? <strong>Empieza</strong> con nuestra <a href=\"/contributing/getting-started/\">guía de contribución</a>.",
+  "footer-note": "Datos de licencias obtenidos de <a href=\"https://spdx.org/licenses/?sortBy=name\" target=\"_blank\">SPDX</a>. Herramientas de cumplimiento proporcionadas por <a href=\"https://fossa.com/\" target=\"_blank\">FOSSA</a>.",
+  "filter-label": "Filtrar por tipo de licencia",
+  "welcome-user": "¡Te damos la bienvenida de nuevo, {displayName}!",
+  "project-count": "{total, plural, =0 {No se encontraron proyectos} one {# proyecto encontrado} other {# proyectos encontrados}}",
+  "contribution-status": "{status, select, pending {Tu contribución está pendiente de revisión} approved {Tu contribución ha sido aprobada} rejected {Tu contribución necesita revisiones} other {Estado desconocido}}",
+  "nested": {
+    "section-title": "Recursos adicionales",
+    "section-description": "Explora más sobre las licencias de código abierto y su cumplimiento.",
+    "link-text": "Explorar todos los recursos"
+  },
+  "multi-link": "Lee la <a href=\"https://opensource.org/osd\">Definición de código abierto</a>, revisa el <a href=\"https://choosealicense.com/\">selector de licencias</a> y consulta los <a href=\"https://spdx.org/licenses/\">identificadores SPDX</a>.",
+  "markdown-description": "## Referencia rápida\n\n- **MIT**: La más permisiva, restricciones mínimas\n- **Apache-2.0**: Permisiva con concesión de patentes\n- **GPL-3.0**: Copyleft fuerte, los derivados deben ser GPL\n\nPara obtener más detalles, consulta la [comparación completa](/open-source/#comparison-table).",
+  "new-key": "Esta es una cadena de traducción completamente nueva añadida en la versión B."
+}

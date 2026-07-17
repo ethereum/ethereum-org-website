@@ -4,6 +4,7 @@ description: Ensuring data integrity onchain for data that is stored, mostly, of
 author: Ori Pomerantz
 tags: ["storage"]
 skill: advanced
+breadcrumb: Merkle proofs
 lang: en
 published: 2021-12-30
 ---

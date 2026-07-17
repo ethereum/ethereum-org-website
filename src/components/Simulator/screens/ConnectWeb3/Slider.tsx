@@ -1,6 +1,7 @@
 import { type ReactNode } from "react"
-import { motion } from "framer-motion"
 import { Check } from "lucide-react"
+import { motion } from "motion/react"
+import { useTranslations } from "next-intl"
 
 import { HStack, VStack } from "@/components/ui/flex"
 
@@ -12,6 +13,7 @@ type SliderProps = {
   children: ReactNode
 }
 export const Slider = ({ isConnected, displayUrl, children }: SliderProps) => {
+  const t = useTranslations("component-wallet-simulator")
   return (
     <>
       <motion.div
@@ -30,7 +32,7 @@ export const Slider = ({ isConnected, displayUrl, children }: SliderProps) => {
         transition={{ duration: 0.75, ease: "easeOut" }}
         data-testid="slider-box"
       >
-        <VStack className="size-full gap-0 rounded-t-2xl bg-background px-6 py-8">
+        <VStack className="size-full gap-0 rounded-t-base bg-background px-6 py-8">
           {isConnected ? (
             <VStack className="gap-4 pt-8">
               <motion.div
@@ -48,14 +50,14 @@ export const Slider = ({ isConnected, displayUrl, children }: SliderProps) => {
                 transition={{ delay: 0.15 }}
               >
                 <p className="px-4 text-center md:px-8">
-                  You&apos;re logged in!
+                  {t("sim-cw-logged-in")}
                 </p>
               </motion.div>
             </VStack>
           ) : (
             <>
               <p className="mb-4 text-center text-lg font-bold">
-                Connect account?
+                {t("sim-cw-connect-account")}
               </p>
               {/* URL Pill */}
               <HStack className="mb-6 rounded-full bg-black/5 px-2 py-1 text-xs">

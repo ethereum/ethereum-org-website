@@ -1,0 +1,285 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/privacy-is-existential/index.md",
+  "generatedAt": "2026-04-29T06:05:02.914Z",
+  "rootHash": "a3eed79d2c6d",
+  "tree": {
+    "contentHash": "9d59829158e0",
+    "anchorHash": "49059555151d",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "9e5930f8764c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "06367897162b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "ef0825432dcb"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "a0e119814b37"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e729abb3bf60"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "94e6f02a5aca"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bfac314fefdc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "f7f25fa7ef5c"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d4e11841abf2"
+      },
+      "prose:1": {
+        "contentHash": "69cb5b358911",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "34b98874eeb3"
+      },
+      "prose:2": {
+        "contentHash": "e04b1ae0fddc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "introduction-000": {
+        "contentHash": "1df21d1dc30f",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "92590c627fa1",
+        "children": {
+          "_label": {
+            "contentHash": "92590c627fa1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "0f558308b04e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "privacy-is-existential-315": {
+        "contentHash": "36d2e49560d4",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "f8f2b338ba3c",
+        "children": {
+          "_label": {
+            "contentHash": "f8f2b338ba3c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "06b5cde2d1e9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "mary-shelley-and-the-one-way-ratchet-of-knowledge-516": {
+        "contentHash": "5844486d2638",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "a5aeceb54f5f",
+        "children": {
+          "_label": {
+            "contentHash": "a5aeceb54f5f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "580ff8b35826",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-cost-of-mediating-disputes-750": {
+        "contentHash": "8f318cb2e3d1",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "e92f27294ea0",
+        "children": {
+          "_label": {
+            "contentHash": "e92f27294ea0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "8b040d3d1722",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "two-rules-of-knowledge-and-power-1024": {
+        "contentHash": "47c8c908267d",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "06474a022b27",
+        "children": {
+          "_label": {
+            "contentHash": "06474a022b27",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "cea2ea8ec896",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-pereira-bueno-case-and-mev-1326": {
+        "contentHash": "976366442ba7",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "f2e887ed8f1c",
+        "children": {
+          "_label": {
+            "contentHash": "f2e887ed8f1c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "7e954d895592",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "legally-enforceable-duties-of-validators-1523": {
+        "contentHash": "8827311c38d9",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "aa8f9bb05b91",
+        "children": {
+          "_label": {
+            "contentHash": "aa8f9bb05b91",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "66ec9cfabf31",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "traditional-finance-pipelines-and-swift-1656": {
+        "contentHash": "dbc83a73c3f9",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "5d0c724ffca1",
+        "children": {
+          "_label": {
+            "contentHash": "5d0c724ffca1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "382eb32c18c7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "conclusions-and-defense-of-neutral-infrastructure-2214": {
+        "contentHash": "42078df91ab1",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "137869efa208",
+        "children": {
+          "_label": {
+            "contentHash": "137869efa208",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "49a9d5c401b7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "qa-session-2421": {
+        "contentHash": "5c0240a9a9d8",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "974367b729e9",
+        "children": {
+          "_label": {
+            "contentHash": "974367b729e9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "fbb17db7a470",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "introduction-000",
+      "privacy-is-existential-315",
+      "mary-shelley-and-the-one-way-ratchet-of-knowledge-516",
+      "the-cost-of-mediating-disputes-750",
+      "two-rules-of-knowledge-and-power-1024",
+      "the-pereira-bueno-case-and-mev-1326",
+      "legally-enforceable-duties-of-validators-1523",
+      "traditional-finance-pipelines-and-swift-1656",
+      "conclusions-and-defense-of-neutral-infrastructure-2214",
+      "qa-session-2421"
+    ]
+  },
+  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+}

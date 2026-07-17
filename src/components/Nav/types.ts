@@ -31,5 +31,5 @@ export type Level = 1 | 2 | 3 | 4
 
 export type LvlRefs = Record<
   "lvl1" | "lvl2" | "lvl3",
-  RefObject<HTMLDivElement>
+  RefObject<HTMLDivElement | null>
 >

@@ -1,60 +1,60 @@
 ---
-title: "রুবি ডেভেলপারদের জন্য ইথেরিয়াম"
-description: "রুবি-ভিত্তিক প্রজেক্ট এবং টুলিং ব্যবহার করে কীভাবে ইথেরিয়ামের জন্য ডেভেলপ করতে হয় তা শিখুন।"
+title: "Ruby ডেভেলপারদের জন্য ইথেরিয়াম"
+description: "Ruby-ভিত্তিক প্রজেক্ট এবং টুলিং ব্যবহার করে ইথেরিয়ামের জন্য কীভাবে ডেভেলপ করতে হয় তা শিখুন।"
 lang: bn
 incomplete: false
 ---
 
-<FeaturedText>রুবি-ভিত্তিক প্রজেক্ট এবং টুলিং ব্যবহার করে কীভাবে ইথেরিয়ামের জন্য ডেভেলপ করতে হয় তা শিখুন।</FeaturedText>
+<FeaturedText>Ruby-ভিত্তিক প্রজেক্ট এবং টুলিং ব্যবহার করে ইথেরিয়ামের জন্য কীভাবে ডেভেলপ করতে হয় তা শিখুন।</FeaturedText>
 
-ইথেরিয়াম ব্যবহার করে বিকেন্দ্রীভূত অ্যাপ্লিকেশন (বা "ড্যাপস") তৈরি করুন যেগুলো ক্রিপ্টোকারেন্সি এবং ব্লকচেইন প্রযুক্তির সুবিধাগুলোকে কাজে লাগায়।. এই ডিএ্যাপসগুলো ট্রাস্টলেস হতে পারে, যার মানে হলো একবার এগুলো ইথেরিয়ামে ডেপ্লয় করা হয়ে গেলে, এগুলো সর্বদা প্রোগ্রাম অনুযায়ী চলবে। তারা নতুন ধরনের আর্থিক অ্যাপ্লিকেশন তৈরি করতে ডিজিটাল অ্যাসেট নিয়ন্ত্রণ করতে পারে। এগুলো বিকেন্দ্রীভূত হতে পারে, যার মানে কোন একক সত্ত্বা বা ব্যক্তি এগুলো নিয়ন্ত্রণ করেনা এবং এগুলো সেন্সর করা প্রায় অসম্ভব।.
+ক্রিপ্টোকারেন্সি এবং ব্লকচেইন প্রযুক্তির সুবিধাগুলো কাজে লাগিয়ে বিকেন্দ্রীকৃত অ্যাপ্লিকেশন (dapp) তৈরি করতে ইথেরিয়াম ব্যবহার করুন। এই dapp-গুলো আস্থা-নিরপেক্ষ হতে পারে, যার মানে হলো একবার ইথেরিয়ামে ডিপ্লয় করা হলে, এগুলো সবসময় প্রোগ্রাম করা নিয়ম অনুযায়ী চলবে। এগুলো ডিজিটাল সম্পদ নিয়ন্ত্রণ করে নতুন ধরনের আর্থিক অ্যাপ্লিকেশন তৈরি করতে পারে। এগুলো বিকেন্দ্রীকৃত হতে পারে, যার মানে হলো কোনো একক সত্তা বা ব্যক্তি এগুলো নিয়ন্ত্রণ করে না এবং এগুলো সেন্সর করা প্রায় অসম্ভব।
 
-## স্মার্ট কন্ট্র্যাক্ট এবং Solidity ভাষা দিয়ে শুরু করা {#getting-started-with-smart-contracts-and-solidity}
+## স্মার্ট কন্ট্রাক্ট এবং Solidity ল্যাঙ্গুয়েজ দিয়ে শুরু করা {#getting-started-with-smart-contracts-and-solidity}
 
-**রুবি-এর সাথে ইথেরিয়ামকে একীভূত করার জন্য প্রথম পদক্ষেপ নিন**
+**ইথেরিয়ামের সাথে Ruby ইন্টিগ্রেট করার প্রথম ধাপগুলো নিন**
 
-একদম প্রথম থেকে শুরু করতে চান? [ethereum.org/learn](/learn/) বা [ethereum.org/developers](/developers/) দেখুন।
+প্রথমে আরও প্রাথমিক ধারণা প্রয়োজন? [ethereum.org/learn](/learn/) বা [ethereum.org/developers](/developers/) দেখুন।
 
-- [ব্লকচেইনের ব্যাখ্যা](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
-- [স্মার্ট কন্ট্র্যাক্ট বোঝা](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
-- [আপনার প্রথম স্মার্ট কন্ট্র্যাক্টটি লিখুন](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
-- [কীভাবে Solidity কম্পাইল এবং ডিপ্লয় করতে হয় তা শিখুন](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
+- [ব্লকচেইন ব্যাখ্যা](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
+- [স্মার্ট কন্ট্রাক্ট বোঝা](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
+- [আপনার প্রথম স্মার্ট কন্ট্রাক্ট লিখুন](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
+- [কীভাবে Solidity কম্পাইল এবং ডিপ্লয় করতে হয় তা শিখুন](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## নতুনদের জন্য নিবন্ধ {#beginner-articles}
+## নতুনদের জন্য আর্টিকেল {#beginner-articles}
 
-- [অবশেষে ইথেরিয়াম অ্যাকাউন্ট বোঝা](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
-- [অবশেষে MetaMask-এর সাথে Rails ব্যবহারকারীদের প্রমাণীকরণ](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
-- [রুবি ব্যবহার করে কীভাবে ইথেরিয়াম নেটওয়ার্কের সাথে সংযোগ স্থাপন করবেন](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
-- [রুবি-তে কীভাবে একটি নতুন ইথেরিয়াম অ্যাড্রেস তৈরি করবেন](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
+- [অবশেষে ইথেরিয়াম অ্যাকাউন্টগুলো বোঝা](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
+- [অবশেষে মেটামাস্ক দিয়ে Rails ব্যবহারকারীদের প্রমাণীকরণ করা](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
+- [Ruby ব্যবহার করে কীভাবে ইথেরিয়াম নেটওয়ার্কের সাথে কানেক্ট করবেন](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
+- [Ruby-তে কীভাবে একটি নতুন ইথেরিয়াম ঠিকানা তৈরি করবেন](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 
-## মধ্যবর্তী স্তরের নিবন্ধ {#intermediate-articles}
+## মধ্যম স্তরের আর্টিকেল {#intermediate-articles}
 
-- [রুবি সহ ব্লকচেইন অ্যাপ](https://www.nopio.com/blog/blockchain-app-ruby/)
-- [স্মার্ট কন্ট্র্যাক্ট এক্সিকিউট করতে ইথেরিয়ামের সাথে সংযুক্ত রুবি ব্যবহার করুন](https://titanwolf.org/Network/Articles/Article?AID=87285822-9b25-49d5-ba2a-7ad95fff7ef9)
+- [Ruby দিয়ে ব্লকচেইন অ্যাপ](https://www.nopio.com/blog/blockchain-app-ruby/)
+- [স্মার্ট কন্ট্রাক্ট এক্সিকিউট করতে ইথেরিয়ামের সাথে কানেক্ট করা Ruby ব্যবহার করুন](https://titanwolf.org/Network/Articles/Article?AID=87285822-9b25-49d5-ba2a-7ad95fff7ef9)
 
-## রুবি প্রজেক্ট এবং টুলস {#ruby-projects-and-tools}
+## Ruby প্রজেক্ট এবং টুল {#ruby-projects-and-tools}
 
 ### সক্রিয় {#active}
 
-- [eth.rb](https://github.com/q9f/eth.rb) - _ইথেরিয়াম অ্যাকাউন্ট, মেসেজ এবং ট্রানজ্যাকশন পরিচালনা করার জন্য রুবি লাইব্রেরি এবং RPC-ক্লায়েন্ট_
-- [keccak.rb](https://github.com/q9f/keccak.rb) - _ইথেরিয়াম দ্বারা ব্যবহৃত Keccak (SHA3) হ্যাস_
-- [siwe-ruby](https://github.com/signinwithethereum/siwe-ruby) - _Sign-In with Ethereum-এর রুবি ইমপ্লিমেন্টেশন_
-- [siwe-rails](https://github.com/signinwithethereum/siwe-rails) - _রেলস জেম যা SIWE লোকাল সাইন ইন রুট যোগ করে_
-- [siwe-rails-examples](https://github.com/signinwithethereum/siwe-rails-examples) - _কাস্টম কন্ট্রোলারের সাথে রুবি অন রেলস ব্যবহার করে SIWE-এর উদাহরণ_
-- [omniauth-siwe](https://github.com/signinwithethereum/omniauth-siwe) - _সাইন ইন উইথ ইথেরিয়াম (SIWE)-এর জন্য OmniAuth কৌশল_
+- [eth.rb](https://github.com/q9f/eth.rb) - _ইথেরিয়াম অ্যাকাউন্ট, মেসেজ এবং ট্রানজ্যাকশন পরিচালনা করার জন্য Ruby লাইব্রেরি এবং RPC-ক্লায়েন্ট_
+- [keccak.rb](https://github.com/q9f/keccak.rb) - _ইথেরিয়াম দ্বারা ব্যবহৃত Keccak (SHA3) হ্যাশ_
+- [siwe-ruby](https://github.com/signinwithethereum/siwe-ruby) - _Sign-In with Ethereum-এর Ruby ইমপ্লিমেন্টেশন_
+- [siwe-rails](https://github.com/signinwithethereum/siwe-rails) - _Rails জেম যা SIWE লোকাল সাইন-ইন রাউট যোগ করে_
+- [siwe-rails-examples](https://github.com/signinwithethereum/siwe-rails-examples) - _কাস্টম কন্ট্রোলারসহ Ruby on Rails ব্যবহার করে SIWE-এর উদাহরণ_
+- [omniauth-siwe](https://github.com/signinwithethereum/omniauth-siwe) - _Sign In With Ethereum (SIWE)-এর জন্য OmniAuth কৌশল_
 - [omniauth-nft](https://github.com/valthon/omniauth-nft) - _NFT মালিকানার মাধ্যমে প্রমাণীকরণের জন্য OmniAuth কৌশল_
-- [ethereum-on-rails](https://github.com/q9f/ethereum-on-rails) - _ইথেরিয়াম অন রেলস টেমপ্লেট যা রুবি অন রেলস-এর সাথে MetaMask সংযোগ করার অনুমতি দেয়_
+- [ethereum-on-rails](https://github.com/q9f/ethereum-on-rails) - _Ethereum on Rails টেমপ্লেট যা মেটামাস্ক-কে Ruby on Rails-এর সাথে কানেক্ট করতে দেয়_
 
 ### আর্কাইভ করা / আর রক্ষণাবেক্ষণ করা হয় না {#archived--no-longer-maintained}
 
-- [web3-eth](https://github.com/spikewilliams/vtada-ethereum) - _রুবি সহ ইথেরিয়াম নোডের RPC মেথড কল করা_
-- [ethereum_tree](https://github.com/longhoangwkm/ethereum_tree) - _BIP32 স্ট্যান্ডার্ড অনুসারে একটি হায়ারারকিকাল ডিটারমিনিস্টিক ওয়ালেট থেকে ETH অ্যাড্রেস তৈরি করার জন্য রুবি লাইব্রেরি_
-- [etherlite](https://github.com/budacom/etherlite) - _রুবি অন রেলসের জন্য ইথেরিয়াম ইন্টিগ্রেশন_
-- [ethereum.rb](https://github.com/EthWorks/ethereum.rb) - _ট্রানজ্যাকশন পাঠানো, কন্ট্র্যাক্ট তৈরি এবং তার সাথে ইন্টারঅ্যাক্ট করার জন্য JSON-RPC ইন্টারফেস ব্যবহার করে রুবি ইথেরিয়াম ক্লায়েন্ট এবং ইথেরিয়াম নোডের সাথে কাজ করার জন্য দরকারী টুলকিট_
-- [omniauth-ethereum.rb](https://github.com/q9f/omniauth-ethereum.rb) - _OmniAuth-এর জন্য ইথেরিয়াম প্রোভাইডার কৌশল প্রয়োগ করে_
+- [web3-eth](https://github.com/spikewilliams/vtada-ethereum) - _Ruby দিয়ে ইথেরিয়াম নোড-এর RPC মেথড কল করা_
+- [ethereum_tree](https://github.com/longhoangwkm/ethereum_tree) - _BIP32 স্ট্যান্ডার্ড অনুযায়ী একটি হায়ারার্কিক্যাল ডিটারমিনিস্টিক ওয়ালেট থেকে ETH ঠিকানা তৈরি করার জন্য Ruby লাইব্রেরি_
+- [etherlite](https://github.com/budacom/etherlite) - _Ruby on Rails-এর জন্য ইথেরিয়াম ইন্টিগ্রেশন_
+- [ethereum.rb](https://github.com/EthWorks/ethereum.rb) - _ট্রানজ্যাকশন পাঠানো, কন্ট্রাক্ট তৈরি করা এবং এর সাথে ইন্টারঅ্যাক্ট করার জন্য জেসন-আরপিসি ইন্টারফেস ব্যবহার করা Ruby ইথেরিয়াম ক্লায়েন্ট, সেইসাথে ইথেরিয়াম নোড-এর সাথে কাজ করার জন্য দরকারী টুলকিট_
+- [omniauth-ethereum.rb](https://github.com/q9f/omniauth-ethereum.rb) - _OmniAuth-এর জন্য ইথেরিয়াম প্রোভাইডার কৌশল ইমপ্লিমেন্ট করে_
 
-আরও সংস্থান খুঁজছেন? আমাদের [ডেভেলপারদের হোম](/developers/) দেখুন।
+আরও রিসোর্স খুঁজছেন? [আমাদের ডেভেলপার হোম](/developers/) দেখুন।
 
-## রুবি কমিউনিটির অবদানকারীগণ {#ruby-community-contributors}
+## Ruby কমিউনিটি কন্ট্রিবিউটর {#ruby-community-contributors}
 
-[ইথেরিয়াম রুবি টেলিগ্রাম গ্রুপ](https://t.me/ruby_eth) একটি দ্রুত বর্ধনশীল সম্প্রদায়ের হোস্ট এবং এটি উপরের যেকোনো প্রজেক্ট এবং সম্পর্কিত বিষয় নিয়ে আলোচনার জন্য নিবেদিত রিসোর্স।
+[Ethereum Ruby টেলিগ্রাম গ্রুপ](https://t.me/ruby_eth) হলো একটি দ্রুত বর্ধনশীল কমিউনিটির হোস্ট এবং এটি উপরের যেকোনো প্রজেক্ট এবং সম্পর্কিত বিষয় নিয়ে আলোচনার জন্য একটি ডেডিকেটেড রিসোর্স।

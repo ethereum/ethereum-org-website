@@ -1,7 +1,7 @@
 import isChromatic from "chromatic/isChromatic"
-import { MotionGlobalConfig } from "framer-motion"
+import { MotionGlobalConfig } from "motion/react"
 import { IBM_Plex_Mono, Inter } from "next/font/google"
-import type { Preview } from "@storybook/react"
+import type { Preview } from "@storybook/nextjs"
 
 import ThemeProvider from "@/components/ThemeProvider"
 import { TooltipProvider } from "@/components/ui/tooltip"
@@ -10,9 +10,6 @@ import nextIntl, { baseLocales } from "./next-intl"
 import { withNextThemes } from "./withNextThemes"
 
 import "../src/styles/global.css"
-import "../src/styles/docsearch.css"
-
-import "@docsearch/css"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -40,10 +37,6 @@ export const breakpointSet: [token: string, value: string][] = [
 ]
 
 const preview: Preview = {
-  globals: {
-    locale: "en",
-    locales: baseLocales,
-  },
   decorators: [
     withNextThemes({
       themes: {
@@ -81,7 +74,7 @@ const preview: Preview = {
     layout: "centered",
     // Modify viewport selection to match Chakra breakpoints (or custom breakpoints)
     viewport: {
-      viewports: breakpointSet.reduce<{
+      options: breakpointSet.reduce<{
         [token: string]: {
           name: string
           styles: Record<"width" | "height", string>
@@ -99,6 +92,10 @@ const preview: Preview = {
         }
       }, {}),
     },
+  },
+  initialGlobals: {
+    locale: "en",
+    locales: baseLocales,
   },
 }
 

@@ -1,0 +1,730 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/scaling/validium/index.md",
+  "generatedAt": "2026-06-17T22:50:01.684Z",
+  "rootHash": "5262df1ee632",
+  "tree": {
+    "contentHash": "2fa9a1bfdd48",
+    "anchorHash": "dd498e3d95e4",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "cc38c4d4fa24",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "96b34dd4146f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:sidebarDepth": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "4e07408562be"
+      },
+      "prose:4": {
+        "contentHash": "f4285e9be9e6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "adfd43fbecf3",
+        "anchorHash": "0e11617f9023"
+      },
+      "prose:5": {
+        "contentHash": "83757b576701",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "6421212dc98a",
+        "anchorHash": "e38757cd7cda"
+      },
+      "prose:6": {
+        "contentHash": "b495e0ebc0a0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:2": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "8a5edab28263"
+      },
+      "prose:7": {
+        "contentHash": "4b89da881d31",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:3": {
+        "contentHash": "e341fa1bcc9c",
+        "anchorHash": "3660039c0c6e"
+      },
+      "prose:8": {
+        "contentHash": "c4b2896a2081",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prerequisites": {
+        "contentHash": "2f52e795ea76",
+        "anchorHash": "d440c819977a",
+        "labelHash": "865514682d01",
+        "children": {
+          "_label": {
+            "contentHash": "865514682d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "2edc678151ba",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "42d7538ac3a1",
+            "anchorHash": "0e11617f9023"
+          },
+          "prose:3": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "0c6eea24ed5f",
+            "anchorHash": "ffb8e9b5b37e"
+          },
+          "prose:4": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "what-is-validium": {
+        "contentHash": "e2fab85ca103",
+        "anchorHash": "7079a457ca9c",
+        "labelHash": "4ab88d9a44cc",
+        "children": {
+          "_label": {
+            "contentHash": "4ab88d9a44cc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "0207d509a6d8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "dd34ba59731d",
+            "anchorHash": "d83d8b930e79"
+          },
+          "prose:4": {
+            "contentHash": "6020bdfd772f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "dd34ba59731d",
+            "anchorHash": "1627f05354dd"
+          },
+          "prose:5": {
+            "contentHash": "224065c25262",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "aee742288697",
+            "anchorHash": "973e284d67f9"
+          },
+          "prose:6": {
+            "contentHash": "3f758eb41e1f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6"
+        ]
+      },
+      "how-do-validiums-interact-with-ethereum": {
+        "contentHash": "274931c6d071",
+        "anchorHash": "e1ffd3e69e7a",
+        "labelHash": "41d753e9f3d3",
+        "children": {
+          "_label": {
+            "contentHash": "41d753e9f3d3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "85715a6fcf18",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "settlement": {
+            "contentHash": "99ebeddbc09c",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "711b5c6af517",
+            "children": {
+              "_label": {
+                "contentHash": "711b5c6af517",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "60ce49d3eb1f",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "security": {
+            "contentHash": "c60590417e06",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "8f6fb4eb7f42",
+            "children": {
+              "_label": {
+                "contentHash": "8f6fb4eb7f42",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "9c45a46c27c2",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "settlement",
+          "security"
+        ]
+      },
+      "how-does-validium-work": {
+        "contentHash": "19cedd11606b",
+        "anchorHash": "1d5d4d88c607",
+        "labelHash": "83743afb98e9",
+        "children": {
+          "_label": {
+            "contentHash": "83743afb98e9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "transactions": {
+            "contentHash": "0bc8a41e613e",
+            "anchorHash": "e1030385a4d7",
+            "labelHash": "3e5136fd4b11",
+            "children": {
+              "_label": {
+                "contentHash": "3e5136fd4b11",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "79055d4265f7",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "9896f30a1097",
+                "anchorHash": "0e500613f6a4"
+              },
+              "prose:2": {
+                "contentHash": "f3517b1d6624",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "state-commitments": {
+            "contentHash": "ababa0186904",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "b36974277a12",
+            "children": {
+              "_label": {
+                "contentHash": "b36974277a12",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "cce6932018fb",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "deposits-and-withdrawals": {
+            "contentHash": "621258b6ccfd",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "08705284eb45",
+            "children": {
+              "_label": {
+                "contentHash": "08705284eb45",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "e14a133d5acd",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "batch-submission": {
+            "contentHash": "9400f3d4bd22",
+            "anchorHash": "8d1529ba4dca",
+            "labelHash": "44640a6744e7",
+            "children": {
+              "_label": {
+                "contentHash": "44640a6744e7",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "2d8bbb88042e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "0c6eea24ed5f",
+                "anchorHash": "3b52f2e35fd0"
+              },
+              "prose:3": {
+                "contentHash": "fbe56f8fca3f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "6ba9f2ab1a28"
+              },
+              "prose:4": {
+                "contentHash": "c5485ece79eb",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "inline-code:1",
+              "prose:4"
+            ]
+          },
+          "data-availability": {
+            "contentHash": "491633580ea6",
+            "anchorHash": "fa35615ca4da",
+            "labelHash": "188a992e372f",
+            "children": {
+              "_label": {
+                "contentHash": "188a992e372f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "7e76ac088efa",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "data-availability-committee": {
+                "contentHash": "1ac716796672",
+                "anchorHash": "7905c06319bb",
+                "labelHash": "2afcc4eacc9b",
+                "children": {
+                  "_label": {
+                    "contentHash": "2afcc4eacc9b",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:2": {
+                    "contentHash": "7ba7c6e7fe4c",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "d7aa35903e36",
+                    "anchorHash": "d24ccdd68382"
+                  },
+                  "prose:3": {
+                    "contentHash": "a8679f7fbc1b",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:1": {
+                    "contentHash": "dfdd13378075",
+                    "anchorHash": "d2365ddd2018"
+                  },
+                  "prose:4": {
+                    "contentHash": "cdb4ee2aea69",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:2",
+                  "link:0",
+                  "prose:3",
+                  "link:1",
+                  "prose:4"
+                ]
+              },
+              "bonded-data-availability": {
+                "contentHash": "83b686058357",
+                "anchorHash": "e8752031b6f6",
+                "labelHash": "d0880e984b5e",
+                "children": {
+                  "_label": {
+                    "contentHash": "d0880e984b5e",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:1": {
+                    "contentHash": "d92ec231f1f6",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "aa0f446c99de",
+                    "anchorHash": "6e603643f533"
+                  },
+                  "prose:2": {
+                    "contentHash": "cdb4ee2aea69",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:1",
+                  "link:0",
+                  "prose:2"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "data-availability-committee",
+              "bonded-data-availability"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "transactions",
+          "state-commitments",
+          "deposits-and-withdrawals",
+          "batch-submission",
+          "data-availability"
+        ]
+      },
+      "volitions-and-validium": {
+        "contentHash": "f3efced513d3",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "83d28792db9a",
+        "children": {
+          "_label": {
+            "contentHash": "83d28792db9a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "95a859fd5fce",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "validiums-and-evm-compatibility": {
+        "contentHash": "d4b25dfccb77",
+        "anchorHash": "9a95ccd07453",
+        "labelHash": "d33a873af4a4",
+        "children": {
+          "_label": {
+            "contentHash": "d33a873af4a4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "08dcd32cad07",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f7925209bc63",
+            "anchorHash": "f68a48502f68"
+          },
+          "prose:3": {
+            "contentHash": "f0cdbaaa69d5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "a50f70c193d4",
+            "anchorHash": "1a61d30edd8a"
+          },
+          "prose:4": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "scaling-ethereum-with-validiums": {
+        "contentHash": "20bd253cee7e",
+        "anchorHash": "29fb7699fc95",
+        "labelHash": "4979603fa25c",
+        "children": {
+          "_label": {
+            "contentHash": "4979603fa25c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "offchain-data-storage": {
+            "contentHash": "445558da3922",
+            "anchorHash": "f1b479cb7e47",
+            "labelHash": "cc7116b7d480",
+            "children": {
+              "_label": {
+                "contentHash": "cc7116b7d480",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:3": {
+                "contentHash": "afc737849cdd",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "fad9c96b8764",
+                "anchorHash": "eacb4595ad89"
+              },
+              "prose:4": {
+                "contentHash": "1b56b8fbbbad",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "105d535a8197",
+                "anchorHash": "375512cb1465"
+              },
+              "prose:5": {
+                "contentHash": "d044ee471c9e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "9c8ae38f81d5",
+                "anchorHash": "e0dcdaf3a7b0"
+              },
+              "prose:6": {
+                "contentHash": "d41a0b8323aa",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:3",
+              "link:0",
+              "prose:4",
+              "link:1",
+              "prose:5",
+              "link:2",
+              "prose:6"
+            ]
+          },
+          "recursive-proofs": {
+            "contentHash": "95d82ea3f602",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "012f3e95fd00",
+            "children": {
+              "_label": {
+                "contentHash": "012f3e95fd00",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "9d017c211e3c",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "offchain-data-storage",
+          "recursive-proofs"
+        ]
+      },
+      "pros-and-cons-of-validium": {
+        "contentHash": "413c5ab0117b",
+        "anchorHash": "3135547619a6",
+        "labelHash": "7db823ea0705",
+        "children": {
+          "_label": {
+            "contentHash": "7db823ea0705",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "0805e172caf0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "use-validium-and-volitions": {
+            "contentHash": "564da9a3cef2",
+            "anchorHash": "901296a68d19",
+            "labelHash": "e27c09da0ff8",
+            "children": {
+              "_label": {
+                "contentHash": "e27c09da0ff8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:5": {
+                "contentHash": "43cf46473141",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "c205924de0fe",
+                "anchorHash": "b5d48d2fb2a3"
+              },
+              "prose:6": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "b5a229ac8bec",
+                "anchorHash": "a6a1dae439a3"
+              },
+              "prose:7": {
+                "contentHash": "0ab4b405c2ca",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "8c6bc099534a",
+                "anchorHash": "6e603643f533"
+              },
+              "prose:8": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "c205924de0fe",
+                "anchorHash": "5c95bb430e41"
+              },
+              "prose:9": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "b5a229ac8bec",
+                "anchorHash": "ad54508f8dab"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:5",
+              "link:0",
+              "prose:6",
+              "link:1",
+              "prose:7",
+              "link:2",
+              "prose:8",
+              "link:3",
+              "prose:9",
+              "link:4"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "use-validium-and-volitions"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "192ae4a339e5",
+        "anchorHash": "3e2397197d1e",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "caf1603a47c6",
+            "anchorHash": "97d7287bb0ec"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "7d6b7abc3d29",
+            "anchorHash": "3660039c0c6e"
+          },
+          "prose:6": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "59f0f679894c",
+            "anchorHash": "322f511ff650"
+          },
+          "prose:7": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "99c54220b54f",
+            "anchorHash": "f79a0f0d8bbc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:sidebarDepth",
+      "prose:4",
+      "link:0",
+      "prose:5",
+      "link:1",
+      "prose:6",
+      "link:2",
+      "prose:7",
+      "link:3",
+      "prose:8",
+      "prerequisites",
+      "what-is-validium",
+      "how-do-validiums-interact-with-ethereum",
+      "how-does-validium-work",
+      "volitions-and-validium",
+      "validiums-and-evm-compatibility",
+      "scaling-ethereum-with-validiums",
+      "pros-and-cons-of-validium",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}

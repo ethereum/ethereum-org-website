@@ -1,42 +1,50 @@
 ---
-title: Kutumia zero-knowledge kwa hali ya siri
-description: michezo ya onchain ina mipaka kwa sababu haiwezi kutunza taarifa zozote zilizofichwa. Baada ya kusoma mafunzo haya, msomaji ataweza kuchanganya uthibitisho wa zero-knowledge na vipengele vya seva ili kuunda michezo inayoweza kuthibitishwa na hali ya siri, offchain, na sehemu. Mbinu ya kufanya hivi itaonyeshwa kwa kuunda mchezo wa minesweeper.
+title: Kutumia sifuri-maarifa kwa hali ya siri
+description: michezo ya mnyororoni ina kikomo kwa sababu haiwezi kuweka taarifa zozote zilizofichwa. Baada ya kusoma mafunzo haya, msomaji ataweza kuchanganya uthibitisho wa maarifa-sifuri na vijenzi vya seva ili kuunda michezo inayoweza kuthibitishwa yenye kijenzi cha hali ya siri, nje ya mnyororo. Mbinu ya kufanya hivi itaonyeshwa kwa kuunda mchezo wa minesweeper.
 author: Ori Pomerantz
-tags: ["server", "offchain", "centralized", "zero-knowledge", "zokrates", "mud"]
+tags:
+  - seva
+  - nje ya mnyororo
+  - iliyowekwa kati
+  - sifuri-maarifa
+  - zokrates
+  - mud
+  - faragha
 skill: advanced
+breadcrumb: Hali ya siri ya ZK
 lang: sw
 published: 2025-03-15
 ---
 
-_Hakuna siri kwenye mnyororo wa bloku_. Kila kitu kinachowekwa kwenye mnyororo wa bloku kiko wazi kwa kila mtu kusoma. Hii ni muhimu, kwa sababu mnyororo wa bloku unategemea mtu yeyote kuweza kuuthibitisha. Hata hivyo, mara nyingi michezo hutegemea hali ya siri. Kwa mfano, mchezo wa [minesweeper](https://en.wikipedia.org/wiki/Minesweeper_\(video_game\)) hauna maana kabisa ikiwa unaweza tu kwenda kwenye kichunguzi cha mnyororo wa bloku na kuona ramani.
+_Hakuna siri kwenye mnyororo wa vitalu_. Kila kitu kinachochapishwa kwenye mnyororo wa vitalu kiko wazi kwa kila mtu kusoma. Hili ni muhimu, kwa sababu mnyororo wa vitalu unategemea mtu yeyote kuweza kuuthibitisha. Hata hivyo, michezo mara nyingi hutegemea hali ya siri. Kwa mfano, mchezo wa [minesweeper](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) hauna maana kabisa ikiwa unaweza tu kwenda kwenye kichunguzi cha bloku na kuona ramani.
 
-Suluhisho rahisi zaidi ni kutumia [sehemu ya seva](/developers/tutorials/server-components/) kushikilia hali ya siri. Hata hivyo, sababu tunayotumia mnyororo wa bloku ni kuzuia udanganyifu na msanidi programu wa mchezo. Tunahitaji kuhakikisha uaminifu wa sehemu ya seva. Seva inaweza kutoa hashi ya hali, na kutumia [uthibitisho wa zero-knowledge](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) kuthibitisha kuwa hali iliyotumiwa kuhesabu matokeo ya hatua ndiyo sahihi.
+Suluhisho rahisi zaidi ni kutumia [kijenzi cha seva](/developers/tutorials/server-components/) kushikilia hali ya siri. Hata hivyo, sababu tunayotumia mnyororo wa vitalu ni kuzuia udanganyifu na msanidi wa mchezo. Tunahitaji kuhakikisha uaminifu wa kijenzi cha seva. Seva inaweza kutoa heshi ya hali, na kutumia [uthibitisho wa maarifa-sifuri](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) kuthibitisha kwamba hali iliyotumika kukokotoa matokeo ya hatua ni sahihi.
 
-Baada ya kusoma makala hii utajua jinsi ya kuunda aina hii ya seva inayoshikilia hali ya siri, wateja wa kuonyesha hali, na sehemu ya onchain kwa mawasiliano kati ya hizi mbili. Zana kuu tutakazotumia zitakuwa:
+Baada ya kusoma makala haya utajua jinsi ya kuunda aina hii ya seva inayoshikilia hali ya siri, kiteja cha kuonyesha hali, na kijenzi cha mnyororoni kwa mawasiliano kati ya hizo mbili. Zana kuu tutakazotumia zitakuwa:
 
-| Zana                                          | Madhumuni                                           |             Imethibitishwa kwenye toleo |
-| --------------------------------------------- | --------------------------------------------------- | --------------------------------------: |
-| [Zokrates](https://zokrates.github.io/)       | Uthibitisho wa zero-knowledge na uthibitishaji wake |   1.1.9 |
-| [Typescript](https://www.typescriptlang.org/) | Lugha ya programu kwa seva na wateja                |   5.4.2 |
-| [Nodi](https://nodejs.org/en)                 | Kuendesha seva                                      | 20.18.2 |
-| [Viem](https://viem.sh/)                      | Mawasiliano na Mnyororo wa bloku                    |  2.9.20 |
-| [MUD](https://mud.dev/)                       | Usimamizi wa data ya Onchain                        |  2.0.12 |
-| [React](https://react.dev/)                   | Kiolesura cha mtumiaji wa Wateja                    |  18.2.0 |
-| [Vite](https://vitejs.dev/)                   | Kutumikia msimbo wa wateja                          |   4.2.1 |
+| Zana                                          | Kusudi                                                  | Imethibitishwa kwenye toleo |
+| --------------------------------------------- | ------------------------------------------------------- | ------------------: |
+| [Zokrates](https://zokrates.github.io/)       | Uthibitisho wa maarifa-sifuri na uhakiki wake           |               1.1.9 |
+| [TypeScript](https://www.typescriptlang.org/) | Lugha ya programu kwa seva na kiteja                    |               5.4.2 |
+| [Node](https://nodejs.org/en)                 | Kuendesha seva                                          |             20.18.2 |
+| [Viem](https://viem.sh/)                      | Mawasiliano na Mnyororo wa vitalu                       |              2.9.20 |
+| [MUD](https://mud.dev/)                       | Usimamizi wa data mnyororoni                            |              2.0.12 |
+| [React](https://react.dev/)                   | Kiolesura cha mtumiaji cha kiteja                       |              18.2.0 |
+| [Vite](https://vitejs.dev/)                   | Kuhudumia msimbo wa kiteja                              |               4.2.1 |
 
 ## Mfano wa Minesweeper {#minesweeper}
 
-[Minesweeper](https://en.wikipedia.org/wiki/Minesweeper_\(video_game\)) ni mchezo unaojumuisha ramani ya siri yenye uwanja wa migodi. Mchezaji anachagua kuchimba katika eneo maalum. Ikiwa eneo hilo lina mgodi, mchezo umeisha. Vinginevyo, mchezaji anapata idadi ya migodi katika viwanja nane vinavyozunguka eneo hilo.
+[Minesweeper](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) ni mchezo unaojumuisha ramani ya siri yenye uwanja wa mabomu. Mchezaji anachagua kuchimba katika eneo maalum. Ikiwa eneo hilo lina bomu, mchezo unakwisha. Vinginevyo, mchezaji anapata idadi ya mabomu katika miraba minane inayozunguka eneo hilo.
 
-Programu hii imeandikwa kwa kutumia [MUD](https://mud.dev/), mfumo unaoturuhusu kuhifadhi data onchain kwa kutumia [hifadhidata ya ufunguo-thamani](https://aws.amazon.com/nosql/key-value/) na kusawazisha data hiyo kiotomatiki na vipengele vya offchain. Mbali na usawazishaji, MUD hurahisisha kutoa udhibiti wa ufikiaji, na kwa watumiaji wengine [kupanua](https://mud.dev/guides/extending-a-world) programu yetu bila ruhusa.
+Programu hii imeandikwa kwa kutumia [MUD](https://mud.dev/), mfumo unaoturuhusu kuhifadhi data mnyororoni kwa kutumia [hifadhidata ya ufunguo-thamani](https://aws.amazon.com/nosql/key-value/) na kusawazisha data hiyo kiotomatiki na vijenzi vya nje ya mnyororo. Mbali na usawazishaji, MUD inafanya iwe rahisi kutoa udhibiti wa ufikiaji, na kwa watumiaji wengine [kupanua](https://mud.dev/guides/extending-a-world) programu yetu bila kuhitaji ruhusa.
 
 ### Kuendesha mfano wa minesweeper {#running-minesweeper-example}
 
 Ili kuendesha mfano wa minesweeper:
 
-1. Hakikisha [una mahitaji ya awali yaliyowekwa](https://mud.dev/quickstart#prerequisites): [Nodi](https://mud.dev/quickstart#prerequisites), [Foundry](https://book.getfoundry.sh/getting-started/installation), [`git`](https://git-scm.com/downloads), [`pnpm`](https://git-scm.com/downloads), na [`mprocs`](https://github.com/pvolok/mprocs).
+1. Hakikisha [umesakinisha mahitaji ya awali](https://mud.dev/quickstart#prerequisites): [Node](https://mud.dev/quickstart#prerequisites), [Foundry](https://book.getfoundry.sh/getting-started/installation), [`git`](https://git-scm.com/downloads), [`pnpm`](https://git-scm.com/downloads), na [`mprocs`](https://github.com/pvolok/mprocs).
 
-2. Kloni hifadhi.
+2. Nakili (clone) hazina.
 
    ```sh copy
    git clone https://github.com/qbzzt/20240901-secret-state.git
@@ -50,9 +58,9 @@ Ili kuendesha mfano wa minesweeper:
    npm install -g mprocs
    ```
 
-   Ikiwa Foundry ilisakinishwa kama sehemu ya `pnpm install`, unahitaji kuanzisha upya ganda la mstari wa amri.
+   Ikiwa Foundry ilisakinishwa kama sehemu ya `pnpm install`, unahitaji kuanzisha upya ganda la mstari wa amri (command-line shell).
 
-4. Kusanya mikataba
+4. Kusanya (compile) mikataba
 
     ```sh copy
     cd packages/contracts
@@ -60,17 +68,18 @@ Ili kuendesha mfano wa minesweeper:
     cd ../..
     ```
 
-5. Anzisha programu (pamoja na mnyororo wa bloku wa [anvil](https://book.getfoundry.sh/anvil/)) na subiri.
+
+5. Anzisha programu (ikiwa ni pamoja na mnyororo wa vitalu wa [anvil](https://book.getfoundry.sh/anvil/)) na usubiri.
 
    ```sh copy
    mprocs
    ```
 
-   Kumbuka kuwa uanzishaji unachukua muda mrefu. Ili kuona maendeleo, kwanza tumia mshale wa chini kusogeza hadi kwenye kichupo cha _contracts_ ili kuona mikataba ya MUD ikisambazwa. Unapopata ujumbe _Waiting for file changes…_, mikataba imesambazwa na maendeleo zaidi yatatokea kwenye kichupo cha _server_. Hapo, unasubiri hadi upate ujumbe _Verifier address: 0x...._.
+   Kumbuka kwamba kuanzisha kunachukua muda mrefu. Ili kuona maendeleo, kwanza tumia mshale wa chini kusogeza hadi kwenye kichupo cha _contracts_ ili kuona mikataba ya MUD ikisambazwa. Unapopata ujumbe _Waiting for file changes…_, mikataba inasambazwa na maendeleo zaidi yatafanyika katika kichupo cha _server_. Hapo, unasubiri hadi upate ujumbe _Verifier address: 0x...._.
 
-   Ikiwa hatua hii itafanikiwa, utaona skrini ya `mprocs`, na michakato tofauti upande wa kushoto na matokeo ya console kwa mchakato uliochaguliwa kwa sasa upande wa kulia.
+   Ikiwa hatua hii imefanikiwa, utaona skrini ya `mprocs`, na michakato tofauti upande wa kushoto na matokeo ya kiweko (console output) kwa mchakato uliochaguliwa kwa sasa upande wa kulia.
 
-   ![Skrini ya mprocs](./mprocs.png)
+   ![The mprocs screen](./mprocs.png)
 
    Ikiwa kuna tatizo na `mprocs`, unaweza kuendesha michakato minne kwa mikono, kila mmoja katika dirisha lake la mstari wa amri:
 
@@ -81,200 +90,199 @@ Ili kuendesha mfano wa minesweeper:
      anvil --base-fee 0 --block-time 2
      ```
 
-   - **Mikataba**
+   - **Contracts** 
 
      ```sh
      cd packages/contracts
      pnpm mud dev-contracts --rpc http://127.0.0.1:8545
      ```
 
-   - **Seva**
+   - **Server**
 
      ```sh
      cd packages/server
      pnpm start
-     ```
+     ```  
 
-   - **Wateja**
+   - **Client**
 
      ```sh
      cd packages/client
      pnpm run dev
-     ```
+     ```  
 
-6. Sasa unaweza kuvinjari kwa [wateja](http://localhost:3000), bonyeza **New Game**, na uanze kucheza.
+6. Sasa unaweza kuvinjari hadi [kwa mteja](http://localhost:3000), bofya **New Game**, na uanze kucheza.
 
 ### Majedwali {#tables}
 
-Tunahitaji [majedwali kadhaa](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/mud.config.ts) onchain.
+Tunahitaji [majedwali kadhaa](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/mud.config.ts) mnyororoni.
 
-- `Configuration`: Jedwali hili ni la pekee, halina ufunguo na rekodi moja tu. Hutumika kushikilia taarifa za usanidi wa mchezo:
-  - `height`: Urefu wa uwanja wa migodi
-  - `width`: Upana wa uwanja wa migodi
-  - `numberOfBombs`: Idadi ya mabomu katika kila uwanja wa migodi
-
-- `VerifierAddress`: Jedwali hili pia ni la pekee. Hutumika kushikilia sehemu moja ya usanidi, anwani ya mkataba wa mthibitishaji (`verifier`). Tungeweza kuweka taarifa hizi kwenye jedwali la `Configuration`, lakini imewekwa na sehemu tofauti, seva, kwa hivyo ni rahisi kuiweka kwenye jedwali tofauti.
+- `Configuration`: Jedwali hili ni singeltoni, halina ufunguo na lina rekodi moja. Linatumika kushikilia maelezo ya usanidi wa mchezo:
+  - `height`: Urefu wa uwanja wa mabomu
+  - `width`: Upana wa uwanja wa mabomu
+  - `numberOfBombs`: Idadi ya mabomu katika kila uwanja wa mabomu
+- `VerifierAddress`: Jedwali hili pia ni singeltoni. Linatumika kushikilia sehemu moja ya usanidi, anwani ya mkataba wa mhakiki (`verifier`). Tungeweza kuweka maelezo haya katika jedwali la `Configuration`, lakini imewekwa na kijenzi tofauti, seva, kwa hivyo ni rahisi kuiweka katika jedwali tofauti.
 
 - `PlayerGame`: Ufunguo ni anwani ya mchezaji. Data ni:
 
-  - `gameId`: Thamani ya baiti 32 ambayo ni hashi ya ramani ambayo mchezaji anacheza (kitambulisho cha mchezo).
-  - `win`: boolean inayoonyesha kama mchezaji alishinda mchezo.
-  - `lose`: boolean inayoonyesha kama mchezaji alishindwa mchezo.
+  - `gameId`: Thamani ya baiti 32 ambayo ni heshi ya ramani anayochezea mchezaji (kitambulisho cha mchezo).
+  - `win`: boolean inayoonyesha ikiwa mchezaji alishinda mchezo.
+  - `lose`: boolean inayoonyesha ikiwa mchezaji alishindwa mchezo.
   - `digNumber`: idadi ya uchimbaji uliofanikiwa katika mchezo.
 
 - `GamePlayer`: Jedwali hili linashikilia ramani ya kinyume, kutoka `gameId` hadi anwani ya mchezaji.
 
-- `Map`: Ufunguo ni tupo ya thamani tatu:
+- `Map`: Ufunguo ni tuple ya thamani tatu:
 
-  - `gameId`: Thamani ya baiti 32 ambayo ni hashi ya ramani ambayo mchezaji anacheza (kitambulisho cha mchezo).
-  - kuratibu ya `x`
-  - kuratibu ya `y`
+  - `gameId`: Thamani ya baiti 32 ambayo ni heshi ya ramani anayochezea mchezaji (kitambulisho cha mchezo).
+  - `x` kuratibu (coordinate)
+  - `y` kuratibu (coordinate)
 
-  Thamani ni nambari moja. Ni 255 ikiwa bomu liligunduliwa. Vinginevyo, ni idadi ya mabomu karibu na eneo hilo pamoja na moja. Hatuwezi tu kutumia idadi ya mabomu, kwa sababu kwa chaguo-msingi hifadhi zote katika EVM na thamani zote za safu katika MUD ni sifuri. Tunahitaji kutofautisha kati ya "mchezaji bado hajachimba hapa" na "mchezaji alichimba hapa, na akakuta hakuna mabomu karibu".
+  Thamani ni nambari moja. Ni 255 ikiwa bomu liligunduliwa. Vinginevyo, ni idadi ya mabomu karibu na eneo hilo kujumlisha moja. Hatuwezi tu kutumia idadi ya mabomu, kwa sababu kwa chaguo-msingi hifadhi yote katika EVM na thamani zote za safu mlango katika MUD ni sifuri. Tunahitaji kutofautisha kati ya "mchezaji hajachimba hapa bado" na "mchezaji alichimba hapa, na akakuta hakuna mabomu karibu".
 
-Kwa kuongeza, mawasiliano kati ya wateja na seva hufanyika kupitia sehemu ya onchain. Hii pia inatekelezwa kwa kutumia majedwali.
+Kwa kuongezea, mawasiliano kati ya mteja na seva yanafanyika kupitia kijenzi cha mnyororoni. Hii pia inatekelezwa kwa kutumia majedwali.
 
-- `PendingGame`: Maombi ambayo hayajashughulikiwa ya kuanza mchezo mpya.
-- `PendingDig`: Maombi ambayo hayajashughulikiwa ya kuchimba katika eneo maalum katika mchezo maalum. Hili ni [jedwali la offchain](https://mud.dev/store/tables#types-of-tables), ikimaanisha kuwa haliandikwi kwenye ghala la EVM, linasomeka tu offchain kwa kutumia matukio.
+- `PendingGame`: Maombi ambayo hayajahudumiwa ya kuanzisha mchezo mpya.
+- `PendingDig`: Maombi ambayo hayajahudumiwa ya kuchimba katika eneo maalum katika mchezo maalum. Hili ni [jedwali la nje ya mnyororo](https://mud.dev/store/tables#types-of-tables), ikimaanisha kwamba haliandikwi kwenye hifadhi ya EVM, linasomeka tu nje ya mnyororo kwa kutumia matukio.
 
 ### Utekelezaji na mtiririko wa data {#execution-data-flows}
 
-Mtiririko huu unaratibu utekelezaji kati ya wateja, sehemu ya onchain, na seva.
+Mitiririko hii inaratibu utekelezaji kati ya mteja, kijenzi cha mnyororoni, na seva.
 
 #### Uanzishaji {#initialization-flow}
 
-Unapoendesha `mprocs`, hatua hizi hutokea:
+Unapoendesha `mprocs`, hatua hizi hufanyika:
 
-1. [`mprocs`](https://github.com/pvolok/mprocs) inaendesha vipengele vinne:
+1. [`mprocs`](https://github.com/pvolok/mprocs) inaendesha vijenzi vinne:
 
-   - [Anvil](https://book.getfoundry.sh/anvil/), ambayo inaendesha mnyororo wa bloku wa ndani
-   - [Mikataba](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts), ambayo inakusanya (ikihitajika) na kusambaza mikataba ya MUD
-   - [Wateja](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), ambayo inaendesha [Vite](https://vitejs.dev/) ili kuhudumia UI na msimbo wa wateja kwa vivinjari vya wavuti.
-   - [Seva](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server), ambayo hufanya vitendo vya seva
+   - [Anvil](https://book.getfoundry.sh/anvil/), ambayo inaendesha mnyororo wa vitalu wa ndani
+   - [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts), ambayo inakusanya (ikiwa inahitajika) na kusambaza mikataba kwa ajili ya MUD
+   - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), ambayo inaendesha [Vite](https://vitejs.dev/) ili kuhudumia UI na msimbo wa mteja kwa vivinjari vya wavuti.
+   - [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server), ambayo inafanya vitendo vya seva
 
-2. Kifurushi cha `contracts` kinasambaza mikataba ya MUD na kisha kinaendesha [hati ya `PostDeploy.s.sol`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol). Hati hii inaweka usanidi. Msimbo kutoka github unabainisha [uwanja wa migodi wa 10x5 wenye migodi nane ndani yake](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23).
+2. Kifurushi cha `contracts` kinasambaza mikataba ya MUD na kisha kuendesha [hati ya `PostDeploy.s.sol`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol). Hati hii inaweka usanidi. Msimbo kutoka github unabainisha [uwanja wa mabomu wa 10x5 wenye mabomu manane ndani yake](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23).
 
 3. [Seva](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts) inaanza kwa [kuweka MUD](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6). Miongoni mwa mambo mengine, hii inawasha usawazishaji wa data, ili nakala ya majedwali husika iwepo kwenye kumbukumbu ya seva.
 
-4. Seva inasajili kazi ya kutekelezwa [wakati jedwali la `Configuration` linabadilika](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23). [Kazi hii](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) inaitwa baada ya `PostDeploy.s.sol` kutekeleza na kurekebisha jedwali.
+4. Seva inajiandikisha (subscribes) kazi itakayotekelezwa [wakati jedwali la `Configuration` linapobadilika](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23). [Kazi hii](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) inaitwa baada ya `PostDeploy.s.sol` kutekelezwa na kurekebisha jedwali.
 
-5. Wakati kazi ya uanzishaji wa seva inapokuwa na usanidi, [inaita `zkFunctions`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35) ili kuanzisha [sehemu ya zero-knowledge ya seva](#using-zokrates-from-typescript). Hii haiwezi kutokea hadi tupate usanidi kwa sababu kazi za zero-knowledge lazima ziwe na upana na urefu wa uwanja wa migodi kama viwango vya kudumu.
+5. Wakati kazi ya uanzishaji wa seva ina usanidi, [inaita `zkFunctions`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35) ili kuanzisha [sehemu ya sifuri-maarifa ya seva](#using-zokrates-from-typescript). Hili haliwezi kufanyika hadi tupate usanidi kwa sababu kazi za sifuri-maarifa lazima ziwe na upana na urefu wa uwanja wa mabomu kama viwango vya kudumu (constants).
 
-6. Baada ya sehemu ya zero-knowledge ya seva kuanzishwa, hatua inayofuata ni [kusambaza mkataba wa uthibitishaji wa zero-knowledge kwenye mnyororo wa bloku](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) na kuweka anwani ya mthibitishwa katika MUD.
+6. Baada ya sehemu ya sifuri-maarifa ya seva kuanzishwa, hatua inayofuata ni [kusambaza mkataba wa uthibitishaji wa sifuri-maarifa kwenye mnyororo wa vitalu](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) na kuweka anwani ya anayethibitishwa katika MUD.
 
-7. Mwishowe, tunasajili masasisho ili tuone mchezaji anapoomba ama [kuanza mchezo mpya](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71) au [kuchimba kwenye mchezo uliopo](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108).
+7. Hatimaye, tunajiandikisha kwa sasisho ili tuone wakati mchezaji anaomba ama [kuanzisha mchezo mpya](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71) au [kuchimba katika mchezo uliopo](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108).
 
 #### Mchezo mpya {#new-game-flow}
 
-Hivi ndivyo hutokea mchezaji anapoomba mchezo mpya.
+Hivi ndivyo inavyotokea wakati mchezaji anaomba mchezo mpya.
 
-1. Ikiwa hakuna mchezo unaoendelea kwa mchezaji huyu, au kuna mmoja lakini una gameId ya sifuri, wateja wanaonyesha [kitufe cha mchezo mpya](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175). Mtumiaji anapobonyeza kitufe hiki, [React inaendesha kazi ya `newGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L96).
+1. Ikiwa hakuna mchezo unaoendelea kwa mchezaji huyu, au kuna mmoja lakini wenye gameId ya sifuri, mteja anaonyesha [kitufe cha mchezo mpya](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175). Mtumiaji anapobonyeza kitufe hiki, [React inaendesha kazi ya `newGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L96).
 
-2. [`newGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/mud/createSystemCalls.ts#L43-L46) ni wito wa `System`. Katika MUD simu zote zinaelekezwa kupitia mkataba wa `World`, na katika hali nyingi unaita `<namespace>__<function name>`. Katika kesi hii, wito ni kwa `app__newGame`, ambayo MUD kisha inaelekeza kwa [`newGame` katika `GameSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L16-L22).
+2. [`newGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/mud/createSystemCalls.ts#L43-L46) ni wito wa `System`. Katika MUD wito wote unaelekezwa kupitia mkataba wa `World`, na katika hali nyingi unaita `<namespace>__<function name>`. Katika kesi hii, wito ni kwa `app__newGame`, ambao MUD kisha inaelekeza kwa [`newGame` katika `GameSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L16-L22).
 
-3. Kazi ya onchain inakagua kwamba mchezaji hana mchezo unaoendelea, na ikiwa hakuna [inaongeza ombi kwenye jedwali la `PendingGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L21).
+3. Kazi ya mnyororoni inakagua kwamba mchezaji hana mchezo unaoendelea, na ikiwa hakuna [inaongeza ombi kwenye jedwali la `PendingGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L21).
 
-4. Seva inagundua mabadiliko katika `PendingGame` na [inaendesha kazi iliyosajiliwa](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71). Kazi hii inaita [`newGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L110-L114), ambayo kwa upande wake inaita [`createGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L116-L144).
+4. Seva inagundua mabadiliko katika `PendingGame` na [inaendesha kazi iliyojiandikisha](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71). Kazi hii inaita [`newGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L110-L114), ambayo nayo inaita [`createGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L116-L144).
 
-5. Jambo la kwanza `createGame` hufanya ni [kuunda ramani isiyo ya kawaida na idadi inayofaa ya migodi](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L120-L135). Kisha, inaita [`makeMapBorders`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L147-L166) ili kuunda ramani yenye mipaka tupu, ambayo ni muhimu kwa Zokrates. Mwishowe, `createGame` inaita [`calculateMapHash`](#calculateMapHash), ili kupata hashi ya ramani, ambayo hutumiwa kama kitambulisho cha mchezo.
+5. Kitu cha kwanza ambacho `createGame` inafanya ni [kuunda ramani ya nasibu yenye idadi inayofaa ya mabomu](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L120-L135). Kisha, inaita [`makeMapBorders`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L147-L166) ili kuunda ramani yenye mipaka tupu, ambayo ni muhimu kwa Zokrates. Hatimaye, `createGame` inaita [`calculateMapHash`](#calculatemaphash), ili kupata heshi ya ramani, ambayo inatumika kama kitambulisho cha mchezo.
 
 6. Kazi ya `newGame` inaongeza mchezo mpya kwenye `gamesInProgress`.
 
-7. Jambo la mwisho ambalo seva hufanya ni kuita [`app__newGameResponse`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L38-L43), ambayo iko onchain. Kazi hii iko katika `System` tofauti, [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol), ili kuwezesha udhibiti wa ufikiaji. Udhibiti wa ufikiaji umefafanuliwa katika [faili ya usanidi ya MUD](https://mud.dev/config), [`mud.config.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/mud.config.ts#L67-L72).
+7. Kitu cha mwisho ambacho seva inafanya ni kuita [`app__newGameResponse`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L38-L43), ambayo iko mnyororoni. Kazi hii iko katika `System` tofauti, [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol), ili kuwezesha udhibiti wa ufikiaji. Udhibiti wa ufikiaji unafafanuliwa katika [faili la usanidi la MUD](https://mud.dev/config), [`mud.config.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/mud.config.ts#L67-L72).
 
-   Orodha ya ufikiaji inaruhusu anwani moja tu kuita `System`. Hii inazuia ufikiaji wa kazi za seva kwa anwani moja, kwa hivyo hakuna anayeweza kujifanya kuwa seva.
+   Orodha ya ufikiaji inaruhusu anwani moja tu kuita `System`. Hii inazuia ufikiaji wa kazi za seva kwa anwani moja, kwa hivyo hakuna mtu anayeweza kujifanya kuwa seva.
 
-8. Sehemu ya onchain inasasisha majedwali husika:
+8. Kijenzi cha mnyororoni kinasasisha majedwali husika:
 
    - Unda mchezo katika `PlayerGame`.
    - Weka ramani ya kinyume katika `GamePlayer`.
    - Ondoa ombi kutoka `PendingGame`.
 
-9. Seva inatambua mabadiliko katika `PendingGame`, lakini haifanyi chochote kwa sababu [`wantsGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L58-L60) ni ya uongo.
+9. Seva inatambua mabadiliko katika `PendingGame`, lakini haifanyi chochote kwa sababu [`wantsGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L58-L60) ni uongo (false).
 
-10. Kwa upande wa wateja [`gameRecord`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L143-L148) imewekwa kwenye ingizo la `PlayerGame` kwa anwani ya mchezaji. Wakati `PlayerGame` inapobadilika, `gameRecord` pia hubadilika.
+10. Kwenye mteja [`gameRecord`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L143-L148) imewekwa kwa ingizo la `PlayerGame` kwa anwani ya mchezaji. Wakati `PlayerGame` inabadilika, `gameRecord` inabadilika pia.
 
-11. Ikiwa kuna thamani katika `gameRecord`, na mchezo haujashindwa wala kushindwa, wateja [wanaonyesha ramani](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175-L190).
+11. Ikiwa kuna thamani katika `gameRecord`, na mchezo haujashindwa au kupotezwa, mteja [anaonyesha ramani](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175-L190).
 
 #### Chimba {#dig-flow}
 
-1. Mchezaji [anabonyeza kitufe cha seli ya ramani](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L188), ambayo inaita [kazi ya `dig`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/mud/createSystemCalls.ts#L33-L36). Kazi hii inaita [`dig` onchain](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L24-L32).
+1. Mchezaji [anabofya kitufe cha seli ya ramani](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L188), ambayo inaita [kazi ya `dig`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/mud/createSystemCalls.ts#L33-L36). Kazi hii inaita [`dig` mnyororoni](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L24-L32).
 
-2. Sehemu ya onchain [inafanya ukaguzi kadhaa wa kiakili](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L25-L30), na ikiwa imefanikiwa inaongeza ombi la kuchimba kwenye [`PendingDig`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L31).
+2. Kijenzi cha mnyororoni [kinafanya ukaguzi kadhaa wa usahihi](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L25-L30), na ikiwa imefanikiwa inaongeza ombi la kuchimba kwenye [`PendingDig`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L31).
 
-3. Seva [inagundua mabadiliko katika `PendingDig`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73). [Ikiwa ni halali](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L75-L84), [inaita msimbo wa zero-knowledge](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L86-L95) (imeelezewa hapa chini) ili kutoa matokeo na uthibitisho kwamba ni halali.
+3. Seva [inagundua mabadiliko katika `PendingDig`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73). [Ikiwa ni halali](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L75-L84), [inaita msimbo wa sifuri-maarifa](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L86-L95) (iliyoelezwa hapa chini) ili kuzalisha matokeo na uthibitisho kwamba ni halali.
 
-4. [Seva](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L97-L107) inaita [`digResponse`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L45-L64) onchain.
+4. [Seva](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L97-L107) inaita [`digResponse`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L45-L64) mnyororoni.
 
-5. `digResponse` hufanya mambo mawili. Kwanza, inakagua [uthibitisho wa zero knowledge](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L47-L61). Kisha, ikiwa uthibitisho umekaguliwa, inaita [`processDigResult`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L67-L86) ili kushughulikia matokeo.
+5. `digResponse` inafanya mambo mawili. Kwanza, inakagua [uthibitisho wa maarifa-sifuri](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L47-L61). Kisha, ikiwa uthibitisho ni sahihi, inaita [`processDigResult`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L67-L86) ili kuchakata matokeo haswa.
 
-6. `processDigResult` inakagua ikiwa mchezo [umeshindwa](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L76-L78) au [umeshinda](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L83-L86), na [inasasisha `Ramani`, ramani ya onchain](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L80).
+6. `processDigResult` inakagua ikiwa mchezo [umepotezwa](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L76-L78) au [kushindwa](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L83-L86), na [kusasisha `Map`, ramani ya mnyororoni](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L80).
 
-7. Mteja huchukua masasisho kiotomatiki na [husasisha ramani inayoonyeshwa kwa mchezaji](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175-L190), na inapohitajika humwambia mchezaji ikiwa ameshinda au ameshindwa.
+7. Mteja anachukua sasisho kiotomatiki na [kusasisha ramani inayoonyeshwa kwa mchezaji](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175-L190), na ikiwa inafaa inamwambia mchezaji ikiwa ni ushindi au kupoteza.
 
 ## Kutumia Zokrates {#using-zokrates}
 
-Katika mtiririko ulioelezwa hapo juu tuliruka sehemu za maarifa-sifuri, tukizichukulia kama sanduku jeusi. Sasa tufungue tuone jinsi msimbo huo umeandikwa.
+Katika mtiririko ulioelezwa hapo juu tuliruka sehemu za sifuri-maarifa, tukizichukulia kama kisanduku cheusi (black box). Sasa hebu tukifungue na tuone jinsi msimbo huo unavyoandikwa.
 
-### Kupiga hashi ramani {#hashing-map}
+### Uheshiji wa ramani {#hashing-map}
 
-Tunaweza kutumia [msimbo huu wa JavaScript](https://github.com/ZK-Plus/ICBC24_Tutorial_Compute-Offchain-Verify-onchain/tree/solutions/exercise) kutekeleza [Poseidon](https://www.poseidon-hash.info), kazi ya hashi ya Zokrates tunayotumia. Hata hivyo, ingawa hii ingekuwa haraka zaidi, pia ingekuwa ngumu zaidi kuliko kutumia tu kazi ya hashi ya Zokrates kuifanya. Hii ni mafunzo, na kwa hivyo msimbo umeboreshwa kwa urahisi, si kwa utendaji. Kwa hivyo, tunahitaji programu mbili tofauti za Zokrates, moja ya kuhesabu tu hashi ya ramani (`hashi`) na nyingine ya kuunda uthibitisho wa maarifa-sifuri wa matokeo ya kuchimba katika eneo kwenye ramani (`chimba`).
+Tunaweza kutumia [msimbo huu wa JavaScript](https://github.com/ZK-Plus/ICBC24_Tutorial_Compute-Offchain-Verify-onchain/tree/solutions/exercise) kutekeleza [Poseidon](https://www.poseidon-hash.info), kazi ya heshi ya Zokrates tunayotumia. Hata hivyo, ingawa hii ingekuwa haraka zaidi, ingekuwa pia ngumu zaidi kuliko kutumia tu kazi ya heshi ya Zokrates kufanya hivyo. Huu ni mwongozo, na hivyo msimbo umeboreshwa kwa urahisi, si kwa utendaji. Kwa hivyo, tunahitaji programu mbili tofauti za Zokrates, moja ya kuhesabu tu heshi ya ramani (`hash`) na nyingine ya kuunda uthibitisho wa maarifa-sifuri wa matokeo ya kuchimba katika eneo kwenye ramani (`dig`).
 
-### Kazi ya hashi {#hash-function}
+### Kazi ya heshi {#hash-function}
 
-Hii ni kazi inayokokotoa hashi ya ramani. Tutapitia msimbo huu mstari kwa mstari.
+Hii ni kazi inayohesabu heshi ya ramani. Tutapitia msimbo huu mstari kwa mstari.
 
 ```
 import "hashes/poseidon/poseidon.zok" as poseidon;
 import "utils/pack/bool/pack128.zok" as pack128;
 ```
 
-Mistari hii miwili inaingiza kazi mbili kutoka kwa [maktaba ya kawaida ya Zokrates](https://zokrates.github.io/toolbox/stdlib.html). [Kazi ya kwanza](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/hashes/poseidon/poseidon.zok) ni [hashi ya Poseidon](https://www.poseidon-hash.info/). Inachukua safu ya [`vipengele vya uwanja`](https://zokrates.github.io/language/types.html#field) na kurudisha `uwanja`.
+Mistari hii miwili inaingiza kazi mbili kutoka kwenye [maktaba ya kawaida ya Zokrates](https://zokrates.github.io/toolbox/stdlib.html). [Kazi ya kwanza](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/hashes/poseidon/poseidon.zok) ni [heshi ya Poseidon](https://www.poseidon-hash.info/). Inachukua safu ya [vipengele vya `field`](https://zokrates.github.io/language/types.html#field) na kurudisha `field`.
 
-Kipengele cha uwanja katika Zokrates kwa kawaida huwa na urefu usiozidi biti 256, lakini si kwa kiasi kikubwa. Ili kurahisisha msimbo, tunazuia ramani iwe na biti zisizozidi 512, na kupiga hashi safu ya nyanja nne, na katika kila uwanja tunatumia biti 128 tu. [Kazi ya `pack128`](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) hubadilisha safu ya biti 128 kuwa `uwanja` kwa kusudi hili.
-
-```
-        def hashMap(bool[${width+2}][${height+2}] map) -> field {
-```
-
-Mstari huu unaanzisha ufafanuzi wa kazi. `hashMap` inapokea kigezo kimoja kiitwacho `map`, safu ya pande mbili ya `bool`(ean). Ukubwa wa ramani ni `width+2` kwa `height+2` kwa sababu ambazo [zimeelezwa hapa chini](#why-map-border).
-
-Tunaweza kutumia `${width+2}` na `${height+2}` kwa sababu programu za Zokrates zimehifadhiwa katika programu hii kama [kamba za kiolezo](https://www.w3schools.com/js/js_string_templates.asp). Msimbo kati ya `${` na `}` unathminiwa na JavaScript, na kwa njia hii programu inaweza kutumika kwa saizi tofauti za ramani. Kigezo cha ramani kina mpaka wa upana wa eneo moja kuzunguka bila mabomu yoyote, ambayo ndiyo sababu tunahitaji kuongeza mbili kwenye upana na urefu.
-
-Thamani ya kurudi ni `uwanja` ambao una hashi.
+Kipengele cha uwanja katika Zokrates kwa kawaida huwa na urefu wa chini ya biti 256, lakini si kwa kiasi kikubwa. Ili kurahisisha msimbo, tunazuia ramani kuwa hadi biti 512, na kuheshi safu ya nyanja nne, na katika kila uwanja tunatumia biti 128 pekee. [Kazi ya `pack128`](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) inabadilisha safu ya biti 128 kuwa `field` kwa madhumuni haya.
 
 ```
-   bool[512] mut map1d = [false; 512];
+def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
-Ramani ni ya pande mbili. Hata hivyo, kazi ya `pack128` haifanyi kazi na safu za pande mbili. Kwa hivyo, kwanza tunalaza ramani kuwa safu ya baiti 512, kwa kutumia `map1d`. Kwa chaguo-msingi vigezo vya Zokrates ni viwango vya kudumu, lakini tunahitaji kugawa thamani kwa safu hii katika kitanzi, kwa hivyo tunakifafanua kama [`mut`](https://zokrates.github.io/language/variables.html#mutability).
+Mstari huu unaanza ufafanuzi wa kazi. `hashMap` inapata kigezo kimoja kinachoitwa `map`, safu ya `bool`(ean) yenye vipimo viwili. Ukubwa wa ramani ni `width+2` kwa `height+2` kwa sababu ambazo [zimeelezwa hapa chini](#why-map-border).
 
-Tunahitaji kuanzisha safu kwa sababu Zokrates haina `undefined`. Usemi wa `[false; 512]` unamaanisha [safu ya thamani 512 za `uongo`](https://zokrates.github.io/language/types.html#declaration-and-initialization).
+Tunaweza kutumia `${width+2}` na `${height+2}` kwa sababu programu za Zokrates zimehifadhiwa katika programu tumizi hii kama [tungo za kiolezo (template strings)](https://www.w3schools.com/js/js_string_templates.asp). Msimbo kati ya `${` na `}` unatathminiwa na JavaScript, na kwa njia hii programu inaweza kutumika kwa ukubwa tofauti wa ramani. Kigezo cha ramani kina mpaka wa upana wa eneo moja kuzunguka kote bila mabomu yoyote, ambayo ndiyo sababu tunahitaji kuongeza mbili kwenye upana na urefu.
 
-```
-   u32 mut counter = 0;
-```
-
-Pia tunahitaji kaunta kutofautisha kati ya biti ambazo tayari tumejaza katika `map1d` na zile ambazo hatujajaza.
+Thamani inayorudishwa ni `field` ambayo ina heshi.
 
 ```
-   for u32 x in 0..${width+2} {
+bool[512] mut map1d = [false; 512];
 ```
 
-Hivi ndivyo unavyotangaza [kitanzi cha `kwa`](https://zokrates.github.io/language/control_flow.html#for-loops) katika Zokrates. Kitanzi cha Zokrates `kwa` lazima kiwe na mipaka maalum, kwa sababu ingawa kinaonekana kama kitanzi, mkalimani kwa kweli "huifungua". Usemi `${width+2}` ni kiwango cha kudumu cha wakati wa kukusanya kwa sababu `width` imewekwa na msimbo wa TypeScript kabla ya kuita mkusanyaji.
+Ramani ina vipimo viwili. Hata hivyo, kazi ya `pack128` haifanyi kazi na safu za vipimo viwili. Kwa hivyo kwanza tunatandaza ramani kuwa safu ya baiti 512, tukitumia `map1d`. Kwa chaguo-msingi vigezo vya Zokrates ni vya kudumu (constants), lakini tunahitaji kugawa thamani kwenye safu hii katika kitanzi (loop), kwa hivyo tunaifafanua kama [`mut`](https://zokrates.github.io/language/variables.html#mutability).
+
+Tunahitaji kuanzisha safu kwa sababu Zokrates haina `undefined`. Usemi wa `[false; 512]` unamaanisha [safu ya thamani 512 za `false`](https://zokrates.github.io/language/types.html#declaration-and-initialization).
 
 ```
-      for u32 y in 0..${height+2} {
+u32 mut counter = 0;
+```
+
+Pia tunahitaji kihesabio ili kutofautisha kati ya biti ambazo tayari tumezijaza kwenye `map1d` na zile ambazo hatujajaza.
+
+```
+for u32 x in 0..${width+2} {
+```
+
+Hivi ndivyo unavyotangaza [kitanzi cha `for`](https://zokrates.github.io/language/control_flow.html#for-loops) katika Zokrates. Kitanzi cha `for` cha Zokrates lazima kiwe na mipaka isiyobadilika, kwa sababu ingawa kinaonekana kuwa kitanzi, kikusanyaji (compiler) kwa kweli "hukifungua" (unrolls). Usemi wa `${width+2}` ni wa kudumu wakati wa kukusanya kwa sababu `width` imewekwa na msimbo wa TypeScript kabla ya kuita kikusanyaji.
+
+```
+for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
    }
 ```
 
-Kwa kila eneo kwenye ramani, weka thamani hiyo kwenye safu ya `map1d` na uongeze kaunta.
+Kwa kila eneo kwenye ramani, weka thamani hiyo kwenye safu ya `map1d` na uongeze kihesabio.
 
 ```
-    field[4] hashMe = [
+field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -282,18 +290,18 @@ Kwa kila eneo kwenye ramani, weka thamani hiyo kwenye safu ya `map1d` na uongeze
     ];
 ```
 
-`pack128` kuunda safu ya thamani nne za `uwanja` kutoka `map1d`. Katika Zokrates `array[a..b]` inamaanisha kipande cha safu kinachoanzia `a` na kuishia `b-1`.
+`pack128` inatumika kuunda safu ya thamani nne za `field` kutoka kwenye `map1d`. Katika Zokrates `array[a..b]` inamaanisha kipande cha safu kinachoanza kwenye `a` na kuishia kwenye `b-1`.
 
 ```
-    return poseidon(hashMe);
+return poseidon(hashMe);
 }
 ```
 
-Tumia `poseidon` kubadilisha safu hii kuwa hashi.
+Tumia `poseidon` kubadilisha safu hii kuwa heshi.
 
-### Programu ya hashi {#hash-program}
+### Programu ya heshi {#hash-program}
 
-Seva inahitaji kuita `hashMap` moja kwa moja ili kuunda vitambulisho vya mchezo. Hata hivyo, Zokrates inaweza tu kuita kazi ya `main` kwenye programu kuanza, kwa hivyo tunaunda programu yenye `main` inayoita kazi ya hashi.
+Seva inahitaji kuita `hashMap` moja kwa moja ili kuunda vitambulisho vya mchezo. Hata hivyo, Zokrates inaweza tu kuita kazi ya `main` kwenye programu ili kuanza, kwa hivyo tunaunda programu yenye `main` inayoita kazi ya heshi.
 
 ```
 ${hashFragment}
@@ -305,12 +313,12 @@ def main(bool[${width+2}][${height+2}] map) -> field {
 
 ### Programu ya kuchimba {#dig-program}
 
-Hii ndiyo moyo wa sehemu ya maarifa-sifuri ya programu, ambapo tunatoa uthibitisho unaotumika kuthibitisha matokeo ya kuchimba.
+Huu ndio moyo wa sehemu ya sifuri-maarifa ya programu tumizi, ambapo tunazalisha uthibitisho unaotumika kuhakiki matokeo ya kuchimba.
 
 ```
 ${hashFragment}
 
-// Idadi ya migodi katika eneo (x,y)
+// Idadi ya mabomu katika eneo (x,y)
 def map2mineCount(bool[${width+2}][${height+2}] map, u32 x, u32 y) -> u8 {
    return if map[x+1][y+1] { 1 } else { 0 };
 }
@@ -318,9 +326,9 @@ def map2mineCount(bool[${width+2}][${height+2}] map, u32 x, u32 y) -> u8 {
 
 #### Kwa nini mpaka wa ramani {#why-map-border}
 
-Uthibitisho wa maarifa-sifuri hutumia [mizunguko ya kihesabu](https://medium.com/web3studio/simple-explanations-of-arithmetic-circuits-and-zero-knowledge-proofs-806e59a79785), ambayo haina mbadala rahisi kwa taarifa ya `if`. Badala yake, wanatumia mbadala wa [kiendeshaji chenye masharti](https://en.wikipedia.org/wiki/Ternary_conditional_operator). Ikiwa `a` inaweza kuwa sifuri au moja, unaweza kuhesabu `if a { b } else { c }` kama `ab+(1-a)c`.
+Uthibitisho wa maarifa-sifuri unatumia [saketi za kihesabu (arithmetic circuits)](https://medium.com/web3studio/simple-explanations-of-arithmetic-circuits-and-zero-knowledge-proofs-806e59a79785), ambazo hazina mbadala rahisi wa kauli ya `if`. Badala yake, zinatumia mbadala wa [kioo cha masharti (conditional operator)](https://en.wikipedia.org/wiki/Ternary_conditional_operator). Ikiwa `a` inaweza kuwa sifuri au moja, unaweza kuhesabu `if a { b } else { c }` kama `ab+(1-a)c`.
 
-Kwa sababu hii, taarifa ya `if` ya Zokrates daima inathmini matawi yote mawili. Kwa mfano, ikiwa una msimbo huu:
+Kwa sababu hii, kauli ya `if` ya Zokrates daima hutathmini matawi yote mawili. Kwa mfano, ikiwa una msimbo huu:
 
 ```
 bool[5] arr = [false; 5];
@@ -328,32 +336,32 @@ u32 index=10;
 return if index>4 { 0 } else { arr[index] }
 ```
 
-Itatoa hitilafu, kwa sababu inahitaji kuhesabu `arr[10]`, ingawa thamani hiyo itazidishwa na sifuri baadaye.
+Italeta hitilafu, kwa sababu inahitaji kuhesabu `arr[10]`, ingawa thamani hiyo baadaye itazidishwa kwa sifuri.
 
-Hii ndiyo sababu tunahitaji mpaka wa upana wa eneo moja kuzunguka ramani. Tunahitaji kuhesabu jumla ya idadi ya migodi karibu na eneo, na hiyo inamaanisha tunahitaji kuona eneo la safu moja juu na chini, kushoto na kulia, kwa eneo tunalochimba. Hiyo inamaanisha maeneo hayo lazima yawepo kwenye safu ya ramani ambayo Zokrates inapewa.
+Hii ndiyo sababu tunahitaji mpaka wa upana wa eneo moja kuzunguka ramani yote. Tunahitaji kuhesabu jumla ya idadi ya mabomu kuzunguka eneo, na hiyo inamaanisha tunahitaji kuona eneo la mstari mmoja juu na chini, kushoto na kulia, mwa eneo tunalochimba. Ambayo inamaanisha maeneo hayo lazima yawepo katika safu ya ramani ambayo Zokrates inapewa.
 
 ```
 def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (field, u8) {
 ```
 
-Kwa chaguo-msingi, uthibitisho wa Zokrates unajumuisha pembejeo zao. Haina faida kujua kuna migodi mitano karibu na eneo isipokuwa unajua ni eneo gani (na huwezi tu kuilinganisha na ombi lako, kwa sababu basi mthibitishaji anaweza kutumia thamani tofauti na asikuambie). Hata hivyo, tunahitaji kuweka ramani kuwa siri, huku tukiitoa kwa Zokrates. Suluhisho ni kutumia kigezo cha `private`, ambacho _hakifunuliwi_ na uthibitisho.
+Kwa chaguo-msingi uthibitisho wa Zokrates unajumuisha pembejeo zake. Haifai kujua kuna mabomu matano kuzunguka eneo isipokuwa kama unajua hasa ni eneo gani (na huwezi tu kulilinganisha na ombi lako, kwa sababu basi mthibitishaji angeweza kutumia thamani tofauti na asikuambie kuhusu hilo). Hata hivyo, tunahitaji kuweka ramani siri, huku tukiipatia Zokrates. Suluhisho ni kutumia kigezo cha `private`, kile ambacho _hakifichuliwi_ na uthibitisho.
 
-Hii inafungua njia nyingine ya matumizi mabaya. Mthibitishaji anaweza kutumia kuratibu sahihi, lakini kuunda ramani yenye idadi yoyote ya migodi karibu na eneo, na labda katika eneo lenyewe. Ili kuzuia matumizi haya mabaya, tunafanya uthibitisho wa maarifa-sifuri ujumuishe hashi ya ramani, ambayo ni kitambulisho cha mchezo.
-
-```
-   return (hashMap(map),
-```
-
-Thamani ya kurudi hapa ni tuple inayojumuisha safu ya hashi ya ramani pamoja na matokeo ya kuchimba.
+Hii inafungua njia nyingine ya matumizi mabaya. Mthibitishaji angeweza kutumia viwianishi (coordinates) sahihi, lakini akaunda ramani yenye idadi yoyote ya mabomu kuzunguka eneo hilo, na ikiwezekana kwenye eneo lenyewe. Ili kuzuia matumizi haya mabaya, tunafanya uthibitisho wa maarifa-sifuri ujumuishe heshi ya ramani, ambayo ni kitambulisho cha mchezo.
 
 ```
-         if map2mineCount(map, x, y) > 0 { 0xFF } else {
+return (hashMap(map),
+```
+
+Thamani inayorudishwa hapa ni tapo (tuple) inayojumuisha safu ya heshi ya ramani pamoja na matokeo ya kuchimba.
+
+```
+if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 Tunatumia 255 kama thamani maalum endapo eneo lenyewe lina bomu.
 
 ```
-            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -361,31 +369,31 @@ Tunatumia 255 kama thamani maalum endapo eneo lenyewe lina bomu.
 }
 ```
 
-Ikiwa mchezaji hajagonga mgodi, ongeza hesabu za migodi kwa eneo linalozunguka eneo hilo na urudishe hiyo.
+Ikiwa mchezaji hajapiga bomu, ongeza idadi ya mabomu kwa eneo linalozunguka eneo hilo na urudishe hiyo.
 
 ### Kutumia Zokrates kutoka TypeScript {#using-zokrates-from-typescript}
 
-Zokrates ina kiolesura cha mstari wa amri, lakini katika programu hii tunaitumia katika [msimbo wa TypeScript](https://zokrates.github.io/toolbox/zokrates_js.html).
+Zokrates ina kiolesura cha mstari wa amri (command line interface), lakini katika programu hii tunaitumia kwenye [msimbo wa TypeScript](https://zokrates.github.io/toolbox/zokrates_js.html).
 
-Maktaba yenye ufafanuzi wa Zokrates inaitwa [`zero-knowledge.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts).
+Maktaba iliyo na ufafanuzi wa Zokrates inaitwa [`zero-knowledge.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts).
 
 ```typescript
 import { initialize as zokratesInitialize } from "zokrates-js"
 ```
 
-Leta [mafungo ya JavaScript ya Zokrates](https://zokrates.github.io/toolbox/zokrates_js.html). Tunahitaji tu kazi ya [`initialize`](https://zokrates.github.io/toolbox/zokrates_js.html#initialize) kwa sababu inarudisha ahadi inayotatua ufafanuzi wote wa Zokrates.
+Ingiza [vifungo vya JavaScript vya Zokrates](https://zokrates.github.io/toolbox/zokrates_js.html). Tunahitaji tu kazi ya [`initialize`](https://zokrates.github.io/toolbox/zokrates_js.html#initialize) kwa sababu inarudisha ahadi (promise) inayotatua kwa ufafanuzi wote wa Zokrates.
 
 ```typescript
 export const zkFunctions = async (width: number, height: number) : Promise<any> => {
 ```
 
-Sawa na Zokrates yenyewe, pia tunasafirisha kazi moja tu, ambayo pia ni [isiyosawazisha](https://www.w3schools.com/js/js_async.asp). Inaporudi hatimaye, inatoa kazi kadhaa kama tutakavyoona hapa chini.
+Sawa na Zokrates yenyewe, pia tunasafirisha (export) kazi moja tu, ambayo pia ni [asinkronasi (asynchronous)](https://www.w3schools.com/js/js_async.asp). Inaporudi hatimaye, inatoa kazi kadhaa kama tutakavyoona hapa chini.
 
 ```typescript
 const zokrates = await zokratesInitialize()
 ```
 
-Anzisha Zokrates, pata kila kitu tunachohitaji kutoka kwa maktaba.
+Anzisha Zokrates, pata kila kitu tunachohitaji kutoka kwenye maktaba.
 
 ```typescript
 const hashFragment = `
@@ -412,24 +420,29 @@ const digProgram = `
     `
 ```
 
-Kisha tuna kazi ya hashi na programu mbili za Zokrates tulizoona hapo juu.
+Kisha tuna kazi ya heshi na programu mbili za Zokrates tulizoziona hapo juu.
 
 ```typescript
 const digCompiled = zokrates.compile(digProgram)
 const hashCompiled = zokrates.compile(hashProgram)
 ```
 
-Hapa tunakusanya programu hizo.
+Hapa tunakusanya (compile) programu hizo.
 
 ```typescript
-// Tengeneza funguo za uthibitishaji wa zero-knowledge.\n// Kwenye mfumo wa uzalishaji ungetaka kutumia sherehe ya usanidi.\n// (https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony).\nconst keySetupResults = zokrates.setup(digCompiled.program, \"\")\nconst verifierKey = keySetupResults.vk\nconst proverKey = keySetupResults.pk
+// Unda funguo kwa ajili ya uhakiki wa sifuri-maarifa.
+// Kwenye mfumo wa uzalishaji ungetaka kutumia sherehe ya usanidi.
+// (https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony).
+const keySetupResults = zokrates.setup(digCompiled.program, "")
+const verifierKey = keySetupResults.vk
+const proverKey = keySetupResults.pk
 ```
 
-Kwenye mfumo wa uzalishaji tunaweza kutumia [hafla ya kuanzisha](https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony) ngumu zaidi, lakini hii ni nzuri ya kutosha kwa maonyesho. Sio tatizo watumiaji kujua ufunguo wa mthibitishaji - bado hawawezi kuitumia kuthibitisha mambo isipokuwa ni kweli. Kwa sababu tunabainisha entropy (kigezo cha pili, `""`), matokeo yatakuwa sawa kila wakati.
+Kwenye mfumo wa uzalishaji tunaweza kutumia [sherehe ya usanidi (setup ceremony)](https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony) ngumu zaidi, lakini hii inatosha kwa onyesho. Sio tatizo kwamba watumiaji wanaweza kujua ufunguo wa mthibitishaji - bado hawawezi kuutumia kuthibitisha mambo isipokuwa kama ni ya kweli. Kwa sababu tunabainisha Entropi (kigezo cha pili, `""`), matokeo yatakuwa sawa kila wakati.
 
-**Kumbuka:** Uundaji wa programu za Zokrates na uundaji wa ufunguo ni michakato ya polepole. Hakuna haja ya kuzirudia kila wakati, ila tu wakati saizi ya ramani inabadilika. Kwenye mfumo wa uzalishaji ungewafanya mara moja, kisha uhifadhi matokeo. Sababu pekee kwa nini siifanyi hapa ni kwa ajili ya urahisi.
+**Kumbuka:** Ukusanyaji wa programu za Zokrates na uundaji wa ufunguo ni michakato ya polepole. Hakuna haja ya kuirudia kila wakati, isipokuwa tu wakati ukubwa wa ramani unabadilika. Kwenye mfumo wa uzalishaji ungeifanya mara moja, na kisha kuhifadhi matokeo. Sababu pekee sifanyi hivi hapa ni kwa ajili ya urahisi.
 
-#### `calculateMapHash` {#calculateMapHash}
+#### `calculateMapHash` {#calculatemaphash}
 
 ```typescript
 const calculateMapHash = function (hashMe: boolean[][]): string {
@@ -442,16 +455,16 @@ const calculateMapHash = function (hashMe: boolean[][]): string {
 }
 ```
 
-Kazi ya [`computeWitness`](https://zokrates.github.io/toolbox/zokrates_js.html#computewitnessartifacts-args-options) inatekeleza programu ya Zokrates. Inarudisha muundo wenye nyanja mbili: `output`, ambayo ni matokeo ya programu kama kamba ya JSON, na `witness`, ambayo ni taarifa inayohitajika kuunda uthibitisho wa maarifa-sifuri wa matokeo. Hapa tunahitaji tu matokeo.
+Kazi ya [`computeWitness`](https://zokrates.github.io/toolbox/zokrates_js.html#computewitnessartifacts-args-options) kwa kweli inaendesha programu ya Zokrates. Inarudisha muundo wenye nyanja mbili: `output`, ambayo ni pato la programu kama tungo ya JSON, na `witness`, ambayo ni taarifa inayohitajika kuunda uthibitisho wa maarifa-sifuri wa matokeo. Hapa tunahitaji tu pato.
 
-Matokeo ni kamba ya fomu `"31337"`, nambari ya desimali iliyofungwa kwenye alama za nukuu. Lakini matokeo tunayohitaji kwa `viem` ni nambari ya heksadesimali ya fomu `0x60A7`. Kwa hivyo tunatumia `.slice(1,-1)` kuondoa alama za nukuu na kisha `BigInt` kuendesha kamba iliyobaki, ambayo ni nambari ya desimali, kwa [`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). `.toString(16)` inabadilisha `BigInt` hii kuwa kamba ya heksadesimali, na `"0x"+` inaongeza alama ya nambari za heksadesimali.
+Pato ni tungo ya muundo wa `"31337"`, nambari ya desimali iliyofungwa katika alama za nukuu. Lakini pato tunalohitaji kwa `viem` ni nambari ya heksadesimali ya muundo wa `0x60A7`. Kwa hivyo tunatumia `.slice(1,-1)` kuondoa alama za nukuu na kisha `BigInt` kuendesha tungo iliyobaki, ambayo ni nambari ya desimali, kuwa [`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). `.toString(16)` inabadilisha `BigInt` hii kuwa tungo ya heksadesimali, na `"0x"+` inaongeza alama kwa nambari za heksadesimali.
 
 ```typescript
 // Chimba na urudishe uthibitisho wa maarifa-sifuri wa matokeo
 // (msimbo wa upande wa seva)
 ```
 
-Uthibitisho wa maarifa-sifuri unajumuisha pembejeo za umma (`x` na `y`) na matokeo (hashi ya ramani na idadi ya mabomu).
+Uthibitisho wa maarifa-sifuri unajumuisha pembejeo za umma (`x` na `y`) na matokeo (heshi ya ramani na idadi ya mabomu).
 
 ```typescript
     const zkDig = function(map: boolean[][], x: number, y: number) : any {
@@ -459,7 +472,7 @@ Uthibitisho wa maarifa-sifuri unajumuisha pembejeo za umma (`x` na `y`) na matok
             throw new Error("Trying to dig outside the map")
 ```
 
-Ni tatizo kuangalia ikiwa faharasa iko nje ya mipaka katika Zokrates, kwa hivyo tunafanya hapa.
+Ni tatizo kuangalia ikiwa faharisi iko nje ya mipaka katika Zokrates, kwa hivyo tunafanya hapa.
 
 ```typescript
 const runResults = zokrates.computeWitness(digCompiled, [map, `${x}`, `${y}`])
@@ -481,12 +494,12 @@ Tumia [`generateProof`](https://zokrates.github.io/toolbox/zokrates_js.html#gene
 
 ```typescript
 const solidityVerifier = `
-        // Ukubwa wa ramani: ${width} x ${height}
+        // Map size: ${width} x ${height}
         \n${zokrates.exportSolidityVerifier(verifierKey)}
         `
 ```
 
-Mthibitishaji wa Solidity, mkataba-erevu tunaoweza kusambaza kwenye mnyororo wa bloku na kutumia kuthibitisha uthibitisho unaotokana na `digCompiled.program`.
+Mhakiki wa Solidity, mkataba mahiri tunaoweza kusambaza kwenye mnyororo wa vitalu na kutumia kuhakiki uthibitisho unaozalishwa na `digCompiled.program`.
 
 ```typescript
     return {
@@ -497,19 +510,19 @@ Mthibitishaji wa Solidity, mkataba-erevu tunaoweza kusambaza kwenye mnyororo wa 
 }
 ```
 
-Mwishowe, rudisha kila kitu ambacho msimbo mwingine unaweza kuhitaji.
+Hatimaye, rudisha kila kitu ambacho msimbo mwingine unaweza kuhitaji.
 
 ## Majaribio ya usalama {#security-tests}
 
-Majaribio ya usalama ni muhimu kwa sababu hitilafu ya utendakazi hatimaye itajidhihirisha. Lakini ikiwa programu haina usalama, kuna uwezekano itabaki imefichwa kwa muda mrefu kabla ya kufunuliwa na mtu anayedanganya na kuondoka na rasilimali ambazo ni za wengine.
+Majaribio ya usalama ni muhimu kwa sababu hitilafu ya utendaji hatimaye itajidhihirisha yenyewe. Lakini ikiwa programu si salama, kuna uwezekano wa kubaki imefichwa kwa muda mrefu kabla ya kufichuliwa na mtu anayedanganya na kutoroka na rasilimali ambazo ni za wengine.
 
 ### Ruhusa {#permissions}
 
-Kuna chombo kimoja cha upendeleo katika mchezo huu, seva. Ni mtumiaji pekee anayeruhusiwa kuita kazi katika [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol). Tunaweza kutumia [`cast`](https://book.getfoundry.sh/cast/) kuthibitisha wito kwa kazi zilizoidhinishwa zinaruhusiwa tu kama akaunti ya seva.
+Kuna huluki moja yenye upendeleo katika mchezo huu, seva. Ndiyo mtumiaji pekee anayeruhusiwa kuita kazi katika [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol). Tunaweza kutumia [`cast`](https://book.getfoundry.sh/cast/) kuthibitisha miito kwa kazi zenye ruhusa inaruhusiwa tu kama akaunti ya seva.
 
-[Ufunguo binafsi wa seva uko katika `setupNetwork.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52).
+[Ufunguo wa siri wa seva upo katika `setupNetwork.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52).
 
-1. Kwenye kompyuta inayoendesha `anvil` (mnyororo wa bloku), weka vigezo hivi vya mazingira.
+1. Kwenye kompyuta inayoendesha `anvil` (mnyororo wa vitalu), weka vigezo hivi vya mazingira.
 
    ```sh copy
    WORLD_ADDRESS=0x8d8b6b8414e1e3dcfd4168561b9be6bd3bf6ec4b
@@ -517,15 +530,15 @@ Kuna chombo kimoja cha upendeleo katika mchezo huu, seva. Ni mtumiaji pekee anay
    AUTHORIZED_KEY=0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
    ```
 
-2. Tumia `cast` kujaribu kuweka anwani ya mthibitishaji kama anwani isiyoidhinishwa.
+2. Tumia `cast` kujaribu kuweka anwani ya mhakiki kama anwani isiyoidhinishwa.
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $UNAUTHORIZED_KEY
    ```
 
-   Sio tu kwamba `cast` inaripoti kutofaulu, lakini unaweza kufungua **Zana za Maendeleo za MUD** kwenye mchezo kwenye kivinjari, bonyeza **Majedwali**, na uchague **app\_\_VerifierAddress**. Angalia kwamba anwani sio sifuri.
+   Sio tu kwamba `cast` inaripoti kufeli, lakini unaweza kufungua **MUD Dev Tools** katika mchezo kwenye kivinjari, bofya **Tables**, na uchague **app\_\_VerifierAddress**. Utaona kwamba anwani si sifuri.
 
-3. Weka anwani ya mthibitishaji kama anwani ya seva.
+3. Weka anwani ya mhakiki kama anwani ya seva.
 
    ```sh copy
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $AUTHORIZED_KEY
@@ -533,11 +546,11 @@ Kuna chombo kimoja cha upendeleo katika mchezo huu, seva. Ni mtumiaji pekee anay
 
    Anwani katika **app\_\_VerifiedAddress** sasa inapaswa kuwa sifuri.
 
-Kazi zote za MUD katika `Mfumo` huo huo hupitia udhibiti sawa wa ufikiaji, kwa hivyo nachukulia jaribio hili linatosha. Ikiwa hutafanya hivyo, unaweza kuangalia kazi zingine katika [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol).
+Kazi zote za MUD katika `System` sawa hupitia udhibiti sawa wa ufikiaji, kwa hivyo ninachukulia jaribio hili kuwa la kutosha. Ikiwa hufikirii hivyo, unaweza kuangalia kazi zingine katika [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol).
 
-### Matumizi mabaya ya maarifa-sifuri {#zero-knowledge-abuses}
+### Matumizi mabaya ya sifuri-maarifa {#zero-knowledge-abuses}
 
-Hisabati ya kuthibitisha Zokrates iko nje ya wigo wa mafunzo haya (na uwezo wangu). Hata hivyo, tunaweza kufanya ukaguzi mbalimbali kwenye msimbo wa maarifa-sifuri ili kuthibitisha kwamba ikiwa haijafanywa kwa usahihi inashindwa. Majaribio haya yote yatatuhitaji kubadilisha [`zero-knowledge.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts) na kuanzisha upya programu nzima. Haitoshi kuanzisha upya mchakato wa seva, kwa sababu inaweka programu katika hali isiyowezekana (mchezaji ana mchezo unaoendelea, lakini mchezo haupatikani tena kwa seva).
+Hisabati ya kuthibitisha Zokrates iko nje ya upeo wa mafunzo haya (na uwezo wangu). Hata hivyo, tunaweza kuendesha ukaguzi mbalimbali kwenye msimbo wa sifuri-maarifa ili kuthibitisha kwamba ikiwa haujafanywa kwa usahihi unafeli. Majaribio haya yote yatahitaji tubadilishe [`zero-knowledge.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts) na kuanzisha upya programu nzima. Haitoshi kuanzisha upya mchakato wa seva, kwa sababu inaweka programu katika hali isiyowezekana (mchezaji ana mchezo unaoendelea, lakini mchezo haupatikani tena kwa seva).
 
 #### Jibu lisilo sahihi {#wrong-answer}
 
@@ -547,10 +560,10 @@ Uwezekano rahisi zaidi ni kutoa jibu lisilo sahihi katika uthibitisho wa maarifa
 proof.inputs[3] = "0x" + "1".padStart(64, "0")
 ```
 
-Hii inamaanisha tutadai kila wakati kuna bomu moja, bila kujali jibu sahihi. Jaribu kucheza na toleo hili, na utaona kwenye kichupo cha **seva** cha skrini ya `pnpm dev` hitilafu hii:
+Hii inamaanisha tutadai kila wakati kuna bomu moja, bila kujali jibu sahihi. Jaribu kucheza na toleo hili, na utaona katika kichupo cha **server** cha skrini ya `pnpm dev` kosa hili:
 
 ```
-      cause: {
+cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000
@@ -559,11 +572,11 @@ e206661696c'
       },
 ```
 
-Kwa hivyo aina hii ya udanganyifu inashindwa.
+Kwa hivyo aina hii ya udanganyifu inafeli.
 
 #### Uthibitisho usio sahihi {#wrong-proof}
 
-Nini kinatokea ikiwa tunatoa taarifa sahihi, lakini tuna data isiyo sahihi ya uthibitisho? Sasa, badilisha mstari wa 91 na:
+Nini kinatokea ikiwa tutatoa taarifa sahihi, lakini tuwe na data isiyo sahihi ya uthibitisho? Sasa, badilisha mstari wa 91 na:
 
 ```ts
 proof.proof = {
@@ -576,13 +589,13 @@ proof.proof = {
 }
 ```
 
-Bado inashindwa, lakini sasa inashindwa bila sababu kwa sababu inatokea wakati wa wito wa mthibitishaji.
+Bado inafeli, lakini sasa inafeli bila sababu kwa sababu inatokea wakati wa mwito wa mhakiki.
 
-### Mtumiaji anawezaje kuthibitisha msimbo wa imani-sifuri? {#user-verify-zero-trust}
+### Mtumiaji anawezaje kuthibitisha msimbo wa uaminifu sifuri? {#user-verify-zero-trust}
 
-Mikataba-erevu ni rahisi kiasi kuthibitisha. Kwa kawaida, msanidi programu anachapisha msimbo chanzo kwa kichunguzi cha bloku, na kichunguzi cha bloku kinathibitisha kwamba msimbo chanzo unakusanywa kwa msimbo katika [shughuli ya usambazaji wa mkataba](/developers/docs/smart-contracts/deploying/). Katika kesi ya MUD `Mfumo` huu ni [ngumu kidogo](https://mud.dev/cli/verify), lakini si kwa kiasi kikubwa.
+Mikataba mahiri ni rahisi kiasi kuthibitisha. Kwa kawaida, msanidi huchapisha msimbo wa chanzo kwenye kichunguzi cha bloku, na kichunguzi cha bloku huthibitisha kwamba msimbo wa chanzo unakusanywa kwenye msimbo katika [muamala wa usambazaji wa mkataba](/developers/docs/smart-contracts/deploying/). Katika kesi ya MUD `System` hii ni [ngumu kidogo zaidi](https://mud.dev/cli/verify), lakini si sana.
 
-Hii ni ngumu zaidi na maarifa-sifuri. Mthibitishaji anajumuisha viwango vya kudumu na anafanya mahesabu juu yao. Hii haikuambii nini kinachothibitishwa.
+Hili ni gumu zaidi kwa sifuri-maarifa. Mhakiki hujumuisha baadhi ya viwango vya kudumu na kuendesha baadhi ya hesabu juu yake. Hii haikuambii nini kinathibitishwa.
 
 ```solidity
     function verifyingKey() pure internal returns (VerifyingKey memory vk) {
@@ -590,13 +603,12 @@ Hii ni ngumu zaidi na maarifa-sifuri. Mthibitishaji anajumuisha viwango vya kudu
         vk.beta = Pairing.G2Point([uint256(0x2cebd0fbd21aca01910581537b21ae4fed46bc0e524c055059aa164ba0a6b62b), uint256(0x18fd4a7bc386cf03a95af7163d5359165acc4e7961cb46519e6d9ee4a1e2b7e9)], [uint256(0x11449dee0199ef6d8eebfe43b548e875c69e7ce37705ee9a00c81fe52f11a009), uint256(0x066d0c83b32800d3f335bb9e8ed5e2924cf00e77e6ec28178592eac9898e1a00)]);
 ```
 
-Suluhisho, angalau hadi wachunguzi wa bloku wataongeza uthibitishaji wa Zokrates kwenye violesura vyao vya watumiaji, ni kwa wasanidi programu kufanya programu za Zokrates zipatikane, na angalau baadhi ya watumiaji kuzikusanya wenyewe na ufunguo sahihi wa uthibitishaji.
+Suluhisho, angalau hadi vichunguzi vya bloku vipate nafasi ya kuongeza uthibitishaji wa Zokrates kwenye miingiliano yao ya watumiaji, ni kwa wasanidi wa programu kufanya programu za Zokrates zipatikane, na kwa angalau baadhi ya watumiaji kuzikusanya wenyewe kwa ufunguo unaofaa wa uthibitishaji.
 
-Kufanya hivyo:
+Ili kufanya hivyo:
 
 1. [Sakinisha Zokrates](https://zokrates.github.io/gettingstarted.html).
-
-2. Unda faili, `dig.zok`, na programu ya Zokrates. Msimbo hapa chini unadhania umehifadhi saizi ya ramani ya asili, 10x5.
+2. Unda faili, `dig.zok`, na programu ya Zokrates. Msimbo ulio hapa chini unachukulia uliweka ukubwa wa ramani asili, 10x5.
 
    ```zokrates
     import "utils/pack/bool/pack128.zok" as pack128;
@@ -640,89 +652,89 @@ Kufanya hivyo:
     }
    ```
 
-3. Kusanya msimbo wa Zokrates na uunde ufunguo wa uthibitishaji. Ufunguo wa uthibitishaji unapaswa kuundwa na entropy sawa iliyotumika katika seva ya awali, [katika kesi hii kamba tupu](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L67).
+3. Kusanya msimbo wa Zokrates na uunde ufunguo wa uthibitishaji. Ufunguo wa uthibitishaji lazima uundwe kwa Entropi sawa iliyotumika katika seva asili, [katika kesi hii mfuatano tupu](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L67).
 
    ```sh copy
    zokrates compile --input dig.zok
    zokrates setup -e ""
    ```
 
-4. Unda mthibitishaji wa Solidity peke yako, na uthibitishe kuwa unafanya kazi sawa na ule ulioko kwenye mnyororo wa bloku (seva inaongeza maoni, lakini hiyo sio muhimu).
+4. Unda mhakiki wa Solidity peke yako, na uthibitishe kuwa inafanana kiutendaji na ile iliyo kwenye mnyororo wa vitalu (seva inaongeza maoni, lakini hiyo si muhimu).
 
    ```sh copy
    zokrates export-verifier
    diff verifier.sol ~/20240901-secret-state/packages/contracts/src/verifier.sol
    ```
 
-## Maamuzi ya kubuni {#design}
+## Maamuzi ya muundo {#design}
 
-Katika programu yoyote ngumu vya kutosha kuna malengo ya kubuni yanayoshindana ambayo yanahitaji maelewano. Wacha tuangalie baadhi ya maelewano na kwa nini suluhisho la sasa ni bora kuliko chaguzi zingine.
+Katika programu yoyote iliyo ngumu vya kutosha kuna malengo ya muundo yanayoshindana ambayo yanahitaji maelewano. Hebu tuangalie baadhi ya maelewano na kwa nini suluhisho la sasa linapendelewa zaidi ya chaguzi nyingine.
 
-### Kwa nini maarifa-sifuri {#why-zero-knowledge}
+### Kwa nini sifuri-maarifa {#why-zero-knowledge}
 
-Kwa minesweeper hauitaji maarifa-sifuri kweli. Seva inaweza kushikilia ramani kila wakati, na kisha kufunua yote wakati mchezo umekwisha. Kisha, mwishoni mwa mchezo, mkataba-erevu unaweza kuhesabu hashi ya ramani, kuthibitisha inalingana, na ikiwa haifanyi hivyo adhibu seva au kupuuzia mchezo kabisa.
+Kwa minesweeper hauhitaji kweli sifuri-maarifa. Seva inaweza kushikilia ramani kila wakati, na kisha kuifichua yote mchezo unapokwisha. Kisha, mwishoni mwa mchezo, mkataba mahiri unaweza kukokotoa heshi ya ramani, kuthibitisha kuwa inalingana, na ikiwa hailingani kuiadhibu seva au kupuuza mchezo kabisa.
 
-Sikutumia suluhisho hili rahisi kwa sababu inafanya kazi tu kwa michezo mifupi yenye hali ya mwisho iliyoelezwa vizuri. Wakati mchezo unaweza kuwa hauna mwisho (kama ilivyo kwa [ulimwengu huru](https://0xparc.org/blog/autonomous-worlds)), unahitaji suluhisho linalothibitisha hali _bila_ kuifunua.
+Sikutumia suluhisho hili rahisi kwa sababu linafanya kazi tu kwa michezo mifupi yenye hali ya mwisho iliyofafanuliwa vizuri. Wakati mchezo unaweza kuwa hauna mwisho (kama ilivyo kwa [ulimwengu unaojitegemea](https://0xparc.org/blog/autonomous-worlds)), unahitaji suluhisho ambalo linathibitisha hali _bila_ kuifichua.
 
-Kama mafunzo, makala hii ilihitaji mchezo mfupi ambao ni rahisi kuelewa, lakini mbinu hii ni muhimu zaidi kwa michezo mirefu.
+Kama mafunzo makala haya yalihitaji mchezo mfupi ambao ni rahisi kueleweka, lakini mbinu hii ni muhimu zaidi kwa michezo mirefu.
 
 ### Kwa nini Zokrates? {#why-zokrates}
 
-[Zokrates](https://zokrates.github.io/) sio maktaba pekee ya maarifa-sifuri inayopatikana, lakini inafanana na lugha ya kawaida ya programu [inayoelekeza](https://en.wikipedia.org/wiki/Imperative_programming) na inasaidia vigezo vya boolean.
+[Zokrates](https://zokrates.github.io/) sio maktaba pekee ya sifuri-maarifa inayopatikana, lakini inafanana na lugha ya kawaida ya programu ya [kiamri](https://en.wikipedia.org/wiki/Imperative_programming) na inasaidia vigezo vya boolean.
 
-Kwa programu yako, na mahitaji tofauti, unaweza kupendelea kutumia [Circum](https://docs.circom.io/getting-started/installation/) au [Cairo](https://www.cairo-lang.org/tutorials/getting-started-with-cairo/).
+Kwa programu yako, yenye mahitaji tofauti, unaweza kupendelea kutumia [Circum](https://docs.circom.io/getting-started/installation/) au [Cairo](https://www.cairo-lang.org/tutorials/getting-started-with-cairo/).
 
-### Wakati wa kukusanya Zokrates {#when-compile-zokrates}
+### Lini ya kukusanya Zokrates {#when-compile-zokrates}
 
-Katika programu hii tunakusanya programu za Zokrates [kila wakati seva inapoanza](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L60-L61). Hii ni wazi ni upotevu wa rasilimali, lakini hii ni mafunzo, yaliyoboreshwa kwa urahisi.
+Katika programu hii tunakusanya programu za Zokrates [kila wakati seva inapoanza](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L60-L61). Huu ni upotevu wa rasilimali waziwazi, lakini haya ni mafunzo, yaliyoboreshwa kwa urahisi.
 
-Ikiwa ningekuwa ninaandika programu ya kiwango cha uzalishaji, ningeangalia kama nina faili na programu za Zokrates zilizokusanywa kwa saizi hii ya uwanja wa migodi, na ikiwa ndivyo nitumie hiyo. Vivyo hivyo kwa kusambaza mkataba wa mthibitishaji onchain.
+Kama ningekuwa ninaandika programu ya kiwango cha uzalishaji, ningeangalia ikiwa nina faili yenye programu za Zokrates zilizokusanywa kwa ukubwa huu wa uwanja wa mabomu, na ikiwa ndivyo nitumie hiyo. Hali ni hiyo hiyo kwa kusambaza mkataba wa mhakiki mnyororoni.
 
-### Kuunda funguo za mthibitishaji na mthibitishaji {#key-creation}
+### Kuunda funguo za mhakiki na mthibitishaji {#key-creation}
 
-[Uundaji wa ufunguo](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L63-L69) ni hesabu nyingine safi ambayo haihitaji kufanywa zaidi ya mara moja kwa saizi fulani ya uwanja wa migodi. Tena, inafanywa mara moja tu kwa ajili ya urahisi.
+[Uundaji wa ufunguo](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L63-L69) ni ukokotoaji mwingine safi ambao hauhitaji kufanywa zaidi ya mara moja kwa ukubwa fulani wa uwanja wa mabomu. Tena, inafanywa mara moja tu kwa ajili ya urahisi.
 
-Kwa kuongeza, tunaweza kutumia [hafla ya kuanzisha](https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony). Faida ya hafla ya kuanzisha ni kwamba unahitaji ama entropy au matokeo ya kati kutoka kwa kila mshiriki ili kudanganya kwenye uthibitisho wa maarifa-sifuri. Ikiwa angalau mshiriki mmoja wa hafla ni mkweli na anafuta habari hiyo, uthibitisho wa maarifa-sifuri uko salama kutokana na mashambulizi fulani. Hata hivyo, _hakuna utaratibu_ wa kuthibitisha kwamba habari imefutwa kutoka kila mahali. Ikiwa uthibitisho wa maarifa-sifuri ni muhimu sana, unataka kushiriki katika hafla ya kuanzisha.
+Zaidi ya hayo, tunaweza kutumia [sherehe ya usanidi](https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony). Faida ya sherehe ya usanidi ni kwamba unahitaji ama Entropi au matokeo fulani ya kati kutoka kwa kila mshiriki ili kudanganya kwenye uthibitisho wa maarifa-sifuri. Ikiwa angalau mshiriki mmoja wa sherehe ni mwaminifu na anafuta taarifa hiyo, uthibitisho wa maarifa-sifuri uko salama dhidi ya mashambulizi fulani. Hata hivyo, _hakuna utaratibu_ wa kuthibitisha kwamba taarifa imefutwa kutoka kila mahali. Ikiwa uthibitisho wa maarifa-sifuri ni muhimu sana, unataka kushiriki katika sherehe ya usanidi.
 
-Hapa tunategemea [nguvu za milele za tau](https://github.com/privacy-scaling-explorations/perpetualpowersoftau), ambayo ilikuwa na washiriki wengi. Pengine ni salama vya kutosha, na rahisi zaidi. Pia hatuongezi entropy wakati wa uundaji wa ufunguo, ambayo inafanya iwe rahisi kwa watumiaji [kuthibitisha usanidi wa maarifa-sifuri](#user-verify-zero-trust).
+Hapa tunategemea [nguvu za kudumu za tau](https://github.com/privacy-scaling-explorations/perpetualpowersoftau), ambazo zilikuwa na makumi ya washiriki. Pengine ni salama vya kutosha, na rahisi zaidi. Pia hatuongezi Entropi wakati wa uundaji wa ufunguo, jambo ambalo hurahisisha watumiaji [kuthibitisha usanidi wa sifuri-maarifa](#user-verify-zero-trust).
 
 ### Wapi pa kuthibitisha {#where-verification}
 
-Tunaweza kuthibitisha uthibitisho wa maarifa-sifuri ama onchain (ambayo inagharimu gesi) au katika mteja (kwa kutumia [`verify`](https://zokrates.github.io/toolbox/zokrates_js.html#verifyverificationkey-proof)). Nilichagua ya kwanza, kwa sababu hii inakuwezesha [kuthibitisha mthibitishaji](#user-verify-zero-trust) mara moja na kisha kuamini kwamba haibadiliki maadamu anwani ya mkataba wake inabaki sawa. Ikiwa uthibitishaji ungefanywa kwa mteja, ungehitaji kuthibitisha msimbo unaopokea kila unapopakua mteja.
+Tunaweza kuthibitisha uthibitisho wa maarifa-sifuri ama mnyororoni (ambayo inagharimu gesi) au kwenye mteja (kwa kutumia [`verify`](https://zokrates.github.io/toolbox/zokrates_js.html#verifyverificationkey-proof)). Nilichagua ya kwanza, kwa sababu hii inakuwezesha [kuthibitisha mhakiki](#user-verify-zero-trust) mara moja na kisha kuamini kwamba haibadiliki mradi tu anwani ya mkataba wake inabaki sawa. Ikiwa uthibitishaji ungefanywa kwenye mteja, itabidi uthibitishe msimbo unaopokea kila wakati unapopakua mteja.
 
-Pia, ingawa mchezo huu ni wa mchezaji mmoja, michezo mingi ya mnyororo wa bloku ni ya wachezaji wengi. uthibitishaji wa onchain unamaanisha unathibitisha tu uthibitisho wa maarifa-sifuri mara moja. Kuifanya katika mteja kungehitaji kila mteja kuthibitisha kivyake.
+Pia, ingawa mchezo huu ni wa mchezaji mmoja, michezo mingi ya mnyororo wa vitalu ni ya wachezaji wengi. uthibitishaji mnyororoni unamaanisha unathibitisha tu uthibitisho wa maarifa-sifuri mara moja. Kufanya hivyo kwenye mteja kungelazimu kila mteja kuthibitisha kwa kujitegemea.
 
-### Kufanya ramani iwe bapa katika TypeScript au Zokrates? {#where-flatten}
+### Kulainisha ramani katika TypeScript au Zokrates? {#where-flatten}
 
-Kwa ujumla, wakati usindikaji unaweza kufanywa ama katika TypeScript au Zokrates, ni bora kuifanya katika TypeScript, ambayo ni haraka sana, na haihitaji uthibitisho wa maarifa-sifuri. Hii ndiyo sababu, kwa mfano, kwamba hatutoi Zokrates na hashi na kuifanya ithibitishe kuwa ni sahihi. Hashing inapaswa kufanywa ndani ya Zokrates, lakini mechi kati ya hashi iliyorudishwa na hashi onchain inaweza kutokea nje yake.
+Kwa ujumla, wakati uchakataji unaweza kufanywa ama katika TypeScript au Zokrates, ni bora kuufanya katika TypeScript, ambayo ni ya haraka sana, na haihitaji uthibitisho wa maarifa-sifuri. Hii ndiyo sababu, kwa mfano, kwamba hatupi Zokrates heshi na kuifanya ithibitishe kuwa ni sahihi. Uheshiji unapaswa kufanywa ndani ya Zokrates, lakini ulinganifu kati ya heshi iliyorudishwa na heshi mnyororoni unaweza kutokea nje yake.
 
-Hata hivyo, bado [tunalainisha ramani katika Zokrates](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20), ambapo tungeweza kuifanya katika TypeScript. Sababu ni kwamba chaguzi zingine, kwa maoni yangu, ni mbaya zaidi.
+Hata hivyo, bado [tunalainisha ramani katika Zokrates](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20), ambapo tungeweza kuifanya katika TypeScript. Sababu ni kwamba chaguzi nyingine ni, kwa maoni yangu, mbaya zaidi.
 
-- Toa safu ya boolean ya mwelekeo mmoja kwa msimbo wa Zokrates, na utumie usemi kama `x*(height+2)
-  +y` kupata ramani ya mwelekeo miwili. [Msimbo](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) ungekuwa mgumu kidogo, kwa hivyo niliamua kuwa faida ya utendaji haifai kwa mafunzo.
+- Kutoa safu ya mwelekeo mmoja ya boolean kwa msimbo wa Zokrates, na kutumia usemi kama vile `x*(height+2)
++y` kupata ramani ya mwelekeo mbili. Hii ingefanya [msimbo](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) kuwa mgumu zaidi kiasi, kwa hivyo niliamua faida ya utendaji haifai kwa mafunzo.
 
-- Tuma Zokrates safu ya mwelekeo mmoja na safu ya mwelekeo miwili. Hata hivyo, suluhisho hili halitupati faida yoyote. Msimbo wa Zokrates ungehitaji kuthibitisha kwamba safu ya mwelekeo mmoja inayoletwa ni kweli uwakilishi sahihi wa safu ya mwelekeo miwili. Kwa hivyo hakungekuwa na faida yoyote ya utendaji.
+- Kutuma Zokrates safu ya mwelekeo mmoja na safu ya mwelekeo mbili. Hata hivyo, suluhisho hili halitupi faida yoyote. Msimbo wa Zokrates ungelazimika kuthibitisha kwamba safu ya mwelekeo mmoja inayotolewa kweli ni uwakilishi sahihi wa safu ya mwelekeo mbili. Kwa hivyo hakungekuwa na faida yoyote ya utendaji.
 
-- Laza safu ya mwelekeo miwili katika Zokrates. Hii ndiyo chaguo rahisi zaidi, kwa hivyo niliichagua.
+- Kulainisha safu ya mwelekeo mbili katika Zokrates. Hili ndilo chaguo rahisi zaidi, kwa hivyo nililichagua.
 
 ### Wapi pa kuhifadhi ramani {#where-store-maps}
 
-Katika programu hii [`gamesInProgress`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L20) ni kigezo tu kwenye kumbukumbu. Hii inamaanisha kwamba ikiwa seva yako itakufa na kuhitaji kuanzishwa upya, habari zote ilizohifadhi zinapotea. Sio tu kwamba wachezaji hawawezi kuendelea na mchezo wao, hawawezi hata kuanza mchezo mpya kwa sababu sehemu ya onchain inafikiri bado wana mchezo unaoendelea.
+Katika programu hii [`gamesInProgress`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L20) ni kigezo tu kwenye kumbukumbu. Hii inamaanisha kwamba ikiwa seva yako itakufa na inahitaji kuanzishwa upya, taarifa zote ilizohifadhi zinapotea. Sio tu kwamba wachezaji hawawezi kuendelea na mchezo wao, hawawezi hata kuanza mchezo mpya kwa sababu kijenzi cha mnyororoni kinafikiri bado wana mchezo unaoendelea.
 
-Huu ni muundo mbaya kwa mfumo wa uzalishaji, ambapo utahifadhi habari hii kwenye hifadhidata. Sababu pekee niliyotumia kigezo hapa ni kwa sababu hii ni mafunzo na urahisi ndio jambo kuu.
+Huu ni muundo mbaya waziwazi kwa mfumo wa uzalishaji, ambapo ungehifadhi taarifa hii kwenye hifadhidata. Sababu pekee niliyotumia kigezo hapa ni kwa sababu haya ni mafunzo na urahisi ndio jambo kuu la kuzingatia.
 
-## Hitimisho: Chini ya hali gani hii ni mbinu inayofaa? {#conclusion}
+## Hitimisho: Ni chini ya masharti gani mbinu hii inafaa? {#conclusion}
 
-Kwa hivyo, sasa unajua jinsi ya kuandika mchezo na seva inayohifadhi hali ya siri ambayo sio ya onchain. Lakini katika kesi gani unapaswa kuifanya? Kuna mambo makuu mawili ya kuzingatia.
+Kwa hivyo, sasa unajua jinsi ya kuandika mchezo na seva inayohifadhi hali ya siri ambayo haipaswi kuwa mnyororoni. Lakini unapaswa kufanya hivyo katika hali gani? Kuna mambo mawili makuu ya kuzingatia.
 
-- _Mchezo unaoendelea kwa muda mrefu_: [Kama ilivyoelezwa hapo juu](#why-zero-knowledge), katika mchezo mfupi unaweza tu kuchapisha hali mara mchezo unapokwisha na kila kitu kuthibitishwa basi. Lakini hiyo sio chaguo wakati mchezo unachukua muda mrefu au usiojulikana, na hali inahitaji kubaki siri.
+- _Mchezo unaoendelea kwa muda mrefu_: [Kama ilivyotajwa hapo juu](#why-zero-knowledge), katika mchezo mfupi unaweza tu kuchapisha hali mara tu mchezo unapokwisha na kufanya kila kitu kihakikiwe wakati huo. Lakini hilo si chaguo wakati mchezo unachukua muda mrefu au usiojulikana, na hali inahitaji kubaki siri.
 
-- _Ugawanyaji fulani wa kati unakubalika_: Uthibitisho wa maarifa-sifuri unaweza kuthibitisha uadilifu, kwamba chombo hakighushi matokeo. Wanachoweza kufanya ni kuhakikisha kuwa chombo bado kitapatikana na kujibu ujumbe. Katika hali ambapo upatikanaji pia unahitaji kugawanywa, uthibitisho wa maarifa-sifuri sio suluhisho la kutosha, na unahitaji [hesabu za vyama vingi](https://en.wikipedia.org/wiki/Secure_multi-party_computation).
+- _Kiasi fulani cha uwekaji kati kinakubalika_: Uthibitisho wa maarifa-sifuri unaweza kuhakiki uadilifu, kwamba chombo hakighushi matokeo. Kile usichoweza kufanya ni kuhakikisha kwamba chombo hicho bado kitapatikana na kujibu ujumbe. Katika hali ambapo upatikanaji pia unahitaji kuwa uliogatuliwa, uthibitisho wa maarifa-sifuri sio suluhisho tosha, na unahitaji [ukokotoaji wa pande nyingi](https://en.wikipedia.org/wiki/Secure_multi-party_computation).
 
 [Tazama hapa kwa kazi zangu zaidi](https://cryptodocguy.pro/).
 
 ### Shukrani {#acknowledgements}
 
-- Alvaro Alonso alisoma rasimu ya makala hii na akanifafanulia baadhi ya kutoelewa kwangu kuhusu Zokrates.
+- Alvaro Alonso alisoma rasimu ya makala haya na kufafanua baadhi ya kutoelewa kwangu kuhusu Zokrates.
 
-Makosa yoyote yaliyobaki ni jukumu langu.
+Makosa yoyote yaliyosalia ni jukumu langu.

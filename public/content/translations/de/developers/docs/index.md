@@ -1,18 +1,27 @@
 ---
-title: Dokumentation zur Ethereum-Entwicklung
-description: Einführung in die Entwicklerdokumentation zu ethereum.org.
+title: Ethereum-Entwicklerdokumentation
+description: "Einführung in die Entwicklerdokumentation von ethereum.org."
 lang: de
 ---
 
-Diese Dokumentation soll Ihnen dabei helfen, mit Ethereum zu entwickeln. Darin wird das Konzept von Ethereum erläutert sowie der Technologie-Stack von Ethereum. Außerdem sind fortgeschrittene Themen für komplexere Anwendungen und Anwendungsfälle dokumentiert.
+Diese Dokumentation soll dir helfen, mit [Ethereum](/) zu entwickeln. Sie behandelt Ethereum als Konzept, erklärt den Ethereum-Tech-Stack und dokumentiert fortgeschrittene Themen für komplexere Anwendungen und Anwendungsfälle.
 
-Diese Dokumentation wird von der Open-Source-Community gepflegt, also zögern Sie nicht, neue Themen vorzuschlagen oder neue Inhalte hinzuzufügen. Geben Sie dabei Beispiele an, wenn das Ihrer Meinung nach hilfreich ist. Die gesamte Entwicklungsdokumentation kann auf GitHub bearbeitet werden. Falls Sie sich nicht sicher sind wie, [befolgen Sie einfach diese Anleitung](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/editing-markdown.md).
+Alles hier ist Open Source und wird von der Community gepflegt. Wenn also eine Seite veraltet ist oder etwas Nützliches fehlt, eröffne ein Issue oder einen Pull Request. Der [Bearbeitungsleitfaden](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/editing-markdown.md) erklärt, wie das geht.
+
+## Wähle einen Startpunkt {#pick-a-starting-point}
+
+Leser kommen mit unterschiedlichen Zielen hierher, und der schnellste Weg durch diese Dokumentation hängt davon ab, was du entwickeln möchtest. Einige häufige Einstiegspunkte:
+
+- **Entwicklung einer dezentralen Anwendung (Dapp), die mit Ethereum kommuniziert.** Beginne mit der [technischen Einführung](/developers/docs/intro-to-ethereum/) und arbeite dich dann durch [Konten](/developers/docs/accounts/) und [Transaktionen](/developers/docs/transactions/). Wähle ein [Framework](/developers/docs/frameworks/), wenn du bereit bist, Code zu schreiben.
+- **Schreiben eines Smart Contracts.** Überfliege die [Einführung](/developers/docs/intro-to-ethereum/), falls EVM-Konzepte neu für dich sind, und springe dann zu [Smart Contracts](/developers/docs/smart-contracts/) und einer [Programmiersprache](/developers/docs/programming-languages/).
+- **Betreiben eines Knotens oder Staking.** Gehe zu [Knoten und Clients](/developers/docs/nodes-and-clients/), dann zu [Netzwerken](/developers/docs/networking-layer/) und [Konsensmechanismen](/developers/docs/consensus-mechanisms/).
+- **Das Protokoll von Grund auf verstehen.** Die unten stehenden Module sind dafür angeordnet. Lies sie der Reihe nach.
 
 ## Entwicklungsmodule {#development-modules}
 
-Wenn das Ihr erster Versuch bei der Entwicklung mit Ethereum ist, empfehlen wir Ihnen, ganz vorne zu beginnen und sich wie bei einem Buch durchzuarbeiten.
+Wenn dies dein erster Versuch in der Ethereum-Entwicklung ist, empfehlen wir, am Anfang zu beginnen und dich wie bei einem Buch durchzuarbeiten.
 
-### Grundsätzliche Themen {#foundational-topics}
+### Grundlegende Themen {#foundational-topics}
 
 <DeveloperDocsLinks headerId="foundational-topics" />
 

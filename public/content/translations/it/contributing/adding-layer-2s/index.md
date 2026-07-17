@@ -1,97 +1,95 @@
 ---
-title: Aggiungere Livelli 2
-description: La politica utilizzata quando aggiungiamo un livello 2 a ethereum.org
+title: Aggiungere layer 2
+description: La politica che utilizziamo quando aggiungiamo un layer 2 a ethereum.org
 lang: it
 ---
 
-# Aggiungere Livelli 2 {#adding-layer-2}
+Vogliamo assicurarci di elencare le migliori risorse possibili in modo che gli utenti possano navigare nello spazio dei layer 2 in modo sicuro e fiducioso.
 
-Vogliamo assicurarci di elencare le migliori risorse possibili, così che gli utenti possano navigare nello spazio del livello 2 con la massima tranquillità e sicurezza.
+Chiunque è libero di suggerire l'aggiunta di un layer 2 su ethereum.org. Se c'è un layer 2 che ci è sfuggito, **[suggeriscilo](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
 
-Chiunque è libero di suggerire nuove piattaforme di scambio su ethereum.org. Se ci siamo dimenticati di un livello 2, **[ti invitiamo a suggerirlo](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
+Attualmente elenchiamo gli l2 nelle seguenti pagine:
 
-Attualmente elenchiamo i L2 nelle pagine seguenti:
+- [Rollup ottimistici](/developers/docs/scaling/optimistic-rollups/)
+- [Rollup a conoscenza zero](/developers/docs/scaling/zk-rollups/)
+- [Layer 2](/layer-2/)
 
-- [Optimistic rollup](/developers/docs/scaling/optimistic-rollups/)
-- [Rollup zero-knowledge](/developers/docs/scaling/zk-rollups/)
-- [Livello 2](/layer-2/)
+Il layer 2 è un paradigma relativamente nuovo ed entusiasmante per Ethereum. Abbiamo cercato di creare un quadro equo per la valutazione su ethereum.org, ma i criteri di inserimento cambieranno e si evolveranno nel tempo.
 
-Il Livello 2 è un paradigma relativamente nuovo ed entusiasmante per Ethereum. Abbiamo provato a creare un meccanismo equo per la disamina su ethereum.org, ma i criteri elencati cambieranno ed evolveranno col tempo.
+## Il quadro decisionale {#decision-framework}
 
-## Il meccanismo decisionale {#decision-framework}
+### Criteri di inclusione: i requisiti fondamentali {#criteria-for-inclusion-the-must-haves}
 
-### Criteri per l'inclusione: gli elementi imprescindibili {#criteria-for-inclusion-the-must-haves}
+**Presenza su L2BEAT**
 
-**Elenco su L2BEAT**
-
-- Per essere preso in considerazione, questo progetto deve essere riportato su [L2BEAT](https://l2beat.com). L2BEAT fornisce una solida valutazione dei rischi dei progetti relativi al livello 2, cui ci affidiamo per la disamina dei progetti L2. **Se il progetto non è presente su L2BEAT, non lo elencheremo come un L2 su ethereum.org.**
-- [Scopri come aggiungere il tuo progetto L2 a L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
+- Per essere preso in considerazione, questo progetto deve essere elencato su [L2BEAT](https://l2beat.com). L2BEAT fornisce una solida valutazione del rischio dei progetti layer 2 su cui ci basiamo per valutare i progetti l2. **Se il progetto non è presente su L2BEAT, non lo elencheremo come l2 su ethereum.org.**
+- [Scopri come aggiungere il tuo progetto l2 a L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
 **Open source**
 
-- Il tuo codice deve essere accessibile e dovresti accettare le PR dall'intera community.
+- Il tuo codice deve essere accessibile e dovresti accettare PR dalla comunità più ampia.
 
-**Categoria del livello 2**
+**Categoria layer 2**
 
-Attualmente, prendiamo in considerazione le seguenti soluzioni come di livello 2:
+Attualmente consideriamo soluzioni layer 2 le seguenti:
 
-- Optimistic rollup
-- Rollup zero-knowledge
+- Rollup ottimistico
+- Rollup a conoscenza zero
 
-_Non prendiamo in considerazione altre soluzioni di scalabilità che non utilizzano Ethereum per la disponibilità o la sicurezza dei dati al fine dell'inclusione nel Livello 2._
+_Non consideriamo layer 2 altre soluzioni di ridimensionamento che non utilizzano Ethereum per la disponibilità dei dati o la sicurezza._
 
 **Ethereum per la disponibilità dei dati**
 
-- La disponibilità dei dati è un fattore distintivo importante tra le altre soluzioni di scalabilità e il Livello 2. Un progetto **must** utilizza la Rete principale di Ethereum per la disponibilità dei dati per essere preso in considerazione in vista dell'inclusione.
+- La disponibilità dei dati è un importante fattore di differenziazione tra le altre soluzioni di ridimensionamento e i layer 2. Un progetto **deve** utilizzare la Mainnet di Ethereum per la disponibilità dei dati per essere preso in considerazione per l'inserimento.
 
 **Bridge**
 
-- Come fanno gli utenti ad accedere al livello 2?
+- In che modo gli utenti possono accedere al layer 2?
 
-**Data di rilascio del progetto**
+**Data di lancio del progetto**
 
-- Un livello due che è stato "attivo" sulla rete principale per 6 mesi
+- Un layer 2 che è "live" sulla Mainnet da oltre 6 mesi
 
-- I progetti più recenti e non ancora ben testati dagli utenti hanno meno probabilità di essere elencati.
+- I progetti più recenti che non sono stati testati sul campo dagli utenti hanno meno probabilità di essere elencati.
 
-**Controllo di sicurezza esterno**
+**Audit di sicurezza esterno**
 
-- Che sia tramite controllo, tramite un team di sicurezza interno o altri metodi, la sicurezza del prodotto deve essere testata in modo affidabile. Questo riduce il rischio per gli utenti e dimostra che la sicurezza viene presa sul serio.
+- Che sia tramite audit, un team di sicurezza interno o qualche altro metodo, la sicurezza del tuo prodotto deve essere testata in modo affidabile. Questo riduce il rischio per i nostri utenti e ci dimostra che prendi sul serio la sicurezza.
 
 **Base di utenti sostenuta**
 
-- Considereremo parametri come lo storico TVL, le statistiche di transazione e se è usato da aziende o progetti noti
+- Prenderemo in considerazione metriche come la cronologia del valore totale bloccato (TVL), le statistiche delle transazioni e se è utilizzato da aziende o progetti noti
 
 **Team di sviluppo attivo**
 
-- Non elencheremo un livello 2 che non dispone di un team attivo al lavoro sul progetto.
+- Non elencheremo un layer 2 che non ha un team attivo che lavora al progetto.
 
-**Esploratore del blocco**
+**Block explorer**
 
-- I progetti elencati richiedono un esploratore del blocco funzionante per consentire agli utenti di navigare facilmente sulla catena.
+- I progetti elencati richiedono un block explorer funzionante per consentire agli utenti di navigare facilmente nella catena.
 
-### Altri criteri: gli aspetti preferibili {#nice-to-haves}
+### Altri criteri: i requisiti opzionali {#nice-to-haves}
 
-**Supporto della piattaforma di scambio per il progetto**
+**Supporto degli exchange per il progetto**
 
-- Gli utenti possono depositare e/o prelevare direttamente da una piattaforma di scambio?
+- Gli utenti sono in grado di depositare e/o prelevare direttamente da un exchange?
 
-**Link alle dapp nell'ecosistema del livello 2**
+**Link alle applicazioni decentralizzate (dapp) nell'ecosistema layer 2**
 
-- Vogliamo poter fornire informazioni su cosa gli utenti possono aspettarsi di poter fare su questo livello 2 (es. https://portal.arbitrum.io/, https://www.optimism.io/apps)
+- Vogliamo essere in grado di fornire informazioni su ciò che gli utenti possono aspettarsi di poter fare su questo layer 2. (es., https://portal.arbitrum.io/, https://www.optimism.io/apps)
 
-**Elenchi di contratti token**
+**Elenchi dei contratti dei token**
 
-- Poiché le risorse avranno un nuovo indirizzo sul livello 2, se è disponibile una risorsa di elenco dei token, ti preghiamo di condividerla.
+- Poiché gli asset avranno un nuovo indirizzo sul layer 2, se è disponibile una risorsa con l'elenco dei token, ti preghiamo di condividerla.
 
-**Supporto nativo al portafoglio**
+**Supporto nativo per i portafogli**
 
-- Qualche portafoglio supporta il L2 nativamente?
+- Ci sono portafogli che supportano nativamente l'l2?
 
-## Aggiungi il tuo livello 2 {#add-exchange}
+## Aggiungi il tuo layer 2 {#add-exchange}
 
-Se desideri aggiungere un livello 2 su ethereum.org, crea un ticket su GitHub.
+Se vuoi aggiungere un layer 2 a ethereum.org, crea una issue su GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
-  Crea un ticket
+  Crea una issue
 </ButtonLink>

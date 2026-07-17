@@ -1,7 +1,10 @@
 {
   "table-active": "aktivní",
+  "table-browser-engines": "Jádra prohlížečů",
+  "table-desktop-platforms": "Desktopové platformy",
   "table-filters": "Filtry",
-  "table-showing": "Zobrazeno",
+  "table-mobile-platforms": "Mobilní platformy",
   "table-reset-filters": "Resetovat",
+  "table-showing": "Zobrazeno",
   "table-what-are-you-looking-for": "Co hledáte?"
 }

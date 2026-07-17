@@ -1,47 +1,47 @@
 ---
 title: "Client-Diversität"
-description: "Eine ausführliche Erklärung über die Bedeutung der Client-Vielfalt für Ethereum."
+description: "Eine allgemeine Erklärung der Bedeutung der Client-Diversität bei Ethereum."
 lang: de
 sidebarDepth: 2
 ---
 
-Das Verhalten eines Ethereum-Knotens wird durch die von ihm ausgeführte Client-Software gesteuert. Es gibt mehrere Ethereum-Clients auf Produktionsebene, die jeweils von verschiedenen Teams in verschiedenen Sprachen entwickelt und gepflegt werden. Die Clients werden nach einer gemeinsamen Spezifikation aufgebaut, die sicherstellt, dass die Clients nahtlos miteinander kommunizieren und die gleiche Funktionalität haben sowie ein gleichwertiges Nutzererlebnis bieten. Im Moment jedoch ist die Verteilung von Clients auf Knotenpunkte nicht gleich genug, um diese Netzwerkbefestigung auf sein volles Potenzial zu realisieren. Idealerweise teilen sich Nutzer ungefähr gleich über die verschiedenen Clients hinweg und bringen so viel Client-Vielfalt wie möglich ins Netzwerk.
+Das Verhalten eines [Ethereum](/)-Knotens wird durch die Client-Software gesteuert, die er ausführt. Es gibt mehrere produktionsreife Ethereum-Clients, von denen jeder in verschiedenen Sprachen von separaten Teams entwickelt und gepflegt wird. Die Clients werden nach einer gemeinsamen Spezifikation entwickelt, die sicherstellt, dass die Clients nahtlos miteinander kommunizieren, dieselbe Funktionalität aufweisen und eine gleichwertige Benutzererfahrung bieten. Derzeit ist die Verteilung der Clients auf die Knoten jedoch nicht gleichmäßig genug, um diese Stärkung des Netzwerks in vollem Umfang zu realisieren. Im Idealfall verteilen sich die Benutzer in etwa gleichmäßig auf die verschiedenen Clients, um dem Netzwerk eine größtmögliche Client-Diversität zu verleihen.
 
 ## Voraussetzungen {#prerequisites}
 
-Wenn Sie noch nicht verstehen, was Nodes und Clients sind, lesen Sie den Artikel über [Nodes und Clients](/developers/docs/nodes-and-clients/). Die [Ausführungs-](/glossary/#execution-layer) und [Konsens-](/glossary/#consensus-layer)Ebenen sind im Glossar definiert.
+Wenn Sie noch nicht wissen, was Knoten und Clients sind, lesen Sie den Artikel über [Knoten und Clients](/developers/docs/nodes-and-clients/). Die [Ausführungs-](/glossary/#execution-layer) und [Konsensschichten](/glossary/#consensus-layer) sind im Glossar definiert.
 
 ## Warum gibt es mehrere Clients? {#why-multiple-clients}
 
-Es gibt mehrere, unabhängig voneinander entwickelte und gewartete Clients, weil die Client-Vielfalt das Netzwerk widerstandsfähiger gegen Angriffe und Fehler macht. Mehrere Clients sind die einzigartige Stärke von Ethereum – andere Blockchains verlassen sich auf die Unfehlbarkeit eines einzigen Clients. Es reicht jedoch nicht aus, einfach mehrere Clients zur Verfügung zu haben. Sie müssen von der Community angenommen werden und die Anzahl der aktiven Nodes muss relativ gleichmäßig auf sie verteilt sein.
+Es gibt mehrere, unabhängig voneinander entwickelte und gepflegte Clients, da die Client-Diversität das Netzwerk widerstandsfähiger gegen Angriffe und Fehler macht. Mehrere Clients sind eine einzigartige Stärke von Ethereum – andere Blockchains verlassen sich auf die Unfehlbarkeit eines einzigen Clients. Es reicht jedoch nicht aus, einfach nur mehrere Clients zur Verfügung zu haben; sie müssen von der Community angenommen werden und die gesamten aktiven Knoten müssen relativ gleichmäßig auf sie verteilt sein.
 
-## Warum ist die Client-Vielfalt wichtig? {#client-diversity-importance}
+## Warum ist Client-Diversität wichtig? {#client-diversity-importance}
 
-Viele unabhängig voneinander entwickelte und gewartete Clients sind für die Sicherheit eines dezentralen Netzwerks unerlässlich. Lassen Sie uns die Gründe dafür untersuchen.
+Viele unabhängig entwickelte und gepflegte Clients zu haben, ist für die Gesundheit eines dezentralen Netzwerks von entscheidender Bedeutung. Lassen Sie uns die Gründe dafür untersuchen.
 
 ### Bugs {#bugs}
 
-Ein Fehler in einem einzelnen Client stellt ein geringeres Risiko für das Netzwerk dar, wenn er nur eine Minderheit der Ethereum-Knoten repräsentiert. Bei einer annähernd gleichmäßigen Verteilung der Knoten auf viele Clients ist die Wahrscheinlichkeit, dass die meisten Clients von einem gemeinsamen Problem betroffen sind, gering. Das Netzwerk ist daher robuster.
+Ein Bug in einem einzelnen Client stellt ein geringeres Risiko für das Netzwerk dar, wenn er eine Minderheit der Ethereum-Knoten repräsentiert. Bei einer in etwa gleichmäßigen Verteilung der Knoten auf viele Clients ist die Wahrscheinlichkeit gering, dass die meisten Clients von einem gemeinsamen Problem betroffen sind, und infolgedessen ist das Netzwerk robuster.
 
 ### Widerstandsfähigkeit gegen Angriffe {#resilience}
 
-Die Client-Vielfalt bietet auch eine gewisse Widerstandsfähigkeit gegen Angriffe. Ein Angriff beispielsweise, der [einen bestimmten Client dazu verleitet](https://twitter.com/vdWijden/status/1437712249926393858), auf einen bestimmten Zweig der Chain zu wechseln, wird wahrscheinlich nicht erfolgreich sein, da andere Clients wahrscheinlich nicht auf dieselbe Weise ausnutzbar sind und die kanonische Chain unbeschädigt bleibt. Eine geringe Client-Vielfalt erhöht das Risiko, das mit einem Hack auf den dominanten Client verbunden ist. Die Client-Vielfalt hat sich bereits als wichtiger Schutz gegen böswillige Angriffe auf das Netzwerk erwiesen. So war beispielsweise der Denial-of-Service-Angriff von Shanghai im Jahr 2016 möglich, weil es den Angreifern gelang, den dominanten Client (Geth) dazu zu bringen, einen „Slow Disk I/O-Vorgang“ zehntausende Male pro Block auszuführen. Da auch alternative Clients online waren, die diese Schwachstelle nicht aufwiesen, konnte Ethereum dem Angriff widerstehen und weiterarbeiten, während die Schwachstelle in Geth behoben wurde.
+Client-Diversität bietet auch Widerstandsfähigkeit gegen Angriffe. Zum Beispiel ist ein Angriff, der [einen bestimmten Client austrickst](https://twitter.com/vdWijden/status/1437712249926393858), um auf einen bestimmten Zweig der Chain zu wechseln, wahrscheinlich nicht erfolgreich, da andere Clients wahrscheinlich nicht auf dieselbe Weise ausgenutzt werden können und die kanonische Chain unbeschädigt bleibt. Eine geringe Client-Diversität erhöht das Risiko, das mit einem Hack des dominierenden Clients verbunden ist. Client-Diversität hat sich bereits als wichtige Verteidigung gegen böswillige Angriffe auf das Netzwerk erwiesen. Beispielsweise war der Shanghai-Denial-of-Service-Angriff im Jahr 2016 möglich, weil Angreifer den dominierenden Client (Geth) dazu bringen konnten, eine langsame Festplatten-E/A-Operation zehntausende Male pro Block auszuführen. Da auch alternative Clients online waren, die diese Schwachstelle nicht aufwiesen, konnte Ethereum dem Angriff standhalten und den Betrieb aufrechterhalten, während die Schwachstelle in Geth behoben wurde.
 
 ### Proof-of-Stake-Endgültigkeit {#finality}
 
-Ein Fehler in einem Konsensclient mit mehr als 33 % der Ethereum-Knoten könnte verhindern, dass die Konsensebene finalisieren kann. Das bedeutet, dass die Nutzer nicht darauf vertrauen können, dass Transaktionen nicht irgendwann rückgängig gemacht oder geändert werden. Dies wäre für viele der auf Ethereum aufbauenden Anwendungen, insbesondere DeFi, sehr problematisch.
+Ein Bug in einem Konsens-Client mit über 33 % der Ethereum-Knoten könnte verhindern, dass die Konsensschicht die Endgültigkeit erreicht, was bedeutet, dass Benutzer nicht darauf vertrauen könnten, dass Transaktionen nicht irgendwann rückgängig gemacht oder geändert werden. Dies wäre für viele der auf Ethereum aufbauenden Dezentralen Anwendungen (Dapps) sehr problematisch, insbesondere für Dezentralisierte Finanzen (DeFi).
 
-<Emoji text="🚨" className="me-4" /> Schlimmer noch: Ein kritischer Bug in einem Client mit Zweidrittelmehrheit könnte dazu führen, dass die Chain <a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">falsch geteilt und finalisiert wird</a>. Dies wiederum würde dazu führen, dass eine große Anzahl von Validatoren auf einer ungültigen Chain stecken bleibt. Wenn sie sich der korrekten Chain wieder anschließen möchten, müssen diese Validatoren mit Slashing oder einem langsamen und teuren freiwilligen Rückzug und Reaktivierung rechnen. Das Ausmaß eines Slashings skaliert mit der Anzahl der schuldigen Knoten, wobei maximal eine Zweidrittelmehrheit geslashed werden kann (32 ETH).
+<Emoji text="🚨" className="me-4" /> Schlimmer noch, ein kritischer Bug in einem Client mit einer Zweidrittelmehrheit könnte dazu führen, dass sich die Chain <a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">fälschlicherweise aufspaltet und Endgültigkeit erreicht</a>, was dazu führt, dass eine große Anzahl von Validatoren auf einer ungültigen Chain stecken bleibt. Wenn sie der korrekten Chain wieder beitreten wollen, droht diesen Validatoren Slashing oder eine langsame und teure freiwillige Abhebung und Reaktivierung. Das Ausmaß eines Slashings skaliert mit der Anzahl der schuldigen Knoten, wobei bei einer Zweidrittelmehrheit maximal geslasht wird (32 ETH).
 
-Obwohl dies unwahrscheinliche Szenarien sind, kann das Ethereum-Ökosystem das Risiko mindern, indem es die Verteilung der Clients auf die aktiven Knoten ausgleicht. Im Idealfall würde kein Konsensclient jemals einen Anteil von 33 % an der Gesamtzahl der Nodes erreichen.
+Obwohl dies unwahrscheinliche Szenarien sind, kann das Ethereum-Ökosystem ihr Risiko mindern, indem es die Verteilung der Clients auf die aktiven Knoten ausgleicht. Im Idealfall würde kein Konsens-Client jemals einen Anteil von 33 % an den gesamten Knoten erreichen.
 
 ### Geteilte Verantwortung {#responsibility}
 
-Bei Mehrheitsclients fallen außerdem Personalkosten an. Ein kleines Entwicklungsteam wird dadurch stärker belastet und trägt mehr Verantwortung. Je geringer die Client-Vielfalt ist, desto größer ist die Last der Verantwortung für die Entwickler, die den Mehrheitsclient pflegen. Die Verteilung dieser Verantwortung auf mehrere Teams ist vorteilhaft für die Sicherheit des Knoten-Netzwerks und für das Personalnetzwerk von Ethereum.
+Mehrheits-Clients haben auch einen menschlichen Preis. Es bürdet einem kleinen Entwicklungsteam übermäßige Belastung und Verantwortung auf. Je geringer die Client-Diversität, desto größer ist die Last der Verantwortung für die Entwickler, die den Mehrheits-Client pflegen. Diese Verantwortung auf mehrere Teams zu verteilen, ist sowohl für die Gesundheit von Ethereums Netzwerk von Knoten als auch für sein Netzwerk von Menschen gut.
 
-## Aktuelle Client-Vielfalt {#current-client-diversity}
+## Aktuelle Client-Diversität {#current-client-diversity}
 
-### Ausführungs-Clients {#execution-clients-breakdown}
+### Ausführungsclients {#execution-clients-breakdown}
 
 <PieChart
 data={[
@@ -63,27 +63,27 @@ data={[
 { name: "Nimbus", value: 8.74},
 { name: "Lodestar", value: 2.67 },
 { name: "Grandine", value: 1.04 },
-{ name: "Andere", value: 0.07 }
+{ name: "Other", value: 0.07 }
 ]}
 />
 
 Dieses Diagramm ist möglicherweise veraltet – aktuelle Informationen finden Sie auf [ethernodes.org](https://ethernodes.org) und [clientdiversity.org](https://clientdiversity.org).
 
-Die beiden Tortendiagramme oben zeigen Momentaufnahmen der aktuellen Client-Vielfalt für die Ausführungs- und Konsensebene (Stand: Oktober 2025). Die Client-Vielfalt hat sich im Laufe der Jahre verbessert, und auf der Ausführungsebene hat die Dominanz von [Geth](https://geth.ethereum.org/) abgenommen. [Nethermind](https://www.nethermind.io/nethermind-client) liegt knapp an zweiter Stelle, [Besu](https://besu.hyperledger.org/) an dritter und [Erigon](https://github.com/ledgerwatch/erigon) an vierter Stelle, während andere Clients weniger als 3 % des Netzwerks ausmachen. Der am häufigsten verwendete Client auf der Konsensebene – [Lighthouse](https://lighthouse.sigmaprime.io/) – liegt nur knapp vor dem am zweithäufigsten verwendeten. [Prysm](https://prysmaticlabs.com/#projects) und [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) machen ~31 % bzw. ~14 % aus, und andere Clients werden selten verwendet.
+Die beiden obigen Kreisdiagramme zeigen Momentaufnahmen der aktuellen Client-Diversität für die Ausführungs- und Konsensschichten (zum Zeitpunkt der Erstellung im Oktober 2025). Die Client-Diversität hat sich im Laufe der Jahre verbessert, und auf der Ausführungsschicht ist die Dominanz von [Geth](https://geth.ethereum.org/) zurückgegangen, wobei [Nethermind](https://www.nethermind.io/nethermind-client) dicht dahinter auf dem zweiten, [Besu](https://besu.hyperledger.org/) auf dem dritten und [Erigon](https://github.com/ledgerwatch/erigon) auf dem vierten Platz liegt, während andere Clients weniger als 3 % des Netzwerks ausmachen. Der am häufigsten verwendete Client auf der Konsensschicht – [Lighthouse](https://lighthouse.sigmaprime.io/) – liegt ziemlich nah am zweithäufigsten verwendeten. [Prysm](https://prysmaticlabs.com/#projects) und [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) machen etwa 31 % bzw. 14 % aus, und andere Clients werden selten verwendet.
 
-Die Daten der Ausführungsebene wurden am 26. Okt. 2025 von [supermajority.info](https://supermajority.info/) bezogen. Die Daten für Konsens-Clients stammen von [Michael Sproul](https://github.com/sigp/blockprint). Die Daten der Konsensclients sind schwieriger zu beschaffen, da die Clients der Konsensschicht nicht immer eindeutige Spuren hinterlassen, anhand derer sie identifiziert werden können. Die Daten wurden mit einem Klassifizierungsalgorithmus generiert, der manchmal einige der Minderheits-Clients verwechselt (weitere Details finden Sie [hier](https://twitter.com/sproulM_/status/1440512518242197516)). Im obigen Diagramm werden diese mehrdeutigen Klassifizierungen mit einem Entweder-Oder-Label behandelt (z. B. Nimbus/Teku). Nichtsdestotrotz ist es klar, dass die Mehrheit des Netzwerks Prysm verwendet. Obwohl es sich nur um Momentaufnahmen handelt, vermitteln die Werte im Diagramm einen guten allgemeinen Eindruck vom aktuellen Stand der Client-Vielfalt.
+Die Daten der Ausführungsschicht wurden am 26. Oktober 2025 von [supermajority.info](https://supermajority.info/) bezogen. Die Daten für Konsens-Clients stammen von [Michael Sproul](https://github.com/sigp/blockprint). Daten zu Konsens-Clients sind schwieriger zu beschaffen, da die Clients der Konsensschicht nicht immer eindeutige Spuren aufweisen, anhand derer sie identifiziert werden können. Die Daten wurden mithilfe eines Klassifizierungsalgorithmus generiert, der manchmal einige der Minderheits-Clients verwechselt (weitere Details finden Sie [hier](https://twitter.com/sproulM_/status/1440512518242197516)). Im obigen Diagramm werden diese mehrdeutigen Klassifizierungen mit einer Entweder-oder-Bezeichnung (z. B. Nimbus/Teku) behandelt. Dennoch ist klar, dass die Mehrheit des Netzwerks Prysm ausführt. Obwohl es sich nur um Momentaufnahmen handelt, vermitteln die Werte im Diagramm einen guten allgemeinen Eindruck vom aktuellen Stand der Client-Diversität.
 
-Aktuelle Daten zur Client-Vielfalt für die Konsensebene sind jetzt auf [clientdiversity.org](https://clientdiversity.org/) verfügbar.
+Aktuelle Daten zur Client-Diversität für die Konsensschicht sind jetzt unter [clientdiversity.org](https://clientdiversity.org/) verfügbar.
 
-## Ausführungsebene {#execution-layer}
+## Ausführungsschicht {#execution-layer}
 
-Bisher hat sich die Diskussion über die Client-Vielfalt hauptsächlich auf die Konsensschicht konzentriert. Allerdings macht der Ausführungs-Client [Geth](https://geth.ethereum.org) derzeit etwa 85 % aller Nodes aus. Dieser Prozentsatz ist aus denselben Gründen problematisch wie bei den Konsensclients. Zum Beispiel könnte ein Fehler in Geth, der die Transaktionsabwicklung oder die Konstruktion der Ausführungsnutzlast betrifft, dazu führen, dass Konsensclients problematische oder fehlerhafte Transaktionen abschließen. Daher wäre Ethereum sicherer mit einer gleichmäßigeren Verteilung der Ausführungsclients, idealerweise mit keinem Client, der mehr als 33 % des Netzwerks repräsentiert.
+Bisher konzentrierte sich die Diskussion um die Client-Diversität hauptsächlich auf die Konsensschicht. Der Ausführungsclient [Geth](https://geth.ethereum.org) macht derzeit jedoch rund 85 % aller Knoten aus. Dieser Prozentsatz ist aus denselben Gründen problematisch wie bei Konsens-Clients. Beispielsweise könnte ein Bug in Geth, der die Transaktionsverarbeitung oder die Erstellung von Ausführungs-Payloads betrifft, dazu führen, dass Konsens-Clients problematische oder fehlerhafte Transaktionen endgültig machen. Daher wäre Ethereum mit einer gleichmäßigeren Verteilung der Ausführungsclients gesünder, idealerweise ohne dass ein Client mehr als 33 % des Netzwerks repräsentiert.
 
 ## Verwenden Sie einen Minderheits-Client {#use-minority-client}
 
-Um die Kundenvielfalt zu berücksichtigen, müssen nicht nur einzelne Benutzer Minderheitskunden auswählen – auch Validierungs pools und Institutionen wie die großen Dapp und Börsen müssen ihre Kunden wechseln. Allerdings können alle Nutzer ihren Teil dazu beitragen, das derzeitige Ungleichgewicht auszugleichen und die Nutzung der gesamten verfügbaren Ethereum-Software zu forcieren. Nach der Zusammenführung müssen alle Knotenbetreiber einen Ausführungsclient und einen Konsensclient betreiben. Die Wahl von Kombinationen der unten vorgeschlagenen Clients wird dazu beitragen, die Client-Vielfalt zu erhöhen.
+Die Bewältigung der Client-Diversität erfordert mehr, als dass einzelne Benutzer Minderheits-Clients wählen – es erfordert, dass auch Validator-Pools und Institutionen wie die großen Dezentralen Anwendungen (Dapps) und Börsen die Clients wechseln. Alle Benutzer können jedoch ihren Teil dazu beitragen, das derzeitige Ungleichgewicht zu beheben und die Nutzung der gesamten verfügbaren Ethereum-Software zu normalisieren. Nach dem Merge müssen alle Knotenbetreiber einen Ausführungsclient und einen Konsens-Client ausführen. Die Wahl von Kombinationen der unten vorgeschlagenen Clients trägt dazu bei, die Client-Diversität zu erhöhen.
 
-### Ausführungs-Clients {#execution-clients}
+### Ausführungsclients {#execution-clients}
 
 - [Besu](https://www.hyperledger.org/use/besu)
 - [Nethermind](https://downloads.nethermind.io/)
@@ -100,33 +100,33 @@ Um die Kundenvielfalt zu berücksichtigen, müssen nicht nur einzelne Benutzer M
 - [Prysm](https://prysm.offchainlabs.com/docs/)
 - [Grandine](https://docs.grandine.io/)
 
-Technisch versierte Nutzer können dazu beitragen, diesen Prozess zu beschleunigen, indem sie mehr Anleitungen und Dokumentationen für Minderheitenclients schreiben und ihre Kollegen, die Knoten betreiben, ermutigen, von den dominanten Clients wegzugehen. Anleitungen für den Wechsel zu einem Minderheits-Konsens-Client sind auf [clientdiversity.org](https://clientdiversity.org/) verfügbar.
+Technische Benutzer können dazu beitragen, diesen Prozess zu beschleunigen, indem sie mehr Tutorials und Dokumentationen für Minderheits-Clients schreiben und ihre Knoten betreibenden Kollegen ermutigen, von den dominierenden Clients weg zu migrieren. Anleitungen zum Wechsel zu einem Minderheits-Konsens-Client finden Sie auf [clientdiversity.org](https://clientdiversity.org/).
 
-## Dashboards zur Client-Vielfalt {#client-diversity-dashboards}
+## Dashboards zur Client-Diversität {#client-diversity-dashboards}
 
-Verschiedene Dashboards geben Echtzeit-Statistiken zur Client-Vielfalt für die Ausführungs- und Konsensebene.
+Mehrere Dashboards bieten Echtzeitstatistiken zur Client-Diversität für die Ausführungs- und Konsensschicht.
 
-**Konsensebene:**
+**Konsensschicht:**
 
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/)
 
-**Ausführungsebene:**
+**Ausführungsschicht:**
 
 - [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)
 
-## Weiterführende Lektüre {#further-reading}
+## Weiterführende Literatur {#further-reading}
 
-- [Client-Vielfalt auf der Konsensebene von Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA)
-- [Ethereum-Merge: Betreiben Sie den Mehrheits-Client auf eigene Gefahr!](https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html) – _Dankrad Fiest, 24. März 2022_
-- [Die Bedeutung der Client-Vielfalt](https://our.status.im/the-importance-of-client-diversity/)
-- [Liste von Ethereum-Node-Diensten](https://ethereumnodes.com/)
-- [Das „Fünf-Warum-Problem“ der Client-Vielfalt](https://notes.ethereum.org/@afhGjrKfTKmksTOtqhB9RQ/BJGj7uh08)
-- [Ethereum-Vielfalt und wie sie erreicht werden kann (YouTube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
+- [Client-Diversität auf der Konsensschicht von Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA)
+- [Ethereum Merge: Run the majority client at your own peril!](https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html) – _Dankrad Fiest, 24. März 2022_
+- [Bedeutung der Client-Diversität](https://our.status.im/the-importance-of-client-diversity/)
+- [Liste der Ethereum-Knotendienste](https://ethereumnodes.com/)
+- [Die „Fünf Warums“ des Problems der Client-Diversität](https://notes.ethereum.org/@afhGjrKfTKmksTOtqhB9RQ/BJGj7uh08)
+- [Ethereum Diversity and How to Solve For It (YouTube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
 - [clientdiversity.org](https://clientdiversity.org/)
 
 ## Verwandte Themen {#related-topics}
 
-- [Einen Ethereum-Node betreiben](/run-a-node/)
-- [Nodes und Clients](/developers/docs/nodes-and-clients/)
+- [Einen Ethereum-Knoten ausführen](/run-a-node/)
+- [Knoten und Clients](/developers/docs/nodes-and-clients/)

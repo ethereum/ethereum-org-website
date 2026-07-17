@@ -1,5 +1,7 @@
 import type { DefiLlamaTVLResponse, MetricReturnData } from "@/lib/types"
 
+import { fetchRetry } from "./fetchRetry"
+
 export const FETCH_TOTAL_VALUE_LOCKED_TASK_ID = "fetch-total-value-locked"
 
 /**
@@ -11,7 +13,7 @@ export async function fetchTotalValueLocked(): Promise<MetricReturnData> {
 
   console.log("Starting total value locked data fetch from DefiLlama")
 
-  const response = await fetch(url)
+  const response = await fetchRetry(url)
 
   if (!response.ok) {
     const status = response.status

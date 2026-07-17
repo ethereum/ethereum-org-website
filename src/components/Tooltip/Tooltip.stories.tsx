@@ -1,5 +1,5 @@
 import { Info } from "lucide-react"
-import { Meta, StoryObj } from "@storybook/react"
+import { Meta, StoryObj } from "@storybook/nextjs"
 
 import Translation from "../Translation"
 import { Center } from "../ui/flex"

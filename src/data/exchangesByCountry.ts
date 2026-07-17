@@ -1,12 +1,12 @@
+// ⚠️ IMPORTANT: When modifying exchange data below, update this date to the current timestamp.
+// This replaced a dynamic `git log` call — there is no automated mechanism to keep it in sync.
+export const exchangesByCountryLastUpdated = "2026-07-02T11:17:29.359Z"
+
 const exchangesByCountry = {
   // Afghanistan
   AF: [
-    "coinmama",
-    "bittrex",
-    "simplex",
     "binance",
     "wazirx",
-    "okx",
     "huobiglobal",
     "gateio",
     "bitfinex",
@@ -30,14 +30,11 @@ const exchangesByCountry = {
   // Algeria
   DZ: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "mtpelerin",
     "wazirx",
-    "okx",
     "kucoin",
     "huobiglobal",
     "gateio",
@@ -47,27 +44,20 @@ const exchangesByCountry = {
   ],
   // American Samoa (USA)
   AS: [
-    "simplex",
     "kraken",
     "okx",
-    "kucoin",
     "huobiglobal",
     "bitfinex",
     "bybit",
-  ],
-  // Andorra
-  AD: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "itezcom",
     "mtpelerin",
     "wazirx",
     "okx",
-    "kucoin",
     "huobiglobal",
     "gateio",
     "bitfinex",
@@ -77,13 +67,11 @@ const exchangesByCountry = {
   // Angola
   AO: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "itezcom",
-    "mtpelerin",
     "okx",
     "kucoin",
     "huobiglobal",
@@ -95,7 +83,6 @@ const exchangesByCountry = {
   // Anguilla (UK)
   AI: [
     "coinmama",
-    "simplex",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -109,9 +96,8 @@ const exchangesByCountry = {
   // Antigua and Barbuda
   AG: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -127,10 +113,8 @@ const exchangesByCountry = {
   // Argentina
   AR: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -151,9 +135,8 @@ const exchangesByCountry = {
   // Armenia
   AM: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "itezcom",
@@ -170,9 +153,8 @@ const exchangesByCountry = {
   // Aruba (Netherlands)
   AW: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "itezcom",
@@ -188,12 +170,9 @@ const exchangesByCountry = {
   // Australia
   AU: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
-    "gemini",
     "binance",
     "cryptocom",
     "itezcom",
@@ -201,7 +180,6 @@ const exchangesByCountry = {
     "mtpelerin",
     "wazirx",
     "zebpay",
-    "easycrypto",
     "okx",
     "kucoin",
     "huobiglobal",
@@ -213,12 +191,9 @@ const exchangesByCountry = {
   // Austria
   AT: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
-    "gemini",
     "cryptocom",
     "itezcom",
     "bitvavo",
@@ -227,18 +202,15 @@ const exchangesByCountry = {
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
     "gateio",
-    "bitfinex",
     "bybit",
     "matrixport",
   ],
   // Azerbaijan
   AZ: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -271,9 +243,8 @@ const exchangesByCountry = {
   // Bahrain
   BH: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "rain",
@@ -291,12 +262,9 @@ const exchangesByCountry = {
   // Bangladesh
   BD: [
     "coinmama",
-    "simplex",
     "kraken",
     "binance",
-    "mtpelerin",
     "wazirx",
-    "okx",
     "kucoin",
     "huobiglobal",
     "bybit",
@@ -320,31 +288,21 @@ const exchangesByCountry = {
   ],
   // Belarus
   BY: [
-    "coinmama",
-    "bittrex",
-    "simplex",
-    "wyre",
-    "kraken",
     "itezcom",
-    "wazirx",
     "okx",
     "kucoin",
     "huobiglobal",
     "gateio",
     "bitfinex",
-    "bybit",
     "matrixport",
   ],
   // Belgium
   BE: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
-    "gemini",
     "cryptocom",
     "itezcom",
     "bitvavo",
@@ -353,7 +311,6 @@ const exchangesByCountry = {
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
     "bybit",
@@ -362,9 +319,8 @@ const exchangesByCountry = {
   // Belize
   BZ: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -380,9 +336,8 @@ const exchangesByCountry = {
   // Benin
   BJ: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "itezcom",
@@ -399,9 +354,8 @@ const exchangesByCountry = {
   // Bermuda (UK)
   BM: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -418,9 +372,8 @@ const exchangesByCountry = {
   // Bhutan
   BT: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "gemini",
     "itezcom",
@@ -437,12 +390,9 @@ const exchangesByCountry = {
   // Bolivia
   BO: [
     "coinmama",
-    "simplex",
-    "wyre",
     "kraken",
     "mtpelerin",
     "wazirx",
-    "okx",
     "kucoin",
     "huobiglobal",
     "bybit",
@@ -451,9 +401,8 @@ const exchangesByCountry = {
   // Bonaire (Netherlands)
   "Bonaire-Netherlands": [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -468,10 +417,8 @@ const exchangesByCountry = {
   // Bosnia and Herzegovina
   BA: [
     "coinmama",
-    "bittrex",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -485,7 +432,6 @@ const exchangesByCountry = {
   // Botswana
   BW: [
     "coinmama",
-    "bittrex",
     "coinbase",
     "kraken",
     "mtpelerin",
@@ -500,10 +446,8 @@ const exchangesByCountry = {
   // Brazil
   BR: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -524,9 +468,8 @@ const exchangesByCountry = {
   // British Virgin Islands (UK)
   VG: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "gemini",
     "cryptocom",
@@ -537,16 +480,14 @@ const exchangesByCountry = {
     "kucoin",
     "huobiglobal",
     "gateio",
-    "bitfinex",
     "bybit",
     "matrixport",
   ],
   // Brunei
   BN: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "itezcom",
@@ -563,9 +504,8 @@ const exchangesByCountry = {
   // Bulgaria
   BG: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -577,7 +517,6 @@ const exchangesByCountry = {
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
     "bybit",
@@ -586,10 +525,8 @@ const exchangesByCountry = {
   // Burkina Faso
   BF: [
     "coinmama",
-    "simplex",
     "kraken",
     "itezcom",
-    "mtpelerin",
     "wazirx",
     "okx",
     "kucoin",
@@ -602,10 +539,8 @@ const exchangesByCountry = {
   // Burundi
   BI: [
     "coinmama",
-    "bittrex",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "wazirx",
@@ -620,7 +555,6 @@ const exchangesByCountry = {
   // Cambodia
   KH: [
     "coinmama",
-    "bittrex",
     "kraken",
     "binance",
     "mtpelerin",
@@ -635,9 +569,8 @@ const exchangesByCountry = {
   // Cameroon
   CM: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "itezcom",
@@ -654,10 +587,8 @@ const exchangesByCountry = {
   // Canada
   CA: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -665,19 +596,14 @@ const exchangesByCountry = {
     "cryptocom",
     "itezcom",
     "mtpelerin",
-    "wazirx",
-    "okx",
     "kucoin",
-    "bitfinex",
-    "bybit",
     "shakepay",
   ],
   // Cape Verde
   CV: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -693,7 +619,6 @@ const exchangesByCountry = {
   // Cayman Islands (UK)
   KY: [
     "coinmama",
-    "simplex",
     "kraken",
     "gemini",
     "cryptocom",
@@ -710,10 +635,8 @@ const exchangesByCountry = {
   // Central African Republic (CAR)
   CF: [
     "coinmama",
-    "bittrex",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "itezcom",
     "wazirx",
     "okx",
@@ -726,9 +649,8 @@ const exchangesByCountry = {
   // Chad
   TD: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -744,10 +666,8 @@ const exchangesByCountry = {
   // Chile
   CL: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -765,22 +685,12 @@ const exchangesByCountry = {
     "matrixport",
   ],
   // China
-  CN: [
-    "coinmama",
-    "simplex",
-    "kraken",
-    "wazirx",
-    "okx",
-    "huobiglobal",
-    "gateio",
-    "bitfinex",
-  ],
+  CN: ["bitfinex"],
   // Clipperton Island (France)
   CP: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -796,10 +706,8 @@ const exchangesByCountry = {
   // Colombia
   CO: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -820,9 +728,8 @@ const exchangesByCountry = {
   // Comoros
   KM: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -837,9 +744,7 @@ const exchangesByCountry = {
   // Congo
   CG: [
     "coinmama",
-    "simplex",
     "itezcom",
-    "mtpelerin",
     "wazirx",
     "okx",
     "huobiglobal",
@@ -851,14 +756,12 @@ const exchangesByCountry = {
   // Cook Islands (New Zealand)
   CK: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
     "wazirx",
-    "easycrypto",
     "okx",
     "kucoin",
     "huobiglobal",
@@ -870,10 +773,8 @@ const exchangesByCountry = {
   // Costa Rica
   CR: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "cryptocom",
@@ -891,8 +792,6 @@ const exchangesByCountry = {
   // Cote d'Ivoire
   CI: [
     "coinmama",
-    "bittrex",
-    "simplex",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -906,8 +805,6 @@ const exchangesByCountry = {
   ],
   // Crimea
   Crimea: [
-    "bittrex",
-    "simplex",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -919,9 +816,8 @@ const exchangesByCountry = {
   // Croatia
   HR: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -932,39 +828,29 @@ const exchangesByCountry = {
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
     "bybit",
     "matrixport",
   ],
   // Cuba
-  CU: ["bittrex", "simplex", "mtpelerin", "wazirx", "bitfinex"],
-  // Curacao (Netherlands)
-  CW: [
-    "coinmama",
-    "simplex",
+  CU: [
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
-    "mtpelerin",
-    "wazirx",
     "bitflyer",
     "okx",
     "kucoin",
     "huobiglobal",
     "gateio",
-    "bybit",
     "matrixport",
   ],
   // Cyprus
   CY: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -976,7 +862,6 @@ const exchangesByCountry = {
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
     "bybit",
@@ -985,10 +870,8 @@ const exchangesByCountry = {
   // Czech republic
   CZ: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -1000,7 +883,6 @@ const exchangesByCountry = {
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
     "bybit",
@@ -1010,13 +892,10 @@ const exchangesByCountry = {
   // Denmark
   DK: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
-    "gemini",
     "cryptocom",
     "itezcom",
     "bitvavo",
@@ -1025,7 +904,6 @@ const exchangesByCountry = {
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
     "bybit",
@@ -1034,9 +912,8 @@ const exchangesByCountry = {
   // Djibouti
   DJ: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -1052,9 +929,8 @@ const exchangesByCountry = {
   // Dominica
   DM: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -1070,10 +946,8 @@ const exchangesByCountry = {
   // Dominican Republic
   DO: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "cryptocom",
@@ -1091,7 +965,6 @@ const exchangesByCountry = {
   // Ecuador
   EC: [
     "coinmama",
-    "simplex",
     "coinbase",
     "kraken",
     "mtpelerin",
@@ -1105,10 +978,8 @@ const exchangesByCountry = {
   // Egypt
   EG: [
     "coinmama",
-    "bittrex",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "gemini",
     "binance",
@@ -1126,9 +997,8 @@ const exchangesByCountry = {
   // El Salvador
   SV: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -1147,9 +1017,8 @@ const exchangesByCountry = {
   // Equatorial Guinea
   GQ: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -1165,10 +1034,8 @@ const exchangesByCountry = {
   // Eritrea
   ER: [
     "coinmama",
-    "bittrex",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "itezcom",
     "mtpelerin",
     "okx",
@@ -1182,10 +1049,8 @@ const exchangesByCountry = {
   // Estonia
   EE: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -1197,7 +1062,6 @@ const exchangesByCountry = {
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
     "bybit",
@@ -1206,9 +1070,8 @@ const exchangesByCountry = {
   // Eswatini (formerly Swaziland)
   SZ: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "itezcom",
     "mtpelerin",
     "wazirx",
@@ -1221,10 +1084,8 @@ const exchangesByCountry = {
   // Ethiopia
   ET: [
     "coinmama",
-    "bittrex",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -1238,9 +1099,8 @@ const exchangesByCountry = {
   // Falkland Islands (UK)
   FK: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -1254,9 +1114,8 @@ const exchangesByCountry = {
   // Fiji
   FJ: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "cryptocom",
     "itezcom",
@@ -1273,13 +1132,10 @@ const exchangesByCountry = {
   // Finland
   FI: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
-    "gemini",
     "cryptocom",
     "itezcom",
     "bitvavo",
@@ -1288,7 +1144,6 @@ const exchangesByCountry = {
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
     "bybit",
@@ -1297,34 +1152,26 @@ const exchangesByCountry = {
   // France
   FR: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "binance",
     "cryptocom",
-    "itezcom",
     "bitvavo",
     "mtpelerin",
-    "wazirx",
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
-    "gateio",
     "bitfinex",
     "bybit",
     "matrixport",
-    "zkp2p",
   ],
   // French Guiana (France)
   GF: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "bitvavo",
@@ -1340,9 +1187,8 @@ const exchangesByCountry = {
   // French Polynesia (France)
   PF: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -1357,9 +1203,8 @@ const exchangesByCountry = {
   // Gabon
   GA: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -1375,9 +1220,8 @@ const exchangesByCountry = {
   // Gambia
   GM: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -1393,9 +1237,8 @@ const exchangesByCountry = {
   // Georgia
   GE: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -1411,26 +1254,19 @@ const exchangesByCountry = {
   // Germany
   DE: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "cryptocom",
-    "itezcom",
     "bitvavo",
     "mtpelerin",
-    "wazirx",
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
-    "gateio",
     "bitfinex",
     "bybit",
     "matrixport",
-    "zkp2p",
   ],
   // Ghana
   GH: [
@@ -1449,9 +1285,8 @@ const exchangesByCountry = {
   // Gibraltar
   GI: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -1470,10 +1305,8 @@ const exchangesByCountry = {
   // Greece
   GR: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -1486,7 +1319,6 @@ const exchangesByCountry = {
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
     "bybit",
@@ -1495,9 +1327,8 @@ const exchangesByCountry = {
   // Greenland (Denmark)
   GL: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -1513,9 +1344,8 @@ const exchangesByCountry = {
   // Grenada
   GD: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -1531,9 +1361,8 @@ const exchangesByCountry = {
   // Guadeloupe (France)
   GP: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "bitvavo",
@@ -1547,33 +1376,28 @@ const exchangesByCountry = {
     "matrixport",
   ],
   // Guam (USA)
-  GU: ["simplex", "kraken", "kucoin", "huobiglobal", "bybit"],
-  // Guatemala
-  GT: [
-    "coinmama",
-    "simplex",
-    "moonpay",
-    "zkp2p",
-    "coinbase",
+  GU: [
     "kraken",
+    "huobiglobal",
+    "bybit",
+    "coinmama",
+    "moonpay",
+    "peer",
+    "coinbase",
     "cryptocom",
     "itezcom",
     "mtpelerin",
     "wazirx",
     "okx",
-    "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
-    "bybit",
     "matrixport",
   ],
   // Guernsey
   GG: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -1591,10 +1415,8 @@ const exchangesByCountry = {
   // Guinea
   GN: [
     "coinmama",
-    "bittrex",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "itezcom",
     "wazirx",
     "kucoin",
@@ -1607,10 +1429,8 @@ const exchangesByCountry = {
   // Guinea-Bissau
   GW: [
     "coinmama",
-    "bittrex",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "okx",
     "kucoin",
     "huobiglobal",
@@ -1622,10 +1442,8 @@ const exchangesByCountry = {
   // Guyana
   GY: [
     "coinmama",
-    "bittrex",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -1640,9 +1458,7 @@ const exchangesByCountry = {
   // Haiti
   HT: [
     "coinmama",
-    "simplex",
     "itezcom",
-    "mtpelerin",
     "okx",
     "kucoin",
     "huobiglobal",
@@ -1654,9 +1470,8 @@ const exchangesByCountry = {
   // Honduras
   HN: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "cryptocom",
@@ -1674,29 +1489,20 @@ const exchangesByCountry = {
   // Hong Kong
   HK: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
     "cryptocom",
-    "itezcom",
     "mtpelerin",
     "wazirx",
-    "kucoin",
-    "huobiglobal",
-    "gateio",
     "bitfinex",
-    "bybit",
   ],
   // Hungary
   HU: [
     "coinmama",
-    "simplex",
-    "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -1709,7 +1515,6 @@ const exchangesByCountry = {
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
     "bybit",
@@ -1718,10 +1523,8 @@ const exchangesByCountry = {
   // Iceland
   IS: [
     "coinmama",
-    "wyre",
     "coinbase",
     "kraken",
-    "gemini",
     "cryptocom",
     "bitvavo",
     "mtpelerin",
@@ -1737,11 +1540,9 @@ const exchangesByCountry = {
   ],
   // India
   IN: [
+    "coinswitch",
     "coinmama",
-    "simplex",
-    "wyre",
-    "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -1754,7 +1555,6 @@ const exchangesByCountry = {
     "okx",
     "kucoin",
     "huobiglobal",
-    "gateio",
     "bitfinex",
     "bybit",
     "matrixport",
@@ -1762,58 +1562,36 @@ const exchangesByCountry = {
   // Indonesia
   ID: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "binance",
     "cryptocom",
-    "mtpelerin",
     "wazirx",
     "okx",
     "kucoin",
     "huobiglobal",
-    "gateio",
     "bitfinex",
     "bybit",
     "matrixport",
   ],
   // Iran
-  IR: ["bittrex", "itezcom", "okx", "huobiglobal", "bitfinex"],
-  // Iraq
-  IQ: [
-    "coinmama",
-    "bittrex",
-    "simplex",
-    "kraken",
-    "okx",
-    "huobiglobal",
-    "gateio",
-    "bitfinex",
-    "bybit",
-    "matrixport",
-  ],
+  IR: ["kraken", "gateio", "matrixport"],
   // Ireland
   IE: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
-    "gemini",
     "cryptocom",
-    "itezcom",
     "bitvavo",
     "mtpelerin",
     "wazirx",
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
     "bybit",
@@ -1822,9 +1600,8 @@ const exchangesByCountry = {
   // Isle of Man
   IM: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "itezcom",
@@ -1840,10 +1617,8 @@ const exchangesByCountry = {
   ],
   // Israel
   IL: [
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "gemini",
     "binance",
@@ -1862,25 +1637,19 @@ const exchangesByCountry = {
   // Italy
   IT: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
-    "gemini",
     "binance",
     "cryptocom",
-    "itezcom",
     "bitvavo",
     "mtpelerin",
     "wazirx",
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
     "gateio",
-    "bitfinex",
     "bybit",
     "matrixport",
   ],
@@ -1902,26 +1671,21 @@ const exchangesByCountry = {
   // Japan
   JP: [
     "coinmama",
-    "simplex",
-    "wyre",
     "coinbase",
     "binance",
     "cryptocom",
     "mtpelerin",
-    "wazirx",
     "bitflyer",
     "okx",
     "kucoin",
-    "gateio",
     "bitfinex",
     "bybit",
   ],
   // Jersey
   JE: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -1939,9 +1703,8 @@ const exchangesByCountry = {
   // Jordan
   JO: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "cryptocom",
@@ -1959,11 +1722,9 @@ const exchangesByCountry = {
   // Kazakhstan
   KZ: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
-    "kraken",
     "binance",
     "itezcom",
     "mtpelerin",
@@ -1979,9 +1740,8 @@ const exchangesByCountry = {
   // Kenya
   KE: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "cryptocom",
@@ -1999,9 +1759,8 @@ const exchangesByCountry = {
   // Kiribati
   KI: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -2017,7 +1776,6 @@ const exchangesByCountry = {
   // Kosovo
   XK: [
     "coinmama",
-    "simplex",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -2032,9 +1790,8 @@ const exchangesByCountry = {
   // Kuwait
   KW: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "rain",
@@ -2053,9 +1810,8 @@ const exchangesByCountry = {
   // Kyrgyzstan
   KG: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "mtpelerin",
@@ -2068,10 +1824,8 @@ const exchangesByCountry = {
   // Laos
   LA: [
     "coinmama",
-    "bittrex",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -2086,10 +1840,8 @@ const exchangesByCountry = {
   // Latvia
   LV: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -2102,7 +1854,6 @@ const exchangesByCountry = {
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
     "bybit",
@@ -2110,10 +1861,7 @@ const exchangesByCountry = {
   ],
   // Lebanon
   LB: [
-    "bittrex",
-    "simplex",
-    "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "okx",
     "kucoin",
@@ -2126,9 +1874,8 @@ const exchangesByCountry = {
   // Lesotho
   LS: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -2144,7 +1891,6 @@ const exchangesByCountry = {
   // Liberia
   LR: [
     "coinmama",
-    "simplex",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -2159,11 +1905,7 @@ const exchangesByCountry = {
   // Libya
   LY: [
     "coinmama",
-    "bittrex",
-    "simplex",
-    "moonpay",
-    "zkp2p",
-    "kraken",
+    "peer",
     "okx",
     "huobiglobal",
     "gateio",
@@ -2174,9 +1916,8 @@ const exchangesByCountry = {
   // Liechtenstein
   LI: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -2197,10 +1938,8 @@ const exchangesByCountry = {
   // Lithuania
   LT: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -2212,7 +1951,6 @@ const exchangesByCountry = {
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
     "bybit",
@@ -2221,10 +1959,8 @@ const exchangesByCountry = {
   // Luxembourg
   LU: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -2236,7 +1972,6 @@ const exchangesByCountry = {
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
     "bybit",
@@ -2245,9 +1980,7 @@ const exchangesByCountry = {
   // Madagascar
   MG: [
     "coinmama",
-    "simplex",
-    "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -2263,9 +1996,8 @@ const exchangesByCountry = {
   // Malawi
   MW: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -2280,18 +2012,13 @@ const exchangesByCountry = {
   // Malaysia
   MY: [
     "coinmama",
-    "simplex",
-    "wyre",
-    "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "cryptocom",
     "itezcom",
     "mtpelerin",
     "wazirx",
-    "kucoin",
     "huobiglobal",
-    "gateio",
     "bitfinex",
     "bybit",
     "matrixport",
@@ -2299,10 +2026,8 @@ const exchangesByCountry = {
   // Maldives
   MV: [
     "coinmama",
-    "bittrex",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "itezcom",
@@ -2319,10 +2044,8 @@ const exchangesByCountry = {
   // Mali
   ML: [
     "coinmama",
-    "bittrex",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "okx",
@@ -2335,7 +2058,6 @@ const exchangesByCountry = {
   // Malta
   MT: [
     "coinmama",
-    "simplex",
     "coinbase",
     "kraken",
     "cryptocom",
@@ -2346,7 +2068,6 @@ const exchangesByCountry = {
     "zebpay",
     "bitflyer",
     "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
     "bybit",
@@ -2355,9 +2076,8 @@ const exchangesByCountry = {
   // Marshall Islands
   MH: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -2373,9 +2093,8 @@ const exchangesByCountry = {
   // Martinique (France)
   MQ: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "bitvavo",
@@ -2392,9 +2111,8 @@ const exchangesByCountry = {
   // Mauritania
   MR: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -2425,10 +2143,8 @@ const exchangesByCountry = {
   // Mexico
   MX: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "binance",
@@ -2448,9 +2164,8 @@ const exchangesByCountry = {
   // Micronesia
   FM: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -2466,9 +2181,8 @@ const exchangesByCountry = {
   // Moldova
   MD: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -2484,9 +2198,8 @@ const exchangesByCountry = {
   // Monaco
   MC: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "itezcom",
@@ -2519,9 +2232,8 @@ const exchangesByCountry = {
   // Montenegro
   ME: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "itezcom",
@@ -2537,9 +2249,8 @@ const exchangesByCountry = {
   // Montserrat (UK)
   MS: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -2554,7 +2265,6 @@ const exchangesByCountry = {
   // Morocco
   MA: [
     "coinmama",
-    "simplex",
     "kraken",
     "mtpelerin",
     "wazirx",
@@ -2569,9 +2279,8 @@ const exchangesByCountry = {
   // Mozambique
   MZ: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -2585,8 +2294,6 @@ const exchangesByCountry = {
   ],
   // Myanmar (formerly Burma)
   MM: [
-    "coinmama",
-    "bittrex",
     "kraken",
     "gemini",
     "itezcom",
@@ -2595,14 +2302,12 @@ const exchangesByCountry = {
     "kucoin",
     "huobiglobal",
     "gateio",
-    "bybit",
   ],
   // Namibia
   NA: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "itezcom",
@@ -2619,9 +2324,8 @@ const exchangesByCountry = {
   // Nauru
   NR: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -2637,9 +2341,8 @@ const exchangesByCountry = {
   // Navassa Island (USA)
   "Navassa-Island-USA": [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "okx",
     "kucoin",
@@ -2649,15 +2352,12 @@ const exchangesByCountry = {
   // Nepal
   NP: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "mtpelerin",
     "wazirx",
-    "okx",
     "kucoin",
     "huobiglobal",
     "gateio",
@@ -2668,21 +2368,15 @@ const exchangesByCountry = {
   // Netherlands
   NL: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
-    "gemini",
     "cryptocom",
-    "itezcom",
     "bitvavo",
     "mtpelerin",
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
-    "gateio",
     "bitfinex",
     "bybit",
     "matrixport",
@@ -2690,9 +2384,8 @@ const exchangesByCountry = {
   // New Caledonia (France)
   NC: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -2707,10 +2400,8 @@ const exchangesByCountry = {
   // New Zealand
   NZ: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -2719,7 +2410,6 @@ const exchangesByCountry = {
     "itezcom",
     "mtpelerin",
     "wazirx",
-    "easycrypto",
     "okx",
     "kucoin",
     "huobiglobal",
@@ -2731,7 +2421,6 @@ const exchangesByCountry = {
   // Nicaragua
   NI: [
     "coinmama",
-    "bittrex",
     "coinbase",
     "kraken",
     "itezcom",
@@ -2746,12 +2435,10 @@ const exchangesByCountry = {
   // Niger
   NE: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
-    "mtpelerin",
     "wazirx",
     "okx",
     "kucoin",
@@ -2764,9 +2451,7 @@ const exchangesByCountry = {
   // Nigeria
   NG: [
     "coinmama",
-    "simplex",
-    "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "gemini",
     "binance",
@@ -2784,14 +2469,12 @@ const exchangesByCountry = {
   // Niue (New Zealand)
   NU: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
     "wazirx",
-    "easycrypto",
     "okx",
     "kucoin",
     "gateio",
@@ -2801,14 +2484,12 @@ const exchangesByCountry = {
   // Norfolk Island (Australia)
   NF: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
     "wazirx",
-    "easycrypto",
     "okx",
     "kucoin",
     "gateio",
@@ -2816,13 +2497,9 @@ const exchangesByCountry = {
     "matrixport",
   ],
   // North Korea
-  KP: ["bittrex", "bitfinex"],
-  // North Macedonia (formerly Macedonia)
-  MK: [
-    "coinmama",
-    "simplex",
+  KP: [
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -2830,21 +2507,18 @@ const exchangesByCountry = {
     "kucoin",
     "huobiglobal",
     "gateio",
-    "bitfinex",
     "bybit",
     "matrixport",
   ],
   // Northern Mariana Islands (USA)
-  MP: ["simplex", "kraken", "kucoin", "huobiglobal", "bybit"],
-  // Norway
-  NO: [
-    "coinmama",
-    "simplex",
-    "wyre",
-    "moonpay",
-    "zkp2p",
-    "coinbase",
+  MP: [
     "kraken",
+    "huobiglobal",
+    "bybit",
+    "coinmama",
+    "moonpay",
+    "peer",
+    "coinbase",
     "gemini",
     "cryptocom",
     "itezcom",
@@ -2853,19 +2527,15 @@ const exchangesByCountry = {
     "wazirx",
     "bitflyer",
     "okx",
-    "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
-    "bybit",
     "matrixport",
   ],
   // Oman
   OM: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "rain",
@@ -2884,7 +2554,6 @@ const exchangesByCountry = {
   // Pakistan
   PK: [
     "coinmama",
-    "bittrex",
     "kraken",
     "binance",
     "mtpelerin",
@@ -2898,9 +2567,8 @@ const exchangesByCountry = {
   // Palau
   PW: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -2915,9 +2583,7 @@ const exchangesByCountry = {
   ],
   // Palestine
   PS: [
-    "simplex",
-    "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -2933,7 +2599,6 @@ const exchangesByCountry = {
   // Panama
   PA: [
     "coinmama",
-    "bittrex",
     "coinbase",
     "kraken",
     "gemini",
@@ -2950,9 +2615,8 @@ const exchangesByCountry = {
   // Papua New Guinea
   PG: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -2968,10 +2632,8 @@ const exchangesByCountry = {
   // Paraguay
   PY: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "cryptocom",
@@ -2989,10 +2651,8 @@ const exchangesByCountry = {
   // Peru
   PE: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -3012,10 +2672,8 @@ const exchangesByCountry = {
   // Philippines
   PH: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -3027,7 +2685,6 @@ const exchangesByCountry = {
     "okx",
     "kucoin",
     "huobiglobal",
-    "gateio",
     "bitfinex",
     "bybit",
     "matrixport",
@@ -3035,9 +2692,8 @@ const exchangesByCountry = {
   // Pitcairn Islands (UK)
   PN: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -3052,23 +2708,18 @@ const exchangesByCountry = {
   // Poland
   PL: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
-    "gemini",
     "binance",
     "cryptocom",
-    "itezcom",
     "bitvavo",
     "mtpelerin",
     "wazirx",
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
     "bybit",
@@ -3077,13 +2728,10 @@ const exchangesByCountry = {
   // Portugal
   PT: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
-    "gemini",
     "binance",
     "cryptocom",
     "itezcom",
@@ -3093,7 +2741,6 @@ const exchangesByCountry = {
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
     "bybit",
@@ -3101,27 +2748,20 @@ const exchangesByCountry = {
   ],
   // Puerto Rico (USA)
   PR: [
-    "simplex",
     "moonpay",
     "kraken",
-    "kucoin",
     "huobiglobal",
     "bybit",
-    "zkp2p",
-  ],
-  // Qatar
-  QA: [
+    "peer",
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "cryptocom",
     "itezcom",
     "mtpelerin",
     "wazirx",
     "okx",
-    "kucoin",
     "huobiglobal",
     "gateio",
     "bitfinex",
@@ -3131,9 +2771,8 @@ const exchangesByCountry = {
   // Romania
   RO: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -3146,35 +2785,18 @@ const exchangesByCountry = {
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
     "bybit",
     "matrixport",
   ],
   // Russia
-  RU: [
-    "coinmama",
-    "simplex",
-    "kraken",
-    "binance",
-    "cryptocom",
-    "itezcom",
-    "mtpelerin",
-    "wazirx",
-    "okx",
-    "kucoin",
-    "huobiglobal",
-    "gateio",
-    "bitfinex",
-    "bybit",
-  ],
+  RU: ["binance", "okx", "kucoin", "huobiglobal", "gateio", "bitfinex"],
   // Rwanda
   RW: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "itezcom",
@@ -3190,9 +2812,8 @@ const exchangesByCountry = {
   // Saba (Netherlands)
   "Saba-Netherlands": [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -3207,9 +2828,8 @@ const exchangesByCountry = {
   // Saint Barthelemy (France)
   BL: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -3224,9 +2844,8 @@ const exchangesByCountry = {
   // Saint Kitts and Nevis
   KN: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "cryptocom",
     "itezcom",
@@ -3242,9 +2861,8 @@ const exchangesByCountry = {
   // Saint Lucia
   LC: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "gemini",
     "itezcom",
@@ -3260,9 +2878,8 @@ const exchangesByCountry = {
   // Saint Martin (France)
   MF: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "bitvavo",
@@ -3279,9 +2896,8 @@ const exchangesByCountry = {
   // Saint Pierre and Miquelon (France)
   PM: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -3296,9 +2912,8 @@ const exchangesByCountry = {
   // Saint Vincent and the Grenadines
   VC: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "gemini",
     "itezcom",
@@ -3314,9 +2929,8 @@ const exchangesByCountry = {
   // Samoa
   WS: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "mtpelerin",
     "wazirx",
@@ -3330,9 +2944,8 @@ const exchangesByCountry = {
   // San Marino
   SM: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "itezcom",
@@ -3349,9 +2962,8 @@ const exchangesByCountry = {
   // Sao Tome and Principe
   ST: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -3367,9 +2979,8 @@ const exchangesByCountry = {
   // Saudi Arabia
   SA: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "binance",
     "rain",
@@ -3388,7 +2999,6 @@ const exchangesByCountry = {
   // Senegal
   SN: [
     "coinmama",
-    "simplex",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -3404,9 +3014,8 @@ const exchangesByCountry = {
   // Serbia
   RS: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "cryptocom",
@@ -3422,9 +3031,8 @@ const exchangesByCountry = {
   // Seychelles
   SC: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -3439,9 +3047,8 @@ const exchangesByCountry = {
   // Sierra Leone
   SL: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "itezcom",
     "mtpelerin",
     "okx",
@@ -3455,28 +3062,20 @@ const exchangesByCountry = {
   // Singapore
   SG: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
-    "coinbase",
+    "peer",
     "gemini",
     "cryptocom",
-    "itezcom",
     "mtpelerin",
-    "wazirx",
     "zebpay",
     "okx",
-    "kucoin",
-    "gateio",
     "bitfinex",
   ],
   // Sint Eustatius (Netherlands)
   "Sint-Eustatius-Netherlands": [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -3492,9 +3091,8 @@ const exchangesByCountry = {
   // Sint Maarten (Netherlands)
   SX: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -3511,10 +3109,8 @@ const exchangesByCountry = {
   // Slovakia
   SK: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -3527,7 +3123,6 @@ const exchangesByCountry = {
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
     "bybit",
@@ -3536,10 +3131,8 @@ const exchangesByCountry = {
   // Slovenia
   SI: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -3551,7 +3144,6 @@ const exchangesByCountry = {
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
     "bybit",
@@ -3560,9 +3152,8 @@ const exchangesByCountry = {
   // Solomon Islands
   SB: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -3577,11 +3168,7 @@ const exchangesByCountry = {
   ],
   // Somalia
   SO: [
-    "coinmama",
-    "bittrex",
-    "simplex",
-    "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "okx",
     "kucoin",
@@ -3594,10 +3181,8 @@ const exchangesByCountry = {
   // South Africa
   ZA: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -3617,9 +3202,8 @@ const exchangesByCountry = {
   // South Georgia and the South Sandwich Islands (UK)
   GS: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -3633,19 +3217,15 @@ const exchangesByCountry = {
   // South Korea
   KR: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "gemini",
     "cryptocom",
     "itezcom",
     "mtpelerin",
-    "wazirx",
     "okx",
     "kucoin",
     "huobiglobal",
-    "gateio",
     "bitfinex",
     "bybit",
     "korbit",
@@ -3653,9 +3233,6 @@ const exchangesByCountry = {
   ],
   // South Sudan
   SS: [
-    "bittrex",
-    "simplex",
-    "kraken",
     "itezcom",
     "okx",
     "kucoin",
@@ -3668,35 +3245,26 @@ const exchangesByCountry = {
   // Spain
   ES: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
-    "gemini",
     "binance",
     "cryptocom",
-    "itezcom",
     "bitvavo",
     "mtpelerin",
     "wazirx",
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
-    "gateio",
-    "bitfinex",
     "bybit",
     "matrixport",
   ],
   // Sri Lanka
   LK: [
     "coinmama",
-    "bittrex",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -3709,35 +3277,28 @@ const exchangesByCountry = {
     "matrixport",
   ],
   // Sudan
-  SD: ["bittrex", "simplex", "kucoin", "bitfinex", "matrixport"],
-  // Suriname
-  SR: [
-    "coinmama",
-    "simplex",
+  SD: [
+    "kucoin",
+    "bitfinex",
+    "matrixport",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
     "wazirx",
     "okx",
-    "kucoin",
     "huobiglobal",
     "gateio",
-    "bitfinex",
     "bybit",
-    "matrixport",
   ],
   // Sweden
   SE: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
-    "gemini",
     "cryptocom",
     "itezcom",
     "bitvavo",
@@ -3746,7 +3307,6 @@ const exchangesByCountry = {
     "bitflyer",
     "okx",
     "kucoin",
-    "huobiglobal",
     "gateio",
     "bitfinex",
     "bybit",
@@ -3755,10 +3315,8 @@ const exchangesByCountry = {
   // Switzerland
   CH: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -3778,13 +3336,9 @@ const exchangesByCountry = {
     "matrixport",
   ],
   // Syria
-  SY: ["bittrex", "wazirx", "okx", "bitfinex"],
-  // Taiwan
-  TW: [
-    "coinmama",
-    "simplex",
+  SY: [
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -3792,21 +3346,16 @@ const exchangesByCountry = {
     "cryptocom",
     "itezcom",
     "mtpelerin",
-    "wazirx",
-    "okx",
     "kucoin",
     "huobiglobal",
     "gateio",
-    "bitfinex",
-    "bybit",
     "matrixport",
   ],
   // Tajikistan
   TJ: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -3822,10 +3371,8 @@ const exchangesByCountry = {
   // Tanzania
   TZ: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -3840,10 +3387,8 @@ const exchangesByCountry = {
   // Thailand
   TH: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "cryptocom",
     "itezcom",
@@ -3851,7 +3396,6 @@ const exchangesByCountry = {
     "wazirx",
     "okx",
     "huobiglobal",
-    "gateio",
     "bitfinex",
     "bybit",
     "bitkub",
@@ -3860,9 +3404,8 @@ const exchangesByCountry = {
   // Timor-Leste
   TL: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -3877,9 +3420,8 @@ const exchangesByCountry = {
   // Togo
   TG: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -3895,14 +3437,12 @@ const exchangesByCountry = {
   // Tokelau (New Zealand)
   TK: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
     "wazirx",
-    "easycrypto",
     "okx",
     "kucoin",
     "huobiglobal",
@@ -3913,9 +3453,8 @@ const exchangesByCountry = {
   // Tonga
   TO: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -3931,11 +3470,8 @@ const exchangesByCountry = {
   // Trinidad and Tobago
   TT: [
     "coinmama",
-    "bittrex",
-    "simplex",
     "coinbase",
     "kraken",
-    "mtpelerin",
     "wazirx",
     "okx",
     "huobiglobal",
@@ -3947,10 +3483,8 @@ const exchangesByCountry = {
   // Tunisia
   TN: [
     "coinmama",
-    "bittrex",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "itezcom",
     "mtpelerin",
@@ -3965,16 +3499,13 @@ const exchangesByCountry = {
   // Turkey
   TR: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
     "binance",
     "cryptocom",
-    "itezcom",
     "mtpelerin",
     "wazirx",
     "okx",
@@ -3988,9 +3519,8 @@ const exchangesByCountry = {
   // Turkmenistan
   TM: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -4005,9 +3535,8 @@ const exchangesByCountry = {
   // Turks and Caicos Islands (UK)
   TC: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -4022,9 +3551,8 @@ const exchangesByCountry = {
   // Tuvalu
   TV: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -4040,7 +3568,6 @@ const exchangesByCountry = {
   // Uganda
   UG: [
     "coinmama",
-    "bittrex",
     "coinbase",
     "kraken",
     "itezcom",
@@ -4052,13 +3579,11 @@ const exchangesByCountry = {
     "bitfinex",
     "bybit",
     "matrixport",
-    "zkp2p",
+    "peer",
   ],
   // Ukraine
   UA: [
     "coinmama",
-    "bittrex",
-    "simplex",
     "binance",
     "cryptocom",
     "itezcom",
@@ -4075,14 +3600,12 @@ const exchangesByCountry = {
   // United Arab Emirates (UAE)
   AE: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "binance",
     "rain",
     "cryptocom",
-    "itezcom",
     "mtpelerin",
     "wazirx",
     "okx",
@@ -4092,49 +3615,39 @@ const exchangesByCountry = {
     "bitfinex",
     "bybit",
     "matrixport",
-    "zkp2p",
   ],
   // United Kingdom (UK)
   GB: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
-    "gemini",
     "cryptocom",
-    "itezcom",
     "bitvavo",
     "mtpelerin",
-    "wazirx",
     "bitflyer",
     "okx",
     "kucoin",
     "huobiglobal",
-    "gateio",
-    "bitfinex",
     "bybit",
     "matrixport",
-    "zkp2p",
   ],
   // United States of America (USA)
   US: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "gemini",
     "binanceus",
     "bitflyer",
-    "zkp2p",
+    "okx",
   ],
   // Uruguay
   UY: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "gemini",
@@ -4151,22 +3664,12 @@ const exchangesByCountry = {
     "matrixport",
   ],
   // US Virgin Islands (USA)
-  VI: [
-    "simplex",
-    "coinbase",
-    "kraken",
-    "cryptocom",
-    "kucoin",
-    "huobiglobal",
-    "bybit",
-    "matrixport",
-  ],
+  VI: ["coinbase", "kraken", "cryptocom", "huobiglobal", "bybit"],
   // Uzbekistan
   UZ: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "itezcom",
@@ -4176,13 +3679,10 @@ const exchangesByCountry = {
     "huobiglobal",
     "gateio",
     "bitfinex",
-    "bybit",
   ],
   // Vanuatu
   VU: [
     "coinmama",
-    "bittrex",
-    "simplex",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -4196,24 +3696,12 @@ const exchangesByCountry = {
     "matrixport",
   ],
   // Venezuela
-  VE: [
-    "coinmama",
-    "bittrex",
-    "simplex",
-    "kraken",
-    "wazirx",
-    "okx",
-    "bitfinex",
-    "bybit",
-    "matrixport",
-  ],
+  VE: ["coinmama", "kraken", "wazirx", "okx", "bybit", "matrixport"],
   // Vietnam
   VN: [
     "coinmama",
-    "simplex",
-    "wyre",
     "moonpay",
-    "zkp2p",
+    "peer",
     "gemini",
     "binance",
     "cryptocom",
@@ -4231,9 +3719,8 @@ const exchangesByCountry = {
   // Wake Island (USA)
   "Wake-Island-USA": [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "okx",
     "kucoin",
@@ -4242,9 +3729,8 @@ const exchangesByCountry = {
   // Wallis and Futuna (France)
   WF: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -4257,22 +3743,12 @@ const exchangesByCountry = {
     "matrixport",
   ],
   // Yemen
-  YE: [
-    "coinmama",
-    "bittrex",
-    "okx",
-    "huobiglobal",
-    "gateio",
-    "bitfinex",
-    "bybit",
-    "matrixport",
-  ],
+  YE: ["okx", "huobiglobal", "gateio", "bitfinex", "bybit", "matrixport"],
   // Zambia
   ZM: [
     "coinmama",
-    "simplex",
     "moonpay",
-    "zkp2p",
+    "peer",
     "coinbase",
     "kraken",
     "itezcom",
@@ -4289,7 +3765,6 @@ const exchangesByCountry = {
   // Zimbabwe
   ZW: [
     "coinmama",
-    "bittrex",
     "binance",
     "okx",
     "huobiglobal",

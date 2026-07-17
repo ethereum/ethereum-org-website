@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Before suggesting a wallet, make sure you've read [our listing policy](https://www.ethereum.org/contributing/adding-wallets/). Only continue with the issue if the wallet meets the criteria listed there. For any required questions, please answer N/A for any questions not applicable to your wallet. This form is very comprehensive, and if you feel like you can't answer all the questions, please reach out to the wallet provider to fill out this template. 
+        Before suggesting a wallet, make sure you've read [our listing policy](https://www.ethereum.org/contributing/adding-wallets/). Only continue with the issue if the wallet meets the criteria listed there. For any required questions, please answer N/A for any questions not applicable to your wallet. This form is very comprehensive, and if you feel like you can't answer all the questions, please reach out to the wallet provider to fill out this template.
   - type: markdown
     id: project_info
     attributes:
@@ -24,7 +24,8 @@ body:
       label: What type of wallet?
       options:
         - "EOA"
-        - "Account Abstraction"
+        - "Smart Account (EIP-4337)"
+        - "EOA with Smart Features (EIP-7702)"
         - "Smart contract"
     validations:
       required: true
@@ -293,7 +294,7 @@ body:
     id: wallet_eip_1559_support
     attributes:
       label: Does the wallet support EIP-1559 (type 2) transactions?
-      description: Does your wallet support EIP-1559 (type 2) transactions for Ethereum Mainnet. Please provide information on the type of transactions this wallet supports. If this is not applicable, please explain. 
+      description: Does your wallet support EIP-1559 (type 2) transactions for Ethereum Mainnet. Please provide information on the type of transactions this wallet supports. If this is not applicable, please explain.
     validations:
       required: true
   - type: textarea
@@ -340,6 +341,26 @@ body:
     attributes:
       label: Does the wallet support bundled transactions?
       description: Please provide any documentation on bundled transactions
+    validations:
+      required: true
+  - type: dropdown
+    id: wallet_eip_4337_support
+    attributes:
+      label: Does the wallet support Smart Accounts (EIP-4337)?
+      description: Smart contract wallets with features like gas sponsorship, social recovery, and custom authentication
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: dropdown
+    id: wallet_eip_7702_support
+    attributes:
+      label: Does the wallet support Account Upgrades (EIP-7702)?
+      description: Allows EOA accounts to temporarily use smart contract features
+      options:
+        - "Yes"
+        - "No"
     validations:
       required: true
   - type: markdown

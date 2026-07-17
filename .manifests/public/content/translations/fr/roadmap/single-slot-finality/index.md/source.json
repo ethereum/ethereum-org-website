@@ -1,0 +1,294 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/roadmap/single-slot-finality/index.md",
+  "generatedAt": "2026-06-08T10:41:48.816Z",
+  "rootHash": "6829f7237d78",
+  "tree": {
+    "contentHash": "73eebde5309e",
+    "anchorHash": "85acfc80dbd5",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "26be487ae07f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "0ee533f97767",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:1": {
+        "contentHash": "47bc3d6e450a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "8a5edab28263"
+      },
+      "prose:2": {
+        "contentHash": "b71a4d4e217e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-finality": {
+        "contentHash": "c3aba2cc6c7a",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "b6383fcc764b",
+        "children": {
+          "_label": {
+            "contentHash": "b6383fcc764b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "e6904a75228f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "why-aim-for-quicker-finality": {
+        "contentHash": "69d4e12e48d8",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "6f0621ef7acc",
+        "children": {
+          "_label": {
+            "contentHash": "6f0621ef7acc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "5f5a094b0410",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-decentralization-time-overhead-tradeoff": {
+        "contentHash": "8bc13532f418",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "3bd1b757c26a",
+        "children": {
+          "_label": {
+            "contentHash": "3bd1b757c26a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "e48a080a0984",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "routes-to-ssf": {
+        "contentHash": "8f3484838172",
+        "anchorHash": "255c536ef8f9",
+        "labelHash": "d140fa94a9c9",
+        "children": {
+          "_label": {
+            "contentHash": "d140fa94a9c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:1": {
+            "contentHash": "6f7d93f7eedd",
+            "anchorHash": "6103ea1c6d76",
+            "children": {
+              "attr:eventCategory": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "f1e82b456042"
+              },
+              "attr:eventName": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "6cf92134005c"
+              },
+              "prose:1": {
+                "contentHash": "9b021c7d3924",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "fa30eb02f3a5"
+              },
+              "prose:2": {
+                "contentHash": "c9b04a11559a",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:eventCategory",
+              "attr:eventName",
+              "prose:1",
+              "inline-code:0",
+              "prose:2"
+            ]
+          },
+          "prose:2": {
+            "contentHash": "99c02f1d5b77",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "61c336be96f9"
+          },
+          "prose:3": {
+            "contentHash": "3b2a17013c8b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "444992c1b9e3",
+            "anchorHash": "8bcca47d0cb7"
+          },
+          "prose:4": {
+            "contentHash": "2e489915ee14",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "component:1",
+          "prose:2",
+          "inline-code:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "role-of-the-fork-choice-rule": {
+        "contentHash": "7febb75823b7",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "43f2187145ea",
+        "children": {
+          "_label": {
+            "contentHash": "43f2187145ea",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "34da0e197b6e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "outstanding-issues": {
+        "contentHash": "4e72c2b3f13c",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "10355d2a6e8d",
+        "children": {
+          "_label": {
+            "contentHash": "10355d2a6e8d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "102ac8fed24f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "current-progress": {
+        "contentHash": "ad92ca67a3ba",
+        "anchorHash": "e2fd227870ae",
+        "labelHash": "46814fcae9de",
+        "children": {
+          "_label": {
+            "contentHash": "46814fcae9de",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "3b5c65ff1414",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "fdf6b8b2922f",
+            "anchorHash": "dbd9c3cd11b2"
+          },
+          "prose:3": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "d5c7c6294c3d",
+            "anchorHash": "375512cb1465"
+          },
+          "prose:4": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "27617cc290a7",
+        "anchorHash": "bcd6e8a0c3f1",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "d9cb37d81ac8",
+            "anchorHash": "2eacc297a637"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "d04cf4e5bab7",
+            "anchorHash": "4e4a0d94bd88"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "what-is-finality",
+      "why-aim-for-quicker-finality",
+      "the-decentralization-time-overhead-tradeoff",
+      "routes-to-ssf",
+      "role-of-the-fork-choice-rule",
+      "outstanding-issues",
+      "current-progress",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

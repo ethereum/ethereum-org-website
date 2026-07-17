@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "locale": "zh-tw",
+  "translatedAt": "2026-06-08T10:28:10.763Z",
+  "englishManifestHash": "a3432d6ece40",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-d77120",
+    "COMPONENT-bcb5d2",
+    "COMPONENT-2a5a2b",
+    "LINK-820020",
+    "LINK-deefa0",
+    "LINK-812ec5",
+    "LINK-862ee8",
+    "LINK-7532bc"
+  ],
+  "placeholderMap": {
+    "COMPONENT-bcb5d2": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "/roadmap/pbs",
+        "eventName": "clicked what kinds of censorship does PBS solve?"
+      }
+    },
+    "COMPONENT-2a5a2b": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "/roadmap/pbs",
+        "eventName": "clicked why is it OK to centralize block building?"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-d77120": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=fHDjgFcha0M&list=PLpktWkixc1gUqkyc1-iE6TT0RWQTBJELe&index=3"
+      }
+    },
+    "LINK-820020": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance"
+      }
+    },
+    "LINK-deefa0": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance"
+      }
+    },
+    "LINK-812ec5": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725"
+      }
+    },
+    "LINK-862ee8": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@fradamt/H1TsYRfJc#Secondary-auctions"
+      }
+    },
+    "LINK-7532bc": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@fradamt/forward-inclusion-lists"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T10:28:10.763Z",
+      "status": "success"
+    }
+  }
+}

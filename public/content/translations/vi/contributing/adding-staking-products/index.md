@@ -1,174 +1,174 @@
 ---
-title: "Thêm sản phẩm hoặc dịch vụ Staking - đặt cọc lấy cổ phần"
-description: "Chính sách chúng tôi sử dụng khi thêm các sản phẩm hoặc dịch vụ staking trên ethereum.org"
+title: Thêm các sản phẩm hoặc dịch vụ đặt cọc
+description: Chính sách chúng tôi sử dụng khi thêm các sản phẩm hoặc dịch vụ đặt cọc vào ethereum.org
 lang: vi
 ---
 
-# Thêm sản phẩm hoặc dịch vụ cổ phần {#adding-staking-products-or-services}
+Chúng tôi muốn đảm bảo rằng mình liệt kê các tài nguyên tốt nhất có thể trong khi vẫn giữ cho người dùng được an toàn và tự tin.
 
-Chúng tôi muốn đảm bảo rằng chúng tôi giới thiệu những nguồn tài liệu tốt nhất, đồng thời giúp người dùng an toàn và tự tin.
+Bất kỳ ai cũng có thể tự do đề xuất thêm một sản phẩm hoặc dịch vụ đặt cọc trên ethereum.org. Nếu có sản phẩm hoặc dịch vụ nào mà chúng tôi đã bỏ sót, **[vui lòng đề xuất](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml)!**
 
-Bất kì ai cũng có thể đề xuất thêm sản phẩm hoặc dịch vụ staking lên ethereum.org. Nếu chúng tôi đã bỏ lỡ sản phẩm nào, **[vui lòng đề xuất nó](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml)!**
+Hiện tại, chúng tôi liệt kê các sản phẩm và dịch vụ đặt cọc trên các trang sau:
 
-Hiện tại chúng tôi đang công bố sản phẩm và dịch vụ staking trên các trang sau đây:
+- [Đặt cọc độc lập](/staking/solo/)
+- [Staking như một dịch vụ](/staking/saas/)
+- [Nhóm đặt cọc](/staking/pools/)
 
-- [Cổ phần một mình](/staking/solo/)
-- [Cổ phần như một dịch vụ](/staking/saas/)
-- [Các bể Staking](/staking/pools/)
+Bằng chứng cổ phần (PoS) trên Chuỗi Beacon đã đi vào hoạt động kể từ ngày 1 tháng 12 năm 2020. Mặc dù việc đặt cọc vẫn còn tương đối mới, chúng tôi đã cố gắng tạo ra một khuôn khổ công bằng và minh bạch để xem xét trên ethereum.org nhưng các tiêu chí niêm yết sẽ thay đổi và phát triển theo thời gian, và cuối cùng là theo quyết định của nhóm phát triển trang web ethereum.org.
 
-Cơ chế đồng thuận bằng cổ phần trên Beacon Chain đi vào hoạt động từ ngày 1 tháng 12 năm 2020. Mặc dù staking còn khá mới, chúng tôi đã cố gắng tạo ra một khung cân nhắc đưa lên ethereum.org công bằng và minh bạch. Tuy nhiên, tiêu chí vào danh sách sẽ thay đổi theo thời gian, và phụ thuộc hoàn toàn vào quyết định của đội ngũ website của ethereum.org.
+## Khuôn khổ quyết định {#the-decision-framework}
 
-## Khung đưa ra quyết định {#the-decision-framework}
+Quyết định niêm yết một sản phẩm trên ethereum.org không phụ thuộc vào bất kỳ một yếu tố đơn lẻ nào. Nhiều tiêu chí được xem xét cùng nhau khi quyết định niêm yết một sản phẩm hoặc dịch vụ. Càng đáp ứng nhiều tiêu chí này, khả năng được niêm yết càng cao.
 
-Quyết định đưa sản phẩm lên ethereum.org không phụ thuộc vào chỉ một yếu tố. Nhiều tiêu chí được cân nhắc trước khi quyết định đưa sản phẩm hoặc dịch vụ lên trang web. Đạt được càng nhiều tiêu chí, càng có khả năng được đưa lên trang.
+**Đầu tiên, đó là danh mục sản phẩm hoặc dịch vụ nào?**
 
-**Đầu tiên, sản phẩm hoặc dịch vụ thuộc nhóm nào sau đây?**
+- Công cụ nút hoặc máy khách
+- Quản lý khóa
+- Staking như một dịch vụ (SaaS)
+- Nhóm đặt cọc
 
-- Nút hoặc bộ công cụ ứng dụng
-- Quản lý khóa riêng
-- Cổ phần như một dịch vụ (SaaS)
-- Bể đặt cược
+Hiện tại, chúng tôi chỉ niêm yết các sản phẩm hoặc dịch vụ trong các danh mục này.
 
-Hiện tại, chúng ta chỉ đưa thông tin sản phẩm hoặc dịch vụ trong các nhóm trên lên web.
+### Tiêu chí để đưa vào {#criteria-for-inclusion}
 
-### Tiêu chí xét duyệt {#criteria-for-inclusion}
+Các đề xuất sản phẩm hoặc dịch vụ đặt cọc sẽ được đánh giá theo các tiêu chí sau:
 
-Sản phẩm hoặch dịch vụ staking nộp và sẽ được đánh giá theo các tiêu chí sau:
+**Dự án hoặc dịch vụ được ra mắt khi nào?**
 
-**Ngày ra mắt dự án/ sản phẩm là khi nào?**
+- Có bằng chứng về thời điểm sản phẩm hoặc dịch vụ được cung cấp cho công chúng không?
+- Điều này được sử dụng để xác định điểm "đã được thử nghiệm thực tế" của sản phẩm.
 
-- Có bằng chứng chứng minh ngày ra mắt dự án/sản phẩm với công chúng?
-- Điều này giúp xác định điểm số thực chiến của sản phẩm.
+**Dự án có đang được duy trì tích cực không?**
 
-**Dự án có được duy trì, cập nhật thường xuyên không?**
+- Có một nhóm tích cực phát triển dự án không? Những ai tham gia?
+- Chỉ những sản phẩm được duy trì tích cực mới được xem xét.
 
-- Có đội ngũ phá triển dự án chuyên cần hay không? Những ai tham gia vào việc quản trị Ethereum?
-- Chỉ cần nhắc những sản phẩm được bảo trì, cập nhật thường xuyên.
+**Sản phẩm hoặc dịch vụ có không cần đến các bên trung gian/con người đáng tin cậy không?**
 
-**Sản phẩm hoặc dịch vụ không phụ thuộc vào người trung gian đáng tin cậy?**
+- Những bước nào trong hành trình của người dùng yêu cầu phải tin tưởng con người để giữ khóa cho tiền của họ, hoặc để phân phối phần thưởng một cách hợp lý?
+- Điều này được sử dụng để xác định điểm "không cần tin cậy" của sản phẩm hoặc dịch vụ.
 
-- Hành trình người dùng có cần đến sự can thiệp của những người đáng tin cậy để sở hữu chìa khoá truy cập tài sản của họ, hay là phần thưởng sẽ được phân chia hợp lí?
-- Điều này giúp xác định điểm số "không dựa niềm tin vào bên thứ ba" của sản phẩm hoặc dịch vụ.
+**Dự án có cung cấp thông tin chính xác và đáng tin cậy không?**
 
-**Dựu án có cung cấp thông tin chính xác và đáng tin cậy?**
-
-- Điều quan trọng là tính năng web của dự án đuợc cập nhất mới nhất, chính xác, và không có những thông gây hiểu lầm, đặc biệt là nếu liên quan đến giao thức Ethereum hoặc các công nghệ liên quan.
-- Những dự án nộp thông tin sai lệch, cũ, hoặc nhận định dễ gây hiểu nhầm về Ethereum hoặc các chủ đề liên quan sẽ không được đưa lên hoặc bị gỡ bỏ nếu như đã được duyệt lên web trước đó.
+- Điều quan trọng là trang web của sản phẩm phải có thông tin cập nhật, chính xác và không gây hiểu lầm, đặc biệt nếu nó liên quan đến Giao thức Ethereum hoặc các công nghệ liên quan khác.
+- Các đề xuất chứa thông tin sai lệch, chi tiết lỗi thời hoặc các tuyên bố có khả năng gây hiểu lầm về Ethereum hoặc các chủ đề liên quan khác sẽ không được niêm yết hoặc sẽ bị xóa nếu đã được niêm yết.
 
 **Những nền tảng nào được hỗ trợ?**
 
-- tức là, Linux, macOS, Windows, iOS, Android
+- ví dụ: Linux, macOS, Windows, iOS, Android
 
 #### Phần mềm và hợp đồng thông minh {#software-and-smart-contracts}
 
-Đối với bất kì phần mềm hoặc hợp đồng thông minh có liên quan:
+Đối với bất kỳ phần mềm tùy chỉnh hoặc hợp đồng thông minh nào có liên quan:
 
-**Toàn bộ có phải là mã nguồn mở?**
+**Mọi thứ có phải là mã nguồn mở không?**
 
-- Các dự án mã nguồn mở cần công khai kho lưu trữ mã nguồn có thể truy cập
-- Điều này giúp xác định điểm số "mã nguồn mở" của sản phẩm.
+- Các dự án mã nguồn mở nên có một kho lưu trữ mã nguồn công khai
+- Điều này được sử dụng để xác định điểm "mã nguồn mở" của sản phẩm.
 
-**Sản phẩm đã kết thúc giai đoạn phát triển _beta_ chưa?**
+**Sản phẩm đã ra khỏi giai đoạn phát triển _beta_ chưa?**
 
-- Sản phẩm đang ở giai đoạn nào trong vòng phát triển sản phẩm?
-- Các sản phẩm đang ở trong giai đoạn beta sẽ không được cân nhắc đưa lên ethereum.org
+- Sản phẩm đang ở đâu trong chu kỳ phát triển của nó?
+- Các sản phẩm trong giai đoạn beta không được xem xét để đưa vào ethereum.org
 
-**Phần mềm đã được kiểm toán độc lập về bảo mật?**
+**Phần mềm đã trải qua một cuộc kiểm toán bảo mật bên ngoài chưa?**
 
-- Nếu chưa, có kế hoạch thực hiện kiểm toán độc lập không?
-- Điều này giúp xác định điểm số "kiểm toán bảo mật" của sản phẩm.
+- Nếu chưa, có kế hoạch tiến hành kiểm toán bên ngoài không?
+- Điều này được sử dụng để xác định điểm "đã kiểm toán" của sản phẩm.
 
-**Dự án có chương trình trả thưởng cho người săn lỗi bảo mật?**
+**Dự án có chương trình tiền thưởng tìm lỗi (bug bounty) không?**
 
-- Nếu không, có kế hoạch tạo chương trình trả thưởng cho người săn lỗi bảo mật?
-- Điều này giúp xác định điểm số "săn lỗi nhận thưởng" của dự án.
+- Nếu chưa, có kế hoạch tạo một chương trình tiền thưởng tìm lỗi bảo mật không?
+- Điều này được sử dụng để xác định điểm "tiền thưởng tìm lỗi" của sản phẩm.
 
-#### Bộ công cụ cho nút hoặc máy khách {#node-or-client-tooling}
+#### Công cụ nút hoặc máy khách {#node-or-client-tooling}
 
-Đối với sản phẩm phần mềm liên quan đến nút và hệ thống thiết lập, quản lý và nâng cấp ứng dụng nền tảng:
+Đối với các sản phẩm phần mềm liên quan đến việc thiết lập, quản lý hoặc di chuyển nút hoặc máy khách:
 
-**Những máy khách lớp đồng thuận nào (tức là Lighthouse, Teku, Nimbus, Prysm, Grandine) được hỗ trợ?**
+**Những máy khách lớp đồng thuận nào (ví dụ: Lighthouse, Teku, Nimbus, Prysm, Grandine) được hỗ trợ?**
 
-- Các ứng dụng nào được hỗ trợ? Người dùng có thể lựa chọn?
-- Điều này giúp xác định điểm số "đa-ứng dụng nền tảng" của sản phẩm.
+- Những máy khách nào được hỗ trợ? Người dùng có thể chọn không?
+- Điều này được sử dụng để xác định điểm "đa máy khách" của sản phẩm.
 
-#### Cổ phần dưới dạng dịch vụ {#staking-as-a-service}
+#### Staking như một dịch vụ {#staking-as-a-service}
 
-Đối với danh sách [cổ phần dưới dạng dịch vụ](/staking/saas/) (tức là vận hành nút được ủy quyền):
+Đối với [các danh sách staking như một dịch vụ](/staking/saas/) (ví dụ: hoạt động nút được ủy quyền):
 
-**Sử dụng dịch vụ phải chi trả những chi phí nào?**
+**Các khoản phí liên quan đến việc sử dụng dịch vụ là gì?**
 
-- Cơ cấu phí là gì, ví dụ: có phí dịch vụ hàng tháng không?
-- Có yêu cầu bổ sung nào cho staking hay không?
+- Cấu trúc phí là gì, ví dụ: có phí hàng tháng cho dịch vụ không?
+- Có bất kỳ yêu cầu đặt cọc bổ sung nào không?
 
-**Người dùng có cần phải đăng kí tài khoản không?**
+**Người dùng có được yêu cầu đăng ký Tài khoản không?**
 
-- Một người có thể sử dụng dịch vụ mà không cần quyền cho phép hay xác minh danh tính hay không?
-- Điều này được dùng để quyết định điểm số "không cần quyền hạn" của sản phẩm.
+- Có ai đó có thể sử dụng dịch vụ mà không cần cấp phép hoặc KYC không?
+- Điều này được sử dụng để xác định điểm "không cần cấp phép" của sản phẩm.
 
-**Ai nắm giữ khoá ký số truy cập, và khoá ký rút tiền?**
+**Ai giữ các khóa cho việc ký, và khóa rút tiền?**
 
-- Người dùng có thể truy cập những khoá ký số nào? Dịch vụ có thể truy cập những khoá ký số nào?
-- Điều này giúp xác định điểm số "không dựa niềm tin vào bên thứ ba" của sản phẩm hoặc dịch vụ.
+- Người dùng duy trì quyền truy cập vào những khóa nào? Dịch vụ có quyền truy cập vào những khóa nào?
+- Điều này được sử dụng để xác định điểm "không cần tin cậy" của sản phẩm.
 
-**Sự đa dạng ứng dụng nền tảng chạy nút như thế nào?**
+**Sự đa dạng máy khách của các nút đang được vận hành là gì?**
 
-- Khoá ký số của trình xác thực được chạy bởi phần lớn mạng lưới ứng dụng đồng thuận (CL) chiếm bao nhiêu phần trăm?
-- Như lần điều chỉnh trước đây, Prysm là mạng lưới ứng dụng đồng thuận được chạy bởi phần lớn người xử lý nút, nguy hiểm đối với mạng lưới. Nếu bất kì ứng dụng nền tảng nào được sử dụng bởi 33% của toàn bộ mạng lưới, chúng tôi sẽ yêu cầu dữ liệu liên quan đến việc sử dụng.
-- Điều này giúp xác định điểm số "ứng dụng nền tảng đa dạng" của sản phẩm.
+- Tỷ lệ phần trăm các khóa trình xác thực đang được chạy bởi một máy khách lớp đồng thuận (CL) chiếm đa số là bao nhiêu?
+- Tính đến lần chỉnh sửa cuối cùng, Prysm là máy khách lớp đồng thuận đang được chạy bởi phần lớn các nhà điều hành nút, điều này rất nguy hiểm cho mạng lưới. Nếu bất kỳ máy khách CL nào hiện đang được sử dụng bởi hơn 33% mạng lưới, chúng tôi yêu cầu dữ liệu liên quan đến việc sử dụng nó.
+- Điều này được sử dụng để xác định điểm "đa dạng máy khách" của sản phẩm.
 
-#### Bể Staking {#staking-pool}
+#### Nhóm đặt cọc {#staking-pool}
 
-Đối với [các dịch vụ cổ phần gộp chung](/staking/pools/):
+Đối với [các dịch vụ đặt cọc chung](/staking/pools/):
 
-**Số tiền ETH tối thiểu để được phép stake?**
+**Số lượng ETH tối thiểu được yêu cầu để đặt cọc là bao nhiêu?**
 
-- ví dụ: 0,01 ETH
+- ví dụ: 0.01 ETH
 
-**Các chi phí và yêu cầu liên quan khi stake?**
+**Các khoản phí hoặc yêu cầu đặt cọc liên quan là gì?**
 
-- Phí chiếm bao nhiêu phần trăm phần thưởng?
-- Có yêu cầu bổ sung nào cho staking hay không?
+- Tỷ lệ phần trăm phần thưởng bị trừ đi làm phí là bao nhiêu?
+- Có bất kỳ yêu cầu đặt cọc bổ sung nào không?
 
-**Có token cung cấp thanh khoản hay không?**
+**Có token Thanh khoản không?**
 
-- Các token có liên đới? Cách chúng hoạt động như thế nào? Địa chỉ hợp đồng của các token đó?
-- Điều này giúp xác định điểm số "token cung cấp thanh khoản" của sản phẩm.
+- Các token liên quan là gì? Chúng hoạt động như thế nào? Các địa chỉ hợp đồng là gì?
+- Điều này được sử dụng để xác định điểm "token Thanh khoản" của sản phẩm.
 
-**Người dùng có thể trở thành người vận hành nút được không?**
+**Người dùng có thể tham gia với tư cách là nhà điều hành nút không?**
 
-- Để chạy ứng dụng nền tảng trình xác minh sử dụng nguồn vốn được góp chung thì có những yêu cầu gì?
-- Việc này có yêu cầu sự cho phép từ cá nhân, doanh nghiệp hay tổ chức tự trị phi tập trung không?
-- Điều này giúp xác định điểm số "nút không cần cấp phép" của sản phẩm.
+- Cần những gì để chạy các máy khách trình xác thực bằng cách sử dụng các khoản tiền chung?
+- Điều này có yêu cầu sự cho phép từ một cá nhân, công ty hoặc DAO không?
+- Điều này được sử dụng để xác định điểm "các nút không cần cấp phép" của sản phẩm.
 
-**Các ứng dụng nền tảng vận hành nút trong pool có đa dạng?**
+**Sự đa dạng máy khách của các nhà điều hành nút trong nhóm là gì?**
 
-- Khoá ký số của trình xác thực được chạy bởi phần lớn mạng lưới ứng dụng đồng thuận (CL) chiếm bao nhiêu phần trăm?
-- Như lần điều chỉnh trước đây, Prysm là mạng lưới ứng dụng đồng thuận được chạy bởi phần lớn người xử lý nút, nguy hiểm đối với mạng lưới. Nếu bất kì ứng dụng nền tảng nào được sử dụng bởi 33% của toàn bộ mạng lưới, chúng tôi sẽ yêu cầu dữ liệu liên quan đến việc sử dụng.
-- Điều này giúp xác định điểm số "ứng dụng nền tảng đa dạng" của sản phẩm.
+- Tỷ lệ phần trăm các nhà điều hành nút đang chạy một máy khách lớp đồng thuận (CL) chiếm đa số là bao nhiêu?
+- Tính đến lần chỉnh sửa cuối cùng, Prysm là máy khách lớp đồng thuận đang được chạy bởi phần lớn các nhà điều hành nút, điều này rất nguy hiểm cho mạng lưới. Nếu bất kỳ máy khách CL nào hiện đang được sử dụng bởi hơn 33% mạng lưới, chúng tôi yêu cầu dữ liệu liên quan đến việc sử dụng nó.
+- Điều này được sử dụng để xác định điểm "đa dạng máy khách" của sản phẩm.
 
-### Các tiêu chí khác: các điểm cộng {#other-criteria}
+### Các tiêu chí khác: những điểm cộng {#other-criteria}
 
 **Những giao diện người dùng nào được hỗ trợ?**
 
-- tức là, ứng dụng trình duyệt, ứng dụng máy tính để bàn, ứng dụng di động, giao diện dòng lệnh
+- ví dụ: Ứng dụng trình duyệt, ứng dụng máy tính để bàn, ứng dụng di động, CLI
 
-**Đối với công cụ chạy nút, phần mềm có cho phép thay dổi ứng dụng nền tảng dễ dàng?**
+**Đối với công cụ nút, phần mềm có cung cấp một cách dễ dàng để chuyển đổi giữa các máy khách không?**
 
-- Người dùng có thể thay đổi ứng dụng sử dụng công cụ một cách dễ dàng và an toàn không?
+- Người dùng có thể thay đổi máy khách một cách dễ dàng và an toàn bằng công cụ này không?
 
-**Đối với Phần mềm dưới dạng dịch vụ, dịch vụ đang vận hành bao nhiều trình xác minh?**
+**Đối với SaaS, hiện có bao nhiêu trình xác thực đang được vận hành bởi dịch vụ?**
 
-- Điều này giúp chúng tôi phần nào hiểu rõ phạm vi tiếp cận của các dịch vụ.
+- Điều này cho chúng tôi biết về mức độ tiếp cận của dịch vụ của bạn cho đến nay.
 
 ## Cách chúng tôi hiển thị kết quả {#product-ordering}
 
-[Các tiêu chí xét duyệt](#criteria-for-inclusion) ở trên được sử dụng để tính điểm tích lũy cho mỗi sản phẩm hoặc dịch vụ. Quá trình này là phương tiện chọn lọc và giới thiệu những sản phẩm đạt tiêu chí dựa trên số liệu khách quan. Càng nhiều bằng chứng bổ sung cho các tiêu chí, càng giúp sản phẩm đạt được vị trí, với những sản phẩm đạt điểm số ngang nhau thì sẽ được sắp xếp ngẫu nhiên ở mỗi lượt tải trang.
+[Các tiêu chí để đưa vào](#criteria-for-inclusion) ở trên được sử dụng để tính điểm tích lũy cho mỗi sản phẩm hoặc dịch vụ. Điều này được sử dụng như một phương tiện để sắp xếp và giới thiệu các sản phẩm đáp ứng các tiêu chí khách quan nhất định. Càng cung cấp nhiều bằng chứng cho các tiêu chí, sản phẩm sẽ được sắp xếp càng cao, với các trường hợp bằng điểm sẽ được sắp xếp ngẫu nhiên khi tải trang.
 
-Logic mã và trọng số cho các tiêu chí này hiện có trong [thành phần JavaScript này](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) trong repo của chúng tôi.
+Logic mã và trọng số cho các tiêu chí này hiện được chứa trong [thành phần JavaScript này](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid/index.tsx#L350) trong kho lưu trữ của chúng tôi.
 
 ## Thêm sản phẩm hoặc dịch vụ của bạn {#add-product}
 
-Nếu bạn muốn thêm sản phẩm Staking vào ethereum.org, hãy tạo góp ý trên Github.
+Nếu bạn muốn thêm một sản phẩm hoặc dịch vụ đặt cọc vào ethereum.org, hãy tạo một vấn đề trên GitHub.
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">Tạo góp ý</ButtonLink>
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
+  Tạo một vấn đề
+</ButtonLink>

@@ -1,62 +1,61 @@
 ---
-title: "クイズの追加"
-description: "ethereum.orgへのクイズの掲載ポリシー"
+title: クイズ
+metaTitle: クイズの追加
+description: ethereum.orgにクイズを追加する際のポリシー
 lang: ja
 ---
 
-# クイズ {#quizzes}
+クイズは、ユーザーが読んだばかりのページの内容を理解できたかどうかをテストする機会です。質問はページで提供されている内容のみに基づいている必要があり、ページに記載されていない情報について尋ねるべきではありません。
 
-クイズとは、ユーザーが今読んだページの内容を理解したかどうかを自分でテストして確かめる機会です。 問題はそのページで提供した内容をベースとするものに限られます。そのページで扱っていない情報を質問すべきではありません。
+質問は次のように構成されています。質問文、1つの正解とその理由の説明、3つの不正解とそれぞれの理由の説明です。
 
-問題は次のように構成されています。 問題のプロンプト、1つの正解と正しい理由の説明、3つの不正解と間違っている理由の説明。
+現在のクイズの例は、以下で確認できます。
 
-現在のクイズ例は、以下にあります。
-
-- [レイヤー2](/layer-2)
+- [レイヤー2 (L2)](/layer-2)
 - [NFT](/nft/)
-- [イーサリアムとは](/what-is-ethereum/)
-- [ETHとは](/what-is-ether/)
+- [イーサリアムとは？](/what-is-ethereum/)
+- [ETHとは？](/what-is-ether/)
 
-## 学習クイズの追加
+## 学習クイズの追加 {#adding-a-learn-quiz}
 
-学習クイズが作成されていないページがある場合は、[issueを開いて](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)ください。
+学習クイズがまだ作成されていないページがある場合は、そのための[Issueを作成](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)してください。
 
-次の情報を提供してください。
-
-- クイズを追加したいページ
-- 次の情報を含む5つの問題
-  - 問題のベースとなっているページのセクション
-  - 問題のプロンプト
-  - 1つの正解と正しい理由の説明
-  - 3つの不正解と、各解答が間違っている理由の説明
-
-## クイズの追加
-
-クイズの問題バンクに追加したい質問がある場合は、[issueを開いて](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)、以下の情報を提供してください。
+以下の情報を提供してください。
 
 - クイズを追加したいページ
-- 各問題について、以下の情報を入力してください。
-  - 問題のベースとなっているページのセクション
-  - 問題のプロンプト
-  - 1つの正解と正しい理由の説明
-  - 3つの不正解と、各解答が間違っている理由の説明
+- 以下の情報を含む5つの質問:
+  - 質問の基となるページのセクション
+  - 質問文
+  - 1つの正解とその理由の説明
+  - 3つの不正解とそれぞれの理由の説明
 
-## クイズの更新
+## クイズの質問の追加 {#adding-a-quiz-question}
 
-クイズの問題バンクにある質問を更新したい場合は、[issueを開いて](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)、以下の情報を提供してください。
+クイズの質問バンクに追加したい質問がある場合は、[Issueを作成](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)し、以下の情報を提供してください。
 
-- クイズを更新したいページ
-- 各問題を更新するために次の情報を入力してください。
-  - 問題のベースとなっているページのセクション
-  - 更新したい問題のプロンプト
-  - 更新された問題のプロンプト
-  - 1つの正解と正しい理由の説明
-  - 3つの不正解と、各解答が間違っている理由の説明
+- クイズの質問を追加したいページ
+- 各質問について、以下の情報を提供してください:
+  - 質問の基となるページのセクション
+  - 質問文
+  - 1つの正解とその理由の説明
+  - 3つの不正解とそれぞれの理由の説明
 
-## クイズの削除
+## クイズの質問の更新 {#updating-a-quiz-question}
 
-質問のコンテンツがページになく、削除が必要な場合は、質問を削除するために[issueを開いて](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)、以下の情報を提供してください。
+クイズの質問バンクで更新したい質問がある場合は、[Issueを作成](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)し、以下の情報を提供してください。
 
-- クイズを削除したいページ
-- 削除したい問題
-- 必要ならば問題を削除する理由の説明
+- クイズの質問を更新したいページ
+- 更新する各質問について、以下の情報を提供してください:
+  - 質問の基となるページのセクション
+  - 更新したい質問の質問文
+  - 更新後の質問文
+  - 1つの正解とその理由の説明
+  - 3つの不正解とそれぞれの理由の説明
+
+## クイズの質問の削除 {#removing-a-quiz-question}
+
+質問の対象となるコンテンツがページに存在しなくなり、削除する必要がある場合は、質問を削除するための[Issueを作成](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)し、以下の情報を提供してください。
+
+- クイズの質問を削除したいページ
+- 削除したい質問
+- 質問を削除すべき理由の説明（必要な場合）

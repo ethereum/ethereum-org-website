@@ -1,0 +1,22 @@
+{
+  "page-title": "اوپن سورس لائسنسنگ",
+  "page-description": "اوپن سورس لائسنسز، تعمیل کے تقاضوں، اور صحیح لائسنس کا انتخاب کرنے کا طریقہ دریافت کریں۔",
+  "hero-cta-primary": "شروع کریں",
+  "hero-cta-secondary": "لائسنس کا موازنہ دیکھیں",
+  "stat-label-projects": "ٹریک کیے گئے اوپن سورس پروجیکٹس",
+  "stat-label-contributors": "دنیا بھر میں فعال حصہ دار",
+  "banner-text": "اوپن سورس میں نئے ہیں؟ ہماری <a href=\"/contributing/getting-started/\">شراکت کی گائیڈ</a> کے ساتھ <strong>شروع کریں</strong>۔",
+  "footer-note": "لائسنس کا ڈیٹا <a href=\"https://spdx.org/licenses/?sortBy=name\" target=\"_blank\">SPDX</a> سے حاصل کیا گیا ہے۔ تعمیل کے ٹولز <a href=\"https://fossa.com/\" target=\"_blank\">FOSSA</a> کے ذریعے فراہم کیے گئے ہیں۔",
+  "filter-label": "لائسنس کی قسم کے لحاظ سے فلٹر کریں",
+  "welcome-user": "خوش آمدید، {displayName}!",
+  "project-count": "{total, plural, =0 {کوئی پروجیکٹ نہیں ملا} one {# پروجیکٹ ملا} other {# پروجیکٹس ملے}}",
+  "contribution-status": "{status, select, pending {آپ کی شراکت کا جائزہ زیر التوا ہے} approved {آپ کی شراکت منظور کر لی گئی ہے} rejected {آپ کی شراکت میں ترامیم کی ضرورت ہے} other {نامعلوم حیثیت}}",
+  "nested": {
+    "section-title": "اضافی وسائل",
+    "section-description": "اوپن سورس لائسنسنگ اور تعمیل کے بارے میں مزید دریافت کریں۔",
+    "link-text": "تمام وسائل براؤز کریں"
+  },
+  "multi-link": "<a href=\"https://opensource.org/osd\">اوپن سورس کی تعریف</a> پڑھیں، <a href=\"https://choosealicense.com/\">لائسنس کے انتخاب کنندہ</a> کا جائزہ لیں، اور <a href=\"https://spdx.org/licenses/\">SPDX شناخت کنندگان</a> چیک کریں۔",
+  "markdown-description": "## فوری حوالہ\n\n- **MIT**: سب سے زیادہ اجازت دینے والا، کم از کم پابندیاں\n- **<span dir=\"ltr\">Apache-2.0</span>**: پیٹنٹ گرانٹ کے ساتھ اجازت دینے والا\n- **<span dir=\"ltr\">GPL-3.0</span>**: مضبوط کاپی لیفٹ، مشتقات کا GPL ہونا لازمی ہے\n\nمزید تفصیلات کے لیے، [مکمل موازنہ](/open-source/#comparison-table) دیکھیں۔",
+  "new-key": "یہ ورژن <span dir=\"ltr\">B</span> میں شامل کی گئی ایک بالکل نئی ترجمہ شدہ سٹرنگ ہے۔"
+}

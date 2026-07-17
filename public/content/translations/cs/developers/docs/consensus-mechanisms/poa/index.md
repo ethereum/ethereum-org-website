@@ -1,80 +1,79 @@
 ---
-title: Proof-of-authority (PoA)
-description: "Vysvětlení konsenzuálního protokolu proof-of-authority a jeho role v ekosystému blockchainu."
+title: "Důkaz autority (PoA)"
+description: "Vysvětlení protokolu konsensu důkazu autority a jeho role v ekosystému blockchainu."
 lang: cs
 ---
 
-**Proof-of-authority (PoA)** je konsenzuální algoritmus založený na reputaci, který je upravenou verzí [důkazu podílem](/developers/docs/consensus-mechanisms/pos/). Většinou se používá na privátních řetězcích, testnetech a lokálních vývojových sítích. PoA je konsenzuální algoritmus založený na reputaci, který k vytváření bloků vyžaduje důvěru v sadu autorizovaných podepisovatelů, a to na rozdíl od mechanismu PoS založeného na podílu.
+**Důkaz autority (PoA)** je algoritmus konsensu založený na reputaci, který je upravenou verzí [důkazu podílem (PoS)](/developers/docs/consensus-mechanisms/pos/). Využívají ho převážně soukromé řetězce, testnety a lokální vývojové sítě. PoA je algoritmus konsensu založený na reputaci, který vyžaduje důvěru ve skupinu autorizovaných podepisovatelů, kteří produkují bloky, na rozdíl od mechanismu založeného na staku v PoS.
 
 ## Předpoklady {#prerequisites}
 
-Abyste lépe porozuměli této stránce, doporučujeme vám si nejprve přečíst o [transakcích](/developers/docs/transactions/), [blocích](/developers/docs/blocks/) a [mechanismech konsenzu](/developers/docs/consensus-mechanisms/).
+Pro lepší pochopení této stránky doporučujeme nejprve si přečíst o [transakcích](/developers/docs/transactions/), [blocích](/developers/docs/blocks/) a [mechanismech konsensu](/developers/docs/consensus-mechanisms/).
 
-## Co je to proof-of-authority (PoA)? {#what-is-poa}
+## Co je důkaz autority (PoA)? {#what-is-poa}
 
-Proof-of-authority je upravená verze **[důkazu podílem](/developers/docs/consensus-mechanisms/pos/) (PoS)**, což je konsenzuální algoritmus založený na reputaci namísto mechanismu PoS založeného na podílu. Tento termín poprvé představil v roce 2017 Gavin Wood a tento konsenzuální algoritmus se většinou používá na privátních řetězcích, testnetech a lokálních vývojových sítích, jelikož překonává potřebu vysoce kvalitních zdrojů jako PoW a řeší problémy se škálovatelností u PoS tím, že pouze malá podmnožina uzlů ukládá blockchain a vytváří bloky.
+Důkaz autority je upravená verze **[důkazu podílem](/developers/docs/consensus-mechanisms/pos/) (PoS)**, což je algoritmus konsensu založený na reputaci namísto mechanismu založeného na staku v PoS. Tento termín poprvé představil v roce 2017 Gavin Wood a tento algoritmus konsensu se používá převážně u soukromých řetězců, testnetů a lokálních vývojových sítí, protože překonává potřebu vysoce výkonných zdrojů, jako je tomu u důkazu prací (PoW), a řeší problémy se škálovatelností u PoS tím, že blockchain ukládá a bloky produkuje pouze malá podmnožina uzlů.
 
-Proof-of-authority vyžaduje důvěru v sadu autorizovaných podepisovatelů, kteří jsou definováni v [genesis bloku](/glossary/#genesis-block). Ve většině současných implementací si všichni autorizovaní podepisovatelé ponechávají stejnou moc a oprávnění při určování konsensu řetězce. Myšlenka stakování reputace je taková, že každý autorizovaný validátor je všem dobře známý, například prostřednictvím ověření klienta (KYC) nebo tím, že jediným validátorem je známá organizace. Tímto způsobem je v případě, že validátor udělá něco špatně, jeho identita známa.
+Důkaz autority vyžaduje důvěru ve skupinu autorizovaných podepisovatelů, kteří jsou nastaveni v [genesis bloku](/glossary/#genesis-block). Ve většině současných implementací si všichni autorizovaní podepisovatelé zachovávají stejnou moc a privilegia při určování konsensu řetězce. Myšlenka stakování reputace spočívá v tom, že každý autorizovaný validátor je všem dobře známý prostřednictvím procesů, jako je KYC (poznej svého klienta), nebo tím, že jediným validátorem je známá organizace – tímto způsobem je v případě, že validátor udělá něco špatně, známa jeho identita.
 
-Existuje několik implementací PoA, ale standardní implementací Etherea je **clique**, která implementuje [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique je standard přívětivý pro vývojáře a snadno se implementuje, přičemž podporuje všechny typy synchronizace klientů. Mezi další implementace patří [IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) a [Aura](https://openethereum.github.io/Chain-specification).
+Existuje několik implementací PoA, ale standardní implementací pro Ethereum je **clique**, která implementuje [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique je standard přívětivý pro vývojáře a snadno implementovatelný, který podporuje všechny typy synchronizace klientů. Mezi další implementace patří [IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) a [Aura](https://openethereum.github.io/Chain-specification).
 
 ## Jak to funguje {#how-it-works}
 
-V PoA je k vytváření nových bloků vybrána sada autorizovaných podepisovatelů. Podepisovatelé jsou vybíráni na základě své reputace a jsou jediní, kdo smí vytvářet nové bloky. Podepisovatelé jsou vybíráni cyklicky (způsobem round-robin) a každý podepisovatel smí vytvořit blok v určitém časovém rámci. Doba vytváření bloku je pevně daná a podepisovatelé musí vytvořit blok v tomto časovém rámci.
+V PoA je vybrána skupina autorizovaných podepisovatelů, kteří vytvářejí nové bloky. Podepisovatelé jsou vybíráni na základě své reputace a jsou jediní, kdo smí vytvářet nové bloky. Podepisovatelé se střídají systémem round-robin a každý podepisovatel smí vytvořit blok v určitém časovém rámci. Čas vytvoření bloku je pevně daný a podepisovatelé musí vytvořit blok v tomto časovém rámci.
 
-Reputace v tomto kontextu není kvantifikovatelná veličina, ale spíše reputace známých korporací, jako je Microsoft nebo Google. Z toho důvodu výběr důvěryhodných podepisovatelů není algoritmický, ale je to normální lidský akt _důvěry_. Když například entita jako Microsoft vytvoří privátní síť PoA pro stovky nebo tisíce startupů a sama se ujme role jediného důvěryhodného podepisovatele s možností v budoucnu přidat další známé podepisovatele, jako je Google, startupy by bezpochyby důvěřovaly společnosti Microsoft, že bude vždy jednat čestně, a síť by používaly. Tím se řeší nutnost stakovat v různých malých/soukromých sítích, které byly vytvořeny pro různé účely, aby zůstaly decentralizované a funkční, a zároveň se eliminuje potřeba těžařů, což spotřebovává velké množství energie a zdrojů. Některé privátní sítě, jako například VeChain, používají standard PoA v jeho původní podobě a některé ho upravují, jako například Binance, která používá [PoSA](https://academy.binance.com/en/glossary/proof-of-staked-authority-posa), což je vlastní upravená verze PoA a PoS.
+Reputace v tomto kontextu není kvantifikovaná veličina, ale spíše jde o reputaci známých korporací, jako jsou Microsoft a Google. Způsob výběru důvěryhodných podepisovatelů tedy není algoritmický, ale jde o běžný lidský akt _důvěry_. Pokud například subjekt jako Microsoft vytvoří soukromou síť PoA mezi stovkami nebo tisíci startupů a převezme roli jediného důvěryhodného podepisovatele s možností v budoucnu přidat další známé podepisovatele, jako je Google, startupy by bezpochyby důvěřovaly Microsoftu, že bude vždy jednat čestně, a síť by využívaly. Tím se řeší nutnost stakovat v různých malých/soukromých sítích, které byly vytvořeny pro různé účely, aby zůstaly decentralizované a funkční, a také potřeba těžařů, což spotřebovává spoustu energie a zdrojů. Některé soukromé sítě používají standard PoA v jeho původní podobě, jako například VeChain, a některé si ho upravují, jako například Binance, která používá [PoSA](https://academy.binance.com/en/glossary/proof-of-staked-authority-posa), což je vlastní upravená verze PoA a PoS.
 
-Hlasovací proces provádějí sami podepisovatelé. Každý podepisovatel hlasuje pro přidání nebo odebrání podepisovatele ve svém bloku, když vytváří nový blok. Uzly sečtou hlasy a podepisovatelé jsou přidáni nebo odebráni na základě toho, zda hlasy dosáhnou určitého prahu `SIGNER_LIMIT`.
+Proces hlasování provádějí sami podepisovatelé. Každý podepisovatel při vytváření nového bloku hlasuje pro přidání nebo odebrání podepisovatele ve svém bloku. Hlasy jsou sčítány uzly a podepisovatelé jsou přidáváni nebo odebíráni na základě toho, zda hlasy dosáhnou určité hranice `SIGNER_LIMIT`.
 
-Může nastat situace, kdy dojde k malým větvím. Obtížnost bloku závisí na tom, zda byl blok podepsán v pořadí, nebo mimo pořadí. Bloky „v pořadí“ mají obtížnost 2 a bloky „mimo pořadí“ mají obtížnost 1. V případě malých větví získá největší celkovou obtížnost a vyhraje ten řetězec, ve kterém většina podepisovatelů potvrzuje bloky „v pořadí“.
+Může nastat situace, kdy dojde k malým forkům; obtížnost bloku závisí na tom, zda byl blok podepsán v pořadí (in turn) nebo mimo pořadí (out of turn). Bloky „v pořadí“ mají obtížnost 2 a bloky „mimo pořadí“ mají obtížnost 1. V případě malých forků získá největší obtížnost a vyhraje ten řetězec, ve kterém většina podepisovatelů pečetí bloky „v pořadí“.
 
-## Vektory útoku {#attack-vectors}
+## Vektory útoků {#attack-vectors}
 
 ### Zlomyslní podepisovatelé {#malicious-signers}
 
-Do seznamu podepisovatelů by mohl být přidán zlomyslný uživatel nebo by mohl být kompromitován podpisový klíč/stroj. V takovém scénáři se protokol musí být schopen bránit proti reorganizacím a spamování. Navrhovaným řešením je, že na seznamu N autorizovaných podepisovatelů může každý podepisovatel razit pouze 1 blok z každých K. To zajišťuje omezení škod a zbytek validátorů může zlomyslného uživatele odhlasovat.
+Na seznam podepisovatelů by mohl být přidán zlomyslný uživatel, nebo by mohl být kompromitován podepisovací klíč či stroj. V takovém scénáři se protokol musí umět bránit proti reorganizacím a spamu. Navrhovaným řešením je, že při seznamu N autorizovaných podepisovatelů smí každý podepisovatel razit pouze 1 blok z každých K bloků. Tím je zajištěno, že škody jsou omezené a zbývající validátoři mohou zlomyslného uživatele odhlasovat pryč.
 
 ### Cenzura {#censorship-attack}
 
-Dalším zajímavým vektorem útoku je, když se podepisovatel (nebo skupina podepisovatelů) pokusí cenzurovat bloky, které hlasují o jejich odstranění ze seznamu autorizací. Aby se tomu předešlo, je povolená frekvence ražení bloků podepisovateli omezena na 1 z N/2. To zajišťuje, že zlomyslní podepisovatelé musí ovládat alespoň 51 % podepisovacích účtů. V takovém případě by se fakticky stali novým zdrojem pravdy pro řetězec.
+Dalším zajímavým vektorem útoku je situace, kdy se podepisovatel (nebo skupina podepisovatelů) pokusí cenzurovat bloky, které hlasují o jejich odstranění z autorizačního seznamu. Aby se tomu zabránilo, je povolená frekvence ražení podepisovatelů omezena na 1 z N/2. Tím je zajištěno, že zlomyslní podepisovatelé by museli ovládat alespoň 51 % podepisovacích účtů, v kterémžto okamžiku by se efektivně stali novým zdrojem pravdy pro řetězec.
 
 ### Spam {#spam-attack}
 
-Dalším menším vektorem útoku je, když zlomyslní podepisovatelé vkládají nové návrhy na hlasování do každého bloku, který razí. Protože uzly musí sečíst všechny hlasy, aby vytvořily skutečný seznam autorizovaných podepisovatelů, musí v průběhu času zaznamenávat všechny hlasy. Bez omezení hlasovacího okna by tento počet mohl pomalu, ale neomezeně růst. Řešením je zavést _pohyblivé_ okno W bloků, po kterém jsou hlasy považovány za zastaralé. _Přiměřené okno může být 1–2 epochy._
+Dalším menším vektorem útoku je, když zlomyslní podepisovatelé vkládají nové návrhy na hlasování do každého bloku, který razí. Vzhledem k tomu, že uzly musí sečíst všechny hlasy, aby vytvořily aktuální seznam autorizovaných podepisovatelů, musí zaznamenávat všechny hlasy v průběhu času. Bez omezení okna pro hlasování by tento počet mohl pomalu, ale neomezeně růst. Řešením je zavést _pohyblivé_ okno o velikosti W bloků, po jehož uplynutí jsou hlasy považovány za zastaralé. _Rozumné okno by mohlo být 1-2 epochy._
 
 ### Souběžné bloky {#concurrent-blocks}
 
-V síti PoA, kde je N autorizovaných podepisovatelů, smí každý podepisovatel razit 1 blok z K, což znamená, že v daném okamžiku smí razit blok N-K+1 validátorů. Aby se zabránilo tomu, že tito validátoři budou soutěžit o bloky, měl by každý podepisovatel přidat malý náhodný "offset" k času, kdy uvolní nový blok. Ačkoli tento proces zajišťuje, že malé větve jsou vzácné, občasné větve se stále mohou vyskytnout, stejně jako na hlavní síti. Pokud se zjistí, že podepisovatel zneužívá svou moc a způsobuje chaos, mohou ho ostatní podepisovatelé odhlasovat.
+V síti PoA, když je N autorizovaných podepisovatelů, smí každý podepisovatel razit 1 blok z K, což znamená, že v daném okamžiku smí razit N-K+1 validátorů. Aby se zabránilo tomu, že tito validátoři budou o bloky závodit, měl by každý podepisovatel přidat malý náhodný „posun“ (offset) k času, kdy vydá nový blok. Ačkoli tento proces zajišťuje, že malé forky jsou vzácné, občas k nim může dojít, stejně jako na Mainnetu. Pokud se zjistí, že podepisovatel zneužívá svou moc a způsobuje chaos, ostatní podepisovatelé ho mohou odhlasovat pryč.
 
-Pokud je například 10 autorizovaných podepisovatelů a každý podepisovatel smí vytvořit 1 blok z 20, pak v daném okamžiku může 11 validátorů vytvářet bloky. Aby se zabránilo tomu, že budou soutěžit o vytváření bloků, každý podepisovatel přidá malý náhodný "offset" k času, kdy uvolní nový blok. To snižuje výskyt malých větví, ale stále umožňuje občasné větve, jak je vidět na hlavní síti Etherea. Pokud podepisovatel zneužije svou autoritu a způsobí narušení, může být odhlasován ze sítě.
+Pokud je například 10 autorizovaných podepisovatelů a každý podepisovatel smí vytvořit 1 blok ze 6, pak v daném okamžiku může bloky vytvářet 5 validátorů. Aby se zabránilo jejich závodění ve vytváření bloků, každý podepisovatel přidá malý náhodný „posun“ k času, kdy vydá nový blok. To snižuje výskyt malých forků, ale stále umožňuje občasné forky, jak je vidět na síti Ethereum Mainnet. Pokud podepisovatel zneužije svou autoritu a způsobí narušení, může být ze sítě odhlasován.
 
 ## Výhody a nevýhody {#pros-and-cons}
 
-| Plusy                                                                                                                                                                         | Minusy                                                                                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Škálovatelnější než jiné populární mechanismy jako PoS a PoW, protože je založen na omezeném počtu podepisovatelů bloků.                                      | Sítě PoA mají obvykle relativně malý počet ověřovacích uzlů. Díky tomu je síť PoA více centralizovaná.                                             |
-| Provoz a údržba blockchainů PoA je neuvěřitelně levná.                                                                                                        | Stát se autorizovaným podepisovatelem je pro běžného člověka obvykle nedostupné, protože blockchain vyžaduje entity se zavedenou reputací.                         |
-| Transakce jsou potvrzovány velmi rychle, může to být i za méně než 1 sekundu, protože k ověření nových bloků je zapotřebí pouze omezený počet podepisovatelů. | Zlomyslní podepisovatelé by mohli provést reorganizaci, dvojí útratu, cenzurovat transakce v síti. Tyto útoky jsou sice zmírněny, ale stále možné. |
+| Výhody                                                                                                                                                    | Nevýhody                                                                                                                                              |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Škálovatelnější než jiné populární mechanismy, jako jsou PoS a PoW, protože je založen na omezeném počtu podepisovatelů bloků                             | Sítě PoA mají obvykle relativně malý počet validujících uzlů. To činí síť PoA více centralizovanou.                                                   |
+| Provoz a údržba blockchainů PoA jsou neuvěřitelně levné                                                                                                   | Stát se autorizovaným podepisovatelem je pro běžného člověka obvykle nedosažitelné, protože blockchain vyžaduje subjekty se zavedenou reputací.       |
+| Transakce jsou potvrzovány velmi rychle, může to trvat i méně než 1 sekundu, protože k validaci nových bloků je zapotřebí pouze omezený počet podepisovatelů | Zlomyslní podepisovatelé by mohli provést reorganizaci, dvojí útratu nebo cenzurovat transakce v síti; tyto útoky jsou sice zmírněny, ale stále jsou možné |
 
 ## Další čtení {#further-reading}
 
-- [EIP-225](https://eips.ethereum.org/EIPS/eip-225) _standard Clique_
-- [Studie Proof of Authority](https://github.com/cryptoeconomics-study/website/blob/master/docs/sync/2.4-lecture.md) _Cryptoeconomics_
-- [Co je to Proof of Authority](https://forum.openzeppelin.com/t/proof-of-authority/3577) _OpenZeppelin_
-- [Vysvětlení Proof of Authority](https://academy.binance.com/en/articles/proof-of-authority-explained) _binance_
+- [EIP-225](https://eips.ethereum.org/EIPS/eip-225) _Standard Clique_
+- [Studie o důkazu autority](https://github.com/cryptoeconomics-study/website/blob/master/docs/sync/2.4-lecture.md) _Cryptoeconomics_
+- [Co je důkaz autority](https://forum.openzeppelin.com/t/proof-of-authority/3577) _OpenZeppelin_
+- [Vysvětlení důkazu autority](https://academy.binance.com/en/articles/proof-of-authority-explained) _Binance_
 - [PoA v blockchainu](https://medium.com/techskill-brew/proof-of-authority-or-poa-in-blockchain-part-11-blockchain-series-be15b3321cba)
 - [Vysvětlení Clique](https://medium.com/@Destiner/clique-cross-client-proof-of-authority-algorithm-for-ethereum-8b2a135201d)
 - [Zastaralé PoA, specifikace Aura](https://openethereum.github.io/Chain-specification)
 - [IBFT 2.0, další implementace PoA](https://besu.hyperledger.org/private-networks/concepts/poa)
 
-### Učíte se spíše vizuálně? Vizuální výuka {#visual-learner}
+### Učíte se raději vizuálně? {#visual-learner}
 
-Podívejte se na vizuální vysvětlení proof-of-authority:
+Podívejte se na vizuální vysvětlení důkazu autority:
 
-<YouTube id="Mj10HSEM5_8" />
+<VideoWatch slug="proof-of-authority-explained" />
 
 ## Související témata {#related-topics}
 
-- [Důkaz prací](/developers/docs/consensus-mechanisms/pow/)
-- [Důkaz podílem](/developers/docs/consensus-mechanisms/pos/)
-
+- [Důkaz prací (PoW)](/developers/docs/consensus-mechanisms/pow/)
+- [Důkaz podílem (PoS)](/developers/docs/consensus-mechanisms/pos/)

@@ -4,6 +4,7 @@ description: "Como funciona o contrato Uniswap-v2? Por que ele é escrito dessa 
 author: Ori Pomerantz
 tags: [ "Solidity" ]
 skill: intermediate
+breadcrumb: "Uniswap v2 passo a passo"
 published: 2021-05-01
 lang: pt-br
 ---

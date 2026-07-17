@@ -1,3 +1,6 @@
+import { useTranslations } from "next-intl"
+
+import { Strong } from "@/components/IntlStringElements"
 import ProductListComponent from "@/components/ProductList"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import InlineLink from "@/components/ui/Link"
@@ -12,91 +15,59 @@ import heyanon from "@/public/images/ai-agents/heyanon.png"
 import luna from "@/public/images/ai-agents/luna.png"
 
 const AiAgentProductLists = ({ list }: { list: string }) => {
-  // TODO: LOGOS, extract intl strings
+  const t = useTranslations("component-ai-agent-products")
+
   const productListSets = {
     "ai-agents": [
       {
-        title: "Luna: The Virtual Influencer",
+        title: t("luna-title"),
         description: "",
         image: luna,
-        alt: "Luna logo",
         contentItems: [
-          <p key="luna-description">
-            Luna is a fully autonomous digital influencer & entertainer that
-            blends music, pop culture, and AI tech. As a virtual idol Luna
-            attracted over{" "}
-            <strong>
-              one million{" "}
-              <InlineLink
-                href="https://www.tiktok.com/@aidolofficial"
-                target="_blank"
-              >
-                TikTok followers
-              </InlineLink>
-            </strong>{" "}
-            and performed live in a music festival.{" "}
+          <p key="luna-description-1">
+            {t.rich("luna-description-1", {
+              strong: Strong,
+              a: (chunks) => (
+                <InlineLink href="https://www.tiktok.com/@aidolofficial">
+                  {chunks}
+                </InlineLink>
+              ),
+            })}
           </p>,
-          <p key="luna-description">
-            Luna engages with users through her own X account. You might receive
-            an X reply if you tag her handle! Luna controls her own onchain
-            wallet.
-          </p>,
+          <p key="luna-description-2">{t("luna-description-2")}</p>,
           <div key="luna-button">
             <ButtonLink
               href="https://app.virtuals.io/virtuals/68"
-              target="_blank"
               variant="outline"
             >
-              Chat with Luna
+              {t("chat-with-brand", { brand: t("luna-brand") })}
             </ButtonLink>
           </div>,
         ],
       },
       {
-        title: "AIXBT: Market Intelligence",
+        title: t("aixbt-title"),
         description: "",
         image: aixbt,
-        alt: "AIXBT logo",
         contentItems: [
-          <p key="aixbt-description">
-            AIXBT provides crypto market analysis. This AI agent autonomously
-            delivers actionable insights, witty commentary, and market sentiment
-            analysis on Twitter/X, where it has gathered a large following.
-          </p>,
-          <p key="aixbt-description">
-            $AIXBT token holders have access to premium real-time market
-            intelligence tool that identifies the best opportunities and market
-            shifts.
-          </p>,
+          <p key="aixbt-description-1">{t("aixbt-description-1")}</p>,
+          <p key="aixbt-description-2">{t("aixbt-description-2")}</p>,
           <div key="aixbt-button">
-            <ButtonLink
-              href="https://x.com/aixbt_agent"
-              target="_blank"
-              variant="outline"
-            >
-              Visit AIXBT
+            <ButtonLink href="https://x.com/aixbt_agent" variant="outline">
+              {t("visit-brand", { brand: t("aixbt-brand") })}
             </ButtonLink>
           </div>,
         ],
       },
       {
-        title: "Botto: Decentralized autonomous artist",
+        title: t("botto-title"),
         description: "",
         image: botto,
-        alt: "Botto logo",
         contentItems: [
-          <p key="botto-description">
-            Botto creates art and NFTs, with the community voting on its best
-            work. Users formed a DAO that guides Botto’s artistic evolution
-            while also earning token rewards for participation.
-          </p>,
+          <p key="botto-description">{t("botto-description")}</p>,
           <div key="botto-button">
-            <ButtonLink
-              href="https://botto.com/"
-              target="_blank"
-              variant="outline"
-            >
-              Visit Botto
+            <ButtonLink href="https://botto.com/" variant="outline">
+              {t("visit-brand", { brand: t("botto-brand") })}
             </ButtonLink>
           </div>,
         ],
@@ -104,47 +75,27 @@ const AiAgentProductLists = ({ list }: { list: string }) => {
     ],
     chat: [
       {
-        title: "Bankr",
+        title: t("bankr-title"),
         description: "",
         image: bankr,
-        alt: "Bankr logo",
         contentItems: [
-          <p key="bankr-description">
-            Bankr simplifies cryptocurrency trading and wallet management.
-            Instead of navigating through dozens of apps, users can connect
-            their wallets and execute actions using simple chat commands.
-          </p>,
+          <p key="bankr-description">{t("bankr-description")}</p>,
           <div key="bankr-button">
-            <ButtonLink
-              href="https://bankr.bot/"
-              target="_blank"
-              variant="outline"
-            >
-              Visit Bankr terminal
+            <ButtonLink href="https://bankr.bot/" variant="outline">
+              {t("bankr-button")}
             </ButtonLink>
           </div>,
         ],
       },
       {
-        title: "HeyAnon",
+        title: t("heyanon-title"),
         description: "",
         image: heyanon,
-        alt: "HeyAnon logo",
         contentItems: [
-          <p key="heyanon-description">
-            HeyAnon simplifies using a wallet with one-click swaps, asset
-            bridging, and trading via a chat interface. This saves people a lot
-            of time. It automates tasks, reduces transaction fees, and optimizes
-            portfolios, making it easier to manage assets without requiring
-            technical expertise.
-          </p>,
+          <p key="heyanon-description">{t("heyanon-description")}</p>,
           <div key="heyanon-button">
-            <ButtonLink
-              href="https://heyanon.ai/"
-              target="_blank"
-              variant="outline"
-            >
-              Visit HeyAnon
+            <ButtonLink href="https://heyanon.ai/" variant="outline">
+              {t("visit-brand", { brand: t("heyanon-brand") })}
             </ButtonLink>
           </div>,
         ],
@@ -152,33 +103,31 @@ const AiAgentProductLists = ({ list }: { list: string }) => {
     ],
     "dive-deeper": [
       {
-        title: "Aiagenttoolkit.xyz",
-        description:
-          "A curated list of AI agents, frameworks, launchpads & resources",
+        title: t("aiagenttoolkit-title"),
+        description: t("aiagenttoolkit-description"),
         image: aiagenttoolkit,
-        alt: "Aiagenttoolkit logo",
         link: "https://www.aiagenttoolkit.xyz/t/frameworks",
       },
       {
-        title: "Cookie.fun",
-        description: "AI agents tracker",
+        title: t("cookiefun-title"),
+        description: t("cookiefun-description"),
         image: cookiefun,
-        alt: "Cookie.fun logo",
         link: "https://cookie.fun/",
       },
       {
-        title: "Clanker",
-        description:
-          "AI that can create a token for you by tagging it on farcaster",
+        title: t("clanker-title"),
+        description: t("clanker-description"),
         image: clanker,
-        alt: "Clanker logo",
         link: "https://farcaster.xyz/clanker",
       },
     ],
   }
 
   return (
-    <ProductListComponent content={productListSets[list]} actionLabel="Go" />
+    <ProductListComponent
+      content={productListSets[list]}
+      actionLabel={t("action-label")}
+    />
   )
 }
 

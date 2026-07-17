@@ -1,4 +1,4 @@
-import { Meta, type StoryObj } from "@storybook/react"
+import { Meta, type StoryObj } from "@storybook/nextjs"
 
 import { Stack } from "../ui/flex"
 

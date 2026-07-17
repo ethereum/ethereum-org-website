@@ -5,6 +5,7 @@ import GuidesHubHeroImage from "@/public/images/heroes/guides-hub-hero.jpg"
 import Layer2HubHeroImage from "@/public/images/heroes/layer-2-hub-hero.png"
 import QuizzesHubHeroImage from "@/public/images/heroes/quizzes-hub-hero.png"
 import FusakaImage from "@/public/images/roadmap/roadmap-fusaka.png"
+import GlamsterdamImage from "@/public/images/roadmap/roadmap-glamsterdam.png"
 import PectraImage from "@/public/images/roadmap/roadmap-pectra.png"
 
 type TranslationFunction = (key: string) => string
@@ -18,6 +19,7 @@ interface BaseRelease {
   image: StaticImageData
   releaseName: string
   content: React.ReactNode | ((t: TranslationFunction) => React.ReactNode)
+  displayDate?: string
   href?: string
   forkcast_href?: string
 }
@@ -44,101 +46,121 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
   {
     image: DevelopersHubHeroImage,
     releaseName: "Paris (The Merge)",
-    releaseDate: "2022-09-15",
+    releaseDate: "2022-09-15T06:42:42.000Z",
     content: (
-      <div>
-        <p className="font-bold">{t("page-roadmap-paris-pos-title")}</p>
+      <>
+        <p>
+          <strong>{t("page-roadmap-paris-pos-title")}</strong>
+        </p>
         <ul>
           <li>{t("page-roadmap-paris-pos-item-1")}</li>
           <li>{t("page-roadmap-paris-pos-item-2")}</li>
         </ul>
-        <p className="font-bold">{t("page-roadmap-paris-beacon-title")}</p>
+        <p>
+          <strong>{t("page-roadmap-paris-beacon-title")}</strong>
+        </p>
         <ul>
           <li>{t("page-roadmap-paris-beacon-item-1")}</li>
           <li>{t("page-roadmap-paris-beacon-item-2")}</li>
         </ul>
-        <p className="font-bold">{t("page-roadmap-paris-difficulty-title")}</p>
+        <p>
+          <strong>{t("page-roadmap-paris-difficulty-title")}</strong>
+        </p>
         <ul>
           <li>{t("page-roadmap-paris-difficulty-item-1")}</li>
           <li>{t("page-roadmap-paris-difficulty-item-2")}</li>
         </ul>
-      </div>
+      </>
     ),
-    href: "/upgrades/merge",
+    href: "/roadmap/merge/",
   },
   {
     image: QuizzesHubHeroImage,
     releaseName: "Shapella",
-    releaseDate: "2023-04-12",
+    releaseDate: "2023-04-12T22:27:35.000Z",
     content: (
-      <div>
-        <p className="font-bold">
-          {t("page-roadmap-shapella-withdrawals-title")}
+      <>
+        <p>
+          <strong>{t("page-roadmap-shapella-withdrawals-title")}</strong>
         </p>
         <ul>
           <li>{t("page-roadmap-shapella-withdrawals-item-1")}</li>
           <li>{t("page-roadmap-shapella-withdrawals-item-2")}</li>
         </ul>
-        <p className="font-bold">{t("page-roadmap-shapella-eip4895-title")}</p>
+        <p>
+          <strong>{t("page-roadmap-shapella-eip4895-title")}</strong>
+        </p>
         <ul>
           <li>{t("page-roadmap-shapella-eip4895-item-1")}</li>
           <li>{t("page-roadmap-shapella-eip4895-item-2")}</li>
         </ul>
-        <p className="font-bold">{t("page-roadmap-shapella-eip3651-title")}</p>
+        <p>
+          <strong>{t("page-roadmap-shapella-eip3651-title")}</strong>
+        </p>
         <ul>
           <li>{t("page-roadmap-shapella-eip3651-item-1")}</li>
           <li>{t("page-roadmap-shapella-eip3651-item-2")}</li>
         </ul>
-      </div>
+      </>
     ),
     href: "/staking/withdrawals",
   },
   {
     image: Layer2HubHeroImage,
     releaseName: "Dencun",
-    releaseDate: "2024-03-13",
+    releaseDate: "2024-03-13T13:55:35.000Z",
     content: (
-      <div>
-        <p className="font-bold">
-          {t("page-roadmap-dencun-danksharding-title")}
+      <>
+        <p>
+          <strong>{t("page-roadmap-dencun-danksharding-title")}</strong>
         </p>
         <ul>
           <li>{t("page-roadmap-dencun-danksharding-item-1")}</li>
           <li>{t("page-roadmap-dencun-danksharding-item-2")}</li>
         </ul>
-        <p className="font-bold">{t("page-roadmap-dencun-eip1153-title")}</p>
+        <p>
+          <strong>{t("page-roadmap-dencun-eip1153-title")}</strong>
+        </p>
         <ul>
           <li>{t("page-roadmap-dencun-eip1153-item-1")}</li>
           <li>{t("page-roadmap-dencun-eip1153-item-2")}</li>
         </ul>
-        <p className="font-bold">{t("page-roadmap-dencun-eip4788-title")}</p>
+        <p>
+          <strong>{t("page-roadmap-dencun-eip4788-title")}</strong>
+        </p>
         <ul>
           <li>{t("page-roadmap-dencun-eip4788-item-1")}</li>
           <li>{t("page-roadmap-dencun-eip4788-item-2")}</li>
         </ul>
-      </div>
+      </>
     ),
     href: "/roadmap/dencun",
   },
   {
     image: PectraImage,
     releaseName: "Pectra",
-    releaseDate: "2025-05-07",
+    releaseDate: "2025-05-07T10:05:11.000Z",
     content: (
-      <div>
-        <p className="font-bold">{t("page-roadmap-pectra-eoa-title")}</p>
+      <>
+        <p>
+          <strong>{t("page-roadmap-pectra-eoa-title")}</strong>
+        </p>
         <ul>
           <li>{t("page-roadmap-pectra-eoa-item-1")}</li>
         </ul>
-        <p className="font-bold">{t("page-roadmap-pectra-balance-title")}</p>
+        <p>
+          <strong>{t("page-roadmap-pectra-balance-title")}</strong>
+        </p>
         <ul>
           <li>{t("page-roadmap-pectra-balance-item-1")}</li>
         </ul>
-        <p className="font-bold">{t("page-roadmap-pectra-blob-title")}</p>
+        <p>
+          <strong>{t("page-roadmap-pectra-blob-title")}</strong>
+        </p>
         <ul>
           <li>{t("page-roadmap-pectra-blob-item-1")}</li>
         </ul>
-      </div>
+      </>
     ),
     href: "/roadmap/pectra",
     forkcast_href: "https://forkcast.org/upgrade/pectra",
@@ -148,45 +170,75 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
     releaseName: "Fusaka",
     releaseDate: "2025-12-03T21:49:11.000Z",
     content: (
-      <div>
-        <p className="font-bold">{t("page-roadmap-fusaka-peerdas-title")}</p>
+      <>
+        <p>
+          <strong>{t("page-roadmap-fusaka-peerdas-title")}</strong>
+        </p>
         <ul>
           <li>{t("page-roadmap-fusaka-peerdas-item-1")}</li>
           <li>{t("page-roadmap-fusaka-peerdas-item-2")}</li>
         </ul>
-        <p className="font-bold">Blob Parameter Only (BPO) Forks</p>
+        <p>
+          <strong>{t("page-roadmap-fusaka-bpo-title")}</strong>
+        </p>
         <ul>
-          <li>Allows flexible blob count increases between major upgrades</li>
-          <li>
-            Enables faster adaptation to L2 scaling needs without waiting for
-            coordinated hard forks
-          </li>
+          <li>{t("page-roadmap-fusaka-bpo-item-1")}</li>
+          <li>{t("page-roadmap-fusaka-bpo-item-2")}</li>
         </ul>
-        <p className="font-bold">Gas Limit & DoS Hardening</p>
+        <p>
+          <strong>{t("page-roadmap-fusaka-gas-title")}</strong>
+        </p>
         <ul>
-          <li>Transaction gas limit cap of 16.7M gas per transaction</li>
-          <li>Default gas limit increase to ~60M (from current 45M)</li>
+          <li>{t("page-roadmap-fusaka-gas-item-1")}</li>
+          <li>{t("page-roadmap-fusaka-gas-item-2")}</li>
         </ul>
-      </div>
+      </>
     ),
     href: "/roadmap/fusaka",
     forkcast_href: "https://forkcast.org/upgrade/fusaka",
   },
   {
-    image: GuidesHubHeroImage,
+    image: GlamsterdamImage,
     releaseName: "Glamsterdam",
     plannedReleaseYear: "2026",
+    displayDate: "H2 2026",
+    href: "/roadmap/glamsterdam/",
     content: (
-      <div>
-        <p className="font-bold">
-          {t("page-roadmap-glamsterdam-discussed-title")}
+      <>
+        <p>
+          <strong>{t("page-roadmap-glamsterdam-epbs-title")}</strong>
         </p>
         <ul>
-          <li>{t("page-roadmap-glamsterdam-discussed-item-1")}</li>
-          <li>{t("page-roadmap-glamsterdam-discussed-item-2")}</li>
+          <li>{t("page-roadmap-glamsterdam-epbs-item-1")}</li>
+          <li>{t("page-roadmap-glamsterdam-epbs-item-2")}</li>
         </ul>
-      </div>
+        <p>
+          <strong>{t("page-roadmap-glamsterdam-bal-title")}</strong>
+        </p>
+        <ul>
+          <li>{t("page-roadmap-glamsterdam-bal-item-1")}</li>
+          <li>{t("page-roadmap-glamsterdam-bal-item-2")}</li>
+          <li>{t("page-roadmap-glamsterdam-bal-item-3")}</li>
+        </ul>
+      </>
     ),
     forkcast_href: "https://forkcast.org/upgrade/glamsterdam",
+  },
+  {
+    image: GuidesHubHeroImage,
+    releaseName: "Hegotá",
+    plannedReleaseYear: "2026",
+    displayDate: "H2 2026",
+    content: (
+      <>
+        <p>
+          <strong>{t("page-roadmap-hegota-discussed-title")}</strong>
+        </p>
+        <ul>
+          <li>{t("page-roadmap-hegota-discussed-item-1")}</li>
+        </ul>
+      </>
+    ),
+    forkcast_href: "https://forkcast.org/upgrade/hegota",
   },
 ]

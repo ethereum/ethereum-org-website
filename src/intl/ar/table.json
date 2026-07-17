@@ -1,7 +1,10 @@
 {
   "table-active": "نشط",
+  "table-browser-engines": "محركات المتصفح",
+  "table-desktop-platforms": "منصات سطح المكتب",
   "table-filters": "عوامل التصفية",
-  "table-showing":  "عرض ",
-  "table-reset-filters": "إعادة تعيين عناصر التصفية",
-  "table-what-are-you-looking-for": "What are you looking for?"
+  "table-mobile-platforms": "منصات الأجهزة المحمولة",
+  "table-reset-filters": "إعادة تعيين",
+  "table-showing": "عرض",
+  "table-what-are-you-looking-for": "ما الذي تبحث عنه؟"
 }

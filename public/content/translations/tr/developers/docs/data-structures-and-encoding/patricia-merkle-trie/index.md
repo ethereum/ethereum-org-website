@@ -1,37 +1,37 @@
 ---
-title: "Merkle Patricia Dijital Ağacı"
-description: "Merkle Patricia Dijital Ağacına Giriş."
+title: "Merkle Patricia Ağacı"
+description: "Merkle Patricia Ağacına giriş."
 lang: tr
 sidebarDepth: 2
 ---
 
-Ethereum'un durumu (tüm hesapların, bakiyelerin ve akıllı sözleşmelerin toplamı), bilgisayar biliminde genel olarak Merkle Ağacı olarak bilinen veri yapısının özel bir versiyonuna kodlanır. Bu yapı, kriptografideki birçok uygulama için kullanışlıdır çünkü ağaca dolanmış tüm bireysel veri parçaları arasında doğrulanabilir bir ilişki oluşturur ve bu da veriler hakkında bir şeyler kanıtlamak için kullanılabilecek tek bir **kök** değeriyle sonuçlanır.
+[Ethereum](/) durumu (tüm hesapların, bakiyelerin ve akıllı sözleşmelerin bütünü), bilgisayar bilimlerinde genel olarak Merkle Ağacı olarak bilinen veri yapısının özel bir sürümüne kodlanır. Bu yapı, kriptografideki birçok uygulama için faydalıdır çünkü ağaçta birbirine dolanmış tüm bireysel veri parçaları arasında doğrulanabilir bir ilişki yaratır ve veriler hakkında bir şeyleri kanıtlamak için kullanılabilecek tek bir **kök** (root) değeriyle sonuçlanır.
 
-Ethereum'un veri yapısı, PATRICIA'nın (Practical Algorithm To Retrieve Information Coded in Alphanumeric - Alfasayısal Kodlanmış Bilgileri Almak için Pratik Algoritma) bazı özelliklerini ödünç aldığı ve Ethereum durumunu oluşturan öğelerin verimli şekilde veri geri alımı (re**trie**val) için tasarlandığından 'değiştirilmiş Merkle-Patricia Trie'dir.
+Ethereum'un veri yapısı, PATRICIA'nın (Alfanümerik Olarak Kodlanmış Bilgileri Geri Almak İçin Pratik Algoritma - Practical Algorithm To Retrieve Information Coded in Alphanumeric) bazı özelliklerini ödünç aldığı ve Ethereum durumunu oluşturan öğelerin verimli bir şekilde geri alınması (re**trie**val) için tasarlandığı için bu şekilde adlandırılan 'değiştirilmiş bir Merkle-Patricia Ağacı'dır.
 
-Bir Merkle-Patricia trie deterministik ve kriptografik olarak doğrulanabilirdir: Bir durum kökü oluşturmanın tek yolu, onu durumun her bir parçasından hesaplamaktır ve aynı olan iki durum, kök karması ve ona yol açan karmalar karşılaştırılarak kolayca kanıtlanabilir (_bir Merkle kanıtı_). Tam tersinden bakacak olursak, aynı kök karmasına sahip iki farklı durum oluşturmak mümkün değildir ve farklı değerlere sahip durumları değiştirme girişimi farklı bir durum kök karmasına yol açar. Teorik olarak, bu yapı eklemeler, aramalar ve silmeler için `O(log(n))` verimliliğinin 'kutsal kasesini' sağlar.
+Bir Merkle-Patricia ağacı deterministiktir ve kriptografik olarak doğrulanabilir: Bir durum kökü oluşturmanın tek yolu, onu durumun her bir parçasından hesaplamaktır ve tamamen aynı olan iki durum, kök hash'i ve ona yol açan hash'ler karşılaştırılarak kolayca kanıtlanabilir (_bir Merkle kanıtı_). Aksine, aynı kök hash'ine sahip iki farklı durum yaratmanın hiçbir yolu yoktur ve durumu farklı değerlerle değiştirme girişimi farklı bir durum kök hash'i ile sonuçlanacaktır. Teorik olarak bu yapı, eklemeler, aramalar ve silmeler için `O(log(n))` verimliliğinin 'kutsal kasesini' sağlar.
 
-Yakın gelecekte Ethereum, gelecekteki protokol iyileştirmeleri için birçok yeni olasılığın önünü açacak olan bir [Verkle Ağacı](/roadmap/verkle-trees) yapısına geçmeyi planlıyor.
+Yakın gelecekte Ethereum, gelecekteki protokol iyileştirmeleri için birçok yeni olasılığın kapısını açacak olan bir [Verkle Ağacı](/roadmap/verkle-trees) yapısına geçmeyi planlamaktadır.
 
 ## Ön Koşullar {#prerequisites}
 
-Bu sayfayı daha iyi anlamak için [karmalar](https://en.wikipedia.org/wiki/Hash_function), [Merkle ağaçları](https://en.wikipedia.org/wiki/Merkle_tree), [trie'lar](https://en.wikipedia.org/wiki/Trie) ve [serileştirme](https://en.wikipedia.org/wiki/Serialization) hakkında temel bilgilere sahip olmak faydalı olacaktır. Bu makale, temel bir [radix ağacının](https://en.wikipedia.org/wiki/Radix_tree) tanımıyla başlıyor, ardından Ethereum'un daha optimize edilmiş veri yapısı için gerekli değişiklikleri kademeli olarak tanıtıyor.
+Bu sayfayı daha iyi anlamak için [hash'ler](https://en.wikipedia.org/wiki/Hash_function), [Merkle ağaçları](https://en.wikipedia.org/wiki/Merkle_tree), [trie'ler](https://en.wikipedia.org/wiki/Trie) ve [serileştirme](https://en.wikipedia.org/wiki/Serialization) hakkında temel bilgiye sahip olmak faydalı olacaktır. Bu makale, temel bir [radix ağacının](https://en.wikipedia.org/wiki/Radix_tree) açıklamasıyla başlar, ardından Ethereum'un daha optimize edilmiş veri yapısı için gerekli değişiklikleri kademeli olarak tanıtır.
 
-## Temel radix trie'lar {#basic-radix-tries}
+## Temel radix trie'leri {#basic-radix-tries}
 
-Temel bir taban dijital ağacında her düğüm aşağıdaki şekilde görünür:
+Temel bir radix trie'sinde, her düğüm aşağıdaki gibi görünür:
 
 ```
-    [i_0, i_1 ... i_n, value]
+[i_0, i_1 ... i_n, value]
 ```
 
-Burada `i_0 ...` `i_n` alfabenin sembollerini (genellikle ikili veya onaltılık) temsil eder, `value` düğümdeki terminal değerdir ve `i_0, i_1 ...` içindeki değerler `i_n` yuvaları ya `NULL` ya da diğer düğümlere yönelik işaretçilerdir (bizim durumumuzda, karmalarıdır). Bu, temel bir `(anahtar, değer)` deposu oluşturur.
+Burada `i_0 ... i_n` alfabenin sembollerini (genellikle ikili veya onaltılı) temsil eder, `value` düğümdeki terminal değeridir ve `i_0, i_1 ... i_n` slotlarındaki değerler ya `NULL` ya da diğer düğümlere işaretçilerdir (bizim durumumuzda, hash'leridir). Bu, temel bir `(key, value)` deposu oluşturur.
 
-Bir dizi anahtar değer çiftinin tabi olduğu sıralamayı sürdürmek için bir taban ağaç veri yapısını kullanmak istediğinizi varsayalım. Trie'da `dog` anahtarıyla eşleştirilmiş geçerli değeri bulmak için, önce `dog` kelimesini alfabe harflerine dönüştürür (`64 6f 67` vererek) ve ardından değeri bulana kadar bu yolu izleyerek trie'dan aşağı inersiniz. Diğer bir deyişle, dijital ağacın kök düğümünü bulmak için kök karmasını düz bir anahtar/değer veritabanında arayarak başlayın. Kök düğüm, diğer düğümlere işaret eden bir dizi anahtar olarak gösterilir. `6` dizinindeki değeri bir anahtar olarak kullanır ve düğümü bir seviye aşağı indirmek için düz anahtar/değer veritabanında aratırsınız. Ardından bir sonraki değere bakmak için `4` dizinini, sonra `6` dizinini seçersiniz ve bu böyle devam eder, ta ki şu yolu izleyene kadar: `root -> 6 -> 4 -> 6 -> 15 -> 6 -> 7`, düğümün değerine bakar ve sonucu döndürürsünüz.
+Diyelim ki bir anahtar değer çiftleri kümesi üzerinde bir sırayı kalıcı kılmak için bir radix ağacı veri yapısı kullanmak istediniz. Trie'de şu anda `dog` anahtarıyla eşlenen değeri bulmak için, önce `dog`'u alfabenin harflerine dönüştürürsünüz (`64 6f 67` elde edersiniz) ve ardından değeri bulana kadar bu yolu izleyerek trie'den aşağı inersiniz. Yani, trie'nin kök düğümünü bulmak için düz bir anahtar/değer veritabanında kök hash'ini arayarak başlarsınız. Bu, diğer düğümlere işaret eden bir anahtarlar dizisi olarak temsil edilir. Bir alt seviyedeki düğümü elde etmek için `6` endeksindeki değeri bir anahtar olarak kullanır ve düz anahtar/değer veritabanında ararsınız. Ardından bir sonraki değeri aramak için `4` endeksini seçer, sonra `6` endeksini seçer ve bu şekilde devam edersiniz, ta ki `root -> 6 -> 4 -> 6 -> 15 -> 6 -> 7` yolunu izledikten sonra düğümün değerini arayıp sonucu döndürene kadar.
 
-"Dijital ağaçta" bir şeye bakmak ile altta yatan düz anahtar/değer "veritabanı" arasında bir fark vardır. Her ikisi de anahtar/değer düzenlemelerini tanımlasa da temel veritabanı, bir anahtarın geleneksel 1 adımlık aramasını yapabilir. Dijital ağaçtaki bir anahtara bakmak, yukarıda açıklanan son değere ulaşmak için birden çok temel veritabanı araması yapılmasını gerektirir. Belirsizliği ortadan kaldırmak için ikincisine `yol` diyelim.
+'Trie' içinde bir şey aramak ile altta yatan düz anahtar/değer 'veritabanı' (DB) içinde aramak arasında bir fark vardır. Her ikisi de anahtar/değer düzenlemelerini tanımlar, ancak altta yatan veritabanı bir anahtarın geleneksel 1 adımlı aramasını yapabilir. Trie'de bir anahtar aramak, yukarıda açıklanan nihai değere ulaşmak için birden fazla temel veritabanı araması gerektirir. Belirsizliği ortadan kaldırmak için ikincisine `path` diyelim.
 
-Taban dijital ağaçları için güncelleme ve silme işlemleri aşağıdaki gibi tanımlanabilir:
+Radix trie'leri için güncelleme ve silme işlemleri aşağıdaki gibi tanımlanabilir:
 
 ```python
     def update(node_hash, path, value):
@@ -64,45 +64,45 @@ Taban dijital ağaçları için güncelleme ve silme işlemleri aşağıdaki gib
                 return hash(newnode)
 ```
 
-Bir "Merkle" Taban ağacı, düğümleri birbirine bağlayıp deterministik olarak oluşturulmuş kriptografik karma özetlerini kullanarak oluşturulur. Bu içerik adresleme (anahtar/değer veritabanında `key == keccak256(rlp(value))`) depolanan veriler için kriptografik bir bütünlük garantisi sağlar. Belli bir dijital ağacın kök karmasının herkesçe bilinmesi durumunda, alttaki yaprak verilere erişimi olan herkes, belirli bir değeri ağaç köküne ekleyen her düğümün karmasını sağlayarak dijital ağacın belirli bir yol üzerinde bir değeri içerdiğine dair kanıt oluşturabilir.
+Bir "Merkle" Radix ağacı, deterministik olarak oluşturulmuş kriptografik hash özetleri kullanılarak düğümlerin birbirine bağlanmasıyla inşa edilir. Bu içerik adresleme (anahtar/değer veritabanında `key == keccak256(rlp(value))`), depolanan verilerin kriptografik bütünlük garantisini sağlar. Belirli bir trie'nin kök hash'i herkesçe biliniyorsa, altta yatan yaprak verilerine erişimi olan herkes, belirli bir değeri ağaç köküne bağlayan her bir düğümün hash'lerini sağlayarak trie'nin belirli bir yolda belirli bir değeri içerdiğine dair bir kanıt oluşturabilir.
 
-Kök karması nihayetinde altındaki tüm karmalara dayandığından, bir saldırganın var olmayan bir `(yol, değer)` çiftinin kanıtını sunması imkansızdır. Temelde yapılacak herhangi bir değişiklik kök karmasını değiştirecektir. Karmayı, veri hakkındaki yapısal bilgilerin, karma işlevinin ön görüntü koruması ile güvence altına alınan sıkıştırılmış bir gösterimi olarak düşünebilirsiniz.
+Kök hash'i nihayetinde altındaki tüm hash'lere dayandığından, bir saldırganın var olmayan bir `(path, value)` çiftinin kanıtını sunması imkansızdır. Altta yatan herhangi bir değişiklik kök hash'ini değiştirecektir. Hash'i, hashleme fonksiyonunun ön görüntü korumasıyla güvence altına alınmış, veriler hakkındaki yapısal bilgilerin sıkıştırılmış bir temsili olarak düşünebilirsiniz.
 
-Bir radix ağacının atomik bir birimine (örneğin, tek bir onaltılık karakter veya 4 bitlik ikili sayı) "nibble" diyeceğiz. Yukarıda açıklandığı gibi, bir yolu her seferinde bir nibble ilerleyerek geçerken, düğümler en fazla 16 alt öğeye başvurabilir ancak bir `değer` öğesi de içerebilir. Bu nedenle onları, uzunluğu 17 olan bir dizi olarak gösteririz. 17 öğeli bu dizileri "dal düğümleri" olarak adlandırıyoruz.
+Bir radix ağacının atomik birimine (örneğin, tek bir onaltılı karakter veya 4 bitlik ikili sayı) "nibble" diyeceğiz. Yukarıda açıklandığı gibi bir yolu her seferinde bir nibble olarak geçerken, düğümler en fazla 16 çocuğa başvurabilir ancak bir `value` öğesi içerir. Bu nedenle, onları 17 uzunluğunda bir dizi olarak temsil ediyoruz. Bu 17 elemanlı dizilere "dal düğümleri" diyoruz.
 
-## Merkle Patricia Trie {#merkle-patricia-trees}
+## Merkle Patricia Ağacı {#merkle-patricia-trees}
 
-Taban dijital ağaçları, büyük bir kısıtlamaya tabidir: bu ağaçlar verimsizdir. Ethereum'da olduğu gibi, yolun 64 karakter uzunluğunda olduğu (`bytes32` içindeki nibble sayısı) bir `(yol, değer)` bağlamasını saklamak isterseniz, karakter başına bir seviye depolamak için bir kilobayttan fazla ekstra alana ihtiyacınız olacaktır ve her arama veya silme işlemi tam 64 adım sürecektir. Aşağıda açıklanan Patricia dijital ağacı bu sorunu çözer.
+Radix trie'lerinin önemli bir sınırlaması vardır: verimsizdirler. Ethereum'da olduğu gibi yolun 64 karakter uzunluğunda (`bytes32` içindeki nibble sayısı) olduğu bir `(path, value)` bağlamasını depolamak isterseniz, karakter başına bir seviye depolamak için bir kilobayttan fazla ekstra alana ihtiyacımız olacak ve her arama veya silme işlemi tam 64 adım sürecektir. Aşağıda tanıtılan Patricia ağacı bu sorunu çözmektedir.
 
 ### Optimizasyon {#optimization}
 
-Merkle Patricia dijital ağacındaki bir düğüm aşağıdaki şekillerden biri gibi gözükür:
+Bir Merkle Patricia ağacındaki bir düğüm aşağıdakilerden biridir:
 
-1. `NULL` (boş dize olarak temsil edilir)
-2. `dal` 17 öğeli bir düğüm `[ v0 ...` `v15, vt ]`
-3. `yaprak` 2 öğeli bir düğüm `[ encodedPath, value ]`
-4. `uzantı` 2 öğeli bir düğüm `[ encodedPath, key ]`
+1.  `NULL` (boş dize olarak temsil edilir)
+2.  `branch` 17 öğeli bir düğüm `[ v0 ... v15, vt ]`
+3.  `leaf` 2 öğeli bir düğüm `[ encodedPath, value ]`
+4.  `extension` 2 öğeli bir düğüm `[ encodedPath, key ]`
 
-64 karakterlik yollar sayesinde dijital ağacın ilk birkaç katmanını geçtikten sonra, aşağı inerken yolun en azından bir kısmında ayrılan yolun bulunmadığı bir düğüme ulaşmanız kaçınılmazdır. Yol boyunca 15'e kadar seyrek `NULL` düğüm oluşturmaktan kaçınmak için, `[ encodedPath, key ]` biçiminde bir `uzantı` düğümü kurarak inişi kısaltırız; burada `encodedPath` ileri atlamak için "kısmi yolu" içerir (aşağıda açıklanan sıkıştırılmış bir kodlama kullanılarak) ve `anahtar` sonraki veritabanı araması içindir.
+64 karakterlik yollarla, trie'nin ilk birkaç katmanını geçtikten sonra, en azından yolun bir kısmı için hiçbir farklı yolun bulunmadığı bir düğüme ulaşmanız kaçınılmazdır. Yol boyunca 15'e kadar seyrek `NULL` düğümü oluşturmak zorunda kalmamak için, `encodedPath`'in ileri atlamak için "kısmi yolu" içerdiği (aşağıda açıklanan kompakt bir kodlama kullanarak) ve `key`'in bir sonraki veritabanı araması için olduğu `[ encodedPath, key ]` biçiminde bir `extension` düğümü kurarak inişi kısaltıyoruz.
 
-`encodedPath`'in ilk nibble'ındaki bir bayrakla işaretlenebilen bir `yaprak` düğüm için, yol önceki tüm düğümün yol parçalarını kodlar ve `değeri` doğrudan arayabiliriz.
+`encodedPath`'in ilk nibble'ındaki bir bayrakla işaretlenebilen bir `leaf` düğümü için yol, önceki tüm düğümlerin yol parçalarını kodlar ve doğrudan `value` değerini arayabiliriz.
 
-Bununla birlikte, yukarıdaki optimizasyondan iki anlam çıkıyor.
+Ancak yukarıdaki bu optimizasyon belirsizliğe yol açar.
 
-Yolları nibble'lar halinde geçerken, geçilecek tek sayıda nibble ile karşılaşabiliriz, ancak tüm veriler `bayt` formatında saklandığı için. Örneğin, `1` nibble'ı ile `01` nibble'larını (her ikisi de `<01>` olarak saklanmalıdır) ayırt etmek mümkün değildir. Tek sayıda uzunluğu belirtmek için kısmi yola önek olarak bir bayrak verilir.
+Yolları nibble'lar halinde geçerken, geçilecek tek sayıda nibble ile karşılaşabiliriz, ancak tüm veriler `bytes` formatında depolandığı için. Örneğin, `1` nibble'ı ile `01` nibble'ları arasında ayrım yapmak mümkün değildir (her ikisi de `<01>` olarak depolanmalıdır). Tek uzunluğu belirtmek için, kısmi yolun önüne bir bayrak eklenir.
 
-### Belirtim: İsteğe bağlı sonlandırıcılı onaltılık dizinin sıkıştırılmış kodlaması {#specification}
+### Spesifikasyon: İsteğe bağlı sonlandırıcı ile onaltılı dizinin kompakt kodlaması {#specification}
 
-Yukarıda açıklandığı gibi, hem _tek ve çift kalan kısmi yol uzunluğu_ hem de _yaprak ve uzantı düğümü_ işaretlemesi, herhangi bir 2 öğeli düğümün kısmi yolunun ilk nibble'ında bulunur. Bu, aşağıdaki sonuçları verir:
+Yukarıda açıklandığı gibi hem _tek ve çift kalan kısmi yol uzunluğunun_ hem de _yaprak ve uzantı düğümünün_ işaretlenmesi, herhangi bir 2 öğeli düğümün kısmi yolunun ilk nibble'ında bulunur. Bunlar aşağıdakilerle sonuçlanır:
 
-| onaltılık karakter | bitler | düğüm türü                               | yol uzunluğu |
-| ------------------ | ------ | ---------------------------------------- | ------------ |
-| 0                  | 0000   | uzantı                                   | çift         |
-| 1                  | 0001   | uzantı                                   | tek          |
-| 2                  | 0010   | sonlandırıcı (yaprak) | çift         |
-| 3                  | 0011   | sonlandırıcı (yaprak) | tek          |
+| onaltılı karakter | bitler | düğüm türü kısmi | yol uzunluğu |
+| -------- | ---- | ------------------ | ----------- |
+| 0        | 0000 | uzantı             | çift        |
+| 1        | 0001 | uzantı             | tek         |
+| 2        | 0010 | sonlandırıcı (yaprak) | çift        |
+| 3        | 0011 | sonlandırıcı (yaprak) | tek         |
 
-Kalan yol uzunluğu çift olduğunda (`0` veya `2`), bunu her zaman başka bir `0` "dolgu" nibble'ı takip edecektir.
+Çift kalan yol uzunluğu için (`0` veya `2`), her zaman başka bir `0` "dolgu" nibble'ı takip edecektir.
 
 ```python
     def compact_encode(hexarray):
@@ -115,7 +115,7 @@ Kalan yol uzunluğu çift olduğunda (`0` veya `2`), bunu her zaman başka bir `
             hexarray = [flags] + hexarray
         else:
             hexarray = [flags] + [0] + hexarray
-        # hexarray now has an even length whose first nibble is the flags.
+        # hexarray artık ilk nibble'ı bayraklar olan çift bir uzunluğa sahip.
         o = ""
         for i in range(0, len(hexarray), 2):
             o += chr(16 * hexarray[i] + hexarray[i + 1])
@@ -135,7 +135,7 @@ Kalan yol uzunluğu çift olduğunda (`0` veya `2`), bunu her zaman başka bir `
     '3f 1c b8'
 ```
 
-Merkle Patricia dijital ağacında bir düğüm almak için genişletilmiş kod:
+İşte Merkle Patricia ağacında bir düğüm elde etmek için genişletilmiş kod:
 
 ```python
     def get_helper(node_hash, path):
@@ -163,64 +163,65 @@ Merkle Patricia dijital ağacında bir düğüm almak için genişletilmiş kod:
         return get_helper(node_hash, path2)
 ```
 
-### Trie Örneği {#example-trie}
+### Örnek Trie {#example-trie}
 
 Dört yol/değer çifti içeren bir trie istediğimizi varsayalım: `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coins')`, `('horse', 'stallion')`.
 
-İlk olarak hem yolları hem de değerleri `bayt`'a dönüştürürüz. Aşağıda, _yollar_ için gerçek bayt gösterimleri `<>` ile belirtilirken, _değerler_ daha kolay anlaşılması için hâlâ `''` ile belirtilen dizeler olarak gösterilmektedir (onlar da aslında `bayt` olacaktır):
+İlk olarak, hem yolları hem de değerleri `bytes` formatına dönüştürüyoruz. Aşağıda, _yollar_ için gerçek bayt temsilleri `<>` ile gösterilirken, _değerler_ daha kolay anlaşılması için hala `''` ile gösterilen dizeler olarak gösterilmektedir (onlar da aslında `bytes` olacaktır):
 
 ```
-    <64 6f> : 'verb'
+<64 6f> : 'verb'
     <64 6f 67> : 'puppy'
     <64 6f 67 65> : 'coins'
     <68 6f 72 73 65> : 'stallion'
 ```
 
-Şimdi, temel veritabanında aşağıdaki anahtar/değer çiftleriyle böyle bir dijital ağaç oluşturuyoruz:
+Şimdi, altta yatan veritabanında aşağıdaki anahtar/değer çiftleriyle böyle bir trie oluşturuyoruz:
 
 ```
-    rootHash: [ <16>, hashA ]
+rootHash: [ <16>, hashA ]
     hashA:    [ <>, <>, <>, <>, hashB, <>, <>, <>, [ <20 6f 72 73 65>, 'stallion' ], <>, <>, <>, <>, <>, <>, <>, <> ]
     hashB:    [ <00 6f>, hashC ]
     hashC:    [ <>, <>, <>, <>, <>, <>, hashD, <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ]
     hashD:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coins' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-Bir düğüme başka bir düğüm içinde referans verildiğinde, dahil edilen şey, eğer `len(rlp.encode(node)) >= 32` ise `keccak256(rlp.encode(node))`, değilse `node`'dur; burada `rlp.encode` [RLP](/developers/docs/data-structures-and-encoding/rlp) kodlama işlevidir.
+Bir düğüm başka bir düğümün içinde referans gösterildiğinde, dahil edilen şey `keccak256(rlp.encode(node))`'dir, eğer `len(rlp.encode(node)) >= 32` ise aksi takdirde `node` olur, burada `rlp.encode` [RLP](/developers/docs/data-structures-and-encoding/rlp) kodlama fonksiyonudur.
 
-Bir trie'ı güncellerken, yeni oluşturulan düğümün uzunluğu >= 32 _ise_, `(keccak256(x), x)` anahtar/değer çiftini kalıcı bir arama tablosunda saklamak gerektiğini unutmayın. Bununla birlikte düğüm bundan daha kısaysa, f (x) = x işlevi tersine çevrilebilir olduğundan hiçbir şeyin depolanmasına gerek yoktur.
+Bir trie'yi güncellerken, yeni oluşturulan düğümün uzunluğu >= 32 _ise_ `(keccak256(x), x)` anahtar/değer çiftini kalıcı bir arama tablosunda saklamak gerektiğine dikkat edin. Ancak, düğüm bundan daha kısaysa, f(x) = x fonksiyonu tersine çevrilebilir olduğundan hiçbir şey saklamaya gerek yoktur.
 
-## Ethereum'daki Trie'lar {#tries-in-ethereum}
+## Ethereum'daki Trie'ler {#tries-in-ethereum}
 
-Ethereum'ün yürütüm katmanındaki tüm merkle ağaçları, Merkle Patricia Dijital Ağacını kullanır.
+Ethereum'un yürütme katmanındaki tüm merkle trie'leri bir Merkle Patricia Ağacı kullanır.
 
-Bir blok başlığında bu dijital ağaçların 3'ünden 3 kök vardır.
+Bir blok başlığından bu trie'lerin 3'ünden gelen 3 kök vardır.
 
-1. durumKökü (stateRoot)
-2. işlemKökü (transactionsRoot)
-3. makbuzKökü (receiptsRoot)
+1.  stateRoot
+2.  transactionsRoot
+3.  receiptsRoot
 
-### Durum Trie'ı {#state-trie}
+### Durum Ağacı {#state-trie}
 
-Bir adet genel durum dijital ağacı vardır ve bu, bir istemci bir bloğu her işlediğinde güncellenir. İçinde bir `yol` her zaman `keccak256(ethereumAddress)` ve bir `değer` her zaman `rlp(ethereumAccount)`'dır. Daha spesifik olarak bir Ethereum `hesabı`, 4 öğeli bir `[nonce,balance,storageRoot,codeHash]` dizisidir. Bu noktada, bu `storageRoot`'un başka bir patricia trie'ının kökü olduğunu belirtmekte fayda var:
+Bir tane küresel durum ağacı vardır ve bir istemci bir bloğu her işlediğinde güncellenir. İçinde, bir `path` her zaman: `keccak256(ethereumAddress)` ve bir `value` her zaman: `rlp(ethereumAccount)` şeklindedir. Daha spesifik olarak bir Ethereum `account`'ı, 4 öğeli bir `[nonce,balance,storageRoot,codeHash]` dizisidir. Bu noktada, bu `storageRoot`'nun başka bir patricia ağacının kökü olduğunu belirtmekte fayda var:
 
-### Depolama Trie'ı {#storage-trie}
+### Depolama Trie'si {#storage-trie}
 
-Depolama trie'ı _tüm_ sözleşme verilerinin bulunduğu yerdir. Her bir hesap için ayrı bir depolama dijital ağacı vardır. Verilen bir adresteki belirli depolama konumlarındaki değerleri alabilmek için depolama adresi, depoda depolanan verilerin tam sayı konumu ve blok kimliği gereklidir. Bunlar daha sonra JSON-RPC API'sinde tanımlanan `eth_getStorageAt`'e argüman olarak aktarılabilir, ör. `0x295a70b2de5e3953354a6a8344e616ed314d7251` adresi için depolama yuvası 0'daki verileri almak için:
+Depolama trie'si, _tüm_ sözleşme verilerinin yaşadığı yerdir. Her hesap için ayrı bir depolama trie'si vardır. Belirli bir adresteki belirli depolama konumlarındaki değerleri almak için depolama adresi, depolanan verilerin depolamadaki tam sayı konumu ve blok kimliği gereklidir. Bunlar daha sonra JSON-RPC API'sinde tanımlanan `eth_getStorageAt`'ye argüman olarak geçirilebilir, örneğin `0x295a70b2de5e3953354a6a8344e616ed314d7251` adresi için depolama slot 0'daki verileri almak için:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
 
 {"jsonrpc":"2.0","id":1,"result":"0x00000000000000000000000000000000000000000000000000000000000004d2"}
+
 ```
 
-Depolama alanındaki diğer öğelerin alınması biraz daha karmaşıktır çünkü ilk önce depolama alanındaki konumun hesaplanması gerekir. Konum, adresin ve depolama konumunun `keccak256` karması olarak hesaplanır, her ikisi de 32 bayt uzunluğa ulaşacak şekilde başlarına sıfır eklenir. Örneğin, `0x391694e7e0b0cce554cb130d723a9d27458f9298` adresi için depolama yuvası 1'deki verilerin konumu şöyledir:
+Depolamadaki diğer öğeleri almak biraz daha karmaşıktır çünkü önce depolama trie'sindeki konum hesaplanmalıdır. Konum, adresin ve depolama konumunun `keccak256` hash'i olarak hesaplanır ve her ikisi de 32 bayt uzunluğunda olacak şekilde sola sıfırlarla doldurulur. Örneğin, `0x391694e7e0b0cce554cb130d723a9d27458f9298` adresi için depolama slot 1'deki verilerin konumu şöyledir:
 
 ```python
 keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
 ```
 
-Geth konsolunda bu aşağıdaki şekilde hesaplanabilir:
+Bir Geth konsolunda, bu aşağıdaki gibi hesaplanabilir:
 
 ```
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
@@ -229,7 +230,7 @@ undefined
 "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9"
 ```
 
-Bu nedenle `yol`, `keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`'dır. Bu, artık daha önce olduğu gibi verileri depolama ağacından almak için kullanılabilir:
+Bu nedenle `path` `keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)` olur. Bu artık verileri depolama trie'sinden daha önce olduğu gibi almak için kullanılabilir:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"], "id": 1}' localhost:8545
@@ -237,11 +238,11 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-Not: Bir Ethereum hesabının `storageRoot`'u, bir sözleşme hesabı değilse varsayılan olarak boştur.
+Not: Bir Ethereum hesabı için `storageRoot`, bir kontrat hesabı değilse varsayılan olarak boştur.
 
-### İşlemler Trie'ı {#transaction-trie}
+### İşlemler Trie'si {#transaction-trie}
 
-Her blok için ayrı bir işlemler trie'ı bulunur ve bu da yine `(anahtar, değer)` çiftlerini saklar. Buradaki bir yol, `rlp(transactionIndex)`'tir ve bu, şu şekilde belirlenen bir değere karşılık gelen anahtarı temsil eder:
+Her blok için ayrı bir işlemler trie'si vardır ve yine `(key, value)` çiftlerini depolar. Buradaki bir yol şöyledir: `rlp(transactionIndex)` ve bu, aşağıdakiler tarafından belirlenen bir değere karşılık gelen anahtarı temsil eder:
 
 ```python
 if legacyTx:
@@ -250,16 +251,16 @@ else:
   value = TxType | encode(tx)
 ```
 
-Bununla ilgili daha fazla bilgi [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718) belgelerinde bulunabilir.
+Bu konuda daha fazla bilgi [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) belgelerinde bulunabilir.
 
-### Makbuzlar Trie'ı {#receipts-trie}
+### Makbuzlar Trie'si {#receipts-trie}
 
-Her bloğun kendi makbuz dijital ağacı vardır. Buradaki bir `yol`: `rlp(transactionIndex)`'dir. `transactionIndex`, dahil edildiği blok içindeki dizinidir. Makbuz dijital ağacı hiçbir zaman güncellenmez. İşlemler dijital ağacına benzer şekilde güncel ve eski makbuzlar mevcuttur. Makbuzlar dijital ağacı içerisinde belirli bir makbuzu sorgulamak için bloktaki işlemin indeksi, makbuz yükü ve işlem türü gereklidir. Döndürülen makbuz, `TransactionType` ve `ReceiptPayload`'un birleşimi olarak tanımlanan `Receipt` türünde veya `rlp([status, cumulativeGasUsed, logsBloom, logs])` olarak tanımlanan `LegacyReceipt` türünde olabilir.
+Her bloğun kendi Makbuzlar trie'si vardır. Buradaki bir `path` şöyledir: `rlp(transactionIndex)`. `transactionIndex`, dahil edildiği blok içindeki endeksidir. Makbuzlar trie'si asla güncellenmez. İşlemler trie'sine benzer şekilde, mevcut ve eski makbuzlar vardır. Makbuzlar trie'sinde belirli bir makbuzu sorgulamak için, işlemin bloğundaki endeksi, makbuz yükü ve işlem türü gereklidir. Döndürülen makbuz, `TransactionType` ve `ReceiptPayload`'nin birleştirilmesi olarak tanımlanan `Receipt` türünde olabilir veya `rlp([status, cumulativeGasUsed, logsBloom, logs])` olarak tanımlanan `LegacyReceipt` türünde olabilir.
 
-Bununla ilgili daha fazla bilgi [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718) belgelerinde bulunabilir.
+Bu konuda daha fazla bilgi [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) belgelerinde bulunabilir.
 
-## Ek Okumalar {#further-reading}
+## Daha Fazla Okuma {#further-reading}
 
-- [Değiştirilmiş Merkle Patricia Trie — Ethereum bir durumu nasıl kaydeder](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
-- [Ethereum'da Merkle'lama](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum)
-- [Ethereum trie'ını anlama](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)
+- [Değiştirilmiş Merkle Patricia Ağacı — Ethereum bir durumu nasıl kaydeder](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
+- [Ethereum'da Merkle İşlemleri](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum)
+- [Ethereum trie'sini anlamak](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)

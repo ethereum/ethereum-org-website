@@ -4,6 +4,7 @@ description: Learn how to create and use a caching contract for cheaper rollup t
 author: Ori Pomerantz
 tags: ["layer 2", "caching", "storage", "scaling"]
 skill: intermediate
+breadcrumb: Caching for rollups
 published: 2022-09-15
 lang: en
 ---
@@ -756,9 +757,9 @@ Since we use the low level `<address>.call()` function, we can't use `vm.expectR
 This is the way we verify that code [emits an event correctly](https://getfoundry.sh/reference/cheatcodes/expect-emit/) in Foundry.
 
 ### The client {#the-client}
-One thing you don't get with Solidity tests is JavaScript code you can cut and paste into your own application. To write that code I deployed WORM to [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), [Optimism's](https://www.optimism.io/) new testnet. It is at address [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
+One thing you don't get with Solidity tests is JavaScript code you can cut and paste into your own application. The original version of this tutorial deployed WORM to Optimism Goerli, which has since been retired. To run the client today, redeploy WORM to a supported OP Stack network such as [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack), then use the resulting contract address in the JavaScript client.
 
-[You can see JavaScript code for the client here](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). To use it:
+[You can see JavaScript code for the client here](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). The sample repository was written for Optimism Goerli, so before running it, update the RPC endpoint and explorer URLs in `javascript/.env.example` and `javascript/index.js` for your target network. To use it:
 
 1. Clone the git repository:
 
@@ -783,8 +784,8 @@ One thing you don't get with Solidity tests is JavaScript code you can cut and p
 
    | Parameter           | Value                                                                                                                                                               |
    | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC            | The mnemonic for an account that has enough ETH to pay for a transaction. [You can get free ETH for the Optimism Goerli network here](https://optimismfaucet.xyz/). |
-   | OPTIMISM_GOERLI_URL | URL to Optimism Goerli. The public endpoint, `https://goerli.optimism.io`, is rate limited but sufficient to what we need here                                      |
+   | MNEMONIC            | The mnemonic for an account that has enough ETH to pay for a transaction. [Optimism's faucet docs](https://docs.optimism.io/app-developers/tools/faucets) list current testnet faucets. |
+   | OPTIMISM_GOERLI_URL | RPC URL for the network where you redeploy WORM. For OP Sepolia, use an OP Sepolia RPC endpoint such as `https://sepolia.optimism.io`, or another endpoint from your provider.        |
 
 5. Run `index.js`.
 
@@ -792,7 +793,7 @@ One thing you don't get with Solidity tests is JavaScript code you can cut and p
    node index.js
    ```
 
-   This sample application first writes an entry to WORM, displaying the calldata and a link to the transaction on Etherscan. Then it reads back that entry, and displays the key it uses and the values in the entry (value, block number, and author).
+   This sample application first writes an entry to WORM, displaying the calldata and a link to the transaction on a block explorer. Then it reads back that entry, and displays the key it uses and the values in the entry (value, block number, and author).
 
 Most of the client is normal Dapp JavaScript. So again we'll only go over the interesting parts.
 

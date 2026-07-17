@@ -39,7 +39,7 @@ export const ABTestDebugPanel = ({
   const panelContent = (
     <div
       ref={panelRef}
-      className="fixed bottom-5 right-5 z-modal rounded-lg border-2 bg-background-low p-2.5 font-mono text-xs"
+      className="fixed right-5 bottom-5 z-modal rounded-lg border-2 bg-background-low p-2.5 font-mono text-xs"
     >
       <Button
         onClick={() => setIsOpen(!isOpen)}

@@ -1,12 +1,11 @@
 import path from "path"
 
 import dotenv from "dotenv"
-import type { ChromaticConfig } from "@chromatic-com/playwright"
 import { defineConfig, devices } from "@playwright/test"
 
 dotenv.config({ path: path.resolve(__dirname, ".env.local") })
 
-export default defineConfig<ChromaticConfig>({
+export default defineConfig({
   testDir: "./tests",
   outputDir: "./tests/__results__",
   fullyParallel: true,
@@ -26,9 +25,6 @@ export default defineConfig<ChromaticConfig>({
     // Global test timeout
     actionTimeout: 10000,
     navigationTimeout: 30000,
-
-    // Chromatic settings
-    disableAutoSnapshot: true,
   },
 
   // Global test timeout

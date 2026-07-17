@@ -1,18 +1,16 @@
 ---
-title: Common misconceptions about Ethereum
-description: Clearing up the most common misunderstandings about how Ethereum works.
-lang: ur-in
+title: ایتھیریم کے بارے میں عام غلط فہمیاں
+description: ایتھیریم کے کام کرنے کے طریقے کے بارے میں سب سے عام غلط فہمیوں کو دور کرنا۔
+lang: ur
 ---
 
-# Common misconceptions about Ethereum {#misconceptions}
+## کیا ایتھیریم کوئی کمپنی ہے؟ {#not-a-company}
 
-## کیا ایتھریم ایک کمپنی ہے؟ {#not-a-company}
+ایتھیریم ایک اوپن سورس، لامركزی ٹیکنالوجی ہے جسے دنیا بھر میں ہزاروں معاونین برقرار رکھتے ہیں۔ "ایتھیریم" کے نام سے کوئی ایسی کمپنی نہیں ہے جو اکاؤنٹس کا انتظام کرتی ہو، فنڈز رکھتی ہو، یا کسٹمر سپورٹ فراہم کرتی ہو۔
 
-Ethereum is open-source, decentralized technology maintained by thousands of contributors worldwide. There is no company called "Ethereum" that manages accounts, holds funds, or provides customer support.
+[ایتھیریم فاؤنڈیشن](https://ethereum.foundation/) ایک غیر منافع بخش تنظیم ہے جو ایتھیریم کی ترقی میں معاونت کرتی ہے، لیکن یہ نیٹ ورک کی مالک نہیں ہے اور نہ ہی اسے کنٹرول کرتی ہے۔ کوئی بھی واحد ادارہ ایسا نہیں کرتا۔
 
-The [Ethereum Foundation](https://ethereum.foundation/) is a non-profit organization that supports Ethereum's development, but it does not own or control the network. No single entity does.
-
-**[ethereum.org](/)** is a community-run educational resource. It is not an exchange, wallet, or financial institution. It does not hold any user funds and cannot access any accounts.
+**[<span dir="ltr">ethereum.org</span>](/)** ایک کمیونٹی کے زیر انتظام تعلیمی وسیلہ ہے۔ یہ کوئی ایکسچینج، والیٹ، یا مالیاتی ادارہ نہیں ہے۔ یہ صارفین کے کوئی فنڈز نہیں رکھتا اور کسی بھی اکاؤنٹ تک رسائی حاصل نہیں کر سکتا۔
 
 <DocLink href="/what-is-ethereum/">
   ایتھیریم کیا ہے؟
@@ -20,54 +18,54 @@ The [Ethereum Foundation](https://ethereum.foundation/) is a non-profit organiza
 
 ## کیا کوئی میرے فنڈز کو بازیافت یا منجمد کر سکتا ہے؟ {#no-fund-access}
 
-Unlike a bank, there is no central authority on Ethereum that can freeze, seize, or recover funds. The person holding the private keys (or seed phrase) has full and sole control over a wallet.
+بینک کے برعکس، ایتھیریم پر کوئی مرکزی اتھارٹی نہیں ہے جو فنڈز کو منجمد، ضبط، یا بازیافت کر سکے۔ پرائیویٹ کیز (یا سیڈ فریز) رکھنے والے شخص کا والیٹ پر مکمل اور واحد کنٹرول ہوتا ہے۔
 
-This means:
+اس کا مطلب ہے:
 
-- **No one can recover funds** you sent to the wrong address
-- **No one can reverse** a transaction after it is confirmed
-- **No one can freeze** your wallet or block your transactions
-- **No one can reset your password** if you lose your seed phrase
+- **کوئی بھی ان فنڈز کو بازیافت نہیں کر سکتا** جو آپ نے غلط پتہ پر بھیجے ہیں
+- **کوئی بھی** ٹرانزیکشن کی تصدیق ہونے کے بعد اسے **واپس نہیں کر سکتا**
+- **کوئی بھی** آپ کے والیٹ کو **منجمد نہیں کر سکتا** یا آپ کی ٹرانزیکشنز کو بلاک نہیں کر سکتا
+- اگر آپ اپنا سیڈ فریز کھو دیتے ہیں تو **کوئی بھی آپ کا پاس ورڈ ری سیٹ نہیں کر سکتا**
 
-This is why protecting your seed phrase is critical. It is the only way to access your wallet. If it is lost or stolen, there is no recovery option.
+یہی وجہ ہے کہ اپنے سیڈ فریز کی حفاظت کرنا انتہائی اہم ہے۔ یہ آپ کے والیٹ تک رسائی کا واحد طریقہ ہے۔ اگر یہ کھو جائے یا چوری ہو جائے، تو بازیافت کا کوئی آپشن نہیں ہے۔
 
 <DocLink href="/security/">
-  ایتھیریم سیکیورٹی اور اسکیم سے بچاؤ
+  ایتھیریم کی سیکیورٹی اور اسکیم سے بچاؤ
 </DocLink>
 
-## کیا میں اب بھی ایتھریم کی مائننگ کر سکتا ہوں؟ {#no-mining}
+## کیا میں اب بھی ایتھیریم کی کان کنی کر سکتا ہوں؟ {#no-mining}
 
-Ethereum switched from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glossary/#pos) during [The Merge](/roadmap/merge/) in September 2022. Mining is no longer possible on Ethereum.
+ایتھیریم نے ستمبر <span dir="ltr">2022</span> میں [دی مرج](/roadmap/merge/) کے دوران [ثبوتِ کار (PoW)](/glossary/#pow) سے [حصہ داری کا ثبوت (PoS)](/glossary/#pos) پر منتقلی کی۔ ایتھیریم پر کان کنی اب ممکن نہیں ہے۔
 
-The network is now secured by validators who [stake](/glossary/#staking) ETH. Anyone can participate:
+نیٹ ورک اب ان توثیق کاروں کے ذریعے محفوظ ہے جو ETH [اسٹیک](/glossary/#staking) کرتے ہیں۔ کوئی بھی اس میں حصہ لے سکتا ہے:
 
-- **Solo staking:** Run your own validator with 32 ETH—[learn more](/staking/solo/)
-- **Staking as a service:** Delegate node operation while keeping your keys—[learn more](/staking/saas/)
-- **Pooled staking:** Stake with less than 32 ETH by joining a pool—[learn more](/staking/pools/)
+- **سولو اسٹیکنگ:** <span dir="ltr">32 ETH</span> کے ساتھ اپنا توثیق کار چلائیں—[مزید جانیں](/staking/solo/)
+- **بطور سروس اسٹیکنگ:** اپنی کیز کو اپنے پاس رکھتے ہوئے نوڈ کے آپریشن کو تفویض کریں—[مزید جانیں](/staking/saas/)
+- **مشترکہ اسٹیکنگ:** کسی پول میں شامل ہو کر <span dir="ltr">32 ETH</span> سے کم کے ساتھ اسٹیک کریں—[مزید جانیں](/staking/pools/)
 
 <DocLink href="/staking/">
-  Learn more about staking
+  اسٹیکنگ کے بارے میں مزید جانیں
 </DocLink>
 
-## کیا کوئی ایتھریم سپورٹ ٹیم ہے؟ {#no-support-team}
+## کیا ایتھیریم کی کوئی سپورٹ ٹیم ہے؟ {#no-support-team}
 
-Looking for "official Ethereum support" is similar to looking for "official internet support." This of course doesn't exist, but depending on your issue you may be able to seek out support from your internet service provider, your router hardware manufacturer, or one of the companies behind the device, app or website you're using.
+"آفیشل ایتھیریم سپورٹ" تلاش کرنا بالکل ویسا ہی ہے جیسے "آفیشل انٹرنیٹ سپورٹ" تلاش کرنا۔ یقیناً اس کا کوئی وجود نہیں ہے، لیکن آپ کے مسئلے کی نوعیت کے لحاظ سے آپ اپنے انٹرنیٹ سروس پرووائیڈر، اپنے راؤٹر ہارڈویئر بنانے والے، یا اس ڈیوائس، ایپ یا ویب سائٹ کے پیچھے موجود کسی کمپنی سے مدد حاصل کر سکتے ہیں جسے آپ استعمال کر رہے ہیں۔
 
-Ethereum is similar. There is no company, support team, or help desk behind Ethereum as a whole, but depending on the issue you may find help by reaching out to your _wallet provider_, _staking service_, _exchange_, _financial institution_ or the _team maintaining an app_ you're using.
+ایتھیریم بھی اسی طرح ہے۔ مجموعی طور پر ایتھیریم کے پیچھے کوئی کمپنی، سپورٹ ٹیم، یا ہیلپ ڈیسک نہیں ہے، لیکن مسئلے کے لحاظ سے آپ اپنے _والیٹ پرووائیڈر_، _اسٹیکنگ سروس_، _ایکسچینج_، _مالیاتی ادارے_ یا اس _ٹیم سے رابطہ کر کے مدد حاصل کر سکتے ہیں جو آپ کی استعمال کردہ ایپ کو برقرار رکھتی ہے_۔
 
-Since Ethereum is publicly transparent by default, you may also find [block explorers](/developers/docs/data-and-analytics/block-explorers/), [analytics tools](/developers/tools/analytics/), and other [online investigation resources](/community/support/scams/#analyze) useful in looking into a problem directly.
+چونکہ ایتھیریم بائی ڈیفالٹ عوامی طور پر شفاف ہے، اس لیے آپ کسی مسئلے کو براہ راست دیکھنے کے لیے [بلاک ایکسپلوررز](/developers/docs/data-and-analytics/block-explorers/)، [تجزیاتی ٹولز](/developers/tools/analytics/)، اور دیگر [آن لائن تفتیشی وسائل](/community/support/scams/#analyze) کو بھی مفید پا سکتے ہیں۔
 
-That said, no one from Ethereum or ethereum.org will ever:
+اس کے باوجود، ایتھیریم یا <span dir="ltr">ethereum.org</span> کی طرف سے کوئی بھی شخص کبھی بھی:
 
-- Contact you via direct message
-- Ask for your seed phrase or private keys
-- Ask you to send ETH to verify your wallet
-- Offer to help you recover funds for a fee
+- آپ سے ڈائریکٹ میسج کے ذریعے رابطہ نہیں کرے گا
+- آپ کا سیڈ فریز یا پرائیویٹ کیز نہیں مانگے گا
+- آپ کے والیٹ کی تصدیق کے لیے آپ سے ETH بھیجنے کا نہیں کہے گا
+- فیس کے عوض آپ کے فنڈز کی بازیافت میں مدد کی پیشکش نہیں کرے گا
 
-**Anyone doing any of the above is trying to scam you.**
+**کوئی بھی شخص جو مندرجہ بالا میں سے کچھ بھی کر رہا ہے وہ آپ کے ساتھ دھوکہ دہی (اسکیم) کرنے کی کوشش کر رہا ہے۔**
 
-If you need help, the real communities that can assist are listed on the [support page](/community/support/). These are volunteer-run, open communities—not official support channels.
+اگر آپ کو مدد کی ضرورت ہے، تو وہ حقیقی کمیونٹیز جو مدد کر سکتی ہیں [سپورٹ پیج](/community/support/) پر درج ہیں۔ یہ رضاکاروں کے زیر انتظام، اوپن کمیونٹیز ہیں—آفیشل سپورٹ چینلز نہیں۔
 
 <DocLink href="/security/">
-  ایتھیریم سیکیورٹی اور اسکیم سے بچاؤ
+  ایتھیریم کی سیکیورٹی اور اسکیم سے بچاؤ
 </DocLink>

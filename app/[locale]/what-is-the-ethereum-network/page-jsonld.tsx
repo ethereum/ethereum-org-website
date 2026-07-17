@@ -4,11 +4,10 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  ethereumCommunityOrganization,
-  ethereumFoundationOrganization,
-} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function WhatIsTheEthereumNetworkPageJsonLD({
   locale,
@@ -19,9 +18,7 @@ export default async function WhatIsTheEthereumNetworkPageJsonLD({
   lastEditLocaleTimestamp: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({
-    namespace: "page-what-is-the-ethereum-network",
-  })
+  const t = await getTranslations("page-what-is-the-ethereum-network")
 
   const url = normalizeUrlForJsonLd(locale, `/what-is-the-ethereum-network/`)
 
@@ -31,24 +28,23 @@ export default async function WhatIsTheEthereumNetworkPageJsonLD({
     url: contributor.html_url,
   }))
 
+  const webPageId = { "@id": url }
+  const articleId = { "@id": `${url}#what-is-the-ethereum-network` }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
-        "@id": url,
+        ...webPageId,
         name: t("page-what-is-ethereum-network-meta-title"),
         description: t("page-what-is-ethereum-network-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityOrganization],
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -72,20 +68,20 @@ export default async function WhatIsTheEthereumNetworkPageJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
-        mainEntity: { "@id": `${url}#what-is-the-ethereum-network` },
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
+        mainEntity: articleId,
       },
       {
         "@type": "Article",
-        "@id": `${url}#what-is-the-ethereum-network`,
+        ...articleId,
+        isPartOf: webPageId,
         headline: t("page-what-is-ethereum-network-title"),
         description: t("page-what-is-ethereum-network-meta-description"),
         image: "https://ethereum.org/images/what-is-ethereum-network.png",
-        author: [ethereumCommunityOrganization],
-        publisher: ethereumFoundationOrganization,
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
         contributor: contributorList,
-        reviewedBy: ethereumFoundationOrganization,
         about: {
           "@type": "Thing",
           name: "Ethereum Network",

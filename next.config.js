@@ -1,10 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
 
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
-})
-
 const createNextIntlPlugin = require("next-intl/plugin")
 
 const { withSentryConfig } = require("@sentry/nextjs")
@@ -30,14 +26,26 @@ const experimental = LIMIT_CPUS
   : {}
 
 /** @type {import('next').NextConfig} */
-module.exports = (phase, { defaultConfig }) => {
+module.exports = (phase) => {
   let nextConfig = {
-    ...defaultConfig,
     reactStrictMode: true,
     env: {
-      // Context is used to determine the environment for Sentry
+      // Netlify build-time vars inlined so they're available at SSR runtime.
       // ref. https://docs.netlify.com/configure-builds/environment-variables/#build-metadata
       NEXT_PUBLIC_CONTEXT: process.env.CONTEXT,
+      // Resolve site URL once at build time. NEXT_PUBLIC_SITE_URL (set in
+      // netlify.toml for dev/staging) takes precedence, then Netlify's
+      // deploy-specific URLs, falling back to the production domain.
+      NEXT_PUBLIC_SITE_URL:
+        process.env.NEXT_PUBLIC_SITE_URL ||
+        process.env.DEPLOY_PRIME_URL ||
+        process.env.DEPLOY_URL ||
+        process.env.URL ||
+        "https://ethereum.org",
+      // Inline IS_VISUAL_TEST into the client bundle so client-side shuffles
+      // (e.g. useStakingProductsCardGrid) can opt out of randomization during
+      // visual test builds. Server code reads it from process.env directly.
+      IS_VISUAL_TEST: process.env.IS_VISUAL_TEST,
     },
     webpack: (config) => {
       config.module.rules.push({
@@ -88,8 +96,41 @@ module.exports = (phase, { defaultConfig }) => {
 
       return config
     },
+    // Turbopack loader equivalents for the webpack() config above
+    turbopack: {
+      rules: {
+        "*.yaml": { loaders: ["yaml-loader"], as: "*.js" },
+        "*.yml": { loaders: ["yaml-loader"], as: "*.js" },
+        "*.svg": { loaders: ["@svgr/webpack"], as: "*.js" },
+        "*.md": { loaders: ["raw-loader"], as: "*.js" },
+        "*.mp3": { as: "*.static" },
+      },
+      // Suppress file-tracing warnings from the MDX pipeline. These files
+      // use dynamic path.join/readFile to read markdown content at runtime.
+      // outputFileTracingExcludes already prevents over-bundling.
+      ignoreIssue: [
+        {
+          path: "**/src/lib/**",
+          description: /Overly broad patterns/,
+        },
+        // "Encountered unexpected file in NFT list" surfaces on the project
+        // root (e.g. `./next.config.js`) even though the underlying fs.*
+        // calls live in src/lib/md/*. Match anywhere so it's suppressed.
+        {
+          path: "**",
+          title: /Encountered unexpected file/,
+        },
+      ],
+    },
+    // Replaces config.externals.push("pino-pretty", "lokijs", "encoding")
+    serverExternalPackages: ["pino-pretty", "lokijs", "encoding"],
     trailingSlash: true,
     images: {
+      // Disable Next's on-disk image LRU: its eager mkdir('.next/cache/images')
+      // crashes on Netlify's read-only Lambda FS as an unhandled rejection.
+      // Images are served via Netlify's image CDN (NEXT_FORCE_EDGE_IMAGES) anyway.
+      maximumDiskCacheSize: 0,
+      qualities: [5, 10, 20, 35, 40, 75, 90, 100],
       deviceSizes: [640, 750, 828, 1080, 1200, 1504, 1920],
       remotePatterns: [
         {
@@ -158,6 +199,14 @@ module.exports = (phase, { defaultConfig }) => {
       }
 
       return [
+        // Whitepaper PDF redirect (no locale prefix)
+        {
+          source:
+            "/669c9e2e2027310b6b3cdce6e1c52962/Ethereum_Whitepaper_-_Buterin_2014.pdf",
+          destination:
+            "/content/whitepaper/whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf",
+          permanent: true,
+        },
         // All primary redirects
         ...redirects.flatMap(([source, destination, permanent]) =>
           createRedirect(source, destination, permanent)
@@ -170,54 +219,100 @@ module.exports = (phase, { defaultConfig }) => {
     ...nextConfig,
     experimental: {
       ...experimental,
-      instrumentationHook: true,
+      // Restore client-side Router Cache durations to Next 14 defaults
+      staleTimes: { dynamic: 30, static: 300 },
     },
   }
 
   if (phase !== PHASE_DEVELOPMENT_SERVER) {
     nextConfig = {
       ...nextConfig,
-      experimental: {
-        ...nextConfig.experimental,
-        outputFileTracingExcludes: {
-          "*": [
-            /**
-             * Exclude these paths from the trace output to avoid bloating the
-             * Netlify functions bundle.
-             *
-             * @see https://github.com/orgs/vercel/discussions/103#discussioncomment-5427097
-             * @see https://nextjs.org/docs/app/api-reference/next-config-js/output#automatically-copying-traced-files
-             */
-            "node_modules/@swc/core-linux-x64-gnu",
-            "node_modules/@swc/core-linux-x64-musl",
-            "node_modules/@esbuild/linux-x64",
-            "node_modules/@sentry/cli/**/*",
-            "node_modules/canvas/**/*",
-            "node_modules/@playwright/**/*",
-            "src/data",
-            "public/**/*.jpg",
-            "public/**/*.png",
-            "public/**/*.webp",
-            "public/**/*.svg",
-            "public/**/*.gif",
-            "public/**/*.json",
-            "public/**/*.txt",
-            "public/**/*.xml",
-            "public/**/*.pdf",
-            "public/**/*.mp3",
-            "public/audio/**",
-            "public/fonts",
-            "public/images",
-            "public/content",
-            // Exclude source maps generated by Sentry to reduce function bundle size
-            ".next/server/**/*.map",
-          ],
-        },
+      outputFileTracingExcludes: {
+        "*": [
+          /**
+           * Exclude these paths from the trace output to avoid bloating the
+           * Netlify functions bundle.
+           *
+           * @see https://github.com/orgs/vercel/discussions/103#discussioncomment-5427097
+           * @see https://nextjs.org/docs/app/api-reference/next-config-js/output#automatically-copying-traced-files
+           */
+          "node_modules/@swc/core-linux-x64-gnu",
+          "node_modules/@swc/core-linux-x64-musl",
+          "node_modules/@esbuild/linux-x64",
+          "node_modules/@sentry/cli/**/*",
+          "node_modules/canvas/**/*",
+          "node_modules/@playwright/**/*",
+          // sharp's musl native binaries never load on Netlify's glibc Lambda.
+          // The Netlify plugin already strips them in CI (but not in local
+          // `netlify build`), so excluding here mainly keeps local bundle
+          // measurements representative of production; harmless in CI. sharp
+          // keeps its glibc binary for build-time plaiceholder use.
+          "**/@img+sharp-libvips-linuxmusl-x64@*/**",
+          "**/@img+sharp-linuxmusl-x64@*/**",
+          "src/data",
+          "public/**/*.jpg",
+          "public/**/*.png",
+          "public/**/*.webp",
+          "public/**/*.svg",
+          "public/**/*.gif",
+          "public/**/*.mp4",
+          "public/**/*.json",
+          "public/**/*.txt",
+          "public/**/*.xml",
+          "public/**/*.pdf",
+          "public/**/*.mp3",
+          "public/audio/**",
+          "public/videos",
+          "public/fonts",
+          "public/images",
+          "public/content",
+          // Dev-only files that get traced from the package root but are never
+          // read by the SSR handler at runtime. Keep dir excludes anchored with
+          // "/**" -- Turbopack matches these globs as substrings during trace
+          // pruning, so a bare "docs" also matches the "@docsearch" SSR chunk
+          // and drops it, 502ing ISR pages that use search.
+          "tests/**",
+          "docs/**",
+          "README.md",
+          ".all-contributorsrc",
+          "tsconfig.tsbuildinfo",
+          "deno.lock",
+          "AGENTS.md",
+          // Exclude source maps generated by Sentry to reduce function bundle size
+          ".next/server/**/*.map",
+          // Translation manifests (canonical name in src/scripts/intl-pipeline/constants.ts)
+          ".manifests",
+        ],
+      },
+      /**
+       * Re-include MD that hub/index routes enumerate at runtime. These pages
+       * read from `public/content/` and may be opted into ISR via other data
+       * getters; without per-route includes the global `public/content` exclude
+       * above leaves those reads empty inside the Netlify function.
+       *
+       * Keys match the normalized App Router route via picomatch with
+       * `contains: true`. Bracketed segments are picomatch character classes,
+       * so the `[locale]` brackets must be escaped to match literally.
+       */
+      outputFileTracingIncludes: {
+        // Homepage "Latest updates" widget reads builder posts at runtime.
+        "\\[locale\\]": [
+          "./public/content/latest/**/*.md",
+          "./public/content/translations/*/latest/**/*.md",
+        ],
+        "\\[locale\\]/latest": [
+          "./public/content/latest/**/*.md",
+          "./public/content/translations/*/latest/**/*.md",
+        ],
+        "\\[locale\\]/developers": [
+          "./public/content/latest/**/*.md",
+          "./public/content/translations/*/latest/**/*.md",
+        ],
       },
     }
   }
 
-  return withBundleAnalyzer(withNextIntl(nextConfig))
+  return withNextIntl(nextConfig)
 }
 
 module.exports = withSentryConfig(module.exports, {
@@ -225,6 +320,4 @@ module.exports = withSentryConfig(module.exports, {
   project: "ethorg",
   silent: true,
   widenClientFileUpload: true,
-  disableLogger: true,
-  automaticVercelMonitors: true,
 })

@@ -4,8 +4,6 @@ lang: en
 description: Our criteria for listing developer tools on ethereum.org
 ---
 
-# Adding developer tools {#contributing-to-ethereumorg-}
-
 We want to make sure we list the best developer resources possible so that people can build with confidence and have the support they need.
 
 If there's a helpful developer tool that we've missed, feel free to suggest it somewhere appropriate.

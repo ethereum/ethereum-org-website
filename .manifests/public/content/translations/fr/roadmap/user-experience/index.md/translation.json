@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "locale": "fr",
+  "translatedAt": "2026-06-18T00:47:54.199Z",
+  "englishManifestHash": "ca853e6b7a3f",
+  "placeholderOrder": [
+    "LINK-769e4b",
+    "LINK-4e5241",
+    "LINK-7cba44",
+    "LINK-d89cb7",
+    "LINK-d3df1f",
+    "LINK-f50767",
+    "LINK-c6d1a0",
+    "LINK-de245a",
+    "LINK-3a96f6",
+    "LINK-47943c",
+    "LINK-be31f6"
+  ],
+  "placeholderMap": {
+    "LINK-769e4b": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#key"
+      }
+    },
+    "LINK-4e5241": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#wallet"
+      }
+    },
+    "LINK-7cba44": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#web2"
+      }
+    },
+    "LINK-d89cb7": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#smart-contract"
+      }
+    },
+    "LINK-d3df1f": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#node"
+      }
+    },
+    "LINK-f50767": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#blockchain"
+      }
+    },
+    "LINK-c6d1a0": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/statelessness"
+      }
+    },
+    "LINK-de245a": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/statelessness/#data-expiry"
+      }
+    },
+    "LINK-3a96f6": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/light-clients/"
+      }
+    },
+    "LINK-47943c": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/verkle-trees/"
+      }
+    },
+    "LINK-be31f6": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/pbs/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T00:47:54.199Z",
+      "status": "success"
+    }
+  }
+}

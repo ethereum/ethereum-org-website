@@ -1,0 +1,245 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/ethereum-institutional-privacy-panel/index.md",
+  "generatedAt": "2026-04-28T23:28:17.630Z",
+  "rootHash": "e1a18c247b86",
+  "tree": {
+    "contentHash": "30b6f3d9e117",
+    "anchorHash": "08993de9f932",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "214ac9c2ec28",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "b1ddec557788",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d517fc85a43d"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "f2f2a5a007c8"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "ff81f867f4d0"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d21f85ea3816"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "320e00e73a7d"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "75a4a556e1f3"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "1339943f0427"
+      },
+      "prose:1": {
+        "contentHash": "6894072ac167",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "8861474c73ee"
+      },
+      "prose:2": {
+        "contentHash": "e73c1247f2ad",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "introduction-to-institutional-privacy-task-force-003": {
+        "contentHash": "635dfdc0713c",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "291898eecd17",
+        "children": {
+          "_label": {
+            "contentHash": "291898eecd17",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "d023e3867ea1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "panel-introductions-and-institutional-problems-500": {
+        "contentHash": "87e124e0615f",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "6da67140a145",
+        "children": {
+          "_label": {
+            "contentHash": "6da67140a145",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "7db15aa143e9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "concrete-workflows-and-storage-1007": {
+        "contentHash": "0fde391b5d1b",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "70c243e98adb",
+        "children": {
+          "_label": {
+            "contentHash": "70c243e98adb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "1fcec22a0de0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "non-negotiable-requirements-1526": {
+        "contentHash": "276700081463",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "6b8b6656ed90",
+        "children": {
+          "_label": {
+            "contentHash": "6b8b6656ed90",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "b052231b86bb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "trade-offs-and-global-liquidity-1810": {
+        "contentHash": "7f2dd012d4ac",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "a349f70affc1",
+        "children": {
+          "_label": {
+            "contentHash": "a349f70affc1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "d2c6a921cda8",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "system-trust-and-adoption-drivers-2047": {
+        "contentHash": "54dcf59b296a",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "11ec6b41a57e",
+        "children": {
+          "_label": {
+            "contentHash": "11ec6b41a57e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "e677441faeaf",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "looking-ahead-to-2026-2315": {
+        "contentHash": "f59c25aebe6b",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "6b197a45a40a",
+        "children": {
+          "_label": {
+            "contentHash": "6b197a45a40a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "6a2e2552b8fe",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "closing-thoughts-2805": {
+        "contentHash": "86ea14d4ef83",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "fc9ecce288e2",
+        "children": {
+          "_label": {
+            "contentHash": "fc9ecce288e2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "590345d66da9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "introduction-to-institutional-privacy-task-force-003",
+      "panel-introductions-and-institutional-problems-500",
+      "concrete-workflows-and-storage-1007",
+      "non-negotiable-requirements-1526",
+      "trade-offs-and-global-liquidity-1810",
+      "system-trust-and-adoption-drivers-2047",
+      "looking-ahead-to-2026-2315",
+      "closing-thoughts-2805"
+    ]
+  },
+  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+}

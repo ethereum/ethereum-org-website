@@ -1,3 +1,6 @@
+"use client"
+import { useTranslations } from "next-intl"
+
 import { ExtendedRollup, FilterOption, Lang } from "@/lib/types"
 
 import { useNetworkColumns } from "@/components/Layer2NetworksTable/hooks/useNetworkColumns"
@@ -10,8 +13,6 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import DataTable from "../DataTable"
 
-import useTranslation from "@/hooks/useTranslation"
-
 const Layer2NetworksTable = ({
   layer2Data,
   locale,
@@ -22,7 +23,7 @@ const Layer2NetworksTable = ({
   mainnetData: ExtendedRollup
 }) => {
   const networkFilterOptions = useNetworkFilters()
-  const { t } = useTranslation("page-layer-2-networks")
+  const t = useTranslations("page-layer-2-networks")
 
   const networks = [mainnetData, ...layer2Data].map((network) => ({
     ...network,

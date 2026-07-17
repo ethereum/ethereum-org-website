@@ -1,0 +1,380 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/contributing/translation-program/playbook/index.md",
+  "generatedAt": "2026-06-08T08:39:47.463Z",
+  "rootHash": "4a72ebf3a62c",
+  "tree": {
+    "contentHash": "17d216e21975",
+    "anchorHash": "7c7fc743a170",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "d5c47f34c8a2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:metaTitle": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "66fdb3fb5c87"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:description": {
+        "contentHash": "196d3f913af9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prose:0": {
+        "contentHash": "da251504dd89",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "content-management": {
+        "contentHash": "fe39a754466a",
+        "anchorHash": "6ec5b038a447",
+        "labelHash": "cc0bd7b0a47c",
+        "children": {
+          "_label": {
+            "contentHash": "cc0bd7b0a47c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "1c0be1ab4d63",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "625c1a856049",
+            "anchorHash": "ac21f1ab2bf8"
+          },
+          "link:1": {
+            "contentHash": "11b29df76cb9",
+            "anchorHash": "33e4cd20093c"
+          },
+          "translation-management-software": {
+            "contentHash": "07ca9b0feaeb",
+            "anchorHash": "1ceb78da317d",
+            "labelHash": "c60eb4f1c5f0",
+            "children": {
+              "_label": {
+                "contentHash": "c60eb4f1c5f0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:13": {
+                "contentHash": "235b7707137e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "dae45f8c8e6b",
+                "anchorHash": "cad9ec2c1307"
+              },
+              "prose:14": {
+                "contentHash": "db501609bf94",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "fb1348af289b",
+                "anchorHash": "27209d490243"
+              },
+              "prose:15": {
+                "contentHash": "4814cfd71e24",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "fccaeafefaaa",
+                "anchorHash": "f7b10581bb12"
+              },
+              "prose:16": {
+                "contentHash": "b892f80c6275",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "159410b8c9be",
+                "anchorHash": "2ea7af25f27a"
+              },
+              "prose:17": {
+                "contentHash": "e58beffe0084",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "949b8e498994",
+                "anchorHash": "3513363c7cf4"
+              },
+              "prose:18": {
+                "contentHash": "0107f7a3734b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:5": {
+                "contentHash": "f337d1856588",
+                "anchorHash": "f60d6b33061e"
+              },
+              "prose:19": {
+                "contentHash": "dbf451986a6b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:6": {
+                "contentHash": "3ac7ea0618fe",
+                "anchorHash": "2cdb74a65efc"
+              },
+              "prose:20": {
+                "contentHash": "060a5bc86fee",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:7": {
+                "contentHash": "d58cb1cf0e31",
+                "anchorHash": "57e544bc3bb9"
+              },
+              "prose:21": {
+                "contentHash": "e0021570dd5e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:8": {
+                "contentHash": "fa40b97142ce",
+                "anchorHash": "8f1a71b615eb"
+              },
+              "prose:22": {
+                "contentHash": "b1d800aab3b8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:9": {
+                "contentHash": "af704f716a63",
+                "anchorHash": "5c810212cff8"
+              },
+              "link:10": {
+                "contentHash": "4dd29ef27796",
+                "anchorHash": "738d448748a2"
+              },
+              "link:11": {
+                "contentHash": "40d5643cf81d",
+                "anchorHash": "56368c87a259"
+              },
+              "link:12": {
+                "contentHash": "823110eacdc5",
+                "anchorHash": "45dccc98d86d"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:13",
+              "link:0",
+              "prose:14",
+              "link:1",
+              "prose:15",
+              "link:2",
+              "prose:16",
+              "link:3",
+              "prose:17",
+              "link:4",
+              "prose:18",
+              "link:5",
+              "prose:19",
+              "link:6",
+              "prose:20",
+              "link:7",
+              "prose:21",
+              "link:8",
+              "prose:22",
+              "link:9",
+              "link:10",
+              "link:11",
+              "link:12"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "link:1",
+          "translation-management-software"
+        ]
+      },
+      "workflow": {
+        "contentHash": "0c25aafb3407",
+        "anchorHash": "d1bc59cf3051",
+        "labelHash": "2e2d5c5649b7",
+        "children": {
+          "_label": {
+            "contentHash": "2e2d5c5649b7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "fe04a1d2b491",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "0a56522100e5",
+            "anchorHash": "810bd71ff229"
+          },
+          "link:1": {
+            "contentHash": "5953ad4ae833",
+            "anchorHash": "118be871c995"
+          },
+          "link:2": {
+            "contentHash": "78d658518e4f",
+            "anchorHash": "c4b067e140c7"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "link:1",
+          "link:2"
+        ]
+      },
+      "terminology-management": {
+        "contentHash": "d09e25c5062b",
+        "anchorHash": "653ecf5284bd",
+        "labelHash": "6c1491a112e6",
+        "children": {
+          "_label": {
+            "contentHash": "6c1491a112e6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "4dde4789aea1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f10bd054c7ff",
+            "anchorHash": "d7193ffa17c7"
+          },
+          "link:1": {
+            "contentHash": "c3b9e1c8d038",
+            "anchorHash": "3e4997b8a839"
+          },
+          "link:2": {
+            "contentHash": "2c7a9cec1025",
+            "anchorHash": "3a39a22bef95"
+          },
+          "tm-and-glossary": {
+            "contentHash": "efba6c5f31c4",
+            "anchorHash": "dc6e7fce0f6b",
+            "labelHash": "962eb2d8273d",
+            "children": {
+              "_label": {
+                "contentHash": "962eb2d8273d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:4": {
+                "contentHash": "43ba07c00c36",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "1898957e87eb",
+                "anchorHash": "b51df641e796"
+              },
+              "link:1": {
+                "contentHash": "8475faa72445",
+                "anchorHash": "2780e68b86e1"
+              },
+              "prose:5": {
+                "contentHash": "0054c068534a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "6f58dce432f0",
+                "anchorHash": "915e170d5774"
+              },
+              "link:3": {
+                "contentHash": "fee3aa112974",
+                "anchorHash": "8b1dd898f1be"
+              },
+              "prose:6": {
+                "contentHash": "ef5e58737c7f",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:4",
+              "link:0",
+              "link:1",
+              "prose:5",
+              "link:2",
+              "link:3",
+              "prose:6"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "link:1",
+          "link:2",
+          "tm-and-glossary"
+        ]
+      },
+      "translator-outreach": {
+        "contentHash": "1ff3d33ebeac",
+        "anchorHash": "eeec9e9e8c10",
+        "labelHash": "006bcbda7494",
+        "children": {
+          "_label": {
+            "contentHash": "006bcbda7494",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "6b6313c99532",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "c6f94c8c336e",
+            "anchorHash": "43aa835f3ab9"
+          },
+          "prose:3": {
+            "contentHash": "528c2a1bb376",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "d5c4ebdd76d4",
+            "anchorHash": "f2a185ec6ca6"
+          },
+          "prose:4": {
+            "contentHash": "0deaa1706971",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "conclusion": {
+        "contentHash": "77f52042997c",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "89db2ad881f2",
+        "children": {
+          "_label": {
+            "contentHash": "89db2ad881f2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "597192aa81d7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:metaTitle",
+      "frontmatter:lang",
+      "frontmatter:description",
+      "prose:0",
+      "content-management",
+      "workflow",
+      "terminology-management",
+      "translator-outreach",
+      "conclusion"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

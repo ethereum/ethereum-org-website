@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "locale": "uk",
+  "translatedAt": "2026-06-18T21:22:26.724Z",
+  "englishManifestHash": "99dc187b09c6",
+  "placeholderOrder": [
+    "LINK-0a3367",
+    "LINK-e0099c",
+    "LINK-6547c1",
+    "LINK-8a4f66",
+    "LINK-22fb3c",
+    "LINK-a5a5eb",
+    "LINK-47865e",
+    "LINK-4f1c59",
+    "LINK-89db58",
+    "LINK-735625",
+    "LINK-2abfba",
+    "LINK-025d52",
+    "LINK-d4c207",
+    "LINK-e5fad7",
+    "LINK-27492e",
+    "CODE-75857a",
+    "CODE-ad5736",
+    "LINK-8efafa",
+    "LINK-60076a",
+    "LINK-65c4de"
+  ],
+  "placeholderMap": {
+    "CODE-75857a": {
+      "type": "inline-code",
+      "values": {
+        "content": "from"
+      }
+    },
+    "CODE-ad5736": {
+      "type": "inline-code",
+      "values": {
+        "content": "100"
+      }
+    },
+    "LINK-0a3367": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/intro-to-ethereum/"
+      }
+    },
+    "LINK-e0099c": {
+      "type": "link",
+      "values": {
+        "url": "https://3xpl.com/ethereum"
+      }
+    },
+    "LINK-6547c1": {
+      "type": "link",
+      "values": {
+        "url": "https://beaconcha.in/"
+      }
+    },
+    "LINK-8a4f66": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/"
+      }
+    },
+    "LINK-22fb3c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/woxjro/lazy-etherscan"
+      }
+    },
+    "LINK-a5a5eb": {
+      "type": "link",
+      "values": {
+        "url": "https://otterscan.io/"
+      }
+    },
+    "LINK-47865e": {
+      "type": "link",
+      "values": {
+        "url": "https://blockchair.com/ethereum"
+      }
+    },
+    "LINK-4f1c59": {
+      "type": "link",
+      "values": {
+        "url": "https://www.chainlens.com/"
+      }
+    },
+    "LINK-89db58": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.dex.guru/"
+      }
+    },
+    "LINK-735625": {
+      "type": "link",
+      "values": {
+        "url": "https://www.etherchain.org/"
+      }
+    },
+    "LINK-2abfba": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/"
+      }
+    },
+    "LINK-025d52": {
+      "type": "link",
+      "values": {
+        "url": "https://ethplorer.io/"
+      }
+    },
+    "LINK-d4c207": {
+      "type": "link",
+      "values": {
+        "url": "https://ethseer.io"
+      }
+    },
+    "LINK-e5fad7": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ethvm.com/"
+      }
+    },
+    "LINK-27492e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.oklink.com/eth"
+      }
+    },
+    "LINK-8efafa": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-60076a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts/"
+      }
+    },
+    "LINK-65c4de": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networks/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T21:22:26.724Z",
+      "status": "success"
+    }
+  }
+}

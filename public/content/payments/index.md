@@ -4,13 +4,13 @@ metaTitle: Payments on Ethereum
 description: An overview of payments on Ethereum
 lang: en
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
 alt: An Eth logo being displayed along with giving hands.
-summaryPoint1: A world where money moves as freely as information
-summaryPoint2: Open and global, enabling borderless transactions for everyone
-summaryPoint3: Payments received within a minute
+summaryPoints:
+  - "A world where money moves as freely as information"
+  - "Open and global, enabling borderless transactions for everyone"
+  - "Payments received within a minute"
 ---
 
 Every day, millions of people face the same challenge: moving money across borders is slow, expensive, and often frustrating. A freelancer in Bali waits days for payment to clear from their New York client. This particularly affects people in regions with limited banking infrastructure, making it difficult to participate in the global economy.
@@ -27,11 +27,11 @@ This isn't a far-off dream—it's happening today on Ethereum. While traditional
 
 For millions of people working abroad, sending money back home is a regular necessity. Traditional remittance services often come with high fees and slow processing times. Ethereum offers a compelling alternative.
 
-<CardGrid>
+<Grid>
   <Card title="Cheaper Fees" emoji=":money_with_wings:" description="Remittance services charge up to $14 fees on average. Ethereum transactions can often be completed under $0.01."/>
   <Card title="Faster Transfers" emoji="📶" description="International wire transfers take several days to process. Ethereum transactions are settled in minutes." />
   <Card title="Open to anyone" emoji="🌎" description="You only need an internet connection and a wallet app to send or receive Ether." />
-</CardGrid>
+</Grid>
 
 ## Access to global currencies {#access-to-global-currencies}
 
@@ -146,7 +146,7 @@ There were also similar response times for tragedies that happened in India and 
 
 </div>
 
-## Ethereum vs fiat {#ethereum-vs-fiat}
+## Crypto payments on Ethereum vs. fiat payments {#ethereum-vs-fiat}
 
 To truly appreciate the impact of Ethereum payments, it's worth comparing them to traditional fiat currencies:
 

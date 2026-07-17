@@ -11,7 +11,7 @@ An archive node is an instance of an [Ethereum](/) client configured to build an
 
 You should understand the concept of an [Ethereum node](/developers/docs/nodes-and-clients/), [its architecture](/developers/docs/nodes-and-clients/node-architecture/), [sync strategies](/developers/docs/nodes-and-clients/#sync-modes), practices of [running](/developers/docs/nodes-and-clients/run-a-node/) and [using them](/developers/docs/apis/json-rpc/).
 
-## What is an archive node
+## What is an archive node {#what-is-an-archive-node}
 
 To grasp the importance of an archive node, let's clarify the concept of "state." Ethereum can be referred to as _transaction-based state machine_. It consists of accounts and applications executing transactions which are changing their state. The global data with information about each account and contract is stored in a trie database called state. This is handled by the execution layer (EL) client and includes:
 
@@ -29,7 +29,7 @@ However, this means that accessing a historical state on a full node consumes a 
 
 It's important to note that the network does not depend on archive nodes to keep and provide all historical data. As mentioned above, all historical interim states can be derived on a full node. Transactions are stored by any full node (currently less than 400G) and can be replayed to build the whole archive.
 
-### Use cases
+### Use cases {#use-cases}
 
 Regular usage of Ethereum like sending transactions, deploying contracts, verifying consensus, etc. does not require access to historical states. Users never need an archive node for a standard interaction with the network.
 
@@ -48,17 +48,17 @@ As explained above, a full node would need to generate this data by EVM executio
 
 There are various free [services](/developers/docs/nodes-and-clients/nodes-as-a-service/) that also allow access to historical data. As it is more demanding to run an archive node, this access is mostly limited and works only for occasional access. If your project requires constant access to historical data, you should consider running one yourself.
 
-## Implementations and usage
+## Implementations and usage {#implementations-and-usage}
 
 Archive node in this context means data served by user facing execution layer clients as they handle the state database and provide JSON-RPC endpoints. Configuration options, sync time and database size may vary by client. For details, please refer to the documentation provided by your client.
 
 Before starting your own archive node, learn about the differences between the clients and especially the various [hardware requirements](/developers/docs/nodes-and-clients/run-a-node/#requirements). Most clients are not optimized for this feature and their archives require more than 12TB of space. In contrast, implementations like Erigon can store the same data in under 3TB which makes them the most effective way of running an archive node.
 
-## Recommended practices
+## Recommended practices {#recommended-practices}
 
 Apart from general [recommendations for running a node](/developers/docs/nodes-and-clients/run-a-node/), an archive node may be more demanding on hardware and maintenance. Considering Erigons [key features](https://github.com/ledgerwatch/erigon#key-features), the most practical approach is using the [Erigon](/developers/docs/nodes-and-clients/#erigon) client implementation.
 
-### Hardware
+### Hardware {#hardware}
 
 Always make sure to verify hardware requirements for a given mode in a client's documentation.
 The biggest requirement for archive nodes is the disk space. Depending on client, it varies from 3TB to 12TB. Even if HDD might be considered a better solution for large amounts of data, syncing it and constantly updating the head of the chain will require SSD drives. [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) drives are good enough but it should be a reliable quality, at least [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). Disks can be fitted into a desktop computer or a server with enough slots. Such dedicated devices are ideal for running high uptime node. It's totally possible to run it on a laptop but the portability will come at an additional cost.

@@ -2,13 +2,7 @@ import { MDXRemoteProps } from "next-mdx-remote"
 import readingTime, { ReadTimeResults } from "reading-time"
 
 import type { Layout } from "@/lib/types"
-import {
-  CommitHistory,
-  FileContributor,
-  Frontmatter,
-  Lang,
-  ToCItem,
-} from "@/lib/types"
+import { FileContributor, Frontmatter, Lang, ToCItem } from "@/lib/types"
 
 import { getMarkdownFileContributorInfo } from "@/lib/utils/contributors"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -18,22 +12,19 @@ import { getLayoutFromSlug } from "../utils/layout"
 import { compile, extractLayoutFromMarkdown } from "./compile"
 import { importMd } from "./import"
 
-const commitHistoryCache: CommitHistory = {}
-
 interface GetPageDataParams {
   locale: string
   slug: string
   baseComponents: MDXRemoteProps["components"]
   componentsMapping: Record<Layout, MDXRemoteProps["components"]>
   layout?: Layout
-  scope?: Record<string, unknown>
 }
 
 interface PageData {
   content: React.ReactNode
   frontmatter: Frontmatter
   tocItems: ToCItem[]
-  lastEditLocaleTimestamp: string
+  lastEditLocaleTimestamp?: string
   contributors: FileContributor[]
   isTranslated: boolean
   timeToRead: ReadTimeResults
@@ -45,7 +36,6 @@ export async function getPageData({
   baseComponents,
   componentsMapping,
   layout: layoutFromProps,
-  scope,
 }: GetPageDataParams): Promise<PageData> {
   const slugArray = slug.split("/")
 
@@ -67,7 +57,6 @@ export async function getPageData({
     slugArray,
     locale,
     components,
-    scope,
   })
 
   // Process TOC items
@@ -81,15 +70,13 @@ export async function getPageData({
     await getMarkdownFileContributorInfo(
       slug,
       locale,
-      frontmatter.lang as string,
-      commitHistoryCache
+      frontmatter.lang as string
     )
 
-  // Format timestamp
-  const lastEditLocaleTimestamp = getLocaleTimestamp(
-    locale as Lang,
-    lastUpdatedDate
-  )
+  // Format timestamp (undefined when contributor data is missing)
+  const lastEditLocaleTimestamp = lastUpdatedDate
+    ? getLocaleTimestamp(locale as Lang, lastUpdatedDate)
+    : undefined
 
   const timeToRead = readingTime(markdown)
 

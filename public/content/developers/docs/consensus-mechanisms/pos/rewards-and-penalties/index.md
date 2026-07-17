@@ -16,7 +16,7 @@ Read on for more details...
 
 ## Rewards and penalties {#rewards}
 
-### Rewards {#rewards}
+### Rewards {#rewards-2}
 
 Validators receive rewards when they make votes that are consistent with the majority of other validators, when they propose blocks, and when they participate in sync committees. The value of the rewards in each epoch are calculated from a `base_reward`. This is the base unit that other rewards are calculated from. The `base_reward` represents the average reward received by a validator under optimal conditions per epoch. This is calculated from the validator's effective balance and the total number of active validators as follows:
 

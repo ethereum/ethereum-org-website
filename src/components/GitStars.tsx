@@ -4,6 +4,8 @@ import Github from "@/components/icons/github.svg"
 import { Center, Flex } from "@/components/ui/flex"
 import { BaseLink, LinkProps } from "@/components/ui/Link"
 
+import { numberFormat } from "@/lib/utils/numbers"
+
 import Emoji from "./Emoji"
 
 type GitHubRepo = {
@@ -18,8 +20,8 @@ type GitStarsProps = Omit<LinkProps, "href" | "href"> & {
 
 const GitStars = ({ gitHubRepo, hideStars, ...props }: GitStarsProps) => {
   const locale = useLocale()
-  // Use Intl.NumberFormat to format the number for locale
-  const starsString = Intl.NumberFormat(locale, {
+  // Use numberFormat to format the number for locale
+  const starsString = numberFormat(locale, {
     compactDisplay: "short",
   }).format(gitHubRepo.stargazerCount)
 

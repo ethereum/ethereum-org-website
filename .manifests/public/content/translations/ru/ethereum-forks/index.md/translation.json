@@ -1,0 +1,1475 @@
+{
+  "version": 1,
+  "locale": "ru",
+  "translatedAt": "2026-06-08T09:21:47.494Z",
+  "englishManifestHash": "5e14a19a4102",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "COMPONENT-b7a7e2",
+    "LINK-2ed744",
+    "LINK-764cb3",
+    "LINK-02a392",
+    "HTMLTAG-0f4f12",
+    "COMPONENT-8d3bae",
+    "LINK-3e1978",
+    "LINK-a9541d",
+    "LINK-a96a41",
+    "LINK-bdb232",
+    "LINK-a7d22d",
+    "LINK-14c4d2",
+    "LINK-e49885",
+    "LINK-233c84",
+    "LINK-a8e435",
+    "LINK-b342f2",
+    "LINK-ceeb6c",
+    "LINK-d75cc3",
+    "LINK-14f434",
+    "LINK-912de0",
+    "LINK-14f434",
+    "LINK-99daf2",
+    "LINK-f0041b",
+    "LINK-750e06",
+    "LINK-75964c",
+    "COMPONENT-af450a",
+    "HTMLTAG-7f962e",
+    "HTMLTAG-bd6eaa",
+    "HTMLTAG-eb5770",
+    "HTMLTAG-f3a4a0",
+    "HTMLTAG-f6dd64",
+    "HTMLTAG-51f6a2",
+    "HTMLTAG-2ca9ae",
+    "HTMLTAG-da5059",
+    "HTMLTAG-15147f",
+    "HTMLTAG-92fa00",
+    "HTMLTAG-0e2349",
+    "LINK-2c84c3",
+    "LINK-bc1b88",
+    "LINK-b0687f",
+    "LINK-1616f0",
+    "COMPONENT-0f0d9b",
+    "HTMLTAG-58c800",
+    "HTMLTAG-6d87c6",
+    "HTMLTAG-778db4",
+    "HTMLTAG-8787b0",
+    "HTMLTAG-7a52d6",
+    "HTMLTAG-715bd2",
+    "LINK-073a38",
+    "LINK-8d9a8b",
+    "LINK-6aface",
+    "LINK-763167",
+    "COMPONENT-8f517f",
+    "HTMLTAG-6d87c6",
+    "HTMLTAG-778db4",
+    "HTMLTAG-d97b3c",
+    "HTMLTAG-d109a3",
+    "HTMLTAG-5aae28",
+    "LINK-d309d1",
+    "LINK-69f450",
+    "COMPONENT-4daef0",
+    "HTMLTAG-b04956",
+    "HTMLTAG-9835bd",
+    "HTMLTAG-950206",
+    "HTMLTAG-e560ba",
+    "HTMLTAG-1f6756",
+    "LINK-1f659d",
+    "LINK-8ee4c0",
+    "LINK-0178e8",
+    "LINK-893c2b",
+    "LINK-14f434",
+    "LINK-8d5f08",
+    "LINK-c705fb",
+    "LINK-791d9a",
+    "LINK-0eec89",
+    "LINK-79c4e4",
+    "LINK-3b0ce3",
+    "LINK-3fe217",
+    "COMPONENT-563872",
+    "HTMLTAG-ca1be1",
+    "HTMLTAG-b8055c",
+    "LINK-361dd4",
+    "LINK-14f434",
+    "LINK-893c2b",
+    "LINK-461848",
+    "LINK-66593f",
+    "LINK-cdf31d",
+    "LINK-aad756",
+    "LINK-938835",
+    "LINK-71a77d",
+    "LINK-81b80c",
+    "LINK-0242c6",
+    "COMPONENT-d99d5e",
+    "HTMLTAG-c3a1ae",
+    "LINK-66593f",
+    "LINK-aad756",
+    "LINK-938835",
+    "LINK-71a77d",
+    "LINK-81b80c",
+    "LINK-3f00a4",
+    "LINK-2e35be",
+    "COMPONENT-f223b7",
+    "HTMLTAG-3c3a22",
+    "LINK-361dd4",
+    "LINK-91ea84",
+    "LINK-80b9da",
+    "LINK-c0e28e",
+    "LINK-e7521e",
+    "LINK-ba745f",
+    "CODE-cae662",
+    "CODE-3092a5",
+    "CODE-051b18",
+    "CODE-fc8465",
+    "LINK-c0e28e",
+    "CODE-7c58b1",
+    "CODE-463ed6",
+    "LINK-df0806",
+    "LINK-f1484c",
+    "LINK-65de42",
+    "LINK-444abb",
+    "COMPONENT-7d812e",
+    "HTMLTAG-27d1fe",
+    "HTMLTAG-b42c71",
+    "HTMLTAG-ff9c6b",
+    "HTMLTAG-225e23",
+    "HTMLTAG-665fc4",
+    "LINK-99cf2c",
+    "LINK-8aa8bb",
+    "COMPONENT-47371d",
+    "HTMLTAG-748bb3",
+    "HTMLTAG-022e8f",
+    "HTMLTAG-2fbb69",
+    "HTMLTAG-a69d3c",
+    "LINK-d1cc3e",
+    "LINK-239467",
+    "LINK-98aa4c",
+    "LINK-07eb0a",
+    "LINK-d1cc3e",
+    "LINK-bd35a3",
+    "LINK-3caea3",
+    "LINK-66593f",
+    "LINK-1baecb",
+    "LINK-9adbbe",
+    "LINK-22cf0b",
+    "COMPONENT-7d4799",
+    "HTMLTAG-aabe2f",
+    "LINK-98464c",
+    "LINK-4dc846",
+    "LINK-5e21ed",
+    "LINK-84a87f",
+    "COMPONENT-a3b484",
+    "HTMLTAG-eb09a2",
+    "HTMLTAG-187161",
+    "LINK-98464c",
+    "HTMLTAG-82404c",
+    "LINK-16f7a3",
+    "HTMLTAG-e74de1",
+    "HTMLTAG-98b7cc",
+    "LINK-5e21ed",
+    "HTMLTAG-70f93b",
+    "LINK-bf455e",
+    "LINK-088678",
+    "LINK-98464c",
+    "LINK-4dc846",
+    "LINK-baddf6",
+    "COMPONENT-4e2485",
+    "HTMLTAG-9b2d9e",
+    "HTMLTAG-abebab",
+    "HTMLTAG-66c196",
+    "HTMLTAG-5e34b8",
+    "LINK-bf455e",
+    "LINK-66593f",
+    "LINK-5f9200",
+    "LINK-670d8d",
+    "COMPONENT-a32691",
+    "HTMLTAG-c30297",
+    "HTMLTAG-69552d",
+    "HTMLTAG-d65fb4",
+    "LINK-6159c3",
+    "HTMLTAG-c5b38e",
+    "LINK-6159c3",
+    "HTMLTAG-54abc9",
+    "HTMLTAG-9e2224",
+    "HTMLTAG-07e5a6",
+    "HTMLTAG-094369",
+    "HTMLTAG-9df1c5",
+    "LINK-66593f",
+    "LINK-2888ca",
+    "COMPONENT-df1e9a",
+    "HTMLTAG-2c5c23",
+    "HTMLTAG-f9c7a4",
+    "HTMLTAG-512cc7",
+    "HTMLTAG-87880b",
+    "LINK-b1cfae",
+    "COMPONENT-5de86d",
+    "HTMLTAG-b4d3a0",
+    "HTMLTAG-d70ccc",
+    "LINK-20592d",
+    "LINK-a81d8b",
+    "LINK-564990",
+    "LINK-1ea36b",
+    "LINK-62af47",
+    "LINK-1510d6",
+    "LINK-5c36df",
+    "COMPONENT-949f6d",
+    "HTMLTAG-cc7326",
+    "HTMLTAG-2a490c",
+    "HTMLTAG-0cac27",
+    "LINK-98464c",
+    "LINK-7d83c0",
+    "LINK-251d1c",
+    "LINK-66593f",
+    "LINK-d3a0e2",
+    "LINK-a66540",
+    "LINK-45fc61",
+    "LINK-16cad8",
+    "LINK-98464c",
+    "LINK-980c9b",
+    "LINK-ee93ee",
+    "LINK-a81d24"
+  ],
+  "placeholderMap": {
+    "COMPONENT-b7a7e2": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "HTMLTAG-0f4f12": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "#dao-fork"
+      }
+    },
+    "LINK-2ed744": {
+      "type": "link",
+      "values": {
+        "url": "/eips/"
+      }
+    },
+    "LINK-764cb3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-02a392": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/"
+      }
+    },
+    "COMPONENT-8d3bae": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "LINK-3e1978": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#execution-layer"
+      }
+    },
+    "LINK-a9541d": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#consensus-layer"
+      }
+    },
+    "LINK-a96a41": {
+      "type": "link",
+      "values": {
+        "url": "https://devcon.org/en/past-events/"
+      }
+    },
+    "LINK-bdb232": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#beacon-chain"
+      }
+    },
+    "LINK-a7d22d": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Altair"
+      }
+    },
+    "LINK-14c4d2": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Bellatrix"
+      }
+    },
+    "LINK-e49885": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Capella"
+      }
+    },
+    "LINK-233c84": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Deneb"
+      }
+    },
+    "LINK-a8e435": {
+      "type": "link",
+      "values": {
+        "url": "<https://en.wikipedia.org/wiki/Electra_(star"
+      }
+    },
+    "LINK-b342f2": {
+      "type": "link",
+      "values": {
+        "url": "<https://en.wikipedia.org/wiki/Fulu_(star"
+      }
+    },
+    "LINK-ceeb6c": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/WASP-13"
+      }
+    },
+    "LINK-d75cc3": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Zeta_Virginis"
+      }
+    },
+    "LINK-14f434": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge/"
+      }
+    },
+    "COMPONENT-af450a": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "HTMLTAG-7f962e": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-7702"
+      }
+    },
+    "HTMLTAG-bd6eaa": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-7691"
+      }
+    },
+    "HTMLTAG-eb5770": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-7623"
+      }
+    },
+    "HTMLTAG-f3a4a0": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-7840"
+      }
+    },
+    "HTMLTAG-f6dd64": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-7251"
+      }
+    },
+    "HTMLTAG-51f6a2": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-7002"
+      }
+    },
+    "HTMLTAG-2ca9ae": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-7685"
+      }
+    },
+    "HTMLTAG-da5059": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-6110"
+      }
+    },
+    "HTMLTAG-15147f": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-2537"
+      }
+    },
+    "HTMLTAG-92fa00": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-2935"
+      }
+    },
+    "HTMLTAG-0e2349": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-7549"
+      }
+    },
+    "COMPONENT-0f0d9b": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "HTMLTAG-58c800": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-1153"
+      }
+    },
+    "HTMLTAG-6d87c6": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-4788"
+      }
+    },
+    "HTMLTAG-778db4": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-4844"
+      }
+    },
+    "HTMLTAG-8787b0": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-5656"
+      }
+    },
+    "HTMLTAG-7a52d6": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-6780"
+      }
+    },
+    "HTMLTAG-715bd2": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-7516"
+      }
+    },
+    "COMPONENT-8f517f": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "HTMLTAG-d97b3c": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-7044"
+      }
+    },
+    "HTMLTAG-d109a3": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-7045"
+      }
+    },
+    "HTMLTAG-5aae28": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-7514"
+      }
+    },
+    "COMPONENT-4daef0": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "HTMLTAG-b04956": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-3651"
+      }
+    },
+    "HTMLTAG-9835bd": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-3855"
+      }
+    },
+    "HTMLTAG-950206": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-3860"
+      }
+    },
+    "HTMLTAG-e560ba": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-4895"
+      }
+    },
+    "HTMLTAG-1f6756": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-6049"
+      }
+    },
+    "COMPONENT-563872": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "HTMLTAG-ca1be1": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-3675"
+      }
+    },
+    "HTMLTAG-b8055c": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-4399"
+      }
+    },
+    "COMPONENT-d99d5e": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "HTMLTAG-c3a1ae": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-5133"
+      }
+    },
+    "COMPONENT-f223b7": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "HTMLTAG-3c3a22": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-4345"
+      }
+    },
+    "COMPONENT-7d812e": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "HTMLTAG-27d1fe": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-1559"
+      }
+    },
+    "HTMLTAG-b42c71": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-3198"
+      }
+    },
+    "HTMLTAG-ff9c6b": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-3529"
+      }
+    },
+    "HTMLTAG-225e23": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-3541"
+      }
+    },
+    "HTMLTAG-665fc4": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-3554"
+      }
+    },
+    "COMPONENT-47371d": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "HTMLTAG-748bb3": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-2565"
+      }
+    },
+    "HTMLTAG-022e8f": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-2718"
+      }
+    },
+    "HTMLTAG-2fbb69": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-2929"
+      }
+    },
+    "HTMLTAG-a69d3c": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-2930"
+      }
+    },
+    "COMPONENT-7d4799": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "HTMLTAG-aabe2f": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-2384"
+      }
+    },
+    "COMPONENT-a3b484": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "HTMLTAG-eb09a2": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-152"
+      }
+    },
+    "HTMLTAG-187161": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-1108"
+      }
+    },
+    "HTMLTAG-82404c": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-1344"
+      }
+    },
+    "HTMLTAG-e74de1": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-1884"
+      }
+    },
+    "HTMLTAG-98b7cc": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-2028"
+      }
+    },
+    "HTMLTAG-70f93b": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-2200"
+      }
+    },
+    "LINK-98464c": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#gas"
+      }
+    },
+    "LINK-16f7a3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/ethereum-stack/#ethereum-virtual-machine"
+      }
+    },
+    "LINK-5e21ed": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/#layer-2-scaling"
+      }
+    },
+    "COMPONENT-4e2485": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "HTMLTAG-9b2d9e": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-145"
+      }
+    },
+    "HTMLTAG-abebab": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-1014"
+      }
+    },
+    "HTMLTAG-66c196": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-1052"
+      }
+    },
+    "HTMLTAG-5e34b8": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-1234"
+      }
+    },
+    "COMPONENT-a32691": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "HTMLTAG-c30297": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-140"
+      }
+    },
+    "HTMLTAG-69552d": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-658"
+      }
+    },
+    "HTMLTAG-d65fb4": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-196"
+      }
+    },
+    "HTMLTAG-c5b38e": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-197"
+      }
+    },
+    "HTMLTAG-54abc9": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-198"
+      }
+    },
+    "HTMLTAG-9e2224": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-211"
+      }
+    },
+    "HTMLTAG-07e5a6": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-214"
+      }
+    },
+    "HTMLTAG-094369": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-100"
+      }
+    },
+    "HTMLTAG-9df1c5": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-649"
+      }
+    },
+    "LINK-6159c3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/zk-rollups/"
+      }
+    },
+    "LINK-66593f": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#difficulty-bomb"
+      }
+    },
+    "COMPONENT-df1e9a": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "HTMLTAG-2c5c23": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-155"
+      }
+    },
+    "HTMLTAG-f9c7a4": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-160"
+      }
+    },
+    "HTMLTAG-512cc7": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-161"
+      }
+    },
+    "HTMLTAG-87880b": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-170"
+      }
+    },
+    "COMPONENT-5de86d": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "HTMLTAG-b4d3a0": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-150"
+      }
+    },
+    "HTMLTAG-d70ccc": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-158"
+      }
+    },
+    "COMPONENT-949f6d": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "HTMLTAG-cc7326": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-2"
+      }
+    },
+    "HTMLTAG-2a490c": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-7"
+      }
+    },
+    "HTMLTAG-0cac27": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org/EIPS/eip-8"
+      }
+    },
+    "CODE-cae662": {
+      "type": "inline-code",
+      "values": {
+        "content": "base"
+      }
+    },
+    "CODE-3092a5": {
+      "type": "inline-code",
+      "values": {
+        "content": "priority"
+      }
+    },
+    "CODE-051b18": {
+      "type": "inline-code",
+      "values": {
+        "content": "Gas units (limit) * Gas price per unit"
+      }
+    },
+    "CODE-fc8465": {
+      "type": "inline-code",
+      "values": {
+        "content": "21,000 * 200 = 4,200,000 gwei"
+      }
+    },
+    "CODE-7c58b1": {
+      "type": "inline-code",
+      "values": {
+        "content": "maxFeePerGas"
+      }
+    },
+    "CODE-463ed6": {
+      "type": "inline-code",
+      "values": {
+        "content": "baseFeePerGas"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-912de0": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/beacon-chain/"
+      }
+    },
+    "LINK-99daf2": {
+      "type": "link",
+      "values": {
+        "url": "#london"
+      }
+    },
+    "LINK-f0041b": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/"
+      }
+    },
+    "LINK-750e06": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/fusaka/"
+      }
+    },
+    "LINK-75964c": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#eoa"
+      }
+    },
+    "LINK-2c84c3": {
+      "type": "link",
+      "values": {
+        "url": "https://pectra.wtf"
+      }
+    },
+    "LINK-bc1b88": {
+      "type": "link",
+      "values": {
+        "url": "https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience"
+      }
+    },
+    "LINK-b0687f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/tree/master/specs/electra/"
+      }
+    },
+    "LINK-1616f0": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/pectra/"
+      }
+    },
+    "LINK-073a38": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2/"
+      }
+    },
+    "LINK-8d9a8b": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/scaling/#proto-danksharding"
+      }
+    },
+    "LINK-6aface": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/danksharding/"
+      }
+    },
+    "LINK-763167": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/cancun.md"
+      }
+    },
+    "LINK-d309d1": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/tree/master/specs/deneb/"
+      }
+    },
+    "LINK-69f450": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/dencun/"
+      }
+    },
+    "LINK-1f659d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md"
+      }
+    },
+    "LINK-8ee4c0": {
+      "type": "link",
+      "values": {
+        "url": "/staking/withdrawals/"
+      }
+    },
+    "LINK-0178e8": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/tree/master/specs/capella/"
+      }
+    },
+    "LINK-893c2b": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#terminal-total-difficulty"
+      }
+    },
+    "LINK-8d5f08": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow"
+      }
+    },
+    "LINK-c705fb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos"
+      }
+    },
+    "LINK-791d9a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#execution-clients"
+      }
+    },
+    "LINK-0eec89": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#consensus-clients"
+      }
+    },
+    "LINK-79c4e4": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md"
+      }
+    },
+    "LINK-3b0ce3": {
+      "type": "link",
+      "values": {
+        "url": "#homestead"
+      }
+    },
+    "LINK-3fe217": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md"
+      }
+    },
+    "LINK-361dd4": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/beacon-chain"
+      }
+    },
+    "LINK-461848": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/tree/master/specs/bellatrix"
+      }
+    },
+    "LINK-cdf31d": {
+      "type": "link",
+      "values": {
+        "url": "#arrow-glacier"
+      }
+    },
+    "LINK-aad756": {
+      "type": "link",
+      "values": {
+        "url": "#muir-glacier"
+      }
+    },
+    "LINK-938835": {
+      "type": "link",
+      "values": {
+        "url": "#byzantium"
+      }
+    },
+    "LINK-71a77d": {
+      "type": "link",
+      "values": {
+        "url": "#constantinople"
+      }
+    },
+    "LINK-81b80c": {
+      "type": "link",
+      "values": {
+        "url": "#london"
+      }
+    },
+    "LINK-0242c6": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2022/06/16/gray-glacier-announcement"
+      }
+    },
+    "LINK-3f00a4": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement"
+      }
+    },
+    "LINK-2e35be": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002"
+      }
+    },
+    "LINK-91ea84": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/tree/master/specs/altair"
+      }
+    },
+    "LINK-80b9da": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/blocks/#block-time"
+      }
+    },
+    "LINK-c0e28e": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1559"
+      }
+    },
+    "LINK-e7521e": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#ice-age"
+      }
+    },
+    "LINK-ba745f": {
+      "type": "link",
+      "values": {
+        "url": "/ethereum-forks/#london"
+      }
+    },
+    "LINK-df0806": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=MGemhK9t44Q"
+      }
+    },
+    "LINK-f1484c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md"
+      }
+    },
+    "LINK-65de42": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2021/07/15/london-mainnet-announcement"
+      }
+    },
+    "LINK-444abb": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41"
+      }
+    },
+    "LINK-99cf2c": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement"
+      }
+    },
+    "LINK-8aa8bb": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80"
+      }
+    },
+    "LINK-d1cc3e": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/beacon-chain/"
+      }
+    },
+    "LINK-239467": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21"
+      }
+    },
+    "LINK-98aa4c": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#staking"
+      }
+    },
+    "LINK-07eb0a": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#mainnet"
+      }
+    },
+    "LINK-bd35a3": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/"
+      }
+    },
+    "LINK-3caea3": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19"
+      }
+    },
+    "LINK-1baecb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/"
+      }
+    },
+    "LINK-9adbbe": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement"
+      }
+    },
+    "LINK-22cf0b": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210"
+      }
+    },
+    "LINK-4dc846": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/ethereum-stack/#ethereum-virtual-machine"
+      }
+    },
+    "LINK-84a87f": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement"
+      }
+    },
+    "LINK-bf455e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/mining/"
+      }
+    },
+    "LINK-088678": {
+      "type": "link",
+      "values": {
+        "url": "#beacon-chain-genesis"
+      }
+    },
+    "LINK-baddf6": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement"
+      }
+    },
+    "LINK-5f9200": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/#layer-2-scaling"
+      }
+    },
+    "LINK-670d8d": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement"
+      }
+    },
+    "LINK-2888ca": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon"
+      }
+    },
+    "LINK-b1cfae": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork"
+      }
+    },
+    "LINK-20592d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.coindesk.com/learn/understanding-the-dao-attack/"
+      }
+    },
+    "LINK-a81d8b": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#dao"
+      }
+    },
+    "LINK-564990": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754"
+      }
+    },
+    "LINK-1ea36b": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/"
+      }
+    },
+    "LINK-62af47": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereumclassic.org/"
+      }
+    },
+    "LINK-1510d6": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2016/07/20/hard-fork-completed"
+      }
+    },
+    "LINK-5c36df": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2016/02/29/homestead-release"
+      }
+    },
+    "LINK-7d83c0": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#block"
+      }
+    },
+    "LINK-251d1c": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#gwei"
+      }
+    },
+    "LINK-d3a0e2": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#pos"
+      }
+    },
+    "LINK-a66540": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2015/08/04/the-thawing-frontier"
+      }
+    },
+    "LINK-45fc61": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1"
+      }
+    },
+    "LINK-16cad8": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#block"
+      }
+    },
+    "LINK-980c9b": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare"
+      }
+    },
+    "LINK-ee93ee": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2014/07/22/launching-the-ether-sale"
+      }
+    },
+    "LINK-a81d24": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/yellowpaper"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T09:21:47.494Z",
+      "status": "success"
+    }
+  }
+}

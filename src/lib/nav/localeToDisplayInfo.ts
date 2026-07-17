@@ -1,31 +1,6 @@
-import type {
-  I18nLocale,
-  Lang,
-  LocaleDisplayInfo,
-  ProjectProgressData,
-} from "@/lib/types"
+import type { I18nLocale, Lang, LocaleDisplayInfo } from "@/lib/types"
 
 import { languages } from "@/lib/utils/translations"
-
-import progressDataJson from "@/data/translationProgress.json"
-
-import { DEFAULT_LOCALE } from "@/lib/constants"
-
-const progressData = progressDataJson satisfies ProjectProgressData[]
-
-const getProgressInfo = (
-  locale: Lang,
-  approvalProgress: number,
-  wordsApproved: number
-) => {
-  const percentage = new Intl.NumberFormat(locale, {
-    style: "percent",
-  }).format(approvalProgress / 100)
-  const progress =
-    approvalProgress === 0 ? "<" + percentage.replace("0", "1") : percentage
-  const words = new Intl.NumberFormat(locale).format(wordsApproved)
-  return { progress, words }
-}
 
 export const localeToDisplayInfo = (
   localeOption: Lang,
@@ -67,52 +42,10 @@ export const localeToDisplayInfo = (
     })
   }
 
-  // English will not have a dataItem
-  const dataItem = progressData.find(
-    ({ languageId }) =>
-      i18nItem.crowdinCode.toLowerCase() === languageId.toLowerCase()
-  )
-
-  const approvalProgress =
-    localeOption === DEFAULT_LOCALE
-      ? 100
-      : Math.floor((dataItem!.words.approved / dataItem!.words.total) * 100) ||
-        0
-
-  const returnData: Partial<LocaleDisplayInfo> = {
+  return {
     localeOption,
     sourceName: sourceName ?? localeOption,
     targetName: targetName ?? localeOption,
     englishName,
   }
-
-  if (progressData.length < 1) {
-    console.warn(`Missing translation progress data; check GitHub action`)
-    return {
-      ...returnData,
-      approvalProgress: 0,
-      wordsApproved: 0,
-    } as LocaleDisplayInfo
-  }
-
-  const totalWords = progressData[0].words.total
-
-  const wordsApproved =
-    localeOption === DEFAULT_LOCALE
-      ? totalWords || 0
-      : dataItem?.words.approved || 0
-
-  const { progress, words } = getProgressInfo(
-    localeOption,
-    approvalProgress,
-    wordsApproved
-  )
-
-  return {
-    ...returnData,
-    approvalProgress,
-    wordsApproved,
-    progress,
-    words,
-  } as LocaleDisplayInfo
 }

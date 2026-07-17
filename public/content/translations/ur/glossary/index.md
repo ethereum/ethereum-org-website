@@ -1,10 +1,10 @@
 ---
-title: "ایتھیریم کی لغت"
-description: "ایتھیریم سے متعلق تکنیکی اور غیر تکنیکی اصطلاحات کی ایک نامکمل لغت"
-lang: ur-in
+title: "فرہنگ"
+metaTitle: "ایتھیریم کی فرہنگ"
+description: "ایتھیریم سے متعلق تکنیکی اور غیر تکنیکی اصطلاحات کی ایک نامکمل فرہنگ"
+lang: ur
+authors: ["اینڈریاس اینٹونوپولوس"]
 ---
-
-# لغت {#ethereum-glossary}
 
 ## \# {#section-numbers}
 
@@ -494,12 +494,12 @@ lang: ur-in
 
 ## ذرائع {#sources}
 
-_جزوی طور پر [Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) کی [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) سے CC-BY-SA کے تحت فراہم کیا گیا ہے_
+_یہ جزوی طور پر <span dir="ltr">CC-BY-SA</span> کے تحت [اینڈریاس ایم اینٹونوپولوس، گیون وڈ](https://aantonop.com/books/mastering-ethereum) کی کتاب [<span dir="ltr">Mastering Ethereum</span>](https://github.com/ethereumbook/ethereumbook) سے فراہم کیا گیا ہے_
 
 <Divider />
 
-## اس صفحہ میں اپنا حصہ ڈالیں {#contribute-to-this-page}
+## اس صفحے میں تعاون کریں {#contribute-to-this-page}
 
-کیا ہم سے کچھ چھوٹ گیا ہے؟ کیا کچھ غلط ہے؟ GitHub پر اس لغت میں تعاون کرکے اسے بہتر بنانے میں ہماری مدد کریں!
+کیا ہم سے کچھ چھوٹ گیا؟ کیا کچھ غلط ہے؟ <span dir="ltr">GitHub</span> پر اس فرہنگ میں تعاون کر کے اسے بہتر بنانے میں ہماری مدد کریں!
 
-[حصہ ڈالنے کے طریقے کے بارے میں مزید جانیں](/contributing/adding-glossary-terms)
+[تعاون کرنے کے طریقے کے بارے میں مزید جانیں](/contributing/adding-glossary-terms)

@@ -220,10 +220,20 @@ Recursive proofs, however, make it possible to finalize several blocks with one 
 
 Watch Finematics explain ZK-rollups:
 
-<YouTube id="7pWxCklcNsU" start="406" />
+<VideoWatch slug="rollups-scaling-strategy" startTime="406" />
 
 
 ## Who is working on a zkEVM? {#zkevm-projects}
+
+<Alert variant="info">
+<AlertEmoji text="💡" />
+<AlertContent>
+<AlertTitle>zkEVM for L2 vs L1</AlertTitle>
+<AlertDescription>
+The projects below use zkEVM technology to build Layer 2 rollups. There is also research into using zkEVM for [L1 block verification](/roadmap/zkevm/), which would enable validators to verify Ethereum blocks without re-executing transactions.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Projects working on zkEVMs include:
 

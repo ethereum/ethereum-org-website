@@ -1,5 +1,3 @@
-import type { ScreensConfig } from "tailwindcss/types/config"
-
 import type { BreakpointKey } from "../types"
 
 export const screens = {
@@ -8,7 +6,7 @@ export const screens = {
   lg: "992px",
   xl: "1280px",
   "2xl": "1536px",
-} satisfies ScreensConfig
+} as const satisfies Record<string, string>
 
 export const breakpointAsNumber = Object.entries(screens).reduce(
   (acc, curr) => {

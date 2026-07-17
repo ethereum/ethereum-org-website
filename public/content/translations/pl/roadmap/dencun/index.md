@@ -1,120 +1,119 @@
 ---
-title: Cancun-Deneb (Dencun) FAQ
-description: Często zadawane pytania dotyczące uaktualnienia sieci Cancun-Deneb (Dencun)
+title: Cancun-Deneb (Dencun)
+metaTitle: FAQ Cancun-Deneb (Dencun)
+description: Często zadawane pytania dotyczące aktualizacji sieci Cancun-Deneb (Dencun)
 lang: pl
 ---
 
-# Cancun-Deneb (Dencun) {#dencun}
+Cancun-Deneb (Dencun) to aktualizacja sieci Ethereum, która aktywuje **proto-danksharding (EIP-4844)**, wprowadzając tymczasowe **bloby** danych w celu tańszego przechowywania danych rollupów [warstwy 2 (L2)](/glossary/#layer-2).
 
-Cancun-Deneb (Dencun) to uaktualnienie sieci Ethereum, które aktywuje **Proto-Danksharding (EIP-4844)**, wprowadzając tymczasowe **bloby** danych do tańszego przechowywania pakietów zbiorczych [warstwy 2 (L2)](/glossary/#layer-2).
+Nowy typ transakcji umożliwia dostawcom rollupów bardziej opłacalne przechowywanie danych w tak zwanych „blobach”. Gwarantuje się, że bloby będą dostępne w sieci przez około 18 dni (dokładniej 4096 [epok](/glossary/#epoch)). Po tym okresie bloby są usuwane z sieci, ale aplikacje nadal mogą weryfikować ważność swoich danych za pomocą dowodów. 
 
-Nowy rodzaj transakcji pozwala dostawcom pakietów zbiorczych na bardziej ekonomiczne przechowywanie danych w tzw. „blobach”. Bloby gwarantują, że będą dostępne dla sieci przez około 18 dni (dokładniej 4096 [epok](/glossary/#epoch)). Po tym okresie bloby są usuwane z sieci, ale aplikacje nadal mogą zweryfikować ważność ich danych za pomocą dowodów.
+Znacznie obniża to koszty rollupów, ogranicza rozrost łańcucha i pomaga obsługiwać większą liczbę użytkowników przy jednoczesnym zachowaniu bezpieczeństwa i zdecentralizowanego zestawu operatorów węzłów.
 
-Zmniejsza to znacznie koszty pakietów zbiorczych, ogranicza wzrost łańcucha i pomaga wspierać większą ilość użytkowników, jednocześnie zachowując bezpieczeństwo i zdecentralizowany zestaw operatów węzłów.
+## Kiedy możemy spodziewać się, że rollupy odzwierciedlą niższe opłaty dzięki proto-dankshardingowi? {#when}
 
-## Kiedy możemy się spodziewać niższych opłat za pakiety zbiorcze ze względu na Proto-Danksharding? {#when}
+- Ta aktualizacja została aktywowana w epoce 269568, **13 marca 2024 r. o 13:55 (UTC)**
+- Wszyscy główni dostawcy rollupów, tacy jak Arbitrum czy Optimism, zasygnalizowali, że bloby będą obsługiwane natychmiast po aktualizacji
+- Harmonogram wsparcia dla poszczególnych rollupów może się różnić, ponieważ każdy dostawca musi zaktualizować swoje systemy, aby skorzystać z nowej przestrzeni blobów
 
-- To uaktualnienie zostało aktywowane w 269568 epoce **13 marca 2024 roku o godzinie 13:55 (UTC)**
-- Wszyscy główni dostawcy pakietów zbiorczych, tacy jak Arbitrum czy Optimism, poinformowali, że bloby będą wspierane natychmiast po uaktualnieniu
-- Harmonogram indywidualnej obsługi pakietów zbiorczych może się różnić, ponieważ każdy dostawca musi zaktualizować swoje systemy, aby móc korzystać z nowej przestrzeni blobów
+## Jak można przekonwertować ETH po twardym rozwidleniu? {#scam-alert}
 
-## Jak można przekonwertować ETH po hard forku? {#scam-alert}
+- **Twoje ETH nie wymaga żadnych działań**: Po aktualizacji Dencun w Ethereum nie ma potrzeby konwertowania ani aktualizowania ETH. Salda Twojego konta pozostaną takie same, a posiadane obecnie ETH pozostanie dostępne w dotychczasowej formie po twardym rozwidleniu.
+- **Uwaga na oszustwa!** <Emoji text="⚠️" /> **każdy, kto instruuje Cię, aby „zaktualizować” Twoje ETH, próbuje Cię oszukać.** W związku z tą aktualizacją nie musisz nic robić. Twoje aktywa pozostaną całkowicie nienaruszone. Pamiętaj, że bycie poinformowanym to najlepsza obrona przed oszustwami.
 
-- **Nic nie musisz robić ze swoim ETH**: po uaktualnieniu Dencun nie ma żadnej potrzeby konwersji lub ulepszenia ETH. Salda Twoich kont pozostaną takie same, a ETH, które obecnie posiadasz, pozostanie dostępne w tej samej formie po hard forku.
-- **Uważaj na oszustwa!** <Emoji text="⚠️" /> **Każdy, kto mówi Ci, aby „ulepszyć” ETH, próbuje cię oszukać.** Nie musisz nic robić w związku z tym uaktualnieniem. Twoje aktywa pozostaną całkowicie nienaruszone. Pamiętaj, że bycie na bieżąco jest najlepszą formą obrony przed oszustwami.
+[Więcej o rozpoznawaniu i unikaniu oszustw](/security/)
 
-[Więcej na temat rozpoznawania i unikania oszustw](/security/)
+## Jaki problem rozwiązuje aktualizacja sieci Dencun? {#network-impact}
 
-## Jaki problem rozwiązuje uaktualnienie sieci Dencun? {#network-impact}
+Dencun rozwiązuje przede wszystkim problem **skalowalności** (obsługa większej liczby użytkowników i transakcji) przy **przystępnych opłatach**, jednocześnie **utrzymując decentralizację** sieci.
 
-Dencun domyślnie skupia się na **skalowalności** (obsłudze większej ilości użytkowników i transakcji) oraz **przystępności opłat**, przy jednoczesnym **zachowaniu decentralizacji** sieci.
+Społeczność Ethereum przyjęła podejście do rozwoju „skoncentrowane na rollupach”, które stawia rollupy warstwy 2 jako główny sposób na bezpieczną obsługę większej liczby użytkowników.
 
-Jeśli chodzi o jej rozwój, społeczność Ethereum przyjęła podejście skoncentrowane wokół pakietów zbiorczych, które określa pakiety zbiorcze warstwy 2 jako główny sposób bezpiecznego wsparcia większej liczby użytkowników.
+Sieci rollupów zajmują się _przetwarzaniem_ (lub „wykonywaniem”) transakcji oddzielnie od Sieci głównej, a następnie publikują dowód kryptograficzny i/lub skompresowane dane transakcji z wynikami z powrotem w Sieci głównej w celu prowadzenia rejestru. Przechowywanie tych dowodów wiąże się z kosztami (w postaci [gazu](/glossary/#gas)), które przed proto-dankshardingiem musiały być trwale przechowywane przez wszystkich operatorów węzłów sieci, co czyniło to drogim zadaniem.
 
-Sieci pakietów zbiorczych zajmują się _przetwarzaniem_ (lub „wykonywaniem”) transakcji niezależnie od sieci głównej, a następnie publikowaniem kryptograficznego dowodu i/lub skompresowanych danych wyników transakcji z powrotem do sieci głównej na potrzeby ewidencjowania. Przechowywanie tych dowodów wiąże się z kosztem (w postaci [gazu](/glossary/#gas)), który przed Proto-Dankshardingiem musiał być przechowywany na stałe przez wszystkich operatorów węzłów sieci, przez co było to kosztowne zadanie.
+Wprowadzenie proto-dankshardingu w aktualizacji Dencun dodaje tańsze przechowywanie danych dla tych dowodów, wymagając od operatorów węzłów przechowywania tych danych tylko przez około 18 dni, po czym dane mogą zostać bezpiecznie usunięte, aby zapobiec wzrostowi wymagań sprzętowych. Ponieważ rollupy zazwyczaj mają 7-dniowy okres wypłaty, ich model bezpieczeństwa pozostaje niezmieniony, dopóki bloby są dostępne na L1 przez ten czas. 18-dniowe okno usuwania zapewnia znaczny bufor dla tego okresu.
 
-Wprowadzenie Proto-Dankshardingu w uaktualnieniu Dencun dodaje tańsze przechowywanie danych dla tych dowodów, wymagając od operatorów węzłów jedynie przechowywania tych danych przez około 18 dni, po których dane można bezpiecznie usunąć, zapobiegając zwiększeniu wymagań sprzętowych.  Ponieważ pakiety zbiorcze mają 7-dniowy okres wypłacania, ich model bezpieczeństwa pozostaje niezmieniony, o ile bloby pozostają dostępne we warstwie 1 przez ten czas. 18-dniowy okres odcinania zapewnia znaczący bufor dla tego okresu.
+[Więcej o skalowaniu Ethereum](/roadmap/scaling/)
 
-[Więcej na temat skalowania Ethereum](/roadmap/scaling/)
+## Jak uzyskuje się dostęp do starych danych blobów? {#historical-access}
 
-## Jak uzyskuje się dostęp do danych starych blobów? {#historical-access}
+Podczas gdy zwykłe węzły Ethereum zawsze będą przechowywać _obecny stan_ sieci, historyczne dane blobów mogą zostać odrzucone około 18 dni po ich wprowadzeniu. Przed odrzuceniem tych danych Ethereum upewnia się, że zostały one udostępnione wszystkim uczestnikom sieci, dając czas na:
 
-Podczas gdy zwykłe węzły Ethereum zawsze będą przechowywać _obecny stan_ sieci, historyczne dane blobów mogą zostać usunięte po około 18 dniach po ich wprowadzeniu. Przed porzuceniem tych danych Ethereum upewnia się, że były one dostępne dla wszystkich uczestników sieci, dając czas na:
+- Pobrane i przechowanie danych przez zainteresowane strony.
+- Zakończenie wszystkich okresów wyzwań rollupów.
+- Finalizację transakcji rollupów.
 
-- Pobranie i przechowanie danych przez zainteresowane podmioty.
-- Zamknięcie wszystkich okresów kwestionowania pakietu zbiorczego.
-- Sfinalizowanie transakcji pakietu zbiorczego.
+_Historyczne_ dane blobów mogą być pożądane z różnych powodów i można je przechowywać oraz uzyskiwać do nich dostęp za pomocą kilku zdecentralizowanych protokołów:
 
-_Historyczne_ dane blobów mogą być pożądane z różnych powodów oraz mogą być przechowywane i udostępniane przy użyciu różnych zdecentralizowanych protokołów:
-
-- **Zewnętrzne protokoły indeksowania**, np. The Graph, przechowują te dane za pośrednictwem zdecentralizowanych sieci operatorów węzłów, motywowanych przez mechanizmy kryptoekonomiczne.
+- **Protokoły indeksowania stron trzecich**, takie jak The Graph, przechowują te dane za pośrednictwem zdecentralizowanej sieci operatorów węzłów motywowanych mechanizmami kryptoekonomicznymi.
 - **BitTorrent** to zdecentralizowany protokół, w którym wolontariusze mogą przechowywać i udostępniać te dane innym.
-- **[Sieć Ethereum portal](/developers/docs/networking-layer/portal-network/)** ma na celu zapewnienie dostępu do wszystkich danych Ethereum przez zdecentralizowaną sieć operatorów węzłów poprzez rozdzielanie danych pomiędzy uczestników, podobnie jak BitTorrent.
-- **Indywidualni użytkownicy** zawsze mogą przechowywać własne kopie dowolnych danych do celów historycznych.
-- **Dostawcy pakietów zbiorczych** są skłonni do przechowywania tych danych w celu polepszenia doświadczeń użytkownika ich pakietu zbiorczego.
-- **Eksploratory bloków** zazwyczaj mają archiwalne węzły, które indeksują i przechowują te wszystkie informacje dla łatwego odniesienia historycznego, udostępniając je dla użytkowników za pomocą interfejsu internetowego.
+- **[Portal Network](/developers/docs/networking-layer/portal-network/)** ma na celu zapewnienie dostępu do wszystkich danych Ethereum za pośrednictwem zdecentralizowanej sieci operatorów węzłów poprzez dystrybucję danych wśród uczestników podobnie jak w BitTorrent.
+- **Indywidualni użytkownicy** zawsze mogą swobodnie przechowywać własne kopie dowolnych danych, które chcą zachować do celów historycznych.
+- **Dostawcy rollupów** są motywowani do przechowywania tych danych w celu poprawy doświadczeń użytkowników ich rollupa.
+- **Eksploratory bloków** zazwyczaj uruchamiają węzły archiwalne, które indeksują i przechowują wszystkie te informacje w celu łatwego odniesienia historycznego, dostępnego dla użytkowników za pośrednictwem interfejsu internetowego.
 
-Należy pamiętać, że odzyskiwanie historycznego stanu działa w oparciu o **model zaufania 1 z N**. Oznacza to, że potrzebujesz danych tylko od _jednego wiarygodnego źródła_, aby zweryfikować jego poprawność na podstawie obecnego stanu sieci.
+Należy zauważyć, że odzyskiwanie historycznego stanu działa w **modelu zaufania 1 z N**. Oznacza to, że potrzebujesz danych tylko z _jednego wiarygodnego źródła_, aby zweryfikować ich poprawność przy użyciu obecnego stanu sieci.
 
-## W jaki sposób to uaktualnienie przyczynia się do poszerzenia planu działania Ethereum? {#roadmap-impact}
+## W jaki sposób ta aktualizacja przyczynia się do szerszej mapy drogowej Ethereum? {#roadmap-impact}
 
-Proto-Danksharding przygotowuje grunt pod pełne wdrożenie [Dankshardingu](/roadmap/danksharding/). Danksharding został zaprojektowany tak, aby rozdzielać dane pakietu zbiorczego pomiędzy operatorów węzłów, dzięki czemu każdy operator musiałby obsługiwać tylko niewielką część wszystkich danych. To rozdzielanie zwiększy liczbę blobów danych na blok, co jest niezbędne do skalowania Ethereum, aby mogła ona obsługiwać większą ilość użytkowników i transakcji.
+Proto-danksharding przygotowuje grunt pod pełne wdrożenie [dankshardingu](/roadmap/danksharding/). Danksharding ma na celu rozdzielenie przechowywania danych rollupów między operatorów węzłów, dzięki czemu każdy operator musi obsługiwać tylko niewielką część wszystkich danych. Ta dystrybucja zwiększy liczbę blobów danych na blok, co jest niezbędne do skalowania Ethereum w celu obsługi większej liczby użytkowników i transakcji.
 
-Ta skalowalność ma kluczowe znaczenie dla [obsługiwania miliardów użytkowników na Ethereum](/roadmap/scaling/) z przystępnymi opłatami i bardziej zaawansowanymi aplikacjami, przy jednoczesnym zachowaniu zdecentralizowanej sieci. Bez tych zmian wymagania sprzętowe dla operatorów węzłów zwiększałyby się, stwarzając konieczność posiadania coraz droższego sprzętu. Mogłoby to wykluczyć mniejszych operatorów, powodując koncentrację kontroli sieci wokół paru dużych operatorów, co byłoby sprzeczne z zasadą decentralizacji.
+Ta skalowalność ma kluczowe znaczenie dla [obsługi miliardów użytkowników na Ethereum](/roadmap/scaling/) przy przystępnych opłatach i bardziej zaawansowanych aplikacjach, przy jednoczesnym utrzymaniu zdecentralizowanej sieci. Bez tych zmian wymagania sprzętowe dla operatorów węzłów wzrosłyby, prowadząc do konieczności posiadania coraz droższego sprzętu. Mogłoby to wykluczyć mniejszych operatorów, skutkując koncentracją kontroli nad siecią wśród kilku dużych operatorów, co byłoby sprzeczne z zasadą decentralizacji.
 
-## Czy to uaktualnienie ma wpływ na wszystkich klientów konsensusu i klientów walidatora Ethereum? {#client-impact}
+## Czy ta aktualizacja wpływa na wszystkich klientów konsensusu i walidatorów Ethereum? {#client-impact}
 
-Tak, Proto-Danksharding (EIP-4844) wymaga zaktualizowania zarówno klienta wykonawczego, jak i klienta konsensusu. Wszystkie główne klienty Ethereum wypuściły wersje wspierające to uaktualnienie. Aby zachować synchronizację z siecią Ethereum po uaktualnieniu, operatorzy węzłów muszą się upewnić, że korzystają z obsługiwanej wersji klienta. Należy pamiętać, że informacje o wersjach klienta zależą od czasu, a użytkownicy powinni zapoznać się z najnowszymi aktualizacjami, aby uzyskać najbardziej aktualne szczegóły. [Sprawdź szczegółowe informacje o wspieranych wersjach klientów](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement#client-releases).
+Tak, proto-danksharding (EIP-4844) wymaga aktualizacji zarówno klientów wykonawczych, jak i klientów konsensusu. Wszyscy główni klienci Ethereum wydali wersje obsługujące aktualizację. Aby utrzymać synchronizację z siecią Ethereum po aktualizacji, operatorzy węzłów muszą upewnić się, że używają obsługiwanej wersji klienta. Należy pamiętać, że informacje o wydaniach klientów są wrażliwe na czas, a użytkownicy powinni zapoznać się z najnowszymi aktualizacjami, aby uzyskać najbardziej aktualne szczegóły. [Zobacz szczegóły dotyczące obsługiwanych wydań klientów](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement#client-releases).
 
-Klienty konsensusu zajmują się oprogramowaniem _walidatora_, które zostało zaktualizowane w celu uwzględnienia uaktualnienia.
+Klienci konsensusu obsługują oprogramowanie _walidatora_, które zostało w całości zaktualizowane w celu dostosowania do aktualizacji.
 
-## W jaki sposób Cancun-Deneb (Dencun) wpływa na Goerli lub inne sieci testowe Ethereum? {#testnet-impact}
+## Jak Cancun-Deneb (Dencun) wpływa na sieci testowe Ethereum? {#testnet-impact}
 
-- Devnety, Goerli, Sepolia i Holesky przeszły uaktualnienie Dencun i mają w pełni działający Proto-Danksharding
-- Twórcy pakietów zbiorczych mogą używać tych sieci do testowania EIP-4844
-- Większość użytkowników nie odczuje tej zmiany w każdej sieci testowej
+- Sieci deweloperskie (devnets), Sepolia i Holesky przeszły aktualizację Dencun i mają w pełni funkcjonujący proto-danksharding
+- Deweloperzy rollupów mogą korzystać z tych sieci do testowania EIP-4844
+- Większość użytkowników w ogóle nie odczuje tej zmiany w żadnej sieci testowej
 
-## Czy wszystkie transakcje w warstwach 2 będą wykorzystywać tymczasową przestrzeń blob lub czy będzie można dokonać wyboru? {#calldata-vs-blobs}
+## Czy wszystkie transakcje na L2 będą teraz korzystać z tymczasowej przestrzeni blobów, czy będzie można wybrać? {#calldata-vs-blobs}
 
-Transakcje pakietu zbiorczego w warstwie 2 Ethereum zawierają opcję korzystania z dwóch rodzajów przechowywania danych: tymczasowej przestrzeni blob lub stałych danych wywoławczych (calldata) inteligentnego kontraktu. Przestrzeń blobów jest ekonomicznym wyborem, zapewniającym tymczasową pamięć przy niższych kosztach. Gwarantuje ona dostępność danych dla wszystkich potrzebnych okresów kwestionowania. Z drugiej strony dane wywoławcze inteligentnego kontraktu oferują stałą pamięć, ale jest ona droższa.
+Transakcje rollupów w warstwie 2 (L2) Ethereum mają możliwość korzystania z dwóch rodzajów przechowywania danych: tymczasowej przestrzeni blobów lub stałych danych wywołania inteligentnego kontraktu. Przestrzeń blobów to ekonomiczny wybór, zapewniający tymczasowe przechowywanie przy niższych kosztach. Gwarantuje dostępność danych przez wszystkie niezbędne okresy wyzwań. Z drugiej strony dane wywołania inteligentnego kontraktu oferują stałe przechowywanie, ale są droższe.
 
-Decyzja o użyciu przestrzeni blobów lub danych wywoławczych jest podejmowana głównie przez dostawców pakietów zbiorczych. Podejmują oni tę decyzję w oparciu o aktualne zapotrzebowanie na przestrzeń blobów. Jeśli zapotrzebowanie na przestrzeń blobów jest wysokie, pakiety zbiorcze mogą zdecydować się na dane wywoławcze, aby zapewnić, że dane zostaną opublikowane w odpowiednim czasie.
+Decyzję o użyciu przestrzeni blobów lub danych wywołania podejmują przede wszystkim dostawcy rollupów. Opierają tę decyzję na bieżącym popycie na przestrzeń blobów. Jeśli popyt na przestrzeń blobów jest wysoki, rollupy mogą zdecydować się na dane wywołania, aby upewnić się, że dane zostaną opublikowane w odpowiednim czasie.
 
-Chociaż teoretycznie możliwe jest, aby użytkownicy wybierali swój preferowany rodzaj pamięci, to zazwyczaj dostawcy pakietów zbiorczych zarządzają tym wyborem. Oferowanie tej opcji użytkownikom zwiększyłoby złożoność, szczególnie w przypadku opłacalnych łączonych transakcji. Aby uzyskać szczegółowe informacje na temat tego wyboru, użytkownicy powinni zapoznać się z dokumentacją dostarczoną przez poszczególnych dostawców pakietów zbiorczych.
+Chociaż teoretycznie możliwe jest, aby użytkownicy wybrali preferowany typ przechowywania, dostawcy rollupów zazwyczaj zarządzają tym wyborem. Zaoferowanie tej opcji użytkownikom zwiększyłoby złożoność, szczególnie w przypadku opłacalnego grupowania transakcji. Aby uzyskać szczegółowe informacje na temat tego wyboru, użytkownicy powinni zapoznać się z dokumentacją dostarczoną przez poszczególnych dostawców rollupów.
 
-## Czy EIP-4844 zredukuje gaz w warstwie 1? {#l1-fee-impact}
+## Czy 4844 zmniejszy gaz na L1? {#l1-fee-impact}
 
-Nieznacznie. Wprowadzony został nowy rynek gazu wyłącznie dla przestrzeni blobów, z którego mogą korzystać dostawcy pakietów zbiorczych. _Chociaż opłaty w warstwie 1 mogą zostać obniżone przez przeniesienie danych pakietu zbiorczego do blobów, to uaktualnienie koncentruje się głównie na redukcji opłat w warstwie 2. Obniżenie opłat w warstwie 1 (sieć główna) może nastąpić jako drugorzędny efekt w mniejszym stopniu._
+Nieznacznie. Wprowadzany jest nowy rynek gazu wyłącznie dla przestrzeni blobów, do użytku przez dostawców rollupów. _Chociaż opłaty na L1 mogą ulec obniżeniu poprzez przeniesienie danych rollupów do blobów, ta aktualizacja skupia się przede wszystkim na obniżeniu opłat na L2. Obniżenie opłat na L1 (Sieć główna) może wystąpić jako efekt drugiego rzędu w mniejszym stopniu._
 
-- Obniżenie gazu w warstwie 1 będzie proporcjonalne do adopcji/użycia danych blob przez dostawców pakietów zbiorczych
-- Gaz w warstwie 1 najprawdopodobniej pozostanie konkurencyjny ze względu na działalność niezwiązaną z pakietami zbiorczymi
-- Pakiety zbiorcze, które wykorzystują przestrzeń blobów, będą wymagać mniej gazu w warstwie 1, co pomoże obniżyć gaz w warstwie 1 w najbliższej przyszłości
-- Przestrzeń blobów jest nadal ograniczona, więc jeśli bloby w bloku są nasycone/pełne, wówczas pakiety zbiorcze mogą być w międzyczasie zobowiązane do opublikowania swoich danych jako danych stałych, co spowodowałoby wzrost cen gazu w warstwie 1 i 2
+- Redukcja gazu na L1 będzie proporcjonalna do adopcji/wykorzystania danych blobów przez dostawców rollupów
+- Gaz na L1 prawdopodobnie pozostanie konkurencyjny ze względu na aktywność niezwiązaną z rollupami
+- Rollupy, które przyjmą wykorzystanie przestrzeni blobów, będą wymagały mniej gazu na L1, pomagając obniżyć opłaty za gaz na L1 w najbliższym czasie
+- Przestrzeń blobów jest nadal ograniczona, więc jeśli bloby w bloku są nasycone/pełne, rollupy mogą być zmuszone do publikowania swoich danych jako danych stałych w międzyczasie, co spowodowałoby wzrost cen gazu na L1 i L2
 
-## Czy zmniejszy to opłaty w innych blockchainach EVM warstwy 1? {#alt-l1-fee-impact}
+## Czy to obniży opłaty na innych łańcuchach bloków warstwy 1 EVM? {#alt-l1-fee-impact}
 
-Nie. Korzyści z Proto-Dankshardingu są charakterystyczne dla pakietów zbiorczych warstwy 2 Ethereum, które przechowują swoje dowody w warstwie 1 (sieć główna).
+Nie. Korzyści z proto-dankshardingu są specyficzne dla rollupów warstwy 2 Ethereum, które przechowują swoje dowody w warstwie 1 (Sieć główna).
 
-Sama kompatybilność z wirtualną maszyną Ethereum (EVM) nie oznacza, że sieć odniesie jakiekolwiek korzyści z tego uaktualnienia. Sieci, które działają niezależnie od Ethereum (niezależnie od tego, czy są kompatybilne z EVM czy nie) nie przechowują swoich danych w Ethereum i nie odniosą jakichkolwiek korzyści z tego uaktualnienia.
+Sama kompatybilność z Maszyną Wirtualną Ethereum (EVM) nie oznacza, że sieć odniesie jakiekolwiek korzyści z tej aktualizacji. Sieci, które działają niezależnie od Ethereum (niezależnie od tego, czy są kompatybilne z EVM, czy nie), nie przechowują swoich danych w Ethereum i nie odniosą żadnych korzyści z tej aktualizacji.
 
-[Więcej na temat pakietów zbiorczych warstwy 2](/layer-2/)
+[Więcej o rollupach warstwy 2](/layer-2/)
 
-## Jesteś raczej wzrokowcem? {#visual-learner}
+## Wolisz uczyć się wzrokowo? {#visual-learner}
 
-<YouTube id="HT9PHWloIiU" />
+<VideoWatch slug="eip-4844-dencun-explained" />
 
-_Odblokowanie skalowania Ethereum, EIP-4844 — Finematics_
+_Odblokowanie skalowania Ethereum, EIP-4844 — Finematics _
 
-<YouTube id="dFjyUY3e53Q" />
+<VideoWatch slug="blobspace-101-dencun" />
 
-_Podstawy przestrzeni blobów z Domothy — Bankless_
+_Blobspace 101 z Domothym — Bankless_
 
-## Further reading {#further-reading}
+## Dalsza lektura {#further-reading}
 
 - [EIP4844.com](https://www.eip4844.com/)
-- [EIP-4844: Transakcje shard blob (Proto-Danksharding)](https://eips.ethereum.org/EIPS/eip-4844)
-- [Ogłoszenie sieci głównej Dencun](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement) — _Blog Fundacji Ethereum_
-- [Przewodnik po Ethereum: Proto-Danksharding](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum/#proto-danksharding-eip-4844) — _Jon Charbonneau_
-- [Często zadawane pytania na temat Proto-Dankshardingu](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq) — _Vitalik Buterin_
-- [Dogłębne objaśnienie EIP-4844: Podstawa uaktualnienia Cancun](https://medium.com/@ebunker.io/an-in-depth-explanation-of-eip-4844-the-core-of-the-cancun-upgrade-de7b13761d2c) — _Ebunker_
-- [AllCoreDevs aktualizacja 016](https://tim.mirror.xyz/HzH5MpK1dnw7qhBSmzCfdCIxpwpD6DpwlfxtaAwEFro) — _Tim Beiko_
+- [EIP-4844: Transakcje blobów shardów (proto-danksharding)](https://eips.ethereum.org/EIPS/eip-4844)
+- [Ogłoszenie Dencun w Sieci głównej](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement) - _Blog Ethereum Foundation_
+- [Autostopem przez Ethereum: proto-danksharding](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum/#proto-danksharding-eip-4844) - _Jon Charbonneau_
+- [FAQ proto-dankshardingu](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq) - _Vitalik Buterin_
+- [Dogłębne wyjaśnienie EIP-4844: rdzeń aktualizacji Cancun](https://medium.com/@ebunker.io/an-in-depth-explanation-of-eip-4844-the-core-of-the-cancun-upgrade-de7b13761d2c) - _Ebunker_
+- [Aktualizacja AllCoreDevs 016](https://tim.mirror.xyz/HzH5MpK1dnw7qhBSmzCfdCIxpwpD6DpwlfxtaAwEFro) - _Tim Beiko_

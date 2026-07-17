@@ -4,8 +4,6 @@ description: The policy we use when adding a wallet to ethereum.org
 lang: en
 ---
 
-# Adding wallets {#adding-wallets}
-
 We want to make sure we show a variety of wallets covering the feature-rich landscape of wallets so that users can navigate Ethereum in a confident manner.
 
 Anyone is free to suggest adding a wallet on ethereum.org. If there's a wallet that we have missed, please suggest it!

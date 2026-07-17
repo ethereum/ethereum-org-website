@@ -5,6 +5,7 @@ author: "Elan Halpern"
 lang: en
 tags: ["alchemy", "websockets", "querying", "javascript"]
 skill: beginner
+breadcrumb: WebSockets
 source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
@@ -39,7 +40,7 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 To begin, open a WebSocket using the WebSocket URL for your app. You can find your app's WebSocket URL by opening the app's page in [your dashboard](https://dashboard.alchemy.com/) and clicking "View Key". Note that your app's URL for WebSockets is different from its URL for HTTP requests, but both can be found by clicking "View Key".
 
-![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.gif)
+![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.mp4#602x280)
 
 Any of the APIs listed in the [Alchemy API Reference](https://www.alchemy.com/docs/reference/api-overview) can be used via WebSocket. To do so, use the same payload that would be sent as the body of a HTTP POST request, but instead send that payload through the WebSocket.
 

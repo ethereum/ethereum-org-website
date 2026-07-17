@@ -1,0 +1,234 @@
+{
+  "version": 1,
+  "locale": "id",
+  "translatedAt": "2026-06-17T21:46:37.748Z",
+  "englishManifestHash": "39838dd08448",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-18f86d",
+    "LINK-540746",
+    "LINK-08a3d2",
+    "LINK-ab55fe",
+    "LINK-9f466b",
+    "LINK-92152c",
+    "LINK-3187d0",
+    "LINK-ce95d5",
+    "LINK-98ff22",
+    "LINK-582a1f",
+    "LINK-ce9962",
+    "LINK-7b5d9a",
+    "LINK-3187d0",
+    "LINK-06a95e",
+    "LINK-3d34be",
+    "LINK-d7edfc",
+    "LINK-7ff967",
+    "CODE-1945d2",
+    "LINK-2f76ce",
+    "LINK-f8fb6a",
+    "LINK-b1c08f",
+    "LINK-2866ce",
+    "LINK-d23800",
+    "LINK-fe3574",
+    "LINK-7e6c0f",
+    "LINK-1cd812",
+    "LINK-4db551",
+    "LINK-d4b109",
+    "LINK-0a0934",
+    "LINK-370129",
+    "LINK-9ce3aa"
+  ],
+  "placeholderMap": {
+    "CODE-1945d2": {
+      "type": "inline-code",
+      "values": {
+        "content": "CALLDATA"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-18f86d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/intro-to-ethereum/"
+      }
+    },
+    "LINK-540746": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/"
+      }
+    },
+    "LINK-08a3d2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/blocks/"
+      }
+    },
+    "LINK-ab55fe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-9f466b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-92152c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/"
+      }
+    },
+    "LINK-3187d0": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/light-clients"
+      }
+    },
+    "LINK-ce95d5": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling"
+      }
+    },
+    "LINK-98ff22": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/statelessness"
+      }
+    },
+    "LINK-582a1f": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/danksharding/#what-is-danksharding"
+      }
+    },
+    "LINK-ce9962": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/pbs"
+      }
+    },
+    "LINK-7b5d9a": {
+      "type": "link",
+      "values": {
+        "url": "https://hackmd.io/@vbuterin/sharding_proposal#Why-not-use-just-committees-and-not-DAS"
+      }
+    },
+    "LINK-06a95e": {
+      "type": "link",
+      "values": {
+        "url": "https://dankradfeist.de/ethereum/2019/12/20/data-availability-checks.html"
+      }
+    },
+    "LINK-3d34be": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2/"
+      }
+    },
+    "LINK-d7edfc": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#rollups"
+      }
+    },
+    "LINK-7ff967": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/optimistic-rollups/"
+      }
+    },
+    "LINK-2f76ce": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/zk-rollups"
+      }
+    },
+    "LINK-f8fb6a": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#zk-proof"
+      }
+    },
+    "LINK-b1c08f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ethportal.net/"
+      }
+    },
+    "LINK-2866ce": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/blockchain-capital-blog/wtf-is-data-availability-80c2c95ded0f"
+      }
+    },
+    "LINK-d23800": {
+      "type": "link",
+      "values": {
+        "url": "https://coinmarketcap.com/academy/article/what-is-data-availability"
+      }
+    },
+    "LINK-fe3574": {
+      "type": "link",
+      "values": {
+        "url": "https://dankradfeist.de/ethereum/2019/12/20/data-availability-checks.html"
+      }
+    },
+    "LINK-7e6c0f": {
+      "type": "link",
+      "values": {
+        "url": "https://hackmd.io/@vbuterin/sharding_proposal#ELI5-data-availability-sampling"
+      }
+    },
+    "LINK-1cd812": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding#can-an-attacker-not-circumvent-this-scheme-by-releasing-a-full-unavailable-block-but-then-only-releasing-individual-bits-of-data-as-clients-query-for-them"
+      }
+    },
+    "LINK-4db551": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/starkware/data-availability-e5564c416424"
+      }
+    },
+    "LINK-d4b109": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf"
+      }
+    },
+    "LINK-0a0934": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@vbuterin/data_sharding_roadmap#Who-would-store-historical-data-under-sharding"
+      }
+    },
+    "LINK-370129": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20250515194659/https://web.archive.org/web/20241108192208/https://research.2077.xyz/data-availability-or-how-rollups-learned-to-stop-worrying-and-love-ethereum"
+      }
+    },
+    "LINK-9ce3aa": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20250515194659/https://research.2077.xyz/eip-7623-increase-calldata-cost"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T21:46:37.748Z",
+      "status": "success"
+    }
+  }
+}

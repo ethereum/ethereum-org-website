@@ -1,3 +1,5 @@
+import { fetchRetry } from "./fetchRetry"
+
 export type GlossaryEntry = {
   string_term: string
   translation_text: string
@@ -27,7 +29,7 @@ export async function fetchTranslationGlossary(): Promise<GlossaryEntry[]> {
   let offset = 0
   while (hasMore) {
     const url = `${baseUrl}&limit=${pageSize}&offset=${offset}`
-    const response = await fetch(url, {
+    const response = await fetchRetry(url, {
       headers: {
         apikey: supabaseKey,
         Authorization: `Bearer ${supabaseKey}`,

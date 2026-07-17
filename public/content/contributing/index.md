@@ -1,10 +1,9 @@
 ---
-title: Contributing
+title: "Contributing to ethereum.org 🦄"
+metaTitle: Contributing
 description: Learn about the different ways you can contribute to ethereum.org
 lang: en
 ---
-
-# Contributing to ethereum.org 🦄 {#contributing-to-ethereumorg}
 
 Ethereum.org is an open-source run project with **12 000+** contributors that help translate, write, design and maintain the website.
 
@@ -23,9 +22,13 @@ We are a welcoming community that will help you grow and educate in the [Ethereu
 
 **Content**
 - [Create/edit content](/contributing/#how-to-update-content) – Suggest new pages or make tweaks to what's here already
+- [Write a builder article](/contributing/adding-articles/) - Contribute an article for the [Latest](/latest/) section
 - [Add community resources](/contributing/content-resources/) – Add a helpful article or resource to a relevant page
-- [Suggest a design resource](/contributing/design/adding-design-resources/) – Add, update, and delete helpful design resources
+- [Suggest a report](/contributing/adding-reports/) - Suggest a research report for the [Reports](/reports/) page
+- [Share your story](/contributing/adding-community-stories/) - Submit a story about your personal experiences with open-source and sanctuary technologies, how the Ethereum ecosystem has impacted your life, or how you and your community use Ethereum
 - [Quizzes](/contributing/quizzes/) – Add, update, and delete quiz question banks for a relevant page
+- [Suggest a design resource](/contributing/design/adding-design-resources/) – Add, update, and delete helpful design resources
+- [Suggest a video](/contributing/adding-videos/) – Suggest an educational video for the video gallery
 
 **Feature ideas**
 - [Request a feature](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Let us know about any ideas you have for a new feature or design
@@ -42,11 +45,11 @@ We are a welcoming community that will help you grow and educate in the [Ethereu
 
 Any questions? 🤔 Join our [Discord server](https://discord.gg/ethereum-org)
 
-## Good first tasks to start contributing
+## Good first tasks to start contributing {#good-first-tasks-to-start-contributing}
 
 These are few current tasks that you could help us solve and take responsibility for. For most you will need GitHub account as most changes to the website are made through GitHub.
 
-<IssuesList issues={gfissues} my={8} />
+<IssuesList my={8} />
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">See all tasks</ButtonLink>
 
@@ -90,7 +93,7 @@ If your contribution gets merged into ethereum.org, you will have a chance to cl
 
 [More on OATs](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
-### How to claim
+### How to claim {#how-to-claim}
 1. Join our [Discord server](https://discord.gg/ethereum-org).
 2. Paste a link to your contribution in the `#🥇 | proof-of-contribution` channel.
 3. Wait for a member of our team to send you a link to your OAT.
@@ -103,7 +106,7 @@ You should only use self-custody wallets to claim OATs. Do not use exchange acco
 GitPOAP will also automatically recognize your merged contribution and let you mint a separate unique contributors POAP on their platform itself!
 
 
-### How to claim {#how-to-claim}
+### How to claim {#how-to-claim-2}
 
 1. Visit [GitPOAP](https://www.gitpoap.io).
 2. Connect with your wallet or even with your email through sign in option.

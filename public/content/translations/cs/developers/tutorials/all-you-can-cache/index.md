@@ -1,39 +1,40 @@
 ---
 title: "Vše, co můžete cachovat"
-description: "Naučte se, jak vytvořit a používat cachovací kontrakt pro levnější rollupové transakce"
+description: "Naučte se, jak vytvořit a používat cachovací kontrakt pro levnější transakce na rollupech"
 author: Ori Pomerantz
-tags: [ "vrstva 2", "cachování", "úložiště" ]
+tags: ["vrstva 2", "cachování", "úložiště", "škálování"]
 skill: intermediate
+breadcrumb: "Cachování pro rollupy"
 published: 2022-09-15
 lang: cs
 ---
 
-Při používání rollupů je cena jednoho bajtu v transakci o mnoho vyšší než cena slotu v úložišti. Proto dává smysl cachovat co nejvíce informací na blockchainu.
+Při používání rollupů je cena bajtu v transakci mnohem vyšší než cena úložného slotu. Proto dává smysl cachovat co nejvíce informací onchain.
 
-V tomto článku se naučíte, jak vytvořit a používat cachovací kontrakt tak, aby se každá hodnota parametru, která se pravděpodobně použije vícekrát, uložila do cache a byla (po prvním použití) dostupná za použití mnohem menšího počtu bajtů, a jak napsat off-chain kód, který tuto cache využívá.
+V tomto článku se dozvíte, jak vytvořit a používat cachovací kontrakt takovým způsobem, aby jakákoli hodnota parametru, u které je pravděpodobné, že bude použita vícekrát, byla uložena do mezipaměti (cache) a byla k dispozici pro použití (po prvním použití) s mnohem menším počtem bajtů, a jak napsat offchain kód, který tuto cache využívá.
 
 Pokud chcete článek přeskočit a podívat se rovnou na zdrojový kód, [najdete ho zde](https://github.com/qbzzt/20220915-all-you-can-cache). Vývojový stack je [Foundry](https://getfoundry.sh/introduction/installation/).
 
 ## Celkový návrh {#overall-design}
 
-Pro zjednodušení budeme předpokládat, že všechny parametry transakce jsou typu `uint256` o délce 32 bajtů. Když obdržíme transakci, zpracujeme každý parametr následujícím způsobem:
+Pro zjednodušení budeme předpokládat, že všechny parametry transakce jsou `uint256`, tedy 32 bajtů dlouhé. Když přijmeme transakci, zpracujeme každý parametr takto:
 
-1. Pokud je první bajt `0xFF`, vezměte následujících 32 bajtů jako hodnotu parametru a zapište ji do cache.
+1. Pokud je první bajt `0xFF`, vezměte dalších 32 bajtů jako hodnotu parametru a zapište ji do cache.
 
-2. Pokud je první bajt `0xFE`, vezměte následujících 32 bajtů jako hodnotu parametru, ale _nezapisujte_ ji do cache.
+2. Pokud je první bajt `0xFE`, vezměte dalších 32 bajtů jako hodnotu parametru, ale _nezapisujte_ ji do cache.
 
-3. Pro jakoukoliv jinou hodnotu vezměte horní čtyři bity jako počet dalších bajtů a spodní čtyři bity jako nejvýznamnější bity klíče cache. Zde je několik příkladů:
+3. Pro jakoukoli jinou hodnotu vezměte horní čtyři bity jako počet dalších bajtů a dolní čtyři bity jako nejvýznamnější bity klíče cache. Zde je několik příkladů:
 
-   | Bajty v calldata | Klíč cache |
-   | :--------------- | ---------: |
-   | 0x0F             |       0x0F |
-   | 0x10,0x10        |       0x10 |
-   | 0x12,0xAC        |     0x02AC |
-   | 0x2D,0xEA, 0xD6  |   0x0DEAD6 |
+   | Bajty v datech volání | Klíč cache |
+   | :---------------- | --------: |
+   | 0x0F              |      0x0F |
+   | 0x10,0x10         |      0x10 |
+   | 0x12,0xAC         |    0x02AC |
+   | 0x2D,0xEA, 0xD6   |  0x0DEAD6 |
 
 ## Manipulace s cache {#cache-manipulation}
 
-Cache je implementována v souboru [`Cache.sol`](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol). Pojďme si ho projít řádek po řádku.
+Cache je implementována v [`Cache.sol`](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol). Pojďme si to projít řádek po řádku.
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -46,18 +47,18 @@ contract Cache {
     bytes1 public constant DONT_CACHE = 0xFE;
 ```
 
-Tyto konstanty se používají k interpretaci speciálních případů, kdy poskytujeme všechny informace a chceme je buď zapsat do cache, nebo ne. Zápis do cache vyžaduje dvě operace [`SSTORE`](https://www.evm.codes/#55) do dříve nepoužitých slotů v úložišti s cenou 22 100 gasu za každou, takže je to volitelné.
+Tyto konstanty se používají k interpretaci speciálních případů, kdy poskytneme všechny informace a buď je chceme zapsat do cache, nebo ne. Zápis do cache vyžaduje dvě operace [`SSTORE`](https://www.evm.codes/#55) do dříve nepoužitých úložných slotů za cenu 22 100 gasu za každou, takže to děláme volitelné.
 
 ```solidity
 
     mapping(uint => uint) public val2key;
 ```
 
-[Mapování](https://www.geeksforgeeks.org/solidity/solidity-mappings/) mezi hodnotami a jejich klíči. Tato informace je nezbytná k zakódování hodnot před odesláním transakce.
+[Mapování](https://www.geeksforgeeks.org/solidity/solidity-mappings/) mezi hodnotami a jejich klíči. Tato informace je nezbytná pro zakódování hodnot před odesláním transakce.
 
 ```solidity
     // Umístění n má hodnotu pro klíč n+1, protože potřebujeme zachovat
-    // nulu jako „není v cache“.
+    // nulu jako „není v mezipaměti“.
     uint[] public key2val;
 ```
 
@@ -70,69 +71,69 @@ Pro mapování z klíčů na hodnoty můžeme použít pole, protože klíče p�
     }  // cacheRead
 ```
 
-Přečte hodnotu z cache.
+Přečtení hodnoty z cache.
 
 ```solidity
-    // Zapíše hodnotu do cache, pokud tam ještě není
-    // Veřejné jen proto,aby fungoval test
+    // Zapsat hodnotu do mezipaměti, pokud tam ještě není
+    // Pouze public, aby mohl fungovat test
     function cacheWrite(uint _value) public returns (uint) {
-        // Pokud je hodnota již v cache, vrátí aktuální klíč
+        // Pokud je hodnota již v mezipaměti, vrátit aktuální klíč
         if (val2key[_value] != 0) {
             return val2key[_value];
         }
 ```
 
-Nemá smysl vkládat stejnou hodnotu do cache více než jednou. Pokud tam hodnota již je, stačí vrátit stávající klíč.
+Nemá smysl vkládat stejnou hodnotu do cache vícekrát. Pokud tam hodnota již je, stačí vrátit existující klíč.
 
 ```solidity
-        // Jelikož 0xFE je speciální případ, největší klíč, který může cache
-        // obsahovat, je 0x0D následovaný 15x 0xFF. Pokud už je délka cache tak
-        // velká, selže.
+        // Jelikož 0xFE je speciální případ, největší klíč, který může mezipaměť
+        // pojmout, je 0x0D následované 15 0xFF. Pokud je délka mezipaměti již takto
+        // velká, selhat.
         //                              1 2 3 4 5 6 7 8 9 A B C D E F
         require(key2val.length+1 < 0x0DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF,
-            "přetečení cache");
+            "cache overflow");
 ```
 
-Nemyslím si, že se někdy dočkáme tak velké cache (přibližně 1,8\*10<sup>37</sup> položek, což by vyžadovalo asi 10<sup>27</sup> TB k uložení). Jsem však dost starý na to, abych si pamatoval [„640 kB bude vždy stačit“](https://quoteinvestigator.com/2011/09/08/640k-enough/). Tento test je velmi levný.
+Nemyslím si, že někdy budeme mít tak velkou cache (přibližně 1,8\*10<sup>37</sup> záznamů, což by vyžadovalo asi 10<sup>27</sup> TB k uložení). Jsem však dost starý na to, abych si pamatoval, že [„640 kB bude vždy stačit“](https://quoteinvestigator.com/2011/09/08/640k-enough/). Tento test je velmi levný.
 
 ```solidity
-        // Zapíše hodnotu pomocí dalšího klíče
+        // Zapsat hodnotu pomocí dalšího klíče
         val2key[_value] = key2val.length+1;
 ```
 
-Přidá zpětné vyhledávání (od hodnoty ke klíči).
+Přidání zpětného vyhledávání (od hodnoty ke klíči).
 
 ```solidity
         key2val.push(_value);
 ```
 
-Přidá dopředné vyhledávání (od klíče k hodnotě). Protože přiřazujeme hodnoty sekvenčně, můžeme ji jednoduše přidat za poslední hodnotu v poli.
+Přidání dopředného vyhledávání (od klíče k hodnotě). Protože hodnoty přiřazujeme sekvenčně, můžeme je jednoduše přidat za poslední hodnotu pole.
 
 ```solidity
         return key2val.length;
     }  // cacheWrite
 ```
 
-Vrátí novou délku `key2val`, což je buňka, kde je uložena nová hodnota.
+Vrácení nové délky `key2val`, což je buňka, kde je uložena nová hodnota.
 
 ```solidity
     function _calldataVal(uint startByte, uint length)
         private pure returns (uint)
 ```
 
-Tato funkce čte hodnotu z calldata libovolné délky (až 32 bajtů, což je velikost slova).
+Tato funkce čte hodnotu z dat volání libovolné délky (až 32 bajtů, velikost slova).
 
 ```solidity
     {
         uint _retVal;
 
         require(length < 0x21,
-            "limit délky _calldataVal je 32 bajtů");
+            "_calldataVal length limit is 32 bytes");
         require(length + startByte <= msg.data.length,
-            "_calldataVal se snaží číst za calldatasize");
+            "_calldataVal trying to read beyond calldatasize");
 ```
 
-Tato funkce je interní, takže pokud je zbytek kódu napsán správně, tyto testy nejsou nutné. Nestojí však mnoho, takže je můžeme klidně použít.
+Tato funkce je interní, takže pokud je zbytek kódu napsán správně, tyto testy nejsou nutné. Nicméně nestojí mnoho, takže je můžeme klidně ponechat.
 
 ```solidity
         assembly {
@@ -140,26 +141,26 @@ Tato funkce je interní, takže pokud je zbytek kódu napsán správně, tyto te
         }
 ```
 
-Tento kód je v jazyce [Yul](https://docs.soliditylang.org/en/v0.8.16/yul.html). Čte 32bajtovou hodnotu z calldata. Funguje to i v případě, že calldata končí před `startByte+32`, protože neinicializovaný prostor v EVM je považován za nulový.
+Tento kód je v jazyce [Yul](https://docs.soliditylang.org/en/v0.8.16/yul.html). Čte 32bajtovou hodnotu z dat volání. To funguje, i když data volání skončí před `startByte+32`, protože neinicializovaný prostor v EVM je považován za nulu.
 
 ```solidity
         _retVal = _retVal >> (256-length*8);
 ```
 
-Nemusíme nutně chtít 32bajtovou hodnotu. Tím se zbavíme přebytečných bajtů.
+Ne nutně chceme 32bajtovou hodnotu. Tímto se zbavíme přebytečných bajtů.
 
 ```solidity
         return _retVal;
     } // _calldataVal
 
 
-    // Načte jeden parametr z calldata, počínaje od _fromByte
+    // Přečíst jeden parametr z dat volání, počínaje od _fromByte
     function _readParam(uint _fromByte) internal
         returns (uint _nextByte, uint _parameterValue)
     {
 ```
 
-Načte jeden parametr z calldata. Všimněte si, že musíme vrátit nejen hodnotu, kterou jsme načetli, ale také umístění dalšího bajtu, protože parametry mohou mít délku od 1 do 33 bajtů.
+Přečtení jednoho parametru z dat volání. Všimněte si, že musíme vrátit nejen přečtenou hodnotu, ale také pozici dalšího bajtu, protože parametry mohou mít délku od 1 bajtu do 33 bajtů.
 
 ```solidity
         // První bajt nám říká, jak interpretovat zbytek
@@ -168,28 +169,28 @@ Načte jeden parametr z calldata. Všimněte si, že musíme vrátit nejen hodno
         _firstByte = uint8(_calldataVal(_fromByte, 1));
 ```
 
-Solidity se snaží snížit počet chyb tím, že zakazuje potenciálně nebezpečné [implicitní převody typů](https://docs.soliditylang.org/en/v0.8.16/types.html#implicit-conversions). Downgrade, například z 256 bitů na 8 bitů, musí být explicitní.
+Solidity se snaží snížit počet chyb tím, že zakazuje potenciálně nebezpečné [implicitní typové konverze](https://docs.soliditylang.org/en/v0.8.16/types.html#implicit-conversions). Snížení, například z 256 bitů na 8 bitů, musí být explicitní.
 
 ```solidity
 
-        // Přečte hodnotu, ale nezapíše ji do cache
+        // Přečíst hodnotu, ale nezapisovat ji do mezipaměti
         if (_firstByte == uint8(DONT_CACHE))
             return(_fromByte+33, _calldataVal(_fromByte+1, 32));
 
-        // Přečte hodnotu a zapíše ji do cache
+        // Přečíst hodnotu a zapsat ji do mezipaměti
         if (_firstByte == uint8(INTO_CACHE)) {
             uint _param = _calldataVal(_fromByte+1, 32);
             cacheWrite(_param);
             return(_fromByte+33, _param);
         }
 
-        // Pokud jsme se dostali sem, znamená to, že musíme číst z cache
+        // Pokud jsme se dostali sem, znamená to, že musíme číst z mezipaměti
 
-        // Počet bajtů navíc ke čtení
+        // Počet dalších bajtů ke čtení
         uint8 _extraBytes = _firstByte / 16;
 ```
 
-Vezměte nižší [půlbajt](https://en.wikipedia.org/wiki/Nibble) a zkombinujte ho s ostatními bajty, abyste načetli hodnotu z cache.
+Vezměte spodní [půlbajt (nibble)](https://en.wikipedia.org/wiki/Nibble) a zkombinujte jej s ostatními bajty pro přečtení hodnoty z cache.
 
 ```solidity
         uint _key = (uint256(_firstByte & 0x0F) << (8*_extraBytes)) +
@@ -200,17 +201,17 @@ Vezměte nižší [půlbajt](https://en.wikipedia.org/wiki/Nibble) a zkombinujte
     }  // _readParam
 
 
-    // Načte n parametrů (funkce vědí, kolik parametrů očekávají)
+    // Přečíst n parametrů (funkce vědí, kolik parametrů očekávají)
     function _readParams(uint _paramNum) internal returns (uint[] memory) {
 ```
 
-Počet parametrů, které máme, bychom mohli získat ze samotné calldata, ale funkce, které nás volají, vědí, kolik parametrů očekávají. Je jednodušší, nechat si to od nich říct.
+Počet parametrů bychom mohli získat ze samotných dat volání, ale funkce, které nás volají, vědí, kolik parametrů očekávají. Je jednodušší nechat je, ať nám to řeknou.
 
 ```solidity
-        // Parametry, které čteme
+        // Parametry, které jsme přečetli
         uint[] memory params = new uint[](_paramNum);
 
-        // Parametry začínají na 4. bajtu, předtím je podpis funkce
+        // Parametry začínají na bajtu 4, předtím je signatura funkce
         uint _atByte = 4;
 
         for(uint i=0; i<_paramNum; i++) {
@@ -218,14 +219,14 @@ Počet parametrů, které máme, bychom mohli získat ze samotné calldata, ale 
         }
 ```
 
-Čtěte parametry, dokud nebudete mít požadovaný počet. Pokud překročíme konec calldata, `_readParams` vrátí volání zpět.
+Čtěte parametry, dokud nebudete mít potřebný počet. Pokud překročíme konec dat volání, `_readParams` volání zvrátí.
 
 ```solidity
 
         return(params);
     }   // readParams
 
-    // Pro testování _readParams, testování čtení čtyř parametrů
+    // Pro testování _readParams, otestovat čtení čtyř parametrů
     function fourParam() public
         returns (uint256,uint256,uint256,uint256)
     {
@@ -235,32 +236,32 @@ Počet parametrů, které máme, bychom mohli získat ze samotné calldata, ale 
     }    // fourParam
 ```
 
-Jednou z velkých výhod Foundry je, že umožňuje psát testy v Solidity ([viz Testování cache níže](#testing-the-cache)). To značně usnadňuje jednotkové testy. Jedná se o funkci, která přečte čtyři parametry a vrátí je, aby test mohl ověřit, že byly správné.
+Jednou z velkých výhod Foundry je, že umožňuje psát testy v Solidity ([viz Testování cache níže](#testing-the-cache)). To značně usnadňuje jednotkové testy (unit tests). Toto je funkce, která přečte čtyři parametry a vrátí je, aby test mohl ověřit, že byly správné.
 
 ```solidity
-    // Získá hodnotu, vrátí bajty, které ji zakódují (pokud možno s použitím cache)
+    // Získat hodnotu, vrátit bajty, které ji zakódují (s využitím mezipaměti, pokud je to možné)
     function encodeVal(uint _val) public view returns(bytes memory) {
 ```
 
-`encodeVal` je funkce, kterou volá off-chain kód, aby pomohla vytvořit calldata, která používá cache. Přijímá jednu hodnotu a vrací bajty, které ji kódují. Tato funkce je `view`, takže nevyžaduje transakci a při externím volání nestojí žádný gas.
+`encodeVal` je funkce, kterou volá offchain kód, aby pomohla vytvořit data volání využívající cache. Přijme jednu hodnotu a vrátí bajty, které ji kódují. Tato funkce je `view`, takže nevyžaduje transakci a při externím volání nestojí žádný gas.
 
 ```solidity
         uint _key = val2key[_val];
 
-        // Hodnota ještě není v cache, přidejte ji
+        // Hodnota ještě není v mezipaměti, přidat ji
         if (_key == 0)
             return bytes.concat(INTO_CACHE, bytes32(_val));
 ```
 
-V [EVM](/developers/docs/evm/) se předpokládá, že všechna neinicializovaná úložiště jsou nulová. Takže pokud hledáme klíč pro hodnotu, která tam není, dostaneme nulu. V takovém případě jsou bajty, které ji kódují, `INTO_CACHE` (takže bude při příštím použití cachována), následované skutečnou hodnotou.
+V [EVM](/developers/docs/evm/) se předpokládá, že veškeré neinicializované úložiště obsahuje nuly. Pokud tedy hledáme klíč pro hodnotu, která tam není, dostaneme nulu. V takovém případě jsou bajty, které ji kódují, `INTO_CACHE` (takže bude příště uložena do cache), následované samotnou hodnotou.
 
 ```solidity
-        // Pokud je klíč <0x10, vraťte ho jako jeden bajt
+        // Pokud je klíč <0x10, vrátit jej jako jeden bajt
         if (_key < 0x10)
             return bytes.concat(bytes1(uint8(_key)));
 ```
 
-Jednotlivé bajty jsou nejjednodušší. Použijeme jen [`bytes.concat`](https://docs.soliditylang.org/en/v0.8.16/types.html#the-functions-bytes-concat-and-string-concat) pro převod typu `bytes<n>` na pole bajtů, které může mít libovolnou délku. Navzdory svému názvu funguje dobře i při zadání pouze jednoho argumentu.
+Jednotlivé bajty jsou nejjednodušší. Stačí použít [`bytes.concat`](https://docs.soliditylang.org/en/v0.8.16/types.html#the-functions-bytes-concat-and-string-concat) k přeměně typu `bytes<n>` na pole bajtů, které může mít libovolnou délku. Navzdory názvu to funguje dobře, i když je poskytnut pouze jeden argument.
 
 ```solidity
         // Dvoubajtová hodnota, zakódovaná jako 0x1vvv
@@ -268,11 +269,11 @@ Jednotlivé bajty jsou nejjednodušší. Použijeme jen [`bytes.concat`](https:/
             return bytes.concat(bytes2(uint16(_key) | 0x1000));
 ```
 
-Pokud máme klíč, který je menší než 16<sup>3</sup>, můžeme ho vyjádřit ve dvou bajtech. Nejprve převedeme `_key`, což je 256bitová hodnota, na 16bitovou hodnotu a pomocí logického součtu přidáme počet bajtů navíc k prvnímu bajtu. Poté ji převedeme na hodnotu `bytes2`, kterou lze převést na `bytes`.
+Když máme klíč, který je menší než 16<sup>3</sup>, můžeme jej vyjádřit ve dvou bajtech. Nejprve převedeme `_key`, což je 256bitová hodnota, na 16bitovou hodnotu a použijeme logické OR k přidání počtu bajtů navíc k prvnímu bajtu. Pak to jen převedeme na hodnotu `bytes2`, kterou lze převést na `bytes`.
 
 ```solidity
         // Pravděpodobně existuje chytrý způsob, jak provést následující řádky jako smyčku,
-        // ale je to funkce typu view, takže optimalizuji na čas programátora a
+        // ale je to view funkce, takže optimalizuji pro čas programátora a
         // jednoduchost.
 
         if (_key < 16*256**2)
@@ -288,14 +289,14 @@ Pokud máme klíč, který je menší než 16<sup>3</sup>, můžeme ho vyjádři
             return bytes.concat(bytes16(uint128(_key) | (0xF * 16 * 256**15)));
 ```
 
-Ostatní hodnoty (3 bajty, 4 bajty atd.) jsou zpracovávány stejným způsobem, jen s jinými velikostmi polí.
+Ostatní hodnoty (3 bajty, 4 bajty atd.) se zpracovávají stejným způsobem, jen s jinými velikostmi polí.
 
 ```solidity
         // Pokud se dostaneme sem, něco je špatně.
         revert("Error in encodeVal, should not happen");
 ```
 
-Pokud se dostaneme sem, znamená to, že jsme dostali klíč, který je větší než 16\*256<sup>15</sup>. Ale `cacheWrite` omezuje klíče, takže se nemůžeme dostat ani na 14\*256<sup>16</sup> (což by mělo první bajt 0xFE, takže by to vypadalo jako `DONT_CACHE`). Ale přidání testu pro případ, že budoucí programátor zavede chybu, nás moc nestojí.
+Pokud se dostaneme sem, znamená to, že jsme dostali klíč, který není menší než 16\*256<sup>15</sup>. Ale `cacheWrite` omezuje klíče, takže se nemůžeme dostat ani na 14\*256<sup>16</sup> (což by mělo první bajt 0xFE, takže by to vypadalo jako `DONT_CACHE`). Nestojí nás ale moc přidat test pro případ, že by budoucí programátor zanesl chybu.
 
 ```solidity
     } // encodeVal
@@ -305,7 +306,7 @@ Pokud se dostaneme sem, znamená to, že jsme dostali klíč, který je větší
 
 ### Testování cache {#testing-the-cache}
 
-Jednou z výhod Foundry je, že [vám umožňuje psát testy v Solidity](https://getfoundry.sh/forge/tests/overview/), což usnadňuje psaní jednotkových testů. Testy pro třídu `Cache` jsou [zde](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol). Protože testovací kód je repetitivní, jak už to u testů bývá, tento článek vysvětluje pouze zajímavé části.
+Jednou z výhod Foundry je, že [vám umožňuje psát testy v Solidity](https://getfoundry.sh/forge/tests/overview/), což usnadňuje psaní jednotkových testů. Testy pro třídu `Cache` jsou [zde](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol). Protože se testovací kód opakuje, jak už to u testů bývá, tento článek vysvětluje pouze zajímavé části.
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -314,11 +315,11 @@ pragma solidity ^0.8.13;
 import "forge-std/Test.sol";
 
 
-// Je potřeba spustit `forge test -vv` pro konzoli.
+// Pro konzoli je nutné spustit `forge test -vv`.
 import "forge-std/console.sol";
 ```
 
-Toto je pouze boilerplate, který je nezbytný pro použití testovacího balíčku a `console.log`.
+Toto je jen standardní kód (boilerplate), který je nezbytný pro použití testovacího balíčku a `console.log`.
 
 ```solidity
 import "src/Cache.sol";
@@ -335,13 +336,13 @@ contract CacheTest is Test {
     }
 ```
 
-Funkce `setUp` se volá před každým testem. V tomto případě pouze vytvoříme novou cache, aby se naše testy navzájem neovlivňovaly.
+Funkce `setUp` se volá před každým testem. V tomto případě jen vytvoříme novou cache, aby se naše testy navzájem neovlivňovaly.
 
 ```solidity
     function testCaching() public {
 ```
 
-Testy jsou funkce, jejichž názvy začínají na `test`. Tato funkce kontroluje základní funkčnost cache, zapisuje hodnoty a znovu je čte.
+Testy jsou funkce, jejichž názvy začínají na `test`. Tato funkce kontroluje základní funkčnost cache, zápis hodnot a jejich opětovné čtení.
 
 ```solidity
         for(uint i=1; i<5000; i++) {
@@ -352,14 +353,14 @@ Testy jsou funkce, jejichž názvy začínají na `test`. Tato funkce kontroluje
             assertEq(cache.cacheRead(i), i*i);
 ```
 
-Takto se provádí skutečné testování pomocí [funkcí `assert...`](https://getfoundry.sh/reference/forge-std/std-assertions/). V tomto případě kontrolujeme, že hodnota, kterou jsme zapsali, je ta, kterou jsme přečetli. Výsledek `cache.cacheWrite` můžeme zahodit, protože víme, že klíče cache jsou přiřazovány lineárně.
+Takto se provádí samotné testování pomocí [funkcí `assert...`](https://getfoundry.sh/reference/forge-std/std-assertions/). V tomto případě kontrolujeme, zda hodnota, kterou jsme zapsali, je ta, kterou jsme přečetli. Výsledek `cache.cacheWrite` můžeme zahodit, protože víme, že klíče cache jsou přiřazovány lineárně.
 
 ```solidity
         }
     }    // testCaching
 
 
-    // Cachovat stejnou hodnotu vícekrát, zajistit, aby klíč zůstal
+    // Uložit stejnou hodnotu do mezipaměti vícekrát, zajistit, že klíč zůstane
     // stejný
     function testRepeatCaching() public {
         for(uint i=1; i<100; i++) {
@@ -369,7 +370,7 @@ Takto se provádí skutečné testování pomocí [funkcí `assert...`](https://
         }
 ```
 
-Nejprve zapíšeme každou hodnotu dvakrát do cache a ujistíme se, že klíče jsou stejné (což znamená, že druhý zápis se ve skutečnosti neuskutečnil).
+Nejprve zapíšeme každou hodnotu do cache dvakrát a ujistíme se, že klíče jsou stejné (což znamená, že k druhému zápisu ve skutečnosti nedošlo).
 
 ```solidity
         for(uint i=1; i<100; i+=3) {
@@ -379,16 +380,16 @@ Nejprve zapíšeme každou hodnotu dvakrát do cache a ujistíme se, že klíče
     }    // testRepeatCaching
 ```
 
-Teoreticky by mohla existovat chyba, která neovlivní po sobě jdoucí zápisy do cache. Takže zde provedeme několik zápisů, které nejsou po sobě jdoucí, a uvidíme, že hodnoty se stále nepřepisují.
+Teoreticky by mohla existovat chyba, která neovlivňuje po sobě jdoucí zápisy do cache. Takže zde provedeme několik zápisů, které nenásledují po sobě, a vidíme, že hodnoty se stále nepřepisují.
 
 ```solidity
-    // Přečte uint z bufferu v paměti (abychom se ujistili, že dostaneme zpět parametry,
+    // Přečíst uint z paměťového bufferu (abychom se ujistili, že dostaneme zpět parametry,
     // které jsme odeslali)
     function toUint256(bytes memory _bytes, uint256 _start) internal pure
         returns (uint256)
 ```
 
-Přečte 256bitové slovo z bufferu `bytes memory`. Tato pomocná funkce nám umožňuje ověřit, že při spuštění volání funkce, která používá cache, obdržíme správné výsledky.
+Přečtení 256bitového slova z bufferu `bytes memory`. Tato pomocná funkce nám umožňuje ověřit, že při spuštění volání funkce, která využívá cache, obdržíme správné výsledky.
 
 ```solidity
     {
@@ -400,18 +401,18 @@ Přečte 256bitové slovo z bufferu `bytes memory`. Tato pomocná funkce nám um
         }
 ```
 
-Yul nepodporuje datové struktury nad rámec `uint256`, takže když odkazujete na sofistikovanější datovou strukturu, jako je paměťový buffer `_bytes`, získáte adresu této struktury. Solidity ukládá hodnoty `bytes memory` jako 32bajtové slovo, které obsahuje délku, následované skutečnými bajty, takže pro získání bajtu číslo `_start` musíme vypočítat `_bytes+32+_start`.
+Yul nepodporuje datové struktury nad rámec `uint256`, takže když odkazujete na sofistikovanější datovou strukturu, jako je paměťový buffer `_bytes`, získáte adresu této struktury. Solidity ukládá hodnoty `bytes memory` jako 32bajtové slovo, které obsahuje délku, následované samotnými bajty, takže abychom získali bajt číslo `_start`, musíme vypočítat `_bytes+32+_start`.
 
 ```solidity
 
         return tempUint;
     }     // toUint256
 
-    // Podpis funkce pro fourParams(), s laskavým svolením
+    // Signatura funkce pro fourParams(), s laskavým svolením
     // https://www.4byte.directory/signatures/?bytes4_signature=0x3edc1e6d
     bytes4 constant FOUR_PARAMS = 0x3edc1e6d;
 
-    // Jen několik konstantních hodnot, abychom viděli, že dostáváme zpět správné hodnoty
+    // Jen nějaké konstantní hodnoty, abychom viděli, že dostáváme zpět správné hodnoty
     uint256 constant VAL_A = 0xDEAD60A7;
     uint256 constant VAL_B =     0xBEEF;
     uint256 constant VAL_C =     0x600D;
@@ -424,7 +425,7 @@ Některé konstanty, které potřebujeme pro testování.
     function testReadParam() public {
 ```
 
-Zavoláním `fourParams()`, funkce, která používá `readParams`, otestujeme, zda umíme správně číst parametry.
+Zavolání `fourParams()`, funkce, která používá `readParams`, abychom otestovali, že dokážeme správně číst parametry.
 
 ```solidity
         address _cacheAddr = address(cache);
@@ -433,23 +434,23 @@ Zavoláním `fourParams()`, funkce, která používá `readParams`, otestujeme, 
         bytes memory _callOutput;
 ```
 
-Nemůžeme použít normální mechanismus ABI pro volání funkce pomocí cache, takže musíme použít nízkoúrovňový mechanismus [`<address>.call()`](https://docs.soliditylang.org/en/v0.8.16/types.html#members-of-addresses). Tento mechanismus přijímá jako vstup `bytes memory` a vrací je (stejně jako booleovskou hodnotu) jako výstup.
+K volání funkce využívající cache nemůžeme použít normální mechanismus ABI, takže musíme použít nízkoúrovňový mechanismus [`<address>.call()`](https://docs.soliditylang.org/en/v0.8.16/types.html#members-of-addresses). Tento mechanismus bere jako vstup `bytes memory` a vrací jej (stejně jako booleovskou hodnotu) jako výstup.
 
 ```solidity
-        // První volání, cache je prázdná
+        // První volání, mezipaměť je prázdná
         _callInput = bytes.concat(
             FOUR_PARAMS,
 ```
 
-Je užitečné, aby stejný kontrakt podporoval jak cachované funkce (pro volání přímo z transakcí), tak i necachované funkce (pro volání z jiných chytrých kontraktů). Abychom toho dosáhli, musíme se nadále spoléhat na mechanismus Solidity pro volání správné funkce, namísto toho, abychom vše vkládali do [funkce `fallback`](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function). Tímto způsobem je kompozitnost mnohem snazší. Jeden bajt by ve většině případů stačil k identifikaci funkce, takže plýtváme třemi bajty (16\*3=48 gasu). Nicméně, v době psaní tohoto článku stojí těchto 48 gasů 0,07 centů, což je rozumná cena za jednodušší a méně chybový kód.
+Je užitečné, aby stejný kontrakt podporoval jak cachované funkce (pro volání přímo z transakcí), tak necachované funkce (pro volání z jiných chytrých kontraktů). K tomu se musíme i nadále spoléhat na mechanismus Solidity pro volání správné funkce, místo abychom vše vkládali do [funkce `fallback`](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function). Tím se výrazně usnadní skládatelnost. K identifikaci funkce by ve většině případů stačil jeden bajt, takže plýtváme třemi bajty (16\*3=48 gasu). Nicméně v době psaní tohoto textu stojí těchto 48 gasu 0,07 centu, což je rozumná cena za jednodušší kód, který je méně náchylný k chybám.
 
 ```solidity
-            // První hodnota, přidejte ji do cache
+            // První hodnota, přidat ji do mezipaměti
             cache.INTO_CACHE(),
             bytes32(VAL_A),
 ```
 
-První hodnota: Příznak, který říká, že je to plná hodnota, která se musí zapsat do cache, následovaný 32 bajty hodnoty. Ostatní tři hodnoty jsou podobné, s výjimkou toho, že `VAL_B` se do cache nezapisuje a `VAL_C` je jak třetím, tak čtvrtým parametrem.
+První hodnota: Příznak říkající, že jde o plnou hodnotu, kterou je třeba zapsat do cache, následovaný 32 bajty hodnoty. Další tři hodnoty jsou podobné, s tím rozdílem, že `VAL_B` se do cache nezapisuje a `VAL_C` je třetím i čtvrtým parametrem.
 
 ```solidity
              .
@@ -472,30 +473,30 @@ Očekáváme, že volání bude úspěšné.
         assertEq(cache.cacheRead(2), VAL_C);
 ```
 
-Začínáme s prázdnou cache a poté přidáme `VAL_A` následované `VAL_C`. Očekávali bychom, že první bude mít klíč 1 a druhý klíč 2.
+Začneme s prázdnou cache a poté přidáme `VAL_A` následované `VAL_C`. Očekávali bychom, že první bude mít klíč 1 a druhé 2.
 
 ```
-        assertEq(toUint256(_callOutput,0), VAL_A);
+assertEq(toUint256(_callOutput,0), VAL_A);
         assertEq(toUint256(_callOutput,32), VAL_B);
         assertEq(toUint256(_callOutput,64), VAL_C);
         assertEq(toUint256(_callOutput,96), VAL_C);
 ```
 
-Výstupem jsou čtyři parametry. Zde ověřujeme, že je správný.
+Výstupem jsou čtyři parametry. Zde ověřujeme, že je to správně.
 
 ```solidity
-        // Druhé volání, můžeme použít cache
+        // Druhé volání, můžeme použít mezipaměť
         _callInput = bytes.concat(
             FOUR_PARAMS,
 
-            // První hodnota v cache
+            // První hodnota v mezipaměti
             bytes1(0x01),
 ```
 
-Klíče cache pod 16 jsou pouze jeden bajt.
+Klíče cache menší než 16 mají pouze jeden bajt.
 
 ```solidity
-            // Druhá hodnota, nepřidávejte ji do cache
+            // Druhá hodnota, nepřidávat ji do mezipaměti
             cache.DONT_CACHE(),
             bytes32(VAL_B),
 
@@ -509,13 +510,13 @@ Klíče cache pod 16 jsou pouze jeden bajt.
     }   // testReadParam
 ```
 
-Testy po volání jsou totožné s testy po prvním volání.
+Testy po volání jsou identické s těmi po prvním volání.
 
 ```solidity
     function testEncodeVal() public {
 ```
 
-Tato funkce je podobná funkci `testReadParam`, s výjimkou toho, že místo explicitního psaní parametrů používáme `encodeVal()`.
+Tato funkce je podobná `testReadParam`, s tím rozdílem, že místo explicitního zápisu parametrů používáme `encodeVal()`.
 
 ```solidity
         .
@@ -535,23 +536,23 @@ Tato funkce je podobná funkci `testReadParam`, s výjimkou toho, že místo exp
     }   // testEncodeVal
 ```
 
-Jediný dodatečný test v `testEncodeVal()` je ověření, že délka `_callInput` je správná. Pro první volání je to 4+33\*4. Pro druhé, kde je každá hodnota již v cache, je to 4+1\*4.
+Jediným dalším testem v `testEncodeVal()` je ověření, že délka `_callInput` je správná. Pro první volání je to 4+33\*4. Pro druhé, kde je každá hodnota již v cache, je to 4+1\*4.
 
 ```solidity
-    // Testujte encodeVal, když je klíč delší než jeden bajt
-    // Maximálně tři bajty, protože plnění cache na čtyři bajty trvá
+    // Otestovat encodeVal, když je klíč delší než jeden bajt
+    // Maximálně tři bajty, protože naplnění mezipaměti na čtyři bajty trvá
     // příliš dlouho.
     function testEncodeValBig() public {
-        // Vložte několik hodnot do cache.
-        // Pro zjednodušení použijte klíč n pro hodnotu n.
+        // Vložit do mezipaměti několik hodnot.
+        // Pro zjednodušení použít klíč n pro hodnotu n.
         for(uint i=1; i<0x1FFF; i++) {
             cache.cacheWrite(i);
         }
 ```
 
-Výše uvedená funkce `testEncodeVal` zapisuje do cache pouze čtyři hodnoty, takže [část funkce, která se zabývá vícebajtovými hodnotami](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol#L144-L171) se nekontroluje. Ale tento kód je složitý a náchylný k chybám.
+Výše uvedená funkce `testEncodeVal` zapisuje do cache pouze čtyři hodnoty, takže [část funkce, která se zabývá vícedílnými bajtovými hodnotami](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol#L144-L171), není kontrolována. Tento kód je ale složitý a náchylný k chybám.
 
-První část této funkce je smyčka, která zapisuje všechny hodnoty od 1 do 0x1FFF do cache v pořadí, takže budeme moci tyto hodnoty zakódovat a vědět, kam jdou.
+První částí této funkce je smyčka, která postupně zapisuje všechny hodnoty od 1 do 0x1FFF do cache, takže budeme schopni tyto hodnoty zakódovat a vědět, kam směřují.
 
 ```solidity
         .
@@ -560,10 +561,10 @@ První část této funkce je smyčka, která zapisuje všechny hodnoty od 1 do 
 
         _callInput = bytes.concat(
             FOUR_PARAMS,
-            cache.encodeVal(0x000F),   // Jeden bajt        0x0F
-            cache.encodeVal(0x0010),   // Dva bajty     0x1010
-            cache.encodeVal(0x0100),   // Dva bajty     0x1100
-            cache.encodeVal(0x1000)    // Tři bajty 0x201000
+            cache.encodeVal(0x000F),   // Jeden bajt      0x0F
+            cache.encodeVal(0x0010),   // Dva bajty       0x1010
+            cache.encodeVal(0x0100),   // Dva bajty       0x1100
+            cache.encodeVal(0x1000)    // Tři bajty       0x201000
         );
 ```
 
@@ -577,7 +578,7 @@ Otestujte jednobajtové, dvoubajtové a tříbajtové hodnoty. Dále netestujeme
     }    // testEncodeValBig
 
 
-    // Otestujte, co se stane s příliš malým bufferem, dostaneme revert
+    // Otestovat, že s příliš malým bufferem dostaneme zvrácení
     function testShortCalldata() public {
 ```
 
@@ -592,10 +593,10 @@ Otestujte, co se stane v abnormálním případě, kdy není dostatek parametrů
     }   // testShortCalldata
 ```
 
-Jelikož se to vrací, výsledek, který bychom měli dostat, je `false`.
+Vzhledem k tomu, že se zvrátí, výsledek, který bychom měli dostat, je `false`.
 
 ```
-    // Volání s klíči cache, které tam nejsou
+// Volání s klíči cache, které tam nejsou
     function testNoCacheKey() public {
         .
         .
@@ -603,7 +604,7 @@ Jelikož se to vrací, výsledek, který bychom měli dostat, je `false`.
         _callInput = bytes.concat(
             FOUR_PARAMS,
 
-            // První hodnota, přidejte ji do cache
+            // První hodnota, přidat ji do cache
             cache.INTO_CACHE(),
             bytes32(VAL_A),
 
@@ -614,33 +615,33 @@ Jelikož se to vrací, výsledek, který bychom měli dostat, je `false`.
         );
 ```
 
-Tato funkce dostane čtyři naprosto legitimní parametry, s výjimkou toho, že cache je prázdná, takže tam nejsou žádné hodnoty ke čtení.
+Tato funkce dostane čtyři naprosto legitimní parametry, s tím rozdílem, že cache je prázdná, takže v ní nejsou žádné hodnoty ke čtení.
 
 ```solidity
         .
         .
         .
-    // Otestujte, co s příliš dlouhým bufferem, vše funguje
+    // Otestovat, že s příliš dlouhým bufferem vše funguje v pořádku
     function testLongCalldata() public {
         address _cacheAddr = address(cache);
         bool _success;
         bytes memory _callInput;
         bytes memory _callOutput;
 
-        // První volání, cache je prázdná
+        // První volání, mezipaměť je prázdná
         _callInput = bytes.concat(
             FOUR_PARAMS,
 
-            // První hodnota, přidejte ji do cache
+            // První hodnota, přidat ji do mezipaměti
             cache.INTO_CACHE(), bytes32(VAL_A),
 
-            // Druhá hodnota, přidejte ji do cache
+            // Druhá hodnota, přidat ji do mezipaměti
             cache.INTO_CACHE(), bytes32(VAL_B),
 
-            // Třetí hodnota, přidejte ji do cache
+            // Třetí hodnota, přidat ji do mezipaměti
             cache.INTO_CACHE(), bytes32(VAL_C),
 
-            // Čtvrtá hodnota, přidejte ji do cache
+            // Čtvrtá hodnota, přidat ji do mezipaměti
             cache.INTO_CACHE(), bytes32(VAL_D),
 
             // A další hodnota pro „štěstí“
@@ -648,7 +649,7 @@ Tato funkce dostane čtyři naprosto legitimní parametry, s výjimkou toho, že
         );
 ```
 
-Tato funkce posílá pět hodnot. Víme, že pátá hodnota je ignorována, protože se nejedná o platný záznam cache, což by způsobilo vrácení, kdyby nebyla zahrnuta.
+Tato funkce odesílá pět hodnot. Víme, že pátá hodnota je ignorována, protože to není platný záznam v cache, což by způsobilo zvrácení, kdyby nebyla zahrnuta.
 
 ```solidity
         (_success, _callOutput) = _cacheAddr.call(_callInput);
@@ -664,11 +665,11 @@ Tato funkce posílá pět hodnot. Víme, že pátá hodnota je ignorována, prot
 
 ## Ukázková aplikace {#a-sample-app}
 
-Psaní testů v Solidity je sice skvělé, ale aby byla dapp užitečná, musí být schopna zpracovávat požadavky i mimo blockchain. Tento článek ukazuje, jak používat cachování v dapp s `WORM`, což znamená „Write Once, Read Many“ (Zapiš jednou, čti mnohokrát). Pokud klíč ještě není zapsán, můžete do něj zapsat hodnotu. Pokud je klíč již zapsán, dostanete revert.
+Psaní testů v Solidity je sice hezké, ale na konci dne musí být decentralizovaná aplikace (dapp) schopna zpracovávat požadavky mimo řetězec, aby byla užitečná. Tento článek ukazuje, jak používat cachování v dapp s `WORM`, což znamená „Write Once, Read Many“ (Zapiš jednou, čti mnohokrát). Pokud klíč ještě není zapsán, můžete do něj zapsat hodnotu. Pokud je klíč již zapsán, dojde ke zvrácení.
 
 ### Kontrakt {#the-contract}
 
-[Zde je kontrakt](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/WORM.sol). Většinou se opakuje to, co jsme již udělali s `Cache` a `CacheTest`, takže se budeme zabývat pouze zajímavými částmi.
+[Toto je kontrakt](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/WORM.sol). Většinou opakuje to, co jsme již udělali s `Cache` a `CacheTest`, takže se budeme věnovat pouze zajímavým částem.
 
 ```solidity
 import "./Cache.sol";
@@ -676,7 +677,7 @@ import "./Cache.sol";
 contract WORM is Cache {
 ```
 
-Nejjednodušší způsob, jak použít `Cache`, je zdědit ho ve vlastním kontraktu.
+Nejjednodušší způsob, jak použít `Cache`, je zdědit jej v našem vlastním kontraktu.
 
 ```solidity
     function writeEntryCached() external {
@@ -685,29 +686,29 @@ Nejjednodušší způsob, jak použít `Cache`, je zdědit ho ve vlastním kontr
     }    // writeEntryCached
 ```
 
-Tato funkce je podobná `fourParam` ve výše uvedeném `CacheTest`. Protože se nedržíme specifikací ABI, je nejlepší do funkce nedeklarovat žádné parametry.
+Tato funkce je podobná `fourParam` v `CacheTest` výše. Protože se neřídíme specifikacemi ABI, je nejlepší do funkce nedeklarovat žádné parametry.
 
 ```solidity
-    // Usnadněte si volání
-    // Podpis funkce pro writeEntryCached(), s laskavým svolením
+    // Usnadnit naše volání
+    // Signatura funkce pro writeEntryCached(), s laskavým svolením
     // https://www.4byte.directory/signatures/?bytes4_signature=0xe4e4f2d3
     bytes4 constant public WRITE_ENTRY_CACHED = 0xe4e4f2d3;
 ```
 
-Externí kód, který volá `writeEntryCached`, bude muset manuálně sestavit calldata, namísto použití `worm.writeEntryCached`, protože nedodržujeme specifikace ABI. Tato konstantní hodnota pouze usnadňuje její zápis.
+Externí kód, který volá `writeEntryCached`, bude muset ručně sestavit data volání místo použití `worm.writeEntryCached`, protože se neřídíme specifikacemi ABI. Mít tuto konstantní hodnotu jen usnadňuje její zápis.
 
-Všimněte si, že i když definujeme `WRITE_ENTRY_CACHED` jako stavovou proměnnou, pro její externí čtení je nutné použít getter funkci, `worm.WRITE_ENTRY_CACHED()`.
+Všimněte si, že i když definujeme `WRITE_ENTRY_CACHED` jako stavovou proměnnou, pro její externí čtení je nutné použít její getter funkci, `worm.WRITE_ENTRY_CACHED()`.
 
 ```solidity
     function readEntry(uint key) public view
         returns (uint _value, address _writtenBy, uint _writtenAtBlock)
 ```
 
-Funkce čtení je `view`, takže nevyžaduje transakci a nestojí žádný gas. V důsledku toho nemá použití cache pro parametr žádný přínos. U funkcí typu view je nejlepší používat standardní mechanismus, který je jednodušší.
+Funkce pro čtení je `view`, takže nevyžaduje transakci a nestojí žádný gas. V důsledku toho nemá použití cache pro parametr žádnou výhodu. U view funkcí je nejlepší použít standardní mechanismus, který je jednodušší.
 
 ### Testovací kód {#the-testing-code}
 
-[Zde je testovací kód pro kontrakt](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/WORM.t.sol). Opět se podívejme pouze na to, co je zajímavé.
+[Toto je testovací kód pro kontrakt](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/WORM.t.sol). Opět se podívejme pouze na to, co je zajímavé.
 
 ```solidity
     function testWReadWrite() public {
@@ -717,27 +718,27 @@ Funkce čtení je `view`, takže nevyžaduje transakci a nestojí žádný gas. 
         worm.writeEntry(0xDEAD, 0xBEEF);
 ```
 
-[Tímto (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) v testu Foundry specifikujeme, že další volání by mělo selhat, a uvádíme důvod selhání. To platí, když používáme syntaxi `<kontrakt>.<název funkce>()` spíše než vytváření calldata a volání kontraktu pomocí nízkoúrovňového rozhraní (`<kontrakt>.call()` atd.).
+[Takto (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) ve Foundry testu specifikujeme, že další volání by mělo selhat, a nahlášený důvod selhání. To platí, když používáme syntaxi `<contract>.<function name>()` místo sestavování dat volání a volání kontraktu pomocí nízkoúrovňového rozhraní (`<contract>.call()` atd.).
 
 ```solidity
     function testReadWriteCached() public {
         uint cacheGoat = worm.cacheWrite(0x60A7);
 ```
 
-Zde využíváme toho, že `cacheWrite` vrací klíč cache. To není něco, co bychom očekávali v produkci, protože `cacheWrite` mění stav, a proto může být volána pouze během transakce. Transakce nemají návratové hodnoty, pokud mají nějaké výsledky, mají být emitovány jako události. Návratová hodnota `cacheWrite` je tedy přístupná pouze z on-chain kódu a on-chain kód nepotřebuje cachování parametrů.
+Zde využíváme skutečnosti, že `cacheWrite` vrací klíč cache. To není něco, co bychom očekávali, že použijeme v produkci, protože `cacheWrite` mění stav, a proto může být voláno pouze během transakce. Transakce nemají návratové hodnoty, pokud mají výsledky, předpokládá se, že tyto výsledky budou emitovány jako události. Návratová hodnota `cacheWrite` je tedy přístupná pouze z onchain kódu a onchain kód nepotřebuje cachování parametrů.
 
 ```solidity
         (_success,) = address(worm).call(_callInput);
 ```
 
-Takto říkáme Solidity, že ačkoli `<adresa kontraktu>.call()` má dvě návratové hodnoty, zajímá nás pouze ta první.
+Takto řekneme Solidity, že ačkoli má `<contract address>.call()` dvě návratové hodnoty, zajímá nás pouze ta první.
 
 ```solidity
         (_success,) = address(worm).call(_callInput);
         assertEq(_success, false);
 ```
 
-Protože používáme nízkoúrovňovou funkci `<address>.call()`, nemůžeme použít `vm.expectRevert()` a musíme se podívat na booleovskou hodnotu úspěchu, kterou získáme z volání.
+Vzhledem k tomu, že používáme nízkoúrovňovou funkci `<address>.call()`, nemůžeme použít `vm.expectRevert()` a musíme se podívat na booleovskou hodnotu úspěchu, kterou získáme z volání.
 
 ```solidity
     event EntryWritten(uint indexed key, uint indexed value);
@@ -753,15 +754,15 @@ Protože používáme nízkoúrovňovou funkci `<address>.call()`, nemůžeme po
         (_success,) = address(worm).call(_callInput);
 ```
 
-Toto je způsob, jak ve Foundry ověřit, že kód [správně emituje událost](https://getfoundry.sh/reference/cheatcodes/expect-emit/).
+Tímto způsobem ověřujeme, že kód ve Foundry [správně emituje událost](https://getfoundry.sh/reference/cheatcodes/expect-emit/).
 
 ### Klient {#the-client}
 
-Jedna věc, kterou se testy v Solidity nezískáte, je JavaScriptový kód, který můžete zkopírovat a vložit do své vlastní aplikace. Abych mohl napsat tento kód, nasadil jsem WORM na [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), nový testnet [Optimismu](https://www.optimism.io/). Je na adrese [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
+Jednou z věcí, kterou u testů v Solidity nezískáte, je kód v JavaScriptu, který byste mohli zkopírovat a vložit do své vlastní aplikace. Původní verze tohoto tutoriálu nasadila WORM na síť Optimism Goerli, která však již byla ukončena. Chcete-li klienta spustit dnes, nasaďte WORM znovu na podporovanou síť OP Stack, jako je [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack), a poté použijte výslednou adresu kontraktu v klientovi v JavaScriptu.
 
-[Zde si můžete prohlédnout JavaScriptový kód pro klienta](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Použití:
+[Kód v JavaScriptu pro klienta si můžete prohlédnout zde](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Ukázkový repozitář byl napsán pro Optimism Goerli, takže před jeho spuštěním aktualizujte koncový bod RPC a URL adresy prohlížeče bloků v souborech `javascript/.env.example` a `javascript/index.js` pro vaši cílovou síť. Chcete-li jej použít:
 
-1. Klonujte git repozitář:
+1. Naklonujte git repozitář:
 
    ```sh
    git clone https://github.com/qbzzt/20220915-all-you-can-cache.git
@@ -780,12 +781,12 @@ Jedna věc, kterou se testy v Solidity nezískáte, je JavaScriptový kód, kter
    cp .env.example .env
    ```
 
-4. Upravte `.env` pro vaši konfiguraci:
+4. Upravte soubor `.env` podle vaší konfigurace:
 
-   | Parametr                                                      | Hodnota                                                                                                                                                                                             |
-   | ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC                                                      | Mnemotechnická pomůcka pro účet, který má dostatek ETH na zaplacení transakce. [Zde můžete získat ETH zdarma pro síť Optimism Goerli](https://optimismfaucet.xyz/). |
-   | OPTIMISM_GOERLI_URL | URL k Optimism Goerli. Veřejný koncový bod `https://goerli.optimism.io` má omezenou rychlost, ale pro naše potřeby je dostačující.                                  |
+   | Parametr            | Hodnota                                                                                                                                                               |
+   | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | MNEMONIC            | Mnemotechnická pomůcka (seed) pro účet, který má dostatek ETH na zaplacení transakce. [Dokumentace k faucetům sítě Optimism](https://docs.optimism.io/app-developers/tools/faucets) uvádí aktuální faucety pro testnet. |
+   | OPTIMISM_GOERLI_URL | RPC URL pro síť, do které znovu nasadíte WORM. Pro OP Sepolia použijte koncový bod RPC pro OP Sepolia, například `https://sepolia.optimism.io`, nebo jiný koncový bod od vašeho poskytovatele.        |
 
 5. Spusťte `index.js`.
 
@@ -793,9 +794,9 @@ Jedna věc, kterou se testy v Solidity nezískáte, je JavaScriptový kód, kter
    node index.js
    ```
 
-   Tato ukázková aplikace nejprve zapíše položku do WORM, zobrazí calldata a odkaz na transakci na Etherscanu. Poté přečte zpět tuto položku a zobrazí klíč, který používá, a hodnoty v položce (hodnota, číslo bloku a autor).
+   Tato ukázková aplikace nejprve zapíše záznam do WORM, přičemž zobrazí data volání a odkaz na transakci v prohlížeči bloků. Poté tento záznam přečte zpět a zobrazí klíč, který používá, a hodnoty v záznamu (hodnotu, číslo bloku a autora).
 
-Většina klienta je normální Dapp JavaScript. Takže opět projdeme jen zajímavé části.
+Většina klienta je běžný JavaScript pro decentralizovanou aplikaci (dapp). Takže si opět projdeme jen ty zajímavé části.
 
 ```javascript
 .
@@ -804,20 +805,20 @@ Většina klienta je normální Dapp JavaScript. Takže opět projdeme jen zají
 const main = async () => {
     const func = await worm.WRITE_ENTRY_CACHED()
 
-    // Pokaždé je potřeba nový klíč
+    // Pokaždé potřebujeme nový klíč
     const key = await worm.encodeVal(Number(new Date()))
 ```
 
-Do daného slotu lze zapsat pouze jednou, takže použijeme časové razítko, abychom se ujistili, že sloty nepoužíváme opakovaně.
+Do daného slotu lze zapisovat pouze jednou, takže používáme časové razítko, abychom se ujistili, že sloty nepoužijeme znovu.
 
 ```javascript
 const val = await worm.encodeVal("0x600D")
 
-// Zapište položku
+// Zapsat záznam
 const calldata = func + key.slice(2) + val.slice(2)
 ```
 
-Ethers očekává, že data volání budou hexadecimální řetězec, `0x` následovaný sudým počtem hexadecimálních číslic. Protože `key` i `val` začínají na `0x`, musíme tyto hlavičky odstranit.
+Knihovna Ethers očekává, že data volání budou hexadecimální řetězec, tedy `0x` následované sudým počtem hexadecimálních číslic. Protože `key` i `val` začínají na `0x`, musíme tyto hlavičky odstranit.
 
 ```javascript
 const tx = await worm.populateTransaction.writeEntryCached()
@@ -826,42 +827,40 @@ tx.data = calldata
 sentTx = await wallet.sendTransaction(tx)
 ```
 
-Stejně jako u testovacího kódu Solidity nemůžeme cachovanou funkci volat normálně. Místo toho musíme použít nízkoúrovňový mechanismus.
+Stejně jako u testovacího kódu v Solidity nemůžeme cachovanou funkci volat normálně. Místo toho musíme použít nízkoúrovňovější mechanismus.
 
 ```javascript
     .
     .
     .
-    // Přečtěte právě zapsanou položku
-    const realKey = '0x' + key.slice(4)  // odstraňte příznak FF
+    // Přečíst právě zapsaný záznam
+    const realKey = '0x' + key.slice(4)  // odstranit příznak FF
     const entryRead = await worm.readEntry(realKey)
     .
     .
     .
 ```
 
-Pro čtení položek můžeme použít normální mechanismus. U funkcí `view` není třeba používat cachování parametrů.
-
+Pro čtení záznamů můžeme použít normální mechanismus. U `view` funkcí není nutné používat cachování parametrů.
 ## Závěr {#conclusion}
 
-Kód v tomto článku je proof of concept, jehož účelem je usnadnit pochopení myšlenky. Pro produkční systém byste mohli chtít implementovat některé další funkce:
+Kód v tomto článku je proof of concept (ověření konceptu), jehož účelem je usnadnit pochopení této myšlenky. Pro systém připravený do produkce byste možná chtěli implementovat některé další funkce:
 
 - Zpracování hodnot, které nejsou `uint256`. Například řetězce.
-- Místo globální cache možná mít mapování mezi uživateli a cachemi. Různí uživatelé používají různé hodnoty.
-- Hodnoty používané pro adresy se liší od hodnot používaných pro jiné účely. Mohlo by mít smysl mít samostatnou cache pouze pro adresy.
-- V současné době jsou klíče cache založeny na algoritmu „kdo dřív přijde, ten má nejmenší klíč“. Prvních šestnáct hodnot lze odeslat jako jeden bajt. Dalších 4080 hodnot lze odeslat jako dva bajty. Další přibližně milion hodnot jsou tři bajty atd. Produkční systém by měl vést počítadla použití záznamů cache a reorganizovat je tak, aby šestnáct _nejběžnějších_ hodnot bylo jednobajtových, dalších 4080 nejběžnějších hodnot dvoubajtových atd.
+- Místo globální cache mít možná mapování mezi uživateli a cachemi. Různí uživatelé používají různé hodnoty.
+- Hodnoty používané pro adresy se liší od hodnot používaných pro jiné účely. Možná by dávalo smysl mít samostatnou cache jen pro adresy.
+- V současné době jsou klíče cache založeny na algoritmu „kdo dřív přijde, má nejmenší klíč“. Prvních šestnáct hodnot lze odeslat jako jeden bajt. Dalších 4080 hodnot lze odeslat jako dva bajty. Další přibližně milion hodnot jsou tři bajty atd. Produkční systém by měl udržovat počítadla využití záznamů v cache a reorganizovat je tak, aby šestnáct _nejběžnějších_ hodnot mělo jeden bajt, dalších 4080 nejběžnějších hodnot dva bajty atd.
 
   To je však potenciálně nebezpečná operace. Představte si následující sled událostí:
 
-  1. Noam Naive zavolá `encodeVal` k zakódování adresy, na kterou chce poslat tokeny. Tato adresa je jedna z prvních použitých v aplikaci, takže zakódovaná hodnota je 0x06. Toto je funkce `view`, ne transakce, takže je to mezi Noamem a uzlem, který používá, a nikdo jiný o tom neví.
+  1. Naivní Noam zavolá `encodeVal`, aby zakódoval adresu, na kterou chce poslat tokeny. Tato adresa je jednou z prvních použitých v aplikaci, takže zakódovaná hodnota je 0x06. Jedná se o funkci `view`, nikoli o transakci, takže probíhá mezi Noamem a uzlem, který používá, a nikdo jiný o tom neví.
 
-  2. Owen Owner spustí operaci přeuspořádání cache. Velmi málo lidí skutečně používá tuto adresu, takže je nyní zakódována jako 0x201122. Jiná hodnota, 10<sup>18</sup>, je přiřazena 0x06.
+  2. Majitel Owen spustí operaci změny pořadí v cache. Tuto adresu ve skutečnosti používá jen velmi málo lidí, takže je nyní zakódována jako 0x201122. Jiné hodnotě, 10<sup>18</sup>, je přiřazeno 0x06.
 
-  3. Noam Naive posílá své tokeny na 0x06. Dostanou se na adresu `0x0000000000000000000000000de0b6b3a7640000`, a protože nikdo nezná soukromý klíč k této adrese, jsou tam prostě zaseknuté. Noam _není spokojený_.
+  3. Naivní Noam pošle své tokeny na 0x06. Ty jdou na adresu `0x0000000000000000000000000de0b6b3a7640000`, a protože nikdo nezná soukromý klíč k této adrese, prostě tam uvíznou. Noam _není nadšený_.
 
-  Existují způsoby, jak tento problém vyřešit, a související problém transakcí, které jsou v mempoolu během přeuspořádání cache, ale musíte si toho být vědomi.
+  Existují způsoby, jak tento problém vyřešit, stejně jako související problém transakcí, které jsou v mempoolu během změny pořadí v cache, ale musíte si toho být vědomi.
 
-Cachování jsem zde demonstroval na Optimismu, protože jsem zaměstnancem Optimismu a je to rollup, který znám nejlépe. Mělo by to ale fungovat s jakýmkoli rollupem, který si účtuje minimální náklady na interní zpracování, takže v porovnání s tím je zápis transakčních dat na L1 hlavním nákladem.
+Cachování jsem zde demonstroval na síti Optimism, protože jsem zaměstnancem Optimism a toto je rollup, který znám nejlépe. Mělo by to ale fungovat s jakýmkoli rollupem, který si účtuje minimální náklady na interní zpracování, takže ve srovnání s tím je zápis transakčních dat na vrstvu 1 (l1) hlavním výdajem.
 
-[Více z mé práce najdete zde](https://cryptodocguy.pro/).
-
+[Zde najdete další mou práci](https://cryptodocguy.pro/).

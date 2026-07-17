@@ -37,8 +37,61 @@ module.exports = [
   ],
   ["/beginners", "/what-is-ethereum/"],
   ["/build", "/developers/tools/"],
-  ["/developers/learning-tools", "/developers/tools/education/"],
+  [
+    "/developers/learning-tools",
+    "/developers/tools/categories/education-standards/",
+  ],
   ["/developers/local-environment", "/developers/tools/"],
+  [
+    "/developers/tools/interoperability",
+    "/developers/tools/categories/network-infrastructure/",
+  ],
+  [
+    "/developers/tools/transactions",
+    "/developers/tools/categories/app-integration/",
+  ],
+  [
+    "/developers/tools/analytics",
+    "/developers/tools/categories/network-infrastructure/",
+  ],
+  [
+    "/developers/tools/education",
+    "/developers/tools/categories/education-standards/",
+  ],
+  ["/developers/tools/sdks", "/developers/tools/categories/app-integration/"],
+  [
+    "/developers/tools/contracts",
+    "/developers/tools/categories/contract-tooling/",
+  ],
+  [
+    "/developers/tools/security",
+    "/developers/tools/categories/security-testing/",
+  ],
+  // Legacy flat category URLs, now under /categories/.
+  [
+    "/developers/tools/contract-tooling",
+    "/developers/tools/categories/contract-tooling/",
+  ],
+  [
+    "/developers/tools/security-testing",
+    "/developers/tools/categories/security-testing/",
+  ],
+  [
+    "/developers/tools/app-integration",
+    "/developers/tools/categories/app-integration/",
+  ],
+  [
+    "/developers/tools/network-infrastructure",
+    "/developers/tools/categories/network-infrastructure/",
+  ],
+  [
+    "/developers/tools/agent-tooling",
+    "/developers/tools/categories/agent-tooling/",
+  ],
+  [
+    "/developers/tools/education-standards",
+    "/developers/tools/categories/education-standards/",
+  ],
   ["/eth2/beacon-chain", "/roadmap/beacon-chain/"],
   ["/eth2/the-beacon-chain", "/roadmap/beacon-chain/"],
   ["/upgrades/the-beacon-chain", "/roadmap/beacon-chain/"],
@@ -101,12 +154,84 @@ module.exports = [
   ["/enterprise/private-ethereum", "https://institutions.ethereum.org/"],
   ["/enterprise/use-cases", "https://institutions.ethereum.org/", false],
   ["/dashboards", "/resources"],
-  ["/tds", "/trillion-dollar-security"],
+  ["/tds", "/reports/trillion-dollar-security"],
+  ["/trillion-dollar-security", "/reports/trillion-dollar-security"],
   ["/10-years", "/10years"],
   ["/history", "/ethereum-forks"],
-  ["/developers/docs/scaling/rollups", "/developers/docs/scaling/"],
+  ["/developers/docs/scaling/rollups", "/developers/docs/scaling/#rollups"],
   ["/eth2/get-involved/staking-community-grants", "/staking/"],
   ["/developers/docs/zk", "/zero-knowledge-proofs/"],
   ["/developers/docs/security", "/developers/docs/smart-contracts/security/"],
   ["/wallet", "/wallets/"],
+  ["/eth2/get-involved/medalla-data-challenge", "/contributing/"],
+  ["/team", "/about/"],
+  [
+    "/contributing/translation-program/blog-translations",
+    "/contributing/translation-program/",
+  ],
+  ["/contributing/translation-program/translatathon/details", "/contributing/"],
+  [
+    "/contributing/translation-program/translatathon/terms-and-conditions",
+    "/contributing/",
+  ],
+  ["/contributing/translation-program/translatathon", "/contributing/"],
+  ["/donate", "/"],
+  [
+    "/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash",
+    "/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/",
+  ],
+  ["/%20wallets", "/wallets/"],
+  ["/developers/docs/zk-snarks", "/zero-knowledge-proofs/"],
+  ["/developers/docs/standards/erc-4337", "/roadmap/account-abstraction/"],
+  ["/developers/docs/accounts/aa", "/roadmap/account-abstraction/"],
+  [
+    "/developers/docs/scaling/layer-2",
+    "/developers/docs/scaling/#layer-2-scaling",
+  ],
+  ["/developers/docs/account-abstraction", "/roadmap/account-abstraction/"],
+  [
+    "/developers/docs/accounts/abstraction",
+    "/roadmap/account-abstraction/",
+    false, // Selectively applying temporary for possible future route usage
+  ],
+  ["/developers/docs/rollups", "/developers/docs/scaling/#rollups"],
+  ["/eth2/what-is-eth2", "/roadmap/"],
+  [
+    "/developers/docs/accounts/account-abstraction",
+    "/roadmap/account-abstraction/",
+  ],
+  [
+    "/developers/docs/consensus-mechanisms/proof-of-stake",
+    "/developers/docs/consensus-mechanisms/pos/",
+  ],
+  ["/zero-knowledge", "/zero-knowledge-proofs/"],
+  [
+    "/developers/docs/smart-contracts/account-abstraction",
+    "/roadmap/account-abstraction/",
+  ],
+  ["/developers/docs/ides/%23web-based-ides", "/developers/docs/"],
+  ["/developers/docs/daos", "/dao/"],
+  [
+    "/developers/docs/consensus-mechanisms/pos/slashing",
+    "/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/",
+  ],
+  ["/wallets/security", "/security/"],
+  ["/developers/docs/sharding", "/developers/docs/data-availability/"],
+  ["/layer-2-scaling", "/layer-2/"],
+  ["/layer-2-scaling/rollups", "/developers/docs/scaling/"],
+  ["/layer-1-scaling/sidechains", "/developers/docs/scaling/sidechains/"],
+  [
+    "/layer-2-scaling/state-channels",
+    "/developers/docs/scaling/state-channels/",
+  ],
+  ["/developers/docs/privacy-enhancements", "/privacy/ethereum/"],
+  ["/developers/docs/wallets", "/wallets/"],
+  ["/blog", "https://blog.ethereum.org"],
+  // Storybook (Chromatic) convenience redirects
+  ["/storybook", "https://master--63b7ea99632763723c7f4d6b.chromatic.com/"],
+  ["/storybook/dev", "https://dev--63b7ea99632763723c7f4d6b.chromatic.com/"],
+  [
+    "/storybook/staging",
+    "https://staging--63b7ea99632763723c7f4d6b.chromatic.com/",
+  ],
 ]

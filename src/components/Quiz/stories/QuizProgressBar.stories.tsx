@@ -1,4 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react"
+import { useTranslations } from "next-intl"
+import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import allQuizzesData from "@/data/quizzes"
 
@@ -6,8 +7,6 @@ import { QuizContent } from "../QuizWidget/QuizContent"
 import { QuizProgressBar } from "../QuizWidget/QuizProgressBar"
 
 import { LAYER_2_QUIZ_KEY, layer2Questions } from "./utils"
-
-import useTranslation from "@/hooks/useTranslation"
 
 const meta = {
   title: "Molecules / Display Content / Quiz / QuizWidget / ProgressBar",
@@ -17,7 +16,7 @@ const meta = {
   },
   decorators: [
     (Story, { args }) => {
-      const { t } = useTranslation()
+      const t = useTranslations("common")
 
       return (
         <QuizContent

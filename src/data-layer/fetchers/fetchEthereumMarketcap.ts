@@ -1,5 +1,7 @@
 import type { MetricReturnData } from "@/lib/types"
 
+import { fetchRetry } from "./fetchRetry"
+
 export const FETCH_ETHEREUM_MARKETCAP_TASK_ID = "fetch-ethereum-marketcap"
 
 /**
@@ -12,7 +14,7 @@ export async function fetchEthereumMarketcap(): Promise<MetricReturnData> {
 
   console.log("Starting Ethereum market cap data fetch")
 
-  const response = await fetch(url)
+  const response = await fetchRetry(url)
 
   if (!response.ok) {
     const status = response.status

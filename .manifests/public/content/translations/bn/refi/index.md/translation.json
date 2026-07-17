@@ -1,0 +1,163 @@
+{
+  "version": 1,
+  "locale": "bn",
+  "translatedAt": "2026-06-19T23:35:48.979Z",
+  "englishManifestHash": "883b729393f7",
+  "placeholderOrder": [
+    "LINK-2b836a",
+    "LINK-0683c4",
+    "IMAGE-d61206",
+    "LINK-74b3ba",
+    "LINK-04abea",
+    "LINK-0fae4a",
+    "LINK-ea73c8",
+    "LINK-30ab29",
+    "LINK-5158aa",
+    "LINK-b38c42",
+    "LINK-e97f6d",
+    "LINK-4635f7",
+    "LINK-096b07",
+    "LINK-cdcb70",
+    "LINK-35090a",
+    "LINK-c61da8",
+    "LINK-11ecfa",
+    "LINK-a725d2",
+    "LINK-3bc1e9",
+    "LINK-abfdcc",
+    "LINK-016d22"
+  ],
+  "placeholderMap": {
+    "IMAGE-d61206": {
+      "type": "image",
+      "values": {
+        "path": "refi-regenerative-economy-diagram.png"
+      }
+    },
+    "LINK-2b836a": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#blockchain"
+      }
+    },
+    "LINK-0683c4": {
+      "type": "link",
+      "values": {
+        "url": "https://capitalinstitute.org/8-principles-regenerative-economy/"
+      }
+    },
+    "LINK-74b3ba": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#smart-contract"
+      }
+    },
+    "LINK-04abea": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#defi"
+      }
+    },
+    "LINK-0fae4a": {
+      "type": "link",
+      "values": {
+        "url": "/desci/"
+      }
+    },
+    "LINK-ea73c8": {
+      "type": "link",
+      "values": {
+        "url": "https://climatefocus.com/so-what-voluntary-carbon-market-exactly/"
+      }
+    },
+    "LINK-30ab29": {
+      "type": "link",
+      "values": {
+        "url": "https://verra.org/project/vcs-program/registry-system/"
+      }
+    },
+    "LINK-5158aa": {
+      "type": "link",
+      "values": {
+        "url": "https://www.goldstandard.org/"
+      }
+    },
+    "LINK-b38c42": {
+      "type": "link",
+      "values": {
+        "url": "https://toucan.earth/"
+      }
+    },
+    "LINK-e97f6d": {
+      "type": "link",
+      "values": {
+        "url": "https://c3.app/"
+      }
+    },
+    "LINK-4635f7": {
+      "type": "link",
+      "values": {
+        "url": "https://moss.earth/"
+      }
+    },
+    "LINK-096b07": {
+      "type": "link",
+      "values": {
+        "url": "https://www.klimadao.finance/infinity"
+      }
+    },
+    "LINK-cdcb70": {
+      "type": "link",
+      "values": {
+        "url": "https://senken.io/"
+      }
+    },
+    "LINK-35090a": {
+      "type": "link",
+      "values": {
+        "url": "https://nori.com/"
+      }
+    },
+    "LINK-c61da8": {
+      "type": "link",
+      "values": {
+        "url": "https://klimadao.finance/"
+      }
+    },
+    "LINK-11ecfa": {
+      "type": "link",
+      "values": {
+        "url": "https://gitcoin.co/"
+      }
+    },
+    "LINK-a725d2": {
+      "type": "link",
+      "values": {
+        "url": "https://www.klimadao.finance/resources/the-vision-of-a-carbon-currency"
+      }
+    },
+    "LINK-3bc1e9": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/The_Ministry_for_the_Future"
+      }
+    },
+    "LINK-abfdcc": {
+      "type": "link",
+      "values": {
+        "url": "https://www.iif.com/Portals/1/Files/TSVCM_Report.pdf"
+      }
+    },
+    "LINK-016d22": {
+      "type": "link",
+      "values": {
+        "url": "https://coinmarketcap.com/academy/glossary/regenerative-finance-refi"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T23:35:48.979Z",
+      "status": "success"
+    }
+  }
+}

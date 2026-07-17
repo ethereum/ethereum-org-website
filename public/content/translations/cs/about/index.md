@@ -1,134 +1,133 @@
 ---
-title: "O nás"
-description: "O týmu, komunitě a misi ethereum.org"
+title: O ethereum.org
+metaTitle: O nás
+description: O týmu, komunitě a poslání ethereum.org
 lang: cs
 ---
 
-# O webu ethereum.org {#about-ethereumorg}
-
-ethereum.org je veřejný, open-source projekt pro komunitu Ethereum, do kterého může přispět každý. Máme malý klíčový tým, který se věnuje údržbě a rozvoji webu, s přispěním tisíců členů komunity z celého světa.
+ethereum.org je veřejný open-source zdroj pro komunitu [Etherea](/), do kterého může přispět kdokoli. Máme malý hlavní tým, který se věnuje údržbě a vývoji webu, s přispěním tisíců členů komunity z celého světa.
 
 **Nikdo z ethereum.org vás nikdy nebude kontaktovat. Neodpovídejte.**
 
 ## Poznámka k názvům {#a-note-on-names}
 
-Je běžné, že lidé zaměňují názvy v rámci ekosystému Etherea, což může vést k mylným představám o tom, jak Ethereum funguje. Zde je rychlé vysvětlení, aby se věci vyjasnily:
+Je běžné, že si lidé pletou názvy v prostředí Etherea, což může vést ke špatným mentálním modelům o tom, jak Ethereum funguje. Zde je stručné vysvětlení, které to objasní:
 
 ### Ethereum {#ethereum}
 
-Ethereum je veřejná síť, blockchain a open-source protokol – provozovaný, řízený, spravovaný a vlastněný globální komunitou desítek tisíc vývojářů, provozovatelů uzlů, držitelů ETH a uživatelů.
+Ethereum je veřejná síť, blockchain a open-source protokol – provozovaný, spravovaný, řízený a vlastněný globální komunitou desítek tisíc vývojářů, provozovatelů uzlů, držitelů ETH a uživatelů.
 
-[Více o síti Ethereum](/what-is-ethereum/)
+[Více o Ethereu](/what-is-ethereum/)
 
-[Více o řízení Etherea](/governance/)
+[Více o správě Etherea](/governance/)
 
 ### Ether (ETH) {#ether-or-eth}
 
-Ether (také známý pod svým tickerovým symbolem ETH) je nativní měna používaná k realizaci transakcí na Ethereu. ETH je potřeba k placení za používání sítě Ethereum (ve formě transakčních poplatků). ETH se také používá k zabezpečení sítě prostřednictvím uzamčení. Když lidé mluví o ceně Etherea, mají na mysli ETH jako aktivum.
+Ether (známý také pod svým tickerem ETH) je nativní měna, se kterou se obchoduje na Ethereu. ETH je potřeba k platbě za používání sítě Ethereum (ve formě transakčních poplatků). ETH se také používá k zabezpečení sítě pomocí stakingu. Když lidé mluví o ceně Etherea, mají na mysli aktivum ETH.
 
 [Více o ETH](/what-is-ether/)
 
-[Více o stakování ETH](/staking/)
+[Více o stakingu ETH](/staking/)
 
 ### Nadace Ethereum {#ethereum-foundation}
 
-Nezisková organizace, financovaná původně z prodeje ETH, která se věnuje podpoře sítě a ekosystému Ethereum.
+Nezisková organizace, původně financovaná z veřejného prodeje (crowdsale) ETH, která se věnuje podpoře sítě a ekosystému Etherea.
 
 [Více o Nadaci Ethereum](/foundation/)
 
 ### ethereum.org {#ethereum-org}
 
-Veřejná, open-source webová stránka a vzdělávací zdroj pro komunitu Ethereum. ethereum.org vede malý klíčový tým, financovaný Nadací Ethereum, s přispěním tisíců členů komunity z celého světa.
+Veřejný open-source web a vzdělávací zdroj pro komunitu Etherea. ethereum.org vede malý hlavní tým financovaný Nadací Ethereum s přispěním tisíců členů komunity z celého světa.
 
-Tato stránka uvádí další informace o ethereum.org.
+Tato stránka obsahuje více informací o ethereum.org.
 
 ## Naše poslání {#our-mission}
 
-**Posláním ethereum.org je být nejlepším portálem pro rostoucí ethereovskou komunitu**
+**Posláním ethereum.org je být tím nejlepším portálem pro rostoucí komunitu Etherea**
 
-Snažíme se vytvořit snadno pochopitelný vzdělávací zdroj pokrývající všechna témata související s Ethereem, navržený tak, aby pomohl novým uživatelům. Chceme:
+Snažíme se vytvořit snadno srozumitelný vzdělávací zdroj pro všechna témata týkající se Etherea, navržený tak, aby pomohl novým uživatelům seznámit se s Ethereem a jeho klíčovými koncepty. Chceme:
 
-- Vysvětlit Ethereum všem, kteří se s touto technologií teprve seznamují
-- Pomoci novým uživatelům začít pracovat s ETH a Ethereem
-- Pomoci novým vývojářům začít stavět na Ethereu
-- Informovat o novinkách ve světě Etherea
-- Prezentovat zdroje vytvořené komunitou
-- Vzdělávat v oblasti Etherea v co největším počtu jazyků
+- vysvětlit Ethereum komukoli, kdo je v této technologii nováčkem
+- pomoci novým uživatelům začít s ETH a Ethereem
+- pomoci novým vývojářům začít tvořit
+- pokrývat novinky ze světa Etherea
+- prezentovat zdroje vytvořené komunitou
+- přinést vzdělávání o Ethereu do co nejvíce jazyků
 
-Abychom dosáhli této mise, náš tým se zaměřuje na dva hlavní cíle na ethereum.org:
+K dosažení tohoto poslání se náš tým na ethereum.org zaměřuje na dva hlavní cíle:
 
-### 1. Zlepšování uživatelského zážitku pro návštěvníky webu ethereum.org {#visitors}
+### 1. Zlepšit uživatelský zážitek pro návštěvníky ethereum.org {#visitors}
 
-- Rozšiřování, vylepšování a udržování aktuálního obsahu
-- Zlepšování použitelnosti a přístupnosti prostřednictvím lokalizace a osvědčených postupů webového vývoje
-- Zvýšení zapojení uživatelů prostřednictvím funkcí jako průzkumy, kvízy a integrace web3
-- Udržování webu jednoduchého a výkonného
+- Rozšiřovat, vylepšovat a udržovat obsah aktuální
+- Zlepšovat použitelnost a přístupnost prostřednictvím lokalizace a osvědčených postupů vývoje webu
+- Zvyšovat zapojení uživatelů pomocí funkcí, jako jsou průzkumy, kvízy a integrace Web3
+- Udržovat web nenáročný a výkonný
 
 ### 2. Rozšiřovat, posilovat a podporovat naši komunitu přispěvatelů {#community}
 
-- Zvýšení celkového počtu přispěvatelů na webu
-- Zlepšení retence přispěvatelů prostřednictvím zapojení, uznání a odměn
-- Povzbuzování členů komunity k čím dál většímu přispívání
-- Podpora větší rozmanitosti příspěvků: kód, obsah, design, překlady, moderace
-- Udržování moderního, čistého a dobře zdokumentovaného kódu
+- Zvyšovat celkový počet přispěvatelů na web
+- Zlepšovat udržení přispěvatelů prostřednictvím zapojení, uznání a odměn
+- Podporovat členy komunity, aby přispívali stále významnějším způsobem
+- Usnadňovat větší rozmanitost příspěvků: kód, obsah, design, překlad, moderování
+- Udržovat kódovou základnu moderní, čistou a dobře zdokumentovanou
 
 ## Základní principy {#core-principles}
 
-Máme několik základních zásad, které nám pomáhají k naplnění naší mise.
+Máme několik základních principů, které nás vedou k naplnění našeho poslání.
 
-### 1. ethereum.org je portál do světa Etherea 🌏 {#core-principles-1}
+### 1. ethereum.org je portál do Etherea 🌏 {#core-principles-1}
 
-Chceme, aby naši uživatelé měli zájem a jejich otázky byly zodpovězeny. Náš portál tedy musí kombinovat informace, „kouzelné okamžiky“ a odkazy na skvělé komunitní zdroje. Účelem našeho obsahu je být „nástupním portálem“, nikoliv náhradou za již existující rozsáhlé zdroje. Rádi bychom podpořili a integrovali zdroje vytvořené komunitou, zviditelnili je a učinili je lépe dohledatelnými.
-[Komunita Etherea](/community/) je v centru všeho: musíme komunitě nejen sloužit, ale také s ní spolupracovat a zapracovávat její zpětnou vazbu. Web není určen pouze pro komunitu, kterou máme nyní, ale pro komunitu, do které doufáme jednou přerůst. Musíme mít na paměti, že naše komunita je globální a obsahuje lidi různých řečí, regionů a kultur.
+Chceme v našich uživatelích vzbudit zájem a zodpovědět jejich otázky. Náš portál proto musí kombinovat informace, „magické momenty“ a odkazy na skvělé komunitní zdroje, které existují. Účelem našeho obsahu je být „onboardingovým portálem“, a ne náhradou za rozsáhlé zdroje, které již existují. Rádi podporujeme a integrujeme komunitou vytvořené zdroje, čímž jim dáváme větší zviditelnění a usnadňujeme jejich objevování.
+[Komunita Etherea](/community/) je jádrem toho všeho: nesmíme komunitě jen sloužit, ale musíme s ní spolupracovat a začleňovat její zpětnou vazbu. Web není jen pro komunitu, kterou máme nyní, ale pro komunitu, do které doufáme, že vyrosteme. Musíme pamatovat na to, že naše komunita je globální a zahrnuje lidi mnoha jazyků, regionů a kultur.
 
 ### 2. ethereum.org se neustále vyvíjí 🛠 {#core-principles-2}
 
-Ethereum a komunita se neustále vyvíjejí a to stejné platí i o ethereum.org. Proto má web jednoduchý designový systém a modulární strukturu. Dozvídáme se více o tom, jak lidé web používají a co od nich komunita chce, a provádíme opětovné změny.
-Jsme open source s komunitou přispěvatelů, takže i vy můžete navrhovat změny nebo nám pomáhat.
-[Zjistěte více o přispívání](/contributing/)
+Ethereum a komunita se neustále vyvíjejí, takže ethereum.org se bude vyvíjet také. Proto má web jednoduchý designový systém a modulární strukturu. Provádíme iterativní změny podle toho, jak se dozvídáme více o tom, jak lidé web používají a co od něj komunita očekává.
+Jsme open-source s komunitou přispěvatelů, takže můžete navrhovat změny nebo nám také pomoci.
+[Přečtěte si o přispívání](/contributing/)
 
 ### 3. ethereum.org není typický produktový web 🦄 {#core-principles-3}
 
-Ethereum je velká věc: zahrnuje komunitu, technologii, soubor myšlenek a ideologií a další.
-To znamená, že web musí vyhovět uživatelům různých zaměření, od „vývojáře, který chce konkrétní nástroj“, až po „nováčka, který si právě koupil ETH a neví, co je to peněženka“.
-„Jaká je nejlepší webová stránka pro blockchainovou platformu?“ zůstává otevřenou otázkou – jsme průkopníci. Její budování vyžaduje experimentování.
+Ethereum je velká věc: zahrnuje komunitu, technologii, soubor myšlenek a ideologií a mnoho dalšího.
+To znamená, že web musí zvládnout mnoho různých uživatelských cest, od „vývojáře, který chce konkrétní nástroj“, až po „nováčka, který si právě koupil nějaké ETH a neví, co je to peněženka“.
+„Jaký je nejlepší web pro blockchainovou platformu?“ zůstává otevřenou otázkou – jsme průkopníci. Budování něčeho takového vyžaduje experimentování.
 
-## Produktový plán {#roadmap}
+## Produktová roadmapa {#roadmap}
 
-Aby byla naše práce přístupnější a abychom podpořili komunitní spolupráci, hlavní tým ethereum.org zveřejňuje přehled cílů našeho plánu v rámci [cyklu shape up](https://www.productplan.com/glossary/shape-up-method/).
+Abychom naši práci zpřístupnili a podpořili větší spolupráci s komunitou, hlavní tým ethereum.org zveřejňuje přehled cílů naší roadmapy v rámci [cyklů Shape Up](https://www.productplan.com/glossary/shape-up-method/).
 
-[Zobrazit náš produktový plán pro 1. cyklus roku 2025](https://github.com/ethereum/ethereum-org-website/issues/14726)
+[Zobrazit naši produktovou roadmapu pro 1. cyklus roku 2025](https://github.com/ethereum/ethereum-org-website/issues/14726)
 
-**Co na to říkáte?** Vždy oceníme zpětnou vazbu k našemu plánu – pokud si myslíte, že bychom na něčem měli pracovat, dejte nám vědět! Vítáme nápady a PR od kohokoli z komunity.
+**Jak to zní?** Vždy oceníme zpětnou vazbu k naší roadmapě – pokud si myslíte, že bychom měli na něčem pracovat, dejte nám prosím vědět! Uvítáme nápady a PR (Pull Requesty) od kohokoli z komunity.
 
-**Chcete se zapojit?** [Zjistěte více o přispívání](/contributing/), [ozvěte se nám na Twitteru](https://x.com/ethdotorg) nebo se připojte ke komunitním diskuzím na [našem serveru na Discordu](https://discord.gg/ethereum-org).
+**Chcete se zapojit?** [Přečtěte si více o přispívání](/contributing/), [napište nám na Twitteru](https://x.com/ethdotorg) nebo se připojte ke komunitním diskusím na [našem serveru na Discordu](https://discord.gg/ethereum-org).
 
 ## Principy designu {#design-principles}
 
-Při rozhodování o obsahu a designu na našem webu se řídíme sadou [principů designu](/contributing/design-principles/).
+Používáme sadu [principů designu](/contributing/design-principles/), kterými se řídíme při rozhodování o obsahu a designu na webu.
 
 ## Designový systém {#design-system}
 
-Vytvořili a vydali jsme [designový systém](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1), abychom mohli rychleji dodávat nové funkce a umožnili členům komunity podílet se na otevřeném designu webu ethereum.org.
+Vytvořili jsme a vydali [designový systém](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1), abychom mohli rychleji dodávat funkce a umožnili členům komunity podílet se na otevřeném designu ethereum.org.
 
-Chcete se zapojit?[Sledujte nás ve Figmě](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), [problém na GitHubu](https://github.com/ethereum/ethereum-org-website/issues/6284) a zapojte se do konverzace na našem [kanálu #design na Discordu](https://discord.gg/ethereum-org).
+Chcete se zapojit? [Sledujte nás ve Figmě](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), v [issue na GitHubu](https://github.com/ethereum/ethereum-org-website/issues/6284) a připojte se ke konverzaci v našem [kanálu #design na Discordu](https://discord.gg/ethereum-org).
 
-## Stylová příručka {#style-guide}
+## Průvodce stylem {#style-guide}
 
-Máme [stylovou příručku](/contributing/style-guide/), která standardizuje některé aspekty tvorby obsahu, aby byl proces přispívání plynulejší.
+Máme [průvodce stylem](/contributing/style-guide/), který standardizuje určité aspekty psaní obsahu, aby byl proces přispívání plynulejší.
 
-Pokud chcete [přispívat na web](/contributing/), přečtěte si prosím [naše principy](/contributing/design-principles/) a [naši stylovou příručku](/contributing/style-guide/).
+Pokud byste chtěli [přispět na web](/contributing/), nezapomeňte si přečíst [naše principy](/contributing/design-principles/) a [našeho průvodce stylem](/contributing/style-guide/).
 
-Také uvítáme zpětnou vazbu k našim designovým principům, designovému systému a k průvodci stylem. Nezapomeňte, že ethereum.org je pro komunitu a od komunity.
+Uvítáme zpětnou vazbu k našim principům designu, designovému systému a průvodci stylem. Pamatujte, že ethereum.org je pro komunitu a od komunity.
 
 ## Licence {#license}
 
-Web ethereum.org je open-source a pokud není uvedeno jinak, je vytvořen pod [licencí MIT](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE). Více o [podmínkách použití](/terms-of-use/) webu ethereum.org.
+Web ethereum.org je open-source a je vytvořen pod [licencí MIT](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE), pokud není uvedeno jinak. Více o [podmínkách použití](/terms-of-use/) ethereum.org.
 
-## Volná místa {#open-jobs}
+## Otevřené pozice {#open-jobs}
 
-Ačkoli je tento web open source a kdokoli na něm může pracovat, máme tým věnovaný ethereum.org a dalším webovým projektům Nadace Ethereum.
+Ačkoli je tento web open-source a může na něm pracovat kdokoli, máme tým, který se věnuje ethereum.org a dalším webovým projektům Nadace Ethereum.
 
-Na tomto místě zveřejníme jakékoliv pracovní nabídky. Pokud zde nevidíte pozici pro vás, přejděte na [náš server na Discordu](https://discord.gg/ethereum-org) a dejte nám vědět, jak byste s námi chtěli spolupracovat!
+Zde budeme zveřejňovat všechny volné pracovní pozice. Pokud zde nevidíte roli pro sebe, zamiřte na [náš server na Discordu](https://discord.gg/ethereum-org) a dejte nám vědět, jak byste s námi chtěli spolupracovat!
 
-Hledáte mimo tým ethereum.org? [Podívejte se na další pracovní příležitosti související s Ethereem](/community/get-involved/#ethereum-jobs/).
+Hledáte i mimo tým ethereum.org? [Podívejte se na další pracovní pozice související s Ethereem](/community/get-involved/#ethereum-jobs/).

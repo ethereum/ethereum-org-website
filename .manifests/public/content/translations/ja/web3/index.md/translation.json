@@ -1,0 +1,198 @@
+{
+  "version": 1,
+  "locale": "ja",
+  "translatedAt": "2026-06-08T11:08:34.054Z",
+  "englishManifestHash": "13bdd69f7135",
+  "placeholderOrder": [
+    "IMAGE-2b4625",
+    "IMAGE-488ddc",
+    "LINK-a21a82",
+    "IMAGE-46c53a",
+    "LINK-063d6f",
+    "LINK-e84c81",
+    "LINK-016df7",
+    "LINK-74b3ba",
+    "LINK-443391",
+    "LINK-1f3f3f",
+    "LINK-0526fb",
+    "LINK-eeea31",
+    "LINK-f323c0",
+    "LINK-d56378",
+    "LINK-ae8c7a",
+    "LINK-aafabd",
+    "LINK-d6e881",
+    "LINK-3b7672",
+    "LINK-e5840e",
+    "LINK-7e52a5",
+    "LINK-2cb1d9",
+    "LINK-4cccdb",
+    "LINK-5a69ae",
+    "LINK-165480",
+    "LINK-82e81f",
+    "LINK-b2b1ad"
+  ],
+  "placeholderMap": {
+    "IMAGE-2b4625": {
+      "type": "image",
+      "values": {
+        "path": "./web1.png"
+      }
+    },
+    "IMAGE-488ddc": {
+      "type": "image",
+      "values": {
+        "path": "./web2.png"
+      }
+    },
+    "IMAGE-46c53a": {
+      "type": "image",
+      "values": {
+        "path": "./web3.png"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-063d6f": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/himgajria/status/1266415636789334016"
+      }
+    },
+    "LINK-e84c81": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#nft"
+      }
+    },
+    "LINK-016df7": {
+      "type": "link",
+      "values": {
+        "url": "/gaming/"
+      }
+    },
+    "LINK-74b3ba": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#smart-contract"
+      }
+    },
+    "LINK-443391": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#ens"
+      }
+    },
+    "LINK-1f3f3f": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#ether"
+      }
+    },
+    "LINK-0526fb": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/"
+      }
+    },
+    "LINK-eeea31": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#layer-2"
+      }
+    },
+    "LINK-f323c0": {
+      "type": "link",
+      "values": {
+        "url": "/wallets/find-wallet/"
+      }
+    },
+    "LINK-d56378": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=SzQLI7BxfYI"
+      }
+    },
+    "LINK-ae8c7a": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/"
+      }
+    },
+    "LINK-aafabd": {
+      "type": "link",
+      "values": {
+        "url": "/wallets/"
+      }
+    },
+    "LINK-d6e881": {
+      "type": "link",
+      "values": {
+        "url": "/community/"
+      }
+    },
+    "LINK-3b7672": {
+      "type": "link",
+      "values": {
+        "url": "/apps/"
+      }
+    },
+    "LINK-e5840e": {
+      "type": "link",
+      "values": {
+        "url": "/dao/"
+      }
+    },
+    "LINK-7e52a5": {
+      "type": "link",
+      "values": {
+        "url": "/developers/"
+      }
+    },
+    "LINK-2cb1d9": {
+      "type": "link",
+      "values": {
+        "url": "https://www.freecodecamp.org/news/what-is-web3"
+      }
+    },
+    "LINK-4cccdb": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae"
+      }
+    },
+    "LINK-5a69ae": {
+      "type": "link",
+      "values": {
+        "url": "https://a16zcrypto.com/posts/article/why-web3-matters/"
+      }
+    },
+    "LINK-165480": {
+      "type": "link",
+      "values": {
+        "url": "https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e"
+      }
+    },
+    "LINK-82e81f": {
+      "type": "link",
+      "values": {
+        "url": "https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf"
+      }
+    },
+    "LINK-b2b1ad": {
+      "type": "link",
+      "values": {
+        "url": "https://www.notboring.co/p/the-web3-debate"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T11:08:34.054Z",
+      "status": "success"
+    }
+  }
+}

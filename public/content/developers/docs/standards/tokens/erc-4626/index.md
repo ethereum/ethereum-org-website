@@ -22,7 +22,7 @@ ERC-4626 is optimized for atomic deposits and redemptions up to a limit. If the 
 
 ERC-7540 expands the utility of ERC-4626 Vaults for asynchronous use cases. The existing Vault interface (`deposit`/`withdraw`/`mint`/`redeem`) is fully utilized to claim asynchronous Requests.
 
-The ERC-7540 extension is described fully in [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
+Learn more about [ERC-7540 Asynchronous Tokenized Vaults](/developers/docs/standards/tokens/erc-7540/).
 
 **Multi-asset vault extension (ERC-7575)**
 
@@ -184,13 +184,13 @@ function balanceOf(address owner) public view returns (uint256)
 
 Returns the total amount of vault shares the `owner` currently has.
 
-### Map of the interface {#mapOfTheInterface}
+### Map of the interface {#mapoftheinterface}
 
 ![Map of the ERC-4626 interface](./map-of-erc-4626.png)
 
 ### Events {#events}
 
-#### Deposit Event
+#### Deposit Event {#deposit-event}
 
 **MUST** be emitted when tokens are deposited into the vault via the [`mint`](#mint) and [`deposit`](#deposit) methods.
 
@@ -205,7 +205,7 @@ event Deposit(
 
 Where `sender` is the user who exchanged `assets` for `shares`, and transferred those `shares` to `owner`.
 
-#### Withdraw Event
+#### Withdraw Event {#withdraw-event}
 
 **MUST** be emitted when shares are withdrawn from the vault by a depositor in the [`redeem`](#redeem) or [`withdraw`](#withdraw) methods.
 

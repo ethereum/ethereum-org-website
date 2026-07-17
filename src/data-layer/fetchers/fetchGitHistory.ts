@@ -1,5 +1,7 @@
 import type { Commit } from "@/lib/types"
 
+import { fetchRetry } from "./fetchRetry"
+
 export const FETCH_GIT_HISTORY_TASK_ID = "fetch-git-history"
 
 const owner = "ethereum"
@@ -22,7 +24,7 @@ export async function fetchGitHistory(): Promise<Commit[]> {
 
   console.log("Starting GitHub commit history data fetch")
 
-  const response = await fetch(url.href, {
+  const response = await fetchRetry(url.href, {
     headers: {
       Authorization: `token ${githubToken}`,
       Accept: "application/vnd.github.v3+json",

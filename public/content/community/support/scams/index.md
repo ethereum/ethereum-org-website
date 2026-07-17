@@ -1,10 +1,9 @@
 ---
-title: Scam help & reporting
+title: I was scammed or lost funds
+metaTitle: Scam help & reporting
 description: What to do if you have been scammed, how to secure your remaining assets, and where to report fraud.
 lang: en
 ---
-
-# I was scammed or lost funds {#scam-help}
 
 Cryptocurrency scams target people of all experience levels, including professionals in finance and technology. You are not alone, and being here is the right first step.
 
@@ -13,7 +12,7 @@ Cryptocurrency scams target people of all experience levels, including professio
 <AlertContent>
 <AlertDescription>
 
-**No one can reverse blockchain transactions.** If someone contacts you claiming they can recover your funds for a fee, that is almost certainly a second scam. See [recovery scams](#recovery-scams) below.
+**No one can reverse blockchain transactions.** If someone contacts you claiming they can recover your funds for a fee, that is almost certainly a second scam. See [recovery scams](#scam-types) below.
 
 </AlertDescription>
 </AlertContent>

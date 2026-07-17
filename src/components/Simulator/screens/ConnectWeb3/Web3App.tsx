@@ -1,5 +1,6 @@
 import React, { type HTMLAttributes } from "react"
 import { Menu } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import { HStack } from "@/components/ui/flex"
 
@@ -20,6 +21,7 @@ export const Web3App = ({
   className,
   ...rest
 }: Web3AppProps) => {
+  const t = useTranslations("component-wallet-simulator")
   return (
     <div
       className={cn("size-full bg-background-highlight", className)}
@@ -29,8 +31,8 @@ export const Web3App = ({
         <p className="text-center text-xs">{displayUrl}</p>
       </div>
       <NotificationPopover
-        title="Example walkthrough"
-        content="Try out a real Ethereum application when finished here"
+        title={t("sim-example-walkthrough")}
+        content={t("sim-try-real-app")}
       >
         <HStack className="gap-3 p-6 text-4xl">
           {/* TODO: Remove 'size' class when icon is migrated */}

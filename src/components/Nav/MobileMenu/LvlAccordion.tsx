@@ -42,7 +42,7 @@ const nestedAccordionSpacingMap = {
   6: "ps-24",
 }
 
-const LvlAccordion = async ({
+const LvlAccordion = ({
   lvl,
   items,
   activeSection,
@@ -61,7 +61,7 @@ const LvlAccordion = async ({
             >
               <Button
                 className={cn(
-                  "flex h-full justify-start whitespace-normal px-4 py-4 text-start text-body no-underline",
+                  "flex h-full justify-start px-4 py-4 text-start whitespace-normal text-body no-underline",
                   nestedAccordionSpacingMap[lvl + 2]
                 )}
                 variant="ghost"
@@ -113,20 +113,20 @@ const LvlAccordion = async ({
             <CollapsibleTrigger
               data-testid={`mobile-menu-collapsible-${slugify(label)}`}
               className={cn(
-                "group/menu flex w-full flex-1 items-center justify-between gap-2 px-4 py-4 font-medium transition-all hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover group-data-[state=open]/menu:bg-background-highlight group-data-[state=open]/menu:text-primary-high-contrast md:px-4 [&[data-state=open]:dir(rtl)_[data-label=icon-container]>svg]:rotate-90 [&[data-state=open]_[data-label=icon-container]>svg]:-rotate-90",
-                "flex h-full justify-start whitespace-normal px-4 py-4 text-start text-body no-underline",
+                "group/menu flex w-full flex-1 items-center justify-between gap-2 px-4 py-4 font-medium transition-all group-data-[state=open]/menu:bg-background-highlight group-data-[state=open]/menu:text-primary-high-contrast hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover md:px-4 [&[data-state=open]_[data-label=icon-container]>svg]:-rotate-90 [&[data-state=open]:dir(rtl)_[data-label=icon-container]>svg]:rotate-90",
+                "flex h-full justify-start px-4 py-4 text-start whitespace-normal text-body no-underline",
                 "text-body",
                 nestedAccordionSpacingMap[lvl]
               )}
             >
               <ExpandIcon />
               <div>
-                <p className="flex-1 text-md font-bold leading-tight text-body">
+                <p className="flex-1 text-md leading-tight font-bold text-body">
                   {label}
                 </p>
                 <p
                   className={cn(
-                    "text-sm font-normal leading-tight",
+                    "text-sm leading-tight font-normal",
                     subtextColorPerLevel[lvl]
                   )}
                 >

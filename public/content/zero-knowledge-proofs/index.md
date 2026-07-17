@@ -1,10 +1,9 @@
 ---
-title: Zero-knowledge proofs
+title: What are zero-knowledge proofs?
+metaTitle: Zero-knowledge proofs
 description: A non-technical introduction to zero-knowledge proofs for beginners.
 lang: en
 ---
-
-# What are zero-knowledge proofs? {#what-are-zk-proofs}
 
 A zero-knowledge proof is a way of proving the validity of a statement without revealing the statement itself. The ‘prover’ is the party trying to prove a claim, while the ‘verifier’ is responsible for validating the claim.
 
@@ -14,7 +13,7 @@ Zero-knowledge proofs first appeared in a 1985 paper, “[The knowledge complexi
 
 Zero-knowledge proofs have improved over the years and they are now being used in several real-world applications.
 
-<YouTube id="fOGdb1CTu5c" />
+<VideoWatch slug="zero-knowledge-proofs-5-levels" />
 
 ## Why do we need zero-knowledge proofs? {#why-zero-knowledge-proofs-are-important}
 
@@ -98,6 +97,8 @@ The chain needs a way to validate offchain transactions without re-executing the
 This is where verifiable computation comes into play. When a node executes a transaction outside of Ethereum, it submits a zero-knowledge proof to prove the correctness of offchain execution. This proof (called a [validity proof](/glossary/#validity-proof)) guarantees that a transaction is valid, allowing Ethereum to apply the result to its state—without waiting for anyone to dispute it.
 
 [Zero-knowledge rollups](/developers/docs/scaling/zk-rollups) and [validiums](/developers/docs/scaling/validium/) are two offchain scaling solutions that use validity proofs to provide secure scalability. These protocols execute thousands of transactions offchain and submit proofs for verification on Ethereum. Those results can be applied immediately once the proof is verified, allowing Ethereum to process more transactions without increasing computation on the base layer.
+
+Beyond Layer 2 scaling, zero-knowledge proofs can also verify Ethereum L1 block execution itself. [zkEVM for L1 verification](/roadmap/zkevm/) would allow validators to verify blocks by checking a proof rather than re-executing all transactions—enabling higher gas limits without raising validator hardware requirements.
 
 ### Reducing bribery and collusion in onchain voting {#secure-blockchain-voting}
 
@@ -234,5 +235,5 @@ ZK-STARK is considered immune to the threat of quantum computing, as it only rel
 - [ZK-STARKs — Create Verifiable Trust, even against Quantum Computers](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [An approximate introduction to how zk-SNARKs are possible](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [Why Zero Knowledge Proofs (ZKPs) is a Game Changer for Self-Sovereign Identity](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
-- [EIP-7503 Explained: Enabling Private Transfers On Ethereum With ZK Proofs](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Emmanuel Awosika_
+- [EIP-7503 Explained: Enabling Private Transfers On Ethereum With ZK Proofs](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [ZK Card Game: game to learn ZK fundamentals and real-life use cases](https://github.com/ZK-card/zk-cards) - _ZK-Cards_

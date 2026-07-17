@@ -1,0 +1,268 @@
+{
+  "version": 1,
+  "locale": "tr",
+  "translatedAt": "2026-06-08T09:43:52.767Z",
+  "englishManifestHash": "45c7bf109bdb",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-759fdd",
+    "LINK-f2f399",
+    "LINK-91d5b3",
+    "LINK-b7715c",
+    "LINK-18a3b2",
+    "LINK-1d407d",
+    "LINK-a341e9",
+    "LINK-e7473b",
+    "LINK-576929",
+    "LINK-bed03f",
+    "LINK-5ca6e2",
+    "LINK-0d0d98",
+    "LINK-ab8d00",
+    "LINK-764cb3",
+    "LINK-a81d8b",
+    "LINK-57a7e3",
+    "LINK-1ea36b",
+    "LINK-62af47",
+    "LINK-9a7dec",
+    "LINK-82421f",
+    "LINK-82e672",
+    "LINK-ee0ff3",
+    "LINK-c56e69",
+    "LINK-5d9891",
+    "LINK-95e77b",
+    "LINK-3034bc",
+    "LINK-139493",
+    "LINK-838fb1",
+    "LINK-e0be1e",
+    "LINK-c2d3d0",
+    "LINK-752563",
+    "LINK-135157",
+    "LINK-4d1cdd",
+    "LINK-a0adda",
+    "LINK-68e0db"
+  ],
+  "placeholderMap": {
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-759fdd": {
+      "type": "link",
+      "values": {
+        "url": "/community/"
+      }
+    },
+    "LINK-f2f399": {
+      "type": "link",
+      "values": {
+        "url": "/what-is-ether/"
+      }
+    },
+    "LINK-91d5b3": {
+      "type": "link",
+      "values": {
+        "url": "/apps/"
+      }
+    },
+    "LINK-b7715c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-18a3b2": {
+      "type": "link",
+      "values": {
+        "url": "/eips/"
+      }
+    },
+    "LINK-1d407d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-a341e9": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1#core-eips"
+      }
+    },
+    "LINK-e7473b": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status"
+      }
+    },
+    "LINK-576929": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-magicians.org/"
+      }
+    },
+    "LINK-bed03f": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/mncqtgVSVw"
+      }
+    },
+    "LINK-5ca6e2": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/EIPs"
+      }
+    },
+    "LINK-0d0d98": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-magicians.org/"
+      }
+    },
+    "LINK-ab8d00": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/"
+      }
+    },
+    "LINK-764cb3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-57a7e3": {
+      "type": "link",
+      "values": {
+        "url": "https://www.coindesk.com/learn/understanding-the-dao-attack"
+      }
+    },
+    "LINK-a81d8b": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#dao"
+      }
+    },
+    "LINK-1ea36b": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/"
+      }
+    },
+    "LINK-62af47": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereumclassic.org/"
+      }
+    },
+    "LINK-9a7dec": {
+      "type": "link",
+      "values": {
+        "url": "/ethereum-forks/#paris"
+      }
+    },
+    "LINK-82421f": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-3675"
+      }
+    },
+    "LINK-82e672": {
+      "type": "link",
+      "values": {
+        "url": "/eips/#participate"
+      }
+    },
+    "LINK-ee0ff3": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-magicians.org/"
+      }
+    },
+    "LINK-c56e69": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/"
+      }
+    },
+    "LINK-5d9891": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/mncqtgVSVw"
+      }
+    },
+    "LINK-95e77b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/run-a-node/"
+      }
+    },
+    "LINK-3034bc": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#execution-clients"
+      }
+    },
+    "LINK-139493": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort"
+      }
+    },
+    "LINK-838fb1": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2017/12/17/voting.html"
+      }
+    },
+    "LINK-e0be1e": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptotesters.com/blog/ethereum-governance"
+      }
+    },
+    "LINK-c2d3d0": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a"
+      }
+    },
+    "LINK-752563": {
+      "type": "link",
+      "values": {
+        "url": "https://hudsonjameson.com/posts/2020-06-22-what-is-an-ethereum-core-developer/"
+      }
+    },
+    "LINK-135157": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2018/03/28/plutocracy.html"
+      }
+    },
+    "LINK-4d1cdd": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2021/08/16/voting3.html"
+      }
+    },
+    "LINK-a0adda": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance"
+      }
+    },
+    "LINK-68e0db": {
+      "type": "link",
+      "values": {
+        "url": "https://www.galaxy.com/insights/research/ethereum-governance/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T09:43:52.767Z",
+      "status": "success"
+    }
+  }
+}

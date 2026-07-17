@@ -1,0 +1,795 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/scaling/state-channels/index.md",
+  "generatedAt": "2026-06-17T22:44:41.320Z",
+  "rootHash": "23b77e7d5590",
+  "tree": {
+    "contentHash": "560d94d1fea5",
+    "anchorHash": "86ebe288c286",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "c8727db52a30",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "7d7396e23c8b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:sidebarDepth": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "4e07408562be"
+      },
+      "prose:1": {
+        "contentHash": "0de4d1744407",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "8a5edab28263"
+      },
+      "prose:2": {
+        "contentHash": "f71fbaf26bff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prerequisites": {
+        "contentHash": "f27aa31c0d43",
+        "anchorHash": "b1f9e6a70a0b",
+        "labelHash": "865514682d01",
+        "children": {
+          "_label": {
+            "contentHash": "865514682d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "d462b6da6b84",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "42d7538ac3a1",
+            "anchorHash": "0e11617f9023"
+          },
+          "prose:3": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "0c6eea24ed5f",
+            "anchorHash": "3b52f2e35fd0"
+          },
+          "prose:4": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "what-are-channels": {
+        "contentHash": "7072e44ad8d4",
+        "anchorHash": "50f1d45b8e40",
+        "labelHash": "b33a02b6a109",
+        "children": {
+          "_label": {
+            "contentHash": "b33a02b6a109",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "014907907bae",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "7428a706f91a",
+            "anchorHash": "08e1b40bd96f"
+          },
+          "prose:3": {
+            "contentHash": "8f8d1579088a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "4fb3b59352d0",
+            "anchorHash": "08e1b40bd96f"
+          },
+          "prose:4": {
+            "contentHash": "0693ba7a89f4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "payment-channels": {
+        "contentHash": "0cdc39e12ef6",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "8f7fb802c250",
+        "children": {
+          "_label": {
+            "contentHash": "8f7fb802c250",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "6a79efb969af",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "state-channels": {
+        "contentHash": "c36b91351041",
+        "anchorHash": "f5501b33498c",
+        "labelHash": "b2a82f5c41a3",
+        "children": {
+          "_label": {
+            "contentHash": "b2a82f5c41a3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "9c552e85a679",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "177cbe0acd36",
+            "anchorHash": "05db58e92d4e"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "how-state-channels-work": {
+        "contentHash": "39e787a7e9d8",
+        "anchorHash": "11dabc407c4d",
+        "labelHash": "874fa619cb00",
+        "children": {
+          "_label": {
+            "contentHash": "874fa619cb00",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "6fada60079ca",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "opening-the-channel": {
+            "contentHash": "c9ab4c2b345f",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "c34b809ce9a0",
+            "children": {
+              "_label": {
+                "contentHash": "c34b809ce9a0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "82ee60f20c68",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "using-the-channel": {
+            "contentHash": "20cc428ec735",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "fa79397264c9",
+            "children": {
+              "_label": {
+                "contentHash": "fa79397264c9",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "8d6d6fd4dc79",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "closing-the-channel": {
+            "contentHash": "68006e8afc15",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "24b2742f6d5e",
+            "children": {
+              "_label": {
+                "contentHash": "24b2742f6d5e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "f08607a57563",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "settling-disputes": {
+            "contentHash": "74789624b92c",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "eeb3d44e2721",
+            "children": {
+              "_label": {
+                "contentHash": "eeb3d44e2721",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "97ec364e014b",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "how-do-state-channels-interact-with-ethereum": {
+            "contentHash": "f313f4f3fe7d",
+            "anchorHash": "8e66c06bbc23",
+            "labelHash": "91ffd9bbe2ce",
+            "children": {
+              "_label": {
+                "contentHash": "91ffd9bbe2ce",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "f9f3d16ac14f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "0c6eea24ed5f",
+                "anchorHash": "3b52f2e35fd0"
+              },
+              "prose:3": {
+                "contentHash": "0b1672fd2a0d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "9c8ae38f81d5",
+                "anchorHash": "e0dcdaf3a7b0"
+              },
+              "prose:4": {
+                "contentHash": "7210037676c7",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "liveness": {
+                "contentHash": "9d35ed5294a3",
+                "anchorHash": "4b9f7d802648",
+                "labelHash": "42978f6ff169",
+                "children": {
+                  "_label": {
+                    "contentHash": "42978f6ff169",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:0": {
+                    "contentHash": "e8f6b4e79f32",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:0"
+                ]
+              },
+              "security": {
+                "contentHash": "120e5c0bf0ad",
+                "anchorHash": "4b9f7d802648",
+                "labelHash": "bf74d7ff2ec3",
+                "children": {
+                  "_label": {
+                    "contentHash": "bf74d7ff2ec3",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:0": {
+                    "contentHash": "bb55e01a569f",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:0"
+                ]
+              },
+              "finality": {
+                "contentHash": "7644c582d6bd",
+                "anchorHash": "4b9f7d802648",
+                "labelHash": "5085653336d4",
+                "children": {
+                  "_label": {
+                    "contentHash": "5085653336d4",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:0": {
+                    "contentHash": "5a74d0ede22b",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:0"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4",
+              "liveness",
+              "security",
+              "finality"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "opening-the-channel",
+          "using-the-channel",
+          "closing-the-channel",
+          "settling-disputes",
+          "how-do-state-channels-interact-with-ethereum"
+        ]
+      },
+      "virtual-state-channels": {
+        "contentHash": "1f2f458d9aa6",
+        "anchorHash": "196a4464bbc6",
+        "labelHash": "a38ea9314923",
+        "children": {
+          "_label": {
+            "contentHash": "a38ea9314923",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "b649fc887f57",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "virtual-payment-channels": {
+            "contentHash": "0aef1ff27c83",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "971865489ed2",
+            "children": {
+              "_label": {
+                "contentHash": "971865489ed2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "a5984d3896b2",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "virtual-payment-channels"
+        ]
+      },
+      "applications-of-state-channels": {
+        "contentHash": "6cfd63855e67",
+        "anchorHash": "ea8094a04bd7",
+        "labelHash": "dca92c614b8d",
+        "children": {
+          "_label": {
+            "contentHash": "dca92c614b8d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "payments": {
+            "contentHash": "b1f15e6a3470",
+            "anchorHash": "b988ae957a36",
+            "labelHash": "632e1c583941",
+            "children": {
+              "_label": {
+                "contentHash": "632e1c583941",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "3098eb7ec378",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "8bffd6eadddc",
+                "anchorHash": "11d61bb2e8d7"
+              },
+              "prose:3": {
+                "contentHash": "a6ae281c6c94",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "e10ac5fdcfe1",
+                "anchorHash": "146a7bea92ac"
+              },
+              "prose:4": {
+                "contentHash": "5f93e5501293",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          },
+          "microtransactions": {
+            "contentHash": "8d7b57828fdf",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "a409b27d0f26",
+            "children": {
+              "_label": {
+                "contentHash": "a409b27d0f26",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "2c20a60100f8",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "decentralized-applications": {
+            "contentHash": "ca2ee58d6b4c",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "05c52912c16c",
+            "children": {
+              "_label": {
+                "contentHash": "05c52912c16c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "a2283b9b093a",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "atomic-transfers": {
+            "contentHash": "99a943a882b1",
+            "anchorHash": "51807381d4dd",
+            "labelHash": "b9f6ee47374b",
+            "children": {
+              "_label": {
+                "contentHash": "b9f6ee47374b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "0c2fed4a8be1",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "e7043feeb933",
+                "anchorHash": "86eae5a8de8a"
+              },
+              "prose:2": {
+                "contentHash": "8424d9e4d805",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "payments",
+          "microtransactions",
+          "decentralized-applications",
+          "atomic-transfers"
+        ]
+      },
+      "drawbacks-of-state-channels": {
+        "contentHash": "f3e301fdf2d9",
+        "anchorHash": "2c2e04974746",
+        "labelHash": "4da700f2fddf",
+        "children": {
+          "_label": {
+            "contentHash": "4da700f2fddf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "liveness-assumptions": {
+            "contentHash": "b7ebe73f2e62",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "e732a182a04d",
+            "children": {
+              "_label": {
+                "contentHash": "e732a182a04d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "e4c6e79224b9",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "data-unavailability": {
+            "contentHash": "82a5ee301749",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "9970c0946fd8",
+            "children": {
+              "_label": {
+                "contentHash": "9970c0946fd8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "d7c0e539a73f",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "liquidity-issues": {
+            "contentHash": "813a80e0d4eb",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "63444b280418",
+            "children": {
+              "_label": {
+                "contentHash": "63444b280418",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "733c5d687d8b",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "griefing-attacks": {
+            "contentHash": "02ede2a5cdfc",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "f058a8bfddef",
+            "children": {
+              "_label": {
+                "contentHash": "f058a8bfddef",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "6f6cbddd833e",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "predefined-participant-sets": {
+            "contentHash": "1b906384f293",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "854480ef02bc",
+            "children": {
+              "_label": {
+                "contentHash": "854480ef02bc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "da23e08bdbe5",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "parallel-transaction-processing": {
+            "contentHash": "25e5c75eef7d",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "689c6e52b6ee",
+            "children": {
+              "_label": {
+                "contentHash": "689c6e52b6ee",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "d2ae3f9f4195",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "liveness-assumptions",
+          "data-unavailability",
+          "liquidity-issues",
+          "griefing-attacks",
+          "predefined-participant-sets",
+          "parallel-transaction-processing"
+        ]
+      },
+      "use-state-channels": {
+        "contentHash": "73a893b6ec05",
+        "anchorHash": "6ae2c4cf49bb",
+        "labelHash": "a463a077598d",
+        "children": {
+          "_label": {
+            "contentHash": "a463a077598d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "e8fc2515bfaf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "15a415b9dfdb",
+            "anchorHash": "616fd551c491"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "3b0582291e49",
+            "anchorHash": "437ab2f37c13"
+          },
+          "prose:6": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "3674b5a9755d",
+            "anchorHash": "b4399c23b42e"
+          },
+          "prose:7": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "473df0706751",
+            "anchorHash": "9c6580042785"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "57f038ff5d2a",
+        "anchorHash": "9b49adcbb661",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "c09379089fda",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "dea2caa0a3f8",
+            "anchorHash": "23e4877f8ce8"
+          },
+          "prose:5": {
+            "contentHash": "f16cc5cc0c8c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "14a7083f5a17",
+            "anchorHash": "3e81c45abf3b"
+          },
+          "prose:6": {
+            "contentHash": "72f5adeb9fda",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "444ad69ea221",
+            "anchorHash": "02bcf124d99b"
+          },
+          "prose:7": {
+            "contentHash": "d4c92b0b9f81",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "57eef1b4c9b8",
+            "anchorHash": "d1ec6dd37ba4"
+          },
+          "prose:8": {
+            "contentHash": "123ee5ac559d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3",
+          "prose:8"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:sidebarDepth",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "prerequisites",
+      "what-are-channels",
+      "payment-channels",
+      "state-channels",
+      "how-state-channels-work",
+      "virtual-state-channels",
+      "applications-of-state-channels",
+      "drawbacks-of-state-channels",
+      "use-state-channels",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}
