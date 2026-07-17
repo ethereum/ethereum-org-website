@@ -2237,6 +2237,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://nodeflare.app"><img src="https://avatars.githubusercontent.com/u/302281547?v=4?s=100" width="100px;" alt="NodeFlare"/><br /><sub><b>NodeFlare</b></sub></a><br /><a href="#maintenance-nodeflareapp" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/hidargmax27-cmyk"><img src="https://avatars.githubusercontent.com/u/250812573?v=4?s=100" width="100px;" alt="hidargmax27-cmyk"/><br /><sub><b>hidargmax27-cmyk</b></sub></a><br /><a href="#tool-hidargmax27-cmyk" title="Tools">🔧</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Equious"><img src="https://avatars.githubusercontent.com/u/76449140?v=4?s=100" width="100px;" alt="Equious"/><br /><sub><b>Equious</b></sub></a><br /><a href="#tool-Equious" title="Tools">🔧</a></td>
+    </tr>
   </tbody>
 </table>
 
