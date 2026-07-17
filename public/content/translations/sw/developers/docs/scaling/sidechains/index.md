@@ -1,64 +1,64 @@
 ---
-title: Minyororo ya pembeni
-description: Utangulizi wa sidechains kama suluhisho la kuongeza ukubwa linalotumiwa sasa na jumuiya ya Ethereum.
+title: Minyororo ya kando
+description: Utangulizi wa minyororo ya kando kama suluhisho la kuongeza uwezo linalotumiwa kwa sasa na jamii ya Ethereum.
 lang: sw
 sidebarDepth: 3
 ---
 
-Sidechain ni mnyororo wa bloku tofauti unaofanya kazi bila kutegemea Ethereum na umeunganishwa na Mtandao Mkuu wa Ethereum kwa daraja la njia mbili. Sidechains zinaweza kuwa na vigezo tofauti vya bloku na [algoriti za makubaliano](/developers/docs/consensus-mechanisms/), ambazo mara nyingi zimeundwa kwa ajili ya uchakataji bora wa miamala. Hata hivyo, kutumia sidechain kuna hasara zake, kwa kuwa hairithi sifa za usalama za Ethereum. Tofauti na [suluhu za kuongeza ukubwa za safu ya 2](/layer-2/), sidechains hazichapishi mabadiliko ya hali na data ya miamala kwenye Mtandao Mkuu wa Ethereum.
+Mnyororo wa kando ni mnyororo wa vitalu tofauti unaofanya kazi kwa kujitegemea na [Ethereum](/) na umeunganishwa kwenye Mtandao Mkuu wa Ethereum kwa daraja la njia mbili. Minyororo ya kando inaweza kuwa na vigezo tofauti vya kitalu na [aligoriti za mwafaka](/developers/docs/consensus-mechanisms/), ambazo mara nyingi zimeundwa kwa ajili ya uchakataji mzuri wa miamala. Kutumia mnyororo wa kando kunahusisha maelewano, ingawa, kwa kuwa havirithi sifa za usalama za Ethereum. Tofauti na [masuluhisho ya kuongeza uwezo ya tabaka la 2 (l2)](/layer-2/), minyororo ya kando haitumi mabadiliko ya hali na data ya muamala kurudi kwenye Mtandao Mkuu wa Ethereum.
 
-Sidechains pia huacha baadhi ya vipimo vya ugatuaji au usalama ili kufikia uwezo wa juu wa kuchakata ([scalability trilemma](https://vitalik.eth.limo/general/2021/05/23/scaling.html)). Hata hivyo, Ethereum imejitolea kuongeza ukubwa bila kuathiri ugatuaji na usalama.
+Minyororo ya kando pia hujitolea kiasi fulani cha ugatuzi au usalama ili kufikia uwezo wa upitishaji wa juu ([utatu wa kuongeza uwezo](https://vitalik.eth.limo/general/2021/05/23/scaling.html)). Ethereum, hata hivyo, imejitolea kuongeza uwezo bila kuathiri ugatuzi na usalama.
 
-## Sidechains hufanyaje kazi? {#how-do-sidechains-work}
+## Minyororo ya kando inafanyaje kazi? {#how-do-sidechains-work}
 
-Sidechains ni minyororo ya bloku huru, yenye historia tofauti, ramani za maendeleo, na mazingatio ya usanifu. Ingawa sidechain inaweza kuwa na mfanano wa juu juu na Ethereum, ina sifa kadhaa za kipekee.
+Minyororo ya kando ni minyororo ya vitalu inayojitegemea, yenye historia tofauti, ramani za maendeleo, na mazingatio ya muundo. Ingawa mnyororo wa kando unaweza kushiriki baadhi ya mfanano wa juu juu na Ethereum, una vipengele kadhaa tofauti.
 
-### Algoriti za makubaliano {#consensus-algorithms}
+### Aligoriti za mwafaka {#consensus-algorithms}
 
-Moja ya sifa zinazofanya sidechains kuwa za kipekee (yaani, tofauti na Ethereum) ni algoriti ya makubaliano inayotumika. Sidechains hazitegemei Ethereum kwa makubaliano na zinaweza kuchagua itifaki mbadala za makubaliano zinazokidhi mahitaji yao. Baadhi ya mifano ya algoriti za makubaliano zinazotumiwa kwenye sidechains ni pamoja na:
+Moja ya sifa zinazofanya minyororo ya kando kuwa ya kipekee (yaani, tofauti na Ethereum) ni aligoriti ya mwafaka inayotumika. Minyororo ya kando haitegemei Ethereum kwa mwafaka na inaweza kuchagua itifaki mbadala za mwafaka zinazokidhi mahitaji yao. Baadhi ya mifano ya aligoriti za mwafaka zinazotumika kwenye minyororo ya kando ni pamoja na:
 
-- [Uthibitisho wa Mamlaka](/developers/docs/consensus-mechanisms/poa/)
-- [Uthibitisho wa hisa uliokabidhiwa](https://en.bitcoin.it/wiki/Delegated_proof_of_stake)
-- [Ustahimilivu wa kosa la Byzantine](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained).
+- [Uthibitisho wa mamlaka (PoA)](/developers/docs/consensus-mechanisms/poa/)
+- [Uthibitisho wa Dau uliokabidhiwa](https://en.bitcoin.it/wiki/Delegated_proof_of_stake)
+- [Uvumilivu wa makosa ya Byzantine](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained).
 
-Kama Ethereum, sidechains zina nodi za kuthibitisha ambazo huhakiki na kuchakata miamala, huzalisha bloku, na huhifadhi hali ya mnyororo wa bloku. Wathibitishaji pia wanawajibika kwa kudumisha makubaliano kwenye mtandao na kuulinda dhidi ya mashambulizi hasidi.
+Kama Ethereum, minyororo ya kando ina nodi za kuthibitisha ambazo huthibitisha na kuchakata miamala, kuzalisha vitalu, na kuhifadhi hali ya mnyororo wa vitalu. Wathibitishaji pia wana jukumu la kudumisha mwafaka kwenye mtandao na kuulinda dhidi ya mashambulizi mabaya.
 
-#### Vigezo vya bloku {#block-parameters}
+#### Vigezo vya kitalu {#block-parameters}
 
-Ethereum inaweka vikomo kwenye [muda wa bloku](/developers/docs/blocks/#block-time) (yaani, muda unaochukua kuzalisha bloku mpya) na [ukubwa wa bloku](/developers/docs/blocks/#block-size) (yaani, kiasi cha data kilichomo kwenye kila bloku kinachopimwa kwa gesi). Kinyume chake, sidechains mara nyingi hutumia vigezo tofauti, kama vile muda mfupi wa bloku na vikomo vya juu vya gesi, ili kufikia uwezo wa juu wa kuchakata, miamala ya haraka, na ada za chini.
+Ethereum huweka mipaka kwenye [muda wa kitalu](/developers/docs/blocks/#block-time) (yaani, muda unaochukua kuzalisha vitalu vipya) na [ukubwa wa kitalu](/developers/docs/blocks/#block-size) (yaani, kiasi cha data kilichomo kwa kila kitalu kinachotajwa katika gesi). Kinyume chake, minyororo ya kando mara nyingi huchukua vigezo tofauti, kama vile muda wa kitalu wa haraka na mipaka ya juu ya gesi, ili kufikia uwezo wa upitishaji wa juu, miamala ya haraka, na ada za chini.
 
-Ingawa hii ina faida fulani, ina athari muhimu kwa ugatuaji na usalama wa mtandao. Vigezo vya bloku, kama vile muda mfupi wa bloku na ukubwa mkubwa wa bloku, huongeza ugumu wa kuendesha nodi kamili—na kuacha "supernodes" chache zikiwajibika kwa kuulinda mnyororo. Katika hali kama hiyo, uwezekano wa wathibitishaji kula njama au uchukuaji hasidi wa mnyororo huongezeka.
+Ingawa hii ina faida fulani, ina athari muhimu kwa ugatuzi na usalama wa mtandao. Vigezo vya kitalu, kama vile muda wa kitalu wa haraka na ukubwa mkubwa wa kitalu, huongeza ugumu wa kuendesha nodi kamili—na kuacha "nodi kuu" chache zikiwa na jukumu la kulinda mnyororo. Katika hali kama hiyo, uwezekano wa wathibitishaji kula njama au kuchukua udhibiti mbaya wa mnyororo huongezeka.
 
-Ili minyororo ya bloku iongeze ukubwa bila kudhuru ugatuaji, uendeshaji wa nodi lazima uwe wazi kwa kila mtu—sio lazima wahusika wenye maunzi maalum. Hii ndiyo sababu jitihada zinaendelea ili kuhakikisha kila mtu anaweza [kuendesha nodi kamili](/developers/docs/nodes-and-clients/#why-should-i-run-an-ethereum-node) kwenye mtandao wa Ethereum.
+Ili minyororo ya vitalu iongeze uwezo bila kudhuru ugatuzi, kuendesha nodi lazima iwe wazi kwa kila mtu—sio lazima wahusika walio na maunzi maalum. Hii ndiyo sababu juhudi zinaendelea ili kuhakikisha kila mtu anaweza [kuendesha nodi kamili](/developers/docs/nodes-and-clients/#why-should-i-run-an-ethereum-node) kwenye mtandao wa Ethereum.
 
-### Upatanifu wa EVM {#evm-compatibility}
+### Utangamano wa EVM {#evm-compatibility}
 
-Baadhi ya sidechains zinapatana na EVM na zinaweza kutekeleza mikataba iliyotengenezwa kwa ajili ya [Mashine ya Mtandaoni ya Ethereum (EVM)](/developers/docs/evm/). Sidechains zinazopatana na EVM zinaauni mikataba-erevu [iliyoandikwa kwa Solidity](/developers/docs/smart-contracts/languages/), pamoja na lugha nyingine za mikataba-erevu za EVM, ambayo ina maana kwamba mikataba-erevu iliyoandikwa kwa ajili ya Mtandao Mkuu wa Ethereum pia itafanya kazi kwenye sidechains zinazopatana na EVM.
+Baadhi ya minyororo ya kando inatangamana na EVM na ina uwezo wa kutekeleza mikataba iliyotengenezwa kwa ajili ya [Mashine Pepe ya Ethereum (EVM)](/developers/docs/evm/). Minyororo ya kando inayoendana na EVM inasaidia mikataba mahiri [iliyoandikwa kwa Solidity](/developers/docs/smart-contracts/languages/), pamoja na lugha zingine za mkataba mahiri wa EVM, ambayo inamaanisha mikataba mahiri iliyoandikwa kwa ajili ya Mtandao Mkuu wa Ethereum pia itafanya kazi kwenye minyororo ya kando inayoendana na EVM.
 
-Hii ina maana kwamba ikiwa unataka kutumia [mfumo mtawanyo wa kimamlaka](/developers/docs/dapps/) yako kwenye sidechain, ni suala la kusambaza [mkataba-erevu](/developers/docs/smart-contracts/) wako kwenye sidechain hii. Inaonekana, inahisika, na inafanya kazi kama Mtandao Mkuu—unaandika mikataba kwa Solidity, na kuingiliana na mnyororo kupitia RPC za sidechains.
+Hii inamaanisha ikiwa unataka kutumia [programu tumizi iliyogatuliwa (dapp)](/developers/docs/dapps/) yako kwenye mnyororo wa kando, ni suala tu la kusambaza [mkataba mahiri](/developers/docs/smart-contracts/) wako kwenye mnyororo huu wa kando. Inaonekana, inahisika, na inatenda kama Mtandao Mkuu—unaandika mikataba katika Solidity, na kuingiliana na mnyororo kupitia RPC ya minyororo ya kando.
 
-Kwa sababu sidechains zinapatana na EVM, zinachukuliwa kuwa [suluhisho muhimu la kuongeza ukubwa](/developers/docs/scaling/) kwa mfumo mtawanyo wa kimamlaka asilia za Ethereum. Ukiwa na mfumo mtawanyo wa kimamlaka wako kwenye sidechain, watumiaji wanaweza kufurahia ada za chini za gesi na miamala ya haraka, hasa ikiwa Mtandao Mkuu una msongamano.
+Kwa sababu minyororo ya kando inatangamana na EVM, inachukuliwa kuwa [suluhisho la kuongeza uwezo](/developers/docs/scaling/) muhimu kwa dapps asili za Ethereum. Ukiwa na dapp yako kwenye mnyororo wa kando, watumiaji wanaweza kufurahia ada za chini za gesi na miamala ya haraka, hasa ikiwa Mtandao Mkuu una msongamano.
 
-Hata hivyo, kama ilivyoelezwa hapo awali, kutumia sidechain kuna hasara kubwa. Kila sidechain inawajibika kwa usalama wake na hairithi sifa za usalama za Ethereum. Hii huongeza uwezekano wa tabia hasidi ambayo inaweza kuathiri watumiaji wako au kuweka fedha zao hatarini.
+Hata hivyo, kama ilivyoelezwa hapo awali, kutumia mnyororo wa kando kunahusisha maelewano makubwa. Kila mnyororo wa kando unawajibika kwa usalama wake na haurithi sifa za usalama za Ethereum. Hii huongeza uwezekano wa tabia mbaya ambayo inaweza kuathiri watumiaji wako au kuweka fedha zao hatarini.
 
-### Uhamisho wa mali {#asset-movement}
+### Mwendo wa mali {#asset-movement}
 
-Ili mnyororo wa bloku tofauti uwe sidechain ya Mtandao Mkuu wa Ethereum, unahitaji uwezo wa kuwezesha uhamishaji wa mali kutoka na kwenda kwenye Mtandao Mkuu wa Ethereum. Uwezo huu wa kuingiliana na Ethereum unafikiwa kwa kutumia daraja la mnyororo wa bloku. [Madaraja](/bridges/) hutumia mikataba-erevu iliyosambazwa kwenye Mtandao Mkuu wa Ethereum na sidechain ili kudhibiti uunganishaji wa fedha kati yao.
+Ili mnyororo wa vitalu tofauti uwe mnyororo wa kando kwa Mtandao Mkuu wa Ethereum unahitaji uwezo wa kuwezesha hamisho la mali kutoka na kwenda kwenye Mtandao Mkuu wa Ethereum. Mwingiliano huu na Ethereum unafikiwa kwa kutumia daraja la mnyororo wa vitalu. [Madaraja](/bridges/) hutumia mikataba mahiri iliyosambazwa kwenye Mtandao Mkuu wa Ethereum na mnyororo wa kando ili kudhibiti uvushaji wa fedha kati yao.
 
-Ingawa madaraja huwasaidia watumiaji kuhamisha fedha kati ya Ethereum na sidechain, mali haihamishiwi kimwili kati ya minyororo hiyo miwili. Badala yake, taratibu zinazohusisha kawaida utengenezaji na uchomaji hutumiwa kwa ajili ya kuhamisha thamani kati ya minyororo. Zaidi kuhusu [jinsi madaraja yanavyofanya kazi](/developers/docs/bridges/#how-do-bridges-work).
+Ingawa madaraja husaidia watumiaji kuhamisha fedha kati ya Ethereum na mnyororo wa kando, mali hazihamishwi kimwili kwenye minyororo hiyo miwili. Badala yake, taratibu ambazo kwa kawaida huhusisha ufuzi na kuteketeza hutumiwa kwa kuhamisha thamani kwenye minyororo. Zaidi kuhusu [jinsi madaraja yanavyofanya kazi](/developers/docs/bridges/#how-do-bridges-work).
 
-## Faida na hasara za sidechains {#pros-and-cons-of-sidechains}
+## Faida na hasara za minyororo ya kando {#pros-and-cons-of-sidechains}
 
-| Faida                                                                                                                                                                       | Hasara                                                                                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Teknolojia inayosimamia sidechains imeimarika na inanufaika kutokana na utafiti mpana na maboresho katika usanifu.                                          | Sidechains huacha baadhi ya vipimo vya ugatuaji na ukosefu wa kuaminiana kwa ajili ya kuongeza ukubwa.                                                                         |
-| Sidechains zinaauni ukokotoaji wa jumla na zinatoa upatanifu wa EVM (zinaweza kuendesha mfumo mtawanyo wa kimamlaka asilia za Ethereum). | Sidechain hutumia utaratibu tofauti wa makubaliano na hainufaiki na dhamana za usalama za Ethereum.                                                                            |
-| Sidechains hutumia mifumo tofauti ya makubaliano ili kuchakata miamala kwa ufanisi na kupunguza ada za miamala kwa watumiaji.                               | Sidechains zinahitaji dhana za juu za uaminifu (k.m., akidi ya wathibitishaji hasidi wa sidechain inaweza kufanya ulaghai). |
-| Sidechains zinazopatana na EVM huruhusu mfumo mtawanyo wa kimamlaka kupanua mfumo wao wa ikolojia.                                                          |                                                                                                                                                                                                |
+| Faida                                                                                                                       | Hasara                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Teknolojia inayoimarisha minyororo ya kando imeanzishwa vizuri na inafaidika kutokana na utafiti wa kina na maboresho katika muundo. | Minyororo ya kando hujitolea kiasi fulani cha ugatuzi na hali ya kutohitaji kuamini kwa ajili ya kuongeza uwezo.                          |
+| Minyororo ya kando inasaidia ukokotoaji wa jumla na inatoa utangamano wa EVM (inaweza kuendesha dapps asili za Ethereum).                    | Mnyororo wa kando hutumia utaratibu wa makubaliano tofauti na haufaidiki na dhamana za usalama za Ethereum.         |
+| Minyororo ya kando hutumia miundo tofauti ya mwafaka ili kuchakata miamala kwa ufanisi na kupunguza ada za muamala kwa watumiaji.         | Minyororo ya kando inahitaji dhana za uaminifu za juu zaidi (k.m., akidi ya wathibitishaji wabaya wa mnyororo wa kando wanaweza kufanya udanganyifu). |
+| Minyororo ya kando inayoendana na EVM inaruhusu dapps kupanua mfumo wao wa ikolojia.                                                            |                                                                                                                  |
 
-### Tumia Sidechains {#use-sidechains}
+### Tumia Minyororo ya Kando {#use-sidechains}
 
-Miradi mingi hutoa utekelezaji wa sidechains ambazo unaweza kuunganisha kwenye mfumo mtawanyo wa kimamlaka zako:
+Miradi mingi hutoa utekelezaji wa minyororo ya kando ambayo unaweza kuiunganisha kwenye dapps zako:
 
 - [Polygon PoS](https://polygon.technology/solutions/polygon-pos)
 - [Skale](https://skale.network/)
@@ -66,8 +66,8 @@ Miradi mingi hutoa utekelezaji wa sidechains ambazo unaweza kuunganisha kwenye m
 - [Loom Network](https://loomx.io/)
 - [Metis Andromeda](https://www.metis.io/)
 
-## Masomo zaidi {#further-reading}
+## Usomaji zaidi {#further-reading}
 
-- [Kuongeza ukubwa wa mfumo mtawanyo wa kimamlaka za Ethereum kupitia Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _Feb 8, 2018 - Georgios Konstantopoulos_
+- [Kuongeza uwezo wa dapps za Ethereum kupitia Minyororo ya Kando](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _Feb 8, 2018 - Georgios Konstantopoulos_
 
-_Unajua rasilimali ya jamii iliyokusaidia?_ Hariri ukurasa huu na uiongeze!_
+_Unajua rasilimali ya jamii iliyokusaidia? Hariri ukurasa huu na uiongeze!_

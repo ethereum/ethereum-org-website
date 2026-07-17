@@ -1,69 +1,67 @@
 ---
-title: "Añadiendo recursos de diseño"
-description: "Pautas y requerimientos para asegurar la calidad de los materiales de diseño en ethereum.org"
+title: Añadir recursos de diseño
+description: Pautas y requisitos para garantizar la calidad de los materiales de diseño en ethereum.org
 lang: es
 ---
 
-# Añadir recursos de diseño {#adding-design-resources}
+Cualquier persona puede sugerir nuevos materiales de diseño a la [página de Diseño y UX en Web3](/developers/docs/design-and-ux/).
 
-Cualquiera puede sugerir nuevos materiales de diseño a la [página Diseño y UX en web3](/developers/docs/design-and-ux/).
+Tenga en cuenta que el enfoque de esta página es proporcionar valor a los aspirantes a diseñadores de Web3. La sección de diseño no está ahí para anunciar sus servicios, productos o plataformas.
 
-Tenga en cuenta que la finalidad de esta página es proporcionar valor a los usuarios que aspiran ser diseñadores en Web3. La sección de diseño no está ahí para que la uses para anunciar tus servicios, productos o plataformas.
+Para garantizar que mantenemos un alto estándar de información y promovemos conocimientos valiosos, hemos establecido una política de inclusión:
 
-Para asegurar que mantenemos un standard alto de información y promover información valiosa hemos establecido un listado de políticas:
+## Estudios de investigación y dashboards {#research-studies}
 
-## Estudios de investigación y paneles {#Research-studies}
+1. Metodología sólida
 
-1. Metodología de Sólida
+a. La metodología debe definir claramente cómo se recopilaron los datos.
 
-a. La metodología debe de mostrar claramente como se recolectaron los datos.
+b. Se debe indicar el número de participantes involucrados en la investigación.
 
-b. El número de participantes involucrados en la investigación debe de ser indicado.
+c. Se deben describir los métodos de investigación empleados.
 
-c. Los métodos de investigación empleados deben de ser descritos.
+2. Relevancia para los diseñadores de Web3 y casos de uso de diseño comunes
 
-2. La importancia para los diseñadores de Web3 y los casos de uso de diseños comunes.
+a. El tema de la investigación debe ser relevante para los diseñadores de Web3 y abordar casos de uso de diseño comunes.
 
-a. El tema de la investigación debe de ser relacionado a diseñadores web3 y abordar casos de uso de diseño comunes.
+3. Enfoque en aportar conocimientos
 
-3. Centrarse en ofrecer perspectivas
+a. El objetivo principal del texto debe ser compartir conocimientos en lugar de promocionar un proyecto o empresa en particular.
 
-a. El objetivo principal del texto debería ser el compartir perspectivas en lugar de fomentar un proyecto o empresa específicos.
+## Artículos {#articles}
 
-## Artículos {#Articles}
+1. Relevancia para los diseñadores/investigadores de Web3 y casos de uso de diseño comunes en Web3
 
-1. La importancia para los diseñadores/investigadores de Web3 y los casos de uso de diseños comunes en Web3.
+a. El tema del artículo debe ser pertinente para los diseñadores e investigadores de Web3, centrándose en casos de uso de diseño comunes en Web3.
 
-a. El título del artículo debería de ser pertinente a diseñarores y investigadored web3, enfocándose en casos de uso comunes de diseños web3.
+2. Calidad básica de redacción
 
-2. Calidad básica de la redacción
+a. El artículo no debe tener errores gramaticales ni ortográficos.
 
-a. El artículo debe estar redactado sin errores gramaticales ni de ortografía.
+b. Se debe hacer hincapié en aportar conocimientos y aprendizajes clave.
 
-b. Hay que hacer hincapié en la aportación de ideas y conocimientos clave.
+c. La redacción debe ser concisa y directa.
 
-c. La escritura debería de ser concisa y directa.
+3. Objetivo del texto
 
-3. Metas del texto
+a. El objetivo principal del artículo debe ser compartir conocimientos en lugar de promocionar un proyecto o empresa en particular.
 
-a. La principal meta del artículo debería de ser compartir conocimiento por encima de promover un proyecto particular o compañía.
+## Comunidades / DAO {#communities-and-daos}
 
-## Comunidades / DAO {#Communities-and-DAOs}
+1. El sitio web debe indicar claramente cómo unirse a la DAO/comunidad
 
-1. El sitio web debe indicar de forma clara como ingresar a la DAO/Comunidad
+2. Beneficios claros de la membresía
 
-2. Beneficios claros de la adhesión como miembro
+a. Los beneficios de convertirse en miembro deben mostrarse de manera destacada.
 
-a. Deben incluirse y explicarse los beneficios de convertirse en miembro.
+**Ejemplos**: recibir comentarios sobre el trabajo, acceder a oportunidades de trabajo o recompensas, compartir hallazgos de diseño e investigación.
 
-**Ejemplos**: recibir comentarios sobre el trabajo, acceder a oportunidades de trabajo o recompensas, compartir ideas sobre diseño e investigación.
+3. Comunicación activa y dinámica en Discord
 
-3. Una comunicación activa y vibrante en Discord
+a. La comunidad de Discord debe mostrar una comunicación animada y participativa.
 
-a. La comunidad de Discord debe de demostrar una comunicación animada y comprometida.
+b. Los moderadores deben participar activamente en el mantenimiento de la comunidad y facilitar los debates.
 
-b. Los moderadores deben implicarse activamente en el mantenimiento de la comunidad y facilitar el debate.
+c. La comunidad debe demostrar un historial de conversaciones valiosas y productivas en las últimas dos semanas.
 
-c. La comunidad debe de demostrar un historial valioso y productivo de conversaciones en las últimas dos semanas.
-
-Siguiendo estos criterios, nuestro objetivo es fomentar un entorno próspero y de intercambio de conocimientos dentro de nuestra comunidad. Nosotros creemos que esta poltiica de lista blanca garantizará que nuestros usuarios tengan acceso a confiables, relevantes y esclarecedores recursos. Gracias por tu entendimiento y compresión en el mantenimiento del contenido de calidad dentro de nuestra plataforma.
+Al adherirnos a estos criterios, nuestro objetivo es fomentar un entorno próspero y de intercambio de conocimientos dentro de nuestra comunidad. Creemos que esta política de inclusión garantizará que nuestros usuarios tengan acceso a recursos confiables, relevantes y reveladores. Gracias por su comprensión y cooperación para mantener la calidad del contenido dentro de nuestra plataforma.

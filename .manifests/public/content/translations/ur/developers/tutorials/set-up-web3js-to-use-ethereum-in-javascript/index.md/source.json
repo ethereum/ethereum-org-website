@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/index.md",
+  "generatedAt": "2026-06-18T00:22:31.720Z",
+  "rootHash": "b022d7ff816a",
+  "tree": {
+    "contentHash": "c7a5d78674a2",
+    "anchorHash": "62f5036cf1af",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "b29566c3ae6b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "a8b52f689049",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "32c02afec79d"
+      },
+      "frontmatter:tags": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "960ed510cd85"
+      },
+      "frontmatter:skill": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "1227132e4f68"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:published": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "a0bf38d19071"
+      },
+      "frontmatter:source": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "f26cb6fb8ba7"
+      },
+      "frontmatter:sourceUrl": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "01731352d79e"
+      },
+      "frontmatter:address": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "875b7ef46ba2"
+      },
+      "prose:1": {
+        "contentHash": "7cb9e93e0574",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "fb639b361f17",
+        "anchorHash": "086bb567049e"
+      },
+      "prose:2": {
+        "contentHash": "ef5c47e5bc41",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "code-fence:14": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "8b3be869ffa4"
+      },
+      "prose:0": {
+        "contentHash": "da26fffec56f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "code-fence:16": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "18508be0cd96"
+      },
+      "code-fence:18": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "1a7f3d5c3c94"
+      },
+      "prose:3": {
+        "contentHash": "f53f26ee508c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "20a636447562",
+        "anchorHash": "ac9de9acc313"
+      },
+      "prose:4": {
+        "contentHash": "cdb4ee2aea69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "code-fence:24": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "ab9a06dd1e82"
+      },
+      "code-fence:28": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "4f5e8463060e"
+      },
+      "inline-code:0": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "27e99b0a6029"
+      },
+      "code-fence:32": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "0e6ae987a53f"
+      },
+      "code-fence:36": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "706653cdf9e0"
+      },
+      "component:40": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "code-comment:42": {
+        "contentHash": "8a7739d83ccf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "code-comment:43": {
+        "contentHash": "b146c7f2fe2f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "code-comment:44": {
+        "contentHash": "40584ad462b8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "code-fence:45": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "44f778af2f4f"
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:author",
+      "frontmatter:tags",
+      "frontmatter:skill",
+      "frontmatter:breadcrumb",
+      "frontmatter:lang",
+      "frontmatter:published",
+      "frontmatter:source",
+      "frontmatter:sourceUrl",
+      "frontmatter:address",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "code-fence:14",
+      "prose:0",
+      "code-fence:16",
+      "prose:0",
+      "code-fence:18",
+      "prose:2",
+      "link:0",
+      "prose:3",
+      "link:1",
+      "prose:4",
+      "code-fence:24",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "code-fence:28",
+      "prose:1",
+      "inline-code:0",
+      "prose:2",
+      "code-fence:32",
+      "prose:1",
+      "inline-code:0",
+      "prose:2",
+      "code-fence:36",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "component:40",
+      "prose:0",
+      "code-comment:42",
+      "code-comment:43",
+      "code-comment:44",
+      "code-fence:45",
+      "prose:2",
+      "link:0",
+      "prose:3",
+      "link:1",
+      "prose:4"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}

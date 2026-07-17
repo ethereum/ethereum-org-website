@@ -35,15 +35,16 @@ test.describe("validateTranslatedJson", () => {
     expect(result.error).toContain("Invalid JSON")
   })
 
-  test("missing key fails", () => {
-    // Same count but different keys
+  test("missing key fails with diagnostic of which key is missing", () => {
+    // Same count but different keys: desc replaced with wrong
     const translated = JSON.stringify({ title: "Hola", wrong: "Mal" }, null, 2)
     const result = validateTranslatedJson(translated, english)
     expect(result.valid).toBe(false)
-    expect(result.error).toContain("Missing keys")
+    expect(result.error).toContain("missing: desc")
+    expect(result.error).toContain("extra: wrong")
   })
 
-  test("key count mismatch fails", () => {
+  test("key count mismatch fails with diagnostic of which key is extra", () => {
     const translated = JSON.stringify(
       { title: "Hola", desc: "Mundo", extra: "Oops" },
       null,
@@ -51,7 +52,8 @@ test.describe("validateTranslatedJson", () => {
     )
     const result = validateTranslatedJson(translated, english)
     expect(result.valid).toBe(false)
-    expect(result.error).toContain("Key count mismatch")
+    expect(result.error).toContain("got 3, expected 2")
+    expect(result.error).toContain("extra: extra")
   })
 
   test("Gemini refusal detected", () => {

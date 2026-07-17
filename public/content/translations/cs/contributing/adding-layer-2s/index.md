@@ -1,96 +1,94 @@
 ---
-title: "Přidávání vrstev 2"
-description: "Zásady, které používáme při přidávání vrstev 2 na ethereum.org"
+title: Přidávání vrstev 2
+description: Zásady, které používáme při přidávání vrstvy 2 na ethereum.org
 lang: cs
 ---
 
-# Přidání druhých vrstev {#adding-layer-2}
+Chceme se ujistit, že uvádíme ty nejlepší možné zdroje, aby se uživatelé mohli v prostoru vrstvy 2 pohybovat bezpečně a s jistotou.
 
-Chceme se ujistit, že uvádíme ty nejlepší možné zdroje, aby se uživatelé mohli bezpečně a s jistotou pohybovat v prostoru vrstev 2.
+Kdokoli může navrhnout přidání vrstvy 2 na ethereum.org. Pokud existuje vrstva 2, kterou jsme vynechali, **[navrhněte ji prosím](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
 
-Kdokoli může na stránkách ethereum.org navrhnout vrstvy 2. Pokud jsme nějakou druhou vrstvu vynechali, **[navrhněte ji, prosím](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
-
-V současné době uvádíme seznam vrstev 2 na následujících stránkách:
+V současné době uvádíme l2 na následujících stránkách:
 
 - [Optimistické rollupy](/developers/docs/scaling/optimistic-rollups/)
 - [Rollupy s nulovou znalostí](/developers/docs/scaling/zk-rollups/)
-- [Druhá vrstva](/layer-2/)
+- [Vrstva 2](/layer-2/)
 
-Vrstva 2 je pro Ethereum relativně nové a vzrušující paradigma. Snažili jsme se vytvořit spravedlivý framework pro posuzování na ethereum.org, ale kritéria pro zařazení do seznamu se budou časem měnit a vyvíjet.
+Vrstva 2 je pro Ethereum relativně nové a vzrušující paradigma. Snažili jsme se vytvořit spravedlivý rámec pro posuzování na ethereum.org, ale kritéria pro zařazení se budou v průběhu času měnit a vyvíjet.
 
-## Rozhodovací rámec {#decision-framework}
+## Rámec pro rozhodování {#decision-framework}
 
-### Kritéria pro zařazení: co je nutností {#criteria-for-inclusion-the-must-haves}
+### Kritéria pro zařazení: nezbytné požadavky {#criteria-for-inclusion-the-must-haves}
 
-**Uvedení na L2BEAT**
+**Zařazení na L2BEAT**
 
-- Aby mohl být tento projekt zařazen, musí být uveden na [L2BEAT](https://l2beat.com). L2BEAT poskytuje robustní hodnocení rizik projektů vrstev 2, o které se při hodnocení opíráme. **Pokud projekt není uveden na L2BEAT, nebudeme ho uvádět jako vrstvu 2 na ethereum.org.**
-- [Zjistěte, jak přidat svůj projekt L2 na L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
+- Aby mohl být projekt zvažován, musí být uveden na [L2BEAT](https://l2beat.com). L2BEAT poskytuje robustní hodnocení rizik projektů vrstvy 2, o které se opíráme při hodnocení l2 projektů. **Pokud projekt není uveden na L2BEAT, nezařadíme jej jako l2 na ethereum.org.**
+- [Přečtěte si, jak přidat svůj l2 projekt na L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
 **Open source**
 
-- Váš kód musí být přístupný a měli byste přijímat pull requesty od širší komunity.
+- Váš kód musí být přístupný a měli byste přijímat PR od širší komunity.
 
 **Kategorie vrstvy 2**
 
-V současné době považujeme za řešení vrstvy 2 následující řešení:
+V současné době považujeme za řešení vrstvy 2 následující:
 
 - Optimistický rollup
-- Rollup nulové znalosti
+- Rollup s nulovou znalostí
 
-_Ostatní řešení škálování, která nevyužívají Ethereum pro dostupnost dat nebo zabezpečení, nepovažujeme za druhou vrstvu._
+_Jiná řešení škálování, která nevyužívají Ethereum pro dostupnost dat nebo bezpečnost, nepovažujeme za vrstvu 2._
 
 **Ethereum pro dostupnost dat**
 
-- Dostupnost dat je důležitým rozlišovacím faktorem mezi ostatními řešeními škálování a vrstvou 2. Projekt **musí** používat hlavní síť Etherea pro dostupnost dat, aby mohl být zařazen do seznamu.
+- Dostupnost dat je důležitým rozlišovacím faktorem mezi ostatními řešeními škálování a vrstvou 2. Aby mohl být projekt zvažován pro zařazení, **musí** pro dostupnost dat využívat Ethereum Mainnet.
 
-**Přemostění**
+**Mosty**
 
-- Jak se mohou uživatelé přemostit na vrstvu 2?
+- Jak se mohou uživatelé připojit k vrstvě 2?
 
 **Datum spuštění projektu**
 
-- Vrstva 2, která je na hlavní síti „naživu“ již více než 6 měsíců
+- Vrstva 2, která je „živě“ na Mainnetu déle než 6 měsíců.
 
-- U novějších projektů, které ještě nebyly testovány uživateli, je pravděpodobnost zařazení do seznamu nižší.
+- U novějších projektů, které nebyly prověřeny uživateli v praxi, je menší pravděpodobnost, že budou zařazeny.
 
 **Externí bezpečnostní audit**
 
-- Ať už prostřednictvím auditu, interního bezpečnostního týmu nebo jiné metody, zabezpečení vašeho produktu musí být spolehlivě otestováno. Snižujete tím riziko pro naše uživatele a dáváte nám najevo, že zabezpečení berete vážně.
+- Ať už prostřednictvím auditu, interního bezpečnostního týmu nebo jiné metody, bezpečnost vašeho produktu musí být spolehlivě otestována. To snižuje riziko pro naše uživatele a ukazuje nám, že berete bezpečnost vážně.
 
-**Stálá uživatelská základna**
+**Trvalá uživatelská základna**
 
-- Budeme brát v úvahu metriky, jako je historie TVL, statistiky transakcí a to, zda ji používají známé společnosti nebo projekty
+- Budeme zvažovat metriky, jako je historie celkové uzamčené hodnoty (TVL), statistiky transakcí a to, zda jej používají známé společnosti nebo projekty.
 
-**Aktivní vývojářský tým**
+**Aktivní vývojový tým**
 
-- Nebudeme uvádět vrstvu 2, která nemá aktivní tým pracující na projektu.
+- Nezařadíme vrstvu 2, která nemá aktivní tým pracující na projektu.
 
-**Průzkumník bloků**
+**Prohlížeč bloků**
 
-- Uvedené projekty vyžadují funkční průzkumník bloků, který uživatelům umožní snadnou navigaci v blockchainu.
+- Zařazené projekty vyžadují funkční prohlížeč bloků, který uživatelům umožní snadnou navigaci v řetězci.
 
-### Další kritéria: užitečné vlastnosti {#nice-to-haves}
+### Další kritéria: co by bylo dobré mít {#nice-to-haves}
 
-**Projekt podporuje burzy**
+**Podpora projektu na burzách**
 
-- Mohou uživatelé vkládat a/nebo vybírat peníze přímo na burze?
+- Mohou uživatelé vkládat a/nebo vybírat prostředky přímo z burzy?
 
-**Odkazy na dappky v ekosystému vrstvy 2**
+**Odkazy na decentralizované aplikace (dapp) v ekosystému vrstvy 2**
 
 - Chceme být schopni poskytnout informace o tom, co mohou uživatelé očekávat, že budou moci na této vrstvě 2 dělat. (např. https://portal.arbitrum.io/, https://www.optimism.io/apps)
 
-**Seznamy tokenových kontraktů**
+**Seznamy kontraktů tokenů**
 
-- Vzhledem k tomu, že aktiva budou mít novou adresu na vrstvě 2, pokud je k dispozici zdroj seznamu tokenů, uveďte ho.
+- Vzhledem k tomu, že aktiva budou mít na vrstvě 2 novou adresu, pokud je k dispozici zdroj se seznamem tokenů, prosím sdílejte jej.
 
 **Nativní podpora peněženek**
 
-- Podporují některé peněženky nativně vrstvu 2?
+- Podporují nějaké peněženky l2 nativně?
 
-## Přidejte svou druhou vrstvu {#add-exchange}
+## Přidejte svou vrstvu 2 {#add-exchange}
 
-Pokud chcete přidat vrstvu 2 na ethereum.org, vytvořte problém na GitHubu.
+Pokud chcete přidat vrstvu 2 na ethereum.org, vytvořte issue na GitHubu.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   Vytvořit issue

@@ -2,7 +2,7 @@
 
 import { type ReactNode, useEffect, useState } from "react"
 import { Info } from "lucide-react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import { PolarAngleAxis, RadialBar, RadialBarChart } from "recharts"
 
 import { cn } from "@/lib/utils/cn"
@@ -10,8 +10,6 @@ import { dateTimeFormat, isValidDate } from "@/lib/utils/date"
 
 import Tooltip from "../Tooltip"
 import Link from "../ui/Link"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 /**
  * RadialChartProps defines the properties for the RadialChart component.
@@ -52,7 +50,7 @@ const RadialChart = ({
   className,
   displayValue,
 }: RadialChartProps) => {
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
   const locale = useLocale()
   const [isMounted, setIsMounted] = useState(false)
 

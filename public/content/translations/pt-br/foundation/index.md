@@ -1,40 +1,37 @@
 ---
-title: "Fundação Ethereum"
-description: "Conheça a Ethereum Foundation (EF), uma organização sem fins lucrativos dedicada a apoiar o Ethereum e tecnologias relacionadas."
+title: Fundação Ethereum
+description: Aprenda sobre a Fundação Ethereum (EF), uma organização sem fins lucrativos dedicada a apoiar o Ethereum e tecnologias relacionadas.
 hideEditButton: true
 lang: pt-br
 ---
 
-# Sobre a Ethereum Foundation {#about-the-ethereum-foundation}
-
 <Logo/>
 
-A [Ethereum Foundation](https://ethereum.foundation/) (EF) é uma organização sem fins lucrativos dedicada a apoiar o [Ethereum](/what-is-ethereum/) e tecnologias relacionadas.
+A [Fundação Ethereum](https://ethereum.foundation/) (EF) é uma organização sem fins lucrativos que apoia o ecossistema [Ethereum](/). Ela financia o desenvolvimento do protocolo, expande o ecossistema e defende o Ethereum.
 
-A EF não é uma empresa, nem mesmo uma organização tradicional sem fins lucrativos. Seu papel não é controlar ou gerenciar o Ethereum, nem eles são a única organização que financia o desenvolvimento constante das tecnologias relacionadas ao Ethereum. A EF faz parte de um [ecossistema](/community/) muito maior.
+A EF não é uma empresa, nem mesmo uma organização sem fins lucrativos tradicional. Ela não controla nem lidera o Ethereum, tampouco é a única organização que financia o desenvolvimento crítico de tecnologias relacionadas ao Ethereum. A EF é uma parte de um [ecossistema](/community/) muito maior.
 
-## Iniciativas da Ethereum Foundation {#ethereum-foundation-initiatives}
+## Mandato da EF {#ef-mandate}
 
-### Programa de Apoio ao Ecossistema {#ecosystem-support-program}
+O Mandato da EF define o propósito, os princípios e os compromissos da Fundação com o ecossistema Ethereum. Publicado onchain, ele consagra a dedicação da EF à **resistência à censura, código aberto, privacidade e segurança (CROPS)** como prioridades inegociáveis.
 
-O [Programa de Apoio ao Ecossistema](https://esp.ethereum.foundation/) existe para fornecer suporte financeiro e não financeiro a projetos e entidades dentro da grande comunidade Ethereum, a fim de acelerar o crescimento do ecossistema. O Programa de Apoio ao Ecossistema é uma expansão do Programa de Bolsas Ethereum, cujo foco principal é oferecer apoio financeiro.
+[Leia o Mandato da Fundação Ethereum](/foundation/mandate/)
 
-Saiba mais sobre o Programa de Apoio ao Ecossistema, os beneficiários de subsídios anteriores e o processo de inscrição para subsídios em [esp.ethereum.foundation](https://esp.ethereum.foundation/). Você também pode ver o [blog do Programa de Apoio ao Ecossistema](https://blog.ethereum.org/category/ecosystem-support-program/) ou seguir [@EF_ESP](https://twitter.com/EF_ESP) para receber as notícias e os anúncios mais recentes.
+## O que a EF faz {#what-the-ef-does}
 
-### Devcon {#devcon}
+- **Desenvolvimento do protocolo** – Apoio a equipes que trabalham no protocolo principal do Ethereum, incluindo desenvolvimento de clientes, pesquisa, atualizações e o [programa de recompensas por bugs](/bug-bounty/)
+- **Financiamento do ecossistema** – Fornecimento de subsídios e apoio a projetos desenvolvidos no Ethereum por meio do [Programa de Suporte ao Ecossistema](https://esp.ethereum.foundation/)
+- **Pesquisa** – Financiamento de pesquisas em criptografia, consenso, escalabilidade, privacidade e segurança
 
-Desde 2014, a Fundação Ethereum organiza a Devcon, uma conferência anual para todos os desenvolvedores, pesquisadores, pensadores e criadores do Ethereum.
+## Programas e iniciativas {#programs-and-initiatives}
 
-Você pode acessar o conteúdo de vídeo das apresentações da conferência de todos os anos desde o seu início em [archive.devcon.org](https://archive.devcon.org/).
+- **[Programa de Suporte ao Ecossistema](https://esp.ethereum.foundation/)** – Subsídios e apoio para projetos de código aberto desenvolvidos no Ethereum
+- **[Subsídios Acadêmicos](https://esp.ethereum.foundation/academic-grants)** – Apoio a pesquisas acadêmicas relacionadas ao Ethereum
+- **[Devcon](https://devcon.org/)** – A conferência anual para desenvolvedores, pesquisadores e construtores do Ethereum
+- **[Programa de Recompensas por Bugs](/bug-bounty/)** – Recompensas por encontrar vulnerabilidades no protocolo Ethereum
 
-Saiba mais em [devcon.org](https://devcon.org/), confira o [blog da Devcon](https://devcon.org/en/blogs/) ou siga [@efdevcon](https://twitter.com/EFDevcon) para ver os anúncios mais recentes.
+## Saiba mais {#learn-more}
 
-### Programa de Bolsas {#fellowship-program}
-
-O [Programa de Bolsas da Ethereum Foundation](https://fellowship.ethereum.foundation/) é uma iniciativa para ajudar a preencher as lacunas de representação entre culturas, nacionalidades e classes econômicas. O Programa de Bolsas visa preencher essas lacunas identificando e apoiando indivíduos únicos e talentosos que ajudam a promover a relevância do Ethereum, e a eliminar os obstáculos iniciais para pessoas e comunidades sub-representadas que se tornarão o futuro da Web3.
-
-[Saiba mais em fellowship.ethereum.foundation](https://fellowship.ethereum.foundation/).
-
-<br/>
-
-Para saber mais sobre a Fundação e seu trabalho, visite [ethereum.foundation](https://ethereum.foundation/) ou confira o [blog da Ethereum Foundation](https://blog.ethereum.org/) para ver as últimas notícias e anúncios da EF.
+- [ethereum.foundation](https://ethereum.foundation/) – Site oficial da EF
+- [Blog da EF](https://blog.ethereum.org/) – Notícias e anúncios
+- [Programa de Suporte ao Ecossistema](https://esp.ethereum.foundation/) – Subsídios e apoio

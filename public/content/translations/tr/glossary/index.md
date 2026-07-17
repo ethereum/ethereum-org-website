@@ -1,10 +1,10 @@
 ---
-title: "Ethereum Terimler Sözlüğü"
-description: "Ethereum ile ilgili teknik ve teknik olmayan terimlere ilişkin tamamlanmamış bir sözlük"
+title: Sözlük
+metaTitle: Ethereum Sözlüğü
+description: Ethereum ile ilgili teknik ve teknik olmayan terimlerin eksik bir sözlüğü
 lang: tr
+authors: ["Andreas Antonopoulos"]
 ---
-
-# Sözlük {#ethereum-glossary}
 
 ## \# {#section-numbers}
 
@@ -494,12 +494,12 @@ lang: tr
 
 ## Kaynaklar {#sources}
 
-_Kısmen [Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) tarafından yazılan [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) kitabından CC-BY-SA lisansı altında sağlanmıştır._
+_Kısmen CC-BY-SA lisansı altında [Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) tarafından yazılan [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) kitabından sağlanmıştır_
 
 <Divider />
 
 ## Bu sayfaya katkıda bulunun {#contribute-to-this-page}
 
-Gözden kaçırdığımız bir şey mi oldu? Yanlış bir şey mi var? GitHub'daki bu sözlüğe katkıda bulunarak gelişmemize yardımcı olun!
+Bir şeyi mi atladık? Yanlış bir şey mi var? GitHub'da bu sözlüğe katkıda bulunarak gelişmemize yardımcı olun!
 
-[Nasıl katkıda bulunacağınız hakkında daha fazla bilgi edinin](/contributing/adding-glossary-terms)
+[Nasıl katkıda bulunabileceğiniz hakkında daha fazla bilgi edinin](/contributing/adding-glossary-terms)

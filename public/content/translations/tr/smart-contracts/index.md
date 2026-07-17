@@ -1,86 +1,84 @@
 ---
-title: "Akıllı sözleşmeler"
-metaTitle: "Akıllı sözleşmeler: Nedir ve yararları nelerdir?"
-description: "Akıllı sözleşmelere teknik olmayan bir giriş"
+title: Akıllı sözleşmelere giriş
+metaTitle: "Akıllı sözleşmeler: Nedir ve faydaları nelerdir"
+description: Akıllı sözleşmelere teknik olmayan bir giriş
 lang: tr
 ---
 
-# Akıllı sözleşmelere giriş {#introduction-to-smart-contracts}
+Akıllı sözleşmeler, [Ethereum'un](/) uygulama katmanının temel yapı taşlarıdır. Bunlar, [Blokzincir](/glossary/#blockchain) üzerinde depolanan, "eğer bu olursa, o zaman şu olur" mantığını izleyen ve oluşturulduktan sonra değiştirilemeyen kodları tarafından tanımlanan kurallara göre yürütülmesi garanti edilen bilgisayar programlarıdır.
 
-<div className="mt-4">
-<ListenToPlayer slug="/smart-contracts/" />
-</div>
+"Akıllı sözleşme" terimini Nick Szabo ortaya atmıştır. 1994 yılında [kavrama bir giriş](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) yazmış ve 1996 yılında [akıllı sözleşmelerin neler yapabileceğine dair bir inceleme](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html) kaleme almıştır.
 
-Akıllı sözleşmeler, Ethereum'un uygulama katmanının temel taşlarıdır. Bunlar, "eğer buysa o zaman şu" mantığını izleyen, kodunda tanımlanan kurallara göre yürütüleceği garanti edilen ve oluşturulduktan sonra değiştirilemeyen, [blokzincirde](/glossary/#blockchain) depolanan bilgisayar programlarıdır.
-
-"Akıllı sözleşme" terimini Nick Szabo ortaya atmıştır. 1994'te [kavrama bir giriş](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) yazdı ve 1996'da [akıllı sözleşmelerin neler yapabileceğine dair bir keşif](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html) yazısı kaleme aldı.
-
-Szabo, otomatik, [kriptografik olarak güvenli](/glossary/#cryptography) süreçlerin, güvenilir aracılar olmadan işlemlerin ve ticari fonksiyonların gerçekleşmesini sağladığı dijital bir pazar yeri tasavvur etmiştir. Ethereum üzerindeki akıllı sözleşmeler bu vizyonu hayata geçirdi.
+Szabo, otomatik ve [kriptografik olarak güvenli](/glossary/#cryptography) süreçlerin, işlemlerin ve işlevlerin güvenilir aracılar olmadan gerçekleşmesini sağladığı dijital bir pazar yeri hayal etmişti. Ethereum üzerindeki akıllı sözleşmeler bu vizyonu hayata geçirmektedir.
 
 Finematics'in akıllı sözleşmeleri açıklamasını izleyin:
 
-<YouTube id="pWGLtjG-F5c" />
+<VideoWatch slug="smart-contracts-code-is-law" />
 
 ## Geleneksel sözleşmelerde güven {#trust-and-contracts}
 
-Geleneksel sözleşmelerle ilgili en büyük sıkıntılardan biri sözleşmenin sonuçlarını harfiyen gerçekleştirecek şahıslara duyulan ihtiyaçtır.
+Geleneksel bir sözleşmeyle ilgili en büyük sorunlardan biri, sözleşmenin sonuçlarını yerine getirecek güvenilir kişilere duyulan ihtiyaçtır.
 
 İşte bir örnek:
 
-Alice ve Bob bisiklet yarışı yapıyorlar. Diyelim ki Alice, Bob'la yarışı kazanacağına dair 10 dolar bahse girdi. Bob kazanacağından emindir ve bahsi kabul eder. Sonunda Alice yarışı Bob'un çok önünde bitirir ve açık ara kazanan olur. Ama Bob, Alice'in hile yaptığını iddia ederek bahsi ödemeyi reddeder.
+Alice ve Bob bir bisiklet yarışı yapıyor. Diyelim ki Alice, yarışı kazanacağına dair Bob ile 10 dolarlık bir iddiaya giriyor. Bob kazanacağından emin ve iddiayı kabul ediyor. Sonunda Alice yarışı Bob'un çok önünde bitiriyor ve açık ara kazanıyor. Ancak Bob, Alice'in hile yapmış olması gerektiğini iddia ederek iddiayı ödemeyi reddediyor.
 
-Bu küçük örnek, akıllı olmayan anlaşmalarla ilgili sorunu göstermektedir. Anlaşmanın koşulları karşılansa bile (yani, yarışın galibi siz olsanız bile), anlaşmayı yerine getirmesi (yani, bahsin ödemesini yapması) için hâlâ başka birine güvenmeniz gerekir.
+Bu basit örnek, akıllı olmayan herhangi bir anlaşmadaki sorunu göstermektedir. Anlaşmanın koşulları yerine getirilse bile (yani yarışın kazananı siz olsanız bile), anlaşmayı yerine getirmesi (yani iddiayı ödemesi) için yine de başka bir kişiye güvenmeniz gerekir.
 
-## Dijital otomat {#vending-machine}
+## Dijital bir otomat {#vending-machine}
 
-Akıllı sözleşmeler için basit bir metafor akıllı sözleşmeye benzer sayılabilecek şekilde çalışan otomatlardır; belirli girdiler önceden belirlenmiş çıktıları garantiler.
+Akıllı sözleşme için basit bir metafor, akıllı sözleşmeye biraz benzer şekilde çalışan bir otomattır; belirli girdiler önceden belirlenmiş çıktıları garanti eder.
 
 - Bir ürün seçersiniz
 - Otomat fiyatı gösterir
 - Fiyatı ödersiniz
-- Otomat, doğru miktarı ödediğinizi onaylar
-- Otomat size ürünü verir
+- Otomat doğru miktarı ödediğinizi doğrular
+- Otomat size ürününüzü verir
 
-Otomat istediğiniz ürünü sadece tüm gereksinimler karşılandığında verecektir. Eğer ürün seçmezseniz veya yeterli parayı girmezseniz otomat ürününüzü vermeyecektir.
+Otomat, yalnızca tüm gereksinimler karşılandıktan sonra istediğiniz ürünü verecektir. Bir ürün seçmezseniz veya yeterli para atmazsanız, otomat ürününüzü vermez.
 
 ## Otomatik yürütme {#automation}
 
-Akıllı sözleşmenin asıl yararı, belirli şartlar sağlandığında anlamı açık olmayan kodu kesin bir şekilde yürütmesidir. Bir insanın sonucu yorumlamasını veya sonucun sağlamasını yapmasına gerek yoktur. Bu, güvenilir aracılara olan ihtiyacı ortadan kaldırır.
+Bir akıllı sözleşmenin temel faydası, belirli koşullar karşılandığında net bir kodu deterministik olarak yürütmesidir. Bir insanın sonucu yorumlamasını veya müzakere etmesini beklemeye gerek yoktur. Bu, güvenilir aracılara olan ihtiyacı ortadan kaldırır.
 
-Örneğin, bir çocuk için fonu bloke altında tutan ve onun belirli bir tarih sonrasında fonu çekmesine izin veren bir akıllı sözleşme hazırlayabilirsiniz. Eğer bu tarihten önce para çekmeye çalışırlarsa, akıllı sözleşme yürütülmeyecektir. Yahut bir galericiye ödeme yaptığınızda arabanın tapusunun dijital halini size otomatik olarak veren bir sözleşme hazırlayabilirsiniz.
+Örneğin, bir çocuk için fonları emanette tutan ve belirli bir tarihten sonra fonları çekmelerine izin veren bir akıllı sözleşme yazabilirsiniz. O tarihten önce çekmeye çalışırlarsa, akıllı sözleşme yürütülmez. Veya satıcıya ödeme yaptığınızda size otomatik olarak bir arabanın ruhsatının dijital bir versiyonunu veren bir sözleşme yazabilirsiniz.
 
 ## Öngörülebilir sonuçlar {#predictability}
 
-Geleneksel sözleşmeler belirsizdir çünkü yorumlama ve uygulama için insanlara dayanırlar. Örnek olarak, iki hakim bir sözleşmeyi farklı yorumlayabilir, bu da tutarsız seçimler ve eşit olmayan sonuçlara yol açabilir. Akıllı sözleşmeler bu ihtimali ortadan kaldırır. Bunun yerine, akıllı sözleşmeler sözleşmenin kodu dahilindeki koşullara bağlı olarak eksiksiz şekilde yürütülür. Bu kesinlik, aynı şartlar sağlandığında akıllı sözleşmenin aynı sonucu ortaya çıkaracağı anlamına gelir.
+Geleneksel sözleşmeler belirsizdir çünkü yorumlanmaları ve uygulanmaları insanlara bağlıdır. Örneğin, iki yargıç bir sözleşmeyi farklı şekilde yorumlayabilir ve bu da tutarsız kararlara ve eşitsiz sonuçlara yol açabilir. Akıllı sözleşmeler bu olasılığı ortadan kaldırır. Bunun yerine, akıllı sözleşmeler tam olarak sözleşmenin kodunda yazılı koşullara göre yürütülür. Bu kesinlik, aynı koşullar altında akıllı sözleşmenin aynı sonucu üreteceği anlamına gelir.
 
-## Halka açık kayıt {#public-record}
+## Herkese açık kayıt {#public-record}
 
-Akıllı sözleşmeler denetim ve takip için kullanışlıdır. Ethereum akıllı sözleşmeleri herkese açık bir blok zincir üzerinde olduğu için herkes varlık aktarımlarını ve diğer bağlantılı bilgileri anında takip edebilir. Örnek olarak, birisinin sizin adresinize para gönderip göndermediğini kontrol edebilirsiniz.
+Akıllı sözleşmeler denetimler ve izleme için faydalıdır. Ethereum akıllı sözleşmeleri herkese açık bir Blokzincir üzerinde olduğundan, herkes varlık transferlerini ve diğer ilgili bilgileri anında izleyebilir. Örneğin, birinin adresinize para gönderip göndermediğini kontrol edebilirsiniz.
 
-## Gizliliğin korunması {#privacy-protection}
+## Gizlilik koruması {#privacy-protection}
 
-Akıllı sözleşmeler ayrıca gizliliğinizi de korur. Ethereum takma adlı bir ağ olduğu için (işlemleriniz herkese açık olarak eşsiz kriptografik bir adrese bağlıdır, kimliğinize değil) gizliliğinizi gözlemleyicilerden koruyabilirsiniz.
+Akıllı sözleşmeler ayrıca gizliliğinizi de korur. Ethereum takma adlı bir ağ olduğundan (işlemleriniz kimliğinize değil, herkese açık olarak benzersiz bir kriptografik adrese bağlıdır), gizliliğinizi gözlemcilerden koruyabilirsiniz.
 
 ## Görünür şartlar {#visible-terms}
 
-Son olarak, tıpkı geleneksel sözleşmelerde olduğu gibi bir akıllı sözleşmeyi imzalamadan (ya da etkileşime geçmeden) önce içinde ne olup olmadığını kontrol edebilirsiniz. Bir akıllı sözleşmenin şeffaflığı herhangi birinin onu inceleyebileceğini garanti eder.
+Son olarak, geleneksel sözleşmelerde olduğu gibi, imzalamadan önce bir akıllı sözleşmenin içinde ne olduğunu kontrol edebilirsiniz. Geleneksel bir sözleşmenin aksine, bir akıllı sözleşmenin zincir içi şeffaflığı, herkesin onunla etkileşime girmeden önce onu incelemesine ve gözden geçirmesine olanak tanır. 
 
-## Akıllı sözleşme kullanım alanları {#use-cases}
+Ancak, herkes bir akıllı sözleşmenin şartlarını görüntüleyebilse de, ham işlem verileri insanlar tarafından değil, uygulamalar ve cüzdanlar tarafından yorumlanmak üzere tasarlanmıştır. Bu verilerin okunması çok zor olduğundan, kullanıcılar genellikle "kör imzalama" adı verilen büyük bir güvenlik riskiyle, yani bir akıllı sözleşmeyle etkileşime giren bir işlemi ne yapacağını tam olarak anlamadan onaylama riskiyle karşı karşıya kalırlar. 
 
-Akıllı sözleşmeler temel olarak bilgisayar programlarının yaptığı her şeyi yapabilir.
+Ethereum ekosistemi **[Açık İmzalama](https://clearsigning.org/)** standartlarına (özellikle [ERC-7730](https://eips.ethereum.org/EIPS/eip-7730)) geçiş yapmaktadır. Açık İmzalama, şeffaf olmayan akıllı sözleşme verilerini sade, insanların okuyabileceği işlem açıklamalarına dönüştürerek, herkesin imzalamadan önce bir sözleşmenin gerçek niyetini anlayabilmesini sağlar.
 
-Hesaplama yapabilir, para birimi oluşturabilir, veri depolayabilir, [NFT](/glossary/#nft) basabilir, iletişim gönderebilir ve hatta grafikler üretebilirler. İşte gerçek dünyadan bazı popüler örnekler:
+## Akıllı sözleşme kullanım durumları {#use-cases}
 
-- [Stabilcoin'ler](/stablecoins/)
+Akıllı sözleşmeler temel olarak bilgisayar programlarının yapabileceği her şeyi yapabilir.
+
+Hesaplamalar yapabilir, para birimi oluşturabilir, veri depolayabilir, [NFT'ler](/glossary/#nft) basabilir, iletişim gönderebilir ve hatta grafikler oluşturabilirler. İşte bazı popüler, gerçek dünya örnekleri:
+
+- [Sabit coinler](/stablecoins/)
 - [Benzersiz dijital varlıklar oluşturma ve dağıtma](/nft/)
-- [Otomatik, açık para birimi borsası](/get-eth/#dex)
+- [Otomatik, açık bir döviz borsası](/get-eth/#dex)
 - [Merkeziyetsiz oyunlar](/apps/categories/gaming)
 - [Otomatik olarak ödeme yapan bir sigorta poliçesi](https://etherisc.com/)
 - [İnsanların özelleştirilmiş, birlikte çalışabilir para birimleri oluşturmasına olanak tanıyan bir standart](/developers/docs/standards/tokens/)
 
-## Daha fazla kaynak {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
-- [Akıllı Sözleşmeler Dünyayı Nasıl Değiştirecek](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
+- [Akıllı Sözleşmeler Dünyayı Nasıl Değiştirecek?](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [Geliştiriciler için akıllı sözleşmeler](/developers/docs/smart-contracts/)
 - [Akıllı sözleşme yazmayı öğrenin](/developers/learning-tools/)
 - [Mastering Ethereum - Akıllı Sözleşme Nedir?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

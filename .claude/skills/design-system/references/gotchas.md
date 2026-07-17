@@ -24,9 +24,9 @@ The bare Radix tooltip (`@/components/ui/tooltip`) is hover-only and has no mobi
 
 **Within a feature, don't mix.** Pick one file as your dialog source. The default export from `dialog-modal` is `Modal` (the high-level convenience); use that when you can.
 
-### `PageHero` is on the deprecation track
+### Import heroes from `@/components/Hero`
 
-`@/components/PageHero` predates the `Hero/` directory. New pages must import from `@/components/Hero` (`ContentHero`, `SimpleHero`, `HubHero`, `MdxHero`, `HomeHero`).
+Heroes are named exports of `@/components/Hero`: `PageHero` (the workhorse), `HubHero`, `HomeHero`. `PageHero` takes discrete props -- `breadcrumbs`, an optional `eyebrow`, an aside (`heroImg` **or** `heroComponent`, mutually exclusive), `title`, `description`, `buttons`, `variant`. `title` is always the `<h1>` -- there is no `header` prop (it was removed). (The former `MdxHero` was removed too -- use `PageHero` text-only with `variant="no-divider"`.)
 
 ## Component Behaviors You'd Miss
 
@@ -37,6 +37,10 @@ In `Button.tsx` lines 67-69, there's an early-out: `["solid", "link"].includes(v
 ### `CardBanner fit="contain"` auto-clones a single child as a blurred backdrop
 
 If you pass `<CardBanner fit="contain"><Image .../></CardBanner>` with **one** child, you get a blurred-bg + sharp-fg automatically (Card.tsx lines 95-119). Pass two children and you lose this magic.
+
+### A bare `CardBanner` on a link card mismatches its corner radius
+
+`Card`'s outer radius is `--card-pad + --banner-radius`, but a `CardBanner` rounds at only `--banner-radius`. Wrapping the banner in a `CardHeader` lets the `--card-pad` inset bridge the difference so the corners stay concentric. Drop the banner straight into `Card` (no header) on any padded size and the banner's squarer corners poke past the card outline; add an `href` and the variant-aware hover has no inset to breathe against. Only go bare with `size="xs"` (`--card-pad: 0`), where the two radii collapse to the same value. This bit the video / hackathon / story / latest card grids until their banners were wrapped in `CardHeader` (July 2026).
 
 ### `LinkBox` requires `LinkOverlay` somewhere inside
 
@@ -62,7 +66,7 @@ Same problem -- bypasses focus rings, hover states, and a11y baseline. Use `Butt
 
 ### Reinventing a heading with a `<div>`
 
-`<div className="text-5xl font-bold">Hello</div>` is wrong. Headings are styled by `base.css` defaults on `<h1>` through `<h6>`. Use the semantic tag and override sizes via `className` only when really needed.
+`<div className="text-5xl font-bold">Hello</div>` is wrong. Headings are styled by `base.css` defaults on `<h1>` through `<h6>`. Use the semantic tag and override sizes only when really needed -- with the `text-h1`-`text-h6` utilities (e.g. `<h2 className="text-h1">`), never a hand-reconstructed `text-3xl lg:text-4xl`. Those same `text-h*` utilities are also how you give a non-heading element a heading-level size.
 
 ### Inlining instead of composing
 
@@ -142,9 +146,9 @@ Configured in `base.css` lines 97-107. Persian fallback. Triggered by `:lang(ur)
 
 ### One `<h1>` per page
 
-`MdxHero` and `HubHero` both render `<h1>`. Most React-page heroes do. Most markdown layouts auto-render the page `title` from frontmatter as the `<h1>`.
+`PageHero` and `HubHero` both render `<h1>`. Most React-page heroes do. Most markdown layouts auto-render the page `title` from frontmatter as the `<h1>`.
 
-**Exception: the `Static` layout**. It does NOT auto-render `title` as `<h1>`. Pages on the `Static` layout MUST include `# Title` in the markdown body to provide the page heading. That's the only place a markdown `# Title` is correct -- on every other layout, a markdown `# Title` creates a duplicate `<h1>`.
+The `Static` layout now follows this same rule: it renders `frontmatter.title` as the `<h1>` through its hero (`PageHero` for normal pages, `HubHero` for the guides hub), so a markdown `# Title` in the body is **redundant** -- it's hidden via CSS (`**:[h1]:hidden` in `Static.tsx`) and the English content has had it removed. Do NOT add a `# Title` to Static markdown. (The CSS hide is transitional, covering non-English content that still carries the legacy `#` line until the pipeline strips it.)
 
 ### Eyebrow text in `HubHero` is rendered as `<h1>`
 
@@ -166,10 +170,14 @@ Chakra leftover, used in 5 places. Don't introduce new uses. Replace with Tailwi
 
 `MdComponents/index.tsx:47,59,74,89` overrides h1/h2 with `text-[2.5rem]`, `text-[2rem]`. These are markdown-specific sizing rules. Don't replicate the arbitrary values in non-markdown code.
 
-### `SimpleHero` and `MdComponents` both use `text-[2.5rem]`
+### `MdComponents` uses `text-[2.5rem]` for the page title
 
-This duplicate "page title size" suggests we need a `--text-page-title` token (or a `Heading` primitive). Until that exists, the arbitrary value is the convention.
+This arbitrary "page title size" suggests we need a `--text-page-title` token (or a `Heading` primitive). Until that exists, the arbitrary value is the convention in markdown rendering. Don't copy it elsewhere -- `PageHero`'s title uses the scale (`text-3xl ... lg:text-6xl`), not `text-[2.5rem]`.
 
 ### `BigNumber` exists -- USE IT
 
 `@/components/BigNumber` is a real component for prominent numeric displays. If you find yourself writing `<p className="text-4xl font-bold">$3000</p>`, you should be using `BigNumber` instead.
+
+### `scroll-mt` is automatic on headings and sections
+
+`base.css` applies `scroll-mt-32` to every `h1`--`h6` and `<section>`, so anchored navigation isn't clipped by the sticky nav. Don't hand-add `scroll-mt-*` to a heading or section, and don't carry over hacks like `scroll-mt-28` / `-scroll-mt-80` -- it's handled globally.

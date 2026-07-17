@@ -12,8 +12,7 @@ import { logger, schedules, task, tasks } from "@trigger.dev/sdk/v3"
 import { fetchDeveloperTools } from "./fetchers/developer-tools"
 import { fetchAccountHolders } from "./fetchers/fetchAccountHolders"
 import { fetchApps } from "./fetchers/fetchApps"
-import { fetchBeaconChain } from "./fetchers/fetchBeaconChain"
-import { fetchBlobscanStats } from "./fetchers/fetchBlobscanStats"
+import { fetchBlobStats } from "./fetchers/fetchBlobStats"
 import { fetchCalendarEvents } from "./fetchers/fetchCalendarEvents"
 import { fetchCommunityPicks } from "./fetchers/fetchCommunityPicks"
 import { fetchEthereumMarketcap } from "./fetchers/fetchEthereumMarketcap"
@@ -32,6 +31,7 @@ import { fetchL2beat } from "./fetchers/fetchL2beat"
 import { fetchAttestantPosts } from "./fetchers/fetchPosts"
 import { fetchRSS } from "./fetchers/fetchRSS"
 import { fetchStablecoinsData } from "./fetchers/fetchStablecoinsData"
+import { fetchStakedPercentage } from "./fetchers/fetchStakedPercentage"
 import { fetchTotalEthStaked } from "./fetchers/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "./fetchers/fetchTotalValueLocked"
 import { fetchTranslationGlossary } from "./fetchers/fetchTranslationGlossary"
@@ -54,12 +54,12 @@ export const KEYS = {
   RSS: "fetch-rss",
   GITHUB_REPO_DATA: "fetch-github-repo-data",
   EVENTS: "fetch-events",
-  BEACONCHAIN: "fetch-beaconchain",
-  BLOBSCAN_STATS: "fetch-blobscan-stats",
+  BLOB_STATS: "fetch-blob-stats",
   ETHEREUM_MARKETCAP: "fetch-ethereum-marketcap",
   ETHEREUM_STABLECOINS_MCAP: "fetch-ethereum-stablecoins-mcap",
   ETH_PRICE: "fetch-eth-price",
   GAS_PRICE: "fetch-gas-price",
+  STAKED_PERCENTAGE: "fetch-staked-percentage",
   TOTAL_ETH_STAKED: "fetch-total-eth-staked",
   TOTAL_VALUE_LOCKED: "fetch-total-value-locked",
   STABLECOINS_DATA: "fetch-stablecoins-data",
@@ -76,6 +76,7 @@ const WEEKLY: TaskDef[] = [[KEYS.GITHUB_CONTRIBUTORS, fetchGitHubContributors]]
 const DAILY: TaskDef[] = [
   [KEYS.ACCOUNT_HOLDERS, fetchAccountHolders],
   [KEYS.APPS, fetchApps],
+  [KEYS.BLOB_STATS, fetchBlobStats],
   [KEYS.CALENDAR_EVENTS, fetchCalendarEvents],
   [KEYS.COMMUNITY_PICKS, fetchCommunityPicks],
   [KEYS.GFIS, fetchGFIs],
@@ -90,12 +91,11 @@ const DAILY: TaskDef[] = [
   [KEYS.EVENTS, fetchEvents],
   [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools],
   [KEYS.TRANSLATION_GLOSSARY, fetchTranslationGlossary],
-  [KEYS.BEACONCHAIN, fetchBeaconChain],
+  [KEYS.STAKED_PERCENTAGE, fetchStakedPercentage],
   [KEYS.VIDEO_THUMBNAILS, fetchVideoThumbnails],
 ]
 
 const HOURLY: TaskDef[] = [
-  [KEYS.BLOBSCAN_STATS, fetchBlobscanStats],
   [KEYS.ETHEREUM_MARKETCAP, fetchEthereumMarketcap],
   [KEYS.ETHEREUM_STABLECOINS_MCAP, fetchEthereumStablecoinsMcap],
   [KEYS.ETH_PRICE, fetchEthPrice],

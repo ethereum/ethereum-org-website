@@ -63,7 +63,7 @@ The markdown body below the frontmatter is the **transcript**. It is rendered in
 
 - **File:** `app/[locale]/videos/[slug]/page.tsx`
 - Uses `generateStaticParams()` via `getVideoSlugs()` to statically generate all video pages
-- Renders: YouTube embed → publish date → collapsible transcript accordion → `FeedbackCard`
+- Renders: YouTube embed → publish date → collapsible transcript accordion → `ContentFeedback`
 - JSON-LD: `VideoObject` with full transcript text
 - Transcript rendered via `renderSimpleMarkdown()` from `src/lib/md/renderSimple.tsx`
 

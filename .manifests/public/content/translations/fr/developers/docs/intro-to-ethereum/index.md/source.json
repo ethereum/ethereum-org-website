@@ -1,0 +1,592 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/intro-to-ethereum/index.md",
+  "generatedAt": "2026-06-18T21:40:44.560Z",
+  "rootHash": "4313a3975d34",
+  "tree": {
+    "contentHash": "521ddaab1a7b",
+    "anchorHash": "73ee42233bb1",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "753da720c4a2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "8a7fc965fa21",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "what-is-a-blockchain": {
+        "contentHash": "7188d4986dd0",
+        "anchorHash": "a52984507a7e",
+        "labelHash": "55cfc665117c",
+        "children": {
+          "_label": {
+            "contentHash": "55cfc665117c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "317acd5b30ec",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "a13bebeb57e1",
+            "anchorHash": "8a5edab28263"
+          },
+          "prose:4": {
+            "contentHash": "034010fbfe00",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "727022da5683",
+            "anchorHash": "0e500613f6a4"
+          },
+          "prose:5": {
+            "contentHash": "3c8d66d6f187",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "6e3a49b8be01",
+            "anchorHash": "bfb1ce30209f"
+          },
+          "prose:6": {
+            "contentHash": "35fff4e88aaa",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:8": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "df94d6b54165",
+            "children": {
+              "attr:slug": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "8a86294a2112"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6",
+          "component:8"
+        ]
+      },
+      "what-is-ethereum": {
+        "contentHash": "b29f5de4721e",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "ac6e184ddd15",
+        "children": {
+          "_label": {
+            "contentHash": "ac6e184ddd15",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "a744991b931b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "what-is-ether": {
+        "contentHash": "6cec6c13f74a",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "34cf0a0dc30d",
+        "children": {
+          "_label": {
+            "contentHash": "34cf0a0dc30d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "92e17113341d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "what-are-smart-contracts": {
+        "contentHash": "abe164b72fb9",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "683cbba4b58f",
+        "children": {
+          "_label": {
+            "contentHash": "683cbba4b58f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "b445f9f48050",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "terminology": {
+        "contentHash": "fd52f48724e7",
+        "anchorHash": "357154c624cd",
+        "labelHash": "9615bd0ba9f0",
+        "children": {
+          "_label": {
+            "contentHash": "9615bd0ba9f0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "blockchain": {
+            "contentHash": "b94f18849f8e",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "625da44e4eaf",
+            "children": {
+              "_label": {
+                "contentHash": "625da44e4eaf",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "5e0609c7e80f",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "eth": {
+            "contentHash": "ea8e20c774d5",
+            "anchorHash": "eaf932f17853",
+            "labelHash": "f4a3760644d0",
+            "children": {
+              "_label": {
+                "contentHash": "f4a3760644d0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "cff7fff67b86",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "cccdfc63c129",
+                "anchorHash": "cd0429192510"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0"
+            ]
+          },
+          "evm": {
+            "contentHash": "624a0648f5b4",
+            "anchorHash": "df8853831ef6",
+            "labelHash": "f7925209bc63",
+            "children": {
+              "_label": {
+                "contentHash": "f7925209bc63",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "203d55305096",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "c09376154329",
+                "anchorHash": "f68a48502f68"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0"
+            ]
+          },
+          "nodes": {
+            "contentHash": "c1013e57268a",
+            "anchorHash": "384ed0ea780d",
+            "labelHash": "7ac362063b9f",
+            "children": {
+              "_label": {
+                "contentHash": "7ac362063b9f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "51326966377a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "f130c1ab1776",
+                "anchorHash": "94d095604d5e"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0"
+            ]
+          },
+          "accounts": {
+            "contentHash": "9ce4147ee327",
+            "anchorHash": "ce6e912810d8",
+            "labelHash": "8a7c8b67fe8b",
+            "children": {
+              "_label": {
+                "contentHash": "8a7c8b67fe8b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "87d180c2daa4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "a9cbd7c6e85f",
+                "anchorHash": "d094984b1eaf"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0"
+            ]
+          },
+          "transactions": {
+            "contentHash": "04f1657af749",
+            "anchorHash": "495737be7554",
+            "labelHash": "3e5136fd4b11",
+            "children": {
+              "_label": {
+                "contentHash": "3e5136fd4b11",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "c96763a9031a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "702dc99b9323",
+                "anchorHash": "d20c9fa6d21a"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0"
+            ]
+          },
+          "blocks": {
+            "contentHash": "30d1397517e1",
+            "anchorHash": "baff71817a23",
+            "labelHash": "1cd5a6687bb7",
+            "children": {
+              "_label": {
+                "contentHash": "1cd5a6687bb7",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "20ce5bc85197",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "100a42db9d9e",
+                "anchorHash": "5fdb077865bd"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0"
+            ]
+          },
+          "smart-contracts": {
+            "contentHash": "80c603f39ae6",
+            "anchorHash": "2132b51ddad6",
+            "labelHash": "c9239b20a918",
+            "children": {
+              "_label": {
+                "contentHash": "c9239b20a918",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "a62fa4572377",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "f32e06d01ed2",
+                "anchorHash": "585d8438b20c"
+              },
+              "prose:3": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "3044d20b60c5",
+                "anchorHash": "c7308a37e8aa"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "blockchain",
+          "eth",
+          "evm",
+          "nodes",
+          "accounts",
+          "transactions",
+          "blocks",
+          "smart-contracts"
+        ]
+      },
+      "where-to-go-next": {
+        "contentHash": "f881627518bc",
+        "anchorHash": "59025af1cc43",
+        "labelHash": "d37284a3b266",
+        "children": {
+          "_label": {
+            "contentHash": "d37284a3b266",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:7": {
+            "contentHash": "fd1adf14edc6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "bc62a3c14fec",
+            "anchorHash": "d094984b1eaf"
+          },
+          "prose:8": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "81dc075c3d55",
+            "anchorHash": "d20c9fa6d21a"
+          },
+          "prose:9": {
+            "contentHash": "513fdc1fae82",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "06a61df042ad",
+            "anchorHash": "f1bdb6df8255"
+          },
+          "prose:10": {
+            "contentHash": "be7b8eacc4a8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "c7308a37e8aa"
+          },
+          "prose:11": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "ad2f7e397e87",
+            "anchorHash": "00ec2e5e724f"
+          },
+          "prose:12": {
+            "contentHash": "108aecab5293",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "e7efd98892bf",
+            "anchorHash": "94d095604d5e"
+          },
+          "prose:13": {
+            "contentHash": "aae687415b64",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "7c9492ccf67a",
+            "anchorHash": "ab199f905ffa"
+          },
+          "prose:14": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:7",
+          "link:0",
+          "prose:8",
+          "link:1",
+          "prose:9",
+          "link:2",
+          "prose:10",
+          "link:3",
+          "prose:11",
+          "link:4",
+          "prose:12",
+          "link:5",
+          "prose:13",
+          "link:6",
+          "prose:14"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "2401778542f8",
+        "anchorHash": "768da08ea041",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "9c16c962b9f8",
+            "anchorHash": "a360e235e901"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "7e6063d392bc",
+            "anchorHash": "f298e92c5141"
+          },
+          "prose:6": {
+            "contentHash": "e8ca85f2d9d9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "c09500586c2c",
+            "anchorHash": "4aaed03eb1e4"
+          },
+          "prose:7": {
+            "contentHash": "6c4ffbe17789",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "769e0b8515e3",
+            "anchorHash": "93c4e99645de"
+          },
+          "prose:8": {
+            "contentHash": "ba5ec51d07a4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "visual-learner": {
+            "contentHash": "25cbd970d52d",
+            "anchorHash": "132658e36b6c",
+            "labelHash": "1ba669cb6c18",
+            "children": {
+              "_label": {
+                "contentHash": "1ba669cb6c18",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "6554b15fd71e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:2": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "e80d9d910c59",
+                "children": {
+                  "attr:slug": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "a5c93604a596"
+                  }
+                }
+              },
+              "link:0": {
+                "contentHash": "904723f24e59",
+                "anchorHash": "6fe296290c7e"
+              },
+              "prose:1": {
+                "contentHash": "123ee5ac559d",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "component:2",
+              "link:0",
+              "prose:1"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3",
+          "prose:8",
+          "visual-learner"
+        ]
+      },
+      "related-tutorials": {
+        "contentHash": "549535b4ec8c",
+        "anchorHash": "73bf65d052de",
+        "labelHash": "7f2933b822cc",
+        "children": {
+          "_label": {
+            "contentHash": "7f2933b822cc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "30965c6cc44c",
+            "anchorHash": "cd312ce12aaa"
+          },
+          "prose:2": {
+            "contentHash": "75bcac48a3e7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "what-is-a-blockchain",
+      "what-is-ethereum",
+      "what-is-ether",
+      "what-are-smart-contracts",
+      "terminology",
+      "where-to-go-next",
+      "further-reading",
+      "related-tutorials"
+    ]
+  },
+  "sourceCommitSha": "aaeb4f67fd616782cfcbaceb7a776b26c0578df4"
+}

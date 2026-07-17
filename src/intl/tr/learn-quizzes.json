@@ -10,7 +10,7 @@
   "explanation": "Açıklama",
   "next-question": "Sonraki soru",
   "next-quiz": "Sonraki test",
-  "question-number": "Soru numarası {{number}}:",
+  "question-number": "Soru numarası {number}:",
   "page-assets-merge": "Birleşme",
   "passed": "Testi geçtiniz!",
   "questions": "Sorular",

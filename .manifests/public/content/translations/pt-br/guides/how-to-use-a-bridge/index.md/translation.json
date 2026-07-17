@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "locale": "pt-br",
+  "translatedAt": "2026-06-08T09:55:08.092Z",
+  "englishManifestHash": "19f4ebdb3e06",
+  "placeholderOrder": [
+    "LINK-78c315",
+    "LINK-325c47",
+    "LINK-baeaad",
+    "LINK-913309",
+    "LINK-8dc885",
+    "IMAGE-339682",
+    "IMAGE-4ca7a5",
+    "LINK-98464c",
+    "IMAGE-5ed7e4",
+    "LINK-aad027",
+    "HTMLTAG-7a1718",
+    "LINK-4aea1c"
+  ],
+  "placeholderMap": {
+    "HTMLTAG-7a1718": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "br"
+      }
+    },
+    "IMAGE-339682": {
+      "type": "image",
+      "values": {
+        "path": "./bridge1.png"
+      }
+    },
+    "IMAGE-4ca7a5": {
+      "type": "image",
+      "values": {
+        "path": "./bridge2.png"
+      }
+    },
+    "IMAGE-5ed7e4": {
+      "type": "image",
+      "values": {
+        "path": "./bridge3.png"
+      }
+    },
+    "LINK-78c315": {
+      "type": "link",
+      "values": {
+        "url": "/guides/how-to-create-an-ethereum-account/"
+      }
+    },
+    "LINK-325c47": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2/"
+      }
+    },
+    "LINK-baeaad": {
+      "type": "link",
+      "values": {
+        "url": "https://portal.arbitrum.io/bridge?l2ChainId=42161"
+      }
+    },
+    "LINK-913309": {
+      "type": "link",
+      "values": {
+        "url": "https://app.optimism.io/bridge/deposit"
+      }
+    },
+    "LINK-8dc885": {
+      "type": "link",
+      "values": {
+        "url": "https://hub.boba.network/"
+      }
+    },
+    "LINK-98464c": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#gas"
+      }
+    },
+    "LINK-aad027": {
+      "type": "link",
+      "values": {
+        "url": "https://chainlist.org"
+      }
+    },
+    "LINK-4aea1c": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T09:55:08.092Z",
+      "status": "success"
+    }
+  }
+}

@@ -52,6 +52,10 @@ type PlaceholderData = Record<Path, Placeholder>
  */
 const absolutePathRegex = /^(?:[a-z]+:)?\/\//
 
+// Videos are sized by the renderer (see `MarkdownVideo`); recognized here only
+// to skip image-only steps (dimension probing, blur placeholders)
+const VIDEO_EXTENSIONS = [".mp4", ".webm", ".mov"]
+
 const getImageSize = (src: string, dir: string) => {
   if (absolutePathRegex.exec(src)) {
     return
@@ -101,9 +105,10 @@ const setImagePlaceholders = async (
 
     // Load image data from file system as buffer
     const buffer: Buffer = fs.readFileSync(path.join("public", src))
+    const imageBytes = Uint8Array.from(buffer)
 
     // Get hash fingerprint of image data (no security implications; fast algorithm prioritized)
-    const hash = await getHashFromBuffer(buffer, {
+    const hash = await getHashFromBuffer(imageBytes, {
       algorithm: "SHA-1",
       length: 8,
     })
@@ -163,9 +168,15 @@ const rehypeImg = (options: Options) => {
     visit(tree, "element", (node) => {
       if (node.tagName === "img" && node.properties) {
         const src = node.properties.src as string
-        const dimensions = getImageSize(src, dir)
+        // Strip any `#WxH` dimensions fragment before deriving the extension
+        const ext = path.extname(src.split("#")[0]).toLowerCase()
+        const isVideo = VIDEO_EXTENSIONS.includes(ext)
 
-        if (!dimensions) {
+        // Videos still flow through (for src rewriting); only images are probed
+        const dimensions = isVideo ? undefined : getImageSize(src, dir)
+
+        // Skip non-video files that have no detectable dimensions
+        if (!dimensions && !isVideo) {
           return
         }
 
@@ -179,13 +190,18 @@ const rehypeImg = (options: Options) => {
           imageIsTranslated && locale !== DEFAULT_LOCALE
             ? translatedImgPath
             : originalPath
-        node.properties.width = dimensions.width
-        node.properties.height = dimensions.height
-        node.properties.aspectRatio =
-          (dimensions.width || 1) / (dimensions.height || 1)
 
-        // Add image node to images array
-        images.push(node)
+        if (dimensions) {
+          node.properties.width = dimensions.width
+          node.properties.height = dimensions.height
+          node.properties.aspectRatio =
+            (dimensions.width || 1) / (dimensions.height || 1)
+        }
+
+        // Only generate blur placeholders for images, not videos
+        if (!isVideo) {
+          images.push(node)
+        }
       }
     })
 

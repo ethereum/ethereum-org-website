@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/contributing/content-resources/index.md",
+  "generatedAt": "2026-06-08T08:13:41.616Z",
+  "rootHash": "711485ab7e39",
+  "tree": {
+    "contentHash": "3e297005d559",
+    "anchorHash": "26b4bdb92fe6",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "e75329bf0790",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:description": {
+        "contentHash": "9bef7f0de582",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prose:0": {
+        "contentHash": "b333358084cc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "how-we-decide": {
+        "contentHash": "3f9d922178b8",
+        "anchorHash": "a39ffe9ca39d",
+        "labelHash": "878cd5c7a042",
+        "children": {
+          "_label": {
+            "contentHash": "878cd5c7a042",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "7df7c73f84e0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "5d137b1793d9",
+            "anchorHash": "4bd107329815"
+          },
+          "prose:2": {
+            "contentHash": "4549c9e9919c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "add-your-content-resource": {
+        "contentHash": "688cb9a88e28",
+        "anchorHash": "f47b1422981e",
+        "labelHash": "a9c4082e696a",
+        "children": {
+          "_label": {
+            "contentHash": "a9c4082e696a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "06d8b57510d2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "97ce0ae34941",
+            "anchorHash": "ec2142106e06",
+            "children": {
+              "attr:href": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "92144b06ff14"
+              },
+              "prose:0": {
+                "contentHash": "f3a0b68bee88",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:href",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:lang",
+      "frontmatter:description",
+      "prose:0",
+      "how-we-decide",
+      "add-your-content-resource"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

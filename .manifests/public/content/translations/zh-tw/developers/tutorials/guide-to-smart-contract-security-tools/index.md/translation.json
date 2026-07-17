@@ -1,0 +1,184 @@
+{
+  "version": 1,
+  "locale": "zh-tw",
+  "translatedAt": "2026-06-17T23:48:58.843Z",
+  "englishManifestHash": "63bc968aec48",
+  "placeholderOrder": [
+    "LINK-5d1afc",
+    "LINK-a2d766",
+    "LINK-b72291",
+    "LINK-36a0de",
+    "LINK-b2111b",
+    "LINK-af1c05",
+    "LINK-a2e877",
+    "LINK-73fc4f",
+    "LINK-78a0f4",
+    "LINK-da7789",
+    "LINK-91fce5",
+    "LINK-16041e",
+    "CODE-6c9790",
+    "CODE-73d1b1",
+    "LINK-6a767a",
+    "LINK-f0a687",
+    "LINK-933a23",
+    "LINK-de84c7",
+    "LINK-3c96d0",
+    "LINK-e6d4dd",
+    "CODE-e2d9b5",
+    "CODE-47edad",
+    "LINK-1fdee1",
+    "LINK-63f3a7"
+  ],
+  "placeholderMap": {
+    "CODE-6c9790": {
+      "type": "inline-code",
+      "values": {
+        "content": "SafeMath"
+      }
+    },
+    "CODE-73d1b1": {
+      "type": "inline-code",
+      "values": {
+        "content": "super"
+      }
+    },
+    "CODE-e2d9b5": {
+      "type": "inline-code",
+      "values": {
+        "content": "slither-erc"
+      }
+    },
+    "CODE-47edad": {
+      "type": "inline-code",
+      "values": {
+        "content": "Automated Testing and Verification"
+      }
+    },
+    "LINK-5d1afc": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/"
+      }
+    },
+    "LINK-a2d766": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/"
+      }
+    },
+    "LINK-b72291": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/"
+      }
+    },
+    "LINK-36a0de": {
+      "type": "link",
+      "values": {
+        "url": "#determining-security-properties"
+      }
+    },
+    "LINK-b2111b": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.trailofbits.com/2019/08/08/246-findings-from-our-smart-contract-audits-an-executive-summary/"
+      }
+    },
+    "LINK-af1c05": {
+      "type": "link",
+      "values": {
+        "url": "https://infosec.mozilla.org/guidelines/risk/rapid_risk_assessment.html"
+      }
+    },
+    "LINK-a2e877": {
+      "type": "link",
+      "values": {
+        "url": "https://csrc.nist.gov/pubs/sp/800/154/ipd"
+      }
+    },
+    "LINK-73fc4f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.amazon.com/Threat-Modeling-Designing-Adam-Shostack/dp/1118809998"
+      }
+    },
+    "LINK-78a0f4": {
+      "type": "link",
+      "values": {
+        "url": "<https://wikipedia.org/wiki/STRIDE_(security"
+      }
+    },
+    "LINK-da7789": {
+      "type": "link",
+      "values": {
+        "url": "<https://wikipedia.org/wiki/DREAD_(risk_assessment_model"
+      }
+    },
+    "LINK-91fce5": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Threat_model#P.A.S.T.A."
+      }
+    },
+    "LINK-16041e": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.regehr.org/archives/1091"
+      }
+    },
+    "LINK-6a767a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/blob/7f54c8b948c34fb35e1d61adaa1bd568ca733253/docs/src/tutorials/exercise2.md"
+      }
+    },
+    "LINK-f0a687": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/exercises/Exercise-2.md"
+      }
+    },
+    "LINK-933a23": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/exercises/Exercise-1.md"
+      }
+    },
+    "LINK-de84c7": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore/exercises"
+      }
+    },
+    "LINK-3c96d0": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/blob/7f54c8b948c34fb35e1d61adaa1bd568ca733253/docs/src/tutorials/exercise1.md"
+      }
+    },
+    "LINK-e6d4dd": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/wiki/ERC-Conformance"
+      }
+    },
+    "LINK-1fdee1": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/trailofbits/publications/blob/master/reviews/0x-protocol.pdf"
+      }
+    },
+    "LINK-63f3a7": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/trailofbits/publications/blob/master/reviews/BalancerCore.pdf"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T23:48:58.843Z",
+      "status": "success"
+    }
+  }
+}

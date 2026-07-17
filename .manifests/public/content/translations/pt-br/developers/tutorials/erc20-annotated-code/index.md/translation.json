@@ -1,0 +1,836 @@
+{
+  "version": 1,
+  "locale": "pt-br",
+  "translatedAt": "2026-06-17T23:40:03.621Z",
+  "englishManifestHash": "88cf8388422b",
+  "placeholderOrder": [
+    "LINK-fb2e62",
+    "LINK-8a4aa0",
+    "LINK-a6a923",
+    "LINK-b28fa5",
+    "LINK-941d73",
+    "IMAGE-63287f",
+    "LINK-8ead3c",
+    "LINK-8885e0",
+    "LINK-813c99",
+    "LINK-ed40b5",
+    "CODEBLOCK-bfc0fd",
+    "LINK-c165c7",
+    "CODEBLOCK-0dc41d",
+    "LINK-f61ecb",
+    "CODEBLOCK-4a2754",
+    "CODE-82a03a",
+    "LINK-aec083",
+    "CODEBLOCK-58858f",
+    "CODE-a83dd0",
+    "CODEBLOCK-0da2b8",
+    "CODE-3c4623",
+    "LINK-95f5a8",
+    "CODE-2bcb43",
+    "LINK-9c1fcb",
+    "LINK-1f9b34",
+    "CODEBLOCK-c16b34",
+    "CODE-82d62f",
+    "CODE-d80c9b",
+    "CODE-3c4623",
+    "CODE-2bcb43",
+    "CODEBLOCK-5a7a95",
+    "CODE-27f576",
+    "CODE-2bcb43",
+    "CODE-dde8be",
+    "CODE-dde8be",
+    "CODEBLOCK-ef0a90",
+    "CODE-32f09f",
+    "CODE-4c1029",
+    "CODE-8b9718",
+    "CODEBLOCK-4e89b0",
+    "CODE-74e216",
+    "CODEBLOCK-ae66a8",
+    "CODE-b7f373",
+    "CODEBLOCK-5a8e92",
+    "LINK-6c36a8",
+    "LINK-6f9d6a",
+    "CODEBLOCK-b2e05b",
+    "CODEBLOCK-9c9557",
+    "CODE-f2c88f",
+    "LINK-471d49",
+    "LINK-0a64ba",
+    "LINK-ac6baf",
+    "CODEBLOCK-da4731",
+    "CODEBLOCK-d82047",
+    "CODE-8e9215",
+    "CODE-a6e600",
+    "CODEBLOCK-c96f4c",
+    "CODE-6c9790",
+    "CODE-77951f",
+    "LINK-ec4acd",
+    "CODE-715dc8",
+    "CODE-9251f3",
+    "LINK-5ddff7",
+    "LINK-569ee1",
+    "CODEBLOCK-5abebb",
+    "CODE-aaba07",
+    "CODE-b89c50",
+    "CODEBLOCK-97943a",
+    "CODE-19f3a5",
+    "CODE-118c36",
+    "CODEBLOCK-4f5bb6",
+    "CODEBLOCK-1d4689",
+    "CODE-7c1aed",
+    "CODE-7c1aed",
+    "CODEBLOCK-537715",
+    "CODE-eb1be7",
+    "CODEBLOCK-e61c66",
+    "CODE-82a353",
+    "CODE-b76a7c",
+    "CODE-ee80fd",
+    "CODE-9d6bd4",
+    "CODE-c064fb",
+    "CODEBLOCK-0e7361",
+    "CODE-ad7377",
+    "CODEBLOCK-95d0c0",
+    "CODEBLOCK-b5ceec",
+    "CODE-27f576",
+    "CODEBLOCK-fb16f6",
+    "CODE-ec328d",
+    "CODE-9251f3",
+    "CODE-bfa3d0",
+    "LINK-3593d6",
+    "CODE-4676eb",
+    "CODE-bfa3d0",
+    "CODE-32f09f",
+    "CODE-74e216",
+    "CODE-b7f373",
+    "CODE-396e22",
+    "CODE-8b1d02",
+    "CODE-0c9d48",
+    "CODEBLOCK-5d04ae",
+    "CODE-32f09f",
+    "CODEBLOCK-fd6ceb",
+    "CODE-27f576",
+    "CODE-396e22",
+    "CODE-b5bea4",
+    "CODEBLOCK-c8d553",
+    "CODEBLOCK-9a8272",
+    "CODE-4c04ac",
+    "CODE-d44362",
+    "CODE-ec328d",
+    "CODEBLOCK-73eadc",
+    "LINK-146abb",
+    "CODE-8b1d02",
+    "CODE-0c9d48",
+    "CODEBLOCK-2ffcb9",
+    "CODE-bcedb7",
+    "CODE-ca9781",
+    "CODE-3e23e8",
+    "CODE-f60f08",
+    "CODEBLOCK-d8ca07",
+    "CODE-ec328d",
+    "CODE-846706",
+    "CODE-134042",
+    "CODE-396e22",
+    "CODEBLOCK-409b49",
+    "CODE-ec328d",
+    "CODE-27f576",
+    "CODE-b7f373",
+    "CODEBLOCK-56cdfd",
+    "CODEBLOCK-086ff6",
+    "LINK-3efa40",
+    "CODE-ec328d",
+    "CODE-8e66d6",
+    "LINK-0a0e61",
+    "CODEBLOCK-dc1283",
+    "CODEBLOCK-6a73f6",
+    "CODE-dde8be",
+    "CODE-846706",
+    "CODE-134042",
+    "CODE-846706",
+    "CODE-134042",
+    "CODE-846706",
+    "CODE-134042",
+    "CODEBLOCK-a51f46",
+    "CODE-a82f5a",
+    "CODEBLOCK-dd8ed6",
+    "CODE-134042",
+    "CODE-846706",
+    "CODEBLOCK-3254ce",
+    "CODE-147fb8",
+    "CODEBLOCK-2ea558",
+    "CODEBLOCK-fd574d",
+    "CODE-7c1aed",
+    "CODEBLOCK-370202",
+    "CODE-77951f",
+    "LINK-9504b1",
+    "CODE-396e22",
+    "CODE-74e216",
+    "CODE-b7f373",
+    "CODE-8b1d02",
+    "CODE-0c9d48",
+    "CODE-ec328d",
+    "LINK-f915fb"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-bfc0fd": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0dc41d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4a2754": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-58858f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0da2b8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c16b34": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5a7a95": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ef0a90": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4e89b0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ae66a8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5a8e92": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b2e05b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9c9557": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-da4731": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d82047": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c96f4c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5abebb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-97943a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4f5bb6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1d4689": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-537715": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e61c66": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0e7361": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-95d0c0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b5ceec": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fb16f6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5d04ae": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fd6ceb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c8d553": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9a8272": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-73eadc": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2ffcb9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d8ca07": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-409b49": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-56cdfd": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-086ff6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-dc1283": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6a73f6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a51f46": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-dd8ed6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3254ce": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2ea558": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fd574d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-370202": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-82a03a": {
+      "type": "inline-code",
+      "values": {
+        "content": "@dev"
+      }
+    },
+    "CODE-a83dd0": {
+      "type": "inline-code",
+      "values": {
+        "content": "I"
+      }
+    },
+    "CODE-3c4623": {
+      "type": "inline-code",
+      "values": {
+        "content": "external"
+      }
+    },
+    "CODE-2bcb43": {
+      "type": "inline-code",
+      "values": {
+        "content": "view"
+      }
+    },
+    "CODE-82d62f": {
+      "type": "inline-code",
+      "values": {
+        "content": "balanceOf"
+      }
+    },
+    "CODE-d80c9b": {
+      "type": "inline-code",
+      "values": {
+        "content": "address"
+      }
+    },
+    "CODE-27f576": {
+      "type": "inline-code",
+      "values": {
+        "content": "transfer"
+      }
+    },
+    "CODE-dde8be": {
+      "type": "inline-code",
+      "values": {
+        "content": "Transfer"
+      }
+    },
+    "CODE-32f09f": {
+      "type": "inline-code",
+      "values": {
+        "content": "allowance"
+      }
+    },
+    "CODE-4c1029": {
+      "type": "inline-code",
+      "values": {
+        "content": "owner"
+      }
+    },
+    "CODE-8b9718": {
+      "type": "inline-code",
+      "values": {
+        "content": "spender"
+      }
+    },
+    "CODE-74e216": {
+      "type": "inline-code",
+      "values": {
+        "content": "approve"
+      }
+    },
+    "CODE-b7f373": {
+      "type": "inline-code",
+      "values": {
+        "content": "transferFrom"
+      }
+    },
+    "CODE-f2c88f": {
+      "type": "inline-code",
+      "values": {
+        "content": "GSN/Context.sol"
+      }
+    },
+    "CODE-8e9215": {
+      "type": "inline-code",
+      "values": {
+        "content": "IERC20"
+      }
+    },
+    "CODE-a6e600": {
+      "type": "inline-code",
+      "values": {
+        "content": "Context"
+      }
+    },
+    "CODE-6c9790": {
+      "type": "inline-code",
+      "values": {
+        "content": "SafeMath"
+      }
+    },
+    "CODE-77951f": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint256"
+      }
+    },
+    "CODE-715dc8": {
+      "type": "inline-code",
+      "values": {
+        "content": "private"
+      }
+    },
+    "CODE-9251f3": {
+      "type": "inline-code",
+      "values": {
+        "content": "_<something>"
+      }
+    },
+    "CODE-aaba07": {
+      "type": "inline-code",
+      "values": {
+        "content": "_balances"
+      }
+    },
+    "CODE-b89c50": {
+      "type": "inline-code",
+      "values": {
+        "content": "_balances[<address>]"
+      }
+    },
+    "CODE-19f3a5": {
+      "type": "inline-code",
+      "values": {
+        "content": "_allowances"
+      }
+    },
+    "CODE-118c36": {
+      "type": "inline-code",
+      "values": {
+        "content": "_allowances[B][A]"
+      }
+    },
+    "CODE-7c1aed": {
+      "type": "inline-code",
+      "values": {
+        "content": "_decimals"
+      }
+    },
+    "CODE-eb1be7": {
+      "type": "inline-code",
+      "values": {
+        "content": "<something>_"
+      }
+    },
+    "CODE-82a353": {
+      "type": "inline-code",
+      "values": {
+        "content": "name"
+      }
+    },
+    "CODE-b76a7c": {
+      "type": "inline-code",
+      "values": {
+        "content": "symbol"
+      }
+    },
+    "CODE-ee80fd": {
+      "type": "inline-code",
+      "values": {
+        "content": "decimals"
+      }
+    },
+    "CODE-9d6bd4": {
+      "type": "inline-code",
+      "values": {
+        "content": "string memory"
+      }
+    },
+    "CODE-c064fb": {
+      "type": "inline-code",
+      "values": {
+        "content": "memory"
+      }
+    },
+    "CODE-ad7377": {
+      "type": "inline-code",
+      "values": {
+        "content": "totalSupply"
+      }
+    },
+    "CODE-ec328d": {
+      "type": "inline-code",
+      "values": {
+        "content": "_transfer"
+      }
+    },
+    "CODE-bfa3d0": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.sender"
+      }
+    },
+    "CODE-4676eb": {
+      "type": "inline-code",
+      "values": {
+        "content": "_msgSender()"
+      }
+    },
+    "CODE-396e22": {
+      "type": "inline-code",
+      "values": {
+        "content": "_approve"
+      }
+    },
+    "CODE-8b1d02": {
+      "type": "inline-code",
+      "values": {
+        "content": "increaseAllowance"
+      }
+    },
+    "CODE-0c9d48": {
+      "type": "inline-code",
+      "values": {
+        "content": "decreaseAllowance"
+      }
+    },
+    "CODE-b5bea4": {
+      "type": "inline-code",
+      "values": {
+        "content": "true"
+      }
+    },
+    "CODE-4c04ac": {
+      "type": "inline-code",
+      "values": {
+        "content": "a.sub(b, \"message\")"
+      }
+    },
+    "CODE-d44362": {
+      "type": "inline-code",
+      "values": {
+        "content": "a-b"
+      }
+    },
+    "CODE-bcedb7": {
+      "type": "inline-code",
+      "values": {
+        "content": "a.add(b)"
+      }
+    },
+    "CODE-ca9781": {
+      "type": "inline-code",
+      "values": {
+        "content": "a"
+      }
+    },
+    "CODE-3e23e8": {
+      "type": "inline-code",
+      "values": {
+        "content": "b"
+      }
+    },
+    "CODE-f60f08": {
+      "type": "inline-code",
+      "values": {
+        "content": "2^256"
+      }
+    },
+    "CODE-846706": {
+      "type": "inline-code",
+      "values": {
+        "content": "_mint"
+      }
+    },
+    "CODE-134042": {
+      "type": "inline-code",
+      "values": {
+        "content": "_burn"
+      }
+    },
+    "CODE-8e66d6": {
+      "type": "inline-code",
+      "values": {
+        "content": "_beforeTokenTransfer"
+      }
+    },
+    "CODE-a82f5a": {
+      "type": "inline-code",
+      "values": {
+        "content": "_totalSupply"
+      }
+    },
+    "CODE-147fb8": {
+      "type": "inline-code",
+      "values": {
+        "content": "Approval"
+      }
+    },
+    "IMAGE-63287f": {
+      "type": "image",
+      "values": {
+        "path": "erc20_interface.png"
+      }
+    },
+    "LINK-fb2e62": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-20/"
+      }
+    },
+    "LINK-8a4aa0": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol"
+      }
+    },
+    "LINK-a6a923": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol"
+      }
+    },
+    "LINK-b28fa5": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/contracts/2.x/erc20-supply"
+      }
+    },
+    "LINK-941d73": {
+      "type": "link",
+      "values": {
+        "url": "https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/"
+      }
+    },
+    "LINK-8ead3c": {
+      "type": "link",
+      "values": {
+        "url": "https://www.w3schools.com/java/java_interface.asp"
+      }
+    },
+    "LINK-8885e0": {
+      "type": "link",
+      "values": {
+        "url": "https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html"
+      }
+    },
+    "LINK-813c99": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol"
+      }
+    },
+    "LINK-ed40b5": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-20"
+      }
+    },
+    "LINK-c165c7": {
+      "type": "link",
+      "values": {
+        "url": "https://spdx.org/licenses/"
+      }
+    },
+    "LINK-f61ecb": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html"
+      }
+    },
+    "LINK-aec083": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/develop/natspec-format.html"
+      }
+    },
+    "LINK-95f5a8": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2"
+      }
+    },
+    "LINK-9c1fcb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "LINK-1f9b34": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD?tab=contract"
+      }
+    },
+    "LINK-6c36a8": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol"
+      }
+    },
+    "LINK-6f9d6a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.tutorialspoint.com/solidity/solidity_inheritance.htm"
+      }
+    },
+    "LINK-471d49": {
+      "type": "link",
+      "values": {
+        "url": "https://www.opengsn.org/"
+      }
+    },
+    "LINK-0a64ba": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.opengsn.org/javascript-client/tutorial.html"
+      }
+    },
+    "LINK-ac6baf": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/"
+      }
+    },
+    "LINK-ec4acd": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol"
+      }
+    },
+    "LINK-5ddff7": {
+      "type": "link",
+      "values": {
+        "url": "https://www.tutorialspoint.com/solidity/solidity_mappings.htm"
+      }
+    },
+    "LINK-569ee1": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Associative_array"
+      }
+    },
+    "LINK-3593d6": {
+      "type": "link",
+      "values": {
+        "url": "https://opengsn.org/"
+      }
+    },
+    "LINK-146abb": {
+      "type": "link",
+      "values": {
+        "url": "https://consensysdiligence.github.io/smart-contract-best-practices/attacks/#front-running"
+      }
+    },
+    "LINK-3efa40": {
+      "type": "link",
+      "values": {
+        "url": "https://www.bitdegree.org/learn/solidity-inheritance"
+      }
+    },
+    "LINK-0a0e61": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Hooking"
+      }
+    },
+    "LINK-9504b1": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/breaking/080-breaking-changes.html"
+      }
+    },
+    "LINK-f915fb": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptodocguy.pro/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T23:40:03.621Z",
+      "status": "success"
+    }
+  }
+}

@@ -1,10 +1,10 @@
 ---
-title: "İlk akıllı sözleşmeni dağıtma"
-description: "Bir Ethereum test ağında ilk akıllı sözleşmeni dağıtmaya giriş"
+title: "İlk akıllı sözleşmenizi dağıtmak"
+description: "Bir Ethereum test ağında ilk akıllı sözleşmenizi dağıtmaya giriş"
 author: "jdourlens"
-tags: [ "akıllı kontratlar", "remix", "solidity", "dağıtma" ]
+tags: ["akıllı sözleşmeler", "Remix", "Solidity", "dağıtmak"]
 skill: beginner
-breadcrumb: "İlk sözleşme dağıtımı"
+breadcrumb: "İlk sözleşmeyi dağıt"
 lang: tr
 published: 2020-04-03
 source: EthereumDev
@@ -12,15 +12,15 @@ sourceUrl: https://ethereumdev.io/deploying-your-first-smart-contract/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Sanırım sen de Ethereum blokzincirinde ilk [akıllı sözleşmeni](/developers/docs/smart-contracts/) [dağıtmaya](/developers/docs/smart-contracts/deploying/) ve onunla etkileşime geçmeye bizim kadar heveslisin.
+Sanırım siz de Ethereum blokzincirinde ilk [akıllı sözleşmenizi](/developers/docs/smart-contracts/) [dağıtmak](/developers/docs/smart-contracts/deploying/) ve onunla etkileşime geçmek için bizim kadar heyecanlısınız.
 
-Endişelenme, bu ilk akıllı sözleşmemiz olduğu için onu [yerel bir test ağında](/developers/docs/networks/) dağıtacağız, böylece dağıtmak ve onunla dilediğince oynamak sana hiçbir maliyeti olmayacak.
+Endişelenmeyin, bu bizim ilk akıllı sözleşmemiz olduğu için onu [yerel bir test ağında](/developers/docs/networks/) dağıtacağız, böylece dağıtmak ve onunla dilediğiniz kadar oynamak size hiçbir şeye mal olmayacak.
 
-## Sözleşmemizi yazma {#writing-our-contract}
+## Sözleşmemizi yazmak {#writing-our-contract}
 
-İlk adım olarak [Remix'i ziyaret edip](https://remix.ethereum.org/) yeni bir dosya oluştur. Remix arayüzünün sol üst kısmından yeni bir dosya ekle ve istediğin dosya adını gir.
+İlk adım [Remix'i ziyaret etmek](https://remix.ethereum.org/) ve yeni bir dosya oluşturmaktır. Remix arayüzünün sol üst kısmında yeni bir dosya ekleyin ve istediğiniz dosya adını girin.
 
-![Remix arayüzünde yeni bir dosya ekleme](./remix.png)
+![Adding a new file in the Remix interface](./remix.png)
 
 Yeni dosyaya aşağıdaki kodu yapıştıracağız.
 
@@ -30,7 +30,7 @@ pragma solidity >=0.5.17;
 
 contract Counter {
 
-    // Sayım sayısını tutmak için işaretsiz tamsayı türünde herkese açık değişken
+    // Sayım sayısını tutmak için unsigned int türünde herkese açık değişken
     uint256 public count = 0;
 
     // Sayacımızı artıran fonksiyon
@@ -38,7 +38,7 @@ contract Counter {
         count += 1;
     }
 
-    // Sayım değerini almak için gerekli olmayan alıcı
+    // Sayım değerini almak için gerekli olmayan getter
     function getCount() public view returns (uint256) {
         return count;
     }
@@ -46,51 +46,51 @@ contract Counter {
 }
 ```
 
-Programlamaya aşinaysan bu programın ne yaptığını kolayca tahmin edebilirsin. Satır satır açıklaması şöyledir:
+Eğer programlamaya aşinaysanız, bu programın ne yaptığını kolayca tahmin edebilirsiniz. İşte satır satır açıklaması:
 
-- 4. Satır: `Counter` adıyla bir sözleşme tanımlıyoruz.
-- 7. Satır: Sözleşmemiz, 0'dan başlayan `count` adında işaretsiz bir tamsayı depolar.
-- 10. Satır: İlk fonksiyon, sözleşmenin durumunu değiştirir ve `count` değişkenimizi artırır.
-- 15. Satır: İkinci fonksiyon, akıllı sözleşmenin dışından `count` değişkeninin değerini okuyabilmek için kullanılan bir alıcıdır. `count` değişkenimizi herkese açık (public) olarak tanımladığımız için bunun gerekli olmadığını, yalnızca örnek olarak gösterildiğini unutma.
+- 4. Satır: `Counter` adında bir sözleşme tanımlıyoruz.
+- 7. Satır: Sözleşmemiz, 0'dan başlayan `count` adında işaretsiz bir tam sayı (unsigned integer) saklar.
+- 10. Satır: İlk işlev, sözleşmenin durumunu değiştirecek ve `count` değişkenimizi artıracaktır (`increment()`).
+- 15. Satır: İkinci işlev, `count` değişkeninin değerini akıllı sözleşmenin dışında okuyabilmek için sadece bir alıcıdır (getter). `count` değişkenimizi public (genel) olarak tanımladığımız için bunun gerekli olmadığını, ancak bir örnek olarak gösterildiğini unutmayın.
 
-İlk basit akıllı sözleşmemiz için hepsi bu kadar. Bilebileceğin üzere, bu Java veya C++ gibi OOP (Nesne Yönelimli Programlama) dillerindeki bir sınıfa benziyor. Şimdi sözleşmemizle oynama zamanı.
+İlk basit akıllı sözleşmemiz için hepsi bu kadar. Bildiğiniz gibi, Java veya C++ gibi NYP (Nesne Yönelimli Programlama) dillerindeki bir sınıfa benziyor. Şimdi sözleşmemizle oynama zamanı.
 
-## Sözleşmemizi dağıtma {#deploying-our-contract}
+## Sözleşmemizi dağıtmak {#deploying-our-contract}
 
-İlk akıllı sözleşmemizi yazdığımıza göre, şimdi onunla oynayabilmek için blokzincirine dağıtacağız.
+İlk akıllı sözleşmemizi yazdığımıza göre, şimdi onunla oynayabilmek için onu blokzincirine dağıtacağız.
 
-[Akıllı sözleşmeyi blokzincirinde dağıtmak](/developers/docs/smart-contracts/deploying/), aslında derlenmiş akıllı sözleşmenin kodunu içeren bir işlemi herhangi bir alıcı belirtmeden göndermekten ibarettir.
+[Akıllı sözleşmeyi blokzincirinde dağıtmak](/developers/docs/smart-contracts/deploying/), aslında sadece derlenmiş akıllı sözleşmenin kodunu içeren bir işlemi herhangi bir alıcı belirtmeden göndermektir.
 
-Önce, sol taraftaki derleme simgesine tıklayarak [sözleşmeyi derleyeceğiz](/developers/docs/smart-contracts/compiling/):
+Öncelikle sol taraftaki derleme (compile) simgesine tıklayarak [sözleşmeyi derleyeceğiz](/developers/docs/smart-contracts/compiling/):
 
-![Remix araç çubuğundaki derleme simgesi](./remix-compile-button.png)
+![The compile icon in the Remix toolbar](./remix-compile-button.png)
 
-Ardından derle düğmesine tıkla:
+Ardından derleme (compile) düğmesine tıklayın:
 
-![Remix Solidity derleyicisindeki derle düğmesi](./remix-compile.png)
+![The compile button in the Remix solidity compiler](./remix-compile.png)
 
-İçeriği metin düzenleyiciye kaydettiğinde sözleşmenin her zaman derlenmesi için “Otomatik derle” seçeneğini tercih edebilirsin.
+Metin düzenleyicide içeriği kaydettiğinizde sözleşmenin her zaman derlenmesi için "Auto compile" (Otomatik derle) seçeneğini seçebilirsiniz.
 
-Ardından "Dağıt ve işlemleri çalıştır" ekranına git:
+Ardından "deploy and run transactions" (işlemleri dağıt ve çalıştır) ekranına gidin:
 
-![Remix araç çubuğundaki dağıtma simgesi](./remix-deploy.png)
+![The deploy icon in the Remix toolbar](./remix-deploy.png)
 
-"Dağıt ve işlemleri çalıştır" ekranına geldiğinde, sözleşme adının göründüğünü kontrol et ve Dağıt'a tıkla. Sayfanın üst kısmında görebileceğin gibi, mevcut ortam “JavaScript VM”dir. Bu, daha hızlı ve hiçbir ücret ödemeden test edebilmek için akıllı sözleşmemizi yerel bir test blokzincirinde dağıtacağımız ve etkileşime gireceğimiz anlamına gelir.
+"deploy and run transactions" ekranına geldiğinizde, sözleşme adınızın göründüğünü iki kez kontrol edin ve Deploy (Dağıt) düğmesine tıklayın. Sayfanın üst kısmında görebileceğiniz gibi, mevcut ortam "JavaScript VM"dir; bu, daha hızlı ve herhangi bir ücret ödemeden test yapabilmek için akıllı sözleşmemizi yerel bir test blokzincirinde dağıtacağımız ve onunla etkileşime gireceğimiz anlamına gelir.
 
-![Remix Solidity derleyicisindeki dağıt düğmesi](./remix-deploy-button.png)
+![The deploy button in the Remix solidity compiler](./remix-deploy-button.png)
 
-“Dağıt” düğmesine tıkladıktan sonra sözleşmenin en altta belirdiğini göreceksin. Sözleşmemizin içeriğini görmek için solundaki oka tıklayarak genişlet. Bu bizim `counter` değişkenimiz, `increment()` fonksiyonumuz ve `getCounter()` alıcımızdır.
+"Deploy" düğmesine tıkladığınızda, sözleşmenizin alt kısımda belirdiğini göreceksiniz. Sözleşmemizin içeriğini görmek için soldaki oka tıklayarak genişletin. Burada `counter` değişkenimiz, `increment()` işlevimiz ve alıcı (getter) `getCounter()` işlevimiz bulunmaktadır.
 
-`count` veya `getCount` düğmesine tıklarsan sözleşmenin `count` değişkeninin içeriğini alır ve görüntüler. Henüz `increment` fonksiyonunu çağırmadığımız için 0 göstermesi gerekir.
+`count` veya `getCount` düğmesine tıklarsanız, sözleşmenin `count` değişkeninin içeriğini alacak ve görüntüleyecektir. Henüz `increment` işlevini çağırmadığımız için 0 göstermelidir.
 
-![Remix Solidity derleyicisindeki fonksiyon düğmesi](./remix-function-button.png)
+![The function button in the Remix solidity compiler](./remix-function-button.png)
 
-Şimdi düğmeye tıklayarak `increment` fonksiyonunu çağıralım. Pencerenin en altında, yapılan işlemlerin kayıtlarının belirdiğini göreceksin. `increment` düğmesi yerine veriyi almak için olan düğmeye bastığında kayıtların farklı olduğunu göreceksin. Bunun nedeni, blokzincirinden veri okumanın herhangi bir işlem (yazma) veya ücret gerektirmemesidir. Çünkü sadece blokzincirinin durumunu değiştirmek bir işlem yapmayı gerektirir:
+Şimdi düğmeye tıklayarak `increment` işlevini çağıralım. Yapılan işlemlerin günlüklerinin pencerenin alt kısmında belirdiğini göreceksiniz. `increment` düğmesi yerine verileri almak için düğmeye bastığınızda günlüklerin farklı olduğunu göreceksiniz. Bunun nedeni, blokzincirindeki verileri okumanın herhangi bir işlem (yazma) veya ücret gerektirmemesidir. Çünkü yalnızca blokzincirinin durumunu değiştirmek bir işlem yapmayı gerektirir:
 
-![İşlemlerin bir kaydı](./transaction-log.png)
+![A log of transactions](./transaction-log.png)
 
-`increment()` fonksiyonumuzu çağırmak için bir işlem oluşturan increment düğmesine bastıktan sonra `count` veya `getCount` düğmelerine tekrar tıkladığımızda, akıllı sözleşmemizin yeni güncellenmiş durumunu `count` değişkeni 0'dan büyük olacak şekilde okuyacağız.
+`increment()` işlevimizi çağırmak için bir işlem oluşturacak olan increment (artırma) düğmesine bastıktan sonra, count veya getCount düğmelerine tekrar tıklarsak, count değişkeninin 0'dan büyük olduğu akıllı sözleşmemizin yeni güncellenmiş durumunu okuruz.
 
-![Akıllı sözleşmenin yeni güncellenmiş durumu](./updated-state.png)
+![Newly updated state of the smart contract](./updated-state.png)
 
-Bir sonraki öğreticide, [akıllı sözleşmelerinize nasıl olay ekleyebileceğinizi](/developers/tutorials/logging-events-smart-contracts/) ele alacağız. Olayları kaydetmek, akıllı sözleşmendeki hataları ayıklamak ve bir fonksiyonu çağırırken neler olduğunu anlamak için uygun bir yoldur.
+Bir sonraki eğitimde, [akıllı sözleşmelerinize nasıl olaylar ekleyebileceğinizi](/developers/tutorials/logging-events-smart-contracts/) ele alacağız. Olayları günlüğe kaydetmek, akıllı sözleşmenizde hata ayıklamanın ve bir işlevi çağırırken neler olduğunu anlamanın uygun bir yoludur.

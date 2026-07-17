@@ -1,173 +1,172 @@
 ---
-title: "Najczęściej zadawane pytania"
-description: "Najczęściej zadawane pytania dotyczące proof-of-stake Ethereum."
+title: "Często zadawane pytania"
+description: "Często zadawane pytania dotyczące dowodu stawki (PoS) w Ethereum."
 lang: pl
 ---
 
-## Czym jest proof-of-stake {#what-is-proof-of-stake}
+## Czym jest dowód stawki (PoS) {#what-is-proof-of-stake}
 
-Proof-of-stake to klasa algorytmów, które mogą zapewnić bezpieczeństwo blockchainów poprzez zagwarantowanie, że aktywa wartościowe zostaną utracone przez atakujących, którzy działają nieuczciwie. Systemy proof-of-stake wymagają zestawu walidatorów, aby udostępnić pewne aktywa, które mogą zostać zniszczone, jeśli walidator zaangażuje się w udowodnione nieuczciwe zachowanie. Ethereum wykorzystuje mechanizm proof-of-stake do zabezpieczania blockchaina.
+Dowód stawki (PoS) to klasa algorytmów, która może zapewniać bezpieczeństwo blockchainom, gwarantując, że atakujący działający nieuczciwie stracą wartościowe aktywa. Systemy dowodu stawki wymagają od zestawu walidatorów udostępnienia pewnych aktywów, które mogą zostać zniszczone, jeśli walidator dopuści się możliwego do udowodnienia nieuczciwego zachowania. Ethereum wykorzystuje mechanizm dowodu stawki do zabezpieczania blockchaina.
 
-## Jak proof-of-stake ma się do proof-of-work? {#comparison-to-proof-of-work}
+## Jak dowód stawki wypada w porównaniu z dowodem pracy (PoW)? {#comparison-to-proof-of-work}
 
-Zarówno proof-of-work, jak i proof-of-stake są mechanizmami, które ekonomicznie zniechęcają złośliwe podmioty do spamowania lub oszukiwania sieci. W obu przypadkach węzły, które aktywnie uczestniczą w konsensusie, umieszczają pewne zasoby „w sieci”, które utracą w przypadku niewłaściwego zachowania.
+Zarówno dowód pracy (PoW), jak i dowód stawki to mechanizmy, które ekonomicznie zniechęcają złośliwych aktorów do spamowania lub oszukiwania sieci. W obu przypadkach węzły, które aktywnie uczestniczą w konsensusie, wnoszą do sieci pewne aktywa, które stracą w przypadku niewłaściwego zachowania.
 
-W proof-of-work tym zasobem jest energia. Węzeł, znany jako górnik, uruchamia algorytm, którego celem jest obliczenie wartości szybciej niż jakikolwiek inny węzeł. Najszybszy węzeł ma prawo zaproponować blok do łańcucha. Aby zmienić historię łańcucha lub zdominować propozycję bloku, górnik musiałby mieć tak dużą moc obliczeniową, że zawsze wygrywałby wyścig. Jest to zaporowo drogie i trudne do wykonania, chroniąc łańcuch przed atakami. Energia wymagana do „wydobywania” przy użyciu proof-of-work jest realnym zasobem, za który płacą górnicy.
+W dowodzie pracy tym aktywem jest energia. Węzeł, znany jako górnik, uruchamia algorytm, którego celem jest obliczenie wartości szybciej niż jakikolwiek inny węzeł. Najszybszy węzeł ma prawo zaproponować blok do łańcucha. Aby zmienić historię łańcucha lub zdominować propozycje bloków, górnik musiałby dysponować tak dużą mocą obliczeniową, aby zawsze wygrywać ten wyścig. Jest to zaporowo drogie i trudne do wykonania, co chroni łańcuch przed atakami. Energia wymagana do „kopania” przy użyciu dowodu pracy to rzeczywiste aktywo, za które płacą górnicy.
 
-Proof-of-stake wymaga od węzłów, zwanych walidatorami, wyraźnego przesłania aktywa kryptowalutowego do inteligentnego kontraktu. Jeśli walidator zachowa się niewłaściwie, kryptowaluta może zostać zniszczona, ponieważ „stakuje”
-on swoje aktywa bezpośrednio do łańcucha, a nie pośrednio poprzez wydatek energetyczny.
+Dowód stawki wymaga od węzłów, znanych jako walidatory, jawnego przesłania krypto aktywów do inteligentnego kontraktu. Jeśli walidator zachowa się niewłaściwie, to krypto może zostać zniszczone, ponieważ „stakuje” on swoje aktywa bezpośrednio w łańcuchu, a nie pośrednio poprzez zużycie energii.
 
-Proof-of-work jest znacznie bardziej energochłonny, ponieważ energia elektryczna jest spalana w procesie wydobywania. Proof-of-stake, z drugiej strony, wymaga tylko bardzo małej ilości energii — walidatory Ethereum mogą nawet działać na urządzeniu o niskim poborze mocy, takim jak Raspberry Pi. Mechanizm proof-of-stake Ethereum jest uważany za bezpieczniejszy niż proof-of-work, ponieważ koszt ataku jest większy, a konsekwencje dla atakującego są poważniejsze.
+Dowód pracy jest znacznie bardziej energochłonny, ponieważ w procesie kopania spalana jest energia elektryczna. Z kolei dowód stawki wymaga tylko bardzo małej ilości energii – walidatory Ethereum mogą działać nawet na urządzeniach o niskim poborze mocy, takich jak Raspberry Pi. Uważa się, że mechanizm dowodu stawki w Ethereum jest bezpieczniejszy niż dowód pracy, ponieważ koszt ataku jest wyższy, a konsekwencje dla atakującego są poważniejsze.
 
-Proof-of-work kontra proof-of-stake to kontrowersyjny temat. [Blog Vitalika Buterina](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) oraz debata pomiędzy Justinem Drake'em a Lyn Alden dobrze podsumowują te argumenty.
+Dowód pracy kontra dowód stawki to temat sporny. [Blog Vitalika Buterina](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) oraz debata między Justinem Drake'iem a Lyn Alden stanowią dobre podsumowanie argumentów.
 
-<YouTube id="1m12zgJ42dI" />
+<VideoWatch slug="pow-vs-pos" />
 
-## Czy proof-of-stake jest energooszczędny? {#is-pos-energy-efficient}
+## Czy dowód stawki jest energooszczędny? {#is-pos-energy-efficient}
 
-Tak. Węzły w sieci proof-of-stake zużywają niewielką ilość energii. W badaniu przeprowadzonym przez stronę trzecią stwierdzono, że cała sieć proof-of-stake Ethereum zużywa około 0,0026 TWh/rok — około 13 000 razy mniej niż gaming w samych Stanach Zjednoczonych.
+Tak. Węzły w sieci dowodu stawki zużywają znikomą ilość energii. Niezależne badanie wykazało, że cała sieć Ethereum oparta na dowodzie stawki zużywa około 0,0026 TWh rocznie – około 13 000 razy mniej niż sam sektor gier w USA.
 
 [Więcej o zużyciu energii przez Ethereum](/energy-consumption/).
 
-## Czy proof-of-stake jest bezpieczny? {#is-pos-secure}
+## Czy dowód stawki jest bezpieczny? {#is-pos-secure}
 
-Proof-of-stake Ethereum jest bardzo bezpieczny. Mechanizm ten był badany, rozwijany i rygorystycznie testowany przez osiem lat przed uruchomieniem. Gwarancje bezpieczeństwa różnią się od blockchainów proof-of-work. W proof-of-stake złośliwi walidatorzy mogą być aktywnie karani („odcinani”) i wyrzucani z zestawu walidatorów, co kosztuje znaczną ilość ETH. W przypadku proof-of-work atakujący może powtarzać swój atak, dopóki ma wystarczającą moc hashowania. Przeprowadzenie równoważnych ataków na proof-of-stake Ethereum jest również bardziej kosztowne niż w przypadku proof-of-work. Aby wpłynąć na żywotność łańcucha, wymagane jest co najmniej 33% całkowitego zestakowanego etheru w sieci (z wyjątkiem przypadków bardzo wyrafinowanych ataków o bardzo niskim prawdopodobieństwie powodzenia). Aby kontrolować zawartość przyszłych bloków, wymagane jest co najmniej 51% całkowitego zestakowanego ETH, a do zmiany historii potrzebne jest ponad 66% całkowitej stawki. Protokół Ethereum zniszczyłby te aktywa w scenariuszach ataku 33% lub 51% oraz poprzez konsensus społeczny w scenariuszu ataku 66%.
+Dowód stawki w Ethereum jest bardzo bezpieczny. Mechanizm ten był badany, rozwijany i rygorystycznie testowany przez osiem lat przed uruchomieniem. Gwarancje bezpieczeństwa różnią się od tych w blockchainach opartych na dowodzie pracy. W dowodzie stawki złośliwe walidatory mogą być aktywnie karane („cięcie”) i usuwane z zestawu walidatorów, co kosztuje je znaczną ilość ETH. W przypadku dowodu pracy atakujący może powtarzać swój atak, dopóki dysponuje wystarczającą mocą obliczeniową (hash power). Przeprowadzenie równoważnych ataków na Ethereum oparte na dowodzie stawki jest również bardziej kosztowne niż w przypadku dowodu pracy. Aby wpłynąć na żywotność (liveness) łańcucha, wymagane jest co najmniej 33% całkowitego stakowanego etheru w sieci (z wyjątkiem bardzo wyrafinowanych ataków o niezwykle niskim prawdopodobieństwie sukcesu). Aby kontrolować zawartość przyszłych bloków, wymagane jest co najmniej 51% całkowitego stakowanego ETH, a do przepisania historii potrzeba ponad 66% całkowitej stawki. Protokół Ethereum zniszczyłby te aktywa w scenariuszach ataku 33% lub 51%, a poprzez konsensus społeczny w scenariuszu ataku 66%.
 
-- [Więcej o obronie proof-of-stake w Ethereum przed atakującymi](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
-- [Więcej o projekcie proof-of-stake](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
+- [Więcej o obronie dowodu stawki Ethereum przed atakującymi](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
+- [Więcej o projekcie dowodu stawki](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
 
-## Czy proof-of-stake sprawia, że Ethereum jest tańsze? {#does-pos-make-ethereum-cheaper}
+## Czy dowód stawki sprawia, że Ethereum jest tańsze? {#does-pos-make-ethereum-cheaper}
 
-Nie. Koszt wysłania transakcji (opłata za gaz) jest określany przez dynamiczny rynek opłat, który rośnie wraz ze wzrostem zapotrzebowania sieci. Mechanizm konsensusu nie ma na to bezpośredniego wpływu.
+Nie. Koszt wysłania transakcji (opłata za gaz) jest określany przez dynamiczny rynek opłat, który rośnie wraz z większym popytem w sieci. Mechanizm konsensusu nie ma na to bezpośredniego wpływu.
 
 [Więcej o gazie](/developers/docs/gas).
 
-## Czym są węzły, klienty i walidatorzy? {#what-are-nodes-clients-and-validators}
+## Czym są węzły, klienty i walidatory? {#what-are-nodes-clients-and-validators}
 
-Węzły to komputery podłączone do sieci Ethereum. Klienty to uruchamiane przez nich oprogramowanie, które zamienia komputer w węzeł. Istnieją dwa rodzaje klientów: klienty wykonawcze i klienty konsensusu. Oba są potrzebne do utworzenia węzła. Walidator jest opcjonalnym dodatkiem do klienta konsensusu, który umożliwia węzłowi uczestnictwo w konsensusie proof-of-stake. Oznacza to tworzenie i proponowanie bloków po wybraniu walidatora i poświadczaniu bloków, o których słyszą w sieci. Aby uruchomić walidator, operator węzła musi wpłacić 32 ETH do kontraktu depozytowego.
+Węzły to komputery podłączone do sieci Ethereum. Klienty to oprogramowanie, które uruchamiają, zmieniające komputer w węzeł. Istnieją dwa rodzaje klientów: klienty wykonawcze i klienty konsensusu. Oba są potrzebne do utworzenia węzła. Walidator to opcjonalny dodatek do klienta konsensusu, który umożliwia węzłowi uczestnictwo w konsensusie dowodu stawki. Oznacza to tworzenie i proponowanie bloków po wybraniu oraz poświadczanie (attesting) bloków, o których dowiadują się w sieci. Aby uruchomić walidator, operator węzła musi zdeponować 32 ETH w kontrakcie depozytowym.
 
 - [Więcej o węzłach i klientach](/developers/docs/nodes-and-clients)
-- [Więcej o stakowaniu](/staking)
+- [Więcej o stakingu](/staking)
 
-## Czy proof-of-stake to nowy pomysł? {#is-pos-new}
+## Czy dowód stawki to nowy pomysł? {#is-pos-new}
 
-Nie. Użytkownik na BitcoinTalk [zaproponował podstawową ideę proof-of-stake](https://bitcointalk.org/index.php?topic=27787.0) jako ulepszenie do Bitcoin w 2011 roku. Minęło jedenaście lat, zanim był on gotowy do wdrożenia w sieci głównej Ethereum. Niektóre inne sieci wdrożyły proof-of-stake wcześniej niż Ethereum, ale nie specyficzny mechanizm Ethereum (znany jako Gasper).
+Nie. Użytkownik na forum BitcoinTalk [zaproponował podstawową ideę dowodu stawki](https://bitcointalk.org/index.php?topic=27787.0) jako aktualizację dla Bitcoina w 2011 roku. Minęło jedenaście lat, zanim był gotowy do wdrożenia w sieci głównej Ethereum. Niektóre inne łańcuchy wdrożyły dowód stawki wcześniej niż Ethereum, ale nie specyficzny mechanizm Ethereum (znany jako Gasper).
 
-## Co jest wyjątkowego w proof-of-stake Ethereum? {#why-is-ethereum-pos-special}
+## Co jest wyjątkowego w dowodzie stawki Ethereum? {#why-is-ethereum-pos-special}
 
-Mechanizm proof-of-stake Ethereum jest unikalny w swojej konstrukcji. Nie był to pierwszy mechanizm proof-of-stake, który został zaprojektowany i wdrożony, ale jest najbardziej niezawodny. Mechanizm proof-of-stake jest znany jako „Casper”. Casper definiuje, w jaki sposób walidatorzy są wybierani do proponowania bloków, w jaki sposób i kiedy poświadczenia są dokonywane, w jaki sposób poświadczenia są liczone, nagrody i kary przyznawane walidatorom, warunki cięcia, mechanizmy awaryjne, takie jak wyciek nieaktywności, oraz warunki „finalizacji”. Finalizacja to warunek, że aby blok został uznany za stałą część łańcucha kanonicznego, musi zostać przegłosowany przez co najmniej 66% wszystkich zestakowanych ETH w sieci. Badacze opracowali Casper specjalnie dla Ethereum, a Ethereum jest pierwszym i jedynym blockchainem, który go wdrożył.
+Mechanizm dowodu stawki w Ethereum jest unikalny w swoim projekcie. Nie był to pierwszy zaprojektowany i wdrożony mechanizm dowodu stawki, ale jest najbardziej solidny. Mechanizm dowodu stawki jest znany jako „Casper”. Casper określa, w jaki sposób wybierane są walidatory do proponowania bloków, jak i kiedy dokonywane są poświadczenia, jak są one liczone, nagrody i kary przyznawane walidatorom, warunki cięcia (slashing), mechanizmy awaryjne, takie jak wyciek za nieaktywność, oraz warunki „ostateczności”. Ostateczność to warunek, zgodnie z którym, aby blok został uznany za stałą część kanonicznego łańcucha, musi na niego zagłosować co najmniej 66% całkowitego stakowanego ETH w sieci. Badacze opracowali Casper specjalnie dla Ethereum, a Ethereum jest pierwszym i jedynym blockchainem, który go wdrożył.
 
-Jako dodatek do Casper, proof-of-stake Ethereum wykorzystuje algorytm wyboru forka o nazwie LMD-GHOST. Jest to wymagane w przypadku wystąpienia sytuacji, w której istnieją dwa bloki dla tego samego slotu. Tworzy to dwa forki blockchainu. LMD-GHOST wybiera tego, który ma największą „wagę” poświadczeń. Waga to liczba poświadczeń ważona efektywnym bilansem walidatorów. LMD-GHOST jest unikalny dla Ethereum.
+Oprócz Casper, dowód stawki w Ethereum wykorzystuje algorytm wyboru rozwidlenia o nazwie LMD-GHOST. Jest to wymagane w przypadku wystąpienia sytuacji, w której istnieją dwa bloki dla tego samego slotu. Tworzy to dwa rozwidlenia blockchaina. LMD-GHOST wybiera to, które ma największą „wagę” poświadczeń. Waga to liczba poświadczeń ważona przez saldo efektywne walidatorów. LMD-GHOST jest unikalny dla Ethereum.
 
 Połączenie Casper i LMD_GHOST jest znane jako Gasper.
 
 [Więcej o Gasper](/developers/docs/consensus-mechanisms/pos/gasper/)
 
-## Czym jest cięcie? {#what-is-slashing}
+## Czym jest cięcie (slashing)? {#what-is-slashing}
 
-Cięcie to termin określający zniszczenie części stawki walidatora i wyrzucenie go z sieci. Ilość ETH utraconych w wyniku cięcia skaluje się wraz z liczbą usuniętych walidatorów — oznacza to, że walidatorzy działający w zmowie są karani surowiej niż pojedyncze osoby.
+Cięcie to termin określający zniszczenie części stawki walidatora i usunięcie go z sieci. Ilość ETH utracona w wyniku cięcia skaluje się wraz z liczbą karanych w ten sposób walidatorów – oznacza to, że walidatory działające w zmowie są karane surowiej niż pojedyncze jednostki.
 
-[Więcej o slashingu](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties#slashing)
+[Więcej o cięciu](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties#slashing)
 
-## Dlaczego walidatorzy potrzebują 32 ETH? {#why-32-eth}
+## Dlaczego walidatory potrzebują 32 ETH? {#why-32-eth}
 
-Walidatorzy muszą stakować ETH, aby mieć coś do stracenia, jeśli zachowają się niewłaściwie. Powodem, dla którego muszą zestakować 32 ETH, jest umożliwienie działania węzłów na skromnym sprzęcie. Gdyby minimalna stawka ETH na walidatora była niższa, wówczas liczba walidatorów, a tym samym liczba wiadomości, które muszą być przetwarzane w każdym slocie, wzrosłaby, co oznacza, że do uruchomienia węzła potrzebny byłby mocniejszy sprzęt.
+Walidatory muszą stakować ETH, aby miały coś do stracenia w przypadku niewłaściwego zachowania. Powodem, dla którego muszą stakować dokładnie 32 ETH, jest umożliwienie działania węzłów na skromnym sprzęcie. Gdyby minimalna ilość ETH na walidator była niższa, liczba walidatorów, a tym samym liczba wiadomości, które muszą zostać przetworzone w każdym slocie, wzrosłaby, co oznaczałoby, że do uruchomienia węzła wymagany byłby potężniejszy sprzęt.
 
-## Jak wybierani są walidatorzy? {#how-are-validators-selected}
+## Jak wybierane są walidatory? {#how-are-validators-selected}
 
-Pojedynczy walidator jest wybierany pseudolosowo, aby zaproponować blok w każdym slocie przy użyciu algorytmu o nazwie RANDAO, który łączy hash od proponenta bloku z ziarnem, które jest aktualizowane co blok. Ta wartość służy do wyboru określonego walidatora z całego zestawu walidatorów. Wybór walidatora jest ustalany na dwie epoki z góry.
+Pojedynczy walidator jest pseudolosowo wybierany jako proponujący blok w każdym slocie za pomocą algorytmu o nazwie RANDAO, który miesza hash od proponującego blok z ziarnem (seed), które jest aktualizowane w każdym bloku. Wartość ta służy do wyboru konkretnego walidatora z całego zestawu walidatorów. Wybór walidatora jest ustalany z wyprzedzeniem dwóch epok.
 
 [Więcej o wyborze walidatora](/developers/docs/consensus-mechanisms/pos/block-proposal)
 
-## Co to jest stake grinding? {#what-is-stake-grinding}
+## Czym jest manipulacja stawką (stake grinding)? {#what-is-stake-grinding}
 
-Stake grinding to kategoria ataków na sieci proof-of-stake, w których atakujący próbuje wpłynąć na algorytm wyboru walidatorów na korzyść własnych walidatorów. Ataki stake grinding na RANDAO wymagają około połowy wszystkich zestakowanych ETH.
+Manipulacja stawką to kategoria ataku na sieci oparte na dowodzie stawki, w której atakujący próbuje wpłynąć na algorytm wyboru walidatora na korzyść własnych walidatorów. Ataki polegające na manipulacji stawką na RANDAO wymagają około połowy całkowitego stakowanego ETH.
 
-[Więcej o stake grinding](https://eth2book.info/altair/part2/building_blocks/randomness/#randao-biasability)
+[Więcej o manipulacji stawką](https://eth2book.info/altair/part2/building_blocks/randomness/#randao-biasability)
 
-## Czym jest social slashing? {#what-is-social-slashing}
+## Czym jest karanie społecznościowe (social slashing)? {#what-is-social-slashing}
 
-Social slashing to zdolność społeczności do skoordynowania forka łańcucha bloków w odpowiedzi na atak. Umożliwia to społeczności odzyskanie stanu sprzed sfinalizowania nieuczciwego łańcucha przez atakującego. Social slashing może być również użyty przeciwko atakom cenzurującym.
+Karanie społecznościowe to zdolność społeczności do skoordynowania rozwidlenia blockchaina w odpowiedzi na atak. Umożliwia to społeczności odzyskanie sprawności po sfinalizowaniu nieuczciwego łańcucha przez atakującego. Karanie społecznościowe może być również wykorzystane przeciwko atakom cenzury.
 
-- [Więcej o social slashing](https://ercwl.medium.com/the-case-for-social-slashing-59277ff4d9c7)
-- [Vitalik Buterin o social slashing](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
+- [Więcej o karaniu społecznościowym](https://ercwl.medium.com/the-case-for-social-slashing-59277ff4d9c7)
+- [Vitalik Buterin o karaniu społecznościowym](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
 
-## Czy zostanę zslashowany? {#will-i-get-slashed}
+## Czy zostanę ukarany cięciem? {#will-i-get-slashed}
 
-Jako walidator, bardzo trudno jest zostać poddanym slashingowi, chyba że celowo dopuszczasz się złośliwego zachowania. Slashing jest stosowany tylko w bardzo specyficznych scenariuszach, w których walidatorzy proponują wiele bloków dla tego samego slotu lub zaprzeczają samym sobie swoimi atestacjami - jest bardzo mało prawdopodobne, aby takie sytuacje powstały przypadkowo.
+Jako walidator bardzo trudno jest zostać ukaranym cięciem, chyba że celowo angażujesz się w złośliwe zachowanie. Cięcie jest wdrażane tylko w bardzo specyficznych scenariuszach, w których walidatory proponują wiele bloków dla tego samego slotu lub zaprzeczają sobie w swoich poświadczeniach – jest bardzo mało prawdopodobne, aby wystąpiły one przypadkowo.
 
-[Więcej o warunkach slashingu](https://eth2book.info/altair/part2/incentives/slashing)
+[Więcej o warunkach cięcia](https://eth2book.info/altair/part2/incentives/slashing)
 
-## Na czym polega problem „nic do stracenia”? {#what-is-nothing-at-stake-problem}
+## Czym jest problem braku stawki (nothing-at-stake)? {#what-is-nothing-at-stake-problem}
 
-Problem „nic do stracenia” to koncepcyjny problem w niektórych mechanizmach proof-of-stake, gdzie istnieją tylko nagrody, a nie ma kar. Jeśli nie ma nic do stracenia, pragmatyczny walidator z równą chęcią poświadczy dowolny, a nawet wiele forków łańcucha bloków, ponieważ zwiększa to jego nagrody. Ethereum omija ten problem, używając warunków finalizacji i slashingu, aby zapewnić jeden kanoniczny łańcuch.
+Problem braku stawki to koncepcyjny problem z niektórymi mechanizmami dowodu stawki, w których istnieją tylko nagrody, a nie ma kar. Jeśli nie ma nic do stracenia (braku stawki), pragmatyczny walidator równie chętnie poświadcza dowolne, a nawet wiele rozwidleń blockchaina, ponieważ zwiększa to jego nagrody. Ethereum omija to, stosując warunki ostateczności i cięcie, aby zapewnić jeden kanoniczny łańcuch.
 
-[Więcej o problemie „nic do stracenia”](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
+[Więcej o problemie braku stawki](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
 
-## Czym jest algorytm wyboru forka? {#what-is-a-fork-choice-algorithm}
+## Czym jest algorytm wyboru rozwidlenia? {#what-is-a-fork-choice-algorithm}
 
-Algorytm wyboru forka implementuje zasady określające, który łańcuch jest kanoniczny. W optymalnych warunkach nie ma potrzeby stosowania reguły wyboru forka, ponieważ na każdy slot przypada tylko jeden proponujący blok i jest tylko jeden blok do wyboru. Czasami jednak wiele bloków dla tego samego slotu lub późno napływające informacje prowadzą do wielu opcji organizacji bloków w pobliżu początku łańcucha. W takich przypadkach wszyscy klienci muszą identycznie implementować te same zasady, aby upewnić się, że wszyscy wybierają prawidłową sekwencję bloków. Algorytm wyboru forka koduje te zasady.
+Algorytm wyboru rozwidlenia wdraża zasady określające, który łańcuch jest tym kanonicznym. W optymalnych warunkach nie ma potrzeby stosowania reguły wyboru rozwidlenia, ponieważ na każdy slot przypada tylko jeden proponujący blok i jeden blok do wyboru. Czasami jednak wiele bloków dla tego samego slotu lub późno docierające informacje prowadzą do wielu opcji organizacji bloków w pobliżu czoła (head) łańcucha. W takich przypadkach wszystkie klienty muszą identycznie wdrożyć pewne zasady, aby upewnić się, że wszystkie wybierają prawidłową sekwencję bloków. Algorytm wyboru rozwidlenia koduje te zasady.
 
-Algorytm wyboru forka w Ethereum nazywa się LMD-GHOST. Wybiera on fork z największą wagą atestacji, czyli ten, za którym głosowała większość zastakowanych ETH.
+Algorytm wyboru rozwidlenia w Ethereum nazywa się LMD-GHOST. Wybiera on rozwidlenie o największej wadze poświadczeń, czyli to, na które zagłosowało najwięcej stakowanego ETH.
 
 [Więcej o LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper/#fork-choice)
 
-## Czym jest finalizacja w proof-of-stake? {#what-is-finality}
+## Czym jest ostateczność w dowodzie stawki? {#what-is-finality}
 
-Finalizacja w proof-of-stake to gwarancja, że dany blok jest stałą częścią kanonicznego łańcucha i nie może zostać odwrócony, chyba że dojdzie do awarii konsensusu, w której atakujący spali 33% całego zastakowanego etheru. Jest to finalizacja „kryptoekonomiczna”, w przeciwieństwie do „finalizacji probabilistycznej”, która ma zastosowanie w łańcuchach bloków typu proof-of-work. W finalizacji probabilistycznej nie ma jawnych stanów sfinalizowanych/niesfinalizowanych dla bloków - po prostu staje się coraz mniej prawdopodobne, że blok może zostać usunięty z łańcucha w miarę starzenia się, a użytkownicy sami określają, kiedy są wystarczająco pewni, że blok jest „bezpieczny”. W przypadku finalizacji kryptoekonomicznej, na pary bloków kontrolnych musi zagłosować 66% zastakowanego etheru. Jeśli ten warunek jest spełniony, bloki pomiędzy tymi punktami kontrolnymi są jawnie „sfinalizowane”.
+Ostateczność w dowodzie stawki to gwarancja, że dany blok jest stałą częścią kanonicznego łańcucha i nie może zostać cofnięty, chyba że nastąpi awaria konsensusu, w której atakujący spali 33% całkowitego stakowanego etheru. Jest to ostateczność „kryptoekonomiczna”, w przeciwieństwie do „ostateczności probabilistycznej”, która ma zastosowanie w blockchainach opartych na dowodzie pracy. W ostateczności probabilistycznej nie ma wyraźnych sfinalizowanych/niesfinalizowanych stanów dla bloków – po prostu staje się coraz mniej prawdopodobne, że blok mógłby zostać usunięty z łańcucha w miarę jego starzenia się, a użytkownicy sami określają, kiedy są wystarczająco pewni, że blok jest „bezpieczny”. W przypadku ostateczności kryptoekonomicznej, na pary bloków punktów kontrolnych musi zagłosować 66% stakowanego etheru. Jeśli ten warunek jest spełniony, bloki między tymi punktami kontrolnymi są wyraźnie „sfinalizowane”.
 
-[Więcej o finalizacji](/developers/docs/consensus-mechanisms/pos/#finality)
+[Więcej o ostateczności](/developers/docs/consensus-mechanisms/pos/#finality)
 
 ## Czym jest „słaba subiektywność”? {#what-is-weak-subjectivity}
 
-Słaba subiektywność to cecha sieci proof-of-stake, w której informacje społeczne są wykorzystywane do potwierdzenia bieżącego stanu łańcucha bloków. Nowe węzły lub węzły ponownie dołączające do sieci po długim okresie bycia offline mogą otrzymać najnowszy stan, dzięki czemu węzeł może natychmiast sprawdzić, czy znajduje się na prawidłowym łańcuchu. Stany te są znane jako „punkty kontrolne słabej subiektywności” i można je uzyskać od innych operatorów węzłów w sposób pozapasmowy, z eksploratorów bloków lub z kilku publicznych punktów końcowych.
+Słaba subiektywność to cecha sieci opartych na dowodzie stawki, w których informacje społeczne są wykorzystywane do potwierdzenia obecnego stanu blockchaina. Nowe węzły lub węzły ponownie dołączające do sieci po długim czasie bycia offline mogą otrzymać niedawny stan, dzięki czemu węzeł może natychmiast sprawdzić, czy znajduje się w odpowiednim łańcuchu. Stany te są znane jako „punkty kontrolne słabej subiektywności” i można je uzyskać od innych operatorów węzłów poza pasmem (out-of-band), z eksploratorów bloków lub z kilku publicznych punktów końcowych.
 
 [Więcej o słabej subiektywności](/developers/docs/consensus-mechanisms/pos/weak-subjectivity)
 
-## Czy proof-of-stake jest odporny na cenzurę? {#is-pos-censorship-resistant}
+## Czy dowód stawki jest odporny na cenzurę? {#is-pos-censorship-resistant}
 
-Odporność na cenzurę jest obecnie trudna do udowodnienia. Jednak w przeciwieństwie do proof-of-work, proof-of-stake oferuje opcję koordynowania slashingów w celu ukarania cenzurujących walidatorów. Nadchodzą zmiany w protokole, które oddzielają budowniczych bloków od proponujących bloki i wprowadzają listy transakcji, które budowniczowie muszą uwzględnić w każdym bloku. Ta propozycja jest znana jako separacja proponującego i budowniczego (proposer-builder separation) i pomaga zapobiegać cenzurowaniu transakcji przez walidatorów.
+Odporność na cenzurę jest obecnie trudna do udowodnienia. Jednak w przeciwieństwie do dowodu pracy, dowód stawki oferuje opcję koordynowania cięć w celu ukarania cenzurujących walidatorów. Nadchodzą zmiany w protokole, które oddzielają budowniczych bloków od proponujących bloki i wdrażają listy transakcji, które budowniczowie muszą uwzględnić w każdym bloku. Ta propozycja jest znana jako separacja proponującego i budującego (PBS) i pomaga zapobiegać cenzurowaniu transakcji przez walidatory.
 
-[Więcej o separacji proponującego i budowniczego](https://notes.ethereum.org/@fradamt/H1TsYRfJc#Original-basic-scheme)
+[Więcej o separacji proponującego i budującego (PBS)](https://notes.ethereum.org/@fradamt/H1TsYRfJc#Original-basic-scheme)
 
-## Czy system proof-of-stake w Ethereum może być celem ataku 51%? {#pos-51-attack}
+## Czy system dowodu stawki Ethereum może paść ofiarą ataku 51%? {#pos-51-attack}
 
-Tak. Proof-of-stake jest podatny na ataki 51%, tak samo jak proof-of-work. Zamiast wymagać 51% mocy haszującej sieci, atakujący potrzebuje 51% wszystkich zastakowanych ETH. Atakujący, który zgromadzi 51% całkowitego stake'u, zyskuje kontrolę nad algorytmem wyboru forka. Umożliwia to atakującemu cenzurowanie określonych transakcji, przeprowadzanie reorganizacji krótkiego zasięgu i ekstrakcję MEV poprzez zmianę kolejności bloków na swoją korzyść.
+Tak. Dowód stawki jest podatny na ataki 51%, podobnie jak dowód pracy. Zamiast wymagać 51% mocy obliczeniowej sieci, atakujący potrzebuje 51% całkowitego stakowanego ETH. Atakujący, który zgromadzi 51% całkowitej stawki, zyskuje kontrolę nad algorytmem wyboru rozwidlenia. Umożliwia to atakującemu cenzurowanie określonych transakcji, przeprowadzanie krótkoterminowych reorganizacji (reorgs) i wydobywanie MEV poprzez zmianę kolejności bloków na swoją korzyść.
 
-[Więcej o atakach na proof-of-stake](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
+[Więcej o atakach na dowód stawki](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
 
 ## Czym jest koordynacja społeczna i dlaczego jest potrzebna? {#what-is-social-coordination}
 
-Koordynacja społeczna jest ostatnią linią obrony dla Ethereum, która pozwoliłaby na odzyskanie uczciwego łańcucha po ataku, który sfinalizował nieuczciwe bloki. W takim przypadku społeczność Ethereum musiałaby skoordynować się „pozapasmowo” i zgodzić się na użycie uczciwego forka mniejszościowego, dokonując w procesie slashingu walidatorów atakującego. Wymagałoby to również, aby aplikacje i giełdy uznały ten uczciwy fork.
+Koordynacja społeczna to ostatnia linia obrony dla Ethereum, która pozwoliłaby na odzyskanie uczciwego łańcucha po ataku, który sfinalizował nieuczciwe bloki. W takim przypadku społeczność Ethereum musiałaby skoordynować się „poza pasmem” (out-of-band) i zgodzić się na użycie uczciwego rozwidlenia mniejszościowego, karząc przy tym cięciem walidatory atakującego. Wymagałoby to również od aplikacji i giełd uznania uczciwego rozwidlenia.
 
 [Przeczytaj więcej o koordynacji społecznej](/developers/docs/consensus-mechanisms/pos/attack-and-defense#people-the-last-line-of-defense)
 
-## Czy w proof-of-stake bogaci stają się bogatsi? {#do-rich-get-richer}
+## Czy bogaci stają się bogatsi w dowodzie stawki? {#do-rich-get-richer}
 
-Im więcej ETH ktoś stakuje, tym więcej walidatorów może uruchomić i tym więcej nagród może zgromadzić. Nagrody skalują się liniowo z ilością zastakowanych ETH, a każdy otrzymuje taki sam zwrot procentowy. Proof-of-work wzbogaca bogatych bardziej niż proof-of-stake, ponieważ bogatsi górnicy, którzy kupują sprzęt na dużą skalę, korzystają z ekonomii skali, co oznacza, że związek między bogactwem a nagrodą jest nieliniowy.
+Im więcej ETH ktoś ma do stakowania, tym więcej walidatorów może uruchomić i tym więcej nagród może zgromadzić. Nagrody skalują się liniowo z ilością stakowanego ETH, a każdy otrzymuje taki sam procentowy zwrot. Dowód pracy wzbogaca bogatych bardziej niż dowód stawki, ponieważ bogatsi górnicy, którzy kupują sprzęt na dużą skalę, korzystają z ekonomii skali, co oznacza, że relacja między bogactwem a nagrodą jest nieliniowa.
 
-## Czy proof-of-stake jest bardziej scentralizowany niż proof-of-work? {#is-pos-decentralized}
+## Czy dowód stawki jest bardziej scentralizowany niż dowód pracy? {#is-pos-decentralized}
 
-Nie, proof-of-work ma tendencję do centralizacji, ponieważ koszty kopania rosną i eliminują z rynku osoby fizyczne, następnie małe firmy i tak dalej. Obecnym problemem z proof-of-stake jest wpływ płynnych instrumentów pochodnych stakowania (LSD). Są to tokeny reprezentujące ETH zastakowane przez jakiegoś dostawcę, które każdy może wymieniać na rynkach wtórnych bez konieczności odstakowywania rzeczywistych ETH. LSD pozwalają użytkownikom stakować mniej niż 32 ETH, ale tworzą również ryzyko centralizacji, w którym kilka dużych organizacji może skończyć kontrolując dużą część stake'u. Dlatego [solo staking](/staking/solo) jest najlepszą opcją dla Ethereum.
+Nie, dowód pracy ma tendencję do centralizacji, ponieważ koszty kopania rosną i wypierają z rynku osoby prywatne, a następnie małe firmy i tak dalej. Obecnym problemem z dowodem stawki jest wpływ instrumentów pochodnych płynnego stakingu (LSD). Są to tokeny reprezentujące ETH stakowane przez jakiegoś dostawcę, które każdy może wymieniać na rynkach wtórnych bez faktycznego odblokowywania (unstaking) ETH. LSD pozwalają użytkownikom na stakowanie z mniej niż 32 ETH, ale stwarzają również ryzyko centralizacji, w którym kilka dużych organizacji może ostatecznie kontrolować znaczną część stawki. Dlatego [staking solo](/staking/solo) jest najlepszą opcją dla Ethereum.
 
-[Więcej o centralizacji stake'u w LSD](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
+[Więcej o centralizacji stawki w LSD](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
 
 ## Dlaczego mogę stakować tylko ETH? {#why-can-i-only-stake-eth}
 
-ETH jest natywną walutą Ethereum. Kluczowe jest posiadanie jednej waluty, w której denominowane są wszystkie stake'i, zarówno do rozliczania efektywnych sald w celu ważenia głosów, jak i dla bezpieczeństwa. Samo ETH jest fundamentalnym składnikiem Ethereum, a nie inteligentnym kontraktem. Włączenie innych walut znacznie zwiększyłoby złożoność i zmniejszyło bezpieczeństwo stakowania.
+ETH to natywna waluta Ethereum. Posiadanie jednej waluty, w której denominowane są wszystkie stawki, jest niezbędne zarówno do rozliczania sald efektywnych w celu ważenia głosów, jak i dla bezpieczeństwa. Samo ETH jest fundamentalnym elementem Ethereum, a nie inteligentnym kontraktem. Włączenie innych walut znacznie zwiększyłoby złożoność i zmniejszyło bezpieczeństwo stakingu.
 
-## Czy Ethereum jest jedynym łańcuchem bloków z proof-of-stake? {#is-ethereum-the-only-pos-blockchain}
+## Czy Ethereum to jedyny blockchain oparty na dowodzie stawki? {#is-ethereum-the-only-pos-blockchain}
 
-Nie, istnieje kilka łańcuchów bloków z proof-of-stake. Żaden nie jest identyczny z Ethereum; mechanizm proof-of-stake w Ethereum jest unikalny.
+Nie, istnieje kilka blockchainów opartych na dowodzie stawki. Żaden nie jest identyczny z Ethereum; mechanizm dowodu stawki w Ethereum jest unikalny.
 
-## Czym jest Połączenie (The Merge)? {#what-is-the-merge}
+## Czym jest The Merge? {#what-is-the-merge}
 
-Połączenie (The Merge) to moment, w którym Ethereum wyłączyło swój mechanizm konsensusu oparty na proof-of-work i włączyło mechanizm konsensusu oparty na proof-of-stake. Połączenie (The Merge) miało miejsce 15 września 2022 r.
+The Merge był momentem, w którym Ethereum wyłączyło swój mechanizm konsensusu oparty na dowodzie pracy i włączyło mechanizm konsensusu oparty na dowodzie stawki. The Merge miał miejsce 15 września 2022 roku.
 
-[Więcej o Połączeniu (The Merge)](/roadmap/merge)
+[Więcej o The Merge](/roadmap/merge)
 
-## Czym są żywotność i bezpieczeństwo? {#what-are-liveness-and-safety}
+## Czym są żywotność (liveness) i bezpieczeństwo (safety)? {#what-are-liveness-and-safety}
 
-Żywotność i bezpieczeństwo to dwa fundamentalne aspekty bezpieczeństwa łańcucha bloków. Żywotność to dostępność finalizującego się łańcucha. Jeśli łańcuch przestaje się finalizować lub użytkownicy nie mogą łatwo uzyskać do niego dostępu, są to awarie żywotności. Niezwykle wysoki koszt dostępu również można uznać za awarię żywotności. Bezpieczeństwo odnosi się do tego, jak trudno jest zaatakować łańcuch - tj. sfinalizować sprzeczne punkty kontrolne.
+Żywotność i bezpieczeństwo to dwie podstawowe kwestie bezpieczeństwa dla blockchaina. Żywotność to dostępność finalizującego łańcucha. Jeśli łańcuch przestaje finalizować lub użytkownicy nie mają do niego łatwego dostępu, są to awarie żywotności. Niezwykle wysoki koszt dostępu można również uznać za awarię żywotności. Bezpieczeństwo odnosi się do tego, jak trudno jest zaatakować łańcuch – tj. sfinalizować sprzeczne punkty kontrolne.
 
-[Przeczytaj więcej w dokumentacji Casper](https://arxiv.org/pdf/1710.09437.pdf)
+[Przeczytaj więcej w dokumencie o Casper](https://arxiv.org/pdf/1710.09437.pdf)

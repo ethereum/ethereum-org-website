@@ -37,7 +37,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 **Want to skip setup for now, and jump straight to the samples?**
 
-- [Playground](https://playground.nethereum.com/) - Interact with Ethereum and learn how to use Nethereum through the browser.
+- [Nethereum Playground](https://playground.nethereum.com/) - Interact with Ethereum and learn how to use Nethereum through the browser.
   - [Query Account Balance](https://docs.nethereum.com/docs/core-foundation/guide-query-balance)
   - [Query ERC20 Smart Contract Balance](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [Transfer ether to an Account](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
@@ -47,12 +47,12 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 - [Nethereum Getting Started & First Project](https://docs.nethereum.com/docs/getting-started/first-project)
 - [Deploy Your Own Development Testchains](https://github.com/Nethereum/Testchains)
-- [VSCode Codegen Plugin for Solidity](https://docs.nethereum.com/docs/aspire-templates/guide-codegen)
+- [Code generation with Nethereum and VS Code](https://docs.nethereum.com/docs/smart-contracts/code-generation/)
 - [Unity and Ethereum: Why and How](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [Create ASP.NET Core Web API for Ethereum dapps](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
-- [Using Nethereum Web3 to Implement a Supply Chain Tracking System](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
+- [Nethereum MUD framework for structured on-chain applications](https://docs.nethereum.com/docs/mud-framework/overview/)
 - [Nethereum Blockchain Processing](https://docs.nethereum.com/docs/data-and-indexing/guide-blockchain-processing)
-- [Nethereum Websocket Streaming](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
+- [Nethereum real-time streaming](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido and Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum and Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
 
@@ -60,12 +60,14 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 - [Azure Key Vault And Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
+- [Ujo Nethereum backend reference architecture](https://github.com/Nethereum/ujo-backend)
 
 ## .NET projects, tools and other fun stuff {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/) - _Compile, create, and run Nethereum code snippets in browser_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Nethereum codegen with UI in Blazor_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _A .NET Wasm SPA light blockchain explorer and simple wallet_
+- [Wonka Business Rules Engine](https://github.com/Nethereum/Wonka) - _A business rules engine (for both the .NET platform and the Ethereum platform) that is inherently metadata-driven_
 - [Nethermind](https://github.com/NethermindEth/nethermind) - _A .NET Core Ethereum client for Linux, Windows, MacOS_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _utility functions for working with Ethereum related codebases_
 - [TestChains](https://github.com/Nethereum/TestChains) - _Pre-configured .NET devchains for fast response (PoA)_

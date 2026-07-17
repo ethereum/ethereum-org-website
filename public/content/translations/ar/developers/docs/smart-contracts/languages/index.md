@@ -1,81 +1,81 @@
 ---
-title: "لغات العقد الذكي"
-description: "نظرة عامة ومقارنة بين لغتي العقود الذكية الرئيسيتين – سوليديتي وفايبر."
+title: "لغات العقود الذكية"
+description: "نظرة عامة ومقارنة بين لغتي العقود الذكية الرئيسيتين – ⁦Solidity⁩ و⁦Vyper⁩."
 lang: ar
 ---
 
-أحد الجوانب الرائعة في إيثريوم هو أنه يمكن برمجة العقود الذكية باستخدام لغات صديقة للمطورين نسبيًا. إذا كنت من ذوي الخبرة في لغة بايثون أو أي [لغة تستخدم الأقواس المتعرجة](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages)، يمكنك إيجاد لغة ذات صياغة مألوفة.
+من الجوانب الرائعة في [إيثيريوم](/) أنه يمكن برمجة العقود الذكية باستخدام لغات صديقة للمطورين نسبيًا. إذا كانت لديك خبرة في لغة <span dir="ltr">Python</span> أو أي [لغة تستخدم الأقواس المعقوفة](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages)، فيمكنك العثور على لغة ذات بنية مألوفة.
 
-اللغتان الأكثر نشاطًا والحفاظ عليهما هما:
+اللغتان الأكثر نشاطًا وصيانة هما:
 
-- لغة برمجة سوليديتي
-- لغة برمجة فايبر
+- <span dir="ltr">Solidity</span>
+- <span dir="ltr">Vyper</span>
 
-يوفر ريميكس IDE بيئة تطوير شاملة لإنشاء واختبار العقود في كل من سوليديتي وفايبر. [جرب بيئة التطوير المتكاملة ريميكس IDE في المتصفح](https://remix.ethereum.org) لبدء البرمجة.
+توفر بيئة التطوير المتكاملة <span dir="ltr">Remix</span> بيئة تطوير شاملة لإنشاء واختبار العقود في كل من <span dir="ltr">Solidity</span> و<span dir="ltr">Vyper</span>. [جرب بيئة التطوير المتكاملة Remix في المتصفح](https://remix.ethereum.org) لبدء البرمجة.
 
-قد يرغب المطورون الأكثر خبرة أيضًا في استخدام لغة يول، وهي لغة وسيطة لـ [آلة إيثريوم الافتراضية](/developers/docs/evm/)، أو يول+، وهو امتداد للغة يول.
+قد يرغب المطورون الأكثر خبرة أيضًا في استخدام <span dir="ltr">Yul</span>، وهي لغة وسيطة لـ [آلة إيثيريوم الافتراضية (EVM)](/developers/docs/evm/)، أو <span dir="ltr">Yul+</span>، وهي امتداد للغة <span dir="ltr">Yul</span>.
 
-إذا كنت فضوليًا وترغب في المساعدة في اختبار اللغات الجديدة التي لا تزال قيد التطوير المكثف، فيمكنك تجربة Fe، وهي لغة عقود ذكية ناشئة لا تزال حاليًا في مهدها.
+إذا كنت فضوليًا وترغب في المساعدة في اختبار لغات جديدة لا تزال قيد التطوير المكثف، فيمكنك تجربة <span dir="ltr">Fe</span>، وهي لغة عقود ذكية ناشئة لا تزال حاليًا في مهدها.
 
 ## المتطلبات الأساسية {#prerequisites}
 
-يمكن أن تساعدك المعرفة السابقة بلغات البرمجة، وخاصة جافا سكريبت أو بايثون، على فهم الاختلافات في لغات العقود الذكية. نوصيك أيضًا بفهم العقود الذكية كمفهوم قبل التعمق في المقارنات اللغوية. [مقدمة إلى العقود الذكية](/developers/docs/smart-contracts/).
+يمكن أن تساعدك المعرفة السابقة بلغات البرمجة، وخاصة <span dir="ltr">JavaScript</span> أو <span dir="ltr">Python</span>، في فهم الاختلافات في لغات العقود الذكية. نوصي أيضًا بفهم العقود الذكية كمفهوم قبل التعمق في مقارنات اللغات. [مقدمة عن العقود الذكية](/developers/docs/smart-contracts/).
 
-## سوليديتي {#solidity}
+## <span dir="ltr">Solidity</span> {#solidity}
 
-- لغة كائنية عالية المستوى لتنفيذ العقود الذكية.
-- لغة القوس المتعرج التي تأثرت بشدة بـ سي بلس بلس.
-- مكتوب بشكل ثابت (نوع المتغير معروف في وقت الترجمة).
-- يدعم:
-  - الميراث (يمكنك تمديد عقود أخرى).
-  - المكتبات (يمكنك إنشاء تعليمات برمجية قابلة لإعادة الاستخدام يمكنك استدعاؤها من عقود مختلفة - مثل الوظائف الثابتة في فئة ثابتة في لغات البرمجة الموجهة للكائنات الأخرى).
-  - أنواع معقدة محددة من قبل المستخدم.
+- لغة عالية المستوى وموجهة للكائنات لتنفيذ العقود الذكية.
+- لغة تستخدم الأقواس المعقوفة وتأثرت بشدة بلغة <span dir="ltr">C++</span>.
+- مكتوبة بشكل ثابت (يُعرف نوع المتغير في وقت الترجمة).
+- تدعم:
+  - الوراثة (يمكنك توسيع عقود أخرى).
+  - المكتبات (يمكنك إنشاء كود قابل لإعادة الاستخدام يمكنك استدعاؤه من عقود مختلفة – مثل الدوال الثابتة في فئة ثابتة في لغات البرمجة الموجهة للكائنات الأخرى).
+  - أنواع معقدة يحددها المستخدم.
 
 ### روابط مهمة {#important-links}
 
 - [التوثيق](https://docs.soliditylang.org/en/latest/)
-- [بوابة لغة سوليديتي](https://soliditylang.org/)
-- [سوليديتي by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
-- [غيت هاب](https://github.com/ethereum/solidity/)
-- [غرفة محادثة سوليديتي على جيتر](https://gitter.im/ethereum/solidity) مرتبطة بـ [غرفة محادثة سوليديتي على Matrix](https://matrix.to/#/#ethereum_solidity:gitter.im)
-- [ورقة الغش](https://reference.auditless.com/cheatsheet)
-- [مدونة سوليديتي](https://blog.soliditylang.org/)
-- [حساب سوليديتي على تويتر](https://twitter.com/solidity_lang)
+- [بوابة لغة Solidity](https://soliditylang.org/)
+- [Solidity بالأمثلة](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
+- [GitHub](https://github.com/ethereum/solidity/)
+- [غرفة دردشة Solidity على Gitter](https://gitter.im/ethereum/solidity) متصلة بـ [غرفة دردشة Solidity على Matrix](https://matrix.to/#/#ethereum_solidity:gitter.im)
+- [ورقة مرجعية (Cheat Sheet)](https://reference.auditless.com/cheatsheet)
+- [مدونة Solidity](https://blog.soliditylang.org/)
+- [تويتر Solidity](https://twitter.com/solidity_lang)
 
-### عقد مثال {#example-contract}
+### مثال على عقد {#example-contract}
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >= 0.7.0;
 
 contract Coin {
-    // الكلمة الرئيسية "public" تجعل المتغيرات
-    // قابلة للوصول من العقود الأخرى
+    // تجعل الكلمة المفتاحية "public" المتغيرات
+    // قابلة للوصول من عقود أخرى
     address public minter;
     mapping (address => uint) public balances;
 
     // تسمح الأحداث للعملاء بالتفاعل مع
-    // تغييرات معينة في العقد تعلن عنها
+    // تغييرات محددة في العقد تعلن عنها
     event Sent(address from, address to, uint amount);
 
-    // يتم تشغيل كود المنشئ فقط عند إنشاء
-    // العقد
+    // يتم تشغيل كود المُنشئ فقط عندما
+    // يتم إنشاء العقد
     constructor() {
         minter = msg.sender;
     }
 
-    // يرسل كمية من العملات التي تم إنشاؤها حديثًا إلى عنوان
-    // لا يمكن استدعاؤه إلا من قبل منشئ العقد
+    // يرسل كمية من العملات المنشأة حديثًا إلى عنوان
+    // يمكن استدعاؤه فقط من قبل منشئ العقد
     function mint(address receiver, uint amount) public {
         require(msg.sender == minter);
         require(amount < 1e60);
         balances[receiver] += amount;
     }
 
-    // يرسل كمية من العملات الموجودة
-    // من أي مستدعٍ إلى عنوان
+    // يرسل كمية من العملات الحالية
+    // من أي متصل إلى عنوان
     function send(address receiver, uint amount) public {
-        require(amount <= balances[msg.sender], "رصيد غير كافٍ.");
+        require(amount <= balances[msg.sender], "Insufficient balance.");
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
         emit Sent(msg.sender, receiver, amount);
@@ -83,39 +83,39 @@ contract Coin {
 }
 ```
 
-يجب أن يمنحك هذا المثال فكرة عن صيغة عقد سوليديتي. للحصول على وصف أكثر تفصيلاً للوظائف والمتغيرات، [انظر التوثيق](https://docs.soliditylang.org/en/latest/contracts.html).
+يجب أن يمنحك هذا المثال فكرة عن شكل بنية عقد <span dir="ltr">Solidity</span>. للحصول على وصف أكثر تفصيلاً للدوال والمتغيرات، [راجع التوثيق](https://docs.soliditylang.org/en/latest/contracts.html).
 
-## فايبر {#vyper}
+## <span dir="ltr">Vyper</span> {#vyper}
 
-- لغة البرمجة Pythonic
-- صياغة قوية
-- رمز مترجم صغير ومفهوم
-- توليد رمز بايت فعال
-- تحتوي عمدًا على ميزات أقل من سوليديتي بهدف جعل العقود أكثر أمانًا وأسهل للتدقيق. فايبر لا يدعم:
-  - المعدلون
-  - الميراث
-  - التجميع المضمن
-  - التحميل الزائد للوظيفة
-  - التحميل الزائد على المشغل
-  - الدعوة العودية
-  - حلقات لا نهائية الطول
-  - النقاط الثابتة الثنائية
+- لغة برمجة مبنية على أسلوب <span dir="ltr">Python</span>
+- كتابة قوية (Strong typing)
+- كود مترجم (compiler) صغير ومفهوم
+- توليد فعال لرمز البايت
+- تحتوي عمدًا على ميزات أقل من <span dir="ltr">Solidity</span> بهدف جعل العقود أكثر أمانًا وأسهل في التدقيق. لا تدعم <span dir="ltr">Vyper</span>:
+  - المُعدِّلات (Modifiers)
+  - الوراثة
+  - لغة التجميع المضمنة (Inline assembly)
+  - التحميل الزائد للدوال (Function overloading)
+  - التحميل الزائد للعوامل (Operator overloading)
+  - الاستدعاء العودي (Recursive calling)
+  - الحلقات اللانهائية
+  - النقاط الثابتة الثنائية (Binary fixed points)
 
-لمزيد من المعلومات، [اقرأ منطق فايبر](https://vyper.readthedocs.io/en/latest/index.html).
+لمزيد من المعلومات، [اقرأ الأساس المنطقي لـ Vyper](https://vyper.readthedocs.io/en/latest/index.html).
 
 ### روابط مهمة {#important-links-1}
 
 - [التوثيق](https://vyper.readthedocs.io)
-- [فايبر by Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
-- [More فايبر by Example](https://vyper-by-example.org/)
-- [غيت هاب](https://github.com/vyperlang/vyper)
-- [محادثة مجتمع فايبر على ديسكورد](https://discord.gg/SdvKC79cJk)
-- [ورقة الغش](https://reference.auditless.com/cheatsheet)
-- [أطر وأدوات تطوير العقود الذكية للغة فايبر](/developers/docs/programming-languages/python/)
-- [VyperPunk - تعلم كيفية تأمين واختراق عقود فايبر الذكية](https://github.com/SupremacyTeam/VyperPunk)
-- [مركز فايبر للتطوير](https://github.com/zcor/vyper-dev)
-- [أفضل أمثلة عقود فايبر الذكية](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
-- [موارد منسقة رائعة للغة فايبر](https://github.com/spadebuilders/awesome-vyper)
+- [Vyper بالأمثلة](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
+- [المزيد من Vyper بالأمثلة](https://vyper-by-example.org/)
+- [GitHub](https://github.com/vyperlang/vyper)
+- [دردشة مجتمع Vyper على ديسكورد](https://discord.gg/SdvKC79cJk)
+- [ورقة مرجعية (Cheat Sheet)](https://reference.auditless.com/cheatsheet)
+- [أطر عمل وأدوات تطوير العقود الذكية لـ Vyper](/developers/docs/programming-languages/python/)
+- [VyperPunk - تعلم كيفية تأمين واختراق العقود الذكية المكتوبة بـ Vyper](https://github.com/SupremacyTeam/VyperPunk)
+- [مركز Vyper للتطوير](https://github.com/zcor/vyper-dev)
+- [أفضل أمثلة العقود الذكية المكتوبة بـ Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [موارد رائعة ومنسقة لـ Vyper](https://github.com/spadebuilders/awesome-vyper)
 
 ### مثال {#example}
 
@@ -123,94 +123,78 @@ contract Coin {
 # مزاد مفتوح
 
 # معلمات المزاد
-
-# يتلقى المستفيد الأموال من صاحب أعلى عرض
-
+# يتلقى المستفيد الأموال من صاحب أعلى عطاء
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # الحالة الحالية للمزاد
-
 highestBidder: public(address)
 highestBid: public(uint256)
 
-# يتم تعيينه إلى "true" في النهاية، ويمنع أي تغيير
-
+# يتم تعيينه إلى true في النهاية، ويمنع أي تغيير
 ended: public(bool)
 
-# تتبع العروض المستردة حتى نتمكن من اتباع نمط السحب
-
+# تتبع العطاءات المستردة حتى نتمكن من اتباع نمط السحب
 pendingReturns: public(HashMap[address, uint256])
 
-# إنشاء مزاد بسيط مع وقت مزايدة `_bidding_time` بالثواني
-
-# نيابة عن عنوان المستفيد `_beneficiary`.
-
+# إنشاء مزاد بسيط بوقت مزايدة `_bidding_time`
+# ثانية نيابة عن
+# عنوان المستفيد `_beneficiary`.
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 
-# المزايدة على المزاد بالقيمة المرسلة
-
+# المزايدة في المزاد بالقيمة المرسلة
 # مع هذه المعاملة.
-
-# سيتم استرداد القيمة فقط في حالة
-
-# عدم الفوز بالمزاد.
-
+# سيتم استرداد القيمة فقط إذا
+# لم يتم الفوز بالمزاد.
 @external
 @payable
 def bid():
     # تحقق مما إذا كانت فترة المزايدة قد انتهت.
     assert block.timestamp < self.auctionEnd
-    # تحقق مما إذا كان العرض مرتفعًا بما فيه الكفاية
+    # تحقق مما إذا كان العطاء مرتفعًا بما يكفي
     assert msg.value > self.highestBid
-    # تتبع المبلغ المسترد لمقدم العطاء الأعلى السابق
+    # تتبع الاسترداد لصاحب أعلى عطاء سابق
     self.pendingReturns[self.highestBidder] += self.highestBid
-    # تتبع العرض الأعلى الجديد
+    # تتبع أعلى عطاء جديد
     self.highestBidder = msg.sender
     self.highestBid = msg.value
 
-# سحب عرض تم استرداده مسبقًا. يتم استخدام نمط السحب
-
+# سحب عطاء تم استرداده مسبقًا. يُستخدم نمط السحب
 # هنا لتجنب مشكلة أمنية. إذا تم إرسال المبالغ المستردة مباشرة
-
-# كجزء من bid()، يمكن لعقد مزايدة ضار أن يمنع
-
-# تلك المبالغ المستردة وبالتالي يمنع وصول عروض أعلى جديدة.
-
+# كجزء من bid()، يمكن لعقد مزايدة خبيث حظر
+# تلك المبالغ المستردة وبالتالي منع دخول عطاءات جديدة أعلى.
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
     self.pendingReturns[msg.sender] = 0
     send(msg.sender, pending_amount)
 
-# إنهاء المزاد وإرسال أعلى عرض
-
+# إنهاء المزاد وإرسال أعلى عطاء
 # إلى المستفيد.
-
 @external
 def endAuction():
-    # من الإرشادات الجيدة تنظيم الوظائف التي تتفاعل
-    # مع العقود الأخرى (أي، تستدعي وظائف أو ترسل الإيثر)
-    # في ثلاث مراحل:
+    # من الإرشادات الجيدة هيكلة الدوال التي تتفاعل
+    # مع عقود أخرى (أي أنها تستدعي دوال أو ترسل إيثر)
+    # إلى ثلاث مراحل:
     # 1. التحقق من الشروط
-    # 2. تنفيذ الإجراءات (من المحتمل تغيير الشروط)
-    # 3. التفاعل مع العقود الأخرى
-    # إذا تم خلط هذه المراحل، يمكن للعقد الآخر
-    # أن يستدعي مرة أخرى العقد الحالي ويعدل الحالة أو يتسبب
-    # في تنفيذ التأثيرات (دفع الإيثر) عدة مرات.
-    # إذا كانت الوظائف التي يتم استدعاؤها داخليًا تتضمن تفاعلاً مع عقود
-    # خارجية، فيجب أيضًا اعتبارها تفاعلاً مع
+    # 2. تنفيذ الإجراءات (والتي قد تغير الشروط)
+    # 3. التفاعل مع عقود أخرى
+    # إذا تم خلط هذه المراحل، يمكن للعقد الآخر معاودة الاتصال
+    # بالعقد الحالي وتعديل الحالة أو التسبب في
+    # تنفيذ التأثيرات (دفع الإيثر) عدة مرات.
+    # إذا كانت الدوال المستدعاة داخليًا تتضمن تفاعلًا مع عقود
+    # خارجية، فيجب اعتبارها أيضًا تفاعلًا مع
     # عقود خارجية.
 
     # 1. الشروط
-    # تحقق مما إذا كان وقت انتهاء المزاد قد حان
+    # تحقق مما إذا كان قد تم الوصول إلى وقت نهاية المزاد
     assert block.timestamp >= self.auctionEnd
-    # تحقق مما إذا كانت هذه الوظيفة قد تم استدعاؤها بالفعل
+    # تحقق مما إذا كانت هذه الدالة قد تم استدعاؤها بالفعل
     assert not self.ended
 
     # 2. التأثيرات
@@ -220,33 +204,33 @@ def endAuction():
     send(self.beneficiary, self.highestBid)
 ```
 
-يجب أن يمنحك هذا المثال فكرة عن صيغة عقد فايبر. للحصول على وصف أكثر تفصيلاً للوظائف والمتغيرات، [انظر التوثيق](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
+يجب أن يمنحك هذا المثال فكرة عن شكل بنية عقد <span dir="ltr">Vyper</span>. للحصول على وصف أكثر تفصيلاً للدوال والمتغيرات، [راجع التوثيق](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
 
-## يول و يول+ {#yul}
+## <span dir="ltr">Yul</span> و<span dir="ltr">Yul+</span> {#yul}
 
-إذا كنت جديدًا على إيثريوم ولم تقم بأي تشفير باستخدام لغات العقود الذكية حتى الآن، فنوصيك بالبدء في استخدام سوليديتي أو فايبر. لا تنظر إلى يول أو يول+ إلا بعد أن تتعرف على أفضل ممارسات أمان العقود الذكية وتفاصيل العمل مع EVM.
+إذا كنت جديدًا على إيثيريوم ولم تقم بأي برمجة باستخدام لغات العقود الذكية بعد، فنوصيك بالبدء باستخدام <span dir="ltr">Solidity</span> أو <span dir="ltr">Vyper</span>. لا تنظر في <span dir="ltr">Yul</span> أو <span dir="ltr">Yul+</span> إلا بعد أن تكون على دراية بأفضل ممارسات أمان العقود الذكية وتفاصيل العمل مع آلة إيثيريوم الافتراضية (<span dir="ltr">EVM</span>).
 
-**يول**
+**<span dir="ltr">Yul</span>**
 
-- لغة وسيطة للإيثيريوم.
-- تدعم [EVM](/developers/docs/evm) و[Ewasm](https://github.com/ewasm)، وهي مجموعة ويب بنكهة الإيثريوم، ومصممة لتكون قاسمًا مشتركًا قابلاً للاستخدام لكلا المنصتين.
-- هدف جيد لمراحل التحسين عالية المستوى التي يمكن أن تفيد منصات EVM وEwasm على حد سواء.
+- لغة وسيطة لإيثيريوم.
+- تدعم [آلة إيثيريوم الافتراضية (EVM)](/developers/docs/evm) و[Ewasm](https://github.com/ewasm)، وهي نسخة من <span dir="ltr">WebAssembly</span> مخصصة لإيثيريوم، ومصممة لتكون قاسمًا مشتركًا قابلاً للاستخدام لكلا المنصتين.
+- هدف جيد لمراحل التحسين عالية المستوى التي يمكن أن تفيد منصتي <span dir="ltr">EVM</span> و<span dir="ltr">Ewasm</span> على حد سواء.
 
-**يول+**
+**<span dir="ltr">Yul+</span>**
 
-- امتداد منخفض المستوى وعالي الكفاءة لـ يول.
-- صُممت في البداية لعقد [الرول أب التفائلي](/developers/docs/scaling/optimistic-rollups/).
-- يمكن النظر إلى يول+ على أنه اقتراح ترقية تجريبي لـ يول، مما يضيف ميزات جديدة إليه.
+- امتداد منخفض المستوى وعالي الكفاءة للغة <span dir="ltr">Yul</span>.
+- صُممت في البداية لعقد [رول أب متفائل](/developers/docs/scaling/optimistic-rollups/).
+- يمكن النظر إلى <span dir="ltr">Yul+</span> على أنها مقترح ترقية تجريبي للغة <span dir="ltr">Yul</span>، حيث تضيف ميزات جديدة إليها.
 
 ### روابط مهمة {#important-links-2}
 
-- [توثيق يول](https://docs.soliditylang.org/en/latest/yul.html)
-- [توثيق يول+](https://github.com/fuellabs/yulp)
-- [منشور مقدمة عن يول+](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
+- [توثيق Yul](https://docs.soliditylang.org/en/latest/yul.html)
+- [توثيق Yul+](https://github.com/fuellabs/yulp)
+- [منشور تعريفي عن Yul+](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
-### عقد مثال {#example-contract-2}
+### مثال على عقد {#example-contract-2}
 
-المثال البسيط التالي يطبق دالة الطاقة. يمكن تجميعه باستخدام `solc --strict-assembly --bin input.yul`. يجب أن يتم تخزين المثال في ملف input.yul.
+ينفذ المثال البسيط التالي دالة القوة (الأس). يمكن تجميعه باستخدام `solc --strict-assembly --bin input.yul`. يجب تخزين المثال في ملف <span dir="ltr">input.yul</span>.
 
 ```
 {
@@ -267,26 +251,26 @@ def endAuction():
 }
 ```
 
-إذا كنت من ذوي الخبرة الجيدة في العقود الذكية، فيمكن العثور على تنفيذ ERC20 الكامل في لغة يول [هنا](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
+إذا كنت تتمتع بخبرة جيدة بالفعل في العقود الذكية، فيمكن العثور على تنفيذ كامل لـ <span dir="ltr">ERC-20</span> بلغة <span dir="ltr">Yul</span> [هنا](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
 
-## Fe {#fe}
+## <span dir="ltr">Fe</span> {#fe}
 
-- اللغة المكتوبة بشكل ثابت لجهاز إيثريوم الظاهري (EVM).
-- مستوحاة من بايثون والصدأ.
-- تهدف إلى أن تكون سهلة التعلم - حتى للمطورين الجدد في نظام إيثريوم البيئي.
-- لا يزال تطوير Fe في مراحله الأولى، وقد صدرت اللغة ألفا في يناير 2021.
+- لغة مكتوبة بشكل ثابت لآلة إيثيريوم الافتراضية (<span dir="ltr">EVM</span>).
+- مستوحاة من <span dir="ltr">Python</span> و<span dir="ltr">Rust</span>.
+- تهدف إلى أن تكون سهلة التعلم -- حتى للمطورين الجدد في نظام إيثيريوم البيئي.
+- لا يزال تطوير <span dir="ltr">Fe</span> في مراحله الأولى، وقد تم إصدار النسخة الأولية (alpha) من اللغة في يناير 2021.
 
 ### روابط مهمة {#important-links-3}
 
-- [غيت هاب](https://github.com/ethereum/fe)
-- [إعلان لغة Fe](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
+- [GitHub](https://github.com/ethereum/fe)
+- [إعلان Fe](https://blog.fe-lang.org/posts/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [خارطة طريق Fe لعام 2021](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
-- [محادثة Fe على ديسكورد](https://discord.com/invite/ywpkAXFjZH)
-- [حساب Fe على تويتر](https://twitter.com/official_fe)
+- [دردشة Fe على ديسكورد](https://discord.com/invite/ywpkAXFjZH)
+- [تويتر Fe](https://twitter.com/official_fe)
 
-### عقد مثال {#example-contract-3}
+### مثال على عقد {#example-contract-3}
 
-فيما يلي عقد بسيط تم تنفيذه في Fe.
+فيما يلي عقد بسيط تم تنفيذه بلغة <span dir="ltr">Fe</span>.
 
 ```
 type BookMsg = bytes[100]
@@ -304,37 +288,36 @@ contract GuestBook:
 
     pub def get_msg(addr: address) -> BookMsg:
         return self.guest_book[addr].to_mem()
-
 ```
 
-## كيف تختار {#how-to-choose}
+## كيفية الاختيار {#how-to-choose}
 
-كما هو الحال مع أي لغة برمجة أخرى، يتعلق الأمر في الغالب باختيار الأداة المناسبة للوظيفة المناسبة بالإضافة إلى التفضيلات الشخصية.
+كما هو الحال مع أي لغة برمجة أخرى، يتعلق الأمر في الغالب باختيار الأداة المناسبة للمهمة المناسبة بالإضافة إلى التفضيلات الشخصية.
 
 إليك بعض الأشياء التي يجب مراعاتها إذا لم تجرب أيًا من اللغات بعد:
 
-### ما هو المفضل عن  سوليديتي؟ {#solidity-advantages}
+### ما الرائع في <span dir="ltr">Solidity</span>؟ {#solidity-advantages}
 
-- إذا كنت مبتدئًا، فهناك العديد من البرامج التعليمية وأدوات التعلم المتاحة. انظر المزيد عن ذلك في قسم [التعلم عن طريق البرمجة](/developers/learning-tools/).
-- أدوات المطور الجيدة المتاحة.
-- تمتلك سوليديتي مجتمعًا كبيرًا من المطورين، مما يعني أنك ستجد على الأرجح إجابات لأسئلتك بسرعة كبيرة.
+- إذا كنت مبتدئًا، فهناك العديد من البرامج التعليمية وأدوات التعلم المتاحة. تعرف على المزيد حول ذلك في قسم [التعلم من خلال البرمجة](/developers/learning-tools/).
+- تتوفر أدوات تطوير جيدة.
+- تمتلك <span dir="ltr">Solidity</span> مجتمع مطورين كبير، مما يعني أنك ستجد على الأرجح إجابات لأسئلتك بسرعة كبيرة.
 
-### ما هو المفضل عن   فايبر؟ {#vyper-advatages}
+### ما الرائع في <span dir="ltr">Vyper</span>؟ {#vyper-advatages}
 
-- طريقة رائعة لبدء مطوري بايثون الذين يرغبون في كتابة عقود ذكية.
-- يحتوي فايبر على عدد أقل من الميزات مما يجعله رائعًا للنماذج الأولية السريعة للأفكار.
-- يهدف فايبر إلى أن يكون سهل التدقيق ويمكن قراءته إلى أقصى حد من قبل الإنسان.
+- طريقة رائعة للبدء لمطوري <span dir="ltr">Python</span> الذين يرغبون في كتابة العقود الذكية.
+- تحتوي <span dir="ltr">Vyper</span> على عدد أقل من الميزات مما يجعلها رائعة للنماذج الأولية السريعة للأفكار.
+- تهدف <span dir="ltr">Vyper</span> إلى أن تكون سهلة التدقيق وقابلة للقراءة من قبل البشر إلى أقصى حد.
 
-### ما هو المفضل عب يول و يول+ ؟ {#yul-advantages}
+### ما الرائع في <span dir="ltr">Yul</span> و<span dir="ltr">Yul+</span>؟ {#yul-advantages}
 
-- لغة مبسطة وعملية ذات مستوى منخفض.
-- يسمح بالاقتراب كثيرًا من EVM الخام، مما يمكن أن يساعد في تحسين استخدام الغاز في العقود الخاصة بك.
+- لغة منخفضة المستوى مبسطة ووظيفية.
+- تتيح الاقتراب أكثر من آلة إيثيريوم الافتراضية (<span dir="ltr">EVM</span>) الخام، مما يمكن أن يساعد في تحسين استخدام الغاز في عقودك.
 
 ## مقارنات اللغات {#language-comparisons}
 
-لإجراء مقارنات بين الصيغة الأساسية ودورة حياة العقد والواجهات والمشغلات وهياكل البيانات والوظائف وتدفق التحكم والمزيد، راجع [ورقة الغش هذه من Auditless](https://reference.auditless.com/cheatsheet/)
+لمقارنات البنية الأساسية، ودورة حياة العقد، والواجهات، والعوامل، وهياكل البيانات، والدوال، وتدفق التحكم، والمزيد، تحقق من [الورقة المرجعية هذه بواسطة Auditless](https://reference.auditless.com/cheatsheet/)
 
 ## قراءة إضافية {#further-reading}
 
-- [مكتبة عقود سوليديتي من أوبن زبلين](https://docs.openzeppelin.com/contracts/5.x/)
-- [سوليديتي by Example](https://solidity-by-example.org)
+- [مكتبة عقود Solidity بواسطة أوبن زبلن](https://docs.openzeppelin.com/contracts/5.x/)
+- [Solidity بالأمثلة](https://solidity-by-example.org)

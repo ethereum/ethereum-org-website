@@ -1,317 +1,316 @@
 ---
-title: Translation program playbook
+title: Guide du programme de traduction
+metaTitle: Guide du programme de traduction
 lang: fr
-description: "Une collection de conseils et de considérations importantes pour la mise en place d'un programme de traduction"
+description: Une collection de conseils et de considérations importantes pour la mise en place d'un programme de traduction
 ---
 
-# Manuel du programme de traduction {#translation-program-playbook}
+L'anglais est l'une des langues les plus parlées au monde et de loin la langue la plus étudiée. Comme l'anglais est la langue la plus couramment utilisée sur Internet – en particulier sur les réseaux sociaux – et que les langages de programmation multilingues sont rares, la majorité du contenu dans l'espace de la chaîne de blocs est nativement rédigée en anglais.
 
-English is one of the most spoken languages in the world and is by far the world’s most studied language. Comme l'anglais est la langue la plus couramment utilisée sur Internet - en particulier sur les médias sociaux - et que les langages de programmation multilingues sont rares, la majorité du contenu de l'espace blockchain est écrit nativement en anglais.
+Cependant, comme plus de 6 milliards de personnes dans le monde (plus de 75 % de la population) ne parlent pas du tout anglais, cela représente une barrière massive à l'entrée sur Ethereum pour la grande majorité de la population mondiale.
 
-However, as over 6 billion people in the world (more than 75% of the population) do not speak English at all, this presents a massive barrier for entry to Ethereum for the vast majority of the world’s population.
+Pour cette raison, un nombre croissant de projets dans cet espace cherchent à faire traduire leur contenu dans différentes langues et à le localiser pour les communautés mondiales.
 
-For this reason, an increasing number of projects in the space are looking to get their content translated into different languages and localized for global communities.
+Fournir un contenu multilingue est un moyen simple et efficace de développer votre communauté mondiale, d'éduquer les non-anglophones, de vous assurer que votre contenu et vos communications atteignent un public plus large, et de faciliter l'intégration de plus de personnes dans cet espace.
 
-Fournir du contenu multilingue est un moyen simple et efficace de développer votre communauté mondiale, de fournir une éducation aux non-anglophones, de s'assurer que votre contenu et vos communications atteignent un public plus large et d'intégrer davantage de personnes dans l'espace.
+Ce guide vise à aborder les défis et les idées fausses courantes concernant la localisation de contenu. Il fournit un guide étape par étape pour la gestion de contenu, le processus de traduction et de révision, l'assurance qualité, la recherche de traducteurs et d'autres aspects vitaux du processus de localisation.
 
-Ce guide vise à répondre aux défis et aux idées fausses courants concernant la localisation du contenu. It provides a step-by-step guide to managing content, the translation and review process, quality assurance, translator outreach, and other vital aspects of the localization process.
+## Gestion de contenu {#content-management}
 
-## Content Management {#content-management}
+La gestion de contenu de traduction fait référence au processus d'automatisation du flux de travail de traduction, ce qui élimine le besoin de travail manuel répétitif, améliore l'efficacité et la qualité, permet un meilleur contrôle et facilite la collaboration.
 
-Translation content management refers to the process of automating the translation workflow, which removes the need for repetitive manual work, improves efficiency and quality, allows for better control, and enables collaboration.
+Il existe de nombreuses approches différentes de la gestion de contenu dans le processus de localisation, en fonction du contenu et de vos besoins.
 
-There are many different approaches to content management in the localization process, depending on the content and your needs.
+La méthode fondamentale de gestion de contenu consiste à créer des fichiers bilingues, contenant le texte source et le texte cible. Cette méthode est rarement utilisée en traduction, car elle n'offre aucun avantage significatif, à part la simplicité.
 
-The fundamental way of managing content is to create bilingual files, containing the source and target text. Ceci est rarement utilisé en traduction, car il n'offre aucun avantage significatif, à part la simplicité.
+Les agences de traduction abordent généralement la gestion de la traduction en utilisant des logiciels de gestion de traduction ou des outils de localisation, qui offrent des capacités de gestion de projet et permettent un contrôle beaucoup plus grand sur les fichiers, le contenu et les linguistes.
 
-Les agences de traduction abordent généralement la gestion de la traduction en utilisant un logiciel de gestion de la traduction ou des outils de localisation, qui fournissent des capacités de gestion de projet et permettent un contrôle beaucoup plus grand sur les fichiers, le contenu et les linguistes.
+En savoir plus sur la gestion de contenu :
 
-Read more about content management:
-
-[Trados on what is translation management](https://www.trados.com/solutions/translation-management/)
+[Trados sur ce qu'est la gestion de traduction](https://www.trados.com/solutions/translation-management/)
 
 [Phrase sur la gestion de contenu multilingue](https://phrase.com/blog/posts/multilingual-content-management/)
 
-### Translation Management Software {#translation-management-software}
+### Logiciels de gestion de traduction {#translation-management-software}
 
-Il existe de nombreux systèmes de gestion de la traduction et outils de localisation, et le choix du logiciel dépend principalement de vos besoins.
+Il existe de nombreux systèmes de gestion de traduction et outils de localisation, et le choix du logiciel dépend principalement de vos besoins.
 
-Alors que certains projets décident de ne pas utiliser de systèmes de gestion de traduction et préfèrent gérer les traductions manuellement - soit directement dans des fichiers bilingues, soit sur des services d'hébergement, tels que GitHub - cela réduit considérablement le contrôle, la productivité, la qualité, l'évolutivité et les capacités de collaboration. Such an approach might be most beneficial for small-scale or one-off translation projects.
+Bien que certains projets décident de ne pas utiliser de systèmes de gestion de traduction et préfèrent gérer les traductions manuellement – soit directement dans des fichiers bilingues, soit sur des services d'hébergement, tels que GitHub – cela réduit considérablement le contrôle, la productivité, la qualité, l'évolutivité et les capacités de collaboration. Une telle approche pourrait être plus bénéfique pour des projets de traduction à petite échelle ou ponctuels.
 
-Un aperçu rapide de certains des outils de gestion de la traduction les plus puissants et les plus largement utilisés :
+Un aperçu rapide de certains des outils de gestion de traduction les plus puissants et les plus utilisés :
 
-**Best for crowdsourcing and collaboration**
+**Idéal pour la production participative (crowdsourcing) et la collaboration**
 
 [Crowdin](https://crowdin.com/)
 
 - Gratuit pour les projets open source (nombre illimité de chaînes et de projets)
-- TM and glossary available with all plans
-- 60+ supported file formats, 70+ API integrations
+- Mémoire de traduction (TM) et glossaire disponibles avec tous les forfaits
+- Plus de 60 formats de fichiers pris en charge, plus de 70 intégrations API
 
 [Lokalise](https://lokalise.com/)
 
-- Free for 2 team members, paid plans for more contributors (limited number of strings for most plans)
-- TM et glossaire disponibles avec certains plans payants
-- 30+ supported file formats, 40+ API integrations
+- Gratuit pour 2 membres de l'équipe, forfaits payants pour plus de contributeurs (nombre limité de chaînes pour la plupart des forfaits)
+- Mémoire de traduction et glossaire disponibles avec certains forfaits payants
+- Plus de 30 formats de fichiers pris en charge, plus de 40 intégrations API
 
 [Transifex](https://www.transifex.com/)
 
-- Uniquement les plans payants (nombre limité de chaînes pour la plupart des plans)
-- TM et glossaire disponibles avec tous les plans payants
-- Plus de 30 formats de fichiers pris en charge, plus de 20 intégrations d'API
+- Uniquement des forfaits payants (nombre limité de chaînes pour la plupart des forfaits)
+- Mémoire de traduction et glossaire disponibles avec tous les forfaits payants
+- Plus de 30 formats de fichiers pris en charge, plus de 20 intégrations API
 
 [Phrase](https://phrase.com/)
 
-- Only paid plans (unlimited number of strings for all plans, limited number of projects and team members)
-- TM et glossaire disponibles avec certains plans payants
-- 40+ supported file formats, 20+ API integrations
+- Uniquement des forfaits payants (nombre illimité de chaînes pour tous les forfaits, nombre limité de projets et de membres d'équipe)
+- Mémoire de traduction et glossaire disponibles avec certains forfaits payants
+- Plus de 40 formats de fichiers pris en charge, plus de 20 intégrations API
 
 [Smartcat](https://www.smartcat.com/)
 
-- Basic free plan with payable advanced features (unlimited number of strings and projects for all plans)
-- TM and glossary available with all plans
-- 60+ supported file formats, 20+ API integrations
+- Forfait de base gratuit avec des fonctionnalités avancées payantes (nombre illimité de chaînes et de projets pour tous les forfaits)
+- Mémoire de traduction et glossaire disponibles avec tous les forfaits
+- Plus de 60 formats de fichiers pris en charge, plus de 20 intégrations API
 
 [POEditor](https://poeditor.com/)
 
-- Free for open-source projects (limited number of strings for all projects, unlimited for open-source projects)
-- TM and glossary available for paid plans
-- 20+ supported file formats, 10+ API integrations
+- Gratuit pour les projets open source (nombre limité de chaînes pour tous les projets, illimité pour les projets open source)
+- Mémoire de traduction et glossaire disponibles pour les forfaits payants
+- Plus de 20 formats de fichiers pris en charge, plus de 10 intégrations API
 
-Et beaucoup d'autres...
+et bien d'autres...
 
 **Outils de traduction professionnels**
 
 [SDL Trados Studio](https://www.trados.com/products/trados-studio/)
 
-- Plans rémunérés pour les traducteurs et les équipes indépendants
-- Outil de traduction assistée par ordinateur (CAT) très puissant et logiciel de productivité traducteur
+- Forfaits payants pour les traducteurs indépendants et les équipes
+- Outil de traduction assistée par ordinateur (TAO) très puissant et logiciel de productivité pour les traducteurs
 
 [MemoQ](https://www.memoq.com/)
 
-- Version gratuite limitée disponible avec plusieurs plans payants pour des fonctionnalités avancées
-- Translation management software for companies, language service providers and translators
+- Version gratuite limitée disponible avec plusieurs forfaits payants pour des fonctionnalités avancées
+- Logiciel de gestion de traduction pour les entreprises, les prestataires de services linguistiques et les traducteurs
 
 [Memsource](https://www.memsource.com/)
 
-- Free for individual translators with several paid plans for teams
-- Système de traduction et de gestion de la traduction assisté par ordinateur basé sur le cloud
+- Gratuit pour les traducteurs individuels avec plusieurs forfaits payants pour les équipes
+- Système de traduction assistée par ordinateur et de gestion de traduction basé sur le cloud
 
-Et beaucoup d'autres...
+et bien d'autres...
 
-Read more about translation management software:
+En savoir plus sur les logiciels de gestion de traduction :
 
-[Wikipedia definition of translation management systems](https://en.wikipedia.org/wiki/Translation_management_system)
+[Définition Wikipédia des systèmes de gestion de traduction](https://en.wikipedia.org/wiki/Translation_management_system)
 
-[Phrase sur 7 choses que tout logiciel de gestion de traduction devrait avoir](https://phrase.com/blog/posts/7-things-every-translation-management-software-should-have/)
+[Phrase sur les 7 éléments que tout logiciel de gestion de traduction devrait avoir](https://phrase.com/blog/posts/7-things-every-translation-management-software-should-have/)
 
-[MemoQ sur ce qu'est un système de gestion de la traduction](https://www.memoq.com/tools/what-is-a-translation-management-system)
+[MemoQ sur ce qu'est un système de gestion de traduction](https://www.memoq.com/tools/what-is-a-translation-management-system)
 
-[Gengo’s list of 16 best translation management systems](https://gengo.com/translator-product-updates/16-best-translation-management-systems/)
+[Liste de Gengo des 16 meilleurs systèmes de gestion de traduction](https://gengo.com/translator-product-updates/16-best-translation-management-systems/)
 
-## Workflow {#workflow}
+## Flux de travail {#workflow}
 
-In the translation space, translation workflow can mean a couple of different things, both somewhat interrelated, and important considerations for your project.
+Dans le domaine de la traduction, le flux de travail de traduction peut signifier plusieurs choses différentes, toutes deux quelque peu interdépendantes, et des considérations importantes pour votre projet.
 
-We will explore both of them below.
+Nous allons explorer les deux ci-dessous.
 
-**Meaning 1**
+**Signification 1**
 
-This is probably the most common way of thinking about translation workflows and something that usually comes to mind when hearing the word workflow.
+C'est probablement la façon la plus courante de concevoir les flux de travail de traduction et ce qui vient généralement à l'esprit lorsqu'on entend le mot flux de travail.
 
-In its essence, it is the ‘flow of work’ from starting to think about translations to using the translated content in your product.
+Dans son essence, c'est le « flux de travail » depuis le moment où l'on commence à penser aux traductions jusqu'à l'utilisation du contenu traduit dans votre produit.
 
-An example workflow in this case would be:
+Un exemple de flux de travail dans ce cas serait :
 
-1. **Preparing the files for translation** – It sounds simple; however, you need to consider a couple of important things. At this step, you should have a clear plan on how the entire process should work.
+1. **Préparation des fichiers pour la traduction** – Cela semble simple ; cependant, vous devez prendre en compte quelques éléments importants. À cette étape, vous devriez avoir un plan clair sur la façon dont l'ensemble du processus devrait fonctionner.
 
-- _Which file types will you be using? Dans quel format souhaitez-vous recevoir vos fichiers traduits ? _
+- _Quels types de fichiers allez-vous utiliser ? Dans quel format souhaitez-vous recevoir vos fichiers traduits ?_
   - Si votre contenu est disponible au format DOCX ou MD, l'approche sera beaucoup plus simple que si vous traduisez une version PDF de votre livre blanc ou d'autres documents.
-- _Which localization tools support this file type? Le fichier peut-il être traduit d'une manière qui conserve le formatage d'origine ? _
-  - Not all file types support direct localization (e.g., PDF files, image files), and not all localization tools support all file types.
-- _Who will be translating the content? Allez-vous commander des traductions professionnelles ou compter sur des bénévoles ? _
-  - This affects a number of other decisions you need to make. For example, professional translators are more comfortable working with advanced localization tools than volunteers.
-- _What are your expectations for the linguists? If you are using a language service provider, what do they expect from you?_
-  - This is the step to make sure your goals, expectations, and timelines are aligned.
-- _Is all the content for translation equally important? Faut-il d'abord traduire du contenu ? _
-  - There are some ways to prioritize certain content, which should be translated and implemented first. Par exemple, si vous avez beaucoup de contenu à traduire, vous pouvez utiliser le contrôle de version pour vous assurer que les traducteurs sont conscients de ce qu'ils doivent prioriser.
+- _Quels outils de localisation prennent en charge ce type de fichier ? Le fichier peut-il être traduit de manière à conserver le formatage d'origine ?_
+  - Tous les types de fichiers ne prennent pas en charge la localisation directe (par exemple, les fichiers PDF, les fichiers image), et tous les outils de localisation ne prennent pas en charge tous les types de fichiers.
+- _Qui traduira le contenu ? Allez-vous commander des traductions professionnelles ou vous appuyer sur des bénévoles ?_
+  - Cela affecte un certain nombre d'autres décisions que vous devez prendre. Par exemple, les traducteurs professionnels sont plus à l'aise pour travailler avec des outils de localisation avancés que les bénévoles.
+- _Quelles sont vos attentes vis-à-vis des linguistes ? Si vous faites appel à un prestataire de services linguistiques, qu'attend-il de vous ?_
+  - C'est l'étape pour vous assurer que vos objectifs, vos attentes et vos délais sont alignés.
+- _Tout le contenu à traduire est-il d'égale importance ? Certains contenus devraient-ils être traduits en premier ?_
+  - Il existe des moyens de prioriser certains contenus, qui devraient être traduits et mis en œuvre en premier. Par exemple, si vous avez beaucoup de contenu à traduire, vous pouvez utiliser le contrôle de version pour vous assurer que les traducteurs savent ce qu'ils doivent prioriser.
 
-2. **Sharing the files for translation** – This step also requires some long-term thinking and is not as straightforward as sending the source files to a language service provider.
+2. **Partage des fichiers pour la traduction** – Cette étape nécessite également une réflexion à long terme et n'est pas aussi simple que d'envoyer les fichiers sources à un prestataire de services linguistiques.
 
-- _Who will be translating the content? How many people will be involved in this process?_
-  - If you plan to use a localization tool, this step is simplified since you can upload the source files to the tool directly. This is also true if the translation process takes place on the hosting service since the source files don’t need to be exported anywhere.
-- _Will the source files be handled manually, or can this process be automated?_
-  - Most localization tools allow for some type of integration or automation of the file management process. On the other hand, if you are working with individual translators and not using a localization tool, manually sending source files to hundreds or thousands of translators is not a scalable process.
-- _Which tools will be used for the localization?_
-  - The answer to this question will determine how you approach everything else. Selecting the proper tool can help you automate content management, managing the Translation Memory and Glossary, managing translators, keeping track of the translation/review progress, etc., so take some time and do some research on which tool you want to use. If you are not planning on using a localization tool, all of the above will need to be done manually.
-- _How long will the translation process take? How much will it cost?_
-  - At this point, you should be ready to share the source files with the language service provider or pool of translators. The language service provider can help you analyze the word count and provide a quote, including the rates and timeline for the translation process.
-- _Are you planning on making changes/updating the source content during this process?_
-  - If your content is dynamic and changes often, any changes or updates can disrupt the translation progress. Using a Translation Memory can help mitigate this significantly, though it is still important to think about how the process will work and how you can prevent setting back the progress the translators are making.
+- _Qui traduira le contenu ? Combien de personnes seront impliquées dans ce processus ?_
+  - Si vous prévoyez d'utiliser un outil de localisation, cette étape est simplifiée car vous pouvez télécharger les fichiers sources directement dans l'outil. Cela est également vrai si le processus de traduction a lieu sur le service d'hébergement, car les fichiers sources n'ont pas besoin d'être exportés nulle part.
+- _Les fichiers sources seront-ils gérés manuellement, ou ce processus peut-il être automatisé ?_
+  - La plupart des outils de localisation permettent un certain type d'intégration ou d'automatisation du processus de gestion des fichiers. En revanche, si vous travaillez avec des traducteurs individuels et que vous n'utilisez pas d'outil de localisation, l'envoi manuel de fichiers sources à des centaines ou des milliers de traducteurs n'est pas un processus évolutif.
+- _Quels outils seront utilisés pour la localisation ?_
+  - La réponse à cette question déterminera la façon dont vous aborderez tout le reste. La sélection de l'outil approprié peut vous aider à automatiser la gestion de contenu, la gestion de la mémoire de traduction et du glossaire, la gestion des traducteurs, le suivi de la progression de la traduction/révision, etc., alors prenez le temps de faire des recherches sur l'outil que vous souhaitez utiliser. Si vous ne prévoyez pas d'utiliser un outil de localisation, tout ce qui précède devra être fait manuellement.
+- _Combien de temps prendra le processus de traduction ? Combien cela coûtera-t-il ?_
+  - À ce stade, vous devriez être prêt à partager les fichiers sources avec le prestataire de services linguistiques ou le groupe de traducteurs. Le prestataire de services linguistiques peut vous aider à analyser le nombre de mots et à fournir un devis, y compris les tarifs et le calendrier du processus de traduction.
+- _Prévoyez-vous d'apporter des modifications/de mettre à jour le contenu source pendant ce processus ?_
+  - Si votre contenu est dynamique et change souvent, toute modification ou mise à jour peut perturber la progression de la traduction. L'utilisation d'une mémoire de traduction peut aider à atténuer considérablement ce problème, bien qu'il soit toujours important de réfléchir à la façon dont le processus fonctionnera et à la façon dont vous pouvez éviter de retarder les progrès réalisés par les traducteurs.
 
-3. **Managing the translation process** – Your work isn’t done once the source content is handed off to the language service provider or the translators. To ensure optimal quality of the translations, content creators should be as involved with the translation process as possible.
+3. **Gestion du processus de traduction** – Votre travail n'est pas terminé une fois que le contenu source est remis au prestataire de services linguistiques ou aux traducteurs. Pour garantir une qualité optimale des traductions, les créateurs de contenu doivent être aussi impliqués que possible dans le processus de traduction.
 
-- _Comment comptez-vous communiquer avec les traducteurs ? _
-  - Si vous prévoyez d'utiliser un outil de localisation, la communication peut avoir lieu directement dans l'outil. Setting up an alternative communication channel with the translators is also recommended since they might be less hesitant to reach out, and messaging tools allow for more free-flowing communication.
-- _Comment gérer les questions des traducteurs ? Who should be answering these questions?_
-  - Translators (both professional and non-professional) will often reach out with questions and requests for clarification or additional context, as well as feedback and ideas for improvements. Replying to these inquiries can often lead to better engagement and quality of translated content. It is also valuable to provide them with as many resources as possible (e.g., guides, tips, terminology guidelines, FAQs, etc.).
-- _Comment gérer le processus d'examen ? Do you want to outsource it, or do you have the capacity to perform reviews internally?_
-  - While not always necessary, reviews are an integral part of an optimal translation process. Usually, it is easiest to outsource the review process to professional reviewers. Cependant, si vous avez une grande équipe internationale, les examens ou l'assurance qualité peuvent également être gérés en interne.
+- _Comment prévoyez-vous de communiquer avec les traducteurs ?_
+  - Si vous prévoyez d'utiliser un outil de localisation, la communication peut avoir lieu directement dans l'outil. La mise en place d'un canal de communication alternatif avec les traducteurs est également recommandée car ils pourraient être moins hésitants à vous contacter, et les outils de messagerie permettent une communication plus fluide.
+- _Comment gérer les questions des traducteurs ? Qui devrait répondre à ces questions ?_
+  - Les traducteurs (professionnels et non professionnels) vous contacteront souvent avec des questions et des demandes de clarification ou de contexte supplémentaire, ainsi que des commentaires et des idées d'amélioration. Répondre à ces demandes peut souvent conduire à un meilleur engagement et à une meilleure qualité du contenu traduit. Il est également utile de leur fournir autant de ressources que possible (par exemple, des guides, des conseils, des directives terminologiques, des FAQ, etc.).
+- _Comment gérer le processus de révision ? Souhaitez-vous l'externaliser ou avez-vous la capacité d'effectuer des révisions en interne ?_
+  - Bien qu'elles ne soient pas toujours nécessaires, les révisions font partie intégrante d'un processus de traduction optimal. En général, il est plus facile d'externaliser le processus de révision à des réviseurs professionnels. Cependant, si vous avez une grande équipe internationale, les révisions ou l'assurance qualité (QA) peuvent également être gérées en interne.
 
-4. **Implementing the translated content** – The last part of the workflow, though still important to consider ahead of time.
+4. **Mise en œuvre du contenu traduit** – La dernière partie du flux de travail, bien qu'il soit toujours important d'y réfléchir à l'avance.
 
-- _Toutes les traductions seront-elles terminées en même temps ? _
-  - If not, you should think about which translations should be prioritized, how to keep track of the translations in progress, and how the implementation is handled while the translations are done.
-- _Comment le contenu traduit vous sera-t-il livré ? What format will it be in?_
-  - C'est une considération importante, quelle que soit l'approche que vous utilisez. Localization tools allow you to maintain control over the target file format and export process and usually support automation, e.g., by enabling integration with the hosting service.
-- _How will you be implementing the translations in your project?_
-  - In some cases, this could be as simple as uploading the translated file or adding it to your docs. However, with more complex projects, like website or app translations, you should make sure the code supports internationalization and establish how the implementation process will be handled ahead of time.
-- _What happens if the formatting is different to the source?_
-  - Similar to the above, if you are translating simple text files, the formatting probably isn’t crucially important. However, with more complex files, like content for a website or application, the formatting and code need to be identical to the source in order to be implemented in your project. If not, the target files will need to be edited, either by the translators or your developers.
+- _Toutes les traductions seront-elles terminées en même temps ?_
+  - Si ce n'est pas le cas, vous devriez réfléchir aux traductions qui doivent être priorisées, à la façon de suivre les traductions en cours et à la façon dont la mise en œuvre est gérée pendant que les traductions sont effectuées.
+- _Comment le contenu traduit vous sera-t-il livré ? Dans quel format sera-t-il ?_
+  - C'est une considération importante, quelle que soit l'approche que vous utilisez. Les outils de localisation vous permettent de garder le contrôle sur le format du fichier cible et le processus d'exportation et prennent généralement en charge l'automatisation, par exemple en permettant l'intégration avec le service d'hébergement.
+- _Comment allez-vous mettre en œuvre les traductions dans votre projet ?_
+  - Dans certains cas, cela pourrait être aussi simple que de télécharger le fichier traduit ou de l'ajouter à vos documents. Cependant, avec des projets plus complexes, comme les traductions de sites Web ou d'applications, vous devez vous assurer que le code prend en charge l'internationalisation et établir à l'avance comment le processus de mise en œuvre sera géré.
+- _Que se passe-t-il si le formatage est différent de la source ?_
+  - Comme ci-dessus, si vous traduisez de simples fichiers texte, le formatage n'est probablement pas d'une importance cruciale. Cependant, avec des fichiers plus complexes, comme le contenu d'un site Web ou d'une application, le formatage et le code doivent être identiques à la source afin d'être mis en œuvre dans votre projet. Sinon, les fichiers cibles devront être modifiés, soit par les traducteurs, soit par vos développeurs.
 
-**Meaning 2**
+**Signification 2**
 
-An alternative translation workflow, which does not account for internal decisions and approaches. The main consideration here is the flow of the content itself.
+Un flux de travail de traduction alternatif, qui ne tient pas compte des décisions et des approches internes. La principale considération ici est le flux du contenu lui-même.
 
-An example workflow in this case would be:
+Un exemple de flux de travail dans ce cas serait :
 
-1. _Translation → Implementation_
+1. _Traduction → Mise en œuvre_
 
-- Le flux de travail le plus simple, où la traduction sera probablement une traduction humaine, car il n'y a pas de processus d'examen ou d'assurance qualité pour évaluer la qualité et éditer les traductions avant la mise en œuvre.
-- With this workflow, it is important that the translators can maintain a certain level of quality, which will require appropriate resources and communication between the project managers and translators.
+- Le flux de travail le plus simple, où la traduction sera probablement une traduction humaine, car il n'y a pas de processus de révision ou d'assurance qualité pour évaluer la qualité et modifier les traductions avant la mise en œuvre.
+- Avec ce flux de travail, il est important que les traducteurs puissent maintenir un certain niveau de qualité, ce qui nécessitera des ressources appropriées et une communication entre les chefs de projet et les traducteurs.
 
-2. _Translation → Review → Implementation_
+2. _Traduction → Révision → Mise en œuvre_
 
-- A more advanced workflow, which includes a review and editing process, to ensure the quality of the translations is acceptable and consistent.
-- There are a number of approaches to this workflow, where the translations could be performed by professional translators or volunteers, while the review process will likely be handled by professional reviewers, who are familiar with all the grammar and orthography rules that need to be observed in the target language.
+- Un flux de travail plus avancé, qui comprend un processus de révision et d'édition, pour s'assurer que la qualité des traductions est acceptable et cohérente.
+- Il existe un certain nombre d'approches pour ce flux de travail, où les traductions pourraient être effectuées par des traducteurs professionnels ou des bénévoles, tandis que le processus de révision sera probablement géré par des réviseurs professionnels, qui connaissent toutes les règles de grammaire et d'orthographe qui doivent être respectées dans la langue cible.
 
-3. _Translation → Review → QA → Implementation_
+3. _Traduction → Révision → Assurance qualité (QA) → Mise en œuvre_
 
-- The optimal workflow to ensure the highest level of quality. While QA is not always necessary, it could be useful to give you a better sense of the quality of the translated text after translation and review.
-- With this workflow, translations could be performed exclusively by volunteers or even machine translation. The review process should be performed by professional translators, while the QA can be performed by a language service provider or internally, if you have employees who are native speakers of the target languages.
+- Le flux de travail optimal pour garantir le plus haut niveau de qualité. Bien que l'assurance qualité ne soit pas toujours nécessaire, elle pourrait être utile pour vous donner une meilleure idée de la qualité du texte traduit après la traduction et la révision.
+- Avec ce flux de travail, les traductions pourraient être effectuées exclusivement par des bénévoles ou même par traduction automatique. Le processus de révision doit être effectué par des traducteurs professionnels, tandis que l'assurance qualité peut être effectuée par un prestataire de services linguistiques ou en interne, si vous avez des employés dont la langue maternelle est la langue cible.
 
 En savoir plus sur les flux de travail de traduction :
 
-[Content rules on the five phases of the translation workflow](https://contentrules.com/creating-translation-workflow/)
+[Règles de contenu sur les cinq phases du flux de travail de traduction](https://contentrules.com/creating-translation-workflow/)
 
-[Smartling on what is translation workflow management](https://www.smartling.com/resources/101/what-is-translation-workflow-management/)
+[Smartling sur ce qu'est la gestion du flux de travail de traduction](https://www.smartling.com/resources/101/what-is-translation-workflow-management/)
 
-[RixTrans on the translation workflow](https://www.rixtrans.com/translation-workflow)
+[RixTrans sur le flux de travail de traduction](https://www.rixtrans.com/translation-workflow)
 
-## Terminology Management {#terminology-management}
+## Gestion de la terminologie {#terminology-management}
 
-Establishing a clear plan on how to handle terminology is one of the most important steps to ensure the quality and consistency of your translations and save your translators time.
+L'établissement d'un plan clair sur la façon de gérer la terminologie est l'une des étapes les plus importantes pour garantir la qualité et la cohérence de vos traductions et faire gagner du temps à vos traducteurs.
 
-In the translation space, this is known as terminology management and is one of the key services language service providers offer their clients, in addition to access to their pool of linguists and content management.
+Dans le domaine de la traduction, cela s'appelle la gestion de la terminologie et c'est l'un des services clés que les prestataires de services linguistiques offrent à leurs clients, en plus de l'accès à leur vivier de linguistes et à la gestion de contenu.
 
-Terminology management refers to the process of identifying, gathering, and managing terminology that is important for your project and should always be translated correctly and consistently.
+La gestion de la terminologie fait référence au processus d'identification, de collecte et de gestion de la terminologie qui est importante pour votre projet et qui doit toujours être traduite correctement et de manière cohérente.
 
-There are a couple of steps to follow when starting to think about terminology management:
+Il y a quelques étapes à suivre lorsque l'on commence à réfléchir à la gestion de la terminologie :
 
-- Identify key terms that should be included in the termbase.
-- Create a glossary of terms and their definitions.
-- Translate the terms and add them to the glossary.
-- Check and approve the translations.
-- Maintenez le glossaire et mettez-le à jour avec de nouveaux termes, à mesure qu'ils deviennent importants.
+- Identifier les termes clés qui doivent être inclus dans la base terminologique.
+- Créer un glossaire des termes et de leurs définitions.
+- Traduire les termes et les ajouter au glossaire.
+- Vérifier et approuver les traductions.
+- Maintenir le glossaire et le mettre à jour avec de nouveaux termes, à mesure qu'ils deviennent importants.
 
-Read more about terminology management:
+En savoir plus sur la gestion de la terminologie :
 
-[Trados on what is terminology management](https://www.trados.com/solutions/terminology-management/translation-101-what-is-terminology-management.html)
+[Trados sur ce qu'est la gestion de la terminologie](https://www.trados.com/solutions/terminology-management/translation-101-what-is-terminology-management.html)
 
-[Language Scientific on why terminology management matters](https://www.languagescientific.com/terminology-management-why-it-matters/#:~:text=Terminology%20management%20is%20the%20process,are%20related%20to%20each%20other.)
+[Language Scientific sur l'importance de la gestion de la terminologie](https://www.languagescientific.com/terminology-management-why-it-matters/#:~:text=Terminology%20management%20is%20the%20process,are%20related%20to%20each%20other.)
 
-[Clear Words Translation on what is terminology management and why it matters](http://clearwordstranslations.com/language/en/what-is-terminology-management/)
+[Clear Words Translation sur ce qu'est la gestion de la terminologie et pourquoi elle est importante](http://clearwordstranslations.com/language/en/what-is-terminology-management/)
 
-### Translation Memory and Glossary {#tm-and-glossary}
+### Mémoire de traduction et glossaire {#tm-and-glossary}
 
-The Translation Memory and Glossary are important tools in the translation industry and something most language service providers rely on.
+La mémoire de traduction et le glossaire sont des outils importants dans l'industrie de la traduction et sur lesquels la plupart des prestataires de services linguistiques s'appuient.
 
-Let’s look at what these terms mean and how they are different to each other:
+Voyons ce que signifient ces termes et en quoi ils diffèrent les uns des autres :
 
-**Mémoire de traduction (TM)** - Une base de données qui stocke automatiquement des segments ou des chaînes, y compris des blocs de texte plus longs, des phrases complètes, des paragraphes et des termes individuels, ainsi que leurs traductions actuelles et précédentes dans toutes les langues.
+**Mémoire de traduction (TM)** – Une base de données qui stocke automatiquement des segments ou des chaînes, y compris des blocs de texte plus longs, des phrases complètes, des paragraphes et des termes individuels, ainsi que leurs traductions actuelles et précédentes dans chaque langue.
 
-La plupart des outils de localisation, des systèmes de gestion de la traduction et des outils de traduction assistés par ordinateur ont des mémoires de traduction intégrées, qui peuvent généralement être exportées et utilisées dans d'autres outils similaires.
+La plupart des outils de localisation, des systèmes de gestion de traduction et des outils de traduction assistée par ordinateur ont des mémoires de traduction intégrées, qui peuvent généralement être exportées et utilisées dans d'autres outils similaires.
 
-The benefits of using a translation memory include faster translations, better translation quality, the ability to retain certain translations when updating or changing source content, and cheaper translation costs for repetitive content.
+Les avantages de l'utilisation d'une mémoire de traduction incluent des traductions plus rapides, une meilleure qualité de traduction, la possibilité de conserver certaines traductions lors de la mise à jour ou de la modification du contenu source, et des coûts de traduction moins élevés pour le contenu répétitif.
 
-Translation memories work based on a percentage match between different segments and are usually most useful when two segments contain over 50% of the same content. They are also used to automatically translate repetitive segments, which are 100% matches, thus removing the need to ever translate repetitive content more than once.
+Les mémoires de traduction fonctionnent sur la base d'un pourcentage de correspondance entre différents segments et sont généralement plus utiles lorsque deux segments contiennent plus de 50 % du même contenu. Elles sont également utilisées pour traduire automatiquement des segments répétitifs, qui correspondent à 100 %, éliminant ainsi le besoin de traduire le contenu répétitif plus d'une fois.
 
-Read more about translation memories:
+En savoir plus sur les mémoires de traduction :
 
-[Memsource on translation memories](https://www.memsource.com/translation-memory/)
+[Memsource sur les mémoires de traduction](https://www.memsource.com/translation-memory/)
 
 [Smartling sur ce qu'est une mémoire de traduction](https://www.smartling.com/resources/101/what-is-translation-memory/)
 
-**Glossary –** A list of important or sensitive terms, their definitions, functions, and established translations. The main difference between a glossary and a translation memory is that a glossary is not created automatically, and that it does not contain translations of full sentences.
+**Glossaire –** Une liste de termes importants ou sensibles, de leurs définitions, de leurs fonctions et de leurs traductions établies. La principale différence entre un glossaire et une mémoire de traduction est qu'un glossaire n'est pas créé automatiquement et qu'il ne contient pas de traductions de phrases complètes.
 
-Most localization tools, translation management systems, and computer-assisted translation tools have built-in glossaries that you can maintain to ensure they contain terminology important for your project. Like the TM, the glossary can usually be exported and used in other localization tools.
+La plupart des outils de localisation, des systèmes de gestion de traduction et des outils de traduction assistée par ordinateur ont des glossaires intégrés que vous pouvez maintenir pour vous assurer qu'ils contiennent la terminologie importante pour votre projet. Comme la mémoire de traduction, le glossaire peut généralement être exporté et utilisé dans d'autres outils de localisation.
 
-Before starting your translation project, it is highly recommended to take some time and create a glossary for your translators and reviewers. Using a glossary ensures that important terms are translated correctly, provides translators with much-needed context, and guarantees consistency in translations.
+Avant de commencer votre projet de traduction, il est fortement recommandé de prendre le temps de créer un glossaire pour vos traducteurs et réviseurs. L'utilisation d'un glossaire garantit que les termes importants sont traduits correctement, fournit aux traducteurs le contexte dont ils ont tant besoin et garantit la cohérence des traductions.
 
-While glossaries most often contain established translations in the target languages, they are also useful without this. Even without established translations, a glossary can have definitions of technical terms, highlight terms that should not get translated, and inform translators whether a specific term is used as a noun, verb, proper noun, or any other part of speech.
+Bien que les glossaires contiennent le plus souvent des traductions établies dans les langues cibles, ils sont également utiles sans cela. Même sans traductions établies, un glossaire peut contenir des définitions de termes techniques, mettre en évidence les termes qui ne doivent pas être traduits et informer les traducteurs si un terme spécifique est utilisé comme nom, verbe, nom propre ou toute autre partie du discours.
 
-Read more about glossaries:
+En savoir plus sur les glossaires :
 
-[Lionbridge on what is a translation glossary](http://info.lionbridge.com/rs/lionbridge/images/Lionbridge%20FAQ_Glossary_2013.pdf)
+[Lionbridge sur ce qu'est un glossaire de traduction](http://info.lionbridge.com/rs/lionbridge/images/Lionbridge%20FAQ_Glossary_2013.pdf)
 
 [Transifex sur les glossaires](https://docs.transifex.com/glossary/glossary)
 
-Si vous ne prévoyez pas d'utiliser un outil de localisation pour votre projet, vous ne pourrez probablement pas utiliser une mémoire de traduction et un glossaire (vous pouvez créer un glossaire ou une base de termes dans un fichier Excel, cependant, les glossaires automatisés éliminent le besoin pour les traducteurs de rechercher manuellement les termes et leurs définitions).
+Si vous ne prévoyez pas d'utiliser un outil de localisation pour votre projet, vous ne pourrez probablement pas utiliser de mémoire de traduction ni de glossaire (vous pourriez créer un glossaire ou une base terminologique dans un fichier Excel, cependant, les glossaires automatisés évitent aux traducteurs de chercher manuellement les termes et leurs définitions).
 
-This means that all repetitive and similar content would have to be manually translated every time. De plus, les traducteurs devraient vous poser des questions pour savoir si un certain terme doit être traduit ou non, comment il est utilisé dans le texte et si un terme a déjà une traduction établie.
+Cela signifie que tout le contenu répétitif et similaire devrait être traduit manuellement à chaque fois. De plus, les traducteurs devraient vous contacter pour savoir si un certain terme doit être traduit ou non, comment il est utilisé dans le texte et si un terme a déjà une traduction établie.
 
-_Voulez-vous utiliser la mémoire de traduction et le glossaire d'ethereum.org dans votre projet ? Contactez-nous à l'adresse translations@ethereum.org. _
+_Voulez-vous utiliser la mémoire de traduction et le glossaire d'ethereum.org dans votre projet ? Contactez-nous à translations@ethereum.org._
 
-## Translator Outreach {#translator-outreach}
+## Recherche de traducteurs {#translator-outreach}
 
-**Working with a language service provider**
+**Travailler avec un prestataire de services linguistiques**
 
-If you are working with a language service provider and their professional translators, this section might not be too relevant for you.
+Si vous travaillez avec un prestataire de services linguistiques et ses traducteurs professionnels, cette section pourrait ne pas être très pertinente pour vous.
 
-Dans ce cas, il est important de sélectionner un fournisseur de services linguistiques ayant la capacité de fournir tous les services dont vous avez besoin (par exemple, traduction, révision, assurance qualité) dans de nombreuses langues.
+Dans ce cas, il est important de sélectionner un prestataire de services linguistiques ayant la capacité de fournir tous les services dont vous avez besoin (par exemple, traduction, révision, assurance qualité) dans de nombreuses langues.
 
-Bien qu'il puisse être tentant de choisir un fournisseur de services linguistiques uniquement en fonction de ses tarifs proposés, il est important de noter que les plus grands fournisseurs de services linguistiques ont des tarifs plus élevés pour une raison.
+Bien qu'il puisse être tentant de sélectionner un prestataire de services linguistiques uniquement en fonction des tarifs proposés, il est important de noter que les plus grands prestataires de services linguistiques ont des tarifs plus élevés pour une bonne raison.
 
-- They have tens of thousands of linguists in their database, which means that they will be able to assign translators with sufficient experience and knowledge of your particular sector to your project (i.e., technical translators).
-- They have significant experience working on different projects and meeting their clients’ diverse needs. This means they will be more likely to adapt to your particular workflow, offer valuable suggestions and potential improvements for your translation process, and meet your needs, requirements, and deadlines.
-- Most of the largest language service providers also have their own localization tools, translation memories, and glossaries that you can use. Si ce n'est pas le cas, ils ont au moins suffisamment de linguistes dans leur bassin pour s'assurer que leurs traducteurs seront familiers et capables de travailler avec n'importe quel outil de localisation que vous souhaitez utiliser.
+- Ils ont des dizaines de milliers de linguistes dans leur base de données, ce qui signifie qu'ils seront en mesure d'affecter à votre projet des traducteurs ayant une expérience et des connaissances suffisantes de votre secteur particulier (c'est-à-dire des traducteurs techniques).
+- Ils ont une expérience significative de travail sur différents projets et de réponse aux divers besoins de leurs clients. Cela signifie qu'ils seront plus susceptibles de s'adapter à votre flux de travail particulier, d'offrir des suggestions précieuses et des améliorations potentielles pour votre processus de traduction, et de répondre à vos besoins, exigences et délais.
+- La plupart des grands prestataires de services linguistiques disposent également de leurs propres outils de localisation, mémoires de traduction et glossaires que vous pouvez utiliser. Sinon, ils ont au moins suffisamment de linguistes dans leur vivier pour s'assurer que leurs traducteurs connaîtront et seront capables de travailler avec n'importe quel outil de localisation que vous souhaitez utiliser.
 
-You can find an in-depth comparison of the largest language service providers in the world, some details about each of them and breakdowns by the services they provide, geographical data, etc. in the [2021 Nimdzi 100 report](https://www.nimdzi.com/nimdzi-100-top-lsp/).
+Vous pouvez trouver une comparaison approfondie des plus grands prestataires de services linguistiques au monde, quelques détails sur chacun d'eux et des répartitions par les services qu'ils fournissent, des données géographiques, etc. dans le [rapport Nimdzi 100 de 2021](https://www.nimdzi.com/nimdzi-100-top-lsp/).
 
-**Working with non-professional translators**
+**Travailler avec des traducteurs non professionnels**
 
 Vous travaillez peut-être avec des traducteurs non professionnels et recherchez des bénévoles pour vous aider à traduire.
 
-There are several ways to reach people and invite them to join your project. This will largely depend on your product and how big of a community you already have.
+Il existe plusieurs façons de contacter les gens et de les inviter à rejoindre votre projet. Cela dépendra en grande partie de votre produit et de la taille de la communauté que vous avez déjà.
 
-Some ways of onboarding volunteers are outlined below:
+Quelques moyens d'intégrer des bénévoles sont décrits ci-dessous :
 
-**Outreach –** While this is somewhat covered in the points below, reaching out to potential volunteers and making sure they are aware of your translation initiative can be effective in itself.
+**Sensibilisation –** Bien que cela soit en partie couvert dans les points ci-dessous, contacter des bénévoles potentiels et s'assurer qu'ils sont au courant de votre initiative de traduction peut être efficace en soi.
 
-A lot of people want to get involved and contribute to their favorite projects, but often don’t see a clear way of doing that without being a developer or having special technical skills. Si vous pouvez faire connaître votre projet, de nombreux bilingues seront probablement désireux de s'impliquer.
+Beaucoup de gens veulent s'impliquer et contribuer à leurs projets préférés, mais ne voient souvent pas de moyen clair de le faire sans être développeur ou avoir des compétences techniques particulières. Si vous pouvez faire connaître votre projet, de nombreux bilingues seront probablement ravis de s'impliquer.
 
-**Looking within your community –** Most projects in the space already have large and active communities. A lot of your community members would probably appreciate the chance to contribute to the project in a simple way.
+**Chercher au sein de votre communauté –** La plupart des projets dans cet espace ont déjà des communautés vastes et actives. Beaucoup de membres de votre communauté apprécieraient probablement la chance de contribuer au projet de manière simple.
 
-Bien que la contribution à des projets open source soit souvent basée sur une motivation intrinsèque, c'est aussi une expérience d'apprentissage fantastique. Anyone interested in learning more about your project would likely be happy to get involved with a translation program as a volunteer, since it would allow them to combine the fact that they have contributed to something they care about with an intensive hands-on learning experience.
+Bien que la contribution à des projets open source soit souvent basée sur une motivation intrinsèque, c'est aussi une expérience d'apprentissage fantastique. Toute personne intéressée à en savoir plus sur votre projet serait probablement heureuse de s'impliquer dans un programme de traduction en tant que bénévole, car cela lui permettrait de combiner le fait d'avoir contribué à quelque chose qui lui tient à cœur avec une expérience d'apprentissage pratique et intensive.
 
-**Mention de l'initiative dans votre produit -** Si votre produit est populaire et utilisé par un grand nombre de personnes, mettre en évidence votre programme de traduction et appeler les utilisateurs à l'action lors de l'utilisation du produit peut être extrêmement efficace.
+**Mentionner l'initiative dans votre produit –** Si votre produit est populaire et utilisé par un grand nombre de personnes, mettre en évidence votre programme de traduction et appeler les utilisateurs à l'action pendant qu'ils utilisent le produit peut être extrêmement efficace.
 
-This could be as simple as adding a banner or pop-up with a CTA to your product for applications and websites. C'est efficace parce que votre public cible est votre communauté - les personnes qui sont les plus susceptibles de s'impliquer en premier lieu.
+Cela pourrait être aussi simple que d'ajouter une bannière ou une fenêtre contextuelle avec un appel à l'action (CTA) à votre produit pour les applications et les sites Web. C'est efficace car votre public cible est votre communauté - les personnes qui sont les plus susceptibles de s'impliquer en premier lieu.
 
-**Social media –** Social media can be an effective way of spreading awareness about your translation program and reaching out to your community members, as well as other people who aren’t members of your community yet.
+**Réseaux sociaux –** Les réseaux sociaux peuvent être un moyen efficace de faire connaître votre programme de traduction et de contacter les membres de votre communauté, ainsi que d'autres personnes qui ne sont pas encore membres de votre communauté.
 
-If you have a Discord server or Telegram channel, it is easy to use that for outreach, communication with your translators, and acknowledging your contributors.
+Si vous avez un serveur Discord ou un canal Telegram, il est facile de l'utiliser pour la sensibilisation, la communication avec vos traducteurs et la reconnaissance de vos contributeurs.
 
 Des plateformes comme X (anciennement Twitter) peuvent également être utiles pour intégrer de nouveaux membres de la communauté et reconnaître publiquement vos contributeurs.
 
-La Fondation Linux a créé un rapport détaillé, le [Report on the 2020 FOSS contributor survey](https://www.linuxfoundation.org/wp-content/uploads/2020FOSSContributorSurveyReport_121020.pdf), analysant les contributeurs open source et leurs motivations.
+La Fondation Linux a créé un vaste [Rapport sur l'enquête 2020 auprès des contributeurs FOSS](https://www.linuxfoundation.org/wp-content/uploads/2020FOSSContributorSurveyReport_121020.pdf), analysant les contributeurs open source et leurs motivations.
 
 ## Conclusion {#conclusion}
 
-This document contains some key considerations every translation program should be aware of. Ce n'est en aucun cas un guide exhaustif, bien qu'il puisse aider toute personne sans expérience dans l'industrie de la traduction à organiser un programme de traduction pour son projet.
+Ce document contient quelques considérations clés dont tout programme de traduction devrait être conscient. Il ne s'agit en aucun cas d'un guide exhaustif, bien qu'il puisse aider toute personne n'ayant aucune expérience dans l'industrie de la traduction à organiser un programme de traduction pour son projet.
 
-If you are looking for more detailed instructions and breakdowns of different tools, processes, and critical aspects of managing a translation program, some of the largest language service providers maintain blogs and often publish articles on different aspects of the localization process. These are the best resources if you want to dive deeper into any of the topics above and understand how the localization process works professionally.
+Si vous recherchez des instructions plus détaillées et des analyses de différents outils, processus et aspects critiques de la gestion d'un programme de traduction, certains des plus grands prestataires de services linguistiques tiennent des blogs et publient souvent des articles sur différents aspects du processus de localisation. Ce sont les meilleures ressources si vous souhaitez approfondir l'un des sujets ci-dessus et comprendre comment le processus de localisation fonctionne de manière professionnelle.
 
-Some relevant links are included at the end of each section; however, you can find many other resources online.
+Quelques liens pertinents sont inclus à la fin de chaque section ; cependant, vous pouvez trouver de nombreuses autres ressources en ligne.
 
-Pour des propositions de coopération ou d'informations supplémentaires, d'apprentissages et de meilleures pratiques que nous avons recueillis en maintenant le programme de traduction ethereum.org, n'hésitez pas à nous contacter à translations@ethereum.org.
+Pour des propositions de coopération ou des informations supplémentaires, des apprentissages et des meilleures pratiques que nous avons acquis en maintenant le programme de traduction d'ethereum.org, n'hésitez pas à nous contacter à translations@ethereum.org.

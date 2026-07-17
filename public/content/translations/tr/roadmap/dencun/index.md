@@ -1,120 +1,119 @@
 ---
-title: Cancun-Deneb (Dencun) SSS
-description: "Cancun-Deneb (Dencun) ağ güncellemesi hakkında sıkça sorulan sorular"
+title: Kankun-Deneb (Dencun)
+metaTitle: Kankun-Deneb (Dencun) SSS
+description: Kankun-Deneb (Dencun) ağ güncellemesi hakkında sıkça sorulan sorular
 lang: tr
 ---
 
-# Cancun-Deneb (Dencun) {#dencun}
+Kankun-Deneb (Dencun), daha ucuz [katman 2 (l2)](/glossary/#layer-2) Rollup depolaması için geçici veri **blob**'ları sunan **Proto-Danksharding (EIP-4844)**'i etkinleştiren bir Ethereum ağ güncellemesidir.
 
-Cancun-Deneb (Dencun), Ethereum ağında **Proto-Danksharding'i (EIP-4844)** etkinleştiren ve daha ucuz [katman 2 (L2)](/glossary/#layer-2) toplama depolaması için geçici veri **blob'ları** sunan bir yükseltmedir.
+Yeni bir işlem türü, Rollup sağlayıcılarının verileri "blob" olarak bilinen yapılarda daha uygun maliyetli bir şekilde depolamasına olanak tanır. Blob'ların ağda yaklaşık 18 gün (daha kesin bir ifadeyle 4096 [Dönem](/glossary/#epoch)) boyunca erişilebilir olması garanti edilir. Bu sürenin ardından blob'lar ağdan budanır, ancak uygulamalar kanıtları kullanarak verilerinin geçerliliğini doğrulamaya devam edebilir. 
 
-Yeni bir işlem türü, toplama sağlayıcılarının verileri "blob" olarak bilinen yapılarda daha az maliyetle depolamasına olanak tanıyor. Blob'ların ağda yaklaşık 18 gün (daha kesin olarak 4096 [dönem](/glossary/#epoch)) boyunca erişilebilir olacağı garanti edilir. Bu sürenin sonunda blob'lar ağdan temizlenir ancak uygulamalar, verilerinin geçerliliğini kanıtlar yardımıyla hala doğrulayabilir.
+Bu, toplamaların maliyetini önemli ölçüde azaltır, Zincir büyümesini sınırlar ve güvenliği ve merkeziyetsiz bir Düğüm operatörleri kümesini korurken daha fazla kullanıcıyı desteklemeye yardımcı olur.
 
-Bu, toplamaların maliyetini önemli ölçüde azaltır, zincir büyümesini sınırlar ve hem güvenliği hem de merkeziyetsiz bir düğüm operatörü grubunu korurken daha fazla kullanıcının desteklenmesine yardımcı olur.
+## Toplamaların Proto-Danksharding sayesinde daha düşük ücretleri ne zaman yansıtmasını bekliyoruz? {#when}
 
-## Proto-Danksharding nedeniyle düşen ücretlerin toplamalara ne zaman yansımasını bekliyoruz? {#when}
-
-- Bu yükseltme, dönem 269568'de, **13-Mar-2024 13:55PM (UTC)** tarihinde etkilenleştirildi
-- Arbitrum veya Optimism gibi tüm büyük toplama sağlayıcıları, blob'ların yükseltmenin hemen ardından destekleneceğini sinyalini verdi
-- Her sağlayıcının yeni blob alanından yararlanmak için sistemlerini güncellemesi gerektiği için bağımsız toplama desteğinin zaman çizelgesi değişiklik gösterebilir
+- Bu güncelleme 269568. dönemde, **13 Mart 2024 saat 13:55'te (UTC)** etkinleştirildi
+- Arbitrum veya Optimism gibi tüm büyük Rollup sağlayıcıları, blob'ların güncellemenin hemen ardından destekleneceğinin sinyalini verdi
+- Her sağlayıcının yeni blob alanından yararlanmak için sistemlerini güncellemesi gerektiğinden, bireysel Rollup desteği için zaman çizelgesi değişiklik gösterebilir
 
 ## Sert çatallanma sonrasında ETH nasıl dönüştürülebilir? {#scam-alert}
 
-- **ETH'niz İçin Hiçbir İşlem Gerekmiyor**. Ethereum Dencun yükseltmesinin ardından, ETH'nizi dönüştürmeniz ya da yükseltmeniz gerekmez. Hesap bakiyeleriniz aynı kalacak ve sert çatallanmanın ardından şu an sahip olduğunuz ETH mevcut biçiminde erişilebilir olacaktır.
-- **Dolandırıcılıklara Karşı Dikkatli Olun!** <Emoji text="⚠️" /> **ETH'nizi "yükseltmenizi" söyleyen kişiler sizi dolandırmaya çalışıyor.** Bu yükseltmeyle ilgili yapmanız gereken hiçbir şey yok. Varlıklarınız hiçbir şekilde etkilenmeyecek. Unutmayın, bilgi sahibi olmak dolandırıcılıklardan korunmanın en iyi yoludur.
+- **ETH'niz İçin Hiçbir İşlem Gerekmiyor**: Ethereum Dencun güncellemesinin ardından ETH'nizi dönüştürmenize veya yükseltmenize gerek yoktur. Hesap bakiyeleriniz aynı kalacak ve şu anda elinizde bulunan ETH, sert çatallanma sonrasında mevcut haliyle erişilebilir olmaya devam edecektir.
+- **Dolandırıcılıklara Karşı Dikkatli Olun!** <Emoji text="⚠️" /> **Size ETH'nizi "yükseltmenizi" söyleyen herkes sizi dolandırmaya çalışıyordur.** Bu güncellemeyle ilgili yapmanız gereken hiçbir şey yoktur. Varlıklarınız tamamen etkilenmeden kalacaktır. Unutmayın, bilgili kalmak dolandırıcılıklara karşı en iyi savunmadır.
 
-[Dolandırıcılığı tanıma ve dolandırıcılıktan kaçınma hakkında daha fazla bilgi](/security/)
+[Dolandırıcılıkları tanıma ve bunlardan kaçınma hakkında daha fazlası](/security/)
 
-## Dencun ağ yükseltmesi hangi problemi çözüyor? {#network-impact}
+## Dencun ağ güncellemesi hangi sorunu çözüyor? {#network-impact}
 
-Dencun, ağırlıklı olarak **uygun ücretler** ile **ölçeklenebilirliği** (daha fazla kullanıcı ve daha fazla işlem yönetmeyi) ele alırken, ağın **merkeziyetsizliğini** de koruyor.
+Dencun öncelikle ağın **merkeziyetsizliğini korurken**, **uygun fiyatlı ücretlerle** **ölçeklenebilirliği** (daha fazla kullanıcıyı ve daha fazla işlemi idare etmeyi) ele alır.
 
-Ethereum topluluğu, katman 2 toplamalarını daha fazla kullanıcıyı güvenli bir şekilde desteklemenin birincil yolu olarak gören "toplama merkezli" bir büyüme yaklaşımını benimsiyor.
+Ethereum topluluğu, büyümesi için katman 2 toplamalarını daha fazla kullanıcıyı güvenli bir şekilde desteklemenin birincil aracı olarak konumlandıran "Rollup merkezli" bir yaklaşım benimsiyor.
 
-Toplama ağları, işlemlerin _işlenmesini_ (veya "yürütülmesini") Ana Ağdan ayrı olarak gerçekleştirir ve ardından sonuçların kriptografik kanıtını ve/veya sıkıştırılmış işlem verilerini kayıt tutma amacıyla Ana Ağa geri gönderir. Bu kanıtların depolanması bir masrafa yol açıyordu ([gaz](/glossary/#gas) biçiminde) ve Proto-Danksharding öncesinde tüm ağ düğüm operatörleri tarafından kalıcı olarak depolanması gerektiği için pahalı bir işti.
+Rollup ağları, işlemlerin _işlenmesini_ (veya "yürütülmesini") Ana Ağ'dan ayrı olarak gerçekleştirir ve ardından sonuçların kriptografik bir kanıtını ve/veya sıkıştırılmış işlem verilerini kayıt tutulması için Ana Ağ'da yayınlar. Bu kanıtları depolamak, Proto-Danksharding'den önce tüm ağ Düğüm operatörleri tarafından kalıcı olarak depolanması gereken ve bu nedenle pahalı bir görev olan bir masraf ([Gaz](/glossary/#gas) şeklinde) getirir.
 
-Dencun yükseltmesinde Proto-Danksharding'in tanıtılması, düğüm operatörlerinin bu verileri yalnızca yaklaşık 18 gün boyunca saklamasının yeterli olmasını beraberinde getirerek bu kanıtlar için daha ucuz veri depolama olanağı sağlıyor; ardından veriler, donanım gereksinimlerinin genişlemesini önlemek için güvenli bir şekilde kaldırılabiliyor.  Toplamalar genellikle 7 günlük bir çekim süresine sahip olduğundan bu süre boyunca L1'de blob'lar mevcut olduğu sürece güvenlik modeli değişmez. 18 günlük temizleme süresi, bu süreç için önemli bir tampon sağlar.
+Dencun güncellemesinde Proto-Danksharding'in sunulması, Düğüm operatörlerinin bu verileri yalnızca yaklaşık 18 gün boyunca depolamasını gerektirerek bu kanıtlar için daha ucuz veri depolaması ekler; bu sürenin ardından donanım gereksinimlerinin artmasını önlemek için veriler güvenli bir şekilde kaldırılabilir. Toplamalar genellikle 7 günlük bir çekim süresine sahip olduğundan, blob'lar bu süre boyunca l1'de mevcut olduğu sürece güvenlik modelleri değişmez. 18 günlük budama penceresi, bu süre için önemli bir tampon sağlar.
 
-[Ethereum'u ölçeklendirme hakkında daha fazla bilgi için](/roadmap/scaling/)
+[Ethereum'u ölçeklendirme hakkında daha fazlası](/roadmap/scaling/)
 
 ## Eski blob verilerine nasıl erişilir? {#historical-access}
 
-Normal Ethereum düğümleri her zaman ağın _mevcut durumunu_ saklayacak olsa da, tarihsel blob verileri başlangıcından yaklaşık 18 gün sonra kaldırılabilir. Bu veriler kaldırılmadan önce Ethereum bu verilerin tüm ağ katılımcılarına sunulmasını sağlayarak aşağıdaki işlemler için zaman tanır:
+Normal Ethereum düğümleri her zaman ağın _mevcut durumunu_ tutacak olsa da, geçmiş blob verileri sunulduktan yaklaşık 18 gün sonra atılabilir. Bu verileri atmadan önce Ethereum, verilerin tüm ağ katılımcılarına sunulduğundan emin olarak şunlar için zaman tanır:
 
-- İlgili tarafların verileri indirip saklaması.
-- Tüm toplama yarışma dönemlerinin tamamlanması.
-- Toplama işlemlerinin sonuçlandırılması.
+- İlgili tarafların verileri indirmesi ve depolaması.
+- Tüm Rollup itiraz sürelerinin tamamlanması.
+- Rollup işlemlerinin kesinleşmesi.
 
-_Tarihsel_ blob verileri çeşitli nedenlerle istenebilir ve çeşitli merkeziyetsiz protokoller kullanılarak saklanıp bunlara erişilebilir:
+_Geçmiş_ blob verileri çeşitli nedenlerle istenebilir ve çeşitli merkeziyetsiz protokoller kullanılarak depolanabilir ve erişilebilir:
 
-- The Graph gibi \***üçüncü taraf indeksleme protokolleri**, bu verileri kripto-ekonomik mekanizmalarla teşvik edilen merkeziyetsiz bir düğüm operatörleri ağı aracılığıyla saklar.
-- **BitTorrent**, gönüllülerin bu verileri saklayıp başkalarına dağıtabileceği merkeziyetsiz bir protokoldür.
-- **[Ethereum portal ağı](/developers/docs/networking-layer/portal-network/)**, BitTorrent'e benzer şekilde verileri katılımcılar arasında dağıtarak merkeziyetsiz düğüm operatörleri ağı aracılığıyla tüm Ethereum verilerine erişim sunmayı amaçlar.
-- **Bireysel kullanıcılar** geçmişe bakmak amacıyla diledikleri verilerin kendilerine ait kopyalarını saklamakta her zaman özgürdür.
-- **Toplama sağlayıcıları**, toplamalara ilişkin kullanıcı deneyimini geliştirmek için bu verileri depolamaya teşvik edilir.
-- **Blok arayıcıları** genellikle tüm bu bilgileri kolayca geçmişe bakmak için indeksleyen ve depolayan arşiv düğümlerini çalıştırır ve kullanıcıların bunlara bir web arayüzü aracılığıyla erişmesini sağlar.
+- The Graph gibi **üçüncü taraf endeksleme protokolleri**, bu verileri kripto-ekonomik mekanizmalarla teşvik edilen merkeziyetsiz bir Düğüm operatörleri ağı aracılığıyla depolar.
+- **BitTorrent**, gönüllülerin bu verileri tutabileceği ve başkalarına dağıtabileceği merkeziyetsiz bir protokoldür.
+- **[Ethereum Portal Ağı](/developers/docs/networking-layer/portal-network/)**, verileri BitTorrent'e benzer şekilde katılımcılar arasında dağıtarak merkeziyetsiz bir Düğüm operatörleri ağı aracılığıyla tüm Ethereum verilerine erişim sağlamayı amaçlar.
+- **Bireysel kullanıcılar**, geçmişe dönük referans için istedikleri herhangi bir verinin kendi kopyalarını depolamakta her zaman özgürdür.
+- **Rollup sağlayıcıları**, Rollup'larının kullanıcı deneyimini geliştirmek için bu verileri depolamaya teşvik edilir.
+- **Blok gezginleri** genellikle, kullanıcıların bir web arayüzü aracılığıyla erişebileceği, kolay geçmiş referansı için tüm bu bilgileri endeksleyen ve depolayan arşiv düğümleri çalıştırır.
 
-Tarihsel durumu geri yüklemenin **1/N güven modeli** üzerinde çalıştığını belirtmek önemlidir. Bu, ağın mevcut durumunu kullanarak doğruluğunu onaylamak için yalnızca _tek bir güvenilir kaynaktan_ gelen verilere ihtiyacınız olduğu anlamına gelir.
+Geçmiş durumu kurtarmanın **N'de 1 güven modeli** üzerinde çalıştığını belirtmek önemlidir. Bu, ağın mevcut durumunu kullanarak doğruluğunu teyit etmek için yalnızca _tek bir güvenilir kaynaktan_ gelen verilere ihtiyacınız olduğu anlamına gelir.
 
-## Bu yükseltme, Ethereum'un genel yol haritasına nasıl katkıda bulunuyor? {#roadmap-impact}
+## Bu güncelleme daha geniş Ethereum yol haritasına nasıl katkıda bulunuyor? {#roadmap-impact}
 
-Proto-Danksharding, [Danksharding](/roadmap/danksharding/)'in tam olarak uygulanması için zemin hazırlar. Danksharding, toplama verilerinin depolama alanını düğüm operatörleri arasında dağıtmak üzere tasarlanmıştır; bu sayede, her operatörün toplama verilerinin sadece küçük bir kısmını işlemesi gerekir. Bu dağıtım, blok başına veri parçacıklarının sayısını artırır ve bu da Ethereum'u daha fazla kullanıcıyı ve işlem hacmini destekleyebilecek şekilde ölçeklendirmek için gereklidir.
+Proto-Danksharding, [danksharding](/roadmap/danksharding/)'in tam olarak uygulanmasına zemin hazırlar. Danksharding, Rollup verilerinin depolanmasını Düğüm operatörleri arasında dağıtmak için tasarlanmıştır, böylece her operatörün toplam verinin yalnızca küçük bir kısmını işlemesi gerekir. Bu dağıtım, Ethereum'u daha fazla kullanıcıyı ve işlemi idare edecek şekilde ölçeklendirmek için gerekli olan Blok başına veri blob'larının sayısını artıracaktır.
 
-Bu ölçeklenebilirlik, bir yandan merkeziyetsiz bir ağın sürdürülmesini sağlarken diğer yandan uygun ücretler ve daha gelişmiş uygulamalarla [Ethereum'daki milyarlarca kullanıcıyı desteklemek](/roadmap/scaling/) açısından hayati önem taşır. Bu değişiklikler olmadan, düğüm operatörleri için gereken donanım talepleri artacak ve giderek daha pahalı ekipmanlara ihtiyaç duyulacaktır. Bu, daha küçük operatörlerin devre dışı kalmasına yol açabilir ve ağ üzerindeki kontrolün birkaç büyük operatörde toplanmasına neden olabilir, bu da merkeziyetsizlik ilkesine aykırıdır.
+Bu ölçeklenebilirlik, merkeziyetsiz bir ağı korurken uygun fiyatlı ücretler ve daha gelişmiş uygulamalarla [Ethereum'da milyarlarca kullanıcıyı desteklemek](/roadmap/scaling/) için çok önemlidir. Bu değişiklikler olmadan, Düğüm operatörleri için donanım talepleri artacak ve giderek daha pahalı ekipmanlara ihtiyaç duyulmasına yol açacaktır. Bu durum, daha küçük operatörleri piyasa dışına itebilir ve ağ kontrolünün birkaç büyük operatör arasında yoğunlaşmasına neden olarak merkeziyetsizlik ilkesine ters düşebilir.
 
-## Bu yükseltme tüm Ethereum mutabakat ve doğrulayıcı istemcilerini etkiliyor mu? {#client-impact}
+## Bu güncelleme tüm Ethereum mutabakat ve Doğrulayıcı istemcilerini etkiliyor mu? {#client-impact}
 
-Evet, Proto-Danksharding (EIP-4844) hem yürütüm istemcilerinin hem de fikir birliği istemcilerinin güncellenmesini gerektirir. Tüm ana Ethereum istemcileri, yükseltmeyi destekleyen sürümler yayımlamıştır. Yükseltme sonrasında Ethereum ağı ile senkronizasyonu sürdürmek için düğüm operatörlerinin desteklenen bir istemci sürümü çalıştırdıklarından emin olmaları gerekir. İstemci sürümleri hakkındaki bilgilerin zamana duyarlı olduğunu ve kullanıcıların en güncel ayrıntılar için en son güncellemelere başvurmaları gerektiğini unutmayın. [Desteklenen istemci sürümleri hakkında ayrıntılara bakın](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement#client-releases).
+Evet, Proto-Danksharding (EIP-4844) hem yürütme istemcilerinde hem de mutabakat istemcilerinde güncellemeler gerektirir. Tüm ana Ethereum istemcileri güncellemeyi destekleyen sürümler yayınladı. Güncelleme sonrasında Ethereum ağıyla senkronizasyonu sürdürmek için Düğüm operatörleri, desteklenen bir istemci sürümünü çalıştırdıklarından emin olmalıdır. İstemci sürümleri hakkındaki bilgilerin zamana duyarlı olduğunu ve kullanıcıların en güncel ayrıntılar için en son güncellemelere başvurmaları gerektiğini unutmayın. [Desteklenen istemci sürümleri hakkındaki ayrıntılara bakın](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement#client-releases).
 
-Fikir birliği istemcileri, yükseltmeye uyum sağlayacak şekilde güncellenen _Doğrulayıcı_ yazılımını yönetir.
+Mutabakat istemcileri, tümü güncellemeyi barındıracak şekilde güncellenmiş olan _Doğrulayıcı_ yazılımını idare eder.
 
-## Cancun-Deneb (Dencun), Ethereum test ağlarını nasıl etkiler? {#testnet-impact}
+## Kankun-Deneb (Dencun) Ethereum test ağlarını nasıl etkiler? {#testnet-impact}
 
-- Devnet'ler, Sepolia ve Holesky, Dencun yükseltmesinden geçmiştir ve Proto-Danksharding tüm işlevleriyle çalışmaktadır.
-- Toplama geliştiricileri, bu ağları EIP-4844 testleri için kullanabilir
-- Çoğu kullanıcı test ağında yapılan bu değişiklikten hiçbir şekilde etkilenmeyecektir
+- Geliştirici ağları (Devnet'ler), Sepolia ve Holesky, Dencun güncellemesinden geçti ve Proto-Danksharding tam olarak çalışıyor
+- Rollup geliştiricileri bu ağları EIP-4844 testi için kullanabilir
+- Çoğu kullanıcı, her bir test ağındaki bu değişiklikten tamamen etkilenmeyecektir
 
-## Artık L2'ler üzerindeki tüm işlemler geçici blob alanını mı kullanacak yoksa seçme şansına sahip olacak mısınız? {#calldata-vs-blobs}
+## L2'lerdeki tüm işlemler artık geçici blob alanını mı kullanacak, yoksa seçim yapabilecek misiniz? {#calldata-vs-blobs}
 
-Ethereum'un Katman 2'deki (L2) toplama işlemleri, geçici blob alanı veya kalıcı akıllı sözleşme verileri olmak üzere iki tür veri depolama seçeneğine sahiptir. Blob alanı, düşük maliyetle geçici depolama sağlayan ekonomik bir seçenektir. Gerekli tüm yarışma dönemlerinde veri kullanılabilirliğini garanti eder. Diğer yandan, akıllı sözleşme verileri kalıcı depolama sunmakla birlikte daha maliyetlidir.
+Ethereum'un Katman 2'sindeki (l2) Rollup işlemleri iki tür veri depolama kullanma seçeneğine sahiptir: geçici blob alanı veya kalıcı Akıllı sözleşme çağrı verisi. Blob alanı, daha düşük maliyetle geçici depolama sağlayan ekonomik bir seçimdir. Gerekli tüm itiraz süreleri için veri kullanılabilirliğini garanti eder. Öte yandan, Akıllı sözleşme çağrı verisi kalıcı depolama sunar ancak daha pahalıdır.
 
-Blob alanı veya calldata seçeneklerinden hangisinin kullanılacağına dair karar, ağırlıklı olarak toplama sağlayıcıları tarafından verilir. Bu kararı, blob alanına olan mevcut talebe dayandırırlar. Toplamalar, blob alanına olan talep yüksekse verilerin zamanında gönderilmesini sağlamak için calldata'yı tercih edebilir.
+Blob alanı veya çağrı verisi kullanma arasındaki karar öncelikle Rollup sağlayıcıları tarafından verilir. Bu kararı blob alanına olan mevcut talebe dayandırırlar. Blob alanına yüksek talep varsa, toplamalar verilerin zamanında yayınlanmasını sağlamak için çağrı verisini tercih edebilir.
 
-Teorik olarak kullanıcıların tercih ettikleri depolama türünü seçmeleri mümkün olsa da, genellikle bu seçimi toplama sağlayıcıları yönetir. Kullanıcılara bu seçeneğin sunulması, özellikle uygun maliyetli paketleme işlemlerinde karmaşıklık yaratacaktır. Kullanıcılar, bu seçime ilişkin özel ayrıntılar için ilgili toplama sağlayıcıları tarafından sağlanan dokümanlara başvurmalıdır.
+Kullanıcıların tercih ettikleri depolama türünü seçmeleri teorik olarak mümkün olsa da, bu seçimi genellikle Rollup sağlayıcıları yönetir. Bu seçeneği kullanıcılara sunmak, özellikle uygun maliyetli paketleme işlemlerinde karmaşıklık katacaktır. Bu seçimle ilgili belirli ayrıntılar için kullanıcılar, bireysel Rollup sağlayıcıları tarafından sağlanan belgelere başvurmalıdır.
 
-## 4844, L1 gazını azaltacak mı? {#l1-fee-impact}
+## 4844, l1 Gazını azaltacak mı? {#l1-fee-impact}
 
-Önemli ölçüde değil. Toplama sağlayıcılarının kullanması amacıyla sadece blob alanı için yeni bir gaz pazarı tanıtıldı. _Her ne kadar L1'deki ücretler, toplama verilerinin blob'lara aktarılmasıyla azaltılabilse de, bu yükseltme öncelikli olarak L2 ücretlerinin azaltılmasına odaklanıyor. L1'deki (Ana Ağ) ücretlerin azaltılması, daha az ölçüde ikinci dereceden bir etki olarak ortaya çıkabilir._
+Önemli ölçüde değil. Rollup sağlayıcılarının kullanımı için özel olarak blob alanına yönelik yeni bir Gaz piyasası sunulmuştur. _Rollup verilerinin blob'lara aktarılmasıyla l1'deki ücretler azaltılabilse de, bu güncelleme öncelikle l2 ücretlerinin azaltılmasına odaklanmaktadır. L1'deki (Ana Ağ) ücretlerin düşmesi, daha az ölçüde ikinci dereceden bir etki olarak ortaya çıkabilir._
 
-- L1 gaz azalması, toplama sağlayıcıları tarafından blob verilerinin benimsenmesiyle/kullanımıyla orantılı olacaktır
-- L1 gazı, toplama dışı faaliyetler sayesinde muhtemelen rekabet gücünü koruyacaktır
-- Blob alanı kullanımını benimseyen toplamalar, daha az L1 gazı talep edecek ve bu sayede kısa vadede L1 gaz ücretleri aşağı çekilebilecektir
-- Blob alanı hala sınırlı olduğundan bir blok içindeki blob'lar doymuşsa/doluysa, verilerini kalıcı veri olarak göndermek için toplamalar gerekli olabilir ve bu da L1 ve L2 gaz fiyatlarını artırabilir
+- L1 Gazındaki azalma, Rollup sağlayıcıları tarafından blob verilerinin benimsenmesi/kullanımı ile orantılı olacaktır
+- L1 Gazının, Rollup ile ilgili olmayan faaliyetlerden dolayı rekabetçi kalması muhtemeldir
+- Blob alanının kullanımını benimseyen toplamalar daha az l1 Gazı talep edecek ve bu da yakın vadede l1 Gaz ücretlerini aşağı çekmeye yardımcı olacaktır
+- Blob alanı hala sınırlıdır, bu nedenle bir Blok içindeki blob'lar doygunluğa ulaşırsa/dolarsa, toplamaların bu süre zarfında verilerini kalıcı veri olarak yayınlaması gerekebilir ve bu da l1 ve l2 Gaz fiyatlarını yukarı çekecektir
 
-## Bu, diğer EVM katman 1 blokzincirlerindeki ücretleri düşürecek mi? {#alt-l1-fee-impact}
+## Bu, diğer EVM katman 1 blokzincirlerindeki ücretleri azaltacak mı? {#alt-l1-fee-impact}
 
-Hayır. Proto-Danksharding'in faydaları, ispatlarını katman 1'de (Ana Ağ) saklayan Ethereum katman 2 toplamalarına özgüdür.
+Hayır. Proto-Danksharding'in faydaları, kanıtlarını katman 1'de (Ana Ağ) depolayan Ethereum katman 2 toplamalarına özgüdür.
 
-Sadece Ethereum Sanal Makinesi (EVM) ile uyumlu olması, bir ağın bu yükseltmeden herhangi bir fayda sağlayacağı anlamına gelmez. Ethereum'dan bağımsız çalışan ağlar (EVM uyumlu olup olmamalarına bakılmaksızın) verilerini Ethereum'da depolamaz ve bu yükseltmeden herhangi bir fayda sağlamaz.
+Sadece Ethereum Sanal Makinesi (EVM) ile uyumlu olmak, bir ağın bu güncellemeden herhangi bir fayda göreceği anlamına gelmez. Ethereum'dan bağımsız olarak çalışan ağlar (EVM uyumlu olsun veya olmasın) verilerini Ethereum'da depolamazlar ve bu güncellemeden herhangi bir fayda görmezler.
 
-[Katman 2 toplamaları hakkında daha fazla bilgi](/layer-2/)
+[Katman 2 toplamaları hakkında daha fazlası](/layer-2/)
 
-## Görerek öğrenmeyi mi tercih ediyorsunuz? {#visual-learner}
+## Görsel öğrenmeyi mi tercih ediyorsunuz? {#visual-learner}
 
-<YouTube id="HT9PHWloIiU" />
+<VideoWatch slug="eip-4844-dencun-explained" />
 
-_Unlocking Ethereum's Scaling, EIP-4844 — Finematics _
+_Ethereum'un Ölçeklenmesinin Kilidini Açmak, EIP-4844 — Finematics _
 
-<YouTube id="dFjyUY3e53Q" />
+<VideoWatch slug="blobspace-101-dencun" />
 
-_Blobspace 101 with Domothy — Bankless_
+_Domothy ile Blobspace 101 — Bankless_
 
-## Daha fazla kaynak {#further-reading}
+## Daha fazla okuma {#further-reading}
 
 - [EIP4844.com](https://www.eip4844.com/)
-- [EIP-4844: Shard blob transactions (Proto-Danksharding)](https://eips.ethereum.org/EIPS/eip-4844)
-- [Dencun Ana Ağ Duyurusu](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement) - _Ethereum Foundation blog_
+- [EIP-4844: Parça blob işlemleri (Proto-Danksharding)](https://eips.ethereum.org/EIPS/eip-4844)
+- [Dencun Ana Ağ Duyurusu](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement) - _Ethereum Foundation blogu_
 - [Otostopçunun Ethereum Rehberi: Proto-Danksharding](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum/#proto-danksharding-eip-4844) - _Jon Charbonneau_
 - [Proto-Danksharding SSS](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq) - _Vitalik Buterin_
-- [EIP-4844'ün Ayrıntılı Açıklaması: Cancun Yükseltmesinin Temeli](https://medium.com/@ebunker.io/an-in-depth-explanation-of-eip-4844-the-core-of-the-cancun-upgrade-de7b13761d2c) - _Ebunker_
+- [EIP-4844'ün Derinlemesine Açıklaması: Kankun Güncellemesinin Çekirdeği](https://medium.com/@ebunker.io/an-in-depth-explanation-of-eip-4844-the-core-of-the-cancun-upgrade-de7b13761d2c) - _Ebunker_
 - [AllCoreDevs Güncellemesi 016](https://tim.mirror.xyz/HzH5MpK1dnw7qhBSmzCfdCIxpwpD6DpwlfxtaAwEFro) - _Tim Beiko_

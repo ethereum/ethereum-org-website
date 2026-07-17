@@ -1,83 +1,83 @@
 ---
-title: "Zkrácené ABI pro optimalizaci calldata"
+title: "Krátká ABI pro optimalizaci dat volání"
 description: "Optimalizace chytrých kontraktů pro optimistické rollupy"
 author: Ori Pomerantz
 lang: cs
-tags: [ "vrstva 2" ]
+tags: ["vrstva 2 (l2)"]
 skill: intermediate
-breadcrumb: "Krátké ABIs"
+breadcrumb: "Krátká ABI"
 published: 2022-04-01
 ---
 
 ## Úvod {#introduction}
 
-V tomto článku se dozvíte o [optimistických rollupech](/developers/docs/scaling/optimistic-rollups), nákladech na transakce na nich a o tom, jak tato odlišná struktura nákladů vyžaduje, abychom optimalizovali jiné věci než na hlavní síti Etherea.
-Také se dozvíte, jak tuto optimalizaci implementovat.
+V tomto článku se dozvíte o [optimistických rollupech](/developers/docs/scaling/optimistic-rollups), nákladech na transakce na nich a o tom, jak tato odlišná struktura nákladů vyžaduje, abychom optimalizovali jiné věci než na Ethereum Mainnetu.
+Také se naučíte, jak tuto optimalizaci implementovat.
 
-### Úplné zveřejnění {#full-disclosure}
+### Plné odhalení {#full-disclosure}
 
-Jsem zaměstnancem společnosti [Optimism](https://www.optimism.io/) na plný úvazek, takže příklady v tomto článku poběží na Optimismu.
-Zde vysvětlená technika by však měla fungovat stejně dobře i pro ostatní rollupy.
+Jsem zaměstnancem [Optimism](https://www.optimism.io/) na plný úvazek, takže příklady v tomto článku poběží na síti Optimism.
+Zde vysvětlená technika by však měla fungovat stejně dobře i pro jiné rollupy.
 
 ### Terminologie {#terminology}
 
-Při diskusi o rollupech se termín „vrstva 1“ (L1) používá pro hlavní síť (Mainnet), produkční síť Etherea.
-Termín „vrstva 2“ (L2) se používá pro rollup nebo jakýkoli jiný systém, který se spoléhá na L1 kvůli bezpečnosti, ale většinu zpracování provádí mimo řetězec (offchain).
+Při diskuzi o rollupech se termín „vrstva 1 (l1)“ používá pro Mainnet, produkční síť Ethereum.
+Termín „vrstva 2 (l2)“ se používá pro rollup nebo jakýkoli jiný systém, který spoléhá na l1 z hlediska bezpečnosti, ale většinu svého zpracování provádí offchain.
 
-## Jak můžeme dále snížit náklady na transakce L2? {#how-can-we-further-reduce-the-cost-of-L2-transactions}
+## Jak můžeme dále snížit náklady na transakce na l2? {#how-can-we-further-reduce-the-cost-of-l2-transactions}
 
-[Optimistické rollupy](/developers/docs/scaling/optimistic-rollups) musí uchovávat záznam o každé historické transakci, aby si je kdokoli mohl projít a ověřit, že aktuální stav je správný.
-Nejlevnější způsob, jak dostat data do hlavní sítě Etherea, je zapsat je jako calldata.
-Toto řešení si zvolily jak [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-), tak [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
+[Optimistické rollupy](/developers/docs/scaling/optimistic-rollups) musí uchovávat záznam o každé historické transakci, aby si je kdokoli mohl projít a ověřit, že je aktuální stav správný.
+Nejlevnější způsob, jak dostat data do Ethereum Mainnetu, je zapsat je jako data volání.
+Toto řešení zvolily sítě [Optimism](https://docs.optimism.io/op-stack/protocol/overview) i [Arbitrum](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction).
 
-### Náklady na transakce L2 {#cost-of-l2-transactions}
+### Náklady na transakce na l2 {#cost-of-l2-transactions}
 
-Náklady na transakce L2 se skládají ze dvou složek:
+Náklady na transakce na l2 se skládají ze dvou složek:
 
-1. Zpracování na L2, které je obvykle extrémně levné
-2. Úložiště na L1, které je vázáno na náklady na palivo na hlavní síti
+1. Zpracování na l2, které je obvykle extrémně levné
+2. Úložiště na l1, které je vázáno na náklady na gas na Mainnetu
 
-V době, kdy toto píšu, je na Optimismu cena paliva L2 0,001 [Gwei](/developers/docs/gas/#pre-london).
-Cena paliva L1 je naopak přibližně 40 gwei.
-[Aktuální ceny si můžete prohlédnout zde](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
+V době psaní tohoto článku je na síti Optimism cena l2 gasu 0,001 [Gwei](/developers/docs/gas/#pre-london).
+Cena l1 gasu je naproti tomu přibližně 40 Gwei.
+[Aktuální ceny můžete vidět zde](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
 
-Jeden bajt calldata stojí buď 4 jednotky paliva (pokud je nulový), nebo 16 jednotek paliva (pokud má jakoukoli jinou hodnotu).
-Jednou z nejdražších operací na EVM je zápis do úložiště.
-Maximální cena zápisu 32bajtového slova do úložiště na L2 je 22 100 jednotek paliva. V současnosti je to 22,1 gwei.
-Takže pokud ušetříme jediný nulový bajt calldata, budeme moci zapsat do úložiště asi 200 bajtů a stále na tom vyděláme.
+Bajt dat volání stojí buď 4 gas (pokud je nulový), nebo 16 gas (pokud má jakoukoli jinou hodnotu).
+Jednou z nejdražších operací v EVM je zápis do úložiště.
+Maximální cena zápisu 32bajtového slova do úložiště na l2 je 22 100 gas. V současnosti to je 22,1 Gwei.
+Takže pokud dokážeme ušetřit jediný nulový bajt dat volání, budeme moci zapsat asi 200 bajtů do úložiště a stále na tom budeme lépe.
 
 ### ABI {#the-abi}
 
-Většina transakcí putuje do kontraktu z externě vlastněného účtu.
+Drtivá většina transakcí přistupuje ke kontraktu z externě vlastněného účtu.
 Většina kontraktů je napsána v jazyce Solidity a interpretuje své datové pole podle [aplikačního binárního rozhraní (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
 
-ABI však bylo navrženo pro L1, kde bajt calldata stojí přibližně stejně jako čtyři aritmetické operace, nikoliv pro L2, kde bajt calldata stojí více než tisíc aritmetických operací.
-Calldata jsou rozdělena takto:
+Nicméně ABI bylo navrženo pro l1, kde bajt dat volání stojí přibližně stejně jako čtyři aritmetické operace, a ne pro l2, kde bajt dat volání stojí více než tisíc aritmetických operací.
+Data volání jsou rozdělena takto:
 
-| Sekce           | Délka | Bajty | Zbytečné bajty | Zbytečné palivo | Nezbytné bajty | Nezbytné palivo |
-| --------------- | ----: | ----: | -------------: | --------------: | -------------: | --------------: |
-| Selektor funkce |     4 |   0-3 |              3 |              48 |              1 |              16 |
-| Nuly            |    12 |  4-15 |             12 |              48 |              0 |               0 |
-| Cílová adresa   |    20 | 16-35 |              0 |               0 |             20 |             320 |
-| Částka          |    32 | 36-67 |             17 |              64 |             15 |             240 |
-| Celkem          |    68 |       |                |             160 |                |             576 |
+| Sekce | Délka | Bajty | Promarněné bajty | Promarněný gas | Nezbytné bajty | Nezbytný gas |
+| ------------------- | -----: | ----: | -----------: | ---------: | --------------: | ------------: |
+| Selektor funkce |      4 |   0-3 |            3 |         48 |               1 |            16 |
+| Nuly |     12 |  4-15 |           12 |         48 |               0 |             0 |
+| Cílová adresa |     20 | 16-35 |            0 |          0 |              20 |           320 |
+| Částka |     32 | 36-67 |           17 |         64 |              15 |           240 |
+| Celkem |     68 |       |              |        160 |                 |           576 |
 
 Vysvětlení:
 
 - **Selektor funkce**: Kontrakt má méně než 256 funkcí, takže je můžeme rozlišit jediným bajtem.
-  Tyto bajty jsou obvykle nenulové, a proto [stojí šestnáct jednotek paliva](https://eips.ethereum.org/EIPS/eip-2028).
-- **Nuly**: Tyto bajty jsou vždy nulové, protože dvacetibajtová adresa nevyžaduje k uložení třicetidvoubajtové slovo.
-  Bajty, které obsahují nulu, stojí čtyři jednotky paliva ([viz Yellow paper](https://ethereum.github.io/yellowpaper/paper.pdf), Dodatek G,
+  Tyto bajty jsou obvykle nenulové, a proto [stojí šestnáct gas](https://eips.ethereum.org/EIPS/eip-2028).
+- **Nuly**: Tyto bajty jsou vždy nulové, protože dvacetibajtová adresa nevyžaduje k uložení dvaatřicetibajtové slovo.
+  Bajty, které obsahují nulu, stojí čtyři gas ([viz yellow paper](https://ethereum.github.io/yellowpaper/paper.pdf), dodatek G,
   str. 27, hodnota pro `G`<sub>`txdatazero`</sub>).
-- **Částka**: Pokud předpokládáme, že v tomto kontraktu je `decimals` osmnáct (normální hodnota) a maximální množství tokenů, které převedeme, bude 10<sup>18</sup>, dostaneme maximální částku 10<sup>36</sup>.
+- **Částka**: Pokud budeme předpokládat, že v tomto kontraktu je `decimals` osmnáct (běžná hodnota) a maximální množství tokenů, které převedeme, bude 10<sup>18</sup>, dostaneme maximální částku 10<sup>36</sup>.
   256<sup>15</sup> &gt; 10<sup>36</sup>, takže patnáct bajtů stačí.
 
-Ztráta 160 jednotek paliva na L1 je obvykle zanedbatelná. Transakce stojí nejméně [21 000 jednotek paliva](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), takže na 0,8 % navíc nezáleží.
-Na L2 je to však jinak. Téměř celé náklady na transakci tvoří její zápis na L1.
-Kromě calldata transakce existuje 109 bajtů záhlaví transakce (cílová adresa, podpis atd.).
-Celkové náklady jsou tedy `109*16+576+160=2480` a my z toho plýtváme asi 6,5 %.
+Ztráta 160 gas na l1 je normálně zanedbatelná. Transakce stojí minimálně [21 000 gas](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), takže dalších 0,8 % nehraje roli.
+Na l2 je to však jiné. Téměř celé náklady na transakci tvoří její zápis na l1.
+Kromě dat volání transakce je zde 109 bajtů hlavičky transakce (cílová adresa, podpis atd.).
+Celkové náklady jsou tedy `109*16+576+160=2480` a my z nich plýtváme asi 6,5 %.
 
-## Snížení nákladů, když nemáte kontrolu nad cílem {#reducing-costs-when-you-dont-control-the-destination}
+## Snižování nákladů, když nemáte pod kontrolou cíl {#reducing-costs-when-you-dont-control-the-destination}
 
 Za předpokladu, že nemáte kontrolu nad cílovým kontraktem, můžete stále použít řešení podobné [tomuto](https://github.com/qbzzt/ethereum.org-20220330-shortABI).
 Pojďme si projít příslušné soubory.
@@ -85,9 +85,9 @@ Pojďme si projít příslušné soubory.
 ### Token.sol {#token-sol}
 
 [Toto je cílový kontrakt](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol).
-Jedná se o standardní kontrakt ERC-20 s jednou další funkcí.
-Tato funkce `faucet` umožňuje každému uživateli získat tokeny k použití.
-U produkčního kontraktu ERC-20 by byla k ničemu, ale usnadňuje život, když kontrakt ERC-20 existuje pouze pro usnadnění testování.
+Jedná se o standardní ERC-20 kontrakt s jednou další funkcí.
+Tato funkce `faucet` umožňuje kterémukoli uživateli získat nějaký token k použití.
+Produkční ERC-20 kontrakt by to učinilo nepoužitelným, ale usnadňuje to život, když ERC-20 existuje pouze pro usnadnění testování.
 
 ```solidity
     /**
@@ -100,7 +100,7 @@ U produkčního kontraktu ERC-20 by byla k ničemu, ale usnadňuje život, když
 
 ### CalldataInterpreter.sol {#calldatainterpreter-sol}
 
-[Toto je kontrakt, který mají transakce volat s kratšími calldata](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol).
+[Toto je kontrakt, který by měly transakce volat s kratšími daty volání](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol).
 Pojďme si ho projít řádek po řádku.
 
 ```solidity
@@ -111,21 +111,20 @@ pragma solidity ^0.8.0;
 import { OrisUselessToken } from "./Token.sol";
 ```
 
-Potřebujeme funkci tokenu, abychom věděli, jak ji volat.
+Potřebujeme funkci tokenu, abychom věděli, jak ji zavolat.
 
 ```solidity
 contract CalldataInterpreter {
-
     OrisUselessToken public immutable token;
 ```
 
-Adresa tokenu, pro který jsme proxy.
+Adresa tokenu, pro který jsme proxy kontraktem.
 
 ```solidity
 
     /**
-     * @dev Určete adresu tokenu
-     * @param tokenAddr_ Adresa kontraktu ERC-20
+     * @dev Určuje adresu tokenu
+     * @param tokenAddr_ adresa kontraktu ERC-20
      */
     constructor(
         address tokenAddr_
@@ -134,14 +133,14 @@ Adresa tokenu, pro který jsme proxy.
     }   // constructor
 ```
 
-Adresa tokenu je jediný parametr, který musíme zadat.
+Adresa tokenu je jediný parametr, který musíme specifikovat.
 
 ```solidity
     function calldataVal(uint startByte, uint length)
         private pure returns (uint) {
 ```
 
-Přečtěte hodnotu z calldata.
+Přečtení hodnoty z dat volání.
 
 ```solidity
         uint _retVal;
@@ -153,9 +152,9 @@ Přečtěte hodnotu z calldata.
             "calldataVal trying to read beyond calldatasize");
 ```
 
-Chystáme se načíst jedno 32bajtové (256bitové) slovo do paměti a odstranit bajty, které nejsou součástí požadovaného pole.
-Tento algoritmus nefunguje pro hodnoty delší než 32 bajtů a samozřejmě nemůžeme číst za koncem calldata.
-Na L1 může být nutné tyto testy přeskočit, abychom ušetřili palivo, ale na L2 je palivo extrémně levné, což umožňuje jakékoli kontroly správnosti, na které si vzpomeneme.
+Načteme do paměti jedno 32bajtové (256bitové) slovo a odstraníme bajty, které nejsou součástí požadovaného pole.
+Tento algoritmus nefunguje pro hodnoty delší než 32 bajtů a samozřejmě nemůžeme číst za koncem dat volání.
+Na l1 by mohlo být nutné tyto testy přeskočit, aby se ušetřil gas, ale na l2 je gas extrémně levný, což umožňuje jakékoli kontroly správnosti, na které si vzpomeneme.
 
 ```solidity
         assembly {
@@ -163,18 +162,18 @@ Na L1 může být nutné tyto testy přeskočit, abychom ušetřili palivo, ale 
         }
 ```
 
-Mohli jsme zkopírovat data z volání do `fallback()` (viz níže), ale je jednodušší použít [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), assembler EVM.
+Mohli jsme zkopírovat data z volání do `fallback()` (viz níže), ale je snazší použít [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), jazyk symbolických adres (assembly) pro EVM.
 
-Zde používáme [operační kód CALLDATALOAD](https://www.evm.codes/#35) ke čtení bajtů `startByte` až `startByte+31` do zásobníku.
-Obecně je syntaxe operačního kódu v Yul `<název operačního kódu>(<první hodnota zásobníku, pokud existuje>, <druhá hodnota zásobníku, pokud existuje>...).`
+Zde používáme [operační kód CALLDATALOAD](https://www.evm.codes/#35) k načtení bajtů `startByte` až `startByte+31` do zásobníku.
+Obecně je syntaxe operačního kódu v jazyce Yul `<opcode name>(<first stack value, if any>,<second stack value, if any>...)`.
 
 ```solidity
 
         _retVal = _retVal >> (256-length*8);
 ```
 
-Součástí pole jsou pouze nejvýznamnější bajty `length`, takže provedeme [posun doprava](https://en.wikipedia.org/wiki/Logical_shift), abychom se zbavili ostatních hodnot.
-To má další výhodu v tom, že se hodnota přesune napravo od pole, takže se jedná o hodnotu samotnou, nikoli o hodnotu vynásobenou 256<sup>něčím</sup>.
+Pouze nejvýznamnější bajty `length` jsou součástí pole, takže provedeme [posun vpravo](https://en.wikipedia.org/wiki/Logical_shift), abychom se zbavili ostatních hodnot.
+To má další výhodu v tom, že se hodnota přesune napravo od pole, takže je to samotná hodnota, a ne hodnota krát 256<sup>něco</sup>.
 
 ```solidity
 
@@ -185,8 +184,8 @@ To má další výhodu v tom, že se hodnota přesune napravo od pole, takže se
     fallback() external {
 ```
 
-Když volání kontraktu v Solidity neodpovídá žádnému z podpisů funkcí, zavolá se [funkce `fallback()`](https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function) (pokud existuje).
-V případě `CalldataInterpreter` se sem dostane _jakékoli_ volání, protože neexistují žádné jiné `externí` nebo `veřejné` funkce.
+Když volání Solidity kontraktu neodpovídá žádnému z podpisů funkcí, zavolá [funkci `fallback()`](https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function) (za předpokladu, že existuje).
+V případě `CalldataInterpreter` se sem dostane _jakékoli_ volání, protože neexistují žádné jiné funkce `external` nebo `public`.
 
 ```solidity
         uint _func;
@@ -194,27 +193,27 @@ V případě `CalldataInterpreter` se sem dostane _jakékoli_ volání, protože
         _func = calldataVal(0, 1);
 ```
 
-Přečtěte první bajt calldata, který nám sdělí funkci.
+Přečtení prvního bajtu dat volání, který nám říká, o jakou funkci jde.
 Existují dva důvody, proč by zde funkce nebyla dostupná:
 
-1. Funkce, které jsou `pure` nebo `view`, nemění stav a nestojí palivo (při volání mimo řetězec).
-   Nemá smysl se snažit snižovat jejich náklady na palivo.
-2. Funkce, které se spoléhají na [`msg.sender`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#block-and-transaction-properties).
-   Hodnota `msg.sender` bude adresa kontraktu `CalldataInterpreter`, nikoli volajícího.
+1. Funkce, které jsou `pure` nebo `view`, nemění stav a nestojí žádný gas (když jsou volány offchain).
+   Nemá smysl se snažit snížit jejich náklady na gas.
+2. Funkce, které spoléhají na [`msg.sender`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#block-and-transaction-properties).
+   Hodnota `msg.sender` bude adresa `CalldataInterpreter`, nikoli volajícího.
 
-Bohužel [při pohledu na specifikace ERC-20](https://eips.ethereum.org/EIPS/eip-20), zbývá pouze jedna funkce, `transfer`.
-To nám ponechává pouze dvě funkce: `transfer` (protože můžeme volat `transferFrom`) a `faucet` (protože můžeme převést tokeny zpět tomu, kdo nás volal).
+Bohužel, [při pohledu na specifikace ERC-20](https://eips.ethereum.org/EIPS/eip-20) nám zbývá pouze jedna funkce, `transfer`.
+To nám ponechává pouze dvě funkce: `transfer` (protože můžeme zavolat `transferFrom`) a `faucet` (protože můžeme převést tokeny zpět tomu, kdo nás zavolal).
 
 ```solidity
 
-        // Volání metod tokenu měnících stav pomocí
-        // informací z calldata
+        // Volat metody tokenu měnící stav pomocí
+        // informací z dat volání
 
         // faucet
         if (_func == 1) {
 ```
 
-Volání funkce `faucet()`, která nemá žádné parametry.
+Volání `faucet()`, které nemá parametry.
 
 ```solidity
             token.faucet();
@@ -223,12 +222,12 @@ Volání funkce `faucet()`, která nemá žádné parametry.
         }
 ```
 
-Po zavolání `token.faucet()` získáme tokeny. Jako proxy kontrakt však tokeny **nepotřebujeme**.
-Potřebuje je EOA (externě vlastněný účet) nebo kontrakt, který nás volal.
-Takže převedeme všechny naše tokeny tomu, kdo nás volal.
+Po zavolání `token.faucet()` získáme tokeny. Nicméně jako proxy kontrakt tokeny **nepotřebujeme**.
+EOA (externě vlastněný účet) nebo kontrakt, který nás zavolal, ano.
+Takže převedeme všechny naše tokeny tomu, kdo nás zavolal.
 
 ```solidity
-        // transfer (předpokládejme, že na něj máme povolenku)
+        // převod (předpokládáme, že pro něj máme povolený limit)
         if (_func == 2) {
 ```
 
@@ -239,33 +238,32 @@ Převod tokenů vyžaduje dva parametry: cílovou adresu a částku.
                 msg.sender,
 ```
 
-Volajícím povolujeme převádět pouze tokeny, které vlastní
+Volajícím umožňujeme převádět pouze tokeny, které vlastní
 
 ```solidity
                 address(uint160(calldataVal(1, 20))),
 ```
 
-Cílová adresa začíná na bajtu č. 1 (bajt č. 0 je funkce).
-Jako adresa je dlouhá 20 bajtů.
+Cílová adresa začíná na bajtu č. 1 (bajt č. 0 je funkce). Jako adresa je dlouhá 20 bajtů.
 
 ```solidity
                 calldataVal(21, 2)
 ```
 
-U tohoto konkrétního kontraktu předpokládáme, že maximální počet tokenů, které by kdokoli chtěl převést, se vejde do dvou bajtů (méně než 65 536).
+Pro tento konkrétní kontrakt předpokládáme, že maximální počet tokenů, které by kdokoli chtěl převést, se vejde do dvou bajtů (méně než 65536).
 
 ```solidity
             );
         }
 ```
 
-Celkově převod zabere 35 bajtů calldata:
+Celkově převod zabere 35 bajtů dat volání:
 
-| Sekce           | Délka | Bajty |
-| --------------- | ----: | ----: |
-| Selektor funkce |     1 |     0 |
-| Cílová adresa   |    32 |  1-32 |
-| Částka          |     2 | 33-34 |
+| Sekce | Délka | Bajty |
+| ------------------- | -----: | ----: |
+| Selektor funkce |      1 |     0 |
+| Cílová adresa |     32 |  1-32 |
+| Částka |      2 | 33-34 |
 
 ```solidity
     }   // fallback
@@ -275,8 +273,8 @@ Celkově převod zabere 35 bajtů calldata:
 
 ### test.js {#test-js}
 
-[Tento jednotkový test v JavaScriptu](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) nám ukazuje, jak tento mechanismus používat (a jak ověřit, že funguje správně).
-Budu předpokládat, že rozumíte [chai](https://www.chaijs.com/) a [ethers](https://docs.ethers.io/v5/) a vysvětlím pouze části, které se týkají konkrétně tohoto kontraktu.
+[Tento JavaScriptový jednotkový test (unit test)](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) nám ukazuje, jak tento mechanismus používat (a jak ověřit, že funguje správně).
+Budu předpokládat, že rozumíte knihovnám [chai](https://www.chaijs.com/) a [ethers](https://docs.ethers.io/v5/), a vysvětlím pouze části, které se konkrétně týkají kontraktu.
 
 ```js
 const { expect } = require("chai");
@@ -303,7 +301,7 @@ Začneme nasazením obou kontraktů.
     const faucetTx = {
 ```
 
-Nemůžeme k vytváření transakcí použít funkce na vysoké úrovni, které bychom normálně používali (například `token.faucet()`), protože nedodržujeme ABI.
+K vytváření transakcí nemůžeme použít funkce na vysoké úrovni, které bychom normálně použili (jako je `token.faucet()`), protože nedodržujeme ABI.
 Místo toho musíme transakci sestavit sami a poté ji odeslat.
 
 ```javascript
@@ -311,12 +309,12 @@ Místo toho musíme transakci sestavit sami a poté ji odeslat.
       data: "0x01"
 ```
 
-Pro transakci musíme zadat dva parametry:
+Pro transakci musíme poskytnout dva parametry:
 
 1. `to`, cílová adresa.
-   Toto je kontrakt interpretu calldata.
-2. `data`, calldata k odeslání.
-   V případě volání faucet jsou data tvořena jediným bajtem, `0x01`.
+   Toto je kontrakt interpretu dat volání.
+2. `data`, data volání k odeslání.
+   V případě volání faucetu jsou data tvořena jediným bajtem, `0x01`.
 
 ```javascript
 
@@ -324,27 +322,27 @@ Pro transakci musíme zadat dva parametry:
     await (await signer.sendTransaction(faucetTx)).wait()
 ```
 
-Voláme [metodu `sendTransaction` podepisujícího](https://docs.ethers.io/v5/api/signer/#Signer-sendTransaction), protože jsme již zadali cíl (`faucetTx.to`) a potřebujeme, aby byla transakce podepsána.
+Voláme [metodu `sendTransaction` podepisujícího (signer)](https://docs.ethers.io/v5/api/signer/#Signer-sendTransaction), protože jsme již specifikovali cíl (`faucetTx.to`) a potřebujeme, aby byla transakce podepsána.
 
 ```javascript
-// Zkontrolujte, zda faucet poskytuje tokeny správně
+// Zkontrolovat, zda faucet poskytuje tokeny správně
 expect(await token.balanceOf(signer.address)).to.equal(1000)
 ```
 
 Zde ověříme zůstatek.
-Není třeba šetřit palivo na funkcích `view`, takže je prostě spouštíme normálně.
+U funkcí `view` není potřeba šetřit gas, takže je prostě spustíme normálně.
 
 ```javascript
-// Dejte CDI povolenku (schválení nelze provést přes proxy)
+// Poskytnout CDI povolený limit (schválení nelze provádět přes proxy)
 const approveTX = await token.approve(cdi.address, 10000)
 await approveTX.wait()
 expect(await token.allowance(signer.address, cdi.address)).to.equal(10000)
 ```
 
-Dejte interpretu calldata povolenku, aby mohl provádět převody.
+Poskytnutí povoleného limitu (allowance) interpretu dat volání, aby mohl provádět převody.
 
 ```javascript
-// Převod tokenů
+// Převést tokeny
 const destAddr = "0xf5a6ead936fb47f342bb63e676479bddf26ebe1d"
 const transferTx = {
   to: cdi.address,
@@ -352,50 +350,50 @@ const transferTx = {
 }
 ```
 
-Vytvořte transakci převodu. První bajt je „0x02“, následuje cílová adresa a nakonec částka (0x0100, což je 256 v desítkové soustavě).
+Vytvoření transakce převodu. První bajt je „0x02“, následovaný cílovou adresou a nakonec částkou (0x0100, což je 256 v desítkové soustavě).
 
 ```javascript
     await (await signer.sendTransaction(transferTx)).wait()
 
-    // Zkontrolujte, že máme o 256 tokenů méně
+    // Zkontrolovat, že máme o 256 tokenů méně
     expect (await token.balanceOf(signer.address)).to.equal(1000-256)
 
-    // A že je náš cíl dostal
+    // A že je náš cíl obdržel
     expect (await token.balanceOf(destAddr)).to.equal(256)
   })    // it
 })      // describe
 ```
 
-## Snížení nákladů, když máte kontrolu nad cílovým kontraktem {#reducing-the-cost-when-you-do-control-the-destination-contract}
+## Snižování nákladů, když máte pod kontrolou cílový kontrakt {#reducing-the-cost-when-you-do-control-the-destination-contract}
 
-Pokud máte kontrolu nad cílovým kontraktem, můžete vytvořit funkce, které obcházejí kontroly `msg.sender`, protože důvěřují interpretu calldata.
-[Příklad, jak to funguje, si můžete prohlédnout zde, ve větvi `control-contract`](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
+Pokud máte kontrolu nad cílovým kontraktem, můžete vytvořit funkce, které obcházejí kontroly `msg.sender`, protože důvěřují interpretu dat volání.
+[Příklad toho, jak to funguje, můžete vidět zde, ve větvi `control-contract`](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
 
 Pokud by kontrakt reagoval pouze na externí transakce, vystačili bychom si s jedním kontraktem.
-To by však narušilo [složitelnost](/developers/docs/smart-contracts/composability/).
-Je mnohem lepší mít kontrakt, který reaguje na běžná volání ERC-20, a další kontrakt, který reaguje na transakce s krátkými calldata.
+To by však narušilo [skládatelnost](/developers/docs/smart-contracts/composability/).
+Je mnohem lepší mít kontrakt, který reaguje na normální volání ERC-20, a další kontrakt, který reaguje na transakce s krátkými daty volání.
 
 ### Token.sol {#token-sol-2}
 
 V tomto příkladu můžeme upravit `Token.sol`.
-To nám umožňuje mít řadu funkcí, které může volat pouze proxy.
+To nám umožňuje mít řadu funkcí, které smí volat pouze proxy kontrakt.
 Zde jsou nové části:
 
 ```solidity
-    // Jediná adresa, která může zadat adresu CalldataInterpreter
+    // Jediná adresa s oprávněním určit adresu CalldataInterpreter
     address owner;
 
     // Adresa CalldataInterpreter
     address proxy = address(0);
 ```
 
-Kontrakt ERC-20 musí znát identitu autorizovaného proxy.
+Kontrakt ERC-20 potřebuje znát identitu autorizovaného proxy kontraktu.
 Tuto proměnnou však nemůžeme nastavit v konstruktoru, protože její hodnotu ještě neznáme.
-Tento kontrakt je instanciován jako první, protože proxy očekává adresu tokenu ve svém konstruktoru.
+Tento kontrakt je instanciován jako první, protože proxy kontrakt očekává adresu tokenu ve svém konstruktoru.
 
 ```solidity
     /**
-     * @dev Volá konstruktor ERC20.
+     * @dev Volá konstruktor ERC-20.
      */
     constructor(
     ) ERC20("Oris useless token-2", "OUT-2") {
@@ -403,12 +401,12 @@ Tento kontrakt je instanciován jako první, protože proxy očekává adresu to
     }
 ```
 
-Adresa tvůrce (nazývaná `owner`) je zde uložena, protože je to jediná adresa, která smí nastavit proxy.
+Adresa tvůrce (nazývaná `owner`) je uložena zde, protože to je jediná adresa, která má povoleno nastavit proxy kontrakt.
 
 ```solidity
     /**
      * @dev nastaví adresu pro proxy (CalldataInterpreter).
-     * Může být zavolána pouze jednou vlastníkem
+     * Může být voláno pouze jednou vlastníkem
      */
     function setProxy(address _proxy) external {
         require(msg.sender == owner, "Can only be called by owner");
@@ -418,24 +416,24 @@ Adresa tvůrce (nazývaná `owner`) je zde uložena, protože je to jediná adre
     }    // function setProxy
 ```
 
-Proxy má privilegovaný přístup, protože může obcházet bezpečnostní kontroly.
-Abychom se ujistili, že můžeme proxy důvěřovat, necháme tuto funkci volat pouze `vlastníka`, a to pouze jednou.
-Jakmile má `proxy` skutečnou hodnotu (nenulovou), nelze tuto hodnotu změnit, takže i kdyby se vlastník rozhodl stát se nepoctivým, nebo by byla odhalena jeho mnemotechnická pomůcka, jsme stále v bezpečí.
+Proxy kontrakt má privilegovaný přístup, protože může obejít bezpečnostní kontroly.
+Abychom se ujistili, že můžeme proxy kontraktu důvěřovat, necháme tuto funkci zavolat pouze `owner`, a to pouze jednou.
+Jakmile má `proxy` skutečnou hodnotu (nenulovou), tato hodnota se nemůže změnit, takže i když se vlastník rozhodne jednat nepoctivě nebo je odhalena jeho mnemotechnická fráze, jsme stále v bezpečí.
 
 ```solidity
     /**
-     * @dev Některé funkce mohou být volány pouze proxy.
+     * @dev Některé funkce mohou být volány pouze přes proxy.
      */
     modifier onlyProxy {
 ```
 
-Toto je [`modifikátorová` funkce](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm), která upravuje způsob fungování ostatních funkcí.
+Toto je [funkce `modifier`](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm), upravuje způsob, jakým fungují ostatní funkce.
 
 ```solidity
       require(msg.sender == proxy);
 ```
 
-Nejprve ověřte, že nás volal proxy a nikdo jiný.
+Nejprve ověříme, že nás zavolal proxy kontrakt a nikdo jiný.
 Pokud ne, `revert`.
 
 ```solidity
@@ -443,10 +441,10 @@ Pokud ne, `revert`.
     }
 ```
 
-Pokud ano, spusťte funkci, kterou upravujeme.
+Pokud ano, spustíme funkci, kterou upravujeme.
 
 ```solidity
-   /* Funkce, které umožňují proxy skutečně zastupovat účty */
+   /* Funkce, které umožňují proxy skutečně fungovat jako proxy pro účty */
 
     function transferProxy(address from, address to, uint256 amount)
         public virtual onlyProxy() returns (bool)
@@ -475,18 +473,18 @@ Pokud ano, spusťte funkci, kterou upravujeme.
     }
 ```
 
-Jedná se o tři operace, které obvykle vyžadují, aby zpráva přišla přímo od subjektu, který převádí tokeny nebo schvaluje povolenku.
+Toto jsou tři operace, které normálně vyžadují, aby zpráva pocházela přímo od subjektu převádějícího tokeny nebo schvalujícího povolený limit.
 Zde máme proxy verzi těchto operací, která:
 
-1. Je upravena `onlyProxy()`, takže je nikdo jiný nesmí ovládat.
-2. Získá adresu, která by normálně byla `msg.sender` jako další parametr.
+1. Je upravena pomocí `onlyProxy()`, takže je nikdo jiný nesmí ovládat.
+2. Získá adresu, která by normálně byla `msg.sender`, jako další parametr.
 
 ### CalldataInterpreter.sol {#calldatainterpreter-sol-2}
 
-Interpret calldata je téměř totožný s výše uvedeným, s výjimkou toho, že funkce proxy dostávají parametr `msg.sender` a není potřeba povolenka pro `transfer`.
+Interpret dat volání je téměř identický s tím výše, s tím rozdílem, že proxy funkce přijímají parametr `msg.sender` a není potřeba povolený limit pro `transfer`.
 
 ```solidity
-        // transfer (není potřeba povolenka)
+        // převod (není potřeba povolený limit)
         if (_func == 2) {
             token.transferProxy(
                 msg.sender,
@@ -495,7 +493,7 @@ Interpret calldata je téměř totožný s výše uvedeným, s výjimkou toho, �
             );
         }
 
-        // schválit
+        // approve
         if (_func == 3) {
             token.approveProxy(
                 msg.sender,
@@ -526,22 +524,22 @@ await cdi.deployed()
 await token.setProxy(cdi.address)
 ```
 
-Musíme kontraktu ERC-20 sdělit, kterému proxy má důvěřovat.
+Musíme kontraktu ERC-20 říct, kterému proxy kontraktu má důvěřovat
 
 ```js
 console.log("CalldataInterpreter addr:", cdi.address)
 
-// K ověření povolenek potřebujeme dva podepisující
+// K ověření povolených limitů jsou potřeba dva podepisující
 const signers = await ethers.getSigners()
 const signer = signers[0]
 const poorSigner = signers[1]
 ```
 
 Ke kontrole `approve()` a `transferFrom()` potřebujeme druhého podepisujícího.
-Říkáme mu `poorSigner` (chudý podepisující), protože nedostane žádný z našich tokenů (samozřejmě ale musí mít ETH).
+Nazýváme ho `poorSigner`, protože nedostane žádné z našich tokenů (samozřejmě ale musí mít ETH).
 
 ```js
-// Převod tokenů
+// Převést tokeny
 const destAddr = "0xf5a6ead936fb47f342bb63e676479bddf26ebe1d"
 const transferTx = {
   to: cdi.address,
@@ -550,7 +548,7 @@ const transferTx = {
 await (await signer.sendTransaction(transferTx)).wait()
 ```
 
-Protože kontrakt ERC-20 důvěřuje proxy (`cdi`), nepotřebujeme povolenku k předávání převodů.
+Protože kontrakt ERC-20 důvěřuje proxy kontraktu (`cdi`), nepotřebujeme povolený limit k předávání převodů.
 
 ```js
 // schválení a transferFrom
@@ -568,19 +566,18 @@ const transferFromTx = {
 }
 await (await poorSigner.sendTransaction(transferFromTx)).wait()
 
-// Zkontrolujte, zda byla kombinace approve / transferFrom provedena správně
+// Zkontrolovat, zda byla kombinace approve / transferFrom provedena správně
 expect(await token.balanceOf(destAddr2)).to.equal(255)
 ```
 
-Otestujte dvě nové funkce.
-Všimněte si, že `transferFromTx` vyžaduje dva parametry adresy: dárce povolenky a příjemce.
+Otestování dvou nových funkcí.
+Všimněte si, že `transferFromTx` vyžaduje dva parametry adresy: poskytovatele povoleného limitu a příjemce.
 
 ## Závěr {#conclusion}
 
-Jak [Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92), tak [Arbitrum](https://developer.offchainlabs.com/docs/special_features) hledají způsoby, jak zmenšit velikost calldata zapisovaných na L1, a tím i náklady na transakce.
-Jako poskytovatelé infrastruktury, kteří hledají obecná řešení, jsou však naše schopnosti omezené.
-Jako vývojář dapp máte znalosti specifické pro danou aplikaci, což vám umožňuje optimalizovat calldata mnohem lépe, než bychom mohli v obecném řešení.
+Sítě [Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92) i [Arbitrum](https://developer.offchainlabs.com/docs/special_features) hledají způsoby, jak snížit velikost dat volání zapisovaných na l1, a tím i náklady na transakce.
+Nicméně jako poskytovatelé infrastruktury hledající obecná řešení jsou naše možnosti omezené.
+Jako vývojář decentralizované aplikace (dapp) máte znalosti specifické pro danou aplikaci, což vám umožňuje optimalizovat vaše data volání mnohem lépe, než bychom to dokázali my v obecném řešení.
 Doufejme, že vám tento článek pomůže najít ideální řešení pro vaše potřeby.
 
-[Více z mé práce najdete zde](https://cryptodocguy.pro/).
-
+[Zde najdete další mou práci](https://cryptodocguy.pro/).

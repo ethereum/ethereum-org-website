@@ -3,14 +3,15 @@ import { getTranslations } from "next-intl/server"
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, TopicFrontmatter } from "@/lib/interfaces"
 
-import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Emoji from "@/components/Emoji"
-import { ContentHero } from "@/components/Hero"
+import PageHero from "@/components/Hero/PageHero"
+import PageActions from "@/components/PageActions"
 import { Alert } from "@/components/ui/alert"
 import InlineLink from "@/components/ui/Link"
 import { List, ListItem } from "@/components/ui/list"
 
 import { getEditPath } from "@/lib/utils/editPath"
+import { buildTopicDropdown } from "@/lib/utils/topicDropdown"
 
 import type { TopicConfig } from "@/data/topics"
 
@@ -55,19 +56,7 @@ export const TopicLayout = async ({
     ? await getTranslations("common")
     : null
 
-  const dropdownLinks: ButtonDropdownList = {
-    text: t(config.dropdown.textKey),
-    ariaLabel: t(config.dropdown.ariaLabelKey),
-    items: config.dropdown.items.map((item) => ({
-      text: t(item.textKey),
-      href: item.href,
-      matomo: {
-        eventCategory: config.dropdown.matomoCategory,
-        eventAction: "click",
-        eventName: item.matomoEvent,
-      },
-    })),
-  }
+  const dropdownLinks = buildTopicDropdown(config.dropdown, t)
 
   const baseDescription = frontmatter.summary ? (
     <p className="text-lg">{frontmatter.summary}</p>
@@ -109,13 +98,17 @@ export const TopicLayout = async ({
   const heroSection = (
     <>
       {editBanner}
-      <ContentHero
+      <PageHero
         breadcrumbs={{ slug, startDepth: 1 }}
-        heroImg={{
-          src: frontmatter.image,
-          width: frontmatter.imageWidth ?? 760,
-          height: frontmatter.imageHeight ?? 450,
-        }}
+        heroImg={
+          frontmatter.image
+            ? {
+                src: frontmatter.image,
+                width: frontmatter.imageWidth ?? 760,
+                height: frontmatter.imageHeight ?? 450,
+              }
+            : undefined
+        }
         blurDataURL={frontmatter.blurDataURL}
         title={frontmatter.title}
         description={heroDescription}
@@ -134,6 +127,18 @@ export const TopicLayout = async ({
       heroSection={heroSection}
       showDropdown={frontmatter.showDropdown ?? true}
     >
+      {/*
+        The `!` overrides defeat the `flow` region's `*:first:mt-0` (which
+        would zero PageActions' mobile top spacing) and zero out the default
+        prose top margin on the following h2 that PageActions displaces from
+        first-child position.
+      */}
+      <PageActions
+        slug={slug}
+        isTranslated={!contentNotTranslated}
+        editPath={getEditPath(slug)}
+        className="-ms-2 mb-8 [&+h2]:mt-0!"
+      />
       {children}
     </ContentLayout>
   )

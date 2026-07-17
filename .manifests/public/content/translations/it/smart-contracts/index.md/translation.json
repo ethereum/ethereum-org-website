@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "locale": "it",
+  "translatedAt": "2026-06-08T10:56:49.112Z",
+  "englishManifestHash": "7b44d4ea0233",
+  "placeholderOrder": [
+    "LINK-9df1a4",
+    "LINK-f50767",
+    "LINK-a0221d",
+    "LINK-e0d63e",
+    "LINK-3d8477",
+    "LINK-4e26ab",
+    "LINK-04ff04",
+    "LINK-ac21ec",
+    "LINK-69bbb7",
+    "LINK-518fa8",
+    "LINK-e47d4a",
+    "LINK-187e28",
+    "LINK-710e2f",
+    "LINK-002e5b",
+    "LINK-5a98bc",
+    "LINK-60b255",
+    "LINK-339bc8",
+    "LINK-827ba9"
+  ],
+  "placeholderMap": {
+    "LINK-9df1a4": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-f50767": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#blockchain"
+      }
+    },
+    "LINK-a0221d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html"
+      }
+    },
+    "LINK-e0d63e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html"
+      }
+    },
+    "LINK-3d8477": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#cryptography"
+      }
+    },
+    "LINK-4e26ab": {
+      "type": "link",
+      "values": {
+        "url": "https://clearsigning.org/"
+      }
+    },
+    "LINK-04ff04": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7730"
+      }
+    },
+    "LINK-ac21ec": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#nft"
+      }
+    },
+    "LINK-69bbb7": {
+      "type": "link",
+      "values": {
+        "url": "/stablecoins/"
+      }
+    },
+    "LINK-518fa8": {
+      "type": "link",
+      "values": {
+        "url": "/nft/"
+      }
+    },
+    "LINK-e47d4a": {
+      "type": "link",
+      "values": {
+        "url": "/get-eth/#dex"
+      }
+    },
+    "LINK-187e28": {
+      "type": "link",
+      "values": {
+        "url": "/apps/categories/gaming"
+      }
+    },
+    "LINK-710e2f": {
+      "type": "link",
+      "values": {
+        "url": "https://etherisc.com/"
+      }
+    },
+    "LINK-002e5b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/"
+      }
+    },
+    "LINK-5a98bc": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=pA6CGuXEKtQ"
+      }
+    },
+    "LINK-60b255": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-339bc8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/learning-tools/"
+      }
+    },
+    "LINK-827ba9": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T10:56:49.112Z",
+      "status": "success"
+    }
+  }
+}

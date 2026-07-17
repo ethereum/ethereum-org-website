@@ -12,9 +12,11 @@ import {
   Card,
   CardBanner,
   CardContent,
+  CardHeader,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
 import Input from "@/components/ui/input"
 import {
   Select,
@@ -260,7 +262,7 @@ const VideoGalleryFilter = ({
           <p className="text-body-medium">{t("page-videos-no-results")}</p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <Grid columns={3}>
           {sortedVideos.map((video) => (
             <Card
               key={video.slug}
@@ -268,18 +270,20 @@ const VideoGalleryFilter = ({
               variant="ghost"
               size="sm"
             >
-              <CardBanner className="aspect-video h-auto">
-                <Image
-                  src={video.thumbnailUrl}
-                  alt={video.title}
-                  width={480}
-                  height={270}
-                  sizes="(max-width: 479px) 100vw, (max-width: 991px) 50vw, 33vw"
-                  loading="lazy"
-                />
-              </CardBanner>
+              <CardHeader>
+                <CardBanner className="aspect-video h-auto">
+                  <Image
+                    src={video.thumbnailUrl}
+                    alt={video.title}
+                    width={480}
+                    height={270}
+                    sizes="(max-width: 479px) 100vw, (max-width: 991px) 50vw, 33vw"
+                    loading="lazy"
+                  />
+                </CardBanner>
+              </CardHeader>
               <CardContent>
-                <CardTitle variant="semibold">{video.title}</CardTitle>
+                <CardTitle size="sm">{video.title}</CardTitle>
                 <CardParagraph size="sm" className="line-clamp-2">
                   {video.description}
                 </CardParagraph>
@@ -293,7 +297,7 @@ const VideoGalleryFilter = ({
               </CardContent>
             </Card>
           ))}
-        </div>
+        </Grid>
       )}
     </div>
   )

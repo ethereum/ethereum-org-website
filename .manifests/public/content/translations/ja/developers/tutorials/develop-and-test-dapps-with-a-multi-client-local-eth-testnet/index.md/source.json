@@ -1,0 +1,939 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/index.md",
+  "generatedAt": "2026-06-17T00:00:32.933Z",
+  "rootHash": "fe584d255c19",
+  "tree": {
+    "contentHash": "d7bc500a57a7",
+    "anchorHash": "49ccad48b86b",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "43655a1dc64e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "3e66457cd90f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "1f829daf1396"
+      },
+      "frontmatter:tags": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:skill": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "94e6f02a5aca"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "3984197a4f72"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:published": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d4de36518149"
+      },
+      "introduction": {
+        "contentHash": "45c6b973ab85",
+        "anchorHash": "2d13b69db090",
+        "labelHash": "b605350bc002",
+        "children": {
+          "_label": {
+            "contentHash": "b605350bc002",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "364379768b98",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "32db144313c6",
+            "anchorHash": "bc8fafddaabc"
+          },
+          "prose:3": {
+            "contentHash": "a24e10fde71a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "a14d3a0cb33b",
+            "anchorHash": "0bcab126e093"
+          },
+          "prose:4": {
+            "contentHash": "9027e1404c8e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "what-is-kurtosis": {
+            "contentHash": "c8d0f6d8cb92",
+            "anchorHash": "3715618b433d",
+            "labelHash": "6eacd3411575",
+            "children": {
+              "_label": {
+                "contentHash": "6eacd3411575",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "a14d3a0cb33b",
+                "anchorHash": "0bcab126e093"
+              },
+              "prose:6": {
+                "contentHash": "4a44485442fa",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "fba9200010db",
+                "anchorHash": "36f1bef6482f"
+              },
+              "prose:7": {
+                "contentHash": "6d6d7f74085d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "c0738799a7ca",
+                "anchorHash": "0115c5bcc37a"
+              },
+              "prose:8": {
+                "contentHash": "d03502c43d74",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "e283f6ecfa0e",
+                "anchorHash": "02615811a9b5"
+              },
+              "prose:9": {
+                "contentHash": "4aa9bfd2f175",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "b83200d3bd0b",
+                "anchorHash": "ac6811bbb0bb"
+              },
+              "prose:10": {
+                "contentHash": "14b26cb20efd",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:5": {
+                "contentHash": "1b192cf1cf34",
+                "anchorHash": "2ccb8c2b09bb"
+              },
+              "prose:11": {
+                "contentHash": "27a9601fa229",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "link:0",
+              "prose:6",
+              "link:1",
+              "prose:7",
+              "link:2",
+              "prose:8",
+              "link:3",
+              "prose:9",
+              "link:4",
+              "prose:10",
+              "link:5",
+              "prose:11"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4",
+          "what-is-kurtosis"
+        ]
+      },
+      "setting-up-kurtosis": {
+        "contentHash": "821687977d50",
+        "anchorHash": "e5e743add3ad",
+        "labelHash": "7a17dc4a4e91",
+        "children": {
+          "_label": {
+            "contentHash": "7a17dc4a4e91",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "489bfa6aa4f7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "c635ca17006f",
+            "anchorHash": "ff605328908c"
+          },
+          "prose:6": {
+            "contentHash": "8f904b754a57",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "fb09c7ede457",
+            "anchorHash": "6e176751a0ce"
+          },
+          "prose:7": {
+            "contentHash": "3254e8d0890c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "1fc0c785332e",
+            "anchorHash": "96d4bf47e20b"
+          },
+          "prose:8": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "ec4e598bd0f3",
+            "anchorHash": "e82b6d33de99"
+          },
+          "prose:9": {
+            "contentHash": "4aa9bfd2f175",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "7c2a28952d52",
+            "anchorHash": "88128c85196a"
+          },
+          "prose:10": {
+            "contentHash": "e340a7c89fb1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      },
+      "instantiate-testnet": {
+        "contentHash": "06845e5c2fa7",
+        "anchorHash": "f2586f756913",
+        "labelHash": "702e06dc51c9",
+        "children": {
+          "_label": {
+            "contentHash": "702e06dc51c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "979e4b534a98",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "858b3b5e46cd"
+          },
+          "prose:1": {
+            "contentHash": "40b83b999ee5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "b370de14e941"
+          },
+          "prose:2": {
+            "contentHash": "5e52cb4d3fa5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:6": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "c082a7ed5dd3"
+          },
+          "prose:3": {
+            "contentHash": "e89f819a7018",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "11a913c106ba"
+          },
+          "prose:4": {
+            "contentHash": "38946a72718b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "review-instantiate-testnet": {
+            "contentHash": "d6ac0e45022c",
+            "anchorHash": "3461c6e6bfee",
+            "labelHash": "aff0766a5290",
+            "children": {
+              "_label": {
+                "contentHash": "aff0766a5290",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:5": {
+                "contentHash": "a40e01198438",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "60c7187d0464",
+                "anchorHash": "bc8fafddaabc"
+              },
+              "prose:6": {
+                "contentHash": "2de9283782de",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "f7cea0456a3d",
+                "anchorHash": "89457a363f29"
+              },
+              "prose:7": {
+                "contentHash": "89b10c57b00f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "1faef10785c0",
+                "anchorHash": "6bcba3e967c3"
+              },
+              "prose:8": {
+                "contentHash": "73b662ad58c4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:3": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "56cf76c8a111"
+              },
+              "prose:9": {
+                "contentHash": "d0a05194978f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "74c08568b7d2",
+                "anchorHash": "27b3874cb8bb"
+              },
+              "prose:10": {
+                "contentHash": "94190fb2033f",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:5",
+              "link:0",
+              "prose:6",
+              "link:1",
+              "prose:7",
+              "link:2",
+              "prose:8",
+              "inline-code:3",
+              "prose:9",
+              "link:4",
+              "prose:10"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "code-fence:2",
+          "prose:1",
+          "inline-code:0",
+          "prose:2",
+          "code-fence:6",
+          "prose:2",
+          "inline-code:0",
+          "prose:3",
+          "inline-code:1",
+          "prose:4",
+          "review-instantiate-testnet"
+        ]
+      },
+      "connect-your-dapp": {
+        "contentHash": "e01780ca68ec",
+        "anchorHash": "9d72c4b20982",
+        "labelHash": "44be01f11829",
+        "children": {
+          "_label": {
+            "contentHash": "44be01f11829",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "set-up-dapp-env": {
+            "contentHash": "a980fe6c1ada",
+            "anchorHash": "6d590b3405bf",
+            "labelHash": "5d26c37085cf",
+            "children": {
+              "_label": {
+                "contentHash": "5d26c37085cf",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "16afe1cf802c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-fence:2": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "9f6ebcc19ce5"
+              },
+              "prose:6": {
+                "contentHash": "b344d80e24a3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "338e889588a9",
+                "anchorHash": "2f49226567a1"
+              },
+              "prose:7": {
+                "contentHash": "6b84d52e1e9c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "ea35b396b10f",
+                "anchorHash": "52bbb2b45c8b"
+              },
+              "prose:8": {
+                "contentHash": "b0c396203d7b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "555c2bf57c30",
+                "anchorHash": "77b4591131e4"
+              },
+              "prose:9": {
+                "contentHash": "29f8e0ef3792",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "d5e916c6d580",
+                "anchorHash": "b32ba71ab31a"
+              },
+              "prose:10": {
+                "contentHash": "ffc64bf36bf3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "328115af3264",
+                "anchorHash": "adb8e709d52d"
+              },
+              "prose:11": {
+                "contentHash": "7675b870e2f0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:5": {
+                "contentHash": "5be3448a66ac",
+                "anchorHash": "2c462786c024"
+              },
+              "prose:12": {
+                "contentHash": "d612ba77b198",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "code-fence:2",
+              "prose:6",
+              "link:0",
+              "prose:7",
+              "link:1",
+              "prose:8",
+              "link:2",
+              "prose:9",
+              "link:3",
+              "prose:10",
+              "link:4",
+              "prose:11",
+              "link:5",
+              "prose:12"
+            ]
+          },
+          "configure-hardhat": {
+            "contentHash": "333a348a7924",
+            "anchorHash": "4008b97d3644",
+            "labelHash": "c23b51611a58",
+            "children": {
+              "_label": {
+                "contentHash": "c23b51611a58",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:6": {
+                "contentHash": "cf63cdbddd48",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "d19b08e73519"
+              },
+              "prose:7": {
+                "contentHash": "866ab23f0299",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "8224069f98b6"
+              },
+              "prose:8": {
+                "contentHash": "bde272a7002e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:2": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "57cf5378f8ca"
+              },
+              "prose:9": {
+                "contentHash": "f1124053f6f1",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:3": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "5ffcf1b5969f"
+              },
+              "prose:10": {
+                "contentHash": "b9e43b211b9c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:4": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "bb607d7aab75"
+              },
+              "prose:11": {
+                "contentHash": "0645db6f0ea0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:5": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "57cf5378f8ca"
+              },
+              "prose:12": {
+                "contentHash": "e7ac0786668e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-comment:14": {
+                "contentHash": "ad898be1aadf",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-comment:15": {
+                "contentHash": "3bb122f99bfc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-fence:16": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "1165553c684b"
+              },
+              "prose:0": {
+                "contentHash": "9ee4638dbd56",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-fence:18": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "5dc2dbdb4383"
+              },
+              "code-fence:20": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e61a781c6992"
+              },
+              "prose:1": {
+                "contentHash": "4e963dfcaf7b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:6",
+              "inline-code:0",
+              "prose:7",
+              "inline-code:1",
+              "prose:8",
+              "inline-code:2",
+              "prose:9",
+              "inline-code:3",
+              "prose:10",
+              "inline-code:4",
+              "prose:11",
+              "inline-code:5",
+              "prose:12",
+              "code-comment:14",
+              "code-comment:15",
+              "code-fence:16",
+              "prose:0",
+              "code-fence:18",
+              "prose:0",
+              "code-fence:20",
+              "prose:1",
+              "inline-code:0",
+              "prose:2"
+            ]
+          },
+          "deploy-and-test-dapp": {
+            "contentHash": "c02e8e905bdb",
+            "anchorHash": "281ecd52e3ca",
+            "labelHash": "50793aa53a36",
+            "children": {
+              "_label": {
+                "contentHash": "50793aa53a36",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "7dc515c91d51",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "bb6bf42bfb1b"
+              },
+              "prose:2": {
+                "contentHash": "ad01080b0e28",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-fence:4": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "15e2049d1fce"
+              },
+              "prose:0": {
+                "contentHash": "9ee4638dbd56",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-fence:6": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "1737db83d92c"
+              },
+              "code-fence:10": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "69e67f7ee363"
+              },
+              "code-fence:12": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "4b702698810f"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "inline-code:0",
+              "prose:2",
+              "code-fence:4",
+              "prose:0",
+              "code-fence:6",
+              "prose:1",
+              "inline-code:0",
+              "prose:2",
+              "code-fence:10",
+              "prose:0",
+              "code-fence:12"
+            ]
+          },
+          "review-dapp-workflows": {
+            "contentHash": "a9f2d31e7fae",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "aff0766a5290",
+            "children": {
+              "_label": {
+                "contentHash": "aff0766a5290",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "12658aead052",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "set-up-dapp-env",
+          "configure-hardhat",
+          "deploy-and-test-dapp",
+          "review-dapp-workflows"
+        ]
+      },
+      "configure-testnet": {
+        "contentHash": "e9991e3ebad8",
+        "anchorHash": "ebf1a5a90909",
+        "labelHash": "4d81822bed9d",
+        "children": {
+          "_label": {
+            "contentHash": "4d81822bed9d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "configure-client-config-and-num-nodes": {
+            "contentHash": "0f532f830b53",
+            "anchorHash": "7e57540c2216",
+            "labelHash": "c37e0e3a7553",
+            "children": {
+              "_label": {
+                "contentHash": "c37e0e3a7553",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:7": {
+                "contentHash": "f1124053f6f1",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "0da3eff1294a"
+              },
+              "prose:8": {
+                "contentHash": "f07f560bdbf4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "8224069f98b6"
+              },
+              "prose:9": {
+                "contentHash": "8a5edab28263",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:2": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "57cf5378f8ca"
+              },
+              "prose:10": {
+                "contentHash": "d24de7fca608",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:3": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "5ffcf1b5969f"
+              },
+              "prose:11": {
+                "contentHash": "8a5edab28263",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:4": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "210c02b1472d"
+              },
+              "prose:12": {
+                "contentHash": "abb913a0c333",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:5": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "11a913c106ba"
+              },
+              "prose:13": {
+                "contentHash": "8a5edab28263",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:6": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "1563fc92f2f4"
+              },
+              "prose:14": {
+                "contentHash": "fe4231c83b48",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-fence:16": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "12c9b08f9252"
+              },
+              "prose:4": {
+                "contentHash": "c70813273641",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:5": {
+                "contentHash": "866ab23f0299",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:6": {
+                "contentHash": "bde272a7002e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-fence:26": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "29bf86f7e067"
+              },
+              "prose:1": {
+                "contentHash": "ab5eaeb39129",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "45b6cf3dbd0f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-fence:30": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "65878ebd1b90"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:7",
+              "inline-code:0",
+              "prose:8",
+              "inline-code:1",
+              "prose:9",
+              "inline-code:2",
+              "prose:10",
+              "inline-code:3",
+              "prose:11",
+              "inline-code:4",
+              "prose:12",
+              "inline-code:5",
+              "prose:13",
+              "inline-code:6",
+              "prose:14",
+              "code-fence:16",
+              "prose:4",
+              "inline-code:0",
+              "prose:5",
+              "inline-code:1",
+              "prose:6",
+              "inline-code:2",
+              "prose:7",
+              "inline-code:3",
+              "prose:8",
+              "code-fence:26",
+              "prose:1",
+              "inline-code:0",
+              "prose:2",
+              "code-fence:30",
+              "prose:4",
+              "inline-code:0",
+              "prose:5",
+              "inline-code:1",
+              "prose:6",
+              "inline-code:2",
+              "prose:7",
+              "inline-code:3",
+              "prose:8"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "configure-client-config-and-num-nodes"
+        ]
+      },
+      "conclusion": {
+        "contentHash": "75e2a72aaac7",
+        "anchorHash": "0f9e6c103a44",
+        "labelHash": "89db2ad881f2",
+        "children": {
+          "_label": {
+            "contentHash": "89db2ad881f2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "aa1cade98ee7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f911e414cf6b",
+            "anchorHash": "1fcb67c37b7e"
+          },
+          "prose:3": {
+            "contentHash": "7175517a370b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "e3acaa06ccbf",
+            "anchorHash": "85e7c47a6b61"
+          },
+          "prose:4": {
+            "contentHash": "bb7208bc9b5d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "other-examples-guides": {
+            "contentHash": "5675b4537978",
+            "anchorHash": "5e7ee5c14064",
+            "labelHash": "108c6ab35326",
+            "children": {
+              "_label": {
+                "contentHash": "108c6ab35326",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:4": {
+                "contentHash": "c523847bd4b2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "ed4f0b24c452",
+                "anchorHash": "06d25403f50e"
+              },
+              "prose:5": {
+                "contentHash": "9bd90756dc51",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "dda7bca2bdc5",
+                "anchorHash": "71af35ca4243"
+              },
+              "prose:6": {
+                "contentHash": "8637837faf6c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "50edb8743a80",
+                "anchorHash": "76d17cdcc082"
+              },
+              "prose:7": {
+                "contentHash": "0da185db0e6d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "83782beeb2c1",
+                "anchorHash": "1e2493341fd3"
+              },
+              "prose:8": {
+                "contentHash": "b2298cbc03d6",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:4",
+              "link:0",
+              "prose:5",
+              "link:1",
+              "prose:6",
+              "link:2",
+              "prose:7",
+              "link:3",
+              "prose:8"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4",
+          "other-examples-guides"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:author",
+      "frontmatter:tags",
+      "frontmatter:skill",
+      "frontmatter:breadcrumb",
+      "frontmatter:lang",
+      "frontmatter:published",
+      "introduction",
+      "setting-up-kurtosis",
+      "instantiate-testnet",
+      "connect-your-dapp",
+      "configure-testnet",
+      "conclusion"
+    ]
+  },
+  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+}

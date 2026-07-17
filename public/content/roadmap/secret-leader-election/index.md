@@ -2,13 +2,12 @@
 title: Secret leader election
 description: Explanation of how secret leader election can help protect validators from attacks
 lang: en
+template: roadmap
 summaryPoints:
   - The IP address of block proposers can be known in advance, making them vulnerable to attacks
   - Secret leader election hides the identity of validators so that they are not knowable in advance
   - An extension of this idea is to make validator selection random in each slot.
 ---
-
-# Secret leader election {#single-secret-leader-election}
 
 In today's [proof-of-stake](/developers/docs/consensus-mechanisms/pos) based consensus mechanism, the list of upcoming block proposers is public and it is possible to map their IP addresses. This means that attackers could identify which validators are due to propose a block and target them with a denial-of-service (DOS) attack that leaves them unable to propose their block in time.
 

@@ -1,5 +1,5 @@
 {
-  "page-what-is-ethereum-meta-title": "Co je Ethereum? (Kompletní průvodce) | ethereum.org",
+  "page-what-is-ethereum-meta-title": "Co je Ethereum? (Kompletní průvodce)",
   "page-what-is-ethereum-meta-description": "Kompletní přehled toho, co je Ethereum, jak funguje, k čemu slouží a jak jej začít používat nebo na něm stavět. Vysvětleno jednoduše.",
   "page-what-is-ethereum-title": "Co je Ethereum?",
   "page-what-is-ethereum-hero-description-1": "Ethereum je decentralizovaná blockchainová síť a platforma pro vývoj softwaru, poháněná kryptoměnou ether (ETH).",
@@ -156,7 +156,7 @@
   "page-what-is-ethereum-roadmap-title": "Jaká je roadmapa Etherea pro rok 2026?",
   "page-what-is-ethereum-roadmap-intro-1": "Ethereum se neřídí pevnou roadmapou. Řídí se sdílenou vizí.",
   "page-what-is-ethereum-roadmap-intro-2": "Aktualizace sítě se provádějí jako EIP a jsou veřejně vyvíjeny přispěvateli z celého světa. Neexistuje žádný centrální tým, který by rozhodoval o tom, co se stane, jen lidé, kteří budují to, co považují za užitečné na základě potřeb uživatelů.",
-  "page-what-is-ethereum-roadmap-intro-3": "Fusaka je nejnovější aktualizace, spuštěná v prosinci 2025. Přinesla PeerDAS pro efektivnější dostupnost dat na L2 a zvýšila výchozí limit plynu na ~60M. S výhledem na rok 2026 je ve vývoji Glamsterdam, který se očekává v první polovině roku 2026.",
+  "page-what-is-ethereum-roadmap-intro-3": "Fusaka je nejnovější aktualizace, spuštěná v prosinci 2025. Přinesla PeerDAS pro efektivnější dostupnost dat na l2 a zvýšila výchozí limit plynu na ~60M. S výhledem do roku 2026 je ve vývoji Glamsterdam, který se očekává ve druhé polovině roku 2026.",
   "page-what-is-ethereum-roadmap-priorities-intro": "<a>Při pohledu do budoucna</a> patří mezi priority Etherea:",
   "page-what-is-ethereum-roadmap-priority-1": "Učinit základní protokol a jeho L2 sítě rychlejšími a levnějšími pro všechny",
   "page-what-is-ethereum-roadmap-priority-2": "Zlepšení uživatelského a vývojářského zážitku",

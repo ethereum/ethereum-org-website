@@ -4,9 +4,9 @@
   "energy-consumption-chart-eth-pos-label": "ETH PoS",
   "energy-consumption-chart-eth-pow-label": "ETH PoW",
   "energy-consumption-chart-gaming-us-label": "Gry w USA",
-  "energy-consumption-chart-global-data-centers-label": "Światowe centra danych",
+  "energy-consumption-chart-global-data-centers-label": "Globalne centra danych",
   "energy-consumption-chart-netflix-label": "Netflix",
   "energy-consumption-chart-paypal-label": "PayPal",
-  "energy-consumption-gold-mining-cbeci-label": "Wydobycie złota",
+  "energy-consumption-gold-mining-cbeci-label": "Kopanie złota",
   "energy-consumption-chart-legend": "Roczne zużycie energii w TWh/rok"
 }

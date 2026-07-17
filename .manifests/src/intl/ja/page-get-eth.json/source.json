@@ -1,12 +1,64 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-get-eth.json",
-  "generatedAt": "2026-05-01T19:46:20.661Z",
-  "rootHash": "ca8ddd38b56f",
+  "generatedAt": "2026-07-10T21:00:03.139Z",
+  "rootHash": "ac3f3c3bcb58",
   "tree": {
-    "contentHash": "ae7263ddedce",
-    "anchorHash": "2fd10eacf5e9",
+    "contentHash": "6bad3f4e3711",
+    "anchorHash": "62ce537fab43",
     "children": {
+      "page-get-eth-hero-title": {
+        "contentHash": "40eaa560c322",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-hero-subtitle": {
+        "contentHash": "1f578a8e5269",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-get-eth-btn": {
+        "contentHash": "8c677f2fb12b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-learn-about-eth-btn": {
+        "contentHash": "587ae24e9244",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-ways-you-can-get-eth": {
+        "contentHash": "b585b356005c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-receive": {
+        "contentHash": "f64a2b255a0f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-receive-link": {
+        "contentHash": "9ee7a7f2491d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-new-to-eth-title": {
+        "contentHash": "a73e95cde536",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-new-to-eth-desc": {
+        "contentHash": "e78b85bb4a4b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-exchanges-eyebrow": {
+        "contentHash": "741401982b0c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-find-exchange-title": {
+        "contentHash": "90a72be286c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-find-exchange-desc": {
+        "contentHash": "bd4538679d00",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-safety-eyebrow": {
+        "contentHash": "e7fd629133a1",
+        "anchorHash": "e3b0c44298fc"
+      },
       "page-get-eth-article-keeping-crypto-safe": {
         "contentHash": "1bb2a4e6c288",
         "anchorHash": "e3b0c44298fc"
@@ -48,25 +100,15 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-description": {
-        "contentHash": "c6223208ebd5",
-        "anchorHash": "9ed7acab1b97",
-        "children": {
-          "html-tag:0": {
-            "contentHash": "a13bebeb57e1",
-            "anchorHash": "b85cbdfd493e"
-          },
-          "prose:1": {
-            "contentHash": "d828261e30b5",
-            "anchorHash": "e3b0c44298fc"
-          }
-        },
-        "childrenOrder": [
-          "html-tag:0",
-          "prose:1"
-        ]
+        "contentHash": "c4e4e2dee54c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-more-on-security": {
+        "contentHash": "e01f17e6d6ba",
+        "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-dex": {
-        "contentHash": "455b7e11c7d5",
+        "contentHash": "9a27f02f47d4",
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-dex-desc": {
@@ -113,7 +155,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-earn-desc": {
-        "contentHash": "c70c2134ad37",
+        "contentHash": "cc9f029ca043",
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-daos-link-desc": {
@@ -168,7 +210,7 @@
         ]
       },
       "page-get-eth-do-not-copy": {
-        "contentHash": "61d7b73971d4",
+        "contentHash": "0cfac8ac2493",
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-exchanges-disclaimer": {
@@ -188,7 +230,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-exchanges-header-exchanges": {
-        "contentHash": "21931fed6020",
+        "contentHash": "df77428663f3",
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-exchanges-header-wallets": {
@@ -248,7 +290,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-meta-title": {
-        "contentHash": "bfa673418c82",
+        "contentHash": "bbaa90121be8",
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-need-wallet": {
@@ -276,7 +318,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-security": {
-        "contentHash": "5d426ba0a1ac",
+        "contentHash": "9e158a437d2c",
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-smart-contract-link": {
@@ -304,7 +346,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-wallet-instructions-lost": {
-        "contentHash": "aa602a7876dd",
+        "contentHash": "f62ced0d889d",
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-wallets": {
@@ -316,7 +358,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-wallets-purchasing": {
-        "contentHash": "74eea1bf0161",
+        "contentHash": "b19a4eda8d48",
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-warning": {
@@ -341,6 +383,10 @@
       },
       "page-get-eth-where-to-buy-title": {
         "contentHash": "53f421e525f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-ways-to-get": {
+        "contentHash": "adab5c90af16",
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-your-address": {
@@ -373,6 +419,19 @@
       }
     },
     "childrenOrder": [
+      "page-get-eth-hero-title",
+      "page-get-eth-hero-subtitle",
+      "page-get-eth-get-eth-btn",
+      "page-get-eth-learn-about-eth-btn",
+      "page-get-eth-ways-you-can-get-eth",
+      "page-get-eth-receive",
+      "page-get-eth-receive-link",
+      "page-get-eth-new-to-eth-title",
+      "page-get-eth-new-to-eth-desc",
+      "page-get-eth-exchanges-eyebrow",
+      "page-get-eth-find-exchange-title",
+      "page-get-eth-find-exchange-desc",
+      "page-get-eth-safety-eyebrow",
       "page-get-eth-article-keeping-crypto-safe",
       "page-get-eth-article-protecting-yourself",
       "page-get-eth-article-store-digital-assets",
@@ -384,6 +443,7 @@
       "page-get-eth-checkout-dapps-btn",
       "page-get-eth-community-safety",
       "page-get-eth-description",
+      "page-get-eth-more-on-security",
       "page-get-eth-dex",
       "page-get-eth-dex-desc",
       "page-get-eth-peers",
@@ -444,6 +504,7 @@
       "page-get-eth-where-to-buy-desc",
       "page-get-eth-where-to-buy-desc-2",
       "page-get-eth-where-to-buy-title",
+      "page-get-eth-ways-to-get",
       "page-get-eth-your-address",
       "page-get-eth-your-address-desc",
       "page-get-eth-your-address-desc-3",
@@ -453,5 +514,5 @@
       "listing-policy-disclaimer"
     ]
   },
-  "sourceCommitSha": "4a12cb9394943a43a5509983baec11bf9c3d756f"
+  "sourceCommitSha": "8fb582e503a16a1083fcf3564a9540d962e02712"
 }

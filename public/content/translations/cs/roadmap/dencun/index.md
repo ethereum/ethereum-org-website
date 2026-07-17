@@ -1,120 +1,119 @@
 ---
-title: FAQ ke Cancun-Deneb (Dencun)
-description: "Často kladené dotazy k vylepšení sítě s názvem Cancun-Deneb (Dencun)"
+title: Cancún-Deneb (Dencun)
+metaTitle: Cancún-Deneb (Dencun) FAQ
+description: Často kladené dotazy týkající se aktualizace sítě Cancún-Deneb (Dencun)
 lang: cs
 ---
 
-# Cancun-Deneb (Dencun) {#dencun}
+Cancún-Deneb (Dencun) je aktualizace sítě Ethereum, která aktivuje **proto-danksharding (EIP-4844)** a zavádí dočasné datové **bloby** pro levnější úložiště rollupů na [vrstvě 2 (l2)](/glossary/#layer-2).
 
-Cancun-Deneb (Dencun) je vylepšení sítě Ethereum, které aktivuje **Proto-Danksharding (EIP-4844)**, zavádějící dočasné datové **bloby** za účelem zlevnění ukládání dat [druhých vrstev (L2)](/glossary/#layer-2) – rollupů.
+Nový typ transakce umožňuje poskytovatelům rollupů ukládat data nákladově efektivněji do takzvaných „blobů“. U blobů je zaručeno, že budou pro síť dostupné po dobu přibližně 18 dnů (přesněji 4096 [epoch](/glossary/#epoch)). Po uplynutí této doby jsou bloby ze sítě odstraněny, ale aplikace mohou stále ověřovat platnost svých dat pomocí důkazů. 
 
-Nový typ transakce umožňuje poskytovatelům rollupů ukládat data nákladově efektivněji v tzv. „blobech“. Bloby jsou s jistotou dostupné na blockchainu přibližně 18 dní (přesněji 4 096 [epoch](/glossary/#epoch)). Po tomto období jsou bloby ze sítě odstraněny, ale aplikace mohou i tak ověřovat platnost svých dat pomocí důkazů.
+To významně snižuje náklady na rollupy, omezuje růst řetězce a pomáhá podporovat více uživatelů při zachování bezpečnosti a decentralizované sady provozovatelů uzlů.
 
-Toto výrazně snižuje náklady rollupů, omezuje nepřiměřený růst řetězce a podporuje více uživatelů při zachování bezpečnosti a decentralizovaného souboru operátorů uzlů.
+## Kdy očekáváme, že se v rollupech projeví nižší poplatky díky proto-dankshardingu? {#when}
 
-## Kdy můžeme očekávat snížení poplatků rollupů díky Proto-Dankshardingu? {#when}
+- Tato aktualizace byla aktivována v epoše 269568, dne **13. března 2024 ve 13:55 (UTC)**
+- Všichni hlavní poskytovatelé rollupů, jako jsou Arbitrum nebo Optimism, signalizovali, že bloby budou podporovány bezprostředně po aktualizaci
+- Časová osa podpory u jednotlivých rollupů se může lišit, protože každý poskytovatel musí aktualizovat své systémy, aby mohl využívat nový prostor pro bloby
 
-- Tento upgrade byl aktivován během epochy 269568, **13. března 2024 ve 13:55 (UTC)**
-- Všichni hlavní poskytovatelé rollupů, jako Arbitrum nebo Optimism, oznámili, že bloby budou podporovány ihned po vylepšení
-- Časový rámec pro podporu jednotlivých rollupů se může lišit, protože každý poskytovatel musí aktualizovat své systémy, aby mohl využívat nový prostor pro bloby
+## Jak lze převést ETH po hard forku? {#scam-alert}
 
-## Jak mohu posílat ETH po hard forku? {#scam-alert}
+- **Pro vaše ETH není vyžadována žádná akce**: Po aktualizaci Dencun na síti Ethereum není nutné vaše ETH nijak převádět ani aktualizovat. Zůstatky na vašem účtu zůstanou stejné a ETH, které aktuálně držíte, zůstane po hard forku přístupné ve své stávající podobě.
+- **Pozor na podvody!** <Emoji text="⚠️" /> **kdokoli, kdo vás nabádá k „aktualizaci“ vašeho ETH, se vás snaží podvést.** V souvislosti s touto aktualizací nemusíte dělat vůbec nic. Vaše aktiva zůstanou zcela nedotčena. Pamatujte, že nejlepší obranou proti podvodům je být informován.
 
-- **S vašimi prostředky nemusíte nic dělat**: Po vylepšení Ethereum Dencun není potřeba ETH převádět nebo vylepšovat. Zůstatky na vašem účtu se nezmění a ETH, které aktuálně držíte, zůstanou po hard forku přístupné ve své stávající podobě.
-- **Pozor na podvody!** <Emoji text="⚠️" /> **Každý, kdo vás vyzývá k „upgradu“ vašich ETH, se vás snaží podvést.** V souvislosti s tímto vylepšením nemusíte podnikat žádné kroky. Vaše aktiva zůstanou nedotčena. Pamatujte, že informovanost je nejlepší obranou proti podvodům.
+[Více o tom, jak rozpoznat podvody a jak se jim vyhnout](/security/)
 
-[Více o rozpoznávání a vyhýbání se podvodům](/security/)
+## Jaký problém řeší aktualizace sítě Dencun? {#network-impact}
 
-## Jaký problém řeší upgrade sítě Dencun? {#network-impact}
+Dencun primárně řeší **škálovatelnost** (zvládnutí více uživatelů a více transakcí) s **dostupnými poplatky**, a to při **zachování decentralizace** sítě.
 
-Dencun se primárně zaměřuje na **škálovatelnost** (zvládání více transakcí a více uživatelů najednou) s **dostupnými poplatky**, při **zachování decentralizace** sítě.
+Komunita Etherea zaujala ke svému růstu přístup „zaměřený na rollupy“, který staví rollupy na vrstvě 2 (l2) do pozice primárního prostředku pro bezpečné podporování více uživatelů.
 
-Ethereovská komunita přijala pro svůj růst přístup „zaměřený na rollupy“, díky čemuž jsou rollupy druhé vrstvy primárním prostředkem pro bezpečnou podporu většího počtu uživatelů.
+Sítě rollupů zpracovávají (neboli „provádějí“) transakce odděleně od Mainnetu a poté publikují kryptografický důkaz a/nebo komprimovaná transakční data s výsledky zpět na Mainnet pro účely uchování záznamů. Ukládání těchto důkazů s sebou nese náklady (ve formě [gasu](/glossary/#gas)), které před zavedením proto-dankshardingu museli trvale ukládat všichni provozovatelé uzlů v síti, což z toho činilo nákladný úkol.
 
-Sítě rollupů zpracovávají transakce odděleně od hlavní sítě a následně publikují kryptografický důkaz a/nebo komprimovaná transakční data výsledků transakcí zpět na hlavní síť, kde se zaznamenávají. Takový záznam nese náklady (ve formě [poplatků za palivo](/glossary/#gas)) a před Proto-Dankshardingem museli všichni operátoři síťových uzlů ukládat tyto informace trvale, což bylo velmi nákladné.
+Zavedení proto-dankshardingu v aktualizaci Dencun přidává levnější datové úložiště pro tyto důkazy tím, že od provozovatelů uzlů vyžaduje uchovávání těchto dat pouze po dobu přibližně 18 dnů, po které mohou být data bezpečně odstraněna, aby se zabránilo nárůstu hardwarových požadavků. Protože rollupy mají obvykle lhůtu pro výběr 7 dnů, jejich bezpečnostní model zůstává nezměněn, dokud jsou bloby dostupné na vrstvě 1 (l1) po tuto dobu. Osmnáctidenní okno pro prořezávání (pruning) poskytuje pro toto období významnou rezervu.
 
-Zavedení Proto-Dankshardingu v rámci vylepšení Dencun umožňuje levnější úložiště pro tyto důkazy tím, že od operátorů uzlů vyžaduje ukládání těchto dat přibližně 18 dní, po kterých mohou být bezpečně odstraněna, což snižuje požadavky na hardware.  Vzhledem k tomu, že rollupy obvykle mají dobu výběru nastavenou na 7 dní, pokud jsou bloby dostupné na vrstvě L1 po tuto dobu, jejich bezpečnostní model zůstává nezměněn. 18denní okno tak znamená významnou rezervu.
+[Více o škálování Etherea](/roadmap/scaling/)
 
-[Další informace o škálování Etherea](/roadmap/scaling/)
+## Jak se přistupuje ke starým datům blobů? {#historical-access}
 
-## Jak se přistupuje ke starým datovým blobům? {#historical-access}
+Zatímco běžné uzly Etherea budou vždy uchovávat _aktuální stav_ sítě, historická data blobů mohou být zahozena přibližně 18 dní po jejich zavedení. Před zahozením těchto dat Ethereum zajišťuje, že byla zpřístupněna všem účastníkům sítě, což poskytuje čas na:
 
-Zatímco běžné uzly Etherea budou vždy ukládat _aktuální stav_ sítě, historická data blobů mohou být odstraněna přibližně 18 dní po jejich uložení. Před odstraněním těchto dat Ethereum zajistí, aby byla zpřístupněna všem účastníkům sítě, čímž poskytne čas na:
+- Stažení a uložení dat zainteresovanými stranami.
+- Dokončení všech lhůt pro zpochybnění (challenge periods) rollupů.
+- Finalizaci transakcí rollupů.
 
-- stažení a uložení dat, pokud je o to zájem,
-- dokončení všech cyklů rollupů,
-- finalizaci transakcí na rollupech.
+_Historická_ data blobů mohou být žádoucí z různých důvodů a lze je ukládat a přistupovat k nim pomocí několika decentralizovaných protokolů:
 
-_Historická_ data blobů mohou být potřebná z různých důvodů a mohou být uložena a zpřístupněna pomocí několika decentralizovaných protokolů:
+- **Indexovací protokoly třetích stran**, jako je The Graph, ukládají tato data prostřednictvím decentralizované sítě provozovatelů uzlů motivovaných kryptoekonomickými mechanismy.
+- **BitTorrent** je decentralizovaný protokol, kde dobrovolníci mohou tato data uchovávat a distribuovat ostatním.
+- **[Portal Network Etherea](/developers/docs/networking-layer/portal-network/)** si klade za cíl poskytovat přístup ke všem datům Etherea prostřednictvím decentralizované sítě provozovatelů uzlů distribucí dat mezi účastníky podobně jako BitTorrent.
+- **Jednotliví uživatelé** si mohou vždy svobodně ukládat vlastní kopie jakýchkoli dat, která si přejí uchovat pro historické účely.
+- **Poskytovatelé rollupů** jsou motivováni k ukládání těchto dat, aby zlepšili uživatelský zážitek ze svého rollupu.
+- **Průzkumníci bloků (block explorers)** obvykle provozují archivní uzly, které indexují a ukládají všechny tyto informace pro snadné historické vyhledávání, přístupné uživatelům přes webové rozhraní.
 
-- **Protokoly indexování třetích stran**, jako je The Graph, tato data ukládají prostřednictvím decentralizované sítě operátorů uzlů motivovaných krypto-ekonomickými mechanismy.
-- **BitTorrent** je decentralizovaný protokol, kde mohou dobrovolníci ukládat a distribuovat tato data ostatním.
-- Cílem **[ethereovské portálové sítě](/developers/docs/networking-layer/portal-network/)** je poskytnout přístup ke všem jeho datům prostřednictvím decentralizované sítě operátorů uzlů pomocí rozdělení dat mezi účastníky podobně jako BitTorrent.
-- I **jednotliví uživatelé** si vždy mohou uložit své vlastní kopie jakýchkoliv dat, která si přejí uchovávat pro historické účely.
-- **Poskytovatelé rollupů** jsou motivováni k ukládání a zlepšování uživatelských možností během interakce s rollupy.
-- **Průzkumníci bloků** typicky provozují archivní uzly, které indexují a ukládají všechny tyto informace pro snadné historické odkazování, přístupné uživatelům prostřednictvím webového rozhraní.
+Je důležité si uvědomit, že obnova historického stavu funguje na **modelu důvěry 1 z N**. To znamená, že k ověření správnosti pomocí aktuálního stavu sítě potřebujete data pouze z _jednoho důvěryhodného zdroje_.
 
-Poznámka: Obnova historického stavu funguje na **modelu důvěry 1-z-N**. To znamená, že potřebujete data pouze z _jediného důvěryhodného zdroje_, abyste ověřili jejich správnost pomocí aktuálního stavu sítě.
+## Jak tato aktualizace přispívá k širší roadmapě Etherea? {#roadmap-impact}
 
-## Jak tento upgrade přispívá k širšímu plánu Etherea? {#roadmap-impact}
+Proto-danksharding připravuje půdu pro plnou implementaci [dankshardingu](/roadmap/danksharding/). Danksharding je navržen tak, aby distribuoval ukládání dat rollupů mezi provozovatele uzlů, takže každý provozovatel musí zpracovávat pouze malou část celkových dat. Tato distribuce zvýší počet datových blobů na blok, což je nezbytné pro škálování Etherea, aby zvládlo více uživatelů a transakcí.
 
-Proto-Danksharding připravuje půdu pro úplnou implementaci [Dankshardingu](/roadmap/danksharding/). Danksharding je navržen tak, aby rozložil úložiště dat rollupů mezi operátory uzlů tak, aby každý operátor musel zpracovat pouze malou část z celkových dat. Toto rozložení zvýší počet datových blobů na jeden blok, což je nezbytné pro škálování Etherea za účelem podpory většího množství uživatelů a transakcí.
+Tato škálovatelnost je klíčová pro [podporu miliard uživatelů na Ethereu](/roadmap/scaling/) s dostupnými poplatky a pokročilejšími aplikacemi, a to při zachování decentralizované sítě. Bez těchto změn by se hardwarové nároky na provozovatele uzlů stupňovaly, což by vedlo k potřebě stále dražšího vybavení. To by mohlo vytlačit menší provozovatele, což by vedlo ke koncentraci kontroly nad sítí mezi několika velkými provozovateli, což by bylo v rozporu s principem decentralizace.
 
-Tato škálovatelnost je zásadní pro [podporu miliard uživatelů na Ethereu](/roadmap/scaling/) s dostupnými poplatky a pokročilejšími aplikacemi při zachování decentralizované sítě. Bez těchto změn by požadavky na hardware pro operátory uzlů rostly, což by vedlo k potřebě stále dražšího vybavení. To by mohlo vyřadit menší operátory, což by vedlo ke koncentraci kontroly nad sítí mezi několik velkých operátorů, což by bylo v rozporu s principem decentralizace.
+## Ovlivňuje tato aktualizace všechny klienty konsensu a validátorů Etherea? {#client-impact}
 
-## Ovlivňuje tento upgrade všechny konsenzus klienty a validátory Etherea? {#client-impact}
+Ano, proto-danksharding (EIP-4844) vyžaduje aktualizace jak exekučních klientů, tak klientů konsensu. Všichni hlavní klienti Etherea vydali verze podporující tuto aktualizaci. Pro udržení synchronizace se sítí Ethereum po aktualizaci musí provozovatelé uzlů zajistit, že používají podporovanou verzi klienta. Upozorňujeme, že informace o vydáních klientů jsou časově citlivé a uživatelé by měli sledovat nejnovější aktualizace pro nejaktuálnější podrobnosti. [Podívejte se na podrobnosti o podporovaných vydáních klientů](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement#client-releases).
 
-Ano, Proto-Danksharding (EIP-4844) vyžaduje aktualizace jak pro klienty zajišťující posílání transakcí (exekuční klienty), tak pro konsenzus klienty. Všechny hlavní klienty Etherea vydaly verze podporující toto vylepšení. Aby operátoři uzlů po vylepšení udrželi synchronizaci se sítí Ethereum, musí si ověřit, že používají podporovanou verzi klienta. Nezapomínejte, že informace o vydání upgradů klientů jsou časově citlivé, a uživatelé by měli sledovat nejnovější aktualizace pro nejaktuálnější podrobnosti. [Další informace o podporovaných verzích klientů](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement#client-releases).
+Klienti konsensu spravují software _validátoru_, který byl kompletně aktualizován, aby se přizpůsobil této aktualizaci.
 
-Konsenzus klienty spravují software _validátora_, který byl kompletně aktualizován, aby mohl tato vylepšení využívat.
+## Jak Cancún-Deneb (Dencun) ovlivňuje testnety Etherea? {#testnet-impact}
 
-## Jak ovlivňuje Cancun-Deneb (Dencun) testovací sítě Etherea? {#testnet-impact}
+- Devnety, Sepolia a Holesky již prošly aktualizací Dencun a proto-danksharding na nich plně funguje
+- Vývojáři rollupů mohou tyto sítě využít k testování EIP-4844
+- Většina uživatelů nebude touto změnou na jednotlivých testnetech vůbec ovlivněna
 
-- Devnety, Sepolia a Holesky prošly upgradem Dencun a mají plně funkční Proto-Danksharding.
-- Vývojáři rollupů mohou využít tyto sítě pro testování EIP-4844.
-- Většina uživatelů nebude touto změnou v jednotlivých testovacích sítích nijak ovlivněna.
+## Budou nyní všechny transakce na L2 využívat dočasný prostor blobů, nebo si budete moci vybrat? {#calldata-vs-blobs}
 
-## Budou všechny transakce na L2 nyní využívat dočasný prostor pro bloby, nebo si budu moci úložiště vybrat? {#calldata-vs-blobs}
+Transakce rollupů na vrstvě 2 (l2) Etherea mají možnost využívat dva typy ukládání dat: dočasný prostor blobů nebo trvalá data volání (calldata) chytrých kontraktů. Prostor blobů je ekonomická volba, která poskytuje dočasné úložiště za nižší cenu. Zaručuje dostupnost dat pro všechny nezbytné lhůty pro zpochybnění. Na druhou stranu data volání chytrých kontraktů nabízejí trvalé úložiště, ale jsou dražší.
 
-Transakce rollupů na druhé vrstvě (L2) Etherea mají možnost využívat dva typy úložiště dat: dočasný prostor pro bloby nebo trvalý úložný prostor pro data chytrých kontraktů (calldata). Prostor pro bloby je ekonomickou volbou, která poskytuje dočasné úložiště za nižší cenu. Zaručuje dostupnost dat pro všechna potřebná období výzev. Na druhou stranu, calldata nabízí trvalé úložiště, to je ale dražší.
+Rozhodnutí mezi použitím prostoru blobů nebo dat volání činí primárně poskytovatelé rollupů. Toto rozhodnutí zakládají na aktuální poptávce po prostoru blobů. Pokud je po prostoru blobů vysoká poptávka, rollupy se mohou rozhodnout pro data volání, aby zajistily včasné odeslání dat.
 
-Rozhodnutí, zda použijí prostor pro bloby, nebo calldata, je primárně na poskytovatelích rollupů. Ti se rozhodují na základě aktuální poptávky po prostoru pro bloby. Pokud je poptávka po prostoru pro bloby v určitém momentu příliš vysoká, rollupy mohou zvolit calldata, aby zajistily včasné odeslání dat.
+Ačkoli je teoreticky možné, aby si uživatelé vybrali preferovaný typ úložiště, tuto volbu obvykle spravují poskytovatelé rollupů. Nabídnutí této možnosti uživatelům by přidalo na složitosti, zejména u nákladově efektivního sdružování transakcí. Pro konkrétní podrobnosti o této volbě by se uživatelé měli obrátit na dokumentaci poskytovanou jednotlivými poskytovateli rollupů.
 
-Ačkoliv je teoreticky možné, aby si uživatelé vybrali preferovaný typ úložiště, poskytovatelé rollupů tuto volbu obvykle dělají sami. Poskytnutí této volby uživatelům by přidalo na složitosti, zejména při nákladově efektivním seskupování transakcí. Pro konkrétní detaily ohledně této volby by uživatelé měli nahlédnout do dokumentace jednotlivých poskytovatelů rollupů.
+## Sníží EIP-4844 gas na L1? {#l1-fee-impact}
 
-## Sníží 4844 poplatky za palivo na vrstvě L1? {#l1-fee-impact}
+Ne nijak významně. Zavádí se nový trh s gasem výhradně pro prostor blobů, který budou využívat poskytovatelé rollupů. _Ačkoli se poplatky na vrstvě 1 (l1) mohou snížit přesunutím dat rollupů do blobů, tato aktualizace se primárně zaměřuje na snížení poplatků na vrstvě 2 (l2). Ke snížení poplatků na L1 (Mainnet) může dojít v menší míře jako k efektu druhého řádu._
 
-Ne zásadně. Prostor pro bloby, který využívají poskytovatelé rollupů, má svůj vlastní nový trh s poplatky za palivo. _I když se poplatky na L1 mohou snížit díky přesunu dat rollupů do blobů, toto vylepšení se primárně zaměřuje na snížení poplatků na vrstvě L2. Snížení poplatků na L1 (hlavní síť) může nastat jako sekundární efekt v menší míře._
+- Snížení gasu na L1 bude úměrné přijetí/využívání dat blobů poskytovateli rollupů
+- Gas na L1 pravděpodobně zůstane konkurenční kvůli aktivitám nesouvisejícím s rollupy
+- Rollupy, které přijmou využívání prostoru blobů, budou vyžadovat méně gasu na L1, což v krátkodobém horizontu pomůže tlačit poplatky za gas na L1 dolů
+- Prostor blobů je stále omezený, takže pokud jsou bloby v rámci bloku nasycené/plné, může být od rollupů mezitím vyžadováno, aby svá data odesílaly jako trvalá data, což by hnalo ceny gasu na L1 a L2 nahoru
 
-- Snížení poplatků na L1 bude úměrné adopci, tedy používání datových blobů poskytovateli rollupů.
-- Poplatky za palivo na L1 pravděpodobně zůstanou konkurenceschopné, ale to bude díky činnostem, které s rollupy nesouvisejí.
-- Rollupy, které budou prostor pro bloby využívat, budou potřebovat méně poplatků za palivo na L1, což pomůže krátkodobě snížit poplatky za palivo na L1.
-- Prostor pro bloby je stále omezený, takže pokud budou bloby v rámci bloku nasyceny/plné, rollupy mohou být nuceny odesílat svá data do permanentního úložiště, což by mohlo zvýšit ceny paliva na L1 i L2.
+## Sníží to poplatky na jiných EVM blockchainech na vrstvě 1? {#alt-l1-fee-impact}
 
-## Sníží to poplatky na jiných EVM blockchainech vrstvy 1? {#alt-l1-fee-impact}
+Ne. Výhody proto-dankshardingu jsou specifické pro rollupy na vrstvě 2 (l2) Etherea, které ukládají své důkazy na vrstvě 1 (Mainnet).
 
-Ne. Výhody Proto-Dankshardingu jsou specifické pro rollupy druhé vrstvy Etherea, které ukládají své důkazy na vrstvě 1 (hlavní síť).
+Pouhá kompatibilita s virtuálním strojem Etherea (EVM) neznamená, že síť z této aktualizace získá nějaký prospěch. Sítě, které fungují nezávisle na Ethereu (ať už jsou kompatibilní s EVM, nebo ne), neukládají svá data na Ethereu a z této aktualizace nebudou mít žádný užitek.
 
-Pouhá kompatibilita s virtuálním strojem Etherea (EVM) neznamená, že síť bude mít z tohoto upgradu nějaký prospěch. Sítě, které fungují nezávisle na Ethereu (ať už jsou kompatibilní s EVM, nebo ne), neukládají svá data na Ethereum a z tohoto upgradu nebudou mít žádný prospěch.
+[Více o rollupech na vrstvě 2](/layer-2/)
 
-[Další informace o rollupech druhé vrstvy](/layer-2/)
+## Učíte se raději vizuálně? {#visual-learner}
 
-## Učíte se spíše vizuálně? {#visual-learner}
+<VideoWatch slug="eip-4844-dencun-explained" />
 
-<YouTube id="HT9PHWloIiU" />
+_Odemykání škálování Etherea, EIP-4844 — Finematics _
 
-_Unlocking Ethereum's Scaling, EIP-4844 – Finematics_
+<VideoWatch slug="blobspace-101-dencun" />
 
-<YouTube id="dFjyUY3e53Q" />
-
-_Blobspace 101 with Domothy – Bankless_
+_Blobspace 101 s Domothym — Bankless_
 
 ## Další čtení {#further-reading}
 
 - [EIP4844.com](https://www.eip4844.com/)
-- [EIP-4844: Transakce shard blobů (Proto-Danksharding)](https://eips.ethereum.org/EIPS/eip-4844)
-- [Oznámení o spuštění vylepšení Dencun na hlavní síti](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement) – _blog Ethereum Foundation_
-- [Stopařův průvodce po Ethereu: Proto-Danksharding](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum/#proto-danksharding-eip-4844) – _Jon Charbonneau_
-- [Často kladené otázky o Proto-Dankshardingu](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq) – _Vitalik Buterin_
-- [Podrobné vysvětlení EIP-4844: Jádro upgradu Cancun](https://medium.com/@ebunker.io/an-in-depth-explanation-of-eip-4844-the-core-of-the-cancun-upgrade-de7b13761d2c) – _Ebunker_
-- [Aktualizace AllCoreDevs 016](https://tim.mirror.xyz/HzH5MpK1dnw7qhBSmzCfdCIxpwpD6DpwlfxtaAwEFro) – _Tim Beiko_
+- [EIP-4844: Transakce shardových blobů (proto-danksharding)](https://eips.ethereum.org/EIPS/eip-4844)
+- [Oznámení o Dencunu na Mainnetu](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement) - _Blog Ethereum Foundation_
+- [Stopařův průvodce po Ethereu: Proto-danksharding](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum/#proto-danksharding-eip-4844) - _Jon Charbonneau_
+- [Často kladené dotazy k proto-dankshardingu](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq) - _Vitalik Buterin_
+- [Hloubkové vysvětlení EIP-4844: Jádro aktualizace Cancún](https://medium.com/@ebunker.io/an-in-depth-explanation-of-eip-4844-the-core-of-the-cancun-upgrade-de7b13761d2c) - _Ebunker_
+- [Aktualizace AllCoreDevs 016](https://tim.mirror.xyz/HzH5MpK1dnw7qhBSmzCfdCIxpwpD6DpwlfxtaAwEFro) - _Tim Beiko_

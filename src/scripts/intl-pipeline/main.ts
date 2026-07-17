@@ -164,6 +164,10 @@ async function loadGlossary(
 function walkForExt(dir: string, ext: string): string[] {
   const out: string[] = []
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    // Never descend into the translation output tree -- those are translated
+    // files, not source files (validateTargetPath rejects them). Matters when
+    // expanding the markdown root (public/content) for a full-tree run.
+    if (entry.isDirectory() && entry.name === "translations") continue
     const full = path.join(dir, entry.name)
     if (entry.isDirectory()) {
       out.push(...walkForExt(full, ext))
@@ -465,20 +469,16 @@ async function runFullTranslation(
     }
   }
 
-  await committer.commitFile(destPath, finalContent, locale)
-  committedFiles.push({ path: destPath, content: finalContent })
-
-  // Build and commit source manifest
+  // Build the manifests BEFORE recording any blob. Manifest construction is
+  // pure and can throw (parse/serialize); doing it first means a builder error
+  // aborts the task without leaving content recorded sans its manifest -- the
+  // same content-without-manifest desync the ref-race fix already closed.
   const sourceManifest =
     file.type === "markdown"
       ? buildMarkdownManifest(file.content, file.path, baseBranchSha)
       : buildJsonManifest(file.content, file.path, baseBranchSha)
-
-  // Commit source manifest
   const smDest = getManifestPath(destPath, "source")
-  await committer.commitFile(smDest, sourceManifest, locale)
 
-  // Commit translation manifest
   const placeholderData =
     result.placeholderOrder && result.placeholderMap
       ? {
@@ -489,9 +489,11 @@ async function runFullTranslation(
         ? extractPlaceholderData(parseEnglishJson(file.content))
         : null
 
+  let translationManifest: string | null = null
+  let tmDest: string | null = null
   if (placeholderData) {
     const parsed = JSON.parse(sourceManifest)
-    const tm = buildLocaleTranslationManifest({
+    translationManifest = buildLocaleTranslationManifest({
       locale,
       englishManifestHash: parsed.rootHash,
       placeholderOrder: placeholderData.placeholderOrder,
@@ -500,8 +502,15 @@ async function runFullTranslation(
         _all: { translatedAt: new Date().toISOString(), status: "success" },
       },
     })
-    const tmDest = getManifestPath(destPath, "translation")
-    await committer.commitFile(tmDest, tm, locale)
+    tmDest = getManifestPath(destPath, "translation")
+  }
+
+  // Record content and its manifest(s) together, manifests last.
+  await committer.commitFile(destPath, finalContent, locale)
+  committedFiles.push({ path: destPath, content: finalContent })
+  await committer.commitFile(smDest, sourceManifest, locale)
+  if (translationManifest && tmDest) {
+    await committer.commitFile(tmDest, translationManifest, locale)
   }
 
   log(`[${locale}] ${destPath}: committed`)
@@ -610,15 +619,16 @@ async function runIncremental(
     }
   }
 
-  await committer.commitFile(destPath, finalContent, locale)
-  committedFiles.push({ path: destPath, content: finalContent })
-
+  // Build the source manifest before recording any blob (see runFullTranslation):
+  // a builder throw must not leave content recorded without its manifest.
   const sourceManifest =
     file.type === "markdown"
       ? buildMarkdownManifest(englishB, file.path, baseBranchSha)
       : buildJsonManifest(englishB, file.path, baseBranchSha)
-
   const smDest = getManifestPath(destPath, "source")
+
+  await committer.commitFile(destPath, finalContent, locale)
+  committedFiles.push({ path: destPath, content: finalContent })
   await committer.commitFile(smDest, sourceManifest, locale)
 
   log(`[${locale}] ${destPath}: committed (incremental)`)
@@ -633,9 +643,15 @@ async function main() {
   const startTime = Date.now()
   logSection("Incremental Translation Pipeline")
 
+  // Blank TARGET_PATH means "translate everything": seed with the JSON and
+  // markdown source roots, which the directory-expansion pass below resolves to
+  // every source file (excluding the translation output tree and the
+  // do-not-translate list).
+  const targetPaths = config.targetPaths.length
+    ? config.targetPaths
+    : [config.jsonRoot, config.mdRoot]
   if (!config.targetPaths.length) {
-    console.error("[ERROR] TARGET_PATH is required")
-    process.exit(1)
+    log("TARGET_PATH is blank -- translating all source files (full tree)")
   }
 
   const targetLanguages = config.allInternalCodes
@@ -643,7 +659,7 @@ async function main() {
   const targetBranch = config.targetBranch
 
   log(`Target: ${targetBranch} (base: ${baseBranch})`)
-  log(`Files: ${config.targetPaths.join(", ")}`)
+  log(`Files: ${targetPaths.join(", ")}`)
   log(`Languages: ${targetLanguages.join(", ")}`)
   log(`Mode: ${config.mode}`)
   log(`Concurrency: ${config.concurrency}`)
@@ -718,7 +734,7 @@ async function main() {
   //   3. Expand     (directory entries -> their constituent files)
   //   4. Validate   (hard errors still throw)
   //   5. Excluded?  (warn-level: skip and continue; throw only if all excluded)
-  const normalizedPaths = config.targetPaths.map((fp) =>
+  const normalizedPaths = targetPaths.map((fp) =>
     normalizeTargetPath(fp, (from, to) =>
       log(`Normalizing "${from}" -> "${to}"`)
     )
@@ -897,9 +913,12 @@ async function main() {
 
   // Log task failures but don't abort -- partial successes ship. Failures are
   // recorded with file context (via submitWithContext) and surfaced in the PR
-  // body with rerun commands. Per-file manifests are only stamped on success,
-  // so a rerun of just the failed combinations naturally retries them without
-  // touching the work that landed this run.
+  // body with rerun commands. A failed task records NEITHER its content nor its
+  // manifest (content+manifests are built then recorded together per task, and
+  // commitFile no longer touches the branch ref mid-run -- see SharedCommitter),
+  // so a failed file simply doesn't appear this run and a rerun re-detects it.
+  // This invariant is what keeps manifest tracking in sync; before it, a
+  // ref-race could ship content without its manifest and desync every rerun.
   if (failures.length > 0) {
     log(
       `${failures.length} task(s) failed (continuing with successes):`,

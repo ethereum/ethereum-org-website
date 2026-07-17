@@ -7,8 +7,7 @@ uploadDate: 2022-10-04
 duration: "0:09:56"
 educationLevel: beginner
 topic:
-  - "dao"
-  - "governance"
+  - "use-cases"
 format: presentation
 author: TED
 breadcrumb: "DAOs & Cities"

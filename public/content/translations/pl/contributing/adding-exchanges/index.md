@@ -1,33 +1,32 @@
 ---
-title: "Dodawanie giełd"
-description: "Polityka, którą stosujemy podczas dodawania giełd do ethereum.org"
+title: Dodawanie giełd Ethereum
+metaTitle: Dodawanie giełd
+description: Zasady, którymi kierujemy się przy dodawaniu giełd do ethereum.org
 lang: pl
 ---
 
-# Dodawanie giełd Ethereum {#adding-ethereum-exchanges}
+Każdy może zaproponować nowe giełdy na ethereum.org.
 
-Każdy może sugerować nowe giełdy na ethereum.org.
-
-Obecnie umieszczamy je na:
+Obecnie wymieniamy je na:
 
 - [ethereum.org/get-eth](/get-eth/)
 
-Ta strona pozwala użytkownikowi wprowadzić miejsce zamieszkania i sprawdzić, z jakich giełd może korzystać. Pomaga to wcześnie wykryć wszelkie ograniczenia geograficzne.
+Ta strona pozwala użytkownikowi wprowadzić miejsce zamieszkania i zobaczyć, z jakich giełd może korzystać. Pomaga to wcześnie wykryć wszelkie ograniczenia geograficzne.
 
-W związku z tym kontekstem potrzebujemy pewnych konkretnych informacji, gdy sugerujesz giełdę.
+Ze względu na ten kontekst, potrzebujemy pewnych konkretnych informacji, gdy proponujesz giełdę.
 
-**UWAGA:** Jeśli chcesz umieścić na liście zdecentralizowaną giełdę, zapoznaj się z naszą [polityką dotyczącą umieszczania portfeli i dapek](/contributing/adding-products/).
+**UWAGA:** Jeśli chcesz dodać zdecentralizowaną giełdę, zapoznaj się z naszymi [zasadami dodawania portfeli i zdecentralizowanych aplikacji (dapp)](/contributing/adding-products/).
 
 ## Czego potrzebujemy {#what-we-need}
 
-- Ograniczenia geograficzne, które dotyczą danej giełdy. Ograniczenia geograficzne związane z giełdą powinny być szczegółowo opisane na dedykowanej stronie lub w sekcji witryny internetowej giełdy.
-- Waluty, których użytkownicy mogą używać do zakupu ETH
-- Dowód, że giełda jest legalnie działającą firmą handlową
-- Wszelkie dodatkowe informacje, które możesz posiadać – mogą to być informacje o firmie, takie jak lata działalności, wsparcie finansowe itp.
+- Ograniczenia geograficzne, które mają zastosowanie do giełdy. Ograniczenia geograficzne związane z giełdą powinny być szczegółowo opisane na dedykowanej stronie lub w sekcji na stronie internetowej giełdy.
+- Waluty, za pomocą których użytkownicy mogą kupić ETH
+- Dowód na to, że giełda jest legalnie działającą firmą handlową
+- Wszelkie dodatkowe informacje, które możesz posiadać – mogą to być informacje o firmie, takie jak lata działalności, zaplecze finansowe itp.
 
 Potrzebujemy tych informacji, aby móc dokładnie [pomóc użytkownikom znaleźć giełdę, z której mogą korzystać](/get-eth/#country-picker).
 
-Dzięki temu ethereum.org może mieć większą pewność, że giełda jest legalną i bezpieczną usługą.
+A także po to, aby ethereum.org miało większą pewność, że giełda jest legalną i bezpieczną usługą.
 
 ---
 

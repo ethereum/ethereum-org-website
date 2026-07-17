@@ -1,96 +1,96 @@
 ---
-title: "مكتبات واجهات برمجة التطبيقات بلغة جافا سكريبت"
-description: "مقدمة إلى مكتبات جافا سكريبت العميلة التي تسمح لك بالتفاعل مع سلسلة الكتل من التطبيق الخاص بك."
+title: "مكتبات ⁦API⁩ لـ ⁦JavaScript⁩"
+description: "مقدمة عن مكتبات عميل ⁦JavaScript⁩ التي تتيح لك التفاعل مع سلسلة الكتل من تطبيقك."
 lang: ar
 ---
 
-لكي يتمكن تطبيق الويب من التفاعل مع بلوكتشين إيثريوم (أي قراءة بيانات البلوكتشين و/أو إرسال المعاملات إلى الشبكة)، يجب أن يتصل بعقدة إيثريوم.
+لكي يتفاعل تطبيق ويب مع سلسلة الكتل لإيثيريوم (أي قراءة بيانات سلسلة الكتل و/أو إرسال معاملات إلى الشبكة)، يجب أن يتصل بعقدة إيثيريوم.
 
-لهذا الغرض، يقوم كل عميل إيثريوم بتنفيذ مواصفات [JSON-RPC](/developers/docs/apis/json-rpc/)، لذلك هناك مجموعة موحدة من [الأساليب](/developers/docs/apis/json-rpc/#json-rpc-methods) التي يمكن للتطبيقات الاعتماد عليها.
+لهذا الغرض، ينفذ كل عميل إيثيريوم مواصفات [<span dir="ltr">JSON-RPC</span>](/developers/docs/apis/json-rpc/)، لذلك هناك مجموعة موحدة من [الطرق](/developers/docs/apis/json-rpc/#json-rpc-methods) التي يمكن للتطبيقات الاعتماد عليها.
 
-إذا كنت ترغب في استخدام جافا سكريبت للاتصال بعقدة إيثريوم، يمكنك استعمال لغة جافا سكريبت العادية، ولكن تتوفر داخل النظام عدة مكتبات ملائمة تسهّل هذه العملية بشكل كبير. مع هذه المكتبات، بوسع المطورين كتابة طرق ذكية من سطر واحد لتهيئة طلبات JSON RPC (في الخلفية) التي تتفاعل مع إيثريوم.
+إذا كنت ترغب في استخدام <span dir="ltr">JavaScript</span> للاتصال بعقدة إيثيريوم، فمن الممكن استخدام <span dir="ltr">JavaScript</span> الأساسية ولكن توجد العديد من المكتبات المريحة داخل النظام البيئي التي تجعل هذا أسهل بكثير. باستخدام هذه المكتبات، يمكن للمطورين كتابة طرق بديهية من سطر واحد لتهيئة طلبات <span dir="ltr">JSON-RPC</span> (داخليًا) التي تتفاعل مع إيثيريوم.
 
-يرجى ملاحظة أنه منذ [الدمج](/roadmap/merge/)، هناك حاجة إلى جزأين متصلين من برامج إيثريوم - عميل تنفيذ وعميل إجماع - لتشغيل عقدة. يرجى التأكد من أن عقدتك تحتوي على كلٍّ من عميل التنفيذ وعميل الإجماع. إذا لم تكن عقدتك على جهازك المحلي (على سبيل المثال، تعمل عقدتك على مثيل AWS) فقم بتحديث عناوين IP في البرنامج التعليمي وفقًا لذلك. لمزيد من المعلومات، يرجى الاطلاع على صفحتنا حول [تشغيل عقدة](/developers/docs/nodes-and-clients/run-a-node/).
+يرجى ملاحظة أنه منذ [الدمج](/roadmap/merge/)، يلزم وجود قطعتين متصلتين من برامج إيثيريوم - عميل التنفيذ وعميل إجماع - لتشغيل عقدة. يرجى التأكد من أن عقدتك تتضمن كلاً من عميل التنفيذ وعميل الإجماع. إذا لم تكن عقدتك على جهازك المحلي (على سبيل المثال، تعمل عقدتك على مثيل <span dir="ltr">AWS</span>)، فقم بتحديث عناوين <span dir="ltr">IP</span> في البرنامج التعليمي وفقًا لذلك. لمزيد من المعلومات، يرجى الاطلاع على صفحتنا حول [تشغيل عقدة](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## المتطلبات الأساسية {#prerequisites}
 
-بالإضافة إلى فهم جافا سكريبت، قد يكون من المفيد فهم [حزمة إيثريوم](/developers/docs/ethereum-stack/) و[عملاء إيثريوم](/developers/docs/nodes-and-clients/).
+بالإضافة إلى فهم <span dir="ltr">JavaScript</span>، قد يكون من المفيد فهم [حزمة إيثيريوم](/developers/docs/ethereum-stack/) و[عملاء إيثيريوم](/developers/docs/nodes-and-clients/).
 
-## ما نفع المكتبة؟ {#why-use-a-library}
+## لماذا تستخدم مكتبة؟ {#why-use-a-library}
 
-تخفف هذه المكتبات إلى حد كبير من تعقيد التفاعل المباشر مع عقدة إيثريوم. كما أنها توفر وظائف مساعِدة (كتحويل ETH إلى Gwei) تتيح لك كمطوّر قضاء وقت أقل في التعامل مع تعقيدات عملاء إيثريوم والتركيز لوقت أطول على وظيفة تطبيقك الفريدة.
+تعمل هذه المكتبات على تجريد الكثير من تعقيدات التفاعل المباشر مع عقدة إيثيريوم. كما أنها توفر وظائف مساعدة (على سبيل المثال، تحويل <span dir="ltr">ETH</span> إلى <span dir="ltr">Gwei</span>) بحيث يمكنك كمطور قضاء وقت أقل في التعامل مع تعقيدات عملاء إيثيريوم ومزيد من الوقت في التركيز على الوظائف الفريدة لتطبيقك.
 
 ## ميزات المكتبة {#library-features}
 
-### الاتصال بعقد إيثريوم {#connect-to-ethereum-nodes}
+### الاتصال بعقد إيثيريوم {#connect-to-ethereum-nodes}
 
-تستخدم هذه المكتبات المزودين لتتيح لك بالاتصال بـ إيثريوم وقراءة بياناته، سواء كان ذلك عبر JSON-RPC أو INFURA أو إيثرسكان أو ألكيمي أو ميتاماسك.
+باستخدام المزودين، تتيح لك هذه المكتبات الاتصال بإيثيريوم وقراءة بياناته، سواء كان ذلك عبر <span dir="ltr">JSON-RPC</span> أو <span dir="ltr">Infura</span> أو <span dir="ltr">Etherscan</span> أو <span dir="ltr">Alchemy</span> أو ميتاماسك.
 
-> **تحذير:** تمت أرشفة ويب3.جي إس في 4 مارس 2025. [اقرأ الإعلان](https://blog.chainsafe.io/web3-js-sunset/). فكر في استخدام مكتبات بديلة مثل [ethers.js](https://ethers.org) أو [viem](https://viem.sh) للمشاريع الجديدة.
+> **تحذير:** تمت أرشفة <span dir="ltr">Web3.js</span> في <span dir="ltr">March 4, 2025</span>. [اقرأ الإعلان](https://blog.chainsafe.io/web3-js-sunset/). فكر في استخدام مكتبات بديلة مثل [<span dir="ltr">Ethers.js</span>](https://ethers.org) أو [<span dir="ltr">Viem</span>](https://viem.sh) للمشاريع الجديدة.
 
-**مثال عن Ethers**
+**مثال <span dir="ltr">Ethers</span>**
 
 ```js
 // يغلف BrowserProvider مزود Web3 قياسي، وهو
-// ما يضيفه MetaMask كـ window.ethereum في كل صفحة
+// ما يحقنه ميتاماسك كـ window.ethereum في كل صفحة
 const provider = new ethers.BrowserProvider(window.ethereum)
 
-// يسمح المكون الإضافي MetaMask أيضًا بتوقيع المعاملات
-// لإرسال الإيثر والدفع لتغيير الحالة داخل البلوكتشين.
-// لهذا، نحن بحاجة إلى موقّع الحساب...
+// تسمح إضافة ميتاماسك أيضًا بتوقيع المعاملات لـ
+// إرسال الإيثر والدفع لتغيير الحالة داخل سلسلة الكتل.
+// لهذا، نحتاج إلى موقع الحساب...
 const signer = provider.getSigner()
 ```
 
-**مثال عن Web3js**
+**مثال <span dir="ltr">Web3js</span>**
 
 ```js
 var web3 = new Web3("http://localhost:8545")
-/ أو
-var web3 = new Web3(New Web3.providers.HttpProvider("http://localhost:8545"))
+// أو
+var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
 
 // تغيير المزود
 web3.setProvider("ws://localhost:8546")
 // أو
-web3.setProvider(new web3.providers.WebsocketProvider("ws://localhost:8546"))
+web3.setProvider(new Web3.providers.WebsocketProvider("ws://localhost:8546"))
 
-// استخدام مزود خدمة الاتصال بين العمليات (IPC) في node.js
+// استخدام مزود IPC في node.js
 var net = require("net")
-var web3 = new Web3("/Users/myuser/Library/Ethereum/geth. ipc", net) // مسار نظام التشغيل على mac
-// أو
+var web3 = new Web3("/Users/myuser/Library/Ethereum/geth.ipc", net) // مسار mac os
+// or
 var web3 = new Web3(
   new Web3.providers.IpcProvider("/Users/myuser/Library/Ethereum/geth.ipc", net)
-) // مسار نظام التشغيل على mac
-// المسار على Windows هو: "\\\\.\\pipe\\geth.ipc"
-/ المسار على linux هو: "/users/myuser/.ethereum/geth.ipc"
+) // مسار mac os
+// في windows المسار هو: "\\\\.\\pipe\\geth.ipc"
+// في linux المسار هو: "/users/myuser/.ethereum/geth.ipc"
 ```
 
-بعد الانتهاء من الإعداد، يصبح بإمكانك الاستعلام من سلسلة الكتل عن:
+بمجرد الإعداد، ستتمكن من الاستعلام من سلسلة الكتل عن:
 
-- أرقام الكتلة
+- أرقام الكتل
 - تقديرات الغاز
-- أحداث العقود الذكية
-- هوية الشبكة
-- وغير ذلك...
+- أحداث العقد الذكي
+- معرف الشبكة
+- والمزيد...
 
-### وظيفة المحفظة {#wallet-functionality}
+### وظائف المحفظة {#wallet-functionality}
 
-تمنحك هذه المكتبات الوظائف اللازمة لإنشاء المحافظ وإدارة المفاتيح وتوقيع المعاملات.
+تمنحك هذه المكتبات وظائف لإنشاء محافظ وإدارة المفاتيح وتوقيع المعاملات.
 
-إليك أمثلة من Ethers
+إليك مثال من <span dir="ltr">Ethers</span>
 
 ```js
-// إنشاء نسخة محفظة من عبارة استذكارية...
+// إنشاء مثيل محفظة من عبارة تذكيرية...
 mnemonic =
   "announce room limb pattern dry unit scale effort smooth jazz weasel alcohol"
 walletMnemonic = Wallet.fromPhrase(mnemonic)
 
-// ... أو من مفتاح خاص
+// ...أو من مفتاح خاص
 walletPrivateKey = new Wallet(walletMnemonic.privateKey)
 
 walletMnemonic.address === walletPrivateKey.address
-// صحيح
+// true
 
-// العنوان كوعد حسب واجهة برمجة تطبيقات الموقّع
+// العنوان كـ Promise وفقًا لـ API الموقع
 walletMnemonic.getAddress()
 // { Promise: '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1' }
 
@@ -98,13 +98,13 @@ walletMnemonic.getAddress()
 walletMnemonic.address
 // '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1'
 
-// مكونات التشفير الداخلية
+// المكونات التشفيرية الداخلية
 walletMnemonic.privateKey
 // '0x1da6847600b0ee25e9ad9a52abbd786dd2502fa4005dd5af9310b7cc7a3b25db'
 walletMnemonic.publicKey
 // '0x04b9e72dfd423bcf95b3801ac93f4392be5ff22143f9980eb78b3a860c4843bfd04829ae61cdba4b3b1978ac5fc64f5cc2f4350e35a108a9c9a92a81200a60cd64'
 
-// عبارة المحفظة الاستذكارية
+// العبارة التذكيرية للمحفظة
 walletMnemonic.mnemonic
 // {
 //   locale: 'en',
@@ -112,8 +112,8 @@ walletMnemonic.mnemonic
 //   phrase: 'announce room limb pattern dry unit scale effort smooth jazz weasel alcohol'
 // }
 
-// ملاحظة: المحفظة التي تم إنشاؤها بمفتاح خاص لا تحتوي على
-//       عبارة استذكارية (الاشتقاق يمنع ذلك)
+// ملاحظة: المحفظة المنشأة باستخدام مفتاح خاص لا
+//       تحتوي على عبارة تذكيرية (الاشتقاق يمنع ذلك)
 walletPrivateKey.mnemonic
 // null
 
@@ -130,7 +130,7 @@ tx = {
 walletMnemonic.signTransaction(tx)
 // { Promise: '0xf865808080948ba1f109551bd432803012645ac136ddd64dba72880de0b6b3a7640000801ca0918e294306d177ab7bd664f5e141436563854ebe0a3e523b9690b4922bbb52b8a01181612cec9c431c4257a79b8c9f0c980a2c49bb5a0e6ac52949163eeb565dfc' }
 
-// تعيد طريقة الاتصال نسخة جديدة من
+// تُرجع طريقة connect مثيلاً جديدًا من
 // المحفظة المتصلة بمزود
 wallet = walletMnemonic.connect(provider)
 
@@ -144,22 +144,22 @@ wallet.getTransactionCount()
 wallet.sendTransaction(tx)
 ```
 
-[اقرأ التوثيق الكامل](https://docs.ethers.io/v5/api/signer/#Wallet)
+[اقرأ المستندات الكاملة](https://docs.ethers.io/v5/api/signer/#Wallet)
 
-بعد الانتهاء من الإعداد، يمكنك:
+بمجرد الإعداد ستتمكن من:
 
 - إنشاء حسابات
-- إرسال المعاملات
-- توقيع المعاملات
-- وغير ذلك...
+- إرسال معاملات
+- توقيع معاملات
+- والمزيد...
 
-### التفاعل مع دوال العقود الذكية {#interact-with-smart-contract-functions}
+### التفاعل مع وظائف العقد الذكي {#interact-with-smart-contract-functions}
 
-تُتيح مكتبات جافا سكريبت لتطبيقك استدعاء وظائف العقود الذكية من خلال قراءة واجهة التطبيق الثنائية (ABI) الخاصة بالعقد بعد عملية ترجمة (Compilation) العقد.
+تتيح مكتبات عميل <span dir="ltr">JavaScript</span> لتطبيقك استدعاء وظائف العقد الذكي من خلال قراءة واجهة التطبيق الثنائية (<span dir="ltr">ABI</span>) لعقد مجمع.
 
-تشرح واجهة التطبيق الثنائية وظائف العقد بصيغة JSON وتتيح لك استخدامه كأي شيء عادي بلغة جافا سكريبت.
+تشرح <span dir="ltr">ABI</span> بشكل أساسي وظائف العقد بتنسيق <span dir="ltr">JSON</span> وتسمح لك باستخدامها ككائن <span dir="ltr">JavaScript</span> عادي.
 
-لذا فإن عقد سوليديتي التالي:
+لذا فإن عقد <span dir="ltr">Solidity</span> التالي:
 
 ```solidity
 contract Test {
@@ -179,7 +179,7 @@ contract Test {
 }
 ```
 
-ينتج JSON التالي:
+سينتج عنه <span dir="ltr">JSON</span> التالي:
 
 ```json
 [{
@@ -208,82 +208,93 @@ contract Test {
 }]
 ```
 
-وهذا يعني أنك تستطيع:
+هذا يعني أنه يمكنك:
 
 - إرسال معاملة إلى العقد الذكي وتنفيذ طريقته
-- الاتصال لتقدير الغاز الذي يحتاجه تنفيذ الطريقة عند تنفيذها في آلة إيثريوم الافتراضية
-- نشر العقود
-- وغير ذلك...
+- الاستدعاء لتقدير الغاز الذي سيستغرقه تنفيذ الطريقة عند تنفيذها في جهاز إيثيريوم الظاهري (<span dir="ltr">EVM</span>)
+- نشر عقد
+- والمزيد...
 
 ### الوظائف المساعدة {#utility-functions}
 
-تمنحك الوظائف المساعِدة اختصارات مفيدة تسهّل بعض الشيء عملية البناء باستخدام إيثريوم.
+تمنحك الوظائف المساعدة اختصارات مفيدة تجعل البناء باستخدام إيثيريوم أسهل قليلاً.
 
-تأتي قيم ETH بفئة واي بشكل افتراضي. كل ETH واحد يعادل 1,000,000,000,000,000,000,000 WEI - هذا يعني أنك تتعامل مع الكثير من الأرقام! `web3.utils.toWei` يحول الإيثر إلى Wei من أجلك.
+قيم <span dir="ltr">ETH</span> تكون بـ <span dir="ltr">Wei</span> افتراضيًا. <span dir="ltr">1 ETH = 1,000,000,000,000,000,000 WEI</span> – هذا يعني أنك تتعامل مع الكثير من الأرقام! `web3.utils.toWei` يحول الإيثر إلى <span dir="ltr">Wei</span> من أجلك.
 
-وتبدو القيمة بـether على الشكل التالي:
+وفي <span dir="ltr">Ethers</span> يبدو الأمر هكذا:
 
 ```js
-// احصل على رصيد حساب (عن طريق العنوان أو اسم ENS)
+// الحصول على رصيد حساب (عن طريق العنوان أو اسم ENS)
 balance = await provider.getBalance("ethers.eth")
 // { BigNumber: "2337132817842795605" }
 
-// ستحتاج غالبًا إلى تنسيق المُخرج للمستخدم
-// الذي يفضل رؤية القيم بـ ether (بدلاً من wei)
+// غالبًا ما ستحتاج إلى تنسيق المخرجات للمستخدم
+// الذي يفضل رؤية القيم بالإيثر (بدلاً من Wei)
 ethers.utils.formatEther(balance)
 // '2.337132817842795605'
 ```
 
-- [الوظائف المساعدة لـ Web3js](https://docs.web3js.org/api/web3-utils)
-- [الوظائف المساعدة لـ Ethers](https://docs.ethers.org/v6/api/utils/)
+- [الوظائف المساعدة لـ <span dir="ltr">Web3js</span>](https://docs.web3js.org/api/web3-utils)
+- [الوظائف المساعدة لـ <span dir="ltr">Ethers</span>](https://docs.ethers.org/v6/api/utils/)
 
 ## المكتبات المتاحة {#available-libraries}
 
-**ويب3.جي إس -** **_واجهة برمجة تطبيقات إيثريوم جافا سكريبت._**
+**<span dir="ltr">Web3.js</span> -** **_واجهة برمجة تطبيقات <span dir="ltr">JavaScript</span> لإيثيريوم._**
 
-- [التوثيق](https://docs.web3js.org)
-- [غيت هاب](https://github.com/ethereum/web3.js)
+- [المستندات](https://docs.web3js.org)
+- [<span dir="ltr">GitHub</span>](https://github.com/ethereum/web3.js)
 
-**إيثرز.جي إس -** **_تنفيذ محفظة إيثريوم بالكامل مع الأدوات المساعدة باستخدام جافا سكريبت و تايب سكريبت._**
+**<span dir="ltr">Ethers.js</span> -** **_تنفيذ كامل لمحفظة إيثيريوم وأدوات مساعدة في <span dir="ltr">JavaScript</span> و<span dir="ltr">TypeScript</span>._**
 
-- [الصفحة الرئيسية لـ إيثرز.جي إس](https://ethers.org/)
-- [التوثيق](https://docs.ethers.io)
-- [غيت هاب](https://github.com/ethers-io/ethers.js)
+- [الصفحة الرئيسية لـ <span dir="ltr">Ethers.js</span>](https://ethers.org/)
+- [المستندات](https://docs.ethers.io)
+- [<span dir="ltr">GitHub</span>](https://github.com/ethers-io/ethers.js)
 
-**ذا غراف -** **_بروتوكول لفهرسة بيانات إيثريوم و آي بي إف إس والاستعلام عنها باستخدام جراف كيو إل._**
+**<span dir="ltr">The Graph</span> -** **_بروتوكول لفهرسة بيانات إيثيريوم و<span dir="ltr">IPFS</span> والاستعلام عنها باستخدام <span dir="ltr">GraphQL</span>._**
 
-- [ذا غراف](https://thegraph.com)
-- [مستكشف Graph](https://thegraph.com/explorer)
-- [التوثيق](https://thegraph.com/docs)
-- [غيت هاب](https://github.com/graphprotocol)
+- [<span dir="ltr">The Graph</span>](https://thegraph.com)
+- [مستكشف <span dir="ltr">Graph</span>](https://thegraph.com/explorer)
+- [المستندات](https://thegraph.com/docs)
+- [<span dir="ltr">GitHub</span>](https://github.com/graphprotocol)
 - [ديسكورد](https://thegraph.com/discord)
 
-**ألكيمي SDK -** **_غلاف حول إيثرز.جي إس مع واجهات برمجة تطبيقات محسّنة._**
+**<span dir="ltr">Alchemy SDK</span> -** **_غلاف حول <span dir="ltr">Ethers.js</span> مع واجهات برمجة تطبيقات محسنة._**
 
-- [التوثيق](https://www.alchemy.com/docs)
-- [غيت هاب](https://github.com/alchemyplatform/alchemy-sdk-js)
+- [المستندات](https://www.alchemy.com/docs)
+- [<span dir="ltr">GitHub</span>](https://github.com/alchemyplatform/alchemy-sdk-js)
 
-**viem -** **_واجهة تايب سكريبت لـ إيثريوم._**
+**<span dir="ltr">Viem</span> -** **_واجهة <span dir="ltr">TypeScript</span> لإيثيريوم._**
 
-- [التوثيق](https://viem.sh)
-- [غيت هاب](https://github.com/wagmi-dev/viem)
+- [المستندات](https://viem.sh)
+- [<span dir="ltr">GitHub</span>](https://github.com/wagmi-dev/viem)
 
-**Drift -** **_مكتبة تعريفية بلغة تايب سكريبت مع تخزين مؤقت مدمج وخطافات ومحاكاة اختبار._**
+**<span dir="ltr">Codex</span> -** **_واجهة برمجة تطبيقات لبيانات سلسلة الكتل المثرية في الوقت الفعلي عبر عشرات السلاسل._**
 
-- [التوثيق](https://ryangoree.github.io/drift/)
-- [غيت هاب](https://github.com/ryangoree/drift/)
+- [المستندات](https://docs.codex.io)
+- [المستكشف](https://docs.codex.io/explore)
+- [<span dir="ltr">GitHub</span>](https://github.com/Codex-Data)
+- [ديسكورد](https://discord.com/invite/mFpUhT3vAq)
+
+**<span dir="ltr">Drift</span> -** **_مكتبة وصفية لـ <span dir="ltr">TypeScript</span> مع تخزين مؤقت مدمج، وخطافات، ونماذج اختبار وهمية._**
+
+- [المستندات](https://ryangoree.github.io/drift/)
+- [<span dir="ltr">GitHub</span>](https://github.com/ryangoree/drift/)
 
 ## قراءة إضافية {#further-reading}
 
-_هل تعرف أحد الموارد المجتمعية التي ساعدتك؟ عدّل هذه الصفحة وأضفه!_
+_هل تعرف موردًا مجتمعيًا ساعدك؟ قم بتعديل هذه الصفحة وأضفه!_
 
-## المواضيع ذات الصلة {#related-topics}
+## مواضيع ذات صلة {#related-topics}
 
 - [العقد والعملاء](/developers/docs/nodes-and-clients/)
 - [أطر التطوير](/developers/docs/frameworks/)
 
-## دروس تعليمية ذات صلة {#related-tutorials}
+## برامج تعليمية ذات صلة {#related-tutorials}
 
-- [إعداد Web3js لاستخدام سلسلة كتل الإيثريوم في جافا سكريبت](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– تعليمات لإعداد web3.js في مشروعك._
-- [استدعاء عقد ذكي من جافا سكريبت](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– باستخدام رمز DAI، تعرّف على كيفية استدعاء وظيفة العقود بواسطة جافا سكريبت._
-- [إرسال المعاملات باستخدام web3 و ألكيمي](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– إرشادات تفصيلية خطوة بخطوة لإرسال المعاملات من الواجهة الخلفية._
+- [إعداد <span dir="ltr">Web3js</span> لاستخدام سلسلة الكتل لإيثيريوم في <span dir="ltr">JavaScript</span>](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– إرشادات لإعداد <span dir="ltr">Web3.js</span> في مشروعك._
+- [استدعاء عقد ذكي من <span dir="ltr">JavaScript</span>](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– باستخدام الرمز المميز <span dir="ltr">DAI</span>، تعرف على كيفية استدعاء وظيفة العقود باستخدام <span dir="ltr">JavaScript</span>._
+- [إرسال المعاملات باستخدام <span dir="ltr">Web3</span> و<span dir="ltr">Alchemy</span>](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– إرشادات خطوة بخطوة لإرسال المعاملات من الواجهة الخلفية._
+
+## برامج تعليمية: واجهات برمجة تطبيقات <span dir="ltr">JavaScript</span> و<span dir="ltr">WebSockets</span> على إيثيريوم {#tutorials}
+
+- [استخدام <span dir="ltr">WebSockets</span>](/developers/tutorials/using-websockets/) _– كيفية استخدام <span dir="ltr">WebSockets</span> مع <span dir="ltr">Alchemy</span> للاشتراك في أحداث إيثيريوم وإجراء طلبات <span dir="ltr">JSON-RPC</span> في الوقت الفعلي._

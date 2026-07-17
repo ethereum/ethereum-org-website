@@ -1,72 +1,72 @@
 ---
-title: "Jak wdrożyć rynek ERC-721"
-description: "Jak umieścić tokenizowane przedmioty w celu sprzedaży w zdecentralizowanym serwisie ogłoszeniowym"
+title: "Jak zaimplementować rynek ERC-721"
+description: "Jak wystawić stokenizowane przedmioty na sprzedaż na zdecentralizowanej tablicy ogłoszeń"
 author: "Alberto Cuesta Cañada"
-tags: [ "smart kontrakty", "erc-721", "Solidity", "tokeny" ]
+tags: ["inteligentne kontrakty", "erc-721", "Solidity", "tokeny"]
 skill: intermediate
-breadcrumb: "Rynek ERC-721"
+breadcrumb: Rynek ERC-721
 lang: pl
 published: 2020-03-19
 source: Hackernoon
 sourceUrl: https://hackernoon.com/how-to-implement-an-erc721-market-1e1a32j9
 ---
 
-W tym artykule pokażę Ci jak kodować Craigslist dla blockchainu Ethereum.
+W tym artykule pokażę Ci, jak zaprogramować odpowiednik Craigslist dla blockchaina Ethereum.
 
-Przed Gumtree, Ebay i Craigslist tablice ogłoszeniowe były w większości wykonane z korka lub papieru. W korytarzach szkolnych, gazetach, ulicach i sklepach istniały klasyczne tablice.
+Przed powstaniem Gumtree, Ebay i Craigslist, tablice ogłoszeń były w większości zrobione z korka lub papieru. Tablice ogłoszeniowe znajdowały się na szkolnych korytarzach, w gazetach, na latarniach ulicznych i w witrynach sklepowowych.
 
-Wszystko to zmieniło się wraz z Internetem. Liczba osób, które widzą konkretną tablicę klasyfikacyjną została pomnożona przez wiele rzędów wielkości. Dzięki temu rynki te stały się o wiele bardziej wydajne i skalowane na skalę światową. Ebay jest ogromnym biznesem, który wywodzi się z tych fizycznych tablic ogłoszeń.
+Wszystko to zmieniło się wraz z nadejściem internetu. Liczba osób, które mogły zobaczyć konkretną tablicę ogłoszeń, wzrosła o wiele rzędów wielkości. Dzięki temu rynki, które one reprezentują, stały się znacznie bardziej wydajne i urosły do globalnych rozmiarów. Ebay to ogromny biznes, który wywodzi się z tych fizycznych tablic ogłoszeniowych.
 
-Blockchain ponownie zmieni te rynki — pozwolę sobie pokazać, w jaki sposób.
+Dzięki technologii blockchain rynki te znów ulegną zmianie, pozwól, że pokażę Ci jak.
 
 ## Monetyzacja {#monetization}
 
-Model biznesowy serwisu ogłoszeniowego w publicznym blockchainie będzie musiał różnić się od modelu Ebay i spółki.
+Model biznesowy publicznej tablicy ogłoszeń opartej na blockchainie będzie musiał różnić się od tego, który stosuje Ebay i podobne firmy.
 
-Po pierwsze, jest [aspekt decentralizacji](/developers/docs/web2-vs-web3/). Istniejące platformy muszą utrzymywać własne serwery. Zdecentralizowana platforma jest utrzymywana przez użytkowników, a zatem koszt obsługi głównej platformy spadnie do zera dla właściciela platformy.
+Po pierwsze, istnieje [kwestia decentralizacji](/developers/docs/web2-vs-web3/). Istniejące platformy muszą utrzymywać własne serwery. Zdecentralizowana platforma jest utrzymywana przez jej użytkowników, więc koszt prowadzenia głównej platformy spada do zera dla jej właściciela.
 
-Następnie frontend — strona internetowa lub interfejs dający dostęp do platformy. Tutaj jest wiele możliwości. Właściciele platformy mogą ograniczyć dostęp i zmusić wszystkich do korzystania ze swojego interfejsu, pobierając opłaty. Właściciele platformy mogą również zdecydować się na otwarcie dostępu (Władza w ręce ludu!) i pozwolić każdemu na budowanie interfejsów do platformy. Lub właściciele mogliby wybrać jakiekolwiek pośrednie podejście.
+Następnie mamy front-end, czyli stronę internetową lub interfejs dający dostęp do platformy. Tutaj istnieje wiele opcji. Właściciele platformy mogą ograniczyć dostęp i zmusić wszystkich do korzystania z ich interfejsu, pobierając za to opłatę. Mogą również zdecydować się na otwarty dostęp (Władza w ręce ludu!) i pozwolić każdemu na tworzenie interfejsów do platformy. Właściciele mogą też zdecydować się na dowolne podejście pomiędzy tymi skrajnościami.
 
-_Liderzy biznesu, którzy mają więcej wizji niż ja, będą wiedzieć, jak na tym zarabiać. Widzę jedynie, że różni się to od status quo i prawdopodobnie jest opłacalne._
+_Liderzy biznesu z większą wizją niż moja będą wiedzieli, jak to zmonetyzować. Ja widzę tylko, że różni się to od status quo i prawdopodobnie jest opłacalne._
 
-Ponadto istnieje kąt automatyzacji i płatności. Niektóre rzeczy można bardzo [skutecznie stokenizować](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com) i handlować nimi na tablicy ogłoszeń. Tokenizowane aktywa są łatwo przenoszone w blockchainie. Bardzo skomplikowane metody płatności mogą być łatwo wdrożone w blockchainie.
+Ponadto dochodzi kwestia automatyzacji i płatności. Niektóre rzeczy mogą być bardzo [skutecznie stokenizowane](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com) i stanowić przedmiot handlu na tablicy ogłoszeń. Stokenizowane aktywa są łatwo przesyłane w blockchainie. Wysoce złożone metody płatności mogą być z łatwością zaimplementowane w blockchainie.
 
-Po prostu wyczuwam tutaj okazję biznesową. W łatwy sposób można wdrożyć serwis ogłoszeniowy bez kosztów bieżących, ze złożonymi ścieżkami płatności uwzględnionymi w każdej transakcji. Jestem pewien, że ktoś wymyśli, do czego to wykorzystać.
+Wyczuwam tu po prostu okazję biznesową. Tablica ogłoszeń bez kosztów operacyjnych może być łatwo zaimplementowana, ze złożonymi ścieżkami płatności zawartymi w każdej transakcji. Jestem pewien, że ktoś wpadnie na pomysł, do czego to wykorzystać.
 
-Po prostu cieszę się, że to buduję. Rzućmy okiem na kod.
+Ja po prostu cieszę się z jej budowania. Spójrzmy na kod.
 
 ## Implementacja {#implementation}
 
-Jakiś czas temu uruchomiliśmy [repozytorium open source](https://github.com/HQ20/contracts?ref=hackernoon.com) z przykładowymi implementacjami biznesowymi i innymi dodatkami. Zachęcamy do zapoznania się.
+Jakiś czas temu uruchomiliśmy [repozytorium open source](https://github.com/HQ20/contracts?ref=hackernoon.com) z przykładowymi implementacjami przypadków biznesowych i innymi dodatkami, zachęcam do zapoznania się z nim.
 
-Kod tej [tablicy ogłoszeń Ethereum](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com) jest tam dostępny, prosimy, korzystajcie z niego i testujcie go do woli. Pamiętaj tylko, że kod nie został poddany audytowi i musisz zrobić własną analizę due dililgence, zanim włożysz w niego pieniądze.
+Kod tej [tablicy ogłoszeń Ethereum](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com) znajduje się tam, proszę, używaj go do woli. Pamiętaj tylko, że kod nie był audytowany i musisz przeprowadzić własną analizę due diligence, zanim zainwestujesz w to jakiekolwiek pieniądze.
 
-Podstawy tablicy nie są skomplikowane. Wszystkie reklamy na tablicy będą tylko strukturą z kilkoma polami:
+Podstawy działania tablicy nie są skomplikowane. Wszystkie ogłoszenia na tablicy będą po prostu strukturą (struct) z kilkoma polami:
 
 ```solidity
 struct Trade {
   address poster;
   uint256 item;
   uint256 price;
-  bytes32 status; // Open, Executed, Cancelled
+  bytes32 status; // Otwarte, Wykonane, Anulowane
 }
 ```
 
-Tak więc jest ktoś zamieszczający reklamę. Przedmiot na sprzedaż. Cenę za przedmiot. Status transakcji, która może być otwarta, wykonana lub anulowana.
+Mamy więc kogoś, kto publikuje ogłoszenie. Przedmiot na sprzedaż. Cenę przedmiotu. Status transakcji, który może być otwarty (open), zrealizowany (executed) lub anulowany (cancelled).
 
-Wszystkie te transakcje będą przechowywane w mapach. Ponieważ wszystko w Solidity wydaje się być mapowaniem. Również dlatego, że jest to wygodne.
+Wszystkie te transakcje będą przechowywane w mapowaniu (mapping). Ponieważ wszystko w Solidity wydaje się być mapowaniem. A także dlatego, że jest to wygodne.
 
 ```solidity
 mapping(uint256 => Trade) public trades;
 ```
 
-Korzystanie z mapowania oznacza, że przed opublikowaniem tej wiadomości musimy przedstawić identyfikator dla każdej reklamy. i będziemy musieli poznać identyfikator reklamy, zanim będziemy mogli na niej działać. Istnieje wiele sposobów radzenia sobie z tym problemem, zarówno w ramach inteligentnego kontraktu, jak i w fazie początkowej. Zapytaj, jeśli potrzebujesz wskazówek.
+Użycie mapowania oznacza po prostu, że musimy wymyślić identyfikator (id) dla każdego ogłoszenia przed jego opublikowaniem, i będziemy musieli znać id ogłoszenia, zanim będziemy mogli na nim operować. Istnieje wiele sposobów radzenia sobie z tym, zarówno w inteligentnym kontrakcie, jak i we front-endzie. Daj znać, jeśli potrzebujesz wskazówek.
 
-Następnie pojawia się pytanie, z czym mamy do czynienia i jaka waluta jest wykorzystywana do zapłaty za transakcję.
+Następnie pojawia się pytanie, czym są te przedmioty, z którymi mamy do czynienia, i jaka jest ta waluta używana do opłacenia transakcji.
 
-W przypadku przedmiotów będziemy wymagać jedynie implementacji interfejsu [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com), który jest po prostu sposobem reprezentacji rzeczywistych przedmiotów w blockchainie, chociaż [najlepiej działa w przypadku aktywów cyfrowych](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com). Zamierzamy określić nasz własny kontrakt ERC721 w konstruktorze, co oznacza, że wszelkie aktywa w naszym serwisie muszą być uprzednio tokenizowane.
+W przypadku przedmiotów będziemy po prostu wymagać, aby implementowały interfejs [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com), który w rzeczywistości jest tylko sposobem reprezentowania przedmiotów ze świata rzeczywistego w blockchainie, chociaż [najlepiej sprawdza się w przypadku aktywów cyfrowych](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com). W konstruktorze określimy nasz własny kontrakt ERC-721, co oznacza, że wszelkie aktywa na naszej tablicy ogłoszeń muszą zostać wcześniej stokenizowane.
 
-W przypadku płatności zamierzamy zrobić coś podobnego. Większość projektów blockchain definiuje własną kryptowalutę [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com). Inni wolą korzystać z głównego nurtu takiego jak DAI. W tym serwisie ogłoszeniowym musisz tylko zdecydować podczas budowy, jaka będzie Twoja waluta. Łatwo.
+W przypadku płatności zrobimy coś podobnego. Większość projektów blockchain definiuje własną kryptowalutę [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com). Inne wolą używać walut głównego nurtu, takich jak DAI. W przypadku tej tablicy ogłoszeń wystarczy zdecydować podczas tworzenia (w konstruktorze), jaka będzie Twoja waluta. Proste.
 
 ```solidity
 constructor (
@@ -78,9 +78,9 @@ constructor (
 }
 ```
 
-Dochodzimy do tego. Mamy ogłoszenia, przedmioty do handlu i walutę do płatności. Ogłoszenie oznacza umieszczenie przedmiotu w escrow, aby pokazać, że się go ma i że nie informowało się o nim dwa razy, być może w innym serwisie.
+Zbliżamy się do celu. Mamy ogłoszenia, przedmioty na wymianę i walutę do płatności. Stworzenie ogłoszenia oznacza umieszczenie przedmiotu w depozycie (escrow), aby pokazać zarówno, że go posiadasz, jak i że nie opublikowałeś go dwukrotnie, na przykład na innej tablicy.
 
-Poniższy kod dokładnie to robi. Umieszcza przedmiot w escrow, tworzy ogłoszenie, wykonuje pewne czynności porządkowe.
+Poniższy kod robi dokładnie to. Umieszcza przedmiot w depozycie, tworzy ogłoszenie i wykonuje pewne prace porządkowe.
 
 ```solidity
 function openTrade(uint256 _item, uint256 _price)
@@ -98,7 +98,7 @@ function openTrade(uint256 _item, uint256 _price)
 }
 ```
 
-Przyjąć ofertę oznacza wybrać ogłoszenie (ofertę), zapłacić cenę, otrzymać przedmiot. Poniższy kod pobiera transakcję. Sprawdza, czy jest dostępna. Płaci za przedmiot. Pobiera przedmiot. Aktualizuje ogłoszenie.
+Zaakceptowanie transakcji oznacza wybranie ogłoszenia (transakcji), zapłacenie ceny i otrzymanie przedmiotu. Poniższy kod pobiera transakcję. Sprawdza, czy jest dostępna. Płaci za przedmiot. Odbiera przedmiot. Aktualizuje ogłoszenie.
 
 ```solidity
 function executeTrade(uint256 _trade)
@@ -113,9 +113,9 @@ function executeTrade(uint256 _trade)
 }
 ```
 
-Mamy też możliwość wycofania się sprzedawców z transakcji zanim kupujący je zaakceptuje. W niektórych modelach ogłoszenia byłyby aktywne przez pewien okres czasu, zanim wygasną. Twój wybór, w zależności od projektu Twojego rynku.
+Na koniec mamy opcję dla sprzedawców, aby wycofać się z transakcji, zanim kupujący ją zaakceptuje. W niektórych modelach ogłoszenia byłyby aktywne przez pewien czas, zanim wygasną. Wybór należy do Ciebie, w zależności od projektu Twojego rynku.
 
-Kod jest bardzo podobny do kodu użytego do realizacji transakcji, tylko, że nie ma wymiany walut i przedmiot wraca na tablicę ogłoszeniową.
+Kod jest bardzo podobny do tego używanego do realizacji transakcji, z tą różnicą, że żadna waluta nie zmienia właściciela, a przedmiot wraca do osoby publikującej ogłoszenie.
 
 ```solidity
 function cancelTrade(uint256 _trade)
@@ -124,23 +124,23 @@ function cancelTrade(uint256 _trade)
   Trade memory trade = trades[_trade];
   require(
     msg.sender == trade.poster,
-    "Ogłoszenie może być anulowane tylko przez wystawiającego."
+    "Trade can be cancelled only by poster."
   );
-  require(trade.status == "Open", "Ogłoszenie nie jest otwarte.");
+  require(trade.status == "Open", "Trade is not Open.");
   itemToken.transferFrom(address(this), trade.poster, trade.item);
   trades[_trade].status = "Cancelled";
   emit TradeStatusChange(_trade, "Cancelled");
 }
 ```
 
-To już wszystko. Dotrwałeś do końca implementacji. To zaskakujące, jak kompaktowe są niektóre pojęcia biznesowe wyrażane w kodzie i jest to jeden z tych przypadków. Sprawdź pełny kontrakt [w naszym repozytorium](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
+To wszystko. Dotarłeś do końca implementacji. To dość zaskakujące, jak zwięzłe są niektóre koncepcje biznesowe, gdy wyrazi się je w kodzie, a to jest jeden z takich przypadków. Sprawdź kompletny kontrakt [w naszym repozytorium](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
 
 ## Wnioski {#conclusion}
 
-Serwisy ogłoszeniowe to powszechna konfiguracja rynku, która intensywnie rosła wraz z Internetem, stając się niezwykle popularnym modelem biznesowym z kilkoma monopolistycznymi zwycięzcami.
+Tablice ogłoszeń to powszechna konfiguracja rynku, która masowo się przeskalowała wraz z internetem, stając się niezwykle popularnym modelem biznesowym z kilkoma monopolistycznymi zwycięzcami.
 
-Serwisy ogłoszeniowe stały się również łatwym narzędziem do replikacji w środowisku blockchain, z bardzo specyficznymi funkcjami, które umożliwią rzucenie wyzwania istniejącym gigantom.
+Tablice ogłoszeń są również łatwym narzędziem do zreplikowania w środowisku blockchain, z bardzo specyficznymi funkcjami, które umożliwią rzucenie wyzwania istniejącym gigantom.
 
-W tym artykule podjąłem próbę połączenia realiów biznesowych serwisów ogłoszeniowych z implementacją technologii. Ta wiedza powinna pomóc w stworzeniu wizji i planu implementacji, jeśli masz odpowiednie umiejętności.
+W tym artykule podjąłem próbę połączenia rzeczywistości biznesowej tablicy ogłoszeń z implementacją technologiczną. Ta wiedza powinna pomóc Ci stworzyć wizję i plan wdrożenia, jeśli posiadasz odpowiednie umiejętności.
 
-Jak zawsze, jeśli chcecie zbudować coś fajnego i przydałaby Wam się jakaś rada, [skontaktujcie się ze mną](https://albertocuesta.es/)! Zawsze chętnie służę pomocą.
+Jak zawsze, jeśli zamierzasz zbudować coś fajnego i przydałaby Ci się porada, [daj mi znać](https://albertocuesta.es/)! Zawsze chętnie pomogę.

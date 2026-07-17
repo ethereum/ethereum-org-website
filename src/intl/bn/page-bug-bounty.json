@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "ইথেরিয়াম বাউন্টি প্রোগ্রাম পুরস্কার নির্ধারণের ক্ষেত্রে বেশ কয়েকটি চলক বিবেচনা করে। যোগ্যতা, স্কোর এবং পুরস্কার সম্পর্কিত সমস্ত শর্তাবলীর চূড়ান্ত সিদ্ধান্ত সম্পূর্ণভাবে ইথেরিয়াম ফাউন্ডেশন বাগ বাউন্টি প্যানেলের ওপর নির্ভর করে।",
   "page-upgrades-bug-bounty-leaderboard": "সম্পূর্ণ লিডারবোর্ড দেখুন",
   "page-upgrades-bug-bounty-leaderboard-list": "বাগ বাউন্টি লিডারবোর্ড",
+  "page-upgrades-bug-bounty-leaderboard-position": "{score, plural, one {# পয়েন্ট} other {# পয়েন্ট}} নিয়ে {rank} নম্বর স্থানে",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "(GitHub প্রোফাইল দেখুন)",
   "page-upgrades-bug-bounty-leaderboard-points": "পয়েন্ট",
   "page-upgrades-bug-bounty-ledger-desc": "ইথেরিয়াম স্পেসিফিকেশনগুলো এক্সিকিউশন লেয়ার এবং কনসেনসাস লেয়ার-এর ডিজাইনের যৌক্তিকতা বিস্তারিতভাবে বর্ণনা করে।",
   "page-upgrades-bug-bounty-ledger-title": "স্পেসিফিকেশন বাগ",

@@ -1,0 +1,582 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/ai-agents/index.md",
+  "generatedAt": "2026-06-18T20:28:49.982Z",
+  "rootHash": "8713cc758b67",
+  "tree": {
+    "contentHash": "be1e99973b31",
+    "anchorHash": "09eab399c0a9",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "3d9e43485a12",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:metaTitle": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "6852c396935c"
+      },
+      "frontmatter:description": {
+        "contentHash": "1e999aa950b8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "2290d7d70dea"
+      },
+      "frontmatter:sidebarDepth": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d4735e3a265e"
+      },
+      "frontmatter:image": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "5570ea2c51c2"
+      },
+      "frontmatter:alt": {
+        "contentHash": "708fa328b6d0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:summaryPoints": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:buttons": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:- content": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "6ec003c724a2"
+      },
+      "frontmatter:toId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d1aae8d77d79"
+      },
+      "frontmatter:isSecondary": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "fcbcf165908d"
+      },
+      "prose:0": {
+        "contentHash": "6eaefc16d922",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-ai-agents": {
+        "contentHash": "3e0fc3c5a22b",
+        "anchorHash": "8024eeaafd4b",
+        "labelHash": "3961d0779551",
+        "children": {
+          "_label": {
+            "contentHash": "3961d0779551",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "2c363b5e635f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "how-ai-agents-work-with-blockchains": {
+            "contentHash": "4a433c287d42",
+            "anchorHash": "10a599e4cf55",
+            "labelHash": "84beb123f791",
+            "children": {
+              "_label": {
+                "contentHash": "84beb123f791",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "4542d32d064c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:2": {
+                "contentHash": "b49c7b3a5836",
+                "anchorHash": "8700605de727",
+                "children": {
+                  "component:0": {
+                    "contentHash": "5fcf97dd750c",
+                    "anchorHash": "da2aee119d18",
+                    "children": {
+                      "attr:title": {
+                        "contentHash": "df04b6cb16c7",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "attr:description": {
+                        "contentHash": "048943163eca",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "attr:emoji": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "e64b0c60e49f"
+                      }
+                    },
+                    "childrenOrder": [
+                      "attr:title",
+                      "attr:description",
+                      "attr:emoji"
+                    ]
+                  },
+                  "component:1": {
+                    "contentHash": "9978b68d284f",
+                    "anchorHash": "611101bcdfd9",
+                    "children": {
+                      "attr:title": {
+                        "contentHash": "99136eeef764",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "attr:description": {
+                        "contentHash": "2cee98f775de",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "attr:emoji": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "c4b4332a65af"
+                      }
+                    },
+                    "childrenOrder": [
+                      "attr:title",
+                      "attr:description",
+                      "attr:emoji"
+                    ]
+                  },
+                  "component:2": {
+                    "contentHash": "60d767cc88a9",
+                    "anchorHash": "fa67c1fef5f0",
+                    "children": {
+                      "attr:title": {
+                        "contentHash": "31fecaec3b8d",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "attr:description": {
+                        "contentHash": "89eeb4ab6f63",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "attr:emoji": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "dfe7a8cc7286"
+                      }
+                    },
+                    "childrenOrder": [
+                      "attr:title",
+                      "attr:description",
+                      "attr:emoji"
+                    ]
+                  }
+                },
+                "childrenOrder": [
+                  "component:0",
+                  "component:1",
+                  "component:2"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "component:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "how-ai-agents-work-with-blockchains"
+        ]
+      },
+      "verifiable-ai": {
+        "contentHash": "a2202de6d649",
+        "anchorHash": "19f767cd73bc",
+        "labelHash": "bb209dafe1cc",
+        "children": {
+          "_label": {
+            "contentHash": "bb209dafe1cc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "9ecff4ed844d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "verifiable-inference": {
+            "contentHash": "eda41fee670a",
+            "anchorHash": "0e0bac68ba7a",
+            "labelHash": "e6d2dadc9dfa",
+            "children": {
+              "_label": {
+                "contentHash": "e6d2dadc9dfa",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "b0fcede27322",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "2ef01eb64480",
+                "anchorHash": "62ae43a1d52b"
+              },
+              "prose:3": {
+                "contentHash": "901bf99ecd26",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "d4111adf97a0",
+                "anchorHash": "f15cf067dfbf"
+              },
+              "prose:4": {
+                "contentHash": "41403c034a0b",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "verifiable-inference"
+        ]
+      },
+      "x402": {
+        "contentHash": "e5bfba2ac50a",
+        "anchorHash": "13bf943f6122",
+        "labelHash": "9a8dcd69d791",
+        "children": {
+          "_label": {
+            "contentHash": "9a8dcd69d791",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "b344d80e24a3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "e1bc792cbfc8",
+            "anchorHash": "14f7b045d2c0"
+          },
+          "prose:2": {
+            "contentHash": "858d935ff039",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "agentic-finance-security": {
+            "contentHash": "137b19bd30c4",
+            "anchorHash": "5871fd93d6be",
+            "labelHash": "f651e92cdf1a",
+            "children": {
+              "_label": {
+                "contentHash": "f651e92cdf1a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "7c2f01375cb2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "da28fc1291f5",
+                "anchorHash": "0bc8df50fb6b"
+              },
+              "prose:2": {
+                "contentHash": "c8a282147332",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "erc-8004": {
+            "contentHash": "72db228744be",
+            "anchorHash": "958275c8703f",
+            "labelHash": "f80e8dbc714b",
+            "children": {
+              "_label": {
+                "contentHash": "f80e8dbc714b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "db01359ae5cb",
+                "anchorHash": "03b87348436c"
+              },
+              "prose:1": {
+                "contentHash": "81452e59e80d",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "link:0",
+              "prose:1"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2",
+          "agentic-finance-security",
+          "erc-8004"
+        ]
+      },
+      "ai-agents-on-ethereum": {
+        "contentHash": "90a7e6928300",
+        "anchorHash": "b662f07e4b76",
+        "labelHash": "e633afd52950",
+        "children": {
+          "_label": {
+            "contentHash": "e633afd52950",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "156e19e72363",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "85a3eed1d531",
+            "children": {
+              "attr:list": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "305a6aeb4aba"
+              }
+            }
+          },
+          "component:4": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "0bc2933c35ec",
+            "children": {
+              "attr:slug": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "5283c535c4a7"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2",
+          "prose:0",
+          "component:4"
+        ]
+      },
+      "agent-controlled-wallets": {
+        "contentHash": "a2d3ca50a2fe",
+        "anchorHash": "c8ae6140e72f",
+        "labelHash": "ac25f25853b8",
+        "children": {
+          "_label": {
+            "contentHash": "ac25f25853b8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "907c62b5f9cc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "2a9e5d50f0e8",
+            "anchorHash": "520bb824cf4d"
+          },
+          "prose:3": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "b38166c62030",
+            "anchorHash": "24a46b1b8713"
+          },
+          "prose:4": {
+            "contentHash": "039eec55c827",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:6": {
+            "contentHash": "a475e9a5a24b",
+            "anchorHash": "f478cae2d2e1",
+            "children": {
+              "attr:variant": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "4bd9354bb652"
+              },
+              "component:0": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "a86755f4507d",
+                "children": {
+                  "attr:text": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "8aa6471e16db"
+                  }
+                }
+              },
+              "component:1": {
+                "contentHash": "6cda83fe3f3e",
+                "anchorHash": "ab686fbd763c",
+                "children": {
+                  "html-tag:0": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:2": {
+                    "contentHash": "ad813b277a8a",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "html-tag:1": {
+                    "contentHash": "d1478d45b04f",
+                    "anchorHash": "af2846cf76a6"
+                  }
+                },
+                "childrenOrder": [
+                  "html-tag:0",
+                  "prose:2",
+                  "html-tag:1"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "attr:variant",
+              "component:0",
+              "component:1"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4",
+          "component:6"
+        ]
+      },
+      "control-your-wallet-using-chat-commands": {
+        "contentHash": "ca5c3c86a5ec",
+        "anchorHash": "179190a76cad",
+        "labelHash": "f0e85fcfe335",
+        "children": {
+          "_label": {
+            "contentHash": "f0e85fcfe335",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "0e52e5606cde",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "09e5334f2044",
+            "children": {
+              "attr:list": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "31e06f7d89fe"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2"
+        ]
+      },
+      "ai-agents-vs-ai-bots": {
+        "contentHash": "da9e89231716",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "08f609aa2a4f",
+        "children": {
+          "_label": {
+            "contentHash": "08f609aa2a4f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "e43141f59c9d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "dive-deeper": {
+        "contentHash": "fb3c2f4b6ca6",
+        "anchorHash": "0bac983773bf",
+        "labelHash": "be8d9ea86cf3",
+        "children": {
+          "_label": {
+            "contentHash": "be8d9ea86cf3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:1": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "a09aa30e321b",
+            "children": {
+              "attr:list": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "b2fa5c39d880"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "component:1"
+        ]
+      },
+      "you-can-build-your-own-ai-agent": {
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "7e5673c0cce6",
+        "children": {
+          "_label": {
+            "contentHash": "7e5673c0cce6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "component:1"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:metaTitle",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:template",
+      "frontmatter:sidebarDepth",
+      "frontmatter:image",
+      "frontmatter:alt",
+      "frontmatter:summaryPoints",
+      "frontmatter:buttons",
+      "frontmatter:- content",
+      "frontmatter:toId",
+      "frontmatter:- content",
+      "frontmatter:toId",
+      "frontmatter:isSecondary",
+      "prose:0",
+      "what-are-ai-agents",
+      "verifiable-ai",
+      "x402",
+      "ai-agents-on-ethereum",
+      "agent-controlled-wallets",
+      "control-your-wallet-using-chat-commands",
+      "ai-agents-vs-ai-bots",
+      "dive-deeper",
+      "you-can-build-your-own-ai-agent"
+    ]
+  },
+  "sourceCommitSha": "aaeb4f67fd616782cfcbaceb7a776b26c0578df4"
+}

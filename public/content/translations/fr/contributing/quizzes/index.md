@@ -1,62 +1,61 @@
 ---
-title: Ajouter un quiz
-description: La politique que nous appliquons pour ajouter des quiz sur ethereum.org
+title: Quiz
+metaTitle: Ajouter un quiz
+description: La politique que nous utilisons lors de l'ajout de quiz sur ethereum.org
 lang: fr
 ---
 
-# Questionnaires {#quizzes}
+Les quiz sont l'occasion pour les utilisateurs de se tester afin de voir s'ils ont compris le contenu de la page qu'ils viennent de lire. Les questions doivent uniquement être basées sur le contenu fourni sur la page et ne doivent pas porter sur des informations qui n'y sont pas mentionnées.
 
-Les quiz permettent aux utilisateurs de vérifier s'ils ont bien compris le contenu de la page qu'ils viennent de lire. Les questions doivent être basées sur le contenu de la page et ne doivent pas porter sur des informations qui n'y sont pas mentionnées.
+Les questions sont structurées comme suit : l'énoncé de la question, 1 bonne réponse avec une explication de la raison pour laquelle elle est correcte, 3 mauvaises réponses avec une explication de la raison pour laquelle elles sont incorrectes.
 
-Les questions sont structurées comme suit. La question invite à donner 1 réponse correcte avec une explication de la raison pour laquelle elle est correcte, 3 réponses incorrectes avec une explication des raisons pour lesquelles elles sont incorrectes.
+Voici quelques exemples de quiz actuels :
 
-Vous trouverez ici quelques exemples de quiz actuels :
-
-- [Couche 2](/layer-2)
+- [Couche 2 (l2)](/layer-2)
 - [NFT](/nft/)
-- [Qu'est-ce qu'Ethereum ?](/what-is-ethereum/)
-- [Qu'est-ce que l'ETH ?](/what-is-ether/)
+- [Qu'est-ce qu'Ethereum ?](/what-is-ethereum/)
+- [Qu'est-ce que l'ETH ?](/what-is-ether/)
 
-## Ajouter un quiz d'apprentissage
+## Ajouter un quiz d'apprentissage {#adding-a-learn-quiz}
 
-S'il existe une page pour laquelle aucun questionnaire d'apprentissage n'a été créé, veuillez [ouvrir un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) à ce sujet.
+S'il y a une page pour laquelle aucun quiz d'apprentissage n'a été créé, veuillez [ouvrir une issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) à ce sujet.
 
 Veuillez fournir les informations suivantes :
 
 - La page sur laquelle vous souhaitez ajouter un quiz
 - 5 questions avec les informations suivantes :
   - La section de la page sur laquelle la question est basée
-  - La question
-  - 1 réponse correcte avec une explication de la raison pour laquelle elle est correcte
-  - 3 réponses incorrectes, chacune accompagnée d'une explication de la raison pour laquelle elle est incorrecte
+  - L'énoncé de la question
+  - 1 bonne réponse avec une explication de la raison pour laquelle elle est correcte
+  - 3 mauvaises réponses, chacune avec une explication de la raison pour laquelle elle est incorrecte
 
-## Ajouter une question de quiz
+## Ajouter une question de quiz {#adding-a-quiz-question}
 
-Si vous souhaitez ajouter une question à la banque de questions pour un questionnaire, veuillez [ouvrir un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) et fournir les informations suivantes :
+S'il y a une question que vous souhaitez ajouter à la banque de questions d'un quiz, veuillez [ouvrir une issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) et fournir les informations suivantes :
 
 - La page sur laquelle vous souhaitez ajouter une question de quiz
-- Pour chaque question, fournir les informations suivantes :
+- Pour chaque question, fournissez les informations suivantes :
   - La section de la page sur laquelle la question est basée
-  - La question
-  - 1 réponse correcte avec une explication de la raison pour laquelle elle est correcte
-  - 3 réponses incorrectes, chacune accompagnée d'une explication de la raison pour laquelle elle est incorrecte
+  - L'énoncé de la question
+  - 1 bonne réponse avec une explication de la raison pour laquelle elle est correcte
+  - 3 mauvaises réponses, chacune avec une explication de la raison pour laquelle elle est incorrecte
 
-## Mettre à jour une question de quiz
+## Mettre à jour une question de quiz {#updating-a-quiz-question}
 
-Si vous souhaitez mettre à jour une question dans la banque de questions d'un questionnaire, veuillez [ouvrir un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) et fournir les informations suivantes :
+S'il y a une question que vous souhaitez mettre à jour dans la banque de questions d'un quiz, veuillez [ouvrir une issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) et fournir les informations suivantes :
 
 - La page sur laquelle vous souhaitez mettre à jour une question de quiz
-- Pour chaque question modifiée, veuillez fournir les informations suivantes :
+- Pour chaque question mise à jour, fournissez les informations suivantes :
   - La section de la page sur laquelle la question est basée
-  - Formulation de la question que vous souhaitez mettre à jour
-  - Mettre à jour la formulation de la question
-  - 1 réponse correcte avec une explication de la raison pour laquelle elle est correcte
-  - 3 réponses incorrectes, chacune accompagnée d'une explication de la raison pour laquelle elle est incorrecte
+  - L'énoncé de la question que vous souhaitez mettre à jour
+  - Le nouvel énoncé de la question
+  - 1 bonne réponse avec une explication de la raison pour laquelle elle est correcte
+  - 3 mauvaises réponses, chacune avec une explication de la raison pour laquelle elle est incorrecte
 
-## Supprimer une question de quiz
+## Supprimer une question de quiz {#removing-a-quiz-question}
 
-Si le contenu d'une question n'existe plus sur la page et qu'elle doit être supprimée, veuillez [ouvrir un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) pour supprimer la question et fournir les informations suivantes :
+Si le contenu d'une question n'existe plus sur la page et qu'elle doit être supprimée, veuillez [ouvrir une issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) pour supprimer la question et fournir les informations suivantes :
 
 - La page sur laquelle vous souhaitez supprimer une question de quiz
 - La question que vous souhaitez supprimer
-- Si nécessaire, l'explication de la raison pour laquelle la question doit être supprimée
+- Une explication, si nécessaire, de la raison pour laquelle la question doit être supprimée

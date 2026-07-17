@@ -1,0 +1,696 @@
+{
+  "version": 1,
+  "locale": "id",
+  "translatedAt": "2026-06-16T15:07:05.961Z",
+  "englishManifestHash": "8b16ef409c16",
+  "placeholderOrder": [
+    "HTML-TAG-0",
+    "HTML-TAG-1",
+    "HTML-TAG-2",
+    "HTML-TAG-3",
+    "HTML-TAG-4",
+    "HTML-TAG-5",
+    "HTML-TAG-6",
+    "HTML-TAG-7",
+    "HTML-TAG-8",
+    "HTML-TAG-9",
+    "HTML-TAG-10",
+    "HTML-TAG-11",
+    "HTML-TAG-12",
+    "HTML-TAG-13",
+    "HTML-TAG-14",
+    "HTML-TAG-15",
+    "HTML-TAG-16",
+    "HTML-TAG-17",
+    "HTML-TAG-18",
+    "HTML-TAG-19",
+    "HTML-TAG-20",
+    "HTML-TAG-21",
+    "HTML-TAG-22",
+    "HTML-TAG-23",
+    "HTML-TAG-24",
+    "HTML-TAG-25",
+    "HTML-TAG-26",
+    "HTML-TAG-27",
+    "HTML-TAG-28",
+    "HTML-TAG-29",
+    "HTML-TAG-30",
+    "HTML-TAG-31",
+    "HTML-TAG-32",
+    "HTML-TAG-33",
+    "HTML-TAG-34",
+    "HTML-TAG-35",
+    "HTML-TAG-36",
+    "HTML-TAG-37",
+    "HTML-TAG-38",
+    "HTML-TAG-39",
+    "HTML-TAG-40",
+    "HTML-TAG-41",
+    "HTML-TAG-42",
+    "HTML-TAG-43",
+    "HTML-TAG-44",
+    "HTML-TAG-45",
+    "HTML-TAG-46",
+    "HTML-TAG-47",
+    "HTML-TAG-48",
+    "HTML-TAG-49",
+    "HTML-TAG-50",
+    "HTML-TAG-51",
+    "HTML-TAG-52",
+    "HTML-TAG-53",
+    "HTML-TAG-54",
+    "HTML-TAG-55",
+    "HTML-TAG-56",
+    "HTML-TAG-57",
+    "HTML-TAG-58",
+    "HTML-TAG-59",
+    "HTML-TAG-60",
+    "HTML-TAG-61",
+    "HTML-TAG-62",
+    "HTML-TAG-63",
+    "HTML-TAG-64",
+    "HTML-TAG-65",
+    "HTML-TAG-66",
+    "HTML-TAG-67",
+    "HTML-TAG-68",
+    "HTML-TAG-69",
+    "HTML-TAG-70",
+    "HTML-TAG-71",
+    "HTML-TAG-72",
+    "HTML-TAG-73",
+    "HTML-TAG-74",
+    "HTML-TAG-75",
+    "HTML-TAG-76",
+    "HTML-TAG-77",
+    "HTML-TAG-78",
+    "HTML-TAG-79",
+    "HTML-TAG-80",
+    "HTML-TAG-81",
+    "HTML-TAG-82",
+    "HTML-TAG-83",
+    "HTML-TAG-84"
+  ],
+  "placeholderMap": {
+    "HTML-TAG-0": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#node"
+      }
+    },
+    "HTML-TAG-1": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#transaction"
+      }
+    },
+    "HTML-TAG-2": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "ether"
+      }
+    },
+    "HTML-TAG-3": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/developers/docs/consensus-mechanisms/pos/attestations/"
+      }
+    },
+    "HTML-TAG-4": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/developers/docs/blocks/"
+      }
+    },
+    "HTML-TAG-5": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#pos"
+      }
+    },
+    "HTML-TAG-6": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#execution-client"
+      }
+    },
+    "HTML-TAG-7": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#validator"
+      }
+    },
+    "HTML-TAG-8": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#consensus-client"
+      }
+    },
+    "HTML-TAG-9": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/dao/"
+      }
+    },
+    "HTML-TAG-10": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/apps/"
+      }
+    },
+    "HTML-TAG-11": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/defi/"
+      }
+    },
+    "HTML-TAG-12": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#pow"
+      }
+    },
+    "HTML-TAG-13": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#difficulty"
+      }
+    },
+    "HTML-TAG-14": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#pos"
+      }
+    },
+    "HTML-TAG-15": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#hard-fork"
+      }
+    },
+    "HTML-TAG-16": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/roadmap/merge"
+      }
+    },
+    "HTML-TAG-17": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#address"
+      }
+    },
+    "HTML-TAG-18": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#transaction"
+      }
+    },
+    "HTML-TAG-19": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#slot"
+      }
+    },
+    "HTML-TAG-20": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#committee"
+      }
+    },
+    "HTML-TAG-21": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#finality"
+      }
+    },
+    "HTML-TAG-22": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/developers/docs/consensus-mechanisms/pos/#how-does-validation-work"
+      }
+    },
+    "HTML-TAG-23": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/wallets/"
+      }
+    },
+    "HTML-TAG-24": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/what-is-ether/"
+      }
+    },
+    "HTML-TAG-25": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#evm"
+      }
+    },
+    "HTML-TAG-26": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#dapp"
+      }
+    },
+    "HTML-TAG-27": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/developers/docs/smart-contracts/anatomy/#events-and-logs"
+      }
+    },
+    "HTML-TAG-28": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#evm"
+      }
+    },
+    "HTML-TAG-29": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#execution-client"
+      }
+    },
+    "HTML-TAG-30": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#layer-2"
+      }
+    },
+    "HTML-TAG-31": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#rollups"
+      }
+    },
+    "HTML-TAG-32": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#rollups"
+      }
+    },
+    "HTML-TAG-33": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#validity-proof"
+      }
+    },
+    "HTML-TAG-34": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/gas/"
+      }
+    },
+    "HTML-TAG-35": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#blockchain"
+      }
+    },
+    "HTML-TAG-36": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#ether"
+      }
+    },
+    "HTML-TAG-37": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#gas"
+      }
+    },
+    "HTML-TAG-38": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#wei"
+      }
+    },
+    "HTML-TAG-39": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#keccak-256"
+      }
+    },
+    "HTML-TAG-40": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#blockchain"
+      }
+    },
+    "HTML-TAG-41": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/layer-2/"
+      }
+    },
+    "HTML-TAG-42": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#blockchain"
+      }
+    },
+    "HTML-TAG-43": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/nft/"
+      }
+    },
+    "HTML-TAG-44": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "HTML-TAG-45": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#miner"
+      }
+    },
+    "HTML-TAG-46": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#block"
+      }
+    },
+    "HTML-TAG-47": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#pow"
+      }
+    },
+    "HTML-TAG-48": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#pos"
+      }
+    },
+    "HTML-TAG-49": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/developers/docs/scaling/optimistic-rollups/"
+      }
+    },
+    "HTML-TAG-50": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#consensus"
+      }
+    },
+    "HTML-TAG-51": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "HTML-TAG-52": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#layer-2"
+      }
+    },
+    "HTML-TAG-53": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#mainnet"
+      }
+    },
+    "HTML-TAG-54": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#gas"
+      }
+    },
+    "HTML-TAG-55": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#transaction"
+      }
+    },
+    "HTML-TAG-56": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/developers/docs/scaling/#rollups"
+      }
+    },
+    "HTML-TAG-57": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/smart-contracts/"
+      }
+    },
+    "HTML-TAG-58": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/stablecoins/"
+      }
+    },
+    "HTML-TAG-59": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#ether"
+      }
+    },
+    "HTML-TAG-60": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#network"
+      }
+    },
+    "HTML-TAG-61": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#transaction"
+      }
+    },
+    "HTML-TAG-62": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#block"
+      }
+    },
+    "HTML-TAG-63": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#pos"
+      }
+    },
+    "HTML-TAG-64": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#validator"
+      }
+    },
+    "HTML-TAG-65": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/staking/"
+      }
+    },
+    "HTML-TAG-66": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#block-reward"
+      }
+    },
+    "HTML-TAG-67": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/staking/pools/"
+      }
+    },
+    "HTML-TAG-68": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#pos"
+      }
+    },
+    "HTML-TAG-69": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#wallet"
+      }
+    },
+    "HTML-TAG-70": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#dapp"
+      }
+    },
+    "HTML-TAG-71": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#validator"
+      }
+    },
+    "HTML-TAG-72": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#gas"
+      }
+    },
+    "HTML-TAG-73": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#layer-2"
+      }
+    },
+    "HTML-TAG-74": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#node"
+      }
+    },
+    "HTML-TAG-75": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#pos"
+      }
+    },
+    "HTML-TAG-76": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#staking"
+      }
+    },
+    "HTML-TAG-77": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/staking/"
+      }
+    },
+    "HTML-TAG-78": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#layer-2"
+      }
+    },
+    "HTML-TAG-79": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#rollups"
+      }
+    },
+    "HTML-TAG-80": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#fraud-proof"
+      }
+    },
+    "HTML-TAG-81": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/developers/docs/scaling/zk-rollups/"
+      }
+    },
+    "HTML-TAG-82": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/wallets/"
+      }
+    },
+    "HTML-TAG-83": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/web3/"
+      }
+    },
+    "HTML-TAG-84": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/developers/docs/scaling/zk-rollups/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T15:07:05.961Z",
+      "status": "success"
+    }
+  }
+}

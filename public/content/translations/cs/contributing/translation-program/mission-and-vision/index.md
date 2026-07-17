@@ -1,25 +1,23 @@
 ---
-title: "Poslání a vize"
+title: Poslání a vize
 lang: cs
-description: "Poslání a vize překladatelského programu ethereum.org"
+description: Poslání a vize překladatelského programu ethereum.org
 ---
 
-# Mise a vize {#mission-and-vision}
+Komunita Etherea se snaží být globální a inkluzivní, přesto je velká část jejího obsahu určena pouze anglicky mluvícím uživatelům, čímž opomíjí 6 miliard lidí na světě, kteří anglicky nemluví. Aby mohl web ethereum.org fungovat jako portál do Etherea pro celosvětovou komunitu, věříme, že je nezbytné poskytovat neanglicky mluvícím uživatelům obsah o Ethereu v jejich rodných jazycích.
 
-Komunita Etherea se snaží být globální a inkluzivní, přesto však velká část jejího obsahu oslovuje pouze anglicky mluvící, čímž vylučuje 6 miliard lidí, kteří anglicky nemluví. Aby mohl ethereum.org sloužit jako portál do světa Etherea pro globální komunitu, věříme, že poskytování obsahu o Ethereu v rodných jazycích neanglicky mluvících uživatelů je zásadní.
-
-Cílem překladatelského programu ethereum.org je zpřístupnit Ethereum všem tím, že překládáme ethereum.org a další obsah Etherea do co nejvíce jazyků.
+Překladatelský program ethereum.org si klade za cíl zpřístupnit Ethereum všem tím, že překládá ethereum.org a další obsah o Ethereu do co nejvíce jazyků.
 
 ## Naše poslání {#our-mission}
 
-- Poskytnout přeložené verze webu, aby si návštěvníci z celého světa mohli přečíst o Ethereu ve svém rodném jazyce
-- Usnadnit připojení dalších členů do globální komunity Etherea
-- Umožnit dostupnější a inkluzivnější sdílení informací a znalostí o Ethereu
-- Motivovat členy komunity, aby do Etherea přispěli překlady a zanechali svou stopu v ekosystému
-- Identifikovat, spojit se a poskytnout vedení vášnivým přispěvatelům, kteří se chtějí zapojit do ekosystému
+- Poskytovat přeložené verze webových stránek, aby se návštěvníci z celého světa mohli učit o Ethereu ve svém rodném jazyce
+- Usnadnit onboarding dalších členů do globální komunity Etherea
+- Umožnit přístupnější a inkluzivnější sdílení informací a znalostí o Ethereu
+- Umožnit členům komunity přispívat překlady pro Ethereum a zanechat tak svou stopu v ekosystému
+- Identifikovat, propojovat a poskytovat vedení nadšeným přispěvatelům, kteří se chtějí zapojit do ekosystému
 
 ## Naše vize {#our-vision}
 
-- Přeložit důležitý obsah pro členy komunity Etherea z co nejvíce zemí a částí světa
-- Podpořit sdílení znalostí napříč jazyky, aby vznikla lépe informovaná a vzdělaná komunita Etherea
-- Zvýšit inkluzivitu a přístupnost Etherea odstraněním jazykových bariér, které brání lidem, kteří nemluví anglicky, připojit se k ekosystému
+- Překládat základní obsah pro členy komunity Etherea z co největšího počtu zemí a částí světa
+- Podporovat sdílení znalostí napříč jazyky s cílem vytvořit lépe informovanou a vzdělanou komunitu Etherea
+- Zvýšit inkluzivitu a přístupnost Etherea odstraněním jazykových bariér, které brání neanglicky mluvícím uživatelům připojit se k ekosystému

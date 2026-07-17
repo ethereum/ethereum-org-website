@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "locale": "ja",
+  "translatedAt": "2026-06-08T07:49:22.214Z",
+  "englishManifestHash": "a447e9d5923d",
+  "placeholderOrder": [
+    "LINK-0da87f",
+    "LINK-fc5b69",
+    "LINK-c2821f"
+  ],
+  "placeholderMap": {
+    "LINK-0da87f": {
+      "type": "link",
+      "values": {
+        "url": "/terms-of-use/"
+      }
+    },
+    "LINK-fc5b69": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title="
+      }
+    },
+    "LINK-c2821f": {
+      "type": "link",
+      "values": {
+        "url": "mailto:website@ethereum.org"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T07:49:22.214Z",
+      "status": "success"
+    }
+  }
+}

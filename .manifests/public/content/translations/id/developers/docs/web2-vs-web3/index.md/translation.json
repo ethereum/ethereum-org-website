@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "locale": "id",
+  "translatedAt": "2026-06-16T23:22:00.445Z",
+  "englishManifestHash": "9cb00e6692ba",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-e103e8",
+    "LINK-af2ee9",
+    "LINK-54e492",
+    "LINK-1cc896",
+    "LINK-165480",
+    "LINK-198034",
+    "LINK-2c7fee"
+  ],
+  "placeholderMap": {
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-e103e8": {
+      "type": "link",
+      "values": {
+        "url": "/web3/"
+      }
+    },
+    "LINK-af2ee9": {
+      "type": "link",
+      "values": {
+        "url": "/web3/"
+      }
+    },
+    "LINK-54e492": {
+      "type": "link",
+      "values": {
+        "url": "https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application"
+      }
+    },
+    "LINK-1cc896": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274"
+      }
+    },
+    "LINK-165480": {
+      "type": "link",
+      "values": {
+        "url": "https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e"
+      }
+    },
+    "LINK-198034": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/fabric-ventures/what-is-web-3-0-why-it-matters-934eb07f3d2b"
+      }
+    },
+    "LINK-2c7fee": {
+      "type": "link",
+      "values": {
+        "url": "https://gavofyork.medium.com/why-we-need-web-3-0-5da4f2bf95ab"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T23:22:00.445Z",
+      "status": "success"
+    }
+  }
+}

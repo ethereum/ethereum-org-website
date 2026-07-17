@@ -7,8 +7,7 @@ uploadDate: 2022-03-01
 duration: "0:11:14"
 educationLevel: beginner
 topic:
-  - "ethereum"
-  - "intro"
+  - "how-ethereum-works"
 format: presentation
 author: Quezar
 breadcrumb: "Ethereum Basics"

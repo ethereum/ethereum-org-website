@@ -19,6 +19,14 @@ This doc focuses on the review-specific patterns (severity mapping, what to flag
 
 This is the determinism backbone. Reviewers don't argue terminology with the pipeline — both pipeline and reviewer defer to ETHGlossary. If a glossary entry looks wrong during review, flag it in the report; don't patch the locale to disagree with it.
 
+## Authority hierarchy — and what to do for items the glossary doesn't cover
+
+ETHGlossary is the source of truth for **term translations AND for transliteration/calque/keep-Latin guidance**. Apply it in this strict order; do not substitute your own instinct:
+
+1. **Term IS in ETHGlossary** → its per-term `script_rule` is the *only* authority for transliterate / calque / keep-latin / always-latin. Query it (`/filter` per file, or `/translations/{lang}/{termId}`). A deviation is CRITICAL.
+2. **Term is NOT in ETHGlossary** (author names, brand-new products, etc.) → apply the script-aware fallback in `known-patterns.md` §1: **transliterate** into non-Latin target scripts, **keep as-is** for Latin scripts.
+3. **Never infer a "default" `script_rule` for an unlisted term.** An absent entry means "use the fallback," **not** "keep Latin." Flagging a correctly-transliterated non-Latin author name (e.g. `te` "మారియో హావెల్" for "Mario Havel") as "should be Latin" is a **false positive** — the kind of fabricated critical that wastes reviewer time. When in doubt, query the API; if the term isn't there, the fallback decides, not you.
+
 ## How to query
 
 **Preferred — per-file `/filter`:**
@@ -26,7 +34,7 @@ This is the determinism backbone. Reviewers don't argue terminology with the pip
 ```bash
 curl -sf -X POST "$GLOSSARY_API_URL/filter" \
   -H "Content-Type: application/json" \
-  -d "$(jq -n --arg text "$ENGLISH_SOURCE" --arg lang "$LANG" '{text: $text, language: $lang}')"
+  -d "$(jq -n --arg content "$ENGLISH_SOURCE" --arg lang "$LANG" '{content: $content, language: $lang}')"
 ```
 
 Returns only the glossary terms that appear in the English source for the file being reviewed, with translations sorted by occurrence. Avoids pulling hundreds of irrelevant terms into review context.

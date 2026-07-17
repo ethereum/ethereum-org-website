@@ -1,0 +1,295 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/roadmap/account-abstraction/index.md",
+  "generatedAt": "2026-06-08T10:04:28.731Z",
+  "rootHash": "9ee6b13d994f",
+  "tree": {
+    "contentHash": "7ec44f7c203f",
+    "anchorHash": "354177be3af4",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "2ebcf10050c2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "a4093f76e7ae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:summaryPoints": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prose:5": {
+        "contentHash": "09d15c636bb3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "8a5edab28263"
+      },
+      "prose:6": {
+        "contentHash": "01df878ded09",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "4fecd01d6ab6",
+        "anchorHash": "34ed0b8095c0"
+      },
+      "prose:7": {
+        "contentHash": "66b7907ba737",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:2": {
+        "contentHash": "6c710c040d9f",
+        "anchorHash": "e925009bccf3"
+      },
+      "prose:8": {
+        "contentHash": "1f204cacf314",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:3": {
+        "contentHash": "400875517911",
+        "anchorHash": "0bc8df50fb6b"
+      },
+      "prose:9": {
+        "contentHash": "364598bbc469",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:4": {
+        "contentHash": "87bae064321b",
+        "anchorHash": "34ed0b8095c0"
+      },
+      "prose:10": {
+        "contentHash": "bb5262bbe2e9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "beyond-seed-phrases": {
+        "contentHash": "86e065ab387b",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "cc2038140e72",
+        "children": {
+          "_label": {
+            "contentHash": "cc2038140e72",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "2f75ac82718a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "better-user-experience": {
+        "contentHash": "71d3ac096c50",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "7e9c787bf519",
+        "children": {
+          "_label": {
+            "contentHash": "7e9c787bf519",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c7e4846fd74f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "how-will-aa-be-implemented": {
+        "contentHash": "872f13ffaf79",
+        "anchorHash": "e826c79cb148",
+        "labelHash": "9d9a0e725a43",
+        "children": {
+          "_label": {
+            "contentHash": "9d9a0e725a43",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "26226af53c40",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "eip-4337-account-abstraction-without-protocol-changes": {
+            "contentHash": "7185eb794544",
+            "anchorHash": "672dcea3e2ff",
+            "labelHash": "d057c6c319f3",
+            "children": {
+              "_label": {
+                "contentHash": "d057c6c319f3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "056b64dc1fad",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "85c1ba17af85"
+              },
+              "prose:2": {
+                "contentHash": "c8ab2667fdb0",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "inline-code:0",
+              "prose:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "eip-4337-account-abstraction-without-protocol-changes"
+        ]
+      },
+      "current-progress": {
+        "contentHash": "e2ac4d5ca1b2",
+        "anchorHash": "5a48ff8b2459",
+        "labelHash": "46814fcae9de",
+        "children": {
+          "_label": {
+            "contentHash": "46814fcae9de",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "acd830a892c6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "7f2da26f95e4",
+            "anchorHash": "7f8394054655"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "fd65092fc0cc",
+        "anchorHash": "a42259ef7868",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:7": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "2644a4798f7b",
+            "anchorHash": "16bf308e98b7"
+          },
+          "prose:8": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "4c6341c4476c",
+            "anchorHash": "0bc8df50fb6b"
+          },
+          "prose:9": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "ca8eb7a771f3",
+            "anchorHash": "e925009bccf3"
+          },
+          "prose:10": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "fa24d3465d40",
+            "anchorHash": "7f8394054655"
+          },
+          "prose:11": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "84648696f40a",
+            "anchorHash": "16cd38bae2ee"
+          },
+          "prose:12": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "15a1634cbf22",
+            "anchorHash": "b5645ddb70d9"
+          },
+          "prose:13": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "59a985a6b0bf",
+            "anchorHash": "da95d7abf196"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:7",
+          "link:0",
+          "prose:8",
+          "link:1",
+          "prose:9",
+          "link:2",
+          "prose:10",
+          "link:3",
+          "prose:11",
+          "link:4",
+          "prose:12",
+          "link:5",
+          "prose:13",
+          "link:6"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:summaryPoints",
+      "prose:5",
+      "link:0",
+      "prose:6",
+      "link:1",
+      "prose:7",
+      "link:2",
+      "prose:8",
+      "link:3",
+      "prose:9",
+      "link:4",
+      "prose:10",
+      "beyond-seed-phrases",
+      "better-user-experience",
+      "how-will-aa-be-implemented",
+      "current-progress",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

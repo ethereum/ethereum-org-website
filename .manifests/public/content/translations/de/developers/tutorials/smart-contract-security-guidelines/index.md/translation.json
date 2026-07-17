@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "locale": "de",
+  "translatedAt": "2026-06-17T00:55:19.751Z",
+  "englishManifestHash": "ce637bad7c3b",
+  "placeholderOrder": [
+    "LINK-5bfc57",
+    "LINK-b6fe05",
+    "LINK-98488a",
+    "LINK-804386",
+    "LINK-e5f42a",
+    "LINK-551661",
+    "LINK-85bd79",
+    "LINK-c2f93e",
+    "LINK-05947b",
+    "LINK-113599",
+    "LINK-487118",
+    "LINK-4c5deb",
+    "LINK-c9b84d",
+    "LINK-2254a0",
+    "LINK-b5b56c",
+    "LINK-663f50",
+    "LINK-30d625"
+  ],
+  "placeholderMap": {
+    "LINK-5bfc57": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/wiki/Printer-documentation"
+      }
+    },
+    "LINK-b6fe05": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/develop/natspec-format.html"
+      }
+    },
+    "LINK-98488a": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/"
+      }
+    },
+    "LINK-804386": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/"
+      }
+    },
+    "LINK-e5f42a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/wiki/Printer-documentation#inheritance-graph"
+      }
+    },
+    "LINK-551661": {
+      "type": "link",
+      "values": {
+        "url": "https://ethernaut.openzeppelin.com/"
+      }
+    },
+    "LINK-85bd79": {
+      "type": "link",
+      "values": {
+        "url": "https://capturetheether.com/"
+      }
+    },
+    "LINK-c2f93e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/not-so-smart-contracts/"
+      }
+    },
+    "LINK-05947b": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/"
+      }
+    },
+    "LINK-113599": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20"
+      }
+    },
+    "LINK-487118": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither"
+      }
+    },
+    "LINK-4c5deb": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/echidna"
+      }
+    },
+    "LINK-c9b84d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/trailofbits/manticore"
+      }
+    },
+    "LINK-2254a0": {
+      "type": "link",
+      "values": {
+        "url": "https://crytic.io/"
+      }
+    },
+    "LINK-b5b56c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33"
+      }
+    },
+    "LINK-663f50": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/blockchain-security-contacts"
+      }
+    },
+    "LINK-30d625": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.trailofbits.com/2018/11/27/10-rules-for-the-secure-use-of-cryptocurrency-hardware-wallets/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T00:55:19.751Z",
+      "status": "success"
+    }
+  }
+}

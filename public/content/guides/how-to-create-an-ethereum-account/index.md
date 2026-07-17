@@ -1,10 +1,9 @@
 ---
-title: How to "create" an Ethereum account
+title: How to create an Ethereum account
+metaTitle: How to "create" an Ethereum account
 description: A step-by-step guide on Ethereum account creation using a wallet.
 lang: en
 ---
-
-# How to create an Ethereum account {#how-to-create-an-ethereum-account}
 
 **Anyone can create an Ethereum account for free.** You just need to install a crypto wallet app. Wallets create and manage your Ethereum account. They can send transactions, check your balances and connect you to other apps built on Ethereum.
 

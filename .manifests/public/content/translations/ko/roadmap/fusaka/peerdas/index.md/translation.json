@@ -1,0 +1,219 @@
+{
+  "version": 1,
+  "locale": "ko",
+  "translatedAt": "2026-06-08T10:19:32.432Z",
+  "englishManifestHash": "a4ed439ae032",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-1e0f28",
+    "LINK-3a8042",
+    "LINK-bda8c4",
+    "LINK-ccd9cc",
+    "LINK-e2a33b",
+    "LINK-f551e1",
+    "LINK-799411",
+    "LINK-b44cfd",
+    "CODE-6ba9f2",
+    "LINK-076ea9",
+    "LINK-3cc62d",
+    "LINK-2a8824",
+    "LINK-b86555",
+    "LINK-cc6c5d",
+    "LINK-4c55a0",
+    "LINK-bf5a5e",
+    "LINK-d0d588",
+    "LINK-43e73f",
+    "IMAGE-2ddfc6",
+    "LINK-4eb51c",
+    "IMAGE-95cc1a",
+    "LINK-6a6a7d",
+    "LINK-acae62",
+    "LINK-20e9b4",
+    "LINK-e9818d",
+    "LINK-336bc8",
+    "LINK-71e8bd",
+    "LINK-ee3b3f"
+  ],
+  "placeholderMap": {
+    "CODE-6ba9f2": {
+      "type": "inline-code",
+      "values": {
+        "content": "calldata"
+      }
+    },
+    "IMAGE-2ddfc6": {
+      "type": "image",
+      "values": {
+        "path": "./polynomial.png"
+      }
+    },
+    "IMAGE-95cc1a": {
+      "type": "image",
+      "values": {
+        "path": "./subnets.png"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-1e0f28": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/danksharding/"
+      }
+    },
+    "LINK-3a8042": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/fusaka/"
+      }
+    },
+    "LINK-bda8c4": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-availability/"
+      }
+    },
+    "LINK-ccd9cc": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2025/08/22/protocol-update-002"
+      }
+    },
+    "LINK-e2a33b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-f551e1": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#layer-1"
+      }
+    },
+    "LINK-799411": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#layer-2"
+      }
+    },
+    "LINK-b44cfd": {
+      "type": "link",
+      "values": {
+        "url": "/glossary#rollups"
+      }
+    },
+    "LINK-076ea9": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/danksharding/"
+      }
+    },
+    "LINK-3cc62d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-availability/blockchain-data-storage-strategies/#eip-4844-blobs"
+      }
+    },
+    "LINK-bf5a5e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.speedtest.net/global-index"
+      }
+    },
+    "LINK-2a8824": {
+      "type": "link",
+      "values": {
+        "url": "https://www.speedtest.net/global-index/germany"
+      }
+    },
+    "LINK-b86555": {
+      "type": "link",
+      "values": {
+        "url": "https://www.speedtest.net/global-index/belgium"
+      }
+    },
+    "LINK-cc6c5d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.speedtest.net/global-index/australia"
+      }
+    },
+    "LINK-4c55a0": {
+      "type": "link",
+      "values": {
+        "url": "https://www.speedtest.net/global-index/united-states"
+      }
+    },
+    "LINK-d0d588": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-availability/"
+      }
+    },
+    "LINK-43e73f": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7594"
+      }
+    },
+    "LINK-4eb51c": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/abs/2207.11079"
+      }
+    },
+    "LINK-6a6a7d": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-magicians.org/t/blob-parameter-only-bpo-forks/22623"
+      }
+    },
+    "LINK-acae62": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7892"
+      }
+    },
+    "LINK-20e9b4": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/fulldas-towards-massive-scalability-with-32mb-blocks-and-beyond/19529"
+      }
+    },
+    "LINK-e9818d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=WOdpO1tH_Us"
+      }
+    },
+    "LINK-336bc8": {
+      "type": "link",
+      "values": {
+        "url": "https://eprint.iacr.org/2024/1362.pdf"
+      }
+    },
+    "LINK-71e8bd": {
+      "type": "link",
+      "values": {
+        "url": "https://eprint.iacr.org/2025/1683"
+      }
+    },
+    "LINK-ee3b3f": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/VitalikButerin/status/1970983281090085200"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T10:19:32.432Z",
+      "status": "success"
+    }
+  }
+}

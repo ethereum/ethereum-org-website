@@ -23,6 +23,7 @@ Estos programas apoyan el ecosistema general de Ethereum ofreciendo subvenciones
 - [Explorador de subvenciones del ESP](https://esp.ethereum.foundation/funded-projects) - _Directorio con función de búsqueda de más de 1000 proyectos apoyados por el Programa de soporte del ecosistema_
 - [Subvenciones académicas](https://esp.ethereum.foundation/academic-grants) - _Subvenciones para apoyar el trabajo académico relacionado con Ethereum_
 
+
 ## Agregadores y plataformas de listas de subvenciones {#grant-list-aggregators}
 
 Estos recursos recopilan y organizan diversas oportunidades de subvenciones en todo el ecosistema de Ethereum, lo que facilita el descubrimiento de oportunidades de financiamiento que se adapten a las necesidades de su proyecto. Los hemos organizado por perfil para ayudarle a comenzar a encontrar los recursos más relevantes según sus necesidades específicas de financiamiento.
@@ -61,6 +62,7 @@ Estos programas se centran en financiar proyectos que benefician a la comunidad 
 - [Giveth](https://giveth.io/) - _Plataforma de donaciones cripto que permite donaciones directas para proyectos benéficos sin tarifas adicionales_
 - [Artizen](https://artizen.fund/) - _Ayudando a los creadores a cofinanciar nuevos proyectos en la frontera del arte, la ciencia, la tecnología y la cultura_
 - [Quadratic Accelerator](https://qacc.giveth.io/) - _Programa acelerador de empresas emergentes que utiliza el financiamiento cuadrático para apoyar proyectos que benefician el bien público_
+
 
 ## Trabajar en Ethereum {#work-in-ethereum}
 

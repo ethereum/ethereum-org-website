@@ -5,15 +5,15 @@ lang: id
 incomplete: true
 ---
 
-Anda perlu mengompilasi kontrak Anda agar aplikasi web Anda dan Mesin Virtual Ethereum (EVM) dapat memahaminya.
+Anda perlu mengompilasi kontrak Anda agar aplikasi web Anda dan mesin virtual Ethereum (EVM) dapat memahaminya.
 
 ## Prasyarat {#prerequisites}
 
-Anda mungkin akan merasa terbantu jika membaca pengantar kami tentang [kontrak pintar](/developers/docs/smart-contracts/) dan [Mesin Virtual Ethereum](/developers/docs/evm/) sebelum membaca tentang kompilasi.
+Anda mungkin akan merasa terbantu jika membaca pengantar kami tentang [kontrak pintar](/developers/docs/smart-contracts/) dan [mesin virtual Ethereum](/developers/docs/evm/) sebelum membaca tentang kompilasi.
 
 ## EVM {#the-evm}
 
-Agar [EVM](/developers/docs/evm/) dapat menjalankan kontrak Anda, kontrak tersebut harus dalam bentuk **bytecode**. Kompilasi mengubah ini:
+Agar [EVM](/developers/docs/evm/) dapat menjalankan kontrak Anda, kontrak tersebut harus dalam bentuk **kode bita**. Kompilasi mengubah ini:
 
 ```solidity
 pragma solidity 0.4.24;
@@ -39,11 +39,11 @@ Ini disebut **opcode**. Opcode EVM adalah instruksi tingkat rendah yang dapat di
 
 ## Aplikasi web {#web-applications}
 
-Kompiler juga akan menghasilkan **Application Binary Interface (ABI)** yang Anda perlukan agar aplikasi Anda dapat memahami kontrak dan memanggil fungsi-fungsi kontrak tersebut.
+Kompilator juga akan menghasilkan **Application Binary Interface (ABI)** yang Anda butuhkan agar aplikasi Anda dapat memahami kontrak dan memanggil fungsi-fungsi kontrak tersebut.
 
-ABI adalah file JSON yang mendeskripsikan kontrak yang disebarkan dan fungsi-fungsi kontrak pintarnya. Ini membantu menjembatani kesenjangan antara web2 dan web3
+ABI adalah file JSON yang mendeskripsikan kontrak yang disebarkan dan fungsi-fungsi kontrak pintarnya. Ini membantu menjembatani kesenjangan antara Web2 dan Web3
 
-Sebuah [pustaka klien JavaScript](/developers/docs/apis/javascript/) akan membaca **ABI** agar Anda dapat memanggil kontrak pintar Anda di antarmuka aplikasi web Anda.
+Sebuah [Pustaka klien JavaScript](/developers/docs/apis/javascript/) akan membaca **ABI** agar Anda dapat memanggil kontrak pintar Anda di antarmuka aplikasi web Anda.
 
 Di bawah ini adalah ABI untuk kontrak token ERC-20. ERC-20 adalah token yang dapat Anda perdagangkan di Ethereum.
 
@@ -279,4 +279,4 @@ Di bawah ini adalah ABI untuk kontrak token ERC-20. ERC-20 adalah token yang dap
 ## Topik terkait {#related-topics}
 
 - [Pustaka klien JavaScript](/developers/docs/apis/javascript/)
-- [Mesin Virtual Ethereum](/developers/docs/evm/)
+- [Mesin virtual Ethereum](/developers/docs/evm/)

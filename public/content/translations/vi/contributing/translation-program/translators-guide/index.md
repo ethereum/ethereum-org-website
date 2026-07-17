@@ -1,152 +1,151 @@
 ---
-title: "Hướng dẫn dịch giả"
+title: Hướng dẫn văn phong dịch thuật ethereum.org
+metaTitle: Hướng dẫn dành cho người dịch
 lang: vi
-description: "Hướng dẫn và mẹo dành cho dịch giả ethereum.org"
+description: Các hướng dẫn và mẹo dành cho người dịch ethereum.org
 ---
 
-# Hướng dẫn phong cách dịch thuật của Ethereum.org {#style-guide}
+Hướng dẫn văn phong dịch thuật ethereum.org chứa một số nguyên tắc, hướng dẫn và mẹo quan trọng nhất dành cho người dịch, giúp chúng tôi bản địa hóa trang web.
 
-Hướng dẫn phong cách dịch thuật của ethereum.org bao gồm một số hướng dẫn, chỉ dẫn và mẹo quan trọng nhất dành cho dịch giả, giúp chúng tôi bản địa hóa trang web.
+Tài liệu này đóng vai trò là một hướng dẫn chung và không dành riêng cho bất kỳ ngôn ngữ nào.
 
-Tài liệu này là hướng dẫn tổng quát và không dành riêng cho bất kỳ ngôn ngữ nào.
-
-Nếu bạn có bất kỳ câu hỏi, đề xuất hay phản hồi nào, vui lòng liên hệ với chúng tôi tại translations@ethereum.org, gửi tin nhắn đến @ethdotorg trên Crowdin hoặc [tham gia Discord của chúng tôi](https://discord.gg/ethereum-org), nơi bạn có thể nhắn tin cho chúng tôi trong kênh #translations hoặc liên hệ với bất kỳ thành viên nào trong nhóm.
+Nếu bạn có bất kỳ câu hỏi, đề xuất hoặc phản hồi nào, vui lòng liên hệ với chúng tôi tại translations@ethereum.org, gửi thông điệp cho @ethdotorg trên Crowdin, hoặc [tham gia Discord của chúng tôi](https://discord.gg/ethereum-org), nơi bạn có thể nhắn tin cho chúng tôi trong kênh #translations hoặc liên hệ với bất kỳ thành viên nào trong nhóm.
 
 ## Sử dụng Crowdin {#using-crowdin}
 
-Bạn có thể tìm thấy các hướng dẫn cơ bản về cách tham gia dự án trong Crowdin và cách sử dụng trình soạn thảo trực tuyến Crowdin trên [trang Chương trình Dịch thuật](/contributing/translation-program/#how-to-translate).
+Bạn có thể tìm thấy các hướng dẫn cơ bản về cách tham gia dự án trên Crowdin và cách sử dụng trình chỉnh sửa trực tuyến Crowdin trên [trang Chương trình Dịch thuật](/contributing/translation-program/#how-to-translate).
 
-Nếu bạn muốn tìm hiểu thêm về Crowdin và sử dụng một số tính năng nâng cao của nó, [cơ sở kiến thức Crowdin](https://support.crowdin.com/online-editor/) chứa rất nhiều hướng dẫn chuyên sâu và tổng quan về tất cả các chức năng của Crowdin.
+Nếu bạn muốn tìm hiểu thêm về Crowdin và cách sử dụng một số tính năng nâng cao của nó, [cơ sở kiến thức Crowdin](https://support.crowdin.com/online-editor/) chứa rất nhiều hướng dẫn chuyên sâu và tổng quan về tất cả các chức năng của Crowdin.
 
 ## Nắm bắt bản chất của thông điệp {#capturing-the-essence}
 
-Khi dịch nội dung từ ethereum.org, hãy tránh dịch sát từng từ.
+Khi dịch nội dung ethereum.org, hãy tránh dịch sát nghĩa đen.
 
-Điều quan trọng là bản dịch phải truyền tải đúng ý nghĩa và tinh thần của thông điệp. Điều này có thể đồng nghĩa với việc diễn đạt lại một số cụm từ hoặc sử dụng bản dịch mang tính mô tả thay vì dịch sát từng từ.
+Điều quan trọng là các bản dịch phải nắm bắt được bản chất của thông điệp. Điều này có thể có nghĩa là diễn đạt lại một số cụm từ nhất định hoặc sử dụng các bản dịch mang tính mô tả thay vì dịch nội dung theo từng từ.
 
-Mỗi ngôn ngữ có các quy tắc ngữ pháp, quy ước và trật tự từ khác nhau. Khi dịch, hãy chú ý đến cách cấu trúc câu trong ngôn ngữ đích và tránh dịch sát theo bản gốc tiếng Anh, vì điều này có thể làm giảm chất lượng câu và độ dễ đọc.
+Các ngôn ngữ khác nhau có các quy tắc ngữ pháp, quy ước và trật tự từ khác nhau. Khi dịch, vui lòng lưu ý đến cách cấu trúc câu trong ngôn ngữ đích và tránh dịch sát nghĩa đen từ bản gốc tiếng Anh, vì điều này có thể dẫn đến cấu trúc câu kém và khó đọc.
 
-Thay vì dịch từng từ trong câu gốc, bạn nên đọc toàn bộ câu và điều chỉnh lại để phù hợp với cách diễn đạt trong ngôn ngữ đích.
+Thay vì dịch văn bản gốc theo từng từ, bạn nên đọc toàn bộ câu và điều chỉnh nó cho phù hợp với các quy ước của ngôn ngữ đích.
 
 ## Trang trọng và thân mật {#formal-vs-informal}
 
-Chúng tôi sử dụng hình thức xưng hô trang trọng, luôn lịch sự và phù hợp với tất cả người dùng.
+Chúng tôi sử dụng hình thức xưng hô trang trọng, luôn lịch sự và phù hợp với tất cả khách truy cập.
 
-Việc sử dụng cách xưng hô trang trọng giúp tránh gây cảm giác thiếu nghiêm túc hoặc gây khó chịu, và phù hợp với mọi độ tuổi cũng như giới tính của người truy cập.
+Việc sử dụng cách xưng hô trang trọng cho phép chúng tôi tránh nghe có vẻ thiếu chính thức hoặc xúc phạm, và phù hợp bất kể tuổi tác và giới tính của khách truy cập.
 
-Hầu hết các ngôn ngữ Ấn-Âu và Phi-Á sử dụng đại từ nhân xưng ngôi thứ hai có phân biệt giới tính giữa nam và nữ. Khi xưng hô với người dùng hoặc sử dụng đại từ sở hữu, chúng ta có thể tránh giả định giới tính của họ, vì cách xưng hô trang trọng thường phù hợp và nhất quán, bất kể họ nhận dạng như thế nào.
+Hầu hết các ngôn ngữ Ấn-Âu và Phi-Á đều sử dụng đại từ nhân xưng ngôi thứ hai phân biệt giới tính, phân biệt giữa nam và nữ. Khi xưng hô với người dùng hoặc sử dụng đại từ sở hữu, chúng ta có thể tránh việc giả định giới tính của khách truy cập, vì hình thức xưng hô trang trọng thường có thể áp dụng chung và nhất quán, bất kể họ xác định giới tính như thế nào.
 
 ## Từ vựng và ý nghĩa đơn giản, rõ ràng {#simple-vocabulary}
 
-Mục tiêu của chúng tôi là giúp nội dung trên trang web dễ hiểu với càng nhiều người càng tốt.
+Mục tiêu của chúng tôi là làm cho nội dung trên trang web trở nên dễ hiểu đối với càng nhiều người càng tốt.
 
-Trong hầu hết các trường hợp, điều này có thể đạt được dễ dàng bằng cách sử dụng các từ ngắn gọn và đơn giản, dễ hiểu. Nếu có nhiều cách dịch khác nhau cho một từ trong ngôn ngữ của bạn với cùng một ý nghĩa, lựa chọn tốt nhất thường là từ ngắn nhất mà vẫn truyền tải rõ ràng nội dung.
+Trong hầu hết các trường hợp, điều này có thể dễ dàng đạt được bằng cách sử dụng các từ ngắn gọn và đơn giản, dễ hiểu. Nếu có nhiều cách dịch cho một từ nhất định trong ngôn ngữ của bạn với cùng một ý nghĩa, lựa chọn tốt nhất thường là từ ngắn nhất phản ánh rõ ràng ý nghĩa đó.
 
 ## Hệ thống chữ viết {#writing-system}
 
-Ethereum.org có sẵn bằng nhiều ngôn ngữ, sử dụng các hệ thống chữ viết thay thế cho bảng chữ cái Latin.
+Ethereum.org có sẵn bằng một số ngôn ngữ, sử dụng các hệ thống chữ viết (hoặc hệ thống văn tự) thay thế cho chữ Latinh.
 
-Tất cả nội dung nên được dịch bằng hệ thống chữ viết phù hợp với ngôn ngữ của bạn và không nên bao gồm bất kỳ từ nào được viết bằng ký tự Latin.
+Tất cả nội dung nên được dịch bằng hệ thống chữ viết chính xác cho ngôn ngữ của bạn và không nên bao gồm bất kỳ từ nào được viết bằng ký tự Latinh.
 
-Khi dịch nội dung, bạn cần đảm bảo bản dịch nhất quán và không chứa bất kỳ ký tự Latin nào.
+Khi dịch nội dung, bạn nên đảm bảo rằng các bản dịch nhất quán và không bao gồm bất kỳ ký tự Latinh nào.
 
-Một quan niệm sai lầm phổ biến là Ethereum luôn phải được viết bằng chữ Latin. Điều này hầu như không chính xác, vui lòng sử dụng cách viết của Ethereum, theo ngôn ngữ mẹ đẻ của bạn (ví dụ: 以太坊 trong tiếng Trung, إيثيريوم trong tiếng Ả Rập, v.v.).
+Một quan niệm sai lầm phổ biến là Ethereum phải luôn được viết bằng chữ Latinh. Điều này phần lớn là không chính xác, vui lòng sử dụng cách viết của Ethereum theo ngôn ngữ bản địa của bạn (ví dụ: 以太坊 trong tiếng Trung, إيثيريوم trong tiếng Ả Rập, v.v.).
 
-**Những điều trên không áp dụng với các ngôn ngữ mà danh từ riêng không nên được dịch theo quy định chung.**
+**Điều trên không áp dụng cho các ngôn ngữ mà theo quy tắc, tên riêng không nên được dịch.**
 
-## Dịch siêu dữ liệu trang {#translating-metadata}
+## Dịch siêu dữ liệu của trang {#translating-metadata}
 
-Một số trang có chứa siêu dữ liệu như 'title', 'lang', 'description', 'sidebar', v.v.
+Một số trang chứa siêu dữ liệu trên trang, như 'title', 'lang', 'description', 'sidebar', v.v.
 
-Chúng tôi ẩn nội dung mà người dịch không nên dịch khi tải lên các trang mới trên Crowdin, nghĩa là tất cả siêu dữ liệu hiển thị với người dịch trong Crowdin đều nên được dịch.
+Chúng tôi ẩn nội dung mà người dịch không bao giờ nên dịch khi tải các trang mới lên Crowdin, nghĩa là tất cả siêu dữ liệu hiển thị cho người dịch trong Crowdin đều nên được dịch.
 
-Vui lòng đặc biệt lưu ý khi dịch các chuỗi mà nội dung gốc là 'en'. Điều này thể hiện ngôn ngữ mà trang có sẵn và nên được dịch sang [mã ngôn ngữ ISO cho ngôn ngữ của bạn](https://www.andiamo.co.uk/resources/iso-language-codes/). Các chuỗi này luôn phải được dịch bằng ký tự Latin, không sử dụng hệ thống chữ viết bản địa của ngôn ngữ đích.
+Vui lòng đặc biệt lưu ý khi dịch bất kỳ chuỗi nào có văn bản gốc là 'en'. Điều này đại diện cho ngôn ngữ mà trang có sẵn và nên được dịch sang [mã ngôn ngữ ISO cho ngôn ngữ của bạn](https://www.andiamo.co.uk/resources/iso-language-codes/). Các chuỗi này phải luôn được dịch bằng ký tự Latinh, không phải hệ thống chữ viết bản địa của ngôn ngữ đích.
 
-Nếu bạn không chắc nên sử dụng mã ngôn ngữ nào, bạn có thể kiểm tra bộ nhớ dịch trong Crowdin hoặc tìm mã ngôn ngữ trong URL của trang khi đang sử dụng trình chỉnh sửa trực tuyến trên Crowdin.
+Nếu bạn không chắc chắn nên sử dụng mã ngôn ngữ nào, bạn có thể kiểm tra bộ nhớ dịch trong Crowdin hoặc tìm mã ngôn ngữ cho ngôn ngữ của bạn trong URL của trang trên trình chỉnh sửa trực tuyến Crowdin.
 
 Một số ví dụ về mã ngôn ngữ cho các ngôn ngữ được sử dụng rộng rãi nhất:
 
 - Tiếng Ả Rập - ar
-- Tiếng Trung Giản thể - zh
+- Tiếng Trung giản thể - zh
 - Tiếng Pháp - fr
 - Tiếng Hindi - hi
 - Tiếng Tây Ban Nha - es
 
 ## Tiêu đề của các bài viết bên ngoài {#external-articles}
 
-Một số chuỗi có chứa tiêu đề của các bài viết bên ngoài. Hầu hết các trang tài liệu dành cho nhà phát triển của chúng tôi đều chứa liên kết đến các bài viết bên ngoài để đọc thêm. Các chuỗi chứa tiêu đề bài viết cần được dịch, bất kể ngôn ngữ gốc của bài viết là gì, để đảm bảo trải nghiệm người dùng nhất quán hơn cho người xem trang bằng ngôn ngữ của họ.
+Một số chuỗi chứa tiêu đề của các bài viết bên ngoài. Hầu hết các trang tài liệu dành cho nhà phát triển của chúng tôi đều chứa các liên kết đến các bài viết bên ngoài để đọc thêm. Các chuỗi chứa tiêu đề của bài viết cần được dịch, bất kể ngôn ngữ của bài viết là gì, để đảm bảo trải nghiệm người dùng nhất quán hơn cho những khách truy cập xem trang bằng ngôn ngữ của họ.
 
-Bạn có thể tìm thấy một số ví dụ về cách các chuỗi này hiển thị đối với người dịch và cách nhận diện chúng bên dưới (liên kết đến các bài viết thường nằm ở cuối các trang, trong phần 'Đọc thêm'):
+Bạn có thể tìm thấy một số ví dụ về hình thức của các chuỗi này đối với người dịch và cách xác định chúng bên dưới (các liên kết đến bài viết chủ yếu có thể được tìm thấy ở cuối các trang này, trong phần 'Đọc thêm'):
 
-![Tiêu đề bài viết trong thanh bên.png](./article-titles-in-sidebar.png)
-![Tiêu đề bài viết trong trình soạn thảo.png](./article-titles-in-editor.png)
+![Article titles in sidebar.png](./article-titles-in-sidebar.png)
+![Article titles in editor.png](./article-titles-in-editor.png)
 
 ## Cảnh báo của Crowdin {#crowdin-warnings}
 
-Crowdin có một tính năng tích hợp sẵn để cảnh báo dịch giả khi họ sắp mắc lỗi. Crowdin sẽ tự động cảnh báo bạn trước khi lưu bản dịch nếu bạn quên bao gồm một thẻ từ bản gốc, dịch các thành phần không nên dịch, thêm nhiều khoảng trắng liên tiếp, quên dấu câu kết thúc, v.v.
-Nếu bạn thấy một cảnh báo như thế này, hãy quay lại và kiểm tra kỹ lại bản dịch đã đề xuất.
+Crowdin có một tính năng tích hợp sẵn để cảnh báo người dịch khi họ sắp mắc lỗi. Crowdin sẽ tự động cảnh báo bạn về điều này trước khi lưu bản dịch của bạn nếu bạn quên bao gồm một thẻ từ bản gốc, dịch các thành phần không nên dịch, thêm nhiều khoảng trắng liên tiếp, quên dấu câu kết thúc, v.v.
+Nếu bạn thấy cảnh báo như thế này, vui lòng quay lại và kiểm tra kỹ bản dịch được đề xuất.
 
-**Không bao giờ bỏ qua các cảnh báo này, vì chúng thường có nghĩa là có vấn đề nào đó, hoặc bản dịch đang thiếu một phần quan trọng của văn bản gốc.**
+**Không bao giờ bỏ qua những cảnh báo này, vì chúng thường có nghĩa là có điều gì đó không ổn, hoặc bản dịch đang thiếu một phần chính của văn bản gốc.**
 
-Ví dụ về cảnh báo của Crowdin khi bạn quên thêm thẻ vào bản dịch của mình:
-![Ví dụ về cảnh báo của Crowdin](./crowdin-warning-example.png)
+Một ví dụ về cảnh báo của Crowdin khi bạn quên thêm thẻ vào bản dịch của mình:
+![Example of a Crowdin warning](./crowdin-warning-example.png)
 
 ## Xử lý các thẻ và đoạn mã {#dealing-with-tags}
 
-Nhiều nội dung gốc chứa thẻ và biến, được tô vàng trong trình chỉnh sửa của Crowdin. Chúng có những chức năng khác nhau và cần được xử lý đúng cách.
+Rất nhiều nội dung gốc chứa các thẻ và biến, được đánh dấu màu vàng trong trình chỉnh sửa Crowdin. Chúng phục vụ các chức năng khác nhau và nên được tiếp cận một cách chính xác.
 
 **Cài đặt Crowdin**
 
-Để dễ dàng quản lý thẻ và sao chép trực tiếp từ bản gốc, chúng tôi khuyên bạn nên thay đổi cài đặt trong trình chỉnh sửa của Crowdin.
+Để giúp việc quản lý các thẻ và sao chép chúng trực tiếp từ bản gốc dễ dàng hơn, chúng tôi khuyên bạn nên thay đổi cài đặt của mình trong trình chỉnh sửa Crowdin.
 
 1. Mở cài đặt
-   ![Cách mở cài đặt trong trình soạn thảo](./editor-settings.png)
+   ![How to open settings in the editor](./editor-settings.png)
 
-2. Cuộn xuống phần “Hiển thị thẻ HTML”
+2. Cuộn xuống phần 'HTML tags displaying' (Hiển thị thẻ HTML)
 
-3. Chọn 'Ẩn'
-   ![Vui lòng chọn 'Ẩn'](./hide-tags.png)
+3. Chọn 'Hide' (Ẩn)
+   ![Please select 'Hide'](./hide-tags.png)
 
-4. Nhấn “Lưu”
+4. Nhấp vào 'Save' (Lưu)
 
-Khi chọn tùy chọn này, toàn bộ văn bản thẻ sẽ không còn được hiển thị, và sẽ được thay thế bằng một số.
-Khi dịch, nhấp vào thẻ này sẽ tự động sao chép chính xác thẻ vào ô dịch.
+Bằng cách chọn tùy chọn này, toàn bộ văn bản của thẻ sẽ không còn được hiển thị và sẽ được thay thế bằng một con số.
+Khi dịch, việc nhấp vào thẻ này sẽ tự động sao chép chính xác thẻ đó vào trường dịch.
 
 **Liên kết**
 
-Bạn có thể thấy các liên kết đầy đủ tới các trang trên ethereum.org hoặc các trang web khác.
+Bạn có thể nhận thấy các liên kết đầy đủ đến các trang trên ethereum.org hoặc các trang web khác.
 
-Các liên kết này phải giống hệt bản gốc và không được thay đổi hay dịch. Nếu bạn dịch hoặc thay đổi liên kết theo bất kỳ cách nào, kể cả chỉ xóa một phần nhỏ như dấu gạch chéo (/), thì liên kết sẽ bị hỏng và không thể sử dụng.
+Chúng phải giống hệt với bản gốc và không được thay đổi hoặc dịch. Nếu bạn dịch một liên kết hoặc thay đổi nó theo bất kỳ cách nào, thậm chí chỉ cần xóa một phần của nó, như dấu gạch chéo (/), điều này sẽ dẫn đến các liên kết bị hỏng và không thể sử dụng được.
 
-Cách tốt nhất để xử lý liên kết là sao chép trực tiếp từ bản gốc, bằng cách nhấp vào liên kết hoặc dùng nút “Sao chép nguồn” (Alt+C).
+Cách tốt nhất để xử lý các liên kết là sao chép chúng trực tiếp từ bản gốc, bằng cách nhấp vào chúng hoặc sử dụng nút 'Copy Source' (Sao chép bản gốc) (`Alt+C`).
 
-![Ví dụ về link.png](./example-of-link.png)
+![Example of link.png](./example-of-link.png)
 
-Các liên kết cũng xuất hiện trong văn bản nguồn dưới dạng các thẻ (tức là `<0>` `</0>`). Nếu bạn di chuột qua thẻ, trình chỉnh sửa sẽ hiển thị toàn bộ nội dung của nó – đôi khi những thẻ này sẽ đại diện cho các liên kết.
+Các liên kết cũng xuất hiện trong văn bản gốc dưới dạng các thẻ (ví dụ: `<0>` `</0>`). Nếu bạn di chuột qua thẻ, trình chỉnh sửa sẽ hiển thị toàn bộ nội dung của nó - đôi khi các thẻ này sẽ đại diện cho các liên kết.
 
-Việc sao chép liên kết từ bản gốc mà không thay đổi thứ tự của chúng là rất quan trọng.
+Điều rất quan trọng là phải sao chép các liên kết từ bản gốc và không thay đổi thứ tự của chúng.
 
-Nếu thay đổi thứ tự của các thẻ, liên kết mà chúng đại diện sẽ bị hỏng.
+Nếu thứ tự của các thẻ bị thay đổi, liên kết mà chúng đại diện sẽ bị hỏng.
 
-![Ví dụ về các liên kết bên trong tags.png](./example-of-links-inside-tags.png)
+![Example of links inside tags.png](./example-of-links-inside-tags.png)
 
 **Thẻ và biến**
 
-Văn bản gốc chứa nhiều loại thẻ khác nhau, luôn phải sao chép từ bản gốc và không bao giờ được thay đổi. Tương tự như trên, thứ tự của các thẻ trong bản dịch cũng phải giữ nguyên như trong bản gốc.
+Văn bản gốc chứa nhiều loại thẻ khác nhau, chúng phải luôn được sao chép từ bản gốc và không bao giờ được thay đổi. Tương tự như trên, thứ tự của các thẻ này trong bản dịch cũng phải giữ nguyên như bản gốc.
 
-Các thẻ luôn có thẻ mở và thẻ đóng. Trong hầu hết các trường hợp, văn bản nằm giữa thẻ mở và thẻ đóng phải được dịch.
+Các thẻ luôn chứa một thẻ mở và thẻ đóng. Trong hầu hết các trường hợp, văn bản giữa các thẻ mở và đóng nên được dịch.
 
-Ví dụ: `<strong x-id="1">`Decentralized`</strong>`
+Ví dụ: `<strong x-id="1">`Phi tập trung`</strong>`
 
-`<strong x-id="1">` - _Thẻ mở làm cho văn bản được in đậm_
+`<strong x-id="1">` - _Thẻ mở làm cho văn bản in đậm_
 
-Decentralized - _Văn bản có thể dịch_
+Phi tập trung - _Văn bản có thể dịch_
 
 `</strong>` - _Thẻ đóng_
 
-![Ví dụ về thẻ ‘strong’ tags.png](./example-of-strong-tags.png)
+![Example of 'strong' tags.png](./example-of-strong-tags.png)
 
-Đoạn mã nên được xử lý hơi khác so với các thẻ khác, vì chúng chứa mã không được dịch.
+Các đoạn mã nên được tiếp cận hơi khác so với các thẻ khác, vì chúng chứa mã không nên dịch.
 
 Ví dụ: `<code>`nonce`</code>`
 
@@ -156,144 +155,144 @@ nonce - _Văn bản không thể dịch_
 
 `</code>` - _Thẻ đóng_
 
-![Ví dụ về đoạn mã code snippets.png](./example-of-code-snippets.png)
+![Example of code snippets.png](./example-of-code-snippets.png)
 
-Văn bản gốc cũng chứa các thẻ rút gọn, chỉ bao gồm số, khiến chức năng của chúng không dễ nhận ra ngay. Bạn có thể di chuột qua các thẻ này để xem chính xác chức năng mà chúng đảm nhận.
+Văn bản gốc cũng chứa các thẻ rút gọn, chỉ chứa các con số, nghĩa là chức năng của chúng không rõ ràng ngay lập tức. Bạn có thể di chuột qua các thẻ này để xem chính xác chúng phục vụ chức năng gì.
 
-Trong ví dụ bên dưới, bạn có thể thấy rằng việc di chuột qua thẻ `<0>` cho thấy nó đại diện cho thẻ `<code>` và chứa một đoạn mã, do đó nội dung bên trong các thẻ này không nên được dịch.
+Trong ví dụ bên dưới, bạn có thể thấy rằng việc di chuột qua thẻ `<0>` cho thấy nó đại diện cho `<code>` và chứa một đoạn mã, do đó nội dung bên trong các thẻ này không nên được dịch.
 
-![Ví dụ về thẻ mơ hồ tags.png](./example-of-ambiguous-tags.png)
+![Example of ambiguous tags.png](./example-of-ambiguous-tags.png)
 
-## Dạng ngắn và dạng đầy đủ/từ viết tắt {#short-vs-full-forms}
+## Dạng viết tắt so với dạng đầy đủ/từ viết tắt {#short-vs-full-forms}
 
-Có rất nhiều chữ viết tắt được sử dụng trên trang web, ví dụ: dapps, NFT, DAO, DeFi, v.v. Các chữ viết tắt này thường được sử dụng trong tiếng Anh và hầu hết khách truy cập trang web đều quen thuộc với chúng.
+Có rất nhiều từ viết tắt được sử dụng trên trang web, ví dụ: dapp, NFT, DAO, DeFi, v.v. Những từ viết tắt này được sử dụng phổ biến trong tiếng Anh và hầu hết khách truy cập vào trang web đều quen thuộc với chúng.
 
-Vì chúng thường không có bản dịch chuẩn trong các ngôn ngữ khác, cách tốt nhất để xử lý những thuật ngữ này là cung cấp bản dịch mô tả đầy đủ, và thêm chữ viết tắt tiếng Anh trong ngoặc đơn.
+Vì chúng thường không có các bản dịch được thiết lập sẵn trong các ngôn ngữ khác, cách tốt nhất để tiếp cận những thuật ngữ này và các thuật ngữ tương tự là cung cấp một bản dịch mô tả của dạng đầy đủ, và thêm từ viết tắt tiếng Anh trong ngoặc đơn.
 
-Không dịch các chữ viết tắt này, vì hầu hết mọi người sẽ không quen thuộc với chúng, và các phiên bản dịch địa phương sẽ không mang nhiều ý nghĩa đối với phần lớn khách truy cập.
+Không dịch các từ viết tắt này, vì hầu hết mọi người sẽ không quen thuộc với chúng và các phiên bản được bản địa hóa sẽ không có nhiều ý nghĩa đối với hầu hết khách truy cập.
 
-Ví dụ về cách dịch dapps:
+Ví dụ về cách dịch dapp:
 
-- Ứng dụng phi tập trung (dapps) → _Dạng đầy đủ đã dịch (viết tắt tiếng Anh trong ngoặc)_
+- Ứng dụng phi tập trung (dapp) → _Dạng đầy đủ được dịch (Từ viết tắt tiếng Anh trong ngoặc đơn)_
 
-## Các thuật ngữ chưa có bản dịch chính thức {#terms-without-established-translations}
+## Các thuật ngữ không có bản dịch được thiết lập sẵn {#terms-without-established-translations}
 
-Một số thuật ngữ có thể chưa có bản dịch chuẩn trong các ngôn ngữ khác và thường được biết đến rộng rãi bằng thuật ngữ gốc tiếng Anh. Các thuật ngữ này thường liên quan đến các khái niệm mới, như proof-of-work, proof-of-stake, Beacon Chain, staking, v.v.
+Một số thuật ngữ có thể không có bản dịch được thiết lập sẵn trong các ngôn ngữ khác và được biết đến rộng rãi bằng thuật ngữ tiếng Anh gốc. Các thuật ngữ như vậy chủ yếu bao gồm các khái niệm mới hơn, như Bằng chứng công việc (PoW), Bằng chứng cổ phần (PoS), Chuỗi Beacon, đặt cọc, v.v.
 
-Khi dịch những thuật ngữ này có thể nghe không tự nhiên, vì phiên bản tiếng Anh cũng được sử dụng phổ biến trong nhiều ngôn ngữ khác, do đó rất khuyến khích nên dịch.
+Mặc dù việc dịch các thuật ngữ này có thể nghe không tự nhiên, vì phiên bản tiếng Anh cũng được sử dụng phổ biến trong các ngôn ngữ khác, nhưng chúng tôi đặc biệt khuyến nghị nên dịch chúng.
 
-Khi dịch, bạn có thể thoải mái sáng tạo, dùng cách dịch mô tả, hoặc chỉ dịch sát nghĩa.
+Khi dịch chúng, hãy thoải mái sáng tạo, sử dụng các bản dịch mang tính mô tả hoặc đơn giản là dịch sát nghĩa đen.
 
-**Lý do hầu hết các thuật ngữ nên được dịch, thay vì để nguyên tiếng Anh, là vì những thuật ngữ mới này sẽ ngày càng phổ biến trong tương lai, khi nhiều người bắt đầu sử dụng Ethereum và các công nghệ liên quan. Nếu chúng ta muốn nhiều người từ khắp nơi trên thế giới tham gia vào lĩnh vực này, chúng ta cần cung cấp thuật ngữ dễ hiểu bằng nhiều ngôn ngữ nhất có thể, ngay cả khi phải tự tạo ra cách dịch.**
+**Lý do tại sao hầu hết các thuật ngữ nên được dịch, thay vì để lại một số bằng tiếng Anh, là thực tế rằng thuật ngữ mới này sẽ trở nên phổ biến hơn trong tương lai, khi có nhiều người bắt đầu sử dụng Ethereum và các công nghệ liên quan. Nếu chúng ta muốn đưa thêm nhiều người từ khắp nơi trên thế giới tham gia vào không gian này, chúng ta cần cung cấp thuật ngữ dễ hiểu bằng càng nhiều ngôn ngữ càng tốt, ngay cả khi chúng ta cần tự tạo ra nó.**
 
 ## Nút & Lời kêu gọi hành động (CTA) {#buttons-and-ctas}
 
-Trang web có nhiều nút, và chúng cần được dịch khác so với nội dung khác.
+Trang web chứa nhiều nút, chúng nên được dịch khác với các nội dung khác.
 
-Văn bản trong nút có thể được xác định bằng cách xem ảnh chụp màn hình ngữ cảnh, đi kèm với hầu hết chuỗi, hoặc kiểm tra trong trình soạn thảo, nơi có chứa cụm từ “nút”.
+Văn bản trên nút có thể được xác định bằng cách xem các ảnh chụp màn hình ngữ cảnh, được kết nối với hầu hết các chuỗi, hoặc bằng cách kiểm tra ngữ cảnh trong trình chỉnh sửa, bao gồm cụm từ ‘’button’’.
 
-Bản dịch cho nút cần ngắn gọn nhất có thể để tránh lỗi định dạng. Ngoài ra, các bản dịch của nút phải ở dạng mệnh lệnh, tức là trình bày một lệnh hoặc yêu cầu.
+Các bản dịch cho các nút nên càng ngắn càng tốt, để ngăn ngừa sự không khớp về định dạng. Ngoài ra, các bản dịch nút nên mang tính mệnh lệnh, tức là thể hiện một lệnh hoặc yêu cầu.
 
-![Cách tìm button.png](./how-to-find-a-button.png)
+![How to find a button.png](./how-to-find-a-button.png)
 
-## Dịch thuật có tính bao hàm {#translating-for-inclusivity}
+## Dịch thuật hướng tới sự hòa nhập {#translating-for-inclusivity}
 
-Người dùng truy cập Ethereum.org đến từ khắp nơi trên thế giới và có nhiều bối cảnh khác nhau. Vì vậy, ngôn ngữ trên trang web cần mang tính trung lập, chào đón tất cả mọi người và không mang tính loại trừ.
+Khách truy cập Ethereum.org đến từ khắp nơi trên thế giới và từ các nền tảng khác nhau. Do đó, ngôn ngữ trên trang web nên trung lập, chào đón mọi người và không mang tính loại trừ.
 
-Một khía cạnh quan trọng của điều này là tính trung lập về giới. Điều này có thể được thực hiện dễ dàng bằng cách dùng cách xưng hô trang trọng và tránh các từ ngữ mang giới tính trong bản dịch.
+Một khía cạnh quan trọng của điều này là sự trung lập về giới tính. Điều này có thể dễ dàng đạt được bằng cách sử dụng hình thức xưng hô trang trọng và tránh bất kỳ từ ngữ phân biệt giới tính nào trong các bản dịch.
 
-Một cách khác để thể hiện tính bao hàm là dịch theo hướng phù hợp với khán giả toàn cầu, không giới hạn ở bất kỳ quốc gia, chủng tộc hay khu vực nào.
+Một hình thức hòa nhập khác là cố gắng dịch cho đối tượng khán giả toàn cầu, không dành riêng cho bất kỳ quốc gia, chủng tộc hoặc khu vực nào.
 
-Cuối cùng, ngôn ngữ cần phù hợp cho mọi nhóm người dùng và mọi lứa tuổi.
+Cuối cùng, ngôn ngữ nên phù hợp với mọi đối tượng và lứa tuổi.
 
-## Bản dịch theo ngôn ngữ cụ thể {#language-specific-translations}
+## Bản dịch dành riêng cho từng ngôn ngữ {#language-specific-translations}
 
-Khi dịch, điều quan trọng là tuân theo các quy tắc ngữ pháp, quy ước và định dạng của tiếng Việt, thay vì sao chép nguyên văn từ bản gốc. Văn bản gốc tuân theo quy tắc ngữ pháp và quy ước của tiếng Anh, điều này không nhất thiết áp dụng cho nhiều ngôn ngữ khác.
+Khi dịch, điều quan trọng là phải tuân theo các quy tắc ngữ pháp, quy ước và định dạng được sử dụng trong ngôn ngữ của bạn, thay vì sao chép từ bản gốc. Văn bản gốc tuân theo các quy tắc và quy ước ngữ pháp tiếng Anh, điều này không thể áp dụng cho nhiều ngôn ngữ khác.
 
-Bạn cần nắm rõ các quy tắc của tiếng Việt và dịch cho phù hợp. Nếu cần hỗ trợ, hãy liên hệ với chúng tôi; chúng tôi sẽ giúp bạn tìm tài liệu tham khảo về cách áp dụng các yếu tố này trong tiếng Việt.
+Bạn nên nhận thức được các quy tắc cho ngôn ngữ của mình và dịch cho phù hợp. Nếu bạn cần trợ giúp, hãy liên hệ với chúng tôi và chúng tôi sẽ giúp bạn tìm một số tài nguyên về cách các yếu tố này nên được sử dụng trong ngôn ngữ của bạn.
 
-Một số điểm cần đặc biệt lưu ý bao gồm:
+Một số ví dụ về những điều cần đặc biệt lưu ý:
 
 ### Dấu câu, định dạng {#punctuation-and-formatting}
 
 **Viết hoa**
 
-- Quy tắc viết hoa có sự khác biệt rất lớn giữa các ngôn ngữ.
-- Trong tiếng Anh, thông thường sẽ viết hoa tất cả các từ trong tiêu đề và tên riêng, các tháng, ngày, tên ngôn ngữ, ngày lễ, v.v. Trong nhiều ngôn ngữ khác, điều này là sai ngữ pháp vì họ có những quy tắc viết hoa khác.
-- Một số ngôn ngữ cũng có quy tắc viết hoa đại từ nhân xưng, danh từ và một số tính từ, trong khi tiếng Anh thì không.
+- Có sự khác biệt lớn về việc viết hoa trong các ngôn ngữ khác nhau.
+- Trong tiếng Anh, việc viết hoa tất cả các từ trong tiêu đề và tên, tháng và ngày, tên ngôn ngữ, ngày lễ, v.v. là rất phổ biến. Trong nhiều ngôn ngữ khác, điều này sai ngữ pháp, vì chúng có các quy tắc viết hoa khác nhau.
+- Một số ngôn ngữ cũng có các quy tắc về việc viết hoa đại từ nhân xưng, danh từ và một số tính từ nhất định, những từ không được viết hoa trong tiếng Anh.
 
-**Khoảng cách**
+**Khoảng trắng**
 
-- Các quy tắc chính tả xác định cách sử dụng khoảng trắng cho từng ngôn ngữ. Vì khoảng trắng được sử dụng ở khắp mọi nơi, nên các quy tắc này là một trong những điểm khác biệt rõ ràng nhất, đồng thời cũng là yếu tố thường bị dịch sai nhiều nhất.
-- Một số khác biệt phổ biến về cách sử dụng khoảng trắng giữa tiếng Anh và các ngôn ngữ khác:
+- Các quy tắc chính tả xác định việc sử dụng khoảng trắng cho mỗi ngôn ngữ. Bởi vì khoảng trắng được sử dụng ở khắp mọi nơi, các quy tắc này là một trong những quy tắc khác biệt nhất và khoảng trắng là một trong những yếu tố bị dịch sai nhiều nhất.
+- Một số khác biệt phổ biến về khoảng trắng giữa tiếng Anh và các ngôn ngữ khác:
   - Khoảng trắng trước các đơn vị đo lường và tiền tệ (ví dụ: USD, EUR, kB, MB)
-  - Khoảng trắng trước các ký hiệu độ (ví dụ: °C, ℉)
+  - Khoảng trắng trước ký hiệu độ (ví dụ: °C, ℉)
   - Khoảng trắng trước một số dấu câu, đặc biệt là dấu chấm lửng (…)
   - Khoảng trắng trước và sau dấu gạch chéo (/)
 
 **Danh sách**
 
-- Mỗi ngôn ngữ đều có một tập hợp quy tắc đa dạng và phức tạp để viết danh sách. Những quy tắc này có thể khác đáng kể so với tiếng Anh.
-- Trong một số ngôn ngữ, từ đầu tiên của mỗi dòng mới cần được viết hoa, trong khi ở các ngôn ngữ khác, dòng mới nên bắt đầu bằng chữ thường. Nhiều ngôn ngữ cũng có các quy tắc khác nhau về việc viết hoa trong danh sách, tùy thuộc vào độ dài của từng dòng.
-- Điều này cũng áp dụng cho dấu câu của từng mục trong danh sách. Dấu câu kết thúc trong danh sách có thể là dấu chấm (.), dấu phẩy (,) hoặc dấu chấm phẩy (;), tùy thuộc vào ngôn ngữ.
+- Mỗi ngôn ngữ đều có một bộ quy tắc đa dạng và phức tạp để viết danh sách. Những quy tắc này có thể khác biệt đáng kể so với tiếng Anh.
+- Trong một số ngôn ngữ, từ đầu tiên của mỗi dòng mới cần được viết hoa, trong khi ở những ngôn ngữ khác, các dòng mới nên bắt đầu bằng chữ thường. Nhiều ngôn ngữ cũng có các quy tắc khác nhau về việc viết hoa trong danh sách, tùy thuộc vào độ dài của mỗi dòng.
+- Điều tương tự cũng áp dụng cho dấu câu của các mục trong dòng. Dấu câu kết thúc trong danh sách có thể là dấu chấm (**.**), dấu phẩy (**,**), hoặc dấu chấm phẩy (**;**), tùy thuộc vào ngôn ngữ.
 
 **Dấu ngoặc kép**
 
-- Các ngôn ngữ sử dụng nhiều loại dấu ngoặc kép khác nhau. Chỉ đơn giản sao chép dấu ngoặc kép tiếng Anh từ nguồn thường là không chính xác.
+- Các ngôn ngữ sử dụng nhiều loại dấu ngoặc kép khác nhau. Việc chỉ cần sao chép dấu ngoặc kép tiếng Anh từ bản gốc thường là không chính xác.
 - Một số loại dấu ngoặc kép phổ biến nhất bao gồm:
-  - „văn bản ví dụ“
-  - ‚văn bản ví dụ‘
-  - »văn bản ví dụ«
-  - “văn bản ví dụ”
-  - ‘văn bản ví dụ’
-  - «văn bản ví dụ»
+  - „example text“
+  - ‚example text’
+  - »example text«
+  - “example text”
+  - ‘example text’
+  - «example text»
 
-**Dấu nối và dấu gạch ngang**
+**Dấu gạch nối và dấu gạch ngang**
 
-- Trong tiếng Anh, dấu nối (-) được dùng để nối các từ hoặc các phần khác nhau của một từ, trong khi dấu gạch ngang (–) được dùng để chỉ một khoảng hoặc một chỗ ngắt.
-- Nhiều ngôn ngữ có các quy tắc khác nhau về việc sử dụng dấu nối và dấu gạch ngang mà cần được tuân thủ.
+- Trong tiếng Anh, dấu gạch nối (-) được sử dụng để nối các từ hoặc các phần khác nhau của một từ, trong khi dấu gạch ngang (–) được sử dụng để biểu thị một phạm vi hoặc một khoảng dừng.
+- Nhiều ngôn ngữ có các quy tắc khác nhau về việc sử dụng dấu gạch nối và dấu gạch ngang cần được tuân thủ.
 
 ### Định dạng {#formats}
 
 **Số**
 
-- Điểm khác biệt chính trong cách viết số ở các ngôn ngữ khác nhau là ký hiệu phân tách được dùng cho số thập phân và số hàng nghìn. Đối với hàng nghìn, ký hiệu phân tách có thể là dấu chấm, dấu phẩy hoặc khoảng trắng. Tương tự, một số ngôn ngữ dùng dấu chấm thập phân, trong khi các ngôn ngữ khác dùng dấu phẩy thập phân.
+- Sự khác biệt chính trong việc viết số ở các ngôn ngữ khác nhau là dấu phân cách được sử dụng cho số thập phân và hàng nghìn. Đối với hàng nghìn, đây có thể là dấu chấm, dấu phẩy hoặc khoảng trắng. Tương tự, một số ngôn ngữ sử dụng dấu chấm thập phân, trong khi những ngôn ngữ khác sử dụng dấu phẩy thập phân.
   - Một số ví dụ về các số lớn:
     - Tiếng Anh – **1,000.50**
     - Tiếng Tây Ban Nha – **1.000,50**
     - Tiếng Pháp – **1 000,50**
-- Một yếu tố quan trọng khác khi dịch số là dấu phần trăm. Nó có thể được viết theo nhiều cách khác nhau: **100%**, **100 %** hoặc **%100**.
-- Cuối cùng, số âm có thể được hiển thị theo nhiều cách khác nhau, tùy thuộc vào ngôn ngữ: -100, 100-, (100) hoặc [100].
+- Một cân nhắc quan trọng khác khi dịch số là ký hiệu phần trăm. Nó có thể được viết theo nhiều cách khác nhau: **100%**, **100 %** hoặc **%100**.
+- Cuối cùng, số âm có thể được hiển thị khác nhau, tùy thuộc vào ngôn ngữ: -100, 100-, (100) hoặc [100].
 
 **Ngày tháng**
 
-- Khi dịch ngày tháng, có nhiều điểm cần lưu ý và khác biệt tùy theo ngôn ngữ. Những yếu tố này bao gồm định dạng ngày, ký hiệu phân tách, chữ hoa và số 0 đứng đầu. Ngoài ra còn có sự khác biệt giữa cách viết ngày đầy đủ và cách viết ngày bằng số.
-  - Một số ví dụ về định dạng ngày khác nhau:
-    - Tiếng Anh – Vương quốc Anh (dd/mm/yyyy) – 1 tháng 1, 2022
-    - Tiếng Anh – Mỹ (mm/dd/yyyy) – ngày 1 tháng 1, 2022
+- Khi dịch ngày tháng, có một số cân nhắc và khác biệt dựa trên ngôn ngữ. Chúng bao gồm định dạng ngày, dấu phân cách, viết hoa và các số không ở đầu. Cũng có sự khác biệt giữa ngày tháng viết đầy đủ và ngày tháng bằng số.
+  - Một số ví dụ về các định dạng ngày khác nhau:
+    - Tiếng Anh Anh (dd/mm/yyyy) – 1st January, 2022
+    - Tiếng Anh Mỹ (mm/dd/yyyy) – January 1st, 2022
     - Tiếng Trung (yyyy-mm-dd) – 2022 年 1 月 1 日
     - Tiếng Pháp (dd/mm/yyyy) – 1er janvier 2022
     - Tiếng Ý (dd/mm/yyyy) – 1º gennaio 2022
-    - Tiếng Đức (dd/mm/yyyy) – 1. Januar 2022 Januar 2022
+    - Tiếng Đức (dd/mm/yyyy) – 1. Januar 2022
 
 **Tiền tệ**
 
-- Việc dịch các đơn vị tiền tệ có thể phức tạp do sự khác biệt về định dạng, quy ước và cách chuyển đổi. Theo nguyên tắc chung, hãy giữ nguyên đơn vị tiền tệ giống như trong nguồn. Bạn có thể thêm đơn vị tiền tệ địa phương và giá trị quy đổi trong ngoặc để người đọc dễ hiểu hơn.
-- Sự khác biệt chính trong cách viết đơn vị tiền tệ ở các ngôn ngữ khác nhau bao gồm vị trí ký hiệu, dấu phẩy thập phân so với dấu chấm thập phân, khoảng cách và viết tắt so với ký hiệu.
+- Việc dịch tiền tệ có thể gặp nhiều thách thức, do các định dạng, quy ước và chuyển đổi khác nhau. Theo nguyên tắc chung, vui lòng giữ nguyên tiền tệ như bản gốc. Bạn có thể thêm tiền tệ địa phương của mình và mức chuyển đổi trong ngoặc đơn, để thuận tiện cho người đọc.
+- Những khác biệt chính trong việc viết tiền tệ ở các ngôn ngữ khác nhau bao gồm vị trí ký hiệu, dấu phẩy thập phân so với dấu chấm thập phân, khoảng trắng và từ viết tắt so với ký hiệu.
   - Vị trí ký hiệu: $100 hoặc 100$
   - Dấu phẩy thập phân so với dấu chấm thập phân: 100,50$ hoặc 100.50$
-  - Khoảng cách: 100$ hoặc 100 $
-  - Viết tắt so với ký hiệu: 100 $ hoặc 100 USD
+  - Khoảng trắng: 100$ hoặc 100 $
+  - Từ viết tắt so với ký hiệu: 100 $ hoặc 100 USD
 
 **Đơn vị đo lường**
 
-- Theo nguyên tắc chung, hãy giữ nguyên đơn vị đo lường giống như trong nguồn. Nếu quốc gia của bạn sử dụng hệ thống khác, bạn có thể thêm phần quy đổi trong ngoặc.
-- Ngoài việc bản địa hóa đơn vị đo lường, cũng cần lưu ý đến sự khác biệt trong cách các ngôn ngữ sử dụng các đơn vị này. Điểm khác biệt chính là khoảng cách giữa số và đơn vị, có thể khác nhau tùy theo ngôn ngữ. Ví dụ về điều này bao gồm 100kB so với 100 kB hoặc 50ºF so với 50 ºF.
+- Theo nguyên tắc chung, vui lòng giữ nguyên các đơn vị đo lường theo bản gốc. Nếu quốc gia của bạn sử dụng một hệ thống khác, bạn có thể bao gồm mức chuyển đổi trong ngoặc đơn.
+- Ngoài việc bản địa hóa các đơn vị đo lường, điều quan trọng là phải lưu ý những khác biệt trong cách các ngôn ngữ tiếp cận những đơn vị này. Sự khác biệt chính là khoảng trắng giữa số và đơn vị, có thể khác nhau tùy thuộc vào ngôn ngữ. Các ví dụ về điều này bao gồm 100kB so với 100 kB hoặc 50ºF so với 50 ºF.
 
 ## Kết luận {#conclusion}
 
 Dịch ethereum.org là một cơ hội tuyệt vời để tìm hiểu về các khía cạnh khác nhau của Ethereum.
 
-Khi dịch, hãy cố gắng đừng vội vàng. Hãy thoải mái và tận hưởng niềm vui!
+Khi dịch, cố gắng đừng vội vàng. Hãy cứ từ từ và tận hưởng niềm vui!
 
-Cảm ơn bạn đã tham gia Chương trình Dịch thuật và giúp chúng tôi mang trang web đến với nhiều người hơn. Cộng đồng Ethereum là toàn cầu, và chúng tôi rất vui vì bạn là một phần của cộng đồng này!
+Cảm ơn bạn đã tham gia Chương trình Dịch thuật và giúp chúng tôi làm cho trang web có thể tiếp cận được với nhiều đối tượng khán giả hơn. Cộng đồng Ethereum mang tính toàn cầu và chúng tôi rất vui vì bạn là một phần của nó!

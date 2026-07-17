@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "Program odměn Etherea zohledňuje při určování odměn řadu proměnných. Rozhodnutí o způsobilosti, skóre a všech podmínkách souvisejících s odměnou jsou výhradně a s konečnou platností na uvážení panelu Bug Bounty Nadace Ethereum.",
   "page-upgrades-bug-bounty-leaderboard": "Zobrazit kompletní žebříčky",
   "page-upgrades-bug-bounty-leaderboard-list": "Žebříček Bug Bounty",
+  "page-upgrades-bug-bounty-leaderboard-position": "Na {rank}. místě se ziskem {score, plural, one {# bodu} other {# bodů}}",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "(Zobrazit profil na GitHubu)",
   "page-upgrades-bug-bounty-leaderboard-points": "bodů",
   "page-upgrades-bug-bounty-ledger-desc": "Specifikace Etherea podrobně popisují zdůvodnění návrhu pro exekuční vrstvu a vrstvu konsensu.",
   "page-upgrades-bug-bounty-ledger-title": "Chyby ve specifikaci",

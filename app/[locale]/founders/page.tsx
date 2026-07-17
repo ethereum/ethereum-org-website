@@ -1,14 +1,15 @@
 import React from "react"
 import { Banknote, ChartNoAxesCombined, Handshake } from "lucide-react"
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
-import ContentHero from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
 import { Section } from "@/components/ui/section"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Tag } from "@/components/ui/tag"
@@ -22,7 +23,6 @@ import Arbitrum from "./logos/arbitrum.svg"
 import Base from "./logos/base.svg"
 import Devconnect from "./logos/devconnect.svg"
 import EcosystemSupport from "./logos/ecosystem-support-program.svg"
-import EFFounderSuccess from "./logos/ef-founder-success.svg"
 import EnsBuilderGrants from "./logos/ens-builder-grants.svg"
 import EthGlobal from "./logos/ethglobal.svg"
 // import Gitcoin from "./logos/gitcoin.svg"
@@ -313,18 +313,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             name: "ETHGlobal",
           }),
         },
-        {
-          name: "Ethereum Foundation Founder Support",
-          Logo: EFFounderSuccess,
-          tags: [],
-          subtitle: t("page-founders-partnerships-ef-founder-support-subtitle"),
-          description: t(
-            "page-founders-partnerships-ef-founder-support-description"
-          ),
-          highlights: [],
-          href: "https://efdn.notion.site/255d989555418113975ff62641d9c814",
-          ctaLabel: t("page-founders-partnerships-ef-founder-support-cta"),
-        },
         // {
         //   name: "Base",
         //   Logo: Base,
@@ -348,7 +336,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <FoundersPageJsonLD locale={locale} contributors={contributors} />
 
       <div>
-        <ContentHero
+        <PageHero
           breadcrumbs={{ slug: "build/founders", startDepth: 1 }}
           heroImg={heroImg}
           title={t("page-founders-title")}
@@ -383,7 +371,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   value={key}
                   className="mt-12 border-0 p-0"
                 >
-                  <div className="grid grid-cols-fill-4 gap-4">
+                  <Grid>
                     {entities.map(
                       ({
                         name,
@@ -441,7 +429,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         </Card>
                       )
                     )}
-                  </div>
+                  </Grid>
                 </TabsContent>
               ))}
             </Tabs>
@@ -457,6 +445,8 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-founders")
 

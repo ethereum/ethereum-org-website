@@ -4,7 +4,8 @@ description: Temukan sumber daya pengembangan Ethereum untuk berbagai bahasa pem
 lang: id
 ---
 
-Kesalahpahaman yang umum terjadi adalah bahwa pengembang harus menulis [kontrak pintar](/developers/docs/smart-contracts/) untuk membangun di Ethereum. Ini salah. Salah satu keindahan jaringan dan komunitas Ethereum adalah Anda dapat [berpartisipasi](/community/) dalam hampir semua bahasa pemrograman.
+Kesalahpahaman yang umum terjadi adalah bahwa pengembang harus menulis [kontrak pintar](/developers/docs/smart-contracts/) untuk membangun di Ethereum. Ini tidak benar.
+Salah satu keindahan dari jaringan dan komunitas Ethereum adalah Anda dapat [berpartisipasi](/community/) menggunakan hampir semua bahasa pemrograman.
 
 Ethereum dan komunitasnya merangkul sumber terbuka (open source). Anda dapat menemukan proyek komunitas - implementasi klien, API, kerangka kerja pengembangan, alat pengujian - dalam berbagai macam bahasa.
 
@@ -25,6 +26,6 @@ Pilih bahasa pemrograman pilihan Anda untuk menemukan proyek, sumber daya, dan k
 
 ### Bagaimana jika bahasa saya tidak didukung {#other-lang}
 
-Jika Anda ingin menautkan ke sumber daya atau menunjuk ke komunitas virtual untuk bahasa pemrograman tambahan, Anda dapat meminta halaman baru dengan [membuka sebuah isu](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
+Jika Anda ingin menautkan ke sumber daya atau mengarahkan ke komunitas virtual untuk bahasa pemrograman tambahan, Anda dapat meminta halaman baru dengan [membuka isu](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
-Jika Anda hanya ingin menulis kode untuk berinteraksi dengan blockchain menggunakan bahasa yang saat ini tidak didukung, Anda dapat menggunakan [antarmuka JSON-RPC](/developers/docs/apis/json-rpc/) untuk terhubung ke jaringan Ethereum. Bahasa pemrograman apa pun yang dapat menggunakan TCP/IP dapat menggunakan antarmuka ini.
+Jika Anda hanya ingin menulis kode untuk berinteraksi dengan rantai blok menggunakan bahasa yang saat ini tidak didukung, Anda dapat menggunakan [antarmuka JSON-RPC](/developers/docs/apis/json-rpc/) untuk terhubung ke jaringan Ethereum. Bahasa pemrograman apa pun yang dapat menggunakan TCP/IP dapat menggunakan antarmuka ini.

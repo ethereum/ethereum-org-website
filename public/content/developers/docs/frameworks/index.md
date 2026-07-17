@@ -64,8 +64,9 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Templates](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-Eth -** **_Ethers.js + Hardhat + React components and hooks for web3: everything you need to get started building decentralized applications powered by smart contracts._**
+**Scaffold-ETH 2 -** **_An up-to-date toolkit for building decentralized applications, built on wagmi, viem, Next.js, and Hardhat or Foundry._**
 
+- [Website](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
 **Tenderly -** **_Web3 development platform that enables blockchain developers to build, test, debug, monitor, and operate smart contracts and improve dapp UX._**
@@ -145,6 +146,11 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [GitHub](https://github.com/uport-project/veramo)
 - [Discord](https://discord.com/invite/FRRBdjemHV)
 - [NPM Package](https://www.npmjs.com/package/@veramo/core)
+
+**Moccasin -** **_A fast, Pythonic smart contract development and testing framework for Vyper, built on Titanoboa._**
+
+- [Documentation](https://cyfrin.github.io/moccasin/)
+- [GitHub](https://github.com/Cyfrin/moccasin)
 
 ## Further reading {#further-reading}
 

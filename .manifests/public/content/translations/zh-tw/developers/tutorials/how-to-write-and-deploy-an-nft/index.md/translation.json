@@ -1,0 +1,437 @@
+{
+  "version": 1,
+  "locale": "zh-tw",
+  "translatedAt": "2026-06-18T00:10:19.026Z",
+  "englishManifestHash": "2b00fe7982a8",
+  "placeholderOrder": [
+    "LINK-5c9ac9",
+    "LINK-c6b559",
+    "LINK-e4be84",
+    "LINK-694db2",
+    "LINK-2e186a",
+    "LINK-34265f",
+    "LINK-65b093",
+    "LINK-2e186a",
+    "LINK-e49f0e",
+    "LINK-31af26",
+    "IMAGE-285c94",
+    "IMAGE-4dfa9c",
+    "LINK-0eaf8d",
+    "LINK-f9ea87",
+    "IMAGE-848058",
+    "LINK-0475cf",
+    "LINK-969eb0",
+    "LINK-97d164",
+    "CODE-9a90f2",
+    "LINK-90a487",
+    "LINK-5a960d",
+    "CODEBLOCK-07a90c",
+    "LINK-56ca94",
+    "LINK-88781b",
+    "LINK-191c9a",
+    "CODE-b094db",
+    "LINK-a13ed3",
+    "CODEBLOCK-a7cfb2",
+    "CODE-71859f",
+    "LINK-898c48",
+    "LINK-301fcb",
+    "LINK-0b9f6b",
+    "CODE-a5fbc1",
+    "CODE-b7f373",
+    "CODE-09565d",
+    "CODE-915310",
+    "CODE-e6ec7f",
+    "CODE-480e30",
+    "LINK-907faa",
+    "CODE-e9cbb0",
+    "LINK-5ebe14",
+    "IMAGE-83922d",
+    "CODE-e9cbb0",
+    "LINK-794750",
+    "LINK-d5ca30",
+    "LINK-459fd8",
+    "LINK-df2c52",
+    "CODEBLOCK-49f2b6",
+    "LINK-5715b2",
+    "CODE-a3e5b0",
+    "CODE-c34f3d",
+    "CODEBLOCK-507091",
+    "LINK-dd6f99",
+    "LINK-18d20e",
+    "IMAGE-7db63f",
+    "IMAGE-0ce9e0",
+    "LINK-8b3416",
+    "IMAGE-1cdcfd",
+    "LINK-3a0da8",
+    "LINK-8fb112",
+    "LINK-d2691d",
+    "LINK-5b60a4",
+    "LINK-262065"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-07a90c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a7cfb2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-49f2b6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-507091": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-9a90f2": {
+      "type": "inline-code",
+      "values": {
+        "content": "{\"jsonrpc\": \"2.0\", \"id\": 0, \"result\": \"0xde0b6b3a7640000\"}"
+      }
+    },
+    "CODE-b094db": {
+      "type": "inline-code",
+      "values": {
+        "content": "contracts"
+      }
+    },
+    "CODE-71859f": {
+      "type": "inline-code",
+      "values": {
+        "content": "npm install @openzeppelin/contracts^4.0.0"
+      }
+    },
+    "CODE-a5fbc1": {
+      "type": "inline-code",
+      "values": {
+        "content": "ownerOf"
+      }
+    },
+    "CODE-b7f373": {
+      "type": "inline-code",
+      "values": {
+        "content": "transferFrom"
+      }
+    },
+    "CODE-09565d": {
+      "type": "inline-code",
+      "values": {
+        "content": "mintNFT(address recipient, string memory tokenURI)"
+      }
+    },
+    "CODE-915310": {
+      "type": "inline-code",
+      "values": {
+        "content": "address recipient"
+      }
+    },
+    "CODE-e6ec7f": {
+      "type": "inline-code",
+      "values": {
+        "content": "string memory tokenURI"
+      }
+    },
+    "CODE-480e30": {
+      "type": "inline-code",
+      "values": {
+        "content": "mintNFT"
+      }
+    },
+    "CODE-e9cbb0": {
+      "type": "inline-code",
+      "values": {
+        "content": ".env"
+      }
+    },
+    "CODE-a3e5b0": {
+      "type": "inline-code",
+      "values": {
+        "content": "scripts/"
+      }
+    },
+    "CODE-c34f3d": {
+      "type": "inline-code",
+      "values": {
+        "content": "deploy.js"
+      }
+    },
+    "IMAGE-285c94": {
+      "type": "image",
+      "values": {
+        "path": "./create-your-app.png"
+      }
+    },
+    "IMAGE-4dfa9c": {
+      "type": "image",
+      "values": {
+        "path": "./alchemy-explorer-sepolia.png"
+      }
+    },
+    "IMAGE-848058": {
+      "type": "image",
+      "values": {
+        "path": "./metamask-goerli.png"
+      }
+    },
+    "IMAGE-83922d": {
+      "type": "image",
+      "values": {
+        "path": "./copy-alchemy-api-url.gif"
+      }
+    },
+    "IMAGE-7db63f": {
+      "type": "image",
+      "values": {
+        "path": "./etherscan-sepoila-contract-creation.png"
+      }
+    },
+    "IMAGE-0ce9e0": {
+      "type": "image",
+      "values": {
+        "path": "./etherscan-sepolia-tx-details.png"
+      }
+    },
+    "IMAGE-1cdcfd": {
+      "type": "image",
+      "values": {
+        "path": "./alchemy-explorer-goerli.png"
+      }
+    },
+    "LINK-5c9ac9": {
+      "type": "link",
+      "values": {
+        "url": "https://metamask.io/"
+      }
+    },
+    "LINK-c6b559": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.0/"
+      }
+    },
+    "LINK-e4be84": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/"
+      }
+    },
+    "LINK-694db2": {
+      "type": "link",
+      "values": {
+        "url": "https://pinata.cloud/"
+      }
+    },
+    "LINK-2e186a": {
+      "type": "link",
+      "values": {
+        "url": "https://alchemy.com/signup/eth"
+      }
+    },
+    "LINK-34265f": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/gWuC7zB"
+      }
+    },
+    "LINK-65b093": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemy.com/alchemy/enhanced-apis/nft-api"
+      }
+    },
+    "LINK-e49f0e": {
+      "type": "link",
+      "values": {
+        "url": "https://alchemy.com/signup/eth"
+      }
+    },
+    "LINK-31af26": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/guides/choosing-a-network"
+      }
+    },
+    "LINK-0eaf8d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-f9ea87": {
+      "type": "link",
+      "values": {
+        "url": "https://metamask.io/download"
+      }
+    },
+    "LINK-0475cf": {
+      "type": "link",
+      "values": {
+        "url": "https://sepoliafaucet.com/"
+      }
+    },
+    "LINK-97d164": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance"
+      }
+    },
+    "LINK-969eb0": {
+      "type": "link",
+      "values": {
+        "url": "https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D"
+      }
+    },
+    "LINK-90a487": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm"
+      }
+    },
+    "LINK-5a960d": {
+      "type": "link",
+      "values": {
+        "url": "https://nodejs.org/en/download/"
+      }
+    },
+    "LINK-56ca94": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/getting-started/#overview"
+      }
+    },
+    "LINK-88781b": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/getting-started/#overview"
+      }
+    },
+    "LINK-191c9a": {
+      "type": "link",
+      "values": {
+        "url": "https://code.visualstudio.com/"
+      }
+    },
+    "LINK-a13ed3": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/contracts/3.x/erc721"
+      }
+    },
+    "LINK-898c48": {
+      "type": "link",
+      "values": {
+        "url": "https://openzeppelin.com/"
+      }
+    },
+    "LINK-301fcb": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-721"
+      }
+    },
+    "LINK-0b9f6b": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/contracts/3.x/access-control"
+      }
+    },
+    "LINK-907faa": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/sending-transactions-using-web3-and-alchemy/"
+      }
+    },
+    "LINK-5ebe14": {
+      "type": "link",
+      "values": {
+        "url": "https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key"
+      }
+    },
+    "LINK-794750": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/json-rpc/"
+      }
+    },
+    "LINK-d5ca30": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/plugins/"
+      }
+    },
+    "LINK-459fd8": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers"
+      }
+    },
+    "LINK-df2c52": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethers-io/ethers.js/"
+      }
+    },
+    "LINK-5715b2": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/u72VCg3"
+      }
+    },
+    "LINK-dd6f99": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/tutorial/testing-contracts.html#writing-tests"
+      }
+    },
+    "LINK-18d20e": {
+      "type": "link",
+      "values": {
+        "url": "https://sepolia.etherscan.io/"
+      }
+    },
+    "LINK-8b3416": {
+      "type": "link",
+      "values": {
+        "url": "https://dashboard.alchemyapi.io/explorer"
+      }
+    },
+    "LINK-3a0da8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/json-rpc/#eth_sendrawtransaction"
+      }
+    },
+    "LINK-8fb112": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/json-rpc/#eth_gettransactionbyhash"
+      }
+    },
+    "LINK-d2691d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/sending-transactions-using-web3-and-alchemy/"
+      }
+    },
+    "LINK-5b60a4": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/how-to-mint-an-nft/"
+      }
+    },
+    "LINK-262065": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/how-to-view-nft-in-metamask/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T00:10:19.026Z",
+      "status": "success"
+    }
+  }
+}

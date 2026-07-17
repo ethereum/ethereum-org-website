@@ -62,7 +62,7 @@ const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
         </AvatarBase>
       </CardHeader>
       <CardContent spacing="sm">
-        <CardTitle variant="semibold" spacing="none">
+        <CardTitle size="sm" spacing="none">
           {name}
         </CardTitle>
         <CardParagraph textColor="body">{role}</CardParagraph>

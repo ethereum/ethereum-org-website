@@ -16,7 +16,7 @@ const baseStyles = {
   th: "text-start border-b border-body text-body normal-case align-bottom p-4",
   tr: "not-[:last-of-type]:[&_th]:border-e-2 not-[:last-of-type]:[&_th]:border-e-background not-[:last-of-type]:[&_td]:border-e-2 not-[:last-of-type]:[&_td]:border-e-background",
   td: "p-4",
-  tbody: "[&_tr]:align-top hover:[&_tr]:bg-background-highlight",
+  tbody: "[&_tr]:align-top [&_tr:hover]:bg-background-highlight",
 }
 
 const stripedTbody = "even:[&_tr]:bg-background-highlight"
@@ -48,13 +48,16 @@ const tableVariants = tv({
       },
       minimal: {
         ...baseStyles,
+        // No column separators — they're meant to carve gaps between
+        // striped/highlighted cells and only show as stray lines here.
+        tr: "",
       },
       product: {
         table: "caption-bottom text-sm",
         thead: "[&-tr:last-child]:border-0",
         tbody: "&_tr:last-child]:border-0",
         tr: "hover:bg-muted/50 data-[state=selected]:bg-muted border-t transition-colors first-of-type:border-t-0",
-        th: "text-muted-foreground h-12 px-4 text-left align-middle font-medium [&:has([role=checkbox])]:pr-0",
+        th: "text-muted-foreground h-12 px-4 text-start align-middle font-medium [&:has([role=checkbox])]:pr-0",
         td: "align-middle p-4 [&:has([role=checkbox])]:pr-0",
       },
       "highlight-first-column": {
@@ -82,6 +85,17 @@ type TableVariantsReturnType = ReturnType<typeof tableVariants>
 type CellPropsWithAlign<C> = Omit<C, "align"> & {
   align?: React.CSSProperties["textAlign"]
 }
+
+const withTextAlign = (
+  style: React.CSSProperties | undefined,
+  textAlign: React.CSSProperties["textAlign"] | undefined
+) =>
+  textAlign === undefined
+    ? style
+    : {
+        ...style,
+        textAlign,
+      }
 
 const TableStylesContext = createContext<{
   [P in keyof TableVariantsReturnType]: TableVariantsReturnType[P]
@@ -141,13 +155,13 @@ TableRow.displayName = "TableRow"
 const TableHead = React.forwardRef<
   HTMLTableCellElement,
   CellPropsWithAlign<React.ThHTMLAttributes<HTMLTableCellElement>>
->(({ className, align, ...props }, ref) => {
+>(({ className, align, style, ...props }, ref) => {
   const { th } = useTableStyles()
   return (
     <th
       ref={ref}
       className={cn(th(), className)}
-      style={{ textAlign: align }}
+      style={withTextAlign(style, align)}
       {...props}
     />
   )
@@ -157,14 +171,14 @@ TableHead.displayName = "TableHead"
 const TableCell = React.forwardRef<
   HTMLTableCellElement,
   CellPropsWithAlign<React.TdHTMLAttributes<HTMLTableCellElement>>
->(({ className, align, children, ...props }, ref) => {
+>(({ className, align, children, style, ...props }, ref) => {
   const { td } = useTableStyles()
 
   return (
     <td
       ref={ref}
       className={cn(td(), className)}
-      style={{ textAlign: align }}
+      style={withTextAlign(style, align)}
       {...props}
     >
       {children}

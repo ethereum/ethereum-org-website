@@ -1,0 +1,814 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/payments/index.md",
+  "generatedAt": "2026-06-18T00:35:10.631Z",
+  "rootHash": "b1f0765ced73",
+  "tree": {
+    "contentHash": "df186b638de6",
+    "anchorHash": "a8d6f9cd5ad7",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "e731b2c33eaf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:metaTitle": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "74a5e40762a2"
+      },
+      "frontmatter:description": {
+        "contentHash": "829d2472377a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "2290d7d70dea"
+      },
+      "frontmatter:sidebarDepth": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d4735e3a265e"
+      },
+      "frontmatter:image": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "977356a21387"
+      },
+      "frontmatter:alt": {
+        "contentHash": "836930de194c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:summaryPoints": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prose:0": {
+        "contentHash": "29fab61a5eda",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "component:10": {
+        "contentHash": "bef2ca886fcf",
+        "anchorHash": "852a3152c7b9",
+        "children": {
+          "attr:style": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e73ec0ddd2b3"
+          },
+          "image:0": {
+            "contentHash": "3d2627ba232b",
+            "anchorHash": "bef121f7b22c"
+          }
+        },
+        "childrenOrder": [
+          "attr:style",
+          "image:0"
+        ]
+      },
+      "remittances": {
+        "contentHash": "b492197d4ad0",
+        "anchorHash": "110e40dc0a88",
+        "labelHash": "3111309a12bf",
+        "children": {
+          "_label": {
+            "contentHash": "3111309a12bf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "556ccc4fc460",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "6e64b78e0658",
+            "anchorHash": "6eeb39116c0b",
+            "children": {
+              "component:0": {
+                "contentHash": "216ac064235a",
+                "anchorHash": "da2aee119d18",
+                "children": {
+                  "attr:title": {
+                    "contentHash": "893befe8c78a",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:description": {
+                    "contentHash": "152ca72818ea",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:emoji": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "e64b0c60e49f"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:title",
+                  "attr:description",
+                  "attr:emoji"
+                ]
+              },
+              "component:1": {
+                "contentHash": "24f358ff9ea3",
+                "anchorHash": "8566b112f990",
+                "children": {
+                  "attr:title": {
+                    "contentHash": "803487d426b1",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:description": {
+                    "contentHash": "d09598d6b02e",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:emoji": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "fdf9cd1c63fb"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:title",
+                  "attr:description",
+                  "attr:emoji"
+                ]
+              },
+              "component:2": {
+                "contentHash": "f3ac48a49900",
+                "anchorHash": "611101bcdfd9",
+                "children": {
+                  "attr:title": {
+                    "contentHash": "2fabbac9e3d9",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:description": {
+                    "contentHash": "7c9b750b527d",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:emoji": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "c4b4332a65af"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:title",
+                  "attr:description",
+                  "attr:emoji"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "component:0",
+              "component:1",
+              "component:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2"
+        ]
+      },
+      "access-to-global-currencies": {
+        "contentHash": "5226ffe3de83",
+        "anchorHash": "3f1e729152f9",
+        "labelHash": "20a9e9e7e1e3",
+        "children": {
+          "_label": {
+            "contentHash": "20a9e9e7e1e3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "9a70824a659a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "f85c763716e7",
+            "anchorHash": "f3206d18005b",
+            "children": {
+              "attr:href": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "a76a84570e0a"
+              },
+              "prose:0": {
+                "contentHash": "830bdf159bfa",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:href",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2"
+        ]
+      },
+      "buying-goods-and-payment-for-services": {
+        "contentHash": "923e4a8c0fd9",
+        "anchorHash": "c4982c188a99",
+        "labelHash": "ef58028026e5",
+        "children": {
+          "_label": {
+            "contentHash": "ef58028026e5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "0c1337344ec5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "20850aaf76e7",
+            "anchorHash": "ce6aa5976020",
+            "children": {
+              "attr:variant": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "2937013f2181"
+              },
+              "component:0": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "491aaf33b92d",
+                "children": {
+                  "attr:text": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "252d79a64486"
+                  }
+                }
+              },
+              "component:1": {
+                "contentHash": "95bf4422692d",
+                "anchorHash": "dd9e6921edb8",
+                "children": {
+                  "attr:className": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "e796b9e20a49"
+                  },
+                  "prose:0": {
+                    "contentHash": "846c52a27a62",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "component:1": {
+                    "contentHash": "7cfaeba8a9e4",
+                    "anchorHash": "fed1eb2dcb83",
+                    "children": {
+                      "attr:href": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "d722be877886"
+                      },
+                      "prose:0": {
+                        "contentHash": "61e8d44ad423",
+                        "anchorHash": "e3b0c44298fc"
+                      }
+                    },
+                    "childrenOrder": [
+                      "attr:href",
+                      "prose:0"
+                    ]
+                  }
+                },
+                "childrenOrder": [
+                  "attr:className",
+                  "prose:0",
+                  "component:1"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "attr:variant",
+              "component:0",
+              "component:1"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2"
+        ]
+      },
+      "pay-with-self-custodial-crypto-cards": {
+        "contentHash": "71c3dcf5806b",
+        "anchorHash": "e1ffd3e69e7a",
+        "labelHash": "6a4dcbfa714f",
+        "children": {
+          "_label": {
+            "contentHash": "6a4dcbfa714f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "8646bcb6b30e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "crypto-cards-examples": {
+            "contentHash": "b75556fc121c",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "e68ee04dff59",
+            "children": {
+              "_label": {
+                "contentHash": "e68ee04dff59",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "f0ba71f538c6",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "crypto-card-custody-comparison": {
+            "contentHash": "602d642f58d1",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "f4f046d323de",
+            "children": {
+              "_label": {
+                "contentHash": "f4f046d323de",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "dd05a6d04a0c",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "crypto-cards-examples",
+          "crypto-card-custody-comparison"
+        ]
+      },
+      "x402": {
+        "contentHash": "ea26fb3e0cfa",
+        "anchorHash": "8a55d7da28cf",
+        "labelHash": "b108f2e2d37d",
+        "children": {
+          "_label": {
+            "contentHash": "b108f2e2d37d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "e2764810dbaf",
+            "anchorHash": "14f7b045d2c0"
+          },
+          "prose:3": {
+            "contentHash": "ddf70f9d18b8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "8cad848f94ed",
+            "anchorHash": "659dc09e68ef"
+          },
+          "prose:4": {
+            "contentHash": "b31f8cb99661",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "8f46303a9160",
+            "anchorHash": "3b52f2e35fd0"
+          },
+          "prose:5": {
+            "contentHash": "c484f52ae633",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "x402-how": {
+            "contentHash": "ad696cfab95d",
+            "anchorHash": "490def8eac41",
+            "labelHash": "3fc57158ca12",
+            "children": {
+              "_label": {
+                "contentHash": "3fc57158ca12",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:5": {
+                "contentHash": "39c86e119b0a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "5118fcdc9511"
+              },
+              "prose:6": {
+                "contentHash": "639eafcb96bb",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "e8d44050873d",
+                "anchorHash": "aeb8a6ee9055"
+              },
+              "prose:7": {
+                "contentHash": "efa4334c6c92",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "3d9e43485a12",
+                "anchorHash": "2b04dd5166cb"
+              },
+              "prose:8": {
+                "contentHash": "afe170ed4bd4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "db9636b7d698",
+                "anchorHash": "6d38cc0b9a5d"
+              },
+              "prose:9": {
+                "contentHash": "4362a992743b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "b9cd8c7d3fe6",
+                "anchorHash": "753587c44bf9"
+              },
+              "prose:10": {
+                "contentHash": "c6afc87557dd",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:5",
+              "inline-code:0",
+              "prose:6",
+              "link:1",
+              "prose:7",
+              "link:2",
+              "prose:8",
+              "link:3",
+              "prose:9",
+              "link:4",
+              "prose:10"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4",
+          "link:2",
+          "prose:5",
+          "x402-how"
+        ]
+      },
+      "salary-payments": {
+        "contentHash": "d20a35bb8be0",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "b4d1e6df46a1",
+        "children": {
+          "_label": {
+            "contentHash": "b4d1e6df46a1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "1235e43ab1d4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "global-relief-efforts": {
+        "contentHash": "62622c96ae21",
+        "anchorHash": "1e04c74eb5c1",
+        "labelHash": "4a811a4990fa",
+        "children": {
+          "_label": {
+            "contentHash": "4a811a4990fa",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:9": {
+            "contentHash": "c96691763e75",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "cef2724e1c95",
+            "anchorHash": "07ac936834e0"
+          },
+          "prose:10": {
+            "contentHash": "940a41e2f4a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "a8a5fdc05fd1",
+            "anchorHash": "d0d62c9d9711"
+          },
+          "prose:11": {
+            "contentHash": "c8661d5fa58a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "1066cc11c255",
+            "anchorHash": "29457b5c0ef0"
+          },
+          "prose:12": {
+            "contentHash": "55a3eb2be9a6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "deb2caeec369",
+            "anchorHash": "73777a3080e3"
+          },
+          "prose:13": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "23e2f2d669bf",
+            "anchorHash": "2a0edc7acbd1"
+          },
+          "prose:14": {
+            "contentHash": "ed5bd5b81a31",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "598adb9464fb",
+            "anchorHash": "a55582013193"
+          },
+          "prose:15": {
+            "contentHash": "c4690edfd74d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "2b61fd0f3386",
+            "anchorHash": "6c406264d865"
+          },
+          "prose:16": {
+            "contentHash": "14cf3ba9452e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "48b4f92b82f3",
+            "anchorHash": "0b7b765cab29"
+          },
+          "prose:17": {
+            "contentHash": "117f204937ff",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:8": {
+            "contentHash": "baa25eb4ed6c",
+            "anchorHash": "53f9987766b0"
+          },
+          "prose:18": {
+            "contentHash": "bb9c1f479bbd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:20": {
+            "contentHash": "fe9e6f335f28",
+            "anchorHash": "8e0aff3be0aa",
+            "children": {
+              "attr:style": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e73ec0ddd2b3"
+              },
+              "image:0": {
+                "contentHash": "501e76a102ec",
+                "anchorHash": "8234249799fb"
+              }
+            },
+            "childrenOrder": [
+              "attr:style",
+              "image:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:9",
+          "link:0",
+          "prose:10",
+          "link:1",
+          "prose:11",
+          "link:2",
+          "prose:12",
+          "link:3",
+          "prose:13",
+          "link:4",
+          "prose:14",
+          "link:5",
+          "prose:15",
+          "link:6",
+          "prose:16",
+          "link:7",
+          "prose:17",
+          "link:8",
+          "prose:18",
+          "component:20"
+        ]
+      },
+      "ethereum-vs-fiat": {
+        "contentHash": "7bab72d05ddc",
+        "anchorHash": "86f975fb3732",
+        "labelHash": "8fa8447b3b57",
+        "children": {
+          "_label": {
+            "contentHash": "8fa8447b3b57",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "579047a93cbf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "programmability": {
+            "contentHash": "2835963101f2",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "db4a3abf5898",
+            "children": {
+              "_label": {
+                "contentHash": "db4a3abf5898",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "965d01863f3d",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "speed": {
+            "contentHash": "6d211c32a5d6",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "c372fee9b456",
+            "children": {
+              "_label": {
+                "contentHash": "c372fee9b456",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "fbee51cd6561",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "lower-fees": {
+            "contentHash": "01c9e49150d5",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "8cd0a2c0e6dd",
+            "children": {
+              "_label": {
+                "contentHash": "8cd0a2c0e6dd",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "c65f0ef8e50f",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "transparency": {
+            "contentHash": "ff01134294dd",
+            "anchorHash": "8a9371acde63",
+            "labelHash": "8b773803e66e",
+            "children": {
+              "_label": {
+                "contentHash": "8b773803e66e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "5ba5967f32d8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:2": {
+                "contentHash": "6098c7f6c162",
+                "anchorHash": "01a67a0237e6",
+                "children": {
+                  "attr:style": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "e73ec0ddd2b3"
+                  },
+                  "image:0": {
+                    "contentHash": "d84842d12f78",
+                    "anchorHash": "5957789a219a"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:style",
+                  "image:0"
+                ]
+              },
+              "component:4": {
+                "contentHash": "8557ce87eeca",
+                "anchorHash": "ce6aa5976020",
+                "children": {
+                  "attr:variant": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "2937013f2181"
+                  },
+                  "component:0": {
+                    "contentHash": "4b9f7d802648",
+                    "anchorHash": "491aaf33b92d",
+                    "children": {
+                      "attr:text": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "252d79a64486"
+                      }
+                    }
+                  },
+                  "component:1": {
+                    "contentHash": "3905bb5ff964",
+                    "anchorHash": "dd9e6921edb8",
+                    "children": {
+                      "attr:className": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "e796b9e20a49"
+                      },
+                      "prose:0": {
+                        "contentHash": "cdb7a8937afc",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "component:1": {
+                        "contentHash": "ce271955d7d3",
+                        "anchorHash": "fed1eb2dcb83",
+                        "children": {
+                          "attr:href": {
+                            "contentHash": "e3b0c44298fc",
+                            "anchorHash": "d722be877886"
+                          },
+                          "prose:0": {
+                            "contentHash": "4efacbdacb80",
+                            "anchorHash": "e3b0c44298fc"
+                          }
+                        },
+                        "childrenOrder": [
+                          "attr:href",
+                          "prose:0"
+                        ]
+                      }
+                    },
+                    "childrenOrder": [
+                      "attr:className",
+                      "prose:0",
+                      "component:1"
+                    ]
+                  }
+                },
+                "childrenOrder": [
+                  "attr:variant",
+                  "component:0",
+                  "component:1"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "component:2",
+              "prose:0",
+              "component:4"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "programmability",
+          "speed",
+          "lower-fees",
+          "transparency"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:metaTitle",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:template",
+      "frontmatter:sidebarDepth",
+      "frontmatter:image",
+      "frontmatter:alt",
+      "frontmatter:summaryPoints",
+      "prose:0",
+      "component:10",
+      "remittances",
+      "access-to-global-currencies",
+      "buying-goods-and-payment-for-services",
+      "pay-with-self-custodial-crypto-cards",
+      "x402",
+      "salary-payments",
+      "global-relief-efforts",
+      "ethereum-vs-fiat"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}
