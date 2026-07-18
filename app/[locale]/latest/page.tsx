@@ -204,6 +204,8 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
+  setRequestLocale(locale)
+
   const t = await getTranslations("page-latest")
 
   const metadata = await getMetadata({
@@ -218,10 +220,7 @@ export async function generateMetadata(props: {
     alternates: {
       ...(metadata.alternates ?? {}),
       types: {
-        "application/rss+xml": getFullUrl(locale, "/latest/feed.xml").replace(
-          /\/$/,
-          ""
-        ),
+        "application/rss+xml": getFullUrl(locale, "/latest/feed/"),
       },
     },
   }
