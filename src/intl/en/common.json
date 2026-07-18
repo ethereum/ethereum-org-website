@@ -231,6 +231,8 @@
   "less": "Less",
   "light-mode": "Light",
   "light-mode-aria-label": "Switch to light mode",
+  "link-external-assistive-text": "(opens in a new tab)",
+  "link-mailto-assistive-text": "(opens email client)",
   "loading": "Loading...",
   "loading-error-refresh": "Error, please refresh.",
   "meetups": "Meetups",
