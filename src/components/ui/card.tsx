@@ -5,9 +5,10 @@ import { Slot } from "@radix-ui/react-slot"
 import Emoji from "@/components/Emoji"
 
 import { cn } from "@/lib/utils/cn"
+import { isExternal } from "@/lib/utils/url"
 
 import { Button, type ButtonProps } from "./buttons/Button"
-import { BaseLink, LinkProps } from "./Link"
+import { BaseLink, ExternalLinkIcon, LinkProps } from "./Link"
 
 const cardVariants = cva(
   cn(
@@ -107,6 +108,9 @@ const Card = React.forwardRef<HTMLDivElement | HTMLAnchorElement, CardProps>(
           className={classes}
           customEventOptions={customEventOptions}
           hideArrow
+          // Card hides BaseLink's trailing arrow; instead a CardButtonFake CTA
+          // surfaces it on the button via this flag (see CardButtonFake).
+          data-external={isExternal(href) || undefined}
           {...props}
         />
       )
@@ -209,6 +213,10 @@ const CardButtonFake = React.forwardRef<HTMLDivElement, CardButtonFakeProps>(
     <Button asChild variant={variant} size={size} isSecondary={isSecondary}>
       <div ref={ref} data-label="button-link" className={className} {...props}>
         {children}
+        {/* Hidden unless the enclosing link Card is external (data-external on
+            the group/link anchor). The card anchor already carries the sr-only
+            "opens in a new tab" text, so this glyph is purely visual. */}
+        <ExternalLinkIcon className="hidden group-data-external/link:inline-block" />
       </div>
     </Button>
   )

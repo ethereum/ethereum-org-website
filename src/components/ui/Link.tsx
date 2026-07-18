@@ -16,10 +16,13 @@ import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 import { Link as I18nLink } from "@/i18n/navigation"
 import { usePathname } from "@/i18n/navigation"
 
-export const ExternalLinkIcon = () => (
+export const ExternalLinkIcon = ({ className }: { className?: string }) => (
   <ExternalLink
     data-label="arrow"
-    className="ms-1 mb-0.5! inline-block size-[0.875em] max-h-4 max-w-4 shrink-0 rtl:-scale-x-100"
+    className={cn(
+"ms-1 mb-0.5! inline-block size-[0.875em] max-h-4 max-w-4 shrink-0 rtl:-scale-x-100",
+      className
+    )}
   />
 )
 
