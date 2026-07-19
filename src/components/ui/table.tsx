@@ -17,7 +17,7 @@ const stripedTbody = "even:[&_tr]:bg-background-highlight"
 
 const tableVariants = tv({
   slots: {
-    table: "w-full table-fixed",
+    table: "w-full",
     // slot key with empty string to establish the key name for variants (TypeScript)
     th: "",
     tr: "",

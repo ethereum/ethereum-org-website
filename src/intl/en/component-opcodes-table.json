@@ -1,9 +1,0 @@
-{
-  "opcode": "Opcode",
-  "name": "Name",
-  "gas": "Gas",
-  "initial-stack": "Initial Stack",
-  "resulting-stack": "Resulting Stack",
-  "mem-storage": "Mem / Storage",
-  "notes": "Notes"
-}
