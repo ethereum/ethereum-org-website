@@ -152,6 +152,9 @@
           href: /developers/docs/apis/backend/
         - id: docs-nav-json-rpc
           href: /developers/docs/apis/json-rpc/
+    - id: docs-nav-authentication
+      href: /developers/docs/ethereum-stack/authentication/
+      description: docs-nav-authentication-description
     - id: docs-nav-data-and-analytics
       href: /developers/docs/data-and-analytics/
       description: docs-nav-data-and-analytics-description

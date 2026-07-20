@@ -2,6 +2,8 @@
   "docs-nav-accounts": "Accounts",
   "docs-nav-accounts-description": "Entities in the network that can hold a balance and send transactions",
   "docs-nav-advanced": "Advanced",
+  "docs-nav-authentication": "Authentication",
+  "docs-nav-authentication-description": "How users sign in to Ethereum apps with their wallet instead of a password",
   "docs-nav-backend-apis": "Backend APIs",
   "docs-nav-block-explorers": "Block explorers",
   "docs-nav-blocks": "Blocks",
