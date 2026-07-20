@@ -47,7 +47,7 @@ No password was ever typed, stored, or transmitted.
 
 A SIWE message looks like this:
 
-```
+```yaml
 example.com wants you to sign in with your Ethereum account:
 0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B
 
