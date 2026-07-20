@@ -45,9 +45,6 @@ jobs:
     # 1. Comment contains @claude /review-translations (from authorized user), OR
     # 2. PR is opened with title starting with "i18n:" (automatic), OR
     # 3. Manually dispatched from Actions tab with a PR number
-    # Automatic pull_request trigger disabled -- see `on:` block above.
-    # To re-enable, add a trailing ` ||` to the expression below and append
-    # the pull_request clause from the commented trigger block.
     if: |
       github.event_name == 'workflow_dispatch' ||
       (
@@ -63,6 +60,15 @@ jobs:
         contains(github.event.comment.body, '/review-translations') &&
         contains(fromJSON('["pettinarip","wackerow","nloureiro","konopkja","mnelsonBT"]'), github.event.comment.user.login)
       )
+      # Automatic pull_request trigger disabled -- see `on:` block above.
+      # To re-enable, uncomment the clause below and add a trailing ` ||` to the line above.
+      # || (
+      #   github.event_name == 'pull_request' &&
+      #   startsWith(github.event.pull_request.title, 'i18n:') &&
+      #   startsWith(github.event.pull_request.head.ref, 'intl/pending-') &&
+      #   github.event.pull_request.head.repo.full_name == github.repository &&
+      #   contains(fromJSON('["pettinarip","wackerow","nloureiro","konopkja","mnelsonBT"]'), github.event.pull_request.user.login)
+      # )
     runs-on: ubuntu-latest
     permissions:
       contents: write

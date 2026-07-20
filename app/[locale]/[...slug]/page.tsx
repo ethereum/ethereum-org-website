@@ -53,10 +53,7 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
   } = await getPageData({
     locale,
     slug,
-    baseComponents: {
-      ...mdComponents,
-      VideoWatch,
-    },
+    baseComponents: { ...mdComponents, VideoWatch },
     componentsMapping,
   })
 
