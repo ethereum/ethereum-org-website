@@ -776,6 +776,17 @@ export type ExtendedRollup = Rollup & {
 export type WalletData = {
   last_updated: string
   name: string
+  /**
+   * Stable URL slug. Defaults to `slugify(name)` via `getWalletSlug`; set
+   * explicitly only to keep a URL stable across a wallet rename.
+   */
+  slug?: string
+  /**
+   * English one-to-two-sentence description (source of truth). Optional
+   * forever — cards degrade gracefully when absent, and search falls back to
+   * name-only for wallets without one.
+   */
+  description?: string
   image: StaticImageData
   twBackgroundColor: string
   twGradiantBrandColor: string
