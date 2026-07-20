@@ -64,7 +64,7 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Templates](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-ETH 2 -** **_An up-to-date toolkit for building decentralized applications, built on wagmi, viem, Next.js, and Hardhat or Foundry._**
+**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem and RainbowKit with your choice of Hardhat or Foundry: contract hot reload, custom React hooks, a burner wallet and local faucet, and extension modules for full-stack dapp development._**
 
 - [Website](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
