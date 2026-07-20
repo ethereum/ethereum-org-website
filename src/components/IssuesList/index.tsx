@@ -26,12 +26,11 @@ const IssuesList = async ({ className }: IssuesListProps) => {
 
   return (
     <Grid className={cn("my-7", className)}>
-      {issues
-        .filter(
-          (issue): issue is GHIssue & { user: NonNullable<GHIssue["user"]> } =>
-            Boolean(issue.user)
-        )
-        .map((issue) => (
+      {issues.map((issue) => {
+        // Skip issues authored by deleted ("ghost") accounts (user: null).
+        if (!issue.user) return null
+
+        return (
           <Stack
             className="gap-4 rounded-md border border-border p-4"
             key={issue.title}
@@ -64,7 +63,8 @@ const IssuesList = async ({ className }: IssuesListProps) => {
               })}
             </Flex>
           </Stack>
-        ))}
+        )
+      })}
     </Grid>
   )
 }
