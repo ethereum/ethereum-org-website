@@ -156,7 +156,9 @@ export const CheckboxFilters: StoryObj = {
               config={config}
               selectedIds={selectedIds}
               onToggle={(optionId) =>
-                setFilter(key, toggleId(selectedIds, optionId))
+                setFilter(key, toggleId(selectedIds, optionId), {
+                  scroll: false,
+                })
               }
             />
           )

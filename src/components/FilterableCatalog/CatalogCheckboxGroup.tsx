@@ -1,5 +1,7 @@
 "use client"
 
+import { useId } from "react"
+
 import Checkbox from "@/components/ui/checkbox"
 
 import { numberFormat } from "@/lib/utils/numbers"
@@ -27,10 +29,13 @@ export default function CatalogCheckboxGroup({
   onToggle,
 }: CatalogCheckboxGroupProps) {
   const nf = numberFormat(locale)
+  const labelId = useId()
 
   return (
-    <div className="space-y-1">
-      <p className="px-3 py-2 text-sm font-bold">{config.label}</p>
+    <div role="group" aria-labelledby={labelId} className="space-y-1">
+      <p id={labelId} className="px-3 py-2 text-sm font-bold">
+        {config.label}
+      </p>
       {config.options.map((option) => (
         <label
           key={option.id}

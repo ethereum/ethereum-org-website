@@ -34,6 +34,12 @@ export type CatalogSidebarHelpers = {
 export type FilterableCatalogProps<TItem> = {
   locale: string
   items: TItem[]
+  /**
+   * Decides item membership from the deferred filter `state` and search `query`.
+   * Pass a stable reference (defined outside render, or memoized) — it's a
+   * dependency of the internal filtering memo, so a fresh function each render
+   * re-runs the filter over every item on every render.
+   */
   filterFn: CatalogFilterFn<TItem>
   labels: FilterableCatalogLabels
   /**
@@ -77,12 +83,14 @@ export default function FilterableCatalog<TItem>({
   const deferredSelection = useDeferredValue(selection)
   const isStale = search !== deferredSearch || selection !== deferredSelection
 
-  const setFilter: CatalogSetFilter = (key, value) => {
+  const setFilter: CatalogSetFilter = (key, value, options) => {
     setSelection((prev) => ({ ...prev, [key]: value }))
-    resultsTopRef.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    })
+    if (options?.scroll ?? true) {
+      resultsTopRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
   }
 
   const filteredItems = useMemo(

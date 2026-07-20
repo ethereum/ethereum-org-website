@@ -41,9 +41,19 @@ export type CatalogCheckboxGroupConfig = {
 /** Selected filter values keyed by an arbitrary consumer-chosen key */
 export type CatalogFilterState = Record<string, string | string[] | undefined>
 
+export type CatalogSetFilterOptions = {
+  /**
+   * Scroll the results region into view after the change. Defaults to `true`
+   * (right for single-select nav); pass `false` for multi-select toggles like
+   * checkboxes, where scrolling on every tick is jarring.
+   */
+  scroll?: boolean
+}
+
 export type CatalogSetFilter = (
   key: string,
-  value: string | string[] | undefined
+  value: string | string[] | undefined,
+  options?: CatalogSetFilterOptions
 ) => void
 
 export type CatalogFilterFn<TItem> = (
