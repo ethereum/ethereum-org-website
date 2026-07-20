@@ -8,7 +8,7 @@ type WideTableProps = ChildOnlyProp & {
 
 const WideTable = ({ className, ...props }: WideTableProps) => (
   <div
-    className={cn("[&_table]:min-w-[1100px] [&_table]:table-fixed", className)}
+    className={cn("[&_table]:min-w-5xl [&_table]:table-fixed", className)}
     {...props}
   />
 )
