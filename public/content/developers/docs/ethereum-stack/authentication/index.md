@@ -10,13 +10,13 @@ On Ethereum, a user proves their identity by **signing a message with their wall
 
 ## How is it different from web2? {#how-is-it-different}
 
-| Web2 | Ethereum |
-|------|----------|
-| Username + password | Wallet address + signature |
-| Server stores credentials | User holds private key |
+| Web2                              | Ethereum                                         |
+| --------------------------------- | ------------------------------------------------ |
+| Username + password               | Wallet address + signature                       |
+| Server stores credentials         | User holds private key                           |
 | Sessions managed by cookies / JWT | Sessions begin with an offchain wallet signature |
-| "Sign in with Google" | "Sign in with Ethereum" |
-| Password reset flows | Seed phrase recovery |
+| "Sign in with Google"             | "Sign in with Ethereum"                          |
+| Password reset flows              | Seed phrase recovery                             |
 
 The fundamental shift: in web2, a centralized server authenticates you. On Ethereum, **you authenticate yourself** by proving you control a specific address—and anyone can verify it independently.
 
