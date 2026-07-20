@@ -27,7 +27,10 @@ const IssuesList = async ({ className }: IssuesListProps) => {
   return (
     <Grid className={cn("my-7", className)}>
       {issues
-        .filter((issue) => issue.user)
+        .filter(
+          (issue): issue is GHIssue & { user: NonNullable<GHIssue["user"]> } =>
+            Boolean(issue.user)
+        )
         .map((issue) => (
           <Stack
             className="gap-4 rounded-md border border-border p-4"

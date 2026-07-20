@@ -1005,11 +1005,15 @@ export type GHIssue = {
   title: string
   html_url: string
   created_at: string
+  /**
+   * The issue author. GitHub's REST API returns `null` for issues authored by
+   * deleted ("ghost") accounts, so consumers must guard against it.
+   */
   user: {
     login: string
     html_url: string
     avatar_url: string
-  }
+  } | null
   labels: GHLabel[]
 }
 
