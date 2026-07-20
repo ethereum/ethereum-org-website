@@ -1,11 +1,11 @@
+import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import type { FileContributor, Lang, PageParams } from "@/lib/types"
+import type { PageParams } from "@/lib/types"
 
 import PageHero from "@/components/Hero/PageHero"
 import MainArticle from "@/components/MainArticle"
 
-import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { formatDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import {
@@ -13,25 +13,37 @@ import {
   getPersonaCounts,
   getWalletLanguageOptions,
   getWalletNetworks,
+  getWalletsByPersona,
+  isWalletPersonaId,
+  WALLET_PERSONA_IDS,
+  WALLET_PERSONAS,
 } from "@/lib/utils/walletData"
 
-import WalletsPageBody from "./_components/WalletsPageBody"
-import FindWalletPageJsonLD from "./page-jsonld"
+import WalletsPageBody from "../../_components/WalletsPageBody"
 
-// Wallet data is repo-checked-in and deploy-coupled, so the page is fully
-// static and only changes at deploy time (revamp plan engineering flags).
+import PersonaPageJsonLD from "./page-jsonld"
+
 export const revalidate = false
 
-const Page = async (props: { params: Promise<PageParams> }) => {
-  const { locale } = await props.params
+type PersonaPageParams = PageParams & { persona: string }
+
+const getPersona = (id: string) =>
+  WALLET_PERSONAS.find((persona) => persona.id === id)
+
+const Page = async (props: { params: Promise<PersonaPageParams> }) => {
+  const { locale, persona: personaId } = await props.params
   setRequestLocale(locale)
+
+  if (!isWalletPersonaId(personaId)) notFound()
+  const persona = getPersona(personaId)!
 
   const t = await getTranslations("page-wallets-find-wallet")
 
-  const wallets = getCatalogWallets(locale!)
+  const allWallets = getCatalogWallets(locale)
+  const wallets = getWalletsByPersona(allWallets, personaId)
   const networks = getWalletNetworks(wallets)
-  const languages = getWalletLanguageOptions(wallets, locale!)
-  const personaCounts = getPersonaCounts(wallets)
+  const languages = getWalletLanguageOptions(wallets, locale)
+  const personaCounts = getPersonaCounts(allWallets)
 
   const mostRecentWalletUpdate = wallets
     .map((wallet) => wallet.last_updated)
@@ -42,29 +54,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     ? formatDate(mostRecentWalletUpdate, locale)
     : ""
 
-  // Contributor info comes from the Netlify Blobs data layer; it only feeds a
-  // supplementary JSON-LD field, so a data-layer outage must not 500 the page.
-  let contributors: FileContributor[] = []
-  try {
-    contributors = (
-      await getAppPageContributorInfo("wallets/find-wallet", locale as Lang)
-    ).contributors
-  } catch {
-    // Non-fatal: JSON-LD omits the contributor list when unavailable.
-  }
-
   return (
     <>
-      <FindWalletPageJsonLD
-        locale={locale}
-        contributors={contributors}
-        wallets={wallets}
-      />
+      <PersonaPageJsonLD locale={locale} persona={persona} wallets={wallets} />
       <MainArticle className="relative flex flex-col">
         <PageHero
           breadcrumbs={{ slug: "/wallets/find-wallet" }}
-          title={t("page-find-wallet-title")}
-          description={t("page-find-wallet-description")}
+          title={t(persona.titleKey)}
+          description={t(persona.descKey)}
           variant="no-divider"
         />
         <WalletsPageBody
@@ -73,27 +70,35 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           networks={networks}
           languages={languages}
           personaCounts={personaCounts}
-          totalCount={wallets.length}
+          totalCount={allWallets.length}
           lastUpdatedDisplay={lastUpdatedDisplay}
+          currentPersonaId={personaId}
         />
       </MainArticle>
     </>
   )
 }
 
+export function generateStaticParams() {
+  return WALLET_PERSONA_IDS.map((persona) => ({ persona }))
+}
+
 export async function generateMetadata(props: {
-  params: Promise<{ locale: string }>
+  params: Promise<PersonaPageParams>
 }) {
-  const { locale } = await props.params
+  const { locale, persona: personaId } = await props.params
   setRequestLocale(locale)
+
+  if (!isWalletPersonaId(personaId)) return {}
+  const persona = getPersona(personaId)!
 
   const t = await getTranslations("page-wallets-find-wallet")
 
   return await getMetadata({
     locale,
-    slug: ["wallets", "find-wallet"],
-    title: t("page-find-wallet-meta-title"),
-    description: t("page-find-wallet-meta-description"),
+    slug: ["wallets", "find-wallet", "personas", personaId],
+    title: t(persona.titleKey),
+    description: t(persona.descKey),
     image: "/images/wallets/wallet-hero.png",
   })
 }
