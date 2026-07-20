@@ -7,20 +7,7 @@ import { capitalize } from "@/lib/utils/string"
 import { newToCrypto } from "@/data/wallets/new-to-crypto"
 import walletsData from "@/data/wallets/wallet-data"
 
-import {
-  DEVELOPER_FEATURES,
-  FINANCE_FEATURES,
-  LONG_TERM_FEATURES,
-  NEW_TO_CRYPTO_FEATURES,
-  NFTS_FEATURES,
-} from "../constants"
-import type {
-  ChainName,
-  FilterOption,
-  WalletData,
-  WalletLanguage,
-  WalletRow,
-} from "../types"
+import type { WalletLanguage } from "../types"
 
 export const getSupportedLocaleWallets = (locale: string) =>
   safeShuffle(
@@ -38,45 +25,6 @@ export const getNonSupportedLocaleWallets = (locale: string) =>
 
 export const getNewToCryptoWallets = () => {
   return walletsData.filter((wallet) => newToCrypto.includes(wallet.name))
-}
-
-// Get a list of a wallet supported Personas (new to crypto, nfts, long term, finance, developer)
-export const getWalletPersonas = (wallet: WalletData) => {
-  const walletPersonas: string[] = []
-
-  const isNewToCryptoPersona = NEW_TO_CRYPTO_FEATURES.every(
-    (feature) => wallet[feature]
-  )
-  const isNFTPersona = NFTS_FEATURES.every((feature) => wallet[feature])
-  const isLongTermPersona = LONG_TERM_FEATURES.every(
-    (feature) => wallet[feature]
-  )
-  const isFinancePersona = FINANCE_FEATURES.every((feature) => wallet[feature])
-  const isDeveloperPersona = DEVELOPER_FEATURES.every(
-    (feature) => wallet[feature]
-  )
-
-  if (isNewToCryptoPersona) {
-    walletPersonas.push("page-find-wallet-new-to-crypto-title")
-  }
-
-  if (isNFTPersona) {
-    walletPersonas.push("page-find-wallet-nfts-title")
-  }
-
-  if (isLongTermPersona) {
-    walletPersonas.push("page-find-wallet-hodler-title")
-  }
-
-  if (isFinancePersona) {
-    walletPersonas.push("page-find-wallet-finance-title")
-  }
-
-  if (isDeveloperPersona) {
-    walletPersonas.push("page-find-wallet-developer-title")
-  }
-
-  return walletPersonas
 }
 
 // Get a list of wallet supported languages with native title
@@ -170,57 +118,4 @@ export const getLanguageCountWalletsData = (locale: string) => {
   )
   languageCountWalletsData.sort((a, b) => a.name.localeCompare(b.name))
   return languageCountWalletsData
-}
-
-function getActiveFilterKeys(filters: FilterOption[]): string[] {
-  const keys: string[] = []
-  filters.forEach((filter) => {
-    filter.items.forEach((item) => {
-      if (item.inputState === true && item.options.length === 0) {
-        keys.push(item.filterKey)
-      }
-      if (item.options?.length > 0) {
-        item.options.forEach((option) => {
-          if (option.inputState === true) {
-            keys.push(option.filterKey)
-          }
-        })
-      }
-    })
-  })
-  return keys
-}
-
-export const filterFn = (data: WalletRow[], filters: FilterOption[]) => {
-  let selectedLanguage: string = ""
-  let selectedLayer2: ChainName[] = []
-
-  const activeFilterKeys = getActiveFilterKeys(filters)
-
-  for (const filter of filters) {
-    for (const item of filter.items) {
-      if (item.filterKey === "languages") {
-        selectedLanguage = item.inputState as string
-      } else if (item.filterKey === "layer_2_support") {
-        selectedLayer2 = (item.inputState as ChainName[]) || []
-      }
-    }
-  }
-
-  return data.filter((wallet) => {
-    // Check language support
-    const matchesLanguage = wallet.languages_supported.includes(
-      selectedLanguage as WalletLanguage
-    )
-
-    // Check layer 2 support (empty array means no filter applied)
-    const matchesLayer2 =
-      selectedLayer2.length === 0 ||
-      selectedLayer2.every((chain) => wallet.supported_chains.includes(chain))
-
-    // Check active filter keys
-    const matchesActiveFilters = activeFilterKeys.every((key) => wallet[key])
-
-    return matchesLanguage && matchesLayer2 && matchesActiveFilters
-  })
 }
