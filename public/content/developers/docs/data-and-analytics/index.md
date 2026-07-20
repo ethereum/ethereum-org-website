@@ -22,21 +22,6 @@ Many [Block Explorers](/developers/docs/data-and-analytics/block-explorers/) off
 
 Developers can then process and transform this data to give their users unique insights and interactions with the [blockchain](/glossary/#blockchain). For example, [Etherscan](https://etherscan.io) and [Blockscout](https://eth.blockscout.com) provide execution and consensus data for every 12s slot.
 
-## Envio {#envio}
-
-[Envio](https://envio.dev/?utm_source=ethereum-org&utm_medium=partner-docs) is the data layer for blockchain apps. It gives Ethereum developers the fastest, most flexible way to get real-time and historical onchain data, from a single GraphQL API to raw high-speed access, with managed hosting on Envio Cloud.
-
-With Envio, developers can benefit from:
-
-- HyperSync data engine: Where a chain is available on HyperSync it becomes the default data source, syncing historical data up to 2000x faster than traditional RPC
-- Flexible event handlers: Write handlers in TypeScript, JavaScript, or ReScript, with reorg support and both real-time and historical data
-- Multichain aggregation: Aggregate data across EVM and non-EVM networks from a single indexer
-- Managed hosting: Deploy and scale indexers on Envio Cloud, or self-host
-
-Follow this [quickstart](https://docs.envio.dev/docs/HyperIndex/quickstart?utm_source=ethereum-org&utm_medium=partner-docs) guide to create, deploy, and query an indexer.
-
-See Envio's [performance benchmarks](https://docs.envio.dev/docs/HyperIndex/benchmarking?utm_source=ethereum-org&utm_medium=partner-docs).
-
 ## The Graph {#the-graph}
 
 [The Graph](https://thegraph.com/) is an indexing protocol that provides an easy way to query blockchain data through open APIs known as subgraphs.
@@ -84,6 +69,12 @@ To get started, visit the [documentation](https://docs.mobula.io), explore the [
 ## EVM Query Language {#evm-query-language}
 
 EVM Query Language (EQL) is an SQL-like language designed to query EVM (Ethereum Virtual Machine) chains. EQL's ultimate goal is to support complex relational queries on EVM chain first-class citizens (blocks, accounts, and transactions) while providing developers and researchers with an ergonomic syntax for everyday use. With EQL, developers can fetch blockchain data using familiar SQL-like syntax and eliminate the need for complex boilerplate code. EQL supports standard blockchain data requests (e.g., retrieving an account's nonce and balance on Ethereum or fetching the current block size and timestamp) and is continually adding support for more complex requests and featuresets.
+
+## Envio {#envio}
+
+[Envio](https://envio.dev/) is an indexing framework that turns onchain events into a queryable GraphQL API. Developers write event handlers in TypeScript, JavaScript, or ReScript to serve real-time and historical data, with reorg support, multichain aggregation across EVM and non-EVM networks, and managed hosting on Envio Cloud or self-hosting.
+
+To get started, follow the [HyperIndex quickstart](https://docs.envio.dev/docs/HyperIndex/quickstart) to create, deploy, and query an indexer.
 
 ## Further Reading {#further-reading}
 
