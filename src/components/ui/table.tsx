@@ -6,16 +6,10 @@ import { tv, type VariantProps } from "tailwind-variants"
 
 import { cn } from "@/lib/utils/cn"
 
-/**
- * TODO: Currently, there are cell spacing issues with some table content.
- * Prefer `table-fixed` utility class in the future when content has been addressed
- * to provide equal cell widths.
- */
-
 const baseStyles = {
-  th: "text-start border-b border-body text-body normal-case align-bottom p-4",
+  th: "text-start border-b border-body text-body normal-case align-bottom p-4 text-sm font-semibold whitespace-normal break-words",
   tr: "not-[:last-of-type]:[&_th]:border-e-2 not-[:last-of-type]:[&_th]:border-e-background not-[:last-of-type]:[&_td]:border-e-2 not-[:last-of-type]:[&_td]:border-e-background",
-  td: "p-4",
+  td: "p-4 text-sm align-top whitespace-normal break-words",
   tbody: "[&_tr]:align-top [&_tr:hover]:bg-background-highlight",
 }
 
@@ -54,11 +48,11 @@ const tableVariants = tv({
       },
       product: {
         table: "caption-bottom text-sm",
-        thead: "[&-tr:last-child]:border-0",
-        tbody: "&_tr:last-child]:border-0",
-        tr: "hover:bg-muted/50 data-[state=selected]:bg-muted border-t transition-colors first-of-type:border-t-0",
-        th: "text-muted-foreground h-12 px-4 text-start align-middle font-medium [&:has([role=checkbox])]:pr-0",
-        td: "align-middle p-4 [&:has([role=checkbox])]:pr-0",
+        thead: "[&_tr:last-child]:border-0",
+        tbody: "[&_tr:last-child]:border-0",
+        tr: "border-t transition-colors first-of-type:border-t-0 hover:bg-muted/50 data-[state=selected]:bg-muted",
+        th: "text-muted-foreground h-12 px-4 text-start align-middle font-medium whitespace-normal break-words [&:has([role=checkbox])]:pr-0",
+        td: "p-4 align-middle whitespace-normal break-words [&:has([role=checkbox])]:pr-0",
       },
       "highlight-first-column": {
         ...baseStyles,
@@ -111,7 +105,7 @@ const Table = React.forwardRef<HTMLTableElement, TableProps>(
 
     return (
       <TableStylesContext.Provider value={tableVariantStyles}>
-        <div className="relative w-full overflow-auto whitespace-normal">
+        <div className="relative w-full overflow-x-auto">
           <table
             ref={ref}
             className={cn(tableVariantStyles.table(), className)}
