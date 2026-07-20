@@ -92,7 +92,8 @@ The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card
 
 **`Card` variants**:
 
-- `variant`: `base` (default, `bg-background-highlight` grey) | `nested` (`bg-background`, use when inside a colored section) | `ghost` (no bg; auto-widens `--banner-radius` for edge-to-edge banners) | `header-bar` (highlight only on the header, bordered card, header laid out as an icon+text row with bottom border — all baked in, just drop a `CardHeader` inside).
+- `variant`: `base` (default, `bg-background-highlight` grey) | `nested` (`bg-background`, use when inside a colored section) | `ghost` (no bg; auto-widens `--banner-radius`; as a link, fills with `bg-background-highlight` on hover instead of an outline ring) | `header-bar` (highlight only on the header, bordered card, header laid out as an icon+text row with bottom border — all baked in, just drop a `CardHeader` inside).
+- **Link hover is variant-aware** (auto, from `href`): `ghost` link cards fill with `bg-background-highlight` and drop the outline; `base`/`nested`/`header-bar` link cards keep the `ring-primary-hover` outline. Driven by an internal `interactive` compound variant, not a prop.
 - `size`: `lg | base (default) | md | sm | xs`. Controls `--card-pad` (between/around parts) and `--content-space` (within `CardContent`). `xs` = zero padding for edge-to-edge banner imagery.
 - `href`: pass to wrap in `BaseLink` and get whole-card-clickable behavior with `group/link` propagation.
 - Card is always vertical (`flex flex-col`); there is no `orientation` variant.
@@ -115,7 +116,7 @@ The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card
 - `size`: `full | lg | base (default) | sm | thumbnail-lg | thumbnail`. Use these instead of `className="h-..."` to stay on-rhythm. `thumbnail-lg` is a 128px square; `thumbnail` is 64px — both `shrink-0` for small logo/icon placements.
 - `fit`: `cover (default) | contain`. With `fit="contain"` and a single `<Image>` child, the banner auto-clones the image as a blurred backdrop. Two children breaks the magic.
 - `zoom`: `true (default) | false`. Controls hover zoom propagation from a parent `group/link`.
-- Placement: inside `CardHeader` for padded; as a direct child of `Card` (pair with `Card size="xs"` or `variant="ghost"`) for edge-to-edge.
+- Placement: inside `CardHeader` (default; keeps banner radius concentric and gives link-hover room). Bare direct child of `Card` only for a true edge-to-edge image, paired with `size="xs"` so radii match (a bare banner on a padded size / link card mismatches corner radius — see gotchas).
 
 **`CardTitle` variants**:
 
@@ -669,6 +670,8 @@ import { Swiper, ... } from "@/components/ui/swiper"
 ```
 
 `"use client"`, wraps swiper.js. On the deprecation track. Migrate existing consumers to `EdgeScrollContainer`.
+
+**i18n requirement:** `Swiper` binds `useTranslations("component-swiper")` for its a11y slide announcements. Every page that renders one must ship that namespace to the client — register the route in `src/lib/utils/translations.ts` (`EXACT_PATH_ADDITIONAL_NAMESPACES` / `PREFIX_PATH_ADDITIONAL_NAMESPACES`) or add `"component-swiper"` to the page's `pick()` for its `I18nProvider`. Missing it means screen readers announce raw key tails (`swiper-next-slide`). Currently registered: `/` (hand-pick), `/developers/` (scoped providers), `/start/`, `/10years/`, `/apps/`.
 
 ### `List` / `OrderedList` / `UnorderedList` / `ListItem`
 

@@ -99,6 +99,8 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const { locale, slug } = await props.params
 
+  setRequestLocale(locale)
+
   try {
     return await getMdMetadata({
       locale,
