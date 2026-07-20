@@ -5,244 +5,78 @@ import { testData } from "../fixtures/testData"
 import { BasePage } from "./BasePage"
 
 /**
- * Page Object Model for the Find Wallet page
+ * Page Object Model for the revamped Find Wallet page (catalog architecture).
  */
 export class FindWalletPage extends BasePage {
   private readonly url = "/wallets/find-wallet"
 
-  // Locators
   private readonly pageHeading: Locator
-  private readonly presetFiltersContainer: Locator
-  private readonly filtersContainer: Locator
-  private readonly mobileFiltersButton: Locator
-  private readonly mobileFiltersSubmitButton: Locator
-  private readonly walletRows: Locator
-  private readonly rowCounter: Locator
+  // Results count line: "Browse all wallets: <shown> / <total>". The regex
+  // requires the "/ total" so it doesn't also match the "all wallets" persona
+  // card (which reads "… available").
+  private readonly resultsCounter: Locator
 
   constructor(page: Page) {
     super(page)
     this.pageHeading = page.getByRole("heading", {
       name: testData.content.headings.findWallet,
     })
-    this.presetFiltersContainer = page.getByTestId("preset-filters-container")
-    this.filtersContainer = page.getByTestId("filters-container")
-    this.mobileFiltersButton = page.getByTestId("mobile-filters-button")
-    this.mobileFiltersSubmitButton = page.getByTestId(
-      "mobile-filters-submit-button"
-    )
-    // SSR renders all wallets and hides filtered-out rows via `.hidden`.
-    // Exclude them so assertions only run against visible rows.
-    this.walletRows = page
-      .getByTestId("wallet-list")
-      .locator(":scope > details:not(.hidden)")
-    this.rowCounter = page.getByText(/Showing all wallets \(\d+\)/i)
+    this.resultsCounter = page.getByText(/Browse all wallets:\s*\d+\s*\/\s*\d+/)
   }
 
-  /**
-   * Navigate to the find wallet page
-   */
   async goto() {
     await this.navigateTo(this.url)
   }
 
-  /**
-   * Verify the find wallet page has loaded successfully
-   */
   async verifyPageLoaded() {
     await expect(this.pageHeading).toBeVisible()
   }
 
-  /**
-   * Click on a persona filter and return the expected count
-   */
-  async selectPersonaFilter(personaName: string) {
-    const personaNamePattern = new RegExp(personaName, "i")
-
-    // Persona cards are <label>s wrapping a visually hidden checkbox
-    // (PresetFilters.tsx); clicking the label forwards to the checkbox
-    const personaCard = this.presetFiltersContainer
-      .locator("label")
-      .filter({ hasText: personaNamePattern })
-    const personaCheckbox = this.presetFiltersContainer.getByRole("checkbox", {
-      name: personaNamePattern,
-    })
-
-    await personaCard.click()
-    await expect(personaCheckbox).toBeChecked()
-
-    // Extract the counter from the card text
-    const counterText = await personaCard.textContent()
-    const match = counterText?.match(/\((\d+)\)/)
-
+  /** Number of wallets currently shown (the first number in the count line). */
+  async getResultsCount(): Promise<number> {
+    const text = await this.resultsCounter.textContent()
+    const match = text?.match(/:\s*(\d+)\s*\//)
     if (!match) {
-      throw new Error(
-        `Could not extract count from persona card: ${counterText}`
-      )
-    }
-
-    return parseInt(match[1], 10)
-  }
-
-  /**
-   * Get the current number of visible wallet rows
-   */
-  async getVisibleWalletCount() {
-    const counterText = await this.rowCounter.textContent()
-    const match = counterText?.match(/\((\d+)\)/)
-    if (!match) {
-      throw new Error(
-        `Could not extract count from row counter: ${counterText}`
-      )
+      throw new Error(`Could not parse results counter: ${text}`)
     }
     return parseInt(match[1], 10)
   }
 
-  /**
-   * Verify the persona filter count matches the displayed rows
-   */
-  async verifyPersonaFilterCount(expectedCount: number) {
-    const actualCount = await this.getVisibleWalletCount()
-    expect(actualCount).toBe(expectedCount)
+  /** Navigate via a persona card (a real `<Link>`, not a client filter). */
+  async openPersona(personaSlug: string) {
+    await this.page.locator(`a[href*="/personas/${personaSlug}/"]`).click()
+    await this.assertUrlMatches(new RegExp(`/personas/${personaSlug}/?$`))
   }
 
-  /**
-   * Expand the first wallet row
-   */
-  async expandFirstWallet() {
-    const firstRow = this.walletRows.first()
-    await firstRow.click()
+  /** Toggle a device filter checkbox by its visible label (viewport-agnostic). */
+  async toggleDeviceFilter(label: string) {
+    await this.page
+      .locator("label:visible")
+      .filter({ hasText: new RegExp(`^${label}`) })
+      .first()
+      .click()
   }
 
-  /**
-   * Verify wallet expansion shows links section
-   */
-  async verifyWalletExpanded() {
-    await expect(
-      this.page.getByRole("heading", { name: /Links/i })
-    ).toBeVisible()
-  }
-
-  /**
-   * Apply device filter on desktop
-   */
-  async applyDesktopDeviceFilter(): Promise<{
-    initialCount: number
-    osOptions: string[]
-  }> {
-    const initialCount = await this.getVisibleWalletCount()
-
-    // Verify device accordion is expanded
-    const deviceAccordion = this.filtersContainer.getByRole("button", {
-      name: /Device/i,
-    })
-    await expect(deviceAccordion).toHaveAttribute("aria-expanded", "true")
-
-    // Click the Desktop filter
-    const deviceRegion = this.filtersContainer
-      .getByRole("heading", { name: /device/i })
-      .locator("..")
-    const desktopLabel = deviceRegion.getByText("Desktop")
-    const desktopLabelParent = desktopLabel.locator("../..")
-    const desktopCheckbox = desktopLabelParent.locator("button")
-    await desktopCheckbox.click()
-
-    const itemContainer = desktopLabelParent.locator("..")
-    const osOptionLabels = itemContainer.locator("label span.select-none")
-    await expect(osOptionLabels.first()).toBeVisible()
-
-    // Get OS options
-    const osOptions = await osOptionLabels.allTextContents()
-
-    return { initialCount, osOptions }
-  }
-
-  /**
-   * Apply mobile device filter
-   */
-  async applyMobileDeviceFilter(): Promise<{
-    initialCount: number
-    osOptions: string[]
-  }> {
-    const initialCount = await this.getVisibleWalletCount()
-
-    // Open mobile filters
-    await this.mobileFiltersButton.click()
-
-    // Verify device accordion is expanded
-    const deviceAccordion = this.page.getByRole("button", { name: /Device/i })
-    await expect(deviceAccordion).toHaveAttribute("aria-expanded", "true")
-
-    // Click the Mobile filter
-    const deviceRegion = this.page
-      .getByRole("heading", { name: /device/i })
-      .locator("..")
-    const mobileLabel = deviceRegion.getByText(/mobile/i)
-    const mobileLabelParent = mobileLabel.locator("../..")
-    const mobileCheckbox = mobileLabelParent.locator("button")
-    await mobileCheckbox.click()
-
-    const itemContainer = mobileLabelParent.locator("..")
-    const osOptionLabels = itemContainer.locator("label span.select-none")
-    await expect(osOptionLabels.first()).toBeVisible()
-
-    // Get OS options
-    const osOptions = await osOptionLabels.allTextContents()
-
-    // Close filters
-    await this.mobileFiltersSubmitButton.click()
-
-    return { initialCount, osOptions }
-  }
-
-  /**
-   * Wait for wallet count to change from initial value
-   */
-  async waitForFilterResults(initialCount: number, timeout = 10000) {
+  /** Wait until the shown count differs from `initialCount`. */
+  async waitForResultsChange(initialCount: number, timeout = 10000) {
     await expect(async () => {
-      const newCount = await this.getVisibleWalletCount()
-      expect(newCount).not.toBe(initialCount)
+      expect(await this.getResultsCount()).not.toBe(initialCount)
     }).toPass({ timeout })
   }
 
-  /**
-   * Verify filtered results contain expected OS options
-   */
-  async verifyFilteredResults(osOptions: string[]) {
-    const rowCount = await this.walletRows.count()
-
-    for (let i = 0; i < rowCount; i++) {
-      const row = this.walletRows.nth(i)
-      const text = await row.textContent()
-
-      const containsOsOption = text && osOptions.some((os) => text.includes(os))
-      expect(containsOsOption).toBeTruthy()
-    }
+  /** Open a wallet's detail by clicking its card link (intercepted modal). */
+  async openWalletDetail(walletSlug: string) {
+    await this.page
+      .locator(`a[href*="/find-wallet/${walletSlug}/"]`)
+      .first()
+      .click()
   }
 
-  /**
-   * Verify row counter matches actual table rows
-   */
-  async verifyRowCounter() {
-    const actualCount = await this.getVisibleWalletCount()
-    const counterText = await this.rowCounter.textContent()
-
-    expect(counterText).toBe(`Showing all wallets (${actualCount})`)
+  get detailDialog(): Locator {
+    return this.page.getByRole("dialog")
   }
 
-  /**
-   * Verify the row counter displays the provided expected count
-   */
-  async verifyRowCounterEquals(expectedCount: number) {
-    await expect(this.rowCounter).toHaveText(
-      `Showing all wallets (${expectedCount})`
-    )
-  }
-
-  /**
-   * Verify that the list renders at least one wallet row
-   */
-  async expectSomeRowsVisible() {
-    const visibleRows = await this.getVisibleWalletCount()
-    expect(visibleRows).toBeGreaterThan(0)
+  async closeDialog() {
+    await this.page.keyboard.press("Escape")
   }
 }
