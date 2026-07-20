@@ -8,11 +8,11 @@ import {
 import type { Lang, PageParams } from "@/lib/types"
 
 import BigNumber from "@/components/BigNumber"
+import ChecklistGrid from "@/components/ChecklistGrid"
 import ContentFeedback from "@/components/ContentFeedback"
 import { CopyButton } from "@/components/CopyToClipboard"
 import { HubHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
-import { CheckCircle } from "@/components/icons/CheckCircle"
 import { Image } from "@/components/Image"
 import CardImage from "@/components/Image/CardImage"
 import MainArticle from "@/components/MainArticle"
@@ -59,32 +59,6 @@ import tutorialTagsBanner from "@/public/images/developers/tutorial-tags-banner.
 import dogeImage from "@/public/images/doge-computer.png"
 import fallbackThumbnail from "@/public/images/eth-glyph-thumbnail.png"
 import heroImage from "@/public/images/heroes/developers-hub-hero.png"
-
-const WhyGrid = ({
-  items,
-}: {
-  items: { heading: string; description: string }[]
-}) => {
-  return (
-    <div
-      className={cn(
-        "rounded-4xl border border-accent-c/20",
-        "grid grid-cols-1 gap-6 p-8 md:grid-cols-2 md:p-14",
-        "bg-tint-accent-c from-70%"
-      )}
-    >
-      {items.map(({ heading, description }) => (
-        <div className="flex gap-1.5" key={heading}>
-          <CheckCircle />
-          <div className="space-y-1">
-            <h3 className="text-lg font-bold">{heading}</h3>
-            <p className="text-body-medium">{description}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  )
-}
 
 const DocsColumn = ({
   heading,
@@ -233,7 +207,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 </BigNumber>
               </div>
             </div>
-            <WhyGrid items={whyGridItems} />
+            <ChecklistGrid items={whyGridItems} />
           </Section>
 
           {/* ETHSKILLS */}
