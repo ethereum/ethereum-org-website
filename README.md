@@ -2242,6 +2242,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jensendunamu"><img src="https://avatars.githubusercontent.com/u/233986215?v=4?s=100" width="100px;" alt="jensen"/><br /><sub><b>jensen</b></sub></a><br /><a href="#maintenance-jensendunamu" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://velog.io/@fdongfdong"><img src="https://avatars.githubusercontent.com/u/20445415?v=4?s=100" width="100px;" alt="FDongFDong"/><br /><sub><b>FDongFDong</b></sub></a><br /><a href="#maintenance-FDongFDong" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://linktr.ee/0xdecentralizer"><img src="https://avatars.githubusercontent.com/u/52651219?v=4?s=100" width="100px;" alt="Mohammad Mahdi Keshavarz"/><br /><sub><b>Mohammad Mahdi Keshavarz</b></sub></a><br /><a href="#maintenance-0xDecentralizer" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Semak12345"><img src="https://avatars.githubusercontent.com/u/88731119?v=4?s=100" width="100px;" alt="Sambyd"/><br /><sub><b>Sambyd</b></sub></a><br /><a href="#maintenance-Semak12345" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
