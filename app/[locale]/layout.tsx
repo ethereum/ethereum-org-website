@@ -56,6 +56,9 @@ export default async function LocaleLayout(props: {
     <html
       lang={toLanguageTag(locale)}
       className={`${inter.variable} ${ibmPlexMono.variable}`}
+      // Lets Next disable smooth scroll during route transitions so it lands
+      // at the true top instead of short (behind the sticky nav).
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
       <body>
