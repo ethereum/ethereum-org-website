@@ -52,11 +52,8 @@ type PlaceholderData = Record<Path, Placeholder>
  */
 const absolutePathRegex = /^(?:[a-z]+:)?\/\//
 
-// Video clips authored as `![](./x.mp4)` are standardized to fixed aspect
-// ratios at authoring time, so the pipeline doesn't measure them — orientation
-// is chosen by the renderer from a `-portrait` filename suffix. We only need to
-// recognize video here to skip image-only steps (dimension probing, blur
-// placeholders).
+// Videos are sized by the renderer (see `MarkdownVideo`); recognized here only
+// to skip image-only steps (dimension probing, blur placeholders)
 const VIDEO_EXTENSIONS = [".mp4", ".webm", ".mov"]
 
 const getImageSize = (src: string, dir: string) => {
@@ -108,9 +105,10 @@ const setImagePlaceholders = async (
 
     // Load image data from file system as buffer
     const buffer: Buffer = fs.readFileSync(path.join("public", src))
+    const imageBytes = Uint8Array.from(buffer)
 
     // Get hash fingerprint of image data (no security implications; fast algorithm prioritized)
-    const hash = await getHashFromBuffer(buffer, {
+    const hash = await getHashFromBuffer(imageBytes, {
       algorithm: "SHA-1",
       length: 8,
     })
@@ -170,11 +168,11 @@ const rehypeImg = (options: Options) => {
     visit(tree, "element", (node) => {
       if (node.tagName === "img" && node.properties) {
         const src = node.properties.src as string
-        const ext = path.extname(src).toLowerCase()
+        // Strip any `#WxH` dimensions fragment before deriving the extension
+        const ext = path.extname(src.split("#")[0]).toLowerCase()
         const isVideo = VIDEO_EXTENSIONS.includes(ext)
 
-        // Videos are sized by the renderer (fixed aspect ratio), so they're not
-        // probed here; they still flow through for src rewriting.
+        // Videos still flow through (for src rewriting); only images are probed
         const dimensions = isVideo ? undefined : getImageSize(src, dir)
 
         // Skip non-video files that have no detectable dimensions

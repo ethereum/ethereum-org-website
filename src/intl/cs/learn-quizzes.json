@@ -10,7 +10,7 @@
   "explanation": "Vysvětlení",
   "next-question": "Další otázka",
   "next-quiz": "Další kvíz",
-  "question-number": "Otázka číslo {{number}}:",
+  "question-number": "Otázka číslo {number}:",
   "page-assets-merge": "Merge",
   "passed": "Úspěšně jste prošli kvízem!",
   "questions": "Otázky",

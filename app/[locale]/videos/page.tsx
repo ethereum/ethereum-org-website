@@ -64,6 +64,8 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const { locale } = await props.params
 
+  setRequestLocale(locale)
+
   const t = await getTranslations("page-videos")
 
   return await getMetadata({

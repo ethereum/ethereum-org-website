@@ -1,8 +1,7 @@
 "use client"
 
-// TODO: Fix RTL compatibility; currently forced to LTR flow
 import { useCallback, useEffect, useMemo, useState } from "react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -20,11 +19,9 @@ import { dateTimeFormat, formatDate } from "@/lib/utils/date"
 
 import { getReleasesData, Release } from "@/data/roadmap/releases"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 const ReleaseCarousel = () => {
   const locale = useLocale()
-  const { t } = useTranslation("page-roadmap")
+  const t = useTranslations("page-roadmap")
 
   const releasesData = useMemo(() => getReleasesData(t), [t])
 
@@ -128,7 +125,6 @@ const ReleaseCarousel = () => {
         opts={{
           align: "center",
           containScroll: false,
-          direction: "ltr",
           loop: false,
           startIndex,
         }}
@@ -191,7 +187,7 @@ const ReleaseCarousel = () => {
                           : index < boundaryIndex
                             ? "bg-primary"
                             : index === boundaryIndex
-                              ? "bg-linear-to-r from-primary to-primary-low-contrast"
+                              ? "bg-linear-to-r from-primary to-primary-low-contrast rtl:bg-linear-to-l"
                               : "bg-primary-low-contrast"
                       )}
                     />
@@ -240,7 +236,6 @@ const ReleaseCarousel = () => {
         opts={{
           align: "center",
           containScroll: false,
-          direction: "ltr",
           loop: false,
           startIndex,
         }}

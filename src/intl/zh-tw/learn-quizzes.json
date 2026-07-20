@@ -10,7 +10,7 @@
   "explanation": "解釋",
   "next-question": "下一題",
   "next-quiz": "下一個測驗",
-  "question-number": "第 {{number}} 題：",
+  "question-number": "第 {number} 題：",
   "page-assets-merge": "合併",
   "passed": "您通過了測驗！",
   "questions": "問題",

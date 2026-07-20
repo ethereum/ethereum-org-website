@@ -63,7 +63,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const allMessages = await getMessages()
   const glossary = allMessages["glossary-tooltip"] as Record<string, string>
   const messages = {
-    ...pick(allMessages, "page-index", "component-wallet-simulator"),
+    ...pick(
+      allMessages,
+      "page-index",
+      "component-swiper",
+      "component-wallet-simulator"
+    ),
     "glossary-tooltip": pick(glossary, [
       "nft-term",
       "nft-definition",
@@ -138,6 +143,8 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
 
   try {
     const t = await getTranslations("page-index")

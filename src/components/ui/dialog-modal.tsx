@@ -1,5 +1,6 @@
 import * as React from "react"
 import { X } from "lucide-react"
+import { useTranslations } from "next-intl"
 import { tv, type VariantProps } from "tailwind-variants"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 
@@ -8,16 +9,15 @@ import { cn } from "@/lib/utils/cn"
 import { Button } from "./buttons/Button"
 import { Center, Flex } from "./flex"
 
-import useTranslation from "@/hooks/useTranslation"
-
 const dialogVariant = tv({
   slots: {
     content:
       "z-modal grid w-full gap-4 rounded-md bg-background p-8 shadow-xl focus:outline-hidden data-[state=open]:animate-fade-in",
     overlay:
-      "data-[state=open]:animate-fade-in overflow-y-auto p-4 grid place-items-center fixed inset-0 bg-black/70 z-overlay",
+      "data-[state=open]:animate-fade-in overflow-y-auto p-4 grid place-items-center fixed inset-0 bg-overlay z-overlay",
     header: "relative pe-12",
     title: "text-2xl",
+    body: "",
     footer: "pt-8",
     close: "text-md size-8 z-10 absolute end-0 top-0",
   },
@@ -40,6 +40,16 @@ const dialogVariant = tv({
       },
       unstyled: {
         content: "block p-0 rounded-none bg-none gap",
+      },
+      // Edge-to-edge media modal: no padding, a single scrolling body, and a
+      // close button that floats over the content (e.g. over a banner image).
+      media: {
+        content:
+          "flex flex-col gap-0 overflow-hidden rounded-lg p-0 max-h-[calc(100dvh-2rem)]",
+        header: "absolute end-0 top-0 z-10 pe-0",
+        close:
+          "static m-2 size-auto rounded bg-background/75 p-1 hover:bg-background hover:text-primary-hover [&_.lucide-x]:stroke-[3]",
+        body: "min-h-0 flex-1 overflow-y-auto",
       },
     },
   },
@@ -117,7 +127,7 @@ const DialogHeader = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => {
   const { header, close } = useDialogStyles()
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
   return (
     <div className={cn(header(), className)} {...props}>
       {children}
@@ -158,13 +168,16 @@ DialogTitle.displayName = DialogPrimitive.Title.displayName
 const DialogDescription = React.forwardRef<
   React.ComponentRef<typeof DialogPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>
->(({ className, ...props }, ref) => (
-  <DialogPrimitive.Description
-    ref={ref}
-    className={cn("", className)}
-    {...props}
-  />
-))
+>(({ className, ...props }, ref) => {
+  const { body } = useDialogStyles()
+  return (
+    <DialogPrimitive.Description
+      ref={ref}
+      className={cn(body(), className)}
+      {...props}
+    />
+  )
+})
 DialogDescription.displayName = DialogPrimitive.Description.displayName
 
 export type ModalProps = DialogProps & {

@@ -2231,7 +2231,14 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/alerodriargui"><img src="https://avatars.githubusercontent.com/u/80339818?v=4?s=100" width="100px;" alt="Alejandro Rodríguez"/><br /><sub><b>Alejandro Rodríguez</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aalerodriargui" title="Bug reports">🐛</a> <a href="#maintenance-alerodriargui" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/vikramsingh786lemonn"><img src="https://avatars.githubusercontent.com/u/289930201?v=4?s=100" width="100px;" alt="vikramsingh786lemonn"/><br /><sub><b>vikramsingh786lemonn</b></sub></a><br /><a href="#tool-vikramsingh786lemonn" title="Tools">🔧</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/lufa23"><img src="https://avatars.githubusercontent.com/u/67415638?v=4?s=100" width="100px;" alt="lufa23"/><br /><sub><b>lufa23</b></sub></a><br /><a href="#maintenance-lufa23" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/lufa23"><img src="https://avatars.githubusercontent.com/u/67415638?v=4?s=100" width="100px;" alt="lufa23"/><br /><sub><b>lufa23</b></sub></a><br /><a href="#maintenance-lufa23" title="Maintenance">🚧</a> <a href="#tool-lufa23" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://mobula.io"><img src="https://avatars.githubusercontent.com/u/89188530?v=4?s=100" width="100px;" alt="Sacha Marcus"/><br /><sub><b>Sacha Marcus</b></sub></a><br /><a href="#tool-NBMSacha" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/MegaRedHand"><img src="https://avatars.githubusercontent.com/u/47506558?v=4?s=100" width="100px;" alt="Tomás Grüner"/><br /><sub><b>Tomás Grüner</b></sub></a><br /><a href="#tool-MegaRedHand" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://nodeflare.app"><img src="https://avatars.githubusercontent.com/u/302281547?v=4?s=100" width="100px;" alt="NodeFlare"/><br /><sub><b>NodeFlare</b></sub></a><br /><a href="#maintenance-nodeflareapp" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/hidargmax27-cmyk"><img src="https://avatars.githubusercontent.com/u/250812573?v=4?s=100" width="100px;" alt="hidargmax27-cmyk"/><br /><sub><b>hidargmax27-cmyk</b></sub></a><br /><a href="#tool-hidargmax27-cmyk" title="Tools">🔧</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Equious"><img src="https://avatars.githubusercontent.com/u/76449140?v=4?s=100" width="100px;" alt="Equious"/><br /><sub><b>Equious</b></sub></a><br /><a href="#tool-Equious" title="Tools">🔧</a></td>
     </tr>
   </tbody>
 </table>

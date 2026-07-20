@@ -80,6 +80,17 @@ type CellPropsWithAlign<C> = Omit<C, "align"> & {
   align?: React.CSSProperties["textAlign"]
 }
 
+const withTextAlign = (
+  style: React.CSSProperties | undefined,
+  textAlign: React.CSSProperties["textAlign"] | undefined
+) =>
+  textAlign === undefined
+    ? style
+    : {
+        ...style,
+        textAlign,
+      }
+
 const TableStylesContext = createContext<{
   [P in keyof TableVariantsReturnType]: TableVariantsReturnType[P]
 }>(tableVariants())
@@ -138,13 +149,13 @@ TableRow.displayName = "TableRow"
 const TableHead = React.forwardRef<
   HTMLTableCellElement,
   CellPropsWithAlign<React.ThHTMLAttributes<HTMLTableCellElement>>
->(({ className, align, ...props }, ref) => {
+>(({ className, align, style, ...props }, ref) => {
   const { th } = useTableStyles()
   return (
     <th
       ref={ref}
       className={cn(th(), className)}
-      style={{ textAlign: align }}
+      style={withTextAlign(style, align)}
       {...props}
     />
   )
@@ -154,14 +165,14 @@ TableHead.displayName = "TableHead"
 const TableCell = React.forwardRef<
   HTMLTableCellElement,
   CellPropsWithAlign<React.TdHTMLAttributes<HTMLTableCellElement>>
->(({ className, align, children, ...props }, ref) => {
+>(({ className, align, children, style, ...props }, ref) => {
   const { td } = useTableStyles()
 
   return (
     <td
       ref={ref}
       className={cn(td(), className)}
-      style={{ textAlign: align }}
+      style={withTextAlign(style, align)}
       {...props}
     >
       {children}

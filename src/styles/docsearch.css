@@ -40,6 +40,8 @@
   --docsearch-highlight-color: hsla(var(--primary-hover));
   --docsearch-modal-width: 650px;
   --docsearch-hit-height: fit-content;
+  /* Replace vendor slate backdrop with the shared overlay token */
+  --docsearch-container-background: hsla(var(--overlay));
 }
 
 .dark {

@@ -1,8 +1,8 @@
 "use client"
-
 import { useEffect, useState } from "react"
 import { ChevronRight } from "lucide-react"
 import { motion } from "motion/react"
+import { useTranslations } from "next-intl"
 
 import { ChildOnlyProp } from "@/lib/types"
 import { DeveloperDocsLink } from "@/lib/interfaces"
@@ -12,7 +12,6 @@ import docLinks from "../data/developer-docs-links.yaml"
 import { HStack } from "./ui/flex"
 import { BaseLink, LinkProps } from "./ui/Link"
 
-import { useTranslation } from "@/hooks/useTranslation"
 export const dropdownIconContainerVariant = {
   open: {
     rotate: 90,
@@ -60,7 +59,7 @@ export type NavLinkProps = {
 }
 
 const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
-  const { t } = useTranslation("page-developers-docs")
+  const t = useTranslations("page-developers-docs")
   const isLinkInPath =
     isTopLevel || path.includes(item.href) || path.includes(item.path)
   const [isOpen, setIsOpen] = useState<boolean>(isLinkInPath)
@@ -133,12 +132,12 @@ export interface SideNavProps {
 // of the given parent. Currently all `path` items default to open
 // and they only collapse when clicked on.
 const SideNav = ({ path }: SideNavProps) => {
-  const { t } = useTranslation("page-developers-docs")
+  const tCommon = useTranslations("common")
 
   return (
     <nav
       className="sticky top-19 h-[calc(100vh-80px)] w-[calc((100%-1448px)/2+256px)] min-w-64 overflow-y-auto border-e-2 bg-background pt-8 pb-16 transition-transform duration-200 max-lg:hidden"
-      aria-label={t("common:nav-developers-docs")}
+      aria-label={tCommon("nav-developers-docs")}
     >
       {docLinks.map((item, idx) => (
         <NavLink item={item} path={path} key={idx} isTopLevel />
