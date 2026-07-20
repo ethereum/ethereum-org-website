@@ -234,11 +234,11 @@ This project enforces type-safe chain names via TypeScript. When working with la
 
 ## A/B Testing
 
-The site uses a GDPR-compliant, cookie-less A/B testing system integrated with Matomo. Experiments are configured in the Matomo dashboard (no code changes or deployments needed); components opt in via `ABTestWrapper` from `@/components/AB/TestWrapper`, rendered server-side with graceful fallback to the original variant.
+The site uses a GDPR-compliant, cookie-less A/B testing system built on the Flags SDK precompute pattern, integrated with Matomo. The proxy assigns variants at the edge (header fingerprinting) and rewrites to signed, statically prerendered variant pages under `ab-code/[code]/` — experiments never force dynamic rendering. Experiment status, weights, and scheduling live in the Matomo dashboard (no deploys needed). Only the default locale is tested; other locales always get the original.
 
 Key gotcha: **variants are matched by array index, not names** — the `variants` array order must match the Matomo experiment order exactly, and the `testKey` must match the Matomo experiment name exactly.
 
-Full guide (setup, example, architecture, env vars): `docs/ab-testing.md`. Code: `app/api/ab-config/`, `src/lib/ab-testing/`, `src/components/AB/`.
+Full guide (architecture, step-by-step recipe, env vars): `docs/ab-testing.md`. Code: `proxy.ts`, `src/lib/ab-testing/`, `src/components/AB/`, `app/[locale]/ab-code/`.
 
 ## Deployment
 

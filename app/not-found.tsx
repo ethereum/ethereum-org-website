@@ -28,6 +28,7 @@ export default async function GlobalNotFound() {
     <html
       lang={toLanguageTag(DEFAULT_LOCALE)}
       className={`${inter.variable} ${ibmPlexMono.variable}`}
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
       <body>
