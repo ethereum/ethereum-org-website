@@ -52,17 +52,6 @@
     ],
     "simple-import-sort/exports": "error",
     "no-unused-vars": "off",
-    "no-restricted-imports": [
-      "warn",
-      {
-        "paths": [
-          {
-            "name": "@/hooks/useTranslation",
-            "message": "Deprecated (#18742): bind namespaces directly with useTranslations from next-intl (client) or getTranslations from next-intl/server (server)."
-          }
-        ]
-      }
-    ],
     "unused-imports/no-unused-vars": [
       "error",
       {

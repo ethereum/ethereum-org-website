@@ -435,6 +435,8 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale, application } = params
 
+  setRequestLocale(locale)
+
   try {
     // Fetch apps data using the new data-layer function (already cached)
     const appsData = await getAppsData()

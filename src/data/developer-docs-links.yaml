@@ -117,6 +117,8 @@
           href: /developers/docs/smart-contracts/anatomy/
         - id: docs-nav-smart-contracts-libraries
           href: /developers/docs/smart-contracts/libraries/
+        - id: docs-nav-interacting-with-smart-contracts
+          href: /developers/docs/smart-contracts/interacting/
         - id: docs-nav-testing-smart-contracts
           href: /developers/docs/smart-contracts/testing/
         - id: docs-nav-compiling-smart-contracts

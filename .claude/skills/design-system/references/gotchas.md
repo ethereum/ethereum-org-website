@@ -38,6 +38,10 @@ In `Button.tsx` lines 67-69, there's an early-out: `["solid", "link"].includes(v
 
 If you pass `<CardBanner fit="contain"><Image .../></CardBanner>` with **one** child, you get a blurred-bg + sharp-fg automatically (Card.tsx lines 95-119). Pass two children and you lose this magic.
 
+### A bare `CardBanner` on a link card mismatches its corner radius
+
+`Card`'s outer radius is `--card-pad + --banner-radius`, but a `CardBanner` rounds at only `--banner-radius`. Wrapping the banner in a `CardHeader` lets the `--card-pad` inset bridge the difference so the corners stay concentric. Drop the banner straight into `Card` (no header) on any padded size and the banner's squarer corners poke past the card outline; add an `href` and the variant-aware hover has no inset to breathe against. Only go bare with `size="xs"` (`--card-pad: 0`), where the two radii collapse to the same value. This bit the video / hackathon / story / latest card grids until their banners were wrapped in `CardHeader` (July 2026).
+
 ### `LinkBox` requires `LinkOverlay` somewhere inside
 
 The whole-card-clickable pattern uses a `before:absolute` pseudo-element on `LinkOverlay`. Use `LinkBox` without `LinkOverlay` and the click-the-whole-card behavior breaks.

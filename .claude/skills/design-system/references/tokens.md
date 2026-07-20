@@ -65,6 +65,7 @@ This is where you get colors for Claude-driven work. Light mode in `:root`, dark
 - `--background-low`
 - `--background-medium`
 - `--background-high`
+- `--overlay` (modal/sheet backdrop dim; the one token with alpha baked in -- use `bg-overlay` as-is, no `/opacity` modifier, no `dark:` needed)
 
 **Borders:**
 - `--border`

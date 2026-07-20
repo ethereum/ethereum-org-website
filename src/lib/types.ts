@@ -551,8 +551,6 @@ export type EthPriceData =
   | { value: number; timestamp?: number; percentChange24h?: number }
   | { error: string }
 
-export type StatsBoxState = ValueOrError<string>
-
 export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
 
 /**
@@ -649,17 +647,6 @@ export type L2beatData = {
   }
 }
 
-export type HomepageActivityMetric =
-  | "ethPrice" // Use with `totalEthStaked` to convert ETH to USD
-  | "totalEthStaked"
-  | "totalValueLocked"
-  | GrowThePieMetricKey
-
-export type AllHomepageActivityData = Record<
-  HomepageActivityMetric,
-  MetricReturnData
->
-
 export type EnterpriseActivityMetric =
   | "txCount"
   | "txCostsMedianUsd"
@@ -671,14 +658,6 @@ export type AllEnterpriseActivityData = Record<
   EnterpriseActivityMetric,
   MetricReturnData
 >
-
-export type StatsBoxMetric = {
-  label: string
-  description?: string
-  state: StatsBoxState
-  apiUrl?: string
-  apiProvider?: string
-}
 
 export type SimulatorNavProps = {
   nav: SimulatorNav
@@ -1421,9 +1400,28 @@ export type TimeLeftLabels = Record<
   TimeLeftLabel
 >
 
-export type Story = {
+/** Community story as authored in src/data/tenYearStories.ts */
+export type StoryData = {
+  /** Key in the "community-stories" namespace holding the translatable story copy */
+  storyKey: string
+  /** Story text verbatim as submitted (English for English submissions) */
+  storyOriginal: string
+  /** BCP-47 language code of the original submission (not necessarily a site locale) */
+  originalLocale: string
+  category: string
   name: string
-  storyEnglish: string
+  date: string
+  country: string
+  twitter: string
+  region: string
+}
+
+/** Community story resolved for rendering; see getCommunityStories */
+export type Story = {
+  storyKey: string
+  name: string
+  /** Story copy resolved to the viewer's locale (falls back to English) */
+  story: string
   storyOriginal: string | null
   twitter: string | null
   country: string | null

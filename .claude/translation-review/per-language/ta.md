@@ -35,3 +35,7 @@ Left unfixed: choosing the right Tamil term for "trade-offs" (compromises/downsi
 
 - 21 UI-string JSONs reviewed. 0 critical. No placeholder leak in glossary-tooltip (clean). The prior "trade-offs" polysemy issue does NOT apply here -- page-stablecoins.json is not in this PR; no "trade-offs" strings present.
 - Minor warnings only: two valid Ethereum transliterations coexist (எத்திரியம்/எத்தீரியம்). ICU/tags/hrefs/domains all intact.
+
+## PR #18772 (community-stories.json, 2026-07-10) -- 9.5/10
+- WARN (unresolved term question): "smart contract" rendered ஸ்மார்ட் ஒப்பந்தங்கள் (3 keys, internally consistent) vs this file's prior documented anchor திறன் ஒப்பந்தம் (PR #18353). ETHGlossary carries NO ta entry for smart contract -- needs an ETHGlossary decision before either form is enforced.
+- transfer/exchange/transaction (பரிமாற்றம்/பரிவர்த்தனை) disambiguation held up across all remittance stories -- the PR #18353 trade-offs polysemy risk did not recur.

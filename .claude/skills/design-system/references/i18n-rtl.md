@@ -105,7 +105,7 @@ export function NextLink() {
 }
 ```
 
-`twFlipForRtl` returns the static `"rtl:-scale-x-100"` variant class (it no longer branches on locale -- the variant itself is a no-op in LTR), so it's safe to drop into any `className` unconditionally. The deprecated `flipForRtl` (a `scaleX(-1)` transform string) should not be used in new code.
+`twFlipForRtl` returns the static `"rtl:-scale-x-100"` variant class (it no longer branches on locale -- the variant itself is a no-op in LTR), so it's safe to drop into any `className` unconditionally. The older `flipForRtl` transform-string API (`scaleX(-1)`) has been removed -- use the `twFlipForRtl` class instead.
 
 ### Pattern: pre-flipped icons
 

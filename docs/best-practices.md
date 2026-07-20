@@ -52,7 +52,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
   - _tl;dr Each individual JSON entry should be a complete phrase by itself_
 
-- This is done using the `Translation` component. However, there is an alternative method for regular JS: using the `t` function from `@/hooks/useTranslation`
+- This is done using the `Translation` component. However, there is an alternative method for regular JS: using the `t` function from `next-intl`
 
   - **Method one: `<Translation />` component (preferred if only needed in JSX)**
 
@@ -66,14 +66,19 @@ Markdown will be translated as whole pages of content, so no specific action is 
   - **Method two: `t()`**
 
     ```tsx
-    import { useTranslation } from "@/hooks/useTranslation"
+    // Client components
+    import { useTranslations } from "next-intl"
 
-    // Utilize anywhere in JS using
-    const { t } = useTranslation()
+    // Bind one function per namespace, then access keys within it
+    const t = useTranslations("common")
     t("language-json-key")
     ```
 
     ```tsx
+    // Server components
+    import { getTranslations } from "next-intl/server"
+
+    const t = await getTranslations("common")
     const siteTitle = t("site-title")
     ```
 
