@@ -3,9 +3,10 @@
 import { memo, useMemo } from "react"
 
 import FilterableCatalog from "@/components/FilterableCatalog"
+import CatalogNavGroup from "@/components/FilterableCatalog/CatalogNavGroup"
 import type {
   CatalogFilterState,
-  CatalogNavGroup,
+  CatalogNavGroupConfig,
 } from "@/components/FilterableCatalog/types"
 
 import type {
@@ -18,6 +19,12 @@ import { numberFormat } from "@/lib/utils/numbers"
 import ToolCard from "./ToolCard"
 
 const SUBCATEGORY_FILTER_KEY = "subcategory"
+
+const PATH_SEPARATOR = "\u00A0\u00A0/\u00A0\u00A0"
+
+function formatPathSegment(value: string): string {
+  return value.toLocaleUpperCase()
+}
 
 type ToolsCatalogProps = {
   locale: string
@@ -204,9 +211,7 @@ export default function ToolsCatalog({
     return result
   }, [tools])
 
-  const navGroup: CatalogNavGroup = {
-    type: "nav",
-    key: SUBCATEGORY_FILTER_KEY,
+  const navConfig: CatalogNavGroupConfig = {
     allLabel: labels.allCategories,
     allHref: "/developers/tools/",
     allCount: totalCount,
@@ -252,17 +257,48 @@ export default function ToolsCatalog({
     return searchableText.includes(normalizedQuery)
   }
 
+  const renderResultsHeader = (state: CatalogFilterState) => {
+    const raw = state[SUBCATEGORY_FILTER_KEY]
+    const selectedSubcategoryId = typeof raw === "string" ? raw : undefined
+    if (!currentCategoryId && !selectedSubcategoryId) return null
+    return (
+      <p className="text-sm text-body-medium">
+        {currentCategoryId &&
+          formatPathSegment(
+            getCategoryLabel(currentCategoryId, categoryLabels)
+          )}
+        {selectedSubcategoryId &&
+          `${PATH_SEPARATOR}${formatPathSegment(
+            getSubcategoryLabel(selectedSubcategoryId, subcategoryLabels)
+          )}`}
+      </p>
+    )
+  }
+
   return (
     <FilterableCatalog
       locale={locale}
       items={tools}
-      filterGroups={[navGroup]}
       filterFn={filterTool}
       labels={{
         searchPlaceholder: labels.searchPlaceholder,
         resultsLabel: labels.resultsLabel,
         noResults: labels.noResults,
       }}
+      renderSidebar={({ state, setFilter }) => {
+        const raw = state[SUBCATEGORY_FILTER_KEY]
+        return (
+          <CatalogNavGroup
+            locale={locale}
+            config={navConfig}
+            selectedChildId={typeof raw === "string" ? raw : undefined}
+            onSelectChild={(childId) =>
+              setFilter(SUBCATEGORY_FILTER_KEY, childId)
+            }
+          />
+        )
+      }}
+      renderResultsHeader={renderResultsHeader}
       renderResults={(filteredTools) => (
         <ToolsResults
           locale={locale}

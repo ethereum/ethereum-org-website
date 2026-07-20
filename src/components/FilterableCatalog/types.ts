@@ -16,14 +16,12 @@ export type CatalogNavItem = {
 }
 
 /**
- * Sidebar group whose top-level entries are real route links (server-rendered
- * listing pages), while children of the current entry act as a single-select
- * client-side filter stored under `key`.
+ * Presentational data for the `CatalogNavGroup` building block: top-level
+ * entries are real route links (server-rendered listing pages); the children of
+ * the current entry are the single-select options. The block is controlled —
+ * the consumer owns where the selected child id lives.
  */
-export type CatalogNavGroup = {
-  type: "nav"
-  /** Filter-state key the selected child id is stored under */
-  key: string
+export type CatalogNavGroupConfig = {
   allLabel: string
   allHref: string
   allCount: number
@@ -31,21 +29,22 @@ export type CatalogNavGroup = {
 }
 
 /**
- * Sidebar group of independent checkboxes. Selected option ids are stored
- * under `key` as an array; combining semantics (AND/OR) are up to the
- * consumer's `filterFn`.
+ * Presentational data for the `CatalogCheckboxGroup` building block: a labelled
+ * set of independent checkboxes. The block is controlled — the consumer owns
+ * the selected ids and how the group combines with others (AND/OR) in `filterFn`.
  */
-export type CatalogCheckboxGroup = {
-  type: "checkbox"
-  key: string
+export type CatalogCheckboxGroupConfig = {
   label: string
   options: CatalogSelectOption[]
 }
 
-export type CatalogFilterGroup = CatalogNavGroup | CatalogCheckboxGroup
-
-/** Selected filter values keyed by group `key` */
+/** Selected filter values keyed by an arbitrary consumer-chosen key */
 export type CatalogFilterState = Record<string, string | string[] | undefined>
+
+export type CatalogSetFilter = (
+  key: string,
+  value: string | string[] | undefined
+) => void
 
 export type CatalogFilterFn<TItem> = (
   item: TItem,

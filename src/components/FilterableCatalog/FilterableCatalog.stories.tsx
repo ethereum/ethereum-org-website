@@ -1,7 +1,14 @@
 import { Meta, StoryObj } from "@storybook/nextjs"
 
+import CatalogCheckboxGroup from "./CatalogCheckboxGroup"
+import CatalogNavGroup from "./CatalogNavGroup"
 import FilterableCatalog from "./index"
-import type { CatalogFilterGroup, CatalogFilterState } from "./types"
+import type {
+  CatalogCheckboxGroupConfig,
+  CatalogFilterState,
+  CatalogNavGroupConfig,
+} from "./types"
+import { toggleId } from "./utils"
 
 const meta = {
   title: "Components / FilterableCatalog",
@@ -60,40 +67,39 @@ const walletAttributes = (wallet: DemoWallet) => [
 ]
 
 // The find-wallet filter sidebar shape planned for PR 2: independent checkbox
-// groups combined with AND semantics by the consumer's filterFn
-const walletFilterGroups: CatalogFilterGroup[] = [
-  {
-    type: "checkbox",
-    key: "devices",
-    label: "Devices",
-    options: [
-      { id: "desktop", label: "Desktop" },
-      { id: "mobile", label: "Mobile" },
-      { id: "browser", label: "Browser" },
-      { id: "hardware", label: "Hardware" },
-    ],
-  },
-  {
-    type: "checkbox",
-    key: "networks",
-    label: "Networks",
-    options: [
-      { id: "ethereum", label: "Ethereum Mainnet" },
-      { id: "op-mainnet", label: "OP Mainnet" },
-      { id: "arbitrum-one", label: "Arbitrum One" },
-      { id: "base", label: "Base" },
-    ],
-  },
-  {
-    type: "checkbox",
-    key: "purchases",
-    label: "Buy / sell crypto",
-    options: [
-      { id: "buy", label: "Buy crypto" },
-      { id: "sell", label: "Sell crypto" },
-    ],
-  },
-]
+// groups combined with AND semantics by the consumer's filterFn. The consumer
+// owns the state key; the block config is presentational only.
+const walletFilterGroups: Array<{ key: string } & CatalogCheckboxGroupConfig> =
+  [
+    {
+      key: "devices",
+      label: "Devices",
+      options: [
+        { id: "desktop", label: "Desktop" },
+        { id: "mobile", label: "Mobile" },
+        { id: "browser", label: "Browser" },
+        { id: "hardware", label: "Hardware" },
+      ],
+    },
+    {
+      key: "networks",
+      label: "Networks",
+      options: [
+        { id: "ethereum", label: "Ethereum Mainnet" },
+        { id: "op-mainnet", label: "OP Mainnet" },
+        { id: "arbitrum-one", label: "Arbitrum One" },
+        { id: "base", label: "Base" },
+      ],
+    },
+    {
+      key: "purchases",
+      label: "Buy / sell crypto",
+      options: [
+        { id: "buy", label: "Buy crypto" },
+        { id: "sell", label: "Sell crypto" },
+      ],
+    },
+  ]
 
 const andFilterWallet = (
   wallet: DemoWallet,
@@ -133,16 +139,60 @@ export const CheckboxFilters: StoryObj = {
     <FilterableCatalog
       locale="en"
       items={demoWallets}
-      filterGroups={walletFilterGroups}
       filterFn={andFilterWallet}
       labels={{
         searchPlaceholder: "Search wallets",
         resultsLabel: "Results",
         noResults: "No results",
       }}
+      renderSidebar={({ state, setFilter }) =>
+        walletFilterGroups.map(({ key, ...config }) => {
+          const raw = state[key]
+          const selectedIds = Array.isArray(raw) ? raw : []
+          return (
+            <CatalogCheckboxGroup
+              key={key}
+              locale="en"
+              config={config}
+              selectedIds={selectedIds}
+              onToggle={(optionId) =>
+                setFilter(key, toggleId(selectedIds, optionId))
+              }
+            />
+          )
+        })
+      }
       renderResults={renderWalletResults}
     />
   ),
+}
+
+const NAV_KEY = "device"
+
+const navConfig: CatalogNavGroupConfig = {
+  allLabel: "All categories",
+  allHref: "#all",
+  allCount: demoWallets.length,
+  items: [
+    {
+      id: "software",
+      label: "Software",
+      href: "#software",
+      count: 4,
+      isCurrent: true,
+      children: [
+        { id: "mobile", label: "Mobile", count: 3 },
+        { id: "desktop", label: "Desktop", count: 3 },
+        { id: "browser", label: "Browser", count: 2 },
+      ],
+    },
+    {
+      id: "hardware",
+      label: "Hardware",
+      href: "#hardware",
+      count: 1,
+    },
+  ],
 }
 
 /**
@@ -154,37 +204,8 @@ export const NavigationSidebar: StoryObj = {
     <FilterableCatalog
       locale="en"
       items={demoWallets}
-      filterGroups={[
-        {
-          type: "nav",
-          key: "device",
-          allLabel: "All categories",
-          allHref: "#all",
-          allCount: demoWallets.length,
-          items: [
-            {
-              id: "software",
-              label: "Software",
-              href: "#software",
-              count: 4,
-              isCurrent: true,
-              children: [
-                { id: "mobile", label: "Mobile", count: 3 },
-                { id: "desktop", label: "Desktop", count: 3 },
-                { id: "browser", label: "Browser", count: 2 },
-              ],
-            },
-            {
-              id: "hardware",
-              label: "Hardware",
-              href: "#hardware",
-              count: 1,
-            },
-          ],
-        },
-      ]}
       filterFn={(wallet, state, query) => {
-        const device = state["device"]
+        const device = state[NAV_KEY]
         if (typeof device === "string" && !wallet.devices.includes(device)) {
           return false
         }
@@ -196,6 +217,17 @@ export const NavigationSidebar: StoryObj = {
         searchPlaceholder: "Search wallets",
         resultsLabel: "Results",
         noResults: "No results",
+      }}
+      renderSidebar={({ state, setFilter }) => {
+        const raw = state[NAV_KEY]
+        return (
+          <CatalogNavGroup
+            locale="en"
+            config={navConfig}
+            selectedChildId={typeof raw === "string" ? raw : undefined}
+            onSelectChild={(childId) => setFilter(NAV_KEY, childId)}
+          />
+        )
       }}
       renderResults={renderWalletResults}
     />
