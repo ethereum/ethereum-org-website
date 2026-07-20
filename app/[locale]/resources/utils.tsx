@@ -216,12 +216,6 @@ export const getResources = async ({
           href: "https://www.blocknative.com/gas-estimator",
           imgSrc: IconBlocknative,
         },
-        {
-          title: "GasFees.io",
-          description: t("page-resources-gas-gasfees-description"),
-          href: "https://www.gasfees.io/",
-          imgSrc: IconEthGlyphBlueCircle,
-        },
       ],
     },
   ]
