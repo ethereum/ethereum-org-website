@@ -72,7 +72,7 @@ EVM Query Language (EQL) is an SQL-like language designed to query EVM (Ethereum
 
 ## Envio {#envio}
 
-[Envio](https://envio.dev/) is an indexing framework that turns onchain events into a queryable GraphQL API. Developers write event handlers in TypeScript, JavaScript, or ReScript to serve real-time and historical data, with reorg support, multichain aggregation across EVM and non-EVM networks, and managed hosting on Envio Cloud or self-hosting.
+[Envio](https://envio.dev/) is an indexing framework that turns onchain events into a queryable GraphQL API. It supports any EVM-compatible blockchain and the Fuel Network. Developers write event handlers in TypeScript, JavaScript, or ReScript to serve real-time and historical data, with reorg support, multichain indexing, and managed hosting on Envio Cloud or self-hosting.
 
 To get started, follow the [HyperIndex quickstart](https://docs.envio.dev/docs/HyperIndex/quickstart) to create, deploy, and query an indexer.
 
