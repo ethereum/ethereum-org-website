@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/breadcrumb"
 
 import { getMetadata } from "@/lib/utils/metadata"
-import { findWalletBySlug, getCatalogWallets } from "@/lib/utils/walletData"
+import { getCatalogWallets, getWalletBySlug } from "@/lib/utils/walletData"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
@@ -36,7 +36,7 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
 
   const t = await getTranslations("page-wallets-find-wallet")
 
-  const wallet = findWalletBySlug(getCatalogWallets(locale), walletSlug)
+  const wallet = getWalletBySlug(walletSlug, locale)
   if (!wallet) notFound()
 
   return (
@@ -91,7 +91,7 @@ export async function generateMetadata(props: {
   const { locale, wallet: walletSlug } = await props.params
   setRequestLocale(locale)
 
-  const wallet = findWalletBySlug(getCatalogWallets(locale), walletSlug)
+  const wallet = getWalletBySlug(walletSlug, locale)
   if (!wallet) return {}
 
   return await getMetadata({

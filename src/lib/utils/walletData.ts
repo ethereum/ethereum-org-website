@@ -22,6 +22,7 @@ import {
   WALLET_PERSONAS,
   type WalletPersonaId,
 } from "@/data/wallets/personas"
+import walletsData from "@/data/wallets/wallet-data"
 
 export { getWalletSlug }
 export {
@@ -169,12 +170,17 @@ export function getCatalogWallets(locale: string): CatalogWallet[] {
   return ordered.map((wallet) => enrichWallet(wallet, locale))
 }
 
-/** Resolve a wallet by its URL slug (slugs are globally unique — flat routes). */
-export function findWalletBySlug(
-  wallets: CatalogWallet[],
-  slug: string
+/**
+ * Resolve a single wallet by URL slug and enrich only that one. Detail views
+ * need just one wallet, so this skips the shuffle + enrichment of all 49 that
+ * `getCatalogWallets` does (slugs are globally unique — flat routes).
+ */
+export function getWalletBySlug(
+  slug: string,
+  locale: string
 ): CatalogWallet | undefined {
-  return wallets.find((wallet) => wallet.slug === slug)
+  const wallet = walletsData.find((entry) => getWalletSlug(entry) === slug)
+  return wallet ? enrichWallet(wallet, locale) : undefined
 }
 
 /** The subset of wallets belonging to a persona (preserves catalog ordering). */

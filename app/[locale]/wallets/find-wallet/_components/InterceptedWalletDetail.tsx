@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation"
 
-import { findWalletBySlug, getCatalogWallets } from "@/lib/utils/walletData"
+import { getWalletBySlug } from "@/lib/utils/walletData"
 
 import WalletDetail from "./WalletDetail"
 import WalletDetailModal from "./WalletDetailModal"
@@ -17,7 +17,7 @@ const InterceptedWalletDetail = async ({
   locale: string
   walletSlug: string
 }) => {
-  const wallet = findWalletBySlug(getCatalogWallets(locale), walletSlug)
+  const wallet = getWalletBySlug(walletSlug, locale)
   if (!wallet) notFound()
 
   return (
