@@ -14441,6 +14441,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "Jordy-Baby",
+      "name": "Jords",
+      "avatar_url": "https://avatars.githubusercontent.com/u/82444671?v=4",
+      "profile": "https://envio.dev/",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
