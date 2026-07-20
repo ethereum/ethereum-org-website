@@ -8,7 +8,9 @@ import type {
 } from "@/lib/types"
 
 import { getWalletSlug } from "@/lib/utils/getWalletSlug"
+import { getLanguageCodeName } from "@/lib/utils/intl"
 import { stripMarkdown } from "@/lib/utils/md"
+import { capitalize } from "@/lib/utils/string"
 import {
   getNonSupportedLocaleWallets,
   getSupportedLanguages,
@@ -16,64 +18,19 @@ import {
 } from "@/lib/utils/wallets"
 
 import {
-  DEVELOPER_FEATURES,
-  FINANCE_FEATURES,
-  LONG_TERM_FEATURES,
-  NEW_TO_CRYPTO_FEATURES,
-  NFTS_FEATURES,
-} from "@/lib/constants"
+  WALLET_PERSONA_IDS,
+  WALLET_PERSONAS,
+  type WalletPersonaId,
+} from "@/data/wallets/personas"
 
 export { getWalletSlug }
-
-/**
- * Canonical persona definitions — the single source of truth, derived from the
- * `*_FEATURES` lists in `constants.ts`. A wallet belongs to a persona when it
- * has ALL of that persona's feature flags (AND semantics, matching the legacy
- * `getWalletPersonas`). The `id` is the URL slug used for persona pages
- * (`/wallets/find-wallet/personas/[persona]`) — deliberately never the internal
- * `hodler` key (its slug/title is `hardware`, resolved in the revamp plan).
- */
-export const WALLET_PERSONAS = [
-  {
-    id: "new-to-crypto",
-    features: NEW_TO_CRYPTO_FEATURES,
-    titleKey: "page-find-wallet-new-to-crypto-title",
-    descKey: "page-find-wallet-new-to-crypto-desc",
-  },
-  {
-    id: "nfts",
-    features: NFTS_FEATURES,
-    titleKey: "page-find-wallet-nfts-title",
-    descKey: "page-find-wallet-nfts-desc",
-  },
-  {
-    id: "hardware",
-    features: LONG_TERM_FEATURES,
-    titleKey: "page-find-wallet-hodler-title",
-    descKey: "page-find-wallet-hodler-desc",
-  },
-  {
-    id: "finance",
-    features: FINANCE_FEATURES,
-    titleKey: "page-find-wallet-finance-title",
-    descKey: "page-find-wallet-finance-desc",
-  },
-  {
-    id: "developer",
-    features: DEVELOPER_FEATURES,
-    titleKey: "page-find-wallet-developer-title",
-    descKey: "page-find-wallet-developer-desc",
-  },
-] as const
-
-export type WalletPersonaId = (typeof WALLET_PERSONAS)[number]["id"]
-
-export const WALLET_PERSONA_IDS = WALLET_PERSONAS.map(
-  (persona) => persona.id
-) as WalletPersonaId[]
-
-export const isWalletPersonaId = (value: string): value is WalletPersonaId =>
-  WALLET_PERSONA_IDS.includes(value as WalletPersonaId)
+export {
+  isWalletPersonaId,
+  PERSONA_TITLE_KEYS,
+  WALLET_PERSONA_IDS,
+  WALLET_PERSONAS,
+  type WalletPersonaId,
+} from "@/data/wallets/personas"
 
 /**
  * The four flat device buckets drawn in the Figma revamp, derived from the raw
@@ -138,6 +95,33 @@ export function getWalletLanguageCodes(wallets: WalletData[]): string[] {
   )
 }
 
+export type WalletLanguageOption = {
+  code: string
+  name: string
+  count: number
+}
+
+/**
+ * Locale-aware language filter options derived from the given wallet set:
+ * each distinct language with its native/localized name and a wallet count
+ * relative to that set (so persona pages get subset-accurate counts). Sorted
+ * alphabetically by localized name.
+ */
+export function getWalletLanguageOptions(
+  wallets: WalletData[],
+  locale: string
+): WalletLanguageOption[] {
+  return getWalletLanguageCodes(wallets)
+    .map((code) => ({
+      code,
+      name: capitalize(getLanguageCodeName(code, locale) ?? code),
+      count: wallets.filter((wallet) =>
+        wallet.languages_supported.includes(code as never)
+      ).length,
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name))
+}
+
 /**
  * The catalog/detail item shape: a wallet enriched with everything the client
  * island and detail views need, all serializable (no functions/translators) so
@@ -199,4 +183,16 @@ export function getWalletsByPersona(
   personaId: WalletPersonaId
 ): CatalogWallet[] {
   return wallets.filter((wallet) => wallet.personas.includes(personaId))
+}
+
+/** Global membership count per persona, for the persona navigation cards. */
+export function getPersonaCounts(
+  wallets: CatalogWallet[]
+): Record<WalletPersonaId, number> {
+  const counts = {} as Record<WalletPersonaId, number>
+  for (const id of WALLET_PERSONA_IDS) counts[id] = 0
+  for (const wallet of wallets) {
+    for (const persona of wallet.personas) counts[persona] += 1
+  }
+  return counts
 }

@@ -1,0 +1,306 @@
+"use client"
+
+import { memo, useMemo } from "react"
+import { useTranslations } from "next-intl"
+
+import FilterableCatalog from "@/components/FilterableCatalog"
+import CatalogCheckboxGroup from "@/components/FilterableCatalog/CatalogCheckboxGroup"
+import type {
+  CatalogFilterState,
+  CatalogSetFilter,
+} from "@/components/FilterableCatalog/types"
+import { toggleId } from "@/components/FilterableCatalog/utils"
+import { Button } from "@/components/ui/buttons/Button"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+import type {
+  CatalogWallet,
+  WalletDeviceId,
+  WalletNetwork,
+} from "@/lib/utils/walletData"
+
+import WalletCard from "./WalletCard"
+
+const DEVICES_KEY = "devices"
+const NETWORKS_KEY = "networks"
+const PURCHASES_KEY = "purchases"
+const LANGUAGE_KEY = "language"
+
+const DEVICE_IDS: WalletDeviceId[] = [
+  "desktop",
+  "mobile",
+  "browser",
+  "hardware",
+]
+const DEVICE_LABEL_KEYS: Record<WalletDeviceId, string> = {
+  desktop: "page-find-wallet-desktop",
+  mobile: "page-find-wallet-mobile",
+  browser: "page-find-wallet-browser",
+  hardware: "page-find-wallet-hardware",
+}
+const PURCHASE_IDS = ["buy_crypto", "withdraw_crypto"] as const
+
+type WalletLanguageOption = { code: string; name: string; count: number }
+
+type WalletsCatalogProps = {
+  locale: string
+  wallets: CatalogWallet[]
+  networks: WalletNetwork[]
+  languages: WalletLanguageOption[]
+}
+
+const asArray = (value: string | string[] | undefined): string[] =>
+  Array.isArray(value) ? value : []
+
+// Legacy Matomo category preserved for trend comparability with the old
+// sidebar (see the find-wallet revamp plan, decision #12).
+const trackFilterToggle = (action: string, name: string) =>
+  trackCustomEvent({
+    eventCategory: "WalletFilterSidebar",
+    eventAction: action,
+    eventName: name,
+  })
+
+const WalletsResults = memo(function WalletsResults({
+  wallets,
+}: {
+  wallets: CatalogWallet[]
+}) {
+  return (
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+      {wallets.map((wallet) => (
+        <WalletCard key={wallet.slug} wallet={wallet} />
+      ))}
+    </div>
+  )
+})
+
+export default function WalletsCatalog({
+  locale,
+  wallets,
+  networks,
+  languages,
+}: WalletsCatalogProps) {
+  const t = useTranslations("page-wallets-find-wallet")
+
+  // Baseline per-option counts (relative to this page's wallet set, stable while
+  // nothing is selected). Selection-relative counts under AND semantics are a
+  // design follow-up (revamp plan, decision #5).
+  const deviceCounts = useMemo(() => {
+    const counts = {} as Record<WalletDeviceId, number>
+    for (const device of DEVICE_IDS) {
+      counts[device] = wallets.filter((wallet) => wallet.devices[device]).length
+    }
+    return counts
+  }, [wallets])
+
+  const purchaseCounts = useMemo(
+    () => ({
+      buy_crypto: wallets.filter((wallet) => wallet.buy_crypto).length,
+      withdraw_crypto: wallets.filter((wallet) => wallet.withdraw_crypto)
+        .length,
+    }),
+    [wallets]
+  )
+
+  const filterWallet = (
+    wallet: CatalogWallet,
+    state: CatalogFilterState,
+    query: string
+  ) => {
+    const devices = asArray(state[DEVICES_KEY])
+    if (!devices.every((device) => wallet.devices[device as WalletDeviceId])) {
+      return false
+    }
+
+    const selectedNetworks = asArray(state[NETWORKS_KEY])
+    if (
+      !selectedNetworks.every((network) =>
+        (wallet.supported_chains as string[]).includes(network)
+      )
+    ) {
+      return false
+    }
+
+    const purchases = asArray(state[PURCHASES_KEY])
+    if (
+      !purchases.every((key) => wallet[key as (typeof PURCHASE_IDS)[number]])
+    ) {
+      return false
+    }
+
+    const language = state[LANGUAGE_KEY]
+    if (
+      typeof language === "string" &&
+      language.length > 0 &&
+      !(wallet.languages_supported as string[]).includes(language)
+    ) {
+      return false
+    }
+
+    const normalizedQuery = query.toLowerCase().trim()
+    if (!normalizedQuery) return true
+    const haystack = [wallet.name, wallet.descriptionStripped ?? ""]
+      .join(" ")
+      .toLowerCase()
+    return haystack.includes(normalizedQuery)
+  }
+
+  const renderSidebar = ({
+    state,
+    setFilter,
+  }: {
+    state: CatalogFilterState
+    setFilter: CatalogSetFilter
+  }) => {
+    const selectedDevices = asArray(state[DEVICES_KEY])
+    const selectedNetworks = asArray(state[NETWORKS_KEY])
+    const selectedPurchases = asArray(state[PURCHASES_KEY])
+    const selectedLanguage =
+      typeof state[LANGUAGE_KEY] === "string"
+        ? (state[LANGUAGE_KEY] as string)
+        : ""
+
+    const hasActiveFilters =
+      selectedDevices.length > 0 ||
+      selectedNetworks.length > 0 ||
+      selectedPurchases.length > 0 ||
+      selectedLanguage.length > 0
+
+    const reset = () => {
+      setFilter(DEVICES_KEY, undefined, { scroll: false })
+      setFilter(NETWORKS_KEY, undefined, { scroll: false })
+      setFilter(PURCHASES_KEY, undefined, { scroll: false })
+      setFilter(LANGUAGE_KEY, undefined, { scroll: false })
+      trackFilterToggle("Reset button", "reset_click")
+    }
+
+    return (
+      <div className="space-y-4">
+        {hasActiveFilters && (
+          <Button variant="ghost" size="sm" className="w-full" onClick={reset}>
+            {t("page-find-wallet-reset-filters")}
+          </Button>
+        )}
+
+        <CatalogCheckboxGroup
+          locale={locale}
+          config={{
+            label: t("page-find-wallet-device"),
+            options: DEVICE_IDS.map((device) => ({
+              id: device,
+              label: t(DEVICE_LABEL_KEYS[device]),
+              count: deviceCounts[device],
+            })),
+          }}
+          selectedIds={selectedDevices}
+          onToggle={(optionId) => {
+            setFilter(DEVICES_KEY, toggleId(selectedDevices, optionId), {
+              scroll: false,
+            })
+            trackFilterToggle(
+              optionId,
+              `${optionId} ${!selectedDevices.includes(optionId)}`
+            )
+          }}
+        />
+
+        <CatalogCheckboxGroup
+          locale={locale}
+          config={{
+            label: t("page-find-wallet-buy-sell-crypto"),
+            options: [
+              {
+                id: "buy_crypto",
+                label: t("page-find-wallet-buy-crypto"),
+                count: purchaseCounts.buy_crypto,
+              },
+              {
+                id: "withdraw_crypto",
+                label: t("page-find-wallet-sell-for-fiat"),
+                count: purchaseCounts.withdraw_crypto,
+              },
+            ],
+          }}
+          selectedIds={selectedPurchases}
+          onToggle={(optionId) => {
+            setFilter(PURCHASES_KEY, toggleId(selectedPurchases, optionId), {
+              scroll: false,
+            })
+            trackFilterToggle(
+              optionId,
+              `${optionId} ${!selectedPurchases.includes(optionId)}`
+            )
+          }}
+        />
+
+        <CatalogCheckboxGroup
+          locale={locale}
+          config={{
+            label: t("page-find-wallet-network-support"),
+            options: networks.map((network) => ({
+              id: network.id,
+              label: network.id,
+              count: network.count,
+            })),
+          }}
+          selectedIds={selectedNetworks}
+          onToggle={(optionId) => {
+            setFilter(NETWORKS_KEY, toggleId(selectedNetworks, optionId), {
+              scroll: false,
+            })
+            trackFilterToggle("network", optionId)
+          }}
+        />
+
+        <div className="space-y-1">
+          <p className="px-3 py-2 text-sm font-bold">
+            {t("page-find-wallet-languages-supported")}
+          </p>
+          <Select
+            value={selectedLanguage || undefined}
+            onValueChange={(value) => {
+              setFilter(LANGUAGE_KEY, value || undefined, { scroll: false })
+              trackFilterToggle("Language search", value)
+            }}
+          >
+            <SelectTrigger className="w-full">
+              <SelectValue
+                placeholder={t("page-find-wallet-search-languages")}
+              />
+            </SelectTrigger>
+            <SelectContent>
+              {languages.map((language) => (
+                <SelectItem key={language.code} value={language.code}>
+                  {language.name} ({language.count})
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <FilterableCatalog
+      locale={locale}
+      items={wallets}
+      filterFn={filterWallet}
+      labels={{
+        searchPlaceholder: t("page-find-wallet-search-wallets"),
+        resultsLabel: t("page-find-wallet-table-title"),
+        noResults: t("page-find-wallet-empty-results-title"),
+      }}
+      renderSidebar={renderSidebar}
+      renderResults={(filtered) => <WalletsResults wallets={filtered} />}
+    />
+  )
+}
