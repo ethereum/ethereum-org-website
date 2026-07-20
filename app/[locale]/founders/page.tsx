@@ -369,6 +369,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       <Card
                         key={name}
                         href={href}
+                        size="lg"
                         hoverLift
                         className="row-span-3 grid grid-rows-subgrid gap-0"
                       >
