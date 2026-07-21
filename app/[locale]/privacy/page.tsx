@@ -35,6 +35,7 @@ import VideoWatch from "@/components/Videos/VideoWatch"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { numberFormat, numberToPercent } from "@/lib/utils/numbers"
+import { getIdFromHash } from "@/lib/utils/url"
 
 import PageJsonLD from "./page-jsonld"
 
@@ -83,11 +84,6 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       url: "#getting-started",
     },
   ]
-
-  const getId = (input: string) => {
-    const parts = input.split("#")
-    return parts.length > 1 ? parts[1] : ""
-  }
 
   return (
     <>
@@ -139,7 +135,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </CardContent>
         </Card>
 
-        <Section id={getId(tocItems[0].url)}>
+        <Section id={getIdFromHash(tocItems[0].url)}>
           <h2>{tocItems[0].title}</h2>
           <p>
             {t.rich("page-privacy-data-against-you-description-1", {
@@ -192,7 +188,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </Alert>
         </Section>
 
-        <Section id={getId(tocItems[1].url)}>
+        <Section id={getIdFromHash(tocItems[1].url)}>
           <h2>{tocItems[1].title}</h2>
           <p>
             {t.rich("page-privacy-private-moments-description-1", {
@@ -255,7 +251,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <VideoWatch slug="metadata-surveillance-and-nym" />
         </Section>
 
-        <Section id={getId(tocItems[2].url)}>
+        <Section id={getIdFromHash(tocItems[2].url)}>
           <h2>{tocItems[2].title}</h2>
           <p>
             {t.rich("page-privacy-targeting-description-1", {
@@ -308,7 +304,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </Grid>
         </Section>
 
-        <Section id={getId(tocItems[3].url)}>
+        <Section id={getIdFromHash(tocItems[3].url)}>
           <h2>{tocItems[3].title}</h2>
           <p>{t("page-privacy-nothing-to-hide-description-1")}</p>
           <p>
@@ -363,7 +359,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </Alert>
         </Section>
 
-        <Section id={getId(tocItems[4].url)}>
+        <Section id={getIdFromHash(tocItems[4].url)}>
           <h2>{tocItems[4].title}</h2>
           <p>{t("page-privacy-what-protects-description-1")}</p>
           <p>
@@ -409,7 +405,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <VideoWatch slug="surveillance-silence-reclaiming-privacy" />
         </Section>
 
-        <Section id={getId(tocItems[5].url)}>
+        <Section id={getIdFromHash(tocItems[5].url)}>
           <h2>{tocItems[5].title}</h2>
           <p>
             {t.rich("page-privacy-default-description-1", { strong: Strong })}
@@ -422,7 +418,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </p>
         </Section>
 
-        <Section id={getId(tocItems[6].url)}>
+        <Section id={getIdFromHash(tocItems[6].url)}>
           <h2>{tocItems[6].title}</h2>
           <p>{t("page-privacy-getting-started-description-1")}</p>
           <p>{t("page-privacy-getting-started-description-2")}</p>

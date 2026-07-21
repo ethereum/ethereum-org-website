@@ -35,6 +35,7 @@ import { Section } from "@/components/ui/section"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
+import { getIdFromHash } from "@/lib/utils/url"
 
 import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
 
@@ -76,10 +77,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     { title: t("page-what-is-ethereum-toc-roadmap"), url: "#roadmap" },
   ]
 
-  const getId = (input: string) => {
-    const parts = input.split("#")
-    return parts.length > 1 ? parts[1] : ""
-  }
   return (
     <>
       <PageJsonLD
@@ -108,7 +105,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         listenSlug="what-is-ethereum"
         variant="narrow"
       >
-        <Section id={getId(tocItems[0].url)}>
+        <Section id={getIdFromHash(tocItems[0].url)}>
           <p>
             {t.rich("page-what-is-ethereum-ethereum-intro-1", {
               strong: Strong,
@@ -161,14 +158,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </p>
         </Section>
 
-        <Section aria-labelledby={getId(tocItems[1].url)}>
+        <Section aria-labelledby={getIdFromHash(tocItems[1].url)}>
           <Image
             src={networksBanner}
             alt=""
             sizes={`(max-width: 800px) calc(100vw - 32px), (max-width: ${screens.lg}) 800px, (max-width: ${screens.xl}) calc(100vw - 480px), 800px`}
             className="rounded-base"
           />
-          <h2 id={getId(tocItems[1].url)}>{tocItems[1].title}</h2>
+          <h2 id={getIdFromHash(tocItems[1].url)}>{tocItems[1].title}</h2>
           <p>
             {t.rich("page-what-is-ethereum-network-intro-1", {
               strong: Strong,
@@ -263,7 +260,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         </Section>
 
         <Section
-          aria-labelledby={getId(tocItems[2].url)}
+          aria-labelledby={getIdFromHash(tocItems[2].url)}
           className="flow rounded-4xl border border-accent-a/20 bg-tint-accent-a px-4 py-6 lg:p-12"
         >
           <div className="flex flex-col items-center justify-center gap-4 xl:flex-row">
@@ -273,7 +270,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               sizes="224px"
               className="max-w-56"
             />
-            <h2 id={getId(tocItems[2].url)}>{tocItems[2].title}</h2>
+            <h2 id={getIdFromHash(tocItems[2].url)}>{tocItems[2].title}</h2>
           </div>
 
           <p>{t("page-what-is-ethereum-ether-intro-1")}</p>
@@ -305,12 +302,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         </Section>
 
         <Section
-          aria-labelledby={getId(tocItems[3].url)}
+          aria-labelledby={getIdFromHash(tocItems[3].url)}
           className="flow rounded-4xl border border-accent-c/20 bg-tint-accent-c px-4 py-6 gradient-use-light lg:p-12"
         >
           <div className="flex flex-col items-center gap-4 xl:flex-row-reverse">
             <Image src={howBanner} alt="" sizes="288px" className="max-w-72" />
-            <h2 id={getId(tocItems[3].url)}>{tocItems[3].title}</h2>
+            <h2 id={getIdFromHash(tocItems[3].url)}>{tocItems[3].title}</h2>
           </div>
 
           <p>
@@ -385,14 +382,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </LinkWithArrow>
         </Section>
 
-        <Section aria-labelledby={getId(tocItems[4].url)}>
+        <Section aria-labelledby={getIdFromHash(tocItems[4].url)}>
           <Image
             src={whatBanner}
             alt=""
             sizes="(max-width: 320px) calc(100vw - 32px), 320px"
             className="mx-auto max-w-xs -scale-x-100"
           />
-          <h2 id={getId(tocItems[4].url)}>{tocItems[4].title}</h2>
+          <h2 id={getIdFromHash(tocItems[4].url)}>{tocItems[4].title}</h2>
           <p>{t("page-what-is-ethereum-what-intro-1")}</p>
           <p>
             {t.rich("page-what-is-ethereum-what-intro-2", {
@@ -538,7 +535,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </HighlightStack>
         </Section>
 
-        <Section aria-labelledby={getId(tocItems[5].url)}>
+        <Section aria-labelledby={getIdFromHash(tocItems[5].url)}>
           <Image
             src={startBanner}
             alt=""
@@ -546,7 +543,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             className="rounded-base"
           />
 
-          <h2 id={getId(tocItems[5].url)}>{tocItems[5].title}</h2>
+          <h2 id={getIdFromHash(tocItems[5].url)}>{tocItems[5].title}</h2>
           <p>{t("page-what-is-ethereum-start-intro-1")}</p>
           <p>{t("page-what-is-ethereum-start-intro-2")}</p>
 
@@ -709,7 +706,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </Card>
         </Section>
 
-        <Section id={getId(tocItems[6].url)}>
+        <Section id={getIdFromHash(tocItems[6].url)}>
           <h2>{tocItems[6].title}</h2>
           <p>{t("page-what-is-ethereum-bitcoin-intro-1")}</p>
           <p>
@@ -742,7 +739,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </LinkWithArrow>
         </Section>
 
-        <Section aria-labelledby={getId(tocItems[7].url)}>
+        <Section aria-labelledby={getIdFromHash(tocItems[7].url)}>
           <Image
             src={whenWhoBanner}
             alt=""
@@ -750,7 +747,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             className="mx-auto max-w-56"
           />
 
-          <h2 id={getId(tocItems[7].url)}>{tocItems[7].title}</h2>
+          <h2 id={getIdFromHash(tocItems[7].url)}>{tocItems[7].title}</h2>
           <p>{t("page-what-is-ethereum-when-who-intro-1")}</p>
           <p>{t("page-what-is-ethereum-when-who-intro-2")}</p>
           <p>{t("page-what-is-ethereum-when-who-intro-3")}</p>
@@ -850,7 +847,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </LinkWithArrow>
         </Section>
 
-        <Section id={getId(tocItems[8].url)}>
+        <Section id={getIdFromHash(tocItems[8].url)}>
           <h2>{tocItems[8].title}</h2>
           <p>{t("page-what-is-ethereum-roadmap-intro-1")}</p>
           <p>{t("page-what-is-ethereum-roadmap-intro-2")} </p>
