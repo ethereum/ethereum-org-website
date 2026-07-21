@@ -9,10 +9,9 @@ import {
 /**
  * Canonical persona definitions — the single source of truth, derived from the
  * `*_FEATURES` lists in `constants.ts`. A wallet belongs to a persona when it
- * has ALL of that persona's feature flags (AND semantics, matching the legacy
- * `getWalletPersonas`). The `id` is the URL slug used for persona pages
- * (`/wallets/find-wallet/personas/[persona]`) — deliberately never the internal
- * `hodler` key (its slug/title is `hardware`, resolved in the revamp plan).
+ * has ALL of that persona's feature flags (AND semantics). The `id` is the URL
+ * slug used for persona pages (`/wallets/find-wallet/personas/[persona]`) —
+ * deliberately `hardware`, never the internal `hodler` key.
  *
  * Dependency-free (imports only constants) so client components can use it
  * without pulling in the server-only wallet data module.
@@ -25,16 +24,10 @@ export const WALLET_PERSONAS = [
     descKey: "page-find-wallet-new-to-crypto-desc",
   },
   {
-    id: "nfts",
-    features: NFTS_FEATURES,
-    titleKey: "page-find-wallet-nfts-title",
-    descKey: "page-find-wallet-nfts-desc",
-  },
-  {
-    id: "hardware",
-    features: LONG_TERM_FEATURES,
-    titleKey: "page-find-wallet-hodler-title",
-    descKey: "page-find-wallet-hodler-desc",
+    id: "developer",
+    features: DEVELOPER_FEATURES,
+    titleKey: "page-find-wallet-developer-title",
+    descKey: "page-find-wallet-developer-desc",
   },
   {
     id: "finance",
@@ -43,16 +36,22 @@ export const WALLET_PERSONAS = [
     descKey: "page-find-wallet-finance-desc",
   },
   {
-    id: "developer",
-    features: DEVELOPER_FEATURES,
-    titleKey: "page-find-wallet-developer-title",
-    descKey: "page-find-wallet-developer-desc",
+    id: "hardware",
+    features: LONG_TERM_FEATURES,
+    titleKey: "page-find-wallet-hodler-title",
+    descKey: "page-find-wallet-hodler-desc",
+  },
+  {
+    id: "nfts",
+    features: NFTS_FEATURES,
+    titleKey: "page-find-wallet-nfts-title",
+    descKey: "page-find-wallet-nfts-desc",
   },
 ] as const
 
 export type WalletPersonaId = (typeof WALLET_PERSONAS)[number]["id"]
 
-/** `Tag` status variants used for persona chips (see `src/components/ui/tag`). */
+/** `Tag` status variants used for wallet-card persona chips (see `src/components/ui/tag`). */
 export type PersonaTagStatus =
   | "primary"
   | "accent-a"
@@ -61,47 +60,16 @@ export type PersonaTagStatus =
   | "tag-yellow"
 
 /**
- * Per-persona accent styling, matched to the Figma redesign and mapped onto the
- * theme-aware semantic tokens (so both light/dark work): purple → primary,
- * NFTs → pink (accent-b), Hardware → teal (accent-c), Finance → blue
- * (accent-a), Developer → amber (warning). Single source shared by the persona
- * navigation cards (`text`/`border`/`bg` utilities) and the wallet-card persona
- * chips (`tag` status), so the two never drift.
+ * Per-persona chip color for the wallet cards, mapped onto theme-aware semantic
+ * tokens. Keep in sync with the index-based card palette in
+ * `WalletPersonaCards` so a persona's chip matches its card.
  */
-export const PERSONA_STYLES: Record<
-  WalletPersonaId,
-  { text: string; border: string; bg: string; tag: PersonaTagStatus }
-> = {
-  "new-to-crypto": {
-    text: "text-primary",
-    border: "border-primary",
-    bg: "bg-primary",
-    tag: "primary",
-  },
-  nfts: {
-    text: "text-accent-b",
-    border: "border-accent-b",
-    bg: "bg-accent-b",
-    tag: "accent-b",
-  },
-  hardware: {
-    text: "text-accent-c",
-    border: "border-accent-c",
-    bg: "bg-accent-c",
-    tag: "accent-c",
-  },
-  finance: {
-    text: "text-accent-a",
-    border: "border-accent-a",
-    bg: "bg-accent-a",
-    tag: "accent-a",
-  },
-  developer: {
-    text: "text-warning-dark",
-    border: "border-warning-border",
-    bg: "bg-warning",
-    tag: "tag-yellow",
-  },
+export const PERSONA_TAG_STATUS: Record<WalletPersonaId, PersonaTagStatus> = {
+  "new-to-crypto": "primary",
+  developer: "accent-b",
+  finance: "accent-c",
+  hardware: "accent-a",
+  nfts: "tag-yellow",
 }
 
 export const WALLET_PERSONA_IDS = WALLET_PERSONAS.map(

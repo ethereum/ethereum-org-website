@@ -52,8 +52,7 @@ type WalletsCatalogProps = {
 const asArray = (value: string | string[] | undefined): string[] =>
   Array.isArray(value) ? value : []
 
-// Legacy Matomo category preserved for trend comparability with the old
-// sidebar (see the find-wallet revamp plan, decision #12).
+// Matomo category kept from the old sidebar for trend comparability.
 const trackFilterToggle = (action: string, name: string) =>
   trackCustomEvent({
     eventCategory: "WalletFilterSidebar",
@@ -83,9 +82,8 @@ export default function WalletsCatalog({
 }: WalletsCatalogProps) {
   const t = useTranslations("page-wallets-find-wallet")
 
-  // Baseline per-option counts (relative to this page's wallet set, stable while
-  // nothing is selected). Selection-relative counts under AND semantics are a
-  // design follow-up (revamp plan, decision #5).
+  // Baseline per-option counts, relative to this page's wallet set (not the
+  // current selection).
   const deviceCounts = useMemo(() => {
     const counts = {} as Record<WalletDeviceId, number>
     for (const device of DEVICE_IDS) {

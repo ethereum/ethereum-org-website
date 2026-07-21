@@ -30,10 +30,9 @@ type WalletFilterGroupProps = {
 }
 
 /**
- * Collapsible sidebar filter group matching the find-wallet redesign: a colored
- * header (chevron + label + selected-count badge) over an indented, railed list
- * of checkbox options. Independent per group (Collapsible, not Accordion) so
- * several can stay open at once.
+ * Collapsible sidebar filter group: a header (chevron + label + selected-count
+ * badge) over an indented, railed list of checkbox options. Independent per
+ * group (Collapsible, not Accordion) so several can stay open at once.
  */
 export default function WalletFilterGroup({
   locale,

@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl"
 import { Tag } from "@/components/ui/tag"
 
 import {
-  PERSONA_STYLES,
+  PERSONA_TAG_STATUS,
   PERSONA_TITLE_KEYS,
   type WalletPersonaId,
 } from "@/data/wallets/personas"
@@ -29,7 +29,7 @@ const WalletPersonaTags = ({ personas }: WalletPersonaTagsProps) => {
         <Tag
           key={persona}
           variant="subtle"
-          status={PERSONA_STYLES[persona].tag}
+          status={PERSONA_TAG_STATUS[persona]}
           size="small"
         >
           {t(PERSONA_TITLE_KEYS[persona])}

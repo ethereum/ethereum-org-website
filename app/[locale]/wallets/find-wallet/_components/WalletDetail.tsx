@@ -40,10 +40,8 @@ type WalletDetailProps = {
 }
 
 /**
- * Shared wallet-detail body used by both the standalone `[wallet]` route and the
- * intercepting modal. Content ported from the legacy `WalletSubComponent`
- * (grouped feature checklists, socials, last-updated); a restyle lands later
- * once the detail design is ready (revamp plan, decision #8).
+ * Shared wallet-detail body used by both the standalone `[wallet]` route and
+ * the intercepting modal (grouped feature checklists, socials, last-updated).
  */
 const WalletDetail = async ({
   locale,

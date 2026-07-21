@@ -14,10 +14,9 @@ export type WalletFeatureGroup = {
 }
 
 /**
- * Feature checklist groups for the wallet detail view, ported from the legacy
- * `useWalletFilters` display order. These are the 16 feature dimensions that
- * live on detail pages only — the revamp's launch filter set is intentionally
- * narrower (see the find-wallet revamp plan, decision #6).
+ * Feature checklist groups for the wallet detail view. These 16 feature
+ * dimensions live on detail pages only — the sidebar filter set is
+ * intentionally narrower.
  */
 export const WALLET_FEATURE_GROUPS: WalletFeatureGroup[] = [
   {

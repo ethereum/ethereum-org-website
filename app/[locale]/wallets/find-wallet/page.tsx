@@ -19,7 +19,7 @@ import WalletsPageBody from "./_components/WalletsPageBody"
 import FindWalletPageJsonLD from "./page-jsonld"
 
 // Wallet data is repo-checked-in and deploy-coupled, so the page is fully
-// static and only changes at deploy time (revamp plan engineering flags).
+// static and only changes at deploy time.
 export const revalidate = false
 
 const Page = async (props: { params: Promise<PageParams> }) => {

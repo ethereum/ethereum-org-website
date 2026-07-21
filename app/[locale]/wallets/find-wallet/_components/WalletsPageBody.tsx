@@ -57,7 +57,7 @@ const WalletsPageBody = async ({
 
   return (
     <>
-      <Section className="px-page">
+      <Section>
         <WalletPersonaCards
           locale={locale}
           personaCounts={personaCounts}

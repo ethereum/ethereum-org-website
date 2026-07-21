@@ -24,7 +24,7 @@ import WalletDetail from "../_components/WalletDetail"
 import WalletDetailPageJsonLD from "./page-jsonld"
 
 // Repo-checked-in data, deploy-coupled: render once on demand, cache durably,
-// invalidate at next deploy (revamp plan engineering flags).
+// invalidate at next deploy.
 export const revalidate = false
 export const dynamicParams = true
 
