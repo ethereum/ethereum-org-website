@@ -441,7 +441,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <h4>{t("page-privacy-ethereum-stealth-apps-title")}</h4>
           <CategoryAppsGrid category="privacy" subcategory="stealth address" />
           {/* // TODO: confirm href -- no dedicated "payments on Ethereum" page */}
-          <ButtonLink href="/guides/" size="lg">
+          <ButtonLink href="/payments/" size="lg">
             {t("page-privacy-ethereum-stealth-apps-cta")}
           </ButtonLink>
 
