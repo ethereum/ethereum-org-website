@@ -149,7 +149,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
         description={t("page-community-hero-subtitle")}
       />
 
-      <main className="pb-page">
+      <main className="py-page">
         <MainArticle className="flow **:data-[label=button-link]:max-md:w-full *:[section]:px-page *:[section]:py-space-2x">
           {/* Why get involved */}
           <Section id="why-get-involved">
