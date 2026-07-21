@@ -2,6 +2,7 @@
 
 import {
   type ReactNode,
+  useCallback,
   useDeferredValue,
   useMemo,
   useRef,
@@ -83,7 +84,8 @@ export default function FilterableCatalog<TItem>({
   const deferredSelection = useDeferredValue(selection)
   const isStale = search !== deferredSearch || selection !== deferredSelection
 
-  const setFilter: CatalogSetFilter = (key, value, options) => {
+  // Stable identity so memoized filter controls don't re-render every keystroke
+  const setFilter: CatalogSetFilter = useCallback((key, value, options) => {
     setSelection((prev) => ({ ...prev, [key]: value }))
     if (options?.scroll ?? true) {
       resultsTopRef.current?.scrollIntoView({
@@ -91,7 +93,7 @@ export default function FilterableCatalog<TItem>({
         block: "start",
       })
     }
-  }
+  }, [])
 
   const filteredItems = useMemo(
     () =>

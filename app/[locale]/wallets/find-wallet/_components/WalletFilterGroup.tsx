@@ -1,5 +1,6 @@
 "use client"
 
+import { memo } from "react"
 import { ChevronDown } from "lucide-react"
 
 import Checkbox from "@/components/ui/checkbox"
@@ -34,7 +35,7 @@ type WalletFilterGroupProps = {
  * badge) over an indented, railed list of checkbox options. Independent per
  * group (Collapsible, not Accordion) so several can stay open at once.
  */
-export default function WalletFilterGroup({
+function WalletFilterGroup({
   locale,
   label,
   options,
@@ -91,3 +92,5 @@ export default function WalletFilterGroup({
     </Collapsible>
   )
 }
+
+export default memo(WalletFilterGroup)
