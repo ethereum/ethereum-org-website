@@ -85,9 +85,19 @@ const setImagePlaceholders = async (
     .replaceAll("/", "-")
     .slice(1)
 
+  // The on-disk placeholder cache is a build-time optimization. When MDX is
+  // compiled on-demand in the serverless runtime the filesystem is read-only
+  // (and this dir isn't bundled), so treat cache I/O as best-effort and fall
+  // back to generating placeholders in memory.
+  let canWriteCache = true
+
   // Make directory for current page if none exists
-  if (!fs.existsSync(PLACEHOLDER_IMAGE_DIR))
-    fs.mkdirSync(PLACEHOLDER_IMAGE_DIR, { recursive: true })
+  try {
+    if (!fs.existsSync(PLACEHOLDER_IMAGE_DIR))
+      fs.mkdirSync(PLACEHOLDER_IMAGE_DIR, { recursive: true })
+  } catch {
+    canWriteCache = false
+  }
 
   const DATA_PATH = path.join(PLACEHOLDER_IMAGE_DIR, FILENAME)
   const existsCache = fs.existsSync(DATA_PATH)
@@ -134,15 +144,16 @@ const setImagePlaceholders = async (
 
   // If cache is still empty, delete JSON file and return
   if (Object.keys(placeholdersCached).length === 0) {
-    fs.rmSync(DATA_PATH, { recursive: true, force: true })
+    if (canWriteCache) fs.rmSync(DATA_PATH, { recursive: true, force: true })
     return
   }
 
   // If cached value has not changed, return without writing to file system
   if (!isChanged) return
 
-  // Write results to cache file
-  fs.writeFileSync(DATA_PATH, JSON.stringify(placeholdersCached, null, 2))
+  // Write results to cache file (skipped when the FS is read-only at runtime)
+  if (canWriteCache)
+    fs.writeFileSync(DATA_PATH, JSON.stringify(placeholdersCached, null, 2))
 }
 
 /**
