@@ -73,7 +73,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           networks={networks}
           languages={languages}
           personaCounts={personaCounts}
-          totalCount={wallets.length}
           lastUpdatedDisplay={lastUpdatedDisplay}
         />
       </MainArticle>

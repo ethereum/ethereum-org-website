@@ -31,7 +31,6 @@ type WalletsPageBodyProps = {
   networks: WalletNetwork[]
   languages: WalletLanguageOption[]
   personaCounts: Record<WalletPersonaId, number>
-  totalCount: number
   lastUpdatedDisplay: string
   currentPersonaId?: WalletPersonaId
 }
@@ -48,7 +47,6 @@ const WalletsPageBody = async ({
   networks,
   languages,
   personaCounts,
-  totalCount,
   lastUpdatedDisplay,
   currentPersonaId,
 }: WalletsPageBodyProps) => {
@@ -63,12 +61,11 @@ const WalletsPageBody = async ({
         <WalletPersonaCards
           locale={locale}
           personaCounts={personaCounts}
-          totalCount={totalCount}
           currentPersonaId={currentPersonaId}
         />
       </Section>
 
-      <Section id="wallets" className="px-page">
+      <Section id="wallets" className="mt-10 px-page lg:mt-16">
         <h2 className="sr-only select-none">
           {t("page-find-wallet-table-title")}
         </h2>

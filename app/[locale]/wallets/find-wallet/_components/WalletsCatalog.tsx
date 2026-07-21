@@ -1,23 +1,15 @@
 "use client"
 
 import { memo, useMemo } from "react"
+import { RotateCcw } from "lucide-react"
 import { useTranslations } from "next-intl"
 
 import FilterableCatalog from "@/components/FilterableCatalog"
-import CatalogCheckboxGroup from "@/components/FilterableCatalog/CatalogCheckboxGroup"
 import type {
   CatalogFilterState,
   CatalogSetFilter,
 } from "@/components/FilterableCatalog/types"
 import { toggleId } from "@/components/FilterableCatalog/utils"
-import { Button } from "@/components/ui/buttons/Button"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import type {
@@ -27,6 +19,7 @@ import type {
 } from "@/lib/utils/walletData"
 
 import WalletCard from "./WalletCard"
+import WalletFilterGroup from "./WalletFilterGroup"
 
 const DEVICES_KEY = "devices"
 const NETWORKS_KEY = "networks"
@@ -74,7 +67,7 @@ const WalletsResults = memo(function WalletsResults({
   wallets: CatalogWallet[]
 }) {
   return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+    <div className="grid grid-cols-1 gap-x-8 gap-y-1 lg:grid-cols-2">
       {wallets.map((wallet) => (
         <WalletCard key={wallet.slug} wallet={wallet} />
       ))}
@@ -136,11 +129,14 @@ export default function WalletsCatalog({
       return false
     }
 
-    const language = state[LANGUAGE_KEY]
+    // Language is OR-semantics (wallet matches if it supports any selected
+    // language), unlike the AND-combined checkbox groups above.
+    const languages = asArray(state[LANGUAGE_KEY])
     if (
-      typeof language === "string" &&
-      language.length > 0 &&
-      !(wallet.languages_supported as string[]).includes(language)
+      languages.length > 0 &&
+      !languages.some((code) =>
+        (wallet.languages_supported as string[]).includes(code)
+      )
     ) {
       return false
     }
@@ -163,16 +159,13 @@ export default function WalletsCatalog({
     const selectedDevices = asArray(state[DEVICES_KEY])
     const selectedNetworks = asArray(state[NETWORKS_KEY])
     const selectedPurchases = asArray(state[PURCHASES_KEY])
-    const selectedLanguage =
-      typeof state[LANGUAGE_KEY] === "string"
-        ? (state[LANGUAGE_KEY] as string)
-        : ""
+    const selectedLanguages = asArray(state[LANGUAGE_KEY])
 
-    const hasActiveFilters =
-      selectedDevices.length > 0 ||
-      selectedNetworks.length > 0 ||
-      selectedPurchases.length > 0 ||
-      selectedLanguage.length > 0
+    const activeCount =
+      selectedDevices.length +
+      selectedNetworks.length +
+      selectedPurchases.length +
+      selectedLanguages.length
 
     const reset = () => {
       setFilter(DEVICES_KEY, undefined, { scroll: false })
@@ -183,23 +176,31 @@ export default function WalletsCatalog({
     }
 
     return (
-      <div className="space-y-4">
-        {hasActiveFilters && (
-          <Button variant="ghost" size="sm" className="w-full" onClick={reset}>
+      <div>
+        <div className="flex items-center justify-between px-2 pb-2">
+          <p className="text-sm font-bold">
+            {t("page-find-wallet-filters")} ({activeCount})
+          </p>
+          <button
+            type="button"
+            onClick={reset}
+            disabled={activeCount === 0}
+            className="flex items-center gap-1.5 text-sm text-primary transition-opacity hover:underline disabled:pointer-events-none disabled:opacity-40"
+          >
+            <RotateCcw className="size-4" />
             {t("page-find-wallet-reset-filters")}
-          </Button>
-        )}
+          </button>
+        </div>
 
-        <CatalogCheckboxGroup
+        <WalletFilterGroup
           locale={locale}
-          config={{
-            label: t("page-find-wallet-device"),
-            options: DEVICE_IDS.map((device) => ({
-              id: device,
-              label: t(DEVICE_LABEL_KEYS[device]),
-              count: deviceCounts[device],
-            })),
-          }}
+          label={t("page-find-wallet-device")}
+          defaultOpen
+          options={DEVICE_IDS.map((device) => ({
+            id: device,
+            label: t(DEVICE_LABEL_KEYS[device]),
+            count: deviceCounts[device],
+          }))}
           selectedIds={selectedDevices}
           onToggle={(optionId) => {
             setFilter(DEVICES_KEY, toggleId(selectedDevices, optionId), {
@@ -212,23 +213,22 @@ export default function WalletsCatalog({
           }}
         />
 
-        <CatalogCheckboxGroup
+        <WalletFilterGroup
           locale={locale}
-          config={{
-            label: t("page-find-wallet-buy-sell-crypto"),
-            options: [
-              {
-                id: "buy_crypto",
-                label: t("page-find-wallet-buy-crypto"),
-                count: purchaseCounts.buy_crypto,
-              },
-              {
-                id: "withdraw_crypto",
-                label: t("page-find-wallet-sell-for-fiat"),
-                count: purchaseCounts.withdraw_crypto,
-              },
-            ],
-          }}
+          label={t("page-find-wallet-buy-sell-crypto")}
+          defaultOpen
+          options={[
+            {
+              id: "buy_crypto",
+              label: t("page-find-wallet-buy-crypto"),
+              count: purchaseCounts.buy_crypto,
+            },
+            {
+              id: "withdraw_crypto",
+              label: t("page-find-wallet-sell-for-fiat"),
+              count: purchaseCounts.withdraw_crypto,
+            },
+          ]}
           selectedIds={selectedPurchases}
           onToggle={(optionId) => {
             setFilter(PURCHASES_KEY, toggleId(selectedPurchases, optionId), {
@@ -241,16 +241,16 @@ export default function WalletsCatalog({
           }}
         />
 
-        <CatalogCheckboxGroup
+        <WalletFilterGroup
           locale={locale}
-          config={{
-            label: t("page-find-wallet-network-support"),
-            options: networks.map((network) => ({
-              id: network.id,
-              label: network.id,
-              count: network.count,
-            })),
-          }}
+          label={t("page-find-wallet-network-support")}
+          defaultOpen
+          scrollable
+          options={networks.map((network) => ({
+            id: network.id,
+            label: network.id,
+            count: network.count,
+          }))}
           selectedIds={selectedNetworks}
           onToggle={(optionId) => {
             setFilter(NETWORKS_KEY, toggleId(selectedNetworks, optionId), {
@@ -260,31 +260,23 @@ export default function WalletsCatalog({
           }}
         />
 
-        <div className="space-y-1">
-          <p className="px-3 py-2 text-sm font-bold">
-            {t("page-find-wallet-languages-supported")}
-          </p>
-          <Select
-            value={selectedLanguage || undefined}
-            onValueChange={(value) => {
-              setFilter(LANGUAGE_KEY, value || undefined, { scroll: false })
-              trackFilterToggle("Language search", value)
-            }}
-          >
-            <SelectTrigger className="w-full">
-              <SelectValue
-                placeholder={t("page-find-wallet-search-languages")}
-              />
-            </SelectTrigger>
-            <SelectContent>
-              {languages.map((language) => (
-                <SelectItem key={language.code} value={language.code}>
-                  {language.name} ({language.count})
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
+        <WalletFilterGroup
+          locale={locale}
+          label={t("page-find-wallet-languages-supported")}
+          scrollable
+          options={languages.map((language) => ({
+            id: language.code,
+            label: language.name,
+            count: language.count,
+          }))}
+          selectedIds={selectedLanguages}
+          onToggle={(optionId) => {
+            setFilter(LANGUAGE_KEY, toggleId(selectedLanguages, optionId), {
+              scroll: false,
+            })
+            trackFilterToggle("Language search", optionId)
+          }}
+        />
       </div>
     )
   }

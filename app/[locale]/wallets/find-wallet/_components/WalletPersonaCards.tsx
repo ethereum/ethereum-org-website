@@ -1,3 +1,4 @@
+import { Check } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
 import { BaseLink } from "@/components/ui/Link"
@@ -5,12 +6,11 @@ import { BaseLink } from "@/components/ui/Link"
 import { cn } from "@/lib/utils/cn"
 import type { WalletPersonaId } from "@/lib/utils/walletData"
 
-import { WALLET_PERSONAS } from "@/data/wallets/personas"
+import { PERSONA_STYLES, WALLET_PERSONAS } from "@/data/wallets/personas"
 
 type WalletPersonaCardsProps = {
   locale: string
   personaCounts: Record<WalletPersonaId, number>
-  totalCount: number
   currentPersonaId?: WalletPersonaId
 }
 
@@ -19,11 +19,15 @@ type WalletPersonaCardsProps = {
  * pages (`/wallets/find-wallet/personas/[persona]`). Each persona page bakes
  * its wallet subset into the HTML for real SEO differentiation — this is
  * navigation, not a client-side filter (revamp plan, decision #4).
+ *
+ * Styling mirrors the Figma redesign / legacy ProductTable persona cards:
+ * a colored checkbox indicator + colored title, description, and count. The
+ * currently-active persona reads as "checked" and links back to the full list,
+ * so clicking it again clears the persona (matching the old toggle behavior).
  */
 const WalletPersonaCards = async ({
   locale,
   personaCounts,
-  totalCount,
   currentPersonaId,
 }: WalletPersonaCardsProps) => {
   const t = await getTranslations({
@@ -31,42 +35,60 @@ const WalletPersonaCards = async ({
     namespace: "page-wallets-find-wallet",
   })
 
-  const cardClass = (isCurrent: boolean) =>
-    cn(
-      "flex flex-col gap-1 rounded-xl border p-4 no-underline transition-colors hover:bg-background-highlight",
-      isCurrent ? "border-primary bg-background-highlight" : "border-body-light"
-    )
-
   return (
-    <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
-      <BaseLink
-        href="/wallets/find-wallet/"
-        className={cardClass(!currentPersonaId)}
-        aria-current={!currentPersonaId ? "page" : undefined}
-      >
-        <span className="font-bold text-body">
-          {t("page-find-wallet-table-title")}
-        </span>
-        <span className="text-sm text-body-medium">
-          {t("page-find-wallet-persona-count-available", { count: totalCount })}
-        </span>
-      </BaseLink>
-
+    <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
       {WALLET_PERSONAS.map((persona) => {
         const isCurrent = currentPersonaId === persona.id
+        const style = PERSONA_STYLES[persona.id]
+        const count = personaCounts[persona.id]
         return (
           <BaseLink
             key={persona.id}
-            href={`/wallets/find-wallet/personas/${persona.id}/`}
-            className={cardClass(isCurrent)}
+            // Re-clicking the active persona clears it back to the full list.
+            href={
+              isCurrent
+                ? "/wallets/find-wallet/"
+                : `/wallets/find-wallet/personas/${persona.id}/`
+            }
             aria-current={isCurrent ? "page" : undefined}
+            className={cn(
+              "group flex h-full min-h-[156px] flex-col items-start rounded-base border p-4 no-underline shadow-lg transition-colors hover:bg-background-highlight lg:p-6",
+              isCurrent ? style.border : "border-primary-low-contrast"
+            )}
           >
-            <span className="font-bold text-body">{t(persona.titleKey)}</span>
-            <span className="text-sm text-body-medium">
-              {t("page-find-wallet-persona-count-available", {
-                count: personaCounts[persona.id],
-              })}
-            </span>
+            <div className="flex w-full items-start gap-2">
+              <span
+                aria-hidden
+                className={cn(
+                  "relative mt-0.5 flex size-5 shrink-0 items-center justify-center rounded border-2",
+                  style.border,
+                  isCurrent && style.bg
+                )}
+              >
+                {isCurrent && (
+                  <Check className="size-4 stroke-[3] text-background" />
+                )}
+              </span>
+              <span
+                className={cn(
+                  "text-left text-xl font-bold hyphens-auto",
+                  style.text
+                )}
+              >
+                {t(persona.titleKey)}
+                <span aria-hidden="true" className="font-normal">
+                  {" "}
+                  ({count})
+                </span>
+                <span className="sr-only">
+                  {" "}
+                  {t("page-find-wallet-persona-count-available", { count })}
+                </span>
+              </span>
+            </div>
+            <p className="mt-2 text-left text-sm leading-normal text-body">
+              {t(persona.descKey)}
+            </p>
           </BaseLink>
         )
       })}

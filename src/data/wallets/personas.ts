@@ -52,6 +52,58 @@ export const WALLET_PERSONAS = [
 
 export type WalletPersonaId = (typeof WALLET_PERSONAS)[number]["id"]
 
+/** `Tag` status variants used for persona chips (see `src/components/ui/tag`). */
+export type PersonaTagStatus =
+  | "primary"
+  | "accent-a"
+  | "accent-b"
+  | "accent-c"
+  | "tag-yellow"
+
+/**
+ * Per-persona accent styling, matched to the Figma redesign and mapped onto the
+ * theme-aware semantic tokens (so both light/dark work): purple → primary,
+ * NFTs → pink (accent-b), Hardware → teal (accent-c), Finance → blue
+ * (accent-a), Developer → amber (warning). Single source shared by the persona
+ * navigation cards (`text`/`border`/`bg` utilities) and the wallet-card persona
+ * chips (`tag` status), so the two never drift.
+ */
+export const PERSONA_STYLES: Record<
+  WalletPersonaId,
+  { text: string; border: string; bg: string; tag: PersonaTagStatus }
+> = {
+  "new-to-crypto": {
+    text: "text-primary",
+    border: "border-primary",
+    bg: "bg-primary",
+    tag: "primary",
+  },
+  nfts: {
+    text: "text-accent-b",
+    border: "border-accent-b",
+    bg: "bg-accent-b",
+    tag: "accent-b",
+  },
+  hardware: {
+    text: "text-accent-c",
+    border: "border-accent-c",
+    bg: "bg-accent-c",
+    tag: "accent-c",
+  },
+  finance: {
+    text: "text-accent-a",
+    border: "border-accent-a",
+    bg: "bg-accent-a",
+    tag: "accent-a",
+  },
+  developer: {
+    text: "text-warning-dark",
+    border: "border-warning-border",
+    bg: "bg-warning",
+    tag: "tag-yellow",
+  },
+}
+
 export const WALLET_PERSONA_IDS = WALLET_PERSONAS.map(
   (persona) => persona.id
 ) as WalletPersonaId[]
