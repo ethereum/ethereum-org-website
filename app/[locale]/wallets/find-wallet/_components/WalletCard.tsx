@@ -7,8 +7,6 @@ import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import type { CatalogWallet, WalletDeviceId } from "@/lib/utils/walletData"
 
-import { NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN } from "@/lib/constants"
-
 import WalletPersonaTags from "./WalletPersonaTags"
 
 const DEVICE_LABEL_KEYS: Record<WalletDeviceId, string> = {
@@ -17,6 +15,11 @@ const DEVICE_LABEL_KEYS: Record<WalletDeviceId, string> = {
   browser: "page-find-wallet-browser",
   hardware: "page-find-wallet-hardware",
 }
+
+// Card shows only the first couple languages inline; the rest collapse into the
+// "+ N" tooltip chip. Local (not the shared NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN)
+// because the compact card wants fewer than the app-detail page.
+const LANGUAGES_SHOWN = 2
 
 const WalletCard = memo(function WalletCard({
   wallet,
@@ -34,10 +37,9 @@ const WalletCard = memo(function WalletCard({
   )
 
   const formattedLanguages = wallet.supportedLanguages
-    .slice(0, NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN)
-    .join(", ")
-  const hasExtraLanguages =
-    wallet.supportedLanguages.length > NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN
+    .slice(0, LANGUAGES_SHOWN)
+    .join(" · ")
+  const hasExtraLanguages = wallet.supportedLanguages.length > LANGUAGES_SHOWN
 
   return (
     // content-visibility lets the browser skip layout/paint of off-screen cards
@@ -66,18 +68,20 @@ const WalletCard = memo(function WalletCard({
             <WalletPersonaTags personas={wallet.personas} />
           )}
 
-          <p className="text-sm text-body-medium">
-            {deviceLabels.length > 0 && <span>{deviceLabels.join(", ")}</span>}
-            {deviceLabels.length > 0 && " · "}
-            <span className="font-semibold text-body">
-              {formattedLanguages}
-            </span>{" "}
-            {hasExtraLanguages && (
-              <SupportedLanguagesTooltip
-                supportedLanguages={wallet.supportedLanguages}
-              />
-            )}
-          </p>
+          <div className="space-y-0.5 text-sm text-body-medium">
+            {deviceLabels.length > 0 && <p>{deviceLabels.join(" · ")}</p>}
+            <p>
+              <span className="font-semibold text-body">
+                {formattedLanguages}
+              </span>{" "}
+              {hasExtraLanguages && (
+                <SupportedLanguagesTooltip
+                  supportedLanguages={wallet.supportedLanguages}
+                  shown={LANGUAGES_SHOWN}
+                />
+              )}
+            </p>
+          </div>
         </div>
       </LinkBox>
     </div>

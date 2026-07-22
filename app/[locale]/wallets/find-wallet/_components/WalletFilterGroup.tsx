@@ -50,11 +50,8 @@ function WalletFilterGroup({
   ).length
 
   return (
-    <Collapsible
-      defaultOpen={defaultOpen}
-      className="border-b last:border-b-0 last:pb-0"
-    >
-      <CollapsibleTrigger className="group flex w-full items-center gap-2 px-2 py-3 text-start">
+    <Collapsible defaultOpen={defaultOpen}>
+      <CollapsibleTrigger className="group flex w-full items-center gap-2 px-2 py-2.5 text-start">
         <ChevronDown className="size-4 shrink-0 text-primary transition-transform group-data-[state=closed]:-rotate-90 rtl:group-data-[state=closed]:rotate-90" />
         <span className="flex-1 text-sm font-bold text-primary">{label}</span>
         {selectedCount > 0 && (

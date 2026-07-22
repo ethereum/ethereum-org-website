@@ -19,6 +19,7 @@ import WalletFilters, {
   NETWORKS_KEY,
   PURCHASES_KEY,
 } from "./WalletFilters"
+import WalletFiltersHeader from "./WalletFiltersHeader"
 
 const DEVICE_IDS: WalletDeviceId[] = [
   "desktop",
@@ -130,6 +131,9 @@ export default function WalletsCatalog({
     buySell: t("page-find-wallet-buy-sell-crypto"),
     network: t("page-find-wallet-network-support"),
     language: t("page-find-wallet-languages-supported"),
+  }
+
+  const headerLabels = {
     filters: t("page-find-wallet-filters"),
     reset: t("page-find-wallet-reset-filters"),
   }
@@ -190,6 +194,13 @@ export default function WalletsCatalog({
         resultsLabel: t("page-find-wallet-table-title"),
         noResults: t("page-find-wallet-empty-results-title"),
       }}
+      renderSidebarHeader={({ state, setFilter }) => (
+        <WalletFiltersHeader
+          state={state}
+          setFilter={setFilter}
+          labels={headerLabels}
+        />
+      )}
       renderSidebar={({ state, setFilter }) => (
         <WalletFilters
           locale={locale}

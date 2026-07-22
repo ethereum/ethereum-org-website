@@ -1,7 +1,6 @@
 "use client"
 
 import { useCallback, useMemo } from "react"
-import { RotateCcw } from "lucide-react"
 
 import type {
   CatalogFilterState,
@@ -36,8 +35,6 @@ type WalletFiltersLabels = {
   buySell: string
   network: string
   language: string
-  filters: string
-  reset: string
 }
 
 type WalletFiltersProps = {
@@ -134,37 +131,8 @@ export default function WalletFilters({
     [setFilter, selectedLanguages]
   )
 
-  const reset = useCallback(() => {
-    setFilter(DEVICES_KEY, undefined, { scroll: false })
-    setFilter(NETWORKS_KEY, undefined, { scroll: false })
-    setFilter(PURCHASES_KEY, undefined, { scroll: false })
-    setFilter(LANGUAGE_KEY, undefined, { scroll: false })
-    trackFilterToggle("Reset button", "reset_click")
-  }, [setFilter])
-
-  const activeCount =
-    selectedDevices.length +
-    selectedNetworks.length +
-    selectedPurchases.length +
-    selectedLanguages.length
-
   return (
     <div>
-      <div className="flex items-center justify-between px-2 pb-2">
-        <p className="text-sm font-bold">
-          {labels.filters} ({activeCount})
-        </p>
-        <button
-          type="button"
-          onClick={reset}
-          disabled={activeCount === 0}
-          className="flex items-center gap-1.5 text-sm text-primary transition-opacity hover:underline disabled:pointer-events-none disabled:opacity-40"
-        >
-          <RotateCcw className="size-4" />
-          {labels.reset}
-        </button>
-      </div>
-
       <WalletFilterGroup
         locale={locale}
         label={labels.device}

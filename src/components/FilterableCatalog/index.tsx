@@ -49,6 +49,12 @@ export type FilterableCatalogProps<TItem> = {
    * `state` and a `setFilter` writer keyed however the consumer likes.
    */
   renderSidebar: (helpers: CatalogSidebarHelpers) => ReactNode
+  /**
+   * Optional row rendered above the search input, outside the bordered sidebar
+   * box (e.g. a "Filters (N)" count + reset control). Receives the same helpers
+   * as `renderSidebar`.
+   */
+  renderSidebarHeader?: (helpers: CatalogSidebarHelpers) => ReactNode
   renderResults: (items: TItem[]) => ReactNode
   /** Optional line rendered above the results count (e.g. an active-path breadcrumb) */
   renderResultsHeader?: (state: CatalogFilterState) => ReactNode
@@ -70,6 +76,7 @@ export default function FilterableCatalog<TItem>({
   filterFn,
   labels,
   renderSidebar,
+  renderSidebarHeader,
   renderResults,
   renderResultsHeader,
   className,
@@ -104,19 +111,21 @@ export default function FilterableCatalog<TItem>({
   // Filter UI reads live selection (not deferred) so controls reflect input
   // immediately; only the results below deferred-render.
   const sidebar = renderSidebar({ state: selection, setFilter })
+  const sidebarHeader = renderSidebarHeader?.({ state: selection, setFilter })
 
   return (
     <Section id="catalog" className={cn("space-y-5", className)}>
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-[280px_1fr]">
         <aside className="hidden lg:block">
-          <div className="sticky top-24 space-y-4">
+          <div className="sticky top-24 space-y-3">
+            {sidebarHeader}
             <Input
               value={search}
               onChange={(event) => setSearch(event.target.value)}
               placeholder={labels.searchPlaceholder}
               className="w-full"
             />
-            <div className="max-h-[calc(100vh-11rem)] space-y-4 overflow-y-auto rounded-xl border p-2">
+            <div className="max-h-[calc(100vh-11rem)] overflow-y-auto rounded-xl border p-2">
               {sidebar}
             </div>
           </div>
@@ -124,13 +133,14 @@ export default function FilterableCatalog<TItem>({
 
         <div className="space-y-4 lg:-mt-5">
           <div className="space-y-3 lg:hidden">
+            {sidebarHeader}
             <Input
               value={search}
               onChange={(event) => setSearch(event.target.value)}
               placeholder={labels.searchPlaceholder}
               className="w-full"
             />
-            <div className="space-y-4 rounded-xl border p-2">{sidebar}</div>
+            <div className="rounded-xl border p-2">{sidebar}</div>
           </div>
           <div ref={resultsTopRef} className="scroll-mt-24" />
           {renderResultsHeader?.(selection)}
