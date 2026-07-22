@@ -46,8 +46,8 @@ import {
   getL2beatData,
 } from "@/lib/data"
 import heroImg from "@/public/images/counter-screen-network-towers-rings-collage-cut-out.png"
-import layer2LearnCalloutImage from "@/public/images/network-column-rooftop-piping-construction.png"
 import layer2CalloutImage from "@/public/images/man-and-dog-playing.png"
+import layer2LearnCalloutImage from "@/public/images/network-column-rooftop-piping-construction.png"
 import developingImage from "@/public/images/network-maturity/developing.svg"
 import emergingImage from "@/public/images/network-maturity/emerging.svg"
 import maturingImage from "@/public/images/network-maturity/maturing.svg"

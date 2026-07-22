@@ -26,12 +26,12 @@ import { layer2Data } from "@/data/networks/networks"
 import PageJsonLD from "./page-jsonld"
 
 import { getGrowThePieData, getL2beatData } from "@/lib/data"
+import layer2NetworksCalloutImage from "@/public/images/counter-screen-network-towers-rings-collage-cut-out.png"
 import heroImg from "@/public/images/heroes/layer-2-hub-hero.png"
 import ethereumLogo from "@/public/images/layer-2/ethereum.png"
-import layer2LearnCalloutImage from "@/public/images/network-column-rooftop-piping-construction.png"
-import layer2NetworksCalloutImage from "@/public/images/counter-screen-network-towers-rings-collage-cut-out.png"
 import mainnetImage from "@/public/images/mainnet.png"
 import manDogCardImage from "@/public/images/man-and-dog-playing.png"
+import layer2LearnCalloutImage from "@/public/images/network-column-rooftop-piping-construction.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
