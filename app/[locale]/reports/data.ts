@@ -82,7 +82,7 @@ export const reports: Report[] = [
     category: "ef-original",
     href: "/reports/basics-for-governments-institutions.pdf",
     imgSrc: ethereumBasicsCover,
-    fileSizeBytes: 1366876,
+    fileSizeBytes: 1284908,
   },
   {
     slug: "trillion-dollar-security",

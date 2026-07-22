@@ -22,7 +22,7 @@ import { CheckCircle } from "@/components/icons/CheckCircle"
 import { XCircle } from "@/components/icons/XCircle"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import ProductList from "@/components/ProductList"
+import ProductList, { type ProductListContent } from "@/components/ProductList"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
@@ -371,51 +371,63 @@ async function Page(props: { params: Promise<PageParams> }) {
     },
   ]
 
-  const toolsData = [
+  const toolsData: ProductListContent[] = [
     {
-      title: "Stablecoins.wtf",
+      title: t("page-stablecoins-tools-stablecoinswtf-title"),
       description: t("page-stablecoins-tools-stablecoinswtf-description"),
-      link: "https://stablecoins.wtf",
+      href: "https://stablecoins.wtf",
       image: stablecoinsWtfImg,
-      alt: "",
+      ctaLabel: t("page-stablecoins-tools-visit-brand", {
+        brand: t("page-stablecoins-tools-stablecoinswtf-title"),
+      }),
     },
     {
-      title: "Stablepulse",
+      title: t("page-stablecoins-tools-stablepulse-title"),
       description: t("page-stablecoins-tools-stablepulse-description"),
-      link: "https://www.stablepulse.org/",
+      href: "https://www.stablepulse.org/",
       image: stablePulseImg,
-      alt: "",
       className: "[&_img]:p-1",
+      ctaLabel: t("page-stablecoins-tools-visit-brand", {
+        brand: t("page-stablecoins-tools-stablepulse-title"),
+      }),
     },
     {
-      title: "Stables.info",
+      title: t("page-stablecoins-tools-stablesinfo-title"),
       description: t("page-stablecoins-tools-stablesinfo-description"),
-      link: "https://stables.info/",
+      href: "https://stables.info/",
       image: stablesInfoImg,
-      alt: "",
+      ctaLabel: t("page-stablecoins-tools-visit-brand", {
+        brand: t("page-stablecoins-tools-stablesinfo-title"),
+      }),
     },
     {
-      title: "Dune Stablecoin Metrics",
+      title: t("page-stablecoins-tools-dune-title"),
       description: t("page-stablecoins-tools-dune-description"),
-      link: "https://dune.com/overview/stablecoin",
+      href: "https://dune.com/overview/stablecoin",
       image: duneImg,
-      alt: "",
       className: "dark:[&_img]:invert [&_img]:p-2",
+      ctaLabel: t("page-stablecoins-tools-visit-brand", {
+        brand: t("page-stablecoins-tools-dune-brand"),
+      }),
     },
     {
-      title: "Visa Onchain Analytics",
+      title: t("page-stablecoins-tools-visa-title"),
       description: t("page-stablecoins-tools-visa-description"),
-      link: "https://visaonchainanalytics.com/",
+      href: "https://visaonchainanalytics.com/",
       image: visaImg,
-      alt: "",
+      ctaLabel: t("page-stablecoins-tools-visit-brand", {
+        brand: t("page-stablecoins-tools-visa-brand"),
+      }),
     },
     {
-      title: "Stablewars",
+      title: t("page-stablecoins-tools-stablewars-title"),
       description: t("page-stablecoins-tools-stablewars-description"),
-      link: "https://stablewars.xyz/",
+      href: "https://stablewars.xyz/",
       image: stablesWarsImg,
-      alt: "",
       className: "[&_img]:p-1",
+      ctaLabel: t("page-stablecoins-tools-visit-brand", {
+        brand: t("page-stablecoins-tools-stablewars-title"),
+      }),
     },
   ]
 
@@ -863,12 +875,11 @@ async function Page(props: { params: Promise<PageParams> }) {
               <h2>{t("page-stablecoins-tools-title")}</h2>
               <div className="[&_img]:shadow-none">
                 <ProductList
-                  columns={2}
                   category={t(
                     "page-stablecoins-category-dashboard-and-education"
                   )}
-                  actionLabel={t("page-apps-ready-button")}
                   content={toolsData}
+                  columns={2}
                 />
               </div>
             </Section>

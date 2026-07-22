@@ -7,14 +7,19 @@ The site supports 25 languages, including **Arabic** and **Urdu** (RTL). Transla
 ### Server Components (preferred)
 
 ```tsx
-import { getLocale, getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
-export default async function Page() {
+export default async function Page({ params }) {
+  const { locale } = await params
+
+  setRequestLocale(locale) // MUST run before any next-intl API (see note below)
+
   const t = await getTranslations("page-namespace")
-  const locale = await getLocale()
   return <h1>{t("page-title")}</h1>
 }
 ```
+
+`setRequestLocale(locale)` **must** be the first statement in every page and `generateMetadata` under `app/[locale]/`, before any next-intl API -- including the `getMetadata`/`getMdMetadata` helpers, which call `getTranslations("common")` internally. Skipping it forces dynamic rendering and throws `Page changed from static to dynamic at runtime, reason: headers` for on-demand params. Descendant server components (no `params`) read the locale with `getLocale()`, which resolves statically once the page has primed the cache. Full root cause and prevention: `docs/solutions/architecture/setrequestlocale-static-to-dynamic-rendering.md`.
 
 ### Client Components
 
@@ -44,6 +49,10 @@ Caveat for both APIs: strings with embedded HTML (`<b>`, `<a href>`) predate nex
 If a string is rendered to a user, it must come from a translation key. The exception is dev-only debug UI (e.g., `AB/TestDebugPanel`) and developer-facing internal copy.
 
 If you find yourself wanting to hard-code, add the key to `src/intl/en/[namespace].json` and use `t()`.
+
+### Interpolate a translated value, never a hard-coded literal
+
+A shared skeleton with an interpolated value -- `t("visit-brand", { brand: t("dune-brand") })` -- is the pattern to reach for: one `"Visit {brand}"` string instead of the `"Visit "` prefix repeated across N labels, and each brand is its own key the pipeline can transliterate or case-adjust per locale. The anti-pattern is passing a hard-coded English literal as the variable (`t("visit-brand", { brand: "Dune" })`): the `"Dune"` literal never enters an intl file, so it stays untranslated English no matter the locale. If a proper noun/brand is enumerable, give it a key and inject the translated value; reserve raw literals for genuinely dynamic runtime values (counts, dates, user input) that can't be keys. `ProductList` CTAs follow this -- see `AiAgentProductLists` and the stablecoins tools list.
 
 ## RTL: Logical CSS Properties
 
@@ -245,6 +254,7 @@ H1-H4 headings in markdown require a custom `{#lower-kebab-id}`. Enforced by mar
 
 ## Common Mistakes
 
+- Calling a next-intl API (`getTranslations`, `getLocale`, or the `getMetadata`/`getMdMetadata` helpers) before `setRequestLocale(locale)` in a page or `generateMetadata` -- opts the route into dynamic rendering and throws `Page changed from static to dynamic at runtime, reason: headers` for on-demand params
 - Using `left-`/`right-`/`ml-`/`mr-`/`pl-`/`pr-` for layout (use logical equivalents)
 - Hard-coding English in JSX
 - `value.toLocaleString()` -- use `numberFormat()`

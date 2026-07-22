@@ -1,6 +1,11 @@
 import { pick } from "lodash"
 import type { Metadata } from "next"
-import { getMessages, setRequestLocale } from "next-intl/server"
+import { notFound } from "next/navigation"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
@@ -19,6 +24,11 @@ const StoryPage = async (props: {
   params: Promise<{ locale: string; slug: string }>
 }) => {
   const { locale, slug } = await props.params
+
+  // Guard against non-existent story slugs (e.g. crawler probes) so they 404
+  // instead of throwing an ENOENT when the markdown file is read.
+  const slugs = await getStorySlugs()
+  if (!slugs.includes(slug)) notFound()
 
   setRequestLocale(locale)
 
@@ -91,10 +101,20 @@ export async function generateMetadata(props: {
 
   setRequestLocale(locale)
 
-  return await getMdMetadata({
-    locale,
-    slug: ["stories", slug],
-  })
+  try {
+    return await getMdMetadata({
+      locale,
+      slug: ["stories", slug],
+    })
+  } catch {
+    // Return basic metadata for invalid paths (mirrors the shared [...slug] route)
+    const t = await getTranslations("common")
+
+    return {
+      title: t("page-not-found"),
+      description: t("page-not-found-description"),
+    }
+  }
 }
 
 export default StoryPage
