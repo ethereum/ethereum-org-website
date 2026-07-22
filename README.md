@@ -2246,6 +2246,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://envio.dev/"><img src="https://avatars.githubusercontent.com/u/82444671?v=4?s=100" width="100px;" alt="Jords"/><br /><sub><b>Jords</b></sub></a><br /><a href="#tool-Jordy-Baby" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/thenameisdevair"><img src="https://avatars.githubusercontent.com/u/172976243?v=4?s=100" width="100px;" alt="Devair"/><br /><sub><b>Devair</b></sub></a><br /><a href="#maintenance-thenameisdevair" title="Maintenance">🚧</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/denalimarsh"><img src="https://avatars.githubusercontent.com/u/15370712?v=4?s=100" width="100px;" alt="Denali Marsh"/><br /><sub><b>Denali Marsh</b></sub></a><br /><a href="#tutorial-denalimarsh" title="Tutorials">✅</a></td>
+    </tr>
   </tbody>
 </table>
 
