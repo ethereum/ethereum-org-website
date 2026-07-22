@@ -53,10 +53,9 @@ const WalletsResults = memo(function WalletsResults({
   wallets: CatalogWallet[]
   filtered: CatalogWallet[]
 }) {
-  // Render every wallet once and toggle visibility, so a filter change flips a
-  // CSS class on stable nodes instead of unmounting/remounting card subtrees
-  // (Image, tooltip, tags). Much cheaper reconciliation on interaction, and all
-  // wallets stay in the SSR DOM so crawlers still index every listing + link.
+  // Render every wallet once and toggle `hidden` so filtering flips a prop on
+  // stable nodes instead of remounting cards, and all wallets stay in the SSR
+  // DOM for crawlers.
   const visibleSlugs = useMemo(
     () => new Set(filtered.map((wallet) => wallet.slug)),
     [filtered]
@@ -80,86 +79,60 @@ export default function WalletsCatalog({
 }: WalletsCatalogProps) {
   const t = useTranslations("page-wallets-find-wallet")
 
-  // Baseline per-option counts, relative to this page's wallet set (not the
-  // current selection).
-  const deviceCounts = useMemo(() => {
-    const counts = {} as Record<WalletDeviceId, number>
-    for (const device of DEVICE_IDS) {
-      counts[device] = wallets.filter((wallet) => wallet.devices[device]).length
-    }
-    return counts
-  }, [wallets])
+  // This component holds no state and doesn't re-render on filter toggles, so
+  // these are plain consts, not useMemo. Only filterFn is stabilized below,
+  // since FilterableCatalog memoizes on it.
+  const deviceCounts = {} as Record<WalletDeviceId, number>
+  for (const device of DEVICE_IDS) {
+    deviceCounts[device] = wallets.filter(
+      (wallet) => wallet.devices[device]
+    ).length
+  }
 
-  const purchaseCounts = useMemo(
-    () => ({
-      buy_crypto: wallets.filter((wallet) => wallet.buy_crypto).length,
-      withdraw_crypto: wallets.filter((wallet) => wallet.withdraw_crypto)
-        .length,
-    }),
-    [wallets]
-  )
+  const purchaseCounts = {
+    buy_crypto: wallets.filter((wallet) => wallet.buy_crypto).length,
+    withdraw_crypto: wallets.filter((wallet) => wallet.withdraw_crypto).length,
+  }
 
-  // Option arrays and labels are built once here (this component doesn't
-  // re-render on filter toggles — the filter state lives in FilterableCatalog),
-  // so they're stable references that let the memoized filter groups skip
-  // re-rendering when an unrelated group changes.
-  const deviceOptions = useMemo(
-    () =>
-      DEVICE_IDS.map((device) => ({
-        id: device,
-        label: t(DEVICE_LABEL_KEYS[device]),
-        count: deviceCounts[device],
-      })),
-    [t, deviceCounts]
-  )
+  const deviceOptions = DEVICE_IDS.map((device) => ({
+    id: device,
+    label: t(DEVICE_LABEL_KEYS[device]),
+    count: deviceCounts[device],
+  }))
 
-  const purchaseOptions = useMemo(
-    () => [
-      {
-        id: "buy_crypto",
-        label: t("page-find-wallet-buy-crypto"),
-        count: purchaseCounts.buy_crypto,
-      },
-      {
-        id: "withdraw_crypto",
-        label: t("page-find-wallet-sell-for-fiat"),
-        count: purchaseCounts.withdraw_crypto,
-      },
-    ],
-    [t, purchaseCounts]
-  )
+  const purchaseOptions = [
+    {
+      id: "buy_crypto",
+      label: t("page-find-wallet-buy-crypto"),
+      count: purchaseCounts.buy_crypto,
+    },
+    {
+      id: "withdraw_crypto",
+      label: t("page-find-wallet-sell-for-fiat"),
+      count: purchaseCounts.withdraw_crypto,
+    },
+  ]
 
-  const networkOptions = useMemo(
-    () =>
-      networks.map((network) => ({
-        id: network.id,
-        label: network.id,
-        count: network.count,
-      })),
-    [networks]
-  )
+  const networkOptions = networks.map((network) => ({
+    id: network.id,
+    label: network.id,
+    count: network.count,
+  }))
 
-  const languageOptions = useMemo(
-    () =>
-      languages.map((language) => ({
-        id: language.code,
-        label: language.name,
-        count: language.count,
-      })),
-    [languages]
-  )
+  const languageOptions = languages.map((language) => ({
+    id: language.code,
+    label: language.name,
+    count: language.count,
+  }))
 
-  const filterLabels = useMemo(
-    () => ({
-      device: t("page-find-wallet-device"),
-      buySell: t("page-find-wallet-buy-sell-crypto"),
-      network: t("page-find-wallet-network-support"),
-      language: t("page-find-wallet-languages-supported"),
-      filters: t("page-find-wallet-filters"),
-      reset: t("page-find-wallet-reset-filters"),
-    }),
-    [t]
-  )
+  const filterLabels = {
+    device: t("page-find-wallet-device"),
+    buySell: t("page-find-wallet-buy-sell-crypto"),
+    network: t("page-find-wallet-network-support"),
+    language: t("page-find-wallet-languages-supported"),
+    filters: t("page-find-wallet-filters"),
+    reset: t("page-find-wallet-reset-filters"),
+  }
 
   const filterWallet = useCallback(function filterWallet(
     wallet: CatalogWallet,
