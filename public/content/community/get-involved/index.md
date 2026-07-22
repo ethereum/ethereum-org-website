@@ -126,4 +126,4 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Digiphysical Apparel Brands_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Collective of Web3 builders_
 
-Please remember to abide by the ethereum.org [code of conduct](/community/code-of-conduct) whenever and however you contribute to ethereum.org!
+Please remember to follow the ethereum.org [code of conduct](/community/code-of-conduct) whenever and however you contribute to ethereum.org!
