@@ -79,6 +79,7 @@ export default function WalletsCatalog({
   languages,
 }: WalletsCatalogProps) {
   const t = useTranslations("page-wallets-find-wallet")
+  const tCommon = useTranslations("common")
 
   // This component holds no state and doesn't re-render on filter toggles, so
   // these are plain consts, not useMemo. Only filterFn is stabilized below,
@@ -189,10 +190,14 @@ export default function WalletsCatalog({
       locale={locale}
       items={wallets}
       filterFn={filterWallet}
+      mobileVariant="sheet"
       labels={{
         searchPlaceholder: t("page-find-wallet-search-wallets"),
         resultsLabel: t("page-find-wallet-table-title"),
         noResults: t("page-find-wallet-empty-results-title"),
+        filtersToggle: t("page-find-wallet-filters"),
+        applyLabel: t("page-find-wallet-show-results"),
+        closeLabel: tCommon("close"),
       }}
       renderSidebarHeader={({ state, setFilter }) => (
         <WalletFiltersHeader

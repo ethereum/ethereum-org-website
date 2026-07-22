@@ -8,9 +8,13 @@ import {
   useRef,
   useState,
 } from "react"
+import { X } from "lucide-react"
 
+import { Button } from "@/components/ui/buttons/Button"
 import Input from "@/components/ui/input"
+import { PersistentPanel } from "@/components/ui/persistent-panel"
 import { Section } from "@/components/ui/section"
+import { Sheet, SheetTrigger } from "@/components/ui/sheet"
 
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
@@ -25,6 +29,12 @@ export type FilterableCatalogLabels = {
   searchPlaceholder: string
   resultsLabel: string
   noResults: string
+  /** Collapsed mobile filter-bar label (required when `mobileVariant="sheet"`). */
+  filtersToggle?: string
+  /** Mobile sheet "apply" button label, shown as `{applyLabel} ({count})`. */
+  applyLabel?: string
+  /** Accessible label for the mobile sheet close button. */
+  closeLabel?: string
 }
 
 export type CatalogSidebarHelpers = {
@@ -58,6 +68,14 @@ export type FilterableCatalogProps<TItem> = {
   renderResults: (items: TItem[]) => ReactNode
   /** Optional line rendered above the results count (e.g. an active-path breadcrumb) */
   renderResultsHeader?: (state: CatalogFilterState) => ReactNode
+  /**
+   * How filters are presented below `lg`. `"inline"` (default) drops the whole
+   * sidebar into the page flow. `"sheet"` collapses it to a "Filters" bar that
+   * opens a slide-in panel — using Sheet (trigger) + PersistentPanel (content
+   * stays mounted after first open, so the filter form isn't re-rendered on
+   * every toggle). Requires `labels.filtersToggle` / `labels.applyLabel`.
+   */
+  mobileVariant?: "inline" | "sheet"
   className?: string
 }
 
@@ -79,12 +97,15 @@ export default function FilterableCatalog<TItem>({
   renderSidebarHeader,
   renderResults,
   renderResultsHeader,
+  mobileVariant = "inline",
   className,
 }: FilterableCatalogProps<TItem>) {
   const nf = numberFormat(locale)
   const [search, setSearch] = useState("")
   const [selection, setSelection] = useState<CatalogFilterState>({})
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
   const resultsTopRef = useRef<HTMLDivElement | null>(null)
+  const mobileTriggerRef = useRef<HTMLButtonElement | null>(null)
 
   // Defer the heavy filter + grid render so typing and filtering stay responsive
   const deferredSearch = useDeferredValue(search)
@@ -113,18 +134,22 @@ export default function FilterableCatalog<TItem>({
   const sidebar = renderSidebar({ state: selection, setFilter })
   const sidebarHeader = renderSidebarHeader?.({ state: selection, setFilter })
 
+  const searchInput = (
+    <Input
+      value={search}
+      onChange={(event) => setSearch(event.target.value)}
+      placeholder={labels.searchPlaceholder}
+      className="w-full"
+    />
+  )
+
   return (
     <Section id="catalog" className={cn("space-y-5", className)}>
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-[280px_1fr]">
         <aside className="hidden lg:block">
           <div className="sticky top-24 space-y-3">
             {sidebarHeader}
-            <Input
-              value={search}
-              onChange={(event) => setSearch(event.target.value)}
-              placeholder={labels.searchPlaceholder}
-              className="w-full"
-            />
+            {searchInput}
             <div className="max-h-[calc(100vh-11rem)] overflow-y-auto rounded-xl border p-2">
               {sidebar}
             </div>
@@ -132,16 +157,66 @@ export default function FilterableCatalog<TItem>({
         </aside>
 
         <div className="space-y-4 lg:-mt-5">
-          <div className="space-y-3 lg:hidden">
-            {sidebarHeader}
-            <Input
-              value={search}
-              onChange={(event) => setSearch(event.target.value)}
-              placeholder={labels.searchPlaceholder}
-              className="w-full"
-            />
-            <div className="rounded-xl border p-2">{sidebar}</div>
-          </div>
+          {mobileVariant === "sheet" ? (
+            <div className="lg:hidden">
+              <Sheet
+                open={mobileFiltersOpen}
+                onOpenChange={setMobileFiltersOpen}
+              >
+                <SheetTrigger asChild>
+                  <button
+                    ref={mobileTriggerRef}
+                    type="button"
+                    className="flex w-full items-center justify-between rounded-xl border px-4 py-3 text-start transition-colors hover:bg-background-highlight"
+                  >
+                    <span className="text-sm font-bold text-primary">
+                      {labels.filtersToggle}
+                    </span>
+                    <span className="text-sm text-body-medium">
+                      {nf.format(filteredItems.length)}
+                    </span>
+                  </button>
+                </SheetTrigger>
+              </Sheet>
+
+              <PersistentPanel
+                open={mobileFiltersOpen}
+                side="left"
+                onOpenChange={setMobileFiltersOpen}
+                triggerRef={mobileTriggerRef}
+                aria-label={labels.filtersToggle}
+                className="gap-3 p-4"
+              >
+                <div className="flex items-center justify-end">
+                  <button
+                    type="button"
+                    onClick={() => setMobileFiltersOpen(false)}
+                    aria-label={labels.closeLabel}
+                    className="grid size-8 place-items-center rounded-full transition-colors hover:bg-background-highlight"
+                  >
+                    <X className="size-5" />
+                  </button>
+                </div>
+                <div className="flex-1 space-y-3 overflow-y-auto">
+                  {sidebarHeader}
+                  {searchInput}
+                  <div className="rounded-xl border p-2">{sidebar}</div>
+                </div>
+                <Button
+                  className="w-full"
+                  onClick={() => setMobileFiltersOpen(false)}
+                >
+                  {labels.applyLabel} ({nf.format(filteredItems.length)})
+                </Button>
+              </PersistentPanel>
+            </div>
+          ) : (
+            <div className="space-y-3 lg:hidden">
+              {sidebarHeader}
+              {searchInput}
+              <div className="rounded-xl border p-2">{sidebar}</div>
+            </div>
+          )}
           <div ref={resultsTopRef} className="scroll-mt-24" />
           {renderResultsHeader?.(selection)}
 
