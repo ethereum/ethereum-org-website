@@ -468,7 +468,7 @@ async function Page(props: { params: Promise<PageParams> }) {
         variant="no-divider"
       />
 
-      <main className="pb-space">
+      <main className="space-y-space-3x pb-page">
         <I18nProvider locale={locale} messages={messages}>
           <MainArticle className="flow **:[h2]:text-h1 *:[section]:mx-auto *:[section]:w-full *:[section]:max-w-7xl *:[section]:px-page *:[section]:py-space-3x">
             {/* Why stablecoins */}
