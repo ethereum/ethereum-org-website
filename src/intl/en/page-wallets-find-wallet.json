@@ -87,6 +87,7 @@
   "page-find-wallet-filters": "Filters",
   "page-find-wallet-reset-filters": "Reset",
   "page-find-wallet-visit-website": "Visit website",
+  "page-find-wallet-get-wallet": "Get {wallet}",
   "page-find-wallet-social-links": "Links",
   "page-find-wallet-empty-results-title": "No results",
   "page-find-wallet-empty-results-desc": "There are no wallets matching your criteria, try removing some filters.",

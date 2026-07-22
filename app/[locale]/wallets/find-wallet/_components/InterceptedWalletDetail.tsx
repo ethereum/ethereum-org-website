@@ -2,13 +2,13 @@ import { notFound } from "next/navigation"
 
 import { getWalletBySlug } from "@/lib/utils/walletData"
 
-import WalletDetail from "./WalletDetail"
 import WalletDetailModal from "./WalletDetailModal"
+import WalletModalDetail from "./WalletModalDetail"
 
 /**
- * Server body for the intercepting modal slot: the compact wallet detail
- * rendered inside the client modal shell. The standalone `[wallet]` route has
- * its own wider layout but shares the same `WalletDetail` content.
+ * Server body for the intercepting modal slot: the compact, row-based wallet
+ * detail rendered inside the client modal shell. The standalone `[wallet]`
+ * route has its own wider, grouped-checklist layout (`WalletDetail`).
  */
 const InterceptedWalletDetail = async ({
   locale,
@@ -23,7 +23,7 @@ const InterceptedWalletDetail = async ({
   return (
     <WalletDetailModal title={wallet.name}>
       <div className="bg-background p-4 sm:p-8">
-        <WalletDetail locale={locale} wallet={wallet} variant="modal" />
+        <WalletModalDetail locale={locale} wallet={wallet} />
       </div>
     </WalletDetailModal>
   )
