@@ -37,14 +37,14 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/what-is-ether/",
             },
             {
+              label: t("nav-values-label"),
+              description: t("nav-values-description"),
+              href: "/values/",
+            },
+            {
               label: t("nav-what-is-web3-label"),
               description: t("nav-what-is-web3-description"),
               href: "/web3/",
-            },
-            {
-              label: t("ethereum-vs-bitcoin"),
-              description: t("nav-ethereum-vs-bitcoin-description"),
-              href: "/ethereum-vs-bitcoin/",
             },
             {
               label: t("nav-stories-label"),
@@ -82,6 +82,11 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               label: t("staking"),
               description: t("nav-stake-description"),
               href: "/staking/",
+            },
+            {
+              label: t("ethereum-vs-bitcoin"),
+              description: t("nav-ethereum-vs-bitcoin-description"),
+              href: "/ethereum-vs-bitcoin/",
             },
           ],
         },
