@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl"
+
 import type { LocaleDisplayInfo } from "@/lib/types"
 
 import {
@@ -10,8 +12,6 @@ import {
 
 import MenuItem from "./MenuItem"
 import NoResultsCallout from "./NoResultsCallout"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 type LanguagePickerMenuProps = {
   className?: string
@@ -26,7 +26,7 @@ const LanguagePickerMenu = ({
   onClose,
   onSelect,
 }: LanguagePickerMenuProps) => {
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
 
   return (
     <Command
@@ -52,7 +52,7 @@ const LanguagePickerMenu = ({
       <div className="text-xs text-body-medium">
         {t("page-languages-filter-label")}{" "}
         <span className="lowercase">
-          ({languages.length} {t("common:languages")})
+          ({languages.length} {t("languages")})
         </span>
       </div>
 

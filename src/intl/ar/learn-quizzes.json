@@ -10,7 +10,7 @@
   "explanation": "الشرح",
   "next-question": "السؤال التالي",
   "next-quiz": "الاختبار التالي",
-  "question-number": "السؤال رقم {{number}}:",
+  "question-number": "السؤال رقم {number}:",
   "page-assets-merge": "الدمج",
   "passed": "لقد اجتزت الاختبار!",
   "questions": "الأسئلة",

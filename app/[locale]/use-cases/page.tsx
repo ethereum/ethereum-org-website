@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { PageParams, ToCItem } from "@/lib/types"
 import type { Lang } from "@/lib/types"
@@ -12,6 +12,7 @@ import Callout from "@/components/ui/callout"
 import {
   Card,
   CardBanner,
+  CardButtonFake,
   CardContent,
   CardFooter,
   CardHeader,
@@ -57,9 +58,9 @@ const UseCaseCard = ({
   description: string
   ctaLabel: string
 }) => (
-  <Card>
+  <Card href={href} hoverLift>
     <CardHeader>
-      <CardBanner background="none" fit="contain">
+      <CardBanner background="none" fit="contain" zoom={false}>
         <Image
           src={image}
           alt=""
@@ -72,9 +73,7 @@ const UseCaseCard = ({
       <CardParagraph>{description}</CardParagraph>
     </CardContent>
     <CardFooter>
-      <ButtonLink href={href} className="w-full">
-        {ctaLabel}
-      </ButtonLink>
+      <CardButtonFake>{ctaLabel}</CardButtonFake>
     </CardFooter>
   </Card>
 )
@@ -306,6 +305,9 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
+
   const t = await getTranslations("page-use-cases")
 
   return await getMetadata({

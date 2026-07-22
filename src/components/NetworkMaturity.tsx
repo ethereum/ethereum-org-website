@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl"
+
 import { AccordionContainer } from "./ui/accordion"
 import InlineLink from "./ui/Link"
 import {
@@ -10,14 +12,13 @@ import {
 } from "./ui/table"
 import ExpandableCard from "./ExpandableCard"
 
-import useTranslation from "@/hooks/useTranslation"
 import DevelopingImage from "@/public/images/network-maturity/developing.svg"
 import EmergingImage from "@/public/images/network-maturity/emerging.svg"
 import MaturingImage from "@/public/images/network-maturity/maturing.svg"
 import RobustImage from "@/public/images/network-maturity/robust.svg"
 
 const NetworkMaturity = () => {
-  const { t } = useTranslation("page-layer-2-networks")
+  const t = useTranslations("page-layer-2-networks")
 
   return (
     <AccordionContainer className="mx-8 mt-10">

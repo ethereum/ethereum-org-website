@@ -14369,6 +14369,87 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "MegaRedHand",
+      "name": "Tomás Grüner",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47506558?v=4",
+      "profile": "https://github.com/MegaRedHand",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "nodeflareapp",
+      "name": "NodeFlare",
+      "avatar_url": "https://avatars.githubusercontent.com/u/302281547?v=4",
+      "profile": "https://nodeflare.app",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "hidargmax27-cmyk",
+      "name": "hidargmax27-cmyk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/250812573?v=4",
+      "profile": "https://github.com/hidargmax27-cmyk",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "Equious",
+      "name": "Equious",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76449140?v=4",
+      "profile": "https://github.com/Equious",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "0xheycat",
+      "name": "0xheycat",
+      "avatar_url": "https://avatars.githubusercontent.com/u/81378817?v=4",
+      "profile": "https://0xheycat.xyz/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "jensendunamu",
+      "name": "jensen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/233986215?v=4",
+      "profile": "https://github.com/jensendunamu",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "0xDecentralizer",
+      "name": "Mohammad Mahdi Keshavarz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52651219?v=4",
+      "profile": "https://linktr.ee/0xdecentralizer",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Xeift",
+      "name": "Xeift",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80938768?v=4",
+      "profile": "https://xeift.tw/",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Jordy-Baby",
+      "name": "Jords",
+      "avatar_url": "https://avatars.githubusercontent.com/u/82444671?v=4",
+      "profile": "https://envio.dev/",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
