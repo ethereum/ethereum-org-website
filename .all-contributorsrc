@@ -14459,6 +14459,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "denalimarsh",
+      "name": "Denali Marsh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15370712?v=4",
+      "profile": "https://github.com/denalimarsh",
+      "contributions": [
+        "tutorial"
+      ]
     }
   ],
   "contributorsPerLine": 7,
