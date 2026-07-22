@@ -28,7 +28,8 @@ it harder to write insecure code than it is in Solidity.
 ```
 
 The `#pragma version` line tells the compiler which Vyper versions the contract is written for. `>0.3.10` accepts any
-release newer than 0.3.10, which includes the current 0.4.x series.
+release newer than 0.3.10, but this contract in fact needs Vyper 0.4.1 or later: it logs events with keyword arguments
+(for example `log IERC721.Transfer(...)`), a feature added in Vyper 0.4.1, so it does not compile on 0.4.0.
 
 ```python
 # @dev Implementation of ERC-721 non-fungible token standard.
@@ -77,7 +78,8 @@ To answer `safeTransferFrom` requests a receiving contract has to implement `ERC
 ```
 
 The `_from` address is the current owner of the token. The `_operator` address is the one that
-requested the transfer (those two may not be the same, because of allowances).
+requested the transfer (those two may not be the same, because of allowances). By convention, most function
+parameters in this contract start with an underscore (`_`).
 
 ```python
             _tokenId: uint256,
