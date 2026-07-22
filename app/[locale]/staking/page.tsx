@@ -10,11 +10,11 @@ import type { Lang, PageParams, StakingStatsData } from "@/lib/types"
 import ExpandableCard from "@/components/ExpandableCard"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
-import { Emphasis } from "@/components/IntlStringElements"
+import { Emphasis, Strong } from "@/components/IntlStringElements"
 import MarkdownCard, { MarkdownCardProps } from "@/components/MarkdownCard"
 import StakingHierarchy from "@/components/Staking/StakingHierarchy"
 import StakingStatsBox from "@/components/Staking/StakingStatsBox"
-import Translation from "@/components/Translation"
+import TooltipLink from "@/components/TooltipLink"
 import { AccordionContainer } from "@/components/ui/accordion"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Grid } from "@/components/ui/grid"
@@ -87,9 +87,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     {
       title: t("page-staking-benefits-1-title"),
       emoji: "💰",
-      description: (
-        <Translation id="page-staking:page-staking-benefits-1-description" />
-      ),
+      description: t.rich("page-staking-benefits-1-description", {
+        a: (chunks) => (
+          <TooltipLink href="/glossary/#consensus">{chunks}</TooltipLink>
+        ),
+      }),
     },
     {
       title: t("page-staking-benefits-2-title"),
@@ -235,10 +237,22 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         <Section id={tocItems.whatIsStaking.id}>
           <h2>{tocItems.whatIsStaking.title}</h2>
           <p>
-            <Translation id="page-staking:page-staking-description" />
+            {t.rich("page-staking-description", {
+              link1: (chunks) => (
+                <TooltipLink href="/glossary/#validator">{chunks}</TooltipLink>
+              ),
+              link2: (chunks) => (
+                <TooltipLink href="/glossary/#block">{chunks}</TooltipLink>
+              ),
+            })}
           </p>
           <p>
-            <Translation id="page-staking:page-staking-description-2" />
+            {t.rich("page-staking-description-2", {
+              link1: (chunks) => <InlineLink href="/">{chunks}</InlineLink>,
+              link2: (chunks) => (
+                <TooltipLink href="/glossary/#pos">{chunks}</TooltipLink>
+              ),
+            })}
           </p>
           <p>{t("page-staking-description-3")}</p>
         </Section>
@@ -337,10 +351,33 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   {t("page-staking-section-comparison-solo-requirements-li1")}
                 </ListItem>
                 <ListItem>
-                  <Translation id="page-staking:page-staking-section-comparison-solo-requirements-li2" />
+                  {t.rich(
+                    "page-staking-section-comparison-solo-requirements-li2",
+                    {
+                      link1: (chunks) => (
+                        <TooltipLink href="/glossary/#execution-client">
+                          {chunks}
+                        </TooltipLink>
+                      ),
+                      link2: (chunks) => (
+                        <TooltipLink href="/glossary/#consensus-client">
+                          {chunks}
+                        </TooltipLink>
+                      ),
+                    }
+                  )}
                 </ListItem>
                 <ListItem>
-                  <Translation id="page-staking:page-staking-section-comparison-solo-requirements-li3" />
+                  {t.rich(
+                    "page-staking-section-comparison-solo-requirements-li3",
+                    {
+                      a: (chunks) => (
+                        <InlineLink href="https://hoodi.launchpad.ethereum.org">
+                          {chunks}
+                        </InlineLink>
+                      ),
+                    }
+                  )}
                 </ListItem>
               </UnorderedList>
             </div>
@@ -405,10 +442,20 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   {t("page-staking-section-comparison-pools-rewards-li1")}
                 </ListItem>
                 <ListItem>
-                  <Translation id="page-staking:page-staking-section-comparison-pools-rewards-li2" />
+                  {t.rich("page-staking-section-comparison-pools-rewards-li2", {
+                    a: (chunks) => (
+                      <TooltipLink href="/glossary/#liquidity-tokens">
+                        {chunks}
+                      </TooltipLink>
+                    ),
+                  })}
                 </ListItem>
                 <ListItem>
-                  <Translation id="page-staking:page-staking-section-comparison-pools-rewards-li3" />
+                  {t.rich("page-staking-section-comparison-pools-rewards-li3", {
+                    a: (chunks) => (
+                      <TooltipLink href="/glossary/#defi">{chunks}</TooltipLink>
+                    ),
+                  })}
                 </ListItem>
               </UnorderedList>
             </div>
@@ -419,7 +466,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   {t("page-staking-section-comparison-pools-risks-li1")}
                 </ListItem>
                 <ListItem>
-                  <Translation id="page-staking:page-staking-section-comparison-pools-risks-li2" />
+                  {t.rich("page-staking-section-comparison-pools-risks-li2", {
+                    a: (chunks) => (
+                      <TooltipLink href="/glossary/#smart-contract">
+                        {chunks}
+                      </TooltipLink>
+                    ),
+                  })}
                 </ListItem>
               </UnorderedList>
             </div>
@@ -466,7 +519,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </TableBody>
           </Table>
           <p>
-            <Translation id="page-staking:page-staking-comparison-restaking-note" />
+            {t.rich("page-staking-comparison-restaking-note", {
+              strong: Strong,
+              a: (chunks) => (
+                <InlineLink href="/restaking/">{chunks}</InlineLink>
+              ),
+            })}
           </p>
         </Section>
 
@@ -509,7 +567,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <ExpandableCard title={t("page-staking-faq-3-question")}>
               <p>{t("page-staking-faq-3-answer-p1")}</p>
               <p>
-                <Translation id="page-staking:page-staking-faq-3-answer-p2" />
+                {t.rich("page-staking-faq-3-answer-p2", {
+                  a: (chunks) => (
+                    <InlineLink href="/staking/pools/">{chunks}</InlineLink>
+                  ),
+                })}
               </p>
             </ExpandableCard>
             <ExpandableCard title={t("page-staking-faq-8-question")}>

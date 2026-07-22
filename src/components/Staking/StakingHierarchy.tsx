@@ -15,9 +15,10 @@ import {
   StakingGlyphEtherCircleIcon,
   StakingGlyphTokenWalletIcon,
 } from "../icons/staking"
-import Translation from "../Translation"
+import TooltipLink from "../TooltipLink"
 import { ButtonLink } from "../ui/buttons/Button"
 import { Center, Flex, VStack } from "../ui/flex"
+import Link from "../ui/Link"
 
 type SectionGridProps = ChildOnlyProp
 
@@ -129,11 +130,15 @@ const StakingHierarchy = () => {
         <Glyph glyphIcon={StakingGlyphCPUIcon} className="text-staking-gold" />
         <Content>
           <p>
-            <Translation id="page-staking:page-staking-hierarchy-solo-p1" />
+            {t.rich("page-staking-hierarchy-solo-p1", {
+              span: (chunks) => <span className="gold">{chunks}</span>,
+            })}
           </p>
           <p>{t("page-staking-hierarchy-solo-p2")}</p>
           <p>
-            <Translation id="page-staking:page-staking-hierarchy-solo-p3" />
+            {t.rich("page-staking-hierarchy-solo-p3", {
+              a: (chunks) => <Link href="/staking/dvt/">{chunks}</Link>,
+            })}
           </p>
           <div>
             <ButtonLink
@@ -207,18 +212,27 @@ const StakingHierarchy = () => {
           className="text-staking-blue"
         />
         <Content>
+          <p>{t("page-staking-hierarchy-pools-p1")}</p>
           <p>
-            <Translation id="page-staking:page-staking-hierarchy-pools-p1" />
+            {t.rich("page-staking-hierarchy-pools-p2", {
+              link1: (chunks) => (
+                <TooltipLink href="/glossary/#erc-20">{chunks}</TooltipLink>
+              ),
+              link2: (chunks) => (
+                <TooltipLink href="/glossary/#liquid-staking-tokens">
+                  {chunks}
+                </TooltipLink>
+              ),
+            })}
           </p>
           <p>
-            <Translation id="page-staking:page-staking-hierarchy-pools-p2" />
+            {t.rich("page-staking-hierarchy-pools-p3", {
+              a: (chunks) => (
+                <TooltipLink href="/glossary/#wallet">{chunks}</TooltipLink>
+              ),
+            })}
           </p>
-          <p>
-            <Translation id="page-staking:page-staking-hierarchy-pools-p3" />
-          </p>
-          <p>
-            <Translation id="page-staking:page-staking-hierarchy-pools-p4" />
-          </p>
+          <p>{t("page-staking-hierarchy-pools-p4")}</p>
           <div>
             <ButtonLink
               href="/staking/pools/"
@@ -253,10 +267,29 @@ const StakingHierarchy = () => {
           className="text-staking-red"
         />
         <Content>
-          <p>{t("page-staking-hierarchy-cex-p1")}</p>
+          <p>
+            {t.rich("page-staking-hierarchy-cex-p1", {
+              a: (chunks) => (
+                <Link href="/staking/saas/#custodial-and-exchange-staking">
+                  {chunks}
+                </Link>
+              ),
+            })}
+          </p>
           <p>{t("page-staking-hierarchy-cex-p2")}</p>
           <p>
-            <Translation id="page-staking:page-staking-hierarchy-cex-p3" />
+            {t.rich("page-staking-hierarchy-cex-p3", {
+              link1: (chunks) => (
+                <TooltipLink href="/glossary/#key">{chunks}</TooltipLink>
+              ),
+              link2: (chunks) => <Link href="/wallets/">{chunks}</Link>,
+              link3: (chunks) => <Link href="/staking/pools/">{chunks}</Link>,
+              link4: (chunks) => (
+                <Link href="/staking/saas/#custodial-and-exchange-staking">
+                  {chunks}
+                </Link>
+              ),
+            })}
           </p>
         </Content>
       </SectionGrid>
