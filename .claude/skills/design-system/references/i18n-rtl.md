@@ -45,6 +45,10 @@ If a string is rendered to a user, it must come from a translation key. The exce
 
 If you find yourself wanting to hard-code, add the key to `src/intl/en/[namespace].json` and use `t()`.
 
+### Interpolate a translated value, never a hard-coded literal
+
+A shared skeleton with an interpolated value -- `t("visit-brand", { brand: t("dune-brand") })` -- is the pattern to reach for: one `"Visit {brand}"` string instead of the `"Visit "` prefix repeated across N labels, and each brand is its own key the pipeline can transliterate or case-adjust per locale. The anti-pattern is passing a hard-coded English literal as the variable (`t("visit-brand", { brand: "Dune" })`): the `"Dune"` literal never enters an intl file, so it stays untranslated English no matter the locale. If a proper noun/brand is enumerable, give it a key and inject the translated value; reserve raw literals for genuinely dynamic runtime values (counts, dates, user input) that can't be keys. `ProductList` CTAs follow this -- see `AiAgentProductLists` and the stablecoins tools list.
+
 ## RTL: Logical CSS Properties
 
 Always use logical equivalents instead of physical directions:

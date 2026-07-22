@@ -160,7 +160,7 @@ Responsive grid for laying out a collection of items (cards, tiles, badges). Ren
 - `size`: `small (7rem) | narrow (12rem) | base (18rem, default) | wide (22rem) | wider (26rem)`. The **min item width** (`--grid-item-min`) — the floor an item shrinks to before a column drops, and so the fold-aggressiveness lever. Pick by item shape: `small` for badges, `base` for standard content cards, `wide`/`wider` for horizontal items like callouts. Larger sizes wrap sooner; keep `columns` small enough that N items of the chosen width fit (min ≤ container/N).
 - `fit`: `boolean` (auto-fill mode only). Default keeps empty tracks (`auto-fill`); `fit` collapses them (`auto-fit`) so a partially-filled row stretches to fill the width.
 - `balanced`: `2 | 4`. A fixed, deterministic **breakpoint** reflow (overrides `columns` via `!important`; `size`/`fit` inert). `balanced={4}` → `4 → 2×2 → 1`, never an orphan 3-up row (which auto-fill produces); `balanced={2}` → `2 → 1` at `md`, a breakpoint-driven alternative to `columns={2}` (which folds by content width). Both fold `1 → 2` at `md`. Use with a **fixed set** of that many items (or a multiple).
-- Applies `gap-4`. `className` is spread last, so override the gap (or `--grid-item-min` / `--grid-repeat`) per call site only when genuinely needed.
+- Applies `gap-4`. `className` is spread last, so override the gap (or `--grid-item-min` / `--grid-repeat`) per call site only when genuinely needed. **If you override the gap, mirror it in `--grid-gap`** (e.g. `gap-x-8 [--grid-gap:--spacing(8)]`): the `grid-cols-auto-*` fold math assumes the gutter via `var(--grid-gap, 1rem)`, and with a wider real gap the even-share term is computed against the wrong gutter -- a second column may **never** form.
 
 ### `Section`
 
