@@ -47,7 +47,7 @@ Two protocol-level upgrades address this problem together:
 
 [**EIP-8141 (Frame Transactions)**](https://eips.ethereum.org/EIPS/eip-8141) introduces a new transaction type that splits transactions into segments for signature validation and fee authorization, and for the actual transaction instructions. Frame transactions allow [smart accounts](/roadmap/account-abstraction/) to define their own signature schemes and use external contracts to cover gas fees. Strict sandboxing rules in the mempool prevent these transactions from opening the network to denial-of-service attacks.
 
-EIP-8141 is being considered for Ethereum's [Hegotá upgrade](https://forkcast.org/upgrade/hegota/), the next network upgrade after the upcoming [Glamsterdam upgrade](/roadmap/glamsterdam/). The same upgrade will also allow smart accounts to adopt [quantum-safe signatures](/roadmap/future-proofing/quantum-resistance/) before the full post-quantum network transition is complete.
+Frame transactions are being considered for Ethereum's [Hegotá upgrade](https://forkcast.org/upgrade/hegota/), the next network upgrade after the upcoming [Glamsterdam upgrade](/roadmap/glamsterdam/). The same upgrade will also allow smart accounts to adopt [quantum-safe signatures](/roadmap/future-proofing/quantum-resistance/) before the full post-quantum network transition is complete.
 
 <ExpandableCard title="How do frame transactions (EIP-8141) enable privacy?" eventCategory="/roadmap/privacy" eventName="clicked how do frame transactions enable privacy?">
 
@@ -55,7 +55,7 @@ Frame transactions allow accounts to choose their own signature verification met
 
 </ExpandableCard>
 
-[**EIP-7805 (Fork-Choice Enforced Inclusion Lists, or FOCIL)**](https://eips.ethereum.org/EIPS/eip-7805) provides the enforcement mechanism for private writes. Block proposers are required by consensus rules to include transactions in their blocks from aggregated local inclusion lists, which collect transactions from multiple sources. If a block builder attempts to censor a transaction that appeared on the inclusion lists, attesting nodes reject the proposed block entirely. EIP-7805 is currently being considered for the [Hegotá upgrade](https://forkcast.org/upgrade/hegota/).
+[**EIP-7805 (Fork-Choice Enforced Inclusion Lists, or FOCIL)**](https://eips.ethereum.org/EIPS/eip-7805) provides the enforcement mechanism for private writes. Block proposers are required by consensus rules to include transactions in their blocks from aggregated local inclusion lists, which collect transactions from multiple sources. If a block builder attempts to censor a transaction that appeared on the inclusion lists, attesting nodes reject the proposed block entirely. FOCIL is currently being considered for the [Hegotá upgrade](https://forkcast.org/upgrade/hegota/).
 
 Frame Transactions give users the flexibility to build privacy-preserving transactions with custom signature schemes, while FOCIL ensures those transactions cannot be selectively censored once they enter the mempool. Together they address two different failure points: one enables the format of private transactions, the other guarantees their inclusion. No central actor can block a valid private transfer.
 
@@ -87,7 +87,7 @@ On Ethereum's privacy roadmap, private proving is supported by complementary inf
 
 **Zero-knowledge virtual machines (zkVMs)** allow smart contracts to run their logic and generate a cryptographic proof that the work was done correctly. When that proof is truly zero-knowledge, it reveals nothing about the inputs, intermediate state, or outputs, unlocking private computation at the network level.
 
-The 'zkVM'name carries a nuance; most systems called zkVMs today are succinct rather than zero-knowledge. Their proofs are small and fast to verify, but do not necessarily hide the data used to generate them. Today, only a handful of proving systems provide the hiding property that privacy applications depend on. The [Client-Side Proving benchmarks](https://ethproofs.org/csp-benchmarks) track which zkVMs have been analyzed for actual zero-knowledge in their system properties. Closing that gap is part of the roadmap's private proving work.
+The "zkVM" name carries a nuance; most systems called zkVMs today are succinct rather than zero-knowledge. Their proofs are small and fast to verify, but do not necessarily hide the data used to generate them. Today, only a handful of proving systems provide the hiding property that privacy applications depend on. The [Client-Side Proving benchmarks](https://ethproofs.org/csp-benchmarks) track which zkVMs have been analyzed for actual zero-knowledge in their system properties. Closing that gap is part of the roadmap's private proving work.
 
 Frame Transactions (EIP-8141) are also connected to implementing zkVMs. They can use custom verification schemes to submit proof-verified state transitions, allowing apps to offer private execution environments and submit the cryptographic proof to the public Ethereum network that the action was done correctly, without exposing the transaction data itself.
 
