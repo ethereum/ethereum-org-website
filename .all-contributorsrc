@@ -14450,6 +14450,15 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "thenameisdevair",
+      "name": "Devair",
+      "avatar_url": "https://avatars.githubusercontent.com/u/172976243?v=4",
+      "profile": "https://github.com/thenameisdevair",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
