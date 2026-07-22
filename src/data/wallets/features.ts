@@ -14,6 +14,39 @@ export type WalletFeatureGroup = {
 }
 
 /**
+ * Ethereum's core CROPS properties (EF mandate: Censorship-resistant, Open
+ * source, Private, Secure — https://ethereum.org/foundation/mandate/), surfaced
+ * as the highlighted set on the wallet modal instead of the full feature list.
+ *
+ * Open source and privacy map to dedicated flags. Censorship-resistance and
+ * security have no single flag, so each uses the closest proxy: custom-RPC
+ * support (connect to your own node, not one provider) and non-custodial key
+ * ownership. Swap a `key` here to change what backs a property.
+ */
+export const CROPS_PROPERTIES: WalletFeature[] = [
+  {
+    key: "rpc_importing",
+    labelKey: "page-find-wallet-crops-censorship-resistant",
+    descKey: "page-find-wallet-crops-censorship-resistant-desc",
+  },
+  {
+    key: "open_source",
+    labelKey: "page-find-wallet-open-source",
+    descKey: "page-find-wallet-open-source-desc",
+  },
+  {
+    key: "privacy",
+    labelKey: "page-find-wallet-crops-private",
+    descKey: "page-find-wallet-privacy-desc",
+  },
+  {
+    key: "non_custodial",
+    labelKey: "page-find-wallet-crops-secure",
+    descKey: "page-find-wallet-non-custodial-desc",
+  },
+]
+
+/**
  * Feature checklist groups for the wallet detail view. These 16 feature
  * dimensions live on detail pages only — the sidebar filter set is
  * intentionally narrower.

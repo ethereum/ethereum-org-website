@@ -16,7 +16,7 @@ import InlineLink from "@/components/ui/Link"
 
 import type { CatalogWallet, WalletDeviceId } from "@/lib/utils/walletData"
 
-import { WALLET_FEATURE_GROUPS } from "@/data/wallets/features"
+import { CROPS_PROPERTIES } from "@/data/wallets/features"
 
 const DEVICE_LABEL_KEYS: Record<WalletDeviceId, string> = {
   desktop: "page-find-wallet-desktop",
@@ -79,8 +79,6 @@ const WalletModalDetail = async ({
     .join(" · ")
   const hasExtraLanguages = wallet.supportedLanguages.length > LANGUAGES_SHOWN
 
-  const features = WALLET_FEATURE_GROUPS.flatMap((group) => group.features)
-
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-row items-center gap-4">
@@ -129,7 +127,7 @@ const WalletModalDetail = async ({
           </DetailRow>
         )}
 
-        {features.map((feature) => {
+        {CROPS_PROPERTIES.map((feature) => {
           const supported = Boolean(wallet[feature.key])
           return (
             <DetailRow
