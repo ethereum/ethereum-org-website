@@ -5,7 +5,7 @@ description: "Přehled AI agentů na Ethereu"
 lang: cs
 template: use-cases
 sidebarDepth: 2
-image: /images/ai-agents/hero-image.png
+image: /images/community-campfire-people-robot-cut-out.png
 alt: "Lidé shromáždění u stolu s terminálem"
 summaryPoints:
   - "Umělá inteligence, která interaguje s blockchainem a nezávisle obchoduje"

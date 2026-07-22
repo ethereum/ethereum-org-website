@@ -29,7 +29,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import UseCasesPageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
-import aiAgentsHero from "@/public/images/ai-agents/hero-image.png"
+import aiAgentsHero from "@/public/images/community-campfire-people-robot-cut-out.png"
 import ethImg from "@/public/images/eth.png"
 import ethGifCat from "@/public/images/eth-gif-cat.png"
 import ethereumLearn from "@/public/images/ethereum-learn.png"

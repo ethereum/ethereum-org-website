@@ -191,6 +191,19 @@ When *should* you use `className`? Things that are genuinely outside the Card's 
 - Button's `hover-link` styling fires from the card's `group/link`, so hovering anywhere on the card animates the fake button identically to a real hover -- you don't (and can't) hand-wire hover styles onto it.
 - Never use it on a non-link card (there's nothing to click) and never use a real `Button`/`ButtonLink` as the sole CTA of an `href` card (invalid nested anchor). See the single-vs-multiple-CTA rule above.
 
+**On an `href` card, use `CardButtonFake` — not a real `Button`/`ButtonLink`.** When the `Card` itself carries the `href` (whole-card link), a real button in the footer nests an interactive control inside the card's anchor — invalid HTML and a focus/click trap. `CardButtonFake` is a presentational `<div>` with full Button styling (`variant`/`size`/`isSecondary`) that lights up from the card's `group/link` hover, so it reads as the card's CTA without being a second control:
+
+```tsx
+<Card href={app.url} variant="nested" border hoverLift>
+  {/* ...header / content... */}
+  <CardFooter buttons="full">
+    <CardButtonFake>Learn more</CardButtonFake>
+  </CardFooter>
+</Card>
+```
+
+**This is the preferred shape for a card with a single action:** lift the destination onto the `Card` `href` and render the CTA as a `CardButtonFake`. Keep real `ButtonLink`s (and no `href` on the `Card`) only when the card has **multiple** distinct actions — it can't collapse to one card-level link — or when it's a non-clickable card that just holds inline links.
+
 ### `CardBanner`
 
 ```tsx

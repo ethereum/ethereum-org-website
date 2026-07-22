@@ -5,7 +5,7 @@ description: Muhtasari wa ajenti wa akili bandia kwenye Ethereum
 lang: sw
 template: use-cases
 sidebarDepth: 2
-image: /images/ai-agents/hero-image.png
+image: /images/community-campfire-people-robot-cut-out.png
 alt: Watu wamekusanyika kwenye meza ya terminali
 summaryPoints:
   - "Akili bandia inayoingiliana na mnyororo wa vitalu na kufanya biashara kwa kujitegemea"

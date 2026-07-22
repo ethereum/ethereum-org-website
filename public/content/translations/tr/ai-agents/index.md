@@ -5,7 +5,7 @@ description: "Ethereum'daki yapay zeka ajanlarına genel bir bakış"
 lang: tr
 template: use-cases
 sidebarDepth: 2
-image: /images/ai-agents/hero-image.png
+image: /images/community-campfire-people-robot-cut-out.png
 alt: "Terminal masasında toplanmış insanlar"
 summaryPoints:
   - "Blokzincir ile etkileşime giren ve bağımsız olarak alım satım yapan yapay zeka"
