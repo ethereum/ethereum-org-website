@@ -54,7 +54,7 @@ It also requires very basic hardware setup, and some understanding of minimum re
 </ExpandableCard>
 
 <ExpandableCard title="Hardware requirements" eventCategory="SoloStaking" eventName="clicked hardware requirements">
-Current community guidance for validator hardware and bandwidth is maintained in <a href="https://eips.ethereum.org/EIPS/eip-7870">EIP-7870</a>. As a rough guide, plan for a 4 TB NVMe SSD, 64 GB of RAM (less can work, but this is the recommended headroom), a solid modern multi-core CPU, and an internet connection of around 50 Mbps download / 25 Mbps upload.
+Current community guidance for validator hardware and bandwidth is maintained in [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). As a rough guide, plan for a 4 TB NVMe SSD, 64 GB of RAM (less can work, but this is the recommended headroom), a solid modern multi-core CPU, and an internet connection of around 50 Mbps download / 25 Mbps upload.
 
 Since the Fusaka upgrade introduced PeerDAS, a staking node only needs to store and download a fraction of the network's blob data, significantly reducing disk and bandwidth requirements for home stakers.
 
@@ -72,7 +72,7 @@ Hardware occasionally fails, network connections error out, and client software 
 </ExpandableCard>
 
 <ExpandableCard title="Reliable uptime" eventCategory="SoloStaking" eventName="clicked reliable uptime">
-Your rewards are proportional to the time your validator is online and properly attesting. Downtime incurs penalties proportional to how many other validators are offline at the same time, but <a href="#faq">does not result in slashing</a>. Bandwidth also matters, as rewards are decreased for attestations that are not received in time. Requirements will vary, but current validator guidance ([EIP-7870](https://eips.ethereum.org/EIPS/eip-7870)) recommends around 50 Mbps download and 25 Mbps upload.
+Your rewards are proportional to the time your validator is online and properly attesting. Downtime incurs penalties proportional to how many other validators are offline at the same time, but [does not result in slashing](#faq). Bandwidth also matters, as rewards are decreased for attestations that are not received in time. Requirements will vary, but current validator guidance ([EIP-7870](https://eips.ethereum.org/EIPS/eip-7870)) recommends around 50 Mbps download and 25 Mbps upload.
 </ExpandableCard>
 
 <ExpandableCard title="Slashing risk" eventCategory="SoloStaking" eventName="clicked slashing risk">
@@ -173,9 +173,9 @@ A <em>validator</em> is a virtual entity that lives on Ethereum and participates
 </ExpandableCard>
 
 <ExpandableCard title="Can I deposit more than 32 ETH?">
-Yes. A validator with <em>compounding</em> (0x02) withdrawal credentials can hold an effective balance of up to 2048 ETH, while the minimum to activate remains 32 ETH. Rewards on a compounding validator are added to its stake automatically, and it earns rewards on every whole ETH above the 32 ETH minimum, so you can stake amounts that aren't multiples of 32. See [Compounding and the 2048 ETH maximum](#compounding-and-max-effective-balance).
+Yes. A validator with _compounding_ (0x02) withdrawal credentials can hold an effective balance of up to 2048 ETH, while the minimum to activate remains 32 ETH. Rewards on a compounding validator are added to its stake automatically, and it earns rewards on every whole ETH above the 32 ETH minimum, so you can stake amounts that aren't multiples of 32. See [Compounding and the 2048 ETH maximum](#compounding-and-max-effective-balance).
 
-Validators with <em>regular withdrawals</em> (0x01) credentials remain capped at an effective balance of 32 ETH, with any balance above that automatically swept to the withdrawal address every few days.
+Validators with _regular withdrawals_ (0x01) credentials remain capped at an effective balance of 32 ETH, with any balance above that automatically swept to the withdrawal address every few days.
 
 For a compounding validator, only balance above the 2048 ETH maximum is swept automatically. To withdraw anything below that, you trigger a partial withdrawal from your withdrawal address (a transaction that costs gas), which can draw down any balance above the 32 ETH minimum. If you run multiple validators, you can also consolidate them into a single compounding validator without exiting the network.
 

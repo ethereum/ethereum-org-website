@@ -118,7 +118,7 @@ No. A single machine running a validator client works without any DVT software, 
 </ExpandableCard>
 
 <ExpandableCard title="Does DVT split my ETH or my withdrawal keys?" eventCategory="DVT" eventName="clicked does DVT split my ETH">
-No. DVT splits only the validator <em>signing</em> key, which is used for consensus duties like attestations and block proposals. Your stake is always controlled by the withdrawal address set for the validator, which is unaffected by DVT. Since the Pectra upgrade, the withdrawal address holder can also trigger a validator exit directly from the execution layer, without needing the signing key at all.
+No. DVT splits only the validator _signing_ key, which is used for consensus duties like attestations and block proposals. Your stake is always controlled by the withdrawal address set for the validator, which is unaffected by DVT. Since the Pectra upgrade, the withdrawal address holder can also trigger a validator exit directly from the execution layer, without needing the signing key at all.
 </ExpandableCard>
 
 <ExpandableCard title="What happens if nodes in a cluster go offline?" eventCategory="DVT" eventName="clicked what happens if nodes go offline">
@@ -126,7 +126,7 @@ As long as a threshold of nodes remains online (for example, 3 out of 4), the va
 </ExpandableCard>
 
 <ExpandableCard title="Is DVT the same as pooled staking?" eventCategory="DVT" eventName="clicked is DVT the same as pooled staking">
-No. Pooled staking combines ETH from many people to fund validators, and is one of several <a href="/staking/">ways to stake</a>. DVT is infrastructure for <em>operating</em> a validator. It distributes the signing of one validator across multiple machines and operators. The two are complementary; many pools use DVT to distribute their operator sets, but DVT itself doesn't pool anyone's ETH.
+No. Pooled staking combines ETH from many people to fund validators, and is one of several [ways to stake](/staking/). DVT is infrastructure for _operating_ a validator. It distributes the signing of one validator across multiple machines and operators. The two are complementary; many pools use DVT to distribute their operator sets, but DVT itself doesn't pool anyone's ETH.
 </ExpandableCard>
 
 ## Further reading {#further-reading}

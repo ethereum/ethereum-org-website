@@ -83,7 +83,7 @@ Delegated staking always means trusting someone else with part of your staking s
 
 ## What to consider {#what-to-consider}
 
-There are a growing number of providers to help you delegate the operation of your validator, but they all have their own benefits and risks. All delegated options require additional trust assumptions compared to solo staking. Delegated options may have additional code wrapping the Ethereum clients that is not open or auditable. Delegation also has a detrimental effect on network decentralization. Depending on the setup, you may not control your validator, andthe operator could act dishonestly using your ETH.
+There are a growing number of providers to help you delegate the operation of your validator, but they all have their own benefits and risks. All delegated options require additional trust assumptions compared to solo staking. Delegated options may have additional code wrapping the Ethereum clients that is not open or auditable. Delegation also has a detrimental effect on network decentralization. Depending on the setup, you may not control your validator, and the operator could act dishonestly using your ETH.
 
 Attribute indicators are used below to signal notable strengths or weaknesses a listed provider may have. Use this section as a reference for how we define these attributes while you're choosing a staking service.
 
@@ -116,13 +116,13 @@ With custodial services, such as staking through a centralized exchange, the pro
 </ExpandableCard>
 
 <ExpandableCard title="So there are two sets of keys?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
-Yes. Each validator has <em>signing</em> keys and separate <em>withdrawal</em> credentials. In order for a validator to attest to the state of the chain, participate in sync committees and propose blocks, the signing keys must be readily accessible by a validator client. These must be connected to the internet in some form, and are thus inherently considered to be "hot" keys. The keys that control withdrawn funds are kept separate for security reasons.
+Yes. Each validator has _signing_ keys and separate _withdrawal_ credentials. In order for a validator to attest to the state of the chain, participate in sync committees and propose blocks, the signing keys must be readily accessible by a validator client. These must be connected to the internet in some form, and are thus inherently considered to be "hot" keys. The keys that control withdrawn funds are kept separate for security reasons.
 
 The withdrawal credentials designate the execution layer address that staking rewards and exited funds go to. Modern deposit tooling lets you set this address at the time of deposit, as either a regular (0x01) or compounding (0x02) credential, and it should be an address you control, ideally secured in cold storage. This protects your funds even if someone else controls your validator signing keys, and since the Pectra upgrade it also lets you exit the validator directly from that address.
 
 Validators set up in the network's early days without an execution withdrawal address use legacy BLS withdrawal keys, and must sign a one-time message declaring a withdrawal address before withdrawals can begin. This involves regenerating the withdrawal keys from the mnemonic seed phrase created at setup.
 
-<strong>Make certain you back this seed phrase up safely or you will be unable to generate your withdrawal keys when the time comes.</strong>
+**Make certain you back this seed phrase up safely or you will be unable to generate your withdrawal keys when the time comes.**
 
 Check with your provider for support regarding how to prepare your validator.
 </ExpandableCard>

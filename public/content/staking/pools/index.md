@@ -55,7 +55,7 @@ There are two ways to exit an LST position:
 - **Redeem through the protocol** for the underlying ETH. Redemption depends on the protocol having liquidity available, either a buffer of unstaked ETH or validators exiting through the consensus layer exit queue, which can take time.
 - **Sell on secondary markets** at any time. Because the token trades freely, its market price can deviate from the value of the ETH backing it, particularly during periods of market stress.
 
-Since the Pectra upgrade, [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) allows validator exits to be triggered directly from the execution layer by the withdrawal address holder. Staking protocols can use this feature to ensure their validators can be exited without relying on node operators to cooperate, so redemptions rely less on trusting node operators than they used to.
+Since the Pectra upgrade, [execution layer triggered withdrawals (EIP-7002)](https://eips.ethereum.org/EIPS/eip-7002) allows validator exits to be triggered directly from the execution layer by the withdrawal address holder. Staking protocols can use this feature to ensure their validators can be exited without relying on node operators to cooperate, so redemptions rely less on trusting node operators than they used to.
 
 ### Holding an LST is not the same as staking {#holding-an-lst-is-not-the-same-as-staking}
 
@@ -74,7 +74,7 @@ LSTs inherit the underlying risks of staking (such as slashing and downtime pena
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Many pools reduce operator risk using <strong>distributed validator technology (DVT)</strong>, middleware that splits a validator's key across multiple machines and operators so no single failure or compromise takes the validator down. <a href="/staking/dvt/">More on distributed validator technology</a>
+Many pools reduce operator risk using **distributed validator technology (DVT)**, middleware that splits a validator's key across multiple machines and operators so no single failure or compromise takes the validator down. [More on distributed validator technology](/staking/dvt/)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -100,7 +100,7 @@ The more of these questions a provider can only answer with "trust us," the more
 <Alert variant="warning">
 <AlertContent>
 <AlertDescription>
-Some products advertise "enhanced" or "boosted" yield by combining staking with <strong>restaking</strong>, a use case for LSTs that commits staked ETH to secure additional protocols under additional slashing conditions. Restaking is a separate risk category and novel application built on top of LSTs, not a form of direct staking participation. If a yield figure is meaningfully higher than the core network staking rate, you should ask exactly where the extra yield comes from. <a href="/restaking/">What is restaking?</a>
+Some products advertise "enhanced" or "boosted" yield by combining staking with **restaking**, a use case for LSTs that commits staked ETH to secure additional protocols under additional slashing conditions. Restaking is a separate risk category and novel application built on top of LSTs, not a form of direct staking participation. If a yield figure is meaningfully higher than the core network staking rate, you should ask exactly where the extra yield comes from. [What is restaking?](/restaking/)
 </AlertDescription>
 </AlertContent>
 </Alert>
