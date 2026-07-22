@@ -37,11 +37,11 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import PageJsonLD from "./page-jsonld"
 
 import layer2NetworksCalloutImage from "@/public/images/counter-screen-network-towers-rings-collage-cut-out.png"
-import heroImg from "@/public/images/network-column-rooftop-piping-construction.png"
 import optimisticRollupImage from "@/public/images/layer-2/optimistic_rollup.png"
 import rollupImage from "@/public/images/layer-2/rollup-2.png"
 import zkRollupImage from "@/public/images/layer-2/zk_rollup.png"
 import layer2CalloutImage from "@/public/images/man-and-dog-playing.png"
+import heroImg from "@/public/images/network-column-rooftop-piping-construction.png"
 import daoImage from "@/public/images/use-cases/dao-2.png"
 import whatIsEthereumImage from "@/public/images/what-is-ethereum.png"
 

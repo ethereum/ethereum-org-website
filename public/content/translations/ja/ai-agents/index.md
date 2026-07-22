@@ -5,7 +5,7 @@ description: "イーサリアム上のAI・エージェントの概要"
 lang: ja
 template: use-cases
 sidebarDepth: 2
-image: /images/ai-agents/hero-image.png
+image: /images/community-campfire-people-robot-cut-out.png
 alt: "端末のテーブルに集まる人々"
 summaryPoints:
   - "ブロックチェーンとやり取りし、独立して取引を行うAI"
