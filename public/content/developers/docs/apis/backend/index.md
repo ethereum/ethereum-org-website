@@ -91,6 +91,12 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Documentation](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
+**SolidRPC -** **_EVM JSON-RPC infrastructure with full, archive, and keyless public access._**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [Documentation](https://solidrpc.io/docs)
+- [GitHub](https://github.com/DamianFigiel/SolidRPC)
+
 **Zmok -** **_Speed-oriented Ethereum nodes as JSON-RPC/WebSockets API._**
 
 - [zmok.io](https://zmok.io/)
