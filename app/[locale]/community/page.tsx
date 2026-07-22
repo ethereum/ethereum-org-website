@@ -140,7 +140,11 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
   return (
     <>
-      <PageJsonLD locale={locale} contributors={contributors} />
+      <PageJsonLD
+        locale={locale}
+        contributors={contributors}
+        featuredStories={featuredStories}
+      />
 
       <HubHero
         heroImg={heroImg}
