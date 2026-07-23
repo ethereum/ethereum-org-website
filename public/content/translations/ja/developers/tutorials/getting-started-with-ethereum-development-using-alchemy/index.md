@@ -37,7 +37,7 @@ Alchemyのアカウント作成は簡単です。[こちらから無料でサイ
 
 「Apps」にカーソルを合わせてアプリを選択することでも、既存のAPIキーを取得できます。ここで「View Key」をクリックできるほか、「Edit App」をクリックして特定のドメインをホワイトリストに登録したり、いくつかの開発者ツールを確認したり、分析を表示したりできます。
 
-![Gif showing a user how to pull API keys](./pull-api-keys.gif)
+![Gif showing a user how to pull API keys](./pull-api-keys.mp4#600x340)
 
 ## 3. コマンドラインからリクエストを行う {#make-a-request-from-the-command-line}
 

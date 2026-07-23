@@ -20,12 +20,12 @@ lang: ja
 
 フレームワークについて深く掘り下げる前に、まずは[分散型アプリケーション (dapp)](/developers/docs/dapps/)と[イーサリアムスタック](/developers/docs/ethereum-stack/)の概要を一読することをお勧めします。
 
-## 利用可能なフレームワーク {#available-frameworks}
+## 利用可能なフレームワーク
 
-**Foundry** - **_Foundryは、イーサリアムアプリケーション開発のための、非常に高速でポータブルかつモジュール式のツールキットです。_**
+**Foundry** - **_イーサリアムアプリケーション開発のための、非常に高速でポータブルなモジュール式ツールキットです。_**
 
 - [Foundryのインストール](https://book.getfoundry.sh/)
-- [Foundry Book](https://book.getfoundry.sh/)
+- [Foundryブック](https://book.getfoundry.sh/)
 - [テレグラムのFoundryコミュニティチャット](https://t.me/foundry_support)
 - [Awesome Foundry](https://github.com/crisgarner/awesome-foundry)
 
@@ -34,7 +34,7 @@ lang: ja
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-**Ape -** **_Pythonユーザー、データサイエンティスト、セキュリティ専門家向けのスマート・コントラクト開発ツールです。_**
+**Ape -** **_Pythonユーザー、データサイエンティスト、セキュリティ専門家のためのスマート・コントラクト開発ツールです。_**
 
 - [ドキュメント](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
@@ -51,13 +51,14 @@ lang: ja
 - [例](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [ディスコード](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_1つのコマンドでイーサリアムを活用したアプリを作成できます。選択可能なUIフレームワークとDeFiテンプレートが豊富に用意されています。_**
+**Create Eth App -** **_1つのコマンドでイーサリアムを利用したアプリを作成できます。幅広いUIフレームワークと分散型金融 (DeFi) テンプレートから選択できます。_**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [テンプレート](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-ETH -** **_Web3向けのEthers.js + Hardhat + Reactコンポーネントとフック。スマート・コントラクトを活用した分散型アプリケーション (dapp) の構築を開始するために必要なものがすべて揃っています。_**
+**Scaffold-ETH 2 -** **_Next.js、Wagmi、Viem、RainbowKitに加えて、HardhatまたはFoundryを選択できます。コントラクトのホットリロード、カスタムReactフック、バーナーウォレット、ローカルフォーセット、フルスタックの分散型アプリケーション (dapp) 開発用の拡張モジュールを備えています。_**
 
+- [ウェブサイト](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
 **Tenderly -** **_ブロックチェーン開発者がスマート・コントラクトを構築、テスト、デバッグ、監視、運用し、dappのUXを向上させることを可能にするWeb3開発プラットフォームです。_**
@@ -93,7 +94,7 @@ lang: ja
 - [GitHub](https://github.com/chainstack)
 - [ディスコード](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_エンタープライズグレードのWeb3開発プラットフォームであり、すべての主要なチェーン、EVMチェーン (およびその他) 上でNFTアプリケーションを構築できます。_**
+**Crossmint -** **_すべての主要なチェーン、EVMチェーン (およびその他) でNFTアプリケーションを構築できる、エンタープライズグレードのWeb3開発プラットフォームです。_**
 
 - [ウェブサイト](https://www.crossmint.com)
 - [ドキュメント](https://docs.crossmint.com)
@@ -112,11 +113,11 @@ lang: ja
 - [コミュニティフォーラム](https://forum.openzeppelin.com/c/support/17)
 - **オープンツェッペリン SDKの開発は終了しました**
 
-**Catapulta -** **_マルチチェーンのスマート・コントラクトデプロイツールです。ブロックエクスプローラーでの検証を自動化し、デプロイされたスマート・コントラクトを追跡してデプロイレポートを共有します。FoundryおよびHardhatプロジェクトでプラグアンドプレイが可能です。_**
+**Catapulta -** **_マルチチェーンのスマート・コントラクトデプロイツールです。ブロックエクスプローラーでの検証を自動化し、デプロイされたスマート・コントラクトを追跡してデプロイレポートを共有します。FoundryおよびHardhatプロジェクト向けのプラグアンドプレイ機能を提供します。_**
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (powered by Covalent) -** **_GoldRushは、開発者、アナリスト、企業向けに最も包括的なブロックチェーンデータAPIスイートを提供します。DeFiダッシュボード、ウォレット、トレーディングボット、AI・エージェント、コンプライアンスプラットフォームのいずれを構築している場合でも、データAPIは必要な不可欠なオンチェーンデータへの高速で正確かつ開発者フレンドリーなアクセスを提供します。_**
+**GoldRush (Covalent提供) -** **_GoldRushは、開発者、アナリスト、企業向けに最も包括的なブロックチェーンデータAPIスイートを提供します。DeFiダッシュボード、ウォレット、トレーディングボット、AI・エージェント、コンプライアンスプラットフォームのいずれを構築する場合でも、データAPIは必要な不可欠なオンチェーンデータへの高速で正確、かつ開発者フレンドリーなアクセスを提供します。_**
 
 - [ウェブサイト](https://goldrush.dev/)
 - [ドキュメント](https://goldrush.dev/docs/chains/ethereum)
@@ -130,7 +131,7 @@ lang: ja
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS Code拡張機能](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_分散型アプリケーション開発者が分散型IDと検証可能なクレデンシャルをアプリケーションに簡単に組み込めるようにする、オープンソースでモジュール式の非依存型フレームワークです。_**
+**Veramo -** **_分散型アプリケーション (dapp) 開発者が分散型IDと検証可能なクレデンシャルをアプリケーションに簡単に組み込めるようにする、オープンソースでモジュール式の非依存型フレームワークです。_**
 
 - [ホームページ](https://veramo.io/)
 - [ドキュメント](https://veramo.io/docs/basics/introduction)
@@ -138,6 +139,10 @@ lang: ja
 - [ディスコード](https://discord.com/invite/FRRBdjemHV)
 - [NPMパッケージ](https://www.npmjs.com/package/@veramo/core)
 
+**Moccasin -** **_Titanoboa上に構築された、Vyper向けの高速でPythonicなスマート・コントラクト開発およびテストフレームワークです。_**
+
+- [ドキュメント](https://cyfrin.github.io/moccasin/)
+- [GitHub](https://github.com/Cyfrin/moccasin)
 ## 参考文献 {#further-reading}
 
 _役に立ったコミュニティリソースをご存知ですか？このページを編集して追加してください！_
