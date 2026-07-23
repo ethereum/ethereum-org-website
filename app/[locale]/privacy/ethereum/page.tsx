@@ -284,8 +284,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <ButtonLink href="/roadmap/privacy/" size="lg">
             {t("page-privacy-ethereum-transition-roadmap-cta")}
           </ButtonLink>
-          {/* // TODO: Replace with chosen Web3Privacy Now video */}
-          <VideoWatch slug="privacy-is-existential" />
+          <VideoWatch slug="ethereum-privacy-roadmap-andy-guzman" />
         </Section>
 
         {/* Umbrella section: the app categories below are h3 subsections of this h2 */}
@@ -440,7 +439,6 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </p>
           <h4>{t("page-privacy-ethereum-stealth-apps-title")}</h4>
           <CategoryAppsGrid category="privacy" subcategory="stealth address" />
-          {/* // TODO: confirm href -- no dedicated "payments on Ethereum" page */}
           <ButtonLink href="/payments/" size="lg">
             {t("page-privacy-ethereum-stealth-apps-cta")}
           </ButtonLink>
