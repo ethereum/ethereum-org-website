@@ -156,6 +156,7 @@
   "sim-cw-connect-disclaimer": "Web sitesine bağlanmak, site sahipleriyle hiçbir kişisel veya güvenli bilgiyi paylaşmaz.",
   "sim-cw-your-collection": "Koleksiyonunuz ({count})",
   "sim-cw-nft-title": "Havalı sanat eseri",
+  "sim-cw-nft-alt": "NFT Görseli",
   "sim-cw-nft-actions-tooltip": "Bunlar, NFT'lerinizin sahibi olarak yapabileceğiniz bazı şeylerdir",
   "sim-cw-set-price": "Bir fiyat belirle",
   "sim-cw-auction-item": "Öğeyi açık artırmaya çıkar",
