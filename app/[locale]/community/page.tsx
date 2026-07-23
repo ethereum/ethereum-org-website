@@ -182,7 +182,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           <Section
             id="get-paid"
             data-flow="skip"
-            className="grid gap-space-3x lg:grid-cols-2 lg:items-center"
+            className="grid gap-space-3x lg:items-center xl:grid-cols-2"
           >
             <div className="flow">
               <h2>{t("page-community-open-source")}</h2>
@@ -204,13 +204,15 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           </Section>
 
           {/* Join an online community */}
-          <Section id="online-communities">
-            <div className="mx-auto flex max-w-2xl flex-col gap-3 md:text-center">
-              <h2>{t("page-community-card-1-title")}</h2>
-              <p className="text-lg text-body-medium">
-                {t("page-community-card-1-description")}
-              </p>
-            </div>
+          <Section
+            id="online-communities"
+            className="*:[:is(h2,p)]:max-w-3xl md:*:[:is(h2,p)]:mx-auto md:*:[:is(h2,p)]:text-center"
+          >
+            <h2>{t("page-community-card-1-title")}</h2>
+            <p className="text-body-medium">
+              {t("page-community-card-1-description")}
+            </p>
+            <div className="flow mx-auto max-w-2xl md:text-center"></div>
             <Grid columns={3}>
               {redditCommunities.map((community) => (
                 <Card
@@ -254,7 +256,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               ))}
             </Grid>
             <div className="flex justify-center">
-              <ButtonLink href="/community/online/">
+              <ButtonLink size="lg" href="/community/online/">
                 {t("page-community-online-see-all")}
               </ButtonLink>
             </div>
@@ -262,13 +264,11 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
           {/* Major blockchain conferences */}
           {conferences.length > 0 && (
-            <Section id="conferences">
-              <div className="flex max-w-2xl flex-col gap-3">
-                <h2>{t("page-community-conferences-title")}</h2>
-                <p className="text-lg text-body-medium">
-                  {t("page-community-conferences-subtitle")}
-                </p>
-              </div>
+            <Section id="conferences" className="*:[:is(h2,p)]:max-w-3xl">
+              <h2>{t("page-community-conferences-title")}</h2>
+              <p className="text-body-medium">
+                {t("page-community-conferences-subtitle")}
+              </p>
               <Grid columns={3}>
                 {conferences.map((event) => (
                   <EventCard
@@ -285,7 +285,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 ))}
               </Grid>
               <div className="flex justify-center">
-                <ButtonLink href="/community/events/">
+                <ButtonLink size="lg" href="/community/events/">
                   {t("page-community-conferences-see-all")}
                 </ButtonLink>
               </div>
@@ -295,13 +295,12 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           {/* Community stories */}
           {featuredStories.length > 0 && (
             <Section id="community-stories" data-flow="skip">
-              <div className="rounded-4xl bg-radial-primary px-4 py-12 md:px-8 md:py-16">
-                <div className="mx-auto mb-10 flex max-w-2xl flex-col gap-3 text-center">
-                  <h2>{t("page-community-stories-title")}</h2>
-                  <p className="text-lg text-body-medium">
-                    {t("page-community-stories-subtitle")}
-                  </p>
-                </div>
+              <div className="flow rounded-4xl bg-radial-primary px-page py-space-3x *:[:is(h2,p)]:mx-auto *:[:is(h2,p)]:max-w-3xl *:[:is(h2,p)]:text-center">
+                <h2>{t("page-community-stories-title")}</h2>
+                <p className="text-body-medium">
+                  {t("page-community-stories-subtitle")}
+                </p>
+                <div className="mx-auto mb-10 flex max-w-2xl flex-col gap-3 text-center"></div>
                 <Grid columns={3} className="mx-auto max-w-screen-lg">
                   {featuredStories.map((story) => (
                     <Card
@@ -340,13 +339,14 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           )}
 
           {/* Ethereum voices */}
-          <Section id="ethereum-voices" className="mt-0">
-            <div className="mx-auto flex max-w-2xl flex-col gap-3 text-center">
-              <h2>{t("page-community-voices-title")}</h2>
-              <p className="text-lg text-body-medium">
-                {t("page-community-voices-subtitle")}
-              </p>
-            </div>
+          <Section
+            id="ethereum-voices"
+            className="mt-0 *:[:is(h2,p)]:mx-auto *:[:is(h2,p)]:max-w-3xl *:[:is(h2,p)]:text-center"
+          >
+            <h2>{t("page-community-voices-title")}</h2>
+            <p className="text-xl text-body-medium">
+              {t("page-community-voices-subtitle")}
+            </p>
             <I18nProvider locale={locale} messages={messages}>
               <CommunityStories stories={voices} />
             </I18nProvider>
@@ -359,8 +359,8 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             variant="responsiveFlex"
             className="justify-between md:items-center"
           >
-            <div className="relative shrink-0 md:w-96 lg:w-128">
-              <FloatingCard className="absolute -top-2 left-2 z-10 shadow-lg md:top-6 md:-left-6">
+            <div className="relative shrink-0 md:w-96 lg:w-lg">
+              <FloatingCard className="absolute inset-s-2 -top-2 z-10 shadow-lg md:-inset-s-6 md:top-6">
                 <p className="text-xs font-semibold text-body-medium uppercase">
                   {t("page-community-contribute-eyebrow")}
                 </p>
@@ -374,15 +374,16 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 src={contributeImg}
                 alt=""
                 sizes="(min-width: 1024px) 32rem, (min-width: 768px) 24rem, 100vw"
-                className="w-full"
+                className="w-full rtl:-scale-x-100"
               />
             </div>
-            <SectionContent className="flex max-w-[660px] flex-1 flex-col gap-6">
+            <SectionContent className="flow @container max-w-2xl flex-1">
               <h2>{t("page-community-contribute")}</h2>
               <p className="text-lg text-body-medium">
                 {t("page-community-contribute-description")}
               </p>
-              <div className="flex gap-4 max-md:flex-col max-md:items-start">
+
+              <div className="flex gap-4 @max-lg:flex-col @max-lg:*:[a]:w-full">
                 <ButtonLink href="/contributing/">
                   {t("page-community-contribute-button")}
                 </ButtonLink>
