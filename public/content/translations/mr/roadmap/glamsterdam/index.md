@@ -2,6 +2,7 @@
 title: "ग्लॅमस्टरडॅम"
 description: "ग्लॅमस्टरडॅम प्रोटोकॉल अपग्रेडबद्दल जाणून घ्या"
 lang: mr
+template: upgrade
 ---
 
 # ग्लॅमस्टरडॅम {#glamsterdam}

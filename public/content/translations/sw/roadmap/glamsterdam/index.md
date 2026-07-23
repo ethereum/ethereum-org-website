@@ -2,6 +2,7 @@
 title: Glamsterdam
 description: Jifunze kuhusu uboreshaji wa itifaki ya Glamsterdam
 lang: sw
+template: upgrade
 ---
 
 # Glamsterdam {#glamsterdam}

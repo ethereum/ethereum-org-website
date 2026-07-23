@@ -2,6 +2,7 @@
 title: "গ্ল্যামস্টারডাম"
 description: "গ্ল্যামস্টারডাম প্রোটোকল আপগ্রেড সম্পর্কে জানুন"
 lang: bn
+template: upgrade
 ---
 
 # গ্ল্যামস্টারডাম {#glamsterdam}

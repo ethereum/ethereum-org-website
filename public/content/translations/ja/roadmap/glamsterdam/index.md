@@ -2,6 +2,7 @@
 title: "グラムステルダム"
 description: "グラムステルダム・プロトコル・アップグレードについて学ぶ"
 lang: ja
+template: upgrade
 ---
 
 # グラムステルダム {#glamsterdam}

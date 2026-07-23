@@ -3,6 +3,7 @@ title: "ஃபுசாகா 🦓"
 metaTitle: ஃபுலு-ஒசாகா (ஃபுசாகா)
 description: ஃபுசாகா நெறிமுறை மேம்பாடு பற்றி அறிக
 lang: ta
+template: upgrade
 authors: ["நிக்ஸோ", "மரியோ ஹாவெல்"]
 ---
 

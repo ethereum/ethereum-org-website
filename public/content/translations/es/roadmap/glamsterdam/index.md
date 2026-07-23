@@ -2,6 +2,7 @@
 title: Glamsterdam
 description: "Aprende sobre la actualización del protocolo Glamsterdam"
 lang: es
+template: upgrade
 ---
 
 # Glamsterdam {#glamsterdam}

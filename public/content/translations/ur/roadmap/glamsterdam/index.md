@@ -2,6 +2,7 @@
 title: "⁦گلیمسٹرڈیم⁩"
 description: "⁦گلیمسٹرڈیم پروٹوکول اپ گریڈ کے بارے میں جانیں⁩"
 lang: ur
+template: upgrade
 ---
 
 # گلیمسٹرڈیم {#glamsterdam}

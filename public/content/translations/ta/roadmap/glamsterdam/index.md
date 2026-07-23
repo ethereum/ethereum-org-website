@@ -2,6 +2,7 @@
 title: "கிளாம்ஸ்டர்டாம்"
 description: "கிளாம்ஸ்டர்டாம் நெறிமுறை மேம்படுத்தல் பற்றி அறிக"
 lang: ta
+template: upgrade
 ---
 
 # கிளாம்ஸ்டர்டாம் {#glamsterdam}
