@@ -21,6 +21,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20
+
       - name: Check crawler status
         id: check
         env:
@@ -29,56 +34,7 @@ jobs:
           CRAWLER_NAME: ethereumorg-2
           MAX_CRAWL_AGE_DAYS: "9" # weekly schedule + buffer
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-        run: |
-          AUTH=$(printf '%s:%s' "$CRAWLER_USER_ID" "$CRAWLER_API_KEY" | base64 -w0)
-          api() { curl -fsSL -H "Authorization: Basic $AUTH" "https://crawler.algolia.com/api/1$1"; }
-
-          problems=()
-
-          ID=$(api "/crawlers?itemsPerPage=100" 2>/dev/null \
-            | jq -r --arg n "$CRAWLER_NAME" '.items[]? | select(.name==$n) | .id' | head -1)
-          if [[ -z "$ID" ]]; then
-            problems+=("Could not find or reach crawler \"$CRAWLER_NAME\" via the Crawler API")
-          else
-            STATUS=$(api "/crawlers/$ID" 2>/dev/null || echo "")
-            if [[ -z "$STATUS" ]] || ! echo "$STATUS" | jq -e . >/dev/null 2>&1; then
-              problems+=("Could not fetch crawler status from the Crawler API")
-            else
-              # Log raw field names so the mapping below is easy to fix if Algolia renames anything.
-              echo "Crawler status fields: $(echo "$STATUS" | jq -r 'keys | join(", ")')"
-
-              if [[ "$(echo "$STATUS" | jq -r '(.blocked==true) or (.blockingError!=null)')" == "true" ]]; then
-                reason=$(echo "$STATUS" | jq -r '.blockingError // "unknown" | if type=="object" then (.code // .message // tostring) else tostring end')
-                problems+=("Crawler is BLOCKED — $reason. It will not publish until a human resolves it.")
-              fi
-
-              last=$(echo "$STATUS" | jq -r '.lastReindexEndedAt // .lastReindexEndDate // .lastCrawlEndedAt // .updatedAt // empty')
-              if [[ -n "$last" ]]; then
-                age=$(( ( $(date +%s) - $(date -d "$last" +%s) ) / 86400 ))
-                echo "Last crawl ended $last (${age}d ago)"
-                if (( age > MAX_CRAWL_AGE_DAYS )); then
-                  problems+=("Last successful crawl was ${age}d ago (> ${MAX_CRAWL_AGE_DAYS}d) — crawling may have stopped")
-                fi
-              else
-                echo "::warning::Could not read a last-crawl timestamp (field mapping may need a tweak)."
-              fi
-            fi
-          fi
-
-          if (( ${#problems[@]} > 0 )); then
-            {
-              echo "unhealthy=true"
-              echo "report<<__HC_EOF__"
-              echo ":rotating_light: **Algolia crawler unhealthy** — \`$CRAWLER_NAME\`"
-              for p in "${problems[@]}"; do echo "• $p"; done
-              echo "Fix: crawler.algolia.com → $CRAWLER_NAME → Overview. See docs/site-search.md."
-              echo "Run: <$RUN_URL>"
-              echo "__HC_EOF__"
-            } >> "$GITHUB_OUTPUT"
-          else
-            echo "unhealthy=false" >> "$GITHUB_OUTPUT"
-            echo "Crawler \"$CRAWLER_NAME\" is running and not blocked."
-          fi
+        run: node .github/scripts/check-crawler.mjs
 
       - name: Alert Discord on failure
         if: steps.check.outputs.unhealthy == 'true'

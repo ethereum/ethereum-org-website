@@ -29,7 +29,7 @@ stalled crawler can go unnoticed for months (the index simply serves stale conte
 weekly GitHub Action guards against this:
 
 - Workflow: `.github/workflows/algolia-index-healthcheck.yml` (Saturdays 09:00 UTC, after
-  the Friday crawl).
+  the Friday crawl); logic in `.github/scripts/check-crawler.mjs`.
 - It pings the Discord alerts channel if, per the Crawler REST API, the **crawler is
   blocked** or its **last successful crawl is older than ~9 days** (i.e. crawling has
   stopped running). That's the failure mode that actually bites — a blocked crawler
