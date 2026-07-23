@@ -122,9 +122,10 @@ For the most common directional icons, the project provides RTL-aware wrappers:
 
 ```tsx
 import { ChevronNext, ChevronPrev } from "@/components/Chevron"
+import { ArrowNext, ArrowPrev } from "@/components/ui/arrow"
 ```
 
-These automatically flip in RTL. Prefer them over the raw Lucide chevrons.
+These automatically flip in RTL (they bake in `rtl:-scale-x-100`). Prefer them over the raw Lucide `ChevronRight`/`ChevronLeft` and `ArrowRight`/`ArrowLeft`.
 
 ### Icons that should NOT flip
 
