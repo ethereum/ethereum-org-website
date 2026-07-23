@@ -97,7 +97,7 @@ export const Variants: Story = {
     <Grid columns={3} size="wide">
       <div>
         <Label>variant=&quot;base&quot; (default)</Label>
-        <Card href="#" variant="base" hoverLift>
+        <Card href="#" variant="base">
           <StandardBody />
         </Card>
       </div>
@@ -106,7 +106,7 @@ export const Variants: Story = {
         <Label>
           variant=&quot;nested&quot; (shown inside a tinted container)
         </Label>
-        <Card href="#" variant="nested" hoverLift>
+        <Card href="#" variant="nested">
           <StandardBody />
         </Card>
       </div>
@@ -115,7 +115,7 @@ export const Variants: Story = {
         <Label>
           variant=&quot;ghost&quot; (no bg; --banner-radius widens to 16px)
         </Label>
-        <Card href="#" variant="ghost" hoverLift>
+        <Card href="#" variant="ghost">
           <StandardBody />
         </Card>
       </div>
@@ -125,7 +125,7 @@ export const Variants: Story = {
           variant=&quot;header-bar&quot; (header layout baked in — just drop a
           CardHeader inside)
         </Label>
-        <Card href="#" variant="header-bar" hoverLift>
+        <Card href="#" variant="header-bar">
           <CardHeader>
             <Shield className="text-accent-a" />
             <CardTitle size="sm">Header-bar card</CardTitle>
@@ -190,7 +190,7 @@ export const Sizes: Story = {
               </CardContent>
             </Card>
           ) : (
-            <Card href="#" size={size} hoverLift>
+            <Card href="#" size={size}>
               <StandardBody />
             </Card>
           )}
@@ -224,7 +224,7 @@ export const ContentSpacingOverride: Story = {
             Card size=&quot;lg&quot;, CardContent spacing=&quot;
             {contentSpacing}&quot; - {CONTENT_SPACING_LABELS[contentSpacing]}
           </Label>
-          <Card href="#" size="lg" hoverLift>
+          <Card href="#" size="lg">
             <CardHeader>
               <CardBanner>
                 <Image
@@ -480,7 +480,7 @@ export const FooterButtons: Story = {
     <Grid columns={2} size="wide">
       <div>
         <Label>CardFooter buttons=&quot;full&quot; (default)</Label>
-        <Card href="#" hoverLift>
+        <Card href="#">
           <CardContent>
             <CardTitle>Full-width buttons</CardTitle>
             <CardParagraph>
@@ -496,7 +496,7 @@ export const FooterButtons: Story = {
 
       <div>
         <Label>CardFooter buttons=&quot;compact&quot;</Label>
-        <Card href="#" hoverLift>
+        <Card href="#">
           <CardContent>
             <CardTitle>Compact buttons</CardTitle>
             <CardParagraph>
@@ -527,13 +527,10 @@ export const Linkable: Story = {
       </p>
       <Grid columns={3} size="wide">
         <div>
-          <Label>
-            Card href=&quot;...&quot; + CardBanner zoom=&#123;true&#125;
-            (default)
-          </Label>
+          <Label>Card href=&quot;...&quot; + CardBanner zoom (opt-in)</Label>
           <Card href="#">
             <CardHeader>
-              <CardBanner>
+              <CardBanner zoom>
                 <Image
                   src={heroLandscape}
                   alt=""
@@ -553,11 +550,11 @@ export const Linkable: Story = {
 
         <div>
           <Label>
-            Card href=&quot;...&quot; + CardBanner zoom=&#123;false&#125;
+            Card href=&quot;...&quot; + CardBanner (no zoom, default)
           </Label>
           <Card href="#">
             <CardHeader>
-              <CardBanner zoom={false}>
+              <CardBanner>
                 <Image
                   src={heroLandscape}
                   alt=""
@@ -569,7 +566,8 @@ export const Linkable: Story = {
               <CardTitle>Linkable, banner zoom disabled</CardTitle>
               <CardParagraph>
                 Same hover/focus behavior on the card, but the banner image
-                stays static. Useful when the banner art shouldn&apos;t move.
+                stays static -- the default now. Add the zoom prop to opt into
+                the scale-up.
               </CardParagraph>
             </CardContent>
           </Card>
@@ -838,7 +836,7 @@ export const Composites: Story = {
         {/* Image-banner card (BuilderCard shape) -- single CTA, whole card links */}
         <div>
           <Label>Image-banner card (BuilderCard shape)</Label>
-          <Card href="#" variant="ghost" border hoverLift>
+          <Card href="#" variant="ghost" border>
             <CardHeader>
               <CardBanner fit="contain" background="none">
                 <Image

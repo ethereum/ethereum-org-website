@@ -171,9 +171,10 @@ When *should* you use `className`? Things that are genuinely outside the Card's 
 
 - Inherits `--card-pad` from the parent.
 - Defaults to `padding-top: 0` (mirrors `CardHeader`'s `padding-bottom: 0`); the gap between Content and Footer comes from Content's bottom-pad. The parent restores the top-pad automatically for `variant="header-bar"`.
-- `buttons="full"` (default): buttons, `ButtonLink`s, and `CardButtonFake`s stretch to full width and center their text. Use this when you want CTAs to span the card.
-- `buttons="compact"`: buttons size to fit their content. Use for trailing-link style, multi-button footers, or when the button shouldn't dominate.
-- `buttons="inherit"`: opt out of both — buttons render with their own intrinsic width.
+- `buttons="responsive"` (default): CTAs span full width on a narrow card and shrink to fit once the card is wide enough (a `@container` query, not the viewport). The right default for most single- and multi-CTA footers.
+- `buttons="full"`: CTAs always stretch to full width with centered text.
+- `buttons="compact"`: CTAs always size to fit their content. Use for trailing-link style or when the button shouldn't dominate.
+- `buttons="inherit"`: opt out — children render at their own intrinsic width (what `CardLinkFake` uses).
 - The layout variants target both real buttons (`[button]`) and `CardButtonFake` (`[data-label=button-link]`), so they apply whichever you use. Which one to use is the single-vs-multiple-CTA rule under [`Card` with `href`](#card-with-href): one CTA -> `CardButtonFake` in an `href` card; two+ -> real `ButtonLink`s in a non-link card.
 
 ### `CardButtonFake`
@@ -189,6 +190,7 @@ When *should* you use `className`? Things that are genuinely outside the Card's 
 
 - The **only** correct way to render a footer CTA inside an `href` `Card`. It's a presentational `<div>` mirror of `Button` (rendered via `Button asChild`), so it reuses every Button style but is **not** an interactive element -- no nested `<a>`/`<button>` inside the card's anchor.
 - Accepts Button's `variant`, `size`, and `isSecondary`. It carries `data-label="button-link"`, so `CardFooter`'s `buttons` layout variants size it exactly like a real button.
+- Trailing icons mirror a real link: the external-link NE arrow appears **automatically** when the card's `href` is external; pass `hideArrow` to suppress it, or `withChevron` for a trailing chevron (the chevron yields to the NE arrow on external cards unless `hideArrow` is set).
 - Button's `hover-link` styling fires from the card's `group/link`, so hovering anywhere on the card animates the fake button identically to a real hover -- you don't (and can't) hand-wire hover styles onto it.
 - Never use it on a non-link card (there's nothing to click) and never use a real `Button`/`ButtonLink` as the sole CTA of an `href` card (invalid nested anchor). See the single-vs-multiple-CTA rule above.
 
@@ -219,7 +221,7 @@ When *should* you use `className`? Things that are genuinely outside the Card's 
 - The link-styled sibling of `CardButtonFake`: use it when the single CTA of an `href` card should read as a **text link** rather than a button. Same rule applies -- a real `InlineLink`/`LinkWithArrow` inside an `href` card nests an anchor in the card's anchor, so use this presentational `<div>` mirror instead.
 - Renders as a non-interactive `<div>`: the text underlines off the card's `group/link` hover/focus, so the whole card lights up identically to hovering the link.
 - **`withForwardArrow`** adds the trailing right-arrow (the `LinkWithArrow` look). The external-link NE arrow is added **automatically** when the card's `href` is external; pass **`hideArrow`** to suppress it. The icon juggling mirrors `CardButtonFake` (external NE arrow vs. forward arrow). Carries `data-label="card-link"`.
-- Pair with `CardFooter buttons="inherit"` -- the `full`/`compact` layout variants target buttons, not this, so `inherit` lets it render at its intrinsic `w-fit` width.
+- Pair with `CardFooter buttons="inherit"` -- the `responsive`/`full`/`compact` layout variants target buttons, not this, so `inherit` lets it render at its intrinsic `w-fit` width.
 - Same footer choice as the button case: `CardButtonFake` for a button-shaped CTA, `CardLinkFake` for a text-link CTA. Both require the whole-card `href`; neither belongs on a non-link card.
 
 ### `CardBanner`
@@ -236,7 +238,7 @@ When *should* you use `className`? Things that are genuinely outside the Card's 
 - For banner images. Default `background="body"` paints a tinted placeholder so loading images don't flash unstyled. Use `background="none"` only when the image will *not* cover the full rectangle and a tint behind it would look wrong.
 - `size` variants: `full | lg | base | sm | thumbnail-lg | thumbnail`. Prefer one of these over `className="h-..."` — the height tokens are part of the design system's vertical rhythm. `thumbnail-lg` (128px square) and `thumbnail` (64px square) both `shrink-0` for small logo/icon placements above content.
 - `fit="contain"` with a *single* `<Image>` child triggers an auto-blurred-backdrop effect: the same image is cloned, scaled, blurred, and placed behind to fill any letterboxing. If you pass two children, you lose this magic and need to provide your own backdrop.
-- `zoom`: `true` (default) propagates the parent `group/link` hover/focus into an image scale-up; pass `zoom={false}` when the art shouldn't move.
+- `zoom`: **opt-in** (off by default) -- pass `zoom` to propagate the parent `group/link` hover/focus into an image scale-up. Use it on media/thumbnail tiles where the image should react; leave it off elsewhere so the card's own hover (lift + ring/fill) isn't doubled by an image scale. There is no `zoom={false}` -- just omit it.
 - Placement:
   - **Inside `CardHeader` (the default -- prefer this):** the banner insets by `--card-pad` and its `--banner-radius` corners stay concentric with the card's outer radius. Required on **link** cards (`href`): the inset keeps the hover state clear of the image and the corner radii aligned.
   - As a bare direct child of `Card` (no `CardHeader`): the banner extends flush to the card's edges. Only safe for a true edge-to-edge image, and pair it with `Card size="xs"` (`--card-pad: 0`) so the banner radius and the card's outer radius match. A bare banner on a padded size (`sm`/`md`/`base`) clips at `--banner-radius` while the card corner is `--card-pad + --banner-radius` -- a visible mismatch, and on a link card the hover treatment has no room to breathe. (See the bare-banner gotcha.)

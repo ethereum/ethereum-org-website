@@ -120,14 +120,14 @@ The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card
 
 **`CardFooter` variants**:
 
-- `buttons`: `full (default)` stretches buttons/ButtonLinks to full width with centered text | `compact` sizes them to fit | `inherit` opts out so children render at intrinsic width.
+- `buttons`: `responsive (default)` full-width on a narrow card, shrink-to-fit once wide (`@container`) | `full` always full-width centered | `compact` always shrink-to-fit | `inherit` opts out (used by `CardLinkFake`).
 
 **`CardBanner` variants**:
 
 - `background`: `body (default)` | `accent-a` | `accent-b` | `accent-c` | `primary` | `none`. `none` only when the image won't cover the full rectangle.
 - `size`: `full | lg | base (default) | sm | thumbnail-lg | thumbnail`. Use these instead of `className="h-..."` to stay on-rhythm. `thumbnail-lg` is a 128px square; `thumbnail` is 64px — both `shrink-0` for small logo/icon placements.
 - `fit`: `cover (default) | contain`. With `fit="contain"` and a single `<Image>` child, the banner auto-clones the image as a blurred backdrop. Two children breaks the magic.
-- `zoom`: `true (default) | false`. Controls hover zoom propagation from a parent `group/link`.
+- `zoom`: opt-in boolean, **off by default**. Pass `zoom` to propagate a parent `group/link` hover into an image scale-up (media/thumbnail tiles). No `zoom={false}` -- omit to keep the image static.
 - Placement: inside `CardHeader` (default; keeps banner radius concentric and gives link-hover room). Bare direct child of `Card` only for a true edge-to-edge image, paired with `size="xs"` so radii match (a bare banner on a padded size / link card mismatches corner radius — see gotchas).
 
 **`CardTitle` variants**:
