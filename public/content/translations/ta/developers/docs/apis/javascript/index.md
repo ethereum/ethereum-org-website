@@ -237,7 +237,7 @@ ethers.utils.formatEther(balance)
 - [Web3.js பயன்பாட்டுச் செயல்பாடுகள்](https://docs.web3js.org/api/web3-utils)
 - [Ethers பயன்பாட்டுச் செயல்பாடுகள்](https://docs.ethers.org/v6/api/utils/)
 
-## கிடைக்கும் நிரலகங்கள் {#available-libraries}
+## கிடைக்கும் நிரலகங்கள்
 
 **Web3.js -** **_எத்திரியம் JavaScript API._**
 
@@ -250,7 +250,7 @@ ethers.utils.formatEther(balance)
 - [ஆவணங்கள்](https://docs.ethers.io)
 - [GitHub](https://github.com/ethers-io/ethers.js)
 
-**The Graph -** **_எத்திரியம் மற்றும் IPFS தரவை அட்டவணைப்படுத்துவதற்கும் GraphQL-ஐப் பயன்படுத்தி அதைக் கேட்பதற்குமான ஒரு நெறிமுறை._**
+**The Graph -** **_எத்திரியம் மற்றும் IPFS தரவை அட்டவணைப்படுத்துவதற்கும் GraphQL-ஐப் பயன்படுத்தி அதை வினவுவதற்குமான ஒரு நெறிமுறை._**
 
 - [The Graph](https://thegraph.com)
 - [Graph எக்ஸ்ப்ளோரர்](https://thegraph.com/explorer)
@@ -263,23 +263,32 @@ ethers.utils.formatEther(balance)
 - [ஆவணங்கள்](https://www.alchemy.com/docs)
 - [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
 
-**Viem -** **_எத்திரியத்திற்கான TypeScript இடைமுகம்._**
+**viem -** **_எத்திரியத்திற்கான TypeScript இடைமுகம்._**
 
 - [ஆவணங்கள்](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-**Codex -** **_டஜன் கணக்கான சங்கிலிகளில் நிகழ்நேர, செறிவூட்டப்பட்ட தொகுதிச்சங்கிலி தரவு API._**
+**wagmi -** **_viem-இன் மேல் கட்டமைக்கப்பட்ட, எத்திரியத்திற்கான React ஹூக்ஸ் நிரலகம்._**
+
+- [ஆவணங்கள்](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_wagmi மற்றும் viem-இன் மேல் கட்டமைக்கப்பட்ட, பரவலாக்கப்பட்ட செயலிகளில் (dapps) பணப்பை இணைப்பைச் சேர்ப்பதற்கான React நிரலகம்._**
+
+- [ஆவணங்கள்](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
+
+**Codex -** **_டஜன் கணக்கான சங்கிலிகள் முழுவதும் நிகழ்நேர, செறிவூட்டப்பட்ட தொகுதிச்சங்கிலி தரவு API._**
 
 - [ஆவணங்கள்](https://docs.codex.io)
 - [எக்ஸ்ப்ளோரர்](https://docs.codex.io/explore)
 - [GitHub](https://github.com/Codex-Data)
 - [டிஸ்கார்ட்](https://discord.com/invite/mFpUhT3vAq)
 
-**Drift -** **_உள்ளமைக்கப்பட்ட தேக்ககம், ஹூக்குகள் மற்றும் சோதனை மாக்குகளைக் கொண்ட TypeScript மெட்டா-நிரலகம்._**
+**Drift -** **_உள்ளமைக்கப்பட்ட தேக்ககம், ஹூக்ஸ் மற்றும் சோதனை மாக்குகளைக் கொண்ட TypeScript மெட்டா-நிரலகம்._**
 
 - [ஆவணங்கள்](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
-
 ## மேலும் படிக்க {#further-reading}
 
 _உங்களுக்கு உதவிய சமூக வளம் பற்றித் தெரியுமா? இந்தப் பக்கத்தைத் திருத்தி அதைச் சேர்க்கவும்!_

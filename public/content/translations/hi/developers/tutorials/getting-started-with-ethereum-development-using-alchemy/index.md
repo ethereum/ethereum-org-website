@@ -42,7 +42,7 @@ Alchemy के साथ खाता बनाना आसान है, [य�
 
 आप “Apps” पर होवर करके और किसी एक को चुनकर मौजूदा API कुंजियां भी प्राप्त कर सकते हैं। आप यहां “View Key” कर सकते हैं, साथ ही विशिष्ट डोमेन को व्हाइटलिस्ट करने, कई डेवलपर टूल देखने और एनालिटिक्स देखने के लिए “Edit App” कर सकते हैं।
 
-![Gif showing a user how to pull API keys](./pull-api-keys.gif)
+![Gif showing a user how to pull API keys](./pull-api-keys.mp4#600x340)
 
 ## 3. कमांड लाइन से अनुरोध करें {#make-a-request-from-the-command-line}
 

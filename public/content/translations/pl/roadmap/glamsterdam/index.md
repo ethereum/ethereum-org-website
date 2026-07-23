@@ -288,15 +288,13 @@ Tak, Glamsterdam najprawdopodobniej obniży opłaty dla codziennych użytkownik�
 
 Ponadto, w celu zapewnienia długoterminowego zrównoważonego rozwoju, Glamsterdam wprowadza listy dostępu na poziomie bloku (BALs). Umożliwia to przetwarzanie równoległe i przygotowuje warstwę 1 (L1) do bezpiecznej obsługi wyższych ogólnych limitów gazu w przyszłości, co prawdopodobnie obniży koszty gazu na transakcję w miarę wzrostu pojemności.
 
-### Czy po aktualizacji Glamsterdam nastąpią jakieś zmiany w moich istniejących inteligentnych kontraktach? {#will-my-smart-contracts-change}
-
+### Czy po aktualizacji Glamsterdam zajdą jakieś zmiany w moich istniejących inteligentnych kontraktach?
 Istniejące kontrakty będą nadal działać normalnie po aktualizacji Glamsterdam. Deweloperzy prawdopodobnie otrzymają kilka nowych narzędzi i powinni przejrzeć swoje zużycie gazu:
 
-- Zwiększenie maksymalnego rozmiaru kontraktu (czyli EIP-7954) pozwala deweloperom na wdrażanie większych aplikacji, podnosząc limit maksymalnego rozmiaru kontraktu z około 24 KiB do 32 KiB.
-- Deterministyczne wstępne wdrożenie fabryki (czyli EIP-7997) wprowadza uniwersalny, wbudowany kontrakt fabryki. Pozwala to deweloperom na wdrażanie ich aplikacji i portfeli inteligentnych kontraktów pod dokładnie tym samym adresem we wszystkich uczestniczących łańcuchach EVM.
-- Jeśli Twoja aplikacja opiera się na złożonym śledzeniu w celu znalezienia transferów ETH, transfery i spalanie ETH emitują log (czyli EIP-7708) pozwoli Ci na przejście na korzystanie z logów w celu prostszego i bardziej niezawodnego księgowania.
-- Wzrost kosztu gazu za tworzenie stanu (czyli EIP-8037) i aktualizacja kosztu gazu za dostęp do stanu (czyli EIP-8038) wprowadzają nowe modele zrównoważonego rozwoju, które zmienią niektóre koszty wdrożenia kontraktów, ponieważ tworzenie nowych kont lub trwałej pamięci masowej będzie miało nową, ustandaryzowaną stałą opłatę opartą na rozmiarze utworzonych danych.
-
+- Zwiększenie maksymalnego rozmiaru kontraktu (czyli EIP-7954) pozwala deweloperom na wdrażanie większych aplikacji, podnosząc limit maksymalnego rozmiaru kontraktu z około 24 KiB do 64 KiB.
+- Deterministyczne wstępne wdrożenie fabryki (czyli EIP-7997) wprowadza uniwersalny, wbudowany kontrakt fabryki. Pozwala to deweloperom na wdrażanie swoich aplikacji i portfeli inteligentnych kontraktów pod dokładnie tym samym adresem we wszystkich uczestniczących łańcuchach EVM.
+- Jeśli Twoja aplikacja opiera się na złożonym śledzeniu w celu znalezienia transferów ETH, Transfery i spalanie ETH emitują log (czyli EIP-7708) pozwoli Ci przejść na korzystanie z logów w celu prostszego i bardziej niezawodnego księgowania.
+- Wzrost kosztu gazu za tworzenie stanu (czyli EIP-8037) oraz aktualizacja kosztu gazu za dostęp do stanu (czyli EIP-8038) wprowadzają nowe modele zrównoważonego rozwoju, które zmienią niektóre koszty wdrożenia kontraktu, ponieważ tworzenie nowych kont lub trwałej pamięci masowej będzie miało nową, ustandaryzowaną stałą opłatę opartą na rozmiarze utworzonych danych.
 ### Jak Glamsterdam wpłynie na pamięć masową węzłów i wymagania sprzętowe? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 
 Wiele propozycji EIP rozważanych dla Glamsterdam rozwiązuje problem spadku wydajności związanego ze wzrostem stanu:

@@ -156,6 +156,7 @@
   "sim-cw-connect-disclaimer": "Durch die Verbindung mit der Website werden keine persönlichen oder sicheren Informationen mit den Website-Betreibern geteilt.",
   "sim-cw-your-collection": "Deine Sammlung ({count})",
   "sim-cw-nft-title": "Coole Kunst",
+  "sim-cw-nft-alt": "NFT-Bild",
   "sim-cw-nft-actions-tooltip": "Dies sind einige Dinge, die du als Besitzer deiner NFTs tun könntest",
   "sim-cw-set-price": "Einen Preis festlegen",
   "sim-cw-auction-item": "Artikel versteigern",

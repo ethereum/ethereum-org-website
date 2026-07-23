@@ -47,9 +47,9 @@ Bir akıllı sözleşme, Ethereum blokzinciri üzerinde yaşayan ve tam olarak p
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## Dapp oluşturma araçları {#dapp-tools}
+## Dapp oluşturma araçları
 
-**Scaffold-ETH _- Akıllı sözleşmenize uyum sağlayan bir ön uç kullanarak Solidity ile hızlıca denemeler yapın._**
+**Scaffold-ETH 2 _- Akıllı sözleşmenize uyum sağlayan bir ön uç kullanarak Solidity ile hızlıca denemeler yapın._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Örnek dapp](https://punkwallet.io/)
@@ -58,28 +58,27 @@ Bir akıllı sözleşme, Ethereum blokzinciri üzerinde yaşayan ve tam olarak p
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**One Click Dapp _- Bir [ABI](/glossary/#abi)'den dapp ön uçları oluşturmak için FOSS (Özgür ve Açık Kaynaklı Yazılım) aracı._**
+**One Click Dapp _- Bir [ABI](/glossary/#abi) üzerinden dapp ön uçları oluşturmak için FOSS aracı._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
-**Etherflow _- Ethereum geliştiricilerinin düğümlerini test etmeleri ve tarayıcıdan RPC çağrıları oluşturup hata ayıklamaları için FOSS aracı._**
+**Etherflow _- Ethereum geliştiricilerinin düğümlerini test etmeleri ve tarayıcı üzerinden RPC çağrıları oluşturup hata ayıklamaları için FOSS aracı._**
 
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
 **thirdweb _- Web3 geliştirmesi için her dilde SDK'lar, akıllı sözleşmeler, araçlar ve altyapı._**
 
-- [Ana Sayfa](https://thirdweb.com/)
-- [Belgeler](https://portal.thirdweb.com/)
+- [Ana sayfa](https://thirdweb.com/)
+- [Dokümantasyon](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Crossmint _- Akıllı sözleşmeleri dağıtmak, kredi kartı ve zincirler arası ödemeleri etkinleştirmek ve NFT'ler oluşturmak, dağıtmak, satmak, depolamak ve düzenlemek için API'leri kullanmak üzere kurumsal düzeyde Web3 geliştirme platformu._**
+**Crossmint _- Akıllı sözleşmeleri dağıtmak, kredi kartı ve zincirler arası ödemeleri etkinleştirmek ve NFT'ler oluşturmak, dağıtmak, satmak, depolamak ve düzenlemek amacıyla API'leri kullanmak için kurumsal düzeyde Web3 geliştirme platformu._**
 
 - [crossmint.com](https://www.crossmint.com)
-- [Belgeler](https://docs.crossmint.com)
+- [Dokümantasyon](https://docs.crossmint.com)
 - [Discord](https://discord.com/invite/crossmint)
-
 ## Daha fazla bilgi {#further-reading}
 
 - [Dapp'leri keşfedin](/apps)

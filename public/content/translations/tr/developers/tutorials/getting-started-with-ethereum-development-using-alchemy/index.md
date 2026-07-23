@@ -13,7 +13,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 ![Ethereum and Alchemy logos](./ethereum-alchemy.png)
 
-Bu, Ethereum geliştirmeye başlamak için yeni başlayanlara yönelik bir rehberdir. Bu eğitim için Maker, 0x, MyEtherWallet, Dharma ve Kyber dahil olmak üzere en iyi blokzincir uygulamalarının %70'inden milyonlarca kullanıcıya güç veren lider blokzincir geliştirici platformu [Alchemy](https://alchemyapi.io/)'yi kullanacağız. Alchemy, işlemleri okuyup yazabilmemiz için Ethereum Zinciri üzerinde bir API uç noktasına erişmemizi sağlayacaktır.
+Bu, Ethereum geliştirmeye başlamak için yeni başlayanlara yönelik bir rehberdir. Bu eğitim için Maker, 0x, MyEtherWallet, Dharma ve Kyber dahil olmak üzere en iyi blokzincir uygulamalarının %70'inden milyonlarca kullanıcıya güç veren lider blokzincir geliştirici platformu [Alchemy](https://www.alchemy.com/)'yi kullanacağız. Alchemy, işlemleri okuyup yazabilmemiz için Ethereum Zinciri üzerinde bir API uç noktasına erişmemizi sağlayacaktır.
 
 Sizi Alchemy'ye kaydolmaktan ilk Web3 betiğinizi yazmaya kadar götüreceğiz! Blokzincir geliştirme deneyimi gerekmez!
 
@@ -37,18 +37,18 @@ Yeni anahtarınızı almak için “Create App” altındaki ayrıntıları dold
 
 Ayrıca “Apps” (Uygulamalar) üzerine gelip birini seçerek mevcut API anahtarlarını çekebilirsiniz. Belirli alan adlarını beyaz listeye almak, çeşitli geliştirici araçlarını görmek ve analizleri görüntülemek için burada “View Key” ve “Edit App” (Uygulamayı Düzenle) işlemlerini yapabilirsiniz.
 
-![Gif showing a user how to pull API keys](./pull-api-keys.gif)
+![Gif showing a user how to pull API keys](./pull-api-keys.mp4#600x340)
 
-## 3. Komut Satırından Bir İstek Yapın {#make-a-request-from-the-command-line}
+## 3. Komut Satırından Bir İstek Yapın
 
 JSON-RPC ve curl kullanarak Alchemy aracılığıyla Ethereum Blokzinciri ile etkileşime geçin.
 
-Manuel istekler için, `POST` istekleri aracılığıyla `JSON-RPC` ile etkileşime geçmenizi öneririz. Sadece `Content-Type: application/json` başlığını ve sorgunuzu aşağıdaki alanlarla birlikte `POST` gövdesi olarak iletin:
+Manuel istekler için, `JSON-RPC` ile `POST` istekleri aracılığıyla etkileşime geçmenizi öneririz. Sadece `Content-Type: application/json` başlığını ve aşağıdaki alanları içeren sorgunuzu `POST` gövdesi olarak iletin:
 
 - `jsonrpc`: JSON-RPC sürümü—şu anda yalnızca `2.0` desteklenmektedir.
-- `method`: ETH API metodu. [API referansına bakın.](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc)
-- `params`: Metoda iletilecek parametrelerin bir listesi.
-- `id`: İsteğinizin kimliği (ID). Bir yanıtın hangi isteğe ait olduğunu takip edebilmeniz için yanıt tarafından döndürülecektir.
+- `method`: ETH API yöntemi. [API referansına bakın.](/developers/docs/apis/json-rpc/)
+- `params`: Yönteme iletilecek parametrelerin bir listesi.
+- `id`: İsteğinizin kimliği. Yanıtın hangi isteğe ait olduğunu takip edebilmeniz için yanıtta döndürülecektir.
 
 İşte mevcut gas fiyatını almak için komut satırından çalıştırabileceğiniz bir örnek:
 
@@ -59,21 +59,20 @@ curl https://eth-mainnet.alchemyapi.io/v2/demo \
 -d '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
 ```
 
-_**NOT:** [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.io/jsonrpc/demo) adresini kendi API anahtarınız olan `https://eth-mainnet.alchemyapi.io/v2/**your-api-key` ile değiştirin._
+_**NOT:** `https://eth-mainnet.alchemyapi.io/v2/demo` adresini kendi API anahtarınız olan `https://eth-mainnet.alchemyapi.io/v2/**your-api-key` ile değiştirin._
 
 **Sonuçlar:**
 
 ```json
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
+## 4. Web3 İstemcinizi Kurun
 
-## 4. Web3 İstemcinizi Kurun {#set-up-your-web3-client}
+**Mevcut bir istemciniz varsa,** mevcut düğüm sağlayıcı URL'nizi API anahtarınızı içeren bir Alchemy URL'si ile değiştirin: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
-**Mevcut bir istemciniz varsa,** mevcut Düğüm sağlayıcı URL'nizi API anahtarınızı içeren bir Alchemy URL'si ile değiştirin: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
+**_NOT:_** Aşağıdaki betiklerin komut satırından çalıştırılması yerine bir **Node bağlamında** çalıştırılması veya **bir dosyaya kaydedilmesi** gerekir. Node veya npm henüz yüklü değilse, [Node.js kurulum talimatlarını](https://nodejs.org/en/download/) izleyin.
 
-**_NOT:_** Aşağıdaki betiklerin komut satırından çalıştırılması değil, bir **düğüm bağlamında (node context)** çalıştırılması veya **bir dosyaya kaydedilmesi** gerekir. Node veya npm henüz yüklü değilse, bu hızlı [Mac'ler için kurulum rehberine](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs) göz atın.
-
-Alchemy ile entegre edebileceğiniz tonlarca [Web3 kütüphanesi](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) vardır, ancak Alchemy ile sorunsuz çalışacak şekilde oluşturulmuş ve yapılandırılmış, Web3.js'nin doğrudan bir alternatifi olan [Alchemy Web3](https://docs.alchemy.com/reference/api-overview)'ü kullanmanızı öneririz. Bu, otomatik yeniden denemeler ve sağlam WebSocket desteği gibi birçok avantaj sağlar.
+Alchemy ile entegre edebileceğiniz pek çok [Web3 kütüphanesi](/developers/docs/apis/javascript/) vardır, ancak Alchemy ile sorunsuz çalışacak şekilde oluşturulmuş ve yapılandırılmış, web3.js'nin doğrudan bir alternatifi olan [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)'ü kullanmanızı öneririz. Bu, otomatik yeniden denemeler ve sağlam WebSocket desteği gibi birçok avantaj sağlar.
 
 AlchemyWeb3.js'yi kurmak için **proje dizininize gidin** ve şunu çalıştırın:
 
@@ -89,7 +88,7 @@ yarn add @alch/alchemy-web3
 npm install @alch/alchemy-web3
 ```
 
-Alchemy'nin Düğüm altyapısıyla etkileşime geçmek için NodeJS'te çalıştırın veya bunu bir JavaScript dosyasına ekleyin:
+Alchemy'nin düğüm altyapısıyla etkileşime geçmek için NodeJS'te çalıştırın veya bunu bir JavaScript dosyasına ekleyin:
 
 ```js
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
@@ -97,10 +96,9 @@ const web3 = createAlchemyWeb3(
   "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 )
 ```
+## 5. İlk Web3 Betiğinizi Yazın!
 
-## 5. İlk Web3 Betiğinizi Yazın! {#write-your-first-web3-script}
-
-Şimdi biraz Web3 programlamaya girişmek için Ethereum Ana Ağı'ndan en son Blok numarasını yazdıran basit bir betik yazacağız.
+Şimdi biraz Web3 programlaması için kolları sıvamak adına Ethereum Ana Ağı'ndan en son blok numarasını yazdıran basit bir betik yazacağız.
 
 **1. Henüz yapmadıysanız, terminalinizde yeni bir proje dizini oluşturun ve içine girin (cd):**
 
@@ -117,7 +115,7 @@ npm install @alch/alchemy-web3
 
 **3. `index.js` adında bir dosya oluşturun ve aşağıdaki içerikleri ekleyin:**
 
-> Sonuç olarak `demo` kısmını kendi Alchemy HTTP API anahtarınızla değiştirmelisiniz.
+> Sonuç olarak `demo` ifadesini Alchemy HTTP API anahtarınızla değiştirmelisiniz.
 
 ```js
 async function main() {
@@ -129,7 +127,7 @@ async function main() {
 main()
 ```
 
-Asenkron (async) konularına aşina değil misiniz? Bu [Medium gönderisine](https://medium.com/better-programming/understanding-async-await-in-javascript-1d81bb079b2c) göz atın.
+Asenkron (async) kavramlara aşina değil misiniz? Bu [Medium gönderisine](https://medium.com/better-programming/understanding-async-await-in-javascript-1d81bb079b2c) göz atın.
 
 **4. Node kullanarak terminalinizde çalıştırın**
 
@@ -137,7 +135,7 @@ Asenkron (async) konularına aşina değil misiniz? Bu [Medium gönderisine](htt
 node index.js
 ```
 
-**5. Artık konsolunuzda en son Blok numarası çıktısını görmelisiniz!**
+**5. Artık konsolunuzda en son blok numarası çıktısını görmelisiniz!**
 
 ```
 The latest block number is 11043912
@@ -145,6 +143,6 @@ The latest block number is 11043912
 
 **Harika! Tebrikler! Alchemy kullanarak ilk Web3 betiğinizi yazdınız 🎉**
 
-Sırada ne yapacağınızdan emin değil misiniz? İlk akıllı sözleşmenizi dağıtmayı deneyin ve [Merhaba Dünya Akıllı Sözleşme Rehberimiz](https://www.alchemy.com/docs/hello-world-smart-contract) ile biraz Solidity programlamaya girişin veya [Kontrol Paneli Demo Uygulaması](https://docs.alchemyapi.io/tutorials/demo-app) ile kontrol paneli bilginizi test edin!
+Sırada ne yapacağınızdan emin değil misiniz? İlk akıllı sözleşmenizi dağıtmayı deneyin ve [Merhaba Dünya Akıllı Sözleşme Rehberimizde](/developers/tutorials/hello-world-smart-contract/) biraz Solidity programlaması için kolları sıvayın veya daha fazla örnek için [Alchemy belgelerini](https://www.alchemy.com/docs/) keşfetmeye devam edin.
 
-_[Alchemy'ye ücretsiz kaydolun](https://auth.alchemy.com/), [belgelerimize](https://www.alchemy.com/docs/) göz atın ve en son haberler için bizi [Twitter](https://twitter.com/AlchemyPlatform)'da takip edin._
+_[Alchemy'ye ücretsiz kaydolun](https://auth.alchemy.com/), [belgelerimize](https://www.alchemy.com/docs/) göz atın ve en son haberler için bizi [Twitter'da](https://twitter.com/AlchemyPlatform) takip edin_.

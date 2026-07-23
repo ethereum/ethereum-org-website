@@ -1,10 +1,10 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-bug-bounty.json",
-  "generatedAt": "2026-06-29T23:47:46.764Z",
-  "rootHash": "b2d31a456964",
+  "generatedAt": "2026-07-22T22:33:59.203Z",
+  "rootHash": "700e8f79366c",
   "tree": {
-    "contentHash": "8b9ad562dfec",
+    "contentHash": "0e74b35650ae",
     "anchorHash": "8180f30e072a",
     "children": {
       "page-upgrades-bug-bounty-annotated-specs": {
@@ -124,7 +124,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-upgrades-bug-bounty-hunting-li-3": {
-        "contentHash": "dc4e29d50e8c",
+        "contentHash": "02b34bee0fc8",
         "anchorHash": "e3b0c44298fc"
       },
       "page-upgrades-bug-bounty-hunting-li-4": {
@@ -991,5 +991,5 @@
       "page-upgrades-bug-bounty-not-included-li-10"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

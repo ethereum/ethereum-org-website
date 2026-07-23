@@ -29,10 +29,13 @@ incomplete: true
 
 القائمة الكاملة لمقترحات [<span dir="ltr">ERC</span>](https://eips.ethereum.org/erc).
 
-## قراءة إضافية {#further-reading}
+## قراءات إضافية
 
-_هل تعرف موردًا مجتمعيًا ساعدك؟ قم بتعديل هذه الصفحة وأضفه!_
+_هل تعرف موردًا مجتمعيًا ساعدك؟ قم بتعديل هذه الصفحة وإضافته!_
 
+- [قائمة التحقق من دمج الرموز المميزة](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md) - _<span dir="ltr">Trail of Bits</span>_
+- [وثائق أوبن زبلن: الرموز المميزة](https://docs.openzeppelin.com/contracts/5.x/tokens) - _أوبن زبلن_
+- [مخاطر دمج الرموز المميزة (<span dir="ltr">PDF</span>)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _أوبن زبلن_
 ## برامج تعليمية ذات صلة {#related-tutorials}
 
 - [قائمة التحقق من دمج الرموز المميزة](/developers/tutorials/token-integration-checklist/) _– قائمة بالأشياء التي يجب مراعاتها عند التفاعل مع الرموز المميزة._

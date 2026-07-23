@@ -47,9 +47,9 @@ dapps کو متعارف کرانے کے لیے، ہمیں سمارٹ کنٹری�
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## dapps بنانے کے ٹولز {#dapp-tools}
+## dapps بنانے کے لیے ٹولز
 
-**Scaffold-ETH _- ایک ایسے فرنٹ اینڈ کا استعمال کرتے ہوئے تیزی سے Solidity کے ساتھ تجربہ کریں جو آپ کے سمارٹ کنٹریکٹ کے مطابق ڈھل جاتا ہے۔_**
+**Scaffold-ETH 2 _- ایک ایسے فرنٹ اینڈ کا استعمال کرتے ہوئے Solidity کے ساتھ تیزی سے تجربہ کریں جو آپ کے سمارٹ کنٹریکٹ کے مطابق ڈھل جاتا ہے۔_**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [مثالی dapp](https://punkwallet.io/)
@@ -58,28 +58,27 @@ dapps کو متعارف کرانے کے لیے، ہمیں سمارٹ کنٹری�
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**One Click Dapp _- ایک [<span dir="ltr">ABI</span>](/glossary/#abi) سے dapp فرنٹ اینڈز بنانے کے لیے <span dir="ltr">FOSS</span> ٹول۔_**
+**One Click Dapp _- ایک [ABI](/glossary/#abi) سے dapp فرنٹ اینڈز بنانے کے لیے <span dir="ltr">FOSS</span> ٹول۔_**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
-**Etherflow _- ایتھیریم ڈیولپرز کے لیے اپنے نوڈ کو ٹیسٹ کرنے، اور براؤزر سے <span dir="ltr">RPC</span> کالز کو مرتب اور ڈیبگ کرنے کے لیے <span dir="ltr">FOSS</span> ٹول۔_**
+**Etherflow _- ایتھیریم ڈیولپرز کے لیے اپنے نوڈ کو ٹیسٹ کرنے، اور براؤزر سے <span dir="ltr">RPC</span> کالز بنانے اور ڈیبگ کرنے کے لیے <span dir="ltr">FOSS</span> ٹول۔_**
 
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
-**thirdweb _- ہر زبان میں <span dir="ltr">SDKs</span>، سمارٹ کنٹریکٹس، ٹولز، اور Web3 ڈیولپمنٹ کے لیے انفراسٹرکچر۔_**
+**thirdweb _- Web3 ڈیولپمنٹ کے لیے ہر زبان میں <span dir="ltr">SDKs</span>، سمارٹ کنٹریکٹس، ٹولز، اور انفراسٹرکچر۔_**
 
 - [ہوم پیج](https://thirdweb.com/)
 - [دستاویزات](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Crossmint _- سمارٹ کنٹریکٹس تعینات کرنے، کریڈٹ کارڈ اور کراس چین ادائیگیوں کو فعال کرنے، اور <span dir="ltr">NFTs</span> بنانے، تقسیم کرنے، فروخت کرنے، ذخیرہ کرنے اور ان میں ترمیم کرنے کے لیے <span dir="ltr">APIs</span> استعمال کرنے کے لیے انٹرپرائز گریڈ Web3 ڈیولپمنٹ پلیٹ فارم۔_**
+**Crossmint _- سمارٹ کنٹریکٹس تعینات کرنے، کریڈٹ کارڈ اور کراس چین ادائیگیوں کو فعال کرنے، اور <span dir="ltr">NFTs</span> بنانے، تقسیم کرنے، فروخت کرنے، محفوظ کرنے اور ان میں ترمیم کرنے کے لیے <span dir="ltr">APIs</span> کا استعمال کرنے کے لیے انٹرپرائز گریڈ Web3 ڈیولپمنٹ پلیٹ فارم۔_**
 
 - [crossmint.com](https://www.crossmint.com)
 - [دستاویزات](https://docs.crossmint.com)
 - [ڈسکارڈ](https://discord.com/invite/crossmint)
-
 ## مزید مطالعہ {#further-reading}
 
 - [dapps دریافت کریں](/apps)

@@ -39,6 +39,7 @@
   "page-find-wallet-buy-crypto-desc": "ウォレット内で法定通貨を使って直接暗号資産を購入する \n *注: 暗号資産の購入は地域によって異なる場合があります",
   "page-find-wallet-sell-for-fiat": "法定通貨に換金",
   "page-find-wallet-sell-for-fiat-desc": "ウォレット内で直接暗号資産を法定通貨に換金する \n *注: 暗号資産の出金は地域によって異なる場合があります",
+  "page-find-wallet-network-support": "ネットワークのサポート",
   "page-find-wallet-multisig": "マルチシグ",
   "page-find-wallet-multisig-desc": "トランザクションを承認するために複数の署名を必要とするウォレット",
   "page-find-wallet-social-recovery": "ソーシャル・リカバリー",

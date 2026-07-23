@@ -143,10 +143,9 @@ Plusieurs outils sont disponibles pour gérer les consolidations. L'outil offici
 
 ## FAQ {#faq}
 
-### Le fait d'y souscrire modifie-t-il ma chance de proposition ou mes récompenses ? {#change-luck-or-rewards}
+### Le fait d'y souscrire modifie-t-il ma chance de proposition ou mes récompenses ?
 
-Non. Le fait d'y souscrire ne diminue pas vos chances de proposition - vos tâches et la sélection des propositions restent les mêmes. Par exemple, si vous avez deux validateurs de 32 ETH contre un validateur de 64 ETH, vous aurez au total les mêmes chances d'être sélectionné pour proposer un bloc et gagner des récompenses.
-
+Non. Le fait d'y souscrire ne diminue pas vos chances de proposition - vos tâches et la sélection pour les propositions restent les mêmes. Par exemple, si vous avez deux validateurs de 32 ETH contre un seul validateur de 64 ETH, vous aurez au total les mêmes chances d'être sélectionné pour proposer un bloc et gagner des récompenses.
 ### Le fait d'y souscrire modifie-t-il mon risque de réduction ? {#change-slashing-risk}
 
 Pour les opérateurs plus petits ou non professionnels, la réponse courte est non. La réponse plus longue est que, pour les opérateurs professionnels gérant de nombreux validateurs par nœud avec des alertes rapides, la consolidation en un nombre réduit de validateurs peut réduire leur capacité à réagir à une réduction et à prévenir les événements en cascade. La *pénalité* de réduction initiale pour tous les validateurs a été considérablement diminuée, passant de 1 ETH (par 32 ETH) à 0,0078125 ETH (par 32 ETH) pour compenser ce risque.

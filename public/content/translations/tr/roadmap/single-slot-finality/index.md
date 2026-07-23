@@ -31,7 +31,7 @@ Mevcut mekanizma tasarımıyla, kesinlik süresini azaltmak için ağdaki doğru
 
 ## SSF'ye giden yollar {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title="Neden bugün SSF'ye sahip olamıyoruz?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 Mevcut mutabakat mekanizması, her doğrulayıcının bir bloğu doğrulamak için işlemesi gereken mesaj sayısını azaltmak amacıyla komiteler olarak bilinen birden fazla doğrulayıcıdan gelen onayları birleştirir. Her doğrulayıcının her dönemde (32 slot) onay verme fırsatı vardır, ancak her slotta yalnızca 'komite' olarak bilinen bir doğrulayıcı alt kümesi onay verir. Bunu, birkaç doğrulayıcının 'birleştirici' (aggregator) olarak seçildiği alt ağlara bölünerek yaparlar. Bu birleştiricilerin her biri, alt ağlarındaki diğer doğrulayıcılardan gördükleri tüm imzaları tek bir birleşik imzada birleştirir. En fazla sayıda bireysel katkıyı içeren birleştirici, birleşik imzasını blok teklifçisine iletir ve o da bunu diğer komitelerden gelen birleşik imzayla birlikte bloğa dahil eder.
 

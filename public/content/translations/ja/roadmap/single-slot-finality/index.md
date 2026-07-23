@@ -31,7 +31,7 @@ lang: ja
 
 ## SSFへの道筋 {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title="なぜ今すぐSSFを実現できないのか？" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 現在のコンセンサス・メカニズムは、ブロックを検証するために各バリデータが処理しなければならないメッセージの数を減らすために、コミッティと呼ばれる複数のバリデータからのアテステーションを組み合わせます。すべてのバリデータは各エポック（32スロット）でアテステーションを行う機会がありますが、各スロットでは「コミッティ」と呼ばれるバリデータのサブセットのみがアテステーションを行います。彼らはサブネットに分割され、その中で少数のバリデータが「アグリゲーター」として選ばれることでこれを行います。これらのアグリゲーターはそれぞれ、サブネット内の他のバリデータから見たすべての署名を単一の集約署名に組み合わせます。最も多くの個別の貢献を含むアグリゲーターは、その集約署名をブロック・プロポーザーに渡し、ブロック・プロポーザーはそれを他のコミッティからの集約署名とともにブロックに含めます。
 

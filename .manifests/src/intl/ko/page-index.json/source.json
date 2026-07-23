@@ -1,10 +1,10 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-index.json",
-  "generatedAt": "2026-07-07T22:40:32.986Z",
-  "rootHash": "438a61c8b531",
+  "generatedAt": "2026-07-22T22:39:17.921Z",
+  "rootHash": "a5ad63c9ead3",
   "tree": {
-    "contentHash": "3007c6adbb8b",
+    "contentHash": "1d8170dc74dd",
     "anchorHash": "846928701ae9",
     "children": {
       "page-index-meta-title": {
@@ -12,7 +12,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-index-meta-description": {
-        "contentHash": "46f3905db4dd",
+        "contentHash": "7951cb7e0b8b",
         "anchorHash": "e3b0c44298fc"
       },
       "page-index-description": {
@@ -742,5 +742,5 @@
       "page-index-latest-updates-cta"
     ]
   },
-  "sourceCommitSha": "d0c944dc89a0cc0fa82fc57431aa119ebd4cc28e"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

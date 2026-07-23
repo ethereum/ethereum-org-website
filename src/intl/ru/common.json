@@ -231,6 +231,8 @@
   "less": "Меньше",
   "light-mode": "Светлая",
   "light-mode-aria-label": "Переключиться на светлую тему",
+  "link-external-assistive-text": "(открывается в новой вкладке)",
+  "link-mailto-assistive-text": "(открывает почтовый клиент)",
   "loading": "Загрузка...",
   "loading-error-refresh": "Ошибка, пожалуйста, обновите страницу.",
   "meetups": "Митапы",

@@ -231,6 +231,8 @@
   "less": "更少",
   "light-mode": "浅色",
   "light-mode-aria-label": "切换到浅色模式",
+  "link-external-assistive-text": "（在新标签页中打开）",
+  "link-mailto-assistive-text": "（打开邮件客户端）",
   "loading": "加载中...",
   "loading-error-refresh": "出错，请刷新。",
   "meetups": "聚会",

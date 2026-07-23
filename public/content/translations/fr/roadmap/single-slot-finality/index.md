@@ -31,7 +31,7 @@ Avec la conception actuelle du mécanisme, afin de réduire le temps de finalit�
 
 ## Voies vers la SSF {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title="Pourquoi ne pouvons-nous pas avoir la SSF dès aujourd'hui ?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 Le mécanisme de consensus actuel combine les attestations de plusieurs validateurs, appelés comités, pour réduire le nombre de messages que chaque validateur doit traiter pour valider un bloc. Chaque validateur a l'opportunité d'attester à chaque époque (32 créneaux), mais dans chaque créneau, seul un sous-ensemble de validateurs, appelé « comité », atteste. Ils le font en se divisant en sous-réseaux dans lesquels quelques validateurs sont sélectionnés pour être des « agrégateurs ». Ces agrégateurs combinent chacun toutes les signatures qu'ils voient des autres validateurs de leur sous-réseau en une seule signature agrégée. L'agrégateur qui inclut le plus grand nombre de contributions individuelles transmet sa signature agrégée au proposeur de bloc, qui l'inclut dans le bloc avec la signature agrégée des autres comités.
 

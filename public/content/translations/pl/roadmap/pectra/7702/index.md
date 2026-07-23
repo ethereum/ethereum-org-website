@@ -1,13 +1,12 @@
 ---
 title: Pectra 7702
-metaTitle: Wytyczne Pectra 7702
+metaTitle: Pectra EIP-7702 guidelines
 description: Dowiedz się więcej o 7702 w aktualizacji Pectra
 lang: pl
 ---
 
-## Streszczenie {#abstract}
-
-EIP-7702 definiuje mechanizm dodawania kodu do EOA. Ta propozycja pozwala EOA, starszym kontom Ethereum, na otrzymywanie krótkoterminowych ulepszeń funkcjonalności, zwiększając użyteczność aplikacji. Odbywa się to poprzez ustawienie wskaźnika na już wdrożony kod bajtowy przy użyciu nowego typu transakcji: 4.
+## Streszczenie
+EIP-7702 definiuje mechanizm dodawania kodu do EOA (zewnętrznie posiadanego konta). Ta propozycja pozwala EOA, starszym kontom Ethereum, na otrzymywanie krótkoterminowych ulepszeń funkcjonalności, zwiększając użyteczność aplikacji. Odbywa się to poprzez ustawienie wskaźnika do już wdrożonego kodu przy użyciu nowego typu transakcji: 4.
 
 Ten nowy typ transakcji wprowadza listę autoryzacji. Każda krotka autoryzacji na liście jest zdefiniowana jako
 
@@ -18,61 +17,58 @@ Ten nowy typ transakcji wprowadza listę autoryzacji. Każda krotka autoryzacji 
 **address** to delegowanie (już wdrożony kod bajtowy, który będzie używany przez EOA)
 **chain_id** blokuje autoryzację do określonego łańcucha (lub 0 dla wszystkich łańcuchów)
 **nonce** blokuje autoryzację do określonego nonce konta
-(**y_parity, r, s**) to podpis krotki autoryzacji, zdefiniowany jako keccak(0x05 || rlp ([chain_id ,address, nonce])) za pomocą klucza prywatnego EOA, którego dotyczy autoryzacja (zwanego również autorytetem)
+(**y_parity, r, s**) to podpis krotki autoryzacji, zdefiniowany jako keccak(0x05 || rlp ([chain_id ,address, nonce])) przez klucz prywatny EOA, którego dotyczy autoryzacja (zwanego również autorytetem)
 
 Delegowanie można zresetować, delegując na adres zerowy (null address).
 
-Klucz prywatny EOA zachowuje pełną kontrolę nad kontem po delegowaniu. Na przykład delegowanie do Safe nie sprawia, że konto staje się multisig, ponieważ nadal istnieje pojedynczy klucz, który może ominąć dowolną politykę podpisywania. W przyszłości programiści powinni projektować z założeniem, że każdy uczestnik systemu może być inteligentnym kontraktem. Dla programistów inteligentnych kontraktów nie jest już bezpieczne zakładanie, że `tx.origin` odnosi się do EOA.
+Klucz prywatny EOA zachowuje pełną kontrolę nad kontem po delegowaniu. Na przykład delegowanie do Safe nie sprawia, że konto staje się multisigiem, ponieważ nadal istnieje pojedynczy klucz, który może ominąć dowolną politykę podpisywania. W przyszłości programiści powinni projektować z założeniem, że każdy uczestnik systemu może być inteligentnym kontraktem. Dla programistów inteligentnych kontraktów nie jest już bezpieczne zakładanie, że `tx.origin` odnosi się do EOA.
+## Najlepsze praktyki
+**Abstrakcja konta**: Kontrakt delegowania powinien być zgodny z szerszymi standardami abstrakcji konta (AA) Ethereum, aby zmaksymalizować kompatybilność. W szczególności powinien być idealnie zgodny lub kompatybilny z ERC-4337.
 
-## Najlepsze praktyki {#best-practices}
-
-**Abstrakcja konta**: Kontrakt delegowania powinien być zgodny z szerszymi standardami abstrakcji konta (AA) Ethereum, aby zmaksymalizować kompatybilność. W szczególności powinien idealnie być zgodny lub kompatybilny z ERC-4337.
-
-**Projekt niewymagający pozwoleń i odporny na cenzurę**: Ethereum ceni uczestnictwo niewymagające pozwoleń. Kontrakt delegowania NIE MOŻE kodować na sztywno ani polegać na żadnym pojedynczym „zaufanym” przekaźniku (relayer) lub usłudze. Zablokowałoby to konto, gdyby przekaźnik przestał działać. Funkcje takie jak wsadowanie (np. approve+transferFrom) mogą być używane przez samo EOA bez przekaźnika. Programiści aplikacji, którzy chcą korzystać z zaawansowanych funkcji udostępnianych przez 7702 (abstrakcja gazu, wypłaty chroniące prywatność), będą potrzebować przekaźnika. Chociaż istnieją różne architektury przekaźników, naszą rekomendacją jest użycie [bundlerów 4337](https://www.erc4337.io/bundlers) wskazujących co najmniej na [punkt wejścia (entry point) 0.8](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0), ponieważ:
+**Projekt niewymagający pozwoleń i odporny na cenzurę**: Ethereum ceni uczestnictwo niewymagające pozwoleń. Kontrakt delegowania NIE MOŻE na stałe kodować ani polegać na żadnym pojedynczym „zaufanym” przekaźniku (relayer) lub usłudze. Spowodowałoby to zablokowanie konta, jeśli przekaźnik przeszedłby w tryb offline. Funkcje takie jak wsadowanie (np. approve+transferFrom) mogą być używane przez samo EOA bez przekaźnika. Dla programistów aplikacji, którzy chcą korzystać z zaawansowanych funkcji umożliwianych przez EIP-7702 (abstrakcja gazu, wypłaty chroniące prywatność), potrzebny będzie przekaźnik. Chociaż istnieją różne architektury przekaźników, naszą rekomendacją jest użycie [bundlerów ERC-4337](https://www.erc4337.io/bundlers) wskazujących co najmniej [punkt wejścia (entry point) 0.8](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0), ponieważ:
 
 - Zapewniają ustandaryzowane interfejsy do przekazywania
 - Zawierają wbudowane systemy paymaster
 - Zapewniają kompatybilność w przód
 - Mogą wspierać odporność na cenzurę poprzez [publiczny mempool](https://notes.ethereum.org/@yoav/unified-erc-4337-mempool)
-- Mogą wymagać, aby funkcja inicjująca była wywoływana tylko z [EntryPoint](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0)
+- Mogą wymagać, aby funkcja inicjująca (init) była wywoływana tylko z [EntryPoint](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0)
 
-Innymi słowy, każdy powinien móc działać jako sponsor/przekaźnik transakcji, o ile dostarczy wymagany ważny podpis lub operację użytkownika (UserOperation) z konta. Zapewnia to odporność na cenzurę: jeśli nie jest wymagana żadna niestandardowa infrastruktura, transakcje użytkownika nie mogą być arbitralnie blokowane przez przekaźnik pełniący rolę strażnika (gatekeepera). Na przykład [Delegation Toolkit od MetaMask](https://github.com/MetaMask/delegation-framework/releases/tag/v1.3.0) jawnie współpracuje z dowolnym bundlerem ERC-4337 lub paymasterem na dowolnym łańcuchu, zamiast wymagać serwera specyficznego dla MetaMask.
+Innymi słowy, każdy powinien móc działać jako sponsor/przekaźnik transakcji, o ile dostarczy wymagany ważny podpis lub operację użytkownika (UserOperation) z konta. Zapewnia to odporność na cenzurę: jeśli nie jest wymagana żadna niestandardowa infrastruktura, transakcje użytkownika nie mogą być arbitralnie blokowane przez przekaźnik pełniący rolę strażnika (gatekeeper). Na przykład [Delegation Toolkit od MetaMask](https://github.com/MetaMask/delegation-framework/releases/tag/v1.3.0) jawnie współpracuje z dowolnym bundlerem lub paymasterem ERC-4337 na dowolnym łańcuchu, zamiast wymagać serwera specyficznego dla MetaMask.
 
 **Integracja zdecentralizowanych aplikacji (dapp) przez interfejsy portfeli**:
 
-Biorąc pod uwagę, że portfele będą umieszczać na białej liście określone kontrakty delegowania dla EIP-7702, dappy nie powinny oczekiwać bezpośredniego żądania autoryzacji 7702. Zamiast tego integracja powinna odbywać się poprzez ustandaryzowane interfejsy portfeli:
+Biorąc pod uwagę, że portfele będą umieszczać na białej liście określone kontrakty delegowania dla EIP-7702, zdecentralizowane aplikacje (dapp) nie powinny oczekiwać bezpośredniego żądania autoryzacji EIP-7702. Zamiast tego integracja powinna odbywać się poprzez ustandaryzowane interfejsy portfeli:
 
-- **ERC-5792 (`wallet_sendCalls`)**: Umożliwia dappom żądanie od portfeli wykonywania wywołań wsadowych, ułatwiając funkcjonalności takie jak wsadowanie transakcji i abstrakcja gazu.
+- **ERC-5792 (`wallet_sendCalls`)**: Umożliwia zdecentralizowanym aplikacjom (dapp) żądanie od portfeli wykonania wsadowanych wywołań, ułatwiając funkcjonalności takie jak wsadowanie transakcji i abstrakcja gazu.
 
-- **ERC-6900**: Pozwala dappom na wykorzystanie możliwości modułowych inteligentnych kont, takich jak klucze sesji i odzyskiwanie konta, poprzez moduły zarządzane przez portfel.
+- **ERC-6900**: Pozwala zdecentralizowanym aplikacjom (dapp) na wykorzystanie możliwości modułowych inteligentnych kont, takich jak klucze sesji i odzyskiwanie konta, poprzez moduły zarządzane przez portfel.
 
-Wykorzystując te interfejsy, dappy mogą uzyskać dostęp do funkcjonalności inteligentnego konta zapewnianych przez EIP-7702 bez bezpośredniego zarządzania delegowaniami, zapewniając kompatybilność i bezpieczeństwo w różnych implementacjach portfeli.
+Wykorzystując te interfejsy, zdecentralizowane aplikacje (dapp) mogą uzyskać dostęp do funkcjonalności inteligentnego konta zapewnianych przez EIP-7702 bez bezpośredniego zarządzania delegowaniami, zapewniając kompatybilność i bezpieczeństwo w różnych implementacjach portfeli.
 
-> Uwaga: Nie ma ustandaryzowanej metody dla dappów do bezpośredniego żądania podpisów autoryzacji 7702. Dappy muszą polegać na określonych interfejsach portfeli, takich jak ERC-6900, aby skorzystać z funkcji EIP-7702.
+> Uwaga: Nie ma ustandaryzowanej metody dla zdecentralizowanych aplikacji (dapp) do bezpośredniego żądania podpisów autoryzacji EIP-7702. Zdecentralizowane aplikacje (dapp) muszą polegać na określonych interfejsach portfeli, takich jak ERC-6900, aby skorzystać z funkcji EIP-7702.
 
 Więcej informacji:
 
 - [Specyfikacja ERC-5792](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-5792.md)
 - [Specyfikacja ERC-6900](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6900.md)
 
-**Unikanie uzależnienia od dostawcy (Vendor Lock-In)**: Zgodnie z powyższym, dobra implementacja jest neutralna dla dostawców i interoperacyjna. Często oznacza to przestrzeganie pojawiających się standardów dla inteligentnych kont. Na przykład [Modular Account od Alchemy](https://github.com/alchemyplatform/modular-account) wykorzystuje standard ERC-6900 dla modułowych inteligentnych kont i jest zaprojektowane z myślą o „interoperacyjnym użyciu niewymagającym pozwoleń”.
+**Unikanie uzależnienia od dostawcy (Vendor Lock-In)**: Zgodnie z powyższym, dobra implementacja jest neutralna dla dostawcy i interoperacyjna. Często oznacza to przestrzeganie pojawiających się standardów dla inteligentnych kont. Na przykład [Modular Account od Alchemy](https://github.com/alchemyplatform/modular-account) wykorzystuje standard ERC-6900 dla modułowych inteligentnych kont i jest zaprojektowane z myślą o „niewymagającym pozwoleń, interoperacyjnym użyciu”.
 
-**Ochrona prywatności**: Chociaż prywatność onchain jest ograniczona, kontrakt delegowania powinien dążyć do zminimalizowania ujawniania danych i możliwości ich powiązania. Można to osiągnąć poprzez wspieranie funkcji takich jak płatności za gaz w tokenach ERC-20 (dzięki czemu użytkownicy nie muszą utrzymywać publicznego salda ETH, co poprawia prywatność i UX) oraz jednorazowe klucze sesji (które zmniejszają zależność od pojedynczego klucza długoterminowego). Na przykład EIP-7702 umożliwia płacenie za gaz w tokenach poprzez sponsorowane transakcje, a dobra implementacja ułatwi integrację takich paymasterów bez ujawniania większej ilości informacji, niż jest to konieczne. Dodatkowo, pozałańcuchowe delegowanie niektórych zatwierdzeń (przy użyciu podpisów, które są weryfikowane onchain) oznacza mniej transakcji onchain z użyciem głównego klucza użytkownika, co wspomaga prywatność. Kontonta, które wymagają użycia przekaźnika, zmuszają użytkowników do ujawnienia swoich adresów IP. Publiczne mempoole (PublicMempools) to poprawiają; gdy transakcja/operacja użytkownika (UserOp) propaguje się przez mempool, nie można stwierdzić, czy pochodzi z adresu IP, który ją wysłał, czy tylko została przez niego przekazana za pośrednictwem protokołu p2p.
+**Ochrona prywatności**: Chociaż prywatność onchain jest ograniczona, kontrakt delegowania powinien dążyć do zminimalizowania ujawniania danych i możliwości ich powiązania. Można to osiągnąć poprzez wspieranie funkcji takich jak płatności za gaz w tokenach ERC-20 (dzięki czemu użytkownicy nie muszą utrzymywać publicznego salda ETH, co poprawia prywatność i UX) oraz jednorazowe klucze sesji (które zmniejszają zależność od pojedynczego klucza długoterminowego). Na przykład EIP-7702 umożliwia płacenie za gaz w tokenach poprzez sponsorowane transakcje, a dobra implementacja ułatwi integrację takich paymasterów bez wycieku większej ilości informacji niż to konieczne. Dodatkowo, pozałańcuchowe delegowanie niektórych zatwierdzeń (przy użyciu podpisów, które są weryfikowane onchain) oznacza mniej transakcji onchain z głównym kluczem użytkownika, co wspomaga prywatność. Konta, które wymagają użycia przekaźnika, zmuszają użytkowników do ujawnienia swoich adresów IP. Publiczne mempoole (PublicMempools) poprawiają to; gdy transakcja/operacja użytkownika (UserOp) propaguje się przez mempool, nie można stwierdzić, czy pochodzi z adresu IP, który ją wysłał, czy tylko została przez niego przekazana za pośrednictwem protokołu p2p.
 
-**Rozszerzalność i modułowe bezpieczeństwo**: Implementacje kont powinny być rozszerzalne, aby mogły ewoluować wraz z nowymi funkcjami i ulepszeniami bezpieczeństwa. Możliwość aktualizacji jest z natury możliwa dzięki EIP-7702 (ponieważ EOA może zawsze delegować do nowego kontraktu w przyszłości, aby zaktualizować swoją logikę). Poza możliwością aktualizacji, dobry projekt pozwala na modułowość – np. moduły wtyczek dla różnych schematów podpisów lub polityk wydatków – bez konieczności całkowitego ponownego wdrażania. Account Kit od Alchemy jest doskonałym przykładem, pozwalającym programistom na instalowanie modułów walidacji (dla różnych typów podpisów, takich jak ECDSA, BLS itp.) oraz modułów wykonawczych dla niestandardowej logiki. Aby osiągnąć większą elastyczność i bezpieczeństwo w kontach obsługujących EIP-7702, zachęca się programistów do delegowania do kontraktu proxy (proxy contract) zamiast bezpośrednio do konkretnej implementacji. Takie podejście pozwala na płynne aktualizacje i modułowość bez wymagania dodatkowych autoryzacji EIP-7702 dla każdej zmiany.
+**Rozszerzalność i modułowe bezpieczeństwo**: Implementacje kont powinny być rozszerzalne, aby mogły ewoluować wraz z nowymi funkcjami i ulepszeniami bezpieczeństwa. Możliwość aktualizacji jest z natury możliwa dzięki EIP-7702 (ponieważ EOA zawsze może delegować do nowego kontraktu w przyszłości, aby zaktualizować swoją logikę). Poza możliwością aktualizacji, dobry projekt pozwala na modułowość – np. moduły wtyczek dla różnych schematów podpisów lub polityk wydatków – bez konieczności całkowitego ponownego wdrażania. Account Kit od Alchemy jest doskonałym przykładem, pozwalającym programistom na instalowanie modułów walidacji (dla różnych typów podpisów, takich jak ECDSA, BLS itp.) oraz modułów wykonawczych dla niestandardowej logiki. Aby osiągnąć większą elastyczność i bezpieczeństwo na kontach z włączonym EIP-7702, zachęca się programistów do delegowania do kontraktu proxy, a nie bezpośrednio do określonej implementacji. Takie podejście pozwala na płynne aktualizacje i modułowość bez wymagania dodatkowych autoryzacji EIP-7702 dla każdej zmiany.
 
-Korzyści ze wzorca Proxy:
+Zalety wzorca Proxy:
 
-- **Możliwość aktualizacji**: Aktualizacja logiki kontraktu poprzez wskazanie przez proxy nowego kontraktu implementacji.
+- **Możliwość aktualizacji**: Zaktualizuj logikę kontraktu, wskazując proxy na nowy kontrakt implementacji.
 
-- **Niestandardowa logika inicjalizacji**: Włączenie funkcji inicjujących w ramach proxy w celu bezpiecznego skonfigurowania niezbędnych zmiennych stanu.
+- **Niestandardowa logika inicjalizacji**: Włącz funkcje inicjalizacji w ramach proxy, aby bezpiecznie skonfigurować niezbędne zmienne stanu.
 
-Na przykład [SafeEIP7702Proxy](https://docs.safe.global/advanced/eip-7702/7702-safe) demonstruje, jak można wykorzystać proxy do bezpiecznego inicjowania i zarządzania delegowaniami w kontach kompatybilnych z EIP-7702.
+Na przykład [SafeEIP7702Proxy](https://docs.safe.global/advanced/eip-7702/7702-safe) pokazuje, jak można wykorzystać proxy do bezpiecznej inicjalizacji i zarządzania delegowaniami na kontach kompatybilnych z EIP-7702.
 
 Wady wzorca Proxy:
 
-- **Zależność od podmiotów zewnętrznych**: Musisz polegać na zewnętrznym zespole, że nie zaktualizuje kontraktu do niebezpiecznej wersji.
-
+- **Poleganie na podmiotach zewnętrznych**: Musisz polegać na zewnętrznym zespole, że nie zaktualizuje do niebezpiecznego kontraktu.
 ## Kwestie bezpieczeństwa {#security-considerations}
 
 **Zabezpieczenie przed ponownym wejściem**: Wraz z wprowadzeniem delegowania EIP-7702, konto użytkownika może dynamicznie przełączać się między kontem posiadanym zewnętrznie (EOA) a inteligentnym kontraktem (SC). Ta elastyczność umożliwia kontu zarówno inicjowanie transakcji, jak i bycie celem wywołań. W rezultacie scenariusze, w których konto wywołuje samo siebie i wykonuje wywołania zewnętrzne, będą miały `msg.sender` równe `tx.origin`, co podważa pewne założenia bezpieczeństwa, które wcześniej opierały się na tym, że `tx.origin` zawsze jest EOA.
@@ -106,8 +102,7 @@ Gdy użytkownicy wykonują delegowane podpisy, docelowy kontrakt otrzymujący de
 
 **Minimalna zaufana powierzchnia i bezpieczeństwo**: Oferując elastyczność, kontrakt delegowania powinien utrzymywać swoją podstawową logikę na minimalnym poziomie i umożliwiać jej audyt. Kontrakt jest w rzeczywistości rozszerzeniem EOA użytkownika, więc każda wada może być katastrofalna. Implementacje powinny postępować zgodnie z najlepszymi praktykami społeczności zajmującej się bezpieczeństwem inteligentnych kontraktów. Na przykład funkcje konstruktora lub inicjatora muszą być starannie zabezpieczone – jak podkreśla Alchemy, w przypadku korzystania ze wzorca proxy w ramach 7702, niezabezpieczony inicjator mógłby pozwolić atakującemu na przejęcie konta. Zespoły powinny dążyć do zachowania prostoty kodu onchain: kontrakt 7702 od Ambire ma tylko ~200 linii w Solidity, celowo minimalizując złożoność w celu zmniejszenia liczby błędów. Należy znaleźć równowagę między bogatą w funkcje logiką a prostotą, która ułatwia audyt.
 
-### Znane implementacje {#known-implementations}
-
+### Znane implementacje
 Ze względu na naturę EIP-7702, zaleca się, aby portfele zachowały ostrożność podczas pomagania użytkownikom w delegowaniu do kontraktu strony trzeciej. Poniżej znajduje się zbiór znanych implementacji, które zostały poddane audytowi:
 
 | Adres kontraktu                            | Źródło                                                                                                                                     | Audyty                                                                                                                                                        |
@@ -118,7 +113,6 @@ Ze względu na naturę EIP-7702, zaleca się, aby portfele zachowały ostrożno�
 | 0x63c0c19a282a1b52b07dd5a65b58948a07dae32b | [MetaMask/delegation-framework](https://github.com/MetaMask/delegation-framework)                                                          | [audyty](https://github.com/MetaMask/delegation-framework/tree/main/audits)                                                                                   |
 | 0x4Cd241E8d1510e30b2076397afc7508Ae59C66c9 | [Zespół AA Fundacji Ethereum](https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/accounts/Simple7702Account.sol) | [audyty](https://github.com/eth-infinitism/account-abstraction/blob/develop/audits/SpearBit%20Account%20Abstraction%20Security%20Review%20-%20Mar%202025.pdf) |
 | 0x17c11FDdADac2b341F2455aFe988fec4c3ba26e3 | [Luganodes/Pectra-Batch-Contract](https://github.com/Luganodes/Pectra-Batch-Contract)                                                      | [audyty](https://certificate.quantstamp.com/full/luganodes-pectra-batch-contract/23f0765f-969a-4798-9edd-188d276c4a2b/index.html)                             |
-
 ## Wytyczne dla portfeli sprzętowych {#hardware-wallet-guidelines}
 
 Portfele sprzętowe nie powinny udostępniać arbitralnego delegowania. Konsensus w przestrzeni portfeli sprzętowych polega na używaniu listy zaufanych kontraktów delegujących. Sugerujemy zezwolenie na znane implementacje wymienione powyżej i rozpatrywanie innych indywidualnie dla każdego przypadku. Ponieważ delegowanie EOA do kontraktu daje kontrolę nad wszystkimi aktywami, portfele sprzętowe powinny zachować ostrożność w sposobie implementacji 7702.
@@ -135,14 +129,11 @@ Uwaga: niektóre aktywa mogą zostać automatycznie odrzucone przez kod delegowa
 
 Powiadom użytkownika, że dla EOA istnieje delegowanie, sprawdzając jego kod, i opcjonalnie zaoferuj usunięcie delegowania.
 
-#### Wspólne delegowanie {#common-delegation}
-
+#### Powszechne delegowanie
 Dostawca sprzętu umieszcza na białej liście znane kontrakty delegowania i implementuje ich obsługę w oprogramowaniu towarzyszącym. Zaleca się wybór kontraktu z pełną obsługą ERC-4337.
 
-EOA delegowane do innego kontraktu będą traktowane jako standardowe EOA.
+Konta EOA delegowane do innego kontraktu będą traktowane jako standardowe EOA.
+#### Niestandardowe delegowanie
+Dostawca sprzętu implementuje własny kontrakt delegowania i dodaje go do list oraz implementuje jego obsługę w oprogramowaniu towarzyszącym. Zaleca się zbudowanie kontraktu z pełną obsługą ERC-4337.
 
-#### Niestandardowe delegowanie {#custom-delegation}
-
-Dostawca sprzętu implementuje własny kontrakt delegowania i dodaje go do list, implementując jego obsługę w oprogramowaniu towarzyszącym. Zaleca się zbudowanie kontraktu z pełną obsługą ERC-4337.
-
-EOA delegowane do innego kontraktu będą traktowane jako standardowe EOA.
+Konta EOA delegowane do innego kontraktu będą traktowane jako standardowe EOA.

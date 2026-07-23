@@ -237,20 +237,20 @@ ethers.utils.formatEther(balance)
 - [Web3.js 实用函数](https://docs.web3js.org/api/web3-utils)
 - [Ethers 实用函数](https://docs.ethers.org/v6/api/utils/)
 
-## 可用库 {#available-libraries}
+## 可用库
 
 **Web3.js -** **_以太坊 JavaScript API。_**
 
 - [文档](https://docs.web3js.org)
 - [GitHub](https://github.com/ethereum/web3.js)
 
-**Ethers.js -** **_使用 JavaScript 和 TypeScript 实现的完整以太坊钱包和实用工具。_**
+**Ethers.js -** **_使用 JavaScript 和 TypeScript 编写的完整以太坊钱包实现和实用工具。_**
 
-- [Ethers.js 主页](https://ethers.org/)
+- [Ethers.js 首页](https://ethers.org/)
 - [文档](https://docs.ethers.io)
 - [GitHub](https://github.com/ethers-io/ethers.js)
 
-**The Graph -** **_一个用于索引以太坊和 IPFS 数据并使用 GraphQL 进行查询的协议。_**
+**The Graph -** **_用于索引以太坊和 IPFS 数据并使用 GraphQL 进行查询的协议。_**
 
 - [The Graph](https://thegraph.com)
 - [Graph 浏览器](https://thegraph.com/explorer)
@@ -268,6 +268,16 @@ ethers.utils.formatEther(balance)
 - [文档](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
+**Wagmi -** **_基于 Viem 构建的以太坊 React Hooks 库。_**
+
+- [文档](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_基于 Wagmi 和 Viem 构建的 React 库，用于为去中心化应用 (dapp) 添加钱包连接功能。_**
+
+- [文档](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
+
 **Codex -** **_跨数十条链的实时、丰富的区块链数据 API。_**
 
 - [文档](https://docs.codex.io)
@@ -275,11 +285,10 @@ ethers.utils.formatEther(balance)
 - [GitHub](https://github.com/Codex-Data)
 - [Discord](https://discord.com/invite/mFpUhT3vAq)
 
-**Drift -** **_内置缓存、钩子和测试模拟的 TypeScript 元库。_**
+**Drift -** **_内置缓存、Hooks 和测试模拟的 TypeScript 元库。_**
 
 - [文档](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
-
 ## 延伸阅读 {#further-reading}
 
 _知道对你有帮助的社区资源吗？编辑本页面并添加它！_

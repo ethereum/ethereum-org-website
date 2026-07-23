@@ -29,10 +29,13 @@ incomplete: true
 
 Полный список предложений [ERC](https://eips.ethereum.org/erc).
 
-## Дополнительная литература {#further-reading}
+## Дополнительная литература
 
 _Знаете ресурс сообщества, который вам помог? Отредактируйте эту страницу и добавьте его!_
 
+- [Контрольный список интеграции токенов](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md) — _Trail of Bits_
+- [Документация ОпенЗеппелин: Токены](https://docs.openzeppelin.com/contracts/5.x/tokens) — _ОпенЗеппелин_
+- [Опасности интеграции токенов (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) — _ОпенЗеппелин_
 ## Связанные руководства {#related-tutorials}
 
 - [Контрольный список интеграции токенов](/developers/tutorials/token-integration-checklist/) _— контрольный список того, что следует учитывать при взаимодействии с токенами._

@@ -84,7 +84,7 @@ GameContract.events.BetPlaced({
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 
-![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.gif)
+![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.mp4#910x692)
 
 இந்த இரண்டு படங்களும் GraphQL-இன் சாராம்சத்தை மிகச்சரியாகப் படம்பிடிக்கின்றன. வலதுபுறத்தில் உள்ள வினவலின் மூலம் நமக்கு என்ன தரவு வேண்டும் என்பதைத் துல்லியமாக வரையறுக்க முடியும், எனவே ஒரே கோரிக்கையில் அனைத்தையும் பெறுகிறோம், மேலும் நமக்குத் தேவையானதைத் தவிர வேறு எதுவும் இல்லை. தேவையான அனைத்து தரவையும் பெறுவதை ஒரு GraphQL சேவையகம் கையாளுகிறது, எனவே முன்பக்க நுகர்வோர் தரப்பைப் பயன்படுத்துவது நம்பமுடியாத அளவிற்கு எளிதானது. உங்களுக்கு ஆர்வமிருந்தால், சேவையகம் ஒரு வினவலை எவ்வாறு சரியாகக் கையாளுகிறது என்பதற்கான [ஒரு நல்ல விளக்கம் இது](https://www.apollographql.com/blog/graphql-explained).
 

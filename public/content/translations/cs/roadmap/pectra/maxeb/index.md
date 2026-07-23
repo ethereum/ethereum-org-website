@@ -143,10 +143,9 @@ Ke správě konsolidací je k dispozici několik nástrojů. Oficiálním nástr
 
 ## Často kladené dotazy (FAQ) {#faq}
 
-### Změní zapojení mé štěstí při návrhu nebo odměny? {#change-luck-or-rewards}
+### Změní zapojení mé štěstí na návrhy nebo odměny?
 
-Ne. Zapojení nesnižuje vaši šanci na návrh – vaše povinnosti a výběr pro návrh zůstávají stejné. Pokud máte například dva validátory s 32 ETH oproti jednomu validátoru s 64 ETH, budete mít stejnou celkovou šanci, že budete vybráni k návrhu bloku a získáte odměny.
-
+Ne. Zapojení nesnižuje vaši šanci na návrh – vaše povinnosti a výběr pro návrh zůstávají stejné. Například pokud máte dva validátory s 32 ETH oproti jednomu validátoru s 64 ETH, budete mít stejnou celkovou šanci, že budete vybráni k návrhu bloku a získáte odměny.
 ### Změní zapojení mé riziko penalizace? {#change-slashing-risk}
 
 Pro menší nebo neprofesionální provozovatele je krátká odpověď ne. Delší odpověď zní, že pro profesionální provozovatele, kteří provozují mnoho validátorů na uzel s rychlým upozorňováním, může konsolidace do menšího počtu validátorů snížit jejich schopnost reagovat na penalizaci a zabránit kaskádovým událostem. Počáteční *pokuta* za penalizaci pro všechny validátory byla dramaticky snížena z 1 ETH (na 32 ETH) na 0,0078125 ETH (na 32 ETH), aby se toto riziko kompenzovalo.
