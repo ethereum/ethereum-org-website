@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "locale": "ru",
+  "translatedAt": "2026-07-23T00:35:08.963Z",
+  "englishManifestHash": "8d64f4150288",
+  "placeholderOrder": [
+    "LINK-cfb08a"
+  ],
+  "placeholderMap": {
+    "LINK-cfb08a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=pcSlowAhvUk"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-07-23T00:35:08.963Z",
+      "status": "success"
+    }
+  }
+}
