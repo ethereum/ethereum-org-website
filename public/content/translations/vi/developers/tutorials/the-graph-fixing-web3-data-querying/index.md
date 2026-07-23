@@ -84,7 +84,7 @@ Bây giờ hãy xem xét một giải pháp tốt hơn.
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 
-![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.gif)
+![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.mp4#910x692)
 
 Hai hình ảnh này gần như nắm bắt được bản chất của GraphQL. Với truy vấn ở bên phải, chúng ta có thể xác định chính xác dữ liệu chúng ta muốn, vì vậy ở đó chúng ta nhận được mọi thứ trong một yêu cầu và không có gì nhiều hơn chính xác những gì chúng ta cần. Một máy chủ GraphQL xử lý việc tìm nạp tất cả dữ liệu được yêu cầu, vì vậy nó cực kỳ dễ sử dụng cho phía người dùng frontend. [Đây là một lời giải thích hay](https://www.apollographql.com/blog/graphql-explained) về cách chính xác máy chủ xử lý một truy vấn nếu bạn quan tâm.
 
