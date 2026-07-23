@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/danksharding/index.md",
-  "generatedAt": "2026-06-08T10:07:49.282Z",
-  "rootHash": "68526f6e0bf9",
+  "generatedAt": "2026-07-23T00:16:18.365Z",
+  "rootHash": "37d24aa12202",
   "tree": {
-    "contentHash": "c5f55c4dbe33",
-    "anchorHash": "eb90f9241f31",
+    "contentHash": "4a4d76fd6890",
+    "anchorHash": "ccb416f5507c",
     "children": {
       "frontmatter:title": {
         "contentHash": "d5c7c6294c3d",
@@ -18,6 +18,10 @@
       "frontmatter:lang": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "3de1580490d2"
       },
       "frontmatter:summaryPoints": {
         "contentHash": "e3b0c44298fc",
@@ -556,6 +560,7 @@
       "frontmatter:title",
       "frontmatter:description",
       "frontmatter:lang",
+      "frontmatter:template",
       "frontmatter:summaryPoints",
       "prose:1",
       "link:0",
@@ -564,5 +569,5 @@
       "what-is-danksharding"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }
