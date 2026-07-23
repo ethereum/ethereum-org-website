@@ -206,7 +206,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </p>
             <Grid balanced={4}>
               {changesComingItems.map((item) => (
-                <Card key={item.title} hoverLift>
+                <Card key={item.title} href={item.button.href}>
                   <CardHeader className="flex items-center justify-between gap-4">
                     <CardTitle>{item.title}</CardTitle>
                     <div className="shrink-0 text-primary-action">
@@ -217,9 +217,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     <CardParagraph>{item.description}</CardParagraph>
                   </CardContent>
                   <CardFooter>
-                    <ButtonLink href={item.button.href} variant="outline">
+                    <CardButtonFake variant="outline">
                       {item.button.label}
-                    </ButtonLink>
+                    </CardButtonFake>
                   </CardFooter>
                 </Card>
               ))}
@@ -278,7 +278,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 <Card
                   key={item.title}
                   href={item.href}
-                  hoverLift
                   className="bg-linear-primary"
                 >
                   <CardContent>

@@ -350,14 +350,12 @@ const cardBannerVariants = cva(
       },
       zoom: {
         true: "group-hover/link:[&_img]:scale-110 group-hover/link:[&_img]:duration-300 group-focus/link:[&_img]:scale-110 group-focus/link:[&_img]:duration-300",
-        false: "",
       },
     },
     defaultVariants: {
       background: "body",
       size: "base",
       fit: "cover",
-      zoom: true,
     },
   }
 )
