@@ -55,10 +55,10 @@ Hai prima bisogno di un'introduzione più basilare? Dai un'occhiata a [ethereum.
 
 ## Progetti e strumenti Python {#python-projects-and-tools}
 
-### Attivi: {#active}
-
 - [Web3.py](https://github.com/ethereum/web3.py) - _Libreria Python per interagire con Ethereum_
 - [Vyper](https://github.com/ethereum/vyper/) - _Linguaggio per smart contract in stile Python per l'EVM_
+- [Titanoboa](https://github.com/vyperlang/titanoboa/) - _Strumento di test nativo di Vyper; un interprete con forking della Mainnet, debug e traceback chiari_
+- [Moccasin](https://github.com/Cyfrin/moccasin) - _Un framework di sviluppo e test di smart contract per Vyper e Python, basato su Titanoboa_
 - [Ape](https://github.com/ApeWorX/ape) - _Lo strumento di sviluppo di smart contract per programmatori Python, data scientist e professionisti della sicurezza_
 - [py-evm](https://github.com/ethereum/py-evm) - _Implementazione della Ethereum Virtual Machine_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _Strumenti per testare applicazioni basate su Ethereum_
@@ -66,10 +66,9 @@ Hai prima bisogno di un'introduzione più basilare? Dai un'occhiata a [ethereum.
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Wrapper Python per il compilatore Solidity solc con supporto per 0.5.x_
 - [pymaker](https://github.com/makerdao/pymaker) - _API Python per i contratti Maker_
 - [siwe](https://github.com/signinwithethereum/siwe-py) - _Sign in with Ethereum (SIWE) per Python_
-- [Web3 DeFi per integrazioni Ethereum](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _Un pacchetto Python con integrazioni pronte per ERC-20, Uniswap e altri progetti popolari_
-- [Wake](https://getwake.io) - _Framework Python all-in-one per test dei contratti, fuzzing, distribuzione, scansione delle vulnerabilità e navigazione del codice (language server - [Strumenti per Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
-- [DeFiPy](https://github.com/defipy-devs/defipy) - _SDK Python per l'analisi della finanza decentralizzata (DeFi) e la simulazione di market maker automatizzati (AMM) su Uniswap V2/V3, Balancer e Curve_
-
+- [Integrazioni Web3 DeFi per Ethereum](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _Un pacchetto Python con integrazioni pronte per ERC-20, Uniswap e altri progetti popolari_
+- [Wake](https://getwake.io) - _Framework Python all-in-one per test, fuzzing, distribuzione, scansione delle vulnerabilità e navigazione del codice dei contratti (language server - [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
+- [DeFiPy](https://github.com/defipy-devs/defipy) - _SDK Python per l'analisi della DeFi e la simulazione di AMM su Uniswap V2/V3, Balancer e Curve_
 ### Archiviati / Non più mantenuti: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _Client Ethereum in Python_
