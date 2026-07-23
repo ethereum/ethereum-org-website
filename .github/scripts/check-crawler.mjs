@@ -29,12 +29,8 @@ async function api(path) {
   return res.json()
 }
 
-/** `blockingError` may be a plain string or an object — pull out something human-readable. */
-function blockReason(status) {
-  const error = status.blockingError
-  if (!error) return "unknown"
-  return typeof error === "string" ? error : error.code || error.message || JSON.stringify(error)
-}
+// Field names below match the Crawler REST API's crawler object:
+// https://www.algolia.com/doc/rest-api/crawler/get-crawler
 
 /** Returns a list of problem strings. Empty list = healthy. */
 async function findProblems() {
@@ -46,22 +42,16 @@ async function findProblems() {
   if (!crawler) return [`No crawler named "${CRAWLER_NAME}" found via the Crawler API`]
 
   const status = await api(`/crawlers/${crawler.id}`)
-  // Log the field names so the mapping below is easy to fix if Algolia ever renames anything.
-  console.log("Crawler status fields:", Object.keys(status).join(", "))
 
   // 1. Is it blocked? (e.g. the SafeReindexing guard tripping after a locale reduction.)
-  if (status.blocked || status.blockingError) {
-    problems.push(
-      `Crawler is BLOCKED — ${blockReason(status)}. It won't publish until a human resolves it.`
-    )
+  //    `blockingError` is a human-readable string, empty when not blocked.
+  if (status.blocked) {
+    const reason = status.blockingError || "unknown"
+    problems.push(`Crawler is BLOCKED — ${reason}. It won't publish until a human resolves it.`)
   }
 
   // 2. Is it still running on schedule? A stale last-crawl means crawling has stopped.
-  const lastCrawl =
-    status.lastReindexEndedAt ??
-    status.lastReindexEndDate ??
-    status.lastCrawlEndedAt ??
-    status.updatedAt
+  const lastCrawl = status.lastReindexEndedAt
   if (lastCrawl) {
     const ageDays = (Date.now() - Date.parse(lastCrawl)) / 86_400_000
     console.log(`Last crawl ended ${lastCrawl} (${ageDays.toFixed(1)}d ago)`)
@@ -71,7 +61,7 @@ async function findProblems() {
       )
     }
   } else {
-    console.log("::warning::Could not read a last-crawl timestamp (field mapping may need a tweak)")
+    problems.push("Crawler has no completed reindex on record — it has never successfully crawled")
   }
 
   return problems
