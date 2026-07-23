@@ -14,7 +14,7 @@ import { HubHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import { Image } from "@/components/Image"
-import CardImage from "@/components/Image/CardImage"
+import { ImageWithFallback } from "@/components/Image/ImageWithFallback"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
@@ -742,15 +742,20 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                     >
                       <CardHeader>
                         <CardBanner size="sm">
-                          {bannerImage ? (
-                            <CardImage src={bannerImage} />
-                          ) : (
-                            <Image
-                              src={fallbackThumbnail}
-                              alt=""
-                              sizes="276px"
-                            />
-                          )}
+                          <ImageWithFallback
+                            src={bannerImage}
+                            alt=""
+                            width={448}
+                            height={144}
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                            fallback={
+                              <Image
+                                src={fallbackThumbnail}
+                                alt=""
+                                sizes="276px"
+                              />
+                            }
+                          />
                         </CardBanner>
                       </CardHeader>
                       <CardContent>

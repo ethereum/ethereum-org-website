@@ -1,6 +1,7 @@
 import type { ReactNode } from "react"
 
-import CardImage from "@/components/Image/CardImage"
+import { Image } from "@/components/Image"
+import { ImageWithFallback } from "@/components/Image/ImageWithFallback"
 import {
   Card,
   CardBanner,
@@ -11,6 +12,8 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Tag } from "@/components/ui/tag"
+
+import fallbackThumbnail from "@/public/images/eth-glyph-thumbnail.png"
 
 type LatestCardProps = {
   href: string
@@ -51,7 +54,11 @@ const LatestCard = ({
   >
     <CardHeader>
       <CardBanner className="aspect-video h-auto">
-        <CardImage src={image} />
+        <ImageWithFallback
+          unoptimized
+          src={image}
+          fallback={<Image src={fallbackThumbnail} alt="" />}
+        />
       </CardBanner>
     </CardHeader>
     <CardContent>
