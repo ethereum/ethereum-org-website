@@ -231,6 +231,8 @@
   "less": "Lebih sedikit",
   "light-mode": "Terang",
   "light-mode-aria-label": "Beralih ke mode terang",
+  "link-external-assistive-text": "(terbuka di tab baru)",
+  "link-mailto-assistive-text": "(membuka klien email)",
   "loading": "Memuat...",
   "loading-error-refresh": "Terjadi kesalahan, silakan segarkan.",
   "meetups": "Meetup",
