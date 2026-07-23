@@ -231,6 +231,8 @@
   "less": "較少",
   "light-mode": "淺色",
   "light-mode-aria-label": "切換至淺色模式",
+  "link-external-assistive-text": "(在新分頁開啟)",
+  "link-mailto-assistive-text": "(開啟電子郵件用戶端)",
   "loading": "載入中...",
   "loading-error-refresh": "發生錯誤，請重新整理。",
   "meetups": "聚會",
