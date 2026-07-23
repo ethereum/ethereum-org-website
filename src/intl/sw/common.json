@@ -231,6 +231,8 @@
   "less": "Chache",
   "light-mode": "Mwangaza",
   "light-mode-aria-label": "Badilisha kwenye hali ya mwangaza",
+  "link-external-assistive-text": "(inafunguka katika kichupo kipya)",
+  "link-mailto-assistive-text": "(inafungua programu ya barua pepe)",
   "loading": "Inapakia...",
   "loading-error-refresh": "Hitilafu, tafadhali onyesha upya.",
   "meetups": "Mikutano",
