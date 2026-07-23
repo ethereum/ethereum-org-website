@@ -1,15 +1,14 @@
 import { memo } from "react"
+import { useTranslations } from "next-intl"
 
 import { Tag } from "../ui/tag"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 type PersonaTagsProps = {
   walletPersonas: string[]
 }
 
 const PersonaTags = ({ walletPersonas }: PersonaTagsProps) => {
-  const { t } = useTranslation("page-wallets-find-wallet")
+  const t = useTranslations("page-wallets-find-wallet")
 
   if (walletPersonas.length === 0) return null
 

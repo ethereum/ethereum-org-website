@@ -39,6 +39,7 @@
   "page-find-wallet-buy-crypto-desc": "Kupujte krypto za fiat měny přímo v peněžence \n *Poznámka: nákup krypta může být specifický pro daný region",
   "page-find-wallet-sell-for-fiat": "Prodat za hotovost",
   "page-find-wallet-sell-for-fiat-desc": "Prodávejte krypto za fiat měny přímo v peněžence \n *Poznámka: výběr krypta může být specifický pro daný region",
+  "page-find-wallet-network-support": "Podpora sítí",
   "page-find-wallet-multisig": "Multisig",
   "page-find-wallet-multisig-desc": "Peněženky, které k autorizaci transakce vyžadují více podpisů",
   "page-find-wallet-social-recovery": "Sociální obnova",

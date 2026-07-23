@@ -27,7 +27,7 @@ seperti:
 
 Sebelum mendalami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca pengantar kami tentang [dapp](/developers/docs/dapps/) dan [tumpukan Ethereum](/developers/docs/ethereum-stack/).
 
-## Kerangka kerja yang tersedia {#available-frameworks}
+## Kerangka kerja yang tersedia
 
 **Foundry** - **_Foundry adalah perangkat yang sangat cepat, portabel, dan modular untuk pengembangan aplikasi Ethereum_**
 
@@ -58,13 +58,14 @@ Sebelum mendalami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca 
 - [Contoh](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_Buat aplikasi bertenaga Ethereum dengan satu perintah. Hadir dengan berbagai penawaran kerangka kerja UI dan templat keuangan terdesentralisasi (DeFi) untuk dipilih._**
+**Create Eth App -** **_Buat aplikasi yang didukung Ethereum dengan satu perintah. Dilengkapi dengan berbagai pilihan kerangka kerja UI dan templat keuangan terdesentralisasi (DeFi) untuk dipilih._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Templat](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-ETH -** **_Ethers.js + Hardhat + komponen dan hook React untuk Web3: semua yang Anda butuhkan untuk mulai membangun aplikasi terdesentralisasi yang didukung oleh kontrak pintar._**
+**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem, dan RainbowKit dengan pilihan Hardhat atau Foundry Anda: muat ulang panas kontrak, hook React kustom, dompet burner dan faucet lokal, serta modul ekstensi untuk pengembangan aplikasi terdesentralisasi (dapp) full-stack._**
 
+- [Situs Web](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
 **Tenderly -** **_Platform pengembangan Web3 yang memungkinkan pengembang rantai blok untuk membangun, menguji, men-debug, memantau, dan mengoperasikan kontrak pintar serta meningkatkan UX dapp._**
@@ -137,7 +138,7 @@ Sebelum mendalami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca 
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [Ekstensi VS Code](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_Kerangka kerja sumber terbuka, modular, dan agnostik yang memudahkan pengembang aplikasi terdesentralisasi untuk membangun identitas terdesentralisasi dan kredensial yang dapat diverifikasi ke dalam aplikasi mereka._**
+**Veramo -** **_Kerangka kerja sumber terbuka, modular, dan agnostik yang memudahkan pengembang aplikasi terdesentralisasi (dapp) untuk membangun identitas terdesentralisasi dan kredensial yang dapat diverifikasi ke dalam aplikasi mereka._**
 
 - [Beranda](https://veramo.io/)
 - [Dokumentasi](https://veramo.io/docs/basics/introduction)
@@ -145,6 +146,10 @@ Sebelum mendalami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca 
 - [Discord](https://discord.com/invite/FRRBdjemHV)
 - [Paket NPM](https://www.npmjs.com/package/@veramo/core)
 
+**Moccasin -** **_Kerangka kerja pengembangan dan pengujian kontrak pintar Pythonic yang cepat untuk Vyper, dibangun di atas Titanoboa._**
+
+- [Dokumentasi](https://cyfrin.github.io/moccasin/)
+- [GitHub](https://github.com/Cyfrin/moccasin)
 ## Bacaan lebih lanjut {#further-reading}
 
 _Tahu sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_

@@ -29,10 +29,13 @@ incomplete: true
 
 [ERC](https://eips.ethereum.org/erc) முன்மொழிவுகளின் முழுப் பட்டியல்.
 
-## மேலும் படிக்க {#further-reading}
+## மேலும் படிக்க
 
-_உங்களுக்கு உதவிய சமூக வளம் பற்றித் தெரியுமா? இந்தப் பக்கத்தைத் திருத்தி அதைச் சேர்க்கவும்!_
+_உங்களுக்கு உதவிய சமூக வளம் பற்றி தெரியுமா? இந்தப் பக்கத்தைத் திருத்தி அதைச் சேர்க்கவும்!_
 
+- [வில்லை ஒருங்கிணைப்பு சரிபார்ப்புப் பட்டியல்](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md) - _Trail of Bits_
+- [ஓப்பன்செப்பெலின் ஆவணங்கள்: வில்லைகள்](https://docs.openzeppelin.com/contracts/5.x/tokens) - _ஓப்பன்செப்பெலின்_
+- [வில்லை ஒருங்கிணைப்பின் ஆபத்துகள் (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _ஓப்பன்செப்பெலின்_
 ## தொடர்புடைய பயிற்சிகள் {#related-tutorials}
 
 - [வில்லை ஒருங்கிணைப்பு சரிபார்ப்புப் பட்டியல்](/developers/tutorials/token-integration-checklist/) _– வில்லைகளுடன் தொடர்பு கொள்ளும்போது கருத்தில் கொள்ள வேண்டிய விஷயங்களின் சரிபார்ப்புப் பட்டியல்._

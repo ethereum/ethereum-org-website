@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/tutorials/how-to-view-nft-in-metamask/index.md",
-  "generatedAt": "2026-06-18T00:05:01.110Z",
-  "rootHash": "a77ed4cf81e6",
+  "generatedAt": "2026-07-22T23:53:23.441Z",
+  "rootHash": "f5abd8d1ab16",
   "tree": {
     "contentHash": "4c33854e2b4e",
-    "anchorHash": "bee7b6f9095b",
+    "anchorHash": "e3e6574697fb",
     "children": {
       "frontmatter:title": {
         "contentHash": "551a634fe1e2",
@@ -69,7 +69,7 @@
       },
       "set-network-to-sepolia": {
         "contentHash": "9293c0d9e9aa",
-        "anchorHash": "3c9297ffb4d1",
+        "anchorHash": "0be306558e79",
         "labelHash": "1c232f8cdb06",
         "children": {
           "_label": {
@@ -82,7 +82,7 @@
           },
           "image:0": {
             "contentHash": "a853abd57dfc",
-            "anchorHash": "17b5c4ef7b66"
+            "anchorHash": "4b1676965d74"
           }
         },
         "childrenOrder": [
@@ -93,7 +93,7 @@
       },
       "add-nft-to-metamask": {
         "contentHash": "d47a8352896c",
-        "anchorHash": "5859847d61b1",
+        "anchorHash": "e37b4a085153",
         "labelHash": "a0e4d9ae8352",
         "children": {
           "_label": {
@@ -122,7 +122,7 @@
           },
           "image:2": {
             "contentHash": "47adcd574aa8",
-            "anchorHash": "e8ee4e364e48"
+            "anchorHash": "5daa322b2886"
           },
           "prose:6": {
             "contentHash": "5ad2d318af26",
@@ -161,5 +161,5 @@
       "add-nft-to-metamask"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

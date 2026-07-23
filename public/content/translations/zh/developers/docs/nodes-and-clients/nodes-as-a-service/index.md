@@ -47,9 +47,9 @@ sidebarDepth: 2
 
 阅读更多关于[运行自己的节点的好处](/developers/docs/nodes-and-clients/#benefits-to-you)。
 
-## 热门节点服务 {#popular-node-services}
+## 流行的节点服务
 
-以下是一些最受欢迎的以太坊节点提供商列表，欢迎补充任何遗漏的提供商！除了免费或付费层级之外，每个节点服务都提供不同的优势和功能，在做出决定之前，你应该调查哪些最适合你的需求。
+以下是一些最流行的以太坊节点提供商列表，欢迎补充任何遗漏的提供商！除了免费或付费层级之外，每个节点服务还提供不同的优势和功能，在做出决定之前，你应该调查哪些服务最适合你的需求。
 
 - [**Alchemy**](https://alchemy.com/)
   - [文档](https://www.alchemy.com/docs/)
@@ -67,12 +67,12 @@ sidebarDepth: 2
 - [**Allnodes**](https://www.allnodes.com/)
   - [文档](https://docs.allnodes.com/)
   - 功能
-    - 使用在 Allnodes 投资组合页面上创建的 PublicNode 代币没有速率限制。
-    - 在 [PublicNode](https://www.publicnode.com) 上提供注重隐私的免费 RPC 端点（100 多条区块链）
-    - 为 90 多条区块链提供无速率限制的专用节点
-    - 为 30 多条区块链提供专用归档节点
+    - 使用在 Allnodes 投资组合页面上创建的 PublicNode 代币，没有速率限制。
+    - [PublicNode](https://www.publicnode.com) 上注重隐私的免费 RPC 端点（100 多条区块链）
+    - 90 多条区块链的无速率限制专用节点
+    - 30 多条区块链的专用归档节点
     - 在 3 个地区（美国、欧盟、亚洲）可用
-    - 在 [PublicNode](https://www.publicnode.com/snapshots) 上提供 100 多条区块链的快照
+    - [PublicNode](https://www.publicnode.com/snapshots) 上 100 多条区块链的快照
     - 24/7 技术支持，99.90%-99.98% 的正常运行时间 SLA（取决于计划）。
     - 按小时计费
     - 使用信用卡、贝宝或加密货币支付
@@ -95,10 +95,10 @@ sidebarDepth: 2
   - 功能
     - 完全托管的以太坊节点
     - 在六个地区可用
-    - 基于 HTTP 和安全 WebSockets 的 JSON-RPC
+    - 基于 HTTP 和安全 WebSocket 的 JSON-RPC
     - 支持 3 条链
     - SLA，AWS 24/7 支持
-    - Go以太坊 (Geth) 和莱特豪斯
+    - Go-ethereum 和莱特豪斯 (Lighthouse)
 
 - [**Ankr**](https://www.ankr.com/)
   - [文档](https://docs.ankr.com/)
@@ -106,8 +106,8 @@ sidebarDepth: 2
     - Ankr 协议 - 开放访问 8 条以上链的公共 RPC API 端点
     - 负载均衡和节点健康监控，提供通往最近可用节点的快速可靠网关
     - 高级层级支持 WSS 端点和无上限速率限制
-    - 一键部署 40 多条链的全节点和验证者节点
-    - 按需扩展
+    - 40 多条链的一键式全节点和验证者节点部署
+    - 随用随扩展
     - 分析工具
     - 仪表板
     - RPC、HTTPS 和 WSS 端点
@@ -125,14 +125,14 @@ sidebarDepth: 2
     - 归档节点
     - 24/7 Discord 支持
     - 24/7 监控和警报
-    - 总体 SLA 为 99.9%
+    - 整体 SLA 为 99.9%
     - 使用加密货币支付
 
 - [**BlockDaemon**](https://blockdaemon.com/)
   - [文档](https://ubiquity.docs.blockdaemon.com/)
   - 优势
     - 仪表板
-    - 按节点计费
+    - 基于每个节点
     - 分析
 
 - [**BlockPI**](https://blockpi.io/)
@@ -140,8 +140,8 @@ sidebarDepth: 2
   - 功能
     - 强大且分布式的节点结构
     - 多达 40 个 HTTPS 和 WSS 端点
-    - 免费注册套餐和月度套餐
-    - 支持 Trace 方法 + 归档数据
+    - 免费注册套餐和包月套餐
+    - Trace 方法 + 归档数据支持
     - 套餐有效期长达 90 天
     - 自定义计划和按需付费
     - 使用加密货币支付
@@ -154,7 +154,7 @@ sidebarDepth: 2
     - 多链支持
     - 免费资费
     - 用户友好的仪表板
-    - 提供除 RPC 之外的区块链数据服务
+    - 提供 RPC 之外的区块链数据服务
 
 - [**Chainstack**](https://chainstack.com/)
   - [文档](https://docs.chainstack.com/)
@@ -174,7 +174,7 @@ sidebarDepth: 2
   - NodeCloud：即插即用的 RPC 基础设施，起价 10 美元——全速，无限制
   - NodeCloud 功能：
     - 支持 185 个网络的 API
-    - 40 多个提供商的分布式池
+    - 40 多家提供商的分布式池
     - 覆盖全球的九 (9) 个地理集群
     - AI 驱动的负载均衡系统
     - 按需付费的统一价格——不涨价、不过期、无锁定
@@ -199,7 +199,7 @@ sidebarDepth: 2
 - [**InfStones**](https://infstones.com/)
   - 功能
     - 免费层级选项
-    - 按需扩展
+    - 随用随扩展
     - 分析
     - 仪表板
     - 独特的 API 端点
@@ -212,7 +212,7 @@ sidebarDepth: 2
   - [文档](https://infura.io/docs)
   - 功能
     - 免费层级选项
-    - 按需扩展
+    - 随用随扩展
     - 付费归档数据
     - 直接支持
     - 仪表板
@@ -221,11 +221,11 @@ sidebarDepth: 2
   - [文档](https://docs.kaleido.io/)
   - 功能
     - 免费入门层级
-    - 一键部署以太坊节点
-    - 可定制的客户端和算法（Geth、Quorum 和贝苏 || PoA、IBFT 和 Raft）
+    - 一键式以太坊节点部署
+    - 可定制的客户端和算法（Geth、Quorum 和贝苏 (Besu) || PoA、IBFT 和 Raft）
     - 500 多个管理和服务 API
     - 用于以太坊交易提交的 RESTful 接口（由 Apache Kafka 支持）
-    - 用于事件传递的出站流（由 Apache Kafka 支持）
+    - 用于事件交付的出站流（由 Apache Kafka 支持）
     - 深入收集“链下”和辅助服务（例如，双边加密消息传输）
     - 具有治理和基于角色的访问控制的简单网络用户引导
     - 针对管理员和最终用户的复杂用户管理
@@ -235,7 +235,7 @@ sidebarDepth: 2
     - ISO 27k 和 SOC 2 Type 2 认证
     - 动态运行时配置（例如，添加云集成、更改节点入口等）
     - 支持多云、多区域和混合部署编排
-    - 基于 SaaS 的简单按小时定价
+    - 基于 SaaS 的简单按小时计费
     - SLA 和 24x7 支持
 
 - [**Lava Network**](https://www.lavanet.xyz/)
@@ -255,9 +255,9 @@ sidebarDepth: 2
   - 功能
     - 免费共享节点
     - 免费共享归档节点
-    - 注重隐私（无日志政策）
+    - 注重隐私（无日志策略）
     - 跨链支持
-    - 按需扩展
+    - 随用随扩展
     - 仪表板
     - 独特的以太坊 SDK
     - 独特的 API 端点
@@ -267,17 +267,17 @@ sidebarDepth: 2
   - [文档](https://docs.nodereal.io/docs/introduction)
   - 功能
     - 可靠、快速且可扩展的 RPC API 服务
-    - 面向 Web3 开发者的增强型 API
+    - 为 Web3 开发人员增强的 API
     - 多链支持
     - 免费开始使用
 
 - [**NodeFlare**](https://nodeflare.app/)
   - [文档](https://nodeflare.app/docs/quick-start)
   - 功能
-    - 8 条 EVM 链，包括以太坊、Base、Arbitrum One 和 Optimism
-    - 4 个区域（欧洲、亚洲、北美），自动故障转移到最近的健康节点
-    - 免费公共端点（无 API 密钥）+ 每月 300 万计算单元的免费计划
-    - 计算单元计费——只为你使用的内容付费，较重的调用成本更高
+    - 23 条 EVM 链，包括以太坊、Base、Arbitrum One 和 Nova、Optimism、Linea 以及 Unichain
+    - 5 个区域（欧洲、英国、亚洲、美国东部、美国西部），自动故障转移到最近的健康节点
+    - 免费公共端点（无 API 密钥）+ 每月 300 万个计算单元的免费计划
+    - 计算单元计费——仅为你使用的内容付费，较重的调用成本更高
     - 付费计划无节流
 
 - [**NOWNodes**](https://nownodes.io/)
@@ -297,38 +297,38 @@ sidebarDepth: 2
     - 每天 100 万次请求的免费层级（每个端点，最多 2 个）
     - Pre-Stake+ 计划（如果你每天需要超过 100 万次请求）
     - 支持 15 条以上区块链
-    - 6400 多个节点通过为应用提供服务赚取 POKT
-    - 支持归档节点、带 Tracing 的归档节点和测试网节点
+    - 6400 多个节点通过为应用程序提供服务赚取 POKT
+    - 归档节点、带 Tracing 的归档节点和测试网节点支持
     - 以太坊主网节点客户端多样性
     - 无单点故障
     - 零停机时间
-    - 具有成本效益的近零代币经济学（质押一次 POKT 即可获得网络带宽）
+    - 经济高效的近零代币经济学（质押一次 POKT 即可获得网络带宽）
     - 无每月沉没成本，将你的基础设施转化为资产
     - 协议内置负载均衡
-    - 按需无限扩展每天的请求数和每小时的节点数
+    - 随用随无限扩展每天的请求数和每小时的节点数
     - 最私密、抗审查的选项
-    - 实践开发者支持
+    - 实践开发人员支持
     - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) 仪表板和分析
 
 - [**QuickNode**](https://www.quicknode.com)
   - [文档](https://www.quicknode.com/docs/)
   - 功能
-    - 24/7 技术支持和开发者 Discord 社区
+    - 24/7 技术支持和开发人员 Discord 社区
     - 地理均衡、多云/裸机、低延迟网络
     - 多链支持（Optimism、Arbitrum、Polygon + 其他 11 条链）
     - 用于速度和稳定性的中间层（调用路由、缓存、索引）
-    - 通过 Webhooks 进行智能合约监控
-    - 直观的仪表板、分析套件、RPC composer
+    - 通过 Webhook 进行智能合约监控
+    - 直观的仪表板、分析套件、RPC Composer
     - 高级安全功能（JWT、掩码、白名单）
     - NFT 数据和分析 API
     - [SOC2 认证](https://www.quicknode.com/security)
-    - 适合从开发者到企业的各类用户
+    - 适合从开发人员到企业的各类用户
 
 - [**Rivet**](https://rivet.cloud/)
   - [文档](https://rivet.readthedocs.io/en/latest/)
   - 功能
     - 免费层级选项
-    - 按需扩展
+    - 随用随扩展
 
 - [**SenseiNode**](https://senseinode.com)
   - [文档](https://docs.senseinode.com/)
@@ -336,13 +336,13 @@ sidebarDepth: 2
     - 专用和共享节点
     - 仪表板
     - 在拉丁美洲不同地点的多个托管提供商上脱离 AWS 托管
-    - 普莱斯姆和莱特豪斯客户端
+    - 普莱斯姆 (Prysm) 和莱特豪斯 (Lighthouse) 客户端
 
 - [**SettleMint**](https://console.settlemint.com/)
   - [文档](https://docs.settlemint.com/)
   - 功能
     - 免费试用
-    - 按需扩展
+    - 随用随扩展
     - 支持 GraphQL
     - RPC 和 WSS 端点
     - 专用全节点
@@ -355,9 +355,9 @@ sidebarDepth: 2
 - [**Tenderly**](https://tenderly.co/web3-gateway)
   - [文档](https://docs.tenderly.co/web3-gateway/web3-gateway)
   - 功能
-    - 免费层级，包括每月 2500 万个 Tenderly 单元
+    - 免费层级，每月包含 2500 万个 Tenderly 单元
     - 免费访问历史数据
-    - 读密集型工作负载速度提升高达 8 倍
+    - 读取密集型工作负载速度提升高达 8 倍
     - 100% 一致的读取访问
     - JSON-RPC 端点
     - 基于 UI 的 RPC 请求构建器和请求预览
@@ -370,7 +370,7 @@ sidebarDepth: 2
 - [**Tokenview**](https://services.tokenview.io/)
   - [文档](https://services.tokenview.io/docs?type=nodeService)
   - 功能
-    - 24/7 技术支持和开发者电报社区
+    - 24/7 技术支持和开发人员电报 (Telegram) 社区
     - 多链支持（比特币、以太坊、Tron、BNB Smart Chain、以太坊经典）
     - RPC 和 WSS 端点均开放使用
     - 无限制访问归档数据 API
@@ -383,7 +383,7 @@ sidebarDepth: 2
   - [文档](https://docs.watchdata.io/)
   - 功能
     - 数据可靠性
-    - 无停机时间的不间断连接
+    - 不间断连接，无停机时间
     - 流程自动化
     - 免费资费
     - 适合任何用户的高限制
@@ -405,13 +405,11 @@ sidebarDepth: 2
   - 功能
     - 企业级无代码自动化平台，提供区块链节点和网络的部署、监控和管理
     - 支持 30 多种协议和集成，并不断增加
-    - 增值 Web3 基础设施服务，如去中心化存储、去中心化身份和用于现实世界用例的区块链账本数据 API
+    - 增值 Web3 基础设施服务，如去中心化存储、去中心化身份 (DID) 和用于现实世界用例的区块链账本数据 API
     - 24/7 支持和主动监控始终确保节点的健康。
     - RPC 端点提供对 API 的经过身份验证的访问，通过直观的仪表板和分析实现无忧管理。
     - 提供托管云和自带云选项供选择，并支持所有主要云提供商，如 AWS、Azure、Google Cloud、Digital Ocean 和本地部署。
     - 我们使用智能路由，每次都命中离你的用户最近的节点
-
-
 ## 延伸阅读 {#further-reading}
 
 - [以太坊节点服务列表](https://ethereumnodes.com/)

@@ -5,9 +5,12 @@ import { Slot } from "@radix-ui/react-slot"
 import Emoji from "@/components/Emoji"
 
 import { cn } from "@/lib/utils/cn"
+import { isExternal } from "@/lib/utils/url"
+
+import { ChevronNext } from "../Chevron"
 
 import { Button, type ButtonProps } from "./buttons/Button"
-import { BaseLink, LinkProps } from "./Link"
+import { BaseLink, ExternalLinkIcon, LinkProps } from "./Link"
 
 const cardVariants = cva(
   cn(
@@ -107,6 +110,9 @@ const Card = React.forwardRef<HTMLDivElement | HTMLAnchorElement, CardProps>(
           className={classes}
           customEventOptions={customEventOptions}
           hideArrow
+          // Card hides BaseLink's trailing arrow; instead a CardButtonFake CTA
+          // surfaces it on the button via this flag (see CardButtonFake).
+          data-external={isExternal(href) || undefined}
           {...props}
         />
       )
@@ -172,11 +178,16 @@ const buttonVariants = cva("gap-4", {
       full: "flex flex-col *:[button]:w-full *:[button]:text-center *:data-[label=button-link]:w-full *:data-[label=button-link]:text-center",
       compact:
         "*:[button]:w-fit *:data-[label=button-link]:w-fit flex flex-wrap",
+      responsive: cn(
+        "@container flex flex-wrap",
+        "*:[button]:w-full *:data-[label=button-link]:w-full",
+        "@lg:*:[button]:w-fit @lg:*:data-[label=button-link]:w-fit"
+      ),
       inherit: "",
     },
   },
   defaultVariants: {
-    buttons: "full",
+    buttons: "responsive",
   },
 })
 
@@ -202,13 +213,45 @@ CardFooter.displayName = "CardFooter"
  * identical to hovering the button itself -- no hover styles are duplicated here.
  */
 type CardButtonFakeProps = React.HTMLAttributes<HTMLDivElement> &
-  Pick<ButtonProps, "variant" | "size" | "isSecondary">
+  Pick<ButtonProps, "variant" | "size" | "isSecondary"> & {
+    withChevron?: boolean
+    hideArrow?: boolean
+  }
 
 const CardButtonFake = React.forwardRef<HTMLDivElement, CardButtonFakeProps>(
-  ({ className, variant, size, isSecondary, children, ...props }, ref) => (
+  (
+    {
+      className,
+      variant,
+      size,
+      isSecondary,
+      children,
+      withChevron,
+      hideArrow,
+      ...props
+    },
+    ref
+  ) => (
     <Button asChild variant={variant} size={size} isSecondary={isSecondary}>
       <div ref={ref} data-label="button-link" className={className} {...props}>
         {children}
+        {/* Hidden unless the enclosing link Card is external (data-external on
+            the group/link anchor). The card anchor already carries the sr-only
+            "opens in a new tab" text, so this glyph is purely visual. */}
+        {!hideArrow && (
+          <ExternalLinkIcon className="hidden group-data-external/link:inline-block" />
+        )}
+        {/* Optional Chevron indicator. External links hide Chevron and show
+            ExternalLinkIcon instead by deafult. If `hideArrow` also applied,
+            external link arrow hidden and replaced with chevron. */}
+        {withChevron && (
+          <ChevronNext
+            className={cn(
+              "size-5",
+              !hideArrow && "group-data-external/link:hidden"
+            )}
+          />
+        )}
       </div>
     </Button>
   )

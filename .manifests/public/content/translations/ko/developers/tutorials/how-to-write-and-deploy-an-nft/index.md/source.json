@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/tutorials/how-to-write-and-deploy-an-nft/index.md",
-  "generatedAt": "2026-06-30T00:44:47.153Z",
-  "rootHash": "afb7cb50184b",
+  "generatedAt": "2026-07-22T23:53:30.318Z",
+  "rootHash": "c45cca0aee7f",
   "tree": {
     "contentHash": "1fb7b4462f64",
-    "anchorHash": "004cc8728db2",
+    "anchorHash": "a56d0f48d0f6",
     "children": {
       "frontmatter:title": {
         "contentHash": "c1c31fe6c863",
@@ -582,7 +582,7 @@
       },
       "connect-metamask-and-alchemy": {
         "contentHash": "40cd40d8c04f",
-        "anchorHash": "acaa7c53f325",
+        "anchorHash": "c188e7168a68",
         "labelHash": "0c681fd2b66e",
         "children": {
           "_label": {
@@ -619,7 +619,7 @@
           },
           "image:3": {
             "contentHash": "df5739995b21",
-            "anchorHash": "a8f03a6d731d"
+            "anchorHash": "bb6fb68b3c8b"
           },
           "prose:9": {
             "contentHash": "a204943256ea",
@@ -988,5 +988,5 @@
       "deploy-contract"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

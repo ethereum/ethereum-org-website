@@ -21,14 +21,11 @@ Bir Ethereum düğümü için multiaddr, düğüm kimliğini (açık anahtarlar�
 
 `/ip4/192.168.22.27/tcp/33000/p2p/5t7Nv7dG2d6ffbvAiewVsEwWweU3LdebSqX2y1bPrW8br`
 
-## Enode {#enode}
+Bir enode, bir URL adres formatı kullanarak bir Ethereum düğümünü tanımlamanın bir yoludur. Onaltılık düğüm kimliği, URL'nin kullanıcı adı kısmında kodlanır ve bir @ işareti kullanılarak ana bilgisayardan ayrılır. Spesifikasyon, ana bilgisayar adını yalnızca bir IP adresi olarak tanımlar; ancak çoğu istemci (Geth ve Besu gibi) burada bir DNS adını da kabul eder ve başlangıçta bunu bir IP adresine çözümler. Bu, standardın bir parçası olmaktan ziyade istemciye özgü bir davranıştır. Ana bilgisayar adı bölümündeki port, TCP dinleme portudur. TCP ve UDP (keşif) portları farklıysa, UDP portu bir sorgu parametresi olan "discport" olarak belirtilir.
 
-Bir enode, bir URL adres formatı kullanarak bir Ethereum düğümünü tanımlamanın bir yoludur. Onaltılık düğüm kimliği, URL'nin kullanıcı adı kısmında kodlanır ve ana bilgisayardan (host) bir @ işareti kullanılarak ayrılır. Ana bilgisayar adı yalnızca bir IP adresi olarak verilebilir; DNS adlarına izin verilmez. Ana bilgisayar adı bölümündeki bağlantı noktası, TCP dinleme bağlantı noktasıdır. TCP ve UDP (keşif) bağlantı noktaları farklıysa, UDP bağlantı noktası bir sorgu parametresi olan "discport" olarak belirtilir.
-
-Aşağıdaki örnekte, düğüm URL'si `10.3.58.6` IP adresine, `30303` TCP bağlantı noktasına ve `30301` UDP keşif bağlantı noktasına sahip bir düğümü tanımlar.
+Aşağıdaki örnekte düğüm URL'si; `10.3.58.6` IP adresine, `30303` TCP portuna ve `30301` UDP keşif portuna sahip bir düğümü tanımlar.
 
 `enode://6f8a80d14311c39f35f516fa664deaaaa13e85b2f7493f37f6144d86991ec012937307647bd3b9a82abe2974e1407241d54947bbb39763a4cac9f77166ad92a0@10.3.58.6:30303?discport=30301`
-
 ## Ethereum Düğüm Kayıtları (ENR'ler) {#enr}
 
 Ethereum Düğüm Kayıtları (ENR'ler), Ethereum'daki ağ adresleri için standartlaştırılmış bir formattır. Multiaddr'lerin ve enode'ların yerini alırlar. Bunlar, düğümler arasında daha fazla bilgi alışverişine izin verdikleri için özellikle yararlıdır. ENR; bir imza, sıra numarası ve imzaları oluşturmak ve doğrulamak için kullanılan kimlik şemasını detaylandıran alanlar içerir. ENR ayrıca anahtar-değer çiftleri olarak düzenlenen rastgele verilerle de doldurulabilir. Bu anahtar-değer çiftleri, düğümün IP adresini ve düğümün kullanabileceği alt protokoller hakkındaki bilgileri içerir. Mutabakat istemcileri, önyükleme (boot) düğümlerini tanımlamak için [belirli bir ENR yapısı](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#enr-structure) kullanır ve ayrıca mevcut Ethereum çatallanması ve onay dedikodu alt ağı (bu, düğümü onayları birlikte toplanan belirli bir eş kümesine bağlar) hakkında bilgi içeren bir `eth2` alanı içerir.

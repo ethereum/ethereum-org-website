@@ -19,7 +19,7 @@ Như một điều kiện tiên quyết, bạn đã phải cài đặt MetaMask 
 
 Ở đầu ứng dụng, nhấn nút “Ví”, sau đó bạn sẽ được nhắc chọn một mạng lưới. Vì NFT của chúng ta đã được đúc trên mạng lưới Sepolia, bạn sẽ muốn chọn Sepolia làm mạng lưới của mình.
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
 
 ## Bước 2: Thêm vật phẩm sưu tầm của bạn vào MetaMask {#add-nft-to-metamask}
 
@@ -29,6 +29,6 @@ Khi bạn đang ở trên mạng lưới Sepolia, hãy chọn tab “Collectible
 
 Bạn có thể cần làm mới vài lần để xem NFT của mình — nhưng nó sẽ ở đó <Emoji text="😄" size={1} />!
 
-![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
 
 Chúc mừng! Bạn đã đúc thành công một NFT và bây giờ bạn có thể xem nó! Chúng tôi rất nóng lòng muốn xem cách bạn sẽ khuấy đảo thế giới NFT!

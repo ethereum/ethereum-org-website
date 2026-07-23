@@ -5,7 +5,7 @@ description: "எத்திரியத்தில் உள்ள செய�
 lang: ta
 template: use-cases
 sidebarDepth: 2
-image: /images/ai-agents/hero-image.png
+image: /images/community-campfire-people-robot-cut-out.png
 alt: "முனைய மேசையைச் சுற்றி கூடியிருக்கும் மக்கள்"
 summaryPoints:
   - "தொகுதிச்சங்கிலியுடன் தொடர்புகொண்டு தன்னிச்சையாக வர்த்தகம் செய்யும் AI"

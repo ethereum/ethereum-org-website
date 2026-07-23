@@ -202,6 +202,8 @@ export async function generateMetadata(props: {
 }) {
   const { locale, tool: toolKey } = await props.params
 
+  setRequestLocale(locale)
+
   const [normalized, toolDescriptions] = await Promise.all([
     normalizeDeveloperToolsData(await getDeveloperToolsData()),
     getTranslations({

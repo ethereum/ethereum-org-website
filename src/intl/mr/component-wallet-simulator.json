@@ -156,6 +156,7 @@
   "sim-cw-connect-disclaimer": "वेबसाइटशी कनेक्ट केल्याने साइट मालकांसोबत कोणतीही वैयक्तिक किंवा सुरक्षित माहिती शेअर केली जाणार नाही.",
   "sim-cw-your-collection": "तुमचे कलेक्शन ({count})",
   "sim-cw-nft-title": "छान कलाकृती",
+  "sim-cw-nft-alt": "NFT प्रतिमा",
   "sim-cw-nft-actions-tooltip": "तुमच्या NFTs चे मालक म्हणून तुम्ही या काही गोष्टी करू शकता",
   "sim-cw-set-price": "किंमत निश्चित करा",
   "sim-cw-auction-item": "वस्तूचा लिलाव करा",

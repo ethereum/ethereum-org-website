@@ -237,14 +237,14 @@ ethers.utils.formatEther(balance)
 - [Pomocné funkce Web3.js](https://docs.web3js.org/api/web3-utils)
 - [Pomocné funkce Ethers](https://docs.ethers.org/v6/api/utils/)
 
-## Dostupné knihovny {#available-libraries}
+## Dostupné knihovny
 
-**Web3.js -** **_JavaScript API pro Ethereum._**
+**Web3.js -** **_JavaScriptové API pro Ethereum._**
 
 - [Dokumentace](https://docs.web3js.org)
 - [GitHub](https://github.com/ethereum/web3.js)
 
-**Ethers.js -** **_Kompletní implementace peněženky Etherea a nástroje v JavaScriptu a TypeScriptu._**
+**Ethers.js -** **_Kompletní implementace peněženky pro Ethereum a pomocné funkce v JavaScriptu a TypeScriptu._**
 
 - [Domovská stránka Ethers.js](https://ethers.org/)
 - [Dokumentace](https://docs.ethers.io)
@@ -258,15 +258,25 @@ ethers.utils.formatEther(balance)
 - [GitHub](https://github.com/graphprotocol)
 - [Discord](https://thegraph.com/discord)
 
-**Alchemy SDK -** **_Wrapper kolem Ethers.js s vylepšenými API._**
+**Alchemy SDK -** **_Wrapper pro Ethers.js s vylepšenými API._**
 
 - [Dokumentace](https://www.alchemy.com/docs)
 - [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
 
-**Viem -** **_Rozhraní TypeScriptu pro Ethereum._**
+**viem -** **_Rozhraní v TypeScriptu pro Ethereum._**
 
 - [Dokumentace](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
+
+**wagmi -** **_Knihovna React hooků pro Ethereum, postavená na viem._**
+
+- [Dokumentace](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_Knihovna v Reactu pro přidání připojení peněženky do decentralizovaných aplikací (dapp), postavená na wagmi a viem._**
+
+- [Dokumentace](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
 
 **Codex -** **_API pro obohacená blockchainová data v reálném čase napříč desítkami sítí._**
 
@@ -275,11 +285,10 @@ ethers.utils.formatEther(balance)
 - [GitHub](https://github.com/Codex-Data)
 - [Discord](https://discord.com/invite/mFpUhT3vAq)
 
-**Drift -** **_Meta-knihovna v TypeScriptu s vestavěným cachováním, hooky a testovacími mocky._**
+**Drift -** **_Metaknihovna v TypeScriptu s vestavěným cachováním, hooky a testovacími mocky._**
 
 - [Dokumentace](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
-
 ## Další čtení {#further-reading}
 
 _Znáte komunitní zdroj, který vám pomohl? Upravte tuto stránku a přidejte ho!_

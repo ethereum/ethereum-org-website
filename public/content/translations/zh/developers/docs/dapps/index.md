@@ -47,39 +47,37 @@ dapp 可以使用任何语言编写前端代码和用户界面（就像传统应
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## 创建去中心化应用 (dapp) 的工具 {#dapp-tools}
-
-**Scaffold-ETH _- 使用适应你智能合约的前端快速体验 Solidity。_**
+## 创建去中心化应用 (dapp) 的工具
+**Scaffold-ETH 2 _- 使用可适应你的智能合约的前端快速试验 Solidity。_**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [示例 dapp](https://punkwallet.io/)
 
-**Create Eth App _- 使用一条命令创建由以太坊驱动的应用程序。_**
+**Create Eth App _- 通过一条命令创建由以太坊驱动的应用程序。_**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**One Click Dapp _- 从 [ABI](/glossary/#abi) 生成 dapp 前端的自由和开源软件 (FOSS) 工具。_**
+**One Click Dapp _- 用于从 [ABI](/glossary/#abi) 生成 dapp 前端的自由及开源软件 (FOSS) 工具。_**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
-**Etherflow _- 供以太坊开发者测试其节点，并在浏览器中编写和调试 RPC 调用的自由和开源软件 (FOSS) 工具。_**
+**Etherflow _- 供以太坊开发者测试其节点，并在浏览器中编写和调试 RPC 调用的自由及开源软件 (FOSS) 工具。_**
 
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
-**thirdweb _- 提供各种语言的 SDK、智能合约、工具以及用于 Web3 开发的基础设施。_**
+**thirdweb _- 适用于 Web3 开发的各种语言的 SDK、智能合约、工具和基础设施。_**
 
 - [主页](https://thirdweb.com/)
 - [文档](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Crossmint _- 企业级 Web3 开发平台，用于部署智能合约、启用信用卡和跨链支付，并使用 API 创建、分发、销售、存储和编辑 NFT。_**
+**Crossmint _- 企业级 Web3 开发平台，用于部署智能合约、支持信用卡和跨链支付，并使用 API 创建、分发、出售、存储和编辑 NFT。_**
 
 - [crossmint.com](https://www.crossmint.com)
 - [文档](https://docs.crossmint.com)
 - [Discord](https://discord.com/invite/crossmint)
-
 ## 延伸阅读 {#further-reading}
 
 - [探索去中心化应用 (dapp)](/apps)

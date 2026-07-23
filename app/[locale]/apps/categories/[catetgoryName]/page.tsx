@@ -223,6 +223,8 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale, catetgoryName } = params
 
+  setRequestLocale(locale)
+
   try {
     const t = await getTranslations("page-apps")
 

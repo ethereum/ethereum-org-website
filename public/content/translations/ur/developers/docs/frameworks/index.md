@@ -20,7 +20,7 @@ lang: ur
 
 فریم ورکس میں گہرائی سے جانے سے پہلے، ہم تجویز کرتے ہیں کہ آپ پہلے [dapps](/developers/docs/dapps/) اور [ایتھیریم اسٹیک](/developers/docs/ethereum-stack/) کا ہمارا تعارف پڑھیں۔
 
-## دستیاب فریم ورکس {#available-frameworks}
+## دستیاب فریم ورکس
 
 **Foundry** - **_Foundry ایتھیریم ایپلی کیشن ڈیولپمنٹ کے لیے ایک انتہائی تیز، پورٹیبل اور ماڈیولر ٹول کٹ ہے_**
 
@@ -31,10 +31,10 @@ lang: ur
 
 **Hardhat -** **_پیشہ ور افراد کے لیے ایتھیریم ڈیولپمنٹ کا ماحول۔_**
 
-- [<span dir="ltr">hardhat.org</span>](https://hardhat.org)
+- [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-**Ape -** **_Python استعمال کرنے والوں، ڈیٹا سائنسدانوں، اور سیکیورٹی کے پیشہ ور افراد کے لیے سمارٹ کنٹریکٹ ڈیولپمنٹ ٹول۔_**
+**Ape -** **_Python ڈیولپرز، ڈیٹا سائنٹسٹس، اور سیکیورٹی پروفیشنلز کے لیے سمارٹ کنٹریکٹ ڈیولپمنٹ ٹول۔_**
 
 - [دستاویزات](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
@@ -45,7 +45,7 @@ lang: ur
 - [دستاویزات](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
-**ethers-kt -** **_<span dir="ltr">EVM</span> پر مبنی بلاک چینز کے لیے غیر ہم وقتی (Async)، اعلیٰ کارکردگی والی Kotlin/Java/Android لائبریری۔_**
+**ethers-kt -** **_<span dir="ltr">EVM</span> پر مبنی بلاک چینز کے لیے غیر مطابقت پذیر (Async)، اعلیٰ کارکردگی والی Kotlin/Java/Android لائبریری۔_**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [مثالیں](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
@@ -56,29 +56,30 @@ lang: ur
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [ٹیمپلیٹس](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-Eth -** **_Web3 کے لیے Ethers.js + Hardhat + React کے اجزاء اور ہکس: سمارٹ کنٹریکٹس سے چلنے والی لامركزی ایپلی کیشنز بنانا شروع کرنے کے لیے آپ کو درکار ہر چیز۔_**
+**Scaffold-ETH 2 -** **_آپ کی پسند کے Hardhat یا Foundry کے ساتھ Next.js، Wagmi، Viem اور RainbowKit: کنٹریکٹ ہاٹ ری لوڈ، کسٹم React ہکس، ایک برنر والیٹ اور مقامی فوسٹ، اور فل اسٹیک غیر مرکزی ایپلی کیشن (dapp) ڈیولپمنٹ کے لیے ایکسٹینشن ماڈیولز۔_**
 
+- [ویب سائٹ](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Web3 ڈیولپمنٹ پلیٹ فارم جو بلاک چین ڈیولپرز کو سمارٹ کنٹریکٹس بنانے، ٹیسٹ کرنے، ڈیبگ کرنے، نگرانی کرنے اور چلانے کے ساتھ ساتھ dapp کے <span dir="ltr">UX</span> کو بہتر بنانے کے قابل بناتا ہے۔_**
+**Tenderly -** **_Web3 ڈیولپمنٹ پلیٹ فارم جو بلاک چین ڈیولپرز کو سمارٹ کنٹریکٹس بنانے، ٹیسٹ کرنے، ڈیبگ کرنے، مانیٹر کرنے اور چلانے کے ساتھ ساتھ dapp کے <span dir="ltr">UX</span> کو بہتر بنانے کے قابل بناتا ہے۔_**
 
 - [ویب سائٹ](https://tenderly.co/)
 - [دستاویزات](https://docs.tenderly.co/)
 
-**The Graph -** **_بلاک چین ڈیٹا کو مؤثر طریقے سے دریافت (query) کرنے کے لیے The Graph۔_**
+**The Graph -** **_بلاک چین ڈیٹا کو مؤثر طریقے سے استفسار (query) کرنے کے لیے The Graph۔_**
 
 - [ویب سائٹ](https://thegraph.com/)
 - [ٹیوٹوریل](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 
 **Alchemy -** **_ایتھیریم ڈیولپمنٹ پلیٹ فارم۔_**
 
-- [<span dir="ltr">alchemy.com</span>](https://www.alchemy.com/)
+- [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
 - [ڈسکارڈ](https://discord.com/invite/alchemyplatform)
 
 **NodeReal -** **_ایتھیریم ڈیولپمنٹ پلیٹ فارم۔_**
 
-- [<span dir="ltr">Nodereal.io</span>](https://nodereal.io/)
+- [Nodereal.io](https://nodereal.io/)
 - [GitHub](https://github.com/node-real)
 - [ڈسکارڈ](https://discord.gg/V5k5gsuE)
 
@@ -89,7 +90,7 @@ lang: ur
 
 **Chainstack -** **_Web3 (ایتھیریم اور دیگر) ڈیولپمنٹ پلیٹ فارم۔_**
 
-- [<span dir="ltr">chainstack.com</span>](https://www.chainstack.com/)
+- [chainstack.com](https://www.chainstack.com/)
 - [GitHub](https://github.com/chainstack)
 - [ڈسکارڈ](https://discord.gg/BSb5zfp9AT)
 
@@ -99,38 +100,38 @@ lang: ur
 - [دستاویزات](https://docs.crossmint.com)
 - [ڈسکارڈ](https://discord.com/invite/crossmint)
 
-**Brownie -** **_Python پر مبنی ڈیولپمنٹ کا ماحول اور ٹیسٹنگ فریم ورک۔_**
+**Brownie -** **_Python پر مبنی ڈیولپمنٹ ماحول اور ٹیسٹنگ فریم ورک۔_**
 
 - [دستاویزات](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **Brownie فی الحال غیر زیرِ انتظام (unmaintained) ہے**
 
-**اوپن زیپلن SDK -** **_حتمی سمارٹ کنٹریکٹ ٹول کٹ: ٹولز کا ایک مجموعہ جو آپ کو سمارٹ کنٹریکٹس تیار کرنے، مرتب کرنے، اپ گریڈ کرنے، تعینات کرنے اور ان کے ساتھ تعامل کرنے میں مدد کرتا ہے۔_**
+**اوپن زیپلن SDK -** **_حتمی سمارٹ کنٹریکٹ ٹول کٹ: سمارٹ کنٹریکٹس کو تیار کرنے، مرتب کرنے، اپ گریڈ کرنے، تعینات کرنے اور ان کے ساتھ تعامل کرنے میں آپ کی مدد کرنے کے لیے ٹولز کا ایک مجموعہ۔_**
 
 - [اوپن زیپلن Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [کمیونٹی فورم](https://forum.openzeppelin.com/c/support/17)
 - **اوپن زیپلن SDK کی ڈیولپمنٹ ختم ہو چکی ہے**
 
-**Catapulta -** **_ملٹی چین سمارٹ کنٹریکٹس کی تعیناتی کا ٹول، بلاک ایکسپلوررز میں تصدیق کو خودکار بناتا ہے، تعینات کردہ سمارٹ کنٹریکٹس کا ٹریک رکھتا ہے اور تعیناتی کی رپورٹس شیئر کرتا ہے، Foundry اور Hardhat پروجیکٹس کے لیے پلگ اینڈ پلے (plug-n-play) ہے۔_**
+**Catapulta -** **_ملٹی چین سمارٹ کنٹریکٹس تعیناتی ٹول، بلاک ایکسپلوررز میں تصدیق کو خودکار بنائیں، تعینات کردہ سمارٹ کنٹریکٹس کا ٹریک رکھیں اور تعیناتی کی رپورٹس شیئر کریں، Foundry اور Hardhat پروجیکٹس کے لیے پلگ اینڈ پلے۔_**
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (Covalent کے زیرِ انتظام) -** **_GoldRush ڈیولپرز، تجزیہ کاروں، اور انٹرپرائزز کے لیے سب سے جامع بلاک چین ڈیٹا API سوٹ پیش کرتا ہے۔ چاہے آپ غیر مرکزی مالیات (DeFi) ڈیش بورڈ، والیٹ، ٹریڈنگ بوٹ، مصنوعی ذہانت کا ایجنٹ یا کمپلائنس پلیٹ فارم بنا رہے ہوں، ڈیٹا APIs آپ کو درکار ضروری آن چین ڈیٹا تک تیز، درست، اور ڈیولپر کے لیے سازگار رسائی فراہم کرتے ہیں_**
+**GoldRush (Covalent کے ذریعے تقویت یافتہ) -** **_GoldRush ڈیولپرز، تجزیہ کاروں اور انٹرپرائزز کے لیے سب سے جامع بلاک چین ڈیٹا API سویٹ پیش کرتا ہے۔ چاہے آپ غیر مرکزی مالیات (DeFi) ڈیش بورڈ، والیٹ، ٹریڈنگ بوٹ، مصنوعی ذہانت کا ایجنٹ یا کمپلائنس پلیٹ فارم بنا رہے ہوں، ڈیٹا APIs آپ کو درکار ضروری آن چین ڈیٹا تک تیز، درست اور ڈیولپر کے لیے سازگار رسائی فراہم کرتے ہیں_**
 
 - [ویب سائٹ](https://goldrush.dev/)
 - [دستاویزات](https://goldrush.dev/docs/chains/ethereum)
 - [GitHub](https://github.com/covalenthq)
 - [ڈسکارڈ](https://www.covalenthq.com/discord/)
 
-**Wake -** **_کنٹریکٹس کی ٹیسٹنگ، فزنگ (fuzzing)، تعیناتی، کمزوریوں کی اسکیننگ اور کوڈ نیویگیشن کے لیے آل ان ون (All-in-one) Python فریم ورک۔_**
+**Wake -** **_کنٹریکٹس کی ٹیسٹنگ، فزنگ (fuzzing)، تعیناتی، کمزوریوں کی اسکیننگ اور کوڈ نیویگیشن کے لیے آل ان ون Python فریم ورک۔_**
 
 - [ہوم پیج](https://getwake.io/)
 - [دستاویزات](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [<span dir="ltr">VS Code</span> ایکسٹینشن](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_اوپن سورس، ماڈیولر اور ایگنوسٹک (agnostic) فریم ورک جو لامركزی ایپلی کیشن ڈیولپرز کے لیے اپنی ایپلی کیشنز میں لامركزی شناخت اور قابل تصدیق اسناد (verifiable credentials) بنانا آسان بناتا ہے۔_**
+**Veramo -** **_اوپن سورس، ماڈیولر اور ایگنوسٹک فریم ورک جو غیر مرکزی ایپلی کیشن (dapp) ڈیولپرز کے لیے اپنی ایپلی کیشنز میں لامركزی شناختیں اور قابل تصدیق اسناد بنانا آسان بناتا ہے۔_**
 
 - [ہوم پیج](https://veramo.io/)
 - [دستاویزات](https://veramo.io/docs/basics/introduction)
@@ -138,6 +139,10 @@ lang: ur
 - [ڈسکارڈ](https://discord.com/invite/FRRBdjemHV)
 - [<span dir="ltr">NPM</span> پیکیج](https://www.npmjs.com/package/@veramo/core)
 
+**Moccasin -** **_Vyper کے لیے ایک تیز، Pythonic سمارٹ کنٹریکٹ ڈیولپمنٹ اور ٹیسٹنگ فریم ورک، جو Titanoboa پر بنایا گیا ہے۔_**
+
+- [دستاویزات](https://cyfrin.github.io/moccasin/)
+- [GitHub](https://github.com/Cyfrin/moccasin)
 ## مزید مطالعہ {#further-reading}
 
 _کسی ایسے کمیونٹی وسیلے کے بارے میں جانتے ہیں جس نے آپ کی مدد کی ہو؟ اس صفحے میں ترمیم کریں اور اسے شامل کریں!_

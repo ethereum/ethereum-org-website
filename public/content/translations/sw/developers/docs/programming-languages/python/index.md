@@ -55,21 +55,20 @@ Je, unahitaji mwongozo wa kimsingi zaidi kwanza? Angalia [ethereum.org/learn](/l
 
 ## Miradi na zana za Python {#python-projects-and-tools}
 
-### Inayotumika: {#active}
-
 - [Web3.py](https://github.com/ethereum/web3.py) - _Maktaba ya Python ya kuingiliana na Ethereum_
-- [Vyper](https://github.com/ethereum/vyper/) - _Lugha ya Mkataba Mahiri ya Pythonic kwa EVM_
-- [Ape](https://github.com/ApeWorX/ape) - _Zana ya usanidi wa mkataba mahiri kwa Wataalamu wa Python, Wanasayansi wa Data, na Wataalamu wa Usalama_
+- [Vyper](https://github.com/ethereum/vyper/) - _Lugha ya Mkataba Mahiri ya Kipython kwa ajili ya EVM_
+- [Titanoboa](https://github.com/vyperlang/titanoboa/) - _Zana asili ya kujaribu ya Vyper; mkalimani aliye na ugawaji wa Mtandao Mkuu, utatuzi, na ufuatiliaji mzuri_
+- [Moccasin](https://github.com/Cyfrin/moccasin) - _Mfumo wa usanidi na majaribio wa mkataba mahiri kwa ajili ya Vyper na Python, uliojengwa kwenye Titanoboa_
+- [Ape](https://github.com/ApeWorX/ape) - _Zana ya usanidi wa mkataba mahiri kwa Wapython, Wanasayansi wa Data, na Wataalamu wa Usalama_
 - [py-evm](https://github.com/ethereum/py-evm) - _utekelezaji wa Mashine Pepe ya Ethereum_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _zana za kujaribu programu tumizi zinazotegemea Ethereum_
-- [eth-utils](https://github.com/ethereum/eth-utils/) - _utendakazi wa matumizi kwa kufanya kazi na misingi ya msimbo inayohusiana na Ethereum_
-- [py-solc-x](https://pypi.org/project/py-solc-x/) - _Kifuniko cha Python karibu na kikusanyaji cha solc solidity chenye usaidizi wa 0.5.x_
-- [pymaker](https://github.com/makerdao/pymaker) - _API ya Python kwa mikataba ya Maker_
-- [siwe](https://github.com/signinwithethereum/siwe-py) - _Ingia na Ethereum (SIWE) kwa Python_
-- [Web3 DeFi kwa miunganisho ya Ethereum](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _Kifurushi cha Python chenye miunganisho tayari kwa ERC-20, Uniswap na miradi mingine maarufu_
-- [Wake](https://getwake.io) - _Mfumo wa Python wa kila kitu kwa majaribio ya mikataba, fuzzing, usambazaji, uchanganuzi wa udhaifu na urambazaji wa msimbo (seva ya lugha - [Zana za Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
-- [DeFiPy](https://github.com/defipy-devs/defipy) - _SDK ya Python kwa uchanganuzi wa fedha zilizogatuliwa (DeFi) na uigaji wa kitengeneza soko cha kiotomatiki (AMM) kwenye Uniswap V2/V3, Balancer, na Curve_
-
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _utendakazi wa matumizi kwa ajili ya kufanya kazi na misingi ya msimbo inayohusiana na Ethereum_
+- [py-solc-x](https://pypi.org/project/py-solc-x/) - _Kifuniko cha Python kwenye kikusanyaji cha solc cha Solidity chenye usaidizi wa 0.5.x_
+- [pymaker](https://github.com/makerdao/pymaker) - _API ya Python kwa ajili ya mikataba ya Maker_
+- [siwe](https://github.com/signinwithethereum/siwe-py) - _Ingia kwa kutumia Ethereum (SIWE) kwa ajili ya Python_
+- [Fedha zilizogatuliwa (DeFi) za Web3 kwa ajili ya miunganisho ya Ethereum](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _Kifurushi cha Python chenye miunganisho tayari kwa ajili ya ERC-20, Uniswap na miradi mingine maarufu_
+- [Wake](https://getwake.io) - _Mfumo wa Python wa kila kitu kwa ajili ya majaribio ya mikataba, fuzzing, usambazaji, uchunguzi wa udhaifu na urambazaji wa msimbo (seva ya lugha - [Zana za Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
+- [DeFiPy](https://github.com/defipy-devs/defipy) - _SDK ya Python kwa ajili ya uchanganuzi wa DeFi na uigaji wa kitengeneza soko cha kiotomatiki (AMM) kwenye Uniswap V2/V3, Balancer, na Curve_
 ### Zilizohifadhiwa / Hazitunzwi tena: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _Mteja wa Ethereum Python_

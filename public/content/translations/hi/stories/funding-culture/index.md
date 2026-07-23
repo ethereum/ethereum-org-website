@@ -64,7 +64,7 @@ lang: hi
 - सीधे प्लेयर में कहानी के निर्णयों पर वोट करने के लिए स्टेक किया
 - एक ERC-20 (हमारा अटेंशन टोकन) कमाया 
 
-![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4)
+![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4#800x400)
 
 ERC-20 को एक बॉन्डिंग कर्व पर जारी किया गया था। आप जितने पहले और जितने अधिक जुड़े हुए थे, आपने उतना ही अधिक कमाया। वोट (जैसे मुख्य पात्र का नाम Mirai रखना) Snapshot के माध्यम से हुए। 
 

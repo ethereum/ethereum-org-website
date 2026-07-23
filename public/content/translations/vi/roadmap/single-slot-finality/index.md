@@ -31,7 +31,7 @@ Với thiết kế cơ chế hiện tại, để giảm thời gian đạt tính
 
 ## Các con đường tiến tới SSF {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title="Tại sao chúng ta chưa thể có SSF ngay hôm nay?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 Cơ chế đồng thuận hiện tại kết hợp các chứng thực từ nhiều trình xác thực, được gọi là các ủy ban, để giảm số lượng tin nhắn mà mỗi trình xác thực phải xử lý để xác thực một khối. Mọi trình xác thực đều có cơ hội chứng thực trong mỗi kỷ nguyên (32 khe) nhưng trong mỗi khe, chỉ một tập hợp con các trình xác thực, được gọi là một 'ủy ban' thực hiện chứng thực. Họ làm như vậy bằng cách chia thành các mạng con trong đó một vài trình xác thực được chọn làm 'người tổng hợp'. Mỗi người tổng hợp đó kết hợp tất cả các chữ ký mà họ thấy từ các trình xác thực khác trong mạng con của họ thành một chữ ký tổng hợp duy nhất. Người tổng hợp bao gồm số lượng đóng góp cá nhân lớn nhất sẽ chuyển chữ ký tổng hợp của họ cho người đề xuất khối, người này sẽ đưa nó vào khối cùng với chữ ký tổng hợp từ các ủy ban khác.
 

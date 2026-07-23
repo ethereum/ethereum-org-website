@@ -20,12 +20,12 @@ Các framework đi kèm với nhiều chức năng có sẵn theo mặc định,
 
 Trước khi đi sâu vào các framework, chúng tôi khuyên bạn trước tiên nên đọc qua phần giới thiệu của chúng tôi về [dapp](/developers/docs/dapps/) và [ngăn xếp Ethereum](/developers/docs/ethereum-stack/).
 
-## Các framework có sẵn {#available-frameworks}
+## Các framework có sẵn
 
 **Foundry** - **_Foundry là một bộ công cụ cực kỳ nhanh, có tính di động và mô-đun hóa để phát triển ứng dụng Ethereum_**
 
 - [Cài đặt Foundry](https://book.getfoundry.sh/)
-- [Sách Foundry](https://book.getfoundry.sh/)
+- [Sách về Foundry](https://book.getfoundry.sh/)
 - [Trò chuyện cộng đồng Foundry trên Telegram](https://t.me/foundry_support)
 - [Awesome Foundry](https://github.com/crisgarner/awesome-foundry)
 
@@ -48,16 +48,17 @@ Trước khi đi sâu vào các framework, chúng tôi khuyên bạn trước ti
 **ethers-kt -** **_Thư viện Kotlin/Java/Android bất đồng bộ, hiệu suất cao dành cho các chuỗi khối dựa trên EVM._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
-- [Các ví dụ](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Ví dụ](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_Tạo các ứng dụng được hỗ trợ bởi Ethereum bằng một lệnh. Đi kèm với nhiều framework giao diện người dùng (UI) và các mẫu tài chính phi tập trung (DeFi) để lựa chọn._**
+**Create Eth App -** **_Tạo các ứng dụng được hỗ trợ bởi Ethereum chỉ bằng một lệnh. Đi kèm với nhiều framework giao diện người dùng (UI) và các mẫu tài chính phi tập trung (DeFi) để lựa chọn._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Các mẫu](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-Eth -** **_Ethers.js + Hardhat + Các thành phần và hook React cho Web3: mọi thứ bạn cần để bắt đầu xây dựng các ứng dụng phi tập trung được hỗ trợ bởi các hợp đồng thông minh._**
+**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem và RainbowKit với sự lựa chọn của bạn giữa Hardhat hoặc Foundry: tải lại nóng hợp đồng, các hook React tùy chỉnh, một ví dùng một lần (burner wallet) và vòi cục bộ, cùng các mô-đun mở rộng để phát triển ứng dụng phi tập trung (dapp) toàn diện (full-stack)._**
 
+- [Trang web](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
 **Tenderly -** **_Nền tảng phát triển Web3 cho phép các nhà phát triển chuỗi khối xây dựng, kiểm thử, gỡ lỗi, giám sát và vận hành các hợp đồng thông minh cũng như cải thiện trải nghiệm người dùng (UX) của dapp._**
@@ -93,7 +94,7 @@ Trước khi đi sâu vào các framework, chúng tôi khuyên bạn trước ti
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_Nền tảng phát triển Web3 cấp doanh nghiệp, cho phép bạn xây dựng các ứng dụng NFT trên tất cả các chuỗi chính, Chuỗi EVM (và các chuỗi khác)._**
+**Crossmint -** **_Nền tảng phát triển Web3 cấp doanh nghiệp, cho phép bạn xây dựng các ứng dụng NFT trên tất cả các chuỗi chính, các chuỗi EVM (và các chuỗi khác)._**
 
 - [Trang web](https://www.crossmint.com)
 - [Tài liệu](https://docs.crossmint.com)
@@ -112,25 +113,25 @@ Trước khi đi sâu vào các framework, chúng tôi khuyên bạn trước ti
 - [Diễn đàn cộng đồng](https://forum.openzeppelin.com/c/support/17)
 - **Quá trình phát triển OpenZeppelin SDK đã kết thúc**
 
-**Catapulta -** **_Công cụ triển khai hợp đồng thông minh đa chuỗi, tự động hóa việc xác minh trong các trình khám phá khối, theo dõi các hợp đồng thông minh đã triển khai và chia sẻ báo cáo triển khai, cắm-và-chạy (plug-n-play) cho các dự án Foundry và Hardhat._**
+**Catapulta -** **_Công cụ triển khai hợp đồng thông minh đa chuỗi, tự động hóa việc xác minh trong các trình khám phá khối, theo dõi các hợp đồng thông minh đã triển khai và chia sẻ báo cáo về việc triển khai, cắm và chạy (plug-n-play) cho các dự án Foundry và Hardhat._**
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (được hỗ trợ bởi Covalent) -** **_GoldRush cung cấp bộ API dữ liệu chuỗi khối toàn diện nhất dành cho các nhà phát triển, nhà phân tích và doanh nghiệp. Cho dù bạn đang xây dựng một bảng điều khiển DeFi, một Ví, một bot giao dịch, một tác nhân AI hay một nền tảng tuân thủ, các API dữ liệu đều cung cấp quyền truy cập nhanh chóng, chính xác và thân thiện với nhà phát triển vào dữ liệu trên chuỗi thiết yếu mà bạn cần_**
+**GoldRush (được hỗ trợ bởi Covalent) -** **_GoldRush cung cấp bộ API dữ liệu chuỗi khối toàn diện nhất dành cho các nhà phát triển, nhà phân tích và doanh nghiệp. Cho dù bạn đang xây dựng một bảng điều khiển tài chính phi tập trung (DeFi), một ví, một bot giao dịch, một tác nhân AI hay một nền tảng tuân thủ, các API dữ liệu đều cung cấp quyền truy cập nhanh chóng, chính xác và thân thiện với nhà phát triển vào dữ liệu trên chuỗi thiết yếu mà bạn cần_**
 
 - [Trang web](https://goldrush.dev/)
 - [Tài liệu](https://goldrush.dev/docs/chains/ethereum)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
-**Wake -** **_Framework Python tất-cả-trong-một để kiểm thử hợp đồng, fuzzing, triển khai, quét lỗ hổng bảo mật và điều hướng mã._**
+**Wake -** **_Framework Python tất cả trong một để kiểm thử hợp đồng, fuzzing, triển khai, quét lỗ hổng bảo mật và điều hướng mã._**
 
 - [Trang chủ](https://getwake.io/)
 - [Tài liệu](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [Tiện ích mở rộng VS Code](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_Framework mã nguồn mở, mô-đun hóa và bất khả tri giúp các nhà phát triển ứng dụng phi tập trung dễ dàng xây dựng các danh tính phi tập trung và thông tin xác thực có thể xác minh vào ứng dụng của họ._**
+**Veramo -** **_Framework mã nguồn mở, mô-đun hóa và bất khả tri giúp các nhà phát triển ứng dụng phi tập trung (dapp) dễ dàng xây dựng các danh tính phi tập trung và thông tin xác thực có thể xác minh vào ứng dụng của họ._**
 
 - [Trang chủ](https://veramo.io/)
 - [Tài liệu](https://veramo.io/docs/basics/introduction)
@@ -138,6 +139,10 @@ Trước khi đi sâu vào các framework, chúng tôi khuyên bạn trước ti
 - [Discord](https://discord.com/invite/FRRBdjemHV)
 - [Gói NPM](https://www.npmjs.com/package/@veramo/core)
 
+**Moccasin -** **_Một framework phát triển và kiểm thử hợp đồng thông minh nhanh chóng, mang phong cách Python dành cho Vyper, được xây dựng trên Titanoboa._**
+
+- [Tài liệu](https://cyfrin.github.io/moccasin/)
+- [GitHub](https://github.com/Cyfrin/moccasin)
 ## Đọc thêm {#further-reading}
 
 _Bạn biết một tài nguyên cộng đồng nào đó đã giúp ích cho bạn? Hãy chỉnh sửa trang này và thêm nó vào!_

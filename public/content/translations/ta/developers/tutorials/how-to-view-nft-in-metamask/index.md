@@ -19,7 +19,7 @@ published: 2021-04-22
 
 பயன்பாட்டின் மேற்புறத்தில், “Wallet” (பணப்பை) பொத்தானை அழுத்தவும், அதன் பிறகு ஒரு பிணையத்தைத் தேர்ந்தெடுக்க நீங்கள் கேட்கப்படுவீர்கள். நமது NFT Sepolia பிணையத்தில் அச்சிடப்பட்டதால், உங்கள் பிணையமாக Sepolia-ஐத் தேர்ந்தெடுக்க வேண்டும்.
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
 
 ## படி 2: மெட்டாமேஸ்க்கில் உங்கள் சேகரிப்பைச் சேர்க்கவும் {#add-nft-to-metamask}
 
@@ -29,6 +29,6 @@ published: 2021-04-22
 
 உங்கள் NFT-ஐப் பார்க்க நீங்கள் ஓரிரு முறை புதுப்பிக்க வேண்டியிருக்கலாம் — ஆனால் அது அங்கே இருக்கும் <Emoji text="😄" size={1} />!
 
-![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
 
 வாழ்த்துக்கள்! நீங்கள் வெற்றிகரமாக ஒரு NFT-ஐ அச்சிட்டுள்ளீர்கள், இப்போது அதை நீங்கள் பார்க்கலாம்! NFT உலகில் நீங்கள் எவ்வாறு புயலைக் கிளப்பப் போகிறீர்கள் என்பதைப் பார்க்க நாங்கள் ஆவலுடன் காத்திருக்கிறோம்!

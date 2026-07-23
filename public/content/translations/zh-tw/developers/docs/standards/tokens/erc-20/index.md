@@ -175,13 +175,12 @@ print("Addr Balance:", addr_balance)
 - [歐本齊柏林 - ERC-20 實作](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Solidity ERC-20 代幣指南](https://www.alchemy.com/overviews/erc20-solidity)
 
-## 其他同質化代幣標準 {#fungible-token-standards}
-
+## 其他同質化代幣標準
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - 代幣化金庫](/developers/docs/standards/tokens/erc-4626)
-
+- [ERC-7540 - 非同步代幣化金庫](/developers/docs/standards/tokens/erc-7540)
 ## 教學：在以太坊上使用 ERC-20 進行建置 {#tutorials}
 
 - [ERC-20 合約演練](/developers/tutorials/erc20-annotated-code/) _– 歐本齊柏林 ERC-20 合約實作的逐行註解演練。_

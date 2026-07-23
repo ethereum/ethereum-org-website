@@ -197,6 +197,10 @@ The four content layouts (`Docs`, `Static`, `Tutorial`, `ContentLayout`) express
 
 Not every page needs a `<main>` wrapper. But when a page does need to wrap its article plus end-of-page actions in something, `<main>` is the element to reach for -- not a bare `<div>`.
 
+**Don't wrap end-of-page actions in a `<Section>`.** `<Section>` renders a `<section>` -- a content landmark/outline entry -- but these actions are page chrome, not article content, so a `<section>` is semantically wrong (it also pulls in `scroll-mt`/`w-full` and gets caught by article-scoped `[&_section]` / `*:[section]:…` selectors). When `<main>` already supplies `px-page`, render the action directly (`<ContentFeedback />`); otherwise wrap in a plain `<div className="px-page">`. Never a `<Section>`.
+
+**JSON-LD import name.** Import the page's structured-data component as `PageJsonLD` (a consistent default-import alias) on every app-router page -- e.g. `import PageJsonLD from "./page-jsonld"`, not `CommunityJsonLD`/`GasPageJsonLD`. Keeps page files scannable and uniform.
+
 ## Pre-Merge Checklist for Layout Work
 
 Before opening a PR that touches anything in `src/layouts/`:

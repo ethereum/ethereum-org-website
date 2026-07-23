@@ -39,6 +39,7 @@
   "page-find-wallet-buy-crypto-desc": "Покупайте криптовалюту за фиат прямо в кошельке \n *Примечание: покупка криптовалюты может зависеть от региона",
   "page-find-wallet-sell-for-fiat": "Продажа за фиат",
   "page-find-wallet-sell-for-fiat-desc": "Продавайте криптовалюту за фиат прямо в кошельке \n *Примечание: вывод криптовалюты может зависеть от региона",
+  "page-find-wallet-network-support": "Поддержка сетей",
   "page-find-wallet-multisig": "Мультисиг",
   "page-find-wallet-multisig-desc": "Кошельки, требующие нескольких подписей для авторизации транзакции",
   "page-find-wallet-social-recovery": "Социальное восстановление",

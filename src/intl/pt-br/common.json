@@ -231,6 +231,8 @@
   "less": "Menos",
   "light-mode": "Claro",
   "light-mode-aria-label": "Mudar para o modo claro",
+  "link-external-assistive-text": "(abre em uma nova aba)",
+  "link-mailto-assistive-text": "(abre o cliente de e-mail)",
   "loading": "Carregando...",
   "loading-error-refresh": "Erro, por favor atualize.",
   "meetups": "Meetups",

@@ -237,20 +237,20 @@ ethers.utils.formatEther(balance)
 - [Funkcje narzędziowe Web3.js](https://docs.web3js.org/api/web3-utils)
 - [Funkcje narzędziowe Ethers](https://docs.ethers.org/v6/api/utils/)
 
-## Dostępne biblioteki {#available-libraries}
+## Dostępne biblioteki
 
 **Web3.js -** **_API JavaScript dla Ethereum._**
 
 - [Dokumentacja](https://docs.web3js.org)
 - [GitHub](https://github.com/ethereum/web3.js)
 
-**Ethers.js -** **_Kompletna implementacja portfela Ethereum i narzędzia w JavaScript i TypeScript._**
+**Ethers.js -** **_Kompletna implementacja portfela Ethereum i narzędzia w językach JavaScript i TypeScript._**
 
 - [Strona główna Ethers.js](https://ethers.org/)
 - [Dokumentacja](https://docs.ethers.io)
 - [GitHub](https://github.com/ethers-io/ethers.js)
 
-**The Graph -** **_Protokół do indeksowania danych Ethereum i IPFS oraz odpytywania ich za pomocą GraphQL._**
+**The Graph -** **_Protokół do indeksowania danych z Ethereum i IPFS oraz odpytywania ich za pomocą GraphQL._**
 
 - [The Graph](https://thegraph.com)
 - [Graph Explorer](https://thegraph.com/explorer)
@@ -258,7 +258,7 @@ ethers.utils.formatEther(balance)
 - [GitHub](https://github.com/graphprotocol)
 - [Discord](https://thegraph.com/discord)
 
-**Alchemy SDK -** **_Wrapper dla Ethers.js z ulepszonymi API._**
+**Alchemy SDK -** **_Nakładka na Ethers.js z rozszerzonym API._**
 
 - [Dokumentacja](https://www.alchemy.com/docs)
 - [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
@@ -268,18 +268,27 @@ ethers.utils.formatEther(balance)
 - [Dokumentacja](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-**Codex -** **_Wzbogacone API danych blockchain w czasie rzeczywistym dla dziesiątek łańcuchów._**
+**Wagmi -** **_Biblioteka hooków React dla Ethereum, zbudowana na bazie Viem._**
+
+- [Dokumentacja](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_Biblioteka React do dodawania połączenia z portfelem do zdecentralizowanych aplikacji (dapp), zbudowana na bazie Wagmi i Viem._**
+
+- [Dokumentacja](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
+
+**Codex -** **_API dostarczające wzbogacone dane blockchain w czasie rzeczywistym z dziesiątek sieci._**
 
 - [Dokumentacja](https://docs.codex.io)
 - [Eksplorator](https://docs.codex.io/explore)
 - [GitHub](https://github.com/Codex-Data)
 - [Discord](https://discord.com/invite/mFpUhT3vAq)
 
-**Drift -** **_Metabiblioteka TypeScript z wbudowanym buforowaniem, hookami i mockami testowymi._**
+**Drift -** **_Metabiblioteka TypeScript z wbudowanym mechanizmem cache, hookami i mockami testowymi._**
 
 - [Dokumentacja](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
-
 ## Dalsza lektura {#further-reading}
 
 _Znasz zasób społeczności, który Ci pomógł? Edytuj tę stronę i dodaj go!_

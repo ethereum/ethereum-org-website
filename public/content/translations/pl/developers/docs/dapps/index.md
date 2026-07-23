@@ -47,9 +47,9 @@ Inteligentny kontrakt to kod, który istnieje na blockchainie Ethereum i działa
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## Narzędzia do tworzenia dappów {#dapp-tools}
+## Narzędzia do tworzenia dappów
 
-**Scaffold-ETH _– Szybko eksperymentuj z Solidity, używając frontendu, który dostosowuje się do Twojego inteligentnego kontraktu._**
+**Scaffold-ETH 2 _– Szybko eksperymentuj z Solidity, używając frontendu, który dostosowuje się do Twojego inteligentnego kontraktu._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Przykładowy dapp](https://punkwallet.io/)
@@ -58,7 +58,7 @@ Inteligentny kontrakt to kod, który istnieje na blockchainie Ethereum i działa
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**One Click Dapp _– Narzędzie FOSS do generowania frontendów dappów z [ABI](/glossary/#abi)._**
+**One Click Dapp _– Narzędzie FOSS do generowania frontendów dappów na podstawie [ABI](/glossary/#abi)._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
@@ -68,7 +68,7 @@ Inteligentny kontrakt to kod, który istnieje na blockchainie Ethereum i działa
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
-**thirdweb _– SDK w każdym języku, inteligentne kontrakty, narzędzia i infrastruktura do tworzenia w Web3._**
+**thirdweb _– Pakiety SDK w każdym języku, inteligentne kontrakty, narzędzia i infrastruktura do programowania w Web3._**
 
 - [Strona główna](https://thirdweb.com/)
 - [Dokumentacja](https://portal.thirdweb.com/)
@@ -79,7 +79,6 @@ Inteligentny kontrakt to kod, który istnieje na blockchainie Ethereum i działa
 - [crossmint.com](https://www.crossmint.com)
 - [Dokumentacja](https://docs.crossmint.com)
 - [Discord](https://discord.com/invite/crossmint)
-
 ## Dalsza lektura {#further-reading}
 
 - [Odkrywaj dappy](/apps)

@@ -29,10 +29,13 @@ Token standartları, token'ların Ethereum ekosistemi genelinde nasıl davrandı
 
 [ERC](https://eips.ethereum.org/erc) tekliflerinin tam listesi.
 
-## İleri okuma {#further-reading}
+## Daha fazla bilgi
 
 _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
+- [Token Entegrasyon Kontrol Listesi](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md) - _Trail of Bits_
+- [OpenZeppelin Belgeleri: Token'lar](https://docs.openzeppelin.com/contracts/5.x/tokens) - _OpenZeppelin_
+- [Token entegrasyonunun Tehlikeleri (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _OpenZeppelin_
 ## İlgili eğitimler {#related-tutorials}
 
 - [Token entegrasyon kontrol listesi](/developers/tutorials/token-integration-checklist/) _– Token'larla etkileşime girerken dikkate alınması gerekenlerin bir kontrol listesi._

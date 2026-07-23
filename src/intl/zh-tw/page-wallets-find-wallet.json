@@ -39,6 +39,7 @@
   "page-find-wallet-buy-crypto-desc": "直接在錢包中使用法定貨幣購買加密貨幣 \n *注意：購買加密貨幣可能因地區而異",
   "page-find-wallet-sell-for-fiat": "賣出換取現金",
   "page-find-wallet-sell-for-fiat-desc": "直接在錢包中將加密貨幣賣出換取法定貨幣 \n *注意：提取加密貨幣可能因地區而異",
+  "page-find-wallet-network-support": "網路支援",
   "page-find-wallet-multisig": "多方簽名",
   "page-find-wallet-multisig-desc": "要求多個簽名以授權交易的錢包",
   "page-find-wallet-social-recovery": "社交恢復",

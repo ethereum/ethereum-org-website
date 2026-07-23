@@ -231,6 +231,8 @@
   "less": "कमी",
   "light-mode": "लाईट",
   "light-mode-aria-label": "लाईट मोडवर स्विच करा",
+  "link-external-assistive-text": "(नवीन टॅबमध्ये उघडते)",
+  "link-mailto-assistive-text": "(ईमेल क्लायंट उघडते)",
   "loading": "लोड होत आहे...",
   "loading-error-refresh": "त्रुटी, कृपया रिफ्रेश करा.",
   "meetups": "मीटअप्स",

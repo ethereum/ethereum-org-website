@@ -231,6 +231,8 @@
   "less": "குறைவாக",
   "light-mode": "ஒளி",
   "light-mode-aria-label": "ஒளிப் பயன்முறைக்கு மாறு",
+  "link-external-assistive-text": "(புதிய தாவலில் திறக்கப்படும்)",
+  "link-mailto-assistive-text": "(மின்னஞ்சல் செயலியைத் திறக்கும்)",
   "loading": "ஏற்றப்படுகிறது...",
   "loading-error-refresh": "பிழை, தயவுசெய்து புதுப்பிக்கவும்.",
   "meetups": "சந்திப்புகள்",

@@ -231,6 +231,8 @@
   "less": "간략히",
   "light-mode": "라이트",
   "light-mode-aria-label": "라이트 모드로 전환",
+  "link-external-assistive-text": "(새 탭에서 열림)",
+  "link-mailto-assistive-text": "(이메일 클라이언트에서 열림)",
   "loading": "로딩 중...",
   "loading-error-refresh": "오류가 발생했습니다. 새로고침해 주세요.",
   "meetups": "밋업",

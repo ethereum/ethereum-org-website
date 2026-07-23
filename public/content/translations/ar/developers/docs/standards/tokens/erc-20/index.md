@@ -175,13 +175,12 @@ print("Addr Balance:", addr_balance)
 - [أوبن زبلن - تنفيذ <span dir="ltr">ERC-20</span>](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - دليل لرموز ERC20 في Solidity](https://www.alchemy.com/overviews/erc20-solidity)
 
-## معايير الرموز القابلة للاستبدال الأخرى {#fungible-token-standards}
-
+## معايير الرموز القابلة للاستبدال الأخرى
 - [<span dir="ltr">ERC-223</span>](/developers/docs/standards/tokens/erc-223)
 - [<span dir="ltr">ERC-1363</span>](/developers/docs/standards/tokens/erc-1363)
 - [<span dir="ltr">ERC-777</span>](/developers/docs/standards/tokens/erc-777)
 - [<span dir="ltr">ERC-4626</span> - الخزائن المرمزة](/developers/docs/standards/tokens/erc-4626)
-
+- [<span dir="ltr">ERC-7540</span> - الخزائن المرمزة غير المتزامنة](/developers/docs/standards/tokens/erc-7540)
 ## برامج تعليمية: البناء باستخدام <span dir="ltr">ERC-20</span> على إيثيريوم {#tutorials}
 
 - [جولة في عقد <span dir="ltr">ERC-20</span>](/developers/tutorials/erc20-annotated-code/) _– جولة مشروحة سطرًا بسطر لتنفيذ عقد أوبن زبلن <span dir="ltr">ERC-20</span>._

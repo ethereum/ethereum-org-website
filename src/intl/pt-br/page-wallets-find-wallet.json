@@ -39,6 +39,7 @@
   "page-find-wallet-buy-crypto-desc": "Compre cripto com moeda fiduciária diretamente na carteira \n *Nota: a compra de cripto pode ser específica da região",
   "page-find-wallet-sell-for-fiat": "Vender por dinheiro",
   "page-find-wallet-sell-for-fiat-desc": "Venda cripto por moeda fiduciária diretamente na carteira \n *Nota: a retirada de cripto pode ser específica da região",
+  "page-find-wallet-network-support": "Suporte a redes",
   "page-find-wallet-multisig": "Multisig",
   "page-find-wallet-multisig-desc": "Carteiras que exigem várias assinaturas para autorizar uma transação",
   "page-find-wallet-social-recovery": "Recuperação social",
