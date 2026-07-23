@@ -237,20 +237,20 @@ ethers.utils.formatEther(balance)
 - [Web3.js-Hilfsfunktionen](https://docs.web3js.org/api/web3-utils)
 - [Ethers-Hilfsfunktionen](https://docs.ethers.org/v6/api/utils/)
 
-## Verfügbare Bibliotheken {#available-libraries}
+## Verfügbare Bibliotheken
 
-**Web3.js –** **_Ethereum-JavaScript-API._**
+**Web3.js -** **_Ethereum-JavaScript-API._**
 
 - [Dokumentation](https://docs.web3js.org)
 - [GitHub](https://github.com/ethereum/web3.js)
 
-**Ethers.js –** **_Vollständige Ethereum-Wallet-Implementierung und Hilfsprogramme in JavaScript und TypeScript._**
+**Ethers.js -** **_Vollständige Ethereum-Wallet-Implementierung und Dienstprogramme in JavaScript und TypeScript._**
 
 - [Ethers.js-Startseite](https://ethers.org/)
 - [Dokumentation](https://docs.ethers.io)
 - [GitHub](https://github.com/ethers-io/ethers.js)
 
-**The Graph –** **_Ein Protokoll zur Indizierung von Ethereum- und IPFS-Daten und deren Abfrage mittels GraphQL._**
+**The Graph -** **_Ein Protokoll zur Indizierung von Ethereum- und IPFS-Daten und deren Abfrage mittels GraphQL._**
 
 - [The Graph](https://thegraph.com)
 - [Graph Explorer](https://thegraph.com/explorer)
@@ -258,28 +258,37 @@ ethers.utils.formatEther(balance)
 - [GitHub](https://github.com/graphprotocol)
 - [Discord](https://thegraph.com/discord)
 
-**Alchemy SDK –** **_Wrapper um Ethers.js mit erweiterten APIs._**
+**Alchemy SDK -** **_Wrapper für Ethers.js mit erweiterten APIs._**
 
 - [Dokumentation](https://www.alchemy.com/docs)
 - [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
 
-**Viem –** **_TypeScript-Schnittstelle für Ethereum._**
+**viem -** **_TypeScript-Schnittstelle für Ethereum._**
 
 - [Dokumentation](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-**Codex –** **_Angereicherte Echtzeit-Blockchain-Daten-API über Dutzende von Chains hinweg._**
+**wagmi -** **_React-Hooks-Bibliothek für Ethereum, basierend auf Viem._**
+
+- [Dokumentation](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_React-Bibliothek zum Hinzufügen von Wallet-Verbindungen zu dezentralen Anwendungen (Dapps), basierend auf Wagmi und Viem._**
+
+- [Dokumentation](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
+
+**Codex -** **_Echtzeit-API für angereicherte Blockchain-Daten über Dutzende von Blockchains hinweg._**
 
 - [Dokumentation](https://docs.codex.io)
 - [Explorer](https://docs.codex.io/explore)
 - [GitHub](https://github.com/Codex-Data)
 - [Discord](https://discord.com/invite/mFpUhT3vAq)
 
-**Drift –** **_TypeScript-Meta-Bibliothek mit integriertem Caching, Hooks und Test-Mocks._**
+**Drift -** **_TypeScript-Meta-Bibliothek mit integriertem Caching, Hooks und Test-Mocks._**
 
 - [Dokumentation](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
-
 ## Weiterführende Literatur {#further-reading}
 
 _Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_

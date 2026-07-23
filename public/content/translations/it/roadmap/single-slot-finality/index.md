@@ -31,7 +31,7 @@ Con l'attuale progettazione del meccanismo, per ridurre il tempo di definitivit�
 
 ## Percorsi verso la SSF {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title="Perché non possiamo avere la SSF già oggi?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 L'attuale meccanismo di consenso combina le attestazioni di più validatori, noti come comitati, per ridurre il numero di messaggi che ogni validatore deve elaborare per convalidare un blocco. Ogni validatore ha l'opportunità di attestare in ogni epoca (32 slot), ma in ogni slot attesta solo un sottoinsieme di validatori, noto come "comitato". Lo fanno dividendosi in sottoreti in cui alcuni validatori vengono selezionati per essere "aggregatori". Ognuno di questi aggregatori combina tutte le firme che vede dagli altri validatori nella propria sottorete in un'unica firma aggregata. L'aggregatore che include il maggior numero di contributi individuali passa la propria firma aggregata al proponente del blocco, che la include nel blocco insieme alla firma aggregata degli altri comitati.
 

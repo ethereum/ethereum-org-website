@@ -227,7 +227,7 @@ Ensuite, créez un fichier `.env` dans le répertoire racine de notre projet, et
 
 - Voir ci-dessous pour obtenir l'URL HTTP de l'API Alchemy et la copier dans votre presse-papiers
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.mp4#842x480)
 
 Votre `.env` devrait maintenant ressembler à ceci :
 

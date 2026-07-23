@@ -237,20 +237,20 @@ ethers.utils.formatEther(balance)
 - [Допоміжні функції Web3.js](https://docs.web3js.org/api/web3-utils)
 - [Допоміжні функції Ethers](https://docs.ethers.org/v6/api/utils/)
 
-## Доступні бібліотеки {#available-libraries}
+## Доступні бібліотеки
 
-**Web3.js —** **_JavaScript API для Етеріум._**
+**Web3.js -** **_JavaScript API для Етеріум._**
 
 - [Документація](https://docs.web3js.org)
 - [GitHub](https://github.com/ethereum/web3.js)
 
-**Ethers.js —** **_Повна реалізація гаманця Етеріум та утиліти на JavaScript і TypeScript._**
+**Ethers.js -** **_Повна реалізація гаманця Етеріум та утиліти на JavaScript і TypeScript._**
 
 - [Головна сторінка Ethers.js](https://ethers.org/)
 - [Документація](https://docs.ethers.io)
 - [GitHub](https://github.com/ethers-io/ethers.js)
 
-**The Graph —** **_Протокол для індексування даних Етеріум та IPFS і виконання запитів до них за допомогою GraphQL._**
+**The Graph -** **_Протокол для індексування даних Етеріум та IPFS і виконання запитів до них за допомогою GraphQL._**
 
 - [The Graph](https://thegraph.com)
 - [Graph Explorer](https://thegraph.com/explorer)
@@ -258,28 +258,37 @@ ethers.utils.formatEther(balance)
 - [GitHub](https://github.com/graphprotocol)
 - [Discord](https://thegraph.com/discord)
 
-**Alchemy SDK —** **_Обгортка навколо Ethers.js із розширеними API._**
+**Alchemy SDK -** **_Обгортка навколо Ethers.js із розширеними API._**
 
 - [Документація](https://www.alchemy.com/docs)
 - [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
 
-**Viem —** **_Інтерфейс TypeScript для Етеріум._**
+**Viem -** **_Інтерфейс TypeScript для Етеріум._**
 
 - [Документація](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-**Codex —** **_API збагачених даних блокчейну в реальному часі для десятків мереж._**
+**Wagmi -** **_Бібліотека хуків React для Етеріум, створена на базі Viem._**
+
+- [Документація](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_Бібліотека React для додавання підключення гаманця до децентралізованих застосунків (dapp), створена на базі Wagmi та Viem._**
+
+- [Документація](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
+
+**Codex -** **_API збагачених даних блокчейну в реальному часі для десятків мереж._**
 
 - [Документація](https://docs.codex.io)
-- [Провідник](https://docs.codex.io/explore)
+- [Оглядач](https://docs.codex.io/explore)
 - [GitHub](https://github.com/Codex-Data)
 - [Discord](https://discord.com/invite/mFpUhT3vAq)
 
-**Drift —** **_Метабібліотека TypeScript із вбудованим кешуванням, хуками та тестовими моками._**
+**Drift -** **_Метабібліотека TypeScript із вбудованим кешуванням, хуками та тестовими моками._**
 
 - [Документація](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
-
 ## Додаткові матеріали {#further-reading}
 
 _Знаєте ресурс спільноти, який вам допоміг? Відредагуйте цю сторінку та додайте його!_

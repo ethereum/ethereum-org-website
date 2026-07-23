@@ -21,14 +21,13 @@ W przypadku węzła Ethereum, multiaddr zawiera identyfikator węzła (node-ID, 
 
 `/ip4/192.168.22.27/tcp/33000/p2p/5t7Nv7dG2d6ffbvAiewVsEwWweU3LdebSqX2y1bPrW8br`
 
-## Enode {#enode}
+## Enode
 
-Enode to sposób identyfikacji węzła Ethereum przy użyciu formatu adresu URL. Szesnastkowy identyfikator węzła (node-ID) jest zakodowany w części URL odpowiadającej nazwie użytkownika, oddzielonej od hosta znakiem @. Nazwa hosta może być podana tylko jako adres IP; nazwy DNS nie są dozwolone. Port w sekcji nazwy hosta to port nasłuchiwania TCP. Jeśli porty TCP i UDP (odkrywanie) różnią się, port UDP jest określany jako parametr zapytania „discport”.
+Enode to sposób identyfikacji węzła Ethereum przy użyciu formatu adresu URL. Szesnastkowy identyfikator węzła (node-ID) jest zakodowany w części URL przeznaczonej na nazwę użytkownika, oddzielonej od hosta znakiem @. Specyfikacja definiuje nazwę hosta wyłącznie jako adres IP; jednak większość klientów (takich jak Geth i Besu) akceptuje w tym miejscu również nazwę DNS i rozwiązuje ją na adres IP podczas uruchamiania. Jest to zachowanie specyficzne dla klienta, a nie część standardu. Port w sekcji nazwy hosta to port nasłuchiwania TCP. Jeśli porty TCP i UDP (odkrywania) różnią się, port UDP jest określany jako parametr zapytania "discport".
 
 W poniższym przykładzie adres URL węzła opisuje węzeł z adresem IP `10.3.58.6`, portem TCP `30303` i portem odkrywania UDP `30301`.
 
 `enode://6f8a80d14311c39f35f516fa664deaaaa13e85b2f7493f37f6144d86991ec012937307647bd3b9a82abe2974e1407241d54947bbb39763a4cac9f77166ad92a0@10.3.58.6:30303?discport=30301`
-
 ## Ethereum Node Records (ENR) {#enr}
 
 Ethereum Node Records (ENR) to ustandaryzowany format adresów sieciowych w Ethereum. Zastępują one multiaddr i enode. Są one szczególnie przydatne, ponieważ pozwalają na większą wymianę informacji między węzłami. ENR zawiera podpis, numer sekwencyjny oraz pola szczegółowo opisujące schemat tożsamości używany do generowania i walidacji podpisów. ENR może być również wypełniony dowolnymi danymi zorganizowanymi jako pary klucz-wartość. Te pary klucz-wartość zawierają adres IP węzła oraz informacje o podprotokołach, z których węzeł może korzystać. Klienci konsensusu używają [określonej struktury ENR](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#enr-structure) do identyfikacji węzłów rozruchowych (boot nodes), a także zawierają pole `eth2` z informacjami o obecnym rozwidleniu Ethereum i podsieci plotkowania poświadczeń (attestation gossip subnet) (łączy to węzeł z określoną grupą węzłów równorzędnych, których poświadczenia są ze sobą agregowane).

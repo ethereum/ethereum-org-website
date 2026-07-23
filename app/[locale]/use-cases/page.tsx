@@ -12,6 +12,7 @@ import Callout from "@/components/ui/callout"
 import {
   Card,
   CardBanner,
+  CardButtonFake,
   CardContent,
   CardFooter,
   CardHeader,
@@ -28,7 +29,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import UseCasesPageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
-import aiAgentsHero from "@/public/images/ai-agents/hero-image.png"
+import aiAgentsHero from "@/public/images/community-campfire-people-robot-cut-out.png"
 import ethImg from "@/public/images/eth.png"
 import ethGifCat from "@/public/images/eth-gif-cat.png"
 import ethereumLearn from "@/public/images/ethereum-learn.png"
@@ -57,9 +58,9 @@ const UseCaseCard = ({
   description: string
   ctaLabel: string
 }) => (
-  <Card>
+  <Card href={href} hoverLift>
     <CardHeader>
-      <CardBanner background="none" fit="contain">
+      <CardBanner background="none" fit="contain" zoom={false}>
         <Image
           src={image}
           alt=""
@@ -72,9 +73,7 @@ const UseCaseCard = ({
       <CardParagraph>{description}</CardParagraph>
     </CardContent>
     <CardFooter>
-      <ButtonLink href={href} className="w-full">
-        {ctaLabel}
-      </ButtonLink>
+      <CardButtonFake>{ctaLabel}</CardButtonFake>
     </CardFooter>
   </Card>
 )

@@ -55,21 +55,20 @@ Butuh pengantar yang lebih mendasar terlebih dahulu? Kunjungi [ethereum.org/lear
 
 ## Proyek dan perkakas Python {#python-projects-and-tools}
 
-### Aktif: {#active}
-
 - [Web3.py](https://github.com/ethereum/web3.py) - _Pustaka Python untuk berinteraksi dengan Ethereum_
 - [Vyper](https://github.com/ethereum/vyper/) - _Bahasa Kontrak Pintar Pythonic untuk EVM_
+- [Titanoboa](https://github.com/vyperlang/titanoboa/) - _Perkakas pengujian bawaan Vyper; sebuah interpreter dengan forking Mainnet, debugging, dan traceback yang rapi_
+- [Moccasin](https://github.com/Cyfrin/moccasin) - _Kerangka kerja pengembangan dan pengujian kontrak pintar untuk Vyper dan Python, dibangun di atas Titanoboa_
 - [Ape](https://github.com/ApeWorX/ape) - _Perkakas pengembangan kontrak pintar untuk Pythonista, Ilmuwan Data, dan Profesional Keamanan_
 - [py-evm](https://github.com/ethereum/py-evm) - _implementasi dari Ethereum Virtual Machine_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _perkakas untuk menguji aplikasi berbasis Ethereum_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _fungsi utilitas untuk bekerja dengan basis kode terkait Ethereum_
-- [py-solc-x](https://pypi.org/project/py-solc-x/) - _Pembungkus Python di sekitar kompilator solidity solc dengan dukungan 0.5.x_
+- [py-solc-x](https://pypi.org/project/py-solc-x/) - _Pembungkus Python untuk kompiler Solidity solc dengan dukungan 0.5.x_
 - [pymaker](https://github.com/makerdao/pymaker) - _API Python untuk kontrak Maker_
-- [siwe](https://github.com/signinwithethereum/siwe-py) - _Masuk dengan Ethereum (SIWE) untuk Python_
-- [Web3 DeFi untuk integrasi Ethereum](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _Paket Python dengan integrasi siap pakai untuk ERC-20, Uniswap, dan proyek populer lainnya_
-- [Wake](https://getwake.io) - _Kerangka kerja Python serba ada untuk pengujian kontrak, fuzzing, penyebaran, pemindaian kerentanan, dan navigasi kode (server bahasa - [Perkakas untuk Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
+- [siwe](https://github.com/signinwithethereum/siwe-py) - _Sign in with Ethereum (SIWE) untuk Python_
+- [Integrasi keuangan terdesentralisasi (DeFi) Web3 untuk Ethereum](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _Paket Python dengan integrasi siap pakai untuk ERC-20, Uniswap, dan proyek populer lainnya_
+- [Wake](https://getwake.io) - _Kerangka kerja Python serba ada untuk pengujian kontrak, fuzzing, penyebaran, pemindaian kerentanan, dan navigasi kode (server bahasa - [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
 - [DeFiPy](https://github.com/defipy-devs/defipy) - _SDK Python untuk analitik keuangan terdesentralisasi (DeFi) dan simulasi pembuat pasar otomatis (AMM) di Uniswap V2/V3, Balancer, dan Curve_
-
 ### Diarsipkan / Tidak lagi dipelihara: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _Klien Python Ethereum_

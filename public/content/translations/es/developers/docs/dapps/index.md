@@ -47,9 +47,9 @@ Un contrato inteligente es un código que vive en la cadena de bloques de Ethere
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## Herramientas para crear dapps {#dapp-tools}
+## Herramientas para crear dapps
 
-**Scaffold-ETH _- Experimente rápidamente con Solidity utilizando un frontend que se adapta a su contrato inteligente._**
+**Scaffold-ETH 2 _- Experimente rápidamente con Solidity usando un frontend que se adapta a su contrato inteligente._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Dapp de ejemplo](https://punkwallet.io/)
@@ -68,18 +68,17 @@ Un contrato inteligente es un código que vive en la cadena de bloques de Ethere
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
-**thirdweb _- SDK en todos los lenguajes, contratos inteligentes, herramientas e infraestructura para el desarrollo de la Web3._**
+**thirdweb _- SDK en todos los lenguajes, contratos inteligentes, herramientas e infraestructura para el desarrollo de Web3._**
 
 - [Página principal](https://thirdweb.com/)
 - [Documentación](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Crossmint _- Plataforma de desarrollo Web3 de nivel empresarial para desplegar contratos inteligentes, habilitar pagos con tarjeta de crédito y entre cadenas, y usar API para crear, distribuir, vender, almacenar y editar NFT._**
+**Crossmint _- Plataforma de desarrollo de Web3 de nivel empresarial para desplegar contratos inteligentes, habilitar pagos con tarjeta de crédito y entre cadenas, y usar API para crear, distribuir, vender, almacenar y editar NFT._**
 
 - [crossmint.com](https://www.crossmint.com)
 - [Documentación](https://docs.crossmint.com)
 - [Discord](https://discord.com/invite/crossmint)
-
 ## Lecturas adicionales {#further-reading}
 
 - [Explorar dapps](/apps)

@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/single-slot-finality/index.md",
-  "generatedAt": "2026-06-08T10:41:48.816Z",
-  "rootHash": "6829f7237d78",
+  "generatedAt": "2026-07-23T00:25:06.372Z",
+  "rootHash": "4bf44a7aa474",
   "tree": {
-    "contentHash": "73eebde5309e",
-    "anchorHash": "85acfc80dbd5",
+    "contentHash": "a283f02e2096",
+    "anchorHash": "d18cf4b46d2b",
     "children": {
       "frontmatter:title": {
         "contentHash": "26be487ae07f",
@@ -18,6 +18,10 @@
       "frontmatter:lang": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "3de1580490d2"
       },
       "prose:1": {
         "contentHash": "47bc3d6e450a",
@@ -277,6 +281,7 @@
       "frontmatter:title",
       "frontmatter:description",
       "frontmatter:lang",
+      "frontmatter:template",
       "prose:1",
       "link:0",
       "prose:2",
@@ -290,5 +295,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

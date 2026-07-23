@@ -231,6 +231,8 @@
   "less": "少なく表示",
   "light-mode": "ライト",
   "light-mode-aria-label": "ライトモードに切り替える",
+  "link-external-assistive-text": "(新しいタブで開く)",
+  "link-mailto-assistive-text": "(メールクライアントを開く)",
   "loading": "読み込み中...",
   "loading-error-refresh": "エラーが発生しました。更新してください。",
   "meetups": "ミートアップ",

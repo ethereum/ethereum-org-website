@@ -551,8 +551,6 @@ export type EthPriceData =
   | { value: number; timestamp?: number; percentChange24h?: number }
   | { error: string }
 
-export type StatsBoxState = ValueOrError<string>
-
 export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
 
 /**
@@ -649,17 +647,6 @@ export type L2beatData = {
   }
 }
 
-export type HomepageActivityMetric =
-  | "ethPrice" // Use with `totalEthStaked` to convert ETH to USD
-  | "totalEthStaked"
-  | "totalValueLocked"
-  | GrowThePieMetricKey
-
-export type AllHomepageActivityData = Record<
-  HomepageActivityMetric,
-  MetricReturnData
->
-
 export type EnterpriseActivityMetric =
   | "txCount"
   | "txCostsMedianUsd"
@@ -671,14 +658,6 @@ export type AllEnterpriseActivityData = Record<
   EnterpriseActivityMetric,
   MetricReturnData
 >
-
-export type StatsBoxMetric = {
-  label: string
-  description?: string
-  state: StatsBoxState
-  apiUrl?: string
-  apiProvider?: string
-}
 
 export type SimulatorNavProps = {
   nav: SimulatorNav
@@ -1005,11 +984,15 @@ export type GHIssue = {
   title: string
   html_url: string
   created_at: string
+  /**
+   * The issue author. GitHub's REST API returns `null` for issues authored by
+   * deleted ("ghost") accounts, so consumers must guard against it.
+   */
   user: {
     login: string
     html_url: string
     avatar_url: string
-  }
+  } | null
   labels: GHLabel[]
 }
 

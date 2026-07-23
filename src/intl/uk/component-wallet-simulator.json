@@ -156,6 +156,7 @@
   "sim-cw-connect-disclaimer": "Підключення до вебсайту не призведе до передачі будь-якої особистої або конфіденційної інформації власникам сайту.",
   "sim-cw-your-collection": "Ваша колекція ({count})",
   "sim-cw-nft-title": "Крутий арт",
+  "sim-cw-nft-alt": "Зображення NFT",
   "sim-cw-nft-actions-tooltip": "Ось деякі речі, які ви можете робити як власник своїх NFT",
   "sim-cw-set-price": "Встановити ціну",
   "sim-cw-auction-item": "Виставити на аукціон",

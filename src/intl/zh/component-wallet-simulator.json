@@ -156,6 +156,7 @@
   "sim-cw-connect-disclaimer": "连接到该网站不会与网站所有者共享任何个人或安全信息。",
   "sim-cw-your-collection": "你的收藏 ({count})",
   "sim-cw-nft-title": "酷炫艺术品",
+  "sim-cw-nft-alt": "NFT 图片",
   "sim-cw-nft-actions-tooltip": "作为 NFT 的所有者，你可以执行以下操作",
   "sim-cw-set-price": "设定价格",
   "sim-cw-auction-item": "拍卖物品",

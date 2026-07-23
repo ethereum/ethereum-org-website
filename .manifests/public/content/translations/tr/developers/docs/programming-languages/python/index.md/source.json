@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/docs/programming-languages/python/index.md",
-  "generatedAt": "2026-06-19T18:54:46.124Z",
-  "rootHash": "317a58a4fe7e",
+  "generatedAt": "2026-07-22T23:19:47.467Z",
+  "rootHash": "c96c26c626c9",
   "tree": {
-    "contentHash": "021b16312b46",
-    "anchorHash": "f626321a7d8c",
+    "contentHash": "70674584e86b",
+    "anchorHash": "a559a78a9e50",
     "children": {
       "frontmatter:title": {
         "contentHash": "f153bd01c74e",
@@ -368,8 +368,8 @@
         ]
       },
       "python-projects-and-tools": {
-        "contentHash": "9069312508de",
-        "anchorHash": "f2f1344a18c7",
+        "contentHash": "8cca508f29c7",
+        "anchorHash": "bc8e69bc1775",
         "labelHash": "078c7b6dc1df",
         "children": {
           "_label": {
@@ -377,15 +377,15 @@
             "anchorHash": "e3b0c44298fc"
           },
           "active": {
-            "contentHash": "b6c1c2a8ce98",
-            "anchorHash": "31ac8cc445d5",
+            "contentHash": "c1343bd0f4e1",
+            "anchorHash": "3976ced25b57",
             "labelHash": "b49c81b7b51d",
             "children": {
               "_label": {
                 "contentHash": "b49c81b7b51d",
                 "anchorHash": "e3b0c44298fc"
               },
-              "prose:13": {
+              "prose:15": {
                 "contentHash": "3973e022e932",
                 "anchorHash": "e3b0c44298fc"
               },
@@ -393,7 +393,7 @@
                 "contentHash": "1e584454fc5b",
                 "anchorHash": "f14bc7486551"
               },
-              "prose:14": {
+              "prose:16": {
                 "contentHash": "290fbe13b552",
                 "anchorHash": "e3b0c44298fc"
               },
@@ -401,128 +401,148 @@
                 "contentHash": "f33ac7f36711",
                 "anchorHash": "dfbe00024f08"
               },
-              "prose:15": {
+              "prose:17": {
                 "contentHash": "558cee3c7390",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:2": {
-                "contentHash": "94e0f9bc5feb",
-                "anchorHash": "2574c706b661"
+                "contentHash": "534f5c84eb53",
+                "anchorHash": "0c33ff1b3160"
               },
-              "prose:16": {
-                "contentHash": "0a44660db9c5",
+              "prose:18": {
+                "contentHash": "790b75f4c158",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:3": {
-                "contentHash": "2c2f03734f63",
-                "anchorHash": "f9684bcf09f4"
+                "contentHash": "49047fd85852",
+                "anchorHash": "190d8bbd8021"
               },
-              "prose:17": {
-                "contentHash": "ce1b55352751",
+              "prose:19": {
+                "contentHash": "8bb7605b1af6",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:4": {
-                "contentHash": "c0f00fd93f6e",
-                "anchorHash": "a559ca5b0f2f"
+                "contentHash": "94e0f9bc5feb",
+                "anchorHash": "2574c706b661"
               },
-              "prose:18": {
-                "contentHash": "f94d6b78371d",
+              "prose:20": {
+                "contentHash": "0a44660db9c5",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:5": {
-                "contentHash": "83314c37a86f",
-                "anchorHash": "fd62331fa5cd"
+                "contentHash": "2c2f03734f63",
+                "anchorHash": "f9684bcf09f4"
               },
-              "prose:19": {
-                "contentHash": "742b548a3d69",
+              "prose:21": {
+                "contentHash": "ce1b55352751",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:6": {
-                "contentHash": "c1c450a84c3b",
-                "anchorHash": "d102fba54801"
+                "contentHash": "c0f00fd93f6e",
+                "anchorHash": "a559ca5b0f2f"
               },
-              "prose:20": {
-                "contentHash": "e00a36962b74",
+              "prose:22": {
+                "contentHash": "f94d6b78371d",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:7": {
-                "contentHash": "edd928380014",
-                "anchorHash": "10d0603d4dc6"
+                "contentHash": "83314c37a86f",
+                "anchorHash": "fd62331fa5cd"
               },
-              "prose:21": {
-                "contentHash": "43f9a6750ef3",
+              "prose:23": {
+                "contentHash": "742b548a3d69",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:8": {
-                "contentHash": "cd9de3288756",
-                "anchorHash": "f8e2055f1734"
+                "contentHash": "c1c450a84c3b",
+                "anchorHash": "d102fba54801"
               },
-              "prose:22": {
-                "contentHash": "969b9d6b1189",
+              "prose:24": {
+                "contentHash": "e00a36962b74",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:9": {
-                "contentHash": "11a008cd3708",
-                "anchorHash": "13bf2790edcb"
+                "contentHash": "edd928380014",
+                "anchorHash": "10d0603d4dc6"
               },
-              "prose:23": {
-                "contentHash": "d55e984bdef2",
+              "prose:25": {
+                "contentHash": "43f9a6750ef3",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:10": {
-                "contentHash": "33a7e908344d",
-                "anchorHash": "53fbf396ff34"
+                "contentHash": "cd9de3288756",
+                "anchorHash": "f8e2055f1734"
               },
-              "prose:24": {
-                "contentHash": "e3371f394caa",
+              "prose:26": {
+                "contentHash": "969b9d6b1189",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:11": {
-                "contentHash": "6dd464f0d0c1",
-                "anchorHash": "c68b1511daf6"
+                "contentHash": "11a008cd3708",
+                "anchorHash": "13bf2790edcb"
               },
-              "prose:25": {
-                "contentHash": "d0c5945630ab",
+              "prose:27": {
+                "contentHash": "d55e984bdef2",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:12": {
+                "contentHash": "33a7e908344d",
+                "anchorHash": "53fbf396ff34"
+              },
+              "prose:28": {
+                "contentHash": "e3371f394caa",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:13": {
+                "contentHash": "6dd464f0d0c1",
+                "anchorHash": "c68b1511daf6"
+              },
+              "prose:29": {
+                "contentHash": "d0c5945630ab",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:14": {
                 "contentHash": "4c57cd64946b",
                 "anchorHash": "0a34077fd71e"
               },
-              "prose:26": {
+              "prose:30": {
                 "contentHash": "6da41d03bdde",
                 "anchorHash": "e3b0c44298fc"
               }
             },
             "childrenOrder": [
               "_label",
-              "prose:13",
-              "link:0",
-              "prose:14",
-              "link:1",
               "prose:15",
-              "link:2",
+              "link:0",
               "prose:16",
-              "link:3",
+              "link:1",
               "prose:17",
-              "link:4",
+              "link:2",
               "prose:18",
-              "link:5",
+              "link:3",
               "prose:19",
-              "link:6",
+              "link:4",
               "prose:20",
-              "link:7",
+              "link:5",
               "prose:21",
-              "link:8",
+              "link:6",
               "prose:22",
-              "link:9",
+              "link:7",
               "prose:23",
-              "link:10",
+              "link:8",
               "prose:24",
-              "link:11",
+              "link:9",
               "prose:25",
+              "link:10",
+              "prose:26",
+              "link:11",
+              "prose:27",
               "link:12",
-              "prose:26"
+              "prose:28",
+              "link:13",
+              "prose:29",
+              "link:14",
+              "prose:30"
             ]
           },
           "archived--no-longer-maintained": {
@@ -806,5 +826,5 @@
       "other-aggregated-lists"
     ]
   },
-  "sourceCommitSha": "f81744420359dc1f7c24ec7290b16ff6591fd2e0"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

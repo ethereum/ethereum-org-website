@@ -23,7 +23,7 @@ import { numberFormat } from "@/lib/utils/numbers"
 import { GITHUB_REPO_URL } from "@/lib/constants"
 
 import { ResourceItem, ResourcesContainer } from "./_components/ResourcesUI"
-import ResourcesPageJsonLD from "./page-jsonld"
+import PageJsonLD from "./page-jsonld"
 import { getResources } from "./utils"
 
 import { getBlobStats, getGrowThePieData } from "@/lib/data"
@@ -78,36 +78,36 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   return (
     <>
-      <ResourcesPageJsonLD locale={locale} contributors={contributors} />
+      <PageJsonLD locale={locale} contributors={contributors} />
 
-      <MainArticle className="relative flex flex-col">
-        <Alert variant="banner" className="max-md:flex-col">
-          {t("page-resources-banner-notification-message")}{" "}
-          <Link
-            href={new URL(
-              "issues/new?title=Resource%20dashboard%20feedback",
-              GITHUB_REPO_URL
-            ).toString()}
-            className="visited:text-white"
-            customEventOptions={{
-              eventCategory: EVENT_CATEGORY,
-              eventAction: "links",
-              eventName: "Ethereum.org Github Page Feedback",
-            }}
-          >
-            {t("page-resources-share-feedback")}
-          </Link>
-        </Alert>
+      <Alert variant="banner" className="max-md:flex-col">
+        {t("page-resources-banner-notification-message")}{" "}
+        <Link
+          href={new URL(
+            "issues/new?title=Resource%20dashboard%20feedback",
+            GITHUB_REPO_URL
+          ).toString()}
+          className="visited:text-white"
+          customEventOptions={{
+            eventCategory: EVENT_CATEGORY,
+            eventAction: "links",
+            eventName: "Ethereum.org Github Page Feedback",
+          }}
+        >
+          {t("page-resources-share-feedback")}
+        </Link>
+      </Alert>
 
-        <HubHero
-          title={t("page-resources-hero-title")}
-          header={t("page-resources-hero-header")}
-          description={t("page-resources-hero-description")}
-          heroImg={heroImg}
-        />
+      <HubHero
+        title={t("page-resources-hero-title")}
+        header={t("page-resources-hero-header")}
+        description={t("page-resources-hero-description")}
+        heroImg={heroImg}
+      />
 
+      <MainArticle>
         <Stack className="gap-4 px-2 py-6 md:gap-8 md:px-4 lg:px-8 xl:gap-11">
-          <StickyContainer className="top-[26px] space-y-5">
+          <StickyContainer className="top-10 space-y-5">
             <div className="my-2 text-center text-body-medium">
               {t("page-resources-whats-on-this-page")}
             </div>
@@ -139,7 +139,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         )}
                         key={title}
                       >
-                        <div className="border-b bg-[#ffffff] px-6 py-4 font-bold dark:bg-[#171717]">
+                        <div className="border-b bg-background px-6 py-4 font-bold">
                           {title}
                         </div>
                         <div className="h-full bg-background bg-linear-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">

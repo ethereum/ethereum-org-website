@@ -39,6 +39,7 @@
   "page-find-wallet-buy-crypto-desc": "شراء الكريبتو بالعملات الورقية مباشرة في المحفظة \n *ملاحظة: قد يكون شراء الكريبتو متاحًا في مناطق محددة فقط",
   "page-find-wallet-sell-for-fiat": "البيع مقابل النقد",
   "page-find-wallet-sell-for-fiat-desc": "بيع الكريبتو مقابل العملات الورقية مباشرة في المحفظة \n *ملاحظة: قد يكون سحب الكريبتو متاحًا في مناطق محددة فقط",
+  "page-find-wallet-network-support": "دعم الشبكة",
   "page-find-wallet-multisig": "متعدد التوقيعات",
   "page-find-wallet-multisig-desc": "المحافظ التي تتطلب توقيعات متعددة لتفويض معاملة",
   "page-find-wallet-social-recovery": "استرداد اجتماعي",

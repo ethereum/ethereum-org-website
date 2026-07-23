@@ -1,10 +1,10 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-apps.json",
-  "generatedAt": "2026-06-29T23:47:31.599Z",
-  "rootHash": "752fb4f7a5ef",
+  "generatedAt": "2026-07-22T22:33:45.919Z",
+  "rootHash": "3cea39a62a75",
   "tree": {
-    "contentHash": "20ae6a508e2a",
+    "contentHash": "8930f6ac3485",
     "anchorHash": "9c41be841505",
     "children": {
       "page-apps-all-apps": {
@@ -84,7 +84,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-apps-meta-description": {
-        "contentHash": "66f3c4be7e87",
+        "contentHash": "466f0d4ac4dc",
         "anchorHash": "e3b0c44298fc"
       },
       "page-apps-category-defi-name": {
@@ -408,5 +408,5 @@
       "page-apps-days-ago"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

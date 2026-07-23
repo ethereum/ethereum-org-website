@@ -231,6 +231,8 @@
   "less": "کم",
   "light-mode": "لائٹ",
   "light-mode-aria-label": "لائٹ موڈ پر سوئچ کریں",
+  "link-external-assistive-text": "(نئے ٹیب میں کھلتا ہے)",
+  "link-mailto-assistive-text": "(ای میل کلائنٹ کھلتا ہے)",
   "loading": "لوڈ ہو رہا ہے...",
   "loading-error-refresh": "خرابی، براہ کرم ریفریش کریں۔",
   "meetups": "میٹ اپس",

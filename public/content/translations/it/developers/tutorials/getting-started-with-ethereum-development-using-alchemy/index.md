@@ -13,7 +13,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 ![Ethereum and Alchemy logos](./ethereum-alchemy.png)
 
-Questa è una guida per principianti per iniziare con lo sviluppo su Ethereum. Per questo tutorial useremo [Alchemy](https://alchemyapi.io/), la principale piattaforma di sviluppo blockchain che alimenta milioni di utenti dal 70% delle migliori app blockchain, tra cui Maker, 0x, MyEtherWallet, Dharma e Kyber. Alchemy ci darà accesso a un endpoint API sulla catena di Ethereum in modo da poter leggere e scrivere transazioni.
+Questa è una guida per principianti per iniziare con lo sviluppo su Ethereum. Per questo tutorial useremo [Alchemy](https://www.alchemy.com/), la principale piattaforma di sviluppo blockchain che alimenta milioni di utenti dal 70% delle migliori app blockchain, tra cui Maker, 0x, MyEtherWallet, Dharma e Kyber. Alchemy ci darà accesso a un endpoint API sulla catena di Ethereum in modo da poter leggere e scrivere transazioni.
 
 Ti guideremo dalla registrazione su Alchemy alla scrittura del tuo primo script Web3! Nessuna esperienza di sviluppo blockchain necessaria!
 
@@ -37,20 +37,20 @@ Compila i dettagli sotto “Create App” per ottenere la tua nuova chiave. Qui 
 
 Puoi anche recuperare le chiavi API esistenti passando il mouse su “Apps” e selezionandone una. Qui puoi cliccare su “View Key”, così come su “Edit App” per inserire domini specifici in whitelist, vedere vari strumenti per sviluppatori e visualizzare le analisi.
 
-![Gif showing a user how to pull API keys](./pull-api-keys.gif)
+![Gif showing a user how to pull API keys](./pull-api-keys.mp4#600x340)
 
-## 3. Effettua una richiesta dalla riga di comando {#make-a-request-from-the-command-line}
+## 3. Effettua una richiesta dalla riga di comando
 
 Interagisci con la blockchain di Ethereum tramite Alchemy usando JSON-RPC e curl.
 
-Per le richieste manuali, consigliamo di interagire con il `JSON-RPC` tramite richieste `POST`. Passa semplicemente l'intestazione `Content-Type: application/json` e la tua query come corpo della richiesta `POST` con i seguenti campi:
+Per le richieste manuali, consigliamo di interagire con `JSON-RPC` tramite richieste `POST`. Passa semplicemente l'intestazione `Content-Type: application/json` e la tua query come corpo della richiesta `POST` con i seguenti campi:
 
 - `jsonrpc`: La versione di JSON-RPC; attualmente è supportata solo la `2.0`.
-- `method`: Il metodo dell'API di ETH. [Vedi il riferimento dell'API.](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc)
+- `method`: Il metodo dell'API di ETH. [Vedi il riferimento dell'API.](/developers/docs/apis/json-rpc/)
 - `params`: Un elenco di parametri da passare al metodo.
 - `id`: L'ID della tua richiesta. Verrà restituito dalla risposta in modo da poter tenere traccia a quale richiesta appartiene una risposta.
 
-Ecco un esempio che puoi eseguire dalla riga di comando per recuperare il prezzo del gas attuale:
+Ecco un esempio che puoi eseguire dalla riga di comando per recuperare l'attuale prezzo del gas:
 
 ```bash
 curl https://eth-mainnet.alchemyapi.io/v2/demo \
@@ -59,21 +59,20 @@ curl https://eth-mainnet.alchemyapi.io/v2/demo \
 -d '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
 ```
 
-_**NOTA:** Sostituisci [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.io/jsonrpc/demo) con la tua chiave API `https://eth-mainnet.alchemyapi.io/v2/**your-api-key`._
+_**NOTA:** Sostituisci `https://eth-mainnet.alchemyapi.io/v2/demo` con la tua chiave API `https://eth-mainnet.alchemyapi.io/v2/**your-api-key`._
 
 **Risultati:**
 
 ```json
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
+## 4. Configura il tuo client Web3
 
-## 4. Configura il tuo client Web3 {#set-up-your-web3-client}
+**Se hai un client esistente,** cambia l'URL del tuo attuale fornitore di nodi in un URL di Alchemy con la tua chiave API: `"https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
-**Se hai un client esistente,** cambia l'URL del tuo attuale provider di nodi con un URL di Alchemy contenente la tua chiave API: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
+**_NOTA:_** Gli script sottostanti devono essere eseguiti in un **contesto di nodo** o **salvati in un file**, non eseguiti dalla riga di comando. Se non hai già installato Node o npm, segui [le istruzioni di installazione di Node.js](https://nodejs.org/en/download/).
 
-**_NOTA:_** Gli script sottostanti devono essere eseguiti in un **contesto node** o **salvati in un file**, non eseguiti dalla riga di comando. Se non hai già installato Node o npm, dai un'occhiata a questa rapida [guida di configurazione per Mac](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs).
-
-Ci sono tantissime [librerie Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) che puoi integrare con Alchemy, tuttavia, ti consigliamo di usare [Alchemy Web3](https://docs.alchemy.com/reference/api-overview), un sostituto diretto per Web3.js, creato e configurato per funzionare perfettamente con Alchemy. Questo offre molteplici vantaggi come i tentativi automatici e un robusto supporto per WebSocket.
+Ci sono tantissime [librerie Web3](/developers/docs/apis/javascript/) che puoi integrare con Alchemy, tuttavia, consigliamo di usare [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), un sostituto diretto per Web3.js, creato e configurato per funzionare perfettamente con Alchemy. Questo offre molteplici vantaggi come i tentativi automatici e un robusto supporto per WebSocket.
 
 Per installare AlchemyWeb3.js, **vai alla directory del tuo progetto** ed esegui:
 
@@ -89,7 +88,7 @@ yarn add @alch/alchemy-web3
 npm install @alch/alchemy-web3
 ```
 
-Per interagire con l'infrastruttura dei nodi di Alchemy, esegui in NodeJS o aggiungi questo a un file JavaScript:
+Per interagire con l'infrastruttura dei nodi di Alchemy, esegui in Node.js o aggiungi questo a un file JavaScript:
 
 ```js
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
@@ -97,19 +96,18 @@ const web3 = createAlchemyWeb3(
   "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 )
 ```
-
-## 5. Scrivi il tuo primo script Web3! {#write-your-first-web3-script}
+## 5. Scrivi il tuo primo script Web3!
 
 Ora, per sporcarci le mani con un po' di programmazione Web3, scriveremo un semplice script che stampa l'ultimo numero di blocco dalla Mainnet di Ethereum.
 
-**1. Se non l'hai già fatto, nel tuo terminale crea una nuova directory di progetto ed entraci con cd:**
+**1. Se non l'hai già fatto, nel tuo terminale crea una nuova directory di progetto e accedi con cd:**
 
 ```
 mkdir web3-example
 cd web3-example
 ```
 
-**2. Installa la dipendenza Web3 di Alchemy (o qualsiasi altra Web3) nel tuo progetto se non l'hai già fatto:**
+**2. Installa la dipendenza Web3 di Alchemy (o qualsiasi Web3) nel tuo progetto se non l'hai già fatto:**
 
 ```
 npm install @alch/alchemy-web3
@@ -117,7 +115,7 @@ npm install @alch/alchemy-web3
 
 **3. Crea un file chiamato `index.js` e aggiungi i seguenti contenuti:**
 
-> Alla fine dovresti sostituire `demo` con la tua chiave API HTTP di Alchemy.
+> Dovresti infine sostituire `demo` con la tua chiave API HTTP di Alchemy.
 
 ```js
 async function main() {
@@ -129,7 +127,7 @@ async function main() {
 main()
 ```
 
-Non hai familiarità con la programmazione asincrona? Dai un'occhiata a questo [post su Medium](https://medium.com/better-programming/understanding-async-await-in-javascript-1d81bb079b2c).
+Non hai familiarità con i concetti asincroni? Dai un'occhiata a questo [post su Medium](https://medium.com/better-programming/understanding-async-await-in-javascript-1d81bb079b2c).
 
 **4. Eseguilo nel tuo terminale usando node**
 
@@ -137,7 +135,7 @@ Non hai familiarità con la programmazione asincrona? Dai un'occhiata a questo [
 node index.js
 ```
 
-**5. Ora dovresti vedere l'ultimo numero di blocco stampato nella tua console!**
+**5. Ora dovresti vedere l'output dell'ultimo numero di blocco nella tua console!**
 
 ```
 The latest block number is 11043912
@@ -145,6 +143,6 @@ The latest block number is 11043912
 
 **Evviva! Congratulazioni! Hai appena scritto il tuo primo script Web3 usando Alchemy 🎉**
 
-Non sai cosa fare dopo? Prova a distribuire il tuo primo smart contract e sporcati le mani con un po' di programmazione in Solidity nella nostra [Guida allo Smart Contract Hello World](https://www.alchemy.com/docs/hello-world-smart-contract), oppure metti alla prova la tua conoscenza della dashboard con l'[App Demo della Dashboard](https://docs.alchemyapi.io/tutorials/demo-app)!
+Non sai cosa fare dopo? Prova a distribuire il tuo primo smart contract e sporcati le mani con un po' di programmazione in Solidity nella nostra [Guida allo Smart Contract Hello World](/developers/tutorials/hello-world-smart-contract/), o continua a esplorare la [documentazione di Alchemy](https://www.alchemy.com/docs/) per altri esempi.
 
 _[Registrati gratuitamente su Alchemy](https://auth.alchemy.com/), dai un'occhiata alla nostra [documentazione](https://www.alchemy.com/docs/) e, per le ultime notizie, seguici su [Twitter](https://twitter.com/AlchemyPlatform)_.

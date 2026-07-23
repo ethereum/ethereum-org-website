@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/tutorials/using-websockets/index.md",
-  "generatedAt": "2026-06-19T23:26:54.750Z",
-  "rootHash": "1c5732c054be",
+  "generatedAt": "2026-07-22T23:54:06.635Z",
+  "rootHash": "5237412d9759",
   "tree": {
     "contentHash": "f54184b0d6b5",
-    "anchorHash": "d91ae1a294da",
+    "anchorHash": "332b3d4ea78b",
     "children": {
       "frontmatter:title": {
         "contentHash": "67cc51a00913",
@@ -136,7 +136,7 @@
       },
       "how-to-use-websockets": {
         "contentHash": "883790c4fee5",
-        "anchorHash": "07a4ee3a078a",
+        "anchorHash": "a15bc81d8e86",
         "labelHash": "dd199c60f4dd",
         "children": {
           "_label": {
@@ -157,7 +157,7 @@
           },
           "image:1": {
             "contentHash": "dde5ea34d839",
-            "anchorHash": "e21c3da4d710"
+            "anchorHash": "97a140cd72df"
           },
           "prose:5": {
             "contentHash": "92941d6a45db",
@@ -689,5 +689,5 @@
       "subscription-api"
     ]
   },
-  "sourceCommitSha": "1d108007c381bf3350d7e706746f624a9050ea3e"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

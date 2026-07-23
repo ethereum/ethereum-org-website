@@ -13,7 +13,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 ![Ethereum and Alchemy logos](./ethereum-alchemy.png)
 
-Đây là hướng dẫn dành cho người mới bắt đầu để làm quen với việc phát triển Ethereum. Trong hướng dẫn này, chúng ta sẽ sử dụng [Alchemy](https://alchemyapi.io/), nền tảng nhà phát triển Chuỗi khối hàng đầu cung cấp sức mạnh cho hàng triệu người dùng từ 70% các ứng dụng Chuỗi khối hàng đầu, bao gồm Maker, 0x, MyEtherWallet, Dharma và Kyber. Alchemy sẽ cung cấp cho chúng ta quyền truy cập vào một điểm cuối API trên Chuỗi Ethereum để chúng ta có thể đọc và ghi các giao dịch.
+Đây là hướng dẫn dành cho người mới bắt đầu để làm quen với việc phát triển Ethereum. Trong hướng dẫn này, chúng ta sẽ sử dụng [Alchemy](https://www.alchemy.com/), nền tảng nhà phát triển Chuỗi khối hàng đầu cung cấp sức mạnh cho hàng triệu người dùng từ 70% các ứng dụng Chuỗi khối hàng đầu, bao gồm Maker, 0x, MyEtherWallet, Dharma và Kyber. Alchemy sẽ cung cấp cho chúng ta quyền truy cập vào một điểm cuối API trên Chuỗi Ethereum để chúng ta có thể đọc và ghi các giao dịch.
 
 Chúng tôi sẽ đưa bạn từ việc đăng ký Alchemy cho đến việc viết tập lệnh Web3 đầu tiên của bạn! Không yêu cầu kinh nghiệm phát triển Chuỗi khối!
 
@@ -37,18 +37,16 @@ Bạn có thể [tạo các khóa API từ bảng điều khiển](https://dashb
 
 Bạn cũng có thể lấy các khóa API hiện có bằng cách di chuột qua “Apps” (Ứng dụng) và chọn một ứng dụng. Bạn có thể “View Key” (Xem khóa) tại đây, cũng như “Edit App” (Chỉnh sửa ứng dụng) để đưa các miền cụ thể vào danh sách trắng, xem một số công cụ dành cho nhà phát triển và xem phân tích.
 
-![Gif showing a user how to pull API keys](./pull-api-keys.gif)
-
-## 3. Thực hiện một yêu cầu từ dòng lệnh {#make-a-request-from-the-command-line}
+![Gif showing a user how to pull API keys](./pull-api-keys.mp4#600x340)
 
 Tương tác với Chuỗi khối Ethereum thông qua Alchemy bằng cách sử dụng JSON-RPC và curl.
 
 Đối với các yêu cầu thủ công, chúng tôi khuyên bạn nên tương tác với `JSON-RPC` thông qua các yêu cầu `POST`. Chỉ cần truyền vào tiêu đề `Content-Type: application/json` và truy vấn của bạn dưới dạng phần thân `POST` với các trường sau:
 
 - `jsonrpc`: Phiên bản JSON-RPC—hiện tại, chỉ hỗ trợ `2.0`.
-- `method`: Phương thức API ETH. [Xem tài liệu tham khảo API.](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc)
+- `method`: Phương thức API ETH. [Xem tài liệu tham khảo API.](/developers/docs/apis/json-rpc/)
 - `params`: Danh sách các tham số để truyền vào phương thức.
-- `id`: ID yêu cầu của bạn. Sẽ được trả về bởi phản hồi để bạn có thể theo dõi xem phản hồi thuộc về yêu cầu nào.
+- `id`: ID yêu cầu của bạn. Sẽ được trả về bởi phản hồi để bạn có thể theo dõi phản hồi thuộc về yêu cầu nào.
 
 Dưới đây là một ví dụ bạn có thể chạy từ dòng lệnh để truy xuất giá gas hiện tại:
 
@@ -59,21 +57,18 @@ curl https://eth-mainnet.alchemyapi.io/v2/demo \
 -d '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
 ```
 
-_**LƯU Ý:** Thay thế [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.io/jsonrpc/demo) bằng khóa API của riêng bạn `https://eth-mainnet.alchemyapi.io/v2/**your-api-key`._
+_**LƯU Ý:** Thay thế `https://eth-mainnet.alchemyapi.io/v2/demo` bằng khóa API của riêng bạn `https://eth-mainnet.alchemyapi.io/v2/**your-api-key`._
 
 **Kết quả:**
 
 ```json
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
-
-## 4. Thiết lập máy khách Web3 của bạn {#set-up-your-web3-client}
-
 **Nếu bạn đã có một máy khách hiện tại,** hãy thay đổi URL nhà cung cấp nút hiện tại của bạn thành URL Alchemy với khóa API của bạn: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
-**_LƯU Ý:_** Các tập lệnh bên dưới cần được chạy trong **môi trường Node** hoặc **được lưu trong một tệp**, không chạy từ dòng lệnh. Nếu bạn chưa cài đặt Node hoặc npm, hãy xem [hướng dẫn thiết lập nhanh cho máy Mac](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs) này.
+**_LƯU Ý:_** Các tập lệnh bên dưới cần được chạy trong **ngữ cảnh nút** hoặc **được lưu trong một tệp**, không chạy từ dòng lệnh. Nếu bạn chưa cài đặt Node hoặc npm, hãy làm theo [hướng dẫn cài đặt Node.js](https://nodejs.org/en/download/).
 
-Có rất nhiều [thư viện Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) mà bạn có thể tích hợp với Alchemy, tuy nhiên, chúng tôi khuyên bạn nên sử dụng [Alchemy Web3](https://docs.alchemy.com/reference/api-overview), một giải pháp thay thế trực tiếp cho Web3.js, được xây dựng và cấu hình để hoạt động liền mạch với Alchemy. Điều này mang lại nhiều lợi thế như tự động thử lại và hỗ trợ WebSocket mạnh mẽ.
+Có rất nhiều [thư viện Web3](/developers/docs/apis/javascript/) bạn có thể tích hợp với Alchemy, tuy nhiên, chúng tôi khuyên bạn nên sử dụng [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), một sự thay thế trực tiếp cho Web3.js, được xây dựng và cấu hình để hoạt động trơn tru với Alchemy. Điều này mang lại nhiều lợi thế như tự động thử lại và hỗ trợ WebSocket mạnh mẽ.
 
 Để cài đặt AlchemyWeb3.js, **hãy điều hướng đến thư mục dự án của bạn** và chạy:
 
@@ -97,19 +92,16 @@ const web3 = createAlchemyWeb3(
   "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 )
 ```
+Bây giờ để bắt tay vào thực hành một chút lập trình Web3, chúng ta sẽ viết một tập lệnh đơn giản in ra số khối mới nhất từ Mạng chính Ethereum.
 
-## 5. Viết tập lệnh Web3 đầu tiên của bạn! {#write-your-first-web3-script}
-
-Bây giờ, để bắt tay vào thực hành một chút lập trình Web3, chúng ta sẽ viết một tập lệnh đơn giản in ra số khối mới nhất từ Mạng chính Ethereum.
-
-**1. Nếu bạn chưa làm, trong terminal của bạn, hãy tạo một thư mục dự án mới và cd vào đó:**
+**1. Nếu bạn chưa làm, trong terminal của bạn hãy tạo một thư mục dự án mới và cd vào đó:**
 
 ```
 mkdir web3-example
 cd web3-example
 ```
 
-**2. Cài đặt phần phụ thuộc Web3 của Alchemy (hoặc bất kỳ Web3 nào) vào dự án của bạn nếu bạn chưa cài đặt:**
+**2. Cài đặt phụ thuộc Web3 của Alchemy (hoặc bất kỳ Web3 nào) vào dự án của bạn nếu bạn chưa cài đặt:**
 
 ```
 npm install @alch/alchemy-web3
@@ -117,7 +109,7 @@ npm install @alch/alchemy-web3
 
 **3. Tạo một tệp có tên `index.js` và thêm nội dung sau:**
 
-> Cuối cùng, bạn nên thay thế `demo` bằng khóa API HTTP Alchemy của bạn.
+> Cuối cùng, bạn nên thay thế `demo` bằng khóa API HTTP Alchemy của mình.
 
 ```js
 async function main() {
@@ -129,7 +121,7 @@ async function main() {
 main()
 ```
 
-Bạn chưa quen với các khái niệm bất đồng bộ (async)? Hãy xem [bài viết trên Medium](https://medium.com/better-programming/understanding-async-await-in-javascript-1d81bb079b2c) này.
+Bạn chưa quen với các khái niệm async? Hãy xem [bài viết trên Medium](https://medium.com/better-programming/understanding-async-await-in-javascript-1d81bb079b2c) này.
 
 **4. Chạy nó trong terminal của bạn bằng node**
 
@@ -137,14 +129,14 @@ Bạn chưa quen với các khái niệm bất đồng bộ (async)? Hãy xem [b
 node index.js
 ```
 
-**5. Bây giờ bạn sẽ thấy đầu ra số khối mới nhất trong bảng điều khiển của mình!**
+**5. Bây giờ bạn sẽ thấy số khối mới nhất được xuất ra trong bảng điều khiển của mình!**
 
 ```
-Số khối mới nhất là 11043912
+The latest block number is 11043912
 ```
 
 **Tuyệt vời! Chúc mừng! Bạn vừa viết tập lệnh Web3 đầu tiên của mình bằng Alchemy 🎉**
 
-Bạn chưa biết phải làm gì tiếp theo? Hãy thử triển khai hợp đồng thông minh đầu tiên của bạn và bắt tay vào thực hành một chút lập trình Solidity trong [Hướng dẫn Hợp đồng thông minh Hello World](https://www.alchemy.com/docs/hello-world-smart-contract) của chúng tôi, hoặc kiểm tra kiến thức về bảng điều khiển của bạn với [Ứng dụng Demo Bảng điều khiển](https://docs.alchemyapi.io/tutorials/demo-app)!
+Bạn không chắc chắn nên làm gì tiếp theo? Hãy thử triển khai hợp đồng thông minh đầu tiên của bạn và bắt tay vào thực hành một chút lập trình Solidity trong [Hướng dẫn Hợp đồng thông minh Hello World](/developers/tutorials/hello-world-smart-contract/) của chúng tôi, hoặc tiếp tục khám phá [tài liệu của Alchemy](https://www.alchemy.com/docs/) để xem thêm các ví dụ.
 
-_[Đăng ký Alchemy miễn phí](https://auth.alchemy.com/), xem [tài liệu](https://www.alchemy.com/docs/) của chúng tôi và để cập nhật những tin tức mới nhất, hãy theo dõi chúng tôi trên [Twitter](https://twitter.com/AlchemyPlatform)_.
+_[Đăng ký Alchemy miễn phí](https://auth.alchemy.com/), xem [tài liệu](https://www.alchemy.com/docs/) của chúng tôi và để cập nhật tin tức mới nhất, hãy theo dõi chúng tôi trên [Twitter](https://twitter.com/AlchemyPlatform)_.
