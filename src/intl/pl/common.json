@@ -231,6 +231,8 @@
   "less": "Mniej",
   "light-mode": "Jasny",
   "light-mode-aria-label": "Przełącz na tryb jasny",
+  "link-external-assistive-text": "(otwiera się w nowej karcie)",
+  "link-mailto-assistive-text": "(otwiera klienta poczty e-mail)",
   "loading": "Ładowanie...",
   "loading-error-refresh": "Błąd, proszę odświeżyć.",
   "meetups": "Spotkania",
