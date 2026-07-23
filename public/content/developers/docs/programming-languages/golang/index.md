@@ -65,6 +65,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _Light Ethereum Subprotocol's Geth implementation_
 - [Ethereum Golang SDK](https://github.com/everFinance/goether) - _A simple Ethereum wallet implementation and utilities in Golang_
 - [Covalent Golang SDK](https://github.com/covalenthq/covalent-api-sdk-go) - _Efficient blockchain data access via Go SDK for 200+ blockchains_
+- [browser-web3-signer](https://github.com/nikicat/browser-web3-signer) - _A CLI and libraries to let you sign EVM transactions, messages, and EIP-712 typed data using your own browser wallet_
 
 Looking for more resources? Check out [ethereum.org/developers](/developers/)
 

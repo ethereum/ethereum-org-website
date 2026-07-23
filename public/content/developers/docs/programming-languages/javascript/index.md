@@ -64,6 +64,7 @@ There are also plenty of other things going on in the land of Ethereum JavaScrip
 - libraries of wallet utilities.
 - tools to generate, import, and export Ethereum keys.
 - an implementation of the `merkle-patricia-tree` – a data structure outlined in the Ethereum yellow paper.
+- [browser-web3-signer](https://github.com/nikicat/browser-web3-signer) - _A CLI and libraries to let you sign EVM transactions, messages, and EIP-712 typed data using your own browser wallet_
 
 Dig into whatever interests you most over at the [EthereumJS repo](https://github.com/ethereumjs)
 

@@ -53,6 +53,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Reth](https://github.com/paradigmxyz/reth) Reth (short for Rust Ethereum) is a new Ethereum full-node implementation
 - [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _A curated collection of projects in the Ethereum ecosystem written in Rust_
 - [Stylus](https://github.com/OffchainLabs/stylus) - _Rust SDK for building smart contracts on Arbitrum_
+- [browser-web3-signer](https://github.com/nikicat/browser-web3-signer) - _A CLI and libraries to let you sign EVM transactions, messages, and EIP-712 typed data using your own browser wallet_
 
 Looking for more resources? Check out [ethereum.org/developers.](/developers/)
 
