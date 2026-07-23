@@ -29,14 +29,11 @@ stalled crawler can go unnoticed for months (the index simply serves stale conte
 weekly GitHub Action guards against this:
 
 - Workflow: `.github/workflows/algolia-index-healthcheck.yml` (Saturdays 09:00 UTC, after
-  the Friday crawl). Script: `src/scripts/algolia-healthcheck.mjs`.
-- It fails and pings the Discord alerts channel if any of these are true:
-  - the **crawler is blocked** or its last successful crawl is older than ~9 days
-    (Crawler REST API);
-  - the live index's **locale count** differs from the expected 25, or its **record
-    count** falls below a floor (search API);
-  - a **settled content page** (published more than ~21 days ago, so past one crawl
-    cycle) is not searchable — a direct "is search up to date?" probe.
+  the Friday crawl).
+- It pings the Discord alerts channel if, per the Crawler REST API, the **crawler is
+  blocked** or its **last successful crawl is older than ~9 days** (i.e. crawling has
+  stopped running). That's the failure mode that actually bites — a blocked crawler
+  silently serving a stale index.
 
 ### A blocked crawler after a locale reduction is a known false alarm
 
@@ -52,13 +49,9 @@ Editor.
 
 Set on the repository (Settings → Secrets and variables → Actions):
 
-- `NEXT_PUBLIC_ALGOLIA_APP_ID`, `NEXT_PUBLIC_ALGOLIA_SEARCH_KEY` — the public search
-  credentials (same values the site uses).
 - `ALGOLIA_CRAWLER_USER_ID`, `ALGOLIA_CRAWLER_API_KEY` — a Crawler REST API key
-  (crawler.algolia.com → account → API key). Optional: without them the crawler
-  status/freshness check is skipped and only the search-index checks run.
+  (crawler.algolia.com → account → API key).
 - `DISCORD_ALERTS_WEBHOOK_URL` — webhook for the internal alerts channel.
-- Variable `ALGOLIA_BASE_SEARCH_INDEX_NAME` (optional) — defaults to `ethereumorg-2`.
 
 ## Resources
 
