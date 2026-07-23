@@ -1,0 +1,44 @@
+name: Algolia Index Health Check
+
+# Weekly check that site search is actually up to date. Runs the morning after the
+# Friday 16:20 UTC DocSearch crawl and alerts Discord if the crawler is blocked/stale
+# or the live index has drifted. See docs/site-search.md and src/scripts/algolia-healthcheck.mjs.
+
+on:
+  schedule:
+    - cron: "0 9 * * SAT" # Saturday 09:00 UTC, after the Friday crawl has finished
+  workflow_dispatch: # Run on demand to verify a fix
+
+permissions:
+  contents: read
+
+jobs:
+  healthcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20
+
+      - name: Run Algolia health check
+        id: check
+        env:
+          ALGOLIA_APP_ID: ${{ secrets.NEXT_PUBLIC_ALGOLIA_APP_ID }}
+          ALGOLIA_SEARCH_KEY: ${{ secrets.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY }}
+          ALGOLIA_INDEX: ${{ vars.ALGOLIA_BASE_SEARCH_INDEX_NAME || 'ethereumorg-2' }}
+          CRAWLER_USER_ID: ${{ secrets.ALGOLIA_CRAWLER_USER_ID }}
+          CRAWLER_API_KEY: ${{ secrets.ALGOLIA_CRAWLER_API_KEY }}
+          CRAWLER_NAME: ethereumorg-2
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: node src/scripts/algolia-healthcheck.mjs
+
+      - name: Alert Discord on failure
+        if: steps.check.outputs.unhealthy == 'true'
+        uses: ./.github/actions/discord-notify
+        with:
+          webhook: ${{ secrets.DISCORD_ALERTS_WEBHOOK_URL }}
+          message: ${{ steps.check.outputs.report }}
