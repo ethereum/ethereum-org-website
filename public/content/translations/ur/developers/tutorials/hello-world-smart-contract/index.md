@@ -11,7 +11,7 @@ published: 2021-03-31
 
 اگر آپ بلاک چین ڈیولپمنٹ میں نئے ہیں اور نہیں جانتے کہ کہاں سے شروع کرنا ہے، یا اگر آپ صرف یہ سمجھنا چاہتے ہیں کہ سمارٹ کنٹریکٹس کو کیسے تعینات کرنا ہے اور ان کے ساتھ کیسے تعامل کرنا ہے، تو یہ گائیڈ آپ کے لیے ہے۔ ہم ایک ورچوئل والیٹ [میٹاماسک](https://metamask.io/)، [Solidity](https://docs.soliditylang.org/en/v0.8.0/)، [Hardhat](https://hardhat.org/)، اور [Alchemy](https://www.alchemy.com/eth) کا استعمال کرتے ہوئے Sepolia ٹیسٹ نیٹ ورک پر ایک سادہ سمارٹ کنٹریکٹ بنانے اور تعینات کرنے کے عمل سے گزریں گے (اگر آپ ابھی تک ان میں سے کسی کا مطلب نہیں سمجھتے تو پریشان نہ ہوں، ہم اس کی وضاحت کریں گے)۔
 
-اس ٹیوٹوریل کے [حصہ 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) میں ہم دیکھیں گے کہ ایک بار جب ہمارا سمارٹ کنٹریکٹ یہاں تعینات ہو جائے تو ہم اس کے ساتھ کیسے تعامل کر سکتے ہیں، اور [حصہ 3](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) میں ہم اس بات کا احاطہ کریں گے کہ اسے Etherscan پر کیسے شائع کیا جائے۔
+اس ٹیوٹوریل کے [حصہ 2](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract) میں ہم دیکھیں گے کہ ایک بار جب ہمارا سمارٹ کنٹریکٹ یہاں تعینات ہو جائے تو ہم اس کے ساتھ کیسے تعامل کر سکتے ہیں، اور [حصہ 3](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan) میں ہم اس بات کا احاطہ کریں گے کہ اسے Etherscan پر کیسے شائع کیا جائے۔
 
 اگر آپ کے کسی بھی موقع پر سوالات ہوں تو بلا جھجھک [Alchemy ڈسکارڈ](https://discord.gg/gWuC7zB) میں رابطہ کریں!
 
@@ -59,22 +59,22 @@ published: 2021-03-31
 >
 > شکر ہے! ہماری نقلی رقم پوری موجود ہے <Emoji text=":money_mouth_face:" size={1} />۔
 
-## مرحلہ 6: اپنا پروجیکٹ شروع کریں {#step-6}
+## مرحلہ 6: اپنا پروجیکٹ انیشلائز کریں {#step-6}
 
-سب سے پہلے، ہمیں اپنے پروجیکٹ کے لیے ایک فولڈر بنانا ہوگا۔ اپنی کمانڈ لائن پر جائیں اور ٹائپ کریں:
+سب سے پہلے، ہمیں اپنے پروجیکٹ کے لیے ایک فولڈر بنانے کی ضرورت ہوگی۔ اپنی کمانڈ لائن پر جائیں اور ٹائپ کریں:
 
 ```
 mkdir hello-world
 cd hello-world
 ```
 
-اب جب کہ ہم اپنے پروجیکٹ فولڈر کے اندر ہیں، ہم پروجیکٹ کو شروع کرنے کے لیے `npm init` استعمال کریں گے۔ اگر آپ کے پاس پہلے سے npm انسٹال نہیں ہے، تو [ان ہدایات](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) پر عمل کریں (ہمیں Node.js کی بھی ضرورت ہوگی لہذا اسے بھی ڈاؤن لوڈ کریں!)۔
+اب جب کہ ہم اپنے پروجیکٹ فولڈر کے اندر ہیں، ہم پروجیکٹ کو انیشلائز کرنے کے لیے `npm init` کا استعمال کریں گے۔ اگر آپ کے پاس پہلے سے npm انسٹال نہیں ہے، تو [Node.js کی انسٹالیشن کی ہدایات](https://nodejs.org/en/download/) پر عمل کریں (ہمیں اس ٹیوٹوریل کے لیے Node.js اور npm کی ضرورت ہوگی)۔
 
 ```
 npm init
 ```
 
-اس سے کوئی خاص فرق نہیں پڑتا کہ آپ انسٹالیشن کے سوالات کا کیا جواب دیتے ہیں، حوالہ کے لیے ہم نے اسے اس طرح کیا ہے:
+اس سے کوئی خاص فرق نہیں پڑتا کہ آپ انسٹالیشن کے سوالات کے کیا جوابات دیتے ہیں، حوالے کے لیے ہم نے اسے اس طرح کیا ہے:
 
 ```
 package name: (hello-world)
@@ -94,15 +94,14 @@ About to write to /Users/.../.../.../hello-world/package.json:
   "description": "hello world smart contract",
   "main": "index.js",
   "scripts": {
-     "test": "echo \"Error: no test specified\" && exit 1"
+     "test": "echo \\"Error: no test specified\\" && exit 1"
   },
   "author": "",
   "license": "ISC"
 }
 ```
 
-<span dir="ltr">package.json</span> کو منظور کریں اور ہم تیار ہیں!
-
+<span dir="ltr">package.json</span> کو منظور کریں اور ہم آگے بڑھنے کے لیے تیار ہیں!
 ## مرحلہ 7: [Hardhat](https://hardhat.org/getting-started/#overview) ڈاؤن لوڈ کریں {#step-7}
 
 Hardhat آپ کے ایتھیریم سافٹ ویئر کو مرتب کرنے، تعینات کرنے، ٹیسٹ کرنے اور ڈیبگ کرنے کے لیے ایک ڈیولپمنٹ ماحول ہے۔ یہ لائیو چین پر تعینات کرنے سے پہلے مقامی طور پر سمارٹ کنٹریکٹس اور غیر مرکزی ایپلی کیشنز (dapps) بناتے وقت ڈیولپرز کی مدد کرتا ہے۔
@@ -350,11 +349,11 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 مبارک ہو! آپ نے ابھی ایتھیریم چین پر ایک سمارٹ کنٹریکٹ تعینات کیا ہے 🎉
 
-یہ سمجھنے کے لیے کہ اندرونی طور پر کیا ہو رہا ہے، آئیے اپنے [Alchemy ڈیش بورڈ](https://dashboard.alchemyapi.io/explorer) میں ایکسپلورر ٹیب پر جائیں۔ اگر آپ کے پاس متعدد Alchemy ایپس ہیں تو یقینی بنائیں کہ ایپ کے لحاظ سے فلٹر کریں اور <span dir="ltr">“Hello World”</span> کو منتخب کریں۔
+یہ سمجھنے کے لیے کہ اندرونی طور پر کیا ہو رہا ہے، آئیے اپنے [Alchemy ڈیش بورڈ](https://dashboard.alchemy.com/explorer) میں ایکسپلورر ٹیب پر جائیں۔ اگر آپ کے پاس متعدد Alchemy ایپس ہیں تو یقینی بنائیں کہ ایپ کے لحاظ سے فلٹر کریں اور <span dir="ltr">“Hello World”</span> کو منتخب کریں۔
 ![hello world explorer](./hello-world-explorer.png)
 
-یہاں آپ کو مٹھی بھر جے سن آر پی سی (JSON-RPC) کالز نظر آئیں گی جو Hardhat/Ethers نے ہمارے لیے اندرونی طور پر اس وقت کیں جب ہم نے `.deploy()` فنکشن کو کال کیا۔ یہاں ذکر کرنے کے لیے دو اہم کالز [`eth_sendRawTransaction`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-send-raw-transaction) ہیں، جو دراصل ہمارے کنٹریکٹ کو Sepolia چین پر لکھنے کی درخواست ہے، اور [`eth_getTransactionByHash`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-get-transaction-by-hash) جو ہیش دیے جانے پر ہماری ٹرانزیکشن کے بارے میں معلومات پڑھنے کی درخواست ہے (ٹرانزیکشنز کے وقت ایک عام نمونہ)۔ ٹرانزیکشنز بھیجنے کے بارے میں مزید جاننے کے لیے، [Web3 کا استعمال کرتے ہوئے ٹرانزیکشنز بھیجنے](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) پر یہ ٹیوٹوریل دیکھیں۔
+یہاں آپ کو مٹھی بھر جے سن آر پی سی (JSON-RPC) کالز نظر آئیں گی جو Hardhat/Ethers نے ہمارے لیے اندرونی طور پر اس وقت کیں جب ہم نے `.deploy()` فنکشن کو کال کیا۔ یہاں ذکر کرنے کے لیے دو اہم کالز [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction) ہیں، جو دراصل ہمارے کنٹریکٹ کو Sepolia چین پر لکھنے کی درخواست ہے، اور [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash) جو ہیش دیے جانے پر ہماری ٹرانزیکشن کے بارے میں معلومات پڑھنے کی درخواست ہے (ٹرانزیکشنز کے وقت ایک عام نمونہ)۔ ٹرانزیکشنز بھیجنے کے بارے میں مزید جاننے کے لیے، [Web3 کا استعمال کرتے ہوئے ٹرانزیکشنز بھیجنے](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) پر یہ ٹیوٹوریل دیکھیں۔
 
-اس ٹیوٹوریل کے حصہ 1 کے لیے بس اتنا ہی، حصہ 2 میں ہم دراصل اپنے ابتدائی پیغام کو اپ ڈیٹ کر کے [اپنے سمارٹ کنٹریکٹ کے ساتھ تعامل کریں گے](https://www.alchemy.com/docs/interacting-with-a-smart-contract)، اور حصہ 3 میں ہم [اپنے سمارٹ کنٹریکٹ کو Etherscan پر شائع کریں گے](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) تاکہ سب کو معلوم ہو سکے کہ اس کے ساتھ کیسے تعامل کرنا ہے۔
+اس ٹیوٹوریل کے حصہ 1 کے لیے بس اتنا ہی، حصہ 2 میں ہم دراصل اپنے ابتدائی پیغام کو اپ ڈیٹ کر کے [اپنے سمارٹ کنٹریکٹ کے ساتھ تعامل کریں گے](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract)، اور حصہ 3 میں ہم [اپنے سمارٹ کنٹریکٹ کو Etherscan پر شائع کریں گے](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan) تاکہ سب کو معلوم ہو سکے کہ اس کے ساتھ کیسے تعامل کرنا ہے۔
 
 **کیا آپ Alchemy کے بارے میں مزید جاننا چاہتے ہیں؟ ہماری [ویب سائٹ](https://www.alchemy.com/eth) دیکھیں۔ کیا آپ کبھی کوئی اپ ڈیٹ نہیں چھوڑنا چاہتے؟ ہمارے نیوز لیٹر کو [یہاں](https://www.alchemy.com/newsletter) سبسکرائب کریں! ہمارے [ڈسکارڈ](https://discord.gg/u72VCg3) میں بھی ضرور شامل ہوں۔**۔

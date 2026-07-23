@@ -72,15 +72,18 @@ Ukubwa wa hifadhidata na kasi ya usawazishaji wa awali inategemea mteja aliyecha
 Pia hakikisha muunganisho wako wa intaneti hauzuiliwi na [kikomo cha kipimo data](https://wikipedia.org/wiki/Data_cap). Inapendekezwa kutumia muunganisho usio na kikomo kwa kuwa usawazishaji wa awali na data inayotangazwa kwenye mtandao inaweza kuzidi kikomo chako.
 
 ##### Mfumo wa uendeshaji
+
 Wateja wote wanaauni mifumo mikuu ya uendeshaji - Linux, macOS, Windows. Hii inamaanisha unaweza kuendesha nodi kwenye kompyuta za kawaida za mezani au mashine za seva zilizo na mfumo wa uendeshaji (OS) unaokufaa zaidi. Hakikisha OS yako imesasishwa ili kuepuka matatizo yanayoweza kutokea na udhaifu wa usalama.
 
 ##### Mahitaji ya chini
+
 - CPU yenye core 2+
 - RAM ya GB 8
 - SSD ya TB 2
 - Kipimo data cha MBit/s 10+
 
 ##### Vipimo vilivyopendekezwa
+
 - CPU ya haraka yenye core 4+
 - RAM ya GB 16+
 - SSD ya haraka yenye TB 2+
@@ -149,6 +152,7 @@ Maagizo ya kusakinisha kila mteja yametolewa katika nyaraka zilizounganishwa kat
 Hapa kuna kurasa za matoleo ya wateja ambapo unaweza kupata binaries zao zilizojengwa mapema au maagizo juu ya usakinishaji:
 
 ##### Wateja wa utekelezaji
+
 - [Besu](https://github.com/hyperledger/besu/releases)
 - [Erigon](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads)
@@ -158,6 +162,7 @@ Hapa kuna kurasa za matoleo ya wateja ambapo unaweza kupata binaries zao zilizoj
 Inafaa pia kuzingatia kwamba anuwai ya wateja ni [suala kwenye tabaka la utekelezaji](/developers/docs/nodes-and-clients/client-diversity/#execution-layer). Inapendekezwa kwamba wasomaji wafikirie kuendesha kiteja cha utekelezaji cha wachache.
 
 ##### Wateja wa mwafaka
+
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
 - [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (Haitoi binary iliyojengwa mapema, picha ya Docker pekee au kujengwa kutoka kwa chanzo)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
@@ -169,6 +174,7 @@ Inafaa pia kuzingatia kwamba anuwai ya wateja ni [suala kwenye tabaka la utekele
 [Angalia matumizi ya hivi punde ya mteja wa mtandao](https://clientdiversity.org/) na ujifunze zaidi kuhusu [anuwai ya wateja](/developers/docs/nodes-and-clients/client-diversity).
 
 ##### Kuthibitisha programu
+
 Unapopakua programu kutoka kwenye intaneti, inapendekezwa kuthibitisha uadilifu wake. Hatua hii ni ya hiari lakini hasa kwa kipande muhimu cha miundombinu kama mteja wa Ethereum, ni muhimu kufahamu vekta zinazoweza kushambulia na kuziepuka. Ikiwa ulipakua binary iliyojengwa mapema, unahitaji kuiamini na kuhatarisha kwamba mshambuliaji anaweza kubadilisha inayoweza kutekelezwa kwa mbaya.
 
 Wasanidi programu hutia saini binaries zilizotolewa na funguo zao za PGP ili uweze kuthibitisha kwa njia ya kriptografia kuwa unaendesha programu haswa waliyounda. Unahitaji tu kupata funguo za umma zinazotumiwa na wasanidi programu, ambazo zinaweza kupatikana kwenye kurasa za matoleo ya mteja au katika nyaraka. Baada ya kupakua toleo la mteja na sahihi yake, unaweza kutumia utekelezaji wa PGP, k.m., [GnuPG](https://gnupg.org/download/index.html) ili kuzithibitisha kwa urahisi. Angalia mafunzo kuhusu kuthibitisha programu huria kwa kutumia `gpg` kwenye [Linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) au [Windows/macOS](https://freedom.press/training/verifying-open-source-software/).
@@ -233,6 +239,7 @@ Tafadhali kumbuka kuwa huu ni mfano wa msingi tu, mipangilio mingine yote itawek
 > Kumbuka kwamba mikwaju ya nyuma `\` katika mifano ni kwa madhumuni ya uumbizaji tu; bendera za usanidi zinaweza kufafanuliwa katika mstari mmoja.
 
 ##### Kuendesha Besu
+
 Mfano huu unaanzisha Besu kwenye Mtandao Mkuu, unahifadhi data ya mnyororo wa vitalu katika umbizo la chaguo-msingi kwenye `/data/ethereum`, unawezesha JSON-RPC na RPC ya Injini kwa kuunganisha mteja wa mwafaka. API ya Injini inathibitishwa na tokeni `jwtsecret` na simu tu kutoka `localhost` zinaruhusiwa.
 
 ```sh
@@ -254,6 +261,7 @@ besu --Xlauncher
 [Nyaraka za Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/) zina chaguo za ziada na maelezo ya usanidi.
 
 ##### Kuendesha Erigon
+
 Mfano huu unaanzisha Erigon kwenye Mtandao Mkuu, unahifadhi data ya mnyororo wa vitalu kwenye `/data/ethereum`, unawezesha JSON-RPC, unafafanua ni nafasi gani za majina zinaruhusiwa na unawezesha uthibitishaji kwa kuunganisha mteja wa mwafaka ambao unafafanuliwa na njia ya `jwtsecret`.
 
 ```sh
@@ -266,6 +274,7 @@ erigon --chain mainnet \
 Erigon kwa chaguo-msingi hufanya usawazishaji kamili na HDD ya 8GB ambayo itasababisha zaidi ya 2TB ya data ya kumbukumbu. Hakikisha `datadir` inaelekeza kwenye diski yenye nafasi ya kutosha ya bure au angalia bendera ya `--prune` ambayo inaweza kupunguza aina tofauti za data. Angalia `--help` ya Erigon ili kujifunza zaidi.
 
 ##### Kuendesha Geth
+
 Mfano huu unaanzisha Geth kwenye Mtandao Mkuu, unahifadhi data ya mnyororo wa vitalu kwenye `/data/ethereum`, unawezesha JSON-RPC na unafafanua ni nafasi gani za majina zinaruhusiwa. Pia inawezesha uthibitishaji kwa kuunganisha mteja wa mwafaka ambao unahitaji njia ya `jwtsecret` na pia chaguo linalofafanua ni miunganisho gani inaruhusiwa, katika mfano wetu tu kutoka `localhost`.
 
 ```sh
@@ -280,6 +289,7 @@ geth --mainnet \
 Angalia [nyaraka kwa chaguo zote za usanidi](https://geth.ethereum.org/docs/fundamentals/command-line-options) na ujifunze zaidi kuhusu [kuendesha Geth na mteja wa mwafaka](https://geth.ethereum.org/docs/getting-started/consensus-clients).
 
 ##### Kuendesha Nethermind
+
 Nethermind inatoa [chaguo mbalimbali za usakinishaji](https://docs.nethermind.io/get-started/installing-nethermind). Kifurushi kinakuja na binaries mbalimbali, ikiwa ni pamoja na Kizindua chenye usanidi unaoongozwa, ambacho kitakusaidia kuunda usanidi kwa mwingiliano. Vinginevyo, unapata Mwendeshaji ambayo ni inayoweza kutekelezwa yenyewe na unaweza kuiendesha tu na bendera za usanidi. JSON-RPC imewezeshwa kwa chaguo-msingi.
 
 ```sh
@@ -293,6 +303,7 @@ Nyaraka za Nethermind zinatoa [mwongozo kamili](https://docs.nethermind.io/get-s
 Kiteja cha utekelezaji kitaanzisha kazi zake za msingi, miisho iliyochaguliwa, na kuanza kutafuta rika. Baada ya kugundua rika kwa mafanikio, mteja anaanza usawazishaji. Kiteja cha utekelezaji kitasubiri muunganisho kutoka kwa mteja wa mwafaka. Data ya sasa ya mnyororo wa vitalu itapatikana mara tu mteja atakaposawazishwa kwa mafanikio kwa hali ya sasa.
 
 ##### Kuendesha Reth
+
 Mfano huu unaanzisha Reth kwenye Mtandao Mkuu, kwa kutumia eneo la data la chaguo-msingi. Inawezesha uthibitishaji wa JSON-RPC na RPC ya Injini kwa kuunganisha mteja wa mwafaka ambao unafafanuliwa na njia ya `jwtsecret`, na simu tu kutoka `localhost` zinaruhusiwa.
 
 ```sh
@@ -317,6 +328,7 @@ Unapoanzisha Nodi ya Kinara kwenye mtandao wa majaribio, unaweza kuokoa muda mwi
 #### Kuendesha mteja wa mwafaka {#running-a-consensus-client}
 
 ##### Kuendesha Lighthouse
+
 Kabla ya kuendesha Lighthouse, jifunze zaidi kuhusu jinsi ya kuisakinisha na kuisanidi katika [Kitabu cha Lighthouse](https://lighthouse-book.sigmaprime.io/installation.html).
 
 ```sh
@@ -329,6 +341,7 @@ lighthouse beacon_node \
 ```
 
 ##### Kuendesha Lodestar
+
 Sakinisha programu ya Lodestar kwa kuikusanya au kupakua picha ya Docker. Jifunze zaidi katika [nyaraka](https://chainsafe.github.io/lodestar/) na [mwongozo wa usanidi](https://hackmd.io/@philknows/rk5cDvKmK) wa kina zaidi.
 
 ```sh
@@ -341,6 +354,7 @@ lodestar beacon \
 ```
 
 ##### Kuendesha Nimbus
+
 Nimbus inakuja na wateja wote wa mwafaka na utekelezaji. Inaweza kuendeshwa kwenye vifaa mbalimbali hata vyenye nguvu ndogo sana ya kompyuta.
 Baada ya [kusakinisha vitegemezi na Nimbus yenyewe](https://nimbus.guide/quick-start.html), unaweza kuendesha mteja wake wa mwafaka:
 
@@ -353,6 +367,7 @@ nimbus_beacon_node \
 ```
 
 ##### Kuendesha Prysm
+
 Prysm inakuja na hati ambayo inaruhusu usakinishaji rahisi wa kiotomatiki. Maelezo yanaweza kupatikana katika [nyaraka za Prysm](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
 ```sh
@@ -364,6 +379,7 @@ Prysm inakuja na hati ambayo inaruhusu usakinishaji rahisi wa kiotomatiki. Maele
 ```
 
 ##### Kuendesha Teku
+
 ```sh
 teku --network mainnet \
     --data-path "/data/ethereum" \
@@ -371,7 +387,7 @@ teku --network mainnet \
     --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
-Wakati mteja wa mwafaka anapounganishwa na kiteja cha utekelezaji ili kusoma mkataba wa amana na kutambua wathibitishaji, pia huunganishwa na rika zingine za Nodi ya Kinara na kuanza kusawazisha nafasi za mwafaka kutoka mwanzo. Mara tu Nodi ya Kinara inapofikia kipindi cha sasa, API ya Kinara inakuwa inatumika kwa wathibitishaji wako. Jifunze zaidi kuhusu [API za Nodi ya Kinara](https://eth2docs.vercel.app/).
+Wakati mteja wa mwafaka anapounganishwa na kiteja cha utekelezaji ili kusoma mkataba wa amana na kutambua wathibitishaji, pia huunganishwa na rika zingine za Nodi ya Kinara na kuanza kusawazisha nafasi za mwafaka kutoka mwanzo. Mara tu Nodi ya Kinara inapofikia kipindi cha sasa, API ya Kinara inakuwa inatumika kwa wathibitishaji wako. Jifunze zaidi kuhusu [API za Nodi ya Kinara](https://ethereum.github.io/beacon-APIs).
 
 ### Kuongeza Wathibitishaji {#adding-validators}
 
@@ -454,7 +470,7 @@ Kama sehemu ya ufuatiliaji wako, hakikisha unafuatilia utendaji wa mashine yako.
 - [Miongozo ya Uwekezaji Dhamana ya Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, inasasishwa mara kwa mara_
 - [Mwongozo | Jinsi ya kusanidi mthibitishaji kwa uwekaji dhamana wa Ethereum kwenye Mtandao Mkuu](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, inasasishwa mara kwa mara_
 - [Miongozo ya EthStaker kuhusu kuendesha wathibitishaji kwenye mitandao ya majaribio](https://github.com/remyroy/ethstaker#guides) – _EthStaker, inasasishwa mara kwa mara_
-- [Sampuli ya programu ya AWS Blockchain Node Runner kwa Nodi za Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) - _AWS, inasasishwa mara kwa mara_
+- [Sampuli ya programu ya AWS Blockchain Node Runner kwa Nodi za Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/blueprints/ethereum) - _AWS, inasasishwa mara kwa mara_
 - [Maswali Yanayoulizwa Mara kwa Mara ya Unganisho kwa waendeshaji wa nodi](https://notes.ethereum.org/@launchpad/node-faq-merge) - _Julai 2022_
 - [Kuchambua mahitaji ya vifaa ili kuwa nodi kamili iliyothibitishwa ya Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 Septemba 2018_
 - [Kuendesha Nodi Kamili za Ethereum: Mwongozo kwa Wasio na Motisha Sana](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 Novemba 2019_

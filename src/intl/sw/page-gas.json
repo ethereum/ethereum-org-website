@@ -32,7 +32,7 @@
   "page-gas-attack-of-the-cryptokitties-text": "Mnamo Novemba 2017, mradi maarufu wa CryptoKitties ulizinduliwa. Kuongezeka kwake kwa umaarufu kwa haraka kulisababisha msongamano mkubwa wa mtandao na ada za juu sana za gesi. Changamoto zilizosababishwa na CryptoKitties ziliharakisha uharaka wa kutafuta suluhisho za kuongeza uwezo wa Ethereum.",
   "page-gas-why-do-we-need-gas-header": "Kwa nini tunahitaji gesi?",
   "page-gas-why-do-we-need-gas-text": "Gesi ni kipengele muhimu katika kuweka Ethereum salama na kuchakata miamala. Gesi inasaidia kwa njia nyingi:",
-  "page-gas-benefits-1-description": "Gesi huifanya Ethereum <a href=\"/glossary/#anti-sybil\">kuhimili mashambulizi ya sybil</a> kwa kuzuia wahusika wabaya kulemea mtandao kwa shughuli za udanganyifu.",
+  "page-gas-benefits-1-description": "Gesi huifanya Ethereum <a href=\"/glossary/#anti-sybil\">kustahimili Sybil</a> kwa kuzuia watu wenye nia mbaya kulemea mtandao kwa shughuli za udanganyifu.",
   "page-gas-benefits-2-description": "Kwa sababu ukokotoaji unagharimu gesi, kutuma miamala ghali ya taka kwenye Ethereum, iwe kwa bahati mbaya au kwa nia mbaya, kunakatishwa tamaa kifedha.",
   "page-gas-benefits-3-description": "Kikomo kigumu cha kiasi cha ukokotoaji kinachoweza kufanywa kwa wakati mmoja huzuia Ethereum kulemewa, na kusaidia kuhakikisha mtandao unapatikana kila wakati.",
   "page-gas-how-is-gas-calculated-header": "Gesi inakokotolewaje?",

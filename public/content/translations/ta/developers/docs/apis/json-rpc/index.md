@@ -1887,7 +1887,7 @@ web3.sha3("Print(uint256)")
 
 ## தொடர்புடைய தலைப்புகள் {#related-topics}
 
-- [ஜேசன்-ஆர்பிசி விவரக்குறிப்பு](http://www.jsonrpc.org/specification)
+- [ஜேசன்-ஆர்பிசி விவரக்குறிப்பு](https://www.jsonrpc.org/specification)
 - [கணுக்கள் மற்றும் கிளையண்டுகள்](/developers/docs/nodes-and-clients/)
 - [JavaScript APIகள்](/developers/docs/apis/javascript/)
 - [பின்தள APIகள்](/developers/docs/apis/backend/)

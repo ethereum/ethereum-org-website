@@ -34,7 +34,7 @@ Do ponto de vista técnico, o livro-razão de uma criptomoeda como o Bitcoin pod
 retorna um erro. Portanto, pode-se definir formalmente:
 
 ```
-APPLY(S,TX) -> S' ou ERROR
+APPLY(S,TX) -> S' or ERROR
 ```
 
 No sistema bancário definido acima:

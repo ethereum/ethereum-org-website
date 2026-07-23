@@ -1,4 +1,4 @@
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import { HStack, VStack } from "@/components/ui/flex"
 
@@ -7,7 +7,6 @@ import { numberToPercent } from "@/lib/utils/numbers"
 import { screens } from "@/lib/utils/screen"
 
 import { useMediaQuery } from "@/hooks/useMediaQuery"
-import { useTranslation } from "@/hooks/useTranslation"
 
 type QuizSummaryProps = {
   numberOfCorrectAnswers: number
@@ -23,7 +22,7 @@ export const QuizSummary = ({
   isPassingScore,
 }: QuizSummaryProps) => {
   const locale = useLocale()
-  const { t } = useTranslation("learn-quizzes")
+  const t = useTranslations("learn-quizzes")
 
   const [largerThanMobile] = useMediaQuery([`(min-width: ${screens.sm})`])
 
@@ -42,7 +41,7 @@ export const QuizSummary = ({
         {isPassingScore ? t("passed") : t("your-results")}
       </h3>
       <HStack
-        className="mx-auto justify-center gap-4 overflow-x-hidden bg-background px-8 py-4 shadow-drop [&_>_div]:py-4"
+        className="mx-auto justify-center gap-4 overflow-x-hidden bg-background px-8 py-4 shadow-lg [&_>_div]:py-4"
         separator={<div className="border-disabled" />}
       >
         <VStack>

@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/guides/how-to-use-a-bridge/index.md",
-  "generatedAt": "2026-06-08T09:54:48.023Z",
-  "rootHash": "19f4ebdb3e06",
+  "generatedAt": "2026-06-30T00:51:01.156Z",
+  "rootHash": "3edaecc5b870",
   "tree": {
-    "contentHash": "f3a1a4ba35f4",
-    "anchorHash": "66456b3b3135",
+    "contentHash": "5de7b07f230f",
+    "anchorHash": "a798e0622a06",
     "children": {
       "frontmatter:title": {
         "contentHash": "152ed6d36cf4",
@@ -206,8 +206,8 @@
         ]
       },
       "7-add-the-selected-layer-2-network-to-your-wallet-optional": {
-        "contentHash": "75f9faa952d6",
-        "anchorHash": "f28c907f40ba",
+        "contentHash": "7ecae14e0460",
+        "anchorHash": "717d442ab529",
         "labelHash": "b087c0e1462b",
         "children": {
           "_label": {
@@ -231,8 +231,8 @@
             "anchorHash": "e3b0c44298fc"
           },
           "component:5": {
-            "contentHash": "1019a51618fb",
-            "anchorHash": "922415cc666f",
+            "contentHash": "8184307f03ac",
+            "anchorHash": "3f8b8c1f14e1",
             "children": {
               "attr:variant": {
                 "contentHash": "e3b0c44298fc",
@@ -249,26 +249,40 @@
                 }
               },
               "component:1": {
-                "contentHash": "e2a6d4a15100",
-                "anchorHash": "102fdc653ece",
+                "contentHash": "d667df3337db",
+                "anchorHash": "cb22b4d52cd6",
                 "children": {
                   "attr:className": {
                     "contentHash": "e3b0c44298fc",
                     "anchorHash": "e796b9e20a49"
                   },
-                  "prose:1": {
+                  "prose:0": {
                     "contentHash": "9aec37764785",
                     "anchorHash": "e3b0c44298fc"
                   },
-                  "html-tag:0": {
-                    "contentHash": "b47f8105a440",
-                    "anchorHash": "b9dbc082e3fe"
+                  "component:1": {
+                    "contentHash": "7a1de0a9b8a3",
+                    "anchorHash": "1b106ab55d9a",
+                    "children": {
+                      "attr:href": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "65c77e41e1a7"
+                      },
+                      "prose:0": {
+                        "contentHash": "7816680efa5d",
+                        "anchorHash": "e3b0c44298fc"
+                      }
+                    },
+                    "childrenOrder": [
+                      "attr:href",
+                      "prose:0"
+                    ]
                   }
                 },
                 "childrenOrder": [
                   "attr:className",
-                  "prose:1",
-                  "html-tag:0"
+                  "prose:0",
+                  "component:1"
                 ]
               }
             },
@@ -370,5 +384,5 @@
       "frequently-asked-questions"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

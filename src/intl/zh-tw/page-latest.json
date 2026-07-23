@@ -1,9 +1,22 @@
 {
-  "page-latest-meta-description": "來自以太坊生態系的建構者資源、工具與發展。",
-  "page-latest-title": "建構者最新動態",
-  "page-latest-subtitle": "一個共享空間，提供專家觀點，探討涵蓋整個以太坊建構者生態系的最新資源、工具與發展。",
+  "page-latest-meta-description": "來自以太坊社群的最新部落格文章、新聞與更新，以及來自整個建構者生態系的專家觀點。",
+  "page-latest-title": "最新以太坊更新",
+  "page-latest-subtitle": "來自社群的最新部落格文章、新聞與更新，以及關於整個以太坊建構者生態系發展的專家觀點。",
   "page-latest-no-posts": "找不到文章。",
   "page-latest-read-more": "閱讀更多",
   "page-latest-minute-read": "{minutes} 分鐘閱讀時間",
-  "page-latest-team-attribution": "EF 建構者成長"
+  "page-latest-team-attribution": "EF 建構者成長",
+  "page-latest-cta-submit-resource": "提交資源",
+  "page-latest-cta-propose-article": "提議文章",
+  "page-latest-highlights-heading": "焦點",
+  "page-latest-articles-heading": "最新以太坊文章",
+  "page-latest-sources-heading": "在這些網站上閱讀更多",
+  "page-latest-see-more": "查看更多 ({count})",
+  "page-latest-sort-label": "排序文章",
+  "page-latest-sort-newest": "從新到舊",
+  "page-latest-sort-oldest": "從舊到新",
+  "page-latest-sort-az": "A–Z",
+  "page-latest-i18n-disclaimer": "部分文章以原文（英文）顯示。",
+  "page-latest-suggest-heading": "建議資源",
+  "page-latest-suggest-description": "知道應該列在這裡的以太坊電子報或研究出版物，或者有建構者文章主題的想法嗎？開啟一個 issue 來提交你的資源。"
 }

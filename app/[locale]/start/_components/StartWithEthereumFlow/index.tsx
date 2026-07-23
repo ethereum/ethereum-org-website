@@ -136,8 +136,8 @@ const StartWithEthereumFlow = ({
           >
             <SwiperSlide
               className={cn(
-                "bg-background from-primary/10 to-primary/5",
-                "border border-primary/10 bg-linear-to-r p-4 sm:p-12"
+                "bg-background bg-fade-primary gradient-reverse",
+                "border border-primary/10 p-4 sm:p-12"
               )}
             >
               <div style={getStyleFromIndex(0)}>
@@ -152,8 +152,8 @@ const StartWithEthereumFlow = ({
 
             <SwiperSlide
               className={cn(
-                "bg-background from-accent-a/10 to-accent-a/5",
-                "border border-accent-a/10 bg-linear-to-b p-4 sm:p-12"
+                "bg-background bg-fade-accent-a gradient-reverse",
+                "border border-accent-a/10 p-4 sm:p-12"
               )}
             >
               <div style={getStyleFromIndex(1)}>
@@ -167,8 +167,8 @@ const StartWithEthereumFlow = ({
 
             <SwiperSlide
               className={cn(
-                "bg-background from-accent-b/10 to-accent-b/5",
-                "border border-accent-b/10 bg-linear-to-b p-4 sm:p-12"
+                "bg-background bg-fade-accent-b gradient-reverse",
+                "border border-accent-b/10 p-4 sm:p-12"
               )}
             >
               <div style={getStyleFromIndex(2)}>

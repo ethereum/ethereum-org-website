@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/community/get-involved/index.md",
-  "generatedAt": "2026-06-08T07:15:46.813Z",
-  "rootHash": "75c2ecf63ab6",
+  "generatedAt": "2026-06-29T23:52:26.931Z",
+  "rootHash": "7bf0ed6a4b3c",
   "tree": {
     "contentHash": "a62a01caa924",
-    "anchorHash": "4bc97a12e698",
+    "anchorHash": "9f9b77307e33",
     "children": {
       "frontmatter:title": {
         "contentHash": "759088733728",
@@ -33,7 +33,7 @@
       },
       "developers": {
         "contentHash": "daae92789477",
-        "anchorHash": "9e8e0af9b03f",
+        "anchorHash": "02a2b8a19469",
         "labelHash": "9b30ac6650b7",
         "children": {
           "_label": {
@@ -54,7 +54,7 @@
           },
           "link:1": {
             "contentHash": "58c45f156e35",
-            "anchorHash": "d9696d5c2954"
+            "anchorHash": "030e06e4d170"
           },
           "prose:10": {
             "contentHash": "60f049edf90c",
@@ -296,7 +296,7 @@
       },
       "non-technical": {
         "contentHash": "2d66830d867b",
-        "anchorHash": "12fa1ed95f21",
+        "anchorHash": "05bcae33bb12",
         "labelHash": "37527855d096",
         "children": {
           "_label": {
@@ -468,7 +468,7 @@
           },
           "support-projects": {
             "contentHash": "7081d0897d18",
-            "anchorHash": "45b7c92ffd44",
+            "anchorHash": "ba59cb0f2fe6",
             "labelHash": "8666a2d99fc5",
             "children": {
               "_label": {
@@ -481,7 +481,7 @@
               },
               "link:0": {
                 "contentHash": "f24403e9a771",
-                "anchorHash": "2914a28c28c2"
+                "anchorHash": "d7a430c41d47"
               },
               "prose:3": {
                 "contentHash": "3973e022e932",
@@ -921,5 +921,5 @@
       "decentralized-autonomous-organizations-daos"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

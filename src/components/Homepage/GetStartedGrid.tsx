@@ -20,8 +20,6 @@ import { numberFormat } from "@/lib/utils/numbers"
 
 import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
 
-import { ChevronNext } from "../Chevron"
-
 import learnImage from "@/public/images/heroes/guides-hub-hero.jpg"
 import enterpriseImage from "@/public/images/heroes/roadmap-hub-hero.jpg"
 import developersImage from "@/public/images/homepage/get-started/developers.png"
@@ -96,7 +94,7 @@ const GetStartedGrid = async ({
 
   return (
     <Section id="get-started" className={cn("relative", className)}>
-      <div className="flex flex-col gap-12 rounded-t-4xl bg-radial-a px-4 pt-20 pb-8 md:px-8">
+      <div className="flex flex-col gap-12 rounded-t-4xl bg-radial-primary px-4 pt-20 pb-8 md:px-8">
         <div className="flex flex-col items-center gap-2 text-center">
           <SectionHeader className="mt-0 mb-0">
             {t("page-index-get-started-title")}
@@ -110,8 +108,6 @@ const GetStartedGrid = async ({
           {cards.map((card) => (
             <Card
               key={card.title}
-              className="border transition-colors hover:border-primary-hover"
-              variant="nested"
               href={card.href}
               size="lg"
               customEventOptions={{
@@ -119,6 +115,8 @@ const GetStartedGrid = async ({
                 eventAction: "section_click",
                 eventName: `get_started/${card.id}`,
               }}
+              variant="nested"
+              border
             >
               <CardHeader>
                 <CardBanner zoom={false}>
@@ -164,10 +162,7 @@ const GetStartedGrid = async ({
                 </ul>
               </CardContent>
               <CardFooter>
-                <CardButtonFake>
-                  {card.cta}
-                  <ChevronNext className="size-5" />
-                </CardButtonFake>
+                <CardButtonFake withChevron>{card.cta}</CardButtonFake>
               </CardFooter>
             </Card>
           ))}

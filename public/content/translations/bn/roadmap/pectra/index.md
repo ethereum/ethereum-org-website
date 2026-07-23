@@ -1,7 +1,7 @@
 ---
-title: পেকট্রা
-metaTitle: প্রাগ-ইলেক্ট্রা (পেকট্রা)
-description: পেকট্রা প্রোটোকল আপগ্রেড সম্পর্কে জানুন
+title: "পেকট্রা"
+metaTitle: "প্রাগ-ইলেক্ট্রা (পেকট্রা)"
+description: "পেকট্রা প্রোটোকল আপগ্রেড সম্পর্কে জানুন"
 lang: bn
 authors: ["নিক্সো", "মারিও হ্যাভেল"]
 ---
@@ -119,9 +119,8 @@ _ইথেরিয়াম পেকট্রা আপগ্রেড: স্
 
 ## আরও পড়ুন {#further-reading}
 
-- [ইথেরিয়াম রোডম্যাপ](/roadmap/)
+- [ইথেরিয়াম রোডম্যাপ](/roadmap/)
 - [পেকট্রা FAQ](https://epf.wiki/#/wiki/pectra-faq)
-- [Pectra.wtf তথ্য পৃষ্ঠা](https://pectra.wtf)
 - [পেকট্রা কীভাবে স্টেকারদের অভিজ্ঞতা উন্নত করে](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [EIP7702 তথ্য পৃষ্ঠা](https://eip7702.io/)
 - [পেকট্রা ডেভনেট](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

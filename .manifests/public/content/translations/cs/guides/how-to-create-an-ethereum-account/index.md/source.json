@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/guides/how-to-create-an-ethereum-account/index.md",
-  "generatedAt": "2026-06-08T09:43:21.527Z",
-  "rootHash": "07ee46fc6f48",
+  "generatedAt": "2026-06-30T00:50:26.154Z",
+  "rootHash": "1f4936c262da",
   "tree": {
-    "contentHash": "bbd3d589be2d",
-    "anchorHash": "4ebda854e8ba",
+    "contentHash": "cb966f34335d",
+    "anchorHash": "9b67befd47f3",
     "children": {
       "frontmatter:title": {
         "contentHash": "98647d7f95d2",
@@ -127,8 +127,8 @@
         ]
       },
       "step-4-store-your-recovery-phrase": {
-        "contentHash": "7b6aad02dfd3",
-        "anchorHash": "01fc27acee1c",
+        "contentHash": "8f575659baf5",
+        "anchorHash": "ca63fcb25a31",
         "labelHash": "525fe0375839",
         "children": {
           "_label": {
@@ -140,12 +140,12 @@
             "anchorHash": "e3b0c44298fc"
           },
           "component:2": {
-            "contentHash": "a9c061fda805",
-            "anchorHash": "819fbb38c412",
+            "contentHash": "1d2a4ad1aab6",
+            "anchorHash": "d18be10e5d3e",
             "children": {
               "component:0": {
-                "contentHash": "5a9491464691",
-                "anchorHash": "b9b977b4ac6e",
+                "contentHash": "b3ddf7e5852e",
+                "anchorHash": "5e6bdf157a40",
                 "children": {
                   "attr:variant": {
                     "contentHash": "e3b0c44298fc",
@@ -162,26 +162,40 @@
                     }
                   },
                   "component:1": {
-                    "contentHash": "0941772eddfa",
-                    "anchorHash": "03a34382bc1a",
+                    "contentHash": "e803400a8f7e",
+                    "anchorHash": "45ba72802ea7",
                     "children": {
                       "attr:className": {
                         "contentHash": "e3b0c44298fc",
                         "anchorHash": "be1d9714ad52"
                       },
-                      "prose:1": {
+                      "prose:0": {
                         "contentHash": "23d21a720255",
                         "anchorHash": "e3b0c44298fc"
                       },
-                      "html-tag:0": {
-                        "contentHash": "436a5c35185c",
-                        "anchorHash": "200c06b134f0"
+                      "component:1": {
+                        "contentHash": "297183898be7",
+                        "anchorHash": "666fb16ac03f",
+                        "children": {
+                          "attr:href": {
+                            "contentHash": "e3b0c44298fc",
+                            "anchorHash": "ee3a75b31775"
+                          },
+                          "prose:0": {
+                            "contentHash": "2b58bdf9f156",
+                            "anchorHash": "e3b0c44298fc"
+                          }
+                        },
+                        "childrenOrder": [
+                          "attr:href",
+                          "prose:0"
+                        ]
                       }
                     },
                     "childrenOrder": [
                       "attr:className",
-                      "prose:1",
-                      "html-tag:0"
+                      "prose:0",
+                      "component:1"
                     ]
                   }
                 },
@@ -370,5 +384,5 @@
       "frequently-asked-questions"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

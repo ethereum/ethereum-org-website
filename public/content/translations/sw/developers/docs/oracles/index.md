@@ -403,7 +403,7 @@ Kuna programu nyingi za orakeli unazoweza kuunganisha kwenye dapp yako ya Ethere
 
 **[Mtandao wa Pyth](https://pyth.network/)** - _Mtandao wa Pyth ni mtandao wa orakeli ya kifedha wa upande wa kwanza ulioundwa kuchapisha data endelevu ya ulimwengu halisi mnyororoni katika mazingira yanayostahimili kuchezewa, yaliyogatuliwa, na yanayojitegemea._
 
-**[API3 DAO](https://www.api3.org/)** - _API3 DAO inatoa suluhu za orakeli za upande wa kwanza zinazotoa uwazi mkubwa wa chanzo, usalama na uwezo wa kupanuka katika suluhu iliyogatuliwa kwa mikataba mahiri_
+**[API3 DAO](https://api3.org/)** - _API3 DAO inatoa suluhu za orakeli za upande wa kwanza zinazotoa uwazi mkubwa wa chanzo, usalama na uwezo wa kupanuka katika suluhu iliyogatuliwa kwa mikataba mahiri_
 
 **[Supra](https://supra.com/)** - Zana iliyounganishwa kiwima ya suluhu za mtambuko-mnyororo zinazounganisha minyororo yote ya vitalu, ya umma (L1s na L2s) au ya kibinafsi (makampuni), ikitoa milisho ya bei ya orakeli iliyogatuliwa inayoweza kutumika kwa matumizi ya mnyororoni na nje ya mnyororo. 
 

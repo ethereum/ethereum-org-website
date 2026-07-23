@@ -92,7 +92,8 @@ The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card
 
 **`Card` variants**:
 
-- `variant`: `base` (default, `bg-background-highlight` grey) | `nested` (`bg-background`, use when inside a colored section) | `ghost` (no bg; auto-widens `--banner-radius` for edge-to-edge banners) | `header-bar` (highlight only on the header, bordered card, header laid out as an icon+text row with bottom border — all baked in, just drop a `CardHeader` inside).
+- `variant`: `base` (default, `bg-background-highlight` grey) | `nested` (`bg-background`, use when inside a colored section) | `ghost` (no bg; auto-widens `--banner-radius`; as a link, fills with `bg-background-highlight` on hover instead of an outline ring) | `header-bar` (highlight only on the header, bordered card, header laid out as an icon+text row with bottom border — all baked in, just drop a `CardHeader` inside).
+- **Link hover is variant-aware** (auto, from `href`): `ghost` link cards fill with `bg-background-highlight` and drop the outline; `base`/`nested`/`header-bar` link cards keep the `ring-primary-hover` outline. Driven by an internal `interactive` compound variant, not a prop.
 - `size`: `lg | base (default) | md | sm | xs`. Controls `--card-pad` (between/around parts) and `--content-space` (within `CardContent`). `xs` = zero padding for edge-to-edge banner imagery.
 - `href`: pass to wrap in `BaseLink` and get whole-card-clickable behavior with `group/link` propagation.
 - Card is always vertical (`flex flex-col`); there is no `orientation` variant.
@@ -115,7 +116,7 @@ The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card
 - `size`: `full | lg | base (default) | sm | thumbnail-lg | thumbnail`. Use these instead of `className="h-..."` to stay on-rhythm. `thumbnail-lg` is a 128px square; `thumbnail` is 64px — both `shrink-0` for small logo/icon placements.
 - `fit`: `cover (default) | contain`. With `fit="contain"` and a single `<Image>` child, the banner auto-clones the image as a blurred backdrop. Two children breaks the magic.
 - `zoom`: `true (default) | false`. Controls hover zoom propagation from a parent `group/link`.
-- Placement: inside `CardHeader` for padded; as a direct child of `Card` (pair with `Card size="xs"` or `variant="ghost"`) for edge-to-edge.
+- Placement: inside `CardHeader` (default; keeps banner radius concentric and gives link-hover room). Bare direct child of `Card` only for a true edge-to-edge image, paired with `size="xs"` so radii match (a bare banner on a padded size / link card mismatches corner radius — see gotchas).
 
 **`CardTitle` variants**:
 
@@ -159,7 +160,7 @@ Responsive grid for laying out a collection of items (cards, tiles, badges). Ren
 - `size`: `small (7rem) | narrow (12rem) | base (18rem, default) | wide (22rem) | wider (26rem)`. The **min item width** (`--grid-item-min`) — the floor an item shrinks to before a column drops, and so the fold-aggressiveness lever. Pick by item shape: `small` for badges, `base` for standard content cards, `wide`/`wider` for horizontal items like callouts. Larger sizes wrap sooner; keep `columns` small enough that N items of the chosen width fit (min ≤ container/N).
 - `fit`: `boolean` (auto-fill mode only). Default keeps empty tracks (`auto-fill`); `fit` collapses them (`auto-fit`) so a partially-filled row stretches to fill the width.
 - `balanced`: `2 | 4`. A fixed, deterministic **breakpoint** reflow (overrides `columns` via `!important`; `size`/`fit` inert). `balanced={4}` → `4 → 2×2 → 1`, never an orphan 3-up row (which auto-fill produces); `balanced={2}` → `2 → 1` at `md`, a breakpoint-driven alternative to `columns={2}` (which folds by content width). Both fold `1 → 2` at `md`. Use with a **fixed set** of that many items (or a multiple).
-- Applies `gap-4`. `className` is spread last, so override the gap (or `--grid-item-min` / `--grid-repeat`) per call site only when genuinely needed.
+- Applies `gap-4`. `className` is spread last, so override the gap (or `--grid-item-min` / `--grid-repeat`) per call site only when genuinely needed. **If you override the gap, mirror it in `--grid-gap`** (e.g. `gap-x-8 [--grid-gap:--spacing(8)]`): the `grid-cols-auto-*` fold math assumes the gutter via `var(--grid-gap, 1rem)`, and with a wider real gap the even-share term is computed against the wrong gutter -- a second column may **never** form.
 
 ### `Section`
 
@@ -324,6 +325,15 @@ import { Tooltip, TooltipContent } from "@/components/ui/tooltip"
 ```
 
 Bare hover-only Radix tooltip. Used only inside `@/components/Tooltip`. Use `@/components/Tooltip` instead.
+
+#### Floating surfaces (Popover, Tooltip) -- the `popover-outline` utility + `nested`
+
+Both `PopoverContent` and `TooltipContent` share the `popover-outline` utility (`src/styles/utilities.css`) for their border + elevation. It exists because a plain CSS `border` traces only the content box and **severs the Radix `Arrow`** (a separate SVG outside the box). `popover-outline` instead draws the 1px themed border *and* the lift as a stack of `drop-shadow()` filters, which follow the box + arrow as one shape.
+
+- **Don't add `border`/`box-shadow` back.** Depth must stay inside the same `filter` -- a `box-shadow` halo becomes the filter's input and the border drop-shadows would trace the faded halo edge and vanish. Adjust elevation by editing the utility, not the call site.
+- **No `overflow-hidden` on the content** -- it clips the Arrow.
+- **Shadow color is themed** via `hsla(var(--body), var(--shadow-opacity))`; `--shadow-opacity` (`0.1` light / `0.15` dark) is set inside the utility, so in dark mode the lift is a light halo by design, not a bug.
+- **`nested` prop** (both components, and `@/components/Tooltip`): swaps the surface + arrow fill from `bg-background-highlight` to the base `bg-background`. Pass it when the floating surface opens over a container that is itself `bg-background-highlight` (e.g. a wallet table row on hover) and would otherwise blend in.
 
 ### `DropdownMenu`
 
@@ -652,6 +662,8 @@ import {
 
 CSS-var driven (`--edge-spacing`, `--edge-mask-size`, `--edge-overflow-y-pad`). Mask fade only at `2xl+`.
 
+`--edge-spacing` defaults to `1rem` (`md:2rem`) so it tracks `px-page`. On the standard model — `px-page` on `<main>`, page content sitting in that padded column — the negative-margin breakout lands flush with the page padding and needs **no override**. Don't reach for a flat `[--edge-spacing:Nrem]`: if it exceeds the surrounding horizontal padding at any breakpoint (e.g. `2rem` while mobile `px-page` is `1rem`), the breakout overshoots and the page scrolls horizontally. Override it only for a genuine exception where the surrounding padding really differs from `px-page`.
+
 ### `Swiper` (deprecation track)
 
 ```tsx
@@ -660,6 +672,8 @@ import { Swiper, ... } from "@/components/ui/swiper"
 ```
 
 `"use client"`, wraps swiper.js. On the deprecation track. Migrate existing consumers to `EdgeScrollContainer`.
+
+**i18n requirement:** `Swiper` binds `useTranslations("component-swiper")` for its a11y slide announcements. Every page that renders one must ship that namespace to the client — register the route in `src/lib/utils/translations.ts` (`EXACT_PATH_ADDITIONAL_NAMESPACES` / `PREFIX_PATH_ADDITIONAL_NAMESPACES`) or add `"component-swiper"` to the page's `pick()` for its `I18nProvider`. Missing it means screen readers announce raw key tails (`swiper-next-slide`). Currently registered: `/` (hand-pick), `/developers/` (scoped providers), `/start/`, `/10years/`, `/apps/`.
 
 ### `List` / `OrderedList` / `UnorderedList` / `ListItem`
 
@@ -779,6 +793,14 @@ import { MdComponents } from "@/components/MdComponents"
 ```
 
 The shortcode registry for markdown content. To add a markdown shortcode, add the component to `MdComponents`.
+
+### `MarkdownVideo` (markdown clips)
+
+Renders `![](./x.mp4)` in markdown content (reached via `MarkdownImage`; not imported in app code) — the modern GIF replacement: silent, looping, plays only while on-screen, controls instead of autoplay under `prefers-reduced-motion`.
+
+**Sizing convention**: an optional `#WxH` fragment on the markdown src declares the clip's intrinsic dimensions — `![](./demo.mp4#800x400)` — and sizes the box to the clip's own aspect ratio (landscape fills the content width; taller-than-wide is height-capped). Without it, a fixed 16:9 box (9:16 via the `-portrait` filename suffix) letterboxes the clip with `object-contain`.
+
+Use the fragment for any off-ratio clip — screen captures usually are. It's presentation metadata only: browsers strip fragments before requesting, so the asset URL stays canonical (one CDN/browser cache entry, no file renames) and references without it — e.g. not-yet-repropagated translations — still play in the default box. **Never rename a video asset to encode metadata.** Implementation notes: `rehypeImg` and `MarkdownImage` strip the fragment before extension checks (an mp4 falling into the image path makes `image-size` throw at build); `MarkdownVideo` sets `width`/`height` attributes plus explicit CSS `aspect-ratio` because the attribute→ratio mapping is unreliable on `<video>` and `h-auto` overrides the height attribute — together they reserve the box before video metadata loads (no CLS).
 
 ## Components NOT to Use
 

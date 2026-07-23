@@ -1,6 +1,6 @@
 ---
-title: Jak rozpoznat podvodné tokeny
-description: Porozumění podvodným tokenům, jak se tváří jako legitimní a jak se jim vyhnout.
+title: "Jak rozpoznat podvodné tokeny"
+description: "Porozumění podvodným tokenům, jak se tváří jako legitimní a jak se jim vyhnout."
 lang: cs
 ---
 
@@ -14,7 +14,7 @@ Existují dva pravděpodobné způsoby, jakými se vás pokusí oklamat:
 Abychom si ukázali, co jsou podvodné tokeny a jak je rozpoznat, podíváme se na jeden příklad: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Tento token se snaží vypadat jako legitimní token [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
 
 <ExpandableCard
-title="What is ARB?"
+title="Co je ARB?"
 contentPreview=''>
 
 Arbitrum je organizace, která vyvíjí a spravuje [optimistic rollupy](/developers/docs/scaling/optimistic-rollups/). Původně bylo Arbitrum organizováno jako zisková společnost, ale poté podniklo kroky k decentralizaci. Jako součást tohoto procesu vydali obchodovatelný [token správy](/dao/#token-based-membership).
@@ -22,7 +22,7 @@ Arbitrum je organizace, která vyvíjí a spravuje [optimistic rollupy](/develop
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="Proč se podvodný token nazývá wARB?"
 contentPreview=''>
 
 V Ethereu existuje konvence, že když aktivum není kompatibilní s ERC-20, vytvoříme jeho „zabalenou“ (wrapped) verzi s názvem začínajícím na „w“. Takže například máme wBTC pro bitcoin a <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH pro ether</a>.
@@ -36,7 +36,7 @@ Nedává smysl vytvářet zabalenou verzi ERC-20 tokenu, který již na Ethereu 
 Celým smyslem Etherea je decentralizace. To znamená, že neexistuje žádná centrální autorita, která by vám mohla zabavit vaše aktiva nebo vám zabránit nasadit chytrý kontrakt. Znamená to ale také, že podvodníci mohou nasadit jakýkoli chytrý kontrakt, který si přejí.
 
 <ExpandableCard
-title="What are smart contracts?"
+title="Co jsou chytré kontrakty?"
 contentPreview=''>
 
 [Chytré kontrakty](/developers/docs/smart-contracts/) jsou programy, které běží nad blockchainem Etherea. Například každý ERC-20 token je implementován jako chytrý kontrakt.

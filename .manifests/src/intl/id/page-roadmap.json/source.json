@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-roadmap.json",
-  "generatedAt": "2026-05-26T09:50:57.443Z",
-  "rootHash": "4a31d9eb5f64",
+  "generatedAt": "2026-06-29T23:50:42.169Z",
+  "rootHash": "c6856b629d3b",
   "tree": {
-    "contentHash": "9cdcc7ab4d37",
-    "anchorHash": "b8c6506e72db",
+    "contentHash": "69cf5700a99a",
+    "anchorHash": "625c80a19531",
     "children": {
       "page-roadmap-title": {
         "contentHash": "be50ffa0fc02",
@@ -175,6 +175,14 @@
       },
       "page-roadmap-technical-upgrades-title": {
         "contentHash": "9f16376624c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-post-quantum-title": {
+        "contentHash": "78ca39fdece8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-post-quantum-description": {
+        "contentHash": "b53c8b017e49",
         "anchorHash": "e3b0c44298fc"
       },
       "page-roadmap-danksharding-title": {
@@ -578,6 +586,8 @@
       "page-roadmap-governance-button",
       "page-roadmap-hero-alt",
       "page-roadmap-technical-upgrades-title",
+      "page-roadmap-post-quantum-title",
+      "page-roadmap-post-quantum-description",
       "page-roadmap-danksharding-title",
       "page-roadmap-danksharding-description",
       "page-roadmap-single-slot-finality-title",
@@ -661,5 +671,5 @@
       "page-roadmap-hegota-discussed-item-1"
     ]
   },
-  "sourceCommitSha": "3ec7d2cd6ede59940bb02b21be2e5d211370a724"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

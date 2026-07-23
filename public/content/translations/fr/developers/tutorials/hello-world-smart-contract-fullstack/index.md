@@ -314,7 +314,7 @@ Accédez au dossier `scripts/` et créez un nouveau fichier appelé `deploy.js`,
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.getContratFactory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // Démarrer le déploiement, en renvoyant une promesse qui se résout en un objet de contrat
   const hello_world = await HelloWorld.deploy("Hello World!")
@@ -486,7 +486,7 @@ main()
 Après avoir exécuté le fichier à l'aide de `npx hardhat run scripts/interact.js` dans le terminal, nous devrions voir cette réponse :
 
 ```
-Le message est : Hello world!
+The message is: Hello world!
 ```
 
 Félicitations ! Vous venez de lire avec succès les données d'un contrat intelligent à partir de la chaîne de blocs Ethereum, bravo !
@@ -566,9 +566,9 @@ Maintenant, exécutez simplement le script et vous devriez pouvoir voir l'ancien
 `npx hardhat run scripts/interact.js --network goerli`
 
 ```
-Le message est : Hello World!
-Mise à jour du message...
-Le nouveau message est : Ceci est le nouveau message.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
 Lors de l'exécution de ce script, vous remarquerez peut-être que l'étape `Updating the message...` prend un certain temps à charger avant que le nouveau message ne se charge. Cela est dû au processus de minage ; si vous êtes curieux de suivre les transactions pendant qu'elles sont minées, visitez le [mempool d'Alchemy](https://dashboard.alchemyapi.io/mempool) pour voir le statut d'une transaction. Si la transaction est abandonnée, il est également utile de vérifier [Etherscan Goerli](https://goerli.etherscan.io) et de rechercher le hachage de votre transaction.

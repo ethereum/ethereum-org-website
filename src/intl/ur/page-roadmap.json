@@ -26,6 +26,8 @@
   "page-roadmap-governance-button": "ایتھیریم گورننس کے بارے میں مزید",
   "page-roadmap-hero-alt": "ایتھیریم روڈ میپ",
   "page-roadmap-technical-upgrades-title": "ایتھیریم میں کون سی تکنیکی اپ گریڈز آ رہی ہیں؟",
+  "page-roadmap-post-quantum-title": "پوسٹ کوانٹم سیکیورٹی",
+  "page-roadmap-post-quantum-description": "کوانٹم کمپیوٹرز کسی دن اس علمِ تشفیر کو توڑ سکتے ہیں جس پر بلاک چینز کا انحصار ہے۔ ایتھیریم کے پوسٹ کوانٹم اپ گریڈز کوانٹم کمپیوٹنگ کے ایک حقیقی خطرہ بننے سے پہلے ہی کمزور الگورتھمز کو تبدیل کر دیں گے۔",
   "page-roadmap-danksharding-title": "ڈینک شارڈنگ",
   "page-roadmap-danksharding-description": "ڈینک شارڈنگ ایتھیریم بلاکس میں ڈیٹا کے \"بلابز\" شامل کر کے صارفین کے لیے لیئر ۲ (l2) رول اپس کو بہت سستا بناتی ہے۔",
   "page-roadmap-single-slot-finality-title": "سنگل سلاٹ حتمیت",

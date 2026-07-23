@@ -56,20 +56,19 @@ Para entrar a la cadena Plasma, Alice (la usuaria) tendrá que depositar ETH o c
 
 #### Salir de la cadena Plasma {#exiting-the-plasma-chain}
 
-Salir de la cadena Plasma es más complejo que entrar por varias razones. La principal es que, si bien Ethereum tiene información sobre el estado de la cadena Plasma, no puede verificar si la información es verdadera o no. Un usuario malintencionado podría hacer una afirmación incorrecta ("Tengo 1000 ETH") y salirse con la suya proporcionando pruebas falsas para respaldar el reclamo.
+Salir de la cadena Plasma es más complejo que entrar a ella por varias razones. La principal es que, si bien Ethereum tiene información sobre el estado de la cadena Plasma, no puede verificar si la información es verdadera o no. Un usuario malintencionado podría hacer una afirmación incorrecta ("Tengo 1000 ETH") y salirse con la suya proporcionando pruebas falsas para respaldar el reclamo.
 
-Para evitar retiros malintencionados, se introduce un "período de desafío". Durante el período de desafío (generalmente una semana), cualquiera puede desafiar una solicitud de retiro utilizando una prueba de fraude. Si el desafío tiene éxito, se deniega la solicitud de retiro.
+Para evitar retiros malintencionados, se introduce un "período de desafío". Durante el período de desafío (generalmente una semana), cualquiera puede desafiar una solicitud de retiro utilizando una prueba de fraude. Si el desafío tiene éxito, entonces se deniega la solicitud de retiro.
 
 Sin embargo, por lo general, los usuarios son honestos y hacen reclamos correctos sobre los fondos que poseen. En este escenario, Alice iniciará una solicitud de retiro en la cadena raíz (Ethereum) enviando una transacción al contrato de Plasma.
 
-También debe proporcionar una prueba de Merkle que verifique que una transacción que creó sus fondos en la cadena Plasma se incluyó en un bloque. Esto es necesario para las iteraciones de Plasma, como [Plasma MVP](https://www.learnplasma.org/en/learn/mvp.html), que utilizan un modelo de [Salida de Transacción No Gastada (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
+También debe proporcionar una prueba de Merkle que verifique que una transacción que creó sus fondos en la cadena Plasma se incluyó en un bloque. Esto es necesario para las iteraciones de Plasma, como Plasma MVP, que utilizan un modelo de [salida de transacción no gastada (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
 
-Otros, como [Plasma Cash](https://www.learnplasma.org/en/learn/cash.html), representan los fondos como [tokens no fungibles](/developers/docs/standards/tokens/erc-721/) en lugar de UTXO. El retiro, en este caso, requiere prueba de propiedad de los tokens en la cadena Plasma. Esto se hace enviando las dos últimas transacciones que involucran el token y proporcionando una prueba de Merkle que verifique la inclusión de esas transacciones en un bloque.
+Otras, como Plasma Cash, representan los fondos como [tokens no fungibles](/developers/docs/standards/tokens/erc-721/) en lugar de UTXO. Retirar, en este caso, requiere una prueba de propiedad de los tokens en la cadena Plasma. Esto se hace enviando las dos últimas transacciones que involucran el token y proporcionando una prueba de Merkle que verifique la inclusión de esas transacciones en un bloque.
 
 El usuario también debe agregar una fianza a la solicitud de retiro como garantía de comportamiento honesto. Si un retador demuestra que la solicitud de retiro de Alice no es válida, su fianza sufre un recorte, y parte de ella va al retador como recompensa.
 
 Si el período de desafío transcurre sin que nadie proporcione una prueba de fraude, la solicitud de retiro de Alice se considera válida, lo que le permite recuperar los depósitos del contrato de Plasma en Ethereum.
-
 ### Arbitraje de disputas {#dispute-arbitration}
 
 Al igual que cualquier cadena de bloques, las cadenas Plasma necesitan un mecanismo para hacer cumplir la integridad de las transacciones en caso de que los participantes actúen de manera malintencionada (por ejemplo, el doble gasto de fondos). Con este fin, las cadenas Plasma utilizan pruebas de fraude para arbitrar disputas relacionadas con la validez de las transiciones de estado y penalizar el mal comportamiento. Las pruebas de fraude se utilizan como un mecanismo a través del cual una cadena hija de Plasma presenta una queja a su cadena principal o a la cadena raíz.
@@ -167,14 +166,12 @@ Múltiples proyectos proporcionan implementaciones de Plasma que puede integrar 
 
 ## Lecturas adicionales {#further-reading}
 
-- [Aprenda sobre Plasma](https://www.learnplasma.org/en/)
-- [Un recordatorio rápido de lo que significa la "seguridad compartida" y por qué es tan importante](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
-- [Cadenas laterales frente a Plasma frente a fragmentación](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
-- [Entendiendo Plasma, Parte 1: Los conceptos básicos](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
+- [Un breve recordatorio de lo que significa la "seguridad compartida" y por qué es tan importante](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
+- [Cadenas laterales vs. Plasma vs. fragmentación](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
+- [Comprendiendo Plasma, parte 1: los conceptos básicos](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
 - [La vida y muerte de Plasma](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 
 _¿Conoce algún recurso de la comunidad que le haya ayudado? ¡Edite esta página y agréguelo!_
-
 ## Tutoriales: Cadenas Plasma en Ethereum {#tutorials}
 
 - [Escriba un Plasma específico para una aplicación que preserve la privacidad](/developers/tutorials/app-plasma/) _– Construya una aplicación Plasma que preserve la privacidad utilizando pruebas de conocimiento cero y componentes fuera de la cadena._

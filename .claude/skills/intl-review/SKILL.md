@@ -62,7 +62,7 @@ Real translation values sometimes contain "Lorem ipsum dolor sit amet" or simila
 
 ### Asymmetric backticks and orphaned HTML tags
 
-Single-open / double-close backticks (`` `text`` ``), missing `</em>` before `</li>`, raw `</a>` without opener — all break MDX compilation. Critical.
+Single-open / double-close backticks (`` `text`` ``), missing `</em>`before`</li>`, raw `</a>` without opener — all break MDX compilation. Critical.
 
 ### `/review-translations` requires a named branch, never detached HEAD
 
@@ -74,20 +74,20 @@ The slash command's worktree setup enforces this; if you script around it, the b
 
 ## Quick "Where Do I Look?" Cheatsheet
 
-| I need... | Path |
-|---|---|
-| Slash command (full pipeline) | `/review-translations` (`.claude/commands/review-translations.md`) |
-| Issue-pattern catalog | `.claude/translation-review/known-patterns.md` + `references/known-patterns.md` |
-| Per-language rules | `references/language-rules.md` (sourced from `.claude/translation-review/localization-rules-by-language-group.md`) |
-| Scoring rubric | `references/scoring-rubric.md` |
-| Per-language findings | `.claude/translation-review/per-language/{lang}.md` |
-| ETHGlossary terms (filtered to source) | `POST /api/v1/filter` |
-| ETHGlossary terms (full per-language) | `GET /api/v1/translations/{lang}` |
-| ETHGlossary policy | https://github.com/wackerow/ethglossary/blob/main/docs/translation-policy.md |
-| Sanitizer source | `src/scripts/intl-pipeline/intl-sanitizer.ts` |
-| Sanitizer test research | `docs/solutions/integration-issues/sanitizer-test-research.md` |
-| Past review post-mortems | `docs/solutions/translation-review/` |
-| Language config | `i18n.config.json` |
+| I need...                              | Path                                                                                                               |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Slash command (full pipeline)          | `/review-translations` (`.claude/commands/review-translations.md`)                                                 |
+| Issue-pattern catalog                  | `.claude/translation-review/known-patterns.md` + `references/known-patterns.md`                                    |
+| Per-language rules                     | `references/language-rules.md` (sourced from `.claude/translation-review/localization-rules-by-language-group.md`) |
+| Scoring rubric                         | `references/scoring-rubric.md`                                                                                     |
+| Per-language findings                  | `.claude/translation-review/per-language/{lang}.md`                                                                |
+| ETHGlossary terms (filtered to source) | `POST /api/v1/filter`                                                                                              |
+| ETHGlossary terms (full per-language)  | `GET /api/v1/translations/{lang}`                                                                                  |
+| ETHGlossary policy                     | https://github.com/wackerow/ethglossary/blob/main/docs/translation-policy.md                                       |
+| Sanitizer source                       | `src/scripts/intl-pipeline/intl-sanitizer.ts`                                                                      |
+| Sanitizer test research                | `docs/solutions/integration-issues/sanitizer-test-research.md`                                                     |
+| Past review post-mortems               | `docs/solutions/integration-issues/` + `docs/solutions/logic-errors/`                                              |
+| Language config                        | `i18n.config.json`                                                                                                 |
 
 ## When to Load Each Reference
 

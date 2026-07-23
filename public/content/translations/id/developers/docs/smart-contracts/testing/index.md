@@ -184,7 +184,7 @@ Fuzzing berguna untuk mengevaluasi mekanisme validasi masukan kontrak pintar kar
 
 ### Panduan untuk menjalankan pengujian berbasis properti untuk kontrak pintar {#running-property-based-tests}
 
-Menjalankan pengujian berbasis properti biasanya dimulai dengan menentukan properti (misalnya, tidak adanya [limpahan bilangan bulat (integer overflow)](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)) atau kumpulan properti yang ingin Anda verifikasi dalam kontrak pintar. Anda mungkin juga perlu menentukan rentang nilai di mana program dapat menghasilkan data untuk masukan transaksi saat menulis pengujian properti.
+Menjalankan pengujian berbasis properti biasanya dimulai dengan menentukan properti (misalnya, tidak adanya [limpahan bilangan bulat (integer overflow)](https://github.com/ConsenSysDiligence/mythril/wiki/Integer-Overflow)) atau kumpulan properti yang ingin Anda verifikasi dalam kontrak pintar. Anda mungkin juga perlu menentukan rentang nilai di mana program dapat menghasilkan data untuk masukan transaksi saat menulis pengujian properti.
 
 Setelah dikonfigurasi dengan benar, alat pengujian properti akan mengeksekusi fungsi kontrak pintar Anda dengan masukan yang dihasilkan secara acak. Jika ada pelanggaran asersi, Anda akan mendapatkan laporan dengan data masukan konkret yang melanggar properti yang sedang dievaluasi. Lihat beberapa panduan di bawah ini untuk mulai menjalankan pengujian berbasis properti dengan berbagai alat:
 
@@ -195,7 +195,7 @@ Setelah dikonfigurasi dengan benar, alat pengujian properti akan mengeksekusi fu
 - **[Fuzzing kontrak dengan Echidna](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
 - **[Fuzzing kontrak dengan Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[Eksekusi simbolis kontrak pintar dengan Manticore](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
-- **[Eksekusi simbolis kontrak pintar dengan Mythril](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
+- **[Eksekusi simbolis kontrak pintar dengan Mythril](https://github.com/ConsenSysDiligence/mythril/blob/develop/docs/source/tutorial.rst)**
 
 ## Pengujian manual untuk kontrak pintar {#manual-testing-for-smart-contracts}
 
@@ -289,7 +289,7 @@ Perbedaan utamanya adalah bahwa program bug bounty terbuka untuk komunitas penge
 
 - **[Manticore](https://manticore.readthedocs.io/en/latest/index.html)** - _Kerangka kerja eksekusi simbolis dinamis untuk menganalisis kode bita EVM._
 
-- **[Mythril](https://github.com/ConsenSys/mythril-classic)** - _Alat penilaian kode bita EVM untuk mendeteksi kerentanan kontrak menggunakan analisis taint, analisis concolic, dan pemeriksaan aliran kontrol._
+- **[Mythril](https://github.com/ConsenSysDiligence/mythril)** - _Alat penilaian kode bita EVM untuk mendeteksi kerentanan kontrak menggunakan analisis taint, analisis concolic, dan pemeriksaan aliran kontrol._
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribble adalah bahasa spesifikasi dan alat verifikasi runtime yang memungkinkan Anda membuat anotasi kontrak pintar dengan properti yang memungkinkan Anda menguji kontrak secara otomatis dengan alat seperti Diligence Fuzzing atau MythX._
 

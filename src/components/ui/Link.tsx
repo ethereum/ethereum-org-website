@@ -3,6 +3,7 @@
 import { AnchorHTMLAttributes, ComponentProps, forwardRef } from "react"
 import { ArrowRight, ExternalLink, Mail } from "lucide-react"
 import NextLink from "next/link"
+import { useTranslations } from "next-intl"
 
 import { MatomoEventOptions } from "@/lib/types"
 
@@ -16,10 +17,13 @@ import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 import { Link as I18nLink } from "@/i18n/navigation"
 import { usePathname } from "@/i18n/navigation"
 
-export const ExternalLinkIcon = () => (
+export const ExternalLinkIcon = ({ className }: { className?: string }) => (
   <ExternalLink
     data-label="arrow"
-    className="ms-1 mb-0.5! inline-block size-[0.875em] max-h-4 max-w-4 shrink-0 rtl:-scale-x-100"
+    className={cn(
+      "ms-1 mb-0.5! inline-block size-[0.875em] max-h-4 max-w-4 shrink-0 rtl:-scale-x-100",
+      className
+    )}
   />
 )
 
@@ -60,6 +64,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   }: LinkProps,
   ref
 ) {
+  const t = useTranslations("common")
   const pathname = usePathname()
   if (!href) {
     // If troubleshooting this warning, check for multiple h1's in markdown content—these will result in broken id hrefs
@@ -130,7 +135,9 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         )}
         <span className="sr-only select-none">
           &nbsp;
-          {isMailto ? "(opens email client)" : "(opens in a new tab)"}
+          {isMailto
+            ? t("link-mailto-assistive-text")
+            : t("link-external-assistive-text")}
         </span>
         {!hideArrow && !isMailto && <ExternalLinkIcon />}
       </a>

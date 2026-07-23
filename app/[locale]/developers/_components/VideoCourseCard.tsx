@@ -3,6 +3,7 @@ import {
   Card,
   CardBanner,
   CardContent,
+  CardHeader,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
@@ -25,16 +26,18 @@ const VideoCourseCard = ({ course, className }: VideoCourseCardProps) => (
       eventName: course.title,
     }}
     variant="ghost"
-    size="xs"
+    size="sm"
   >
-    <CardBanner size="sm">
-      <Image
-        src={course.imgSrc}
-        alt={course.imgAlt}
-        className="transition-transform group-hover:scale-105 group-hover:transition-transform"
-        sizes="(max-width: 480px) calc(100vw - 2rem), 300px"
-      />
-    </CardBanner>
+    <CardHeader>
+      <CardBanner size="sm">
+        <Image
+          src={course.imgSrc}
+          alt={course.imgAlt}
+          className="transition-transform group-hover:scale-105"
+          sizes="(max-width: 480px) calc(100vw - 2rem), 300px"
+        />
+      </CardBanner>
+    </CardHeader>
     <CardContent>
       <Tag
         status="warning"

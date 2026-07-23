@@ -26,6 +26,8 @@
   "page-roadmap-governance-button": "Více o správě Etherea",
   "page-roadmap-hero-alt": "Plán vývoje Etherea",
   "page-roadmap-technical-upgrades-title": "Jaká technická vylepšení čekají Ethereum?",
+  "page-roadmap-post-quantum-title": "Postkvantová bezpečnost",
+  "page-roadmap-post-quantum-description": "Kvantové počítače by jednoho dne mohly prolomit kryptografii, na kterou se blockchainy spoléhají. Postkvantová vylepšení Etherea nahradí zranitelné algoritmy dříve, než se kvantové výpočty stanou skutečnou hrozbou.",
   "page-roadmap-danksharding-title": "Danksharding",
   "page-roadmap-danksharding-description": "Danksharding výrazně zlevňuje rollupy na vrstvě 2 (l2) pro uživatele přidáním datových „blobů“ do bloků Etherea.",
   "page-roadmap-single-slot-finality-title": "Jednoslotová finalita",

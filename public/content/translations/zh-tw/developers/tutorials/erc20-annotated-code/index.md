@@ -195,7 +195,7 @@ import "./IERC20.sol";
 import "../../math/SafeMath.sol";
 ```
 
-- `GSN/Context.sol` 是使用 [OpenGSN](https://www.opengsn.org/) 所需的定義，這是一個允許沒有以太幣的使用者使用區塊鏈的系統。請注意，這是一個舊版本，如果你想與 OpenGSN 整合，請[使用本教學](https://docs.opengsn.org/javascript-client/tutorial.html)。
+- `GSN/Context.sol` 是使用 [OpenGSN](https://opengsn.org/) 所需的定義，這是一個允許沒有以太幣的使用者使用區塊鏈的系統。請注意，這是一個舊版本，如果你想與 OpenGSN 整合，請[使用本教學](https://docs.opengsn.org/javascript-client/tutorial.html)。
 - [SafeMath 函式庫](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)，它可以防止 Solidity 版本 **&lt;0.8.0** 的算術溢位/下溢。在 Solidity ≥0.8.0 中，算術運算在溢位/下溢時會自動回滾，使得 SafeMath 變得不必要。此合約使用 SafeMath 是為了與舊版編譯器向下相容。
 
 &nbsp;

@@ -1,6 +1,6 @@
 "use client"
-
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import { TranslationKey } from "@/lib/types"
 import type { DeveloperDocsLink } from "@/lib/interfaces"
@@ -11,7 +11,6 @@ import { cn } from "@/lib/utils/cn"
 
 import docLinks from "@/data/developer-docs-links.yaml"
 
-import { useTranslation } from "@/hooks/useTranslation"
 import { usePathname } from "@/i18n/navigation"
 
 const TextDiv = ({ children, className, ...props }) => (
@@ -38,7 +37,7 @@ type CardLinkProps = {
 }
 
 const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
-  const { t } = useTranslation("page-developers-docs")
+  const t = useTranslations("page-developers-docs")
 
   if (!docData) return <div className="flex-1" />
 

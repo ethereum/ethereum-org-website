@@ -28,7 +28,7 @@ const BugBountyLeaderboard = async ({
 
   return (
     <List
-      className="ms-0 mb-8 w-full list-none overflow-hidden rounded-base bg-background shadow-table-box"
+      className="ms-0 mb-8 w-full list-none overflow-hidden rounded-base bg-background shadow-xl"
       aria-label={t("page-upgrades-bug-bounty-leaderboard-list")}
     >
       {content

@@ -271,8 +271,8 @@ function safe_add(uint x, uint y) returns(uint z){
 
 **Mythril** - _எத்திரியம் திறன் ஒப்பந்தங்களில் உள்ள பாதிப்புகளைக் கண்டறிவதற்கான ஒரு குறியீட்டுச் செயலாக்கக் கருவி_
 
-- [GitHub](https://github.com/ConsenSys/mythril-classic)
-- [ஆவணங்கள்](https://mythril-classic.readthedocs.io/en/develop/)
+- [GitHub](https://github.com/ConsenSysDiligence/mythril)
+- [ஆவணங்கள்](https://github.com/ConsenSysDiligence/mythril/tree/develop/docs/source)
 
 ## மேலும் படிக்க {#further-reading}
 

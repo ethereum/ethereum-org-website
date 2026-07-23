@@ -27,7 +27,7 @@ Jika Anda menguasai dua bahasa dan ingin membantu kami menjangkau lebih banyak o
 **Berita**
 
 - [BeInCrypto](http://www.beincrypto.com.br) - berita dan artikel mata uang kripto, termasuk daftar bursa, tersedia di Brasil
-- [Cointelegraph](http://cointelegraph.com.br/category/analysis) - Cointelegraph versi Brasil, outlet berita mata uang kripto utama
+- [Cointelegraph](https://cointelegraph.com.br/) - Cointelegraph versi Brasil, outlet berita mata uang kripto utama
 - [Livecoins](http://www.livecoins.com.br/ethereum) - berita dan alat mata uang kripto
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - berita dan laporan mata uang kripto
 - [Modular Crypto](https://modularcrypto.xyz/) - berita dan artikel pendidikan mata uang kripto
@@ -37,7 +37,7 @@ Jika Anda menguasai dua bahasa dan ingin membantu kami menjangkau lebih banyak o
 - [web3dev](https://www.web3dev.com.br/) - Pusat konten dan komunitas Discord untuk pengembang Web3.
 - [Web3Brasil](https://github.com/web3brasil/web3brasil) - sumber daya untuk mempelajari Web3 dan keuangan terdesentralisasi (DeFi)
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) - berita dan pendidikan mata uang kripto, termasuk 'Ethereum untuk pemula' dan 'DeFi' untuk pemula
-- [CriptoAtivos](http://www.criptoativos.wiki.br/) - wawasan dari ruang mata uang kripto, pendidikan, dan blog
+- [CriptoAtivos](https://web.archive.org/web/20220916210708/https://www.criptoativos.wiki.br/) - wawasan dari ruang mata uang kripto, pendidikan, dan blog
 - [Cointimes](http://www.cointimes.com.br/) - berita dan pendidikan mata uang kripto
 - [Paket pemula Web3](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - panduan yang menjawab pertanyaan kripto yang paling sering diajukan dan mendasar
 

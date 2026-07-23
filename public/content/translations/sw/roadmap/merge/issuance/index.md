@@ -14,7 +14,7 @@ Tunaweza kugawanya usambazaji wa ETH katika nguvu mbili kuu: utoaji na kuteketez
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="Utoaji wa ETH kwa ufupi">
 
 - Kabla ya kuhamia kwenye Uthibitisho wa Dau (PoS), wachimbaji walitolewa takriban ETH 13,000 kwa siku
 - Waweka dhamana wanatolewa takriban ETH 1,700 kwa siku, kulingana na takriban jumla ya ETH milioni 14 zilizowekwa dhamana
@@ -38,18 +38,18 @@ Wathibitishaji kwenye Mnyororo wa Beacon wanapewa tuzo ya ETH kwa kuthibitisha h
 
 ### Mchanganuo wa utoaji kabla ya unganisho {#pre-merge-issuance-breakdown}
 
-Jumla ya usambazaji wa ETH: **~ETH 120,520,000** (wakati wa Unganisho mnamo Septemba 2022)
+Jumla ya usambazaji wa ETH: **\~ETH 120,520,000** (wakati wa Unganisho mnamo Septemba 2022)
 
 **Utoaji wa tabaka la utekelezaji:**
 
-- Ilikadiriwa kuwa ETH 2.08 kwa kila sekunde 13.3\*: **~ETH 4,930,000** zilitolewa kwa mwaka
+- Ilikadiriwa kuwa ETH 2.08 kwa kila sekunde 13.3\*: **\~ETH 4,930,000** zilitolewa kwa mwaka
 - Ilisababisha kiwango cha mfumuko wa bei cha **takriban 4.09%** (Milioni 4.93 kwa mwaka / jumla ya Milioni 120.5)
 - \*Hii inajumuisha ETH 2 kwa kila kitalu kikuu, pamoja na wastani wa ETH 0.08 kwa muda kutoka kwa vitalu vya ommer. Pia inatumia sekunde 13.3, lengo la msingi la muda wa kitalu bila ushawishi wowote kutoka kwa [Bomu la ugumu](/glossary/#difficulty-bomb). ([Tazama chanzo](https://bitinfocharts.com/ethereum/))
 
 **Utoaji wa tabaka la mwafaka:**
 
 - Kwa kutumia jumla ya ETH 14,000,000 zilizowekwa dhamana, kiwango cha utoaji wa ETH ni takriban ETH 1700 kwa siku ([Tazama chanzo](https://ultrasound.money/))
-- Inasababisha **~ETH 620,500** kutolewa kwa mwaka
+- Inasababisha **\~ETH 620,500** kutolewa kwa mwaka
 - Ilisababisha kiwango cha mfumuko wa bei cha **takriban 0.52%** (620.5K kwa mwaka / jumla ya Milioni 119.3)
 
 <Alert variant="update">
@@ -57,9 +57,9 @@ Jumla ya usambazaji wa ETH: **~ETH 120,520,000** (wakati wa Unganisho mnamo Sept
 <AlertDescription>
 **Jumla ya kiwango cha utoaji kwa mwaka (kabla ya unganisho): ~4.61%** (4.09% + 0.52%)
 
-**~88.7%** ya utoaji ilikuwa ikienda kwa wachimbaji kwenye tabaka la utekelezaji (4.09 / 4.61 * 100)
+**\~88.7%** ya utoaji ilikuwa ikienda kwa wachimbaji kwenye tabaka la utekelezaji (4.09 / 4.61 * 100)
 
-**~11.3%** ilikuwa ikitolewa kwa waweka dhamana kwenye tabaka la mwafaka (0.52 / 4.61 * 100)
+**\~11.3%** ilikuwa ikitolewa kwa waweka dhamana kwenye tabaka la mwafaka (0.52 / 4.61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -84,16 +84,16 @@ Kadiri wathibitishaji wengi wanavyojitoa, idadi ya juu zaidi ya wathibitishaji w
 
 ### Mchanganuo wa mfumuko wa bei baada ya unganisho {#post-merge-inflation-breakdown}
 
-- [Jumla ya usambazaji wa ETH](/eth/supply/): **~ETH 120,520,000** (wakati wa Unganisho mnamo Septemba 2022)
+- [Jumla ya usambazaji wa ETH](/eth/supply/): **\~ETH 120,520,000** (wakati wa Unganisho mnamo Septemba 2022)
 - Utoaji wa tabaka la utekelezaji: **0**
-- Utoaji wa tabaka la mwafaka: Sawa na hapo juu, **~0.52%** kiwango cha utoaji kwa mwaka (kukiwa na jumla ya ETH milioni 14 zilizowekwa dhamana)
+- Utoaji wa tabaka la mwafaka: Sawa na hapo juu, **\~0.52%** kiwango cha utoaji kwa mwaka (kukiwa na jumla ya ETH milioni 14 zilizowekwa dhamana)
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Jumla ya kiwango cha utoaji kwa mwaka: **~0.52%**
+Jumla ya kiwango cha utoaji kwa mwaka: **\~0.52%**
 
-Upunguzaji halisi katika utoaji wa ETH wa kila mwaka: **~88.7%** ((4.61% - 0.52%) / 4.61% * 100)
+Upunguzaji halisi katika utoaji wa ETH wa kila mwaka: **\~88.7%** ((4.61% - 0.52%) / 4.61% * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

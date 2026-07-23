@@ -52,7 +52,7 @@ Wenn du der Meinung bist, dass eine Community basierend auf diesen Richtlinien h
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> – Web3-Ersteller-Community, in der sich Entwickler, Branchenführer und Ethereum-Enthusiasten aufhalten. Wir haben eine Leidenschaft für Web3-Entwicklung, -Design und -Kultur. Komm und baue mit uns.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> – Chat für Solidity-Entwicklung (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>– Frage-und-Antwort-Forum</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>– dezentrales Frage-und-Antwort-Forum</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://www.peera.ai/community-forum">Peera Community Forum</Link> <i>– dezentrales Frage-und-Antwort-Forum</i></SocialListItem>
 
 ## YouTube und X (ehemals Twitter) {#youtube-and-twitter}
 

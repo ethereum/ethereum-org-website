@@ -1,0 +1,10 @@
+{
+  "title": "앱 둘러보기",
+  "description": "직접 사용해 볼 수 있도록 가장 인기 있는 앱 몇 가지를 정리했습니다. 앱을 최대한 활용하려면 ETH와 지갑이 필요합니다.",
+  "take-a-look": "살펴보기",
+  "aave-description": "토큰을 빌려주어 이자를 얻고 언제든지 출금하세요.",
+  "farcaster-description": "암호화폐 소셜 및 커뮤니티 플랫폼입니다.",
+  "uniswap-description": "전 세계 어디서나 토큰을 다른 토큰으로 스왑하세요.",
+  "go": "Go",
+  "powered-by-ethereum": "이더리움 기반"
+}

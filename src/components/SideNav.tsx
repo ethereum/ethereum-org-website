@@ -1,8 +1,8 @@
 "use client"
-
 import { useEffect, useState } from "react"
 import { ChevronRight } from "lucide-react"
 import { motion } from "motion/react"
+import { useTranslations } from "next-intl"
 
 import { ChildOnlyProp } from "@/lib/types"
 import { DeveloperDocsLink } from "@/lib/interfaces"
@@ -12,7 +12,6 @@ import docLinks from "../data/developer-docs-links.yaml"
 import { HStack } from "./ui/flex"
 import { BaseLink, LinkProps } from "./ui/Link"
 
-import { useTranslation } from "@/hooks/useTranslation"
 export const dropdownIconContainerVariant = {
   open: {
     rotate: 90,
@@ -76,7 +75,7 @@ const isItemInPath = (item: DeveloperDocsLink, path: string): boolean => {
 }
 
 const NavLink = ({ item, path }: NavLinkProps) => {
-  const { t } = useTranslation("page-developers-docs")
+  const t = useTranslations("page-developers-docs")
   const isLinkInPath = isItemInPath(item, path)
   const [isOpen, setIsOpen] = useState<boolean>(isLinkInPath)
 
@@ -140,12 +139,12 @@ export interface SideNavProps {
 }
 
 const SideNav = ({ path }: SideNavProps) => {
-  const { t } = useTranslation("page-developers-docs")
+  const tCommon = useTranslations("common")
 
   return (
     <nav
-      className="sticky top-[4.75rem] hidden h-[calc(100vh-80px)] w-[calc((100%-1448px)/2+256px)] min-w-[256px] overflow-y-auto border-e bg-background pt-8 pb-16 shadow-[1px_0px_0px_rgba(0,0,0,0.1)] transition-transform duration-200 lg:block"
-      aria-label={t("common:nav-developers-docs")}
+      className="sticky top-19 h-[calc(100vh-80px)] w-[calc((100%-1448px)/2+256px)] min-w-64 overflow-y-auto border-e-2 bg-background pt-8 pb-16 transition-transform duration-200 max-lg:hidden"
+      aria-label={tCommon("nav-developers-docs")}
     >
       {docLinks.map((item, idx) => (
         <NavLink item={item} path={path} key={idx} />

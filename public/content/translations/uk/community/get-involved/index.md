@@ -1,6 +1,6 @@
 ---
-title: Як я можу долучитися?
-description: Як долучитися до спільноти Етеріуму.
+title: "Як я можу долучитися?"
+description: "Як долучитися до спільноти Етеріуму."
 lang: uk
 ---
 
@@ -11,7 +11,7 @@ lang: uk
 ## Розробники <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Дізнайтеся більше та спробуйте Етеріум на [ethereum.org/developers/](/developers/)
-- Відвідайте хакатон [ETHGlobal](https://ethglobal.co/) поблизу вас!
+- Відвідайте хакатон [ETHGlobal](https://ethglobal.com/) поблизу вас!
 - Перегляньте [проєкти, пов'язані з вашою сферою знань або обраною мовою програмування](/developers/docs/programming-languages/)
 - Дивіться або беріть участь у [дзвінках щодо консенсусу та рівня виконання](https://www.youtube.com/@EthereumProtocol/streams)
 - [Список побажань Ecosystem Support Program](https://esp.ethereum.foundation/wishlist/) — інструменти, документація та інфраструктура, для яких Програма підтримки екосистеми Етеріуму активно шукає заявки на гранти
@@ -80,7 +80,7 @@ lang: uk
 
 Екосистема Етеріуму має на меті фінансувати суспільні блага та впливові проєкти. За допомогою дуже невеликих пожертв ви можете висловити свою підтримку та дозволити реалізувати важливу роботу.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Фінансові спеціалісти та бухгалтери <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

@@ -121,7 +121,6 @@ _Pembaruan Pectra Ethereum: Apa yang Perlu Diketahui Staker — Blockdaemon_
 
 - [Peta jalan Ethereum](/roadmap/)
 - [Tanya Jawab Pectra](https://epf.wiki/#/wiki/pectra-faq)
-- [Halaman info Pectra.wtf](https://pectra.wtf)
 - [Bagaimana Pectra meningkatkan pengalaman staker](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [Halaman info EIP-7702](https://eip7702.io/)
+- [Halaman info EIP7702](https://eip7702.io/)
 - [Devnet Pectra](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

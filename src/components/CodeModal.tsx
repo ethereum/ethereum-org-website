@@ -1,5 +1,6 @@
 import { Children, type ReactElement } from "react"
 import { Clipboard, ClipboardCheck } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import { Button } from "./ui/buttons/Button"
 import {
@@ -12,7 +13,6 @@ import {
 } from "./ui/sheet"
 
 import { useClipboard } from "@/hooks/useClipboard"
-import { useTranslation } from "@/hooks/useTranslation"
 
 type CodeModalProps = {
   title: string
@@ -22,7 +22,7 @@ type CodeModalProps = {
 }
 
 const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => {
-  const { t } = useTranslation()
+  const t = useTranslations("common")
   const codeSnippet = (
     Children.toArray(children)[0] as ReactElement<{ children: string }>
   ).props.children

@@ -45,8 +45,9 @@ next-env.d.ts
 # rss feeds
 /feed.xml
 
-# Sitemaps
-sitemap*.xml
+# Sitemaps (root-level generated output only; anchored so the app/sitemap.xml/
+# route handler that serves the <sitemapindex> stays tracked -- mirrors /feed.xml)
+/sitemap*.xml
 
 # Robots.txt
 robots.txt

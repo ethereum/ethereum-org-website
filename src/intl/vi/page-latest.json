@@ -1,9 +1,22 @@
 {
-  "page-latest-meta-description": "Tài nguyên, công cụ và các bước phát triển dành cho trình xây dựng từ hệ sinh thái Ethereum.",
-  "page-latest-title": "Cập nhật cho trình xây dựng",
-  "page-latest-subtitle": "Một không gian chung dành cho các góc nhìn chuyên gia về những tài nguyên, công cụ và bước phát triển mới nhất trong toàn bộ hệ sinh thái trình xây dựng Ethereum.",
+  "page-latest-meta-description": "Các bài đăng blog, tin tức và cập nhật mới nhất từ cộng đồng Ethereum, cùng với các góc nhìn chuyên gia từ khắp hệ sinh thái trình xây dựng.",
+  "page-latest-title": "Cập nhật Ethereum mới nhất",
+  "page-latest-subtitle": "Các bài đăng blog, tin tức và cập nhật mới nhất từ cộng đồng, cùng với các góc nhìn chuyên gia về những phát triển trên toàn hệ sinh thái trình xây dựng Ethereum.",
   "page-latest-no-posts": "Không tìm thấy bài viết nào.",
   "page-latest-read-more": "Đọc thêm",
   "page-latest-minute-read": "{minutes} phút đọc",
-  "page-latest-team-attribution": "EF Builder Growth"
+  "page-latest-team-attribution": "EF Builder Growth",
+  "page-latest-cta-submit-resource": "Gửi tài nguyên",
+  "page-latest-cta-propose-article": "Đề xuất bài viết",
+  "page-latest-highlights-heading": "Điểm nổi bật",
+  "page-latest-articles-heading": "Các bài viết Ethereum mới nhất",
+  "page-latest-sources-heading": "Đọc thêm trên các trang web này",
+  "page-latest-see-more": "Xem thêm ({count})",
+  "page-latest-sort-label": "Sắp xếp bài viết",
+  "page-latest-sort-newest": "Mới nhất trước",
+  "page-latest-sort-oldest": "Cũ nhất trước",
+  "page-latest-sort-az": "A–Z",
+  "page-latest-i18n-disclaimer": "Một số bài viết được hiển thị bằng ngôn ngữ gốc (tiếng Anh).",
+  "page-latest-suggest-heading": "Đề xuất tài nguyên",
+  "page-latest-suggest-description": "Bạn biết một bản tin hoặc ấn phẩm nghiên cứu về Ethereum nên được liệt kê ở đây, hoặc có ý tưởng về chủ đề bài viết cho trình xây dựng? Hãy mở một issue để gửi tài nguyên của bạn."
 }

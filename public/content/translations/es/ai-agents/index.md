@@ -5,7 +5,7 @@ description: "Una descripción general de los agentes de IA en Ethereum"
 lang: es
 template: use-cases
 sidebarDepth: 2
-image: /images/ai-agents/hero-image.png
+image: /images/community-campfire-people-robot-cut-out.png
 alt: Personas reunidas en una mesa con terminales
 summaryPoints:
   - "IA que interactúa con la cadena de bloques y opera de forma independiente"

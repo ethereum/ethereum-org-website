@@ -1,6 +1,6 @@
 ---
-title: 我該如何參與？
-description: 如何參與以太坊社群。
+title: "我該如何參與？"
+description: "如何參與以太坊社群。"
 lang: zh-tw
 ---
 
@@ -11,7 +11,7 @@ lang: zh-tw
 ## 開發人員 <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - 在 [ethereum.org/developers/](/developers/) 了解並嘗試以太坊
-- 參加你附近的 [ETHGlobal](https://ethglobal.co/) 黑客松！
+- 參加你附近的 [ETHGlobal](https://ethglobal.com/) 黑客松！
 - 查看[與你的專業領域或首選程式語言相關的專案](/developers/docs/programming-languages/)
 - 觀看或參與[共識與執行層會議](https://www.youtube.com/@EthereumProtocol/streams)
 - [生態系統支援計畫願望清單](https://esp.ethereum.foundation/wishlist/) - 以太坊生態系統支援計畫積極尋求資助申請的工具、文件和基礎設施領域
@@ -80,7 +80,7 @@ lang: zh-tw
 
 以太坊生態系統的使命是資助公共財和具影響力的專案。只需非常小額的捐款，你就可以表達支持，並讓重要的工作得以實現。
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## 金融專業人士與會計師 <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

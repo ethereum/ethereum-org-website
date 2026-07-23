@@ -1,6 +1,6 @@
 ---
-title: Jak mogę się zaangażować?
-description: Jak zaangażować się w społeczność Ethereum.
+title: "Jak mogę się zaangażować?"
+description: "Jak zaangażować się w społeczność Ethereum."
 lang: pl
 ---
 
@@ -11,7 +11,7 @@ Zacznij od przeczytania o misji i wartościach ethereum.org w naszym [kodeksie p
 ## Programiści <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Dowiedz się więcej i wypróbuj Ethereum na [ethereum.org/developers/](/developers/)
-- Weź udział w hackathonie [ETHGlobal](https://ethglobal.co/) w Twojej okolicy!
+- Weź udział w hackathonie [ETHGlobal](https://ethglobal.com/) w Twojej okolicy!
 - Sprawdź [projekty związane z Twoją dziedziną wiedzy lub wybranym językiem programowania](/developers/docs/programming-languages/)
 - Oglądaj lub bierz udział w [rozmowach dotyczących warstwy konsensusu i warstwy wykonawczej](https://www.youtube.com/@EthereumProtocol/streams)
 - [Lista życzeń Ecosystem Support Program](https://esp.ethereum.foundation/wishlist/) – obszary narzędzi, dokumentacji i infrastruktury, w których program wsparcia ekosystemu Ethereum (Ecosystem Support Program) aktywnie poszukuje wniosków o granty
@@ -80,7 +80,7 @@ Stakując swoje ETH, możesz zdobywać nagrody, jednocześnie pomagając zabezpi
 
 Ekosystem Ethereum ma misję finansowania dóbr publicznych i wpływowych projektów. Za pomocą bardzo małych darowizn możesz okazać swoje wsparcie i umożliwić realizację ważnych prac.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Specjaliści ds. finansów i księgowi <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

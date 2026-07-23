@@ -1,7 +1,7 @@
 ---
-title: Giới thiệu về Web3
-metaTitle: Web3 là gì và tại sao nó lại quan trọng?
-description: Giới thiệu về Web3—bước tiến hóa tiếp theo của World Wide Web—và lý do tại sao nó lại quan trọng.
+title: "Giới thiệu về Web3"
+metaTitle: "Web3 là gì và tại sao nó lại quan trọng?"
+description: "Giới thiệu về Web3—bước tiến hóa tiếp theo của World Wide Web—và lý do tại sao nó lại quan trọng."
 lang: vi
 ---
 
