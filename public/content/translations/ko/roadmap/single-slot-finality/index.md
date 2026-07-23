@@ -31,7 +31,7 @@ lang: ko
 
 ## SSF로 가는 길 {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title="왜 지금 SSF를 구현할 수 없을까요?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 현재의 합의 메커니즘은 블록을 검증하기 위해 각 검증자가 처리해야 하는 메시지 수를 줄이기 위해 위원회라고 알려진 여러 검증자의 증명을 결합합니다. 모든 검증자는 각 에포크(32 슬롯)마다 증명할 기회를 갖지만, 각 슬롯에서는 '위원회'라고 하는 일부 검증자만 증명합니다. 이들은 서브넷으로 나뉘어 그중 몇 명의 검증자가 '어그리게이터(aggregator)'로 선택되는 방식으로 이를 수행합니다. 이 어그리게이터들은 서브넷 내의 다른 검증자들로부터 받은 모든 서명을 하나의 집계 서명으로 결합합니다. 가장 많은 개별 기여를 포함한 어그리게이터가 자신의 집계 서명을 블록 제안자에게 전달하고, 블록 제안자는 이를 다른 위원회의 집계 서명과 함께 블록에 포함시킵니다.
 

@@ -31,7 +31,7 @@ Mit dem aktuellen Design des Mechanismus ist es zur Reduzierung der Zeit bis zur
 
 ## Wege zur SSF {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title="Warum können wir SSF nicht schon heute haben?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 Der aktuelle Konsensmechanismus kombiniert Attestierungen von mehreren Validatoren, bekannt als Komitees, um die Anzahl der Nachrichten zu reduzieren, die jeder Validator verarbeiten muss, um einen Block zu validieren. Jeder Validator hat die Möglichkeit, in jeder Epoche (32 Slots) zu attestieren, aber in jedem Slot attestiert nur eine Teilmenge von Validatoren, die als „Komitee“ bezeichnet wird. Sie tun dies, indem sie sich in Subnetze aufteilen, in denen einige wenige Validatoren als „Aggregatoren“ ausgewählt werden. Diese Aggregatoren kombinieren jeweils alle Signaturen, die sie von anderen Validatoren in ihrem Subnetz sehen, zu einer einzigen aggregierten Signatur. Der Aggregator, der die größte Anzahl an individuellen Beiträgen enthält, gibt seine aggregierte Signatur an den Block-Proposer weiter, der sie zusammen mit der aggregierten Signatur der anderen Komitees in den Block aufnimmt.
 
