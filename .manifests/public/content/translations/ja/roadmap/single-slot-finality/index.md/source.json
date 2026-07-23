@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/single-slot-finality/index.md",
-  "generatedAt": "2026-07-23T00:25:07.003Z",
-  "rootHash": "4bf44a7aa474",
+  "generatedAt": "2026-07-23T22:50:18.780Z",
+  "rootHash": "9bb8f5a5f505",
   "tree": {
-    "contentHash": "a283f02e2096",
-    "anchorHash": "d18cf4b46d2b",
+    "contentHash": "cd76e7c935a4",
+    "anchorHash": "725a23f7e9d8",
     "children": {
       "frontmatter:title": {
         "contentHash": "26be487ae07f",
@@ -93,8 +93,8 @@
         ]
       },
       "routes-to-ssf": {
-        "contentHash": "8f3484838172",
-        "anchorHash": "255c536ef8f9",
+        "contentHash": "6bcdb3dac733",
+        "anchorHash": "6331b9bca123",
         "labelHash": "d140fa94a9c9",
         "children": {
           "_label": {
@@ -102,9 +102,13 @@
             "anchorHash": "e3b0c44298fc"
           },
           "component:1": {
-            "contentHash": "6f7d93f7eedd",
-            "anchorHash": "6103ea1c6d76",
+            "contentHash": "b0e197cae82e",
+            "anchorHash": "cfc88a81eabd",
             "children": {
+              "attr:title": {
+                "contentHash": "bef51d6c28a1",
+                "anchorHash": "e3b0c44298fc"
+              },
               "attr:eventCategory": {
                 "contentHash": "e3b0c44298fc",
                 "anchorHash": "f1e82b456042"
@@ -127,6 +131,7 @@
               }
             },
             "childrenOrder": [
+              "attr:title",
               "attr:eventCategory",
               "attr:eventName",
               "prose:1",
@@ -295,5 +300,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "9fbda251935a99d698459c3ce514c22fdce5a065"
 }
