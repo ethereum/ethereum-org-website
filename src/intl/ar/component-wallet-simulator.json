@@ -156,6 +156,7 @@
   "sim-cw-connect-disclaimer": "الاتصال بالموقع لن يشارك أي معلومات شخصية أو آمنة مع مالكي الموقع.",
   "sim-cw-your-collection": "مجموعتك (⁦{count}⁩)",
   "sim-cw-nft-title": "فن رائع",
+  "sim-cw-nft-alt": "صورة ⁦NFT⁩",
   "sim-cw-nft-actions-tooltip": "هذه بعض الأشياء التي يمكنك القيام بها بصفتك مالكًا لرموز ⁦NFT⁩ الخاصة بك",
   "sim-cw-set-price": "تحديد سعر",
   "sim-cw-auction-item": "عرض العنصر في مزاد",
