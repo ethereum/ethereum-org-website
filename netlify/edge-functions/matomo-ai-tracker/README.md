@@ -56,3 +56,13 @@ curl -H "User-Agent: ChatGPT-User" http://localhost:8888/en/learn/
 
 The Matomo Measurement Protocol payload sets `source` to `Netlify` for this
 port.
+
+## Testing
+
+Unit tests ported from the upstream suite live in `tests/unit/matomo-ai-tracker/` and run with the repo's Playwright unit project:
+
+```bash
+pnpm test:unit
+```
+
+Type checking uses the scoped `netlify/edge-functions/tsconfig.json` (Deno-style `.ts`-extension imports), run as part of `pnpm type-check`.
