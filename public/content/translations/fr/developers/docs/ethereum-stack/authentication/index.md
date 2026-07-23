@@ -1,6 +1,6 @@
 ---
 title: Authentification sur Ethereum
-description: Découvrez comment fonctionne l'authentification des utilisateurs dans les applications Ethereum : pas de mots de passe, juste des portefeuilles et des signatures.
+description: "Découvrez comment fonctionne l'authentification des utilisateurs dans les applications Ethereum : pas de mots de passe, juste des portefeuilles et des signatures."
 lang: fr
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Autenticazione su Ethereum
-description: Scopri come funziona l'autenticazione degli utenti nelle applicazioni Ethereum: niente password, solo portafogli e firme.
+description: "Scopri come funziona l'autenticazione degli utenti nelle applicazioni Ethereum: niente password, solo portafogli e firme."
 lang: it
 ---
 

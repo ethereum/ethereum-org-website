@@ -1,6 +1,6 @@
 ---
 title: Autenticación en Ethereum
-description: Aprenda cómo funciona la autenticación de usuarios en las aplicaciones de Ethereum: sin contraseñas, solo billeteras y firmas.
+description: "Aprenda cómo funciona la autenticación de usuarios en las aplicaciones de Ethereum: sin contraseñas, solo billeteras y firmas."
 lang: es
 ---
 
