@@ -175,13 +175,12 @@ Einige alternative Standards sind aus diesem Problem hervorgegangen, wie z. B. [
 - [OpenZeppelin - ERC-20-Implementierung](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Leitfaden zu Solidity-ERC20-Token](https://www.alchemy.com/overviews/erc20-solidity)
 
-## Andere Standards für fungible Token {#fungible-token-standards}
-
+## Weitere Standards für fungible Token
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - Tokenisierte Vaults](/developers/docs/standards/tokens/erc-4626)
-
+- [ERC-7540 - Asynchrone tokenisierte Vaults](/developers/docs/standards/tokens/erc-7540)
 ## Tutorials: Bauen mit ERC-20 auf Ethereum {#tutorials}
 
 - [ERC-20-Vertrag-Walkthrough](/developers/tutorials/erc20-annotated-code/) _– Ein zeilenweise kommentierter Durchgang durch die ERC-20-Vertragsimplementierung von OpenZeppelin._
