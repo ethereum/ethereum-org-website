@@ -29,10 +29,13 @@ incomplete: true
 
 [ERC](https://eips.ethereum.org/erc) 제안의 전체 목록입니다.
 
-## 더 읽어보기 {#further-reading}
+## 더 읽어보기
 
 _도움이 된 커뮤니티 리소스를 알고 계신가요? 이 페이지를 편집하여 추가해 주세요!_
 
+- [토큰 통합 체크리스트](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md) - _Trail of Bits_
+- [오픈제플린 문서: 토큰](https://docs.openzeppelin.com/contracts/5.x/tokens) - _오픈제플린_
+- [토큰 통합의 위험성 (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _오픈제플린_
 ## 관련 튜토리얼 {#related-tutorials}
 
 - [토큰 통합 체크리스트](/developers/tutorials/token-integration-checklist/) _– 토큰과 상호작용할 때 고려해야 할 사항들의 체크리스트입니다._
