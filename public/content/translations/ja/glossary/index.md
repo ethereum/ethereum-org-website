@@ -1,10 +1,10 @@
 ---
-title: "イーサリアム用語集"
-description: "イーサリアムに関連する専門用語および非専門用語の未完成の用語集。"
+title: 用語集
+metaTitle: イーサリアム用語集
+description: イーサリアムに関連する技術的および非技術的な用語の不完全な用語集
 lang: ja
+authors: ["アンドレアス・アントノプロス"]
 ---
-
-# 用語集 {#ethereum-glossary}
 
 ## \# {#section-numbers}
 
@@ -494,12 +494,12 @@ lang: ja
 
 ## 出典 {#sources}
 
-_一部は[Andreas M. Antonopoulos、Gavin Wood](https://aantonop.com/books/mastering-ethereum)著の[Mastering Ethereum](https://github.com/ethereumbook/ethereumbook)より、CC-BY-SAライセンスの下で提供されています_
+_CC-BY-SAライセンスの下、[アンドレアス・M・アントノプロス、ギャビン・ウッド](https://aantonop.com/books/mastering-ethereum)著の[Mastering Ethereum](https://github.com/ethereumbook/ethereumbook)から一部提供されています_
 
 <Divider />
 
 ## このページに貢献する {#contribute-to-this-page}
 
-不足している情報はありませんか? 誤った情報はありませんか? GitHubでこの用語集の改善にご協力ください！
+何か見落としている用語はありますか？間違っている箇所はありますか？GitHubでこの用語集に貢献して、改善にご協力ください！
 
-[貢献する方法の詳細を見る](/contributing/adding-glossary-terms)
+[貢献方法の詳細はこちら](/contributing/adding-glossary-terms)

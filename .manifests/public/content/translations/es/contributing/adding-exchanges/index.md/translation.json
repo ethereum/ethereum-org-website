@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "locale": "es",
+  "translatedAt": "2026-06-08T07:41:39.181Z",
+  "englishManifestHash": "cd570c438fb8",
+  "placeholderOrder": [
+    "LINK-5dc4b9",
+    "LINK-fbf1d7",
+    "LINK-f2019d"
+  ],
+  "placeholderMap": {
+    "LINK-5dc4b9": {
+      "type": "link",
+      "values": {
+        "url": "/get-eth/"
+      }
+    },
+    "LINK-fbf1d7": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/adding-products/"
+      }
+    },
+    "LINK-f2019d": {
+      "type": "link",
+      "values": {
+        "url": "/get-eth/#country-picker"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T07:41:39.181Z",
+      "status": "success"
+    }
+  }
+}

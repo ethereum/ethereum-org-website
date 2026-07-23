@@ -4,8 +4,6 @@ description: Explore different areas of open research and learn how to get invol
 lang: en
 ---
 
-# Active areas of Ethereum research {#active-areas-of-ethereum-research}
-
 One of the primary strengths of Ethereum is that an active research and engineering community is constantly improving it. Many enthusiastic, skilled people worldwide would like to apply themselves to outstanding issues in Ethereum, but it is not always easy to find out what those issues are. This page outlines key active research areas as a rough guide to Ethereum's cutting edge.
 
 ## How Ethereum research works {#how-ethereum-research-works}
@@ -247,7 +245,7 @@ Blockspace markets govern the inclusion of end-user transactions, either directl
 #### Recent research {#recent-research-10}
 
 - [Multidimensional EIP-1559 video presentation](https://youtu.be/QbR4MTgnCko)
-- [Cross domain MEV](http://arxiv.org/abs/2112.01472)
+- [Cross domain MEV](https://arxiv.org/abs/2112.01472)
 - [MEV auctions](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### Proof-of-stake incentives {#proof-of-stake-incentives}

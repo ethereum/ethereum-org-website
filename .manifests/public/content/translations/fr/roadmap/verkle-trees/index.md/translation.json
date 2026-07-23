@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "locale": "fr",
+  "translatedAt": "2026-06-08T10:47:28.052Z",
+  "englishManifestHash": "2453abb9182c",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "COMPONENT-ba4eee",
+    "COMPONENT-9cd2c4",
+    "CODE-45aed7",
+    "IMAGE-4c5a3a",
+    "LINK-ee07c2",
+    "LINK-846351",
+    "LINK-be922c",
+    "LINK-fe86a9",
+    "LINK-52f9f4",
+    "LINK-2b317b",
+    "LINK-6992e6",
+    "LINK-0ec705",
+    "LINK-f0fcd3",
+    "LINK-4cea20",
+    "LINK-3aaeb4",
+    "LINK-e9ae22",
+    "LINK-5744c0"
+  ],
+  "placeholderMap": {
+    "COMPONENT-ba4eee": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "/roadmap/verkle-trees",
+        "eventName": "clicked why do we want stateless clients?"
+      }
+    },
+    "COMPONENT-9cd2c4": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "/roadmap/verkle-trees",
+        "eventName": "clicked exactly how much can Verkle trees reduce witness size?"
+      }
+    },
+    "CODE-45aed7": {
+      "type": "inline-code",
+      "values": {
+        "content": "(key,value)"
+      }
+    },
+    "IMAGE-4c5a3a": {
+      "type": "image",
+      "values": {
+        "path": "./verkle.png"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-ee07c2": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2021/12/02/verkle-tree-structure"
+      }
+    },
+    "LINK-846351": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=cPLHFBeC0Vg"
+      }
+    },
+    "LINK-be922c": {
+      "type": "link",
+      "values": {
+        "url": "https://verkle.info/"
+      }
+    },
+    "LINK-fe86a9": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=RGJOQHzg3UQ"
+      }
+    },
+    "LINK-52f9f4": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20250124132255/https://research.2077.xyz/verkle-trees"
+      }
+    },
+    "LINK-2b317b": {
+      "type": "link",
+      "values": {
+        "url": "https://ihagopian.com/posts/anatomy-of-a-verkle-proof"
+      }
+    },
+    "LINK-6992e6": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=f7bEtX3Z57o"
+      }
+    },
+    "LINK-0ec705": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=Q7rStTKwuYs"
+      }
+    },
+    "LINK-f0fcd3": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=0yiZJNciIJ4"
+      }
+    },
+    "LINK-4cea20": {
+      "type": "link",
+      "values": {
+        "url": "https://zeroknowledge.fm/podcast/202/"
+      }
+    },
+    "LINK-3aaeb4": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2021/06/18/verkle.html"
+      }
+    },
+    "LINK-e9ae22": {
+      "type": "link",
+      "values": {
+        "url": "https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html"
+      }
+    },
+    "LINK-5744c0": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T10:47:28.052Z",
+      "status": "success"
+    }
+  }
+}

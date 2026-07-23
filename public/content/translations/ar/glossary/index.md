@@ -1,10 +1,10 @@
 ---
-title: "مسرد مصطلحات إثيريوم"
-description: "مسرد غير مكتمل للمصطلحات التقنية وغير التقنية المتعلقة بـ إيثريوم"
+title: مسرد المصطلحات
+metaTitle: مسرد مصطلحات إيثيريوم
+description: مسرد غير مكتمل للمصطلحات التقنية وغير التقنية المتعلقة بإيثيريوم
 lang: ar
+authors: ["أندرياس أنتونوبولوس"]
 ---
-
-# مسرد المصطلحات {#ethereum-glossary}
 
 ## \# {#section-numbers}
 
@@ -494,12 +494,12 @@ lang: ar
 
 ## المصادر {#sources}
 
-_مقدم جزئيًا من [Mastering إيثريوم](https://github.com/ethereumbook/ethereumbook) من تأليف [Andreas M. Antonopoulos, غافين وود](https://aantonop.com/books/mastering-ethereum) بموجب ترخيص CC-BY-SA_
+_مقدم جزئيًا من كتاب [إتقان إيثيريوم](https://github.com/ethereumbook/ethereumbook) للمؤلفين [أندرياس م. أنتونوبولوس، وغافين وود](https://aantonop.com/books/mastering-ethereum) بموجب ترخيص <span dir="ltr">CC-BY-SA</span>_
 
 <Divider />
 
 ## ساهم في هذه الصفحة {#contribute-to-this-page}
 
-Did we miss something؟ Is something incorrect؟ Help us improve by contributing to this glossary on غيت هاب!
+هل فاتنا شيء؟ هل هناك شيء غير صحيح؟ ساعدنا في التحسين من خلال المساهمة في هذا المسرد على GitHub!
 
-[اعرف المزيد حول كيفية المساهمة](/contributing/adding-glossary-terms)
+[تعرف على المزيد حول كيفية المساهمة](/contributing/adding-glossary-terms)

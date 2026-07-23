@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/what-is-a-dapp/index.md",
+  "generatedAt": "2026-04-29T00:19:43.343Z",
+  "rootHash": "d0d82bf6307f",
+  "tree": {
+    "contentHash": "bd4a924c5ad6",
+    "anchorHash": "6d9de793c6c3",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "4797d48cbb6d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "688975b30af8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d1eebdf80746"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "382ee14d0822"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "5752469ef26a"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "0cb1dd1d18fd"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "630f02076427"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b29be240f173"
+      },
+      "prose:1": {
+        "contentHash": "6f319ec25088",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "aadfaa2fc9b5"
+      },
+      "prose:2": {
+        "contentHash": "86421c5b7aa6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-a-dapp-001": {
+        "contentHash": "0a483aab6bce",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "94e9d6b9b1c1",
+        "children": {
+          "_label": {
+            "contentHash": "94e9d6b9b1c1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "a2a22c066d54",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "how-dapps-work-029": {
+        "contentHash": "b056c2b2fabd",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "dff86e0813b7",
+        "children": {
+          "_label": {
+            "contentHash": "dff86e0813b7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "79c4467b7cb4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "security-benefits-110": {
+        "contentHash": "4d4c2653009b",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "8acb588bcffd",
+        "children": {
+          "_label": {
+            "contentHash": "8acb588bcffd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "7de9c392bf5a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "building-dapps-on-ethereum-123": {
+        "contentHash": "5569e2d5a563",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "5e4c51511d95",
+        "children": {
+          "_label": {
+            "contentHash": "5e4c51511d95",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "96d0bcce14c9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "example-ethlance-143": {
+        "contentHash": "68e464700338",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "eef48184d7f1",
+        "children": {
+          "_label": {
+            "contentHash": "eef48184d7f1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "bff6049723ca",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "what-is-a-dapp-001",
+      "how-dapps-work-029",
+      "security-benefits-110",
+      "building-dapps-on-ethereum-123",
+      "example-ethlance-143"
+    ]
+  },
+  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+}

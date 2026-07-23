@@ -1,0 +1,285 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/transactions-eth-build/index.md",
+  "generatedAt": "2026-04-29T06:21:01.298Z",
+  "rootHash": "c2a001f24db6",
+  "tree": {
+    "contentHash": "ada3b4757f0d",
+    "anchorHash": "438dfe4e15b1",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "cd69e758b599",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "c6b6359921cd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "636e5e00895e"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "78d372afcbf9"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bf8c90b59d39"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "fe30030e102e"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e618f8f25b6b"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "1cb40c945588"
+      },
+      "prose:1": {
+        "contentHash": "451a7eedc4aa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "2134affb702a"
+      },
+      "prose:2": {
+        "contentHash": "f34da9fd5313",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transaction-fees-and-miner-incentives-000": {
+        "contentHash": "7d4880bb7966",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "8448ee404e8c",
+        "children": {
+          "_label": {
+            "contentHash": "8448ee404e8c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "382311617849",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "anatomy-of-an-ethereum-transaction-110": {
+        "contentHash": "eb6f392dd73c",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "e2c945a9e6a7",
+        "children": {
+          "_label": {
+            "contentHash": "e2c945a9e6a7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "adc335fb609c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "setting-up-the-transaction-225": {
+        "contentHash": "a6449a2e5dc8",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "22dfc2ad3567",
+        "children": {
+          "_label": {
+            "contentHash": "22dfc2ad3567",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "2772d686c95f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "gas-price-strategy-420": {
+        "contentHash": "91b3789fceb9",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "7f7ed5a02bcc",
+        "children": {
+          "_label": {
+            "contentHash": "7f7ed5a02bcc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "a10dc0fd81d9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "converting-to-wei-520": {
+        "contentHash": "6277ec87e5fa",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "8cec1c0ed81b",
+        "children": {
+          "_label": {
+            "contentHash": "8cec1c0ed81b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "97b3353e8ade",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "signing-and-broadcasting-702": {
+        "contentHash": "8543166fe1a6",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "946aee051433",
+        "children": {
+          "_label": {
+            "contentHash": "946aee051433",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "6fef749d6556",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "checking-the-block-841": {
+        "contentHash": "dddd03941f59",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "feb8d19c09fb",
+        "children": {
+          "_label": {
+            "contentHash": "feb8d19c09fb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "adb0c6216088",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "sending-data-with-a-transaction-954": {
+        "contentHash": "4c7fdc5fa91d",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "4d6cf388781d",
+        "children": {
+          "_label": {
+            "contentHash": "4d6cf388781d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "56c4b085b9c9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "transaction-pool-and-gas-bumping-1243": {
+        "contentHash": "37f624e8ed23",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "9f7bc534299f",
+        "children": {
+          "_label": {
+            "contentHash": "9f7bc534299f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "9e0117e3188f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "summary-1452": {
+        "contentHash": "021fe12bc3f4",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "ea11f68d3d79",
+        "children": {
+          "_label": {
+            "contentHash": "ea11f68d3d79",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4b169346bae4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "transaction-fees-and-miner-incentives-000",
+      "anatomy-of-an-ethereum-transaction-110",
+      "setting-up-the-transaction-225",
+      "gas-price-strategy-420",
+      "converting-to-wei-520",
+      "signing-and-broadcasting-702",
+      "checking-the-block-841",
+      "sending-data-with-a-transaction-954",
+      "transaction-pool-and-gas-bumping-1243",
+      "summary-1452"
+    ]
+  },
+  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+}

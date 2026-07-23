@@ -1,14 +1,14 @@
 ---
 title: "Bibliothèques d'API backend"
-description: Introduction aux API clientes Ethereum, qui vous permettent d'interagir avec la blockchain depuis votre application.
+description: "Une introduction aux API de clients Ethereum qui vous permettent d'interagir avec la chaîne de blocs depuis votre application."
 lang: fr
 ---
 
-Pour qu'une application logicielle puisse interagir avec la blockchain Ethereum (c'est-à-dire lire les données de la blockchain et/ou envoyer des transactions sur le réseau), elle doit se connecter à un nœud Ethereum.
+Pour qu'une application logicielle puisse interagir avec la chaîne de blocs [Ethereum](/) (c'est-à-dire lire les données de la chaîne de blocs et/ou envoyer des transactions au réseau), elle doit se connecter à un nœud Ethereum.
 
-À cette fin, chaque client Ethereum met en œuvre la spécification [JSON-RPC](/developers/docs/apis/json-rpc/), de sorte qu'il existe un ensemble uniforme de [méthodes](/developers/docs/apis/json-rpc/#json-rpc-methods) sur lesquelles les applications peuvent s'appuyer.
+À cette fin, chaque client Ethereum implémente la spécification [JSON-RPC](/developers/docs/apis/json-rpc/), il existe donc un ensemble uniforme de [méthodes](/developers/docs/apis/json-rpc/#json-rpc-methods) sur lesquelles les applications peuvent s'appuyer.
 
-Si vous souhaitez utiliser un langage de programmation spécifique pour vous connecter à un nœud Ethereum, il existe de nombreuses bibliothèques pratiques au sein de l'écosystème qui facilitent grandement cette tâche. Avec ces bibliothèques, les développeurs peuvent écrire des méthodes intuitives d'une seule ligne pour initialiser les requêtes JSON-RPC (en arrière-plan) qui interagissent avec Ethereum.
+Si vous souhaitez utiliser un langage de programmation spécifique pour vous connecter à un nœud Ethereum, il existe de nombreuses bibliothèques pratiques au sein de l'écosystème qui facilitent grandement cette tâche. Avec ces bibliothèques, les développeurs peuvent écrire des méthodes intuitives en une seule ligne pour initialiser des requêtes JSON-RPC (en interne) qui interagissent avec Ethereum.
 
 ## Prérequis {#prerequisites}
 
@@ -16,7 +16,7 @@ Il peut être utile de comprendre la [pile Ethereum](/developers/docs/ethereum-s
 
 ## Pourquoi utiliser une bibliothèque ? {#why-use-a-library}
 
-Ces bibliothèques suppriment une grande partie de la complexité d'une interaction directe avec un nœud Ethereum. Elles fournissent également des fonctions utilitaires (par ex. la conversion d'ETH en Gwei) afin que, en tant que développeur, vous puissiez passer moins de temps à gérer les subtilités des clients Ethereum et plus de temps à vous concentrer sur les fonctionnalités uniques de votre application.
+Ces bibliothèques font abstraction d'une grande partie de la complexité liée à l'interaction directe avec un nœud Ethereum. Elles fournissent également des fonctions utilitaires (par exemple, la conversion d'ETH en gwei) afin qu'en tant que développeur, vous puissiez passer moins de temps à gérer les subtilités des clients Ethereum et plus de temps à vous concentrer sur les fonctionnalités uniques de votre application.
 
 ## Bibliothèques disponibles {#available-libraries}
 
@@ -28,39 +28,37 @@ Ces bibliothèques suppriment une grande partie de la complexité d'une interact
 - [Documentation](https://www.alchemy.com/docs/)
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
-
-**All That Node -** **_Nœud en tant que service._**
+  
+**All That Node -** **_Nœud en tant que service (Node-as-a-Service)._**
 
 - [All That Node.com](https://www.allthatnode.com/)
 - [Documentation](https://docs.allthatnode.com)
 - [Discord](https://discord.gg/GmcdVEUbJM)
 
-**Blast by Bware Labs -** **_API décentralisées pour le réseau principal et les réseaux de test Ethereum._**
+**Blast par Bware Labs -** **_API décentralisées pour le réseau principal Ethereum et les réseaux de test._**
 
 - [blastapi.io](https://blastapi.io/)
 - [Documentation](https://docs.blastapi.io)
 - [Discord](https://discord.gg/SaRqmRUjjQ)
 
-**BlockPi -** **_Fournit des services RPC plus efficaces et plus rapides_**
+**BlockPi -** **_Fournit des services RPC plus efficaces et rapides_**
 
 - [blockpi.io](https://blockpi.io/)
 - [Documentation](https://docs.blockpi.io/)
 - [GitHub](https://github.com/BlockPILabs)
 - [Discord](https://discord.com/invite/xTvGVrGVZv)
 
-**Passerelle Ethereum de Cloudflare.**
+**Cloudflare Ethereum Gateway.**
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 
-**Etherscan - Explorateur de blocs et APIs de transaction**
-
+**Etherscan - Explorateur de blocs et API de transaction**
 - [Documentation](https://docs.etherscan.io/)
 
-**Blockscout - Open Source Block Explorer**
-
+**Blockscout - Explorateur de blocs open source**
 - [Documentation](https://docs.blockscout.com/)
 
-**GetBlock -** **_Blockchain en tant que service pour le développement Web3_**
+**GetBlock -** **_Chaîne de blocs en tant que service pour le développement Web3_**
 
 - [GetBlock.io](https://getblock.io/)
 - [Documentation](https://docs.getblock.io/)
@@ -71,7 +69,7 @@ Ces bibliothèques suppriment une grande partie de la complexité d'une interact
 - [Documentation](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - _Fournisseur EVM JSON-RPC rentable_**
+**Node RPC - _Fournisseur JSON-RPC EVM rentable_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [Documentation](https://docs.noderpc.xyz/node-rpc)
@@ -81,19 +79,19 @@ Ces bibliothèques suppriment une grande partie de la complexité d'une interact
 - [NOWNodes.io](https://nownodes.io/)
 - [Documentation](https://nownodes.gitbook.io/documentation)
 
-**QuickNode -** **_Infrastructure de blockchain en tant que service._**
+**QuickNode -** **_Infrastructure de chaîne de blocs en tant que service._**
 
 - [quicknode.com](https://quicknode.com)
 - [Documentation](https://www.quicknode.com/docs/welcome)
 - [Discord](https://discord.gg/quicknode)
 
-**Rivet -** **_API Ethereum et Ethereum Classic en tant que service, propulsées par des logiciels open source._**
+**Rivet -** **_API Ethereum et Ethereum Classic en tant que service propulsées par des logiciels open source._**
 
 - [rivet.cloud](https://rivet.cloud)
 - [Documentation](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
-**Zmok -** **_Nœuds Ethereum axés sur la vitesse via une API JSON-RPC/WebSockets._**
+**Zmok -** **_Nœuds Ethereum axés sur la vitesse en tant qu'API JSON-RPC/WebSockets._**
 
 - [zmok.io](https://zmok.io/)
 - [GitHub](https://github.com/zmok-io)
@@ -102,38 +100,38 @@ Ces bibliothèques suppriment une grande partie de la complexité d'une interact
 
 ### Outils de développement {#development-tools}
 
-**ethers-kt -** **_Bibliothèque Kotlin/Java/Android asynchrone et très performante pour les blockchains basées sur l'EVM._**
+**ethers-kt -** **_Bibliothèque asynchrone et performante en Kotlin/Java/Android pour les chaînes de blocs basées sur l'EVM._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Exemples](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Nethereum -** **_Une bibliothèque d'intégration .NET open source pour la blockchain._**
+**Nethereum -** **_Une bibliothèque d'intégration .NET open source pour la chaîne de blocs._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
-- [Documentation](http://docs.nethereum.com/en/latest/)
+- [Documentation](https://docs.nethereum.com/docs/getting-started/welcome/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
-**Outils Python -** **_Diverses bibliothèques pour interagir avec Ethereum via Python._**
+**Outils Python -** **_Variété de bibliothèques pour l'interaction avec Ethereum via Python._**
 
 - [py.ethereum.org](https://snakecharmers.ethereum.org/)
-- [GitHub de web3.py](https://github.com/ethereum/web3.py)
-- [Chat de web3.py](https://gitter.im/ethereum/web3.py)
+- [GitHub de Web3.py](https://github.com/ethereum/web3.py)
+- [Chat de Web3.py](https://gitter.im/ethereum/web3.py)
 
-**Tatum -** **_La plateforme de développement blockchain ultime._**
+**Tatum -** **_La plateforme de développement de chaîne de blocs ultime._**
 
 - [Tatum](https://tatum.io/)
 - [GitHub](https://github.com/tatumio/)
 - [Documentation](https://docs.tatum.io/)
 - [Discord](https://discord.gg/EDmW3kjTC9)
 
-**web3j -** **_Une bibliothèque d'intégration Java/Android/Kotlin/Scala pour Ethereum._**
+**Web3j -** **_Une bibliothèque d'intégration Java/Android/Kotlin/Scala pour Ethereum._**
 
 - [GitHub](https://github.com/web3j/web3j)
 - [Documentation](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
-### Services de blockchain {#blockchain-services}
+### Services de chaîne de blocs {#blockchain-services}
 
 **BlockCypher -** **_API Web Ethereum._**
 
@@ -152,12 +150,12 @@ Ces bibliothèques suppriment une grande partie de la complexité d'une interact
 - [Documentation](https://docs.chainstack.com/)
 - [Référence de l'API Ethereum](https://docs.chainstack.com/reference/ethereum-getting-started)
 
-**Coinbase Cloud Node -** **_API d'infrastructure de blockchain._**
+**Coinbase Cloud Node -** **_API d'infrastructure de chaîne de blocs._**
 
-- [Nœud Cloud Coinbase](https://www.coinbase.com/developer-platform)
+- [Coinbase Cloud Node](https://www.coinbase.com/developer-platform)
 - [Documentation](https://docs.cdp.coinbase.com/)
 
-**DataHub by Figment -** **_Services d'API Web3 avec le réseau principal et les réseaux de test Ethereum._**
+**DataHub par Figment -** **_Services d'API Web3 avec le réseau principal Ethereum et les réseaux de test._**
 
 - [DataHub](https://www.figment.io/)
 - [Documentation](https://docs.figment.io/)
@@ -170,35 +168,44 @@ Ces bibliothèques suppriment une grande partie de la complexité d'une interact
 - [Discord](https://moralis.io/joindiscord/)
 - [Forum](https://forum.moralis.io/)
 
-**NFTPort -** **_API de données et de frappe Ethereum._**
+**NFTPort -** **_API de données Ethereum et de frappe (mint)._**
 
 - [nftport.xyz](https://www.nftport.xyz/)
 - [Documentation](https://docs.nftport.xyz/)
 - [GitHub](https://github.com/nftport/)
 - [Discord](https://discord.com/invite/K8nNrEgqhE)
 
-**Tokenview -** **_La plateforme générale d'API de blockchain multi-crypto._**
+**Tokenview -** **_La plateforme générale d'API de chaînes de blocs multi-crypto._**
 
 - [services.tokenview.io](https://services.tokenview.io/)
 - [Documentation](https://services.tokenview.io/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-**Watchdata -** **_Fournit un accès API simple et fiable à la blockchain Ethereum._**
+**Watchdata -** **_Fournit un accès API simple et fiable à la chaîne de blocs Ethereum._**
 
 - [Watchdata](https://watchdata.io/)
 - [Documentation](https://docs.watchdata.io/)
 - [Discord](https://discord.com/invite/TZRJbZ6bdn)
 
-**Covalent -** **_API de blockchain enrichies pour plus de 200 chaînes._**
+**Codex -** **_API de données de chaîne de blocs enrichies en temps réel sur des dizaines de chaînes._**
+
+- [codex.io](https://www.codex.io/)
+- [Documentation](https://docs.codex.io)
+- [Explorateur](https://docs.codex.io/explore)
+- [GitHub](https://github.com/Codex-Data)
+- [Discord](https://discord.com/invite/mFpUhT3vAq)
+
+**Covalent -** **_API de chaîne de blocs enrichies pour plus de 200 chaînes._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
 - [Documentation](https://www.covalenthq.com/docs/api/)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
-## En savoir plus {#further-reading}
 
-_Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
+## Lectures complémentaires {#further-reading}
+
+_Vous connaissez une ressource communautaire qui vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 ## Sujets connexes {#related-topics}
 
@@ -207,5 +214,5 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 ## Tutoriels connexes {#related-tutorials}
 
-- [Configurer Web3js pour utiliser la blockchain Ethereum avec JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instructions pour installer et intégrer web3.js dans votre projet._
-- [Appeler un contrat intelligent depuis JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– À l'aide du jeton DAI, découvrez comment appeler des fonctions de contrat en JavaScript._
+- [Configurer Web3.js pour utiliser la chaîne de blocs Ethereum en JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instructions pour configurer Web3.js dans votre projet._
+- [Appeler un contrat intelligent depuis JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– En utilisant le jeton DAI, découvrez comment appeler une fonction de contrat à l'aide de JavaScript._

@@ -1,4 +1,7 @@
+"use client"
+
 import React, { HTMLAttributes } from "react"
+import { useTranslations } from "next-intl"
 
 import { ChildOnlyProp } from "@/lib/types"
 
@@ -16,13 +19,11 @@ import Translation from "../Translation"
 import { ButtonLink } from "../ui/buttons/Button"
 import { Center, Flex, VStack } from "../ui/flex"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 type SectionGridProps = ChildOnlyProp
 
 const SectionGrid = ({ children }: SectionGridProps) => {
   return (
-    <div className="staking-grid-stacked md:staking-grid relative grid grid-cols-1 gap-4 md:grid-cols-[5rem_1fr_5rem] md:gap-x-8 md:gap-y-0">
+    <div className="relative grid grid-cols-1 gap-4 staking-grid-stacked md:grid-cols-[5rem_1fr_5rem] md:gap-x-8 md:gap-y-0 md:staking-grid">
       {children}
     </div>
   )
@@ -30,7 +31,7 @@ const SectionGrid = ({ children }: SectionGridProps) => {
 
 const StyledEtherSvg = ({ className = "size-full" }: { className: string }) => {
   return (
-    <Center className="area-ether z-[2] mx-auto w-full max-w-20">
+    <Center className="z-[2] mx-auto w-full max-w-20 area-ether">
       <StakingGlyphEtherCircleIcon className={className} />
     </Center>
   )
@@ -43,7 +44,7 @@ const Line = () => {
 const Header = ({ children, className }: HTMLAttributes<HTMLDivElement>) => (
   <Flex
     className={cn(
-      "area-header flex-col items-center justify-center gap-2 md:items-start",
+      "flex-col items-center justify-center gap-2 area-header md:items-start",
       className
     )}
   >
@@ -72,7 +73,7 @@ const Pill = ({
 }: HTMLAttributes<HTMLParagraphElement>) => (
   <p
     className={cn(
-      "relative m-0 whitespace-nowrap rounded-sm px-1 py-[0.125rem]",
+      "relative m-0 rounded-xs px-1 py-[0.125rem] whitespace-nowrap",
       className
     )}
   >
@@ -96,16 +97,21 @@ const Glyph = ({ glyphIcon: GlyphIcon, className }: GlyphProps) => (
 )
 
 const Content = ({ children }: ChildOnlyProp) => (
-  <Flex className="area-content flex-col gap-4 md:mb-12 md:mt-4">
+  <Flex className="flex-col gap-4 area-content md:mt-4 md:mb-12">
     {children}
   </Flex>
 )
 
 const StakingHierarchy = () => {
-  const { t } = useTranslation("page-staking")
+  const t = useTranslations("page-staking")
 
   return (
-    <VStack className="gap-16 bg-gradient-staking p-8 md:gap-0 md:rounded-lg">
+    <VStack
+      className={cn(
+        "gap-16 p-8 md:gap-0 md:rounded-lg",
+        "bg-linear-to-b/increasing from-yellow-300/10 from-10% via-blue-400/10 via-70% to-red-200/10 to-80%"
+      )}
+    >
       <SectionGrid>
         <StyledEtherSvg className="size-[100%] text-staking-gold" />
         <Line />

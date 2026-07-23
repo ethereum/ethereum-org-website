@@ -7,11 +7,25 @@ import { fetchRetry } from "./fetchRetry"
 const GITHUB_API_BASE =
   "https://api.github.com/repos/ethereum/ethereum-org-website"
 
-// Optimized settings for parallel fetching
-const BATCH_SIZE = 20 // Concurrent requests per batch
-const BATCH_DELAY_MS = 50 // Small delay between batches to avoid rate limiting
+// GitHub recommends serial requests per token. Keeping a tiny window of
+// concurrency (2) preserves throughput while staying well under the 100
+// concurrent-request secondary limit and the 900 points/min budget.
+const BATCH_SIZE = 2
+const BATCH_DELAY_MS = 200
+
+// Bounds for rate-limit recovery. We retry a bounded number of times to
+// avoid runaway loops on persistent 403/429s, and cap any single wait at
+// 5 minutes so a misreported reset time can't stall the task indefinitely.
+const MAX_RATE_LIMIT_RETRIES = 3
+const MAX_RATE_LIMIT_WAIT_MS = 5 * 60 * 1000
+const DEFAULT_SECONDARY_WAIT_MS = 60 * 1000
 
 const APP_PAGES_PREFIX = "app/[locale]/"
+
+const githubApiHeaders = (token: string) => ({
+  Authorization: `Bearer ${token}`,
+  Accept: "application/vnd.github.v3+json",
+})
 
 interface AllContributorsEntry {
   login: string
@@ -54,6 +68,7 @@ const EXCLUDED_EMAILS = [
   "actions@github.com",
   "github-actions[bot]@users.noreply.github.com",
   "noreply@github.com",
+  "gemini@google.com",
 ]
 
 /** GitHub logins (exact match) that should be excluded */
@@ -241,87 +256,161 @@ async function parallelBatch<T, R>(
 }
 
 /**
+ * Parse a Retry-After header value (either delta-seconds or HTTP-date)
+ * into a millisecond delay, capped to MAX_RATE_LIMIT_WAIT_MS.
+ */
+function parseRetryAfterMs(header: string | null): number | null {
+  if (!header) return null
+
+  const seconds = Number(header)
+  if (!Number.isNaN(seconds)) {
+    return Math.min(Math.max(0, seconds * 1000), MAX_RATE_LIMIT_WAIT_MS)
+  }
+
+  const epoch = Date.parse(header)
+  if (!Number.isNaN(epoch)) {
+    return Math.min(Math.max(0, epoch - Date.now()), MAX_RATE_LIMIT_WAIT_MS)
+  }
+
+  return null
+}
+
+/**
+ * Inspect a GitHub response and return the ms to wait before retrying,
+ * or null if the response isn't rate-limited.
+ *
+ * Covers both:
+ *   - Primary rate limit: identified by `X-RateLimit-Remaining: 0`,
+ *     reset time read from `X-RateLimit-Reset` (epoch seconds).
+ *   - Secondary rate limit: returned as 403 or 429 with a `Retry-After`
+ *     header, or with a body message containing "secondary rate limit"
+ *     or "abuse". Triggered by concurrent requests, sustained throughput
+ *     above ~900 points/min, or excessive content creation.
+ */
+async function readRateLimitWait(response: Response): Promise<number | null> {
+  if (response.status !== 403 && response.status !== 429) return null
+
+  if (response.headers.get("X-RateLimit-Remaining") === "0") {
+    const reset = response.headers.get("X-RateLimit-Reset")
+    if (reset) {
+      const waitMs = Math.max(0, +reset * 1000 - Date.now())
+      return Math.min(waitMs, MAX_RATE_LIMIT_WAIT_MS)
+    }
+  }
+
+  const retryAfter = parseRetryAfterMs(response.headers.get("Retry-After"))
+  if (retryAfter !== null) return retryAfter
+
+  // No headers but a 403/429 from an authenticated request: most likely
+  // secondary rate limit with the header omitted. GitHub's guidance is
+  // to wait at least one minute before retrying.
+  const body = await response
+    .clone()
+    .text()
+    .catch(() => "")
+  if (/secondary rate limit|abuse/i.test(body)) {
+    return DEFAULT_SECONDARY_WAIT_MS
+  }
+
+  return null
+}
+
+/**
  * Fetch commits for a file path from GitHub API.
  * Returns contributors in FileContributor format.
+ *
+ * 404 is returned as an empty array (expected for legacy historical paths
+ * passed in by `getAllHistoricalPaths`). Rate-limit responses are retried
+ * with backoff up to MAX_RATE_LIMIT_RETRIES. Any other non-OK status
+ * throws -- silent fallbacks here produced empty contributor lists in
+ * production blob storage and surfaced as the "January 1, 1970" UI bug.
  */
 async function fetchCommitsForPath(
   filepath: string,
   token: string,
-  nameLookup: NameLookup
+  nameLookup: NameLookup,
+  attempt = 0
 ): Promise<FileContributor[]> {
   const url = new URL(`${GITHUB_API_BASE}/commits`)
   url.searchParams.set("path", filepath)
   url.searchParams.set("sha", "master")
 
   const response = await fetchRetry(url.href, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-      Accept: "application/vnd.github.v3+json",
-    },
+    headers: githubApiHeaders(token),
   })
 
-  // Handle GitHub-specific rate limiting (403, not 429)
-  if (
-    response.status === 403 &&
-    response.headers.get("X-RateLimit-Remaining") === "0"
-  ) {
-    const resetTime = response.headers.get("X-RateLimit-Reset")
-    if (resetTime) {
-      const waitTime = +resetTime - Math.floor(Date.now() / 1000)
-      console.log(`Rate limit exceeded, waiting ${waitTime}s...`)
-      await delay(waitTime * 1000)
-      return fetchCommitsForPath(filepath, token, nameLookup) // Retry
-    }
+  if (response.ok) {
+    const commits = await response.json()
+    return Array.isArray(commits) ? transformCommits(commits, nameLookup) : []
   }
 
-  if (!response.ok) {
-    // 404 is expected for paths that don't exist
-    if (response.status !== 404) {
-      console.warn(
-        `Failed to fetch commits for ${filepath}: ${response.status}`
+  // 404 = path doesn't exist at this point in history (expected for the
+  // legacy variants passed in by getAllHistoricalPaths).
+  if (response.status === 404) return []
+
+  const waitMs = await readRateLimitWait(response)
+  if (waitMs !== null) {
+    if (attempt >= MAX_RATE_LIMIT_RETRIES) {
+      throw new Error(
+        `GitHub rate limit retries exhausted for ${filepath} (status ${response.status} after ${attempt} attempts)`
       )
     }
-    return []
+    console.log(
+      `Rate limited on ${filepath} (status ${response.status}); waiting ${Math.round(waitMs / 1000)}s before retry ${attempt + 1}/${MAX_RATE_LIMIT_RETRIES}...`
+    )
+    await delay(waitMs)
+    return fetchCommitsForPath(filepath, token, nameLookup, attempt + 1)
   }
 
-  const commits = await response.json()
-  if (!Array.isArray(commits)) {
-    return []
-  }
-
-  // Transform to FileContributor format and deduplicate.
-  // When a commit author email isn't linked to a GitHub account, the API
-  // returns `author: null`. We still include these commits so their date
-  // is captured, using the git commit author name as a fallback identity.
-  // Also parses co-author trailers and filters out bots/AI agents.
-  const contributors = commits.flatMap(
-    (commit: {
-      author?: { login: string; avatar_url: string; html_url: string } | null
-      commit: { author: { name: string; date: string }; message: string }
-    }) => {
-      const login = commit.author?.login ?? commit.commit.author.name
-      const date = commit.commit.author.date
-
-      // Use username-based avatar URL instead of the API's /u/{id}?v=4
-      // format which causes redirect loops with Next.js image optimization
-      const primary: FileContributor[] = isExcludedContributor(login)
-        ? []
-        : [
-            {
-              login,
-              avatar_url: commit.author
-                ? `https://avatars.githubusercontent.com/${commit.author.login}`
-                : "",
-              html_url: commit.author?.html_url ?? "",
-              date,
-            },
-          ]
-
-      const coAuthors = parseCoAuthors(commit.commit.message, date, nameLookup)
-
-      return [...primary, ...coAuthors]
-    }
+  // Anything else (auth failure, persistent 5xx after fetchRetry, etc.)
+  // must fail loudly. Silent empty returns previously masked partial
+  // failures and shipped them to production storage.
+  const body = await response.text().catch(() => "")
+  throw new Error(
+    `Failed to fetch commits for ${filepath}: ${response.status} ${response.statusText} -- ${body.slice(0, 300)}`
   )
+}
+
+interface GitHubCommit {
+  author?: { login: string; avatar_url: string; html_url: string } | null
+  commit: { author: { name: string; date: string }; message: string }
+}
+
+/**
+ * Transform raw GitHub commits API response into FileContributor entries,
+ * filtering out bots and parsing co-author trailers. When a commit author
+ * email isn't linked to a GitHub account, the API returns `author: null`;
+ * we still include those commits so the date is captured, using the git
+ * commit author name as a fallback identity. Deduplicates by login,
+ * keeping the first (most recent) occurrence.
+ */
+function transformCommits(
+  commits: GitHubCommit[],
+  nameLookup: NameLookup
+): FileContributor[] {
+  const contributors = commits.flatMap((commit) => {
+    const login = commit.author?.login ?? commit.commit.author.name
+    const date = commit.commit.author.date
+
+    // Use username-based avatar URL instead of the API's /u/{id}?v=4
+    // format which causes redirect loops with Next.js image optimization
+    const primary: FileContributor[] = isExcludedContributor(login)
+      ? []
+      : [
+          {
+            login,
+            avatar_url: commit.author
+              ? `https://avatars.githubusercontent.com/${commit.author.login}`
+              : "",
+            html_url: commit.author?.html_url ?? "",
+            date,
+          },
+        ]
+
+    const coAuthors = parseCoAuthors(commit.commit.message, date, nameLookup)
+
+    return [...primary, ...coAuthors]
+  })
 
   // Remove duplicates by login (keep first = most recent)
   const seen = new Set<string>()
@@ -372,10 +461,7 @@ async function discoverPathsFromTree(token: string): Promise<{
   const url = `${GITHUB_API_BASE}/git/trees/master?recursive=1`
 
   const response = await fetchRetry(url, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-      Accept: "application/vnd.github.v3+json",
-    },
+    headers: githubApiHeaders(token),
   })
 
   if (!response.ok) {

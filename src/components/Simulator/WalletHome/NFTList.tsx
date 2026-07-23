@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl"
+
 import { Image } from "@/components/Image"
 import { Flex, type FlexProps } from "@/components/ui/flex"
 
@@ -11,6 +13,7 @@ type NFTListProps = FlexProps & {
   nfts: Array<NFT>
 }
 export const NFTList = ({ nfts, ...flexProps }: NFTListProps) => {
+  const t = useTranslations("component-wallet-simulator")
   const size = useBreakpointValue({
     base: "max-w-20 max-h-20",
     md: "max-w-24 max-h-24",
@@ -25,7 +28,7 @@ export const NFTList = ({ nfts, ...flexProps }: NFTListProps) => {
           </div>
         ))
       ) : (
-        <p>No NFTs yet!</p>
+        <p>{t("sim-no-nfts")}</p>
       )}
     </Flex>
   )

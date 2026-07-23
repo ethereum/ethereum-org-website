@@ -1,68 +1,69 @@
 ---
 title: "以太坊基金会与社区资助计划"
-description: "以太坊生态系统的资助方案清单。"
+description: "整个以太坊生态系统中的资助计划列表。"
 lang: zh
 ---
 
 # 以太坊资助 {#ethereum-grants}
 
-下面列出的方案为向致力于促进以太坊生态系统成功和发展的项目提供各种资金支持。 根据本指南来寻求和申请资金，助力你的以太坊项目成功。
+以下列出的计划为致力于促进 [以太坊](/) 生态系统成功与发展的项目提供各种资金资助。你可以将其作为指南，寻找并申请资金，以帮助你的下一个以太坊项目取得成功。
 
-这个列表由我们的社区管理。 如果有内容缺失或错误，请编辑此页面！
+此列表由我们的社区策划。如果有遗漏或错误之处，请编辑此页面！
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>创始人，需要帮助加速您的业务吗？ [前往创始人支持](/founders/)</div>
+<div>创始人，需要帮助加速你的业务吗？[前往创始人支持](/founders/)</div>
 </Alert>
 
 ## 广泛的以太坊生态系统 {#broad-ethereum-ecosystem}
 
-这些计划通过向大量项目提供资助来支持庞大的以太坊生态系统。 其中包括可扩容性、社区建设、安全、隐私等解决方案。 这些资助并非专门针对任何一个以太坊平台，如果不确定，可以从这里开始。
+这些计划通过向广泛的项目提供资助来支持广泛的以太坊生态系统。这些项目包括可扩展性、社区建设、安全性、隐私等方面的解决方案。这些资助不局限于任何单一的以太坊平台，如果你不确定从哪里开始，这里是一个很好的起点。
 
-- [EF 生态系统支持计划](https://esp.ethereum.foundation) - _为有利于以太坊的开源项目提供资金，尤其侧重于通用工具、基础设施、研究和公共物品_
-- [ESP 资助项目浏览器](https://esp.ethereum.foundation/funded-projects) - _可搜索的目录，收录了生态系统支持计划资助的 1,000 多个项目_
-- [学术资助](https://esp.ethereum.foundation/academic-grants) - _为支持以太坊相关学术工作而设的资助_
+- [以太坊基金会生态系统支持计划 (ESP)](https://esp.ethereum.foundation) - _资助有益于以太坊的开源项目，特别关注通用工具、基础设施、研究和公共物品_
+- [ESP 资助浏览器](https://esp.ethereum.foundation/funded-projects) - _可搜索的目录，包含生态系统支持计划支持的 1000 多个项目_
+- [学术资助](https://esp.ethereum.foundation/academic-grants) - _支持以太坊相关学术工作的资助_
+
 
 ## 资助列表聚合器和平台 {#grant-list-aggregators}
 
-这些资源汇总并且整理了以太坊生态系统中的各类资助机会，让你更容易发现与项目需求匹配的资金支持。 我们根据用户特色对它们进行了分类，帮助你根据自身的资金需求快速找到最相关的资源。
+这些资源汇编并整理了整个以太坊生态系统中的各种资助机会，使你更容易发现符合项目需求的资金机会。我们按受众角色对它们进行了分类，以帮助你根据具体的资金需求开始寻找最相关的资源。
 
-### 面向所有资助申请者：综合目录 {#comprehensive-directories}
+### 面向所有资助寻求者：综合目录 {#comprehensive-directories}
 
-这类通用平台涵盖了整个 Web3 领域内的各类资助项目，对于任何寻求资金支持的人来说，都是极具价值的起点：
+这些通用平台广泛涵盖了整个 Web3 领域的资助，对于任何寻找资金的人来说都是有用的起点：
 
-- [Blockchain Grants](https://www.blockchaingrants.org/) - _区块链和加密货币资助目录_
-- [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - 所有 Web3 资助计划目录，每周更新
+- [Karma 资金地图](https://gap.karmahq.xyz/funding-map) - 所有 Web3 资助计划的目录，每周更新
+- [Etherscan 资助目录](https://etherscan.io/directory/Others/Grant) - 以太坊区块浏览器上精选的资助列表
 
 ### 面向开发者和构建者 {#for-developers-and-builders}
 
-- [Grant Programs Viewer](https://airtable.com/shr86elKgWTSCP4AY) - _公开的资助项目 Airtable 数据库_
-- [Web3 Grants Spreadsheet](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _提供 Web3 资助机会的 Google 电子表格_
-- [Arbitrum Grants](https://arbitrum.foundation/grants) — Arbitrum DAO 和 [The Arbitrum Foundation](https://arbitrum.foundation/)
+- [资助计划查看器](https://airtable.com/shr86elKgWTSCP4AY) - _资助计划的公开 Airtable 数据库_
+- [Web3 资助电子表格](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _Web3 资助机会的 Google 电子表格_
+- [Arbitrum 资助](https://arbitrum.foundation/grants) — Arbitrum DAO 和 [Arbitrum 基金会](https://arbitrum.foundation/)
 
-### 面向 DeFi 项目和金融应用 {#for-defi-projects}
+### 面向去中心化金融 (DeFi) 项目和金融应用 {#for-defi-projects}
 
-- [LlamaoGrants](https://wiki.defillama.com/wiki/LlamaoGrants) - _DeFi Llama 的资助计划目录_
-- [AlphaGrowth Grants](https://alphagrowth.io/crypto-web3-grants-list) - _加密货币和 Web3 资助的综合列表_
-- [Uniswap Foundation Grants](https://www.uniswapfoundation.org/build) - _为 DeFi 构建者提供的 Unichain 和 Uniswap v4 资助与支持_
+- [AlphaGrowth 资助](https://alphagrowth.io/crypto-web3-grants-list) - _加密货币和 Web3 资助的综合列表_
+- [尤尼斯瓦普基金会资助](https://www.uniswapfoundation.org/build) - _Unichain 和尤尼斯瓦普 v4 资助以及对 DeFi 构建者的支持_
 
 ### 面向 DAO 贡献者和治理创新者 {#for-dao-contributors}
 
-面向社区驱动项目和治理实验的资源
+面向社区驱动项目和治理实验的资源：
 
-- [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _提供资助的组织的 Google 电子表格_
-- [MetaGov Database](https://docs.google.com/spreadsheets/d/1e5g-dlWWsK2DZoZGBgfxyfGNSddLk-V7sLEgfPjEhbA/edit#gid=780420708) - _综合 Web3 资助地图_
+- [DAO 资助](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _提供资助的组织的 Google 电子表格_
+- [MetaGov 数据库](https://docs.google.com/spreadsheets/d/1e5g-dlWWsK2DZoZGBgfxyfGNSddLk-V7sLEgfPjEhbA/edit#gid=780420708) - _综合的 Web3 资助地图_
 
-### 公共物品和影响 {#public-goods-and-impact}
+### 公共物品与影响力 {#public-goods-and-impact}
 
-这些项目专注于资助那些更广泛的社区、公共产品以及更具影响力的计划。 这些平台包括资助提供方，以及利用链上资金分配机制（包括[二次方募资](/defi/#quadratic-funding)）的捐赠平台：
+这些计划侧重于资助造福更广泛社区、公共物品和影响力倡议的项目。这些包括资助提供者，以及利用链上资金分配机制（包括[二次方融资](/defi/#quadratic-funding)）的捐赠平台：
 
-- [Gitcoin](https://www.gitcoin.co/program) - _Gitcoin Grants 利用多种资金分配机制为以太坊生态系统中的开源项目和公共产品提供资金_
-- [Octant](https://octant.app/home) - _公共产品资助生态系统，平衡公共利益与个人财务赋能_
-- [Giveth](https://giveth.io/) - _加密捐赠平台，支持公益项目直接捐赠，且不收取任何额外费用_
-- [Artizen](https://artizen.fund/) - _助力创作者对接资源，为艺术、科学、技术与文化前沿领域的新项目提供资金支持_
-- [Quadratic Accelerator](https://qacc.giveth.io/) - _初创企业加速计划，利用二次方募资支持造福公共产品的项目_
+- [Gitcoin](https://www.gitcoin.co/program) - _Gitcoin Grants 利用多种资本分配机制来资助以太坊生态系统中的开源项目和公共物品_
+- [Octant](https://octant.app/home) - _平衡公共利益和个人财务赋权的公共物品资助生态系统_
+- [Giveth](https://giveth.io/) - _加密货币捐赠平台，支持直接向公益项目捐款，且不收取任何额外费用_
+- [Artizen](https://artizen.fund/) - _帮助创作者在艺术、科学、技术和文化的前沿领域为新项目提供匹配资金_
+- [Quadratic Accelerator](https://qacc.giveth.io/) - _使用二次方融资来支持造福公共物品的项目的初创加速器计划_
+
 
 ## 在以太坊工作 {#work-in-ethereum}
 
-没有准备好启动你自己的项目？ 有数百家公司正在积极寻求热情人士的加入，为以太坊生态系统奉献力量。 正在寻找更多信息？ [查看以太坊相关工作](/community/get-involved/#ethereum-jobs)
+还没准备好启动你自己的项目？有数百家公司正在积极寻找充满热情的人才，在以太坊生态系统中工作并做出贡献。想了解更多信息？[查看以太坊相关工作](/community/get-involved/#ethereum-jobs)

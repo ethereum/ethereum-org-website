@@ -1,47 +1,31 @@
-import ProductListComponent from "@/components/ProductList"
-import { ButtonLink } from "@/components/ui/buttons/Button"
+import { getTranslations } from "next-intl/server"
+
+import ProductListComponent, {
+  type ProductListContent,
+} from "@/components/ProductList"
 
 import eigenLayer from "@/public/images/use-cases/eigen-layer-logo.png"
 import symbiotic from "@/public/images/use-cases/symbiotic-logo.png"
 
-export const RestakingList = () => {
+export const RestakingList = async () => {
+  const t = await getTranslations("component-restaking-products")
+
   const productListSets = [
     {
-      title: "EigenLayer (Restaking Platform)",
-      description: "",
+      title: t("eigenlayer-title"),
+      description: t("eigenlayer-description"),
       image: eigenLayer,
-      alt: "eigen layer logo",
-      contentItems: [
-        <p key="eigenlayer-description">
-          EigenLayer introduced the idea of restaking in 2023 and has grown to
-          thousands of people restaking millions of ETH. Referred to as
-          “Ethereum middleware”, it connects stakers, operators and AVSs.
-        </p>,
-        <div key="eigenlayer-button">
-          <ButtonLink href="https://eigenlayer.xyz/" variant="outline">
-            Visit EigenLayer
-          </ButtonLink>
-        </div>,
-      ],
+      href: "https://eigenlayer.xyz/",
+      ctaLabel: t("visit-brand", { brand: t("eigenlayer-brand") }),
     },
     {
-      title: "Symbiotic (Restaking platform)",
-      description: "",
+      title: t("symbiotic-title"),
+      description: t("symbiotic-description"),
       image: symbiotic,
-      alt: "Symbiotic logo",
-      contentItems: [
-        <p key="symbiotic-description">
-          Symbiotic is a permissionless restaking protocol that helps secure
-          different blockchain networks by letting users “restake” their assets.
-        </p>,
-        <div key="symbiotic-button">
-          <ButtonLink href="https://symbiotic.fi/" variant="outline">
-            Visit Symbiotic
-          </ButtonLink>
-        </div>,
-      ],
+      href: "https://symbiotic.fi/",
+      ctaLabel: t("visit-brand", { brand: t("symbiotic-brand") }),
     },
-  ]
+  ] satisfies ProductListContent[]
 
-  return <ProductListComponent content={productListSets} actionLabel="Go" />
+  return <ProductListComponent content={productListSets} />
 }

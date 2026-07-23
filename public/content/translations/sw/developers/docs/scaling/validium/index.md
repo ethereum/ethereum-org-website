@@ -1,166 +1,165 @@
 ---
 title: Validium
-description: Utangulizi wa Validium kama suluhisho la kuongeza ukubwa linalotumika sasa na jumuiya ya Ethereum.
+description: Utangulizi wa Validium kama suluhisho la kuongeza viwango linalotumiwa kwa sasa na jamii ya Ethereum.
 lang: sw
 sidebarDepth: 3
 ---
 
-Validium ni [suluhisho la kuongeza ukubwa](/developers/docs/scaling/) ambalo hutekeleza uadilifu wa miamala kwa kutumia ithibati za uhalali kama vile [ZK-rollups](/developers/docs/scaling/zk-rollups/), lakini haihifadhi data ya miamala kwenye Mtandao Mkuu wa Ethereum. Ingawa upatikanaji wa data nje ya mnyororo una changamoto zake, unaweza kusababisha maboresho makubwa katika kuongeza ukubwa (validiums zinaweza kuchakata [miamala ~9,000, au zaidi, kwa sekunde](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
+Validium ni [suluhisho la kuongeza viwango](/developers/docs/scaling/) ambalo husimamia uadilifu wa miamala kwa kutumia uthibitisho wa uhalali kama [ZK-rollups](/developers/docs/scaling/zk-rollups/), lakini haihifadhi data za muamala kwenye Mtandao Mkuu wa [Ethereum](/). Ingawa upatikanaji wa data nje ya mnyororo unaleta mabadilishano, unaweza kusababisha maboresho makubwa katika uwezo wa kuongeza viwango (Validium zinaweza kuchakata [miamala ~9,000, au zaidi, kwa sekunde](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
 
 ## Mahitaji ya awali {#prerequisites}
 
-Unapaswa kuwa umesoma na kuelewa ukurasa wetu kuhusu [kuongeza ukubwa wa Ethereum](/developers/docs/scaling/) na [safu ya 2](/layer-2).
+Unapaswa kuwa umesoma na kuelewa ukurasa wetu kuhusu [kuongeza viwango vya Ethereum](/developers/docs/scaling/) na [tabaka la 2 (l2)](/layer-2).
 
 ## Validium ni nini? {#what-is-validium}
 
-Validiums ni suluhu za kuongeza ukubwa zinazotumia upatikanaji wa data na ukokotoaji nje ya mnyororo zilizoundwa kuboresha upitishaji kwa kuchakata miamala nje ya Mtandao Mkuu wa Ethereum. Kama vile zero-knowledge rollups (ZK-rollups), validiums huchapisha [ithibati za zero-knowledge](/glossary/#zk-proof) ili kuthibitisha miamala ya nje ya mnyororo kwenye Ethereum. Hii huzuia mabadiliko ya hali batili na huongeza dhamana ya usalama ya mnyororo wa validium.
+Validium ni masuluhisho ya kuongeza viwango yanayotumia upatikanaji wa data na ukokotoaji nje ya mnyororo yaliyoundwa kuboresha uwezo wa upitishaji kwa kuchakata miamala nje ya Mtandao Mkuu wa Ethereum. Kama mikusanyiko ya sifuri-maarifa (ZK-rollups), Validium huchapisha [uthibitisho wa maarifa-sifuri](/glossary/#zk-proof) ili kuthibitisha miamala ya nje ya mnyororo kwenye Ethereum. Hii inazuia mabadiliko batili ya hali na kuimarisha uhakikisho wa usalama wa mnyororo wa Validium.
 
-"Ithibati hizi za uhalali" zinaweza kuja kwa njia ya ZK-SNARKs (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) au ZK-STARKs (Zero-Knowledge Scalable Transparent ARgument of Knowledge). Zaidi kuhusu [ithibati za zero-knowledge](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/).
+Huu "uthibitisho wa uhalali" unaweza kuja katika mfumo wa ZK-SNARKs (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) au ZK-STARKs (Zero-Knowledge Scalable Transparent ARgument of Knowledge). Zaidi kuhusu [uthibitisho wa maarifa-sifuri](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/).
 
-Fedha za watumiaji wa validium zinadhibitiwa na mkataba-erevu kwenye Ethereum. Validiums hutoa uondoaji wa pesa karibu na papo hapo, kama vile ZK-rollups; mara tu ithibati ya uhalali kwa ombi la uondoaji imethibitishwa kwenye Mtandao Mkuu, watumiaji wanaweza kutoa fedha kwa kutoa [ithibati za Merkle](/developers/tutorials/merkle-proofs-for-offline-data-integrity/). Ithibati ya Merkle huthibitisha ujumuishwaji wa muamala wa uondoaji wa mtumiaji katika kundi la miamala lililothibitishwa, ikiruhusu mkataba wa kwenye mnyororo kuchakata uondoaji huo.
+Fedha zinazomilikiwa na watumiaji wa Validium zinadhibitiwa na mkataba mahiri kwenye Ethereum. Validium hutoa utoaji wa karibu na papo hapo, sawa na vile ZK-rollups hufanya; mara tu uthibitisho wa uhalali wa ombi la utoaji unapothibitishwa kwenye Mtandao Mkuu, watumiaji wanaweza kutoa fedha kwa kutoa [ushahidi wa Merkle](/developers/tutorials/merkle-proofs-for-offline-data-integrity/). Ushahidi wa Merkle unathibitisha kujumuishwa kwa muamala wa utoaji wa mtumiaji katika kundi la miamala iliyothibitishwa, kuruhusu mkataba wa mnyororoni kuchakata utoaji.
 
-Hata hivyo, watumiaji wa validium wanaweza kugandishiwa fedha zao na uondoaji kuzuiwa. Hii inaweza kutokea ikiwa wasimamizi wa upatikanaji wa data kwenye mnyororo wa validium watawazuilia watumiaji data ya hali ya nje ya mnyororo. Bila ufikiaji wa data ya miamala, watumiaji hawawezi kukokotoa ithibati ya Merkle inayohitajika kuthibitisha umiliki wa fedha na kutekeleza uondoaji.
+Hata hivyo, watumiaji wa Validium wanaweza kufungiwa fedha zao na utoaji kuzuiwa. Hili linaweza kutokea ikiwa wasimamizi wa upatikanaji wa data kwenye mnyororo wa Validium watazuia data za hali ya nje ya mnyororo kwa watumiaji. Bila ufikiaji wa data za muamala, watumiaji hawawezi kukokotoa ushahidi wa Merkle unaohitajika kuthibitisha umiliki wa fedha na kutekeleza utoaji.
 
-Huu ndio tofauti kuu kati ya validiums na ZK-rollups—msimamo wao kwenye wigo wa upatikanaji wa data. Suluhisho zote mbili zinashughulikia uhifadhi wa data kwa njia tofauti, jambo ambalo lina athari kwa usalama na kutohitaji uaminifu.
+Hii ndiyo tofauti kuu kati ya Validium na ZK-rollups—nafasi zao kwenye wigo wa upatikanaji wa data. Masuluhisho yote mawili yanashughulikia uhifadhi wa data kwa njia tofauti, jambo ambalo lina athari kwa usalama na hali ya kutohitaji kuamini.
 
-## Je, validiums huingiliana vipi na Ethereum? {#how-do-validiums-interact-with-ethereum}
+## Validium zinaingilianaje na Ethereum? {#how-do-validiums-interact-with-ethereum}
 
-Validiums ni itifaki za kuongeza ukubwa zilizojengwa juu ya mnyororo uliopo wa Ethereum. Ingawa hutekeleza miamala nje ya mnyororo, mnyororo wa validium unasimamiwa na mkusanyiko wa mikataba-erevu iliyotumwa kwenye Mtandao Mkuu ikijumuisha:
+Validium ni itifaki za kuongeza viwango zilizojengwa juu ya mnyororo uliopo wa Ethereum. Ingawa inatekeleza miamala nje ya mnyororo, mnyororo wa Validium unasimamiwa na mkusanyiko wa mikataba mahiri iliyosambazwa kwenye Mtandao Mkuu ikijumuisha:
 
-1. **Mkataba wa kuthibitisha**: Mkataba wa kuthibitisha huthibitisha uhalali wa ithibati zilizowasilishwa na mwendeshaji wa validium wakati wa kufanya masasisho ya hali. Hii inajumuisha ithibati za uhalali zinazothibitisha usahihi wa miamala ya nje ya mnyororo na ithibati za upatikanaji wa data zinazothibitisha uwepo wa data ya miamala ya nje ya mnyororo.
+1. **Mkataba wa mhakiki**: Mkataba wa mhakiki unathibitisha uhalali wa uthibitisho uliowasilishwa na mwendeshaji wa Validium wakati wa kufanya masasisho ya hali. Hii inajumuisha uthibitisho wa uhalali unaothibitisha usahihi wa miamala ya nje ya mnyororo na uthibitisho wa upatikanaji wa data unaothibitisha uwepo wa data za muamala wa nje ya mnyororo.
 
-2. **Mkataba mkuu**: Mkataba mkuu huhifadhi ahadi za hali (mizizi ya Merkle) zilizowasilishwa na wazalishaji wa bloku na husasisha hali ya validium mara tu ithibati ya uhalali inapothibitishwa kwenye mnyororo. Mkataba huu pia huchakata amana na uondoaji kutoka kwa mnyororo wa validium.
+2. **Mkataba mkuu**: Mkataba mkuu unahifadhi ufungamanisho wa hali (mzizi wa Merkle) uliowasilishwa na wazalishaji wa kitalu na kusasisha hali ya Validium mara tu uthibitisho wa uhalali unapothibitishwa mnyororoni. Mkataba huu pia huchakata amana na utoaji kutoka kwenye mnyororo wa Validium.
 
-Validiums pia hutegemea mnyororo mkuu wa Ethereum kwa yafuatayo:
+Validium pia hutegemea mnyororo mkuu wa Ethereum kwa yafuatayo:
 
-### Marekebisho {#settlement}
+### Ukamilishaji {#settlement}
 
-Miamala inayotekelezwa kwenye validium haiwezi kuthibitishwa kikamilifu hadi mnyororo mkuu utakapothibitisha uhalali wake. Shughuli zote zinazofanywa kwenye validium lazima hatimaye zirekebishwe kwenye Mtandao Mkuu. Mnyororo wa bloku wa Ethereum pia hutoa "dhamana za marekebisho" kwa watumiaji wa validium, ikimaanisha miamala ya nje ya mnyororo haiwezi kubadilishwa au kurekebishwa mara tu inapowekwa kwenye mnyororo.
+Miamala inayotekelezwa kwenye Validium haiwezi kuthibitishwa kikamilifu hadi mnyororo mzazi uthibitishe uhalali wake. Biashara zote zinazofanywa kwenye Validium lazima hatimaye zikamilishwe kwenye Mtandao Mkuu. Mnyororo wa vitalu wa Ethereum pia hutoa "dhamana za ukamilishaji" kwa watumiaji wa Validium, ikimaanisha miamala ya nje ya mnyororo haiwezi kubadilishwa au kugeuzwa mara tu inapofungamanishwa mnyororoni.
 
 ### Usalama {#security}
 
-Ethereum, ikifanya kazi kama safu ya marekebisho, pia inahakikisha uhalali wa mabadiliko ya hali kwenye validium. Miamala ya nje ya mnyororo inayotekelezwa kwenye mnyororo wa validium huthibitishwa kupitia mkataba-erevu kwenye safu ya msingi ya Ethereum.
+Ethereum, ikifanya kazi kama tabaka la ukamilishaji, pia inahakikisha uhalali wa mabadiliko ya hali kwenye Validium. Miamala ya nje ya mnyororo inayotekelezwa kwenye mnyororo wa Validium inathibitishwa kupitia mkataba mahiri kwenye tabaka la msingi la Ethereum.
 
-Ikiwa mkataba wa kuthibitisha kwenye mnyororo utaona ithibati ni batili, miamala hukataliwa. Hii inamaanisha waendeshaji lazima watimize masharti ya uhalali yanayotekelezwa na itifaki ya Ethereum kabla ya kusasisha hali ya validium.
+Ikiwa mkataba wa mhakiki wa mnyororoni utaona uthibitisho ni batili, miamala inakataliwa. Hii inamaanisha waendeshaji lazima watimize masharti ya uhalali yanayotekelezwa na itifaki ya Ethereum kabla ya kusasisha hali ya Validium.
 
-## Je, validium inafanyaje kazi? {#how-does-validium-work}
+## Validium inafanyaje kazi? {#how-does-validium-work}
 
 ### Miamala {#transactions}
 
-Watumiaji huwasilisha miamala kwa mwendeshaji, nodi inayohusika na kutekeleza miamala kwenye mnyororo wa validium. Baadhi ya validiums zinaweza kutumia mwendeshaji mmoja kutekeleza mnyororo au kutegemea utaratibu wa [uthibitisho wa hisa (PoS)](/developers/docs/consensus-mechanisms/pos/) kwa waendeshaji wanaozunguka.
+Watumiaji huwasilisha miamala kwa mwendeshaji, nodi inayohusika na kutekeleza miamala kwenye mnyororo wa Validium. Baadhi ya Validium zinaweza kutumia mwendeshaji mmoja kutekeleza mnyororo au kutegemea utaratibu wa [Uthibitisho wa Dau (PoS)](/developers/docs/consensus-mechanisms/pos/) kwa kuzungusha waendeshaji.
 
-Mwendeshaji hukusanya miamala katika kundi na kuituma kwenye sakiti ya kuthibitisha kwa ajili ya uthibitisho. Sakiti ya kuthibitisha inakubali kundi la miamala (na data nyingine muhimu) kama pembejeo na hutoa ithibati ya uhalali inayothibitisha kuwa shughuli zilifanywa kwa usahihi.
+Mwendeshaji hukusanya miamala katika kundi na kuituma kwenye saketi ya kuthibitisha kwa ajili ya uthibitisho. Saketi ya kuthibitisha inakubali kundi la miamala (na data nyingine husika) kama ingizo na kutoa uthibitisho wa uhalali unaothibitisha kwamba shughuli zilifanywa kwa usahihi.
 
-### Ahadi za hali {#state-commitments}
+### Ufungamanisho wa hali {#state-commitments}
 
-Hali ya validium huwekwa hashi kama mti wa Merkle na mzizi huhifadhiwa kwenye mkataba mkuu kwenye Ethereum. Mzizi wa Merkle, unaojulikana pia kama mzizi wa hali, hufanya kazi kama ahadi ya kriptografia kwa hali ya sasa ya akaunti na salio kwenye validium.
+Hali ya Validium inafanyiwa heshi kama mti wa Merkle na mzizi kuhifadhiwa katika mkataba mkuu kwenye Ethereum. Mzizi wa Merkle, unaojulikana pia kama mzizi wa hali, hufanya kazi kama ufungamanisho wa kificho kwa hali ya sasa ya akaunti na salio kwenye Validium.
 
-Ili kufanya sasisho la hali, mwendeshaji lazima akokotoe mzizi mpya wa hali (baada ya kutekeleza miamala) na kuiwasilisha kwa mkataba wa kwenye mnyororo. Ikiwa ithibati ya uhalali itakaguliwa, hali iliyopendekezwa inakubaliwa na validium hubadilika na kuwa mzizi mpya wa hali.
+Ili kufanya sasisho la hali, mwendeshaji lazima akokotoe mzizi mpya wa hali (baada ya kutekeleza miamala) na kuuwasilisha kwenye mkataba wa mnyororoni. Ikiwa uthibitisho wa uhalali ni sahihi, hali iliyopendekezwa inakubaliwa na Validium inabadilika kwenda kwenye mzizi mpya wa hali.
 
-### Amana na uondoaji {#deposits-and-withdrawals}
+### Amana na utoaji {#deposits-and-withdrawals}
 
-Watumiaji huhamisha fedha kutoka Ethereum hadi validium kwa kuweka ETH (au tokeni yoyote inayoendana na ERC) kwenye mkataba wa kwenye mnyororo. Mkataba hupeleka tukio la amana kwa validium nje ya mnyororo, ambapo anwani ya mtumiaji hupewa kiasi sawa na amana yake. Mwendeshaji pia hujumuisha muamala huu wa amana katika kundi jipya.
+Watumiaji huhamisha fedha kutoka Ethereum kwenda kwenye Validium kwa kuweka amana ya ETH (au tokeni yoyote inayoendana na ERC) katika mkataba wa mnyororoni. Mkataba huo hupeleka matukio ya amana kwenye Validium nje ya mnyororo, ambapo anwani ya mtumiaji inawekewa kiasi sawa na amana yao. Mwendeshaji pia hujumuisha muamala huu wa amana katika kundi jipya.
 
-Ili kurudisha fedha kwenye Mtandao Mkuu, mtumiaji wa validium huanzisha muamala wa uondoaji na kuwasilisha kwa mwendeshaji ambaye huthibitisha ombi la uondoaji na kulijumuisha kwenye kundi. Mali za mtumiaji kwenye mnyororo wa validium pia huharibiwa kabla ya kuweza kutoka kwenye mfumo. Mara tu ithibati ya uhalali inayohusishwa na kundi inapothibitishwa, mtumiaji anaweza kupiga simu mkataba mkuu ili kuondoa salio la amana yake ya awali.
+Ili kurudisha fedha kwenye Mtandao Mkuu, mtumiaji wa Validium huanzisha muamala wa utoaji na kuuwasilisha kwa mwendeshaji ambaye anathibitisha ombi la utoaji na kulijumuisha katika kundi. Mali za mtumiaji kwenye mnyororo wa Validium pia huharibiwa kabla ya kuweza kujitoa kwenye mfumo. Mara tu uthibitisho wa uhalali unaohusishwa na kundi unapothibitishwa, mtumiaji anaweza kuita mkataba mkuu ili kutoa salio la amana yao ya awali.
 
-Kama utaratibu wa kuzuia udhibiti, itifaki ya validium inaruhusu watumiaji kuondoa moja kwa moja kutoka kwa mkataba wa validium bila kupitia kwa mwendeshaji. Katika kesi hii, watumiaji wanahitaji kutoa ithibati ya Merkle kwa mkataba wa kuthibitisha ikionyesha ujumuishwaji wa akaunti katika mzizi wa hali. Ikiwa ithibati itakubaliwa, mtumiaji anaweza kupiga simu kazi ya uondoaji ya mkataba mkuu ili kutoa fedha zake kutoka kwa validium.
+Kama utaratibu wa kupinga udhibiti, itifaki ya Validium inaruhusu watumiaji kutoa moja kwa moja kutoka kwenye mkataba wa Validium bila kupitia kwa mwendeshaji. Katika kesi hii, watumiaji wanahitaji kutoa ushahidi wa Merkle kwa mkataba wa mhakiki unaoonyesha kujumuishwa kwa akaunti katika mzizi wa hali. Ikiwa uthibitisho unakubaliwa, mtumiaji anaweza kuita kitendakazi cha utoaji cha mkataba mkuu ili kutoa fedha zao kutoka kwenye Validium.
 
 ### Uwasilishaji wa kundi {#batch-submission}
 
-Baada ya kutekeleza kundi la miamala, mwendeshaji huwasilisha ithibati ya uhalali inayohusiana na mkataba wa kuthibitisha na kupendekeza mzizi mpya wa hali kwa mkataba mkuu. Ikiwa ithibati ni halali, mkataba mkuu husasisha hali ya validium na kukamilisha matokeo ya miamala katika kundi.
+Baada ya kutekeleza kundi la miamala, mwendeshaji huwasilisha uthibitisho wa uhalali unaohusishwa kwenye mkataba wa mhakiki na kupendekeza mzizi mpya wa hali kwenye mkataba mkuu. Ikiwa uthibitisho ni halali, mkataba mkuu husasisha hali ya Validium na kukamilisha matokeo ya miamala katika kundi.
 
-Tofauti na ZK-rollup, wazalishaji wa bloku kwenye validium hawahitajiki kuchapisha data ya miamala kwa makundi ya miamala (vichwa vya bloku pekee). Hii inafanya validium kuwa itifaki ya kuongeza ukubwa ya nje ya mnyororo tu, kinyume na itifaki za kuongeza ukubwa "mseto" (yaani, [safu ya 2](/layer-2/)) ambazo huchapisha data ya hali kwenye mnyororo mkuu wa Ethereum kwa kutumia data ya blob, `calldata`, au mchanganyiko wa zote mbili.
+Tofauti na ZK-rollup, wazalishaji wa kitalu kwenye Validium hawatakiwi kuchapisha data za muamala kwa makundi ya miamala (vichwa vya kitalu pekee). Hii inafanya Validium kuwa itifaki ya kuongeza viwango ya nje ya mnyororo pekee, tofauti na itifaki za kuongeza viwango "mseto" (yaani, [tabaka la 2 (l2)](/layer-2/)) zinazochapisha data za hali kwenye mnyororo mkuu wa Ethereum kwa kutumia data za blobu, `calldata`, au mchanganyiko wa zote mbili.
 
 ### Upatikanaji wa data {#data-availability}
 
-Kama ilivyotajwa, validiums hutumia mtindo wa upatikanaji wa data nje ya mnyororo, ambapo waendeshaji huhifadhi data yote ya miamala nje ya Mtandao Mkuu wa Ethereum. Nyayo ya chini ya data kwenye mnyororo ya Validium inaboresha kuongeza ukubwa (upitishaji hauzuiwi na uwezo wa Ethereum wa kuchakata data) na inapunguza ada za watumiaji (gharama ya kuchapisha data kwenye mnyororo ni ya chini).
+Kama ilivyotajwa, Validium hutumia muundo wa upatikanaji wa data nje ya mnyororo, ambapo waendeshaji huhifadhi data zote za muamala nje ya Mtandao Mkuu wa Ethereum. Alama ndogo ya data ya mnyororoni ya Validium inaboresha uwezo wa kuongeza viwango (uwezo wa upitishaji hauzuiliwi na uwezo wa kuchakata data wa Ethereum) na kupunguza ada za watumiaji (gharama ya kuchapisha data mnyororoni ni ndogo).
 
-Hata hivyo, upatikanaji wa data nje ya mnyororo huleta tatizo: data muhimu kwa ajili ya kuunda au kuthibitisha ithibati za Merkle inaweza isipatikane. Hii inamaanisha watumiaji wanaweza wasiweze kutoa fedha kutoka kwa mkataba wa kwenye mnyororo ikiwa waendeshaji watafanya vitendo vya hasidi.
+Hata hivyo, upatikanaji wa data nje ya mnyororo unaleta tatizo: data muhimu kwa ajili ya kuunda au kuthibitisha ushahidi wa Merkle inaweza isipatikane. Hii inamaanisha watumiaji wanaweza kushindwa kutoa fedha kutoka kwenye mkataba wa mnyororoni ikiwa waendeshaji watatenda kwa nia mbaya.
 
-Suluhisho mbalimbali za validium zinajaribu kutatua tatizo hili kwa kugatua uhifadhi wa data ya hali. Hii inahusisha kuwalazimisha wazalishaji wa bloku kutuma data ya msingi kwa "wasimamizi wa upatikanaji wa data" wanaohusika na kuhifadhi data ya nje ya mnyororo na kuifanya ipatikane kwa watumiaji wanapoiomba.
+Masuluhisho mbalimbali ya Validium yanajaribu kutatua tatizo hili kwa kugatua uhifadhi wa data za hali. Hii inahusisha kuwalazimisha wazalishaji wa kitalu kutuma data za msingi kwa "wasimamizi wa upatikanaji wa data" wanaohusika na kuhifadhi data za nje ya mnyororo na kuzifanya zipatikane kwa watumiaji wanapoomba.
 
-Wasimamizi wa upatikanaji wa data katika validium huthibitisha upatikanaji wa data kwa miamala ya nje ya mnyororo kwa kutia saini kila kundi la validium. Sahihi hizi huunda aina ya "ithibati ya upatikanaji" ambayo mkataba wa kuthibitisha kwenye mnyororo huikagua kabla ya kuidhinisha masasisho ya hali.
+Wasimamizi wa upatikanaji wa data katika Validium wanathibitisha upatikanaji wa data kwa miamala ya nje ya mnyororo kwa kusaini kila kundi la Validium. Saini hizi zinaunda aina ya "uthibitisho wa upatikanaji" ambao mkataba wa mhakiki wa mnyororoni hukagua kabla ya kuidhinisha masasisho ya hali.
 
-Validiums hutofautiana katika mbinu zao za usimamizi wa upatikanaji wa data. Baadhi hutegemea wahusika wanaoaminika kuhifadhi data ya hali, wakati wengine hutumia wathibitishaji waliopewa nasibu kwa kazi hiyo.
+Validium zinatofautiana katika mbinu zao za usimamizi wa upatikanaji wa data. Baadhi hutegemea pande zinazoaminika kuhifadhi data za hali, wakati nyingine hutumia wathibitishaji waliopangwa kwa nasibu kwa kazi hiyo.
 
 #### Kamati ya upatikanaji wa data (DAC) {#data-availability-committee}
 
-Ili kuhakikisha upatikanaji wa data ya nje ya mnyororo, baadhi ya suluhu za validium huteua kundi la vyombo vinavyoaminika, vinavyojulikana kwa pamoja kama kamati ya upatikanaji wa data (DAC), ili kuhifadhi nakala za hali na kutoa uthibitisho wa upatikanaji wa data. Kamati za DAC ni rahisi kutekeleza na zinahitaji uratibu mdogo kwa kuwa uanachama ni mdogo.
+Ili kuhakikisha upatikanaji wa data za nje ya mnyororo, baadhi ya masuluhisho ya Validium huteua kikundi cha taasisi zinazoaminika, zinazojulikana kwa pamoja kama kamati ya upatikanaji wa data (DAC), kuhifadhi nakala za hali na kutoa uthibitisho wa upatikanaji wa data. DAC ni rahisi kutekeleza na zinahitaji uratibu mdogo kwa kuwa uanachama ni mdogo.
 
-Hata hivyo, watumiaji lazima waamini DAC ili kufanya data ipatikane inapohitajika (k.m., kwa ajili ya kuzalisha ithibati za Merkle). Kuna uwezekano wa wanachama wa kamati za upatikanaji wa data [kuathiriwa na mhusika hasidi](https://notes.ethereum.org/DD7GyItYQ02d0ax_X-UbWg?view) ambaye anaweza kuzuia data ya nje ya mnyororo.
+Hata hivyo, watumiaji lazima waamini DAC kufanya data ipatikane inapohitajika (k.m., kwa ajili ya kuzalisha ushahidi wa Merkle). Kuna uwezekano wa wanachama wa kamati za upatikanaji wa data [kudhibitiwa na mhusika mwenye nia mbaya](https://notes.ethereum.org/DD7GyItYQ02d0ax_X-UbWg?view) ambaye anaweza kuzuia data za nje ya mnyororo.
 
-[Zaidi kuhusu kamati za upatikanaji wa data katika validiums](https://medium.com/starkware/data-availability-e5564c416424).
+[Zaidi kuhusu kamati za upatikanaji wa data katika Validium](https://medium.com/starkware/data-availability-e5564c416424).
 
-#### Upatikanaji wa data uliodhaminiwa {#bonded-data-availability}
+#### Upatikanaji wa data uliowekewa dhamana {#bonded-data-availability}
 
-Validiums nyingine zinahitaji washiriki wanaohusika na kuhifadhi data ya nje ya mtandao kuweka hisa (yaani, kufungia) tokeni katika mkataba-erevu kabla ya kuchukua majukumu yao. Hisa hii hutumika kama "dhamana" ili kuhakikisha tabia ya uaminifu miongoni mwa wasimamizi wa upatikanaji wa data na inapunguza dhana za uaminifu. Ikiwa washiriki hawa watashindwa kuthibitisha upatikanaji wa data, dhamana hupunguzwa.
+Validium nyingine zinahitaji washiriki waliopewa jukumu la kuhifadhi data za nje ya mtandao kuweka dhamana (yaani, kufungia) tokeni katika mkataba mahiri kabla ya kuchukua majukumu yao. Dhamana hii inatumika kama "kifungo" ili kuhakikisha tabia ya uaminifu miongoni mwa wasimamizi wa upatikanaji wa data na kupunguza dhana za uaminifu. Ikiwa washiriki hawa watashindwa kuthibitisha upatikanaji wa data, dhamana inakatwa (ukataji).
 
-Katika mpango wa upatikanaji wa data uliodhaminiwa, mtu yeyote anaweza kupewa jukumu la kushikilia data ya nje ya mnyororo mara tu anapotoa hisa inayohitajika. Hii huongeza bwawa la wasimamizi wa upatikanaji wa data wanaostahili, na kupunguza ugatuzi unaoathiri kamati za upatikanaji wa data (DACs). Muhimu zaidi, mbinu hii inategemea motisha za kiuchumi za kripto kuzuia shughuli hasidi, ambayo ni salama zaidi kuliko kuteua wahusika wanaoaminika ili kulinda data ya nje ya mtandao katika validium.
+Katika mpango wa upatikanaji wa data uliowekewa dhamana, mtu yeyote anaweza kupangiwa kushikilia data za nje ya mnyororo mara tu anapotoa dhamana inayohitajika. Hii inapanua kundi la wasimamizi wanaostahili wa upatikanaji wa data, na kupunguza uwekaji kati unaoathiri kamati za upatikanaji wa data (DAC). Muhimu zaidi, mbinu hii inategemea motisha za kiuchumi za kificho ili kuzuia shughuli mbaya, ambayo ni salama zaidi kuliko kuteua pande zinazoaminika kulinda data za nje ya mtandao katika Validium.
 
-[Zaidi kuhusu upatikanaji wa data uliodhaminiwa katika validiums](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf).
+[Zaidi kuhusu upatikanaji wa data uliowekewa dhamana katika Validium](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf).
 
-## Volitions na validium {#volitions-and-validium}
+## Volitions na Validium {#volitions-and-validium}
 
-Validiums hutoa faida nyingi lakini huja na changamoto (hasa, upatikanaji wa data). Lakini, kama ilivyo kwa suluhu nyingi za kuongeza ukubwa, validiums zinafaa kwa matumizi maalum—ndiyo maana volitions ziliundwa.
+Validium hutoa faida nyingi lakini huja na mabadilishano (hasa, upatikanaji wa data). Lakini, kama ilivyo kwa masuluhisho mengi ya kuongeza viwango, Validium zinafaa kwa matumizi maalum—ndiyo maana volitions ziliundwa.
 
-Volitions huchanganya ZK-rollup na mnyororo wa validium na huruhusu watumiaji kubadili kati ya suluhu mbili za kuongeza ukubwa. Kwa kutumia volitions, watumiaji wanaweza kunufaika na upatikanaji wa data nje ya mnyororo wa validium kwa miamala fulani, huku wakibaki na uhuru wa kubadili hadi suluhisho la upatikanaji wa data kwenye mnyororo (ZK-rollup) ikihitajika. Hii kimsingi huwapa watumiaji uhuru wa kuchagua changamoto kulingana na mazingira yao ya kipekee.
+Volitions zinachanganya ZK-rollup na mnyororo wa Validium na kuruhusu watumiaji kubadili kati ya masuluhisho hayo mawili ya kuongeza viwango. Kwa volitions, watumiaji wanaweza kutumia fursa ya upatikanaji wa data nje ya mnyororo wa Validium kwa miamala fulani, huku wakihifadhi uhuru wa kubadili kwenda kwenye suluhisho la upatikanaji wa data mnyororoni (ZK-rollup) ikihitajika. Hii kimsingi inawapa watumiaji uhuru wa kuchagua mabadilishano kama inavyoamriwa na mazingira yao ya kipekee.
 
-Exchange isiyogatuliwa (DEX) inaweza kupendelea kutumia miundombinu inayoweza kuongezeka na ya faragha ya validium kwa biashara za thamani ya juu. Inaweza pia kutumia ZK-rollup kwa watumiaji wanaotaka dhamana za juu za usalama na kutohitaji uaminifu za ZK-rollup.
+Soko la kubadilishana lililogatuliwa (DEX) linaweza kupendelea kutumia miundombinu ya Validium inayoweza kuongezwa viwango na ya faragha kwa biashara za thamani ya juu. Inaweza pia kutumia ZK-rollup kwa watumiaji wanaotaka uhakikisho wa juu wa usalama wa ZK-rollup na hali ya kutohitaji kuamini.
 
-## Upatanifu wa Validiums na EVM {#validiums-and-evm-compatibility}
+## Validium na utangamano wa EVM {#validiums-and-evm-compatibility}
 
-Kama ZK-rollups, validiums zinafaa zaidi kwa programu rahisi, kama vile ubadilishanaji wa tokeni na malipo. Kusaidia ukokotoaji wa jumla na utekelezaji wa mikataba-erevu miongoni mwa validiums ni vigumu kutekeleza, kutokana na gharama kubwa ya kuthibitisha maagizo ya [EVM](/developers/docs/evm/) katika sakiti ya ithibati ya zero-knowledge.
+Kama ZK-rollups, Validium zinafaa zaidi kwa programu rahisi, kama vile ubadilishaji wa tokeni na malipo. Kusaidia ukokotoaji wa jumla na utekelezaji wa mkataba mahiri miongoni mwa Validium ni vigumu kutekeleza, kutokana na mzigo mkubwa wa kuthibitisha maagizo ya [EVM](/developers/docs/evm/) katika saketi ya uthibitisho wa maarifa-sifuri.
 
-Baadhi ya miradi ya validium hujaribu kukwepa tatizo hili kwa kuandaa lugha zinazoendana na EVM (k.m., Solidity, Vyper) ili kuunda bytecode maalum iliyoboreshwa kwa uthibitisho mzuri. Upungufu wa mbinu hii ni kwamba VM mpya zinazofaa kwa ithibati za zero-knowledge zinaweza zisiunge mkono opcodes muhimu za EVM, na wasanidi programu wanapaswa kuandika moja kwa moja katika lugha ya kiwango cha juu kwa uzoefu bora. Hii inaleta matatizo zaidi: inawalazimisha wasanidi programu kujenga mfumo mtawanyo wa kimamlaka na rundo jipya kabisa la usanidi na inavunja upatanifu na miundombinu ya sasa ya Ethereum.
+Baadhi ya miradi ya Validium inajaribu kukwepa tatizo hili kwa kukusanya (ukusanyaji) lugha zinazoendana na EVM (k.m., Solidity, Vyper) katika kuunda msimbo wa baiti maalum ulioboreshwa kwa uthibitishaji mzuri. Hasara ya mbinu hii ni kwamba VM mpya zinazofaa kwa uthibitisho wa maarifa-sifuri zinaweza zisisaidie opcodes muhimu za EVM, na wasanidi programu wanapaswa kuandika moja kwa moja katika lugha ya kiwango cha juu kwa uzoefu bora. Hii inaleta matatizo zaidi: inawalazimisha wasanidi programu kujenga programu tumizi iliyogatuliwa (dapp) na mrundikano mpya kabisa wa maendeleo na kuvunja utangamano na miundombinu ya sasa ya Ethereum.
 
-Hata hivyo, baadhi ya timu zinajaribu kuboresha opcodes zilizopo za EVM kwa ajili ya sakiti za uthibitisho wa ZK. Hii itasababisha uundaji wa Mashine Halisi ya Ethereum ya Zero-Knowledge (zkEVM), VM inayoendana na EVM ambayo hutoa ithibati ili kuthibitisha usahihi wa utekelezaji wa programu. Kwa zkEVM, minyororo ya validium inaweza kutekeleza mikataba-erevu nje ya mnyororo na kuwasilisha ithibati za uhalali ili kuthibitisha ukokotoaji wa nje ya mnyororo (bila kulazimika kuitekeleza tena) kwenye Ethereum.
+Baadhi ya timu, hata hivyo, zinajaribu kuboresha opcodes zilizopo za EVM kwa saketi za kuthibitisha za ZK. Hii itasababisha maendeleo ya Mashine Pepe ya Ethereum ya maarifa-sifuri (zkEVM), VM inayoendana na EVM inayozalisha uthibitisho ili kuthibitisha usahihi wa utekelezaji wa programu. Kwa zkEVM, minyororo ya Validium inaweza kutekeleza mikataba mahiri nje ya mnyororo na kuwasilisha uthibitisho wa uhalali ili kuthibitisha ukokotoaji wa nje ya mnyororo (bila kulazimika kuutekeleza tena) kwenye Ethereum.
 
 [Zaidi kuhusu zkEVMs](https://www.alchemy.com/overviews/zkevm).
 
-## Je, validiums huongezaje ukubwa wa Ethereum? {#scaling-ethereum-with-validiums}
+## Validium zinaongezaje viwango vya Ethereum? {#scaling-ethereum-with-validiums}
 
 ### 1. Uhifadhi wa data nje ya mnyororo {#offchain-data-storage}
 
-Miradi ya kuongeza ukubwa ya Safu ya 2, kama vile optimistic rollups na ZK-rollups, hubadilisha uongezaji usio na kikomo wa itifaki za kuongeza ukubwa za nje ya mnyororo (k.m., [Njozi](/developers/docs/scaling/plasma/)) kwa usalama kwa kuchapisha baadhi ya data za miamala kwenye L1. Lakini hii inamaanisha sifa za kuongeza ukubwa za rollups zimezuiwa na kipimo data kwenye Mtandao Mkuu wa Ethereum ([ugawanyaji wa data](/roadmap/danksharding/) unapendekeza kuboresha uwezo wa uhifadhi wa data wa Ethereum kwa sababu hii).
+Miradi ya kuongeza viwango ya tabaka la 2 (l2), kama vile mikusanyiko yenye matumaini na ZK-rollups, inabadilishana uwezo usio na kikomo wa kuongeza viwango wa itifaki safi za kuongeza viwango za nje ya mnyororo (k.m., [Plasma](/developers/docs/scaling/plasma/)) kwa usalama kwa kuchapisha baadhi ya data za muamala kwenye tabaka la 1 (l1). Lakini hii inamaanisha sifa za kuongeza viwango za mikusanyiko zinazuiliwa na kipimo data kwenye Mtandao Mkuu wa Ethereum ([mnyororo wa shadi wa data](/roadmap/danksharding/) unapendekeza kuboresha uwezo wa kuhifadhi data wa Ethereum kwa sababu hii).
 
-Validiums hufikia kuongeza ukubwa kwa kuweka data yote ya miamala nje ya mnyororo na huweka tu ahadi za hali (na ithibati za uhalali) wakati wa kupeleka masasisho ya hali kwenye mnyororo mkuu wa Ethereum. Hata hivyo, uwepo wa ithibati za uhalali huipa validiums dhamana za juu za usalama kuliko suluhu nyingine za kuongeza ukubwa za nje ya mnyororo, ikiwa ni pamoja na Njozi na [sidechains](/developers/docs/scaling/sidechains/). Kwa kupunguza kiasi cha data ambacho Ethereum inapaswa kuchakata kabla ya kuthibitisha miamala ya nje ya mnyororo, miundo ya validium huongeza sana upitishaji kwenye Mtandao Mkuu.
+Validium zinafikia uwezo wa kuongeza viwango kwa kuweka data zote za muamala nje ya mnyororo na kuchapisha tu ufungamanisho wa hali (na uthibitisho wa uhalali) wakati wa kupeleka masasisho ya hali kwenye mnyororo mkuu wa Ethereum. Uwepo wa uthibitisho wa uhalali, hata hivyo, unazipa Validium uhakikisho wa juu wa usalama kuliko masuluhisho mengine safi ya kuongeza viwango ya nje ya mnyororo, ikiwa ni pamoja na Plasma na [minyororo ya kando](/developers/docs/scaling/sidechains/). Kwa kupunguza kiasi cha data ambacho Ethereum inapaswa kuchakata kabla ya kuthibitisha miamala ya nje ya mnyororo, miundo ya Validium inaongeza sana uwezo wa upitishaji kwenye Mtandao Mkuu.
 
-### 2. Ithibati za kujirudia {#recursive-proofs}
+### 2. Uthibitisho unaojirudia {#recursive-proofs}
 
-Ithibati ya kujirudia ni ithibati ya uhalali inayothibitisha uhalali wa ithibati nyingine. "Ithibati hizi za ithibati" huzalishwa kwa kukusanya ithibati nyingi kwa kujirudia hadi ithibati moja ya mwisho inayothibitisha ithibati zote za awali itengenezwe. Ithibati za kujirudia huongeza kasi ya usindikaji wa mnyororo wa bloku kwa kuongeza idadi ya miamala inayoweza kuthibitishwa kwa kila ithibati ya uhalali.
+Uthibitisho unaojirudia ni uthibitisho wa uhalali unaothibitisha uhalali wa uthibitisho mwingine. Hizi "uthibitisho wa uthibitisho" zinazalishwa kwa kukusanya kwa kujirudia uthibitisho mwingi hadi uthibitisho mmoja wa mwisho unaothibitisha uthibitisho wote uliopita utakapoundwa. Uthibitisho unaojirudia unaongeza kasi ya kuchakata mnyororo wa vitalu kwa kuongeza idadi ya miamala inayoweza kuthibitishwa kwa kila uthibitisho wa uhalali.
 
-Kwa kawaida, kila ithibati ya uhalali ambayo mwendeshaji wa validium huiwasilisha kwa Ethereum kwa uthibitisho huthibitisha uadilifu wa bloku moja. Wakati ithibati moja ya kujirudia inaweza kutumika kuthibitisha uhalali wa bloku kadhaa za validium kwa wakati mmoja—hii inawezekana kwani sakiti ya kuthibitisha inaweza kukusanya ithibati kadhaa za bloku kwa kujirudia na kuwa ithibati moja ya mwisho. Ikiwa mkataba wa kuthibitisha kwenye mnyororo utakubali ithibati ya kujirudia, bloku zote za msingi hukamilishwa mara moja.
+Kwa kawaida, kila uthibitisho wa uhalali ambao mwendeshaji wa Validium anawasilisha kwa Ethereum kwa uthibitishaji unathibitisha uadilifu wa kitalu kimoja. Wakati uthibitisho mmoja unaojirudia unaweza kutumika kuthibitisha uhalali wa vitalu kadhaa vya Validium kwa wakati mmoja—hii inawezekana kwa kuwa saketi ya kuthibitisha inaweza kukusanya kwa kujirudia uthibitisho wa vitalu kadhaa katika uthibitisho mmoja wa mwisho. Ikiwa mkataba wa mhakiki wa mnyororoni unakubali uthibitisho unaojirudia, vitalu vyote vya msingi vinakamilishwa (ukamilifu) mara moja.
 
-## Faida na hasara za validium {#pros-and-cons-of-validium}
+## Faida na hasara za Validium {#pros-and-cons-of-validium}
 
-| Faida                                                                                                                                                     | Hasara                                                                                                                                                                                                               |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ithibati za uhalali hutekeleza uadilifu wa miamala ya nje ya mnyororo na kuzuia waendeshaji kukamilisha masasisho ya hali batili.         | Uzalishaji wa ithibati za uhalali unahitaji maunzi maalum, jambo linaloleta hatari ya ugatuzi.                                                                                                       |
-| Huongeza ufanisi wa mtaji kwa watumiaji (hakuna ucheleweshaji wa kutoa fedha kurudi Ethereum)                                          | Usaidizi mdogo kwa ukokotoaji wa jumla/mikataba-erevu; lugha maalum zinahitajika kwa usanidi.                                                                                                        |
-| Haiathiriwi na mashambulizi fulani ya kiuchumi yanayokabili mifumo inayotegemea uthibitisho wa ulaghai katika matumizi ya thamani ya juu. | Nguvu kubwa ya ukokotoaji inahitajika kuzalisha ithibati za ZK; haina gharama nafuu kwa programu za upitishaji wa chini.                                                                             |
-| Hupunguza ada za gesi kwa watumiaji kwa kutoweka calldata kwenye Mtandao Mkuu wa Ethereum.                                                | Muda wa polepole wa ukamilisho wa kihisia (dakika 10-30 kuzalisha ithibati ya ZK) lakini haraka zaidi kufikia ukamilisho kamili kwa sababu hakuna ucheleweshaji wa muda wa mzozo. |
-| Inafaa kwa matumizi maalum, kama vile biashara au michezo ya mnyororo wa bloku inayotanguliza faragha ya miamala na kuongeza ukubwa.      | Watumiaji wanaweza kuzuiwa kutoa fedha kwa kuwa uzalishaji wa ithibati za umiliki za Merkle unahitaji data ya nje ya mnyororo kupatikana wakati wote.                                                |
-| Upatikanaji wa data nje ya mnyororo hutoa viwango vya juu vya upitishaji na huongeza kuongezeka kwa ukubwa.                               | Mtindo wa usalama unategemea dhana za uaminifu na motisha za kiuchumi za kripto, tofauti na ZK-rollups, ambazo hutegemea tu mifumo ya usalama ya kriptografia.                                       |
+| Faida                                                                                                                    | Hasara                                                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Uthibitisho wa uhalali husimamia uadilifu wa miamala ya nje ya mnyororo na kuzuia waendeshaji kukamilisha masasisho batili ya hali. | Kuzalisha uthibitisho wa uhalali kunahitaji maunzi maalum, ambayo inaleta hatari ya uwekaji kati.                                                              |
+| Inaongeza ufanisi wa mtaji kwa watumiaji (hakuna ucheleweshaji katika kutoa fedha kurudi kwenye Ethereum)                                 | Usaidizi mdogo kwa ukokotoaji wa jumla/mikataba mahiri; lugha maalum zinahitajika kwa maendeleo.                                             |
+| Haiko hatarini kwa baadhi ya mashambulizi ya kiuchumi yanayokabiliwa na mifumo inayotegemea uthibitisho wa udanganyifu katika programu za thamani ya juu.                | Nguvu kubwa ya ukokotoaji inahitajika ili kuzalisha uthibitisho wa ZK; si ya gharama nafuu kwa programu zenye uwezo mdogo wa upitishaji.                                         |
+| Inapunguza ada za gesi kwa watumiaji kwa kutochapisha data za mwito kwenye Mtandao Mkuu wa Ethereum.                                                  | Muda wa ukamilifu wa kibinafsi wa polepole (dakika 10-30 kuzalisha uthibitisho wa ZK) lakini haraka zaidi kwa ukamilifu kamili kwa sababu hakuna ucheleweshaji wa muda wa mzozo.               |
+| Inafaa kwa matumizi maalum, kama vile biashara au michezo ya mnyororo wa vitalu inayotanguliza faragha ya muamala na uwezo wa kuongeza viwango.  | Watumiaji wanaweza kuzuiwa kutoa fedha kwa kuwa kuzalisha ushahidi wa Merkle wa umiliki kunahitaji data za nje ya mnyororo kupatikana wakati wote.      |
+| Upatikanaji wa data nje ya mnyororo hutoa viwango vya juu vya uwezo wa upitishaji na kuongeza uwezo wa kuongeza viwango.                              | Muundo wa usalama unategemea dhana za uaminifu na motisha za kiuchumi za kificho, tofauti na ZK-rollups, ambazo zinategemea tu mifumo ya usalama ya kificho. |
 
 ### Tumia Validium/Volitions {#use-validium-and-volitions}
 
-Miradi mingi hutoa utekelezaji wa Validium na volitions ambayo unaweza kuiunganisha katika mfumo mtawanyo wa kimamlaka wako:
+Miradi mingi hutoa utekelezaji wa Validium na volitions ambazo unaweza kuziunganisha kwenye programu tumizi iliyogatuliwa (dapp) yako:
 
-**StarkWare StarkEx** - _StarkEx ni suluhisho la kuongeza ukubwa la Safu ya 2 (L2) ya Ethereum ambalo linategemea ithibati za uhalali. Inaweza kufanya kazi katika modi za upatikanaji wa data za ZK-Rollup au Validium._
+**StarkWare StarkEx** - _StarkEx ni suluhisho la uwezo wa kuongeza viwango la Tabaka la 2 (L2) la Ethereum ambalo linategemea uthibitisho wa uhalali. Inaweza kufanya kazi katika njia za upatikanaji wa data za ZK-Rollup au Validium._
 
 - [Nyaraka](https://docs.starkware.co/starkex-v4/starkex-deep-dive/data-availability-modes#validium)
 - [Tovuti](https://starkware.co/starkex/)
 
-**Matter Labs zkPorter**- _zkPorter ni itifaki ya kuongeza ukubwa ya Safu ya 2 inayoshughulikia upatikanaji wa data kwa mbinu mseto inayochanganya mawazo ya zkRollup na ugawanyaji. Inaweza kusaidia idadi yoyote ya shards, kila moja ikiwa na sera yake ya upatikanaji wa data._
+**Matter Labs zkPorter**- _zkPorter ni itifaki ya kuongeza viwango ya Tabaka la 2 inayoshughulikia upatikanaji wa data kwa mbinu mseto inayochanganya mawazo ya zkRollup na mnyororo wa shadi. Inaweza kusaidia shadi nyingi kiholela, kila moja ikiwa na sera yake ya upatikanaji wa data._
 
 - [Blogu](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)
 - [Nyaraka](https://docs.zksync.io/zksync-protocol/rollup/data-availability)
 - [Tovuti](https://zksync.io/)
 
-## Masomo zaidi {#further-reading}
+## Usomaji zaidi {#further-reading}
 
-- [Validium na Safu ya 2 Mbili-kwa-Mbili — Toleo Na. 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
+- [Validium Na Tabaka la 2 Mbili-Kwa-Mbili — Toleo Na. 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 - [ZK-rollups dhidi ya Validium](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)
-- [Volition na Wigo Unaoibuka wa Upatikanaji wa Data](https://medium.com/starkware/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb)
-- [Rollups, Validiums, na Volitions: Jifunze Kuhusu Suluhu Moto Zaidi za Kuongeza Ukubwa za Ethereum](https://www.defipulse.com/blog/rollups-validiums-and-volitions-learn-about-the-hottest-ethereum-scaling-solutions)
-- [Mwongozo wa Vitendo kwa Unda-mpya za Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
+- [Volition na wigo Unaoibuka wa Upatikanaji wa Data](https://medium.com/starkware/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb)
+- [Mwongozo wa Vitendo wa Mikusanyiko ya Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

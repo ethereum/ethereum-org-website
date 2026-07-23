@@ -1,19 +1,24 @@
 import React from "react"
 import { Banknote, ChartNoAxesCombined, Handshake } from "lucide-react"
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
-import ContentHero from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import MainArticle from "@/components/MainArticle"
-import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Card } from "@/components/ui/card"
+import {
+  Card,
+  CardButtonFake,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
 import { Section } from "@/components/ui/section"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Tag } from "@/components/ui/tag"
 
-import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
@@ -22,16 +27,14 @@ import Arbitrum from "./logos/arbitrum.svg"
 import Base from "./logos/base.svg"
 import Devconnect from "./logos/devconnect.svg"
 import EcosystemSupport from "./logos/ecosystem-support-program.svg"
-import EFFounderSuccess from "./logos/ef-founder-success.svg"
 import EnsBuilderGrants from "./logos/ens-builder-grants.svg"
 import EthGlobal from "./logos/ethglobal.svg"
-// import Gitcoin from "./logos/gitcoin.svg"
 import Kernel from "./logos/kernel.svg"
 import Optimism from "./logos/optimism.svg"
 import Polygon from "./logos/polygon.svg"
 import ProtogolGuild from "./logos/protocol-guild.svg"
 import Unichain from "./logos/unichain.svg"
-import FoundersPageJsonLD from "./page-jsonld"
+import PageJsonLD from "./page-jsonld"
 
 import heroImg from "@/public/images/upgrades/merge.png"
 
@@ -80,7 +83,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     ecosystemEvents: {
       label: t("page-founders-support-tag-ecosystem-events"),
       className:
-        "bg-pink-100 dark:bg-pink-800/50 text-pink-800 dark:text-pink-100 tracking-1",
+        "bg-pink-100 dark:bg-pink-800/50 text-pink-800 dark:text-pink-100",
     },
     accelerator: {
       label: t("page-founders-support-tag-accelerator"),
@@ -137,15 +140,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             name: "Optimism",
           }),
         },
-        // {
-        //   name: "Gitcoin",
-        //   Logo: Gitcoin,
-        //   tags: ["grantProgram", "publicGoods"],
-        //   description: "A quarterly initiative that empowers people and collectives in web3 to allocate funding toward projects and causes they believe in.",
-        //   highlights: ["3,700+ projects supported"],
-        //   href: "https://www.gitcoin.co/program",
-        //   ctaLabel: t.rich("page-founders-cta-visit-name", { name: "Gitcoin" }),
-        // },
         {
           name: "Base",
           Logo: Base,
@@ -313,27 +307,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             name: "ETHGlobal",
           }),
         },
-        {
-          name: "Ethereum Foundation Founder Support",
-          Logo: EFFounderSuccess,
-          tags: [],
-          subtitle: t("page-founders-partnerships-ef-founder-support-subtitle"),
-          description: t(
-            "page-founders-partnerships-ef-founder-support-description"
-          ),
-          highlights: [],
-          href: "https://efdn.notion.site/255d989555418113975ff62641d9c814",
-          ctaLabel: t("page-founders-partnerships-ef-founder-support-cta"),
-        },
-        // {
-        //   name: "Base",
-        //   Logo: Base,
-        //   tags: [],
-        //   description: "Base Batches is a global program for builders creating the next wave of onchain apps",
-        //   highlights: [],
-        //   href: "https://www.basebatches.xyz/",
-        //   ctaLabel: "Visit Base",
-        // },
       ],
     },
   ]
@@ -345,105 +318,105 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   return (
     <>
-      <FoundersPageJsonLD locale={locale} contributors={contributors} />
+      <PageJsonLD locale={locale} contributors={contributors} />
 
-      <div>
-        <ContentHero
-          breadcrumbs={{ slug: "build/founders", startDepth: 1 }}
-          heroImg={heroImg}
-          title={t("page-founders-title")}
-          description={t("page-founders-description")}
-        />
-        <MainArticle className="relative space-y-16 px-4 py-16 md:space-y-20 md:px-10 md:py-20">
-          <Section id="apply" className="space-y-12">
-            <div className="space-y-4">
-              <h2>{t("page-founders-apply-h2")}</h2>
-              <p>{t("page-founders-apply-p1")}</p>
-            </div>
+      <PageHero
+        breadcrumbs={{ slug: "build/founders", startDepth: 1 }}
+        heroImg={heroImg}
+        title={t("page-founders-title")}
+        description={t("page-founders-description")}
+      />
 
-            <Tabs defaultValue={supportTabs[0].key}>
-              <TabsList>
-                {supportTabs.map(({ key, label, icon }) => (
-                  <TabsTrigger
-                    key={key}
-                    value={key}
-                    // TODO: Add tracking to triggers
-                    // customEventOptions={{
-                    //   eventCategory: "founders_support",
-                    //   eventAction: "apply_for_support_section",
-                    // }}
-                  >
-                    {icon}&nbsp;{label}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-              {supportTabs.map(({ key, entities, categoryCtaLabel }) => (
-                <TabsContent
+      <MainArticle className="flow px-page pt-page-2x pb-page">
+        <Section id="apply">
+          <h2>{t("page-founders-apply-h2")}</h2>
+          <p>{t("page-founders-apply-p1")}</p>
+
+          <Tabs defaultValue={supportTabs[0].key}>
+            <TabsList>
+              {supportTabs.map(({ key, label, icon }) => (
+                <TabsTrigger
                   key={key}
                   value={key}
-                  className="mt-12 border-0 p-0"
+                  // TODO: Add tracking to triggers
+                  // customEventOptions={{
+                  //   eventCategory: "founders_support",
+                  //   eventAction: "apply_for_support_section",
+                  // }}
                 >
-                  <div className="grid grid-cols-fill-4 gap-4">
-                    {entities.map(
-                      ({
-                        name,
-                        Logo,
-                        tags,
-                        subtitle,
-                        description,
-                        highlights,
-                        href,
-                        ctaLabel,
-                      }) => (
-                        <Card
-                          key={name}
-                          className="row-span-3 grid grid-rows-subgrid gap-y-8 rounded-2xl bg-background-highlight p-8 max-md:px-4"
-                        >
-                          <h3 className="sr-only">{name}</h3>
-                          <Logo className="my-auto max-h-9 max-w-full [&_*]:!fill-body" />
-                          <div className="space-y-4">
-                            {!!tags.length && (
-                              <div className="flex flex-wrap gap-x-1 gap-y-2">
-                                {tags.map((tag) => (
-                                  <Tag
-                                    key={tag}
-                                    className={cn(
-                                      "!min-h-0 !py-1",
-                                      supportTags[tag].className
-                                    )}
-                                  >
-                                    {supportTags[tag].label}
-                                  </Tag>
-                                ))}
-                              </div>
-                            )}
-                            {subtitle && (
-                              <p className="font-bold">{subtitle}</p>
-                            )}
-                            <p>{description}</p>
-                            {highlights.map((highlight) => (
-                              <div
-                                key={highlight}
-                                className="flex items-center gap-2"
-                              >
-                                <CheckCircle />
-                                <p>{highlight}</p>
-                              </div>
-                            ))}
-                          </div>
-                          <ButtonLink href={href} variant="outline">
-                            {ctaLabel || categoryCtaLabel}
-                          </ButtonLink>
-                        </Card>
-                      )
-                    )}
-                  </div>
-                </TabsContent>
+                  {icon}&nbsp;{label}
+                </TabsTrigger>
               ))}
-            </Tabs>
-          </Section>
-        </MainArticle>
-      </div>
+            </TabsList>
+            {supportTabs.map(({ key, entities, categoryCtaLabel }) => (
+              <TabsContent
+                key={key}
+                value={key}
+                className="mt-space border-0 p-0"
+              >
+                <Grid>
+                  {entities.map(
+                    ({
+                      name,
+                      Logo,
+                      tags,
+                      subtitle,
+                      description,
+                      highlights,
+                      href,
+                      ctaLabel,
+                    }) => (
+                      <Card
+                        key={name}
+                        href={href}
+                        size="lg"
+                        hoverLift
+                        className="row-span-3 grid grid-rows-subgrid gap-0"
+                      >
+                        <CardHeader className="my-auto">
+                          <h3 className="sr-only">{name}</h3>
+                          <Logo className="max-h-9 max-w-full **:fill-body!" />
+                        </CardHeader>
+                        <CardContent spacing="md">
+                          {!!tags.length && (
+                            <div className="flex flex-wrap gap-x-1 gap-y-2">
+                              {tags.map((tag) => (
+                                <Tag
+                                  key={tag}
+                                  size="small"
+                                  className={supportTags[tag].className}
+                                >
+                                  {supportTags[tag].label}
+                                </Tag>
+                              ))}
+                            </div>
+                          )}
+                          {subtitle && <p className="font-bold">{subtitle}</p>}
+                          <p>{description}</p>
+                          {highlights.map((highlight) => (
+                            <div
+                              key={highlight}
+                              className="flex items-center gap-2"
+                            >
+                              <CheckCircle />
+                              <p>{highlight}</p>
+                            </div>
+                          ))}
+                        </CardContent>
+                        <CardFooter>
+                          <CardButtonFake variant="outline">
+                            {ctaLabel || categoryCtaLabel}
+                          </CardButtonFake>
+                        </CardFooter>
+                      </Card>
+                    )
+                  )}
+                </Grid>
+              </TabsContent>
+            ))}
+          </Tabs>
+        </Section>
+      </MainArticle>
     </>
   )
 }
@@ -453,6 +426,8 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-founders")
 

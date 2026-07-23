@@ -1,10 +1,8 @@
 ---
 title: Kode etik
-description: Standar dasar yang kami perjuangkan di seluruh ruang ethereum.org.
+description: Standar dasar yang kami upayakan di seluruh ruang ethereum.org.
 lang: id
 ---
-
-# Kode etik {#code-of-conduct}
 
 ## Misi {#mission}
 
@@ -12,32 +10,32 @@ Untuk mengembangkan dan memelihara pusat pengetahuan yang paling komprehensif da
 
 ## Nilai-nilai {#values}
 
-Komunitas ethereum.org berjuang untuk menjadi:
+Komunitas ethereum.org berupaya untuk menjadi:
 
 - edukatif, ditujukan untuk membantu semua orang memahami Ethereum
 - inklusif
 - mudah diakses
 - digerakkan oleh komunitas
-- berfokus pada teknologi dasar dan kasus penggunaan Ethereum
+- berfokus pada teknologi yang mendasari Ethereum dan kasus penggunaannya
 - berfokus pada konsep dan prinsip desain Ethereum
 
 ## Kami bukanlah {#what-we-are-not}
 
-- Situs web Ethereum Foundation
+- Situs web Yayasan Ethereum
 - Platform untuk mempromosikan investasi atau mencari keuntungan dalam bentuk apa pun
 - Platform untuk mengangkat atau mendukung proyek atau organisasi individu
 - DEX, CEX, atau bentuk platform keuangan lainnya
 - Platform yang memberikan nasihat keuangan atau hukum dalam bentuk apa pun
 
-## Kode etik {#code-of-conduct}
+## Kode etik {#code-of-conduct-2}
 
 ### Janji {#pledge}
 
-Partisipasi terbuka adalah inti dari etos ethereum.org. Kami adalah situs web dan komunitas yang dikelola oleh ribuan kontributor, dan ini hanya mungkin terjadi jika kami mempertahankan lingkungan yang ramah dan partisipatif. Untuk tujuan ini, para kontributor situs ini berjanji untuk mempertahankan lingkungan yang bebas dari pelecehan bagi semua peserta di seluruh platform dan ruang komunitas ethereum.org. Komunitas ethereum.org menyambut dan menghargai siapa saja yang ingin berpartisipasi dengan cara yang konstruktif dan ramah, tanpa memandang usia, disabilitas, etnis, karakteristik seks, identitas gender, tingkat pengalaman, bidang keahlian, pendidikan, status sosial ekonomi, kebangsaan, penampilan pribadi, ras, agama, atau dimensi keragaman lainnya.
+Partisipasi terbuka adalah inti dari etos ethereum.org. Kami adalah situs web dan komunitas yang dikelola oleh ribuan kontributor, dan hal ini hanya mungkin terjadi jika kami mempertahankan lingkungan yang ramah dan partisipatif. Untuk tujuan ini, para kontributor situs ini berjanji untuk mempertahankan lingkungan yang bebas dari pelecehan bagi semua peserta di seluruh platform dan ruang komunitas ethereum.org. Komunitas ethereum.org menyambut dan menghargai siapa saja yang ingin berpartisipasi dengan cara yang konstruktif dan ramah, tanpa memandang usia, disabilitas, etnis, karakteristik seksual, identitas gender, tingkat pengalaman, bidang keahlian, pendidikan, status sosial ekonomi, kebangsaan, penampilan pribadi, ras, agama, atau dimensi keragaman lainnya.
 
 ### Ruang lingkup {#scope}
 
-Kode Etik ini berlaku untuk semua ruang ethereum.org (seperti GitHub, Discord, Figma, Crowdin, X (sebelumnya Twitter) dan platform online lainnya), dan juga berlaku ketika komunitas diwakili di ruang publik dunia nyata seperti di pertemuan (meetup), konferensi, dan acara.
+Kode Etik ini berlaku untuk semua ruang ethereum.org (seperti GitHub, Discord, Figma, Crowdin, X (sebelumnya Twitter), dan platform online lainnya), dan juga berlaku ketika komunitas diwakili di ruang publik dunia nyata seperti pada pertemuan, konferensi, dan peristiwa.
 
 ### Standar kami {#our-standards}
 
@@ -53,20 +51,20 @@ Contoh perilaku yang berkontribusi dalam menciptakan lingkungan yang positif mel
 Contoh perilaku yang tidak dapat diterima oleh peserta meliputi:
 
 - Kekerasan fisik, mengancam kekerasan fisik, atau mendorong kekerasan fisik dalam bentuk apa pun
-- Menggunakan bahasa atau gambar yang diseksualisasi atau memaksakan perhatian seksual yang tidak diinginkan
-- Meniru individu lain atau dengan tidak jujur mengklaim afiliasi dengan individu atau organisasi tertentu
+- Menggunakan bahasa atau gambar yang berbau seksual atau memaksakan perhatian seksual yang tidak diinginkan
+- Meniru individu lain atau secara tidak jujur mengklaim afiliasi dengan individu atau organisasi tertentu
 - Trolling, komentar yang menghina/merendahkan, dan serangan pribadi atau politik
 - Melecehkan anggota komunitas lain di saluran publik atau pribadi
 - Memublikasikan informasi pribadi orang lain, seperti alamat fisik atau elektronik, tanpa izin eksplisit
 - Rekayasa sosial, penipuan, atau memanipulasi anggota komunitas lainnya
 - Mempromosikan investasi, token, proyek, atau apa pun untuk keuntungan moneter atau non-moneter pribadi
-- Melakukan spam pada server dengan konten yang tidak relevan (off-topic)
+- Melakukan spam pada server dengan konten di luar topik
 - Mengabaikan permintaan atau peringatan dari moderator komunitas
 - Terlibat dalam perilaku lain yang secara wajar dapat dianggap tidak pantas dalam lingkungan profesional
 
 ### Pelaporan {#reporting}
 
-Pelanggaran kode etik biasanya akan terlihat oleh komunitas karena kami mencoba melakukan semuanya di saluran publik yang terbuka, yang memungkinkan anggota komunitas untuk mengawasi diri mereka sendiri.
+Pelanggaran kode etik biasanya akan terlihat oleh komunitas karena kami mencoba melakukan semuanya di saluran publik yang terbuka, sehingga anggota komunitas dapat mengawasi diri mereka sendiri.
 
 Namun, jika terjadi sesuatu yang menurut Anda perlu mendapat perhatian, Anda dapat menyampaikannya kepada seseorang yang memiliki peran moderasi (misalnya, pemandu discord) sehingga mereka dapat membantu menyelidiki dan memberikan tanggapan yang sesuai.
 

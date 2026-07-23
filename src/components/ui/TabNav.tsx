@@ -48,14 +48,14 @@ const TabNav = ({
 
   return (
     <div className={cn("flex w-full justify-center", className)}>
-      <nav className="mx-4 flex w-full max-w-full gap-1 overflow-x-auto rounded-2xl border bg-background p-0.5 shadow md:max-w-[calc(100%-2rem)] md:shadow-lg lg:w-auto">
+      <nav className="mx-4 flex w-full max-w-full gap-1 overflow-x-auto rounded-base border bg-background p-0.5 shadow md:max-w-[calc(100%-2rem)] md:shadow-lg lg:w-auto">
         {sections.map(({ key, href: sectionHref, label, icon }) => {
           const isActive = activeKey.toLowerCase() === key.toLowerCase()
           const sharedProps = {
             variant: "ghost" as ButtonVariantProps["variant"],
             isSecondary: true,
             className: cn(
-              "relative flex-shrink-0 text-nowrap rounded-xl px-4 py-2 text-sm [&_svg]:shrink-0 [&_svg]:text-sm",
+              "relative shrink-0 text-nowrap rounded-xl px-4 py-2 text-sm [&_svg]:shrink-0 [&_svg]:text-sm",
               isActive && "!text-primary"
             ),
             customEventOptions: customEventOptions

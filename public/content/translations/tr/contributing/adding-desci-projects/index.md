@@ -1,44 +1,42 @@
 ---
-title: Merkeziyetsiz Bilim projeleri ekleme
-description: "ethereum.org'daki Merkeziyetsiz Bilim sayfasına proje bağlantıları eklerken kullandığımız politika"
+title: DeSci projeleri ekleme
+description: ethereum.org'daki DeSci sayfasına projelere bağlantı eklerken kullandığımız politika
 lang: tr
 ---
 
-# Proje ekleme {#adding-projects}
+Çeşitli projeleri gösterdiğimizden ve DeSci ortamının iyi bir genel görünümünü sunduğumuzdan emin olmak istiyoruz.
 
-Çeşitli projeler sunduğumuzdan ve Merkeziyetsiz Bilim manzarasının anlık görüntüsünü verdiğimizden emin olmak istiyoruz.
-
-Herkes, ethereum.org'daki Merkeziyetsiz Bilim sayfasındaki listeye proje önermek konusunda özgürdür. Aynı şekilde, bir projenin artık alakalı olmadığını ya da artık uygunluk kriterlerimizi karşılamadığını fark eden herkes, o projeyi kaldırmamızı önermekte özgürdür.
+Herkes ethereum.org'daki DeSci sayfasında listelenmesi için bir proje önermekte özgürdür. Aynı şekilde, artık alakalı olmayan veya uygunluk kriterlerimizi karşılamayan bir projeyi fark eden herkes projenin kaldırılmasını önermekte özgürdür.
 
 ## Karar çerçevesi {#the-decision-framework}
 
 ### Dahil edilme kriterleri: olmazsa olmazlar {#the-must-haves}
 
-- **Açık kaynak kodu/verisi** - Kodun ve verinin açıklığı Merkeziyetsiz Bilim'in temel bir ilkesidir, bu nedenle Merkeziyetsiz Bilim projeleri kapalı kaynaklı olmamalıdır. Kod temeli erişilebilir ve tercihen "çekme talebine" açık olmalıdır.
-- **Merkeziyetsiz Bilim projeleri kanıtlanabilir şekilde merkeziyetsiz olmalıdır** - Bu, bir DAO tarafından yönetilmeyi veya saklamasız cüzdanlar da dahil olmak üzere merkeziyetsiz bir teknoloji yığını ile inşa edilmeyi içerebilir. Muhtemelen Ethereum'da denetlenebilir akıllı sözleşmeleri içerir.
-- **Dürüst ve doğru listeleme bilgileri** - Projelerden önerilen herhangi bir listelemenin dürüst ve doğru bilgilerle gelmesi beklenir. Ürününüzü, örneğin "açık kaynaklı" değilken öyleymiş gibi duyurarak listeleme bilgilerini tahrif eden ürünler kaldırılacaktır.
-- **Bilime erişimi genişletmeye yönelik kanıtlanabilir taahhüt** - Bir Merkeziyetsiz Bilim projesi, bilime katılımı sadece token/NFT sahiplerine değil, genel halka nasıl genişlettiğini ifade edebilmelidir.
-- **Küresel olarak erişilebilir** - Projeniz, belirli kişilerin hizmetinize erişmesini engelleyen coğrafi sınırlamalara veya KYC gereksinimlerine sahip değildir.
-- **Bilgilendirici web sitesi ve dokümantasyon** - Proje web sitesini ziyaret edenlerin projenin gerçekte ne yaptığını, bilim altyapısının merkeziyetsizleştirilmesine nasıl katkıda bulunduğunu ve nasıl katılabileceklerini anlamaları önemlidir.
-- **Proje, Ethereum ekosisteminin bir parçası olmalıdır** - ethereum.org olarak, DeSci hareketinin temel katmanı için Ethereum'un (ve Katman 2'lerinin) uygun olduğuna inanıyoruz.
-- **Proje yeterince oturmuş olmalıdır** - Projenin, hizmetlerine birkaç aydır erişebilen gerçek kullanıcıları olmalıdır.
+- **Açık kaynak kod/veri** - Kodun ve verinin açıklığı temel bir DeSci ilkesidir, bu nedenle DeSci projeleri kapalı kaynak olmamalıdır. Kod tabanı erişilebilir ve ideal olarak PR'lara (çekme isteklerine) açık olmalıdır.
+- **DeSci projeleri kanıtlanabilir şekilde merkeziyetsiz olmalıdır** - Bu, bir DAO tarafından yönetilmeyi veya gözetimsiz cüzdanlar da dahil olmak üzere merkeziyetsiz bir teknoloji yığını ile inşa edilmeyi içerebilir. Muhtemelen Ethereum üzerinde denetlenebilir akıllı sözleşmeler içerir.
+- **Dürüst ve doğru listeleme bilgileri** - Projelerden önerilen tüm listelemelerin dürüst ve doğru bilgilerle gelmesi beklenir. Ürününüzün "açık kaynak" olmadığını halde öyle olduğunu beyan etmek gibi listeleme bilgilerinde sahtecilik yapan ürünler kaldırılacaktır.
+- **Bilime erişimi genişletme konusunda kanıtlanabilir taahhüt** - Bir DeSci projesi, bilime katılımı sadece Token/NFT sahipleri için değil, genel halk için nasıl genişlettiğini açıkça ifade edebilmelidir.
+- **Küresel olarak erişilebilir** - Projenizin, belirli kişilerin hizmetinize erişmesini engelleyen coğrafi sınırlamaları veya KYC gereksinimleri yoktur.
+- **Bilgilendirici web sitesi ve belgeler** - Proje web sitesini ziyaret edenlerin projenin gerçekte ne yaptığını, bilim altyapısının merkeziyetsizlik sürecine nasıl katkıda bulunduğunu ve nasıl katılacaklarını anlayabilmeleri önemlidir.
+- **Proje Ethereum ekosisteminin bir parçası olmalıdır** - ethereum.org olarak Ethereum'un (ve katman 2 (l2) çözümlerinin) DeSci hareketi için uygun temel katman olduğuna inanıyoruz.
+- **Proje oldukça köklüdür** - Projenin, birkaç aydır projenin hizmetlerine erişebilen gerçek kullanıcıları vardır.
 
-### Olması istenen özellikler
+### Olsa iyi olurlar {#nice-to-haves}
 
-- **Birden fazla dilde mevcut olma** - Projeniz, dünyanın dört bir yanındaki kullanıcıların erişebilmesi için birden çok dile çevrilmiştir.
-- **Eğitici kaynaklar** - Ürününüz, kullanıcılara yardımcı olmak ve onları eğitmek için iyi tasarlanmış bir başlangıç deneyimine sahip olmalıdır. Alternatif olarak, makaleler veya videolar gibi nasıl yapılır içeriğinin kanıtına da sahip olabilir.
-- **Üçüncü taraf denetimleri** - Ürününüz, güvenilir bir üçüncü taraf tarafından güvenlik açıklarına karşı profesyonelce denetlenmiş olmalıdır.
-- **İrtibat kişisi** - Proje için bir irtibat kişisinin (bu bir DAO veya topluluk temsilcisi olabilir) bulunması, değişiklikler yapıldığında doğru bilgi almamıza büyük ölçüde yardımcı olacaktır. Bu, geleceğe ait bilgileri toplarken ethereum.org'u güncelleme sürecini yönetilebilir halde tutacaktır.
+- **Birden fazla dilde mevcuttur** - Projeniz, dünyanın dört bir yanındaki kullanıcıların erişmesine olanak tanıyacak şekilde birden fazla dile çevrilmiştir.
+- **Eğitim kaynakları** - Ürününüz, kullanıcılara yardımcı olmak ve onları eğitmek için iyi tasarlanmış bir sisteme katılım deneyimine sahip olmalıdır. Veya makaleler ya da videolar gibi nasıl yapılır içeriklerinin kanıtı olmalıdır.
+- **Üçüncü taraf denetimleri** - Ürününüz, güvenilir bir üçüncü tarafça güvenlik açıklarına karşı profesyonel olarak denetlenmiştir.
+- **İletişim noktası** - Proje için bir iletişim noktası (bu, bir DAO veya topluluktan bir temsilci olabilir), değişiklikler yapıldığında doğru bilgileri almamıza büyük ölçüde yardımcı olacaktır. Bu, gelecekteki bilgileri toplarken ethereum.org'u güncellemeyi yönetilebilir kılacaktır.
 
 ## Bakım {#maintenance}
 
-Ethereum'un akıcı yapısında olduğu gibi, ekipler ve ürünler gelir ve gider; yenilikler her gün gerçekleşir, bu nedenle şu amaçlarla içeriğimizin rutin kontrollerini gerçekleştireceğiz:
+Ethereum'un akışkan doğası gereği, ekipler ve ürünler gelir ve gider, inovasyon ise her gün gerçekleşir; bu nedenle içeriğimizin rutin kontrollerini şu amaçlarla yapacağız:
 
-- Listelenen tüm projelerin kriterlerimizi hâlâ karşıladığından emin olmak
-- Şu anda listelenenlerden daha fazla kriterlerimizi karşılayan önerilen ürünler olmadığını doğrulamak
+- Listelenen tüm projelerin hala kriterlerimizi karşıladığından emin olmak
+- Önerilen ürünler arasında, şu anda listelenenlerden daha fazla kriterimizi karşılayan ürünler olmadığını doğrulamak
 
-ethereum.org'un bakımı açık kaynak topluluğu tarafından yapılmaktadır ve güncel tutulması için topluluğa güveniyoruz. Listelenmiş projelerde güncellenmesi gereken herhangi bir bilgi olduğunu fark ettiyseniz, lütfen GitHub depomuzda bir sorun ya da çekme isteği açın.
+Ethereum.org açık kaynak topluluğu tarafından sürdürülmektedir ve bunu güncel tutmaya yardımcı olması için topluluğa güveniyoruz. Listelenen projeler hakkında güncellenmesi gereken herhangi bir bilgi fark ederseniz, lütfen GitHub depomuzda bir sorun (issue) veya çekme isteği (pull request) açın.
 
 ## Kullanım koşulları {#terms-of-use}
 
-Lütfen [kullanım koşullarımıza](/terms-of-use/) da göz atın. Ethereum.org'daki bilgiler, yalnızca genel bilgi amaçlı verilmektedir.
+Lütfen [kullanım koşullarımıza](/terms-of-use/) da başvurun. ethereum.org'daki bilgiler yalnızca genel bilgilendirme amacıyla sağlanmaktadır.

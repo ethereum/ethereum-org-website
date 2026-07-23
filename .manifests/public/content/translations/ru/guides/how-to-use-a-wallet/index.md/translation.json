@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "locale": "ru",
+  "translatedAt": "2026-06-08T09:57:44.691Z",
+  "englishManifestHash": "affa6cfe2bf0",
+  "placeholderOrder": [
+    "LINK-97889d",
+    "IMAGE-93b345",
+    "IMAGE-55205e",
+    "IMAGE-9d5f9a",
+    "LINK-e9d514",
+    "HTMLTAG-7a1718",
+    "LINK-f07134",
+    "LINK-a1b5b2"
+  ],
+  "placeholderMap": {
+    "HTMLTAG-7a1718": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "br"
+      }
+    },
+    "IMAGE-93b345": {
+      "type": "image",
+      "values": {
+        "path": "./send.png"
+      }
+    },
+    "IMAGE-55205e": {
+      "type": "image",
+      "values": {
+        "path": "./connect1.png"
+      }
+    },
+    "IMAGE-9d5f9a": {
+      "type": "image",
+      "values": {
+        "path": "./connect2.png"
+      }
+    },
+    "LINK-97889d": {
+      "type": "link",
+      "values": {
+        "url": "/guides/how-to-create-an-ethereum-account/"
+      }
+    },
+    "LINK-e9d514": {
+      "type": "link",
+      "values": {
+        "url": "/apps/#explore"
+      }
+    },
+    "LINK-f07134": {
+      "type": "link",
+      "values": {
+        "url": "https://chainlist.org/"
+      }
+    },
+    "LINK-a1b5b2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-and-analytics/block-explorers/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T09:57:44.691Z",
+      "status": "success"
+    }
+  }
+}

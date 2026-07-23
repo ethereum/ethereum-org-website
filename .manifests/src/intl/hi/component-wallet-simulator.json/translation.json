@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "locale": "hi",
+  "translatedAt": "2026-04-18T20:58:53.659Z",
+  "englishManifestHash": "86f422ca5b5e",
+  "placeholderOrder": [
+    "ICU-VARIABLE-0",
+    "ICU-VARIABLE-1",
+    "ICU-VARIABLE-2",
+    "ICU-VARIABLE-3",
+    "ICU-VARIABLE-4",
+    "ICU-VARIABLE-5",
+    "ICU-VARIABLE-6",
+    "ICU-VARIABLE-7",
+    "ICU-VARIABLE-8",
+    "ICU-VARIABLE-9",
+    "ICU-VARIABLE-10",
+    "ICU-VARIABLE-11"
+  ],
+  "placeholderMap": {
+    "ICU-VARIABLE-0": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{contactName}"
+      }
+    },
+    "ICU-VARIABLE-1": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{ethAmount}"
+      }
+    },
+    "ICU-VARIABLE-2": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{usdAmount}"
+      }
+    },
+    "ICU-VARIABLE-3": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{sender}"
+      }
+    },
+    "ICU-VARIABLE-4": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{ethAmount}"
+      }
+    },
+    "ICU-VARIABLE-5": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{usdAmount}"
+      }
+    },
+    "ICU-VARIABLE-6": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{amount}"
+      }
+    },
+    "ICU-VARIABLE-7": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{name}"
+      }
+    },
+    "ICU-VARIABLE-8": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{ethAmount}"
+      }
+    },
+    "ICU-VARIABLE-9": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{usdAmount}"
+      }
+    },
+    "ICU-VARIABLE-10": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{recipient}"
+      }
+    },
+    "ICU-VARIABLE-11": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{count}"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-04-18T20:58:53.659Z",
+      "status": "success"
+    }
+  }
+}

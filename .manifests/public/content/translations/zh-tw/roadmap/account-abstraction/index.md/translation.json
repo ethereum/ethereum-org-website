@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "locale": "zh-tw",
+  "translatedAt": "2026-06-08T10:06:01.266Z",
+  "englishManifestHash": "9ee6b13d994f",
+  "placeholderOrder": [
+    "LINK-86c2f9",
+    "LINK-a21a82",
+    "LINK-ca72e1",
+    "LINK-e3bf9b",
+    "LINK-da20af",
+    "CODE-85c1ba",
+    "LINK-136b59",
+    "LINK-0b2e01",
+    "LINK-0dcc97",
+    "LINK-6f9613",
+    "LINK-a42e76",
+    "LINK-be92bd",
+    "LINK-bbde19",
+    "LINK-5f3437"
+  ],
+  "placeholderMap": {
+    "CODE-85c1ba": {
+      "type": "inline-code",
+      "values": {
+        "content": "UserOperation"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-86c2f9": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#eoa"
+      }
+    },
+    "LINK-ca72e1": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7702"
+      }
+    },
+    "LINK-e3bf9b": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4337"
+      }
+    },
+    "LINK-da20af": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#eoa"
+      }
+    },
+    "LINK-136b59": {
+      "type": "link",
+      "values": {
+        "url": "https://www.bundlebear.com/erc4337-overview/all"
+      }
+    },
+    "LINK-0b2e01": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.erc4337.io/"
+      }
+    },
+    "LINK-0dcc97": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4337"
+      }
+    },
+    "LINK-6f9613": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7702"
+      }
+    },
+    "LINK-a42e76": {
+      "type": "link",
+      "values": {
+        "url": "https://www.bundlebear.com/erc4337-overview/all"
+      }
+    },
+    "LINK-be92bd": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists"
+      }
+    },
+    "LINK-bbde19": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2021/01/11/recovery.html"
+      }
+    },
+    "LINK-5f3437": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/4337Mafia/awesome-account-abstraction"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T10:06:01.266Z",
+      "status": "success"
+    }
+  }
+}

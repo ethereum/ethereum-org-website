@@ -7,7 +7,6 @@ import type { CommunityBlog } from "./types"
 export const OLD_CONTENT_DIR = "src/content" // For old git commit history -- do not remove
 export const CONTENT_DIR = "public/content"
 export const CONTENT_PATH = "/content"
-export const TRANSLATIONS_DIR = "public/content/translations"
 export const TRANSLATED_IMAGES_DIR = "/content/translations"
 export const PLACEHOLDER_IMAGE_DIR = "src/data/placeholders"
 export const INTERNAL_TUTORIALS_JSON = "src/data/internalTutorials.json"
@@ -38,6 +37,7 @@ export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-websit
 export const MAIN_CONTENT_ID = "main-content"
 export const WEBSITE_EMAIL = "website@ethereum.org"
 export const DEFAULT_OG_IMAGE = "/images/home/hero.png"
+export const SITE_TITLE = "ethereum.org"
 
 // Config
 export const CONTENT_IMAGES_MAX_WIDTH = 800
@@ -99,6 +99,8 @@ export const WALLETS_FILTERS_DEFAULT = {
   withdraw_crypto: false,
   multisig: false,
   social_recovery: false,
+  eip_4337_support: false,
+  eip_7702_support: false,
   new_to_crypto: false,
 }
 

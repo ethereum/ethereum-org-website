@@ -1,0 +1,76 @@
+{
+  "skill_name": "intl-review",
+  "notes": "Output evals for the intl-review skill. Each prompt exercises a distinct high-leverage rule: glossary-deviation-as-critical, translated-href as critical even when not build-breaking, frontmatter tag policy (concept-tag vs brand-tag distinction), tone inconsistency as warning not critical, the 5-category scoring rubric. Run with the skill-creator workflow (`python -m scripts.run_loop` against the eval JSON) or manually by reading SKILL.md and answering each prompt, then grading against the assertions.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "glossary-deviation-classified-critical",
+      "prompt": "in the Japanese translation of dapps/index.md, 'Solidity' is rendered as 'ソリディティ' (transliteration). ETHGlossary says script_rule for Solidity is `always_latin` for all languages. Is this a critical issue or just a style preference? Should it auto-fix?",
+      "expected_output": "Skill should classify this as CRITICAL severity. Should explain it'll be auto-fixed (revert to Latin form). Should cite ETHGlossary as authority and the `script_rule: always_latin` deviation specifically. Should NOT downgrade to warning or call it stylistic.",
+      "files": [],
+      "assertions": [
+        {"text": "Output classifies the deviation as CRITICAL severity, not warning or style preference"},
+        {"text": "Output states that this would be auto-fixed (revert to the Latin form per ETHGlossary)"},
+        {"text": "Output references `script_rule: always_latin` (or the deterministic-deviation rule that drives auto-fix)"},
+        {"text": "Output cites ETHGlossary as the canonical / authoritative source for the correct form"},
+        {"text": "Output does NOT classify the issue as low-severity, stylistic, or judgment-based"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "translated-href-classified-critical",
+      "prompt": "Reviewing a Spanish translation PR and noticed the link `<a href=\"/governance\">` became `<a href=\"/gobernanza\">`. This isn't breaking the build but it doesn't feel right. what's the severity?",
+      "expected_output": "Skill should classify as CRITICAL. Internal hrefs must stay English regardless of locale -- the destination `/gobernanza` doesn't exist, so navigation breaks. Auto-fix path (revert to English). Should NOT classify as warning or style preference.",
+      "files": [],
+      "assertions": [
+        {"text": "Output classifies the translated href as CRITICAL severity"},
+        {"text": "Output explains that internal hrefs (paths starting with /) must stay English regardless of locale"},
+        {"text": "Output explains the destination path does not exist (navigation-breaking, not just style)"},
+        {"text": "Output recommends auto-fix (reverting the locale's href to match the English source)"},
+        {"text": "Output does NOT classify as warning or style preference"}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "concept-tag-vs-brand-tag-distinction",
+      "prompt": "I'm reviewing the Czech translation of a tutorial. The frontmatter `tags:` array has `\"smart kontrakt účty\"` instead of the English `\"smart contracts\"`. Should I revert it to English? Other tutorials' tags are still in English so I want to be consistent.",
+      "expected_output": "Skill should explicitly say DO NOT revert the concept tag to English. Explain the brand-tag vs concept-tag distinction: brand names (e.g., 'solidity', 'hardhat') stay English; concept/category tags (e.g., 'smart contracts', 'testing', 'security') are intentionally translated. The current state is correct.",
+      "files": [],
+      "assertions": [
+        {"text": "Output explicitly says DO NOT revert the concept tag to English"},
+        {"text": "Output explains the brand-tag vs concept-tag distinction (proper nouns / product names stay English; descriptive concept tags translate)"},
+        {"text": "Output classifies the current translated form as CORRECT, not an issue"},
+        {"text": "Output gives at least one example of a brand-name tag that WOULD stay English (e.g., `solidity`, `hardhat`, a brand name)"},
+        {"text": "Output does NOT recommend flagging this as a critical or warning issue"}
+      ]
+    },
+    {
+      "id": 4,
+      "name": "tone-inconsistency-as-warning",
+      "prompt": "In the German translation of a tutorial, the page opens with 'Sie' (formal you) but switches to 'du' (informal you) for a few paragraphs in the middle, then back to 'Sie' near the end. how do I classify this -- critical, warning, or just a note?",
+      "expected_output": "Skill should classify as WARNING (medium severity), NOT critical. Tone consistency is judgment-based; auto-fix would erase legitimate variation, so it's flagged for manual/native-speaker review rather than auto-corrected. Affects the Tone/Register scoring category but doesn't block merge.",
+      "files": [],
+      "assertions": [
+        {"text": "Output classifies the issue as WARNING / medium severity, NOT critical"},
+        {"text": "Output explains it would not be auto-fixed (semantic / judgment-based, multiple valid renderings exist)"},
+        {"text": "Output mentions or references the Tone/Register scoring category (or the 5-category rubric)"},
+        {"text": "Output recommends manual or native-speaker review rather than auto-correction"},
+        {"text": "Output does NOT classify the issue as critical or build-breaking"}
+      ]
+    },
+    {
+      "id": 5,
+      "name": "scoring-pr-with-5-category-rubric",
+      "prompt": "Need to produce a quality score for the open Korean and Vietnamese translations on intl/pending-dev. what's the right rubric? give me the categories I should score on, what each one means, and how the overall score is calculated.",
+      "expected_output": "Skill should produce the 5-category rubric (Brand Name Preservation, Technical Accuracy, Semantic Fidelity, Terminology Consistency, Tone/Register), describe each, and state that overall = average of the 5. Should reach for `references/scoring-rubric.md`. Should NOT invent new categories or omit any of the 5.",
+      "files": [],
+      "assertions": [
+        {"text": "Output names all 5 categories: Brand Name Preservation, Technical Accuracy, Semantic Fidelity, Terminology Consistency, Tone/Register"},
+        {"text": "Output explains overall score = average (or equivalent computation) of the 5 category scores"},
+        {"text": "Output gives a brief description of what each of the 5 categories measures"},
+        {"text": "Output references `references/scoring-rubric.md` (or the equivalent rubric file/section)"},
+        {"text": "Output does NOT invent new categories not in the 5, and does NOT omit any of the 5"}
+      ]
+    }
+  ]
+}

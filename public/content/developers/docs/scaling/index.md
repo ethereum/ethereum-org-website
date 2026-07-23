@@ -91,11 +91,11 @@ Learn more about [Validium](/developers/docs/scaling/validium/).
 
 ## More of a visual learner? {#visual-learner}
 
-<YouTube id="BgCgauWVTs0" />
+<VideoWatch slug="layer-2-scaling-explained" />
 
 _Note the explanation in the video uses the term "Layer 2" to refer to all offchain scaling solutions, while we differentiate "Layer 2" as an offchain solution that derives its security through layer 1 Mainnet consensus._
 
-<YouTube id="7pWxCklcNsU" />
+<VideoWatch slug="rollups-scaling-strategy" />
 
 ## Further reading {#further-reading}
 

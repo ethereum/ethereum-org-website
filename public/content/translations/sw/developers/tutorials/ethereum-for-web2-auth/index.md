@@ -1,60 +1,64 @@
 ---
-title: Kutumia Ethereum kwa uthibitishaji wa web2
-description: Baada ya kusoma mafunzo haya, msanidi programu ataweza kuunganisha kuingia kwa Ethereum (web3) na kuingia kwa SAML, kiwango kinachotumika katika web2 kutoa kuingia mara moja na huduma zingine zinazohusiana. Hii inaruhusu ufikiaji wa rasilimali za web2 kuthibitishwa kupitia saini za Ethereum, na sifa za mtumiaji zikitoka kwenye uthibitisho.
+title: Kutumia Ethereum kwa uthibitishaji wa Web2
+description: Baada ya kusoma mafunzo haya, msanidi ataweza kuunganisha kuingia kwa Ethereum (web3) na kuingia kwa SAML, kiwango kinachotumiwa katika Web2 kutoa kuingia mara moja na huduma zingine zinazohusiana. Hii inaruhusu ufikiaji wa rasilimali za Web2 kuthibitishwa kupitia sahihi za Ethereum, huku sifa za mtumiaji zikitoka kwenye uthibitisho.
 author: Ori Pomerantz
-tags: [ "web2", "uthibitishaji", "eas" ]
+tags:
+  - Web2
+  - uthibitishaji
+  - eas
 skill: beginner
+breadcrumb: Ethereum kwa uthibitishaji wa Web2
 lang: sw
 published: 2025-04-30
 ---
 
 ## Utangulizi {#introduction}
 
-[SAML](https://www.onelogin.com/learn/saml) ni kiwango kinachotumika kwenye web2 kuruhusu [mtoa huduma wa kitambulisho (IdP)](https://en.wikipedia.org/wiki/Identity_provider#SAML_identity_provider) kutoa taarifa za mtumiaji kwa [watoa huduma (SP)](https://en.wikipedia.org/wiki/Service_provider_\(SAML\)).
+[SAML](https://www.onelogin.com/learn/saml) ni kiwango kinachotumiwa kwenye Web2 kuruhusu [mtoa utambulisho (IdP)](https://en.wikipedia.org/wiki/Identity_provider#SAML_identity_provider) kutoa taarifa za mtumiaji kwa [watoa huduma (SP)](https://en.wikipedia.org/wiki/Service_provider_(SAML)).
 
-Katika mafunzo haya unajifunza jinsi ya kuunganisha saini za Ethereum na SAML ili kuwaruhusu watumiaji kutumia mikoba yao ya Ethereum kujithibitisha kwa huduma za web2 ambazo bado hazitumii Ethereum moja kwa moja.
+Katika mafunzo haya unajifunza jinsi ya kuunganisha sahihi za Ethereum na SAML ili kuruhusu watumiaji kutumia mikoba yao ya Ethereum kujithibitisha kwenye huduma za Web2 ambazo bado hazitumii Ethereum asilia.
 
-Kumbuka kwamba mafunzo haya yameandikwa kwa ajili ya hadhira mbili tofauti:
+Kumbuka kwamba mafunzo haya yameandikwa kwa hadhira mbili tofauti:
 
-- Watu wa Ethereum wanaoielewa Ethereum na wanahitaji kujifunza SAML
-- Watu wa Web2 wanaoielewa SAML na uthibitishaji wa web2 na wanahitaji kujifunza Ethereum
+- Watu wa Ethereum wanaoelewa Ethereum na wanahitaji kujifunza SAML
+- Watu wa Web2 wanaoelewa SAML na uthibitishaji wa Web2 na wanahitaji kujifunza Ethereum
 
-Kutokana na hilo, itaendana na kuwa na nyenzo nyingi za utangulizi ambazo tayari unazijua. Jisikie huru kuiruka.
+Kama matokeo, itakuwa na nyenzo nyingi za utangulizi ambazo tayari unazijua. Jisikie huru kuziruka.
 
 ### SAML kwa watu wa Ethereum {#saml-for-ethereum-people}
 
-SAML ni itifaki ya kati. Mtoa huduma (SP) anakubali tu madai (kama vile "huyu ni mtumiaji wangu John, anapaswa kuwa na ruhusa za kufanya A, B, na C") kutoka kwa mtoa huduma wa kitambulisho (IdP) ikiwa ina uhusiano wa awali wa kuaminiana nayo, au na [mamlaka ya cheti](https://www.ssl.com/article/what-is-a-certificate-authority-ca/) iliyosaini cheti cha IdP hicho.
+SAML ni itifaki iliyowekwa kati. Mtoa huduma (SP) anakubali tu madai (kama vile "huyu ni mtumiaji wangu John, anapaswa kuwa na ruhusa za kufanya A, B, na C") kutoka kwa mtoa utambulisho (IdP) ikiwa ina uhusiano wa uaminifu uliopo tayari ama nayo, au na [mamlaka ya cheti](https://www.ssl.com/article/what-is-a-certificate-authority-ca/) iliyosaini cheti cha IdP huyo.
 
-Kwa mfano, SP inaweza kuwa wakala wa usafiri unaotoa huduma za usafiri kwa makampuni, na IdP inaweza kuwa tovuti ya ndani ya kampuni. Wakati wafanyakazi wanapohitaji kuweka nafasi ya safari za kibiashara, wakala wa usafiri huwatuma kwa ajili ya uthibitishaji na kampuni kabla ya kuwaruhusu kuweka nafasi ya safari.
+Kwa mfano, SP inaweza kuwa wakala wa usafiri anayetoa huduma za usafiri kwa makampuni, na IdP inaweza kuwa tovuti ya ndani ya kampuni. Wakati wafanyakazi wanahitaji kukata tiketi za usafiri wa kibiashara, wakala wa usafiri huwatuma kwa uthibitishaji na kampuni kabla ya kuwaruhusu kukata tiketi za usafiri.
 
-![Mchakato wa SAML hatua kwa hatua](./fig-01-saml.png)
+![Step by step SAML process](./fig-01-saml.png)
 
-Hii ndiyo njia ambayo taasisi tatu, kivinjari, SP, na IdP, hujadiliana kwa ajili ya ufikiaji. SP haihitaji kujua chochote kuhusu mtumiaji anayetumia kivinjari mapema, ila tu kumwamini IdP.
+Hii ndiyo njia ambayo vyombo vitatu, kivinjari, SP, na IdP, hujadiliana kwa ajili ya ufikiaji. SP haihitaji kujua chochote kuhusu mtumiaji anayetumia kivinjari mapema, inahitaji tu kuiamini IdP.
 
 ### Ethereum kwa watu wa SAML {#ethereum-for-saml-people}
 
-Ethereum ni mfumo uliotawanywa.
+Ethereum ni mfumo uliogatuliwa. 
 
-![Kuingia kwa Ethereum](./fig-02-eth-logon.png)
+![Ethereum logon](./fig-02-eth-logon.png)
 
-Watumiaji wana ufunguo binafsi (kwa kawaida huhifadhiwa kwenye kiendelezi cha kivinjari). Kutoka kwenye ufunguo binafsi unaweza kupata ufunguo wa umma, na kutoka hapo anwani ya baiti 20. Wakati watumiaji wanapohitaji kuingia kwenye mfumo, wanaombwa kusaini ujumbe wenye nonce (thamani ya matumizi moja). Seva inaweza kuthibitisha saini iliundwa na anwani hiyo.
+Watumiaji wana ufunguo wa siri (kawaida huhifadhiwa kwenye kiendelezi cha kivinjari). Kutoka kwenye ufunguo wa siri unaweza kupata ufunguo wa umma, na kutoka hapo anwani ya baiti 20. Wakati watumiaji wanahitaji kuingia kwenye mfumo, wanaombwa kusaini ujumbe na nonsi (thamani ya matumizi mara moja). Seva inaweza kuthibitisha sahihi iliundwa na anwani hiyo.
 
-![Kupata data ya ziada kutoka kwa uthibitisho](./fig-03-eas-data.png)
+![Getting extra data from attestations](./fig-03-eas-data.png)
 
-Saini inathibitisha tu anwani ya Ethereum. Ili kupata sifa zingine za mtumiaji, kwa kawaida unatumia [uthibitisho](https://attest.org/). Uthibitisho kwa kawaida huwa na nyanja hizi:
+Sahihi inathibitisha tu anwani ya Ethereum. Ili kupata sifa zingine za mtumiaji, kwa kawaida unatumia [uthibitisho](https://attest.org/). Uthibitisho kwa kawaida una nyanja hizi:
 
 - **Mthibitishaji**, anwani iliyofanya uthibitisho
-- **Mpokeaji**, anwani ambayo uthibitisho unatumika kwake
+- **Mpokeaji**, anwani ambayo uthibitisho unatumika
 - **Data**, data inayothibitishwa, kama vile jina, ruhusa, n.k.
-- **Schema**, Kitambulisho cha schema inayotumika kutafsiri data.
+- **Skima**, kitambulisho cha skima inayotumika kufasiri data.
 
-Kwa sababu ya asili ya mfumo uliotawanywa wa Ethereum, mtumiaji yeyote anaweza kufanya uthibitisho. Utambulisho wa mthibitishaji ni muhimu kutambua ni uthibitisho upi tunaouzingatia kuwa wa kuaminika.
+Kwa sababu ya asili iliyogatuliwa ya Ethereum, mtumiaji yeyote anaweza kufanya uthibitisho. Utambulisho wa mthibitishaji ni muhimu ili kutambua ni uthibitisho upi tunaochukulia kuwa wa kuaminika.
 
-## Mpangilio {#setup}
+## Usanidi {#setup}
 
-Hatua ya kwanza ni kuwa na SAML SP na SAML IdP zinazowasiliana kati yao.
+Hatua ya kwanza ni kuwa na SAML SP na SAML IdP zinazowasiliana zenyewe kwa zenyewe.
 
-1. Pakua programu. Programu ya mfano kwa makala hii iko [kwenye github](https://github.com/qbzzt/250420-saml-ethereum). Hatua tofauti huhifadhiwa katika matawi tofauti, kwa hatua hii unataka `saml-only`
+1. Pakua programu. Programu ya mfano kwa makala haya iko [kwenye GitHub](https://github.com/qbzzt/250420-saml-ethereum). Hatua tofauti zimehifadhiwa katika matawi tofauti, kwa hatua hii unataka `saml-only`
 
     ```sh
     git clone https://github.com/qbzzt/250420-saml-ethereum -b saml-only
@@ -62,7 +66,7 @@ Hatua ya kwanza ni kuwa na SAML SP na SAML IdP zinazowasiliana kati yao.
     pnpm install
     ```
 
-2. Unda funguo zenye vyeti vilivyosainiwa kibinafsi. Hii inamaanisha kuwa ufunguo ni mamlaka yake ya cheti, na inahitaji kuingizwa kwa mikono kwa mtoa huduma. Tazama [hati za OpenSSL](https://docs.openssl.org/master/man1/openssl-req/) kwa habari zaidi.
+2. Unda funguo zilizo na vyeti vilivyosainiwa binafsi. Hii inamaanisha kuwa ufunguo ni mamlaka yake yenyewe ya cheti, na inahitaji kuingizwa kwa mikono kwa mtoa huduma. Tazama [nyaraka za OpenSSL](https://docs.openssl.org/master/man1/openssl-req/) kwa maelezo zaidi. 
 
     ```sh
     mkdir keys
@@ -78,19 +82,19 @@ Hatua ya kwanza ni kuwa na SAML SP na SAML IdP zinazowasiliana kati yao.
     pnpm start
     ```
 
-4. Vinjari hadi kwa SP kwenye URL [http://localhost:3000/](http://localhost:3000/) na ubofye kitufe ili kuelekezwa kwa IdP (mlango 3001).
+4. Vinjari hadi kwenye SP kwenye URL [http://localhost:3000/](http://localhost:3000/) na ubofye kitufe ili kuelekezwa kwenye IdP (lango 3001).
 
-5. Mpe IdP anwani yako ya barua pepe na ubofye **Ingia kwa mtoa huduma**. Tazama kuwa unaelekezwa tena kwa mtoa huduma (mlango 3000) na kwamba anakutambua kwa anwani yako ya barua pepe.
+5. Ipe IdP anwani yako ya barua pepe na ubofye **Ingia kwa mtoa huduma**. Utaona kwamba unaelekezwa tena kwa mtoa huduma (lango 3000) na kwamba inakutambua kwa anwani yako ya barua pepe.
 
 ### Maelezo ya kina {#detailed-explanation}
 
-Hivi ndivyo inavyotokea, hatua kwa hatua:
+Hivi ndivyo kinachotokea, hatua kwa hatua:
 
-![Kuingia kwa kawaida kwa SAML bila Ethereum](./fig-04-saml-no-eth.png)
+![Normal SAML logon without Ethereum](./fig-04-saml-no-eth.png)
 
 #### src/config.mts {#srcconfigmts}
 
-Faili hii ina usanidi kwa Mtoa Huduma wa Kitambulisho na Mtoa Huduma. Kwa kawaida hizi mbili zingekuwa taasisi tofauti, lakini hapa tunaweza kushiriki msimbo kwa urahisi.
+Faili hili lina usanidi kwa Mtoa Utambulisho na Mtoa Huduma. Kwa kawaida hizi mbili zingekuwa vyombo tofauti, lakini hapa tunaweza kushiriki msimbo kwa urahisi.
 
 ```typescript
 const fs = await import("fs")
@@ -98,14 +102,14 @@ const fs = await import("fs")
 const protocol="http"
 ```
 
-Kwa sasa tunafanya majaribio tu, kwa hivyo ni sawa kutumia HTTP.
+Kwa sasa tunajaribu tu, kwa hivyo ni sawa kutumia HTTP.
 
 ```typescript
 export const spCert = fs.readFileSync("keys/saml-sp.crt").toString()
 export const idpCert = fs.readFileSync("keys/saml-idp.crt").toString()
 ```
 
-Soma funguo za umma, ambazo kwa kawaida zinapatikana kwa vipengele vyote viwili (na aidha zinaaminika moja kwa moja, au zimesainiwa na mamlaka ya cheti inayoaminika).
+Soma funguo za umma, ambazo kwa kawaida zinapatikana kwa vipengele vyote viwili (na ama zinaaminika moja kwa moja, au zimesainiwa na mamlaka ya cheti inayoaminika).
 
 ```typescript
 export const spPort = 3000
@@ -132,7 +136,7 @@ Data ya umma kwa mtoa huduma.
     entityID: `${spUrl}/metadata`,
 ```
 
-Kwa kawaida, katika SAML `entityID` ni URL ambapo metadata ya taasisi inapatikana. Metadata hii inalingana na data ya umma hapa, isipokuwa iko katika fomu ya XML.
+Kwa kawaida, katika SAML `entityID` ni URL ambapo data fafanuzi ya chombo inapatikana. Data fafanuzi hii inalingana na data ya umma hapa, isipokuwa iko katika muundo wa XML.
 
 ```typescript
     wantAssertionsSigned: true,
@@ -146,7 +150,7 @@ Kwa kawaida, katika SAML `entityID` ni URL ambapo metadata ya taasisi inapatikan
   }
 ```
 
-Ufafanuzi muhimu zaidi kwa madhumuni yetu ni `assertionConsumerServer`. Inamaanisha kuwa ili kudai kitu (kwa mfano, "mtumiaji anayekutumia habari hii ni somebody@example.com") kwa mtoa huduma tunahitaji kutumia [HTTP POST](https://www.w3schools.com/tags/ref_httpmethods.asp) kwa URL `http://localhost:3000/sp/assertion`.
+Ufafanuzi muhimu zaidi kwa madhumuni yetu ni `assertionConsumerServer`. Inamaanisha kwamba ili kuthibitisha jambo (kwa mfano, "mtumiaji anayekutumia taarifa hii ni somebody@example.com") kwa mtoa huduma tunahitaji kutumia [HTTP POST](https://www.w3schools.com/tags/ref_httpmethods.asp) kwenye URL `http://localhost:3000/sp/assertion`.
 
 ```typescript
 export const idpPublicData = {
@@ -164,11 +168,11 @@ export const idpPublicData = {
   }
 ```
 
-Data ya umma kwa mtoa huduma wa kitambulisho ni sawa. Inabainisha kuwa ili kumwingiza mtumiaji unatumia POST kwa `http://localhost:3001/idp/login` na kumtoa mtumiaji unatumia POST kwa `http://localhost:3001/idp/logout`.
+Data ya umma kwa mtoa utambulisho inafanana. Inabainisha kwamba ili kumwingiza mtumiaji una-POST kwenye `http://localhost:3001/idp/login` na kumtoa mtumiaji una-POST kwenye `http://localhost:3001/idp/logout`.
 
 #### src/sp.mts {#srcspmts}
 
-Huu ndio msimbo unaotekeleza mtoa huduma.
+Huu ni msimbo unaotekeleza mtoa huduma.
 
 ```typescript
 import * as config from "./config.mts"
@@ -183,7 +187,7 @@ import * as validator from "@authenio/samlify-node-xmllint"
 saml.setSchemaValidator(validator)
 ```
 
-Maktaba ya `samlify` inatarajia kuwa na kifurushi kinachothibitisha kuwa XML ni sahihi, imesainiwa na ufunguo wa umma unaotarajiwa, n.k. Tunatumia [`@authenio/samlify-node-xmllint`](https://www.npmjs.com/package/@authenio/samlify-node-xmllint) kwa madhumuni haya.
+Maktaba ya `samlify` inatarajia kuwa na kifurushi cha kuthibitisha kwamba XML ni sahihi, imesainiwa na ufunguo wa umma unaotarajiwa, n.k. Tunatumia [`@authenio/samlify-node-xmllint`](https://www.npmjs.com/package/@authenio/samlify-node-xmllint) kwa madhumuni haya.
 
 ```typescript
 const express = (await import("express")).default
@@ -191,7 +195,7 @@ const spRouter = express.Router()
 const app = express()
 ```
 
-[`Router`](https://expressjs.com/en/5x/api.html#router) ya [`express`](https://expressjs.com/) ni "tovuti ndogo" ambayo inaweza kuwekwa ndani ya tovuti. Katika kesi hii, tunaitumia kupanga ufafanuzi wote wa watoa huduma pamoja.
+[`Router`](https://expressjs.com/en/5x/api.html#router) ya [`express`](https://expressjs.com/) ni "tovuti ndogo" inayoweza kupachikwa ndani ya tovuti. Katika hali hii, tunaitumia kuweka pamoja ufafanuzi wote wa mtoa huduma.
 
 ```typescript
 const spPrivateKey = fs.readFileSync("keys/saml-sp.pem").toString()
@@ -202,13 +206,13 @@ const sp = saml.ServiceProvider({
 })
 ```
 
-Uwakilishi wa mtoa huduma wenyewe ni data yote ya umma, na ufunguo binafsi unaotumia kusaini habari.
+Uwakilishi wa mtoa huduma wenyewe ni data yote ya umma, na ufunguo wa siri inayoutumia kusaini taarifa.
 
 ```typescript
 const idp = saml.IdentityProvider(config.idpPublicData);
 ```
 
-Data ya umma ina kila kitu ambacho mtoa huduma anahitaji kujua kuhusu mtoa huduma wa kitambulisho.
+Data ya umma ina kila kitu ambacho mtoa huduma anahitaji kujua kuhusu mtoa utambulisho.
 
 ```typescript
 spRouter.get(`/metadata`, 
@@ -216,20 +220,20 @@ spRouter.get(`/metadata`,
 )
 ```
 
-Ili kuwezesha ushirikiano na vipengele vingine vya SAML, watoa huduma na watoa huduma za utambulisho wanapaswa kuwa na data zao za umma (zinazoitwa metadata) zinazopatikana katika muundo wa XML katika `/metadata`.
+Ili kuwezesha mwingiliano na vipengele vingine vya SAML, watoa huduma na utambulisho wanapaswa kuwa na data yao ya umma (inayoitwa data fafanuzi) inayopatikana katika muundo wa XML kwenye `/metadata`.
 
 ```typescript
 spRouter.post(`/assertion`,
 ```
 
-Hii ndiyo ukurasa unaofikiwa na kivinjari ili kujitambulisha. Madai hayo yanajumuisha kitambulisho cha mtumiaji (hapa tunatumia anwani ya barua pepe), na yanaweza kujumuisha sifa za ziada. Hiki ni kishikizi cha hatua ya 7 katika mchoro wa mfuatano hapo juu.
+Huu ni ukurasa unaofikiwa na kivinjari ili kujitambulisha. Dai linajumuisha kitambulisho cha mtumiaji (hapa tunatumia anwani ya barua pepe), na linaweza kujumuisha sifa za ziada. Hiki ni kishughulikiaji cha hatua ya 7 katika mchoro wa mfuatano hapo juu.
 
 ```typescript
   async (req, res) => {
-    // console.log(`SAML response:\n${Buffer.from(req.body.SAMLResponse, 'base64').toString('utf-8')}`)
+    // console.log(`Majibu ya SAML:\n${Buffer.from(req.body.SAMLResponse, 'base64').toString('utf-8')}`)
 ```
 
-Unaweza kutumia amri iliyotolewa maoni ili kuona data ya XML iliyotolewa katika madai. Ime[simbwa kwa base64](https://en.wikipedia.org/wiki/Base64).
+Unaweza kutumia amri iliyotolewa maoni ili kuona data ya XML iliyotolewa katika dai. Imesimbwa kwa [base64](https://en.wikipedia.org/wiki/Base64).
 
 ```typescript
     try {
@@ -249,7 +253,7 @@ Changanua ombi la kuingia kutoka kwa seva ya utambulisho.
       res.send();
 ```
 
-Tuma jibu la HTML, ili tu kumwonyesha mtumiaji tulipata kuingia.
+Tuma majibu ya HTML, ili tu kumwonyesha mtumiaji tumepata kuingia.
 
 ```typescript
     } catch (err) {
@@ -260,13 +264,13 @@ Tuma jibu la HTML, ili tu kumwonyesha mtumiaji tulipata kuingia.
 )
 ```
 
-Mjulishe mtumiaji endapo kutakuwa na hitilafu.
+Mfahamishe mtumiaji endapo kutatokea hitilafu.
 
 ```typescript
 spRouter.get('/login',
 ```
 
-Unda ombi la kuingia wakati kivinjari kinapojaribu kupata ukurasa huu. Hiki ni kishikizi cha hatua ya 1 katika mchoro wa mfuatano hapo juu.
+Unda ombi la kuingia wakati kivinjari kinajaribu kupata ukurasa huu. Hiki ni kishughulikiaji cha hatua ya 1 katika mchoro wa mfuatano hapo juu.
 
 ```typescript
   async (req, res) => {
@@ -284,13 +288,13 @@ Pata taarifa ya kutuma ombi la kuingia.
           </script>
 ```
 
-Ukurasa huu unawasilisha fomu (tazama hapa chini) kiotomatiki. Kwa njia hii mtumiaji hahitaji kufanya chochote ili aelekezwe. Hii ni hatua ya 2 katika mchoro wa mfuatano hapo juu.
+Ukurasa huu unawasilisha fomu (tazama hapa chini) kiotomatiki. Kwa njia hii mtumiaji halazimiki kufanya chochote ili kuelekezwa kwingine. Hii ni hatua ya 2 katika mchoro wa mfuatano hapo juu.
 
 ```typescript
           <form method="post" action="${loginRequest.entityEndpoint}">
 ```
 
-Tuma kwa `loginRequest.entityEndpoint` (URL ya mwisho wa mtoa huduma wa utambulisho).
+Tuma kwa `loginRequest.entityEndpoint` (URL ya mwisho wa mtoa utambulisho).
 
 ```typescript
             <input type="hidden" name="${loginRequest.type}" value="${loginRequest.context}" />
@@ -309,7 +313,7 @@ Jina la ingizo ni `loginRequest.type` (`SAMLRequest`). Maudhui ya uwanja huo ni 
 app.use(express.urlencoded({extended: true}))
 ```
 
-[Middleware hii](https://expressjs.com/en/5x/api.html#express.urlencoded) inasoma mwili wa [ombi la HTTP](https://www.tutorialspoint.com/http/http_requests.htm). Kwa chaguo-msingi, express inapuuzia, kwa sababu maombi mengi hayaihitaji. Tunaihitaji kwa sababu POST inatumia mwili.
+[Kifaa hiki cha kati](https://expressjs.com/en/5x/api.html#express.urlencoded) kinasoma kiini cha [ombi la HTTP](https://www.tutorialspoint.com/http/http_requests.htm). Kwa chaguo-msingi express inakipuuza, kwa sababu maombi mengi hayakihitaji. Tunakihitaji kwa sababu POST inatumia kiini.
 
 ```typescript
 app.use(`/${config.spDir}`, spRouter)
@@ -331,7 +335,7 @@ app.get("/", (req, res) => {
 })
 ```
 
-Ikiwa kivinjari kitajaribu kupata saraka ya mizizi, kipe kiungo cha ukurasa wa kuingia.
+Ikiwa kivinjari kinajaribu kupata saraka ya mzizi, kipe kiungo cha ukurasa wa kuingia.
 
 ```typescript
 app.listen(config.spPort, () => {
@@ -343,13 +347,13 @@ Sikiliza `spPort` na programu hii ya express.
 
 #### src/idp.mts {#srcidpmts}
 
-Huyu ndiye mtoa huduma wa kitambulisho. Ni sawa na mtoa huduma, maelezo yaliyo hapa chini ni ya sehemu ambazo ni tofauti.
+Huyu ni mtoa utambulisho. Anafanana sana na mtoa huduma, maelezo hapa chini ni kwa sehemu ambazo ni tofauti.
 
 ```typescript
 const xmlParser = new (await import("fast-xml-parser")).XMLParser(
   {
-    ignoreAttributes: false, // Preserve attributes
-    attributeNamePrefix: "@_", // Prefix for attributes
+    ignoreAttributes: false, // Hifadhi sifa
+    attributeNamePrefix: "@_", // Kiambishi awali cha sifa
   }
 )
 ```
@@ -360,7 +364,7 @@ Tunahitaji kusoma na kuelewa ombi la XML tunalopokea kutoka kwa mtoa huduma.
 const getLoginPage = requestId => `
 ```
 
-Kazi hii huunda ukurasa na fomu inayojituma yenyewe ambayo inarudishwa katika hatua ya 4 ya mchoro wa mfuatano hapo juu.
+Kazi hii inaunda ukurasa na fomu iliyowasilishwa kiotomatiki ambayo inarejeshwa katika hatua ya 4 ya mchoro wa mfuatano hapo juu.
 
 ```typescript
 <html>
@@ -380,8 +384,8 @@ Kazi hii huunda ukurasa na fomu inayojituma yenyewe ambayo inarudishwa katika ha
 
 Kuna nyanja mbili tunazotuma kwa mtoa huduma:
 
-1. `requestId` ambayo tunajibu.
-2. Kitambulisho cha mtumiaji (tunatumia anwani ya barua pepe ambayo mtumiaji hutoa kwa sasa).
+1. `requestId` ambayo tunaijibu.
+2. Kitambulisho cha mtumiaji (tunatumia anwani ya barua pepe anayotoa mtumiaji kwa sasa).
 
 ```typescript
     </form>
@@ -394,7 +398,7 @@ idpRouter.post("/loginSubmitted", async (req, res) => {
   const loginResponse = await idp.createLoginResponse(
 ```
 
-Hiki ni kishikizi cha hatua ya 5 katika mchoro wa mfuatano hapo juu. [`idp.createLoginResponse`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L73-L125) huunda jibu la kuingia.
+Hiki ni kishughulikiaji cha hatua ya 5 ya mchoro wa mfuatano hapo juu. [`idp.createLoginResponse`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L73-L125) inaunda majibu ya kuingia. 
 
 ```typescript
     sp, 
@@ -403,7 +407,7 @@ Hiki ni kishikizi cha hatua ya 5 katika mchoro wa mfuatano hapo juu. [`idp.creat
       audience: sp.entityID,
 ```
 
-Watazamaji ni watoa huduma.
+Hadhira ni mtoa huduma.
 
 ```typescript
       extract: {
@@ -413,13 +417,13 @@ Watazamaji ni watoa huduma.
       },
 ```
 
-Taarifa iliyotolewa kutoka kwa ombi. Kigezo kimoja tunachojali katika ombi ni requestId, ambayo inaruhusu mtoa huduma kulinganisha maombi na majibu yao.
+Taarifa iliyotolewa kutoka kwenye ombi. Kigezo kimoja tunachojali katika ombi ni requestId, ambayo inaruhusu mtoa huduma kulinganisha maombi na majibu yao.
 
 ```typescript
-      signingKey: { privateKey: idpPrivateKey, publicKey: config.idpCert }  // Ensure signing
+      signingKey: { privateKey: idpPrivateKey, publicKey: config.idpCert }  // Hakikisha utiaji sahihi
 ```
 
-Tunahitaji `signingKey` ili kuwa na data ya kusaini jibu. Mtoa huduma haamini maombi ambayo hayajasainiwa.
+Tunahitaji `signingKey` kuwa na data ya kusaini majibu. Mtoa huduma haamini maombi ambayo hayajasainiwa.
 
 ```typescript
     },
@@ -428,9 +432,9 @@ Tunahitaji `signingKey` ili kuwa na data ya kusaini jibu. Mtoa huduma haamini ma
       email: req.body.email
 ```
 
-Hili ni eneo lenye maelezo ya mtumiaji tunayorudisha kwa mtoa huduma.
+Huu ni uwanja wenye taarifa za mtumiaji tunazotuma tena kwa mtoa huduma.
 
-```typescript
+```typescript      
     }
   );
 
@@ -450,34 +454,34 @@ Hili ni eneo lenye maelezo ya mtumiaji tunayorudisha kwa mtoa huduma.
 })
 ```
 
-Tena, tumia fomu inayojituma yenyewe. Hii ni hatua ya 6 ya mchoro wa mfuatano hapo juu.
+Tena, tumia fomu iliyowasilishwa kiotomatiki. Hii ni hatua ya 6 ya mchoro wa mfuatano hapo juu.
 
 ```typescript
 
-// IdP endpoint for login requests
+// Kituo cha IdP kwa maombi ya kuingia
 idpRouter.post(`/login`,
 ```
 
-Hii ni sehemu ya mwisho inayopokea ombi la kuingia kutoka kwa mtoa huduma. Hii ni handler hatua ya 3 ya mchoro wa mfuatano hapo juu.
+Huu ni mwisho unaopokea ombi la kuingia kutoka kwa mtoa huduma. Hiki ni kishughulikiaji cha hatua ya 3 ya mchoro wa mfuatano hapo juu.
 
 ```typescript
   async (req, res) => {
     try {
-      // Workaround because I couldn't get parseLoginRequest to work.
+      // Njia mbadala kwa sababu nilishindwa kufanya parseLoginRequest ifanye kazi.
       // const loginRequest = await idp.parseLoginRequest(sp, 'post', req)
       const samlRequest = xmlParser.parse(Buffer.from(req.body.SAMLRequest, 'base64').toString('utf-8'))
       res.send(getLoginPage(samlRequest["samlp:AuthnRequest"]["@_ID"]))
 ```
 
-Tunapaswa kuwa na uwezo wa kutumia [`idp.parseLoginRequest`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L127-L144) kusoma kitambulisho cha ombi la uthibitishaji. Hata hivyo, sikuweza kuifanyia kazi na haikustahili kutumia muda mwingi juu yake kwa hivyo ninatumia tu [kichanganuzi cha XML cha jumla](https://www.npmjs.com/package/fast-xml-parser). Taarifa tunayohitaji ni sifa ya `ID` ndani ya lebo ya `<samlp:AuthnRequest>`, ambayo iko katika kiwango cha juu cha XML.
+Tunapaswa kuweza kutumia [`idp.parseLoginRequest`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L127-L144) kusoma kitambulisho cha ombi la uthibitishaji. Hata hivyo, sikuweza kuifanya ifanye kazi na haikufaa kutumia muda mwingi kwayo kwa hivyo natumia tu [kichanganuzi cha XML cha matumizi ya jumla](https://www.npmjs.com/package/fast-xml-parser). Taarifa tunayohitaji ni sifa ya `ID` ndani ya lebo ya `<samlp:AuthnRequest>`, ambayo iko kwenye kiwango cha juu cha XML.
 
-## Kutumia saini za Ethereum {#using-ethereum-signatures}
+## Kutumia sahihi za Ethereum {#using-ethereum-signatures}
 
-Sasa kwa kuwa tunaweza kutuma utambulisho wa mtumiaji kwa mtoa huduma, hatua inayofuata ni kupata utambulisho wa mtumiaji kwa njia inayoaminika. Viem inaturuhusu kuuliza tu mkoba kwa anwani ya mtumiaji, lakini hii inamaanisha kuuliza kivinjari kwa habari. Hatuidhibiti kivinjari, kwa hivyo hatuwezi kuamini moja kwa moja jibu tunalopata kutoka kwake.
+Sasa kwa kuwa tunaweza kutuma utambulisho wa mtumiaji kwa mtoa huduma, hatua inayofuata ni kupata utambulisho wa mtumiaji kwa njia inayoaminika. Viem inaturuhusu tu kuuuliza mkoba anwani ya mtumiaji, lakini hii inamaanisha kukiuliza kivinjari taarifa hiyo. Hatudhibiti kivinjari, kwa hivyo hatuwezi kuamini kiotomatiki majibu tunayopata kutoka kwake.
 
-Badala yake, IdP itatuma kivinjari mfuatano wa kusaini. Ikiwa mkoba katika kivinjari unasaini mfuatano huu, inamaanisha kuwa kweli ni anwani hiyo (yaani, inajua ufunguo binafsi unaolingana na anwani).
+Badala yake, IdP itatuma mfuatano kwa kivinjari ili usainiwe. Ikiwa mkoba kwenye kivinjari utasaini mfuatano huu, inamaanisha kwamba kweli ni anwani hiyo (yaani, inajua ufunguo wa siri unaolingana na anwani hiyo).
 
-Ili kuona hili likitendeka, simamisha IdP na SP zilizopo na endesha amri hizi:
+Ili kuona hili likifanya kazi, simamisha IdP na SP zilizopo na uendeshe amri hizi:
 
 ```sh
 git checkout eth-signatures
@@ -485,47 +489,47 @@ pnpm install
 pnpm start
 ```
 
-Kisha vinjari [kwa SP](http://localhost:3000) na ufuate maelekezo.
+Kisha vinjari [hadi kwenye SP](http://localhost:3000) na ufuate maelekezo.
 
-Kumbuka kuwa kwa wakati huu hatujui jinsi ya kupata anwani ya barua pepe kutoka kwa anwani ya Ethereum, kwa hivyo badala yake tunaripoti `<ethereum address>@bad.email.address` kwa SP.
+Kumbuka kwamba katika hatua hii hatujui jinsi ya kupata anwani ya barua pepe kutoka kwenye anwani ya Ethereum, kwa hivyo badala yake tunaripoti `<ethereum address>@bad.email.address` kwa SP.
 
 ### Maelezo ya kina {#detailed-explanation-2}
 
-Mabadiliko yapo katika hatua 4-5 katika mchoro uliopita.
+Mabadiliko yako katika hatua ya 4-5 katika mchoro uliopita.
 
-![SAML na saini ya Ethereum](./fig-05-saml-w-signature.png)
+![SAML with an Ethereum signature](./fig-05-saml-w-signature.png)
 
-Faili pekee tuliyobadilisha ni `idp.mts`. Hapa kuna sehemu zilizobadilishwa.
+Faili pekee tulilobadilisha ni `idp.mts`. Hapa kuna sehemu zilizobadilishwa.
 
 ```typescript
 import { v4 as uuidv4 } from 'uuid'
 import { verifyMessage } from 'viem'
 ```
 
-Tunahitaji maktaba hizi mbili za ziada. Tunatumia [`uuid`](https://www.npmjs.com/package/uuid) kuunda thamani ya [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce). Thamani yenyewe haijalishi, ni ukweli tu kwamba inatumika mara moja tu.
+Tunahitaji maktaba hizi mbili za ziada. Tunatumia [`uuid`](https://www.npmjs.com/package/uuid) kuunda thamani ya [nonsi](https://en.wikipedia.org/wiki/Cryptographic_nonce). Thamani yenyewe haijalishi, isipokuwa ukweli kwamba inatumika mara moja tu.
 
-Maktaba ya [`viem`](https://viem.sh/) inaturuhusu kutumia ufafanuzi wa Ethereum. Hapa tunaihitaji ili kuthibitisha kuwa saini ni halali.
+Maktaba ya [`viem`](https://viem.sh/) inaturuhusu kutumia ufafanuzi wa Ethereum. Hapa tunaitegemea kuthibitisha kwamba sahihi ni halali kweli.
 
 ```typescript
 const loginPrompt = "To access the service provider, sign this nonce: "
 ```
 
-Mkoba unamwomba mtumiaji ruhusa ya kusaini ujumbe. Ujumbe ambao ni nonce tu unaweza kuwachanganya watumiaji, kwa hivyo tunajumuisha kidokezo hiki.
+Mkoba unamwomba mtumiaji ruhusa ya kusaini ujumbe. Ujumbe ambao ni nonsi tu unaweza kuwachanganya watumiaji, kwa hivyo tunajumuisha kidokezo hiki.
 
 ```typescript
-// Keep requestIDs here
+// Hifadhi requestIDs hapa
 let nonces = {}
 ```
 
-Tunahitaji taarifa ya ombi ili tuweze kulijibu. Tunaweza kuituma na ombi (hatua ya 4), na kuipokea tena (hatua ya 5). Hata hivyo, hatuwezi kuamini taarifa tunazopata kutoka kwenye kivinjari, ambacho kiko chini ya udhibiti wa mtumiaji anayeweza kuwa na nia mbaya. Kwa hivyo ni bora kuihifadhi hapa, na nonce kama ufunguo.
+Tunahitaji taarifa ya ombi ili kuweza kulijibu. Tungeweza kuituma pamoja na ombi (hatua ya 4), na kuipokea tena (hatua ya 5). Hata hivyo, hatuwezi kuamini taarifa tunayopata kutoka kwenye kivinjari, ambacho kiko chini ya udhibiti wa mtumiaji anayeweza kuwa na nia mbaya. Kwa hivyo ni bora kuihifadhi hapa, na nonsi kama ufunguo.
 
-Kumbuka kuwa tunafanya hivi hapa kama kigezo kwa ajili ya urahisi. Hata hivyo, hii ina hasara kadhaa:
+Kumbuka kwamba tunafanya hivi hapa kama kigezo kwa ajili ya urahisi. Hata hivyo, hii ina hasara kadhaa:
 
-- Tuko katika hatari ya shambulio la kunyimwa huduma. Mtumiaji hasidi anaweza kujaribu kuingia mara nyingi, akijaza kumbukumbu zetu.
-- Ikiwa mchakato wa IdP unahitaji kuanzishwa upya, tunapoteza maadili yaliyopo.
-- Hatuwezi kusawazisha mzigo katika michakato mingi, kwa sababu kila moja ingekuwa na kigezo chake.
+- Tuko hatarini kwa shambulio la kunyimwa huduma. Mtumiaji mwenye nia mbaya anaweza kujaribu kuingia mara nyingi, na kujaza kumbukumbu yetu.
+- Ikiwa mchakato wa IdP unahitaji kuanzishwa upya, tunapoteza thamani zilizopo.
+- Hatuwezi kusawazisha mzigo kwenye michakato mingi, kwa sababu kila mmoja ungekuwa na kigezo chake.
 
-Katika mfumo wa uzalishaji tungetumia hifadhidata na kutekeleza aina fulani ya utaratibu wa kumalizika muda.
+Kwenye mfumo wa uzalishaji tungetumia hifadhidata na kutekeleza aina fulani ya utaratibu wa kuisha muda wake.
 
 ```typescript
 const getSignaturePage = requestId => {
@@ -533,7 +537,7 @@ const getSignaturePage = requestId => {
   nonces[nonce] = requestId
 ```
 
-Unda nonce, na uhifadhi `requestId` kwa matumizi ya baadaye.
+Unda nonsi, na uhifadhi `requestId` kwa matumizi ya baadaye.
 
 ```typescript
   return `
@@ -548,7 +552,7 @@ JavaScript hii inatekelezwa kiotomatiki wakati ukurasa unapopakiwa.
       import { createWalletClient, custom, getAddress } from 'https://esm.sh/viem'
 ```
 
-Tunahitaji kazi kadhaa kutoka kwa `viem`.
+Tunahitaji kazi kadhaa kutoka `viem`.
 
 ```typescript
       if (!window.ethereum) {
@@ -562,7 +566,7 @@ Tunaweza kufanya kazi tu ikiwa kuna mkoba kwenye kivinjari.
       const [account] = await window.ethereum.request({method: 'eth_requestAccounts'})
 ```
 
-Omba orodha ya akaunti kutoka kwa mkoba (`window.ethereum`). Fikiria kuna angalau moja, na hifadhi tu ya kwanza.
+Omba orodha ya akaunti kutoka kwenye mkoba (`window.ethereum`). Chukulia kuna angalau moja, na uhifadhi ya kwanza tu. 
 
 ```typescript
       const walletClient = createWalletClient({
@@ -579,7 +583,7 @@ Unda [mteja wa mkoba](https://viem.sh/docs/clients/wallet) ili kuingiliana na mk
             message: "${loginPrompt}${nonce}"
 ```
 
-Mwombe mtumiaji kusaini ujumbe. Kwa sababu HTML hii yote iko katika [kamba ya kiolezo](https://viem.sh/docs/clients/wallet), tunaweza kutumia vigezo vilivyofafanuliwa katika mchakato wa idp. Hii ni hatua ya 4.5 katika mchoro wa mfuatano.
+Mwombe mtumiaji asaini ujumbe. Kwa sababu HTML hii yote iko katika [mfuatano wa kiolezo](https://viem.sh/docs/clients/wallet), tunaweza kutumia vigezo vilivyofafanuliwa katika mchakato wa idp. Hii ni hatua ya 4.5 katika mchoro wa mfuatano.
 
 ```typescript
         }).then(signature => {
@@ -589,7 +593,7 @@ Mwombe mtumiaji kusaini ujumbe. Kwa sababu HTML hii yote iko katika [kamba ya ki
       }
 ```
 
-Elekeza kwa `/idp/signature/<nonce>/<address>/<signature>`. Hii ni hatua ya 5 katika mchoro wa mfuatano.
+Elekeza kwingine kwenye `/idp/signature/<nonce>/<address>/<signature>`. Hii ni hatua ya 5 katika mchoro wa mfuatano.
 
 ```typescript
       window.badSignature = () => {
@@ -600,7 +604,7 @@ Elekeza kwa `/idp/signature/<nonce>/<address>/<signature>`. Hii ni hatua ya 5 ka
       }
 ```
 
-Saini inarudishwa na kivinjari, ambacho kinaweza kuwa hasidi (hakuna kitu cha kukuzuia kufungua `http://localhost:3001/idp/signature/bad-nonce/bad-address/bad-signature` kwenye kivinjari). Kwa hivyo, ni muhimu kuthibitisha kuwa mchakato wa IdP unashughulikia saini mbaya ipasavyo.
+Sahihi inatumwa tena na kivinjari, ambacho kinaweza kuwa na nia mbaya (hakuna kinachokuzuia kufungua tu `http://localhost:3001/idp/signature/bad-nonce/bad-address/bad-signature` kwenye kivinjari). Kwa hivyo, ni muhimu kuthibitisha mchakato wa IdP unashughulikia sahihi mbaya kwa usahihi.
 
 ```typescript
     </script>
@@ -620,13 +624,13 @@ Saini inarudishwa na kivinjari, ambacho kinaweza kuwa hasidi (hakuna kitu cha ku
 }
 ```
 
-Sehemu iliyobaki ni HTML ya kawaida tu.
+Iliyosalia ni HTML ya kawaida tu.
 
 ```typescript
 idpRouter.get("/signature/:nonce/:account/:signature", async (req, res) => {
 ```
 
-Hiki ni kishikizi cha hatua ya 5 katika mchoro wa mfuatano.
+Hiki ni kishughulikiaji cha hatua ya 5 katika mchoro wa mfuatano.
 
 ```typescript
   const requestId = nonces[req.params.nonce]
@@ -638,13 +642,13 @@ Hiki ni kishikizi cha hatua ya 5 katika mchoro wa mfuatano.
   nonces[req.params.nonce] = undefined
 ```
 
-Pata kitambulisho cha ombi, na ufute nonce kutoka kwa `nonces` ili kuhakikisha haiwezi kutumika tena.
+Pata kitambulisho cha ombi, na ufute nonsi kutoka `nonces` ili kuhakikisha haiwezi kutumika tena.
 
 ```typescript
   try {
 ```
 
-Kwa sababu kuna njia nyingi ambazo saini inaweza kuwa batili, tunafunga hii katika `try ...` kuzuia `catch` ili kunasa makosa yoyote yaliyorushwa.
+Kwa sababu kuna njia nyingi ambazo sahihi inaweza kuwa batili, tunafunga hii katika kizuizi cha `try ... catch` ili kunasa makosa yoyote yaliyotupwa.
 
 ```typescript
     const validSignature = await verifyMessage({
@@ -665,7 +669,7 @@ Tumia [`verifyMessage`](https://viem.sh/docs/actions/public/verifyMessage#verify
   }
 ```
 
-Sehemu iliyobaki ya mshikaji ni sawa na kile tumefanya katika mshikaji wa `/loginSubmitted` hapo awali, isipokuwa kwa mabadiliko madogo.
+Sehemu iliyosalia ya kishughulikiaji ni sawa na kile tulichofanya katika kishughulikiaji cha `/loginSubmitted` hapo awali, isipokuwa kwa mabadiliko moja madogo.
 
 ```typescript
   const loginResponse = await idp.createLoginResponse(
@@ -678,14 +682,15 @@ Sehemu iliyobaki ya mshikaji ni sawa na kile tumefanya katika mshikaji wa `/logi
   );
 ```
 
-Hatuna anwani halisi ya barua pepe (tutaipata katika sehemu inayofuata), kwa hivyo kwa sasa tunarudisha anwani ya Ethereum na kuiweka alama wazi kuwa si anwani ya barua pepe.
+Hatuna anwani halisi ya barua pepe (tutaipata katika sehemu inayofuata), kwa hivyo kwa sasa tunarejesha anwani ya Ethereum na kuiweka alama wazi kama sio anwani ya barua pepe.
+
 
 ```typescript
-// IdP endpoint for login requests
+// Kituo cha IdP kwa maombi ya kuingia
 idpRouter.post(`/login`,
   async (req, res) => {
     try {
-      // Workaround because I couldn't get parseLoginRequest to work.
+      // Njia mbadala kwa sababu nilishindwa kufanya parseLoginRequest ifanye kazi.
       // const loginRequest = await idp.parseLoginRequest(sp, 'post', req)
       const samlRequest = xmlParser.parse(Buffer.from(req.body.SAMLRequest, 'base64').toString('utf-8'))
       res.send(getSignaturePage(samlRequest["samlp:AuthnRequest"]["@_ID"]))
@@ -697,13 +702,13 @@ idpRouter.post(`/login`,
 )
 ```
 
-Badala ya `getLoginPage`, sasa tumia `getSignaturePage` katika kishikilizi cha hatua ya 3.
+Badala ya `getLoginPage`, sasa tumia `getSignaturePage` katika kishughulikiaji cha hatua ya 3.
 
 ## Kupata anwani ya barua pepe {#getting-the-email-address}
 
-Hatua inayofuata ni kupata anwani ya barua pepe, kitambulisho kinachoombwa na mtoa huduma. Ili kufanya hivyo, tunatumia [Huduma ya Uthibitisho ya Ethereum (EAS)](https://attest.org/).
+Hatua inayofuata ni kupata anwani ya barua pepe, kitambulisho kilichoombwa by mtoa huduma. Ili kufanya hivyo, tunatumia [Huduma ya Uthibitisho ya Ethereum (EAS)](https://attest.org/).
 
-Njia rahisi zaidi ya kupata uthibitisho ni kutumia [GraphQL API](https://docs.attest.org/docs/developer-tools/api). Tunatumia swali hili:
+Njia rahisi zaidi ya kupata uthibitisho ni kutumia [API ya GraphQL](https://docs.attest.org/docs/developer-tools/api). Tunatumia hoja hii:
 
 ```
 query GetAttestationsByRecipient {
@@ -721,17 +726,17 @@ query GetAttestationsByRecipient {
 }
 ```
 
-[`schemaId`](https://optimism.easscan.org/schema/view/0xfa2eff59a916e3cc3246f9aec5e0ca00874ae9d09e4678e5016006f07622f977) hii inajumuisha anwani ya barua pepe tu. Swali hili linauliza uthibitisho wa skimu hii. Mada ya uthibitisho inaitwa `recipient`. Daima ni anwani ya Ethereum.
+[`schemaId`](https://optimism.easscan.org/schema/view/0xfa2eff59a916e3cc3246f9aec5e0ca00874ae9d09e4678e5016006f07622f977) hii inajumuisha tu anwani ya barua pepe. Hoja hii inaomba uthibitisho wa skima hii. Mada ya uthibitisho inaitwa `recipient`. Kila mara ni anwani ya Ethereum.
 
 Onyo: Njia tunayopata uthibitisho hapa ina masuala mawili ya usalama.
 
-- Tunaenda kwenye eneo la mwisho la API, `https://optimism.easscan.org/graphql`, ambalo ni sehemu ya kati. Tunaweza kupata sifa ya `id` na kisha kufanya utafutaji wa mnyororo ili kuthibitisha kwamba uthibitisho ni halisi, lakini eneo la mwisho la API bado linaweza kudhibiti uthibitisho kwa kutotuambia kuhusu wao.
+- Tunaenda kwenye mwisho wa API, `https://optimism.easscan.org/graphql`, ambayo ni kipengele kilichowekwa kati. Tunaweza kupata sifa ya `id` na kisha kufanya utafutaji mnyororoni ili kuthibitisha kwamba uthibitisho ni wa kweli, lakini mwisho wa API bado unaweza kudhibiti uthibitisho kwa kutotuambia kuuhusu. 
 
-  Tatizo hili si gumu kulitatua, tunaweza kuendesha sehemu yetu ya GraphQL na kupata uthibitisho kutoka kwa kumbukumbu za mnyororo, lakini hiyo ni ya kupita kiasi kwa madhumuni yetu.
+  Tatizo hili si gumu kutatua, tungeweza kuendesha mwisho wetu wenyewe wa GraphQL na kupata uthibitisho kutoka kwenye logi za mnyororo, lakini hiyo ni kupita kiasi kwa madhumuni yetu.
 
-- Hatuangalii utambulisho wa mthibitishaji. Mtu yeyote anaweza kutupa habari za uongo. Katika utekelezaji wa ulimwengu halisi tungekuwa na seti ya wathibitishaji wanaoaminika na kuangalia tu uthibitisho wao.
+- Hatuangalii utambulisho wa mthibitishaji. Mtu yeyote anaweza kutulisha taarifa za uongo. Katika utekelezaji wa ulimwengu halisi tungekuwa na seti ya wathibitishaji wanaoaminika na kuangalia tu uthibitisho wao.
 
-Ili kuona hili likitendeka, simamisha IdP na SP zilizopo na endesha amri hizi:
+Ili kuona hili likifanya kazi, simamisha IdP na SP zilizopo na uendeshe amri hizi:
 
 ```sh
 git checkout email-address
@@ -741,25 +746,25 @@ pnpm start
 
 Kisha toa anwani yako ya barua pepe. Una njia mbili za kufanya hivyo:
 
-- Ingiza mkoba ukitumia ufunguo binafsi, na utumie ufunguo binafsi wa majaribio `0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80`.
+- Ingiza mkoba ukitumia ufunguo wa siri, na utumie ufunguo wa siri wa majaribio `0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80`.
 
-- Ongeza uthibitisho kwa anwani yako ya barua pepe:
+- Ongeza uthibitisho kwa anwani yako mwenyewe ya barua pepe:
 
-  1. Vinjari [skimu katika kivinjari cha uthibitisho](https://optimism.easscan.org/schema/view/0xfa2eff59a916e3cc3246f9aec5e0ca00874ae9d09e4678e5016006f07622f977).
+  1. Vinjari hadi kwenye [skima katika kichunguzi cha uthibitisho](https://optimism.easscan.org/schema/view/0xfa2eff59a916e3cc3246f9aec5e0ca00874ae9d09e4678e5016006f07622f977).
 
-  2. Bofya **Thibitisha na Schema**.
+  2. Bofya **Thibitisha kwa Skima**.
 
-  3. Ingiza anwani yako ya Ethereum kama mpokeaji, anwani yako ya barua pepe kama anwani ya barua pepe, na uchague **Onchain**. Kisha bofya **Fanya Uthibitisho**.
+  3. Weka anwani yako ya Ethereum kama mpokeaji, anwani yako ya barua pepe kama anwani ya barua pepe, na uchague **Mnyororoni**. Kisha ubofye **Fanya Uthibitisho**.
 
-  4. Idhinisha muamala kwenye mkoba wako. Utahitaji ETH kwenye [Mnyororo wa bloku wa Optimism](https://app.optimism.io/bridge/deposit) kulipia gesi.
+  4. Idhinisha muamala kwenye mkoba wako. Utahitaji baadhi ya ETH kwenye [Mnyororo wa vitalu wa Optimism](https://app.optimism.io/bridge/deposit) ili kulipia gesi.
 
-Vyovyote vile, baada ya kufanya hivi nenda kwenye [http://localhost:3000](http://localhost:3000) na ufuate maelekezo. Ikiwa umeingiza ufunguo binafsi wa majaribio, barua pepe unayopokea ni `test_addr_0@example.com`. Ikiwa umetumia anwani yako mwenyewe, inapaswa kuwa chochote ulichothibitisha.
+Vyovyote vile, baada ya kufanya hivi vinjari hadi [http://localhost:3000](http://localhost:3000) na ufuate maelekezo. Ikiwa uliingiza ufunguo wa siri wa majaribio, barua pepe unayopokea ni `test_addr_0@example.com`. Ikiwa ulitumia anwani yako mwenyewe, inapaswa kuwa chochote ulichothibitisha.
 
 ### Maelezo ya kina {#detailed-explanation-3}
 
-![Kupata kutoka anwani ya Ethereum hadi barua-pepe](./fig-06-saml-sig-n-email.png)
+![Getting from Ethereum address to e-mail](./fig-06-saml-sig-n-email.png)
 
-Hatua mpya ni mawasiliano ya GraphQL, hatua 5.6 na 5.7.
+Hatua mpya ni mawasiliano ya GraphQL, hatua ya 5.6 na 5.7.
 
 Tena, hapa kuna sehemu zilizobadilishwa za `idp.mts`.
 
@@ -774,33 +779,33 @@ Ingiza maktaba tunazohitaji.
 const graphqlEndpointUrl = "https://optimism.easscan.org/graphql"
 ```
 
-Kuna [sehemu tofauti kwa kila mnyororo wa bloku](https://docs.attest.org/docs/developer-tools/api).
+Kuna [mwisho tofauti kwa kila mnyororo wa vitalu](https://docs.attest.org/docs/developer-tools/api).
 
 ```typescript
 const graphqlClient = new GraphQLClient(graphqlEndpointUrl, { fetch })
 ```
 
-Unda mteja mpya wa `GraphQLClient` tunaoweza kutumia kuuliza maswali kwenye endpoint.
+Unda mteja mpya wa `GraphQLClient` tunaoweza kutumia kwa kuhoji mwisho.
 
 ```typescript
 const graphqlSchema = 'string emailAddress'
 const graphqlEncoder = new SchemaEncoder(graphqlSchema)
 ```
 
-GraphQL inatupa tu kitu cha data kisichoeleweka na baiti. Ili kuielewa tunahitaji skimu.
+GraphQL inatupa tu kipengee cha data kisicho wazi chenye baiti. Ili kuielewa tunahitaji skima. 
 
 ```typescript
 const ethereumAddressToEmail = async ethAddr => {
 ```
 
-Kazi ya kupata kutoka anwani ya Ethereum hadi anwani ya barua-pepe.
+Kazi ya kupata kutoka kwenye anwani ya Ethereum hadi kwenye anwani ya barua pepe.
 
 ```typescript
   const query = `
     query GetAttestationsByRecipient {
 ```
 
-Hili ni swali la GraphQL.
+Hii ni hoja ya GraphQL.
 
 ```typescript
       attestations(
@@ -815,13 +820,13 @@ Tunatafuta uthibitisho.
         }
 ```
 
-Uthibitisho tunaotaka ni ule ulio katika skimu yetu, ambapo mpokeaji ni `getAddress(ethAddr)`. Kazi ya [`getAddress`](https://viem.sh/docs/utilities/getAddress#getaddress) inahakikisha anwani yetu ina [checksum](https://github.com/ethereum/ercs/blob/master/ERCS/erc-55.md) sahihi. Hii ni muhimu kuhusu GraphQL ni muhimu kwa herufi kubwa na ndogo. "0xBAD060A7", "0xBad060A7", na "0xbad060a7" ni maadili tofauti.
+Uthibitisho tunaotaka ni ule ulio katika skima yetu, ambapo mpokeaji ni `getAddress(ethAddr)`. Kazi ya [`getAddress`](https://viem.sh/docs/utilities/getAddress#getaddress) inahakikisha anwani yetu ina [checksum](https://github.com/ethereum/ercs/blob/master/ERCS/erc-55.md) sahihi. Hii ni muhimu kwa sababu GraphQL inajali herufi kubwa na ndogo. "0xBAD060A7", "0xBad060A7", na "0xbad060a7" ni thamani tofauti.
 
 ```typescript
         take: 1
 ```
 
-Bila kujali ni ithibati ngapi tunapata, tunataka tu ya kwanza.
+Bila kujali tunapata uthibitisho wangapi, tunataka wa kwanza tu.
 
 ```typescript
       ) {
@@ -832,11 +837,11 @@ Bila kujali ni ithibati ngapi tunapata, tunataka tu ya kwanza.
     }`
 ```
 
-Sehemu tunazotaka kupokea.
+Nyanja tunazotaka kupokea.
 
-- `attester`: Anwani iliyowasilisha uthibitisho. Kawaida hii hutumika kuamua kama kuamini uthibitisho au la.
-- `id`: Kitambulisho cha uthibitisho. Unaweza kutumia thamani hii [kusoma uthibitisho onchain](https://optimism.blockscout.com/address/0x4200000000000000000000000000000000000021?tab=read_proxy&source_address=0x4E0275Ea5a89e7a3c1B58411379D1a0eDdc5b088#0xa3112a64) ili kuthibitisha kuwa taarifa kutoka kwa swali la GraphQL ni sahihi.
-- `data`: Data ya skimu (katika kesi hii, anwani ya barua pepe).
+- `attester`: Anwani iliyowasilisha uthibitisho. Kwa kawaida hii inatumika kuamua kama kuamini uthibitisho au la.
+- `id`: Kitambulisho cha uthibitisho. Unaweza kutumia thamani hii [kusoma uthibitisho mnyororoni](https://optimism.blockscout.com/address/0x4200000000000000000000000000000000000021?tab=read_proxy&source_address=0x4E0275Ea5a89e7a3c1B58411379D1a0eDdc5b088#0xa3112a64) ili kuthibitisha kwamba taarifa kutoka kwenye hoja ya GraphQL ni sahihi.
+- `data`: Data ya skima (katika hali hii, anwani ya barua pepe).
 
 ```typescript
   const queryResult = await graphqlClient.request(query)
@@ -845,7 +850,7 @@ Sehemu tunazotaka kupokea.
     return "no_address@available.is"
 ```
 
-Ikiwa hakuna uthibitisho, rudisha thamani ambayo ni wazi si sahihi, lakini ambayo itaonekana kuwa halali kwa mtoa huduma.
+Ikiwa hakuna uthibitisho, rejesha thamani ambayo ni wazi si sahihi, lakini ambayo ingeonekana halali kwa mtoa huduma.
 
 ```typescript
   const attestationDataFields = graphqlEncoder.decodeData(queryResult.attestations[0].data)
@@ -853,7 +858,7 @@ Ikiwa hakuna uthibitisho, rudisha thamani ambayo ni wazi si sahihi, lakini ambay
 }
 ```
 
-Ikiwa kuna thamani, tumia `decodeData` kusimbua data. Hatuhitaji metadata inayotoa, ni thamani yenyewe tu.
+Ikiwa kuna thamani, tumia `decodeData` kusimbua data. Hatuhitaji data fafanuzi inayoitoa, isipokuwa thamani yenyewe tu.
 
 ```typescript
   const loginResponse = await idp.createLoginResponse(
@@ -872,15 +877,15 @@ Ikiwa kuna thamani, tumia `decodeData` kusimbua data. Hatuhitaji metadata inayot
 
 Tumia kazi mpya kupata anwani ya barua pepe.
 
-## Vipi kuhusu utawanyaji wa mamlaka? {#what-about-decentralization}
+## Vipi kuhusu ugatuzi? {#what-about-decentralization}
 
-Katika usanidi huu watumiaji hawawezi kujifanya kuwa mtu mwingine, mradi tu tunategemea wathibitishaji wanaoaminika kwa ramani ya anwani ya Ethereum hadi barua pepe. Hata hivyo, mtoa huduma wetu wa kitambulisho bado ni sehemu ya kati. Yeyote aliye na ufunguo binafsi wa mtoa huduma wa kitambulisho anaweza kutuma habari za uongo kwa mtoa huduma.
+Katika usanidi huu watumiaji hawawezi kujifanya kuwa mtu ambaye sio, mradi tu tunategemea wathibitishaji wanaoaminika kwa uchoraji wa ramani wa Ethereum hadi anwani ya barua pepe. Hata hivyo, mtoa utambulisho wetu bado ni kipengele kilichowekwa kati. Yeyote aliye na ufunguo wa siri wa mtoa utambulisho anaweza kutuma taarifa za uongo kwa mtoa huduma.
 
-Kunaweza kuwa na suluhisho kwa kutumia [hesabu ya pande nyingi (MPC)](https://en.wikipedia.org/wiki/Secure_multi-party_computation). Natumai kuandika kuihusu katika mafunzo yajayo.
+Kunaweza kuwa na suluhisho kwa kutumia [ukokotoaji wa pande nyingi (MPC)](https://en.wikipedia.org/wiki/Secure_multi-party_computation). Natumai kuandika kuihusu katika mafunzo yajayo.
 
 ## Hitimisho {#conclusion}
 
-Kukubalika kwa kiwango cha kuingia, kama vile saini za Ethereum, kunakabiliwa na tatizo la kuku na yai. Watoa huduma wanataka kuvutia soko pana iwezekanavyo. Watumiaji wanataka kuwa na uwezo wa kufikia huduma bila kuwa na wasiwasi kuhusu kuunga mkono kiwango chao cha kuingia.
-Kuunda adapta, kama vile Ethereum IdP, kunaweza kutusaidia kushinda kikwazo hiki.
+Kupitishwa kwa kiwango cha kuingia, kama vile sahihi za Ethereum, kunakabiliwa na tatizo la kuku na yai. Watoa huduma wanataka kuvutia soko pana iwezekanavyo. Watumiaji wanataka kuweza kufikia huduma bila kuwa na wasiwasi kuhusu kusaidia kiwango chao cha kuingia.
+Kuunda adapta, kama vile Ethereum IdP, kunaweza kutusaidia kuvuka kikwazo hiki.
 
 [Tazama hapa kwa kazi zangu zaidi](https://cryptodocguy.pro/).

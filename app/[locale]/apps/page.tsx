@@ -8,11 +8,11 @@ import {
 import { AppCategory, AppData, Lang, PageParams } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
-import Breadcrumbs from "@/components/Breadcrumbs"
-import { SimpleHero } from "@/components/Hero"
+import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
+import { Grid } from "@/components/ui/grid"
 
 import {
   APP_TAG_VARIANTS,
@@ -20,6 +20,7 @@ import {
   getHighlightedApps,
 } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { getLocalizedDescription } from "@/lib/utils/i18n-descriptions"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { slugify } from "@/lib/utils/url"
@@ -62,6 +63,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   // Get translations
   const t = await getTranslations("page-apps")
+  const appDescriptions = await getTranslations("page-app-descriptions")
   const tSubcategory = await getTranslations("app-subcategories")
 
   // Translate subcategory tags, falling back to the raw string
@@ -88,6 +90,19 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/apps")
   const messages = pick(allMessages, requiredNamespaces)
 
+  const localizeApps = <T extends { name: string; description: string }>(
+    apps: T[]
+  ): T[] =>
+    apps.map((app) => ({
+      ...app,
+      description: getLocalizedDescription(
+        appDescriptions,
+        "app",
+        app.name,
+        app.description
+      ),
+    }))
+
   const { contributors } = await getAppPageContributorInfo(
     "apps",
     locale as Lang
@@ -97,30 +112,34 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     <>
       <AppsJsonLD locale={locale} contributors={contributors} />
       <I18nProvider locale={locale} messages={messages}>
-        <SimpleHero
-          breadcrumbs={<Breadcrumbs slug={"/apps"} />}
+        <PageHero
+          breadcrumbs={{ slug: "/apps" }}
           title={t("page-apps-title")}
-          subtitle={t("page-apps-subtitle")}
+          description={t("page-apps-subtitle")}
           buttons={[
             {
               href: "/what-are-apps/",
-              label: t("page-apps-learn-button"),
+              content: t("page-apps-learn-button"),
               variant: "outline",
               isSecondary: true,
             },
           ]}
+          variant="no-divider"
         />
 
         <MainArticle className="flex flex-col gap-32 py-10">
           <div className="flex flex-col gap-8 px-4 md:px-8">
             <h2>{t("page-apps-highlights-title")}</h2>
-            <AppsHighlight apps={highlightedApps.map(translateApp)} matomoCategory="apps" />
+            <AppsHighlight
+              apps={localizeApps(highlightedApps.map(translateApp))}
+              matomoCategory="apps"
+            />
           </div>
 
           <div className="flex flex-col gap-4 px-4 md:px-8">
             <h2>{t("page-apps-discover-title")}</h2>
-            <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
-              {discoverApps.map((app) => (
+            <Grid columns={3}>
+              {localizeApps(discoverApps).map((app) => (
                 <AppCard
                   key={app.name}
                   name={app.name}
@@ -143,7 +162,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   }}
                 />
               ))}
-            </div>
+            </Grid>
           </div>
 
           <div className="flex flex-col gap-4 px-4 md:px-8">
@@ -154,7 +173,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           {/* Note: Implemented this instead of swiper from design to allow for SSR */}
           <div className="flex flex-col gap-4 px-4 md:px-8">
             <h2>{t("page-apps-categories-title")}</h2>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <Grid columns={3}>
               {Object.values(appsCategories).map((category) => (
                 <SubpageCard
                   key={category.slug}
@@ -169,7 +188,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   }}
                 />
               ))}
-            </div>
+            </Grid>
           </div>
 
           <div className="flex flex-col gap-4 px-4 md:px-8">
@@ -194,6 +213,9 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
+
   const t = await getTranslations("page-apps")
 
   return await getMetadata({

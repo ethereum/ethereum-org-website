@@ -1,4 +1,4 @@
-import type { JSX, ReactNode } from "react"
+import type { ReactNode } from "react"
 
 export type MatomoExperiment = {
   idexperiment: string
@@ -27,9 +27,7 @@ export type ABTestAssignment = {
   experimentName: string
   variant: string
   variantIndex: number
-  assignedAt: number
 }
 
 // Type-safe tuple for at least 2 variants
-type Element = ReactNode | JSX.Element | string
-export type ABTestVariants = [Element, Element, ...Element[]]
+export type ABTestVariants = [ReactNode, ReactNode, ...ReactNode[]]

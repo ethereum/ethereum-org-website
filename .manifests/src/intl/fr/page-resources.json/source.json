@@ -1,0 +1,490 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-resources.json",
+  "generatedAt": "2026-05-26T16:41:03.448Z",
+  "rootHash": "02f802692a82",
+  "tree": {
+    "contentHash": "16370f425ec4",
+    "anchorHash": "fbae56276362",
+    "children": {
+      "page-resources-network-title": {
+        "contentHash": "1b32d67cd02d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-using-title": {
+        "contentHash": "44d27526e8ce",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-scaling-title": {
+        "contentHash": "0c9caed20ed3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-resilience-title": {
+        "contentHash": "efaf683ed8d6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-privacy-security-title": {
+        "contentHash": "f38d325999eb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-network-layer2-title": {
+        "contentHash": "50e762ae7601",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-network-layer2-chart-label": {
+        "contentHash": "7aa15d0d5f68",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-network-layer2-l2beat-description": {
+        "contentHash": "b5347c89616d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-network-layer2-growthepie-description": {
+        "contentHash": "ef0822fd4f66",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-block-explorers-title": {
+        "contentHash": "22da58fdc2b3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-block-explorers-chart-label": {
+        "contentHash": "3b631fd6a25f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-block-explorers-blockscout-description": {
+        "contentHash": "3afc4e4882ed",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-block-explorers-etherscan-description": {
+        "contentHash": "9d62f46f6cd1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-block-explorers-beaconchain-description": {
+        "contentHash": "6d7419e63e91",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-block-explorers-txcity-description": {
+        "contentHash": "c7c24fa97eb5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-block-explorers-panda-ops-description": {
+        "contentHash": "8be7eee46af6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-block-explorers-otterscan-description": {
+        "contentHash": "60f8102e9850",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-eth-asset-title": {
+        "contentHash": "97066c6c3d11",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-eth-asset-etherealize-description": {
+        "contentHash": "160bd5abb17d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-eth-asset-ultrasound-description": {
+        "contentHash": "13211b4eea41",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-eth-asset-ethismoney-description": {
+        "contentHash": "3e5a8b98957c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-gas-title": {
+        "contentHash": "e23a445d0fa7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-gas-etherscan-description": {
+        "contentHash": "0d42e32fba91",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-gas-ethgastracker-description": {
+        "contentHash": "1656d356f969",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-gas-blocknative-description": {
+        "contentHash": "695d21c70b57",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-gas-gasfees-description": {
+        "contentHash": "44f196b5d4fe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-defi-title": {
+        "contentHash": "3871f97fc9a1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-defi-defillama-description": {
+        "contentHash": "8f828f6edf73",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-defi-eigenphi-description": {
+        "contentHash": "cc1b8f34691a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-defi-defiscan-description": {
+        "contentHash": "08a360b952f1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-stablecoins-title": {
+        "contentHash": "2d46a862ce8b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-stablecoins-stablecoinswtf-description": {
+        "contentHash": "9008ec110f1c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-stablecoins-visa-description": {
+        "contentHash": "9d4ef3d333f4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-stablecoins-rwa-description": {
+        "contentHash": "a85e51e6253a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-nft-title": {
+        "contentHash": "35987a0f9ae7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-nft-etherscan-description": {
+        "contentHash": "2deecb805ded",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-nft-nftgo-description": {
+        "contentHash": "684233a6141e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-applications-title": {
+        "contentHash": "98e33b0f3104",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-applications-ecosystem-description": {
+        "contentHash": "1eb494e254e3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-applications-farcaster-description": {
+        "contentHash": "e7221fe63aa2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-applications-dappradar-description": {
+        "contentHash": "b8ebfffdbfe9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-adoption-title": {
+        "contentHash": "b33f29e19ff1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-adoption-ethereumadoption-description": {
+        "contentHash": "c3c304fc1683",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-adoption-cryptowerk-description": {
+        "contentHash": "f753895e32d9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-adoption-reserves-description": {
+        "contentHash": "21908983ac17",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-roadmap-title": {
+        "contentHash": "13e3c97dc45e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-roadmap-metric-label": {
+        "contentHash": "a55a2375c7db",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-roadmap-ethroadmap-description": {
+        "contentHash": "6d29d31d727d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-blobs-title": {
+        "contentHash": "6474f1fa0511",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-blobs-metric-total-label": {
+        "contentHash": "43814801e7b0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-blobs-metric-fee-label": {
+        "contentHash": "0bd1f69cf6f9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-blobs-blobscan-description": {
+        "contentHash": "5a7f46dea9ef",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-blobs-blobsguru-description": {
+        "contentHash": "cd6df95a2099",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-nodes-title": {
+        "contentHash": "7ac362063b9f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-nodes-nodewatch-description": {
+        "contentHash": "e100699e6d1c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-nodes-ethernodes-description": {
+        "contentHash": "1a64a57a3901",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-nodes-etherscan-description": {
+        "contentHash": "4faacaa33e10",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-nodes-luckystaker-description": {
+        "contentHash": "258c3ee96cd1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-nodes-pectrified-description": {
+        "contentHash": "be88c99a1950",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-nodes-validatorqueue-description": {
+        "contentHash": "b7e4cc5d4a50",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-network-resilience-title": {
+        "contentHash": "8ad1bc112fdd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-network-resilience-neutralitywatch-description": {
+        "contentHash": "8cb24a4f542b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-network-resilience-sunshine-description": {
+        "contentHash": "9167f84c35a5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-network-resilience-clientdiversity-description": {
+        "contentHash": "fc4b7e894da0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-network-resilience-supermajority-description": {
+        "contentHash": "a874a9eea985",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-attestations-title": {
+        "contentHash": "ca740e692731",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-attestations-eas-description": {
+        "contentHash": "446e8d58c3c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-relays-title": {
+        "contentHash": "df8ebcd185dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-relays-beaconchain-description": {
+        "contentHash": "0fd22f102f7e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-relays-ratednetwork-description": {
+        "contentHash": "afb0c056e45e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-relays-relayscan-description": {
+        "contentHash": "cd04ec35b88b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-mev-title": {
+        "contentHash": "bd1f8c9dfcb8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-mev-mevboost-description": {
+        "contentHash": "9008ec110f1c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-mev-mevwatch-description": {
+        "contentHash": "d6a290849128",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-wallets-title": {
+        "contentHash": "e7fd629133a1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-wallets-wallet-beat-description": {
+        "contentHash": "526d5c3e135a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-wallets-bundlebear-description": {
+        "contentHash": "dfbf926bedf1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-zk-adoption-title": {
+        "contentHash": "d0edc34a774e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-zk-adoption-ethproofs-description": {
+        "contentHash": "8e3b33a7c825",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-zk-adoption-l2beat-description": {
+        "contentHash": "5aa5e8dcd707",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-mempool-title": {
+        "contentHash": "f2845b922706",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-mempool-mempool-description": {
+        "contentHash": "a74751df3485",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-meta-title": {
+        "contentHash": "e4633ec1cc6d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-meta-description": {
+        "contentHash": "f7b8e45ffd3e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-hero-title": {
+        "contentHash": "e89b30aa1dc3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-hero-header": {
+        "contentHash": "da9eda0786bb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-hero-description": {
+        "contentHash": "f7b8e45ffd3e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-find-more": {
+        "contentHash": "a16bbd58a53c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-contribute-title": {
+        "contentHash": "97b0c61b99f6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-contribute-description": {
+        "contentHash": "bca7ab71e703",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-suggest-resource": {
+        "contentHash": "0aa03459a85c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-found-bug": {
+        "contentHash": "e56f6de96514",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-whats-on-this-page": {
+        "contentHash": "e8c4c6e24be7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-banner-notification-message": {
+        "contentHash": "091496672fbd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-share-feedback": {
+        "contentHash": "bd801fe8ecdf",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-resources-network-title",
+      "page-resources-using-title",
+      "page-resources-scaling-title",
+      "page-resources-resilience-title",
+      "page-resources-privacy-security-title",
+      "page-resources-network-layer2-title",
+      "page-resources-network-layer2-chart-label",
+      "page-resources-network-layer2-l2beat-description",
+      "page-resources-network-layer2-growthepie-description",
+      "page-resources-block-explorers-title",
+      "page-resources-block-explorers-chart-label",
+      "page-resources-block-explorers-blockscout-description",
+      "page-resources-block-explorers-etherscan-description",
+      "page-resources-block-explorers-beaconchain-description",
+      "page-resources-block-explorers-txcity-description",
+      "page-resources-block-explorers-panda-ops-description",
+      "page-resources-block-explorers-otterscan-description",
+      "page-resources-eth-asset-title",
+      "page-resources-eth-asset-etherealize-description",
+      "page-resources-eth-asset-ultrasound-description",
+      "page-resources-eth-asset-ethismoney-description",
+      "page-resources-gas-title",
+      "page-resources-gas-etherscan-description",
+      "page-resources-gas-ethgastracker-description",
+      "page-resources-gas-blocknative-description",
+      "page-resources-gas-gasfees-description",
+      "page-resources-defi-title",
+      "page-resources-defi-defillama-description",
+      "page-resources-defi-eigenphi-description",
+      "page-resources-defi-defiscan-description",
+      "page-resources-stablecoins-title",
+      "page-resources-stablecoins-stablecoinswtf-description",
+      "page-resources-stablecoins-visa-description",
+      "page-resources-stablecoins-rwa-description",
+      "page-resources-nft-title",
+      "page-resources-nft-etherscan-description",
+      "page-resources-nft-nftgo-description",
+      "page-resources-applications-title",
+      "page-resources-applications-ecosystem-description",
+      "page-resources-applications-farcaster-description",
+      "page-resources-applications-dappradar-description",
+      "page-resources-adoption-title",
+      "page-resources-adoption-ethereumadoption-description",
+      "page-resources-adoption-cryptowerk-description",
+      "page-resources-adoption-reserves-description",
+      "page-resources-roadmap-title",
+      "page-resources-roadmap-metric-label",
+      "page-resources-roadmap-ethroadmap-description",
+      "page-resources-blobs-title",
+      "page-resources-blobs-metric-total-label",
+      "page-resources-blobs-metric-fee-label",
+      "page-resources-blobs-blobscan-description",
+      "page-resources-blobs-blobsguru-description",
+      "page-resources-nodes-title",
+      "page-resources-nodes-nodewatch-description",
+      "page-resources-nodes-ethernodes-description",
+      "page-resources-nodes-etherscan-description",
+      "page-resources-nodes-luckystaker-description",
+      "page-resources-nodes-pectrified-description",
+      "page-resources-nodes-validatorqueue-description",
+      "page-resources-network-resilience-title",
+      "page-resources-network-resilience-neutralitywatch-description",
+      "page-resources-network-resilience-sunshine-description",
+      "page-resources-network-resilience-clientdiversity-description",
+      "page-resources-network-resilience-supermajority-description",
+      "page-resources-attestations-title",
+      "page-resources-attestations-eas-description",
+      "page-resources-relays-title",
+      "page-resources-relays-beaconchain-description",
+      "page-resources-relays-ratednetwork-description",
+      "page-resources-relays-relayscan-description",
+      "page-resources-mev-title",
+      "page-resources-mev-mevboost-description",
+      "page-resources-mev-mevwatch-description",
+      "page-resources-wallets-title",
+      "page-resources-wallets-wallet-beat-description",
+      "page-resources-wallets-bundlebear-description",
+      "page-resources-zk-adoption-title",
+      "page-resources-zk-adoption-ethproofs-description",
+      "page-resources-zk-adoption-l2beat-description",
+      "page-resources-mempool-title",
+      "page-resources-mempool-mempool-description",
+      "page-resources-meta-title",
+      "page-resources-meta-description",
+      "page-resources-hero-title",
+      "page-resources-hero-header",
+      "page-resources-hero-description",
+      "page-resources-find-more",
+      "page-resources-contribute-title",
+      "page-resources-contribute-description",
+      "page-resources-suggest-resource",
+      "page-resources-found-bug",
+      "page-resources-whats-on-this-page",
+      "page-resources-banner-notification-message",
+      "page-resources-share-feedback"
+    ]
+  },
+  "sourceCommitSha": "a8478a15398e05bbd134fb0d64575a708b5b3efd"
+}

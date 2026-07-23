@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import humanizeDuration from "humanize-duration"
 import { useLocale } from "next-intl"
 
 import type { NetworkUpgradeDetails } from "@/lib/types"
@@ -9,6 +8,7 @@ import type { NetworkUpgradeDetails } from "@/lib/types"
 import { BaseLink } from "@/components/ui/Link"
 
 import { dateTimeFormat } from "@/lib/utils/date"
+import { formatDuration } from "@/lib/utils/time"
 
 import networkUpgradeSummaryData from "@/data/networkUpgradeSummaryData"
 
@@ -64,21 +64,12 @@ const UpgradeCountdown = () => {
       // If the date has past, set the countdown to null
       if (timeLeft < 0) return setUpgradeCountdown(null)
 
-      const baseOptions = {
-        units: ["d", "h", "m", "s"],
-        round: true,
-      }
-
-      try {
-        setUpgradeCountdown(
-          humanizeDuration(timeLeft, {
-            ...baseOptions,
-            language: locale,
-          })
-        )
-      } catch {
-        setUpgradeCountdown(humanizeDuration(timeLeft, baseOptions))
-      }
+      setUpgradeCountdown(
+        formatDuration(timeLeft, locale, {
+          units: ["d", "h", "m", "s"],
+          round: true,
+        })
+      )
     }
     countdown()
 
@@ -106,7 +97,7 @@ const UpgradeCountdown = () => {
         {scalingUpgradeCountdown ? (
           scalingUpgradeCountdown
         ) : (
-          <div className="rounded-full bg-success px-2 py-1 text-xs font-normal uppercase text-success-light">
+          <div className="rounded-full bg-success px-2 py-1 text-xs font-normal text-success-light uppercase">
             Live Since{" "}
             {dateTimeFormat(locale, { timeZone: "UTC" }).format(
               new Date(upgradeDate)

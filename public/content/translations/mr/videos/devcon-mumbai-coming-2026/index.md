@@ -1,0 +1,19 @@
+---
+title: "Devcon मुंबई - 3-6 नोव्हेंबर 2026 रोजी येत आहे"
+description: "नोव्हेंबर 2026 मध्ये मुंबई, भारत येथे होणाऱ्या इथेरियम फाउंडेशनची प्रमुख कम्युनिटी परिषद, Devcon चा अधिकृत घोषणा ट्रेलर."
+lang: mr
+youtubeId: "st_A7rRr9tk"
+uploadDate: 2025-11-21
+duration: "0:00:45"
+educationLevel: beginner
+topic:
+  - "community-stories"
+  - "community"
+format: explainer
+author: "इथेरियम फाउंडेशन"
+breadcrumb: "Devcon मुंबई"
+---
+
+3-6 नोव्हेंबर 2026 रोजी मुंबई, भारत येथे नियोजित, डेव्हलपर्स आणि बिल्डर्ससाठी इथेरियम फाउंडेशनची प्रमुख परिषद, **Devcon 8** चा अधिकृत घोषणा ट्रेलर.
+
+*या व्हिडिओसाठी कोणतीही ट्रान्सक्रिप्ट उपलब्ध नाही. YouTube वर इथेरियम फाउंडेशनने प्रकाशित केलेला [मूळ व्हिडिओ](https://www.youtube.com/watch?v=st_A7rRr9tk) पहा.*

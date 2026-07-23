@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "locale": "es",
+  "translatedAt": "2026-06-19T23:44:18.335Z",
+  "englishManifestHash": "3eabc09f2620",
+  "placeholderOrder": [
+    "LINK-78ab7f",
+    "LINK-3632ad",
+    "LINK-ada27d",
+    "LINK-3a0704",
+    "LINK-d3a0e2",
+    "LINK-72343e",
+    "LINK-929b76",
+    "LINK-b3fafc",
+    "LINK-7f1116",
+    "LINK-936064",
+    "LINK-1a7aa6",
+    "LINK-d3df1f",
+    "LINK-32e8ad",
+    "LINK-7fdb49"
+  ],
+  "placeholderMap": {
+    "LINK-78ab7f": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#smart-contract"
+      }
+    },
+    "LINK-3632ad": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#consensus-client"
+      }
+    },
+    "LINK-ada27d": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#block"
+      }
+    },
+    "LINK-3a0704": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/#finality"
+      }
+    },
+    "LINK-d3a0e2": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#pos"
+      }
+    },
+    "LINK-72343e": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#pow"
+      }
+    },
+    "LINK-929b76": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739"
+      }
+    },
+    "LINK-b3fafc": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#fork"
+      }
+    },
+    "LINK-7f1116": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#finality"
+      }
+    },
+    "LINK-936064": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/single-slot-finality/"
+      }
+    },
+    "LINK-1a7aa6": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#validator"
+      }
+    },
+    "LINK-d3df1f": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#node"
+      }
+    },
+    "LINK-32e8ad": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#staking-pool"
+      }
+    },
+    "LINK-7fdb49": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/secret-leader-election"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T23:44:18.335Z",
+      "status": "success"
+    }
+  }
+}

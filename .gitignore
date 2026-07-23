@@ -10,6 +10,7 @@
 /coverage
 tests/__results__/
 tests/__report__/
+test-results/
 
 # next.js
 /.next/
@@ -42,10 +43,11 @@ pnpm-lock.yaml.bak
 next-env.d.ts
 
 # rss feeds
-feed.xml
+/feed.xml
 
-# Sitemaps
-sitemap*.xml
+# Sitemaps (root-level generated output only; anchored so the app/sitemap.xml/
+# route handler that serves the <sitemapindex> stays tracked -- mirrors /feed.xml)
+/sitemap*.xml
 
 # Robots.txt
 robots.txt
@@ -64,9 +66,16 @@ src/data/crowdin/bucketsAwaitingReviewReport.csv
 build-storybook.log
 build-archive.log
 storybook-static
+storybook-static-pages
 
 # Trigger
 .trigger
 
 # Git worktrees for Claude commands
 .worktrees
+
+# Hide skill eval workspaces
+.claude/skills/*-workspace
+
+# Playwright CLI session state
+.playwright-cli

@@ -1,10 +1,9 @@
 ---
-title: Sumber daya untuk penerjemah
+title: Sumber Daya
+metaTitle: Sumber daya untuk penerjemah
 lang: id
 description: Sumber daya yang berguna untuk penerjemah ethereum.org
 ---
-
-# Sumber daya {#resources}
 
 Anda dapat menemukan beberapa panduan dan alat yang berguna untuk penerjemah ethereum.org, serta komunitas terjemahan dan pembaruan di bawah ini.
 
@@ -19,20 +18,20 @@ Anda dapat menemukan beberapa panduan dan alat yang berguna untuk penerjemah eth
 - [Linguee](https://www.linguee.com/)
   _– mesin pencari untuk terjemahan dan kamus yang memungkinkan pencarian berdasarkan kata atau frasa_
 - [Pencarian istilah Proz](https://www.proz.com/search/)
-  _– basis data kamus terjemahan dan glosarium untuk istilah khusus_
+  _– basis data kamus terjemahan dan glosarium untuk istilah-istilah khusus_
 - [Eurotermbank](https://www.eurotermbank.com/)
   _– koleksi terminologi Eropa dalam 42 bahasa_
 
 ## Komunitas {#communities}
 
 - [Grup terjemahan Discord khusus bahasa](https://discord.gg/ethereum-org)
-  _– inisiatif untuk menghubungkan penerjemah ethereum.org ke Grup Terjemahan_
+  _– sebuah inisiatif untuk menghubungkan penerjemah ethereum.org ke Grup Terjemahan_
 - [Grup penerjemah bahasa Mandarin](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– Halaman Notion untuk koordinasi yang lebih mudah antara penerjemah bahasa Mandarin_
 
 ## Pembaruan terbaru {#latest-updates}
 
-Untuk terus mengikuti perkembangan Program Terjemahan terbaru, Anda dapat mengikuti [blog Ethereum Foundation](https://blog.ethereum.org/):
+Untuk terus mengikuti perkembangan terbaru Program Terjemahan, Anda dapat mengikuti [blog Yayasan Ethereum](https://blog.ethereum.org/):
 
 - [Pembaruan pencapaian Oktober 2021](https://blog.ethereum.org/2021/10/04/translation-program-update)
 - [Pembaruan pencapaian Desember 2020](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
@@ -41,9 +40,9 @@ Untuk terus mengikuti perkembangan Program Terjemahan terbaru, Anda dapat mengik
 
 ## Jam kerja untuk penerjemah {#office-hours}
 
-Kami memiliki jam kerja (office hours) untuk penerjemah pada hari Rabu kedua setiap bulannya. Sesi ini diadakan di saluran suara #office-hours di [Discord ethereum.org](https://discord.gg/ethereum-org), di mana Anda juga dapat menemukan waktu yang tepat dan detail tambahan.
+Kami memiliki jam kerja untuk penerjemah pada hari Rabu minggu kedua setiap bulannya. Sesi ini diadakan di saluran suara #office-hours di [Discord ethereum.org](https://discord.gg/ethereum-org), di mana Anda juga dapat menemukan waktu yang tepat dan detail tambahan.
 
-Jam kerja memungkinkan penerjemah kami untuk mengajukan pertanyaan tentang proses terjemahan, memberikan umpan balik pada program, berbagi ide mereka, atau sekadar mengobrol dengan tim inti ethereum.org.
-Terakhir, kami ingin menggunakan panggilan ini untuk mengomunikasikan perkembangan terbaru dengan Program Terjemahan dan membagikan kiat serta instruksi utama dengan kontributor kami.
+Jam kerja memungkinkan penerjemah kami untuk mengajukan pertanyaan tentang proses terjemahan, memberikan umpan balik pada program, membagikan ide mereka, atau sekadar mengobrol dengan tim inti ethereum.org.
+Terakhir, kami ingin menggunakan panggilan ini untuk mengomunikasikan perkembangan terbaru dengan Program Terjemahan dan membagikan kiat serta instruksi utama kepada kontributor kami.
 
 Jika Anda adalah penerjemah ethereum.org atau ingin menjadi salah satunya, jangan ragu untuk bergabung dengan kami selama salah satu sesi ini.

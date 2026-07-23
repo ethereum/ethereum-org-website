@@ -1,5 +1,3 @@
-// TODO: Fix RTL compatibility
-
 import * as React from "react"
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
@@ -9,6 +7,8 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
+
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 type CarouselApi = UseEmblaCarouselType[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
@@ -59,8 +59,11 @@ const Carousel = React.forwardRef<
     },
     ref
   ) => {
+    const { isRtl, direction } = useRtlFlip()
+
     const [carouselRef, api] = useEmblaCarousel(
       {
+        direction,
         ...opts,
         axis: orientation === "horizontal" ? "x" : "y",
       },
@@ -90,13 +93,21 @@ const Carousel = React.forwardRef<
       (event: React.KeyboardEvent<HTMLDivElement>) => {
         if (event.key === "ArrowLeft") {
           event.preventDefault()
-          scrollPrev()
+          if (isRtl) {
+            scrollNext()
+          } else {
+            scrollPrev()
+          }
         } else if (event.key === "ArrowRight") {
           event.preventDefault()
-          scrollNext()
+          if (isRtl) {
+            scrollPrev()
+          } else {
+            scrollNext()
+          }
         }
       },
-      [scrollPrev, scrollNext]
+      [scrollPrev, scrollNext, isRtl]
     )
 
     React.useEffect(() => {
@@ -137,6 +148,7 @@ const Carousel = React.forwardRef<
       >
         <div
           ref={ref}
+          dir={opts?.direction ?? direction}
           onKeyDownCapture={handleKeyDown}
           className={cn("relative", className)}
           role="region"
@@ -163,7 +175,7 @@ const CarouselContent = React.forwardRef<
         ref={ref}
         className={cn(
           "flex",
-          orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
+          orientation === "horizontal" ? "-ms-4" : "-mt-4 flex-col",
           className
         )}
         {...props}
@@ -210,14 +222,14 @@ const CarouselPrevious = React.forwardRef<
         "absolute h-8 w-8 rounded-full",
         orientation === "horizontal"
           ? "start-5 top-1/2 -translate-y-1/2"
-          : "-top-12 start-1/2 -translate-x-1/2 rotate-90",
+          : "start-1/2 -top-12 -translate-x-1/2 rotate-90 rtl:translate-x-1/2",
         className
       )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
     >
-      <ChevronLeft className="size-6" />
+      <ChevronLeft className="size-6 rtl:-scale-x-100" />
       <span className="sr-only">Previous slide</span>
     </Button>
   )
@@ -239,14 +251,14 @@ const CarouselNext = React.forwardRef<
         "absolute h-8 w-8 rounded-full",
         orientation === "horizontal"
           ? "end-5 top-1/2 -translate-y-1/2"
-          : "-bottom-12 start-1/2 -translate-x-1/2 rotate-90",
+          : "start-1/2 -bottom-12 -translate-x-1/2 rotate-90 rtl:translate-x-1/2",
         className
       )}
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
     >
-      <ChevronRight className="size-6" />
+      <ChevronRight className="size-6 rtl:-scale-x-100" />
       <span className="sr-only">Next slide</span>
     </Button>
   )

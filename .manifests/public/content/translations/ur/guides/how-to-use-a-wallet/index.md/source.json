@@ -1,0 +1,358 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/guides/how-to-use-a-wallet/index.md",
+  "generatedAt": "2026-06-30T00:51:02.868Z",
+  "rootHash": "6472e979e4f6",
+  "tree": {
+    "contentHash": "0c0e8edf71ad",
+    "anchorHash": "41df80ecf2d3",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "2b58bdf9f156",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:metaTitle": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "be35cf45646e"
+      },
+      "frontmatter:description": {
+        "contentHash": "dd3f1590caa4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:1": {
+        "contentHash": "79c8cb2345f2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "98647d7f95d2",
+        "anchorHash": "6baff4bd9072"
+      },
+      "prose:2": {
+        "contentHash": "cdb4ee2aea69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "open-your-wallet": {
+        "contentHash": "34194253c54b",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "a3782e38d259",
+        "children": {
+          "_label": {
+            "contentHash": "a3782e38d259",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "d97f42fb5e68",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "receive-cryptocurrency": {
+        "contentHash": "9c70efb44f33",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "2c293cd66b44",
+        "children": {
+          "_label": {
+            "contentHash": "2c293cd66b44",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "631fce52c57e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "send-cryptocurrency": {
+        "contentHash": "f36f374b4211",
+        "anchorHash": "3fcf94c17eca",
+        "labelHash": "8de935ce765c",
+        "children": {
+          "_label": {
+            "contentHash": "8de935ce765c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "ee8476571a74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "43d3a19810bc",
+            "anchorHash": "5f926946d707"
+          },
+          "component:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "fda8c3f8e8ed",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "image:0",
+          "component:3",
+          "prose:0"
+        ]
+      },
+      "connecting-to-projects": {
+        "contentHash": "9afa678bda86",
+        "anchorHash": "184e459422e0",
+        "labelHash": "efd3be6ddfae",
+        "children": {
+          "_label": {
+            "contentHash": "efd3be6ddfae",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "c856bf50b53c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "30ae9c966d4b",
+            "anchorHash": "6feaf9f71edc"
+          },
+          "prose:4": {
+            "contentHash": "5312a2a52af6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:1": {
+            "contentHash": "d7dab77fd0e2",
+            "anchorHash": "467faa2b3792"
+          },
+          "prose:5": {
+            "contentHash": "c1719caaee3a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "46de0975e258",
+            "anchorHash": "6c7d348a0523"
+          },
+          "prose:6": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:8": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:9": {
+            "contentHash": "8184307f03ac",
+            "anchorHash": "3f8b8c1f14e1",
+            "children": {
+              "attr:variant": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "2937013f2181"
+              },
+              "component:0": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "491aaf33b92d",
+                "children": {
+                  "attr:text": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "252d79a64486"
+                  }
+                }
+              },
+              "component:1": {
+                "contentHash": "d667df3337db",
+                "anchorHash": "cb22b4d52cd6",
+                "children": {
+                  "attr:className": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "e796b9e20a49"
+                  },
+                  "prose:0": {
+                    "contentHash": "9aec37764785",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "component:1": {
+                    "contentHash": "7a1de0a9b8a3",
+                    "anchorHash": "1b106ab55d9a",
+                    "children": {
+                      "attr:href": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "65c77e41e1a7"
+                      },
+                      "prose:0": {
+                        "contentHash": "7816680efa5d",
+                        "anchorHash": "e3b0c44298fc"
+                      }
+                    },
+                    "childrenOrder": [
+                      "attr:href",
+                      "prose:0"
+                    ]
+                  }
+                },
+                "childrenOrder": [
+                  "attr:className",
+                  "prose:0",
+                  "component:1"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "attr:variant",
+              "component:0",
+              "component:1"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "image:0",
+          "prose:4",
+          "image:1",
+          "prose:5",
+          "link:2",
+          "prose:6",
+          "component:8",
+          "component:9"
+        ]
+      },
+      "frequently-asked-questions": {
+        "contentHash": "4e7f7f0decc7",
+        "anchorHash": "c40a8f19a11b",
+        "labelHash": "e956a9404b46",
+        "children": {
+          "_label": {
+            "contentHash": "e956a9404b46",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "if-i-own-an-eth-address-do-i-own-the-same-address-on-other-blockchains": {
+            "contentHash": "691781051e61",
+            "anchorHash": "dbcfae7de50a",
+            "labelHash": "07be9b417fa3",
+            "children": {
+              "_label": {
+                "contentHash": "07be9b417fa3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "aeb91d29da24",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "a330395cc0a5",
+                "anchorHash": "07d2711554ff"
+              },
+              "prose:2": {
+                "contentHash": "97edda1b7966",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "can-i-use-the-same-address-on-multiple-devices": {
+            "contentHash": "7b8005a7a66b",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "792453032d5c",
+            "children": {
+              "_label": {
+                "contentHash": "792453032d5c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "b2d5a182b4ad",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "i-have-not-received-the-crypto-where-can-i-check-the-status-of-a-transaction": {
+            "contentHash": "5d5e8235e8de",
+            "anchorHash": "6282a1a63e39",
+            "labelHash": "f70581c5fe7a",
+            "children": {
+              "_label": {
+                "contentHash": "f70581c5fe7a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "7e7d2669195b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "8e6a6cd85a73",
+                "anchorHash": "05e131527bc2"
+              },
+              "prose:2": {
+                "contentHash": "2d4b9d5a5077",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "can-i-cancel-or-return-transactions": {
+            "contentHash": "350aab317eb9",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "1d193d58a8cb",
+            "children": {
+              "_label": {
+                "contentHash": "1d193d58a8cb",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "987b3a85a8a5",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "if-i-own-an-eth-address-do-i-own-the-same-address-on-other-blockchains",
+          "can-i-use-the-same-address-on-multiple-devices",
+          "i-have-not-received-the-crypto-where-can-i-check-the-status-of-a-transaction",
+          "can-i-cancel-or-return-transactions"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:metaTitle",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "open-your-wallet",
+      "receive-cryptocurrency",
+      "send-cryptocurrency",
+      "connecting-to-projects",
+      "frequently-asked-questions"
+    ]
+  },
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+}

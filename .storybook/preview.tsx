@@ -10,9 +10,6 @@ import nextIntl, { baseLocales } from "./next-intl"
 import { withNextThemes } from "./withNextThemes"
 
 import "../src/styles/global.css"
-import "../src/styles/docsearch.css"
-
-import "@docsearch/css"
 
 const inter = Inter({
   subsets: ["latin"],

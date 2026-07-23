@@ -1,0 +1,80 @@
+name: Sync External Descriptions
+
+on:
+  schedule:
+    # Run weekly on Mondays at 02:00 UTC
+    - cron: "0 2 * * MON"
+  workflow_dispatch: # Allow manual runs
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up git
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Action"
+
+      - name: Fetch latest dev
+        run: git fetch origin dev
+
+      - name: Generate timestamp
+        run: |
+          echo "TIMESTAMP=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
+          echo "READABLE_DATE=$(date +'%B %-d')" >> $GITHUB_ENV
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run extraction script
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_BLOBS_TOKEN: ${{ secrets.NETLIFY_BLOBS_TOKEN }}
+        run: npx tsx src/scripts/syncExternalDescriptions.ts
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if git diff --quiet src/intl/en/page-app-descriptions.json src/intl/en/page-developers-tools-descriptions.json 2>/dev/null; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create branch, commit, push, and open PR
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          BRANCH="i18n/external-descriptions-${{ env.TIMESTAMP }}"
+
+          git checkout -b "$BRANCH" origin/dev
+          git add src/intl/en/page-app-descriptions.json src/intl/en/page-developers-tools-descriptions.json
+          git commit -m "i18n: sync external app and tool descriptions"
+          git push origin "$BRANCH"
+
+          echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+          gh pr create \
+            --base dev \
+            --head "$BRANCH" \
+            --title "i18n: sync external descriptions - ${{ env.READABLE_DATE }}" \
+            --body "Automated sync of app and tool descriptions from external data sources into i18n namespace files for translation.
+
+          - \`src/intl/en/page-app-descriptions.json\` -- app descriptions from Google Sheets
+          - \`src/intl/en/page-developers-tools-descriptions.json\` -- tool descriptions from BuidlGuidl
+
+          Once merged, these strings will be picked up by the translation pipeline and translated into all 24 supported locales.
+
+          This PR was created automatically by the \`i18n-sync-external-descriptions\` workflow." \
+            --label "translation 🌍"

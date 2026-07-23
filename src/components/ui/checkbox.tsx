@@ -15,12 +15,12 @@ export type CheckboxProps = React.ComponentPropsWithoutRef<
 >
 
 const Checkbox = React.forwardRef<
-  React.ElementRef<typeof CheckboxPrimitive.Root>,
+  React.ComponentRef<typeof CheckboxPrimitive.Root>,
   CheckboxProps
 >(({ className, ...props }, ref) => (
   <CheckboxPrimitive.Root
     ref={ref}
-    className={cn(commonControlClasses, "rounded-sm", className)}
+    className={cn(commonControlClasses, "rounded-xs", className)}
     {...props}
   >
     <CheckboxPrimitive.Indicator className="grid place-items-center">

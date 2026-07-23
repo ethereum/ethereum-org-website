@@ -1,4 +1,4 @@
-import { takeSnapshot, test } from "@chromatic-com/playwright"
+import { test } from "@playwright/test"
 
 import { FindWalletPage } from "./pages/FindWalletPage"
 
@@ -10,11 +10,9 @@ test.describe("Find Wallet Page", () => {
     await findWalletPage.goto()
   })
 
-  test("loads successfully", async ({ page }, testInfo) => {
-    // ensure page is ready before taking snapshot
+  test("loads successfully", async () => {
     await findWalletPage.waitForPageReady()
     await findWalletPage.verifyPageLoaded()
-    await takeSnapshot(page, "find-wallet-initial", testInfo)
   })
 
   test("personas filter updates counter and list", async () => {

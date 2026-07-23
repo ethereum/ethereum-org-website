@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "locale": "sw",
+  "translatedAt": "2026-04-30T20:51:06.703Z",
+  "englishManifestHash": "fd45482206c1",
+  "placeholderOrder": [
+    "HTML-TAG-0",
+    "HTML-TAG-1",
+    "HTML-TAG-2"
+  ],
+  "placeholderMap": {
+    "HTML-TAG-0": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/contributing",
+        "target": "_blank"
+      }
+    },
+    "HTML-TAG-1": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://github.com/ethereum/ethereum-org-website/issues/new?label%3A%22bug%20%F0%9F%90%9B%22&template=bug_report.yaml"
+      }
+    },
+    "HTML-TAG-2": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://discord.gg/ethereum-org",
+        "target": "_blank"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-04-30T20:51:06.703Z",
+      "status": "success"
+    }
+  }
+}

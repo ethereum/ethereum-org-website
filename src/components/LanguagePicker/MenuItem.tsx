@@ -40,7 +40,7 @@ const MenuItem = ({ displayInfo, ...props }: ItemProps) => {
               {targetName}
             </p>
           </div>
-          <p className="text-xs uppercase text-body">{sourceName}</p>
+          <p className="text-xs text-body uppercase">{sourceName}</p>
         </div>
         {isCurrent && (
           <Check

@@ -1,0 +1,751 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/consensus-mechanisms/pos/faqs/index.md",
+  "generatedAt": "2026-06-16T22:08:23.761Z",
+  "rootHash": "ee424456010c",
+  "tree": {
+    "contentHash": "b11e968d16b8",
+    "anchorHash": "ea015987fce6",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "a3d458e1bd1e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "3c4a06adc3af",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "what-is-proof-of-stake": {
+        "contentHash": "c2656a553603",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "53408d59293b",
+        "children": {
+          "_label": {
+            "contentHash": "53408d59293b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4bb0ac8fcbd1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "comparison-to-proof-of-work": {
+        "contentHash": "5470cb27a825",
+        "anchorHash": "f8cd17277cb3",
+        "labelHash": "47b693a8aea9",
+        "children": {
+          "_label": {
+            "contentHash": "47b693a8aea9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "81570ec917a9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "2d3e03f8d990",
+            "anchorHash": "9897015ee5f5"
+          },
+          "prose:2": {
+            "contentHash": "4473de470f86",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:4": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "5edfe2ccd214",
+            "children": {
+              "attr:slug": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "9780d292c0ac"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2",
+          "component:4"
+        ]
+      },
+      "is-pos-energy-efficient": {
+        "contentHash": "7332b9ced79d",
+        "anchorHash": "c5c1e11d8b9d",
+        "labelHash": "c3c008dfb457",
+        "children": {
+          "_label": {
+            "contentHash": "c3c008dfb457",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "85d201dfaef9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "1819218171ea",
+            "anchorHash": "15b2dc43a23c"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "is-pos-secure": {
+        "contentHash": "4519bc47b142",
+        "anchorHash": "29c404be7146",
+        "labelHash": "aa6ea217a5b3",
+        "children": {
+          "_label": {
+            "contentHash": "aa6ea217a5b3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "d119a2dfd58d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "78ea8ebd4207",
+            "anchorHash": "43f9202ea673"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "64100a5d43c5",
+            "anchorHash": "e053a407c1ef"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1"
+        ]
+      },
+      "does-pos-make-ethereum-cheaper": {
+        "contentHash": "42674a2e641a",
+        "anchorHash": "4cbc98ebae21",
+        "labelHash": "3c13228a2611",
+        "children": {
+          "_label": {
+            "contentHash": "3c13228a2611",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "22f3a6eec1d3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "d35aaa4b0530",
+            "anchorHash": "ddd35011a30f"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "what-are-nodes-clients-and-validators": {
+        "contentHash": "bb300ea780fb",
+        "anchorHash": "3bb10516a8ea",
+        "labelHash": "1f60ef5daa87",
+        "children": {
+          "_label": {
+            "contentHash": "1f60ef5daa87",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "abeba4b1520b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "570ae8fe42c6",
+            "anchorHash": "c683d7a1d9ea"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "69d6e676fc84",
+            "anchorHash": "f4d8b626ab98"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1"
+        ]
+      },
+      "is-pos-new": {
+        "contentHash": "ffe83d2630ce",
+        "anchorHash": "dcbf4296872c",
+        "labelHash": "630906bbbf22",
+        "children": {
+          "_label": {
+            "contentHash": "630906bbbf22",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "deac9375fa27",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "78f819021160",
+            "anchorHash": "25d9227a1516"
+          },
+          "prose:2": {
+            "contentHash": "ae34eb2f935b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "why-is-ethereum-pos-special": {
+        "contentHash": "9dfc0f6606f5",
+        "anchorHash": "4d0812a60f93",
+        "labelHash": "0115f5ead72d",
+        "children": {
+          "_label": {
+            "contentHash": "0115f5ead72d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "2d8e92b0f1ec",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "551f0a8a488e",
+            "anchorHash": "84bfd2f18351"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0"
+        ]
+      },
+      "what-is-slashing": {
+        "contentHash": "706140c8ec12",
+        "anchorHash": "34d2e0ad0848",
+        "labelHash": "9afc7f42cbad",
+        "children": {
+          "_label": {
+            "contentHash": "9afc7f42cbad",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "9aef08231c4d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "6003e5118ca5",
+            "anchorHash": "13e9d908befb"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0"
+        ]
+      },
+      "why-32-eth": {
+        "contentHash": "053c64e5de7a",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "75d03505fed3",
+        "children": {
+          "_label": {
+            "contentHash": "75d03505fed3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "25f85ec5b83b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "how-are-validators-selected": {
+        "contentHash": "228eec3d948f",
+        "anchorHash": "e620217e2c40",
+        "labelHash": "ad75472a41ab",
+        "children": {
+          "_label": {
+            "contentHash": "ad75472a41ab",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "56a0ff9290b1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "83df95b1f23a",
+            "anchorHash": "3de222b3d77c"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0"
+        ]
+      },
+      "what-is-stake-grinding": {
+        "contentHash": "7d7cafe92ddf",
+        "anchorHash": "34eb6fde1424",
+        "labelHash": "eb6559fb1b99",
+        "children": {
+          "_label": {
+            "contentHash": "eb6559fb1b99",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "cfa8ebfabb8f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "ae631f7447c3",
+            "anchorHash": "8ac4a21015d5"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0"
+        ]
+      },
+      "what-is-social-slashing": {
+        "contentHash": "3fcb23f13aa3",
+        "anchorHash": "48b3661c1a7f",
+        "labelHash": "b19d93e84beb",
+        "children": {
+          "_label": {
+            "contentHash": "b19d93e84beb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "519c8c82e9a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "d4f70365228a",
+            "anchorHash": "c9440e712fec"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "3fd5bb98faff",
+            "anchorHash": "6655fc8a8031"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1"
+        ]
+      },
+      "will-i-get-slashed": {
+        "contentHash": "a4926598aa68",
+        "anchorHash": "b3ab06445da5",
+        "labelHash": "bdce56a91cb4",
+        "children": {
+          "_label": {
+            "contentHash": "bdce56a91cb4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "78fa00b8e156",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "4a3ef99aa0f3",
+            "anchorHash": "68b934f998b9"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0"
+        ]
+      },
+      "what-is-nothing-at-stake-problem": {
+        "contentHash": "20325a12f789",
+        "anchorHash": "fe5839aa8824",
+        "labelHash": "a84700f5e428",
+        "children": {
+          "_label": {
+            "contentHash": "a84700f5e428",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "a1f150fa84b1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "60c117e868e7",
+            "anchorHash": "b1976764c4b9"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0"
+        ]
+      },
+      "what-is-a-fork-choice-algorithm": {
+        "contentHash": "4654e25cbbc0",
+        "anchorHash": "b7f18997e7a8",
+        "labelHash": "fb3d216958b2",
+        "children": {
+          "_label": {
+            "contentHash": "fb3d216958b2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "229f1ec470be",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "3b5afebbd9c6",
+            "anchorHash": "d6637f385b84"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0"
+        ]
+      },
+      "what-is-finality": {
+        "contentHash": "a958254ad0f6",
+        "anchorHash": "7040a9bcec4e",
+        "labelHash": "81e91b775036",
+        "children": {
+          "_label": {
+            "contentHash": "81e91b775036",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "0e43b4f63ffb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "174713ccf822",
+            "anchorHash": "2d1e611ccfd5"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0"
+        ]
+      },
+      "what-is-weak-subjectivity": {
+        "contentHash": "42be85680c30",
+        "anchorHash": "b6641b802851",
+        "labelHash": "c94d1947a250",
+        "children": {
+          "_label": {
+            "contentHash": "c94d1947a250",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "160945cbd8a5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "c6b1645940ad",
+            "anchorHash": "bc9e565fc25f"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0"
+        ]
+      },
+      "is-pos-censorship-resistant": {
+        "contentHash": "7677e27ee6ff",
+        "anchorHash": "2705048d9a69",
+        "labelHash": "920e3df24d90",
+        "children": {
+          "_label": {
+            "contentHash": "920e3df24d90",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "fc923e40bd15",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "d7d8d30b021a",
+            "anchorHash": "a59cfb5a6da3"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0"
+        ]
+      },
+      "pos-51-attack": {
+        "contentHash": "6da0053c003b",
+        "anchorHash": "d2eb532b1c9b",
+        "labelHash": "1481eb8ce035",
+        "children": {
+          "_label": {
+            "contentHash": "1481eb8ce035",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "6dbc1bb2cc09",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "912687a72f2b",
+            "anchorHash": "43f9202ea673"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0"
+        ]
+      },
+      "what-is-social-coordination": {
+        "contentHash": "35600cc3ab8b",
+        "anchorHash": "8f9a8f06d2ae",
+        "labelHash": "abdbc20e8f21",
+        "children": {
+          "_label": {
+            "contentHash": "abdbc20e8f21",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "c8c671dc1c95",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "ff87c0169866",
+            "anchorHash": "84df26aecfcf"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0"
+        ]
+      },
+      "do-rich-get-richer": {
+        "contentHash": "8821ee196340",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "e5cec38fef01",
+        "children": {
+          "_label": {
+            "contentHash": "e5cec38fef01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "7973a76c0d0a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "is-pos-decentralized": {
+        "contentHash": "a048ee49e01e",
+        "anchorHash": "5bb74b5beb13",
+        "labelHash": "d5f736f63484",
+        "children": {
+          "_label": {
+            "contentHash": "d5f736f63484",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "c0b7f4102f5e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "3379bc591f1e",
+            "anchorHash": "27d1e9bde4a1"
+          },
+          "prose:3": {
+            "contentHash": "8a08da464625",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "3541623aa685",
+            "anchorHash": "ab7a165c0027"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1"
+        ]
+      },
+      "why-can-i-only-stake-eth": {
+        "contentHash": "b6fce3981b51",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "ceae929d9596",
+        "children": {
+          "_label": {
+            "contentHash": "ceae929d9596",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "e5eb11dd23b5",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "is-ethereum-the-only-pos-blockchain": {
+        "contentHash": "19436068f244",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "e55075c07d98",
+        "children": {
+          "_label": {
+            "contentHash": "e55075c07d98",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ebcf56aa5118",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "what-is-the-merge": {
+        "contentHash": "e305929fb220",
+        "anchorHash": "f4777115f524",
+        "labelHash": "faab1f792c45",
+        "children": {
+          "_label": {
+            "contentHash": "faab1f792c45",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "a5329fa5adaf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "45d5bc5b7135",
+            "anchorHash": "4aaed03eb1e4"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0"
+        ]
+      },
+      "what-are-liveness-and-safety": {
+        "contentHash": "3393152ffde6",
+        "anchorHash": "7d7e29984606",
+        "labelHash": "02b8cebc65bc",
+        "children": {
+          "_label": {
+            "contentHash": "02b8cebc65bc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "b9a874875f9c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "d4a840e0e4b5",
+            "anchorHash": "8b5f98890e67"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "what-is-proof-of-stake",
+      "comparison-to-proof-of-work",
+      "is-pos-energy-efficient",
+      "is-pos-secure",
+      "does-pos-make-ethereum-cheaper",
+      "what-are-nodes-clients-and-validators",
+      "is-pos-new",
+      "why-is-ethereum-pos-special",
+      "what-is-slashing",
+      "why-32-eth",
+      "how-are-validators-selected",
+      "what-is-stake-grinding",
+      "what-is-social-slashing",
+      "will-i-get-slashed",
+      "what-is-nothing-at-stake-problem",
+      "what-is-a-fork-choice-algorithm",
+      "what-is-finality",
+      "what-is-weak-subjectivity",
+      "is-pos-censorship-resistant",
+      "pos-51-attack",
+      "what-is-social-coordination",
+      "do-rich-get-richer",
+      "is-pos-decentralized",
+      "why-can-i-only-stake-eth",
+      "is-ethereum-the-only-pos-blockchain",
+      "what-is-the-merge",
+      "what-are-liveness-and-safety"
+    ]
+  },
+  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+}

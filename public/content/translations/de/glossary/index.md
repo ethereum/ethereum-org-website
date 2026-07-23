@@ -1,10 +1,10 @@
 ---
-title: Ethereum-Glossar
-description: "Ein unvollständiges Glossar technischer und nicht-technischer Begriffe im Zusammenhang mit Ethereum"
+title: Glossar
+metaTitle: Ethereum-Glossar
+description: Ein unvollständiges Glossar technischer und nicht-technischer Begriffe im Zusammenhang mit Ethereum
 lang: de
+authors: ["Andreas Antonopoulos"]
 ---
-
-# Glossar {#ethereum-glossary}
 
 ## \# {#section-numbers}
 

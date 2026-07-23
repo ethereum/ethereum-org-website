@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-contributing-translation-program-acknowledgements.json",
+  "generatedAt": "2026-06-16T15:27:30.276Z",
+  "rootHash": "6b3fa4979a73",
+  "tree": {
+    "contentHash": "a5c4f313f3e8",
+    "anchorHash": "7bcbbe86fc73",
+    "children": {
+      "page-contributing-translation-program-acknowledgements-acknowledgement-page-title": {
+        "contentHash": "c0b11dec333d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-acknowledgement-page-1": {
+        "contentHash": "05c0a20268c2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-acknowledgement-page-2": {
+        "contentHash": "8ae795dc50ef",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-acknowledgement-page-3": {
+        "contentHash": "1008daf04553",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-acknowledgement-page-link": {
+        "contentHash": "f35737d5ad1b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-acknowledgement-page-4": {
+        "contentHash": "fdfae0289879",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-acknowledgement-page-5": {
+        "contentHash": "6e29b4cb0157",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-cert-title": {
+        "contentHash": "2a93a8a442e3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-cert-1": {
+        "contentHash": "faed766a2da4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-cert-2": {
+        "contentHash": "1858d19c49af",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-cert-3": {
+        "contentHash": "cabaf08586bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-hero-image-alt": {
+        "contentHash": "08f4f80599da",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-meta-description": {
+        "contentHash": "6f7891e44566",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-meta-title": {
+        "contentHash": "3fa9c9d25fed",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-our-translators-cta": {
+        "contentHash": "0b42255679ef",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-our-translators-title": {
+        "contentHash": "b3780af7deb4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-our-translators-view-all": {
+        "contentHash": "5b1e66cb476f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-our-translators-1": {
+        "contentHash": "2cfc2fc87059",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-translation-leaderboard-title": {
+        "contentHash": "e06dcf9da784",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-translation-leaderboard-cta": {
+        "contentHash": "7ee40a179148",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-translation-leaderboard-1": {
+        "contentHash": "8c85bcdc66a1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view": {
+        "contentHash": "4ba97be0a542",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-translation-leaderboard-month-view": {
+        "contentHash": "7e51b4eba492",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-translation-leaderboard-quarter-view": {
+        "contentHash": "7aabcd7fd98c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-less": {
+        "contentHash": "0264d7b0ccb8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-more": {
+        "contentHash": "ba8a80fdd737",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-translator": {
+        "contentHash": "e6fe8ee281de",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-language": {
+        "contentHash": "a4fe65264ef7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-total-words": {
+        "contentHash": "c834bb1dece1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-oats-title": {
+        "contentHash": "63210c3b7b7c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-1": {
+        "contentHash": "55514d87bd43",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-2": {
+        "contentHash": "99f69e87e9ed",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-3": {
+        "contentHash": "16923ce5f804",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-how-to-claim-title": {
+        "contentHash": "cc90c87a530e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-how-to-claim-1": {
+        "contentHash": "9328da69749e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-how-to-claim-1-discord": {
+        "contentHash": "3a9884e3ad9a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-how-to-claim-2": {
+        "contentHash": "f1b455e815d1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-how-to-claim-3": {
+        "contentHash": "ebb50faa156d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-how-to-claim-4": {
+        "contentHash": "1026d06c3f8a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-4": {
+        "contentHash": "e123b58064e7",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-contributing-translation-program-acknowledgements-acknowledgement-page-title",
+      "page-contributing-translation-program-acknowledgements-acknowledgement-page-1",
+      "page-contributing-translation-program-acknowledgements-acknowledgement-page-2",
+      "page-contributing-translation-program-acknowledgements-acknowledgement-page-3",
+      "page-contributing-translation-program-acknowledgements-acknowledgement-page-link",
+      "page-contributing-translation-program-acknowledgements-acknowledgement-page-4",
+      "page-contributing-translation-program-acknowledgements-acknowledgement-page-5",
+      "page-contributing-translation-program-acknowledgements-cert-title",
+      "page-contributing-translation-program-acknowledgements-cert-1",
+      "page-contributing-translation-program-acknowledgements-cert-2",
+      "page-contributing-translation-program-acknowledgements-cert-3",
+      "page-contributing-translation-program-acknowledgements-hero-image-alt",
+      "page-contributing-translation-program-acknowledgements-meta-description",
+      "page-contributing-translation-program-acknowledgements-meta-title",
+      "page-contributing-translation-program-acknowledgements-our-translators-cta",
+      "page-contributing-translation-program-acknowledgements-our-translators-title",
+      "page-contributing-translation-program-acknowledgements-our-translators-view-all",
+      "page-contributing-translation-program-acknowledgements-our-translators-1",
+      "page-contributing-translation-program-acknowledgements-translation-leaderboard-title",
+      "page-contributing-translation-program-acknowledgements-translation-leaderboard-cta",
+      "page-contributing-translation-program-acknowledgements-translation-leaderboard-1",
+      "page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view",
+      "page-contributing-translation-program-acknowledgements-translation-leaderboard-month-view",
+      "page-contributing-translation-program-acknowledgements-translation-leaderboard-quarter-view",
+      "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-less",
+      "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-more",
+      "page-contributing-translation-program-acknowledgements-translator",
+      "page-contributing-translation-program-acknowledgements-language",
+      "page-contributing-translation-program-acknowledgements-total-words",
+      "page-contributing-translation-program-acknowledgements-oats-title",
+      "page-contributing-translation-program-acknowledgements-1",
+      "page-contributing-translation-program-acknowledgements-2",
+      "page-contributing-translation-program-acknowledgements-3",
+      "page-contributing-translation-program-acknowledgements-how-to-claim-title",
+      "page-contributing-translation-program-acknowledgements-how-to-claim-1",
+      "page-contributing-translation-program-acknowledgements-how-to-claim-1-discord",
+      "page-contributing-translation-program-acknowledgements-how-to-claim-2",
+      "page-contributing-translation-program-acknowledgements-how-to-claim-3",
+      "page-contributing-translation-program-acknowledgements-how-to-claim-4",
+      "page-contributing-translation-program-acknowledgements-4"
+    ]
+  },
+  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+}

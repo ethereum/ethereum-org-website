@@ -1,0 +1,360 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/latest/privacy-apps-on-ethereum/index.md",
+  "generatedAt": "2026-06-03T07:02:11.591Z",
+  "rootHash": "5fbac46b8d27",
+  "tree": {
+    "contentHash": "4b3843a26f05",
+    "anchorHash": "195ab75d17ff",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "599533aa231b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "40565513499d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "320fc488a16e"
+      },
+      "frontmatter:team": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0b40ef7405d"
+      },
+      "frontmatter:tags": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:published": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d279fe5d573b"
+      },
+      "frontmatter:image": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "118da598f232"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b8b4d55be06a"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:0": {
+        "contentHash": "efe37c3a53e5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "the-pattern-explained-through-anonymous-voting": {
+        "contentHash": "b06e757750c9",
+        "anchorHash": "002e489a313f",
+        "labelHash": "ac65c5eaff9f",
+        "children": {
+          "_label": {
+            "contentHash": "ac65c5eaff9f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ad429b895603",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "step-one-registering": {
+            "contentHash": "8b522ef0e619",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "0e59b9fcd201",
+            "children": {
+              "_label": {
+                "contentHash": "0e59b9fcd201",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "a0cd5a99c376",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "step-two-building-the-crowd": {
+            "contentHash": "0c9333f37412",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "072fed146e89",
+            "children": {
+              "_label": {
+                "contentHash": "072fed146e89",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "6b6ad240bc3e",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "step-three-acting-anonymously": {
+            "contentHash": "f5eee9db92eb",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "0a37754504b0",
+            "children": {
+              "_label": {
+                "contentHash": "0a37754504b0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "a4c209534f63",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "step-one-registering",
+          "step-two-building-the-crowd",
+          "step-three-acting-anonymously"
+        ]
+      },
+      "the-reusable-gate": {
+        "contentHash": "603081157c59",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "af996575c01e",
+        "children": {
+          "_label": {
+            "contentHash": "af996575c01e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "aeb6f90aedf7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "what-runs-where": {
+        "contentHash": "f6e916734398",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "2ec67e173f1e",
+        "children": {
+          "_label": {
+            "contentHash": "2ec67e173f1e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "66c4cb3012b2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-tooling-caught-up": {
+        "contentHash": "02148747d5de",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "a3f9040ef6d5",
+        "children": {
+          "_label": {
+            "contentHash": "a3f9040ef6d5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "64d84bf46773",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-proof-is-not-enough": {
+        "contentHash": "a65889723a94",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "9a3896fff2b5",
+        "children": {
+          "_label": {
+            "contentHash": "9a3896fff2b5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "8c56a618446e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "what-this-changes-for-builders": {
+        "contentHash": "26b9117023e6",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "78af5b53e0c1",
+        "children": {
+          "_label": {
+            "contentHash": "78af5b53e0c1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "db72d16e9c15",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "415d64523fb0",
+        "anchorHash": "6416a85e8c60",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:10": {
+            "contentHash": "c977dbe78522",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "bbc75a717056",
+            "anchorHash": "75933c0a33c9"
+          },
+          "prose:11": {
+            "contentHash": "6bc54f13bea5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "fea516007ec5",
+            "anchorHash": "526a5280eafd"
+          },
+          "prose:12": {
+            "contentHash": "267c23695b6e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "b37ce82750f4",
+            "anchorHash": "0ab19efda16e"
+          },
+          "prose:13": {
+            "contentHash": "23f663630e2f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "dbf078d74798",
+            "anchorHash": "bd87feebde77"
+          },
+          "prose:14": {
+            "contentHash": "540dd397b2d3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "cdc52bfdd0fb",
+            "anchorHash": "ea6118deafca"
+          },
+          "prose:15": {
+            "contentHash": "d80edd7fb074",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "3c7cd45abab2",
+            "anchorHash": "d9d1fbf4d6f1"
+          },
+          "prose:16": {
+            "contentHash": "a50aa8b9a980",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "23dad71451f2",
+            "anchorHash": "5436cf3f539b"
+          },
+          "prose:17": {
+            "contentHash": "6ce012fd1056",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "d536748e8910",
+            "anchorHash": "3f5fdaace66e"
+          },
+          "prose:18": {
+            "contentHash": "99a1b84b9865",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:8": {
+            "contentHash": "3691f663b81b",
+            "anchorHash": "19d5c3de7d4a"
+          },
+          "prose:19": {
+            "contentHash": "e3b7e7a038be",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:9": {
+            "contentHash": "62fdf46e6fd5",
+            "anchorHash": "0bc8df50fb6b"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:10",
+          "link:0",
+          "prose:11",
+          "link:1",
+          "prose:12",
+          "link:2",
+          "prose:13",
+          "link:3",
+          "prose:14",
+          "link:4",
+          "prose:15",
+          "link:5",
+          "prose:16",
+          "link:6",
+          "prose:17",
+          "link:7",
+          "prose:18",
+          "link:8",
+          "prose:19",
+          "link:9"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:author",
+      "frontmatter:team",
+      "frontmatter:tags",
+      "frontmatter:published",
+      "frontmatter:image",
+      "frontmatter:breadcrumb",
+      "frontmatter:lang",
+      "prose:0",
+      "the-pattern-explained-through-anonymous-voting",
+      "the-reusable-gate",
+      "what-runs-where",
+      "the-tooling-caught-up",
+      "the-proof-is-not-enough",
+      "what-this-changes-for-builders",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "3d9ccec5aac63a907c96f18f2699f8c05f31816d"
+}

@@ -12,6 +12,8 @@ Need a more basic understanding of web3 first? Check out [**Learn hub**](/learn/
 
 Effective design goes beyond creating visually appealing user interfaces. It involves gaining a deep understanding of the user's needs, objectives, and driving factors. Therefore, we highly recommend that all designers adopt a design process, such as the [**double diamond process**](<https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)>), to ensure that their work is deliberate and intentional.
 
+If you want to see what are currently the most pressing UX pain points, check out this **[map of current UX issues](https://ethux.design/)**.
+
 - [Web3 needs more UX Researchers and Designers](https://blog.akasha.org/akasha-conversations-9-web3-needs-more-ux-researchers-and-designers) - An overview of current design maturity
 - [A simple guide to UX Research in web3](https://uxplanet.org/a-complete-guide-to-ux-research-for-web-3-0-products-d6bead20ebb1) - Simple guide how to do research
 - [How to Approach UX Decisions in Web3](https://archive.devcon.org/archive/watch/6/data-empathy-how-to-approach-ux-decisions-in-web3/) - A brief overview of quantitative and qualitative research and the differences between the two (video, 6 min)

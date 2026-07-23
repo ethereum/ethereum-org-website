@@ -1,0 +1,545 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/crypto-security-passwords/index.md",
+  "generatedAt": "2026-04-29T05:05:50.401Z",
+  "rootHash": "4cc97a6218a4",
+  "tree": {
+    "contentHash": "cae7848d56bb",
+    "anchorHash": "13b61aa6bea1",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "cf5efd2e0f95",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "3b8f4f362a6c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b14d1f24c5cd"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "8f2291ee9b4a"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "22c6666b2fe8"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bfac314fefdc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "c5176c9dda2f"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "6e0850721586"
+      },
+      "prose:1": {
+        "contentHash": "d5ef93f6183b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "0d85e8ed3de0"
+      },
+      "prose:2": {
+        "contentHash": "77867098f493",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "security-fundamentals-and-balancing-risk-305": {
+        "contentHash": "67085db05ed3",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "0a667128c26c",
+        "children": {
+          "_label": {
+            "contentHash": "0a667128c26c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "d2f8c63cb039",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "keeping-security-simple-840": {
+        "contentHash": "358b1b40579a",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "a838bd8dc458",
+        "children": {
+          "_label": {
+            "contentHash": "a838bd8dc458",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "f0bc17b31e86",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "password-managers-1350": {
+        "contentHash": "0e41916e3b0c",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "f285db10698e",
+        "children": {
+          "_label": {
+            "contentHash": "f285db10698e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "bc754ae305e6",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "choosing-a-password-manager-across-devices-1822": {
+        "contentHash": "ba2b9e03f25f",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "3b46bf40d35c",
+        "children": {
+          "_label": {
+            "contentHash": "3b46bf40d35c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ec527e0f367b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "bad-password-policies-2402": {
+        "contentHash": "683eaa9f99d5",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "98047d9bb38c",
+        "children": {
+          "_label": {
+            "contentHash": "98047d9bb38c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "81debe342abf",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "how-password-databases-are-encrypted-2919": {
+        "contentHash": "ab0f5dc31c51",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "ac799bb20991",
+        "children": {
+          "_label": {
+            "contentHash": "ac799bb20991",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "0b47d00c0680",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "wallet-passphrases-and-bip-39-3502": {
+        "contentHash": "a37a72df5187",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "0a66867b2060",
+        "children": {
+          "_label": {
+            "contentHash": "0a66867b2060",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "82872e732c2c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-xkcd-passphrase-concept-4047": {
+        "contentHash": "84cd4f1033b1",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "ada857110452",
+        "children": {
+          "_label": {
+            "contentHash": "ada857110452",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "2c50c311df87",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "using-passphrases-for-wallets-and-encryption-4527": {
+        "contentHash": "cff57671fc5c",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "8eed741227b0",
+        "children": {
+          "_label": {
+            "contentHash": "8eed741227b0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ad659afe8a16",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "generating-passphrases-securely-5025": {
+        "contentHash": "9d10a07b5614",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "436b0c392bb1",
+        "children": {
+          "_label": {
+            "contentHash": "436b0c392bb1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "f00aeb3d273f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-diceware-method-5527": {
+        "contentHash": "edaae52ca9f8",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "77eb9269cc53",
+        "children": {
+          "_label": {
+            "contentHash": "77eb9269cc53",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "a23afb485705",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "biometric-authentication-10044": {
+        "contentHash": "05f111e0da38",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "981898f3095b",
+        "children": {
+          "_label": {
+            "contentHash": "981898f3095b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "73813f31f32f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "security-keys-and-yubikeys-10551": {
+        "contentHash": "bf9161899809",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "f8c97cd9c9e8",
+        "children": {
+          "_label": {
+            "contentHash": "f8c97cd9c9e8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "569a6c602b5a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "why-sms-is-weak-two-factor-authentication-11100": {
+        "contentHash": "f9f7a2c5afc8",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "2d5f800f1e62",
+        "children": {
+          "_label": {
+            "contentHash": "2d5f800f1e62",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c561d3158126",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "securing-your-phone-number-11625": {
+        "contentHash": "db7d8a5f9b5a",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "38ca3334d580",
+        "children": {
+          "_label": {
+            "contentHash": "38ca3334d580",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "f8a732d6c95c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "time-based-one-time-passwords-12156": {
+        "contentHash": "fd686151cd88",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "92688a5b5838",
+        "children": {
+          "_label": {
+            "contentHash": "92688a5b5838",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "e9e60a93f8c1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-hierarchy-of-two-factor-authentication-12644": {
+        "contentHash": "d271f03863f9",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "240380d0a5c4",
+        "children": {
+          "_label": {
+            "contentHash": "240380d0a5c4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "bb3307be215c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "qa-porting-phone-numbers-and-app-security-13137": {
+        "contentHash": "06b318dad0ad",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "caae9d5b5c7e",
+        "children": {
+          "_label": {
+            "contentHash": "caae9d5b5c7e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c64b36983dc4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "qa-converting-bank-sms-to-stronger-authentication-13601": {
+        "contentHash": "f1390b232056",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "47f25293d712",
+        "children": {
+          "_label": {
+            "contentHash": "47f25293d712",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "af1cf54e783a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "qa-comparing-password-managers-14143": {
+        "contentHash": "35e0a32ac822",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "c5a868a9e20e",
+        "children": {
+          "_label": {
+            "contentHash": "c5a868a9e20e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ea40310e2d44",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "qa-bitcoin-signatures-for-authentication-14701": {
+        "contentHash": "fc29564a00b6",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "7ed39cbfcdca",
+        "children": {
+          "_label": {
+            "contentHash": "7ed39cbfcdca",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ea9568caab8a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "qa-passwords-for-tv-remotes-and-low-security-devices-15210": {
+        "contentHash": "917a130e2300",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "188a3fcd2950",
+        "children": {
+          "_label": {
+            "contentHash": "188a3fcd2950",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "87d6500cf270",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "closing-15725": {
+        "contentHash": "ff4eb107c857",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "4ffe0a096f7d",
+        "children": {
+          "_label": {
+            "contentHash": "4ffe0a096f7d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "9cfc0f9e3466",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "security-fundamentals-and-balancing-risk-305",
+      "keeping-security-simple-840",
+      "password-managers-1350",
+      "choosing-a-password-manager-across-devices-1822",
+      "bad-password-policies-2402",
+      "how-password-databases-are-encrypted-2919",
+      "wallet-passphrases-and-bip-39-3502",
+      "the-xkcd-passphrase-concept-4047",
+      "using-passphrases-for-wallets-and-encryption-4527",
+      "generating-passphrases-securely-5025",
+      "the-diceware-method-5527",
+      "biometric-authentication-10044",
+      "security-keys-and-yubikeys-10551",
+      "why-sms-is-weak-two-factor-authentication-11100",
+      "securing-your-phone-number-11625",
+      "time-based-one-time-passwords-12156",
+      "the-hierarchy-of-two-factor-authentication-12644",
+      "qa-porting-phone-numbers-and-app-security-13137",
+      "qa-converting-bank-sms-to-stronger-authentication-13601",
+      "qa-comparing-password-managers-14143",
+      "qa-bitcoin-signatures-for-authentication-14701",
+      "qa-passwords-for-tv-remotes-and-low-security-devices-15210",
+      "closing-15725"
+    ]
+  },
+  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+}

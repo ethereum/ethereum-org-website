@@ -1,0 +1,573 @@
+{
+  "version": 1,
+  "locale": "it",
+  "translatedAt": "2026-06-19T19:33:56.450Z",
+  "englishManifestHash": "d23f768390c2",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-60076a",
+    "LINK-cd977e",
+    "IMAGE-f4e11b",
+    "LINK-fb70b4",
+    "CODE-75857a",
+    "CODE-663ea1",
+    "CODE-1a2fc2",
+    "CODE-78377b",
+    "CODE-cd4240",
+    "CODE-b4a697",
+    "CODE-c971d2",
+    "LINK-134191",
+    "CODE-8c83aa",
+    "CODE-7c58b1",
+    "CODE-463ed6",
+    "CODE-8c83aa",
+    "CODE-c971d2",
+    "CODE-8c83aa",
+    "LINK-7dc5a0",
+    "CODEBLOCK-ecd568",
+    "LINK-49bc5b",
+    "CODEBLOCK-45b73f",
+    "CODEBLOCK-253fba",
+    "CODE-d7439b",
+    "LINK-a1db99",
+    "CODE-1b5b9c",
+    "LINK-211554",
+    "LINK-c4035c",
+    "LINK-5c031b",
+    "LINK-1d3c3b",
+    "CODE-6d0e87",
+    "LINK-38a187",
+    "LINK-08aeba",
+    "CODE-3b88ef",
+    "CODEBLOCK-2e79d2",
+    "CODE-663ea1",
+    "LINK-f72f26",
+    "CODE-d2f023",
+    "CODE-cd4240",
+    "LINK-4e26ab",
+    "LINK-af2204",
+    "LINK-9c1fcb",
+    "CODE-463ed6",
+    "CODE-8c83aa",
+    "CODEBLOCK-3fb6f7",
+    "IMAGE-797b94",
+    "LINK-fb70b4",
+    "LINK-bac543",
+    "CODE-2bcb43",
+    "LINK-9730fc",
+    "CODE-b8ba2e",
+    "LINK-800893",
+    "CODE-17a675",
+    "CODE-17a675",
+    "CODE-2bcb43",
+    "CODE-b8ba2e",
+    "CODE-508918",
+    "LINK-aeb2e3",
+    "CODE-b93ae4",
+    "LINK-c0e28e",
+    "LINK-abf5ca",
+    "CODE-c9a1f5",
+    "CODE-b0945e",
+    "CODE-dab601",
+    "CODE-b0945e",
+    "LINK-c0e28e",
+    "CODE-8eba24",
+    "LINK-a1db99",
+    "CODE-b8ad1b",
+    "LINK-b875fb",
+    "LINK-555495",
+    "CODE-7aa529",
+    "LINK-9c1fcb",
+    "CODE-aee817",
+    "CODE-b8ad1b",
+    "CODE-a03279",
+    "CODE-b51c80",
+    "CODE-a03279",
+    "LINK-c0e28e",
+    "LINK-e45e23",
+    "CODE-e6bdd4",
+    "CODE-8c83aa",
+    "CODE-7c58b1",
+    "CODE-5f6f0f",
+    "LINK-37f8a6",
+    "LINK-c73541",
+    "CODE-e36c03",
+    "CODE-5e2361",
+    "CODE-6a6e0f",
+    "CODE-9d1b8d",
+    "CODE-3df9ec",
+    "LINK-3baa8c",
+    "LINK-52554e",
+    "CODE-1dbfc9",
+    "LINK-908758",
+    "LINK-60076a",
+    "LINK-6358d8",
+    "LINK-ce8c89"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-ecd568": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-45b73f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-253fba": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2e79d2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3fb6f7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-75857a": {
+      "type": "inline-code",
+      "values": {
+        "content": "from"
+      }
+    },
+    "CODE-663ea1": {
+      "type": "inline-code",
+      "values": {
+        "content": "to"
+      }
+    },
+    "CODE-1a2fc2": {
+      "type": "inline-code",
+      "values": {
+        "content": "signature"
+      }
+    },
+    "CODE-78377b": {
+      "type": "inline-code",
+      "values": {
+        "content": "nonce"
+      }
+    },
+    "CODE-cd4240": {
+      "type": "inline-code",
+      "values": {
+        "content": "value"
+      }
+    },
+    "CODE-b4a697": {
+      "type": "inline-code",
+      "values": {
+        "content": "input data"
+      }
+    },
+    "CODE-c971d2": {
+      "type": "inline-code",
+      "values": {
+        "content": "gasLimit"
+      }
+    },
+    "CODE-8c83aa": {
+      "type": "inline-code",
+      "values": {
+        "content": "maxPriorityFeePerGas"
+      }
+    },
+    "CODE-7c58b1": {
+      "type": "inline-code",
+      "values": {
+        "content": "maxFeePerGas"
+      }
+    },
+    "CODE-463ed6": {
+      "type": "inline-code",
+      "values": {
+        "content": "baseFeePerGas"
+      }
+    },
+    "CODE-d7439b": {
+      "type": "inline-code",
+      "values": {
+        "content": "raw"
+      }
+    },
+    "CODE-1b5b9c": {
+      "type": "inline-code",
+      "values": {
+        "content": "tx"
+      }
+    },
+    "CODE-6d0e87": {
+      "type": "inline-code",
+      "values": {
+        "content": "0xa9059cbb"
+      }
+    },
+    "CODE-3b88ef": {
+      "type": "inline-code",
+      "values": {
+        "content": "transfer(address,uint256)"
+      }
+    },
+    "CODE-d2f023": {
+      "type": "inline-code",
+      "values": {
+        "content": "4f6742badb049791cd9a37ea913f2bac38d01279"
+      }
+    },
+    "CODE-2bcb43": {
+      "type": "inline-code",
+      "values": {
+        "content": "view"
+      }
+    },
+    "CODE-b8ba2e": {
+      "type": "inline-code",
+      "values": {
+        "content": "pure"
+      }
+    },
+    "CODE-17a675": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_call"
+      }
+    },
+    "CODE-508918": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017"
+      }
+    },
+    "CODE-b93ae4": {
+      "type": "inline-code",
+      "values": {
+        "content": "RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])"
+      }
+    },
+    "CODE-c9a1f5": {
+      "type": "inline-code",
+      "values": {
+        "content": "TransactionType || TransactionPayload"
+      }
+    },
+    "CODE-b0945e": {
+      "type": "inline-code",
+      "values": {
+        "content": "TransactionType"
+      }
+    },
+    "CODE-dab601": {
+      "type": "inline-code",
+      "values": {
+        "content": "TransactionPayload"
+      }
+    },
+    "CODE-8eba24": {
+      "type": "inline-code",
+      "values": {
+        "content": "0xf8"
+      }
+    },
+    "CODE-b8ad1b": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x0"
+      }
+    },
+    "CODE-7aa529": {
+      "type": "inline-code",
+      "values": {
+        "content": "accessList"
+      }
+    },
+    "CODE-aee817": {
+      "type": "inline-code",
+      "values": {
+        "content": "yParity"
+      }
+    },
+    "CODE-a03279": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x1"
+      }
+    },
+    "CODE-b51c80": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x01"
+      }
+    },
+    "CODE-e6bdd4": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x02"
+      }
+    },
+    "CODE-5f6f0f": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x2"
+      }
+    },
+    "CODE-e36c03": {
+      "type": "inline-code",
+      "values": {
+        "content": "blobVersionedHashes"
+      }
+    },
+    "CODE-5e2361": {
+      "type": "inline-code",
+      "values": {
+        "content": "maxFeePerBlobGas"
+      }
+    },
+    "CODE-6a6e0f": {
+      "type": "inline-code",
+      "values": {
+        "content": "blobGasPrice"
+      }
+    },
+    "CODE-9d1b8d": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x03"
+      }
+    },
+    "CODE-3df9ec": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x3"
+      }
+    },
+    "CODE-1dbfc9": {
+      "type": "inline-code",
+      "values": {
+        "content": "authorization_list"
+      }
+    },
+    "IMAGE-f4e11b": {
+      "type": "image",
+      "values": {
+        "path": "./tx.png"
+      }
+    },
+    "IMAGE-797b94": {
+      "type": "image",
+      "values": {
+        "path": "./gas-tx.png"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-60076a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts/"
+      }
+    },
+    "LINK-cd977e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/intro-to-ethereum/"
+      }
+    },
+    "LINK-fb70b4": {
+      "type": "link",
+      "values": {
+        "url": "https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf"
+      }
+    },
+    "LINK-134191": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/opcodes"
+      }
+    },
+    "LINK-7dc5a0": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "LINK-49bc5b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/json-rpc"
+      }
+    },
+    "LINK-a1db99": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-structures-and-encoding/rlp"
+      }
+    },
+    "LINK-211554": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#abi"
+      }
+    },
+    "LINK-c4035c": {
+      "type": "link",
+      "values": {
+        "url": "https://www.4byte.directory/signatures/"
+      }
+    },
+    "LINK-5c031b": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding"
+      }
+    },
+    "LINK-1d3c3b": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/tx/0xd0dcbe007569fcfa1902dae0ab8b4e078efe42e231786312289b1eee5590f6a1"
+      }
+    },
+    "LINK-38a187": {
+      "type": "link",
+      "values": {
+        "url": "https://www.4byte.directory/signatures/?bytes4_signature=0xa9059cbb"
+      }
+    },
+    "LINK-08aeba": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48#code"
+      }
+    },
+    "LINK-f72f26": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279"
+      }
+    },
+    "LINK-4e26ab": {
+      "type": "link",
+      "values": {
+        "url": "https://clearsigning.org/"
+      }
+    },
+    "LINK-af2204": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7730"
+      }
+    },
+    "LINK-9c1fcb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "LINK-bac543": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/contracts.html#view-functions"
+      }
+    },
+    "LINK-9730fc": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/contracts.html#pure-functions"
+      }
+    },
+    "LINK-800893": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/json-rpc#eth_call"
+      }
+    },
+    "LINK-aeb2e3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-structures-and-encoding/rlp/"
+      }
+    },
+    "LINK-c0e28e": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1559"
+      }
+    },
+    "LINK-abf5ca": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-2718"
+      }
+    },
+    "LINK-b875fb": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-2930"
+      }
+    },
+    "LINK-555495": {
+      "type": "link",
+      "values": {
+        "url": "/ethereum-forks/#berlin"
+      }
+    },
+    "LINK-e45e23": {
+      "type": "link",
+      "values": {
+        "url": "/ethereum-forks/#london"
+      }
+    },
+    "LINK-37f8a6": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4844"
+      }
+    },
+    "LINK-c73541": {
+      "type": "link",
+      "values": {
+        "url": "/ethereum-forks/#dencun"
+      }
+    },
+    "LINK-3baa8c": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7702"
+      }
+    },
+    "LINK-52554e": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/pectra/"
+      }
+    },
+    "LINK-908758": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-2718"
+      }
+    },
+    "LINK-6358d8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-ce8c89": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T19:33:56.450Z",
+      "status": "success"
+    }
+  }
+}

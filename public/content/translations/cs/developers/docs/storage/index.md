@@ -1,46 +1,47 @@
 ---
-title: "Decentralizovaná úložiště"
-description: "Přehled toho, co je decentralizované úložiště, a dostupné nástroje pro jeho integraci do dappek."
+title: "Decentralizované úložiště"
+description: "Přehled toho, co je decentralizované úložiště, a dostupných nástrojů pro jeho integraci do decentralizované aplikace (dapp)."
 lang: cs
+authors: ["Patrick Collins"]
 ---
 
-Na rozdíl od centralizovaného serveru, který provozuje jedna společnost nebo organizace, decentralizované úložné systémy sestávají z peer-to-peer sítě uživatelů-operátorů, kteří drží část celkových dat, čímž vytvářejí odolný systém sdílení souborů. Tyto systémy mohou být využívány v blockchainových aplikacích nebo v jakékoliv síti založené na peer-to-peer principu.
+Na rozdíl od centralizovaného serveru provozovaného jedinou společností nebo organizací se systémy decentralizovaného úložiště skládají z peer-to-peer sítě uživatelů-provozovatelů, kteří uchovávají část celkových dat, čímž vytvářejí odolný systém pro sdílení a ukládání souborů. Ty mohou být součástí aplikace založené na blockchainu nebo jakékoli sítě založené na peer-to-peer.
 
-Ethereum samotné může být využíváno jako decentralizovaný úložný systém, což se děje například při ukládání kódu ve všech smart kontraktech. Když ale přijde na velké objemy dat, Ethereum není navrženo k tomuto účelu. Řetězec neustále roste, ale v době psaní tohoto textu se velikost blockchainu Etherea pohybuje kolem 500 GB až 1 TB ([v závislosti na klientovi](https://etherscan.io/chartsync/chaindefault)) a každý uzel v síti musí být schopen uložit všechna tato data. Pokud by řetězec expandoval na velké objemy dat (řekněme 5 TB), nebylo by nadále možné zajistit funkčnost všech síťových uzlů. Náklady na nasazení tak velkého množství dat na hlavní síť by také byly neúměrně vysoké kvůli poplatkům za [gas](/developers/docs/gas).
+Samotné Ethereum lze použít jako systém decentralizovaného úložiště, a také jím je, pokud jde o ukládání kódu ve všech chytrých kontraktech. Pokud však jde o velké objemy dat, k tomu Ethereum nebylo navrženo. Řetězec neustále roste, ale v době psaní tohoto textu má řetězec Etherea přibližně 500 GB – 1 TB ([v závislosti na klientovi](https://etherscan.io/chartsync/chaindefault)) a každý uzel v síti musí být schopen uložit všechna data. Pokud by se řetězec rozšířil na velké objemy dat (řekněme 5 TB), nebylo by pro všechny uzly proveditelné nadále fungovat. Navíc by náklady na nasazení takového množství dat na Mainnet byly kvůli poplatkům za [gas](/developers/docs/gas) neúnosně vysoké.
 
-Z těchto důvodů potřebujeme jiný řetězec nebo metodologii k ukládání velkých objemů dat decentralizovaným způsobem.
+Kvůli těmto omezením potřebujeme jiný řetězec nebo metodiku pro ukládání velkého množství dat decentralizovaným způsobem.
 
-Při zvažování možností decentralizovaného úložiště (dStorage) musí uživatel vzít v úvahu několik věcí.
+Při zvažování možností decentralizovaného úložiště (dStorage) je několik věcí, které musí mít uživatel na paměti.
 
-- Mechanismus uchovávání / pobídková struktura
-- Vymáhání uchovávání dat
-- Decentralizace
-- Konsenzus
+- Mechanismus perzistence / struktura pobídek
+- Vynucování uchovávání dat
+- Míra decentralizace
+- Konsensus
 
-## Mechanismus perzistence / pobídková struktura {#persistence-mechanism}
+## Mechanismus perzistence / struktura pobídek {#persistence-mechanism}
 
-### Na bázi blockchainu {#blockchain-based}
+### Založené na blockchainu {#blockchain-based}
 
-Aby mohl kus dat přetrvat navždy, musíme použít mechanismus uchovávání. Například na Ethereu je tento mechanismus založen na tom, že celý řetězec musí být zohledněn při provozování síťového uzlu. Nové kusy dat jsou přidávány na konec řetězce, který neustále roste - což vyžaduje, aby každý uzel replikoval všechna vložená data.
+Aby data přetrvala navždy, musíme použít mechanismus perzistence. Například na Ethereu spočívá mechanismus perzistence v tom, že při provozování uzlu je třeba brát v úvahu celý řetězec. Nová data se připojují na konec řetězce a ten neustále roste – což vyžaduje, aby každý uzel replikoval všechna vložená data.
 
-Toto je známé jako **perzistence na bázi blockchainu**.
+To je známé jako perzistence **založená na blockchainu**.
 
-Problém s perzistencí na bázi blockchainu je v tom, že by se blockchain mohl příliš rozrůst, aby bylo možné všechna data reálně udržovat a ukládat (např. [mnoho zdrojů](https://healthit.com.au/how-big-is-the-internet-and-how-do-we-measure-it/) odhaduje, že internet vyžaduje kapacitu úložiště přes 40 zettabytů).
+Problém s perzistencí založenou na blockchainu spočívá v tom, že by se řetězec mohl stát příliš velkým na to, aby bylo možné jej udržovat a reálně ukládat všechna data (např. [mnoho zdrojů](https://healthit.com.au/how-big-is-the-internet-and-how-do-we-measure-it/) odhaduje, že internet vyžaduje úložnou kapacitu přes 40 zettabytů).
 
-I blockchain musí mít nějaký typ pobídkové struktury. V případě uchovávání založeném na blockchainu se platí validátorovi. Když jsou data přidána do řetězce, validátoři jsou placeni za jejich přidání.
+Blockchain musí mít také nějaký typ struktury pobídek. U perzistence založené na blockchainu se provádí platba validátorovi. Když jsou data přidána do řetězce, validátoři dostanou zaplaceno za jejich přidání.
 
-Platformy s uchováváním založeným na blockchainu:
+Platformy s perzistencí založenou na blockchainu:
 
 - Ethereum
 - [Arweave](https://www.arweave.org/)
 
-### Na bázi kontraktů {#contract-based}
+### Založené na kontraktech {#contract-based}
 
-**Perzistence na bázi kontraktů** vychází z myšlenky, že data nemohou být replikována každým uzlem a ukládána navždy, ale místo toho musí být udržována prostřednictvím smluvních dohod. Tyto dohody jsou uzavírány s více uzly, které se zavázaly uchovávat kus dat po určitou dobu. Data musí být obnovena nebo refundována, kdykoli vyprší, aby byla zachována jejich existence.
+Perzistence **založená na kontraktech** vychází z předpokladu, že data nemohou být replikována každým uzlem a ukládána navždy, a místo toho musí být udržována pomocí smluvních dohod (kontraktů). Jedná se o dohody uzavřené s více uzly, které slíbily uchovávat určitá data po určitou dobu. Aby data zůstala zachována, musí být tyto dohody po vypršení platnosti obnoveny nebo znovu zaplaceny.
 
-Ve většině případů se místo ukládání všech dat on-chain ukládá na blockchain pouze haš, který odkazuje na umístění dat. Tímto způsobem není třeba, aby celý řetězec rostl kvůli ukládání všech dat.
+Ve většině případů se místo ukládání všech dat onchain ukládá hash umístění dat v řetězci. Tímto způsobem se celý řetězec nemusí škálovat, aby pojal všechna data.
 
-Platformy s uchováváním založeným na kontraktu:
+Platformy s perzistencí založenou na kontraktech:
 
 - [Filecoin](https://docs.filecoin.io/basics/what-is-filecoin)
 - [Skynet](https://sia.tech/)
@@ -50,30 +51,30 @@ Platformy s uchováváním založeným na kontraktu:
 - [Swarm](https://www.ethswarm.org/)
 - [4EVERLAND](https://www.4everland.org/)
 
-### Další aspekty {#additional-consideration}
+### Další úvahy {#additional-consideration}
 
-IPFS je distribuovaný systém pro ukládání a přístup k souborům, webovým stránkám, aplikacím a datům. Nemá zabudovaný motivační systém, ale může být použit s jakýmkoli z výše uvedených řešení založených na kontraktech pro dlouhodobé uchování dat. Dalším způsobem, jak uchovat data na IPFS, je spolupráce s pinningovou službou, která vaše data „připne“. Můžete také provozovat vlastní IPFS uzel a přispívat do sítě, abyste uchovali svá nebo cizí data zdarma!
+IPFS je distribuovaný systém pro ukládání a přístup k souborům, webovým stránkám, aplikacím a datům. Nemá vestavěné schéma pobídek, ale pro dlouhodobější perzistenci jej lze použít s jakýmkoli z výše uvedených řešení pobídek založených na kontraktech. Dalším způsobem, jak zachovat data na IPFS, je spolupráce se službou pro připínání (pinning service), která vaše data „připne“ za vás. Můžete dokonce provozovat svůj vlastní uzel IPFS a přispívat do sítě k bezplatnému uchovávání vašich a/nebo cizích dat!
 
 - [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/)
-- [Pinata](https://www.pinata.cloud/) _(pinovací služba IPFS)_
-- [web3.storage](https://web3.storage/) _(pinovací služba pro IPFS/Filecoin)_
-- [Infura](https://infura.io/product/ipfs) _(pinovací služba IPFS)_
-- [IPFS Scan](https://ipfs-scan.io) _(prohlížeč pinů IPFS)_
-- [4EVERLAND](https://www.4everland.org/) _(pinovací služba IPFS)_
-- [Filebase](https://filebase.com) _(pinovací služba IPFS)_
-- [Spheron Network](https://spheron.network/) _(pinovací služba pro IPFS/Filecoin)_
+- [Pinata](https://www.pinata.cloud/) _(služba pro připínání IPFS)_
+- [web3.storage](https://web3.storage/) _(služba pro připínání IPFS/Filecoin)_
+- [Infura](https://infura.io/product/ipfs) _(služba pro připínání IPFS)_
+- [IPFS Scan](https://ipfs-scan.io) _(průzkumník připínání IPFS)_
+- [4EVERLAND](https://www.4everland.org/)_（služba pro připínání IPFS）_
+- [Filebase](https://filebase.com) _(služba pro připínání IPFS)_
+- [Spheron Network](https://spheron.network/) _(služba pro připínání IPFS/Filecoin)_
 
-SWARM je decentralizovaná technologie pro ukládání a distribuci dat s motivačním systémem a orákulem pro stanovení ceny za pronájem úložiště.
+Swarm je technologie pro decentralizované ukládání a distribuci dat se systémem pobídek pro ukládání a orákulem pro ceny pronájmu úložiště.
 
 ## Uchovávání dat {#data-retention}
 
-Aby systémy mohly uchovávat data, musí mít nějaký mechanismus, který zajistí, že data budou uchována.
+Aby bylo možné data uchovat, musí mít systémy nějaký mechanismus, který zajistí, že data budou skutečně uchována.
 
-### Mechanismus výzvy {#challenge-mechanism}
+### Mechanismus výzev {#challenge-mechanism}
 
-Jedním z nejpopulárnějších způsobů, jak zajistit uchování dat, je použití nějakého typu kryptografické výzvy, která je poskytnuta síťovým uzlům, aby se ověřilo, zda stále mají data. Jednoduchým příkladem je proof-of-access od Arweave. Uzel je vyzván, aby prokázal, že má data jak z nejnovějšího bloku, tak z náhodného bloku z minulosti. Pokud uzel nemůže přijít s odpovědí, je penalizován.
+Jedním z nejpopulárnějších způsobů, jak zajistit uchování dat, je použití nějakého typu kryptografické výzvy, která je vydána uzlům, aby se ověřilo, že data stále mají. Jednoduchým příkladem je důkaz o přístupu (proof-of-access) sítě Arweave. Vydávají uzlům výzvu, aby zjistili, zda mají data jak v nejnovějším bloku, tak v náhodném bloku v minulosti. Pokud uzel nedokáže přijít s odpovědí, je penalizován.
 
-Typy dStorage s mechanismem výzvy:
+Typy decentralizovaného úložiště (dStorage) s mechanismem výzev:
 
 - Züs
 - Skynet
@@ -82,9 +83,9 @@ Typy dStorage s mechanismem výzvy:
 - Crust Network
 - 4EVERLAND
 
-### Decentralizace {#decentrality}
+### Míra decentralizace {#decentrality}
 
-Neexistují skvělé nástroje pro měření úrovně decentralizace platforem, ale obecně platí, že byste měli používat nástroje, které nevyžadují nějakou formu KYC, což je důkaz, že nejsou centralizované.
+Neexistují skvělé nástroje pro měření úrovně decentralizace platforem, ale obecně budete chtít používat nástroje, které nemají nějakou formu KYC, což poskytuje důkaz, že nejsou centralizované.
 
 Decentralizované nástroje bez KYC:
 
@@ -96,16 +97,16 @@ Decentralizované nástroje bez KYC:
 - Crust Network
 - 4EVERLAND
 
-### Konsenzus {#consensus}
+### Konsensus {#consensus}
 
-Většina těchto nástrojů má vlastní verzi [mechanismu konsensu](/developers/docs/consensus-mechanisms/), ale obecně jsou založeny buď na [**důkazu prací (PoW)**](/developers/docs/consensus-mechanisms/pow/), nebo na [**důkazu podílem (PoS)**](/developers/docs/consensus-mechanisms/pos/).
+Většina z těchto nástrojů má svou vlastní verzi [mechanismu konsensu](/developers/docs/consensus-mechanisms/), ale obecně jsou založeny buď na [**důkazu prací (PoW)**](/developers/docs/consensus-mechanisms/pow/) nebo [**důkazu podílem (PoS)**](/developers/docs/consensus-mechanisms/pos/).
 
-Založeno na proof of work:
+Založené na důkazu prací (PoW):
 
 - Skynet
 - Arweave
 
-Založeno na proof of stake:
+Založené na důkazu podílem (PoS):
 
 - Ethereum
 - Filecoin
@@ -114,103 +115,112 @@ Založeno na proof of stake:
 
 ## Související nástroje {#related-tools}
 
-**IPFS – _meziplanetární souborový systém (InterPlanetary File System) je decentralizované úložiště a systém odkazů na soubory pro Ethereum._**
+**IPFS – _InterPlanetary File System je systém pro decentralizované úložiště a odkazování na soubory pro Ethereum._**
 
 - [Ipfs.io](https://ipfs.io/)
 - [Dokumentace](https://docs.ipfs.io/)
 - [GitHub](https://github.com/ipfs/ipfs)
 
-**Storj DCS – _bezpečné, soukromé a s S3 kompatibilní decentralizované cloudové objektové úložiště pro vývojáře._**
+**Storj DCS – _Bezpečné, soukromé a s S3 kompatibilní decentralizované cloudové objektové úložiště pro vývojáře._**
 
 - [Storj.io](https://storj.io/)
 - [Dokumentace](https://docs.storj.io/)
 - [GitHub](https://github.com/storj/storj)
 
-**Sia – _využívá kryptografii k vytvoření tržiště s cloudovým úložištěm, které nevyžaduje důvěru a umožňuje kupujícím a prodávajícím obchodovat přímo._**
+**Sia – _Využívá kryptografii k vytvoření tržiště cloudového úložiště nevyžadujícího důvěru, což umožňuje kupujícím a prodávajícím provádět transakce přímo._**
 
 - [Skynet.net](https://sia.tech/)
 - [Dokumentace](https://docs.sia.tech/)
 - [GitHub](https://github.com/SiaFoundation/)
 
-**Filecoin – _Filecoin byl vytvořen stejným týmem, který stojí za IPFS. Je to pobídková vrstva nad ideály IPFS._**
+**Filecoin – _Filecoin byl vytvořen stejným týmem, který stojí za IPFS. Jedná se o vrstvu pobídek nad ideály IPFS._**
 
 - [Filecoin.io](https://filecoin.io/)
 - [Dokumentace](https://docs.filecoin.io/)
 - [GitHub](https://github.com/filecoin-project/)
 
-**Arweave – _Arweave je platforma dStorage (decentralizované úložiště) pro ukládání dat._**
+**Arweave – _Arweave je platforma dStorage pro ukládání dat._**
 
 - [Arweave.org](https://www.arweave.org/)
 - [Dokumentace](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**Züs – _Züs je dStorage platforma s důkazem podílem (proof-of-stake), tříštěním (sharding) a tzv. blobbery._**
+**Züs – _Züs je platforma dStorage založená na důkazu podílem (PoS) se shardingem a blobbery._**
 
 - [zus.network](https://zus.network/)
 - [Dokumentace](https://docs.zus.network/zus-docs/)
 - [GitHub](https://github.com/0chain/)
 
-**Crust Network – _Crust je dStorage platforma postavená na IPFS._**
+**Crust Network – _Crust je platforma dStorage postavená na IPFS._**
 
 - [Crust.network](https://crust.network)
 - [Dokumentace](https://wiki.crust.network)
 - [GitHub](https://github.com/crustio)
 
-**Swarm – _distribuovaná úložná platforma a služba pro distribuci obsahu pro web3 stack Etherea._**
+**Swarm – _Distribuovaná platforma pro ukládání a služba pro distribuci obsahu pro Web3 stack Etherea._**
 
 - [EthSwarm.org](https://www.ethswarm.org/)
 - [Dokumentace](https://docs.ethswarm.org/)
 - [GitHub](https://github.com/ethersphere/)
 
-**OrbitDB – _decentralizovaná peer-to-peer databáze postavená na IPFS._**
+**OrbitDB – _Decentralizovaná peer-to-peer databáze postavená na IPFS._**
 
 - [OrbitDB.org](https://orbitdb.org/)
 - [Dokumentace](https://github.com/orbitdb/field-manual/)
 - [GitHub](https://github.com/orbitdb/orbit-db/)
 
-**Aleph.im – _decentralizovaný cloudový projekt (databáze, souborové úložiště, výpočetní výkon a DID). Unikátní kombinace off-chain a on-chain peer-to-peer technologií. Kompatibilita s IPFS a více blockchainy._**
+**Aleph.im – _Decentralizovaný cloudový projekt (databáze, ukládání souborů, výpočty a decentralizovaná identita (DID)). Unikátní spojení offchain a onchain peer-to-peer technologie. Kompatibilita s IPFS a více řetězci._**
 
 - [Aleph.im](https://aleph.cloud/)
 - [Dokumentace](https://docs.aleph.cloud/)
 - [GitHub](https://github.com/aleph-im/)
 
-**Ceramic – _uživatelsky řízené databázové úložiště IPFS pro poutavé aplikace s velkým množstvím dat._**
+**Ceramic – _Uživatelem řízené databázové úložiště IPFS pro datově bohaté a poutavé aplikace._**
 
 - [Ceramic.network](https://ceramic.network/)
 - [Dokumentace](https://developers.ceramic.network/)
 - [GitHub](https://github.com/ceramicnetwork/js-ceramic/)
 
-**Filebase – _decentralizované úložiště kompatibilní s S3 a geograficky redundantní pinovací služba pro IPFS. Všechny soubory nahrané do IPFS přes Filebase jsou automaticky pinovány na infrastrukturu Filebase s 3x replikací po celém světě._**
+**Filebase – _S3 kompatibilní decentralizované úložiště a georedundantní služba pro připínání IPFS. Všechny soubory nahrané do IPFS přes Filebase jsou automaticky připnuty k infrastruktuře Filebase s trojnásobnou replikací po celém světě._**
 
 - [Filebase.com](https://filebase.com/)
 - [Dokumentace](https://docs.filebase.com/)
 - [GitHub](https://github.com/filebase)
 
-**4EVERLAND – _cloudová výpočetní platforma pro Web 3.0, která integruje základní schopnosti úložiště, výpočetního výkonu a sítě, je kompatibilní s S3 a poskytuje synchronní ukládání dat v decentralizovaných úložných sítích, jako jsou IPFS a Arweave._**
+**4EVERLAND – _Platforma pro cloud computing Web 3.0, která integruje základní funkce úložiště, výpočtů a sítí, je kompatibilní s S3 a poskytuje synchronní ukládání dat v sítích decentralizovaného úložiště, jako jsou IPFS a Arweave._**
 
 - [4everland.org](https://www.4everland.org/)
 - [Dokumentace](https://docs.4everland.org/)
 - [GitHub](https://github.com/4everland)
 
-**Kaleido – _platforma typu blockchain jako služba (BaaS) s IPFS uzly na jedno kliknutí._**
+**Kaleido – _Platforma blockchain-as-a-service s uzly IPFS na jedno kliknutí_**
 
 - [Kaleido](https://kaleido.io/)
 - [Dokumentace](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [GitHub](https://github.com/kaleido-io)
 
-**Spheron Network – _Spheron je platforma jako služba (PaaS) určená pro dApps, které chtějí spouštět své aplikace na decentralizované infrastruktuře s nejlepším výkonem. Poskytuje výpočetní výkon, decentralizované úložiště, CDN a webhosting ihned k použití._**
+**Spheron Network – _Spheron je platforma jako služba (PaaS) navržená pro decentralizované aplikace (dapps), které chtějí spustit své aplikace na decentralizované infrastruktuře s nejlepším výkonem. Ve výchozím nastavení poskytuje výpočetní výkon, decentralizované úložiště, CDN a webhosting._**
 
 - [spheron.network](https://spheron.network/)
 - [Dokumentace](https://docs.spheron.network/)
 - [GitHub](https://github.com/spheronFdn)
 
+**dweb3 – _Resolver pro decentralizované webové stránky, podobný eth.limo, podporující všechny typy a neomezující se pouze na ENS a IPFS._**
+
+- [dweb3.wtf](https://dweb3.wtf)
+
+**web3compass – _Vyhledávač pro decentralizované webové stránky podporované IPFS a ENS._**
+
+- [web3compass.net](https://www.web3compass.net/)
+- [Dokumentace](https://www.web3compass.net/statistics)
+
 ## Další čtení {#further-reading}
 
-- [Co je to decentralizované úložiště?](https://coinmarketcap.com/academy/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) – _CoinMarketCap_
-- [Boření pěti běžných mýtů o decentralizovaném úložišti](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) – _Storj_
+- [Co je decentralizované úložiště?](https://coinmarketcap.com/academy/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) – _CoinMarketCap_
+- [Vyvrácení pěti běžných mýtů o decentralizovaném úložišti](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) – _Storj_
 
 _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ho!_
 
 ## Související témata {#related-topics}
 
-- [Vývojářské frameworky](/developers/docs/frameworks/)
+- [Vývojové frameworky](/developers/docs/frameworks/)

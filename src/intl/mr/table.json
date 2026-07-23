@@ -1,7 +1,10 @@
 {
   "table-active": "सक्रिय",
-  "table-filters": "फिल्टर",
-  "table-showing": "दाखवत आहे",
-  "table-reset-filters": "रीसेट करा",
+  "table-browser-engines": "ब्राउझर इंजिन्स",
+  "table-desktop-platforms": "डेस्कटॉप प्लॅटफॉर्म्स",
+  "table-filters": "फिल्टर्स",
+  "table-mobile-platforms": "मोबाईल प्लॅटफॉर्म्स",
+  "table-reset-filters": "रीसेट",
+  "table-showing": "दर्शवित आहे",
   "table-what-are-you-looking-for": "तुम्ही काय शोधत आहात?"
 }

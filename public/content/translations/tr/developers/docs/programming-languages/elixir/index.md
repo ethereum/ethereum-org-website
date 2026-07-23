@@ -7,13 +7,13 @@ incomplete: false
 
 <FeaturedText>Elixir tabanlı projeleri ve araçları kullanarak Ethereum için nasıl geliştirme yapacağınızı öğrenin.</FeaturedText>
 
-Kripto para birimi ve blok zinciri teknolojisinin faydalarını kullanan merkeziyetsiz uygulamalar (veya "dapp'ler") oluşturmak için Ethereum'u kullanın. Bu dapp'ler güvenilir olabilir, yani Ethereum'a dağıtıldıktan sonra her zaman programlandığı gibi çalışırlar. Yeni tür finansal uygulamalar oluşturmak için dijital varlıkları kontrol edebilirler. Merkeziyetsiz olabilirler, yani tek bir varlık veya kişi onları kontrol etmez ve sansürlemenin neredeyse imkansız olduğu anlamına gelir.
+Kripto para ve Blokzincir teknolojisinin avantajlarından yararlanan merkeziyetsiz uygulamalar (veya "dapp'ler") oluşturmak için Ethereum'u kullanın. Bu dapp'ler güven gerektirmeyen yapıda olabilir, yani Ethereum'a dağıtıldıklarında her zaman programlandıkları gibi çalışacaklardır. Yeni tür finansal uygulamalar oluşturmak için dijital varlıkları kontrol edebilirler. Merkeziyetsiz olabilirler, yani hiçbir tekil kurum veya kişi onları kontrol edemez ve sansürlenmeleri neredeyse imkansızdır.
 
-## Akıllı sözleşmelere ve Solidity diline başlangıç {#getting-started-with-smart-contracts-and-solidity}
+## Akıllı sözleşmeler ve Solidity diline başlarken {#getting-started-with-smart-contracts-and-solidity}
 
 **Elixir'i Ethereum ile entegre etmek için ilk adımlarınızı atın**
 
-Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/learn](/learn/) veya [ethereum.org/developers](/developers/) adreslerine göz atın.
+Önce daha temel bir başlangıca mı ihtiyacınız var? [ethereum.org/learn](/learn/) veya [ethereum.org/developers](/developers/) adreslerine göz atın.
 
 - [Blokzincir Açıklaması](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Akıllı Sözleşmeleri Anlamak](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -22,7 +22,7 @@ Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/lea
 
 ## Başlangıç seviyesi makaleler {#beginner-articles}
 
-- [Sonunda Ethereum hesaplarını anlamak](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
+- [Ethereum hesaplarını nihayet anlamak](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [Ethers — Elixir için birinci sınıf bir Ethereum Web3 kütüphanesi](https://medium.com/@alisinabh/announcing-ethers-a-first-class-ethereum-web3-library-for-elixir-1d64e9409122)
 
 ## Orta seviye makaleler {#intermediate-articles}
@@ -34,22 +34,22 @@ Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/lea
 
 ### Aktif {#active}
 
-- [block_keys](https://github.com/ExWeb3/block_keys) - _Elixir'de BIP32 & BIP44 Uygulaması (Deterministik Cüzdanlar için Çoklu Hesap Hiyerarşisi)_
-- [ethereumex](https://github.com/mana-ethereum/ethereumex) - _Ethereum blokzinciri için Elixir JSON-RPC istemcisi_
-- [ethers](https://github.com/ExWeb3/elixir_ethers) - _Elixir kullanarak Ethereum'daki akıllı sözleşmelerle etkileşim kurmak için kapsamlı bir Web3 kütüphanesi_
-- [ethers_kms](https://github.com/ExWeb3/elixir_ethers_kms) - _Ethers için bir KMS imzalayıcı kütüphanesi (AWS KMS ile işlemleri imzala)_
+- [block_keys](https://github.com/ExWeb3/block_keys) - _Elixir'de BIP32 ve BIP44 Uygulaması (Deterministik Cüzdanlar için Çoklu Hesap Hiyerarşisi)_
+- [ethereumex](https://github.com/mana-ethereum/ethereumex) - _Ethereum Blokzinciri için Elixir JSON-RPC istemcisi_
+- [ethers](https://github.com/ExWeb3/elixir_ethers) - _Elixir kullanarak Ethereum üzerindeki akıllı sözleşmelerle etkileşim kurmak için kapsamlı bir Web3 kütüphanesi_
+- [ethers_kms](https://github.com/ExWeb3/elixir_ethers_kms) - _Ethers için bir KMS imzalayıcı kütüphanesi (işlemleri AWS KMS ile imzalayın)_
 - [ex_abi](https://github.com/poanetwork/ex_abi) - _Elixir'de Ethereum ABI ayrıştırıcı/kod çözücü/kodlayıcı uygulaması_
-- [ex_keccak](https://github.com/ExWeb3/ex_keccak) - _Bir NIF ile oluşturulmuş tiny-keccak Rust crate'ini kullanarak Keccak SHA3-256 karmalarını hesaplamak için Elixir kütüphanesi_
+- [ex_keccak](https://github.com/ExWeb3/ex_keccak) - _NIF ile oluşturulmuş tiny-keccak Rust sandığı (crate) kullanarak Keccak SHA3-256 karmalarını hesaplamak için Elixir kütüphanesi_
 - [ex_rlp](https://github.com/mana-ethereum/ex_rlp) - _Ethereum'un RLP (Özyinelemeli Uzunluk Öneki) kodlamasının Elixir uygulaması_
 
-### Arşivlenmiş / Artık bakımı yapılmıyor {#archived--no-longer-maintained}
+### Arşivlenmiş / Artık bakımı yapılmayan {#archived--no-longer-maintained}
 
-- [eth](https://hex.pm/packages/eth) - _Elixir için Ethereum yardımcı programları_
+- [eth](https://hex.pm/packages/eth) - _Elixir için Ethereum araçları_
 - [exw3](https://github.com/hswick/exw3) - _Elixir için üst düzey Ethereum RPC İstemcisi_
 - [mana](https://github.com/mana-ethereum/mana) - _Elixir ile yazılmış Ethereum tam düğüm uygulaması_
 
 Daha fazla kaynak mı arıyorsunuz? [Geliştirici ana sayfamıza](/developers/) göz atın.
 
-## Elixir topluluğu katkıda bulunanları {#elixir-community-contributors}
+## Elixir topluluğuna katkıda bulunanlar {#elixir-community-contributors}
 
-[Elixir Slack #ethereum kanalı](https://elixir-lang.slack.com/archives/C5RPZ3RJL), hızla büyüyen bir topluluğa ev sahipliği yapar ve yukarıdaki projelerden herhangi biri ve ilgili konular hakkındaki tartışmalar için özel bir kaynaktır.
+[Elixir'in Slack #ethereum kanalı](https://elixir-lang.slack.com/archives/C5RPZ3RJL), hızla büyüyen bir topluluğa ev sahipliği yapmaktadır ve yukarıdaki projeler ile ilgili konulardaki tartışmalar için özel bir kaynaktır.

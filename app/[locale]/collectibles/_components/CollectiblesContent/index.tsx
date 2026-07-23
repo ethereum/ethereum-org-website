@@ -1,6 +1,6 @@
 "use client"
-
 import { useMemo } from "react"
+import { useTranslations } from "next-intl"
 import { useIsMounted } from "usehooks-ts"
 import { useAccount } from "wagmi"
 import { useQuery } from "@tanstack/react-query"
@@ -18,7 +18,6 @@ import CollectiblesCurrentYear from "../CollectiblesCurrentYear"
 import CollectiblesPreviousYears from "../CollectiblesPreviousYears"
 import CollectiblesProgress from "../CollectiblesProgress/lazy"
 
-import useTranslation from "@/hooks/useTranslation"
 import alreadyContributorImg from "@/public/images/10-year-anniversary/adoption-1.png"
 
 export type BadgeWithOwned = Badge & {
@@ -28,7 +27,7 @@ export type BadgeWithOwned = Badge & {
 const ADDRESS_STATS_API = `${COLLECTIBLES_BASE_URL}/api/stats/`
 
 const CollectiblesContent = ({ badges }: CollectiblesPageProps) => {
-  const { t } = useTranslation("page-collectibles")
+  const t = useTranslations("page-collectibles")
 
   const currentYear = new Date().getFullYear().toString()
 
@@ -83,7 +82,7 @@ const CollectiblesContent = ({ badges }: CollectiblesPageProps) => {
   return (
     <div className="flex flex-col gap-8 xl:flex-row">
       {/* Already a contributor? section */}
-      <div className="flex h-fit w-full flex-col gap-y-4 rounded-2xl border border-accent-a/5 bg-gradient-to-b from-accent-a/5 to-accent-a/10 px-6 py-6 xl:sticky xl:top-28 xl:max-w-xs dark:from-accent-a/10 dark:to-accent-a/20">
+      <div className="flex h-fit w-full flex-col gap-y-4 rounded-base border border-accent-a/5 bg-tint-accent-a px-6 py-6 xl:sticky xl:top-28 xl:max-w-xs">
         <Image
           src={alreadyContributorImg}
           alt={t("page-collectibles-contributor-img-alt")}
@@ -104,8 +103,8 @@ const CollectiblesContent = ({ badges }: CollectiblesPageProps) => {
         )}
         {isLoading && (
           <div className="flex w-full flex-col gap-y-4">
-            <Skeleton className="h-10 w-full rounded-2xl" />
-            <Skeleton className="h-10 w-full rounded-2xl" />
+            <Skeleton className="h-10 w-full rounded-base" />
+            <Skeleton className="h-10 w-full rounded-base" />
           </div>
         )}
         {error && (

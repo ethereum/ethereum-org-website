@@ -1,8 +1,8 @@
 "use client"
-
 import { useState } from "react"
 import { ChevronRight } from "lucide-react"
 import { AnimatePresence, motion } from "motion/react"
+import { useTranslations } from "next-intl"
 
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 import { DeveloperDocsLink } from "@/lib/interfaces"
@@ -15,8 +15,6 @@ import {
   dropdownIconContainerVariant,
   type NavLinkProps as SideNavLinkProps,
 } from "./SideNav"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 // Traverse all links to find page id
 const getPageTitleId = (
@@ -50,7 +48,7 @@ const innerLinksVariants = {
 
 const LinkContainer = ({ children }: ChildOnlyProp) => {
   return (
-    <HStack className="w-full justify-between py-2 pe-8 ps-2 hover:bg-[ednBackground]">
+    <HStack className="w-full justify-between py-2 ps-2 pe-8 hover:bg-[ednBackground]">
       {children}
     </HStack>
   )
@@ -72,7 +70,7 @@ export type NavLinkProps = SideNavLinkProps & {
 }
 
 const NavLink = ({ item, path, toggle }: NavLinkProps) => {
-  const { t } = useTranslation("page-developers-docs")
+  const t = useTranslations("page-developers-docs")
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
   if (item.items) {
@@ -102,7 +100,7 @@ const NavLink = ({ item, path, toggle }: NavLinkProps) => {
           </motion.div>
         </LinkContainer>
         <motion.div
-          className="ps-4 text-sm font-normal leading-relaxed"
+          className="ps-4 text-sm leading-relaxed font-normal"
           key={item.id}
           animate={isOpen ? "open" : "closed"}
           variants={innerLinksVariants}
@@ -132,7 +130,7 @@ export type SideNavMobileProps = {
 
 // TODO consolidate into SideNav
 const SideNavMobile = ({ path }: SideNavMobileProps) => {
-  const { t } = useTranslation("page-developers-docs")
+  const t = useTranslations("page-developers-docs")
 
   const [isOpen, setIsOpen] = useState<boolean>(false)
 

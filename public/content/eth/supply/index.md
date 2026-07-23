@@ -1,10 +1,9 @@
 ---
-title: Understanding ETH Supply and Issuance
+title: ETH supply and issuance
+metaTitle: Understanding ETH Supply and Issuance
 description: A beginner-friendly guide to ETH supply and issuance, covering key concepts such as EIPs, PoS, and EIP-1559.
 lang: en
 ---
-
-# ETH Supply and Issuance {#eth-supply-and-issuance}
 
 ## Prerequisites {#prerequisites}
 

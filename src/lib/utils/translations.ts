@@ -27,8 +27,10 @@ export const EXACT_PATH_NAMESPACE_MAP: Record<string, string> = {
   "/founders/": "page-founders",
   "/get-eth/": "page-get-eth",
   "/bug-bounty/": "page-bug-bounty",
+  "/privacy/": "page-privacy",
   "/quizzes/": "learn-quizzes",
-  "/trillion-dollar-security/": "page-trillion-dollar-security",
+  "/reports/": "page-reports",
+  "/reports/trillion-dollar-security/": "page-trillion-dollar-security",
   "/wallets/find-wallet/": "page-wallets-find-wallet",
   "/wallets/": "page-wallets",
   "/what-is-ether/": "page-what-is-ether",
@@ -43,10 +45,10 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
   ["/layer-2/", "page-layer-2"],
   ["/developers/local-environment/", "page-developers-local-environment"],
   ["/developers/learning-tools/", "page-developers-learning-tools"],
+  ["/latest/", "page-latest"],
   ["/developers/tutorials/", "page-developers-tutorials"],
   ["/developers/tools/", "page-developers-tools"],
   ["/developers/", "page-developers-index"],
-  ["/contributing/translation-program/translatathon/", "page-translatathon"],
   ["/community/events/", "page-community-events"],
   ["/community/support/", "page-community-support"],
   ["/community/", "page-community"],
@@ -56,6 +58,10 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
   ["/ethereum-forks/", "page-history"],
   ["/resources/", "page-resources"],
   ["/stablecoins/", "page-stablecoins"],
+  // Ordering matters: /videos/ MUST be before /learn/ to prevent false positive matching
+  // (because /videos/ paths are prefixed with /learn/ in some contexts or just to avoid overly greedy matches)
+  ["/videos/", "page-videos"],
+  ["/stories/", "page-stories"],
   ["/learn/", "page-learn"],
   ["/gas/", "page-gas"],
   ["/what-is-ethereum/", "page-what-is-ethereum"],
@@ -65,17 +71,26 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
 ]
 
 const EXACT_PATH_ADDITIONAL_NAMESPACES: Record<string, string[]> = {
-  "/": ["page-10-year-anniversary"],
+  "/": ["page-10-year-anniversary", "page-app-descriptions"],
+  "/developers/": ["component-swiper"],
+  "/start/": ["component-swiper"],
+  "/wallets/": ["component-wallet-simulator"],
+  "/what-are-apps/": ["component-story-card"],
 }
 
 const PREFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [
   ["/developers/docs/scaling/", ["page-layer-2"]],
-  ["/roadmap/vision/", ["page-upgrades-index", "page-roadmap-vision"]],
+  ["/developers/tools/", ["page-developers-tools-descriptions"]],
   ["/gas/", ["page-gas", "page-community"]],
   ["/layer-2/networks/", ["table"]],
   ["/energy-consumption/", ["page-about"]],
   ["/glossary/", ["glossary"]],
-  ["/10years/", ["page-10-year-anniversary"]],
+  [
+    "/10years/",
+    ["page-10-year-anniversary", "component-swiper", "component-story-card"],
+  ],
+  ["/stories/", ["component-story-card"]],
+  ["/apps/", ["page-app-descriptions", "component-swiper"]],
 ]
 
 const SUFFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [

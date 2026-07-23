@@ -1,0 +1,73 @@
+---
+title: "Cara membuat l2 gerilya"
+description: "Fatemeh Fannizadeh dan Melanie Premsyl tentang membangun jaringan Lapisan 2 sebagai alat untuk privasi, kebebasan, dan perlawanan, menata ulang infrastruktur rantai blok melalui kacamata cypherpunk dan aktivis."
+lang: id
+youtubeId: "WlsICV2OPAE"
+uploadDate: 2025-11-23
+duration: "0:15:55"
+educationLevel: intermediate
+topic:
+  - "privacy-and-security"
+  - "scaling-and-layer-2"
+  - "privacy"
+  - "layer-2"
+format: interview
+author: Web3Privacy Now
+breadcrumb: "L2 Gerilya"
+---
+
+**Fatemeh Fannizadeh** dan **Melanie Premsyl** melakukan presentasi di Ethereum Cypherpunk Congress (ECC#2) di Buenos Aires tentang membangun jaringan lapisan 2 (l2) sebagai alat untuk privasi, kebebasan, dan perlawanan, menata ulang infrastruktur rantai blok melalui kacamata cypherpunk dan aktivis, dengan eksplorasi mendetail ke dalam persimpangan antara filosofi anarkis dan arsitektur rantai blok.
+
+*Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=WlsICV2OPAE) yang dipublikasikan oleh Web3Privacy Now. Transkrip ini telah sedikit diedit agar lebih mudah dibaca.*
+
+#### Pengantar dan filosofi anarkis (0:05) {#introduction-and-anarchist-philosophy-005}
+
+**Fatemeh Fannizadeh:** [Tepuk tangan] Baiklah, terima kasih sudah hadir di sini. Saya tahu Vitalik sedang berbicara sekarang. Sungguh suatu kehormatan ada beberapa dari Anda di sini dan tidak berada di antrean matcha di sebelah sana. Kita akan berbincang hari ini tentang l2 gerilya, dan saya rasa kita akan membahasnya, tetapi saya perkenalkan kepada Anda Melanie Premsyl, filsuf dan anarkis Prancis, yang memberikan kehormatan untuk bergabung dengan kita di sini. Apakah Anda ingin memberikan sedikit perkenalan tentang diri Anda?
+
+**Melanie Premsyl:** Ya. Hai semuanya. Jadi saya adalah seorang filsuf Prancis. Saya mempelajari anarki dan teknologi, dan pada awalnya saya lebih berada di sisi wilayah. Seperti di pusat Prancis, misalnya, saya tidak tahu apakah Anda tahu Tarnac, atau semua kelompok semacam itu yang lebih merupakan kelompok kekerasan. Masalah utama yang saya temui adalah bahwa kita perlu terhubung dengan orang lain di dunia, dan banyak kelompok anarkis sangat terbatas. Kita butuh cara agar kita bisa berkomunikasi dengan lebih banyak orang dari Amerika atau Amerika Selatan. Dan itulah mengapa sekarang kita mencoba membuat jembatan dengan kripto dan semua orang yang mencoba menemukan cara baru untuk melawan kurangnya privasi, kurangnya kebebasan, dan kekerasan negara.
+
+#### Persidangan bersaudara MEV (1:52) {#the-mev-brothers-trial-152}
+
+**Fatemeh Fannizadeh:** Luar biasa. Jadi pada dasarnya, kita bertemu beberapa minggu yang lalu di New York. Kita berdua menghadiri persidangan yang berlangsung di Manhattan di mana dua bersaudara ini, yang dikenal sebagai bersaudara MEV, dituntut karena mereka melakukan *sandwich* terhadap beberapa bot *sandwich*. Saya pergi ke pengadilan untuk menonton persidangan, dan saya melihat orang ini di sini sedang membaca Spinoza dalam bahasa Prancis, dan saya sangat penasaran dengan apa yang sedang terjadi. Tidak ada seorang pun di kursi penonton selain kita berdua! Jadi saya menjadi sangat penasaran tentang apa yang membuat Anda, yang pertama dan terutama adalah seorang anarkis dan filsuf daripada seorang teknolog, pada dasarnya datang untuk menghadiri persidangan khusus ini, tetapi juga untuk memikirkan tentang tata kelola Ethereum dan seluruh sistem validasi serta persidangan yang sedang berlangsung di New York. 
+
+**Melanie Premsyl:** Saya rasa saya hanya mencari tahu untuk memahami apakah ada cara di mana Amerika Serikat mencoba mengendalikan Ethereum. Karena di Eropa, kita sangat tertinggal dalam permainan kripto karena kita tidak memiliki undang-undang, dan saya hanya sekadar memeriksa. 
+
+**Fatemeh Fannizadeh:** Jadi, apakah Anda pikir Amerika Serikat sedang mencoba mengendalikan Ethereum? 
+
+**Melanie Premsyl:** Saya rasa itu pertanyaan besar. Saya pikir Amerika Serikat sedang mencoba mengendalikan semua orang. 
+
+**Fatemeh Fannizadeh:** Oke. Ya, itu cukup masuk akal. Jadi bagi mereka yang belum mengikuti persidangan, setelah sekitar tiga atau empat minggu, persidangan tersebut dibatalkan (mistrial). Juri tidak dapat mencapai putusan bulat dan memutuskan apakah kedua bersaudara ini bersalah melanggar aturan rantai blok atau tidak—yang mana ini merupakan hasil yang cukup positif, menurut saya, bagi kripto, bahwa pengadilan atau juri tidak memutuskan apa yang benar dan apa yang salah secara onchain. 
+
+#### Menjembatani rantai blok dengan komunitas lain (4:06) {#bridging-blockchain-with-other-communities-406}
+
+**Fatemeh Fannizadeh:** Tapi oke, jika kita mundur selangkah tentang apa yang Anda katakan mengenai kaum anarkis yang melihat ke dalam teknologi ini untuk pada dasarnya menjembatani berbagai kelompok yang berbeda. 
+
+**Melanie Premsyl:** Ya. Jadi saya rasa saya di sini hanya untuk satu tujuan. Saya bukan gadis teknologi, atau saya bukan bagian dari permainan kripto, tetapi apa yang saya amati dengan sudut pandang lain adalah bahwa rantai blok memiliki kekuatan yang sangat disruptif tetapi tidak mampu menjangkau komunitas lain yang lebih teritorial. Saya pikir salah satu tujuannya adalah untuk menciptakan rantai blok yang berwarna, seperti mengapa kita ingin berbicara tentang l2, bagaimana menciptakan komunitas baru dengan latar belakang lain, dengan imajinasi dan khayalan lain.
+
+**Fatemeh Fannizadeh:** Maksud saya, sungguh luar biasa bagi saya melihat Anda hadir di sini di Devconnect sejujurnya, karena Anda membawa perspektif segar semacam ini pada komunitas ini dan apa yang kita lakukan serta acara-acara kita. Kemarin kita menghabiskan banyak waktu berpindah dari satu acara ke acara lain, dan saya mendapatkan umpan balik Anda—sesuatu yang saya tidak lagi mampu melihatnya, karena kita pada dasarnya telah berurusan dengan teater ini selama bertahun-tahun. Kita semua berteman, jadi kita semua sangat baik satu sama lain. Tetapi perspektif kritis ini luar biasa. Saya pikir kita bisa mendapatkan manfaat dari ini, terutama karena saya menjadi sangat bersemangat melihat bahwa kaum anarkis atau mungkin orang-orang yang lebih berhaluan kiri sebenarnya masih tertarik dengan teknologi kita. Meskipun, terlepas dari apa pun pertengkaran di Twitter kripto yang ada, mungkin lebih baik Anda tidak menyadari seluruh sisi komunitas ini. Tetapi pertengkaran tentang Ethereum sebagai teknologi komunis—apakah itu terdengar benar bagi Anda? Apakah menurut Anda tidak apa-apa untuk mengatakan bahwa Ethereum adalah teknologi komunis? 
+
+**Melanie Premsyl:** Ya, saya ingin mengatakan itu, tetapi saya tidak yakin, karena Anda tahu ada banyak orang yang perlu menghasilkan uang, jadi itu juga tujuan utamanya. Tetapi saya pikir kita bisa menggunakannya seperti jaring komunis, bahwa hanya satu bagian yang bisa menjadi mimpi semacam itu. Saya pikir itu adalah kue impian yang bisa diwujudkan, tetapi kita perlu memiliki alat dan desain yang membantu orang-orang keluar dari pemikiran teknis yang sangat berbau rekayasa, untuk memahami seperti apa bentuknya.
+
+#### Desentralisasi dan Lapisan 2 (6:55) {#decentralization-and-layer-2s-655}
+
+**Fatemeh Fannizadeh:** Itu sangat mengingatkan saya pada DAO beberapa tahun yang lalu. Saya tidak tahu tentang Anda semua, tetapi saya sangat bersemangat, saya berpikir bahwa DAO merevolusi cara kita berorganisasi sebagai kelompok dan komunitas secara onchain dan kebebasan yang kita miliki. Dan pada akhirnya, semua ini gagal total. Saya rasa itu tidak terwujud sama sekali. Itu hanya menjadi lebih tentang sistem pemungutan suara, itu tidak benar-benar demokratis, ini semua tentang mencari keuntungan. Seluruh gagasan yang kita miliki tentang DAO sebagai alat sosial tidak benar-benar terwujud. 
+
+**Fatemeh Fannizadeh:** Tetapi saya pikir kita telah banyak berbicara baru-baru ini tentang alat-alat yang diberikan rantai blok kepada kita dan bagaimana kita dapat membayangkan rantai blok berkembang dalam lima hingga sepuluh tahun ke depan, dan banyak pembicaraan terjadi tentang Ethereum yang menjadi privat. Saya pikir ini jelas merupakan jalan ke depan: lapisan 1 (l1) menjadi l1 yang berpusat pada privasi. Dan juga ada peta jalan yang berpusat pada rollup. Jadi bagaimana l2 dan rollup akan menjadi semacam pengguna utama Ethereum daripada pengguna akhir. Pengguna akhir kemudian akan berpindah, alih-alih menjadi bagian dari DAO di l1, menjadi bagian dari berbagai rollup atau l2. Jadi bagaimana kita pada dasarnya dapat memproyeksikan imajinasi kita ke masa depan Ethereum semacam ini untuk membangun apa yang Anda katakan, ruang kebebasan anarkis subkomunis ini? 
+
+**Melanie Premsyl:** Jadi saya orang Prancis. Ini adalah masalah besar. Menjadi orang Prancis, kami adalah bangsa yang sangat berpusat pada negara. Jadi saya selalu berpikir dengan cara yang pedagogis dan sangat dari atas ke bawah. Dan saya pikir l2 menciptakan cara agar semua orang dapat membuat rantai blok mini, dan mereka diamankan oleh lapisan 1. Saya ingin melihat apakah orang-orang dapat membuat bantuan pedagogis untuk semua orang untuk sesuatu yang gratis. Saya pikir banyak kelompok, seperti asosiasi, dapat membuat rantai blok mereka sendiri, dan itu akan menjadi sebuah cara—seperti yang Anda tahu, federalisme adalah subjek utama yang besar dari anarkisme. Bagaimana orang-orang bisa berhasil untuk mungkin saling membenci, tetapi tetap berbicara satu sama lain. Jadi kita perlu memiliki federalisme semacam ini di dalam rantai blok. Setiap orang memiliki lapisan 2 dengan nilainya sendiri, dan dengan demikian kita berbicara dengan infrastruktur yang sama. 
+
+#### Anarki, kebebasan, dan membangun perkakas (9:53) {#anarchy-freedom-and-building-tooling-953}
+
+**Fatemeh Fannizadeh:** Ya, saya sangat menyukai apa yang Anda katakan tentang pada dasarnya saling membenci tetapi tetap berkomunikasi, seperti tidak menjadi toksik terlepas dari perbedaan kita. Dan fakta bahwa ada seperti satu l1 dalam skenario ini, yang mana adalah Ethereum, juga sering dikatakan sebagai fasis karena kita semua harus setuju dengan satu set aturan ini. Jadi ini adalah satu sistem yang sama untuk semua orang, dan Anda pada dasarnya harus tunduk pada l1 ini atau Anda bisa pergi, itu pertanyaan yang sama sekali berbeda. Tetapi jika kita dapat mendesentralisasikan ini ke dalam berbagai jenis ekosistem l2 rollup kecil, maka kita dapat membawa kembali disonansi dan ketidaksepakatan di dalam infrastruktur bersama ini. 
+
+**Melanie Premsyl:** Ya, tentu saja. Saya pikir Anda hebat. Saya pikir ada tanggung jawab besar bagi orang-orang teknologi yang memiliki cara berpikir yang benar. Anda adalah satu-satunya saat ini yang mencoba melakukan sesuatu yang baik, dan karenanya Anda tidak bisa hanya berada dalam imajinasi Anda sendiri. Dan seperti yang Anda katakan, mungkin masalah fasisme—seperti kita hanya satu, Anda memiliki tanggung jawab besar. Ini bukan hanya menggunakan Ethereum atau sekadar privasi, ini seperti kita sedang menciptakan dunia teknologi baru dan kita harus memilih antara apakah hanya akan ada orang-orang teknologi, atau apakah orang-orang teknologi akan terhubung dengan semua orang yang menginginkan lebih banyak kebebasan.
+
+**Fatemeh Fannizadeh:** Jadi kita banyak menyebutkan komunisme dan anarkisme, dan ini hampir seperti kata-kata kutukan di kripto menurut saya. Anda tahu, ini sangat ternoda dan Anda langsung mendapat kritik jika Anda menyebutkan konsep ini. Dan saya tidak tahu, mungkin saya salah, tetapi ketika saya bergabung dengan kripto, ada lebih banyak peretas dan estetika anarkis lebih terasa. Suasananya lebih—keren untuk menjadi seperti ini, jadi banyak orang mengidentifikasi diri dengan hal itu. Saat ini saya merasa masih banyak yang ada di sekitar, tetapi mungkin lebih tertutup. Seperti, apakah ada anarkis yang tertutup di ruangan ini? Saya tidak tahu! Saya pikir ada. Jadi saya akan mengatakan mari kita mungkin mundur selangkah, jika Anda dapat mendefinisikan sebenarnya apa itu komunisme atau anarkisme.
+
+**Melanie Premsyl:** Ya. Tidak, saya pikir anarkisme tidak dikenal dengan baik padahal caranya sangat sederhana. Itu hanya ketika kita tiba pada titik memiliki organisasi mandiri. Jadi ketika ada kantong-kantong kebebasan, kantong-kantong anarki, seperti ketika orang-orang hanya berbicara bersama dengan teman-teman, dengan sebuah asosiasi, di tempat kerja juga, dan mereka tidak membutuhkan seseorang untuk menjadi ketua, kepala untuk memahami dan memutuskan. Karena pada akhirnya, masalah manusia adalah bahwa orang-orang ingin memiliki seorang ketua. Anarkisme hanya mencoba melawan keinginan mendalam untuk dikendalikan oleh orang lain. Apakah kita benar-benar ingin bebas? Itulah pertanyaannya, dan bagaimana kita bisa berhasil melakukannya bersama-sama? 
+
+**Fatemeh Fannizadeh:** Sesuatu yang Anda katakan kemarin juga yang menurut saya sangat relevan, adalah bahwa setiap orang menjalani anarki dalam hidup mereka. Beberapa orang seperti, "Oh, anarki, kita sangat jauh dari itu. Anda hanya reaksioner, anti-kemapanan, anti-negara." Tetapi sebenarnya, setiap orang, baik itu dalam keluarga mereka, dalam persahabatan mereka, dalam beberapa bentuk hubungan, sedang menavigasi ranah semacam ketiadaan hukum, anarki, di mana aturan diciptakan melalui dinamika antarpribadi. Jadi setiap orang memiliki tingkat anarki tertentu dalam hidup mereka, dan saya pikir mulai dari sana, mungkin menjadi lebih nyata juga untuk membicarakannya.
+
+**Melanie Premsyl:** Ya. Ya. Itulah mengapa saya pikir rantai blok benar-benar anarkis, dalam cara berpikir seperti itu. 
+
+**Fatemeh Fannizadeh:** Oke. Luar biasa. Saya pikir ini mungkin kalimat yang sempurna untuk mengakhiri. Rantai blok adalah anarkis. Dan juga untuk menyimpulkannya, saya pikir apa yang benar-benar penting atau apa yang sangat ingin saya lihat di rantai blok adalah lebih banyak perkakas. Karena sulit bagi saya untuk membayangkan kelompok anarkis atau kelompok berdaulat yang lebih otonom untuk datang dan hanya menjadi pengguna sebuah produk. Belum tentu ada kecocokan pasar dalam arti itu. Sangat tidak mungkin mereka akan begitu saja mengadopsi produk yang sudah jadi sepenuhnya. Sebaliknya, jika Anda memberi mereka bahan mentah untuk membangun milik mereka sendiri. Jadi ini lebih seperti swakarya (DIY), bangun perkakas Anda sendiri, rollup l2 Anda sendiri, apa pun Anda ingin menyebutnya. Saya pikir itu akan membuat kripto menjadi lebih selaras dengan kita. Merci beaucoup. [Tepuk tangan]

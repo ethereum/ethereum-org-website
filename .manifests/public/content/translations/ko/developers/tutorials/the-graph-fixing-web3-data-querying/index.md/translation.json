@@ -1,0 +1,260 @@
+{
+  "version": 1,
+  "locale": "ko",
+  "translatedAt": "2026-06-18T00:28:50.125Z",
+  "englishManifestHash": "a39fb019d108",
+  "placeholderOrder": [
+    "CODEBLOCK-935fc0",
+    "CODE-34b0af",
+    "CODE-18debd",
+    "CODE-cd6b98",
+    "LINK-02f0ea",
+    "CODEBLOCK-d373f9",
+    "IMAGE-19a99a",
+    "IMAGE-7b4a71",
+    "IMAGE-40ba53",
+    "IMAGE-e68da9",
+    "LINK-fbecf4",
+    "IMAGE-c3aead",
+    "CODE-a725ae",
+    "CODE-efc167",
+    "CODE-c971ef",
+    "CODE-a725ae",
+    "CODE-c971ef",
+    "CODE-a48e48",
+    "LINK-450974",
+    "LINK-9bec81",
+    "CODEBLOCK-cd6627",
+    "CODE-efc167",
+    "LINK-9bec81",
+    "CODEBLOCK-3bd96f",
+    "CODE-c971ef",
+    "CODE-a725ae",
+    "CODE-479222",
+    "CODE-76f425",
+    "CODE-b15ecb",
+    "LINK-492571",
+    "CODEBLOCK-d8405b",
+    "CODEBLOCK-30f7c1",
+    "CODEBLOCK-be6f9b",
+    "IMAGE-197f8a",
+    "LINK-4a6ed7",
+    "LINK-c27ad0",
+    "IMAGE-88651a",
+    "LINK-89818b",
+    "LINK-d65796",
+    "LINK-042acd",
+    "LINK-5b6ed2",
+    "LINK-071573"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-935fc0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d373f9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-cd6627": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3bd96f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d8405b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-30f7c1": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-be6f9b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-34b0af": {
+      "type": "inline-code",
+      "values": {
+        "content": "totalGamesPlayerWon"
+      }
+    },
+    "CODE-18debd": {
+      "type": "inline-code",
+      "values": {
+        "content": "totalGamesPlayerLost"
+      }
+    },
+    "CODE-cd6b98": {
+      "type": "inline-code",
+      "values": {
+        "content": "BetPlaced"
+      }
+    },
+    "CODE-a725ae": {
+      "type": "inline-code",
+      "values": {
+        "content": "subgraph.yaml"
+      }
+    },
+    "CODE-efc167": {
+      "type": "inline-code",
+      "values": {
+        "content": "schema.graphql"
+      }
+    },
+    "CODE-c971ef": {
+      "type": "inline-code",
+      "values": {
+        "content": "mapping.ts"
+      }
+    },
+    "CODE-a48e48": {
+      "type": "inline-code",
+      "values": {
+        "content": "subgraph.template.yaml"
+      }
+    },
+    "CODE-479222": {
+      "type": "inline-code",
+      "values": {
+        "content": "handleNewBet"
+      }
+    },
+    "CODE-76f425": {
+      "type": "inline-code",
+      "values": {
+        "content": "event.transaction.hash.toHex() + \"-\" + event.logIndex.toString()"
+      }
+    },
+    "CODE-b15ecb": {
+      "type": "inline-code",
+      "values": {
+        "content": ".save()"
+      }
+    },
+    "IMAGE-19a99a": {
+      "type": "image",
+      "values": {
+        "path": "./one-does-not-simply-query.jpg"
+      }
+    },
+    "IMAGE-7b4a71": {
+      "type": "image",
+      "values": {
+        "path": "./not-good-enough.jpg"
+      }
+    },
+    "IMAGE-40ba53": {
+      "type": "image",
+      "values": {
+        "path": "./graphql.jpg"
+      }
+    },
+    "IMAGE-e68da9": {
+      "type": "image",
+      "values": {
+        "path": "./graphql-query.gif"
+      }
+    },
+    "IMAGE-c3aead": {
+      "type": "image",
+      "values": {
+        "path": "./thegraph.png"
+      }
+    },
+    "IMAGE-197f8a": {
+      "type": "image",
+      "values": {
+        "path": "./magic.jpg"
+      }
+    },
+    "IMAGE-88651a": {
+      "type": "image",
+      "values": {
+        "path": "./thegraph-explorer.png"
+      }
+    },
+    "LINK-02f0ea": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.web3js.org/api/web3/class/Contract#events"
+      }
+    },
+    "LINK-fbecf4": {
+      "type": "link",
+      "values": {
+        "url": "https://www.apollographql.com/blog/graphql-explained"
+      }
+    },
+    "LINK-450974": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/aave/aave-protocol/tree/master/thegraph"
+      }
+    },
+    "LINK-9bec81": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest"
+      }
+    },
+    "LINK-492571": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference"
+      }
+    },
+    "LINK-4a6ed7": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/docs/en/deploying/deploying-a-subgraph-to-hosted/"
+      }
+    },
+    "LINK-c27ad0": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/explorer/"
+      }
+    },
+    "LINK-89818b": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/graphprotocol/graph-node#quick-start"
+      }
+    },
+    "LINK-d65796": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/docs/en/developing/supported-networks/"
+      }
+    },
+    "LINK-042acd": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/docs/en/substreams/"
+      }
+    },
+    "LINK-5b6ed2": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/blog/mainnet-migration/"
+      }
+    },
+    "LINK-071573": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/docs/en/network/explorer/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T00:28:50.125Z",
+      "status": "success"
+    }
+  }
+}

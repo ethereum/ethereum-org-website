@@ -4,8 +4,9 @@ lang: en
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: Receive financial incentives to generate accurate forecasts 
-summaryPoint2: High quality predictions about future events
+summaryPoints:
+  - "Receive financial incentives to generate accurate forecasts"
+  - "High quality predictions about future events"
 buttons: 
   - content: Learn more
     toId: how-prediction-markets-work
@@ -30,11 +31,11 @@ In theory, because bettors stand to profit from being correct, prediction market
 
 Unlike traditional forecasting, blockchain-based prediction markets are:
 
-<CardGrid>
+<Grid>
   <Card title="Incentivized" emoji=":money_with_wings:" description="Participants stake real funds, which infers high-quality predictions."/>
   <Card title="Decentralization" emoji="🌎" description="Using blockchain and smart contracts ensures transparent and automated payouts." />
   <Card title="Market driven odds" emoji="🤝" description="Prices are set by traders buying and selling outcome shares, rather than preset by a centralized bookmaker." />
-</CardGrid>
+</Grid>
 
 Even as an observer of the market, you can assess valuable data that would be otherwise unavailable. Think of it like this:
 

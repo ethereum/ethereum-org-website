@@ -2,13 +2,12 @@
 title: Account abstraction
 description: An overview of Ethereum's plans to make user accounts simpler and safer
 lang: en
+template: roadmap
 summaryPoints:
   - Account abstraction makes it much easier to build smart contract wallets
   - Smart contract wallets make it much easier to manage access to Ethereum accounts
   - Lost and exposed keys can be recovered using multiple backups
 ---
-
-# Account abstraction {#account-abstraction}
 
 Most existing users interact with [Ethereum](/) using **[externally owned accounts (EOAs)](/glossary/#eoa)**. This limits how users can interact with Ethereum. For example, it makes it difficult to do batches of transactions and requires users to always keep an ETH balance to pay transaction fees.
 

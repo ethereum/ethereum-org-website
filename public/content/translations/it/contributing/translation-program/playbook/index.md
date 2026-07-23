@@ -1,30 +1,29 @@
 ---
-title: Manuale del programma di traduzione
+title: Playbook del programma di traduzione
+metaTitle: Playbook del programma di traduzione
 lang: it
-description: Una raccolta di suggerimenti e considerazioni importanti per l'impostazione di un programma di traduzione
+description: Una raccolta di suggerimenti e considerazioni importanti per la creazione di un programma di traduzione
 ---
 
-# Manuale del programma di traduzione {#translation-program-playbook}
-
-L'inglese è una delle lingue più parlate al mondo ed è di gran lunga la lingua più studiata a livello globale. Poiché l'inglese è la lingua più comune utilizzata su Internet, specialmente sui social media, e i linguaggi di programmazione multilingue sono scarsi, la maggior parte dei contenuti nello spazio della blockchain è scritta nativamente in inglese.
+L'inglese è una delle lingue più parlate al mondo ed è di gran lunga la lingua più studiata a livello globale. Poiché l'inglese è la lingua più utilizzata su Internet, specialmente sui social media, e i linguaggi di programmazione multilingue sono scarsi, la maggior parte dei contenuti nello spazio della blockchain è scritta nativamente in inglese.
 
 Tuttavia, poiché oltre 6 miliardi di persone al mondo (più del 75% della popolazione) non parlano affatto inglese, ciò rappresenta un'enorme barriera all'ingresso in Ethereum per la stragrande maggioranza della popolazione mondiale.
 
 Per questo motivo, un numero crescente di progetti nel settore sta cercando di far tradurre i propri contenuti in diverse lingue e localizzarli per le comunità globali.
 
-Fornire contenuti multilingue è un modo semplice ed efficace per far crescere la propria comunità globale, offrire formazione a chi non parla inglese, assicurarsi che i propri contenuti e le proprie comunicazioni raggiungano un pubblico più ampio e far avvicinare più persone al settore.
+Fornire contenuti multilingue è un modo semplice ed efficace per far crescere la tua comunità globale, offrire formazione a chi non parla inglese, assicurarsi che i tuoi contenuti e le tue comunicazioni raggiungano un pubblico più ampio e favorire l'inserimento di più persone nel settore.
 
-Questa guida mira ad affrontare le sfide e le idee sbagliate comuni sulla localizzazione dei contenuti. Fornisce una guida passo passo alla gestione dei contenuti, al processo di traduzione e revisione, alla garanzia della qualità, al coinvolgimento dei traduttori e ad altri aspetti vitali del processo di localizzazione.
+Questa guida mira ad affrontare le sfide e le idee sbagliate comuni sulla localizzazione dei contenuti. Fornisce una guida passo passo alla gestione dei contenuti, al processo di traduzione e revisione, alla garanzia della qualità, alla ricerca di traduttori e ad altri aspetti vitali del processo di localizzazione.
 
 ## Gestione dei contenuti {#content-management}
 
 La gestione dei contenuti di traduzione si riferisce al processo di automazione del flusso di lavoro di traduzione, che elimina la necessità di lavori manuali ripetitivi, migliora l'efficienza e la qualità, consente un controllo migliore e facilita la collaborazione.
 
-Esistono molti approcci diversi alla gestione dei contenuti nel processo di localizzazione, a seconda dei contenuti e delle proprie esigenze.
+Esistono molti approcci diversi alla gestione dei contenuti nel processo di localizzazione, a seconda dei contenuti e delle tue esigenze.
 
 Il modo fondamentale per gestire i contenuti è creare file bilingue, contenenti il testo di origine e quello di destinazione. Questo metodo è usato raramente nella traduzione, poiché non offre vantaggi significativi, a parte la semplicità.
 
-Le agenzie di traduzione di solito affrontano la gestione delle traduzioni utilizzando software di gestione delle traduzioni o strumenti di localizzazione, che forniscono capacità di gestione dei progetti e consentono un controllo molto maggiore su file, contenuti e linguisti.
+Le agenzie di traduzione di solito affrontano la gestione delle traduzioni utilizzando software di gestione delle traduzioni o strumenti di localizzazione, che forniscono funzionalità di gestione dei progetti e consentono un controllo molto maggiore su file, contenuti e linguisti.
 
 Scopri di più sulla gestione dei contenuti:
 
@@ -34,7 +33,7 @@ Scopri di più sulla gestione dei contenuti:
 
 ### Software di gestione delle traduzioni {#translation-management-software}
 
-Esistono molti sistemi di gestione delle traduzioni e strumenti di localizzazione, e la scelta del software dipende principalmente dalle proprie esigenze.
+Esistono molti sistemi di gestione delle traduzioni e strumenti di localizzazione, e la scelta del software dipende principalmente dalle tue esigenze.
 
 Sebbene alcuni progetti decidano di non utilizzare sistemi di gestione delle traduzioni e preferiscano gestire le traduzioni manualmente, direttamente in file bilingue o su servizi di hosting come GitHub, ciò riduce drasticamente il controllo, la produttività, la qualità, la scalabilità e le capacità di collaborazione. Un approccio del genere potrebbe essere più vantaggioso per progetti di traduzione su piccola scala o una tantum.
 
@@ -44,8 +43,8 @@ Una rapida occhiata ad alcuni degli strumenti di gestione delle traduzioni più 
 
 [Crowdin](https://crowdin.com/)
 
-- Gratuito per i progetti open-source (numero illimitato di stringhe e progetti)
-- TM (Memoria di Traduzione) e glossario disponibili con tutti i piani
+- Gratuito per progetti open source (numero illimitato di stringhe e progetti)
+- TM (Memoria di traduzione) e glossario disponibili con tutti i piani
 - Oltre 60 formati di file supportati, oltre 70 integrazioni API
 
 [Lokalise](https://lokalise.com/)
@@ -74,7 +73,7 @@ Una rapida occhiata ad alcuni degli strumenti di gestione delle traduzioni più 
 
 [POEditor](https://poeditor.com/)
 
-- Gratuito per i progetti open-source (numero limitato di stringhe per tutti i progetti, illimitato per i progetti open-source)
+- Gratuito per progetti open source (numero limitato di stringhe per tutti i progetti, illimitato per i progetti open source)
 - TM e glossario disponibili per i piani a pagamento
 - Oltre 20 formati di file supportati, oltre 10 integrazioni API
 
@@ -111,7 +110,7 @@ Scopri di più sui software di gestione delle traduzioni:
 
 ## Flusso di lavoro {#workflow}
 
-Nello spazio della traduzione, il flusso di lavoro di traduzione può significare un paio di cose diverse, entrambe in qualche modo correlate, e considerazioni importanti per il tuo progetto.
+Nel campo delle traduzioni, il flusso di lavoro di traduzione può significare un paio di cose diverse, entrambe in qualche modo correlate e considerazioni importanti per il tuo progetto.
 
 Le esploreremo entrambe di seguito.
 
@@ -119,14 +118,14 @@ Le esploreremo entrambe di seguito.
 
 Questo è probabilmente il modo più comune di pensare ai flussi di lavoro di traduzione e qualcosa che di solito viene in mente quando si sente la parola flusso di lavoro.
 
-Nella sua essenza, è il "flusso di lavoro" dall'iniziare a pensare alle traduzioni fino all'utilizzo dei contenuti tradotti nel proprio prodotto.
+Nella sua essenza, è il "flusso di lavoro" dall'iniziare a pensare alle traduzioni fino all'utilizzo dei contenuti tradotti nel tuo prodotto.
 
 Un esempio di flusso di lavoro in questo caso sarebbe:
 
-1. **Preparazione dei file per la traduzione** – Sembra semplice; tuttavia, è necessario considerare un paio di cose importanti. In questa fase, dovresti avere un piano chiaro su come dovrebbe funzionare l'intero processo.
+1. **Preparazione dei file per la traduzione**: sembra semplice; tuttavia, devi considerare un paio di cose importanti. In questa fase, dovresti avere un piano chiaro su come dovrebbe funzionare l'intero processo.
 
-- _Quali tipi di file utilizzerai? In quale formato desideri ricevere i tuoi file tradotti?_
-  - Se i tuoi contenuti sono disponibili in formato DOCX o MD, l'approccio sarà molto più semplice rispetto alla traduzione di una versione PDF del tuo Whitepaper o di altri documenti.
+- _Quali tipi di file utilizzerai? In quale formato vuoi ricevere i tuoi file tradotti?_
+  - Se i tuoi contenuti sono disponibili in formato DOCX o MD, l'approccio sarà molto più semplice rispetto alla traduzione di una versione PDF del tuo whitepaper o di altri documenti.
 - _Quali strumenti di localizzazione supportano questo tipo di file? Il file può essere tradotto in modo da mantenere la formattazione originale?_
   - Non tutti i tipi di file supportano la localizzazione diretta (ad es. file PDF, file immagine) e non tutti gli strumenti di localizzazione supportano tutti i tipi di file.
 - _Chi tradurrà i contenuti? Ordinerai traduzioni professionali o ti affiderai a volontari?_
@@ -136,37 +135,37 @@ Un esempio di flusso di lavoro in questo caso sarebbe:
 - _Tutti i contenuti da tradurre sono ugualmente importanti? Alcuni contenuti dovrebbero essere tradotti prima?_
   - Ci sono alcuni modi per dare priorità a determinati contenuti, che dovrebbero essere tradotti e implementati per primi. Ad esempio, se hai molti contenuti da tradurre, puoi utilizzare il controllo della versione per assicurarti che i traduttori sappiano a quali dare la priorità.
 
-2. **Condivisione dei file per la traduzione** – Anche questo passaggio richiede una riflessione a lungo termine e non è semplice come inviare i file di origine a un fornitore di servizi linguistici.
+2. **Condivisione dei file per la traduzione**: anche questo passaggio richiede una riflessione a lungo termine e non è semplice come inviare i file di origine a un fornitore di servizi linguistici.
 
 - _Chi tradurrà i contenuti? Quante persone saranno coinvolte in questo processo?_
   - Se prevedi di utilizzare uno strumento di localizzazione, questo passaggio è semplificato poiché puoi caricare i file di origine direttamente nello strumento. Questo vale anche se il processo di traduzione avviene sul servizio di hosting, poiché i file di origine non devono essere esportati da nessuna parte.
 - _I file di origine verranno gestiti manualmente o questo processo può essere automatizzato?_
   - La maggior parte degli strumenti di localizzazione consente un qualche tipo di integrazione o automazione del processo di gestione dei file. D'altra parte, se lavori con singoli traduttori e non utilizzi uno strumento di localizzazione, l'invio manuale dei file di origine a centinaia o migliaia di traduttori non è un processo scalabile.
 - _Quali strumenti verranno utilizzati per la localizzazione?_
-  - La risposta a questa domanda determinerà come affronterai tutto il resto. La selezione dello strumento appropriato può aiutarti ad automatizzare la gestione dei contenuti, la gestione della Memoria di Traduzione e del Glossario, la gestione dei traduttori, il monitoraggio dei progressi di traduzione/revisione, ecc., quindi prenditi del tempo e fai qualche ricerca su quale strumento desideri utilizzare. Se non prevedi di utilizzare uno strumento di localizzazione, tutto quanto sopra dovrà essere fatto manualmente.
+  - La risposta a questa domanda determinerà come affronterai tutto il resto. La selezione dello strumento appropriato può aiutarti ad automatizzare la gestione dei contenuti, la gestione della memoria di traduzione e del glossario, la gestione dei traduttori, il monitoraggio dei progressi di traduzione/revisione, ecc., quindi prenditi un po' di tempo e fai qualche ricerca su quale strumento desideri utilizzare. Se non prevedi di utilizzare uno strumento di localizzazione, tutto quanto sopra dovrà essere fatto manualmente.
 - _Quanto tempo richiederà il processo di traduzione? Quanto costerà?_
   - A questo punto, dovresti essere pronto a condividere i file di origine con il fornitore di servizi linguistici o con il gruppo di traduttori. Il fornitore di servizi linguistici può aiutarti ad analizzare il conteggio delle parole e fornire un preventivo, incluse le tariffe e le tempistiche per il processo di traduzione.
-- _Prevedi di apportare modifiche/aggiornare i contenuti di origine durante questo processo?_
-  - Se i tuoi contenuti sono dinamici e cambiano spesso, qualsiasi modifica o aggiornamento può interrompere i progressi della traduzione. L'utilizzo di una Memoria di Traduzione può aiutare a mitigare questo problema in modo significativo, sebbene sia comunque importante pensare a come funzionerà il processo e a come evitare di ritardare i progressi che i traduttori stanno facendo.
+- _Hai intenzione di apportare modifiche/aggiornare i contenuti di origine durante questo processo?_
+  - Se i tuoi contenuti sono dinamici e cambiano spesso, eventuali modifiche o aggiornamenti possono interrompere i progressi della traduzione. L'utilizzo di una memoria di traduzione può aiutare a mitigare questo problema in modo significativo, sebbene sia comunque importante pensare a come funzionerà il processo e a come evitare di ritardare i progressi che i traduttori stanno facendo.
 
-3. **Gestione del processo di traduzione** – Il tuo lavoro non è finito una volta che i contenuti di origine vengono consegnati al fornitore di servizi linguistici o ai traduttori. Per garantire una qualità ottimale delle traduzioni, i creatori di contenuti dovrebbero essere il più coinvolti possibile nel processo di traduzione.
+3. **Gestione del processo di traduzione**: il tuo lavoro non è finito una volta che i contenuti di origine vengono consegnati al fornitore di servizi linguistici o ai traduttori. Per garantire una qualità ottimale delle traduzioni, i creatori di contenuti dovrebbero essere il più coinvolti possibile nel processo di traduzione.
 
-- _Come prevedi di comunicare con i traduttori?_
+- _Come pensi di comunicare con i traduttori?_
   - Se prevedi di utilizzare uno strumento di localizzazione, la comunicazione può avvenire direttamente nello strumento. Si consiglia inoltre di impostare un canale di comunicazione alternativo con i traduttori, poiché potrebbero essere meno esitanti a contattarti e gli strumenti di messaggistica consentono una comunicazione più fluida.
 - _Come gestire le domande dei traduttori? Chi dovrebbe rispondere a queste domande?_
-  - I traduttori (sia professionisti che non professionisti) spesso si metteranno in contatto con domande e richieste di chiarimenti o contesto aggiuntivo, nonché feedback e idee per miglioramenti. Rispondere a queste richieste può spesso portare a un migliore coinvolgimento e a una maggiore qualità dei contenuti tradotti. È anche utile fornire loro quante più risorse possibili (ad es. guide, suggerimenti, linee guida terminologiche, FAQ, ecc.).
+  - I traduttori (sia professionisti che non professionisti) spesso si metteranno in contatto con domande e richieste di chiarimenti o contesto aggiuntivo, nonché feedback e idee per miglioramenti. Rispondere a queste richieste può spesso portare a un migliore coinvolgimento e a una migliore qualità dei contenuti tradotti. È anche utile fornire loro quante più risorse possibili (ad es. guide, suggerimenti, linee guida terminologiche, FAQ, ecc.).
 - _Come gestire il processo di revisione? Vuoi esternalizzarlo o hai la capacità di eseguire le revisioni internamente?_
-  - Sebbene non siano sempre necessarie, le revisioni sono parte integrante di un processo di traduzione ottimale. Di solito, è più semplice esternalizzare il processo di revisione a revisori professionisti. Tuttavia, se hai un grande team internazionale, le revisioni o la QA possono essere gestite anche internamente.
+  - Sebbene non siano sempre necessarie, le revisioni sono parte integrante di un processo di traduzione ottimale. Di solito, è più semplice esternalizzare il processo di revisione a revisori professionisti. Tuttavia, se hai un grande team internazionale, le revisioni o la QA (garanzia della qualità) possono essere gestite anche internamente.
 
-4. **Implementazione dei contenuti tradotti** – L'ultima parte del flusso di lavoro, sebbene sia comunque importante da considerare in anticipo.
+4. **Implementazione dei contenuti tradotti**: l'ultima parte del flusso di lavoro, sebbene sia comunque importante da considerare in anticipo.
 
 - _Tutte le traduzioni verranno completate contemporaneamente?_
   - In caso contrario, dovresti pensare a quali traduzioni dovrebbero avere la priorità, a come tenere traccia delle traduzioni in corso e a come viene gestita l'implementazione mentre le traduzioni vengono eseguite.
 - _Come ti verranno consegnati i contenuti tradotti? In quale formato saranno?_
-  - Questa è una considerazione importante, indipendentemente dall'approccio utilizzato. Gli strumenti di localizzazione consentono di mantenere il controllo sul formato del file di destinazione e sul processo di esportazione e di solito supportano l'automazione, ad esempio abilitando l'integrazione con il servizio di hosting.
+  - Questa è una considerazione importante, indipendentemente dall'approccio utilizzato. Gli strumenti di localizzazione ti consentono di mantenere il controllo sul formato del file di destinazione e sul processo di esportazione e di solito supportano l'automazione, ad esempio abilitando l'integrazione con il servizio di hosting.
 - _Come implementerai le traduzioni nel tuo progetto?_
   - In alcuni casi, questo potrebbe essere semplice come caricare il file tradotto o aggiungerlo ai tuoi documenti. Tuttavia, con progetti più complessi, come le traduzioni di siti web o app, dovresti assicurarti che il codice supporti l'internazionalizzazione e stabilire in anticipo come verrà gestito il processo di implementazione.
-- _Cosa succede se la formattazione è diversa da quella di origine?_
+- _Cosa succede se la formattazione è diversa dall'origine?_
   - Similmente a quanto sopra, se stai traducendo semplici file di testo, la formattazione probabilmente non è di fondamentale importanza. Tuttavia, con file più complessi, come i contenuti per un sito web o un'applicazione, la formattazione e il codice devono essere identici all'origine per poter essere implementati nel tuo progetto. In caso contrario, i file di destinazione dovranno essere modificati, dai traduttori o dai tuoi sviluppatori.
 
 **Significato 2**
@@ -202,7 +201,7 @@ Scopri di più sui flussi di lavoro di traduzione:
 
 Stabilire un piano chiaro su come gestire la terminologia è uno dei passaggi più importanti per garantire la qualità e la coerenza delle tue traduzioni e far risparmiare tempo ai tuoi traduttori.
 
-Nello spazio della traduzione, questo è noto come gestione della terminologia ed è uno dei servizi chiave che i fornitori di servizi linguistici offrono ai propri clienti, oltre all'accesso al loro gruppo di linguisti e alla gestione dei contenuti.
+Nel campo delle traduzioni, questo è noto come gestione della terminologia ed è uno dei servizi chiave che i fornitori di servizi linguistici offrono ai propri clienti, oltre all'accesso al loro gruppo di linguisti e alla gestione dei contenuti.
 
 La gestione della terminologia si riferisce al processo di identificazione, raccolta e gestione della terminologia che è importante per il tuo progetto e che dovrebbe sempre essere tradotta in modo corretto e coerente.
 
@@ -222,19 +221,19 @@ Scopri di più sulla gestione della terminologia:
 
 [Clear Words Translation su cos'è la gestione della terminologia e perché è importante](http://clearwordstranslations.com/language/en/what-is-terminology-management/)
 
-### Memoria di Traduzione e Glossario {#tm-and-glossary}
+### Memoria di traduzione e glossario {#tm-and-glossary}
 
-La Memoria di Traduzione e il Glossario sono strumenti importanti nel settore delle traduzioni e qualcosa su cui fa affidamento la maggior parte dei fornitori di servizi linguistici.
+La memoria di traduzione e il glossario sono strumenti importanti nel settore delle traduzioni e qualcosa su cui fa affidamento la maggior parte dei fornitori di servizi linguistici.
 
 Diamo un'occhiata a cosa significano questi termini e in che modo differiscono l'uno dall'altro:
 
-**Memoria di traduzione (TM)** – Un database che archivia automaticamente segmenti o stringhe, inclusi blocchi di testo più lunghi, frasi complete, paragrafi e singoli termini, nonché le loro traduzioni attuali e precedenti in ogni lingua.
+**Memoria di traduzione (TM)**: un database che archivia automaticamente segmenti o stringhe, inclusi blocchi di testo più lunghi, frasi complete, paragrafi e singoli termini, nonché le loro traduzioni attuali e precedenti in ogni lingua.
 
 La maggior parte degli strumenti di localizzazione, dei sistemi di gestione delle traduzioni e degli strumenti di traduzione assistita dal computer dispone di memorie di traduzione integrate, che di solito possono essere esportate e utilizzate anche in altri strumenti simili.
 
 I vantaggi dell'utilizzo di una memoria di traduzione includono traduzioni più rapide, una migliore qualità della traduzione, la capacità di conservare determinate traduzioni durante l'aggiornamento o la modifica dei contenuti di origine e costi di traduzione inferiori per i contenuti ripetitivi.
 
-Le memorie di traduzione funzionano in base a una corrispondenza percentuale tra segmenti diversi e di solito sono più utili quando due segmenti contengono oltre il 50% degli stessi contenuti. Vengono anche utilizzate per tradurre automaticamente segmenti ripetitivi, che corrispondono al 100%, eliminando così la necessità di tradurre i contenuti ripetitivi più di una volta.
+Le memorie di traduzione funzionano in base a una corrispondenza percentuale tra segmenti diversi e di solito sono più utili quando due segmenti contengono oltre il 50% dello stesso contenuto. Vengono anche utilizzate per tradurre automaticamente segmenti ripetitivi, che corrispondono al 100%, eliminando così la necessità di tradurre i contenuti ripetitivi più di una volta.
 
 Scopri di più sulle memorie di traduzione:
 
@@ -242,13 +241,13 @@ Scopri di più sulle memorie di traduzione:
 
 [Smartling su cos'è una memoria di traduzione](https://www.smartling.com/resources/101/what-is-translation-memory/)
 
-**Glossario –** Un elenco di termini importanti o sensibili, le loro definizioni, funzioni e traduzioni stabilite. La differenza principale tra un glossario e una memoria di traduzione è che un glossario non viene creato automaticamente e che non contiene traduzioni di frasi complete.
+**Glossario:** un elenco di termini importanti o sensibili, le loro definizioni, funzioni e traduzioni stabilite. La differenza principale tra un glossario e una memoria di traduzione è che un glossario non viene creato automaticamente e che non contiene traduzioni di frasi complete.
 
 La maggior parte degli strumenti di localizzazione, dei sistemi di gestione delle traduzioni e degli strumenti di traduzione assistita dal computer dispone di glossari integrati che puoi mantenere per assicurarti che contengano la terminologia importante per il tuo progetto. Come la TM, il glossario di solito può essere esportato e utilizzato in altri strumenti di localizzazione.
 
 Prima di iniziare il tuo progetto di traduzione, si consiglia vivamente di dedicare un po' di tempo alla creazione di un glossario per i tuoi traduttori e revisori. L'utilizzo di un glossario garantisce che i termini importanti vengano tradotti correttamente, fornisce ai traduttori il contesto tanto necessario e garantisce la coerenza nelle traduzioni.
 
-Sebbene i glossari contengano più spesso traduzioni stabilite nelle lingue di destinazione, sono utili anche senza di esse. Anche senza traduzioni stabilite, un glossario può contenere definizioni di termini tecnici, evidenziare termini che non dovrebbero essere tradotti e informare i traduttori se un termine specifico viene utilizzato come sostantivo, verbo, nome proprio o qualsiasi altra parte del discorso.
+Sebbene i glossari contengano molto spesso traduzioni stabilite nelle lingue di destinazione, sono utili anche senza di esse. Anche senza traduzioni stabilite, un glossario può contenere definizioni di termini tecnici, evidenziare termini che non dovrebbero essere tradotti e informare i traduttori se un termine specifico viene utilizzato come sostantivo, verbo, nome proprio o qualsiasi altra parte del discorso.
 
 Scopri di più sui glossari:
 
@@ -258,11 +257,11 @@ Scopri di più sui glossari:
 
 Se non prevedi di utilizzare uno strumento di localizzazione per il tuo progetto, probabilmente non sarai in grado di utilizzare una memoria di traduzione e un glossario (potresti creare un glossario o un database terminologico in un file Excel, tuttavia, i glossari automatizzati eliminano la necessità per i traduttori di cercare manualmente i termini e le loro definizioni).
 
-Ciò significa che tutti i contenuti ripetitivi e simili dovrebbero essere tradotti manualmente ogni volta. Inoltre, i traduttori dovrebbero contattarti con domande su se un determinato termine debba essere tradotto o meno, come viene utilizzato nel testo e se un termine ha già una traduzione stabilita.
+Ciò significa che tutti i contenuti ripetitivi e simili dovrebbero essere tradotti manualmente ogni volta. Inoltre, i traduttori dovrebbero contattarti con domande per sapere se un determinato termine deve essere tradotto o meno, come viene utilizzato nel testo e se un termine ha già una traduzione stabilita.
 
 _Vuoi utilizzare la memoria di traduzione e il glossario di ethereum.org nel tuo progetto? Contattaci all'indirizzo translations@ethereum.org._
 
-## Coinvolgimento dei traduttori {#translator-outreach}
+## Ricerca di traduttori {#translator-outreach}
 
 **Lavorare con un fornitore di servizi linguistici**
 
@@ -272,9 +271,9 @@ In questo caso, è importante selezionare un fornitore di servizi linguistici co
 
 Sebbene possa essere allettante selezionare un fornitore di servizi linguistici basandosi esclusivamente sulle tariffe offerte, è importante notare che i fornitori di servizi linguistici più grandi hanno tariffe più elevate per un motivo.
 
-- Hanno decine di migliaia di linguisti nel loro database, il che significa che saranno in grado di assegnare al tuo progetto traduttori con sufficiente esperienza e conoscenza del tuo particolare settore (ovvero, traduttori tecnici).
+- Hanno decine di migliaia di linguisti nel loro database, il che significa che saranno in grado di assegnare al tuo progetto traduttori con sufficiente esperienza e conoscenza del tuo settore specifico (ovvero, traduttori tecnici).
 - Hanno un'esperienza significativa nel lavorare su diversi progetti e nel soddisfare le diverse esigenze dei loro clienti. Ciò significa che saranno più propensi ad adattarsi al tuo particolare flusso di lavoro, a offrire preziosi suggerimenti e potenziali miglioramenti per il tuo processo di traduzione e a soddisfare le tue esigenze, i tuoi requisiti e le tue scadenze.
-- La maggior parte dei più grandi fornitori di servizi linguistici dispone anche di propri strumenti di localizzazione, memorie di traduzione e glossari che puoi utilizzare. In caso contrario, hanno almeno abbastanza linguisti nel loro gruppo per assicurarsi che i loro traduttori abbiano familiarità e siano in grado di lavorare con qualsiasi strumento di localizzazione tu voglia utilizzare.
+- La maggior parte dei più grandi fornitori di servizi linguistici dispone anche di propri strumenti di localizzazione, memorie di traduzione e glossari che puoi utilizzare. In caso contrario, hanno almeno un numero sufficiente di linguisti nel loro gruppo per assicurarsi che i loro traduttori abbiano familiarità e siano in grado di lavorare con qualsiasi strumento di localizzazione tu voglia utilizzare.
 
 Puoi trovare un confronto approfondito dei più grandi fornitori di servizi linguistici al mondo, alcuni dettagli su ciascuno di essi e suddivisioni in base ai servizi che forniscono, dati geografici, ecc. nel [rapporto Nimdzi 100 del 2021](https://www.nimdzi.com/nimdzi-100-top-lsp/).
 
@@ -284,27 +283,27 @@ Potresti lavorare con traduttori non professionisti e cercare volontari che ti a
 
 Esistono diversi modi per raggiungere le persone e invitarle a unirsi al tuo progetto. Ciò dipenderà in gran parte dal tuo prodotto e da quanto è grande la comunità che hai già.
 
-Alcuni modi per coinvolgere i volontari sono descritti di seguito:
+Alcuni modi per favorire l'inserimento di volontari sono descritti di seguito:
 
-**Sensibilizzazione –** Sebbene questo sia in qualche modo trattato nei punti seguenti, contattare potenziali volontari e assicurarsi che siano a conoscenza della tua iniziativa di traduzione può essere efficace di per sé.
+**Sensibilizzazione:** sebbene questo aspetto sia in qualche modo trattato nei punti seguenti, contattare potenziali volontari e assicurarsi che siano a conoscenza della tua iniziativa di traduzione può essere efficace di per sé.
 
-Molte persone vogliono essere coinvolte e contribuire ai loro progetti preferiti, ma spesso non vedono un modo chiaro per farlo senza essere sviluppatori o avere competenze tecniche speciali. Se riesci a diffondere la consapevolezza sul tuo progetto, molti bilingui saranno probabilmente desiderosi di essere coinvolti.
+Molte persone vogliono essere coinvolte e contribuire ai loro progetti preferiti, ma spesso non vedono un modo chiaro per farlo senza essere sviluppatori o avere competenze tecniche speciali. Se riesci a diffondere la consapevolezza del tuo progetto, molti bilingui saranno probabilmente desiderosi di essere coinvolti.
 
-**Cercare all'interno della propria comunità –** La maggior parte dei progetti nel settore ha già comunità ampie e attive. Molti membri della tua comunità probabilmente apprezzerebbero la possibilità di contribuire al progetto in modo semplice.
+**Cercare all'interno della tua comunità:** la maggior parte dei progetti nel settore ha già comunità ampie e attive. Molti membri della tua comunità probabilmente apprezzerebbero la possibilità di contribuire al progetto in modo semplice.
 
-Sebbene contribuire a progetti open-source sia spesso basato su una motivazione intrinseca, è anche una fantastica esperienza di apprendimento. Chiunque sia interessato a saperne di più sul tuo progetto sarebbe probabilmente felice di essere coinvolto in un programma di traduzione come volontario, poiché gli consentirebbe di combinare il fatto di aver contribuito a qualcosa a cui tiene con un'intensa esperienza di apprendimento pratico.
+Sebbene contribuire a progetti open source sia spesso basato su una motivazione intrinseca, è anche una fantastica esperienza di apprendimento. Chiunque sia interessato a saperne di più sul tuo progetto sarebbe probabilmente felice di essere coinvolto in un programma di traduzione come volontario, poiché gli consentirebbe di combinare il fatto di aver contribuito a qualcosa a cui tiene con un'intensa esperienza di apprendimento pratico.
 
-**Menzionare l'iniziativa nel proprio prodotto –** Se il tuo prodotto è popolare e utilizzato da un gran numero di persone, evidenziare il tuo programma di traduzione e invitare gli utenti all'azione durante l'utilizzo del prodotto può essere estremamente efficace.
+**Menzionare l'iniziativa nel tuo prodotto:** se il tuo prodotto è popolare e utilizzato da un gran numero di persone, evidenziare il tuo programma di traduzione e invitare gli utenti all'azione durante l'utilizzo del prodotto può essere estremamente efficace.
 
-Questo potrebbe essere semplice come aggiungere un banner o un pop-up con una CTA al tuo prodotto per applicazioni e siti web. Questo è efficace perché il tuo pubblico di destinazione è la tua comunità: le persone che hanno maggiori probabilità di essere coinvolte in primo luogo.
+Questo potrebbe essere semplice come aggiungere un banner o un pop-up con una CTA (Call to Action) al tuo prodotto per applicazioni e siti web. Questo è efficace perché il tuo pubblico di destinazione è la tua comunità: le persone che hanno maggiori probabilità di essere coinvolte in primo luogo.
 
-**Social media –** I social media possono essere un modo efficace per diffondere la consapevolezza sul tuo programma di traduzione e raggiungere i membri della tua comunità, così come altre persone che non ne fanno ancora parte.
+**Social media:** i social media possono essere un modo efficace per diffondere la consapevolezza del tuo programma di traduzione e raggiungere i membri della tua comunità, così come altre persone che non ne fanno ancora parte.
 
 Se hai un server Discord o un canale Telegram, è facile usarlo per la sensibilizzazione, la comunicazione con i tuoi traduttori e il riconoscimento dei tuoi collaboratori.
 
-Piattaforme come X (precedentemente Twitter) possono anche essere utili per coinvolgere nuovi membri della comunità e riconoscere pubblicamente i tuoi collaboratori.
+Piattaforme come X (in precedenza Twitter) possono anche essere utili per l'inserimento di nuovi membri della comunità e per riconoscere pubblicamente i tuoi collaboratori.
 
-La Linux Foundation ha creato un ampio [Rapporto sul sondaggio dei collaboratori FOSS del 2020](https://www.linuxfoundation.org/wp-content/uploads/2020FOSSContributorSurveyReport_121020.pdf), analizzando i collaboratori open-source e le loro motivazioni.
+La Linux Foundation ha creato un ampio [Rapporto sul sondaggio dei collaboratori FOSS del 2020](https://www.linuxfoundation.org/wp-content/uploads/2020FOSSContributorSurveyReport_121020.pdf), analizzando i collaboratori open source e le loro motivazioni.
 
 ## Conclusione {#conclusion}
 
@@ -314,4 +313,4 @@ Se stai cercando istruzioni più dettagliate e suddivisioni di diversi strumenti
 
 Alcuni link pertinenti sono inclusi alla fine di ogni sezione; tuttavia, puoi trovare molte altre risorse online.
 
-Per proposte di cooperazione o informazioni aggiuntive, insegnamenti e migliori pratiche che abbiamo acquisito mantenendo il Programma di traduzione di ethereum.org, non esitare a contattarci all'indirizzo translations@ethereum.org.
+Per proposte di cooperazione o informazioni aggiuntive, insegnamenti e best practice che abbiamo acquisito mantenendo il programma di traduzione di ethereum.org, non esitare a contattarci all'indirizzo translations@ethereum.org.

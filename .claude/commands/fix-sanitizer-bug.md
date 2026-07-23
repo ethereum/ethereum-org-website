@@ -6,13 +6,13 @@ argument-hint: [--language=CODE] [--issue="description"] [--file=PATH] [--skip-b
 
 # Fix Sanitizer Bug
 
-Iterative workflow for fixing bugs in the post-import translation sanitizer (`src/scripts/i18n/post_import_sanitize.ts`). Follows a test-first approach: triage the issue, write a failing test, implement the fix, verify across languages.
+Iterative workflow for fixing bugs in the post-import translation sanitizer (`src/scripts/intl-pipeline/intl-sanitizer.ts`). Follows a test-first approach: triage the issue, write a failing test, implement the fix, verify across languages.
 
 ## Context
 - Current branch: !`git branch --show-current`
 - Arguments: $ARGUMENTS
-- Sanitizer: `src/scripts/i18n/post_import_sanitize.ts`
-- Test files: `tests/unit/sanitizer/*.spec.ts`
+- Sanitizer: `src/scripts/intl-pipeline/intl-sanitizer.ts`
+- Test files: `tests/unit/intl-pipeline/sanitizer/*.spec.ts`
 - Research docs: `docs/solutions/integration-issues/`
 
 ## Phase 0: Gather Context
@@ -100,9 +100,9 @@ Examples: "Gas" → "Sprit" (gasoline) in German, tone inconsistency
 
 ### Determine which test file
 
-- Pure function (no English source needed) → `tests/unit/sanitizer/standalone-fixes.spec.ts`
-- Needs English comparison → `tests/unit/sanitizer/english-comparison.spec.ts`
-- End-to-end through processMarkdownFile/processJsonFile → `tests/unit/sanitizer/integration.spec.ts`
+- Pure function (no English source needed) → `tests/unit/intl-pipeline/sanitizer/standalone-fixes.spec.ts`
+- Needs English comparison → `tests/unit/intl-pipeline/sanitizer/english-comparison.spec.ts`
+- End-to-end through processMarkdownFile/processJsonFile → `tests/unit/intl-pipeline/sanitizer/integration.spec.ts`
 
 ### Write the test FIRST
 
@@ -141,7 +141,7 @@ Add the new function name to the destructured import from `_testOnly` at the top
 ### Verify test fails
 
 ```bash
-npx playwright test --project=unit tests/unit/sanitizer/{FILE}.spec.ts
+npx playwright test --project=unit tests/unit/intl-pipeline/sanitizer/{FILE}.spec.ts
 ```
 
 The new test MUST fail (function doesn't exist yet). Existing tests should still pass.
@@ -165,13 +165,13 @@ test.describe("warnNewIssue", () => {
 })
 ```
 
-Use `tests/unit/sanitizer/warnings.spec.ts` for warn-only functions.
+Use `tests/unit/intl-pipeline/sanitizer/warnings.spec.ts` for warn-only functions.
 
 ## Phase 4: Implement the Fix
 
 ### Write the function in the sanitizer
 
-**File:** `src/scripts/i18n/post_import_sanitize.ts`
+**File:** `src/scripts/intl-pipeline/intl-sanitizer.ts`
 
 **For fix functions** — follow the established pattern:
 
@@ -235,10 +235,10 @@ issues.push(...newWarnings)
 ### Step 1: Unit tests
 
 ```bash
-npx playwright test --project=unit tests/unit/sanitizer/
+npx playwright test --project=unit tests/unit/intl-pipeline/sanitizer/
 ```
 
-**All tests must pass** — both the new test and all existing 99+ tests.
+**All tests must pass** — both the new test and all existing 600+ tests.
 
 If a test fails:
 - New test fails → fix the implementation, not the test
@@ -248,16 +248,16 @@ If a test fails:
 
 **CRITICAL: NEVER run the sanitizer against an entire language. It processes thousands of files and will hang for 30+ minutes. Always scope to the specific files from the PR.**
 
-Determine which files to test from the PR context (e.g., `gaming/index.md`). Then run the sanitizer with `TARGET_FILES` to scope it to just those files:
+Determine which files to test from the PR context (e.g., `gaming/index.md`). The sanitizer's only env-var scoping is `TARGET_LANGUAGES` (per-language, not per-file) — there is no `TARGET_FILES`. For single files, write an inline script that calls `processMarkdownFile` directly:
 
 ```bash
-# If TARGET_FILES env var is supported:
-TARGET_FILES="public/content/translations/{LANGUAGE}/{PAGE_PATH}" \
-  npx ts-node -O '{"module":"commonjs"}' ./src/scripts/i18n/post_import_sanitize.ts
+# Language-level scoping (still processes every file for that language):
+TARGET_LANGUAGES={LANGUAGE} \
+  npx ts-node -O '{"module":"commonjs"}' ./src/scripts/intl-pipeline/intl-sanitizer.ts
 
-# If not, write a quick inline node script that calls processMarkdownFile directly:
-node -e '
-const { _testOnly } = require("./src/scripts/i18n/post_import_sanitize");
+# Preferred for single files — inline script calling processMarkdownFile directly:
+npx ts-node -O '{"module":"commonjs"}' -e '
+const { _testOnly } = require("./src/scripts/intl-pipeline/intl-sanitizer");
 const fs = require("fs");
 const file = "public/content/translations/{LANGUAGE}/{PAGE_PATH}";
 const content = fs.readFileSync(file, "utf8");
@@ -302,8 +302,8 @@ Test the same page in 2-3 other languages to check for false positives. **NEVER 
 ```bash
 # Test the same page path in a few other languages
 for lang in es tr ja; do
-  node -e "
-    const { _testOnly } = require('./src/scripts/i18n/post_import_sanitize');
+  npx ts-node -O '{"module":"commonjs"}' -e "
+    const { _testOnly } = require('./src/scripts/intl-pipeline/intl-sanitizer');
     const fs = require('fs');
     const file = 'public/content/translations/$lang/{PAGE_PATH}';
     if (!fs.existsSync(file)) { console.log('$lang: file not found, skipping'); process.exit(0); }
@@ -361,7 +361,7 @@ If the fix worked, move the pattern from "New Patterns Not Yet Covered" to "Patt
 ### Update existing bug docs if relevant
 
 Check if this relates to previously documented bugs:
-- `docs/solutions/integration-issues/post-import-sanitizer-bugs-found-japanese-review.md`
+- `docs/solutions/integration-issues/intl-pipeline-bugs-from-pr-18041-review.md`
 
 ### Report summary
 
@@ -376,8 +376,8 @@ Display to user:
 **Tests:** {N} new tests added, {TOTAL} total passing
 **Languages verified:** {LANGUAGES_CHECKED}
 **Files changed:**
-  - src/scripts/i18n/post_import_sanitize.ts (fix + export)
-  - tests/unit/sanitizer/{FILE}.spec.ts (new tests)
+  - src/scripts/intl-pipeline/intl-sanitizer.ts (fix + export)
+  - tests/unit/intl-pipeline/sanitizer/{FILE}.spec.ts (new tests)
   - docs/solutions/integration-issues/sanitizer-test-research.md (documentation)
 ```
 
@@ -385,22 +385,23 @@ Display to user:
 
 ### Run all sanitizer tests
 ```bash
-npx playwright test --project=unit tests/unit/sanitizer/
+npx playwright test --project=unit tests/unit/intl-pipeline/sanitizer/
 ```
 
 ### Run sanitizer against a language
 ```bash
-TARGET_LANGUAGES=ja npx ts-node -O '{"module":"commonjs"}' ./src/scripts/i18n/post_import_sanitize.ts
+TARGET_LANGUAGES=ja npx ts-node -O '{"module":"commonjs"}' ./src/scripts/intl-pipeline/intl-sanitizer.ts
 ```
 
 ### Key files
 | File | Purpose |
 |------|---------|
-| `src/scripts/i18n/post_import_sanitize.ts` | Sanitizer source (~2100 lines) |
-| `tests/unit/sanitizer/standalone-fixes.spec.ts` | Tests for pure functions |
-| `tests/unit/sanitizer/english-comparison.spec.ts` | Tests needing English source |
-| `tests/unit/sanitizer/warnings.spec.ts` | Tests for warn-only functions |
-| `tests/unit/sanitizer/integration.spec.ts` | End-to-end tests |
+| `src/scripts/intl-pipeline/intl-sanitizer.ts` | Sanitizer source (~5900 lines) |
+| `tests/unit/intl-pipeline/sanitizer/standalone-fixes.spec.ts` | Tests for pure functions |
+| `tests/unit/intl-pipeline/sanitizer/code-block-extractor.spec.ts` | Tests for code-block extraction |
+| `tests/unit/intl-pipeline/sanitizer/english-comparison.spec.ts` | Tests needing English source |
+| `tests/unit/intl-pipeline/sanitizer/warnings.spec.ts` | Tests for warn-only functions |
+| `tests/unit/intl-pipeline/sanitizer/integration.spec.ts` | End-to-end tests |
 | `docs/solutions/integration-issues/sanitizer-test-research.md` | Pattern catalog |
 
 ### Code block awareness pattern

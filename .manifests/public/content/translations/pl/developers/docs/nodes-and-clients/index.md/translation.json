@@ -1,0 +1,605 @@
+{
+  "version": 1,
+  "locale": "pl",
+  "translatedAt": "2026-06-19T18:33:32.044Z",
+  "englishManifestHash": "5042c9fc6d76",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-f404d0",
+    "LINK-cd977e",
+    "LINK-31f8fe",
+    "LINK-cc4298",
+    "LINK-21141b",
+    "LINK-0858be",
+    "IMAGE-0bcbc3",
+    "LINK-791d9a",
+    "LINK-0eec89",
+    "LINK-1ed7a5",
+    "LINK-c7d589",
+    "LINK-6d3bac",
+    "LINK-43b6c5",
+    "LINK-b7f13c",
+    "LINK-642c60",
+    "LINK-0bcc3c",
+    "LINK-15a99a",
+    "LINK-0d91cf",
+    "LINK-d56854",
+    "LINK-a8fc8e",
+    "LINK-85fe88",
+    "LINK-b9ef5a",
+    "LINK-bbdf34",
+    "LINK-5c6d91",
+    "LINK-bcad6f",
+    "LINK-a2e07f",
+    "LINK-a153b5",
+    "LINK-19e6e5",
+    "LINK-7a5389",
+    "LINK-232e32",
+    "LINK-a5af27",
+    "LINK-2d5d7a",
+    "IMAGE-752c60",
+    "LINK-4e62dd",
+    "LINK-8fba5e",
+    "LINK-21b689",
+    "LINK-891278",
+    "LINK-a04871",
+    "LINK-de0fa6",
+    "LINK-9d2cba",
+    "LINK-e08871",
+    "LINK-c8c901",
+    "LINK-2e4bf1",
+    "LINK-bf2897",
+    "LINK-c8c901",
+    "LINK-2e4bf1",
+    "LINK-92804c",
+    "LINK-c8c901",
+    "LINK-89be34",
+    "LINK-2e4bf1",
+    "LINK-032efb",
+    "LINK-2e4bf1",
+    "LINK-da5fe9",
+    "LINK-2e4bf1",
+    "LINK-766356",
+    "LINK-2e4bf1",
+    "LINK-d1f55c",
+    "LINK-ee5651",
+    "LINK-91127d",
+    "LINK-0130de",
+    "LINK-c51020",
+    "LINK-c6c08b",
+    "LINK-e98c6c",
+    "LINK-671415",
+    "LINK-c705fb",
+    "LINK-6deea9",
+    "LINK-0512e9",
+    "LINK-bcad6f",
+    "LINK-699f26",
+    "LINK-1cea3c",
+    "LINK-4d3609",
+    "LINK-46dcd0",
+    "LINK-77ed58",
+    "LINK-41c538",
+    "LINK-9e5ce6",
+    "LINK-225ec5",
+    "LINK-761ea4",
+    "LINK-bf7fef",
+    "LINK-61123f",
+    "LINK-42ee4f",
+    "LINK-14aa12",
+    "LINK-d6b92f",
+    "LINK-fe7d36",
+    "LINK-8d60af",
+    "LINK-6a7b8f",
+    "LINK-7b5f2f",
+    "LINK-5ce839",
+    "LINK-6318b4",
+    "LINK-65c4de",
+    "LINK-db1a75"
+  ],
+  "placeholderMap": {
+    "IMAGE-0bcbc3": {
+      "type": "image",
+      "values": {
+        "path": "./eth1eth2client.png"
+      }
+    },
+    "IMAGE-752c60": {
+      "type": "image",
+      "values": {
+        "path": "./nodes.png"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-f404d0": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-cd977e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/intro-to-ethereum/"
+      }
+    },
+    "LINK-31f8fe": {
+      "type": "link",
+      "values": {
+        "url": "/run-a-node"
+      }
+    },
+    "LINK-cc4298": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2022/02/28/complexity.html"
+      }
+    },
+    "LINK-21141b": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge"
+      }
+    },
+    "LINK-0858be": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2/"
+      }
+    },
+    "LINK-791d9a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#execution-clients"
+      }
+    },
+    "LINK-0eec89": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#consensus-clients"
+      }
+    },
+    "LINK-1ed7a5": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/client-diversity/"
+      }
+    },
+    "LINK-c7d589": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.github.io/yellowpaper/paper.pdf"
+      }
+    },
+    "LINK-6d3bac": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/execution-specs/"
+      }
+    },
+    "LINK-43b6c5": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs"
+      }
+    },
+    "LINK-b7f13c": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/"
+      }
+    },
+    "LINK-642c60": {
+      "type": "link",
+      "values": {
+        "url": "/ethereum-forks/"
+      }
+    },
+    "LINK-0bcc3c": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/nodetracker"
+      }
+    },
+    "LINK-15a99a": {
+      "type": "link",
+      "values": {
+        "url": "https://ethernodes.org/"
+      }
+    },
+    "LINK-0d91cf": {
+      "type": "link",
+      "values": {
+        "url": "https://www.nodewatch.io/"
+      }
+    },
+    "LINK-d56854": {
+      "type": "link",
+      "values": {
+        "url": "https://monitoreth.io/"
+      }
+    },
+    "LINK-a8fc8e": {
+      "type": "link",
+      "values": {
+        "url": "https://probelab.io"
+      }
+    },
+    "LINK-85fe88": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/dennis-tra/nebula"
+      }
+    },
+    "LINK-b9ef5a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/run-a-node/"
+      }
+    },
+    "LINK-bbdf34": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/archive-nodes"
+      }
+    },
+    "LINK-5c6d91": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ethportal.net/"
+      }
+    },
+    "LINK-bcad6f": {
+      "type": "link",
+      "values": {
+        "url": "https://nimbus.team/"
+      }
+    },
+    "LINK-a2e07f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/a16z/helios"
+      }
+    },
+    "LINK-a153b5": {
+      "type": "link",
+      "values": {
+        "url": "https://lodestar.chainsafe.io/"
+      }
+    },
+    "LINK-19e6e5": {
+      "type": "link",
+      "values": {
+        "url": "https://metamask.io"
+      }
+    },
+    "LINK-7a5389": {
+      "type": "link",
+      "values": {
+        "url": "https://frame.sh/"
+      }
+    },
+    "LINK-232e32": {
+      "type": "link",
+      "values": {
+        "url": "/wallets/find-wallet/"
+      }
+    },
+    "LINK-a5af27": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/json-rpc/"
+      }
+    },
+    "LINK-2d5d7a": {
+      "type": "link",
+      "values": {
+        "url": "/staking/solo/"
+      }
+    },
+    "LINK-4e62dd": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/#what-is-pos"
+      }
+    },
+    "LINK-8fba5e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/blocks/#block-anatomy"
+      }
+    },
+    "LINK-21b689": {
+      "type": "link",
+      "values": {
+        "url": "/run-a-node"
+      }
+    },
+    "LINK-891278": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/run-a-node/"
+      }
+    },
+    "LINK-a04871": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/nodes-as-a-service/"
+      }
+    },
+    "LINK-de0fa6": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/client-diversity/"
+      }
+    },
+    "LINK-9d2cba": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/tests"
+      }
+    },
+    "LINK-e08871": {
+      "type": "link",
+      "values": {
+        "url": "https://geth.ethereum.org/"
+      }
+    },
+    "LINK-c8c901": {
+      "type": "link",
+      "values": {
+        "url": "#snap-sync"
+      }
+    },
+    "LINK-2e4bf1": {
+      "type": "link",
+      "values": {
+        "url": "#full-sync"
+      }
+    },
+    "LINK-bf2897": {
+      "type": "link",
+      "values": {
+        "url": "https://www.nethermind.io/"
+      }
+    },
+    "LINK-92804c": {
+      "type": "link",
+      "values": {
+        "url": "https://besu.hyperledger.org/en/stable/"
+      }
+    },
+    "LINK-89be34": {
+      "type": "link",
+      "values": {
+        "url": "#fast-sync"
+      }
+    },
+    "LINK-032efb": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ledgerwatch/erigon"
+      }
+    },
+    "LINK-da5fe9": {
+      "type": "link",
+      "values": {
+        "url": "https://reth.rs/"
+      }
+    },
+    "LINK-766356": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereumjs/ethereumjs-monorepo"
+      }
+    },
+    "LINK-d1f55c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networks/"
+      }
+    },
+    "LINK-ee5651": {
+      "type": "link",
+      "values": {
+        "url": "https://besu.hyperledger.org/en/stable/"
+      }
+    },
+    "LINK-91127d": {
+      "type": "link",
+      "values": {
+        "url": "https://geth.ethereum.org/docs"
+      }
+    },
+    "LINK-0130de": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.nethermind.io"
+      }
+    },
+    "LINK-c51020": {
+      "type": "link",
+      "values": {
+        "url": "https://reth.rs/"
+      }
+    },
+    "LINK-c6c08b": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth"
+      }
+    },
+    "LINK-e98c6c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereumjs/ethereumjs-monorepo/tree/master"
+      }
+    },
+    "LINK-671415": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/beacon-chain/"
+      }
+    },
+    "LINK-c705fb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos"
+      }
+    },
+    "LINK-6deea9": {
+      "type": "link",
+      "values": {
+        "url": "https://lighthouse.sigmaprime.io/"
+      }
+    },
+    "LINK-0512e9": {
+      "type": "link",
+      "values": {
+        "url": "https://lodestar.chainsafe.io/"
+      }
+    },
+    "LINK-699f26": {
+      "type": "link",
+      "values": {
+        "url": "https://prysm.offchainlabs.com/docs/"
+      }
+    },
+    "LINK-1cea3c": {
+      "type": "link",
+      "values": {
+        "url": "https://consensys.net/knowledge-base/ethereum-2/teku/"
+      }
+    },
+    "LINK-4d3609": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.grandine.io/"
+      }
+    },
+    "LINK-46dcd0": {
+      "type": "link",
+      "values": {
+        "url": "https://lighthouse-book.sigmaprime.io/"
+      }
+    },
+    "LINK-77ed58": {
+      "type": "link",
+      "values": {
+        "url": "https://lodestar.chainsafe.io/"
+      }
+    },
+    "LINK-41c538": {
+      "type": "link",
+      "values": {
+        "url": "https://nimbus.guide/"
+      }
+    },
+    "LINK-9e5ce6": {
+      "type": "link",
+      "values": {
+        "url": "https://prysm.offchainlabs.com/docs/"
+      }
+    },
+    "LINK-225ec5": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ConsenSys/web3signer/"
+      }
+    },
+    "LINK-761ea4": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.teku.consensys.net/en/latest/"
+      }
+    },
+    "LINK-bf7fef": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.grandine.io/"
+      }
+    },
+    "LINK-61123f": {
+      "type": "link",
+      "values": {
+        "url": "#archive-node"
+      }
+    },
+    "LINK-42ee4f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/devp2p/blob/master/caps/snap.md"
+      }
+    },
+    "LINK-14aa12": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/light-clients/"
+      }
+    },
+    "LINK-d6b92f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md"
+      }
+    },
+    "LINK-fe7d36": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/weak-subjectivity/"
+      }
+    },
+    "LINK-8d60af": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#genesis-block"
+      }
+    },
+    "LINK-6a7b8f": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@djrtwo/ws-sync-in-practice"
+      }
+    },
+    "LINK-7b5f2f": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a"
+      }
+    },
+    "LINK-5ce839": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31"
+      }
+    },
+    "LINK-6318b4": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/blocks/"
+      }
+    },
+    "LINK-65c4de": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networks/"
+      }
+    },
+    "LINK-db1a75": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/run-node-raspberry-pi/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T18:33:32.044Z",
+      "status": "success"
+    }
+  }
+}

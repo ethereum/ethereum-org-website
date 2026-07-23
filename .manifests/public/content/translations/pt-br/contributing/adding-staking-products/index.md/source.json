@@ -1,0 +1,314 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/contributing/adding-staking-products/index.md",
+  "generatedAt": "2026-06-08T08:07:57.205Z",
+  "rootHash": "b9b481822b2a",
+  "tree": {
+    "contentHash": "46ded7398d37",
+    "anchorHash": "11e849533688",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "1991adeb98a6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "c8c8379b5122",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:4": {
+        "contentHash": "de2cdf258c72",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "a15c0175aa29",
+        "anchorHash": "1e757d5cc961"
+      },
+      "prose:5": {
+        "contentHash": "7144fa4178da",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "3663ec0493cc",
+        "anchorHash": "5dd929c34d64"
+      },
+      "prose:6": {
+        "contentHash": "3973e022e932",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:2": {
+        "contentHash": "6561796cd0de",
+        "anchorHash": "75d6b80b6fee"
+      },
+      "prose:7": {
+        "contentHash": "3973e022e932",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:3": {
+        "contentHash": "d2c3c6c36c0d",
+        "anchorHash": "6b3c01636366"
+      },
+      "prose:8": {
+        "contentHash": "e52e29a2fe42",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "the-decision-framework": {
+        "contentHash": "7162289a1903",
+        "anchorHash": "0a47b552e425",
+        "labelHash": "09f808a5016b",
+        "children": {
+          "_label": {
+            "contentHash": "09f808a5016b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c16440b240d3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "criteria-for-inclusion": {
+            "contentHash": "a2475a2058a4",
+            "anchorHash": "5be7cd9a7f76",
+            "labelHash": "e9b13c31f7b0",
+            "children": {
+              "_label": {
+                "contentHash": "e9b13c31f7b0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "82778e37b763",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "software-and-smart-contracts": {
+                "contentHash": "9e38dbf54a66",
+                "anchorHash": "4b9f7d802648",
+                "labelHash": "f0fe14143db2",
+                "children": {
+                  "_label": {
+                    "contentHash": "f0fe14143db2",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:0": {
+                    "contentHash": "c0afc7f25a04",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:0"
+                ]
+              },
+              "node-or-client-tooling": {
+                "contentHash": "901a74f7030d",
+                "anchorHash": "4b9f7d802648",
+                "labelHash": "4946c02a1881",
+                "children": {
+                  "_label": {
+                    "contentHash": "4946c02a1881",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:0": {
+                    "contentHash": "f0fe2912f7d4",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:0"
+                ]
+              },
+              "staking-as-a-service": {
+                "contentHash": "7dcb14528862",
+                "anchorHash": "23821806326e",
+                "labelHash": "6561796cd0de",
+                "children": {
+                  "_label": {
+                    "contentHash": "6561796cd0de",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:1": {
+                    "contentHash": "ca15ebc05a3c",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "f03a98e1f275",
+                    "anchorHash": "75d6b80b6fee"
+                  },
+                  "prose:2": {
+                    "contentHash": "c6928e19a20a",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:1",
+                  "link:0",
+                  "prose:2"
+                ]
+              },
+              "staking-pool": {
+                "contentHash": "9ddac363664d",
+                "anchorHash": "4f7ae1e46ca6",
+                "labelHash": "1ab5b9c24252",
+                "children": {
+                  "_label": {
+                    "contentHash": "1ab5b9c24252",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:1": {
+                    "contentHash": "ca15ebc05a3c",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "6315ef3bbe46",
+                    "anchorHash": "6b3c01636366"
+                  },
+                  "prose:2": {
+                    "contentHash": "a660b349960a",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:1",
+                  "link:0",
+                  "prose:2"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "software-and-smart-contracts",
+              "node-or-client-tooling",
+              "staking-as-a-service",
+              "staking-pool"
+            ]
+          },
+          "other-criteria": {
+            "contentHash": "63ddabd1d192",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "6e3d366cc4b4",
+            "children": {
+              "_label": {
+                "contentHash": "6e3d366cc4b4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "89129d8d54c7",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "criteria-for-inclusion",
+          "other-criteria"
+        ]
+      },
+      "product-ordering": {
+        "contentHash": "8665025ffd7e",
+        "anchorHash": "ba3e6bd4fe7e",
+        "labelHash": "7d1598b17edf",
+        "children": {
+          "_label": {
+            "contentHash": "7d1598b17edf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "b344d80e24a3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "4dc66012a938",
+            "anchorHash": "b8bd14dfd6c5"
+          },
+          "prose:3": {
+            "contentHash": "c3bbaf0502d0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "3c2f5da587b2",
+            "anchorHash": "61af4f07bb80"
+          },
+          "prose:4": {
+            "contentHash": "fa3b367165ab",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "add-product": {
+        "contentHash": "5d61ed79b221",
+        "anchorHash": "08141951dda7",
+        "labelHash": "ceb825014365",
+        "children": {
+          "_label": {
+            "contentHash": "ceb825014365",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "fbca248055ed",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "97ce0ae34941",
+            "anchorHash": "70f4d6f5c2ea",
+            "children": {
+              "attr:href": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "1e757d5cc961"
+              },
+              "prose:0": {
+                "contentHash": "f3a0b68bee88",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:href",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:4",
+      "link:0",
+      "prose:5",
+      "link:1",
+      "prose:6",
+      "link:2",
+      "prose:7",
+      "link:3",
+      "prose:8",
+      "the-decision-framework",
+      "product-ordering",
+      "add-product"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

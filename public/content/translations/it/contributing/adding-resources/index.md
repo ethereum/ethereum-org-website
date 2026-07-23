@@ -1,10 +1,8 @@
 ---
 title: Aggiungere risorse
-description: La politica che utilizziamo per aggiungere risorse a ethereum.org
+description: La politica che utilizziamo quando aggiungiamo risorse a ethereum.org
 lang: it
 ---
-
-# Aggiungere risorse {#adding-resources}
 
 Vogliamo assicurarci di elencare le migliori risorse possibili mantenendo gli utenti al sicuro e fiduciosi.
 
@@ -16,7 +14,7 @@ Sebbene accogliamo con favore le nuove aggiunte, le risorse attuali sono state s
 - _Una buona storia_: ciò che è elencato dovrebbe fornire un momento "aha"
 - _Credibilità_: tutto dovrebbe riguardare aziende/progetti legittimi per ridurre al minimo i rischi per gli utenti
 
-Nel complesso **ethereum.org mira a fornire un'esperienza di onboarding fluida per i nuovi utenti**. Per questo motivo, aggiungiamo risorse in base alla loro:
+Nel complesso **ethereum.org mira a fornire un'esperienza di inserimento fluida per i nuovi utenti**. Per questo motivo, aggiungiamo risorse in base alla loro:
 
 - facilità d'uso
 - accuratezza

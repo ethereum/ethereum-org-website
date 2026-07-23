@@ -2,11 +2,11 @@ import { FileContributor, Frontmatter } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  ethereumCommunityOrganization,
-  ethereumFoundationOrganization,
-} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
+import { resolveAuthorsFromFrontmatter } from "@/lib/jsonld/utils"
 
 export default async function SlugJsonLD({
   locale,
@@ -27,7 +27,7 @@ export default async function SlugJsonLD({
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: `https://ethereum.org/${locale}/`,
+      item: normalizeUrlForJsonLd(locale, "/"),
     },
   ]
 
@@ -52,44 +52,48 @@ export default async function SlugJsonLD({
     url: contributor.html_url,
   }))
 
+  const { authorGraphNodes, authorIds } = resolveAuthorsFromFrontmatter(
+    frontmatter.authors ?? frontmatter.author
+  )
+
+  const webPageId = { "@id": url }
+  const articleId = { "@id": `${url}#article` }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ...BASE_GRAPH_NODES,
+      ...authorGraphNodes,
       {
         "@type": "WebPage",
-        "@id": url,
+        ...webPageId,
         name: frontmatter.title,
         description: frontmatter.description,
-        url: url,
+        url,
         inLanguage: locale,
-        author: [ethereumCommunityOrganization],
+        author: authorIds,
         contributor: contributorList,
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: breadcrumbItems,
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
-        mainEntity: { "@id": `${url}#article` },
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
+        mainEntity: articleId,
       },
       {
         "@type": "Article",
-        "@id": `${url}#article`,
+        ...articleId,
+        isPartOf: webPageId,
         headline: frontmatter.title,
         description: frontmatter.description,
         image: frontmatter.image
           ? `https://ethereum.org${frontmatter.image}`
           : undefined,
-        author: [ethereumCommunityOrganization],
+        author: authorIds,
         contributor: contributorList,
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
         dateModified: frontmatter.published,
         mainEntityOfPage: url,
         about: {

@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils/cn"
 import { commonControlClasses } from "./checkbox"
 
 const Switch = React.forwardRef<
-  React.ElementRef<typeof SwitchPrimitives.Root>,
+  React.ComponentRef<typeof SwitchPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
 >(({ className, ...props }, ref) => {
   return (
@@ -22,7 +22,7 @@ const Switch = React.forwardRef<
     >
       <SwitchPrimitives.Thumb
         className={cn(
-          "pointer-events-none block size-3 rounded-full bg-background transition-transform data-[state=checked]:translate-x-2.5 data-[state=unchecked]:translate-x-0 data-[state=unchecked]:data-[disabled]:border data-[state=unchecked]:data-[disabled]:border-disabled"
+          "pointer-events-none block size-3 rounded-full bg-background transition-transform data-[state=checked]:translate-x-2.5 data-[state=unchecked]:translate-x-0 data-[state=unchecked]:data-[disabled]:border data-[state=unchecked]:data-[disabled]:border-disabled rtl:data-[state=checked]:-translate-x-2.5"
         )}
       />
     </SwitchPrimitives.Root>

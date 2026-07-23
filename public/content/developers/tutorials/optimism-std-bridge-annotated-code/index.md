@@ -77,7 +77,7 @@ It includes functions and definitions required for bridging ERC-20 tokens.
 // SPDX-License-Identifier: MIT
 ```
 
-[Most of Optimism's code is released under the MIT license](https://help.optimism.io/hc/en-us/articles/4411908707995-What-software-license-does-Optimism-use-).
+[Most of Optimism's code is released under the MIT license](https://github.com/ethereum-optimism/optimism/blob/develop/LICENSE).
 
 ```solidity
 pragma solidity >0.5.0 <0.9.0;

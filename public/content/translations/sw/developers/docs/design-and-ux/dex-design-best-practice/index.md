@@ -1,220 +1,217 @@
 ---
-title: Mazoezi bora ya ubunifu wa Mabadilishano yaliyogatuliwa (DEX)
+title: Mbinu bora za muundo wa soko la ubadilishanaji lililogatuliwa (DEX)
 description: Mwongozo unaoelezea maamuzi ya UX/UI kwa ajili ya kubadilishana tokeni.
 lang: sw
 ---
 
-Tangu kuzinduliwa kwa Uniswap mnamo 2018, kumekuwa na mamia ya mabadilishano yaliyogatuliwa yaliyozinduliwa katika makumi ya minyororo tofauti.
-Mengi ya haya yalileta vipengele vipya au kuongeza mabadiliko yao, lakini kiolesura kimebaki sawa kwa ujumla.
+Tangu kuzinduliwa kwa Uniswap mnamo 2018, kumekuwa na mamia ya masoko ya ubadilishanaji yaliyogatuliwa yaliyozinduliwa kwenye makumi ya misururu tofauti.
+Mengi ya haya yalianzisha vipengele vipya au kuongeza mtindo wao wenyewe, lakini kiolesura kimebaki kuwa sawa kwa ujumla.
 
 Sababu moja ya hii ni [Sheria ya Jakob](https://lawsofux.com/jakobs-law/):
 
-> Watumiaji hutumia muda wao mwingi kwenye tovuti zingine. Hii inamaanisha kuwa watumiaji wanapendelea tovuti yako ifanye kazi kwa njia sawa na tovuti zingine zote ambazo tayari wanazijua.
+> Watumiaji hutumia muda wao mwingi kwenye tovuti nyingine. Hii inamaanisha kuwa watumiaji wanapendelea tovuti yako ifanye kazi kwa njia sawa na tovuti nyingine zote wanazozijua tayari.
 
-Shukrani kwa wavumbuzi wa awali kama Uniswap, Pancakeswap, na Sushiswap, watumiaji wa DeFi wana wazo la pamoja la jinsi DEX inavyoonekana.
-Kwa sababu hii, kitu kama “mazoezi bora” sasa kinaibuka. Tunaona maamuzi zaidi na zaidi ya ubunifu yakisanifishwa katika tovuti zote. Unaweza kuona mabadiliko ya DEXes kama mfano mkubwa wa kuijaribu moja kwa moja. Vitu vilivyofanya kazi vilibaki, visivyofanya kazi, vilitupiliwa mbali. Bado kuna nafasi ya mtindo wa kipekee, lakini kuna viwango fulani ambavyo DEX inapaswa kuzingatia.
+Shukrani kwa wavumbuzi wa mapema kama Uniswap, Pancakeswap, na Sushiswap, watumiaji wa fedha zilizogatuliwa (DeFi) wana wazo la pamoja la jinsi soko la ubadilishanaji lililogatuliwa (DEX) linavyoonekana.
+Kwa sababu hii, kitu kama "mbinu bora" sasa kinaibuka. Tunaona maamuzi mengi zaidi ya muundo yakisanifiwa kwenye tovuti mbalimbali. Unaweza kuona mabadiliko ya DEX kama mfano mkubwa wa kufanya majaribio katika matumizi halisi. Mambo yaliyofanya kazi yalibaki, mambo ambayo hayakufanya kazi, yalitupwa nje. Bado kuna nafasi ya kuweka mtindo binafsi, lakini kuna viwango fulani ambavyo DEX inapaswa kufuata.
 
-Makala hii ni muhtasari wa:
-
+Makala haya ni muhtasari wa:
 - nini cha kujumuisha
-- jinsi ya kuifanya iweze kutumika iwezekanavyo
-- njia kuu za kubinafsisha ubunifu
+- jinsi ya kuifanya iwe rahisi kutumia iwezekanavyo
+- njia kuu za kubinafsisha muundo
 
-Violezo vyote vya mfano vilitengenezwa mahususi kwa ajili ya makala hii, ingawa vyote vinatokana na miradi halisi.
+Mifano yote ya michoro ya awali (wireframes) ilitengenezwa mahususi kwa ajili ya makala haya, ingawa yote inategemea miradi halisi.
 
-Seti ya Figma pia imejumuishwa chini - jisikie huru kuitumia na kuharakisha violezo vyako mwenyewe!
+Kifurushi cha Figma pia kimejumuishwa chini - jisikie huru kukitumia na kuharakisha michoro yako ya awali!
 
-## Muundo wa msingi wa DEX {#basic-anatomy-of-a-dex}
+## Muundo wa kimsingi wa DEX {#basic-anatomy-of-a-dex}
 
-Kwa ujumla, UI ina vipengele vitatu:
-
+Kiolesura cha mtumiaji (UI) kwa ujumla kina vipengele vitatu:
 1. Fomu kuu
 2. Kitufe
 3. Paneli ya maelezo
 
-![UI ya DEX ya kawaida, inayoonyesha vipengele vitatu vikuu](./1.png)
+![Generic DEX UI, showing the three main elements](./1.png)
+
 
 ## Tofauti {#variations}
 
-Hii itakuwa mada ya kawaida katika makala hii, lakini kuna njia mbalimbali tofauti ambazo vipengele hivi vinaweza kupangwa. “Paneli ya maelezo” inaweza kuwa:
-
+Hii itakuwa mada ya kawaida katika makala haya, lakini kuna njia mbalimbali tofauti ambazo vipengele hivi vinaweza kupangwa. "Paneli ya maelezo" inaweza kuwa:
 - Juu ya kitufe
 - Chini ya kitufe
-- Imefichwa kwenye paneli ya akodioni
-- Na/au kwenye modal ya “hakikisho”
-
-Zingatia Modal ya “hakikisho” si ya lazima, lakini ikiwa unaonyesha maelezo machache sana kwenye UI kuu, inakuwa muhimu.
+- Imefichwa katika paneli kunjufu (accordion)
+- Na/au kwenye kidirisha cha "kuhakiki"
+  
+Zingatia: Kidirisha cha "kuhakiki" ni cha hiari, lakini ikiwa unaonyesha maelezo machache sana kwenye UI kuu, inakuwa muhimu.
 
 ## Muundo wa fomu kuu {#structure-of-the-main-form}
 
-Hili ndilo kisanduku ambapo unachagua tokeni unayotaka kubadilisha. Sehemu hiyo ina sehemu ya kuingiza data na kitufe kidogo mfululizo.
+Hili ni sanduku ambapo unachagua ni tokeni gani unataka kufanyia badilishano. Kipengele hiki kinajumuisha sehemu ya kuingiza data na kitufe kidogo katika mstari mmoja.
 
-Kwa kawaida DEX huonyesha maelezo ya ziada katika safu moja juu na safu moja chini, ingawa hii inaweza kusanidiwa tofauti.
+DEX kwa kawaida huonyesha maelezo ya ziada katika mstari mmoja juu na mstari mmoja chini, ingawa hii inaweza kusanidiwa tofauti.
 
-![Safu ya kuingiza, yenye safu ya maelezo juu na chini](./2.png)
+![Input row, with a details row above and below](./2.png)
 
 ## Tofauti {#variations2}
 
-Tofauti mbili za UI zimeonyeshwa hapa; moja bila mipaka yoyote, na kutengeneza ubunifu ulio wazi sana, na moja ambapo safu ya kuingiza ina mpaka, na kutengeneza mwelekeo kwenye kipengele hicho.
+Tofauti mbili za UI zinaonyeshwa hapa; moja isiyo na mipaka yoyote, na kuunda muundo ulio wazi sana, na moja ambapo mstari wa kuingiza data una mpaka, na kuunda mwelekeo kwenye kipengele hicho.
 
-![Tofauti mbili za UI za fomu kuu](./3.png)
+![Two UI variations of the main form](./3.png)
 
-Muundo huu wa msingi huruhusu **maelezo manne muhimu** kuonyeshwa katika ubunifu: moja katika kila kona. Ikiwa kuna safu moja tu ya juu/chini, basi kuna nafasi mbili tu.
+Muundo huu wa kimsingi unaruhusu **vipande vinne muhimu vya maelezo** kuonyeshwa katika muundo: kimoja katika kila kona. Ikiwa kuna mstari mmoja tu wa juu/chini, basi kuna nafasi mbili tu.
 
 Wakati wa mabadiliko ya DeFi, mambo mengi tofauti yamejumuishwa hapa.
 
 ## Maelezo muhimu ya kujumuisha {#key-info-to-include}
 
 - Salio katika mkoba
-- Kitufe cha Max
-- Thamani sawa ya Fiat
-- Athari ya bei kwenye kiasi “kilichopokelewa”
+- Kitufe cha kiwango cha juu (Max)
+- Thamani sawa katika sarafu ya serikali (fiat)
+- Athari ya bei kwenye kiasi "kilichopokelewa"
 
-Katika siku za mwanzo za DeFi, thamani sawa ya fiat mara nyingi ilikuwa haipo. Ikiwa unaunda mradi wa aina yoyote wa Web3, ni muhimu thamani sawa ya fiat ionyeshwe. Watumiaji bado wanafikiri kulingana na sarafu za ndani, kwa hivyo ili kuendana na mifumo ya akili ya ulimwengu halisi, hii inapaswa kujumuishwa.
+Katika siku za mwanzo za DeFi, thamani sawa ya sarafu ya serikali mara nyingi ilikosekana. Ikiwa unaunda aina yoyote ya mradi wa Web3, ni muhimu kwamba thamani sawa ya sarafu ya serikali ionyeshwe. Watumiaji bado wanafikiria kwa kutumia sarafu za ndani, kwa hivyo ili kuendana na mifumo ya kiakili ya ulimwengu halisi, hii inapaswa kujumuishwa.
 
-Kwenye sehemu ya pili (ile unayochagua tokeni unayobadilisha) unaweza pia kujumuisha athari ya bei karibu na kiasi cha sarafu ya fiat, kwa kukokotoa tofauti kati ya kiasi cha kuingiza na kiasi kinachokadiriwa cha kutoa. Haya ni maelezo muhimu sana ya kujumuisha.
+Kwenye sehemu ya pili (ile ambayo unachagua tokeni unayobadilisha kwenda) unaweza pia kujumuisha athari ya bei karibu na kiasi cha sarafu ya serikali, kwa kukokotoa tofauti kati ya kiasi kilichoingizwa na kiasi kinachokadiriwa kutoka. Hili ni jambo muhimu sana la kujumuisha.
 
-Vitufe vya asilimia (k.m., 25%, 50%, 75%) vinaweza kuwa kipengele muhimu, lakini vinachukua nafasi zaidi, huongeza wito zaidi wa kuchukua hatua, na kuongeza mzigo zaidi wa kiakili. Sawa na vitelezi vya asilimia. Baadhi ya maamuzi haya ya UI yatategemea chapa yako na aina ya mtumiaji wako.
+Vitufe vya asilimia (k.m., 25%, 50%, 75%) vinaweza kuwa kipengele muhimu, lakini vinachukua nafasi zaidi, vinaongeza wito zaidi wa kuchukua hatua, na kuongeza mzigo zaidi wa kiakili. Sawa na vitelezi vya asilimia. Baadhi ya maamuzi haya ya UI yatategemea chapa yako na aina ya mtumiaji wako.
 
-Maelezo ya ziada yanaweza kuonyeshwa chini ya fomu kuu. Kwa kuwa aina hii ya maelezo ni kwa ajili ya watumiaji wa kitaalamu, inaleta maana ama:
+Maelezo ya ziada yanaweza kuonyeshwa chini ya fomu kuu. Kwa kuwa aina hii ya maelezo ni zaidi kwa watumiaji wataalamu, inaleta maana:
+- kuiweka kwa uchache iwezekanavyo, au;
+- kuificha katika paneli kunjufu (accordion)
 
-- kuweka iwe ndogo iwezekanavyo, au;
-- kuificha kwenye paneli ya akodioni
-
-![Maelezo yaliyoonyeshwa kwenye pembe za fomu hiyo kuu](./4.png)
+![Details shown in the corners of that main form](./4.png)
 
 ## Maelezo ya ziada ya kujumuisha {#extra-info-to-include}
 
 - Bei ya tokeni
-- Slippage
-- Kiwango cha chini kilichopokelewa
-- Matokeo yanayotarajiwa
+- Tofauti ya utekelezaji
+- Kiasi cha chini kilichopokelewa
+- Kiasi kinachotarajiwa
 - Athari ya bei
 - Makadirio ya gharama ya gesi
-- Ada zingine
-- Uelekezaji wa agizo
+- Ada nyingine
+- Uelekezaji wa oda
 
-Kwa ubishi, baadhi ya maelezo haya yanaweza kuwa ya hiari.
+Inawezekana, baadhi ya maelezo haya yanaweza kuwa ya hiari.
 
-Uelekezaji wa agizo unavutia, lakini haileti tofauti kubwa kwa watumiaji wengi.
+Uelekezaji wa oda unavutia, lakini haileti tofauti kubwa kwa watumiaji wengi.
 
-Baadhi ya maelezo mengine ni kurudia tu jambo lile lile kwa njia tofauti. Kwa mfano “kiwango cha chini kilichopokelewa” na “slippage” ni pande mbili za sarafu moja. Ikiwa umeweka slippage kuwa 1%, basi kiwango cha chini unachoweza kutarajia kupokea = matokeo yanayotarajiwa-1%. Baadhi ya UI zitaonyesha kiasi kinachotarajiwa, kiasi cha chini, na slippage… Ambayo ni muhimu lakini labda ni kuzidisha.
+Baadhi ya maelezo mengine yanarudia tu kitu kile kile kwa njia tofauti. Kwa mfano "kiasi cha chini kilichopokelewa" na "tofauti ya utekelezaji" ni pande mbili za sarafu moja. Ikiwa umeweka tofauti ya utekelezaji kwa 1%, basi kiasi cha chini unachoweza kutarajia kupokea = kiasi kinachotarajiwa-1%. Baadhi ya UI zitaonyesha kiasi kinachotarajiwa, kiasi cha chini, na tofauti ya utekelezaji... Ambayo ni muhimu lakini inawezekana ni maelezo yaliyozidi. 
 
-Watumiaji wengi wataacha slippage chaguo-msingi hata hivyo.
+Watumiaji wengi wataacha tofauti ya utekelezaji ya msingi hata hivyo.
 
-“Athari ya bei” mara nyingi huonyeshwa kwenye mabano karibu na thamani sawa ya fiat katika sehemu ya “kwa”. Haya ni maelezo mazuri ya UX ya kuongeza, lakini ikiwa yameonyeshwa hapa, je, kweli yanahitaji kuonyeshwa tena hapa chini? Na kisha tena kwenye skrini ya hakikisho?
+"Athari ya bei" mara nyingi huonyeshwa kwenye mabano karibu na thamani sawa ya sarafu ya serikali katika sehemu ya "kwenda". Hili ni jambo zuri la UX la kuongeza, lakini ikiwa linaonyeshwa hapa, je, kweli linahitaji kuonyeshwa tena hapa chini? Na kisha tena kwenye skrini ya kuhakiki?
 
-Watumiaji wengi (hasa wale wanaobadilisha kiasi kidogo) hawatajali kuhusu maelezo haya; wataingiza tu nambari na kubonyeza badilisha.
+Watumiaji wengi (hasa wale wanaofanya badilishano la kiasi kidogo) hawatajali kuhusu maelezo haya; wataingiza tu nambari na kubofya badilishano.
 
-![Baadhi ya maelezo yanaonyesha kitu kile kile](./5.png)
+![Some details show the same thing](./5.png)
 
-Ni maelezo gani hasa yanaonyeshwa yatategemea hadhira yako na hisia gani unataka programu iwe nayo.
+Ni maelezo gani hasa yanayoonyeshwa yatategemea hadhira yako na hisia gani unataka programu iwe nayo.
 
-Ikiwa utajumuisha uvumilivu wa slippage katika paneli ya maelezo, unapaswa pia kuifanya iweze kuhaririwa moja kwa moja kutoka hapa. Huu ni mfano mzuri wa “kiongeza kasi”; mbinu nadhifu ya UX inayoweza kuharakisha mtiririko wa watumiaji wenye uzoefu, bila kuathiri utumiaji wa jumla wa programu.
+Ikiwa utajumuisha uvumilivu wa tofauti ya utekelezaji katika paneli ya maelezo, unapaswa pia kuifanya iweze kuhaririwa moja kwa moja kutoka hapa. Huu ni mfano mzuri wa "kiharakishi"; mbinu nzuri ya UX inayoweza kuharakisha mtiririko wa watumiaji wenye uzoefu, bila kuathiri matumizi ya jumla ya programu.
 
-![Slippage inaweza kudhibitiwa kutoka kwa paneli ya maelezo](./6.png)
+![Slippage can be controlled from the details panel](./6.png)
 
-Ni wazo zuri kufikiria kwa makini si tu kuhusu taarifa moja maalum kwenye skrini moja, bali kuhusu mtiririko mzima kupitia:
-Kuingiza nambari katika Fomu Kuu → Kuchanganua Maelezo → Kubofya hadi kwenye Skrini ya Hakikisho (ikiwa una skrini ya hakikisho).
-Je, paneli ya maelezo inapaswa kuonekana wakati wote, au mtumiaji anahitaji kubofya ili kuipanua?
-Je, unapaswa kuongeza ugumu kwa kuongeza skrini ya hakikisho? Hii inamlazimu mtumiaji kupunguza kasi na kufikiria biashara yake, ambayo inaweza kuwa muhimu. Lakini je, wanataka kuona maelezo yale yale tena? Ni nini muhimu zaidi kwao katika hatua hii?
+Ni wazo zuri kufikiria kwa makini sio tu kuhusu kipande kimoja maalum cha taarifa kwenye skrini moja, bali kuhusu mtiririko mzima:
+Kuingiza nambari katika Fomu Kuu → Kukagua Maelezo → Kubofya kwenye Skrini ya Kuhakiki (ikiwa una skrini ya kuhakiki). 
+Je, paneli ya maelezo inapaswa kuonekana wakati wote, au mtumiaji anahitaji kuibofya ili kuipanua?
+Je, unapaswa kuunda msuguano kwa kuongeza skrini ya kuhakiki? Hii inamlazimu mtumiaji kupunguza mwendo na kufikiria biashara yake, jambo ambalo linaweza kuwa muhimu. Lakini je, wanataka kuona maelezo yale yale tena? Ni nini muhimu zaidi kwao wakati huu?
 
-## Chaguo za ubunifu {#design-options}
+## Chaguzi za muundo {#design-options}
 
 Kama ilivyotajwa, mengi ya haya yanategemea mtindo wako binafsi
 Mtumiaji wako ni nani?
-Chapa yako ni ipi?
-Je, unataka kiolesura cha “kitaalamu” kinachoonyesha kila undani, au unataka kuwa na muonekano mdogo?
-Hata kama unawalenga watumiaji wa kitaalamu wanaotaka maelezo yote iwezekanavyo, bado unapaswa kukumbuka maneno ya busara ya Alan Cooper:
+Chapa yako ni nini?
+Je, unataka kiolesura cha "kitaalamu" kinachoonyesha kila maelezo, au unataka kuwa na muundo rahisi?
+Hata kama unalenga watumiaji wataalamu wanaotaka maelezo yote iwezekanavyo, bado unapaswa kukumbuka maneno ya busara ya Alan Cooper:
 
-> Haijalishi kiolesura chako ni kizuri kiasi gani, haijalishi ni cha kuvutia kiasi gani, ingekuwa bora kama kingekuwa kidogo.
+> Haijalishi kiolesura chako ni kizuri kiasi gani, haijalishi kinavutia kiasi gani, ingekuwa bora ikiwa kingekuwa na mambo machache.
 
 ### Muundo {#structure}
 
 - tokeni upande wa kushoto, au tokeni upande wa kulia
-- Safu 2 au 3
+- mistari 2 au 3
 - maelezo juu au chini ya kitufe
-- maelezo yamepanuliwa, yamepunguzwa, au hayaonyeshwi
+- maelezo yaliyopanuliwa, yaliyopunguzwa, au ambayo hayaonyeshwi
 
-### Mtindo wa sehemu {#component-style}
+### Mtindo wa kipengele {#component-style}
 
 - tupu
-- yenye mpaka
+- yenye muhtasari
 - iliyojazwa
 
-Kwa mtazamo safi wa UX, mtindo wa UI ni muhimu kidogo kuliko unavyofikiria. Mitindo ya kuona huja na kuondoka kwa mzunguko, na upendeleo mwingi ni wa kibinafsi.
+Kutoka kwa mtazamo halisi wa UX, mtindo wa UI haujalishi sana kama unavyofikiria. Mitindo ya kuona huja na kuondoka katika mizunguko, na mapendeleo mengi ni ya kibinafsi.
 
-Njia rahisi zaidi ya kupata hisia ya hili - na kufikiria juu ya usanidi mbalimbali tofauti - ni kuangalia baadhi ya mifano na kisha kufanya majaribio mwenyewe.
+Njia rahisi zaidi ya kupata hisia ya hili - na kufikiria kuhusu usanidi mbalimbali tofauti - ni kuangalia baadhi ya mifano na kisha kufanya majaribio wewe mwenyewe.
 
-Seti ya Figma iliyojumuishwa ina sehemu tupu, zenye mpaka na zilizojazwa.
+Kifurushi cha Figma kilichojumuishwa kina vipengele vitupu, vyenye muhtasari na vilivyojazwa.
 
-Angalia mifano ifuatayo ili kuona njia tofauti unazoweza kuweka yote pamoja:
+Angalia mifano hapa chini ili kuona njia tofauti unazoweza kuweka yote pamoja:
 
-![safu 3 katika mtindo uliojazwa](./7.png)
+![3 rows in a filled style](./7.png)
 
-![safu 3 katika mtindo wenye mpaka](./8.png)
+![3 rows in a outlined style](./8.png)
 
-![safu 2 katika mtindo tupu](./9.png)
+![2 rows in an empty style](./9.png)
 
-![safu 3 katika mtindo wenye mpaka, na paneli ya maelezo](./10.png)
+![3 rows in an outlined style, with a details panel](./10.png)
 
-![safu 3 na safu ya kuingiza katika mtindo wenye mpaka](./11.png)
+![3 rows with the input row in an outlined style](./11.png)
 
-![safu 2 katika mtindo uliojazwa](./12.png)
+![2 rows in a filled style](./12.png)
 
 ## Lakini tokeni inapaswa kwenda upande gani? {#but-which-side-should-the-token-go-on}
 
-Jambo la msingi ni kwamba labda haileti tofauti kubwa kwa utumiaji. Hata hivyo, kuna mambo machache ya kuzingatia, ambayo yanaweza kukushawishi kwa njia moja au nyingine.
+Jambo la msingi ni kwamba labda haileti tofauti kubwa kwa matumizi. Kuna mambo machache ya kuzingatia, hata hivyo, ambayo yanaweza kukushawishi kwa njia moja au nyingine.
 
-Imekuwa ya kuvutia kiasi kuona mtindo ukibadilika na wakati. Hapo awali Uniswap ilikuwa na tokeni upande wa kushoto, lakini tangu wakati huo imeiweka upande wa kulia. Sushiswap pia ilifanya mabadiliko haya wakati wa uboreshaji wa ubunifu. Itifaki nyingi, lakini si zote, zimefuata mkondo.
+Imekuwa ya kuvutia kiasi kuona mtindo ukibadilika na wakati. Uniswap mwanzoni ilikuwa na tokeni upande wa kushoto, lakini tangu wakati huo imeihamishia upande wa kulia. Sushiswap pia ilifanya mabadiliko haya wakati wa uboreshaji wa muundo. Itifaki nyingi, lakini sio zote, zimefuata mkondo huo.
 
-Kawaida ya kifedha kwa jadi huweka alama ya sarafu kabla ya nambari, k.m., $50, €50, £50, lakini sisi _tunasema_ dola 50, Euro 50, pauni 50.
+Kawaida ya kifedha kwa asili huweka alama ya sarafu kabla ya nambari, k.m., $50, €50, £50, lakini sisi *husema* dola 50, Euro 50, pauni 50.
 
-Kwa mtumiaji wa jumla - hasa mtu anayesoma kutoka kushoto kwenda kulia, juu hadi chini - tokeni upande wa kulia labda huhisi asili zaidi.
+Kwa mtumiaji wa kawaida - hasa mtu anayesoma kutoka kushoto kwenda kulia, juu hadi chini - tokeni upande wa kulia labda inahisi asili zaidi.
 
-![UI yenye tokeni upande wa kushoto](./13.png)
+![A UI with tokens on the left](./13.png)
 
-Kuweka tokeni upande wa kushoto na nambari zote upande wa kulia huonekana kuwa na ulinganifu wa kupendeza, ambayo ni faida, lakini kuna hasara nyingine kwa mpangilio huu.
+Kuweka tokeni upande wa kushoto na nambari zote upande wa kulia kunaonekana kwa ulinganifu wa kupendeza, ambayo ni faida, lakini kuna hasara nyingine kwa mpangilio huu.
 
-Sheria ya ukaribu inasema kuwa vitu vilivyo karibu pamoja huonekana kama vinahusiana. Kwa hiyo, tunataka kuweka vitu vinavyohusiana karibu na kila kimoja. Salio la tokeni linahusiana moja kwa moja na tokeni yenyewe, na litabadilika kila tokeni mpya inapochaguliwa. Kwa hivyo inaleta maana zaidi kidogo kwa salio la tokeni kuwa karibu na kitufe cha kuchagua tokeni. Inaweza kuhamishwa chini ya tokeni, lakini hiyo inavunja ulinganifu wa mpangilio.
+Sheria ya ukaribu inasema kwamba vitu vilivyo karibu pamoja huchukuliwa kuwa vinahusiana. Kwa hivyo, tunataka kuweka vitu vinavyohusiana karibu na kila kimoja. Salio la tokeni linahusiana moja kwa moja na tokeni yenyewe, na litabadilika wakati wowote tokeni mpya inapochaguliwa. Kwa hivyo inaleta maana kidogo zaidi kwa salio la tokeni kuwa karibu na kitufe cha kuchagua tokeni. Inaweza kuhamishwa chini ya tokeni, lakini hiyo inavunja ulinganifu wa mpangilio.
 
-Hatimaye, kuna faida na hasara kwa chaguo zote mbili, lakini inavutia jinsi mwelekeo unavyoonekana kuwa kuelekea tokeni upande wa kulia.
+Hatimaye, kuna faida na hasara kwa chaguzi zote mbili, lakini inavutia jinsi mwelekeo unavyoonekana kuwa kuelekea tokeni upande wa kulia.
 
 ## Tabia ya kitufe {#button-behavior}
 
-Usiwe na kitufe tofauti cha Kuidhinisha. Pia usiwe na bofyo tofauti la Kuidhinisha. Mtumiaji anataka Kubadilisha, kwa hivyo sema tu “badilisha” kwenye kitufe na uanzishe uidhinishaji kama hatua ya kwanza. Modal inaweza kuonyesha maendeleo kwa hatua, au arifa rahisi ya “tx 1 kati ya 2 - inaidhinisha”.
+Usiwe na kitufe tofauti cha Idhinisha. Pia usiwe na mbofyo tofauti wa Idhinisha. Mtumiaji anataka kufanya Badilishano, kwa hivyo sema tu "badilishano" kwenye kitufe na uanzishe uidhinishaji kama hatua ya kwanza. Kidirisha kinaweza kuonyesha maendeleo kwa kutumia kiashiria cha hatua, au arifa rahisi ya "muamala 1 kati ya 2 - inaidhinisha".
 
-![UI yenye vitufe tofauti vya kuidhinisha na kubadilisha](./14.png)
+![A UI with separate buttons for approve and swap](./14.png)
 
-![UI yenye kitufe kimoja kinachosema idhinisha](./15.png)
+![A UI with one button that says approve](./15.png)
 
 ### Kitufe kama msaada wa kimuktadha {#button-as-contextual-help}
 
-Kitufe kinaweza kufanya kazi mara mbili kama arifa!
+Kitufe kinaweza kufanya kazi mbili kama arifa!
 
-Huu kwa kweli ni muundo wa ubunifu usio wa kawaida nje ya Web3, lakini umekuwa wa kawaida ndani yake. Huu ni uvumbuzi mzuri kwani unaokoa nafasi, na kuweka umakini.
+Kwa kweli huu ni muundo usio wa kawaida nje ya Web3, lakini umekuwa kiwango ndani yake. Huu ni uvumbuzi mzuri kwani unaokoa nafasi, na kuweka umakini ukilenga.
 
-Ikiwa kitendo kikuu - KUBADILISHA - hakipatikani kwa sababu ya hitilafu, sababu inaweza kuelezewa kwa kutumia kitufe, k.m.:
+Ikiwa kitendo kikuu - BADILISHANO - hakipatikani kutokana na hitilafu, sababu ya kwa nini inaweza kuelezewa na kitufe, k.m.:
 
 - badilisha mtandao
 - unganisha mkoba
 - hitilafu mbalimbali
 
-Kitufe pia kinaweza **kupangwa kwa kitendo** kinachohitaji kufanywa. Kwa mfano, ikiwa mtumiaji hawezi kubadilisha kwa sababu yuko kwenye mtandao usio sahihi, kitufe kinapaswa kusema “badilisha hadi Ethereum”, na mtumiaji anapobofya kitufe, kinapaswa kubadilisha mtandao hadi Ethereum. Hii inaharakisha mtiririko wa mtumiaji kwa kiasi kikubwa.
+Kitufe pia kinaweza **kuhusishwa na kitendo** kinachohitaji kufanywa. Kwa mfano, ikiwa mtumiaji hawezi kufanya badilishano kwa sababu yuko kwenye mtandao usio sahihi, kitufe kinapaswa kusema "badilisha kwenda Ethereum", na wakati mtumiaji anabofya kwenye kitufe, inapaswa kubadilisha mtandao kwenda Ethereum. Hii inaharakisha mtiririko wa mtumiaji kwa kiasi kikubwa.
 
-![Vitendo muhimu vinavyoanzishwa kutoka kwa CTA kuu](./16.png)
+![Key actions being initiated from the main CTA](./16.png)
 
-![Ujumbe wa hitilafu umeonyeshwa ndani ya CTA kuu](./17.png)
+![Error message shown within the main CTA](./17.png)
 
-## Jenga yako mwenyewe na faili hii ya figma {#build-your-own-with-this-figma-file}
+## Jenga yako mwenyewe na faili hili la figma {#build-your-own-with-this-figma-file}
 
-Shukrani kwa kazi ngumu ya itifaki nyingi, ubunifu wa DEX umeboreka sana. Tunajua ni maelezo gani mtumiaji anahitaji, jinsi tunapaswa kuyaonyesha, na jinsi ya kufanya mtiririko uwe laini iwezekanavyo.
-Tunatumahi makala hii inatoa muhtasari thabiti wa kanuni za UX.
+Shukrani kwa kazi ngumu ya itifaki nyingi, muundo wa DEX umeboreshwa sana. Tunajua ni maelezo gani mtumiaji anahitaji, jinsi tunavyopaswa kuyaonyesha, na jinsi ya kufanya mtiririko uwe laini iwezekanavyo.
+Tunatumai makala haya yanatoa muhtasari thabiti wa kanuni za UX. 
 
-Ikiwa unataka kujaribu, tafadhali jisikie huru kutumia seti ya violezo vya Figma. Imewekwa rahisi iwezekanavyo, lakini ina unyumbufu wa kutosha kujenga muundo wa msingi kwa njia mbalimbali.
+Ikiwa unataka kufanya majaribio, tafadhali jisikie huru kutumia kifurushi cha michoro ya awali cha Figma. Kimewekwa rahisi iwezekanavyo, lakini kina unyumbufu wa kutosha kujenga muundo wa kimsingi kwa njia mbalimbali.
 
-[Seti ya violezo vya Figma](https://www.figma.com/community/file/1393606680816807382/dex-wireframes-kit)
+[Kifurushi cha michoro ya awali cha Figma](https://www.figma.com/community/file/1393606680816807382/dex-wireframes-kit)
 
-DeFi itaendelea kubadilika, na daima kuna nafasi ya kuboresha.
+Fedha zilizogatuliwa (DeFi) zitaendelea kubadilika, na daima kuna nafasi ya kuboresha. 
 
-Kila la kheri!
+Kila la heri!

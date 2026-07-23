@@ -1,10 +1,8 @@
 ---
-title: "Ressourcen hinzufügen"
-description: "Die Richtlinie, die wir beim Hinzufügen von Ressourcen zu ethereum.org anwenden"
+title: Ressourcen hinzufügen
+description: Die Richtlinie, die wir beim Hinzufügen von Ressourcen zu ethereum.org anwenden
 lang: de
 ---
-
-# Ressourcen hinzufügen {#adding-resources}
 
 Wir möchten sicherstellen, dass wir die bestmöglichen Ressourcen auflisten und gleichzeitig die Sicherheit und das Vertrauen der Nutzer wahren.
 
@@ -26,7 +24,7 @@ Insgesamt **zielt ethereum.org darauf ab, neuen Nutzern ein nahtloses Onboarding
 
 ### Kriterien {#criteria}
 
-- **Ehrliche und genaue Auflistungsinformationen** – Alle vorgeschlagenen Einträge müssen ehrliche und genaue Informationen enthalten. Produkte, die Informationen fälschen, werden entfernt.
+- **Ehrliche und genaue Listungsinformationen** – Alle vorgeschlagenen Einträge müssen ehrliche und genaue Informationen enthalten. Produkte, die Informationen fälschen, werden entfernt.
 - **Aktives Projekt** – Die Ressource sollte von einem aktiven Team gepflegt werden, um Qualität und Support für die Nutzer sicherzustellen. Veraltete Ressourcen können entfernt werden.
 
 ### Produktreihenfolge {#product-ordering}
@@ -35,7 +33,7 @@ Wir behalten uns das Recht vor, Produkte basierend auf ihrer Wirkung anzuordnen.
 
 ## Wartung {#maintenance}
 
-Da sich das Ethereum-Ökosystem weiterentwickelt, werden wir unsere Inhalte routinemäßig überprüfen, um:
+Da sich das Ethereum-Ökosystem weiterentwickelt, werden wir unsere Inhalte regelmäßig überprüfen, um:
 
 - Sicherzustellen, dass alle aufgelisteten Ressourcen weiterhin unsere Kriterien erfüllen
 - Zu überprüfen, ob keine Produkte vorgeschlagen wurden, die mehr unserer Kriterien erfüllen als die derzeit aufgelisteten

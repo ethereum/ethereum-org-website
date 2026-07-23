@@ -4,8 +4,6 @@ description: A collection of practical guides explaining the basics of using Eth
 lang: en
 ---
 
-# Ethereum guides {#ethereum-guides}
-
 Do you want to start your Ethereum journey? Our practical guides lead you step-by-step on getting started, and make it easier to navigate this new technology.
 
 ## Getting started {#getting-started}

@@ -1,4 +1,4 @@
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import { CompletedQuizzes, QuizShareStats } from "@/lib/types"
 
@@ -20,8 +20,6 @@ import {
   getTotalQuizzesPoints,
   shareOnTwitter,
 } from "./utils"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 const handleShare = ({ score, total }: QuizShareStats) => {
   shareOnTwitter({
@@ -48,7 +46,7 @@ const QuizzesStats = ({
   completedQuizzes,
 }: QuizzesStatsProps) => {
   const locale = useLocale()
-  const { t } = useTranslation("learn-quizzes")
+  const t = useTranslations("learn-quizzes")
   const numberOfCompletedQuizzes = getNumberOfCompletedQuizzes(completedQuizzes)
 
   // These values are not fixed but calculated each time, can't be moved to /constants
@@ -96,7 +94,7 @@ const QuizzesStats = ({
                 <Center className="size-16 rounded-full bg-primary">
                   <TrophyIcon className="text-[35.62px] text-background" />
                 </Center>
-                <span className="text-5xl font-bold leading-base">
+                <span className="text-5xl leading-base font-bold">
                   {totalCorrectAnswers}
                   <span className="text-body-medium">
                     /{totalQuizzesPoints}

@@ -1,5 +1,6 @@
 import * as React from "react"
 import { X } from "lucide-react"
+import { useTranslations } from "next-intl"
 import { tv, type VariantProps } from "tailwind-variants"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 
@@ -11,11 +12,12 @@ import { Center, Flex } from "./flex"
 const dialogVariant = tv({
   slots: {
     content:
-      "data-[state=open]:animate-fade-in w-full grid gap-4 rounded-md bg-background p-8 shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none z-modal",
+      "z-modal grid w-full gap-4 rounded-md bg-background p-8 shadow-xl focus:outline-hidden data-[state=open]:animate-fade-in",
     overlay:
-      "data-[state=open]:animate-fade-in overflow-y-auto p-4 grid place-items-center fixed inset-0 bg-black/70 z-overlay",
+      "data-[state=open]:animate-fade-in overflow-y-auto p-4 grid place-items-center fixed inset-0 bg-overlay z-overlay",
     header: "relative pe-12",
     title: "text-2xl",
+    body: "",
     footer: "pt-8",
     close: "text-md size-8 z-10 absolute end-0 top-0",
   },
@@ -38,6 +40,16 @@ const dialogVariant = tv({
       },
       unstyled: {
         content: "block p-0 rounded-none bg-none gap",
+      },
+      // Edge-to-edge media modal: no padding, a single scrolling body, and a
+      // close button that floats over the content (e.g. over a banner image).
+      media: {
+        content:
+          "flex flex-col gap-0 overflow-hidden rounded-lg p-0 max-h-[calc(100dvh-2rem)]",
+        header: "absolute end-0 top-0 z-10 pe-0",
+        close:
+          "static m-2 size-auto rounded bg-background/75 p-1 hover:bg-background hover:text-primary-hover [&_.lucide-x]:stroke-[3]",
+        body: "min-h-0 flex-1 overflow-y-auto",
       },
     },
   },
@@ -70,7 +82,7 @@ const DialogPortal = DialogPrimitive.Portal
 const DialogClose = DialogPrimitive.Close
 
 const DialogOverlay = React.forwardRef<
-  React.ElementRef<typeof DialogPrimitive.Overlay>,
+  React.ComponentRef<typeof DialogPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
 >(({ className, ...props }, ref) => {
   const { overlay } = useDialogStyles()
@@ -89,7 +101,7 @@ type DialogContentProps = React.ComponentPropsWithoutRef<
 >
 
 const DialogContent = React.forwardRef<
-  React.ElementRef<typeof DialogPrimitive.Content>,
+  React.ComponentRef<typeof DialogPrimitive.Content>,
   DialogContentProps
 >(({ className, children, ...props }, ref) => {
   const { content } = useDialogStyles()
@@ -115,13 +127,13 @@ const DialogHeader = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => {
   const { header, close } = useDialogStyles()
+  const t = useTranslations("common")
   return (
     <div className={cn(header(), className)} {...props}>
       {children}
       <Center className={close()} asChild>
-        <DialogPrimitive.Close>
+        <DialogPrimitive.Close aria-label={t("close")}>
           <X size="20" />
-          <span className="sr-only">Close</span>
         </DialogPrimitive.Close>
       </Center>
     </div>
@@ -139,7 +151,7 @@ const DialogFooter = ({
 DialogFooter.displayName = "DialogFooter"
 
 const DialogTitle = React.forwardRef<
-  React.ElementRef<typeof DialogPrimitive.Title>,
+  React.ComponentRef<typeof DialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
 >(({ className, ...props }, ref) => {
   const { title } = useDialogStyles()
@@ -154,15 +166,18 @@ const DialogTitle = React.forwardRef<
 DialogTitle.displayName = DialogPrimitive.Title.displayName
 
 const DialogDescription = React.forwardRef<
-  React.ElementRef<typeof DialogPrimitive.Description>,
+  React.ComponentRef<typeof DialogPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>
->(({ className, ...props }, ref) => (
-  <DialogPrimitive.Description
-    ref={ref}
-    className={cn("", className)}
-    {...props}
-  />
-))
+>(({ className, ...props }, ref) => {
+  const { body } = useDialogStyles()
+  return (
+    <DialogPrimitive.Description
+      ref={ref}
+      className={cn(body(), className)}
+      {...props}
+    />
+  )
+})
 DialogDescription.displayName = DialogPrimitive.Description.displayName
 
 export type ModalProps = DialogProps & {

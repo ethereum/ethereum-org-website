@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/crypto-apps-desocial-linda-xie/index.md",
+  "generatedAt": "2026-04-29T04:49:02.695Z",
+  "rootHash": "9b083c6b3138",
+  "tree": {
+    "contentHash": "b08d6737fa10",
+    "anchorHash": "38b19268a61e",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "a1232879b0f9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "b86b6e3bf8a0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "29001a97e391"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "a0e119814b37"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "410833e7b67f"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bfac314fefdc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b1cc2e711844"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "49c00761e209"
+      },
+      "prose:1": {
+        "contentHash": "956a1413dc92",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "a27d1fddc624"
+      },
+      "prose:2": {
+        "contentHash": "e04b1ae0fddc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "the-problem-with-centralized-social-000": {
+        "contentHash": "e603e8e497b3",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "4b175d101919",
+        "children": {
+          "_label": {
+            "contentHash": "4b175d101919",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "44104332fe81",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "open-social-graphs-130": {
+        "contentHash": "057d7581d082",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "4dc672418b31",
+        "children": {
+          "_label": {
+            "contentHash": "4dc672418b31",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c01071d3543e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "benefits-for-builders-313": {
+        "contentHash": "380112109429",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "ca5a64ca23a7",
+        "children": {
+          "_label": {
+            "contentHash": "ca5a64ca23a7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "a2a4e7dbdcb2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "crypto-and-embedded-wallets-630": {
+        "contentHash": "76f358231301",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "dff8c0f13f1e",
+        "children": {
+          "_label": {
+            "contentHash": "dff8c0f13f1e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "39b90d338c7e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "micro-tipping-836": {
+        "contentHash": "1efbe80361fd",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "004035b62b0a",
+        "children": {
+          "_label": {
+            "contentHash": "004035b62b0a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "61ccb6af3127",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "mini-apps-and-creative-tools-1101": {
+        "contentHash": "6a08e3b97a28",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "26a57e495862",
+        "children": {
+          "_label": {
+            "contentHash": "26a57e495862",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "606a01b38a62",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-warplet-phenomenon-1241": {
+        "contentHash": "c838f704d1a2",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "eb5cc2f2fc50",
+        "children": {
+          "_label": {
+            "contentHash": "eb5cc2f2fc50",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "b968e5af4f4f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "mini-apps-for-social-good-1502": {
+        "contentHash": "7ce513fbaff9",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "5636835a15b4",
+        "children": {
+          "_label": {
+            "contentHash": "5636835a15b4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c42162f1941a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "challenges-of-decentralized-social-1641": {
+        "contentHash": "c2ebb4aa42c1",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "384ec8345e5e",
+        "children": {
+          "_label": {
+            "contentHash": "384ec8345e5e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "d169893f62af",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "why-now-1948": {
+        "contentHash": "7337c03482d8",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "fb2c44705e2a",
+        "children": {
+          "_label": {
+            "contentHash": "fb2c44705e2a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "5302ac270071",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "qa-2347": {
+        "contentHash": "313ce4686113",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "843198429e52",
+        "children": {
+          "_label": {
+            "contentHash": "843198429e52",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4ca25193016a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "the-problem-with-centralized-social-000",
+      "open-social-graphs-130",
+      "benefits-for-builders-313",
+      "crypto-and-embedded-wallets-630",
+      "micro-tipping-836",
+      "mini-apps-and-creative-tools-1101",
+      "the-warplet-phenomenon-1241",
+      "mini-apps-for-social-good-1502",
+      "challenges-of-decentralized-social-1641",
+      "why-now-1948",
+      "qa-2347"
+    ]
+  },
+  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+}

@@ -13,7 +13,7 @@ import {
 import { getAppPageLastCommitDate } from "./gh"
 import { getLocaleTimestamp } from "./time"
 
-import { getGitHubContributors, getStaticGitHubContributors } from "@/lib/data"
+import { getStaticGitHubContributors } from "@/lib/data"
 
 /** Sort team members to the end, preserving relative order within each group. */
 const sortTeamToEnd = (contributors: FileContributor[]): FileContributor[] =>
@@ -54,7 +54,7 @@ export const getAppPageContributorInfo = async (
 ) => {
   // TODO: Incorporate Crowdin contributor information
 
-  const contributorsData = await getGitHubContributors()
+  const contributorsData = await getStaticGitHubContributors()
   const gitHubContributors = contributorsData?.appPages[pagePath] ?? []
 
   const uniqueGitHubContributors = gitHubContributors.filter(
@@ -63,7 +63,11 @@ export const getAppPageContributorInfo = async (
   )
 
   const latestCommitDate = getAppPageLastCommitDate(gitHubContributors)
-  const lastEditLocaleTimestamp = getLocaleTimestamp(locale, latestCommitDate)
+  // Guard the empty sentinel: getLocaleTimestamp(locale, "") would format an
+  // Invalid Date, so keep the timestamp empty when there is no commit date.
+  const lastEditLocaleTimestamp = latestCommitDate
+    ? getLocaleTimestamp(locale, latestCommitDate)
+    : ""
 
   // if (
   //   (!uniqueGitHubContributors.length || !lastEditLocaleTimestamp) &&

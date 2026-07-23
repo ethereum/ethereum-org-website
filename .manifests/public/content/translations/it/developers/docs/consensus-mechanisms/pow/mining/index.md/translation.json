@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "locale": "it",
+  "translatedAt": "2026-06-16T22:16:28.635Z",
+  "englishManifestHash": "2f8904ff3066",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "HTMLTAG-addbca",
+    "HTMLTAG-85419b",
+    "HTMLTAG-fd28ad",
+    "LINK-ab55fe",
+    "LINK-08a3d2",
+    "LINK-1baecb",
+    "LINK-8c77fd",
+    "LINK-ea50db",
+    "LINK-599bc2",
+    "LINK-13ddc8",
+    "LINK-a933de",
+    "LINK-bc04f7",
+    "LINK-e7c900",
+    "LINK-43a458",
+    "LINK-496041",
+    "LINK-5d065d",
+    "LINK-3a93bb",
+    "LINK-b763c2",
+    "LINK-03e2e4",
+    "LINK-ce8c89",
+    "LINK-6c4cfe",
+    "LINK-8f1f3a"
+  ],
+  "placeholderMap": {
+    "HTMLTAG-addbca": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/roadmap/merge/"
+      }
+    },
+    "HTMLTAG-85419b": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "HTMLTAG-fd28ad": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/staking/"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-ab55fe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-08a3d2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/blocks/"
+      }
+    },
+    "LINK-1baecb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/"
+      }
+    },
+    "LINK-8c77fd": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/"
+      }
+    },
+    "LINK-ea50db": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/ether-mining-calculator"
+      }
+    },
+    "LINK-599bc2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos"
+      }
+    },
+    "LINK-13ddc8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-a933de": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts/"
+      }
+    },
+    "LINK-bc04f7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-e7c900": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/blocks/"
+      }
+    },
+    "LINK-43a458": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "LINK-496041": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#ommer"
+      }
+    },
+    "LINK-5d065d": {
+      "type": "link",
+      "values": {
+        "url": "https://ycharts.com/indicators/ethereum_uncle_rate"
+      }
+    },
+    "LINK-3a93bb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/"
+      }
+    },
+    "LINK-b763c2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/"
+      }
+    },
+    "LINK-03e2e4": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/"
+      }
+    },
+    "LINK-ce8c89": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "LINK-6c4cfe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-8f1f3a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T22:16:28.635Z",
+      "status": "success"
+    }
+  }
+}

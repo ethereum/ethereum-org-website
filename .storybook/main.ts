@@ -12,7 +12,8 @@ const config: StorybookConfig = {
   stories: [
     "../src/components/**/*.stories.{ts,tsx}",
     "../src/layouts/stories/*.stories.tsx",
-    "../src/styles/*.stories.tsx",
+    "../src/styles/__stories__/*.stories.tsx",
+    "../app/**/*.stories.{ts,tsx}",
   ],
 
   addons: [
@@ -66,6 +67,12 @@ const config: StorybookConfig = {
     config.module.rules.push({
       test: /\.svg$/,
       use: ["@svgr/webpack"],
+    })
+
+    // .all-contributorsrc is JSON without a .json extension
+    config.module.rules.push({
+      test: /\.all-contributorsrc$/,
+      type: "json",
     })
 
     return config

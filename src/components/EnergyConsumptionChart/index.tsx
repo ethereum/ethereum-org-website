@@ -11,7 +11,7 @@ import {
   LinearScale,
 } from "chart.js"
 import ChartDataLabels from "chartjs-plugin-datalabels"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import { Bar } from "react-chartjs-2"
 
 import type { Lang } from "@/lib/types"
@@ -24,7 +24,6 @@ import { isLangRightToLeft } from "@/lib/utils/translations"
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import useColorModeValue from "@/hooks/useColorModeValue"
 import { useIsClient } from "@/hooks/useIsClient"
-import { useTranslation } from "@/hooks/useTranslation"
 
 // ChartDataLabels required to display y-labels on top of bars
 ChartJS.register(
@@ -36,7 +35,7 @@ ChartJS.register(
 )
 
 const EnergyConsumptionChart = () => {
-  const { t } = useTranslation("page-energy-consumption")
+  const t = useTranslations("page-energy-consumption")
   const locale = useLocale()
   const isClient = useIsClient()
   const isRtl = isLangRightToLeft(locale as Lang)

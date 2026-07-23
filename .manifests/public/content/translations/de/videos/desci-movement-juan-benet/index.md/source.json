@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/desci-movement-juan-benet/index.md",
+  "generatedAt": "2026-04-28T23:13:30.304Z",
+  "rootHash": "a1cd3f31d952",
+  "tree": {
+    "contentHash": "0fa39d502b17",
+    "anchorHash": "5afed16ab921",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "e4b219b6a214",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "ef800d07ab27",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "ebac60a4c1b7"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "42671b83d124"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "0c251bf3fe78"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "94e6f02a5aca"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bfac314fefdc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "c9c97df85768"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "44d59744abee"
+      },
+      "prose:1": {
+        "contentHash": "4a4408d27048",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "9703e9939001"
+      },
+      "prose:2": {
+        "contentHash": "5324cd3c5f60",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "introduction-to-science-and-progress-010": {
+        "contentHash": "ec631b0d451c",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "55fadc496093",
+        "children": {
+          "_label": {
+            "contentHash": "55fadc496093",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "e046441c0f87",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-desci-movement-511": {
+        "contentHash": "79919a4bf4da",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "0e8e27443631",
+        "children": {
+          "_label": {
+            "contentHash": "0e8e27443631",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "01d694d37d0c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "funding-the-commons-1040": {
+        "contentHash": "98f10287f627",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "49ecadc7c786",
+        "children": {
+          "_label": {
+            "contentHash": "49ecadc7c786",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "a8ec93c4bd0f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "organizing-people-and-data-daos-1528": {
+        "contentHash": "3b18e857050b",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "6b8dc4711167",
+        "children": {
+          "_label": {
+            "contentHash": "6b8dc4711167",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "905cc5e1537f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "open-access-reproducible-science-and-call-to-action-2040": {
+        "contentHash": "1e70e694b61b",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "e84944b25a41",
+        "children": {
+          "_label": {
+            "contentHash": "e84944b25a41",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "f241adbdb976",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "introduction-to-science-and-progress-010",
+      "the-desci-movement-511",
+      "funding-the-commons-1040",
+      "organizing-people-and-data-daos-1528",
+      "open-access-reproducible-science-and-call-to-action-2040"
+    ]
+  },
+  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+}

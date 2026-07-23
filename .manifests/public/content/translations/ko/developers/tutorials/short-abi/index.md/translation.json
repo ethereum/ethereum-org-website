@@ -1,0 +1,687 @@
+{
+  "version": 1,
+  "locale": "ko",
+  "translatedAt": "2026-06-17T00:54:05.079Z",
+  "englishManifestHash": "d820fb7ae1f8",
+  "placeholderOrder": [
+    "LINK-e5095f",
+    "LINK-12c146",
+    "LINK-709d01",
+    "LINK-0d4f49",
+    "LINK-c4c3db",
+    "LINK-adbe49",
+    "LINK-b64e9d",
+    "LINK-ef908b",
+    "LINK-0e43f1",
+    "LINK-a4a3d8",
+    "CODE-333e0a",
+    "CODE-06b794",
+    "CODE-ee80fd",
+    "LINK-8d50b8",
+    "CODE-0755cd",
+    "LINK-2e990e",
+    "LINK-83a309",
+    "CODE-f40b4c",
+    "CODEBLOCK-bae1d2",
+    "LINK-125160",
+    "CODEBLOCK-0a58a8",
+    "CODEBLOCK-2c85af",
+    "CODEBLOCK-5afccf",
+    "CODEBLOCK-d94125",
+    "CODEBLOCK-5676f7",
+    "CODEBLOCK-f6abc1",
+    "CODE-14bfed",
+    "LINK-c40686",
+    "LINK-c4c8e9",
+    "CODE-fc9092",
+    "CODE-edbaf4",
+    "CODE-351161",
+    "CODEBLOCK-9ba3ba",
+    "CODE-0f82ac",
+    "LINK-6bc1b8",
+    "CODEBLOCK-722610",
+    "LINK-2e936c",
+    "CODE-14bfed",
+    "CODE-bbddcd",
+    "CODE-3c4623",
+    "CODE-efa1f3",
+    "CODEBLOCK-12f368",
+    "CODE-b8ba2e",
+    "CODE-2bcb43",
+    "LINK-3c23fe",
+    "CODE-bfa3d0",
+    "CODE-bfa3d0",
+    "CODE-bbddcd",
+    "LINK-8910e3",
+    "CODE-27f576",
+    "CODE-27f576",
+    "CODE-b7f373",
+    "CODE-f40b4c",
+    "CODEBLOCK-d572eb",
+    "CODE-11092e",
+    "CODEBLOCK-97b641",
+    "CODE-1fd515",
+    "CODEBLOCK-5989fa",
+    "CODEBLOCK-21869e",
+    "CODEBLOCK-d77906",
+    "CODEBLOCK-83dd04",
+    "CODEBLOCK-0ba3da",
+    "CODEBLOCK-f87c1d",
+    "LINK-1890f6",
+    "LINK-dd9092",
+    "LINK-5b49d3",
+    "CODEBLOCK-bb9d76",
+    "CODEBLOCK-494f27",
+    "CODE-1fd515",
+    "CODEBLOCK-e2220a",
+    "CODE-663ea1",
+    "CODE-3a6eb0",
+    "CODE-b51c80",
+    "CODEBLOCK-131c70",
+    "CODE-18f5e8",
+    "LINK-e1bb7b",
+    "CODE-f6b033",
+    "CODEBLOCK-94db15",
+    "CODE-2bcb43",
+    "CODEBLOCK-0bbd20",
+    "CODEBLOCK-08e0e6",
+    "CODEBLOCK-718c2a",
+    "CODE-bfa3d0",
+    "LINK-1a6811",
+    "CODE-27454e",
+    "LINK-1feb10",
+    "CODE-874ed3",
+    "CODEBLOCK-4e84f2",
+    "CODEBLOCK-35b667",
+    "CODE-4c1029",
+    "CODEBLOCK-9533f6",
+    "CODE-4c1029",
+    "CODE-124193",
+    "CODEBLOCK-1e19d6",
+    "LINK-a9118b",
+    "CODE-c70610",
+    "CODEBLOCK-1bd784",
+    "CODE-079132",
+    "CODEBLOCK-db0e2c",
+    "CODEBLOCK-2d149f",
+    "CODE-e8ccea",
+    "CODE-bfa3d0",
+    "CODE-bfa3d0",
+    "CODE-27f576",
+    "CODEBLOCK-7e22d5",
+    "CODEBLOCK-d23ceb",
+    "CODEBLOCK-204f1c",
+    "CODE-401a40",
+    "CODE-d7ab40",
+    "CODE-29c176",
+    "CODEBLOCK-52e354",
+    "CODE-4b60c6",
+    "CODEBLOCK-907cab",
+    "CODE-212159",
+    "LINK-d6f70e",
+    "LINK-8a8c66",
+    "LINK-f915fb"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-bae1d2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0a58a8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2c85af": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5afccf": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d94125": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5676f7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f6abc1": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9ba3ba": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-722610": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-12f368": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d572eb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-97b641": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5989fa": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-21869e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d77906": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-83dd04": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0ba3da": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f87c1d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-bb9d76": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-494f27": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e2220a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-131c70": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-94db15": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0bbd20": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-08e0e6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-718c2a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4e84f2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-35b667": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9533f6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1e19d6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1bd784": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-db0e2c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2d149f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7e22d5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d23ceb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-204f1c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-52e354": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-907cab": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-333e0a": {
+      "type": "inline-code",
+      "values": {
+        "content": "G"
+      }
+    },
+    "CODE-06b794": {
+      "type": "inline-code",
+      "values": {
+        "content": "txdatazero"
+      }
+    },
+    "CODE-ee80fd": {
+      "type": "inline-code",
+      "values": {
+        "content": "decimals"
+      }
+    },
+    "CODE-0755cd": {
+      "type": "inline-code",
+      "values": {
+        "content": "109*16+576+160=2480"
+      }
+    },
+    "CODE-f40b4c": {
+      "type": "inline-code",
+      "values": {
+        "content": "faucet"
+      }
+    },
+    "CODE-14bfed": {
+      "type": "inline-code",
+      "values": {
+        "content": "fallback()"
+      }
+    },
+    "CODE-fc9092": {
+      "type": "inline-code",
+      "values": {
+        "content": "startByte"
+      }
+    },
+    "CODE-edbaf4": {
+      "type": "inline-code",
+      "values": {
+        "content": "startByte+31"
+      }
+    },
+    "CODE-351161": {
+      "type": "inline-code",
+      "values": {
+        "content": "<opcode name>(<first stack value, if any>,<second stack value, if any>...)"
+      }
+    },
+    "CODE-0f82ac": {
+      "type": "inline-code",
+      "values": {
+        "content": "length"
+      }
+    },
+    "CODE-bbddcd": {
+      "type": "inline-code",
+      "values": {
+        "content": "CalldataInterpreter"
+      }
+    },
+    "CODE-3c4623": {
+      "type": "inline-code",
+      "values": {
+        "content": "external"
+      }
+    },
+    "CODE-efa1f3": {
+      "type": "inline-code",
+      "values": {
+        "content": "public"
+      }
+    },
+    "CODE-b8ba2e": {
+      "type": "inline-code",
+      "values": {
+        "content": "pure"
+      }
+    },
+    "CODE-2bcb43": {
+      "type": "inline-code",
+      "values": {
+        "content": "view"
+      }
+    },
+    "CODE-bfa3d0": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.sender"
+      }
+    },
+    "CODE-27f576": {
+      "type": "inline-code",
+      "values": {
+        "content": "transfer"
+      }
+    },
+    "CODE-b7f373": {
+      "type": "inline-code",
+      "values": {
+        "content": "transferFrom"
+      }
+    },
+    "CODE-11092e": {
+      "type": "inline-code",
+      "values": {
+        "content": "faucet()"
+      }
+    },
+    "CODE-1fd515": {
+      "type": "inline-code",
+      "values": {
+        "content": "token.faucet()"
+      }
+    },
+    "CODE-663ea1": {
+      "type": "inline-code",
+      "values": {
+        "content": "to"
+      }
+    },
+    "CODE-3a6eb0": {
+      "type": "inline-code",
+      "values": {
+        "content": "data"
+      }
+    },
+    "CODE-b51c80": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x01"
+      }
+    },
+    "CODE-f6b033": {
+      "type": "inline-code",
+      "values": {
+        "content": "sendTransaction"
+      }
+    },
+    "CODE-18f5e8": {
+      "type": "inline-code",
+      "values": {
+        "content": "faucetTx.to"
+      }
+    },
+    "CODE-27454e": {
+      "type": "inline-code",
+      "values": {
+        "content": "control-contract"
+      }
+    },
+    "CODE-874ed3": {
+      "type": "inline-code",
+      "values": {
+        "content": "Token.sol"
+      }
+    },
+    "CODE-4c1029": {
+      "type": "inline-code",
+      "values": {
+        "content": "owner"
+      }
+    },
+    "CODE-124193": {
+      "type": "inline-code",
+      "values": {
+        "content": "proxy"
+      }
+    },
+    "CODE-c70610": {
+      "type": "inline-code",
+      "values": {
+        "content": "modifier"
+      }
+    },
+    "CODE-079132": {
+      "type": "inline-code",
+      "values": {
+        "content": "revert"
+      }
+    },
+    "CODE-e8ccea": {
+      "type": "inline-code",
+      "values": {
+        "content": "onlyProxy()"
+      }
+    },
+    "CODE-401a40": {
+      "type": "inline-code",
+      "values": {
+        "content": "approve()"
+      }
+    },
+    "CODE-d7ab40": {
+      "type": "inline-code",
+      "values": {
+        "content": "transferFrom()"
+      }
+    },
+    "CODE-29c176": {
+      "type": "inline-code",
+      "values": {
+        "content": "poorSigner"
+      }
+    },
+    "CODE-4b60c6": {
+      "type": "inline-code",
+      "values": {
+        "content": "cdi"
+      }
+    },
+    "CODE-212159": {
+      "type": "inline-code",
+      "values": {
+        "content": "transferFromTx"
+      }
+    },
+    "LINK-e5095f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/optimistic-rollups"
+      }
+    },
+    "LINK-12c146": {
+      "type": "link",
+      "values": {
+        "url": "https://www.optimism.io/"
+      }
+    },
+    "LINK-709d01": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/optimistic-rollups"
+      }
+    },
+    "LINK-0d4f49": {
+      "type": "link",
+      "values": {
+        "url": "https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-"
+      }
+    },
+    "LINK-c4c3db": {
+      "type": "link",
+      "values": {
+        "url": "https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups"
+      }
+    },
+    "LINK-adbe49": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/#pre-london"
+      }
+    },
+    "LINK-b64e9d": {
+      "type": "link",
+      "values": {
+        "url": "https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m"
+      }
+    },
+    "LINK-ef908b": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding"
+      }
+    },
+    "LINK-0e43f1": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-2028"
+      }
+    },
+    "LINK-a4a3d8": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.github.io/yellowpaper/paper.pdf"
+      }
+    },
+    "LINK-8d50b8": {
+      "type": "link",
+      "values": {
+        "url": "https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed"
+      }
+    },
+    "LINK-2e990e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/ethereum.org-20220330-shortABI"
+      }
+    },
+    "LINK-83a309": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol"
+      }
+    },
+    "LINK-125160": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol"
+      }
+    },
+    "LINK-c40686": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.12/yul.html"
+      }
+    },
+    "LINK-c4c8e9": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#35"
+      }
+    },
+    "LINK-6bc1b8": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Logical_shift"
+      }
+    },
+    "LINK-2e936c": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function"
+      }
+    },
+    "LINK-3c23fe": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#block-and-transaction-properties"
+      }
+    },
+    "LINK-8910e3": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-20"
+      }
+    },
+    "LINK-1890f6": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js"
+      }
+    },
+    "LINK-dd9092": {
+      "type": "link",
+      "values": {
+        "url": "https://www.chaijs.com/"
+      }
+    },
+    "LINK-5b49d3": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ethers.io/v5/"
+      }
+    },
+    "LINK-e1bb7b": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ethers.io/v5/api/signer/#Signer-sendTransaction"
+      }
+    },
+    "LINK-1a6811": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract"
+      }
+    },
+    "LINK-1feb10": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/composability/"
+      }
+    },
+    "LINK-a9118b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm"
+      }
+    },
+    "LINK-d6f70e": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92"
+      }
+    },
+    "LINK-8a8c66": {
+      "type": "link",
+      "values": {
+        "url": "https://developer.offchainlabs.com/docs/special_features"
+      }
+    },
+    "LINK-f915fb": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptodocguy.pro/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T00:54:05.079Z",
+      "status": "success"
+    }
+  }
+}
