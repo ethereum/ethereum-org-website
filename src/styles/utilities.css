@@ -161,19 +161,19 @@
 }
 
 @utility hover-lift-xs {
-  @apply scale-100 shadow-none duration-300 hover:scale-[1.005] hover:shadow hover:duration-300;
+  @apply shadow-none duration-300 hover:-translate-y-1 hover:shadow hover:duration-300;
 }
 
 @utility hover-lift-base {
-  @apply scale-100 shadow-none duration-300 hover:scale-101 hover:shadow-md hover:duration-300;
+  @apply shadow-none duration-300 hover:-translate-y-1 hover:shadow-md hover:duration-300;
 }
 
 @utility hover-lift-sm {
-  @apply scale-100 shadow-sm duration-300 hover:scale-101 hover:shadow-lg hover:duration-300;
+  @apply shadow-sm duration-300 hover:-translate-y-1 hover:shadow-lg hover:duration-300;
 }
 
 @utility hover-lift-md {
-  @apply scale-100 shadow-md duration-300 hover:scale-101 hover:shadow-xl hover:duration-300;
+  @apply shadow-md duration-300 hover:-translate-y-1 hover:shadow-xl hover:duration-300;
 }
 
 /* background-image (gradients) */
