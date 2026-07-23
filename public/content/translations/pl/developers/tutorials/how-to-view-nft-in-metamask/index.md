@@ -19,7 +19,7 @@ Wymaganiem wstępnym jest posiadanie zainstalowanej aplikacji mobilnej MetaMask,
 
 Na górze aplikacji naciśnij przycisk „Portfel” (Wallet), po czym zostaniesz poproszony o wybranie sieci. Ponieważ nasz NFT został wybity w sieci Sepolia, musisz wybrać Sepolia jako swoją sieć.
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
 
 ## Krok 2: Dodaj swój przedmiot kolekcjonerski do MetaMask {#add-nft-to-metamask}
 
@@ -29,6 +29,6 @@ Gdy znajdziesz się w sieci Sepolia, wybierz zakładkę „Przedmioty kolekcjone
 
 Być może będziesz musiał odświeżyć kilka razy, aby zobaczyć swój NFT — ale na pewno tam będzie <Emoji text="😄" size={1} />!
 
-![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
 
 Gratulacje! Pomyślnie wybiłeś NFT i możesz go teraz wyświetlić! Nie możemy się doczekać, aby zobaczyć, jak zawojujesz świat NFT!

@@ -4,34 +4,31 @@ description: "Standard dla skarbców przynoszących zysk."
 lang: pl
 ---
 
-## Wprowadzenie {#introduction}
+ERC-4626 to standard optymalizujący i ujednolicający parametry techniczne skarbców generujących zysk (yield-bearing vaults). Zapewnia on standardowe API dla stokenizowanych skarbców generujących zysk, które reprezentują udziały w pojedynczym bazowym tokenie ERC-20. ERC-4626 opisuje również opcjonalne rozszerzenie dla stokenizowanych skarbców wykorzystujących ERC-20, oferując podstawową funkcjonalność deponowania, wypłacania tokenów i odczytywania sald.
 
-ERC-4626 to standard optymalizujący i ujednolicający parametry techniczne skarbców przynoszących zysk. Zapewnia on standardowe API dla stokenizowanych skarbców przynoszących zysk, które reprezentują udziały w pojedynczym bazowym tokenie ERC-20. ERC-4626 określa również opcjonalne rozszerzenie dla stokenizowanych skarbców wykorzystujących ERC-20, oferując podstawową funkcjonalność deponowania, wypłacania tokenów i odczytywania sald.
+**Rola ERC-4626 w skarbcach generujących zysk**
 
-**Rola ERC-4626 w skarbcach przynoszących zysk**
+Rynki pożyczkowe, agregatory i tokeny z natury oprocentowane pomagają użytkownikom znaleźć najlepszy zysk z ich tokenów krypto poprzez realizację różnych strategii. Strategie te są realizowane z niewielkimi różnicami, co może być podatne na błędy lub marnować zasoby programistyczne.
 
-Rynki pożyczkowe, agregatory i tokeny z natury przynoszące odsetki pomagają użytkownikom znaleźć najlepszy zysk na ich tokenach krypto poprzez realizację różnych strategii. Strategie te są realizowane z niewielkimi różnicami, co może być podatne na błędy lub marnować zasoby programistyczne.
-
-ERC-4626 w skarbcach przynoszących zysk zmniejszy wysiłek integracyjny i odblokuje dostęp do zysków w różnych aplikacjach przy niewielkim specjalistycznym wysiłku ze strony programistów, tworząc bardziej spójne i solidne wzorce implementacji.
+ERC-4626 w skarbcach generujących zysk obniży wysiłek integracyjny i odblokuje dostęp do zysków w różnych aplikacjach przy niewielkim specjalistycznym wysiłku ze strony deweloperów, tworząc bardziej spójne i solidne wzorce implementacji.
 
 Token ERC-4626 jest w pełni opisany w [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
 
 **Asynchroniczne rozszerzenie skarbca (ERC-7540)**
 
-ERC-4626 jest zoptymalizowany pod kątem atomowych depozytów i umorzeń do określonego limitu. Jeśli limit zostanie osiągnięty, nie można składać nowych depozytów ani umorzeń. To ograniczenie nie sprawdza się dobrze w żadnym systemie inteligentnych kontraktów z asynchronicznymi działaniami lub opóźnieniami jako warunkiem wstępnym do interakcji ze Skarbcem (np. protokoły aktywów ze świata rzeczywistego, protokoły pożyczkowe z niepełnym zabezpieczeniem, międzyłańcuchowe protokoły pożyczkowe, tokeny płynnego stakingu (LST) lub ubezpieczeniowe moduły bezpieczeństwa).
+ERC-4626 jest zoptymalizowany pod kątem atomowych depozytów i umorzeń do pewnego limitu. Jeśli limit zostanie osiągnięty, nie można składać nowych depozytów ani umorzeń. To ograniczenie nie sprawdza się dobrze w przypadku żadnego systemu inteligentnych kontraktów z asynchronicznymi działaniami lub opóźnieniami jako warunkiem wstępnym do interakcji ze skarbcem (np. protokoły aktywów ze świata rzeczywistego, protokoły pożyczkowe z niepełnym zabezpieczeniem, międzyłańcuchowe protokoły pożyczkowe, tokeny płynnego stakingu (LST) lub moduły bezpieczeństwa ubezpieczeń).
 
-ERC-7540 rozszerza użyteczność Skarbców ERC-4626 dla przypadków użycia asynchronicznego. Istniejący interfejs Skarbca (`deposit`/`withdraw`/`mint`/`redeem`) jest w pełni wykorzystywany do odbierania asynchronicznych Żądań.
+ERC-7540 rozszerza użyteczność skarbców ERC-4626 dla przypadków użycia asynchronicznego. Istniejący interfejs skarbca (`deposit`/`withdraw`/`mint`/`redeem`) jest w pełni wykorzystywany do odbierania asynchronicznych żądań.
 
-Rozszerzenie ERC-7540 jest w pełni opisane w [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
+Dowiedz się więcej o [asynchronicznych stokenizowanych skarbcach ERC-7540](/developers/docs/standards/tokens/erc-7540/).
 
-**Wieloaktywowe rozszerzenie skarbca (ERC-7575)**
+**Rozszerzenie skarbca wieloaktywowego (ERC-7575)**
 
-Jednym z brakujących przypadków użycia, który nie jest obsługiwany przez ERC-4626, są Skarbce posiadające wiele aktywów lub punktów wejścia, takie jak tokeny dostawcy płynności (LP). Są one na ogół nieporęczne lub niezgodne ze standardem ze względu na wymóg, aby sam ERC-4626 był tokenem ERC-20.
+Jednym z brakujących przypadków użycia, który nie jest obsługiwany przez ERC-4626, są skarbce posiadające wiele aktywów lub punktów wejścia, takie jak tokeny dostawcy płynności (LP). Są one na ogół nieporęczne lub niezgodne ze standardem ze względu na wymóg, aby ERC-4626 sam w sobie był tokenem ERC-20.
 
-ERC-7575 dodaje obsługę Skarbców z wieloma aktywami poprzez wyodrębnienie implementacji tokena ERC-20 z implementacji ERC-4626.
+ERC-7575 dodaje obsługę skarbców z wieloma aktywami poprzez wyodrębnienie implementacji tokena ERC-20 z implementacji ERC-4626.
 
 Rozszerzenie ERC-7575 jest w pełni opisane w [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575).
-
 ## Wymagania wstępne {#prerequisites}
 
 Aby lepiej zrozumieć tę stronę, zalecamy najpierw przeczytać o [standardach tokenów](/developers/docs/standards/tokens/) i [ERC-20](/developers/docs/standards/tokens/erc-20/).

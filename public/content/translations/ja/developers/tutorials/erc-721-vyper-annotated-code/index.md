@@ -26,7 +26,7 @@ published: 2021-04-01
 # 変更元: https://github.com/vyperlang/vyper/blob/de74722bf2d8718cca46902be165f9fe0e3641dd/examples/tokens/ERC721.vy
 ```
 
-Vyperのコメントは、Pythonと同様にハッシュ（`#`）で始まり、行末まで続きます。`@<keyword>`を含むコメントは、人間が読めるドキュメントを生成するために[NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html)によって使用されます。
+Vyperのコメントは、Pythonと同様にハッシュ（`ethereum.ercs`）で始まり、行末まで続きます。`@<keyword>`を含むコメントは、人間が読めるドキュメントを生成するために[NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html)によって使用されます。
 
 ```python
 from vyper.interfaces import ERC721
@@ -40,7 +40,14 @@ ERC-721インターフェースはVyper言語に組み込まれています。
 
 最初の行はインターフェースをインポートし、2行目はここでそれを実装することを指定しています。
 
-### ERC721Receiverインターフェース {#receiver-interface}
+```python
+#pragma version >0.3.10
+```
+
+```python
+#pragma version >0.3.10
+```
+### ERC721Receiverインターフェース
 
 ```python
 # safeTransferFrom()によって呼び出されるコントラクトのインターフェース
@@ -48,10 +55,10 @@ interface ERC721Receiver:
     def onERC721Received(
 ```
 
-ERC-721は2種類の送金をサポートしています：
+ERC-721は2種類の送金をサポートしています。
 
-- `transferFrom`：送信者が任意の宛先アドレスを指定でき、送金の責任を送信者に負わせます。これは、無効なアドレスに送金できることを意味し、その場合NFTは永久に失われます。
-- `safeTransferFrom`：宛先アドレスがコントラクトであるかを確認します。コントラクトである場合、ERC-721コントラクトは受信側コントラクトにNFTを受け取るかどうかを尋ねます。
+- `transferFrom`は、送信者が任意の宛先アドレスを指定でき、送金の責任を送信者に負わせます。これは、無効なアドレスに送金できることを意味し、その場合NFTは永久に失われます。
+- `safeTransferFrom`は、宛先アドレスがコントラクトであるかどうかを確認します。コントラクトである場合、ERC-721コントラクトは受信側コントラクトにNFTを受け取るかどうかを尋ねます。
 
 `safeTransferFrom`のリクエストに応答するには、受信側コントラクトは`ERC721Receiver`を実装する必要があります。
 
@@ -60,7 +67,7 @@ ERC-721は2種類の送金をサポートしています：
             _from: address,
 ```
 
-`_from`アドレスはトークンの現在の所有者です。`_operator`アドレスは送金をリクエストしたアドレスです（アローワンスがあるため、これら2つは同じではない場合があります）。
+`_from`アドレスは、トークンの現在の所有者です。`_operator`アドレスは、送金をリクエストしたアドレスです（アローワンスがあるため、これら2つは同じではない場合があります）。慣例として、このコントラクトのほとんどの関数パラメータはアンダースコア（`_`）で始まります。
 
 ```python
             _tokenId: uint256,
@@ -75,89 +82,41 @@ ERC-721のトークンIDは256ビットです。通常、これらはトーク�
 リクエストには最大1024バイトのユーザーデータを含めることができます。
 
 ```python
-        ) -> bytes32: view
+        ) -> bytes4: nonpayable
 ```
 
-コントラクトが誤って送金を受け入れるケースを防ぐため、戻り値はブール値ではなく、特定の値を持つ256ビットです。
+コントラクトが誤って送金を受け入れるケースを防ぐため、戻り値はブール値ではなく、特定の4バイトの値、つまり`onERC721Received`の関数セレクタになります。受信側コントラクトがトークンを受け入れる際に自身の状態を変更する可能性があるため、この関数は`nonpayable`です。
+### イベント
 
-この関数は`view`であり、ブロックチェーンの状態を読み取ることはできますが、変更することはできないことを意味します。
+[イベント](/developers/docs/smart-contracts/anatomy/#events-and-logs)は、ブロックチェーンの外部にいるユーザーやサーバーにイベントを知らせるために発行されます。イベントの内容は、ブロックチェーン上のコントラクトからは利用できないことに注意してください。3つのERC-721イベントはインポートした`IERC721`インターフェースで定義されているため、このコントラクト自体では宣言しません。以下の送金関数で見るように、`log IERC721.<Event>(...)`を使用して発行します。
 
-### イベント {#events}
+`Transfer`（`sender`、`receiver`、`token_id`）は、NFTの所有権の変更を報告します。これはERC-20のTransferイベントに似ていますが、金額の代わりに`token_id`を報告する点が異なります。ゼロ・アドレスを所有する人はいないため、慣例としてトークンの作成と破棄を報告するために使用します。1つの例外はコントラクトの作成時であり、この間は`Transfer`を発行することなく任意の数のNFTを作成して割り当てることができます。
 
-[イベント](/developers/docs/smart-contracts/anatomy/#events-and-logs)は、ブロックチェーン外のユーザーやサーバーにイベントを通知するために発行されます。イベントの内容はブロックチェーン上のコントラクトからは利用できないことに注意してください。
+ERC-721の承認（approval）はERC-20のアローワンスに似ています。特定のアドレスが特定のトークンを送金することが許可され、その承認されたアドレスが設定または再確認されるたびに`Approval`（`owner`、`approved`、`token_id`）が発行されます。これにより、コントラクトがトークンを受け入れたときに応答するメカニズムが提供されます。コントラクトはイベントをリッスンできないため、単にトークンを送金しただけでは、コントラクトはそれを「知る」ことができません。この方法では、所有者が最初に承認を送信し、次にコントラクトに「トークンXの送金を承認したので、...してください」というリクエストを送信します。これは、ERC-721標準をERC-20標準に似せるための設計上の選択です。ERC-721トークンは非代替性であるため、コントラクトはトークンの所有権を確認することで、特定のトークンを取得したことを識別することもできます。
 
-```python
-# @dev 任意のメカニズムによってNFTの所有権が変更されたときに発行されます。このイベントは、NFTが
-#      作成（`from` == 0）および破棄（`to` == 0）されたときに発行されます。例外：コントラクト作成中、任意の
-#      数のNFTがTransferを発行せずに作成および割り当てられる場合があります。いかなる
-#      送金時にも、そのNFTの承認済みアドレス（存在する場合）はなしにリセットされます。
-# @param _from NFTの送信者（アドレスがゼロ・アドレスの場合はトークンの作成を示します）。
-# @param _to NFTの受信者（アドレスがゼロ・アドレスの場合はトークンの破棄を示します）。
-# @param _tokenId 送金されたNFT。
-event Transfer:
-    sender: indexed(address)
-    receiver: indexed(address)
-    tokenId: indexed(uint256)
-```
+最後に、所有者に対して_オペレーター_が有効または無効になったときに`ApprovalForAll`（`owner`、`operator`、`approved`）が発行されます。委任状のように、アカウントの特定のタイプ（特定のコントラクトによって管理されるもの）のすべてのトークンを管理できるオペレーターを持つことが便利な場合があります。たとえば、私が6か月間連絡を取っていないかどうかを確認し、そうであれば私の資産を相続人に分配するコントラクトにそのような権限を与えたいと思うかもしれません（相続人の1人がそれを要求した場合。コントラクトはトランザクションによって呼び出されない限り何もできません）。ERC-20では、相続コントラクトに高いアローワンスを与えるだけで済みますが、トークンが非代替性であるため、ERC-721では機能しません。これがその同等物です。`approved`の値は、イベントが承認のためのものか、承認の取り消しのためのものかを示します。
+### 状態変数
 
-これはERC-20のTransferイベントに似ていますが、金額の代わりに`tokenId`を報告する点が異なります。ゼロ・アドレスを所有する人はいないため、慣例としてトークンの作成と破棄を報告するために使用します。
-
-```python
-# @dev これは、NFTの承認済みアドレスが変更または再確認されたときに発行されます。ゼロ・
-#      アドレスは、承認済みアドレスがないことを示します。Transferイベントが発行されると、これも
-#      そのNFTの承認済みアドレス（存在する場合）がなしにリセットされることを示します。
-# @param _owner NFTの所有者。
-# @param _approved 承認するアドレス。
-# @param _tokenId 承認するNFT。
-event Approval:
-    owner: indexed(address)
-    approved: indexed(address)
-    tokenId: indexed(uint256)
-```
-
-ERC-721の承認（approval）は、ERC-20のアローワンスに似ています。特定のアドレスが特定のトークンを送金することが許可されます。これにより、コントラクトがトークンを受け取ったときに応答するメカニズムが提供されます。コントラクトはイベントをリッスンできないため、単にトークンを送金しただけでは、コントラクトはそれを「知る」ことができません。この方法では、所有者が最初に承認を提出し、次にコントラクトにリクエストを送信します。「トークンXの送金を承認したので、...を実行してください」。
-
-これは、ERC-721標準をERC-20標準に似せるための設計上の選択です。ERC-721トークンは代替不可能であるため、コントラクトはトークンの所有権を確認することで、特定のトークンを受け取ったことを識別することもできます。
-
-```python
-# @dev これは、所有者に対してオペレーターが有効または無効にされたときに発行されます。オペレーターは
-#      所有者のすべてのNFTを管理できます。
-# @param _owner NFTの所有者。
-# @param _operator オペレーター権限を設定するアドレス。
-# @param _approved オペレーター権限のステータス（オペレーター権限が付与されている場合はtrue、
-# 取り消されている場合はfalse）。
-event ApprovalForAll:
-    owner: indexed(address)
-    operator: indexed(address)
-    approved: bool
-```
-
-委任状のように、特定の種類（特定のコントラクトによって管理されるもの）のアカウントのすべてのトークンを管理できる_オペレーター_を持つことが便利な場合があります。たとえば、私が6か月間連絡を取っていないかを確認し、そうであれば私の資産を相続人に分配するコントラクトにそのような権限を与えたいと思うかもしれません（相続人の一人がそれを要求した場合。コントラクトはトランザクションによって呼び出されない限り何もできません）。ERC-20では、相続コントラクトに高いアローワンスを与えるだけで済みますが、ERC-721ではトークンが代替不可能であるため、それは機能しません。これはそれに相当するものです。
-
-`approved`の値は、イベントが承認のためのものか、承認の取り消しのためのものかを示します。
-
-### 状態変数 {#state-vars}
-
-これらの変数は、どのトークンが利用可能で誰が所有しているかという、トークンの現在の状態を含んでいます。これらのほとんどは`HashMap`オブジェクトであり、[2つの型間に存在する単方向のマッピング](https://vyper.readthedocs.io/en/latest/types.html#mappings)です。
+これらの変数は、どのトークンが利用可能で誰が所有しているかという、トークンの現在の状態を保持します。これらのほとんどは`HashMap`オブジェクトであり、[2つの型間に存在する単方向のマッピング](https://vyper.readthedocs.io/en/latest/types.html#mappings)です。
 
 ```python
 # @dev NFT IDからそれを所有するアドレスへのマッピング。
 idToOwner: HashMap[uint256, address]
 
-# @dev NFT IDから承認済みアドレスへのマッピング。
+# @dev NFT IDから承認されたアドレスへのマッピング。
 idToApprovals: HashMap[uint256, address]
 ```
 
-イーサリアムにおけるユーザーとコントラクトのアイデンティティは、160ビットのアドレスで表されます。これら2つの変数は、トークンIDからその所有者および送金を承認された者（それぞれ最大1人）にマッピングします。イーサリアムでは、初期化されていないデータは常にゼロであるため、所有者や承認された送金者がいない場合、そのトークンの値はゼロになります。
+イーサリアムにおけるユーザーとコントラクトのアイデンティティは、160ビットのアドレスで表されます。これら2つの変数は、トークンIDからその所有者および送金を承認された者（それぞれ最大1つ）にマッピングします。イーサリアムでは、初期化されていないデータは常にゼロであるため、所有者や承認された送金者がいない場合、そのトークンの値はゼロになります。
 
 ```python
-# @dev 所有者のアドレスからそのトークンの数へのマッピング。
+# @dev 所有者のアドレスからそのトークン数へのマッピング。
 ownerToNFTokenCount: HashMap[address, uint256]
 ```
 
-この変数は、各所有者のトークン数を保持します。所有者からトークンへのマッピングはないため、特定の所有者が所有するトークンを特定する唯一の方法は、ブロックチェーンのイベント履歴を遡り、該当する`Transfer`イベントを確認することです。この変数を使用することで、すべてのNFTを取得し終え、これ以上過去を遡る必要がないタイミングを知ることができます。
+この変数は、各所有者のトークン数を保持します。所有者からトークンへのマッピングはないため、特定の所有者が所有するトークンを識別する唯一の方法は、ブロックチェーンのイベント履歴をさかのぼって適切な`Transfer`イベントを確認することです。この変数を使用することで、すべてのNFTを取得したタイミングを知ることができ、それ以上過去をさかのぼる必要がなくなります。
 
-このアルゴリズムは、ユーザーインターフェースと外部サーバーでのみ機能することに注意してください。ブロックチェーン上で実行されているコード自体は、過去のイベントを読み取ることはできません。
+このアルゴリズムは、ユーザーインターフェースと外部サーバーでのみ機能することに注意してください。ブロックチェーン自体で実行されているコードは、過去のイベントを読み取ることができません。
 
 ```python
 # @dev 所有者のアドレスからオペレーターのアドレスのマッピングへのマッピング。
@@ -171,33 +130,31 @@ ownerToOperators: HashMap[address, HashMap[address, bool]]
 minter: address
 ```
 
-新しいトークンは何らかの方法で作成される必要があります。このコントラクトでは、それを行うことが許可されている単一のエンティティ、`minter`が存在します。これは、たとえばゲームには十分である可能性が高いです。他の目的では、より複雑なビジネスロジックを作成する必要があるかもしれません。
+新しいトークンは何らかの方法で作成される必要があります。このコントラクトでは、それを行うことが許可されている単一のエンティティ、つまり`minter`が存在します。たとえば、ゲームの場合はこれで十分でしょう。他の目的では、より複雑なビジネスロジックを作成する必要があるかもしれません。
 
 ```python
-# @dev インターフェースIDからそれがサポートされているかどうかのboolへのマッピング
-supportedInterfaces: HashMap[bytes32, bool]
-
-# @dev ERC-165のERC-165インターフェースID
-ERC165_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000000000000000000000000000000000000001ffc9a7
-
-# @dev ERC-721のERC-165インターフェースID
-ERC721_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000000000000000000000000000000000000080ac58cd
+# @dev サポートされているERC165インターフェースIDの静的リスト
+SUPPORTED_INTERFACES: constant(bytes4[2]) = [
+    # ERC165のERC165インターフェースID
+    0x01ffc9a7,
+    # ERC721のERC165インターフェースID
+    0x80ac58cd,
+]
 ```
 
-[ERC-165](https://eips.ethereum.org/EIPS/eip-165)は、コントラクトがどのERCに準拠しているか、アプリケーションがどのように通信できるかを開示するメカニズムを指定しています。この場合、コントラクトはERC-165とERC-721に準拠しています。
-
+[ERC-165](https://eips.ethereum.org/EIPS/eip-165)は、コントラクトがどのERCに準拠しているか、アプリケーションがどのように通信できるかを開示するためのメカニズムを指定しています。`SUPPORTED_INTERFACES`は、このコントラクトが準拠する2つの4バイトのインターフェースID（ERC-165自体とERC-721）の定数リストです。
 ### 関数 {#functions}
 
 これらは実際にERC-721を実装する関数です。
 
-#### コンストラクタ {#constructor}
+#### コンストラクタ
 
 ```python
-@external
+@deploy
 def __init__():
 ```
 
-Vyperでは、Pythonと同様に、コンストラクタ関数は`__init__`と呼ばれます。
+Pythonと同様に、Vyperではコンストラクタ関数は`__init__`と呼ばれます。これには`@deploy`デコレータが付けられており、コントラクトがデプロイされたときに1回だけ実行されることを意味します。
 
 ```python
     """
@@ -205,51 +162,48 @@ Vyperでは、Pythonと同様に、コンストラクタ関数は`__init__`と�
     """
 ```
 
-PythonおよびVyperでは、複数行の文字列（`"""`で始まり終わる）を指定し、それを一切使用しないことでコメントを作成することもできます。これらのコメントには[NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html)を含めることもできます。
+PythonやVyperでは、複数行の文字列（`"""`で始まり終わる）を指定し、それを何にも使用しないことでコメントを作成することもできます。これらのコメントには[NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html)を含めることもできます。
 
 ```python
-    self.supportedInterfaces[ERC165_INTERFACE_ID] = True
-    self.supportedInterfaces[ERC721_INTERFACE_ID] = True
     self.minter = msg.sender
 ```
 
-状態変数にアクセスするには、`self.<variable name>`を使用します（これもPythonと同じです）。
+状態変数にアクセスするには、`self.<変数名>`を使用します（これもPythonと同じです）。コンストラクタは、コントラクトをデプロイしたアカウントを`minter`として記録します。
+#### ビュー関数
 
-#### View関数 {#views}
-
-これらはブロックチェーンの状態を変更しない関数であり、外部から呼び出された場合は無料で実行できます。View関数がコントラクトから呼び出された場合、依然としてすべてのノードで実行される必要があるため、ガスがかかります。
+これらはブロックチェーンの状態を変更しない関数であるため、外部から呼び出された場合は無料で実行できます。ビュー関数がコントラクトによって呼び出された場合、依然としてすべてのノードで実行される必要があるため、ガスがかかります。
 
 ```python
 @view
 @external
 ```
 
-関数定義の前にあり、アットマーク（`@`）で始まるこれらのキーワードは_デコレーション_と呼ばれます。これらは関数を呼び出すことができる状況を指定します。
+関数定義の前にあるアットマーク（`@`）で始まるこれらのキーワードは、_デコレータ_と呼ばれます。これらは、関数を呼び出すことができる状況を指定します。
 
-- `@view`は、この関数がViewであることを指定します。
+- `@view`は、この関数がビューであることを指定します。
 - `@external`は、この特定の関数がトランザクションや他のコントラクトから呼び出せることを指定します。
 
 ```python
-def supportsInterface(_interfaceID: bytes32) -> bool:
+def supportsInterface(interface_id: bytes4) -> bool:
 ```
 
-Pythonとは対照的に、Vyperは[静的型付け言語](https://wikipedia.org/wiki/Type_system#Static_type_checking)です。[データ型](https://vyper.readthedocs.io/en/latest/types.html)を特定せずに変数や関数パラメータを宣言することはできません。この場合、入力パラメータは256ビットの値である`bytes32`です（256ビットは[イーサリアム仮想マシン](/developers/docs/evm/)のネイティブワードサイズです）。出力はブール値です。慣例として、関数パラメータの名前はアンダースコア（`_`）で始まります。
+Pythonとは対照的に、Vyperは[静的型付け言語](https://wikipedia.org/wiki/Type_system#Static_type_checking)です。[データ型](https://vyper.readthedocs.io/en/latest/types.html)を特定せずに変数や関数パラメータを宣言することはできません。この場合、入力パラメータは4バイトの値である`bytes4`であり、出力はブール値です。
 
 ```python
     """
     @dev インターフェースの識別はERC-165で指定されています。
-    @param _interfaceID インターフェースのID
+    @param interface_id インターフェースのID
     """
-    return self.supportedInterfaces[_interfaceID]
+    return interface_id in SUPPORTED_INTERFACES
 ```
 
-コンストラクタ（`__init__`）で設定された`self.supportedInterfaces` HashMapから値を返します。
+`interface_id`が`SUPPORTED_INTERFACES`リスト内のインターフェースIDのいずれかである場合は、`True`を返します。
 
 ```python
-### VIEW関数 ###
+### ビュー関数 ###
 ```
 
-これらは、トークンに関する情報をユーザーや他のコントラクトが利用できるようにするView関数です。
+これらは、トークンに関する情報をユーザーや他のコントラクトが利用できるようにするビュー関数です。
 
 ```python
 @view
@@ -260,10 +214,10 @@ def balanceOf(_owner: address) -> uint256:
          `_owner`がゼロ・アドレスの場合はスローします。ゼロ・アドレスに割り当てられたNFTは無効と見なされます。
     @param _owner 残高を照会するアドレス。
     """
-    assert _owner != ZERO_ADDRESS
+    assert _owner != empty(address)
 ```
 
-この行は、`_owner`がゼロでないことを[アサート](https://vyper.readthedocs.io/en/latest/statements.html#assert)します。ゼロの場合、エラーとなり操作はリバートされます。
+この行は、`_owner`がゼロ・アドレス（`empty(address)`と記述）ではないことを[アサート](https://vyper.readthedocs.io/en/latest/statements.html#assert)します。ゼロ・アドレスである場合、エラーが発生し、操作はリバートされます。
 
 ```python
     return self.ownerToNFTokenCount[_owner]
@@ -278,7 +232,7 @@ def ownerOf(_tokenId: uint256) -> address:
     """
     owner: address = self.idToOwner[_tokenId]
     # `_tokenId`が有効なNFTでない場合はスローします
-    assert owner != ZERO_ADDRESS
+    assert owner != empty(address)
     return owner
 ```
 
@@ -289,12 +243,12 @@ def ownerOf(_tokenId: uint256) -> address:
 @external
 def getApproved(_tokenId: uint256) -> address:
     """
-    @dev 単一のNFTの承認済みアドレスを取得します。
+    @dev 単一のNFTの承認されたアドレスを取得します。
          `_tokenId`が有効なNFTでない場合はスローします。
     @param _tokenId 承認を照会するNFTのID。
     """
     # `_tokenId`が有効なNFTでない場合はスローします
-    assert self.idToOwner[_tokenId] != ZERO_ADDRESS
+    assert self.idToOwner[_tokenId] != empty(address)
     return self.idToApprovals[_tokenId]
 ```
 
@@ -305,28 +259,27 @@ def getApproved(_tokenId: uint256) -> address:
 @external
 def isApprovedForAll(_owner: address, _operator: address) -> bool:
     """
-    @dev `_operator`が`_owner`の承認済みオペレーターであるかを確認します。
+    @dev `_operator`が`_owner`の承認されたオペレーターであるかどうかを確認します。
     @param _owner NFTを所有するアドレス。
-    @param _operator 所有者の代理として行動するアドレス。
+    @param _operator 所有者に代わって行動するアドレス。
     """
     return (self.ownerToOperators[_owner])[_operator]
 ```
 
-この関数は、`_operator`がこのコントラクト内の`_owner`のすべてのトークンを管理することを許可されているかを確認します。複数のオペレーターが存在する可能性があるため、これは2レベルのHashMapになっています。
-
-#### 送金ヘルパー関数 {#transfer-helpers}
+この関数は、`_operator`がこのコントラクト内の`_owner`のすべてのトークンを管理することが許可されているかどうかを確認します。複数のオペレーターが存在する可能性があるため、これは2レベルのHashMapになっています。
+#### 送金ヘルパー関数
 
 これらの関数は、トークンの送金や管理の一部となる操作を実装します。
 
 ```python
 
-### 送金関数のヘルパー ###
+### 送金関数ヘルパー ###
 
 @view
 @internal
 ```
 
-このデコレーション`@internal`は、関数が同じコントラクト内の他の関数からのみアクセス可能であることを意味します。慣例として、これらの関数名もアンダースコア（`_`）で始まります。
+この`@internal`デコレータは、関数が同じコントラクト内の他の関数からのみアクセス可能であることを意味します。慣例として、これらの関数名もアンダースコア（`_`）で始まります。
 
 ```python
 def _isApprovedOrOwner(_spender: address, _tokenId: uint256) -> bool:
@@ -344,13 +297,13 @@ def _isApprovedOrOwner(_spender: address, _tokenId: uint256) -> bool:
     return (spenderIsOwner or spenderIsApproved) or spenderIsApprovedForAll
 ```
 
-アドレスがトークンの送金を許可されるには、3つの方法があります：
+アドレスがトークンの送金を許可されるには、次の3つの方法があります。
 
 1. アドレスがトークンの所有者である
 2. アドレスがそのトークンを使用することを承認されている
-3. アドレスがトークン所有者のオペレーターである
+3. アドレスがトークンの所有者のオペレーターである
 
-上記の関数は状態を変更しないため、Viewにすることができます。運用コストを削減するために、Viewに_できる_関数はすべてViewに_すべき_です。
+上記の関数は状態を変更しないため、ビューにすることができます。運用コストを削減するために、ビューに_できる_関数はすべてビューに_すべき_です。
 
 ```python
 @internal
@@ -360,7 +313,7 @@ def _addTokenTo(_to: address, _tokenId: uint256):
          `_tokenId`が誰かに所有されている場合はスローします。
     """
     # `_tokenId`が誰かに所有されている場合はスローします
-    assert self.idToOwner[_tokenId] == ZERO_ADDRESS
+    assert self.idToOwner[_tokenId] == empty(address)
     # 所有者を変更します
     self.idToOwner[_tokenId] = _to
     # カウントの追跡を変更します
@@ -376,7 +329,7 @@ def _removeTokenFrom(_from: address, _tokenId: uint256):
     # `_from`が現在の所有者でない場合はスローします
     assert self.idToOwner[_tokenId] == _from
     # 所有者を変更します
-    self.idToOwner[_tokenId] = ZERO_ADDRESS
+    self.idToOwner[_tokenId] = empty(address)
     # カウントの追跡を変更します
     self.ownerToNFTokenCount[_from] -= 1
 ```
@@ -392,12 +345,12 @@ def _clearApproval(_owner: address, _tokenId: uint256):
     """
     # `_owner`が現在の所有者でない場合はスローします
     assert self.idToOwner[_tokenId] == _owner
-    if self.idToApprovals[_tokenId] != ZERO_ADDRESS:
+    if self.idToApprovals[_tokenId] != empty(address):
         # 承認をリセットします
-        self.idToApprovals[_tokenId] = ZERO_ADDRESS
+        self.idToApprovals[_tokenId] = empty(address)
 ```
 
-必要な場合のみ値を変更します。状態変数はストレージに存在します。ストレージへの書き込みは、EVM（イーサリアム仮想マシン）が行う最も高価な操作の1つです（[ガス](/developers/docs/gas/)の観点から）。したがって、それを最小限に抑えることは良い考えであり、既存の値を書き込むだけでも高いコストがかかります。
+必要な場合にのみ値を変更します。状態変数はストレージに存在します。ストレージへの書き込みは、EVM（イーサリアム仮想マシン）が行う最も高価な操作の1つです（[ガス](/developers/docs/gas/)の観点から）。したがって、それを最小限に抑えることは良い考えであり、既存の値を書き込むだけでも高いコストがかかります。
 
 ```python
 @internal
@@ -418,7 +371,7 @@ def _transferFrom(_from: address, _to: address, _tokenId: uint256, _sender: addr
     # 要件を確認します
     assert self._isApprovedOrOwner(_sender, _tokenId)
     # `_to`がゼロ・アドレスの場合はスローします
-    assert _to != ZERO_ADDRESS
+    assert _to != empty(address)
     # 承認をクリアします。`_from`が現在の所有者でない場合はスローします
     self._clearApproval(_from, _tokenId)
     # NFTを削除します。`_tokenId`が有効なNFTでない場合はスローします
@@ -426,18 +379,18 @@ def _transferFrom(_from: address, _to: address, _tokenId: uint256, _sender: addr
     # NFTを追加します
     self._addTokenTo(_to, _tokenId)
     # 送金をログに記録します
-    log Transfer(_from, _to, _tokenId)
+    log IERC721.Transfer(sender=_from, receiver=_to, token_id=_tokenId)
 ```
 
-Vyperでイベントを発行するには、`log`ステートメントを使用します（[詳細はこちらを参照してください](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)）。
-
-#### 送金関数 {#transfer-funs}
+Vyperでイベントを発行するには、`log`ステートメントを使用します（[詳細はこちらを参照してください](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)）。イベントはインポートされたインターフェースに属しているため、`IERC721.Transfer`として参照し、キーワードでフィールドを渡します。
+#### 送金関数
 
 ```python
 
 ### 送金関数 ###
 
 @external
+@payable
 def transferFrom(_from: address, _to: address, _tokenId: uint256):
     """
     @dev `msg.sender`が現在の所有者、承認されたオペレーター、またはこのNFTの承認済み
@@ -446,7 +399,7 @@ def transferFrom(_from: address, _to: address, _tokenId: uint256):
          `_to`がゼロ・アドレスの場合はスローします。
          `_tokenId`が有効なNFTでない場合はスローします。
     @notice 呼び出し元は、`_to`がNFTを受信できることを確認する責任があります。そうでない場合、
-            それらは永久に失われる可能性があります。
+            NFTは永久に失われる可能性があります。
     @param _from NFTの現在の所有者。
     @param _to 新しい所有者。
     @param _tokenId 送金するNFT。
@@ -454,10 +407,13 @@ def transferFrom(_from: address, _to: address, _tokenId: uint256):
     self._transferFrom(_from, _to, _tokenId, msg.sender)
 ```
 
-この関数を使用すると、任意のアドレスに送金できます。アドレスがユーザーであるか、トークンの送金方法を知っているコントラクトでない限り、送金したトークンはそのアドレスにスタックし、役に立たなくなります。
+この関数を使用すると、任意のアドレスに送金できます。アドレスがユーザーであるか、トークンの送金方法を知っているコントラクトでない限り、送金したトークンはそのアドレスでスタックし、役に立たなくなります。
+
+`IERC721`インターフェースは`transferFrom`、`safeTransferFrom`、および`approve`をpayableとして宣言しているため、インターフェースを実装するコントラクトはそれらのシグネチャと一致させる必要があり、ここに`@payable`デコレータがあります。
 
 ```python
 @external
+@payable
 def safeTransferFrom(
         _from: address,
         _to: address,
@@ -465,7 +421,7 @@ def safeTransferFrom(
         _data: Bytes[1024]=b""
     ):
     """
-    @dev NFTの所有権をあるアドレスから別のアドレスへ送金します。
+    @dev NFTの所有権をあるアドレスから別のアドレスに送金します。
          `msg.sender`が現在の所有者、承認されたオペレーター、またはこのNFTの
          承認済みアドレスでない限りスローします。
          `_from`が現在の所有者でない場合はスローします。
@@ -473,7 +429,6 @@ def safeTransferFrom(
          `_tokenId`が有効なNFTでない場合はスローします。
          `_to`がスマートコントラクトの場合、`_to`で`onERC721Received`を呼び出し、
          戻り値が`bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`でない場合はスローします。
-         注：bytes4はパディング付きのbytes32で表されます
     @param _from NFTの現在の所有者。
     @param _to 新しい所有者。
     @param _tokenId 送金するNFT。
@@ -482,32 +437,33 @@ def safeTransferFrom(
     self._transferFrom(_from, _to, _tokenId, msg.sender)
 ```
 
-問題があればいずれにせよリバートし、呼び出しで行われたすべてがキャンセルされるため、最初に送金を行っても問題ありません。
+問題がある場合はいずれにせよリバートされ、呼び出しで行われたすべての処理がキャンセルされるため、最初に送金を行っても問題ありません。
 
 ```python
-    if _to.is_contract: # `_to`がコントラクトのアドレスであるかを確認します
+    if _to.is_contract: # `_to`がコントラクトアドレスかどうかを確認します
 ```
 
-まず、アドレスがコントラクトであるか（コードを持っているか）を確認します。そうでない場合は、ユーザーアドレスであると想定し、ユーザーがトークンを使用または送金できると考えます。しかし、それで安心しきってはいけません。`safeTransferFrom`を使用しても、誰も秘密鍵を知らないアドレスに送金すると、トークンを失う可能性があります。
+まず、アドレスがコントラクトであるか（コードを持っているか）どうかを確認します。そうでない場合は、ユーザーアドレスであると想定し、ユーザーはトークンを使用または送金できると考えます。しかし、誤った安心感に陥らないでください。誰も秘密鍵を知らないアドレスに送金した場合、`safeTransferFrom`を使用してもトークンを失う可能性があります。
 
 ```python
-        returnValue: bytes32 = ERC721Receiver(_to).onERC721Received(msg.sender, _from, _tokenId, _data)
+        returnValue: bytes4 = extcall ERC721Receiver(_to).onERC721Received(msg.sender, _from, _tokenId, _data)
 ```
 
-ターゲットコントラクトを呼び出して、ERC-721トークンを受け取ることができるかを確認します。
+ターゲットコントラクトを呼び出して、ERC-721トークンを受信できるかどうかを確認します。Vyper 0.4では他のコントラクトへの呼び出しをマークする必要があるため、呼び出しには`extcall`というプレフィックスが付けられます。
 
 ```python
         # 送金先が'onERC721Received'を実装していないコントラクトの場合はスローします
-        assert returnValue == method_id("onERC721Received(address,address,uint256,bytes)", output_type=bytes32)
+        assert returnValue == method_id("onERC721Received(address,address,uint256,bytes)", output_type=bytes4)
 ```
 
 宛先がコントラクトであっても、ERC-721トークンを受け入れない（またはこの特定の送金を受け入れないと決定した）場合は、リバートします。
 
 ```python
 @external
+@payable
 def approve(_approved: address, _tokenId: uint256):
     """
-    @dev NFTの承認済みアドレスを設定または再確認します。ゼロ・アドレスは承認済みアドレスがないことを示します。
+    @dev NFTの承認されたアドレスを設定または再確認します。ゼロ・アドレスは承認されたアドレスがないことを示します。
          `msg.sender`が現在のNFT所有者、または現在の所有者の承認されたオペレーターでない限りスローします。
          `_tokenId`が有効なNFTでない場合はスローします。（注：これはEIPには書かれていません）
          `_approved`が現在の所有者である場合はスローします。（注：これはEIPには書かれていません）
@@ -516,12 +472,12 @@ def approve(_approved: address, _tokenId: uint256):
     """
     owner: address = self.idToOwner[_tokenId]
     # `_tokenId`が有効なNFTでない場合はスローします
-    assert owner != ZERO_ADDRESS
+    assert owner != empty(address)
     # `_approved`が現在の所有者である場合はスローします
     assert _approved != owner
 ```
 
-慣例として、承認者を置きたくない場合は、自分自身ではなくゼロ・アドレスを指定します。
+慣例として、承認者を持ちたくない場合は、自分自身ではなくゼロ・アドレスを指定します。
 
 ```python
     # 要件を確認します
@@ -535,25 +491,24 @@ def approve(_approved: address, _tokenId: uint256):
 ```python
     # 承認を設定します
     self.idToApprovals[_tokenId] = _approved
-    log Approval(owner, _approved, _tokenId)
+    log IERC721.Approval(owner=owner, approved=_approved, token_id=_tokenId)
 
 
 @external
 def setApprovalForAll(_operator: address, _approved: bool):
     """
-    @dev 第三者（「オペレーター」）が`msg.sender`のすべての資産を管理するための承認を有効または無効にします。
-         また、ApprovalForAllイベントを発行します。
+    @dev サードパーティ（「オペレーター」）が`msg.sender`のすべての資産を管理するための
+         承認を有効または無効にします。また、ApprovalForAllイベントを発行します。
          `_operator`が`msg.sender`である場合はスローします。（注：これはEIPには書かれていません）
     @notice これは、送信者がその時点でトークンを所有していなくても機能します。
     @param _operator 承認されたオペレーターのセットに追加するアドレス。
-    @param _approved オペレーターが承認されている場合はtrue、承認を取り消す場合はfalse。
+    @param _approved オペレーターが承認されている場合はTrue、承認を取り消す場合はFalse。
     """
     # `_operator`が`msg.sender`である場合はスローします
     assert _operator != msg.sender
     self.ownerToOperators[msg.sender][_operator] = _approved
-    log ApprovalForAll(msg.sender, _operator, _approved)
+    log IERC721.ApprovalForAll(owner=msg.sender, operator=_operator, approved=_approved)
 ```
-
 #### 新しいトークンのミントと既存のトークンの破棄 {#mint-burn}
 
 コントラクトを作成したアカウントは`minter`であり、新しいNFTをミントする権限を持つスーパーユーザーです。しかし、そのアカウントでさえ既存のトークンをバーンすることは許可されていません。所有者、または所有者によって承認されたエンティティのみがそれを行うことができます。

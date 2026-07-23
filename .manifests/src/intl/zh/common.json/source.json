@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/common.json",
-  "generatedAt": "2026-07-11T18:00:04.484Z",
-  "rootHash": "01286e1bfab4",
+  "generatedAt": "2026-07-22T22:30:38.705Z",
+  "rootHash": "aec245439a88",
   "tree": {
-    "contentHash": "39b5121b4193",
-    "anchorHash": "382f8c4c4af9",
+    "contentHash": "9179d5b5ad5d",
+    "anchorHash": "05674fdf33b4",
     "children": {
       "about-ethereum-org": {
         "contentHash": "9aafb3686977",
@@ -990,6 +990,14 @@
       },
       "light-mode-aria-label": {
         "contentHash": "bfa0cab91d75",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link-external-assistive-text": {
+        "contentHash": "1d1833565142",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link-mailto-assistive-text": {
+        "contentHash": "7311cdb9c6e0",
         "anchorHash": "e3b0c44298fc"
       },
       "loading": {
@@ -2564,6 +2572,8 @@
       "less",
       "light-mode",
       "light-mode-aria-label",
+      "link-external-assistive-text",
+      "link-mailto-assistive-text",
       "loading",
       "loading-error-refresh",
       "meetups",
@@ -2899,5 +2909,5 @@
       "region-sint-eustatius-netherlands"
     ]
   },
-  "sourceCommitSha": "8e25023e1d2afab19c877d669db09cea9e0e4ab4"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

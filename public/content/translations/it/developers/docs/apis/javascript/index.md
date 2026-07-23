@@ -237,20 +237,19 @@ ethers.utils.formatEther(balance)
 - [Funzioni di utilità di Web3js](https://docs.web3js.org/api/web3-utils)
 - [Funzioni di utilità di Ethers](https://docs.ethers.org/v6/api/utils/)
 
-## Librerie disponibili {#available-libraries}
-
-**Web3.js -** **_API JavaScript di Ethereum._**
+## Librerie disponibili
+**Web3.js -** **_API JavaScript per Ethereum._**
 
 - [Documentazione](https://docs.web3js.org)
 - [GitHub](https://github.com/ethereum/web3.js)
 
-**Ethers.js -** **_Implementazione completa del portafoglio Ethereum e utilità in JavaScript e TypeScript._**
+**Ethers.js -** **_Implementazione completa di portafoglio Ethereum e utilità in JavaScript e TypeScript._**
 
 - [Home di Ethers.js](https://ethers.org/)
 - [Documentazione](https://docs.ethers.io)
 - [GitHub](https://github.com/ethers-io/ethers.js)
 
-**The Graph -** **_Un protocollo per l'indicizzazione dei dati di Ethereum e IPFS e per interrogarli utilizzando GraphQL._**
+**The Graph -** **_Un protocollo per indicizzare i dati di Ethereum e IPFS e interrogarli usando GraphQL._**
 
 - [The Graph](https://thegraph.com)
 - [Graph Explorer](https://thegraph.com/explorer)
@@ -268,7 +267,17 @@ ethers.utils.formatEther(balance)
 - [Documentazione](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-**Codex -** **_API di dati blockchain arricchiti e in tempo reale su dozzine di catene._**
+**wagmi -** **_Libreria di hook React per Ethereum, basata su viem._**
+
+- [Documentazione](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_Libreria React per aggiungere la connessione del portafoglio alle applicazioni decentralizzate (dapp), basata su wagmi e viem._**
+
+- [Documentazione](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
+
+**Codex -** **_API di dati blockchain arricchiti in tempo reale su decine di catene._**
 
 - [Documentazione](https://docs.codex.io)
 - [Explorer](https://docs.codex.io/explore)
@@ -279,7 +288,6 @@ ethers.utils.formatEther(balance)
 
 - [Documentazione](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
-
 ## Letture consigliate {#further-reading}
 
 _Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_

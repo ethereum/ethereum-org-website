@@ -4,34 +4,31 @@ description: "Um padrão para cofres geradores de rendimento."
 lang: pt-br
 ---
 
-## Introdução {#introduction}
+O ERC-4626 é um padrão para otimizar e unificar os parâmetros técnicos de cofres com rendimento. Ele fornece uma API padrão para cofres com rendimento tokenizados que representam cotas de um único token ERC-20 subjacente. O ERC-4626 também descreve uma extensão opcional para cofres tokenizados utilizando ERC-20, oferecendo funcionalidade básica para depositar, sacar tokens e ler saldos.
 
-O ERC-4626 é um padrão para otimizar e unificar os parâmetros técnicos de cofres geradores de rendimento. Ele fornece uma API padrão para cofres geradores de rendimento tokenizados que representam cotas de um único token ERC-20 subjacente. O ERC-4626 também descreve uma extensão opcional para cofres tokenizados utilizando ERC-20, oferecendo funcionalidade básica para depositar, sacar tokens e ler saldos.
+**O papel do ERC-4626 em cofres com rendimento**
 
-**O papel do ERC-4626 em cofres geradores de rendimento**
+Mercados de empréstimo, agregadores e tokens que rendem juros intrinsecamente ajudam os usuários a encontrar o melhor rendimento em seus tokens cripto executando diferentes estratégias. Essas estratégias são feitas com pequenas variações, o que pode ser propenso a erros ou desperdiçar recursos de desenvolvimento.
 
-Mercados de empréstimo, agregadores e tokens intrinsecamente geradores de juros ajudam os usuários a encontrar o melhor rendimento em seus tokens cripto executando diferentes estratégias. Essas estratégias são feitas com pequenas variações, o que pode ser propenso a erros ou desperdiçar recursos de desenvolvimento.
-
-O ERC-4626 em cofres geradores de rendimento reduzirá o esforço de integração e desbloqueará o acesso ao rendimento em várias aplicações com pouco esforço especializado dos desenvolvedores, criando padrões de implementação mais consistentes e robustos.
+O ERC-4626 em cofres com rendimento reduzirá o esforço de integração e desbloqueará o acesso ao rendimento em várias aplicações com pouco esforço especializado dos desenvolvedores, criando padrões de implementação mais consistentes e robustos.
 
 O token ERC-4626 é totalmente descrito no [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
 
 **Extensão de cofre assíncrono (ERC-7540)**
 
-O ERC-4626 é otimizado para depósitos e resgates atômicos até um limite. Se o limite for atingido, nenhum novo depósito ou resgate poderá ser enviado. Essa limitação não funciona bem para nenhum sistema de contrato inteligente com ações assíncronas ou atrasos como pré-requisito para interagir com o Cofre (por exemplo, protocolos de ativos do mundo real, protocolos de empréstimo subcolateralizados, protocolos de empréstimo cross-chain, tokens de staking líquido ou módulos de segurança de seguros).
+O ERC-4626 é otimizado para depósitos e resgates atômicos até um limite. Se o limite for atingido, nenhum novo depósito ou resgate poderá ser enviado. Essa limitação não funciona bem para nenhum sistema de contrato inteligente com ações assíncronas ou atrasos como pré-requisito para interagir com o cofre (por exemplo, protocolos de ativos do mundo real, protocolos de empréstimo subcolateralizados, protocolos de empréstimo cross-chain, tokens de staking líquido (LSTs) ou módulos de segurança de seguro).
 
-O ERC-7540 expande a utilidade dos Cofres ERC-4626 para casos de uso assíncronos. A interface existente do Cofre (`deposit`/`withdraw`/`mint`/`redeem`) é totalmente utilizada para reivindicar Solicitações assíncronas.
+O ERC-7540 expande a utilidade dos cofres ERC-4626 para casos de uso assíncronos. A interface existente do cofre (`deposit`/`withdraw`/`mint`/`redeem`) é totalmente utilizada para reivindicar solicitações assíncronas.
 
-A extensão ERC-7540 é totalmente descrita no [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
+Saiba mais sobre [Cofres tokenizados assíncronos ERC-7540](/developers/docs/standards/tokens/erc-7540/).
 
 **Extensão de cofre de múltiplos ativos (ERC-7575)**
 
-Um caso de uso ausente que não é suportado pelo ERC-4626 são os Cofres que possuem múltiplos ativos ou pontos de entrada, como Tokens de provedor de liquidez (LP). Estes são geralmente difíceis de manejar ou não conformes devido ao requisito do ERC-4626 de ser ele próprio um ERC-20.
+Um caso de uso ausente que não é suportado pelo ERC-4626 são os cofres que possuem múltiplos ativos ou pontos de entrada, como tokens de provedor de liquidez (LP). Estes são geralmente difíceis de manejar ou não estão em conformidade devido ao requisito do ERC-4626 de ser ele próprio um ERC-20.
 
-O ERC-7575 adiciona suporte para Cofres com múltiplos ativos externalizando a implementação do token ERC-20 da implementação do ERC-4626.
+O ERC-7575 adiciona suporte para cofres com múltiplos ativos ao externalizar a implementação do token ERC-20 da implementação do ERC-4626.
 
 A extensão ERC-7575 é totalmente descrita no [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575).
-
 ## Pré-requisitos {#prerequisites}
 
 Para entender melhor esta página, recomendamos que você leia primeiro sobre [padrões de token](/developers/docs/standards/tokens/) e [ERC-20](/developers/docs/standards/tokens/erc-20/).

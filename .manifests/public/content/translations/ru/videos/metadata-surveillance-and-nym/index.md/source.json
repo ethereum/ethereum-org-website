@@ -1,0 +1,205 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/metadata-surveillance-and-nym/index.md",
+  "generatedAt": "2026-07-23T00:28:45.192Z",
+  "rootHash": "10ada09035ea",
+  "tree": {
+    "contentHash": "4543d5ef2729",
+    "anchorHash": "c54533ac526d",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "450de059ae87",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "bba43d789df1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "95e0b1347872"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "0520c56fdd3d"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d50880ed2d08"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "02540942346f"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "cb76da4fb487"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d4e11841abf2"
+      },
+      "prose:1": {
+        "contentHash": "aebe937c3f0b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "87b0ac72155c"
+      },
+      "prose:2": {
+        "contentHash": "4ad82ead6a66",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "intro-004": {
+        "contentHash": "2577981c07b8",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "beb9032875b1",
+        "children": {
+          "_label": {
+            "contentHash": "beb9032875b1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4b3f21770a90",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "communications-metadata-027": {
+        "contentHash": "195f7c69c133",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "53fa2b48550e",
+        "children": {
+          "_label": {
+            "contentHash": "53fa2b48550e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "6c6756e3cd9e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "who-gets-access-to-metadata-110": {
+        "contentHash": "7b32faf1d466",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "e42be81a1eef",
+        "children": {
+          "_label": {
+            "contentHash": "e42be81a1eef",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ff940b1ecfe1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "why-is-metadata-important-200": {
+        "contentHash": "4d3225ee6c52",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "131eb999bdac",
+        "children": {
+          "_label": {
+            "contentHash": "131eb999bdac",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "a030b190834e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "metadata-surveillance-515": {
+        "contentHash": "244ca11c82b4",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "a2617c30b39d",
+        "children": {
+          "_label": {
+            "contentHash": "a2617c30b39d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "bdab829f0e51",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "a-wish-list-for-private-communications-640": {
+        "contentHash": "cea5af2705b8",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "ce64d9b6593e",
+        "children": {
+          "_label": {
+            "contentHash": "ce64d9b6593e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "08836eede68a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "intro-004",
+      "communications-metadata-027",
+      "who-gets-access-to-metadata-110",
+      "why-is-metadata-important-200",
+      "metadata-surveillance-515",
+      "a-wish-list-for-private-communications-640"
+    ]
+  },
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+}

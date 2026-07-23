@@ -47,18 +47,18 @@ Ao usar um serviço de nó, você está centralizando o aspecto de infraestrutur
 
 Leia mais sobre os [benefícios de executar o seu próprio nó](/developers/docs/nodes-and-clients/#benefits-to-you).
 
-## Serviços de nó populares {#popular-node-services}
+## Serviços de nó populares
 
-Aqui está uma lista de alguns dos provedores de nó do Ethereum mais populares, sinta-se à vontade para adicionar os que estiverem faltando! Cada serviço de nó oferece diferentes benefícios e recursos, além de níveis gratuitos ou pagos, você deve investigar quais se adequam melhor às suas necessidades antes de tomar uma decisão.
+Aqui está uma lista de alguns dos provedores de nó do Ethereum mais populares, sinta-se à vontade para adicionar qualquer um que esteja faltando! Cada serviço de nó oferece diferentes benefícios e recursos, além de níveis gratuitos ou pagos, você deve investigar quais se adequam melhor às suas necessidades antes de tomar uma decisão.
 
 - [**Alchemy**](https://alchemy.com/)
   - [Documentação](https://www.alchemy.com/docs/)
   - Recursos
-    - Maior nível gratuito com 300 milhões de unidades de computação por mês (\~30 milhões de solicitações getLatestBlock)
-    - Suporte multichain para Polygon, Starknet, Optimism, Arbitrum
-    - Alimentando ~70% dos maiores aplicativos descentralizados (dapps) do Ethereum e volume de transações de finanças descentralizadas (DeFi)
+    - Maior nível gratuito com 300 milhões de unidades de computação por mês (~30 milhões de solicitações getLatestBlock)
+    - Suporte multicadeia para Polygon, Starknet, Optimism, Arbitrum
+    - Impulsionando ~70% dos maiores aplicativos descentralizados (dapps) do Ethereum e volume de transações de finanças descentralizadas (DeFi)
     - Alertas de webhook em tempo real via Alchemy Notify
-    - Melhor suporte e confiabilidade/estabilidade da categoria
+    - Suporte e confiabilidade/estabilidade de primeira classe
     - API de NFT da Alchemy
     - Painel com Request Explorer, Mempool Watcher e Composer
     - Acesso integrado a faucet de testnet
@@ -105,7 +105,7 @@ Aqui está uma lista de alguns dos provedores de nó do Ethereum mais populares,
   - Recursos
     - Protocolo Ankr - acesso aberto a endpoints de API RPC públicos para mais de 8 cadeias
     - Balanceamento de carga e monitoramento da integridade do nó para um gateway rápido e confiável para o nó disponível mais próximo
-    - Nível premium habilitando endpoint WSS e limite de taxa sem teto
+    - Nível premium permitindo endpoint WSS e limite de taxa sem teto
     - Implantação de nó completo e nó validador com um clique para mais de 40 cadeias
     - Escale conforme o uso
     - Ferramentas de análise
@@ -121,7 +121,7 @@ Aqui está uma lista de alguns dos provedores de nó do Ethereum mais populares,
     - Infraestrutura descentralizada
     - API pública
     - Plano gratuito dedicado
-    - Suporte multichain (mais de 17 blockchains)
+    - Suporte multicadeia (mais de 17 blockchains)
     - Nós de arquivo
     - Suporte 24/7 no Discord
     - Monitoramento e alertas 24/7
@@ -133,7 +133,7 @@ Aqui está uma lista de alguns dos provedores de nó do Ethereum mais populares,
   - Benefícios
     - Painel
     - Base por nó
-    - Análise
+    - Análises
 
 - [**BlockPI**](https://blockpi.io/)
   - [Documentação](https://docs.blockpi.io/)
@@ -151,7 +151,7 @@ Aqui está uma lista de alguns dos provedores de nó do Ethereum mais populares,
   - [Documentação](https://docs.chainbase.com)
   - Recursos
     - Serviço RPC altamente disponível, rápido e escalável
-    - Suporte multichain
+    - Suporte multicadeia
     - Tarifas gratuitas
     - Painel amigável
     - Fornece serviços de dados de blockchain além do RPC
@@ -175,7 +175,7 @@ Aqui está uma lista de alguns dos provedores de nó do Ethereum mais populares,
   - Recursos do NodeCloud:
     - Suporte de API para 185 redes
     - Pool distribuído de mais de 40 provedores
-    - Cobertura global com nove (9) geo-clusters
+    - Cobertura global com nove (9) clusters geográficos
     - Sistema de balanceamento de carga alimentado por IA
     - Preço fixo conforme o uso — sem aumentos, sem expiração, sem fidelidade
     - Chaves ilimitadas, ajustes granulares de chaves, funções de equipe, proteção de front-end
@@ -192,7 +192,7 @@ Aqui está uma lista de alguns dos provedores de nó do Ethereum mais populares,
     - Número ilimitado de chaves de API
     - Alta velocidade de conexão a 1 GB/s
     - Trace+Archive
-    - Análise avançada
+    - Análises avançadas
     - Atualizações automatizadas
     - Suporte técnico
 
@@ -200,7 +200,7 @@ Aqui está uma lista de alguns dos provedores de nó do Ethereum mais populares,
   - Recursos
     - Opção de nível gratuito
     - Escale conforme o uso
-    - Análise
+    - Análises
     - Painel
     - Endpoints de API exclusivos
     - Nós completos dedicados
@@ -226,12 +226,12 @@ Aqui está uma lista de alguns dos provedores de nó do Ethereum mais populares,
     - Mais de 500 APIs administrativas e de serviço
     - Interface RESTful para envio de transação do Ethereum (apoiada pelo Apache Kafka)
     - Fluxos de saída para entrega de eventos (apoiados pelo Apache Kafka)
-    - Coleção profunda de serviços offchain e auxiliares (por exemplo, transporte de mensagens criptografadas bilaterais)
+    - Ampla coleção de serviços offchain e auxiliares (por exemplo, transporte de mensagens criptografadas bilaterais)
     - Integração de rede direta com governança e controle de acesso baseado em função
     - Gerenciamento de usuários sofisticado para administradores e usuários finais
     - Infraestrutura de nível empresarial altamente escalável e resiliente
     - Gerenciamento de chave privada Cloud HSM
-    - Tethering da Rede Principal do Ethereum
+    - Ancoragem à Rede Principal do Ethereum
     - Certificações ISO 27k e SOC 2, Tipo 2
     - Configuração de tempo de execução dinâmica (por exemplo, adicionar integrações de nuvem, alterar ingressos de nó, etc.)
     - Suporte para orquestrações de implantação multinuvem, multirregião e híbridas
@@ -246,9 +246,9 @@ Aqui está uma lista de alguns dos provedores de nó do Ethereum mais populares,
     - Código aberto
     - SDK totalmente descentralizado
     - Integração com Ethers.js
-    - Interface intuitiva de gerenciamento de projetos
+    - Interface de gerenciamento de projetos intuitiva
     - Integridade de dados baseada em consenso
-    - Suporte multichain
+    - Suporte multicadeia
 
 - [**Moralis**](https://moralis.io/)
   - [Documentação](https://docs.moralis.io/)
@@ -256,10 +256,10 @@ Aqui está uma lista de alguns dos provedores de nó do Ethereum mais populares,
     - Nós compartilhados gratuitos
     - Nós de arquivo compartilhados gratuitos
     - Focado em privacidade (política de não registro)
-    - Suporte cross-chain
+    - Suporte de cadeia cruzada
     - Escale conforme o uso
     - Painel
-    - SDK exclusivo do Ethereum
+    - SDK do Ethereum exclusivo
     - Endpoints de API exclusivos
     - Suporte técnico direto
 
@@ -268,14 +268,14 @@ Aqui está uma lista de alguns dos provedores de nó do Ethereum mais populares,
   - Recursos
     - Serviços de API RPC confiáveis, rápidos e escaláveis
     - API aprimorada para desenvolvedores Web3
-    - Suporte multichain
+    - Suporte multicadeia
     - Comece gratuitamente
 
 - [**NodeFlare**](https://nodeflare.app/)
   - [Documentação](https://nodeflare.app/docs/quick-start)
   - Recursos
-    - 8 cadeias EVM, incluindo Ethereum, Base, Arbitrum One e Optimism
-    - 4 regiões (Europa, Ásia, América do Norte) com failover automático para o nó saudável mais próximo
+    - 23 cadeias EVM, incluindo Ethereum, Base, Arbitrum One e Nova, Optimism, Linea e Unichain
+    - 5 regiões (Europa, Reino Unido, Ásia, Leste dos EUA, Oeste dos EUA) com failover automático para o nó íntegro mais próximo
     - Endpoint público gratuito (sem chave de API) + plano gratuito com 3 milhões de unidades de computação/mês
     - Faturamento por unidade de computação — pague apenas pelo que usar, chamadas mais pesadas custam mais
     - Sem limitação em planos pagos
@@ -293,14 +293,14 @@ Aqui está uma lista de alguns dos provedores de nó do Ethereum mais populares,
 - [**Pocket Network**](https://www.pokt.network/)
   - [Documentação](https://docs.pokt.network/)
   - Recursos
-    - Protocolo RPC descentralizado e Marketplace
+    - Protocolo RPC descentralizado e mercado
     - Nível gratuito de 1 milhão de solicitações por dia (por endpoint, máximo de 2)
     - Programa Pre-Stake+ (se você precisar de mais de 1 milhão de solicitações por dia)
     - Mais de 15 blockchains suportadas
     - Mais de 6.400 nós ganhando POKT por servir aplicativos
     - Suporte a nó de arquivo, nó de arquivo com rastreamento e nó de rede de teste
     - Diversidade de clientes de nó da Rede Principal do Ethereum
-    - Nenhum ponto único de falha
+    - Sem ponto único de falha
     - Zero tempo de inatividade
     - Tokenomics econômico quase zero (faça stake de POKT uma vez para largura de banda da rede)
     - Sem custos irrecuperáveis mensais, transforme sua infraestrutura em um ativo
@@ -308,19 +308,19 @@ Aqui está uma lista de alguns dos provedores de nó do Ethereum mais populares,
     - Escale infinitamente o número de solicitações por dia e nós por hora conforme o uso
     - A opção mais privada e resistente à censura
     - Suporte prático ao desenvolvedor
-    - Painel e análise do [Pocket Portal](https://bit.ly/ETHorg_POKTportal)
+    - Painel e análises do [Pocket Portal](https://bit.ly/ETHorg_POKTportal)
 
 - [**QuickNode**](https://www.quicknode.com)
   - [Documentação](https://www.quicknode.com/docs/)
   - Recursos
     - Suporte técnico 24/7 e comunidade de desenvolvedores no Discord
-    - Rede de baixa latência, multinuvem/metal e geo-balanceada
-    - Suporte multichain (Optimism, Arbitrum, Polygon + 11 outras)
+    - Rede de baixa latência, multinuvem/metal e balanceada geograficamente
+    - Suporte multicadeia (Optimism, Arbitrum, Polygon + 11 outras)
     - Camadas intermediárias para velocidade e estabilidade (roteamento de chamadas, cache, indexação)
     - Monitoramento de contrato inteligente via Webhooks
-    - Painel intuitivo, pacote de análise, compositor RPC
+    - Painel intuitivo, pacote de análises, compositor RPC
     - Recursos avançados de segurança (JWT, mascaramento, lista de permissões)
-    - API de dados e análise de NFT
+    - API de dados e análises de NFT
     - [Certificado SOC2](https://www.quicknode.com/security)
     - Adequado para desenvolvedores a empresas
 
@@ -355,13 +355,13 @@ Aqui está uma lista de alguns dos provedores de nó do Ethereum mais populares,
 - [**Tenderly**](https://tenderly.co/web3-gateway)
   - [Documentação](https://docs.tenderly.co/web3-gateway/web3-gateway)
   - Recursos
-    - Nível gratuito incluindo 25 milhões de Unidades Tenderly por mês
+    - Nível gratuito incluindo 25 milhões de unidades Tenderly por mês
     - Acesso gratuito a dados históricos
     - Cargas de trabalho com uso intenso de leitura até 8x mais rápidas
     - Acesso de leitura 100% consistente
     - Endpoints JSON-RPC
-    - Construtor de solicitação RPC baseado em interface do usuário e visualização de solicitação
-    - Estreitamente integrado com as ferramentas de desenvolvimento, depuração e teste do Tenderly
+    - Construtor de solicitações RPC baseado em interface do usuário e visualização de solicitações
+    - Fortemente integrado com as ferramentas de desenvolvimento, depuração e teste da Tenderly
     - Simulações de transação
     - Análise e filtragem de uso
     - Gerenciamento de chaves de fácil acesso
@@ -371,7 +371,7 @@ Aqui está uma lista de alguns dos provedores de nó do Ethereum mais populares,
   - [Documentação](https://services.tokenview.io/docs?type=nodeService)
   - Recursos
     - Suporte técnico 24/7 e comunidade de desenvolvedores no Telegram
-    - Suporte multichain (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Classic)
+    - Suporte multicadeia (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Classic)
     - Ambos os endpoints RPC e WSS estão abertos para uso
     - Acesso ilimitado à API de dados de arquivo
     - Painel com Request Explorer e Mempool Watcher
@@ -388,7 +388,7 @@ Aqui está uma lista de alguns dos provedores de nó do Ethereum mais populares,
     - Tarifas gratuitas
     - Limites altos que se adequam a qualquer usuário
     - Suporte para vários nós
-    - Escalonamento de recursos
+    - Dimensionamento de recursos
     - Altas velocidades de processamento
 
 - [**ZMOK**](https://zmok.io/)
@@ -398,20 +398,18 @@ Aqui está uma lista de alguns dos provedores de nó do Ethereum mais populares,
     - Mempool de transações globais com métodos de pesquisa/filtragem
     - Taxa de transação ilimitada e gás infinito para envio de transações
     - Obtenção mais rápida do novo bloco e leitura da blockchain
-    - A garantia do melhor preço por chamada de API
+    - A melhor garantia de preço por chamada de API
 
 - [**Zeeve**](https://www.zeeve.io/)
   - [Documentação](https://www.zeeve.io/docs/)
   - Recursos
     - Plataforma de automação sem código de nível empresarial que fornece implantação, monitoramento e gerenciamento de nós e redes de blockchain
     - Mais de 30 protocolos e integrações suportados, e adicionando mais
-    - Serviços de infraestrutura Web3 de valor agregado, como armazenamento descentralizado, identidade descentralizada e APIs de dados de Blockchain Ledger para casos de uso do mundo real
+    - Serviços de infraestrutura Web3 de valor agregado, como armazenamento descentralizado, identidade descentralizada e APIs de dados de livro-razão de blockchain para casos de uso do mundo real
     - Suporte 24/7 e monitoramento proativo garantem a integridade dos nós o tempo todo.
-    - Os endpoints RPC oferecem acesso autenticado a APIs, gerenciamento sem complicações com painel intuitivo e análise.
+    - Os endpoints RPC oferecem acesso autenticado a APIs, gerenciamento sem complicações com painel intuitivo e análises.
     - Fornece opções de nuvem gerenciada e traga sua própria nuvem para escolher e oferece suporte a todos os principais provedores de nuvem, como AWS, Azure, Google Cloud, Digital Ocean e local.
     - Usamos roteamento inteligente para atingir o nó mais próximo do seu usuário todas as vezes
-
-
 ## Leitura adicional {#further-reading}
 
 - [Lista de serviços de nó do Ethereum](https://ethereumnodes.com/)

@@ -77,7 +77,7 @@ node scripts/mint-nft.js
 
 对于更喜欢视觉学习的读者，上述步骤总结如下：
 
-![How to upload your image to Pinata](./instructionsPinata.gif)
+![How to upload your image to Pinata](./instructionsPinata.mp4#712x376)
 
 现在，我们需要再上传一个文档到 Pinata。但在那之前，我们需要先创建它！
 
@@ -105,7 +105,7 @@ node scripts/mint-nft.js
 
 完成 JSON 文件的编辑后，保存它并按照我们上传图像的相同步骤将其上传到 Pinata。
 
-![How to upload your nft-metadata.json to Pinata](./uploadPinata.gif)
+![How to upload your nft-metadata.json to Pinata](./uploadPinata.mp4#1280x676)
 
 ## 第 5 步：创建你的合约实例 {#instance-contract}
 

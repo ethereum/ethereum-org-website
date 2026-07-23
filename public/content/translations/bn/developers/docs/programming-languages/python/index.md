@@ -55,21 +55,21 @@ incomplete: true
 
 ## Python প্রজেক্ট এবং টুল {#python-projects-and-tools}
 
-### সক্রিয়: {#active}
-
+### অ্যাক্টিভ:
 - [Web3.py](https://github.com/ethereum/web3.py) - _ইথেরিয়ামের সাথে ইন্টারঅ্যাক্ট করার জন্য Python লাইব্রেরি_
-- [Vyper](https://github.com/ethereum/vyper/) - _EVM-এর জন্য পাইথনিক স্মার্ট কন্ট্রাক্ট ল্যাঙ্গুয়েজ_
-- [Ape](https://github.com/ApeWorX/ape) - _পাইথনিস্টা, ডেটা সায়েন্টিস্ট এবং সিকিউরিটি প্রফেশনালদের জন্য স্মার্ট কন্ট্রাক্ট ডেভেলপমেন্ট টুল_
+- [Vyper](https://github.com/ethereum/vyper/) - _EVM-এর জন্য পাইথনিক (Pythonic) স্মার্ট কন্ট্রাক্ট ল্যাঙ্গুয়েজ_
+- [Titanoboa](https://github.com/vyperlang/titanoboa/) - _Vyper-এর নিজস্ব টেস্টিং টুল; মেইননেট ফোর্কিং, ডিবাগিং এবং সুন্দর ট্রেসব্যাকসহ একটি ইন্টারপ্রেটার_
+- [Moccasin](https://github.com/Cyfrin/moccasin) - _Titanoboa-এর উপর নির্মিত Vyper এবং Python-এর জন্য একটি স্মার্ট কন্ট্রাক্ট ডেভেলপমেন্ট এবং টেস্টিং ফ্রেমওয়ার্ক_
+- [Ape](https://github.com/ApeWorX/ape) - _পাইথনিস্টা (Pythonistas), ডেটা সায়েন্টিস্ট এবং সিকিউরিটি প্রফেশনালদের জন্য স্মার্ট কন্ট্রাক্ট ডেভেলপমেন্ট টুল_
 - [py-evm](https://github.com/ethereum/py-evm) - _ইথেরিয়াম ভার্চুয়াল মেশিনের ইমপ্লিমেন্টেশন_
-- [eth-tester](https://github.com/ethereum/eth-tester) - _ইথেরিয়াম-ভিত্তিক অ্যাপ্লিকেশন টেস্টিংয়ের টুল_
+- [eth-tester](https://github.com/ethereum/eth-tester) - _ইথেরিয়াম-ভিত্তিক অ্যাপ্লিকেশন টেস্ট করার টুল_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _ইথেরিয়াম সম্পর্কিত কোডবেস নিয়ে কাজ করার জন্য ইউটিলিটি ফাংশন_
-- [py-solc-x](https://pypi.org/project/py-solc-x/) - _0.5.x সাপোর্টসহ solc সলিডিটি কম্পাইলারের জন্য Python র‍্যাপার_
+- [py-solc-x](https://pypi.org/project/py-solc-x/) - _0.5.x সাপোর্টসহ solc Solidity কম্পাইলারের জন্য Python র‍্যাপার_
 - [pymaker](https://github.com/makerdao/pymaker) - _Maker কন্ট্রাক্টের জন্য Python API_
-- [siwe](https://github.com/signinwithethereum/siwe-py) - _Python-এর জন্য সাইন ইন উইথ ইথেরিয়াম (SIWE)_
-- [ইথেরিয়াম ইন্টিগ্রেশনের জন্য Web3 DeFi](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _ERC-20, ইউনিসোয়াপ (Uniswap) এবং অন্যান্য জনপ্রিয় প্রজেক্টের রেডি ইন্টিগ্রেশনসহ একটি Python প্যাকেজ_
-- [Wake](https://getwake.io) - _কন্ট্রাক্ট টেস্টিং, ফাজিং, ডিপ্লয়মেন্ট, ভালনারেবিলিটি স্ক্যানিং এবং কোড নেভিগেশনের জন্য অল-ইন-ওয়ান Python ফ্রেমওয়ার্ক (ল্যাঙ্গুয়েজ সার্ভার - [Solidity-এর জন্য টুল](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
-- [DeFiPy](https://github.com/defipy-devs/defipy) - _ইউনিসোয়াপ (Uniswap) V2/V3, Balancer এবং Curve জুড়ে বিকেন্দ্রীভূত অর্থব্যবস্থা (DeFi) অ্যানালিটিক্স এবং স্বয়ংক্রিয় বাজার নির্ধারক (এএমএম) সিমুলেশনের জন্য Python SDK_
-
+- [siwe](https://github.com/signinwithethereum/siwe-py) - _Python-এর জন্য সাইন ইন উইথ ইথেরিয়াম (siwe)_
+- [Web3 DeFi for Ethereum integrations](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _ERC-20, ইউনিসোয়াপ এবং অন্যান্য জনপ্রিয় প্রজেক্টের জন্য রেডি ইন্টিগ্রেশনসহ একটি Python প্যাকেজ_
+- [Wake](https://getwake.io) - _কন্ট্রাক্ট টেস্টিং, ফাজিং, ডিপ্লয়মেন্ট, দুর্বলতা স্ক্যানিং এবং কোড নেভিগেশনের জন্য অল-ইন-ওয়ান Python ফ্রেমওয়ার্ক (ল্যাঙ্গুয়েজ সার্ভার - [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
+- [DeFiPy](https://github.com/defipy-devs/defipy) - _ইউনিসোয়াপ V2/V3, Balancer এবং Curve জুড়ে বিকেন্দ্রীভূত অর্থব্যবস্থা (DeFi) অ্যানালিটিক্স এবং স্বয়ংক্রিয় বাজার নির্ধারক (এএমএম) সিমুলেশনের জন্য Python SDK_
 ### আর্কাইভ করা / আর মেইনটেইন করা হয় না: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _ইথেরিয়াম Python ক্লায়েন্ট_

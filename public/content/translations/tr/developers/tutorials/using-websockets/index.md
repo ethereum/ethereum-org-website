@@ -39,7 +39,7 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 Başlamak için, uygulamanızın WebSocket URL'sini kullanarak bir WebSocket açın. Uygulamanızın WebSocket URL'sini, [kontrol panelinizde](https://dashboard.alchemy.com/) uygulamanın sayfasını açıp "View Key" (Anahtarı Görüntüle) seçeneğine tıklayarak bulabilirsiniz. Uygulamanızın WebSocket'ler için olan URL'sinin HTTP istekleri için olan URL'sinden farklı olduğunu, ancak her ikisinin de "View Key" seçeneğine tıklanarak bulunabileceğini unutmayın.
 
-![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.gif)
+![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.mp4#602x280)
 
 [Alchemy API Referansı](https://www.alchemy.com/docs/reference/api-overview) içinde listelenen API'lerin herhangi biri WebSocket aracılığıyla kullanılabilir. Bunu yapmak için, bir HTTP POST isteğinin gövdesi olarak gönderilecek olan aynı yükü kullanın, ancak bu yükü bunun yerine WebSocket üzerinden gönderin.
 

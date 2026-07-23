@@ -4,34 +4,31 @@ description: Kiwango cha hifadhi zinazozalisha faida.
 lang: sw
 ---
 
-## Utangulizi {#introduction}
-
-ERC-4626 ni kiwango cha kuboresha na kuunganisha vigezo vya kiufundi vya hifadhi zinazozalisha faida. Inatoa API ya kiwango kwa hifadhi zinazozalisha faida zilizowekwa tokeni ambazo zinawakilisha hisa za tokeni moja ya msingi ya ERC-20. ERC-4626 pia inaelezea kiendelezi cha hiari kwa hifadhi zilizowekwa tokeni zinazotumia ERC-20, ikitoa utendaji wa kimsingi wa kuweka amana, utoaji wa tokeni na kusoma salio.
+ERC-4626 ni kiwango cha kuboresha na kuunganisha vigezo vya kiufundi vya hifadhi zinazozalisha faida. Inatoa API sanifu kwa hifadhi zinazozalisha faida zilizowekwa tokeni ambazo zinawakilisha hisa za tokeni moja ya msingi ya ERC-20. ERC-4626 pia inaelezea kiendelezi cha hiari kwa hifadhi zilizowekwa tokeni zinazotumia ERC-20, ikitoa utendaji wa kimsingi wa kuweka amana, kutoa tokeni na kusoma salio.
 
 **Jukumu la ERC-4626 katika hifadhi zinazozalisha faida**
 
-Masoko ya ukopeshaji, vijumlishi, na tokeni zinazozalisha riba kiasili huwasaidia watumiaji kupata faida bora kwenye tokeni zao za kripto kwa kutekeleza mikakati tofauti. Mikakati hii inafanywa kwa tofauti ndogo, ambayo inaweza kuwa na makosa au kupoteza rasilimali za maendeleo.
+Masoko ya ukopeshaji, vijumuishi, na tokeni zenye riba asilia huwasaidia watumiaji kupata faida bora zaidi kwenye tokeni zao za kripto kwa kutekeleza mikakati tofauti. Mikakati hii inafanywa kwa tofauti ndogo, ambayo inaweza kusababisha makosa au kupoteza rasilimali za maendeleo.
 
-ERC-4626 katika hifadhi zinazozalisha faida itapunguza juhudi za ujumuishaji na kufungua ufikiaji wa faida katika programu mbalimbali kwa juhudi kidogo maalum kutoka kwa wasanidi programu kwa kuunda mifumo thabiti zaidi na imara ya utekelezaji.
+ERC-4626 katika hifadhi zinazozalisha faida itapunguza juhudi za ujumuishaji na kufungua ufikiaji wa faida katika programu mbalimbali kwa juhudi kidogo maalum kutoka kwa wasanidi programu kwa kuunda mifumo thabiti na imara zaidi ya utekelezaji.
 
 Tokeni ya ERC-4626 imeelezewa kikamilifu katika [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
 
 **Kiendelezi cha hifadhi isiyosawazishwa (ERC-7540)**
 
-ERC-4626 imeboreshwa kwa amana na ukombozi wa atomiki hadi kikomo. Ikiwa kikomo kinafikiwa, hakuna amana mpya au ukombozi unaoweza kuwasilishwa. Kizuizi hiki hakifanyi kazi vizuri kwa mfumo wowote wa mkataba mahiri wenye vitendo visivyosawazishwa au ucheleweshaji kama sharti la kuingiliana na Hifadhi (k.m., itifaki za mali za ulimwengu halisi, itifaki za ukopeshaji zisizo na dhamana ya kutosha, itifaki za ukopeshaji za mtambuko-mnyororo, tokani za uwekaji amana wenye ukwasi (lst), au moduli za usalama wa bima).
+ERC-4626 imeboreshwa kwa amana na ukombozi wa atomiki hadi kikomo fulani. Ikiwa kikomo kitafikiwa, hakuna amana au ukombozi mpya unaoweza kuwasilishwa. Kizuizi hiki hakifanyi kazi vizuri kwa mfumo wowote wa mkataba mahiri wenye vitendo visivyosawazishwa au ucheleweshaji kama sharti la kuingiliana na Hifadhi (k.m., itifaki za mali za ulimwengu halisi, itifaki za ukopeshaji zisizo na dhamana ya kutosha, itifaki za ukopeshaji za mtambuko-mnyororo, tokani za uwekaji amana wenye ukwasi (LST), au moduli za usalama wa bima).
 
 ERC-7540 inapanua matumizi ya Hifadhi za ERC-4626 kwa matukio ya matumizi yasiyosawazishwa. Kiolesura kilichopo cha Hifadhi (`deposit`/`withdraw`/`mint`/`redeem`) kinatumika kikamilifu kudai Maombi yasiyosawazishwa.
 
-Kiendelezi cha ERC-7540 kimeelezewa kikamilifu katika [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
+Jifunze zaidi kuhusu [Hifadhi Zilizowekwa Tokeni Zisizosawazishwa za ERC-7540](/developers/docs/standards/tokens/erc-7540/).
 
 **Kiendelezi cha hifadhi ya mali nyingi (ERC-7575)**
 
-Tukio moja la matumizi linalokosekana ambalo halitumiki na ERC-4626 ni Hifadhi ambazo zina mali nyingi au sehemu za kuingilia kama vile Tokeni za mtoa ukwasi (LP). Hizi kwa ujumla ni ngumu au hazitii kutokana na hitaji la ERC-4626 yenyewe kuwa ERC-20.
+Tukio moja la matumizi linalokosekana ambalo halitumiki na ERC-4626 ni Hifadhi ambazo zina mali nyingi au sehemu za kuingilia kama vile Tokeni za mtoa ukwasi (LP). Hizi kwa ujumla ni ngumu kudhibiti au hazitii matakwa kutokana na hitaji la ERC-4626 yenyewe kuwa ERC-20.
 
-ERC-7575 inaongeza usaidizi kwa Hifadhi zenye mali nyingi kwa kuweka nje utekelezaji wa tokeni ya ERC-20 kutoka kwa utekelezaji wa ERC-4626.
+ERC-7575 inaongeza usaidizi kwa Hifadhi zenye mali nyingi kwa kutenganisha utekelezaji wa tokeni ya ERC-20 kutoka kwa utekelezaji wa ERC-4626.
 
 Kiendelezi cha ERC-7575 kimeelezewa kikamilifu katika [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575).
-
 ## Mahitaji ya Awali {#prerequisites}
 
 Ili kuelewa vyema ukurasa huu, tunapendekeza usome kwanza kuhusu [viwango vya tokeni](/developers/docs/standards/tokens/) na [ERC-20](/developers/docs/standards/tokens/erc-20/).

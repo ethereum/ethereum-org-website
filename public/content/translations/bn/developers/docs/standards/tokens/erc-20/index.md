@@ -175,13 +175,12 @@ print("Addr Balance:", addr_balance)
 - [ওপেনজেপেলিন - ERC-20 বাস্তবায়ন](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Solidity ERC20 টোকেনের গাইড](https://www.alchemy.com/overviews/erc20-solidity)
 
-## অন্যান্য বিনিমেয় টোকেন স্ট্যান্ডার্ড {#fungible-token-standards}
-
+## অন্যান্য বিনিমেয় টোকেন স্ট্যান্ডার্ড
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - টোকেনাইজড ভল্ট](/developers/docs/standards/tokens/erc-4626)
-
+- [ERC-7540 - অ্যাসিঙ্ক্রোনাস টোকেনাইজড ভল্ট](/developers/docs/standards/tokens/erc-7540)
 ## টিউটোরিয়াল: ইথেরিয়ামে ERC-20 দিয়ে তৈরি করুন {#tutorials}
 
 - [ERC-20 কন্ট্রাক্ট ওয়াক-থ্রু](/developers/tutorials/erc20-annotated-code/) _– ওপেনজেপেলিন ERC-20 কন্ট্রাক্ট বাস্তবায়নের একটি লাইন-বাই-লাইন টীকাযুক্ত ওয়াকথ্রু।_

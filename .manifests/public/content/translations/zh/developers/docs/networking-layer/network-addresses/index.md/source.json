@@ -1,10 +1,10 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/docs/networking-layer/network-addresses/index.md",
-  "generatedAt": "2026-06-18T21:47:23.750Z",
-  "rootHash": "03731fe30349",
+  "generatedAt": "2026-07-22T23:08:46.029Z",
+  "rootHash": "3f2e1031c408",
   "tree": {
-    "contentHash": "1bd35aa5e6ff",
+    "contentHash": "9dbcd56f8fac",
     "anchorHash": "e0ea84496cfb",
     "children": {
       "frontmatter:title": {
@@ -115,7 +115,7 @@
         ]
       },
       "enode": {
-        "contentHash": "bc0523357c8d",
+        "contentHash": "4e76dadcb310",
         "anchorHash": "a2e1537da6d2",
         "labelHash": "137ce0ebd94d",
         "children": {
@@ -124,7 +124,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:4": {
-            "contentHash": "ddb0fbc03a61",
+            "contentHash": "54d7ebdd7e60",
             "anchorHash": "e3b0c44298fc"
           },
           "inline-code:0": {
@@ -256,5 +256,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "aaeb4f67fd616782cfcbaceb7a776b26c0578df4"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

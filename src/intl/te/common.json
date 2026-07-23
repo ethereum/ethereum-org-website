@@ -231,6 +231,8 @@
   "less": "తక్కువ",
   "light-mode": "లైట్",
   "light-mode-aria-label": "లైట్ మోడ్‌కి మారండి",
+  "link-external-assistive-text": "(కొత్త ట్యాబ్‌లో తెరవబడుతుంది)",
+  "link-mailto-assistive-text": "(ఈమెయిల్ క్లయింట్‌ను తెరుస్తుంది)",
   "loading": "లోడ్ అవుతోంది...",
   "loading-error-refresh": "లోపం, దయచేసి రిఫ్రెష్ చేయండి.",
   "meetups": "మీటప్‌లు",

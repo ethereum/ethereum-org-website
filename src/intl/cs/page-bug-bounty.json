@@ -28,7 +28,7 @@
   "page-upgrades-bug-bounty-hunting-execution-leaderboard-subtitle": "Najděte chyby exekuční vrstvy a dostaňte se do tohoto žebříčku",
   "page-upgrades-bug-bounty-hunting-li-1": "Problémy bez POC (Proof of Concept), problémy, které již nahlásil jiný uživatel, nebo problémy, které jsou již známé správcům specifikací a klientů, nemají nárok na odměnu.",
   "page-upgrades-bug-bounty-hunting-li-2": "Veřejné odhalení zranitelnosti nebo její nahlášení jiným stranám bez předchozí dohody ruší nárok na odměnu.",
-  "page-upgrades-bug-bounty-hunting-li-3": "Zaměstnanci a dodavatelé Nadace Ethereum, příjemci grantů Nadace Ethereum nebo týmy klientů v rámci programu Bug Bounty se mohou programu zúčastnit pouze za účelem získávání bodů a neobdrží peněžní odměny.",
+  "page-upgrades-bug-bounty-hunting-li-3": "Zaměstnanci, dodavatelé, poskytovatelé služeb nebo příjemci grantů Nadace Ethereum, případně členové klientských týmů zahrnutých do programu odměn, se mohou programu účastnit pouze za účelem získávání bodů a neobdrží finanční odměny během trvání tohoto vztahu a po dobu 90 dnů po jeho ukončení. Zranitelnosti objevené během kteréhokoli z těchto období nebo prostřednictvím neveřejných informací získaných díky takovému vztahu nemají nárok na finanční odměnu bez ohledu na to, kdy jsou nahlášeny.",
   "page-upgrades-bug-bounty-hunting-li-4": "Program odměn Etherea zohledňuje při určování odměn řadu proměnných. Rozhodnutí o způsobilosti, skóre a všech podmínkách souvisejících s odměnou jsou výhradně a s konečnou platností na uvážení panelu Bug Bounty Nadace Ethereum.",
   "page-upgrades-bug-bounty-leaderboard": "Zobrazit kompletní žebříčky",
   "page-upgrades-bug-bounty-leaderboard-list": "Žebříček Bug Bounty",

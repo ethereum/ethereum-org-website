@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/glamsterdam/index.md",
-  "generatedAt": "2026-06-08T10:22:00.317Z",
-  "rootHash": "c40a539f8ff7",
+  "generatedAt": "2026-07-23T00:17:56.165Z",
+  "rootHash": "76c611c1e5cf",
   "tree": {
-    "contentHash": "f79c12290cf3",
-    "anchorHash": "5322cfe97e43",
+    "contentHash": "a6165d30e671",
+    "anchorHash": "7a8e502c16a7",
     "children": {
       "frontmatter:title": {
         "contentHash": "e2c1912b24c8",
@@ -19,7 +19,11 @@
         "contentHash": "e3b0c44298fc",
         "anchorHash": "dbd3a49d0d90"
       },
-      "component:3": {
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "7fef9479c8bc"
+      },
+      "component:4": {
         "contentHash": "935d15f6f702",
         "anchorHash": "061a2212602c",
         "children": {
@@ -118,7 +122,7 @@
         "contentHash": "e73fdebac5bd",
         "anchorHash": "e3b0c44298fc"
       },
-      "component:12": {
+      "component:13": {
         "contentHash": "4b9f7d802648",
         "anchorHash": "ed6d0da8a1a5",
         "children": {
@@ -720,7 +724,7 @@
         ]
       },
       "faq": {
-        "contentHash": "9533a9d07ffa",
+        "contentHash": "113990932f70",
         "anchorHash": "c98e0219901a",
         "labelHash": "dbc468a14b60",
         "children": {
@@ -879,7 +883,7 @@
             ]
           },
           "will-my-smart-contracts-change": {
-            "contentHash": "333a81fe297c",
+            "contentHash": "cd21c822117b",
             "anchorHash": "4b9f7d802648",
             "labelHash": "8c77ff46233b",
             "children": {
@@ -888,7 +892,7 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "prose:0": {
-                "contentHash": "5bb645227b19",
+                "contentHash": "1c3344b699f3",
                 "anchorHash": "e3b0c44298fc"
               }
             },
@@ -933,7 +937,8 @@
       "frontmatter:title",
       "frontmatter:description",
       "frontmatter:lang",
-      "component:3",
+      "frontmatter:template",
+      "component:4",
       "link:0",
       "prose:4",
       "link:1",
@@ -942,7 +947,7 @@
       "prose:6",
       "link:3",
       "prose:7",
-      "component:12",
+      "component:13",
       "improvements-in-glamsterdam",
       "scale-l1",
       "network-sustainability",
@@ -952,5 +957,5 @@
       "faq"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

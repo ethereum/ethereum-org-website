@@ -77,7 +77,7 @@ Une fois que vous avez créé un compte :
 
 Pour ceux qui ont une mémoire plus visuelle, les étapes ci-dessus sont résumées ici :
 
-![How to upload your image to Pinata](./instructionsPinata.gif)
+![How to upload your image to Pinata](./instructionsPinata.mp4#712x376)
 
 Maintenant, nous allons vouloir téléverser un document supplémentaire sur Pinata. Mais avant de faire cela, nous devons le créer !
 
@@ -105,7 +105,7 @@ N'hésitez pas à modifier les données dans le JSON. Vous pouvez supprimer ou a
 
 Une fois que vous avez terminé de modifier le fichier JSON, enregistrez-le et téléversez-le sur Pinata, en suivant les mêmes étapes que pour le téléversement de l'image.
 
-![How to upload your nft-metadata.json to Pinata](./uploadPinata.gif)
+![How to upload your nft-metadata.json to Pinata](./uploadPinata.mp4#1280x676)
 
 ## Étape 5 : Créer une instance de votre contrat {#instance-contract}
 

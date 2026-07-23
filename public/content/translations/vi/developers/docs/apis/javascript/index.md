@@ -237,7 +237,7 @@ ethers.utils.formatEther(balance)
 - [Các hàm tiện ích của Web3js](https://docs.web3js.org/api/web3-utils)
 - [Các hàm tiện ích của Ethers](https://docs.ethers.org/v6/api/utils/)
 
-## Các thư viện có sẵn {#available-libraries}
+## Các thư viện có sẵn
 
 **Web3.js -** **_API JavaScript của Ethereum._**
 
@@ -250,7 +250,7 @@ ethers.utils.formatEther(balance)
 - [Tài liệu](https://docs.ethers.io)
 - [GitHub](https://github.com/ethers-io/ethers.js)
 
-**The Graph -** **_Một giao thức để lập chỉ mục dữ liệu Ethereum và IPFS và truy vấn nó bằng GraphQL._**
+**The Graph -** **_Một giao thức để lập chỉ mục dữ liệu Ethereum và IPFS và truy vấn dữ liệu đó bằng GraphQL._**
 
 - [The Graph](https://thegraph.com)
 - [Graph Explorer](https://thegraph.com/explorer)
@@ -258,28 +258,37 @@ ethers.utils.formatEther(balance)
 - [GitHub](https://github.com/graphprotocol)
 - [Discord](https://thegraph.com/discord)
 
-**Alchemy SDK -** **_Trình bao bọc xung quanh Ethers.js với các API được nâng cao._**
+**Alchemy SDK -** **_Trình bao bọc xung quanh Ethers.js với các API nâng cao._**
 
 - [Tài liệu](https://www.alchemy.com/docs)
 - [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
 
-**viem -** **_Giao diện TypeScript cho Ethereum._**
+**Viem -** **_Giao diện TypeScript cho Ethereum._**
 
 - [Tài liệu](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-**Codex -** **_API dữ liệu chuỗi khối được làm phong phú, theo thời gian thực trên hàng chục chuỗi._**
+**Wagmi -** **_Thư viện React hooks cho Ethereum, được xây dựng trên nền tảng Viem._**
+
+- [Tài liệu](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_Thư viện React để thêm kết nối ví vào các ứng dụng phi tập trung (dapp), được xây dựng trên Wagmi và Viem._**
+
+- [Tài liệu](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
+
+**Codex -** **_API dữ liệu chuỗi khối phong phú, theo thời gian thực trên hàng chục chuỗi._**
 
 - [Tài liệu](https://docs.codex.io)
 - [Trình khám phá](https://docs.codex.io/explore)
 - [GitHub](https://github.com/Codex-Data)
 - [Discord](https://discord.com/invite/mFpUhT3vAq)
 
-**Drift -** **_Siêu thư viện TypeScript với bộ nhớ đệm, hook và test mock được tích hợp sẵn._**
+**Drift -** **_Siêu thư viện TypeScript được tích hợp sẵn bộ nhớ đệm, hooks và test mocks._**
 
 - [Tài liệu](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
-
 ## Đọc thêm {#further-reading}
 
 _Bạn biết một tài nguyên cộng đồng nào đó đã giúp ích cho bạn? Hãy chỉnh sửa trang này và thêm nó vào!_

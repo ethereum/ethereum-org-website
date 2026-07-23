@@ -39,7 +39,7 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 للبدء، افتح <span dir="ltr">WebSocket</span> باستخدام عنوان <span dir="ltr">URL</span> لـ <span dir="ltr">WebSocket</span> الخاص بتطبيقك. يمكنك العثور على عنوان <span dir="ltr">URL</span> لـ <span dir="ltr">WebSocket</span> الخاص بتطبيقك عن طريق فتح صفحة التطبيق في [لوحة التحكم الخاصة بك](https://dashboard.alchemy.com/) والنقر على "عرض المفتاح" (<span dir="ltr">View Key</span>). لاحظ أن عنوان <span dir="ltr">URL</span> لتطبيقك لـ <span dir="ltr">WebSockets</span> يختلف عن عنوان <span dir="ltr">URL</span> الخاص به لطلبات <span dir="ltr">HTTP</span>، ولكن يمكن العثور على كليهما بالنقر على "عرض المفتاح".
 
-![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.gif)
+![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.mp4#602x280)
 
 يمكن استخدام أي من واجهات برمجة التطبيقات (<span dir="ltr">APIs</span>) المدرجة في [مرجع <span dir="ltr">API</span> لـ <span dir="ltr">Alchemy</span>](https://www.alchemy.com/docs/reference/api-overview) عبر <span dir="ltr">WebSocket</span>. للقيام بذلك، استخدم نفس الحمولة التي سيتم إرسالها كجسم لطلب <span dir="ltr">HTTP POST</span>، ولكن بدلاً من ذلك أرسل تلك الحمولة من خلال <span dir="ltr">WebSocket</span>.
 
