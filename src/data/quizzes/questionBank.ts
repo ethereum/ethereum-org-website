@@ -102,9 +102,9 @@ const questionBankConfig: QuestionBankConfig = {
   ],
   merge: [
     { totalAnswers: 4, correctAnswer: 2 },
-    { totalAnswers: 4, correctAnswer: 4 },
-    { totalAnswers: 4, correctAnswer: 1 },
-    { totalAnswers: 2, correctAnswer: 2 },
+    { totalAnswers: 4, correctAnswer: 3 },
+    { totalAnswers: 4, correctAnswer: 2 },
+    { totalAnswers: 4, correctAnswer: 3 },
     { totalAnswers: 4, correctAnswer: 2 },
   ],
   gas: [
