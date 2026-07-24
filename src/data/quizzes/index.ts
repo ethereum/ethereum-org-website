@@ -122,6 +122,17 @@ const quizzes = {
       "privacy-6",
     ],
   },
+  bridges: {
+    title: "bridges",
+    questions: [
+      "bridges-1",
+      "bridges-2",
+      "bridges-3",
+      "bridges-4",
+      "bridges-5",
+      "bridges-6",
+    ],
+  },
 } satisfies RawQuizzes
 
 const ethereumBasicsQuizzesRaw: QuizzesSection[] = [
@@ -169,6 +180,10 @@ const usingEthereumQuizzesRaw: QuizzesSection[] = [
   },
   {
     id: "defi",
+    level: "beginner",
+  },
+  {
+    id: "bridges",
     level: "beginner",
   },
   {
