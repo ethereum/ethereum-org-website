@@ -37,6 +37,14 @@ const colors = {
     "bg-accent-a",
     "bg-[#BEBF3B]",
   ],
+  // Faint fill for the active card, so a checked persona reads as selected.
+  bgTint: [
+    "bg-primary/10",
+    "bg-accent-b/10",
+    "bg-accent-c/10",
+    "bg-accent-a/10",
+    "bg-[#BEBF3B]/10",
+  ],
 }
 
 /**
@@ -78,8 +86,10 @@ const WalletPersonaCards = async ({
                 }
                 aria-current={isActive ? "page" : undefined}
                 className={cn(
-                  "group flex h-[164px] w-full cursor-pointer flex-col items-start rounded-base border p-3 no-underline shadow-lg transition-all duration-50 hover:bg-background-highlight focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-4 focus-visible:outline-primary-hover lg:h-full lg:p-6",
-                  isActive ? "border-primary" : "border-primary-low-contrast"
+                  "group flex h-[164px] w-full cursor-pointer flex-col items-start rounded-base border-2 p-3 no-underline shadow-lg transition-all duration-50 focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-4 focus-visible:outline-primary-hover lg:h-full lg:p-6",
+                  isActive
+                    ? cn(colors.border[colorIdx], colors.bgTint[colorIdx])
+                    : "border-primary-low-contrast hover:bg-background-highlight"
                 )}
               >
                 <div className="items-top flex w-full gap-2 px-1.5 text-base leading-normal font-normal">

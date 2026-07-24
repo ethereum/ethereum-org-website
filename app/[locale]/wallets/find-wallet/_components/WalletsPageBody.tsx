@@ -1,6 +1,8 @@
+import { ArrowLeft } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
 import ListingMethodology from "@/components/ListingMethodology"
+import { BaseLink } from "@/components/ui/Link"
 import { UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
@@ -58,6 +60,17 @@ const WalletsPageBody = async ({
   return (
     <>
       <Section>
+        {currentPersonaId && (
+          <div className="mb-4 flex px-page">
+            <BaseLink
+              href="/wallets/find-wallet/"
+              className="inline-flex items-center gap-1.5 text-sm font-bold no-underline hover:underline"
+            >
+              <ArrowLeft className="size-4 rtl:-scale-x-100" />
+              {t("page-find-wallet-see-all-wallets")}
+            </BaseLink>
+          </div>
+        )}
         <WalletPersonaCards
           locale={locale}
           personaCounts={personaCounts}

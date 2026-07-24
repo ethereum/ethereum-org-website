@@ -19,6 +19,7 @@ import {
   WALLET_PERSONAS,
 } from "@/lib/utils/walletData"
 
+import WalletPersonaBreadcrumbs from "../../_components/WalletPersonaBreadcrumbs"
 import WalletsPageBody from "../../_components/WalletsPageBody"
 
 import PersonaPageJsonLD from "./page-jsonld"
@@ -59,9 +60,14 @@ const Page = async (props: { params: Promise<PersonaPageParams> }) => {
       <PersonaPageJsonLD locale={locale} persona={persona} wallets={wallets} />
       <MainArticle className="relative flex flex-col">
         <PageHero
-          breadcrumbs={{ slug: "/wallets/find-wallet" }}
-          title={t(persona.titleKey)}
-          description={t(persona.descKey)}
+          breadcrumbs={
+            <WalletPersonaBreadcrumbs
+              locale={locale}
+              personaTitle={t(persona.titleKey)}
+            />
+          }
+          title={t(persona.heroTitleKey)}
+          description={t(persona.heroDescKey)}
           variant="no-divider"
         />
         <WalletsPageBody
@@ -96,8 +102,8 @@ export async function generateMetadata(props: {
   return await getMetadata({
     locale,
     slug: ["wallets", "find-wallet", "personas", personaId],
-    title: t(persona.titleKey),
-    description: t(persona.descKey),
+    title: t(persona.heroTitleKey),
+    description: t(persona.heroDescKey),
     image: "/images/wallets/wallet-hero.png",
   })
 }
