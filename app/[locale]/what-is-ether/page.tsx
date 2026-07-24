@@ -1,5 +1,10 @@
+import { pick } from "lodash"
 import { Landmark, SquareCode, User } from "lucide-react"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import type { Lang, ToCItem } from "@/lib/types"
 
@@ -9,8 +14,10 @@ import {
   HighlightStack,
   IconBox,
 } from "@/components/HighlightCard"
+import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
+import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import {
   Alert,
   AlertContent,
@@ -24,6 +31,7 @@ import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import GasTable from "./_components/GasTable"
 import PageJsonLD from "./page-jsonld"
@@ -42,6 +50,11 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   setRequestLocale(locale)
 
   const t = await getTranslations("page-what-is-ether")
+
+  const messages = pick(
+    await getMessages({ locale }),
+    getRequiredNamespacesForPage("/what-is-ether")
+  )
 
   const [
     { contributors, lastEditLocaleTimestamp },
@@ -623,6 +636,10 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             {t("page-what-is-ether-what-is-wrapping-eth-description-7")}
           </LinkWithArrow>
         </Section>
+
+        <I18nProvider locale={locale} messages={messages}>
+          <StandaloneQuizWidget quizKey="what-is-ether" />
+        </I18nProvider>
       </ContentLayout>
     </>
   )

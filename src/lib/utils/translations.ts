@@ -131,6 +131,7 @@ const QUIZZES_PREFIXES: string[] = [
   "/stablecoins/",
   "/wallets/",
   "/web3/",
+  "/what-is-ether/",
   "/what-is-ethereum/",
 ]
 
