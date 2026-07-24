@@ -1,24 +1,17 @@
 import { notFound } from "next/navigation"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { setRequestLocale } from "next-intl/server"
 
 import type { PageParams } from "@/lib/types"
 
 import ContentFeedback from "@/components/ContentFeedback"
 import MainArticle from "@/components/MainArticle"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
 
 import { getMetadata } from "@/lib/utils/metadata"
 import { getCatalogWallets, getWalletBySlug } from "@/lib/utils/walletData"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
+import FindWalletBreadcrumbs from "../_components/FindWalletBreadcrumbs"
 import WalletDetail from "../_components/WalletDetail"
 
 import WalletDetailPageJsonLD from "./page-jsonld"
@@ -34,8 +27,6 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
   const { locale, wallet: walletSlug } = await props.params
   setRequestLocale(locale)
 
-  const t = await getTranslations("page-wallets-find-wallet")
-
   const wallet = getWalletBySlug(walletSlug, locale)
   if (!wallet) notFound()
 
@@ -44,32 +35,12 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
       <WalletDetailPageJsonLD locale={locale} wallet={wallet} />
       {/* Breadcrumb sits outside <main>, matching the catalog page inset. */}
       <div className="px-page py-hero lg:py-hero-2x">
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/">ethereum.org</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
-              /
-            </BreadcrumbSeparator>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/wallets/find-wallet/">
-                {t("page-find-wallet-title")}
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
-              /
-            </BreadcrumbSeparator>
-            <BreadcrumbItem>
-              <BreadcrumbPage>{wallet.name}</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
+        <FindWalletBreadcrumbs locale={locale} leaf={wallet.name} />
       </div>
 
       <main className="px-page pb-page">
         <MainArticle className="max-w-5xl">
-          <WalletDetail locale={locale} wallet={wallet} variant="page" />
+          <WalletDetail locale={locale} wallet={wallet} />
         </MainArticle>
         <ContentFeedback />
       </main>

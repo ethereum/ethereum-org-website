@@ -14,17 +14,19 @@ import {
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
 /**
- * Breadcrumbs for a persona page: ethereum.org / Wallets / Find wallet /
- * <persona>. Built by hand rather than via the slug-based `Breadcrumbs` because
- * the `personas` URL segment isn't a navigable route (so it's dropped) and the
- * persona label lives in the page namespace, not `common`.
+ * Breadcrumbs for find-wallet leaf pages (persona pages, wallet detail):
+ * ethereum.org / Wallets / Find wallet / <leaf>. Built by hand rather than via
+ * the slug-based `Breadcrumbs` so it stays consistent across routes whose URL
+ * segments aren't all navigable (e.g. `personas`) and whose leaf label lives in
+ * the page namespace, not `common`.
  */
-const WalletPersonaBreadcrumbs = async ({
+const FindWalletBreadcrumbs = async ({
   locale,
-  personaTitle,
+  leaf,
 }: {
   locale: string
-  personaTitle: string
+  /** Label for the current (non-link) page: a persona title or a wallet name. */
+  leaf: string
 }) => {
   const t = await getTranslations({ locale, namespace: "common" })
   const dir = isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"
@@ -53,11 +55,11 @@ const WalletPersonaBreadcrumbs = async ({
         </BreadcrumbItem>
         {separator}
         <BreadcrumbItem>
-          <BreadcrumbPage>{personaTitle}</BreadcrumbPage>
+          <BreadcrumbPage>{leaf}</BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
   )
 }
 
-export default WalletPersonaBreadcrumbs
+export default FindWalletBreadcrumbs

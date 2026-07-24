@@ -19,7 +19,7 @@ import {
   WALLET_PERSONAS,
 } from "@/lib/utils/walletData"
 
-import WalletPersonaBreadcrumbs from "../../_components/WalletPersonaBreadcrumbs"
+import FindWalletBreadcrumbs from "../../_components/FindWalletBreadcrumbs"
 import WalletsPageBody from "../../_components/WalletsPageBody"
 
 import PersonaPageJsonLD from "./page-jsonld"
@@ -61,10 +61,7 @@ const Page = async (props: { params: Promise<PersonaPageParams> }) => {
       <MainArticle className="relative flex flex-col">
         <PageHero
           breadcrumbs={
-            <WalletPersonaBreadcrumbs
-              locale={locale}
-              personaTitle={t(persona.titleKey)}
-            />
+            <FindWalletBreadcrumbs locale={locale} leaf={t(persona.titleKey)} />
           }
           title={t(persona.heroTitleKey)}
           description={t(persona.heroDescKey)}
