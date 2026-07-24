@@ -1,7 +1,7 @@
+import type { Chain } from "viem"
 import { http } from "wagmi"
 import { hardhat, mainnet, sepolia } from "wagmi/chains"
 import { getDefaultConfig } from "@rainbow-me/rainbowkit"
-import type { Chain } from "viem"
 import {
   coinbaseWallet,
   metaMaskWallet,
