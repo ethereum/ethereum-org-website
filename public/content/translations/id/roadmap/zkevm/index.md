@@ -2,6 +2,7 @@
 title: zkEVM untuk verifikasi blok L1
 description: Pelajari bagaimana bukti tanpa pengetahuan dapat memverifikasi eksekusi blok Ethereum, memungkinkan laju pemrosesan yang lebih tinggi dan persyaratan validator yang lebih rendah.
 lang: id
+template: roadmap
 ---
 
 zkEVM adalah teknologi yang menggunakan [bukti tanpa pengetahuan](/zero-knowledge-proofs/) untuk memverifikasi eksekusi blok Ethereum. Alih-alih mengharuskan setiap [validator](/glossary/#validator) untuk mengeksekusi ulang semua transaksi dalam sebuah blok, satu aktor khusus (disebut "pembukti") mengeksekusi blok tersebut dan menghasilkan bukti kriptografis bahwa eksekusi tersebut benar. Setiap node kemudian dapat memverifikasi bukti ini—sebuah proses yang jauh lebih murah daripada mengeksekusi ulang semua transaksi.

@@ -2,6 +2,7 @@
 title: "غلامستردام"
 description: "تعرف على ترقية بروتوكول غلامستردام"
 lang: ar
+template: upgrade
 ---
 
 # غلامستردام {#glamsterdam}

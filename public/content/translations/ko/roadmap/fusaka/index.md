@@ -3,6 +3,7 @@ title: "푸사카 🦓"
 metaTitle: 풀루-오사카 (푸사카)
 description: 푸사카 프로토콜 업그레이드에 대해 알아보세요
 lang: ko
+template: upgrade
 authors: ["Nixo", "마리오 하벨"]
 ---
 

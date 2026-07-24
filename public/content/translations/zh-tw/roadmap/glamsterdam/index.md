@@ -2,6 +2,7 @@
 title: "格蘭斯特丹"
 description: "了解格蘭斯特丹 (Glamsterdam) 協定升級"
 lang: zh-tw
+template: upgrade
 ---
 
 # 格蘭斯特丹 {#glamsterdam}

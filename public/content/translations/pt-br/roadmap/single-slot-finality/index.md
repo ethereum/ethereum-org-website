@@ -2,6 +2,7 @@
 title: Finalidade de slot único
 description: Explicação sobre a finalidade de slot único
 lang: pt-br
+template: roadmap
 ---
 
 Leva cerca de 15 minutos para um bloco do [Ethereum](/) ser finalizado. No entanto, podemos fazer com que o mecanismo de consenso do Ethereum valide blocos de forma mais eficiente e diminua drasticamente o tempo até a finalidade. Em vez de esperar quinze minutos, os blocos poderiam ser propostos e finalizados no mesmo slot. Esse conceito é conhecido como **finalidade de slot único (SSF)**.

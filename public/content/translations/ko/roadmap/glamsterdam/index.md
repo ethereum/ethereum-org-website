@@ -2,6 +2,7 @@
 title: "글램스테르담"
 description: "글램스테르담 프로토콜 업그레이드에 대해 알아보세요"
 lang: ko
+template: upgrade
 ---
 
 # 글램스테르담 {#glamsterdam}
