@@ -102,11 +102,13 @@ async function getDynamicIntlPagePaths(): Promise<string[]> {
     { getStaticAppsData, getStaticDeveloperToolsData },
     { getToolKey, normalizeDeveloperToolsData, withCategories },
     { slugify },
+    { getCatalogWallets, WALLET_PERSONA_IDS },
   ] = await Promise.all([
     import("@/data/apps/categories"),
     import("@/lib/data"),
     import("@/lib/utils/developerToolsData"),
     import("../utils/url"),
+    import("@/lib/utils/walletData"),
   ])
 
   // discoverStaticPages() excludes dynamic segments, so add known
@@ -139,11 +141,23 @@ async function getDynamicIntlPagePaths(): Promise<string[]> {
         .map((app) => `/apps/${slugify(app.name)}/`)
     : []
 
+  // Find-wallet persona pages
+  const walletPersonaPaths = WALLET_PERSONA_IDS.map(
+    (persona) => `/wallets/find-wallet/personas/${persona}/`
+  )
+
+  // Individual wallet detail pages, matching the [wallet] route's slugs.
+  const walletDetailPaths = getCatalogWallets(DEFAULT_LOCALE).map(
+    (wallet) => `/wallets/find-wallet/${wallet.slug}/`
+  )
+
   return [
     ...devToolPaths,
     ...devToolDetailPaths,
     ...appCategoryPaths,
     ...appPaths,
+    ...walletPersonaPaths,
+    ...walletDetailPaths,
   ]
 }
 

@@ -41,6 +41,14 @@ export default async function WalletDetailPageJsonLD({
   )
   const os = platforms(wallet)
 
+  const sameAs = [
+    wallet.twitter,
+    wallet.discord,
+    wallet.reddit,
+    wallet.telegram,
+    wallet.repo_url,
+  ].filter(Boolean)
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -49,8 +57,12 @@ export default async function WalletDetailPageJsonLD({
         "@type": "WebPage",
         "@id": url,
         name: wallet.name,
+        ...(wallet.descriptionStripped && {
+          description: wallet.descriptionStripped,
+        }),
         url,
         inLanguage: locale,
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
@@ -76,16 +88,21 @@ export default async function WalletDetailPageJsonLD({
           ],
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#wallet` },
       },
       {
         "@type": "SoftwareApplication",
         "@id": `${url}#wallet`,
         name: wallet.name,
+        ...(wallet.descriptionStripped && {
+          description: wallet.descriptionStripped,
+        }),
         url: wallet.url,
         applicationCategory: "Cryptocurrency Wallet",
         ...(os.length > 0 && { operatingSystem: os.join(", ") }),
-        ...(wallet.twitter && { sameAs: [wallet.twitter] }),
+        ...(wallet.repo_url && { codeRepository: wallet.repo_url }),
+        ...(sameAs.length > 0 && { sameAs }),
         offers: {
           "@type": "Offer",
           price: "0",

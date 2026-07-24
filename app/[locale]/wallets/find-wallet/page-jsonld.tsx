@@ -50,7 +50,10 @@ export default async function FindWalletPageJsonLD({
         "@id": url,
         name: t("page-find-wallet-meta-title"),
         description: t("page-find-wallet-meta-description"),
-        image: "https://ethereum.org/images/wallets/wallet-hero.png",
+        image: normalizeUrlForJsonLd(
+          undefined,
+          "/images/wallets/wallet-hero.png"
+        ),
         url,
         inLanguage: locale,
         contributor: contributorList,

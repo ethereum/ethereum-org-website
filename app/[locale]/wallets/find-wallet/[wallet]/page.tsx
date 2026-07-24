@@ -70,6 +70,7 @@ export async function generateMetadata(props: {
     slug: ["wallets", "find-wallet", walletSlug],
     title: wallet.name,
     description: wallet.descriptionStripped?.slice(0, 160) ?? wallet.name,
+    image: "/images/wallets/wallet-hero.png",
   })
 }
 

@@ -8,7 +8,13 @@ import type { CatalogWallet } from "@/lib/utils/walletData"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
-type Persona = { id: string; titleKey: string; descKey: string }
+type Persona = {
+  id: string
+  titleKey: string
+  descKey: string
+  heroTitleKey: string
+  heroDescKey: string
+}
 
 export default async function PersonaPageJsonLD({
   locale,
@@ -28,7 +34,8 @@ export default async function PersonaPageJsonLD({
     locale,
     `/wallets/find-wallet/personas/${persona.id}/`
   )
-  const title = t(persona.titleKey)
+  // Hero title matches the page <title>/H1; short titleKey stays the crumb leaf.
+  const name = t(persona.heroTitleKey)
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -37,10 +44,15 @@ export default async function PersonaPageJsonLD({
       {
         "@type": "CollectionPage",
         "@id": url,
-        name: title,
-        description: t(persona.descKey),
+        name,
+        description: t(persona.heroDescKey),
+        image: normalizeUrlForJsonLd(
+          undefined,
+          "/images/wallets/wallet-hero.png"
+        ),
         url,
         inLanguage: locale,
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
@@ -60,18 +72,20 @@ export default async function PersonaPageJsonLD({
             {
               "@type": "ListItem",
               position: 3,
-              name: title,
+              name: t(persona.titleKey),
               item: url,
             },
           ],
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#wallet-list` },
       },
       {
         "@type": "ItemList",
         "@id": `${url}#wallet-list`,
-        name: title,
+        name,
+        description: t(persona.descKey),
         numberOfItems: wallets.length,
         itemListElement: wallets.map((wallet, index) => ({
           "@type": "ListItem",
@@ -79,6 +93,9 @@ export default async function PersonaPageJsonLD({
           item: {
             "@type": "SoftwareApplication",
             name: wallet.name,
+            ...(wallet.descriptionStripped && {
+              description: wallet.descriptionStripped,
+            }),
             url: normalizeUrlForJsonLd(
               locale,
               `/wallets/find-wallet/${wallet.slug}/`
