@@ -1,6 +1,5 @@
 {
   "$schema": "https://www.chromatic.com/config-file.schema.json",
-  "zip": true,
   "untraced": [
     "public/content/**",
     "src/intl/**",
