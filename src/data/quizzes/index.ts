@@ -122,6 +122,17 @@ const quizzes = {
       "privacy-6",
     ],
   },
+  payments: {
+    title: "payments-page",
+    questions: [
+      "payments-1",
+      "payments-2",
+      "payments-3",
+      "payments-4",
+      "payments-5",
+      "payments-6",
+    ],
+  },
 } satisfies RawQuizzes
 
 const ethereumBasicsQuizzesRaw: QuizzesSection[] = [
@@ -185,6 +196,10 @@ const usingEthereumQuizzesRaw: QuizzesSection[] = [
   },
   {
     id: "merge",
+    level: "intermediate",
+  },
+  {
+    id: "payments",
     level: "intermediate",
   },
   {
