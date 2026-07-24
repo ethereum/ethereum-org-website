@@ -122,6 +122,10 @@ const quizzes = {
       "privacy-6",
     ],
   },
+  "zero-knowledge-proofs": {
+    title: "zero-knowledge-proofs",
+    questions: ["zkp-1", "zkp-2", "zkp-3", "zkp-4", "zkp-5", "zkp-6", "zkp-7"],
+  },
 } satisfies RawQuizzes
 
 const ethereumBasicsQuizzesRaw: QuizzesSection[] = [
@@ -185,6 +189,10 @@ const usingEthereumQuizzesRaw: QuizzesSection[] = [
   },
   {
     id: "merge",
+    level: "intermediate",
+  },
+  {
+    id: "zero-knowledge-proofs",
     level: "intermediate",
   },
   {
