@@ -108,6 +108,111 @@ function parseFrontmatter(
   }
 }
 
+function getFrontmatterFieldRange(
+  yaml: string,
+  key: string
+): { start: number; end: number } | null {
+  const lines = yaml.split("\n")
+  const keyPattern = new RegExp(`^${escapeRegex(key)}:\\s*`)
+  const startLine = lines.findIndex((line) => keyPattern.test(line))
+  if (startLine === -1) return null
+
+  let endLine = startLine + 1
+  while (endLine < lines.length && /^\s/.test(lines[endLine])) {
+    endLine++
+  }
+
+  const start =
+    lines.slice(0, startLine).join("\n").length + (startLine ? 1 : 0)
+  const field = lines.slice(startLine, endLine).join("\n")
+  return { start, end: start + field.length }
+}
+
+function getFrontmatterKeys(yaml: string): string[] {
+  return yaml
+    .split("\n")
+    .flatMap((line) => line.match(/^([A-Za-z0-9_-]+):(?:\s|$)/)?.[1] ?? [])
+}
+
+function removeFrontmatterField(text: string, key: string): string {
+  const fm = parseFrontmatter(text)
+  if (!fm) return text
+
+  const range = getFrontmatterFieldRange(fm.yaml, key)
+  if (!range) return text
+
+  let start = range.start
+  let end = range.end
+  if (end < fm.yaml.length && fm.yaml[end] === "\n") {
+    end++
+  } else if (start > 0 && fm.yaml[start - 1] === "\n") {
+    start--
+  }
+
+  const newYaml = fm.yaml.slice(0, start) + fm.yaml.slice(end)
+  return `---\n${newYaml}\n---${fm.body}`
+}
+
+function insertFrontmatterField(
+  text: string,
+  englishB: string,
+  key: string,
+  field: string
+): string {
+  const fm = parseFrontmatter(text)
+  const englishFm = parseFrontmatter(englishB)
+  if (!fm || !englishFm || getFrontmatterFieldRange(fm.yaml, key)) return text
+
+  const englishKeys = getFrontmatterKeys(englishFm.yaml)
+  const keyIndex = englishKeys.indexOf(key)
+  if (keyIndex === -1) return text
+
+  let insertAt = fm.yaml.length
+  let prefix = fm.yaml.length ? "\n" : ""
+  let suffix = ""
+
+  for (let i = keyIndex - 1; i >= 0; i--) {
+    const previous = getFrontmatterFieldRange(fm.yaml, englishKeys[i])
+    if (!previous) continue
+    insertAt = previous.end
+    prefix = "\n"
+    suffix = ""
+    break
+  }
+
+  if (insertAt === fm.yaml.length) {
+    for (let i = keyIndex + 1; i < englishKeys.length; i++) {
+      const next = getFrontmatterFieldRange(fm.yaml, englishKeys[i])
+      if (!next) continue
+      insertAt = next.start
+      prefix = ""
+      suffix = "\n"
+      break
+    }
+  }
+
+  const newYaml =
+    fm.yaml.slice(0, insertAt) +
+    prefix +
+    field +
+    suffix +
+    fm.yaml.slice(insertAt)
+  return `---\n${newYaml}\n---${fm.body}`
+}
+
+function getFrontmatterField(yaml: string, key: string): string | null {
+  const range = getFrontmatterFieldRange(yaml, key)
+  return range ? yaml.slice(range.start, range.end) : null
+}
+
+function getFrontmatterChangeKey(path: string, key?: string): string | null {
+  if (key) return key
+  const pathPart = path
+    .split("/")
+    .find((part) => part.startsWith("frontmatter:"))
+  return pathPart?.slice("frontmatter:".length) || null
+}
+
 // ---------------------------------------------------------------------------
 // JSON Pipeline
 // ---------------------------------------------------------------------------
@@ -289,6 +394,13 @@ function pipelineMarkdown(
   // 3b. Remove deleted components (e.g., <Divider />)
   for (const removed of dr.removed) {
     if (renamedOldIds.has(removed.id)) continue
+    if (removed.id.startsWith("frontmatter:")) {
+      result = removeFrontmatterField(
+        result,
+        removed.id.slice("frontmatter:".length)
+      )
+      continue
+    }
     if (removed.id.startsWith("component:")) {
       result = result.replace(/\n*<Divider\s*\/>\s*\n*/g, "\n\n")
     }
@@ -331,7 +443,10 @@ function pipelineMarkdown(
           `^(${escapeRegex(change.key)}:\\s*).*$`,
           "m"
         )
-        const newYaml = fm.yaml.replace(keyPattern, `$1${change.newValue}`)
+        const newYaml = fm.yaml.replace(
+          keyPattern,
+          (_, prefix: string) => prefix + change.newValue
+        )
         result = `---\n${newYaml}\n---${fm.body}`
       }
       continue
@@ -390,6 +505,21 @@ function pipelineMarkdown(
   // 3d. Apply structural additions
   for (const change of cs.changes) {
     if (change.action !== "add") continue
+
+    const frontmatterKey =
+      change.elementType === "frontmatter-field"
+        ? getFrontmatterChangeKey(change.path, change.key)
+        : null
+    if (frontmatterKey && change.contentType !== "translatable") {
+      const englishFm = parseFrontmatter(englishB)
+      const field = englishFm
+        ? getFrontmatterField(englishFm.yaml, frontmatterKey)
+        : null
+      if (field) {
+        result = insertFrontmatterField(result, englishB, frontmatterKey, field)
+      }
+      continue
+    }
 
     const attrName = change.key || change.path.match(/attr:(\w+)$/)?.[1]
 
@@ -536,6 +666,30 @@ function pipelineMarkdown(
   }
 
   // --- Phase 4 & 5: LLM Translation + Assembly ---
+
+  for (const change of cs.changes) {
+    const frontmatterKey =
+      change.elementType === "frontmatter-field"
+        ? getFrontmatterChangeKey(change.path, change.key)
+        : null
+    if (
+      change.action !== "add" ||
+      !frontmatterKey ||
+      change.contentType !== "translatable" ||
+      change.newValue === undefined
+    ) {
+      continue
+    }
+
+    const sectionId = `frontmatter:${frontmatterKey}`
+    const translated = llm ? llm(sectionId, change.newValue) : change.newValue
+    result = insertFrontmatterField(
+      result,
+      englishB,
+      frontmatterKey,
+      `${frontmatterKey}: ${translated}`
+    )
+  }
 
   for (const sectionId of llmSectionIds) {
     const enBSec = findSection(englishB, sectionId)
