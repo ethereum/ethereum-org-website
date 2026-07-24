@@ -9,7 +9,7 @@ lang: ur
 published: 2022-05-15
 ---
 
-[یلو پیپر](https://ethereum.github.io/yellowpaper/paper.pdf) ایتھیریم کے لیے باضابطہ تفصیلات ہے۔ سوائے ان جگہوں کے جہاں [<span dir="ltr">EIP</span> عمل](/eips/) کے ذریعے ترمیم کی گئی ہو، اس میں ہر چیز کے کام کرنے کے طریقے کی قطعی وضاحت موجود ہے۔ یہ ایک ریاضیاتی مقالے کے طور پر لکھا گیا ہے، جس میں ایسی اصطلاحات شامل ہیں جن سے پروگرامرز شاید واقف نہ ہوں۔ اس مقالے میں آپ اسے پڑھنا سیکھیں گے، اور اس کی توسیع کے طور پر دیگر متعلقہ ریاضیاتی مقالے بھی۔
+[یلو پیپر](https://ethereum.github.io/yellowpaper/paper.pdf) ایتھیریم کے لیے باضابطہ تفصیلات (specification) ہے۔ سوائے ان جگہوں کے جہاں [<span dir="ltr">EIP</span> عمل](/eips/) کے ذریعے ترمیم کی گئی ہو، اس میں ہر چیز کے کام کرنے کے طریقے کی بالکل درست وضاحت موجود ہے۔ یہ ایک ریاضیاتی مقالے کے طور پر لکھا گیا ہے، جس میں ایسی اصطلاحات شامل ہیں جن سے پروگرامرز شاید واقف نہ ہوں۔ اس مقالے میں آپ اسے پڑھنا سیکھیں گے، اور اس کی مدد سے دیگر متعلقہ ریاضیاتی مقالے بھی۔
 
 ## کون سا یلو پیپر؟ {#which-yellow-paper}
 
@@ -17,24 +17,25 @@ published: 2022-05-15
 
 ### <span dir="ltr">EVM</span> کیوں؟ {#why-the-evm}
 
-اصل یلو پیپر ایتھیریم کی ترقی کے بالکل آغاز میں لکھا گیا تھا۔ یہ اصل ثبوتِ کار (PoW) پر مبنی اتفاق رائے کا طریقہ کار بیان کرتا ہے جو اصل میں نیٹ ورک کو محفوظ بنانے کے لیے استعمال کیا گیا تھا۔ تاہم، ایتھیریم نے ثبوتِ کار (PoW) کو بند کر دیا اور <span dir="ltr">September 2022</span> میں حصہ داری کا ثبوت (PoS) پر مبنی اتفاق رائے کا استعمال شروع کر دیا۔ یہ ٹیوٹوریل یلو پیپر کے ان حصوں پر توجہ مرکوز کرے گا جو ایتھیریم ورچوئل مشین کی وضاحت کرتے ہیں۔ <span dir="ltr">EVM</span> حصہ داری کا ثبوت (PoS) کی طرف منتقلی سے غیر تبدیل شدہ رہا (سوائے DIFFICULTY آپ کوڈ کی واپسی کی قدر کے)۔
+اصل یلو پیپر ایتھیریم کی ڈیولپمنٹ کے بالکل آغاز میں لکھا گیا تھا۔ یہ اصل ثبوتِ کار (PoW) پر مبنی اتفاق رائے کا طریقہ کار بیان کرتا ہے جو اصل میں نیٹ ورک کو محفوظ بنانے کے لیے استعمال کیا گیا تھا۔ تاہم، ایتھیریم نے ثبوتِ کار (PoW) کو بند کر دیا اور ستمبر <span dir="ltr">2022</span> میں حصہ داری کا ثبوت (PoS) پر مبنی اتفاق رائے کا استعمال شروع کر دیا۔ یہ ٹیوٹوریل یلو پیپر کے ان حصوں پر توجہ مرکوز کرے گا جو ایتھیریم ورچوئل مشین کی وضاحت کرتے ہیں۔ <span dir="ltr">EVM</span> حصہ داری کا ثبوت (PoS) کی طرف منتقلی سے غیر تبدیل شدہ رہا (سوائے DIFFICULTY آپ کوڈ کی واپسی کی قدر کے)۔
 
-## 9 Execution model {#9-execution-model}
+## 9 عمل درآمد کا ماڈل {#9-execution-model}
 
-This section (p. 14-16) includes most of the definition of the EVM.
+اس سیکشن (صفحہ <span dir="ltr">14-16</span>) میں <span dir="ltr">EVM</span> کی زیادہ تر تعریف شامل ہے۔
 
-The term _system state_ includes everything you need to know about the system to run it. In a typical computer, this means the memory, content of registers, etc.
+اصطلاح _سسٹم کی حالت_ میں وہ سب کچھ شامل ہے جو آپ کو سسٹم کو چلانے کے لیے اس کے بارے میں جاننے کی ضرورت ہے۔ ایک عام کمپیوٹر میں، اس کا مطلب میموری، رجسٹرز کا مواد وغیرہ ہے۔
 
-A [Turing machine](https://en.wikipedia.org/wiki/Turing_machine) is a computational model. Essentially, it is a simplified version of a computer, which is proved to have the same ability to run computations that a normal computer can (everything that a computer can calculate a Turing machine can calculate and vice versa). This model makes it easier to prove various theorems about what is and what isn't computable.
+ایک [ٹیورنگ مشین (Turing machine)](https://en.wikipedia.org/wiki/Turing_machine) ایک کمپیوٹیشنل ماڈل ہے۔ بنیادی طور پر، یہ کمپیوٹر کا ایک سادہ ورژن ہے، جس کے بارے میں یہ ثابت ہو چکا ہے کہ اس میں حساب کتاب چلانے کی وہی صلاحیت ہے جو ایک عام کمپیوٹر میں ہوتی ہے (ہر وہ چیز جس کا حساب ایک کمپیوٹر لگا سکتا ہے، ایک ٹیورنگ مشین بھی اس کا حساب لگا سکتی ہے اور اس کے برعکس)۔ یہ ماڈل اس بارے میں مختلف نظریات کو ثابت کرنا آسان بناتا ہے کہ کیا قابلِ حساب ہے اور کیا نہیں۔
 
-The term [Turing-complete](https://en.wikipedia.org/wiki/Turing_completeness) means a computer that can run the same calculations as a Turing machine. Turing machines can get into infinite loops, and the EVM cannot because it would run out of gas, so it's only quasi-Turing-complete.
-## <span dir="ltr">9.1</span> بنیادی باتیں {#91-basics}
+اصطلاح [ٹیورنگ-مکمل (Turing-complete)](https://en.wikipedia.org/wiki/Turing_completeness) کا مطلب ایک ایسا کمپیوٹر ہے جو ٹیورنگ مشین کی طرح ہی حساب کتاب چلا سکتا ہے۔ ٹیورنگ مشینیں لامحدود لوپس (infinite loops) میں پھنس سکتی ہیں، اور <span dir="ltr">EVM</span> ایسا نہیں کر سکتی کیونکہ اس کی گیس ختم ہو جائے گی، اس لیے یہ صرف نیم-ٹیورنگ-مکمل (quasi-Turing-complete) ہے۔
 
-یہ سیکشن <span dir="ltr">EVM</span> کی بنیادی باتیں فراہم کرتا ہے اور یہ بتاتا ہے کہ اس کا دیگر کمپیوٹیشنل ماڈلز سے کیسے موازنہ کیا جاتا ہے۔
+## 9.1 بنیادی باتیں {#91-basics}
 
-ایک [اسٹیک مشین](https://en.wikipedia.org/wiki/Stack_machine) ایک ایسا کمپیوٹر ہے جو درمیانی ڈیٹا کو رجسٹرز میں نہیں، بلکہ ایک [**اسٹیک**](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>) میں محفوظ کرتا ہے۔ یہ ورچوئل مشینوں کے لیے ترجیحی فن تعمیر ہے کیونکہ اسے نافذ کرنا آسان ہے جس کا مطلب ہے کہ بگز اور سیکیورٹی کے خطرات کا امکان بہت کم ہوتا ہے۔ اسٹیک میں میموری کو <span dir="ltr">256-bit</span> الفاظ میں تقسیم کیا گیا ہے۔ اسے اس لیے منتخب کیا گیا تھا کیونکہ یہ ایتھیریم کے بنیادی کرپٹوگرافک آپریشنز جیسے کیچاک-۲۵۶ ہیشنگ اور بیضوی منحنی کے حساب کتاب کے لیے آسان ہے۔ اسٹیک کا زیادہ سے زیادہ سائز <span dir="ltr">1024</span> آئٹمز (<span dir="ltr">1024 x 256 bits</span>) ہے۔ جب آپ کوڈز پر عمل درآمد کیا جاتا ہے تو وہ عام طور پر اپنے پیرامیٹرز اسٹیک سے حاصل کر رہے ہوتے ہیں۔ اسٹیک میں عناصر کو دوبارہ ترتیب دینے کے لیے خاص طور پر آپ کوڈز موجود ہیں جیسے `POP` (اسٹیک کے اوپری حصے سے آئٹم کو ہٹاتا ہے)، `DUP_N` (اسٹیک میں N ویں آئٹم کی نقل بناتا ہے)، وغیرہ۔
+یہ سیکشن <span dir="ltr">EVM</span> کی بنیادی باتیں بتاتا ہے اور یہ کہ اس کا دیگر کمپیوٹیشنل ماڈلز سے کیسے موازنہ کیا جاتا ہے۔
 
-<span dir="ltr">EVM</span> میں ایک غیر مستقل جگہ بھی ہوتی ہے جسے **میموری** کہا جاتا ہے جو عمل درآمد کے دوران ڈیٹا کو محفوظ کرنے کے لیے استعمال ہوتی ہے۔ یہ میموری <span dir="ltr">32-byte</span> الفاظ میں ترتیب دی گئی ہے۔ تمام میموری کے مقامات کو صفر پر شروع کیا جاتا ہے۔ اگر آپ میموری میں ایک لفظ شامل کرنے کے لیے اس [Yul](https://docs.soliditylang.org/en/latest/yul.html) کوڈ پر عمل درآمد کرتے ہیں، تو یہ لفظ میں خالی جگہ کو صفر سے بھر کر میموری کے <span dir="ltr">32 bytes</span> کو پُر کر دے گا، یعنی یہ ایک لفظ بناتا ہے - جس میں مقامات <span dir="ltr">0-29</span> پر صفر، <span dir="ltr">30</span> پر 0x60، اور <span dir="ltr">31</span> پر 0xA7 ہوتا ہے۔
+ایک [اسٹیک مشین](https://en.wikipedia.org/wiki/Stack_machine) ایک ایسا کمپیوٹر ہے جو درمیانی ڈیٹا کو رجسٹرز میں نہیں، بلکہ ایک [**اسٹیک**](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>). میں اسٹور کرتا ہے۔ یہ ورچوئل مشینوں کے لیے ترجیحی فن تعمیر (architecture) ہے کیونکہ اسے نافذ کرنا آسان ہے جس کا مطلب ہے کہ بگز اور سیکیورٹی کے خطرات کا امکان بہت کم ہوتا ہے۔ اسٹیک میں میموری کو <span dir="ltr">256-bit</span> الفاظ (words) میں تقسیم کیا گیا ہے۔ اسے اس لیے منتخب کیا گیا تھا کیونکہ یہ ایتھیریم کے بنیادی کرپٹوگرافک آپریشنز جیسے کیچاک-۲۵۶ ہیشنگ اور بیضوی منحنی کے حساب کتاب کے لیے آسان ہے۔ اسٹیک کا زیادہ سے زیادہ سائز <span dir="ltr">1024</span> آئٹمز (<span dir="ltr">1024 x 256 bits</span>) ہے۔ جب آپ کوڈز پر عمل درآمد ہوتا ہے تو وہ عام طور پر اپنے پیرامیٹرز اسٹیک سے حاصل کر رہے ہوتے ہیں۔ اسٹیک میں عناصر کو دوبارہ ترتیب دینے کے لیے خاص طور پر آپ کوڈز موجود ہیں جیسے `POP` (اسٹیک کے اوپری حصے سے آئٹم کو ہٹاتا ہے)، `DUP_N` (اسٹیک میں Nویں آئٹم کی نقل بناتا ہے)، وغیرہ۔
+
+<span dir="ltr">EVM</span> میں ایک غیر مستقل (volatile) جگہ بھی ہوتی ہے جسے **میموری** کہا جاتا ہے جو عمل درآمد کے دوران ڈیٹا کو اسٹور کرنے کے لیے استعمال ہوتی ہے۔ یہ میموری <span dir="ltr">32-byte</span> الفاظ میں ترتیب دی گئی ہے۔ تمام میموری لوکیشنز کو صفر پر شروع (initialize) کیا جاتا ہے۔ اگر آپ میموری میں ایک لفظ شامل کرنے کے لیے اس [Yul](https://docs.soliditylang.org/en/latest/yul.html) کوڈ پر عمل درآمد کرتے ہیں، تو یہ لفظ میں خالی جگہ کو صفر سے بھر کر میموری کے <span dir="ltr">32</span> بائٹس کو پُر کر دے گا، یعنی یہ ایک لفظ بناتا ہے - جس میں لوکیشنز <span dir="ltr">0-29</span> میں صفر، <span dir="ltr">30</span> پر <span dir="ltr">0x60</span>، اور <span dir="ltr">31</span> پر <span dir="ltr">0xA7</span> ہوتا ہے۔
 
 ```yul
 mstore(0, 0x60A7)
@@ -42,30 +43,31 @@ mstore(0, 0x60A7)
 
 `mstore` ان تین آپ کوڈز میں سے ایک ہے جو <span dir="ltr">EVM</span> میموری کے ساتھ تعامل کے لیے فراہم کرتا ہے - یہ میموری میں ایک لفظ لوڈ کرتا ہے۔ دیگر دو `mstore8` ہیں جو میموری میں ایک بائٹ لوڈ کرتا ہے، اور `mload` جو میموری سے اسٹیک میں ایک لفظ منتقل کرتا ہے۔
 
-<span dir="ltr">EVM</span> میں ایک الگ غیر متزلزل **اسٹوریج** ماڈل بھی ہے جسے سسٹم کی حالت کے حصے کے طور پر برقرار رکھا جاتا ہے - یہ میموری الفاظ کی صفوں (اسٹیک میں ورڈ-ایڈریس ایبل بائٹ صفوں کے برعکس) میں ترتیب دی گئی ہے۔ یہ اسٹوریج وہ جگہ ہے جہاں کنٹریکٹس مستقل ڈیٹا رکھتے ہیں - ایک کنٹریکٹ صرف اپنے اسٹوریج کے ساتھ تعامل کر سکتا ہے۔ اسٹوریج کو کلید-قدر کی میپنگز میں ترتیب دیا گیا ہے۔
+<span dir="ltr">EVM</span> میں ایک الگ غیر متزلزل (non-volatile) **اسٹوریج** ماڈل بھی ہے جسے سسٹم کی حالت کے حصے کے طور پر برقرار رکھا جاتا ہے - یہ میموری ورڈ اریز (word arrays) میں ترتیب دی گئی ہے (اسٹیک میں ورڈ-ایڈریس ایبل بائٹ اریز کے برعکس)۔ یہ اسٹوریج وہ جگہ ہے جہاں کنٹریکٹس مستقل ڈیٹا رکھتے ہیں - ایک کنٹریکٹ صرف اپنے اسٹوریج کے ساتھ تعامل کر سکتا ہے۔ اسٹوریج کو کلید-قدر (key-value) میپنگز میں ترتیب دیا گیا ہے۔
 
-اگرچہ یلو پیپر کے اس حصے میں اس کا ذکر نہیں کیا گیا ہے، لیکن یہ جاننا بھی مفید ہے کہ میموری کی ایک چوتھی قسم بھی ہے۔ **کال ڈیٹا** بائٹ-ایڈریس ایبل صرف پڑھنے کے قابل میموری ہے جو ٹرانزیکشن کے `data` پیرامیٹر کے ساتھ پاس کی گئی قدر کو محفوظ کرنے کے لیے استعمال ہوتی ہے۔ <span dir="ltr">EVM</span> کے پاس `calldata` کو منظم کرنے کے لیے مخصوص آپ کوڈز ہیں۔ `calldatasize` ڈیٹا کا سائز واپس کرتا ہے۔ `calldataload` ڈیٹا کو اسٹیک میں لوڈ کرتا ہے۔ `calldatacopy` ڈیٹا کو میموری میں کاپی کرتا ہے۔
+اگرچہ یلو پیپر کے اس حصے میں اس کا ذکر نہیں کیا گیا ہے، لیکن یہ جاننا بھی مفید ہے کہ میموری کی ایک چوتھی قسم بھی ہے۔ **کال ڈیٹا** بائٹ-ایڈریس ایبل ریڈ-اونلی میموری ہے جو ٹرانزیکشن کے `data` پیرامیٹر کے ساتھ پاس کی گئی قدر کو اسٹور کرنے کے لیے استعمال ہوتی ہے۔ <span dir="ltr">EVM</span> کے پاس `calldata` کو منظم کرنے کے لیے مخصوص آپ کوڈز ہیں۔ `calldatasize` ڈیٹا کا سائز واپس کرتا ہے۔ `calldataload` ڈیٹا کو اسٹیک میں لوڈ کرتا ہے۔ `calldatacopy` ڈیٹا کو میموری میں کاپی کرتا ہے۔
 
-معیاری [وان نیومین فن تعمیر](https://en.wikipedia.org/wiki/Von_Neumann_architecture) کوڈ اور ڈیٹا کو ایک ہی میموری میں محفوظ کرتا ہے۔ <span dir="ltr">EVM</span> سیکیورٹی وجوہات کی بنا پر اس معیار کی پیروی نہیں کرتا ہے - غیر مستقل میموری کا اشتراک پروگرام کوڈ کو تبدیل کرنا ممکن بناتا ہے۔ اس کے بجائے، کوڈ کو اسٹوریج میں محفوظ کیا جاتا ہے۔
+معیاری [وان نیومین فن تعمیر (Von Neumann architecture)](https://en.wikipedia.org/wiki/Von_Neumann_architecture) کوڈ اور ڈیٹا کو ایک ہی میموری میں اسٹور کرتا ہے۔ <span dir="ltr">EVM</span> سیکیورٹی وجوہات کی بنا پر اس معیار کی پیروی نہیں کرتا ہے - غیر مستقل میموری کا اشتراک پروگرام کوڈ کو تبدیل کرنا ممکن بناتا ہے۔ اس کے بجائے، کوڈ کو اسٹوریج میں محفوظ کیا جاتا ہے۔
 
 صرف دو صورتیں ہیں جن میں کوڈ پر میموری سے عمل درآمد کیا جاتا ہے:
 
 - جب ایک کنٹریکٹ دوسرا کنٹریکٹ بناتا ہے ([`CREATE`](https://www.evm.codes/#f0) یا [`CREATE2`](https://www.evm.codes/#f5) کا استعمال کرتے ہوئے)، تو کنٹریکٹ کنسٹرکٹر کا کوڈ میموری سے آتا ہے۔
 - _کسی بھی_ کنٹریکٹ کی تخلیق کے دوران، کنسٹرکٹر کوڈ چلتا ہے اور پھر اصل کنٹریکٹ کے کوڈ کے ساتھ واپس آتا ہے، وہ بھی میموری سے۔
 
-اصطلاح غیر معمولی عمل درآمد کا مطلب ایک ایسی استثنا ہے جو موجودہ کنٹریکٹ کے عمل درآمد کو روکنے کا سبب بنتی ہے۔
+اصطلاح غیر معمولی عمل درآمد (exceptional execution) کا مطلب ایک ایسی استثنا (exception) ہے جو موجودہ کنٹریکٹ کے عمل درآمد کو روکنے کا سبب بنتی ہے۔
 
-## <span dir="ltr">9.2</span> فیس کا جائزہ {#92-fees-overview}
+## 9.2 فیس کا جائزہ {#92-fees-overview}
 
 یہ سیکشن بتاتا ہے کہ گیس کی فیس کا حساب کیسے لگایا جاتا ہے۔ اس کی تین لاگتیں ہیں:
 
-### Opcode cost {#opcode-cost}
+### آپ کوڈ کی لاگت {#opcode-cost}
 
-The inherent cost of the specific opcode. To get this value, find the cost group of the opcode in Appendix H (p. 29, under equation (329)), and find the cost group in equation (326). This gives you a cost function, which in most cases uses parameters from Appendix G (p. 28).
+مخصوص آپ کوڈ کی موروثی لاگت۔ یہ قدر حاصل کرنے کے لیے، ضمیمہ H (صفحہ <span dir="ltr">29</span>، مساوات (<span dir="ltr">329</span>) کے تحت) میں آپ کوڈ کا لاگت گروپ تلاش کریں، اور مساوات (<span dir="ltr">326</span>) میں لاگت گروپ تلاش کریں۔ یہ آپ کو ایک لاگت کا فنکشن دیتا ہے، جو زیادہ تر معاملات میں ضمیمہ G (صفحہ <span dir="ltr">28</span>) سے پیرامیٹرز استعمال کرتا ہے۔
 
-For example, the opcode [`CALLDATACOPY`](https://www.evm.codes/#37) is a member of group _W<sub>copy</sub>_. The opcode cost for that group is _G<sub>verylow</sub>+G<sub>copy</sub>×⌈μ<sub>s</sub>[2]÷32⌉_. Looking at Appendix G, we see that both constants are 3, which gives us _3+3×⌈μ<sub>s</sub>[2]÷32⌉_.
+مثال کے طور پر، آپ کوڈ [`CALLDATACOPY`](https://www.evm.codes/#37) گروپ <span dir="ltr">_W<sub>copy</sub>_</span> کا رکن ہے۔ اس گروپ کے لیے آپ کوڈ کی لاگت <span dir="ltr">_G<sub>verylow</sub>+G<sub>copy</sub>×⌈μ<sub>s</sub>[2]÷32⌉_</span> ہے۔ ضمیمہ G کو دیکھتے ہوئے، ہم دیکھتے ہیں کہ دونوں مستقل (constants) <span dir="ltr">3</span> ہیں، جو ہمیں <span dir="ltr">_3+3×⌈μ<sub>s</sub>[2]÷32⌉_</span> دیتا ہے۔
 
-We still need to decipher the expression _⌈μ<sub>s</sub>[2]÷32⌉_. The outmost part, _⌈ \<value\> ⌉_ is the ceiling function, a function that given a value returns the smallest integer that is still not smaller than the value. For example, _⌈2.5⌉ = ⌈3⌉ = 3_. The inner part is _μ<sub>s</sub>[2]÷32_. Looking at section 3 (Conventions) on p. 3, _μ_ is the machine state. The machine state is defined in section 9.4.1 on p. 15. According to that section, one of the machine state parameters is _s_ for the stack. Putting it all together, it seems that _μ<sub>s</sub>[2]_ is location #2 in the stack. Looking at [the opcode](https://www.evm.codes/#37), location #2 in the stack is the size of the data in bytes. Looking at the other opcodes in group W<sub>copy</sub>, [`CODECOPY`](https://www.evm.codes/#39) and [`RETURNDATACOPY`](https://www.evm.codes/#3e), they also have a size of data in the same location. So _⌈μ<sub>s</sub>[2]÷32⌉_ is the number of 32 byte words required to store the data being copied. Putting everything together, the inherent cost of [`CALLDATACOPY`](https://www.evm.codes/#37) is 3 gas plus 3 per word of data being copied.
+ہمیں ابھی بھی اظہار <span dir="ltr">_⌈μ<sub>s</sub>[2]÷32⌉_</span> کو سمجھنے کی ضرورت ہے۔ سب سے بیرونی حصہ، <span dir="ltr">_⌈ \<value\> ⌉_</span> سیلنگ فنکشن (ceiling function) ہے، ایک ایسا فنکشن جو کسی قدر کے دیے جانے پر سب سے چھوٹا عدد (integer) واپس کرتا ہے جو اس قدر سے چھوٹا نہیں ہوتا۔ مثال کے طور پر، <span dir="ltr">_⌈2.5⌉ = ⌈3⌉ = 3_</span>۔ اندرونی حصہ <span dir="ltr">_μ<sub>s</sub>[2]÷32_</span> ہے۔ صفحہ <span dir="ltr">3</span> پر سیکشن <span dir="ltr">3</span> (Conventions) کو دیکھتے ہوئے، <span dir="ltr">_μ_</span> مشین کی حالت ہے۔ مشین کی حالت کی تعریف صفحہ <span dir="ltr">15</span> پر سیکشن <span dir="ltr">9.4.1</span> میں کی گئی ہے۔ اس سیکشن کے مطابق، مشین کی حالت کے پیرامیٹرز میں سے ایک اسٹیک کے لیے <span dir="ltr">_s_</span> ہے۔ ان سب کو ملا کر، ایسا لگتا ہے کہ <span dir="ltr">_μ<sub>s</sub>[2]_</span> اسٹیک میں لوکیشن #<span dir="ltr">2</span> ہے۔ [آپ کوڈ](https://www.evm.codes/#37) کو دیکھتے ہوئے، اسٹیک میں لوکیشن #<span dir="ltr">2</span> بائٹس میں ڈیٹا کا سائز ہے۔ گروپ <span dir="ltr">W<sub>copy</sub></span> میں دیگر آپ کوڈز، [`CODECOPY`](https://www.evm.codes/#39) اور [`RETURNDATACOPY`](https://www.evm.codes/#3e) کو دیکھتے ہوئے، ان کے پاس بھی اسی لوکیشن میں ڈیٹا کا سائز ہوتا ہے۔ لہذا <span dir="ltr">_⌈μ<sub>s</sub>[2]÷32⌉_</span> کاپی کیے جانے والے ڈیٹا کو اسٹور کرنے کے لیے درکار <span dir="ltr">32</span> بائٹ الفاظ کی تعداد ہے۔ ہر چیز کو ملا کر، [`CALLDATACOPY`](https://www.evm.codes/#37) کی موروثی لاگت <span dir="ltr">3</span> گیس جمع کاپی کیے جانے والے ڈیٹا کے فی لفظ <span dir="ltr">3</span> گیس ہے۔
+
 ### چلانے کی لاگت {#running-cost}
 
 اس کوڈ کو چلانے کی لاگت جسے ہم کال کر رہے ہیں۔
@@ -73,197 +75,204 @@ We still need to decipher the expression _⌈μ<sub>s</sub>[2]÷32⌉_. The outm
 - [`CREATE`](https://www.evm.codes/#f0) اور [`CREATE2`](https://www.evm.codes/#f5) کے معاملے میں، نئے کنٹریکٹ کے لیے کنسٹرکٹر۔
 - [`CALL`](https://www.evm.codes/#f1)، [`CALLCODE`](https://www.evm.codes/#f2)، [`STATICCALL`](https://www.evm.codes/#fa)، یا [`DELEGATECALL`](https://www.evm.codes/#f4) کے معاملے میں، وہ کنٹریکٹ جسے ہم کال کرتے ہیں۔
 
-### Expanding memory cost {#expanding-memory-cost}
+### میموری کو بڑھانے کی لاگت {#expanding-memory-cost}
 
-The cost of expanding memory (if necessary).
+میموری کو بڑھانے کی لاگت (اگر ضروری ہو)۔
 
-In equation 326, this value is written as _C<sub>mem</sub>(μ<sub>i</sub>')-C<sub>mem</sub>(μ<sub>i</sub>)_. Looking at section 9.4.1 again, we see that _μ<sub>i</sub>_ is the number of words in memory. So _μ<sub>i</sub>_ is the number of words in memory before the opcode and _μ<sub>i</sub>'_ is the number of words in memory after the opcode.
+مساوات <span dir="ltr">326</span> میں، یہ قدر <span dir="ltr">_C<sub>mem</sub>(μ<sub>i</sub>')-C<sub>mem</sub>(μ<sub>i</sub>)_</span> کے طور پر لکھی گئی ہے۔ سیکشن <span dir="ltr">9.4.1</span> کو دوبارہ دیکھتے ہوئے، ہم دیکھتے ہیں کہ <span dir="ltr">_μ<sub>i</sub>_</span> میموری میں الفاظ کی تعداد ہے۔ لہذا <span dir="ltr">_μ<sub>i</sub>_</span> آپ کوڈ سے پہلے میموری میں الفاظ کی تعداد ہے اور <span dir="ltr">_μ<sub>i</sub>'_</span> آپ کوڈ کے بعد میموری میں الفاظ کی تعداد ہے۔
 
-The function _C<sub>mem</sub>_ is defined in equation 328: _C<sub>mem</sub>(a) = G<sub>memory</sub> × a + ⌊a<sup>2</sup> ÷ 512⌋_. _⌊x⌋_ is the floor function, a function that given a value returns the largest integer that is still not larger than the value. For example, _⌊2.5⌋ = ⌊2⌋ = 2._ When _a < √512_, _a<sup>2</sup> < 512_, and the result of the floor function is zero. So for the first 22 words (704 bytes), the cost rises linearly with the number of memory words required. Beyond that point _⌊a<sup>2</sup> ÷ 512⌋_ is positive. When the memory required is high enough the gas cost is proportional to the square of the amount of memory.
+فنکشن <span dir="ltr">_C<sub>mem</sub>_</span> کی تعریف مساوات <span dir="ltr">328</span> میں کی گئی ہے: <span dir="ltr">_C<sub>mem</sub>(a) = G<sub>memory</sub> × a + ⌊a<sup>2</sup> ÷ 512⌋_</span>۔ <span dir="ltr">_⌊x⌋_</span> فلور فنکشن (floor function) ہے، ایک ایسا فنکشن جو کسی قدر کے دیے جانے پر سب سے بڑا عدد واپس کرتا ہے جو اس قدر سے بڑا نہیں ہوتا۔ مثال کے طور پر، <span dir="ltr">_⌊2.5⌋ = ⌊2⌋ = 2_</span>۔ جب <span dir="ltr">_a < √512_</span>، <span dir="ltr">_a<sup>2</sup> < 512_</span>، اور فلور فنکشن کا نتیجہ صفر ہوتا ہے۔ لہذا پہلے <span dir="ltr">22</span> الفاظ (<span dir="ltr">704</span> بائٹس) کے لیے، لاگت درکار میموری الفاظ کی تعداد کے ساتھ لکیری (linearly) طور پر بڑھتی ہے۔ اس مقام کے بعد <span dir="ltr">_⌊a<sup>2</sup> ÷ 512⌋_</span> مثبت ہوتا ہے۔ جب درکار میموری کافی زیادہ ہو تو گیس کی لاگت میموری کی مقدار کے مربع (square) کے متناسب ہوتی ہے۔
 
-**Note** that these factors only influence the _inherent_ gas cost - it does not take into account the fee market or tips to validators that determine how much an end user is required to pay - this is just the raw cost of running a particular operation on the EVM.
+**نوٹ** کریں کہ یہ عوامل صرف _موروثی_ گیس کی لاگت کو متاثر کرتے ہیں - یہ فیس مارکیٹ یا توثیق کاروں (validators) کو دی جانے والی ٹپس کو مدنظر نہیں رکھتا جو یہ طے کرتے ہیں کہ آخری صارف کو کتنی ادائیگی کرنی ہے - یہ صرف <span dir="ltr">EVM</span> پر کسی خاص آپریشن کو چلانے کی خام لاگت ہے۔
 
-[Read more about gas](/developers/docs/gas/).
-## 9.3 Execution environment {#93-execution-env}
+[گیس کے بارے میں مزید پڑھیں](/developers/docs/gas/)۔
 
-The execution environment is a tuple, _I_, that includes information that isn't part of the blockchain state or the EVM.
+## 9.3 عمل درآمد کا ماحول {#93-execution-env}
 
-| Parameter       | Opcode to access the data                                                                                        | Solidity code to access the data         |
+عمل درآمد کا ماحول ایک ٹپل (tuple)، <span dir="ltr">_I_</span> ہے، جس میں ایسی معلومات شامل ہیں جو بلاک چین کی حالت یا <span dir="ltr">EVM</span> کا حصہ نہیں ہیں۔
+
+| پیرامیٹر | ڈیٹا تک رسائی کے لیے آپ کوڈ | ڈیٹا تک رسائی کے لیے Solidity کوڈ |
 | --------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| _I<sub>a</sub>_ | [`ADDRESS`](https://www.evm.codes/#30)                                                                           | `address(this)`                          |
-| _I<sub>o</sub>_ | [`ORIGIN`](https://www.evm.codes/#32)                                                                            | `tx.origin`                              |
-| _I<sub>p</sub>_ | [`GASPRICE`](https://www.evm.codes/#3a)                                                                          | `tx.gasprice`                            |
-| _I<sub>d</sub>_ | [`CALLDATALOAD`](https://www.evm.codes/#35), etc.                                                                | `msg.data`                               |
-| _I<sub>s</sub>_ | [`CALLER`](https://www.evm.codes/#33)                                                                            | `msg.sender`                             |
-| _I<sub>v</sub>_ | [`CALLVALUE`](https://www.evm.codes/#34)                                                                         | `msg.value`                              |
-| _I<sub>b</sub>_ | [`CODECOPY`](https://www.evm.codes/#39)                                                                          | `address(this).code`                     |
-| _I<sub>H</sub>_ | Block header fields, such as [`NUMBER`](https://www.evm.codes/#43) and [`DIFFICULTY`](https://www.evm.codes/#44) | `block.number`, `block.difficulty`, etc. |
-| _I<sub>e</sub>_ | Depth of the call stack for calls between contracts (including contract creation)                                |
-| _I<sub>w</sub>_ | Is the EVM allowed to change state, or is it running statically                                                  |
+| <span dir="ltr">_I<sub>a</sub>_</span> | [`ADDRESS`](https://www.evm.codes/#30)                                                                           | `address(this)`                          |
+| <span dir="ltr">_I<sub>o</sub>_</span> | [`ORIGIN`](https://www.evm.codes/#32)                                                                            | `tx.origin`                              |
+| <span dir="ltr">_I<sub>p</sub>_</span> | [`GASPRICE`](https://www.evm.codes/#3a)                                                                          | `tx.gasprice`                            |
+| <span dir="ltr">_I<sub>d</sub>_</span> | [`CALLDATALOAD`](https://www.evm.codes/#35)، وغیرہ۔                                                                | `msg.data`                               |
+| <span dir="ltr">_I<sub>s</sub>_</span> | [`CALLER`](https://www.evm.codes/#33)                                                                            | `msg.sender`                             |
+| <span dir="ltr">_I<sub>v</sub>_</span> | [`CALLVALUE`](https://www.evm.codes/#34)                                                                         | `msg.value`                              |
+| <span dir="ltr">_I<sub>b</sub>_</span> | [`CODECOPY`](https://www.evm.codes/#39)                                                                          | `address(this).code`                     |
+| <span dir="ltr">_I<sub>H</sub>_</span> | بلاک ہیڈر فیلڈز، جیسے [`NUMBER`](https://www.evm.codes/#43) اور [`DIFFICULTY`](https://www.evm.codes/#44) | `block.number`، `block.difficulty`، وغیرہ۔ |
+| <span dir="ltr">_I<sub>e</sub>_</span> | کنٹریکٹس کے درمیان کالز کے لیے کال اسٹیک کی گہرائی (بشمول کنٹریکٹ کی تخلیق)                                |
+| <span dir="ltr">_I<sub>w</sub>_</span> | کیا <span dir="ltr">EVM</span> کو حالت تبدیل کرنے کی اجازت ہے، یا یہ جامد (statically) طور پر چل رہا ہے                                                  |
 
-A few other parameters are necessary to understand the rest of section 9:
+سیکشن <span dir="ltr">9</span> کے بقیہ حصے کو سمجھنے کے لیے کچھ اور پیرامیٹرز ضروری ہیں:
 
-| Parameter | Defined in section   | Meaning                                                                                                                                                                                                                  |
+| پیرامیٹر | سیکشن میں تعریف شدہ | معنی |
 | --------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| _σ_       | 2 (p. 2, equation 1) | The state of the blockchain                                                                                                                                                                                              |
-| _g_       | 9.3 (p. 14)          | Remaining gas                                                                                                                                                                                                            |
-| _A_       | 6.1 (p. 9)           | Accrued substate (changes scheduled for when the transaction ends)                                                                                                                                                       |
-| _o_       | 9.3 (p. 14)          | Output - the returned result in the case of internal transaction (when one contract calls another) and calls to view functions (when you are just asking for information, so there is no need to wait for a transaction) |
-## 9.4 Execution overview {#94-execution-overview}
+| <span dir="ltr">_σ_</span>       | <span dir="ltr">2</span> (صفحہ <span dir="ltr">2</span>، مساوات <span dir="ltr">1</span>) | بلاک چین کی حالت |
+| <span dir="ltr">_g_</span>       | <span dir="ltr">9.3</span> (صفحہ <span dir="ltr">14</span>)          | باقی ماندہ گیس |
+| <span dir="ltr">_A_</span>       | <span dir="ltr">6.1</span> (صفحہ <span dir="ltr">9</span>)           | جمع شدہ ذیلی حالت (تبدیلیاں جو ٹرانزیکشن ختم ہونے پر شیڈول کی گئی ہیں) |
+| <span dir="ltr">_o_</span>       | <span dir="ltr">9.3</span> (صفحہ <span dir="ltr">14</span>)          | آؤٹ پٹ - اندرونی ٹرانزیکشن (جب ایک کنٹریکٹ دوسرے کو کال کرتا ہے) اور ویو فنکشنز کی کالز (جب آپ صرف معلومات مانگ رہے ہوں، اس لیے ٹرانزیکشن کا انتظار کرنے کی ضرورت نہیں ہے) کی صورت میں واپس کیا گیا نتیجہ |
 
-Now that have all the preliminaries, we can finally start working on how the EVM works.
+## 9.4 عمل درآمد کا جائزہ {#94-execution-overview}
 
-Equations 146-151 give us the initial conditions for running the EVM:
+اب جب کہ ہمارے پاس تمام ابتدائی معلومات ہیں، ہم بالآخر اس پر کام شروع کر سکتے ہیں کہ <span dir="ltr">EVM</span> کیسے کام کرتا ہے۔
 
-| Symbol           | Initial value | Meaning                                                                                                                                                                                                                                                     |
+مساوات <span dir="ltr">146-151</span> ہمیں <span dir="ltr">EVM</span> چلانے کے لیے ابتدائی شرائط دیتی ہیں:
+
+| علامت | ابتدائی قدر | معنی |
 | ---------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| _μ<sub>g</sub>_  | _g_           | Gas remaining                                                                                                                                                                                                                                               |
-| _μ<sub>pc</sub>_ | _0_           | Program counter, the address of the next instruction to execute                                                                                                                                                                                             |
-| _μ<sub>m</sub>_  | _(0, 0, ...)_ | Memory, initialized to all zeros                                                                                                                                                                                                                            |
-| _μ<sub>i</sub>_  | _0_           | Highest memory location used                                                                                                                                                                                                                                |
-| _μ<sub>s</sub>_  | _()_          | The stack, initially empty                                                                                                                                                                                                                                  |
-| _μ<sub>o</sub>_  | _∅_           | The output, empty set until and unless we stop either with return data ([`RETURN`](https://www.evm.codes/#f3) or [`REVERT`](https://www.evm.codes/#fd)) or without it ([`STOP`](https://www.evm.codes/#00) or [`SELFDESTRUCT`](https://www.evm.codes/#ff)). |
+| <span dir="ltr">_μ<sub>g</sub>_</span>  | <span dir="ltr">_g_</span>           | باقی ماندہ گیس |
+| <span dir="ltr">_μ<sub>pc</sub>_</span> | <span dir="ltr">_0_</span>           | پروگرام کاؤنٹر، عمل درآمد کے لیے اگلی ہدایت کا پتہ |
+| <span dir="ltr">_μ<sub>m</sub>_</span>  | <span dir="ltr">_(0, 0, ...)_</span> | میموری، تمام صفر پر شروع کی گئی |
+| <span dir="ltr">_μ<sub>i</sub>_</span>  | <span dir="ltr">_0_</span>           | استعمال شدہ سب سے اعلیٰ میموری لوکیشن |
+| <span dir="ltr">_μ<sub>s</sub>_</span>  | <span dir="ltr">_()_</span>          | اسٹیک، ابتدائی طور پر خالی |
+| <span dir="ltr">_μ<sub>o</sub>_</span>  | <span dir="ltr">_∅_</span>           | آؤٹ پٹ، خالی سیٹ جب تک کہ ہم واپسی کے ڈیٹا کے ساتھ ([`RETURN`](https://www.evm.codes/#f3) یا [`REVERT`](https://www.evm.codes/#fd)) یا اس کے بغیر ([`STOP`](https://www.evm.codes/#00) یا [`SELFDESTRUCT`](https://www.evm.codes/#ff)) نہ رکیں۔ |
 
-Equation 152 tells us there are four possible conditions at each point in time during execution, and what to do with them:
+مساوات <span dir="ltr">152</span> ہمیں بتاتی ہے کہ عمل درآمد کے دوران ہر وقت چار ممکنہ شرائط ہوتی ہیں، اور ان کے ساتھ کیا کرنا ہے:
 
-1.  `Z(σ,μ,A,I)`. Z represents a function that tests whether an operation creates an invalid state transition (see [exceptional halting](#942-exceptional-halt)). If it evaluates to True, the new state is identical to the old one (except gas gets burned) because the changes have not been implemented.
-2.  If the opcode being executed is [`REVERT`](https://www.evm.codes/#fd), the new state is the same as the old state, some gas is lost.
-3.  If the sequence of operations is finished, as signified by a [`RETURN`](https://www.evm.codes/#f3)), the state is updated to the new state.
-4.  If we aren't at one of the end conditions 1-3, continue running.
-## <span dir="ltr">9.4.1</span> مشین کی حالت {#941-machine-state}
+1.  `Z(σ,μ,A,I)`۔ Z ایک ایسے فنکشن کی نمائندگی کرتا ہے جو یہ جانچتا ہے کہ آیا کوئی آپریشن ایک غلط حالت کی منتقلی (invalid state transition) بناتا ہے (دیکھیں [غیر معمولی رکاوٹ](#942-exceptional-halt))۔ اگر یہ درست (True) ثابت ہوتا ہے، تو نئی حالت پرانی حالت جیسی ہی ہوتی ہے (سوائے اس کے کہ گیس جل جاتی ہے) کیونکہ تبدیلیاں نافذ نہیں کی گئی ہیں۔
+2.  اگر عمل درآمد کیا جانے والا آپ کوڈ [`REVERT`](https://www.evm.codes/#fd) ہے، تو نئی حالت پرانی حالت جیسی ہی ہوتی ہے، کچھ گیس ضائع ہو جاتی ہے۔
+3.  اگر آپریشنز کا سلسلہ ختم ہو گیا ہے، جیسا کہ [`RETURN`](https://www.evm.codes/#f3) سے ظاہر ہوتا ہے)، تو حالت کو نئی حالت میں اپ ڈیٹ کر دیا جاتا ہے۔
+4.  اگر ہم اختتامی شرائط <span dir="ltr">1-3</span> میں سے کسی ایک پر نہیں ہیں، تو چلنا جاری رکھیں۔
 
-یہ سیکشن مشین کی حالت کو مزید تفصیل سے بیان کرتا ہے۔ یہ بتاتا ہے کہ _w_ موجودہ آپ کوڈ ہے۔ اگر _μ<sub>pc</sub>_ کوڈ کی لمبائی _||I<sub>b</sub>||_ سے کم ہے، تو وہ بائٹ (_I<sub>b</sub>[μ<sub>pc</sub>]_) آپ کوڈ ہے۔ بصورت دیگر، آپ کوڈ کو [`STOP`](https://www.evm.codes/#00) کے طور پر بیان کیا جاتا ہے۔
+## 9.4.1 مشین کی حالت {#941-machine-state}
 
-چونکہ یہ ایک [اسٹیک مشین](https://en.wikipedia.org/wiki/Stack_machine) ہے، اس لیے ہمیں ہر آپ کوڈ کے ذریعے نکالے گئے (_δ_) اور ڈالے گئے (_α_) آئٹمز کی تعداد کا ٹریک رکھنے کی ضرورت ہے۔
+یہ سیکشن مشین کی حالت کو زیادہ تفصیل سے بیان کرتا ہے۔ یہ بتاتا ہے کہ <span dir="ltr">_w_</span> موجودہ آپ کوڈ ہے۔ اگر <span dir="ltr">_μ<sub>pc</sub>_</span> کوڈ کی لمبائی <span dir="ltr">_||I<sub>b</sub>||_</span> سے کم ہے، تو وہ بائٹ (<span dir="ltr">_I<sub>b</sub>[μ<sub>pc</sub>]_</span>) آپ کوڈ ہے۔ بصورت دیگر، آپ کوڈ کو [`STOP`](https://www.evm.codes/#00) کے طور پر بیان کیا جاتا ہے۔
 
-## 9.4.2 Exceptional Halting {#942-exceptional-halt}
+چونکہ یہ ایک [اسٹیک مشین](https://en.wikipedia.org/wiki/Stack_machine) ہے، اس لیے ہمیں ہر آپ کوڈ کے ذریعے نکالے گئے (popped out) (<span dir="ltr">_δ_</span>) اور ڈالے گئے (pushed in) (<span dir="ltr">_α_</span>) آئٹمز کی تعداد کا ٹریک رکھنے کی ضرورت ہے۔
 
-This section defines the _Z_ function, which specifies when we have an abnormal termination. This is a [Boolean](https://en.wikipedia.org/wiki/Boolean_data_type) function, so it uses [_∨_ for a logical or](https://en.wikipedia.org/wiki/Logical_disjunction) and [_∧_ for a logical and](https://en.wikipedia.org/wiki/Logical_conjunction).
+## 9.4.2 غیر معمولی رکاوٹ {#942-exceptional-halt}
 
-We have an exceptional halt if any of these conditions is true:
+یہ سیکشن <span dir="ltr">_Z_</span> فنکشن کی تعریف کرتا ہے، جو یہ بتاتا ہے کہ کب ہمارا غیر معمولی اختتام (abnormal termination) ہوتا ہے۔ یہ ایک [بولین (Boolean)](https://en.wikipedia.org/wiki/Boolean_data_type) فنکشن ہے، اس لیے یہ [منطقی 'یا' (logical or) کے لیے <span dir="ltr">_∨_</span>](https://en.wikipedia.org/wiki/Logical_disjunction) اور [منطقی 'اور' (logical and) کے لیے <span dir="ltr">_∧_</span>](https://en.wikipedia.org/wiki/Logical_conjunction) استعمال کرتا ہے۔
 
-- **_μ<sub>g</sub> < C(σ,μ,A,I)_**
-  As we saw in section 9.2, _C_ is the function that specifies the gas cost. There isn't enough gas left to cover the next opcode.
+اگر ان میں سے کوئی بھی شرط درست ہے تو ہمارے پاس ایک غیر معمولی رکاوٹ ہوتی ہے:
 
-- **_δ<sub>w</sub>=∅_**
-  If the number of items popped for an opcode is undefined, then the opcode itself is undefined.
+- **<span dir="ltr">_μ<sub>g</sub> < C(σ,μ,A,I)_</span>**
+  جیسا کہ ہم نے سیکشن <span dir="ltr">9.2</span> میں دیکھا، <span dir="ltr">_C_</span> وہ فنکشن ہے جو گیس کی لاگت بتاتا ہے۔ اگلے آپ کوڈ کو کور کرنے کے لیے کافی گیس نہیں بچی ہے۔
 
-- **_|| μ<sub>s</sub> || < δ<sub>w</sub>_**
-  Stack underflow, not enough items in the stack for the current opcode.
+- **<span dir="ltr">_δ<sub>w</sub>=∅_</span>**
+  اگر کسی آپ کوڈ کے لیے نکالے گئے آئٹمز کی تعداد غیر متعین (undefined) ہے، تو آپ کوڈ خود غیر متعین ہے۔
 
-- **_w = JUMP ∧ μ<sub>s</sub>[0]∉D(I<sub>b</sub>)_**
-  The opcode is [`JUMP`](https://www.evm.codes/#56) and the address is not a [`JUMPDEST`](https://www.evm.codes/#5b). Jumps are _only_ valid when the destination is a [`JUMPDEST`](https://www.evm.codes/#5b).
+- **<span dir="ltr">_|| μ<sub>s</sub> || < δ<sub>w</sub>_</span>**
+  اسٹیک انڈر فلو (Stack underflow)، موجودہ آپ کوڈ کے لیے اسٹیک میں کافی آئٹمز نہیں ہیں۔
 
-- **_w = JUMPI ∧ μ<sub>s</sub>[1]≠0 ∧ μ<sub>s</sub>[0] ∉ D(I<sub>b</sub>)_**
-  The opcode is [`JUMPI`](https://www.evm.codes/#57), the condition is true (non zero) so the jump should happen, and the address is not a [`JUMPDEST`](https://www.evm.codes/#5b). Jumps are _only_ valid when the destination is a [`JUMPDEST`](https://www.evm.codes/#5b).
+- **<span dir="ltr">_w = JUMP ∧ μ<sub>s</sub>[0]∉D(I<sub>b</sub>)_</span>**
+  آپ کوڈ [`JUMP`](https://www.evm.codes/#56) ہے اور پتہ [`JUMPDEST`](https://www.evm.codes/#5b) نہیں ہے۔ جمپس (Jumps) _صرف_ اس وقت درست ہوتے ہیں جب منزل ایک [`JUMPDEST`](https://www.evm.codes/#5b) ہو۔
 
-- **_w = RETURNDATACOPY ∧ μ<sub>s</sub>[1]+μ<sub>s</sub>[2]>|| μ<sub>o</sub> ||_**
-  The opcode is [`RETURNDATACOPY`](https://www.evm.codes/#3e). In this opcode stack element _μ<sub>s</sub>[1]_ is the offset to read from in the return data buffer, and stack element _μ<sub>s</sub>[2]_ is the length of data. This condition occurs when you try to read beyond the end of the return data buffer. Note that there isn't a similar condition for the calldata or for the code itself. When you try to read beyond the end of those buffers you just get zeros.
+- **<span dir="ltr">_w = JUMPI ∧ μ<sub>s</sub>[1]≠0 ∧ μ<sub>s</sub>[0] ∉ D(I<sub>b</sub>)_</span>**
+  آپ کوڈ [`JUMPI`](https://www.evm.codes/#57) ہے، شرط درست ہے (غیر صفر) اس لیے جمپ ہونا چاہیے، اور پتہ [`JUMPDEST`](https://www.evm.codes/#5b) نہیں ہے۔ جمپس _صرف_ اس وقت درست ہوتے ہیں جب منزل ایک [`JUMPDEST`](https://www.evm.codes/#5b) ہو۔
 
-- **_|| μ<sub>s</sub> || - δ<sub>w</sub> + α<sub>w</sub> > 1024_**
+- **<span dir="ltr">_w = RETURNDATACOPY ∧ μ<sub>s</sub>[1]+μ<sub>s</sub>[2]>|| μ<sub>o</sub> ||_</span>**
+  آپ کوڈ [`RETURNDATACOPY`](https://www.evm.codes/#3e) ہے۔ اس آپ کوڈ میں اسٹیک عنصر <span dir="ltr">_μ<sub>s</sub>[1]_</span> ریٹرن ڈیٹا بفر میں پڑھنے کے لیے آفسیٹ (offset) ہے، اور اسٹیک عنصر <span dir="ltr">_μ<sub>s</sub>[2]_</span> ڈیٹا کی لمبائی ہے۔ یہ شرط اس وقت پیش آتی ہے جب آپ ریٹرن ڈیٹا بفر کے اختتام سے آگے پڑھنے کی کوشش کرتے ہیں۔ نوٹ کریں کہ کال ڈیٹا یا خود کوڈ کے لیے ایسی کوئی شرط نہیں ہے۔ جب آپ ان بفرز کے اختتام سے آگے پڑھنے کی کوشش کرتے ہیں تو آپ کو صرف صفر ملتے ہیں۔
 
-  Stack overflow. If running the opcode will result in a stack of over 1024 items, abort.
+- **<span dir="ltr">_|| μ<sub>s</sub> || - δ<sub>w</sub> + α<sub>w</sub> > 1024_</span>**
 
-- **_¬I<sub>w</sub> ∧ W(w,μ)_**
-  Are we running statically ([¬ is negation](https://en.wikipedia.org/wiki/Negation) and _I<sub>w</sub>_ is true when we are allowed to change the blockchain state)? If so, and we're trying a state changing operation, it can't happen.
+  اوور فلو (Stack overflow)۔ اگر آپ کوڈ چلانے کے نتیجے میں اسٹیک <span dir="ltr">1024</span> آئٹمز سے زیادہ ہو جائے گا، تو منسوخ (abort) کریں۔
 
-  The function _W(w,μ)_ is defined later in equation 159. _W(w,μ)_ is true if one of these conditions is true:
+- **<span dir="ltr">_¬I<sub>w</sub> ∧ W(w,μ)_</span>**
+  کیا ہم جامد طور پر چل رہے ہیں ([¬ نفی (negation) ہے](https://en.wikipedia.org/wiki/Negation) اور <span dir="ltr">_I<sub>w</sub>_</span> درست ہے جب ہمیں بلاک چین کی حالت تبدیل کرنے کی اجازت ہوتی ہے)؟ اگر ایسا ہے، اور ہم حالت تبدیل کرنے والے آپریشن کی کوشش کر رہے ہیں، تو یہ نہیں ہو سکتا۔
 
-  - **_w ∈ \{CREATE, CREATE2, SSTORE, SELFDESTRUCT}_**
-    These opcodes change the state, either by creating a new contract, storing a value, or destroying the current contract.
+  فنکشن <span dir="ltr">_W(w,μ)_</span> کی تعریف بعد میں مساوات <span dir="ltr">159</span> میں کی گئی ہے۔ <span dir="ltr">_W(w,μ)_</span> درست ہے اگر ان میں سے کوئی ایک شرط درست ہو:
 
-  - **_LOG0≤w ∧ w≤LOG4_**
-    If we are called statically we cannot emit log entries.
-    The log opcodes are all in the range between [`LOG0` (A0)](https://www.evm.codes/#a0) and [`LOG4` (A4)](https://www.evm.codes/#a4).
-    The number after the log opcode specifies how many topics the log entry contains.
-  - **_w=CALL ∧ μ<sub>s</sub>[2]≠0_**
-    You can call another contract when you're static, but if you do you cannot transfer ETH to it.
+  - **<span dir="ltr">_w ∈ \{CREATE, CREATE2, SSTORE, SELFDESTRUCT}_</span>**
+    یہ آپ کوڈز حالت کو تبدیل کرتے ہیں، یا تو نیا کنٹریکٹ بنا کر، کوئی قدر اسٹور کر کے، یا موجودہ کنٹریکٹ کی خود تلفی کر کے۔
 
-- **_w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>_**
-  You cannot run [`SSTORE`](https://www.evm.codes/#55) unless you have more than G<sub>callstipend</sub> (defined as 2300 in Appendix G) gas.
-## 9.4.3 Jump Destination Validity {#943-jump-dest-valid}
+  - **<span dir="ltr">_LOG0≤w ∧ w≤LOG4_</span>**
+    اگر ہمیں جامد طور پر کال کیا جاتا ہے تو ہم لاگ اندراجات (log entries) خارج نہیں کر سکتے۔
+    لاگ آپ کوڈز تمام [`LOG0` (<span dir="ltr">A0</span>)](https://www.evm.codes/#a0) اور [`LOG4` (<span dir="ltr">A4</span>)](https://www.evm.codes/#a4) کے درمیان کی حد میں ہیں۔
+    لاگ آپ کوڈ کے بعد کا نمبر بتاتا ہے کہ لاگ اندراج میں کتنے عنوانات (topics) شامل ہیں۔
+  - **<span dir="ltr">_w=CALL ∧ μ<sub>s</sub>[2]≠0_</span>**
+    جب آپ جامد ہوں تو آپ کسی دوسرے کنٹریکٹ کو کال کر سکتے ہیں، لیکن اگر آپ ایسا کرتے ہیں تو آپ اسے ETH منتقل نہیں کر سکتے۔
 
-Here we formally define what are the [`JUMPDEST`](https://www.evm.codes/#5b) opcodes. We cannot just look for byte value 0x5B, because it might be inside a PUSH (and therefore data and not an opcode).
+- **<span dir="ltr">_w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>_</span>**
+  آپ [`SSTORE`](https://www.evm.codes/#55) نہیں چلا سکتے جب تک کہ آپ کے پاس <span dir="ltr">G<sub>callstipend</sub></span> (ضمیمہ G میں <span dir="ltr">2300</span> کے طور پر بیان کیا گیا ہے) سے زیادہ گیس نہ ہو۔
 
-In equation (162) we define a function, _N(i,w)_. The first parameter, _i_, is the opcode's location. The second, _w_, is the opcode itself. If _w∈[PUSH1, PUSH32]_ that means the opcode is a PUSH (square brackets define a range that includes the endpoints). If that case the next opcode is at _i+2+(w−PUSH1)_. For [`PUSH1`](https://www.evm.codes/#60) we need to advance by two bytes (the PUSH itself and the one byte value), for [`PUSH2`](https://www.evm.codes/#61) we need to advance by three bytes because it's a two byte value, etc. All other EVM opcodes are just one byte long, so in all other cases _N(i,w)=i+1_.
+## 9.4.3 جمپ کی منزل کا درست ہونا {#943-jump-dest-valid}
 
-This function is used in equation (161) to define _D<sub>J</sub>(c,i)_, which is the [set](<https://en.wikipedia.org/wiki/Set_(mathematics)>) of all valid jump destinations in code _c_, starting with opcode location _i_. This function is defined recursively. If _i≥||c||_, that means that we're at or after the end of the code. We are not going to find any more jump destinations, so just return the empty set.
+یہاں ہم باضابطہ طور پر بیان کرتے ہیں کہ [`JUMPDEST`](https://www.evm.codes/#5b) آپ کوڈز کیا ہیں۔ ہم صرف بائٹ ویلیو <span dir="ltr">0x5B</span> کو نہیں دیکھ سکتے، کیونکہ یہ PUSH کے اندر ہو سکتا ہے (اور اس لیے یہ ڈیٹا ہے نہ کہ آپ کوڈ)۔
 
-In all other cases we look at the rest of the code by going to the next opcode and getting the set starting from it. _c[i]_ is the current opcode, so _N(i,c[i])_ is the location of the next opcode. _D<sub>J</sub>(c,N(i,c[i]))_ is therefore the set of valid jump destinations that starts at the next opcode. If the current opcode isn't a `JUMPDEST`, just return that set. If it is `JUMPDEST`, include it in the result set and return that.
-## <span dir="ltr">9.4.4</span> عام رکاوٹ {#944-normal-halt}
+مساوات (<span dir="ltr">162</span>) میں ہم ایک فنکشن، <span dir="ltr">_N(i,w)_</span> کی تعریف کرتے ہیں۔ پہلا پیرامیٹر، <span dir="ltr">_i_</span>، آپ کوڈ کی لوکیشن ہے۔ دوسرا، <span dir="ltr">_w_</span>، خود آپ کوڈ ہے۔ اگر <span dir="ltr">_w∈[PUSH1, PUSH32]_</span> ہے تو اس کا مطلب ہے کہ آپ کوڈ ایک PUSH ہے (مربع بریکٹ ایک ایسی حد کی وضاحت کرتے ہیں جس میں اختتامی مقامات شامل ہوتے ہیں)۔ اس صورت میں اگلا آپ کوڈ <span dir="ltr">_i+2+(w−PUSH1)_</span> پر ہے۔ [`PUSH1`](https://www.evm.codes/#60) کے لیے ہمیں دو بائٹس (خود PUSH اور ایک بائٹ ویلیو) آگے بڑھنے کی ضرورت ہے، [`PUSH2`](https://www.evm.codes/#61) کے لیے ہمیں تین بائٹس آگے بڑھنے کی ضرورت ہے کیونکہ یہ دو بائٹ ویلیو ہے، وغیرہ۔ دیگر تمام <span dir="ltr">EVM</span> آپ کوڈز صرف ایک بائٹ لمبے ہیں، اس لیے دیگر تمام صورتوں میں <span dir="ltr">_N(i,w)=i+1_</span> ہے۔
 
-رکاوٹ کا فنکشن _H_، تین قسم کی قدریں واپس کر سکتا ہے۔
+یہ فنکشن مساوات (<span dir="ltr">161</span>) میں <span dir="ltr">_D<sub>J</sub>(c,i)_</span> کی تعریف کرنے کے لیے استعمال ہوتا ہے، جو کوڈ <span dir="ltr">_c_</span> میں تمام درست جمپ منزلوں کا [سیٹ](<https://en.wikipedia.org/wiki/Set_(mathematics)>) ہے، جو آپ کوڈ لوکیشن <span dir="ltr">_i_</span> سے شروع ہوتا ہے۔ اس فنکشن کی تعریف تکراری (recursively) طور پر کی گئی ہے۔ اگر <span dir="ltr">_i≥||c||_</span> ہے، تو اس کا مطلب ہے کہ ہم کوڈ کے اختتام پر یا اس کے بعد ہیں۔ ہمیں مزید کوئی جمپ منزلیں نہیں ملنے والی ہیں، اس لیے بس خالی سیٹ واپس کریں۔
 
-- اگر ہم ہالٹ آپ کوڈ میں نہیں ہیں، تو _∅_، خالی سیٹ واپس کریں۔ روایت کے مطابق، اس قدر کی تشریح بولین غلط (false) کے طور پر کی جاتی ہے۔
+دیگر تمام صورتوں میں ہم اگلے آپ کوڈ پر جا کر اور اس سے شروع ہونے والا سیٹ حاصل کر کے بقیہ کوڈ کو دیکھتے ہیں۔ <span dir="ltr">_c[i]_</span> موجودہ آپ کوڈ ہے، اس لیے <span dir="ltr">_N(i,c[i])_</span> اگلے آپ کوڈ کی لوکیشن ہے۔ لہذا <span dir="ltr">_D<sub>J</sub>(c,N(i,c[i]))_</span> درست جمپ منزلوں کا سیٹ ہے جو اگلے آپ کوڈ سے شروع ہوتا ہے۔ اگر موجودہ آپ کوڈ `JUMPDEST` نہیں ہے، تو بس وہ سیٹ واپس کریں۔ اگر یہ `JUMPDEST` ہے، تو اسے رزلٹ سیٹ میں شامل کریں اور اسے واپس کریں۔
+
+## 9.4.4 عام رکاوٹ {#944-normal-halt}
+
+رکاوٹ کا فنکشن (halting function) <span dir="ltr">_H_</span>، تین قسم کی قدریں واپس کر سکتا ہے۔
+
+- اگر ہم ہالٹ (halt) آپ کوڈ میں نہیں ہیں، تو <span dir="ltr">_∅_</span>، خالی سیٹ واپس کریں۔ روایت کے مطابق، اس قدر کو بولین غلط (false) کے طور پر سمجھا جاتا ہے۔
 - اگر ہمارے پاس ایک ہالٹ آپ کوڈ ہے جو آؤٹ پٹ پیدا نہیں کرتا ہے (یا تو [`STOP`](https://www.evm.codes/#00) یا [`SELFDESTRUCT`](https://www.evm.codes/#ff))، تو واپسی کی قدر کے طور پر صفر بائٹس کے سائز کی ترتیب واپس کریں۔ نوٹ کریں کہ یہ خالی سیٹ سے بہت مختلف ہے۔ اس قدر کا مطلب ہے کہ <span dir="ltr">EVM</span> واقعی رک گیا تھا، بس پڑھنے کے لیے کوئی واپسی کا ڈیٹا نہیں ہے۔
-- اگر ہمارے پاس ایک ہالٹ آپ کوڈ ہے جو آؤٹ پٹ پیدا کرتا ہے (یا تو [`RETURN`](https://www.evm.codes/#f3) یا [`REVERT`](https://www.evm.codes/#fd))، تو اس آپ کوڈ کے ذریعے بتائی گئی بائٹس کی ترتیب واپس کریں۔ یہ ترتیب میموری سے لی گئی ہے، اسٹیک کے اوپری حصے کی قدر (_μ<sub>s</sub>[0]_) پہلی بائٹ ہے، اور اس کے بعد کی قدر (_μ<sub>s</sub>[1]_) لمبائی ہے۔
+- اگر ہمارے پاس ایک ہالٹ آپ کوڈ ہے جو آؤٹ پٹ پیدا کرتا ہے (یا تو [`RETURN`](https://www.evm.codes/#f3) یا [`REVERT`](https://www.evm.codes/#fd))، تو اس آپ کوڈ کے ذریعے بتائی گئی بائٹس کی ترتیب واپس کریں۔ یہ ترتیب میموری سے لی گئی ہے، اسٹیک کے اوپری حصے کی قدر (<span dir="ltr">_μ<sub>s</sub>[0]_</span>) پہلی بائٹ ہے، اور اس کے بعد کی قدر (<span dir="ltr">_μ<sub>s</sub>[1]_</span>) لمبائی ہے۔
 
-## <span dir="ltr">H.2</span> ہدایات کا مجموعہ
+## H.2 ہدایات کا سیٹ {#h2-instruction-set}
 
-اس سے پہلے کہ ہم <span dir="ltr">EVM</span> کے آخری ذیلی حصے، <span dir="ltr">9.5</span> کی طرف بڑھیں، آئیے خود ہدایات پر ایک نظر ڈالتے ہیں۔ ان کی وضاحت ضمیمہ <span dir="ltr">H.2</span> میں کی گئی ہے جو صفحہ <span dir="ltr">30</span> سے شروع ہوتا ہے۔ کوئی بھی چیز جس کے بارے میں یہ واضح نہیں کیا گیا کہ وہ اس مخصوص آپ کوڈ کے ساتھ تبدیل ہو رہی ہے، اس کے بارے میں توقع کی جاتی ہے کہ وہ ویسے ہی رہے گی۔ جو متغیرات تبدیل ہوتے ہیں انہیں \<something\>′ کے طور پر واضح کیا جاتا ہے۔
+<span dir="ltr">EVM</span> کے آخری ذیلی حصے، <span dir="ltr">9.5</span> پر جانے سے پہلے، آئیے خود ہدایات پر نظر ڈالتے ہیں۔ ان کی تعریف ضمیمہ H.2 میں کی گئی ہے جو صفحہ <span dir="ltr">30</span> سے شروع ہوتا ہے۔ کوئی بھی چیز جس کے بارے میں یہ نہیں بتایا گیا کہ وہ اس مخصوص آپ کوڈ کے ساتھ تبدیل ہو رہی ہے، اس کے ویسے ہی رہنے کی توقع کی جاتی ہے۔ جو متغیرات (variables) تبدیل ہوتے ہیں انہیں <span dir="ltr">\<something\>′</span> کے طور پر بیان کیا جاتا ہے۔
 
-مثال کے طور پر، آئیے [`ADD`](https://www.evm.codes/#01) آپ کوڈ پر ایک نظر ڈالتے ہیں۔
+مثال کے طور پر، آئیے [`ADD`](https://www.evm.codes/#01) آپ کوڈ کو دیکھتے ہیں۔
 
-| قدر | نیمونک | δ | α | تفصیل |
+| قدر | یادداشت (Mnemonic) | δ   | α   | تفصیل                                               |
 | ----: | -------- | --- | --- | --------------------------------------------------------- |
-| 0x01 | ADD | 2 | 1 | جمع کا عمل۔ |
-| | | | | _μ′<sub>s</sub>[0] ≡ μ<sub>s</sub>[0] + μ<sub>s</sub>[1]_ |
+|  <span dir="ltr">0x01</span> | ADD      | <span dir="ltr">2</span>   | <span dir="ltr">1</span>   | اضافے کا آپریشن (Addition operation)۔                                       |
+|       |          |     |     | <span dir="ltr">_μ′<sub>s</sub>[0] ≡ μ<sub>s</sub>[0] + μ<sub>s</sub>[1]_</span> |
 
-_δ_ ان اقدار کی تعداد ہے جو ہم اسٹیک سے نکالتے (pop) ہیں۔ اس صورت میں دو، کیونکہ ہم اوپر کی دو اقدار کو جمع کر رہے ہیں۔
+<span dir="ltr">_δ_</span> ان قدروں کی تعداد ہے جو ہم اسٹیک سے نکالتے ہیں۔ اس صورت میں دو، کیونکہ ہم اوپر کی دو قدروں کو جمع کر رہے ہیں۔
 
-_α_ ان اقدار کی تعداد ہے جو ہم واپس ڈالتے (push) ہیں۔ اس صورت میں ایک، یعنی مجموعہ۔
+<span dir="ltr">_α_</span> ان قدروں کی تعداد ہے جو ہم واپس ڈالتے ہیں۔ اس صورت میں ایک، یعنی مجموعہ۔
 
-لہذا نیا اسٹیک ٹاپ (_μ′<sub>s</sub>[0]_) پرانے اسٹیک ٹاپ (_μ<sub>s</sub>[0]_) اور اس کے نیچے موجود پرانی قدر (_μ<sub>s</sub>[1]_) کا مجموعہ ہے۔
+لہذا نیا اسٹیک ٹاپ (<span dir="ltr">_μ′<sub>s</sub>[0]_</span>) پرانے اسٹیک ٹاپ (<span dir="ltr">_μ<sub>s</sub>[0]_</span>) اور اس کے نیچے پرانی قدر (<span dir="ltr">_μ<sub>s</sub>[1]_</span>) کا مجموعہ ہے۔
 
-تمام آپ کوڈز کی ایک طویل اور بورنگ فہرست پر نظر ڈالنے کے بجائے، یہ مضمون صرف ان آپ کوڈز کی وضاحت کرتا ہے جو کچھ نیا متعارف کراتے ہیں۔
+ایک طویل اور بورنگ فہرست کے ساتھ تمام آپ کوڈز پر جانے کے بجائے، یہ مضمون صرف ان آپ کوڈز کی وضاحت کرتا ہے جو کچھ نیا متعارف کراتے ہیں۔
 
-| قدر | نیمونک | δ | α | تفصیل |
+| قدر | یادداشت (Mnemonic)  | δ   | α   | تفصیل                                                                                                |
 | ----: | --------- | --- | --- | ---------------------------------------------------------------------------------------------------------- |
-| 0x20 | KECCAK256 | 2 | 1 | کیچاک-۲۵۶ ہیش کا حساب لگائیں۔ |
-| | | | | _μ′<sub>s</sub>[0] ≡ KEC(μ<sub>m</sub>[μ<sub>s</sub>[0] . . . (μ<sub>s</sub>[0] + μ<sub>s</sub>[1] − 1)])_ |
-| | | | | _μ′<sub>i</sub> ≡ M(μ<sub>i</sub>,μ<sub>s</sub>[0],μ<sub>s</sub>[1])_ |
+|  <span dir="ltr">0x20</span> | KECCAK256 | <span dir="ltr">2</span>   | <span dir="ltr">1</span>   | کیچاک-۲۵۶ ہیش کا حساب لگائیں۔                                                                                   |
+|       |           |     |     | <span dir="ltr">_μ′<sub>s</sub>[0] ≡ KEC(μ<sub>m</sub>[μ<sub>s</sub>[0] . . . (μ<sub>s</sub>[0] + μ<sub>s</sub>[1] − 1)])_</span> |
+|       |           |     |     | <span dir="ltr">_μ′<sub>i</sub> ≡ M(μ<sub>i</sub>,μ<sub>s</sub>[0],μ<sub>s</sub>[1])_</span>                                      |
 
-یہ پہلا آپ کوڈ ہے جو میموری تک رسائی حاصل کرتا ہے (اس صورت میں، صرف پڑھنے کے لیے)۔ تاہم، یہ میموری کی موجودہ حدود سے آگے بڑھ سکتا ہے، اس لیے ہمیں _μ<sub>i</sub>_ کو اپ ڈیٹ کرنے کی ضرورت ہے۔ ہم یہ صفحہ <span dir="ltr">30</span> پر مساوات <span dir="ltr">330</span> میں بیان کردہ _M_ فنکشن کا استعمال کرتے ہوئے کرتے ہیں۔
+یہ پہلا آپ کوڈ ہے جو میموری تک رسائی حاصل کرتا ہے (اس صورت میں، صرف پڑھنے کے لیے)۔ تاہم، یہ میموری کی موجودہ حدود سے آگے بڑھ سکتا ہے، اس لیے ہمیں <span dir="ltr">_μ<sub>i</sub>_</span> کو اپ ڈیٹ کرنے کی ضرورت ہے۔ ہم یہ صفحہ <span dir="ltr">30</span> پر مساوات <span dir="ltr">330</span> میں بیان کردہ <span dir="ltr">_M_</span> فنکشن کا استعمال کرتے ہوئے کرتے ہیں۔
 
-| قدر | نیمونک | δ | α | تفصیل |
+| قدر | یادداشت (Mnemonic) | δ   | α   | تفصیل                       |
 | ----: | -------- | --- | --- | --------------------------------- |
-| 0x31 | BALANCE | 1 | 1 | دیے گئے اکاؤنٹ کا بیلنس حاصل کریں۔ |
-| | | | | ... |
+|  <span dir="ltr">0x31</span> | BALANCE  | <span dir="ltr">1</span>   | <span dir="ltr">1</span>   | دیے گئے اکاؤنٹ کا بیلنس حاصل کریں۔ |
+|       |          |     |     | ...                               |
 
-وہ پتہ جس کا بیلنس ہمیں تلاش کرنے کی ضرورت ہے وہ _μ<sub>s</sub>[0] mod 2<sup>160</sup>_ ہے۔ اسٹیک کا اوپری حصہ پتہ ہے، لیکن چونکہ پتے صرف <span dir="ltr">160 bits</span> کے ہوتے ہیں، اس لیے ہم قدر کا [ماڈیولو (modulo)](https://en.wikipedia.org/wiki/Modulo_operation) <span dir="ltr">2<sup>160</sup></span> حساب لگاتے ہیں۔
+وہ پتہ جس کا بیلنس ہمیں تلاش کرنے کی ضرورت ہے وہ <span dir="ltr">_μ<sub>s</sub>[0] mod 2<sup>160</sup>_</span> ہے۔ اسٹیک کا اوپری حصہ پتہ ہے، لیکن چونکہ پتے صرف <span dir="ltr">160</span> بٹس کے ہوتے ہیں، اس لیے ہم [ماڈیولو (modulo)](https://en.wikipedia.org/wiki/Modulo_operation) <span dir="ltr">2<sup>160</sup></span> کی قدر کا حساب لگاتے ہیں۔
 
-اگر _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] ≠ ∅_ ہے، تو اس کا مطلب ہے کہ اس پتے کے بارے میں معلومات موجود ہیں۔ اس صورت میں، _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>]<sub>b</sub>_ اس پتے کا بیلنس ہے۔ اگر _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] = ∅_ ہے، تو اس کا مطلب ہے کہ یہ پتہ غیر شروع شدہ (uninitialized) ہے اور بیلنس صفر ہے۔ آپ صفحہ <span dir="ltr">4</span> پر سیکشن <span dir="ltr">4.1</span> میں اکاؤنٹ کی معلومات کے فیلڈز کی فہرست دیکھ سکتے ہیں۔
+اگر <span dir="ltr">_σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] ≠ ∅_</span> ہے، تو اس کا مطلب ہے کہ اس پتے کے بارے میں معلومات موجود ہیں۔ اس صورت میں، <span dir="ltr">_σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>]<sub>b</sub>_</span> اس پتے کا بیلنس ہے۔ اگر <span dir="ltr">_σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] = ∅_</span> ہے، تو اس کا مطلب ہے کہ یہ پتہ غیر شروع شدہ (uninitialized) ہے اور بیلنس صفر ہے۔ آپ صفحہ <span dir="ltr">4</span> پر سیکشن <span dir="ltr">4.1</span> میں اکاؤنٹ کی معلومات کے فیلڈز کی فہرست دیکھ سکتے ہیں۔
 
-دوسری مساوات، _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub>[0] mod 2<sup>160</sup>\}_، گرم اسٹوریج (وہ اسٹوریج جس تک حال ہی میں رسائی حاصل کی گئی ہو اور جس کے کیشے (cached) ہونے کا امکان ہو) اور ٹھنڈے اسٹوریج (وہ اسٹوریج جس تک رسائی حاصل نہ کی گئی ہو اور جس کے سست اسٹوریج میں ہونے کا امکان ہو جسے بازیافت کرنا زیادہ مہنگا ہو) تک رسائی کی لاگت میں فرق سے متعلق ہے۔ _A<sub>a</sub>_ ان پتوں کی فہرست ہے جن تک ٹرانزیکشن کے ذریعے پہلے رسائی حاصل کی گئی تھی، اس لیے ان تک رسائی سستی ہونی چاہیے، جیسا کہ صفحہ <span dir="ltr">9</span> پر سیکشن <span dir="ltr">6.1</span> میں بیان کیا گیا ہے۔ آپ اس موضوع کے بارے میں مزید [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929) میں پڑھ سکتے ہیں۔
+دوسری مساوات، <span dir="ltr">_A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub>[0] mod 2<sup>160</sup>}_</span>، گرم اسٹوریج (وہ اسٹوریج جس تک حال ہی میں رسائی حاصل کی گئی ہو اور جس کے کیش (cached) ہونے کا امکان ہو) اور ٹھنڈے اسٹوریج (وہ اسٹوریج جس تک رسائی حاصل نہ کی گئی ہو اور جس کے سست اسٹوریج میں ہونے کا امکان ہو جسے بازیافت کرنا زیادہ مہنگا ہو) تک رسائی کے درمیان لاگت کے فرق سے متعلق ہے۔ <span dir="ltr">_A<sub>a</sub>_</span> ان پتوں کی فہرست ہے جن تک ٹرانزیکشن کے ذریعے پہلے رسائی حاصل کی گئی تھی، اس لیے ان تک رسائی سستی ہونی چاہیے، جیسا کہ صفحہ <span dir="ltr">9</span> پر سیکشن <span dir="ltr">6.1</span> میں بیان کیا گیا ہے۔ آپ اس موضوع کے بارے میں [<span dir="ltr">EIP-2929</span>](https://eips.ethereum.org/EIPS/eip-2929) میں مزید پڑھ سکتے ہیں۔
 
-| قدر | نیمونک | δ | α | تفصیل |
+| قدر | یادداشت (Mnemonic) | δ   | α   | تفصیل                             |
 | ----: | -------- | --- | --- | --------------------------------------- |
-| 0x8F | DUP16 | 16 | 17 | اسٹیک کے <span dir="ltr">16</span> ویں آئٹم کی نقل بنائیں۔ |
-| | | | | _μ′<sub>s</sub>[0] ≡ μ<sub>s</sub>[15]_ |
+|  <span dir="ltr">0x8F</span> | DUP16    | <span dir="ltr">16</span>  | <span dir="ltr">17</span>  | <span dir="ltr">16</span>ویں اسٹیک آئٹم کی نقل بنائیں۔              |
+|       |          |     |     | <span dir="ltr">_μ′<sub>s</sub>[0] ≡ μ<sub>s</sub>[15]_</span> |
 
-نوٹ کریں کہ کسی بھی اسٹیک آئٹم کو استعمال کرنے کے لیے، ہمیں اسے نکالنا (pop) پڑتا ہے، جس کا مطلب ہے کہ ہمیں اس کے اوپر موجود تمام اسٹیک آئٹمز کو بھی نکالنا ہوگا۔ [`DUP<n>`](https://www.evm.codes/#8f) اور [`SWAP<n>`](https://www.evm.codes/#9f) کے معاملے میں، اس کا مطلب ہے کہ سولہ اقدار تک کو نکالنا اور پھر واپس ڈالنا (push) پڑتا ہے۔
-## <span dir="ltr">9.5</span> عمل درآمد کا چکر
+نوٹ کریں کہ کسی بھی اسٹیک آئٹم کو استعمال کرنے کے لیے، ہمیں اسے نکالنا (pop) ہوگا، جس کا مطلب ہے کہ ہمیں اس کے اوپر موجود تمام اسٹیک آئٹمز کو بھی نکالنا ہوگا۔ [`DUP<n>`](https://www.evm.codes/#8f) اور [`SWAP<n>`](https://www.evm.codes/#9f) کے معاملے میں، اس کا مطلب ہے کہ سولہ قدروں تک کو نکالنا اور پھر ڈالنا (push) پڑے گا۔
 
-اب چونکہ ہمارے پاس تمام حصے موجود ہیں، ہم بالآخر سمجھ سکتے ہیں کہ <span dir="ltr">EVM</span> کے عمل درآمد کے چکر کو کس طرح دستاویزی شکل دی گئی ہے۔
+## 9.5 عمل درآمد کا چکر {#95-exec-cycle}
 
-مساوات (<span dir="ltr">164</span>) کہتی ہے کہ دی گئی حالت کے مطابق:
+اب جب کہ ہمارے پاس تمام حصے ہیں، ہم بالآخر سمجھ سکتے ہیں کہ <span dir="ltr">EVM</span> کے عمل درآمد کے چکر (execution cycle) کو کیسے دستاویزی شکل دی گئی ہے۔
 
-- _σ_ (عالمی بلاک چین کی حالت)
-- _μ_ (<span dir="ltr">EVM</span> کی حالت)
-- _A_ (ذیلی حالت، وہ تبدیلیاں جو ٹرانزیکشن کے ختم ہونے پر ہوں گی)
-- _I_ (عمل درآمد کا ماحول)
+مساوات (<span dir="ltr">164</span>) کہتی ہے کہ دی گئی حالت میں:
 
-نئی حالت _(σ', μ', A', I')_ ہے۔
+- <span dir="ltr">_σ_</span> (عالمی بلاک چین کی حالت)
+- <span dir="ltr">_μ_</span> (<span dir="ltr">EVM</span> کی حالت)
+- <span dir="ltr">_A_</span> (ذیلی حالت، ٹرانزیکشن ختم ہونے پر ہونے والی تبدیلیاں)
+- <span dir="ltr">_I_</span> (عمل درآمد کا ماحول)
 
-مساوات (<span dir="ltr">165</span>)-(<span dir="ltr">167</span>) اسٹیک اور ایک آپ کوڈ (_μ<sub>s</sub>_) کی وجہ سے اس میں ہونے والی تبدیلی کی وضاحت کرتی ہیں۔ مساوات (<span dir="ltr">168</span>) گیس (_μ<sub>g</sub>_) میں تبدیلی ہے۔ مساوات (<span dir="ltr">169</span>) پروگرام کاؤنٹر (_μ<sub>pc</sub>_) میں تبدیلی ہے۔ آخر میں، مساوات (<span dir="ltr">170</span>)-(<span dir="ltr">173</span>) یہ واضح کرتی ہیں کہ دیگر پیرامیٹرز ویسے ہی رہتے ہیں، جب تک کہ آپ کوڈ کے ذریعے واضح طور پر تبدیل نہ کیے جائیں۔
+نئی حالت <span dir="ltr">_(σ', μ', A', I')_</span> ہے۔
 
-اس کے ساتھ <span dir="ltr">EVM</span> کی مکمل وضاحت ہو جاتی ہے۔
+مساوات (<span dir="ltr">165</span>)-(<span dir="ltr">167</span>) اسٹیک اور آپ کوڈ (<span dir="ltr">_μ<sub>s</sub>_</span>) کی وجہ سے اس میں ہونے والی تبدیلی کی وضاحت کرتی ہیں۔ مساوات (<span dir="ltr">168</span>) گیس میں تبدیلی (<span dir="ltr">_μ<sub>g</sub>_</span>) ہے۔ مساوات (<span dir="ltr">169</span>) پروگرام کاؤنٹر میں تبدیلی (<span dir="ltr">_μ<sub>pc</sub>_</span>) ہے۔ آخر میں، مساوات (<span dir="ltr">170</span>)-(<span dir="ltr">173</span>) بتاتی ہیں کہ دیگر پیرامیٹرز ویسے ہی رہتے ہیں، جب تک کہ آپ کوڈ کے ذریعے واضح طور پر تبدیل نہ کیے جائیں۔
+
+اس کے ساتھ <span dir="ltr">EVM</span> کی مکمل تعریف ہو جاتی ہے۔
+
 ## نتیجہ {#conclusion}
 
-ریاضیاتی اشارے قطعی ہیں اور انہوں نے یلو پیپر کو ایتھیریم کی ہر تفصیل بتانے کی اجازت دی ہے۔ تاہم، اس کی کچھ خامیاں ہیں:
+ریاضیاتی اشارے (Mathematical notation) قطعی ہوتے ہیں اور انہوں نے یلو پیپر کو ایتھیریم کی ہر تفصیل بتانے کی اجازت دی ہے۔ تاہم، اس کی کچھ خامیاں ہیں:
 
-- اسے صرف انسان ہی سمجھ سکتے ہیں، جس کا مطلب ہے کہ [تعمیل کے ٹیسٹ](https://github.com/ethereum/tests) دستی طور پر لکھے جانے چاہئیں۔
+- اسے صرف انسان ہی سمجھ سکتے ہیں، جس کا مطلب ہے کہ [تعمیل کے ٹیسٹ (compliance tests)](https://github.com/ethereum/tests) دستی طور پر لکھے جانے چاہئیں۔
 - پروگرامرز کمپیوٹر کوڈ کو سمجھتے ہیں۔
-  وہ ریاضیاتی اشارے کو سمجھ بھی سکتے ہیں اور نہیں بھی۔
+  وہ ریاضیاتی اشارے سمجھ بھی سکتے ہیں اور نہیں بھی۔
 
-شاید انہی وجوہات کی بنا پر، نئی [اتفاق رائے کی تہہ کی تفصیلات](https://github.com/ethereum/consensus-specs/blob/master/tests/core/pyspec/README.md) Python میں لکھی گئی ہیں۔ Python میں [عمل درآمد کی تہہ کی تفصیلات](https://ethereum.github.io/execution-specs) موجود ہیں، لیکن وہ مکمل نہیں ہیں۔ جب تک کہ پورا یلو پیپر بھی Python یا اس جیسی کسی زبان میں ترجمہ نہیں ہو جاتا، یلو پیپر سروس میں رہے گا، اور اسے پڑھنے کے قابل ہونا مددگار ہے۔
+شاید انہی وجوہات کی بنا پر، اتفاق رائے کی تہہ کی نئی تفصیلات [Python](https://github.com/ethereum/consensus-specs/blob/master/tests/core/pyspec/README.md) میں لکھی گئی ہیں۔ Python میں [عمل درآمد کی تہہ کی تفصیلات](https://ethereum.github.io/execution-specs) موجود ہیں، لیکن وہ مکمل نہیں ہیں۔ جب تک کہ پورا یلو پیپر بھی Python یا اس جیسی کسی زبان میں ترجمہ نہیں ہو جاتا، یلو پیپر سروس میں رہے گا، اور اسے پڑھنے کے قابل ہونا مددگار ہے۔

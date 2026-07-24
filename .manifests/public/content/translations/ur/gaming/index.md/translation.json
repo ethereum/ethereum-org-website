@@ -1,19 +1,18 @@
 {
   "version": 1,
   "locale": "ur",
-  "translatedAt": "2026-06-11T14:44:48.018Z",
-  "englishManifestHash": "9998a7c6df52",
+  "translatedAt": "2026-07-24T15:57:23.109Z",
+  "englishManifestHash": "d400e209ae59",
   "placeholderOrder": [
     "LINK-5986c4",
     "LINK-734450",
     "LINK-6fdd77",
-    "LINK-032cef",
+    "LINK-7efa61",
     "LINK-21ea62",
     "LINK-333db9",
     "LINK-acd165",
     "LINK-7025b6",
     "LINK-8cc6be",
-    "LINK-1bf4bb",
     "LINK-51ef83",
     "LINK-80080b",
     "LINK-f56c1a",
@@ -29,6 +28,7 @@
     "LINK-ff5150",
     "LINK-f1fb3a",
     "LINK-113852",
+    "LINK-259e9e",
     "LINK-6c4cfe",
     "LINK-eb269e",
     "LINK-7f43c7",
@@ -56,10 +56,10 @@
         "url": "/roadmap/scaling/"
       }
     },
-    "LINK-032cef": {
+    "LINK-7efa61": {
       "type": "link",
       "values": {
-        "url": "https://x.com/asph0d37"
+        "url": "https://play.asphodel.io/"
       }
     },
     "LINK-21ea62": {
@@ -90,12 +90,6 @@
       "type": "link",
       "values": {
         "url": "https://abs.xyz/"
-      }
-    },
-    "LINK-1bf4bb": {
-      "type": "link",
-      "values": {
-        "url": "https://www.immutable.com/"
       }
     },
     "LINK-51ef83": {
@@ -188,6 +182,12 @@
         "url": "https://x.com/FOCGERS"
       }
     },
+    "LINK-259e9e": {
+      "type": "link",
+      "values": {
+        "url": "/apps/eternum/"
+      }
+    },
     "LINK-6c4cfe": {
       "type": "link",
       "values": {
@@ -233,7 +233,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-11T14:44:48.018Z",
+      "translatedAt": "2026-07-24T15:57:23.109Z",
       "status": "success"
     }
   }

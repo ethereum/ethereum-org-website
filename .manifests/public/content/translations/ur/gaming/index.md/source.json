@@ -1,7 +1,7 @@
 {
   "version": 1,
   "sourceFile": "public/content/gaming/index.md",
-  "generatedAt": "2026-07-23T00:09:00.006Z",
+  "generatedAt": "2026-07-24T15:57:23.108Z",
   "rootHash": "d400e209ae59",
   "tree": {
     "contentHash": "4140b8b33fed",
@@ -709,5 +709,5 @@
       "get-started-with-gaming-on-ethereum"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "a1fbad5cfb3d96e2bc6a345a0325fbc6a46dbc6f"
 }

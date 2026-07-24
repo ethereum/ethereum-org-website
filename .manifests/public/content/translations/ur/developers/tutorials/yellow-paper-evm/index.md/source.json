@@ -1,7 +1,7 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/tutorials/yellow-paper-evm/index.md",
-  "generatedAt": "2026-07-23T00:04:36.459Z",
+  "generatedAt": "2026-07-24T15:59:01.202Z",
   "rootHash": "596389cda58e",
   "tree": {
     "contentHash": "bb7bacf188c7",
@@ -1328,5 +1328,5 @@
       "conclusion"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "a1fbad5cfb3d96e2bc6a345a0325fbc6a46dbc6f"
 }

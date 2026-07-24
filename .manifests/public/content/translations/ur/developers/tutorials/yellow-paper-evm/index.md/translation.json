@@ -1,12 +1,12 @@
 {
   "version": 1,
   "locale": "ur",
-  "translatedAt": "2026-06-19T23:34:41.466Z",
-  "englishManifestHash": "6f3029cd946f",
+  "translatedAt": "2026-07-24T15:59:01.203Z",
+  "englishManifestHash": "596389cda58e",
   "placeholderOrder": [
     "LINK-5bdec9",
     "LINK-299230",
-    "LINK-ea13b2",
+    "LINK-4e3fd0",
     "LINK-3a0ce1",
     "LINK-fa9c2b",
     "LINK-2d8b10",
@@ -476,10 +476,10 @@
         "url": "/eips/"
       }
     },
-    "LINK-ea13b2": {
+    "LINK-4e3fd0": {
       "type": "link",
       "values": {
-        "url": "yellow-paper-berlin.pdf"
+        "url": "https://ethereum.github.io/yellowpaper/paper.pdf"
       }
     },
     "LINK-3a0ce1": {
@@ -791,7 +791,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-19T23:34:41.466Z",
+      "translatedAt": "2026-07-24T15:59:01.203Z",
       "status": "success"
     }
   }
