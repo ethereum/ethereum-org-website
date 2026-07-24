@@ -83,6 +83,25 @@ test.describe("getConfig", () => {
     )
   })
 
+  test("falls back to NEXT_PUBLIC_* vars when unprefixed are absent", () => {
+    const config = getConfig({
+      NEXT_PUBLIC_MATOMO_URL: "https://public.example.com",
+      NEXT_PUBLIC_MATOMO_SITE_ID: "5",
+    })
+    expect(config.matomoUrl).toBe("https://public.example.com")
+    expect(config.matomoSiteId).toBe(5)
+  })
+
+  test("unprefixed vars override NEXT_PUBLIC_* vars", () => {
+    const config = getConfig({
+      ...baseEnv,
+      NEXT_PUBLIC_MATOMO_URL: "https://public.example.com",
+      NEXT_PUBLIC_MATOMO_SITE_ID: "5",
+    })
+    expect(config.matomoUrl).toBe(baseEnv.MATOMO_URL)
+    expect(config.matomoSiteId).toBe(42)
+  })
+
   test("throws when MATOMO_URL is missing", () => {
     expect(() => getConfig({ MATOMO_SITE_ID: "1" })).toThrow(
       /MATOMO_URL is required/

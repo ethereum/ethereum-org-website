@@ -31,14 +31,20 @@ const defaultUrlExcludePattern =
 export function getConfig(
   env: Partial<Env> & Record<string, string | undefined>
 ): MatomoConfig {
-  const matomoUrl = env.MATOMO_URL
+  // Unprefixed vars act as overrides; default to the site-wide NEXT_PUBLIC_*
+  // vars already scoped per deploy context in Netlify
+  const matomoUrl = env.MATOMO_URL || env.NEXT_PUBLIC_MATOMO_URL
   if (!matomoUrl) {
-    throw new Error("MATOMO_URL is required")
+    throw new Error(
+      "MATOMO_URL is required (MATOMO_URL or NEXT_PUBLIC_MATOMO_URL)"
+    )
   }
 
-  const siteIdRaw = env.MATOMO_SITE_ID
+  const siteIdRaw = env.MATOMO_SITE_ID || env.NEXT_PUBLIC_MATOMO_SITE_ID
   if (!siteIdRaw) {
-    throw new Error("MATOMO_SITE_ID is required")
+    throw new Error(
+      "MATOMO_SITE_ID is required (MATOMO_SITE_ID or NEXT_PUBLIC_MATOMO_SITE_ID)"
+    )
   }
   const matomoSiteId = toInt(siteIdRaw)
   if (matomoSiteId === undefined) {
