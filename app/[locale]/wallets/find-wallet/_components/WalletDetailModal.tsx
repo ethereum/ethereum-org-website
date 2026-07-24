@@ -11,6 +11,7 @@ import {
   Dialog,
   DialogClose,
   DialogContent,
+  DialogDescription,
   DialogTitle,
 } from "@/components/ui/dialog-modal"
 
@@ -26,10 +27,13 @@ import {
 const WalletDetailModal = ({
   title,
   image,
+  description,
   children,
 }: {
   title: string
   image: StaticImageData
+  /** Accessible description; when absent, Radix's describedby warning is opted out. */
+  description?: string
   children: ReactNode
 }) => {
   const router = useRouter()
@@ -43,7 +47,14 @@ const WalletDetailModal = ({
         if (!open) router.back()
       }}
     >
-      <DialogContent>
+      <DialogContent
+        {...(description ? {} : { "aria-describedby": undefined })}
+      >
+        {description && (
+          <DialogDescription className="sr-only">
+            {description}
+          </DialogDescription>
+        )}
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center gap-4">
             <Image

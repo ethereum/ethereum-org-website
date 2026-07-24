@@ -4,3 +4,7 @@ export function toggleId(ids: string[], id: string): string[] {
     ? ids.filter((existing) => existing !== id)
     : [...ids, id]
 }
+
+/** Normalize a filter-state slot (string | string[] | undefined) to an array. */
+export const asArray = (value: string | string[] | undefined): string[] =>
+  Array.isArray(value) ? value : []

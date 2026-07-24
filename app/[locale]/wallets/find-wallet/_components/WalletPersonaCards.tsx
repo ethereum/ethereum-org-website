@@ -15,36 +15,44 @@ type WalletPersonaCardsProps = {
   currentPersonaId?: WalletPersonaId
 }
 
-const colors = {
-  text: [
-    "text-primary",
-    "text-accent-b",
-    "text-accent-c",
-    "text-accent-a",
-    "text-[#BEBF3B]",
-  ],
-  border: [
-    "border-primary",
-    "border-accent-b",
-    "border-accent-c",
-    "border-accent-a",
-    "border-[#BEBF3B]",
-  ],
-  bg: [
-    "bg-primary",
-    "bg-accent-b",
-    "bg-accent-c",
-    "bg-accent-a",
-    "bg-[#BEBF3B]",
-  ],
-  // Faint fill for the active card, so a checked persona reads as selected.
-  bgTint: [
-    "bg-primary/10",
-    "bg-accent-b/10",
-    "bg-accent-c/10",
-    "bg-accent-a/10",
-    "bg-[#BEBF3B]/10",
-  ],
+// Per-persona accent classes, keyed by persona id (not array position) so
+// reordering WALLET_PERSONAS can't desync a card from its color. Full literal
+// class strings are required for Tailwind's scanner. `bgTint` is the faint fill
+// on the active card, so a checked persona reads as selected. The chip
+// counterpart lives in `PERSONA_TAG_STATUS` (semantic tokens).
+type PersonaColor = { text: string; border: string; bg: string; bgTint: string }
+
+const PERSONA_COLORS: Record<WalletPersonaId, PersonaColor> = {
+  "new-to-crypto": {
+    text: "text-primary",
+    border: "border-primary",
+    bg: "bg-primary",
+    bgTint: "bg-primary/10",
+  },
+  developer: {
+    text: "text-accent-b",
+    border: "border-accent-b",
+    bg: "bg-accent-b",
+    bgTint: "bg-accent-b/10",
+  },
+  finance: {
+    text: "text-accent-c",
+    border: "border-accent-c",
+    bg: "bg-accent-c",
+    bgTint: "bg-accent-c/10",
+  },
+  hardware: {
+    text: "text-accent-a",
+    border: "border-accent-a",
+    bg: "bg-accent-a",
+    bgTint: "bg-accent-a/10",
+  },
+  nfts: {
+    text: "text-[#BEBF3B]",
+    border: "border-[#BEBF3B]",
+    bg: "bg-[#BEBF3B]",
+    bgTint: "bg-[#BEBF3B]/10",
+  },
 }
 
 /**
@@ -72,9 +80,9 @@ const WalletPersonaCards = async ({
         className="grid auto-cols-[200px] grid-flow-col gap-4 overflow-x-auto px-4 lg:auto-cols-fr"
         data-testid="preset-filters-container"
       >
-        {WALLET_PERSONAS.map((persona, idx) => {
+        {WALLET_PERSONAS.map((persona) => {
           const isActive = currentPersonaId === persona.id
-          const colorIdx = colors.text[idx] ? idx : idx % colors.text.length
+          const color = PERSONA_COLORS[persona.id]
           const count = personaCounts[persona.id]
           return (
             <div key={persona.id} className="grid-rows-1 pb-5">
@@ -88,7 +96,7 @@ const WalletPersonaCards = async ({
                 className={cn(
                   "group flex h-[164px] w-full cursor-pointer flex-col items-start rounded-base border-2 p-3 no-underline shadow-lg transition-all duration-50 focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-4 focus-visible:outline-primary-hover lg:h-full lg:p-6",
                   isActive
-                    ? cn(colors.border[colorIdx], colors.bgTint[colorIdx])
+                    ? cn(color.border, color.bgTint)
                     : "border-primary-low-contrast hover:bg-background-highlight"
                 )}
               >
@@ -97,8 +105,8 @@ const WalletPersonaCards = async ({
                     aria-hidden
                     className={cn(
                       "relative mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded border-2",
-                      colors.border[colorIdx],
-                      isActive && colors.bg[colorIdx]
+                      color.border,
+                      isActive && color.bg
                     )}
                   >
                     {isActive && (
@@ -108,7 +116,7 @@ const WalletPersonaCards = async ({
                   <span
                     className={cn(
                       "text-left text-xl font-bold hyphens-auto transition-all duration-50",
-                      colors.text[colorIdx]
+                      color.text
                     )}
                   >
                     {t(persona.titleKey)}

@@ -7,6 +7,7 @@ import type {
   CatalogFilterState,
   CatalogSetFilter,
 } from "@/components/FilterableCatalog/types"
+import { asArray } from "@/components/FilterableCatalog/utils"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -16,9 +17,6 @@ import {
   NETWORKS_KEY,
   PURCHASES_KEY,
 } from "./WalletFilters"
-
-const asArray = (value: string | string[] | undefined): string[] =>
-  Array.isArray(value) ? value : []
 
 type WalletFiltersHeaderProps = {
   state: CatalogFilterState

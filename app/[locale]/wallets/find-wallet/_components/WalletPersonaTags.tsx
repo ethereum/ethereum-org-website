@@ -1,3 +1,5 @@
+"use client"
+
 import { memo } from "react"
 import { useTranslations } from "next-intl"
 
@@ -14,9 +16,9 @@ type WalletPersonaTagsProps = {
 }
 
 /**
- * Persona chips for a wallet card. Each chip carries its persona's accent color
- * (shared with the persona nav cards via `PERSONA_STYLES`) so the two stay in
- * sync, resolving persona ids to localized titles.
+ * Persona chips for a wallet. Each chip carries its persona's accent color via
+ * `PERSONA_TAG_STATUS`, resolving persona ids to localized titles. Renders
+ * nothing when the wallet has no personas.
  */
 const WalletPersonaTags = ({ personas }: WalletPersonaTagsProps) => {
   const t = useTranslations("page-wallets-find-wallet")

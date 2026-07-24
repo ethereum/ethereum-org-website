@@ -6,7 +6,7 @@ import type {
   CatalogFilterState,
   CatalogSetFilter,
 } from "@/components/FilterableCatalog/types"
-import { toggleId } from "@/components/FilterableCatalog/utils"
+import { asArray, toggleId } from "@/components/FilterableCatalog/utils"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -18,9 +18,6 @@ export const DEVICES_KEY = "devices"
 export const NETWORKS_KEY = "networks"
 export const PURCHASES_KEY = "purchases"
 export const LANGUAGE_KEY = "language"
-
-const asArray = (value: string | string[] | undefined): string[] =>
-  Array.isArray(value) ? value : []
 
 // Matomo category kept from the old sidebar for trend comparability.
 const trackFilterToggle = (action: string, name: string) =>

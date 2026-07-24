@@ -7,16 +7,18 @@ import type {
   WalletData,
 } from "@/lib/types"
 
-import { getWalletSlug } from "@/lib/utils/getWalletSlug"
+import { formatDate } from "@/lib/utils/date"
 import { getLanguageCodeName } from "@/lib/utils/intl"
 import { stripMarkdown } from "@/lib/utils/md"
 import { capitalize } from "@/lib/utils/string"
+import { slugify } from "@/lib/utils/url"
 import {
   getNonSupportedLocaleWallets,
   getSupportedLanguages,
   getSupportedLocaleWallets,
 } from "@/lib/utils/wallets"
 
+import { getWalletDevices, type WalletDeviceId } from "@/data/wallets/devices"
 import {
   WALLET_PERSONA_IDS,
   WALLET_PERSONAS,
@@ -24,7 +26,6 @@ import {
 } from "@/data/wallets/personas"
 import walletsData from "@/data/wallets/wallet-data"
 
-export { getWalletSlug }
 export {
   isWalletPersonaId,
   PERSONA_TITLE_KEYS,
@@ -33,31 +34,28 @@ export {
   type WalletPersonaId,
 } from "@/data/wallets/personas"
 
-/**
- * The four flat device buckets drawn in the Figma revamp, derived from the raw
- * per-OS booleans on `WalletData`. Note `hardware` here means "is a hardware
- * wallet device" (the `hardware` field), distinct from the `hardware_support`
- * feature (software wallet that pairs with one).
- */
-export type WalletDeviceId = "desktop" | "mobile" | "browser" | "hardware"
-
-export const WALLET_DEVICE_IDS: WalletDeviceId[] = [
-  "desktop",
-  "mobile",
-  "browser",
-  "hardware",
-]
-
-export function getWalletDevices(
-  wallet: WalletData
-): Record<WalletDeviceId, boolean> {
-  return {
-    desktop: wallet.linux || wallet.windows || wallet.macOS,
-    mobile: wallet.ios || wallet.android,
-    browser: wallet.firefox || wallet.chromium,
-    hardware: wallet.hardware,
-  }
+/** OS/platform names a wallet runs on, for JSON-LD `operatingSystem`. */
+export function getWalletPlatforms(wallet: WalletData): string[] {
+  const os: string[] = []
+  if (wallet.ios) os.push("iOS")
+  if (wallet.android) os.push("Android")
+  if (wallet.linux) os.push("Linux")
+  if (wallet.windows) os.push("Windows")
+  if (wallet.macOS) os.push("macOS")
+  if (wallet.chromium) os.push("Chromium (Extension)")
+  if (wallet.firefox) os.push("Firefox")
+  if (wallet.hardware) os.push("Hardware")
+  return os
 }
+
+/**
+ * Canonical mapping from a wallet to its URL slug (also its React key). Defaults
+ * to `slugify(name)`; a wallet may pin an explicit `slug` to keep its URL stable
+ * across a rename.
+ */
+export const getWalletSlug = (
+  wallet: Pick<WalletData, "name" | "slug">
+): string => wallet.slug ?? slugify(wallet.name)
 
 /** Persona ids a wallet qualifies for (all of a persona's features true). */
 export function getWalletPersonaIds(wallet: WalletData): WalletPersonaId[] {
@@ -120,7 +118,7 @@ export function getWalletLanguageOptions(
         wallet.languages_supported.includes(code as never)
       ).length,
     }))
-    .sort((a, b) => a.name.localeCompare(b.name))
+    .sort((a, b) => a.name.localeCompare(b.name, locale))
 }
 
 /**
@@ -189,6 +187,19 @@ export function getWalletsByPersona(
   personaId: WalletPersonaId
 ): CatalogWallet[] {
   return wallets.filter((wallet) => wallet.personas.includes(personaId))
+}
+
+/** Display string for the most recent `last_updated` across the given wallets (empty when none). */
+export function getLastUpdatedDisplay(
+  wallets: CatalogWallet[],
+  locale: string
+): string {
+  const mostRecent = wallets
+    .map((wallet) => wallet.last_updated)
+    .filter((date) => date.length > 0)
+    .sort()
+    .at(-1)
+  return mostRecent ? formatDate(mostRecent, locale) : ""
 }
 
 /** Global membership count per persona, for the persona navigation cards. */

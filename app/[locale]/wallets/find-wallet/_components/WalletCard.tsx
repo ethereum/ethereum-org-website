@@ -1,3 +1,5 @@
+"use client"
+
 import { memo, useMemo } from "react"
 import { useTranslations } from "next-intl"
 
@@ -5,16 +7,11 @@ import { Image } from "@/components/Image"
 import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
-import type { CatalogWallet, WalletDeviceId } from "@/lib/utils/walletData"
+import type { CatalogWallet } from "@/lib/utils/walletData"
+
+import { getDeviceLabels } from "@/data/wallets/devices"
 
 import WalletPersonaTags from "./WalletPersonaTags"
-
-const DEVICE_LABEL_KEYS: Record<WalletDeviceId, string> = {
-  desktop: "page-find-wallet-desktop",
-  mobile: "page-find-wallet-mobile",
-  browser: "page-find-wallet-browser",
-  hardware: "page-find-wallet-hardware",
-}
 
 // Card shows only the first couple languages inline; the rest collapse into the
 // "+ N" tooltip chip. Local (not the shared NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN)
@@ -29,10 +26,7 @@ const WalletCard = memo(function WalletCard({
   const t = useTranslations("page-wallets-find-wallet")
 
   const deviceLabels = useMemo(
-    () =>
-      (Object.keys(wallet.devices) as WalletDeviceId[])
-        .filter((device) => wallet.devices[device])
-        .map((device) => t(DEVICE_LABEL_KEYS[device])),
+    () => getDeviceLabels(wallet.devices, t),
     [wallet.devices, t]
   )
 
@@ -64,9 +58,7 @@ const WalletCard = memo(function WalletCard({
             {wallet.name}
           </LinkOverlay>
 
-          {wallet.personas.length > 0 && (
-            <WalletPersonaTags personas={wallet.personas} />
-          )}
+          <WalletPersonaTags personas={wallet.personas} />
 
           <div className="space-y-0.5 text-sm text-body-medium">
             {deviceLabels.length > 0 && <p>{deviceLabels.join(" · ")}</p>}

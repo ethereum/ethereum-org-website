@@ -71,8 +71,8 @@ export type PersonaTagStatus =
 
 /**
  * Per-persona chip color for the wallet cards, mapped onto theme-aware semantic
- * tokens. Keep in sync with the index-based card palette in
- * `WalletPersonaCards` so a persona's chip matches its card.
+ * tokens. Keep in sync with the `PERSONA_COLORS` map in `WalletPersonaCards` so
+ * a persona's chip matches its card.
  */
 export const PERSONA_TAG_STATUS: Record<WalletPersonaId, PersonaTagStatus> = {
   "new-to-crypto": "primary",

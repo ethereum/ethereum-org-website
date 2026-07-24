@@ -6,10 +6,10 @@ import PageHero from "@/components/Hero/PageHero"
 import MainArticle from "@/components/MainArticle"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { formatDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import {
   getCatalogWallets,
+  getLastUpdatedDisplay,
   getPersonaCounts,
   getWalletLanguageOptions,
   getWalletNetworks,
@@ -28,19 +28,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const t = await getTranslations("page-wallets-find-wallet")
 
-  const wallets = getCatalogWallets(locale!)
+  const wallets = getCatalogWallets(locale)
   const networks = getWalletNetworks(wallets)
-  const languages = getWalletLanguageOptions(wallets, locale!)
+  const languages = getWalletLanguageOptions(wallets, locale)
   const personaCounts = getPersonaCounts(wallets)
 
-  const mostRecentWalletUpdate = wallets
-    .map((wallet) => wallet.last_updated)
-    .filter((date) => date.length > 0)
-    .sort()
-    .at(-1)
-  const lastUpdatedDisplay = mostRecentWalletUpdate
-    ? formatDate(mostRecentWalletUpdate, locale)
-    : ""
+  const lastUpdatedDisplay = getLastUpdatedDisplay(wallets, locale)
 
   // Contributor info comes from the Netlify Blobs data layer; it only feeds a
   // supplementary JSON-LD field, so a data-layer outage must not 500 the page.

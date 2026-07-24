@@ -5,12 +5,19 @@ import { useTranslations } from "next-intl"
 
 import FilterableCatalog from "@/components/FilterableCatalog"
 import type { CatalogFilterState } from "@/components/FilterableCatalog/types"
+import { asArray } from "@/components/FilterableCatalog/utils"
 
 import type {
   CatalogWallet,
-  WalletDeviceId,
+  WalletLanguageOption,
   WalletNetwork,
 } from "@/lib/utils/walletData"
+
+import {
+  DEVICE_LABEL_KEYS,
+  WALLET_DEVICE_IDS,
+  type WalletDeviceId,
+} from "@/data/wallets/devices"
 
 import WalletCard from "./WalletCard"
 import WalletFilters, {
@@ -21,21 +28,7 @@ import WalletFilters, {
 } from "./WalletFilters"
 import WalletFiltersHeader from "./WalletFiltersHeader"
 
-const DEVICE_IDS: WalletDeviceId[] = [
-  "desktop",
-  "mobile",
-  "browser",
-  "hardware",
-]
-const DEVICE_LABEL_KEYS: Record<WalletDeviceId, string> = {
-  desktop: "page-find-wallet-desktop",
-  mobile: "page-find-wallet-mobile",
-  browser: "page-find-wallet-browser",
-  hardware: "page-find-wallet-hardware",
-}
 const PURCHASE_IDS = ["buy_crypto", "withdraw_crypto"] as const
-
-type WalletLanguageOption = { code: string; name: string; count: number }
 
 type WalletsCatalogProps = {
   locale: string
@@ -43,9 +36,6 @@ type WalletsCatalogProps = {
   networks: WalletNetwork[]
   languages: WalletLanguageOption[]
 }
-
-const asArray = (value: string | string[] | undefined): string[] =>
-  Array.isArray(value) ? value : []
 
 const WalletsResults = memo(function WalletsResults({
   wallets,
@@ -85,7 +75,7 @@ export default function WalletsCatalog({
   // these are plain consts, not useMemo. Only filterFn is stabilized below,
   // since FilterableCatalog memoizes on it.
   const deviceCounts = {} as Record<WalletDeviceId, number>
-  for (const device of DEVICE_IDS) {
+  for (const device of WALLET_DEVICE_IDS) {
     deviceCounts[device] = wallets.filter(
       (wallet) => wallet.devices[device]
     ).length
@@ -96,7 +86,7 @@ export default function WalletsCatalog({
     withdraw_crypto: wallets.filter((wallet) => wallet.withdraw_crypto).length,
   }
 
-  const deviceOptions = DEVICE_IDS.map((device) => ({
+  const deviceOptions = WALLET_DEVICE_IDS.map((device) => ({
     id: device,
     label: t(DEVICE_LABEL_KEYS[device]),
     count: deviceCounts[device],

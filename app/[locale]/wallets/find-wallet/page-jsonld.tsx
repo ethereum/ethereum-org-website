@@ -5,6 +5,7 @@ import { FileContributor, Lang, WalletData } from "@/lib/types"
 import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+import { getWalletPlatforms } from "@/lib/utils/walletData"
 
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
@@ -27,19 +28,6 @@ export default async function FindWalletPageJsonLD({
     name: contributor.login,
     url: contributor.html_url,
   }))
-
-  const platforms = (wallet: WalletData): string[] => {
-    const os: string[] = []
-    if (wallet.ios) os.push("iOS")
-    if (wallet.android) os.push("Android")
-    if (wallet.linux) os.push("Linux")
-    if (wallet.windows) os.push("Windows")
-    if (wallet.macOS) os.push("macOS")
-    if (wallet.chromium) os.push("Chromium (Extension)")
-    if (wallet.firefox) os.push("Firefox")
-    if (wallet.hardware) os.push("Hardware")
-    return os
-  }
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -100,8 +88,8 @@ export default async function FindWalletPageJsonLD({
             name: wallet.name,
             url: wallet.url,
             applicationCategory: "Cryptocurrency Wallet",
-            ...(platforms(wallet).length > 0 && {
-              operatingSystem: platforms(wallet).join(", "),
+            ...(getWalletPlatforms(wallet).length > 0 && {
+              operatingSystem: getWalletPlatforms(wallet).join(", "),
             }),
             offers: {
               "@type": "Offer",

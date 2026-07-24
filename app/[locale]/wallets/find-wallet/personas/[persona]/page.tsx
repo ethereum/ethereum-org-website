@@ -6,10 +6,10 @@ import type { PageParams } from "@/lib/types"
 import PageHero from "@/components/Hero/PageHero"
 import MainArticle from "@/components/MainArticle"
 
-import { formatDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import {
   getCatalogWallets,
+  getLastUpdatedDisplay,
   getPersonaCounts,
   getWalletLanguageOptions,
   getWalletNetworks,
@@ -46,14 +46,7 @@ const Page = async (props: { params: Promise<PersonaPageParams> }) => {
   const languages = getWalletLanguageOptions(wallets, locale)
   const personaCounts = getPersonaCounts(allWallets)
 
-  const mostRecentWalletUpdate = wallets
-    .map((wallet) => wallet.last_updated)
-    .filter((date) => date.length > 0)
-    .sort()
-    .at(-1)
-  const lastUpdatedDisplay = mostRecentWalletUpdate
-    ? formatDate(mostRecentWalletUpdate, locale)
-    : ""
+  const lastUpdatedDisplay = getLastUpdatedDisplay(wallets, locale)
 
   return (
     <>

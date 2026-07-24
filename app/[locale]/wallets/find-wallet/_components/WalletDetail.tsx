@@ -13,23 +13,17 @@ import Twitter from "@/components/icons/twitter.svg"
 import { Image } from "@/components/Image"
 import Tooltip from "@/components/Tooltip"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Tag } from "@/components/ui/tag"
 
 import { getLocaleFormattedDate } from "@/lib/utils/date"
-import type { CatalogWallet, WalletDeviceId } from "@/lib/utils/walletData"
+import type { CatalogWallet } from "@/lib/utils/walletData"
 
+import { getDeviceLabels } from "@/data/wallets/devices"
 import {
   WALLET_FEATURE_GROUPS,
   type WalletFeature,
 } from "@/data/wallets/features"
-import { PERSONA_TAG_STATUS, PERSONA_TITLE_KEYS } from "@/data/wallets/personas"
 
-const DEVICE_LABEL_KEYS: Record<WalletDeviceId, string> = {
-  desktop: "page-find-wallet-desktop",
-  mobile: "page-find-wallet-mobile",
-  browser: "page-find-wallet-browser",
-  hardware: "page-find-wallet-hardware",
-}
+import WalletPersonaTags from "./WalletPersonaTags"
 
 const WALLET_LINK_EVENT = {
   eventCategory: "WalletExternalLinkList",
@@ -54,9 +48,7 @@ const WalletDetail = async ({
     namespace: "page-wallets-find-wallet",
   })
 
-  const deviceLabels = (Object.keys(wallet.devices) as WalletDeviceId[])
-    .filter((device) => wallet.devices[device])
-    .map((device) => t(DEVICE_LABEL_KEYS[device]))
+  const deviceLabels = getDeviceLabels(wallet.devices, t)
 
   const lastUpdated = getLocaleFormattedDate(
     locale as Lang,
@@ -97,20 +89,7 @@ const WalletDetail = async ({
         />
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
-            {wallet.personas.length > 0 && (
-              <div className="flex flex-row flex-wrap gap-1">
-                {wallet.personas.map((persona) => (
-                  <Tag
-                    key={persona}
-                    variant="subtle"
-                    status={PERSONA_TAG_STATUS[persona]}
-                    size="small"
-                  >
-                    {t(PERSONA_TITLE_KEYS[persona])}
-                  </Tag>
-                ))}
-              </div>
-            )}
+            <WalletPersonaTags personas={wallet.personas} />
 
             <h1 className="mt-0">{wallet.name}</h1>
 

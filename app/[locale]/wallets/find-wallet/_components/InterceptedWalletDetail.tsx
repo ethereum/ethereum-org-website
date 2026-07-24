@@ -14,19 +14,12 @@ import Tooltip from "@/components/Tooltip"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import InlineLink from "@/components/ui/Link"
 
-import type { WalletDeviceId } from "@/lib/utils/walletData"
 import { getWalletBySlug } from "@/lib/utils/walletData"
 
+import { getDeviceLabels } from "@/data/wallets/devices"
 import { CROPS_PROPERTIES } from "@/data/wallets/features"
 
 import WalletDetailModal from "./WalletDetailModal"
-
-const DEVICE_LABEL_KEYS: Record<WalletDeviceId, string> = {
-  desktop: "page-find-wallet-desktop",
-  mobile: "page-find-wallet-mobile",
-  browser: "page-find-wallet-browser",
-  hardware: "page-find-wallet-hardware",
-}
 
 // How many languages to list inline in the value cell before the "+ N" tooltip.
 const LANGUAGES_SHOWN = 5
@@ -77,9 +70,7 @@ const InterceptedWalletDetail = async ({
   })
   const tCommon = await getTranslations({ locale, namespace: "common" })
 
-  const deviceLabels = (Object.keys(wallet.devices) as WalletDeviceId[])
-    .filter((device) => wallet.devices[device])
-    .map((device) => t(DEVICE_LABEL_KEYS[device]))
+  const deviceLabels = getDeviceLabels(wallet.devices, t)
 
   const shownLanguages = wallet.supportedLanguages
     .slice(0, LANGUAGES_SHOWN)
@@ -87,7 +78,11 @@ const InterceptedWalletDetail = async ({
   const hasExtraLanguages = wallet.supportedLanguages.length > LANGUAGES_SHOWN
 
   return (
-    <WalletDetailModal title={wallet.name} image={wallet.image}>
+    <WalletDetailModal
+      title={wallet.name}
+      image={wallet.image}
+      description={wallet.descriptionStripped}
+    >
       <div className="flex flex-col gap-6">
         {wallet.descriptionStripped && (
           <p className="text-body-medium">{wallet.descriptionStripped}</p>
