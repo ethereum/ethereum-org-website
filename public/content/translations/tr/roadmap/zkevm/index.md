@@ -2,6 +2,7 @@
 title: L1 blok doğrulaması için zkEVM
 description: Sıfır bilgi ispatlarının Ethereum blok yürütmesini nasıl doğrulayabileceğini, daha yüksek işlem kapasitesi ve daha düşük doğrulayıcı gereksinimlerini nasıl sağlayabileceğini öğrenin.
 lang: tr
+template: roadmap
 ---
 
 zkEVM, Ethereum blok yürütmesini doğrulamak için [sıfır bilgi ispatlarını](/zero-knowledge-proofs/) kullanan bir teknolojidir. Her [doğrulayıcının](/glossary/#validator) bir bloktaki tüm işlemleri yeniden yürütmesini gerektirmek yerine, ("kanıtlayıcı" adı verilen) tek bir uzmanlaşmış aktör bloğu yürütür ve yürütmenin doğru olduğuna dair kriptografik bir ispat üretir. Ardından herhangi bir düğüm bu ispatı doğrulayabilir; bu süreç, tüm işlemleri yeniden yürütmekten kat kat daha ucuzdur.

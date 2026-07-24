@@ -3,6 +3,7 @@ title: "Fusaka 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
 description: Tìm hiểu về bản nâng cấp giao thức Fusaka
 lang: vi
+template: upgrade
 authors: ["Nixo", "Mario Havel"]
 ---
 

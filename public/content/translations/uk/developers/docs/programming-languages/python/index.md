@@ -55,21 +55,21 @@ incomplete: true
 
 ## Проєкти та інструменти Python {#python-projects-and-tools}
 
-### Активні: {#active}
-
+### Активні:
 - [Web3.py](https://github.com/ethereum/web3.py) — _бібліотека Python для взаємодії з Етеріумом_
 - [Vyper](https://github.com/ethereum/vyper/) — _мова смарт-контрактів у стилі Python для EVM_
-- [Ape](https://github.com/ApeWorX/ape) — _інструмент розробки смарт-контрактів для Python-розробників, фахівців з даних та безпеки_
+- [Titanoboa](https://github.com/vyperlang/titanoboa/) — _власний інструмент тестування Vyper; інтерпретатор із форкінгом Головної мережі, налагодженням та зручним трасуванням_
+- [Moccasin](https://github.com/Cyfrin/moccasin) — _фреймворк для розробки та тестування смарт-контрактів для Vyper і Python, створений на базі Titanoboa_
+- [Ape](https://github.com/ApeWorX/ape) — _інструмент розробки смарт-контрактів для Python-розробників, фахівців із даних та спеціалістів з безпеки_
 - [py-evm](https://github.com/ethereum/py-evm) — _реалізація віртуальної машини Етеріуму_
 - [eth-tester](https://github.com/ethereum/eth-tester) — _інструменти для тестування застосунків на базі Етеріуму_
 - [eth-utils](https://github.com/ethereum/eth-utils/) — _допоміжні функції для роботи з кодовими базами, пов'язаними з Етеріумом_
-- [py-solc-x](https://pypi.org/project/py-solc-x/) — _обгортка Python для компілятора Solidity solc з підтримкою версій 0.5.x_
+- [py-solc-x](https://pypi.org/project/py-solc-x/) — _обгортка Python для компілятора Solidity solc з підтримкою версії 0.5.x_
 - [pymaker](https://github.com/makerdao/pymaker) — _API Python для контрактів Maker_
-- [siwe](https://github.com/signinwithethereum/siwe-py) — _вхід за допомогою Етеріуму (SIWE) для Python_
-- [Web3 DeFi для інтеграцій з Етеріумом](https://github.com/tradingstrategy-ai/web3-ethereum-defi) — _пакет Python з готовими інтеграціями для ERC-20, Юнісвоп та інших популярних проєктів_
-- [Wake](https://getwake.io) — _універсальний фреймворк Python для тестування контрактів, фазингу, розгортання, сканування вразливостей та навігації по коду (мовний сервер — [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
-- [DeFiPy](https://github.com/defipy-devs/defipy) — _SDK Python для аналітики децентралізованих фінансів (DeFi) та симуляції автоматизованого маркетмейкера (АММ) у Юнісвоп V2/V3, Balancer та Curve_
-
+- [siwe](https://github.com/signinwithethereum/siwe-py) — _Sign in with Ethereum (SIWE) для Python_
+- [Інтеграції Web3 децентралізованих фінансів (DeFi) для Етеріуму](https://github.com/tradingstrategy-ai/web3-ethereum-defi) — _пакет Python із готовими інтеграціями для ERC-20, Юнісвоп та інших популярних проєктів_
+- [Wake](https://getwake.io) — _універсальний фреймворк Python для тестування контрактів, фазингу, розгортання, сканування на вразливості та навігації по коду (мовний сервер — [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
+- [DeFiPy](https://github.com/defipy-devs/defipy) — _SDK Python для аналітики DeFi та симуляції автоматизованого маркетмейкера (АММ) для Юнісвоп V2/V3, Balancer та Curve_
 ### Архівні / Більше не підтримуються: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) — _клієнт Етеріуму на Python_

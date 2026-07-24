@@ -32,7 +32,7 @@
   "page-gas-attack-of-the-cryptokitties-text": "2017年11月、人気プロジェクトのクリプトキティーズが立ち上げられました。その急激な人気の高まりは、深刻なネットワークの混雑と極めて高いガス代を引き起こしました。クリプトキティーズによってもたらされた課題は、イーサリアムのスケーリング・ソリューションを見つける緊急性を加速させました。",
   "page-gas-why-do-we-need-gas-header": "なぜガスが必要なのですか？",
   "page-gas-why-do-we-need-gas-text": "ガスは、イーサリアムを安全に保ち、トランザクションを処理するための重要な要素です。ガスは多くの点で役立ちます：",
-  "page-gas-benefits-1-description": "ガスは、悪意のあるアクターが不正な活動でネットワークを圧倒するのを防ぐことで、イーサリアムの<a href=\"/glossary/#anti-sybil\">シビル耐性</a>を維持します。",
+  "page-gas-benefits-1-description": "ガスは、悪意のあるアクターが不正行為によってネットワークを圧倒するのを防ぐことで、イーサリアムの<a href=\"/glossary/#anti-sybil\">シビル耐性</a>を維持します。",
   "page-gas-benefits-2-description": "計算にはガスがかかるため、偶発的であれ悪意であれ、高価なトランザクションでイーサリアムにスパムを送信することは、経済的に抑制されます。",
   "page-gas-benefits-3-description": "一度に実行できる計算量にハードリミットを設けることで、イーサリアムが圧倒されるのを防ぎ、ネットワークに常にアクセスできるようにします。",
   "page-gas-how-is-gas-calculated-header": "ガスはどのように計算されますか？",

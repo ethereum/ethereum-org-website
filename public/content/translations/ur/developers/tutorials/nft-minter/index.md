@@ -33,18 +33,17 @@ published: 2021-10-06
 
 دو <span dir="ltr">NFT</span> سمارٹ کنٹریکٹ معیارات کے درمیان سب سے بڑا فرق یہ ہے کہ <span dir="ltr">ERC-1155</span> ایک ملٹی ٹوکن معیار ہے اور اس میں بیچ (batch) کی فعالیت شامل ہے، جبکہ <span dir="ltr">ERC-721</span> ایک سنگل ٹوکن معیار ہے اور اس لیے ایک وقت میں صرف ایک ٹوکن کی منتقلی کی حمایت کرتا ہے۔
 
-### ڈھلائی (minting) کے فنکشن کو کال کریں {#minting-function}
+### ڈھلائی کے فنکشن کو کال کریں
 
-عام طور پر، اس ڈھلائی کے فنکشن کا تقاضا ہوتا ہے کہ آپ دو متغیرات کو پیرامیٹرز کے طور پر پاس کریں، پہلا `recipient`، جو اس پتہ کی وضاحت کرتا ہے جو آپ کا تازہ ڈھالا گیا <span dir="ltr">NFT</span> وصول کرے گا، اور دوسرا <span dir="ltr">NFT</span> کا `tokenURI`، ایک سٹرنگ جو ایک <span dir="ltr">JSON</span> دستاویز کو حل کرتی ہے جو <span dir="ltr">NFT</span> کے میٹا ڈیٹا کو بیان کرتی ہے۔
+عام طور پر، اس ڈھلائی کے فنکشن کا تقاضا ہوتا ہے کہ آپ دو متغیرات کو پیرامیٹرز کے طور پر پاس کریں، پہلا `recipient`، جو اس پتہ کی وضاحت کرتا ہے جو آپ کا تازہ ڈھالا گیا <span dir="ltr">NFT</span> وصول کرے گا، اور دوسرا <span dir="ltr">NFT</span> کا `tokenURI`، ایک سٹرنگ جو <span dir="ltr">NFT</span> کے میٹا ڈیٹا کو بیان کرنے والے <span dir="ltr">JSON</span> دستاویز کو حل کرتی ہے۔
 
-ایک <span dir="ltr">NFT</span> کا میٹا ڈیٹا ہی دراصل اسے زندہ کرتا ہے، جس سے اس میں خصوصیات شامل ہوتی ہیں، جیسے کہ نام، تفصیل، تصویر (یا مختلف ڈیجیٹل اثاثہ)، اور دیگر اوصاف۔ یہاں [tokenURI کی ایک مثال](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2) ہے، جس میں ایک <span dir="ltr">NFT</span> کا میٹا ڈیٹا ہوتا ہے۔
+ایک <span dir="ltr">NFT</span> کا میٹا ڈیٹا واقعی وہ چیز ہے جو اسے زندہ کرتا ہے، جس سے اس میں خصوصیات شامل ہوتی ہیں، جیسے کہ ایک نام، تفصیل، تصویر (یا مختلف ڈیجیٹل اثاثہ)، اور دیگر اوصاف۔ یہاں [ایک <span dir="ltr">tokenURI</span> کی مثال](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2) ہے، جس میں ایک <span dir="ltr">NFT</span> کا میٹا ڈیٹا شامل ہے۔
 
-اس ٹیوٹوریل میں، ہم حصہ ۲ پر توجہ مرکوز کرنے جا رہے ہیں، جو کہ ہمارے React <span dir="ltr">UI</span> کا استعمال کرتے ہوئے ایک موجودہ <span dir="ltr">NFT</span> کے سمارٹ کنٹریکٹ کے ڈھلائی کے فنکشن کو کال کرنا ہے۔
+اس ٹیوٹوریل میں، ہم حصہ ۲ پر توجہ مرکوز کرنے جا رہے ہیں، جو ہمارے React <span dir="ltr">UI</span> کا استعمال کرتے ہوئے ایک <span dir="ltr">NFT</span> سمارٹ کنٹریکٹ کے ڈھلائی کے فنکشن کو کال کرنا ہے۔
 
-[یہاں ایک لنک ہے](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) اس <span dir="ltr">ERC-721</span> <span dir="ltr">NFT</span> سمارٹ کنٹریکٹ کا جسے ہم اس ٹیوٹوریل میں کال کریں گے۔ اگر آپ یہ جاننا چاہتے ہیں کہ ہم نے اسے کیسے بنایا، تو ہم انتہائی سفارش کرتے ہیں کہ آپ ہمارا دوسرا ٹیوٹوریل، ["ایک NFT کیسے بنائیں"](https://www.alchemy.com/docs/how-to-create-an-nft) دیکھیں۔
+آپ کو ایک <span dir="ltr">ERC-721</span> <span dir="ltr">NFT</span> سمارٹ کنٹریکٹ کی ضرورت ہوگی جو کسی معاون آزمائشی نیٹ ورک جیسے Sepolia پر تعینات ہو۔ اگر آپ خود ایک تعینات کرنا چاہتے ہیں، تو ہم Alchemy کی [Sepolia پر سمارٹ کنٹریکٹ تعینات کرنے](https://www.alchemy.com/docs/how-to-deploy-a-smart-contract-to-the-sepolia-testnet) کی گائیڈ کی سفارش کرتے ہیں۔
 
-زبردست، اب جب کہ ہم سمجھ گئے ہیں کہ <span dir="ltr">NFT</span> بنانا کیسے کام کرتا ہے، آئیے اپنی سٹارٹر فائلوں کو کلون کریں!
-
+بہترین، اب جب کہ ہم سمجھ گئے ہیں کہ <span dir="ltr">NFT</span> بنانا کیسے کام کرتا ہے، آئیے اپنی سٹارٹر فائلوں کو کلون کریں!
 ## سٹارٹر فائلوں کو کلون کریں {#clone-the-starter-files}
 
 سب سے پہلے، اس پروجیکٹ کے لیے سٹارٹر فائلیں حاصل کرنے کے لیے [nft-minter-tutorial GitHub ریپوزٹری](https://github.com/alchemyplatform/nft-minter-tutorial) پر جائیں۔ اس ریپوزٹری کو اپنے مقامی ماحول میں کلون کریں۔
@@ -195,28 +194,23 @@ return (
 
 صارفین کو آپ کے سمارٹ کنٹریکٹ کے ساتھ تعامل کرنے کے قابل ہونے کے لیے انہیں اپنے ایتھیریم والیٹ کو آپ کی غیر مرکزی ایپلی کیشن (dapp) سے جوڑنے کی ضرورت ہوگی۔
 
-### میٹاماسک ڈاؤن لوڈ کریں {#download-metamask}
+اس ٹیوٹوریل کے لیے، ہم میٹاماسک کا استعمال کریں گے، جو براؤزر میں ایک ورچوئل والیٹ ہے جسے آپ کے ایتھیریم اکاؤنٹ کا پتہ منظم کرنے کے لیے استعمال کیا جاتا ہے۔ اگر آپ اس بارے میں مزید سمجھنا چاہتے ہیں کہ ایتھیریم پر ٹرانزیکشنز کیسے کام کرتی ہیں، تو [یہ صفحہ](/developers/docs/transactions/) دیکھیں۔
 
-اس ٹیوٹوریل کے لیے، ہم میٹاماسک کا استعمال کریں گے، جو براؤزر میں ایک ورچوئل والیٹ ہے جسے آپ کے ایتھیریم اکاؤنٹ کے پتہ کو منظم کرنے کے لیے استعمال کیا جاتا ہے۔ اگر آپ اس بارے میں مزید سمجھنا چاہتے ہیں کہ ایتھیریم پر ٹرانزیکشنز کیسے کام کرتی ہیں، تو [اس صفحہ](/developers/docs/transactions/) کو دیکھیں۔
+آپ [یہاں](https://metamask.io/download) مفت میں میٹاماسک ڈاؤن لوڈ کر کے ایک اکاؤنٹ بنا سکتے ہیں۔ جب آپ اکاؤنٹ بنا رہے ہوں، یا اگر آپ کے پاس پہلے سے اکاؤنٹ ہے، تو یقینی بنائیں کہ آپ کسی تعاون یافتہ آزمائشی نیٹ ورک جیسے کہ Sepolia پر سوئچ کر لیں \(تاکہ ہم حقیقی پیسوں کے ساتھ کام نہ کر رہے ہوں\)۔
+### فوسٹ سے ایتھر شامل کریں
 
-آپ [یہاں](https://metamask.io/download) مفت میں میٹاماسک ڈاؤن لوڈ کر سکتے ہیں اور ایک اکاؤنٹ بنا سکتے ہیں۔ جب آپ ایک اکاؤنٹ بنا رہے ہوں، یا اگر آپ کے پاس پہلے سے ہی ایک اکاؤنٹ ہے، تو یقینی بنائیں کہ اوپری دائیں جانب "Ropsten Test Network" پر سوئچ کریں (تاکہ ہم حقیقی رقم کے ساتھ کام نہ کر رہے ہوں)۔
+اپنے <span dir="ltr">NFTs</span> کو ڈھالنے (یا ایتھیریم بلاک چین پر کسی بھی ٹرانزیکشن پر دستخط کرنے) کے لیے، ہمیں کچھ نقلی ETH کی ضرورت ہوگی۔ آزمائشی نیٹ ورک ETH حاصل کرنے کے لیے، ایک فعال فوسٹ جیسے کہ [Alchemy Sepolia فوسٹ](https://www.alchemy.com/faucets/ethereum-sepolia) کا استعمال کریں اور اپنا Sepolia اکاؤنٹ کا پتہ درج کریں۔ اس کے فوراً بعد آپ کو اپنے میٹاماسک اکاؤنٹ میں ETH نظر آنا چاہیے!
+### اپنا بیلنس چیک کریں
 
-### ایک فوسٹ سے ایتھر شامل کریں {#add-ether-from-faucet}
-
-اپنے <span dir="ltr">NFTs</span> کو ڈھالنے (یا ایتھیریم بلاک چین پر کسی بھی ٹرانزیکشنز پر دستخط کرنے) کے لیے، ہمیں کچھ نقلی <span dir="ltr">Eth</span> کی ضرورت ہوگی۔ <span dir="ltr">Eth</span> حاصل کرنے کے لیے آپ [روپسٹن فوسٹ](https://faucet.ropsten.be/) پر جا سکتے ہیں اور اپنا روپسٹن اکاؤنٹ کا پتہ درج کر سکتے ہیں، پھر "Send Ropsten Eth" پر کلک کریں۔ آپ کو جلد ہی اپنے میٹاماسک اکاؤنٹ میں <span dir="ltr">Eth</span> نظر آنا چاہیے!
-
-### اپنا بیلنس چیک کریں {#check-your-balance}
-
-یہ دوبارہ چیک کرنے کے لیے کہ ہمارا بیلنس موجود ہے، آئیے [Alchemy کے کمپوزر ٹول](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D) کا استعمال کرتے ہوئے ایک [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) درخواست کریں۔ یہ ہمارے والیٹ میں موجود <span dir="ltr">Eth</span> کی مقدار واپس کرے گا۔ اپنا میٹاماسک اکاؤنٹ کا پتہ درج کرنے اور "Send Request" پر کلک کرنے کے بعد، آپ کو اس طرح کا جواب نظر آنا چاہیے:
+یہ دوبارہ چیک کرنے کے لیے کہ ہمارا بیلنس موجود ہے، آئیے [Alchemy کے سینڈ باکس ٹول](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) کا استعمال کرتے ہوئے ایک [<span dir="ltr">eth_getBalance</span>](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) درخواست کریں۔ یہ ہمارے والیٹ میں موجود <span dir="ltr">ETH</span> کی مقدار واپس کرے گا۔ اپنے میٹاماسک اکاؤنٹ کا پتہ درج کرنے اور "<span dir="ltr">Send Request</span>" پر کلک کرنے کے بعد، آپ کو اس طرح کا جواب نظر آنا چاہیے:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**نوٹ:** یہ نتیجہ Wei میں ہے نہ کہ eth میں۔ Wei کو ایتھر کی سب سے چھوٹی اکائی کے طور پر استعمال کیا جاتا ہے۔ Wei سے eth میں تبدیلی یہ ہے: <span dir="ltr">1 eth = 10¹⁸ wei</span>۔ لہذا اگر ہم <span dir="ltr">0xde0b6b3a7640000</span> کو اعشاریہ میں تبدیل کریں تو ہمیں <span dir="ltr">1\*10¹⁸</span> ملتا ہے جو <span dir="ltr">1 eth</span> کے برابر ہے۔
+**نوٹ:** یہ نتیجہ <span dir="ltr">Wei</span> میں ہے نہ کہ <span dir="ltr">ETH</span> میں۔ <span dir="ltr">Wei</span> کو ایتھر کی سب سے چھوٹی اکائی کے طور پر استعمال کیا جاتا ہے۔ <span dir="ltr">Wei</span> سے <span dir="ltr">ETH</span> میں تبدیلی یہ ہے: <span dir="ltr">1 ETH = 10¹⁸ Wei</span>۔ لہذا اگر ہم <span dir="ltr">0xde0b6b3a7640000</span> کو اعشاریہ میں تبدیل کریں تو ہمیں <span dir="ltr">1\*10¹⁸</span> ملتا ہے جو <span dir="ltr">1 ETH</span> کے برابر ہے۔
 
-شکر ہے! ہماری نقلی رقم پوری طرح موجود ہے! <Emoji text=":money_mouth_face:" size={1} />
-
+شکر ہے! ہمارا فرضی پیسہ وہیں موجود ہے! <Emoji text=":money_mouth_face:" size={1} />
 ## میٹاماسک کو اپنے <span dir="ltr">UI</span> سے جوڑیں {#connect-metamask-to-your-ui}
 
 اب جب کہ ہمارا میٹاماسک والیٹ ترتیب پا چکا ہے، آئیے اپنی غیر مرکزی ایپلی کیشن (dapp) کو اس سے جوڑیں!
@@ -583,30 +577,29 @@ export const pinJSONToIPFS = async (JSONBody) => {
 
 ہمیں ایتھیریم بلاک چین سے جڑنے اور اپنے سمارٹ کنٹریکٹ کو لوڈ کرنے کے لیے ایک Alchemy API کلید اور Alchemy Web3 API کی بھی ضرورت ہوگی۔
 
-### اپنی Alchemy API کلید بنائیں {#create-alchemy-api}
+### اپنی <span dir="ltr">Alchemy API</span> کلید بنائیں
 
-اگر آپ کے پاس پہلے سے Alchemy اکاؤنٹ نہیں ہے، تو [یہاں مفت میں سائن اپ کریں۔](https://alchemy.com/?a=eth-org-nft-minter)
+اگر آپ کے پاس پہلے سے <span dir="ltr">Alchemy</span> اکاؤنٹ نہیں ہے، تو [یہاں مفت سائن اپ کریں۔](https://alchemy.com/?a=eth-org-nft-minter)
 
-ایک بار جب آپ Alchemy اکاؤنٹ بنا لیتے ہیں، تو آپ ایک ایپ بنا کر ایک API کلید تیار کر سکتے ہیں۔ یہ ہمیں روپسٹن ٹیسٹ نیٹ ورک پر درخواستیں کرنے کی اجازت دے گا۔
+ایک بار جب آپ <span dir="ltr">Alchemy</span> اکاؤنٹ بنا لیتے ہیں، تو آپ ایک ایپ بنا کر <span dir="ltr">API</span> کلید تیار کر سکتے ہیں۔ یہ ہمیں <span dir="ltr">Sepolia</span> آزمائشی نیٹ ورک پر درخواستیں بھیجنے کی اجازت دے گا۔
 
-نیویگیشن بار میں "Apps" پر ہوور کر کے اور "Create App" پر کلک کر کے اپنے Alchemy ڈیش بورڈ میں "Create App" صفحہ پر جائیں۔
+اپنے <span dir="ltr">Alchemy Dashboard</span> میں نیویگیشن بار میں "Apps" پر ہوور کر کے اور "Create App" پر کلک کر کے "Create App" صفحہ پر جائیں۔
 
-اپنی ایپ کا نام رکھیں ہم نے "My First NFT!" کا انتخاب کیا، ایک مختصر تفصیل پیش کریں، اپنی ایپ کی بک کیپنگ کے لیے استعمال ہونے والے ماحول کے لیے "Staging" کو منتخب کریں، اور اپنے نیٹ ورک کے لیے "Ropsten" کا انتخاب کریں۔
+اپنی ایپ کا نام رکھیں (ہم نے "My First NFT!" کا انتخاب کیا ہے)، ایک مختصر تفصیل فراہم کریں، اپنی ایپ کی بک کیپنگ کے لیے استعمال ہونے والے Environment کے لیے "Staging" کو منتخب کریں، اور اپنے نیٹ ورک کے لیے "<span dir="ltr">Sepolia</span>" کا انتخاب کریں۔
 
 "Create app" پر کلک کریں اور بس! آپ کی ایپ نیچے دیے گئے ٹیبل میں ظاہر ہونی چاہیے۔
 
-زبردست تو اب جب کہ ہم نے اپنا HTTP Alchemy API URL بنا لیا ہے، اسے اپنے کلپ بورڈ پر کاپی کریں...
+زبردست، تو اب جب کہ ہم نے اپنا <span dir="ltr">HTTP Alchemy API URL</span> بنا لیا ہے، اسے اپنے کلپ بورڈ پر کاپی کریں...
 
-...اور پھر آئیے اسے اپنی `.env` فائل میں شامل کریں۔ مجموعی طور پر، آپ کی .env فائل اس طرح نظر آنی چاہیے:
+...اور پھر آئیے اسے اپنی `.env` فائل میں شامل کریں۔ مجموعی طور پر، آپ کی <span dir="ltr">.env</span> فائل اس طرح نظر آنی چاہیے:
 
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
 REACT_APP_PINATA_SECRET = <pinata-secret>
-REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
+REACT_APP_ALCHEMY_KEY = https://eth-sepolia.g.alchemy.com/v2/<alchemy-key>
 ```
 
-اب جب کہ ہمارے پاس اپنا کنٹریکٹ ABI اور ہماری Alchemy API کلید ہے، ہم [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) کا استعمال کرتے ہوئے اپنا سمارٹ کنٹریکٹ لوڈ کرنے کے لیے تیار ہیں۔
-
+اب جب کہ ہمارے پاس اپنا کنٹریکٹ <span dir="ltr">ABI</span> اور ہماری <span dir="ltr">Alchemy API</span> کلید ہے، ہم [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) کا استعمال کرتے ہوئے اپنا سمارٹ کنٹریکٹ لوڈ کرنے کے لیے تیار ہیں۔
 ### اپنا Alchemy Web3 اینڈ پوائنٹ اور کنٹریکٹ ترتیب دیں {#setup-alchemy-endpoint}
 
 سب سے پہلے، اگر آپ کے پاس یہ پہلے سے نہیں ہے، تو آپ کو ٹرمینل میں ہوم ڈائرکٹری: `nft-minter-tutorial` پر جا کر [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) انسٹال کرنے کی ضرورت ہوگی:
@@ -849,12 +842,6 @@ const onMintPressed = async () => {
 }
 ```
 
-## اپنے <span dir="ltr">NFT</span> کو ایک لائیو ویب سائٹ پر تعینات کریں {#deploy-your-nft}
-
-کیا آپ اپنے پروجیکٹ کو صارفین کے تعامل کے لیے لائیو کرنے کے لیے تیار ہیں؟ اپنے منٹر کو ایک لائیو ویب سائٹ پر تعینات کرنے کے لیے [یہ ٹیوٹوریل](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online) دیکھیں۔
-
-ایک آخری مرحلہ...
-
 ## بلاک چین کی دنیا میں تہلکہ مچا دیں {#take-the-blockchain-world-by-storm}
 
 مذاق کر رہا ہوں، آپ ٹیوٹوریل کے اختتام تک پہنچ گئے ہیں!
@@ -865,6 +852,6 @@ const onMintPressed = async () => {
 - اپنے فرنٹ اینڈ سے سمارٹ کنٹریکٹ کے طریقوں کو کال کریں
 - میٹاماسک کا استعمال کرتے ہوئے ٹرانزیکشنز پر دستخط کریں
 
-غالباً، آپ اپنی غیر مرکزی ایپلی کیشن (dapp) کے ذریعے ڈھالے گئے <span dir="ltr">NFTs</span> کو اپنے والیٹ میں دکھانے کے قابل ہونا چاہیں گے — لہذا ہمارا فوری ٹیوٹوریل [اپنے والیٹ میں اپنا NFT کیسے دیکھیں](https://www.alchemy.com/docs/how-to-view-your-nft-in-your-mobile-wallet) ضرور دیکھیں!
+غالباً، آپ اپنی غیر مرکزی ایپلی کیشن (dapp) کے ذریعے ڈھالے گئے <span dir="ltr">NFTs</span> کو اپنے والیٹ میں دکھانے کے قابل ہونا چاہیں گے — لہذا ہمارا فوری ٹیوٹوریل [اپنے والیٹ میں اپنا NFT کیسے دیکھیں](/developers/tutorials/how-to-view-nft-in-metamask/) ضرور دیکھیں!
 
 اور، ہمیشہ کی طرح، اگر آپ کے کوئی سوالات ہیں، تو ہم [Alchemy ڈسکارڈ](https://discord.gg/gWuC7zB) میں مدد کے لیے موجود ہیں۔ ہم یہ دیکھنے کے لیے بے تاب ہیں کہ آپ اس ٹیوٹوریل کے تصورات کو اپنے مستقبل کے پروجیکٹس میں کیسے لاگو کرتے ہیں!

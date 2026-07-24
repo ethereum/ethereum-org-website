@@ -37,7 +37,7 @@
   "page-layer-2-learn-rollupCards-optimistic-description": "Optimistické rollupy používají důkazy chyby, kde se předpokládá, že transakce jsou platné, ale mohou být zpochybněny, pokud existuje podezření na neplatnou transakci. Pokud existuje podezření na neplatnou transakci, spustí se důkaz chyby, aby se zjistilo, zda k tomu došlo.",
   "page-layer-2-learn-rollupCards-optimistic-childSentence": "Více o optimistických rollupech",
   "page-layer-2-learn-rollupCards-zk-title": "Rollupy s nulovým vědomím",
-  "page-layer-2-learn-rollupCards-zk-description": "Rollupy s nulovým vědomím používají důkazy platnosti, kde jsou výpočty transakcí prováděny offchain, a tato data jsou následně dodána na Ethereum Mainnet s důkazem o jejich platnosti.",
+  "page-layer-2-learn-rollupCards-zk-description": "Rollupy s nulovým vědomím používají důkazy platnosti, kde se výpočty transakcí provádějí offchain, a tato data jsou následně odeslána na Ethereum Mainnet s důkazem o jejich platnosti.",
   "page-layer-2-learn-rollupCards-zk-childSentence": "Více o zk-rollupech",
   "page-layer-2-learn-dyor-title": "Udělejte si vlastní průzkum: Rizika vrstvy 2",
   "page-layer-2-learn-dyor-1": "Protože řetězce vrstvy 2 dědí bezpečnost z Etherea, v ideálním světě jsou stejně bezpečné jako l1 Ethereum. Nicméně mnoho <strong>projektů je stále mladých a do jisté míry experimentálních</strong>. Po letech výzkumu a vývoje byla v roce 2021 spuštěna řada technologií l2, které budou škálovat Ethereum. To neznamená, že tyto l2 nejsou bezpečné, pouze to, že žádná vrstva 2 není tak prověřená v praxi jako Ethereum Mainnet. Vždy si udělejte vlastní průzkum a rozhodněte se, zda jste s případnými riziky srozuměni.",

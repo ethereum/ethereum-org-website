@@ -245,7 +245,7 @@ import "./IERC20.sol";
 import "../../math/SafeMath.sol";
 ```
 
-- `GSN/Context.sol` son las definiciones requeridas para usar [OpenGSN](https://www.opengsn.org/), un sistema que permite a los usuarios sin ether
+- `GSN/Context.sol` son las definiciones requeridas para usar [OpenGSN](https://opengsn.org/), un sistema que permite a los usuarios sin ether
   usar la cadena de bloques. Tenga en cuenta que esta es una versión antigua, si desea integrarse con OpenGSN
   [use este tutorial](https://docs.opengsn.org/javascript-client/tutorial.html).
 - [La biblioteca SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), que previene

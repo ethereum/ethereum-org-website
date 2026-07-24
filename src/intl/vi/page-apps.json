@@ -18,7 +18,7 @@
   "page-apps-categories-title": "Danh mục ứng dụng",
   "page-apps-community-picks-title": "Lựa chọn của cộng đồng",
   "page-apps-meta-title": "Các ứng dụng tiền mã hóa hàng đầu trên Ethereum",
-  "page-apps-meta-description": "Khám phá các ứng dụng tiền mã hóa trên Ethereum: khám phá tài chính phi tập trung (DeFi), NFT, Mạng xã hội, Trò chơi, Cầu nối, Quyền riêng tư, Năng suất & các ứng dụng phi tập trung (dapp) DAO. Tìm các ứng dụng trên chuỗi đáng tin cậy để giao dịch, kiếm tiền và tương tác.",
+  "page-apps-meta-description": "Khám phá các ứng dụng trên Ethereum: DeFi, NFT, mạng xã hội, trò chơi, cầu nối, quyền riêng tư và DAO. Tìm các ứng dụng trên chuỗi đáng tin cậy để giao dịch tiền mã hóa, kiếm tiền và tương tác.",
   "page-apps-category-defi-name": "DeFi",
   "page-apps-category-defi-description": "Tài chính phi tập trung (DeFi) là một danh mục các ứng dụng phi tập trung (dapp) cho phép người dùng cho vay, vay mượn, giao dịch và kiếm lãi từ tài sản tiền mã hóa của họ.",
   "page-apps-category-defi-meta-title": "Danh sách các ứng dụng DeFi trên Ethereum — Cho vay, Vay mượn & Lợi nhuận",
@@ -66,6 +66,7 @@
   "page-apps-info-last-updated": "Cập nhật lần cuối",
   "page-apps-gallery-title": "Thư viện",
   "page-apps-more-apps-like-this": "Thêm các ứng dụng tương tự",
+  "page-apps-by-company": "bởi {company}",
   "page-apps-today": "Hôm nay",
   "page-apps-one-day-ago": "1 ngày trước",
   "page-apps-days-ago": "{days} ngày trước"

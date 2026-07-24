@@ -18,7 +18,7 @@
   "page-apps-categories-title": "Kategori aplikasi",
   "page-apps-community-picks-title": "Pilihan komunitas",
   "page-apps-meta-title": "Aplikasi kripto teratas di Ethereum",
-  "page-apps-meta-description": "Temukan aplikasi kripto di Ethereum: jelajahi DeFi, NFT, Sosial, Permainan, Jembatan, Privasi, Produktivitas & dapp DAO. Temukan aplikasi onchain tepercaya untuk berdagang, menghasilkan, dan berinteraksi.",
+  "page-apps-meta-description": "Jelajahi aplikasi di Ethereum: DeFi, NFT, sosial, permainan, jembatan, privasi, dan DAO. Temukan aplikasi onchain tepercaya untuk memperdagangkan kripto, mendapatkan penghasilan, dan berinteraksi.",
   "page-apps-category-defi-name": "DeFi",
   "page-apps-category-defi-description": "DeFi adalah kategori aplikasi terdesentralisasi yang memungkinkan pengguna untuk meminjamkan, meminjam, berdagang, dan mendapatkan bunga atas aset kripto mereka.",
   "page-apps-category-defi-meta-title": "Daftar aplikasi DeFi Ethereum — Peminjaman & Hasil",
@@ -66,6 +66,7 @@
   "page-apps-info-last-updated": "Terakhir diperbarui",
   "page-apps-gallery-title": "Galeri",
   "page-apps-more-apps-like-this": "Lebih banyak aplikasi seperti ini",
+  "page-apps-by-company": "oleh {company}",
   "page-apps-today": "Hari ini",
   "page-apps-one-day-ago": "1 hari yang lalu",
   "page-apps-days-ago": "{days} hari yang lalu"

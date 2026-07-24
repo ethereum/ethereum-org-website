@@ -3,6 +3,7 @@ title: Pectra
 metaTitle: Prague-Electra (Pectra)
 description: Jifunze kuhusu sasisho la itifaki ya Pectra
 lang: sw
+template: upgrade
 authors: ["Nixo", "Mario Havel"]
 ---
 
@@ -121,7 +122,6 @@ _Sasisho la Pectra la Ethereum: Kile Waweka Dhamana Wanachohitaji Kujua — Bloc
 
 - [Ramani ya njia ya Ethereum](/roadmap/)
 - [Maswali Yanayoulizwa Mara kwa Mara (FAQ) ya Pectra](https://epf.wiki/#/wiki/pectra-faq)
-- [Ukurasa wa taarifa wa Pectra.wtf](https://pectra.wtf)
 - [Jinsi Pectra inavyoboresha uzoefu wa mweka dhamana](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [Ukurasa wa taarifa wa EIP7702](https://eip7702.io/)
-- [Mitandao ya wasanidi (devnets) ya Pectra](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)
+- [Ukurasa wa maelezo wa EIP7702](https://eip7702.io/)
+- [Mitandao ya wasanidi ya Pectra](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

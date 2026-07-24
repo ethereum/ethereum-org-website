@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-developers-docs.json",
-  "generatedAt": "2026-05-26T10:11:43.270Z",
-  "rootHash": "f0638a4201af",
+  "generatedAt": "2026-07-22T22:35:09.597Z",
+  "rootHash": "df9ae61c1fb6",
   "tree": {
-    "contentHash": "ec03daebb3c7",
-    "anchorHash": "3e2772382b70",
+    "contentHash": "e7305f8ceb29",
+    "anchorHash": "bb976a3dd643",
     "children": {
       "docs-nav-accounts": {
         "contentHash": "8a7c8b67fe8b",
@@ -17,6 +17,14 @@
       },
       "docs-nav-advanced": {
         "contentHash": "9f088dbebd6c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-authentication": {
+        "contentHash": "66880d2d8216",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-authentication-description": {
+        "contentHash": "b383c171a62e",
         "anchorHash": "e3b0c44298fc"
       },
       "docs-nav-backend-apis": {
@@ -93,6 +101,10 @@
       },
       "docs-nav-data-availability": {
         "contentHash": "188a992e372f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-data-availability-description": {
+        "contentHash": "6a6571303c9f",
         "anchorHash": "e3b0c44298fc"
       },
       "docs-nav-data-availability-storage-strategies": {
@@ -217,6 +229,10 @@
       },
       "docs-nav-integrated-development-environments-ides-description": {
         "contentHash": "25ac5e8725e2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-interacting-with-smart-contracts": {
+        "contentHash": "22a72cebcec0",
         "anchorHash": "e3b0c44298fc"
       },
       "docs-nav-intro-to-dapps": {
@@ -607,10 +623,6 @@
         "contentHash": "34c469663829",
         "anchorHash": "e3b0c44298fc"
       },
-      "back-to-top": {
-        "contentHash": "b05d95c62372",
-        "anchorHash": "e3b0c44298fc"
-      },
       "banner-page-incomplete": {
         "contentHash": "b122b7056047",
         "anchorHash": "e3b0c44298fc"
@@ -628,6 +640,8 @@
       "docs-nav-accounts",
       "docs-nav-accounts-description",
       "docs-nav-advanced",
+      "docs-nav-authentication",
+      "docs-nav-authentication-description",
       "docs-nav-backend-apis",
       "docs-nav-block-explorers",
       "docs-nav-blocks",
@@ -647,6 +661,7 @@
       "docs-nav-data-and-analytics",
       "docs-nav-data-and-analytics-description",
       "docs-nav-data-availability",
+      "docs-nav-data-availability-description",
       "docs-nav-data-availability-storage-strategies",
       "docs-nav-dart",
       "docs-nav-delphi",
@@ -678,6 +693,7 @@
       "docs-nav-heuristics-for-web3",
       "docs-nav-integrated-development-environments-ides",
       "docs-nav-integrated-development-environments-ides-description",
+      "docs-nav-interacting-with-smart-contracts",
       "docs-nav-intro-to-dapps",
       "docs-nav-intro-to-dapps-description",
       "docs-nav-intro-to-ether",
@@ -775,11 +791,10 @@
       "layer-2-boba-note",
       "layer-2-metis-note",
       "layer-2-optimism-note",
-      "back-to-top",
       "banner-page-incomplete",
       "next",
       "previous"
     ]
   },
-  "sourceCommitSha": "3ec7d2cd6ede59940bb02b21be2e5d211370a724"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

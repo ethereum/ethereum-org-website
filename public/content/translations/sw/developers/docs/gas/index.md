@@ -134,7 +134,7 @@ Ikiwa unataka kufuatilia bei za gesi, ili uweze kutuma ETH yako kwa bei nafuu, u
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _Kikadiriaji cha bei ya gesi ya muamala cha chanzo wazi_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _Fuatilia na ufuatilie bei za gesi za Ethereum, na L2 ili kupunguza ada za muamala na kuokoa pesa_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Kiendelezi cha Chrome cha kukadiria gesi kinachoauni miamala ya urithi ya Aina ya 0 na miamala ya Aina ya 2 ya EIP-1559._
-- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Kokotoa ada za gesi katika sarafu yako ya ndani kwa aina tofauti za miamala kwenye Mtandao Mkuu, Arbitrum, na Polygon._
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Kokotoa ada za gesi katika sarafu yako ya ndani kwa aina tofauti za miamala kwenye Mtandao Mkuu, Arbitrum, na Polygon._
 
 ## Zana zinazohusiana {#related-tools}
 

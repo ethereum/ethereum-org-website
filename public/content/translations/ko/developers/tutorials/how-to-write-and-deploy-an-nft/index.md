@@ -21,7 +21,7 @@ Alchemy는 Makersplace(최근 크리스티 경매에서 6,900만 달러의 디�
 
 이 튜토리얼의 2부에서는 스마트 컨트랙트를 사용하여 NFT를 발행하는 방법을 살펴보고, 3부에서는 메타마스크에서 NFT를 확인하는 방법을 설명합니다.
 
-물론 진행 중에 궁금한 점이 있다면 언제든지 [Alchemy 디스코드](https://discord.gg/gWuC7zB)에 문의하거나 [Alchemy의 NFT API 문서](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)를 방문해 주세요!
+물론 진행 중에 궁금한 점이 있다면 언제든지 [Alchemy 디스코드](https://discord.gg/gWuC7zB)에 문의하거나 [Alchemy의 NFT API 문서](https://www.alchemy.com/docs/reference/nft-api-quickstart)를 방문해 주세요!
 
 ## 1단계: 이더리움 네트워크에 연결하기 {#connect-to-ethereum}
 
@@ -31,7 +31,7 @@ Alchemy는 Makersplace(최근 크리스티 경매에서 6,900만 달러의 디�
 
 ## 2단계: 앱(및 API 키) 생성하기 {#make-api-key}
 
-Alchemy 계정을 생성한 후에는 앱을 생성하여 API 키를 발급받을 수 있습니다. 이를 통해 Sepolia 테스트 네트워크에 요청을 보낼 수 있습니다. 테스트 네트워크에 대해 더 자세히 알고 싶다면 [이 가이드](https://docs.alchemyapi.io/guides/choosing-a-network)를 확인해 보세요.
+Alchemy 계정을 생성한 후에는 앱을 생성하여 API 키를 발급받을 수 있습니다. 이를 통해 Sepolia 테스트 네트워크에 요청을 보낼 수 있습니다. 테스트 네트워크에 대해 더 자세히 알고 싶다면 [이 가이드](https://www.alchemy.com/docs/choosing-a-web3-network)를 확인해 보세요.
 
 1. 내비게이션 바의 "Apps"에 마우스를 올리고 "Create App"을 클릭하여 Alchemy 대시보드의 "Create App" 페이지로 이동합니다.
 
@@ -57,14 +57,13 @@ Alchemy 계정을 생성한 후에는 앱을 생성하여 API 키를 발급받�
 
 ## 5단계: 잔액 확인하기 {#check-balance}
 
-잔액이 제대로 들어왔는지 다시 확인하기 위해 [Alchemy의 컴포저 도구](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)를 사용하여 [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) 요청을 보내보겠습니다. 이 요청은 지갑에 있는 ETH의 양을 반환합니다. 메타마스크 계정 주소를 입력하고 "Send Request"를 클릭하면 다음과 같은 응답을 볼 수 있습니다.
+잔액이 제대로 들어왔는지 다시 확인하기 위해, [Alchemy의 샌드박스 도구](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)를 사용하여 [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) 요청을 보내보겠습니다. 이 요청은 지갑에 있는 ETH의 양을 반환합니다. 메타마스크 계정 주소를 입력하고 "Send Request"를 클릭하면 다음과 같은 응답을 볼 수 있습니다.
 
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 
 > **참고** 이 결과는 ETH가 아니라 Wei 단위입니다. Wei는 이더의 가장 작은 단위로 사용됩니다. Wei에서 ETH로의 변환 비율은 1 ETH = 10<sup>18</sup> Wei입니다. 따라서 0xde0b6b3a7640000을 십진수로 변환하면 1\*10<sup>18</sup> Wei가 되며, 이는 1 ETH와 같습니다.
 
-휴! 가짜 돈이 모두 들어왔습니다.
-
+휴! 가짜 돈이 모두 잘 들어왔네요.
 ## 6단계: 프로젝트 초기화하기 {#initialize-project}
 
 먼저 프로젝트를 위한 폴더를 생성해야 합니다. 명령줄로 이동하여 다음을 입력하세요.
@@ -72,11 +71,11 @@ Alchemy 계정을 생성한 후에는 앱을 생성하여 API 키를 발급받�
     mkdir my-nft
     cd my-nft
 
-이제 프로젝트 폴더 안에 있으므로 npm init을 사용하여 프로젝트를 초기화하겠습니다. 아직 npm이 설치되어 있지 않다면 [이 지침](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm)을 따르세요([Node.js](https://nodejs.org/en/download/)도 필요하므로 함께 다운로드하세요!).
+이제 프로젝트 폴더 안에 들어왔으므로, `npm init`을 사용하여 프로젝트를 초기화하겠습니다. 아직 npm이 설치되어 있지 않다면 [Node.js 설치 지침](https://nodejs.org/en/download/)을 따르세요(이 튜토리얼에서는 Node.js와 npm이 필요합니다).
 
     npm init
 
-설치 질문에 어떻게 대답하든 크게 상관없습니다. 참고를 위해 저희가 입력한 내용은 다음과 같습니다.
+설치 질문에 어떻게 대답하든 크게 상관없습니다. 참고를 위해 저희가 입력한 내용을 아래에 보여드립니다.
 
 ```json
     package name: (my-nft)
@@ -104,7 +103,6 @@ Alchemy 계정을 생성한 후에는 앱을 생성하여 API 키를 발급받�
 ```
 
 package.json을 승인하면 준비가 완료됩니다!
-
 ## 7단계: [Hardhat](https://hardhat.org/getting-started/#overview) 설치하기 {#install-hardhat}
 
 Hardhat은 이더리움 소프트웨어를 컴파일, 배포, 테스트 및 디버깅하기 위한 개발 환경입니다. 개발자가 라이브 체인에 배포하기 전에 로컬에서 스마트 컨트랙트와 탈중앙화 애플리케이션(dapp)을 구축할 때 도움을 줍니다.
@@ -233,7 +231,7 @@ ERC-721 생성자에서 "MyNFT"와 "NFT"라는 두 개의 문자열을 전달하
 
 - HTTP Alchemy API URL을 가져와 클립보드에 복사하려면 아래를 참조하세요.
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.mp4#842x480)
 
 이제 `.env` 파일은 다음과 같은 모습이어야 합니다.
 
@@ -346,7 +344,7 @@ From 주소는 메타마스크 계정 주소와 일치해야 하며 To 주소에
 
 야호! 방금 이더리움(테스트넷) 체인에 NFT 스마트 컨트랙트를 배포했습니다!
 
-내부적으로 어떤 일이 일어나고 있는지 이해하기 위해 [Alchemy 대시보드](https://dashboard.alchemyapi.io/explorer)의 Explorer 탭으로 이동해 보겠습니다. 여러 개의 Alchemy 앱이 있는 경우 앱별로 필터링하여 "MyNFT"를 선택하세요.
+내부적으로 어떤 일이 일어나고 있는지 이해하기 위해 [Alchemy 대시보드](https://dashboard.alchemy.com/explorer)의 Explorer 탭으로 이동해 보겠습니다. 여러 개의 Alchemy 앱이 있는 경우 앱별로 필터링하여 "MyNFT"를 선택하세요.
 
 ![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
 

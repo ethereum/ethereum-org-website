@@ -10,7 +10,7 @@
   "explanation": "설명",
   "next-question": "다음 질문",
   "next-quiz": "다음 퀴즈",
-  "question-number": "질문 번호 {{number}}:",
+  "question-number": "질문 번호 {number}:",
   "page-assets-merge": "머지",
   "passed": "퀴즈를 통과했습니다!",
   "questions": "질문",

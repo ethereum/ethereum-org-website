@@ -1,7 +1,7 @@
 ---
-title: నేను మోసపోయాను లేదా నిధులను కోల్పోయాను
-metaTitle: స్కామ్ సహాయం & రిపోర్టింగ్
-description: మీరు మోసపోయినట్లయితే ఏమి చేయాలి, మీ మిగిలిన ఆస్తులను ఎలా సురక్షితం చేసుకోవాలి మరియు మోసం గురించి ఎక్కడ నివేదించాలి.
+title: "నేను మోసపోయాను లేదా నిధులను కోల్పోయాను"
+metaTitle: "స్కామ్ సహాయం & రిపోర్టింగ్"
+description: "మీరు మోసపోయినట్లయితే ఏమి చేయాలి, మీ మిగిలిన ఆస్తులను ఎలా సురక్షితం చేసుకోవాలి మరియు మోసం గురించి ఎక్కడ నివేదించాలి."
 lang: te
 ---
 
@@ -85,8 +85,8 @@ lang: te
 ## గమనించవలసిన స్కామ్‌ల రకాలు {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="గివ్‌అవే మరియు ఎయిర్‌డ్రాప్ మోసాలు"
+contentPreview="ఎవరూ ఉచితంగా ETH ఇవ్వరు. ఈ ఆఫర్‌లు ఎల్లప్పుడూ మోసాలే."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ eventName="clicked giveaway scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="నకిలీ గుర్తింపు మరియు నకిలీ మద్దతు"
+contentPreview="ఎథీరియం లేదా ethereum.org నుండి ఎవరూ మిమ్మల్ని ముందుగా సంప్రదించరు."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ eventName="clicked impersonation scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="రికవరీ మోసాలు"
+contentPreview="మోసపోయిన తర్వాత, నకిలీ 'క్రిప్టో రికవరీ నిపుణుల' పట్ల అప్రమత్తంగా ఉండండి."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ eventName="clicked recovery scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="ఫిషింగ్ వెబ్‌సైట్‌లు మరియు నకిలీ యాప్‌లు"
+contentPreview="మీ ఆధారాలను దొంగిలించడానికి స్కామ్ సైట్‌లు నిజమైన వాలెట్‌లు మరియు ఎక్స్ఛేంజీలను అనుకరిస్తాయి."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >

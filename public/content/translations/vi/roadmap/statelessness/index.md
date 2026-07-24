@@ -1,7 +1,8 @@
 ---
-title: Tính phi trạng thái, hết hạn trạng thái và hết hạn lịch sử
-description: Giải thích về hết hạn lịch sử và Ethereum phi trạng thái
+title: "Tính phi trạng thái, hết hạn trạng thái và hết hạn lịch sử"
+description: "Giải thích về hết hạn lịch sử và Ethereum phi trạng thái"
 lang: vi
+template: roadmap
 ---
 
 Khả năng chạy các nút [Ethereum](/) trên phần cứng khiêm tốn là rất quan trọng đối với sự phi tập trung thực sự. Điều này là do việc chạy một nút cung cấp cho người dùng khả năng xác minh thông tin bằng cách thực hiện các kiểm tra mật mã học một cách độc lập thay vì tin tưởng vào một bên thứ ba cung cấp dữ liệu cho họ. Việc chạy một nút cho phép người dùng gửi giao dịch trực tiếp đến mạng lưới ngang hàng Ethereum thay vì phải tin tưởng vào một bên trung gian. Sự phi tập trung là không thể nếu những lợi ích này chỉ dành cho những người dùng có phần cứng đắt tiền. Thay vào đó, các nút nên có khả năng chạy với yêu cầu xử lý và bộ nhớ cực kỳ khiêm tốn để chúng có thể chạy trên điện thoại di động, máy vi tính hoặc chạy ngầm không đáng kể trên máy tính cá nhân.

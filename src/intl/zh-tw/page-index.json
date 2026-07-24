@@ -1,6 +1,6 @@
 {
-  "page-index-meta-title": "以太坊 - 來自 Ethereum.org 的完整指南",
-  "page-index-meta-description": "以太坊是一個全球性、去中心化的金錢與新型態應用程式平台。在以太坊上，你可以掌控自己的金錢、資料與身分。不需要銀行、不需要中間人，也不需要任何許可。",
+  "page-index-meta-title": "以太坊 - 來自 ethereum.org 的完整指南",
+  "page-index-meta-description": "以太坊是一個去中心化平台，專為具備韌性的應用程式與基礎設施而打造。掌控你的資金、資料與身分，無需銀行或中間人。",
   "page-index-description": "創新應用程式與區塊鏈網路的領先平台",
   "page-index-title": "歡迎來到以太坊",
   "page-index-hero-image-alt": "一幅代表以太坊生態系統的未來城市插畫。",
@@ -41,14 +41,14 @@
   "page-index-carousel-privacy-ethereum-label": "以太坊應用程式",
   "page-index-carousel-privacy-ethereum-value": "預設為隱私",
   "page-index-carousel-remittances-tag": "跨境支付",
-  "page-index-carousel-remittances-title": "在 {minutes} 分鐘內將錢匯回家",
+  "page-index-carousel-remittances-title": "在 {seconds} 秒內匯款回家",
   "page-index-carousel-remittances-subtitle": "省去 {wireFee} 的電匯手續費和 {days} 天以上的等待時間。",
   "page-index-carousel-remittances-description": "只要花費 {txFee}，就能將<stablecoinsLink>穩定幣</stablecoinsLink>發送給世界上任何地方的任何人。他們幾乎可以立即收到資金。",
   "page-index-carousel-remittances-cta": "親自試試看",
   "page-index-carousel-remittances-traditional-label": "電匯",
   "page-index-carousel-remittances-traditional-value": "{min}-{max} 天",
   "page-index-carousel-remittances-ethereum-label": "以太坊",
-  "page-index-carousel-remittances-ethereum-value": "{minutes} 分鐘",
+  "page-index-carousel-remittances-ethereum-value": "{seconds} 秒",
   "page-index-carousel-borrowing-tag": "金融服務管道",
   "page-index-carousel-borrowing-title": "無需信用紀錄即可借款",
   "page-index-carousel-borrowing-subtitle": "你不需要信用評分就能開始。",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "私有與許可制網路",
   "page-index-get-started-enterprise-bullet-3": "機構資源",
   "page-index-get-started-enterprise-cta": "探索企業資源",
-  "page-index-simulator-cta": "嘗試更多指南"
+  "page-index-simulator-cta": "嘗試更多指南",
+  "page-index-latest-updates-title": "以太坊最新更新",
+  "page-index-latest-updates-cta": "查看更多"
 }

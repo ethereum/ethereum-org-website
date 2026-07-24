@@ -60,10 +60,20 @@ The Graph کے ساتھ، ڈیولپرز ان چیزوں سے فائدہ اٹھ�
 
 شروع کرنے کے لیے، [دستاویزات](https://docs.codex.io) دیکھیں، [ایکسپلورر](https://docs.codex.io/explore) آزمائیں، یا [ڈیش بورڈ](https://dashboard.codex.io/signup) پر سائن اپ کریں۔
 
+
+## Mobula
+[Mobula](https://mobula.io/) ایک اعلیٰ کارکردگی کا کرپٹو ڈیٹا API ہے جو <span dir="ltr">90+</span> بلاک چینز پر ریئل ٹائم اور تاریخی مارکیٹ ڈیٹا، ٹوکن میٹا ڈیٹا، والیٹ پورٹ فولیوز، اور آن چین تجزیات فراہم کرتا ہے۔ ڈیولپرز اپنا بنیادی ڈھانچہ چلائے بغیر ٹوکن کی قیمتوں، مارکیٹ کیپس، ٹریڈنگ کے حجم، سیالیت کے ڈیٹا، اور ملٹی چین والیٹ بیلنسز کے لیے REST اور GraphQL اینڈ پوائنٹس تک رسائی حاصل کر سکتے ہیں۔ Mobula پروڈکشن ایپلی کیشنز کے لیے مفت (<span dir="ltr">100K</span> درخواستیں/مہینہ) اور ادا شدہ پلانز دونوں پیش کرتا ہے۔
+
+شروع کرنے کے لیے، [دستاویزات](https://docs.mobula.io) دیکھیں، [API حوالہ](https://docs.mobula.io/reference/) دریافت کریں، یا [ڈیش بورڈ](https://mobula.io/) پر سائن اپ کریں۔
 ## EVM Query Language {#evm-query-language}
 
 EVM Query Language (EQL) ایک SQL جیسی زبان ہے جسے EVM (ایتھیریم ورچوئل مشین) چینز کو استفسار کرنے کے لیے ڈیزائن کیا گیا ہے۔ EQL کا حتمی مقصد EVM چین کے فرسٹ کلاس شہریوں (بلاکس، اکاؤنٹس، اور ٹرانزیکشنز) پر پیچیدہ رشتہ دار سوالات کی حمایت کرنا ہے جبکہ ڈیولپرز اور محققین کو روزمرہ کے استعمال کے لیے ایک ایرگونومک نحو فراہم کرنا ہے۔ EQL کے ساتھ، ڈیولپرز مانوس SQL جیسے نحو کا استعمال کرتے ہوئے بلاک چین ڈیٹا حاصل کر سکتے ہیں اور پیچیدہ بوائلر پلیٹ کوڈ کی ضرورت کو ختم کر سکتے ہیں۔ EQL معیاری بلاک چین ڈیٹا کی درخواستوں کی حمایت کرتا ہے (جیسے، ایتھیریم پر کسی اکاؤنٹ کا نانس اور بیلنس بازیافت کرنا یا موجودہ بلاک کا سائز اور ٹائم اسٹیمپ لانا) اور مسلسل مزید پیچیدہ درخواستوں اور فیچر سیٹس کے لیے تعاون شامل کر رہا ہے۔
 
+
+## Envio
+[Envio](https://envio.dev/) ایک انڈیکسنگ فریم ورک ہے جو آن چین ایونٹس کو قابل استفسار GraphQL API میں تبدیل کرتا ہے۔ یہ ایتھیریم اور کسی بھی EVM سے مطابقت رکھنے والی چین کو سپورٹ کرتا ہے۔ ڈیولپرز تنظیمِ نو کی سپورٹ، ملٹی چین انڈیکسنگ، اور Envio Cloud پر مینیجڈ ہوسٹنگ یا سیلف ہوسٹنگ کے ساتھ ریئل ٹائم اور تاریخی ڈیٹا پیش کرنے کے لیے TypeScript، JavaScript، یا ReScript میں ایونٹ ہینڈلرز لکھتے ہیں۔
+
+شروع کرنے کے لیے، ایک انڈیکسر بنانے، تعینات کرنے، اور استفسار کرنے کے لیے [HyperIndex کوئیک اسٹارٹ](https://docs.envio.dev/docs/HyperIndex/quickstart) پر عمل کریں۔
 ## مزید مطالعہ {#further-reading}
 
 - [کرپٹو ڈیٹا کی تلاش I: ڈیٹا فلو آرکیٹیکچرز](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
@@ -75,7 +85,7 @@ EVM Query Language (EQL) ایک SQL جیسی زبان ہے جسے EVM (ایتھ�
 - [Dune کی بنیادی باتیں](https://docs.dune.com/#dune-basics)
 - [SubQuery ایتھیریم کوئیک اسٹارٹ گائیڈ](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [SQD نیٹ ورک کا جائزہ](https://docs.sqd.dev/)
-- [EVM Query Language](https://eql.sh/blog/alpha-release-notes)
+- [EVM Query Language](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 
 ## ٹیوٹوریلز: ڈیٹا اور تجزیات / ایتھیریم پر SQL {#tutorials}
 

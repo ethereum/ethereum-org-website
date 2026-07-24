@@ -20,9 +20,9 @@ lang: zh-tw
 
 在深入了解框架之前，我們建議您先閱讀我們對[去中心化應用程式 (dapp)](/developers/docs/dapps/)和[以太坊堆疊](/developers/docs/ethereum-stack/)的簡介。
 
-## 可用的框架 {#available-frameworks}
+## 可用的框架
 
-**Foundry** - **_Foundry 是一個極快、可攜且模組化的以太坊應用程式開發工具包_**
+**Foundry** - **_Foundry 是一個極速、可攜式且模組化的以太坊應用程式開發工具包_**
 
 - [安裝 Foundry](https://book.getfoundry.sh/)
 - [Foundry 手冊](https://book.getfoundry.sh/)
@@ -51,16 +51,17 @@ lang: zh-tw
 - [範例](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_使用一個指令建立由以太坊驅動的應用程式。提供多種使用者介面 (UI) 框架和去中心化金融 (DeFi) 範本可供選擇。_**
+**Create Eth App -** **_只需一個指令即可建立由以太坊驅動的應用程式。提供多種 UI 框架和去中心化金融 (DeFi) 範本可供選擇。_**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [範本](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-Eth -** **_適用於 Web3 的 Ethers.js + Hardhat + React 元件和掛鉤 (hooks)：開始建置由智能合約驅動的去中心化應用程式所需的一切。_**
+**Scaffold-ETH 2 -** **_結合 Next.js、Wagmi、Viem 和 RainbowKit，並可選擇搭配 Hardhat 或 Foundry：具備合約熱重載、自訂 React hooks、拋棄式錢包與本地水龍頭，以及用於全端去中心化應用程式 (dapp) 開發的擴充模組。_**
 
+- [網站](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Web3 開發平台，讓區塊鏈開發人員能夠建置、測試、除錯、監控和操作智能合約，並改善 dapp 的使用者體驗 (UX)。_**
+**Tenderly -** **_Web3 開發平台，讓區塊鏈開發者能夠建置、測試、除錯、監控和操作智能合約，並改善 dapp 的使用者體驗。_**
 
 - [網站](https://tenderly.co/)
 - [文件](https://docs.tenderly.co/)
@@ -112,25 +113,25 @@ lang: zh-tw
 - [社群論壇](https://forum.openzeppelin.com/c/support/17)
 - **歐本齊柏林 SDK 開發已結束**
 
-**Catapulta -** **_多鏈智能合約部署工具，可自動在區塊瀏覽器中進行驗證、追蹤已部署的智能合約並分享部署報告，為 Foundry 和 Hardhat 專案提供隨插即用的支援。_**
+**Catapulta -** **_多鏈智能合約部署工具，可在區塊鏈瀏覽器中自動驗證、追蹤已部署的智能合約並分享部署報告，為 Foundry 和 Hardhat 專案提供隨插即用的支援。_**
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush（由 Covalent 提供技術支援）-** **_GoldRush 為開發人員、分析師和企業提供最全面的區塊鏈資料 API 套件。無論您是要建置去中心化金融 (DeFi) 儀表板、錢包、交易機器人、AI 代理還是合規平台，這些資料 API 都能提供快速、準確且對開發人員友善的存取方式，讓您取得所需的重要鏈上資料_**
+**GoldRush（由 Covalent 提供技術支援）-** **_GoldRush 為開發者、分析師和企業提供最全面的區塊鏈資料 API 套件。無論您是要建置 DeFi 儀表板、錢包、交易機器人、AI 代理還是合規平台，這些資料 API 都能提供快速、準確且對開發者友善的存取方式，讓您取得所需的關鍵鏈上資料_**
 
 - [網站](https://goldrush.dev/)
 - [文件](https://goldrush.dev/docs/chains/ethereum)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
-**Wake -** **_用於合約測試、模糊測試、部署、漏洞掃描和程式碼導覽的多合一 Python 框架。_**
+**Wake -** **_用於合約測試、模糊測試、部署、漏洞掃描和程式碼導覽的一站式 Python 框架。_**
 
 - [首頁](https://getwake.io/)
 - [文件](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS Code 擴充功能](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_開源、模組化且與平台無關的框架，讓去中心化應用程式開發人員能輕鬆地將去中心化身分和可驗證憑證建置到他們的應用程式中。_**
+**Veramo -** **_開源、模組化且與平台無關的框架，讓去中心化應用程式 (dapp) 開發者能輕鬆地將去中心化身分和可驗證憑證建置到他們的應用程式中。_**
 
 - [首頁](https://veramo.io/)
 - [文件](https://veramo.io/docs/basics/introduction)
@@ -138,6 +139,10 @@ lang: zh-tw
 - [Discord](https://discord.com/invite/FRRBdjemHV)
 - [NPM 套件](https://www.npmjs.com/package/@veramo/core)
 
+**Moccasin -** **_基於 Titanoboa 建置，專為 Vyper 打造的快速、具 Python 風格的智能合約開發與測試框架。_**
+
+- [文件](https://cyfrin.github.io/moccasin/)
+- [GitHub](https://github.com/Cyfrin/moccasin)
 ## 延伸閱讀 {#further-reading}
 
 _知道有什麼社群資源對您有幫助嗎？編輯此頁面並加入它！_

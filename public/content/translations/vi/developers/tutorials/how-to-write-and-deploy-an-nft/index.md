@@ -17,7 +17,7 @@ Trong hướng dẫn này, chúng ta sẽ đi qua việc tạo và triển khai 
 
 Trong Phần 2 của hướng dẫn này, chúng ta sẽ đi qua cách chúng ta có thể sử dụng hợp đồng thông minh của mình để đúc một NFT, và trong Phần 3, chúng tôi sẽ giải thích cách xem NFT của bạn trên MetaMask.
 
-Và tất nhiên, nếu bạn có câu hỏi ở bất kỳ thời điểm nào, đừng ngần ngại liên hệ trong [Discord của Alchemy](https://discord.gg/gWuC7zB) hoặc truy cập [tài liệu API NFT của Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)!
+Và tất nhiên, nếu bạn có câu hỏi ở bất kỳ thời điểm nào, đừng ngần ngại liên hệ trong [Discord của Alchemy](https://discord.gg/gWuC7zB) hoặc truy cập [tài liệu API NFT của Alchemy](https://www.alchemy.com/docs/reference/nft-api-quickstart)!
 
 ## Bước 1: Kết nối với mạng lưới Ethereum {#connect-to-ethereum}
 
@@ -27,7 +27,7 @@ Trong hướng dẫn này, chúng ta cũng sẽ tận dụng các công cụ dà
 
 ## Bước 2: Tạo ứng dụng của bạn (và khóa API) {#make-api-key}
 
-Sau khi bạn đã tạo tài khoản Alchemy, bạn có thể tạo khóa API bằng cách tạo một ứng dụng. Điều này sẽ cho phép chúng ta thực hiện các yêu cầu tới mạng thử nghiệm Sepolia. Hãy xem [hướng dẫn này](https://docs.alchemyapi.io/guides/choosing-a-network) nếu bạn tò mò muốn tìm hiểu thêm về các mạng thử nghiệm.
+Sau khi bạn đã tạo tài khoản Alchemy, bạn có thể tạo khóa API bằng cách tạo một ứng dụng. Điều này sẽ cho phép chúng ta thực hiện các yêu cầu tới mạng thử nghiệm Sepolia. Hãy xem [hướng dẫn này](https://www.alchemy.com/docs/choosing-a-web3-network) nếu bạn tò mò muốn tìm hiểu thêm về các mạng thử nghiệm.
 
 1. Điều hướng đến trang “Create App” trong Bảng điều khiển Alchemy của bạn bằng cách di chuột qua “Apps” trên thanh điều hướng và nhấp vào “Create App”
 
@@ -53,14 +53,13 @@ Bạn có thể tải xuống và tạo tài khoản MetaMask miễn phí [tại
 
 ## Bước 5: Kiểm tra số dư của bạn {#check-balance}
 
-Để kiểm tra lại xem số dư của chúng ta đã có ở đó chưa, hãy thực hiện một yêu cầu [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) bằng cách sử dụng [công cụ composer của Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Điều này sẽ trả về số lượng ETH trong ví của chúng ta. Sau khi bạn nhập địa chỉ tài khoản MetaMask của mình và nhấp vào “Send Request”, bạn sẽ thấy một phản hồi như thế này:
+Để kiểm tra lại xem số dư của chúng ta đã có ở đó chưa, hãy thực hiện một yêu cầu [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) bằng cách sử dụng [công cụ hộp cát của Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Điều này sẽ trả về số lượng ETH trong Ví của chúng ta. Sau khi bạn nhập địa chỉ Tài khoản MetaMask của mình và nhấp vào “Send Request”, bạn sẽ thấy một phản hồi như thế này:
 
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 
-> **Lưu ý** Kết quả này tính bằng wei, không phải ETH. Wei được sử dụng làm mệnh giá nhỏ nhất của ether. Tỷ lệ chuyển đổi từ wei sang ETH là 1 eth = 10<sup>18</sup> wei. Vì vậy, nếu chúng ta chuyển đổi 0xde0b6b3a7640000 sang số thập phân, chúng ta nhận được 1\*10<sup>18</sup> wei, tương đương với 1 ETH.
+> **Lưu ý** Kết quả này tính bằng Wei, không phải ETH. Wei được sử dụng làm mệnh giá nhỏ nhất của ether. Việc chuyển đổi từ Wei sang ETH là 1 eth = 10<sup>18</sup> Wei. Vì vậy, nếu chúng ta chuyển đổi 0xde0b6b3a7640000 sang số thập phân, chúng ta sẽ nhận được 1\*10<sup>18</sup> Wei, tương đương với 1 ETH.
 
-Phù! Tiền giả của chúng ta đã ở đó.
-
+Phù! Tiền giả của chúng ta đều ở đó.
 ## Bước 6: Khởi tạo dự án của chúng ta {#initialize-project}
 
 Đầu tiên, chúng ta sẽ cần tạo một thư mục cho dự án của mình. Điều hướng đến dòng lệnh của bạn và nhập:
@@ -68,11 +67,11 @@ Phù! Tiền giả của chúng ta đã ở đó.
     mkdir my-nft
     cd my-nft
 
-Bây giờ chúng ta đang ở trong thư mục dự án của mình, chúng ta sẽ sử dụng npm init để khởi tạo dự án. Nếu bạn chưa cài đặt npm, hãy làm theo [các hướng dẫn này](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (chúng ta cũng sẽ cần [Node.js](https://nodejs.org/en/download/), vì vậy hãy tải xuống cả cái đó nữa!).
+Bây giờ chúng ta đã ở trong thư mục dự án của mình, chúng ta sẽ sử dụng npm init để khởi tạo dự án. Nếu bạn chưa cài đặt npm, hãy làm theo [hướng dẫn cài đặt Node.js](https://nodejs.org/en/download/) (chúng ta sẽ cần Node.js và npm cho hướng dẫn này).
 
     npm init
 
-Việc bạn trả lời các câu hỏi cài đặt như thế nào không thực sự quan trọng; đây là cách chúng tôi đã làm để bạn tham khảo:
+Cách bạn trả lời các câu hỏi cài đặt không thực sự quan trọng; đây là cách chúng tôi đã làm để tham khảo:
 
 ```json
     package name: (my-nft)
@@ -99,8 +98,7 @@ Việc bạn trả lời các câu hỏi cài đặt như thế nào không th�
     }
 ```
 
-Chấp thuận package.json, và chúng ta đã sẵn sàng!
-
+Chấp thuận package.json và chúng ta đã sẵn sàng!
 ## Bước 7: Cài đặt [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
 Hardhat là một môi trường phát triển để biên dịch, triển khai, thử nghiệm và gỡ lỗi phần mềm Ethereum của bạn. Nó giúp các nhà phát triển khi xây dựng các hợp đồng thông minh và ứng dụng phi tập trung (dapp) cục bộ trước khi triển khai lên chuỗi trực tiếp.
@@ -229,7 +227,7 @@ Sau đó, tạo một tệp `.env` trong thư mục gốc của dự án của c
 
 - Xem bên dưới để lấy URL API Alchemy HTTP và sao chép nó vào khay nhớ tạm của bạn
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.mp4#842x480)
 
 Tệp `.env` của bạn bây giờ sẽ trông như thế này:
 
@@ -342,7 +340,7 @@ Nếu chúng ta truy cập [Etherscan Sepolia](https://sepolia.etherscan.io/) v�
 
 Tuyệt vời! Bạn vừa triển khai hợp đồng thông minh NFT của mình lên chuỗi Ethereum (mạng thử nghiệm)!
 
-Để hiểu những gì đang diễn ra bên trong, hãy điều hướng đến tab Explorer trong [bảng điều khiển Alchemy](https://dashboard.alchemyapi.io/explorer) của chúng ta. Nếu bạn có nhiều ứng dụng Alchemy, hãy đảm bảo lọc theo ứng dụng và chọn “MyNFT”.
+Để hiểu những gì đang diễn ra bên trong, hãy điều hướng đến tab Explorer trong [bảng điều khiển Alchemy](https://dashboard.alchemy.com/explorer) của chúng ta. Nếu bạn có nhiều ứng dụng Alchemy, hãy đảm bảo lọc theo ứng dụng và chọn “MyNFT”.
 
 ![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
 

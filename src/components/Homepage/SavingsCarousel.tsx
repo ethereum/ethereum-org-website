@@ -99,7 +99,7 @@ function useSlides(): Slide[] {
     {
       id: "remittances",
       tag: t("page-index-carousel-remittances-tag"),
-      title: t("page-index-carousel-remittances-title", { minutes: twelve }),
+      title: t("page-index-carousel-remittances-title", { seconds: twelve }),
       subtitle: t("page-index-carousel-remittances-subtitle", {
         wireFee,
         days: fmt(5),
@@ -135,7 +135,7 @@ function useSlides(): Slide[] {
         ethereum: {
           label: t("page-index-carousel-remittances-ethereum-label"),
           value: t("page-index-carousel-remittances-ethereum-value", {
-            minutes: twelve,
+            seconds: twelve,
           }),
         },
       },

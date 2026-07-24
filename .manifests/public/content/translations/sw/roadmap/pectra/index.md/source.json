@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/pectra/index.md",
-  "generatedAt": "2026-06-08T10:34:31.833Z",
-  "rootHash": "a2d0066392ec",
+  "generatedAt": "2026-07-23T00:23:37.426Z",
+  "rootHash": "6657e5ed60f7",
   "tree": {
-    "contentHash": "b3755909d836",
-    "anchorHash": "4866c133f57e",
+    "contentHash": "01d29058a375",
+    "anchorHash": "2351d61422d1",
     "children": {
       "frontmatter:title": {
         "contentHash": "e84deb0fe6a2",
@@ -22,6 +22,10 @@
       "frontmatter:lang": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "7fef9479c8bc"
       },
       "frontmatter:authors": {
         "contentHash": "e3b0c44298fc",
@@ -55,7 +59,7 @@
         "contentHash": "111871bee3b6",
         "anchorHash": "e3b0c44298fc"
       },
-      "component:12": {
+      "component:13": {
         "contentHash": "4017434b51d3",
         "anchorHash": "f3451d4448cb",
         "children": {
@@ -727,15 +731,15 @@
         ]
       },
       "further-reading": {
-        "contentHash": "81f09edfc9c4",
-        "anchorHash": "7b1260526215",
+        "contentHash": "31cae2b238c8",
+        "anchorHash": "ac9c9489688c",
         "labelHash": "4082f515b2f4",
         "children": {
           "_label": {
             "contentHash": "4082f515b2f4",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:6": {
+          "prose:5": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
@@ -743,7 +747,7 @@
             "contentHash": "be50ffa0fc02",
             "anchorHash": "0d9f7701bb4e"
           },
-          "prose:7": {
+          "prose:6": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
@@ -751,53 +755,43 @@
             "contentHash": "9d2ef76190ce",
             "anchorHash": "b168023ca947"
           },
-          "prose:8": {
+          "prose:7": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
           "link:2": {
-            "contentHash": "cdb7917b2dfd",
-            "anchorHash": "78d0b3948bca"
+            "contentHash": "e8fd018216ae",
+            "anchorHash": "02b0f4839558"
+          },
+          "prose:8": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "ab4d4331c37f",
+            "anchorHash": "9c6bde35a0a0"
           },
           "prose:9": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:3": {
-            "contentHash": "e8fd018216ae",
-            "anchorHash": "02b0f4839558"
-          },
-          "prose:10": {
-            "contentHash": "3973e022e932",
-            "anchorHash": "e3b0c44298fc"
-          },
           "link:4": {
-            "contentHash": "ab4d4331c37f",
-            "anchorHash": "9c6bde35a0a0"
-          },
-          "prose:11": {
-            "contentHash": "3973e022e932",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:5": {
             "contentHash": "9ab86306b6fc",
             "anchorHash": "c054482f5ca8"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:6",
+          "prose:5",
           "link:0",
-          "prose:7",
+          "prose:6",
           "link:1",
-          "prose:8",
+          "prose:7",
           "link:2",
-          "prose:9",
+          "prose:8",
           "link:3",
-          "prose:10",
-          "link:4",
-          "prose:11",
-          "link:5"
+          "prose:9",
+          "link:4"
         ]
       }
     },
@@ -806,6 +800,7 @@
       "frontmatter:metaTitle",
       "frontmatter:description",
       "frontmatter:lang",
+      "frontmatter:template",
       "frontmatter:authors",
       "prose:3",
       "link:0",
@@ -814,7 +809,7 @@
       "prose:5",
       "inline-code:2",
       "prose:6",
-      "component:12",
+      "component:13",
       "new-improvements",
       "client-impact",
       "scam-alert",
@@ -822,5 +817,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

@@ -237,7 +237,7 @@ ethers.utils.formatEther(balance)
 - [Web3js 유틸리티 함수](https://docs.web3js.org/api/web3-utils)
 - [Ethers 유틸리티 함수](https://docs.ethers.org/v6/api/utils/)
 
-## 사용 가능한 라이브러리 {#available-libraries}
+## 사용 가능한 라이브러리
 
 **Web3.js -** **_이더리움 JavaScript API._**
 
@@ -258,7 +258,7 @@ ethers.utils.formatEther(balance)
 - [GitHub](https://github.com/graphprotocol)
 - [디스코드](https://thegraph.com/discord)
 
-**Alchemy SDK -** **_향상된 API를 제공하는 Ethers.js 래퍼(Wrapper)._**
+**Alchemy SDK -** **_향상된 API를 제공하는 Ethers.js 래퍼(wrapper)._**
 
 - [문서](https://www.alchemy.com/docs)
 - [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
@@ -267,6 +267,16 @@ ethers.utils.formatEther(balance)
 
 - [문서](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
+
+**wagmi -** **_viem을 기반으로 구축된 이더리움용 React 훅(hooks) 라이브러._**
+
+- [문서](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_wagmi 및 viem을 기반으로 구축되어 탈중앙화 애플리케이션(dapp)에 지갑 연결을 추가하기 위한 React 라이브러리._**
+
+- [문서](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
 
 **Codex -** **_수십 개의 체인에 걸친 실시간의 풍부한 블록체인 데이터 API._**
 
@@ -279,7 +289,6 @@ ethers.utils.formatEther(balance)
 
 - [문서](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
-
 ## 더 읽을거리 {#further-reading}
 
 _도움이 된 커뮤니티 리소스를 알고 계신가요? 이 페이지를 편집하여 추가해 주세요!_

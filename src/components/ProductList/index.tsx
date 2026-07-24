@@ -1,17 +1,25 @@
 import type { ImageProps } from "next/image"
 
 import { Image } from "@/components/Image"
-import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Flex } from "@/components/ui/flex"
-import { List, ListItem } from "@/components/ui/list"
+import {
+  Card,
+  CardBanner,
+  CardButtonFake,
+  CardContent,
+  CardFooter,
+  CardParagraph,
+  CardTitle,
+} from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
 
 import { cn } from "@/lib/utils/cn"
 
-type Content = {
+export type ProductListContent = {
   title: string
-  description: string
-  contentItems?: React.ReactNode[]
-  link?: string
+  description: React.ReactNode | React.ReactNode[]
+  href: string
+  /** Complete, self-descriptive CTA label, e.g. "Visit EigenLayer" */
+  ctaLabel: string
   image?: ImageProps["src"]
   alt?: string
   id?: string
@@ -19,109 +27,95 @@ type Content = {
 }
 
 export type ProductListProps = {
-  content: Content[]
+  content: ProductListContent[]
   category?: string
-  actionLabel: string
-  /** Columns rendered from `md` up. Defaults to a single column. */
-  columns?: 1 | 2
+  columns?: 2
+  parentHeadingLevel?: 1 | 2 | 3
 }
 
 const ProductList = ({
-  actionLabel,
   content,
   category,
-  columns = 1,
+  columns,
+  parentHeadingLevel = 2,
 }: ProductListProps) => {
-  const CATEGORY_NAME = "category-name"
-
-  // In a two-column grid the bottom row shouldn't draw a divider on `md+` (one
-  // item when the count is odd, two when it's even). On mobile the list is
-  // always a single column, so only the very last item drops its divider.
-  const lastRowSize = content.length % 2 === 0 ? 2 : 1
+  const CategoryHeading = `h${parentHeadingLevel + 1}` as "h2" | "h3" | "h4"
+  const ProductHeading = `h${parentHeadingLevel + (category ? 2 : 1)}` as
+    | "h2"
+    | "h3"
+    | "h4"
+    | "h5"
 
   return (
-    <div className="w-full">
+    <div className="mb-4 w-full space-y-space">
       {category && (
-        <h3
-          id={CATEGORY_NAME}
-          className="mt-10 mb-0 border-b-2 border-border pb-4 text-2xl"
-        >
+        <CategoryHeading className="mt-space-2x border-b pb-space-half text-h3">
           {category}
-        </h3>
+        </CategoryHeading>
       )}
-      <List
-        aria-labelledby={CATEGORY_NAME}
-        className={cn(
-          "m-0 mb-4",
-          columns === 2 && "grid grid-cols-1 gap-x-16 md:grid-cols-2"
-        )}
-      >
+      <Grid columns={columns || 1} size="wider">
         {content.map(
           (
             {
               title,
               description,
-              link,
+              href,
+              ctaLabel,
               image,
-              alt,
+              alt = "",
               id,
-              contentItems,
               className,
             },
             idx
           ) => {
-            const isLast = idx === content.length - 1
-            const inLastGridRow =
-              columns === 2 && idx >= content.length - lastRowSize
-
+            const descriptions = Array.isArray(description)
+              ? description
+              : [description]
             return (
-              <ListItem
+              <Card
                 key={id || idx}
-                color="text"
-                className={cn(
-                  "mt-8 mb-0 flex pb-4",
-                  !isLast && "border-b",
-                  inLastGridRow && "md:border-b-0",
-                  className
-                )}
+                variant="ghost"
+                href={href}
+                hoverLift
+                className={cn("@container/card flex-row", className)}
               >
-                <div className="w-20">
-                  {image && (
-                    <Image
-                      src={image}
-                      alt={alt || ""}
-                      width={66}
-                      height={66}
-                      className="rounded-xl shadow-lg dark:shadow-body-light"
-                    />
-                  )}
-                </div>
-                <Flex className="ms-4 w-full flex-col justify-between pb-4 sm:flex-row">
-                  <div className="flex flex-1 flex-col gap-2">
-                    <div className="text-xl font-bold">{title}</div>
-                    <div className="mb-0 text-sm opacity-60">{description}</div>
-                    {contentItems && (
-                      <div className="mb-0 flex flex-col gap-2 text-sm">
-                        {contentItems}
-                      </div>
-                    )}
-                  </div>
-                  {link && (
-                    <ButtonLink
-                      variant="outline"
-                      href={link}
-                      className="ms-0 mt-4 min-h-fit gap-0 self-start rounded-xs px-6 py-1 sm:ms-8 sm:mt-0 sm:self-center"
+                {image && (
+                  <CardContent className="flex-none pe-0">
+                    <CardBanner
+                      background="none"
+                      fit="contain"
+                      size="thumbnail"
+                      zoom={false}
                     >
-                      {actionLabel}
-                      <span className="sr-only">to {title} website</span>
-                    </ButtonLink>
-                  )}
-                </Flex>
-              </ListItem>
+                      <Image src={image} alt={alt} width={128} height={128} />
+                    </CardBanner>
+                  </CardContent>
+                )}
+                <div className="flex flex-col">
+                  <CardContent>
+                    <CardTitle asChild>
+                      <ProductHeading>{title}</ProductHeading>
+                    </CardTitle>
+                    {descriptions.map((desc, i) => (
+                      <CardParagraph key={i}>{desc}</CardParagraph>
+                    ))}
+                  </CardContent>
+                  {/* Full-width CTA when the card is narrow; fit-content once
+                      the card is wide enough (most visible at 1 column). */}
+                  <CardFooter className="mt-auto" buttons="inherit">
+                    <CardButtonFake
+                      variant="outline"
+                      className="w-full @md/card:w-fit"
+                    >
+                      {ctaLabel}
+                    </CardButtonFake>
+                  </CardFooter>
+                </div>
+              </Card>
             )
           }
         )}
-      </List>
+      </Grid>
     </div>
   )
 }

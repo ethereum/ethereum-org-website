@@ -18,7 +18,7 @@
   "page-apps-categories-title": "アプリケーションのカテゴリー",
   "page-apps-community-picks-title": "コミュニティのおすすめ",
   "page-apps-meta-title": "イーサリアム上のトップ暗号資産アプリ",
-  "page-apps-meta-description": "イーサリアム上の暗号資産アプリを見つけましょう。DeFi、NFT、ソーシャル、ゲーム、ブリッジ、プライバシー、生産性、DAOのdappを探索できます。取引、収益化、交流のための信頼できるオンチェーンアプリを見つけてください。",
+  "page-apps-meta-description": "イーサリアム上のアプリを探索しましょう：DeFi、NFT、ソーシャル、ゲーム、ブリッジ、プライバシー、DAO。暗号資産の取引、獲得、交流ができる、信頼できるオンチェーンアプリを見つけましょう。",
   "page-apps-category-defi-name": "DeFi",
   "page-apps-category-defi-description": "DeFi（分散型金融）は、ユーザーが暗号資産のレンディング、借り入れ、取引、利息の獲得を行える分散型アプリケーションのカテゴリーです。",
   "page-apps-category-defi-meta-title": "イーサリアムのDeFiアプリ一覧 — レンディング、借り入れ、利回り",
@@ -66,6 +66,7 @@
   "page-apps-info-last-updated": "最終更新",
   "page-apps-gallery-title": "ギャラリー",
   "page-apps-more-apps-like-this": "類似のアプリ",
+  "page-apps-by-company": "{company} 提供",
   "page-apps-today": "今日",
   "page-apps-one-day-ago": "1日前",
   "page-apps-days-ago": "{days}日前"

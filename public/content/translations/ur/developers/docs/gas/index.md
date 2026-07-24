@@ -134,7 +134,7 @@ _خاکہ [ایتھیریم EVM کی تصویر کشی](https://takenobu-hs.gith
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _اوپن سورس ٹرانزیکشن گیس کی قیمت کا تخمینہ کار_
 - [<span dir="ltr">ETH Gas Tracker</span>](https://www.ethgastracker.com/) _ٹرانزیکشن فیس کو کم کرنے اور پیسے بچانے کے لیے ایتھیریم، اور لیئر ۲ (l2) گیس کی قیمتوں کی نگرانی اور ٹریک کریں_
 - [<span dir="ltr">Blocknative ETH Gas Estimator</span>](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _گیس کا تخمینہ لگانے والی کروم ایکسٹینشن جو ٹائپ 0 کی پرانی ٹرانزیکشنز اور ٹائپ 2 <span dir="ltr">EIP-1559</span> ٹرانزیکشنز دونوں کو سپورٹ کرتی ہے۔_
-- [<span dir="ltr">Cryptoneur Gas Fees Calculator</span>](https://www.cryptoneur.xyz/gas-fees-calculator) _مین نیٹ، آربٹرم، اور پولی گون پر مختلف ٹرانزیکشن اقسام کے لیے اپنی مقامی کرنسی میں گیس فیس کا حساب لگائیں۔_
+- [<span dir="ltr">Cryptoneur Gas Fees Calculator</span>](https://cryptoneur.xyz/en/gas-fees-calculator) _مین نیٹ، آربٹرم، اور پولی گون پر مختلف ٹرانزیکشن اقسام کے لیے اپنی مقامی کرنسی میں گیس فیس کا حساب لگائیں۔_
 
 ## متعلقہ ٹولز {#related-tools}
 

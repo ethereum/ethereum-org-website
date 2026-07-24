@@ -1,8 +1,9 @@
 ---
-title: பெக்ட்ரா
-metaTitle: ப்ராக்-எலக்ட்ரா (பெக்ட்ரா)
-description: பெக்ட்ரா நெறிமுறை மேம்பாடு பற்றி அறிக
+title: "பெக்ட்ரா"
+metaTitle: "ப்ராக்-எலக்ட்ரா (பெக்ட்ரா)"
+description: "பெக்ட்ரா நெறிமுறை மேம்பாடு பற்றி அறிக"
 lang: ta
+template: upgrade
 authors: ["நிக்ஸோ", "மரியோ ஹாவெல்"]
 ---
 
@@ -121,7 +122,6 @@ _எத்திரியம் பெக்ட்ரா மேம்பாட�
 
 - [எத்திரியம் வழிகாட்டி வரைபடம்](/roadmap/)
 - [பெக்ட்ரா FAQ](https://epf.wiki/#/wiki/pectra-faq)
-- [Pectra.wtf தகவல் பக்கம்](https://pectra.wtf)
-- [பெக்ட்ரா பங்குவைப்பவர் அனுபவத்தை எப்படி மேம்படுத்துகிறது](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
+- [பங்குவைப்பவர் அனுபவத்தை பெக்ட்ரா எவ்வாறு மேம்படுத்துகிறது](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [EIP7702 தகவல் பக்கம்](https://eip7702.io/)
-- [பெக்ட்ரா டெவ்நெட்கள்](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)
+- [பெக்ட்ரா devnets](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

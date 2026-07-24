@@ -215,5 +215,3 @@ Spazio Twitter:
 - [AMA della community di ETH](https://x.com/NapulETH/status/1905732699094151623)
 
 Articoli:
-
-- [Costruire ETHKL, di Danny H.](https://sekto.tech/ethkl24)

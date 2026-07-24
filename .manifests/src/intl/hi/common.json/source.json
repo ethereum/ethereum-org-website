@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/common.json",
-  "generatedAt": "2026-06-11T18:12:54.346Z",
-  "rootHash": "37e3e90aabf2",
+  "generatedAt": "2026-07-22T22:30:22.645Z",
+  "rootHash": "aec245439a88",
   "tree": {
-    "contentHash": "68ced947acb6",
-    "anchorHash": "2b0750c7dab9",
+    "contentHash": "9179d5b5ad5d",
+    "anchorHash": "05674fdf33b4",
     "children": {
       "about-ethereum-org": {
         "contentHash": "9aafb3686977",
@@ -21,6 +21,10 @@
       },
       "acknowledgements": {
         "contentHash": "c9015d53b908",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "adding-community-stories": {
+        "contentHash": "53c41324fc82",
         "anchorHash": "e3b0c44298fc"
       },
       "adding-desci-projects": {
@@ -63,8 +67,16 @@
         "contentHash": "fd215ca4b497",
         "anchorHash": "e3b0c44298fc"
       },
+      "agent-tooling": {
+        "contentHash": "6157ff96ba11",
+        "anchorHash": "e3b0c44298fc"
+      },
       "ai-agents": {
         "contentHash": "3d9e43485a12",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-integration": {
+        "contentHash": "cfdddb5e9661",
         "anchorHash": "e3b0c44298fc"
       },
       "apps": {
@@ -137,6 +149,10 @@
       },
       "content-standardization": {
         "contentHash": "f1854793f823",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "contract-tooling": {
+        "contentHash": "6d26d8c2fc81",
         "anchorHash": "e3b0c44298fc"
       },
       "contributing": {
@@ -258,6 +274,10 @@
         "contentHash": "ba1a84f8388c",
         "anchorHash": "e3b0c44298fc"
       },
+      "deposit-contract": {
+        "contentHash": "10449017f4dd",
+        "anchorHash": "e3b0c44298fc"
+      },
       "description": {
         "contentHash": "c7b1e6b4be2a",
         "anchorHash": "e3b0c44298fc"
@@ -356,6 +376,10 @@
       },
       "edit-page": {
         "contentHash": "5d2c6743b87c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "education-standards": {
+        "contentHash": "7fbf171be369",
         "anchorHash": "e3b0c44298fc"
       },
       "ef-blog": {
@@ -582,6 +606,10 @@
       },
       "future-proofing": {
         "contentHash": "d35c1e677306",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "gas": {
+        "contentHash": "d85b58b6125d",
         "anchorHash": "e3b0c44298fc"
       },
       "get-eth": {
@@ -962,6 +990,14 @@
       },
       "light-mode-aria-label": {
         "contentHash": "bfa0cab91d75",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link-external-assistive-text": {
+        "contentHash": "1d1833565142",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link-mailto-assistive-text": {
+        "contentHash": "7311cdb9c6e0",
         "anchorHash": "e3b0c44298fc"
       },
       "loading": {
@@ -1556,6 +1592,14 @@
         "contentHash": "1e91cc66da1d",
         "anchorHash": "e3b0c44298fc"
       },
+      "nav-roadmap-account-abstraction": {
+        "contentHash": "2ebcf10050c2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-danksharding": {
+        "contentHash": "d5c7c6294c3d",
+        "anchorHash": "e3b0c44298fc"
+      },
       "nav-roadmap-description": {
         "contentHash": "b533eb80a154",
         "anchorHash": "e3b0c44298fc"
@@ -1592,6 +1636,10 @@
         "contentHash": "edbc8cbbe264",
         "anchorHash": "e3b0c44298fc"
       },
+      "nav-roadmap-pbs": {
+        "contentHash": "f04af9b1aa1c",
+        "anchorHash": "e3b0c44298fc"
+      },
       "nav-roadmap-scaling": {
         "contentHash": "f1766cc4ec8d",
         "anchorHash": "e3b0c44298fc"
@@ -1602,6 +1650,10 @@
       },
       "nav-roadmap-scaling-label": {
         "contentHash": "2fc8de069189",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-secret-leader-election": {
+        "contentHash": "9d1a2ca7f4a1",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-roadmap-security": {
@@ -1616,6 +1668,14 @@
         "contentHash": "b209561576f3",
         "anchorHash": "e3b0c44298fc"
       },
+      "nav-roadmap-single-slot-finality": {
+        "contentHash": "26be487ae07f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-statelessness": {
+        "contentHash": "6c88f20571b1",
+        "anchorHash": "e3b0c44298fc"
+      },
       "nav-roadmap-user-experience": {
         "contentHash": "7e9c787bf519",
         "anchorHash": "e3b0c44298fc"
@@ -1626,6 +1686,14 @@
       },
       "nav-roadmap-ux-label": {
         "contentHash": "7e9c787bf519",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-verkle-trees": {
+        "contentHash": "fdf6b8b2922f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-zkevm": {
+        "contentHash": "84685178c6df",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-rwa-description": {
@@ -1729,7 +1797,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "nav-staking-saas-label": {
-        "contentHash": "4c31dec05833",
+        "contentHash": "6561796cd0de",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-staking-solo-description": {
@@ -1742,6 +1810,14 @@
       },
       "nav-staking-solo-label": {
         "contentHash": "3663ec0493cc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-stories-description": {
+        "contentHash": "2b07e765a86d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-stories-label": {
+        "contentHash": "e2718f208216",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-start-get-started-description": {
@@ -1832,6 +1908,10 @@
         "contentHash": "d157dad01986",
         "anchorHash": "e3b0c44298fc"
       },
+      "network-infrastructure": {
+        "contentHash": "ff99932523e7",
+        "anchorHash": "e3b0c44298fc"
+      },
       "nft-page": {
         "contentHash": "031f7477d6fe",
         "anchorHash": "e3b0c44298fc"
@@ -1854,6 +1934,10 @@
       },
       "open": {
         "contentHash": "ed077f3d8125",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-actions": {
+        "contentHash": "adc00f399f4e",
         "anchorHash": "e3b0c44298fc"
       },
       "page-languages-filter-label": {
@@ -2010,6 +2094,10 @@
         "contentHash": "8f6fb4eb7f42",
         "anchorHash": "e3b0c44298fc"
       },
+      "security-testing": {
+        "contentHash": "cf78e9359e4f",
+        "anchorHash": "e3b0c44298fc"
+      },
       "see-contributors": {
         "contentHash": "bdcc1746e82a",
         "anchorHash": "e3b0c44298fc"
@@ -2064,6 +2152,10 @@
       },
       "statelessness": {
         "contentHash": "6c88f20571b1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "stories": {
+        "contentHash": "6d09cf574882",
         "anchorHash": "e3b0c44298fc"
       },
       "style-guide": {
@@ -2252,6 +2344,7 @@
       "about-us",
       "account-abstraction",
       "acknowledgements",
+      "adding-community-stories",
       "adding-desci-projects",
       "adding-developer-tools",
       "adding-exchanges",
@@ -2262,7 +2355,9 @@
       "adding-reports",
       "adding-staking-products",
       "adding-wallets",
+      "agent-tooling",
       "ai-agents",
+      "app-integration",
       "apps",
       "aria-toggle-menu-button",
       "aria-toggle-search-button",
@@ -2281,6 +2376,7 @@
       "contact",
       "content-resources",
       "content-standardization",
+      "contract-tooling",
       "contributing",
       "contributors",
       "contributors-thanks",
@@ -2306,6 +2402,7 @@
       "decentralized-science",
       "decentralized-social-networks",
       "defi-page",
+      "deposit-contract",
       "description",
       "design",
       "design-principles",
@@ -2331,6 +2428,7 @@
       "documentation",
       "down",
       "edit-page",
+      "education-standards",
       "ef-blog",
       "eips",
       "energy-consumption",
@@ -2378,6 +2476,7 @@
       "founders",
       "from",
       "future-proofing",
+      "gas",
       "get-eth",
       "get-involved",
       "get-started",
@@ -2473,6 +2572,8 @@
       "less",
       "light-mode",
       "light-mode-aria-label",
+      "link-external-assistive-text",
+      "link-mailto-assistive-text",
       "loading",
       "loading-error-refresh",
       "meetups",
@@ -2621,6 +2722,8 @@
       "nav-reports-label",
       "nav-research-description",
       "nav-research-label",
+      "nav-roadmap-account-abstraction",
+      "nav-roadmap-danksharding",
       "nav-roadmap-description",
       "nav-roadmap-future-description",
       "nav-roadmap-future-label",
@@ -2630,15 +2733,21 @@
       "nav-roadmap-options",
       "nav-roadmap-options-alt",
       "nav-roadmap-overview-description",
+      "nav-roadmap-pbs",
       "nav-roadmap-scaling",
       "nav-roadmap-scaling-description",
       "nav-roadmap-scaling-label",
+      "nav-roadmap-secret-leader-election",
       "nav-roadmap-security",
       "nav-roadmap-security-description",
       "nav-roadmap-security-label",
+      "nav-roadmap-single-slot-finality",
+      "nav-roadmap-statelessness",
       "nav-roadmap-user-experience",
       "nav-roadmap-ux-description",
       "nav-roadmap-ux-label",
+      "nav-roadmap-verkle-trees",
+      "nav-roadmap-zkevm",
       "nav-rwa-description",
       "nav-run-a-node-description",
       "nav-see-all-guides-description",
@@ -2668,6 +2777,8 @@
       "nav-staking-solo-description",
       "nav-support-description",
       "nav-staking-solo-label",
+      "nav-stories-description",
+      "nav-stories-label",
       "nav-start-get-started-description",
       "nav-start-with-crypto-title",
       "nav-start-with-crypto-description",
@@ -2690,12 +2801,14 @@
       "nav-where-to-start-label",
       "nav-whitepaper-description",
       "nav-zkp-description",
+      "network-infrastructure",
       "nft-page",
       "nfts",
       "no",
       "on-this-page",
       "onchain-gaming",
       "open",
+      "page-actions",
       "page-languages-filter-label",
       "page-languages-filter-placeholder",
       "page-languages-interested",
@@ -2733,6 +2846,7 @@
       "search-ethereum-org",
       "secret-leader-election",
       "security",
+      "security-testing",
       "see-contributors",
       "start-building",
       "show-all",
@@ -2747,6 +2861,7 @@
       "stake-eth",
       "staking",
       "statelessness",
+      "stories",
       "style-guide",
       "support",
       "terms-and-conditions",
@@ -2794,5 +2909,5 @@
       "region-sint-eustatius-netherlands"
     ]
   },
-  "sourceCommitSha": "2e0bedf904a21d6a5283f6df5a7894ec4f4b54c3"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

@@ -6,7 +6,7 @@ import {
   SquareCode,
   User,
 } from "lucide-react"
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams, ToCItem } from "@/lib/types"
 
@@ -264,7 +264,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
         <Section
           aria-labelledby={getId(tocItems[2].url)}
-          className="flow rounded-4xl border border-accent-a/20 bg-linear-to-b from-accent-a/5 to-accent-a/15 px-4 py-6 lg:p-12"
+          className="flow rounded-4xl border border-accent-a/20 bg-tint-accent-a px-4 py-6 lg:p-12"
         >
           <div className="flex flex-col items-center justify-center gap-4 xl:flex-row">
             <Image
@@ -306,7 +306,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
         <Section
           aria-labelledby={getId(tocItems[3].url)}
-          className="flow rounded-4xl border border-accent-c/20 bg-linear-to-b from-accent-c/5 to-accent-c/15 px-4 py-6 lg:p-12"
+          className="flow rounded-4xl border border-accent-c/20 bg-tint-accent-c px-4 py-6 gradient-use-light lg:p-12"
         >
           <div className="flex flex-col items-center gap-4 xl:flex-row-reverse">
             <Image src={howBanner} alt="" sizes="288px" className="max-w-72" />
@@ -919,6 +919,8 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-what-is-ethereum")
 

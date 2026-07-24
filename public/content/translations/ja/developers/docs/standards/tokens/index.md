@@ -29,10 +29,13 @@ incomplete: true
 
 [ERC](https://eips.ethereum.org/erc)提案の完全なリスト。
 
-## 参考文献 {#further-reading}
+## 参考文献
 
 _役に立ったコミュニティリソースをご存知ですか？このページを編集して追加してください！_
 
+- [トークン統合チェックリスト](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md) - _Trail of Bits_
+- [オープンツェッペリンのドキュメント: トークン](https://docs.openzeppelin.com/contracts/5.x/tokens) - _オープンツェッペリン_
+- [トークン統合の危険性 (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _オープンツェッペリン_
 ## 関連チュートリアル {#related-tutorials}
 
 - [トークン統合チェックリスト](/developers/tutorials/token-integration-checklist/) _– トークンとやり取りする際に考慮すべき事項のチェックリスト。_

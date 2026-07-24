@@ -60,10 +60,22 @@ Untuk memulai, kunjungi [panduan mulai cepat Ethereum](https://academy.subquery.
 
 Untuk memulai, kunjungi [dokumentasi](https://docs.codex.io), coba [Penjelajah](https://docs.codex.io/explore), atau daftar di [dasbor](https://dashboard.codex.io/signup).
 
+
+## Mobula
+
+[Mobula](https://mobula.io/) adalah API data kripto berkinerja tinggi yang menyediakan data pasar waktu nyata dan historis, metadata token, portofolio dompet, dan analitik onchain di lebih dari 90 rantai blok. Pengembang dapat mengakses titik akhir REST dan GraphQL untuk harga token, kapitalisasi pasar, volume perdagangan, data likuiditas, dan saldo dompet multirantai tanpa menjalankan infrastruktur mereka sendiri. Mobula menawarkan paket gratis (100 ribu permintaan/bulan) dan berbayar untuk aplikasi produksi.
+
+Untuk memulai, kunjungi [dokumentasi](https://docs.mobula.io), jelajahi [referensi API](https://docs.mobula.io/reference/), atau daftar di [dasbor](https://mobula.io/).
 ## EVM Query Language {#evm-query-language}
 
 EVM Query Language (EQL) adalah bahasa mirip SQL yang dirancang untuk meminta kueri pada rantai EVM (Ethereum Virtual Machine). Tujuan utama EQL adalah untuk mendukung kueri relasional yang kompleks pada entitas kelas satu rantai EVM (blok, akun, dan transaksi) sambil memberikan pengembang dan peneliti sintaksis yang ergonomis untuk penggunaan sehari-hari. Dengan EQL, pengembang dapat mengambil data rantai blok menggunakan sintaksis mirip SQL yang familier dan menghilangkan kebutuhan akan kode boilerplate yang kompleks. EQL mendukung permintaan data rantai blok standar (misalnya, mengambil nonce dan saldo akun di Ethereum atau mengambil ukuran blok dan stempel waktu saat ini) dan terus menambahkan dukungan untuk permintaan dan set fitur yang lebih kompleks.
 
+
+## Envio
+
+[Envio](https://envio.dev/) adalah kerangka kerja pengindeksan yang mengubah peristiwa onchain menjadi API GraphQL yang dapat dikueri. Ini mendukung Ethereum dan rantai apa pun yang kompatibel dengan EVM. Pengembang menulis penangan peristiwa di TypeScript, JavaScript, atau ReScript untuk menyajikan data waktu nyata dan historis, dengan dukungan reorganisasi, pengindeksan multirantai, dan hosting terkelola di Envio Cloud atau hosting mandiri.
+
+Untuk memulai, ikuti [panduan mulai cepat HyperIndex](https://docs.envio.dev/docs/HyperIndex/quickstart) untuk membuat, menyebarkan, dan mengkueri pengindeks.
 ## Bacaan Lebih Lanjut {#further-reading}
 
 - [Menjelajahi Data Kripto I: Arsitektur Aliran Data](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
@@ -75,7 +87,7 @@ EVM Query Language (EQL) adalah bahasa mirip SQL yang dirancang untuk meminta ku
 - [Dasar-dasar Dune](https://docs.dune.com/#dune-basics)
 - [Panduan Mulai Cepat Ethereum SubQuery](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [Ikhtisar Jaringan SQD](https://docs.sqd.dev/)
-- [EVM Query Language](https://eql.sh/blog/alpha-release-notes)
+- [EVM Query Language](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 
 ## Tutorial: Data & analitik / SQL di Ethereum {#tutorials}
 

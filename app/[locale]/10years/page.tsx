@@ -20,10 +20,10 @@ import YouTube from "@/components/YouTube"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { getCommunityStories } from "@/lib/utils/stories"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import tenYearEventRegions from "@/data/tenYearEventRegions"
-import tenYearStories from "@/data/tenYearStories"
 
 import AdoptionSwiper from "./_components/AdoptionSwiper/lazy"
 import { adoptionStyles } from "./_components/data"
@@ -33,11 +33,7 @@ import TenYearHero from "./_components/TenYearHero"
 import TorchHistorySwiper from "./_components/TorchHistorySwiper/lazy"
 import { torchHolders } from "./_components/torchHoldersData"
 import Stories from "./_components/UserStories/lazy"
-import {
-  getAdoptionCards,
-  getInnovationCards,
-  parseStoryDates,
-} from "./_components/utils"
+import { getAdoptionCards, getInnovationCards } from "./_components/utils"
 import TenYearJsonLD from "./page-jsonld"
 
 import Curved10YearsText from "@/public/images/10-year-anniversary/10y-torch-heading.svg"
@@ -50,7 +46,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   setRequestLocale(locale)
 
-  const stories = parseStoryDates(tenYearStories, locale)
+  const stories = await getCommunityStories(locale)
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -94,7 +90,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         </div>
 
         <div className="w-full px-4 py-8 md:px-8">
-          <div className="flex flex-col items-center gap-4 rounded-4xl bg-radial-a px-4 pt-8 lg:px-14 lg:pt-14">
+          <div className="flex flex-col items-center gap-4 rounded-4xl bg-radial-primary px-4 pt-8 lg:px-14 lg:pt-14">
             <div className="flex flex-col gap-4 text-center">
               <h2 className="text-4xl font-black">
                 {t("page-10-year-livestream-title")}
@@ -204,7 +200,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
         <div
           id="torch-history"
-          className="my-32 flex w-full scroll-mt-32 flex-col bg-linear-to-b from-[#161A36] via-[#161A36] via-60% to-[#9C63F8] md:rounded-3xl"
+          // Custom color for 10-year anniversary torch theme, #161A36 matches torch.mp4 background
+          className="my-32 flex w-full scroll-mt-32 flex-col bg-linear-to-b from-[#161A36] from-60% to-purple-600 md:rounded-3xl"
         >
           <div className="p-8">
             <div className="relative">
@@ -377,6 +374,8 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-10-year-anniversary")
 

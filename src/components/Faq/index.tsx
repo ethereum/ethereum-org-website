@@ -21,7 +21,7 @@ const FaqTrigger = React.forwardRef<
       "text-start font-medium",
       "hover:text-body hover:[&_h2]:!text-body [&_svg]:rotate-90 [&[data-state=open]_h2]:text-current [&[data-state=open]_svg]:-rotate-90",
       "[&_[data-label='icon-container']]:ms-8 [&_[data-label='icon-container']]:rounded-full [&_[data-label='icon-container']]:border [&_[data-label='icon-container']]:border-body [&_[data-label='icon-container']]:p-2 [&_svg]:text-lg",
-      "hover:[&_[data-label='icon-container']]:!border-primary-hover hover:[&_[data-label='icon-container']]:shadow-[4px_4px_0_hsla(var(--primary-low-contrast),1)] [&_[data-label='icon-container']:hover_svg]:text-primary-hover",
+      "hover:**:data-[label='icon-container']:border-primary-hover! hover:**:data-[label='icon-container']:shadow-primary-no-blur-1 [&_[data-label='icon-container']:hover_svg]:text-primary-hover",
       "[&[data-state=open]]:text-current",
       className
     )}
@@ -60,7 +60,7 @@ const FaqItem = React.forwardRef<
   <AccordionItem
     ref={ref}
     className={cn(
-      "w-full border-b last:border-b-0 hover:bg-background-highlight [&[data-state=open]]:bg-background-highlight",
+      "w-full border-b last:border-b-0 hover:bg-background-highlight data-[state=open]:bg-background-highlight",
       className
     )}
     {...props}

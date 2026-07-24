@@ -1,7 +1,7 @@
 ---
-title: Introducción a Web3
-metaTitle: ¿Qué es Web3 y por qué es importante?
-description: Una introducción a Web3 (la próxima evolución de la World Wide Web) y por qué es importante.
+title: "Introducción a Web3"
+metaTitle: "¿Qué es Web3 y por qué es importante?"
+description: "Una introducción a Web3 (la próxima evolución de la World Wide Web) y por qué es importante."
 lang: es
 ---
 

@@ -60,10 +60,22 @@ Per iniziare, visita la [guida rapida di Ethereum](https://academy.subquery.netw
 
 Per iniziare, visita la [documentazione](https://docs.codex.io), prova l'[Explorer](https://docs.codex.io/explore) o registrati sulla [dashboard](https://dashboard.codex.io/signup).
 
+
+## Mobula
+
+[Mobula](https://mobula.io/) è un'API di dati cripto ad alte prestazioni che fornisce dati di mercato storici e in tempo reale, metadati dei token, portafogli e analisi onchain su oltre 90 blockchain. Gli sviluppatori possono accedere agli endpoint REST e GraphQL per i prezzi dei token, le capitalizzazioni di mercato, i volumi di trading, i dati sulla liquidità e i saldi dei portafogli multi-catena senza gestire una propria infrastruttura. Mobula offre sia piani gratuiti (100.000 richieste/mese) che a pagamento per le applicazioni di produzione.
+
+Per iniziare, visita la [documentazione](https://docs.mobula.io), esplora il [riferimento API](https://docs.mobula.io/reference/) o registrati sulla [dashboard](https://mobula.io/).
 ## EVM Query Language {#evm-query-language}
 
 L'EVM Query Language (EQL) è un linguaggio simile a SQL progettato per interrogare le catene EVM (Ethereum Virtual Machine). L'obiettivo finale di EQL è supportare query relazionali complesse sui cittadini di prima classe della catena EVM (blocchi, account e transazioni) fornendo al contempo a sviluppatori e ricercatori una sintassi ergonomica per l'uso quotidiano. Con EQL, gli sviluppatori possono recuperare i dati della blockchain utilizzando una sintassi familiare simile a SQL ed eliminare la necessità di codice boilerplate complesso. EQL supporta le richieste standard di dati della blockchain (ad es. il recupero del nonce e del saldo di un account su Ethereum o il recupero della dimensione e del timestamp del blocco corrente) e aggiunge continuamente supporto per richieste e set di funzionalità più complessi.
 
+
+## Envio
+
+[Envio](https://envio.dev/) è un framework di indicizzazione che trasforma gli eventi onchain in un'API GraphQL interrogabile. Supporta Ethereum e qualsiasi catena compatibile con l'EVM. Gli sviluppatori scrivono gestori di eventi in TypeScript, JavaScript o ReScript per fornire dati storici e in tempo reale, con supporto per la riorganizzazione, indicizzazione multi-catena e hosting gestito su Envio Cloud o self-hosting.
+
+Per iniziare, segui la [guida rapida di HyperIndex](https://docs.envio.dev/docs/HyperIndex/quickstart) per creare, distribuire e interrogare un indicizzatore.
 ## Letture consigliate {#further-reading}
 
 - [Esplorare i dati cripto I: architetture del flusso di dati](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
@@ -75,7 +87,7 @@ L'EVM Query Language (EQL) è un linguaggio simile a SQL progettato per interrog
 - [Basi di Dune](https://docs.dune.com/#dune-basics)
 - [Guida rapida di SubQuery per Ethereum](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [Panoramica della rete SQD](https://docs.sqd.dev/)
-- [EVM Query Language](https://eql.sh/blog/alpha-release-notes)
+- [EVM Query Language](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 
 ## Tutorial: Dati e analisi / SQL su Ethereum {#tutorials}
 

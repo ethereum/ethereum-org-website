@@ -256,14 +256,12 @@ Lebih suka belajar secara visual? Tonton Finematics menjelaskan rollup Optimisti
 ## Bacaan lebih lanjut tentang rollup Optimistic {#further-reading-on-optimistic-rollups}
 
 - [Bagaimana cara kerja rollup Optimistic (Panduan Lengkap)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [Apa itu Rollup Rantai Blok? Pengantar Teknis](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
 - [Panduan Esensial untuk Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [Panduan Praktis untuk Rollup Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
-- [Status Bukti Penipuan di L2 Ethereum](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
-- [Bagaimana cara kerja Rollup Optimism sebenarnya?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
-- [Eksplorasi Mendalam OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
+- [Status Bukti Penipuan di l2 Ethereum](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
+- [Bagaimana sebenarnya cara kerja Rollup Optimism?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
+- [Pembahasan Mendalam OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [Apa itu Mesin Virtual Optimistic?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
-
 ## Tutorial: Rollup Optimistic dan jembatan di Ethereum {#tutorials}
 
 - [Panduan kontrak jembatan standar Optimism](/developers/tutorials/optimism-std-bridge-annotated-code/) _– Panduan kode beranotasi dari jembatan standar Optimism untuk memindahkan aset antara l1 dan l2._

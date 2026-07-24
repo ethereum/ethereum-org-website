@@ -60,10 +60,22 @@ Para comenzar, visite la [guía de inicio rápido de Ethereum](https://academy.s
 
 Para comenzar, visite la [documentación](https://docs.codex.io), pruebe el [Explorador](https://docs.codex.io/explore) o regístrese en el [panel de control](https://dashboard.codex.io/signup).
 
+
+## Mobula
+
+[Mobula](https://mobula.io/) es una API de datos cripto de alto rendimiento que proporciona datos de mercado históricos y en tiempo real, metadatos de tokens, portafolios de billeteras y análisis en cadena en más de 90 cadenas de bloques. Los desarrolladores pueden acceder a puntos de conexión REST y GraphQL para obtener precios de tokens, capitalizaciones de mercado, volúmenes de negociación, datos de liquidez y saldos de billeteras multicadena sin tener que ejecutar su propia infraestructura. Mobula ofrece planes gratuitos (100 000 solicitudes/mes) y de pago para aplicaciones en producción.
+
+Para comenzar, visite la [documentación](https://docs.mobula.io), explore la [referencia de la API](https://docs.mobula.io/reference/) o regístrese en el [panel de control](https://mobula.io/).
 ## Lenguaje de consulta de EVM {#evm-query-language}
 
 EVM Query Language (EQL) es un lenguaje similar a SQL diseñado para consultar cadenas de la EVM (Máquina Virtual de Ethereum). El objetivo final de EQL es admitir consultas relacionales complejas sobre los ciudadanos de primera clase de la cadena EVM (bloques, cuentas y transacciones) al tiempo que proporciona a los desarrolladores e investigadores una sintaxis ergonómica para el uso diario. Con EQL, los desarrolladores pueden obtener datos de la cadena de bloques utilizando una sintaxis familiar similar a SQL y eliminar la necesidad de código repetitivo complejo. EQL admite solicitudes de datos estándar de la cadena de bloques (por ejemplo, recuperar el nonce y el saldo de una cuenta en Ethereum o recuperar el tamaño y la marca de tiempo del bloque actual) y agrega continuamente soporte para solicitudes y conjuntos de características más complejos.
 
+
+## Envio
+
+[Envio](https://envio.dev/) es un marco de indexación que convierte los eventos en cadena en una API GraphQL consultable. Es compatible con Ethereum y cualquier cadena compatible con la EVM. Los desarrolladores escriben manejadores de eventos en TypeScript, JavaScript o ReScript para servir datos históricos y en tiempo real, con soporte para reorganizaciones, indexación multicadena y alojamiento administrado en Envio Cloud o alojamiento propio.
+
+Para comenzar, siga la [guía de inicio rápido de HyperIndex](https://docs.envio.dev/docs/HyperIndex/quickstart) para crear, desplegar y consultar un indexador.
 ## Lecturas adicionales {#further-reading}
 
 - [Explorando datos cripto I: Arquitecturas de flujo de datos](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
@@ -75,7 +87,7 @@ EVM Query Language (EQL) es un lenguaje similar a SQL diseñado para consultar c
 - [Conceptos básicos de Dune](https://docs.dune.com/#dune-basics)
 - [Guía de inicio rápido de Ethereum en SubQuery](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [Descripción general de la red SQD](https://docs.sqd.dev/)
-- [Lenguaje de consulta de EVM](https://eql.sh/blog/alpha-release-notes)
+- [Lenguaje de consulta de EVM](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 
 ## Tutoriales: Datos y análisis / SQL en Ethereum {#tutorials}
 

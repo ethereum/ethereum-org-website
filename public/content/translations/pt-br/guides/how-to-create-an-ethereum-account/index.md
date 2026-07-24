@@ -1,7 +1,7 @@
 ---
 title: Como criar uma conta Ethereum
 metaTitle: Como "criar" uma conta Ethereum
-description: Um guia passo a passo sobre a criação de uma conta Ethereum usando uma carteira.
+description: "Um guia passo a passo sobre a criação de uma conta Ethereum usando uma carteira."
 lang: pt-br
 ---
 

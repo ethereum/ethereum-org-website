@@ -18,7 +18,7 @@
   "page-apps-categories-title": "애플리케이션 카테고리",
   "page-apps-community-picks-title": "커뮤니티 추천",
   "page-apps-meta-title": "이더리움 최고의 암호화폐 앱",
-  "page-apps-meta-description": "이더리움의 암호화폐 앱을 살펴보세요. 탈중앙화 금융 (DeFi), NFT, 소셜, 게임, 브릿지, 프라이버시, 생산성 및 DAO 탈중앙화 애플리케이션 (dapp)을 탐색해 보세요. 거래, 수익 창출, 상호 작용을 위한 신뢰할 수 있는 온체인 앱을 찾아보세요.",
+  "page-apps-meta-description": "이더리움 앱을 살펴보세요: DeFi, NFT, 소셜, 게임, 브릿지, 프라이버시, DAO. 암호화폐를 거래하고, 수익을 창출하며, 상호작용할 수 있는 신뢰할 수 있는 온체인 앱을 찾아보세요.",
   "page-apps-category-defi-name": "DeFi",
   "page-apps-category-defi-description": "DeFi는 사용자가 암호화폐 자산을 대출, 차입, 거래하고 이자를 얻을 수 있도록 하는 탈중앙화 애플리케이션 카테고리입니다.",
   "page-apps-category-defi-meta-title": "이더리움 DeFi 앱 목록 — 대출, 차입 및 수익",
@@ -66,6 +66,7 @@
   "page-apps-info-last-updated": "최근 업데이트",
   "page-apps-gallery-title": "갤러리",
   "page-apps-more-apps-like-this": "이와 유사한 앱 더 보기",
+  "page-apps-by-company": "{company} 제작",
   "page-apps-today": "오늘",
   "page-apps-one-day-ago": "1일 전",
   "page-apps-days-ago": "{days}일 전"

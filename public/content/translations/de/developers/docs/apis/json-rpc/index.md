@@ -1887,7 +1887,7 @@ Dies war nur eine kurze Einführung in einige der häufigsten Aufgaben, die die 
 
 ## Verwandte Themen {#related-topics}
 
-- [JSON-RPC-Spezifikation](http://www.jsonrpc.org/specification)
+- [JSON-RPC-Spezifikation](https://www.jsonrpc.org/specification)
 - [Knoten und Clients](/developers/docs/nodes-and-clients/)
 - [JavaScript-APIs](/developers/docs/apis/javascript/)
 - [Backend-APIs](/developers/docs/apis/backend/)

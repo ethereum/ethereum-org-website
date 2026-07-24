@@ -4,11 +4,11 @@
 
 @layer base {
   * {
-    @apply scroll-smooth border-border;
+    @apply scroll-smooth border-border dark:shadow-body/15;
   }
 
   body {
-    @apply bg-background font-body leading-base text-body;
+    @apply bg-background font-body leading-base text-body antialiased;
   }
 
   a {

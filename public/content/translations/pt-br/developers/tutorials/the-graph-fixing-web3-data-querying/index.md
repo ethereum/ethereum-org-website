@@ -84,7 +84,7 @@ Primeiro, vamos falar sobre o GraphQL, originalmente projetado e implementado pe
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 
-![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.gif)
+![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.mp4#910x692)
 
 As duas imagens capturam muito bem a essência do GraphQL. Com a consulta à direita, podemos definir exatamente quais dados queremos, então obtemos tudo em uma única solicitação e nada mais do que exatamente o que precisamos. Um servidor GraphQL lida com a busca de todos os dados necessários, por isso é incrivelmente fácil para o lado do consumidor frontend usar. [Esta é uma boa explicação](https://www.apollographql.com/blog/graphql-explained) de como exatamente o servidor lida com uma consulta, se você estiver interessado.
 

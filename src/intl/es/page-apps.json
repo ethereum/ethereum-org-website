@@ -18,7 +18,7 @@
   "page-apps-categories-title": "Categorías de aplicaciones",
   "page-apps-community-picks-title": "Selecciones de la comunidad",
   "page-apps-meta-title": "Las mejores aplicaciones cripto en Ethereum",
-  "page-apps-meta-description": "Descubre aplicaciones cripto en Ethereum: explora finanzas descentralizadas (DeFi), NFT, redes sociales, juegos, puentes, privacidad, productividad y aplicaciones descentralizadas (dapp) de DAO. Encuentra aplicaciones en cadena confiables para comerciar, ganar e interactuar.",
+  "page-apps-meta-description": "Descubre aplicaciones en Ethereum: DeFi, NFT, redes sociales, juegos, puentes, privacidad y DAO. Encuentra aplicaciones en cadena confiables para comerciar con cripto, ganar e interactuar.",
   "page-apps-category-defi-name": "DeFi",
   "page-apps-category-defi-description": "DeFi es una categoría de aplicaciones descentralizadas que permiten a los usuarios prestar, pedir prestado, comerciar y ganar intereses sobre sus activos cripto.",
   "page-apps-category-defi-meta-title": "Lista de aplicaciones DeFi de Ethereum: préstamos, toma de préstamos y rendimiento",
@@ -66,6 +66,7 @@
   "page-apps-info-last-updated": "Última actualización",
   "page-apps-gallery-title": "Galería",
   "page-apps-more-apps-like-this": "Más aplicaciones como esta",
+  "page-apps-by-company": "por {company}",
   "page-apps-today": "Hoy",
   "page-apps-one-day-ago": "Hace 1 día",
   "page-apps-days-ago": "Hace {days} días"

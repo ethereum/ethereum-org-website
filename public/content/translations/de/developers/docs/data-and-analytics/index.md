@@ -60,10 +60,22 @@ Um zu beginnen, besuchen Sie die [Ethereum-Schnellstartanleitung](https://academ
 
 Um loszulegen, besuchen Sie die [Dokumentation](https://docs.codex.io), probieren Sie den [Explorer](https://docs.codex.io/explore) aus oder melden Sie sich im [Dashboard](https://dashboard.codex.io/signup) an.
 
+
+## Mobula
+
+[Mobula](https://mobula.io/) ist eine hochleistungsfähige Krypto-Daten-API, die Echtzeit- und historische Marktdaten, Token-Metadaten, Wallet-Portfolios und Onchain-Analysen über mehr als 90 Blockchains hinweg bereitstellt. Entwickler können auf REST- und GraphQL-Endpunkte für Token-Preise, Marktkapitalisierungen, Handelsvolumina, Liquiditätsdaten und Multi-Chain-Wallet-Guthaben zugreifen, ohne eine eigene Infrastruktur betreiben zu müssen. Mobula bietet sowohl kostenlose (100.000 Anfragen/Monat) als auch kostenpflichtige Pläne für Produktionsanwendungen.
+
+Um loszulegen, besuchen Sie die [Dokumentation](https://docs.mobula.io), erkunden Sie die [API-Referenz](https://docs.mobula.io/reference/) oder melden Sie sich im [Dashboard](https://mobula.io/) an.
 ## EVM Query Language {#evm-query-language}
 
 Die EVM Query Language (EQL) ist eine SQL-ähnliche Sprache, die für die Abfrage von EVM-Chains (Ethereum Virtual Machine) entwickelt wurde. Das ultimative Ziel von EQL ist es, komplexe relationale Abfragen auf First-Class-Citizens der EVM-Chain (Blöcke, Konten und Transaktionen) zu unterstützen und Entwicklern sowie Forschern gleichzeitig eine ergonomische Syntax für den täglichen Gebrauch zu bieten. Mit EQL können Entwickler Blockchain-Daten mit einer vertrauten SQL-ähnlichen Syntax abrufen und den Bedarf an komplexem Boilerplate-Code eliminieren. EQL unterstützt standardmäßige Blockchain-Datenanfragen (z. B. das Abrufen der Nonce und des Guthabens eines Kontos auf Ethereum oder das Abrufen der aktuellen Blockgröße und des Zeitstempels) und fügt kontinuierlich Unterstützung für komplexere Anfragen und Funktionsumfänge hinzu.
 
+
+## Envio
+
+[Envio](https://envio.dev/) ist ein Indexierungs-Framework, das Onchain-Ereignisse in eine abfragbare GraphQL-API verwandelt. Es unterstützt Ethereum und jede EVM-kompatible Chain. Entwickler schreiben Ereignis-Handler in TypeScript, JavaScript oder ReScript, um Echtzeit- und historische Daten bereitzustellen, mit Reorg-Unterstützung, Multi-Chain-Indexierung und verwaltetem Hosting in der Envio Cloud oder als Self-Hosting.
+
+Um loszulegen, folgen Sie der [HyperIndex-Schnellstartanleitung](https://docs.envio.dev/docs/HyperIndex/quickstart), um einen Indexer zu erstellen, bereitzustellen und abzufragen.
 ## Weiterführende Literatur {#further-reading}
 
 - [Erkundung von Krypto-Daten I: Datenflussarchitekturen](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
@@ -75,7 +87,7 @@ Die EVM Query Language (EQL) ist eine SQL-ähnliche Sprache, die für die Abfrag
 - [Dune-Grundlagen](https://docs.dune.com/#dune-basics)
 - [SubQuery Ethereum-Schnellstartanleitung](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [Übersicht über das SQD-Netzwerk](https://docs.sqd.dev/)
-- [EVM Query Language](https://eql.sh/blog/alpha-release-notes)
+- [EVM Query Language](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 
 ## Tutorials: Daten & Analysen / SQL auf Ethereum {#tutorials}
 

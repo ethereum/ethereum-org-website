@@ -55,11 +55,12 @@ incomplete: true
 
 ## Python प्रोजेक्ट्स आणि टूल्स {#python-projects-and-tools}
 
-### सक्रिय: {#active}
-
+### सक्रिय:
 - [Web3.py](https://github.com/ethereum/web3.py) - _इथेरियमशी संवाद साधण्यासाठी Python लायब्ररी_
-- [Vyper](https://github.com/ethereum/vyper/) - _EVM साठी पायथॉनिक स्मार्ट कॉन्ट्रॅक्ट भाषा_
-- [Ape](https://github.com/ApeWorX/ape) - _पायथॉनिस्टा, डेटा सायंटिस्ट आणि सुरक्षा व्यावसायिकांसाठी स्मार्ट कॉन्ट्रॅक्ट डेव्हलपमेंट टूल_
+- [Vyper](https://github.com/ethereum/vyper/) - _EVM साठी Pythonic स्मार्ट कॉन्ट्रॅक्ट भाषा_
+- [Titanoboa](https://github.com/vyperlang/titanoboa/) - _Vyper चे मूळ चाचणी टूल; मुख्यनेट फोर्किंग, डीबगिंग आणि सुंदर ट्रेसबॅकसह एक इंटरप्रिटर_
+- [Moccasin](https://github.com/Cyfrin/moccasin) - _Titanoboa वर तयार केलेले, Vyper आणि Python साठी स्मार्ट कॉन्ट्रॅक्ट डेव्हलपमेंट आणि चाचणी फ्रेमवर्क_
+- [Ape](https://github.com/ApeWorX/ape) - _Pythonistas, डेटा सायंटिस्ट्स आणि सुरक्षा व्यावसायिकांसाठी स्मार्ट कॉन्ट्रॅक्ट डेव्हलपमेंट टूल_
 - [py-evm](https://github.com/ethereum/py-evm) - _इथेरियम व्हर्च्युअल मशीनची अंमलबजावणी_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _इथेरियम-आधारित ॲप्लिकेशन्सची चाचणी करण्यासाठी टूल्स_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _इथेरियम संबंधित कोडबेससह काम करण्यासाठी युटिलिटी फंक्शन्स_
@@ -67,9 +68,8 @@ incomplete: true
 - [pymaker](https://github.com/makerdao/pymaker) - _Maker कॉन्ट्रॅक्ट्ससाठी Python API_
 - [siwe](https://github.com/signinwithethereum/siwe-py) - _Python साठी इथेरियमसह साइन इन करा (SIWE)_
 - [इथेरियम इंटिग्रेशन्ससाठी Web3 विकेंद्रित वित्त (DeFi)](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _ERC-20, युनिस्वॅप आणि इतर लोकप्रिय प्रोजेक्ट्ससाठी तयार इंटिग्रेशन्ससह एक Python पॅकेज_
-- [Wake](https://getwake.io) - _कॉन्ट्रॅक्ट्सची चाचणी, फझिंग, प्रस्थापना, असुरक्षितता स्कॅनिंग आणि कोड नेव्हिगेशनसाठी ऑल-इन-वन Python फ्रेमवर्क (लँग्वेज सर्व्हर - [Solidity साठी टूल्स](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
+- [Wake](https://getwake.io) - _कॉन्ट्रॅक्ट्सची चाचणी, फझिंग, प्रस्थापना, असुरक्षा स्कॅनिंग आणि कोड नेव्हिगेशनसाठी ऑल-इन-वन Python फ्रेमवर्क (लँग्वेज सर्व्हर - [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
 - [DeFiPy](https://github.com/defipy-devs/defipy) - _युनिस्वॅप V2/V3, Balancer आणि Curve वर विकेंद्रित वित्त (DeFi) ॲनालिटिक्स आणि स्वयंचलित बाजार निर्माता (AMM) सिम्युलेशनसाठी Python SDK_
-
 ### संग्रहित / आता देखभाल केली जात नाही: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _इथेरियम Python क्लायंट_

@@ -32,38 +32,33 @@ Nếu bạn có câu hỏi ở bất kỳ bước nào, đừng ngần ngại li
 
 Có nhiều cách để tạo yêu cầu đến chuỗi Ethereum. Để đơn giản, chúng ta sẽ sử dụng một tài khoản miễn phí trên Alchemy, một nền tảng dành cho nhà phát triển chuỗi khối và API cho phép chúng ta giao tiếp với chuỗi Ethereum mà không cần tự chạy một nút. Alchemy cũng có các công cụ dành cho nhà phát triển để giám sát và phân tích; chúng ta sẽ tận dụng những công cụ này trong hướng dẫn này để hiểu những gì đang diễn ra bên trong việc triển khai hợp đồng thông minh của chúng ta.
 
-### Tạo ứng dụng và khóa API của bạn {#create-your-app-and-api-key}
+### Tạo ứng dụng và khóa API của bạn
 
-Sau khi bạn đã tạo tài khoản Alchemy, bạn có thể tạo khóa API bằng cách tạo một ứng dụng. Điều này sẽ cho phép bạn tạo các yêu cầu đến mạng thử nghiệm Goerli. Nếu bạn không quen thuộc với các mạng thử nghiệm, bạn có thể [đọc hướng dẫn của Alchemy về cách chọn mạng lưới](https://www.alchemy.com/docs/choosing-a-web3-network).
+Sau khi bạn đã tạo một tài khoản Alchemy, bạn có thể tạo một khóa API bằng cách tạo một ứng dụng. Điều này sẽ cho phép bạn tạo các yêu cầu đến mạng thử nghiệm Sepolia. Nếu bạn không quen thuộc với các mạng thử nghiệm, bạn có thể [đọc hướng dẫn của Alchemy về cách chọn mạng lưới](https://www.alchemy.com/docs/choosing-a-web3-network).
 
-Trên bảng điều khiển Alchemy, tìm menu thả xuống **Apps** trên thanh điều hướng và nhấp vào **Create App**.
+Trên bảng điều khiển Alchemy, hãy tìm menu thả xuống **Apps** trên thanh điều hướng và nhấp vào **Create App**.
 
-![Hello world create app](./hello-world-create-app.png)
+![Tạo ứng dụng hello world](./hello-world-create-app.png)
 
-Đặt tên cho ứng dụng của bạn là '_Hello World_' và viết một mô tả ngắn. Chọn **Staging** làm môi trường của bạn và **Goerli** làm mạng lưới của bạn.
+Đặt tên cho ứng dụng của bạn là '_Hello World_' và viết một mô tả ngắn. Chọn **Staging** làm môi trường của bạn và **Sepolia** làm mạng lưới của bạn.
 
-![create app view hello world](./create-app-view-hello-world.png)
+![chế độ xem tạo ứng dụng hello world](./create-app-view-hello-world.png)
 
-_Lưu ý: hãy chắc chắn chọn **Goerli**, nếu không hướng dẫn này sẽ không hoạt động._
+_Lưu ý: hãy chắc chắn chọn **Sepolia**, nếu không hướng dẫn này sẽ không hoạt động._
 
 Nhấp vào **Create app**. Ứng dụng của bạn sẽ xuất hiện trong bảng bên dưới.
-
-### Tạo một tài khoản Ethereum {#create-an-ethereum-account}
-
+### Tạo tài khoản Ethereum
 Bạn cần một tài khoản Ethereum để gửi và nhận các giao dịch. Chúng ta sẽ sử dụng MetaMask, một ví ảo trên trình duyệt cho phép người dùng quản lý địa chỉ tài khoản Ethereum của họ.
 
-Bạn có thể tải xuống và tạo tài khoản MetaMask miễn phí [tại đây](https://metamask.io/download). Khi bạn đang tạo tài khoản, hoặc nếu bạn đã có tài khoản, hãy đảm bảo chuyển sang “Goerli Test Network” ở góc trên bên phải (để chúng ta không phải giao dịch bằng tiền thật).
-
-### Bước 4: Thêm ether từ một vòi {#step-4-add-ether-from-a-faucet}
-
-Để triển khai hợp đồng thông minh của bạn lên mạng thử nghiệm, bạn sẽ cần một ít ETH giả. Để nhận ETH trên mạng lưới Goerli, hãy truy cập vào một vòi Goerli và nhập địa chỉ tài khoản Goerli của bạn. Lưu ý rằng các vòi Goerli gần đây có thể hơi không ổn định - hãy xem [trang mạng thử nghiệm](/developers/docs/networks/#goerli) để biết danh sách các tùy chọn có thể thử:
+Bạn có thể tải xuống và tạo tài khoản MetaMask miễn phí [tại đây](https://metamask.io/download). Khi bạn tạo tài khoản, hoặc nếu bạn đã có tài khoản, hãy đảm bảo chuyển sang “Sepolia Test Network” (Mạng thử nghiệm Sepolia) ở góc trên bên phải (để chúng ta không phải giao dịch bằng tiền thật).
+### Bước 4: Thêm ether từ một Vòi
+Để triển khai hợp đồng thông minh của bạn lên mạng thử nghiệm, bạn sẽ cần một ít ETH giả. Để nhận ETH trên mạng lưới Sepolia, hãy truy cập một vòi Sepolia và nhập địa chỉ tài khoản Sepolia của bạn. Xem [trang mạng thử nghiệm](/developers/docs/networks/#sepolia) để biết danh sách các tùy chọn có thể thử:
 
 _Lưu ý: do tắc nghẽn mạng lưới, quá trình này có thể mất một lúc._
 ``
-
 ### Bước 5: Kiểm tra số dư của bạn {#step-5-check-your-balance}
 
-Để kiểm tra lại xem ETH đã có trong ví của bạn chưa, hãy tạo một yêu cầu [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) bằng cách sử dụng [công cụ composer của Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Thao tác này sẽ trả về số lượng ETH trong ví của chúng ta. Để tìm hiểu thêm, hãy xem [hướng dẫn ngắn của Alchemy về cách sử dụng công cụ composer](https://youtu.be/r6sjRxBZJuU).
+Để kiểm tra lại xem ETH đã có trong ví của bạn chưa, hãy tạo một yêu cầu [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) bằng cách sử dụng [công cụ sandbox của Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Yêu cầu này sẽ trả về số lượng ETH trong ví của chúng ta. Để tìm hiểu thêm, hãy xem [hướng dẫn ngắn của Alchemy về cách sử dụng công cụ composer](https://youtu.be/r6sjRxBZJuU).
 
 Nhập địa chỉ tài khoản MetaMask của bạn và nhấp vào **Send Request**. Bạn sẽ thấy một phản hồi trông giống như đoạn mã bên dưới.
 
@@ -73,8 +68,7 @@ Nhập địa chỉ tài khoản MetaMask của bạn và nhấp vào **Send Req
 
 > _Lưu ý: Kết quả này tính bằng wei, không phải ETH. Wei được sử dụng làm đơn vị nhỏ nhất của ether._
 
-Phù! Tiền giả của chúng ta đã ở đó.
-
+Phù! Toàn bộ số tiền giả của chúng ta đã ở đó.
 ### Bước 6: Khởi tạo dự án của chúng ta {#step-6-initialize-our-project}
 
 Đầu tiên, chúng ta sẽ cần tạo một thư mục cho dự án của mình. Điều hướng đến dòng lệnh của bạn và nhập nội dung sau.
@@ -86,7 +80,7 @@ cd hello-world
 
 Bây giờ chúng ta đã ở trong thư mục dự án của mình, chúng ta sẽ sử dụng `npm init` để khởi tạo dự án.
 
-> Nếu bạn chưa cài đặt npm, hãy làm theo [các hướng dẫn này để cài đặt Node.js và npm](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm).
+> Nếu bạn chưa cài đặt npm, hãy làm theo [hướng dẫn cài đặt Node.js](https://nodejs.org/en/download/) để cài đặt Node.js và npm.
 
 Đối với mục đích của hướng dẫn này, việc bạn trả lời các câu hỏi khởi tạo như thế nào không quan trọng. Dưới đây là cách chúng tôi đã làm để bạn tham khảo:
 
@@ -116,8 +110,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
 }
 ```
 
-Phê duyệt package.json và chúng ta đã sẵn sàng!
-
+Chấp thuận package.json và chúng ta đã sẵn sàng!
 ### Bước 7: Tải xuống Hardhat {#step-7-download-hardhat}
 
 Hardhat là một môi trường phát triển để biên dịch, triển khai, thử nghiệm và gỡ lỗi phần mềm Ethereum của bạn. Nó giúp các nhà phát triển khi xây dựng các hợp đồng thông minh và ứng dụng phi tập trung (dapp) cục bộ trước khi triển khai lên chuỗi trực tiếp.
@@ -225,7 +218,7 @@ Chúng ta đã tạo một ví MetaMask, tài khoản Alchemy và viết hợp �
 
 Mọi giao dịch được gửi từ ví của bạn đều yêu cầu chữ ký bằng khóa riêng tư duy nhất của bạn. Để cung cấp cho chương trình của chúng ta quyền này, chúng ta có thể lưu trữ an toàn khóa riêng tư của mình trong một tệp môi trường. Chúng ta cũng sẽ lưu trữ khóa API cho Alchemy ở đây.
 
-> Để tìm hiểu thêm về việc gửi các giao dịch, hãy xem [hướng dẫn này](https://www.alchemy.com/docs/hello-world-smart-contract#step-11-connect-metamask--alchemy-to-your-project) về cách gửi các giao dịch bằng Web3.
+> Để tìm hiểu thêm về việc gửi các giao dịch, hãy xem [hướng dẫn này](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) về cách gửi các giao dịch bằng Web3.
 
 Đầu tiên, hãy cài đặt gói dotenv trong thư mục dự án của bạn:
 
@@ -242,7 +235,7 @@ Không đặt tên nó là `process.env` hoặc `.env-custom` hoặc bất kỳ 
 - Làm theo [các hướng dẫn này](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) để xuất khóa riêng tư của bạn
 - Xem bên dưới để lấy URL API HTTP Alchemy
 
-![Animated walkthrough of getting an Alchemy API key](./get-alchemy-api-key.gif)
+![Animated walkthrough of getting an Alchemy API key](./get-alchemy-api-key.mp4#1280x696)
 
 Tệp `.env` của bạn sẽ trông giống như thế này:
 
@@ -255,7 +248,7 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 ### Bước 12: Cài đặt Ethers.js {#step-12-install-ethersjs}
 
-Ethers.js là một thư viện giúp tương tác và tạo các yêu cầu đến Ethereum dễ dàng hơn bằng cách bọc [các phương thức JSON-RPC tiêu chuẩn](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) bằng các phương thức thân thiện với người dùng hơn.
+Ethers.js là một thư viện giúp tương tác và tạo các yêu cầu đến Ethereum dễ dàng hơn bằng cách bọc [các phương thức JSON-RPC tiêu chuẩn](/developers/docs/apis/json-rpc/) bằng các phương thức thân thiện với người dùng hơn.
 
 Hardhat cho phép chúng ta tích hợp [các plugin](https://hardhat.org/plugins/) để có thêm công cụ và chức năng mở rộng. Chúng ta sẽ tận dụng [plugin Ethers](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) cho việc triển khai hợp đồng.
 
@@ -343,12 +336,11 @@ const hello_world = await HelloWorld.deploy()
 
 Việc gọi `deploy()` trên một `ContractFactory` sẽ bắt đầu việc triển khai và trả về một `Promise` phân giải thành một đối tượng `Contract`. Đây là đối tượng có một phương thức cho mỗi hàm hợp đồng thông minh của chúng ta.
 
-### Bước 16: Triển khai hợp đồng của chúng ta {#step-16-deploy-our-contract}
-
+### Bước 16: Triển khai hợp đồng của chúng ta
 Cuối cùng chúng ta đã sẵn sàng để triển khai hợp đồng thông minh của mình! Điều hướng đến dòng lệnh và chạy:
 
 ```bash
-npx hardhat run scripts/deploy.js --network goerli
+npx hardhat run scripts/deploy.js --network sepolia
 ```
 
 Sau đó, bạn sẽ thấy một cái gì đó giống như:
@@ -357,24 +349,23 @@ Sau đó, bạn sẽ thấy một cái gì đó giống như:
 Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 ```
 
-**Vui lòng lưu địa chỉ này**. Chúng ta sẽ sử dụng nó sau trong hướng dẫn.
+**Vui lòng lưu lại địa chỉ này**. Chúng ta sẽ sử dụng nó ở phần sau của hướng dẫn.
 
-Nếu chúng ta truy cập [Etherscan của Goerli](https://goerli.etherscan.io) và tìm kiếm địa chỉ hợp đồng của mình, chúng ta sẽ có thể thấy rằng nó đã được triển khai thành công. Giao dịch sẽ trông giống như thế này:
+Nếu chúng ta truy cập [Sepolia Etherscan](https://sepolia.etherscan.io) và tìm kiếm địa chỉ hợp đồng của mình, chúng ta sẽ có thể thấy rằng nó đã được triển khai thành công. Giao dịch sẽ trông giống như thế này:
 
 ![](./etherscan-contract.png)
 
-Địa chỉ `From` phải khớp với địa chỉ tài khoản MetaMask của bạn và địa chỉ `To` sẽ hiển thị **Contract Creation**. Nếu chúng ta nhấp vào giao dịch, chúng ta sẽ thấy địa chỉ hợp đồng của mình trong trường `To`.
+Địa chỉ `From` phải khớp với địa chỉ tài khoản MetaMask của bạn và địa chỉ `To` sẽ ghi là **Contract Creation**. Nếu chúng ta nhấp vào giao dịch, chúng ta sẽ thấy địa chỉ hợp đồng của mình trong trường `To`.
 
 ![](./etherscan-transaction.png)
 
 Chúc mừng! Bạn vừa triển khai một hợp đồng thông minh lên một mạng thử nghiệm Ethereum.
 
-Để hiểu những gì đang diễn ra bên trong, hãy điều hướng đến tab Explorer trong [bảng điều khiển Alchemy](https://dashboard.alchemy.com/explorer) của chúng ta. Nếu bạn có nhiều ứng dụng Alchemy, hãy đảm bảo lọc theo ứng dụng và chọn **Hello World**.
+Để hiểu cách thức hoạt động bên trong, hãy điều hướng đến tab Explorer trong [bảng điều khiển Alchemy](https://dashboard.alchemy.com/explorer) của chúng ta. Nếu bạn có nhiều ứng dụng Alchemy, hãy đảm bảo lọc theo ứng dụng và chọn **Hello World**.
 
 ![](./hello-world-explorer.png)
 
-Tại đây, bạn sẽ thấy một số phương thức JSON-RPC mà Hardhat/Ethers đã thực hiện ngầm cho chúng ta khi chúng ta gọi hàm `.deploy()`. Hai phương thức quan trọng ở đây là [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), là yêu cầu ghi hợp đồng của chúng ta lên chuỗi Goerli, và [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash), là yêu cầu đọc thông tin về giao dịch của chúng ta dựa trên hàm băm. Để tìm hiểu thêm về việc gửi các giao dịch, hãy xem [hướng dẫn của chúng tôi về cách gửi các giao dịch bằng Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
-
+Tại đây, bạn sẽ thấy một số phương thức JSON-RPC mà Hardhat/Ethers đã thực hiện ngầm cho chúng ta khi chúng ta gọi hàm `.deploy()`. Hai phương thức quan trọng ở đây là [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction), là yêu cầu ghi hợp đồng của chúng ta lên Chuỗi Sepolia và [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash), là yêu cầu đọc thông tin về giao dịch của chúng ta dựa trên hàm băm. Để tìm hiểu thêm về việc gửi các giao dịch, hãy xem [hướng dẫn của chúng tôi về cách gửi các giao dịch bằng Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 ## Phần 2: Tương tác với Hợp đồng thông minh của bạn {#part-2-interact-with-your-smart-contract}
 
 Bây giờ chúng ta đã triển khai thành công một hợp đồng thông minh lên mạng lưới Goerli, hãy cùng tìm hiểu cách tương tác với nó.
@@ -486,7 +477,7 @@ main()
 Sau khi chạy tệp bằng `npx hardhat run scripts/interact.js` trong terminal, chúng ta sẽ thấy phản hồi này:
 
 ```
-Thông điệp là: Hello world!
+The message is: Hello world!
 ```
 
 Chúc mừng! Bạn vừa đọc thành công dữ liệu hợp đồng thông minh từ Chuỗi khối Ethereum, làm tốt lắm!
@@ -515,11 +506,10 @@ main()
 
 Lưu ý rằng ở dòng 11, chúng ta thực hiện lệnh gọi `.wait()` trên đối tượng giao dịch được trả về. Điều này đảm bảo rằng tập lệnh của chúng ta sẽ đợi giao dịch được khai thác trên Chuỗi khối trước khi thoát khỏi hàm. Nếu không bao gồm lệnh gọi `.wait()`, tập lệnh có thể không thấy giá trị `message` đã được cập nhật trong hợp đồng.
 
-### Đọc thông điệp mới {#read-the-new-message}
+### Đọc thông điệp mới
+Bạn sẽ có thể lặp lại [bước trước đó](#read-the-init-message) để đọc giá trị `message` đã được cập nhật. Hãy dành một chút thời gian và xem liệu bạn có thể thực hiện các thay đổi cần thiết để in ra giá trị mới đó không!
 
-Bạn có thể lặp lại [bước trước](#read-the-init-message) để đọc giá trị `message` đã cập nhật. Hãy dành một chút thời gian và xem liệu bạn có thể thực hiện các thay đổi cần thiết để in ra giá trị mới đó không!
-
-Nếu bạn cần một gợi ý, đây là những gì tệp `interact.js` của bạn sẽ trông giống như ở thời điểm này:
+Nếu bạn cần một gợi ý, đây là nội dung tệp `interact.js` của bạn tại thời điểm này:
 
 ```javascript
 // interact.js
@@ -530,13 +520,13 @@ const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS
 
 const contract = require("../artifacts/contracts/HelloWorld.sol/HelloWorld.json")
 
-// provider - Alchemy
+// nhà cung cấp - Alchemy
 const alchemyProvider = new ethers.providers.AlchemyProvider(
-  (network = "goerli"),
+  (network = "sepolia"),
   API_KEY
 )
 
-// signer - bạn
+// người ký - bạn
 const signer = new ethers.Wallet(PRIVATE_KEY, alchemyProvider)
 
 // phiên bản hợp đồng
@@ -563,16 +553,15 @@ main()
 
 Bây giờ chỉ cần chạy tập lệnh và bạn sẽ có thể thấy thông điệp cũ, trạng thái cập nhật và thông điệp mới được in ra terminal của bạn!
 
-`npx hardhat run scripts/interact.js --network goerli`
+`npx hardhat run scripts/interact.js --network sepolia`
 
 ```
-Thông điệp là: Hello World!
-Đang cập nhật thông điệp...
-Thông điệp mới là: This is the new message.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
-Trong khi chạy tập lệnh đó, bạn có thể nhận thấy rằng bước `Updating the message...` mất một lúc để tải trước khi thông điệp mới được tải. Đó là do quá trình khai thác; nếu bạn tò mò về việc theo dõi các giao dịch trong khi chúng đang được khai thác, hãy truy cập [mempool của Alchemy](https://dashboard.alchemyapi.io/mempool) để xem trạng thái của một giao dịch. Nếu giao dịch bị hủy, việc kiểm tra [Goerli Etherscan](https://goerli.etherscan.io) và tìm kiếm hàm băm giao dịch (transaction hash) của bạn cũng rất hữu ích.
-
+Trong khi chạy tập lệnh đó, bạn có thể nhận thấy rằng bước `Updating the message...` mất một lúc để tải trước khi thông điệp mới tải. Đó là do quá trình khai thác; nếu bạn tò mò về việc theo dõi các giao dịch trong khi chúng đang được khai thác, hãy truy cập [mempool của Alchemy](https://dashboard.alchemy.com/mempool) để xem trạng thái của một giao dịch. Nếu giao dịch bị loại bỏ, việc kiểm tra [Sepolia Etherscan](https://sepolia.etherscan.io) và tìm kiếm mã băm giao dịch của bạn cũng rất hữu ích.
 ## Phần 3: Xuất bản Hợp đồng thông minh của bạn lên Etherscan {#part-3-publish-your-smart-contract-to-etherscan}
 
 Bạn đã làm tất cả những công việc khó khăn để đưa hợp đồng thông minh của mình vào hoạt động; bây giờ là lúc chia sẻ nó với thế giới!
@@ -642,17 +631,17 @@ module.exports = {
 }
 ```
 
-#### Xác minh hợp đồng thông minh của bạn trên Etherscan {#verify-your-smart-contract-on-etherscan}
+#### Xác minh hợp đồng thông minh của bạn trên Etherscan
 
 Đảm bảo tất cả các tệp đã được lưu và tất cả các biến `.env` được cấu hình chính xác.
 
 Chạy tác vụ `verify`, truyền vào địa chỉ hợp đồng và mạng lưới nơi nó được triển khai:
 
 ```text
-npx hardhat verify --network goerli DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
+npx hardhat verify --network sepolia DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
 ```
 
-Đảm bảo rằng `DEPLOYED_CONTRACT_ADDRESS` là địa chỉ của hợp đồng thông minh đã triển khai của bạn trên mạng thử nghiệm Goerli. Ngoài ra, đối số cuối cùng (`'Hello World!'`) phải là cùng một giá trị chuỗi được sử dụng [trong bước triển khai ở phần 1](#step-15-write-our-deploy-script).
+Đảm bảo rằng `DEPLOYED_CONTRACT_ADDRESS` là địa chỉ của hợp đồng thông minh đã được triển khai của bạn trên mạng thử nghiệm Sepolia. Ngoài ra, đối số cuối cùng (`'Hello World!'`) phải là cùng một giá trị chuỗi được sử dụng [trong bước triển khai ở phần 1](#step-15-write-our-deploy-script).
 
 Nếu mọi việc suôn sẻ, bạn sẽ thấy thông điệp sau trong terminal của mình:
 
@@ -663,11 +652,10 @@ for verification on Etherscan. Waiting for verification result...
 
 
 Successfully verified contract HelloWorld on Etherscan.
-https://goerli.etherscan.io/address/<contract-address>#contracts
+https://sepolia.etherscan.io/address/<contract-address>#contracts
 ```
 
 Chúc mừng! Mã hợp đồng thông minh của bạn đã có trên Etherscan!
-
 ### Kiểm tra hợp đồng thông minh của bạn trên Etherscan! {#check-out-your-smart-contract-on-etherscan}
 
 Khi bạn điều hướng đến liên kết được cung cấp trong terminal của mình, bạn sẽ có thể thấy mã hợp đồng thông minh và ABI của mình được xuất bản trên Etherscan!
@@ -679,7 +667,7 @@ Khi bạn điều hướng đến liên kết được cung cấp trong terminal
 Đến cuối hướng dẫn này, bạn sẽ biết cách:
 
 - Kết nối ví MetaMask với ứng dụng phi tập trung (dapp) của bạn
-- Đọc dữ liệu từ hợp đồng thông minh của bạn bằng API [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
+- Đọc dữ liệu từ hợp đồng thông minh của bạn bằng API [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)
 - Ký các giao dịch Ethereum bằng MetaMask
 
 Đối với dapp này, chúng ta sẽ sử dụng [React](https://react.dev/) làm framework frontend; tuy nhiên, điều quan trọng cần lưu ý là chúng ta sẽ không dành nhiều thời gian để phân tích các nguyên tắc cơ bản của nó, vì chúng ta sẽ chủ yếu tập trung vào việc đưa chức năng Web3 vào dự án của mình.
@@ -900,9 +888,9 @@ Bây giờ chúng ta đã hiểu những gì mình đang làm việc, hãy tìm 
 
 Điều này nghe có vẻ như rất nhiều bước, nhưng đừng lo lắng! Chúng tôi sẽ hướng dẫn bạn cách thực hiện từng bước một! :\)
 
-#### Thiết lập kết nối API tới chuỗi Ethereum {#establish-an-api-connection-to-the-ethereum-chain}
+#### Thiết lập kết nối API với chuỗi Ethereum {#establish-an-api-connection-to-the-ethereum-chain}
 
-Bạn còn nhớ trong Phần 2 của hướng dẫn này, chúng ta đã sử dụng [khóa Alchemy Web3 để đọc từ hợp đồng thông minh của mình](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library) như thế nào không? Bạn cũng sẽ cần một khóa Alchemy Web3 trong dapp của mình để đọc từ chuỗi.
+Bạn có nhớ trong Phần 2 của hướng dẫn này, chúng ta đã sử dụng khóa Alchemy Web3 của mình để đọc từ hợp đồng thông minh không? Bạn cũng sẽ cần một khóa Alchemy Web3 trong ứng dụng phi tập trung (dapp) của mình để đọc từ chuỗi.
 
 Nếu bạn chưa có, trước tiên hãy cài đặt [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) bằng cách điều hướng đến thư mục gốc của `starter-files` và chạy lệnh sau trong terminal của bạn:
 
@@ -918,15 +906,15 @@ Sau đó, cài đặt gói [dotenv](https://www.npmjs.com/package/dotenv) trong 
 npm install dotenv --save
 ```
 
-Đối với dapp của chúng ta, **chúng ta sẽ sử dụng khóa API Websockets** thay vì khóa API HTTP, vì nó sẽ cho phép chúng ta thiết lập một trình lắng nghe phát hiện khi thông điệp được lưu trữ trong hợp đồng thông minh thay đổi.
+Đối với dapp của chúng ta, **chúng ta sẽ sử dụng khóa API Websockets** thay vì khóa API HTTP, vì nó sẽ cho phép chúng ta thiết lập một trình lắng nghe (listener) phát hiện khi thông điệp được lưu trữ trong hợp đồng thông minh thay đổi.
 
-Khi bạn đã có khóa API của mình, hãy tạo một tệp `.env` trong thư mục gốc của bạn và thêm URL Alchemy Websockets của bạn vào đó. Sau đó, tệp `.env` của bạn sẽ trông như thế này:
+Khi bạn đã có khóa API của mình, hãy tạo một tệp `.env` trong thư mục gốc của bạn và thêm URL Alchemy Websockets của bạn vào đó. Sau đó, tệp `.env` của bạn sẽ trông giống như thế này:
 
 ```javascript
-REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<khóa>
+REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<key>
 ```
 
-Bây giờ, chúng ta đã sẵn sàng thiết lập điểm cuối (endpoint) Alchemy Web3 trong dapp của mình! Hãy quay lại `interact.js` của chúng ta, được lồng bên trong thư mục `util` và thêm đoạn mã sau vào đầu tệp:
+Bây giờ, chúng ta đã sẵn sàng thiết lập điểm cuối (endpoint) Alchemy Web3 trong dapp của mình! Hãy quay lại tệp `interact.js` của chúng ta, tệp này nằm trong thư mục `util` và thêm đoạn mã sau vào đầu tệp:
 
 ```javascript
 // interact.js
@@ -939,32 +927,31 @@ const web3 = createAlchemyWeb3(alchemyKey)
 //export const helloWorldContract;
 ```
 
-Ở trên, trước tiên chúng ta đã nhập khóa Alchemy từ tệp `.env` của mình và sau đó truyền `alchemyKey` của chúng ta vào `createAlchemyWeb3` để thiết lập điểm cuối Alchemy Web3.
+Ở trên, trước tiên chúng ta đã nhập khóa Alchemy từ tệp `.env` của mình và sau đó truyền `alchemyKey` của chúng ta cho `createAlchemyWeb3` để thiết lập điểm cuối Alchemy Web3 của chúng ta.
 
 Với điểm cuối này đã sẵn sàng, đã đến lúc tải hợp đồng thông minh của chúng ta!
-
 #### Tải hợp đồng thông minh Hello World của bạn {#loading-your-hello-world-smart-contract}
 
 Để tải hợp đồng thông minh Hello World của bạn, bạn sẽ cần địa chỉ hợp đồng và ABI của nó, cả hai đều có thể được tìm thấy trên Etherscan nếu bạn đã hoàn thành [Phần 3 của hướng dẫn này.](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)
 
-#### Cách lấy ABI hợp đồng của bạn từ Etherscan {#how-to-get-your-contract-abi-from-etherscan}
+#### Cách lấy ABI hợp đồng của bạn từ Etherscan
+Nếu bạn đã bỏ qua Phần 3 của hướng dẫn này, trước tiên hãy triển khai và xác minh hợp đồng HelloWorld của riêng bạn. Sau đó, mở trang hợp đồng của bạn trên [Sepolia Etherscan](https://sepolia.etherscan.io) để sao chép ABI của nó.
 
-Nếu bạn đã bỏ qua Phần 3 của hướng dẫn này, bạn có thể sử dụng hợp đồng HelloWorld với địa chỉ [0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code). ABI của nó có thể được tìm thấy [tại đây](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code).
+ABI hợp đồng là cần thiết để chỉ định hàm nào mà một hợp đồng sẽ gọi cũng như đảm bảo rằng hàm sẽ trả về dữ liệu theo định dạng mà bạn mong đợi. Sau khi chúng ta đã sao chép ABI hợp đồng của mình, hãy lưu nó dưới dạng tệp JSON có tên `contract-abi.json` trong thư mục `src` của bạn.
 
-ABI hợp đồng là cần thiết để chỉ định hàm nào mà hợp đồng sẽ gọi cũng như đảm bảo rằng hàm sẽ trả về dữ liệu theo định dạng bạn mong đợi. Khi chúng ta đã sao chép ABI hợp đồng của mình, hãy lưu nó dưới dạng tệp JSON có tên `contract-abi.json` trong thư mục `src` của bạn.
+Tệp contract-abi.json của bạn nên được lưu trữ trong thư mục src của bạn.
 
-Tệp contract-abi.json của bạn nên được lưu trữ trong thư mục src.
-
-Được trang bị địa chỉ hợp đồng, ABI và điểm cuối Alchemy Web3, chúng ta có thể sử dụng [phương thức hợp đồng](https://docs.web3js.org/api/web3-eth-contract/class/Contract) để tải một phiên bản của hợp đồng thông minh. Nhập ABI hợp đồng của bạn vào tệp `interact.js` và thêm địa chỉ hợp đồng của bạn.
+Được trang bị địa chỉ hợp đồng, ABI và điểm cuối Alchemy Web3 của chúng ta, chúng ta có thể sử dụng [phương thức contract](https://docs.web3js.org/api/web3-eth-contract/class/Contract) để tải một phiên bản (instance) của hợp đồng thông minh của chúng ta. Nhập ABI hợp đồng của bạn vào tệp `interact.js` và thêm địa chỉ hợp đồng của bạn.
 
 ```javascript
 // interact.js
 
 const contractABI = require("../contract-abi.json")
-const contractAddress = "0x6f3f635A9762B47954229Ea479b4541eAF402A6A"
+// Sử dụng địa chỉ hợp đồng của bạn ở đây
+const contractAddress = "0x..."
 ```
 
-Bây giờ cuối cùng chúng ta có thể bỏ chú thích biến `helloWorldContract` của mình và tải hợp đồng thông minh bằng điểm cuối AlchemyWeb3 của chúng ta:
+Bây giờ, cuối cùng chúng ta có thể bỏ chú thích biến `helloWorldContract` của mình và tải hợp đồng thông minh bằng cách sử dụng điểm cuối AlchemyWeb3 của chúng ta:
 
 ```javascript
 // interact.js
@@ -974,7 +961,7 @@ export const helloWorldContract = new web3.eth.Contract(
 )
 ```
 
-Tóm lại, 12 dòng đầu tiên của `interact.js` của bạn bây giờ sẽ trông như thế này:
+Tóm lại, 12 dòng đầu tiên trong tệp `interact.js` của bạn bây giờ sẽ trông như thế này:
 
 ```javascript
 // interact.js
@@ -993,8 +980,7 @@ export const helloWorldContract = new web3.eth.Contract(
 )
 ```
 
-Bây giờ chúng ta đã tải xong hợp đồng của mình, chúng ta có thể triển khai hàm `loadCurrentMessage`!
-
+Bây giờ chúng ta đã tải xong hợp đồng của mình, chúng ta có thể triển khai hàm `loadCurrentMessage` của mình!
 #### Triển khai `loadCurrentMessage` trong tệp `interact.js` của bạn {#implementing-loadcurrentmessage-in-your-interact-js-file}
 
 Hàm này cực kỳ đơn giản. Chúng ta sẽ thực hiện một lệnh gọi web3 bất đồng bộ (async) đơn giản để đọc từ hợp đồng của mình. Hàm của chúng ta sẽ trả về thông điệp được lưu trữ trong hợp đồng thông minh:
@@ -1034,7 +1020,7 @@ Bây giờ nói về trình lắng nghe đó...
 
 #### Triển khai `addSmartContractListener` {#implement-addsmartcontractlistener}
 
-Nếu bạn nhớ lại tệp `HelloWorld.sol` mà chúng ta đã viết trong [Phần 1 của loạt bài hướng dẫn này](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract), bạn sẽ nhớ lại rằng có một sự kiện hợp đồng thông minh được gọi là `UpdatedMessages` được phát ra sau khi hàm `update` của hợp đồng thông minh của chúng ta được gọi \(xem dòng 9 và 27\):
+Nếu bạn nhớ lại tệp `HelloWorld.sol` mà chúng ta đã viết trong [Phần 1 của loạt bài hướng dẫn này](#step-10-write-our-contract), bạn sẽ nhớ lại rằng có một sự kiện hợp đồng thông minh được gọi là `UpdatedMessages` được phát ra sau khi hàm `update` của hợp đồng thông minh của chúng ta được gọi \(xem dòng 9 và 27\):
 
 ```javascript
 // HelloWorld.sol
@@ -1121,26 +1107,21 @@ Vì vậy, tiếp theo chúng ta sẽ giải quyết việc thiết lập ví Et
 
 Nếu bạn muốn hiểu thêm về cách các giao dịch trên Ethereum hoạt động, hãy xem [trang này](/developers/docs/transactions/) từ Ethereum Foundation.
 
-#### Tải xuống MetaMask {#download-metamask}
+Bạn có thể tải xuống và tạo tài khoản MetaMask miễn phí [tại đây](https://metamask.io/download). Khi bạn tạo tài khoản, hoặc nếu bạn đã có tài khoản, hãy đảm bảo chuyển sang “Mạng thử nghiệm Sepolia” ở góc trên bên phải \(để chúng ta không phải giao dịch bằng tiền thật\).
+#### Thêm ether từ một vòi
 
-Bạn có thể tải xuống và tạo tài khoản MetaMask miễn phí [tại đây](https://metamask.io/download). Khi bạn đang tạo tài khoản hoặc nếu bạn đã có tài khoản, hãy đảm bảo chuyển sang “Goerli Test Network” ở phía trên bên phải \(để chúng ta không giao dịch bằng tiền thật\).
-
-#### Thêm ether từ một vòi {#add-ether-from-a-faucet}
-
-Để ký một giao dịch trên chuỗi khối Ethereum, chúng ta sẽ cần một số ETH giả. Để nhận ETH, bạn có thể truy cập [FaucETH](https://fauceth.komputing.org) và nhập địa chỉ tài khoản Goerli của bạn, nhấp vào “Request funds” (Yêu cầu tiền), sau đó chọn “Ethereum Testnet Goerli” trong menu thả xuống và cuối cùng nhấp lại vào nút “Request funds”. Bạn sẽ thấy ETH trong tài khoản MetaMask của mình ngay sau đó!
-
+Để ký một giao dịch trên Chuỗi khối Ethereum, chúng ta sẽ cần một ít ETH giả. Để nhận ETH, bạn có thể truy cập vào một vòi Sepolia được liệt kê trên [trang mạng thử nghiệm](/developers/docs/networks/#sepolia) và nhập địa chỉ tài khoản Sepolia của bạn. Bạn sẽ thấy ETH trong tài khoản MetaMask của mình ngay sau đó!
 #### Kiểm tra số dư của bạn {#check-your-balance}
 
-Để kiểm tra lại xem số dư của chúng ta đã có ở đó chưa, hãy thực hiện một yêu cầu [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) bằng cách sử dụng [công cụ composer của Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Điều này sẽ trả về số lượng ETH trong ví của chúng ta. Sau khi bạn nhập địa chỉ tài khoản MetaMask của mình và nhấp vào “Send Request” (Gửi yêu cầu), bạn sẽ thấy phản hồi như thế này:
+Để kiểm tra lại xem số dư của chúng ta đã có ở đó chưa, hãy tạo một yêu cầu [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) bằng cách sử dụng [công cụ sandbox của Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Thao tác này sẽ trả về số lượng ETH trong ví của chúng ta. Sau khi bạn nhập địa chỉ tài khoản MetaMask của mình và nhấp vào “Send Request”, bạn sẽ thấy một phản hồi giống như thế này:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**LƯU Ý:** Kết quả này tính bằng wei chứ không phải eth. Wei được sử dụng làm mệnh giá nhỏ nhất của ether. Tỷ lệ chuyển đổi từ wei sang eth là: 1 eth = 10¹⁸ wei. Vì vậy, nếu chúng ta chuyển đổi 0xde0b6b3a7640000 sang số thập phân, chúng ta nhận được 1\*10¹⁸ tương đương với 1 eth.
+**LƯU Ý:** Kết quả này tính bằng wei chứ không phải ETH. Wei được sử dụng làm mệnh giá nhỏ nhất của ether. Tỷ lệ chuyển đổi từ wei sang ETH là: 1 ETH = 10¹⁸ wei. Vì vậy, nếu chúng ta chuyển đổi 0xde0b6b3a7640000 sang hệ thập phân, chúng ta sẽ nhận được 1\*10¹⁸, tương đương với 1 ETH.
 
-Phù! Tiền giả của chúng ta đã có đầy đủ ở đó! 🤑
-
+Phù! Tiền giả của chúng ta đều ở đó! 🤑
 ### Bước 5: Kết nối MetaMask với UI của bạn {#step-5-connect-metamask-to-your-ui}
 
 Bây giờ ví MetaMask của chúng ta đã được thiết lập, hãy kết nối dapp của chúng ta với nó!
@@ -1539,7 +1520,7 @@ Hãy tiếp tục và kiểm tra nút **Update** (Cập nhật)!
 Wooooo, bạn đã đi đến cuối hướng dẫn! Tóm lại, bạn đã học được cách:
 
 - Kết nối ví MetaMask với dự án dapp của bạn
-- Đọc dữ liệu từ hợp đồng thông minh của bạn bằng API [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
+- Đọc dữ liệu từ hợp đồng thông minh của bạn bằng API [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)
 - Ký các giao dịch Ethereum bằng MetaMask
 
 Bây giờ bạn đã được trang bị đầy đủ để áp dụng các kỹ năng từ hướng dẫn này nhằm xây dựng dự án dapp tùy chỉnh của riêng bạn! Như mọi khi, nếu bạn có bất kỳ câu hỏi nào, đừng ngần ngại liên hệ với chúng tôi để được trợ giúp trong [Discord của Alchemy](https://discord.gg/gWuC7zB). 🧙‍♂️

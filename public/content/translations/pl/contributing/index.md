@@ -9,13 +9,11 @@ Ethereum.org to projekt open-source z ponad **12 000** współtwórców, którzy
 
 Jesteśmy przyjazną społecznością, która pomoże Ci się rozwijać i edukować w ekosystemie [Ethereum](/), jednocześnie wnosząc znaczący wkład i zdobywając odpowiednie praktyczne doświadczenie!
 
-## Sposoby na współtworzenie {#ways-to-contribute}
-
 **Tłumaczenia**
-- [Dołącz do programu tłumaczeń](/contributing/translation-program/) – Pomóż nam udostępnić ethereum.org w nowych językach
+- [Dołącz do programu tłumaczeń](/contributing/translation-program/) – Pomóż nam przetłumaczyć ethereum.org na nowe języki
 
 **Programowanie**
-- [Pracuj nad otwartym zgłoszeniem](https://github.com/ethereum/ethereum-org-website/issues) – Prace, które zidentyfikowaliśmy jako wymagające wykonania
+- [Pracuj nad otwartym zgłoszeniem](https://github.com/ethereum/ethereum-org-website/issues) – Praca, którą zidentyfikowaliśmy jako wymagającą wykonania
 
 **Projektowanie**
 - [Pomóż w projektowaniu strony](/contributing/design/) – Projektanci na każdym poziomie mogą przyczynić się do ulepszenia strony
@@ -24,10 +22,11 @@ Jesteśmy przyjazną społecznością, która pomoże Ci się rozwijać i edukow
 - [Twórz/edytuj treść](/contributing/#how-to-update-content) – Zaproponuj nowe strony lub wprowadź poprawki do tego, co już tu jest
 - [Napisz artykuł dla budowniczych](/contributing/adding-articles/) - Prześlij artykuł do sekcji [Najnowsze](/latest/)
 - [Dodaj zasoby społeczności](/contributing/content-resources/) – Dodaj pomocny artykuł lub zasób do odpowiedniej strony
-- [Zaproponuj raport](/contributing/adding-reports/) - Zaproponuj raport badawczy na stronę [Raporty](/reports/)
-- [Zaproponuj zasób projektowy](/contributing/design/adding-design-resources/) – Dodawaj, aktualizuj i usuwaj pomocne zasoby projektowe
+- [Zaproponuj raport](/contributing/adding-reports/) - Zaproponuj raport z badań na stronę [Raporty](/reports/)
+- [Podziel się swoją historią](/contributing/adding-community-stories/) - Prześlij historię o swoich osobistych doświadczeniach z technologiami open-source i technologiami azylu, jak ekosystem Ethereum wpłynął na Twoje życie, lub jak Ty i Twoja społeczność korzystacie z Ethereum
 - [Quizy](/contributing/quizzes/) – Dodawaj, aktualizuj i usuwaj bazy pytań do quizów dla odpowiedniej strony
-- [Zaproponuj wideo](/contributing/adding-videos/) – Zaproponuj film edukacyjny do galerii wideo
+- [Zaproponuj zasób projektowy](/contributing/design/adding-design-resources/) – Dodawaj, aktualizuj i usuwaj pomocne zasoby projektowe
+- [Zaproponuj wideo](/contributing/adding-videos/) – Zaproponuj wideo edukacyjne do galerii wideo
 
 **Pomysły na funkcje**
 - [Zgłoś zapotrzebowanie na funkcję](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Daj nam znać o swoich pomysłach na nową funkcję lub projekt
@@ -35,11 +34,11 @@ Jesteśmy przyjazną społecznością, która pomoże Ci się rozwijać i edukow
 **Listy produktów**
 - [Dodaj giełdę](/contributing/adding-exchanges/) – Dodaj giełdę do naszej [wyszukiwarki giełd](/get-eth/#country-picker)
 - [Dodaj produkt](/contributing/adding-products/) – Dodaj zdecentralizowaną aplikację (dapp) lub portfel do odpowiedniej strony
-- [Dodaj narzędzia deweloperskie](/contributing/adding-developer-tools/) – Dodaj narzędzie deweloperskie do odpowiedniej strony
+- [Dodaj narzędzia dla programistów](/contributing/adding-developer-tools/) – Dodaj narzędzie dla programistów do odpowiedniej strony
 - [Dodaj warstwę 2](/contributing/adding-layer-2s/) – Dodaj warstwę 2 (L2) do odpowiedniej strony
-- [Dodaj produkt lub usługę do stakingu](/contributing/adding-staking-products/) – Dodaj projekt, który ułatwia staking solo, staking grupowy lub staking jako usługę
-- [Dodaj portfel](/contributing/adding-wallets/) – Dodaj portfel na [stronę wyszukiwania portfeli](/wallets/find-wallet/)
-- [Zaproponuj projekt na naszą stronę DeSci](/contributing/adding-desci-projects/) – Dodaj projekt zbudowany na Ethereum, który przyczynia się do zdecentralizowanej nauki (DeSci)
+- [Dodaj produkt lub usługę stakingową](/contributing/adding-staking-products/) – Dodaj projekt, który ułatwia staking solo, staking grupowy lub staking jako usługę
+- [Dodaj portfel](/contributing/adding-wallets/) – Dodaj portfel do [strony wyszukiwania portfeli](/wallets/find-wallet/)
+- [Zaproponuj projekt na naszą stronę DeSci](/contributing/adding-desci-projects/) – Dodaj projekt zbudowany na Ethereum, który przyczynia się do rozwoju zdecentralizowanej nauki (DeSci)
 - [Dodaj zasób](/contributing/adding-resources/) – Dodaj przydatny zasób do dowolnej odpowiedniej strony
 
 Masz pytania? 🤔 Dołącz do naszego [serwera Discord](https://discord.gg/ethereum-org)

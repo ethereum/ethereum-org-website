@@ -10,7 +10,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import LanguagePickerMenu from "./LanguagePickerMenu"
 import { useLanguagePicker } from "./useLanguagePicker"
 
-import { usePathname, useRouter } from "@/i18n/navigation"
+import { getPathname, usePathname } from "@/i18n/navigation"
 
 type LanguagePickerProps = {
   className?: string
@@ -26,7 +26,6 @@ const LanguagePicker = ({
   onNoResultsClose,
 }: LanguagePickerProps) => {
   const pathname = usePathname()
-  const { push } = useRouter()
   const { languages: sortedLanguages } = useLanguagePicker(languages)
 
   useEffect(() => {
@@ -47,21 +46,18 @@ const LanguagePicker = ({
 
   const handleMenuItemSelect = (currentValue: string) => {
     onSelect?.(currentValue)
-    const selectedLanguage = sortedLanguages.find(
-      ({ localeOption }) => localeOption === currentValue
-    )
-
-    if (!selectedLanguage) return
-
-    push(pathname, {
-      locale: selectedLanguage.localeOption,
-    })
 
     trackCustomEvent({
       eventCategory: `Language picker`,
       eventAction: "Locale chosen",
       eventName: currentValue,
     })
+
+    // Hard navigation, not a soft push: a soft nav to an intercepting `@modal`
+    // route (e.g. the tool-detail page) would re-open the modal instead of
+    // switching locale — a known Next.js intercepting-routes limitation.
+    const href = getPathname({ href: pathname, locale: currentValue })
+    window.location.href = `${href}${window.location.search}${window.location.hash}`
   }
 
   const handleNoResultsClose = () => {

@@ -32,38 +32,33 @@ published: 2021-10-25
 
 이더리움 체인에 요청을 보내는 방법은 여러 가지가 있습니다. 간단하게 진행하기 위해, 노드를 직접 실행하지 않고도 이더리움 체인과 통신할 수 있게 해주는 블록체인 개발자 플랫폼이자 API인 Alchemy의 무료 계정을 사용하겠습니다. Alchemy는 모니터링과 분석을 위한 개발자 도구도 제공합니다. 이 튜토리얼에서는 스마트 컨트랙트 배포 과정에서 내부적으로 어떤 일이 일어나는지 이해하기 위해 이 도구들을 활용할 것입니다.
 
-### 앱 및 API 키 생성하기 {#create-your-app-and-api-key}
+### 앱 및 API 키 생성하기
 
-Alchemy 계정을 생성한 후, 앱을 만들어 API 키를 생성할 수 있습니다. 이를 통해 괴를리 테스트넷에 요청을 보낼 수 있습니다. 테스트넷에 익숙하지 않다면 [네트워크 선택에 대한 Alchemy의 가이드](https://www.alchemy.com/docs/choosing-a-web3-network)를 읽어보세요.
+Alchemy 계정을 생성한 후, 앱을 생성하여 API 키를 발급받을 수 있습니다. 이를 통해 Sepolia 테스트넷에 요청을 보낼 수 있습니다. 테스트넷에 익숙하지 않다면 [네트워크 선택에 대한 Alchemy의 가이드](https://www.alchemy.com/docs/choosing-a-web3-network)를 읽어보세요.
 
-Alchemy 대시보드의 내비게이션 바에서 **Apps** 드롭다운을 찾아 <strong>Create App</strong>을 클릭하세요.
+Alchemy 대시보드의 내비게이션 바에서 **Apps** 드롭다운을 찾아 **Create App**을 클릭하세요.
 
 ![Hello world create app](./hello-world-create-app.png)
 
-앱 이름에 '_Hello World_'를 입력하고 짧은 설명을 작성하세요. 환경(environment)으로 <strong>Staging</strong>을 선택하고 네트워크로 <strong>Goerli</strong>를 선택하세요.
+앱 이름에 '_Hello World_'를 입력하고 짧은 설명을 작성하세요. 환경(environment)으로 **Staging**을 선택하고 네트워크로 **Sepolia**를 선택하세요.
 
 ![create app view hello world](./create-app-view-hello-world.png)
 
-_참고: 반드시 <strong>괴를리</strong>를 선택해야 합니다. 그렇지 않으면 이 튜토리얼이 제대로 작동하지 않습니다._
+_참고: 반드시 **Sepolia**를 선택해야 합니다. 그렇지 않으면 이 튜토리얼이 제대로 작동하지 않습니다._
 
-<strong>Create app</strong>을 클릭하세요. 아래 표에 앱이 나타날 것입니다.
+**Create app**을 클릭하세요. 아래 표에 앱이 나타날 것입니다.
+### 이더리움 계정 생성하기
+트랜잭션을 보내고 받으려면 이더리움 계정이 필요합니다. 사용자가 이더리움 계정 주소를 관리할 수 있게 해주는 브라우저 내 가상 지갑인 메타마스크를 사용할 것입니다.
 
-### 이더리움 계정 생성하기 {#create-an-ethereum-account}
-
-트랜잭션을 보내고 받으려면 이더리움 계정이 필요합니다. 사용자가 이더리움 계정 주소를 관리할 수 있게 해주는 브라우저 내 가상 지갑인 메타마스크를 사용하겠습니다.
-
-[여기](https://metamask.io/download)에서 메타마스크 계정을 무료로 다운로드하고 생성할 수 있습니다. 계정을 생성할 때나 이미 계정이 있는 경우, 우측 상단에서 "Goerli Test Network"로 전환해야 합니다(실제 돈을 다루지 않기 위함입니다).
-
-### 4단계: 퍼싯에서 이더 추가하기 {#step-4-add-ether-from-a-faucet}
-
-테스트 네트워크에 스마트 컨트랙트를 배포하려면 가짜 ETH가 필요합니다. 괴를리 네트워크에서 ETH를 얻으려면 괴를리 퍼싯으로 이동하여 괴를리 계정 주소를 입력하세요. 최근 괴를리 퍼싯이 다소 불안정할 수 있으니, 시도해 볼 수 있는 옵션 목록은 [테스트 네트워크 페이지](/developers/docs/networks/#goerli)를 참조하세요:
+[여기](https://metamask.io/download)에서 무료로 메타마스크를 다운로드하고 계정을 생성할 수 있습니다. 계정을 생성할 때, 또는 이미 계정이 있는 경우, 우측 상단에서 "Sepolia 테스트 네트워크"로 전환해야 합니다(실제 돈을 다루지 않기 위함입니다).
+### 4단계: 퍼싯에서 이더 추가하기
+스마트 컨트랙트를 테스트 네트워크에 배포하려면 가짜 ETH가 필요합니다. Sepolia 네트워크에서 ETH를 얻으려면 Sepolia 퍼싯으로 이동하여 Sepolia 계정 주소를 입력하세요. 시도해 볼 수 있는 옵션 목록은 [테스트 네트워크 페이지](/developers/docs/networks/#sepolia)를 참조하세요:
 
 _참고: 네트워크 혼잡으로 인해 시간이 다소 걸릴 수 있습니다._
 ``
-
 ### 5단계: 잔액 확인하기 {#step-5-check-your-balance}
 
-지갑에 ETH가 들어왔는지 다시 확인하기 위해, [Alchemy의 컴포저(composer) 도구](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)를 사용하여 [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) 요청을 보내보겠습니다. 이 요청은 지갑에 있는 ETH의 양을 반환합니다. 자세한 내용은 [컴포저 도구 사용법에 대한 Alchemy의 짧은 튜토리얼](https://youtu.be/r6sjRxBZJuU)을 확인하세요.
+지갑에 ETH가 있는지 다시 확인하기 위해 [Alchemy의 샌드박스 도구](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)를 사용하여 [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) 요청을 보내보겠습니다. 이 요청은 지갑에 있는 ETH의 양을 반환합니다. 자세한 내용은 [컴포저(composer) 도구 사용 방법에 대한 Alchemy의 짧은 튜토리얼](https://youtu.be/r6sjRxBZJuU)을 확인하세요.
 
 메타마스크 계정 주소를 입력하고 **Send Request**를 클릭하세요. 아래 코드 스니펫과 같은 응답을 볼 수 있습니다.
 
@@ -71,24 +66,23 @@ _참고: 네트워크 혼잡으로 인해 시간이 다소 걸릴 수 있습니�
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
 ```
 
-> _참고: 이 결과는 ETH가 아닌 wei 단위입니다. Wei는 이더의 가장 작은 단위로 사용됩니다._
+> _참고: 이 결과는 ETH가 아니라 wei 단위입니다. wei는 이더의 가장 작은 단위로 사용됩니다._
 
-휴! 가짜 돈이 모두 들어왔습니다.
-
+휴! 가짜 돈이 모두 잘 들어있네요.
 ### 6단계: 프로젝트 초기화하기 {#step-6-initialize-our-project}
 
-먼저 프로젝트를 위한 폴더를 만들어야 합니다. 명령줄(command line)로 이동하여 다음을 입력하세요.
+먼저 프로젝트를 위한 폴더를 만들어야 합니다. 명령줄로 이동하여 다음을 입력하세요.
 
 ```
 mkdir hello-world
 cd hello-world
 ```
 
-이제 프로젝트 폴더 안에 있으므로, `npm init`를 사용하여 프로젝트를 초기화하겠습니다.
+이제 프로젝트 폴더 안에 있으므로, `npm init`을 사용하여 프로젝트를 초기화하겠습니다.
 
-> 아직 npm이 설치되어 있지 않다면, [이 지침에 따라 Node.js와 npm을 설치](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm)하세요.
+> 아직 npm이 설치되어 있지 않다면, [Node.js 설치 지침](https://nodejs.org/en/download/)을 따라 Node.js와 npm을 설치하세요.
 
-이 튜토리얼의 목적상 초기화 질문에 어떻게 대답하든 상관없습니다. 참고를 위해 저희가 진행한 방법은 다음과 같습니다:
+이 튜토리얼의 목적상 초기화 질문에 어떻게 대답하든 상관없습니다. 참고를 위해 우리가 어떻게 했는지 보여드립니다:
 
 ```
 package name: (hello-world)
@@ -117,7 +111,6 @@ About to write to /Users/.../.../.../hello-world/package.json:
 ```
 
 package.json을 승인하면 준비가 완료됩니다!
-
 ### 7단계: Hardhat 다운로드하기 {#step-7-download-hardhat}
 
 Hardhat은 이더리움 소프트웨어를 컴파일, 배포, 테스트 및 디버깅하기 위한 개발 환경입니다. 개발자가 라이브 체인에 배포하기 전에 로컬에서 스마트 컨트랙트와 탈중앙화 애플리케이션(dapp)을 구축할 때 도움을 줍니다.
@@ -225,7 +218,7 @@ contract HelloWorld {
 
 지갑에서 전송되는 모든 트랜잭션은 고유한 개인 키를 사용한 서명이 필요합니다. 프로그램에 이 권한을 부여하기 위해 환경 파일에 개인 키를 안전하게 저장할 수 있습니다. 또한 여기에 Alchemy용 API 키도 저장할 것입니다.
 
-> 트랜잭션 전송에 대해 더 알아보려면 Web3를 사용한 트랜잭션 전송에 관한 [이 튜토리얼](https://www.alchemy.com/docs/hello-world-smart-contract#step-11-connect-metamask--alchemy-to-your-project)을 확인하세요.
+> 트랜잭션 전송에 대해 더 알아보려면 Web3를 사용한 트랜잭션 전송에 관한 [이 튜토리얼](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)을 확인하세요.
 
 먼저 프로젝트 디렉터리에 dotenv 패키지를 설치하세요:
 
@@ -242,7 +235,7 @@ npm install dotenv --save
 - 개인 키를 내보내려면 [이 지침](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key)을 따르세요.
 - HTTP Alchemy API URL을 얻으려면 아래를 참조하세요.
 
-![Animated walkthrough of getting an Alchemy API key](./get-alchemy-api-key.gif)
+![Animated walkthrough of getting an Alchemy API key](./get-alchemy-api-key.mp4#1280x696)
 
 `.env` 파일은 다음과 같아야 합니다:
 
@@ -255,7 +248,7 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 ### 12단계: Ethers.js 설치하기 {#step-12-install-ethersjs}
 
-Ethers.js는 [표준 JSON-RPC 메서드](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc)를 더 사용자 친화적인 메서드로 래핑하여 이더리움과 상호작용하고 요청을 보내는 것을 더 쉽게 만들어주는 라이브러리입니다.
+Ethers.js는 [표준 JSON-RPC 메서드](/developers/docs/apis/json-rpc/)를 더 사용자 친화적인 메서드로 래핑하여 이더리움과 상호작용하고 요청을 보내는 것을 더 쉽게 만들어주는 라이브러리입니다.
 
 Hardhat을 사용하면 추가 도구 및 확장된 기능을 위해 [플러그인](https://hardhat.org/plugins/)을 통합할 수 있습니다. 컨트랙트 배포를 위해 [Ethers 플러그인](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers)을 활용할 것입니다.
 
@@ -314,7 +307,7 @@ npx hardhat compile
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.get컨트랙트Factory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // 배포를 시작하고, 컨트랙트 객체로 리졸브되는 프로미스를 반환합니다
   const hello_world = await HelloWorld.deploy("Hello World!")
@@ -343,12 +336,12 @@ const hello_world = await HelloWorld.deploy()
 
 `ContractFactory`에서 `deploy()`를 호출하면 배포가 시작되고, `Contract` 객체로 확인(resolve)되는 `Promise`를 반환합니다. 이 객체는 스마트 컨트랙트의 각 함수에 대한 메서드를 가지고 있습니다.
 
-### 16단계: 컨트랙트 배포하기 {#step-16-deploy-our-contract}
+### 16단계: 컨트랙트 배포하기
 
 드디어 스마트 컨트랙트를 배포할 준비가 되었습니다! 명령줄로 이동하여 다음을 실행하세요:
 
 ```bash
-npx hardhat run scripts/deploy.js --network goerli
+npx hardhat run scripts/deploy.js --network sepolia
 ```
 
 그러면 다음과 같은 내용이 표시될 것입니다:
@@ -359,7 +352,7 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 **이 주소를 저장해 두세요**. 튜토리얼의 뒷부분에서 사용할 것입니다.
 
-[괴를리 Etherscan](https://goerli.etherscan.io)으로 이동하여 컨트랙트 주소를 검색하면 성공적으로 배포되었음을 확인할 수 있습니다. 트랜잭션은 다음과 같이 보일 것입니다:
+[Sepolia Etherscan](https://sepolia.etherscan.io)으로 이동하여 컨트랙트 주소를 검색하면 성공적으로 배포되었음을 확인할 수 있습니다. 트랜잭션은 다음과 같은 모습일 것입니다:
 
 ![](./etherscan-contract.png)
 
@@ -369,12 +362,11 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 축하합니다! 방금 이더리움 테스트넷에 스마트 컨트랙트를 배포했습니다.
 
-내부적으로 어떤 일이 일어나고 있는지 이해하기 위해 [Alchemy 대시보드](https://dashboard.alchemy.com/explorer)의 Explorer 탭으로 이동해 보겠습니다. 여러 개의 Alchemy 앱이 있는 경우 앱별로 필터링하여 **Hello World**를 선택하세요.
+내부적으로 어떤 일이 일어나고 있는지 이해하기 위해, [Alchemy 대시보드](https://dashboard.alchemy.com/explorer)의 Explorer 탭으로 이동해 보겠습니다. 여러 개의 Alchemy 앱이 있다면 앱별로 필터링하여 **Hello World**를 선택하세요.
 
 ![](./hello-world-explorer.png)
 
-여기서 `.deploy()` 함수를 호출했을 때 Hardhat/Ethers가 내부적으로 생성한 몇 가지 JSON-RPC 메서드를 볼 수 있습니다. 여기서 중요한 두 가지 메서드는 괴를리 체인에 컨트랙트를 기록하라는 요청인 [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction)와 해시가 주어졌을 때 트랜잭션에 대한 정보를 읽어오라는 요청인 [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash)입니다. 트랜잭션 전송에 대해 더 알아보려면 [Web3를 사용한 트랜잭션 전송 튜토리얼](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)을 확인하세요.
-
+여기서 `.deploy()` 함수를 호출했을 때 Hardhat/Ethers가 내부적으로 생성한 몇 가지 JSON-RPC 메서드를 볼 수 있습니다. 여기서 중요한 두 가지 메서드는 Sepolia 체인에 컨트랙트를 기록하기 위한 요청인 [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction)과 해시가 주어졌을 때 트랜잭션에 대한 정보를 읽기 위한 요청인 [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash)입니다. 트랜잭션 전송에 대해 더 알아보려면 [Web3를 사용한 트랜잭션 전송에 관한 튜토리얼](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)을 확인하세요.
 ## 2부: 스마트 컨트랙트와 상호작용하기 {#part-2-interact-with-your-smart-contract}
 
 이제 괴를리 네트워크에 스마트 컨트랙트를 성공적으로 배포했으므로, 이와 상호작용하는 방법을 알아보겠습니다.
@@ -486,7 +478,7 @@ main()
 터미널에서 `npx hardhat run scripts/interact.js`를 사용하여 파일을 실행하면 다음과 같은 응답이 표시되어야 합니다:
 
 ```
-메시지: Hello world!
+The message is: Hello world!
 ```
 
 축하합니다! 방금 이더리움 블록체인에서 스마트 컨트랙트 데이터를 성공적으로 읽어왔습니다. 정말 잘하셨습니다!
@@ -515,9 +507,9 @@ main()
 
 11번째 줄에서 반환된 트랜잭션 객체에 대해 `.wait()`를 호출한다는 점에 유의하세요. 이는 함수를 종료하기 전에 스크립트가 블록체인에서 트랜잭션이 채굴될 때까지 기다리도록 보장합니다. `.wait()` 호출이 포함되지 않으면, 스크립트가 컨트랙트에서 업데이트된 `message` 값을 확인하지 못할 수 있습니다.
 
-### 새 메시지 읽기 {#read-the-new-message}
+### 새 메시지 읽기
 
-[이전 단계](#read-the-init-message)를 반복하여 업데이트된 `message` 값을 읽을 수 있어야 합니다. 잠시 시간을 내어 새 값을 출력하는 데 필요한 변경 사항을 적용해 보세요!
+[이전 단계](#read-the-init-message)를 반복하여 업데이트된 `message` 값을 읽을 수 있을 것입니다. 잠시 시간을 내어 새 값을 출력하는 데 필요한 변경을 수행할 수 있는지 확인해 보세요!
 
 힌트가 필요하다면, 이 시점에서 `interact.js` 파일은 다음과 같은 모습이어야 합니다:
 
@@ -532,7 +524,7 @@ const contract = require("../artifacts/contracts/HelloWorld.sol/HelloWorld.json"
 
 // 프로바이더 - Alchemy
 const alchemyProvider = new ethers.providers.AlchemyProvider(
-  (network = "goerli"),
+  (network = "sepolia"),
   API_KEY
 )
 
@@ -561,18 +553,17 @@ async function main() {
 main()
 ```
 
-이제 스크립트를 실행하면 터미널에 이전 메시지, 업데이트 상태, 그리고 새 메시지가 출력되는 것을 볼 수 있습니다!
+이제 스크립트를 실행하기만 하면 터미널에 이전 메시지, 업데이트 상태, 그리고 새 메시지가 출력되는 것을 볼 수 있을 것입니다!
 
-`npx hardhat run scripts/interact.js --network goerli`
+`npx hardhat run scripts/interact.js --network sepolia`
 
 ```
-메시지: Hello World!
-메시지 업데이트 중...
-새 메시지: This is the new message.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
-스크립트를 실행하는 동안 새 메시지가 로드되기 전에 `Updating the message...` 단계가 로드되는 데 시간이 꽤 걸리는 것을 알 수 있습니다. 이는 채굴 과정 때문입니다. 채굴되는 동안 트랜잭션을 추적하는 방법이 궁금하다면 [Alchemy 멤풀](https://dashboard.alchemyapi.io/mempool)을 방문하여 트랜잭션 상태를 확인해 보세요. 트랜잭션이 드롭된 경우, [괴를리 Etherscan](https://goerli.etherscan.io)을 확인하고 트랜잭션 해시를 검색해 보는 것도 도움이 됩니다.
-
+스크립트를 실행하는 동안 새 메시지가 로드되기 전에 `Updating the message...` 단계에서 시간이 다소 걸리는 것을 눈치채셨을 수 있습니다. 이는 채굴 과정 때문입니다. 채굴되는 동안 트랜잭션을 추적하는 방법이 궁금하다면 [Alchemy 멤풀](https://dashboard.alchemy.com/mempool)을 방문하여 트랜잭션 상태를 확인해 보세요. 트랜잭션이 드롭(drop)된 경우, [Sepolia Etherscan](https://sepolia.etherscan.io)을 확인하고 트랜잭션 해시를 검색해 보는 것도 도움이 됩니다.
 ## 파트 3: Etherscan에 스마트 컨트랙트 게시하기 {#part-3-publish-your-smart-contract-to-etherscan}
 
 스마트 컨트랙트를 구현하기 위해 힘든 작업을 모두 마쳤습니다. 이제 세상과 공유할 시간입니다!
@@ -642,19 +633,19 @@ module.exports = {
 }
 ```
 
-#### Etherscan에서 스마트 컨트랙트 검증하기 {#verify-your-smart-contract-on-etherscan}
+#### Etherscan에서 스마트 컨트랙트 검증하기
 
-모든 파일이 저장되었고 모든 `.env` 변수가 올바르게 구성되었는지 확인합니다.
+모든 파일이 저장되었고 모든 `.env` 변수가 올바르게 구성되었는지 확인하세요.
 
-컨트랙트 주소와 배포된 네트워크를 전달하여 `verify` 작업을 실행합니다:
+컨트랙트 주소와 배포된 네트워크를 전달하여 `verify` 작업을 실행하세요:
 
 ```text
-npx hardhat verify --network goerli DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
+npx hardhat verify --network sepolia DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
 ```
 
-`DEPLOYED_CONTRACT_ADDRESS`가 괴를리 테스트넷에 배포된 스마트 컨트랙트의 주소인지 확인하세요. 또한 마지막 인수(`'Hello World!'`)는 [파트 1의 배포 단계](#step-15-write-our-deploy-script)에서 사용된 것과 동일한 문자열 값이어야 합니다.
+`DEPLOYED_CONTRACT_ADDRESS`가 Sepolia 테스트넷에 배포된 스마트 컨트랙트의 주소인지 확인하세요. 또한, 마지막 인수(`'Hello World!'`)는 [파트 1의 배포 단계](#step-15-write-our-deploy-script)에서 사용된 것과 동일한 문자열 값이어야 합니다.
 
-모든 것이 순조롭게 진행되면 터미널에 다음 메시지가 표시됩니다:
+모든 것이 잘 진행되면 터미널에 다음과 같은 메시지가 표시됩니다:
 
 ```text
 Successfully submitted source code for contract
@@ -663,11 +654,10 @@ for verification on Etherscan. Waiting for verification result...
 
 
 Successfully verified contract HelloWorld on Etherscan.
-https://goerli.etherscan.io/address/<contract-address>#contracts
+https://sepolia.etherscan.io/address/<contract-address>#contracts
 ```
 
-축하합니다! 스마트 컨트랙트 코드가 Etherscan에 등록되었습니다!
-
+축하합니다! 스마트 컨트랙트 코드가 Etherscan에 게시되었습니다!
 ### Etherscan에서 스마트 컨트랙트 확인하기! {#check-out-your-smart-contract-on-etherscan}
 
 터미널에 제공된 링크로 이동하면 Etherscan에 게시된 스마트 컨트랙트 코드와 ABI를 볼 수 있습니다!
@@ -694,7 +684,7 @@ sourceUrl: https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract
 이 튜토리얼을 마치면 다음 방법을 알게 됩니다:
 
 - 메타마스크 지갑을 탈중앙화 애플리케이션 (dapp)에 연결하기
-- [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) API를 사용하여 스마트 컨트랙트에서 데이터 읽기
+- [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) API를 사용하여 스마트 컨트랙트에서 데이터 읽기
 - 메타마스크를 사용하여 이더리움 트랜잭션 서명하기
 
 이 dapp에서는 프론트엔드 프레임워크로 [React](https://react.dev/)를 사용할 것입니다. 하지만 프로젝트에 Web3 기능을 도입하는 데 주로 초점을 맞출 것이므로 React의 기본 개념을 설명하는 데 많은 시간을 할애하지는 않을 것입니다.
@@ -917,31 +907,31 @@ export const updateMessage = async (message) => {}
 
 #### 이더리움 체인에 API 연결 설정하기 {#establish-an-api-connection-to-the-ethereum-chain}
 
-이 튜토리얼의 파트 2에서 [Alchemy Web3 키를 사용하여 스마트 컨트랙트에서 데이터를 읽었던](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library) 것을 기억하시나요? 체인에서 데이터를 읽으려면 dapp에도 Alchemy Web3 키가 필요합니다.
+이 튜토리얼의 파트 2에서 스마트 컨트랙트에서 데이터를 읽기 위해 Alchemy Web3 키를 사용했던 것을 기억하시나요? 체인에서 데이터를 읽으려면 탈중앙화 애플리케이션 (dapp)에도 Alchemy Web3 키가 필요합니다.
 
-아직 없다면 먼저 `starter-files`의 루트 디렉토리로 이동하여 터미널에서 다음을 실행하여 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)를 설치하세요:
+아직 설치하지 않았다면, 먼저 `starter-files`의 루트 디렉터리로 이동하여 터미널에서 다음을 실행해 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)를 설치하세요:
 
 ```text
 npm install @alch/alchemy-web3
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)는 [Web3.js](https://docs.web3js.org/)의 래퍼(wrapper)로, 향상된 API 메서드와 기타 중요한 이점을 제공하여 Web3 개발자의 작업을 더 쉽게 만들어 줍니다. 최소한의 구성만 필요하도록 설계되어 앱에서 즉시 사용할 수 있습니다!
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)는 [Web3.js](https://docs.web3js.org/)를 감싸는 래퍼(wrapper)로, 향상된 API 메서드와 기타 중요한 이점을 제공하여 Web3 개발자로서의 삶을 더 편하게 만들어 줍니다. 최소한의 구성만 필요하도록 설계되어 앱에서 바로 사용할 수 있습니다!
 
-그런 다음 프로젝트 디렉토리에 [dotenv](https://www.npmjs.com/package/dotenv) 패키지를 설치하여 API 키를 가져온 후 안전하게 저장할 수 있는 공간을 마련합니다.
+그런 다음, 프로젝트 디렉터리에 [dotenv](https://www.npmjs.com/package/dotenv) 패키지를 설치하여 API 키를 가져온 후 안전하게 저장할 수 있는 공간을 마련하세요.
 
 ```text
 npm install dotenv --save
 ```
 
-우리 dapp에서는 HTTP API 키 대신 **Websockets API 키를 사용할 것입니다**. 이를 통해 스마트 컨트랙트에 저장된 메시지가 변경될 때 이를 감지하는 리스너를 설정할 수 있기 때문입니다.
+우리의 dapp에서는 HTTP API 키 대신 **Websockets API 키를 사용할 것입니다**. 이를 통해 스마트 컨트랙트에 저장된 메시지가 변경될 때 이를 감지하는 리스너를 설정할 수 있기 때문입니다.
 
-API 키가 준비되면 루트 디렉토리에 `.env` 파일을 만들고 Alchemy Websockets URL을 추가합니다. 그 후 `.env` 파일은 다음과 같아야 합니다:
+API 키를 얻었다면 루트 디렉터리에 `.env` 파일을 만들고 Alchemy Websockets URL을 추가하세요. 추가한 후 `.env` 파일은 다음과 같아야 합니다:
 
 ```javascript
-REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<키>
+REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<key>
 ```
 
-이제 dapp에 Alchemy Web3 엔드포인트를 설정할 준비가 되었습니다! `util` 폴더 안에 중첩된 `interact.js`로 돌아가서 파일 상단에 다음 코드를 추가해 보겠습니다:
+이제 dapp에 Alchemy Web3 엔드포인트를 설정할 준비가 되었습니다! `util` 폴더 안에 있는 `interact.js`로 돌아가서 파일 맨 위에 다음 코드를 추가해 보겠습니다:
 
 ```javascript
 // interact.js
@@ -954,32 +944,32 @@ const web3 = createAlchemyWeb3(alchemyKey)
 //export const helloWorldContract;
 ```
 
-위에서 먼저 `.env` 파일에서 Alchemy 키를 가져온 다음, `alchemyKey`를 `createAlchemyWeb3`에 전달하여 Alchemy Web3 엔드포인트를 설정했습니다.
+위 코드에서는 먼저 `.env` 파일에서 Alchemy 키를 가져온 다음, `alchemyKey`를 `createAlchemyWeb3`에 전달하여 Alchemy Web3 엔드포인트를 설정했습니다.
 
-이 엔드포인트가 준비되었으니 이제 스마트 컨트랙트를 로드할 차례입니다!
-
+이 엔드포인트가 준비되었으니, 이제 스마트 컨트랙트를 로드할 차례입니다!
 #### Hello World 스마트 컨트랙 로드하기 {#loading-your-hello-world-smart-contract}
 
 Hello World 스마트 컨트랙트를 로드하려면 컨트랙트 주소와 ABI가 필요합니다. [이 튜토리얼의 파트 3](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)을 완료했다면 두 가지 모두 Etherscan에서 찾을 수 있습니다.
 
-#### Etherscan에서 컨트랙트 ABI를 가져오는 방법 {#how-to-get-your-contract-abi-from-etherscan}
+#### Etherscan에서 컨트랙트 ABI 가져오기
 
-이 튜토리얼의 파트 3을 건너뛰었다면 주소가 [0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code)인 HelloWorld 컨트랙트를 사용할 수 있습니다. 해당 ABI는 [여기](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code)에서 찾을 수 있습니다.
+이 튜토리얼의 파트 3을 건너뛰었다면, 먼저 자신만의 HelloWorld 컨트랙트를 배포하고 검증하세요. 그런 다음 [Sepolia Etherscan](https://sepolia.etherscan.io)에서 컨트랙트 페이지를 열어 ABI를 복사합니다.
 
-컨트랙트 ABI는 컨트랙트가 호출할 함수를 지정하고 함수가 예상하는 형식으로 데이터를 반환하도록 보장하는 데 필요합니다. 컨트랙트 ABI를 복사한 후 `src` 디렉토리에 `contract-abi.json`라는 JSON 파일로 저장해 보겠습니다.
+컨트랙트 ABI는 컨트랙트가 호출할 함수를 지정하고 해당 함수가 예상하는 형식으로 데이터를 반환하도록 보장하는 데 필요합니다. 컨트랙트 ABI를 복사했다면, `src` 디렉터리에 `contract-abi.json`이라는 JSON 파일로 저장해 보겠습니다.
 
-contract-abi.json은 src 폴더에 저장되어야 합니다.
+contract-abi.json 파일은 src 폴더에 저장되어야 합니다.
 
-컨트랙트 주소, ABI 및 Alchemy Web3 엔드포인트를 갖추었으므로 [contract 메서드](https://docs.web3js.org/api/web3-eth-contract/class/Contract)를 사용하여 스마트 컨트랙트의 인스턴스를 로드할 수 있습니다. 컨트랙트 ABI를 `interact.js` 파일로 가져오고 컨트랙트 주소를 추가합니다.
+컨트랙트 주소, ABI, Alchemy Web3 엔드포인트가 준비되었으므로, [contract 메서드](https://docs.web3js.org/api/web3-eth-contract/class/Contract)를 사용하여 스마트 컨트랙트 인스턴스를 로드할 수 있습니다. `interact.js` 파일에 컨트랙트 ABI를 가져오고 컨트랙트 주소를 추가하세요.
 
 ```javascript
 // interact.js
 
 const contractABI = require("../contract-abi.json")
-const contractAddress = "0x6f3f635A9762B47954229Ea479b4541eAF402A6A"
+// 여기에 컨트랙트 주소를 사용하세요
+const contractAddress = "0x..."
 ```
 
-이제 마침내 `helloWorldContract` 변수의 주석을 해제하고 AlchemyWeb3 엔드포인트를 사용하여 스마트 컨트랙트를 로드할 수 있습니다:
+이제 마침내 `helloWorldContract` 변수의 주석을 해제하고, AlchemyWeb3 엔드포인트를 사용하여 스마트 컨트랙트를 로드할 수 있습니다:
 
 ```javascript
 // interact.js
@@ -1009,7 +999,6 @@ export const helloWorldContract = new web3.eth.Contract(
 ```
 
 이제 컨트랙트가 로드되었으므로 `loadCurrentMessage` 함수를 구현할 수 있습니다!
-
 #### `interact.js` 파일에 `loadCurrentMessage` 구현하기 {#implementing-loadcurrentmessage-in-your-interact-js-file}
 
 이 함수는 매우 간단합니다. 컨트랙트에서 데이터를 읽기 위해 간단한 비동기 web3 호출을 수행할 것입니다. 우리 함수는 스마트 컨트랙트에 저장된 메시지를 반환합니다:
@@ -1049,7 +1038,7 @@ useEffect(async () => {
 
 #### `addSmartContractListener` 구현하기 {#implement-addsmartcontractlistener}
 
-[이 튜토리얼 시리즈의 파트 1](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract)에서 작성한 `HelloWorld.sol` 파일을 떠올려 보면, 스마트 컨트랙트의 `update` 함수가 호출된 후 발생하는 `UpdatedMessages`라는 스마트 컨트랙트 이벤트가 있다는 것을 기억하실 것입니다(9번째 및 27번째 줄 참조):
+[이 튜토리얼 시리즈의 파트 1](#step-10-write-our-contract)에서 작성한 `HelloWorld.sol` 파일을 떠올려 보면, 스마트 컨트랙트의 `update` 함수가 호출된 후 발생하는 `UpdatedMessages`라는 스마트 컨트랙트 이벤트가 있다는 것을 기억하실 것입니다(9번째 및 27번째 줄 참조):
 
 ```javascript
 // HelloWorld.sol
@@ -1136,26 +1125,23 @@ useEffect(async () => {
 
 이더리움의 트랜잭션 작동 방식에 대해 더 자세히 알고 싶다면 이더리움 재단의 [이 페이지](/developers/docs/transactions/)를 확인하세요.
 
-#### 메타마스크 다운로드 {#download-metamask}
+#### 메타마스크 다운로드하기
 
-[여기](https://metamask.io/download)에서 메타마스크를 다운로드하고 무료로 계정을 만들 수 있습니다. 계정을 만들 때나 이미 계정이 있는 경우, 오른쪽 상단에서 "Goerli Test Network(괴를리 테스트 네트워크)"로 전환해야 합니다(실제 돈을 다루지 않기 위함입니다).
+[여기](https://metamask.io/download)에서 무료로 메타마스크를 다운로드하고 계정을 생성할 수 있습니다. 계정을 생성할 때, 또는 이미 계정이 있는 경우, 우측 상단에서 "Sepolia 테스트 네트워크"로 전환해야 합니다\(실제 돈을 다루지 않기 위함입니다\).
+#### 퍼싯에서 이더 추가하기
 
-#### 퍼싯에서 이더 추가하기 {#add-ether-from-a-faucet}
-
-이더리움 블록체인에서 트랜잭션에 서명하려면 가짜 ETH가 필요합니다. ETH를 얻으려면 [FaucETH](https://fauceth.komputing.org)로 이동하여 괴를리 계정 주소를 입력하고 "Request funds(자금 요청)"를 클릭한 다음, 드롭다운에서 "Ethereum Testnet Goerli"를 선택하고 마지막으로 "Request funds" 버튼을 다시 클릭합니다. 곧 메타마스크 계정에서 ETH를 확인할 수 있을 것입니다!
-
+이더리움 블록체인에서 트랜잭션에 서명하려면 가짜 ETH가 필요합니다. ETH를 얻으려면 [테스트 네트워크 페이지](/developers/docs/networks/#sepolia)에 나열된 Sepolia 퍼싯으로 이동하여 Sepolia 계정 주소를 입력하면 됩니다. 곧 메타마스크 계정에서 ETH를 확인할 수 있을 것입니다!
 #### 잔액 확인하기 {#check-your-balance}
 
-잔액이 있는지 다시 확인하기 위해 [Alchemy의 컴포저 도구](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)를 사용하여 [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) 요청을 해보겠습니다. 그러면 지갑에 있는 ETH의 양이 반환됩니다. 메타마스크 계정 주소를 입력하고 "Send Request(요청 보내기)"를 클릭하면 다음과 같은 응답이 표시될 것입니다:
+잔액이 제대로 들어왔는지 다시 확인하기 위해, [Alchemy의 샌드박스 도구](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)를 사용하여 [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) 요청을 보내보겠습니다. 이는 지갑에 있는 ETH의 양을 반환합니다. 메타마스크 계정 주소를 입력하고 "Send Request"를 클릭하면 다음과 같은 응답을 볼 수 있습니다:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**참고:** 이 결과는 ETH가 아니라 wei 단위입니다. Wei는 이더의 가장 작은 단위로 사용됩니다. wei에서 ETH로의 변환은 1 ETH = 10¹⁸ wei입니다. 따라서 0xde0b6b3a7640000을 10진수로 변환하면 1\*10¹⁸이 되며 이는 1 ETH와 같습니다.
+**참고:** 이 결과는 ETH가 아닌 wei 단위입니다. wei는 이더의 가장 작은 단위로 사용됩니다. wei에서 ETH로의 변환 비율은 1 ETH = 10¹⁸ wei입니다. 따라서 0xde0b6b3a7640000을 십진수로 변환하면 1\*10¹⁸이 되며, 이는 1 ETH와 같습니다.
 
-휴! 가짜 돈이 모두 들어왔네요! 🤑
-
+휴! 가짜 돈이 모두 잘 들어있네요! 🤑
 ### 5단계: 메타마스크를 UI에 연결하기 {#step-5-connect-metamask-to-your-ui}
 
 이제 메타마스크 지갑이 설정되었으니 dapp에 연결해 보겠습니다!
@@ -1554,7 +1540,7 @@ const onUpdatePressed = async () => {
 우와, 튜토리얼의 끝까지 오셨군요! 요약하자면, 여러분은 다음 방법을 배웠습니다:
 
 - 메타마스크 지갑을 dapp 프로젝트에 연결하기
-- [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) API를 사용하여 스마트 컨트랙트에서 데이터 읽기
+- [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) API를 사용하여 스마트 컨트랙트에서 데이터 읽기
 - 메타마스크를 사용하여 이더리움 트랜잭션 서명하기
 
 이제 이 튜토리얼에서 배운 기술을 적용하여 나만의 커스텀 dapp 프로젝트를 구축할 준비가 완벽하게 되었습니다! 언제나 그렇듯이 질문이 있다면 주저하지 말고 [Alchemy 디스코드](https://discord.gg/gWuC7zB)에서 도움을 요청하세요. 🧙‍♂️

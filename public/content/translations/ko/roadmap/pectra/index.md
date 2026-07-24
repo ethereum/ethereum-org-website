@@ -1,8 +1,9 @@
 ---
-title: 펙트라
-metaTitle: 프라하-엘렉트라 (펙트라)
-description: 펙트라 프로토콜 업그레이드에 대해 알아보세요
+title: "펙트라"
+metaTitle: "프라하-엘렉트라 (펙트라)"
+description: "펙트라 프로토콜 업그레이드에 대해 알아보세요"
 lang: ko
+template: upgrade
 authors: ["Nixo", "Mario Havel"]
 ---
 
@@ -121,7 +122,6 @@ _이더리움 펙트라 업그레이드: 스테이커가 알아야 할 사항 �
 
 - [이더리움 로드맵](/roadmap/)
 - [펙트라 FAQ](https://epf.wiki/#/wiki/pectra-faq)
-- [Pectra.wtf 정보 페이지](https://pectra.wtf)
 - [펙트라가 스테이커 경험을 향상시키는 방법](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [EIP-7702 정보 페이지](https://eip7702.io/)
+- [EIP7702 정보 페이지](https://eip7702.io/)
 - [펙트라 데브넷](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

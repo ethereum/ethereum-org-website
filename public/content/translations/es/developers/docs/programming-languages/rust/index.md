@@ -44,7 +44,7 @@ Usa Ethereum para crear aplicaciones descentralizadas (dapps) que utilicen los b
 - [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _Referencia de la API de OASIS_
 - [Solaris](https://github.com/paritytech/sol-rs) - _Entorno de pruebas unitarias para contratos inteligentes de Solidity utilizando la EVM nativa del cliente Parity._
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Implementación de la Máquina Virtual de Ethereum en Rust_
-- [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Contrato inteligente Wavelet en Rust_
+- [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Contrato inteligente Wavelet en Rust_
 - [Foundry](https://github.com/foundry-rs/foundry) - _Conjunto de herramientas para el desarrollo de aplicaciones de Ethereum_
 - [Alloy](https://alloy.rs) - _Bibliotecas de alto rendimiento, bien probadas y documentadas para interactuar con Ethereum y otras cadenas basadas en la EVM._
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Biblioteca de Ethereum e implementación de billetera_

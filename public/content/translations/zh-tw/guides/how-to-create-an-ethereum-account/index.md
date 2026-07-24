@@ -1,7 +1,7 @@
 ---
-title: 如何建立以太坊帳戶
-metaTitle: 如何「建立」以太坊帳戶
-description: 使用錢包建立以太坊帳戶的逐步指南。
+title: "如何建立以太坊帳戶"
+metaTitle: "如何「建立」以太坊帳戶"
+description: "使用錢包建立以太坊帳戶的逐步指南。"
 lang: zh-tw
 ---
 

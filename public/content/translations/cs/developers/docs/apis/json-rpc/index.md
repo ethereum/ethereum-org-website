@@ -1887,7 +1887,7 @@ Toto byl jen stručný úvod do některých nejběžnějších úloh, který dem
 
 ## Související témata {#related-topics}
 
-- [Specifikace JSON-RPC](http://www.jsonrpc.org/specification)
+- [Specifikace JSON-RPC](https://www.jsonrpc.org/specification)
 - [Uzly a klienti](/developers/docs/nodes-and-clients/)
 - [JavaScript API](/developers/docs/apis/javascript/)
 - [Backendová API](/developers/docs/apis/backend/)

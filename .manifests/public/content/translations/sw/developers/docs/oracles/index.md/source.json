@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/docs/oracles/index.md",
-  "generatedAt": "2026-06-17T22:18:11.804Z",
-  "rootHash": "251f37a1862f",
+  "generatedAt": "2026-06-29T23:58:07.736Z",
+  "rootHash": "5a97538cd756",
   "tree": {
     "contentHash": "de2727e9d204",
-    "anchorHash": "89801994ae70",
+    "anchorHash": "777da8fab317",
     "children": {
       "frontmatter:title": {
         "contentHash": "8cd7b48f730e",
@@ -1031,7 +1031,7 @@
       },
       "use-blockchain-oracles": {
         "contentHash": "407cf7525dce",
-        "anchorHash": "b37763224954",
+        "anchorHash": "f1a4abd37189",
         "labelHash": "7dc90e8ef012",
         "children": {
           "_label": {
@@ -1108,7 +1108,7 @@
           },
           "link:8": {
             "contentHash": "036a744f6794",
-            "anchorHash": "79eda52cafd0"
+            "anchorHash": "3d75ef7c2b2f"
           },
           "prose:22": {
             "contentHash": "56e4788f02cb",
@@ -1326,5 +1326,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

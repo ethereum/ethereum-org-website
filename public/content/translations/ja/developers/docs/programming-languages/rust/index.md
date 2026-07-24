@@ -44,7 +44,7 @@ incomplete: true
 - [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS APIリファレンス_
 - [Solaris](https://github.com/paritytech/sol-rs) - _ネイティブのParityクライアントEVMを使用したSolidityスマート・コントラクトの単体テストハーネス。_
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Rustによるイーサリアム仮想マシンの実装_
-- [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _RustによるWaveletスマート・コントラクト_
+- [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _RustによるWaveletスマート・コントラクト_
 - [Foundry](https://github.com/foundry-rs/foundry) - _イーサリアムアプリケーション開発のためのツールキット_
 - [Alloy](https://alloy.rs) - _イーサリアムやその他のEVMベースのチェーンと対話するための、高性能で十分にテストされ文書化されたライブラリ。_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _イーサリアムライブラリとウォレットの実装_

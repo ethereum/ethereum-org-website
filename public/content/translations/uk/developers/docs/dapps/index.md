@@ -47,9 +47,9 @@ Dapp може мати фронтенд-код та інтерфейси кор�
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## Інструменти для створення dapp {#dapp-tools}
+## Інструменти для створення децентралізованих застосунків (dapp)
 
-**Scaffold-ETH _— швидко експериментуйте з Solidity, використовуючи фронтенд, який адаптується до вашого смарт-контракту._**
+**Scaffold-ETH 2 _— швидко експериментуйте з Solidity за допомогою фронтенду, який адаптується до вашого смарт-контракту._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Приклад dapp](https://punkwallet.io/)
@@ -58,28 +58,27 @@ Dapp може мати фронтенд-код та інтерфейси кор�
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**One Click Dapp _— FOSS-інструмент для генерування фронтендів dapp з [ABI](/glossary/#abi)._**
+**One Click Dapp _— інструмент із відкритим вихідним кодом (FOSS) для створення фронтендів dapp з [ABI](/glossary/#abi)._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
-**Etherflow _— FOSS-інструмент для розробників Етеріуму для тестування свого вузла, а також створення та налагодження RPC-викликів із браузера._**
+**Etherflow _— інструмент із відкритим вихідним кодом (FOSS) для розробників Етеріуму, що дозволяє тестувати свій вузол, а також створювати та налагоджувати RPC-виклики з браузера._**
 
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
-**thirdweb _— SDK будь-якою мовою, смарт-контракти, інструменти та інфраструктура для розробки Web3._**
+**thirdweb _— SDK будь-якою мовою, смарт-контракти, інструменти та інфраструктура для розробки у Web3._**
 
 - [Домашня сторінка](https://thirdweb.com/)
 - [Документація](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Crossmint _— платформа розробки Web3 корпоративного рівня для розгортання смарт-контрактів, увімкнення платежів кредитними картками та кросчейн-платежів, а також використання API для створення, розповсюдження, продажу, зберігання та редагування NFT._**
+**Crossmint _— платформа корпоративного рівня для розробки у Web3, що дозволяє розгортати смарт-контракти, підключати платежі кредитними картками та кросчейн-платежі, а також використовувати API для створення, розповсюдження, продажу, зберігання та редагування NFT._**
 
 - [crossmint.com](https://www.crossmint.com)
 - [Документація](https://docs.crossmint.com)
 - [Discord](https://discord.com/invite/crossmint)
-
 ## Подальше читання {#further-reading}
 
 - [Ознайомтеся з dapp](/apps)
