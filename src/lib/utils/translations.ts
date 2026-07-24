@@ -122,6 +122,7 @@ const QUIZZES_PREFIXES: string[] = [
   "/eth/",
   "/gas/",
   "/nft/",
+  "/privacy/",
   "/quizzes/",
   "/run-a-node/",
   "/security/",

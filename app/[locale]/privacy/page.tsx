@@ -1,3 +1,4 @@
+import { pick } from "lodash"
 import {
   ArrowLeftRight,
   ChartNoAxesCombined,
@@ -5,15 +6,21 @@ import {
   Lightbulb,
   Sparkle,
 } from "lucide-react"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import type { Lang, ToCItem } from "@/lib/types"
 
 import BigNumber from "@/components/BigNumber"
 import PathwayCard from "@/components/cards/pathway-card"
 import PageHero from "@/components/Hero/PageHero"
+import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
+import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import {
   Alert,
   AlertContent,
@@ -35,6 +42,7 @@ import VideoWatch from "@/components/Videos/VideoWatch"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { numberFormat, numberToPercent } from "@/lib/utils/numbers"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import PageJsonLD from "./page-jsonld"
 
@@ -49,6 +57,10 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   setRequestLocale(locale)
 
   const t = await getTranslations("page-privacy")
+
+  const allMessages = await getMessages({ locale })
+  const requiredNamespaces = getRequiredNamespacesForPage("/privacy/")
+  const messages = pick(allMessages, requiredNamespaces)
 
   const { contributors, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("privacy", locale)
@@ -439,6 +451,12 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             description={t("page-privacy-pathway-2-description")}
             banner={<Image src={developersEthBlocksImg} alt="" sizes="160px" />}
           />
+        </Section>
+
+        <Section id="quiz-section">
+          <I18nProvider locale={locale} messages={messages}>
+            <StandaloneQuizWidget quizKey="privacy" />
+          </I18nProvider>
         </Section>
       </ContentLayout>
     </>
