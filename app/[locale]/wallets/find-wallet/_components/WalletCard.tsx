@@ -75,10 +75,14 @@ const WalletCard = memo(function WalletCard({
                 {formattedLanguages}
               </span>{" "}
               {hasExtraLanguages && (
-                <SupportedLanguagesTooltip
-                  supportedLanguages={wallet.supportedLanguages}
-                  shown={LANGUAGES_SHOWN}
-                />
+                // Lift above the LinkOverlay's ::before so the tooltip is
+                // hoverable; the rest of the card stays a click target.
+                <span className="relative z-10">
+                  <SupportedLanguagesTooltip
+                    supportedLanguages={wallet.supportedLanguages}
+                    shown={LANGUAGES_SHOWN}
+                  />
+                </span>
               )}
             </p>
           </div>
