@@ -17,11 +17,12 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import { getLocaleFormattedDate } from "@/lib/utils/date"
 import type { CatalogWallet } from "@/lib/utils/walletData"
 
-import { getDeviceLabels } from "@/data/wallets/devices"
+import { buildDeviceLabels, getDeviceLabels } from "@/data/wallets/devices"
 import {
   WALLET_FEATURE_GROUPS,
   type WalletFeature,
 } from "@/data/wallets/features"
+import { buildPersonaLabels } from "@/data/wallets/personas"
 
 import WalletPersonaTags from "./WalletPersonaTags"
 
@@ -48,7 +49,8 @@ const WalletDetail = async ({
     namespace: "page-wallets-find-wallet",
   })
 
-  const deviceLabels = getDeviceLabels(wallet.devices, t)
+  const deviceLabels = getDeviceLabels(wallet.devices, buildDeviceLabels(t))
+  const personaLabels = buildPersonaLabels(t)
 
   const lastUpdated = getLocaleFormattedDate(
     locale as Lang,
@@ -89,7 +91,10 @@ const WalletDetail = async ({
         />
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
-            <WalletPersonaTags personas={wallet.personas} />
+            <WalletPersonaTags
+              personas={wallet.personas}
+              labels={personaLabels}
+            />
 
             <h1 className="mt-0">{wallet.name}</h1>
 

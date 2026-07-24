@@ -13,8 +13,11 @@ import type {
   WalletPersonaId,
 } from "@/lib/utils/walletData"
 
+import { buildDeviceLabels } from "@/data/wallets/devices"
+import { buildPersonaLabels } from "@/data/wallets/personas"
+
 import WalletPersonaCards from "./WalletPersonaCards"
-import WalletsCatalog from "./WalletsCatalog"
+import WalletsCatalog, { type WalletCatalogLabels } from "./WalletsCatalog"
 
 const METHODOLOGY_CRITERIA = [
   "security",
@@ -56,6 +59,34 @@ const WalletsPageBody = async ({
     locale,
     namespace: "page-wallets-find-wallet",
   })
+  const tCommon = await getTranslations({ locale, namespace: "common" })
+
+  // Built server-side so the client catalog island receives plain strings —
+  // no i18n runtime or message catalog ships to the browser.
+  const catalogLabels: WalletCatalogLabels = {
+    catalog: {
+      searchPlaceholder: t("page-find-wallet-search-wallets"),
+      resultsLabel: t("page-find-wallet-table-title"),
+      noResults: t("page-find-wallet-empty-results-title"),
+      filtersToggle: t("page-find-wallet-filters"),
+      applyLabel: t("page-find-wallet-show-results"),
+      closeLabel: tCommon("close"),
+    },
+    filter: {
+      device: t("page-find-wallet-device"),
+      buySell: t("page-find-wallet-buy-sell-crypto"),
+      network: t("page-find-wallet-network-support"),
+      language: t("page-find-wallet-languages-supported"),
+    },
+    header: {
+      filters: t("page-find-wallet-filters"),
+      reset: t("page-find-wallet-reset-filters"),
+    },
+    buyCrypto: t("page-find-wallet-buy-crypto"),
+    sellCrypto: t("page-find-wallet-sell-for-fiat"),
+    devices: buildDeviceLabels(t),
+    personas: buildPersonaLabels(t),
+  }
 
   return (
     <>
@@ -89,6 +120,7 @@ const WalletsPageBody = async ({
           wallets={wallets}
           networks={networks}
           languages={languages}
+          labels={catalogLabels}
         />
       </Section>
 

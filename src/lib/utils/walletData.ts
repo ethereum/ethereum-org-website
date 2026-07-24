@@ -115,7 +115,7 @@ export function getWalletLanguageOptions(
       code,
       name: capitalize(getLanguageCodeName(code, locale) ?? code),
       count: wallets.filter((wallet) =>
-        wallet.languages_supported.includes(code as never)
+        (wallet.languages_supported as string[]).includes(code)
       ).length,
     }))
     .sort((a, b) => a.name.localeCompare(b.name, locale))

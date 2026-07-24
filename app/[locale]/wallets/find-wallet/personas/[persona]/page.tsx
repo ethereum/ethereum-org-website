@@ -38,7 +38,10 @@ const Page = async (props: { params: Promise<PersonaPageParams> }) => {
   if (!isWalletPersonaId(personaId)) notFound()
   const persona = getPersona(personaId)!
 
-  const t = await getTranslations("page-wallets-find-wallet")
+  const t = await getTranslations({
+    locale,
+    namespace: "page-wallets-find-wallet",
+  })
 
   const allWallets = getCatalogWallets(locale)
   const wallets = getWalletsByPersona(allWallets, personaId)
@@ -87,7 +90,10 @@ export async function generateMetadata(props: {
   if (!isWalletPersonaId(personaId)) return {}
   const persona = getPersona(personaId)!
 
-  const t = await getTranslations("page-wallets-find-wallet")
+  const t = await getTranslations({
+    locale,
+    namespace: "page-wallets-find-wallet",
+  })
 
   return await getMetadata({
     locale,

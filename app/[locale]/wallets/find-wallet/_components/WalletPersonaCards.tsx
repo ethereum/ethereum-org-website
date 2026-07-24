@@ -78,7 +78,7 @@ const WalletPersonaCards = async ({
       </FieldLegend>
       <div
         className="grid auto-cols-[200px] grid-flow-col gap-4 overflow-x-auto px-4 lg:auto-cols-fr"
-        data-testid="preset-filters-container"
+        data-testid="persona-cards-container"
       >
         {WALLET_PERSONAS.map((persona) => {
           const isActive = currentPersonaId === persona.id

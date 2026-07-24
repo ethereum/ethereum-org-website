@@ -1,7 +1,6 @@
 "use client"
 
-import { memo, useMemo } from "react"
-import { useTranslations } from "next-intl"
+import { memo } from "react"
 
 import { Image } from "@/components/Image"
 import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
@@ -9,7 +8,8 @@ import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import type { CatalogWallet } from "@/lib/utils/walletData"
 
-import { getDeviceLabels } from "@/data/wallets/devices"
+import { getDeviceLabels, type WalletDeviceId } from "@/data/wallets/devices"
+import type { WalletPersonaId } from "@/data/wallets/personas"
 
 import WalletPersonaTags from "./WalletPersonaTags"
 
@@ -18,17 +18,19 @@ import WalletPersonaTags from "./WalletPersonaTags"
 // because the compact card wants fewer than the app-detail page.
 const LANGUAGES_SHOWN = 2
 
+type WalletCardProps = {
+  wallet: CatalogWallet
+  /** Pre-localized label dicts, built once on the server. */
+  deviceLabels: Record<WalletDeviceId, string>
+  personaLabels: Record<WalletPersonaId, string>
+}
+
 const WalletCard = memo(function WalletCard({
   wallet,
-}: {
-  wallet: CatalogWallet
-}) {
-  const t = useTranslations("page-wallets-find-wallet")
-
-  const deviceLabels = useMemo(
-    () => getDeviceLabels(wallet.devices, t),
-    [wallet.devices, t]
-  )
+  deviceLabels,
+  personaLabels,
+}: WalletCardProps) {
+  const deviceList = getDeviceLabels(wallet.devices, deviceLabels)
 
   const formattedLanguages = wallet.supportedLanguages
     .slice(0, LANGUAGES_SHOWN)
@@ -58,10 +60,13 @@ const WalletCard = memo(function WalletCard({
             {wallet.name}
           </LinkOverlay>
 
-          <WalletPersonaTags personas={wallet.personas} />
+          <WalletPersonaTags
+            personas={wallet.personas}
+            labels={personaLabels}
+          />
 
           <div className="space-y-0.5 text-sm text-body-medium">
-            {deviceLabels.length > 0 && <p>{deviceLabels.join(" · ")}</p>}
+            {deviceList.length > 0 && <p>{deviceList.join(" · ")}</p>}
             <p>
               <span className="font-semibold text-body">
                 {formattedLanguages}

@@ -16,7 +16,7 @@ import InlineLink from "@/components/ui/Link"
 
 import { getWalletBySlug } from "@/lib/utils/walletData"
 
-import { getDeviceLabels } from "@/data/wallets/devices"
+import { buildDeviceLabels, getDeviceLabels } from "@/data/wallets/devices"
 import { CROPS_PROPERTIES } from "@/data/wallets/features"
 
 import WalletDetailModal from "./WalletDetailModal"
@@ -70,7 +70,7 @@ const InterceptedWalletDetail = async ({
   })
   const tCommon = await getTranslations({ locale, namespace: "common" })
 
-  const deviceLabels = getDeviceLabels(wallet.devices, t)
+  const deviceLabels = getDeviceLabels(wallet.devices, buildDeviceLabels(t))
 
   const shownLanguages = wallet.supportedLanguages
     .slice(0, LANGUAGES_SHOWN)
@@ -82,6 +82,7 @@ const InterceptedWalletDetail = async ({
       title={wallet.name}
       image={wallet.image}
       description={wallet.descriptionStripped}
+      closeLabel={tCommon("close")}
     >
       <div className="flex flex-col gap-6">
         {wallet.descriptionStripped && (

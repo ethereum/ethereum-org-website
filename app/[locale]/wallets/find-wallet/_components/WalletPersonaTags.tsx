@@ -1,28 +1,26 @@
 "use client"
 
 import { memo } from "react"
-import { useTranslations } from "next-intl"
 
 import { Tag } from "@/components/ui/tag"
 
 import {
   PERSONA_TAG_STATUS,
-  PERSONA_TITLE_KEYS,
   type WalletPersonaId,
 } from "@/data/wallets/personas"
 
 type WalletPersonaTagsProps = {
   personas: WalletPersonaId[]
+  /** Localized persona titles keyed by id, built on the server. */
+  labels: Record<WalletPersonaId, string>
 }
 
 /**
  * Persona chips for a wallet. Each chip carries its persona's accent color via
- * `PERSONA_TAG_STATUS`, resolving persona ids to localized titles. Renders
- * nothing when the wallet has no personas.
+ * `PERSONA_TAG_STATUS`. Titles come in pre-localized as props so this stays a
+ * plain, i18n-runtime-free component. Renders nothing when there are no personas.
  */
-const WalletPersonaTags = ({ personas }: WalletPersonaTagsProps) => {
-  const t = useTranslations("page-wallets-find-wallet")
-
+const WalletPersonaTags = ({ personas, labels }: WalletPersonaTagsProps) => {
   if (personas.length === 0) return null
 
   return (
@@ -34,7 +32,7 @@ const WalletPersonaTags = ({ personas }: WalletPersonaTagsProps) => {
           status={PERSONA_TAG_STATUS[persona]}
           size="small"
         >
-          {t(PERSONA_TITLE_KEYS[persona])}
+          {labels[persona]}
         </Tag>
       ))}
     </div>

@@ -19,7 +19,7 @@ export const WALLET_DEVICE_IDS: WalletDeviceId[] = [
   "hardware",
 ]
 
-export const DEVICE_LABEL_KEYS: Record<WalletDeviceId, string> = {
+const DEVICE_LABEL_KEYS: Record<WalletDeviceId, string> = {
   desktop: "page-find-wallet-desktop",
   mobile: "page-find-wallet-mobile",
   browser: "page-find-wallet-browser",
@@ -37,12 +37,22 @@ export function getWalletDevices(
   }
 }
 
-/** Localized labels for the device buckets a wallet supports, in canonical order. */
+/**
+ * Localized label per device id, built on the server so client components get
+ * plain strings as props instead of pulling the i18n runtime into the bundle.
+ */
+export function buildDeviceLabels(
+  t: (key: string) => string
+): Record<WalletDeviceId, string> {
+  return Object.fromEntries(
+    WALLET_DEVICE_IDS.map((id) => [id, t(DEVICE_LABEL_KEYS[id])])
+  ) as Record<WalletDeviceId, string>
+}
+
+/** The labels for the device buckets a wallet supports, in canonical order. */
 export function getDeviceLabels(
   devices: Record<WalletDeviceId, boolean>,
-  t: (key: string) => string
+  labels: Record<WalletDeviceId, string>
 ): string[] {
-  return WALLET_DEVICE_IDS.filter((id) => devices[id]).map((id) =>
-    t(DEVICE_LABEL_KEYS[id])
-  )
+  return WALLET_DEVICE_IDS.filter((id) => devices[id]).map((id) => labels[id])
 }

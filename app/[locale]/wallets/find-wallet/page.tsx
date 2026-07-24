@@ -26,7 +26,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const { locale } = await props.params
   setRequestLocale(locale)
 
-  const t = await getTranslations("page-wallets-find-wallet")
+  const t = await getTranslations({
+    locale,
+    namespace: "page-wallets-find-wallet",
+  })
 
   const wallets = getCatalogWallets(locale)
   const networks = getWalletNetworks(wallets)
@@ -79,7 +82,10 @@ export async function generateMetadata(props: {
   const { locale } = await props.params
   setRequestLocale(locale)
 
-  const t = await getTranslations("page-wallets-find-wallet")
+  const t = await getTranslations({
+    locale,
+    namespace: "page-wallets-find-wallet",
+  })
 
   return await getMetadata({
     locale,

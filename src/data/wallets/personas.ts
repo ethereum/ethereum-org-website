@@ -93,3 +93,15 @@ export const isWalletPersonaId = (value: string): value is WalletPersonaId =>
 export const PERSONA_TITLE_KEYS = Object.fromEntries(
   WALLET_PERSONAS.map((persona) => [persona.id, persona.titleKey])
 ) as Record<WalletPersonaId, string>
+
+/**
+ * Localized display title per persona id, built on the server so client
+ * components (e.g. the card persona chips) get plain strings as props.
+ */
+export function buildPersonaLabels(
+  t: (key: string) => string
+): Record<WalletPersonaId, string> {
+  return Object.fromEntries(
+    WALLET_PERSONAS.map((persona) => [persona.id, t(persona.titleKey)])
+  ) as Record<WalletPersonaId, string>
+}

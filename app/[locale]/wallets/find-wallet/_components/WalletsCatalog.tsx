@@ -1,7 +1,6 @@
 "use client"
 
 import { memo, useCallback, useMemo } from "react"
-import { useTranslations } from "next-intl"
 
 import FilterableCatalog from "@/components/FilterableCatalog"
 import type { CatalogFilterState } from "@/components/FilterableCatalog/types"
@@ -13,11 +12,8 @@ import type {
   WalletNetwork,
 } from "@/lib/utils/walletData"
 
-import {
-  DEVICE_LABEL_KEYS,
-  WALLET_DEVICE_IDS,
-  type WalletDeviceId,
-} from "@/data/wallets/devices"
+import { WALLET_DEVICE_IDS, type WalletDeviceId } from "@/data/wallets/devices"
+import type { WalletPersonaId } from "@/data/wallets/personas"
 
 import WalletCard from "./WalletCard"
 import WalletFilters, {
@@ -30,19 +26,48 @@ import WalletFiltersHeader from "./WalletFiltersHeader"
 
 const PURCHASE_IDS = ["buy_crypto", "withdraw_crypto"] as const
 
+/**
+ * All display strings the client catalog needs, built once on the server so no
+ * i18n runtime ships to the browser (mirrors the dev-tools label-dict pattern).
+ */
+export type WalletCatalogLabels = {
+  /** FilterableCatalog chrome (search, results header, mobile sheet). */
+  catalog: {
+    searchPlaceholder: string
+    resultsLabel: string
+    noResults: string
+    filtersToggle: string
+    applyLabel: string
+    closeLabel: string
+  }
+  /** Filter group headers (WalletFilters). */
+  filter: { device: string; buySell: string; network: string; language: string }
+  /** Sidebar header row (WalletFiltersHeader). */
+  header: { filters: string; reset: string }
+  buyCrypto: string
+  sellCrypto: string
+  devices: Record<WalletDeviceId, string>
+  personas: Record<WalletPersonaId, string>
+}
+
 type WalletsCatalogProps = {
   locale: string
   wallets: CatalogWallet[]
   networks: WalletNetwork[]
   languages: WalletLanguageOption[]
+  labels: WalletCatalogLabels
 }
 
 const WalletsResults = memo(function WalletsResults({
   wallets,
   filtered,
+  deviceLabels,
+  personaLabels,
 }: {
   wallets: CatalogWallet[]
   filtered: CatalogWallet[]
+  deviceLabels: Record<WalletDeviceId, string>
+  personaLabels: Record<WalletPersonaId, string>
 }) {
   // Render every wallet once and toggle `hidden` so filtering flips a prop on
   // stable nodes instead of remounting cards, and all wallets stay in the SSR
@@ -55,7 +80,11 @@ const WalletsResults = memo(function WalletsResults({
     <div className="grid grid-cols-1 gap-x-8 gap-y-1 lg:grid-cols-2">
       {wallets.map((wallet) => (
         <div key={wallet.slug} hidden={!visibleSlugs.has(wallet.slug)}>
-          <WalletCard wallet={wallet} />
+          <WalletCard
+            wallet={wallet}
+            deviceLabels={deviceLabels}
+            personaLabels={personaLabels}
+          />
         </div>
       ))}
     </div>
@@ -67,10 +96,8 @@ export default function WalletsCatalog({
   wallets,
   networks,
   languages,
+  labels,
 }: WalletsCatalogProps) {
-  const t = useTranslations("page-wallets-find-wallet")
-  const tCommon = useTranslations("common")
-
   // This component holds no state and doesn't re-render on filter toggles, so
   // these are plain consts, not useMemo. Only filterFn is stabilized below,
   // since FilterableCatalog memoizes on it.
@@ -81,27 +108,22 @@ export default function WalletsCatalog({
     ).length
   }
 
-  const purchaseCounts = {
-    buy_crypto: wallets.filter((wallet) => wallet.buy_crypto).length,
-    withdraw_crypto: wallets.filter((wallet) => wallet.withdraw_crypto).length,
-  }
-
   const deviceOptions = WALLET_DEVICE_IDS.map((device) => ({
     id: device,
-    label: t(DEVICE_LABEL_KEYS[device]),
+    label: labels.devices[device],
     count: deviceCounts[device],
   }))
 
   const purchaseOptions = [
     {
       id: "buy_crypto",
-      label: t("page-find-wallet-buy-crypto"),
-      count: purchaseCounts.buy_crypto,
+      label: labels.buyCrypto,
+      count: wallets.filter((wallet) => wallet.buy_crypto).length,
     },
     {
       id: "withdraw_crypto",
-      label: t("page-find-wallet-sell-for-fiat"),
-      count: purchaseCounts.withdraw_crypto,
+      label: labels.sellCrypto,
+      count: wallets.filter((wallet) => wallet.withdraw_crypto).length,
     },
   ]
 
@@ -116,18 +138,6 @@ export default function WalletsCatalog({
     label: language.name,
     count: language.count,
   }))
-
-  const filterLabels = {
-    device: t("page-find-wallet-device"),
-    buySell: t("page-find-wallet-buy-sell-crypto"),
-    network: t("page-find-wallet-network-support"),
-    language: t("page-find-wallet-languages-supported"),
-  }
-
-  const headerLabels = {
-    filters: t("page-find-wallet-filters"),
-    reset: t("page-find-wallet-reset-filters"),
-  }
 
   const filterWallet = useCallback(function filterWallet(
     wallet: CatalogWallet,
@@ -181,19 +191,12 @@ export default function WalletsCatalog({
       items={wallets}
       filterFn={filterWallet}
       mobileVariant="sheet"
-      labels={{
-        searchPlaceholder: t("page-find-wallet-search-wallets"),
-        resultsLabel: t("page-find-wallet-table-title"),
-        noResults: t("page-find-wallet-empty-results-title"),
-        filtersToggle: t("page-find-wallet-filters"),
-        applyLabel: t("page-find-wallet-show-results"),
-        closeLabel: tCommon("close"),
-      }}
+      labels={labels.catalog}
       renderSidebarHeader={({ state, setFilter }) => (
         <WalletFiltersHeader
           state={state}
           setFilter={setFilter}
-          labels={headerLabels}
+          labels={labels.header}
         />
       )}
       renderSidebar={({ state, setFilter }) => (
@@ -205,11 +208,16 @@ export default function WalletsCatalog({
           purchaseOptions={purchaseOptions}
           networkOptions={networkOptions}
           languageOptions={languageOptions}
-          labels={filterLabels}
+          labels={labels.filter}
         />
       )}
       renderResults={(filtered) => (
-        <WalletsResults wallets={wallets} filtered={filtered} />
+        <WalletsResults
+          wallets={wallets}
+          filtered={filtered}
+          deviceLabels={labels.devices}
+          personaLabels={labels.personas}
+        />
       )}
     />
   )

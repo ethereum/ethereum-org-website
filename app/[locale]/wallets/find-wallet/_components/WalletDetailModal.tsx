@@ -3,7 +3,6 @@
 import { X } from "lucide-react"
 import type { StaticImageData } from "next/image"
 import { useRouter } from "next/navigation"
-import { useTranslations } from "next-intl"
 import type { ReactNode } from "react"
 
 import { Image } from "@/components/Image"
@@ -28,16 +27,18 @@ const WalletDetailModal = ({
   title,
   image,
   description,
+  closeLabel,
   children,
 }: {
   title: string
   image: StaticImageData
   /** Accessible description; when absent, Radix's describedby warning is opted out. */
   description?: string
+  /** Localized "close" label, built on the server. */
+  closeLabel: string
   children: ReactNode
 }) => {
   const router = useRouter()
-  const t = useTranslations("common")
 
   return (
     <Dialog
@@ -65,7 +66,7 @@ const WalletDetailModal = ({
             <DialogTitle className="mt-0 text-h3">{title}</DialogTitle>
           </div>
           <DialogClose
-            aria-label={t("close")}
+            aria-label={closeLabel}
             className="flex size-8 shrink-0 items-center justify-center rounded transition-colors hover:text-primary-hover"
           >
             <X size="20" />
