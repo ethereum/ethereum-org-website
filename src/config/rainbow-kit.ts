@@ -19,10 +19,6 @@ const CHAIN_MAP = {
   mainnet,
 } as const
 
-type ChainName = keyof typeof CHAIN_MAP
-
-const isChainName = (name: string): name is ChainName => name in CHAIN_MAP
-
 // Determine which chains to use based on env vars
 export const getTargetChains = (): TargetChains => {
   const chainNames =
@@ -36,7 +32,7 @@ export const getTargetChains = (): TargetChains => {
 
   // Map chain names to actual chain objects
   const validChains: Chain[] = chainNames
-    .filter(isChainName)
+    .filter((name): name is keyof typeof CHAIN_MAP => name in CHAIN_MAP)
     .map((name) => CHAIN_MAP[name])
 
   // If no valid chains found, fallback to just hardhat
