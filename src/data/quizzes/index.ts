@@ -122,6 +122,17 @@ const quizzes = {
       "privacy-6",
     ],
   },
+  "what-are-apps": {
+    title: "what-are-apps",
+    questions: [
+      "what-are-apps-1",
+      "what-are-apps-2",
+      "what-are-apps-3",
+      "what-are-apps-4",
+      "what-are-apps-5",
+      "what-are-apps-6",
+    ],
+  },
 } satisfies RawQuizzes
 
 const ethereumBasicsQuizzesRaw: QuizzesSection[] = [
@@ -151,6 +162,10 @@ const ethereumBasicsQuizzesRaw: QuizzesSection[] = [
   },
   {
     id: "smart-contracts",
+    level: "beginner",
+  },
+  {
+    id: "what-are-apps",
     level: "beginner",
   },
 ]
