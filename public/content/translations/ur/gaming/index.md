@@ -119,7 +119,7 @@ Gigaverse کے ROM NFTs فیکٹریوں کے طور پر کام کرتے ہیں
 
 ## ایتھیریم پر گیمنگ کے ساتھ شروعات کریں {#get-started-with-gaming-on-ethereum}
 
-1. **کھیلنے کے لیے ایک تفریحی گیم تلاش کریں** - اوپر دی گئی گیمز کو براؤز کریں، یا [ChainPlay](https://chainplay.gg/chain/ethereum/)، [Gam3s.GG](https://gam3s.gg/)، اور [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games) جیسے پلیٹ فارمز دریافت کریں۔
+1. **کھیلنے کے لیے ایک تفریحی گیم تلاش کریں** - اوپر دی گئی گیمز کو براؤز کریں، یا [ChainPlay](https://chainplay.gg/chain/ethereum/)، [Gam<span dir="ltr">3s</span>.GG](https://gam3s.gg/)، اور [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games) جیسے پلیٹ فارمز دریافت کریں۔
 2. **اپنا کرپٹو والیٹ سیٹ اپ کریں** - کھلاڑیوں کو ڈیجیٹل ان-گیم اثاثوں کا انتظام کرنے اور (کچھ معاملات میں) گیمز میں لاگ ان کرنے کے لیے ایک والیٹ کی ضرورت ہوتی ہے۔ [یہاں ایک والیٹ تلاش کریں](/wallets/find-wallet/)۔
 3. **اپنے والیٹ کو فنڈ کریں** - کچھ ایتھر (ETH) یا اس لیئر ۲ (l2) نیٹ ورک سے متعلقہ ٹوکنز حاصل کریں جس پر آپ کھیلنے کا ارادہ رکھتے ہیں۔ [یہاں جانیں کہ ETH کہاں سے حاصل کریں](/get-eth/)۔ 
 4. **کھیلیں** - کھیلنا شروع کریں اور اپنی ان-گیم پیشرفت کی حقیقی ملکیت سے لطف اندوز ہوں!
