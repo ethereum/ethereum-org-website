@@ -31,6 +31,20 @@ export function dateTimeFormat(
   return new Intl.DateTimeFormat(locale, finalOptions)
 }
 
+const normalizeDateTimeWhitespace = (value: string): string =>
+  value.replace(/\s+/g, " ")
+
+/**
+ * Format a date with deterministic whitespace across server and browser ICU
+ * implementations, preventing byte-level React hydration mismatches.
+ */
+export const formatDateTime = (
+  locale: string,
+  date: Date | number,
+  options?: Intl.DateTimeFormatOptions
+): string =>
+  normalizeDateTimeWhitespace(dateTimeFormat(locale, options).format(date))
+
 export const dateToString = (published: Date | string) =>
   new globalThis.Date(published).toISOString().split("T")[0]
 
@@ -63,12 +77,12 @@ export const formatDate = (
   if (!isValidDate(date)) {
     return ""
   }
-  return dateTimeFormat(locale, {
+  return formatDateTime(locale, new Date(date), {
     month: "long",
     day: "numeric",
     year: "numeric",
     ...options,
-  }).format(new Date(date))
+  })
 }
 
 export const isDateReached = (date: string) => {
@@ -83,30 +97,25 @@ export const formatDateRange = (
   locale: string = DEFAULT_LOCALE,
   options?: Intl.DateTimeFormatOptions
 ) =>
-  dateTimeFormat(locale, {
-    month: "short",
-    day: "numeric",
-    ...options,
-  })
-    .formatRange(new Date(start), new Date(end || start))
-    // Normalize whitespace to avoid SSR/client hydration mismatches: Node's ICU
-    // and the browser's ICU can emit different space characters (e.g. U+202F
-    // narrow no-break space vs a regular U+0020) around the range en-dash. The
-    // two render identically but differ byte-for-byte, tripping React's
-    // hydration check. Collapsing whitespace makes the output deterministic.
-    .replace(/\s+/g, " ")
+  normalizeDateTimeWhitespace(
+    dateTimeFormat(locale, {
+      month: "short",
+      day: "numeric",
+      ...options,
+    }).formatRange(new Date(start), new Date(end || start))
+  )
 
 export const getLocaleYear = (
   locale: string = "en-US",
   date?: ConstructorParameters<DateConstructor>[0]
 ) =>
-  dateTimeFormat(locale, { year: "numeric" }).format(
-    date ? new Date(date) : new Date()
-  )
+  formatDateTime(locale, date ? new Date(date) : new Date(), {
+    year: "numeric",
+  })
 
 export const getLocaleFormattedDate = (locale: Lang, date: string) => {
   const walletLastUpdatedDate = new Date(date)
-  return dateTimeFormat(locale).format(walletLastUpdatedDate)
+  return formatDateTime(locale, walletLastUpdatedDate)
 }
 
 /**

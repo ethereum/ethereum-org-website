@@ -5,7 +5,7 @@ import { useLocale, useTranslations } from "next-intl"
 
 import { Progress } from "@/components/ui/progress"
 
-import { dateTimeFormat } from "@/lib/utils/date"
+import { formatDateTime } from "@/lib/utils/date"
 
 import { type BadgeWithOwned } from "../CollectiblesContent"
 
@@ -38,9 +38,11 @@ const CollectiblesProgress = ({ badges }: CollectiblesProgressProps) => {
       {contributorSinceYear < Infinity && (
         <p className="text-body-medium">
           {t("page-collectibles-contributing-since")}:{" "}
-          {dateTimeFormat(locale, {
-            year: "numeric",
-          }).format(new Date().setFullYear(contributorSinceYear))}
+          {formatDateTime(
+            locale,
+            new Date().setFullYear(contributorSinceYear),
+            { year: "numeric" }
+          )}
         </p>
       )}
       <div className="space-y-1">
