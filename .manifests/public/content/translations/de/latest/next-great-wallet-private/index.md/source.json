@@ -1,0 +1,550 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/latest/next-great-wallet-private/index.md",
+  "generatedAt": "2026-07-23T00:10:14.500Z",
+  "rootHash": "30ecd6a17bb1",
+  "tree": {
+    "contentHash": "8c9ddc3d35c2",
+    "anchorHash": "e71881a5e11e",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "07037563eb24",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "95d052c80bd5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b65057beac5b"
+      },
+      "frontmatter:team": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "12ae32cb1ec0"
+      },
+      "frontmatter:tags": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:published": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "9896cbc5690b"
+      },
+      "frontmatter:image": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "8c907365a866"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "c825be42b865"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:0": {
+        "contentHash": "d78657d02503",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-your-wallet-gives-away-onchain": {
+        "contentHash": "104745008313",
+        "anchorHash": "73e88fd8f5d0",
+        "labelHash": "17e7654ffa3a",
+        "children": {
+          "_label": {
+            "contentHash": "17e7654ffa3a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "2e3b0fc7c345",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "88765bd0a21f",
+            "anchorHash": "d39f88e0472e"
+          },
+          "prose:2": {
+            "contentHash": "2c859f595ccb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "what-your-wallet-gives-away-before-you-transact": {
+        "contentHash": "c1db4042a533",
+        "anchorHash": "cf5d8f737ad4",
+        "labelHash": "ce929c3e1f9b",
+        "children": {
+          "_label": {
+            "contentHash": "ce929c3e1f9b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "541d4dc875ce",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "df8f776d1ca5",
+            "anchorHash": "bba5a2290e54"
+          },
+          "prose:5": {
+            "contentHash": "93e9bef10231",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "6903bb84494b",
+            "anchorHash": "13f5250df2aa"
+          },
+          "prose:6": {
+            "contentHash": "0d1e47f65bd6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "6d62f74c3501",
+            "anchorHash": "9e264bd82ef6"
+          },
+          "prose:7": {
+            "contentHash": "091a46a7d10b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "fd5255594dc7",
+            "anchorHash": "00723b9a3ba2"
+          },
+          "prose:8": {
+            "contentHash": "b9fd6462194c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3",
+          "prose:8"
+        ]
+      },
+      "whos-looking": {
+        "contentHash": "e2d67ba375bb",
+        "anchorHash": "9de62cc5c954",
+        "labelHash": "0415848e791d",
+        "children": {
+          "_label": {
+            "contentHash": "0415848e791d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "af1978ba2526",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "a25a72056a3b",
+            "anchorHash": "a50025f87754"
+          },
+          "prose:3": {
+            "contentHash": "bfefc157f4d1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "e0ab61047aa5",
+            "anchorHash": "9131162c5c77"
+          },
+          "prose:4": {
+            "contentHash": "36223d41b26f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "why-the-wallet-is-where-privacy-gets-fixed": {
+        "contentHash": "b29b2f1a040f",
+        "anchorHash": "a263342e174d",
+        "labelHash": "5707565000a4",
+        "children": {
+          "_label": {
+            "contentHash": "5707565000a4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:6": {
+            "contentHash": "39fd0653cd7c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "71c54adfd56b",
+            "anchorHash": "357a1834dadd"
+          },
+          "prose:7": {
+            "contentHash": "f1a34319fdc6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "a47cb4967170",
+            "anchorHash": "646db3aa1eff"
+          },
+          "prose:8": {
+            "contentHash": "4215958661ab",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "0b3afe01f561",
+            "anchorHash": "51145e1dad44"
+          },
+          "prose:9": {
+            "contentHash": "af16087b8b65",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "663adf65a6cd",
+            "anchorHash": "3b8a0ea2b8d8"
+          },
+          "prose:10": {
+            "contentHash": "b793309310ca",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "35dbce1c33b7",
+            "anchorHash": "f84e85e576ff"
+          },
+          "prose:11": {
+            "contentHash": "7d544b0d1248",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "3285d83c9c4f",
+            "anchorHash": "3a6ecf31d176"
+          },
+          "prose:12": {
+            "contentHash": "bd5ad4630c2c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:6",
+          "link:0",
+          "prose:7",
+          "link:1",
+          "prose:8",
+          "link:2",
+          "prose:9",
+          "link:3",
+          "prose:10",
+          "link:4",
+          "prose:11",
+          "link:5",
+          "prose:12"
+        ]
+      },
+      "what-a-privacy-preserving-wallet-actually-does": {
+        "contentHash": "c2282f60288a",
+        "anchorHash": "2050b3bec338",
+        "labelHash": "7eac2b3f2ea4",
+        "children": {
+          "_label": {
+            "contentHash": "7eac2b3f2ea4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "4e2815c78b80",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "1af103a117a1",
+            "anchorHash": "42e28cde91ec"
+          },
+          "prose:6": {
+            "contentHash": "4f8fb70387e2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "97d9df6698ec",
+            "anchorHash": "158c013abd45"
+          },
+          "prose:7": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "c6632258de54",
+            "anchorHash": "61a4102c5564"
+          },
+          "prose:8": {
+            "contentHash": "38d6ef7f9d23",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "e3baa6695372",
+            "anchorHash": "48fb3e00f01b"
+          },
+          "prose:9": {
+            "contentHash": "7175517a370b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "d0ea57cac9eb",
+            "anchorHash": "3deb9d73b0f3"
+          },
+          "prose:10": {
+            "contentHash": "68d42c7292c8",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      },
+      "ideas-worth-stealing": {
+        "contentHash": "6d3a4236d195",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "9a0cdc038f66",
+        "children": {
+          "_label": {
+            "contentHash": "9a0cdc038f66",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ee9cbc208744",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "action-steps": {
+        "contentHash": "548dcee04b7f",
+        "anchorHash": "0acf88aec66d",
+        "labelHash": "125bd64f9b73",
+        "children": {
+          "_label": {
+            "contentHash": "125bd64f9b73",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "for-builders": {
+            "contentHash": "24c9b488f407",
+            "anchorHash": "c0cd46e1f277",
+            "labelHash": "d7b363071b1f",
+            "children": {
+              "_label": {
+                "contentHash": "d7b363071b1f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "308d2ce7f416",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "570522b2199b",
+                "anchorHash": "862562a21bf6"
+              },
+              "prose:2": {
+                "contentHash": "11bd942ed19d",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "for-users": {
+            "contentHash": "66da0546ddd1",
+            "anchorHash": "bc9062cabe30",
+            "labelHash": "605a2453541a",
+            "children": {
+              "_label": {
+                "contentHash": "605a2453541a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "3a2d8828ee45",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "4b970c8748c4",
+                "anchorHash": "57ceb916dea8"
+              },
+              "prose:2": {
+                "contentHash": "2f92e06b83ca",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "for-builders",
+          "for-users"
+        ]
+      },
+      "for-further-exploration": {
+        "contentHash": "cb64db2bbed1",
+        "anchorHash": "99cb33e2a765",
+        "labelHash": "4f98482a6f04",
+        "children": {
+          "_label": {
+            "contentHash": "4f98482a6f04",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:9": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "46f24d2453f5",
+            "anchorHash": "bba5a2290e54"
+          },
+          "prose:10": {
+            "contentHash": "fe329f58e9a2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "3fcbdebc28e9",
+            "anchorHash": "42e28cde91ec"
+          },
+          "prose:11": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "a47cb4967170",
+            "anchorHash": "646db3aa1eff"
+          },
+          "prose:12": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "c6632258de54",
+            "anchorHash": "61a4102c5564"
+          },
+          "prose:13": {
+            "contentHash": "4aa9bfd2f175",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "97d9df6698ec",
+            "anchorHash": "158c013abd45"
+          },
+          "prose:14": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "e3baa6695372",
+            "anchorHash": "48fb3e00f01b"
+          },
+          "prose:15": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "d0ea57cac9eb",
+            "anchorHash": "3deb9d73b0f3"
+          },
+          "prose:16": {
+            "contentHash": "cdf802bb8562",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "54da94bd5c02",
+            "anchorHash": "862562a21bf6"
+          },
+          "prose:17": {
+            "contentHash": "2a600752881e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:8": {
+            "contentHash": "4b970c8748c4",
+            "anchorHash": "57ceb916dea8"
+          },
+          "prose:18": {
+            "contentHash": "c35f3cef191a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:9",
+          "link:0",
+          "prose:10",
+          "link:1",
+          "prose:11",
+          "link:2",
+          "prose:12",
+          "link:3",
+          "prose:13",
+          "link:4",
+          "prose:14",
+          "link:5",
+          "prose:15",
+          "link:6",
+          "prose:16",
+          "link:7",
+          "prose:17",
+          "link:8",
+          "prose:18"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:author",
+      "frontmatter:team",
+      "frontmatter:tags",
+      "frontmatter:published",
+      "frontmatter:image",
+      "frontmatter:breadcrumb",
+      "frontmatter:lang",
+      "prose:0",
+      "what-your-wallet-gives-away-onchain",
+      "what-your-wallet-gives-away-before-you-transact",
+      "whos-looking",
+      "why-the-wallet-is-where-privacy-gets-fixed",
+      "what-a-privacy-preserving-wallet-actually-does",
+      "ideas-worth-stealing",
+      "action-steps",
+      "for-further-exploration"
+    ]
+  },
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+}

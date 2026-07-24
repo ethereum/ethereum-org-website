@@ -44,11 +44,14 @@ export async function POST(req: Request) {
       timestamp: issue.created_at,
       description: issue.labels.map((label) => label.name).join(" • "),
       color: 10181046, // purple
-      author: {
-        name: issue.user.login,
-        url: issue.user.html_url,
-        icon_url: issue.user.avatar_url,
-      },
+      // `issue.user` is null for issues authored by deleted ("ghost") accounts.
+      ...(issue.user && {
+        author: {
+          name: issue.user.login,
+          url: issue.user.html_url,
+          icon_url: issue.user.avatar_url,
+        },
+      }),
     },
   ]
 

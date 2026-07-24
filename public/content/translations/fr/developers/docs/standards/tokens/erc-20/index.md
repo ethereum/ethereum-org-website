@@ -175,13 +175,12 @@ Certaines normes alternatives ont émergé de ce problème, telles que l'[ERC-22
 - [OpenZeppelin - Implémentation de l'ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Guide des jetons ERC-20 en Solidity](https://www.alchemy.com/overviews/erc20-solidity)
 
-## Autres normes de jetons fongibles {#fungible-token-standards}
-
+## Autres normes de jetons fongibles
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
-- [ERC-4626 - Coffres-forts tokenisés](/developers/docs/standards/tokens/erc-4626)
-
+- [ERC-4626 - Coffres tokenisés](/developers/docs/standards/tokens/erc-4626)
+- [ERC-7540 - Coffres tokenisés asynchrones](/developers/docs/standards/tokens/erc-7540)
 ## Tutoriels : Construire avec l'ERC-20 sur Ethereum {#tutorials}
 
 - [Parcours d'un contrat ERC-20](/developers/tutorials/erc20-annotated-code/) _– Un parcours annoté ligne par ligne de l'implémentation du contrat ERC-20 d'OpenZeppelin._

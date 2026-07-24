@@ -1,9 +1,9 @@
+import { useTranslations } from "next-intl"
+
 import { WalletPersonas } from "@/lib/types"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 export const useWalletPersonaPresets = (): WalletPersonas[] => {
-  const { t } = useTranslation("page-wallets-find-wallet")
+  const t = useTranslations("page-wallets-find-wallet")
   const personas: WalletPersonas[] = [
     {
       title: t("page-find-wallet-new-to-crypto-title"),

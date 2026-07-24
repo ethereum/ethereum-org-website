@@ -1,0 +1,655 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/smart-contracts/interacting/index.md",
+  "generatedAt": "2026-07-22T23:22:15.324Z",
+  "rootHash": "071420150073",
+  "tree": {
+    "contentHash": "a0b85d16a9e2",
+    "anchorHash": "37684efe829d",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "22a72cebcec0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "30b21841cd65",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:0": {
+        "contentHash": "8107ec7277e9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prerequisites": {
+        "contentHash": "6aace477437a",
+        "anchorHash": "6bbc77670d23",
+        "labelHash": "865514682d01",
+        "children": {
+          "_label": {
+            "contentHash": "865514682d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "df427267501d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "ac99b865d2d6",
+            "anchorHash": "c7308a37e8aa"
+          },
+          "prose:4": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "8badb8a19e2a",
+            "anchorHash": "d094984b1eaf"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "139061e79a79",
+            "anchorHash": "d20c9fa6d21a"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2"
+        ]
+      },
+      "two-ways": {
+        "contentHash": "06eb273d7267",
+        "anchorHash": "6a46495a20f9",
+        "labelHash": "79e8057dc632",
+        "children": {
+          "_label": {
+            "contentHash": "79e8057dc632",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "e66bcb4881a6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "reading-from-a-contract": {
+            "contentHash": "464dde2312a8",
+            "anchorHash": "35038a8ebcf9",
+            "labelHash": "2725464aa06d",
+            "children": {
+              "_label": {
+                "contentHash": "2725464aa06d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "5c13fa7323bd",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "2fe840e13244",
+                "anchorHash": "d08920759d1c"
+              },
+              "prose:2": {
+                "contentHash": "a49ceea9df0e",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "writing-to-a-contract": {
+            "contentHash": "d622c7ab1bbd",
+            "anchorHash": "adff17f11434",
+            "labelHash": "ecb63449712b",
+            "children": {
+              "_label": {
+                "contentHash": "ecb63449712b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "b6a33b852b43",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "224e7ca51381",
+                "anchorHash": "826adfe8ada2"
+              },
+              "prose:3": {
+                "contentHash": "646f61ce2e20",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "1859ef770ef0",
+                "anchorHash": "fc7323d31c9f"
+              },
+              "prose:4": {
+                "contentHash": "ad7a25fe926d",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "reading-from-a-contract",
+          "writing-to-a-contract"
+        ]
+      },
+      "understanding-contract-abis": {
+        "contentHash": "91f7111d9ccf",
+        "anchorHash": "6e9fc9bcea0e",
+        "labelHash": "dffe3581e958",
+        "children": {
+          "_label": {
+            "contentHash": "dffe3581e958",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "a9d4a891f3c8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "where-to-find-abis": {
+            "contentHash": "6c9dbd730220",
+            "anchorHash": "67c2fcf74c4f",
+            "labelHash": "773f27b3a6ba",
+            "children": {
+              "_label": {
+                "contentHash": "773f27b3a6ba",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "5dc22742f5df",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "d0299bb7f22b",
+                "anchorHash": "fa8d01891bbc"
+              },
+              "prose:3": {
+                "contentHash": "b11e4a902500",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "08f8ae501ab7",
+                "anchorHash": "1b1499006b00"
+              },
+              "prose:4": {
+                "contentHash": "9080c6f83281",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "where-to-find-abis"
+        ]
+      },
+      "tools-and-libraries": {
+        "contentHash": "77995bc6896a",
+        "anchorHash": "b2474a215add",
+        "labelHash": "c4670b75b635",
+        "children": {
+          "_label": {
+            "contentHash": "c4670b75b635",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "b980a310b90b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "client-libraries": {
+            "contentHash": "ef92854a68bf",
+            "anchorHash": "28d337854a27",
+            "labelHash": "25d3ccbfaa3c",
+            "children": {
+              "_label": {
+                "contentHash": "25d3ccbfaa3c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:3": {
+                "contentHash": "ebcb914270e3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "7108a4102fd9",
+                "anchorHash": "4830d959990c"
+              },
+              "prose:4": {
+                "contentHash": "e894ce39cc77",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "cc90ce1732a6",
+                "anchorHash": "34813e3fa331"
+              },
+              "prose:5": {
+                "contentHash": "f5b1cf987d6a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "20ba7fe89d26",
+                "anchorHash": "fad70c2eeeea"
+              },
+              "prose:6": {
+                "contentHash": "60bab4293133",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:3",
+              "link:0",
+              "prose:4",
+              "link:1",
+              "prose:5",
+              "link:2",
+              "prose:6"
+            ]
+          },
+          "backend-libraries": {
+            "contentHash": "8f9c9322260e",
+            "anchorHash": "85870d8bc21d",
+            "labelHash": "6da3e2711b65",
+            "children": {
+              "_label": {
+                "contentHash": "6da3e2711b65",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:3": {
+                "contentHash": "ebcb914270e3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "cc90ce1732a6",
+                "anchorHash": "34813e3fa331"
+              },
+              "prose:4": {
+                "contentHash": "b84eff9389d8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "fa44072767c5",
+                "anchorHash": "83925db1bd04"
+              },
+              "prose:5": {
+                "contentHash": "da1f44f15f4a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "780ae282ce05",
+                "anchorHash": "7e7237e68846"
+              },
+              "prose:6": {
+                "contentHash": "66cb71f74c7e",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:3",
+              "link:0",
+              "prose:4",
+              "link:1",
+              "prose:5",
+              "link:2",
+              "prose:6"
+            ]
+          },
+          "example-viem": {
+            "contentHash": "0847241cf842",
+            "anchorHash": "3f38eb9701e6",
+            "labelHash": "6298e7b133de",
+            "children": {
+              "_label": {
+                "contentHash": "6298e7b133de",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-comment:1": {
+                "contentHash": "d4d38e301b66",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-fence:2": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "59ec8af162fa"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "code-comment:1",
+              "code-fence:2"
+            ]
+          },
+          "example-ethers": {
+            "contentHash": "0133bb78f131",
+            "anchorHash": "fbc6a1acafe7",
+            "labelHash": "23d0a355cdfb",
+            "children": {
+              "_label": {
+                "contentHash": "23d0a355cdfb",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-comment:1": {
+                "contentHash": "1621e5fc88bc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-fence:2": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "d435609484ec"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "code-comment:1",
+              "code-fence:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "client-libraries",
+          "backend-libraries",
+          "example-viem",
+          "example-ethers"
+        ]
+      },
+      "events-and-logs": {
+        "contentHash": "e751020cf988",
+        "anchorHash": "671d3f745c68",
+        "labelHash": "6ffec707cf5e",
+        "children": {
+          "_label": {
+            "contentHash": "6ffec707cf5e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "28f0fb8fda36",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-comment:2": {
+            "contentHash": "beb7a91ca9e9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "f7f6e9771587"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "code-comment:2",
+          "code-fence:3"
+        ]
+      },
+      "simulating": {
+        "contentHash": "8a4968d159ea",
+        "anchorHash": "59b69a89b33f",
+        "labelHash": "613505004818",
+        "children": {
+          "_label": {
+            "contentHash": "613505004818",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "46610c069ead",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "17a6754dfdd8"
+          },
+          "prose:2": {
+            "contentHash": "e7ac0786668e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-comment:4": {
+            "contentHash": "bf1a74e6a2c1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:5": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "b72336625e26"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "inline-code:0",
+          "prose:2",
+          "code-comment:4",
+          "code-fence:5"
+        ]
+      },
+      "wallets-and-signing": {
+        "contentHash": "35fec8b8732f",
+        "anchorHash": "4d60f87248ce",
+        "labelHash": "9139803c9712",
+        "children": {
+          "_label": {
+            "contentHash": "9139803c9712",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "1f6b262748bb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "23212665a245",
+            "anchorHash": "93ad88bd412d"
+          },
+          "prose:2": {
+            "contentHash": "0346bae329f1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "related-tutorials": {
+        "contentHash": "3f50e5ee014f",
+        "anchorHash": "743e1cf3aa5b",
+        "labelHash": "7f2933b822cc",
+        "children": {
+          "_label": {
+            "contentHash": "7f2933b822cc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "613479e69683",
+            "anchorHash": "d511688e127f"
+          },
+          "prose:4": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "3e84954e382a",
+            "anchorHash": "a04fc4065212"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "9ef1c873dc70",
+            "anchorHash": "3766989e5161"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "b3ffeb5b8b65",
+        "anchorHash": "485cceb06d4f",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "3268aab99e64",
+            "anchorHash": "9b00cba7f2cd"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "400b9a958a14",
+            "anchorHash": "4d7848a5ba49"
+          },
+          "prose:6": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "4275bd743db0",
+            "anchorHash": "2f288e98b2a7"
+          },
+          "prose:7": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "83008e1f6015",
+            "anchorHash": "469aafba0077"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3"
+        ]
+      },
+      "related-topics": {
+        "contentHash": "886e1e9f79ee",
+        "anchorHash": "38aebe81218e",
+        "labelHash": "5a38da0df0ab",
+        "children": {
+          "_label": {
+            "contentHash": "5a38da0df0ab",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "b3dd950744a1",
+            "anchorHash": "1b1499006b00"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "016c5a9097ae",
+            "anchorHash": "b641259e428d"
+          },
+          "prose:6": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "3dc6018c29a5",
+            "anchorHash": "93ad88bd412d"
+          },
+          "prose:7": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "8ae9cad53864",
+            "anchorHash": "9556b83c2e45"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:0",
+      "prerequisites",
+      "two-ways",
+      "understanding-contract-abis",
+      "tools-and-libraries",
+      "events-and-logs",
+      "simulating",
+      "wallets-and-signing",
+      "related-tutorials",
+      "further-reading",
+      "related-topics"
+    ]
+  },
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+}

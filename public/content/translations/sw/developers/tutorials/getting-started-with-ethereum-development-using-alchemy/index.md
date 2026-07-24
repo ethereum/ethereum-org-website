@@ -13,7 +13,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 ![Ethereum and Alchemy logos](./ethereum-alchemy.png)
 
-Huu ni mwongozo wa wanaoanza kuanza na uendelezaji wa Ethereum. Kwa mafunzo haya tutatumia [Alchemy](https://alchemyapi.io/), jukwaa linaloongoza la waendelezaji wa mnyororo wa vitalu linalowezesha mamilioni ya watumiaji kutoka 70% ya programu bora za mnyororo wa vitalu, ikiwa ni pamoja na Maker, 0x, MyEtherWallet, Dharma, na Kyber. Alchemy itatupa ufikiaji wa mwisho wa API kwenye mnyororo wa Ethereum ili tuweze kusoma na kuandika miamala.
+Huu ni mwongozo wa wanaoanza kuanza na uendelezaji wa Ethereum. Kwa mafunzo haya tutatumia [Alchemy](https://www.alchemy.com/), jukwaa linaloongoza la waendelezaji wa mnyororo wa vitalu linalowezesha mamilioni ya watumiaji kutoka 70% ya programu bora za mnyororo wa vitalu, ikiwa ni pamoja na Maker, 0x, MyEtherWallet, Dharma, na Kyber. Alchemy itatupa ufikiaji wa mwisho wa API kwenye mnyororo wa Ethereum ili tuweze kusoma na kuandika miamala.
 
 Tutakuchukua kuanzia kujisajili na Alchemy hadi kuandika hati yako ya kwanza ya Web3! Hakuna uzoefu wa uendelezaji wa mnyororo wa vitalu unaohitajika!
 
@@ -37,20 +37,19 @@ Jaza maelezo chini ya “Create App” ili kupata ufunguo wako mpya. Unaweza pia
 
 Unaweza pia kuvuta funguo za API zilizopo kwa kuelea juu ya “Apps” na kuchagua moja. Unaweza “View Key” hapa, pamoja na “Edit App” ili kuidhinisha vikoa maalum, kuona zana kadhaa za waendelezaji, na kutazama uchanganuzi.
 
-![Gif showing a user how to pull API keys](./pull-api-keys.gif)
+![Gif showing a user how to pull API keys](./pull-api-keys.mp4#600x340)
 
-## 3. Fanya Ombi kutoka kwenye Mstari wa Amri {#make-a-request-from-the-command-line}
-
+## 3. Fanya Ombi kutoka kwenye Mstari wa Amri
 Wasiliana na mnyororo wa vitalu wa Ethereum kupitia Alchemy ukitumia JSON-RPC na curl.
 
-Kwa maombi ya mwongozo, tunapendekeza kuwasiliana na `JSON-RPC` kupitia maombi ya `POST`. Pitisha tu kichwa cha `Content-Type: application/json` na swali lako kama kiwiliwili cha `POST` chenye sehemu zifuatazo:
+Kwa maombi ya mwongozo, tunapendekeza kuwasiliana na `JSON-RPC` kupitia maombi ya `POST`. Pitisha tu kichwa cha `Content-Type: application/json` na hoja yako kama kiwiliwili cha `POST` chenye nyanja zifuatazo:
 
-- `jsonrpc`: Toleo la JSON-RPC—kwa sasa, ni `2.0` pekee linalotumika.
-- `method`: Mbinu ya API ya ETH. [Tazama rejeleo la API.](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc)
+- `jsonrpc`: Toleo la JSON-RPC—kwa sasa, ni `2.0` pekee inayotumika.
+- `method`: Mbinu ya API ya ETH. [Tazama rejeleo la API.](/developers/docs/apis/json-rpc/)
 - `params`: Orodha ya vigezo vya kupitisha kwenye mbinu.
-- `id`: Kitambulisho cha ombi lako. Kitarudishwa na jibu ili uweze kufuatilia jibu ni la ombi gani.
+- `id`: Kitambulisho cha ombi lako. Kitarudishwa na majibu ili uweze kufuatilia ni ombi lipi majibu yanahusiana nalo.
 
-Huu hapa ni mfano unaoweza kuendesha kutoka kwenye mstari wa amri ili kupata bei ya gesi ya sasa:
+Hapa kuna mfano unaoweza kuendesha kutoka kwenye mstari wa amri ili kupata bei ya gesi ya sasa:
 
 ```bash
 curl https://eth-mainnet.alchemyapi.io/v2/demo \
@@ -59,21 +58,19 @@ curl https://eth-mainnet.alchemyapi.io/v2/demo \
 -d '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
 ```
 
-_**KUMBUKA:** Badilisha [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.io/jsonrpc/demo) na ufunguo wako wa API `https://eth-mainnet.alchemyapi.io/v2/**your-api-key`._
+_**KUMBUKA:** Badilisha `https://eth-mainnet.alchemyapi.io/v2/demo` na ufunguo wako wa API `https://eth-mainnet.alchemyapi.io/v2/**your-api-key`._
 
 **Matokeo:**
 
 ```json
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
-
-## 4. Sanidi Mteja wako wa Web3 {#set-up-your-web3-client}
-
+## 4. Sanidi Mteja wako wa Web3
 **Ikiwa una mteja aliyepo,** badilisha URL ya mtoa huduma wako wa nodi wa sasa kuwa URL ya Alchemy yenye ufunguo wako wa API: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
-**_KUMBUKA:_** Hati zilizo hapa chini zinahitaji kuendeshwa katika **muktadha wa nodi** au **kuhifadhiwa kwenye faili**, sio kuendeshwa kutoka kwenye mstari wa amri. Ikiwa bado hujasakinisha Node au npm, angalia [mwongozo huu wa haraka wa usanidi kwa macs](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs).
+**_KUMBUKA:_** Hati zilizo hapa chini zinahitaji kuendeshwa katika **muktadha wa nodi** au **kuhifadhiwa kwenye faili**, sio kuendeshwa kutoka kwenye mstari wa amri. Ikiwa bado huna Node au npm iliyosakinishwa, fuata [maagizo ya usakinishaji wa Node.js](https://nodejs.org/en/download/).
 
-Kuna maktaba nyingi za [Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) unazoweza kuunganisha na Alchemy, hata hivyo, tunapendekeza kutumia [Alchemy Web3](https://docs.alchemy.com/reference/api-overview), mbadala wa moja kwa moja wa Web3.js, iliyojengwa na kusanidiwa kufanya kazi bila mshono na Alchemy. Hii inatoa faida nyingi kama vile majaribio ya kiotomatiki na usaidizi thabiti wa WebSocket.
+Kuna maktaba nyingi za [Web3](/developers/docs/apis/javascript/) unazoweza kuunganisha na Alchemy, hata hivyo, tunapendekeza kutumia [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), mbadala wa moja kwa moja wa Web3.js, iliyojengwa na kusanidiwa kufanya kazi bila mshono na Alchemy. Hii inatoa faida nyingi kama vile majaribio ya kiotomatiki na usaidizi thabiti wa WebSocket.
 
 Ili kusakinisha AlchemyWeb3.js, **nenda kwenye saraka ya mradi wako** na uendeshe:
 
@@ -97,9 +94,7 @@ const web3 = createAlchemyWeb3(
   "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 )
 ```
-
-## 5. Andika Hati yako ya kwanza ya Web3! {#write-your-first-web3-script}
-
+## 5. Andika Hati yako ya kwanza ya Web3!
 Sasa ili kuanza kwa vitendo na programu kidogo ya Web3 tutaandika hati rahisi inayochapisha nambari ya kitalu cha hivi punde kutoka kwenye Mtandao Mkuu wa Ethereum.
 
 **1. Ikiwa bado hujafanya hivyo, kwenye terminal yako unda saraka mpya ya mradi na uingie ndani yake (cd):**
@@ -117,7 +112,7 @@ npm install @alch/alchemy-web3
 
 **3. Unda faili inayoitwa `index.js` na uongeze yaliyomo yafuatayo:**
 
-> Hatimaye unapaswa kubadilisha `demo` na ufunguo wako wa API ya HTTP ya Alchemy.
+> Unapaswa hatimaye kubadilisha `demo` na ufunguo wako wa API wa HTTP wa Alchemy.
 
 ```js
 async function main() {
@@ -143,8 +138,8 @@ node index.js
 The latest block number is 11043912
 ```
 
-**Hongera! Umeandika hati yako ya kwanza ya Web3 ukitumia Alchemy 🎉**
+**Hongera! Umeandika tu hati yako ya kwanza ya Web3 ukitumia Alchemy 🎉**
 
-Huna uhakika wa kufanya nini baadaye? Jaribu kusambaza mkataba mahiri wako wa kwanza na uanze kwa vitendo na programu ya Solidity katika [Mwongozo wetu wa Mkataba Mahiri wa Hello World](https://www.alchemy.com/docs/hello-world-smart-contract), au jaribu ujuzi wako wa dashibodi na [Programu ya Onyesho ya Dashibodi](https://docs.alchemyapi.io/tutorials/demo-app)!
+Huna uhakika wa kufanya nini baadaye? Jaribu kusambaza mkataba mahiri wako wa kwanza na uanze kwa vitendo na programu ya Solidity katika [Mwongozo wetu wa Mkataba Mahiri wa Hello World](/developers/tutorials/hello-world-smart-contract/), au endelea kuchunguza [nyaraka za Alchemy](https://www.alchemy.com/docs/) kwa mifano zaidi.
 
 _[Jisajili na Alchemy bure](https://auth.alchemy.com/), angalia [nyaraka](https://www.alchemy.com/docs/) zetu, na kwa habari za hivi punde, tufuate kwenye [Twitter](https://twitter.com/AlchemyPlatform)_.

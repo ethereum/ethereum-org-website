@@ -10,7 +10,7 @@
   "explanation": "వివరణ",
   "next-question": "తదుపరి ప్రశ్న",
   "next-quiz": "తదుపరి క్విజ్",
-  "question-number": "ప్రశ్న సంఖ్య {{number}}:",
+  "question-number": "ప్రశ్న సంఖ్య {number}:",
   "page-assets-merge": "ది మెర్జ్",
   "passed": "మీరు క్విజ్‌లో ఉత్తీర్ణులయ్యారు!",
   "questions": "ప్రశ్నలు",

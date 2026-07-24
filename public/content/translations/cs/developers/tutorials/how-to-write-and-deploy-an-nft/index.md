@@ -227,7 +227,7 @@ Poté vytvořte soubor `.env` v kořenovém adresáři našeho projektu a přide
 
 - Níže se podívejte, jak získat HTTP URL pro API Alchemy, a zkopírujte si ho do schránky
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.mp4#842x480)
 
 Váš soubor `.env` by nyní měl vypadat takto:
 

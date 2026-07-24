@@ -39,6 +39,7 @@
   "page-find-wallet-buy-crypto-desc": "直接在钱包中用法币购买加密货币 \n *注意：购买加密货币可能受地区限制",
   "page-find-wallet-sell-for-fiat": "出售换取现金",
   "page-find-wallet-sell-for-fiat-desc": "直接在钱包中将加密货币出售为法币 \n *注意：提取加密货币可能受地区限制",
+  "page-find-wallet-network-support": "网络支持",
   "page-find-wallet-multisig": "多重签名",
   "page-find-wallet-multisig-desc": "要求多个签名来授权交易的钱包",
   "page-find-wallet-social-recovery": "社交恢复",

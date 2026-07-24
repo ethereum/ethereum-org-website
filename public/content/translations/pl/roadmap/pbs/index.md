@@ -2,6 +2,7 @@
 title: Separacja proponującego i budującego
 description: Dowiedz się, jak i dlaczego walidatorzy Ethereum podzielą swoje obowiązki związane z budowaniem i rozgłaszaniem bloków.
 lang: pl
+template: roadmap
 ---
 
 Obecni walidatorzy [Ethereum](/) tworzą _i_ rozgłaszają bloki. Grupują transakcje, o których dowiedzieli się za pośrednictwem sieci plotkującej (gossip network), i pakują je w blok, który jest wysyłany do węzłów partnerskich w sieci Ethereum. **Separacja proponującego i budującego (PBS)** dzieli te zadania między wielu walidatorów. Budowniczowie bloków stają się odpowiedzialni za tworzenie bloków i oferowanie ich proponującemu blok w każdym slocie. Proponujący blok nie widzi zawartości bloku, po prostu wybiera ten najbardziej opłacalny, otrzymując opłatę od budowniczego bloków (lub budowniczy płaci stawkę proponującemu) przed wysłaniem bloku do swoich węzłów partnerskich.

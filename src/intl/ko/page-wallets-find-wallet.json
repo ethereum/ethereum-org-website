@@ -39,6 +39,7 @@
   "page-find-wallet-buy-crypto-desc": "지갑에서 직접 법정화폐로 암호화폐 구매 \n *참고: 암호화폐 구매는 지역에 따라 다를 수 있습니다.",
   "page-find-wallet-sell-for-fiat": "현금으로 판매",
   "page-find-wallet-sell-for-fiat-desc": "지갑에서 직접 암호화폐를 법정화폐로 판매 \n *참고: 암호화폐 출금은 지역에 따라 다를 수 있습니다.",
+  "page-find-wallet-network-support": "네트워크 지원",
   "page-find-wallet-multisig": "다중서명",
   "page-find-wallet-multisig-desc": "트랜잭션을 승인하기 위해 여러 서명이 필요한 지갑",
   "page-find-wallet-social-recovery": "소셜 복구",

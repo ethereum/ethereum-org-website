@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/component-wallet-simulator.json",
-  "generatedAt": "2026-04-20T15:18:16.427Z",
-  "rootHash": "dc3bc3308e2c",
+  "generatedAt": "2026-07-22T22:33:14.014Z",
+  "rootHash": "01e0557fe887",
   "tree": {
-    "contentHash": "cbea2396a120",
-    "anchorHash": "ccb96eed7282",
+    "contentHash": "f874da8d9708",
+    "anchorHash": "7c548f0ef5b7",
     "children": {
       "sim-back": {
         "contentHash": "76900f1bfd16",
@@ -45,6 +45,14 @@
       },
       "sim-example-walkthrough": {
         "contentHash": "ce256b1ff039",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-start-next-lesson": {
+        "contentHash": "8600f9712b28",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-how-to": {
+        "contentHash": "f1be2a6b208b",
         "anchorHash": "e3b0c44298fc"
       },
       "sim-address-tooltip": {
@@ -841,6 +849,10 @@
         "contentHash": "c2a196b6acc3",
         "anchorHash": "e3b0c44298fc"
       },
+      "sim-cw-nft-alt": {
+        "contentHash": "2a3734fe5f5a",
+        "anchorHash": "e3b0c44298fc"
+      },
       "sim-cw-nft-actions-tooltip": {
         "contentHash": "453a3b609bdb",
         "anchorHash": "e3b0c44298fc"
@@ -889,6 +901,8 @@
       "sim-click",
       "sim-no-nfts",
       "sim-example-walkthrough",
+      "sim-start-next-lesson",
+      "sim-how-to",
       "sim-address-tooltip",
       "sim-try-real-app",
       "sim-try-login-app",
@@ -1034,6 +1048,7 @@
       "sim-cw-connect-disclaimer",
       "sim-cw-your-collection",
       "sim-cw-nft-title",
+      "sim-cw-nft-alt",
       "sim-cw-nft-actions-tooltip",
       "sim-cw-set-price",
       "sim-cw-auction-item",
@@ -1045,5 +1060,5 @@
       "sim-cw-search-website"
     ]
   },
-  "sourceCommitSha": "291369439fa61b40cb4116a5e6b9b918940a5fad"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

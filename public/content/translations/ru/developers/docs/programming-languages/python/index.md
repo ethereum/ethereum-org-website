@@ -55,21 +55,20 @@ incomplete: true
 
 ## Проекты и инструменты на Python {#python-projects-and-tools}
 
-### Активные: {#active}
-
 - [Web3.py](https://github.com/ethereum/web3.py) — _библиотека Python для взаимодействия с Эфириумом_
 - [Vyper](https://github.com/ethereum/vyper/) — _язык смарт-контрактов в стиле Python для EVM_
-- [Ape](https://github.com/ApeWorX/ape) — _инструмент разработки смарт-контрактов для питонистов, специалистов по данным и профессионалов в области безопасности_
+- [Titanoboa](https://github.com/vyperlang/titanoboa/) — _нативный инструмент тестирования для Vyper; интерпретатор с поддержкой форкинга Мейннета, отладки и красивой трассировки_
+- [Moccasin](https://github.com/Cyfrin/moccasin) — _фреймворк для разработки и тестирования смарт-контрактов для Vyper и Python, созданный на базе Titanoboa_
+- [Ape](https://github.com/ApeWorX/ape) — _инструмент разработки смарт-контрактов для Python-разработчиков, специалистов по данным и безопасности_
 - [py-evm](https://github.com/ethereum/py-evm) — _реализация виртуальной машины Эфириума_
 - [eth-tester](https://github.com/ethereum/eth-tester) — _инструменты для тестирования приложений на базе Эфириума_
 - [eth-utils](https://github.com/ethereum/eth-utils/) — _служебные функции для работы с кодовыми базами, связанными с Эфириумом_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) — _обертка Python для компилятора Solidity solc с поддержкой версии 0.5.x_
 - [pymaker](https://github.com/makerdao/pymaker) — _API Python для контрактов Maker_
 - [siwe](https://github.com/signinwithethereum/siwe-py) — _вход с помощью Эфириума (SIWE) для Python_
-- [Web3 DeFi для интеграций с Эфириумом](https://github.com/tradingstrategy-ai/web3-ethereum-defi) — _пакет Python с готовыми интеграциями для ERC-20, Юнисвоп и других популярных проектов_
+- [Интеграции Web3 DeFi для Эфириума](https://github.com/tradingstrategy-ai/web3-ethereum-defi) — _пакет Python с готовыми интеграциями для ERC-20, Юнисвоп и других популярных проектов_
 - [Wake](https://getwake.io) — _универсальный фреймворк Python для тестирования контрактов, фаззинга, развертывания, сканирования уязвимостей и навигации по коду (языковой сервер — [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
 - [DeFiPy](https://github.com/defipy-devs/defipy) — _SDK Python для аналитики децентрализованных финансов (DeFi) и симуляции автоматизированного маркетмейкера (AMM) в Юнисвоп V2/V3, Balancer и Curve_
-
 ### В архиве / Больше не поддерживаются: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) — _клиент Эфириума на Python_

@@ -33,7 +33,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     getDeveloperToolsData(),
     getAppPageContributorInfo("developers/tools", locale as Lang),
     getTranslations({ locale, namespace: "page-developers-tools" }),
-    getTranslations({ locale, namespace: "page-developers-tools-descriptions" }),
+    getTranslations({
+      locale,
+      namespace: "page-developers-tools-descriptions",
+    }),
   ])
 
   const normalized = normalizeDeveloperToolsData(data)
@@ -82,6 +85,9 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
+
   const t = await getTranslations({
     locale,
     namespace: "page-developers-tools",

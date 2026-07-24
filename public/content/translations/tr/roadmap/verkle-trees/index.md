@@ -2,6 +2,7 @@
 title: Verkle Ağaçları
 description: Verkle Ağaçlarının üst düzey bir açıklaması ve Ethereum'u güncellemek için nasıl kullanılacakları
 lang: tr
+template: roadmap
 summaryPoints:
   - Verkle Ağaçlarının ne olduğunu keşfedin
   - Verkle Ağaçlarının Ethereum için neden faydalı bir güncelleme olduğunu okuyun

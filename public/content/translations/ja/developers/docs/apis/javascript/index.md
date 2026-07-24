@@ -237,20 +237,20 @@ ethers.utils.formatEther(balance)
 - [Web3jsのユーティリティ関数](https://docs.web3js.org/api/web3-utils)
 - [Ethersのユーティリティ関数](https://docs.ethers.org/v6/api/utils/)
 
-## 利用可能なライブラリ {#available-libraries}
+## 利用可能なライブラリ
 
-**Web3.js -** **_イーサリアムJavaScript API_**
+**Web3.js -** **_イーサリアムのJavaScript API。_**
 
 - [ドキュメント](https://docs.web3js.org)
 - [GitHub](https://github.com/ethereum/web3.js)
 
-**Ethers.js -** **_JavaScriptおよびTypeScriptによる完全なイーサリアムウォレットの実装とユーティリティ_**
+**Ethers.js -** **_JavaScriptおよびTypeScriptによる完全なイーサリアムウォレットの実装とユーティリティ。_**
 
 - [Ethers.js ホーム](https://ethers.org/)
 - [ドキュメント](https://docs.ethers.io)
 - [GitHub](https://github.com/ethers-io/ethers.js)
 
-**The Graph -** **_イーサリアムおよびIPFSのデータをインデックス化し、GraphQLを使用してクエリを実行するためのプロトコル_**
+**The Graph -** **_イーサリアムとIPFSのデータをインデックス化し、GraphQLを使用してクエリを実行するためのプロトコル。_**
 
 - [The Graph](https://thegraph.com)
 - [Graph Explorer](https://thegraph.com/explorer)
@@ -258,28 +258,37 @@ ethers.utils.formatEther(balance)
 - [GitHub](https://github.com/graphprotocol)
 - [ディスコード](https://thegraph.com/discord)
 
-**Alchemy SDK -** **_強化されたAPIを備えたEthers.jsのラッパー_**
+**Alchemy SDK -** **_強化されたAPIを備えたEthers.jsのラッパー。_**
 
 - [ドキュメント](https://www.alchemy.com/docs)
 - [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
 
-**viem -** **_イーサリアムのためのTypeScriptインターフェース_**
+**viem -** **_イーサリアムのTypeScriptインターフェース。_**
 
 - [ドキュメント](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-**Codex -** **_数十のチェーンにわたるリアルタイムで強化されたブロックチェーンデータAPI_**
+**wagmi -** **_viem上に構築された、イーサリアム用のReact Hooksライブラリ。_**
+
+- [ドキュメント](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_wagmiとviem上に構築された、分散型アプリケーション (dapp) にウォレット接続を追加するためのReactライブラリ。_**
+
+- [ドキュメント](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
+
+**Codex -** **_数十のチェーンにわたる、リアルタイムで強化されたブロックチェーンデータAPI。_**
 
 - [ドキュメント](https://docs.codex.io)
 - [エクスプローラー](https://docs.codex.io/explore)
 - [GitHub](https://github.com/Codex-Data)
 - [ディスコード](https://discord.com/invite/mFpUhT3vAq)
 
-**Drift -** **_キャッシュ、フック、テストモックが組み込まれたTypeScriptメタライブラリ_**
+**Drift -** **_キャッシング、フック、テストモックが組み込まれたTypeScriptメタライブラリ。_**
 
 - [ドキュメント](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
-
 ## 参考文献 {#further-reading}
 
 _役に立ったコミュニティリソースをご存知ですか？このページを編集して追加してください！_

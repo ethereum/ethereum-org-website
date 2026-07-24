@@ -29,10 +29,13 @@ Zde jsou některé z nejpopulárnějších standardů tokenů na Ethereu:
 
 Úplný seznam návrhů [ERC](https://eips.ethereum.org/erc).
 
-## Další čtení {#further-reading}
+## Další čtení
 
-_Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ho!_
+_Znáte komunitní zdroj, který vám pomohl? Upravte tuto stránku a přidejte ho!_
 
+- [Kontrolní seznam pro integraci tokenů](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md) – _Trail of Bits_
+- [Dokumentace OpenZeppelin: Tokeny](https://docs.openzeppelin.com/contracts/5.x/tokens) – _OpenZeppelin_
+- [Nebezpečí integrace tokenů (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) – _OpenZeppelin_
 ## Související tutoriály {#related-tutorials}
 
 - [Kontrolní seznam pro integraci tokenů](/developers/tutorials/token-integration-checklist/) _– Seznam věcí, které je třeba zvážit při interakci s tokeny._

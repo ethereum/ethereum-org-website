@@ -27,7 +27,7 @@ import { numberFormat } from "@/lib/utils/numbers"
 import { isExternal, isFile } from "@/lib/utils/url"
 
 import { reports } from "./data"
-import ReportsPageJsonLD from "./page-jsonld"
+import PageJsonLD from "./page-jsonld"
 
 import heroImg from "@/public/images/reports/reports-hero.webp"
 
@@ -52,7 +52,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   return (
     <>
-      <ReportsPageJsonLD
+      <PageJsonLD
         locale={locale}
         contributors={contributors}
         reports={reports}
@@ -64,14 +64,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         title={t("page-reports-title")}
         description={t("page-reports-description")}
       />
-      <MainArticle className="relative space-y-16 px-4 py-16 md:space-y-20 md:px-10 md:py-20">
-        <Section id="reports" className="space-y-12">
-          <div className="max-w-3xl space-y-[0.25lh]">
-            <h2>{t("page-reports-heading")}</h2>
-            <p>{t("page-reports-intro")}</p>
-          </div>
 
-          <Grid>
+      <MainArticle className="flow px-page pt-page-2x pb-page">
+        <Section id="reports">
+          <h2>{t("page-reports-heading")}</h2>
+          <p className="max-w-3xl">{t("page-reports-intro")}</p>
+
+          <Grid data-flow="cta">
             {sortedReports.map(
               ({
                 slug,
@@ -138,12 +137,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </Grid>
         </Section>
 
-        <Section id="suggest" className="space-y-[1.5lh]">
-          <div className="max-w-3xl space-y-[0.25lh]">
-            <h2>{t("page-reports-suggest-heading")}</h2>
-            <p>{t("page-reports-suggest-body")}</p>
-          </div>
-          <Flex className="flex-wrap gap-4 max-sm:*:[a]:w-full">
+        <Section id="suggest">
+          <h2>{t("page-reports-suggest-heading")}</h2>
+          <p className="max-w-3xl">{t("page-reports-suggest-body")}</p>
+          <Flex data-flow="cta" className="flex-wrap gap-4 max-sm:*:[a]:w-full">
             <ButtonLink href="https://ethereumadoption.com/reports/eth/">
               {t("page-reports-more-cta")}
             </ButtonLink>
@@ -165,6 +162,8 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-reports")
 
