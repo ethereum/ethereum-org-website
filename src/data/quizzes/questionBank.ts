@@ -165,6 +165,14 @@ const questionBankConfig: QuestionBankConfig = {
     { totalAnswers: 4, correctAnswer: 4 },
     { totalAnswers: 4, correctAnswer: 2 },
   ],
+  privacy: [
+    { totalAnswers: 4, correctAnswer: 4, explanationOverrides: [1, 1, 1, 4] },
+    { totalAnswers: 4, correctAnswer: 2 },
+    { totalAnswers: 4, correctAnswer: 3 },
+    { totalAnswers: 2, correctAnswer: 1, explanationOverrides: [1, 1] },
+    { totalAnswers: 4, correctAnswer: 1 },
+    { totalAnswers: 4, correctAnswer: 2 },
+  ],
 }
 
 const charFromIdx = (idx: number) => String.fromCharCode(97 + idx)
