@@ -25,6 +25,7 @@ const meta = {
       defi: [false, 0],
       gas: [false, 0],
       privacy: [false, 0],
+      transactions: [false, 0],
     },
     totalCorrectAnswers: 0,
   },

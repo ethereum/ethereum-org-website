@@ -122,6 +122,18 @@ const quizzes = {
       "privacy-6",
     ],
   },
+  transactions: {
+    title: "transactions",
+    questions: [
+      "transactions-1",
+      "transactions-2",
+      "transactions-3",
+      "transactions-4",
+      "transactions-5",
+      "transactions-6",
+      "transactions-7",
+    ],
+  },
 } satisfies RawQuizzes
 
 const ethereumBasicsQuizzesRaw: QuizzesSection[] = [
@@ -203,6 +215,18 @@ const usingEthereumQuizzesRaw: QuizzesSection[] = [
 
 export const usingEthereumQuizzes: QuizzesSection[] = addNextQuiz(
   usingEthereumQuizzesRaw
+)
+
+// Quizzes drawn from the developer docs, on the mechanics of the network itself
+const howEthereumWorksQuizzesRaw: QuizzesSection[] = [
+  {
+    id: "transactions",
+    level: "intermediate",
+  },
+]
+
+export const howEthereumWorksQuizzes: QuizzesSection[] = addNextQuiz(
+  howEthereumWorksQuizzesRaw
 )
 
 export default quizzes
