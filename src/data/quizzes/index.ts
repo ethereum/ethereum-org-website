@@ -122,6 +122,10 @@ const quizzes = {
       "privacy-6",
     ],
   },
+  evm: {
+    title: "evm",
+    questions: ["evm-1", "evm-2", "evm-3", "evm-4", "evm-5", "evm-6"],
+  },
 } satisfies RawQuizzes
 
 const ethereumBasicsQuizzesRaw: QuizzesSection[] = [
@@ -203,6 +207,18 @@ const usingEthereumQuizzesRaw: QuizzesSection[] = [
 
 export const usingEthereumQuizzes: QuizzesSection[] = addNextQuiz(
   usingEthereumQuizzesRaw
+)
+
+// Quizzes drawn from the developer docs, on the mechanics of the network itself
+const howEthereumWorksQuizzesRaw: QuizzesSection[] = [
+  {
+    id: "evm",
+    level: "advanced",
+  },
+]
+
+export const howEthereumWorksQuizzes: QuizzesSection[] = addNextQuiz(
+  howEthereumWorksQuizzesRaw
 )
 
 export default quizzes
