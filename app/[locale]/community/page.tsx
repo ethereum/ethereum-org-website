@@ -162,7 +162,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             </h2>
             <Grid columns={3}>
               {whyGetInvolvedCards.map((card, idx) => (
-                <Card key={idx} href={card.href} hoverLift>
+                <Card key={idx} href={card.href}>
                   <CardHeader>
                     <CardIconContainer>{card.icon}</CardIconContainer>
                   </CardHeader>
@@ -218,11 +218,15 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                   key={community.handle}
                   href={community.href}
                   variant="ghost"
-                  hoverLift
                   size="sm"
                 >
                   <CardHeader>
-                    <CardBanner background="none" fit="cover" className="h-40">
+                    <CardBanner
+                      background="none"
+                      fit="cover"
+                      className="h-40"
+                      zoom
+                    >
                       <Image
                         src={community.banner}
                         alt=""
@@ -308,7 +312,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                       className="border"
                     >
                       <CardHeader>
-                        <CardBanner className="h-40">
+                        <CardBanner className="h-40" zoom>
                           <Image
                             src={story.image}
                             alt=""

@@ -20,6 +20,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardBanner,
+  CardButtonFake,
   CardContent,
   CardFooter,
   CardHeader,
@@ -266,7 +267,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
 
             <Grid columns={2} size="wide">
               {/* Quickstart your idea */}
-              <Card variant="nested" size="lg">
+              <Card variant="nested" size="lg" hoverLift>
                 <CardHeader>
                   <CardBanner background="none" size="lg">
                     <Image
@@ -326,7 +327,16 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
               </Card>
 
               {/* Get help */}
-              <Card variant="nested" size="lg">
+              <Card
+                href="https://ethereum.stackexchange.com/"
+                variant="nested"
+                size="lg"
+                customEventOptions={{
+                  eventCategory: "mid_boxes",
+                  eventAction: "click",
+                  eventName: "stack-exchange",
+                }}
+              >
                 <CardHeader>
                   <CardBanner background="none" size="lg">
                     <Image
@@ -346,23 +356,23 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                   </CardParagraph>
                 </CardContent>
                 <CardFooter>
-                  <ButtonLink
-                    variant="outline"
-                    isSecondary
-                    href="https://ethereum.stackexchange.com/"
-                    customEventOptions={{
-                      eventCategory: "mid_boxes",
-                      eventAction: "click",
-                      eventName: "stack-exchange",
-                    }}
-                  >
+                  <CardButtonFake variant="outline" isSecondary>
                     {t("page-developers-stack-exchange")}
-                  </ButtonLink>
+                  </CardButtonFake>
                 </CardFooter>
               </Card>
 
               {/* Resources */}
-              <Card variant="nested" size="lg">
+              <Card
+                href="/developers/learning-tools/"
+                variant="nested"
+                size="lg"
+                customEventOptions={{
+                  eventCategory: "mid_boxes",
+                  eventAction: "click",
+                  eventName: "play-with-code",
+                }}
+              >
                 <CardHeader>
                   <CardBanner background="none" size="lg" fit="contain">
                     <Image
@@ -381,23 +391,23 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                   </CardParagraph>
                 </CardContent>
                 <CardFooter>
-                  <ButtonLink
-                    variant="outline"
-                    isSecondary
-                    href="/developers/learning-tools/"
-                    customEventOptions={{
-                      eventCategory: "mid_boxes",
-                      eventAction: "click",
-                      eventName: "play-with-code",
-                    }}
-                  >
+                  <CardButtonFake variant="outline" isSecondary>
                     {t("page-developers-play-code")}
-                  </ButtonLink>
+                  </CardButtonFake>
                 </CardFooter>
               </Card>
 
               {/* Tutorials */}
-              <Card variant="nested" size="lg">
+              <Card
+                href="/developers/tutorials/"
+                variant="nested"
+                size="lg"
+                customEventOptions={{
+                  eventCategory: "mid_boxes",
+                  eventAction: "click",
+                  eventName: "view-tutorials",
+                }}
+              >
                 <CardHeader>
                   <CardBanner background="none" size="lg" fit="contain">
                     <Image
@@ -416,18 +426,9 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                   </CardParagraph>
                 </CardContent>
                 <CardFooter>
-                  <ButtonLink
-                    variant="outline"
-                    isSecondary
-                    href="/developers/tutorials/"
-                    customEventOptions={{
-                      eventCategory: "mid_boxes",
-                      eventAction: "click",
-                      eventName: "view-tutorials",
-                    }}
-                  >
+                  <CardButtonFake variant="outline" isSecondary>
                     {t("page-developers-learn-tutorials-cta")}
-                  </ButtonLink>
+                  </CardButtonFake>
                 </CardFooter>
               </Card>
             </Grid>
@@ -480,7 +481,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                       size="sm"
                     >
                       <CardHeader>
-                        <CardBanner size="sm">
+                        <CardBanner size="sm" zoom>
                           {post.image ? (
                             <Image
                               src={post.image}
@@ -715,7 +716,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                       size="sm"
                     >
                       <CardHeader>
-                        <CardBanner size="sm">
+                        <CardBanner size="sm" zoom>
                           {bannerImage ? (
                             <CardImage src={bannerImage} />
                           ) : (

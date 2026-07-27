@@ -119,7 +119,7 @@ const GetStartedGrid = async ({
               border
             >
               <CardHeader>
-                <CardBanner zoom={false}>
+                <CardBanner>
                   <Image
                     src={card.image}
                     alt=""
