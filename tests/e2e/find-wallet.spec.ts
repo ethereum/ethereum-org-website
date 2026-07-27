@@ -29,6 +29,13 @@ test.describe("Find Wallet Page", () => {
     expect(await findWalletPage.getResultsCount()).toBeLessThan(initialCount)
   })
 
+  test("advanced filter narrows the results", async () => {
+    const initialCount = await findWalletPage.getResultsCount()
+    await findWalletPage.toggleAdvancedFilter("Multisig")
+    await findWalletPage.waitForResultsChange(initialCount)
+    expect(await findWalletPage.getResultsCount()).toBeLessThan(initialCount)
+  })
+
   test("wallet card opens a detail modal and closes", async ({ page }) => {
     await findWalletPage.openWalletDetail("metamask")
     await expect(findWalletPage.detailDialog).toBeVisible()

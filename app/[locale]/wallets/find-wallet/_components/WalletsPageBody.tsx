@@ -14,6 +14,7 @@ import {
 } from "@/lib/utils/walletData"
 
 import { buildDeviceLabels } from "@/data/wallets/devices"
+import { WALLET_ADVANCED_FILTERS } from "@/data/wallets/features"
 import {
   buildPersonaLabels,
   type WalletPersonaId,
@@ -73,6 +74,7 @@ const WalletsPageBody = async ({
       buySell: t("page-find-wallet-buy-sell-crypto"),
       network: t("page-find-wallet-network-support"),
       language: t("page-find-wallet-languages-supported"),
+      advanced: t("page-find-wallet-advanced-filters"),
     },
     header: {
       filters: t("page-find-wallet-filters"),
@@ -83,6 +85,13 @@ const WalletsPageBody = async ({
     devices: buildDeviceLabels(t),
     personas: buildPersonaLabels(t),
   }
+
+  const advancedFilters = WALLET_ADVANCED_FILTERS.map(({ key, labelKey }) => ({
+    id: key,
+    label: t(labelKey),
+    count: wallets.filter((wallet) => wallet.advancedFlags.includes(key))
+      .length,
+  }))
 
   return (
     <>
@@ -117,6 +126,7 @@ const WalletsPageBody = async ({
           wallets={wallets.map(toCatalogCard)}
           networks={networks}
           languages={languages}
+          advancedFilters={advancedFilters}
           labels={catalogLabels}
         />
       </Section>

@@ -1,7 +1,9 @@
 import type { WalletData } from "@/lib/types"
 
+export type WalletFeatureKey = keyof WalletData
+
 export type WalletFeature = {
-  key: keyof WalletData
+  key: WalletFeatureKey
   labelKey: string
   descKey: string
 }
@@ -40,7 +42,6 @@ export const CROPS_PROPERTIES: WalletFeature[] = [
   },
 ]
 
-/** Detail pages only — the sidebar filter set is intentionally narrower. */
 export const WALLET_FEATURE_GROUPS: WalletFeatureGroup[] = [
   {
     titleKey: "page-find-wallet-features",
@@ -163,3 +164,18 @@ export const WALLET_FEATURE_GROUPS: WalletFeatureGroup[] = [
     ],
   },
 ]
+
+/**
+ * The sidebar's "Advanced filters" set: every detail-page feature except the
+ * buy/sell pair, which already has its own sidebar group.
+ */
+export const WALLET_ADVANCED_FILTERS: WalletFeature[] =
+  WALLET_FEATURE_GROUPS.filter(
+    (group) => group.titleKey !== "page-find-wallet-buy-sell-crypto"
+  ).flatMap((group) => group.features)
+
+export function getWalletAdvancedFlags(wallet: WalletData): WalletFeatureKey[] {
+  return WALLET_ADVANCED_FILTERS.filter(({ key }) => wallet[key]).map(
+    ({ key }) => key
+  )
+}

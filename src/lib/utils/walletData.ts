@@ -20,6 +20,10 @@ import {
 
 import { getWalletDevices, type WalletDeviceId } from "@/data/wallets/devices"
 import {
+  getWalletAdvancedFlags,
+  type WalletFeatureKey,
+} from "@/data/wallets/features"
+import {
   WALLET_PERSONA_IDS,
   WALLET_PERSONAS,
   type WalletPersonaId,
@@ -114,6 +118,8 @@ export type CatalogWallet = Wallet & {
   slug: string
   devices: Record<WalletDeviceId, boolean>
   personas: WalletPersonaId[]
+  /** Only the enabled keys, so the client payload stays sparse. */
+  advancedFlags: WalletFeatureKey[]
   descriptionStripped?: string
 }
 
@@ -129,6 +135,7 @@ export type CatalogWalletCard = Pick<
   | "image"
   | "devices"
   | "personas"
+  | "advancedFlags"
   | "supportedLanguages"
   | "descriptionStripped"
   | "supported_chains"
@@ -143,6 +150,7 @@ export const toCatalogCard = (wallet: CatalogWallet): CatalogWalletCard => ({
   image: wallet.image,
   devices: wallet.devices,
   personas: wallet.personas,
+  advancedFlags: wallet.advancedFlags,
   supported_chains: wallet.supported_chains,
   supportedLanguages: wallet.supportedLanguages,
   languages_supported: wallet.languages_supported,
@@ -168,6 +176,7 @@ export function enrichWallet(
     ),
     devices: getWalletDevices(wallet),
     personas: getWalletPersonaIds(wallet),
+    advancedFlags: getWalletAdvancedFlags(wallet),
     descriptionStripped: wallet.description
       ? stripMarkdown(wallet.description)
       : undefined,

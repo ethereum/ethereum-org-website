@@ -16,7 +16,9 @@ import { WALLET_DEVICE_IDS, type WalletDeviceId } from "@/data/wallets/devices"
 import type { WalletPersonaId } from "@/data/wallets/personas"
 
 import WalletCard from "./WalletCard"
+import type { WalletFilterOption } from "./WalletFilterGroup"
 import WalletFilters, {
+  ADVANCED_KEY,
   DEVICES_KEY,
   LANGUAGE_KEY,
   NETWORKS_KEY,
@@ -36,7 +38,13 @@ export type WalletCatalogLabels = {
     applyLabel: string
     closeLabel: string
   }
-  filter: { device: string; buySell: string; network: string; language: string }
+  filter: {
+    device: string
+    buySell: string
+    network: string
+    language: string
+    advanced: string
+  }
   header: { filters: string; reset: string }
   buyCrypto: string
   sellCrypto: string
@@ -49,6 +57,8 @@ type WalletsCatalogProps = {
   wallets: CatalogWalletCard[]
   networks: WalletNetwork[]
   languages: WalletLanguageOption[]
+  /** Built server-side: its labels come from the feature groups' i18n keys. */
+  advancedFilters: WalletFilterOption[]
   labels: WalletCatalogLabels
 }
 
@@ -89,6 +99,7 @@ export default function WalletsCatalog({
   wallets,
   networks,
   languages,
+  advancedFilters,
   labels,
 }: WalletsCatalogProps) {
   // No state here, so no re-renders — plain consts, not useMemo. Only filterFn
@@ -157,6 +168,15 @@ export default function WalletsCatalog({
       return false
     }
 
+    const advanced = asArray(state[ADVANCED_KEY])
+    if (
+      !advanced.every((flag) =>
+        (wallet.advancedFlags as string[]).includes(flag)
+      )
+    ) {
+      return false
+    }
+
     // OR, unlike the AND-combined groups above.
     const languages = asArray(state[LANGUAGE_KEY])
     if (
@@ -199,6 +219,7 @@ export default function WalletsCatalog({
           purchaseOptions={purchaseOptions}
           networkOptions={networkOptions}
           languageOptions={languageOptions}
+          advancedOptions={advancedFilters}
           labels={labels.filter}
         />
       )}

@@ -18,12 +18,14 @@ export const DEVICES_KEY = "devices"
 export const NETWORKS_KEY = "networks"
 export const PURCHASES_KEY = "purchases"
 export const LANGUAGE_KEY = "language"
+export const ADVANCED_KEY = "advanced"
 
 const ALL_FILTER_KEYS = [
   DEVICES_KEY,
   NETWORKS_KEY,
   PURCHASES_KEY,
   LANGUAGE_KEY,
+  ADVANCED_KEY,
 ] as const
 
 // Category kept from the old sidebar for trend comparability.
@@ -39,6 +41,7 @@ type WalletFiltersLabels = {
   buySell: string
   network: string
   language: string
+  advanced: string
 }
 
 type WalletFiltersProps = {
@@ -49,6 +52,7 @@ type WalletFiltersProps = {
   purchaseOptions: WalletFilterOption[]
   networkOptions: WalletFilterOption[]
   languageOptions: WalletFilterOption[]
+  advancedOptions: WalletFilterOption[]
   labels: WalletFiltersLabels
 }
 
@@ -65,12 +69,14 @@ export default function WalletFilters({
   purchaseOptions,
   networkOptions,
   languageOptions,
+  advancedOptions,
   labels,
 }: WalletFiltersProps) {
   const devicesValue = state[DEVICES_KEY]
   const networksValue = state[NETWORKS_KEY]
   const purchasesValue = state[PURCHASES_KEY]
   const languageValue = state[LANGUAGE_KEY]
+  const advancedValue = state[ADVANCED_KEY]
 
   const selectedDevices = useMemo(() => asArray(devicesValue), [devicesValue])
   const selectedNetworks = useMemo(
@@ -84,6 +90,10 @@ export default function WalletFilters({
   const selectedLanguages = useMemo(
     () => asArray(languageValue),
     [languageValue]
+  )
+  const selectedAdvanced = useMemo(
+    () => asArray(advancedValue),
+    [advancedValue]
   )
 
   const onToggleDevice = useCallback(
@@ -132,6 +142,19 @@ export default function WalletFilters({
     [setFilter, selectedLanguages]
   )
 
+  const onToggleAdvanced = useCallback(
+    (optionId: string) => {
+      setFilter(ADVANCED_KEY, toggleId(selectedAdvanced, optionId), {
+        scroll: false,
+      })
+      trackFilterToggle(
+        optionId,
+        `${optionId} ${!selectedAdvanced.includes(optionId)}`
+      )
+    },
+    [setFilter, selectedAdvanced]
+  )
+
   return (
     <div>
       <WalletFilterGroup
@@ -169,6 +192,15 @@ export default function WalletFilters({
         options={languageOptions}
         selectedIds={selectedLanguages}
         onToggle={onToggleLanguage}
+      />
+
+      <WalletFilterGroup
+        locale={locale}
+        label={labels.advanced}
+        scrollable
+        options={advancedOptions}
+        selectedIds={selectedAdvanced}
+        onToggle={onToggleAdvanced}
       />
     </div>
   )

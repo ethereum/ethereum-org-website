@@ -56,6 +56,19 @@ export class FindWalletPage extends BasePage {
 
   async toggleDeviceFilter(label: string) {
     await this.openFiltersIfCollapsed()
+    await this.clickFilterOption(label)
+  }
+
+  async toggleAdvancedFilter(label: string) {
+    await this.openFiltersIfCollapsed()
+    const group = this.page.getByRole("button", { name: /^Advanced filters/ })
+    if ((await group.getAttribute("aria-expanded")) === "false") {
+      await group.click()
+    }
+    await this.clickFilterOption(label)
+  }
+
+  private async clickFilterOption(label: string) {
     await this.page
       .locator("label:visible")
       .filter({ hasText: new RegExp(`^${label}`) })
