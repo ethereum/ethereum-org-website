@@ -17,6 +17,7 @@ export default async function ValuesPageJsonLD({
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-values")
+  const tCommon = await getTranslations("common")
 
   const url = normalizeUrlForJsonLd(locale, `/values/`)
 
@@ -49,7 +50,7 @@ export default async function ValuesPageJsonLD({
             {
               "@type": "ListItem",
               position: 1,
-              name: "Home",
+              name: tCommon("home"),
               item: normalizeUrlForJsonLd(locale, "/"),
             },
             {
@@ -76,9 +77,8 @@ export default async function ValuesPageJsonLD({
         contributor: contributorList,
         about: {
           "@type": "Thing",
-          name: "Ethereum's core principles",
-          description:
-            "The core principles behind Ethereum: privacy, open source, censorship resistance, and security",
+          name: t("page-values-meta-title"),
+          description: t("page-values-meta-description"),
         },
       },
       {
