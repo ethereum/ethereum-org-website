@@ -21,8 +21,8 @@ import WalletFilters, {
   LANGUAGE_KEY,
   NETWORKS_KEY,
   PURCHASES_KEY,
+  WalletFiltersHeader,
 } from "./WalletFilters"
-import WalletFiltersHeader from "./WalletFiltersHeader"
 
 const PURCHASE_IDS = ["buy_crypto", "withdraw_crypto"] as const
 
@@ -42,7 +42,7 @@ export type WalletCatalogLabels = {
   }
   /** Filter group headers (WalletFilters). */
   filter: { device: string; buySell: string; network: string; language: string }
-  /** Sidebar header row (WalletFiltersHeader). */
+  /** Sidebar "Filters (N) · Reset" row. */
   header: { filters: string; reset: string }
   buyCrypto: string
   sellCrypto: string

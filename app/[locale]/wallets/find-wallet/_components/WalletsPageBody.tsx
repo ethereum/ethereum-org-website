@@ -10,11 +10,13 @@ import type {
   CatalogWallet,
   WalletLanguageOption,
   WalletNetwork,
-  WalletPersonaId,
 } from "@/lib/utils/walletData"
 
 import { buildDeviceLabels } from "@/data/wallets/devices"
-import { buildPersonaLabels } from "@/data/wallets/personas"
+import {
+  buildPersonaLabels,
+  type WalletPersonaId,
+} from "@/data/wallets/personas"
 
 import WalletPersonaCards from "./WalletPersonaCards"
 import WalletsCatalog, { type WalletCatalogLabels } from "./WalletsCatalog"

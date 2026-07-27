@@ -1,6 +1,7 @@
 "use client"
 
 import { useCallback, useMemo } from "react"
+import { RotateCcw } from "lucide-react"
 
 import type {
   CatalogFilterState,
@@ -18,6 +19,13 @@ export const DEVICES_KEY = "devices"
 export const NETWORKS_KEY = "networks"
 export const PURCHASES_KEY = "purchases"
 export const LANGUAGE_KEY = "language"
+
+const ALL_FILTER_KEYS = [
+  DEVICES_KEY,
+  NETWORKS_KEY,
+  PURCHASES_KEY,
+  LANGUAGE_KEY,
+] as const
 
 // Matomo category kept from the old sidebar for trend comparability.
 const trackFilterToggle = (action: string, name: string) =>
@@ -166,6 +174,50 @@ export default function WalletFilters({
         selectedIds={selectedLanguages}
         onToggle={onToggleLanguage}
       />
+    </div>
+  )
+}
+
+/**
+ * "Filters (N) · Reset" row shown above the search input (outside the bordered
+ * group box) — rendered via FilterableCatalog's `renderSidebarHeader` slot so
+ * the shared search input can sit between it and the filter groups.
+ */
+export function WalletFiltersHeader({
+  state,
+  setFilter,
+  labels,
+}: {
+  state: CatalogFilterState
+  setFilter: CatalogSetFilter
+  labels: { filters: string; reset: string }
+}) {
+  const activeCount = ALL_FILTER_KEYS.reduce(
+    (total, key) => total + asArray(state[key]).length,
+    0
+  )
+
+  const reset = useCallback(() => {
+    for (const key of ALL_FILTER_KEYS) {
+      setFilter(key, undefined, { scroll: false })
+    }
+    trackFilterToggle("Reset button", "reset_click")
+  }, [setFilter])
+
+  return (
+    <div className="flex items-center justify-between px-1">
+      <p className="text-sm font-bold">
+        {labels.filters} ({activeCount})
+      </p>
+      <button
+        type="button"
+        onClick={reset}
+        disabled={activeCount === 0}
+        className="flex items-center gap-1.5 text-sm text-primary transition-opacity hover:underline disabled:pointer-events-none disabled:opacity-40"
+      >
+        <RotateCcw className="size-4" />
+        {labels.reset}
+      </button>
     </div>
   )
 }

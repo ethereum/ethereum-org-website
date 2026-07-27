@@ -5,9 +5,8 @@ import { FieldLegend, FieldSet } from "@/components/ui/field"
 import { BaseLink } from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
-import type { WalletPersonaId } from "@/lib/utils/walletData"
 
-import { WALLET_PERSONAS } from "@/data/wallets/personas"
+import { WALLET_PERSONAS, type WalletPersonaId } from "@/data/wallets/personas"
 
 type WalletPersonaCardsProps = {
   locale: string
