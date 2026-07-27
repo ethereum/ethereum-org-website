@@ -113,31 +113,9 @@ const GLOSSARY_TOOLTIP_PREFIXES: string[] = [
   "/roadmap/",
 ]
 
-const QUIZZES_PREFIXES: string[] = [
-  "/layer-2/learn/",
-  "/layer-2/",
-  "/roadmap/merge/",
-  "/roadmap/scaling/",
-  "/staking/solo/",
-  "/defi/",
-  "/eth/",
-  "/gas/",
-  "/nft/",
-  "/privacy/",
-  "/quizzes/",
-  "/run-a-node/",
-  "/security/",
-  "/smart-contracts/",
-  "/stablecoins/",
-  "/wallets/",
-  "/web3/",
-  "/what-is-ether/",
-  "/what-is-ethereum/",
-]
-
 const LAYOUT_NAMESPACES: Record<string, string[]> = {
   docs: ["page-developers-docs"],
-  "use-cases": ["template-usecase", "learn-quizzes"],
+  "use-cases": ["template-usecase"],
   upgrade: ["page-upgrades", "page-upgrades-index"],
   tutorial: ["page-developers-tutorials"],
 }
@@ -219,13 +197,6 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   for (const prefix of GLOSSARY_TOOLTIP_PREFIXES) {
     if (path.startsWith(prefix)) {
       requiredNamespaces.push("glossary-tooltip")
-      break
-    }
-  }
-
-  for (const prefix of QUIZZES_PREFIXES) {
-    if (path.startsWith(prefix)) {
-      requiredNamespaces.push("learn-quizzes")
       break
     }
   }
