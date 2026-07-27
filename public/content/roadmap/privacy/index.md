@@ -47,7 +47,7 @@ Two protocol-level upgrades address this problem together:
 
 [**EIP-8141 (Frame Transactions)**](https://eips.ethereum.org/EIPS/eip-8141) introduces a new transaction type that splits transactions into segments for signature validation and fee authorization, and for the actual transaction instructions. Frame transactions allow [smart accounts](/roadmap/account-abstraction/) to define their own signature schemes and use external contracts to cover gas fees. Strict sandboxing rules in the mempool prevent these transactions from opening the network to denial-of-service attacks.
 
-Frame transactions are being considered for Ethereum's [Hegotá upgrade](https://forkcast.org/upgrade/hegota/), the next network upgrade after the upcoming [Glamsterdam upgrade](/roadmap/glamsterdam/). The same upgrade will also allow smart accounts to adopt [quantum-safe signatures](/roadmap/future-proofing/quantum-resistance/) before the full post-quantum network transition is complete.
+Frame transactions are being considered for Ethereum's [Hegotá upgrade](https://forkcast.org/upgrade/hegota/), the next network upgrade after the upcoming [Glamsterdam upgrade](/roadmap/glamsterdam/). The same upgrade will also allow smart accounts to adopt [quantum-safe signatures](/roadmap/security/quantum-resistance/) before the full post-quantum network transition is complete.
 
 <ExpandableCard title="How do frame transactions (EIP-8141) enable privacy?" eventCategory="/roadmap/privacy" eventName="clicked how do frame transactions enable privacy?">
 
@@ -57,7 +57,7 @@ Frame transactions allow accounts to choose their own signature verification met
 
 [**EIP-7805 (Fork-Choice Enforced Inclusion Lists, or FOCIL)**](https://eips.ethereum.org/EIPS/eip-7805) provides the enforcement mechanism for private writes. Block proposers are required by consensus rules to include transactions in their blocks from aggregated local inclusion lists, which collect transactions from multiple sources. If a block builder attempts to censor a transaction that appeared on the inclusion lists, attesting nodes reject the proposed block entirely. FOCIL is currently being considered for the [Hegotá upgrade](https://forkcast.org/upgrade/hegota/).
 
-Frame Transactions give users the flexibility to build privacy-preserving transactions with custom signature schemes, while FOCIL ensures those transactions cannot be selectively censored once they enter the mempool. Together they address two different failure points: one enables the format of private transactions, the other guarantees their inclusion. No central actor can block a valid private transfer.
+Frame transactions give users the flexibility to build privacy-preserving transactions with custom signature schemes, while FOCIL ensures those transactions cannot be selectively censored once they enter the mempool. Together they address two different failure points: one enables the format of private transactions, the other guarantees their inclusion. No central actor can block a valid private transfer.
 
 <VideoWatch slug="eip-7805-focil-explained" />
 
@@ -75,7 +75,7 @@ Historically, app-level privacy solutions have fractured liquidity and suffered 
 
 Other research approaches being advanced for transaction privacy include proofs that allow users to demonstrate that transaction amounts are valid without revealing the actual values (like bulletproofs and range proofs). Research into **confidential transactions** aims to hide amounts while still allowing the network to verify that no value is created or destroyed.
 
-These payment-layer solutions build on the infrastructure described earlier in this section. PIR protects the preparation phase, Frame Transactions and FOCIL ensure private payments reach the mempool without censorship, and zkVMs enable the complex cryptography required for value hiding while maintaining network security guarantees.
+These payment-layer solutions build on the infrastructure described earlier in this section. PIR protects the preparation phase, frame transactions and FOCIL ensure private payments reach the mempool without censorship, and zkVMs enable the complex cryptography required for value hiding while maintaining network security guarantees.
 
 ## Private proving and identity protection {#private-proving}
 
@@ -89,13 +89,13 @@ On Ethereum's privacy roadmap, private proving is supported by complementary inf
 
 The "zkVM" name carries a nuance; most systems called zkVMs today are succinct rather than zero-knowledge. Their proofs are small and fast to verify, but do not necessarily hide the data used to generate them. Today, only a handful of proving systems provide the hiding property that privacy applications depend on. The [Client-Side Proving benchmarks](https://ethproofs.org/csp-benchmarks) track which zkVMs have been analyzed for actual zero-knowledge in their system properties. Closing that gap is part of the roadmap's private proving work.
 
-Frame Transactions (EIP-8141) are also connected to implementing zkVMs. They can use custom verification schemes to submit proof-verified state transitions, allowing apps to offer private execution environments and submit the cryptographic proof to the public Ethereum network that the action was done correctly, without exposing the transaction data itself.
+Frame transactions (EIP-8141) are also connected to implementing zkVMs. They can use custom verification schemes to submit proof-verified state transitions, allowing apps to offer private execution environments and submit the cryptographic proof to the public Ethereum network that the action was done correctly, without exposing the transaction data itself.
 
 Zero-knowledge proofs are excellent for allowing individuals to prove their data is valid while keeping it private, but they cannot easily manage smart contracts where multiple users need to interact with a shared pool of secret data at the same time.
 
 To bridge this gap, Ethereum's roadmap incorporates **Fully Homomorphic Encryption (FHE)**. FHE allows smart contracts to run calculations directly on encrypted data without ever having to decrypt or expose the underlying information. Integrating FHE building blocks and specialized cryptographic coprocessors into Ethereum is essential for decentralized applications that rely on a shared "hidden state," like private automated market makers (AMMs), confidential lending pools, or sealed-bid auctions where everyone's inputs must interact while remaining completely secret.
 
-**Client-side proving** makes generating these privacy proofs practical on everyday devices. The Client-Side Proving project maintains a public benchmark suite comparing proving systems and zkVMs on consumer hardware, publishing results at [ethproofs.org](https://ethproofs.org). Technical research aims for transparent, [post-quantum](/roadmap/future-proofing/quantum-resistance/) proofs with direct onchain verification, making private computation faster, easier to verify directly on the Ethereum network, and viable on mobile devices.
+**Client-side proving** makes generating these privacy proofs practical on everyday devices. The Client-Side Proving project maintains a public benchmark suite comparing proving systems and zkVMs on consumer hardware, publishing results at [ethproofs.org](https://ethproofs.org). Technical research aims for transparent, [post-quantum](/roadmap/security/quantum-resistance/) proofs with direct onchain verification, making private computation faster, easier to verify directly on the Ethereum network, and viable on mobile devices.
 
 The [**zkID initiative**](https://pse.dev/projects/zk-id) has produced open-source infrastructure aligned with global identity frameworks, including the European Digital Identity (EUDI) wallet. The Open Anonymous Credentials (OpenAC) system provides unlinkability for issued credentials, ensuring that multiple proofs generated by the same user across different platforms cannot be correlated back to a single profile.
 
