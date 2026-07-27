@@ -453,3 +453,32 @@ A user-facing `<ExpandableCard title= "...">` title shipped **untranslated in al
 - JSON files with 40+ entries can exceed Opus context window — plan for Sonnet fallback or 3-way split
 - 5-agent parallel review architecture validated in Turkish review: Core Pages, Dev Docs, Tutorials, JSON Batch A, JSON Batch B
 - Recommended sub-agent split for Phase 2+: MDX Syntax, Brand Names, Href Validation, Semantic Review, Build Verification
+
+### 30. Compound glossary entries lose to their bare counterpart on a new page (CRITICAL — recurring)
+
+ETHGlossary carries distinct entries for a bare term and its compound (`zero-knowledge` vs `zero-knowledge proof`; `proposer` vs `block proposer`; `anonymity` vs `anonymity set`). When the pipeline translates a **brand-new** page, it frequently resolves the bare entry and appends a literal/transliterated head noun, producing e.g. bn `জিরো-নলেজ প্রুফ` instead of `শূন্য-জ্ঞান প্রমাণ`, or uk `пропонент блоку` instead of `пропонувач блоку`. Pattern 20 covers the inverse false positive; this is the true-positive direction.
+
+**Tell that it is real, not a variant:** the same PR's *sibling* file usually renders the compound correctly (a video transcript alongside the roadmap page). Cross-file disagreement inside one PR is the signal.
+
+**Detect deterministically:** for a page whose English contains a compound term, extract the locale's rendering of the shortest unambiguous anchor — the markdown link text is ideal (`- [Zero-knowledge proofs](/zero-knowledge-proofs/)` -> one line per locale) — and diff against the glossary's compound entry. Prefix/substring matching on inflected languages produces both false 0s and inflated counts; compare the whole link text instead.
+
+**Fix scope discipline:** only the noun-phrase occurrences change. Adjectival uses (`truly zero-knowledge`, `zero-knowledge passport verification`, `zero-knowledge voting`, `zkVM`) legitimately keep the bare entry.
+
+### 31. Partial speaker-label transliteration in video transcripts is a convention question, not a defect (WARNING)
+
+Long transcripts show `**Speaker Name:**` bylines left in Latin while the body text of the same turn is fully translated. Counts from PR #18925 `eip-7805-focil-explained` (85 labels): ja 45 Latin, ko 46, bn 11, ru 10, mr 4, uk 4, hi 3.
+
+**The failure unit is the `####` section, all-or-nothing, and it repeats across languages.** Every affected section has 100% of its labels untranslated; unaffected sections have 0%. The *same* sections fail in unrelated locales — section@136 in ru/bn/uk/ja/ko, section@168 in hi/ru/ja/ko, section@206 in mr/ja/ko. Since per-language runs are independent, identical section-level failures mean the pipeline splits the document into section-sized units and the name-transliteration step skips some units outright. Deterministic, reproducible, upstream — not model randomness.
+
+Verify with: for each locale, bucket `^\*\*.+:\*\*` label lines by preceding `^#### ` heading and compare the Latin-label count to the section total. A section that is 4/4 or 0/4 (never 2/4) confirms the mechanism.
+
+**Do not hand-fix.** `zh` (57/57) and `zh-tw` (44/44) keep *every* label in Latin, i.e. all-Latin is an accepted locale convention, so there is no single correct target — hand-fixing means imposing arbitrary transliterations across scripts. Fix upstream in the name-substitution pass, or leave. Agents disagree on severity for exactly this reason (ru's agent called it critical; uk/mr/hi's called it a warning).
+
+### All 24 languages -- privacy roadmap import, Reviewed PR #18925 (intl/pending-privacy-roadmap)
+- 24 langs x 6 files each (3 new markdown: `roadmap/privacy`, 2 video transcripts; 3 UI-string JSON) = 144 content files + 216 manifests. Fleet avg **~9.5/10**.
+- **Deterministic layer clean fleet-wide except `ur`:** `roadmap/privacy/index.md` truncated at 41% (2 of 6 sections, 57/136 lines), ending mid-sentence on a leaked `<HTML-PLACEHOLDER-LINK-d08112` (MDX build-breaker) plus `EIP-۸۱۴۱` Eastern-Arabic numerals in an identifier. **Repaired by a scoped pipeline re-run** (`target_path` + `target_languages=ur` + `mode=full`), NOT hand-translated — the sanctioned repair for missing content.
+- **10 criticals hand-fixed** (`39e2229215`), all pattern-30 compound-entry misses plus pl `receipts` (retail sense `paragony` for the Ethereum sense `pokwitowanie`) and it `Omoforma` (not an Italian word; `Omomorfa`).
+- **JSON key deletions were all legitimate prunes** — verify with a true key-set difference (`comm -23 old new | comm -12 - en`), never by grepping `^-` diff lines: modified keys emit a `-`/`+` pair and a naive grep reported 61 phantom regressions.
+- **English line 58 is a fleet-wide weak spot:** the FOCIL/`block proposer` sentence drew criticals in ja/tr/uk/zh-tw and warnings in pt-br/sw/mr — 7 of 24 locales fumbled the same sentence. Two distinct causes, do not conflate them: `block proposer`/`block builder` ARE in ETHGlossary (so those misses are pattern-30 compound-resolution failures, and adding glossary entries will not help), whereas `inclusion list`, `attester`/`attesting node`, `FOCIL`/`fork-choice`, and `censorship resistance` are **absent from ETHGlossary** — which is why each locale improvised, sometimes 2-3 renderings within one file (de Inclusion List vs Inklusionsliste; vi two forms ~15x each; mr three forms; attester varying across hi/mr/ru/id/ja). Those four are real glossary gaps worth filing.
+- **Suspect bare entry:** `builder => Ersteller` (de) coexists with `block builder => Block-Builder`. Bare "builder" in Ethereum prose still means block builder, so the bare entry produced a glossary-compliant but contextually wrong "Der Ersteller beobachtet" for "The builder observes".
+- **Methodology:** deterministic sweeps (structure, anchors, hrefs, fences, numerals, placeholder leaks, JSON key sets) ran *before* the agents and found the only build-breaker; the 24 one-per-language Sonnet agents then supplied the judgment layer. Telling agents which checks were already done kept their reports focused and cut re-reported noise to near zero.
