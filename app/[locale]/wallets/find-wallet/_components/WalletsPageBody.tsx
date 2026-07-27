@@ -69,7 +69,7 @@ const WalletsPageBody = async ({
   const catalogLabels: WalletCatalogLabels = {
     catalog: {
       searchPlaceholder: t("page-find-wallet-search-wallets"),
-      resultsLabel: t("page-find-wallet-table-title"),
+      resultsLabel: t("page-find-wallet-results-label"),
       noResults: t("page-find-wallet-empty-results-title"),
       filtersToggle: t("page-find-wallet-filters"),
       applyLabel: t("page-find-wallet-show-results"),

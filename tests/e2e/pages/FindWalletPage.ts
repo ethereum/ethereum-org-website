@@ -11,9 +11,9 @@ export class FindWalletPage extends BasePage {
   private readonly url = "/wallets/find-wallet"
 
   private readonly pageHeading: Locator
-  // Results count line: "Browse all wallets: <shown> / <total>". The regex
-  // requires the "/ total" so it doesn't also match the "all wallets" persona
-  // card (which reads "… available").
+  // Results count line: "Wallets found: <shown> / <total>". The regex requires
+  // the "/ total" so it doesn't also match a persona card (which reads
+  // "… available").
   private readonly resultsCounter: Locator
 
   constructor(page: Page) {
@@ -21,7 +21,7 @@ export class FindWalletPage extends BasePage {
     this.pageHeading = page.getByRole("heading", {
       name: testData.content.headings.findWallet,
     })
-    this.resultsCounter = page.getByText(/Browse all wallets:\s*\d+\s*\/\s*\d+/)
+    this.resultsCounter = page.getByText(/Wallets found:\s*\d+\s*\/\s*\d+/)
   }
 
   async goto() {

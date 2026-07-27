@@ -19,7 +19,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { getLocaleFormattedDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
-import { getCatalogWallets, getWalletBySlug } from "@/lib/utils/walletData"
+import { getAllWalletSlugs, getWalletBySlug } from "@/lib/utils/walletData"
 
 import { buildDeviceLabels, getDeviceLabels } from "@/data/wallets/devices"
 import {
@@ -226,9 +226,9 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
 
 export function generateStaticParams() {
   // Prebuild English wallet pages; other locales render on demand.
-  return getCatalogWallets(DEFAULT_LOCALE).map((wallet) => ({
+  return getAllWalletSlugs().map((wallet) => ({
     locale: DEFAULT_LOCALE,
-    wallet: wallet.slug,
+    wallet,
   }))
 }
 

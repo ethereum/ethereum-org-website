@@ -57,6 +57,13 @@ export const getWalletSlug = (
   wallet: Pick<WalletData, "name" | "slug">
 ): string => wallet.slug ?? slugify(wallet.name)
 
+/**
+ * Every wallet slug, for route generation. Skips the shuffle + full enrichment
+ * `getCatalogWallets` does, which callers that only need slugs don't pay for.
+ */
+export const getAllWalletSlugs = (): string[] =>
+  walletsData.map((wallet) => getWalletSlug(wallet))
+
 /** Persona ids a wallet qualifies for (all of a persona's features true). */
 export function getWalletPersonaIds(wallet: WalletData): WalletPersonaId[] {
   return WALLET_PERSONAS.filter((persona) =>
