@@ -2,7 +2,9 @@ import type { ComponentProps } from "react"
 import { fn } from "storybook/test"
 import type { Meta, StoryObj } from "@storybook/nextjs"
 
-import QuizWidget, { type QuizWidgetProps } from "../QuizWidget"
+import QuizWidget, {
+  type QuizWidgetProps,
+} from "../QuizWidget/QuizWidgetClient"
 import QuizzesModal from "../QuizzesModal"
 
 import { LAYER_2_QUIZ_KEY } from "./utils"
