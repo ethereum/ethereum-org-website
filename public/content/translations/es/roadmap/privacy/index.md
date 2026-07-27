@@ -1,6 +1,6 @@
 ---
 title: La hoja de ruta de privacidad para Ethereum
-description: Ethereum está trabajando para hacer de la privacidad una propiedad de primer nivel de la red a través de actualizaciones que protegen la privacidad de las transacciones, aseguran el acceso a los datos del usuario y permiten una identidad verificable pero privada.
+description: "Ethereum está trabajando para hacer de la privacidad una propiedad de primer nivel de la red a través de actualizaciones que protegen la privacidad de las transacciones, aseguran el acceso a los datos del usuario y permiten una identidad verificable pero privada."
 lang: es
 image: /images/roadmap/roadmap-security.png
 alt: "Hoja de ruta de Ethereum"

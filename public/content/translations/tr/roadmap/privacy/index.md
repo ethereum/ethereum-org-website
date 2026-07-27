@@ -1,6 +1,6 @@
 ---
-title: Ethereum için gizlilik yol haritası
-description: Ethereum, işlem gizliliğini koruyan, kullanıcı veri erişimini güvence altına alan ve doğrulanabilir ancak gizli kimliğe olanak tanıyan güncellemeler aracılığıyla gizliliği ağın birinci sınıf bir özelliği haline getirmek için çalışıyor.
+title: "Ethereum için gizlilik yol haritası"
+description: "Ethereum, işlem gizliliğini koruyan, kullanıcı veri erişimini güvence altına alan ve doğrulanabilir ancak gizli kimliğe olanak tanıyan güncellemeler aracılığıyla gizliliği ağın birinci sınıf bir özelliği haline getirmek için çalışıyor."
 lang: tr
 image: /images/roadmap/roadmap-security.png
 alt: "Ethereum yol haritası"

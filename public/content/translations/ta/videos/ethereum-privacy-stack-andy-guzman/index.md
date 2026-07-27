@@ -10,7 +10,7 @@ topic:
   - "privacy"
   - "roadmap-and-priorities"
 format: presentation
-author: எத்போல்டர்
+author: "எத்போல்டர்"
 breadcrumb: "எத்திரியம் தனியுரிமை அடுக்கு"
 ---
 

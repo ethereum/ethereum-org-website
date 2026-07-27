@@ -11,11 +11,11 @@ topic:
   - "network-upgrades"
   - "roadmap-and-priorities"
 format: presentation
-author: ECH 인스티튜트
+author: "ECH 인스티튜트"
 breadcrumb: "EIP-7805 (FOCIL)"
 ---
 
-Ethereum Cat Herders의 **PEEPanEIP** 에피소드 141입니다. 진행자 푸자 란잔(Pooja Ranjan)이 이더리움 재단 Robust Incentives Group의 연구원이자 [EIP-7805](https://eips.ethereum.org/EIPS/eip-7805)의 공동 저자인 **토마스 티에리**와 **줄리안 마**를 모시고 포크 선택 강제 포함 목록(FOCIL)에 대해 설명합니다. 이더리움에 프로토콜 수준의 검열 저항성이 필요한 이유, 메커니즘의 작동 방식, 그리고 구현 현황을 다룹니다.
+Ethereum Cat Herders의 **PEEPanEIP** 에피소드 141입니다. 진행자 푸자 란잔(Pooja Ranjan)이 이더리움 재단 Robust Incentives Group의 연구원이자 [EIP-7805](https://eips.ethereum.org/EIPS/eip-7805)의 공동 저자인 <strong>토마스 티에리</strong>와 <strong>줄리안 마</strong>를 모시고 포크 선택 강제 포함 목록(FOCIL)에 대해 설명합니다. 이더리움에 프로토콜 수준의 검열 저항성이 필요한 이유, 메커니즘의 작동 방식, 그리고 구현 현황을 다룹니다.
 
 *이 대본은 Ethereum Cat Herders가 게시한 [원본 비디오 대본](https://www.youtube.com/watch?v=cUGyLx-mf6I)의 접근성 향상 버전입니다. 가독성을 위해 약간의 편집을 거쳤습니다.*
 

@@ -1,9 +1,9 @@
 ---
-title: Lộ trình quyền riêng tư cho Ethereum
-description: Ethereum đang nỗ lực đưa quyền riêng tư trở thành thuộc tính hàng đầu của mạng lưới thông qua các bản nâng cấp giúp bảo vệ quyền riêng tư của giao dịch, bảo mật quyền truy cập dữ liệu người dùng và cho phép danh tính có thể xác minh nhưng vẫn riêng tư.
+title: "Lộ trình quyền riêng tư cho Ethereum"
+description: "Ethereum đang nỗ lực đưa quyền riêng tư trở thành thuộc tính hàng đầu của mạng lưới thông qua các bản nâng cấp giúp bảo vệ quyền riêng tư của giao dịch, bảo mật quyền truy cập dữ liệu người dùng và cho phép danh tính có thể xác minh nhưng vẫn riêng tư."
 lang: vi
 image: /images/roadmap/roadmap-security.png
-alt: Lộ trình Ethereum
+alt: "Lộ trình Ethereum"
 template: roadmap
 ---
 

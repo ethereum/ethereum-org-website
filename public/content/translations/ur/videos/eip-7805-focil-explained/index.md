@@ -11,7 +11,7 @@ topic:
   - "network-upgrades"
   - "roadmap-and-priorities"
 format: presentation
-author: ای سی ایچ انسٹی ٹیوٹ
+author: "ای سی ایچ انسٹی ٹیوٹ"
 breadcrumb: "⁦EIP-7805⁩ (⁦FOCIL⁩)"
 ---
 

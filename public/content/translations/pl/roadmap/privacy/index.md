@@ -1,6 +1,6 @@
 ---
-title: Mapa drogowa prywatności dla Ethereum
-description: Ethereum pracuje nad tym, aby prywatność stała się pierwszorzędną cechą sieci poprzez aktualizacje, które chronią prywatność transakcji, zabezpieczają dostęp do danych użytkowników i umożliwiają weryfikowalną, ale prywatną tożsamość.
+title: "Mapa drogowa prywatności dla Ethereum"
+description: "Ethereum pracuje nad tym, aby prywatność stała się pierwszorzędną cechą sieci poprzez aktualizacje, które chronią prywatność transakcji, zabezpieczają dostęp do danych użytkowników i umożliwiają weryfikowalną, ale prywatną tożsamość."
 lang: pl
 image: /images/roadmap/roadmap-security.png
 alt: Mapa drogowa Ethereum

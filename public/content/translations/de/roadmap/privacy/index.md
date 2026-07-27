@@ -1,6 +1,6 @@
 ---
-title: Die Privatsphäre-Roadmap für Ethereum
-description: Ethereum arbeitet daran, Privatsphäre durch Upgrades zu einer erstklassigen Eigenschaft des Netzwerks zu machen. Diese Upgrades schützen die Privatsphäre von Transaktionen, sichern den Zugriff auf Benutzerdaten und ermöglichen eine verifizierbare, aber private Identität.
+title: "Die Privatsphäre-Roadmap für Ethereum"
+description: "Ethereum arbeitet daran, Privatsphäre durch Upgrades zu einer erstklassigen Eigenschaft des Netzwerks zu machen. Diese Upgrades schützen die Privatsphäre von Transaktionen, sichern den Zugriff auf Benutzerdaten und ermöglichen eine verifizierbare, aber private Identität."
 lang: de
 image: /images/roadmap/roadmap-security.png
 alt: "Ethereum-Roadmap"

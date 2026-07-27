@@ -1,9 +1,9 @@
 ---
-title: Plán rozvoje soukromí pro Ethereum
-description: Ethereum pracuje na tom, aby se soukromí stalo prvotřídní vlastností sítě prostřednictvím aktualizací, které chrání soukromí transakcí, zabezpečují přístup k uživatelským datům a umožňují ověřitelnou, ale soukromou identitu.
+title: "Plán rozvoje soukromí pro Ethereum"
+description: "Ethereum pracuje na tom, aby se soukromí stalo prvotřídní vlastností sítě prostřednictvím aktualizací, které chrání soukromí transakcí, zabezpečují přístup k uživatelským datům a umožňují ověřitelnou, ale soukromou identitu."
 lang: cs
 image: /images/roadmap/roadmap-security.png
-alt: Plán rozvoje Etherea
+alt: "Plán rozvoje Etherea"
 template: roadmap
 ---
 

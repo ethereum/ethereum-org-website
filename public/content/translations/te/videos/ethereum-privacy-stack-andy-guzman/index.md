@@ -10,7 +10,7 @@ topic:
   - "privacy"
   - "roadmap-and-priorities"
 format: presentation
-author: ఎత్‌బోల్డర్
+author: "ఎత్‌బోల్డర్"
 breadcrumb: "ఎథీరియం గోప్యత స్టాక్"
 ---
 

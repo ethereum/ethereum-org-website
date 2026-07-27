@@ -14,7 +14,7 @@ author: EthBoulder
 breadcrumb: "이더리움 프라이버시 스택"
 ---
 
-이더리움 재단의 PSE(Privacy Stewards of Ethereum) 팀 리더인 **앤디 구즈만(Andy Guzman)**이 EthBoulder 2026에서 진행한 강연입니다. 그는 이더리움 프라이버시의 주요 사각지대를 폭로합니다. 트랜잭션에 서명하지 않는 사용자조차도 일상적인 쿼리를 통해 상세한 행동 데이터를 유출하고 있다는 것입니다. 그는 프라이빗 읽기(PIR), 트래픽 프라이버시(어니언 라우팅 및 믹스넷), 통합 이진 트리(unified binary trees) 및 ZK 검증 가능 상태(ZK-verifiable state)와 같은 성능 개선 작업을 다루는 이더리움 프라이버시 스택을 소개합니다.
+이더리움 재단의 PSE(Privacy Stewards of Ethereum) 팀 리더인 <strong>앤디 구즈만(Andy Guzman)</strong>이 EthBoulder 2026에서 진행한 강연입니다. 그는 이더리움 프라이버시의 주요 사각지대를 폭로합니다. 트랜잭션에 서명하지 않는 사용자조차도 일상적인 쿼리를 통해 상세한 행동 데이터를 유출하고 있다는 것입니다. 그는 프라이빗 읽기(PIR), 트래픽 프라이버시(어니언 라우팅 및 믹스넷), 통합 이진 트리(unified binary trees) 및 ZK 검증 가능 상태(ZK-verifiable state)와 같은 성능 개선 작업을 다루는 이더리움 프라이버시 스택을 소개합니다.
 
 *이 스크립트는 EthBoulder가 게시한 [원본 비디오 스크립트](https://www.youtube.com/watch?v=tvAqDJXCBaA)의 접근성 향상 버전입니다. 가독성을 위해 약간의 편집을 거쳤습니다.*
 

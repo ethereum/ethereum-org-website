@@ -11,7 +11,7 @@ topic:
   - "network-upgrades"
   - "roadmap-and-priorities"
 format: presentation
-author: ஈசிஎச் இன்ஸ்டிடியூட்
+author: "ஈசிஎச் இன்ஸ்டிடியூட்"
 breadcrumb: "EIP-7805 (FOCIL)"
 ---
 

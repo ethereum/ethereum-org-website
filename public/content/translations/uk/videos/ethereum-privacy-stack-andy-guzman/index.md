@@ -10,7 +10,7 @@ topic:
   - "privacy"
   - "roadmap-and-priorities"
 format: presentation
-author: ЕтБоулдер
+author: "ЕтБоулдер"
 breadcrumb: "Стек приватності Етеріуму"
 ---
 

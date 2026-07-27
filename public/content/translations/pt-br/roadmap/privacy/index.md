@@ -1,6 +1,6 @@
 ---
 title: O roteiro de privacidade do Ethereum
-description: O Ethereum está trabalhando para tornar a privacidade uma propriedade de primeira classe da rede por meio de atualizações que protegem a privacidade das transações, garantem o acesso aos dados do usuário e permitem uma identidade verificável, porém privada.
+description: "O Ethereum está trabalhando para tornar a privacidade uma propriedade de primeira classe da rede por meio de atualizações que protegem a privacidade das transações, garantem o acesso aos dados do usuário e permitem uma identidade verificável, porém privada."
 lang: pt-br
 image: /images/roadmap/roadmap-security.png
 alt: "Roteiro do Ethereum"

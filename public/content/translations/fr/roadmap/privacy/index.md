@@ -1,6 +1,6 @@
 ---
-title: La feuille de route de la confidentialité pour Ethereum
-description: Ethereum s'efforce de faire de la confidentialité une propriété de premier ordre du réseau grâce à des mises à niveau qui protègent la confidentialité des transactions, sécurisent l'accès aux données des utilisateurs et permettent une identité vérifiable mais privée.
+title: "La feuille de route de la confidentialité pour Ethereum"
+description: "Ethereum s'efforce de faire de la confidentialité une propriété de premier ordre du réseau grâce à des mises à niveau qui protègent la confidentialité des transactions, sécurisent l'accès aux données des utilisateurs et permettent une identité vérifiable mais privée."
 lang: fr
 image: /images/roadmap/roadmap-security.png
 alt: "Feuille de route d'Ethereum"

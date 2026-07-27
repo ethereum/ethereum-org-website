@@ -11,7 +11,7 @@ topic:
   - "network-upgrades"
   - "roadmap-and-priorities"
 format: presentation
-author: І-Сі-Ейч Інститут
+author: "І-Сі-Ейч Інститут"
 breadcrumb: "EIP-7805 (FOCIL)"
 ---
 

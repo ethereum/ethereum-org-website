@@ -10,7 +10,7 @@ topic:
   - "privacy"
   - "roadmap-and-priorities"
 format: presentation
-author: एथबोल्डर
+author: "एथबोल्डर"
 breadcrumb: "इथेरियम गोपनीयता स्टॅक"
 ---
 

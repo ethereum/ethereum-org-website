@@ -1,6 +1,6 @@
 ---
 title: La roadmap della privacy per Ethereum
-description: Ethereum sta lavorando per rendere la privacy una proprietà di prim'ordine della rete attraverso aggiornamenti che proteggono la privacy delle transazioni, mettono al sicuro l'accesso ai dati degli utenti e abilitano un'identità verificabile ma privata.
+description: "Ethereum sta lavorando per rendere la privacy una proprietà di prim'ordine della rete attraverso aggiornamenti che proteggono la privacy delle transazioni, mettono al sicuro l'accesso ai dati degli utenti e abilitano un'identità verificabile ma privata."
 lang: it
 image: /images/roadmap/roadmap-security.png
 alt: Roadmap di Ethereum

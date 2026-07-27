@@ -10,7 +10,7 @@ topic:
   - "privacy"
   - "roadmap-and-priorities"
 format: presentation
-author: إيث بولدر
+author: "إيث بولدر"
 breadcrumb: "حزمة الخصوصية في إيثيريوم"
 ---
 

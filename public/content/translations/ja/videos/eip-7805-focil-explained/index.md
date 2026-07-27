@@ -11,7 +11,7 @@ topic:
   - "network-upgrades"
   - "roadmap-and-priorities"
 format: presentation
-author: ECHインスティテュート
+author: "ECHインスティテュート"
 breadcrumb: "EIP-7805 (FOCIL)"
 ---
 
