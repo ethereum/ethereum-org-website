@@ -347,6 +347,8 @@
   "nav-roadmap-options-alt": "Roadmap options dropdown menu",
   "nav-roadmap-overview-description": "The future of Ethereum",
   "nav-roadmap-pbs": "Proposer-builder separation",
+  "nav-roadmap-privacy-description": "Upgrades making privacy a network-level default",
+  "nav-roadmap-privacy-label": "Privacy",
   "nav-roadmap-quantum-resistance": "Quantum resistance",
   "nav-roadmap-scaling": "Scaling",
   "nav-roadmap-scaling-description": "Network updates to further reduce transaction costs and speed",
