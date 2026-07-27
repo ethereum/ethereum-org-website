@@ -56,4 +56,33 @@ test.describe("Find Wallet Page", () => {
     ).toBeVisible()
     await expect(page.getByRole("dialog")).toBeHidden()
   })
+
+  // The modal already sits on the detail URL, so this only works as a document
+  // navigation — a router link would be swallowed by the interception.
+  test("modal 'Full details' escapes to the standalone page", async ({
+    page,
+  }) => {
+    await findWalletPage.openWalletDetail("metamask")
+    await expect(findWalletPage.detailDialog).toBeVisible()
+
+    await findWalletPage.detailDialog
+      .getByRole("link", { name: "Full details" })
+      .click()
+
+    await expect(
+      page.getByRole("heading", { level: 1, name: "MetaMask" })
+    ).toBeVisible()
+    await expect(page.getByRole("dialog")).toBeHidden()
+  })
+
+  test("standalone page lists related wallets", async ({ page }) => {
+    await page.goto("/wallets/find-wallet/metamask/")
+    const related = page.locator("section").filter({
+      has: page.getByRole("heading", { name: "Related resources" }),
+    })
+    await expect(related).toBeVisible()
+    await expect(
+      related.locator('a[href*="/find-wallet/"]').first()
+    ).toBeVisible()
+  })
 })

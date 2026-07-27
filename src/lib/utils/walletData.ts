@@ -10,6 +10,7 @@ import type {
 import { formatDate } from "@/lib/utils/date"
 import { getLanguageCodeName } from "@/lib/utils/intl"
 import { stripMarkdown } from "@/lib/utils/md"
+import { seededShuffle } from "@/lib/utils/random"
 import { capitalize } from "@/lib/utils/string"
 import { slugify } from "@/lib/utils/url"
 import {
@@ -198,6 +199,40 @@ export function getWalletBySlug(
 ): CatalogWallet | undefined {
   const wallet = walletsData.find((entry) => getWalletSlug(entry) === slug)
   return wallet ? enrichWallet(wallet, locale) : undefined
+}
+
+/**
+ * Wallets sharing this one's personas, most personas in common first. Most
+ * wallets tie on persona overlap, so the tie order is a shuffle seeded from the
+ * host wallet's slug: stable across prerender and revalidation, but a different
+ * six per detail page instead of the same alphabetical head everywhere.
+ */
+export function getRelatedWallets(
+  wallet: CatalogWallet,
+  locale: string,
+  limit = 6
+): CatalogWallet[] {
+  const personas = new Set(wallet.personas)
+  if (personas.size === 0) return []
+
+  const seed = [...wallet.slug].reduce(
+    (acc, char) => acc + char.charCodeAt(0),
+    0
+  )
+
+  const scored = walletsData
+    .filter((entry) => getWalletSlug(entry) !== wallet.slug)
+    .map((entry) => ({
+      entry,
+      shared: getWalletPersonaIds(entry).filter((id) => personas.has(id))
+        .length,
+    }))
+    .filter(({ shared }) => shared > 0)
+
+  return seededShuffle(scored, seed)
+    .sort((a, b) => b.shared - a.shared)
+    .slice(0, limit)
+    .map(({ entry }) => enrichWallet(entry, locale))
 }
 
 export function getWalletsByPersona(

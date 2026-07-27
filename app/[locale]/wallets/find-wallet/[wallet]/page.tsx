@@ -6,12 +6,10 @@ import type { ChainName, Lang, PageParams } from "@/lib/types"
 
 import ChainImages from "@/components/ChainImages"
 import ContentFeedback from "@/components/ContentFeedback"
+import { CheckCircle } from "@/components/icons/CheckCircle"
 import Discord from "@/components/icons/discord.svg"
-import {
-  GreenCheckProductGlyph,
-  WarningProductGlyph,
-} from "@/components/icons/staking"
 import Twitter from "@/components/icons/twitter.svg"
+import { XCircle } from "@/components/icons/XCircle"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import Tooltip from "@/components/Tooltip"
@@ -19,7 +17,12 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { getLocaleFormattedDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
-import { getAllWalletSlugs, getWalletBySlug } from "@/lib/utils/walletData"
+import {
+  getAllWalletSlugs,
+  getRelatedWallets,
+  getWalletBySlug,
+  toCatalogCard,
+} from "@/lib/utils/walletData"
 
 import { buildDeviceLabels, getDeviceLabels } from "@/data/wallets/devices"
 import {
@@ -31,6 +34,7 @@ import { buildPersonaLabels } from "@/data/wallets/personas"
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import FindWalletBreadcrumbs from "../_components/FindWalletBreadcrumbs"
+import WalletCard from "../_components/WalletCard"
 import WalletPersonaTags from "../_components/WalletPersonaTags"
 
 import WalletDetailPageJsonLD from "./page-jsonld"
@@ -62,8 +66,10 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
     namespace: "page-wallets-find-wallet",
   })
 
-  const deviceLabels = getDeviceLabels(wallet.devices, buildDeviceLabels(t))
+  const deviceLabelMap = buildDeviceLabels(t)
+  const deviceLabels = getDeviceLabels(wallet.devices, deviceLabelMap)
   const personaLabels = buildPersonaLabels(t)
+  const relatedWallets = getRelatedWallets(wallet, locale)
 
   const lastUpdated = getLocaleFormattedDate(
     locale as Lang,
@@ -74,13 +80,11 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
     const supported = Boolean(wallet[feature.key])
     return (
       <li key={feature.key} className="mb-2 flex flex-row gap-2">
-        <span className="translate-y-0.5">
-          {supported ? (
-            <GreenCheckProductGlyph className="size-4" />
-          ) : (
-            <WarningProductGlyph className="size-4" />
-          )}
-        </span>
+        {supported ? (
+          <CheckCircle className="shrink-0" />
+        ) : (
+          <XCircle className="shrink-0" />
+        )}
         <p className={supported ? "text-body" : "text-disabled"}>
           {t(feature.labelKey)}
           <Tooltip
@@ -212,6 +216,24 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
             <p className="text-body-medium italic">
               {`${wallet.name} ${t("page-find-wallet-info-updated-on")} ${lastUpdated}`}
             </p>
+
+            {relatedWallets.length > 0 && (
+              <section className="space-y-4">
+                <h2 className="text-h4">
+                  {t("page-find-wallet-related-title")}
+                </h2>
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  {relatedWallets.map((related) => (
+                    <WalletCard
+                      key={related.slug}
+                      wallet={toCatalogCard(related)}
+                      deviceLabels={deviceLabelMap}
+                      personaLabels={personaLabels}
+                    />
+                  ))}
+                </div>
+              </section>
+            )}
           </div>
         </MainArticle>
         <ContentFeedback />

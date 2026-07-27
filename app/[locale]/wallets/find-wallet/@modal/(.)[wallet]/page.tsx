@@ -1,14 +1,15 @@
-import { Info } from "lucide-react"
+import { ArrowRight, Info } from "lucide-react"
 import { notFound } from "next/navigation"
 import { getTranslations } from "next-intl/server"
 import type { ReactNode } from "react"
 
-import type { ChainName } from "@/lib/types"
+import type { ChainName, Lang } from "@/lib/types"
 
 import ChainImages from "@/components/ChainImages"
+import { CheckCircle } from "@/components/icons/CheckCircle"
 import Discord from "@/components/icons/discord.svg"
-import { GreenCheckProductGlyph } from "@/components/icons/staking"
 import Twitter from "@/components/icons/twitter.svg"
+import { XCircle } from "@/components/icons/XCircle"
 import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
 import Tooltip from "@/components/Tooltip"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -20,6 +21,8 @@ import { buildDeviceLabels, getDeviceLabels } from "@/data/wallets/devices"
 import { CROPS_PROPERTIES } from "@/data/wallets/features"
 
 import WalletDetailModal from "../../_components/WalletDetailModal"
+
+import { getPathname } from "@/i18n/navigation"
 
 type ModalParams = { locale: string; wallet: string }
 
@@ -67,6 +70,11 @@ export default async function InterceptedWalletModal(props: {
   const tCommon = await getTranslations({ locale, namespace: "common" })
 
   const deviceLabels = getDeviceLabels(wallet.devices, buildDeviceLabels(t))
+
+  const detailHref = getPathname({
+    href: `/wallets/find-wallet/${wallet.slug}/`,
+    locale: locale as Lang,
+  })
 
   const shownLanguages = wallet.supportedLanguages
     .slice(0, LANGUAGES_SHOWN)
@@ -128,15 +136,33 @@ export default async function InterceptedWalletModal(props: {
               >
                 {supported ? (
                   <span className="inline-flex items-center gap-1.5 font-bold text-success">
-                    <GreenCheckProductGlyph className="size-4 shrink-0" />
+                    <CheckCircle className="my-0 shrink-0" />
                     {tCommon("yes")}
                   </span>
                 ) : (
-                  <span className="font-bold text-error">{tCommon("no")}</span>
+                  <span className="inline-flex items-center gap-1.5 font-bold text-error">
+                    <XCircle className="my-0 shrink-0" />
+                    {tCommon("no")}
+                  </span>
                 )}
               </DetailRow>
             )
           })}
+
+          {/* Belongs with the rows it extends: these properties are a summary
+              of the full feature set. Deliberate raw anchor (against the
+              design-system "no raw <a>" rule) because the modal already sits on
+              this URL, so only a document navigation escapes the interception.
+              LinkWithArrow is out for the same reason; its markup is mirrored. */}
+          <a
+            href={detailHref}
+            className="group mt-1 self-end text-sm no-underline visited:text-primary-visited"
+          >
+            <span className="group-hover:underline">
+              {t("page-find-wallet-full-details")}
+            </span>
+            <ArrowRight className="ms-1 mb-0.5 inline size-[1em] rtl:-scale-x-100" />
+          </a>
         </div>
 
         <div className="flex flex-wrap items-center justify-between gap-4">

@@ -101,6 +101,8 @@
   "page-find-wallet-reset-filters": "Reset",
   "page-find-wallet-visit-website": "Visit website",
   "page-find-wallet-get-wallet": "Get {wallet}",
+  "page-find-wallet-full-details": "Full details",
+  "page-find-wallet-related-title": "Related resources",
   "page-find-wallet-show-results": "Show wallets",
   "page-find-wallet-crops-censorship-resistant": "Censorship resistant",
   "page-find-wallet-crops-censorship-resistant-desc": "Lets you connect to custom RPC endpoints or your own node, so no single provider can block your access.",
