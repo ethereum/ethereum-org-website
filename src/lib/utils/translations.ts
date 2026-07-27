@@ -69,6 +69,7 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
   ["/run-a-node/", "page-run-a-node"],
   ["/roadmap/", "page-roadmap"],
   ["/start/", "page-start"],
+  ["/values/", "page-values"],
 ]
 
 const EXACT_PATH_ADDITIONAL_NAMESPACES: Record<string, string[]> = {
