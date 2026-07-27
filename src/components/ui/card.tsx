@@ -98,7 +98,7 @@ const Card = React.forwardRef<HTMLDivElement | HTMLAnchorElement, CardProps>(
         variant,
         size,
         // Link cards (href) always lift; non-link cards opt in via the prop.
-        hoverLift: !!href || hoverLift,
+        hoverLift: hoverLift ?? !!href,
         border,
         interactive: !!href,
       }),
