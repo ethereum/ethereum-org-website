@@ -453,11 +453,6 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               description: t("nav-roadmap-ux-description"),
               href: "/roadmap/user-experience/",
             },
-            {
-              label: t("nav-roadmap-future-label"),
-              description: t("nav-roadmap-future-description"),
-              href: "/roadmap/future-proofing/",
-            },
           ],
         },
         {
