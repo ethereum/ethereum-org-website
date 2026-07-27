@@ -124,10 +124,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         description={t("page-values-hero-description")}
       />
 
-      <main className="space-y-space-3x pb-page">
-        <MainArticle className="flow **:data-[label=button-link]:max-md:w-full *:[section]:px-page">
+      <main className="px-page pb-page">
+        <MainArticle className="flow **:data-[label=button-link]:max-md:w-full *:[section]:py-space-2x">
           {/* The hidden cost of living online */}
-          <Section id="hidden-cost" className="mt-space-3x *:[p]:max-w-3xl">
+          <Section id="hidden-cost" className="*:[p]:max-w-3xl">
             <h2>{t("page-values-cost-title")}</h2>
             <p>{t("page-values-cost-description")}</p>
             <p>
@@ -255,9 +255,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </Section>
         </MainArticle>
 
-        <div className="px-page">
-          <ContentFeedback />
-        </div>
+        <ContentFeedback />
       </main>
     </>
   )
