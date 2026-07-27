@@ -227,7 +227,7 @@ Kisha, unda faili la `.env` katika saraka kuu ya mradi wetu, na uongeze ufunguo 
 
 - Tazama hapa chini ili kupata URL ya API ya HTTP ya Alchemy na uinakili kwenye ubao wako wa kunakili
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.mp4#842x480)
 
 Faili lako la `.env` sasa linapaswa kuonekana hivi:
 

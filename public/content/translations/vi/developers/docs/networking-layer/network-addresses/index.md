@@ -21,14 +21,13 @@ Cần có một số hiểu biết về [lớp mạng lưới](/developers/docs/
 
 `/ip4/192.168.22.27/tcp/33000/p2p/5t7Nv7dG2d6ffbvAiewVsEwWweU3LdebSqX2y1bPrW8br`
 
-## Enode {#enode}
+## Enode
 
-Enode là một cách để nhận dạng một nút Ethereum bằng cách sử dụng định dạng địa chỉ URL. ID nút dạng thập lục phân được mã hóa trong phần tên người dùng của URL, phân tách với máy chủ bằng dấu @. Tên máy chủ chỉ có thể được cung cấp dưới dạng địa chỉ IP; tên DNS không được phép. Cổng trong phần tên máy chủ là cổng lắng nghe TCP. Nếu cổng TCP và UDP (khám phá) khác nhau, cổng UDP được chỉ định dưới dạng tham số truy vấn "discport".
+Enode là một cách để nhận dạng một nút Ethereum bằng cách sử dụng định dạng địa chỉ URL. ID nút hệ thập lục phân được mã hóa trong phần tên người dùng của URL, phân tách với máy chủ bằng dấu @. Đặc tả chỉ định nghĩa tên máy chủ là một địa chỉ IP; tuy nhiên, hầu hết các máy khách (chẳng hạn như Geth và Besu) cũng chấp nhận tên DNS ở đây và phân giải nó thành địa chỉ IP khi khởi động. Đây là hành vi cụ thể của máy khách chứ không phải là một phần của tiêu chuẩn. Cổng trong phần tên máy chủ là cổng lắng nghe TCP. Nếu các cổng TCP và UDP (khám phá) khác nhau, cổng UDP được chỉ định dưới dạng tham số truy vấn "discport".
 
 Trong ví dụ sau, URL của nút mô tả một nút có địa chỉ IP `10.3.58.6`, cổng TCP `30303` và cổng khám phá UDP `30301`.
 
 `enode://6f8a80d14311c39f35f516fa664deaaaa13e85b2f7493f37f6144d86991ec012937307647bd3b9a82abe2974e1407241d54947bbb39763a4cac9f77166ad92a0@10.3.58.6:30303?discport=30301`
-
 ## Ethereum Node Records (ENR) {#enr}
 
 Ethereum Node Records (ENR) là một định dạng chuẩn hóa cho các địa chỉ mạng lưới trên Ethereum. Chúng thay thế cho multiaddr và enode. Chúng đặc biệt hữu ích vì cho phép trao đổi thông tin nhiều hơn giữa các nút. ENR chứa một chữ ký, số thứ tự và các trường chi tiết về lược đồ danh tính được sử dụng để tạo và xác thực chữ ký. ENR cũng có thể được điền bằng dữ liệu tùy ý được tổ chức dưới dạng các cặp khóa-giá trị. Các cặp khóa-giá trị này chứa địa chỉ IP của nút và thông tin về các giao thức phụ mà nút có thể sử dụng. Các máy khách đồng thuận sử dụng một [cấu trúc ENR cụ thể](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#enr-structure) để nhận dạng các nút khởi động và cũng bao gồm một trường `eth2` chứa thông tin về phân nhánh Ethereum hiện tại và mạng con lan truyền chứng thực (điều này kết nối nút với một tập hợp các nút ngang hàng cụ thể mà các chứng thực của chúng được tổng hợp lại với nhau).

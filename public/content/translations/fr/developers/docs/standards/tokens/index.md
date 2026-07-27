@@ -29,10 +29,13 @@ Voici quelques-uns des standards de jetons les plus populaires sur Ethereum :
 
 La liste complète des propositions [ERC](https://eips.ethereum.org/erc).
 
-## Lectures complémentaires {#further-reading}
+## Lectures complémentaires
 
 _Vous connaissez une ressource communautaire qui vous a aidé ? Modifiez cette page et ajoutez-la !_
 
+- [Liste de contrôle pour l'intégration de jetons](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md) - _Trail of Bits_
+- [Documentation OpenZeppelin : Jetons](https://docs.openzeppelin.com/contracts/5.x/tokens) - _OpenZeppelin_
+- [Les dangers de l'intégration de jetons (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _OpenZeppelin_
 ## Tutoriels connexes {#related-tutorials}
 
 - [Liste de contrôle pour l'intégration de jetons](/developers/tutorials/token-integration-checklist/) _– Une liste de contrôle des éléments à prendre en compte lors de l'interaction avec des jetons._

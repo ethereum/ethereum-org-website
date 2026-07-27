@@ -28,6 +28,10 @@ The bare Radix tooltip (`@/components/ui/tooltip`) is hover-only and has no mobi
 
 Heroes are named exports of `@/components/Hero`: `PageHero` (the workhorse), `HubHero`, `HomeHero`. `PageHero` takes discrete props -- `breadcrumbs`, an optional `eyebrow`, an aside (`heroImg` **or** `heroComponent`, mutually exclusive), `title`, `description`, `buttons`, `variant`. `title` is always the `<h1>` -- there is no `header` prop (it was removed). (The former `MdxHero` was removed too -- use `PageHero` text-only with `variant="no-divider"`.)
 
+### Image imports are camelCase -- but SVG-as-component can't be
+
+Name raster image imports (`.png`/`.webp` used as `src` / `StaticImageData`) in **camelCase** (`heroImage`, `manDogCardImage`). SVGs are the exception: `@svgr/webpack` makes `import X from "foo.svg"` a **React component** rendered `<X />`, and JSX reads a lowercase-initial tag as a DOM element -- so a camelCase SVG import silently renders a bogus `<foo />` instead of the icon. To satisfy the camelCase convention *and* render, either store the (camelCase) import in a **capitalized** field and destructure it (`{ Icon: robustImage }` -> `<Icon />`, e.g. in a data-driven `.map`), or import the URL form (`import robustImage from "foo.svg?url"`) and use `<Image src={robustImage} …>`. Don't reach for `?url` blindly -- it yields a plain URL string, so `<Image>` then needs explicit `width`/`height`.
+
 ## Component Behaviors You'd Miss
 
 ### `Button isSecondary` does nothing on `solid` and `link` variants
@@ -37,6 +41,10 @@ In `Button.tsx` lines 67-69, there's an early-out: `["solid", "link"].includes(v
 ### `CardBanner fit="contain"` auto-clones a single child as a blurred backdrop
 
 If you pass `<CardBanner fit="contain"><Image .../></CardBanner>` with **one** child, you get a blurred-bg + sharp-fg automatically (Card.tsx lines 95-119). Pass two children and you lose this magic.
+
+### A bare `CardBanner` on a link card mismatches its corner radius
+
+`Card`'s outer radius is `--card-pad + --banner-radius`, but a `CardBanner` rounds at only `--banner-radius`. Wrapping the banner in a `CardHeader` lets the `--card-pad` inset bridge the difference so the corners stay concentric. Drop the banner straight into `Card` (no header) on any padded size and the banner's squarer corners poke past the card outline; add an `href` and the variant-aware hover has no inset to breathe against. Only go bare with `size="xs"` (`--card-pad: 0`), where the two radii collapse to the same value. This bit the video / hackathon / story / latest card grids until their banners were wrapped in `CardHeader` (July 2026).
 
 ### `LinkBox` requires `LinkOverlay` somewhere inside
 
@@ -96,6 +104,10 @@ The legacy `Callout.tsx`/`CalloutSSR.tsx` and `CalloutBanner.tsx`/`CalloutBanner
 
 `@/components/ui/Link.tsx` and `@/components/ui/buttons/Button.tsx` auto-fire Matomo events when `customEventOptions` is omitted (with sensible defaults). Manually wiring `trackCustomEvent` in a new component is usually unnecessary if you're using these primitives.
 
+### A `.flow` `<Section>` that is a flex/grid row silently offsets its items
+
+The `.flow` rhythm adds `margin-top` to 2nd+ children of any section it scopes -- and its scope is a *descendant* selector (`.flow section:not([data-flow="skip"])`), so it reaches **nested** sections too. A `<Section>` that is itself a flex/grid container (text+image row, card grid) therefore needs `data-flow="skip"`, or its image/2nd column gets pushed down within the row. Easy to miss on a nested section. See `spacing-typography.md`.
+
 ## Tokens That Aren't Real
 
 These class names appear in `ui/select.tsx`, `ui/dialog.tsx`, `ui/dropdown-menu.tsx`, `ui/tabs.tsx` but are **NOT defined** in this project's tokens. They're stale shadcn defaults that don't resolve:
@@ -112,6 +124,10 @@ If you're touching one of these files, replace these with semantic tokens (see `
 ### Hard-coded `left-`/`right-`/`ml-`/`mr-`/`pl-`/`pr-` breaks RTL
 
 Use logical equivalents: `inset-s-`, `inset-e-`, `ms-`, `me-`, `ps-`, `pe-`. The site supports Arabic and Urdu. The `ui/select.tsx` and `ui/dropdown-menu.tsx` files currently have a number of these violations; don't add more.
+
+### `<Translation>` with a glossary link needs an `I18nProvider`
+
+`<Translation>` server-renders fine on its own, but it turns a `/glossary/#term` link into `GlossaryTooltip` -- a `"use client"` component reading the `glossary-tooltip` namespace from the client context. So a page with a glossary-link `<Translation>` must wrap it in `I18nProvider` (carrying that namespace), even if it has no other client i18n. A plain `<a href="/foo">` does NOT trigger this. See `server-vs-client.md`.
 
 ### `toLocaleString` / `Intl.NumberFormat` without locale wrappers
 
@@ -137,6 +153,10 @@ Use `useRtlFlip` only when you need to flip a non-chevron directional icon (a cu
 ### Urdu uses `list-style-type: urdu` for ordered lists
 
 Configured in `base.css` lines 97-107. Persian fallback. Triggered by `:lang(ur)`, not `dir`. Don't override.
+
+### Bare `<ul>`/`<li>` inherit legacy global list styles
+
+`base.css` still ships global `ul`/`ol` rules (start margin + `disc` markers, TODO-slated for removal) and a global `li` bottom margin. A non-prose `<ul>` (nav menu, card list) needs `m-0 list-none` on the `ul` and `m-0` on the `li`s or it renders indented with stray spacing. And once `list-none` removes the markers, Safari/VoiceOver drops list semantics -- add `role="list"` to keep the list announced.
 
 ## Heading Hierarchy
 

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { shuffle } from "lodash"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import type { ImageProps } from "@/components/Image"
 import { SelectOnChange } from "@/components/Select"
@@ -10,7 +10,6 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import exchangeData from "@/data/exchangesByCountry"
 
-import { useTranslation } from "@/hooks/useTranslation"
 import binance from "@/public/images/exchanges/binance.png"
 import bitbuy from "@/public/images/exchanges/bitbuy.png"
 import bitfinex from "@/public/images/exchanges/bitfinex.png"
@@ -91,6 +90,7 @@ type ExchangeData = Record<Country, ExchangeKey[]>
 type ExchangeByCountryOption = {
   value: string
   label: string
+  countryCode: Country
   exchanges: string[]
 }
 
@@ -101,8 +101,6 @@ type FilteredData = {
   image: ImageProps["src"]
   alt: string
 }
-
-const UNITED_STATES = "United States of America (USA)"
 
 const exchanges: ExchangeDetails = {
   binance: {
@@ -314,25 +312,30 @@ const exchanges: ExchangeDetails = {
 
 export const useCentralizedExchanges = () => {
   const locale = useLocale()
-  const { t } = useTranslation("page-get-eth")
+  const t = useTranslations("page-get-eth")
+  const tCommon = useTranslations("common")
   const [selectedCountry, setSelectedCountry] =
     useState<ExchangeByCountryOption | null>()
 
   const placeholderString = t("page-get-eth-exchanges-search")
 
   // Add `value` & `label` for Select component, sort alphabetically
-  const selectOptions: ExchangeByCountryOption[] = Object.entries(
-    exchangeData as ExchangeData
-  )
+  const exchangeEntries = Object.entries(exchangeData as ExchangeData) as [
+    Country,
+    ExchangeKey[],
+  ][]
+
+  const selectOptions: ExchangeByCountryOption[] = exchangeEntries
     .map(([countryCode, exchanges]) => {
       const countryName =
         countryCode.length === 2
           ? getCountryCodeName(countryCode, locale)
-          : t(`common:region-${countryCode.toLowerCase()}`)
+          : tCommon(`region-${countryCode.toLowerCase()}`)
 
       return {
         value: countryName,
         label: countryName,
+        countryCode,
         exchanges,
       }
     })
@@ -369,10 +372,9 @@ export const useCentralizedExchanges = () => {
         .filter((exchange) => selectedCountry?.exchanges.includes(exchange))
         // Format array for <CardList/>
         .map((exchange) => {
-          // Add state exceptions if Country is USA
+          // Add state exceptions if the selected country is the United States
           let description: string | undefined
-          // TODO: Set up for i18n support; currently all country names in English:
-          if (selectedCountry.value === UNITED_STATES) {
+          if (selectedCountry.countryCode === "US") {
             const { usaExceptions } = exchanges[exchange]
             if (usaExceptions.length > 0) {
               description = `${t("page-get-eth-exchanges-except")} ${formatList(

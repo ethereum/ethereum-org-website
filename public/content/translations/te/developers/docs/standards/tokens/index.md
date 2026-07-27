@@ -29,10 +29,13 @@ incomplete: true
 
 [ERC](https://eips.ethereum.org/erc) ప్రతిపాదనల పూర్తి జాబితా.
 
-## మరింత చదవడానికి {#further-reading}
+## మరింత చదవడానికి
 
-_మీకు సహాయపడిన కమ్యూనిటీ వనరు గురించి తెలుసా? ఈ పేజీని సవరించి, దానిని జోడించండి!_
+_మీకు సహాయపడిన కమ్యూనిటీ వనరు ఏదైనా తెలుసా? ఈ పేజీని సవరించి, దాన్ని జోడించండి!_
 
+- [టోకెన్ ఇంటిగ్రేషన్ చెక్‌లిస్ట్](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md) - _Trail of Bits_
+- [ఓపెన్‌జెప్పెలిన్ డాక్యుమెంటేషన్: టోకెన్‌లు](https://docs.openzeppelin.com/contracts/5.x/tokens) - _ఓపెన్‌జెప్పెలిన్_
+- [టోకెన్ ఇంటిగ్రేషన్ యొక్క ప్రమాదాలు (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _ఓపెన్‌జెప్పెలిన్_
 ## సంబంధిత ట్యుటోరియల్స్ {#related-tutorials}
 
 - [టోకెన్ ఇంటిగ్రేషన్ చెక్‌లిస్ట్](/developers/tutorials/token-integration-checklist/) _– టోకెన్‌లతో పరస్పర చర్య చేస్తున్నప్పుడు పరిగణించవలసిన విషయాల చెక్‌లిస్ట్._

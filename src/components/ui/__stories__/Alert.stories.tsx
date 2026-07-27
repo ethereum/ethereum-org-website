@@ -123,7 +123,7 @@ export const TitleSizes: Story = {
     docs: {
       description: {
         story:
-          "`AlertTitle` accepts a `size` variant: `base` (default, bold body size) or `2xl` for prominent callout headings.",
+          "`AlertTitle` accepts a `size` variant: `base` (default, bold body size) or `lg` for prominent callout headings.",
       },
     },
   },

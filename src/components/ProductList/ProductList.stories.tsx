@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/nextjs"
 
-import ProductList from "."
+import ProductList, { type ProductListContent } from "."
 
 const meta = {
   title: "Components / Content / ProductList",
@@ -10,7 +10,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "Vertical list of product / tool entries used on directory pages (wallets, dapps, dev tools). Each row shows an optional 66x66 thumbnail, a title, a description, optional content items, and an optional outlined CTA labelled by `actionLabel`. Pass `category` to render a heading above the list. Items are visually separated by dividers between rows.",
+          'List of product / tool entries used on directory pages (wallets, dapps, dev tools). Each entry is a ghost `Card` whose whole surface links to the product: an optional logo thumbnail beside the title and description, and a required outlined CTA (`ctaLabel`, a complete self-descriptive label such as "Visit Uniswap") as the sole action. Pass `category` to render a heading above the list, and `columns={2}` to lay entries out in two columns when there\'s room.',
       },
     },
   },
@@ -27,14 +27,15 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-const sampleContent = [
+const sampleContent: ProductListContent[] = [
   {
     title: "Uniswap",
     description:
       "A decentralized exchange protocol that lets users swap tokens without intermediaries.",
     image: "/images/dapps/uni.png",
     alt: "Uniswap logo",
-    link: "https://uniswap.org",
+    href: "https://uniswap.org",
+    ctaLabel: "Visit Uniswap",
   },
   {
     title: "Aave",
@@ -42,7 +43,8 @@ const sampleContent = [
       "An open-source, non-custodial protocol for earning interest on deposits and borrowing assets.",
     image: "/images/dapps/aave.png",
     alt: "Aave logo",
-    link: "https://aave.com",
+    href: "https://aave.com",
+    ctaLabel: "Visit Aave",
   },
   {
     title: "Compound",
@@ -50,76 +52,61 @@ const sampleContent = [
       "An algorithmic, autonomous interest rate protocol for lending and borrowing crypto assets.",
     image: "/images/dapps/compound.png",
     alt: "Compound logo",
-    link: "https://compound.finance",
+    href: "https://compound.finance",
+    ctaLabel: "Visit Compound",
   },
 ]
 
 export const Default: Story = {
   args: {
-    actionLabel: "Visit",
     content: sampleContent,
   },
 }
 
 export const WithCategory: Story = {
   args: {
-    actionLabel: "Visit",
     category: "Decentralized exchanges",
     content: sampleContent,
+    columns: 2,
   },
 }
 
 export const WithoutImages: Story = {
   args: {
-    actionLabel: "Open",
-    content: sampleContent.map(({ title, description, link }) => ({
-      title,
-      description,
-      link,
+    content: sampleContent.map((item) => ({
+      title: item.title,
+      description: item.description,
+      href: item.href,
+      ctaLabel: item.ctaLabel,
     })),
   },
 }
 
-export const WithoutLinks: Story = {
+export const MultipleParagraphs: Story = {
   args: {
-    actionLabel: "Visit",
-    content: sampleContent.map(({ title, description, image, alt }) => ({
-      title,
-      description,
-      image,
-      alt,
-    })),
-  },
-}
-
-export const WithContentItems: Story = {
-  args: {
-    actionLabel: "Visit",
     category: "Lending markets",
     content: [
       {
         title: "Morpho",
-        description:
+        description: [
           "Permissionless lending markets with isolated risk and curated vaults.",
+          "Isolated markets, audited contracts.",
+        ],
         image: "/images/dapps/morpho.png",
         alt: "Morpho logo",
-        link: "https://morpho.org",
-        contentItems: [
-          <span key="markets">Isolated markets</span>,
-          <span key="audited">Audited contracts</span>,
-        ],
+        href: "https://morpho.org",
+        ctaLabel: "Visit Morpho",
       },
       {
         title: "Spark",
-        description:
+        description: [
           "Borrow and save against blue-chip collateral on Ethereum mainnet.",
+          "Predictable savings rates, backed by the DAI stablecoin.",
+        ],
         image: "/images/dapps/sparkfi.png",
         alt: "Spark logo",
-        link: "https://spark.fi",
-        contentItems: [
-          <span key="rates">Predictable savings rates</span>,
-          <span key="dai">Backed by the DAI stablecoin</span>,
-        ],
+        href: "https://spark.fi",
+        ctaLabel: "Visit Spark",
       },
     ],
   },

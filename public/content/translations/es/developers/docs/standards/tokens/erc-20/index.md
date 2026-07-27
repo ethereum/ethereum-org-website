@@ -175,13 +175,12 @@ Algunos estándares alternativos han surgido de este problema, como [ERC-223](/d
 - [OpenZeppelin - Implementación de ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Guía de tokens ERC-20 en Solidity](https://www.alchemy.com/overviews/erc20-solidity)
 
-## Otros estándares de tokens fungibles {#fungible-token-standards}
-
+## Otros estándares de tokens fungibles
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - Bóvedas tokenizadas](/developers/docs/standards/tokens/erc-4626)
-
+- [ERC-7540 - Bóvedas tokenizadas asíncronas](/developers/docs/standards/tokens/erc-7540)
 ## Tutoriales: Construir con ERC-20 en Ethereum {#tutorials}
 
 - [Tutorial del contrato ERC-20](/developers/tutorials/erc20-annotated-code/) _– Un tutorial anotado línea por línea de la implementación del contrato ERC-20 de OpenZeppelin._

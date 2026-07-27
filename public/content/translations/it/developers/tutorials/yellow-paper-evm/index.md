@@ -13,22 +13,21 @@ published: 2022-05-15
 
 ## Quale yellow paper? {#which-yellow-paper}
 
-Come quasi tutto il resto in Ethereum, lo yellow paper si evolve nel tempo. Per poter fare riferimento a una versione specifica, ho caricato [la versione attuale al momento della stesura](yellow-paper-berlin.pdf). I numeri di sezione, pagina ed equazione che utilizzo faranno riferimento a quella versione. È una buona idea tenerlo aperto in un'altra finestra durante la lettura di questo documento.
+Come quasi tutto il resto in Ethereum, lo yellow paper si evolve nel tempo. Per poter fare riferimento a una versione specifica, ho caricato [la versione attuale al momento della stesura](https://ethereum.github.io/yellowpaper/paper.pdf). I numeri di sezione, pagina ed equazione che utilizzo faranno riferimento a quella versione. È una buona idea tenerlo aperto in un'altra finestra durante la lettura di questo documento.
 
 ### Perché l'EVM? {#why-the-evm}
 
 Lo yellow paper originale è stato scritto proprio all'inizio dello sviluppo di Ethereum. Descrive il meccanismo di consenso originale basato sulla Prova di lavoro (PoW) che veniva originariamente utilizzato per proteggere la rete. Tuttavia, Ethereum ha disattivato la Prova di lavoro e ha iniziato a utilizzare il consenso basato sulla Proof-of-Stake (PoS) a settembre 2022. Questo tutorial si concentrerà sulle parti dello yellow paper che definiscono la Macchina Virtuale di Ethereum (EVM). L'EVM è rimasta invariata dal passaggio alla Proof-of-Stake (ad eccezione del valore di ritorno del codice operativo (opcode) DIFFICULTY).
 
-## 9 Modello di esecuzione {#9-execution-model}
+## 9 Modello di esecuzione
 
-Questa sezione (p. 12-14) include la maggior parte della definizione dell'EVM.
+Questa sezione (pag. 14-16) include la maggior parte della definizione dell'EVM.
 
-Il termine _stato del sistema_ include tutto ciò che devi sapere sul sistema per eseguirlo. In un computer tipico, questo significa la memoria, il contenuto dei registri, ecc.
+Il termine _stato del sistema_ (system state) include tutto ciò che è necessario sapere sul sistema per eseguirlo. In un computer tipico, questo significa la memoria, il contenuto dei registri, ecc.
 
-Una [macchina di Turing](https://en.wikipedia.org/wiki/Turing_machine) è un modello computazionale. Essenzialmente, è una versione semplificata di un computer, che ha dimostrato di avere la stessa capacità di eseguire calcoli di un computer normale (tutto ciò che un computer può calcolare, una macchina di Turing può calcolarlo e viceversa). Questo modello rende più facile dimostrare vari teoremi su cosa è e cosa non è computabile.
+Una [macchina di Turing](https://en.wikipedia.org/wiki/Turing_machine) è un modello computazionale. Essenzialmente, è una versione semplificata di un computer, che ha dimostrato di avere la stessa capacità di eseguire calcoli di un computer normale (tutto ciò che un computer può calcolare, una macchina di Turing può calcolarlo e viceversa). Questo modello rende più facile dimostrare vari teoremi su cosa è e cosa non è calcolabile.
 
-Il termine [Turing-completo](https://en.wikipedia.org/wiki/Turing_completeness) indica un computer che può eseguire gli stessi calcoli di una macchina di Turing. Le macchine di Turing possono entrare in cicli infiniti, mentre l'EVM non può perché esaurirebbe il gas, quindi è solo quasi-Turing-completa.
-
+Il termine [Turing-completo](https://en.wikipedia.org/wiki/Turing_completeness) indica un computer che può eseguire gli stessi calcoli di una macchina di Turing. Le macchine di Turing possono entrare in loop infiniti, mentre l'EVM non può perché esaurirebbe il gas, quindi è solo quasi-Turing-completa.
 ## 9.1 Basi {#91-basics}
 
 Questa sezione fornisce le basi dell'EVM e come si confronta con altri modelli computazionali.
@@ -60,14 +59,13 @@ Il termine esecuzione eccezionale indica un'eccezione che causa l'interruzione d
 
 Questa sezione spiega come vengono calcolate le commissioni del gas. Ci sono tre costi:
 
-### Costo dell'opcode {#opcode-cost}
+### Costo del codice operativo (opcode)
 
-Il costo intrinseco dello specifico opcode. Per ottenere questo valore, trova il gruppo di costo dell'opcode nell'Appendice H (p. 28, sotto l'equazione (327)) e trova il gruppo di costo nell'equazione (324). Questo ti dà una funzione di costo, che nella maggior parte dei casi utilizza i parametri dell'Appendice G (p. 27).
+Il costo intrinseco dello specifico codice operativo (opcode). Per ottenere questo valore, trova il gruppo di costo dell'opcode nell'Appendice H (pag. 29, sotto l'equazione (329)) e trova il gruppo di costo nell'equazione (326). Questo ti fornisce una funzione di costo, che nella maggior parte dei casi utilizza i parametri dell'Appendice G (pag. 28).
 
 Ad esempio, l'opcode [`CALLDATACOPY`](https://www.evm.codes/#37) è un membro del gruppo _W<sub>copy</sub>_. Il costo dell'opcode per quel gruppo è _G<sub>verylow</sub>+G<sub>copy</sub>×⌈μ<sub>s</sub>[2]÷32⌉_. Guardando l'Appendice G, vediamo che entrambe le costanti sono 3, il che ci dà _3+3×⌈μ<sub>s</sub>[2]÷32⌉_.
 
-Dobbiamo ancora decifrare l'espressione _⌈μ<sub>s</sub>[2]÷32⌉_. La parte più esterna, _⌈ \<valore\> ⌉_ è la funzione soffitto (ceiling), una funzione che dato un valore restituisce il più piccolo intero che non è comunque inferiore al valore. Ad esempio, _⌈2.5⌉ = ⌈3⌉ = 3_. La parte interna è _μ<sub>s</sub>[2]÷32_. Guardando la sezione 3 (Convenzioni) a p. 3, _μ_ è lo stato della macchina. Lo stato della macchina è definito nella sezione 9.4.1 a p. 13. Secondo quella sezione, uno dei parametri dello stato della macchina è _s_ per lo stack. Mettendo tutto insieme, sembra che _μ<sub>s</sub>[2]_ sia la posizione #2 nello stack. Guardando [l'opcode](https://www.evm.codes/#37), la posizione #2 nello stack è la dimensione dei dati in byte. Guardando gli altri opcode nel gruppo W<sub>copy</sub>, [`CODECOPY`](https://www.evm.codes/#39) e [`RETURNDATACOPY`](https://www.evm.codes/#3e), anch'essi hanno una dimensione dei dati nella stessa posizione. Quindi _⌈μ<sub>s</sub>[2]÷32⌉_ è il numero di parole da 32 byte necessarie per memorizzare i dati copiati. Mettendo tutto insieme, il costo intrinseco di [`CALLDATACOPY`](https://www.evm.codes/#37) è 3 gas più 3 per ogni parola di dati copiata.
-
+Dobbiamo ancora decifrare l'espressione _⌈μ<sub>s</sub>[2]÷32⌉_. La parte più esterna, _⌈ \<value\> ⌉_ è la funzione soffitto (ceiling), una funzione che, dato un valore, restituisce il più piccolo intero che non è comunque inferiore al valore. Ad esempio, _⌈2.5⌉ = ⌈3⌉ = 3_. La parte interna è _μ<sub>s</sub>[2]÷32_. Guardando la sezione 3 (Convenzioni) a pag. 3, _μ_ è lo stato della macchina. Lo stato della macchina è definito nella sezione 9.4.1 a pag. 15. Secondo quella sezione, uno dei parametri dello stato della macchina è _s_ per lo stack. Mettendo tutto insieme, sembra che _μ<sub>s</sub>[2]_ sia la posizione n. 2 nello stack. Guardando [l'opcode](https://www.evm.codes/#37), la posizione n. 2 nello stack è la dimensione dei dati in byte. Guardando gli altri opcode nel gruppo W<sub>copy</sub>, [`CODECOPY`](https://www.evm.codes/#39) e [`RETURNDATACOPY`](https://www.evm.codes/#3e), anch'essi hanno una dimensione dei dati nella stessa posizione. Quindi _⌈μ<sub>s</sub>[2]÷32⌉_ è il numero di parole da 32 byte necessarie per memorizzare i dati copiati. Mettendo tutto insieme, il costo intrinseco di [`CALLDATACOPY`](https://www.evm.codes/#37) è di 3 gas più 3 per ogni parola di dati copiata.
 ### Costo di esecuzione {#running-cost}
 
 Il costo di esecuzione del codice che stiamo chiamando.
@@ -75,23 +73,22 @@ Il costo di esecuzione del codice che stiamo chiamando.
 - Nel caso di [`CREATE`](https://www.evm.codes/#f0) e [`CREATE2`](https://www.evm.codes/#f5), il costruttore per il nuovo contratto.
 - Nel caso di [`CALL`](https://www.evm.codes/#f1), [`CALLCODE`](https://www.evm.codes/#f2), [`STATICCALL`](https://www.evm.codes/#fa), o [`DELEGATECALL`](https://www.evm.codes/#f4), il contratto che chiamiamo.
 
-### Costo di espansione della memoria {#expanding-memory-cost}
+### Costo di espansione della memoria
 
 Il costo di espansione della memoria (se necessario).
 
-Nell'equazione 324, questo valore è scritto come _C<sub>mem</sub>(μ<sub>i</sub>')-C<sub>mem</sub>(μ<sub>i</sub>)_. Guardando di nuovo la sezione 9.4.1, vediamo che _μ<sub>i</sub>_ è il numero di parole in memoria. Quindi _μ<sub>i</sub>_ è il numero di parole in memoria prima dell'opcode e _μ<sub>i</sub>'_ è il numero di parole in memoria dopo l'opcode.
+Nell'equazione 326, questo valore è scritto come _C<sub>mem</sub>(μ<sub>i</sub>')-C<sub>mem</sub>(μ<sub>i</sub>)_. Guardando di nuovo la sezione 9.4.1, vediamo che _μ<sub>i</sub>_ è il numero di parole in memoria. Quindi _μ<sub>i</sub>_ è il numero di parole in memoria prima del codice operativo (opcode) e _μ<sub>i</sub>'_ è il numero di parole in memoria dopo l'opcode.
 
-La funzione _C<sub>mem</sub>_ è definita nell'equazione 326: _C<sub>mem</sub>(a) = G<sub>memory</sub> × a + ⌊a<sup>2</sup> ÷ 512⌋_. _⌊x⌋_ è la funzione pavimento (floor), una funzione che dato un valore restituisce il più grande intero che non è comunque superiore al valore. Ad esempio, _⌊2.5⌋ = ⌊2⌋ = 2._ Quando _a < √512_, _a<sup>2</sup> < 512_, e il risultato della funzione pavimento è zero. Quindi per le prime 22 parole (704 byte), il costo aumenta linearmente con il numero di parole di memoria richieste. Oltre quel punto _⌊a<sup>2</sup> ÷ 512⌋_ è positivo. Quando la memoria richiesta è sufficientemente alta, il costo del gas è proporzionale al quadrato della quantità di memoria.
+La funzione _C<sub>mem</sub>_ è definita nell'equazione 328: _C<sub>mem</sub>(a) = G<sub>memory</sub> × a + ⌊a<sup>2</sup> ÷ 512⌋_. _⌊x⌋_ è la funzione pavimento (floor), una funzione che, dato un valore, restituisce il più grande intero che non è comunque superiore al valore. Ad esempio, _⌊2.5⌋ = ⌊2⌋ = 2._ Quando _a < √512_, _a<sup>2</sup> < 512_, e il risultato della funzione pavimento è zero. Quindi per le prime 22 parole (704 byte), il costo aumenta linearmente con il numero di parole di memoria richieste. Oltre quel punto _⌊a<sup>2</sup> ÷ 512⌋_ è positivo. Quando la memoria richiesta è sufficientemente alta, il costo del gas è proporzionale al quadrato della quantità di memoria.
 
 **Nota** che questi fattori influenzano solo il costo _intrinseco_ del gas: non tengono conto del mercato delle commissioni o delle mance ai validatori che determinano quanto un utente finale è tenuto a pagare; questo è solo il costo grezzo dell'esecuzione di una particolare operazione sull'EVM.
 
 [Scopri di più sul gas](/developers/docs/gas/).
-
-## 9.3 Ambiente di esecuzione {#93-execution-env}
+## 9.3 Ambiente di esecuzione
 
 L'ambiente di esecuzione è una tupla, _I_, che include informazioni che non fanno parte dello stato della blockchain o dell'EVM.
 
-| Parametro       | Opcode per accedere ai dati                                                                                        | Codice Solidity per accedere ai dati         |
+| Parametro       | Codice operativo (opcode) per accedere ai dati                                                                   | Codice Solidity per accedere ai dati     |
 | --------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
 | _I<sub>a</sub>_ | [`ADDRESS`](https://www.evm.codes/#30)                                                                           | `address(this)`                          |
 | _I<sub>o</sub>_ | [`ORIGIN`](https://www.evm.codes/#32)                                                                            | `tx.origin`                              |
@@ -101,57 +98,55 @@ L'ambiente di esecuzione è una tupla, _I_, che include informazioni che non fan
 | _I<sub>v</sub>_ | [`CALLVALUE`](https://www.evm.codes/#34)                                                                         | `msg.value`                              |
 | _I<sub>b</sub>_ | [`CODECOPY`](https://www.evm.codes/#39)                                                                          | `address(this).code`                     |
 | _I<sub>H</sub>_ | Campi dell'intestazione del blocco, come [`NUMBER`](https://www.evm.codes/#43) e [`DIFFICULTY`](https://www.evm.codes/#44) | `block.number`, `block.difficulty`, ecc. |
-| _I<sub>e</sub>_ | Profondità dello stack di chiamate per le chiamate tra contratti (inclusa la creazione di contratti)                                |
-| _I<sub>w</sub>_ | L'EVM è autorizzata a cambiare stato o è in esecuzione in modo statico                                                  |
+| _I<sub>e</sub>_ | Profondità dello stack di chiamate per le chiamate tra contratti (inclusa la creazione del contratto)            |
+| _I<sub>w</sub>_ | L'EVM è autorizzata a cambiare stato, o è in esecuzione statica                                                  |
 
 Alcuni altri parametri sono necessari per comprendere il resto della sezione 9:
 
-| Parametro | Definito nella sezione   | Significato                                                                                                                                                                                                                  |
-| --------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| _σ_       | 2 (p. 2, equazione 1) | Lo stato della blockchain                                                                                                                                                                                              |
-| _g_       | 9.3 (p. 13)          | Gas rimanente                                                                                                                                                                                                            |
-| _A_       | 6.1 (p. 8)           | Sottostato accumulato (modifiche programmate per quando termina la transazione)                                                                                                                                                       |
-| _o_       | 9.3 (p. 13)          | Output: il risultato restituito nel caso di una transazione interna (quando un contratto ne chiama un altro) e chiamate a funzioni di visualizzazione (quando si richiedono solo informazioni, quindi non c'è bisogno di aspettare una transazione) |
-
-## 9.4 Panoramica dell'esecuzione {#94-execution-overview}
+| Parametro | Definito nella sezione | Significato                                                                                                                                                                                                                              |
+| --------- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| _σ_       | 2 (pag. 2, equazione 1)| Lo stato della blockchain                                                                                                                                                                                                                |
+| _g_       | 9.3 (pag. 14)          | Gas rimanente                                                                                                                                                                                                                            |
+| _A_       | 6.1 (pag. 9)           | Sottostato maturato (modifiche programmate per quando termina la transazione)                                                                                                                                                            |
+| _o_       | 9.3 (pag. 14)          | Output: il risultato restituito nel caso di una transazione interna (quando un contratto ne chiama un altro) e chiamate a funzioni di visualizzazione (quando si richiedono solo informazioni, quindi non c'è bisogno di aspettare una transazione) |
+## 9.4 Panoramica dell'esecuzione
 
 Ora che abbiamo tutti i preliminari, possiamo finalmente iniziare a lavorare su come funziona l'EVM.
 
-Le equazioni 137-142 ci forniscono le condizioni iniziali per l'esecuzione dell'EVM:
+Le equazioni 146-151 ci forniscono le condizioni iniziali per l'esecuzione dell'EVM:
 
-| Simbolo           | Valore iniziale | Significato                                                                                                                                                                                                                                                     |
-| ---------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| _μ<sub>g</sub>_  | _g_           | Gas rimanente                                                                                                                                                                                                                                               |
-| _μ<sub>pc</sub>_ | _0_           | Program counter, l'indirizzo della prossima istruzione da eseguire                                                                                                                                                                                             |
-| _μ<sub>m</sub>_  | _(0, 0, ...)_ | Memoria, inizializzata tutta a zeri                                                                                                                                                                                                                            |
-| _μ<sub>i</sub>_  | _0_           | Posizione di memoria più alta utilizzata                                                                                                                                                                                                                                |
-| _μ<sub>s</sub>_  | _()_          | Lo stack, inizialmente vuoto                                                                                                                                                                                                                                  |
-| _μ<sub>o</sub>_  | _∅_           | L'output, insieme vuoto fino a quando e a meno che non ci fermiamo con dati di ritorno ([`RETURN`](https://www.evm.codes/#f3) o [`REVERT`](https://www.evm.codes/#fd)) o senza di essi ([`STOP`](https://www.evm.codes/#00) o [`SELFDESTRUCT`](https://www.evm.codes/#ff)). |
+| Simbolo          | Valore iniziale | Significato                                                                                                                                                                                                                                                 |
+| ---------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| _μ<sub>g</sub>_  | _g_             | Gas rimanente                                                                                                                                                                                                                                               |
+| _μ<sub>pc</sub>_ | _0_             | Program counter, l'indirizzo della prossima istruzione da eseguire                                                                                                                                                                                          |
+| _μ<sub>m</sub>_  | _(0, 0, ...)_   | Memoria, inizializzata tutta a zero                                                                                                                                                                                                                         |
+| _μ<sub>i</sub>_  | _0_             | Posizione di memoria più alta utilizzata                                                                                                                                                                                                                    |
+| _μ<sub>s</sub>_  | _()_            | Lo stack, inizialmente vuoto                                                                                                                                                                                                                                |
+| _μ<sub>o</sub>_  | _∅_             | L'output, insieme vuoto fino a quando e a meno che non ci fermiamo con i dati di ritorno ([`RETURN`](https://www.evm.codes/#f3) o [`REVERT`](https://www.evm.codes/#fd)) o senza di essi ([`STOP`](https://www.evm.codes/#00) o [`SELFDESTRUCT`](https://www.evm.codes/#ff)). |
 
-L'equazione 143 ci dice che ci sono quattro possibili condizioni in ogni momento durante l'esecuzione e cosa fare con esse:
+L'equazione 152 ci dice che ci sono quattro possibili condizioni in ogni momento durante l'esecuzione, e cosa fare con esse:
 
 1.  `Z(σ,μ,A,I)`. Z rappresenta una funzione che verifica se un'operazione crea una transizione di stato non valida (vedi [arresto eccezionale](#942-exceptional-halt)). Se restituisce Vero, il nuovo stato è identico a quello vecchio (tranne per il gas che viene bruciato) perché le modifiche non sono state implementate.
-2.  Se l'opcode in esecuzione è [`REVERT`](https://www.evm.codes/#fd), il nuovo stato è uguale al vecchio stato, si perde un po' di gas.
+2.  Se il codice operativo (opcode) in esecuzione è [`REVERT`](https://www.evm.codes/#fd), il nuovo stato è uguale al vecchio stato, si perde un po' di gas.
 3.  Se la sequenza di operazioni è terminata, come indicato da un [`RETURN`](https://www.evm.codes/#f3)), lo stato viene aggiornato al nuovo stato.
 4.  Se non ci troviamo in una delle condizioni finali 1-3, continua l'esecuzione.
-
 ## 9.4.1 Stato della macchina {#941-machine-state}
 
 Questa sezione spiega lo stato della macchina in maggiore dettaglio. Specifica che _w_ è l'opcode corrente. Se _μ<sub>pc</sub>_ è inferiore a _||I<sub>b</sub>||_, la lunghezza del codice, allora quel byte (_I<sub>b</sub>[μ<sub>pc</sub>]_) è l'opcode. Altrimenti, l'opcode è definito come [`STOP`](https://www.evm.codes/#00).
 
 Poiché si tratta di una [macchina a stack](https://en.wikipedia.org/wiki/Stack_machine), dobbiamo tenere traccia del numero di elementi estratti (popped) (_δ_) e inseriti (pushed) (_α_) da ciascun opcode.
 
-## 9.4.2 Arresto eccezionale {#942-exceptional-halt}
+## 9.4.2 Arresto eccezionale
 
 Questa sezione definisce la funzione _Z_, che specifica quando abbiamo una terminazione anomala. Questa è una funzione [booleana](https://en.wikipedia.org/wiki/Boolean_data_type), quindi utilizza [_∨_ per un OR logico](https://en.wikipedia.org/wiki/Logical_disjunction) e [_∧_ per un AND logico](https://en.wikipedia.org/wiki/Logical_conjunction).
 
 Abbiamo un arresto eccezionale se una qualsiasi di queste condizioni è vera:
 
 - **_μ<sub>g</sub> < C(σ,μ,A,I)_**
-  Come abbiamo visto nella sezione 9.2, _C_ è la funzione che specifica il costo del gas. Non c'è abbastanza gas rimasto per coprire il prossimo opcode.
+  Come abbiamo visto nella sezione 9.2, _C_ è la funzione che specifica il costo del gas. Non c'è abbastanza gas rimasto per coprire il prossimo codice operativo (opcode).
 
 - **_δ<sub>w</sub>=∅_**
-  Se il numero di elementi estratti per un opcode non è definito, allora l'opcode stesso non è definito.
+  Se il numero di elementi estratti (popped) per un opcode non è definito, allora l'opcode stesso non è definito.
 
 - **_|| μ<sub>s</sub> || < δ<sub>w</sub>_**
   Underflow dello stack, non ci sono abbastanza elementi nello stack per l'opcode corrente.
@@ -170,9 +165,9 @@ Abbiamo un arresto eccezionale se una qualsiasi di queste condizioni è vera:
   Overflow dello stack. Se l'esecuzione dell'opcode comporterà uno stack di oltre 1024 elementi, interrompi.
 
 - **_¬I<sub>w</sub> ∧ W(w,μ)_**
-  Siamo in esecuzione in modo statico ([¬ è la negazione](https://en.wikipedia.org/wiki/Negation) e _I<sub>w</sub>_ è vero quando ci è permesso cambiare lo stato della blockchain)? Se è così, e stiamo provando un'operazione di modifica dello stato, non può avvenire.
+  Siamo in esecuzione statica ([¬ è la negazione](https://en.wikipedia.org/wiki/Negation) e _I<sub>w</sub>_ è vero quando ci è permesso cambiare lo stato della blockchain)? Se è così, e stiamo provando un'operazione di modifica dello stato, non può avvenire.
 
-  La funzione _W(w,μ)_ è definita più avanti nell'equazione 150. _W(w,μ)_ è vera se una di queste condizioni è vera:
+  La funzione _W(w,μ)_ è definita più avanti nell'equazione 159. _W(w,μ)_ è vera se una di queste condizioni è vera:
 
   - **_w ∈ \{CREATE, CREATE2, SSTORE, SELFDESTRUCT}_**
     Questi opcode cambiano lo stato, creando un nuovo contratto, memorizzando un valore o distruggendo il contratto corrente.
@@ -186,17 +181,15 @@ Abbiamo un arresto eccezionale se una qualsiasi di queste condizioni è vera:
 
 - **_w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>_**
   Non puoi eseguire [`SSTORE`](https://www.evm.codes/#55) a meno che tu non abbia più di G<sub>callstipend</sub> (definito come 2300 nell'Appendice G) gas.
+## 9.4.3 Validità della destinazione di salto
 
-## 9.4.3 Validità della destinazione del salto {#943-jump-dest-valid}
+Qui definiamo formalmente quali sono i codici operativi (opcode) [`JUMPDEST`](https://www.evm.codes/#5b). Non possiamo semplicemente cercare il valore del byte 0x5B, perché potrebbe trovarsi all'interno di un PUSH (e quindi essere un dato e non un opcode).
 
-Qui definiamo formalmente quali sono gli opcode [`JUMPDEST`](https://www.evm.codes/#5b). Non possiamo semplicemente cercare il valore del byte 0x5B, perché potrebbe trovarsi all'interno di un PUSH (e quindi essere un dato e non un opcode).
+Nell'equazione (162) definiamo una funzione, _N(i,w)_. Il primo parametro, _i_, è la posizione dell'opcode. Il secondo, _w_, è l'opcode stesso. Se _w∈[PUSH1, PUSH32]_ significa che l'opcode è un PUSH (le parentesi quadre definiscono un intervallo che include gli estremi). In quel caso il prossimo opcode si trova a _i+2+(w−PUSH1)_. Per [`PUSH1`](https://www.evm.codes/#60) dobbiamo avanzare di due byte (il PUSH stesso e il valore di un byte), per [`PUSH2`](https://www.evm.codes/#61) dobbiamo avanzare di tre byte perché è un valore di due byte, ecc. Tutti gli altri opcode dell'EVM sono lunghi solo un byte, quindi in tutti gli altri casi _N(i,w)=i+1_.
 
-Nell'equazione (153) definiamo una funzione, _N(i,w)_. Il primo parametro, _i_, è la posizione dell'opcode. Il secondo, _w_, è l'opcode stesso. Se _w∈[PUSH1, PUSH32]_ significa che l'opcode è un PUSH (le parentesi quadre definiscono un intervallo che include gli estremi). In quel caso il prossimo opcode si trova a _i+2+(w−PUSH1)_. Per [`PUSH1`](https://www.evm.codes/#60) dobbiamo avanzare di due byte (il PUSH stesso e il valore di un byte), per [`PUSH2`](https://www.evm.codes/#61) dobbiamo avanzare di tre byte perché è un valore di due byte, ecc. Tutti gli altri opcode dell'EVM sono lunghi solo un byte, quindi in tutti gli altri casi _N(i,w)=i+1_.
-
-Questa funzione viene utilizzata nell'equazione (152) per definire _D<sub>J</sub>(c,i)_, che è l'[insieme](<https://en.wikipedia.org/wiki/Set_(mathematics)>) di tutte le destinazioni di salto valide nel codice _c_, a partire dalla posizione dell'opcode _i_. Questa funzione è definita in modo ricorsivo. Se _i≥||c||_, significa che siamo alla fine o dopo la fine del codice. Non troveremo altre destinazioni di salto, quindi restituiamo semplicemente l'insieme vuoto.
+Questa funzione viene utilizzata nell'equazione (161) per definire _D<sub>J</sub>(c,i)_, che è l'[insieme](<https://en.wikipedia.org/wiki/Set_(mathematics)>) di tutte le destinazioni di salto valide nel codice _c_, a partire dalla posizione dell'opcode _i_. Questa funzione è definita in modo ricorsivo. Se _i≥||c||_, significa che siamo alla fine o dopo la fine del codice. Non troveremo altre destinazioni di salto, quindi restituiamo semplicemente l'insieme vuoto.
 
 In tutti gli altri casi guardiamo il resto del codice passando all'opcode successivo e ottenendo l'insieme a partire da esso. _c[i]_ è l'opcode corrente, quindi _N(i,c[i])_ è la posizione dell'opcode successivo. _D<sub>J</sub>(c,N(i,c[i]))_ è quindi l'insieme delle destinazioni di salto valide che inizia all'opcode successivo. Se l'opcode corrente non è un `JUMPDEST`, restituisci semplicemente quell'insieme. Se è `JUMPDEST`, includilo nell'insieme dei risultati e restituiscilo.
-
 ## 9.4.4 Arresto normale {#944-normal-halt}
 
 La funzione di arresto _H_, può restituire tre tipi di valori.
@@ -205,56 +198,55 @@ La funzione di arresto _H_, può restituire tre tipi di valori.
 - Se abbiamo un opcode di arresto che non produce output (sia [`STOP`](https://www.evm.codes/#00) che [`SELFDESTRUCT`](https://www.evm.codes/#ff)), restituisci una sequenza di byte di dimensione zero come valore di ritorno. Nota che questo è molto diverso dall'insieme vuoto. Questo valore significa che l'EVM si è davvero fermata, solo che non ci sono dati di ritorno da leggere.
 - Se abbiamo un opcode di arresto che produce output (sia [`RETURN`](https://www.evm.codes/#f3) che [`REVERT`](https://www.evm.codes/#fd)), restituisci la sequenza di byte specificata da quell'opcode. Questa sequenza è presa dalla memoria, il valore in cima allo stack (_μ<sub>s</sub>[0]_) è il primo byte, e il valore successivo (_μ<sub>s</sub>[1]_) è la lunghezza.
 
-## H.2 Set di istruzioni {#h2-instruction-set}
+## H.2 Set di istruzioni
 
-Prima di passare alla sottosezione finale dell'EVM, la 9.5, diamo un'occhiata alle istruzioni stesse. Sono definite nell'Appendice H.2 che inizia a p. 29. Tutto ciò che non è specificato come in fase di modifica con quello specifico opcode dovrebbe rimanere lo stesso. Le variabili che cambiano sono specificate con un \<qualcosa\>′.
+Prima di passare alla sottosezione finale dell'EVM, la 9.5, diamo un'occhiata alle istruzioni stesse. Sono definite nell'Appendice H.2 che inizia a pag. 30. Tutto ciò che non è specificato come modificato con quello specifico codice operativo (opcode) si presume rimanga invariato. Le variabili che cambiano sono specificate come \<qualcosa\>′.
 
 Ad esempio, diamo un'occhiata all'opcode [`ADD`](https://www.evm.codes/#01).
 
 | Valore | Mnemonico | δ   | α   | Descrizione                                               |
 | ----: | -------- | --- | --- | --------------------------------------------------------- |
-|  0x01 | ADD      | 2   | 1   | Operazione di addizione.                                       |
+|  0x01 | ADD      | 2   | 1   | Operazione di addizione.                                  |
 |       |          |     |     | _μ′<sub>s</sub>[0] ≡ μ<sub>s</sub>[0] + μ<sub>s</sub>[1]_ |
 
-_δ_ è il numero di valori che estraiamo dallo stack. In questo caso due, perché stiamo sommando i primi due valori.
+_δ_ è il numero di valori che estraiamo (pop) dallo stack. In questo caso due, perché stiamo sommando i due valori in cima.
 
-_α_ è il numero di valori che reinseriamo. In questo caso uno, la somma.
+_α_ è il numero di valori che reinseriamo (push). In questo caso uno, la somma.
 
 Quindi la nuova cima dello stack (_μ′<sub>s</sub>[0]_) è la somma della vecchia cima dello stack (_μ<sub>s</sub>[0]_) e del vecchio valore sottostante (_μ<sub>s</sub>[1]_).
 
-Invece di esaminare tutti gli opcode con un "elenco da far incrociare gli occhi", questo articolo spiega solo quegli opcode che introducono qualcosa di nuovo.
+Invece di esaminare tutti gli opcode con un elenco noioso, questo articolo spiega solo quegli opcode che introducono qualcosa di nuovo.
 
-| Valore | Mnemonico  | δ   | α   | Descrizione                                                                                                |
+| Valore | Mnemonico | δ   | α   | Descrizione                                                                                                |
 | ----: | --------- | --- | --- | ---------------------------------------------------------------------------------------------------------- |
-|  0x20 | KECCAK256 | 2   | 1   | Calcola l'hash Keccak-256.                                                                                   |
+|  0x20 | KECCAK256 | 2   | 1   | Calcola l'hash Keccak-256.                                                                                 |
 |       |           |     |     | _μ′<sub>s</sub>[0] ≡ KEC(μ<sub>m</sub>[μ<sub>s</sub>[0] . . . (μ<sub>s</sub>[0] + μ<sub>s</sub>[1] − 1)])_ |
 |       |           |     |     | _μ′<sub>i</sub> ≡ M(μ<sub>i</sub>,μ<sub>s</sub>[0],μ<sub>s</sub>[1])_                                      |
 
-Questo è il primo opcode che accede alla memoria (in questo caso, in sola lettura). Tuttavia, potrebbe espandersi oltre i limiti attuali della memoria, quindi dobbiamo aggiornare _μ<sub>i</sub>._ Lo facciamo utilizzando la funzione _M_ definita nell'equazione 328 a p. 29.
+Questo è il primo opcode che accede alla memoria (in questo caso, in sola lettura). Tuttavia, potrebbe espandersi oltre i limiti attuali della memoria, quindi dobbiamo aggiornare _μ<sub>i</sub>._ Lo facciamo usando la funzione _M_ definita nell'equazione 330 a pag. 30.
 
-| Valore | Mnemonico | δ   | α   | Descrizione                       |
-| ----: | -------- | --- | --- | --------------------------------- |
-|  0x31 | BALANCE  | 1   | 1   | Ottieni il saldo dell'account specificato. |
-|       |          |     |     | ...                               |
+| Valore | Mnemonico | δ   | α   | Descrizione                               |
+| ----: | -------- | --- | --- | ----------------------------------------- |
+|  0x31 | BALANCE  | 1   | 1   | Ottieni il saldo dell'account specificato.|
+|       |          |     |     | ...                                       |
 
 L'indirizzo di cui dobbiamo trovare il saldo è _μ<sub>s</sub>[0] mod 2<sup>160</sup>_. La cima dello stack è l'indirizzo, ma poiché gli indirizzi sono di soli 160 bit, calcoliamo il valore [modulo](https://en.wikipedia.org/wiki/Modulo_operation) 2<sup>160</sup>.
 
-Se _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] ≠ ∅_, significa che ci sono informazioni su questo indirizzo. In quel caso, _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>]<sub>b</sub>_ è il saldo per quell'indirizzo. Se _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] = ∅_, significa che questo indirizzo non è inizializzato e il saldo è zero. Puoi vedere l'elenco dei campi di informazione dell'account nella sezione 4.1 a p. 4.
+Se _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] ≠ ∅_, significa che ci sono informazioni su questo indirizzo. In quel caso, _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>]<sub>b</sub>_ è il saldo per quell'indirizzo. Se _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] = ∅_, significa che questo indirizzo non è inizializzato e il saldo è zero. Puoi vedere l'elenco dei campi delle informazioni dell'account nella sezione 4.1 a pag. 4.
 
-La seconda equazione, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub>[0] mod 2<sup>160</sup>}_, è correlata alla differenza di costo tra l'accesso all'archiviazione calda (warm storage, archiviazione a cui si è acceduto di recente e che probabilmente è nella cache) e all'archiviazione fredda (cold storage, archiviazione a cui non si è acceduto e che probabilmente si trova in un'archiviazione più lenta e più costosa da recuperare). _A<sub>a</sub>_ è l'elenco degli indirizzi a cui la transazione ha precedentemente effettuato l'accesso, che dovrebbero quindi essere più economici da accedere, come definito nella sezione 6.1 a p. 8. Puoi leggere di più su questo argomento in [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929).
+La seconda equazione, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub>[0] mod 2<sup>160</sup>}_, è correlata alla differenza di costo tra l'accesso all'archiviazione calda (warm storage, archiviazione a cui si è acceduto di recente e che è probabile sia nella cache) e all'archiviazione fredda (cold storage, archiviazione a cui non si è acceduto e che è probabile si trovi in un'archiviazione più lenta e più costosa da recuperare). _A<sub>a</sub>_ è l'elenco degli indirizzi a cui la transazione ha precedentemente effettuato l'accesso, che dovrebbero quindi essere più economici da accedere, come definito nella sezione 6.1 a pag. 9. Puoi leggere di più su questo argomento in [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929).
 
 | Valore | Mnemonico | δ   | α   | Descrizione                             |
 | ----: | -------- | --- | --- | --------------------------------------- |
-|  0x8F | DUP16    | 16  | 17  | Duplica il 16° elemento dello stack.              |
+|  0x8F | DUP16    | 16  | 17  | Duplica il 16° elemento dello stack.    |
 |       |          |     |     | _μ′<sub>s</sub>[0] ≡ μ<sub>s</sub>[15]_ |
 
-Nota che per utilizzare qualsiasi elemento dello stack, dobbiamo estrarlo (pop), il che significa che dobbiamo anche estrarre tutti gli elementi dello stack sopra di esso. Nel caso di [`DUP<n>`](https://www.evm.codes/#8f) e [`SWAP<n>`](https://www.evm.codes/#9f), questo significa dover estrarre e poi reinserire (push) fino a sedici valori.
-
-## 9.5 Il ciclo di esecuzione {#95-exec-cycle}
+Nota che per usare qualsiasi elemento dello stack, dobbiamo estrarlo (pop), il che significa che dobbiamo anche estrarre tutti gli elementi dello stack sopra di esso. Nel caso di [`DUP<n>`](https://www.evm.codes/#8f) e [`SWAP<n>`](https://www.evm.codes/#9f), questo significa dover estrarre e poi reinserire (push) fino a sedici valori.
+## 9.5 Il ciclo di esecuzione
 
 Ora che abbiamo tutte le parti, possiamo finalmente capire come è documentato il ciclo di esecuzione dell'EVM.
 
-L'equazione (155) dice che dato lo stato:
+L'equazione (164) dice che dato lo stato:
 
 - _σ_ (stato globale della blockchain)
 - _μ_ (stato dell'EVM)
@@ -263,10 +255,9 @@ L'equazione (155) dice che dato lo stato:
 
 Il nuovo stato è _(σ', μ', A', I')_.
 
-Le equazioni (156)-(158) definiscono lo stack e la sua modifica dovuta a un opcode (_μ<sub>s</sub>_). L'equazione (159) è la variazione del gas (_μ<sub>g</sub>_). L'equazione (160) è la variazione del program counter (_μ<sub>pc</sub>_). Infine, le equazioni (161)-(164) specificano che gli altri parametri rimangono gli stessi, a meno che non vengano esplicitamente modificati dall'opcode.
+Le equazioni (165)-(167) definiscono lo stack e la sua modifica dovuta a un codice operativo (opcode) (_μ<sub>s</sub>_). L'equazione (168) è la variazione del gas (_μ<sub>g</sub>_). L'equazione (169) è la variazione del program counter (_μ<sub>pc</sub>_). Infine, le equazioni (170)-(173) specificano che gli altri parametri rimangono gli stessi, a meno che non vengano esplicitamente modificati dall'opcode.
 
 Con questo l'EVM è completamente definita.
-
 ## Conclusione {#conclusion}
 
 La notazione matematica è precisa e ha permesso allo yellow paper di specificare ogni dettaglio di Ethereum. Tuttavia, presenta alcuni svantaggi:

@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-developers-tools-descriptions.json",
-  "generatedAt": "2026-07-08T23:22:17.393Z",
-  "rootHash": "5715b3cfff6d",
+  "generatedAt": "2026-07-22T22:37:16.351Z",
+  "rootHash": "1af5ad145bed",
   "tree": {
-    "contentHash": "d319c724be6c",
-    "anchorHash": "7a33d4223768",
+    "contentHash": "338264b39174",
+    "anchorHash": "049be9c976dc",
     "children": {
       "tool-aave-description": {
         "contentHash": "48fc576dee63",
@@ -116,7 +116,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-blockscout-open-source-block-explorer-description": {
-        "contentHash": "876560a58273",
+        "contentHash": "ff66d6a1cc43",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-blocksmithjs-description": {
@@ -345,10 +345,6 @@
       },
       "tool-ethereum-rpc-mcp-server-description": {
         "contentHash": "b04bc39c6def",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "tool-ethereum-wingman-description": {
-        "contentHash": "35af09e06ab4",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-ethereumrb-description": {
@@ -656,7 +652,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-nftscan-description": {
-        "contentHash": "a70627727d47",
+        "contentHash": "4632d6347e72",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-noble-cryptography-description": {
@@ -1152,7 +1148,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-zabi-description": {
-        "contentHash": "022ed487d585",
+        "contentHash": "ffb21f3f2130",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-zerion-api-mcp-server-description": {
@@ -1278,7 +1274,6 @@
       "tool-ethereum-mcp-ethcf-description",
       "tool-ethereum-multicall-description",
       "tool-ethereum-rpc-mcp-server-description",
-      "tool-ethereum-wingman-description",
       "tool-ethereumrb-description",
       "tool-etherml-description",
       "tool-ethernal-description",
@@ -1491,5 +1486,5 @@
       "tool-zokrates-description"
     ]
   },
-  "sourceCommitSha": "b82f8c942864e33593547ea39f710e6ce97af902"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

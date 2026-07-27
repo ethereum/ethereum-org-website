@@ -22,7 +22,7 @@ import { CheckCircle } from "@/components/icons/CheckCircle"
 import { XCircle } from "@/components/icons/XCircle"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import ProductList from "@/components/ProductList"
+import ProductList, { type ProductListContent } from "@/components/ProductList"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
@@ -371,51 +371,63 @@ async function Page(props: { params: Promise<PageParams> }) {
     },
   ]
 
-  const toolsData = [
+  const toolsData: ProductListContent[] = [
     {
-      title: "Stablecoins.wtf",
+      title: t("page-stablecoins-tools-stablecoinswtf-title"),
       description: t("page-stablecoins-tools-stablecoinswtf-description"),
-      link: "https://stablecoins.wtf",
+      href: "https://stablecoins.wtf",
       image: stablecoinsWtfImg,
-      alt: "",
+      ctaLabel: t("page-stablecoins-tools-visit-brand", {
+        brand: t("page-stablecoins-tools-stablecoinswtf-title"),
+      }),
     },
     {
-      title: "Stablepulse",
+      title: t("page-stablecoins-tools-stablepulse-title"),
       description: t("page-stablecoins-tools-stablepulse-description"),
-      link: "https://www.stablepulse.org/",
+      href: "https://www.stablepulse.org/",
       image: stablePulseImg,
-      alt: "",
       className: "[&_img]:p-1",
+      ctaLabel: t("page-stablecoins-tools-visit-brand", {
+        brand: t("page-stablecoins-tools-stablepulse-title"),
+      }),
     },
     {
-      title: "Stables.info",
+      title: t("page-stablecoins-tools-stablesinfo-title"),
       description: t("page-stablecoins-tools-stablesinfo-description"),
-      link: "https://stables.info/",
+      href: "https://stables.info/",
       image: stablesInfoImg,
-      alt: "",
+      ctaLabel: t("page-stablecoins-tools-visit-brand", {
+        brand: t("page-stablecoins-tools-stablesinfo-title"),
+      }),
     },
     {
-      title: "Dune Stablecoin Metrics",
+      title: t("page-stablecoins-tools-dune-title"),
       description: t("page-stablecoins-tools-dune-description"),
-      link: "https://dune.com/overview/stablecoin",
+      href: "https://dune.com/overview/stablecoin",
       image: duneImg,
-      alt: "",
       className: "dark:[&_img]:invert [&_img]:p-2",
+      ctaLabel: t("page-stablecoins-tools-visit-brand", {
+        brand: t("page-stablecoins-tools-dune-brand"),
+      }),
     },
     {
-      title: "Visa Onchain Analytics",
+      title: t("page-stablecoins-tools-visa-title"),
       description: t("page-stablecoins-tools-visa-description"),
-      link: "https://visaonchainanalytics.com/",
+      href: "https://visaonchainanalytics.com/",
       image: visaImg,
-      alt: "",
+      ctaLabel: t("page-stablecoins-tools-visit-brand", {
+        brand: t("page-stablecoins-tools-visa-brand"),
+      }),
     },
     {
-      title: "Stablewars",
+      title: t("page-stablecoins-tools-stablewars-title"),
       description: t("page-stablecoins-tools-stablewars-description"),
-      link: "https://stablewars.xyz/",
+      href: "https://stablewars.xyz/",
       image: stablesWarsImg,
-      alt: "",
       className: "[&_img]:p-1",
+      ctaLabel: t("page-stablecoins-tools-visit-brand", {
+        brand: t("page-stablecoins-tools-stablewars-title"),
+      }),
     },
   ]
 
@@ -456,420 +468,430 @@ async function Page(props: { params: Promise<PageParams> }) {
         variant="no-divider"
       />
 
-      <I18nProvider locale={locale} messages={messages}>
-        <MainArticle className="flow **:[h2]:text-h1 *:[section]:mx-auto *:[section]:w-full *:[section]:max-w-7xl *:[section]:px-page *:[section]:py-space-3x">
-          {/* Why stablecoins */}
-          <Section id="why" className="md:text-center">
-            <h2>{t("page-stablecoins-why-stablecoins")}</h2>
-            <p className="mx-auto max-w-3xl text-lg text-body-medium">
-              <Translation id="page-stablecoins:page-stablecoins-why-stablecoins-intro" />
-            </p>
-            <Grid data-flow="cta" balanced={4} className="gap-4 text-start">
-              {features.map(({ title, description, icon: Icon }) => (
-                <Card key={title} variant="base" size="lg">
-                  <CardContent>
-                    <Icon className="size-12 text-primary" />
-                    <CardTitle>{title}</CardTitle>
-                    <CardParagraph>{description}</CardParagraph>
-                  </CardContent>
-                </Card>
-              ))}
-            </Grid>
-            <Card
-              variant="nested"
-              data-flow="cta"
-              className="flex-row items-center gap-6 border p-6 text-start"
-            >
-              <div className="relative h-32 w-40 shrink-0 overflow-hidden rounded-xl max-md:hidden">
-                <Image
-                  src={bitcoinPizzaImg}
-                  alt={t("page-stablecoins-bitcoin-pizza-alt")}
-                  fill
-                  className="object-cover"
-                  sizes="160px"
-                />
-              </div>
-              <div>
-                <CardTitle>{t("page-stablecoins-bitcoin-pizza")}</CardTitle>
-                <CardParagraph size="sm">
-                  {t("page-stablecoins-bitcoin-pizza-body")}
-                </CardParagraph>
-              </div>
-            </Card>
-          </Section>
-
-          {/* How they work: types of stablecoins */}
-          <Section id="how" className="md:text-center">
-            <h2>{t("page-stablecoins-types-of-stablecoin")}</h2>
-            <p className="mx-auto max-w-3xl text-lg text-body-medium">
-              {t("page-stablecoins-types-intro")}
-            </p>
-            <Tabs data-flow="cta" defaultValue={types[0].title}>
-              <TabsList className="md:mx-auto">
-                {types.map((type) => (
-                  <TabsTrigger key={type.title} value={type.title}>
-                    {type.title}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-              {types.map((type) => (
-                <TabsContent
-                  key={type.title}
-                  value={type.title}
-                  className="mt-space border-0 p-0"
-                >
-                  <Grid
-                    balanced={2}
-                    className="gap-8 rounded-base bg-background-highlight p-6 text-start md:p-10"
-                  >
-                    <div>
-                      <h3 className="mb-4 text-2xl font-black">{type.title}</h3>
-                      <div className="mb-6 text-body-medium">
-                        {type.description}
-                      </div>
-                      {type.links.length > 0 && (
-                        <div>
-                          <p className="mb-2 font-bold">
-                            {t("example-projects")}
-                          </p>
-                          <ul className="m-0 list-disc space-y-1 ps-5">
-                            {type.links.map((link) => (
-                              <li key={link.text}>
-                                <InlineLink href={link.url}>
-                                  {link.text}
-                                </InlineLink>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                    </div>
-                    <div>
-                      {/* Shared header row — one continuous divider across both columns on desktop */}
-                      <div className="mb-3 hidden border-b border-border pb-2 sm:grid sm:grid-cols-2 sm:gap-x-6">
-                        <h4 className="text-success">{t("pros")}</h4>
-                        <h4 className="text-error">{t("cons")}</h4>
-                      </div>
-                      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                        <div>
-                          <h4 className="mb-3 border-b border-border pb-2 text-success sm:hidden">
-                            {t("pros")}
-                          </h4>
-                          <ul className="m-0 list-none space-y-3 ps-0">
-                            {type.pros.map((pro, idx) => (
-                              <li key={idx} className="flex gap-2">
-                                <CheckCircle className="shrink-0" />
-                                <span className="font-bold">{pro}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div>
-                          <h4 className="mb-3 border-b border-border pb-2 text-error sm:hidden">
-                            {t("cons")}
-                          </h4>
-                          <ul className="m-0 list-none space-y-3 ps-0">
-                            {type.cons.map((con, idx) => (
-                              <li key={idx} className="flex gap-2">
-                                <XCircle className="shrink-0" />
-                                <span className="font-bold">{con}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </Grid>
-                </TabsContent>
-              ))}
-            </Tabs>
-          </Section>
-
-          {/* Getting started */}
-          <Section
-            id="getting-started"
-            className="grid grid-cols-1 items-center gap-10 text-start lg:grid-cols-2 lg:gap-16"
-            data-flow="skip"
-          >
-            <div className="flow">
-              <h2>{t("page-stablecoins-getting-started-title")}</h2>
-              <p className="text-lg text-body-medium">
-                {t("page-stablecoins-getting-started-intro")}
+      <main className="space-y-space-3x pb-page">
+        <I18nProvider locale={locale} messages={messages}>
+          <MainArticle className="flow **:[h2]:text-h1 *:[section]:mx-auto *:[section]:w-full *:[section]:max-w-7xl *:[section]:px-page *:[section]:py-space-3x">
+            {/* Why stablecoins */}
+            <Section id="why" className="md:text-center">
+              <h2>{t("page-stablecoins-why-stablecoins")}</h2>
+              <p className="mx-auto max-w-3xl text-lg text-body-medium">
+                <Translation id="page-stablecoins:page-stablecoins-why-stablecoins-intro" />
               </p>
-              <div className="flex flex-col gap-6">
-                <PathwayCard
-                  href="/wallets/find-wallet/"
-                  banner={
-                    <Image
-                      src={walletCardImg}
-                      alt=""
-                      sizes="(max-width: 640px) 100vw, 176px"
-                    />
-                  }
-                  title={t("page-stablecoins-download-wallet-title")}
-                  description={t(
-                    "page-stablecoins-download-wallet-description"
-                  )}
-                  badge={{
-                    label: t("page-stablecoins-recommended"),
-                    status: "tag-green",
-                  }}
-                />
-                <PathwayCard
-                  href="/get-eth/"
-                  banner={
-                    <Image
-                      src={exchangeCardImg}
-                      alt=""
-                      sizes="(max-width: 640px) 100vw, 176px"
-                    />
-                  }
-                  title={t("page-stablecoins-register-exchange-title")}
-                  description={t(
-                    "page-stablecoins-register-exchange-description"
-                  )}
+              <Grid data-flow="cta" balanced={4} className="gap-4 text-start">
+                {features.map(({ title, description, icon: Icon }) => (
+                  <Card key={title} variant="base" size="lg">
+                    <CardContent>
+                      <Icon className="size-12 text-primary" />
+                      <CardTitle>{title}</CardTitle>
+                      <CardParagraph>{description}</CardParagraph>
+                    </CardContent>
+                  </Card>
+                ))}
+              </Grid>
+              <Card
+                variant="nested"
+                data-flow="cta"
+                className="flex-row items-center gap-6 border p-6 text-start"
+              >
+                <div className="relative h-32 w-40 shrink-0 overflow-hidden rounded-xl max-md:hidden">
+                  <Image
+                    src={bitcoinPizzaImg}
+                    alt={t("page-stablecoins-bitcoin-pizza-alt")}
+                    fill
+                    className="object-cover"
+                    sizes="160px"
+                  />
+                </div>
+                <div>
+                  <CardTitle>{t("page-stablecoins-bitcoin-pizza")}</CardTitle>
+                  <CardParagraph size="sm">
+                    {t("page-stablecoins-bitcoin-pizza-body")}
+                  </CardParagraph>
+                </div>
+              </Card>
+            </Section>
+
+            {/* How they work: types of stablecoins */}
+            <Section id="how" className="md:text-center">
+              <h2>{t("page-stablecoins-types-of-stablecoin")}</h2>
+              <p className="mx-auto max-w-3xl text-lg text-body-medium">
+                {t("page-stablecoins-types-intro")}
+              </p>
+              <Tabs data-flow="cta" defaultValue={types[0].title}>
+                <TabsList className="md:mx-auto">
+                  {types.map((type) => (
+                    <TabsTrigger key={type.title} value={type.title}>
+                      {type.title}
+                    </TabsTrigger>
+                  ))}
+                </TabsList>
+                {types.map((type) => (
+                  <TabsContent
+                    key={type.title}
+                    value={type.title}
+                    className="mt-space border-0 p-0"
+                  >
+                    <Grid
+                      balanced={2}
+                      className="gap-8 rounded-base bg-background-highlight p-6 text-start md:p-10"
+                    >
+                      <div>
+                        <h3 className="mb-4 text-2xl font-black">
+                          {type.title}
+                        </h3>
+                        <div className="mb-6 text-body-medium">
+                          {type.description}
+                        </div>
+                        {type.links.length > 0 && (
+                          <div>
+                            <p className="mb-2 font-bold">
+                              {t("example-projects")}
+                            </p>
+                            <ul className="m-0 list-disc space-y-1 ps-5">
+                              {type.links.map((link) => (
+                                <li key={link.text}>
+                                  <InlineLink href={link.url}>
+                                    {link.text}
+                                  </InlineLink>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                      <div>
+                        {/* Shared header row — one continuous divider across both columns on desktop */}
+                        <div className="mb-3 hidden border-b border-border pb-2 sm:grid sm:grid-cols-2 sm:gap-x-6">
+                          <h4 className="text-success">{t("pros")}</h4>
+                          <h4 className="text-error">{t("cons")}</h4>
+                        </div>
+                        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                          <div>
+                            <h4 className="mb-3 border-b border-border pb-2 text-success sm:hidden">
+                              {t("pros")}
+                            </h4>
+                            <ul className="m-0 list-none space-y-3 ps-0">
+                              {type.pros.map((pro, idx) => (
+                                <li key={idx} className="flex gap-2">
+                                  <CheckCircle className="shrink-0" />
+                                  <span className="font-bold">{pro}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <h4 className="mb-3 border-b border-border pb-2 text-error sm:hidden">
+                              {t("cons")}
+                            </h4>
+                            <ul className="m-0 list-none space-y-3 ps-0">
+                              {type.cons.map((con, idx) => (
+                                <li key={idx} className="flex gap-2">
+                                  <XCircle className="shrink-0" />
+                                  <span className="font-bold">{con}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </Grid>
+                  </TabsContent>
+                ))}
+              </Tabs>
+            </Section>
+
+            {/* Getting started */}
+            <Section
+              id="getting-started"
+              className="grid grid-cols-1 items-center gap-10 text-start lg:grid-cols-2 lg:gap-16"
+              data-flow="skip"
+            >
+              <div className="flow">
+                <h2>{t("page-stablecoins-getting-started-title")}</h2>
+                <p className="text-lg text-body-medium">
+                  {t("page-stablecoins-getting-started-intro")}
+                </p>
+                <div className="flex flex-col gap-6">
+                  <PathwayCard
+                    href="/wallets/find-wallet/"
+                    banner={
+                      <Image
+                        src={walletCardImg}
+                        alt=""
+                        sizes="(max-width: 640px) 100vw, 176px"
+                      />
+                    }
+                    title={t("page-stablecoins-download-wallet-title")}
+                    description={t(
+                      "page-stablecoins-download-wallet-description"
+                    )}
+                    badge={{
+                      label: t("page-stablecoins-recommended"),
+                      status: "tag-green",
+                    }}
+                  />
+                  <PathwayCard
+                    href="/get-eth/"
+                    banner={
+                      <Image
+                        src={exchangeCardImg}
+                        alt=""
+                        sizes="(max-width: 640px) 100vw, 176px"
+                      />
+                    }
+                    title={t("page-stablecoins-register-exchange-title")}
+                    description={t(
+                      "page-stablecoins-register-exchange-description"
+                    )}
+                  />
+                </div>
+              </div>
+              <div className="mx-auto w-full max-w-lg">
+                <Image
+                  src={gettingStartedImg}
+                  alt={t("page-stablecoins-getting-started-alt")}
+                  sizes="(max-width: 1024px) 90vw, 600px"
+                  className="h-auto w-full"
                 />
               </div>
-            </div>
-            <div className="mx-auto w-full max-w-lg">
-              <Image
-                src={gettingStartedImg}
-                alt={t("page-stablecoins-getting-started-alt")}
-                sizes="(max-width: 1024px) 90vw, 600px"
-                className="h-auto w-full"
-              />
-            </div>
-          </Section>
+            </Section>
 
-          {/* Choose a stablecoin: editor's choices + market cap table */}
-          {/* Full-bleed gradient: the colored wrapper spans the full width while
+            {/* Choose a stablecoin: editor's choices + market cap table */}
+            {/* Full-bleed gradient: the colored wrapper spans the full width while
               the inner Section keeps content at max-w-7xl. `mt-space-3x` restores
               the section-boundary gap the non-section wrapper misses in `flow`. */}
-          <div className="mt-space-3x w-full rounded-t-4xl bg-radial-primary">
-            <Section
-              id="choose"
-              className="mx-auto w-full max-w-7xl px-page py-space-2x text-center"
-            >
-              <h2>{t("page-stablecoins-choose-title")}</h2>
-              <p className="mx-auto max-w-3xl text-lg text-body-medium">
-                {t("page-stablecoins-choose-intro")}
-              </p>
-              <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
-                <LinkWithArrow href="#how">
-                  {t("page-stablecoins-choose-link-types")}
-                </LinkWithArrow>
-                <LinkWithArrow href="#get-stablecoins">
-                  {t("page-stablecoins-get-stablecoins")}
-                </LinkWithArrow>
-              </div>
-
-              <Section id="editors-choice" className="text-start">
-                <h3 className="text-h2">
-                  {t("page-stablecoins-editors-choice")}
-                </h3>
-                <p className="text-body-medium">
-                  {t("page-stablecoins-editors-choice-intro")}
+            <div className="mt-space-3x w-full bg-radial-primary transition-[border-radius] 2xl:rounded-t-4xl">
+              <Section
+                id="choose"
+                className="mx-auto w-full max-w-7xl px-page py-space-2x text-center"
+              >
+                <h2>{t("page-stablecoins-choose-title")}</h2>
+                <p className="mx-auto max-w-3xl text-lg text-body-medium">
+                  {t("page-stablecoins-choose-intro")}
                 </p>
-                <EdgeScrollContainer>
-                  {editorsChoices.map((choice) => (
-                    <EdgeScrollItem
-                      key={choice.title}
-                      className="ms-4 basis-[80%] sm:basis-1/2 lg:basis-[29%]"
-                    >
-                      <Card
-                        variant="nested"
-                        border
-                        hoverLift
-                        className="h-full"
-                      >
-                        <CardHeader>
-                          <CardBanner
-                            background="none"
-                            fit="contain"
-                            size="full"
-                            zoom={false}
-                            className={cn(
-                              "flex h-40 items-center justify-center p-8",
-                              choice.bannerClass
-                            )}
-                          >
-                            <Image
-                              src={choice.image}
-                              alt={choice.alt}
-                              sizes="160px"
-                            />
-                          </CardBanner>
-                        </CardHeader>
-                        <CardContent spacing="sm">
-                          <CardTitle asChild>
-                            <h4>{choice.title}</h4>
-                          </CardTitle>
-                          <CardParagraph size="sm">{choice.body}</CardParagraph>
-                        </CardContent>
-                        <CardFooter
-                          buttons="full"
-                          className="flex flex-col gap-2"
-                        >
-                          <ButtonLink href={choice.swapUrl}>
-                            {choice.swapButtonText}
-                          </ButtonLink>
-                          <ButtonLink href={choice.learnUrl} variant="outline">
-                            {choice.learnButtonText}
-                          </ButtonLink>
-                        </CardFooter>
-                      </Card>
-                    </EdgeScrollItem>
-                  ))}
-                </EdgeScrollContainer>
-              </Section>
-
-              <Section id="stablecoin-markets" className="text-start">
-                <h3 className="text-h2">
-                  {t("page-stablecoins-top-coins")}&nbsp;
-                  <Tooltip content={tooltipContent}>
-                    <Info className="inline size-4" />
-                  </Tooltip>
-                </h3>
-                <p className="text-body-medium">
-                  {t("page-stablecoins-top-coins-intro")}{" "}
-                  {t("page-stablecoins-top-coins-intro-code")}
-                </p>
-                <StablecoinsTable
-                  content={coinDetails}
-                  hasError={marketsHasError}
-                />
-              </Section>
-            </Section>
-          </div>
-
-          {/* How to get stablecoins */}
-          <Section id="get-stablecoins" className="md:text-center">
-            <h2>{t("page-stablecoins-get-stablecoins")}</h2>
-            <p className="max-w-3xl text-lg text-body-medium md:mx-auto">
-              {t("page-stablecoins-get-intro")}
-            </p>
-            <Grid balanced={2} className="gap-6 text-start">
-              {methods.map((method) => (
-                <PathwayCard
-                  key={method.title}
-                  className="h-full"
-                  href={method.href}
-                  banner={
-                    <Image
-                      src={method.image}
-                      alt=""
-                      sizes="(max-width: 640px) 100vw, 176px"
-                    />
-                  }
-                  title={method.title}
-                  description={method.description}
-                  badge={method.badge}
-                />
-              ))}
-            </Grid>
-          </Section>
-
-          {/* Interest rate / apps to earn interest */}
-          {/* Full-bleed band: same wrapper rationale as the choose band above. */}
-          <div className="mt-space-3x w-full rounded-4xl bg-background-highlight">
-            <Section
-              id="earn-interest"
-              className="mx-auto w-full max-w-7xl px-page py-space-3x"
-            >
-              <div className="flex flex-col items-center gap-8 lg:flex-row lg:justify-between">
-                <div className="flow max-w-3xl">
-                  <h2>{t("page-stablecoins-interest-rate-title")}</h2>
-                  <p className="text-lg text-body-medium">
-                    <Translation id="page-stablecoins:page-stablecoins-interest-rate-body" />
-                  </p>
+                <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
+                  <LinkWithArrow href="#how">
+                    {t("page-stablecoins-choose-link-types")}
+                  </LinkWithArrow>
+                  <LinkWithArrow href="#get-stablecoins">
+                    {t("page-stablecoins-get-stablecoins")}
+                  </LinkWithArrow>
                 </div>
-                <Image
-                  src={manAndDogImg}
-                  alt={t("page-stablecoins-interest-rate-alt")}
-                  sizes="(max-width: 1024px) 80vw, 409px"
-                  className="h-auto w-full max-w-sm shrink-0 lg:w-[409px] lg:max-w-none"
+
+                <Section id="editors-choice" className="text-start">
+                  <h3 className="text-h2">
+                    {t("page-stablecoins-editors-choice")}
+                  </h3>
+                  <p className="text-body-medium">
+                    {t("page-stablecoins-editors-choice-intro")}
+                  </p>
+                  <EdgeScrollContainer>
+                    {editorsChoices.map((choice) => (
+                      <EdgeScrollItem
+                        key={choice.title}
+                        className="ms-4 basis-[80%] sm:basis-1/2 lg:basis-[29%]"
+                      >
+                        <Card
+                          variant="nested"
+                          border
+                          hoverLift
+                          className="h-full"
+                        >
+                          <CardHeader>
+                            <CardBanner
+                              background="none"
+                              fit="contain"
+                              size="full"
+                              zoom={false}
+                              className={cn(
+                                "flex h-40 items-center justify-center p-8",
+                                choice.bannerClass
+                              )}
+                            >
+                              <Image
+                                src={choice.image}
+                                alt={choice.alt}
+                                sizes="160px"
+                              />
+                            </CardBanner>
+                          </CardHeader>
+                          <CardContent spacing="sm">
+                            <CardTitle asChild>
+                              <h4>{choice.title}</h4>
+                            </CardTitle>
+                            <CardParagraph size="sm">
+                              {choice.body}
+                            </CardParagraph>
+                          </CardContent>
+                          <CardFooter
+                            buttons="full"
+                            className="flex flex-col gap-2"
+                          >
+                            <ButtonLink href={choice.swapUrl}>
+                              {choice.swapButtonText}
+                            </ButtonLink>
+                            <ButtonLink
+                              href={choice.learnUrl}
+                              variant="outline"
+                            >
+                              {choice.learnButtonText}
+                            </ButtonLink>
+                          </CardFooter>
+                        </Card>
+                      </EdgeScrollItem>
+                    ))}
+                  </EdgeScrollContainer>
+                </Section>
+
+                <Section id="stablecoin-markets" className="text-start">
+                  <h3 className="text-h2">
+                    {t("page-stablecoins-top-coins")}&nbsp;
+                    <Tooltip content={tooltipContent}>
+                      <Info className="inline size-4" />
+                    </Tooltip>
+                  </h3>
+                  <p className="text-body-medium">
+                    {t("page-stablecoins-top-coins-intro")}{" "}
+                    {t("page-stablecoins-top-coins-intro-code")}
+                  </p>
+                  <StablecoinsTable
+                    content={coinDetails}
+                    hasError={marketsHasError}
+                  />
+                </Section>
+              </Section>
+            </div>
+
+            {/* How to get stablecoins */}
+            <Section id="get-stablecoins" className="md:text-center">
+              <h2>{t("page-stablecoins-get-stablecoins")}</h2>
+              <p className="max-w-3xl text-lg text-body-medium md:mx-auto">
+                {t("page-stablecoins-get-intro")}
+              </p>
+              <Grid balanced={2} className="gap-6 text-start">
+                {methods.map((method) => (
+                  <PathwayCard
+                    key={method.title}
+                    className="h-full"
+                    href={method.href}
+                    banner={
+                      <Image
+                        src={method.image}
+                        alt=""
+                        sizes="(max-width: 640px) 100vw, 176px"
+                      />
+                    }
+                    title={method.title}
+                    description={method.description}
+                    badge={method.badge}
+                  />
+                ))}
+              </Grid>
+            </Section>
+
+            {/* Interest rate / apps to earn interest */}
+            {/* Full-bleed band: same wrapper rationale as the choose band above. */}
+            <div className="mt-space-3x w-full rounded-4xl bg-background-highlight">
+              <Section
+                id="earn-interest"
+                className="mx-auto w-full max-w-7xl px-page py-space-3x"
+              >
+                <div className="flex flex-col items-center gap-8 lg:flex-row lg:justify-between">
+                  <div className="flow max-w-3xl">
+                    <h2>{t("page-stablecoins-interest-rate-title")}</h2>
+                    <p className="text-lg text-body-medium">
+                      <Translation id="page-stablecoins:page-stablecoins-interest-rate-body" />
+                    </p>
+                  </div>
+                  <Image
+                    src={manAndDogImg}
+                    alt={t("page-stablecoins-interest-rate-alt")}
+                    sizes="(max-width: 1024px) 80vw, 409px"
+                    className="h-auto w-full max-w-sm shrink-0 lg:w-[409px] lg:max-w-none"
+                  />
+                </div>
+
+                <Section id="earn-apps">
+                  <h3 className="text-h2">
+                    {t("page-stablecoins-apps-earn-interest-title")}
+                  </h3>
+                  <p className="text-body-medium">
+                    {t("page-stablecoins-apps-earn-interest-intro")}
+                  </p>
+                  <EdgeScrollContainer>
+                    {interestApps.map((app) => (
+                      <EdgeScrollItem
+                        key={app.name}
+                        className="ms-4 basis-[80%] sm:basis-1/2 lg:basis-[29%]"
+                      >
+                        <Card
+                          href={app.url}
+                          variant="nested"
+                          border
+                          hoverLift
+                          className="h-full"
+                        >
+                          <CardHeader>
+                            <CardBanner
+                              background="none"
+                              fit="contain"
+                              size="full"
+                              zoom={false}
+                              className={cn(
+                                "flex h-40 items-center justify-center p-10",
+                                app.bannerClass
+                              )}
+                            >
+                              <Image
+                                src={app.image}
+                                alt={app.alt}
+                                sizes="280px"
+                              />
+                            </CardBanner>
+                          </CardHeader>
+                          <CardContent spacing="sm">
+                            <CardTitle className="uppercase" asChild>
+                              <h4>{app.name}</h4>
+                            </CardTitle>
+                            <CardParagraph size="sm">
+                              {app.description}
+                            </CardParagraph>
+                          </CardContent>
+                          <CardFooter buttons="full">
+                            <CardButtonFake>
+                              {t("page-stablecoins-learn-more")}
+                            </CardButtonFake>
+                          </CardFooter>
+                        </Card>
+                      </EdgeScrollItem>
+                    ))}
+                  </EdgeScrollContainer>
+                </Section>
+              </Section>
+            </div>
+
+            {/* Learn more / tools */}
+            <Section id="tools">
+              <h2>{t("page-stablecoins-tools-title")}</h2>
+              <div className="[&_img]:shadow-none">
+                <ProductList
+                  category={t(
+                    "page-stablecoins-category-dashboard-and-education"
+                  )}
+                  content={toolsData}
+                  columns={2}
                 />
               </div>
-
-              <Section id="earn-apps">
-                <h3 className="text-h2">
-                  {t("page-stablecoins-apps-earn-interest-title")}
-                </h3>
-                <p className="text-body-medium">
-                  {t("page-stablecoins-apps-earn-interest-intro")}
-                </p>
-                <EdgeScrollContainer>
-                  {interestApps.map((app) => (
-                    <EdgeScrollItem
-                      key={app.name}
-                      className="ms-4 basis-[80%] sm:basis-1/2 lg:basis-[29%]"
-                    >
-                      <Card
-                        href={app.url}
-                        variant="nested"
-                        border
-                        hoverLift
-                        className="h-full"
-                      >
-                        <CardHeader>
-                          <CardBanner
-                            background="none"
-                            fit="contain"
-                            size="full"
-                            zoom={false}
-                            className={cn(
-                              "flex h-40 items-center justify-center p-10",
-                              app.bannerClass
-                            )}
-                          >
-                            <Image
-                              src={app.image}
-                              alt={app.alt}
-                              sizes="280px"
-                            />
-                          </CardBanner>
-                        </CardHeader>
-                        <CardContent spacing="sm">
-                          <CardTitle className="uppercase" asChild>
-                            <h4>{app.name}</h4>
-                          </CardTitle>
-                          <CardParagraph size="sm">
-                            {app.description}
-                          </CardParagraph>
-                        </CardContent>
-                        <CardFooter buttons="full">
-                          <CardButtonFake>
-                            {t("page-stablecoins-learn-more")}
-                          </CardButtonFake>
-                        </CardFooter>
-                      </Card>
-                    </EdgeScrollItem>
-                  ))}
-                </EdgeScrollContainer>
-              </Section>
             </Section>
-          </div>
 
-          {/* Learn more / tools */}
-          <Section id="tools">
-            <h2>{t("page-stablecoins-tools-title")}</h2>
-            <div className="[&_img]:shadow-none">
-              <ProductList
-                columns={2}
-                category={t(
-                  "page-stablecoins-category-dashboard-and-education"
-                )}
-                actionLabel={t("page-apps-ready-button")}
-                content={toolsData}
-              />
-            </div>
-          </Section>
+            <StandaloneQuizWidget quizKey="stablecoins" />
+          </MainArticle>
+        </I18nProvider>
 
-          <StandaloneQuizWidget quizKey="stablecoins" />
-        </MainArticle>
-
-        <ContentFeedback />
-      </I18nProvider>
+        <div className="px-page">
+          <ContentFeedback />
+        </div>
+      </main>
     </>
   )
 }
@@ -879,6 +901,8 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-stablecoins")
 

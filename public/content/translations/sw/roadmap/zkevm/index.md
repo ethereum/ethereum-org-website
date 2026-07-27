@@ -2,6 +2,7 @@
 title: zkEVM kwa uthibitishaji wa kitalu cha tabaka la 1 (l1)
 description: Jifunze jinsi uthibitisho wa maarifa-sifuri unavyoweza kuthibitisha utekelezaji wa kitalu cha Ethereum, kuwezesha uwezo wa upitishaji wa juu zaidi na mahitaji ya chini ya mthibitishaji.
 lang: sw
+template: roadmap
 ---
 
 zkEVM ni teknolojia inayotumia [uthibitisho wa maarifa-sifuri](/zero-knowledge-proofs/) kuthibitisha utekelezaji wa kitalu cha Ethereum. Badala ya kuhitaji kila [mthibitishaji](/glossary/#validator) kutekeleza upya miamala yote katika kitalu, mhusika mmoja maalum (anayeitwa "mthibitishaji") hutekeleza kitalu na kuzalisha uthibitisho wa kificho kwamba utekelezaji ulikuwa sahihi. Nodi yoyote inaweza kisha kuthibitisha uthibitisho huu—mchakato ambao ni wa bei nafuu sana kuliko kutekeleza upya miamala yote.

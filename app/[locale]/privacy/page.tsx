@@ -14,6 +14,7 @@ import PathwayCard from "@/components/cards/pathway-card"
 import PageHero from "@/components/Hero/PageHero"
 import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
+import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import {
   Alert,
   AlertContent,
@@ -448,6 +449,10 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             banner={<Image src={developersEthBlocksImg} alt="" sizes="160px" />}
           />
         </Section>
+
+        <Section id="quiz-section">
+          <StandaloneQuizWidget quizKey="privacy" />
+        </Section>
       </ContentLayout>
     </>
   )
@@ -459,6 +464,8 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-privacy")
 

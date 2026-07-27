@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-roadmap.json",
-  "generatedAt": "2026-06-29T23:50:53.775Z",
-  "rootHash": "c6856b629d3b",
+  "generatedAt": "2026-07-22T22:41:52.720Z",
+  "rootHash": "6c8dfa27b503",
   "tree": {
-    "contentHash": "69cf5700a99a",
-    "anchorHash": "625c80a19531",
+    "contentHash": "4d23fee8b915",
+    "anchorHash": "8f795bcdda29",
     "children": {
       "page-roadmap-title": {
         "contentHash": "be50ffa0fc02",
@@ -505,6 +505,30 @@
         "contentHash": "088234e748f2",
         "anchorHash": "e3b0c44298fc"
       },
+      "page-roadmap-fusaka-bpo-title": {
+        "contentHash": "7a09a51f4f0a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-fusaka-bpo-item-1": {
+        "contentHash": "3cd18c52346e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-fusaka-bpo-item-2": {
+        "contentHash": "a11dfcae2817",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-fusaka-gas-title": {
+        "contentHash": "246f88240369",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-fusaka-gas-item-1": {
+        "contentHash": "1dfdb1709cb9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-fusaka-gas-item-2": {
+        "contentHash": "548d68f3b6a8",
+        "anchorHash": "e3b0c44298fc"
+      },
       "page-roadmap-fusaka-additional-title": {
         "contentHash": "68841a81a73d",
         "anchorHash": "e3b0c44298fc"
@@ -656,6 +680,12 @@
       "page-roadmap-fusaka-peerdas-title",
       "page-roadmap-fusaka-peerdas-item-1",
       "page-roadmap-fusaka-peerdas-item-2",
+      "page-roadmap-fusaka-bpo-title",
+      "page-roadmap-fusaka-bpo-item-1",
+      "page-roadmap-fusaka-bpo-item-2",
+      "page-roadmap-fusaka-gas-title",
+      "page-roadmap-fusaka-gas-item-1",
+      "page-roadmap-fusaka-gas-item-2",
       "page-roadmap-fusaka-additional-title",
       "page-roadmap-fusaka-additional-item-1",
       "page-roadmap-fusaka-additional-item-2",
@@ -671,5 +701,5 @@
       "page-roadmap-hegota-discussed-item-1"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

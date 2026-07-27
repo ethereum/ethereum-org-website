@@ -10,7 +10,7 @@
   "explanation": "解説",
   "next-question": "次の質問",
   "next-quiz": "次のクイズ",
-  "question-number": "質問 {{number}}:",
+  "question-number": "質問 {number}:",
   "page-assets-merge": "マージ",
   "passed": "クイズに合格しました！",
   "questions": "質問",

@@ -72,7 +72,8 @@ export default async function PrivacyPageJsonLD({
         isPartOf: webPageId,
         headline: t("page-privacy-title"),
         description: t("page-privacy-meta-description"),
-        image: "https://ethereum.org/images/man-and-dog-playing.png",
+        image:
+          "https://ethereum.org/images/three-people-cat-butterflies-petting-dog.png",
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         contributor: contributorList,

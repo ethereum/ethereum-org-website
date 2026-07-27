@@ -42,7 +42,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 你还可以通过将鼠标悬停在“Apps”（应用程序）上并选择一个来提取现有的 API 密钥。你可以在此处“View Key”（查看密钥），以及“Edit App”（编辑应用程序）以将特定域名列入白名单、查看多种开发者工具并查看分析数据。
 
-![Gif showing a user how to pull API keys](./pull-api-keys.gif)
+![Gif showing a user how to pull API keys](./pull-api-keys.mp4#600x340)
 
 ## 3. 从命令行发起请求 {#make-a-request-from-the-command-line}
 

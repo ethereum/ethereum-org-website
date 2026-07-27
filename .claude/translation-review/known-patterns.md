@@ -1,7 +1,8 @@
 # Known Translation Patterns & Issues
 
 > This is a living document. Updated after each language review.
-> Last updated: 2026-06-30 (PR #18629 full-tree: empty `{#}` h5 build-breaker, code-fence corruption cluster, the source-language decision rule, and the "deterministic sweeps beat agent triage" methodology note)
+> Last updated: 2026-07-22 (PR #18868 full pipeline, 22 langs: YAML colon-in-description build-breaker, raw-`<`-in-prose MDX break, and the `ExpandableCard title= "` attribute-extraction gap; fleet avg 9.7)
+> Previous: 2026-06-30 (PR #18629 full-tree: empty `{#}` h5 build-breaker, code-fence corruption cluster, the source-language decision rule, and the "deterministic sweeps beat agent triage" methodology note)
 > Previous: 2026-06-09 (PR #18375: MDX duplicated-closer / dropped-`>` breakers, duplicate ghost-heading artifact, ETHGlossary authority hierarchy)
 
 ## Issue Categories
@@ -299,11 +300,25 @@ ETHGlossary frequently has multiple entries for one base term that differ by sur
 ### 21. "Trade-offs" Polysemy -- Exchange/Transfer vs Compromise (MEDIUM)
 "trade-offs" (compromises/downsides) mistranslated as the financial/transfer sense of "trade" (exchange/swap). Seen in ta `page-stablecoins-types-intro` (PR #18353): "their benefits, and trade-offs" -> "...exchanges" (பரிமாற்றங்கள்), which also collides with swap=பரிமாற்றம். High-risk in languages where "trade" maps to a swap/exchange term. Not automatable -- requires the pros/cons sense. Check any "trade-off(s)" occurrence in pro/con or comparison contexts.
 
+### All 24 languages -- page-get-eth.json (get-eth redesign), Reviewed PR #18767
+- ~20 changed keys per language (hero / exchanges / safety strings), 24 langs, incremental scope. Fleet avg **~9.9/10**, **0 critical issues**, 8 cosmetic warnings, no fixes needed.
+- Deterministic sweeps clean: JSON valid x24, key sets byte-match EN, both internal hrefs identical everywhere, no placeholder leaks (pattern 22 grep), no ticker/domain typos.
+- Recurring nuance (NOT an error, do not auto-fix): "Get ETH" and "Receive ETH" merge into one verb in ru/uk/hi/tr (Получить / Отримати / प्राप्त करें / alın); mr and ar/ur differentiate. Native-speaker call.
+- ur: "decentralized" carries Arabic kaf U+0643 instead of Urdu keheh U+06A9 -- traced to ETHGlossary's own entry (لامركزی), so per the authority policy it is NOT a translation error; logged as an ETHGlossary normalization candidate (like the lowercase `(l1)`/`(l2)` note).
+- ta: the prior swap/exchange homograph concern (pattern 21 family) is now well-handled -- swap=பரிமாற்றம் vs exchange-platform=பரிமாற்றகம் (distinct derived form).
+- Historically weak languages all clean: tr shows none of its client/mainnet/EHT modes; vi fully translated (no English chunks); ar shows none of its historical failure modes and keeps the get/receive distinction.
+
 ### Czech (cs) & Traditional Chinese (zh-tw) -- latest/ blog, Reviewed PR #18344
 - cs 8.8/10: 1 real critical fixed -- "gas" rendered as literal "plyn" (4x in building-on-ethereum-in-2026); ETHGlossary note mandates the loanword "gas" (same file already used "gasu"). zero-knowledge flag was a false positive (see pattern 20).
 - zh-tw 9.5/10: 1 real critical fixed -- "smart contract" as 智慧合約 -> 智能合約 (glossary: 智慧 is the smartphone sense, 智能 is the crypto term).
 - 22 other languages clean (0 real critical); fleet avg ~9.6/10. No MDX/href/semantic-inversion/cross-script issues across 72 files.
 - Several non-Latin glossary entries store lowercase `(l1)`/`(l2)`; translators render lowercase L1/L2 faithfully -- glossary-correct, not an error (candidate for ETHGlossary normalization).
+
+### All 24 languages -- page-layer-2-networks.json chart labels, Reviewed PR #18765 (intl/pending-fix-rtl-l2-networks)
+- 6 chart-legend/table-header labels per language (NFT / DeFi / Social / Token Transfers / Unlabeled / Actions). Fleet avg ~9.7/10, **0 critical issues**; single-agent review (scope-calibrated).
+- Pattern worth remembering -- **acronym expansion in space-constrained labels**: 6 langs (ar, bn, cs, de, sw, vi) rendered bare "DeFi" as the glossary's FULL form "decentralized finance (DeFi)" while 18 kept the bare acronym matching English. Both glossary-legal; full form is heavy for a chart legend. Warning-level only, no change required -- but a candidate MT-prompt refinement: match the source's acronym-vs-expansion choice for UI labels.
+- ta: token=வில்லை is ETHGlossary-mandated (native disc/medallion term, note sanctions casual டோக்கன்) and used consistently in-file -- do NOT flag as a mistranslation.
+- "Actions" -> Azioni/Akcje/Ações/Acciones collides with the "shares/stocks" finance sense in it/pl/pt-br/es but is the standard UI-column translation -- not an issue.
 
 ### Turkish (tr) -- Reviewed PR #17182
 - Quality score: 7.7/10
@@ -369,6 +384,13 @@ The intl-pipeline extracts attributed HTML tags (`<a href>`, `<img>`) from JSON 
 - Scores: fr/it/vi 10.0; de/es/hi/id/pl/ru/ur 9.8; tr 9.7; ar/bn/ja/ko/sw/ta/uk/zh 9.6; cs 9.5; mr/te 9.4.
 - Confirmed clean across the fleet: no semantic inversions (PoW/PoS, validator/miner, mainnet/testnet), no translated internal hrefs, no transliterated domains, no cross-script contamination, ICU placeholders + rich-text tags intact, brand/script policy correct per group. zh `智能合约` correct (not `智慧`). Historically weak ar/vi/tr clean of prior failure modes.
 
+### All 24 languages -- page-privacy.json, Reviewed PR #18739 (intl/pending-privacy-page)
+- Single 71-key UI-string JSON (privacy landing page) x 24 langs. Fleet avg **~9.5/10** (range: te 8.3, ur/it 9.3, up to es/id/ko/pt-br 9.8).
+- Structure clean fleet-wide (deterministic script): full key parity, all 6 named rich-text tags (`<dragnet>`, `<ftcReport>`, `<harvest>`, `<manipulate>`, `<nccStudy>`, `<reported>`) + `{value}` placeholder preserved, stats intact (376, 135, years). Two balanced `<strong>` redistributions (ar/ko) safe for RTL/SOV word order. Urdu correctly wraps metric `{value}` in U+2066/U+2069 bidi isolates (RTL-correct, not an artifact).
+- **1 critical (te): pattern 26** -- Uber "does not use" denial inverted by the `-మని` reported-directive suffix. Hand-fixed.
+- Minor fixes applied: de/cs/it/sw grammar+spelling typos; ar detached-lam spacing (2 strings); ru decimal `2.8`->`2,8`; zh/zh-tw/hi/bn "price gouging" softening (pattern 27).
+- Ethereum correctly transliterated per ETHGlossary in every non-Latin script (イーサリアム, 以太坊, 이더리움, Эфириум, إيثيريوم, इथेरियम, எத்திரியம், ఎథీరియం). Glossary density low for this page (~10 matched terms; mostly privacy/metadata/permissionless/zero-knowledge/cryptography).
+
 ### 23. Empty `{#}` Heading Anchors on h5 (CRITICAL — build-breaker)
 
 MT injects empty `{#}` tokens (often duplicated: `{#} {#} {#}`) onto h5 (`#####`) headings that have NO anchor in English (only h1-h4 require `{#id}`). `escapeHeadingIds` only escapes `{#word}` (needs a word char), so empty `{#}` reaches the MDX parser as a `{#}` expression -> "Could not parse expression with acorn" -> build fails. **Detect deterministically** by compiling each changed file through `@mdx-js/mdx` (strip frontmatter + escape `{#id}` first). **Fix:** strip the empty `{#}` tokens (English h5 has no anchor). Seen in PR #18629 `developers/docs/networks/index.md`, all 23 langs, 9 tokens/file.
@@ -385,6 +407,46 @@ PR #18629 hit every variant fleet-wide: `short-abi` Solidity keywords (incl. ko 
 ### 25. Methodology — Deterministic Sweeps Beat Agent Triage for Systematic Code Issues
 
 In PR #18629, deterministic sweeps (MDX compile + anchored grep against English) caught **~2x** the code/output criticals that 24 per-language Sonnet agents found. Agents reported es/id/ko as "0 critical" while all three had `getContractFactory` corrupted; short-abi keyword translation was missed by most agents. **Lesson:** for systematic, file-repeated issues (same English source mistranslated the same way across langs), do NOT rely on per-language agent triage for coverage — run a deterministic detection+fix sweep keyed on stable English anchors, then use agents for the judgment calls (semantics, glossary, tone). Reserve agent findings for what can't be grepped.
+
+### 26. Reported-Speech Negation Inversion in SOV/Agglutinative Langs (CRITICAL — semantic)
+
+A denial in indirect speech ("X says it does **not** do Y") can silently flip to an affirmative directive when the negation rides a verb suffix that collides with a reported-command marker. **Telugu (PR #18739):** "Uber says it does not use this to set fares" became `...దీనిని ఉపయోగించమని Uber చెబుతోంది` -- `-మని` is the standard reported-directive suffix ("says TO use"), so the default parse is the OPPOSITE of the source; only a strained `ఉపయోగించము+అని` (we-do-not-use) reading recovers the negative. On a page making a factual claim about a named company this is a meaning inversion, not a nit. **Fix:** unambiguous negative -- verbal-noun + లేదని (`ఉపయోగించడం లేదని` = "is not using") or 3rd-person negative `ఉపయోగించదని`. **Detection:** agent-only (not greppable) -- flag any "<entity> says ... not ..." denial and confirm the target keeps an explicit negation. Watch other SOV/agglutinative langs (Tamil, Telugu, Korean, Japanese) where negation is a suffix.
+
+### 27. Pejorative / Term-of-Art Flattening -- "price gouging", "surge" (LOW/MEDIUM — nuance)
+
+English words carrying a pejorative or technical shade lose it when MT picks the neutral core sense. Recurring on the privacy page: "algorithmic price **gouging**" -> plain "price increase" (bn, hi) or "price **fraud**" (zh `价格欺诈`, zh-tw `價格欺詐`) -- drops the exploitative-overcharging sense; `"surge" price` (Uber, a quoted term-of-art) collapses into the same word used for "dynamic pricing" (it, pl, pt-br, zh) -- loses the demand-spike nuance and the scare-quote framing. Not build/meaning-breaking; whether to fix depends on how load-bearing the nuance is. **Easy patches:** zh/zh-tw gouging = `哄抬` (哄抬价格/物价, the standard term); insert an "unfair/exploitative" qualifier (hi `अनुचित`, bn `অন্যায্য`) before "increase". **Detection:** agent-only -- give reviewers the loaded source terms explicitly so they verify the shade survived.
+
+### All 24 languages -- community-stories.json (26 keys) + 3 common.json keys, Reviewed PR #18772 (stories-intl)
+- New namespace of first-person community testimonials; fleet avg ~9.6/10, 7 criticals across 6 languages, all hand-fixed in-branch.
+- **zh-tw 智慧合約 REGRESSION**: the exact PR #18344 error recurred in all 4 "smart contract" occurrences (3 keys) of the new import -- the pipeline does not consult prior review fixes; check this term on EVERY zh-tw import.
+- **RTL untranslated Latin date fragments** (new tell): "March 2020" shipped bidi-isolated but untranslated in ar AND ur (story-dorgo-eth) while all Latin-script langs translated it. Deterministic detection: grep English month names in RTL/Indic/CJK locale files.
+- **Passive-voice agency reversal** (pattern 4 variant): sw rendered "all banks denied my loan apps" as "benki zote zilikataliwa" (banks WERE denied). Passive constructions can invert who-did-what without touching an antonym pair.
+- **Double-negation inversion** (pattern 4 variant): hi rendered "a lack of trust" as "अविश्वास की कमी" (lack of DIStrust). Negating an already-negative noun flips polarity.
+- **tr stablecoin**: ETHGlossary has NO tr entry (old KB note "sabit para" is stale); locale convention is the fused loanword "sabitcoin" (~130 occurrences) -- the import's spaced hybrid "sabit coin" was collapsed to match.
+- Scores: it/de 9.9, vi 9.9, cs/es/fr/pt-br/ru/uk/zh 9.8, id 9.7, ar/ja/ko/mr/te(9.4) 9.4-9.6, ta 9.5, pl 9.6, tr 9.2, sw 9.1, ur 9.1, bn 9.4, hi 8.2, zh-tw 8.3.
+- Clean fleet-wide: key parity 26/26 everywhere, ICU-safe, \n\n paragraph structure exact in all 4 multi-paragraph stories, no placeholder leaks, no cross-script contamination, amounts intact, no untranslated chunks (vi's historical failure mode absent).
+
+### 28. Unquoted `description` with an internal `: ` -> YAML build-breaker (CRITICAL — build-breaker)
+
+MT rewrites an English em-dash/parenthetical in the `description` frontmatter as a colon, producing an unquoted YAML scalar with an internal `: ` (colon+space). `next-mdx-remote`'s frontmatter parser (the eemeli `yaml` package, NOT js-yaml) reads the second colon as a nested mapping -> `YAMLParseError: Nested mappings are not allowed in compact mappings` / `BLOCK_AS_IMPLICIT_KEY`, and the page prerender fails.
+
+**Seen in PR #18868:** English `applications—no passwords` (em-dash) became `applicaciones Ethereum: sin contraseñas` in es/fr/it `developers/docs/ethereum-stack/authentication`. **Fix:** wrap the value in double quotes (`description: "…: …"`) — do NOT drop the colon. **Detect deterministically:** scan changed-file frontmatter for any top-level `key: value` where the plain (unquoted, non-`[`/`{`/`|`/`>`) value contains `: ` or ends with `:`. Both eemeli-yaml and js-yaml reject it, so gray-matter validation catches it too.
+
+Companion break in the same PR (pattern 3 family): a translator added a raw `<` in prose inside full-width parens (`より小さい（<）` in ja `evm/opcodes`) where English had none (`uint256 less-than`). MDX parses `<）` as a JSX tag open -> `Unexpected character before name`. Fix = escape to `&lt;`. Caught by the `next-mdx-remote/serialize` compile sweep, not the frontmatter scan.
+
+### 29. `ExpandableCard title= "..."` (space after `=`) defeats pipeline attribute extraction (HIGH — fleet-wide untranslated UI string)
+
+A user-facing `<ExpandableCard title= "...">` title shipped **untranslated in all 24 locales** on `roadmap/single-slot-finality` (`"Why can't we have SSF today?"`). Root cause is in the **English source**: `title= "..."` has a space between `=` and the opening quote, which the pipeline's attribute-value extractor doesn't match, so the string is never sent for translation (the card *body* translates fine; only the `title` attribute leaks English). The `eventName`/`eventCategory` attributes are intentionally skipped (analytics), but `title` is reader-visible.
+
+**Detection (deterministic, cross-locale):** grep the English verbatim title across `public/content/translations/*/<page>` — a string present unchanged in ~all locales is an extraction gap, not per-language laziness. **Durable fix:** normalize `attr= "` -> `attr="` in the English source AND/OR make the pipeline's JSX-attribute extractor tolerate whitespace around `=`, then re-pass. This is the JSX-attribute analogue of the untranslated-chunk failure mode.
+
+### All 22 languages -- full pipeline import, Reviewed PR #18868 (intl/pending-dev)
+- 22 langs x ~64 changed files each (1,063 markdown + 480 UI-string JSON = 1,543 total). Fleet avg **~9.7/10**. Deterministic layer (MDX compile, JSON parse, HTML-PLACEHOLDER, hrefs, domains, tickers, cross-script) **clean fleet-wide** except the 4 build-breakers below.
+- **Build-breakers (4, hand-fixed + committed `a0ca2f940e`, Netlify deploy preview green):** patterns 28 (es/fr/it authentication YAML colon) + 3-family (ja opcodes raw `<`).
+- **2 criticals, both `ur` untranslated chunks** (`gaming/index.md` two sections; `yellow-paper-evm` ~half the prose) — left for a pipeline re-pass, NOT hand-translated. ur scored 8.4 (lowest); all other langs 9.2-9.9.
+- **Systematic content-sync gaps (not per-lang defects):** pattern 29 ExpandableCard title (all 24); `ethrex` execution-client row dropped in `es` (English recently added it, others kept the paragraph but dropped the row); dropped headings/anchors (zh `erc-4626` `## Introduction`, id `pectra/maxeb` FAQ heading, id `gaming` H2 anchor). All trace to recent English-side moves or pipeline coverage — re-pass territory.
+- **Recurring nuance (warning-level):** "trade-off" polysemy rendered with the glossary's *swap/exchange* term (ur تبادلہ, ta பரிமாற்றம், mr) instead of the compromise sense; loanword-vs-calque term choices (it `contratti intelligenti` vs preferred loanword `smart contract`; tr `sabit coin` vs fused `sabitcoin`); ar MEV glossed "miner extractable value" on PoS pages (pbs correct). No semantic inversions, no reported-speech negation flips, no cross-script contamination, brand/script policy correct per group.
+- **Methodology confirmed (pattern 25):** deterministic sweeps caught 100% of build-breakers before any agent ran; the 22 agents added the judgment layer (untranslated chunks, polysemy, glossary nuance) that grep can't. Calibrated 1-agent-per-language (not 3) was sufficient given the clean deterministic pass.
 
 ## Agent Architecture Notes
 

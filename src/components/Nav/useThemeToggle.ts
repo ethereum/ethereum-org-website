@@ -1,14 +1,14 @@
 import { Moon, Sun } from "lucide-react"
+import { useTranslations } from "next-intl"
 import { useTheme } from "next-themes"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import useColorModeValue from "@/hooks/useColorModeValue"
 import { useEventListener } from "@/hooks/useEventListener"
-import useTranslation from "@/hooks/useTranslation"
 
 export const useThemeToggle = () => {
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
   const { setTheme, resolvedTheme } = useTheme()
   const ThemeIcon = useColorModeValue(Moon, Sun)
 

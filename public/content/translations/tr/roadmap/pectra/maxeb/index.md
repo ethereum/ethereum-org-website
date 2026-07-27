@@ -143,10 +143,8 @@ Birleştirmeleri yönetmek için kullanılabilecek çeşitli araçlar vardır. E
 
 ## SSS {#faq}
 
-### Geçiş yapmak teklif şansımı veya ödüllerimi değiştirir mi? {#change-luck-or-rewards}
-
-Hayır. Geçiş yapmak teklif şansınızı azaltmaz - görevleriniz ve teklif seçiminiz aynı kalır. Örneğin, iki adet 32 ETH'lik doğrulayıcınız veya bir adet 64 ETH'lik doğrulayıcınız olması durumunda, bir blok teklif etmek üzere seçilme ve ödül kazanma şansınız toplamda aynı olacaktır.
-
+### Geçiş yapmak teklif şansımı veya ödüllerimi değiştirir mi?
+Hayır. Geçiş yapmak teklif şansınızı azaltmaz - görevleriniz ve teklif seçiminiz aynı kalır. Örneğin, iki adet 32 ETH'lik doğrulayıcıya kıyasla bir adet 64 ETH'lik doğrulayıcınız olması durumunda, bir blok teklif etmek ve ödül kazanmak için seçilme şansınız toplamda aynı olacaktır.
 ### Geçiş yapmak ceza kesintisi (slashing) riskimi değiştirir mi? {#change-slashing-risk}
 
 Daha küçük veya profesyonel olmayan operatörler için kısa cevap hayırdır. Daha uzun cevap ise, hızlı uyarı sistemleriyle düğüm başına birçok doğrulayıcı çalıştıran profesyonel operatörler için, daha az sayıda doğrulayıcıda birleşmenin, bir ceza kesintisine tepki verme ve zincirleme olayları önleme yeteneklerini azaltabileceğidir. Bu riski dengelemek için tüm doğrulayıcılar için başlangıç ceza kesintisi *cezası* 1 ETH'den (32 ETH başına) 0,0078125 ETH'ye (32 ETH başına) önemli ölçüde düşürülmüştür.

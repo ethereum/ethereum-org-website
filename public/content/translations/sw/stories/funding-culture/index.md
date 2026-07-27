@@ -64,7 +64,7 @@ Jaribio letu la kwanza lilikuwa mfululizo wa anime ulioitwa [White Rabbit](https
 - Waliweka dhamana ili kupiga kura kuhusu maamuzi ya hadithi moja kwa moja kwenye kichezaji
 - Walipata ERC-20 (tokeni yetu ya usikivu) 
 
-![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4)
+![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4#800x400)
 
 ERC-20 ilitolewa kwenye mkondo wa dhamana (bonding curve). Kadiri ulivyowahi na kushiriki zaidi, ndivyo ulivyopata zaidi. Kura (kama vile kumpa jina mhusika mkuu Mirai) zilifanyika kupitia Snapshot. 
 

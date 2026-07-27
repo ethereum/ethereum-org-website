@@ -1,14 +1,14 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/component-ai-agent-products.json",
-  "generatedAt": "2026-05-01T19:53:05.047Z",
-  "rootHash": "5bad7109ee11",
+  "generatedAt": "2026-07-22T22:31:17.302Z",
+  "rootHash": "1a91d6ae995f",
   "tree": {
-    "contentHash": "85e026bfd6c8",
-    "anchorHash": "eaaf5054dc6b",
+    "contentHash": "2f554f66bc81",
+    "anchorHash": "a06ae0f2d7a4",
     "children": {
-      "action-label": {
-        "contentHash": "6cc8519b9158",
+      "aiagenttoolkit-brand": {
+        "contentHash": "80dfe3c0c52c",
         "anchorHash": "e3b0c44298fc"
       },
       "aiagenttoolkit-description": {
@@ -77,12 +77,20 @@
           "icu:0"
         ]
       },
+      "clanker-brand": {
+        "contentHash": "ef2d50b60bd8",
+        "anchorHash": "e3b0c44298fc"
+      },
       "clanker-description": {
         "contentHash": "31c94ea46315",
         "anchorHash": "e3b0c44298fc"
       },
       "clanker-title": {
         "contentHash": "ef2d50b60bd8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "cookiefun-brand": {
+        "contentHash": "7df895deca43",
         "anchorHash": "e3b0c44298fc"
       },
       "cookiefun-description": {
@@ -110,11 +118,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "luna-description-1": {
-        "contentHash": "afd557206e28",
+        "contentHash": "a1fcb9f2353c",
         "anchorHash": "4b9f7d802648",
         "children": {
           "prose:0": {
-            "contentHash": "8547570b347e",
+            "contentHash": "1f156f443e77",
             "anchorHash": "e3b0c44298fc"
           }
         }
@@ -147,7 +155,7 @@
       }
     },
     "childrenOrder": [
-      "action-label",
+      "aiagenttoolkit-brand",
       "aiagenttoolkit-description",
       "aiagenttoolkit-title",
       "aixbt-brand",
@@ -161,8 +169,10 @@
       "botto-description",
       "botto-title",
       "chat-with-brand",
+      "clanker-brand",
       "clanker-description",
       "clanker-title",
+      "cookiefun-brand",
       "cookiefun-description",
       "cookiefun-title",
       "heyanon-brand",
@@ -175,5 +185,5 @@
       "visit-brand"
     ]
   },
-  "sourceCommitSha": "4a12cb9394943a43a5509983baec11bf9c3d756f"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

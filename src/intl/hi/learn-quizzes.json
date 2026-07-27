@@ -10,7 +10,7 @@
   "explanation": "स्पष्टीकरण",
   "next-question": "अगला प्रश्न",
   "next-quiz": "अगला क्विज़",
-  "question-number": "प्रश्न संख्या {{number}}:",
+  "question-number": "प्रश्न संख्या {number}:",
   "page-assets-merge": "द मर्ज",
   "passed": "आपने क्विज़ पास कर लिया!",
   "questions": "प्रश्न",

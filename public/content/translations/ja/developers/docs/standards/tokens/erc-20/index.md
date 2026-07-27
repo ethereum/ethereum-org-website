@@ -175,13 +175,12 @@ ERC-20でこの問題を完全に防ぐことはできませんが、エンド�
 - [オープンツェッペリン - ERC-20 実装](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Solidity ERC20トークンガイド](https://www.alchemy.com/overviews/erc20-solidity)
 
-## その他の代替可能トークン標準 {#fungible-token-standards}
-
+## その他の代替可能トークン標準
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - トークン化されたボールト](/developers/docs/standards/tokens/erc-4626)
-
+- [ERC-7540 - 非同期のトークン化されたボールト](/developers/docs/standards/tokens/erc-7540)
 ## チュートリアル：イーサリアム上でERC-20を使って構築する {#tutorials}
 
 - [ERC-20コントラクトのウォークスルー](/developers/tutorials/erc20-annotated-code/) _– オープンツェッペリンのERC-20コントラクト実装の1行ごとの注釈付きウォークスルー。_
