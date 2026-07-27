@@ -212,7 +212,6 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             <p className="text-body-medium">
               {t("page-community-card-1-description")}
             </p>
-            <div className="flow mx-auto max-w-2xl md:text-center"></div>
             <Grid columns={3}>
               {redditCommunities.map((community) => (
                 <Card
@@ -238,7 +237,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                       width={64}
                       height={64}
                       className={cn("size-16 rounded-lg", community.iconClass)}
-                      sizes="64x"
+                      sizes="64px"
                     />
                     <div>
                       <CardTitle>{community.handle}</CardTitle>
@@ -300,7 +299,6 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 <p className="text-body-medium">
                   {t("page-community-stories-subtitle")}
                 </p>
-                <div className="mx-auto mb-10 flex max-w-2xl flex-col gap-3 text-center"></div>
                 <Grid columns={3} className="mx-auto max-w-screen-lg">
                   {featuredStories.map((story) => (
                     <Card
