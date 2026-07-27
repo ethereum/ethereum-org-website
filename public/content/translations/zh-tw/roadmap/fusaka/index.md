@@ -3,6 +3,7 @@ title: "富薩卡 🦓"
 metaTitle: Fulu-Osaka (富薩卡)
 description: 了解富薩卡協定升級
 lang: zh-tw
+template: upgrade
 authors: ["Nixo", "馬里奧·哈維爾"]
 ---
 

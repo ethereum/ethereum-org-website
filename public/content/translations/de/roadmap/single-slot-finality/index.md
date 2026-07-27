@@ -2,6 +2,7 @@
 title: Single-Slot-Finalität
 description: Erklärung der Single-Slot-Finalität
 lang: de
+template: roadmap
 ---
 
 Es dauert etwa 15 Minuten, bis ein [Ethereum](/)-Block endgültig wird. Wir können jedoch den Konsensmechanismus von Ethereum dazu bringen, Blöcke effizienter zu validieren und die Zeit bis zur Endgültigkeit drastisch zu verkürzen. Anstatt 15 Minuten zu warten, könnten Blöcke im selben Slot vorgeschlagen und endgültig gemacht werden. Dieses Konzept ist als **Single-Slot-Finalität (SSF)** bekannt.

@@ -62,6 +62,7 @@
   "page-privacy-default-description-1": "事情不必如此。我们有可能构建<strong>默认隐私</strong>的系统，其设计使得人们不必时刻组装、监控和保护自己的隐私。这种技术就像一个避难所：无需许可，且每个人都触手可及。",
   "page-privacy-default-description-2": "<strong>这也是以太坊存在的部分原因。</strong>需要明确的是，这是一项艰巨且尚未完成的工作。以太坊在设计上是一个公开透明的账本，这本身就是一个隐私挑战；为了解决这个问题，以太坊积极的隐私路线图正在将网络过渡到默认隐私的架构。如今，以太坊是零知识证明等高级隐私保护技术的发源地，这些技术让你能够在不泄露底层数据的情况下证明某件事是真实的。",
   "page-privacy-default-description-3": "<strong>一个不同的未来是可能的</strong>，在这个未来中，隐私是内置的，保护隐私不再需要费力争取。",
+  "page-privacy-default-cta": "探索隐私路线图",
   "page-privacy-getting-started-title": "开始",
   "page-privacy-getting-started-description-1": "开始在网上保护你的隐私很容易。你可以通过将日常应用切换为保护隐私的替代方案来保护你的个人数据。",
   "page-privacy-getting-started-description-2": "以太坊驱动了一系列工具，让你能够安全地验证数字身份、进行无记名投票、机密地进行协调等等。",

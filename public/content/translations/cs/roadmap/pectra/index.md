@@ -3,6 +3,7 @@ title: Pectra
 metaTitle: Prague-Electra (Pectra)
 description: "Přečtěte si o aktualizaci protokolu Pectra"
 lang: cs
+template: upgrade
 authors: ["Nixo", "Mario Havel"]
 ---
 

@@ -3,6 +3,7 @@ title: "Fusaka 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
 description: Fusaka protokol güncellemesi hakkında bilgi edinin
 lang: tr
+template: upgrade
 authors: ["Nixo", "Mario Havel"]
 ---
 

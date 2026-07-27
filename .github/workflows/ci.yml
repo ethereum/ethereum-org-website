@@ -91,6 +91,8 @@ jobs:
         uses: chromaui/action@v16
         with:
           projectToken: fee8e66c9916
+          # untraced globs live in chromatic.config.json (Storybook project only).
+          configFile: chromatic.config.json
           exitZeroOnChanges: true
           onlyChanged: true
           # Release-train builds (dev/staging/master head branches) were

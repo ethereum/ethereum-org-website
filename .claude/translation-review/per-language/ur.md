@@ -12,3 +12,11 @@
 - CRIT fixed: bidi-isolated untranslated "March 2020" in story-dorgo-eth -> مارچ 2020 (Western digits kept, matching the file's other years). Same artifact as ar -- grep English month names on every RTL import.
 - WARN (unfixed): numeral-style inconsistency -- Western 2021/400 vs native ۵/۸ in prose; ur convention doc prefers native numerals for prose but the file is mixed; left as-is pending a fleet decision.
 - LRI/PDI bidi isolation marks all correctly paired across 26 keys.
+
+## PR #18925 (privacy roadmap + 2 video transcripts) -- 2026-07-27 -- 9.8/10 (after repair)
+
+**Repaired via scoped pipeline re-run, not by hand:** `roadmap/privacy/index.md` arrived truncated at 41% (57 of 136 lines, 2 of 6 sections), ending mid-sentence on a leaked `<HTML-PLACEHOLDER-LINK-d08112` — an MDX build-breaker — and carried `EIP-۸۱۴۱` (Eastern-Arabic numerals) in an identifier at L52. Re-dispatched `intl-pipeline.yml` with `target_path=public/content/roadmap/privacy/index.md`, `target_languages=ur`, `mode=full`; result is 135 lines, all 6 headings, no placeholder, no numeral corruption. Truncation is missing *content* — regenerate it, never hand-translate.
+
+**Clean on re-review:** no glossary deviations, no negation flips across a very negation-dense FOCIL Q&A, formal آپ register consistent. The historical `trade-off` polysemy trap (تبادلہ/swap) is correctly rendered سمجھوتہ here — an improvement over prior reviews.
+
+**Note:** Eastern-Arabic numerals in ordinary prose (`لیئر ۲`, `۱۰، ۱۲`) are correct Urdu convention. Only ASCII-digit corruption *inside* EIP-/ERC- identifiers is a defect.

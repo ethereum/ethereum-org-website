@@ -2,6 +2,7 @@
 title: Tek slot kesinliği
 description: Tek slot kesinliğinin açıklaması
 lang: tr
+template: roadmap
 ---
 
 Bir [Ethereum](/) bloğunun kesinleşmesi yaklaşık 15 dakika sürer. Ancak, Ethereum'un mutabakat mekanizmasının blokları daha verimli bir şekilde doğrulamasını sağlayabilir ve kesinlik süresini önemli ölçüde azaltabiliriz. On beş dakika beklemek yerine, bloklar aynı slot içinde teklif edilebilir ve kesinleşebilir. Bu kavram **tek slot kesinliği (SSF)** olarak bilinir.

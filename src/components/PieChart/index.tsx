@@ -3,13 +3,10 @@
 import { TrendingUp } from "lucide-react"
 import {
   Cell,
-  Legend,
   Pie,
   PieChart as RechartsPieChart,
-  ResponsiveContainer,
   type TooltipProps,
 } from "recharts"
-import type { Formatter } from "recharts/types/component/DefaultLegendContent"
 
 import {
   Card,
@@ -135,38 +132,6 @@ export function PieChart({
   // Calculate total for percentage display
   const total = processedData.reduce((sum, item) => sum + item.value, 0)
 
-  // Function to calculate optimal chart dimensions based on data size and screen
-  const getChartDimensions = () => {
-    const dataCount = processedData.length
-    const baseHeight =
-      dataCount <= 4 ? 320 : Math.min(380, 280 + dataCount * 15)
-
-    return {
-      height: baseHeight,
-      outerRadius: Math.max(50, Math.min(80, 400 / Math.max(6, dataCount))),
-      cx: dataCount <= 3 ? "40%" : dataCount <= 5 ? "35%" : "30%",
-    }
-  }
-
-  const dimensions = getChartDimensions()
-
-  const legendFormatter: Formatter = (label: string, { payload }) => {
-    const numeric = typeof payload?.value === "number" ? payload.value : 0
-    const percentage = ((numeric / total) * 100).toFixed(1)
-
-    const isSmallScreen =
-      typeof window !== "undefined" ? window.innerWidth < 640 : false
-    const maxLength = isSmallScreen ? 10 : 15
-    const displayName =
-      label.length > maxLength ? `${label.substring(0, maxLength)}...` : label
-
-    return (
-      <span className="text-xs sm:text-sm" title={label}>
-        {displayName} {showPercentage && `(${percentage}%)`}
-      </span>
-    )
-  }
-
   // Custom tooltip content
   const customTooltipContent = ({
     active,
@@ -202,37 +167,60 @@ export function PieChart({
       </CardHeader>
 
       <CardContent>
-        <ChartContainer config={defaultChartConfig}>
-          <ResponsiveContainer width="100%" height={dimensions.height}>
-            <RechartsPieChart className="ms-4 -me-12">
+        {/* Stack the pie above the legend on mobile; centered side-by-side from `sm` up. */}
+        <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-center sm:gap-10">
+          <ChartContainer
+            config={defaultChartConfig}
+            // Square, fluid pie that scales with the container instead of a
+            // fixed pixel radius (overrides ChartContainer's default aspect-video).
+            className="aspect-square w-full max-w-[280px] shrink-0"
+          >
+            <RechartsPieChart>
               <ChartTooltip cursor={false} content={customTooltipContent} />
-
-              <Legend
-                layout="vertical"
-                verticalAlign="middle"
-                align="right"
-                className="max-w-1/2 text-sm/snug break-all"
-                formatter={legendFormatter}
-              />
-
               <Pie
                 data={processedData}
                 dataKey="value"
                 nameKey="name"
-                cx={dimensions.cx}
+                cx="50%"
                 cy="50%"
-                outerRadius={dimensions.outerRadius}
+                outerRadius="90%"
                 label={false}
-                stroke="#ffffff"
-                strokeWidth={1}
+                stroke="hsla(var(--background-highlight))"
+                strokeWidth={2}
               >
                 {processedData.map((_, i) => (
                   <Cell key={`cell-${i}`} fill={generateColor(i)} />
                 ))}
               </Pie>
             </RechartsPieChart>
-          </ResponsiveContainer>
-        </ChartContainer>
+          </ChartContainer>
+
+          <ul className="flex w-full max-w-[320px] flex-col gap-2.5">
+            {processedData.map((item, i) => {
+              const percentage = ((item.value / total) * 100).toFixed(1)
+              return (
+                <li
+                  key={item.name}
+                  className="flex items-center gap-2 text-sm/snug"
+                >
+                  <span
+                    aria-hidden
+                    className="size-3 shrink-0 rounded-xs"
+                    style={{ backgroundColor: generateColor(i) }}
+                  />
+                  <span className="min-w-0 flex-1 truncate" title={item.name}>
+                    {item.name}
+                  </span>
+                  {showPercentage && (
+                    <span className="shrink-0 text-body-medium tabular-nums">
+                      {percentage}%
+                    </span>
+                  )}
+                </li>
+              )
+            })}
+          </ul>
+        </div>
       </CardContent>
 
       {(footerText || footerSubText) && (

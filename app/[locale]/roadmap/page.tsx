@@ -19,7 +19,7 @@ import {
   CheaperTransactionsIcon,
   DankshardingIcon,
   ExtraSecurityIcon,
-  FutureProofingIcon,
+  PrivacyIcon,
   SingleSlotFinalityIcon,
   StatelessnessIcon,
 } from "@/components/icons/roadmap"
@@ -102,12 +102,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       },
     },
     {
-      title: t("page-roadmap-future-proofing-title"),
-      icon: <FutureProofingIcon className="h-auto w-12" />,
-      description: t("page-roadmap-future-proofing-description"),
+      title: t("page-roadmap-privacy-title"),
+      icon: <PrivacyIcon className="h-auto w-12" />,
+      description: t("page-roadmap-privacy-description"),
       button: {
-        label: t("page-roadmap-future-proofing-button"),
-        href: "/roadmap/future-proofing",
+        label: t("page-roadmap-privacy-button"),
+        href: "/roadmap/privacy",
       },
     },
   ]
@@ -117,7 +117,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       icon: <Atom className="size-7" />,
       title: t("page-roadmap-post-quantum-title"),
       description: t("page-roadmap-post-quantum-description"),
-      href: "/roadmap/future-proofing/quantum-resistance",
+      href: "/roadmap/security/quantum-resistance",
     },
     {
       icon: <SingleSlotFinalityIcon className="size-7" />,
@@ -204,7 +204,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <p className="max-w-3xl text-lg">
               <Translation id="page-roadmap:page-roadmap-changes-coming-description" />
             </p>
-            <Grid balanced={4}>
+            <Grid className="grid-cols-1! md:grid-cols-2! xl:grid-cols-5!">
               {changesComingItems.map((item) => (
                 <Card key={item.title} href={item.button.href}>
                   <CardHeader className="flex items-center justify-between gap-4">

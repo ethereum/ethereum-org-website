@@ -2,6 +2,7 @@
 title: Finalidad de un solo slot
 description: Explicación de la finalidad de un solo slot
 lang: es
+template: roadmap
 ---
 
 Un bloque de [Ethereum](/) tarda unos 15 minutos en finalizar. Sin embargo, podemos hacer que el mecanismo de consenso de Ethereum valide los bloques de manera más eficiente y reduzca drásticamente el tiempo hasta la finalidad. En lugar de esperar quince minutos, los bloques podrían proponerse y finalizarse en el mismo slot. Este concepto se conoce como **finalidad de un solo slot (SSF)**.

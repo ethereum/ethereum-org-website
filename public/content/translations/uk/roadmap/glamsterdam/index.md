@@ -2,6 +2,7 @@
 title: "Гламстердам"
 description: "Дізнайтеся про оновлення протоколу Гламстердам"
 lang: uk
+template: upgrade
 ---
 
 # Гламстердам {#glamsterdam}

@@ -2,6 +2,7 @@
 title: Danksharding
 description: Jifunze kuhusu Proto-Danksharding na danksharding - masasisho mawili yanayofuatana kwa ajili ya kuongeza uwezo wa Ethereum.
 lang: sw
+template: roadmap
 summaryPoints:
   - Danksharding ni sasisho la awamu nyingi ili kuboresha uwezo wa kuongezeka na uwezo wa Ethereum.
   - Hatua ya kwanza, Proto-Danksharding, inaongeza mablobu ya data kwenye vitalu
