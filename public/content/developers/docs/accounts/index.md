@@ -135,3 +135,7 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 - [Smart contracts](/developers/docs/smart-contracts/)
 - [Transactions](/developers/docs/transactions/)
+
+<Divider />
+
+<QuizWidget quizKey="accounts" />
