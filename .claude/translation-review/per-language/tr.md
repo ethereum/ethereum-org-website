@@ -37,3 +37,9 @@
 ## PR #18772 (community-stories.json, 2026-07-10) -- 9.2/10
 - CRIT fixed: spaced hybrid "sabit coin('ler/lerde/lerle/lere)" -> fused "sabitcoin" (5 occurrences). ETHGlossary has NO tr stablecoin entry; the old "sabit para" KB note is stale. Locale convention is "sabitcoin" (~130 occurrences across tr/*.json); common.json's "Stablecoin'ler" (3x) and "Sabit paralar" (1x) are the outliers, not the rule.
 - No EHT/BSL transpositions, no DeFi letter drops, no Musteri/Markette recurrences.
+
+## PR #18925 (privacy roadmap + 2 video transcripts) -- 2026-07-27 -- 9.3/10
+
+**Fixed (critical):** `Blok önericilerinin` -> `Blok teklifçilerinin` (`roadmap/privacy` L58, compound entry `block proposer = blok teklifçisi`). The embedded video transcript uses `teklif edici`/`teklifçi` throughout, making `önerici` the outlier.
+
+**Not fixed (warning):** `private` rendered `gizli` in the roadmap page but `özel` in the video embedded on that same page; PIR expanded two different ways. Visible side by side, worth a follow-up decision.
