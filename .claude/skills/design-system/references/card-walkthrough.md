@@ -105,7 +105,7 @@ Two independent booleans layer edge/interaction treatment on top of `variant`/`s
 | Prop | Effect | When |
 |---|---|---|
 | `border` | Static hairline edge (`ring ring-border`). It's a `ring`, so it never shifts layout. | A resting outline on `nested`/`ghost` cards that need definition against their background. |
-| `hoverLift` | +1% scale + shadow on hover (300ms). | **Auto-applied on every `href` `Card`** -- don't pass it there. Pass it by hand only on a **non-link** card that carries an action (multiple buttons, or an inline link in the copy), where it signals "interactive content here." |
+| `hoverLift` | +1% scale + shadow on hover (300ms). The scale is `motion-safe`-gated, so reduced-motion users get the shadow step only. | **Auto-applied on every `href` `Card`** -- don't pass it there. Pass it by hand only on a **non-link** card that carries an action (multiple buttons, or an inline link in the copy), where it signals "interactive content here." |
 
 **There is no `hoverOutline` prop anymore.** Every Card with an `href` gets a hover affordance automatically, chosen by `variant` -- you don't set it:
 

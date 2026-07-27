@@ -106,7 +106,7 @@ The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card
 - **Link hover is variant-aware** (auto, from `href`): `ghost` link cards fill with `bg-background-highlight` and drop the outline; `base`/`nested`/`header-bar` link cards keep the `ring-primary-hover` outline. Driven by an internal `interactive` compound variant, not a prop.
 - `size`: `lg | base (default) | md | sm | xs`. Controls `--card-pad` (between/around parts) and `--content-space` (within `CardContent`). `xs` = zero padding for edge-to-edge banner imagery.
 - `href`: wraps in `BaseLink` for whole-card-clickable behavior with `group/link` propagation. An `href` card **auto-applies `hoverLift`** and the outline/fill -- don't pass `hoverLift` on a link card.
-- `hoverLift` (pass by hand only on **non-link** action cards): raises the card on hover (+1% scale + shadow, 250ms). `border`: static `ring-border` edge.
+- `hoverLift` (pass by hand only on **non-link** action cards): raises the card on hover (+1% scale + shadow, 300ms; the scale is `motion-safe`-gated). `border`: static `ring-border` edge.
 - **Single-CTA `href` cards render the CTA as `CardButtonFake` (button-shaped) or `CardLinkFake` (text link), never a real `ButtonLink`/`Button`/`LinkWithArrow`** -- a real interactive element nested in the card's anchor is invalid HTML. `CardButtonFake` mirrors `Button` (`variant`/`size`/`isSecondary`, `withChevron`, `hideArrow`); `CardLinkFake` mirrors a text link (`withForwardArrow`, `hideArrow`; external NE arrow automatic). See `card-walkthrough.md`.
 - Card is always vertical (`flex flex-col`); there is no `orientation` variant.
 
