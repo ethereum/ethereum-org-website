@@ -1,7 +1,7 @@
 {
   "version": 1,
   "locale": "ur",
-  "translatedAt": "2026-07-27T19:12:35.593Z",
+  "translatedAt": "2026-07-27T19:48:30.618Z",
   "englishManifestHash": "9c98a48dea0b",
   "placeholderOrder": [
     "LINK-80c564",
@@ -14,7 +14,32 @@
     "LINK-0358ba",
     "LINK-c9540f",
     "COMPONENT-426850",
-    "LINK-4a194d"
+    "LINK-4a194d",
+    "LINK-d08112",
+    "LINK-d70f5a",
+    "LINK-03926d",
+    "LINK-488e78",
+    "LINK-d795bc",
+    "LINK-47e9a3",
+    "LINK-d9cef4",
+    "LINK-7f476c",
+    "LINK-bbbff6",
+    "LINK-f7eaef",
+    "LINK-66ac30",
+    "LINK-5b9062",
+    "LINK-d50956",
+    "LINK-d08112",
+    "LINK-1c8218",
+    "LINK-c0ee0b",
+    "LINK-e459f2",
+    "LINK-dd9889",
+    "LINK-a467ca",
+    "LINK-d50956",
+    "LINK-47eade",
+    "LINK-b06262",
+    "LINK-1d9049",
+    "LINK-d795bc",
+    "LINK-fb1c07"
   ],
   "placeholderMap": {
     "COMPONENT-426850": {
@@ -214,7 +239,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-07-27T19:12:35.593Z",
+      "translatedAt": "2026-07-27T19:48:30.618Z",
       "status": "success"
     }
   }
