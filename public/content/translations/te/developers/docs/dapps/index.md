@@ -47,9 +47,9 @@ dappsను పరిచయం చేయడానికి, మనం స్మ�
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## dapps సృష్టించడానికి సాధనాలు {#dapp-tools}
+## dappsను సృష్టించడానికి సాధనాలు
 
-**Scaffold-ETH _- మీ స్మార్ట్ కాంట్రాక్ట్‌కు అనుగుణంగా ఉండే ఫ్రంటెండ్‌ను ఉపయోగించి Solidityతో త్వరగా ప్రయోగాలు చేయండి._**
+**Scaffold-ETH 2 _- మీ స్మార్ట్ కాంట్రాక్ట్‌కు అనుగుణంగా ఉండే ఫ్రంటెండ్‌ను ఉపయోగించి Solidityతో త్వరగా ప్రయోగాలు చేయండి._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [ఉదాహరణ dapp](https://punkwallet.io/)
@@ -58,7 +58,7 @@ dappsను పరిచయం చేయడానికి, మనం స్మ�
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**One Click Dapp _- [ABI](/glossary/#abi) నుండి dapp ఫ్రంటెండ్‌లను రూపొందించడానికి FOSS సాధనం._**
+**One Click Dapp _- ఒక [ABI](/glossary/#abi) నుండి dapp ఫ్రంటెండ్‌లను రూపొందించడానికి FOSS సాధనం._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
@@ -79,7 +79,6 @@ dappsను పరిచయం చేయడానికి, మనం స్మ�
 - [crossmint.com](https://www.crossmint.com)
 - [డాక్యుమెంటేషన్](https://docs.crossmint.com)
 - [డిస్కార్డ్](https://discord.com/invite/crossmint)
-
 ## మరింత చదవడానికి {#further-reading}
 
 - [dappsను అన్వేషించండి](/apps)

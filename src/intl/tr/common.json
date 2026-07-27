@@ -230,6 +230,8 @@
   "less": "Daha az",
   "light-mode": "Açık",
   "light-mode-aria-label": "Açık moda geç",
+  "link-external-assistive-text": "(yeni sekmede açılır)",
+  "link-mailto-assistive-text": "(e-posta istemcisini açar)",
   "loading": "Yükleniyor...",
   "loading-error-refresh": "Hata, lütfen yenileyin.",
   "meetups": "Buluşmalar",

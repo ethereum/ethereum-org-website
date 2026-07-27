@@ -175,13 +175,12 @@ print("Addr Balance:", addr_balance)
 - [اوپن زیپلن - <span dir="ltr">ERC-20</span> کا نفاذ](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Solidity ERC20 ٹوکنز کے لیے گائیڈ](https://www.alchemy.com/overviews/erc20-solidity)
 
-## دیگر قابل تبادلہ ٹوکن سٹینڈرڈز {#fungible-token-standards}
-
+## دیگر قابل تبادلہ ٹوکن سٹینڈرڈز
 - [<span dir="ltr">ERC-223</span>](/developers/docs/standards/tokens/erc-223)
 - [<span dir="ltr">ERC-1363</span>](/developers/docs/standards/tokens/erc-1363)
 - [<span dir="ltr">ERC-777</span>](/developers/docs/standards/tokens/erc-777)
 - [<span dir="ltr">ERC-4626</span> - ٹوکنائزڈ والٹس](/developers/docs/standards/tokens/erc-4626)
-
+- [<span dir="ltr">ERC-7540</span> - ایسنکرونس ٹوکنائزڈ والٹس](/developers/docs/standards/tokens/erc-7540)
 ## ٹیوٹوریلز: ایتھیریم پر <span dir="ltr">ERC-20</span> کے ساتھ تعمیر کریں {#tutorials}
 
 - [<span dir="ltr">ERC-20</span> کنٹریکٹ واک تھرو](/developers/tutorials/erc20-annotated-code/) _– اوپن زیپلن <span dir="ltr">ERC-20</span> کنٹریکٹ کے نفاذ کا ایک لائن بہ لائن تشریحی واک تھرو۔_

@@ -230,6 +230,8 @@
   "less": "Meno",
   "light-mode": "Chiaro",
   "light-mode-aria-label": "Passa alla modalità chiara",
+  "link-external-assistive-text": "(si apre in una nuova scheda)",
+  "link-mailto-assistive-text": "(apre il client email)",
   "loading": "Caricamento...",
   "loading-error-refresh": "Errore, per favore aggiorna.",
   "meetups": "Meetup",

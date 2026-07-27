@@ -2,6 +2,7 @@
 title: Glamsterdam
 description: "Tìm hiểu về bản nâng cấp Giao thức Glamsterdam"
 lang: vi
+template: upgrade
 ---
 
 # Glamsterdam {#glamsterdam}
@@ -289,15 +290,14 @@ Có, Glamsterdam rất có thể sẽ giảm phí cho người dùng hàng ngày
 
 Ngoài ra, vì tính bền vững lâu dài, Glamsterdam giới thiệu Danh sách truy cập cấp độ khối (BAL). Điều này cho phép xử lý song song và chuẩn bị cho lớp 1 (l1) để xử lý an toàn các giới hạn gas tổng thể cao hơn trong tương lai, điều này có khả năng sẽ làm giảm chi phí gas cho mỗi giao dịch khi công suất tăng lên.
 
-### Sẽ có bất kỳ thay đổi nào đối với các hợp đồng thông minh hiện tại của tôi sau Glamsterdam không? {#will-my-smart-contracts-change}
+### Có bất kỳ thay đổi nào đối với các hợp đồng thông minh hiện có của tôi sau Glamsterdam không?
 
-Các hợp đồng hiện tại sẽ tiếp tục hoạt động bình thường sau Glamsterdam. Các nhà phát triển có thể sẽ nhận được một số công cụ mới và nên xem xét việc sử dụng gas của họ:
+Các hợp đồng hiện có sẽ tiếp tục hoạt động bình thường sau Glamsterdam. Các nhà phát triển có thể sẽ nhận được một số công cụ mới và nên xem xét việc sử dụng gas của họ:
 
-- Tăng kích thước hợp đồng tối đa (hoặc EIP-7954) cho phép các nhà phát triển triển khai các ứng dụng lớn hơn, nâng giới hạn kích thước hợp đồng tối đa từ khoảng 24KiB lên 32KiB.
-- Triển khai trước nhà máy xác định (hoặc EIP-7997) giới thiệu một hợp đồng nhà máy phổ quát, được tích hợp sẵn. Nó cho phép các nhà phát triển triển khai các ứng dụng và Ví hợp đồng thông minh của họ đến cùng một Địa chỉ chính xác trên tất cả các chuỗi EVM tham gia.
+- Tăng kích thước hợp đồng tối đa (hoặc EIP-7954) cho phép các nhà phát triển triển khai các ứng dụng lớn hơn, nâng giới hạn kích thước hợp đồng tối đa từ khoảng 24KiB lên 64KiB.
+- Triển khai trước nhà máy xác định (hoặc EIP-7997) giới thiệu một hợp đồng nhà máy phổ quát, được tích hợp sẵn. Nó cho phép các nhà phát triển triển khai các ứng dụng và Ví hợp đồng thông minh của họ đến cùng một Địa chỉ chính xác trên tất cả các Chuỗi EVM tham gia.
 - Nếu ứng dụng của bạn dựa vào việc theo dõi phức tạp để tìm các khoản chuyển ETH, Các khoản chuyển và đốt ETH phát ra một Nhật ký (hoặc EIP-7708) sẽ cho phép bạn chuyển sang sử dụng Nhật ký để hạch toán đơn giản và đáng tin cậy hơn.
-- Tăng chi phí gas tạo trạng thái (hoặc EIP-8037) và cập nhật chi phí gas truy cập trạng thái (hoặc EIP-8038) giới thiệu các mô hình bền vững mới sẽ thay đổi một số chi phí triển khai hợp đồng nhất định, vì việc tạo Tài khoản mới hoặc lưu trữ vĩnh viễn sẽ có một khoản phí cố định được tiêu chuẩn hóa mới dựa trên kích thước của dữ liệu được tạo.
-
+- Tăng chi phí gas tạo trạng thái (hoặc EIP-8037) và Cập nhật chi phí gas truy cập trạng thái (hoặc EIP-8038) giới thiệu các mô hình bền vững mới sẽ thay đổi một số chi phí triển khai hợp đồng nhất định, vì việc tạo các Tài khoản mới hoặc lưu trữ vĩnh viễn sẽ có một khoản phí cố định được tiêu chuẩn hóa mới dựa trên kích thước của dữ liệu được tạo.
 ### Glamsterdam sẽ ảnh hưởng như thế nào đến lưu trữ nút và các yêu cầu phần cứng? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 
 Nhiều EIP đang được xem xét cho Glamsterdam giải quyết vấn đề suy giảm hiệu suất của sự tăng trưởng trạng thái:

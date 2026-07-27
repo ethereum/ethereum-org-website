@@ -2,6 +2,7 @@
 title: Tính chung cuộc trong một slot
 description: Giải thích về tính chung cuộc trong một slot
 lang: vi
+template: roadmap
 ---
 
 Mất khoảng 15 phút để một khối [Ethereum](/) đạt tính chung cuộc. Tuy nhiên, chúng ta có thể làm cho cơ chế đồng thuận của Ethereum xác thực các khối hiệu quả hơn và giảm đáng kể thời gian đạt tính chung cuộc. Thay vì chờ đợi mười lăm phút, các khối có thể được đề xuất và đã chung cuộc trong cùng một khe. Khái niệm này được gọi là **tính chung cuộc trong một slot (SSF)**.
@@ -31,7 +32,7 @@ Với thiết kế cơ chế hiện tại, để giảm thời gian đạt tính
 
 ## Các con đường tiến tới SSF {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title="Tại sao chúng ta chưa thể có SSF ngay hôm nay?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 Cơ chế đồng thuận hiện tại kết hợp các chứng thực từ nhiều trình xác thực, được gọi là các ủy ban, để giảm số lượng tin nhắn mà mỗi trình xác thực phải xử lý để xác thực một khối. Mọi trình xác thực đều có cơ hội chứng thực trong mỗi kỷ nguyên (32 khe) nhưng trong mỗi khe, chỉ một tập hợp con các trình xác thực, được gọi là một 'ủy ban' thực hiện chứng thực. Họ làm như vậy bằng cách chia thành các mạng con trong đó một vài trình xác thực được chọn làm 'người tổng hợp'. Mỗi người tổng hợp đó kết hợp tất cả các chữ ký mà họ thấy từ các trình xác thực khác trong mạng con của họ thành một chữ ký tổng hợp duy nhất. Người tổng hợp bao gồm số lượng đóng góp cá nhân lớn nhất sẽ chuyển chữ ký tổng hợp của họ cho người đề xuất khối, người này sẽ đưa nó vào khối cùng với chữ ký tổng hợp từ các ủy ban khác.
 

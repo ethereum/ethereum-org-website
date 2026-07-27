@@ -39,6 +39,7 @@
   "page-find-wallet-buy-crypto-desc": "Doğrudan cüzdan içinde itibari para ile kripto satın alın \n *Not: kripto satın alma bölgeye özgü olabilir",
   "page-find-wallet-sell-for-fiat": "Nakit için sat",
   "page-find-wallet-sell-for-fiat-desc": "Doğrudan cüzdan içinde kriptoyu itibari paraya satın \n *Not: kripto çekme bölgeye özgü olabilir",
+  "page-find-wallet-network-support": "Ağ desteği",
   "page-find-wallet-multisig": "Çoklu imza",
   "page-find-wallet-multisig-desc": "Bir işleme yetki vermek için birden fazla imza gerektiren cüzdanlar",
   "page-find-wallet-social-recovery": "Sosyal kurtarma",

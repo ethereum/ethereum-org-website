@@ -230,6 +230,8 @@
   "less": "কম",
   "light-mode": "লাইট",
   "light-mode-aria-label": "লাইট মোডে স্যুইচ করুন",
+  "link-external-assistive-text": "(একটি নতুন ট্যাবে খোলে)",
+  "link-mailto-assistive-text": "(ইমেইল ক্লায়েন্ট খুলবে)",
   "loading": "লোড হচ্ছে...",
   "loading-error-refresh": "ত্রুটি, অনুগ্রহ করে রিফ্রেশ করুন।",
   "meetups": "মিটআপ",

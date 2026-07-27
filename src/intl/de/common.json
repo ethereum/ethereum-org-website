@@ -230,6 +230,8 @@
   "less": "Weniger",
   "light-mode": "Hell",
   "light-mode-aria-label": "Zum hellen Modus wechseln",
+  "link-external-assistive-text": "(öffnet in einem neuen Tab)",
+  "link-mailto-assistive-text": "(öffnet E-Mail-Programm)",
   "loading": "Wird geladen...",
   "loading-error-refresh": "Fehler, bitte neu laden.",
   "meetups": "Meetups",

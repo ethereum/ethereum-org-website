@@ -232,6 +232,7 @@ module.exports = [
   ["/developers/docs/privacy-enhancements", "/privacy/ethereum/"],
   ["/developers/docs/wallets", "/wallets/"],
   ["/blog", "https://blog.ethereum.org"],
+  ["/latest/feed.xml", "/latest/feed/"],
   // Storybook (Chromatic) convenience redirects
   ["/storybook", "https://master--63b7ea99632763723c7f4d6b.chromatic.com/"],
   ["/storybook/dev", "https://dev--63b7ea99632763723c7f4d6b.chromatic.com/"],

@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/pbs/index.md",
-  "generatedAt": "2026-06-08T10:27:11.751Z",
-  "rootHash": "a3432d6ece40",
+  "generatedAt": "2026-07-23T00:18:03.423Z",
+  "rootHash": "43ff56562ea0",
   "tree": {
-    "contentHash": "8b7bf485dda1",
-    "anchorHash": "6e95382398a4",
+    "contentHash": "cb8c7c354647",
+    "anchorHash": "d885b04621cc",
     "children": {
       "frontmatter:title": {
         "contentHash": "f04af9b1aa1c",
@@ -18,6 +18,10 @@
       "frontmatter:lang": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "3de1580490d2"
       },
       "prose:1": {
         "contentHash": "b57d2effa5bc",
@@ -244,6 +248,7 @@
       "frontmatter:title",
       "frontmatter:description",
       "frontmatter:lang",
+      "frontmatter:template",
       "prose:1",
       "link:0",
       "prose:2",
@@ -254,5 +259,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

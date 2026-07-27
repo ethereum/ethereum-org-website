@@ -230,6 +230,8 @@
   "less": "Méně",
   "light-mode": "Světlý",
   "light-mode-aria-label": "Přepnout do světlého režimu",
+  "link-external-assistive-text": "(otevře se v nové kartě)",
+  "link-mailto-assistive-text": "(otevře e-mailového klienta)",
   "loading": "Načítání...",
   "loading-error-refresh": "Chyba, prosím obnovte stránku.",
   "meetups": "Meetupy",

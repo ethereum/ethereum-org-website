@@ -14,14 +14,15 @@ env:
   # Shared base URL for the production server we boot for e2e + lighthouse.
   LOCAL_BASE_URL: http://localhost:3000
 
-# Extended jobs (build / e2e / lighthouse / visual / page-visual) only run for
-# PRs into master, staging, or test/** branches. Jobs downstream of `build`
-# inherit gating automatically via `needs:` (skipped jobs propagate).
+# Extended jobs (build / e2e / lighthouse / page-visual) only run for PRs into
+# master, staging, or test/** branches. Jobs downstream of `build` inherit
+# gating automatically via `needs:` (skipped jobs propagate).
 #
-# Exception: Storybook Chromatic (`visual-tests`) also runs on non-draft PRs
-# into dev that touch UI code (see `chromatic-gate`), so visual changes are
-# reviewed on the PR that introduces them. The path gate keeps snapshot usage
-# within the Chromatic plan.
+# Exception: Storybook Chromatic (`visual-tests`) runs on every non-draft PR.
+# TurboSnap (`onlyChanged`) keeps snapshot usage low, so PRs with no affected
+# stories cost nothing. The merge gate for visual changes is Chromatic's own
+# "UI Tests" check (posted by the Chromatic GitHub App), which updates live as a
+# maintainer accepts/rejects -- so this job just publishes and exits 0.
 #
 # `fetch-depth: 0` is set selectively: lint needs it for `git diff`, and the
 # two Chromatic jobs need it for baseline detection. Other jobs use the default
@@ -71,36 +72,13 @@ jobs:
       - name: Run unit tests
         run: pnpm test:unit
 
-  chromatic-gate:
-    name: Chromatic gate
-    if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: read
-    outputs:
-      # Release PRs (base master/staging/test/**) always run Chromatic;
-      # dev PRs only when non-draft and touching UI code.
-      run: ${{ github.base_ref != 'dev' || (github.event.pull_request.draft == false && steps.filter.outputs.ui == 'true') }}
-    steps:
-      - uses: dorny/paths-filter@7b450fff21473bca461d4b92ce414b9d0420d706 # v4.0.2
-        id: filter
-        # A filter hiccup must not block release PRs; dev PRs fail closed.
-        continue-on-error: true
-        with:
-          filters: |
-            ui:
-              - "src/components/**"
-              - "src/layouts/**"
-              - "src/styles/**"
-              - "app/**"
-              - ".storybook/**"
-              - "package.json"
-              - "pnpm-lock.yaml"
-
   visual-tests:
     name: Visual regression (Chromatic)
-    needs: chromatic-gate
-    if: needs.chromatic-gate.outputs.run == 'true'
+    # Runs on every non-draft PR. TurboSnap (`onlyChanged`) means PRs with no
+    # affected stories snapshot nothing, so this is cheap for content-only PRs.
+    # This job only publishes to Chromatic; the required merge gate is the
+    # Chromatic App's "UI Tests" check, so the job itself always exits 0.
+    if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -113,6 +91,8 @@ jobs:
         uses: chromaui/action@v16
         with:
           projectToken: fee8e66c9916
+          # untraced globs live in chromatic.config.json (Storybook project only).
+          configFile: chromatic.config.json
           exitZeroOnChanges: true
           onlyChanged: true
           # Release-train builds (dev/staging/master head branches) were

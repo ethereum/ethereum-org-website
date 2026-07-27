@@ -182,11 +182,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
       <main className="space-y-space-3x pb-page">
         <MainArticle className="flow **:data-[label=button-link]:max-md:w-full *:[section]:px-page">
-          <Section
-            id="releases"
-            dir="ltr"
-            className="mt-space-3x overflow-hidden"
-          >
+          <Section id="releases" className="mt-space-3x overflow-hidden">
             <I18nProvider locale={locale} messages={messages}>
               <ReleaseCarousel />
             </I18nProvider>
@@ -359,6 +355,8 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-roadmap")
 

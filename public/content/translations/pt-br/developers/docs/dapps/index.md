@@ -47,14 +47,14 @@ Um contrato inteligente é um código que vive na blockchain do Ethereum e é ex
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## Ferramentas para criar dapps {#dapp-tools}
+## Ferramentas para criar dapps
 
-**Scaffold-ETH _- Experimente rapidamente com Solidity usando um frontend que se adapta ao seu contrato inteligente._**
+**Scaffold-ETH 2 _- Experimente rapidamente com Solidity usando um frontend que se adapta ao seu contrato inteligente._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Dapp de exemplo](https://punkwallet.io/)
 
-**Create Eth App _- Crie aplicativos baseados em Ethereum com um comando._**
+**Create Eth App _- Crie aplicativos baseados no Ethereum com um comando._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
@@ -63,7 +63,7 @@ Um contrato inteligente é um código que vive na blockchain do Ethereum e é ex
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
-**Etherflow _- Ferramenta FOSS para desenvolvedores Ethereum testarem seu nó e comporem e depurarem chamadas RPC a partir do navegador._**
+**Etherflow _- Ferramenta FOSS para desenvolvedores do Ethereum testarem seu nó, além de compor e depurar chamadas RPC a partir do navegador._**
 
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
@@ -79,7 +79,6 @@ Um contrato inteligente é um código que vive na blockchain do Ethereum e é ex
 - [crossmint.com](https://www.crossmint.com)
 - [Documentação](https://docs.crossmint.com)
 - [Discord](https://discord.com/invite/crossmint)
-
 ## Leitura adicional {#further-reading}
 
 - [Explorar dapps](/apps)

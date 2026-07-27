@@ -37,7 +37,7 @@ Rellene los detalles en «Create App» para obtener su nueva clave. Aquí tambi�
 
 También puede obtener claves de API existentes pasando el cursor sobre «Apps» (Aplicaciones) y seleccionando una. Aquí puede hacer clic en «View Key», así como en «Edit App» (Editar aplicación) para incluir dominios específicos en la lista blanca, ver varias herramientas para desarrolladores y consultar análisis.
 
-![Gif showing a user how to pull API keys](./pull-api-keys.gif)
+![Gif showing a user how to pull API keys](./pull-api-keys.mp4#600x340)
 
 ## 3. Haga una solicitud desde la línea de comandos {#make-a-request-from-the-command-line}
 

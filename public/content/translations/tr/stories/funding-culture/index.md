@@ -64,7 +64,7 @@ Hollywood'un modası geçmiş, bürokratik sisteminin tamamen yerini alabilir ve
 - Oynatıcı üzerinden doğrudan olay örgüsü kararlarına Oy vermek için stake ettiler
 - Bir ERC-20 (dikkat Token'ımız) kazandılar 
 
-![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4)
+![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4#800x400)
 
 ERC-20 bir bağlanma eğrisi (bonding curve) üzerinde ihraç edildi. Ne kadar erken katılır ve ne kadar çok etkileşime girerseniz, o kadar çok kazanıyordunuz. Oylar (ana karaktere Mirai adını vermek gibi) Snapshot üzerinden gerçekleşti. 
 

@@ -237,14 +237,13 @@ ethers.utils.formatEther(balance)
 - [Vitendaji vya matumizi vya Web3js](https://docs.web3js.org/api/web3-utils)
 - [Vitendaji vya matumizi vya Ethers](https://docs.ethers.org/v6/api/utils/)
 
-## Maktaba zinazopatikana {#available-libraries}
-
+## Maktaba zinazopatikana
 **Web3.js -** **_API ya JavaScript ya Ethereum._**
 
 - [Nyaraka](https://docs.web3js.org)
 - [GitHub](https://github.com/ethereum/web3.js)
 
-**Ethers.js -** **_Utekelezaji kamili wa mkoba wa Ethereum na matumizi katika JavaScript na TypeScript._**
+**Ethers.js -** **_Utekelezaji kamili wa mkoba wa Ethereum na huduma katika JavaScript na TypeScript._**
 
 - [Ukurasa wa mwanzo wa Ethers.js](https://ethers.org/)
 - [Nyaraka](https://docs.ethers.io)
@@ -263,23 +262,32 @@ ethers.utils.formatEther(balance)
 - [Nyaraka](https://www.alchemy.com/docs)
 - [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
 
-**viem -** **_Kiolesura cha TypeScript cha Ethereum._**
+**Viem -** **_Kiolesura cha TypeScript kwa ajili ya Ethereum._**
 
 - [Nyaraka](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-**Codex -** **_API ya data ya mnyororo wa vitalu iliyoboreshwa na ya wakati halisi katika minyororo mingi._**
+**Wagmi -** **_Maktaba ya React hooks kwa ajili ya Ethereum, iliyojengwa juu ya Viem._**
+
+- [Nyaraka](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_Maktaba ya React ya kuongeza muunganisho wa mkoba kwenye programu tumizi zilizogatuliwa (dapps), iliyojengwa juu ya Wagmi na Viem._**
+
+- [Nyaraka](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
+
+**Codex -** **_API ya data ya mnyororo wa vitalu iliyoboreshwa, ya wakati halisi katika makumi ya minyororo._**
 
 - [Nyaraka](https://docs.codex.io)
 - [Kichunguzi](https://docs.codex.io/explore)
 - [GitHub](https://github.com/Codex-Data)
 - [Discord](https://discord.com/invite/mFpUhT3vAq)
 
-**Drift -** **_Maktaba kuu ya TypeScript yenye uakibishaji uliojengewa ndani, ndoano, na majaribio ya kuiga._**
+**Drift -** **_Meta-maktaba ya TypeScript yenye uwekaji akiba, hooks, na test mocks zilizojengewa ndani._**
 
 - [Nyaraka](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
-
 ## Usomaji zaidi {#further-reading}
 
 _Unajua rasilimali ya jamii iliyokusaidia? Hariri ukurasa huu na uiongeze!_

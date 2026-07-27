@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/zkevm/index.md",
-  "generatedAt": "2026-06-08T10:51:05.782Z",
-  "rootHash": "dd3dfe3c25fa",
+  "generatedAt": "2026-07-23T00:26:06.913Z",
+  "rootHash": "47f260fd2ea5",
   "tree": {
-    "contentHash": "aade4c1cfba5",
-    "anchorHash": "e478214b993b",
+    "contentHash": "9a473c5a9d46",
+    "anchorHash": "82282aac458d",
     "children": {
       "frontmatter:title": {
         "contentHash": "6a3637808297",
@@ -18,6 +18,10 @@
       "frontmatter:lang": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "3de1580490d2"
       },
       "prose:2": {
         "contentHash": "e1e8d7aab4fc",
@@ -39,7 +43,7 @@
         "contentHash": "77cf35327009",
         "anchorHash": "e3b0c44298fc"
       },
-      "component:8": {
+      "component:9": {
         "contentHash": "30adee947f74",
         "anchorHash": "108f8f8faa5d",
         "children": {
@@ -566,12 +570,13 @@
       "frontmatter:title",
       "frontmatter:description",
       "frontmatter:lang",
+      "frontmatter:template",
       "prose:2",
       "link:0",
       "prose:3",
       "link:1",
       "prose:4",
-      "component:8",
+      "component:9",
       "reexecution-problem",
       "how-it-works",
       "benefits",
@@ -581,5 +586,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

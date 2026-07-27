@@ -230,6 +230,8 @@
   "less": "Moins",
   "light-mode": "Clair",
   "light-mode-aria-label": "Passer au mode clair",
+  "link-external-assistive-text": "(s'ouvre dans un nouvel onglet)",
+  "link-mailto-assistive-text": "(ouvre le client de messagerie)",
   "loading": "Chargement...",
   "loading-error-refresh": "Erreur, veuillez rafraîchir.",
   "meetups": "Meetups",

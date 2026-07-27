@@ -29,10 +29,13 @@ Hapa kuna baadhi ya viwango maarufu vya tokeni kwenye Ethereum:
 
 Orodha kamili ya mapendekezo ya [ERC](https://eips.ethereum.org/erc).
 
-## Kusoma zaidi {#further-reading}
+## Usomaji zaidi
 
-_Unajua rasilimali ya jamii iliyokusaidia? Hariri ukurasa huu na uiongeze!_
+_Je, unajua rasilimali ya jamii iliyokusaidia? Hariri ukurasa huu na uiongeze!_
 
+- [Orodha ya Ukaguzi ya Ujumuishaji wa Tokeni](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md) - _Trail of Bits_
+- [Nyaraka za OpenZeppelin: Tokeni](https://docs.openzeppelin.com/contracts/5.x/tokens) - _OpenZeppelin_
+- [Hatari za Ujumuishaji wa Tokeni (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _OpenZeppelin_
 ## Mafunzo yanayohusiana {#related-tutorials}
 
 - [Orodha ya ukaguzi ya ujumuishaji wa tokeni](/developers/tutorials/token-integration-checklist/) _– Orodha ya ukaguzi ya mambo ya kuzingatia wakati wa kuingiliana na tokeni._

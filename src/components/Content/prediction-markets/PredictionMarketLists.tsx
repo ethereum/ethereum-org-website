@@ -1,77 +1,41 @@
-import ProductListComponent from "@/components/ProductList"
-import { ButtonLink } from "@/components/ui/buttons/Button"
+import { getTranslations } from "next-intl/server"
+
+import ProductListComponent, {
+  type ProductListContent,
+} from "@/components/ProductList"
 
 import auger from "@/public/images/dapps/auger.png"
 import kalshi from "@/public/images/dapps/kalshi.png"
 import polymarket from "@/public/images/dapps/polymarket.png"
 
-const PredictionMarketLists = () => {
+const PredictionMarketLists = async () => {
+  const t = await getTranslations("component-prediction-market-products")
+
   const productListSets = [
     {
-      title: "Polymarket",
-      description: "",
+      title: t("polymarket-title"),
+      description: t("polymarket-description"),
       image: polymarket,
-      alt: "Polymarket logo",
-      contentItems: [
-        <p key="polymarket-description">
-          A popular forecasting market with real-time trading.
-        </p>,
-        <div key="polymarket-button">
-          <ButtonLink
-            href="https://polymarket.com/"
-            target="_blank"
-            variant="outline"
-          >
-            Explore Polymarket
-          </ButtonLink>
-        </div>,
-      ],
+      href: "https://polymarket.com/",
+      ctaLabel: t("polymarket-cta"),
     },
     {
-      title: "Augur",
-      description: "",
+      title: t("augur-title"),
+      description: t("augur-description"),
       image: auger,
-      alt: "Augur logo",
-      contentItems: [
-        <p key="auger-description">
-          A fully decentralized prediction market protocol used for predicting
-          price trends. Disclaimer: you will need some technical expertise to
-          start using Augur.
-        </p>,
-        <div key="auger-button">
-          <ButtonLink
-            href="https://github.com/AugurProject"
-            target="_blank"
-            variant="outline"
-          >
-            Dive into Augur
-          </ButtonLink>
-        </div>,
-      ],
+      href: "https://github.com/AugurProject",
+      ctaLabel: t("augur-cta"),
     },
     {
-      title: "Kalshi",
-      description: "",
+      title: t("kalshi-title"),
+      description: t("kalshi-description"),
       image: kalshi,
-      alt: "Kalshi logo",
-      contentItems: [
-        <p key="kalshi-description">
-          a CFTC-compliant platform using Ethereum for USDC deposits. (USA only)
-        </p>,
-        <div key="kalshi-button">
-          <ButtonLink
-            href="https://kalshi.com/"
-            target="_blank"
-            variant="outline"
-          >
-            Try Kalshi
-          </ButtonLink>
-        </div>,
-      ],
+      href: "https://kalshi.com/",
+      ctaLabel: t("kalshi-cta"),
     },
-  ]
+  ] satisfies ProductListContent[]
 
-  return <ProductListComponent content={productListSets} actionLabel="Go" />
+  return <ProductListComponent content={productListSets} />
 }
 
 export default PredictionMarketLists

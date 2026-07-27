@@ -55,21 +55,22 @@ incomplete: true
 
 ## <span dir="ltr">Python</span> پروجیکٹس اور ٹولز {#python-projects-and-tools}
 
-### فعال: {#active}
+### Active: {#active}
 
-- [<span dir="ltr">Web3.py</span>](https://github.com/ethereum/web3.py) - _ایتھیریم کے ساتھ تعامل کے لیے <span dir="ltr">Python</span> لائبریری_
-- [<span dir="ltr">Vyper</span>](https://github.com/ethereum/vyper/) - _<span dir="ltr">EVM</span> کے لیے پائتھونک سمارٹ کنٹریکٹ زبان_
-- [<span dir="ltr">Ape</span>](https://github.com/ApeWorX/ape) - _پائتھونسٹاس، ڈیٹا سائنسدانوں، اور سیکیورٹی پیشہ ور افراد کے لیے سمارٹ کنٹریکٹ ڈیولپمنٹ ٹول_
-- [<span dir="ltr">py-evm</span>](https://github.com/ethereum/py-evm) - _ایتھیریم ورچوئل مشین کا نفاذ_
-- [<span dir="ltr">eth-tester</span>](https://github.com/ethereum/eth-tester) - _ایتھیریم پر مبنی ایپلی کیشنز کی ٹیسٹنگ کے لیے ٹولز_
-- [<span dir="ltr">eth-utils</span>](https://github.com/ethereum/eth-utils/) - _ایتھیریم سے متعلقہ کوڈ بیسز کے ساتھ کام کرنے کے لیے یوٹیلیٹی فنکشنز_
-- [<span dir="ltr">py-solc-x</span>](https://pypi.org/project/py-solc-x/) - _<span dir="ltr">0.5.x</span> سپورٹ کے ساتھ <span dir="ltr">solc solidity</span> کمپائلر کے گرد <span dir="ltr">Python</span> ریپر_
-- [<span dir="ltr">pymaker</span>](https://github.com/makerdao/pymaker) - _میکر کنٹریکٹس کے لیے <span dir="ltr">Python API</span>_
-- [<span dir="ltr">siwe</span>](https://github.com/signinwithethereum/siwe-py) - _<span dir="ltr">Python</span> کے لیے ایتھیریم کے ساتھ سائن ان کریں (<span dir="ltr">SIWE</span>)_
-- [ایتھیریم انضمام کے لیے <span dir="ltr">Web3</span> غیر مرکزی مالیات (<span dir="ltr">DeFi</span>)](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _<span dir="ltr">ERC-20</span>، یونی سویپ اور دیگر مقبول پروجیکٹس کے لیے تیار انضمام کے ساتھ ایک <span dir="ltr">Python</span> پیکیج_
-- [<span dir="ltr">Wake</span>](https://getwake.io) - _کنٹریکٹس کی ٹیسٹنگ، فزنگ، تعیناتی، کمزوری کی اسکیننگ اور کوڈ نیویگیشن کے لیے آل ان ون <span dir="ltr">Python</span> فریم ورک (لینگویج سرور - [<span dir="ltr">Solidity</span> کے لیے ٹولز](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
-- [<span dir="ltr">DeFiPy</span>](https://github.com/defipy-devs/defipy) - _یونی سویپ <span dir="ltr">V2/V3</span>، <span dir="ltr">Balancer</span>، اور <span dir="ltr">Curve</span> میں غیر مرکزی مالیات (<span dir="ltr">DeFi</span>) کے تجزیات اور خودکار بازار ساز (اے ایم ایم) سمولیشن کے لیے <span dir="ltr">Python SDK</span>_
-
+- [Web3.py](https://github.com/ethereum/web3.py) - _Python library for interacting with Ethereum_
+- [Vyper](https://github.com/ethereum/vyper/) - _Pythonic Smart Contract Language for the EVM_
+- [Titanoboa](https://github.com/vyperlang/titanoboa/) - _Vyper's native testing tool; an interpreter with mainnet forking, debugging, and pretty tracebacks_
+- [Moccasin](https://github.com/Cyfrin/moccasin) - _A smart contract development and testing framework for Vyper and Python, built on Titanoboa_
+- [Ape](https://github.com/ApeWorX/ape) - _The smart contract development tool for Pythonistas, Data Scientists, and Security Professionals_
+- [py-evm](https://github.com/ethereum/py-evm) - _implementation of the Ethereum Virtual Machine_
+- [eth-tester](https://github.com/ethereum/eth-tester) - _tools for testing Ethereum-based applications_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _utility functions for working with Ethereum related codebases_
+- [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python wrapper around the solc solidity compiler with 0.5.x support_
+- [pymaker](https://github.com/makerdao/pymaker) - _Python API for Maker contracts_
+- [siwe](https://github.com/signinwithethereum/siwe-py) - _Sign in with Ethereum (siwe) for Python_
+- [Web3 DeFi for Ethereum integrations](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _A Python package with ready integrations for ERC-20, Uniswap and other popular projects_
+- [Wake](https://getwake.io) - _All-in-one Python framework for contracts testing, fuzzing, deployment, vulnerability scanning and code navigation (language server - [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
+- [DeFiPy](https://github.com/defipy-devs/defipy) - _Python SDK for DeFi analytics and AMM simulation across Uniswap V2/V3, Balancer, and Curve_
 ### آرکائیو شدہ / اب برقرار نہیں رکھا گیا: {#archived--no-longer-maintained}
 
 - [<span dir="ltr">Trinity</span>](https://github.com/ethereum/trinity) - _ایتھیریم <span dir="ltr">Python</span> کلائنٹ_

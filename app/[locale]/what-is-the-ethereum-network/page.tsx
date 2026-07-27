@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, ToCItem } from "@/lib/types"
 
@@ -20,8 +20,8 @@ import PageJsonLD from "./page-jsonld"
 import { ContentLayout } from "@/layouts/ContentLayout"
 import developersHubImg from "@/public/images/heroes/developers-hub-hero.png"
 import layer2HubImg from "@/public/images/heroes/layer-2-hub-hero.png"
-import layer2LearnHeroImg from "@/public/images/layer-2/learn-hero.png"
 import manDogPlayingImg from "@/public/images/man-and-dog-playing.png"
+import layer2LearnHeroImg from "@/public/images/network-column-rooftop-piping-construction.png"
 import computerImg from "@/public/images/what-is-ethereum-network/computer_alone.png"
 import heroImg from "@/public/images/what-is-ethereum-network/what-is-ethereum-network.png"
 
@@ -622,6 +622,8 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-what-is-the-ethereum-network")
 

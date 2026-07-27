@@ -230,6 +230,8 @@
   "less": "Ít hơn",
   "light-mode": "Sáng",
   "light-mode-aria-label": "Chuyển sang chế độ sáng",
+  "link-external-assistive-text": "(mở trong tab mới)",
+  "link-mailto-assistive-text": "(mở ứng dụng email)",
   "loading": "Đang tải...",
   "loading-error-refresh": "Lỗi, vui lòng làm mới.",
   "meetups": "Gặp mặt",

@@ -237,14 +237,14 @@ ethers.utils.formatEther(balance)
 - [Fungsi utilitas Web3js](https://docs.web3js.org/api/web3-utils)
 - [Fungsi utilitas Ethers](https://docs.ethers.org/v6/api/utils/)
 
-## Pustaka yang tersedia {#available-libraries}
+## Pustaka yang tersedia
 
 **Web3.js -** **_API JavaScript Ethereum._**
 
 - [Dokumentasi](https://docs.web3js.org)
 - [GitHub](https://github.com/ethereum/web3.js)
 
-**Ethers.js -** **_Implementasi dompet Ethereum lengkap dan utilitas dalam JavaScript dan TypeScript._**
+**Ethers.js -** **_Implementasi dompet Ethereum yang lengkap dan utilitas dalam JavaScript dan TypeScript._**
 
 - [Beranda Ethers.js](https://ethers.org/)
 - [Dokumentasi](https://docs.ethers.io)
@@ -268,7 +268,17 @@ ethers.utils.formatEther(balance)
 - [Dokumentasi](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-**Codex -** **_API data rantai blok yang diperkaya dan waktu nyata (real-time) di puluhan rantai._**
+**wagmi -** **_Pustaka React hooks untuk Ethereum, dibangun di atas viem._**
+
+- [Dokumentasi](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_Pustaka React untuk menambahkan koneksi dompet ke aplikasi terdesentralisasi (dapp), dibangun di atas wagmi dan viem._**
+
+- [Dokumentasi](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
+
+**Codex -** **_API data rantai blok yang diperkaya dan waktu nyata di puluhan rantai._**
 
 - [Dokumentasi](https://docs.codex.io)
 - [Explorer](https://docs.codex.io/explore)
@@ -279,7 +289,6 @@ ethers.utils.formatEther(balance)
 
 - [Dokumentasi](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
-
 ## Bacaan lebih lanjut {#further-reading}
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_

@@ -230,6 +230,8 @@
   "less": "أقل",
   "light-mode": "فاتح",
   "light-mode-aria-label": "التبديل إلى الوضع الفاتح",
+  "link-external-assistive-text": "(يفتح في علامة تبويب جديدة)",
+  "link-mailto-assistive-text": "(يفتح تطبيق البريد الإلكتروني)",
   "loading": "جاري التحميل...",
   "loading-error-refresh": "حدث خطأ، يرجى التحديث.",
   "meetups": "اللقاءات",

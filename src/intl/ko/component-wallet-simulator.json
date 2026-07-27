@@ -156,6 +156,7 @@
   "sim-cw-connect-disclaimer": "웹사이트에 연결해도 사이트 소유자와 개인 정보나 보안 정보가 공유되지 않습니다.",
   "sim-cw-your-collection": "내 컬렉션 ({count})",
   "sim-cw-nft-title": "멋진 예술 작품",
+  "sim-cw-nft-alt": "NFT 이미지",
   "sim-cw-nft-actions-tooltip": "NFT 소유자로서 할 수 있는 몇 가지 작업입니다",
   "sim-cw-set-price": "가격 설정",
   "sim-cw-auction-item": "아이템 경매",
