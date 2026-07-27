@@ -1,6 +1,4 @@
-// Renders nothing when no wallet-detail route is being intercepted into the
-// modal slot. Required so the parallel slot resolves cleanly on the index,
-// persona, and standalone routes.
+// Required so the @modal slot resolves on routes with nothing intercepted.
 const Default = () => null
 
 export default Default

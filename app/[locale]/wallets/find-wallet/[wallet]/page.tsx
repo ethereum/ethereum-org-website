@@ -35,8 +35,7 @@ import WalletPersonaTags from "../_components/WalletPersonaTags"
 
 import WalletDetailPageJsonLD from "./page-jsonld"
 
-// Repo-checked-in data, deploy-coupled: render once on demand, cache durably,
-// invalidate at next deploy.
+// Wallet data is repo-checked-in, so it only changes at deploy time.
 export const revalidate = false
 export const dynamicParams = true
 
@@ -48,11 +47,8 @@ const WALLET_LINK_EVENT = {
 } as const
 
 /**
- * Standalone wallet detail. Mirrors the developer tools detail layout
- * (thumbnail + info column with tags, title, meta, and an action-link row) and
- * adds the wallet-specific grouped feature checklists. Reached by direct load or
- * refresh; navigating here from within the find-wallet subtree is intercepted by
- * `@modal/(.)[wallet]`, which renders its own compact, row-based layout.
+ * Standalone wallet detail, reached by direct load or refresh. Navigating here
+ * from inside the find-wallet subtree hits `@modal/(.)[wallet]` instead.
  */
 const Page = async (props: { params: Promise<WalletPageParams> }) => {
   const { locale, wallet: walletSlug } = await props.params
@@ -101,7 +97,7 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
   return (
     <>
       <WalletDetailPageJsonLD locale={locale} wallet={wallet} />
-      {/* Breadcrumb sits outside <main>, matching the catalog page inset. */}
+      {/* Outside <main>, matching the catalog page inset. */}
       <div className="px-page py-hero lg:py-hero-2x">
         <FindWalletBreadcrumbs locale={locale} leaf={wallet.name} />
       </div>
@@ -225,7 +221,7 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
 }
 
 export function generateStaticParams() {
-  // Prebuild English wallet pages; other locales render on demand.
+  // English only; other locales render on demand.
   return getAllWalletSlugs().map((wallet) => ({
     locale: DEFAULT_LOCALE,
     wallet,

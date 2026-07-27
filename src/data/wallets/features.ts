@@ -1,27 +1,21 @@
 import type { WalletData } from "@/lib/types"
 
-/** A single boolean wallet feature with its label/description translation keys. */
 export type WalletFeature = {
   key: keyof WalletData
   labelKey: string
   descKey: string
 }
 
-/** A titled group of related features, shown as a checklist on wallet detail. */
 export type WalletFeatureGroup = {
   titleKey: string
   features: WalletFeature[]
 }
 
 /**
- * Ethereum's core CROPS properties (EF mandate: Censorship-resistant, Open
- * source, Private, Secure — https://ethereum.org/foundation/mandate/), surfaced
- * as the highlighted set on the wallet modal instead of the full feature list.
- *
- * Open source and privacy map to dedicated flags. Censorship-resistance and
- * security have no single flag, so each uses the closest proxy: custom-RPC
- * support (connect to your own node, not one provider) and non-custodial key
- * ownership. Swap a `key` here to change what backs a property.
+ * Ethereum's CROPS properties (https://ethereum.org/foundation/mandate/),
+ * highlighted on the wallet modal. Censorship-resistance and security have no
+ * dedicated flag, so each uses the closest proxy: custom-RPC support and
+ * non-custodial keys.
  */
 export const CROPS_PROPERTIES: WalletFeature[] = [
   {
@@ -46,11 +40,7 @@ export const CROPS_PROPERTIES: WalletFeature[] = [
   },
 ]
 
-/**
- * Feature checklist groups for the wallet detail view. These 16 feature
- * dimensions live on detail pages only — the sidebar filter set is
- * intentionally narrower.
- */
+/** Detail pages only — the sidebar filter set is intentionally narrower. */
 export const WALLET_FEATURE_GROUPS: WalletFeatureGroup[] = [
   {
     titleKey: "page-find-wallet-features",

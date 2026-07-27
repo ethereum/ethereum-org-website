@@ -34,7 +34,7 @@ export {
   type WalletPersonaId,
 } from "@/data/wallets/personas"
 
-/** OS/platform names a wallet runs on, for JSON-LD `operatingSystem`. */
+/** For JSON-LD `operatingSystem`. */
 export function getWalletPlatforms(wallet: WalletData): string[] {
   const os: string[] = []
   if (wallet.ios) os.push("iOS")
@@ -48,39 +48,27 @@ export function getWalletPlatforms(wallet: WalletData): string[] {
   return os
 }
 
-/**
- * Canonical mapping from a wallet to its URL slug (also its React key). Defaults
- * to `slugify(name)`; a wallet may pin an explicit `slug` to keep its URL stable
- * across a rename.
- */
 export const getWalletSlug = (
   wallet: Pick<WalletData, "name" | "slug">
 ): string => wallet.slug ?? slugify(wallet.name)
 
-/**
- * Every wallet slug, for route generation. Skips the shuffle + full enrichment
- * `getCatalogWallets` does, which callers that only need slugs don't pay for.
- */
+/** Slugs only — skips the shuffle and enrichment `getCatalogWallets` does. */
 export const getAllWalletSlugs = (): string[] =>
   walletsData.map((wallet) => getWalletSlug(wallet))
 
-/** Persona ids a wallet qualifies for (all of a persona's features true). */
+/** A wallet qualifies for a persona when it has all of that persona's features. */
 export function getWalletPersonaIds(wallet: WalletData): WalletPersonaId[] {
   return WALLET_PERSONAS.filter((persona) =>
     persona.features.every((feature) => wallet[feature as keyof WalletData])
   ).map((persona) => persona.id)
 }
 
-/**
- * The distinct chains present across the given wallets with per-chain wallet
- * counts, most-supported first. Fully derived — no curated list — so the
- * Networks filter self-maintains as wallet data evolves.
- */
 export type WalletNetwork = {
   id: ChainName | NonEVMChainName
   count: number
 }
 
+/** Distinct chains across the given wallets, most-supported first. */
 export function getWalletNetworks(wallets: WalletData[]): WalletNetwork[] {
   const counts = new Map<ChainName | NonEVMChainName, number>()
   for (const wallet of wallets) {
@@ -93,7 +81,6 @@ export function getWalletNetworks(wallets: WalletData[]): WalletNetwork[] {
     .sort((a, b) => b.count - a.count || a.id.localeCompare(b.id))
 }
 
-/** The distinct languages any wallet supports (deduped). */
 export function getWalletLanguageCodes(wallets: WalletData[]): string[] {
   return wallets.reduce(
     (acc, wallet) => union(acc, wallet.languages_supported),
@@ -107,12 +94,7 @@ export type WalletLanguageOption = {
   count: number
 }
 
-/**
- * Locale-aware language filter options derived from the given wallet set:
- * each distinct language with its native/localized name and a wallet count
- * relative to that set (so persona pages get subset-accurate counts). Sorted
- * alphabetically by localized name.
- */
+/** Counts are relative to `wallets`, so persona pages get subset-accurate ones. */
 export function getWalletLanguageOptions(
   wallets: WalletData[],
   locale: string
@@ -128,25 +110,17 @@ export function getWalletLanguageOptions(
     .sort((a, b) => a.name.localeCompare(b.name, locale))
 }
 
-/**
- * The catalog/detail item shape: a wallet enriched with everything the client
- * island and detail views need, all serializable (no functions/translators) so
- * it can cross the server→client boundary as props.
- */
 export type CatalogWallet = Wallet & {
   slug: string
   devices: Record<WalletDeviceId, boolean>
   personas: WalletPersonaId[]
-  /** Plain-text description (markdown stripped) for card/search; undefined when the wallet has none. */
   descriptionStripped?: string
 }
 
 /**
- * The projection of a wallet the catalog island actually reads — the only
- * wallet fields that cross to the client. A full `CatalogWallet` serializes to
- * ~2KB each (49 of them), most of it feature flags, socials, and theme colors
- * the island never touches; detail views re-resolve the whole record
- * server-side via `getWalletBySlug`, so none of that needs to be on the wire.
+ * The only wallet fields that cross to the client. A full `CatalogWallet` is
+ * ~2KB serialized, 49 of them; detail views re-resolve the whole record
+ * server-side via `getWalletBySlug`, so keep this to what the island reads.
  */
 export type CatalogWalletCard = Pick<
   CatalogWallet,
@@ -174,7 +148,7 @@ export const toCatalogCard = (wallet: CatalogWallet): CatalogWalletCard => ({
   languages_supported: wallet.languages_supported,
   buy_crypto: wallet.buy_crypto,
   withdraw_crypto: wallet.withdraw_crypto,
-  // Omit the key entirely when absent, rather than serializing a null.
+  // Omit the key rather than serialize a null.
   ...(wallet.descriptionStripped && {
     descriptionStripped: wallet.descriptionStripped,
   }),
@@ -200,12 +174,7 @@ export function enrichWallet(
   }
 }
 
-/**
- * All wallets as catalog items, in locale-aware order: wallets supporting the
- * current locale first (shuffled within group via `safeShuffle`, visual-test
- * deterministic), then the rest. Baked into SSG/ISR HTML — no hydration
- * mismatch — and persona pages inherit the ordering for free.
- */
+/** Wallets supporting `locale` first, then the rest. */
 export function getCatalogWallets(locale: string): CatalogWallet[] {
   const ordered = [
     ...getSupportedLocaleWallets(locale),
@@ -214,11 +183,6 @@ export function getCatalogWallets(locale: string): CatalogWallet[] {
   return ordered.map((wallet) => enrichWallet(wallet, locale))
 }
 
-/**
- * Resolve a single wallet by URL slug and enrich only that one. Detail views
- * need just one wallet, so this skips the shuffle + enrichment of all 49 that
- * `getCatalogWallets` does (slugs are globally unique — flat routes).
- */
 export function getWalletBySlug(
   slug: string,
   locale: string
@@ -227,7 +191,6 @@ export function getWalletBySlug(
   return wallet ? enrichWallet(wallet, locale) : undefined
 }
 
-/** The subset of wallets belonging to a persona (preserves catalog ordering). */
 export function getWalletsByPersona(
   wallets: CatalogWallet[],
   personaId: WalletPersonaId
@@ -235,7 +198,6 @@ export function getWalletsByPersona(
   return wallets.filter((wallet) => wallet.personas.includes(personaId))
 }
 
-/** Display string for the most recent `last_updated` across the given wallets (empty when none). */
 export function getLastUpdatedDisplay(
   wallets: CatalogWallet[],
   locale: string
@@ -248,7 +210,6 @@ export function getLastUpdatedDisplay(
   return mostRecent ? formatDate(mostRecent, locale) : ""
 }
 
-/** Global membership count per persona, for the persona navigation cards. */
 export function getPersonaCounts(
   wallets: CatalogWallet[]
 ): Record<WalletPersonaId, number> {

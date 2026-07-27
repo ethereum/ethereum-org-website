@@ -23,10 +23,8 @@ import WalletDetailModal from "../../_components/WalletDetailModal"
 
 type ModalParams = { locale: string; wallet: string }
 
-// How many languages to list inline in the value cell before the "+ N" tooltip.
 const LANGUAGES_SHOWN = 5
 
-/** A single label/value row in the modal's info list. */
 const DetailRow = ({
   label,
   tooltip,
@@ -50,14 +48,9 @@ const DetailRow = ({
 )
 
 /**
- * Intercepts `/wallets/find-wallet/[wallet]` when navigated to from within the
- * find-wallet subtree, rendering the wallet detail as a modal over the catalog.
- * A direct load / refresh of the same URL renders the standalone `[wallet]`
- * page instead, which has its own wider, grouped-checklist layout.
- *
- * This body is server-rendered and handed to the client modal shell
- * (`WalletDetailModal`) as children. Every info dimension is a labelled row:
- * networks as chain glyphs, devices/languages as text, features as yes/no.
+ * Shown as a modal when navigated to from inside the find-wallet subtree; a
+ * direct load or refresh renders the standalone `[wallet]` page instead. Body
+ * is server-rendered and passed to the client shell as children.
  */
 export default async function InterceptedWalletModal(props: {
   params: Promise<ModalParams>

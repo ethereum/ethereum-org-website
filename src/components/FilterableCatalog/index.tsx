@@ -30,9 +30,9 @@ export type FilterableCatalogLabels = {
   noResults: string
   /** Collapsed mobile filter-bar label (required when `mobileVariant="sheet"`). */
   filtersToggle?: string
-  /** Mobile sheet "apply" button label, shown as `{applyLabel} ({count})`. */
+  /** Mobile "apply" button label, shown as `{applyLabel} ({count})`. */
   applyLabel?: string
-  /** Accessible label for the mobile sheet close button. */
+  /** Accessible label for the mobile close button. */
   closeLabel?: string
 }
 
@@ -58,21 +58,15 @@ export type FilterableCatalogProps<TItem> = {
    * `state` and a `setFilter` writer keyed however the consumer likes.
    */
   renderSidebar: (helpers: CatalogSidebarHelpers) => ReactNode
-  /**
-   * Optional row rendered above the search input, outside the bordered sidebar
-   * box (e.g. a "Filters (N)" count + reset control). Receives the same helpers
-   * as `renderSidebar`.
-   */
+  /** Optional row above the search input, outside the bordered sidebar box. */
   renderSidebarHeader?: (helpers: CatalogSidebarHelpers) => ReactNode
   renderResults: (items: TItem[]) => ReactNode
   /** Optional line rendered above the results count (e.g. an active-path breadcrumb) */
   renderResultsHeader?: (state: CatalogFilterState) => ReactNode
   /**
-   * How filters are presented below `lg`. `"inline"` (default) drops the whole
-   * sidebar into the page flow. `"sheet"` collapses it to a "Filters" bar that
-   * opens a slide-in panel — using Sheet (trigger) + PersistentPanel (content
-   * stays mounted after first open, so the filter form isn't re-rendered on
-   * every toggle). Requires `labels.filtersToggle` / `labels.applyLabel`.
+   * How filters are presented below `lg`. `"inline"` (default) drops the sidebar
+   * into the page flow; `"sheet"` collapses it behind a "Filters" bar and needs
+   * `labels.filtersToggle` / `labels.applyLabel`.
    */
   mobileVariant?: "inline" | "sheet"
   className?: string
@@ -159,9 +153,8 @@ export default function FilterableCatalog<TItem>({
         <div className="space-y-4 lg:-mt-5">
           {mobileVariant === "sheet" ? (
             <div className="lg:hidden">
-              {/* A plain button, not SheetTrigger: the panel below is a
-                  PersistentPanel, so Radix would stamp an aria-controls
-                  pointing at SheetContent that never renders. */}
+              {/* Not SheetTrigger: Radix would stamp an aria-controls pointing
+                  at SheetContent, which this variant never renders. */}
               <button
                 ref={mobileTriggerRef}
                 type="button"
@@ -219,7 +212,6 @@ export default function FilterableCatalog<TItem>({
           <div ref={resultsTopRef} className="scroll-mt-24" />
           {renderResultsHeader?.(selection)}
 
-          {/* Announced politely so filtering isn't silent for screen readers. */}
           <p className="text-sm text-body-medium" aria-live="polite">
             {labels.resultsLabel}:{" "}
             <strong>{nf.format(filteredItems.length)}</strong> /{" "}

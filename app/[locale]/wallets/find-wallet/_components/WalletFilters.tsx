@@ -13,8 +13,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import WalletFilterGroup, { type WalletFilterOption } from "./WalletFilterGroup"
 
-// Shared filter-state keys, imported by WalletsCatalog's filterFn so the writer
-// (setFilter here) and reader (filterWallet) stay in sync.
+// Also read by WalletsCatalog's filterFn.
 export const DEVICES_KEY = "devices"
 export const NETWORKS_KEY = "networks"
 export const PURCHASES_KEY = "purchases"
@@ -27,7 +26,7 @@ const ALL_FILTER_KEYS = [
   LANGUAGE_KEY,
 ] as const
 
-// Matomo category kept from the old sidebar for trend comparability.
+// Category kept from the old sidebar for trend comparability.
 const trackFilterToggle = (action: string, name: string) =>
   trackCustomEvent({
     eventCategory: "WalletFilterSidebar",
@@ -54,12 +53,9 @@ type WalletFiltersProps = {
 }
 
 /**
- * Filter sidebar. `state` changes on every toggle so this component re-renders,
- * but each `WalletFilterGroup` is memoized and receives stable options + a
- * per-group `selectedIds`/`onToggle` (memoized on that group's own slice of the
- * state). So toggling one group only re-renders that group — the other groups
- * (notably the ~30-item network list) skip, which is what keeps INP down: the
- * per-toggle cost was Radix checkbox/Presence churn across every group at once.
+ * Each group is memoized on its own slice of `state`, so toggling one group
+ * doesn't re-render the others (notably the ~30-item network list). That
+ * isolation is what keeps INP down — don't collapse it into shared props.
  */
 export default function WalletFilters({
   locale,
@@ -178,11 +174,7 @@ export default function WalletFilters({
   )
 }
 
-/**
- * "Filters (N) · Reset" row shown above the search input (outside the bordered
- * group box) — rendered via FilterableCatalog's `renderSidebarHeader` slot so
- * the shared search input can sit between it and the filter groups.
- */
+/** Rendered via FilterableCatalog's `renderSidebarHeader` slot. */
 export function WalletFiltersHeader({
   state,
   setFilter,

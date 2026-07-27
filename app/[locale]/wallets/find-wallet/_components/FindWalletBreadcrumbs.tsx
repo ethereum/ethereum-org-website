@@ -14,18 +14,15 @@ import {
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
 /**
- * Breadcrumbs for find-wallet leaf pages (persona pages, wallet detail):
- * ethereum.org / Wallets / Find wallet / <leaf>. Built by hand rather than via
- * the slug-based `Breadcrumbs` so it stays consistent across routes whose URL
- * segments aren't all navigable (e.g. `personas`) and whose leaf label lives in
- * the page namespace, not `common`.
+ * Hand-built rather than the slug-based `Breadcrumbs`: not every URL segment is
+ * navigable (`personas`), and the leaf label lives outside the `common`
+ * namespace.
  */
 const FindWalletBreadcrumbs = async ({
   locale,
   leaf,
 }: {
   locale: string
-  /** Label for the current (non-link) page: a persona title or a wallet name. */
   leaf: string
 }) => {
   const t = await getTranslations({ locale, namespace: "common" })

@@ -4,16 +4,11 @@ import { testData } from "../fixtures/testData"
 
 import { BasePage } from "./BasePage"
 
-/**
- * Page Object Model for the revamped Find Wallet page (catalog architecture).
- */
 export class FindWalletPage extends BasePage {
   private readonly url = "/wallets/find-wallet"
 
   private readonly pageHeading: Locator
-  // Results count line: "Wallets found: <shown> / <total>". The regex requires
-  // the "/ total" so it doesn't also match a persona card (which reads
-  // "… available").
+  // The "/ total" keeps this from matching a persona card's "… available".
   private readonly resultsCounter: Locator
 
   constructor(page: Page) {
@@ -32,7 +27,6 @@ export class FindWalletPage extends BasePage {
     await expect(this.pageHeading).toBeVisible()
   }
 
-  /** Number of wallets currently shown (the first number in the count line). */
   async getResultsCount(): Promise<number> {
     const text = await this.resultsCounter.textContent()
     const match = text?.match(/:\s*(\d+)\s*\//)
@@ -42,16 +36,14 @@ export class FindWalletPage extends BasePage {
     return parseInt(match[1], 10)
   }
 
-  /** Navigate via a persona card (a real `<Link>`, not a client filter). */
   async openPersona(personaSlug: string) {
     await this.page.locator(`a[href*="/personas/${personaSlug}/"]`).click()
     await this.assertUrlMatches(new RegExp(`/personas/${personaSlug}/?$`))
   }
 
   /**
-   * Below `lg` the sidebar collapses behind a "Filters" trigger and its panel
-   * isn't mounted until first open, so no filter label exists to click yet.
-   * No-op on desktop, where the sidebar is always rendered.
+   * Below `lg` the panel isn't mounted until first open, so no filter label
+   * exists to click. No-op on desktop.
    */
   private async openFiltersIfCollapsed() {
     const trigger = this.page.getByRole("button", { name: /^Filters/ })
@@ -62,7 +54,6 @@ export class FindWalletPage extends BasePage {
     ).toBeVisible()
   }
 
-  /** Toggle a device filter checkbox by its visible label (viewport-agnostic). */
   async toggleDeviceFilter(label: string) {
     await this.openFiltersIfCollapsed()
     await this.page
@@ -72,14 +63,12 @@ export class FindWalletPage extends BasePage {
       .click()
   }
 
-  /** Wait until the shown count differs from `initialCount`. */
   async waitForResultsChange(initialCount: number, timeout = 10000) {
     await expect(async () => {
       expect(await this.getResultsCount()).not.toBe(initialCount)
     }).toPass({ timeout })
   }
 
-  /** Open a wallet's detail by clicking its card link (intercepted modal). */
   async openWalletDetail(walletSlug: string) {
     await this.page
       .locator(`a[href*="/find-wallet/${walletSlug}/"]`)

@@ -15,13 +15,9 @@ import {
 } from "@/components/ui/dialog-modal"
 
 /**
- * Client shell for the intercepted wallet-detail route. The detail content is
- * server-rendered and passed as `children`; closing the modal pops the
- * intercepted route off the history stack, returning to the catalog.
- *
- * Composes the dialog primitives directly (rather than the `Modal` wrapper) so
- * the wallet icon, name, and close button share one flex row — keeping the
- * close button aligned with the visible title.
+ * Client shell for the intercepted detail route; closing pops the intercepted
+ * route off history. Composes the dialog primitives directly, rather than the
+ * `Modal` wrapper, to keep the close button in the same row as the title.
  */
 const WalletDetailModal = ({
   title,
@@ -32,9 +28,8 @@ const WalletDetailModal = ({
 }: {
   title: string
   image: StaticImageData
-  /** Accessible description; when absent, Radix's describedby warning is opted out. */
+  /** When absent, Radix's describedby warning is opted out. */
   description?: string
-  /** Localized "close" label, built on the server. */
   closeLabel: string
   children: ReactNode
 }) => {

@@ -7,14 +7,9 @@ import {
 } from "@/lib/constants"
 
 /**
- * Canonical persona definitions — the single source of truth, derived from the
- * `*_FEATURES` lists in `constants.ts`. A wallet belongs to a persona when it
- * has ALL of that persona's feature flags (AND semantics). The `id` is the URL
- * slug used for persona pages (`/wallets/find-wallet/personas/[persona]`) —
- * deliberately `hardware`, never the internal `hodler` key.
- *
- * Dependency-free (imports only constants) so client components can use it
- * without pulling in the server-only wallet data module.
+ * `id` is the URL slug for `/wallets/find-wallet/personas/[persona]`, so the
+ * long-term-storage persona is `hardware` even though its keys say `hodler`.
+ * Keep this module dependency-free — client components import it.
  */
 export const WALLET_PERSONAS = [
   {
@@ -61,7 +56,7 @@ export const WALLET_PERSONAS = [
 
 export type WalletPersonaId = (typeof WALLET_PERSONAS)[number]["id"]
 
-/** `Tag` status variants used for wallet-card persona chips (see `src/components/ui/tag`). */
+/** Subset of `Tag` statuses (see `src/components/ui/tag`). */
 export type PersonaTagStatus =
   | "primary"
   | "accent-a"
@@ -69,11 +64,7 @@ export type PersonaTagStatus =
   | "accent-c"
   | "tag-yellow"
 
-/**
- * Per-persona chip color for the wallet cards, mapped onto theme-aware semantic
- * tokens. Keep in sync with the `PERSONA_COLORS` map in `WalletPersonaCards` so
- * a persona's chip matches its card.
- */
+/** Keep in sync with `PERSONA_COLORS` in WalletPersonaCards. */
 export const PERSONA_TAG_STATUS: Record<WalletPersonaId, PersonaTagStatus> = {
   "new-to-crypto": "primary",
   developer: "accent-b",
@@ -89,15 +80,10 @@ export const WALLET_PERSONA_IDS = WALLET_PERSONAS.map(
 export const isWalletPersonaId = (value: string): value is WalletPersonaId =>
   WALLET_PERSONA_IDS.includes(value as WalletPersonaId)
 
-/** Translation key for a persona's display title, keyed by persona id. */
 export const PERSONA_TITLE_KEYS = Object.fromEntries(
   WALLET_PERSONAS.map((persona) => [persona.id, persona.titleKey])
 ) as Record<WalletPersonaId, string>
 
-/**
- * Localized display title per persona id, built on the server so client
- * components (e.g. the card persona chips) get plain strings as props.
- */
 export function buildPersonaLabels(
   t: (key: string) => string
 ): Record<WalletPersonaId, string> {

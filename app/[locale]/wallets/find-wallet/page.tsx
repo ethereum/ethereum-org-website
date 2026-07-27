@@ -18,8 +18,7 @@ import {
 import WalletsPageBody from "./_components/WalletsPageBody"
 import FindWalletPageJsonLD from "./page-jsonld"
 
-// Wallet data is repo-checked-in and deploy-coupled, so the page is fully
-// static and only changes at deploy time.
+// Wallet data is repo-checked-in, so it only changes at deploy time.
 export const revalidate = false
 
 const Page = async (props: { params: Promise<PageParams> }) => {
@@ -38,15 +37,15 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const lastUpdatedDisplay = getLastUpdatedDisplay(wallets, locale)
 
-  // Contributor info comes from the Netlify Blobs data layer; it only feeds a
-  // supplementary JSON-LD field, so a data-layer outage must not 500 the page.
+  // Only feeds a supplementary JSON-LD field, so a data-layer outage must not
+  // 500 the page.
   let contributors: FileContributor[] = []
   try {
     contributors = (
       await getAppPageContributorInfo("wallets/find-wallet", locale as Lang)
     ).contributors
   } catch {
-    // Non-fatal: JSON-LD omits the contributor list when unavailable.
+    // Non-fatal: JSON-LD omits the contributor list.
   }
 
   return (

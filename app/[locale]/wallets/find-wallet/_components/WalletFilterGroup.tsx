@@ -30,11 +30,7 @@ type WalletFilterGroupProps = {
   scrollable?: boolean
 }
 
-/**
- * Collapsible sidebar filter group: a header (chevron + label + selected-count
- * badge) over an indented, railed list of checkbox options. Independent per
- * group (Collapsible, not Accordion) so several can stay open at once.
- */
+/** Collapsible, not Accordion, so several groups can stay open at once. */
 function WalletFilterGroup({
   locale,
   label,

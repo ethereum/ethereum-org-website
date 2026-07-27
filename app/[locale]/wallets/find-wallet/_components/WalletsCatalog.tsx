@@ -26,12 +26,8 @@ import WalletFilters, {
 
 const PURCHASE_IDS = ["buy_crypto", "withdraw_crypto"] as const
 
-/**
- * All display strings the client catalog needs, built once on the server so no
- * i18n runtime ships to the browser (mirrors the dev-tools label-dict pattern).
- */
+/** Built on the server so no i18n runtime ships to the browser. */
 export type WalletCatalogLabels = {
-  /** FilterableCatalog chrome (search, results header, mobile sheet). */
   catalog: {
     searchPlaceholder: string
     resultsLabel: string
@@ -40,9 +36,7 @@ export type WalletCatalogLabels = {
     applyLabel: string
     closeLabel: string
   }
-  /** Filter group headers (WalletFilters). */
   filter: { device: string; buySell: string; network: string; language: string }
-  /** Sidebar "Filters (N) · Reset" row. */
   header: { filters: string; reset: string }
   buyCrypto: string
   sellCrypto: string
@@ -69,9 +63,8 @@ const WalletsResults = memo(function WalletsResults({
   deviceLabels: Record<WalletDeviceId, string>
   personaLabels: Record<WalletPersonaId, string>
 }) {
-  // Render every wallet once and toggle `hidden` so filtering flips a prop on
-  // stable nodes instead of remounting cards, and all wallets stay in the SSR
-  // DOM for crawlers.
+  // Every wallet renders once and filtering toggles `hidden`: no remounts, and
+  // all wallets stay in the SSR DOM for crawlers.
   const visibleSlugs = useMemo(
     () => new Set(filtered.map((wallet) => wallet.slug)),
     [filtered]
@@ -98,9 +91,8 @@ export default function WalletsCatalog({
   languages,
   labels,
 }: WalletsCatalogProps) {
-  // This component holds no state and doesn't re-render on filter toggles, so
-  // these are plain consts, not useMemo. Only filterFn is stabilized below,
-  // since FilterableCatalog memoizes on it.
+  // No state here, so no re-renders — plain consts, not useMemo. Only filterFn
+  // needs a stable identity, since FilterableCatalog memoizes on it.
   const deviceCounts = {} as Record<WalletDeviceId, number>
   for (const device of WALLET_DEVICE_IDS) {
     deviceCounts[device] = wallets.filter(
@@ -165,8 +157,7 @@ export default function WalletsCatalog({
       return false
     }
 
-    // Language is OR-semantics (wallet matches if it supports any selected
-    // language), unlike the AND-combined checkbox groups above.
+    // OR, unlike the AND-combined groups above.
     const languages = asArray(state[LANGUAGE_KEY])
     if (
       languages.length > 0 &&

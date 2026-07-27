@@ -43,12 +43,7 @@ type WalletsPageBodyProps = {
   currentPersonaId?: WalletPersonaId
 }
 
-/**
- * Shared body for the find-wallet index and persona pages: persona navigation,
- * the filterable catalog (over the page's wallet subset), and the listing
- * methodology. Wallet detail is its own route (`[wallet]`), shown as a modal
- * via interception.
- */
+/** Shared by the index and persona pages, over each page's wallet subset. */
 const WalletsPageBody = async ({
   locale,
   wallets,
@@ -64,8 +59,6 @@ const WalletsPageBody = async ({
   })
   const tCommon = await getTranslations({ locale, namespace: "common" })
 
-  // Built server-side so the client catalog island receives plain strings —
-  // no i18n runtime or message catalog ships to the browser.
   const catalogLabels: WalletCatalogLabels = {
     catalog: {
       searchPlaceholder: t("page-find-wallet-search-wallets"),

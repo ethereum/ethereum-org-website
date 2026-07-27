@@ -14,11 +14,9 @@ type WalletPersonaCardsProps = {
   currentPersonaId?: WalletPersonaId
 }
 
-// Per-persona accent classes, keyed by persona id (not array position) so
-// reordering WALLET_PERSONAS can't desync a card from its color. Full literal
-// class strings are required for Tailwind's scanner. `bgTint` is the faint fill
-// on the active card, so a checked persona reads as selected. The chip
-// counterpart lives in `PERSONA_TAG_STATUS` (semantic tokens).
+// Keyed by id, not array position, so reordering WALLET_PERSONAS can't desync
+// a card from its color. Class strings must stay literal for Tailwind's
+// scanner. Chip counterpart: `PERSONA_TAG_STATUS`.
 type PersonaColor = { text: string; border: string; bg: string; bgTint: string }
 
 const PERSONA_COLORS: Record<WalletPersonaId, PersonaColor> = {
@@ -47,7 +45,7 @@ const PERSONA_COLORS: Record<WalletPersonaId, PersonaColor> = {
     bgTint: "bg-accent-a/10",
   },
   // No accent-d token exists, so nfts rides the warning/yellow family — the
-  // same tokens behind its `tag-yellow` chip, hence theme-aware in both modes.
+  // same tokens behind its `tag-yellow` chip.
   nfts: {
     text: "text-warning-dark dark:text-yellow-500",
     border: "border-warning-dark dark:border-yellow-500",
@@ -57,10 +55,8 @@ const PERSONA_COLORS: Record<WalletPersonaId, PersonaColor> = {
 }
 
 /**
- * Persona navigation: server-rendered `<Link>` cards that route to persona
- * pages (`/wallets/find-wallet/personas/[persona]`) for real SEO
- * differentiation, not client-side filters. The active persona reads as
- * "checked" and links back to the full list, so clicking it again clears it.
+ * Real links to persona pages, not client-side filters, so each persona is its
+ * own indexable page. The active card links back to the full list.
  */
 const WalletPersonaCards = async ({
   locale,

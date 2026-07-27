@@ -17,7 +17,6 @@ test.describe("Find Wallet Page", () => {
 
   test("persona card navigates to a persona page", async () => {
     await findWalletPage.openPersona("nfts")
-    // The persona subset is smaller than the full catalog.
     const count = await findWalletPage.getResultsCount()
     expect(count).toBeGreaterThan(0)
     expect(count).toBeLessThanOrEqual(49)
@@ -38,7 +37,6 @@ test.describe("Find Wallet Page", () => {
 
     await findWalletPage.closeDialog()
     await expect(findWalletPage.detailDialog).toBeHidden()
-    // Closing pops the intercepted route: back on the catalog.
     await expect(page).toHaveURL(/\/find-wallet\/?$/)
   })
 

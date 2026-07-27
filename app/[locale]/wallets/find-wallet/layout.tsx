@@ -1,11 +1,7 @@
 import { setRequestLocale } from "next-intl/server"
 import type { ReactNode } from "react"
 
-/**
- * Activates the parallel `@modal` slot used for intercepted wallet detail. The
- * catalog island and detail leaves receive pre-localized strings as props (built
- * on the server), so no client i18n provider is needed in this subtree.
- */
+/** Activates the `@modal` slot used for intercepted wallet detail. */
 export default async function FindWalletLayout({
   children,
   modal,

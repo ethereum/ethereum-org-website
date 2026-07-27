@@ -11,14 +11,12 @@ import {
 
 type WalletPersonaTagsProps = {
   personas: WalletPersonaId[]
-  /** Localized persona titles keyed by id, built on the server. */
   labels: Record<WalletPersonaId, string>
 }
 
 /**
- * Persona chips for a wallet. Each chip carries its persona's accent color via
- * `PERSONA_TAG_STATUS`. Titles come in pre-localized as props so this stays a
- * plain, i18n-runtime-free component. Renders nothing when there are no personas.
+ * Keep `"use client"`: WalletCard imports this, and dropping the directive
+ * breaks hydration of the whole catalog island (dead clicks, stalled images).
  */
 const WalletPersonaTags = ({ personas, labels }: WalletPersonaTagsProps) => {
   if (personas.length === 0) return null

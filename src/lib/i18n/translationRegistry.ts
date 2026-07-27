@@ -141,12 +141,10 @@ async function getDynamicIntlPagePaths(): Promise<string[]> {
         .map((app) => `/apps/${slugify(app.name)}/`)
     : []
 
-  // Find-wallet persona pages
   const walletPersonaPaths = WALLET_PERSONA_IDS.map(
     (persona) => `/wallets/find-wallet/personas/${persona}/`
   )
 
-  // Individual wallet detail pages, matching the [wallet] route's slugs.
   const walletDetailPaths = getAllWalletSlugs().map(
     (slug) => `/wallets/find-wallet/${slug}/`
   )

@@ -1,14 +1,9 @@
 import type { WalletData } from "@/lib/types"
 
 /**
- * The four flat device buckets drawn in the Figma revamp, derived from the raw
- * per-OS booleans on `WalletData`. Note `hardware` here means "is a hardware
- * wallet device" (the `hardware` field), distinct from the `hardware_support`
- * feature (software wallet that pairs with one).
- *
- * Dependency-free (imports only the `WalletData` type) so client components
- * (cards, catalog) can use the ids/labels without pulling in the server-only
- * `walletData` module, which reaches Node built-ins via `md`.
+ * `hardware` means the wallet is a hardware device, not the `hardware_support`
+ * feature. Keep this module dependency-free — client components import it,
+ * and `walletData` reaches Node built-ins via `md`.
  */
 export type WalletDeviceId = "desktop" | "mobile" | "browser" | "hardware"
 
@@ -37,10 +32,6 @@ export function getWalletDevices(
   }
 }
 
-/**
- * Localized label per device id, built on the server so client components get
- * plain strings as props instead of pulling the i18n runtime into the bundle.
- */
 export function buildDeviceLabels(
   t: (key: string) => string
 ): Record<WalletDeviceId, string> {
@@ -49,7 +40,6 @@ export function buildDeviceLabels(
   ) as Record<WalletDeviceId, string>
 }
 
-/** The labels for the device buckets a wallet supports, in canonical order. */
 export function getDeviceLabels(
   devices: Record<WalletDeviceId, boolean>,
   labels: Record<WalletDeviceId, string>
