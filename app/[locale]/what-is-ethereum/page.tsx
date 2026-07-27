@@ -1,4 +1,3 @@
-import { pick } from "lodash"
 import {
   Castle,
   Landmark,
@@ -7,11 +6,7 @@ import {
   SquareCode,
   User,
 } from "lucide-react"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams, ToCItem } from "@/lib/types"
 
@@ -22,7 +17,6 @@ import {
   HighlightStack,
   IconBox,
 } from "@/components/HighlightCard"
-import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import { Emphasis, Strong } from "@/components/IntlStringElements"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
@@ -42,7 +36,6 @@ import { Section } from "@/components/ui/section"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
 
@@ -62,11 +55,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
   const t = await getTranslations("page-what-is-ethereum")
-
-  const messages = pick(
-    await getMessages({ locale }),
-    getRequiredNamespacesForPage("/what-is-ethereum")
-  )
 
   const { contributors, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("what-is-ethereum", locale as Lang)
@@ -923,9 +911,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </UnorderedList>
         </Section>
 
-        <I18nProvider locale={locale} messages={messages}>
-          <StandaloneQuizWidget quizKey="what-is-ethereum" />
-        </I18nProvider>
+        <StandaloneQuizWidget quizKey="what-is-ethereum" />
       </ContentLayout>
     </>
   )
