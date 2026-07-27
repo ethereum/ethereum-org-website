@@ -7,7 +7,7 @@ import type { CatalogFilterState } from "@/components/FilterableCatalog/types"
 import { asArray } from "@/components/FilterableCatalog/utils"
 
 import type {
-  CatalogWallet,
+  CatalogWalletCard,
   WalletLanguageOption,
   WalletNetwork,
 } from "@/lib/utils/walletData"
@@ -52,7 +52,7 @@ export type WalletCatalogLabels = {
 
 type WalletsCatalogProps = {
   locale: string
-  wallets: CatalogWallet[]
+  wallets: CatalogWalletCard[]
   networks: WalletNetwork[]
   languages: WalletLanguageOption[]
   labels: WalletCatalogLabels
@@ -64,8 +64,8 @@ const WalletsResults = memo(function WalletsResults({
   deviceLabels,
   personaLabels,
 }: {
-  wallets: CatalogWallet[]
-  filtered: CatalogWallet[]
+  wallets: CatalogWalletCard[]
+  filtered: CatalogWalletCard[]
   deviceLabels: Record<WalletDeviceId, string>
   personaLabels: Record<WalletPersonaId, string>
 }) {
@@ -140,7 +140,7 @@ export default function WalletsCatalog({
   }))
 
   const filterWallet = useCallback(function filterWallet(
-    wallet: CatalogWallet,
+    wallet: CatalogWalletCard,
     state: CatalogFilterState,
     query: string
   ) {

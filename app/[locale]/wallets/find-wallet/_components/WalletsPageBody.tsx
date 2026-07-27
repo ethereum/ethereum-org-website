@@ -6,10 +6,11 @@ import { BaseLink } from "@/components/ui/Link"
 import { UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
-import type {
-  CatalogWallet,
-  WalletLanguageOption,
-  WalletNetwork,
+import {
+  type CatalogWallet,
+  toCatalogCard,
+  type WalletLanguageOption,
+  type WalletNetwork,
 } from "@/lib/utils/walletData"
 
 import { buildDeviceLabels } from "@/data/wallets/devices"
@@ -119,7 +120,8 @@ const WalletsPageBody = async ({
           // Reset client filter/search state when navigating between personas.
           key={currentPersonaId ?? "all"}
           locale={locale}
-          wallets={wallets}
+          // Slim projection: only what the island reads crosses to the client.
+          wallets={wallets.map(toCatalogCard)}
           networks={networks}
           languages={languages}
           labels={catalogLabels}

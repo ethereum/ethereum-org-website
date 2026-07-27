@@ -6,7 +6,7 @@ import { Image } from "@/components/Image"
 import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
-import type { CatalogWallet } from "@/lib/utils/walletData"
+import type { CatalogWalletCard } from "@/lib/utils/walletData"
 
 import { getDeviceLabels, type WalletDeviceId } from "@/data/wallets/devices"
 import type { WalletPersonaId } from "@/data/wallets/personas"
@@ -19,7 +19,7 @@ import WalletPersonaTags from "./WalletPersonaTags"
 const LANGUAGES_SHOWN = 2
 
 type WalletCardProps = {
-  wallet: CatalogWallet
+  wallet: CatalogWalletCard
   /** Pre-localized label dicts, built once on the server. */
   deviceLabels: Record<WalletDeviceId, string>
   personaLabels: Record<WalletPersonaId, string>

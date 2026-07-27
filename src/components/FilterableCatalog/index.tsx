@@ -14,7 +14,6 @@ import { Button } from "@/components/ui/buttons/Button"
 import Input from "@/components/ui/input"
 import { PersistentPanel } from "@/components/ui/persistent-panel"
 import { Section } from "@/components/ui/section"
-import { Sheet, SheetTrigger } from "@/components/ui/sheet"
 
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
@@ -139,6 +138,7 @@ export default function FilterableCatalog<TItem>({
       value={search}
       onChange={(event) => setSearch(event.target.value)}
       placeholder={labels.searchPlaceholder}
+      aria-label={labels.searchPlaceholder}
       className="w-full"
     />
   )
@@ -159,25 +159,24 @@ export default function FilterableCatalog<TItem>({
         <div className="space-y-4 lg:-mt-5">
           {mobileVariant === "sheet" ? (
             <div className="lg:hidden">
-              <Sheet
-                open={mobileFiltersOpen}
-                onOpenChange={setMobileFiltersOpen}
+              {/* A plain button, not SheetTrigger: the panel below is a
+                  PersistentPanel, so Radix would stamp an aria-controls
+                  pointing at SheetContent that never renders. */}
+              <button
+                ref={mobileTriggerRef}
+                type="button"
+                onClick={() => setMobileFiltersOpen(true)}
+                aria-haspopup="dialog"
+                aria-expanded={mobileFiltersOpen}
+                className="flex w-full items-center justify-between rounded-xl border px-4 py-3 text-start transition-colors hover:bg-background-highlight"
               >
-                <SheetTrigger asChild>
-                  <button
-                    ref={mobileTriggerRef}
-                    type="button"
-                    className="flex w-full items-center justify-between rounded-xl border px-4 py-3 text-start transition-colors hover:bg-background-highlight"
-                  >
-                    <span className="text-sm font-bold text-primary">
-                      {labels.filtersToggle}
-                    </span>
-                    <span className="text-sm text-body-medium">
-                      {nf.format(filteredItems.length)}
-                    </span>
-                  </button>
-                </SheetTrigger>
-              </Sheet>
+                <span className="text-sm font-bold text-primary">
+                  {labels.filtersToggle}
+                </span>
+                <span className="text-sm text-body-medium">
+                  {nf.format(filteredItems.length)}
+                </span>
+              </button>
 
               <PersistentPanel
                 open={mobileFiltersOpen}
@@ -220,7 +219,8 @@ export default function FilterableCatalog<TItem>({
           <div ref={resultsTopRef} className="scroll-mt-24" />
           {renderResultsHeader?.(selection)}
 
-          <p className="text-sm text-body-medium">
+          {/* Announced politely so filtering isn't silent for screen readers. */}
+          <p className="text-sm text-body-medium" aria-live="polite">
             {labels.resultsLabel}:{" "}
             <strong>{nf.format(filteredItems.length)}</strong> /{" "}
             {nf.format(items.length)}

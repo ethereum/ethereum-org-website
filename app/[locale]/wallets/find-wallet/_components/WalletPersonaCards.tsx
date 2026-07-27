@@ -46,11 +46,13 @@ const PERSONA_COLORS: Record<WalletPersonaId, PersonaColor> = {
     bg: "bg-accent-a",
     bgTint: "bg-accent-a/10",
   },
+  // No accent-d token exists, so nfts rides the warning/yellow family — the
+  // same tokens behind its `tag-yellow` chip, hence theme-aware in both modes.
   nfts: {
-    text: "text-[#BEBF3B]",
-    border: "border-[#BEBF3B]",
-    bg: "bg-[#BEBF3B]",
-    bgTint: "bg-[#BEBF3B]/10",
+    text: "text-warning-dark dark:text-yellow-500",
+    border: "border-warning-dark dark:border-yellow-500",
+    bg: "bg-warning-dark dark:bg-yellow-500",
+    bgTint: "bg-warning-dark/10 dark:bg-yellow-500/10",
   },
 }
 

@@ -134,6 +134,45 @@ export type CatalogWallet = Wallet & {
   descriptionStripped?: string
 }
 
+/**
+ * The projection of a wallet the catalog island actually reads — the only
+ * wallet fields that cross to the client. A full `CatalogWallet` serializes to
+ * ~2KB each (49 of them), most of it feature flags, socials, and theme colors
+ * the island never touches; detail views re-resolve the whole record
+ * server-side via `getWalletBySlug`, so none of that needs to be on the wire.
+ */
+export type CatalogWalletCard = Pick<
+  CatalogWallet,
+  | "slug"
+  | "name"
+  | "image"
+  | "devices"
+  | "personas"
+  | "supportedLanguages"
+  | "descriptionStripped"
+  | "supported_chains"
+  | "languages_supported"
+  | "buy_crypto"
+  | "withdraw_crypto"
+>
+
+export const toCatalogCard = (wallet: CatalogWallet): CatalogWalletCard => ({
+  slug: wallet.slug,
+  name: wallet.name,
+  image: wallet.image,
+  devices: wallet.devices,
+  personas: wallet.personas,
+  supported_chains: wallet.supported_chains,
+  supportedLanguages: wallet.supportedLanguages,
+  languages_supported: wallet.languages_supported,
+  buy_crypto: wallet.buy_crypto,
+  withdraw_crypto: wallet.withdraw_crypto,
+  // Omit the key entirely when absent, rather than serializing a null.
+  ...(wallet.descriptionStripped && {
+    descriptionStripped: wallet.descriptionStripped,
+  }),
+})
+
 export function enrichWallet(
   wallet: WalletData,
   locale: string
