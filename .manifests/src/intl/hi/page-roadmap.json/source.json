@@ -1,10 +1,10 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-roadmap.json",
-  "generatedAt": "2026-07-22T22:41:20.508Z",
-  "rootHash": "6c8dfa27b503",
+  "generatedAt": "2026-07-27T19:27:18.729Z",
+  "rootHash": "7294b02f1cef",
   "tree": {
-    "contentHash": "4d23fee8b915",
+    "contentHash": "27fee54537ea",
     "anchorHash": "8f795bcdda29",
     "children": {
       "page-roadmap-title": {
@@ -50,11 +50,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-roadmap-cheaper-transactions-description": {
-        "contentHash": "c65064d856eb",
+        "contentHash": "e2bcc6ded693",
         "anchorHash": "e3b0c44298fc"
       },
       "page-roadmap-cheaper-transactions-button": {
-        "contentHash": "985227cef2d3",
+        "contentHash": "849519a20ffc",
         "anchorHash": "e3b0c44298fc"
       },
       "page-roadmap-extra-security-title": {
@@ -78,19 +78,19 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-roadmap-better-user-experience-button": {
-        "contentHash": "60adab3674a9",
+        "contentHash": "108dd10986eb",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-roadmap-future-proofing-title": {
-        "contentHash": "d35c1e677306",
+      "page-roadmap-privacy-title": {
+        "contentHash": "f2f071cd4040",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-roadmap-future-proofing-description": {
-        "contentHash": "d1216fafbf7d",
+      "page-roadmap-privacy-description": {
+        "contentHash": "1cb62e2d0057",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-roadmap-future-proofing-button": {
-        "contentHash": "8747f88fdd88",
+      "page-roadmap-privacy-button": {
+        "contentHash": "09f091889f3c",
         "anchorHash": "e3b0c44298fc"
       },
       "page-roadmap-why-need-title": {
@@ -598,9 +598,9 @@
       "page-roadmap-better-user-experience-title",
       "page-roadmap-better-user-experience-description",
       "page-roadmap-better-user-experience-button",
-      "page-roadmap-future-proofing-title",
-      "page-roadmap-future-proofing-description",
-      "page-roadmap-future-proofing-button",
+      "page-roadmap-privacy-title",
+      "page-roadmap-privacy-description",
+      "page-roadmap-privacy-button",
       "page-roadmap-why-need-title",
       "page-roadmap-why-need-description",
       "page-roadmap-how-defined-title",
@@ -701,5 +701,5 @@
       "page-roadmap-hegota-discussed-item-1"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "4a7c0fa2a3ee82737bedc324112b0f3d16f22030"
 }
