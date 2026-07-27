@@ -48,8 +48,23 @@ export class FindWalletPage extends BasePage {
     await this.assertUrlMatches(new RegExp(`/personas/${personaSlug}/?$`))
   }
 
+  /**
+   * Below `lg` the sidebar collapses behind a "Filters" trigger and its panel
+   * isn't mounted until first open, so no filter label exists to click yet.
+   * No-op on desktop, where the sidebar is always rendered.
+   */
+  private async openFiltersIfCollapsed() {
+    const trigger = this.page.getByRole("button", { name: /^Filters/ })
+    if (!(await trigger.isVisible())) return
+    await trigger.click()
+    await expect(
+      this.page.getByRole("dialog", { name: /^Filters/ })
+    ).toBeVisible()
+  }
+
   /** Toggle a device filter checkbox by its visible label (viewport-agnostic). */
   async toggleDeviceFilter(label: string) {
+    await this.openFiltersIfCollapsed()
     await this.page
       .locator("label:visible")
       .filter({ hasText: new RegExp(`^${label}`) })
