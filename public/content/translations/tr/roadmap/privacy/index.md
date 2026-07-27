@@ -55,7 +55,7 @@ Bir işlem gönderildikten sonra, zincir içi kaydedilmeden önce onu gözlemley
 
 </ExpandableCard>
 
-[**EIP-7805 (Çatallanma Seçimi Zorunlu Dahil Etme Listeleri veya FOCIL)**](https://eips.ethereum.org/EIPS/eip-7805), gizli yazmalar için yaptırım mekanizması sağlar. Blok önericilerinin, mutabakat kuralları gereği, birden fazla kaynaktan işlem toplayan birleştirilmiş yerel dahil etme listelerindeki işlemleri bloklarına dahil etmeleri gerekir. Bir blok oluşturucu, dahil etme listelerinde görünen bir işlemi sansürlemeye çalışırsa, onaylayan düğümler önerilen bloku tamamen reddeder. FOCIL şu anda [Hegotá güncellemesi](https://forkcast.org/upgrade/hegota/) için değerlendirilmektedir.
+[**EIP-7805 (Çatallanma Seçimi Zorunlu Dahil Etme Listeleri veya FOCIL)**](https://eips.ethereum.org/EIPS/eip-7805), gizli yazmalar için yaptırım mekanizması sağlar. Blok teklifçilerinin, mutabakat kuralları gereği, birden fazla kaynaktan işlem toplayan birleştirilmiş yerel dahil etme listelerindeki işlemleri bloklarına dahil etmeleri gerekir. Bir blok oluşturucu, dahil etme listelerinde görünen bir işlemi sansürlemeye çalışırsa, onaylayan düğümler önerilen bloku tamamen reddeder. FOCIL şu anda [Hegotá güncellemesi](https://forkcast.org/upgrade/hegota/) için değerlendirilmektedir.
 
 Çerçeve işlemleri, kullanıcılara özel imza şemalarıyla gizliliği koruyan işlemler oluşturma esnekliği sağlarken, FOCIL bu işlemlerin bellek havuzuna girdikten sonra seçici olarak sansürlenememesini sağlar. Birlikte iki farklı başarısızlık noktasını ele alırlar: Biri gizli işlemlerin formatını mümkün kılar, diğeri ise bunların dahil edilmesini garanti eder. Hiçbir merkezi aktör geçerli bir gizli transferi engelleyemez.
 

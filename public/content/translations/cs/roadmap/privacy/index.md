@@ -13,7 +13,7 @@ Výzkumníci z Nadace Ethereum [shrnuli tři hlavní priority plánu rozvoje](ht
 
 - **Soukromé čtení** - dotazování a procházení Etherea bez odhalení, k jakým adresám, kontraktům nebo datům uživatel přistupuje. Ochrana čtení zabraňuje shromažďování dat ještě předtím, než je transakce vůbec podepsána.
 - **Soukromý zápis** - odesílání transakcí, které jsou odolné vůči cenzuře a úniku metadat, od zařazení do mempoolu až po konečné vypořádání. Ochrana zápisu zajišťuje, že soukromé transakce nebudou cenzurovány ani spojovány se svým původem.
-- **Soukromé dokazování** - ověřování identity, způsobilosti nebo dat bez odhalení základních osobních údajů pomocí efektivních důkazů s nulovým vědomím. Soukromé dokazování umožňuje uživatelům účastnit se sítě a zároveň se rozhodnout odhalit pouze nezbytné minimum informací (selektivní odhalení).
+- **Soukromé dokazování** - ověřování identity, způsobilosti nebo dat bez odhalení základních osobních údajů pomocí efektivních důkazů s nulovou znalostí. Soukromé dokazování umožňuje uživatelům účastnit se sítě a zároveň se rozhodnout odhalit pouze nezbytné minimum informací (selektivní odhalení).
 
 Společně tyto tři oblasti tvoří komplexní model soukromí. Cílem je **výpočetní suverenita**, která zajistí, že Ethereum bude platformou, kde mohou jednotlivci a instituce globálně interagovat, koordinovat se a provádět transakce bez neschváleného shromažďování dat, sledování nebo centralizované cenzury.
 
@@ -79,7 +79,7 @@ Tato řešení na platební vrstvě staví na infrastruktuře popsané dříve v
 
 ## Soukromé dokazování a ochrana identity {#private-proving}
 
-Soukromí není o úplném utajení. Je o **selektivním odhalení**, neboli o výběru toho, jaké informace odhalit, komu a za jakých podmínek. Ethereum podporuje selektivní odhalení prostřednictvím [**důkazů s nulovým vědomím (ZKP)**](/zero-knowledge-proofs/), které umožňují jedné straně prokázat, že je tvrzení pravdivé, aniž by odhalila podkladová data. Například prokázání občanství bez odhalení údajů z pasu nebo prokázání věkové hranice bez odhalení přesného data narození.
+Soukromí není o úplném utajení. Je o **selektivním odhalení**, neboli o výběru toho, jaké informace odhalit, komu a za jakých podmínek. Ethereum podporuje selektivní odhalení prostřednictvím [**důkazů s nulovou znalostí (ZKP)**](/zero-knowledge-proofs/), které umožňují jedné straně prokázat, že je tvrzení pravdivé, aniž by odhalila podkladová data. Například prokázání občanství bez odhalení údajů z pasu nebo prokázání věkové hranice bez odhalení přesného data narození.
 
 Soukromé dokazování se napojuje na plán rozvoje soukromí tím, že umožňuje ověřitelnou identitu bez vystavení dat na úrovni protokolu. Zatímco soukromé čtení a zápis chrání transakční metadata, soukromé dokazování zajišťuje, že kontroly identity a způsobilosti vyžadované pro účast v reálném světě nevyžadují odevzdání osobních údajů centralizovaným ověřovacím systémům.
 
@@ -91,7 +91,7 @@ Název „zkVM“ v sobě nese určitou nuanci; většina systémů, které se d
 
 Rámcové transakce (EIP-8141) jsou také spojeny s implementací zkVM. Mohou využívat vlastní ověřovací schémata k odesílání důkazem ověřených přechodů stavu, což aplikacím umožňuje nabízet soukromá exekuční prostředí a odesílat veřejné síti Ethereum kryptografický důkaz, že akce byla provedena správně, aniž by byla odhalena samotná transakční data.
 
-Důkazy s nulovým vědomím jsou vynikající pro to, aby jednotlivcům umožnily prokázat platnost jejich dat a zároveň je udržet v soukromí, ale nemohou snadno spravovat chytré kontrakty, kde více uživatelů potřebuje současně interagovat se sdíleným fondem tajných dat.
+Důkazy s nulovou znalostí jsou vynikající pro to, aby jednotlivcům umožnily prokázat platnost jejich dat a zároveň je udržet v soukromí, ale nemohou snadno spravovat chytré kontrakty, kde více uživatelů potřebuje současně interagovat se sdíleným fondem tajných dat.
 
 K překlenutí této mezery začleňuje plán rozvoje Etherea **plně homomorfní šifrování (FHE)**. FHE umožňuje chytrým kontraktům provádět výpočty přímo na zašifrovaných datech, aniž by bylo nutné podkladové informace dešifrovat nebo odhalit. Integrace stavebních bloků FHE a specializovaných kryptografických koprocesorů do Etherea je nezbytná pro decentralizované aplikace, které spoléhají na sdílený „skrytý stav“, jako jsou soukromí automatizovaní tvůrci trhu (AMM), důvěrné fondy pro půjčování nebo aukce s uzavřenými nabídkami, kde musí vstupy všech interagovat a zároveň zůstat zcela tajné.
 
@@ -103,7 +103,7 @@ V oblasti správy poskytuje protokol [**Minimal Anti-Collusion Infrastructure (M
 
 Hlasování zachovávající soukromí již chrání skutečné voliče v prostředích s vysokými sázkami. [Nástroj Freedom Tool od Rarimo](https://docs.rarimo.com/freedom-tool/) využívá ověřování pasů s nulovým vědomím, aby občanům umožnil prokázat, že jsou oprávněni volit, aniž by odhalili, kým jsou. Poháněl anonymní stínové volby a opoziční průzkumy v zemích včetně Ruska (opoziční hlasování [Russia2024](https://rarimo.medium.com/russian-opposition-use-rarimos-freedom-tool-to-launch-surveillance-free-voting-app-0d73ebea5e8a)), Gruzie (aplikace pro průzkumy United Space) a Íránu (projekt Iranians Vote), kde bezpečnost voličů závisí na kryptografickém tajemství hlasování.
 
-Soukromé dokazování také umožňuje **soukromí s ohledem na dodržování předpisů (compliance-aware privacy)**. Řešení soukromí, jako jsou fondy soukromí, přijímají vklady volně, ale před výběrem vyžadují, aby uživatelé vygenerovali důkazy s nulovým vědomím, že se jejich prostředky neprotínají se známými škodlivými adresami. Programovatelný model dodržování předpisů odděluje akt ochrany transakcí od aktu prokazování souladu s předpisy, což běžným uživatelům umožňuje provádět transakce soukromě a zároveň splňovat institucionální požadavky.
+Soukromé dokazování také umožňuje **soukromí s ohledem na dodržování předpisů (compliance-aware privacy)**. Řešení soukromí, jako jsou fondy soukromí, přijímají vklady volně, ale před výběrem vyžadují, aby uživatelé vygenerovali důkazy s nulovou znalostí, že se jejich prostředky neprotínají se známými škodlivými adresami. Programovatelný model dodržování předpisů odděluje akt ochrany transakcí od aktu prokazování souladu s předpisy, což běžným uživatelům umožňuje provádět transakce soukromě a zároveň splňovat institucionální požadavky.
 
 zkEVM mohou tyto kontroly dodržování předpisů provádět soukromě, ověřovat regulační status bez odhalení podrobností o transakcích nebo identit uživatelů.
 
@@ -117,7 +117,7 @@ Výzkum a vývoj v oblasti soukromí na Ethereu zahrnuje desítky týmů napří
 
 **Přístupová vrstva**: Výzkum PIR postupuje s aktivními implementacemi, které testují infrastrukturní týmy. SDK peněženky Kohaku je ve vývoji jako open-source reference pro peněženky zachovávající soukromí.
 
-**Dokazování na straně klienta**: Týmy aktivně využívají výsledky testů založených na benchmarcích k optimalizaci toho, jak důkazy s nulovým vědomím běží na standardních zařízeních. Projekty jako Spartan-WHIR posouvají vpřed bezpečné, kvantově odolné důkazy, které lze snadno ověřit přímo v síti Ethereum. Výzkumné iniciativy jako leanVM poskytují odlehčený zkVM navržený tak, aby spojil více kryptografických podpisů dohromady, čímž zmenšuje velikost dat kvantově bezpečných podpisů 250krát, aby se ušetřilo místo a snížily náklady na síť.
+**Dokazování na straně klienta**: Týmy aktivně využívají výsledky testů založených na benchmarcích k optimalizaci toho, jak důkazy s nulovou znalostí běží na standardních zařízeních. Projekty jako Spartan-WHIR posouvají vpřed bezpečné, kvantově odolné důkazy, které lze snadno ověřit přímo v síti Ethereum. Výzkumné iniciativy jako leanVM poskytují odlehčený zkVM navržený tak, aby spojil více kryptografických podpisů dohromady, čímž zmenšuje velikost dat kvantově bezpečných podpisů 250krát, aby se ušetřilo místo a snížily náklady na síť.
 
 **Identita a dokazování**: Iniciativa zkID vytváří optimalizovaná dokazovací schémata pro mobilní zařízení. MACI nadále zabezpečuje kola kvadratického financování a správu DAO, nástroje jako Freedom Tool od Rarimo přinášejí hlasování s nulovým vědomím do voleb v reálném světě a pokračuje probíhající výzkum standardů identity zachovávajících soukromí.
 
@@ -129,7 +129,7 @@ Výzkum a vývoj v oblasti soukromí na Ethereu zahrnuje desítky týmů napří
 - [Plán rozvoje PSE: 2025 a dále](https://pse.dev/blog/pse-roadmap-2025)
 - [Mandát Nadace Ethereum](/foundation/mandate/)
 - [strawmap.org](https://strawmap.org/)
-- [Důkazy s nulovým vědomím](/zero-knowledge-proofs/)
+- [Důkazy s nulovou znalostí](/zero-knowledge-proofs/)
 - [Decentralizovaná identita](/decentralized-identity/)
 - [Plán rozvoje Kohaku](https://notes.ethereum.org/@niard/KohakuRoadmap)
 - [Benchmarky dokazování na straně klienta](https://ethproofs.org/csp-benchmarks)
