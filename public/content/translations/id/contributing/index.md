@@ -50,11 +50,11 @@ Berikut adalah beberapa tugas saat ini yang dapat Anda bantu selesaikan dan ambi
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">Lihat semua tugas</ButtonLink>
 
-## Cara bekerja pada ethereum.org {#how-to-update-content}
+## Cara bekerja di ethereum.org
 
-Jika Anda ingin berkontribusi dalam [Program Terjemahan](/contributing/translation-program/), kami meminta Anda untuk membuat akun di [Crowdin](https://crowdin.com/project/ethereum-org). Untuk hal lainnya – menambahkan atau mengedit konten atau visual ke situs web, memperbaiki bug, mengerjakan tugas terbuka – Anda akan memerlukan akun [GitHub](https://github.com/).
+Untuk berkontribusi (menambahkan atau mengedit konten atau visual ke situs web, memperbaiki bug, mengerjakan tugas terbuka) Anda akan memerlukan akun [GitHub](https://github.com/).
 
-Semua pembaruan dilakukan melalui proses PR GitHub. Ini berarti Anda membuat salinan lokal dari situs web, membuat perubahan, dan meminta untuk menggabungkan perubahan Anda. Jika Anda belum pernah melakukan ini sebelumnya, ikuti petunjuk di bagian bawah [repositori GitHub](https://github.com/ethereum/ethereum-org-website) kami.
+Semua pembaruan dilakukan melalui proses PR GitHub. Ini berarti Anda membuat salinan lokal situs web, melakukan perubahan, dan meminta untuk menggabungkan perubahan Anda. Jika Anda belum pernah melakukan ini sebelumnya, ikuti petunjuk di bagian bawah [repositori GitHub](https://github.com/ethereum/ethereum-org-website) kami.
 
 Anda tidak memerlukan izin untuk mengerjakan apa pun, tetapi selalu lebih baik untuk memberi tahu kami apa yang Anda rencanakan. Anda dapat melakukannya dengan:
 
