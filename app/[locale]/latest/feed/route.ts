@@ -32,11 +32,13 @@ const IMAGE_MIME_TYPES: Record<string, string> = {
 
 const getImageUrl = (path: string): string => new URL(path, SITE_URL).href
 
-const getImageMimeType = (path: string): string => {
+// Undefined for unrecognized extensions: `medium="image"` already conveys the
+// class, and a guessed MIME type is worse than an absent one.
+const getImageMimeType = (path: string): string | undefined => {
   const pathname = new URL(path, SITE_URL).pathname.toLowerCase()
   const extension = pathname.match(/\.[^.]+$/)?.[0] ?? ""
 
-  return IMAGE_MIME_TYPES[extension] ?? "image/jpeg"
+  return IMAGE_MIME_TYPES[extension]
 }
 
 export async function GET(
@@ -70,6 +72,7 @@ export async function GET(
       const imageSrc = post.image ?? getBlogFallbackHero(post.href).src
       const imageUrl = getImageUrl(imageSrc)
       const imageType = getImageMimeType(imageSrc)
+      const imageTypeAttr = imageType ? ` type="${imageType}"` : ""
 
       return [
         "<item>",
@@ -80,7 +83,7 @@ export async function GET(
         creator,
         `<pubDate>${pubDate}</pubDate>`,
         categories,
-        `<media:content url="${escapeXml(imageUrl)}" medium="image" type="${imageType}" />`,
+        `<media:content url="${escapeXml(imageUrl)}" medium="image"${imageTypeAttr} />`,
         `<media:thumbnail url="${escapeXml(imageUrl)}" />`,
         "</item>",
       ].join("")
