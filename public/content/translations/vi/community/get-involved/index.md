@@ -59,11 +59,9 @@ Nếu bạn không phải là nhà phát triển, có thể khó biết bắt đ
 
 - Có rất nhiều cuộc gọi cộng đồng nguồn mở và việc có người ghi chú là một sự trợ giúp rất lớn. Nếu bạn quan tâm, hãy tham gia [Discord của Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) và giới thiệu bản thân!
 
-### Dịch nội dung Ethereum sang ngôn ngữ mẹ đẻ của bạn {#translate-ethereum}
-
-- ethereum.org duy trì một Chương trình Dịch thuật để dịch trang web và các tài nguyên khác sang nhiều ngôn ngữ khác nhau
-- Tìm hiểu cách tham gia [tại đây](/contributing/translation-program)
-
+### Giúp cải thiện các bản dịch nội dung Ethereum
+- Chương trình Dịch thuật ethereum.org đang dần khép lại và không còn tiếp nhận người dịch mới—hãy xem [trang chương trình](/contributing/translation-program/) để biết trạng thái và lịch sử của chương trình
+- Bạn vẫn có thể giúp đỡ bằng cách [báo cáo lỗi trong các bản dịch hiện có](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 ### Chạy một nút {#run-a-node}
 
 Tham gia cùng hàng ngàn người vận hành nút trong việc giúp phi tập trung hóa Ethereum hơn nữa.

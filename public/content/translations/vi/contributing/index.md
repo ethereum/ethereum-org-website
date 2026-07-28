@@ -50,24 +50,21 @@ Bạn có câu hỏi nào không? 🤔 Hãy tham gia [máy chủ Discord](https:
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">Xem tất cả các nhiệm vụ</ButtonLink>
 
-## Cách làm việc trên ethereum.org {#how-to-update-content}
+Để đóng góp (thêm hoặc chỉnh sửa nội dung hoặc hình ảnh cho trang web, sửa lỗi, làm việc trên các nhiệm vụ đang mở), bạn sẽ cần một tài khoản [GitHub](https://github.com/).
 
-Nếu bạn muốn đóng góp trong [Chương trình dịch thuật](/contributing/translation-program/), chúng tôi yêu cầu bạn tạo một tài khoản trên [Crowdin](https://crowdin.com/project/ethereum-org). Đối với mọi thứ khác – thêm hoặc chỉnh sửa nội dung hoặc hình ảnh cho trang web, sửa lỗi, làm việc trên các nhiệm vụ đang mở – bạn sẽ cần một tài khoản [GitHub](https://github.com/).
-
-Tất cả các bản cập nhật đều được thực hiện thông qua quy trình PR (Pull Request) của GitHub. Điều này có nghĩa là bạn tạo một bản sao cục bộ của trang web, thực hiện các thay đổi của mình và yêu cầu hợp nhất các thay đổi đó. Nếu bạn chưa từng làm điều này trước đây, hãy làm theo các hướng dẫn ở cuối [kho lưu trữ GitHub](https://github.com/ethereum/ethereum-org-website) của chúng tôi.
+Tất cả các bản cập nhật đều được thực hiện thông qua quy trình PR của GitHub. Điều này có nghĩa là bạn tạo một bản sao cục bộ của trang web, thực hiện các thay đổi của mình và yêu cầu hợp nhất các thay đổi đó. Nếu bạn chưa từng làm điều này trước đây, hãy làm theo các hướng dẫn ở cuối [kho lưu trữ GitHub](https://github.com/ethereum/ethereum-org-website) của chúng tôi.
 
 Bạn không cần sự cho phép để làm việc trên bất kỳ điều gì, nhưng tốt nhất là luôn cho chúng tôi biết bạn đang dự định làm gì. Bạn có thể làm điều này bằng cách:
 
-- Bình luận về một vấn đề (issue) hoặc PR trên [GitHub](https://github.com/ethereum/ethereum-org-website)
+- Bình luận về một vấn đề hoặc PR trên [GitHub](https://github.com/ethereum/ethereum-org-website)
 - Nhắn tin trên [máy chủ Discord](https://discord.gg/ethereum-org) của chúng tôi
 
 Trước khi đóng góp, hãy đảm bảo bạn đã quen thuộc với:
 
 - [tầm nhìn đang phát triển của ethereum.org](/about/)
 - [các nguyên tắc thiết kế](/contributing/design-principles/) của chúng tôi
-- [hướng dẫn văn phong](/contributing/style-guide/) của chúng tôi
+- [hướng dẫn phong cách](/contributing/style-guide/) của chúng tôi
 - [quy tắc ứng xử](/community/code-of-conduct) của chúng tôi
-
 ## Cách các quyết định về trang web được đưa ra {#how-decisions-about-the-site-are-made}
 
 Các quyết định về từng PR riêng lẻ, sự phát triển thiết kế và các bản nâng cấp lớn được đưa ra bởi một nhóm từ khắp hệ sinh thái Ethereum. Nhóm này bao gồm các nhà quản lý dự án, nhà phát triển, nhà thiết kế, bộ phận tiếp thị và truyền thông, cùng các chuyên gia về chủ đề. Ý kiến đóng góp của cộng đồng định hình mọi quyết định: vì vậy, vui lòng đặt câu hỏi trong các vấn đề (issues), gửi PR hoặc liên hệ với nhóm:

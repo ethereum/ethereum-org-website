@@ -8,17 +8,17 @@ Chương trình Dịch thuật là một nỗ lực hợp tác nhằm dịch eth
 
 ![](./enterprise-eth.png)
 
-## Giúp chúng tôi dịch thuật {#help-us-translate}
+## Giúp chúng tôi dịch thuật {#program-status}
 
 Chương trình Dịch thuật của ethereum.org luôn rộng mở và bất kỳ ai cũng có thể đóng góp!
 
 1. Bạn sẽ cần đăng nhập vào tài khoản Crowdin của mình hoặc đăng ký.
 2. Chọn ngôn ngữ bạn muốn đóng góp.
-3. Trước khi bắt đầu, vui lòng xem hướng dẫn [Cách dịch thuật](/contributing/translation-program/how-to-translate/) để tìm hiểu cách sử dụng Crowdin và [Hướng dẫn Văn phong Dịch thuật](/contributing/translation-program/translators-guide/) để biết các mẹo và phương pháp hay nhất.
+3. Trước khi bắt đầu, vui lòng xem hướng dẫn [Cách dịch thuật](/contributing/translation-program/acknowledgements/) để tìm hiểu cách sử dụng Crowdin và [Hướng dẫn Văn phong Dịch thuật](/contributing/translation-program/contributors/) để biết các mẹo và phương pháp hay nhất.
 4. Các bản dịch bằng máy sẽ không được phê duyệt.
 5. Tất cả các bản dịch đều được xem xét trước khi thêm vào trang web, vì vậy sẽ có một khoảng thời gian trễ ngắn trước khi bản dịch của bạn được hiển thị.
 
-_Tham gia [Discord của ethereum.org](https://discord.gg/ethereum-org) để hợp tác dịch thuật, đặt câu hỏi, chia sẻ phản hồi và ý tưởng, hoặc tham gia một nhóm dịch thuật._
+_Tham gia [Discord của ethereum.org](https://github.com/ethereum/ethereum-org-website/issues/new/choose) để hợp tác dịch thuật, đặt câu hỏi, chia sẻ phản hồi và ý tưởng, hoặc tham gia một nhóm dịch thuật._
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Bắt đầu dịch
@@ -57,33 +57,27 @@ Những người đóng góp cho Chương trình Dịch thuật đủ điều ki
 
 Ghi nhận công khai các dịch giả hàng đầu của chúng tôi thông qua [bảng xếp hạng](/contributing/translation-program/acknowledgements/) và [danh sách tất cả những người đóng góp cho Chương trình Dịch thuật](/contributing/translation-program/contributors/).
 
-#### Phần thưởng {#rewards}
+#### Phần thưởng
 
-Trước đây, chúng tôi đã trao phần thưởng hồi tố cho những người đóng góp tích cực nhất bằng vé tham dự các hội nghị Ethereum như [Devcon](https://devcon.org/en/) và [Devconnect](https://devconnect.org/), cũng như các vật phẩm độc quyền của ethereum.org.
+Trước đây, chúng tôi đã trao thưởng hồi tố cho những người đóng góp tích cực nhất bằng vé tham dự các hội nghị Ethereum như [Devcon](https://devcon.org/en/) và [Devconnect](https://devconnect.org/), cũng như các vật phẩm độc quyền của ethereum.org.
+### Hướng dẫn và tài nguyên
 
-Chúng tôi không ngừng suy nghĩ về những cách thức mới và sáng tạo để trao phần thưởng cho những người đóng góp, vì vậy hãy chú ý theo dõi!
+Những tài liệu tham khảo này vẫn có sẵn cho các cộng đồng dịch thuật và các dự án đang chạy chương trình của riêng họ:
 
-### Hướng dẫn và tài nguyên {#guides-and-resources}
-
-Nếu bạn đang đóng góp cho Chương trình Dịch thuật hoặc đang nghĩ đến việc tham gia, bạn nên xem các hướng dẫn dịch thuật dưới đây:
-
-- [Hướng dẫn Văn phong Dịch thuật](/contributing/translation-program/translators-guide/) _– các chỉ dẫn và mẹo dành cho dịch giả của ethereum.org_
+- [Hướng dẫn Văn phong Dịch thuật](/contributing/translation-program/translators-guide/) _– hướng dẫn và mẹo dành cho các dịch giả của ethereum.org_
 - [Câu hỏi thường gặp về Dịch thuật](/contributing/translation-program/faq/) _– các câu hỏi thường gặp và câu trả lời về Chương trình Dịch thuật của ethereum.org_
-- [Hướng dẫn trình chỉnh sửa trực tuyến Crowdin](https://support.crowdin.com/online-editor/) _– hướng dẫn chuyên sâu về cách sử dụng trình chỉnh sửa trực tuyến Crowdin và một số tính năng nâng cao của Crowdin_
 
-Để biết các công cụ dịch thuật hữu ích khác, cộng đồng dịch giả và các bài đăng trên blog của Chương trình Dịch thuật, vui lòng truy cập [Trang tài nguyên](/contributing/translation-program/resources/).
-
+Để biết thêm các công cụ dịch thuật hữu ích khác, các cộng đồng dịch giả và các bài đăng trên blog của Chương trình Dịch thuật, vui lòng truy cập [Trang tài nguyên](/contributing/translation-program/resources/).
 ## Liên hệ {#get-in-touch}
 
-Bạn có câu hỏi nào không? Hoặc muốn hợp tác với nhóm của chúng tôi và các dịch giả khác? Vui lòng đăng bài trong kênh #translations trên [máy chủ Discord của ethereum.org](https://discord.gg/ethereum-org)
+Bạn có câu hỏi nào không? Hoặc muốn hợp tác với nhóm của chúng tôi và các dịch giả khác? Vui lòng đăng bài trong kênh #translations trên [máy chủ Discord của ethereum.org](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 
 Bạn cũng có thể liên hệ với chúng tôi qua địa chỉ translations@ethereum.org
 
-## Bắt đầu chương trình dịch thuật của riêng bạn {#starting-a-translation-program}
+## Bắt đầu chương trình dịch thuật của riêng bạn
 
-Chúng tôi tận tâm dịch nội dung Ethereum sang càng nhiều ngôn ngữ càng tốt và cung cấp nội dung giáo dục cho mọi người.
-Cùng với trọng tâm vào dịch thuật, chúng tôi muốn giúp các dự án Ethereum khác tổ chức, quản lý và cải thiện nỗ lực dịch thuật của riêng họ.
+Việc cung cấp nội dung giáo dục cho mọi người vẫn là ưu tiên hàng đầu của ethereum.org và chúng tôi muốn giúp các dự án Ethereum khác tổ chức, quản lý và cải thiện các nỗ lực dịch thuật của riêng họ.
 
 Vì lý do này, chúng tôi đã tạo ra một [Cẩm nang Chương trình Dịch thuật](/contributing/translation-program/playbook/) chứa một số mẹo và phương pháp hay nhất mà chúng tôi đã đúc kết được trong quá trình dịch ethereum.org.
 
-Bạn muốn hợp tác sâu hơn hoặc sử dụng một số tài nguyên dịch thuật của chúng tôi? Bạn có phản hồi nào về cẩm nang không? Chúng tôi rất mong nhận được phản hồi từ bạn tại translations@ethereum.org.
+Bạn muốn hợp tác sâu hơn hoặc sử dụng một số tài nguyên dịch thuật của chúng tôi? Bạn có bất kỳ phản hồi nào về cẩm nang không? Chúng tôi rất mong nhận được phản hồi từ bạn tại translations@ethereum.org.
