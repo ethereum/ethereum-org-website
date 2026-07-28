@@ -8,17 +8,17 @@ Překladatelský program je společné úsilí o překlad webu ethereum.org do r
 
 ![](./enterprise-eth.png)
 
-## Pomozte nám s překladem {#help-us-translate}
+## Pomozte nám s překladem {#program-status}
 
 Překladatelský program ethereum.org je otevřený a přispět může kdokoli!
 
 1. Budete se muset přihlásit ke svému účtu Crowdin nebo se zaregistrovat.
 2. Vyberte jazyk, do kterého chcete překládat.
-3. Než začnete, přečtěte si prosím průvodce [Jak překládat](/contributing/translation-program/how-to-translate/), kde se dozvíte, jak používat Crowdin, a [Průvodce stylem překladu](/contributing/translation-program/translators-guide/), kde najdete tipy a osvědčené postupy.
+3. Než začnete, přečtěte si prosím průvodce [Jak překládat](/contributing/translation-program/acknowledgements/), kde se dozvíte, jak používat Crowdin, a [Průvodce stylem překladu](/contributing/translation-program/contributors/), kde najdete tipy a osvědčené postupy.
 4. Strojové překlady nebudou schváleny.
 5. Všechny překlady jsou před přidáním na web kontrolovány, takže než se vaše překlady zveřejní, dojde ke krátkému zpoždění.
 
-_Připojte se na [Discord ethereum.org](https://discord.gg/ethereum-org), kde můžete spolupracovat na překladech, klást otázky, sdílet zpětnou vazbu a nápady nebo se připojit k překladatelské skupině._
+_Připojte se na [Discord ethereum.org](https://github.com/ethereum/ethereum-org-website/issues/new/choose), kde můžete spolupracovat na překladech, klást otázky, sdílet zpětnou vazbu a nápady nebo se připojit k překladatelské skupině._
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Začít překládat
@@ -57,33 +57,27 @@ Přispěvatelé do překladatelského programu mají nárok na různé OATs (onc
 
 Veřejné uznání našich nejlepších překladatelů pomocí [žebříčků](/contributing/translation-program/acknowledgements/) a [seznamu všech přispěvatelů do překladatelského programu](/contributing/translation-program/contributors/).
 
-#### Odměny {#rewards}
+#### Odměny
 
-V minulosti jsme naše nejaktivnější přispěvatele zpětně odměnili vstupenkami na konference o Ethereu, jako jsou [Devcon](https://devcon.org/en/) a [Devconnect](https://devconnect.org/), a také exkluzivním merchem ethereum.org.
+V minulosti jsme naše nejaktivnější přispěvatele zpětně odměňovali vstupenkami na konference o Ethereu, jako jsou [Devcon](https://devcon.org/en/) a [Devconnect](https://devconnect.org/), a také exkluzivním merchem ethereum.org.
+### Průvodci a zdroje
 
-Neustále vymýšlíme nové a inovativní způsoby, jak odměnit naše přispěvatele, takže zůstaňte s námi!
-
-### Průvodci a zdroje {#guides-and-resources}
-
-Pokud přispíváte do překladatelského programu nebo uvažujete o zapojení, měli byste se podívat na níže uvedené průvodce překladem:
+Tyto referenční materiály zůstávají k dispozici překladatelským komunitám a projektům, které provozují své vlastní programy:
 
 - [Průvodce stylem překladu](/contributing/translation-program/translators-guide/) _– pokyny a tipy pro překladatele ethereum.org_
-- [Časté dotazy k překladům](/contributing/translation-program/faq/) _– často kladené otázky a odpovědi týkající se překladatelského programu ethereum.org_
-- [Průvodce online editorem Crowdin](https://support.crowdin.com/online-editor/) _– podrobný průvodce používáním online editoru Crowdin a některých jeho pokročilých funkcí_
+- [Často kladené dotazy k překladům](/contributing/translation-program/faq/) _– často kladené dotazy a odpovědi týkající se překladatelského programu ethereum.org_
 
-Další užitečné překladatelské nástroje, komunity překladatelů a příspěvky na blogu o překladatelském programu najdete na [stránce se zdroji](/contributing/translation-program/resources/).
-
+Další užitečné překladatelské nástroje, komunity překladatelů a příspěvky na blogu o překladatelském programu najdete na [stránce Zdroje](/contributing/translation-program/resources/).
 ## Kontaktujte nás {#get-in-touch}
 
-Máte nějaké dotazy? Nebo chcete spolupracovat s naším týmem a dalšími překladateli? Napište nám do kanálu #translations na našem [Discord serveru ethereum.org](https://discord.gg/ethereum-org).
+Máte nějaké dotazy? Nebo chcete spolupracovat s naším týmem a dalšími překladateli? Napište nám do kanálu #translations na našem [Discord serveru ethereum.org](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
 Můžete nás také kontaktovat na adrese translations@ethereum.org
 
-## Založení vlastního překladatelského programu {#starting-a-translation-program}
+## Založení vlastního překladatelského programu
 
-Jsme odhodláni překládat obsah o Ethereu do co největšího počtu jazyků a zpřístupnit vzdělávací obsah všem.
-V souladu s naším zaměřením na překlady chceme pomoci dalším projektům na Ethereu organizovat, řídit a zlepšovat jejich vlastní překladatelské úsilí.
+Zpřístupnění vzdělávacího obsahu všem zůstává pro ethereum.org prioritou a chceme pomoci dalším projektům na Ethereu organizovat, spravovat a zlepšovat jejich vlastní překladatelské úsilí.
 
-Z tohoto důvodu jsme vytvořili [příručku překladatelského programu](/contributing/translation-program/playbook/), která obsahuje některé tipy a osvědčené postupy, které jsme získali během překládání webu ethereum.org.
+Z tohoto důvodu jsme vytvořili [Příručku překladatelského programu](/contributing/translation-program/playbook/), která obsahuje některé tipy a osvědčené postupy, které jsme získali během překládání webu ethereum.org.
 
-Chcete s námi dále spolupracovat nebo využít některé z našich překladatelských zdrojů? Máte k příručce nějakou zpětnou vazbu? Budeme rádi, když se nám ozvete na translations@ethereum.org.
+Chcete dále spolupracovat nebo využít některé z našich překladatelských zdrojů? Máte nějakou zpětnou vazbu k příručce? Rádi o vás uslyšíme na adrese translations@ethereum.org.
