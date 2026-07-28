@@ -8,17 +8,17 @@ El Programa de traducción es un esfuerzo colaborativo para traducir ethereum.or
 
 ![](./enterprise-eth.png)
 
-## Ayúdanos a traducir {#help-us-translate}
+## Ayúdanos a traducir {#program-status}
 
 ¡El Programa de traducción de ethereum.org es abierto y cualquiera puede contribuir!
 
 1. Tendrás que iniciar sesión en tu cuenta de Crowdin o registrarte.
 2. Selecciona el idioma al que quieres contribuir.
-3. Antes de empezar, consulta la guía [Cómo traducir](/contributing/translation-program/how-to-translate/) para aprender a usar Crowdin, y la [Guía de estilo de traducción](/contributing/translation-program/translators-guide/) para obtener consejos y mejores prácticas.
+3. Antes de empezar, consulta la guía [Cómo traducir](/contributing/translation-program/acknowledgements/) para aprender a usar Crowdin, y la [Guía de estilo de traducción](/contributing/translation-program/contributors/) para obtener consejos y mejores prácticas.
 4. No se aprobarán las traducciones automáticas.
 5. Todas las traducciones se revisan antes de añadirse al sitio, por lo que habrá un breve retraso antes de que tus traducciones se publiquen.
 
-_Únete al [Discord de ethereum.org](https://discord.gg/ethereum-org) para colaborar en las traducciones, hacer preguntas, compartir comentarios e ideas, o unirte a un grupo de traducción._
+_Únete al [Discord de ethereum.org](https://github.com/ethereum/ethereum-org-website/issues/new/choose) para colaborar en las traducciones, hacer preguntas, compartir comentarios e ideas, o unirte a un grupo de traducción._
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Empezar a traducir
@@ -57,33 +57,27 @@ Los contribuyentes al Programa de traducción son elegibles para diferentes OATs
 
 Reconocimientos públicos a nuestros mejores traductores mediante [tablas de clasificación](/contributing/translation-program/acknowledgements/) y una [lista de todos los contribuyentes al Programa de traducción](/contributing/translation-program/contributors/).
 
-#### Recompensas {#rewards}
+#### Recompensas
 
 En el pasado, hemos recompensado retroactivamente a nuestros contribuyentes más activos con entradas para conferencias de Ethereum como [Devcon](https://devcon.org/en/) y [Devconnect](https://devconnect.org/), así como con mercancía exclusiva de ethereum.org.
+### Guías y recursos
 
-Estamos constantemente pensando en formas nuevas e innovadoras de recompensar a nuestros contribuyentes, ¡así que mantente atento!
-
-### Guías y recursos {#guides-and-resources}
-
-Si estás contribuyendo al Programa de traducción o pensando en involucrarte, deberías consultar las siguientes guías de traducción:
+Estos materiales de referencia siguen estando disponibles para las comunidades de traducción y los proyectos que ejecutan sus propios programas:
 
 - [Guía de estilo de traducción](/contributing/translation-program/translators-guide/) _– instrucciones y consejos para los traductores de ethereum.org_
 - [Preguntas frecuentes sobre la traducción](/contributing/translation-program/faq/) _– preguntas frecuentes y respuestas sobre el Programa de traducción de ethereum.org_
-- [Guía del editor en línea de Crowdin](https://support.crowdin.com/online-editor/) _– una guía detallada para usar el editor en línea de Crowdin y algunas de las funciones avanzadas de Crowdin_
 
-Para otras herramientas de traducción útiles, comunidades de traductores y publicaciones del blog del Programa de traducción, visita la [página de Recursos](/contributing/translation-program/resources/).
-
+Para conocer otras herramientas de traducción útiles, comunidades de traductores y publicaciones del blog del Programa de traducción, visita la [página de Recursos](/contributing/translation-program/resources/).
 ## Ponte en contacto {#get-in-touch}
 
-¿Tienes alguna pregunta? ¿O quieres colaborar con nuestro equipo y otros traductores? Por favor, publica en el canal #translations de nuestro [servidor de Discord de ethereum.org](https://discord.gg/ethereum-org)
+¿Tienes alguna pregunta? ¿O quieres colaborar con nuestro equipo y otros traductores? Por favor, publica en el canal #translations de nuestro [servidor de Discord de ethereum.org](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 
 También puedes comunicarte con nosotros en translations@ethereum.org
 
-## Iniciar tu propio programa de traducción {#starting-a-translation-program}
+## Iniciar tu propio programa de traducción
 
-Nos dedicamos a traducir el contenido de Ethereum a la mayor cantidad de idiomas posible y a poner el contenido educativo a disposición de todos.
-En línea con nuestro enfoque en las traducciones, queremos ayudar a otros proyectos de Ethereum a organizar, gestionar y mejorar sus propios esfuerzos de traducción.
+Hacer que el contenido educativo esté disponible para todos sigue siendo una prioridad para ethereum.org, y queremos ayudar a otros proyectos de Ethereum a organizar, gestionar y mejorar sus propios esfuerzos de traducción.
 
 Por esta razón, hemos creado un [manual del Programa de traducción](/contributing/translation-program/playbook/) que contiene algunos consejos y mejores prácticas que hemos aprendido en el proceso de traducción de ethereum.org.
 
-¿Quieres colaborar más o usar algunos de nuestros recursos de traducción? ¿Tienes algún comentario sobre el manual? Nos encantaría escucharte en translations@ethereum.org.
+¿Quieres colaborar más o utilizar algunos de nuestros recursos de traducción? ¿Tienes algún comentario sobre el manual? Nos encantaría saber de ti en translations@ethereum.org.
