@@ -59,11 +59,9 @@ Wenn du kein Entwickler bist, kann es schwierig sein zu wissen, wo man bei Ether
 
 - Es gibt viele Open-Source-Community-Calls, und Protokollanten zu haben, ist eine große Hilfe. Wenn du interessiert bist, tritt dem [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu) bei und stelle dich vor!
 
-### Übersetze Ethereum-Inhalte in deine Muttersprache {#translate-ethereum}
-
-- ethereum.org unterhält ein Übersetzungsprogramm, das die Website und andere Ressourcen in viele verschiedene Sprachen übersetzt
-- Finde [hier](/contributing/translation-program) heraus, wie du dich einbringen kannst
-
+### Hilf dabei, übersetzte Ethereum-Inhalte zu verbessern
+- Das Übersetzungsprogramm von ethereum.org läuft aus und es findet kein Onboarding neuer Übersetzer mehr statt – siehe die [Programmseite](/contributing/translation-program/) für den Status und Verlauf
+- Du kannst weiterhin helfen, indem du [Fehler in bestehenden Übersetzungen meldest](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 ### Betreibe einen Knoten {#run-a-node}
 
 Schließe dich Tausenden von Knotenbetreibern an und hilf dabei, Ethereum weiter zu dezentralisieren.

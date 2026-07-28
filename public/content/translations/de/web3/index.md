@@ -126,12 +126,10 @@ Wichtige Web3-Funktionen wie Sign-in with Ethereum stehen bereits jedem kostenlo
 
 Die technische Einstiegshürde für die Nutzung von Web3 ist derzeit zu hoch. Nutzer müssen Sicherheitsbedenken begreifen, komplexe technische Dokumentationen verstehen und sich in wenig intuitiven Benutzeroberflächen zurechtfinden. Insbesondere [Wallet-Anbieter](/wallets/find-wallet/) arbeiten daran, dies zu lösen, aber es sind weitere Fortschritte erforderlich, bevor Web3 massenhaft angenommen wird.
 
-### Bildung {#education}
+### Bildung
+Web3 führt neue Paradigmen ein, die das Erlernen anderer mentaler Modelle erfordern als jene, die im Web 2.0 verwendet werden. Eine ähnliche Aufklärungskampagne fand statt, als das Web 1.0 in den späten 1990er Jahren an Popularität gewann; Befürworter des World Wide Web nutzten eine Vielzahl von Vermittlungsmethoden, um die Öffentlichkeit aufzuklären, von einfachen Metaphern (die Datenautobahn, Browser, Surfen im Web) bis hin zu [Fernsehsendungen](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 ist nicht schwierig, aber es ist anders. Bildungsinitiativen, die Web2-Nutzer über diese Web3-Paradigmen informieren, sind für seinen Erfolg von entscheidender Bedeutung.
 
-Web3 führt neue Paradigmen ein, die das Erlernen anderer mentaler Modelle erfordern als die im Web 2.0 verwendeten. Eine ähnliche Bildungsoffensive fand statt, als das Web 1.0 in den späten 1990er Jahren an Popularität gewann; Befürworter des World Wide Web nutzten eine Vielzahl von Aufklärungstechniken, um die Öffentlichkeit zu informieren, von einfachen Metaphern (die Datenautobahn, Browser, Surfen im Web) bis hin zu [Fernsehsendungen](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 ist nicht schwierig, aber es ist anders. Bildungsinitiativen, die Web2-Nutzer über diese Web3-Paradigmen informieren, sind für seinen Erfolg von entscheidender Bedeutung.
-
-Ethereum.org trägt durch unser [Übersetzungsprogramm](/contributing/translation-program/) zur Web3-Bildung bei, mit dem Ziel, wichtige Ethereum-Inhalte in so viele Sprachen wie möglich zu übersetzen.
-
+Ethereum.org hat durch sein [Übersetzungsprogramm](/contributing/translation-program/) zur Web3-Bildung beigetragen, welches wichtige Ethereum-Inhalte in Dutzenden von Sprachen verfügbar gemacht hat.
 ### Zentralisierte Infrastruktur {#centralized-infrastructure}
 
 Das Web3-Ökosystem ist jung und entwickelt sich schnell. Infolgedessen hängt es derzeit hauptsächlich von zentralisierter Infrastruktur ab (GitHub, Twitter, Discord usw.). Viele Web3-Unternehmen beeilen sich, diese Lücken zu schließen, aber der Aufbau einer hochwertigen, zuverlässigen Infrastruktur braucht Zeit.
