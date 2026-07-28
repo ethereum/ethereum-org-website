@@ -50,24 +50,21 @@ lang: ar
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">عرض جميع المهام</ButtonLink>
 
-## كيفية العمل على <span dir="ltr">ethereum.org</span> {#how-to-update-content}
+للمساهمة (إضافة أو تعديل المحتوى أو العناصر المرئية للموقع، أو إصلاح الأخطاء، أو العمل على المهام المفتوحة) ستحتاج إلى حساب [<span dir="ltr">GitHub</span>](https://github.com/).
 
-إذا كنت ترغب في المساهمة في [برنامج الترجمة](/contributing/translation-program/)، نطلب منك إنشاء حساب على [<span dir="ltr">Crowdin</span>](https://crowdin.com/project/ethereum-org). لكل شيء آخر – إضافة أو تعديل المحتوى أو المرئيات على الموقع، إصلاح الأخطاء، العمل على المهام المفتوحة – ستحتاج إلى حساب [<span dir="ltr">GitHub</span>](https://github.com/).
+تتم جميع التحديثات عبر عملية طلبات السحب (<span dir="ltr">PR</span>) في <span dir="ltr">GitHub</span>. هذا يعني أنك تقوم بإنشاء نسخة محلية من الموقع، وإجراء تغييراتك، وطلب دمج تغييراتك. إذا لم تقم بذلك من قبل، فاتبع التعليمات الموجودة في أسفل [مستودع <span dir="ltr">GitHub</span>](https://github.com/ethereum/ethereum-org-website) الخاص بنا.
 
-تتم جميع التحديثات عبر عملية طلبات السحب (PR) في <span dir="ltr">GitHub</span>. هذا يعني أنك تقوم بإنشاء نسخة محلية من الموقع، وإجراء تغييراتك، وطلب دمج تغييراتك. إذا لم تقم بذلك من قبل، فاتبع التعليمات الموجودة في أسفل [مستودع <span dir="ltr">GitHub</span>](https://github.com/ethereum/ethereum-org-website) الخاص بنا.
+لا تحتاج إلى إذن للعمل على أي شيء، ولكن من الأفضل دائمًا إخبارنا بما تخطط للقيام به. يمكنك القيام بذلك عن طريق:
 
-لا تحتاج إلى إذن للعمل على أي شيء، ولكن من الأفضل دائمًا إعلامنا بما تخطط للقيام به. يمكنك القيام بذلك عن طريق:
-
-- التعليق على مشكلة أو طلب سحب (PR) في [<span dir="ltr">GitHub</span>](https://github.com/ethereum/ethereum-org-website)
+- التعليق على مشكلة أو طلب سحب (<span dir="ltr">PR</span>) في [<span dir="ltr">GitHub</span>](https://github.com/ethereum/ethereum-org-website)
 - المراسلة على [خادم ديسكورد](https://discord.gg/ethereum-org) الخاص بنا
 
 قبل المساهمة، تأكد من أنك على دراية بما يلي:
 
-- [الرؤية المتطورة لـ <span dir="ltr">ethereum.org</span>](/about/)
+- [رؤية <span dir="ltr">ethereum.org</span>](/about/) المتطورة
 - [مبادئ التصميم](/contributing/design-principles/) الخاصة بنا
 - [دليل الأسلوب](/contributing/style-guide/) الخاص بنا
 - [قواعد السلوك](/community/code-of-conduct) الخاصة بنا
-
 ## كيف يتم اتخاذ القرارات بشأن الموقع {#how-decisions-about-the-site-are-made}
 
 يتم اتخاذ القرارات المتعلقة بطلبات السحب (PRs) الفردية، وتطور التصميم، والترقيات الرئيسية من قبل فريق من جميع أنحاء نظام إيثيريوم البيئي. يضم هذا الفريق مديري مشاريع، ومطورين، ومصممين، ومسؤولي تسويق واتصالات، وخبراء في الموضوع. تُوجه مدخلات المجتمع كل قرار: لذا يرجى طرح الأسئلة في المشكلات، أو إرسال طلبات السحب، أو الاتصال بالفريق:

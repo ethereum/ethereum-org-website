@@ -8,17 +8,17 @@ description: "معلومات حول برنامج ترجمة موقع ⁦ethereum
 
 ![](./enterprise-eth.png)
 
-## ساعدنا في الترجمة {#help-us-translate}
+## ساعدنا في الترجمة {#program-status}
 
 برنامج ترجمة موقع <span dir="ltr">ethereum.org</span> مفتوح ويمكن لأي شخص المساهمة فيه!
 
 1. ستحتاج إلى تسجيل الدخول إلى حساب Crowdin الخاص بك أو التسجيل.
 2. حدد اللغة التي ترغب في المساهمة فيها.
-3. قبل البدء، يرجى الاطلاع على دليل [كيفية الترجمة](/contributing/translation-program/how-to-translate/) لمعرفة كيفية استخدام Crowdin، و[دليل أسلوب الترجمة](/contributing/translation-program/translators-guide/) للحصول على نصائح وأفضل الممارسات.
+3. قبل البدء، يرجى الاطلاع على دليل [كيفية الترجمة](/contributing/translation-program/acknowledgements/) لمعرفة كيفية استخدام Crowdin، و[دليل أسلوب الترجمة](/contributing/translation-program/contributors/) للحصول على نصائح وأفضل الممارسات.
 4. لن تتم الموافقة على الترجمات الآلية.
 5. تتم مراجعة جميع الترجمات قبل إضافتها إلى الموقع، لذلك سيكون هناك تأخير قصير قبل نشر ترجماتك.
 
-_انضم إلى [ديسكورد <span dir="ltr">ethereum.org</span>](https://discord.gg/ethereum-org) للتعاون في الترجمات، أو طرح الأسئلة، أو مشاركة الملاحظات والأفكار، أو الانضمام إلى مجموعة ترجمة._
+_انضم إلى [ديسكورد <span dir="ltr">ethereum.org</span>](https://github.com/ethereum/ethereum-org-website/issues/new/choose) للتعاون في الترجمات، أو طرح الأسئلة، أو مشاركة الملاحظات والأفكار، أو الانضمام إلى مجموعة ترجمة._
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   ابدأ الترجمة
@@ -57,32 +57,26 @@ _انضم إلى [ديسكورد <span dir="ltr">ethereum.org</span>](https://di
 
 تقدير عام لكبار المترجمين لدينا باستخدام [لوحات الصدارة](/contributing/translation-program/acknowledgements/) و[قائمة بجميع المساهمين في برنامج الترجمة](/contributing/translation-program/contributors/).
 
-#### المكافآت {#rewards}
+#### المكافآت
 
-في الماضي، قمنا بمكافأة المساهمين الأكثر نشاطًا لدينا بأثر رجعي بتذاكر لمؤتمرات إيثيريوم مثل [Devcon](https://devcon.org/en/) و[Devconnect](https://devconnect.org/)، بالإضافة إلى سلع حصرية خاصة بموقع <span dir="ltr">ethereum.org</span>.
+في الماضي، قمنا بمكافأة المساهمين الأكثر نشاطًا لدينا بأثر رجعي بتذاكر لحضور مؤتمرات إيثيريوم مثل [<span dir="ltr">Devcon</span>](https://devcon.org/en/) و[<span dir="ltr">Devconnect</span>](https://devconnect.org/)، بالإضافة إلى سلع حصرية خاصة بموقع <span dir="ltr">ethereum.org</span>.
+### الأدلة والموارد
 
-نحن نفكر باستمرار في طرق جديدة ومبتكرة لمكافأة مساهمينا، لذا ابقوا على اطلاع!
+تظل هذه المواد المرجعية متاحة لمجتمعات الترجمة والمشاريع التي تدير برامجها الخاصة:
 
-### الأدلة والموارد {#guides-and-resources}
+- [دليل أسلوب الترجمة](/contributing/translation-program/translators-guide/) _– إرشادات ونصائح لمترجمي موقع <span dir="ltr">ethereum.org</span>_
+- [الأسئلة الشائعة حول الترجمة](/contributing/translation-program/faq/) _– أسئلة وأجوبة شائعة حول برنامج ترجمة موقع <span dir="ltr">ethereum.org</span>_
 
-إذا كنت تساهم في برنامج الترجمة أو تفكر في المشاركة، فيجب عليك التحقق من أدلة الترجمة أدناه:
-
-- [دليل أسلوب الترجمة](/contributing/translation-program/translators-guide/) _– تعليمات ونصائح لمترجمي موقع <span dir="ltr">ethereum.org</span>_
-- [الأسئلة الشائعة حول الترجمة](/contributing/translation-program/faq/) _– الأسئلة والأجوبة الشائعة حول برنامج ترجمة موقع <span dir="ltr">ethereum.org</span>_
-- [دليل محرر Crowdin عبر الإنترنت](https://support.crowdin.com/online-editor/) _– دليل متعمق لاستخدام محرر Crowdin عبر الإنترنت وبعض ميزات Crowdin المتقدمة_
-
-للحصول على أدوات ترجمة مفيدة أخرى، ومجتمعات المترجمين، ومنشورات مدونة برنامج الترجمة، يرجى زيارة [صفحة الموارد](/contributing/translation-program/resources/).
-
+للحصول على أدوات ترجمة أخرى مفيدة، ومجتمعات المترجمين، ومنشورات مدونة برنامج الترجمة، يرجى زيارة [صفحة الموارد](/contributing/translation-program/resources/).
 ## تواصل معنا {#get-in-touch}
 
-هل لديك أي أسئلة؟ أو ترغب في التعاون مع فريقنا والمترجمين الآخرين؟ يرجى النشر في قناة <span dir="ltr">#translations</span> على [خادم ديسكورد الخاص بموقع <span dir="ltr">ethereum.org</span>](https://discord.gg/ethereum-org)
+هل لديك أي أسئلة؟ أو ترغب في التعاون مع فريقنا والمترجمين الآخرين؟ يرجى النشر في قناة <span dir="ltr">#translations</span> على [خادم ديسكورد الخاص بموقع <span dir="ltr">ethereum.org</span>](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 
 يمكنك أيضًا التواصل معنا على <span dir="ltr">translations@ethereum.org</span>
 
-## بدء برنامج الترجمة الخاص بك {#starting-a-translation-program}
+## بدء برنامج الترجمة الخاص بك
 
-نحن مكرسون لترجمة محتوى إيثيريوم إلى أكبر عدد ممكن من اللغات وجعل المحتوى التعليمي متاحًا للجميع.
-وتماشيًا مع تركيزنا على الترجمات، نريد مساعدة مشاريع إيثيريوم الأخرى في تنظيم وإدارة وتحسين جهود الترجمة الخاصة بها.
+يظل توفير المحتوى التعليمي للجميع أولوية بالنسبة لموقع <span dir="ltr">ethereum.org</span>، ونريد مساعدة مشاريع إيثيريوم الأخرى في تنظيم وإدارة وتحسين جهود الترجمة الخاصة بها.
 
 لهذا السبب، قمنا بإنشاء [دليل برنامج الترجمة](/contributing/translation-program/playbook/) الذي يحتوي على بعض النصائح وأفضل الممارسات التي اكتسبناها في عملية ترجمة موقع <span dir="ltr">ethereum.org</span>.
 
