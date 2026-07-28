@@ -126,12 +126,11 @@ Recursos importantes da Web3, como o Sign-in with Ethereum (Fazer login com Ethe
 
 A barreira técnica de entrada para usar a Web3 é atualmente muito alta. Os usuários devem compreender as preocupações de segurança, entender a documentação técnica complexa e navegar por interfaces de usuário não intuitivas. Os [provedores de carteira](/wallets/find-wallet/), em particular, estão trabalhando para resolver isso, mas é necessário mais progresso antes que a Web3 seja adotada em massa.
 
-### Educação {#education}
+### Educação
 
-A Web3 introduz novos paradigmas que exigem o aprendizado de modelos mentais diferentes dos usados na Web 2.0. Um esforço educacional semelhante aconteceu quando a Web 1.0 estava ganhando popularidade no final da década de 1990; os defensores da world wide web usaram uma série de técnicas educacionais para educar o público, desde metáforas simples (a rodovia da informação, navegadores, surfar na web) até [transmissões de televisão](https://www.youtube.com/watch?v=SzQLI7BxfYI). A Web3 não é difícil, mas é diferente. Iniciativas educacionais que informam os usuários da Web2 sobre esses paradigmas da Web3 são vitais para o seu sucesso.
+A Web3 introduz novos paradigmas que exigem o aprendizado de modelos mentais diferentes dos usados na Web 2.0. Um esforço educacional semelhante aconteceu quando a Web 1.0 estava ganhando popularidade no final da década de 1990; os defensores da World Wide Web usaram uma série de técnicas educacionais para educar o público, desde metáforas simples (a rodovia da informação, navegadores, surfar na web) até [transmissões de televisão](https://www.youtube.com/watch?v=SzQLI7BxfYI). A Web3 não é difícil, mas é diferente. Iniciativas educacionais que informam os usuários da Web2 sobre esses paradigmas da Web3 são vitais para o seu sucesso.
 
-O Ethereum.org contribui para a educação sobre a Web3 por meio do nosso [Programa de Tradução](/contributing/translation-program/), com o objetivo de traduzir conteúdos importantes do Ethereum para o maior número possível de idiomas.
-
+O Ethereum.org tem contribuído para a educação sobre a Web3 por meio de seu [Programa de Tradução](/contributing/translation-program/), que disponibilizou conteúdos importantes sobre o Ethereum em dezenas de idiomas.
 ### Infraestrutura centralizada {#centralized-infrastructure}
 
 O ecossistema da Web3 é jovem e está evoluindo rapidamente. Como resultado, atualmente ele depende principalmente de infraestrutura centralizada (GitHub, Twitter, Discord, etc.). Muitas empresas da Web3 estão correndo para preencher essas lacunas, mas construir uma infraestrutura confiável e de alta qualidade leva tempo.
