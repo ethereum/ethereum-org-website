@@ -63,6 +63,7 @@ Se você não é um desenvolvedor, pode ser difícil saber por onde começar no 
 
 - O Programa de Tradução do ethereum.org está sendo encerrado e não está mais integrando novos tradutores — veja a [página do programa](/contributing/translation-program/) para saber seu status e histórico
 - Você ainda pode ajudar [relatando erros nas traduções existentes](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
+
 ### Execute um nó {#run-a-node}
 
 Junte-se a milhares de operadores de nó para ajudar a descentralizar ainda mais o Ethereum.

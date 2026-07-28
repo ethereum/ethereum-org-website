@@ -63,6 +63,7 @@ Si vous n'êtes pas développeur, il peut être difficile de savoir par où comm
 
 - Le programme de traduction d'ethereum.org touche à sa fin et n'intègre plus de nouveaux traducteurs — consultez la [page du programme](/contributing/translation-program/) pour connaître son statut et son historique
 - Vous pouvez toujours aider en [signalant les erreurs dans les traductions existantes](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
+
 ### Exécuter un nœud {#run-a-node}
 
 Rejoignez des milliers d'opérateurs de nœuds pour aider à décentraliser davantage Ethereum.

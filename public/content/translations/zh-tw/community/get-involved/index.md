@@ -63,6 +63,7 @@ lang: zh-tw
 
 - ethereum.org 翻譯計畫已進入尾聲，且不再招募新翻譯人員——請參閱[計畫頁面](/contributing/translation-program/)以了解其狀態與歷史
 - 你仍然可以透過[回報現有翻譯中的錯誤](https://github.com/ethereum/ethereum-org-website/issues/new/choose)來提供協助
+
 ### 運行節點 {#run-a-node}
 
 加入數千名節點營運者的行列，幫助進一步去中心化以太坊。

@@ -131,6 +131,7 @@ La barrera técnica de entrada para usar Web3 es actualmente demasiado alta. Los
 Web3 introduce nuevos paradigmas que requieren aprender modelos mentales diferentes a los utilizados en la Web 2.0. Un impulso educativo similar ocurrió cuando la Web 1.0 estaba ganando popularidad a fines de la década de 1990; los defensores de la World Wide Web utilizaron una gran cantidad de técnicas educativas para educar al público, desde metáforas simples (la autopista de la información, los navegadores, navegar por la web) hasta [transmisiones de televisión](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 no es difícil, pero es diferente. Las iniciativas educativas que informan a los usuarios de Web2 sobre estos paradigmas de Web3 son vitales para su éxito.
 
 Ethereum.org ha contribuido a la educación sobre Web3 a través de su [Programa de traducción](/contributing/translation-program/), que hizo que contenido importante de Ethereum estuviera disponible en docenas de idiomas.
+
 ### Infraestructura centralizada {#centralized-infrastructure}
 
 El ecosistema de Web3 es joven y evoluciona rápidamente. Como resultado, actualmente depende principalmente de infraestructura centralizada (GitHub, Twitter, Discord, etc.). Muchas empresas de Web3 se apresuran a llenar estos vacíos, pero construir una infraestructura confiable y de alta calidad lleva tiempo.

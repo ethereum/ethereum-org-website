@@ -63,6 +63,7 @@ Pokud nejste vývojář, může být těžké zjistit, kde v Ethereu začít. Zd
 
 - Překladatelský program ethereum.org se chýlí ke konci a již neprovádí onboarding nových překladatelů – informace o jeho stavu a historii najdete na [stránce programu](/contributing/translation-program/)
 - Stále můžete pomoci tím, že [nahlásíte chyby ve stávajících překladech](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
+
 ### Provozujte uzel {#run-a-node}
 
 Připojte se k tisícům provozovatelů uzlů a pomozte dále decentralizovat Ethereum.

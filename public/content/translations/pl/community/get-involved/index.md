@@ -63,6 +63,7 @@ Jeśli nie jesteś programistą, może być trudno zorientować się, od czego z
 
 - Program tłumaczeń ethereum.org jest wygaszany i nie prowadzi już onboardingu nowych tłumaczy – zobacz [stronę programu](/contributing/translation-program/), aby zapoznać się z jego statusem i historią
 - Nadal możesz pomóc, [zgłaszając błędy w istniejących tłumaczeniach](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
+
 ### Uruchom węzeł {#run-a-node}
 
 Dołącz do tysięcy operatorów węzłów, pomagając w dalszej decentralizacji Ethereum.

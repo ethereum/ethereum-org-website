@@ -63,6 +63,7 @@ lang: zh
 
 - ethereum.org 翻译项目正在逐步结束，不再招募新译者——请查看[项目页面](/contributing/translation-program/)了解其状态和历史
 - 你仍然可以通过[报告现有翻译中的错误](https://github.com/ethereum/ethereum-org-website/issues/new/choose)来提供帮助
+
 ### 运行节点 {#run-a-node}
 
 加入成千上万的节点运营商，帮助进一步实现以太坊的去中心化。

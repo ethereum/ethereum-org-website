@@ -63,6 +63,7 @@ lang: ja
 
 - ethereum.orgの翻訳プログラムは段階的に終了しており、新規翻訳者のオンボーディングは行っていません。ステータスと履歴については、[プログラムページ](/contributing/translation-program/)をご覧ください。
 - [既存の翻訳のエラーを報告する](https://github.com/ethereum/ethereum-org-website/issues/new/choose)ことで、引き続き貢献することができます。
+
 ### ノードを実行する {#run-a-node}
 
 何千人ものノードオペレーターに加わり、イーサリアムのさらなる分散化に貢献しましょう。

@@ -63,6 +63,7 @@ Eğer bir geliştirici değilseniz, Ethereum'da nereden başlayacağınızı bil
 
 - ethereum.org Çeviri Programı kademeli olarak sonlandırılıyor ve artık yeni çevirmenlerin sisteme katılımını sağlamıyor—durumu ve geçmişi için [program sayfasına](/contributing/translation-program/) göz atın
 - Yine de [mevcut çevirilerdeki hataları bildirerek](https://github.com/ethereum/ethereum-org-website/issues/new/choose) yardımcı olabilirsiniz
+
 ### Bir düğüm çalıştırın {#run-a-node}
 
 Ethereum'u daha da merkeziyetsizleştirmeye yardımcı olan binlerce düğüm operatörüne katılın.

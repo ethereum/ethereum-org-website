@@ -131,6 +131,7 @@ Hambatan teknis untuk masuk menggunakan Web3 saat ini terlalu tinggi. Pengguna h
 Web3 memperkenalkan paradigma baru yang mensyaratkan pembelajaran model mental yang berbeda dari yang digunakan di Web2.0. Dorongan edukasi serupa terjadi ketika Web1.0 mulai populer pada akhir 1990-an; para pendukung world wide web menggunakan serangkaian teknik edukasi untuk mendidik publik mulai dari metafora sederhana (jalan raya informasi, peramban, berselancar di web) hingga [siaran televisi](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 tidaklah sulit, tetapi berbeda. Inisiatif edukasi yang menginformasikan pengguna Web2 tentang paradigma Web3 ini sangat penting bagi keberhasilannya.
 
 Ethereum.org telah berkontribusi pada edukasi Web3 melalui [Program Terjemahan](/contributing/translation-program/)-nya, yang membuat konten Ethereum yang penting tersedia dalam puluhan bahasa.
+
 ### Infrastruktur tersentralisasi {#centralized-infrastructure}
 
 Ekosistem Web3 masih muda dan berkembang dengan cepat. Akibatnya, saat ini ia bergantung terutama pada infrastruktur tersentralisasi (GitHub, Twitter, Discord, dll.). Banyak perusahaan Web3 bergegas untuk mengisi celah ini, tetapi membangun infrastruktur yang berkualitas tinggi dan andal membutuhkan waktu.

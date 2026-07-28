@@ -4,7 +4,7 @@ lang: vi
 description: "Thông tin về Chương trình Dịch thuật của ethereum.org"
 ---
 
-Chương trình Dịch thuật là một nỗ lực hợp tác nhằm dịch ethereum.org sang các ngôn ngữ khác nhau, giúp hàng tỷ người không nói tiếng Anh trên toàn thế giới có thể tiếp cận trang web này dễ dàng hơn.
+Chương trình Dịch thuật từng là một nỗ lực hợp tác nhằm dịch ethereum.org sang các ngôn ngữ khác nhau, giúp hàng tỷ người không nói tiếng Anh trên toàn thế giới có thể tiếp cận trang web này dễ dàng hơn.
 
 ![](./enterprise-eth.png)
 
@@ -22,7 +22,7 @@ _Tham gia [Discord của ethereum.org](https://discord.gg/ethereum-org) để đ
 
 Cộng đồng [Ethereum](/) hướng tới mục tiêu toàn cầu và hòa nhập, tuy nhiên phần lớn nội dung của nó chỉ phục vụ cho những người nói tiếng Anh, bỏ lại 6 tỷ người không nói tiếng Anh trên thế giới. Để ethereum.org đóng vai trò là cổng thông tin vào Ethereum cho cộng đồng toàn cầu, chúng tôi tin rằng việc cung cấp nội dung Ethereum cho những người không nói tiếng Anh bằng ngôn ngữ mẹ đẻ của họ là điều thiết yếu.
 
-Chương trình Dịch thuật của ethereum.org nhằm mục đích làm cho Ethereum có thể tiếp cận được với mọi người bằng cách dịch ethereum.org và các nội dung Ethereum khác sang càng nhiều ngôn ngữ càng tốt.
+Chương trình Dịch thuật của ethereum.org đã nhằm mục đích làm cho Ethereum có thể tiếp cận được với mọi người bằng cách dịch ethereum.org và các nội dung Ethereum khác sang càng nhiều ngôn ngữ càng tốt.
 
 Đọc thêm về [sứ mệnh và tầm nhìn](/contributing/translation-program/mission-and-vision) của Chương trình Dịch thuật ethereum.org.
 

@@ -63,6 +63,7 @@ lang: ar
 
 - برنامج ترجمة <span dir="ltr">ethereum.org</span> في مراحله النهائية ولم يعد يستقبل مترجمين جددًا — راجع [صفحة البرنامج](/contributing/translation-program/) لمعرفة حالته وتاريخه
 - لا يزال بإمكانك المساعدة من خلال [الإبلاغ عن الأخطاء في الترجمات الحالية](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
+
 ### تشغيل عقدة {#run-a-node}
 
 انضم إلى الآلاف من مشغلي العقد في المساعدة على زيادة لامركزية إيثيريوم.

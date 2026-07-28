@@ -131,6 +131,7 @@ Web3 使用像 [ETH](/glossary/#ether) 這樣的代幣直接在瀏覽器中匯�
 Web3 引入了新的典範，這要求人們學習與 Web 2.0 不同的心智模型。在 1990 年代後期 Web 1.0 逐漸普及時，也發生過類似的教育推廣活動；全球資訊網的倡導者使用了一系列教育技術來教育大眾，從簡單的比喻（資訊高速公路、瀏覽器、上網衝浪）到[電視廣播](https://www.youtube.com/watch?v=SzQLI7BxfYI)。Web3 並不困難，但它與眾不同。向 Web2 使用者宣導這些 Web3 典範的教育計畫，對其成功至關重要。
 
 Ethereum.org 透過其[翻譯計畫](/contributing/translation-program/)為 Web3 教育做出了貢獻，該計畫讓重要的以太坊內容得以提供數十種語言版本。
+
 ### 中心化基礎設施 {#centralized-infrastructure}
 
 Web3 生態系統還很年輕且發展迅速。因此，它目前主要依賴中心化基礎設施（GitHub、推特、Discord 等）。許多 Web3 公司正爭相填補這些空白，但建立高品質、可靠的基礎設施需要時間。

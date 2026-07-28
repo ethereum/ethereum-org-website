@@ -33,3 +33,9 @@
 **Not fixed (warning):** `credible neutrality` rendered 可靠中立性 vs 可信中立性 in one file; 區塊構建 (23x) vs 區塊建構 (7x).
 
 **Convention confirmed:** zh-tw keeps all 44/44 video speaker labels in Latin. That is deliberate — do not "fix" it (known-patterns #31).
+
+## PR #18935 (intl/pending-content-translation-program-winddown-ctas) -- 2026-07-28 -- Score 9.2/10
+- **Aspect (hand-fixed):** same as zh -- `是`->`曾是`, `旨在`->`曾旨在` on the program page intro and "About". zh-tw's intro was the only line in the whole 24-locale fleet left byte-identical to dev, i.e. the pipeline did not retranslate it at all.
+- Traditional characters clean throughout, zero Simplified leakage; terminology internally consistent (`翻譯計畫`/`譯者`) including `get-involved`, where zh drifted.
+- This run also cleaned up a stale 您/你 register inconsistency on the program page.
+- `remains a priority` overstated as `首要任務`.

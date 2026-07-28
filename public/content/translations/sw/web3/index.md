@@ -131,6 +131,7 @@ Kizuizi cha kiufundi cha kuingia ili kutumia Web3 kwa sasa kiko juu sana. Watumi
 Web3 inaleta dhana mpya zinazohitaji kujifunza mifumo tofauti ya kifikra ikilinganishwa na ile inayotumika katika Web 2.0. Kampeni sawa ya kuelimisha ilifanyika wakati Web 1.0 ilipokuwa ikipata umaarufu mwishoni mwa miaka ya 1990; watetezi wa Wavuti ya Ulimwenguni Pote walitumia mbinu nyingi za kuelimisha umma kuanzia sitiari rahisi (barabara kuu ya habari, vivinjari, kuvinjari wavuti) hadi [matangazo ya televisheni](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 si ngumu, lakini ni tofauti. Mipango ya kuelimisha inayowajulisha watumiaji wa Web2 kuhusu dhana hizi za Web3 ni muhimu kwa mafanikio yake.
 
 Ethereum.org imechangia katika elimu ya Web3 kupitia [Programu yake ya Kutafsiri](/contributing/translation-program/), ambayo ilifanya maudhui muhimu ya Ethereum yapatikane katika makumi ya lugha.
+
 ### Miundombinu iliyowekwa kati {#centralized-infrastructure}
 
 Mfumo wa ikolojia wa Web3 ni mchanga na unabadilika haraka. Kutokana na hili, kwa sasa unategemea hasa miundombinu iliyowekwa kati (GitHub, Twitter, Discord, n.k.). Kampuni nyingi za Web3 zinakimbilia kuziba mapengo haya, lakini kujenga miundombinu ya ubora wa juu na inayotegemewa huchukua muda.

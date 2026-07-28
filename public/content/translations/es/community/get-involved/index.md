@@ -63,6 +63,7 @@ Si no es desarrollador, puede ser difícil saber por dónde empezar en Ethereum.
 
 - El Programa de traducción de ethereum.org está llegando a su fin y ya no está incorporando nuevos traductores; consulte la [página del programa](/contributing/translation-program/) para conocer su estado e historial
 - Aún puede ayudar [reportando errores en las traducciones existentes](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
+
 ### Ejecute un nodo {#run-a-node}
 
 Únase a miles de operadores de nodos para ayudar a descentralizar aún más Ethereum.

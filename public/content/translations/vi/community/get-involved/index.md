@@ -63,6 +63,7 @@ Nếu bạn không phải là nhà phát triển, có thể khó biết bắt đ
 
 - Chương trình Dịch thuật ethereum.org đang dần khép lại và không còn tiếp nhận người dịch mới—hãy xem [trang chương trình](/contributing/translation-program/) để biết trạng thái và lịch sử của chương trình
 - Bạn vẫn có thể giúp đỡ bằng cách [báo cáo lỗi trong các bản dịch hiện có](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
+
 ### Chạy một nút {#run-a-node}
 
 Tham gia cùng hàng ngàn người vận hành nút trong việc giúp phi tập trung hóa Ethereum hơn nữa.

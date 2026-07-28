@@ -4,7 +4,7 @@ lang: zh-tw
 description: "關於 ethereum.org 翻譯計畫的資訊"
 ---
 
-翻譯計畫是一項協作工作，旨在將 ethereum.org 翻譯成不同的語言，讓全球數十億非英語母語人士更容易使用本網站。
+翻譯計畫曾是一項協作工作，旨在將 ethereum.org 翻譯成不同的語言，讓全球數十億非英語母語人士更容易使用本網站。
 
 ![](./enterprise-eth.png)
 
@@ -22,7 +22,7 @@ _加入 [ethereum.org Discord](https://discord.gg/ethereum-org) 提問或分享�
 
 [以太坊](/)社群致力於實現全球化與包容性，但其大部分內容僅迎合英語母語人士，將全球 60 億非英語母語人士排除在外。為了讓 ethereum.org 成為全球社群進入以太坊的入口網站，我們認為以非英語母語人士的母語提供以太坊內容是不可或缺的。
 
-ethereum.org 翻譯計畫旨在透過將 ethereum.org 和其他以太坊內容翻譯成盡可能多的語言，讓每個人都能接觸到以太坊。
+ethereum.org 翻譯計畫曾旨在透過將 ethereum.org 和其他以太坊內容翻譯成盡可能多的語言，讓每個人都能接觸到以太坊。
 
 閱讀更多關於 ethereum.org 翻譯計畫的[使命與願景](/contributing/translation-program/mission-and-vision)。
 

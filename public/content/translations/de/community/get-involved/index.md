@@ -63,6 +63,7 @@ Wenn du kein Entwickler bist, kann es schwierig sein zu wissen, wo man bei Ether
 
 - Das Übersetzungsprogramm von ethereum.org läuft aus und es findet kein Onboarding neuer Übersetzer mehr statt – siehe die [Programmseite](/contributing/translation-program/) für den Status und Verlauf
 - Du kannst weiterhin helfen, indem du [Fehler in bestehenden Übersetzungen meldest](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
+
 ### Betreibe einen Knoten {#run-a-node}
 
 Schließe dich Tausenden von Knotenbetreibern an und hilf dabei, Ethereum weiter zu dezentralisieren.

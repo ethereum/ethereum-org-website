@@ -63,6 +63,7 @@ Ikiwa wewe si msanidi programu, inaweza kuwa vigumu kujua pa kuanzia katika Ethe
 
 - Programu ya Tafsiri ya ethereum.org inafikia ukingoni na haifanyi tena uingizaji wa watafsiri wapya—tazama [ukurasa wa programu](/contributing/translation-program/) kwa hali na historia yake
 - Bado unaweza kusaidia kwa [kuripoti makosa katika tafsiri zilizopo](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
+
 ### Endesha nodi {#run-a-node}
 
 Jiunge na maelfu ya waendeshaji wa nodi katika kusaidia kugatua zaidi Ethereum.

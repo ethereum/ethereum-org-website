@@ -131,6 +131,7 @@ Technická bariéra vstupu pro používání Web3 je v současné době příli�
 Web3 přináší nová paradigmata, která vyžadují osvojení si jiných mentálních modelů než těch, které se používají ve Web 2.0. Podobná vzdělávací kampaň proběhla, když koncem 90. let získával na popularitě Web 1.0; zastánci World Wide Webu využívali k edukaci veřejnosti řadu vzdělávacích technik, od jednoduchých metafor (informační dálnice, prohlížeče, surfování po webu) až po [televizní vysílání](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 není složitý, ale je jiný. Vzdělávací iniciativy, které informují uživatele Web2 o těchto paradigmatech Web3, jsou pro jeho úspěch naprosto zásadní.
 
 Ethereum.org přispělo ke vzdělávání o Web3 prostřednictvím svého [překladatelského programu](/contributing/translation-program/), díky kterému je důležitý obsah o Ethereu dostupný v desítkách jazyků.
+
 ### Centralizovaná infrastruktura {#centralized-infrastructure}
 
 Ekosystém Web3 je mladý a rychle se vyvíjí. V důsledku toho v současné době závisí především na centralizované infrastruktuře (GitHub, Twitter, Discord atd.). Mnoho společností ve Web3 spěchá, aby tyto mezery zaplnilo, ale vybudování vysoce kvalitní a spolehlivé infrastruktury vyžaduje čas.
