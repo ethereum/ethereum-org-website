@@ -1,7 +1,7 @@
 ---
-title: Çeviri Programı
+title: "Çeviri Programı"
 lang: tr
-description: ethereum.org Çeviri Programı hakkında bilgi
+description: "ethereum.org Çeviri Programı hakkında bilgi"
 ---
 
 Çeviri Programı, ethereum.org'u farklı dillere çevirerek web sitesini dünya çapında İngilizce konuşmayan milyarlarca insan için daha erişilebilir hale getirmeyi amaçlayan ortak bir çabaydı.

@@ -1,7 +1,7 @@
 ---
 title: "ethereum.orgకి సహకరించడం 🦄"
-metaTitle: సహకారం
-description: మీరు ethereum.orgకి సహకరించగల వివిధ మార్గాల గురించి తెలుసుకోండి
+metaTitle: "సహకారం"
+description: "మీరు ethereum.orgకి సహకరించగల వివిధ మార్గాల గురించి తెలుసుకోండి"
 lang: te
 ---
 
@@ -94,6 +94,7 @@ ethereum.orgకి ఏదైనా కంటెంట్ లేదా ఆర్�
 [OATల గురించి మరింత](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### ఎలా క్లెయిమ్ చేయాలి {#how-to-claim}
+
 1. మా [డిస్కార్డ్ సర్వర్‌లో](https://discord.gg/ethereum-org) చేరండి.
 2. `#🥇 | proof-of-contribution` ఛానెల్‌లో మీ సహకారానికి సంబంధించిన లింక్‌ను పేస్ట్ చేయండి.
 3. మా బృందంలోని సభ్యుడు మీ OATకి లింక్‌ను పంపే వరకు వేచి ఉండండి.

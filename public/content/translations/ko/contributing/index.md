@@ -1,11 +1,11 @@
 ---
 title: "ethereum.org 기여하기 🦄"
-metaTitle: 기여하기
-description: ethereum.org에 기여할 수 있는 다양한 방법에 대해 알아보세요.
+metaTitle: "기여하기"
+description: "ethereum.org에 기여할 수 있는 다양한 방법에 대해 알아보세요."
 lang: ko
 ---
 
-Ethereum.org는 웹사이트의 번역, 작성, 디자인 및 유지 관리를 돕는 **12,000명 이상**의 기여자가 참여하는 오픈 소스 프로젝트입니다.
+Ethereum.org는 웹사이트의 번역, 작성, 디자인 및 유지 관리를 돕는 <strong>12,000명 이상</strong>의 기여자가 참여하는 오픈 소스 프로젝트입니다.
 
 우리는 여러분이 [이더리움](/) 생태계에서 성장하고 학습할 수 있도록 돕는 동시에, 의미 있는 기여를 하고 관련 실무 경험을 쌓을 수 있도록 환영하는 커뮤니티입니다!
 
@@ -94,6 +94,7 @@ ethereum.org에 콘텐츠나 결과물을 기여할 때는 본인의 창작물�
 [OAT에 대해 더 알아보기](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### 청구 방법 {#how-to-claim}
+
 1. [디스코드 서버](https://discord.gg/ethereum-org)에 참여하세요.
 2. `#🥇 | proof-of-contribution` 채널에 기여한 링크를 붙여넣으세요.
 3. 팀원이 OAT 링크를 보내줄 때까지 기다리세요.

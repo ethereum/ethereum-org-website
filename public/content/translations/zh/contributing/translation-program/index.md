@@ -1,7 +1,7 @@
 ---
-title: 翻译计划
+title: "翻译计划"
 lang: zh
-description: 关于 ethereum.org 翻译计划的信息
+description: "关于 ethereum.org 翻译计划的信息"
 ---
 
 翻译计划是一项旨在将 ethereum.org 翻译成不同语言的协作计划，使全球数十亿非英语使用者更容易访问该网站。
@@ -28,9 +28,9 @@ ethereum.org 翻译计划旨在通过将 ethereum.org 和其他以太坊内容�
 
 ### 我们目前的进展 {#our-progress}
 
-- [**6,900 多名**译者](/contributing/translation-program/contributors/)
+- [<strong>6,900 多名</strong>译者](/contributing/translation-program/contributors/)
 - 网站支持 **68** 种语言
-- [2024 年翻译了 **289 万**字](/contributing/translation-program/acknowledgements/)
+- [2024 年翻译了 <strong>289 万</strong>字](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 

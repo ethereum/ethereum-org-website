@@ -1,7 +1,7 @@
 ---
-title: Chương trình Dịch thuật
+title: "Chương trình Dịch thuật"
 lang: vi
-description: Thông tin về Chương trình Dịch thuật của ethereum.org
+description: "Thông tin về Chương trình Dịch thuật của ethereum.org"
 ---
 
 Chương trình Dịch thuật là một nỗ lực hợp tác nhằm dịch ethereum.org sang các ngôn ngữ khác nhau, giúp hàng tỷ người không nói tiếng Anh trên toàn thế giới có thể tiếp cận trang web này dễ dàng hơn.

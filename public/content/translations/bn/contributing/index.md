@@ -1,7 +1,7 @@
 ---
 title: "⁠ethereum.org⁠-এ অবদান রাখা 🦄"
-metaTitle: অবদান রাখা
-description: ⁠ethereum.org⁠-এ আপনি কীভাবে বিভিন্ন উপায়ে অবদান রাখতে পারেন সে সম্পর্কে জানুন
+metaTitle: "অবদান রাখা"
+description: "⁠ethereum.org⁠-এ আপনি কীভাবে বিভিন্ন উপায়ে অবদান রাখতে পারেন সে সম্পর্কে জানুন"
 lang: bn
 ---
 
@@ -94,6 +94,7 @@ Ethereum.org একটি ওপেন-সোর্স পরিচালিত 
 [OAT সম্পর্কে আরও জানুন](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### কীভাবে দাবি করবেন {#how-to-claim}
+
 1. আমাদের [ডিসকর্ড সার্ভারে](https://discord.gg/ethereum-org) যোগ দিন।
 2. `#🥇 | proof-of-contribution` চ্যানেলে আপনার অবদানের একটি লিংক পেস্ট করুন।
 3. আমাদের দলের কোনো সদস্য আপনাকে আপনার OAT-এর লিংক পাঠানো পর্যন্ত অপেক্ষা করুন।

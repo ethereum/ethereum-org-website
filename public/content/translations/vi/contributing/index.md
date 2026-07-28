@@ -1,7 +1,7 @@
 ---
 title: "Đóng góp cho ethereum.org 🦄"
-metaTitle: Đóng góp
-description: Tìm hiểu về các cách khác nhau mà bạn có thể đóng góp cho ethereum.org
+metaTitle: "Đóng góp"
+description: "Tìm hiểu về các cách khác nhau mà bạn có thể đóng góp cho ethereum.org"
 lang: vi
 ---
 
@@ -94,6 +94,7 @@ Nếu đóng góp của bạn được hợp nhất vào ethereum.org, bạn s�
 [Tìm hiểu thêm về OAT](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Cách yêu cầu nhận {#how-to-claim}
+
 1. Tham gia [máy chủ Discord](https://discord.gg/ethereum-org) của chúng tôi.
 2. Dán liên kết đến đóng góp của bạn trong kênh `#🥇 | proof-of-contribution`.
 3. Đợi một thành viên trong nhóm của chúng tôi gửi cho bạn liên kết đến OAT của bạn.

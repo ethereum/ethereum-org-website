@@ -1,7 +1,7 @@
 ---
 title: "⁦ethereum.org⁩ में योगदान देना 🦄"
-metaTitle: योगदान देना
-description: जानें कि आप किन विभिन्न तरीकों से ⁦ethereum.org⁩ में योगदान दे सकते हैं
+metaTitle: "योगदान देना"
+description: "जानें कि आप किन विभिन्न तरीकों से ⁦ethereum.org⁩ में योगदान दे सकते हैं"
 lang: hi
 ---
 
@@ -94,6 +94,7 @@ ethereum.org में किसी भी सामग्री या आर�
 [OAT के बारे में अधिक जानकारी](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### दावा कैसे करें {#how-to-claim}
+
 1. हमारे [डिस्कॉर्ड सर्वर](https://discord.gg/ethereum-org) से जुड़ें।
 2. `#🥇 | proof-of-contribution` चैनल में अपने योगदान का लिंक पेस्ट करें।
 3. हमारी टीम के किसी सदस्य द्वारा आपको आपके OAT का लिंक भेजे जाने की प्रतीक्षा करें।

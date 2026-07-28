@@ -1,7 +1,7 @@
 ---
 title: "Внесок у розвиток ethereum.org 🦄"
-metaTitle: Внесок
-description: Дізнайтеся про різні способи, як ви можете зробити свій внесок у розвиток ethereum.org
+metaTitle: "Внесок"
+description: "Дізнайтеся про різні способи, як ви можете зробити свій внесок у розвиток ethereum.org"
 lang: uk
 ---
 
@@ -94,6 +94,7 @@ Ethereum.org — це проєкт із відкритим вихідним ко
 [Більше про OAT](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Як затребувати {#how-to-claim}
+
 1. Приєднуйтесь до нашого [сервера Discord](https://discord.gg/ethereum-org).
 2. Вставте посилання на ваш внесок у канал `#🥇 | proof-of-contribution`.
 3. Зачекайте, поки член нашої команди надішле вам посилання на ваш OAT.

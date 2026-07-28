@@ -1,7 +1,7 @@
 ---
-title: 翻譯計畫
+title: "翻譯計畫"
 lang: zh-tw
-description: 關於 ethereum.org 翻譯計畫的資訊
+description: "關於 ethereum.org 翻譯計畫的資訊"
 ---
 
 翻譯計畫是一項協作工作，旨在將 ethereum.org 翻譯成不同的語言，讓全球數十億非英語母語人士更容易使用本網站。
@@ -28,9 +28,9 @@ ethereum.org 翻譯計畫旨在透過將 ethereum.org 和其他以太坊內容�
 
 ### 我們目前的進展 {#our-progress}
 
-- [**超過 6,900 名**譯者](/contributing/translation-program/contributors/)
+- [<strong>超過 6,900 名</strong>譯者](/contributing/translation-program/contributors/)
 - 網站上支援 **68** 種語言
-- [2024 年翻譯了 **289 萬**字](/contributing/translation-program/acknowledgements/)
+- [2024 年翻譯了 <strong>289 萬</strong>字](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 

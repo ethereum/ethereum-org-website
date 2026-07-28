@@ -1,7 +1,7 @@
 ---
-title: 翻訳プログラム
+title: "翻訳プログラム"
 lang: ja
-description: ethereum.org翻訳プログラムに関する情報
+description: "ethereum.org翻訳プログラムに関する情報"
 ---
 
 翻訳プログラムは、ethereum.orgをさまざまな言語に翻訳し、世界中の何十億人もの非英語圏の人々にとってウェブサイトをよりアクセスしやすくするための共同プロジェクトでした。
@@ -28,8 +28,8 @@ ethereum.org翻訳プログラムの[ミッションとビジョン](/contributi
 
 ### これまでの進捗 {#our-progress}
 
-- [**6,900人以上**の翻訳者](/contributing/translation-program/contributors/)
-- **68**言語がサイト上で公開
+- [<strong>6,900人以上</strong>の翻訳者](/contributing/translation-program/contributors/)
+- <strong>68</strong>言語がサイト上で公開
 - [2024年に**289万**語を翻訳](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />

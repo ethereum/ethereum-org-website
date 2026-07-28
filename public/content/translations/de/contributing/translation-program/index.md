@@ -1,7 +1,7 @@
 ---
-title: Übersetzungsprogramm
+title: "Übersetzungsprogramm"
 lang: de
-description: Informationen über das Übersetzungsprogramm von ethereum.org
+description: "Informationen über das Übersetzungsprogramm von ethereum.org"
 ---
 
 Das Übersetzungsprogramm war eine gemeinschaftliche Initiative, um ethereum.org in verschiedene Sprachen zu übersetzen und die Website für Milliarden von nicht englischsprachigen Menschen auf der ganzen Welt zugänglicher zu machen.

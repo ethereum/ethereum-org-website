@@ -94,6 +94,7 @@ ethereum.orgにコンテンツや成果物を貢献する際は、あなた自�
 [OATの詳細](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### 請求方法 {#how-to-claim}
+
 1. 私たちの[ディスコードサーバー](https://discord.gg/ethereum-org)に参加します。
 2. `#🥇 | proof-of-contribution` チャンネルにあなたの貢献へのリンクを貼り付けます。
 3. チームメンバーからOATへのリンクが送られてくるのを待ちます。
