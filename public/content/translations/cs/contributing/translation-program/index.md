@@ -1,7 +1,7 @@
 ---
-title: Překladatelský program
+title: "Překladatelský program"
 lang: cs
-description: Informace o překladatelském programu ethereum.org
+description: "Informace o překladatelském programu ethereum.org"
 ---
 
 Překladatelský program je společné úsilí o překlad webu ethereum.org do různých jazyků, aby byl přístupnější miliardám lidí na celém světě, kteří nemluví anglicky.
@@ -57,10 +57,10 @@ Přispěvatelé do překladatelského programu mají nárok na různé OATs (onc
 
 Veřejné uznání našich nejlepších překladatelů pomocí [žebříčků](/contributing/translation-program/acknowledgements/) a [seznamu všech přispěvatelů do překladatelského programu](/contributing/translation-program/contributors/).
 
-#### Odměny
+#### Odměny {#rewards}
 
 V minulosti jsme naše nejaktivnější přispěvatele zpětně odměňovali vstupenkami na konference o Ethereu, jako jsou [Devcon](https://devcon.org/en/) a [Devconnect](https://devconnect.org/), a také exkluzivním merchem ethereum.org.
-### Průvodci a zdroje
+### Průvodci a zdroje {#guides-and-resources}
 
 Tyto referenční materiály zůstávají k dispozici překladatelským komunitám a projektům, které provozují své vlastní programy:
 
@@ -74,7 +74,7 @@ Máte nějaké dotazy? Nebo chcete spolupracovat s naším týmem a dalšími p�
 
 Můžete nás také kontaktovat na adrese translations@ethereum.org
 
-## Založení vlastního překladatelského programu
+## Založení vlastního překladatelského programu {#starting-a-translation-program}
 
 Zpřístupnění vzdělávacího obsahu všem zůstává pro ethereum.org prioritou a chceme pomoci dalším projektům na Ethereu organizovat, spravovat a zlepšovat jejich vlastní překladatelské úsilí.
 

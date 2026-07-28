@@ -50,23 +50,6 @@ Questi sono alcuni compiti attuali che potresti aiutarci a risolvere e di cui po
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">Vedi tutti i compiti</ButtonLink>
 
-## Come lavorare su ethereum.org
-
-Per contribuire (aggiungere o modificare contenuti o elementi visivi del sito web, correggere bug, lavorare su compiti aperti) avrai bisogno di un account [GitHub](https://github.com/).
-
-Tutti gli aggiornamenti vengono effettuati tramite il processo delle PR di GitHub. Ciò significa che crei una copia locale del sito web, apporti le tue modifiche e richiedi di unire le tue modifiche. Se non l'hai mai fatto prima, segui le istruzioni in fondo al nostro [repository GitHub](https://github.com/ethereum/ethereum-org-website).
-
-Non hai bisogno di permessi per lavorare su nulla, ma è sempre meglio farci sapere cosa hai intenzione di fare. Puoi farlo:
-
-- Commentando una issue o una PR su [GitHub](https://github.com/ethereum/ethereum-org-website)
-- Inviando un messaggio sul nostro [server Discord](https://discord.gg/ethereum-org)
-
-Prima di contribuire, assicurati di avere familiarità con:
-
-- la [visione di ethereum.org](/about/) in continua evoluzione
-- i nostri [principi di design](/contributing/design-principles/)
-- la nostra [guida di stile](/contributing/style-guide/)
-- il nostro [codice di condotta](/community/code-of-conduct)
 ## Come vengono prese le decisioni sul sito {#how-decisions-about-the-site-are-made}
 
 Le decisioni sulle singole PR, sull'evoluzione del design e sui principali aggiornamenti vengono prese da un team proveniente da tutto l'ecosistema di Ethereum. Questo team include project manager, sviluppatori, designer, esperti di marketing e comunicazione ed esperti in materia. Il contributo della community informa ogni decisione: quindi ti preghiamo di porre domande nelle issue, inviare PR o contattare il team:

@@ -57,9 +57,11 @@ Les contributeurs au programme de traduction sont éligibles à différents jeto
 
 Reconnaissances publiques de nos meilleurs traducteurs à l'aide de [classements](/contributing/translation-program/acknowledgements/) et d'une [liste de tous les contributeurs au programme de traduction](/contributing/translation-program/contributors/).
 
-#### Récompenses
+#### Récompenses {#rewards}
+
 Par le passé, nous avons récompensé rétroactivement nos contributeurs les plus actifs avec des billets pour des conférences Ethereum telles que [Devcon](https://devcon.org/en/) et [Devconnect](https://devconnect.org/), ainsi qu'avec des produits dérivés exclusifs ethereum.org.
-### Guides et ressources
+### Guides et ressources {#guides-and-resources}
+
 Ces documents de référence restent disponibles pour les communautés de traduction et les projets gérant leurs propres programmes :
 
 - [Guide de style de traduction](/contributing/translation-program/translators-guide/) _– instructions et conseils pour les traducteurs d'ethereum.org_
@@ -72,7 +74,8 @@ Avez-vous des questions ? Ou souhaitez-vous collaborer avec notre équipe et d'a
 
 Vous pouvez également nous contacter à l'adresse translations@ethereum.org
 
-## Démarrer votre propre programme de traduction
+## Démarrer votre propre programme de traduction {#starting-a-translation-program}
+
 Rendre le contenu éducatif accessible à tous reste une priorité pour ethereum.org, et nous souhaitons aider d'autres projets Ethereum à organiser, gérer et améliorer leurs propres efforts de traduction.
 
 Pour cette raison, nous avons créé un [guide du programme de traduction](/contributing/translation-program/playbook/) qui contient quelques conseils et bonnes pratiques que nous avons acquis lors du processus de traduction d'ethereum.org.

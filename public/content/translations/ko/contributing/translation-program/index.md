@@ -1,7 +1,7 @@
 ---
-title: 번역 프로그램
+title: "번역 프로그램"
 lang: ko
-description: ethereum.org 번역 프로그램에 대한 정보
+description: "ethereum.org 번역 프로그램에 대한 정보"
 ---
 
 번역 프로그램은 전 세계 수십억 명의 비영어권 사용자가 웹사이트에 더 쉽게 접근할 수 있도록 ethereum.org를 다양한 언어로 번역하는 공동의 노력입니다.
@@ -34,7 +34,7 @@ ethereum.org 번역 프로그램의 [사명과 비전](/contributing/translation
 
 ### 현재까지의 진행 상황 {#our-progress}
 
-- [**6,900명 이상**의 번역가](/contributing/translation-program/contributors/)
+- [<strong>6,900명 이상</strong>의 번역가](/contributing/translation-program/contributors/)
 - **68개** 언어 사이트 지원
 - [2024년 **289만** 단어 번역](/contributing/translation-program/acknowledgements/)
 
@@ -57,9 +57,11 @@ Ethereum.org는 수천 명의 커뮤니티 구성원에 의해 번역되며, 이
 
 [리더보드](/contributing/translation-program/acknowledgements/) 및 [번역 프로그램의 모든 기여자 목록](/contributing/translation-program/contributors/)을 통해 우수 번역가에 대한 공개적인 감사를 표합니다.
 
-#### 보상
+#### 보상 {#rewards}
+
 과거에는 가장 활발하게 활동한 기여자들에게 [Devcon](https://devcon.org/en/) 및 [Devconnect](https://devconnect.org/)와 같은 이더리움 컨퍼런스 티켓과 ethereum.org 독점 굿즈를 소급하여 보상으로 제공했습니다.
-### 가이드 및 리소스
+### 가이드 및 리소스 {#guides-and-resources}
+
 이러한 참고 자료는 자체 프로그램을 운영하는 번역 커뮤니티 및 프로젝트에서 계속 사용할 수 있습니다.
 
 - [번역 스타일 가이드](/contributing/translation-program/translators-guide/) _– ethereum.org 번역가를 위한 지침 및 팁_
@@ -72,7 +74,8 @@ Ethereum.org는 수천 명의 커뮤니티 구성원에 의해 번역되며, 이
 
 translations@ethereum.org로 문의하실 수도 있습니다.
 
-## 자체 번역 프로그램 시작하기
+## 자체 번역 프로그램 시작하기 {#starting-a-translation-program}
+
 모든 사람이 교육 콘텐츠를 이용할 수 있도록 하는 것은 ethereum.org의 최우선 과제이며, 우리는 다른 이더리움 프로젝트가 자체적인 번역 작업을 구성, 관리 및 개선할 수 있도록 돕고자 합니다.
 
 이러한 이유로 우리는 ethereum.org를 번역하는 과정에서 얻은 몇 가지 팁과 모범 사례가 포함된 [번역 프로그램 플레이북](/contributing/translation-program/playbook/)을 만들었습니다.

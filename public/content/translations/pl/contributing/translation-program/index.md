@@ -1,7 +1,7 @@
 ---
-title: Program tłumaczeń
+title: "Program tłumaczeń"
 lang: pl
-description: Informacje o programie tłumaczeń ethereum.org
+description: "Informacje o programie tłumaczeń ethereum.org"
 ---
 
 Program tłumaczeń to wspólny wysiłek mający na celu przetłumaczenie ethereum.org na różne języki, aby uczynić stronę bardziej dostępną dla miliardów osób na całym świecie, które nie mówią po angielsku.
@@ -57,10 +57,10 @@ Współtwórcy programu tłumaczeń kwalifikują się do otrzymania różnych OA
 
 Publiczne wyróżnienia naszych najlepszych tłumaczy za pomocą [tabel liderów](/contributing/translation-program/acknowledgements/) oraz [listy wszystkich współtwórców programu tłumaczeń](/contributing/translation-program/contributors/).
 
-#### Nagrody
+#### Nagrody {#rewards}
 
 W przeszłości wstecznie nagradzaliśmy naszych najaktywniejszych współtwórców biletami na konferencje Ethereum, takie jak [Devcon](https://devcon.org/en/) i [Devconnect](https://devconnect.org/), a także ekskluzywnymi gadżetami ethereum.org.
-### Przewodniki i zasoby
+### Przewodniki i zasoby {#guides-and-resources}
 
 Te materiały referencyjne pozostają dostępne dla społeczności tłumaczy i projektów prowadzących własne programy:
 
@@ -74,7 +74,7 @@ Masz jakieś pytania? A może chcesz współpracować z naszym zespołem i innym
 
 Możesz również skontaktować się z nami pod adresem translations@ethereum.org
 
-## Uruchomienie własnego programu tłumaczeń
+## Uruchomienie własnego programu tłumaczeń {#starting-a-translation-program}
 
 Udostępnianie treści edukacyjnych wszystkim pozostaje priorytetem dla ethereum.org i chcemy pomóc innym projektom Ethereum w organizowaniu, zarządzaniu i ulepszaniu ich własnych działań tłumaczeniowych.
 

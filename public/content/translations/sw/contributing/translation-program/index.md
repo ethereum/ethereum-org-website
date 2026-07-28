@@ -57,9 +57,11 @@ Wachangiaji wa Programu ya Kutafsiri wanastahiki kupata OATs (onchain achievemen
 
 Shukrani za hadharani kwa watafsiri wetu bora kwa kutumia [bao za viongozi](/contributing/translation-program/acknowledgements/) na [orodha ya wachangiaji wote kwenye Programu ya Kutafsiri](/contributing/translation-program/contributors/).
 
-#### Zawadi
+#### Zawadi {#rewards}
+
 Zamani, tumewazawadia wachangiaji wetu wanaoshiriki zaidi tiketi za kuhudhuria mikutano ya Ethereum kama vile [Devcon](https://devcon.org/en/) na [Devconnect](https://devconnect.org/), pamoja na bidhaa za kipekee za ethereum.org.
-### Miongozo na rasilimali
+### Miongozo na rasilimali {#guides-and-resources}
+
 Nyenzo hizi za marejeleo zinasalia kupatikana kwa jamii za watafsiri na miradi inayoendesha programu zao wenyewe:
 
 - [Mwongozo wa Mtindo wa Kutafsiri](/contributing/translation-program/translators-guide/) _– maagizo na vidokezo kwa watafsiri wa ethereum.org_
@@ -72,7 +74,8 @@ Je, una maswali yoyote? Au unataka kushirikiana na timu yetu na watafsiri wengin
 
 Unaweza pia kuwasiliana nasi kupitia translations@ethereum.org
 
-## Kuanzisha programu yako mwenyewe ya kutafsiri
+## Kuanzisha programu yako mwenyewe ya kutafsiri {#starting-a-translation-program}
+
 Kufanya maudhui ya kuelimisha yapatikane kwa kila mtu kunasalia kuwa kipaumbele kwa ethereum.org, na tunataka kusaidia miradi mingine ya Ethereum kupanga, kusimamia, na kuboresha juhudi zao za kutafsiri.
 
 Kwa sababu hii, tumeunda [Kitabu cha mbinu cha Programu ya Kutafsiri](/contributing/translation-program/playbook/) ambacho kina baadhi ya vidokezo na mbinu bora tulizojifunza katika mchakato wa kutafsiri ethereum.org.

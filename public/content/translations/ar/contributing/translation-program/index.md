@@ -57,10 +57,10 @@ _انضم إلى [ديسكورد <span dir="ltr">ethereum.org</span>](https://gi
 
 تقدير عام لكبار المترجمين لدينا باستخدام [لوحات الصدارة](/contributing/translation-program/acknowledgements/) و[قائمة بجميع المساهمين في برنامج الترجمة](/contributing/translation-program/contributors/).
 
-#### المكافآت
+#### المكافآت {#rewards}
 
 في الماضي، قمنا بمكافأة المساهمين الأكثر نشاطًا لدينا بأثر رجعي بتذاكر لحضور مؤتمرات إيثيريوم مثل [<span dir="ltr">Devcon</span>](https://devcon.org/en/) و[<span dir="ltr">Devconnect</span>](https://devconnect.org/)، بالإضافة إلى سلع حصرية خاصة بموقع <span dir="ltr">ethereum.org</span>.
-### الأدلة والموارد
+### الأدلة والموارد {#guides-and-resources}
 
 تظل هذه المواد المرجعية متاحة لمجتمعات الترجمة والمشاريع التي تدير برامجها الخاصة:
 
@@ -74,7 +74,7 @@ _انضم إلى [ديسكورد <span dir="ltr">ethereum.org</span>](https://gi
 
 يمكنك أيضًا التواصل معنا على <span dir="ltr">translations@ethereum.org</span>
 
-## بدء برنامج الترجمة الخاص بك
+## بدء برنامج الترجمة الخاص بك {#starting-a-translation-program}
 
 يظل توفير المحتوى التعليمي للجميع أولوية بالنسبة لموقع <span dir="ltr">ethereum.org</span>، ونريد مساعدة مشاريع إيثيريوم الأخرى في تنظيم وإدارة وتحسين جهود الترجمة الخاصة بها.
 

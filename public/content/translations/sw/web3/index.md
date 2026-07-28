@@ -126,7 +126,8 @@ Vipengele muhimu vya Web3, kama vile Kuingia na Ethereum, tayari vinapatikana kw
 
 Kizuizi cha kiufundi cha kuingia ili kutumia Web3 kwa sasa kiko juu sana. Watumiaji lazima waelewe masuala ya usalama, waelewe nyaraka changamano za kiufundi, na wapitie violesura vya watumiaji visivyoeleweka. [Watoa huduma za mkoba](/wallets/find-wallet/), hasa, wanafanya kazi kutatua hili, lakini maendeleo zaidi yanahitajika kabla ya Web3 kupitishwa kwa wingi.
 
-### Elimu
+### Elimu {#education}
+
 Web3 inaleta dhana mpya zinazohitaji kujifunza mifumo tofauti ya kifikra ikilinganishwa na ile inayotumika katika Web 2.0. Kampeni sawa ya kuelimisha ilifanyika wakati Web 1.0 ilipokuwa ikipata umaarufu mwishoni mwa miaka ya 1990; watetezi wa Wavuti ya Ulimwenguni Pote walitumia mbinu nyingi za kuelimisha umma kuanzia sitiari rahisi (barabara kuu ya habari, vivinjari, kuvinjari wavuti) hadi [matangazo ya televisheni](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 si ngumu, lakini ni tofauti. Mipango ya kuelimisha inayowajulisha watumiaji wa Web2 kuhusu dhana hizi za Web3 ni muhimu kwa mafanikio yake.
 
 Ethereum.org imechangia katika elimu ya Web3 kupitia [Programu yake ya Kutafsiri](/contributing/translation-program/), ambayo ilifanya maudhui muhimu ya Ethereum yapatikane katika makumi ya lugha.

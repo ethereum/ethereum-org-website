@@ -1,7 +1,7 @@
 ---
 title: Pengantar Web3
 metaTitle: Apa itu Web3 dan mengapa ini penting?
-description: Pengantar Web3—evolusi berikutnya dari World Wide Web—dan mengapa ini penting.
+description: "Pengantar Web3—evolusi berikutnya dari World Wide Web—dan mengapa ini penting."
 lang: id
 ---
 
@@ -126,7 +126,7 @@ Fitur-fitur penting Web3, seperti Masuk dengan Ethereum, sudah tersedia untuk di
 
 Hambatan teknis untuk masuk menggunakan Web3 saat ini terlalu tinggi. Pengguna harus memahami masalah keamanan, mengerti dokumentasi teknis yang kompleks, dan menavigasi antarmuka pengguna yang tidak intuitif. [Penyedia dompet](/wallets/find-wallet/), khususnya, sedang berupaya untuk menyelesaikan ini, tetapi lebih banyak kemajuan diperlukan sebelum Web3 diadopsi secara massal.
 
-### Edukasi
+### Edukasi {#education}
 
 Web3 memperkenalkan paradigma baru yang mensyaratkan pembelajaran model mental yang berbeda dari yang digunakan di Web2.0. Dorongan edukasi serupa terjadi ketika Web1.0 mulai populer pada akhir 1990-an; para pendukung world wide web menggunakan serangkaian teknik edukasi untuk mendidik publik mulai dari metafora sederhana (jalan raya informasi, peramban, berselancar di web) hingga [siaran televisi](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 tidaklah sulit, tetapi berbeda. Inisiatif edukasi yang menginformasikan pengguna Web2 tentang paradigma Web3 ini sangat penting bagi keberhasilannya.
 

@@ -126,7 +126,7 @@ Ważne funkcje Web3, takie jak logowanie przez Ethereum (Sign-in with Ethereum),
 
 Techniczna bariera wejścia do korzystania z Web3 jest obecnie zbyt wysoka. Użytkownicy muszą pojąć kwestie bezpieczeństwa, zrozumieć złożoną dokumentację techniczną i poruszać się po nieintuicyjnych interfejsach użytkownika. W szczególności [dostawcy portfeli](/wallets/find-wallet/) pracują nad rozwiązaniem tego problemu, ale potrzeba więcej postępów, zanim Web3 zostanie masowo zaadoptowane.
 
-### Edukacja
+### Edukacja {#education}
 
 Web3 wprowadza nowe paradygmaty, które wymagają przyswojenia innych modeli mentalnych niż te używane w Web 2.0. Podobna kampania edukacyjna miała miejsce, gdy Web 1.0 zyskiwało na popularności pod koniec lat 90.; zwolennicy World Wide Web wykorzystywali mnóstwo technik edukacyjnych, aby uczyć społeczeństwo, od prostych metafor (autostrada informacyjna, przeglądarki, surfowanie po sieci) po [transmisje telewizyjne](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 nie jest trudne, ale jest inne. Inicjatywy edukacyjne informujące użytkowników Web2 o tych paradygmatach Web3 są kluczowe dla jego sukcesu.
 

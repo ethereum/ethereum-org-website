@@ -126,7 +126,7 @@ Důležité funkce Web3, jako je Přihlášení pomocí Etherea (Sign-in with Et
 
 Technická bariéra vstupu pro používání Web3 je v současné době příliš vysoká. Uživatelé musí chápat bezpečnostní rizika, rozumět složité technické dokumentaci a orientovat se v neintuitivních uživatelských rozhraních. Zejména [poskytovatelé peněženek](/wallets/find-wallet/) pracují na řešení tohoto problému, ale než bude Web3 masově přijat, je zapotřebí dalšího pokroku.
 
-### Vzdělávání
+### Vzdělávání {#education}
 
 Web3 přináší nová paradigmata, která vyžadují osvojení si jiných mentálních modelů než těch, které se používají ve Web 2.0. Podobná vzdělávací kampaň proběhla, když koncem 90. let získával na popularitě Web 1.0; zastánci World Wide Webu využívali k edukaci veřejnosti řadu vzdělávacích technik, od jednoduchých metafor (informační dálnice, prohlížeče, surfování po webu) až po [televizní vysílání](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 není složitý, ale je jiný. Vzdělávací iniciativy, které informují uživatele Web2 o těchto paradigmatech Web3, jsou pro jeho úspěch naprosto zásadní.
 

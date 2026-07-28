@@ -9,7 +9,7 @@ Ethereum.org হলো একটি ওপেন-সোর্স পরিচা
 
 আমরা একটি আন্তরিক কমিউনিটি যা আপনাকে [ইথেরিয়াম](/) ইকোসিস্টেমে বেড়ে উঠতে এবং শিখতে সাহায্য করবে, পাশাপাশি আপনি অর্থপূর্ণভাবে অবদান রাখতে এবং প্রাসঙ্গিক বাস্তব অভিজ্ঞতা অর্জন করতে পারবেন!
 
-## অবদান রাখার উপায়
+## অবদান রাখার উপায় {#ways-to-contribute}
 
 **Translations**
 - [অনুবাদে কোনো ভুল রিপোর্ট করুন](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – [অনুবাদ প্রোগ্রাম](/contributing/translation-program/) গুটিয়ে নেওয়া হচ্ছে এবং নতুন অনুবাদকদের আর অনবোর্ডিং করা হচ্ছে না
@@ -52,7 +52,7 @@ Ethereum.org হলো একটি ওপেন-সোর্স পরিচা
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">সব কাজ দেখুন</ButtonLink>
 
-## ethereum.org-এ কীভাবে কাজ করবেন
+## ethereum.org-এ কীভাবে কাজ করবেন {#how-to-update-content}
 
 অবদান রাখার জন্য (ওয়েবসাইটে কন্টেন্ট বা ভিজ্যুয়াল যোগ বা এডিট করা, বাগ ফিক্স করা, ওপেন টাস্কে কাজ করা) আপনার একটি [GitHub](https://github.com/) অ্যাকাউন্ট প্রয়োজন হবে।
 

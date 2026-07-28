@@ -59,7 +59,8 @@ lang: zh
 
 - 有许多开源社区电话会议，有记录员会帮上大忙。如果你感兴趣，请加入 [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)，并做个自我介绍！
 
-### 帮助改进以太坊翻译内容
+### 帮助改进以太坊翻译内容 {#translate-ethereum}
+
 - ethereum.org 翻译项目正在逐步结束，不再招募新译者——请查看[项目页面](/contributing/translation-program/)了解其状态和历史
 - 你仍然可以通过[报告现有翻译中的错误](https://github.com/ethereum/ethereum-org-website/issues/new/choose)来提供帮助
 ### 运行节点 {#run-a-node}

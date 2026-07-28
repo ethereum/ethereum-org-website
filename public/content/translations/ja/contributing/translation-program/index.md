@@ -1,7 +1,7 @@
 ---
-title: 翻訳プログラム
+title: "翻訳プログラム"
 lang: ja
-description: ethereum.org翻訳プログラムに関する情報
+description: "ethereum.org翻訳プログラムに関する情報"
 ---
 
 翻訳プログラムは、世界中の何十億人もの非英語圏の人々がウェブサイトにアクセスしやすくなるよう、ethereum.orgをさまざまな言語に翻訳する共同の取り組みです。
@@ -34,8 +34,8 @@ ethereum.org翻訳プログラムの[ミッションとビジョン](/contributi
 
 ### これまでの進捗 {#our-progress}
 
-- [**6,900人以上**の翻訳者](/contributing/translation-program/contributors/)
-- **68**言語がサイトで公開中
+- [<strong>6,900人以上</strong>の翻訳者](/contributing/translation-program/contributors/)
+- <strong>68</strong>言語がサイトで公開中
 - [2024年に**289万**語を翻訳](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
@@ -57,10 +57,10 @@ Ethereum.orgは何千人ものコミュニティメンバーによって翻訳�
 
 [リーダーボード](/contributing/translation-program/acknowledgements/)や[翻訳プログラムの全貢献者リスト](/contributing/translation-program/contributors/)を使用した、トップ翻訳者への公式な謝辞。
 
-#### 報酬
+#### 報酬 {#rewards}
 
 過去には、最もアクティブな貢献者に対して、[Devcon](https://devcon.org/en/)や[Devconnect](https://devconnect.org/)などのイーサリアムカンファレンスのチケットや、ethereum.orgの限定グッズを事後的に報酬として提供してきました。
-### ガイドとリソース
+### ガイドとリソース {#guides-and-resources}
 
 これらの参考資料は、独自のプログラムを運営している翻訳コミュニティやプロジェクトで引き続き利用できます。
 
@@ -74,7 +74,7 @@ Ethereum.orgは何千人ものコミュニティメンバーによって翻訳�
 
 translations@ethereum.org までご連絡いただくことも可能です。
 
-## 独自の翻訳プログラムの開始
+## 独自の翻訳プログラムの開始 {#starting-a-translation-program}
 
 教育コンテンツを誰もが利用できるようにすることは、引き続きethereum.orgの優先事項であり、他のイーサリアムプロジェクトが独自の翻訳の取り組みを組織、管理、改善できるよう支援したいと考えています。
 

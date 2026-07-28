@@ -50,23 +50,6 @@ Zde je několik aktuálních úkolů, které byste nám mohli pomoci vyřešit a
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">Zobrazit všechny úkoly</ButtonLink>
 
-## Jak pracovat na ethereum.org
-
-Pro přispívání (přidávání nebo úpravu obsahu či vizuálů na webu, opravu chyb, práci na otevřených úkolech) budete potřebovat účet na [GitHubu](https://github.com/).
-
-Všechny aktualizace se provádějí prostřednictvím procesu PR (pull request) na GitHubu. To znamená, že si vytvoříte lokální kopii webu, provedete změny a požádáte o jejich sloučení. Pokud jste to ještě nikdy nedělali, postupujte podle pokynů ve spodní části našeho [repozitáře na GitHubu](https://github.com/ethereum/ethereum-org-website).
-
-K práci na čemkoli nepotřebujete povolení, ale vždy je nejlepší dát nám vědět, co plánujete udělat. Můžete to udělat takto:
-
-- Komentováním issue nebo PR na [GitHubu](https://github.com/ethereum/ethereum-org-website)
-- Napsáním zprávy na náš [Discord server](https://discord.gg/ethereum-org)
-
-Před přispěním se ujistěte, že jste obeznámeni s:
-
-- vyvíjející se [vizí ethereum.org](/about/)
-- našimi [principy designu](/contributing/design-principles/)
-- naším [průvodcem stylem](/contributing/style-guide/)
-- naším [kodexem chování](/community/code-of-conduct)
 ## Jak se rozhoduje o webu {#how-decisions-about-the-site-are-made}
 
 Rozhodnutí o jednotlivých PR, vývoji designu a velkých aktualizacích dělá tým napříč ekosystémem Etherea. Tento tým zahrnuje projektové manažery, vývojáře, designéry, odborníky na marketing a komunikaci a experty na danou problematiku. Názory komunity ovlivňují každé rozhodnutí: proto prosím pokládejte otázky v issues, posílejte PR nebo kontaktujte tým:

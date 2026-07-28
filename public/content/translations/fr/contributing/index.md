@@ -9,7 +9,7 @@ Ethereum.org est un projet open source avec **plus de 12 000** contributeurs qui
 
 Nous sommes une communauté accueillante qui vous aidera à vous développer et à vous former dans l'écosystème [Ethereum](/) tout en contribuant de manière significative et en acquérant une expérience pratique pertinente !
 
-## Façons de contribuer
+## Façons de contribuer {#ways-to-contribute}
 
 **Traductions**
 - [Signaler une erreur de traduction](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – Le [Programme de traduction](/contributing/translation-program/) touche à sa fin et n'intègre plus de nouveaux traducteurs
@@ -52,7 +52,7 @@ Voici quelques tâches actuelles que vous pourriez nous aider à résoudre et pr
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">Voir toutes les tâches</ButtonLink>
 
-## Comment travailler sur ethereum.org
+## Comment travailler sur ethereum.org {#how-to-update-content}
 
 Pour contribuer (ajouter ou modifier du contenu ou des visuels sur le site Web, corriger des bugs, travailler sur des tâches ouvertes), vous aurez besoin d'un compte [GitHub](https://github.com/).
 

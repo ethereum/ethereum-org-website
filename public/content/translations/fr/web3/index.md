@@ -126,7 +126,8 @@ Des fonctionnalités importantes du Web3, comme la connexion avec Ethereum, sont
 
 La barrière technique à l'entrée pour utiliser le Web3 est actuellement trop élevée. Les utilisateurs doivent appréhender les problèmes de sécurité, comprendre une documentation technique complexe et naviguer dans des interfaces utilisateur peu intuitives. Les [fournisseurs de portefeuilles](/wallets/find-wallet/), en particulier, s'efforcent de résoudre ce problème, mais davantage de progrès sont nécessaires avant que le Web3 ne soit adopté en masse.
 
-### Éducation
+### Éducation {#education}
+
 Le Web3 introduit de nouveaux paradigmes qui nécessitent d'apprendre des modèles mentaux différents de ceux utilisés dans le Web 2.0. Une campagne d'éducation similaire a eu lieu lorsque le Web 1.0 a gagné en popularité à la fin des années 1990 ; les partisans du World Wide Web ont utilisé une multitude de techniques éducatives pour sensibiliser le public, allant de simples métaphores (l'autoroute de l'information, les navigateurs, surfer sur le Web) à des [émissions de télévision](https://www.youtube.com/watch?v=SzQLI7BxfYI). Le Web3 n'est pas difficile, mais il est différent. Les initiatives éducatives informant les utilisateurs du Web2 de ces paradigmes du Web3 sont vitales pour son succès.
 
 Ethereum.org a contribué à l'éducation au Web3 grâce à son [programme de traduction](/contributing/translation-program/), qui a rendu d'importants contenus sur Ethereum disponibles dans des dizaines de langues.

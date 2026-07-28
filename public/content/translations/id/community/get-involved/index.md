@@ -59,7 +59,8 @@ Jika Anda bukan seorang pengembang, mungkin sulit untuk mengetahui dari mana har
 
 - Ada banyak panggilan komunitas sumber terbuka, dan memiliki pencatat adalah bantuan yang sangat besar. Jika Anda tertarik, bergabunglah dengan [Discord Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu), dan perkenalkan diri Anda!
 
-### Bantu tingkatkan konten Ethereum yang diterjemahkan
+### Bantu tingkatkan konten Ethereum yang diterjemahkan {#translate-ethereum}
+
 - Program Terjemahan ethereum.org sedang dihentikan secara bertahap dan tidak lagi melakukan orientasi penerjemah baru—lihat [halaman program](/contributing/translation-program/) untuk mengetahui status dan riwayatnya
 - Anda masih dapat membantu dengan [melaporkan kesalahan pada terjemahan yang ada](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 ### Jalankan sebuah node {#run-a-node}

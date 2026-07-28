@@ -1,7 +1,7 @@
 ---
-title: Çeviri Programı
+title: "Çeviri Programı"
 lang: tr
-description: ethereum.org Çeviri Programı hakkında bilgi
+description: "ethereum.org Çeviri Programı hakkında bilgi"
 ---
 
 Çeviri Programı, web sitesini dünya çapında İngilizce konuşmayan milyarlarca insan için daha erişilebilir hale getirmek amacıyla ethereum.org'u farklı dillere çevirmeye yönelik ortak bir çabadır.
@@ -57,9 +57,11 @@ Ethereum.org, binlerce topluluk üyesi tarafından çevrilmektedir ve onlar Çev
 
 [Liderlik tabloları](/contributing/translation-program/acknowledgements/) ve [Çeviri Programına katkıda bulunanların tam listesi](/contributing/translation-program/contributors/) kullanılarak en iyi çevirmenlerimize açıkça teşekkür edilmesi.
 
-#### Ödüller
+#### Ödüller {#rewards}
+
 Geçmişte, en aktif katkıda bulunanlarımızı [Devcon](https://devcon.org/en/) ve [Devconnect](https://devconnect.org/) gibi Ethereum konferanslarına biletlerin yanı sıra özel ethereum.org ürünleriyle geriye dönük olarak ödüllendirdik.
-### Kılavuzlar ve kaynaklar
+### Kılavuzlar ve kaynaklar {#guides-and-resources}
+
 Bu referans materyalleri, çeviri toplulukları ve kendi programlarını yürüten projeler için erişilebilir olmaya devam etmektedir:
 
 - [Çeviri Stil Kılavuzu](/contributing/translation-program/translators-guide/) _– ethereum.org çevirmenleri için talimatlar ve ipuçları_
@@ -72,7 +74,8 @@ Herhangi bir sorunuz mu var? Veya ekibimizle ve diğer çevirmenlerle iş birli�
 
 Bize translations@ethereum.org adresinden de ulaşabilirsiniz.
 
-## Kendi çeviri programınızı başlatmak
+## Kendi çeviri programınızı başlatmak {#starting-a-translation-program}
+
 Eğitim içeriğini herkes için erişilebilir kılmak ethereum.org için bir öncelik olmaya devam ediyor ve diğer Ethereum projelerinin kendi çeviri çalışmalarını organize etmelerine, yönetmelerine ve geliştirmelerine yardımcı olmak istiyoruz.
 
 Bu nedenle, ethereum.org'u çevirme sürecinde edindiğimiz bazı ipuçlarını ve en iyi uygulamaları içeren bir [Çeviri Programı rehberi](/contributing/translation-program/playbook/) oluşturduk.

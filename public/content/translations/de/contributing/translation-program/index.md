@@ -1,7 +1,7 @@
 ---
-title: Übersetzungsprogramm
+title: "Übersetzungsprogramm"
 lang: de
-description: Informationen über das Übersetzungsprogramm von ethereum.org
+description: "Informationen über das Übersetzungsprogramm von ethereum.org"
 ---
 
 Das Übersetzungsprogramm ist eine gemeinschaftliche Initiative, um ethereum.org in verschiedene Sprachen zu übersetzen und die Website für Milliarden von Menschen weltweit, die kein Englisch sprechen, zugänglicher zu machen.
@@ -57,9 +57,11 @@ Mitwirkende am Übersetzungsprogramm haben Anspruch auf verschiedene OATs (Oncha
 
 Öffentliche Anerkennungen unserer Top-Übersetzer durch [Bestenlisten](/contributing/translation-program/acknowledgements/) und eine [Liste aller Mitwirkenden am Übersetzungsprogramm](/contributing/translation-program/contributors/).
 
-#### Belohnungen
+#### Belohnungen {#rewards}
+
 In der Vergangenheit haben wir unsere aktivsten Mitwirkenden rückwirkend mit Tickets für Ethereum-Konferenzen wie [Devcon](https://devcon.org/en/) und [Devconnect](https://devconnect.org/) sowie exklusivem ethereum.org-Merchandise belohnt.
-### Leitfäden und Ressourcen
+### Leitfäden und Ressourcen {#guides-and-resources}
+
 Diese Referenzmaterialien stehen weiterhin für Übersetzungs-Communitys und Projekte zur Verfügung, die ihre eigenen Programme durchführen:
 
 - [Übersetzungs-Styleguide](/contributing/translation-program/translators-guide/) _– Anweisungen und Tipps für ethereum.org-Übersetzer_
@@ -72,7 +74,8 @@ Hast du Fragen? Oder möchtest du mit unserem Team und anderen Übersetzern zusa
 
 Du kannst uns auch unter translations@ethereum.org erreichen.
 
-## Ein eigenes Übersetzungsprogramm starten
+## Ein eigenes Übersetzungsprogramm starten {#starting-a-translation-program}
+
 Bildungsinhalte für alle zugänglich zu machen, bleibt eine Priorität für ethereum.org, und wir möchten anderen Ethereum-Projekten helfen, ihre eigenen Übersetzungsbemühungen zu organisieren, zu verwalten und zu verbessern.
 
 Aus diesem Grund haben wir ein [Playbook für Übersetzungsprogramme](/contributing/translation-program/playbook/) erstellt, das einige Tipps und Best Practices enthält, die wir beim Übersetzen von ethereum.org gesammelt haben.

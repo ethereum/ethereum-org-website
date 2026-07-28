@@ -50,24 +50,6 @@ Berikut adalah beberapa tugas saat ini yang dapat Anda bantu selesaikan dan ambi
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">Lihat semua tugas</ButtonLink>
 
-## Cara bekerja di ethereum.org
-
-Untuk berkontribusi (menambahkan atau mengedit konten atau visual ke situs web, memperbaiki bug, mengerjakan tugas terbuka) Anda akan memerlukan akun [GitHub](https://github.com/).
-
-Semua pembaruan dilakukan melalui proses PR GitHub. Ini berarti Anda membuat salinan lokal situs web, melakukan perubahan, dan meminta untuk menggabungkan perubahan Anda. Jika Anda belum pernah melakukan ini sebelumnya, ikuti petunjuk di bagian bawah [repositori GitHub](https://github.com/ethereum/ethereum-org-website) kami.
-
-Anda tidak memerlukan izin untuk mengerjakan apa pun, tetapi selalu lebih baik untuk memberi tahu kami apa yang Anda rencanakan. Anda dapat melakukannya dengan:
-
-- Berkomentar pada masalah atau PR di [GitHub](https://github.com/ethereum/ethereum-org-website)
-- Mengirim pesan di [server Discord](https://discord.gg/ethereum-org) kami
-
-Sebelum berkontribusi, pastikan Anda familier dengan:
-
-- [visi ethereum.org](/about/) yang terus berkembang
-- [prinsip desain](/contributing/design-principles/) kami
-- [panduan gaya](/contributing/style-guide/) kami
-- [kode etik](/community/code-of-conduct) kami
-
 ## Bagaimana keputusan tentang situs ini dibuat {#how-decisions-about-the-site-are-made}
 
 Keputusan tentang PR individu, evolusi desain, dan peningkatan besar dibuat oleh tim dari seluruh ekosistem Ethereum. Tim ini mencakup manajer proyek, pengembang, desainer, pemasaran dan komunikasi, serta pakar materi pelajaran. Masukan komunitas menginformasikan setiap keputusan: jadi silakan ajukan pertanyaan di masalah, kirimkan PR, atau hubungi tim:

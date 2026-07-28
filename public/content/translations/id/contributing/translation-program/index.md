@@ -57,10 +57,10 @@ Kontributor Program Terjemahan berhak mendapatkan berbagai OAT (onchain achievem
 
 Penghargaan publik untuk penerjemah teratas kami menggunakan [papan peringkat](/contributing/translation-program/acknowledgements/) dan [daftar semua kontributor Program Terjemahan](/contributing/translation-program/contributors/).
 
-#### Hadiah
+#### Hadiah {#rewards}
 
 Di masa lalu, kami telah memberikan hadiah secara retroaktif kepada kontributor kami yang paling aktif dengan tiket ke konferensi Ethereum seperti [Devcon](https://devcon.org/en/) dan [Devconnect](https://devconnect.org/), serta merchandise eksklusif ethereum.org.
-### Panduan dan sumber daya
+### Panduan dan sumber daya {#guides-and-resources}
 
 Materi referensi ini tetap tersedia untuk komunitas terjemahan dan proyek yang menjalankan program mereka sendiri:
 
@@ -74,7 +74,7 @@ Apakah Anda memiliki pertanyaan? Atau ingin berkolaborasi dengan tim kami dan pe
 
 Anda juga dapat menghubungi kami di translations@ethereum.org
 
-## Memulai program terjemahan Anda sendiri
+## Memulai program terjemahan Anda sendiri {#starting-a-translation-program}
 
 Menyediakan konten edukasi bagi semua orang tetap menjadi prioritas bagi ethereum.org, dan kami ingin membantu proyek Ethereum lainnya mengatur, mengelola, dan meningkatkan upaya terjemahan mereka sendiri.
 

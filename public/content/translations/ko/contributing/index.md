@@ -9,7 +9,7 @@ Ethereum.org는 웹사이트의 번역, 작성, 디자인 및 유지 관리를 �
 
 우리는 여러분이 [이더리움](/) 생태계에서 성장하고 학습할 수 있도록 돕는 동시에, 의미 있는 기여를 하고 관련 실무 경험을 쌓을 수 있도록 환영하는 커뮤니티입니다!
 
-## 기여 방법
+## 기여 방법 {#ways-to-contribute}
 
 **번역**
 - [번역 오류 보고하기](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – [번역 프로그램](/contributing/translation-program/)이 종료 수순을 밟고 있으며 더 이상 새로운 번역가를 온보딩하지 않습니다.
@@ -52,7 +52,7 @@ Ethereum.org는 웹사이트의 번역, 작성, 디자인 및 유지 관리를 �
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">모든 작업 보기</ButtonLink>
 
-## ethereum.org 작업 방법
+## ethereum.org 작업 방법 {#how-to-update-content}
 
 기여(웹사이트에 콘텐츠나 시각 자료 추가 또는 편집, 버그 수정, 열려 있는 작업 수행)를 하려면 [GitHub](https://github.com/) 계정이 필요합니다.
 

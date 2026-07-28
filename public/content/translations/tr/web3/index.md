@@ -126,7 +126,7 @@ Ethereum ile Giriş Yap gibi önemli Web3 özellikleri, herkesin sıfır maliyet
 
 Web3'ü kullanmaya başlamanın önündeki teknik engel şu anda çok yüksektir. Kullanıcılar güvenlik endişelerini kavramalı, karmaşık teknik belgeleri anlamalı ve sezgisel olmayan kullanıcı arayüzlerinde gezinmelidir. Özellikle [cüzdan sağlayıcıları](/wallets/find-wallet/) bunu çözmek için çalışıyor, ancak Web3'ün kitlesel olarak benimsenmesinden önce daha fazla ilerlemeye ihtiyaç var.
 
-### Eğitim
+### Eğitim {#education}
 
 Web3, Web 2.0'da kullanılanlardan farklı zihinsel modellerin öğrenilmesini gerektiren yeni paradigmalar sunar. Benzer bir eğitim hamlesi, 1990'ların sonlarında Web 1.0 popülerlik kazanırken de yaşandı; World Wide Web savunucuları, halkı eğitmek için basit metaforlardan (bilgi otoyolu, tarayıcılar, web'de gezinmek) [televizyon yayınlarına](https://www.youtube.com/watch?v=SzQLI7BxfYI) kadar bir dizi eğitim tekniği kullandı. Web3 zor değildir, ancak farklıdır. Web2 kullanıcılarını bu Web3 paradigmaları hakkında bilgilendiren eğitim girişimleri, onun başarısı için hayati önem taşır.
 

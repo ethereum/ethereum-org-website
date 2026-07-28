@@ -1,7 +1,7 @@
 ---
-title: Chương trình Dịch thuật
+title: "Chương trình Dịch thuật"
 lang: vi
-description: Thông tin về Chương trình Dịch thuật của ethereum.org
+description: "Thông tin về Chương trình Dịch thuật của ethereum.org"
 ---
 
 Chương trình Dịch thuật là một nỗ lực hợp tác nhằm dịch ethereum.org sang các ngôn ngữ khác nhau để giúp hàng tỷ người không nói tiếng Anh trên toàn thế giới có thể tiếp cận trang web này dễ dàng hơn.
@@ -57,10 +57,10 @@ Những người đóng góp cho Chương trình Dịch thuật đủ điều ki
 
 Ghi nhận công khai các dịch giả hàng đầu của chúng tôi thông qua [bảng xếp hạng](/contributing/translation-program/acknowledgements/) và [danh sách tất cả những người đóng góp cho Chương trình Dịch thuật](/contributing/translation-program/contributors/).
 
-#### Phần thưởng
+#### Phần thưởng {#rewards}
 
 Trước đây, chúng tôi đã trao thưởng hồi tố cho những người đóng góp tích cực nhất bằng vé tham dự các hội nghị Ethereum như [Devcon](https://devcon.org/en/) và [Devconnect](https://devconnect.org/), cũng như các vật phẩm độc quyền của ethereum.org.
-### Hướng dẫn và tài nguyên
+### Hướng dẫn và tài nguyên {#guides-and-resources}
 
 Những tài liệu tham khảo này vẫn có sẵn cho các cộng đồng dịch thuật và các dự án đang chạy chương trình của riêng họ:
 
@@ -74,7 +74,7 @@ Bạn có câu hỏi nào không? Hoặc muốn hợp tác với nhóm của ch�
 
 Bạn cũng có thể liên hệ với chúng tôi qua địa chỉ translations@ethereum.org
 
-## Bắt đầu chương trình dịch thuật của riêng bạn
+## Bắt đầu chương trình dịch thuật của riêng bạn {#starting-a-translation-program}
 
 Việc cung cấp nội dung giáo dục cho mọi người vẫn là ưu tiên hàng đầu của ethereum.org và chúng tôi muốn giúp các dự án Ethereum khác tổ chức, quản lý và cải thiện các nỗ lực dịch thuật của riêng họ.
 

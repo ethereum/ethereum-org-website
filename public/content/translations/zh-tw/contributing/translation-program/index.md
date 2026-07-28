@@ -1,7 +1,7 @@
 ---
-title: 翻譯計畫
+title: "翻譯計畫"
 lang: zh-tw
-description: 關於 ethereum.org 翻譯計畫的資訊
+description: "關於 ethereum.org 翻譯計畫的資訊"
 ---
 
 翻譯計畫是一項協作工作，旨在將 ethereum.org 翻譯成不同的語言，讓全球數十億非英語母語人士更容易使用本網站。
@@ -34,9 +34,9 @@ ethereum.org 翻譯計畫旨在透過將 ethereum.org 及其他以太坊內容�
 
 ### 我們目前的進度 {#our-progress}
 
-- [**超過 6,900 名**翻譯者](/contributing/translation-program/contributors/)
+- [<strong>超過 6,900 名</strong>翻譯者](/contributing/translation-program/contributors/)
 - 網站上線 **68** 種語言
-- [2024 年翻譯了 **289 萬**個字](/contributing/translation-program/acknowledgements/)
+- [2024 年翻譯了 <strong>289 萬</strong>個字](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 
@@ -57,10 +57,10 @@ Ethereum.org 由數千名社群成員翻譯，他們是翻譯計畫的關鍵部�
 
 透過[排行榜](/contributing/translation-program/acknowledgements/)與[翻譯計畫所有貢獻者名單](/contributing/translation-program/contributors/)公開感謝我們的頂尖翻譯者。
 
-#### 獎勵
+#### 獎勵 {#rewards}
 
 過去，我們曾追溯性地獎勵最活躍的貢獻者，提供如 [Devcon](https://devcon.org/en/) 和 [Devconnect](https://devconnect.org/) 等以太坊會議的門票，以及專屬的 ethereum.org 周邊商品。
-### 指南與資源
+### 指南與資源 {#guides-and-resources}
 
 這些參考資料仍可供翻譯社群和執行自有計畫的專案使用：
 
@@ -74,7 +74,7 @@ Ethereum.org 由數千名社群成員翻譯，他們是翻譯計畫的關鍵部�
 
 您也可以透過 translations@ethereum.org 聯絡我們。
 
-## 啟動您自己的翻譯計畫
+## 啟動您自己的翻譯計畫 {#starting-a-translation-program}
 
 讓所有人都能取得教育內容仍然是 ethereum.org 的首要任務，我們希望協助其他以太坊專案組織、管理並改善他們自己的翻譯工作。
 
