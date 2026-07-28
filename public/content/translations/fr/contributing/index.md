@@ -9,39 +9,39 @@ Ethereum.org est un projet open source avec **plus de 12 000** contributeurs qui
 
 Nous sommes une communauté accueillante qui vous aidera à vous développer et à vous former dans l'écosystème [Ethereum](/) tout en contribuant de manière significative et en acquérant une expérience pratique pertinente !
 
-## Façons de contribuer {#ways-to-contribute}
+## Façons de contribuer
 
 **Traductions**
-- [Rejoindre le programme de traduction](/contributing/translation-program/) – Aidez-nous à traduire ethereum.org dans de nouvelles langues
+- [Signaler une erreur de traduction](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – Le [Programme de traduction](/contributing/translation-program/) touche à sa fin et n'intègre plus de nouveaux traducteurs
 
 **Développement**
-- [Travailler sur un ticket ouvert](https://github.com/ethereum/ethereum-org-website/issues) – Tâches que nous avons identifiées et qui doivent être accomplies
+- [Travailler sur un ticket ouvert](https://github.com/ethereum/ethereum-org-website/issues) – Les tâches que nous avons identifiées et qui doivent être accomplies
 
 **Design**
 - [Aider à concevoir le site Web](/contributing/design/) – Les designers de tous niveaux peuvent contribuer à améliorer le site Web
 
 **Contenu**
-- [Créer/modifier du contenu](/contributing/#how-to-update-content) – Suggérez de nouvelles pages ou apportez des modifications à ce qui existe déjà
-- [Rédiger un article de constructeur](/contributing/adding-articles/) - Proposez un article pour la section [Dernières actualités](/latest/)
-- [Ajouter des ressources communautaires](/contributing/content-resources/) – Ajoutez un article ou une ressource utile à une page pertinente
-- [Suggérer un rapport](/contributing/adding-reports/) - Suggérez un rapport de recherche pour la page [Rapports](/reports/)
-- [Partager votre histoire](/contributing/adding-community-stories/) - Soumettez une histoire sur vos expériences personnelles avec les technologies open source et sanctuaires, sur la façon dont l'écosystème Ethereum a eu un impact sur votre vie, ou sur la façon dont vous et votre communauté utilisez Ethereum
-- [Quiz](/contributing/quizzes/) – Ajoutez, mettez à jour et supprimez des banques de questions de quiz pour une page pertinente
-- [Suggérer une ressource de design](/contributing/design/adding-design-resources/) – Ajoutez, mettez à jour et supprimez des ressources de design utiles
-- [Suggérer une vidéo](/contributing/adding-videos/) – Suggérez une vidéo éducative pour la galerie vidéo
+- [Créer/modifier du contenu](/contributing/#how-to-update-content) – Suggérer de nouvelles pages ou apporter des modifications à ce qui existe déjà
+- [Rédiger un article de constructeur](/contributing/adding-articles/) - Contribuer à un article pour la section [Dernières actualités](/latest/)
+- [Ajouter des ressources communautaires](/contributing/content-resources/) – Ajouter un article ou une ressource utile à une page pertinente
+- [Suggérer un rapport](/contributing/adding-reports/) - Suggérer un rapport de recherche pour la page [Rapports](/reports/)
+- [Partager votre histoire](/contributing/adding-community-stories/) - Soumettre une histoire sur vos expériences personnelles avec les technologies open source et de sanctuaire, comment l'écosystème Ethereum a eu un impact sur votre vie, ou comment vous et votre communauté utilisez Ethereum
+- [Quiz](/contributing/quizzes/) – Ajouter, mettre à jour et supprimer des banques de questions de quiz pour une page pertinente
+- [Suggérer une ressource de design](/contributing/design/adding-design-resources/) – Ajouter, mettre à jour et supprimer des ressources de design utiles
+- [Suggérer une vidéo](/contributing/adding-videos/) – Suggérer une vidéo éducative pour la galerie vidéo
 
 **Idées de fonctionnalités**
 - [Demander une fonctionnalité](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Faites-nous part de vos idées pour une nouvelle fonctionnalité ou un nouveau design
 
 **Listes de produits**
-- [Ajouter une plateforme d'échange](/contributing/adding-exchanges/) – Ajoutez une plateforme d'échange à notre [outil de recherche de plateformes d'échange](/get-eth/#country-picker)
-- [Ajouter un produit](/contributing/adding-products/) – Ajoutez une application décentralisée (dapp) ou un portefeuille à une page pertinente
-- [Ajouter des outils de développement](/contributing/adding-developer-tools/) – Ajoutez un outil de développement à une page pertinente
-- [Ajouter une couche 2 (l2)](/contributing/adding-layer-2s/) – Ajoutez un l2 à une page pertinente
-- [Ajouter un produit ou service de staking](/contributing/adding-staking-products/) – Ajoutez un projet qui facilite le staking en solo, le staking mutualisé ou le staking en tant que service
-- [Ajouter un portefeuille](/contributing/adding-wallets/) – Ajoutez un portefeuille pour la [page de recherche de portefeuilles](/wallets/find-wallet/)
-- [Suggérer un projet pour notre page de science décentralisée (DeSci)](/contributing/adding-desci-projects/) – Ajoutez un projet construit sur Ethereum qui contribue à la DeSci
-- [Ajouter une ressource](/contributing/adding-resources/) – Ajoutez une ressource utile à n'importe quelle page pertinente
+- [Ajouter une plateforme d'échange](/contributing/adding-exchanges/) – Ajouter une plateforme d'échange à notre [outil de recherche de plateformes d'échange](/get-eth/#country-picker)
+- [Ajouter un produit](/contributing/adding-products/) – Ajouter une application décentralisée (dapp) ou un portefeuille à une page pertinente
+- [Ajouter des outils de développement](/contributing/adding-developer-tools/) – Ajouter un outil de développement à une page pertinente
+- [Ajouter une couche 2](/contributing/adding-layer-2s/) – Ajouter une couche 2 (l2) à une page pertinente
+- [Ajouter un produit ou service de staking](/contributing/adding-staking-products/) – Ajouter un projet qui facilite le staking en solo, le staking mutualisé ou le staking en tant que service
+- [Ajouter un portefeuille](/contributing/adding-wallets/) – Ajouter un portefeuille pour la [page de recherche de portefeuilles](/wallets/find-wallet/)
+- [Suggérer un projet pour notre page DeSci](/contributing/adding-desci-projects/) – Ajouter un projet construit sur Ethereum qui contribue à la science décentralisée (DeSci)
+- [Ajouter une ressource](/contributing/adding-resources/) – Ajouter une ressource utile à toute page pertinente
 
 Des questions ? 🤔 Rejoignez notre [serveur Discord](https://discord.gg/ethereum-org)
 ## Bonnes premières tâches pour commencer à contribuer {#good-first-tasks-to-start-contributing}
@@ -52,9 +52,9 @@ Voici quelques tâches actuelles que vous pourriez nous aider à résoudre et pr
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">Voir toutes les tâches</ButtonLink>
 
-## Comment travailler sur ethereum.org {#how-to-update-content}
+## Comment travailler sur ethereum.org
 
-Si vous souhaitez contribuer au [programme de traduction](/contributing/translation-program/), nous vous demandons de créer un compte sur [Crowdin](https://crowdin.com/project/ethereum-org). Pour tout le reste – ajouter ou modifier du contenu ou des visuels sur le site Web, corriger des bugs, travailler sur des tâches ouvertes – vous aurez besoin d'un compte [GitHub](https://github.com/).
+Pour contribuer (ajouter ou modifier du contenu ou des visuels sur le site Web, corriger des bugs, travailler sur des tâches ouvertes), vous aurez besoin d'un compte [GitHub](https://github.com/).
 
 Toutes les mises à jour sont effectuées via le processus de PR (Pull Request) de GitHub. Cela signifie que vous créez une copie locale du site Web, apportez vos modifications et demandez à fusionner vos modifications. Si vous n'avez jamais fait cela auparavant, suivez les instructions au bas de notre [dépôt GitHub](https://github.com/ethereum/ethereum-org-website).
 
@@ -65,11 +65,10 @@ Vous n'avez pas besoin de permission pour travailler sur quoi que ce soit, mais 
 
 Avant de contribuer, assurez-vous de vous familiariser avec :
 
-- la [vision en évolution d'ethereum.org](/about/)
+- la [vision d'ethereum.org](/about/) en constante évolution
 - nos [principes de design](/contributing/design-principles/)
 - notre [guide de style](/contributing/style-guide/)
 - notre [code de conduite](/community/code-of-conduct)
-
 ## Comment les décisions concernant le site sont prises {#how-decisions-about-the-site-are-made}
 
 Les décisions concernant les PR individuelles, l'évolution du design et les mises à jour majeures sont prises par une équipe issue de l'ensemble de l'écosystème Ethereum. Cette équipe comprend des chefs de projet, des développeurs, des designers, des spécialistes du marketing et de la communication, ainsi que des experts en la matière. L'avis de la communauté éclaire chaque décision : n'hésitez donc pas à poser des questions dans les tickets, à soumettre des PR ou à contacter l'équipe :
