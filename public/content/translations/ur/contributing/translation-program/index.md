@@ -8,17 +8,17 @@ description: "⁦ethereum.org⁩ ترجمہ پروگرام کے بارے میں 
 
 ![](./enterprise-eth.png)
 
-## ترجمہ کرنے میں ہماری مدد کریں {#help-us-translate}
+## ترجمہ کرنے میں ہماری مدد کریں {#program-status}
 
 <span dir="ltr">ethereum.org</span> ترجمہ پروگرام سب کے لیے کھلا ہے اور کوئی بھی اس میں حصہ لے سکتا ہے!
 
 1. آپ کو اپنے <span dir="ltr">Crowdin</span> اکاؤنٹ میں لاگ ان کرنے یا سائن اپ کرنے کی ضرورت ہوگی۔
 2. وہ زبان منتخب کریں جس میں آپ حصہ لینا چاہتے ہیں۔
-3. شروع کرنے سے پہلے، براہ کرم <span dir="ltr">Crowdin</span> کا استعمال سیکھنے کے لیے [ترجمہ کرنے کا طریقہ](/contributing/translation-program/how-to-translate/) گائیڈ، اور تجاویز اور بہترین طریقوں کے لیے [ترجمہ اسٹائل گائیڈ](/contributing/translation-program/translators-guide/) دیکھیں۔
+3. شروع کرنے سے پہلے، براہ کرم <span dir="ltr">Crowdin</span> کا استعمال سیکھنے کے لیے [ترجمہ کرنے کا طریقہ](/contributing/translation-program/acknowledgements/) گائیڈ، اور تجاویز اور بہترین طریقوں کے لیے [ترجمہ اسٹائل گائیڈ](/contributing/translation-program/contributors/) دیکھیں۔
 4. مشینی تراجم منظور نہیں کیے جائیں گے۔
 5. سائٹ پر شامل کیے جانے سے پہلے تمام تراجم کا جائزہ لیا جاتا ہے، اس لیے آپ کے تراجم لائیو ہونے میں تھوڑی تاخیر ہوگی۔
 
-_تراجم پر تعاون کرنے، سوالات پوچھنے، آراء اور خیالات شیئر کرنے، یا کسی ترجمہ گروپ میں شامل ہونے کے لیے [<span dir="ltr">ethereum.org</span> ڈسکارڈ](https://discord.gg/ethereum-org) میں شامل ہوں۔_
+_تراجم پر تعاون کرنے، سوالات پوچھنے، آراء اور خیالات شیئر کرنے، یا کسی ترجمہ گروپ میں شامل ہونے کے لیے [<span dir="ltr">ethereum.org</span> ڈسکارڈ](https://github.com/ethereum/ethereum-org-website/issues/new/choose) میں شامل ہوں۔_
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   ترجمہ شروع کریں
@@ -57,33 +57,27 @@ _تراجم پر تعاون کرنے، سوالات پوچھنے، آراء او
 
 [لیڈر بورڈز](/contributing/translation-program/acknowledgements/) اور [ترجمہ پروگرام میں حصہ لینے والے تمام افراد کی فہرست](/contributing/translation-program/contributors/) کا استعمال کرتے ہوئے ہمارے سرفہرست مترجمین کا عوامی اعتراف۔
 
-#### انعامات {#rewards}
+#### انعامات
 
-ماضی میں، ہم نے اپنے سب سے زیادہ فعال شراکت داروں کو ایتھیریم کانفرنسز جیسے [<span dir="ltr">Devcon</span>](https://devcon.org/en/) اور [<span dir="ltr">Devconnect</span>](https://devconnect.org/) کے ٹکٹس کے ساتھ ساتھ خصوصی <span dir="ltr">ethereum.org</span> مرچنڈائز سے نوازا ہے۔
+ماضی میں، ہم نے اپنے سب سے زیادہ فعال حصہ لینے والوں کو ان کی سابقہ خدمات کے اعتراف میں ایتھیریم کانفرنسز جیسے [<span dir="ltr">Devcon</span>](https://devcon.org/en/) اور [<span dir="ltr">Devconnect</span>](https://devconnect.org/) کے ٹکٹس، اور ساتھ ہی خصوصی <span dir="ltr">ethereum.org</span> مرچنڈائز سے نوازا ہے۔
+### گائیڈز اور وسائل
 
-ہم اپنے شراکت داروں کو انعام دینے کے لیے مسلسل نئے اور اختراعی طریقوں کے بارے میں سوچ رہے ہیں، لہذا جڑے رہیں!
-
-### گائیڈز اور وسائل {#guides-and-resources}
-
-اگر آپ ترجمہ پروگرام میں حصہ لے رہے ہیں یا شامل ہونے کے بارے میں سوچ رہے ہیں، تو آپ کو ذیل میں دی گئی ترجمہ گائیڈز دیکھنی چاہئیں:
+یہ حوالہ جاتی مواد ترجمہ کمیونٹیز اور اپنے پروگرام چلانے والے پروجیکٹس کے لیے دستیاب ہیں:
 
 - [ترجمہ اسٹائل گائیڈ](/contributing/translation-program/translators-guide/) _– <span dir="ltr">ethereum.org</span> کے مترجمین کے لیے ہدایات اور تجاویز_
-- [ترجمہ کے اکثر پوچھے گئے سوالات (FAQs)](/contributing/translation-program/faq/) _– <span dir="ltr">ethereum.org</span> ترجمہ پروگرام کے بارے میں اکثر پوچھے گئے سوالات اور جوابات_
-- [<span dir="ltr">Crowdin</span> آن لائن ایڈیٹر گائیڈ](https://support.crowdin.com/online-editor/) _– <span dir="ltr">Crowdin</span> آن لائن ایڈیٹر اور <span dir="ltr">Crowdin</span> کی کچھ جدید خصوصیات استعمال کرنے کے لیے ایک تفصیلی گائیڈ_
+- [ترجمہ کے اکثر پوچھے گئے سوالات (<span dir="ltr">FAQs</span>)](/contributing/translation-program/faq/) _– <span dir="ltr">ethereum.org</span> ترجمہ پروگرام کے بارے میں اکثر پوچھے گئے سوالات اور ان کے جوابات_
 
 دیگر مفید ترجمہ ٹولز، مترجم کمیونٹیز اور ترجمہ پروگرام کی بلاگ پوسٹس کے لیے، براہ کرم [وسائل کا صفحہ](/contributing/translation-program/resources/) دیکھیں۔
-
 ## رابطہ کریں {#get-in-touch}
 
-کیا آپ کا کوئی سوال ہے؟ یا ہماری ٹیم اور دیگر مترجمین کے ساتھ تعاون کرنا چاہتے ہیں؟ براہ کرم ہمارے [<span dir="ltr">ethereum.org</span> ڈسکارڈ سرور](https://discord.gg/ethereum-org) کے <span dir="ltr">#translations</span> چینل میں پوسٹ کریں۔
+کیا آپ کا کوئی سوال ہے؟ یا ہماری ٹیم اور دیگر مترجمین کے ساتھ تعاون کرنا چاہتے ہیں؟ براہ کرم ہمارے [<span dir="ltr">ethereum.org</span> ڈسکارڈ سرور](https://github.com/ethereum/ethereum-org-website/issues/new/choose) کے <span dir="ltr">#translations</span> چینل میں پوسٹ کریں۔
 
 آپ ہم سے <span dir="ltr">translations@ethereum.org</span> پر بھی رابطہ کر سکتے ہیں۔
 
-## اپنا ترجمہ پروگرام شروع کرنا {#starting-a-translation-program}
+## اپنا ترجمہ پروگرام شروع کرنا
 
-ہم ایتھیریم کے مواد کو زیادہ سے زیادہ زبانوں میں ترجمہ کرنے اور تعلیمی مواد کو ہر کسی کے لیے دستیاب بنانے کے لیے پرعزم ہیں۔
-تراجم پر ہماری توجہ کے مطابق، ہم دیگر ایتھیریم پروجیکٹس کو ان کی اپنی ترجمہ کی کوششوں کو منظم کرنے، ان کا نظم کرنے اور انہیں بہتر بنانے میں مدد کرنا چاہتے ہیں۔
+تعلیمی مواد کو ہر کسی کے لیے دستیاب بنانا <span dir="ltr">ethereum.org</span> کے لیے ایک ترجیح برقرار ہے، اور ہم دیگر ایتھیریم پروجیکٹس کی ان کی اپنی ترجمہ کی کوششوں کو منظم کرنے، سنبھالنے اور بہتر بنانے میں مدد کرنا چاہتے ہیں۔
 
-اس وجہ سے، ہم نے ایک [ترجمہ پروگرام پلے بک](/contributing/translation-program/playbook/) بنائی ہے جس میں کچھ تجاویز اور بہترین طریقے شامل ہیں جو ہم نے <span dir="ltr">ethereum.org</span> کا ترجمہ کرنے کے عمل میں سیکھے ہیں۔
+اس وجہ سے، ہم نے ایک [ترجمہ پروگرام پلے بک](/contributing/translation-program/playbook/) بنائی ہے جس میں کچھ تجاویز اور بہترین طریقہ کار شامل ہیں جو ہم نے <span dir="ltr">ethereum.org</span> کا ترجمہ کرنے کے عمل میں سیکھے ہیں۔
 
-مزید تعاون کرنا چاہتے ہیں یا ہمارے کچھ ترجمہ کے وسائل استعمال کرنا چاہتے ہیں؟ پلے بک پر کوئی رائے ہے؟ ہم <span dir="ltr">translations@ethereum.org</span> پر آپ سے سننا پسند کریں گے۔
+مزید تعاون کرنا چاہتے ہیں یا ہمارے کچھ ترجمہ کے وسائل استعمال کرنا چاہتے ہیں؟ پلے بک پر کوئی رائے ہے؟ ہمیں <span dir="ltr">translations@ethereum.org</span> پر آپ سے سن کر خوشی ہوگی۔
