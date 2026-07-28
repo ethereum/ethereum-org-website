@@ -31,10 +31,12 @@ type LangViewModeObj = {
   [key: string]: { viewport: string; locale: string }
 }
 
-// RTL locales only get a representative subset of widths. Direction bugs
-// surface at mobile + desktop, so snapshotting Arabic at all 6 breakpoints
-// doubled the per-story count for little added signal.
-const rtlViewports = new Set(["base", "lg"])
+// One width per device class, not per breakpoint token: the six tokens include
+// near-neighbours that never disagreed. RTL adds only the narrowest, since what
+// it proves is that direction flips. Every story spreading these pays the full
+// matrix, so widths here are the largest single lever on snapshot usage.
+const ltrViewports = new Set(["base", "md", "xl"])
+const rtlViewports = new Set(["base"])
 
 export const langViewportModes = Object.entries(
   viewportModes
@@ -44,7 +46,8 @@ export const langViewportModes = Object.entries(
   const currLangViewObj = {} as LangViewModeObj
 
   Object.entries(langModes).forEach(([langKey, langVal]) => {
-    if (langKey !== "en" && !rtlViewports.has(viewKey)) return
+    const widths = langKey === "en" ? ltrViewports : rtlViewports
+    if (!widths.has(viewKey)) return
     currLangViewObj[`${langKey}-${viewKey}`] = {
       viewport: viewVal.viewport,
       locale: langVal.locale,
