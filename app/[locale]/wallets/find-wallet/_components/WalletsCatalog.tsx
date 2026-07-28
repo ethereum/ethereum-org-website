@@ -6,6 +6,7 @@ import FilterableCatalog from "@/components/FilterableCatalog"
 import type { CatalogFilterState } from "@/components/FilterableCatalog/types"
 import { asArray } from "@/components/FilterableCatalog/utils"
 
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import type {
   CatalogWalletCard,
   WalletLanguageOption,
@@ -28,12 +29,22 @@ import WalletFilters, {
 
 const PURCHASE_IDS = ["buy_crypto", "withdraw_crypto"] as const
 
+// Category kept from the old empty state for trend comparability.
+const trackEmptyStateReset = () =>
+  trackCustomEvent({
+    eventCategory: "Wallet_empty_state",
+    eventAction: "reset",
+    eventName: "reset_button_clicked",
+  })
+
 /** Built on the server so no i18n runtime ships to the browser. */
 export type WalletCatalogLabels = {
   catalog: {
     searchPlaceholder: string
     resultsLabel: string
     noResults: string
+    noResultsDesc: string
+    resetLabel: string
     filtersToggle: string
     applyLabel: string
     closeLabel: string
@@ -203,6 +214,7 @@ export default function WalletsCatalog({
       filterFn={filterWallet}
       mobileVariant="sheet"
       labels={labels.catalog}
+      onReset={trackEmptyStateReset}
       renderSidebarHeader={({ state, setFilter }) => (
         <WalletFiltersHeader
           state={state}

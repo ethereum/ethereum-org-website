@@ -65,6 +65,8 @@ const WalletsPageBody = async ({
       searchPlaceholder: t("page-find-wallet-search-wallets"),
       resultsLabel: t("page-find-wallet-results-label"),
       noResults: t("page-find-wallet-empty-results-title"),
+      noResultsDesc: t("page-find-wallet-empty-results-desc"),
+      resetLabel: t("page-find-wallet-reset-filters"),
       filtersToggle: t("page-find-wallet-filters"),
       applyLabel: t("page-find-wallet-show-results"),
       closeLabel: tCommon("close"),

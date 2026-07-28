@@ -4,11 +4,12 @@ import {
   type ReactNode,
   useCallback,
   useDeferredValue,
+  useEffect,
   useMemo,
   useRef,
   useState,
 } from "react"
-import { X } from "lucide-react"
+import { RotateCcw, X } from "lucide-react"
 
 import { Button } from "@/components/ui/buttons/Button"
 import Input from "@/components/ui/input"
@@ -16,6 +17,7 @@ import { PersistentPanel } from "@/components/ui/persistent-panel"
 import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { numberFormat } from "@/lib/utils/numbers"
 
 import type {
@@ -24,10 +26,17 @@ import type {
   CatalogSetFilter,
 } from "./types"
 
+// Fires once the query settles, so one event per search rather than per keystroke.
+const SEARCH_TRACKING_DEBOUNCE_MS = 1200
+
 export type FilterableCatalogLabels = {
   searchPlaceholder: string
   resultsLabel: string
   noResults: string
+  /** Second line of the empty state. */
+  noResultsDesc?: string
+  /** Empty-state reset button; the button renders only when this is provided. */
+  resetLabel?: string
   /** Collapsed mobile filter-bar label (required when `mobileVariant="sheet"`). */
   filtersToggle?: string
   /** Mobile "apply" button label, shown as `{applyLabel} ({count})`. */
@@ -69,6 +78,11 @@ export type FilterableCatalogProps<TItem> = {
    * `labels.filtersToggle` / `labels.applyLabel`.
    */
   mobileVariant?: "inline" | "sheet"
+  /**
+   * Called after the empty-state reset has cleared both search and filters.
+   * The shell owns the clearing; the consumer owns any tracking.
+   */
+  onReset?: () => void
   className?: string
 }
 
@@ -91,6 +105,7 @@ export default function FilterableCatalog<TItem>({
   renderResults,
   renderResultsHeader,
   mobileVariant = "inline",
+  onReset,
   className,
 }: FilterableCatalogProps<TItem>) {
   const nf = numberFormat(locale)
@@ -121,6 +136,39 @@ export default function FilterableCatalog<TItem>({
       items.filter((item) => filterFn(item, deferredSelection, deferredSearch)),
     [items, filterFn, deferredSelection, deferredSearch]
   )
+
+  useEffect(() => {
+    const query = search.trim()
+    if (!query) return
+    const timeout = setTimeout(
+      () =>
+        trackCustomEvent({
+          eventCategory: "CatalogSearch",
+          eventAction: "search",
+          eventName: query,
+        }),
+      SEARCH_TRACKING_DEBOUNCE_MS
+    )
+    return () => clearTimeout(timeout)
+  }, [search])
+
+  // Clears search too, unlike the sidebar reset — an empty query is often what
+  // emptied the results.
+  const resetAll = useCallback(() => {
+    setSearch("")
+    setSelection({})
+    onReset?.()
+  }, [onReset])
+
+  // Event triple kept from the old shared ProductTable sheet for trend comparability.
+  const openMobileFilters = useCallback((open: boolean) => {
+    setMobileFiltersOpen(open)
+    trackCustomEvent({
+      eventCategory: "MobileFilterToggle",
+      eventAction: "Tap MobileFilterToggle",
+      eventName: `show mobile filters ${open}`,
+    })
+  }, [])
 
   // Filter UI reads live selection (not deferred) so controls reflect input
   // immediately; only the results below deferred-render.
@@ -158,7 +206,7 @@ export default function FilterableCatalog<TItem>({
               <button
                 ref={mobileTriggerRef}
                 type="button"
-                onClick={() => setMobileFiltersOpen(true)}
+                onClick={() => openMobileFilters(true)}
                 aria-haspopup="dialog"
                 aria-expanded={mobileFiltersOpen}
                 className="flex w-full items-center justify-between rounded-xl border px-4 py-3 text-start transition-colors hover:bg-background-highlight"
@@ -174,7 +222,7 @@ export default function FilterableCatalog<TItem>({
               <PersistentPanel
                 open={mobileFiltersOpen}
                 side="left"
-                onOpenChange={setMobileFiltersOpen}
+                onOpenChange={openMobileFilters}
                 triggerRef={mobileTriggerRef}
                 aria-label={labels.filtersToggle}
                 className="gap-3 p-4"
@@ -182,7 +230,7 @@ export default function FilterableCatalog<TItem>({
                 <div className="flex items-center justify-end">
                   <button
                     type="button"
-                    onClick={() => setMobileFiltersOpen(false)}
+                    onClick={() => openMobileFilters(false)}
                     aria-label={labels.closeLabel}
                     className="grid size-8 place-items-center rounded-full transition-colors hover:bg-background-highlight"
                   >
@@ -196,7 +244,7 @@ export default function FilterableCatalog<TItem>({
                 </div>
                 <Button
                   className="w-full"
-                  onClick={() => setMobileFiltersOpen(false)}
+                  onClick={() => openMobileFilters(false)}
                 >
                   {labels.applyLabel} ({nf.format(filteredItems.length)})
                 </Button>
@@ -227,8 +275,17 @@ export default function FilterableCatalog<TItem>({
             {renderResults(filteredItems)}
           </div>
           {filteredItems.length === 0 && (
-            <div className="rounded-xl border p-8 text-center text-body-medium">
-              {labels.noResults}
+            <div className="flex flex-col items-center gap-3 rounded-xl border p-8 text-center text-body-medium">
+              <p className="m-0 font-bold text-body">{labels.noResults}</p>
+              {labels.noResultsDesc && (
+                <p className="m-0 max-w-prose">{labels.noResultsDesc}</p>
+              )}
+              {labels.resetLabel && (
+                <Button variant="outline" onClick={resetAll} className="mt-1">
+                  <RotateCcw className="size-4" />
+                  {labels.resetLabel}
+                </Button>
+              )}
             </div>
           )}
         </div>

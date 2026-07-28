@@ -137,9 +137,11 @@ export default function WalletFilters({
       setFilter(LANGUAGE_KEY, toggleId(selectedLanguages, optionId), {
         scroll: false,
       })
-      trackFilterToggle("Language search", optionId)
+      // The old sidebar logged the language name, not its code — keep it comparable.
+      const name = languageOptions.find(({ id }) => id === optionId)?.label
+      trackFilterToggle("Language search", name ?? optionId)
     },
-    [setFilter, selectedLanguages]
+    [setFilter, selectedLanguages, languageOptions]
   )
 
   const onToggleAdvanced = useCallback(
