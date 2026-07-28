@@ -52,7 +52,7 @@ Hizi ni kazi chache za sasa ambazo unaweza kutusaidia kutatua na kuwajibika nazo
 
 ## Jinsi ya kufanya kazi kwenye ethereum.org {#how-to-update-content}
 
-Ikiwa ungependa kuchangia katika [Programu ya Kutafsiri](/contributing/translation-program/), tunakuomba ufungue akaunti kwenye [Crowdin](https://crowdin.com/project/ethereum-org). Kwa kila kitu kingine – kuongeza au kuhariri maudhui au vielelezo kwenye tovuti, kurekebisha hitilafu, kufanyia kazi kazi zilizo wazi – utahitaji akaunti ya [GitHub](https://github.com/).
+Ili kuchangia (kuongeza au kuhariri maudhui au vielelezo kwenye tovuti, kurekebisha hitilafu, kufanyia kazi kazi zilizo wazi) utahitaji akaunti ya [GitHub](https://github.com/).
 
 Masasisho yote yanafanywa kupitia mchakato wa PR wa GitHub. Hii inamaanisha unaunda nakala ya ndani ya tovuti, unafanya mabadiliko yako na kuomba kuunganisha mabadiliko yako. Ikiwa hujawahi kufanya hivi hapo awali, fuata maagizo yaliyo chini ya [hazina yetu ya GitHub](https://github.com/ethereum/ethereum-org-website).
 
@@ -63,11 +63,10 @@ Huhitaji ruhusa ili kufanyia kazi chochote, lakini daima ni vyema kutujulisha ki
 
 Kabla ya kuchangia, hakikisha unafahamu:
 
-- [maono yanayoendelea ya ethereum.org](/about/)
+- [dira inayoendelea ya ethereum.org](/about/)
 - [kanuni zetu za usanifu](/contributing/design-principles/)
 - [mwongozo wetu wa mtindo](/contributing/style-guide/)
 - [kanuni zetu za maadili](/community/code-of-conduct)
-
 ## Jinsi maamuzi kuhusu tovuti yanavyofanywa {#how-decisions-about-the-site-are-made}
 
 Maamuzi kuhusu PR za kibinafsi, mabadiliko ya usanifu na uboreshaji mkubwa yanafanywa na timu kutoka kote kwenye mfumo wa ikolojia wa Ethereum. Timu hii inajumuisha wasimamizi wa miradi, wasanidi, wasanifu, masoko na mawasiliano, na wataalamu wa mada. Maoni ya jamii hufahamisha kila uamuzi: kwa hivyo tafadhali uliza maswali katika masuala, wasilisha PR, au wasiliana na timu:

@@ -8,17 +8,17 @@ Programu ya Kutafsiri ni juhudi za ushirikiano za kutafsiri ethereum.org katika 
 
 ![](./enterprise-eth.png)
 
-## Tusaidie kutafsiri {#help-us-translate}
+## Tusaidie kutafsiri {#program-status}
 
 Programu ya Kutafsiri ya ethereum.org iko wazi na mtu yeyote anaweza kuchangia!
 
 1. Utahitaji kuingia kwenye akaunti yako ya Crowdin au kujisajili.
 2. Chagua lugha unayotaka kuchangia.
-3. Kabla ya kuanza, tafadhali angalia mwongozo wa [Jinsi ya kutafsiri](/contributing/translation-program/how-to-translate/) ili kujifunza jinsi ya kutumia Crowdin, na [Mwongozo wa Mtindo wa Kutafsiri](/contributing/translation-program/translators-guide/) kwa vidokezo na mbinu bora.
+3. Kabla ya kuanza, tafadhali angalia mwongozo wa [Jinsi ya kutafsiri](/contributing/translation-program/acknowledgements/) ili kujifunza jinsi ya kutumia Crowdin, na [Mwongozo wa Mtindo wa Kutafsiri](/contributing/translation-program/contributors/) kwa vidokezo na mbinu bora.
 4. Tafsiri za mashine hazitaidhinishwa.
 5. Tafsiri zote hukaguliwa kabla ya kuongezwa kwenye tovuti, kwa hivyo kutakuwa na ucheleweshaji mfupi kabla ya tafsiri zako kuchapishwa.
 
-_Jiunge na [Discord ya ethereum.org](https://discord.gg/ethereum-org) ili kushirikiana kwenye tafsiri, kuuliza maswali, kushiriki maoni na mawazo, au kujiunga na kikundi cha kutafsiri._
+_Jiunge na [Discord ya ethereum.org](https://github.com/ethereum/ethereum-org-website/issues/new/choose) ili kushirikiana kwenye tafsiri, kuuliza maswali, kushiriki maoni na mawazo, au kujiunga na kikundi cha kutafsiri._
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Anza kutafsiri
@@ -57,33 +57,24 @@ Wachangiaji wa Programu ya Kutafsiri wanastahiki kupata OATs (onchain achievemen
 
 Shukrani za hadharani kwa watafsiri wetu bora kwa kutumia [bao za viongozi](/contributing/translation-program/acknowledgements/) na [orodha ya wachangiaji wote kwenye Programu ya Kutafsiri](/contributing/translation-program/contributors/).
 
-#### Tuzo {#rewards}
-
-Hapo awali, tumewapa tuzo wachangiaji wetu wanaofanya kazi zaidi kwa kuwapa tikiti za mikutano ya Ethereum kama vile [Devcon](https://devcon.org/en/) na [Devconnect](https://devconnect.org/), pamoja na bidhaa za kipekee za ethereum.org.
-
-Tunafikiria kila mara njia mpya na za kibunifu za kuwapa tuzo wachangiaji wetu, kwa hivyo endelea kufuatilia!
-
-### Miongozo na rasilimali {#guides-and-resources}
-
-Ikiwa unachangia kwenye Programu ya Kutafsiri au unafikiria kujihusisha, unapaswa kuangalia miongozo ya kutafsiri hapa chini:
+#### Zawadi
+Zamani, tumewazawadia wachangiaji wetu wanaoshiriki zaidi tiketi za kuhudhuria mikutano ya Ethereum kama vile [Devcon](https://devcon.org/en/) na [Devconnect](https://devconnect.org/), pamoja na bidhaa za kipekee za ethereum.org.
+### Miongozo na rasilimali
+Nyenzo hizi za marejeleo zinasalia kupatikana kwa jamii za watafsiri na miradi inayoendesha programu zao wenyewe:
 
 - [Mwongozo wa Mtindo wa Kutafsiri](/contributing/translation-program/translators-guide/) _– maagizo na vidokezo kwa watafsiri wa ethereum.org_
-- [Maswali Yanayoulizwa Mara kwa Mara (FAQs) ya Kutafsiri](/contributing/translation-program/faq/) _– maswali na majibu yanayoulizwa mara kwa mara kuhusu Programu ya Kutafsiri ya ethereum.org_
-- [Mwongozo wa kihariri cha mtandaoni cha Crowdin](https://support.crowdin.com/online-editor/) _– mwongozo wa kina wa kutumia kihariri cha mtandaoni cha Crowdin na baadhi ya vipengele vya hali ya juu vya Crowdin_
+- [Maswali Yanayoulizwa Sana kuhusu Kutafsiri](/contributing/translation-program/faq/) _– maswali yanayoulizwa mara kwa mara na majibu kuhusu Programu ya Kutafsiri ya ethereum.org_
 
 Kwa zana zingine muhimu za kutafsiri, jamii za watafsiri na machapisho ya blogu ya Programu ya Kutafsiri, tafadhali tembelea [Ukurasa wa rasilimali](/contributing/translation-program/resources/).
-
 ## Wasiliana nasi {#get-in-touch}
 
-Je, una maswali yoyote? Au unataka kushirikiana na timu yetu na watafsiri wengine? Tafadhali chapisha katika chaneli ya #translations ya [seva yetu ya Discord ya ethereum.org](https://discord.gg/ethereum-org)
+Je, una maswali yoyote? Au unataka kushirikiana na timu yetu na watafsiri wengine? Tafadhali chapisha katika chaneli ya #translations ya [seva yetu ya Discord ya ethereum.org](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 
 Unaweza pia kuwasiliana nasi kupitia translations@ethereum.org
 
-## Kuanzisha programu yako mwenyewe ya kutafsiri {#starting-a-translation-program}
-
-Tumejitolea kutafsiri maudhui ya Ethereum katika lugha nyingi iwezekanavyo na kufanya maudhui ya kuelimisha yapatikane kwa kila mtu.
-Sambamba na lengo letu la kutafsiri, tunataka kusaidia miradi mingine ya Ethereum kupanga, kusimamia, na kuboresha juhudi zao wenyewe za kutafsiri.
+## Kuanzisha programu yako mwenyewe ya kutafsiri
+Kufanya maudhui ya kuelimisha yapatikane kwa kila mtu kunasalia kuwa kipaumbele kwa ethereum.org, na tunataka kusaidia miradi mingine ya Ethereum kupanga, kusimamia, na kuboresha juhudi zao za kutafsiri.
 
 Kwa sababu hii, tumeunda [Kitabu cha mbinu cha Programu ya Kutafsiri](/contributing/translation-program/playbook/) ambacho kina baadhi ya vidokezo na mbinu bora tulizojifunza katika mchakato wa kutafsiri ethereum.org.
 
-Unataka kushirikiana zaidi au kutumia baadhi ya rasilimali zetu za kutafsiri? Una maoni yoyote kuhusu kitabu cha mbinu? Tungependa kusikia kutoka kwako kupitia translations@ethereum.org.
+Je, unataka kushirikiana zaidi au kutumia baadhi ya rasilimali zetu za kutafsiri? Je, una maoni yoyote kuhusu kitabu cha mbinu? Tungependa kusikia kutoka kwako kupitia translations@ethereum.org.
