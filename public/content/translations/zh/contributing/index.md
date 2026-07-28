@@ -50,15 +50,15 @@ Ethereum.org 是一个开源项目，拥有 **12 000+** 名贡献者，他们帮
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">查看所有任务</ButtonLink>
 
-## 如何参与 ethereum.org 的工作 {#how-to-update-content}
+## 如何参与 ethereum.org 的工作
 
-如果你希望在[翻译计划](/contributing/translation-program/)中做出贡献，我们请你在 [Crowdin](https://crowdin.com/project/ethereum-org) 上创建一个账户。对于其他所有事情——向网站添加或编辑内容或视觉效果、修复错误、处理未解决的任务——你将需要一个 [GitHub](https://github.com/) 账户。
+为了做出贡献（向网站添加或编辑内容或视觉效果、修复错误、处理未解决的任务），你需要一个 [GitHub](https://github.com/) 账户。
 
-所有更新都是通过 GitHub 拉取请求 (PR) 流程进行的。这意味着你需要创建网站的本地副本，进行更改并请求合并你的更改。如果你以前从未这样做过，请按照我们 [GitHub 仓库](https://github.com/ethereum/ethereum-org-website)底部的说明进行操作。
+所有更新都是通过 GitHub 的拉取请求 (PR) 流程进行的。这意味着你需要创建网站的本地副本，进行更改并请求合并你的更改。如果你以前从未这样做过，请按照我们的 [GitHub 仓库](https://github.com/ethereum/ethereum-org-website)底部的说明进行操作。
 
-你不需要获得许可即可开展任何工作，但最好让我们知道你打算做什么。你可以通过以下方式做到这一点：
+你不需要获得许可即可开展任何工作，但最好让我们知道你的计划。你可以通过以下方式做到这一点：
 
-- 在 [GitHub](https://github.com/ethereum/ethereum-org-website) 上的议题或拉取请求 (PR) 中发表评论
+- 在 [GitHub](https://github.com/ethereum/ethereum-org-website) 上的议题或 PR 中发表评论
 - 在我们的 [Discord 服务器](https://discord.gg/ethereum-org)上发送消息
 
 在做出贡献之前，请确保你熟悉：
@@ -67,7 +67,6 @@ Ethereum.org 是一个开源项目，拥有 **12 000+** 名贡献者，他们帮
 - 我们的[设计原则](/contributing/design-principles/)
 - 我们的[风格指南](/contributing/style-guide/)
 - 我们的[行为准则](/community/code-of-conduct)
-
 ## 关于网站的决定是如何做出的 {#how-decisions-about-the-site-are-made}
 
 关于各个拉取请求 (PR)、设计演进和重大升级的决定由来自整个以太坊生态系统的团队做出。该团队包括项目经理、开发人员、设计师、营销和传播人员以及主题专家。社区的意见为每一个决定提供参考：因此，请在议题中提出问题、提交 PR 或联系团队：
