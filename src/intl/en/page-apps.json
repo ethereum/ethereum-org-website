@@ -65,6 +65,8 @@
   "page-apps-info-creator": "Creator",
   "page-apps-info-last-updated": "Last updated",
   "page-apps-gallery-title": "Gallery",
+  "page-apps-gallery-screenshot-alt": "Screenshot {index} of {appName} showing the application interface",
+  "page-apps-gallery-modal-title": "{appName} Screenshots",
   "page-apps-more-apps-like-this": "More apps like this",
   "page-apps-by-company": "by {company}",
   "page-apps-today": "Today",
