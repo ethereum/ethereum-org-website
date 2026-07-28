@@ -50,24 +50,21 @@ Ethereum.org 是一個開源專案，擁有超過 **12,000** 名貢獻者，協�
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">查看所有任務</ButtonLink>
 
-## 如何參與 ethereum.org 的工作 {#how-to-update-content}
+為了進行貢獻（在網站上新增或編輯內容或視覺效果、修復錯誤、處理未解決的任務），你需要一個 [GitHub](https://github.com/) 帳戶。
 
-如果你希望在[翻譯計畫](/contributing/translation-program/)中做出貢獻，我們請你在 [Crowdin](https://crowdin.com/project/ethereum-org) 上建立一個帳戶。對於其他所有事項（在網站上新增或編輯內容或視覺效果、修復錯誤、處理未解決的任務），你將需要一個 [GitHub](https://github.com/) 帳戶。
+所有更新都是透過 GitHub 拉取請求 (PR) 流程進行。這意味著你需要建立網站的本機副本，進行變更，然後請求合併你的變更。如果你以前從未做過這件事，請遵循我們 [GitHub 儲存庫](https://github.com/ethereum/ethereum-org-website)底部的說明。
 
-所有更新都是透過 GitHub 的拉取請求 (PR) 流程進行。這意味著你需要建立網站的本機副本，進行變更，然後請求合併你的變更。如果你以前從未這樣做過，請遵循我們 [GitHub 儲存庫](https://github.com/ethereum/ethereum-org-website)底部的指示。
+你不需要獲得許可即可處理任何事情，但最好還是讓我們知道你打算做什麼。你可以透過以下方式進行：
 
-你不需要獲得許可即可進行任何工作，但最好還是讓我們知道你打算做什麼。你可以透過以下方式通知我們：
-
-- 在 [GitHub](https://github.com/ethereum/ethereum-org-website) 上的議題 (issue) 或拉取請求 (PR) 中留言
+- 在 [GitHub](https://github.com/ethereum/ethereum-org-website) 的議題 (issue) 或拉取請求 (PR) 中留言
 - 在我們的 [Discord 伺服器](https://discord.gg/ethereum-org)上傳送訊息
 
-在做出貢獻之前，請確保你熟悉：
+在貢獻之前，請確保你熟悉：
 
 - ethereum.org 不斷發展的[願景](/about/)
 - 我們的[設計原則](/contributing/design-principles/)
 - 我們的[風格指南](/contributing/style-guide/)
 - 我們的[行為準則](/community/code-of-conduct)
-
 ## 關於網站的決策是如何制定的 {#how-decisions-about-the-site-are-made}
 
 關於個別拉取請求 (PR)、設計演進和重大升級的決策，是由來自整個以太坊生態系統的團隊所制定。這個團隊包括專案經理、開發人員、設計師、行銷與公關人員，以及主題專家。社群的意見會影響每一個決策：因此，請在議題 (issue) 中提出問題、提交拉取請求 (PR)，或聯絡團隊：
