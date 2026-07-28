@@ -1,10 +1,11 @@
 import type { NextRequest } from "next/server"
 import { getTranslations } from "next-intl/server"
 
-import { SITE_URL } from "@/lib/constants"
 import { getBlogFallbackHero } from "@/lib/utils/blog"
 import { getBlogPostsData } from "@/lib/utils/md"
 import { getFullUrl } from "@/lib/utils/url"
+
+import { SITE_URL } from "@/lib/constants"
 
 export const dynamic = "force-static"
 
