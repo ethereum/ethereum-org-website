@@ -8,17 +8,17 @@ description: ethereum.org Çeviri Programı hakkında bilgi
 
 ![](./enterprise-eth.png)
 
-## Çevirmemize yardım edin {#help-us-translate}
+## Çevirmemize yardım edin {#program-status}
 
 ethereum.org Çeviri Programı herkese açıktır ve herkes katkıda bulunabilir!
 
 1. Crowdin hesabınıza giriş yapmanız veya kaydolmanız gerekecektir.
 2. Katkıda bulunmak istediğiniz dili seçin.
-3. Başlamadan önce, Crowdin'i nasıl kullanacağınızı öğrenmek için [Nasıl çeviri yapılır](/contributing/translation-program/how-to-translate/) kılavuzuna ve ipuçları ile en iyi uygulamalar için [Çeviri Stil Kılavuzu](/contributing/translation-program/translators-guide/)'na göz atın.
+3. Başlamadan önce, Crowdin'i nasıl kullanacağınızı öğrenmek için [Nasıl çeviri yapılır](/contributing/translation-program/acknowledgements/) kılavuzuna ve ipuçları ile en iyi uygulamalar için [Çeviri Stil Kılavuzu](/contributing/translation-program/contributors/)'na göz atın.
 4. Makine çevirileri onaylanmayacaktır.
 5. Tüm çeviriler siteye eklenmeden önce incelenir, bu nedenle çevirilerinizin yayına girmesi kısa bir süre alacaktır.
 
-_Çeviriler üzerinde iş birliği yapmak, soru sormak, geri bildirim ve fikir paylaşmak veya bir çeviri grubuna katılmak için [ethereum.org Discord](https://discord.gg/ethereum-org) sunucusuna katılın._
+_Çeviriler üzerinde iş birliği yapmak, soru sormak, geri bildirim ve fikir paylaşmak veya bir çeviri grubuna katılmak için [ethereum.org Discord](https://github.com/ethereum/ethereum-org-website/issues/new/choose) sunucusuna katılın._
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Çeviriye başla
@@ -57,33 +57,24 @@ Ethereum.org, binlerce topluluk üyesi tarafından çevrilmektedir ve onlar Çev
 
 [Liderlik tabloları](/contributing/translation-program/acknowledgements/) ve [Çeviri Programına katkıda bulunanların tam listesi](/contributing/translation-program/contributors/) kullanılarak en iyi çevirmenlerimize açıkça teşekkür edilmesi.
 
-#### Ödüller {#rewards}
-
-Geçmişte, en aktif katılımcılarımızı [Devcon](https://devcon.org/en/) ve [Devconnect](https://devconnect.org/) gibi Ethereum konferanslarına biletlerin yanı sıra özel ethereum.org ürünleriyle geriye dönük olarak ödüllendirdik.
-
-Katkıda bulunanlarımızı ödüllendirmek için sürekli olarak yeni ve yenilikçi yollar düşünüyoruz, bu yüzden takipte kalın!
-
-### Kılavuzlar ve kaynaklar {#guides-and-resources}
-
-Çeviri Programına katkıda bulunuyorsanız veya dahil olmayı düşünüyorsanız, aşağıdaki çeviri kılavuzlarına göz atmalısınız:
+#### Ödüller
+Geçmişte, en aktif katkıda bulunanlarımızı [Devcon](https://devcon.org/en/) ve [Devconnect](https://devconnect.org/) gibi Ethereum konferanslarına biletlerin yanı sıra özel ethereum.org ürünleriyle geriye dönük olarak ödüllendirdik.
+### Kılavuzlar ve kaynaklar
+Bu referans materyalleri, çeviri toplulukları ve kendi programlarını yürüten projeler için erişilebilir olmaya devam etmektedir:
 
 - [Çeviri Stil Kılavuzu](/contributing/translation-program/translators-guide/) _– ethereum.org çevirmenleri için talimatlar ve ipuçları_
 - [Çeviri SSS](/contributing/translation-program/faq/) _– ethereum.org Çeviri Programı hakkında sıkça sorulan sorular ve cevapları_
-- [Crowdin çevrim içi düzenleyici kılavuzu](https://support.crowdin.com/online-editor/) _– Crowdin çevrim içi düzenleyicisinin ve Crowdin'in bazı gelişmiş özelliklerinin kullanımına dair derinlemesine bir kılavuz_
 
 Diğer faydalı çeviri araçları, çevirmen toplulukları ve Çeviri Programı blog yazıları için lütfen [Kaynaklar sayfasını](/contributing/translation-program/resources/) ziyaret edin.
-
 ## İletişime geçin {#get-in-touch}
 
-Herhangi bir sorunuz mu var? Veya ekibimizle ve diğer çevirmenlerle iş birliği yapmak mı istiyorsunuz? Lütfen [ethereum.org Discord sunucumuzun](https://discord.gg/ethereum-org) #translations kanalında paylaşım yapın.
+Herhangi bir sorunuz mu var? Veya ekibimizle ve diğer çevirmenlerle iş birliği yapmak mı istiyorsunuz? Lütfen [ethereum.org Discord sunucumuzun](https://github.com/ethereum/ethereum-org-website/issues/new/choose) #translations kanalında paylaşım yapın.
 
 Bize translations@ethereum.org adresinden de ulaşabilirsiniz.
 
-## Kendi çeviri programınızı başlatmak {#starting-a-translation-program}
+## Kendi çeviri programınızı başlatmak
+Eğitim içeriğini herkes için erişilebilir kılmak ethereum.org için bir öncelik olmaya devam ediyor ve diğer Ethereum projelerinin kendi çeviri çalışmalarını organize etmelerine, yönetmelerine ve geliştirmelerine yardımcı olmak istiyoruz.
 
-Ethereum içeriğini mümkün olduğunca çok dile çevirmeye ve eğitim içeriğini herkes için erişilebilir kılmaya kendimizi adadık.
-Çevirilere odaklanmamız doğrultusunda, diğer Ethereum projelerinin kendi çeviri çalışmalarını organize etmelerine, yönetmelerine ve geliştirmelerine yardımcı olmak istiyoruz.
+Bu nedenle, ethereum.org'u çevirme sürecinde edindiğimiz bazı ipuçlarını ve en iyi uygulamaları içeren bir [Çeviri Programı rehberi](/contributing/translation-program/playbook/) oluşturduk.
 
-Bu nedenle, ethereum.org'u çevirme sürecinde edindiğimiz bazı ipuçlarını ve en iyi uygulamaları içeren bir [Çeviri Programı başvuru kitabı](/contributing/translation-program/playbook/) oluşturduk.
-
-Daha fazla iş birliği yapmak veya çeviri kaynaklarımızdan bazılarını kullanmak ister misiniz? Başvuru kitabı hakkında herhangi bir geri bildiriminiz var mı? Sizden translations@ethereum.org adresinden haber almayı çok isteriz.
+Daha fazla iş birliği yapmak veya çeviri kaynaklarımızdan bazılarını kullanmak ister misiniz? Rehber hakkında herhangi bir geri bildiriminiz var mı? Sizden translations@ethereum.org adresinden haber almaktan memnuniyet duyarız.

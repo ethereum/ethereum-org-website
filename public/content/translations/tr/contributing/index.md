@@ -50,16 +50,14 @@ Bunlar, çözmemize yardımcı olabileceğiniz ve sorumluluk alabileceğiniz bir
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">Tüm görevleri görün</ButtonLink>
 
-## ethereum.org üzerinde nasıl çalışılır {#how-to-update-content}
+Katkıda bulunmak için (web sitesine içerik veya görseller eklemek veya düzenlemek, hataları düzeltmek, açık görevler üzerinde çalışmak) bir [GitHub](https://github.com/) hesabına ihtiyacınız olacaktır.
 
-[Çeviri Programına](/contributing/translation-program/) katkıda bulunmak isterseniz, [Crowdin](https://crowdin.com/project/ethereum-org) üzerinde bir hesap oluşturmanızı rica ediyoruz. Diğer her şey için (web sitesine içerik veya görseller eklemek veya düzenlemek, hataları düzeltmek, açık görevler üzerinde çalışmak) bir [GitHub](https://github.com/) hesabına ihtiyacınız olacaktır.
-
-Tüm güncellemeler GitHub PR (Çekme İsteği) süreci aracılığıyla yapılır. Bu, web sitesinin yerel bir kopyasını oluşturduğunuz, değişikliklerinizi yaptığınız ve değişikliklerinizin birleştirilmesini talep ettiğiniz anlamına gelir. Bunu daha önce hiç yapmadıysanız, [GitHub depomuzun](https://github.com/ethereum/ethereum-org-website) altındaki talimatları izleyin.
+Tüm güncellemeler GitHub PR süreci aracılığıyla yapılır. Bu, web sitesinin yerel bir kopyasını oluşturduğunuz, değişikliklerinizi yaptığınız ve değişikliklerinizin birleştirilmesini talep ettiğiniz anlamına gelir. Bunu daha önce hiç yapmadıysanız, [GitHub depomuzun](https://github.com/ethereum/ethereum-org-website) altındaki talimatları izleyin.
 
 Herhangi bir şey üzerinde çalışmak için izne ihtiyacınız yoktur, ancak ne yapmayı planladığınızı bize bildirmeniz her zaman en iyisidir. Bunu şu şekilde yapabilirsiniz:
 
-- [GitHub](https://github.com/ethereum/ethereum-org-website)'daki bir soruna veya PR'a yorum yaparak
-- [Discord sunucumuzda](https://discord.gg/ethereum-org) mesajlaşarak
+- [GitHub](https://github.com/ethereum/ethereum-org-website) üzerinde bir soruna veya PR'a yorum yaparak
+- [Discord sunucumuzda](https://discord.gg/ethereum-org) mesaj göndererek
 
 Katkıda bulunmadan önce şunlara aşina olduğunuzdan emin olun:
 
@@ -67,7 +65,6 @@ Katkıda bulunmadan önce şunlara aşina olduğunuzdan emin olun:
 - [tasarım ilkelerimiz](/contributing/design-principles/)
 - [stil rehberimiz](/contributing/style-guide/)
 - [davranış kurallarımız](/community/code-of-conduct)
-
 ## Site hakkındaki kararlar nasıl alınır {#how-decisions-about-the-site-are-made}
 
 Bireysel PR'lar, tasarımın gelişimi ve büyük güncellemeler hakkındaki kararlar, Ethereum ekosisteminin dört bir yanından gelen bir ekip tarafından alınır. Bu ekipte proje yöneticileri, geliştiriciler, tasarımcılar, pazarlama ve iletişim uzmanları ile konu uzmanları yer alır. Topluluğun girdileri her kararı şekillendirir: bu nedenle lütfen sorunlarda (issues) sorular sorun, PR'lar gönderin veya ekiple iletişime geçin:

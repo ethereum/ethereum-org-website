@@ -59,11 +59,9 @@ Eğer bir geliştirici değilseniz, Ethereum'da nereden başlayacağınızı bil
 
 - Birçok açık kaynaklı topluluk çağrısı vardır ve not alan kişilerin olması büyük bir yardımdır. İlgileniyorsanız, [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu) sunucusuna katılın ve kendinizi tanıtın!
 
-### Ethereum içeriğini ana dilinize çevirin {#translate-ethereum}
-
-- ethereum.org, web sitesini ve diğer kaynakları birçok farklı dile çeviren bir Çeviri Programı yürütmektedir
-- Nasıl dahil olabileceğinizi [buradan](/contributing/translation-program) öğrenin
-
+### Çevrilmiş Ethereum içeriğini iyileştirmeye yardımcı olun
+- ethereum.org Çeviri Programı kademeli olarak sonlandırılıyor ve artık yeni çevirmenlerin sisteme katılımını sağlamıyor—durumu ve geçmişi için [program sayfasına](/contributing/translation-program/) göz atın
+- Yine de [mevcut çevirilerdeki hataları bildirerek](https://github.com/ethereum/ethereum-org-website/issues/new/choose) yardımcı olabilirsiniz
 ### Bir düğüm çalıştırın {#run-a-node}
 
 Ethereum'u daha da merkeziyetsizleştirmeye yardımcı olan binlerce düğüm operatörüne katılın.
