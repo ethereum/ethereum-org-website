@@ -111,6 +111,16 @@ const quizzes = {
       "smart-contracts-4",
     ],
   },
+  "energy-consumption": {
+    title: "energy-consumption",
+    questions: [
+      "energy-consumption-1",
+      "energy-consumption-2",
+      "energy-consumption-3",
+      "energy-consumption-4",
+      "energy-consumption-5",
+    ],
+  },
   privacy: {
     title: "learn-quizzes:page-privacy",
     questions: [
@@ -151,6 +161,10 @@ const ethereumBasicsQuizzesRaw: QuizzesSection[] = [
   },
   {
     id: "smart-contracts",
+    level: "beginner",
+  },
+  {
+    id: "energy-consumption",
     level: "beginner",
   },
 ]

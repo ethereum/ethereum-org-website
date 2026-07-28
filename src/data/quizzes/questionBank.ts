@@ -165,6 +165,13 @@ const questionBankConfig: QuestionBankConfig = {
     { totalAnswers: 4, correctAnswer: 4 },
     { totalAnswers: 4, correctAnswer: 2 },
   ],
+  "energy-consumption": [
+    { totalAnswers: 4, correctAnswer: 1 },
+    { totalAnswers: 4, correctAnswer: 3 },
+    { totalAnswers: 2, correctAnswer: 2, explanationOverrides: [1, 1] },
+    { totalAnswers: 4, correctAnswer: 3 },
+    { totalAnswers: 4, correctAnswer: 4 },
+  ],
   privacy: [
     { totalAnswers: 4, correctAnswer: 4, explanationOverrides: [1, 1, 1, 4] },
     { totalAnswers: 4, correctAnswer: 2 },
