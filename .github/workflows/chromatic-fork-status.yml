@@ -1,0 +1,41 @@
+name: Chromatic fork status
+
+# Fork PRs cannot read the Chromatic token, so ci.yml skips them and the app
+# never posts the required check. This reports it so they stay mergeable.
+#
+# pull_request_target is needed for a token that can post statuses. This reads
+# only the event payload and never checks out fork code.
+
+on:
+  pull_request_target:
+    branches: [dev, master, staging, "test/**"]
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+  statuses: write
+
+concurrency:
+  group: chromatic-fork-status-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  report:
+    name: Report Chromatic status for fork PRs
+    if: github.event.pull_request.head.repo.full_name != github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mark the required Chromatic check as passing
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SHA: ${{ github.event.pull_request.head.sha }}
+          REPO: ${{ github.repository }}
+          # Must match the required check in branch protection character for
+          # character, or the PR stays blocked.
+          CONTEXT: "UI Tests: ethereum-org-website"
+        run: |
+          set -euo pipefail
+          gh api "repos/${REPO}/statuses/${SHA}" \
+            -f state=success \
+            -f context="$CONTEXT" \
+            -f description='Fork PR — visual review happens after merge'

@@ -74,11 +74,16 @@ jobs:
 
   visual-tests:
     name: Visual regression (Chromatic)
-    # Runs on every non-draft PR. TurboSnap (`onlyChanged`) means PRs with no
-    # affected stories snapshot nothing, so this is cheap for content-only PRs.
-    # This job only publishes to Chromatic; the required merge gate is the
-    # Chromatic App's "UI Tests" check, so the job itself always exits 0.
-    if: github.event.pull_request.draft == false
+    # Non-draft PRs whose head is in this repo. TurboSnap (`onlyChanged`) keeps
+    # PRs with no affected stories cheap. This job only publishes; the merge gate
+    # is the Chromatic App's "UI Tests" check, so it always exits 0.
+    #
+    # Forks are excluded: they cannot read the token, and pinning to this repo
+    # also keeps a fork's own Actions off our quota. Their required check comes
+    # from chromatic-fork-status.yml.
+    if: >-
+      github.event.pull_request.draft == false
+      && github.event.pull_request.head.repo.full_name == 'ethereum/ethereum-org-website'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -90,7 +95,7 @@ jobs:
       - name: Publish to Chromatic
         uses: chromaui/action@v16
         with:
-          projectToken: fee8e66c9916
+          projectToken: ${{ secrets.CHROMATIC_STORYBOOK_TOKEN }}
           # Not named chromatic.config.json: that filename is auto-loaded by
           # both projects, and untraced without onlyChanged fails the pages job.
           configFile: chromatic.storybook.json
