@@ -4,29 +4,23 @@ lang: id
 description: Informasi tentang Program Terjemahan ethereum.org
 ---
 
-Program Terjemahan adalah upaya kolaboratif untuk menerjemahkan ethereum.org ke dalam berbagai bahasa guna membuat situs web ini lebih mudah diakses oleh miliaran penutur non-bahasa Inggris di seluruh dunia.
+Program Terjemahan adalah upaya kolaboratif untuk menerjemahkan ethereum.org ke dalam berbagai bahasa, membuat situs web ini lebih mudah diakses oleh miliaran penutur non-bahasa Inggris di seluruh dunia.
 
 ![](./enterprise-eth.png)
 
-## Bantu kami menerjemahkan {#program-status}
+## Status program {#program-status}
 
-Program Terjemahan ethereum.org bersifat terbuka dan siapa saja dapat berkontribusi!
+Program Terjemahan ethereum.org sedang dihentikan secara bertahap dan tidak lagi melakukan orientasi penerjemah baru. Proyek Crowdin sedang ditutup, dan kami tidak menerima pengiriman terjemahan baru melaluinya.
 
-1. Anda harus masuk ke akun Crowdin Anda atau mendaftar.
-2. Pilih bahasa yang ingin Anda bantu terjemahkan.
-3. Sebelum memulai, silakan periksa panduan [Cara menerjemahkan](/contributing/translation-program/acknowledgements/) untuk mempelajari cara menggunakan Crowdin, dan [Panduan Gaya Terjemahan](/contributing/translation-program/contributors/) untuk kiat dan praktik terbaik.
-4. Terjemahan mesin tidak akan disetujui.
-5. Semua terjemahan ditinjau sebelum ditambahkan ke situs, sehingga akan ada sedikit penundaan sebelum terjemahan Anda ditayangkan.
+Kami sangat berterima kasih kepada ribuan penerjemah komunitas yang telah membuat ethereum.org tersedia dalam puluhan bahasa selama bertahun-tahun—karya mereka tetap tayang di situs ini, dan pengakuan mereka di halaman [penghargaan](/contributing/translation-program/acknowledgements/) serta [kontributor](/contributing/translation-program/contributors/) tetap dipertahankan.
 
-_Bergabunglah dengan [Discord ethereum.org](https://github.com/ethereum/ethereum-org-website/issues/new/choose) untuk berkolaborasi dalam terjemahan, mengajukan pertanyaan, berbagi umpan balik dan ide, atau bergabung dengan grup terjemahan._
+Jika Anda menemukan kesalahan pada terjemahan yang ada, silakan [buka isu di GitHub](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
-<ButtonLink href="https://crowdin.com/project/ethereum-org/">
-  Mulai menerjemahkan
-</ButtonLink>
+_Bergabunglah dengan [Discord ethereum.org](https://discord.gg/ethereum-org) untuk mengajukan pertanyaan atau membagikan umpan balik._
 
 ## Tentang Program Terjemahan {#about-us}
 
-Komunitas [Ethereum](/) bertujuan untuk menjadi global dan inklusif, namun sebagian besar kontennya hanya melayani penutur bahasa Inggris, mengabaikan 6 miliar penutur non-bahasa Inggris di dunia. Agar ethereum.org dapat bertindak sebagai portal ke Ethereum untuk komunitas di seluruh dunia, kami percaya bahwa menyediakan konten Ethereum dalam bahasa ibu mereka bagi penutur non-bahasa Inggris adalah hal yang penting.
+Komunitas [Ethereum](/) bertujuan untuk menjadi global dan inklusif, namun sebagian besar kontennya hanya melayani penutur bahasa Inggris, mengabaikan 6 miliar penutur non-bahasa Inggris di dunia. Agar ethereum.org dapat bertindak sebagai portal menuju Ethereum bagi komunitas di seluruh dunia, kami percaya bahwa menyediakan konten Ethereum dalam bahasa ibu bagi penutur non-bahasa Inggris adalah hal yang esensial.
 
 Program Terjemahan ethereum.org bertujuan untuk membuat Ethereum dapat diakses oleh semua orang dengan menerjemahkan ethereum.org dan konten Ethereum lainnya ke dalam sebanyak mungkin bahasa.
 
@@ -35,14 +29,14 @@ Baca lebih lanjut tentang [misi dan visi](/contributing/translation-program/miss
 ### Kemajuan kami sejauh ini {#our-progress}
 
 - [**6.900 +** penerjemah](/contributing/translation-program/contributors/)
-- **68** bahasa ditayangkan di situs
+- **68** bahasa tayang di situs
 - [**2,89 juta** kata diterjemahkan pada tahun 2024](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 
 ### Penghargaan {#acknowledgements}
 
-Ethereum.org diterjemahkan oleh ribuan anggota komunitas dan mereka adalah bagian utama dari Program Terjemahan.
+Ethereum.org telah diterjemahkan oleh ribuan anggota komunitas, dan mereka adalah bagian kunci dari Program Terjemahan.
 Kami ingin memberikan penghargaan kepada para penerjemah kami dan mendukung mereka dalam jalur karier mereka. Berikut adalah beberapa penghargaan penerjemah kami:
 
 #### Sertifikat {#certificate}
@@ -59,25 +53,27 @@ Penghargaan publik untuk penerjemah teratas kami menggunakan [papan peringkat](/
 
 #### Hadiah {#rewards}
 
-Di masa lalu, kami telah memberikan hadiah secara retroaktif kepada kontributor kami yang paling aktif dengan tiket ke konferensi Ethereum seperti [Devcon](https://devcon.org/en/) dan [Devconnect](https://devconnect.org/), serta merchandise eksklusif ethereum.org.
+Di masa lalu, kami telah memberikan hadiah secara retroaktif kepada kontributor paling aktif kami berupa tiket ke konferensi Ethereum seperti [Devcon](https://devcon.org/en/) dan [Devconnect](https://devconnect.org/), serta merchandise eksklusif ethereum.org.
+
 ### Panduan dan sumber daya {#guides-and-resources}
 
 Materi referensi ini tetap tersedia untuk komunitas terjemahan dan proyek yang menjalankan program mereka sendiri:
 
 - [Panduan Gaya Terjemahan](/contributing/translation-program/translators-guide/) _– instruksi dan kiat untuk penerjemah ethereum.org_
-- [FAQ Terjemahan](/contributing/translation-program/faq/) _– pertanyaan yang sering diajukan dan jawaban tentang Program Terjemahan ethereum.org_
+- [Tanya Jawab Terjemahan](/contributing/translation-program/faq/) _– pertanyaan yang sering diajukan dan jawaban tentang Program Terjemahan ethereum.org_
 
-Untuk alat terjemahan berguna lainnya, komunitas penerjemah, dan postingan blog Program Terjemahan, silakan kunjungi [halaman Sumber Daya](/contributing/translation-program/resources/).
+Untuk alat terjemahan berguna lainnya, komunitas penerjemah, dan pos blog Program Terjemahan, silakan kunjungi [halaman Sumber Daya](/contributing/translation-program/resources/).
+
 ## Hubungi kami {#get-in-touch}
 
-Apakah Anda memiliki pertanyaan? Atau ingin berkolaborasi dengan tim kami dan penerjemah lainnya? Silakan posting di saluran #translations di [server Discord ethereum.org](https://github.com/ethereum/ethereum-org-website/issues/new/choose) kami
+Apakah Anda memiliki pertanyaan? Atau ingin berkolaborasi dengan tim kami dan penerjemah lainnya? Silakan kirim pesan di saluran #translations di [server Discord ethereum.org](https://discord.gg/ethereum-org) kami
 
 Anda juga dapat menghubungi kami di translations@ethereum.org
 
 ## Memulai program terjemahan Anda sendiri {#starting-a-translation-program}
 
-Menyediakan konten edukasi bagi semua orang tetap menjadi prioritas bagi ethereum.org, dan kami ingin membantu proyek Ethereum lainnya mengatur, mengelola, dan meningkatkan upaya terjemahan mereka sendiri.
+Membuat konten edukasi tersedia untuk semua orang tetap menjadi prioritas bagi ethereum.org, dan kami ingin membantu proyek Ethereum lainnya mengatur, mengelola, dan meningkatkan upaya terjemahan mereka sendiri.
 
 Untuk alasan ini, kami telah membuat [buku panduan Program Terjemahan](/contributing/translation-program/playbook/) yang berisi beberapa kiat dan praktik terbaik yang telah kami pelajari dalam proses menerjemahkan ethereum.org.
 
-Ingin berkolaborasi lebih lanjut atau menggunakan beberapa sumber daya terjemahan kami? Punya umpan balik tentang buku panduan ini? Kami akan sangat senang mendengar dari Anda di translations@ethereum.org.
+Ingin berkolaborasi lebih lanjut atau menggunakan beberapa sumber daya terjemahan kami? Punya umpan balik tentang buku panduan tersebut? Kami akan sangat senang mendengar dari Anda di translations@ethereum.org.
