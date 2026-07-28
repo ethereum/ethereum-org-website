@@ -50,24 +50,23 @@ Oto kilka bieżących zadań, w których rozwiązaniu możesz nam pomóc i za kt
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">Zobacz wszystkie zadania</ButtonLink>
 
-## Jak pracować nad ethereum.org {#how-to-update-content}
+## Jak pracować nad ethereum.org
 
-Jeśli chcesz wziąć udział w [Programie Tłumaczeń](/contributing/translation-program/), prosimy o założenie konta na platformie [Crowdin](https://crowdin.com/project/ethereum-org). Do wszystkiego innego – dodawania lub edytowania treści czy elementów wizualnych na stronie, naprawiania błędów, pracy nad otwartymi zadaniami – będziesz potrzebować konta na [GitHub](https://github.com/).
+Aby wnieść wkład (dodawać lub edytować treść lub elementy wizualne na stronie, naprawiać błędy, pracować nad otwartymi zadaniami), będziesz potrzebować konta na [GitHub](https://github.com/).
 
-Wszystkie aktualizacje są wprowadzane poprzez proces Pull Request (PR) na GitHub. Oznacza to, że tworzysz lokalną kopię strony, wprowadzasz zmiany i prosisz o ich scalenie (merge). Jeśli nigdy wcześniej tego nie robiłeś, postępuj zgodnie z instrukcjami na dole naszego [repozytorium GitHub](https://github.com/ethereum/ethereum-org-website).
+Wszystkie aktualizacje są wprowadzane za pośrednictwem procesu PR na GitHub. Oznacza to, że tworzysz lokalną kopię strony, wprowadzasz zmiany i prosisz o ich scalenie. Jeśli nigdy wcześniej tego nie robiłeś, postępuj zgodnie z instrukcjami na dole naszego [repozytorium GitHub](https://github.com/ethereum/ethereum-org-website).
 
 Nie potrzebujesz pozwolenia, aby nad czymkolwiek pracować, ale zawsze najlepiej jest dać nam znać, co planujesz zrobić. Możesz to zrobić poprzez:
 
 - Skomentowanie zgłoszenia (issue) lub PR na [GitHub](https://github.com/ethereum/ethereum-org-website)
 - Wysłanie wiadomości na naszym [serwerze Discord](https://discord.gg/ethereum-org)
 
-Przed rozpoczęciem współtworzenia upewnij się, że znasz:
+Przed wniesieniem wkładu upewnij się, że znasz:
 
 - ewoluującą [wizję ethereum.org](/about/)
 - nasze [zasady projektowania](/contributing/design-principles/)
 - nasz [przewodnik po stylu](/contributing/style-guide/)
 - nasz [kodeks postępowania](/community/code-of-conduct)
-
 ## Jak podejmowane są decyzje dotyczące strony {#how-decisions-about-the-site-are-made}
 
 Decyzje dotyczące poszczególnych PR-ów, ewolucji projektu i głównych aktualizacji są podejmowane przez zespół z całego ekosystemu Ethereum. W skład tego zespołu wchodzą kierownicy projektów, programiści, projektanci, specjaliści ds. marketingu i komunikacji oraz eksperci merytoryczni. Wkład społeczności ma wpływ na każdą decyzję: dlatego prosimy o zadawanie pytań w zgłoszeniach (issues), przesyłanie PR-ów lub kontakt z zespołem:
