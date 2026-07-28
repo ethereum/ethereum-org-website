@@ -77,6 +77,9 @@ export default async function Page(props: { params: Promise<Params> }) {
   const params = await props.params
   const { locale } = params
 
+  // Set locale before next-intl APIs so on-demand renders stay static
+  setRequestLocale(locale)
+
   const t = await getTranslations("page-bug-bounty")
   const tCommon = await getTranslations("common")
 
