@@ -8,17 +8,17 @@ description: ethereum.org翻訳プログラムに関する情報
 
 ![](./enterprise-eth.png)
 
-## 翻訳にご協力ください {#help-us-translate}
+## 翻訳にご協力ください {#program-status}
 
 ethereum.org翻訳プログラムはオープンであり、誰でも貢献できます！
 
 1. Crowdinアカウントにログインするか、サインアップする必要があります。
 2. 貢献したい言語を選択します。
-3. 始める前に、Crowdinの使い方を学ぶための[翻訳方法](/contributing/translation-program/how-to-translate/)ガイドと、ヒントやベストプラクティスが記載された[翻訳スタイルガイド](/contributing/translation-program/translators-guide/)を確認してください。
+3. 始める前に、Crowdinの使い方を学ぶための[翻訳方法](/contributing/translation-program/acknowledgements/)ガイドと、ヒントやベストプラクティスが記載された[翻訳スタイルガイド](/contributing/translation-program/contributors/)を確認してください。
 4. 機械翻訳は承認されません。
 5. すべての翻訳はサイトに追加される前にレビューされるため、翻訳が公開されるまでに少し時間がかかります。
 
-_翻訳で協力したり、質問したり、フィードバックやアイデアを共有したり、翻訳グループに参加したりするには、[ethereum.orgのディスコード](https://discord.gg/ethereum-org)に参加してください。_
+_翻訳で協力したり、質問したり、フィードバックやアイデアを共有したり、翻訳グループに参加したりするには、[ethereum.orgのディスコード](https://github.com/ethereum/ethereum-org-website/issues/new/choose)に参加してください。_
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   翻訳を始める
@@ -57,33 +57,27 @@ Ethereum.orgは何千人ものコミュニティメンバーによって翻訳�
 
 [リーダーボード](/contributing/translation-program/acknowledgements/)や[翻訳プログラムの全貢献者リスト](/contributing/translation-program/contributors/)を使用した、トップ翻訳者への公式な謝辞。
 
-#### 報酬 {#rewards}
+#### 報酬
 
-過去には、最もアクティブな貢献者に対して、[Devcon](https://devcon.org/en/)や[Devconnect](https://devconnect.org/)などのイーサリアムカンファレンスのチケットや、ethereum.orgの限定グッズを遡及的に報酬として提供してきました。
+過去には、最もアクティブな貢献者に対して、[Devcon](https://devcon.org/en/)や[Devconnect](https://devconnect.org/)などのイーサリアムカンファレンスのチケットや、ethereum.orgの限定グッズを事後的に報酬として提供してきました。
+### ガイドとリソース
 
-私たちは常に貢献者に報いるための新しく革新的な方法を考えていますので、ご期待ください！
+これらの参考資料は、独自のプログラムを運営している翻訳コミュニティやプロジェクトで引き続き利用できます。
 
-### ガイドとリソース {#guides-and-resources}
-
-翻訳プログラムに貢献している、または参加を検討している場合は、以下の翻訳ガイドを確認してください。
-
-- [翻訳スタイルガイド](/contributing/translation-program/translators-guide/) _– ethereum.org翻訳者向けの手順とヒント_
-- [翻訳に関するFAQ](/contributing/translation-program/faq/) _– ethereum.org翻訳プログラムに関するよくある質問と回答_
-- [Crowdinオンラインエディターガイド](https://support.crowdin.com/online-editor/) _– Crowdinオンラインエディターの使用方法とCrowdinの高度な機能に関する詳細なガイド_
+- [翻訳スタイルガイド](/contributing/translation-program/translators-guide/) _– ethereum.orgの翻訳者向けの手順とヒント_
+- [翻訳に関するよくある質問](/contributing/translation-program/faq/) _– ethereum.org翻訳プログラムに関するよくある質問と回答_
 
 その他の便利な翻訳ツール、翻訳者コミュニティ、翻訳プログラムのブログ記事については、[リソースページ](/contributing/translation-program/resources/)をご覧ください。
-
 ## お問い合わせ {#get-in-touch}
 
-質問がありますか？または、私たちのチームや他の翻訳者と協力したいですか？[ethereum.orgのディスコードサーバー](https://discord.gg/ethereum-org)の#translationsチャンネルに投稿してください。
+質問がありますか？または、私たちのチームや他の翻訳者と協力したいですか？[ethereum.orgのディスコードサーバー](https://github.com/ethereum/ethereum-org-website/issues/new/choose)の#translationsチャンネルに投稿してください。
 
 translations@ethereum.org までご連絡いただくことも可能です。
 
-## 独自の翻訳プログラムを始める {#starting-a-translation-program}
+## 独自の翻訳プログラムの開始
 
-私たちは、イーサリアムのコンテンツをできるだけ多くの言語に翻訳し、誰もが教育コンテンツを利用できるようにすることに専念しています。
-翻訳への注力の一環として、他のイーサリアムプロジェクトが独自の翻訳の取り組みを整理、管理、改善できるよう支援したいと考えています。
+教育コンテンツを誰もが利用できるようにすることは、引き続きethereum.orgの優先事項であり、他のイーサリアムプロジェクトが独自の翻訳の取り組みを組織、管理、改善できるよう支援したいと考えています。
 
-そのため、ethereum.orgを翻訳する過程で得たヒントやベストプラクティスをまとめた[翻訳プログラムプレイブック](/contributing/translation-program/playbook/)を作成しました。
+そのため、ethereum.orgの翻訳プロセスで得たヒントやベストプラクティスをまとめた[翻訳プログラムのプレイブック](/contributing/translation-program/playbook/)を作成しました。
 
-さらに協力したい、または私たちの翻訳リソースを使用したいですか？プレイブックに関するフィードバックがありますか？translations@ethereum.org までぜひご連絡ください。
+さらに協力したい、または私たちの翻訳リソースを使用したいとお考えですか？プレイブックに関するフィードバックはありますか？translations@ethereum.org までぜひご連絡ください。

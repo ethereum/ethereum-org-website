@@ -50,24 +50,23 @@ ethereum.orgは、ウェブサイトの翻訳、執筆、デザイン、保守�
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">すべてのタスクを見る</ButtonLink>
 
-## ethereum.orgでの作業方法 {#how-to-update-content}
+## ethereum.orgでの作業方法
 
-[翻訳プログラム](/contributing/translation-program/)で貢献したい場合は、[Crowdin](https://crowdin.com/project/ethereum-org)でアカウントを作成するようお願いします。それ以外のこと（ウェブサイトへのコンテンツやビジュアルの追加・編集、バグの修正、オープンなタスクへの取り組みなど）については、[GitHub](https://github.com/)アカウントが必要になります。
+貢献する（ウェブサイトへのコンテンツやビジュアルの追加や編集、バグの修正、オープンなタスクへの取り組み）には、[GitHub](https://github.com/)アカウントが必要になります。
 
-すべての更新はGitHubのPR（プルリクエスト）プロセスを通じて行われます。つまり、ウェブサイトのローカルコピーを作成し、変更を加えて、その変更のマージをリクエストします。これまでに行ったことがない場合は、私たちの[GitHubリポジトリ](https://github.com/ethereum/ethereum-org-website)の下部にある手順に従ってください。
+すべての更新はGitHubのPRプロセスを通じて行われます。つまり、ウェブサイトのローカルコピーを作成し、変更を加えて、その変更のマージをリクエストします。これまでに行ったことがない場合は、私たちの[GitHubリポジトリ](https://github.com/ethereum/ethereum-org-website)の下部にある手順に従ってください。
 
-何かに取り組むために許可は必要ありませんが、何を計画しているかを私たちに知らせておくのが常に最善です。以下の方法で知らせることができます：
+作業を行うのに許可は必要ありませんが、何を計画しているかを私たちに知らせておくのが常に最善です。以下の方法で知らせることができます：
 
 - [GitHub](https://github.com/ethereum/ethereum-org-website)のIssueまたはPRにコメントする
 - 私たちの[ディスコードサーバー](https://discord.gg/ethereum-org)でメッセージを送る
 
 貢献する前に、以下についてよく理解しておいてください：
 
-- 進化し続ける[ethereum.orgのビジョン](/about/)
+- 進化する[ethereum.orgのビジョン](/about/)
 - 私たちの[デザイン原則](/contributing/design-principles/)
 - 私たちの[スタイルガイド](/contributing/style-guide/)
 - 私たちの[行動規範](/community/code-of-conduct)
-
 ## サイトに関する決定はどのように行われるか {#how-decisions-about-the-site-are-made}
 
 個々のPR、デザインの進化、および主要なアップグレードに関する決定は、イーサリアムエコシステム全体から集まったチームによって行われます。このチームには、プロジェクトマネージャー、開発者、デザイナー、マーケティングおよびコミュニケーション担当者、そして専門家が含まれます。コミュニティからの意見はすべての決定に反映されます。そのため、Issueで質問を提起したり、PRを提出したり、チームに連絡したりしてください：
