@@ -4,7 +4,7 @@ lang: en
 description: Information about the ethereum.org Translation Program
 ---
 
-The Translation Program is a collaborative effort to translate ethereum.org into different languages in order to make the website more accessible to billions of non-English speakers around the world.
+The Translation Program was a collaborative effort to translate ethereum.org into different languages, making the website more accessible to billions of non-English speakers around the world.
 
 ![](./enterprise-eth.png)
 
@@ -22,7 +22,7 @@ _Join the [ethereum.org Discord](https://discord.gg/ethereum-org) to ask questio
 
 The [Ethereum](/) community aims to be global and inclusive, yet much of its content only caters to English speakers, leaving out the world's 6 billion non-English speakers. For ethereum.org to act as the portal into Ethereum for the worldwide community, we believe providing non-English speakers with Ethereum content in their native languages is essential.
 
-The ethereum.org Translation Program aims to make Ethereum accessible to everyone by translating ethereum.org and other Ethereum content into as many languages as possible.
+The ethereum.org Translation Program aimed to make Ethereum accessible to everyone by translating ethereum.org and other Ethereum content into as many languages as possible.
 
 Read more about the ethereum.org Translation Program [mission and vision](/contributing/translation-program/mission-and-vision).
 
@@ -36,7 +36,7 @@ Read more about the ethereum.org Translation Program [mission and vision](/contr
 
 ### Acknowledgements {#acknowledgements}
 
-Ethereum.org is translated by thousands of community members and they are the key part of the Translation Program.
+Ethereum.org has been translated by thousands of community members, and they are the key part of the Translation Program.
 We want to acknowledge our translators and support them on their career paths. Here are some of our translator acknowledgements:
 
 #### Certificate {#certificate}
@@ -55,8 +55,6 @@ Public acknowledgements of our top translators using [leaderboards](/contributin
 
 In the past, we have retroactively rewarded our most active contributors with tickets to Ethereum conferences like [Devcon](https://devcon.org/en/) and [Devconnect](https://devconnect.org/), as well as exclusive ethereum.org merch.
 
-We're constantly thinking of new and innovative ways to reward our contributors, so stay tuned!
-
 ### Guides and resources {#guides-and-resources}
 
 These reference materials remain available for translation communities and projects running their own programs:
@@ -74,8 +72,7 @@ You can also reach out to us at translations@ethereum.org
 
 ## Starting your own translation program {#starting-a-translation-program}
 
-We are dedicated to translating Ethereum content into as many languages as possible and making educational content available to everyone.
-In line with our focus on translations, we want to help other Ethereum projects organize, manage, and improve their own translation efforts.
+Making educational content available to everyone remains a priority for ethereum.org, and we want to help other Ethereum projects organize, manage, and improve their own translation efforts.
 
 For this reason, we have created a [Translation Program playbook](/contributing/translation-program/playbook/) that contains some tips and best practices we have picked up in the process of translating ethereum.org.
 
