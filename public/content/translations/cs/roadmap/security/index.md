@@ -43,6 +43,13 @@ Je možné, že by sofistikovaný útočník mohl identifikovat nadcházející 
 
 <ButtonLink variant="outline-color" href="/roadmap/secret-leader-election">Přečtěte si o tajné volbě lídra</ButtonLink>
 
-## Současný pokrok {#current-progress}
+## Současný pokrok
 
-**Bezpečnostní upgrady v plánu vývoje jsou v pokročilých fázích výzkumu**, ale neočekává se, že by byly v dohledné době implementovány. Dalšími kroky pro view-merge, PBS, SSF a SLE je dokončit specifikaci a začít s tvorbou prototypů.
+K polovině roku 2026:
+
+- **Tvorba bloků a odolnost vůči cenzuře**: ePBS a seznamy přístupů na úrovni bloku běží na devnetech Glamsterdam. FOCIL je plánován pro Hegotá s cílem v roce 2027.
+- **Finalita**: Minimmit a širší práce na konsensu Lean Ethereum zůstávají v aktivním výzkumu a zatím nebyly přiřazeny k žádnému forku.
+- **Kvantová odolnost**: Běží každotýdenní postkvantové interop devnety a milníky základní infrastruktury směřují přibližně k roku 2029.
+- **Zjednodušení**: Pectra a Fusaka byly nasazeny; Glamsterdam a Hegotá přinášejí další kolo úklidu.
+
+Žádná část této práce není dokončena a všechny časové osy jsou odhady, které se mohou posunout.
