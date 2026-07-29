@@ -9,6 +9,6 @@ educationLevel: intermediate
 topic:
   - "privacy"
 format: presentation
-author: 以太坊基金會
+author: "以太坊基金會"
 breadcrumb: "QuarkID"
 ---

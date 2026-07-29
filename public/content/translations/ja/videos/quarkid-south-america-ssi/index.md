@@ -9,6 +9,6 @@ educationLevel: intermediate
 topic:
   - "privacy"
 format: presentation
-author: イーサリアム・ファウンデーション
+author: "イーサリアム・ファウンデーション"
 breadcrumb: "QuarkID"
 ---

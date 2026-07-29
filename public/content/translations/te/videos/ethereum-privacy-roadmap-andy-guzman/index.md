@@ -10,6 +10,6 @@ topic:
   - "privacy"
   - "roadmap-and-priorities"
 format: presentation
-author: వెబ్3ప్రైవసీ నౌ
+author: "వెబ్3ప్రైవసీ నౌ"
 breadcrumb: "ప్రైవసీ రోడ్‌మ్యాప్"
 ---

@@ -10,6 +10,6 @@ topic:
   - "privacy"
   - "roadmap-and-priorities"
 format: presentation
-author: वेब3प्रायव्हसी नाऊ
+author: "वेब3प्रायव्हसी नाऊ"
 breadcrumb: "गोपनीयता रोडमॅप"
 ---

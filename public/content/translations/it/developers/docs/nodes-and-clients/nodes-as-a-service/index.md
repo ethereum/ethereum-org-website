@@ -47,14 +47,14 @@ Utilizzando un servizio di nodi stai centralizzando l'aspetto infrastrutturale d
 
 Scopri di più sui [vantaggi di eseguire il tuo nodo](/developers/docs/nodes-and-clients/#benefits-to-you).
 
-## Servizi di nodi popolari
+## Servizi di nodi popolari {#popular-node-services}
 
 Ecco un elenco di alcuni dei fornitori di nodi Ethereum più popolari, sentiti libero di aggiungere quelli mancanti! Ogni servizio di nodi offre vantaggi e funzionalità diversi oltre a livelli gratuiti o a pagamento, dovresti indagare su quali si adattano meglio alle tue esigenze prima di prendere una decisione.
 
 - [**Alchemy**](https://alchemy.com/)
   - [Documentazione](https://www.alchemy.com/docs/)
   - Funzionalità
-    - Il livello gratuito più ampio con 300 milioni di unità di calcolo al mese (~30 milioni di richieste getLatestBlock)
+    - Il livello gratuito più ampio con 300 milioni di unità di calcolo al mese (\~30 milioni di richieste getLatestBlock)
     - Supporto multi-catena per Polygon, Starknet, Optimism, Arbitrum
     - Alimenta circa il 70% delle più grandi applicazioni decentralizzate (dapp) di Ethereum e del volume di transazioni della finanza decentralizzata (DeFi)
     - Avvisi webhook in tempo reale tramite Alchemy Notify

@@ -10,6 +10,6 @@ topic:
   - "privacy"
   - "roadmap-and-priorities"
 format: presentation
-author: ওয়েবথ্রিপ্রাইভেসি নাউ
+author: "ওয়েবথ্রিপ্রাইভেসি নাউ"
 breadcrumb: "প্রাইভেসি রোডম্যাপ"
 ---

@@ -9,6 +9,6 @@ educationLevel: intermediate
 topic:
   - "privacy"
 format: presentation
-author: Этериум Фаундейшн
+author: "Этериум Фаундейшн"
 breadcrumb: "QuarkID"
 ---

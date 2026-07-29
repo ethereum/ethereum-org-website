@@ -9,6 +9,6 @@ educationLevel: intermediate
 topic:
   - "privacy"
 format: presentation
-author: ఎథిరియం ఫౌండేషన్
+author: "ఎథిరియం ఫౌండేషన్"
 breadcrumb: "QuarkID"
 ---

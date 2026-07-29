@@ -44,6 +44,7 @@ Ci sono potenziali componenti aggiuntivi per la PBS, come transazioni crittograf
 <ButtonLink variant="outline-color" href="/roadmap/secret-leader-election">Scopri di più sull'elezione segreta del leader</ButtonLink>
 
 ## Progressi attuali
+
 A metà del 2026:
 
 - **Costruzione di blocchi e resistenza alla censura**: l'ePBS e le liste di accesso a livello di blocco sono in esecuzione sulle devnet di Glamsterdam. FOCIL è pianificato per Hegotá, previsto per il 2027.

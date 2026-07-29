@@ -10,6 +10,6 @@ topic:
   - "privacy"
   - "roadmap-and-priorities"
 format: presentation
-author: 웹3프라이버시 나우
+author: "웹3프라이버시 나우"
 breadcrumb: "프라이버시 로드맵"
 ---
