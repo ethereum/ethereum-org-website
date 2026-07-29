@@ -1,19 +1,22 @@
 ---
-title: "Guia de estilo de tradução do ethereum.org"
+title: Guia de estilo de tradução do ethereum.org
 metaTitle: Guia para tradutores
 lang: pt-br
-description: "Instruções e dicas para tradutores do ethereum.org"
+description: Instruções e dicas para tradutores do ethereum.org
 ---
 
 O guia de estilo de tradução do ethereum.org contém algumas das diretrizes, instruções e dicas mais importantes para os tradutores, ajudando-nos a localizar o site.
 
 Este documento serve como um guia geral e não é específico para nenhum idioma.
 
-Se você tiver alguma dúvida, sugestão ou feedback, sinta-se à vontade para entrar em contato conosco pelo e-mail translations@ethereum.org, enviar uma mensagem para @ethdotorg no Crowdin ou [entrar no nosso Discord](https://discord.gg/ethereum-org), onde você pode nos enviar uma mensagem no canal #translations ou entrar em contato com qualquer membro da equipe.
+Se você tiver alguma dúvida, sugestão ou feedback, sinta-se à vontade para entrar em contato conosco pelo e-mail translations@ethereum.org, enviar uma mensagem para @ethdotorg no Crowdin ou [entrar no nosso Discord](https://discord.gg/ethereum-org), onde você pode nos enviar uma mensagem no canal #translations ou entrar em contato com qualquer um dos membros da equipe.
 
-O projeto do ethereum.org no Crowdin está sendo encerrado e não aceita mais novas contribuições (veja o [status do Programa de Tradução](/contributing/translation-program/#program-status)). As orientações abaixo permanecem como referência para as comunidades de tradução que usam o Crowdin em seus próprios projetos.
+## Usando o Crowdin {#using-crowdin}
+
+O projeto do ethereum.org no Crowdin está sendo encerrado e não aceita mais novas contribuições (veja o [status do Programa de Tradução](/contributing/translation-program/#program-status)). As orientações abaixo permanecem como referência para comunidades de tradução que usam o Crowdin em seus próprios projetos.
 
 Se você quiser saber mais sobre o Crowdin e como usar alguns de seus recursos avançados, a [base de conhecimento do Crowdin](https://support.crowdin.com/online-editor/) contém muitos guias detalhados e visões gerais de todas as funcionalidades do Crowdin.
+
 ## Capturando a essência da mensagem {#capturing-the-essence}
 
 Ao traduzir o conteúdo do ethereum.org, evite traduções literais.
@@ -30,23 +33,23 @@ Usamos a forma formal de tratamento, que é sempre educada e apropriada para tod
 
 O uso do tratamento formal nos permite evitar soar não oficiais ou ofensivos, e funciona independentemente da idade e do gênero do visitante.
 
-A maioria dos idiomas indo-europeus e afro-asiáticos usa pronomes pessoais de segunda pessoa específicos de gênero, que distinguem entre masculino e feminino. Ao se dirigir ao usuário ou usar pronomes possessivos, podemos evitar presumir o gênero do visitante, pois a forma formal de tratamento é geralmente aplicável e consistente, independentemente de como ele se identifique.
+A maioria dos idiomas indo-europeus e afro-asiáticos usa pronomes pessoais de segunda pessoa específicos de gênero, que distinguem entre masculino e feminino. Ao nos dirigirmos ao usuário ou usarmos pronomes possessivos, podemos evitar presumir o gênero do visitante, pois a forma formal de tratamento é geralmente aplicável e consistente, independentemente de como ele se identifique.
 
 ## Vocabulário e significado simples e claros {#simple-vocabulary}
 
 Nosso objetivo é tornar o conteúdo do site compreensível para o maior número possível de pessoas.
 
-Na maioria dos casos, isso pode ser facilmente alcançado usando palavras curtas e simples que são facilmente compreensíveis. Se houver várias traduções possíveis para uma determinada palavra no seu idioma com o mesmo significado, a melhor opção é, na maioria das vezes, a palavra mais curta que reflita claramente o significado.
+Na maioria dos casos, isso pode ser facilmente alcançado usando palavras curtas e simples que sejam facilmente compreensíveis. Se houver várias traduções possíveis para uma determinada palavra em seu idioma com o mesmo significado, a melhor opção geralmente é a palavra mais curta que reflita claramente o significado.
 
 ## Sistema de escrita {#writing-system}
 
-O ethereum.org está disponível em vários idiomas, usando sistemas de escrita (ou scripts de escrita) alternativos ao latino.
+O ethereum.org está disponível em vários idiomas, usando sistemas de escrita (ou alfabetos) alternativos ao latino.
 
 Todo o conteúdo deve ser traduzido usando o sistema de escrita correto para o seu idioma e não deve incluir nenhuma palavra escrita com caracteres latinos.
 
 Ao traduzir o conteúdo, você deve garantir que as traduções sejam consistentes e não incluam caracteres latinos.
 
-Um equívoco comum é que Ethereum deve sempre ser escrito em latim. Isso é em grande parte incorreto, por favor, use a grafia de Ethereum nativa do seu idioma (por exemplo, 以太坊 em chinês, إيثيريوم em árabe, etc.).
+Um equívoco comum é que Ethereum deve sempre ser escrito em caracteres latinos. Isso é em grande parte incorreto, por favor, use a grafia de Ethereum nativa do seu idioma (por exemplo, 以太坊 em chinês, إيثيريوم em árabe, etc.).
 
 **O que foi dito acima não se aplica a idiomas onde nomes próprios não devem ser traduzidos como regra.**
 
@@ -56,9 +59,9 @@ Algumas páginas contêm metadados na página, como 'title', 'lang', 'descriptio
 
 Ocultamos o conteúdo que os tradutores nunca devem traduzir ao enviar novas páginas para o Crowdin, o que significa que todos os metadados visíveis para os tradutores no Crowdin devem ser traduzidos.
 
-Por favor, tenha um cuidado especial ao traduzir quaisquer strings onde o texto de origem seja 'en'. Isso representa o idioma em que a página está disponível e deve ser traduzido para o [código de idioma ISO para o seu idioma](https://www.andiamo.co.uk/resources/iso-language-codes/). Essas strings devem sempre ser traduzidas usando caracteres latinos, não o script de escrita nativo do idioma de destino.
+Tenha um cuidado especial ao traduzir qualquer string em que o texto de origem seja 'en'. Isso representa o idioma em que a página está disponível e deve ser traduzido para o [código de idioma ISO do seu idioma](https://www.andiamo.co.uk/resources/iso-language-codes/). Essas strings devem sempre ser traduzidas usando caracteres latinos, e não o sistema de escrita nativo do idioma de destino.
 
-Se você não tiver certeza de qual código de idioma usar, pode verificar a memória de tradução no Crowdin ou encontrar o código de idioma para o seu idioma no URL da página no editor online do Crowdin.
+Se você não tiver certeza de qual código de idioma usar, pode verificar a memória de tradução no Crowdin ou encontrar o código de idioma do seu idioma no URL da página no editor online do Crowdin.
 
 Alguns exemplos de códigos de idioma para os idiomas mais falados:
 
@@ -79,48 +82,48 @@ Você pode encontrar alguns exemplos de como essas strings se parecem para os tr
 
 ## Avisos do Crowdin {#crowdin-warnings}
 
-O Crowdin tem um recurso integrado que avisa os tradutores quando eles estão prestes a cometer um erro. O Crowdin avisará você automaticamente sobre isso antes de salvar sua tradução se você esquecer de incluir uma tag da fonte, traduzir elementos que não devem ser traduzidos, adicionar vários espaços consecutivos, esquecer a pontuação final, etc.
+O Crowdin tem um recurso integrado que avisa os tradutores quando eles estão prestes a cometer um erro. O Crowdin avisará você automaticamente sobre isso antes de salvar sua tradução se você esquecer de incluir uma tag da origem, traduzir elementos que não devem ser traduzidos, adicionar vários espaços consecutivos, esquecer a pontuação final, etc.
 Se você vir um aviso como este, volte e verifique novamente a tradução sugerida.
 
-**Nunca ignore esses avisos, pois eles geralmente significam que algo está errado ou que a tradução está sem uma parte fundamental do texto de origem.**
+**Nunca ignore esses avisos, pois eles geralmente significam que algo está errado ou que falta uma parte fundamental do texto de origem na tradução.**
 
 Um exemplo de um aviso do Crowdin quando você esquece de adicionar uma tag à sua tradução:
 ![Example of a Crowdin warning](./crowdin-warning-example.png)
 
 ## Lidando com tags e trechos de código {#dealing-with-tags}
 
-Grande parte do conteúdo de origem contém tags e variáveis, que são destacadas em amarelo no editor do Crowdin. Elas serveem a funções diferentes e devem ser abordadas corretamente.
+Grande parte do conteúdo de origem contém tags e variáveis, que são destacadas em amarelo no editor do Crowdin. Elas têm funções diferentes e devem ser abordadas corretamente.
 
 **Configurações do Crowdin**
 
-Para facilitar o gerenciamento de tags e copiá-las diretamente da fonte, recomendamos alterar suas configurações no editor do Crowdin.
+Para facilitar o gerenciamento de tags e copiá-las diretamente da origem, recomendamos alterar suas configurações no editor do Crowdin.
 
 1. Abra as configurações
    ![How to open settings in the editor](./editor-settings.png)
 
-2. Role para baixo até a seção 'Exibição de tags HTML' (HTML tags displaying)
+2. Role para baixo até a seção 'HTML tags displaying' (Exibição de tags HTML)
 
-3. Selecione 'Ocultar' (Hide)
+3. Selecione 'Hide' (Ocultar)
    ![Please select 'Hide'](./hide-tags.png)
 
-4. Clique em 'Salvar' (Save)
+4. Clique em 'Save' (Salvar)
 
-Ao selecionar esta opção, o texto completo da tag não será mais mostrado e será substituído por um número.
+Ao selecionar essa opção, o texto completo da tag não será mais exibido e será substituído por um número.
 Ao traduzir, clicar nesta tag copiará automaticamente a tag exata para o campo de tradução.
 
 **Links**
 
 Você pode notar links completos para páginas no ethereum.org ou em outros sites.
 
-Eles devem ser idênticos à fonte e não devem ser alterados ou traduzidos. Se você traduzir um link ou alterá-lo de alguma forma, mesmo que seja apenas removendo uma parte dele, como uma barra (/), isso levará a links quebrados e inutilizáveis.
+Eles devem ser idênticos à origem e não devem ser alterados ou traduzidos. Se você traduzir um link ou alterá-lo de alguma forma, mesmo que seja apenas removendo uma parte dele, como uma barra (/), isso levará a links quebrados e inutilizáveis.
 
-A melhor maneira de lidar com links é copiá-los diretamente da fonte, clicando neles ou usando o botão 'Copiar Fonte' (Copy Source) (`Alt+C`).
+A melhor maneira de lidar com links é copiá-los diretamente da origem, clicando neles ou usando o botão 'Copy Source' (Copiar origem) (`Alt+C`).
 
 ![Example of link.png](./example-of-link.png)
 
 Os links também aparecem no texto de origem na forma de tags (ou seja, `<0>` `</0>`). Se você passar o mouse sobre a tag, o editor mostrará seu conteúdo completo - às vezes, essas tags representarão links.
 
-É muito importante copiar os links da fonte e não alterar a ordem deles.
+É muito importante copiar os links da origem e não alterar a ordem deles.
 
 Se a ordem das tags for alterada, o link que elas representam será quebrado.
 
@@ -128,7 +131,7 @@ Se a ordem das tags for alterada, o link que elas representam será quebrado.
 
 **Tags e variáveis**
 
-O texto de origem contém muitos tipos diferentes de tags, que devem sempre ser copiadas da fonte e nunca alteradas. De forma semelhante ao que foi dito acima, a ordem dessas tags na tradução também deve permanecer a mesma da fonte.
+O texto de origem contém muitos tipos diferentes de tags, que devem sempre ser copiadas da origem e nunca alteradas. De forma semelhante ao que foi dito acima, a ordem dessas tags na tradução também deve permanecer a mesma da origem.
 
 As tags sempre contêm uma tag de abertura e uma de fechamento. Na maioria dos casos, o texto entre as tags de abertura e fechamento deve ser traduzido.
 
@@ -162,7 +165,7 @@ No exemplo abaixo, você pode ver que passar o mouse sobre a tag `<0>` mostra qu
 
 ## Formas curtas vs. completas/abreviações {#short-vs-full-forms}
 
-Existem muitas abreviações usadas no site, por exemplo, dapps, NFT, DAO, DeFi, etc. Essas abreviações são comumente usadas em inglês e a maioria dos visitantes do site está familiarizada com elas.
+Há muitas abreviações usadas no site, por exemplo, dapps, NFT, DAO, DeFi, etc. Essas abreviações são comumente usadas em inglês e a maioria dos visitantes do site está familiarizada com elas.
 
 Como elas geralmente não têm traduções estabelecidas em outros idiomas, a melhor maneira de abordar esses e outros termos semelhantes é fornecer uma tradução descritiva da forma completa e adicionar a abreviação em inglês entre parênteses.
 
@@ -176,17 +179,17 @@ Exemplo de como traduzir dapps:
 
 Alguns termos podem não ter traduções estabelecidas em outros idiomas e são amplamente conhecidos pelo termo original em inglês. Esses termos incluem principalmente conceitos mais recentes, como Prova de Trabalho (PoW), Prova de Participação (PoS), Beacon Chain, staking, etc.
 
-Embora a tradução desses termos possa soar não natural, já que a versão em inglês também é comumente usada em outros idiomas, é altamente recomendável que eles sejam traduzidos.
+Embora a tradução desses termos possa soar artificial, já que a versão em inglês também é comumente usada em outros idiomas, é altamente recomendável que eles sejam traduzidos.
 
 Ao traduzi-los, sinta-se à vontade para ser criativo, usar traduções descritivas ou simplesmente traduzi-los literalmente.
 
-**O motivo pelo qual a maioria dos termos deve ser traduzida, em vez de deixar alguns em inglês, é o fato de que essa nova terminologia se tornará mais difundida no futuro, à medida que mais pessoas começarem a usar o Ethereum e tecnologias relacionadas. Se quisermos integrar mais pessoas de todo o mundo a este espaço, precisamos fornecer terminologia compreensível no maior número possível de idiomas, mesmo que precisemos criá-la nós mesmos.**
+**O motivo pelo qual a maioria dos termos deve ser traduzida, em vez de deixar alguns em inglês, é o fato de que essa nova terminologia se tornará mais difundida no futuro, à medida que mais pessoas começarem a usar o Ethereum e tecnologias relacionadas. Se quisermos integrar mais pessoas de todo o mundo a este espaço, precisamos fornecer uma terminologia compreensível no maior número possível de idiomas, mesmo que precisemos criá-la nós mesmos.**
 
 ## Botões e CTAs {#buttons-and-ctas}
 
 O site contém vários botões, que devem ser traduzidos de forma diferente de outros conteúdos.
 
-O texto do botão pode ser identificado visualizando as capturas de tela de contexto, conectadas à maioria das strings, ou verificando o contexto no editor, que inclui a palavra ''button''.
+O texto do botão pode ser identificado visualizando as capturas de tela de contexto, conectadas à maioria das strings, ou verificando o contexto no editor, que inclui a palavra "button" (botão).
 
 As traduções para botões devem ser as mais curtas possíveis, para evitar incompatibilidades de formatação. Além disso, as traduções de botões devem ser imperativas, ou seja, apresentar um comando ou solicitação.
 
@@ -194,7 +197,7 @@ As traduções para botões devem ser as mais curtas possíveis, para evitar inc
 
 ## Traduzindo para a inclusão {#translating-for-inclusivity}
 
-Os visitantes do ethereum.org vêm de todo o mundo e de diferentes origens. A linguagem no site deve, portanto, ser neutra, acolhedora para todos e não exclusiva.
+Os visitantes do ethereum.org vêm de todo o mundo e de diferentes origens. Portanto, a linguagem no site deve ser neutra, acolhedora para todos e não exclusiva.
 
 Um aspecto importante disso é a neutralidade de gênero. Isso pode ser facilmente alcançado usando a forma formal de tratamento e evitando quaisquer palavras específicas de gênero nas traduções.
 
@@ -204,9 +207,9 @@ Por fim, a linguagem deve ser adequada para todos os públicos e idades.
 
 ## Traduções específicas do idioma {#language-specific-translations}
 
-Ao traduzir, é importante seguir as regras gramaticais, convenções e formatação usadas no seu idioma, em vez de copiar da fonte. O texto de origem segue as regras e convenções gramaticais do inglês, o que não se aplica a muitos outros idiomas.
+Ao traduzir, é importante seguir as regras gramaticais, convenções e formatação usadas em seu idioma, em vez de copiar da origem. O texto de origem segue as regras e convenções gramaticais do inglês, o que não se aplica a muitos outros idiomas.
 
-Você deve estar ciente das regras do seu idioma e traduzir de acordo. Se precisar de ajuda, entre em contato conosco e ajudaremos você a encontrar alguns recursos sobre como esses elementos devem ser usados no seu idioma.
+Você deve estar ciente das regras do seu idioma e traduzir de acordo. Se precisar de ajuda, entre em contato conosco e ajudaremos você a encontrar alguns recursos sobre como esses elementos devem ser usados em seu idioma.
 
 Alguns exemplos do que ter um cuidado especial:
 
@@ -216,7 +219,7 @@ Alguns exemplos do que ter um cuidado especial:
 
 - Existem grandes diferenças no uso de maiúsculas e minúsculas em diferentes idiomas.
 - Em inglês, é comum colocar em maiúscula todas as palavras em títulos e nomes, meses e dias, nomes de idiomas, feriados, etc. Em muitos outros idiomas, isso é gramaticalmente incorreto, pois eles têm regras diferentes de uso de maiúsculas e minúsculas.
-- Alguns idiomas também têm regras sobre o uso de maiúsculas em pronomes pessoais, substantivos e certos adjetivos, que não são escritos com maiúsculas em inglês.
+- Alguns idiomas também têm regras sobre o uso de maiúsculas em pronomes pessoais, substantivos e certos adjetivos, que não são capitalizados em inglês.
 
 **Espaçamento**
 
@@ -231,11 +234,11 @@ Alguns exemplos do que ter um cuidado especial:
 
 - Cada idioma tem um conjunto diversificado e complexo de regras para escrever listas. Elas podem ser significativamente diferentes do inglês.
 - Em alguns idiomas, a primeira palavra de cada nova linha precisa ser maiúscula, enquanto em outros, as novas linhas devem começar com letras minúsculas. Muitos idiomas também têm regras diferentes sobre o uso de maiúsculas em listas, dependendo do comprimento de cada linha.
-- O mesmo se aplica à pontuação dos itens da linha. A pontuação final nas listas pode ser um ponto final (**.**), vírgula (**,**) ou ponto e vírgula (**;**), dependendo do idioma.
+- O mesmo se aplica à pontuação dos itens de linha. A pontuação final nas listas pode ser um ponto final (**.**), vírgula (**,**) ou ponto e vírgula (**;**), dependendo do idioma.
 
 **Aspas**
 
-- Os idiomas usam muitos tipos diferentes de aspas. Simplesmente copiar as aspas em inglês da fonte costuma ser incorreto.
+- Os idiomas usam muitas aspas diferentes. Simplesmente copiar as aspas em inglês da origem costuma ser incorreto.
 - Alguns dos tipos mais comuns de aspas incluem:
   - „texto de exemplo“
   - ‚texto de exemplo’
@@ -244,10 +247,10 @@ Alguns exemplos do que ter um cuidado especial:
   - ‘texto de exemplo’
   - «texto de exemplo»
 
-**Hífens e travessões**
+**Hifens e travessões**
 
 - Em inglês, um hífen (-) é usado para unir palavras ou partes diferentes de uma palavra, enquanto um travessão (–) é usado para indicar um intervalo ou uma pausa.
-- Muitos idiomas têm regras diferentes para o uso de hífens e travessões que devem ser observadas.
+- Muitos idiomas têm regras diferentes para o uso de hifens e travessões que devem ser observadas.
 
 ### Formatos {#formats}
 
@@ -263,7 +266,7 @@ Alguns exemplos do que ter um cuidado especial:
 
 **Datas**
 
-- Ao traduzir datas, há uma série de considerações e diferenças com base no idioma. Isso inclui o formato da data, separador, uso de maiúsculas e zeros à esquerda. Também há diferenças entre datas por extenso e numéricas.
+- Ao traduzir datas, há uma série de considerações e diferenças com base no idioma. Isso inclui o formato da data, separador, uso de maiúsculas e zeros à esquerda. Também há diferenças entre datas completas e numéricas.
   - Alguns exemplos de diferentes formatos de data:
     - Inglês do Reino Unido (dd/mm/aaaa) – 1st January, 2022
     - Inglês dos EUA (mm/dd/aaaa) – January 1st, 2022
@@ -274,7 +277,7 @@ Alguns exemplos do que ter um cuidado especial:
 
 **Moedas**
 
-- Traduzir moedas pode ser um desafio, devido aos diferentes formatos, convenções e conversões. Como regra geral, mantenha as moedas iguais às da fonte. Você pode adicionar sua moeda local e a conversão entre parênteses, para o benefício do leitor.
+- Traduzir moedas pode ser um desafio, devido aos diferentes formatos, convenções e conversões. Como regra geral, mantenha as moedas iguais às da origem. Você pode adicionar sua moeda local e a conversão entre parênteses, para o benefício do leitor.
 - As principais diferenças na escrita de moedas em diferentes idiomas incluem o posicionamento do símbolo, vírgulas decimais vs. pontos decimais, espaçamento e abreviações vs. símbolos.
   - Posicionamento do símbolo: $100 ou 100$
   - Vírgulas decimais vs. pontos decimais: 100,50$ ou 100.50$
@@ -283,8 +286,8 @@ Alguns exemplos do que ter um cuidado especial:
 
 **Unidades de medida**
 
-- Como regra geral, mantenha as unidades de medida conforme a fonte. Se o seu país usar um sistema diferente, você pode incluir a conversão entre parênteses.
-- Além da localização das unidades de medida, também é importante observar as diferenças em como os idiomas abordam essas unidades. A principal diferença é o espaçamento entre o número e a unidade, que pode ser diferente, com base no idioma. Exemplos disso incluem 100kB vs. 100 kB ou 50ºF vs. 50 ºF.
+- Como regra geral, mantenha as unidades de medida conforme a origem. Se o seu país usar um sistema diferente, você pode incluir a conversão entre parênteses.
+- Além da localização das unidades de medida, também é importante observar as diferenças em como os idiomas abordam essas unidades. A principal diferença é o espaçamento entre o número e a unidade, que pode ser diferente, dependendo do idioma. Exemplos disso incluem 100kB vs. 100 kB ou 50ºF vs. 50 ºF.
 
 ## Conclusão {#conclusion}
 
