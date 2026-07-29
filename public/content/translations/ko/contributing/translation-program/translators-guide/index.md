@@ -1,8 +1,8 @@
 ---
-title: ethereum.org 번역 스타일 가이드
-metaTitle: 번역가 가이드
+title: "ethereum.org 번역 스타일 가이드"
+metaTitle: "번역가 가이드"
 lang: ko
-description: ethereum.org 번역가를 위한 지침 및 팁
+description: "ethereum.org 번역가를 위한 지침 및 팁"
 ---
 
 ethereum.org 번역 스타일 가이드는 웹사이트 현지화에 도움이 되는 번역가를 위한 가장 중요한 가이드라인, 지침 및 팁을 포함하고 있습니다.
@@ -11,12 +11,9 @@ ethereum.org 번역 스타일 가이드는 웹사이트 현지화에 도움이 �
 
 질문, 제안 또는 피드백이 있는 경우 언제든지 translations@ethereum.org로 문의하거나, Crowdin에서 @ethdotorg로 메시지를 보내거나, [디스코드에 참여](https://discord.gg/ethereum-org)하여 #translations 채널에서 메시지를 남기거나 팀원에게 연락해 주세요.
 
-## Crowdin 사용하기 {#using-crowdin}
+ethereum.org Crowdin 프로젝트는 종료 중이며 더 이상 새로운 기여를 받지 않습니다([번역 프로그램 상태](/contributing/translation-program/#program-status) 참조). 아래 지침은 자체 프로젝트에 Crowdin을 사용하는 번역 커뮤니티를 위한 참고 자료로 남겨둡니다.
 
-Crowdin에서 프로젝트에 참여하는 방법과 Crowdin 온라인 편집기를 사용하는 방법에 대한 기본 지침은 [번역 프로그램 페이지](/contributing/translation-program/#how-to-translate)에서 확인할 수 있습니다.
-
-Crowdin과 고급 기능 사용법에 대해 더 자세히 알고 싶다면, [Crowdin 지식 기반(knowledge base)](https://support.crowdin.com/online-editor/)에서 Crowdin의 모든 기능에 대한 심층적인 가이드와 개요를 확인할 수 있습니다.
-
+Crowdin과 일부 고급 기능 사용에 대해 더 자세히 알고 싶다면, [Crowdin 지식 기반](https://support.crowdin.com/online-editor/)에서 모든 Crowdin 기능에 대한 심층적인 가이드와 개요를 확인할 수 있습니다.
 ## 메시지의 본질 파악하기 {#capturing-the-essence}
 
 ethereum.org 콘텐츠를 번역할 때는 직역을 피하세요.
@@ -261,7 +258,7 @@ Ethereum.org 방문자는 전 세계에서 오며 다양한 배경을 가지고 
     - 영어 – **1,000.50**
     - 스페인어 – **1.000,50**
     - 프랑스어 – **1 000,50**
-- 숫자를 번역할 때 또 다른 중요한 고려 사항은 퍼센트 기호입니다. 이는 **100%**, **100 %** 또는 **%100**과 같이 다양한 방식으로 작성될 수 있습니다.
+- 숫자를 번역할 때 또 다른 중요한 고려 사항은 퍼센트 기호입니다. 이는 **100%**, **100 %** 또는 <strong>%100</strong>과 같이 다양한 방식으로 작성될 수 있습니다.
 - 마지막으로, 음수는 언어에 따라 다르게 표시될 수 있습니다: -100, 100-, (100) 또는 [100].
 
 **날짜**

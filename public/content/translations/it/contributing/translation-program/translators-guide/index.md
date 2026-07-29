@@ -11,12 +11,9 @@ Questo documento funge da guida generale e non è specifico per una singola ling
 
 Se hai domande, suggerimenti o feedback, non esitare a contattarci all'indirizzo translations@ethereum.org, inviare un messaggio a @ethdotorg su Crowdin, o [unirti al nostro Discord](https://discord.gg/ethereum-org), dove puoi scriverci nel canale #translations o contattare uno qualsiasi dei membri del team.
 
-## Usare Crowdin {#using-crowdin}
-
-Puoi trovare le istruzioni di base su come unirti al progetto su Crowdin e su come usare l'editor online di Crowdin nella [pagina del Programma di traduzione](/contributing/translation-program/#how-to-translate).
+Il progetto Crowdin di ethereum.org è in fase di chiusura e non accetta più nuovi contributi (consulta lo [stato del Programma di traduzione](/contributing/translation-program/#program-status)). Le linee guida seguenti rimangono come riferimento per le community di traduzione che utilizzano Crowdin per i propri progetti.
 
 Se desideri saperne di più su Crowdin e sull'utilizzo di alcune delle sue funzionalità avanzate, la [knowledge base di Crowdin](https://support.crowdin.com/online-editor/) contiene molte guide approfondite e panoramiche di tutte le funzionalità di Crowdin.
-
 ## Catturare l'essenza del messaggio {#capturing-the-essence}
 
 Quando traduci i contenuti di ethereum.org, evita le traduzioni letterali.

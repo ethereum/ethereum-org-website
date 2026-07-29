@@ -1,8 +1,8 @@
 ---
-title: ethereum.org 翻譯風格指南
-metaTitle: 翻譯者指南
+title: "ethereum.org 翻譯風格指南"
+metaTitle: "翻譯者指南"
 lang: zh-tw
-description: 給 ethereum.org 翻譯者的指示與提示
+description: "給 ethereum.org 翻譯者的指示與提示"
 ---
 
 ethereum.org 翻譯風格指南包含了一些對翻譯者來說最重要的準則、指示與提示，以協助我們在地化這個網站。
@@ -11,12 +11,9 @@ ethereum.org 翻譯風格指南包含了一些對翻譯者來說最重要的準�
 
 如果您有任何問題、建議或回饋，歡迎透過 translations@ethereum.org 與我們聯絡，在 Crowdin 上傳送訊息給 @ethdotorg，或[加入我們的 Discord](https://discord.gg/ethereum-org)，您可以在 #translations 頻道中傳送訊息給我們，或聯絡任何團隊成員。
 
-## 使用 Crowdin {#using-crowdin}
+ethereum.org 的 Crowdin 專案即將關閉，且不再接受新的貢獻（請參閱[翻譯計畫狀態](/contributing/translation-program/#program-status)）。下方的指南將保留作為使用 Crowdin 進行自有專案的翻譯社群的參考。
 
-您可以在[翻譯計畫頁面](/contributing/translation-program/#how-to-translate)上找到關於如何加入 Crowdin 專案以及如何使用 Crowdin 線上編輯器的基本指示。
-
-如果您想進一步了解 Crowdin 並使用其部分進階功能，[Crowdin 知識庫](https://support.crowdin.com/online-editor/)包含了許多深入的指南以及所有 Crowdin 功能的總覽。
-
+如果您想進一步了解 Crowdin 以及如何使用其部分進階功能，[Crowdin 知識庫](https://support.crowdin.com/online-editor/)包含了許多深入的指南以及所有 Crowdin 功能的概述。
 ## 掌握訊息的精髓 {#capturing-the-essence}
 
 翻譯 ethereum.org 內容時，請避免直譯。

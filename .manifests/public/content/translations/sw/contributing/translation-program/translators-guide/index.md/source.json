@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/contributing/translation-program/translators-guide/index.md",
-  "generatedAt": "2026-06-08T08:46:57.567Z",
-  "rootHash": "c88b048075a7",
+  "generatedAt": "2026-07-29T05:24:01.414Z",
+  "rootHash": "6b5e64ff603b",
   "tree": {
-    "contentHash": "2e7cd5a86b0c",
-    "anchorHash": "9c6facf5872e",
+    "contentHash": "e506e2fab39d",
+    "anchorHash": "292b0560bbc0",
     "children": {
       "frontmatter:title": {
         "contentHash": "8fdf18774d20",
@@ -36,8 +36,8 @@
         "anchorHash": "e3b0c44298fc"
       },
       "using-crowdin": {
-        "contentHash": "34a872adcaaf",
-        "anchorHash": "a0fda95e75d9",
+        "contentHash": "7f82c596d909",
+        "anchorHash": "d30a8fdefb2e",
         "labelHash": "572a409f84e9",
         "children": {
           "_label": {
@@ -45,15 +45,15 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:2": {
-            "contentHash": "b71176a16512",
+            "contentHash": "55182c734d68",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
-            "contentHash": "c4b50251edef",
-            "anchorHash": "363e4085f048"
+            "contentHash": "323e92f52c30",
+            "anchorHash": "aa3af6a275f4"
           },
           "prose:3": {
-            "contentHash": "01900d1448a0",
+            "contentHash": "2fbe776ceed9",
             "anchorHash": "e3b0c44298fc"
           },
           "link:1": {
@@ -616,5 +616,5 @@
       "conclusion"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "c7a64f38c3cf12cb0e445666299a4f4df18fa3b4"
 }

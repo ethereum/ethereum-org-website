@@ -1,8 +1,8 @@
 ---
-title: Przewodnik po stylu tłumaczeń ethereum.org
-metaTitle: Przewodnik dla tłumaczy
+title: "Przewodnik po stylu tłumaczeń ethereum.org"
+metaTitle: "Przewodnik dla tłumaczy"
 lang: pl
-description: Instrukcje i wskazówki dla tłumaczy ethereum.org
+description: "Instrukcje i wskazówki dla tłumaczy ethereum.org"
 ---
 
 Przewodnik po stylu tłumaczeń ethereum.org zawiera jedne z najważniejszych wytycznych, instrukcji i wskazówek dla tłumaczy, pomagając nam w lokalizacji strony internetowej.
@@ -11,12 +11,9 @@ Ten dokument służy jako ogólny przewodnik i nie jest specyficzny dla żadnego
 
 Jeśli masz jakiekolwiek pytania, sugestie lub opinie, skontaktuj się z nami pod adresem translations@ethereum.org, wyślij wiadomość do @ethdotorg na platformie Crowdin lub [dołącz do naszego serwera Discord](https://discord.gg/ethereum-org), gdzie możesz napisać do nas na kanale #translations lub skontaktować się z dowolnym członkiem zespołu.
 
-## Korzystanie z platformy Crowdin {#using-crowdin}
+Projekt Crowdin ethereum.org jest zamykany i nie przyjmuje już nowych zgłoszeń (zobacz [status Programu Tłumaczeń](/contributing/translation-program/#program-status)). Poniższe wskazówki pozostają jako punkt odniesienia dla społeczności tłumaczy korzystających z Crowdin we własnych projektach.
 
-Podstawowe instrukcje dotyczące dołączania do projektu w Crowdin oraz korzystania z edytora online Crowdin można znaleźć na [stronie Programu Tłumaczeń](/contributing/translation-program/#how-to-translate).
-
-Jeśli chcesz dowiedzieć się więcej o platformie Crowdin i korzystaniu z niektórych jej zaawansowanych funkcji, [baza wiedzy Crowdin](https://support.crowdin.com/online-editor/) zawiera wiele szczegółowych przewodników i przeglądów wszystkich funkcji Crowdin.
-
+Jeśli chcesz dowiedzieć się więcej o Crowdin i korzystaniu z niektórych jego zaawansowanych funkcji, [baza wiedzy Crowdin](https://support.crowdin.com/online-editor/) zawiera wiele szczegółowych przewodników i przeglądów wszystkich funkcji Crowdin.
 ## Oddanie sedna wiadomości {#capturing-the-essence}
 
 Tłumacząc treści na ethereum.org, unikaj dosłownych tłumaczeń.

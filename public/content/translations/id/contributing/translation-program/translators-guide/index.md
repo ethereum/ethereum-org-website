@@ -11,12 +11,9 @@ Dokumen ini berfungsi sebagai panduan umum dan tidak spesifik untuk satu bahasa 
 
 Jika Anda memiliki pertanyaan, saran, atau umpan balik, jangan ragu untuk menghubungi kami di translations@ethereum.org, mengirim pesan ke @ethdotorg di Crowdin, atau [bergabung dengan Discord kami](https://discord.gg/ethereum-org), di mana Anda dapat mengirim pesan kepada kami di saluran #translations atau menghubungi salah satu anggota tim.
 
-## Menggunakan Crowdin {#using-crowdin}
+Proyek Crowdin ethereum.org sedang ditutup dan tidak lagi menerima kontribusi baru (lihat [status Program Terjemahan](/contributing/translation-program/#program-status)). Panduan di bawah ini tetap sebagai referensi bagi komunitas terjemahan yang menggunakan Crowdin untuk proyek mereka sendiri.
 
-Anda dapat menemukan instruksi dasar tentang cara bergabung dengan proyek di Crowdin dan cara menggunakan editor daring Crowdin di [halaman Program Terjemahan](/contributing/translation-program/#how-to-translate).
-
-Jika Anda ingin mempelajari lebih lanjut tentang Crowdin dan menggunakan beberapa fitur lanjutannya, [basis pengetahuan Crowdin](https://support.crowdin.com/online-editor/) berisi banyak panduan mendalam dan gambaran umum dari semua fungsionalitas Crowdin.
-
+Jika Anda ingin mempelajari lebih lanjut tentang Crowdin dan menggunakan beberapa fitur lanjutannya, [basis pengetahuan Crowdin](https://support.crowdin.com/online-editor/) berisi banyak panduan mendalam dan ikhtisar dari semua fungsionalitas Crowdin.
 ## Menangkap esensi pesan {#capturing-the-essence}
 
 Saat menerjemahkan konten ethereum.org, hindari terjemahan harfiah.

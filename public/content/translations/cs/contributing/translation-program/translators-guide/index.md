@@ -1,8 +1,8 @@
 ---
-title: Průvodce stylem překladů pro ethereum.org
-metaTitle: Průvodce pro překladatele
+title: "Průvodce stylem překladů pro ethereum.org"
+metaTitle: "Průvodce pro překladatele"
 lang: cs
-description: Pokyny a tipy pro překladatele ethereum.org
+description: "Pokyny a tipy pro překladatele ethereum.org"
 ---
 
 Průvodce stylem překladů pro ethereum.org obsahuje některé z nejdůležitějších pokynů, instrukcí a tipů pro překladatele, které nám pomáhají s lokalizací webu.
@@ -13,10 +13,9 @@ Pokud máte jakékoli dotazy, návrhy nebo zpětnou vazbu, neváhejte se na nás
 
 ## Používání platformy Crowdin {#using-crowdin}
 
-Základní pokyny, jak se připojit k projektu na platformě Crowdin a jak používat její online editor, najdete na [stránce Překladatelského programu](/contributing/translation-program/#how-to-translate).
+Projekt ethereum.org na platformě Crowdin se uzavírá a již nepřijímá nové příspěvky (viz [stav Překladatelského programu](/contributing/translation-program/#program-status)). Níže uvedené pokyny zůstávají jako reference pro překladatelské komunity, které používají Crowdin pro své vlastní projekty.
 
-Pokud byste se chtěli o platformě Crowdin a používání některých jejích pokročilých funkcí dozvědět více, [znalostní báze Crowdin](https://support.crowdin.com/online-editor/) obsahuje spoustu podrobných průvodců a přehledů všech jejích funkcí.
-
+Pokud byste se chtěli dozvědět více o platformě Crowdin a používání některých jejích pokročilých funkcí, [znalostní báze Crowdin](https://support.crowdin.com/online-editor/) obsahuje spoustu podrobných průvodců a přehledů všech funkcí platformy Crowdin.
 ## Zachycení podstaty zprávy {#capturing-the-essence}
 
 Při překládání obsahu ethereum.org se vyhněte doslovným překladům.

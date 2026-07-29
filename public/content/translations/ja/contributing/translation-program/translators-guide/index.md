@@ -1,8 +1,8 @@
 ---
-title: ethereum.org 翻訳スタイルガイド
-metaTitle: 翻訳者向けガイド
+title: "ethereum.org 翻訳スタイルガイド"
+metaTitle: "翻訳者向けガイド"
 lang: ja
-description: ethereum.orgの翻訳者向けの手順とヒント
+description: "ethereum.orgの翻訳者向けの手順とヒント"
 ---
 
 ethereum.orgの翻訳スタイルガイドには、ウェブサイトのローカライズに役立つ、翻訳者向けの最も重要なガイドライン、手順、ヒントが記載されています。
@@ -11,12 +11,9 @@ ethereum.orgの翻訳スタイルガイドには、ウェブサイトのロー�
 
 質問、提案、フィードバックがある場合は、translations@ethereum.org までお気軽にお問い合わせいただくか、Crowdinで @ethdotorg にメッセージを送信するか、[ディスコードに参加](https://discord.gg/ethereum-org)して、#translations チャンネルでメッセージを送信するか、チームメンバーのいずれかにご連絡ください。
 
-## Crowdinの使用 {#using-crowdin}
+ethereum.orgのCrowdinプロジェクトは閉鎖されるため、新規の貢献は受け付けていません（[翻訳プログラムのステータス](/contributing/translation-program/#program-status)を参照してください）。以下のガイダンスは、独自のプロジェクトでCrowdinを使用している翻訳コミュニティ向けの参考資料として残されています。
 
-Crowdinでのプロジェクトへの参加方法やCrowdinオンラインエディタの使用方法に関する基本的な手順は、[翻訳プログラムのページ](/contributing/translation-program/#how-to-translate)で確認できます。
-
-Crowdinやその高度な機能の使用方法についてさらに詳しく知りたい場合は、[Crowdinナレッジベース](https://support.crowdin.com/online-editor/)に、Crowdinのすべての機能に関する詳細なガイドと概要が多数掲載されています。
-
+Crowdinとその高度な機能の使用方法について詳しく知りたい場合は、[Crowdinナレッジベース](https://support.crowdin.com/online-editor/)に、Crowdinのすべての機能に関する詳細なガイドと概要が多数掲載されています。
 ## メッセージの本質を捉える {#capturing-the-essence}
 
 ethereum.orgのコンテンツを翻訳する際は、直訳を避けてください。

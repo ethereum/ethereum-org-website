@@ -1,8 +1,8 @@
 ---
-title: Guia de estilo de tradução do ethereum.org
+title: "Guia de estilo de tradução do ethereum.org"
 metaTitle: Guia para tradutores
 lang: pt-br
-description: Instruções e dicas para tradutores do ethereum.org
+description: "Instruções e dicas para tradutores do ethereum.org"
 ---
 
 O guia de estilo de tradução do ethereum.org contém algumas das diretrizes, instruções e dicas mais importantes para os tradutores, ajudando-nos a localizar o site.
@@ -11,12 +11,9 @@ Este documento serve como um guia geral e não é específico para nenhum idioma
 
 Se você tiver alguma dúvida, sugestão ou feedback, sinta-se à vontade para entrar em contato conosco pelo e-mail translations@ethereum.org, enviar uma mensagem para @ethdotorg no Crowdin ou [entrar no nosso Discord](https://discord.gg/ethereum-org), onde você pode nos enviar uma mensagem no canal #translations ou entrar em contato com qualquer membro da equipe.
 
-## Usando o Crowdin {#using-crowdin}
-
-Você pode encontrar instruções básicas sobre como participar do projeto no Crowdin e como usar o editor online do Crowdin na [página do Programa de Tradução](/contributing/translation-program/#how-to-translate).
+O projeto do ethereum.org no Crowdin está sendo encerrado e não aceita mais novas contribuições (veja o [status do Programa de Tradução](/contributing/translation-program/#program-status)). As orientações abaixo permanecem como referência para as comunidades de tradução que usam o Crowdin em seus próprios projetos.
 
 Se você quiser saber mais sobre o Crowdin e como usar alguns de seus recursos avançados, a [base de conhecimento do Crowdin](https://support.crowdin.com/online-editor/) contém muitos guias detalhados e visões gerais de todas as funcionalidades do Crowdin.
-
 ## Capturando a essência da mensagem {#capturing-the-essence}
 
 Ao traduzir o conteúdo do ethereum.org, evite traduções literais.
