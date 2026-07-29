@@ -43,6 +43,13 @@ Es posible que un atacante sofisticado pueda identificar a los próximos validad
 
 <ButtonLink variant="outline-color" href="/roadmap/secret-leader-election">Leer sobre la elección secreta de líder</ButtonLink>
 
-## Progreso actual {#current-progress}
+## Progreso actual
 
-**Las actualizaciones de seguridad en la hoja de ruta se encuentran en etapas avanzadas de investigación**, pero no se espera que se implementen por un tiempo. Los próximos pasos para la fusión de vistas (view-merge), PBS, SSF y SLE son finalizar una especificación y comenzar a construir prototipos.
+A mediados de 2026:
+
+- **Construcción de bloques y resistencia a la censura**: ePBS y las listas de acceso a nivel de bloque se están ejecutando en las devnets de Glamsterdam. FOCIL está planeado para Hegotá, prevista para 2027.
+- **Finalidad**: Minimmit y el trabajo de consenso más amplio de Lean Ethereum siguen en investigación activa sin asignación de bifurcación todavía.
+- **Resistencia cuántica**: Se están ejecutando devnets de interoperabilidad poscuántica semanales, y los hitos de la infraestructura central apuntan a aproximadamente 2029.
+- **Simplificación**: Pectra y Fusaka se lanzaron; Glamsterdam y Hegotá traen la próxima ronda de limpiezas.
+
+Ninguna parte de este trabajo está terminada, y todos los plazos son estimaciones que pueden cambiar.
