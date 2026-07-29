@@ -11,12 +11,11 @@ Tento dokument slouží jako obecný průvodce a není specifický pro žádný 
 
 Pokud máte jakékoli dotazy, návrhy nebo zpětnou vazbu, neváhejte se na nás obrátit na adrese translations@ethereum.org, pošlete zprávu uživateli @ethdotorg na platformě Crowdin nebo [se připojte na náš Discord](https://discord.gg/ethereum-org), kde nám můžete napsat do kanálu #translations nebo kontaktovat kteréhokoli člena týmu.
 
-## Používání platformy Crowdin {#using-crowdin}
+## Používání platformy Crowdin
 
-Základní pokyny, jak se připojit k projektu na platformě Crowdin a jak používat její online editor, najdete na [stránce Překladatelského programu](/contributing/translation-program/#how-to-translate).
+Projekt ethereum.org na platformě Crowdin se uzavírá a již nepřijímá nové příspěvky (viz [stav Překladatelského programu](/contributing/translation-program/#program-status)). Níže uvedené pokyny zůstávají jako reference pro překladatelské komunity, které používají Crowdin pro své vlastní projekty.
 
-Pokud byste se chtěli o platformě Crowdin a používání některých jejích pokročilých funkcí dozvědět více, [znalostní báze Crowdin](https://support.crowdin.com/online-editor/) obsahuje spoustu podrobných průvodců a přehledů všech jejích funkcí.
-
+Pokud byste se chtěli dozvědět více o platformě Crowdin a používání některých jejích pokročilých funkcí, [znalostní báze Crowdin](https://support.crowdin.com/online-editor/) obsahuje spoustu podrobných průvodců a přehledů všech funkcí platformy Crowdin.
 ## Zachycení podstaty zprávy {#capturing-the-essence}
 
 Při překládání obsahu ethereum.org se vyhněte doslovným překladům.
