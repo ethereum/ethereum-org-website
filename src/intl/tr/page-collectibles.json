@@ -59,9 +59,6 @@
   "page-collectibles-translations-250": "250 kelime rozeti",
   "page-collectibles-translations-50000": "50.000 kelime rozeti",
   "page-collectibles-translations-badge-desc": "Herhangi bir dile.",
-  "page-collectibles-translations-desc": "Çoğu kullanıcı İngilizce konuşmuyor, bu nedenle makalelerimizi diğer dillere çevirmeye yardımcı olmak çok önemlidir, çeviri deneyimi gerekmez.",
-  "page-collectibles-translations-instructions-1": "<a href=\"https://crowdin.com/project/ethereum-org\">Crowdin</a>'e kaydolun",
-  "page-collectibles-translations-instructions-2": "Dil seçin",
-  "page-collectibles-translations-instructions-3": "Çevirmeye başlayın",
+  "page-collectibles-translations-desc": "Bu rozetler, kapanma sürecinde olan ve artık yeni çevirmenler için sisteme katılım sağlamayan ethereum.org Çeviri Programı'na yapılan geçmiş katkıları onurlandırmaktadır.",
   "page-collectibles-translations-title": "Çeviriler"
 }

@@ -1,12 +1,13 @@
 {
   "version": 1,
   "locale": "de",
-  "translatedAt": "2026-06-08T08:33:37.383Z",
-  "englishManifestHash": "6bbbd1fa837c",
+  "translatedAt": "2026-07-28T22:16:30.603Z",
+  "englishManifestHash": "ebd5f97fca4b",
   "placeholderOrder": [
     "IMAGE-b9bb84",
-    "LINK-e953a5",
-    "LINK-11c3c5",
+    "LINK-43171d",
+    "LINK-89d09a",
+    "LINK-b43513",
     "LINK-20d0cc",
     "LINK-a21a82",
     "LINK-d966e4",
@@ -20,7 +21,6 @@
     "LINK-29a333",
     "LINK-11c3c5",
     "LINK-78799d",
-    "LINK-0f400d",
     "LINK-163e15",
     "LINK-5c84b1",
     "LINK-b7a222"
@@ -32,16 +32,22 @@
         "path": "./enterprise-eth.png"
       }
     },
-    "LINK-e953a5": {
+    "LINK-43171d": {
       "type": "link",
       "values": {
-        "url": "/contributing/translation-program/how-to-translate/"
+        "url": "/contributing/translation-program/acknowledgements/"
       }
     },
-    "LINK-11c3c5": {
+    "LINK-89d09a": {
       "type": "link",
       "values": {
-        "url": "/contributing/translation-program/translators-guide/"
+        "url": "/contributing/translation-program/contributors/"
+      }
+    },
+    "LINK-b43513": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues/new/choose"
       }
     },
     "LINK-20d0cc": {
@@ -110,16 +116,16 @@
         "url": "https://devconnect.org/"
       }
     },
+    "LINK-11c3c5": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/translators-guide/"
+      }
+    },
     "LINK-78799d": {
       "type": "link",
       "values": {
         "url": "/contributing/translation-program/faq/"
-      }
-    },
-    "LINK-0f400d": {
-      "type": "link",
-      "values": {
-        "url": "https://support.crowdin.com/online-editor/"
       }
     },
     "LINK-163e15": {
@@ -143,7 +149,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-08T08:33:37.383Z",
+      "translatedAt": "2026-07-28T22:16:30.603Z",
       "status": "success"
     }
   }

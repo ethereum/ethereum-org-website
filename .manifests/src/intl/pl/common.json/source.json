@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/common.json",
-  "generatedAt": "2026-07-27T19:26:34.914Z",
-  "rootHash": "bc0301d3e727",
+  "generatedAt": "2026-07-28T21:56:30.602Z",
+  "rootHash": "7dd84a54ecd1",
   "tree": {
-    "contentHash": "d4c20ffe1828",
-    "anchorHash": "77c7fb3365b2",
+    "contentHash": "221d9c05dfe4",
+    "anchorHash": "f5888b41b282",
     "children": {
       "about-ethereum-org": {
         "contentHash": "9aafb3686977",
@@ -1633,7 +1633,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "nav-translation-program-description": {
-        "contentHash": "5ec659d8681f",
+        "contentHash": "88017b3ca923",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-tutorials-description": {
@@ -1662,6 +1662,14 @@
       },
       "nav-trillion-dollar-security-label": {
         "contentHash": "5e7e0f90e03e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-values-description": {
+        "contentHash": "38fde2913087",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-values-label": {
+        "contentHash": "b3bb96be5919",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-videos-description": {
@@ -1744,10 +1752,6 @@
         "contentHash": "14b26622d3f9",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-languages-interested": {
-        "contentHash": "8fe21fcdda9c",
-        "anchorHash": "e3b0c44298fc"
-      },
       "page-languages-learn-more": {
         "contentHash": "f9a3728f484a",
         "anchorHash": "e3b0c44298fc"
@@ -1756,13 +1760,15 @@
         "contentHash": "64e76d18f94f",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-languages-want-more-link": {
-        "contentHash": "87730412fde5",
-        "anchorHash": "e3b0c44298fc"
-      },
       "page-languages-want-more-paragraph": {
-        "contentHash": "34784d7f9812",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "84083a8122df",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "d9299c2797bc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
       },
       "page-last-updated": {
         "contentHash": "381e0362f381",
@@ -2512,6 +2518,8 @@
       "nav-technical-history-label",
       "nav-trillion-dollar-security-description",
       "nav-trillion-dollar-security-label",
+      "nav-values-description",
+      "nav-values-label",
       "nav-videos-description",
       "nav-videos-label",
       "nav-what-is-ether-description",
@@ -2532,10 +2540,8 @@
       "page-actions",
       "page-languages-filter-label",
       "page-languages-filter-placeholder",
-      "page-languages-interested",
       "page-languages-learn-more",
       "page-languages-want-more-header",
-      "page-languages-want-more-link",
       "page-languages-want-more-paragraph",
       "page-last-updated",
       "page-not-found",
@@ -2624,5 +2630,5 @@
       "region-sint-eustatius-netherlands"
     ]
   },
-  "sourceCommitSha": "4a7c0fa2a3ee82737bedc324112b0f3d16f22030"
+  "sourceCommitSha": "f99d74bf2ad4ecaa64f42bc984735fecc8fe83af"
 }
