@@ -20,11 +20,9 @@ _Rejoignez le [Discord d'ethereum.org](https://discord.gg/ethereum-org) pour pos
 
 ## À propos du programme de traduction {#about-us}
 
-La communauté [Ethereum](/) se veut mondiale et inclusive, pourtant une grande partie de son contenu s'adresse uniquement aux anglophones, laissant de côté les 6 milliards de personnes non anglophones dans le monde. Pour qu'ethereum.org agisse comme le portail vers Ethereum pour la communauté mondiale, nous pensons qu'il est essentiel de fournir aux non-anglophones du contenu sur Ethereum dans leur langue maternelle.
+La communauté [Ethereum](/) se veut mondiale et inclusive, pourtant une grande partie de son contenu ne s'adresse qu'aux anglophones, laissant de côté les 6 milliards de personnes non anglophones dans le monde. Pour qu'ethereum.org agisse comme le portail vers Ethereum pour la communauté mondiale, nous pensons qu'il est essentiel de fournir aux non-anglophones du contenu sur Ethereum dans leur langue maternelle.
 
 Le programme de traduction d'ethereum.org visait à rendre Ethereum accessible à tous en traduisant ethereum.org et d'autres contenus liés à Ethereum dans autant de langues que possible.
-
-Apprenez-en plus sur la [mission et la vision](/contributing/translation-program/mission-and-vision) du programme de traduction d'ethereum.org.
 
 ### Nos progrès jusqu'à présent {#our-progress}
 
@@ -60,7 +58,6 @@ Par le passé, nous avons récompensé rétroactivement nos contributeurs les pl
 Ces documents de référence restent disponibles pour les communautés de traduction et les projets gérant leurs propres programmes :
 
 - [Guide de style de traduction](/contributing/translation-program/translators-guide/) _– instructions et conseils pour les traducteurs d'ethereum.org_
-- [FAQ sur la traduction](/contributing/translation-program/faq/) _– foire aux questions et réponses sur le programme de traduction d'ethereum.org_
 
 Pour d'autres outils de traduction utiles, des communautés de traducteurs et des articles de blog sur le programme de traduction, veuillez visiter la [page des ressources](/contributing/translation-program/resources/).
 
