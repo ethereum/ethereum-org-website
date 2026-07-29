@@ -11,12 +11,9 @@ ethereum.org 번역 스타일 가이드는 웹사이트 현지화에 도움이 �
 
 질문, 제안 또는 피드백이 있는 경우 언제든지 translations@ethereum.org로 문의하거나, Crowdin에서 @ethdotorg로 메시지를 보내거나, [디스코드에 참여](https://discord.gg/ethereum-org)하여 #translations 채널에서 메시지를 남기거나 팀원에게 연락해 주세요.
 
-## Crowdin 사용하기 {#using-crowdin}
+ethereum.org Crowdin 프로젝트는 종료 중이며 더 이상 새로운 기여를 받지 않습니다([번역 프로그램 상태](/contributing/translation-program/#program-status) 참조). 아래 지침은 자체 프로젝트에 Crowdin을 사용하는 번역 커뮤니티를 위한 참고 자료로 남겨둡니다.
 
-Crowdin에서 프로젝트에 참여하는 방법과 Crowdin 온라인 편집기를 사용하는 방법에 대한 기본 지침은 [번역 프로그램 페이지](/contributing/translation-program/#how-to-translate)에서 확인할 수 있습니다.
-
-Crowdin과 고급 기능 사용법에 대해 더 자세히 알고 싶다면, [Crowdin 지식 기반(knowledge base)](https://support.crowdin.com/online-editor/)에서 Crowdin의 모든 기능에 대한 심층적인 가이드와 개요를 확인할 수 있습니다.
-
+Crowdin과 일부 고급 기능 사용에 대해 더 자세히 알고 싶다면, [Crowdin 지식 기반](https://support.crowdin.com/online-editor/)에서 모든 Crowdin 기능에 대한 심층적인 가이드와 개요를 확인할 수 있습니다.
 ## 메시지의 본질 파악하기 {#capturing-the-essence}
 
 ethereum.org 콘텐츠를 번역할 때는 직역을 피하세요.
