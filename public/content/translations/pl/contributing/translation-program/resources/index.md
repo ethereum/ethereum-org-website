@@ -10,8 +10,7 @@ Poniżej znajdziesz przydatne przewodniki i narzędzia dla tłumaczy ethereum.or
 ## Przewodniki {#guides}
 
 - [Przewodnik po stylu tłumaczenia](/contributing/translation-program/translators-guide/) _– instrukcje i wskazówki dla tłumaczy ethereum.org_
-- [Często zadawane pytania (FAQ) dotyczące tłumaczeń](/contributing/translation-program/faq/) _– często zadawane pytania i odpowiedzi dotyczące Programu Tłumaczeń ethereum.org_
-- [Przewodnik po edytorze online Crowdin](https://support.crowdin.com/online-editor/) _– szczegółowy przewodnik po korzystaniu z edytora online Crowdin i niektórych zaawansowanych funkcjach platformy Crowdin_
+- [Przewodnik po edytorze online Crowdin](https://support.crowdin.com/online-editor/) _– szczegółowy przewodnik po korzystaniu z edytora online Crowdin i niektórych jego zaawansowanych funkcjach_
 
 ## Narzędzia {#tools}
 
@@ -25,18 +24,18 @@ Poniżej znajdziesz przydatne przewodniki i narzędzia dla tłumaczy ethereum.or
 ## Społeczności {#communities}
 
 - [Grupy tłumaczeniowe na Discordzie dla poszczególnych języków](https://discord.gg/ethereum-org)
-  _– inicjatywa mająca na celu łączenie tłumaczy ethereum.org w Grupy Tłumaczeniowe_
+  _– inicjatywa mająca na celu łączenie tłumaczy ethereum.org w grupy tłumaczeniowe_
 - [Grupa tłumaczy języka chińskiego](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– strona w Notion ułatwiająca koordynację między tłumaczami języka chińskiego_
 
 ## Najnowsze aktualizacje {#latest-updates}
 
-Aby być na bieżąco z najnowszymi postępami w Programie Tłumaczeń, możesz śledzić [blog Fundacji Ethereum](https://blog.ethereum.org/):
+Aby być na bieżąco z najnowszymi postępami Programu Tłumaczeń, możesz śledzić [blog Fundacji Ethereum](https://blog.ethereum.org/):
 
-- [Aktualizacja kamieni milowych – październik 2021 r.](https://blog.ethereum.org/2021/10/04/translation-program-update)
-- [Aktualizacja kamieni milowych – grudzień 2020 r.](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
-- [Aktualizacja kamieni milowych – lipiec 2020 r.](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone)
-- [Uruchomienie Programu Tłumaczeń – sierpień 2019 r.](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community)
+- [Aktualizacja kamieni milowych z października 2021 r.](https://blog.ethereum.org/2021/10/04/translation-program-update)
+- [Aktualizacja kamieni milowych z grudnia 2020 r.](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
+- [Aktualizacja kamieni milowych z lipca 2020 r.](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone)
+- [Uruchomienie Programu Tłumaczeń w sierpniu 2019 r.](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community)
 
 ## Godziny konsultacji dla tłumaczy {#office-hours}
 
