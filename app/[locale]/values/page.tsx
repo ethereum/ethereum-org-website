@@ -11,6 +11,7 @@ import PrivacyIcon from "@/components/icons/privacy.svg"
 import BetterUserExperienceIcon from "@/components/icons/roadmap/better-user-experience.svg"
 import OpenSourceStakingIcon from "@/components/icons/staking/open-source-staking.svg"
 import { Image } from "@/components/Image"
+import { Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
 import { AccordionContainer } from "@/components/ui/accordion"
 import {
@@ -130,10 +131,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <Section id="hidden-cost" className="*:[p]:max-w-3xl">
             <h2>{t("page-values-cost-title")}</h2>
             <p>{t("page-values-cost-description")}</p>
-            <p>
-              <strong>{t("page-values-cost-inevitable-strong")}</strong>
-              {t("page-values-cost-inevitable-continued")}
-            </p>
+            <p>{t.rich("page-values-cost-inevitable", { strong: Strong })}</p>
             <Grid balanced={4}>
               {principleCards.map((card) => (
                 <Card
@@ -174,28 +172,24 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </p>
               <ul>
                 <li>
-                  <strong>
-                    {t("page-values-internet-list-open-code-strong")}
-                  </strong>{" "}
-                  {t("page-values-internet-list-open-code")}
+                  {t.rich("page-values-internet-list-open-code", {
+                    strong: Strong,
+                  })}
                 </li>
                 <li>
-                  <strong>
-                    {t("page-values-internet-list-privacy-strong")}
-                  </strong>{" "}
-                  {t("page-values-internet-list-privacy")}
+                  {t.rich("page-values-internet-list-privacy", {
+                    strong: Strong,
+                  })}
                 </li>
                 <li>
-                  <strong>
-                    {t("page-values-internet-list-censorship-strong")}
-                  </strong>{" "}
-                  {t("page-values-internet-list-censorship")}
+                  {t.rich("page-values-internet-list-censorship", {
+                    strong: Strong,
+                  })}
                 </li>
                 <li>
-                  <strong>
-                    {t("page-values-internet-list-security-strong")}
-                  </strong>{" "}
-                  {t("page-values-internet-list-security")}
+                  {t.rich("page-values-internet-list-security", {
+                    strong: Strong,
+                  })}
                 </li>
               </ul>
               <p>{t("page-values-internet-p3")}</p>

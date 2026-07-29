@@ -47,14 +47,14 @@ Dengan menggunakan layanan node, Anda memusatkan aspek infrastruktur dari produk
 
 Baca lebih lanjut tentang [manfaat menjalankan node Anda sendiri](/developers/docs/nodes-and-clients/#benefits-to-you).
 
-## Layanan node populer
+## Layanan node populer {#popular-node-services}
 
 Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan ragu untuk menambahkan jika ada yang terlewat! Setiap layanan node menawarkan manfaat dan fitur yang berbeda selain tingkatan gratis atau berbayar, Anda harus menyelidiki mana yang paling sesuai dengan kebutuhan Anda sebelum membuat keputusan.
 
 - [**Alchemy**](https://alchemy.com/)
   - [Dokumentasi](https://www.alchemy.com/docs/)
   - Fitur
-    - Tingkat gratis terbesar dengan 300 juta unit komputasi per bulan (~30 juta permintaan getLatestBlock)
+    - Tingkat gratis terbesar dengan 300 juta unit komputasi per bulan (\~30 juta permintaan getLatestBlock)
     - Dukungan multirantai untuk Polygon, Starknet, Optimism, Arbitrum
     - Mendukung ~70% dari aplikasi terdesentralisasi (dapp) Ethereum terbesar dan volume transaksi keuangan terdesentralisasi (DeFi)
     - Peringatan webhook waktu nyata melalui Alchemy Notify
