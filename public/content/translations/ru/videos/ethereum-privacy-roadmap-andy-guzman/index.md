@@ -1,6 +1,6 @@
 ---
-title: "Дорожная карта конфиденциальности Ethereum"
-description: "Энди Гузман из Privacy Stewards of Ethereum (PSE) рассказывает о дорожной карте конфиденциальности Ethereum на саммите Ethereum Privacy Stack в рамках Devconnect 2025, обсуждая текущее состояние конфиденциальности в сети и направления развития протокола."
+title: "Дорожная карта приватности Эфириума"
+description: "Энди Гузман из Privacy Stewards of Ethereum (PSE) рассказывает о дорожной карте приватности Эфириума на саммите Ethereum Privacy Stack в рамках Devconnect 2025, обсуждая текущее состояние приватности в сети и направления развития протокола."
 lang: ru
 youtubeId: "qCBMjokWBRc"
 uploadDate: 2025-12-09
@@ -11,5 +11,5 @@ topic:
   - "roadmap-and-priorities"
 format: presentation
 author: Web3Privacy Now
-breadcrumb: "Дорожная карта конфиденциальности"
+breadcrumb: "Дорожная карта приватности"
 ---

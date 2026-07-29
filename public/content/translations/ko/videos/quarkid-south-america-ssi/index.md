@@ -9,6 +9,6 @@ educationLevel: intermediate
 topic:
   - "privacy"
 format: presentation
-author: "이더리움 파운데이션"
+author: "이더리움 재단"
 breadcrumb: "QuarkID"
 ---

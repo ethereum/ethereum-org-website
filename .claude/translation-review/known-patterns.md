@@ -1,7 +1,8 @@
 # Known Translation Patterns & Issues
 
 > This is a living document. Updated after each language review.
-> Last updated: 2026-07-22 (PR #18868 full pipeline, 22 langs: YAML colon-in-description build-breaker, raw-`<`-in-prose MDX break, and the `ExpandableCard title= "` attribute-extraction gap; fleet avg 9.7)
+> Last updated: 2026-07-29 (PR #18938 full pipeline, 24 langs: Indic loaded-polyseme bloc failure, sanitizer frontmatter-guard newline bug corrupting `uploadDate`, `/videos` frontmatter bypassing ETHGlossary, split-sentence `-strong` keys, partial-update manifest drift; fleet avg 8.9 -- lowest in months)
+> Previous: 2026-07-22 (PR #18868 full pipeline, 22 langs: YAML colon-in-description build-breaker, raw-`<`-in-prose MDX break, and the `ExpandableCard title= "` attribute-extraction gap; fleet avg 9.7)
 > Previous: 2026-06-30 (PR #18629 full-tree: empty `{#}` h5 build-breaker, code-fence corruption cluster, the source-language decision rule, and the "deterministic sweeps beat agent triage" methodology note)
 > Previous: 2026-06-09 (PR #18375: MDX duplicated-closer / dropped-`>` breakers, duplicate ghost-heading artifact, ETHGlossary authority hierarchy)
 
@@ -520,3 +521,67 @@ Fixes applied (minimal marker, everything else byte-identical): zh/zh-tw `是`�
 - **Full-file retranslation churns lines the English change never touched.** ta regressed `முக்கிய பகுதி` → `திறவுகோல் பகுதி` ("keyhole part") and lost two sentence-final periods; es appended an unrequested gloss and re-translated "Onchain Achievement Token"; fr moved the *opposite* way on the same term. Budget review attention for collateral drift, not just the intended diff.
 - **`page-collectibles.json` is where program-name splits hide.** es casing, it casing, pl `Program tłumaczeń` vs `Program Tłumaczeń`, cs `utlumuje` vs `chýlí ke konci`, ru `перевода`/`переводов`, uk `перекладу`/`перекладів`, te `కార్యక్రమం`/`ప్రోగ్రామ్`, mr `अनुवाद`/`भाषांतर`, sw two names + three winddown verbs. The JSON was translated in a separate task from the markdown, so the two drift apart; check them against each other explicitly.
 - **ja softened the message:** `縮小` ("scaling down", implies continued operation) on the program and contributing pages, vs the correct `段階的に終了` it used in get-involved and page-collectibles. Left unfixed — worth a native call.
+
+### 32. Loaded English polysemes resolve to the WRONG sense in Indic locales, as a bloc (CRITICAL)
+
+Where an English word is an auto-antonym or carries a loaded secondary sense, MT into the five Indic-script locales (`bn`, `hi`, `mr`, `ta`, `te`) resolves to the everyday/administrative/religious reading rather than the legal-technical one. **The split follows the script family, not translator quality** — in PR #18938 all 19 non-Indic locales rendered the same words correctly.
+
+Confirmed on the brand-new `/privacy/ethereum` page (`page-privacy-ethereum.json`):
+
+| English | Wrong sense produced | Locales |
+|---|---|---|
+| **sanctioned** wallets (sanctions-listed) | *approved / permitted* — inverts a blocklist into an allowlist | bn `অনুমোদিত`, hi `स्वीकृत`, mr `मंजूर`, ta `அனுமதிக்கப்பட்ட`, te `మంజూరు చేయబడిన` |
+| **communal** pool (shared) | *sectarian / religious* — te literally "religious"; `सांप्रदायिक` is politically loaded in India | bn, hi, mr, ta, te |
+| proof of **innocence** (not guilty) | *naivety* (ta `அப்பாவித்தனம்`, te `అమాయకత్వం`), *integrity* (ko `무결성`), *candour* (id `Kepolosan`) | ta, te + ko, id |
+
+Why it happens: in Hindi/Marathi/Bengali/Tamil/Telugu the dominant borrowed sense of "sanction" is administrative approval (`मंजूर बजट` = "sanctioned budget"), and "communal" is the religious-community sense first.
+
+**Detection is deterministic, and agent triage is NOT sufficient** — per-language agents caught only 3 of the 8 individual misses in #18938; `ta` and `te` were found only by sweeping the string across all 24 locales. For any English source containing a loaded polyseme, extract each locale's rendering of that one term and diff the Indic group against the intended sense.
+
+**Durable fix:** pin these senses per-locale in ETHGlossary, and keep a loaded-polyseme watchlist for the pre-ship sweep. Starter list: sanction, communal, innocence, state, actor, semantics, receipt, stake(s), audit, exposure, bundle, front-run, niche, unstructured.
+
+### 32b. "actor" -> stage/film performer (CRITICAL — same family, wider blast radius)
+
+English "actor" meaning *party/agent* becomes a theatrical performer in `mr` (`अभिनेते`), `ta` (`நடிகர்`), `te` (`నటులు`) and `ur` (`اداکار`). Reads as "bad film-actor", "state-employed actors", "malicious performers". The tell that it is real and not a variant: the same PR's `page-values.json` renders "bad actors" correctly with a non-theatrical word (`वाईट प्रवृत्तीचे लोक`, `చెడ్డ వ్యక్తులు`), so it is cross-file disagreement inside one import. Fix with the entity/party word (`घटक`, `தரப்புகள்`, `వ్యక్తులు/సంస్థలు`, `عناصر`).
+
+### 33. Frontmatter guard requires a trailing newline -> sanitizer corrupts YAML in frontmatter-only files (CRITICAL — build/data)
+
+`fixBareRtlDates`, `fixBareRtlMath` and `fixBareRtlValues` each split frontmatter off with `/^(---\n[\s\S]*?\n---\n)/`, which **requires a newline after the closing `---`**. `/videos/*` stubs are frontmatter-only and the pipeline emits them **without** a trailing newline, so the match returns null, `frontmatter` becomes `""`, the entire file is treated as body, and `RTL_SKIP_PATTERN` does not protect YAML. Result in PR #18938: `uploadDate: <span dir="ltr">2025-12-09</span>` in all 4 ar/ur video files.
+
+Reader impact is silent, not a build break: `gray-matter` parses the value as a **string** rather than a Date, so `formatDate()` fails `isValidDate` and returns `""` — the video page renders a **blank** upload date — and `app/[locale]/videos/[slug]/page-jsonld.tsx` emits `<span dir="ltr">2024-11-14</span>T00:00:00+00:00` as the schema.org `VideoObject.uploadDate`, injecting raw HTML into structured data. `VideoGalleryFilter` also sorts on the string, and `<` (0x3C) sorts after digits.
+
+Note `uploadDate` was **already** on the sanitizer's `syncProtectedFrontmatterFields` protected list and the LLM is explicitly forbidden from doing this (`prompt-builder.ts`) — the sanitizer did it to itself, *after* the correct value had been copied from English. Guards downstream of a protection step must be verified independently.
+
+**Fixed in #18938:** all four guards now accept `\n---(?:\n|$)`, the pipeline emits a trailing newline, and `tests/unit/intl-pipeline/sanitizer/standalone-fixes.spec.ts` covers the frontmatter-only case for both `fixBareRtlDates` and `fixBareRtlValues` (both new tests fail without the patch). Patching the guard does **not** clean already-corrupted files — `RTL_SKIP_PATTERN` protects existing `<span dir="ltr">` for idempotency, so shipped corruption needs a separate unwrap.
+
+### 34. `/videos/*` frontmatter is translated on a path that never consults ETHGlossary (HIGH — fleet-wide)
+
+In PR #18938 the two new video stubs disagreed with their *own locale's* JSON on the PR's core terms, while the JSON files were glossary-clean — the signature of a separate, unbound translation path rather than per-language error. Six locales (`bn`, `hi`, `ru`, `te`, `uk`, `ur`) rendered `privacy` differently in the stub than in their `page-privacy-ethereum.json`; every non-Latin locale with a translated `Ethereum Foundation` entry used a phonetic transliteration instead (ar `إيثريوم فاونديشن` vs `مؤسسة إيثيريوم`, ko `이더리움 파운데이션` vs `이더리움 재단`, ru `Этериум Фаундейшн` vs `Фонд Ethereum`, ja `イーサリアム・ファウンデーション` vs `イーサリアム財団`); `ta`/`te` left `Ethereum` in Latin against a 163-occurrence mandate; `hi`/`mr`/`ta`/`te` transliterated `account abstraction` and `decentralized identity` instead of using the compound entries.
+
+**Detection:** for each locale, diff the stub's rendering of a core term against the same locale's JSON for the same term. Cross-file disagreement inside one PR is the tell (same logic as #30). Latin-script locales keeping the `author` byline in Latin is the **established convention** and is not a defect.
+
+### 35. Splitting one sentence across two intl keys forces English word order on every locale (HIGH — English-source defect)
+
+A `<strong>{t("x-strong")}</strong>{" "}{t("x")}` render pattern makes the second key a grammatical **fragment** that only parses in English order, joined by a space hard-coded in the component. Translators cannot see or change the join, so locales whose syntax differs have no legal rendering. On `/values` in PR #18938: German requires a comma before the relative clause and could not add one; Turkish repeated the head noun to stay grammatical, shipping "**Güvenlik** güvenlik ..." (= "Security security you cannot inspect"). A continuation key that begins with punctuation (`". It's the result of ..."`) is worse — the sentence boundary lives in the wrong file.
+
+Reviewers: treat any `-strong`/`-continued`/`-part2` key pair as a defect in the **English source**, not a translation error, and expect the same bullet to break in several unrelated locales at once. Fix = one key per sentence with inline tags rendered via `t.rich` + `Strong`/`Emphasis` from `@/components/IntlStringElements`. Rule recorded in the `design-system` skill (`references/i18n-rtl.md`).
+
+### 36. Partial JSON updates ship translated content without refreshing `translation.json` (MEDIUM — manifest drift)
+
+When a JSON namespace is updated **incrementally** (a subset of keys), the pipeline writes the new `source.json` rootHash but leaves `translation.json` untouched, so the manifest records the translation as behind English even though the content just shipped. Full-file updates refresh both.
+
+PR #18938: `page-community.json` (28 of 55 keys) and `learn-quizzes.json` (49 of 744) shipped translated content with `translatedAt` still reading 2026-06-16 / 2026-05-07 and `englishManifestHash` pointing at the **old** rootHash, e.g. `de/page-community` `source.rootHash=f2518dbf3879` vs `trans.englishManifestHash=2ea5fe9c1b8f`. The two fully-new files (`page-values`, `page-privacy-ethereum`) matched correctly.
+
+**Consequence is record-keeping only — do NOT over-escalate this.** Verified in the #18938 review: the incremental gate is `hasEnglishChanged(englishContent, source.json)` (`manifest-adapter.ts:141`), which reads **`source.json` alone**. `translation.json` is never read for any decision and `englishManifestHash` is **write-only** across the whole pipeline. So a stale `translation.json` does **not** trigger re-translation and does **not** put review fixes at risk. What it does break is observability: `translatedAt` and `englishManifestHash` misreport when a locale was last translated, so the manifests can't be trusted to answer "is this locale current?".
+
+**`stamp_only` will not fix it.** That flag writes only the *source* manifest, and it sits behind the same `hasEnglishChanged` gate — for a file whose `source.json` is already current it is a complete no-op. Fixing this needs a pipeline change that writes `translation.json` on the incremental path, not a workflow run.
+
+**Check with a hash comparison, not timestamps alone:** `source.json.rootHash == translation.json.englishManifestHash` per file per locale.
+
+### All 24 languages -- /values + /privacy/ethereum + privacy quiz + community, Reviewed PR #18938 (intl/pending-dev)
+- 24 langs x 8 files (es: 9) = 193 content files. Changed surface: `page-values.json` 39/39 (new page), `page-privacy-ethereum.json` 116/116 (new page), `page-community.json` 28/55, `learn-quizzes.json` 49/744 (new privacy quiz), plus 4 markdown (2 new frontmatter-only video stubs, `roadmap/security`, `nodes-as-a-service`). Fleet avg **8.9** — well below the 9.5-9.7 of recent runs.
+- Scores: fr/pt-br 9.6, cs 9.5, zh 9.4, it 9.3, id/ja/pl/ru/zh-tw 9.2, ar/de/tr/vi 9.1, ko 8.8, es 8.7, sw/uk 8.6, bn/hi 8.4, mr 8.0, te/ur 7.9, ta 7.4. **The bottom six are five Indic locales plus `ur`** — see #32.
+- **Deterministic layer clean**: MDX compile 97/97 (English controls clean, no build-breakers), full JSON key parity, rich-text tag + ICU sets byte-match, zero `HTML-PLACEHOLDER` leaks, hrefs byte-identical, zero ticker/domain typos, no `<span dir=` in JSON values.
+- **`roadmap/security` was broken in all 24 locales** and repaired by a scoped `mode=full` re-run (not hand-edits): English had been rewritten to 8 sections, every locale still carried the superseded 5, and this PR patched only the "Current progress" block onto them — 23 locales also lost `{#current-progress}`, and `ur` received 19 lines of **verbatim untranslated English** while losing its translated section. The re-run also restored `summaryPoints` and replaced the invalid `variant="outline-color"` ButtonLinks. It additionally fixed the zh-tw negation-scope error and left ja `devnet` bare (hand-fixed to `デブネット`).
+- **English-source defects, inherited by every locale:** `page-values` Open Source / Security card **descriptions swapped** (flagged independently by 14 agents; fixed by exchanging the values in all 25 files, which needs no re-translation since both strings already existed everywhere); the split-sentence `-strong` keys of #35; `Quicknode` -> `QuickNode` casing, which several locales had already corrected on their own.
+- **METHODOLOGY — a sweep that silently matches nothing is worse than no sweep.** The first href/heading/ticker/domain pass in this review was a **no-op**: written in zsh, `for L in $LANGS` does not word-split, so every iteration skipped and all four checks reported clean. That masked a 23-locale anchor deletion until an agent contradicted the result. Always print a per-item count and assert a non-zero file count before trusting a sweep; and treat an agent that contradicts a deterministic "clean" as a signal to re-run the sweep, not as a false positive.

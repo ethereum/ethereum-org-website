@@ -22,7 +22,7 @@ Un "nodo" es cualquier instancia de software cliente de Ethereum que está conec
 
 Estos clientes trabajan juntos para realizar un seguimiento de la cabeza de la cadena de Ethereum y permiten a los usuarios interactuar con la red. El diseño modular con múltiples piezas de software trabajando juntas se llama [complejidad encapsulada](https://vitalik.eth.limo/general/2022/02/28/complexity.html). Este enfoque facilitó la ejecución de [La Fusión](/roadmap/merge) sin problemas, hace que el software cliente sea más fácil de mantener y desarrollar, y permite la reutilización de clientes individuales, por ejemplo, en el [ecosistema de capa 2 (l2)](/layer-2/).
 
-![Coupled execution and consensus clients](./eth1eth2client.png)
+![Clientes de ejecución y consenso acoplados](./eth1eth2client.png)
 Diagrama simplificado de un cliente de ejecución y de consenso acoplados.
 
 ### Diversidad de clientes {#client-diversity}
@@ -57,7 +57,7 @@ Si desea [ejecutar su propio nodo](/developers/docs/nodes-and-clients/run-a-node
 
 ### Nodo completo {#full-node}
 
-Los nodos completos hacen una validación bloque por bloque de la cadena de bloques, lo que incluye la descarga y verificación del cuerpo del bloque y los datos de estado de cada bloque. Hay diferentes clases de nodos completos: algunos comienzan desde el bloque génesis y verifican cada bloque en toda la historia de la cadena de bloques. Otros comienzan su verificación en un bloque más reciente que confían en que sea válido (por ejemplo, la 'sincronización rápida' o snap sync de Geth). Independientemente de dónde comience la verificación, los nodos completos solo guardan una copia local de los datos relativamente recientes (generalmente los 128 bloques más recientes), lo que permite que los datos más antiguos se eliminen para ahorrar espacio en disco. Los datos más antiguos se pueden regenerar cuando se necesiten.
+Los nodos completos hacen una validación bloque por bloque de la cadena de bloques, lo que incluye la descarga y verificación del cuerpo del bloque y los datos de estado de cada bloque. Hay diferentes clases de nodos completos: algunos comienzan desde el bloque génesis y verifican cada bloque en toda la historia de la cadena de bloques. Otros comienzan su verificación en un bloque más reciente que confían en que sea válido (por ejemplo, la «sincronización snap» de Geth). Independientemente de dónde comience la verificación, los nodos completos solo guardan una copia local de los datos relativamente recientes (generalmente los 128 bloques más recientes), lo que permite que los datos más antiguos se eliminen para ahorrar espacio en disco. Los datos más antiguos se pueden regenerar cuando se necesiten.
 
 - Almacena todos los datos de la cadena de bloques (aunque esto se depura periódicamente para que un nodo completo no almacene todos los datos de estado hasta el génesis)
 - Participa en la validación de bloques, verifica todos los bloques y estados.
@@ -99,7 +99,7 @@ Ejecutar su propio nodo le permite utilizar Ethereum de forma privada, autosufic
 - Puede conectarse a su nodo utilizando **Comunicaciones entre Procesos (IPC)** o reescribir el nodo para cargar su programa como un complemento (plugin). Esto proporciona baja latencia, lo que ayuda mucho, por ejemplo, al procesar una gran cantidad de datos usando bibliotecas Web3 o cuando necesita reemplazar sus transacciones lo más rápido posible (es decir, frontrunning).
 - Puede hacer staking de ETH directamente para asegurar la red y ganar recompensas. Consulte el [staking en solitario](/staking/solo/) para comenzar.
 
-![How you access Ethereum via your application and nodes](./nodes.png)
+![Cómo acceder a Ethereum a través de su aplicación y nodos](./nodes.png)
 
 ### Beneficios para la red {#network-benefits}
 

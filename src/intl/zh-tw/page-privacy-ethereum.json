@@ -76,7 +76,7 @@
   "page-privacy-ethereum-l2-description-1": "隱形地址與隱私池保護基本的資產轉帳，但不能保護在去中心化交易所交易代幣、從借貸協定借款資產或參與去中心化治理時涉及的複雜智能合約邏輯。",
   "page-privacy-ethereum-l2-description-2": "專注於隱私的第二層 (L2) 網路為運算提供了一個私人環境，同時繼承了以太坊主網的安全性。其中一些網路使用<zkrollups>零知識匯總 (ZK-rollups)</zkrollups>，它在鏈下捆綁數千筆交易，生成其有效性的密碼學證明而不揭露底層交易資料，並將該證明發布到以太坊。",
   "page-privacy-ethereum-l2-description-3": "ZK-rollups 擴展了以太坊的網路容量並保留了以太坊主網的安全保證，同時提供了<strong>機密去中心化金融 (DeFi)、私人身分證明與具備合規意識的應用程式</strong>所需的選擇性揭露機制。",
-  "page-privacy-ethereum-l2-description-4": "專注於可程式化隱私的 L2（如 Aztec）允許開發人員部署私人智能合約。內部狀態、使用者餘額、身分資料與業務邏輯在數學上不受公眾視線的影響，並且私人執行環境 (PXE) 在使用者的本機裝置上運行，處理機密資料。公共的 Aztec 虛擬機允許應用程式將這種可驗證的客戶端私人資料與共享的公共帳本狀態混合在一起。",
+  "page-privacy-ethereum-l2-description-4": "專注於可程式化隱私的 L2（如 Aztec）允許開發人員部署私人智能合約。內部狀態、使用者餘額、身分資料與業務邏輯在數學上被屏蔽於公眾視野之外，並且私人執行環境 (PXE) 在使用者的本機裝置上運行，處理機密資料。公共的 Aztec 虛擬機允許應用程式將這種可驗證的客戶端私人資料與共享的公共帳本狀態混合在一起。",
   "page-privacy-ethereum-l2-list-title": "專注於隱私的以太坊第二層 (L2) 網路",
   "page-privacy-ethereum-l2-list-aztec": "<link>Aztec</link> - 以太坊上隱私優先的 L2，允許私人執行與私人狀態、公共執行與公共狀態，以及與以太坊主網的私人互動。",
   "page-privacy-ethereum-l2-list-fairblock": "<link>Fairblock Network</link> - 用於開放金融的機密性 L2，專注於機密金融、機構的機密執行環境與私人 AI。",
