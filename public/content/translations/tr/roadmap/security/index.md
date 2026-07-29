@@ -43,6 +43,13 @@ Karmaşık bir saldırganın yaklaşan doğrulayıcıları tespit etmesi ve blok
 
 <ButtonLink variant="outline-color" href="/roadmap/secret-leader-election">Gizli lider seçimi hakkında bilgi edinin</ButtonLink>
 
-## Mevcut ilerleme {#current-progress}
+## Mevcut ilerleme
 
-**Yol haritasındaki güvenlik yükseltmeleri ileri araştırma aşamalarındadır**, ancak bir süre daha uygulanmaları beklenmemektedir. Görünüm birleştirme (view-merge), PBS, SSF ve SLE için sonraki adımlar, bir spesifikasyonu kesinleştirmek ve prototipler oluşturmaya başlamaktır.
+2026 ortası itibarıyla:
+
+- **Blok oluşturma ve sansür direnci**: ePBS ve blok düzeyinde erişim listeleri Glamsterdam devnet'lerinde çalışmaktadır. FOCIL, 2027 için hedeflenen Hegotá için planlanmaktadır.
+- **Kesinlik**: Minimmit ve daha geniş kapsamlı Lean Ethereum mutabakat çalışmaları, henüz bir çatallanma ataması olmaksızın aktif araştırma aşamasında kalmaya devam etmektedir.
+- **Kuantum direnci**: Haftalık kuantum sonrası birlikte çalışabilirlik devnet'leri çalışmaktadır ve temel altyapı kilometre taşları yaklaşık 2029'u hedeflemektedir.
+- **Basitleştirme**: Pectra ve Fusaka yayınlandı; Glamsterdam ve Hegotá bir sonraki temizlik turunu taşıyor.
+
+Bu çalışmaların hiçbir kısmı tamamlanmamıştır ve tüm zaman çizelgeleri değişebilecek tahminlerdir.
