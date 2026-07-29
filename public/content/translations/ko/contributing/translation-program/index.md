@@ -1,7 +1,7 @@
 ---
-title: 번역 프로그램
+title: "번역 프로그램"
 lang: ko
-description: ethereum.org 번역 프로그램에 대한 정보
+description: "ethereum.org 번역 프로그램에 대한 정보"
 ---
 
 번역 프로그램은 전 세계 수십억 명의 비영어권 사용자가 웹사이트에 더 쉽게 접근할 수 있도록 ethereum.org를 다양한 언어로 번역하기 위한 공동의 노력이었습니다.
@@ -26,8 +26,8 @@ ethereum.org 번역 프로그램은 ethereum.org 및 기타 이더리움 콘텐�
 
 ### 현재까지의 진행 상황 {#our-progress}
 
-- [**6,900명 이상**의 번역가](/contributing/translation-program/contributors/)
-- **68**개 언어 사이트 지원
+- [<strong>6,900명 이상</strong>의 번역가](/contributing/translation-program/contributors/)
+- <strong>68</strong>개 언어 사이트 지원
 - [2024년 **289만** 단어 번역](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />

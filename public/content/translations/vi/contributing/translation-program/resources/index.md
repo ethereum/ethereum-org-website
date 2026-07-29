@@ -1,8 +1,8 @@
 ---
-title: Tài nguyên
-metaTitle: Tài nguyên dành cho biên dịch viên
+title: "Tài nguyên"
+metaTitle: "Tài nguyên dành cho biên dịch viên"
 lang: vi
-description: Các tài nguyên hữu ích dành cho biên dịch viên của ethereum.org
+description: "Các tài nguyên hữu ích dành cho biên dịch viên của ethereum.org"
 ---
 
 Bạn có thể tìm thấy một số hướng dẫn và công cụ hữu ích dành cho các biên dịch viên của ethereum.org, cũng như các cộng đồng dịch thuật và thông tin cập nhật ở bên dưới.

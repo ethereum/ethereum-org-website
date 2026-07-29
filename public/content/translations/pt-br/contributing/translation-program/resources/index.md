@@ -2,7 +2,7 @@
 title: Recursos
 metaTitle: Recursos para tradutores
 lang: pt-br
-description: Recursos úteis para os tradutores do ethereum.org
+description: "Recursos úteis para os tradutores do ethereum.org"
 ---
 
 Você pode encontrar alguns guias e ferramentas úteis para os tradutores do ethereum.org, bem como comunidades de tradução e atualizações abaixo.

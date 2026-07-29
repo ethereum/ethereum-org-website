@@ -1,8 +1,8 @@
 ---
-title: الموارد
-metaTitle: الموارد للمترجمين
+title: "الموارد"
+metaTitle: "الموارد للمترجمين"
 lang: ar
-description: موارد مفيدة لمترجمي موقع ⁦ethereum.org⁩
+description: "موارد مفيدة لمترجمي موقع ⁦ethereum.org⁩"
 ---
 
 يمكنك العثور أدناه على بعض الأدلة والأدوات المفيدة لمترجمي موقع <span dir="ltr">ethereum.org</span>، بالإضافة إلى مجتمعات الترجمة والتحديثات.

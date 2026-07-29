@@ -1,8 +1,8 @@
 ---
 title: Zdroje
-metaTitle: Zdroje pro překladatele
+metaTitle: "Zdroje pro překladatele"
 lang: cs
-description: Užitečné zdroje pro překladatele webu ethereum.org
+description: "Užitečné zdroje pro překladatele webu ethereum.org"
 ---
 
 Níže najdete několik užitečných průvodců a nástrojů pro překladatele webu ethereum.org, stejně jako překladatelské komunity a novinky.

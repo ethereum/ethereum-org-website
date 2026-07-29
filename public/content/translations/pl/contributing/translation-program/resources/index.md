@@ -1,8 +1,8 @@
 ---
 title: Zasoby
-metaTitle: Zasoby dla tłumaczy
+metaTitle: "Zasoby dla tłumaczy"
 lang: pl
-description: Przydatne zasoby dla tłumaczy ethereum.org
+description: "Przydatne zasoby dla tłumaczy ethereum.org"
 ---
 
 Poniżej znajdziesz przydatne przewodniki i narzędzia dla tłumaczy ethereum.org, a także informacje o społecznościach tłumaczy i aktualizacjach.

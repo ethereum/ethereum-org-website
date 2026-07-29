@@ -1,7 +1,7 @@
 ---
-title: Překladatelský program
+title: "Překladatelský program"
 lang: cs
-description: Informace o překladatelském programu ethereum.org
+description: "Informace o překladatelském programu ethereum.org"
 ---
 
 Překladatelský program byl společným úsilím o překlad webu ethereum.org do různých jazyků, čímž se web stal přístupnějším pro miliardy lidí na celém světě, kteří nemluví anglicky.

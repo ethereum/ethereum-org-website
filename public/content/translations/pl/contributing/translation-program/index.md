@@ -1,7 +1,7 @@
 ---
-title: Program tłumaczeń
+title: "Program tłumaczeń"
 lang: pl
-description: Informacje o programie tłumaczeń ethereum.org
+description: "Informacje o programie tłumaczeń ethereum.org"
 ---
 
 Program tłumaczeń był wspólnym wysiłkiem mającym na celu przetłumaczenie ethereum.org na różne języki, dzięki czemu strona stała się bardziej dostępna dla miliardów osób na całym świecie, które nie posługują się językiem angielskim.

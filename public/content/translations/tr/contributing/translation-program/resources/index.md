@@ -1,8 +1,8 @@
 ---
 title: Kaynaklar
-metaTitle: Çevirmenler için kaynaklar
+metaTitle: "Çevirmenler için kaynaklar"
 lang: tr
-description: ethereum.org çevirmenleri için faydalı kaynaklar
+description: "ethereum.org çevirmenleri için faydalı kaynaklar"
 ---
 
 Aşağıda ethereum.org çevirmenleri için bazı faydalı rehberler ve araçların yanı sıra çeviri toplulukları ve güncellemeleri bulabilirsiniz.

@@ -1,8 +1,8 @@
 ---
-title: وسائل
-metaTitle: مترجمین کے لیے وسائل
+title: "وسائل"
+metaTitle: "مترجمین کے لیے وسائل"
 lang: ur
-description: ⁦ethereum.org⁩ کے مترجمین کے لیے مفید وسائل
+description: "⁦ethereum.org⁩ کے مترجمین کے لیے مفید وسائل"
 ---
 
 آپ ذیل میں <span dir="ltr">ethereum.org</span> کے مترجمین کے لیے کچھ مفید رہنمائی اور ٹولز، نیز ترجمہ کی کمیونٹیز اور اپ ڈیٹس تلاش کر سکتے ہیں۔

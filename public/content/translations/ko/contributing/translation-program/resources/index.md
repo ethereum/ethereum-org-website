@@ -1,8 +1,8 @@
 ---
-title: 리소스
-metaTitle: 번역가를 위한 리소스
+title: "리소스"
+metaTitle: "번역가를 위한 리소스"
 lang: ko
-description: ethereum.org 번역가를 위한 유용한 리소스
+description: "ethereum.org 번역가를 위한 유용한 리소스"
 ---
 
 아래에서 ethereum.org 번역가를 위한 유용한 가이드와 도구, 번역 커뮤니티 및 업데이트를 확인할 수 있습니다.

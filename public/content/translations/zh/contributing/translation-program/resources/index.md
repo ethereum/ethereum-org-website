@@ -1,8 +1,8 @@
 ---
-title: 资源
-metaTitle: 译者资源
+title: "资源"
+metaTitle: "译者资源"
 lang: zh
-description: 供 ethereum.org 译者使用的实用资源
+description: "供 ethereum.org 译者使用的实用资源"
 ---
 
 您可以在下方找到供 ethereum.org 译者使用的一些实用指南和工具，以及翻译社区和最新动态。

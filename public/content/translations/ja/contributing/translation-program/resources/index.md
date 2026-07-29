@@ -1,8 +1,8 @@
 ---
-title: リソース
-metaTitle: 翻訳者向けリソース
+title: "リソース"
+metaTitle: "翻訳者向けリソース"
 lang: ja
-description: ethereum.orgの翻訳者向けの役立つリソース
+description: "ethereum.orgの翻訳者向けの役立つリソース"
 ---
 
 以下に、ethereum.orgの翻訳者向けの役立つガイドやツール、翻訳コミュニティ、最新情報などをまとめています。

@@ -1,8 +1,8 @@
 ---
 title: Ressourcen
-metaTitle: Ressourcen für Übersetzer
+metaTitle: "Ressourcen für Übersetzer"
 lang: de
-description: Nützliche Ressourcen für Übersetzer von ethereum.org
+description: "Nützliche Ressourcen für Übersetzer von ethereum.org"
 ---
 
 Nachfolgend findest du einige nützliche Leitfäden und Tools für Übersetzer von ethereum.org sowie Übersetzungs-Communitys und Updates.
