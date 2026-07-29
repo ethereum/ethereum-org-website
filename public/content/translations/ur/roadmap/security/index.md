@@ -11,6 +11,25 @@ template: roadmap
 
 ایسی بہتری بھی موجود ہے جو بلاک تجویز کنندہ کو ان کے بلاکس کے اصل مواد سے بے خبر رکھ کر ٹرانزیکشنز کو سنسر کرنا بہت مشکل بناتی ہے، اور یہ پہچاننے کے نئے طریقے بھی ہیں کہ کب کوئی کلائنٹ سنسر کر رہا ہے۔ یہ تمام ترامیم مل کر [حصہ داری کا ثبوت (PoS)](/glossary/#pos) پروٹوکول کو اپ گریڈ کریں گی تاکہ صارفین - افراد سے لے کر کارپوریشنز تک - کو ایتھیریم پر اپنی ایپس، ڈیٹا اور اثاثوں پر فوری اعتماد حاصل ہو۔
 
+## Current progress {#current-progress}
+
+As of mid 2026:
+
+- **Block building and censorship resistance**: ePBS and block-level access lists are running on Glamsterdam devnets. FOCIL is planned for Hegotá, targeted for 2027.
+- **Finality**: Minimmit and the wider Lean Ethereum consensus work remain in active research with no fork assignment yet.
+- **Quantum resistance**: Weekly post-quantum interop devnets are running, and core infrastructure milestones target approximately 2029.
+- **Simplification**: Pectra and Fusaka shipped; Glamsterdam and Hegotá carry the next round of cleanups.
+
+No part of this work is finished, and all timelines are estimates that may shift.
+
+## Further reading {#further-reading}
+
+- [Forkcast: Ethereum network upgrade tracker](https://forkcast.org)
+- [Strawmap: a draft Ethereum L1 roadmap](https://strawmap.org) - _EF Architecture_
+- [Post-Quantum Ethereum](https://pq.ethereum.org) - _Ethereum Foundation_
+- [Lean Ethereum roadmap tracker](https://leanroadmap.org) - _ReamLabs_
+- [Proof-of-stake and finality](/developers/docs/consensus-mechanisms/pos/#finality)
+- [The EVM](/developers/docs/evm/)
 ## اسٹیکنگ کا انخلا {#staking-withdrawals}
 
 [ثبوتِ کار (PoW)](/glossary/#pow) سے حصہ داری کا ثبوت (PoS) میں اپ گریڈ کا آغاز ایتھیریم کے بانیوں کی جانب سے ایک ڈپازٹ کنٹریکٹ میں اپنے <span dir="ltr">ETH</span> کو "اسٹیک" کرنے سے ہوا۔ وہ <span dir="ltr">ETH</span> نیٹ ورک کی حفاظت کے لیے استعمال ہوتا ہے۔ توثیق کاروں کو اسٹیک کیے گئے <span dir="ltr">ETH</span> کو نکالنے کی اجازت دینے کے لیے <span dir="ltr">April 12, 2023</span> کو ایک دوسری اپ ڈیٹ کی گئی۔ اس کے بعد سے توثیق کار آزادانہ طور پر <span dir="ltr">ETH</span> کو اسٹیک کر سکتے ہیں یا نکال سکتے ہیں۔
@@ -42,7 +61,3 @@ template: roadmap
 یہ ممکن ہے کہ ایک پیچیدہ حملہ آور آنے والے توثیق کاروں کی شناخت کر لے اور انہیں بلاکس تجویز کرنے سے روکنے کے لیے اسپام کرے؛ اسے **ڈینائل آف سروس (<span dir="ltr">DoS</span>)** حملہ کہا جاتا ہے۔ [**خفیہ انتخابِ قائد (<span dir="ltr">SLE</span>)**](/roadmap/secret-leader-election) کو نافذ کرنے سے بلاک تجویز کنندہ کو پہلے سے جاننے سے روک کر اس قسم کے حملے سے تحفظ ملے گا۔ یہ امیدوار بلاک تجویز کنندہ کی نمائندگی کرنے والے کرپٹوگرافک وعدوں (commitments) کے ایک سیٹ کو مسلسل شفل کر کے کام کرتا ہے اور ان کی ترتیب کو یہ تعین کرنے کے لیے استعمال کرتا ہے کہ کس توثیق کار کو اس طرح منتخب کیا گیا ہے کہ صرف توثیق کار خود ہی اپنی ترتیب کو پہلے سے جانتے ہیں۔
 
 <ButtonLink variant="outline-color" href="/roadmap/secret-leader-election">خفیہ انتخابِ قائد کے بارے میں پڑھیں</ButtonLink>
-
-## موجودہ پیش رفت {#current-progress}
-
-**روڈ میپ پر سیکیورٹی اپ گریڈز تحقیق کے اعلیٰ مراحل میں ہیں**، لیکن توقع نہیں ہے کہ انہیں کچھ عرصے تک نافذ کیا جائے گا۔ ویو-مرج، پی بی ایس، <span dir="ltr">SSF</span> اور <span dir="ltr">SLE</span> کے لیے اگلے اقدامات ایک تصریح (specification) کو حتمی شکل دینا اور پروٹوٹائپس بنانا شروع کرنا ہیں۔
