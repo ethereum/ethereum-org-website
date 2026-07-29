@@ -23,3 +23,7 @@
 - **Terminology split (left unfixed):** `get-involved` drifted to `翻译项目`/`项目页面` while the program page, contributing, `common.json` and `page-collectibles.json` all use `翻译计划`/`计划页面`.
 - `remains a priority` overstated as `首要任务` ("top priority") on the program page.
 - Bold rendered as `<strong>` HTML rather than `**` in 1-2 spots per file (new this run; dev had none). Valid MDX, renders identically, and arguably safer given CJK emphasis-flanking rules -- noted, not fixed.
+
+## PR #18937 (intl/pending-content-translation-program-remove-recruitment-pages) -- 2026-07-29
+- Program page fully retranslated again; the aspect fixes from #18935 were wiped and re-applied (`曾是` / `曾旨在` on lines 7 and 25). See known-patterns #34.
+- **Program-name term flipped file-wide** to `翻译项目` (14 occurrences, zero `翻译计划`), the reverse of the split logged yesterday, where `get-involved` used `翻译项目` and the program page used `翻译计划`. The re-applied lines follow the new dominant term so the page is internally consistent, but `contributing/index.md`, `common.json` and `page-collectibles.json` still use `翻译计划` -- the cross-file split persists, now pointing the other way. Worth settling centrally rather than per-run.
