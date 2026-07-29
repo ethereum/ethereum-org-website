@@ -1,7 +1,7 @@
 ---
-title: "Çeviri Programı"
+title: Çeviri Programı
 lang: tr
-description: "ethereum.org Çeviri Programı hakkında bilgi"
+description: ethereum.org Çeviri Programı hakkında bilgi
 ---
 
 Çeviri Programı, ethereum.org'u farklı dillere çevirerek web sitesini dünya çapında İngilizce konuşmayan milyarlarca insan için daha erişilebilir hale getirmeyi amaçlayan ortak bir çabaydı.
@@ -10,23 +10,21 @@ description: "ethereum.org Çeviri Programı hakkında bilgi"
 
 ## Program durumu {#program-status}
 
-ethereum.org Çeviri Programı sona eriyor ve artık yeni çevirmenlerin sisteme katılımını sağlamıyor. Crowdin projesi kapatılıyor ve bu proje üzerinden yeni çeviri gönderimlerini kabul etmiyoruz.
+ethereum.org Çeviri Programı yavaş yavaş sona eriyor ve artık yeni çevirmenlerin sisteme katılımını sağlamıyor. Crowdin projesi kapatılıyor ve bu proje üzerinden yeni çeviri gönderimlerini kabul etmiyoruz.
 
 Yıllar boyunca ethereum.org'u onlarca dilde erişilebilir kılan binlerce topluluk çevirmenine derinden minnettarız; çalışmaları sitede yayında kalmaya devam ediyor ve [teşekkürler](/contributing/translation-program/acknowledgements/) ile [katkıda bulunanlar](/contributing/translation-program/contributors/) sayfalarındaki takdirleri yerini koruyor.
 
 Mevcut bir çeviride hata fark ederseniz, lütfen [GitHub'da bir sorun açın](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
-_Soru sormak veya geri bildirim paylaşmak için [ethereum.org Discord](https://discord.gg/ethereum-org) kanalına katılın._
+_Soru sormak veya geri bildirim paylaşmak için [ethereum.org Discord](https://discord.gg/ethereum-org) sunucusuna katılın._
 
 ## Çeviri Programı Hakkında {#about-us}
 
-[Ethereum](/) topluluğu küresel ve kapsayıcı olmayı hedefler, ancak içeriğinin büyük bir kısmı yalnızca İngilizce konuşanlara hitap ederek dünyadaki İngilizce konuşmayan 6 milyar insanı dışarıda bırakmaktadır. ethereum.org'un dünya çapındaki topluluk için Ethereum'a açılan bir portal olarak işlev görebilmesi adına, İngilizce konuşmayan kişilere kendi ana dillerinde Ethereum içeriği sunmanın çok önemli olduğuna inanıyoruz.
+[Ethereum](/) topluluğu küresel ve kapsayıcı olmayı hedefler, ancak içeriklerinin çoğu yalnızca İngilizce konuşanlara hitap ederek dünyadaki İngilizce konuşmayan 6 milyar insanı dışarıda bırakmaktadır. ethereum.org'un dünya çapındaki topluluk için Ethereum'a açılan bir portal olarak işlev görebilmesi adına, İngilizce konuşmayanlara kendi ana dillerinde Ethereum içeriği sunmanın çok önemli olduğuna inanıyoruz.
 
 ethereum.org Çeviri Programı, ethereum.org'u ve diğer Ethereum içeriklerini mümkün olduğunca çok dile çevirerek Ethereum'u herkes için erişilebilir kılmayı amaçladı.
 
-ethereum.org Çeviri Programının [misyonu ve vizyonu](/contributing/translation-program/mission-and-vision) hakkında daha fazla bilgi edinin.
-
-### Şu ana kadarki ilerlememiz {#our-progress}
+### Şimdiye kadarki ilerlememiz {#our-progress}
 
 - [**6.900'den fazla** çevirmen](/contributing/translation-program/contributors/)
 - Sitede yayında olan **68** dil
@@ -36,7 +34,7 @@ ethereum.org Çeviri Programının [misyonu ve vizyonu](/contributing/translatio
 
 ### Teşekkürler {#acknowledgements}
 
-Ethereum.org binlerce topluluk üyesi tarafından çevrilmiştir ve onlar Çeviri Programının kilit bir parçasıdır.
+Ethereum.org, binlerce topluluk üyesi tarafından çevrilmiştir ve onlar Çeviri Programının kilit bir parçasıdır.
 Çevirmenlerimizi takdir etmek ve onları kariyer yollarında desteklemek istiyoruz. İşte çevirmenlerimize yönelik bazı teşekkürlerimiz:
 
 #### Sertifika {#certificate}
@@ -53,14 +51,13 @@ Ethereum.org binlerce topluluk üyesi tarafından çevrilmiştir ve onlar Çevir
 
 #### Ödüller {#rewards}
 
-Geçmişte, en aktif katılımcılarımızı [Devcon](https://devcon.org/en/) ve [Devconnect](https://devconnect.org/) gibi Ethereum konferanslarına biletlerin yanı sıra özel ethereum.org ürünleriyle geriye dönük olarak ödüllendirdik.
+Geçmişte, en aktif katkıda bulunanlarımızı [Devcon](https://devcon.org/en/) ve [Devconnect](https://devconnect.org/) gibi Ethereum konferanslarına biletlerin yanı sıra özel ethereum.org ürünleriyle geriye dönük olarak ödüllendirdik.
 
 ### Kılavuzlar ve kaynaklar {#guides-and-resources}
 
 Bu referans materyalleri, kendi programlarını yürüten çeviri toplulukları ve projeleri için erişilebilir olmaya devam etmektedir:
 
 - [Çeviri Stil Kılavuzu](/contributing/translation-program/translators-guide/) _– ethereum.org çevirmenleri için talimatlar ve ipuçları_
-- [Çeviri SSS](/contributing/translation-program/faq/) _– ethereum.org Çeviri Programı hakkında sıkça sorulan sorular ve cevapları_
 
 Diğer faydalı çeviri araçları, çevirmen toplulukları ve Çeviri Programı blog yazıları için lütfen [Kaynaklar sayfasını](/contributing/translation-program/resources/) ziyaret edin.
 
