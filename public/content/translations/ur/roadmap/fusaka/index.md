@@ -3,6 +3,7 @@ title: "فوساکا 🦓"
 metaTitle: "فولو-اوساکا (فوساکا)"
 description: "فوساکا پروٹوکول اپ گریڈ کے بارے میں جانیں"
 lang: ur
+template: upgrade
 authors: ["نکسو", "ماریو ہیول"]
 ---
 

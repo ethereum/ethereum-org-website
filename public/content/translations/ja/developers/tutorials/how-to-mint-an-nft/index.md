@@ -77,7 +77,7 @@ NFTが真に分散型であることを保証するために、便利なIPFS API
 
 視覚的に学びたい方のために、上記の手順を以下にまとめました。
 
-![How to upload your image to Pinata](./instructionsPinata.gif)
+![How to upload your image to Pinata](./instructionsPinata.mp4#712x376)
 
 次に、もう1つのドキュメントをPinataにアップロードします。しかしその前に、それを作成する必要があります！
 
@@ -105,7 +105,7 @@ JSON内のデータは自由に変更してください。attributesセクショ
 
 JSONファイルの編集が完了したら保存し、画像をアップロードしたときと同じ手順でPinataにアップロードします。
 
-![How to upload your nft-metadata.json to Pinata](./uploadPinata.gif)
+![How to upload your nft-metadata.json to Pinata](./uploadPinata.mp4#1280x676)
 
 ## ステップ5: コントラクトのインスタンスを作成する {#instance-contract}
 

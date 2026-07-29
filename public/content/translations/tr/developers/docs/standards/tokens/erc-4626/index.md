@@ -4,34 +4,33 @@ description: "Getiri sağlayan kasalar için bir standart."
 lang: tr
 ---
 
-## Giriş {#introduction}
+## Giriş
 
-ERC-4626, getiri sağlayan kasaların teknik parametrelerini optimize etmek ve birleştirmek için bir standarttır. Tek bir dayanak ERC-20 tokeninin paylarını temsil eden tokenleştirilmiş getiri sağlayan kasalar için standart bir API sağlar. ERC-4626 ayrıca, ERC-20 kullanan tokenleştirilmiş kasalar için isteğe bağlı bir uzantının ana hatlarını çizerek token yatırma, çekim yapma ve bakiyeleri okuma gibi temel işlevler sunar.
+ERC-4626, getiri sağlayan kasaların teknik parametrelerini optimize etmek ve birleştirmek için kullanılan bir standarttır. Tek bir dayanak ERC-20 Tokeninin paylarını temsil eden tokenleştirilmiş getiri sağlayan kasalar için standart bir API sağlar. ERC-4626 ayrıca, ERC-20 kullanan tokenleştirilmiş kasalar için isteğe bağlı bir uzantının ana hatlarını çizer ve Token yatırma, çekme ve bakiyeleri okuma gibi temel işlevler sunar.
 
 **Getiri sağlayan kasalarda ERC-4626'nın rolü**
 
-Borç verme piyasaları, toplayıcılar ve doğası gereği faiz getiren tokenler, farklı stratejiler yürüterek kullanıcıların kripto tokenlerinde en iyi getiriyi bulmalarına yardımcı olur. Bu stratejiler, hataya açık olabilen veya geliştirme kaynaklarını boşa harcayabilen küçük farklılıklarla yapılır.
+Borç verme piyasaları, toplayıcılar ve doğası gereği faiz getiren Tokenler, farklı stratejiler yürüterek kullanıcıların kripto Tokenlerinde en iyi getiriyi bulmalarına yardımcı olur. Bu stratejiler, hataya açık olabilen veya geliştirme kaynaklarını israf edebilen küçük farklılıklarla gerçekleştirilir.
 
 Getiri sağlayan kasalardaki ERC-4626, daha tutarlı ve sağlam uygulama kalıpları oluşturarak entegrasyon çabasını azaltacak ve geliştiricilerin çok az özel çabasıyla çeşitli uygulamalarda getiriye erişimin kilidini açacaktır.
 
-ERC-4626 tokeni, [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626) içinde tam olarak açıklanmıştır.
+ERC-4626 Tokeni, [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626) içinde tam olarak açıklanmıştır.
 
 **Asenkron kasa uzantısı (ERC-7540)**
 
-ERC-4626, belirli bir sınıra kadar atomik para yatırma ve itfa işlemleri için optimize edilmiştir. Sınıra ulaşılırsa, yeni para yatırma veya itfa işlemleri gönderilemez. Bu sınırlama, Kasa ile arayüz oluşturmak için bir ön koşul olarak asenkron eylemlere veya gecikmelere sahip herhangi bir akıllı sözleşme sistemi için iyi çalışmaz (örneğin, gerçek dünya varlık protokolleri, eksik teminatlandırılmış borç verme protokolleri, zincirler arası borç verme protokolleri, likit staking tokenleri veya sigorta güvenlik modülleri).
+ERC-4626, belirli bir sınıra kadar atomik para yatırma ve itfa işlemleri için optimize edilmiştir. Sınıra ulaşılırsa, yeni para yatırma veya itfa işlemleri gönderilemez. Bu sınırlama, Kasa ile arayüz oluşturmak için bir ön koşul olarak asenkron eylemlere veya gecikmelere sahip herhangi bir akıllı sözleşme sistemi için iyi çalışmaz (örneğin, gerçek dünya varlık protokolleri, eksik teminatlandırılmış borç verme protokolleri, zincirler arası borç verme protokolleri, likit staking tokenleri (LST) veya sigorta güvenlik modülleri).
 
 ERC-7540, asenkron kullanım durumları için ERC-4626 Kasalarının faydasını genişletir. Mevcut Kasa arayüzü (`deposit`/`withdraw`/`mint`/`redeem`), asenkron İstekleri talep etmek için tam olarak kullanılır.
 
-ERC-7540 uzantısı, [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540) içinde tam olarak açıklanmıştır.
+[ERC-7540 Asenkron Tokenleştirilmiş Kasalar](/developers/docs/standards/tokens/erc-7540/) hakkında daha fazla bilgi edinin.
 
 **Çoklu varlık kasa uzantısı (ERC-7575)**
 
-ERC-4626 tarafından desteklenmeyen eksik bir kullanım durumu, likidite sağlayıcı (LP) Tokenleri gibi birden fazla varlığa veya giriş noktasına sahip Kasalardır. Bunlar, ERC-4626'nın kendisinin bir ERC-20 olması gerekliliği nedeniyle genellikle kullanışsızdır veya uyumlu değildir.
+ERC-4626 tarafından desteklenmeyen eksik bir kullanım durumu, Likidite sağlayıcı (LP) Tokenleri gibi birden fazla varlığa veya giriş noktasına sahip Kasalardır. Bunlar, ERC-4626'nın kendisinin bir ERC-20 olması gerekliliği nedeniyle genellikle kullanışsızdır veya uyumlu değildir.
 
-ERC-7575, ERC-20 token uygulamasını ERC-4626 uygulamasından dışsallaştırarak birden fazla varlığa sahip Kasalar için destek ekler.
+ERC-7575, ERC-20 Token uygulamasını ERC-4626 uygulamasından dışsallaştırarak birden fazla varlığa sahip Kasalar için destek ekler.
 
 ERC-7575 uzantısı, [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575) içinde tam olarak açıklanmıştır.
-
 ## Ön Koşullar {#prerequisites}
 
 Bu sayfayı daha iyi anlamak için öncelikle [token standartları](/developers/docs/standards/tokens/) ve [ERC-20](/developers/docs/standards/tokens/erc-20/) hakkında okumanızı öneririz.

@@ -3,6 +3,7 @@ title: "फुसाका 🦓"
 metaTitle: Fulu-Osaka (फुसाका)
 description: फुसाका प्रोटोकॉल अपग्रेड के बारे में जानें
 lang: hi
+template: upgrade
 authors: ["निक्सो", "मारियो हैवेल"]
 ---
 

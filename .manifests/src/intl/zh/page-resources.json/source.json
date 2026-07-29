@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-resources.json",
-  "generatedAt": "2026-05-26T16:43:18.727Z",
-  "rootHash": "02f802692a82",
+  "generatedAt": "2026-07-22T22:40:52.336Z",
+  "rootHash": "e2fb119d31f3",
   "tree": {
-    "contentHash": "16370f425ec4",
-    "anchorHash": "fbae56276362",
+    "contentHash": "3bf475a82a1f",
+    "anchorHash": "7fe23631ad6f",
     "children": {
       "page-resources-network-title": {
         "contentHash": "1b32d67cd02d",
@@ -105,10 +105,6 @@
       },
       "page-resources-gas-blocknative-description": {
         "contentHash": "695d21c70b57",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-resources-gas-gasfees-description": {
-        "contentHash": "44f196b5d4fe",
         "anchorHash": "e3b0c44298fc"
       },
       "page-resources-defi-title": {
@@ -414,7 +410,6 @@
       "page-resources-gas-etherscan-description",
       "page-resources-gas-ethgastracker-description",
       "page-resources-gas-blocknative-description",
-      "page-resources-gas-gasfees-description",
       "page-resources-defi-title",
       "page-resources-defi-defillama-description",
       "page-resources-defi-eigenphi-description",
@@ -486,5 +481,5 @@
       "page-resources-share-feedback"
     ]
   },
-  "sourceCommitSha": "a8478a15398e05bbd134fb0d64575a708b5b3efd"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

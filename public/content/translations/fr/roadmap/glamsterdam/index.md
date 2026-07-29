@@ -2,6 +2,7 @@
 title: Glamsterdam
 description: "Découvrez la mise à jour du protocole Glamsterdam"
 lang: fr
+template: upgrade
 ---
 
 # Glamsterdam {#glamsterdam}
@@ -295,15 +296,14 @@ Oui, Glamsterdam réduira très probablement les frais pour les utilisateurs quo
 
 De plus, pour une durabilité à long terme, Glamsterdam introduit les listes d'accès au niveau du bloc (BAL). Cela permet un traitement parallèle et prépare la couche 1 (l1) à gérer en toute sécurité des limites de gaz globales plus élevées à l'avenir, ce qui réduira probablement les coûts en gaz par transaction à mesure que la capacité augmentera.
 
-### Y aura-t-il des changements à mes contrats intelligents existants après Glamsterdam ? {#will-my-smart-contracts-change}
+### Y aura-t-il des changements pour mes contrats intelligents existants après Glamsterdam ?
 
 Les contrats existants continueront de fonctionner normalement après Glamsterdam. Les développeurs obtiendront probablement plusieurs nouveaux outils et devraient revoir leur utilisation de gaz :
 
-- L'augmentation de la taille maximale du contrat (ou EIP-7954) permet aux développeurs de déployer des applications plus grandes, augmentant la limite de taille maximale du contrat d'environ 24 Kio à 32 Kio.
+- L'augmentation de la taille maximale des contrats (ou EIP-7954) permet aux développeurs de déployer des applications plus volumineuses, faisant passer la limite de taille maximale des contrats d'environ 24 Kio à 64 Kio.
 - Le pré-déploiement d'usine déterministe (ou EIP-7997) introduit un contrat d'usine universel et intégré. Il permet aux développeurs de déployer leurs applications et leurs portefeuilles de contrats intelligents à la même adresse exacte sur toutes les chaînes EVM participantes.
 - Si votre application s'appuie sur un traçage complexe pour trouver les transferts d'ETH, les transferts et les destructions d'ETH émettent un journal (ou EIP-7708) vous permettra de passer à l'utilisation de journaux pour une comptabilité plus simple et plus fiable.
-- L'augmentation du coût en gaz de la création d'état (ou EIP-8037) et la mise à jour du coût en gaz de l'accès à l'état (ou EIP-8038) introduisent de nouveaux modèles de durabilité qui modifieront certains coûts de déploiement de contrat, car la création de nouveaux comptes ou d'un stockage permanent aura de nouveaux frais fixes standardisés basés sur la taille des données créées.
-
+- L'augmentation du coût en gaz de la création d'état (ou EIP-8037) et la mise à jour du coût en gaz de l'accès à l'état (ou EIP-8038) introduisent de nouveaux modèles de durabilité qui modifieront certains coûts de déploiement de contrats, car la création de nouveaux comptes ou d'un stockage permanent aura de nouveaux frais fixes standardisés basés sur la taille des données créées.
 ### Comment Glamsterdam affectera-t-elle le stockage des nœuds et les exigences matérielles ? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 
 Plusieurs EIP en cours d'examen pour Glamsterdam s'attaquent à la chute des performances liée à la croissance de l'état :

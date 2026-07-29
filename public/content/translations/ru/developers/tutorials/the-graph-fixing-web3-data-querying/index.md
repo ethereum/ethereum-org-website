@@ -84,7 +84,7 @@ GameContract.events.BetPlaced({
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 
-![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.gif)
+![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.mp4#910x692)
 
 Эти два изображения в значительной степени отражают суть GraphQL. С помощью запроса справа мы можем точно определить, какие данные нам нужны, поэтому мы получаем все в одном запросе и ничего лишнего. Сервер GraphQL обрабатывает получение всех необходимых данных, поэтому его невероятно легко использовать на стороне фронтенда. [Здесь есть хорошее объяснение](https://www.apollographql.com/blog/graphql-explained) того, как именно сервер обрабатывает запрос, если вам интересно.
 

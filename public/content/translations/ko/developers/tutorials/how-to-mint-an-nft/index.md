@@ -81,7 +81,7 @@ node scripts/mint-nft.js
 
 시각적인 학습을 선호하는 분들을 위해 위 단계를 아래에 요약했습니다:
 
-![How to upload your image to Pinata](./instructionsPinata.gif)
+![How to upload your image to Pinata](./instructionsPinata.mp4#712x376)
 
 이제 Pinata에 문서를 하나 더 업로드하려고 합니다. 하지만 그 전에 먼저 문서를 생성해야 합니다!
 
@@ -109,7 +109,7 @@ json의 데이터를 자유롭게 변경해 보세요. attributes 섹션을 제�
 
 JSON 파일 편집을 마치면 저장하고, 이미지를 업로드할 때와 동일한 단계에 따라 Pinata에 업로드하세요.
 
-![How to upload your nft-metadata.json to Pinata](./uploadPinata.gif)
+![How to upload your nft-metadata.json to Pinata](./uploadPinata.mp4#1280x676)
 
 ## 5단계: 컨트랙트 인스턴스 생성하기 {#instance-contract}
 

@@ -37,14 +37,14 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/what-is-ether/",
             },
             {
+              label: t("nav-values-label"),
+              description: t("nav-values-description"),
+              href: "/values/",
+            },
+            {
               label: t("nav-what-is-web3-label"),
               description: t("nav-what-is-web3-description"),
               href: "/web3/",
-            },
-            {
-              label: t("ethereum-vs-bitcoin"),
-              description: t("nav-ethereum-vs-bitcoin-description"),
-              href: "/ethereum-vs-bitcoin/",
             },
             {
               label: t("nav-stories-label"),
@@ -82,6 +82,11 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               label: t("staking"),
               description: t("nav-stake-description"),
               href: "/staking/",
+            },
+            {
+              label: t("ethereum-vs-bitcoin"),
+              description: t("nav-ethereum-vs-bitcoin-description"),
+              href: "/ethereum-vs-bitcoin/",
             },
           ],
         },
@@ -256,14 +261,19 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/developers/tools/",
             },
             {
-              label: t("nav-code-tutorials-label"),
-              description: t("nav-code-tutorials-description"),
+              label: t("learn-ethereum-development"),
+              description: t("nav-learn-ethereum-development-description"),
+              href: "/developers/tools/categories/education-standards/",
+            },
+            {
+              label: t("tutorials"),
+              description: t("nav-tutorials-description"),
               href: "/developers/tutorials/",
             },
             {
               label: t("nav-learn-by-coding-label"),
               description: t("nav-learn-by-coding-description"),
-              href: "/developers/tools/education/",
+              href: "/developers/tools/categories/education-standards/",
             },
           ],
         },
@@ -449,9 +459,9 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/roadmap/user-experience/",
             },
             {
-              label: t("nav-roadmap-future-label"),
-              description: t("nav-roadmap-future-description"),
-              href: "/roadmap/future-proofing/",
+              label: t("nav-roadmap-privacy-label"),
+              description: t("nav-roadmap-privacy-description"),
+              href: "/roadmap/privacy/",
             },
           ],
         },
@@ -510,7 +520,7 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
             {
               label: t("nav-data-analytics-label"),
               description: t("nav-data-analytics-description"),
-              href: "/developers/tools/analytics/",
+              href: "/developers/tools/categories/network-infrastructure/",
             },
             {
               label: t("nav-ethereum-foundation-label"),

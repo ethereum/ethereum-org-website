@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/secret-leader-election/index.md",
-  "generatedAt": "2026-06-08T10:40:04.413Z",
-  "rootHash": "77b423f0ac62",
+  "generatedAt": "2026-07-23T00:25:03.815Z",
+  "rootHash": "e2a5a38dee2c",
   "tree": {
-    "contentHash": "8a40ba09e0f8",
-    "anchorHash": "f5254d082b3a",
+    "contentHash": "b46d56893c97",
+    "anchorHash": "04bc07a6a221",
     "children": {
       "frontmatter:title": {
         "contentHash": "9d1a2ca7f4a1",
@@ -18,6 +18,10 @@
       "frontmatter:lang": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "3de1580490d2"
       },
       "frontmatter:summaryPoints": {
         "contentHash": "e3b0c44298fc",
@@ -185,6 +189,7 @@
       "frontmatter:title",
       "frontmatter:description",
       "frontmatter:lang",
+      "frontmatter:template",
       "frontmatter:summaryPoints",
       "prose:4",
       "link:0",
@@ -201,5 +206,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

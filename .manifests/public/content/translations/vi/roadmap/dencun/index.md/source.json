@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/dencun/index.md",
-  "generatedAt": "2026-06-08T10:12:15.175Z",
-  "rootHash": "196c0ff16257",
+  "generatedAt": "2026-07-23T00:16:31.001Z",
+  "rootHash": "05db0700d49f",
   "tree": {
-    "contentHash": "b746b4e79b11",
-    "anchorHash": "0e41076de2b5",
+    "contentHash": "5f1193b26d81",
+    "anchorHash": "3151e9d4b74f",
     "children": {
       "frontmatter:title": {
         "contentHash": "5c987ca90176",
@@ -22,6 +22,10 @@
       "frontmatter:lang": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "7fef9479c8bc"
       },
       "prose:2": {
         "contentHash": "a7aca71255e9",
@@ -445,6 +449,7 @@
       "frontmatter:metaTitle",
       "frontmatter:description",
       "frontmatter:lang",
+      "frontmatter:template",
       "prose:2",
       "link:0",
       "prose:3",
@@ -464,5 +469,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

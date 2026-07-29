@@ -39,7 +39,7 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 시작하려면 앱의 웹소켓 URL을 사용하여 웹소켓을 엽니다. [대시보드](https://dashboard.alchemy.com/)에서 앱 페이지를 열고 "View Key"를 클릭하여 앱의 웹소켓 URL을 찾을 수 있습니다. 앱의 웹소켓 URL은 HTTP 요청용 URL과 다르지만, 두 URL 모두 "View Key"를 클릭하여 찾을 수 있습니다.
 
-![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.gif)
+![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.mp4#602x280)
 
 [Alchemy API 참조](https://www.alchemy.com/docs/reference/api-overview)에 나열된 모든 API는 웹소켓을 통해 사용할 수 있습니다. 이렇게 하려면 HTTP POST 요청의 본문으로 보낼 페이로드와 동일한 페이로드를 사용하되, 해당 페이로드를 웹소켓을 통해 보내면 됩니다.
 

@@ -2,6 +2,7 @@
 title: "格蘭斯特丹"
 description: "了解格蘭斯特丹 (Glamsterdam) 協定升級"
 lang: zh-tw
+template: upgrade
 ---
 
 # 格蘭斯特丹 {#glamsterdam}
@@ -288,15 +289,14 @@ ETH 轉帳與銷毀發出日誌 (ETH transfers and burns emit a log，或 EIP-77
 
 此外，為了長期永續性，格蘭斯特丹引入了區塊級存取清單 (BALs)。這實現了平行處理，並為 L1 在未來安全處理更高的整體 Gas 限制做好了準備，隨著容量的增長，這可能會降低每筆交易的 Gas 成本。
 
-### 在格蘭斯特丹之後，我現有的智能合約會有任何變化嗎？ {#will-my-smart-contracts-change}
+### 在格蘭斯特丹升級之後，我現有的智能合約會有任何改變嗎？
 
-現有合約在格蘭斯特丹之後將繼續正常運作。開發人員可能會獲得幾個新工具，並應審查其 Gas 使用情況：
+現有的合約在格蘭斯特丹升級後將繼續正常運作。開發人員可能會獲得幾個新工具，並且應該審查他們的 Gas 使用量：
 
-- 增加最大合約大小 (Increase maximum contract size，或 EIP-7954) 允許開發人員部署更大的應用程式，將最大合約大小限制從大約 24KiB 提高到 32KiB。
+- 增加最大合約大小 (Increase maximum contract size，或 EIP-7954) 允許開發人員部署更大的應用程式，將最大合約大小限制從大約 24KiB 提高到 64KiB。
 - 確定性工廠預先部署 (Deterministic factory predeploy，或 EIP-7997) 引入了一個通用的、內建的工廠合約。它允許開發人員將他們的應用程式與智能合約錢包部署到所有參與的 EVM 鏈上完全相同的地址。
-- 如果您的應用程式依賴複雜的追蹤來尋找 ETH 轉帳，ETH 轉帳與銷毀發出日誌 (ETH transfers and burns emit a log，或 EIP-7708) 將允許您切換到使用日誌進行更簡單、更可靠的記帳。
-- 狀態建立 Gas 成本增加 (State creation gas cost increase，或 EIP-8037) 與狀態存取 Gas 成本更新 (State-access gas cost update，或 EIP-8038) 引入了新的永續性模型，這將改變某些合約部署成本，因為建立新帳戶或永久儲存將根據建立的資料大小收取新的標準化固定費用。
-
+- 如果您的應用程式依賴複雜的追蹤來尋找 ETH 轉帳，ETH 轉帳與銷毀發出日誌 (ETH transfers and burns emit a log，或 EIP-7708) 將允許您改用日誌來進行更簡單、更可靠的記帳。
+- 狀態建立 Gas 成本增加 (State creation gas cost increase，或 EIP-8037) 與狀態存取 Gas 成本更新 (state-access gas cost update，或 EIP-8038) 引入了新的永續性模型，這將改變某些合約部署成本，因為建立新帳戶或永久儲存將根據建立的資料大小收取新的標準化固定費用。
 ### 格蘭斯特丹將如何影響節點儲存與硬體要求？ {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 
 考慮納入格蘭斯特丹的多個 EIP 解決了狀態增長的效能懸崖問題：

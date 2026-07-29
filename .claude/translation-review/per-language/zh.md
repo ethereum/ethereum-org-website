@@ -17,3 +17,9 @@
 - Verified false positives (do NOT flag): MetaMask=梅塔马斯克 and rollups=汇总 both match ETHGlossary.
 - No semantic inversions, no translated hrefs, no cross-script contamination. ICU/tags intact.
 - Pipeline artifact fixed; see `docs/solutions/logic-errors/intl-pipeline-html-placeholder-leak.md`.
+
+## PR #18935 (intl/pending-content-translation-program-winddown-ctas) -- 2026-07-28 -- Score 8.9/10
+- **Aspect (hand-fixed):** intro and "About" sentences came back tense-neutral after English moved to past. Fixed with `是`->`曾是` and `旨在`->`曾旨在`. Chinese has no tense morphology, so a tense-only English edit needs an explicit 曾/了 marker or it silently no-ops -- known-patterns #33.
+- **Terminology split (left unfixed):** `get-involved` drifted to `翻译项目`/`项目页面` while the program page, contributing, `common.json` and `page-collectibles.json` all use `翻译计划`/`计划页面`.
+- `remains a priority` overstated as `首要任务` ("top priority") on the program page.
+- Bold rendered as `<strong>` HTML rather than `**` in 1-2 spots per file (new this run; dev had none). Valid MDX, renders identically, and arguably safer given CJK emphasis-flanking rules -- noted, not fixed.

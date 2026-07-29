@@ -3,6 +3,7 @@ title: "फुसाका 🦓"
 metaTitle: फुलू-ओसाका (फुसाका)
 description: फुसाका प्रोटोकॉल अपग्रेडबद्दल जाणून घ्या
 lang: mr
+template: upgrade
 authors: ["निक्सो", "मारिओ हॅवेल"]
 ---
 

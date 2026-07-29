@@ -24,6 +24,7 @@ import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { getIdFromHash } from "@/lib/utils/url"
 
 import GasTable from "./_components/GasTable"
 import PageJsonLD from "./page-jsonld"
@@ -91,11 +92,6 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     },
   ]
 
-  const getId = (input: string) => {
-    const parts = input.split("#")
-    return parts.length > 1 ? parts[1] : ""
-  }
-
   return (
     <>
       <PageJsonLD
@@ -121,7 +117,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         variant="narrow"
       >
-        <Section id={getId(tocItems[0].url)}>
+        <Section id={getIdFromHash(tocItems[0].url)}>
           <p>{t("page-what-is-ether-what-is-ether-description-1")}</p>
           <p>
             {t.rich("page-what-is-ether-what-is-ether-description-2", {
@@ -191,7 +187,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </LinkWithArrow>
         </Section>
 
-        <Section id={getId(tocItems[1].url)}>
+        <Section id={getIdFromHash(tocItems[1].url)}>
           <h2>{tocItems[1].title}</h2>
           <p>
             {t.rich("page-what-is-ether-how-to-buy-eth-description-1", {
@@ -280,14 +276,14 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </LinkWithArrow>
         </Section>
 
-        <Section aria-labelledby={getId(tocItems[2].url)}>
+        <Section aria-labelledby={getIdFromHash(tocItems[2].url)}>
           <Image
             src={ethOrgLogo}
             alt=""
             sizes="128px"
             className="mx-auto max-w-32"
           />
-          <h2 id={getId(tocItems[2].url)}>{tocItems[2].title}</h2>
+          <h2 id={getIdFromHash(tocItems[2].url)}>{tocItems[2].title}</h2>
           <p>
             {t.rich(
               "page-what-is-ether-how-to-send-and-receive-eth-description-1",
@@ -336,7 +332,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </LinkWithArrow>
         </Section>
 
-        <Section id={getId(tocItems[3].url)}>
+        <Section id={getIdFromHash(tocItems[3].url)}>
           <h2>{tocItems[3].title}</h2>
           <p>
             {t(
@@ -355,14 +351,14 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </p>
         </Section>
 
-        <Section aria-labelledby={getId(tocItems[4].url)}>
+        <Section aria-labelledby={getIdFromHash(tocItems[4].url)}>
           <Image
             src={infrastructureTransparent}
             alt=""
             sizes="(max-width: 320px) calc(100vw - 32px), 320px"
             className="mx-auto max-w-xs"
           />
-          <h2 id={getId(tocItems[4].url)}>{tocItems[4].title}</h2>
+          <h2 id={getIdFromHash(tocItems[4].url)}>{tocItems[4].title}</h2>
           <p>
             {t.rich(
               "page-what-is-ether-how-much-does-it-cost-to-send-eth-description-1",
@@ -417,14 +413,14 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </p>
         </Section>
 
-        <Section aria-labelledby={getId(tocItems[5].url)}>
+        <Section aria-labelledby={getIdFromHash(tocItems[5].url)}>
           <Image
             src={developersHubHero}
             alt=""
             sizes="(max-width: 832px) calc(100vw - 32px), 800px"
             className="mx-auto rounded-base"
           />
-          <h2 id={getId(tocItems[5].url)}>{tocItems[5].title}</h2>
+          <h2 id={getIdFromHash(tocItems[5].url)}>{tocItems[5].title}</h2>
           <p>{t("page-what-is-ether-what-is-the-eth-supply-description-1")}</p>
           <UnorderedList>
             <ListItem>
@@ -454,7 +450,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </p>
         </Section>
 
-        <Section id={getId(tocItems[6].url)}>
+        <Section id={getIdFromHash(tocItems[6].url)}>
           <h2>{tocItems[6].title}</h2>
           <p>
             {t.rich(
@@ -546,7 +542,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <p>{t("page-what-is-ether-distribution-description-1")}</p>
         </Section>
 
-        <Section id={getId(tocItems[7].url)}>
+        <Section id={getIdFromHash(tocItems[7].url)}>
           <h2>{tocItems[7].title}</h2>
           <p>{t("page-what-is-ether-what-makes-eth-valuable-description-1")}</p>
           <p>
@@ -588,7 +584,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </p>
         </Section>
 
-        <Section id={getId(tocItems[8].url)}>
+        <Section id={getIdFromHash(tocItems[8].url)}>
           <h2>{tocItems[8].title}</h2>
           <p>{t("page-what-is-ether-what-is-wrapping-eth-description-1")}</p>
           <p>{t("page-what-is-ether-what-is-wrapping-eth-description-2")}</p>
@@ -634,6 +630,8 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-what-is-ether")
 

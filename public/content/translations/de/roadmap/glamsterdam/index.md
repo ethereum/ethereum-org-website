@@ -2,6 +2,7 @@
 title: Glamsterdam
 description: "Erfahre mehr über das Glamsterdam-Protokoll-Upgrade"
 lang: de
+template: upgrade
 ---
 
 # Glamsterdam {#glamsterdam}
@@ -288,15 +289,14 @@ Ja, Glamsterdam wird höchstwahrscheinlich die Gebühren für alltägliche Benut
 
 Darüber hinaus führt Glamsterdam für die langfristige Nachhaltigkeit Block-Level Access Lists (BALs) ein. Dies ermöglicht eine parallele Verarbeitung und bereitet Layer 1 (L1) darauf vor, in Zukunft höhere Gesamt-Gaslimits sicher zu handhaben, was wahrscheinlich die Gaskosten pro Transaktion senken wird, wenn die Kapazität wächst.
 
-### Wird es nach Glamsterdam Änderungen an meinen bestehenden Smart Contracts geben? {#will-my-smart-contracts-change}
+### Wird es nach Glamsterdam Änderungen an meinen bestehenden Smart Contracts geben?
 
 Bestehende Verträge werden nach Glamsterdam weiterhin normal funktionieren. Entwickler werden wahrscheinlich mehrere neue Tools erhalten und sollten ihren Gasverbrauch überprüfen:
 
-- Die Erhöhung der maximalen Vertragsgröße (oder EIP-7954) ermöglicht es Entwicklern, größere Anwendungen bereitzustellen, indem das Limit für die maximale Vertragsgröße von etwa 24 KiB auf 32 KiB angehoben wird.
-- Das deterministische Factory-Predeploy (oder EIP-7997) führt einen universellen, integrierten Factory-Vertrag ein. Es ermöglicht Entwicklern, ihre Anwendungen und Smart-Contract-Wallets auf genau derselben Adresse über alle teilnehmenden EVM-Chains hinweg bereitzustellen.
-- Wenn deine App auf komplexes Tracing angewiesen ist, um ETH-Transfers zu finden, wird dir die Tatsache, dass ETH-Transfers und -Burns ein Log ausgeben (oder EIP-7708), ermöglichen, für eine einfachere und zuverlässigere Abrechnung auf die Verwendung von Logs umzusteigen.
-- Die Erhöhung der Gaskosten für die Zustandserstellung (oder EIP-8037) und die Aktualisierung der Gaskosten für den Zustandszugriff (oder EIP-8038) führen neue Nachhaltigkeitsmodelle ein, die bestimmte Kosten für die Bereitstellung von Verträgen ändern werden, da die Erstellung neuer Konten oder permanenten Speichers eine neue standardisierte feste Gebühr basierend auf der Größe der erstellten Daten haben wird.
-
+- Die Erhöhung der maximalen Vertragsgröße (oder EIP-7954) ermöglicht es Entwicklern, größere Anwendungen bereitzustellen, wodurch das Limit für die maximale Vertragsgröße von etwa 24 KiB auf 64 KiB angehoben wird.
+- Deterministisches Factory-Predeploy (oder EIP-7997) führt einen universellen, integrierten Factory-Vertrag ein. Es ermöglicht Entwicklern, ihre Anwendungen und Smart-Contract-Wallets auf genau derselben Adresse über alle teilnehmenden EVM-Chains hinweg bereitzustellen.
+- Wenn deine App auf komplexes Tracing angewiesen ist, um ETH-Transfers zu finden, wird „ETH-Transfers und -Burns geben ein Log aus“ (oder EIP-7708) es dir ermöglichen, für eine einfachere und zuverlässigere Buchhaltung auf die Verwendung von Logs umzusteigen.
+- Die Erhöhung der Gaskosten für die Zustandserstellung (oder EIP-8037) und die Aktualisierung der Gaskosten für den Zustandszugriff (oder EIP-8038) führen neue Nachhaltigkeitsmodelle ein, die bestimmte Kosten für die Bereitstellung von Verträgen ändern werden, da die Erstellung neuer Konten oder permanenten Speichers eine neue standardisierte Festgebühr basierend auf der Größe der erstellten Daten haben wird.
 ### Wie wird sich Glamsterdam auf die Speicher- und Hardwareanforderungen von Knoten auswirken? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 
 Mehrere EIPs, die für Glamsterdam in Betracht gezogen werden, befassen sich mit dem Leistungseinbruch durch das Zustandswachstum:

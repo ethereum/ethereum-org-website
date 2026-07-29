@@ -237,7 +237,7 @@ ethers.utils.formatEther(balance)
 - [Web3js యుటిలిటీ ఫంక్షన్‌లు](https://docs.web3js.org/api/web3-utils)
 - [Ethers యుటిలిటీ ఫంక్షన్‌లు](https://docs.ethers.org/v6/api/utils/)
 
-## అందుబాటులో ఉన్న లైబ్రరీలు {#available-libraries}
+## అందుబాటులో ఉన్న లైబ్రరీలు
 
 **Web3.js -** **_ఎథీరియం JavaScript API._**
 
@@ -250,10 +250,10 @@ ethers.utils.formatEther(balance)
 - [డాక్యుమెంటేషన్](https://docs.ethers.io)
 - [GitHub](https://github.com/ethers-io/ethers.js)
 
-**The Graph -** **_ఎథీరియం మరియు IPFS డేటాను ఇండెక్స్ చేయడానికి మరియు GraphQLని ఉపయోగించి దాన్ని క్వెరీ చేయడానికి ఒక ప్రోటోకాల్._**
+**The Graph -** **_ఎథీరియం మరియు IPFS డేటాను ఇండెక్స్ చేయడానికి మరియు GraphQL ఉపయోగించి క్వెరీ చేయడానికి ఒక ప్రోటోకాల్._**
 
 - [The Graph](https://thegraph.com)
-- [గ్రాఫ్ ఎక్స్‌ప్లోరర్](https://thegraph.com/explorer)
+- [Graph ఎక్స్‌ప్లోరర్](https://thegraph.com/explorer)
 - [డాక్యుమెంటేషన్](https://thegraph.com/docs)
 - [GitHub](https://github.com/graphprotocol)
 - [డిస్కార్డ్](https://thegraph.com/discord)
@@ -268,6 +268,16 @@ ethers.utils.formatEther(balance)
 - [డాక్యుమెంటేషన్](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
+**wagmi -** **_viem పైన నిర్మించబడిన ఎథీరియం కోసం React హుక్స్ లైబ్రరీ._**
+
+- [డాక్యుమెంటేషన్](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_wagmi మరియు viem పైన నిర్మించబడిన, వికేంద్రీకృత అప్లికేషన్‌లకు (dapps) వాలెట్ కనెక్షన్‌ను జోడించడానికి React లైబ్రరీ._**
+
+- [డాక్యుమెంటేషన్](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
+
 **Codex -** **_డజన్ల కొద్దీ చైన్‌లలో రియల్-టైమ్, సుసంపన్నమైన బ్లాక్‌చైన్ డేటా API._**
 
 - [డాక్యుమెంటేషన్](https://docs.codex.io)
@@ -279,7 +289,6 @@ ethers.utils.formatEther(balance)
 
 - [డాక్యుమెంటేషన్](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
-
 ## తదుపరి పఠనం {#further-reading}
 
 _మీకు సహాయపడిన కమ్యూనిటీ వనరు గురించి తెలుసా? ఈ పేజీని సవరించి, దాన్ని జోడించండి!_

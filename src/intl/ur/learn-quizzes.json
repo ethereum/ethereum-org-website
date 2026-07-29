@@ -10,7 +10,7 @@
   "explanation": "وضاحت",
   "next-question": "اگلا سوال",
   "next-quiz": "اگلا کوئز",
-  "question-number": "سوال نمبر {{number}}:",
+  "question-number": "سوال نمبر {number}:",
   "page-assets-merge": "دی مرج",
   "passed": "آپ نے کوئز پاس کر لیا!",
   "questions": "سوالات",

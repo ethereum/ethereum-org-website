@@ -3,6 +3,7 @@ title: Pectra
 metaTitle: Prague-Electra (Pectra)
 description: Jifunze kuhusu sasisho la itifaki ya Pectra
 lang: sw
+template: upgrade
 authors: ["Nixo", "Mario Havel"]
 ---
 

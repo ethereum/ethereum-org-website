@@ -10,7 +10,7 @@
   "explanation": "ব্যাখ্যা",
   "next-question": "পরবর্তী প্রশ্ন",
   "next-quiz": "পরবর্তী কুইজ",
-  "question-number": "প্রশ্ন নম্বর {{number}}:",
+  "question-number": "প্রশ্ন নম্বর {number}:",
   "page-assets-merge": "দ্য মার্জ",
   "passed": "আপনি কুইজে পাস করেছেন!",
   "questions": "প্রশ্নসমূহ",

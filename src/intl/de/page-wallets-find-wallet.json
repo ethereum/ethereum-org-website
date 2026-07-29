@@ -39,6 +39,7 @@
   "page-find-wallet-buy-crypto-desc": "Krypto mit Fiat direkt in der Wallet kaufen \n *Hinweis: Der Kauf von Krypto kann regionalspezifisch sein",
   "page-find-wallet-sell-for-fiat": "Gegen Fiat verkaufen",
   "page-find-wallet-sell-for-fiat-desc": "Krypto direkt in der Wallet gegen Fiat verkaufen \n *Hinweis: Das Abheben von Krypto kann regionalspezifisch sein",
+  "page-find-wallet-network-support": "Netzwerkunterstützung",
   "page-find-wallet-multisig": "Multisig",
   "page-find-wallet-multisig-desc": "Wallets, die mehrere Signaturen erfordern, um eine Transaktion zu autorisieren",
   "page-find-wallet-social-recovery": "Soziale Wiederherstellung",

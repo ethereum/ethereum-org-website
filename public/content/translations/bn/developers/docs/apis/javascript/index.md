@@ -237,9 +237,9 @@ ethers.utils.formatEther(balance)
 - [Web3js ইউটিলিটি ফাংশন](https://docs.web3js.org/api/web3-utils)
 - [Ethers ইউটিলিটি ফাংশন](https://docs.ethers.org/v6/api/utils/)
 
-## উপলব্ধ লাইব্রেরি {#available-libraries}
+## উপলব্ধ লাইব্রেরি
 
-**Web3.js -** **_ইথেরিয়াম JavaScript API._**
+**Web3.js -** **_ইথেরিয়াম JavaScript API।_**
 
 - [ডকুমেন্টেশন](https://docs.web3js.org)
 - [GitHub](https://github.com/ethereum/web3.js)
@@ -258,7 +258,7 @@ ethers.utils.formatEther(balance)
 - [GitHub](https://github.com/graphprotocol)
 - [ডিসকর্ড](https://thegraph.com/discord)
 
-**Alchemy SDK -** **_উন্নত API সহ Ethers.js-এর চারপাশে র‍্যাপার।_**
+**Alchemy SDK -** **_উন্নত API সহ Ethers.js-এর র‍্যাপার।_**
 
 - [ডকুমেন্টেশন](https://www.alchemy.com/docs)
 - [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
@@ -268,18 +268,27 @@ ethers.utils.formatEther(balance)
 - [ডকুমেন্টেশন](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-**Codex -** **_কয়েক ডজন চেইন জুড়ে রিয়েল-টাইম, সমৃদ্ধ ব্লকচেইন ডেটা API।_**
+**wagmi -** **_ইথেরিয়ামের জন্য React হুকস লাইব্রেরি, যা viem-এর উপর ভিত্তি করে তৈরি।_**
+
+- [ডকুমেন্টেশন](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_বিকেন্দ্রীকৃত অ্যাপ্লিকেশন (dapp)-এ ওয়ালেট কানেকশন যোগ করার জন্য React লাইব্রেরি, যা wagmi এবং viem-এর উপর ভিত্তি করে তৈরি।_**
+
+- [ডকুমেন্টেশন](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
+
+**Codex -** **_ডজন খানেক চেইন জুড়ে রিয়েল-টাইম, সমৃদ্ধ ব্লকচেইন ডেটা API।_**
 
 - [ডকুমেন্টেশন](https://docs.codex.io)
 - [এক্সপ্লোরার](https://docs.codex.io/explore)
 - [GitHub](https://github.com/Codex-Data)
 - [ডিসকর্ড](https://discord.com/invite/mFpUhT3vAq)
 
-**Drift -** **_বিল্ট-ইন ক্যাশিং, হুক এবং টেস্ট মক সহ TypeScript মেটা-লাইব্রেরি।_**
+**Drift -** **_বিল্ট-ইন ক্যাশিং, হুকস এবং টেস্ট মক সহ TypeScript মেটা-লাইব্রেরি।_**
 
 - [ডকুমেন্টেশন](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
-
 ## আরও পড়ুন {#further-reading}
 
 _আপনাকে সাহায্য করেছে এমন কোনো কমিউনিটি রিসোর্স সম্পর্কে জানেন? এই পেজটি এডিট করুন এবং এটি যোগ করুন!_

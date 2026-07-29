@@ -3,6 +3,7 @@ title: "পেকট্রা"
 metaTitle: "প্রাগ-ইলেক্ট্রা (পেকট্রা)"
 description: "পেকট্রা প্রোটোকল আপগ্রেড সম্পর্কে জানুন"
 lang: bn
+template: upgrade
 authors: ["নিক্সো", "মারিও হ্যাভেল"]
 ---
 

@@ -3,6 +3,7 @@ title: "Фусака 🦓"
 metaTitle: Fulu-Osaka (Фусака)
 description: Дізнайтеся про оновлення протоколу Фусака
 lang: uk
+template: upgrade
 authors: ["Nixo", "Маріо Гавел"]
 ---
 

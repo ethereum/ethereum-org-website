@@ -33,3 +33,9 @@
 
 - 21 UI-string JSONs reviewed. 1 critical fixed: `glossary-tooltip.json` `ommer-definition` leaked `<HTML-PLACEHOLDER-HTMLTAG-7ff424>` -> restored to `<a href="/glossary/#pow">` (pattern 22).
 - gas=gas loanword honored (not "plyn"); zero-knowledge compound-form correct. No semantic inversions, hrefs/tickers intact.
+
+## PR #18925 (privacy roadmap + 2 video transcripts) -- 2026-07-27 -- 9.2/10
+
+**Fixed (critical):** the inverse of this file's #18344 false positive. Here the noun phrase genuinely used the bare entry: `důkazů s nulovým vědomím` at lines 16/82/94/106/120/132 -> `s nulovou znalostí` (compound entry). The link text on 132 pointed at `/zero-knowledge-proofs/` whose own cs title uses the compound form, so the visible text disagreed with its target.
+
+Adjectival uses correctly left on the bare entry: L88 `důkaz skutečně s nulovým vědomím`, L90 `spíše stručná než s nulovým vědomím` + `na skutečné nulové vědomí`, L104 `ověřování pasů`, L122 `hlasování`. The #18344 note stands — check which sense before touching either form.

@@ -3,6 +3,7 @@ title: "佩克特拉"
 metaTitle: "Prague-Electra (佩克特拉)"
 description: "了解佩克特拉协议升级"
 lang: zh
+template: upgrade
 authors: ["Nixo", "马里奥·哈维尔"]
 ---
 

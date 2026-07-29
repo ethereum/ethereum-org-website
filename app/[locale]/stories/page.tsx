@@ -29,12 +29,10 @@ import { Section } from "@/components/ui/section"
 
 import { getStoriesData } from "@/lib/utils/md"
 import { getMetadata } from "@/lib/utils/metadata"
+import { getCommunityStories } from "@/lib/utils/stories"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { getVideos } from "@/lib/utils/videos"
 
-import tenYearStories from "@/data/tenYearStories"
-
-import { parseStoryDates } from "../10years/_components/utils"
 import { getVideosByCategory } from "../videos/utils"
 
 import CommunityStories from "./_components/CommunityStories"
@@ -53,7 +51,7 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
 
   const videos = await getVideos(locale)
   const storyVideos = getVideosByCategory(videos, ["community-stories"])
-  const communityStories: Story[] = parseStoryDates(tenYearStories, locale)
+  const communityStories: Story[] = await getCommunityStories(locale)
   const featuredStories = await getStoriesData(locale)
 
   const allMessages = await getMessages({ locale })
@@ -95,7 +93,7 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
                     className="border"
                   >
                     <CardHeader>
-                      <CardBanner className="h-40">
+                      <CardBanner className="h-40" zoom>
                         <Image
                           src={story.image}
                           alt=""
@@ -140,20 +138,22 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
                   variant="ghost"
                   size="sm"
                 >
-                  <CardBanner className="aspect-video h-auto">
-                    {video.thumbnailUrl ? (
-                      <Image
-                        src={video.thumbnailUrl}
-                        alt={video.title}
-                        width={480}
-                        height={270}
-                        sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                        loading="lazy"
-                      />
-                    ) : (
-                      <div className="size-full bg-background-highlight" />
-                    )}
-                  </CardBanner>
+                  <CardHeader>
+                    <CardBanner className="aspect-video h-auto" zoom>
+                      {video.thumbnailUrl ? (
+                        <Image
+                          src={video.thumbnailUrl}
+                          alt={video.title}
+                          width={480}
+                          height={270}
+                          sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div className="size-full bg-background-highlight" />
+                      )}
+                    </CardBanner>
+                  </CardHeader>
                   <CardContent>
                     <CardTitle>{video.title}</CardTitle>
                     <CardParagraph size="sm" className="line-clamp-2">
@@ -216,6 +216,8 @@ export async function generateMetadata(props: {
   params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const { locale } = await props.params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-stories")
 

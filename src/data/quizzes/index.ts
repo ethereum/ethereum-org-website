@@ -111,6 +111,17 @@ const quizzes = {
       "smart-contracts-4",
     ],
   },
+  privacy: {
+    title: "learn-quizzes:page-privacy",
+    questions: [
+      "privacy-1",
+      "privacy-2",
+      "privacy-3",
+      "privacy-4",
+      "privacy-5",
+      "privacy-6",
+    ],
+  },
 } satisfies RawQuizzes
 
 const ethereumBasicsQuizzesRaw: QuizzesSection[] = [
@@ -132,6 +143,10 @@ const ethereumBasicsQuizzesRaw: QuizzesSection[] = [
   },
   {
     id: "security",
+    level: "beginner",
+  },
+  {
+    id: "privacy",
     level: "beginner",
   },
   {

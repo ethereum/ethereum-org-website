@@ -10,7 +10,7 @@
   "explanation": "Explicação",
   "next-question": "Próxima pergunta",
   "next-quiz": "Próximo questionário",
-  "question-number": "Pergunta número {{number}}:",
+  "question-number": "Pergunta número {number}:",
   "page-assets-merge": "The Merge",
   "passed": "Você passou no questionário!",
   "questions": "Perguntas",

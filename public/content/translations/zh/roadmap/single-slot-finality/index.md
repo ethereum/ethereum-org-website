@@ -2,6 +2,7 @@
 title: 单槽最终性
 description: 单槽最终性解释
 lang: zh
+template: roadmap
 ---
 
 [以太坊](/)区块需要大约 15 分钟才能最终确定。然而，我们可以使以太坊的共识机制更高效地验证区块，并大幅缩短达到最终性的时间。区块可以在同一个时隙内被提议并最终确定，而无需等待 15 分钟。这个概念被称为**单槽最终性 (SSF)**。
@@ -31,7 +32,7 @@ lang: zh
 
 ## 实现单槽最终性 (SSF) 的途径 {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title="为什么我们现在还无法实现 SSF？" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 目前的共识机制将来自多个验证者（称为委员会）的证明结合起来，以减少每个验证者在验证区块时必须处理的消息数量。每个验证者都有机会在每个时段（32 个时隙）内进行证明，但在每个时隙中，只有一部分验证者（称为“委员会”）进行证明。他们通过划分为子网来实现这一点，在子网中，少数验证者被选为“聚合者”。这些聚合者各自将他们从其子网中其他验证者那里看到的所有签名组合成一个单一的聚合签名。包含最多个人贡献的聚合者将其聚合签名传递给区块提议者，区块提议者将其与其他委员会的聚合签名一起包含在区块中。
 
