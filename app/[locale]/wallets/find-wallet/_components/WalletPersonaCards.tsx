@@ -43,6 +43,7 @@ const WalletPersonaCards = async ({
           const isActive = currentPersonaId === persona.id
           const color = PERSONA_STYLES[persona.id]
           const count = personaCounts[persona.id]
+          const title = t(persona.titleKey)
           return (
             <li key={persona.id} className="grid-rows-1 pb-5">
               <BaseLink
@@ -52,6 +53,15 @@ const WalletPersonaCards = async ({
                     : `/wallets/find-wallet/personas/${persona.id}/`
                 }
                 aria-current={isActive ? "page" : undefined}
+                // Mirrors the old preset filter's event exactly (same category,
+                // same translated title, same "<title> true|false") so persona
+                // engagement stays comparable across the A/B arms. The active
+                // card links back to the full list, so it is the deselect.
+                customEventOptions={{
+                  eventCategory: "UserPersona",
+                  eventAction: title,
+                  eventName: `${title} ${!isActive}`,
+                }}
                 className={cn(
                   "group flex h-[164px] w-full cursor-pointer flex-col items-start rounded-base border-2 p-3 no-underline shadow-lg transition-all duration-50 focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-4 focus-visible:outline-primary-hover lg:h-full lg:p-6",
                   isActive
@@ -65,7 +75,7 @@ const WalletPersonaCards = async ({
                     color.text
                   )}
                 >
-                  {t(persona.titleKey)}
+                  {title}
                   <span aria-hidden="true" className="font-normal">
                     {" "}
                     ({count})
