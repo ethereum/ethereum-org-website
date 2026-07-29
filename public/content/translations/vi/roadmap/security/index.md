@@ -43,6 +43,13 @@ Có khả năng một kẻ tấn công tinh vi có thể xác định các trìn
 
 <ButtonLink variant="outline-color" href="/roadmap/secret-leader-election">Đọc về bầu chọn người dẫn đầu bí mật</ButtonLink>
 
-## Tiến độ hiện tại {#current-progress}
+## Tiến độ hiện tại
 
-**Các bản nâng cấp bảo mật trên lộ trình đang ở giai đoạn nghiên cứu nâng cao**, nhưng dự kiến sẽ chưa được triển khai trong một thời gian nữa. Các bước tiếp theo đối với view-merge, PBS, SSF và SLE là hoàn thiện thông số kỹ thuật và bắt đầu xây dựng các nguyên mẫu.
+Tính đến giữa năm 2026:
+
+- **Xây dựng khối và khả năng chống kiểm duyệt**: ePBS và danh sách truy cập cấp độ khối đang chạy trên các devnet của Glamsterdam. FOCIL được lên kế hoạch cho Hegotá, dự kiến vào năm 2027.
+- **Tính chung cuộc**: Minimmit và công việc đồng thuận Lean Ethereum rộng lớn hơn vẫn đang được tích cực nghiên cứu và chưa được chỉ định cho đợt phân nhánh nào.
+- **Khả năng kháng lượng tử**: Các devnet tương tác hậu lượng tử hàng tuần đang chạy và các cột mốc cơ sở hạ tầng cốt lõi dự kiến vào khoảng năm 2029.
+- **Đơn giản hóa**: Pectra và Fusaka đã được phát hành; Glamsterdam và Hegotá sẽ mang đến đợt dọn dẹp tiếp theo.
+
+Không có phần nào của công việc này đã hoàn thành và tất cả các mốc thời gian đều là ước tính có thể thay đổi.
