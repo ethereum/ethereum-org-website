@@ -1,55 +1,108 @@
 ---
-title: "Un Ethereum más seguro"
-description: "Ethereum es la plataforma de contratos inteligentes más segura y descentralizada que existe. Sin embargo, aún se pueden realizar mejoras para que Ethereum siga siendo resistente a cualquier nivel de ataque en el futuro."
+title: Un Ethereum más seguro
+description: La hoja de ruta de Ethereum refuerza la producción de bloques y la resistencia a la censura hoy en día, al tiempo que prepara el protocolo para la era cuántica y décadas de funcionamiento confiable.
 lang: es
 image: /images/roadmap/roadmap-security.png
 alt: "Hoja de ruta de Ethereum"
 template: roadmap
+summaryPoints:
+  - Las actualizaciones de refuerzo a corto plazo, como la separación proponente-constructor consagrada y las listas de inclusión, están en desarrollo activo
+  - La preparación poscuántica está en marcha años antes de cualquier amenaza cuántica creíble
+  - La simplificación del protocolo elimina la complejidad y reduce la superficie de ataque de Ethereum
 ---
 
-**Ethereum ya es una plataforma muy segura** y descentralizada de [contratos inteligentes](/glossary/#smart-contract). Sin embargo, aún se pueden realizar mejoras para que Ethereum siga siendo resistente a todo tipo de ataques en el futuro. Estas incluyen cambios sutiles en la forma en que los [clientes de Ethereum](/glossary/#consensus-client) manejan los [bloques](/glossary/#block) en competencia, así como el aumento de la velocidad a la que la red considera que los bloques están ["finalizados"](/developers/docs/consensus-mechanisms/pos/#finality) (lo que significa que no se pueden cambiar sin pérdidas económicas extremas para un atacante).
+Ethereum ya es una plataforma de [contratos inteligentes](/glossary/#smart-contract) muy segura y descentralizada. La hoja de ruta tiene como objetivo mantenerlo así durante décadas al **reforzar la red hoy en día mientras se prepara para amenazas que podrían aparecer solo dentro de unos años**. Las actualizaciones a corto plazo se rastrean en [forkcast.org](https://forkcast.org), y el borrador de la hoja de ruta a más largo plazo se publica en [strawmap.org](https://strawmap.org).
 
-También hay mejoras que hacen que la censura de transacciones sea mucho más difícil al hacer que los proponentes de bloques no puedan ver el contenido real de sus bloques, y nuevas formas de identificar cuándo un cliente está censurando. En conjunto, estas mejoras actualizarán el protocolo de [prueba de participación (PoS)](/glossary/#pos) para que los usuarios, desde individuos hasta corporaciones, tengan confianza instantánea en sus aplicaciones, datos y activos en Ethereum.
+<ExpandableCard title="¿Es seguro Ethereum hoy?" eventCategory="/roadmap/security" eventName="clicked is ethereum secure today?">
 
-## Retiros de staking {#staking-withdrawals}
+Sí. Ethereum ha funcionado continuamente desde 2015 sin tiempo de inactividad. Las mejoras en esta página hacen que una red que ya es segura sea más difícil de atacar, censurar o interrumpir.
 
-La actualización de [prueba de trabajo (PoW)](/glossary/#pow) a prueba de participación (PoS) comenzó con los pioneros de Ethereum haciendo "staking" de su ETH en un contrato de depósito. Ese ETH se utiliza para proteger la red. Hubo una segunda actualización el 12 de abril de 2023 para permitir a los validadores retirar el ETH en staking. Desde entonces, los validadores pueden hacer staking o retirar ETH libremente.
+</ExpandableCard>
 
-<ButtonLink variant="outline-color" href="/staking/withdrawals/">Leer sobre los retiros</ButtonLink>
+## Construcción de bloques sin necesidad de confianza {#trustless-block-building}
 
-## Defensa contra ataques {#defending-against-attacks}
+La mayoría de los bloques de Ethereum en la actualidad se ensamblan a través de una división del trabajo: constructores especializados construyen el bloque más valioso que pueden, y el [validador](/glossary/#validator) al que le toca el turno propone la mejor oferta. Esto evita que la construcción profesional de bloques concentre la [participación](/glossary/#staking) entre los operadores más grandes, pero desde 2022 ha dependido de software fuera del protocolo que la red no puede verificar.
 
-Se pueden realizar mejoras en el protocolo de prueba de participación de Ethereum. Una de ellas se conoce como [fusión de vistas (view-merge)](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739): un algoritmo de elección de [bifurcación](/glossary/#fork) más seguro que dificulta ciertos tipos de ataques sofisticados.
+La **separación proponente-constructor consagrada (ePBS, o EIP-7732)** traslada esta división al protocolo, eliminando la necesidad de confiar en los retransmisores (relays), los intermediarios externos que actualmente pasan los bloques entre los constructores y los validadores. ePBS es una de las características principales de la próxima actualización [Glamsterdam](/roadmap/glamsterdam/), prevista para 2026. No se ha establecido una fecha para la Red principal; los equipos de clientes la están probando en devnets (redes de prueba temporales).
 
-Reducir el tiempo que tarda Ethereum en [finalizar](/glossary/#finality) los bloques proporcionaría una mejor experiencia de usuario y evitaría ataques sofisticados de "reorganización" en los que los atacantes intentan reordenar bloques muy recientes para extraer ganancias o censurar ciertas transacciones. La [**finalidad de un solo slot (SSF)**](/roadmap/single-slot-finality/) es una **forma de minimizar el retraso de finalización**. En este momento, hay 15 minutos de bloques que un atacante teóricamente podría convencer a otros validadores de reconfigurar. Con SSF, hay 0. Los usuarios, desde individuos hasta aplicaciones y exchanges, se benefician de la rápida garantía de que sus transacciones no se revertirán, y la red se beneficia al neutralizar toda una clase de ataques.
+<ButtonLink variant="outline" href="/roadmap/pbs/">Más sobre la separación proponente-constructor</ButtonLink>
 
-<ButtonLink variant="outline-color" href="/roadmap/single-slot-finality/">Leer sobre la finalidad de un solo slot</ButtonLink>
+## Resistencia a la censura {#censorship-resistance}
 
-## Defensa contra la censura {#defending-against-censorship}
+Una red resistente a la censura significa que nadie puede impedir que una transacción válida llegue a la cadena. Las **listas de inclusión aplicadas por elección de bifurcación (FOCIL, o EIP-7805)** dan a muchos validadores voz y voto sobre lo que debe incluir un bloque: publican listas de transacciones pendientes que el constructor de bloques está obligado a incluir. Ningún actor individual puede dejar fuera su transacción discretamente.
 
-La descentralización evita que individuos o pequeños grupos de [validadores](/glossary/#validator) se vuelvan demasiado influyentes. Las nuevas tecnologías de staking pueden ayudar a garantizar que los validadores de Ethereum se mantengan lo más descentralizados posible, al mismo tiempo que los defienden contra fallas de hardware, software y de la red. Esto incluye software que comparte las responsabilidades del validador a través de múltiples [nodos](/glossary/#node). Esto se conoce como **tecnología de validador distribuido (DVT)**. Los [fondos de staking](/glossary/#staking-pool) tienen incentivos para usar DVT porque permite que varias computadoras participen colectivamente en la validación, lo que agrega redundancia y tolerancia a fallas. También divide las claves de los validadores en varios sistemas, en lugar de tener operadores individuales ejecutando múltiples validadores. Esto hace que sea más difícil para los operadores deshonestos coordinar ataques en Ethereum. En general, la idea es obtener beneficios de seguridad al ejecutar validadores como _comunidades_ en lugar de como individuos.
+FOCIL es la característica principal de la capa de consenso de Hegotá, la actualización que sigue a Glamsterdam y está prevista para 2027. Se programó deliberadamente después de Glamsterdam para que ePBS y FOCIL nunca se lancen como una combinación no probada. Continúa la investigación sobre las mempools cifradas, que ocultarían el contenido de las transacciones en espera hasta que se incluyan de forma segura en un bloque.
 
-<ButtonLink variant="outline-color" href="/staking/dvt/">Leer sobre la tecnología de validador distribuido</ButtonLink>
+## Finalidad más rápida {#faster-finality}
 
-La implementación de la **separación proponente-constructor (PBS)** mejorará drásticamente las defensas integradas de Ethereum contra la censura. La PBS permite que un validador cree un bloque y otro lo transmita a través de la red Ethereum. Esto garantiza que las ganancias de los algoritmos profesionales de construcción de bloques que maximizan los beneficios se compartan de manera más justa en toda la red, **evitando que la participación se concentre** en los participantes institucionales con mejor rendimiento a lo largo del tiempo. El proponente de bloque puede seleccionar el bloque más rentable que le ofrezca un mercado de constructores de bloques. Para censurar, un proponente de bloque a menudo tendría que elegir un bloque menos rentable, lo que sería **económicamente irracional y también obvio para el resto de los validadores** de la red.
+Para los usuarios, la [finalidad](/glossary/#finality) es el momento en que una transacción se vuelve permanente, cuando revertirla le costaría a un atacante una enorme cantidad de ETH en staking. Hoy en día, la finalidad tarda unos 15 minutos, y **los investigadores quieren reducir ese tiempo drásticamente**. El trabajo comenzó como finalidad de un solo slot, evolucionó a finalidad de tres slots y ahora continúa como Minimmit, un protocolo de consenso de una sola ronda en el programa Lean Ethereum presentado en julio de 2025. La finalidad en segundos es un objetivo a largo plazo en el borrador de la hoja de ruta, apuntando aproximadamente a 2029. Esto sigue siendo una investigación activa, y aún no se ha asignado ninguna actualización de finalidad a una bifurcación.
 
-Existen posibles complementos para la PBS, como transacciones cifradas y listas de inclusión, que podrían mejorar aún más la resistencia a la censura de Ethereum. Estos hacen que el constructor y el proponente de bloques no puedan ver las transacciones reales incluidas en sus bloques.
+<ButtonLink variant="outline" href="/roadmap/single-slot-finality/">Más sobre la investigación de finalidad más rápida</ButtonLink>
 
-<ButtonLink variant="outline-color" href="/roadmap/pbs/">Leer sobre la separación proponente-constructor</ButtonLink>
+## Validadores resilientes {#resilient-validators}
 
-## Protección de los validadores {#protecting-validators}
+Un validador suele ser una máquina que contiene una clave de firma. La **tecnología de validador distribuido (DVT)** reemplaza esa única máquina con un comité de máquinas que comparten la clave y firman juntas, por lo que si una computadora falla o se roba una clave, el validador no se cae. DVT está en vivo en producción y es utilizado por operadores de staking a gran escala. En enero de 2026, Vitalik Buterin propuso una variante simplificada a nivel de protocolo llamada DVT-lite; es una propuesta temprana sin una bifurcación programada.
 
-Es posible que un atacante sofisticado pueda identificar a los próximos validadores y enviarles spam para evitar que propongan bloques; esto se conoce como un ataque de **denegación de servicio (DoS)**. La implementación de la [**elección secreta de líder (SLE)**](/roadmap/secret-leader-election) protegerá contra este tipo de ataque al evitar que los proponentes de bloques se puedan conocer de antemano. Esto funciona mezclando continuamente un conjunto de compromisos criptográficos que representan a los candidatos a proponentes de bloques y utilizando su orden para determinar qué validador es seleccionado, de tal manera que solo los propios validadores conocen su orden de antemano.
+La red también se protege a sí misma a través de la [diversidad de clientes](/developers/docs/nodes-and-clients/client-diversity/): Ethereum se ejecuta en varias implementaciones de software construidas de forma independiente, por lo que un error en un cliente deja al resto de la red en pie.
 
-<ButtonLink variant="outline-color" href="/roadmap/secret-leader-election">Leer sobre la elección secreta de líder</ButtonLink>
+Dos ideas de investigación anteriores, view-merge y la elección secreta de líder, ya no son elementos activos de la hoja de ruta.
 
-## Progreso actual
+<ButtonLink variant="outline" href="/staking/dvt/">Más sobre la tecnología de validador distribuido</ButtonLink>
+
+## Resistencia cuántica {#quantum-resistance}
+
+Ethereum utiliza la [criptografía](/glossary/#cryptography) para mantener la red segura y proteger los fondos de los usuarios. Con el tiempo, algunos de estos métodos criptográficos serán **vulnerables a las computadoras cuánticas**, que pueden resolver problemas matemáticos específicos exponencialmente más rápido que las máquinas clásicas.
+
+**Ninguna computadora cuántica puede romper la criptografía de Ethereum hoy en día.** El hardware requerido aún no existe a gran escala. Pero investigaciones recientes sugieren que la brecha se está cerrando más rápido de lo esperado. En marzo de 2026, Google Quantum AI publicó un artículo estimando que romper la criptografía de curva elíptica de 256 bits (el tipo que Ethereum usa para las firmas de cuentas) podría requerir aproximadamente 1,200 cúbits lógicos, unas 20 veces menos que las estimaciones anteriores.
+
+Las transiciones criptográficas tardan años en planificarse y ejecutarse de forma segura, por lo que la preparación se está llevando a cabo ahora, mucho antes de que exista el hardware. Se han identificado cuatro áreas que requieren actualizaciones poscuánticas: firmas de consenso de validadores (BLS), los esquemas de compromiso utilizados para la disponibilidad de datos (KZG), firmas de cuentas (ECDSA) y los sistemas de pruebas de conocimiento cero utilizados por los [rollups](/glossary/#rollups).
+
+La Fundación Ethereum formó un **equipo de Seguridad Poscuántica** dedicado en enero de 2026, y su trabajo se rastrea públicamente en [pq.ethereum.org](https://pq.ethereum.org). El trabajo activo incluye firmas de validadores basadas en hash (leanXMSS) combinadas con una zkVM mínima (leanVM) que agrega las firmas más grandes seguras contra la computación cuántica de manera eficiente, y devnets de interoperabilidad semanales con más de 10 equipos de clientes.
+
+Una parte clave de la estrategia de transición es **EIP-8141**, que introduce la [abstracción de cuentas](/roadmap/account-abstraction/) nativa. Esto permite a las cuentas individuales elegir su propia verificación de firma, lo que significa que los usuarios podrían cambiar a firmas seguras contra la computación cuántica sin esperar una única migración en todo el protocolo. EIP-8141 se está considerando para la actualización Hegotá. Los hitos de la infraestructura poscuántica central apuntan a completarse aproximadamente para 2029. Estos son objetivos de planificación y pueden cambiar.
+
+<ExpandableCard title="¿Pueden las computadoras cuánticas robar mi ETH hoy?" eventCategory="/roadmap/security" eventName="clicked can quantum computers steal my ETH today?">
+
+No. Ninguna computadora cuántica actual puede romper la criptografía de Ethereum. El trabajo descrito en esta página es una preparación temprana para una amenaza que aún está a años de distancia. Cuando las billeteras poscuánticas estén disponibles, el software de la billetera lo guiará a través de la migración. Por ahora, no hay nada que deba hacer.
+
+</ExpandableCard>
+
+<ButtonLink variant="outline" href="/roadmap/security/quantum-resistance/">Más sobre la resistencia cuántica</ButtonLink>
+
+## Protocolo más simple y eficiente {#simpler-and-more-efficient-protocol}
+
+La complejidad crea oportunidades para errores y vulnerabilidades. Parte de la hoja de ruta se centra en **simplificar Ethereum y eliminar la deuda técnica** para que el protocolo sea más fácil de mantener, auditar y analizar. Un protocolo más simple también ofrece a los atacantes menos superficie para explorar.
+
+Entregado hasta ahora:
+
+- **[Pectra (mayo de 2025)](/roadmap/pectra/)**: Introdujo EIP-7702, que permite a las cuentas de propiedad externa delegar temporalmente en el código de un contrato inteligente, un paso hacia la abstracción de cuentas completa.
+- **[Fusaka (diciembre de 2025)](/roadmap/fusaka/)**: Implementó PeerDAS (EIP-7594), que distribuye la carga de trabajo de disponibilidad de datos a través de la red. También aumentó los parámetros de los blobs, expandiendo la capacidad de procesamiento de datos para los rollups.
+- **[Dencun (marzo de 2024)](/roadmap/dencun/)**: Introdujo transacciones de blobs (EIP-4844) para datos de rollup más baratos y restringió `SELFDESTRUCT` (EIP-6780) para eliminar una fuente de complejidad de larga data.
+- **[Shapella (abril de 2023)](/staking/withdrawals/)**: Permitió a los validadores retirar ETH en staking (EIP-4895), eliminando una restricción inicial del staking de [prueba de participación](/glossary/#pos).
+- **London (agosto de 2021)**: Revisó los precios del gas con EIP-1559, introduciendo una tarifa base y un mecanismo para quemar con el fin de lograr costos de transacción más predecibles.
+
+En progreso:
+
+- **Glamsterdam (prevista para 2026)**: Las características principales son ePBS (EIP-7732) y las listas de acceso a nivel de bloque (EIP-7928), y también se está considerando la revisión de precios del gas.
+- **Hegotá (prevista para 2027)**: FOCIL (EIP-7805) es la característica principal de la capa de consenso. Se está considerando para su inclusión: EIP-8141 (abstracción de cuentas nativa).
+- **En curso**: Los esfuerzos para simplificar la [EVM](/developers/docs/evm/), armonizar las implementaciones de clientes y eliminar gradualmente las funciones obsoletas continúan en todos los equipos de clientes. El trabajo sobre la ausencia de estado (permitir a los participantes verificar la cadena sin almacenar todos sus datos) se está rediseñando en torno a árboles hash binarios seguros contra la computación cuántica, y el enfoque final aún está por confirmarse.
+
+## Progreso actual {#current-progress}
 
 A mediados de 2026:
 
-- **Construcción de bloques y resistencia a la censura**: ePBS y las listas de acceso a nivel de bloque se están ejecutando en las devnets de Glamsterdam. FOCIL está planeado para Hegotá, prevista para 2027.
-- **Finalidad**: Minimmit y el trabajo de consenso más amplio de Lean Ethereum siguen en investigación activa sin asignación de bifurcación todavía.
-- **Resistencia cuántica**: Se están ejecutando devnets de interoperabilidad poscuántica semanales, y los hitos de la infraestructura central apuntan a aproximadamente 2029.
-- **Simplificación**: Pectra y Fusaka se lanzaron; Glamsterdam y Hegotá traen la próxima ronda de limpiezas.
+- **Construcción de bloques y resistencia a la censura**: ePBS y las listas de acceso a nivel de bloque se están ejecutando en las devnets de Glamsterdam. FOCIL está planeado para Hegotá, previsto para 2027.
+- **Finalidad**: Minimmit y el trabajo más amplio de consenso de Lean Ethereum siguen en investigación activa sin asignación de bifurcación todavía.
+- **Resistencia cuántica**: Se están ejecutando devnets de interoperabilidad poscuántica semanales, y los hitos de la infraestructura central apuntan aproximadamente a 2029.
+- **Simplificación**: Pectra y Fusaka se lanzaron; Glamsterdam y Hegotá llevan la siguiente ronda de limpiezas.
 
 Ninguna parte de este trabajo está terminada, y todos los plazos son estimaciones que pueden cambiar.
+
+## Lecturas adicionales {#further-reading}
+
+- [Forkcast: Rastreador de actualizaciones de la red Ethereum](https://forkcast.org)
+- [Strawmap: un borrador de la hoja de ruta de la capa 1 (l1) de Ethereum](https://strawmap.org) - _EF Architecture_
+- [Ethereum poscuántico](https://pq.ethereum.org) - _Fundación Ethereum_
+- [Rastreador de la hoja de ruta de Lean Ethereum](https://leanroadmap.org) - _ReamLabs_
+- [Prueba de participación y finalidad](/developers/docs/consensus-mechanisms/pos/#finality)
+- [La EVM](/developers/docs/evm/)
