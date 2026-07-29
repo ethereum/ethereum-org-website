@@ -27,3 +27,8 @@
 - **Message softened (left unfixed, needs native call):** "winding down" rendered `縮小` ("scaling down", implies continued operation at reduced size) on the program page and `contributing/index.md`, while the same PR correctly uses `段階的に終了` in `get-involved` and `終了に向かっており` in `page-collectibles`. Not an inversion -- the next clause says the Crowdin project is closing -- but it understates the announcement on the two most-read pages.
 - Aspect handling was the best of the CJK group: `でした`, `目指していました`, `貢献してきました` all correctly past without intervention.
 - `〜向けに` + `利用できます` on the guides lead leaves the subject dangling; `ご利用いただけます` is correct.
+
+## PR #18937 -- 2026-07-29 -- translators-guide, 7.5/10 pre-fix
+- The `mode=full` regeneration replaced the standard `完全形` with the non-standard katakana calque `フルフォーム` in three places including the `{#short-vs-full-forms}` heading. Reverted to `完全形`.
+- Not patched: half-width parens around Japanese text in two spots (the file otherwise uses full-width), and `これの重要な側面は` (unnatural; dev had `この重要な側面の1つは`).
+- Win from the same run: restored `訪問者がどのように自認しているかに関係なく` ("regardless of how they identify"), a source clause dev's ja had dropped entirely.
