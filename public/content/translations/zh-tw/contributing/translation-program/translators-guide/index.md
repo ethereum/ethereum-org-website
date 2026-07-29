@@ -1,8 +1,8 @@
 ---
-title: ethereum.org 翻譯風格指南
-metaTitle: 翻譯者指南
+title: "ethereum.org 翻譯風格指南"
+metaTitle: "翻譯者指南"
 lang: zh-tw
-description: 給 ethereum.org 翻譯者的指示與提示
+description: "給 ethereum.org 翻譯者的指示與提示"
 ---
 
 ethereum.org 翻譯風格指南包含了一些對翻譯者來說最重要的準則、指示與提示，以協助我們在地化這個網站。

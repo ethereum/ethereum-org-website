@@ -1,8 +1,8 @@
 ---
-title: Guia de estilo de tradução do ethereum.org
+title: "Guia de estilo de tradução do ethereum.org"
 metaTitle: Guia para tradutores
 lang: pt-br
-description: Instruções e dicas para tradutores do ethereum.org
+description: "Instruções e dicas para tradutores do ethereum.org"
 ---
 
 O guia de estilo de tradução do ethereum.org contém algumas das diretrizes, instruções e dicas mais importantes para os tradutores, ajudando-nos a localizar o site.

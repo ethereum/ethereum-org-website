@@ -1,8 +1,8 @@
 ---
-title: Przewodnik po stylu tłumaczeń ethereum.org
-metaTitle: Przewodnik dla tłumaczy
+title: "Przewodnik po stylu tłumaczeń ethereum.org"
+metaTitle: "Przewodnik dla tłumaczy"
 lang: pl
-description: Instrukcje i wskazówki dla tłumaczy ethereum.org
+description: "Instrukcje i wskazówki dla tłumaczy ethereum.org"
 ---
 
 Przewodnik po stylu tłumaczeń ethereum.org zawiera jedne z najważniejszych wytycznych, instrukcji i wskazówek dla tłumaczy, pomagając nam w lokalizacji strony internetowej.

@@ -1,8 +1,8 @@
 ---
-title: Hướng dẫn văn phong dịch thuật ethereum.org
-metaTitle: Hướng dẫn dành cho người dịch
+title: "Hướng dẫn văn phong dịch thuật ethereum.org"
+metaTitle: "Hướng dẫn dành cho người dịch"
 lang: vi
-description: Các hướng dẫn và mẹo dành cho người dịch ethereum.org
+description: "Các hướng dẫn và mẹo dành cho người dịch ethereum.org"
 ---
 
 Hướng dẫn văn phong dịch thuật ethereum.org chứa một số nguyên tắc, hướng dẫn và mẹo quan trọng nhất dành cho người dịch, giúp chúng tôi bản địa hóa trang web.

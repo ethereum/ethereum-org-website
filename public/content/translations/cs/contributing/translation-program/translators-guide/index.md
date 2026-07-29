@@ -1,8 +1,8 @@
 ---
-title: Průvodce stylem překladů pro ethereum.org
-metaTitle: Průvodce pro překladatele
+title: "Průvodce stylem překladů pro ethereum.org"
+metaTitle: "Průvodce pro překladatele"
 lang: cs
-description: Pokyny a tipy pro překladatele ethereum.org
+description: "Pokyny a tipy pro překladatele ethereum.org"
 ---
 
 Průvodce stylem překladů pro ethereum.org obsahuje některé z nejdůležitějších pokynů, instrukcí a tipů pro překladatele, které nám pomáhají s lokalizací webu.
@@ -11,7 +11,7 @@ Tento dokument slouží jako obecný průvodce a není specifický pro žádný 
 
 Pokud máte jakékoli dotazy, návrhy nebo zpětnou vazbu, neváhejte se na nás obrátit na adrese translations@ethereum.org, pošlete zprávu uživateli @ethdotorg na platformě Crowdin nebo [se připojte na náš Discord](https://discord.gg/ethereum-org), kde nám můžete napsat do kanálu #translations nebo kontaktovat kteréhokoli člena týmu.
 
-## Používání platformy Crowdin
+## Používání platformy Crowdin {#using-crowdin}
 
 Projekt ethereum.org na platformě Crowdin se uzavírá a již nepřijímá nové příspěvky (viz [stav Překladatelského programu](/contributing/translation-program/#program-status)). Níže uvedené pokyny zůstávají jako reference pro překladatelské komunity, které používají Crowdin pro své vlastní projekty.
 

@@ -11,7 +11,7 @@ Hati hii inatumika kama mwongozo wa jumla na si mahususi kwa lugha yoyote ile.
 
 Ikiwa una maswali, mapendekezo au maoni yoyote, jisikie huru kuwasiliana nasi kupitia translations@ethereum.org, tuma ujumbe kwa @ethdotorg kwenye Crowdin, au [jiunge na Discord yetu](https://discord.gg/ethereum-org), ambapo unaweza kututumia ujumbe katika chaneli ya #translations au kuwasiliana na mwanachama yeyote wa timu.
 
-## Kutumia Crowdin
+## Kutumia Crowdin {#using-crowdin}
 
 Mradi wa Crowdin wa ethereum.org unafungwa na haupokei tena michango mipya (tazama [Hali ya Programu ya Utafsiri](/contributing/translation-program/#program-status)). Mwongozo ulio hapa chini unasalia kama marejeleo kwa jumuiya za utafsiri zinazotumia Crowdin kwa miradi yao wenyewe.
 

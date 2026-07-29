@@ -1,8 +1,8 @@
 ---
-title: ethereum.org çeviri stil rehberi
-metaTitle: Çevirmen rehberi
+title: "ethereum.org çeviri stil rehberi"
+metaTitle: "Çevirmen rehberi"
 lang: tr
-description: ethereum.org çevirmenleri için talimatlar ve ipuçları
+description: "ethereum.org çevirmenleri için talimatlar ve ipuçları"
 ---
 
 ethereum.org çeviri stil rehberi, web sitesini yerelleştirmemize yardımcı olan çevirmenler için en önemli yönergelerden, talimatlardan ve ipuçlarından bazılarını içerir.
