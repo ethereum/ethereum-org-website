@@ -11,12 +11,9 @@ Bu belge genel bir rehber niteliğindedir ve herhangi bir dile özgü değildir.
 
 Herhangi bir sorunuz, öneriniz veya geri bildiriminiz varsa, translations@ethereum.org adresinden bize ulaşmaktan, Crowdin'de @ethdotorg'a mesaj göndermekten veya #translations kanalında bize mesaj gönderebileceğiniz ya da ekip üyelerinden herhangi birine ulaşabileceğiniz [Discord'umuza katılmaktan](https://discord.gg/ethereum-org) çekinmeyin.
 
-## Crowdin Kullanımı {#using-crowdin}
+ethereum.org Crowdin projesi kapatılıyor ve artık yeni katkı kabul etmiyor (bkz. [Çeviri Programı durumu](/contributing/translation-program/#program-status)). Aşağıdaki rehberlik, kendi projeleri için Crowdin kullanan çeviri toplulukları için referans olarak kalmaktadır.
 
-Crowdin'deki projeye nasıl katılacağınız ve Crowdin çevrimiçi düzenleyicisini nasıl kullanacağınızla ilgili temel talimatları [Çeviri Programı sayfasında](/contributing/translation-program/#how-to-translate) bulabilirsiniz.
-
-Crowdin ve bazı gelişmiş özelliklerinin kullanımı hakkında daha fazla bilgi edinmek isterseniz, [Crowdin bilgi bankası](https://support.crowdin.com/online-editor/) tüm Crowdin işlevlerine dair birçok derinlemesine rehber ve genel bakış içerir.
-
+Crowdin ve bazı gelişmiş özelliklerinin kullanımı hakkında daha fazla bilgi edinmek isterseniz, [Crowdin bilgi tabanı](https://support.crowdin.com/online-editor/) tüm Crowdin işlevlerine dair birçok derinlemesine rehber ve genel bakış içerir.
 ## Mesajın özünü yakalamak {#capturing-the-essence}
 
 ethereum.org içeriğini çevirirken kelimesi kelimesine çevirilerden kaçının.
