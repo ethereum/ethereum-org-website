@@ -1,7 +1,7 @@
 ---
-title: "Übersetzungsprogramm"
+title: Übersetzungsprogramm
 lang: de
-description: "Informationen über das Übersetzungsprogramm von ethereum.org"
+description: Informationen über das ethereum.org-Übersetzungsprogramm
 ---
 
 Das Übersetzungsprogramm war eine gemeinschaftliche Initiative, um ethereum.org in verschiedene Sprachen zu übersetzen und die Website für Milliarden von nicht englischsprachigen Menschen auf der ganzen Welt zugänglicher zu machen.
@@ -10,25 +10,23 @@ Das Übersetzungsprogramm war eine gemeinschaftliche Initiative, um ethereum.org
 
 ## Programmstatus {#program-status}
 
-Das Übersetzungsprogramm von ethereum.org läuft aus und führt kein Onboarding für neue Übersetzer mehr durch. Das Crowdin-Projekt wird geschlossen und wir nehmen darüber keine neuen Übersetzungsbeiträge mehr an.
+Das ethereum.org-Übersetzungsprogramm läuft aus und führt kein Onboarding für neue Übersetzer mehr durch. Das Crowdin-Projekt wird geschlossen und wir nehmen darüber keine neuen Übersetzungsbeiträge mehr an.
 
-Wir sind den Tausenden von Community-Übersetzern zutiefst dankbar, die ethereum.org im Laufe der Jahre in Dutzenden von Sprachen verfügbar gemacht haben – ihre Arbeit bleibt auf der Website live, und ihre Anerkennung auf den Seiten für [Danksagungen](/contributing/translation-program/acknowledgements/) und [Mitwirkende](/contributing/translation-program/contributors/) bleibt bestehen.
+Wir sind den Tausenden von Community-Übersetzern zutiefst dankbar, die ethereum.org im Laufe der Jahre in Dutzenden von Sprachen verfügbar gemacht haben – ihre Arbeit bleibt auf der Website live und ihre Anerkennung auf den Seiten [Danksagungen](/contributing/translation-program/acknowledgements/) und [Mitwirkende](/contributing/translation-program/contributors/) bleibt bestehen.
 
 Wenn Sie einen Fehler in einer bestehenden Übersetzung entdecken, [eröffnen Sie bitte ein Issue auf GitHub](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
-_Treten Sie dem [Discord von ethereum.org](https://discord.gg/ethereum-org) bei, um Fragen zu stellen oder Feedback zu geben._
+_Treten Sie dem [ethereum.org Discord](https://discord.gg/ethereum-org) bei, um Fragen zu stellen oder Feedback zu geben._
 
 ## Über das Übersetzungsprogramm {#about-us}
 
 Die [Ethereum](/)-Community strebt danach, global und inklusiv zu sein, doch ein Großteil ihrer Inhalte richtet sich nur an englischsprachige Personen, wodurch die 6 Milliarden nicht englischsprachigen Menschen der Welt ausgeschlossen werden. Damit ethereum.org als Portal zu Ethereum für die weltweite Community fungieren kann, glauben wir, dass es unerlässlich ist, nicht englischsprachigen Personen Ethereum-Inhalte in ihrer Muttersprache zur Verfügung zu stellen.
 
-Das Übersetzungsprogramm von ethereum.org zielte darauf ab, Ethereum für alle zugänglich zu machen, indem ethereum.org und andere Ethereum-Inhalte in so viele Sprachen wie möglich übersetzt wurden.
-
-Lesen Sie mehr über die [Mission und Vision](/contributing/translation-program/mission-and-vision) des Übersetzungsprogramms von ethereum.org.
+Das ethereum.org-Übersetzungsprogramm zielte darauf ab, Ethereum für jeden zugänglich zu machen, indem ethereum.org und andere Ethereum-Inhalte in so viele Sprachen wie möglich übersetzt wurden.
 
 ### Unser bisheriger Fortschritt {#our-progress}
 
-- [**6.900 +** Übersetzer](/contributing/translation-program/contributors/)
+- [**Über 6.900** Übersetzer](/contributing/translation-program/contributors/)
 - **68** Sprachen live auf der Website
 - [**2,89 Millionen** übersetzte Wörter im Jahr 2024](/contributing/translation-program/acknowledgements/)
 
@@ -41,11 +39,11 @@ Wir möchten unsere Übersetzer anerkennen und sie auf ihrem Karriereweg unterst
 
 #### Zertifikat {#certificate}
 
-Wenn Sie zum Übersetzungsprogramm beigetragen haben und mindestens 5.000 Ihrer übersetzten Wörter genehmigt wurden, haben Sie Anspruch auf ein Übersetzerzertifikat von ethereum.org. [Mehr zu Zertifikaten](/contributing/translation-program/acknowledgements/#certificate)
+Wenn Sie zum Übersetzungsprogramm beigetragen haben und mindestens 5.000 Ihrer übersetzten Wörter genehmigt wurden, haben Sie Anspruch auf ein ethereum.org-Übersetzerzertifikat. [Mehr zu Zertifikaten](/contributing/translation-program/acknowledgements/#certificate)
 
 #### OATs {#oats}
 
-Mitwirkende am Übersetzungsprogramm haben Anspruch auf verschiedene OATs (Onchain Achievement Tokens), basierend auf der Anzahl ihrer übersetzten Wörter im Jahr 2024. OATs sind NFTs, die Ihren Beitrag zum Übersetzungsprogramm von ethereum.org belegen. [Mehr zu OATs](/contributing/translation-program/acknowledgements/#oats)
+Mitwirkende am Übersetzungsprogramm haben Anspruch auf verschiedene OATs (Onchain Achievement Tokens), basierend auf der Anzahl ihrer übersetzten Wörter im Jahr 2024. OATs sind NFTs, die Ihren Beitrag zum ethereum.org-Übersetzungsprogramm belegen. [Mehr zu OATs](/contributing/translation-program/acknowledgements/#oats)
 
 #### Danksagungen an Übersetzer {#translator-acknowledgements}
 
@@ -59,16 +57,15 @@ In der Vergangenheit haben wir unsere aktivsten Mitwirkenden rückwirkend mit Ti
 
 Diese Referenzmaterialien stehen Übersetzungs-Communitys und Projekten, die ihre eigenen Programme durchführen, weiterhin zur Verfügung:
 
-- [Übersetzungs-Styleguide](/contributing/translation-program/translators-guide/) _– Anweisungen und Tipps für Übersetzer von ethereum.org_
-- [Übersetzungs-FAQs](/contributing/translation-program/faq/) _– häufig gestellte Fragen und Antworten zum Übersetzungsprogramm von ethereum.org_
+- [Übersetzungs-Styleguide](/contributing/translation-program/translators-guide/) _– Anweisungen und Tipps für ethereum.org-Übersetzer_
 
 Weitere nützliche Übersetzungstools, Übersetzer-Communitys und Blogbeiträge zum Übersetzungsprogramm finden Sie auf der [Ressourcenseite](/contributing/translation-program/resources/).
 
 ## Kontakt aufnehmen {#get-in-touch}
 
-Haben Sie Fragen? Oder möchten Sie mit unserem Team und anderen Übersetzern zusammenarbeiten? Bitte posten Sie im Kanal #translations unseres [Discord-Servers von ethereum.org](https://discord.gg/ethereum-org)
+Haben Sie Fragen? Oder möchten Sie mit unserem Team und anderen Übersetzern zusammenarbeiten? Bitte posten Sie im Kanal #translations unseres [ethereum.org Discord-Servers](https://discord.gg/ethereum-org).
 
-Sie können uns auch unter translations@ethereum.org erreichen
+Sie können uns auch unter translations@ethereum.org erreichen.
 
 ## Ein eigenes Übersetzungsprogramm starten {#starting-a-translation-program}
 

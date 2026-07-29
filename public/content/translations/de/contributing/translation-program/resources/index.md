@@ -10,8 +10,7 @@ Nachfolgend findest du einige nützliche Leitfäden und Tools für Übersetzer v
 ## Leitfäden {#guides}
 
 - [Übersetzungs-Styleguide](/contributing/translation-program/translators-guide/) _– Anweisungen und Tipps für Übersetzer von ethereum.org_
-- [Übersetzungs-FAQs](/contributing/translation-program/faq/) _– häufig gestellte Fragen und Antworten zum Übersetzungsprogramm von ethereum.org_
-- [Leitfaden für den Crowdin-Online-Editor](https://support.crowdin.com/online-editor/) _– ein ausführlicher Leitfaden zur Nutzung des Crowdin-Online-Editors und einiger erweiterter Funktionen von Crowdin_
+- [Leitfaden für den Crowdin-Online-Editor](https://support.crowdin.com/online-editor/) _– ein ausführlicher Leitfaden zur Nutzung des Crowdin-Online-Editors und einiger der erweiterten Funktionen von Crowdin_
 
 ## Tools {#tools}
 
@@ -40,7 +39,7 @@ Um über die neuesten Fortschritte des Übersetzungsprogramms auf dem Laufenden 
 
 ## Sprechstunden für Übersetzer {#office-hours}
 
-Wir veranstalten jeden zweiten Mittwoch im Monat Sprechstunden für Übersetzer. Diese finden im Sprachkanal #office-hours auf dem [Discord von ethereum.org](https://discord.gg/ethereum-org) statt, wo du auch die genauen Zeiten und weitere Details findest.
+Wir bieten jeden zweiten Mittwoch im Monat Sprechstunden für Übersetzer an. Diese finden im Sprachkanal #office-hours auf dem [Discord von ethereum.org](https://discord.gg/ethereum-org) statt, wo du auch die genauen Zeiten und weitere Details findest.
 
 Die Sprechstunden ermöglichen es unseren Übersetzern, Fragen zum Übersetzungsprozess zu stellen, Feedback zum Programm zu geben, ihre Ideen zu teilen oder einfach mit dem Kernteam von ethereum.org zu plaudern.
 Schließlich möchten wir diese Anrufe nutzen, um aktuelle Entwicklungen im Übersetzungsprogramm zu kommunizieren und wichtige Tipps und Anweisungen mit unseren Mitwirkenden zu teilen.
