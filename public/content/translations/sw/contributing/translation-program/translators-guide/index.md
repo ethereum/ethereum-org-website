@@ -11,12 +11,11 @@ Hati hii inatumika kama mwongozo wa jumla na si mahususi kwa lugha yoyote ile.
 
 Ikiwa una maswali, mapendekezo au maoni yoyote, jisikie huru kuwasiliana nasi kupitia translations@ethereum.org, tuma ujumbe kwa @ethdotorg kwenye Crowdin, au [jiunge na Discord yetu](https://discord.gg/ethereum-org), ambapo unaweza kututumia ujumbe katika chaneli ya #translations au kuwasiliana na mwanachama yeyote wa timu.
 
-## Kutumia Crowdin {#using-crowdin}
+## Kutumia Crowdin
 
-Unaweza kupata maagizo ya kimsingi kuhusu jinsi ya kujiunga na mradi katika Crowdin na jinsi ya kutumia kihariri cha mtandaoni cha Crowdin kwenye [Ukurasa wa Programu ya Utafsiri](/contributing/translation-program/#how-to-translate).
+Mradi wa Crowdin wa ethereum.org unafungwa na haupokei tena michango mipya (tazama [Hali ya Programu ya Utafsiri](/contributing/translation-program/#program-status)). Mwongozo ulio hapa chini unasalia kama marejeleo kwa jumuiya za utafsiri zinazotumia Crowdin kwa miradi yao wenyewe.
 
-Ikiwa ungependa kujifunza zaidi kuhusu Crowdin na kutumia baadhi ya vipengele vyake vya hali ya juu, [kumbukumbu ya maarifa ya Crowdin](https://support.crowdin.com/online-editor/) ina miongozo mingi ya kina na muhtasari wa utendaji wote wa Crowdin.
-
+Ikiwa ungependa kujifunza zaidi kuhusu Crowdin na kutumia baadhi ya vipengele vyake vya hali ya juu, [kituo cha maarifa cha Crowdin](https://support.crowdin.com/online-editor/) kina miongozo mingi ya kina na muhtasari wa utendaji wote wa Crowdin.
 ## Kunasa kiini cha ujumbe {#capturing-the-essence}
 
 Unapotafsiri maudhui ya ethereum.org, epuka tafsiri za neno kwa neno.
