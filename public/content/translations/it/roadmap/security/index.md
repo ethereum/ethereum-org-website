@@ -1,5 +1,5 @@
 ---
-title: Un Ethereum più sicuro
+title: "Un Ethereum più sicuro"
 description: La roadmap di Ethereum rafforza oggi la produzione di blocchi e la resistenza alla censura, preparando al contempo il protocollo per l'era quantistica e per decenni di funzionamento affidabile.
 lang: it
 image: /images/roadmap/roadmap-security.png

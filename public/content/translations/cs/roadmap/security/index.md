@@ -1,6 +1,6 @@
 ---
-title: Bezpečnější Ethereum
-description: Plán vývoje Etherea dnes posiluje tvorbu bloků a odolnost vůči cenzuře, zatímco připravuje protokol na kvantovou éru a desetiletí spolehlivého provozu.
+title: "Bezpečnější Ethereum"
+description: "Plán vývoje Etherea dnes posiluje tvorbu bloků a odolnost vůči cenzuře, zatímco připravuje protokol na kvantovou éru a desetiletí spolehlivého provozu."
 lang: cs
 image: /images/roadmap/roadmap-security.png
 alt: "Plán vývoje Etherea"

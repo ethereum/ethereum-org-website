@@ -1,6 +1,6 @@
 ---
-title: Un Ethereum plus sécurisé
-description: La feuille de route d'Ethereum renforce aujourd'hui la production de blocs et la résistance à la censure tout en préparant le protocole pour l'ère quantique et des décennies de fonctionnement fiable.
+title: "Un Ethereum plus sécurisé"
+description: "La feuille de route d'Ethereum renforce aujourd'hui la production de blocs et la résistance à la censure tout en préparant le protocole pour l'ère quantique et des décennies de fonctionnement fiable."
 lang: fr
 image: /images/roadmap/roadmap-security.png
 alt: "Feuille de route d'Ethereum"

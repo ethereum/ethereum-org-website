@@ -1,6 +1,6 @@
 ---
 title: Um Ethereum mais seguro
-description: O roteiro do Ethereum fortalece a produção de blocos e a resistência à censura hoje, enquanto prepara o protocolo para a era quântica e décadas de operação confiável.
+description: "O roteiro do Ethereum fortalece a produção de blocos e a resistência à censura hoje, enquanto prepara o protocolo para a era quântica e décadas de operação confiável."
 lang: pt-br
 image: /images/roadmap/roadmap-security.png
 alt: Roteiro do Ethereum

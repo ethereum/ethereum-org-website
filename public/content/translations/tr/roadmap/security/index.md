@@ -1,6 +1,6 @@
 ---
-title: Daha güvenli bir Ethereum
-description: Ethereum'un yol haritası, protokolü kuantum çağına ve onlarca yıllık güvenilir operasyona hazırlarken bugün blok üretimini ve sansür direncini güçlendiriyor.
+title: "Daha güvenli bir Ethereum"
+description: "Ethereum'un yol haritası, protokolü kuantum çağına ve onlarca yıllık güvenilir operasyona hazırlarken bugün blok üretimini ve sansür direncini güçlendiriyor."
 lang: tr
 image: /images/roadmap/roadmap-security.png
 alt: "Ethereum yol haritası"

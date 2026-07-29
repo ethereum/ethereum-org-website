@@ -1,6 +1,6 @@
 ---
 title: Ein sichereres Ethereum
-description: Die Roadmap von Ethereum härtet heute die Blockproduktion und Zensurresistenz, während sie das Protokoll auf das Quantenzeitalter und Jahrzehnte zuverlässigen Betriebs vorbereitet.
+description: "Die Roadmap von Ethereum härtet heute die Blockproduktion und Zensurresistenz, während sie das Protokoll auf das Quantenzeitalter und Jahrzehnte zuverlässigen Betriebs vorbereitet."
 lang: de
 image: /images/roadmap/roadmap-security.png
 alt: "Ethereum-Roadmap"

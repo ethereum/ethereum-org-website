@@ -1,6 +1,6 @@
 ---
-title: Một Ethereum bảo mật hơn
-description: Lộ trình của Ethereum củng cố việc sản xuất khối và khả năng chống kiểm duyệt ngay hôm nay, đồng thời chuẩn bị giao thức cho kỷ nguyên lượng tử và hàng thập kỷ hoạt động đáng tin cậy.
+title: "Một Ethereum bảo mật hơn"
+description: "Lộ trình của Ethereum củng cố việc sản xuất khối và khả năng chống kiểm duyệt ngay hôm nay, đồng thời chuẩn bị giao thức cho kỷ nguyên lượng tử và hàng thập kỷ hoạt động đáng tin cậy."
 lang: vi
 image: /images/roadmap/roadmap-security.png
 alt: "Ethereum roadmap"

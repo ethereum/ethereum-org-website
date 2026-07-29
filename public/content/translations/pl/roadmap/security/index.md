@@ -1,6 +1,6 @@
 ---
 title: Bezpieczniejsze Ethereum
-description: Mapa drogowa Ethereum wzmacnia dziś produkcję bloków i odporność na cenzurę, jednocześnie przygotowując protokół na erę kwantową i dziesięciolecia niezawodnego działania.
+description: "Mapa drogowa Ethereum wzmacnia dziś produkcję bloków i odporność na cenzurę, jednocześnie przygotowując protokół na erę kwantową i dziesięciolecia niezawodnego działania."
 lang: pl
 image: /images/roadmap/roadmap-security.png
 alt: Mapa drogowa Ethereum

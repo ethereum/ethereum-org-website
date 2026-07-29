@@ -1,6 +1,6 @@
 ---
-title: Un Ethereum más seguro
-description: La hoja de ruta de Ethereum refuerza la producción de bloques y la resistencia a la censura hoy en día, al tiempo que prepara el protocolo para la era cuántica y décadas de funcionamiento confiable.
+title: "Un Ethereum más seguro"
+description: "La hoja de ruta de Ethereum refuerza la producción de bloques y la resistencia a la censura hoy en día, al tiempo que prepara el protocolo para la era cuántica y décadas de funcionamiento confiable."
 lang: es
 image: /images/roadmap/roadmap-security.png
 alt: "Hoja de ruta de Ethereum"
