@@ -43,6 +43,13 @@ Existem complementos potenciais para a PBS, como transações criptografadas e l
 
 <ButtonLink variant="outline-color" href="/roadmap/secret-leader-election">Leia sobre a eleição secreta de líder</ButtonLink>
 
-## Progresso atual {#current-progress}
+## Progresso atual
 
-**As atualizações de segurança no roteiro estão em estágios avançados de pesquisa**, mas não se espera que sejam implementadas por algum tempo. Os próximos passos para view-merge, PBS, SSF e SLE são finalizar uma especificação e começar a construir protótipos.
+Em meados de 2026:
+
+- **Construção de blocos e resistência à censura**: O ePBS e as listas de acesso no nível do bloco estão sendo executados nas devnets da Glamsterdam. O FOCIL está planejado para a Hegotá, prevista para 2027.
+- **Finalidade**: O Minimmit e o trabalho mais amplo de consenso do Lean Ethereum permanecem em pesquisa ativa, sem atribuição de bifurcação ainda.
+- **Resistência quântica**: As devnets de interoperabilidade pós-quântica semanais estão em execução, e os marcos da infraestrutura principal visam aproximadamente 2029.
+- **Simplificação**: A Pectra e a Fusaka foram lançadas; a Glamsterdam e a Hegotá trazem a próxima rodada de limpezas.
+
+Nenhuma parte deste trabalho está concluída, e todos os cronogramas são estimativas que podem mudar.
