@@ -520,3 +520,28 @@ Fixes applied (minimal marker, everything else byte-identical): zh/zh-tw `是`�
 - **Full-file retranslation churns lines the English change never touched.** ta regressed `முக்கிய பகுதி` → `திறவுகோல் பகுதி` ("keyhole part") and lost two sentence-final periods; es appended an unrequested gloss and re-translated "Onchain Achievement Token"; fr moved the *opposite* way on the same term. Budget review attention for collateral drift, not just the intended diff.
 - **`page-collectibles.json` is where program-name splits hide.** es casing, it casing, pl `Program tłumaczeń` vs `Program Tłumaczeń`, cs `utlumuje` vs `chýlí ke konci`, ru `перевода`/`переводов`, uk `перекладу`/`перекладів`, te `కార్యక్రమం`/`ప్రోగ్రామ్`, mr `अनुवाद`/`भाषांतर`, sw two names + three winddown verbs. The JSON was translated in a separate task from the markdown, so the two drift apart; check them against each other explicitly.
 - **ja softened the message:** `縮小` ("scaling down", implies continued operation) on the program and contributing pages, vs the correct `段階的に終了` it used in get-involved and page-collectibles. Left unfixed — worth a native call.
+
+### 34. Hand-fixes to translated content are erased by the next `mode=full` run on that file (PROCESS)
+
+Nine aspect-marker fixes hand-applied to `contributing/translation-program/index.md` in PR #18935 were wiped when PR #18937 re-ran `mode=full` on the same file one day later — `runFullTranslation` regenerates from English and never reads the locale file, so any human edit in it is discarded silently. Seven of the nine had to be redone; the other two (ta) happened to regenerate correctly.
+
+**Sequence hand-fixes after the last pipeline run that touches the file, never before.** If another run is likely, log the fix in `.claude/translation-review/per-language/` and re-apply afterwards rather than assuming it stuck. Re-request replacement lines against the *current* text — the regeneration rewords surrounding clauses, so yesterday's full-line replacement would silently revert unrelated wording (zh's file-wide term had flipped `翻译计划` -> `翻译项目`, 14 occurrences, so the old replacement line would have reintroduced the minority form).
+
+**Verify markers by reading, not grepping for a specific verb.** A marker grep reported ta line 7 as reverted when the regeneration had simply restructured the sentence and used a different past form (`அமைந்தது` instead of `ஆக இருந்தது`). Regeneration also *fixed* all three ta regressions logged the day before, so re-checking beats assuming the previous findings still hold.
+
+### 35. `auto` mode is unsafe for ANY English edit on a page with structural markup, not just block deletions (CRITICAL)
+
+Pattern 32 framed the incremental bug as triggered by deleted/replaced blocks. PR #18937 disproved the narrow framing: `translators-guide/index.md` had a **single 1:1 sentence replacement** — the shape that had come through cleanly on `get-involved` and `web3` — and the incremental run **deleted the `## Using Crowdin {#using-crowdin}` heading outright in 17 of 24 locales** while correctly translating the replacement paragraph below it, plus ate the blank line before the following heading. Re-running the same file with `mode=full` produced 24/24 clean output for $1.79.
+
+Cost of the failed shortcut was $0.38 and one review cycle; the full run that fixed it cost $1.79. **Default to `mode=full` for any English edit to these content pages** and treat `auto` as reserved for runs where nothing structural (headings, list items, links, JSX) is touched. If you do use `auto`, the anchor-set diff against English is the check that catches it — links alone passed 24/24 on the run that dropped the heading, because the heading carried no link.
+
+### 36. Hand-patching translated content through a text channel silently alters Unicode composition (PROCESS)
+
+Fixing a *content* defect introduced an *encoding* defect that no content review would catch. A Bengali replacement line pasted from a subagent's report arrived with two precomposed য় (U+09DF) decomposed into য + ় (U+09AF U+09BC), taking `bn/contributing/translation-program/index.md` from a uniform 36/0 precomposed to 34/2 mixed. The reviewer had predicted exactly this ("in case your paste path does any normalization, which would silently alter it"), which is the only reason it was checked.
+
+**Any hand patch of non-Latin content needs a codepoint-level diff, not a visual one.** Count the at-risk characters in the file before and after, and compare against the file's own dominant convention rather than against NFC — several locale files are deliberately non-NFC (bn/index.md is 36 precomposed / 0 decomposed; bn/translators-guide is the mirror image at 191 decomposed / 9 precomposed, which is why normalization drift there needs its own pass rather than a line fix).
+
+Characters that bit or nearly bit in one session: U+09DF Bengali YYA, U+0931 Devanagari RRA (mr), U+200C ZWNJ inside Telugu inflected forms, U+2066/U+2069 bidi isolates (ur). Ask the reviewer which normalization form to emit and verify the count after applying.
+
+**Corollary: ask for full lines, never do the substring swap yourself.** A Korean fix looked like a one-word noun swap (`잠재고객` -> `독자`) but the two nouns end in a consonant and a vowel respectively, so the particles had to change too (`독자을` would have been ungrammatical) -- and on one of the three lines the correct word was neither, but `사람들`. A Tamil heading fix needed two words changed, not one, to keep an adjectival/nominalized pair parallel. Subagents also caught their own errors mid-handoff twice (a wrong `Crowdin` occurrence extracted for a Tamil heading; two line numbers cited from diff-hunk offsets rather than file lines).
+

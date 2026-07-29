@@ -4,7 +4,7 @@ lang: id
 description: Informasi tentang Program Terjemahan ethereum.org
 ---
 
-Program Terjemahan dulunya adalah upaya kolaboratif untuk menerjemahkan ethereum.org ke dalam berbagai bahasa, membuat situs web ini lebih mudah diakses oleh miliaran penutur non-bahasa Inggris di seluruh dunia.
+Program Terjemahan dulunya adalah upaya kolaboratif untuk menerjemahkan ethereum.org ke dalam berbagai bahasa, membuat situs web ini lebih mudah diakses oleh miliaran orang yang tidak berbahasa Inggris di seluruh dunia.
 
 ![](./enterprise-eth.png)
 
@@ -14,17 +14,15 @@ Program Terjemahan ethereum.org sedang dihentikan secara bertahap dan tidak lagi
 
 Kami sangat berterima kasih kepada ribuan penerjemah komunitas yang telah membuat ethereum.org tersedia dalam puluhan bahasa selama bertahun-tahun—karya mereka tetap tayang di situs ini, dan pengakuan mereka di halaman [penghargaan](/contributing/translation-program/acknowledgements/) serta [kontributor](/contributing/translation-program/contributors/) tetap dipertahankan.
 
-Jika Anda menemukan kesalahan pada terjemahan yang ada, silakan [buka isu di GitHub](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
+Jika Anda menemukan kesalahan dalam terjemahan yang ada, silakan [buka isu di GitHub](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
 _Bergabunglah dengan [Discord ethereum.org](https://discord.gg/ethereum-org) untuk mengajukan pertanyaan atau membagikan umpan balik._
 
 ## Tentang Program Terjemahan {#about-us}
 
-Komunitas [Ethereum](/) bertujuan untuk menjadi global dan inklusif, namun sebagian besar kontennya hanya melayani penutur bahasa Inggris, mengabaikan 6 miliar penutur non-bahasa Inggris di dunia. Agar ethereum.org dapat bertindak sebagai portal menuju Ethereum bagi komunitas di seluruh dunia, kami percaya bahwa menyediakan konten Ethereum dalam bahasa ibu bagi penutur non-bahasa Inggris adalah hal yang esensial.
+Komunitas [Ethereum](/) bertujuan untuk menjadi global dan inklusif, namun sebagian besar kontennya hanya melayani penutur bahasa Inggris, mengabaikan 6 miliar orang yang tidak berbahasa Inggris di dunia. Agar ethereum.org dapat bertindak sebagai portal menuju Ethereum bagi komunitas di seluruh dunia, kami percaya bahwa menyediakan konten Ethereum dalam bahasa ibu mereka bagi mereka yang tidak berbahasa Inggris adalah hal yang esensial.
 
-Program Terjemahan ethereum.org bertujuan untuk membuat Ethereum dapat diakses oleh semua orang dengan menerjemahkan ethereum.org dan konten Ethereum lainnya ke dalam sebanyak mungkin bahasa.
-
-Baca lebih lanjut tentang [misi dan visi](/contributing/translation-program/mission-and-vision) Program Terjemahan ethereum.org.
+Program Terjemahan ethereum.org sebelumnya bertujuan untuk membuat Ethereum dapat diakses oleh semua orang dengan menerjemahkan ethereum.org dan konten Ethereum lainnya ke dalam sebanyak mungkin bahasa.
 
 ### Kemajuan kami sejauh ini {#our-progress}
 
@@ -41,7 +39,7 @@ Kami ingin memberikan penghargaan kepada para penerjemah kami dan mendukung mere
 
 #### Sertifikat {#certificate}
 
-Jika Anda telah berkontribusi pada Program Terjemahan dan setidaknya 5.000 kata terjemahan Anda telah disetujui, Anda berhak mendapatkan sertifikat penerjemah ethereum.org. [Lebih lanjut tentang sertifikat](/contributing/translation-program/acknowledgements/#certificate)
+Jika Anda telah berkontribusi pada Program Terjemahan dan setidaknya 5.000 kata yang Anda terjemahkan telah disetujui, Anda berhak mendapatkan sertifikat penerjemah ethereum.org. [Lebih lanjut tentang sertifikat](/contributing/translation-program/acknowledgements/#certificate)
 
 #### OAT {#oats}
 
@@ -60,7 +58,6 @@ Di masa lalu, kami telah memberikan hadiah secara retroaktif kepada kontributor 
 Materi referensi ini tetap tersedia untuk komunitas terjemahan dan proyek yang menjalankan program mereka sendiri:
 
 - [Panduan Gaya Terjemahan](/contributing/translation-program/translators-guide/) _– instruksi dan kiat untuk penerjemah ethereum.org_
-- [Tanya Jawab Terjemahan](/contributing/translation-program/faq/) _– pertanyaan yang sering diajukan dan jawaban tentang Program Terjemahan ethereum.org_
 
 Untuk alat terjemahan berguna lainnya, komunitas penerjemah, dan pos blog Program Terjemahan, silakan kunjungi [halaman Sumber Daya](/contributing/translation-program/resources/).
 

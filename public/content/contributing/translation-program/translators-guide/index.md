@@ -13,7 +13,7 @@ If you have any questions, suggestions or feedback, feel free to reach out to us
 
 ## Using Crowdin {#using-crowdin}
 
-You can find basic instructions on how to join the project in Crowdin and how to use the Crowdin online editor on the [Translation Program page](/contributing/translation-program/#how-to-translate).
+The ethereum.org Crowdin project is being closed and no longer accepts new contributions (see the [Translation Program status](/contributing/translation-program/#program-status)). The guidance below remains as reference for translation communities using Crowdin for their own projects.
 
 If you would like to learn more about Crowdin and using some of its advanced feature, the [Crowdin knowledge base](https://support.crowdin.com/online-editor/) contains a lot of in-depth guides and overviews of all Crowdin functionality.
 
