@@ -11,12 +11,9 @@ description: "إرشادات ونصائح لمترجمي ⁦ethereum.org⁩"
 
 إذا كانت لديك أي أسئلة أو اقتراحات أو ملاحظات، فلا تتردد في التواصل معنا على <span dir="ltr">translations@ethereum.org</span>، أو إرسال رسالة إلى <span dir="ltr">@ethdotorg</span> على Crowdin، أو [الانضمام إلى ديسكورد الخاص بنا](https://discord.gg/ethereum-org)، حيث يمكنك مراسلتنا في قناة <span dir="ltr">#translations</span> أو التواصل مع أي من أعضاء الفريق.
 
-## استخدام Crowdin {#using-crowdin}
-
-يمكنك العثور على إرشادات أساسية حول كيفية الانضمام إلى المشروع في Crowdin وكيفية استخدام محرر Crowdin عبر الإنترنت في [صفحة برنامج الترجمة](/contributing/translation-program/#how-to-translate).
+يتم إغلاق مشروع Crowdin الخاص بموقع <span dir="ltr">ethereum.org</span> ولم يعد يقبل مساهمات جديدة (راجع [حالة برنامج الترجمة](/contributing/translation-program/#program-status)). تظل الإرشادات أدناه كمرجع لمجتمعات الترجمة التي تستخدم Crowdin لمشاريعها الخاصة.
 
 إذا كنت ترغب في معرفة المزيد عن Crowdin واستخدام بعض ميزاته المتقدمة، فإن [قاعدة معرفة Crowdin](https://support.crowdin.com/online-editor/) تحتوي على الكثير من الأدلة المتعمقة والنظرات العامة لجميع وظائف Crowdin.
-
 ## التقاط جوهر الرسالة {#capturing-the-essence}
 
 عند ترجمة محتوى <span dir="ltr">ethereum.org</span>، تجنب الترجمة الحرفية.
