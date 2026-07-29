@@ -130,7 +130,7 @@ The technical barrier to entry to using Web3 is currently too high. Users must c
 
 Web3 introduces new paradigms that require learning different mental models than the ones used in Web2.0. A similar education drive happened as Web1.0 was gaining popularity in the late 1990s; proponents of the world wide web used a slew of educational techniques to educate the public from simple metaphors (the information highway, browsers, surfing the web) to [television broadcasts](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 isn't difficult, but it is different. Educational initiatives informing Web2 users of these Web3 paradigms are vital for its success.
 
-Ethereum.org contributes to Web3 education through our [Translation Program](/contributing/translation-program/), aiming to translate important Ethereum content to as many languages as possible.
+Ethereum.org has contributed to Web3 education through its [Translation Program](/contributing/translation-program/), which made important Ethereum content available in dozens of languages.
 
 ### Centralized infrastructure {#centralized-infrastructure}
 
