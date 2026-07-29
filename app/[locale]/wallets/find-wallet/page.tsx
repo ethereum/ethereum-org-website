@@ -1,7 +1,9 @@
 import { getTranslations, setRequestLocale } from "next-intl/server"
+import type { ReactNode } from "react"
 
 import type { FileContributor, Lang, PageParams } from "@/lib/types"
 
+import { ABTest } from "@/components/AB"
 import PageHero from "@/components/Hero/PageHero"
 import MainArticle from "@/components/MainArticle"
 
@@ -21,8 +23,20 @@ import FindWalletPageJsonLD from "./page-jsonld"
 // Wallet data is repo-checked-in, so it only changes at deploy time.
 export const revalidate = false
 
-const Page = async (props: { params: Promise<PageParams> }) => {
+const Page = async (props: {
+  params: Promise<PageParams>
+  /** Precomputed A/B variant index, passed only by the ab-code route */
+  catalogVariant?: number
+  /**
+   * The A/B test's Original arm, injected by the ab-code route rather than
+   * imported here: a static import would pull the legacy table's client
+   * components into this route's bundle, shipping them to every visitor of the
+   * design that replaced it.
+   */
+  legacyBody?: ReactNode
+}) => {
   const { locale } = await props.params
+  const { catalogVariant, legacyBody } = props
   setRequestLocale(locale)
 
   const t = await getTranslations({
@@ -48,8 +62,22 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     // Non-fatal: JSON-LD omits the contributor list.
   }
 
+  const catalogBody = (
+    <WalletsPageBody
+      key="NewCatalog"
+      locale={locale}
+      wallets={wallets}
+      networks={networks}
+      languages={languages}
+      personaCounts={personaCounts}
+      lastUpdatedDisplay={lastUpdatedDisplay}
+    />
+  )
+
   return (
     <>
+      {/* Outside the variant swap: both arms are the same URL, so search
+          engines must see one consistent set of structured data. */}
       <FindWalletPageJsonLD
         locale={locale}
         contributors={contributors}
@@ -62,14 +90,17 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           description={t("page-find-wallet-description")}
           variant="no-divider"
         />
-        <WalletsPageBody
-          locale={locale}
-          wallets={wallets}
-          networks={networks}
-          languages={languages}
-          personaCounts={personaCounts}
-          lastUpdatedDisplay={lastUpdatedDisplay}
-        />
+        {catalogVariant !== undefined && legacyBody ? (
+          <ABTest
+            testKey="FindWalletCatalog2026"
+            variantIndex={catalogVariant}
+            // Element keys become the Matomo variation names verbatim - they
+            // must match the dashboard exactly (see ABTest label derivation).
+            variants={[legacyBody, catalogBody]}
+          />
+        ) : (
+          catalogBody
+        )}
       </MainArticle>
     </>
   )
