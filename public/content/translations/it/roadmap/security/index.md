@@ -43,6 +43,13 @@ Ci sono potenziali componenti aggiuntivi per la PBS, come transazioni crittograf
 
 <ButtonLink variant="outline-color" href="/roadmap/secret-leader-election">Scopri di più sull'elezione segreta del leader</ButtonLink>
 
-## Progressi attuali {#current-progress}
+## Progressi attuali
 
-**Gli aggiornamenti di sicurezza sulla roadmap sono in fasi avanzate di ricerca**, ma non si prevede che vengano implementati per un po' di tempo. I prossimi passi per view-merge, PBS, SSF e SLE sono finalizzare una specifica e iniziare a costruire prototipi.
+A metà del 2026:
+
+- **Costruzione di blocchi e resistenza alla censura**: l'ePBS e le liste di accesso a livello di blocco sono in esecuzione sulle devnet di Glamsterdam. FOCIL è pianificato per Hegotá, previsto per il 2027.
+- **Definitività**: Minimmit e il più ampio lavoro sul consenso di Lean Ethereum rimangono in fase di ricerca attiva senza ancora alcuna assegnazione a un fork.
+- **Resistenza quantistica**: sono in esecuzione devnet di interoperabilità post-quantistica settimanali e le tappe fondamentali dell'infrastruttura di base mirano all'incirca al 2029.
+- **Semplificazione**: Pectra e Fusaka sono stati rilasciati; Glamsterdam ed Hegotá portano il prossimo ciclo di pulizie.
+
+Nessuna parte di questo lavoro è terminata e tutte le tempistiche sono stime che potrebbero subire variazioni.

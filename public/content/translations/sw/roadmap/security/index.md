@@ -43,6 +43,13 @@ Inawezekana kwamba mshambuliaji wa kisasa anaweza kuwatambua wathibitishaji wana
 
 <ButtonLink variant="outline-color" href="/roadmap/secret-leader-election">Soma kuhusu uchaguzi wa siri wa kiongozi</ButtonLink>
 
-## Maendeleo ya sasa {#current-progress}
+## Maendeleo ya sasa
 
-**Maboresho ya usalama kwenye ramani ya njia yako katika hatua za juu za utafiti**, lakini hayatarajiwi kutekelezwa kwa muda. Hatua zinazofuata za view-merge, PBS, SSF na SLE ni kukamilisha vipimo na kuanza kujenga mifano.
+Kufikia katikati ya 2026:
+
+- **Ujenzi wa kitalu na ukinzani wa udhibiti**: ePBS na orodha za ufikiaji za kiwango cha kitalu zinaendeshwa kwenye devnets za Glamsterdam. FOCIL imepangwa kwa Hegotá, inayolengwa kwa 2027.
+- **Ukamilifu**: Minimmit na kazi pana ya mwafaka ya Lean Ethereum zinasalia katika utafiti unaoendelea bila upangaji wa mchepuo bado.
+- **Ukinzani wa kwanta**: Devnets za mwingiliano za baada ya kwanta za kila wiki zinaendeshwa, na hatua muhimu za msingi za miundombinu zinalenga takriban 2029.
+- **Urahisishaji**: Pectra na Fusaka zimetolewa; Glamsterdam na Hegotá zinabeba awamu inayofuata ya usafishaji.
+
+Hakuna sehemu ya kazi hii iliyokamilika, na ratiba zote ni makadirio ambayo yanaweza kubadilika.

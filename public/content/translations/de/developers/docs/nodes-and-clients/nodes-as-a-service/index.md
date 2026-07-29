@@ -47,14 +47,14 @@ Durch die Nutzung eines Knoten-Dienstes zentralisieren Sie den Infrastrukturaspe
 
 Lesen Sie mehr über die [Vorteile des Betriebs eines eigenen Knotens](/developers/docs/nodes-and-clients/#benefits-to-you).
 
-## Beliebte Knoten-Dienste
+## Beliebte Knoten-Dienste {#popular-node-services}
 
 Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Sie gerne fehlende hinzu! Jeder Knoten-Dienst bietet neben kostenlosen oder kostenpflichtigen Tarifen unterschiedliche Vorteile und Funktionen. Sie sollten vor einer Entscheidung prüfen, welche am besten zu Ihren Anforderungen passen.
 
 - [**Alchemy**](https://alchemy.com/)
   - [Dokumentation](https://www.alchemy.com/docs/)
   - Funktionen
-    - Größter kostenloser Tarif mit 300 Mio. Recheneinheiten pro Monat (~30 Mio. getLatestBlock-Anfragen)
+    - Größter kostenloser Tarif mit 300 Mio. Recheneinheiten pro Monat (\~30 Mio. getLatestBlock-Anfragen)
     - Multichain-Unterstützung für Polygon, Starknet, Optimism, Arbitrum
     - Unterstützt ~70 % der größten dezentralen Anwendungen (Dapps) auf Ethereum und des Transaktionsvolumens im Bereich dezentralisierte Finanzen (DeFi)
     - Echtzeit-Webhook-Benachrichtigungen über Alchemy Notify

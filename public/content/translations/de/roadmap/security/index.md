@@ -43,6 +43,13 @@ Es ist möglich, dass ein raffinierter Angreifer bevorstehende Validatoren ident
 
 <ButtonLink variant="outline-color" href="/roadmap/secret-leader-election">Mehr über die Geheime Anführerwahl lesen</ButtonLink>
 
-## Aktueller Fortschritt {#current-progress}
+## Aktueller Fortschritt
 
-**Sicherheits-Upgrades auf der Roadmap befinden sich in fortgeschrittenen Forschungsstadien**, aber es wird nicht erwartet, dass sie in absehbarer Zeit implementiert werden. Die nächsten Schritte für View-Merge, PBS, SSF und SLE bestehen darin, eine Spezifikation fertigzustellen und mit dem Bau von Prototypen zu beginnen.
+Stand Mitte 2026:
+
+- **Block-Building und Zensurresistenz**: ePBS und Zugriffslisten auf Blockebene laufen auf Glamsterdam-Devnets. FOCIL ist für Hegotá geplant, das für 2027 anvisiert wird.
+- **Endgültigkeit**: Minimmit und die breitere Konsens-Arbeit an Lean Ethereum bleiben in aktiver Forschung, noch ohne Fork-Zuweisung.
+- **Quantenresistenz**: Wöchentliche Post-Quanten-Interop-Devnets laufen, und die Meilensteine der Kerninfrastruktur zielen auf etwa 2029 ab.
+- **Vereinfachung**: Pectra und Fusaka wurden ausgeliefert; Glamsterdam und Hegotá bringen die nächste Runde von Bereinigungen.
+
+Kein Teil dieser Arbeit ist abgeschlossen, und alle Zeitpläne sind Schätzungen, die sich verschieben können.

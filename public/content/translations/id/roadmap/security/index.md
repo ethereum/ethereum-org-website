@@ -43,6 +43,13 @@ Ada kemungkinan bahwa penyerang canggih dapat mengidentifikasi validator yang ak
 
 <ButtonLink variant="outline-color" href="/roadmap/secret-leader-election">Baca tentang pemilihan pemimpin rahasia</ButtonLink>
 
-## Kemajuan saat ini {#current-progress}
+## Kemajuan saat ini
 
-**Peningkatan keamanan pada peta jalan berada dalam tahap penelitian lanjutan**, tetapi tidak diharapkan untuk diimplementasikan dalam waktu dekat. Langkah selanjutnya untuk view-merge, PBS, SSF, dan SLE adalah memfinalisasi spesifikasi dan mulai membangun prototipe.
+Pada pertengahan 2026:
+
+- **Pembangunan blok dan ketahanan terhadap penyensoran**: ePBS dan daftar akses tingkat blok berjalan di devnet Glamsterdam. FOCIL direncanakan untuk Hegotá, ditargetkan pada tahun 2027.
+- **Finalitas**: Minimmit dan pekerjaan konsensus Lean Ethereum yang lebih luas tetap dalam penelitian aktif tanpa penetapan percabangan.
+- **Ketahanan kuantum**: Devnet interop pascakuantum mingguan sedang berjalan, dan pencapaian infrastruktur inti menargetkan sekitar tahun 2029.
+- **Penyederhanaan**: Pectra dan Fusaka telah dirilis; Glamsterdam dan Hegotá membawa putaran pembersihan berikutnya.
+
+Tidak ada bagian dari pekerjaan ini yang selesai, dan semua garis waktu adalah perkiraan yang dapat bergeser.

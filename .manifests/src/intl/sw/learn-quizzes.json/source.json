@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/learn-quizzes.json",
-  "generatedAt": "2026-07-10T04:59:03.745Z",
-  "rootHash": "0561335dbe12",
+  "generatedAt": "2026-07-29T05:40:58.237Z",
+  "rootHash": "627c17231d57",
   "tree": {
-    "contentHash": "4ba0d2099539",
-    "anchorHash": "5593dd9060f1",
+    "contentHash": "9be4cabdf7a9",
+    "anchorHash": "28b2f7778eba",
     "children": {
       "add-quiz": {
         "contentHash": "acb537ff65b3",
@@ -76,6 +76,10 @@
       },
       "page-assets-merge": {
         "contentHash": "c09500586c2c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy": {
+        "contentHash": "54a57c3147c4",
         "anchorHash": "e3b0c44298fc"
       },
       "passed": {
@@ -2809,6 +2813,194 @@
       "smart-contracts-4-d-explanation": {
         "contentHash": "d2f9abc3863d",
         "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-1-prompt": {
+        "contentHash": "691ea033a202",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-1-a-label": {
+        "contentHash": "5ef23d6804a2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-1-a-explanation": {
+        "contentHash": "940975a33330",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-1-b-label": {
+        "contentHash": "d8b8ae1bd9a0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-1-c-label": {
+        "contentHash": "f3efbb4c20b7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-1-d-label": {
+        "contentHash": "369560db0357",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-1-d-explanation": {
+        "contentHash": "f9d0800db1f8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-2-prompt": {
+        "contentHash": "292bc8427201",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-2-a-label": {
+        "contentHash": "fffdcfb59dc3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-2-a-explanation": {
+        "contentHash": "0af89c1bdc93",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-2-b-label": {
+        "contentHash": "3ef7ab787e1a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-2-b-explanation": {
+        "contentHash": "e62c887ca128",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-2-c-label": {
+        "contentHash": "3c1aee77d35e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-2-c-explanation": {
+        "contentHash": "8c0ec5b65f1b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-2-d-label": {
+        "contentHash": "b2257245b513",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-2-d-explanation": {
+        "contentHash": "3f3f8937d71a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-3-prompt": {
+        "contentHash": "e0d5a62a37de",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-3-a-label": {
+        "contentHash": "eb0d23544b65",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-3-a-explanation": {
+        "contentHash": "14eb90c9af40",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-3-b-label": {
+        "contentHash": "0c2e08e0cb51",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-3-b-explanation": {
+        "contentHash": "e18db2ed4000",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-3-c-label": {
+        "contentHash": "39ff8e631068",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-3-c-explanation": {
+        "contentHash": "bc63cbc09b62",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-3-d-label": {
+        "contentHash": "b4cb8252879e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-3-d-explanation": {
+        "contentHash": "69de5ee3f757",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-4-prompt": {
+        "contentHash": "9b59009b569c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-4-a-label": {
+        "contentHash": "3cbc87c7681f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-4-a-explanation": {
+        "contentHash": "a727c1097cc5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-4-b-label": {
+        "contentHash": "60a33e6cf515",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-5-prompt": {
+        "contentHash": "0bb59461e6b8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-5-a-label": {
+        "contentHash": "88cfa2a91c74",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-5-a-explanation": {
+        "contentHash": "ee36d0d2f939",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-5-b-label": {
+        "contentHash": "e4edb23228fe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-5-b-explanation": {
+        "contentHash": "f18fac172e49",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-5-c-label": {
+        "contentHash": "95961a653352",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-5-c-explanation": {
+        "contentHash": "22955d579da5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-5-d-label": {
+        "contentHash": "643ef997b07a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-5-d-explanation": {
+        "contentHash": "18ef5eef7c51",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-6-prompt": {
+        "contentHash": "540f3f624542",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-6-a-label": {
+        "contentHash": "9b932db1f906",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-6-a-explanation": {
+        "contentHash": "25769495d5c9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-6-b-label": {
+        "contentHash": "6120914040f5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-6-b-explanation": {
+        "contentHash": "cfd9c41bb0c9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-6-c-label": {
+        "contentHash": "b713fda5e0e3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-6-c-explanation": {
+        "contentHash": "e9c835ed01c9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-6-d-label": {
+        "contentHash": "423b4f841a66",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-6-d-explanation": {
+        "contentHash": "3fb9dc08172d",
+        "anchorHash": "e3b0c44298fc"
       }
     },
     "childrenOrder": [
@@ -2825,6 +3017,7 @@
       "next-quiz",
       "question-number",
       "page-assets-merge",
+      "page-privacy",
       "passed",
       "questions",
       "questions-answered",
@@ -3507,8 +3700,55 @@
       "smart-contracts-4-c-label",
       "smart-contracts-4-c-explanation",
       "smart-contracts-4-d-label",
-      "smart-contracts-4-d-explanation"
+      "smart-contracts-4-d-explanation",
+      "privacy-1-prompt",
+      "privacy-1-a-label",
+      "privacy-1-a-explanation",
+      "privacy-1-b-label",
+      "privacy-1-c-label",
+      "privacy-1-d-label",
+      "privacy-1-d-explanation",
+      "privacy-2-prompt",
+      "privacy-2-a-label",
+      "privacy-2-a-explanation",
+      "privacy-2-b-label",
+      "privacy-2-b-explanation",
+      "privacy-2-c-label",
+      "privacy-2-c-explanation",
+      "privacy-2-d-label",
+      "privacy-2-d-explanation",
+      "privacy-3-prompt",
+      "privacy-3-a-label",
+      "privacy-3-a-explanation",
+      "privacy-3-b-label",
+      "privacy-3-b-explanation",
+      "privacy-3-c-label",
+      "privacy-3-c-explanation",
+      "privacy-3-d-label",
+      "privacy-3-d-explanation",
+      "privacy-4-prompt",
+      "privacy-4-a-label",
+      "privacy-4-a-explanation",
+      "privacy-4-b-label",
+      "privacy-5-prompt",
+      "privacy-5-a-label",
+      "privacy-5-a-explanation",
+      "privacy-5-b-label",
+      "privacy-5-b-explanation",
+      "privacy-5-c-label",
+      "privacy-5-c-explanation",
+      "privacy-5-d-label",
+      "privacy-5-d-explanation",
+      "privacy-6-prompt",
+      "privacy-6-a-label",
+      "privacy-6-a-explanation",
+      "privacy-6-b-label",
+      "privacy-6-b-explanation",
+      "privacy-6-c-label",
+      "privacy-6-c-explanation",
+      "privacy-6-d-label",
+      "privacy-6-d-explanation"
     ]
   },
-  "sourceCommitSha": "5035db81f97e3a15f7c8b71bf91b72c02ad8a11a"
+  "sourceCommitSha": "bff6b26a8b30b949a9a730f3427af6918af7bb68"
 }

@@ -47,14 +47,14 @@ Používáním služby pro uzly centralizujete infrastrukturní aspekt vašeho p
 
 Přečtěte si více o [výhodách provozování vlastního uzlu](/developers/docs/nodes-and-clients/#benefits-to-you).
 
-## Populární služby pro uzly
+## Populární služby pro uzly {#popular-node-services}
 
 Zde je seznam některých z nejpopulárnějších poskytovatelů uzlů Etherea, neváhejte přidat jakékoli, které chybí! Každá služba pro uzly nabízí kromě bezplatných nebo placených úrovní různé výhody a funkce, před rozhodnutím byste měli prozkoumat, které z nich nejlépe vyhovují vašim potřebám.
 
 - [**Alchemy**](https://alchemy.com/)
   - [Dokumentace](https://www.alchemy.com/docs/)
   - Funkce
-    - Největší bezplatná úroveň s 300 miliony výpočetních jednotek měsíčně (~30 milionů požadavků getLatestBlock)
+    - Největší bezplatná úroveň s 300 miliony výpočetních jednotek měsíčně (\~30 milionů požadavků getLatestBlock)
     - Podpora více řetězců pro Polygon, Starknet, Optimism, Arbitrum
     - Pohání ~70 % největších decentralizovaných aplikací (dapp) na Ethereu a objemu transakcí v decentralizovaných financích (DeFi)
     - Upozornění webhooků v reálném čase přes Alchemy Notify
