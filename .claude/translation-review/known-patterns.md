@@ -522,7 +522,30 @@ Fixes applied (minimal marker, everything else byte-identical): zh/zh-tw `是`�
 - **`page-collectibles.json` is where program-name splits hide.** es casing, it casing, pl `Program tłumaczeń` vs `Program Tłumaczeń`, cs `utlumuje` vs `chýlí ke konci`, ru `перевода`/`переводов`, uk `перекладу`/`перекладів`, te `కార్యక్రమం`/`ప్రోగ్రామ్`, mr `अनुवाद`/`भाषांतर`, sw two names + three winddown verbs. The JSON was translated in a separate task from the markdown, so the two drift apart; check them against each other explicitly.
 - **ja softened the message:** `縮小` ("scaling down", implies continued operation) on the program and contributing pages, vs the correct `段階的に終了` it used in get-involved and page-collectibles. Left unfixed — worth a native call.
 
-### 32. Loaded English polysemes resolve to the WRONG sense in Indic locales, as a bloc (CRITICAL)
+### 34. Hand-fixes to translated content are erased by the next `mode=full` run on that file (PROCESS)
+
+Nine aspect-marker fixes hand-applied to `contributing/translation-program/index.md` in PR #18935 were wiped when PR #18937 re-ran `mode=full` on the same file one day later — `runFullTranslation` regenerates from English and never reads the locale file, so any human edit in it is discarded silently. Seven of the nine had to be redone; the other two (ta) happened to regenerate correctly.
+
+**Sequence hand-fixes after the last pipeline run that touches the file, never before.** If another run is likely, log the fix in `.claude/translation-review/per-language/` and re-apply afterwards rather than assuming it stuck. Re-request replacement lines against the *current* text — the regeneration rewords surrounding clauses, so yesterday's full-line replacement would silently revert unrelated wording (zh's file-wide term had flipped `翻译计划` -> `翻译项目`, 14 occurrences, so the old replacement line would have reintroduced the minority form).
+
+**Verify markers by reading, not grepping for a specific verb.** A marker grep reported ta line 7 as reverted when the regeneration had simply restructured the sentence and used a different past form (`அமைந்தது` instead of `ஆக இருந்தது`). Regeneration also *fixed* all three ta regressions logged the day before, so re-checking beats assuming the previous findings still hold.
+
+### 35. `auto` mode is unsafe for ANY English edit on a page with structural markup, not just block deletions (CRITICAL)
+
+Pattern 32 framed the incremental bug as triggered by deleted/replaced blocks. PR #18937 disproved the narrow framing: `translators-guide/index.md` had a **single 1:1 sentence replacement** — the shape that had come through cleanly on `get-involved` and `web3` — and the incremental run **deleted the `## Using Crowdin {#using-crowdin}` heading outright in 17 of 24 locales** while correctly translating the replacement paragraph below it, plus ate the blank line before the following heading. Re-running the same file with `mode=full` produced 24/24 clean output for $1.79.
+
+Cost of the failed shortcut was $0.38 and one review cycle; the full run that fixed it cost $1.79. **Default to `mode=full` for any English edit to these content pages** and treat `auto` as reserved for runs where nothing structural (headings, list items, links, JSX) is touched. If you do use `auto`, the anchor-set diff against English is the check that catches it — links alone passed 24/24 on the run that dropped the heading, because the heading carried no link.
+
+### 36. Hand-patching translated content through a text channel silently alters Unicode composition (PROCESS)
+
+Fixing a *content* defect introduced an *encoding* defect that no content review would catch. A Bengali replacement line pasted from a subagent's report arrived with two precomposed য় (U+09DF) decomposed into য + ় (U+09AF U+09BC), taking `bn/contributing/translation-program/index.md` from a uniform 36/0 precomposed to 34/2 mixed. The reviewer had predicted exactly this ("in case your paste path does any normalization, which would silently alter it"), which is the only reason it was checked.
+
+**Any hand patch of non-Latin content needs a codepoint-level diff, not a visual one.** Count the at-risk characters in the file before and after, and compare against the file's own dominant convention rather than against NFC — several locale files are deliberately non-NFC (bn/index.md is 36 precomposed / 0 decomposed; bn/translators-guide is the mirror image at 191 decomposed / 9 precomposed, which is why normalization drift there needs its own pass rather than a line fix).
+
+Characters that bit or nearly bit in one session: U+09DF Bengali YYA, U+0931 Devanagari RRA (mr), U+200C ZWNJ inside Telugu inflected forms, U+2066/U+2069 bidi isolates (ur). Ask the reviewer which normalization form to emit and verify the count after applying.
+
+**Corollary: ask for full lines, never do the substring swap yourself.** A Korean fix looked like a one-word noun swap (`잠재고객` -> `독자`) but the two nouns end in a consonant and a vowel respectively, so the particles had to change too (`독자을` would have been ungrammatical) -- and on one of the three lines the correct word was neither, but `사람들`. A Tamil heading fix needed two words changed, not one, to keep an adjectival/nominalized pair parallel. Subagents also caught their own errors mid-handoff twice (a wrong `Crowdin` occurrence extracted for a Tamil heading; two line numbers cited from diff-hunk offsets rather than file lines).
+### 37. Loaded English polysemes resolve to the WRONG sense in Indic locales, as a bloc (CRITICAL)
 
 Where an English word is an auto-antonym or carries a loaded secondary sense, MT into the five Indic-script locales (`bn`, `hi`, `mr`, `ta`, `te`) resolves to the everyday/administrative/religious reading rather than the legal-technical one. **The split follows the script family, not translator quality** — in PR #18938 all 19 non-Indic locales rendered the same words correctly.
 
@@ -540,11 +563,11 @@ Why it happens: in Hindi/Marathi/Bengali/Tamil/Telugu the dominant borrowed sens
 
 **Durable fix:** pin these senses per-locale in ETHGlossary, and keep a loaded-polyseme watchlist for the pre-ship sweep. Starter list: sanction, communal, innocence, state, actor, semantics, receipt, stake(s), audit, exposure, bundle, front-run, niche, unstructured.
 
-### 32b. "actor" -> stage/film performer (CRITICAL — same family, wider blast radius)
+### 37b. "actor" -> stage/film performer (CRITICAL — same family, wider blast radius)
 
 English "actor" meaning *party/agent* becomes a theatrical performer in `mr` (`अभिनेते`), `ta` (`நடிகர்`), `te` (`నటులు`) and `ur` (`اداکار`). Reads as "bad film-actor", "state-employed actors", "malicious performers". The tell that it is real and not a variant: the same PR's `page-values.json` renders "bad actors" correctly with a non-theatrical word (`वाईट प्रवृत्तीचे लोक`, `చెడ్డ వ్యక్తులు`), so it is cross-file disagreement inside one import. Fix with the entity/party word (`घटक`, `தரப்புகள்`, `వ్యక్తులు/సంస్థలు`, `عناصر`).
 
-### 33. Frontmatter guard requires a trailing newline -> sanitizer corrupts YAML in frontmatter-only files (CRITICAL — build/data)
+### 38. Frontmatter guard requires a trailing newline -> sanitizer corrupts YAML in frontmatter-only files (CRITICAL — build/data)
 
 `fixBareRtlDates`, `fixBareRtlMath` and `fixBareRtlValues` each split frontmatter off with `/^(---\n[\s\S]*?\n---\n)/`, which **requires a newline after the closing `---`**. `/videos/*` stubs are frontmatter-only and the pipeline emits them **without** a trailing newline, so the match returns null, `frontmatter` becomes `""`, the entire file is treated as body, and `RTL_SKIP_PATTERN` does not protect YAML. Result in PR #18938: `uploadDate: <span dir="ltr">2025-12-09</span>` in all 4 ar/ur video files.
 
@@ -554,19 +577,19 @@ Note `uploadDate` was **already** on the sanitizer's `syncProtectedFrontmatterFi
 
 **Fixed in #18938:** all four guards now accept `\n---(?:\n|$)`, the pipeline emits a trailing newline, and `tests/unit/intl-pipeline/sanitizer/standalone-fixes.spec.ts` covers the frontmatter-only case for both `fixBareRtlDates` and `fixBareRtlValues` (both new tests fail without the patch). Patching the guard does **not** clean already-corrupted files — `RTL_SKIP_PATTERN` protects existing `<span dir="ltr">` for idempotency, so shipped corruption needs a separate unwrap.
 
-### 34. `/videos/*` frontmatter is translated on a path that never consults ETHGlossary (HIGH — fleet-wide)
+### 39. `/videos/*` frontmatter is translated on a path that never consults ETHGlossary (HIGH — fleet-wide)
 
 In PR #18938 the two new video stubs disagreed with their *own locale's* JSON on the PR's core terms, while the JSON files were glossary-clean — the signature of a separate, unbound translation path rather than per-language error. Six locales (`bn`, `hi`, `ru`, `te`, `uk`, `ur`) rendered `privacy` differently in the stub than in their `page-privacy-ethereum.json`; every non-Latin locale with a translated `Ethereum Foundation` entry used a phonetic transliteration instead (ar `إيثريوم فاونديشن` vs `مؤسسة إيثيريوم`, ko `이더리움 파운데이션` vs `이더리움 재단`, ru `Этериум Фаундейшн` vs `Фонд Ethereum`, ja `イーサリアム・ファウンデーション` vs `イーサリアム財団`); `ta`/`te` left `Ethereum` in Latin against a 163-occurrence mandate; `hi`/`mr`/`ta`/`te` transliterated `account abstraction` and `decentralized identity` instead of using the compound entries.
 
 **Detection:** for each locale, diff the stub's rendering of a core term against the same locale's JSON for the same term. Cross-file disagreement inside one PR is the tell (same logic as #30). Latin-script locales keeping the `author` byline in Latin is the **established convention** and is not a defect.
 
-### 35. Splitting one sentence across two intl keys forces English word order on every locale (HIGH — English-source defect)
+### 40. Splitting one sentence across two intl keys forces English word order on every locale (HIGH — English-source defect)
 
 A `<strong>{t("x-strong")}</strong>{" "}{t("x")}` render pattern makes the second key a grammatical **fragment** that only parses in English order, joined by a space hard-coded in the component. Translators cannot see or change the join, so locales whose syntax differs have no legal rendering. On `/values` in PR #18938: German requires a comma before the relative clause and could not add one; Turkish repeated the head noun to stay grammatical, shipping "**Güvenlik** güvenlik ..." (= "Security security you cannot inspect"). A continuation key that begins with punctuation (`". It's the result of ..."`) is worse — the sentence boundary lives in the wrong file.
 
 Reviewers: treat any `-strong`/`-continued`/`-part2` key pair as a defect in the **English source**, not a translation error, and expect the same bullet to break in several unrelated locales at once. Fix = one key per sentence with inline tags rendered via `t.rich` + `Strong`/`Emphasis` from `@/components/IntlStringElements`. Rule recorded in the `design-system` skill (`references/i18n-rtl.md`).
 
-### 36. Partial JSON updates ship translated content without refreshing `translation.json` (MEDIUM — manifest drift)
+### 41. Partial JSON updates ship translated content without refreshing `translation.json` (MEDIUM — manifest drift)
 
 When a JSON namespace is updated **incrementally** (a subset of keys), the pipeline writes the new `source.json` rootHash but leaves `translation.json` untouched, so the manifest records the translation as behind English even though the content just shipped. Full-file updates refresh both.
 
@@ -580,8 +603,9 @@ PR #18938: `page-community.json` (28 of 55 keys) and `learn-quizzes.json` (49 of
 
 ### All 24 languages -- /values + /privacy/ethereum + privacy quiz + community, Reviewed PR #18938 (intl/pending-dev)
 - 24 langs x 8 files (es: 9) = 193 content files. Changed surface: `page-values.json` 39/39 (new page), `page-privacy-ethereum.json` 116/116 (new page), `page-community.json` 28/55, `learn-quizzes.json` 49/744 (new privacy quiz), plus 4 markdown (2 new frontmatter-only video stubs, `roadmap/security`, `nodes-as-a-service`). Fleet avg **8.9** — well below the 9.5-9.7 of recent runs.
-- Scores: fr/pt-br 9.6, cs 9.5, zh 9.4, it 9.3, id/ja/pl/ru/zh-tw 9.2, ar/de/tr/vi 9.1, ko 8.8, es 8.7, sw/uk 8.6, bn/hi 8.4, mr 8.0, te/ur 7.9, ta 7.4. **The bottom six are five Indic locales plus `ur`** — see #32.
+- Scores: fr/pt-br 9.6, cs 9.5, zh 9.4, it 9.3, id/ja/pl/ru/zh-tw 9.2, ar/de/tr/vi 9.1, ko 8.8, es 8.7, sw/uk 8.6, bn/hi 8.4, mr 8.0, te/ur 7.9, ta 7.4. **The bottom six are five Indic locales plus `ur`** — see #37.
 - **Deterministic layer clean**: MDX compile 97/97 (English controls clean, no build-breakers), full JSON key parity, rich-text tag + ICU sets byte-match, zero `HTML-PLACEHOLDER` leaks, hrefs byte-identical, zero ticker/domain typos, no `<span dir=` in JSON values.
 - **`roadmap/security` was broken in all 24 locales** and repaired by a scoped `mode=full` re-run (not hand-edits): English had been rewritten to 8 sections, every locale still carried the superseded 5, and this PR patched only the "Current progress" block onto them — 23 locales also lost `{#current-progress}`, and `ur` received 19 lines of **verbatim untranslated English** while losing its translated section. The re-run also restored `summaryPoints` and replaced the invalid `variant="outline-color"` ButtonLinks. It additionally fixed the zh-tw negation-scope error and left ja `devnet` bare (hand-fixed to `デブネット`).
-- **English-source defects, inherited by every locale:** `page-values` Open Source / Security card **descriptions swapped** (flagged independently by 14 agents; fixed by exchanging the values in all 25 files, which needs no re-translation since both strings already existed everywhere); the split-sentence `-strong` keys of #35; `Quicknode` -> `QuickNode` casing, which several locales had already corrected on their own.
+- **English-source defects, inherited by every locale:** `page-values` Open Source / Security card **descriptions swapped** (flagged independently by 14 agents; fixed by exchanging the values in all 25 files, which needs no re-translation since both strings already existed everywhere); the split-sentence `-strong` keys of #40; `Quicknode` -> `QuickNode` casing, which several locales had already corrected on their own.
+- **Hand-fix sequencing (per #34) was deliberate here:** the `mode=full` re-run of `roadmap/security` was triggered *first*, and every hand-fix — including ja `devnet` -> `デブネット` in that same regenerated file — was applied afterwards. ~90 term fixes across non-Latin locales now live in `page-privacy-ethereum.json`, `page-values.json`, `page-community.json`, `learn-quizzes.json` and the two `/videos` stubs; a future `mode=full` on any of those paths will erase them. They are derived from ETHGlossary entries and agent-stated expected values but are **not native-speaker reviewed** — the `ta`/`te` inflected forms most of all.
 - **METHODOLOGY — a sweep that silently matches nothing is worse than no sweep.** The first href/heading/ticker/domain pass in this review was a **no-op**: written in zsh, `for L in $LANGS` does not word-split, so every iteration skipped and all four checks reported clean. That masked a 23-locale anchor deletion until an agent contradicted the result. Always print a per-item count and assert a non-zero file count before trusting a sweep; and treat an agent that contradicts a deterministic "clean" as a signal to re-run the sweep, not as a false positive.

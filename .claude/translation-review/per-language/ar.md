@@ -96,3 +96,9 @@ Key terms to verify in future reviews:
 - CRIT fixed: story-dorgo-eth bidi-isolated untranslated "March 2020" -> مارس 2020. Same artifact existed in ur -- grep English month names in RTL files on every import.
 - Ethereum/Bitcoin transliteration consistency was PERFECT across 26 entries (major improvement over PR #17105's 5-variant drift).
 - Open judgment call: MoneyGram/Western Union kept Latin vs PayPal transliterated باي بال (both non-glossary; fleet-wide inconsistency, not fixed).
+
+## PR #18937 (intl/pending-content-translation-program-remove-recruitment-pages) -- 2026-07-29 -- Score 8/10 pre-fix
+- The `mode=full` regeneration of `translators-guide/index.md` **stripped the English Crowdin UI labels** from five instruction lines (`'إخفاء' (Hide)` -> `'إخفاء'`). Crowdin's interface is English-only, so the reader could no longer match the instruction to the button. Restored, wrapped in `<span dir="ltr">` per this file's own pattern rather than bare as dev had them.
+- The terms-without-established-translations line invented `(PoW)`/`(PoS)` abbreviations not in the source and dropped the English glosses, leaving `التخزين` ("storage", a weak rendering of *staking*) with nothing to disambiguate it. Restored to full English glosses.
+- Not patched: tashkeel dropped from ~6 passive verbs while others kept theirs (internally inconsistent but not wrong), and موضع -> وضع for "placement" (vaguer, not incorrect).
+- Wins from the same run: `الأسماء الصحيحة` -> `أسماء الأعلام` (correct term for proper nouns), `نص الكتابة` -> `نظام الكتابة`, and three new LTR spans on the date-format examples.

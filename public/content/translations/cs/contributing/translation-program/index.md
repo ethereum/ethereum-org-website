@@ -4,27 +4,25 @@ lang: cs
 description: "Informace o překladatelském programu ethereum.org"
 ---
 
-Překladatelský program byl společným úsilím o překlad ethereum.org do různých jazyků, čímž se web stal přístupnějším pro miliardy lidí na celém světě, kteří nemluví anglicky.
+Překladatelský program byl společným úsilím o překlad webu ethereum.org do různých jazyků, čímž se web stal přístupnějším pro miliardy lidí na celém světě, kteří nemluví anglicky.
 
 ![](./enterprise-eth.png)
 
 ## Stav programu {#program-status}
 
-Překladatelský program ethereum.org se chýlí ke konci a již neprovádí onboarding nových překladatelů. Projekt na platformě Crowdin se uzavírá a jejím prostřednictvím již nepřijímáme nové návrhy překladů.
+Překladatelský program ethereum.org se chýlí ke konci a již neprovádí onboarding nových překladatelů. Projekt na platformě Crowdin se uzavírá a nepřijímáme přes něj žádné nové návrhy překladů.
 
-Jsme hluboce vděční tisícům komunitních překladatelů, díky nimž bylo ethereum.org v průběhu let dostupné v desítkách jazyků – jejich práce zůstává na webu aktivní a jejich uznání na stránkách [poděkování](/contributing/translation-program/acknowledgements/) a [přispěvatelů](/contributing/translation-program/contributors/) zůstává zachováno.
+Jsme hluboce vděční tisícům komunitních překladatelů, díky nimž byl web ethereum.org v průběhu let dostupný v desítkách jazyků – jejich práce zůstává na webu aktivní a jejich uznání na stránkách [poděkování](/contributing/translation-program/acknowledgements/) a [přispěvatelů](/contributing/translation-program/contributors/) zůstává zachováno.
 
-Pokud v existujícím překladu objevíte chybu, prosím [založte issue na GitHubu](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
+Pokud v existujícím překladu objevíte chybu, prosím [nahlaste problém na GitHubu](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
 _Připojte se na [Discord ethereum.org](https://discord.gg/ethereum-org), kde se můžete ptát nebo sdílet zpětnou vazbu._
 
 ## O překladatelském programu {#about-us}
 
-Komunita [Etherea](/) se snaží být globální a inkluzivní, přesto je velká část jejího obsahu určena pouze anglicky mluvícím, čímž opomíjí 6 miliard lidí na světě, kteří anglicky nemluví. Aby ethereum.org mohlo fungovat jako portál do Etherea pro celosvětovou komunitu, věříme, že je nezbytné poskytovat obsah o Ethereu neanglicky mluvícím v jejich rodných jazycích.
+Komunita [Etherea](/) se snaží být globální a inkluzivní, přesto je velká část jejího obsahu určena pouze anglicky mluvícím, čímž opomíjí 6 miliard lidí na světě, kteří anglicky nemluví. Aby mohl web ethereum.org fungovat jako portál do Etherea pro celosvětovou komunitu, věříme, že je nezbytné poskytovat obsah o Ethereu neanglicky mluvícím uživatelům v jejich rodných jazycích.
 
-Cílem překladatelského programu ethereum.org bylo zpřístupnit Ethereum všem prostřednictvím překladu ethereum.org a dalšího obsahu o Ethereu do co největšího počtu jazyků.
-
-Přečtěte si více o [poslání a vizi](/contributing/translation-program/mission-and-vision) překladatelského programu ethereum.org.
+Cílem překladatelského programu ethereum.org bylo zpřístupnit Ethereum všem prostřednictvím překladu webu ethereum.org a dalšího obsahu o Ethereu do co největšího počtu jazyků.
 
 ### Náš dosavadní pokrok {#our-progress}
 
@@ -60,7 +58,6 @@ V minulosti jsme naše nejaktivnější přispěvatele zpětně odměňovali vst
 Tyto referenční materiály zůstávají k dispozici překladatelským komunitám a projektům, které provozují své vlastní programy:
 
 - [Průvodce stylem překladu](/contributing/translation-program/translators-guide/) _– pokyny a tipy pro překladatele ethereum.org_
-- [Časté dotazy k překladům](/contributing/translation-program/faq/) _– často kladené otázky a odpovědi týkající se překladatelského programu ethereum.org_
 
 Další užitečné překladatelské nástroje, komunity překladatelů a blogové příspěvky o překladatelském programu najdete na [stránce se zdroji](/contributing/translation-program/resources/).
 
@@ -74,6 +71,6 @@ Můžete nás také kontaktovat na adrese translations@ethereum.org
 
 Zpřístupnění vzdělávacího obsahu všem zůstává pro ethereum.org prioritou a chceme pomoci dalším projektům na Ethereu organizovat, řídit a zlepšovat jejich vlastní překladatelské úsilí.
 
-Z tohoto důvodu jsme vytvořili [příručku překladatelského programu](/contributing/translation-program/playbook/), která obsahuje některé tipy a osvědčené postupy, jež jsme získali během překládání ethereum.org.
+Z tohoto důvodu jsme vytvořili [příručku překladatelského programu](/contributing/translation-program/playbook/), která obsahuje některé tipy a osvědčené postupy, jež jsme získali během překládání webu ethereum.org.
 
 Chcete s námi dále spolupracovat nebo využít některé z našich překladatelských zdrojů? Máte k příručce nějakou zpětnou vazbu? Budeme rádi, když se nám ozvete na translations@ethereum.org.

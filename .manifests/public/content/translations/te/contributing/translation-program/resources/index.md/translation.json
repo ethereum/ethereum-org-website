@@ -1,11 +1,10 @@
 {
   "version": 1,
   "locale": "te",
-  "translatedAt": "2026-06-08T08:43:38.916Z",
-  "englishManifestHash": "d2cb2b3f9636",
+  "translatedAt": "2026-07-29T05:20:15.916Z",
+  "englishManifestHash": "329255b3e778",
   "placeholderOrder": [
     "LINK-c35225",
-    "LINK-78799d",
     "LINK-0f400d",
     "LINK-20421e",
     "LINK-e6243d",
@@ -24,12 +23,6 @@
       "type": "link",
       "values": {
         "url": "/contributing/translation-program/translators-guide/"
-      }
-    },
-    "LINK-78799d": {
-      "type": "link",
-      "values": {
-        "url": "/contributing/translation-program/faq/"
       }
     },
     "LINK-0f400d": {
@@ -107,7 +100,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-08T08:43:38.916Z",
+      "translatedAt": "2026-07-29T05:20:15.916Z",
       "status": "success"
     }
   }
