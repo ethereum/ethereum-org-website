@@ -33,7 +33,7 @@ Wir verwenden die formelle Anrede, die immer höflich und für alle Besucher ang
 
 Die Verwendung der formellen Anrede ermöglicht es uns, nicht inoffiziell oder anstößig zu klingen, und funktioniert unabhängig von Alter und Geschlecht des Besuchers.
 
-Die meisten indogermanischen und afroasiatischen Sprachen verwenden geschlechtsspezifische Personalpronomen der zweiten Person, die zwischen männlich und weiblich unterscheiden. Wenn wir den Benutzer ansprechen oder Possessivpronomen verwenden, können wir vermeiden, das Geschlecht des Besuchers vorauszusetzen, da die formelle Anrede allgemein anwendbar und konsistent ist, unabhängig davon, wie er oder sie sich identifiziert.
+Die meisten indogermanischen und afroasiatischen Sprachen verwenden geschlechtsspezifische Personalpronomen der zweiten Person, die zwischen männlich und weiblich unterscheiden. Wenn wir den Benutzer ansprechen oder Possessivpronomen verwenden, können wir vermeiden, das Geschlecht des Besuchers vorauszusetzen, da die formelle Anrede allgemein anwendbar und konsistent ist, unabhängig davon, wie sich die Person selbst identifiziert.
 
 ## Einfaches und klares Vokabular und Bedeutung {#simple-vocabulary}
 

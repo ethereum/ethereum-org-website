@@ -117,7 +117,7 @@ Vous remarquerez peut-être des liens complets vers des pages sur ethereum.org o
 
 Ceux-ci doivent être identiques à la source et ne pas être modifiés ou traduits. Si vous traduisez un lien ou le modifiez de quelque manière que ce soit, même en supprimant simplement une partie, comme une barre oblique (/), cela entraînera des liens rompus et inutilisables.
 
-La meilleure façon de gérer les liens est de les copier directement depuis la source, soit en cliquant dessus, soit en utilisant le bouton « Copier la source » (`Alt+C`).
+La meilleure façon de gérer les liens est de les copier directement depuis la source, soit en cliquant dessus, soit en utilisant le bouton « Copier la source » (Copy Source) (`Alt+C`).
 
 ![Example of link.png](./example-of-link.png)
 

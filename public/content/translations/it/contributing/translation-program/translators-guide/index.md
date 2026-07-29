@@ -240,12 +240,12 @@ Alcuni esempi di cosa prestare particolare attenzione:
 
 - Le lingue utilizzano molti tipi diversi di virgolette. Copiare semplicemente le virgolette inglesi dalla fonte è spesso scorretto.
 - Alcuni dei tipi più comuni di virgolette includono:
-  - „example text“
-  - ‚example text’
-  - »example text«
-  - “example text”
-  - ‘example text’
-  - «example text»
+  - „testo di esempio“
+  - ‚testo di esempio’
+  - »testo di esempio«
+  - “testo di esempio”
+  - ‘testo di esempio’
+  - «testo di esempio»
 
 **Trattini e lineette**
 

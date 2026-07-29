@@ -22,7 +22,7 @@ _Bergabunglah dengan [Discord ethereum.org](https://discord.gg/ethereum-org) unt
 
 Komunitas [Ethereum](/) bertujuan untuk menjadi global dan inklusif, namun sebagian besar kontennya hanya melayani penutur bahasa Inggris, mengabaikan 6 miliar orang yang tidak berbahasa Inggris di dunia. Agar ethereum.org dapat bertindak sebagai portal menuju Ethereum bagi komunitas di seluruh dunia, kami percaya bahwa menyediakan konten Ethereum dalam bahasa ibu mereka bagi mereka yang tidak berbahasa Inggris adalah hal yang esensial.
 
-Program Terjemahan ethereum.org bertujuan untuk membuat Ethereum dapat diakses oleh semua orang dengan menerjemahkan ethereum.org dan konten Ethereum lainnya ke dalam sebanyak mungkin bahasa.
+Program Terjemahan ethereum.org sebelumnya bertujuan untuk membuat Ethereum dapat diakses oleh semua orang dengan menerjemahkan ethereum.org dan konten Ethereum lainnya ke dalam sebanyak mungkin bahasa.
 
 ### Kemajuan kami sejauh ini {#our-progress}
 
@@ -51,7 +51,7 @@ Penghargaan publik untuk penerjemah teratas kami menggunakan [papan peringkat](/
 
 #### Hadiah {#rewards}
 
-Di masa lalu, kami telah memberikan hadiah secara retroaktif kepada kontributor paling aktif kami berupa tiket ke konferensi Ethereum seperti [Devcon](https://devcon.org/en/) dan [Devconnect](https://devconnect.org/), serta pernak-pernik eksklusif ethereum.org.
+Di masa lalu, kami telah memberikan hadiah secara retroaktif kepada kontributor paling aktif kami berupa tiket ke konferensi Ethereum seperti [Devcon](https://devcon.org/en/) dan [Devconnect](https://devconnect.org/), serta merchandise eksklusif ethereum.org.
 
 ### Panduan dan sumber daya {#guides-and-resources}
 

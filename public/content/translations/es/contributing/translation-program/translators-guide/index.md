@@ -101,12 +101,12 @@ Para facilitar la gestión de etiquetas y copiarlas directamente del texto origi
 1. Abra la configuración
    ![How to open settings in the editor](./editor-settings.png)
 
-2. Desplácese hacia abajo hasta la sección 'Visualización de etiquetas HTML'
+2. Desplácese hacia abajo hasta la sección 'HTML tags displaying' (Visualización de etiquetas HTML)
 
-3. Seleccione 'Ocultar'
+3. Seleccione 'Hide' (Ocultar)
    ![Please select 'Hide'](./hide-tags.png)
 
-4. Haga clic en 'Guardar'
+4. Haga clic en 'Save' (Guardar)
 
 Al seleccionar esta opción, el texto completo de la etiqueta ya no se mostrará y será reemplazado por un número.
 Al traducir, hacer clic en esta etiqueta copiará automáticamente la etiqueta exacta al campo de traducción.

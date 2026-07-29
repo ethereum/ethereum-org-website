@@ -30,7 +30,7 @@ Anda dapat menemukan beberapa panduan dan alat yang berguna untuk penerjemah eth
 
 ## Pembaruan terbaru {#latest-updates}
 
-Untuk terus mengikuti perkembangan Program Terjemahan terbaru, Anda dapat mengikuti [blog Yayasan Ethereum](https://blog.ethereum.org/):
+Untuk terus mengikuti perkembangan terbaru Program Terjemahan, Anda dapat mengikuti [blog Yayasan Ethereum](https://blog.ethereum.org/):
 
 - [Pembaruan pencapaian Oktober 2021](https://blog.ethereum.org/2021/10/04/translation-program-update)
 - [Pembaruan pencapaian Desember 2020](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)

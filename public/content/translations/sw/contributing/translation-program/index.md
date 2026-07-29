@@ -20,7 +20,7 @@ _Jiunge na [Discord ya ethereum.org](https://discord.gg/ethereum-org) ili kuuliz
 
 ## Kuhusu Programu ya Kutafsiri {#about-us}
 
-Jamii ya [Ethereum](/) inalenga kuwa ya kimataifa na jumuishi, lakini maudhui yake mengi yanahudumia wazungumzaji wa Kiingereza pekee, na kuwaacha nje wazungumzaji bilioni 6 wasiozungumza Kiingereza duniani. Ili ethereum.org ifanye kazi kama lango la kuingia kwenye Ethereum kwa jamii ya ulimwenguni kote, tunaamini kutoa maudhui ya Ethereum kwa wazungumzaji wasio wa Kiingereza katika lugha zao za asili ni muhimu.
+Jamii ya [Ethereum](/) inalenga kuwa ya kimataifa na jumuishi, lakini maudhui yake mengi yanahudumia wazungumzaji wa Kiingereza pekee, na kuwaacha nje watu bilioni 6 wasiozungumza Kiingereza duniani. Ili ethereum.org ifanye kazi kama lango la kuingia kwenye Ethereum kwa jamii ya ulimwenguni kote, tunaamini kutoa maudhui ya Ethereum kwa watu wasiozungumza Kiingereza katika lugha zao za asili ni muhimu.
 
 Programu ya Kutafsiri ya ethereum.org ililenga kufanya Ethereum ifikiwe na kila mtu kwa kutafsiri ethereum.org na maudhui mengine ya Ethereum katika lugha nyingi iwezekanavyo.
 

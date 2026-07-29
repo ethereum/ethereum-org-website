@@ -15,7 +15,7 @@ Ikiwa una maswali, mapendekezo au maoni yoyote, jisikie huru kuwasiliana nasi ku
 
 Mradi wa Crowdin wa ethereum.org unafungwa na haupokei tena michango mipya (tazama [Hali ya Programu ya Utafsiri](/contributing/translation-program/#program-status)). Mwongozo ulio hapa chini unasalia kama marejeleo kwa jamii za utafsiri zinazotumia Crowdin kwa miradi yao wenyewe.
 
-Ikiwa ungependa kujifunza zaidi kuhusu Crowdin na kutumia baadhi ya vipengele vyake vya hali ya juu, [kambi ya maarifa ya Crowdin](https://support.crowdin.com/online-editor/) ina miongozo mingi ya kina na muhtasari wa utendaji wote wa Crowdin.
+Ikiwa ungependa kujifunza zaidi kuhusu Crowdin na kutumia baadhi ya vipengele vyake vya hali ya juu, [kumbukumbu ya maarifa ya Crowdin](https://support.crowdin.com/online-editor/) ina miongozo mingi ya kina na muhtasari wa utendaji wote wa Crowdin.
 
 ## Kunasa kiini cha ujumbe {#capturing-the-essence}
 
@@ -31,7 +31,7 @@ Badala ya kutafsiri maandishi ya chanzo neno kwa neno, inashauriwa usome sentens
 
 Tunatumia namna rasmi ya kuhutubia, ambayo daima ni ya heshima na inafaa kwa wageni wote.
 
-Kutumia namna rasmi ya kuhutubia huturuhusu kuepuka kusikika kama sio rasmi au kuudhi, na inafanya kazi bila kujali umri na jinsia ya mgeni.
+Kutumia namna rasmi ya kuhutubia huturuhusu kuepuka kusikika kama sio rasmi au kuudhi, na hufanya kazi bila kujali umri na jinsia ya mgeni.
 
 Lugha nyingi za Kiindo-Ulaya na Kiafrika-Kiasia hutumia viwakilishi vya nafsi ya pili vinavyozingatia jinsia, ambavyo hutofautisha kati ya mwanamume na mwanamke. Tunapomhutubia mtumiaji au kutumia viwakilishi vimilikishi, tunaweza kuepuka kudhani jinsia ya mgeni, kwani namna rasmi ya kuhutubia inatumika kwa ujumla na ni thabiti, bila kujali jinsi wanavyojitambulisha.
 
@@ -71,9 +71,9 @@ Baadhi ya mifano ya misimbo ya lugha kwa lugha zinazozungumzwa sana:
 - Kihindi - hi
 - Kihispania - es
 
-## Mada za makala za nje {#external-articles}
+## Vichwa vya makala za nje {#external-articles}
 
-Baadhi ya mifuatano ina mada za makala za nje. Kurasa zetu nyingi za nyaraka za wasanidi programu zina viungo vya makala za nje kwa usomaji zaidi. Mifuatano iliyo na mada za makala inahitaji kutafsiriwa, bila kujali lugha ya makala, ili kuhakikisha matumizi thabiti zaidi kwa wageni wanaotazama ukurasa katika lugha yao.
+Baadhi ya mifuatano ina vichwa vya makala za nje. Kurasa zetu nyingi za nyaraka za wasanidi programu zina viungo vya makala za nje kwa usomaji zaidi. Mifuatano iliyo na vichwa vya makala inahitaji kutafsiriwa, bila kujali lugha ya makala, ili kuhakikisha matumizi thabiti zaidi kwa wageni wanaotazama ukurasa katika lugha yao.
 
 Unaweza kupata baadhi ya mifano ya jinsi mifuatano hii inavyoonekana kwa watafsiri na jinsi ya kuitambua hapa chini (viungo vya makala vinaweza kupatikana zaidi chini ya kurasa hizi, katika sehemu ya 'Usomaji zaidi'):
 
@@ -218,7 +218,7 @@ Baadhi ya mifano ya kile cha kuzingatia hasa:
 **Uwekaji wa herufi kubwa**
 
 - Kuna tofauti kubwa katika uwekaji wa herufi kubwa katika lugha tofauti.
-- Katika Kiingereza, ni kawaida kuweka herufi kubwa kwa maneno yote katika mada na majina, miezi na siku, majina ya lugha, sikukuu, n.k. Katika lugha nyingine nyingi, hii si sahihi kisarufi, kwani zina sheria tofauti za uwekaji wa herufi kubwa.
+- Katika Kiingereza, ni kawaida kuweka herufi kubwa kwa maneno yote katika vichwa na majina, miezi na siku, majina ya lugha, sikukuu, n.k. Katika lugha nyingine nyingi, hii si sahihi kisarufi, kwani zina sheria tofauti za uwekaji wa herufi kubwa.
 - Baadhi ya lugha pia zina sheria kuhusu kuweka herufi kubwa kwa viwakilishi vya nafsi, nomino, na vivumishi fulani, ambavyo haviwekwi herufi kubwa katika Kiingereza.
 
 **Nafasi**

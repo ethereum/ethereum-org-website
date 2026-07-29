@@ -240,12 +240,12 @@ Beberapa contoh hal yang perlu diperhatikan secara khusus:
 
 - Bahasa menggunakan banyak tanda kutip yang berbeda. Sekadar menyalin tanda kutip bahasa Inggris dari sumber sering kali tidak benar.
 - Beberapa jenis tanda kutip yang paling umum meliputi:
-  - „example text“
-  - ‚example text’
-  - »example text«
-  - “example text”
-  - ‘example text’
-  - «example text»
+  - „teks contoh“
+  - ‚teks contoh’
+  - »teks contoh«
+  - “teks contoh”
+  - ‘teks contoh’
+  - «teks contoh»
 
 **Tanda hubung dan tanda pisah**
 

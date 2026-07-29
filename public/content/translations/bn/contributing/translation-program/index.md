@@ -12,7 +12,7 @@ description: "ethereum.org অনুবাদ প্রোগ্রাম সম
 
 ethereum.org অনুবাদ প্রোগ্রামটি গুটিয়ে নেওয়া হচ্ছে এবং নতুন অনুবাদকদের আর অনবোর্ডিং করা হচ্ছে না। Crowdin প্রজেক্টটি বন্ধ করে দেওয়া হচ্ছে এবং আমরা এর মাধ্যমে নতুন কোনো অনুবাদ জমা নিচ্ছি না।
 
-আমরা হাজার হাজার কমিউনিটি অনুবাদকদের প্রতি গভীরভাবে কৃতজ্ঞ যারা বছরের পর বছর ধরে ethereum.org-কে ডজন খানেক ভাষায় উপলব্ধ করেছেন—তাদের কাজ সাইটে লাইভ থাকবে এবং [স্বীকৃতি](/contributing/translation-program/acknowledgements/) ও [অবদানকারী](/contributing/translation-program/contributors/) পেজগুলোতে তাদের সম্মাননা বজায় থাকবে।
+আমরা হাজার হাজার কমিউনিটি অনুবাদকদের প্রতি গভীরভাবে কৃতজ্ঞ যারা বছরের পর বছর ধরে ethereum.org-কে ডজন ডজন ভাষায় উপলব্ধ করেছেন—তাদের কাজ সাইটে লাইভ থাকবে এবং [স্বীকৃতি](/contributing/translation-program/acknowledgements/) ও [অবদানকারী](/contributing/translation-program/contributors/) পেজগুলোতে তাদের সম্মাননা বজায় থাকবে।
 
 আপনি যদি বিদ্যমান কোনো অনুবাদে ভুল দেখতে পান, তাহলে অনুগ্রহ করে [GitHub-এ একটি ইস্যু খুলুন](https://github.com/ethereum/ethereum-org-website/issues/new/choose)।
 
