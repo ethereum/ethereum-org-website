@@ -10,7 +10,6 @@ Níže najdete několik užitečných průvodců a nástrojů pro překladatele 
 ## Průvodci {#guides}
 
 - [Průvodce stylem překladu](/contributing/translation-program/translators-guide/) _– pokyny a tipy pro překladatele webu ethereum.org_
-- [Časté dotazy k překladům](/contributing/translation-program/faq/) _– často kladené otázky a odpovědi týkající se překladatelského programu ethereum.org_
 - [Průvodce online editorem Crowdin](https://support.crowdin.com/online-editor/) _– podrobný průvodce používáním online editoru Crowdin a některých jeho pokročilých funkcí_
 
 ## Nástroje {#tools}
@@ -25,13 +24,13 @@ Níže najdete několik užitečných průvodců a nástrojů pro překladatele 
 ## Komunity {#communities}
 
 - [Jazykově specifické překladatelské skupiny na Discordu](https://discord.gg/ethereum-org)
-  _– iniciativa pro propojení překladatelů webu ethereum.org s překladatelskými skupinami_
+  _– iniciativa propojující překladatele webu ethereum.org s překladatelskými skupinami_
 - [Skupina čínských překladatelů](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– stránka na platformě Notion pro snazší koordinaci mezi čínskými překladateli_
 
 ## Nejnovější aktualizace {#latest-updates}
 
-Abyste měli přehled o nejnovějším vývoji překladatelského programu, můžete sledovat [blog Nadace Ethereum](https://blog.ethereum.org/):
+Chcete-li mít přehled o nejnovějším vývoji překladatelského programu, můžete sledovat [blog Nadace Ethereum](https://blog.ethereum.org/):
 
 - [Aktualizace milníků z října 2021](https://blog.ethereum.org/2021/10/04/translation-program-update)
 - [Aktualizace milníků z prosince 2020](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
@@ -42,7 +41,7 @@ Abyste měli přehled o nejnovějším vývoji překladatelského programu, mů�
 
 Každou druhou středu v měsíci pořádáme konzultační hodiny pro překladatele. Konají se v hlasovém kanálu #office-hours na [Discordu ethereum.org](https://discord.gg/ethereum-org), kde také najdete přesné časy a další podrobnosti.
 
-Konzultační hodiny umožňují našim překladatelům klást otázky ohledně procesu překladu, poskytovat zpětnou vazbu k programu, sdílet své nápady nebo si jen popovídat s hlavním týmem ethereum.org.
+Konzultační hodiny umožňují našim překladatelům klást otázky ohledně procesu překladu, poskytovat zpětnou vazbu k programu, sdílet své nápady nebo si jen tak popovídat s hlavním týmem ethereum.org.
 V neposlední řadě chceme tyto hovory využít k informování o nedávném vývoji překladatelského programu a ke sdílení klíčových tipů a pokynů s našimi přispěvateli.
 
 Pokud jste překladatelem webu ethereum.org nebo byste se jím chtěli stát, neváhejte se k nám během některého z těchto setkání připojit.
