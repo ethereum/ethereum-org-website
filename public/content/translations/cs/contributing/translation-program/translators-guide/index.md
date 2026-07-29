@@ -1,8 +1,8 @@
 ---
-title: Průvodce stylem překladů pro ethereum.org
-metaTitle: Průvodce pro překladatele
+title: "Průvodce stylem překladů pro ethereum.org"
+metaTitle: "Průvodce pro překladatele"
 lang: cs
-description: Pokyny a tipy pro překladatele ethereum.org
+description: "Pokyny a tipy pro překladatele ethereum.org"
 ---
 
 Průvodce stylem překladů pro ethereum.org obsahuje některé z nejdůležitějších pokynů, instrukcí a tipů pro překladatele, které nám pomáhají s lokalizací webu.

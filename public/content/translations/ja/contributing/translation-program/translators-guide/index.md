@@ -1,8 +1,8 @@
 ---
-title: ethereum.org 翻訳スタイルガイド
-metaTitle: 翻訳者ガイド
+title: "ethereum.org 翻訳スタイルガイド"
+metaTitle: "翻訳者ガイド"
 lang: ja
-description: ethereum.orgの翻訳者向けの手順とヒント
+description: "ethereum.orgの翻訳者向けの手順とヒント"
 ---
 
 ethereum.orgの翻訳スタイルガイドには、ウェブサイトのローカライズに役立つ、翻訳者向けの最も重要なガイドライン、手順、ヒントが記載されています。

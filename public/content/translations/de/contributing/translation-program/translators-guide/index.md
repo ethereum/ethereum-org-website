@@ -1,8 +1,8 @@
 ---
-title: ethereum.org Übersetzungs-Styleguide
-metaTitle: Leitfaden für Übersetzer
+title: "ethereum.org Übersetzungs-Styleguide"
+metaTitle: "Leitfaden für Übersetzer"
 lang: de
-description: Anweisungen und Tipps für Übersetzer von ethereum.org
+description: "Anweisungen und Tipps für Übersetzer von ethereum.org"
 ---
 
 Der ethereum.org Übersetzungs-Styleguide enthält einige der wichtigsten Richtlinien, Anweisungen und Tipps für Übersetzer, die uns bei der Lokalisierung der Website helfen.

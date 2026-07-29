@@ -1,6 +1,6 @@
 ---
-title: Guía de estilo de traducción de ethereum.org
-metaTitle: Guía para traductores
+title: "Guía de estilo de traducción de ethereum.org"
+metaTitle: "Guía para traductores"
 lang: es
 description: Instrucciones y consejos para los traductores de ethereum.org
 ---
