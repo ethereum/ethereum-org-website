@@ -1,55 +1,108 @@
 ---
 title: "Một Ethereum bảo mật hơn"
-description: "Ethereum là nền tảng hợp đồng thông minh bảo mật và phi tập trung nhất hiện nay. Tuy nhiên, vẫn có thể thực hiện các cải tiến để Ethereum duy trì khả năng chống chịu trước mọi cấp độ tấn công trong tương lai xa."
+description: "Lộ trình của Ethereum củng cố việc sản xuất khối và khả năng chống kiểm duyệt ngay hôm nay, đồng thời chuẩn bị giao thức cho kỷ nguyên lượng tử và hàng thập kỷ hoạt động đáng tin cậy."
 lang: vi
 image: /images/roadmap/roadmap-security.png
-alt: "Lộ trình Ethereum"
+alt: "Ethereum roadmap"
 template: roadmap
+summaryPoints:
+  - Các bản nâng cấp củng cố trong thời gian tới như tách biệt người đề xuất và người xây dựng (PBS) được tích hợp sẵn và danh sách bao gồm đang được tích cực phát triển
+  - Việc chuẩn bị hậu lượng tử đang được tiến hành nhiều năm trước khi có bất kỳ mối đe dọa lượng tử đáng kể nào
+  - Việc đơn giản hóa giao thức giúp loại bỏ sự phức tạp và thu hẹp bề mặt tấn công của Ethereum
 ---
 
-**Ethereum vốn đã là một nền tảng** [hợp đồng thông minh](/glossary/#smart-contract) phi tập trung và **rất bảo mật**. Tuy nhiên, vẫn có thể thực hiện các cải tiến để Ethereum duy trì khả năng chống chịu trước mọi loại hình tấn công trong tương lai xa. Những cải tiến này bao gồm các thay đổi tinh tế trong cách [máy khách Ethereum](/glossary/#consensus-client) xử lý các [khối](/glossary/#block) cạnh tranh, cũng như tăng tốc độ mà mạng lưới xem các khối là ["đã chung cuộc"](/developers/docs/consensus-mechanisms/pos/#finality) (nghĩa là chúng không thể bị thay đổi nếu kẻ tấn công không chịu tổn thất kinh tế cực lớn).
+Ethereum vốn đã là một nền tảng [hợp đồng thông minh](/glossary/#smart-contract) phi tập trung và rất bảo mật. Lộ trình nhằm mục đích duy trì điều đó trong nhiều thập kỷ bằng cách **củng cố mạng lưới ngay hôm nay đồng thời chuẩn bị cho những mối đe dọa có thể chỉ xuất hiện trong nhiều năm tới**. Các bản nâng cấp trong thời gian tới được theo dõi tại [forkcast.org](https://forkcast.org) và bản dự thảo lộ trình dài hạn hơn được xuất bản tại [strawmap.org](https://strawmap.org).
 
-Ngoài ra còn có các cải tiến giúp việc kiểm duyệt giao dịch trở nên khó khăn hơn nhiều bằng cách làm cho người đề xuất khối không thể thấy nội dung thực tế trong các khối của họ, và các phương pháp mới để xác định khi nào một máy khách đang thực hiện kiểm duyệt. Cùng với nhau, những cải tiến này sẽ nâng cấp giao thức [Bằng chứng cổ phần (PoS)](/glossary/#pos) để người dùng - từ cá nhân đến các tập đoàn - có thể tin tưởng ngay lập tức vào các ứng dụng, dữ liệu và tài sản của họ trên Ethereum.
+<ExpandableCard title="Ethereum hiện nay có an toàn không?" eventCategory="/roadmap/security" eventName="clicked is ethereum secure today?">
 
-## Rút tiền đặt cọc {#staking-withdrawals}
+Đúng vậy. Ethereum đã chạy liên tục kể từ năm 2015 mà không có thời gian chết. Những cải tiến trên trang này làm cho một mạng lưới vốn đã bảo mật trở nên khó bị tấn công, kiểm duyệt hoặc phá vỡ hơn.
 
-Quá trình nâng cấp từ [Bằng chứng công việc (PoW)](/glossary/#pow) lên Bằng chứng cổ phần (PoS) bắt đầu với việc những người tiên phong của Ethereum "đặt cọc" ETH của họ vào một hợp đồng tiền gửi. Số ETH đó được sử dụng để bảo vệ mạng lưới. Đã có một bản cập nhật thứ hai vào ngày 12 tháng 4 năm 2023 để cho phép các trình xác thực rút số ETH đã đặt cọc. Kể từ đó, các trình xác thực có thể tự do đặt cọc hoặc rút ETH.
+</ExpandableCard>
 
-<ButtonLink variant="outline-color" href="/staking/withdrawals/">Đọc về việc rút tiền</ButtonLink>
+## Xây dựng khối không cần tin cậy {#trustless-block-building}
 
-## Phòng thủ chống lại các cuộc tấn công {#defending-against-attacks}
+Hầu hết các khối Ethereum ngày nay được lắp ráp thông qua sự phân công lao động: các trình tạo block chuyên biệt xây dựng khối có giá trị nhất mà họ có thể, và [trình xác thực](/glossary/#validator) đến lượt sẽ đề xuất ưu đãi tốt nhất. Điều này giúp việc xây dựng khối chuyên nghiệp không tập trung [đặt cọc](/glossary/#staking) vào các nhà điều hành lớn nhất, nhưng kể từ năm 2022, nó đã dựa vào phần mềm ngoài giao thức mà mạng lưới không thể xác minh.
 
-Có những cải tiến có thể được thực hiện đối với giao thức Bằng chứng cổ phần (PoS) của Ethereum. Một trong số đó được gọi là [view-merge](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739) - một thuật toán lựa chọn [phân nhánh](/glossary/#fork) bảo mật hơn, giúp gây khó khăn cho một số loại hình tấn công tinh vi nhất định.
+**Tách biệt người đề xuất và người xây dựng (PBS) được tích hợp sẵn (ePBS, hoặc EIP-7732)** đưa sự phân chia này vào giao thức, loại bỏ nhu cầu tin cậy các rơ-le (relay), những người trung gian bên thứ ba hiện đang chuyển các khối giữa các trình tạo block và trình xác thực. ePBS là điểm nhấn của bản nâng cấp [Glamsterdam](/roadmap/glamsterdam/) sắp tới, dự kiến vào năm 2026. Chưa có ngày cụ thể cho Mạng chính; các nhóm máy khách đang thử nghiệm nó trên các devnet (mạng thử nghiệm tạm thời).
 
-Việc giảm thời gian Ethereum cần để [đạt tính chung cuộc](/glossary/#finality) cho các khối sẽ mang lại trải nghiệm người dùng tốt hơn và ngăn chặn các cuộc tấn công "tổ chức lại chuỗi" tinh vi nơi những kẻ tấn công cố gắng xáo trộn các khối rất gần đây để trục lợi hoặc kiểm duyệt một số giao dịch nhất định. [**Tính chung cuộc trong một slot (SSF)**](/roadmap/single-slot-finality/) là một **cách để giảm thiểu độ trễ đạt tính chung cuộc**. Hiện tại, có một lượng khối tương đương 15 phút mà về mặt lý thuyết, kẻ tấn công có thể thuyết phục các trình xác thực khác cấu hình lại. Với SSF, con số này là 0. Người dùng, từ cá nhân đến các ứng dụng và sàn giao dịch, được hưởng lợi từ sự đảm bảo nhanh chóng rằng các giao dịch của họ sẽ không bị hoàn tác, và mạng lưới được hưởng lợi nhờ việc triệt tiêu hoàn toàn một nhóm các cuộc tấn công.
+<ButtonLink variant="outline" href="/roadmap/pbs/">Tìm hiểu thêm về tách biệt người đề xuất và người xây dựng</ButtonLink>
 
-<ButtonLink variant="outline-color" href="/roadmap/single-slot-finality/">Đọc về tính chung cuộc trong một slot</ButtonLink>
+## Khả năng chống kiểm duyệt {#censorship-resistance}
 
-## Phòng thủ chống lại sự kiểm duyệt {#defending-against-censorship}
+Một mạng lưới chống kiểm duyệt có nghĩa là không ai có thể ngăn cản một giao dịch hợp lệ tiếp cận chuỗi. **Danh sách bao gồm được thực thi theo lựa chọn phân nhánh (FOCIL, hoặc EIP-7805)** mang lại cho nhiều trình xác thực tiếng nói về những gì một khối phải bao gồm: họ xuất bản danh sách các giao dịch đang chờ xử lý mà trình tạo block được yêu cầu phải đưa vào. Không một tác nhân đơn lẻ nào có thể âm thầm loại bỏ giao dịch của bạn.
 
-Sự phi tập trung ngăn chặn các cá nhân hoặc nhóm nhỏ các [trình xác thực](/glossary/#validator) trở nên quá có sức ảnh hưởng. Các công nghệ đặt cọc mới có thể giúp đảm bảo các trình xác thực của Ethereum duy trì tính phi tập trung ở mức tối đa đồng thời bảo vệ chúng khỏi các sự cố về phần cứng, phần mềm và mạng lưới. Điều này bao gồm phần mềm chia sẻ trách nhiệm của trình xác thực trên nhiều [nút](/glossary/#node). Điều này được gọi là **công nghệ trình xác thực phân tán (DVT)**. [Các nhóm đặt cọc](/glossary/#staking-pool) được khuyến khích sử dụng DVT vì nó cho phép nhiều máy tính cùng tham gia vào quá trình xác thực, bổ sung thêm tính dự phòng và khả năng chịu lỗi. Nó cũng phân chia các khóa của trình xác thực trên nhiều hệ thống, thay vì để các nhà điều hành đơn lẻ chạy nhiều trình xác thực. Điều này khiến các nhà điều hành không trung thực khó có thể phối hợp tấn công Ethereum hơn. Nhìn chung, ý tưởng là đạt được các lợi ích bảo mật bằng cách chạy các trình xác thực dưới dạng _cộng đồng_ thay vì cá nhân.
+FOCIL là điểm nhấn ở lớp đồng thuận của Hegotá, bản nâng cấp tiếp nối Glamsterdam và dự kiến vào năm 2027. Nó được cố tình lên lịch sau Glamsterdam để ePBS và FOCIL không bao giờ được phát hành dưới dạng một sự kết hợp chưa được thử nghiệm. Nghiên cứu về các mempool được mã hóa, giúp ẩn nội dung của các giao dịch đang chờ cho đến khi chúng được đưa vào một khối một cách an toàn, vẫn đang tiếp tục.
 
-<ButtonLink variant="outline-color" href="/staking/dvt/">Đọc về công nghệ trình xác thực phân tán</ButtonLink>
+## Tính chung cuộc nhanh hơn {#faster-finality}
 
-Việc triển khai **tách biệt người đề xuất và người xây dựng (PBS)** sẽ cải thiện đáng kể các hệ thống phòng thủ tích hợp sẵn của Ethereum chống lại sự kiểm duyệt. PBS cho phép một trình xác thực tạo ra một khối và một trình xác thực khác phát sóng nó trên toàn mạng lưới Ethereum. Điều này đảm bảo rằng lợi nhuận từ các thuật toán tạo khối chuyên nghiệp nhằm tối đa hóa lợi nhuận được chia sẻ công bằng hơn trên toàn mạng lưới, **ngăn chặn việc đặt cọc bị tập trung** vào các tổ chức đặt cọc có hiệu suất tốt nhất theo thời gian. Người đề xuất khối được quyền chọn khối mang lại nhiều lợi nhuận nhất được cung cấp cho họ bởi một thị trường các trình tạo block. Để kiểm duyệt, một người đề xuất khối thường sẽ phải chọn một khối ít lợi nhuận hơn, điều này sẽ **phi lý về mặt kinh tế và cũng hiển nhiên đối với các trình xác thực còn lại** trên mạng lưới.
+Đối với người dùng, [tính chung cuộc](/glossary/#finality) là thời điểm một giao dịch trở nên vĩnh viễn, khi việc đảo ngược nó sẽ khiến kẻ tấn công tiêu tốn một lượng lớn ETH đã đặt cọc. Ngày nay, tính chung cuộc mất khoảng 15 phút và **các nhà nghiên cứu muốn thu hẹp thời gian đó một cách đáng kể**. Công việc bắt đầu với tính chung cuộc một khe (single-slot finality), phát triển thành tính chung cuộc ba khe (three-slot finality), và hiện tiếp tục với Minimmit, một giao thức đồng thuận một vòng trong chương trình Lean Ethereum được giới thiệu vào tháng 7 năm 2025. Tính chung cuộc tính bằng giây là mục tiêu định hướng dài hạn trên dự thảo lộ trình, nhắm tới khoảng năm 2029. Đây vẫn là một nghiên cứu đang hoạt động và chưa có bản nâng cấp tính chung cuộc nào được chỉ định cho một đợt phân nhánh.
 
-Có những tiện ích bổ sung tiềm năng cho PBS, chẳng hạn như các giao dịch được mã hóa và danh sách bao gồm (inclusion list), có thể cải thiện hơn nữa khả năng chống kiểm duyệt của Ethereum. Những tiện ích này làm cho trình tạo block và người đề xuất không thể thấy các giao dịch thực tế được đưa vào trong khối của họ.
+<ButtonLink variant="outline" href="/roadmap/single-slot-finality/">Tìm hiểu thêm về nghiên cứu tính chung cuộc nhanh hơn</ButtonLink>
 
-<ButtonLink variant="outline-color" href="/roadmap/pbs/">Đọc về việc tách biệt người đề xuất và người xây dựng</ButtonLink>
+## Trình xác thực kiên cường {#resilient-validators}
 
-## Bảo vệ các trình xác thực {#protecting-validators}
+Một trình xác thực thường là một máy tính giữ một khóa ký. **Công nghệ trình xác thực phân tán (DVT)** thay thế cỗ máy đơn lẻ đó bằng một ủy ban các máy tính chia sẻ khóa và cùng nhau ký, do đó một máy tính bị hỏng hoặc một khóa bị đánh cắp sẽ không làm trình xác thực ngừng hoạt động. DVT đang hoạt động trong thực tế và được các nhà điều hành đặt cọc sử dụng ở quy mô lớn. Vào tháng 1 năm 2026, Vitalik Buterin đã đề xuất một biến thể cấp độ giao thức đơn giản hóa có tên là DVT-lite; đây là một đề xuất ban đầu và chưa có lịch trình phân nhánh.
 
-Có khả năng một kẻ tấn công tinh vi có thể xác định các trình xác thực sắp tới và gửi thư rác (spam) cho họ để ngăn họ đề xuất khối; điều này được gọi là một cuộc tấn công **từ chối dịch vụ (DoS)**. Việc triển khai [**bầu chọn người dẫn đầu bí mật (SLE)**](/roadmap/secret-leader-election) sẽ bảo vệ chống lại loại hình tấn công này bằng cách ngăn chặn việc biết trước danh tính của những người đề xuất khối. Phương pháp này hoạt động bằng cách liên tục xáo trộn một tập hợp các cam kết mật mã đại diện cho các ứng cử viên đề xuất khối và sử dụng thứ tự của họ để xác định trình xác thực nào được chọn theo cách mà chỉ bản thân các trình xác thực mới biết trước thứ tự của họ.
+Mạng lưới cũng tự bảo vệ thông qua [sự đa dạng máy khách](/developers/docs/nodes-and-clients/client-diversity/): Ethereum chạy trên một số triển khai phần mềm được xây dựng độc lập, vì vậy một lỗi trong một máy khách vẫn giúp phần còn lại của mạng lưới hoạt động bình thường.
 
-<ButtonLink variant="outline-color" href="/roadmap/secret-leader-election">Đọc về bầu chọn người dẫn đầu bí mật</ButtonLink>
+Hai ý tưởng nghiên cứu trước đây, view-merge và bầu chọn người dẫn đầu bí mật, không còn là các hạng mục lộ trình đang hoạt động.
 
-## Tiến độ hiện tại
+<ButtonLink variant="outline" href="/staking/dvt/">Tìm hiểu thêm về công nghệ trình xác thực phân tán</ButtonLink>
+
+## Khả năng kháng lượng tử {#quantum-resistance}
+
+Ethereum sử dụng [mật mã học](/glossary/#cryptography) để giữ cho mạng lưới an toàn và bảo vệ tiền của người dùng. Cuối cùng, một số phương pháp mật mã này sẽ **dễ bị tổn thương trước các máy tính lượng tử**, vốn có thể giải quyết các vấn đề toán học cụ thể nhanh hơn theo cấp số nhân so với các máy tính cổ điển.
+
+**Ngày nay không có máy tính lượng tử nào có thể phá vỡ mật mã học của Ethereum.** Phần cứng cần thiết vẫn chưa tồn tại ở quy mô lớn. Nhưng nghiên cứu gần đây cho thấy khoảng cách này đang thu hẹp nhanh hơn dự kiến trước đây. Vào tháng 3 năm 2026, Google Quantum AI đã công bố một bài báo ước tính rằng việc phá vỡ mật mã học đường cong elliptic 256-bit (loại mà Ethereum sử dụng cho chữ ký tài khoản) có thể cần khoảng 1.200 qubit logic, ít hơn khoảng 20 lần so với các ước tính trước đó.
+
+Các quá trình chuyển đổi mật mã mất nhiều năm để lập kế hoạch và thực hiện một cách an toàn, vì vậy việc chuẩn bị đang diễn ra ngay bây giờ, rất lâu trước khi phần cứng tồn tại. Bốn lĩnh vực đã được xác định là cần nâng cấp hậu lượng tử: chữ ký đồng thuận của trình xác thực (BLS), các lược đồ cam kết được sử dụng cho tính khả dụng của dữ liệu (KZG), chữ ký tài khoản (ECDSA) và các hệ thống Bằng chứng không kiến thức (ZK-proof) được sử dụng bởi các [bản cuộn](/glossary/#rollups).
+
+Tổ chức Ethereum đã thành lập một **nhóm Bảo mật Hậu lượng tử** chuyên trách vào tháng 1 năm 2026 và công việc của nhóm được theo dõi công khai tại [pq.ethereum.org](https://pq.ethereum.org). Công việc đang hoạt động bao gồm chữ ký trình xác thực dựa trên mã băm (leanXMSS) kết hợp với một zkVM tối giản (leanVM) giúp tổng hợp các chữ ký an toàn lượng tử lớn hơn một cách hiệu quả, và các devnet tương tác hàng tuần với hơn 10 nhóm máy khách.
+
+Một phần quan trọng của chiến lược chuyển đổi là **EIP-8141**, giới thiệu [trừu tượng hóa tài khoản](/roadmap/account-abstraction/) gốc. Điều này cho phép các tài khoản cá nhân chọn xác minh chữ ký của riêng họ, nghĩa là người dùng có thể chuyển sang các chữ ký an toàn lượng tử mà không cần chờ đợi một đợt di chuyển toàn giao thức duy nhất. EIP-8141 đang được xem xét cho bản nâng cấp Hegotá. Các cột mốc cơ sở hạ tầng hậu lượng tử cốt lõi nhắm mục tiêu hoàn thành vào khoảng năm 2029. Đây là các mục tiêu lập kế hoạch và có thể thay đổi.
+
+<ExpandableCard title="Máy tính lượng tử hiện nay có thể đánh cắp ETH của tôi không?" eventCategory="/roadmap/security" eventName="clicked can quantum computers steal my ETH today?">
+
+Không. Ngày nay không có máy tính lượng tử nào có thể phá vỡ mật mã học của Ethereum. Công việc được mô tả trên trang này là sự chuẩn bị sớm cho một mối đe dọa vẫn còn cách xa nhiều năm. Khi các ví hậu lượng tử khả dụng, phần mềm ví sẽ hướng dẫn bạn thực hiện quá trình di chuyển. Hiện tại, bạn không cần phải làm gì cả.
+
+</ExpandableCard>
+
+<ButtonLink variant="outline" href="/roadmap/security/quantum-resistance/">Tìm hiểu thêm về khả năng kháng lượng tử</ButtonLink>
+
+## Giao thức đơn giản và hiệu quả hơn {#simpler-and-more-efficient-protocol}
+
+Sự phức tạp tạo ra cơ hội cho các lỗi và lỗ hổng. Một phần của lộ trình tập trung vào việc **đơn giản hóa Ethereum và loại bỏ nợ kỹ thuật** để giao thức dễ bảo trì, kiểm toán và suy luận hơn. Một giao thức đơn giản hơn cũng khiến những kẻ tấn công có ít bề mặt để thăm dò hơn.
+
+Đã được phân phối cho đến nay:
+
+- **[Pectra (Tháng 5 năm 2025)](/roadmap/pectra/)**: Đã giới thiệu EIP-7702, cho phép các tài khoản thuộc sở hữu bên ngoài tạm thời ủy quyền cho mã hợp đồng thông minh, một bước đệm hướng tới trừu tượng hóa tài khoản hoàn toàn.
+- **[Fusaka (Tháng 12 năm 2025)](/roadmap/fusaka/)**: Đã triển khai PeerDAS (EIP-7594), giúp phân phối khối lượng công việc về tính khả dụng của dữ liệu trên toàn mạng lưới. Đồng thời tăng các tham số khối dữ liệu, mở rộng thông lượng dữ liệu cho các bản cuộn.
+- **[Dencun (Tháng 3 năm 2024)](/roadmap/dencun/)**: Đã giới thiệu các giao dịch khối dữ liệu (EIP-4844) để có dữ liệu Rollup rẻ hơn và hạn chế `SELFDESTRUCT` (EIP-6780) nhằm loại bỏ một nguồn gây phức tạp tồn tại từ lâu.
+- **[Shapella (Tháng 4 năm 2023)](/staking/withdrawals/)**: Đã cho phép các trình xác thực rút ETH đã đặt cọc (EIP-4895), loại bỏ một hạn chế ban đầu của việc đặt cọc [Bằng chứng cổ phần (PoS)](/glossary/#pos).
+- **London (Tháng 8 năm 2021)**: Đã đại tu việc định giá Gas với EIP-1559, giới thiệu một phí cơ sở và cơ chế đốt để có chi phí giao dịch dễ dự đoán hơn.
+
+Đang tiến hành:
+
+- **Glamsterdam (dự kiến vào năm 2026)**: Các điểm nhấn là ePBS (EIP-7732) và danh sách truy cập cấp độ khối (EIP-7928), với việc định giá lại Gas cũng đang được xem xét.
+- **Hegotá (dự kiến vào năm 2027)**: FOCIL (EIP-7805) là điểm nhấn ở lớp đồng thuận. Đang được xem xét để đưa vào: EIP-8141 (trừu tượng hóa tài khoản gốc).
+- **Đang diễn ra**: Những nỗ lực nhằm đơn giản hóa [EVM](/developers/docs/evm/), hài hòa các triển khai máy khách và loại bỏ dần các tính năng không còn được dùng nữa vẫn tiếp tục trên các nhóm máy khách. Công việc về tính phi trạng thái (cho phép những người tham gia xác minh chuỗi mà không cần lưu trữ tất cả dữ liệu của nó) đang được thiết kế lại xoay quanh các cây mã băm nhị phân an toàn lượng tử, với phương pháp cuối cùng vẫn chưa được xác nhận.
+
+## Tiến độ hiện tại {#current-progress}
 
 Tính đến giữa năm 2026:
 
 - **Xây dựng khối và khả năng chống kiểm duyệt**: ePBS và danh sách truy cập cấp độ khối đang chạy trên các devnet của Glamsterdam. FOCIL được lên kế hoạch cho Hegotá, dự kiến vào năm 2027.
-- **Tính chung cuộc**: Minimmit và công việc đồng thuận Lean Ethereum rộng lớn hơn vẫn đang được tích cực nghiên cứu và chưa được chỉ định cho đợt phân nhánh nào.
-- **Khả năng kháng lượng tử**: Các devnet tương tác hậu lượng tử hàng tuần đang chạy và các cột mốc cơ sở hạ tầng cốt lõi dự kiến vào khoảng năm 2029.
+- **Tính chung cuộc**: Minimmit và công việc đồng thuận Lean Ethereum rộng lớn hơn vẫn đang được tích cực nghiên cứu và chưa được chỉ định phân nhánh.
+- **Khả năng kháng lượng tử**: Các devnet tương tác hậu lượng tử hàng tuần đang chạy và các cột mốc cơ sở hạ tầng cốt lõi nhắm mục tiêu vào khoảng năm 2029.
 - **Đơn giản hóa**: Pectra và Fusaka đã được phát hành; Glamsterdam và Hegotá sẽ mang đến đợt dọn dẹp tiếp theo.
 
-Không có phần nào của công việc này đã hoàn thành và tất cả các mốc thời gian đều là ước tính có thể thay đổi.
+Chưa có phần nào của công việc này hoàn tất và tất cả các mốc thời gian đều là ước tính có thể thay đổi.
+
+## Đọc thêm {#further-reading}
+
+- [Forkcast: Trình theo dõi nâng cấp mạng lưới Ethereum](https://forkcast.org)
+- [Strawmap: bản dự thảo lộ trình lớp 1 (l1) của Ethereum](https://strawmap.org) - _EF Architecture_
+- [Ethereum Hậu lượng tử](https://pq.ethereum.org) - _Tổ chức Ethereum_
+- [Trình theo dõi lộ trình Lean Ethereum](https://leanroadmap.org) - _ReamLabs_
+- [Bằng chứng cổ phần (PoS) và tính chung cuộc](/developers/docs/consensus-mechanisms/pos/#finality)
+- [EVM](/developers/docs/evm/)

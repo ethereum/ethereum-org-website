@@ -1,7 +1,7 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/security/index.md",
-  "generatedAt": "2026-07-29T05:53:11.942Z",
+  "generatedAt": "2026-07-29T16:23:32.991Z",
   "rootHash": "dc1fdad59379",
   "tree": {
     "contentHash": "1b6a9716f3a5",
@@ -534,5 +534,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "bff6b26a8b30b949a9a730f3427af6918af7bb68"
+  "sourceCommitSha": "bdbd25a40e6e0de0bbadf7d749383b1d200da0c8"
 }
