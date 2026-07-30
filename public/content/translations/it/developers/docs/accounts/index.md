@@ -97,7 +97,7 @@ Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 
 Hai bisogno di una chiave privata per firmare messaggi e transazioni che producono una firma. Altri possono quindi prendere la firma per derivare la tua chiave pubblica, dimostrando l'autore del messaggio. Nella tua applicazione, puoi utilizzare una libreria JavaScript per inviare transazioni alla rete.
 
-## Account di contratto {#contract-accounts}
+## Account di contratto
 
 Anche gli account di contratto hanno un indirizzo esadecimale di 42 caratteri:
 
@@ -105,8 +105,9 @@ Esempio:
 
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
-L'indirizzo del contratto viene solitamente fornito quando un contratto viene distribuito sulla blockchain di Ethereum. L'indirizzo deriva dall'indirizzo del creatore e dal numero di transazioni inviate da quell'indirizzo (il "nonce").
+L'indirizzo del contratto viene solitamente assegnato quando un contratto viene distribuito sulla blockchain di Ethereum. L'indirizzo deriva dall'indirizzo del creatore e dal numero di transazioni inviate da tale indirizzo (il "nonce"). Questo è il modo in cui l'operazione `CREATE` deriva un indirizzo.
 
+I contratti possono anche essere distribuiti con [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), che deriva l'indirizzo dall'indirizzo del creatore, da un valore scelto dal creatore (il "salt") e da un hash del codice di creazione del contratto. Non è coinvolto alcun nonce, quindi l'indirizzo può essere calcolato prima che il contratto esista e rimane lo stesso indipendentemente da quante altre transazioni il creatore invia nel frattempo. Ciò rende possibile fare riferimento a un contratto che non è stato ancora distribuito.
 ## Chiavi del validatore {#validators-keys}
 
 C'è anche un altro tipo di chiave in Ethereum, introdotto quando Ethereum è passato dal consenso basato sulla Prova di lavoro (PoW) alla Proof-of-Stake (PoS). Queste sono le chiavi "BLS" e vengono utilizzate per identificare i validatori. Queste chiavi possono essere aggregate in modo efficiente per ridurre la larghezza di banda richiesta alla rete per raggiungere il consenso. Senza questa aggregazione di chiavi, lo stake minimo per un validatore sarebbe molto più alto.
