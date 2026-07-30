@@ -97,7 +97,7 @@ Z vašeho soukromého klíče je možné odvodit nové veřejné klíče, ale z 
 
 K podepisování zpráv a transakcí, jejichž výstupem je podpis, potřebujete soukromý klíč. Ostatní pak mohou vzít podpis a odvodit váš veřejný klíč, čímž se prokáže autor zprávy. Ve své aplikaci můžete k odesílání transakcí do sítě použít knihovnu JavaScript.
 
-## Kontraktové účty {#contract-accounts}
+## Kontraktové účty
 
 Kontraktové účty mají také 42znakovou hexadecimální adresu:
 
@@ -105,8 +105,9 @@ Příklad:
 
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
-Adresa kontraktu je obvykle přidělena, když je kontrakt nasazen na blockchain Etherea. Adresa vychází z adresy tvůrce a počtu transakcí odeslaných z této adresy („nonce“).
+Adresa kontraktu je obvykle přidělena, když je kontrakt nasazen na blockchain Etherea. Adresa vychází z adresy tvůrce a počtu transakcí odeslaných z této adresy („nonce“). Tímto způsobem odvozuje adresu operace `CREATE`.
 
+Kontrakty lze také nasadit pomocí [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), která odvozuje adresu z adresy tvůrce, hodnoty, kterou tvůrce zvolí („salt“), a hashe kódu pro vytvoření kontraktu. Není zde použita žádná nonce, takže adresu lze vypočítat ještě předtím, než kontrakt existuje, a zůstává stejná bez ohledu na to, kolik dalších transakcí tvůrce mezitím odešle. Díky tomu je možné odkazovat na kontrakt, který ještě nebyl nasazen.
 ## Klíče validátoru {#validators-keys}
 
 V Ethereu existuje také další typ klíče, který byl zaveden, když Ethereum přešlo z konsensu založeného na důkazu prací (PoW) na důkaz podílem (PoS). Jedná se o klíče „BLS“ a používají se k identifikaci validátorů. Tyto klíče lze efektivně agregovat, aby se snížila šířka pásma potřebná k tomu, aby síť dospěla ke konsensu. Bez této agregace klíčů by byl minimální stake pro validátora mnohem vyšší.
