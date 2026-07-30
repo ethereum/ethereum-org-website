@@ -18,7 +18,6 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import { getLocaleFormattedDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import {
-  getAllWalletSlugs,
   getRelatedWallets,
   getWalletBySlug,
   toCatalogCard,
@@ -30,8 +29,6 @@ import {
   type WalletFeature,
 } from "@/data/wallets/features"
 import { buildPersonaLabels } from "@/data/wallets/personas"
-
-import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import FindWalletBreadcrumbs from "../_components/FindWalletBreadcrumbs"
 import WalletCard from "../_components/WalletCard"
@@ -243,11 +240,11 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
 }
 
 export function generateStaticParams() {
-  // English only; other locales render on demand.
-  return getAllWalletSlugs().map((wallet) => ({
-    locale: DEFAULT_LOCALE,
-    wallet,
-  }))
+  // Deliberately empty: these pages must render on demand so the response
+  // carries `Vary: Next-Url`. Build-time prerenders have no response to read,
+  // so Next marks them "cannot be intercepted" and the client then caches this
+  // URL ignoring Next-Url, which permanently shadows `@modal/(.)[wallet]`.
+  return []
 }
 
 export async function generateMetadata(props: {
