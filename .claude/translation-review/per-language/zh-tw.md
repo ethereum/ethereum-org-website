@@ -25,3 +25,17 @@
 ## PR #18772 (community-stories.json, 2026-07-10) -- 8.3/10
 - CRIT fixed: 智慧合約 -> 智能合約, 4 occurrences in 3 keys (story-charles x2, story-rodrigo-nunez, story-mesoreefdao). FULL REGRESSION of the PR #18344 finding -- the pipeline re-emits this error on fresh translations; verify on every zh-tw import.
 - Otherwise clean: no simplified-character leakage (even in story-shangzi whose source author wrote Simplified), no inversions.
+
+## PR #18925 (privacy roadmap + 2 video transcripts) -- 2026-07-27 -- 9.4/10
+
+**Fixed (critical):** `區塊提議者` -> `區塊提案者` (`roadmap/privacy` L58). The sibling `eip-7805-focil-explained` uses 提案者/區塊提案者 correctly 6+ times.
+
+**Not fixed (warning):** `credible neutrality` rendered 可靠中立性 vs 可信中立性 in one file; 區塊構建 (23x) vs 區塊建構 (7x).
+
+**Convention confirmed:** zh-tw keeps all 44/44 video speaker labels in Latin. That is deliberate — do not "fix" it (known-patterns #31).
+
+## PR #18935 (intl/pending-content-translation-program-winddown-ctas) -- 2026-07-28 -- Score 9.2/10
+- **Aspect (hand-fixed):** same as zh -- `是`->`曾是`, `旨在`->`曾旨在` on the program page intro and "About". zh-tw's intro was the only line in the whole 24-locale fleet left byte-identical to dev, i.e. the pipeline did not retranslate it at all.
+- Traditional characters clean throughout, zero Simplified leakage; terminology internally consistent (`翻譯計畫`/`譯者`) including `get-involved`, where zh drifted.
+- This run also cleaned up a stale 您/你 register inconsistency on the program page.
+- `remains a priority` overstated as `首要任務`.

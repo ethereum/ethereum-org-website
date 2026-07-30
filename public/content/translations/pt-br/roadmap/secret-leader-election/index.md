@@ -2,6 +2,7 @@
 title: Eleição secreta de líder
 description: Explicação de como a eleição secreta de líder pode ajudar a proteger os validadores contra ataques
 lang: pt-br
+template: roadmap
 summaryPoints:
   - O endereço IP dos propositores de bloco pode ser conhecido com antecedência, tornando-os vulneráveis a ataques
   - A eleição secreta de líder oculta a identidade dos validadores para que não sejam conhecidos com antecedência

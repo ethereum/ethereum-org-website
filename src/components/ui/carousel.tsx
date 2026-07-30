@@ -3,6 +3,7 @@ import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/buttons/Button"
 
@@ -212,6 +213,7 @@ const CarouselPrevious = React.forwardRef<
   React.ComponentProps<typeof Button>
 >(({ className, variant = "outline", size = "sm", ...props }, ref) => {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
+  const t = useTranslations("component-swiper")
 
   return (
     <Button
@@ -230,7 +232,7 @@ const CarouselPrevious = React.forwardRef<
       {...props}
     >
       <ChevronLeft className="size-6 rtl:-scale-x-100" />
-      <span className="sr-only">Previous slide</span>
+      <span className="sr-only">{t("swiper-previous-slide")}</span>
     </Button>
   )
 })
@@ -241,6 +243,7 @@ const CarouselNext = React.forwardRef<
   React.ComponentProps<typeof Button>
 >(({ className, variant = "outline", size = "sm", ...props }, ref) => {
   const { orientation, scrollNext, canScrollNext } = useCarousel()
+  const t = useTranslations("component-swiper")
 
   return (
     <Button
@@ -259,7 +262,7 @@ const CarouselNext = React.forwardRef<
       {...props}
     >
       <ChevronRight className="size-6 rtl:-scale-x-100" />
-      <span className="sr-only">Next slide</span>
+      <span className="sr-only">{t("swiper-next-slide")}</span>
     </Button>
   )
 })

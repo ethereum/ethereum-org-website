@@ -87,6 +87,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     <CardBanner
                       size="full"
                       fit="contain"
+                      zoom
                       className="aspect-[1/calc(sqrt(2))]" // Force A0 paper ratio
                     >
                       <Image

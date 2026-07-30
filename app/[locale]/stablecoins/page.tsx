@@ -702,7 +702,6 @@ async function Page(props: { params: Promise<PageParams> }) {
                               background="none"
                               fit="contain"
                               size="full"
-                              zoom={false}
                               className={cn(
                                 "flex h-40 items-center justify-center p-8",
                                 choice.bannerClass
@@ -828,7 +827,6 @@ async function Page(props: { params: Promise<PageParams> }) {
                           href={app.url}
                           variant="nested"
                           border
-                          hoverLift
                           className="h-full"
                         >
                           <CardHeader>
@@ -836,7 +834,6 @@ async function Page(props: { params: Promise<PageParams> }) {
                               background="none"
                               fit="contain"
                               size="full"
-                              zoom={false}
                               className={cn(
                                 "flex h-40 items-center justify-center p-10",
                                 app.bannerClass

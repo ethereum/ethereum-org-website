@@ -2,6 +2,7 @@
 title: Jednoslotová finalita
 description: Vysvětlení jednoslotové finality
 lang: cs
+template: roadmap
 ---
 
 Trvá přibližně 15 minut, než je blok [Etherea](/) finalizován. Můžeme však zajistit, aby mechanismus konsensu Etherea validoval bloky efektivněji a dramaticky zkrátil čas do finality. Místo patnáctiminutového čekání by bloky mohly být navrženy a finalizovány ve stejném slotu. Tento koncept je známý jako **jednoslotová finalita (SSF)**.

@@ -31,6 +31,11 @@ type LangViewModeObj = {
   [key: string]: { viewport: string; locale: string }
 }
 
+// RTL locales only get a representative subset of widths. Direction bugs
+// surface at mobile + desktop, so snapshotting Arabic at all 6 breakpoints
+// doubled the per-story count for little added signal.
+const rtlViewports = new Set(["base", "lg"])
+
 export const langViewportModes = Object.entries(
   viewportModes
 ).reduce<LangViewModeObj>((arr, curr) => {
@@ -39,6 +44,7 @@ export const langViewportModes = Object.entries(
   const currLangViewObj = {} as LangViewModeObj
 
   Object.entries(langModes).forEach(([langKey, langVal]) => {
+    if (langKey !== "en" && !rtlViewports.has(viewKey)) return
     currLangViewObj[`${langKey}-${viewKey}`] = {
       viewport: viewVal.viewport,
       locale: langVal.locale,

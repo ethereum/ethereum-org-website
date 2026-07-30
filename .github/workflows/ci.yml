@@ -91,6 +91,9 @@ jobs:
         uses: chromaui/action@v16
         with:
           projectToken: fee8e66c9916
+          # Not named chromatic.config.json: that filename is auto-loaded by
+          # both projects, and untraced without onlyChanged fails the pages job.
+          configFile: chromatic.storybook.json
           exitZeroOnChanges: true
           onlyChanged: true
           # Release-train builds (dev/staging/master head branches) were

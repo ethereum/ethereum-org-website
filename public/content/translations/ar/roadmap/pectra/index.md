@@ -3,6 +3,7 @@ title: "⁦بيكترا⁩"
 metaTitle: "⁦براغ-إليكترا (بيكترا)⁩"
 description: "⁦تعرف على ترقية بروتوكول بيكترا⁩"
 lang: ar
+template: upgrade
 authors: ["Nixo", "ماريو هافيل"]
 ---
 

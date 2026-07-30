@@ -2,6 +2,7 @@
 title: Finalità a singolo slot
 description: Spiegazione della finalità a singolo slot
 lang: it
+template: roadmap
 ---
 
 Ci vogliono circa 15 minuti affinché un blocco di [Ethereum](/) venga finalizzato. Tuttavia, possiamo fare in modo che il meccanismo di consenso di Ethereum convalidi i blocchi in modo più efficiente e riduca drasticamente il tempo di definitività. Invece di aspettare quindici minuti, i blocchi potrebbero essere proposti e finalizzati nello stesso slot. Questo concetto è noto come **finalità a singolo slot (SSF)**.

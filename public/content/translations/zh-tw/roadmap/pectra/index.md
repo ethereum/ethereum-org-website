@@ -3,6 +3,7 @@ title: "佩克特拉"
 metaTitle: "Prague-Electra (佩克特拉)"
 description: "了解佩克特拉 (Pectra) 協定升級"
 lang: zh-tw
+template: upgrade
 authors:
   - Nixo
   - 馬里奧·哈維爾

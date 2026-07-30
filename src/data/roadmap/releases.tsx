@@ -227,8 +227,8 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
   {
     image: GuidesHubHeroImage,
     releaseName: "Hegotá",
-    plannedReleaseYear: "2026",
-    displayDate: "H2 2026",
+    plannedReleaseYear: "2027",
+    displayDate: "2027",
     content: (
       <>
         <p>

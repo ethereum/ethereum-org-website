@@ -1,8 +1,8 @@
 ---
-title: Przewodnik po stylu tłumaczeń ethereum.org
-metaTitle: Przewodnik dla tłumaczy
+title: "Przewodnik po stylu tłumaczeń ethereum.org"
+metaTitle: "Przewodnik dla tłumaczy"
 lang: pl
-description: Instrukcje i wskazówki dla tłumaczy ethereum.org
+description: "Instrukcje i wskazówki dla tłumaczy ethereum.org"
 ---
 
 Przewodnik po stylu tłumaczeń ethereum.org zawiera jedne z najważniejszych wytycznych, instrukcji i wskazówek dla tłumaczy, pomagając nam w lokalizacji strony internetowej.
@@ -13,27 +13,27 @@ Jeśli masz jakiekolwiek pytania, sugestie lub opinie, skontaktuj się z nami po
 
 ## Korzystanie z platformy Crowdin {#using-crowdin}
 
-Podstawowe instrukcje dotyczące dołączania do projektu w Crowdin oraz korzystania z edytora online Crowdin można znaleźć na [stronie Programu Tłumaczeń](/contributing/translation-program/#how-to-translate).
+Projekt ethereum.org na platformie Crowdin jest zamykany i nie przyjmuje już nowych zgłoszeń (zobacz [status Programu Tłumaczeń](/contributing/translation-program/#program-status)). Poniższe wskazówki pozostają jako punkt odniesienia dla społeczności tłumaczy korzystających z platformy Crowdin we własnych projektach.
 
-Jeśli chcesz dowiedzieć się więcej o platformie Crowdin i korzystaniu z niektórych jej zaawansowanych funkcji, [baza wiedzy Crowdin](https://support.crowdin.com/online-editor/) zawiera wiele szczegółowych przewodników i przeglądów wszystkich funkcji Crowdin.
+Jeśli chcesz dowiedzieć się więcej o platformie Crowdin i korzystaniu z niektórych jej zaawansowanych funkcji, [baza wiedzy Crowdin](https://support.crowdin.com/online-editor/) zawiera wiele szczegółowych przewodników i przeglądów wszystkich funkcji platformy Crowdin.
 
-## Oddanie sedna wiadomości {#capturing-the-essence}
+## Oddanie sensu wiadomości {#capturing-the-essence}
 
 Tłumacząc treści na ethereum.org, unikaj dosłownych tłumaczeń.
 
-Ważne jest, aby tłumaczenia oddawały sedno wiadomości. Może to oznaczać przeformułowanie niektórych zwrotów lub użycie tłumaczeń opisowych zamiast tłumaczenia treści słowo w słowo.
+Ważne jest, aby tłumaczenia oddawały sens wiadomości. Może to oznaczać przeformułowanie niektórych zwrotów lub użycie tłumaczeń opisowych zamiast tłumaczenia treści słowo w słowo.
 
-Różne języki mają różne zasady gramatyczne, konwencje i szyk wyrazów. Podczas tłumaczenia należy pamiętać o tym, jak budowane są zdania w językach docelowych i unikać dosłownego tłumaczenia angielskiego źródła, ponieważ może to prowadzić do złej struktury zdań i słabej czytelności.
+Różne języki mają różne zasady gramatyczne, konwencje i szyk wyrazów. Podczas tłumaczenia należy zwracać uwagę na strukturę zdań w językach docelowych i unikać dosłownego tłumaczenia angielskiego oryginału, ponieważ może to prowadzić do złej struktury zdań i słabej czytelności.
 
 Zamiast tłumaczyć tekst źródłowy słowo w słowo, zaleca się przeczytanie całego zdania i dostosowanie go do konwencji języka docelowego.
 
 ## Styl formalny a nieformalny {#formal-vs-informal}
 
-Używamy formalnej formy zwrotu, która jest zawsze uprzejma i odpowiednia dla wszystkich odwiedzających.
+Używamy formalnej formy zwracania się do odbiorcy, która jest zawsze uprzejma i odpowiednia dla wszystkich odwiedzających.
 
-Używanie formalnych zwrotów pozwala nam uniknąć brzmienia nieoficjalnego lub obraźliwego i sprawdza się niezależnie od wieku i płci odwiedzającego.
+Używanie formy formalnej pozwala nam uniknąć brzmienia nieoficjalnego lub obraźliwego i sprawdza się niezależnie od wieku i płci odwiedzającego.
 
-Większość języków indoeuropejskich i afroazjatyckich używa zaimków osobowych w drugiej osobie, które rozróżniają płeć męską i żeńską. Zwracając się do użytkownika lub używając zaimków dzierżawczych, możemy uniknąć zakładania płci odwiedzającego, ponieważ formalna forma zwrotu jest ogólnie mająca zastosowanie i spójna, niezależnie od tego, jak się identyfikują.
+Większość języków indoeuropejskich i afroazjatyckich używa zaimków osobowych w drugiej osobie, które rozróżniają płeć męską i żeńską. Zwracając się do użytkownika lub używając zaimków dzierżawczych, możemy uniknąć zakładania płci odwiedzającego, ponieważ formalna forma zwracania się jest ogólnie stosowana i spójna, niezależnie od tego, jak się identyfikują.
 
 ## Proste i jasne słownictwo oraz znaczenie {#simple-vocabulary}
 
@@ -43,13 +43,13 @@ W większości przypadków można to łatwo osiągnąć, używając krótkich i 
 
 ## System pisma {#writing-system}
 
-Ethereum.org jest dostępne w wielu językach, które używają alternatywnych systemów pisma (lub skryptów) w stosunku do alfabetu łacińskiego.
+Strona Ethereum.org jest dostępna w wielu językach, wykorzystujących systemy pisma (lub alfabety) alternatywne dla łacińskiego.
 
 Cała treść powinna zostać przetłumaczona przy użyciu prawidłowego systemu pisma dla Twojego języka i nie powinna zawierać żadnych słów zapisanych znakami łacińskimi.
 
 Podczas tłumaczenia treści należy upewnić się, że tłumaczenia są spójne i nie zawierają żadnych znaków łacińskich.
 
-Częstym błędnym przekonaniem jest to, że słowo Ethereum powinno być zawsze zapisywane alfabetem łacińskim. Jest to w większości nieprawda, prosimy o używanie pisowni Ethereum natywnej dla Twojego języka (np. 以太坊 w języku chińskim, إيثيريوم w języku arabskim itp.).
+Częstym błędnym przekonaniem jest to, że słowo Ethereum powinno być zawsze zapisywane alfabetem łacińskim. Jest to w większości nieprawda, prosimy o używanie pisowni Ethereum właściwej dla Twojego języka (np. 以太坊 w języku chińskim, إيثيريوم w języku arabskim itp.).
 
 **Powyższe nie dotyczy języków, w których z zasady nie tłumaczy się nazw własnych.**
 
@@ -57,9 +57,9 @@ Częstym błędnym przekonaniem jest to, że słowo Ethereum powinno być zawsze
 
 Niektóre strony zawierają metadane, takie jak „title”, „lang”, „description”, „sidebar” itp.
 
-Ukrywamy treści, których tłumacze nigdy nie powinni tłumaczyć podczas przesyłania nowych stron do Crowdin, co oznacza, że wszystkie metadane widoczne dla tłumaczy w Crowdin powinny zostać przetłumaczone.
+Ukrywamy treści, których tłumacze nigdy nie powinni tłumaczyć podczas przesyłania nowych stron na platformę Crowdin, co oznacza, że wszystkie metadane widoczne dla tłumaczy w Crowdin powinny zostać przetłumaczone.
 
-Prosimy o zachowanie szczególnej ostrożności podczas tłumaczenia jakichkolwiek ciągów znaków, w których tekstem źródłowym jest „en”. Reprezentuje to język, w którym dostępna jest strona, i powinno zostać przetłumaczone na [kod języka ISO dla Twojego języka](https://www.andiamo.co.uk/resources/iso-language-codes/). Te ciągi znaków powinny być zawsze tłumaczone przy użyciu znaków łacińskich, a nie systemu pisma natywnego dla języka docelowego.
+Prosimy o zachowanie szczególnej ostrożności podczas tłumaczenia wszelkich ciągów znaków, w których tekstem źródłowym jest „en”. Reprezentuje to język, w którym dostępna jest strona, i powinno zostać przetłumaczone na [kod języka ISO dla Twojego języka](https://www.andiamo.co.uk/resources/iso-language-codes/). Te ciągi znaków powinny być zawsze tłumaczone przy użyciu znaków łacińskich, a nie systemu pisma właściwego dla języka docelowego.
 
 Jeśli nie masz pewności, jakiego kodu języka użyć, możesz sprawdzić pamięć tłumaczeń w Crowdin lub znaleźć kod dla swojego języka w adresie URL strony w edytorze online Crowdin.
 
@@ -80,14 +80,14 @@ Poniżej znajdziesz kilka przykładów tego, jak te ciągi znaków wyglądają d
 ![Article titles in sidebar.png](./article-titles-in-sidebar.png)
 ![Article titles in editor.png](./article-titles-in-editor.png)
 
-## Ostrzeżenia w Crowdin {#crowdin-warnings}
+## Ostrzeżenia na platformie Crowdin {#crowdin-warnings}
 
 Crowdin ma wbudowaną funkcję, która ostrzega tłumaczy, gdy mają popełnić błąd. Crowdin automatycznie ostrzeże Cię o tym przed zapisaniem tłumaczenia, jeśli zapomnisz dołączyć tag ze źródła, przetłumaczysz elementy, które nie powinny być tłumaczone, dodasz kilka spacji z rzędu, zapomnisz o interpunkcji końcowej itp.
 Jeśli zobaczysz takie ostrzeżenie, wróć i dokładnie sprawdź sugerowane tłumaczenie.
 
 **Nigdy nie ignoruj tych ostrzeżeń, ponieważ zazwyczaj oznaczają one, że coś jest nie tak lub że w tłumaczeniu brakuje kluczowej części tekstu źródłowego.**
 
-Przykład ostrzeżenia w Crowdin, gdy zapomnisz dodać tag do swojego tłumaczenia:
+Przykład ostrzeżenia Crowdin, gdy zapomnisz dodać tag do swojego tłumaczenia:
 ![Example of a Crowdin warning](./crowdin-warning-example.png)
 
 ## Radzenie sobie z tagami i fragmentami kodu {#dealing-with-tags}
@@ -115,7 +115,7 @@ Podczas tłumaczenia kliknięcie tego tagu automatycznie skopiuje dokładny tag 
 
 Możesz zauważyć pełne linki do stron na ethereum.org lub innych witrynach.
 
-Powinny one być identyczne ze źródłem i nie mogą być zmieniane ani tłumaczone. Jeśli przetłumaczysz link lub zmienisz go w jakikolwiek sposób, nawet usuwając tylko jego część, np. ukośnik (/), doprowadzi to do uszkodzonych i bezużytecznych linków.
+Powinny one być identyczne ze źródłem i nie należy ich zmieniać ani tłumaczyć. Jeśli przetłumaczysz link lub zmienisz go w jakikolwiek sposób, nawet usuwając tylko jego część, np. ukośnik (/), doprowadzi to do uszkodzenia i bezużyteczności linków.
 
 Najlepszym sposobem obsługi linków jest skopiowanie ich bezpośrednio ze źródła, klikając na nie lub używając przycisku „Kopiuj źródło” (Copy Source) (`Alt+C`).
 
@@ -163,7 +163,7 @@ W poniższym przykładzie widać, że najechanie kursorem na tag `<0>` pokazuje,
 
 ![Example of ambiguous tags.png](./example-of-ambiguous-tags.png)
 
-## Formy skrócone a pełne/skrótowce {#short-vs-full-forms}
+## Formy krótkie a pełne/skróty {#short-vs-full-forms}
 
 Na stronie używa się wielu skrótów, np. dapps, NFT, DAO, DeFi itp. Skróty te są powszechnie używane w języku angielskim i większość odwiedzających stronę jest z nimi zaznajomiona.
 
@@ -179,7 +179,7 @@ Przykład, jak przetłumaczyć dapps:
 
 Niektóre terminy mogą nie mieć ustalonych tłumaczeń w innych językach i są powszechnie znane pod oryginalnym angielskim terminem. Takie terminy obejmują głównie nowsze koncepcje, takie jak dowód pracy (PoW), dowód stawki (PoS), Beacon Chain, staking itp.
 
-Chociaż tłumaczenie tych terminów może brzmieć nienaturalnie, ponieważ angielska wersja jest powszechnie używana również w innych językach, wysoce zaleca się ich tłumaczenie.
+Chociaż tłumaczenie tych terminów może brzmieć nienaturalnie, ponieważ angielska wersja jest powszechnie używana również w innych językach, wysoce zalecane jest ich tłumaczenie.
 
 Tłumacząc je, nie bój się wykazać kreatywnością, używaj tłumaczeń opisowych lub po prostu tłumacz je dosłownie.
 
@@ -199,7 +199,7 @@ Tłumaczenia przycisków powinny być jak najkrótsze, aby zapobiec niedopasowan
 
 Odwiedzający ethereum.org pochodzą z całego świata i z różnych środowisk. Język na stronie powinien być zatem neutralny, przyjazny dla wszystkich i niewykluczający.
 
-Ważnym aspektem tego jest neutralność płciowa. Można to łatwo osiągnąć, używając formalnej formy zwrotu i unikając w tłumaczeniach słów specyficznych dla danej płci.
+Ważnym aspektem tego jest neutralność płciowa. Można to łatwo osiągnąć, używając formalnej formy zwracania się i unikając w tłumaczeniach słów specyficznych dla danej płci.
 
 Inną formą inkluzywności jest próba tłumaczenia dla globalnej publiczności, niespecyficznej dla żadnego kraju, rasy czy regionu.
 
@@ -209,7 +209,7 @@ Wreszcie, język powinien być odpowiedni dla wszystkich odbiorców i grup wieko
 
 Podczas tłumaczenia ważne jest przestrzeganie zasad gramatycznych, konwencji i formatowania używanych w Twoim języku, w przeciwieństwie do kopiowania ze źródła. Tekst źródłowy jest zgodny z angielskimi zasadami gramatycznymi i konwencjami, co nie ma zastosowania do wielu innych języków.
 
-Powinieneś znać zasady obowiązujące w Twoim języku i odpowiednio tłumaczyć. Jeśli potrzebujesz pomocy, skontaktuj się z nami, a pomożemy Ci znaleźć zasoby na temat tego, jak te elementy powinny być używane w Twoim języku.
+Należy znać zasady obowiązujące w danym języku i odpowiednio tłumaczyć. Jeśli potrzebujesz pomocy, skontaktuj się z nami, a pomożemy Ci znaleźć zasoby na temat tego, jak te elementy powinny być używane w Twoim języku.
 
 Kilka przykładów tego, na co należy zwracać szczególną uwagę:
 
@@ -217,14 +217,14 @@ Kilka przykładów tego, na co należy zwracać szczególną uwagę:
 
 **Wielkie litery**
 
-- Istnieją ogromne różnice w użyciu wielkich liter w różnych językach.
+- Istnieją ogromne różnice w używaniu wielkich liter w różnych językach.
 - W języku angielskim powszechne jest pisanie wielką literą wszystkich słów w tytułach i nazwach, miesiącach i dniach, nazwach języków, świętach itp. W wielu innych językach jest to gramatycznie niepoprawne, ponieważ mają one inne zasady dotyczące wielkich liter.
 - Niektóre języki mają również zasady dotyczące pisania wielką literą zaimków osobowych, rzeczowników i niektórych przymiotników, które w języku angielskim nie są pisane wielką literą.
 
 **Spacje**
 
 - Zasady ortografii określają użycie spacji dla każdego języka. Ponieważ spacje są używane wszędzie, zasady te są jednymi z najbardziej odrębnych, a spacje są jednymi z najczęściej błędnie tłumaczonych elementów.
-- Niektóre typowe różnice w użyciu spacji między językiem angielskim a innymi językami:
+- Niektóre typowe różnice w odstępach między językiem angielskim a innymi językami:
   - Spacja przed jednostkami miary i walutami (np. USD, EUR, kB, MB)
   - Spacja przed znakami stopni (np. °C, ℉)
   - Spacja przed niektórymi znakami interpunkcyjnymi, zwłaszcza wielokropkiem (…)
@@ -233,8 +233,8 @@ Kilka przykładów tego, na co należy zwracać szczególną uwagę:
 **Listy**
 
 - Każdy język ma zróżnicowany i złożony zestaw zasad pisania list. Mogą się one znacznie różnić od języka angielskiego.
-- W niektórych językach pierwsze słowo każdego nowego wiersza musi być pisane wielką literą, podczas gdy w innych nowe wiersze powinny zaczynać się od małych liter. Wiele języków ma również różne zasady dotyczące wielkich liter w listach, w zależności od długości każdego wiersza.
-- To samo dotyczy interpunkcji elementów listy. Interpunkcja końcowa w listach może być kropką (**.**), przecinkiem (**,**) lub średnikiem (**;**), w zależności od języka.
+- W niektórych językach pierwsze słowo każdego nowego wiersza musi być pisane wielką literą, podczas gdy w innych nowe wiersze powinny zaczynać się od małych liter. Wiele języków ma również różne zasady dotyczące wielkich liter na listach, w zależności od długości każdego wiersza.
+- To samo dotyczy interpunkcji elementów listy. Interpunkcją końcową na listach może być kropka (**.**), przecinek (**,**) lub średnik (**;**), w zależności od języka.
 
 **Cudzysłowy**
 
@@ -256,12 +256,12 @@ Kilka przykładów tego, na co należy zwracać szczególną uwagę:
 
 **Liczby**
 
-- Główną różnicą w zapisywaniu liczb w różnych językach jest separator używany dla miejsc dziesiętnych i tysięcy. W przypadku tysięcy może to być kropka, przecinek lub spacja. Podobnie niektóre języki używają kropki dziesiętnej, podczas gdy inne używają przecinka dziesiętnego.
+- Główną różnicą w zapisywaniu liczb w różnych językach jest separator używany dla ułamków dziesiętnych i tysięcy. W przypadku tysięcy może to być kropka, przecinek lub spacja. Podobnie niektóre języki używają kropki dziesiętnej, podczas gdy inne używają przecinka dziesiętnego.
   - Kilka przykładów dużych liczb:
     - Angielski – **1,000.50**
     - Hiszpański – **1.000,50**
     - Francuski – **1 000,50**
-- Kolejną ważną kwestią przy tłumaczeniu liczb jest znak procentu. Można go zapisać na różne sposoby: **100%**, **100 %** lub **%100**.
+- Kolejną ważną kwestią przy tłumaczeniu liczb jest znak procenta. Można go zapisać na różne sposoby: **100%**, **100 %** lub **%100**.
 - Wreszcie, liczby ujemne mogą być wyświetlane w różny sposób, w zależności od języka: -100, 100-, (100) lub [100].
 
 **Daty**
@@ -277,7 +277,7 @@ Kilka przykładów tego, na co należy zwracać szczególną uwagę:
 
 **Waluty**
 
-- Tłumaczenie walut może być wyzwaniem ze względu na różne formaty, konwencje i przeliczenia. Zasadniczo prosimy o zachowanie walut takich samych jak w źródle. Dla wygody czytelnika możesz dodać w nawiasach lokalną walutę i przeliczenie.
+- Tłumaczenie walut może być wyzwaniem ze względu na różne formaty, konwencje i przeliczenia. Zasadniczo prosimy o zachowanie walut takich samych jak w źródle. Dla wygody czytelnika możesz dodać lokalną walutę i przeliczenie w nawiasach.
 - Główne różnice w zapisywaniu walut w różnych językach obejmują umiejscowienie symbolu, przecinki dziesiętne a kropki dziesiętne, spacje oraz skróty a symbole.
   - Umiejscowienie symbolu: $100 lub 100$
   - Przecinki dziesiętne a kropki dziesiętne: 100,50$ lub 100.50$
@@ -287,7 +287,7 @@ Kilka przykładów tego, na co należy zwracać szczególną uwagę:
 **Jednostki miary**
 
 - Zasadniczo prosimy o zachowanie jednostek miary zgodnie ze źródłem. Jeśli w Twoim kraju używany jest inny system, możesz podać przeliczenie w nawiasach.
-- Poza lokalizacją jednostek miary, ważne jest również zwrócenie uwagi na różnice w podejściu języków do tych jednostek. Główną różnicą jest spacja między liczbą a jednostką, która może być różna w zależności od języka. Przykłady to 100kB a 100 kB lub 50ºF a 50 ºF.
+- Oprócz lokalizacji jednostek miary, ważne jest również zwrócenie uwagi na różnice w podejściu języków do tych jednostek. Główną różnicą jest odstęp między liczbą a jednostką, który może być różny w zależności od języka. Przykłady to 100kB w porównaniu do 100 kB lub 50ºF w porównaniu do 50 ºF.
 
 ## Podsumowanie {#conclusion}
 
