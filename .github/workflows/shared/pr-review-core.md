@@ -62,7 +62,7 @@ Format (keep the visible part under ~250 words; put detail in a `<details>` bloc
 </details>
 ```
 
-<!-- Coupling: team-digest.md's pre-fetch greps the rendered verdict header "First-pass review — ✅ Looks mergeable" to detect merge-ready PRs. If you change this header format or the "✅ Looks mergeable" wording, update the jq test() string in team-digest.md too, or that detection silently becomes always-false. -->
+<!-- Coupling: two consumers parse this rendered header. team-digest.md's pre-fetch greps "First-pass review — ✅ Looks mergeable"; .github/scripts/intake-evidence.sh matches "First-pass review — " and then each verdict wording to build `aiReview.verdict`. Change the header format or any verdict wording and both must be updated, or the detection silently becomes always-false. -->
 
 `<VERDICT>` is exactly one of:
 - `✅ Looks mergeable` — scope is sound, conventions pass, no failing checks (CI may still be running)

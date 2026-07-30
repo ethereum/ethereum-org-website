@@ -1,0 +1,214 @@
+#!/usr/bin/env bash
+# Deterministic evidence collector for the intake decision digest.
+#
+# Everything GitHub already knows is resolved here rather than inferred by the
+# agent: head SHA, check rollup, mergeability, review state, linked issues,
+# whether commits landed after the AI first-pass verdict, and who last spoke.
+#
+# Env: REPO (owner/name), GH_TOKEN. Writes to $OUT_DIR (default /tmp/gh-aw/agent):
+#   open-prs.json     one record per open PR
+#   open-issues.json  one record per open issue
+#   queue-stats.json  repo-level counts
+set -euo pipefail
+
+OUT_DIR="${OUT_DIR:-/tmp/gh-aw/agent}"
+OWNER="${REPO%%/*}"
+NAME="${REPO##*/}"
+
+mkdir -p "$OUT_DIR"
+
+PR_QUERY='
+query($owner: String!, $name: String!, $endCursor: String) {
+  repository(owner: $owner, name: $name) {
+    pullRequests(states: OPEN, first: 40, after: $endCursor, orderBy: {field: UPDATED_AT, direction: DESC}) {
+      pageInfo { hasNextPage endCursor }
+      nodes {
+        number title url body createdAt updatedAt isDraft
+        author { login }
+        authorAssociation
+        additions deletions changedFiles
+        mergeable
+        reviewDecision
+        headRefOid
+        labels(first: 20) { nodes { name } }
+        files(first: 25) { nodes { path } }
+        closingIssuesReferences(first: 5) { nodes { number } }
+        reviewRequests(first: 10) {
+          nodes { requestedReviewer { ... on User { login } ... on Team { name } } }
+        }
+        reviews(last: 20) { nodes { state submittedAt author { login } } }
+        comments(last: 25) { nodes { createdAt authorAssociation body author { login } } }
+        commits(last: 1) {
+          nodes {
+            commit {
+              committedDate
+              statusCheckRollup {
+                state
+                contexts(first: 60) {
+                  nodes {
+                    ... on CheckRun { name conclusion status }
+                    ... on StatusContext { context state }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}'
+
+ISSUE_QUERY='
+query($owner: String!, $name: String!, $endCursor: String) {
+  repository(owner: $owner, name: $name) {
+    issues(states: OPEN, first: 50, after: $endCursor, orderBy: {field: UPDATED_AT, direction: DESC}) {
+      pageInfo { hasNextPage endCursor }
+      nodes {
+        number title url body createdAt updatedAt
+        author { login }
+        authorAssociation
+        labels(first: 20) { nodes { name } }
+        assignees(first: 5) { nodes { login } }
+        comments(last: 10) { nodes { createdAt authorAssociation body author { login } } }
+      }
+    }
+  }
+}'
+
+# Bodies and comments are untrusted input: strip control characters, collapse
+# whitespace, truncate. Shared by both transforms below.
+read -r -d '' HELPERS <<'JQ' || true
+def clean($n): (. // "")
+  | gsub("[[:cntrl:]]"; " ") | gsub("\\s+"; " ") | sub("^ +"; "") | sub(" +$"; "")
+  | if (length > $n) then (.[0:$n] + " …") else . end;
+def days_since: (now - fromdateiso8601) / 86400 | floor;
+def team: (. == "OWNER" or . == "MEMBER" or . == "COLLABORATOR");
+def human_comments: [ .comments.nodes[]
+  | select((.author.login // "") | endswith("[bot]") | not)
+  | select((.author.login // "") | IN("netlify", "codecov", "vercel") | not) ];
+JQ
+
+PR_TRANSFORM='
+[ .[].data.repository.pullRequests.nodes[] ]
+| map(
+    (.commits.nodes[0].commit) as $head
+  | ($head.statusCheckRollup.contexts.nodes // []) as $checks
+  | ([ .comments.nodes[] | select((.body // "") | test("First-pass review — ")) ] | last) as $ai
+  | (human_comments) as $human
+  | {
+      number, title, url,
+      author: .author.login,
+      isTeam: (.authorAssociation | team),
+      isDraft, createdAt, updatedAt,
+      ageDays: (.createdAt | days_since),
+      idleDays: (.updatedAt | days_since),
+      bodyExcerpt: (.body | clean($bodyChars)),
+      labels: [ .labels.nodes[].name ],
+      size: { files: .changedFiles, additions: .additions, deletions: .deletions },
+      paths: ([ .files.nodes[].path ][0:15]),
+      headSha: (.headRefOid[0:7]),
+      lastCommitAt: $head.committedDate,
+      mergeable,
+      ci: {
+        state: ($head.statusCheckRollup.state // "NONE"),
+        failing: ([ $checks[]
+                    | select(((.conclusion // .state) | IN("FAILURE", "ERROR", "TIMED_OUT")))
+                    | (.name // .context) ] | unique),
+        pending: ([ $checks[]
+                    | select(.status == "IN_PROGRESS" or .status == "QUEUED" or .state == "PENDING") ] | length)
+      },
+      reviewDecision,
+      requestedReviewers: [ .reviewRequests.nodes[].requestedReviewer | (.login // .name) ],
+      reviews: [ .reviews.nodes[]
+                 | select(.state | IN("APPROVED", "CHANGES_REQUESTED"))
+                 | { author: .author.login, state, at: .submittedAt } ],
+      linkedIssues: [ .closingIssuesReferences.nodes[].number ],
+      aiReview: (if $ai == null then null else {
+        verdict: (if ($ai.body | test("Looks mergeable")) then "looks-mergeable"
+                  elif ($ai.body | test("Needs work")) then "needs-work"
+                  elif ($ai.body | test("Likely close")) then "likely-close"
+                  else "unparsed" end),
+        at: $ai.createdAt,
+        supersededByCommits: ($head.committedDate > $ai.createdAt),
+        excerpt: ($ai.body | clean($commentChars))
+      } end),
+      humanCommentCount: ($human | length),
+      lastHumanComment: ($human | last | if . == null then null else {
+        author: .author.login,
+        at: .createdAt,
+        isTeam: (.authorAssociation | team),
+        excerpt: (.body | clean($commentChars))
+      } end)
+    })
+| sort_by(.number)'
+
+ISSUE_TRANSFORM='
+[ .[].data.repository.issues.nodes[] ]
+| map(
+    (human_comments) as $human
+  | {
+      number, title, url,
+      author: .author.login,
+      isTeam: (.authorAssociation | team),
+      createdAt, updatedAt,
+      ageDays: (.createdAt | days_since),
+      idleDays: (.updatedAt | days_since),
+      bodyExcerpt: (.body | clean($bodyChars)),
+      labels: [ .labels.nodes[].name ],
+      assignees: [ .assignees.nodes[].login ],
+      humanCommentCount: ($human | length),
+      answeredByTeam: ([ $human[] | select(.authorAssociation | team) ] | length > 0),
+      lastHumanComment: ($human | last | if . == null then null else {
+        author: .author.login,
+        at: .createdAt,
+        isTeam: (.authorAssociation | team),
+        excerpt: (.body | clean($commentChars))
+      } end)
+    })
+| sort_by(.number)'
+
+collect() {
+  gh api graphql --paginate -F owner="$OWNER" -F name="$NAME" -f query="$1" \
+    | jq -s --argjson bodyChars 600 --argjson commentChars 400 "$HELPERS $2"
+}
+
+collect "$PR_QUERY" "$PR_TRANSFORM" > "$OUT_DIR/open-prs.json"
+collect "$ISSUE_QUERY" "$ISSUE_TRANSFORM" > "$OUT_DIR/open-issues.json"
+
+# GitHub computes mergeability lazily, so the first read of `mergeable` is mostly
+# UNKNOWN — the query itself is what schedules the computation. Ask again.
+if jq -e 'any(.[]; .mergeable == "UNKNOWN")' "$OUT_DIR/open-prs.json" > /dev/null; then
+  sleep 20
+  gh api graphql --paginate -F owner="$OWNER" -F name="$NAME" -f query='
+    query($owner: String!, $name: String!, $endCursor: String) {
+      repository(owner: $owner, name: $name) {
+        pullRequests(states: OPEN, first: 100, after: $endCursor) {
+          pageInfo { hasNextPage endCursor }
+          nodes { number mergeable }
+        }
+      }
+    }' \
+    | jq -s '[ .[].data.repository.pullRequests.nodes[] ] | INDEX(.number | tostring)' \
+      > "$OUT_DIR/mergeable.json"
+  jq --slurpfile fresh "$OUT_DIR/mergeable.json" '
+    map(. + { mergeable: ($fresh[0][.number | tostring].mergeable // .mergeable) })
+  ' "$OUT_DIR/open-prs.json" > "$OUT_DIR/open-prs.tmp.json"
+  mv "$OUT_DIR/open-prs.tmp.json" "$OUT_DIR/open-prs.json"
+  rm -f "$OUT_DIR/mergeable.json"
+fi
+
+jq -n \
+  --slurpfile prs "$OUT_DIR/open-prs.json" \
+  --slurpfile issues "$OUT_DIR/open-issues.json" \
+  '{
+     openPRs: ($prs[0] | length),
+     openPRsNonDraft: ($prs[0] | map(select(.isDraft | not)) | length),
+     openIssues: ($issues[0] | length),
+     issuesAwaitingTeamReply: ($issues[0] | map(select(.answeredByTeam | not)) | length),
+     prsWithFailingChecks: ($prs[0] | map(select(.ci.failing | length > 0)) | length),
+     prsConflicting: ($prs[0] | map(select(.mergeable == "CONFLICTING")) | length)
+   }' > "$OUT_DIR/queue-stats.json"
+
+echo "Collected $(jq length "$OUT_DIR/open-prs.json") PRs, $(jq length "$OUT_DIR/open-issues.json") issues"
+jq -c . "$OUT_DIR/queue-stats.json"
