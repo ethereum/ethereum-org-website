@@ -97,7 +97,7 @@ Es posible derivar nuevas claves públicas a partir de tu clave privada, pero no
 
 Necesitas una clave privada para firmar mensajes y transacciones que generan una firma. Otros pueden entonces tomar la firma para derivar tu clave pública, demostrando la autoría del mensaje. En tu aplicación, puedes usar una biblioteca de JavaScript para enviar transacciones a la red.
 
-## Cuentas de contrato
+## Cuentas de contrato {#contract-accounts}
 
 Las cuentas de contrato también tienen una dirección hexadecimal de 42 caracteres:
 

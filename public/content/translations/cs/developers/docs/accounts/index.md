@@ -97,7 +97,7 @@ Z vašeho soukromého klíče je možné odvodit nové veřejné klíče, ale z 
 
 K podepisování zpráv a transakcí, jejichž výstupem je podpis, potřebujete soukromý klíč. Ostatní pak mohou vzít podpis a odvodit váš veřejný klíč, čímž se prokáže autor zprávy. Ve své aplikaci můžete k odesílání transakcí do sítě použít knihovnu JavaScript.
 
-## Kontraktové účty
+## Kontraktové účty {#contract-accounts}
 
 Kontraktové účty mají také 42znakovou hexadecimální adresu:
 

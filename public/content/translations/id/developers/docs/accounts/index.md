@@ -97,7 +97,7 @@ Dimungkinkan untuk menurunkan kunci publik baru dari kunci privat Anda, tetapi A
 
 Anda memerlukan kunci privat untuk menandatangani pesan dan transaksi yang menghasilkan tanda tangan. Orang lain kemudian dapat mengambil tanda tangan tersebut untuk menurunkan kunci publik Anda, membuktikan pembuat pesan tersebut. Dalam aplikasi Anda, Anda dapat menggunakan Pustaka JavaScript untuk mengirim transaksi ke jaringan.
 
-## Akun kontrak
+## Akun kontrak {#contract-accounts}
 
 Akun kontrak juga memiliki alamat heksadesimal 42 karakter:
 

@@ -1,6 +1,6 @@
 ---
-title: Chuỗi Plasma
-description: Giới thiệu về các chuỗi Plasma như một giải pháp mở rộng quy mô hiện đang được cộng đồng Ethereum sử dụng.
+title: "Chuỗi Plasma"
+description: "Giới thiệu về các chuỗi Plasma như một giải pháp mở rộng quy mô hiện đang được cộng đồng Ethereum sử dụng."
 lang: vi
 incomplete: true
 sidebarDepth: 3

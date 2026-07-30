@@ -97,7 +97,7 @@ Es ist möglich, neue öffentliche Schlüssel aus Ihrem privaten Schlüssel abzu
 
 Sie benötigen einen privaten Schlüssel, um Nachrichten und Transaktionen zu signieren, die eine Signatur ausgeben. Andere können dann die Signatur nehmen, um Ihren öffentlichen Schlüssel abzuleiten und so den Autor der Nachricht zu beweisen. In Ihrer Anwendung können Sie eine JavaScript-Bibliothek verwenden, um Transaktionen an das Netzwerk zu senden.
 
-## Contract-Konten
+## Contract-Konten {#contract-accounts}
 
 Contract-Konten haben ebenfalls eine 42-stellige hexadezimale Adresse:
 

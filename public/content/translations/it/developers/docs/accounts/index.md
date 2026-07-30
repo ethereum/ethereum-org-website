@@ -97,7 +97,7 @@ Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 
 Hai bisogno di una chiave privata per firmare messaggi e transazioni che producono una firma. Altri possono quindi prendere la firma per derivare la tua chiave pubblica, dimostrando l'autore del messaggio. Nella tua applicazione, puoi utilizzare una libreria JavaScript per inviare transazioni alla rete.
 
-## Account di contratto
+## Account di contratto {#contract-accounts}
 
 Anche gli account di contratto hanno un indirizzo esadecimale di 42 caratteri:
 
