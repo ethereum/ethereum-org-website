@@ -97,16 +97,15 @@ Możliwe jest wyprowadzenie nowych kluczy publicznych z klucza prywatnego, ale n
 
 Potrzebujesz klucza prywatnego do podpisywania wiadomości i transakcji, co generuje podpis. Inni mogą następnie użyć tego podpisu do wyprowadzenia Twojego klucza publicznego, udowadniając w ten sposób autora wiadomości. W swojej aplikacji możesz użyć biblioteki JavaScript do wysyłania transakcji do sieci.
 
-## Konta kontraktów {#contract-accounts}
-
 Konta kontraktów również mają 42-znakowy adres szesnastkowy:
 
 Przykład:
 
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
-Adres kontraktu jest zazwyczaj nadawany, gdy kontrakt jest wdrażany na blockchainie Ethereum. Adres pochodzi od adresu twórcy i liczby transakcji wysłanych z tego adresu („nonce”).
+Adres kontraktu jest zazwyczaj nadawany, gdy kontrakt jest wdrażany na blockchainie Ethereum. Adres ten jest generowany na podstawie adresu twórcy oraz liczby transakcji wysłanych z tego adresu („nonce”). W ten sposób operacja `CREATE` wyprowadza adres.
 
+Kontrakty mogą być również wdrażane za pomocą [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), które wyprowadza adres na podstawie adresu twórcy, wartości wybranej przez twórcę („sól”) oraz hasha kodu tworzenia kontraktu. W tym procesie nie bierze udziału nonce, więc adres może zostać obliczony zanim kontrakt powstanie i pozostaje taki sam, niezależnie od tego, ile innych transakcji twórca wyśle w międzyczasie. Dzięki temu możliwe jest odwoływanie się do kontraktu, który nie został jeszcze wdrożony.
 ## Klucze walidatora {#validators-keys}
 
 W Ethereum istnieje również inny rodzaj klucza, wprowadzony, gdy Ethereum przeszło z konsensusu opartego na dowodzie pracy (PoW) na dowód stawki (PoS). Są to klucze „BLS” i służą do identyfikacji walidatorów. Klucze te mogą być wydajnie agregowane w celu zmniejszenia przepustowości wymaganej przez sieć do osiągnięcia konsensusu. Bez tej agregacji kluczy minimalna stawka dla walidatora byłaby znacznie wyższa.
