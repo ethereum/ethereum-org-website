@@ -205,7 +205,8 @@ jq -n \
      openPRs: ($prs[0] | length),
      openPRsNonDraft: ($prs[0] | map(select(.isDraft | not)) | length),
      openIssues: ($issues[0] | length),
-     issuesAwaitingTeamReply: ($issues[0] | map(select(.answeredByTeam | not)) | length),
+     externalIssuesAwaitingTeamReply:
+       ($issues[0] | map(select((.isTeam | not) and (.answeredByTeam | not))) | length),
      prsWithFailingChecks: ($prs[0] | map(select(.ci.failing | length > 0)) | length),
      prsConflicting: ($prs[0] | map(select(.mergeable == "CONFLICTING")) | length)
    }' > "$OUT_DIR/queue-stats.json"

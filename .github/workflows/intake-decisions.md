@@ -128,7 +128,7 @@ Field notes that change how you read the data:
 - `mergeable: "CONFLICTING"` — nobody can merge this until it is rebased, whatever else looks fine.
 - `aiReview` — the first-pass reviewer's verdict. It is **one input to readiness, never the readiness state itself**. `supersededByCommits: true` means commits landed after the verdict was written, so it describes code that no longer exists — treat that verdict as absent.
 - `isTeam` — GitHub's author association, already resolved. Use it; do not guess from handles.
-- `answeredByTeam: false` on an issue — nobody from the team has replied yet.
+- `answeredByTeam: false` on an issue — no team member has commented. On a team-authored issue that is normal; the "unanswered external contributor" signal is `isTeam: false` **and** `answeredByTeam: false`.
 - `idleDays` — days since anything happened, which is usually more telling than `ageDays`.
 
 You have read-only access. Do not label, comment on, or close anything; the only thing this workflow emits is the digest.
@@ -216,7 +216,7 @@ Discord-flavored markdown, masked links (`/pull/<n>` for PRs, `/issues/<n>` for 
 **🔄 Since the last digest**
 - <new / resolved / repeated items, one line each, max 3>
 
-**📊 Queue** — <P> open PRs (<c> conflicting, <f> failing checks) · <I> open issues (<u> awaiting a first team reply) · [full queue](https://github.com/${{ github.repository }}/pulls)
+**📊 Queue** — <P> open PRs (<c> conflicting, <f> failing checks) · <I> open issues (<u> external, no team reply) · [full queue](https://github.com/${{ github.repository }}/pulls)
 ```
 
 Rules:
@@ -226,7 +226,7 @@ Rules:
 - Every card ends in an arrow line naming an action a specific person can take. If you cannot write that line, the card does not belong in the digest.
 - State recommendations as recommendations, with the confidence attached. Do not hedge them into uselessness, and do not present them as decisions already made.
 - Never reproduce the queue. The `full queue` link covers everything you left out.
-- If you are over budget, drop whole sections bottom-up: deltas, then suggested closures, then waiting-on, then batches. Never trim "Decide today".
+- If you are over budget, tighten the prose first — the evidence and arrow lines are usually a third longer than they need to be, and every card costs ~120 characters in link URLs alone. Only once they are tight, drop whole sections bottom-up: deltas, then suggested closures, then waiting-on, then batches. Never trim "Decide today".
 
 ## Step 6 — emit
 
