@@ -97,7 +97,7 @@ Dimungkinkan untuk menurunkan kunci publik baru dari kunci privat Anda, tetapi A
 
 Anda memerlukan kunci privat untuk menandatangani pesan dan transaksi yang menghasilkan tanda tangan. Orang lain kemudian dapat mengambil tanda tangan tersebut untuk menurunkan kunci publik Anda, membuktikan pembuat pesan tersebut. Dalam aplikasi Anda, Anda dapat menggunakan Pustaka JavaScript untuk mengirim transaksi ke jaringan.
 
-## Akun kontrak {#contract-accounts}
+## Akun kontrak
 
 Akun kontrak juga memiliki alamat heksadesimal 42 karakter:
 
@@ -105,8 +105,9 @@ Contoh:
 
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
-Alamat kontrak biasanya diberikan saat sebuah kontrak diterapkan ke rantai blok Ethereum. Alamat tersebut berasal dari alamat pembuat dan jumlah transaksi yang dikirim dari alamat tersebut ("nonce").
+Alamat kontrak biasanya diberikan saat sebuah kontrak diterapkan ke rantai blok Ethereum. Alamat tersebut berasal dari alamat pembuat dan jumlah transaksi yang dikirim dari alamat tersebut ("nonce"). Beginilah cara operasi `CREATE` menurunkan sebuah alamat.
 
+Kontrak juga dapat diterapkan dengan [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), yang menurunkan alamat dari alamat pembuat, nilai yang dipilih pembuat ("salt"), dan hash dari kode pembuatan kontrak. Tidak melibatkan nonce, sehingga alamat dapat dihitung sebelum kontrak ada dan tetap sama tidak peduli berapa banyak transaksi lain yang dikirim pembuat sementara itu. Hal ini memungkinkan untuk merujuk pada kontrak yang belum diterapkan.
 ## Kunci validator {#validators-keys}
 
 Ada juga jenis kunci lain di Ethereum, yang diperkenalkan saat Ethereum beralih dari konsensus berbasis Bukti Kerja (PoW) ke Bukti Kepemilikan (PoS). Ini adalah kunci 'BLS' dan digunakan untuk mengidentifikasi validator. Kunci-kunci ini dapat diagregasi secara efisien untuk mengurangi bandwidth yang diperlukan jaringan untuk mencapai konsensus. Tanpa agregasi kunci ini, stake minimum untuk seorang validator akan jauh lebih tinggi.
