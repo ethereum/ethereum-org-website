@@ -62,7 +62,7 @@ Format (keep the visible part under ~250 words; put detail in a `<details>` bloc
 </details>
 ```
 
-<!-- Coupling: .github/scripts/intake-evidence.sh parses this rendered header — it matches "First-pass review — " and then each verdict wording to build `aiReview.verdict` for the intake digest. Change the header format or any verdict wording and that script must be updated too, or the detection silently becomes always-false. -->
+<!-- Coupling: .github/scripts/intake-evidence.sh parses this rendered header — it matches the full "First-pass review — <emoji> <wording>" line, emoji included, to build `aiReview.verdict` for the intake digest. Change the header format, an emoji, or any verdict wording and that script must be updated too, or the detection silently becomes always-false. -->
 
 `<VERDICT>` is exactly one of:
 - `✅ Looks mergeable` — scope is sound, conventions pass, no failing checks (CI may still be running)

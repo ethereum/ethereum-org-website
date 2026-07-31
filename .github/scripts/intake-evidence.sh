@@ -37,7 +37,7 @@ query($owner: String!, $name: String!, $endCursor: String) {
           nodes { requestedReviewer { ... on User { login } ... on Team { name } } }
         }
         reviews(last: 20) { nodes { state submittedAt author { login } } }
-        comments(last: 25) { nodes { createdAt authorAssociation body author { login } } }
+        comments(last: 25) { nodes { createdAt authorAssociation body author { login __typename } } }
         commits(last: 1) {
           nodes {
             commit {
@@ -70,7 +70,7 @@ query($owner: String!, $name: String!, $endCursor: String) {
         authorAssociation
         labels(first: 20) { nodes { name } }
         assignees(first: 5) { nodes { login } }
-        comments(last: 10) { nodes { createdAt authorAssociation body author { login } } }
+        comments(last: 10) { nodes { createdAt authorAssociation body author { login __typename } } }
       }
     }
   }
@@ -78,15 +78,18 @@ query($owner: String!, $name: String!, $endCursor: String) {
 
 # Bodies and comments are untrusted input: strip control characters, collapse
 # whitespace, truncate. Shared by both transforms below.
+#
+# GraphQL reports bot logins without the REST "[bot]" suffix (`github-actions`,
+# not `github-actions[bot]`), so author type is the only reliable discriminator.
 read -r -d '' HELPERS <<'JQ' || true
 def clean($n): (. // "")
   | gsub("[[:cntrl:]]"; " ") | gsub("\\s+"; " ") | sub("^ +"; "") | sub(" +$"; "")
   | if (length > $n) then (.[0:$n] + " …") else . end;
 def days_since: (now - fromdateiso8601) / 86400 | floor;
 def team: (. == "OWNER" or . == "MEMBER" or . == "COLLABORATOR");
-def human_comments: [ .comments.nodes[]
-  | select((.author.login // "") | endswith("[bot]") | not)
-  | select((.author.login // "") | IN("netlify", "codecov", "vercel") | not) ];
+def is_bot: ((.author.__typename // "") == "Bot")
+  or ((.author.login // "") | IN("netlify", "codecov", "vercel"));
+def human_comments: [ .comments.nodes[] | select(is_bot | not) ];
 JQ
 
 PR_TRANSFORM='
@@ -94,7 +97,9 @@ PR_TRANSFORM='
 | map(
     (.commits.nodes[0].commit) as $head
   | ($head.statusCheckRollup.contexts.nodes // []) as $checks
-  | ([ .comments.nodes[] | select((.body // "") | test("First-pass review — ")) ] | last) as $ai
+  | ([ .comments.nodes[]
+       | select(is_bot)
+       | select((.body // "") | test("First-pass review — ")) ] | last) as $ai
   | (human_comments) as $human
   | {
       number, title, url,
@@ -125,9 +130,9 @@ PR_TRANSFORM='
                  | { author: .author.login, state, at: .submittedAt } ],
       linkedIssues: [ .closingIssuesReferences.nodes[].number ],
       aiReview: (if $ai == null then null else {
-        verdict: (if ($ai.body | test("Looks mergeable")) then "looks-mergeable"
-                  elif ($ai.body | test("Needs work")) then "needs-work"
-                  elif ($ai.body | test("Likely close")) then "likely-close"
+        verdict: (if ($ai.body | test("First-pass review — ✅ Looks mergeable")) then "looks-mergeable"
+                  elif ($ai.body | test("First-pass review — 🔧 Needs work")) then "needs-work"
+                  elif ($ai.body | test("First-pass review — 🗑️ Likely close")) then "likely-close"
                   else "unparsed" end),
         at: $ai.createdAt,
         supersededByCommits: ($head.committedDate > $ai.createdAt),
