@@ -198,6 +198,26 @@ if jq -e 'any(.[]; .mergeable == "UNKNOWN")' "$OUT_DIR/open-prs.json" > /dev/nul
   rm -f "$OUT_DIR/mergeable.json"
 fi
 
+# One line per open item, small enough to read whole. The detail files are big
+# enough that an agent reading them can truncate and never know what it skipped,
+# so candidate selection has to start from an index that covers 100% of the queue.
+jq -s '{
+  prs: (.[0] | map({
+    n: .number, t: (.title[0:70]), a: .author, team: .isTeam, draft: .isDraft,
+    age: .ageDays, idle: .idleDays, merge: .mergeable, ci: .ci.state,
+    fail: (.ci.failing | length), rd: .reviewDecision,
+    ai: (if .aiReview == null then null
+         elif .aiReview.supersededByCommits then (.aiReview.verdict + "/stale")
+         else .aiReview.verdict end),
+    files: .size.files, linked: .linkedIssues, labels: .labels
+  })),
+  issues: (.[1] | map({
+    n: .number, t: (.title[0:70]), a: .author, team: .isTeam,
+    age: .ageDays, idle: .idleDays, comments: .humanCommentCount,
+    answered: .answeredByTeam, assigned: (.assignees | length > 0), labels: .labels
+  }))
+}' "$OUT_DIR/open-prs.json" "$OUT_DIR/open-issues.json" > "$OUT_DIR/queue-index.json"
+
 jq -n \
   --slurpfile prs "$OUT_DIR/open-prs.json" \
   --slurpfile issues "$OUT_DIR/open-issues.json" \
