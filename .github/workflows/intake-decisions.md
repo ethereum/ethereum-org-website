@@ -159,7 +159,9 @@ Build a card for each candidate:
   "owner_lane": "technical-content",
   "confidence": 0.91,
   "evidence": ["Required frontmatter is missing", "Deploy preview failed"],
-  "analyzed_sha": "6126795"
+  "analyzed_sha": "6126795",
+  "first_seen": "2026-07-29",
+  "runs_seen": 3
 }
 ```
 
@@ -172,6 +174,7 @@ Build a card for each candidate:
 - `effort_to_unblock` `small|medium|large` — the maintainer's cost, not the contributor's.
 - `evidence` — two to four facts taken from the input files. Never invent one, and prefer the deterministic fields over prose.
 - `analyzed_sha` — the PR's `headSha`, `null` for issues. A card is only valid for the SHA it was built from.
+- `first_seen` / `runs_seen` — carried forward from `previous-cards.json` and incremented, so the count survives even though only one run's cards are handed to you. Set them to today and `1` when the item is new, **or when the recommendation changed** — a different recommendation is a new decision, not an old one repeating.
 
 Abstain rather than guess: when a PR is too large or too specialized to judge from the evidence (say, >1000 changed lines of code, or a `translation` lane diff), the honest card is `needs_domain_review` with the reason, not a fabricated verdict.
 
@@ -189,7 +192,16 @@ Publish at most five cards across "Decide today" and "Verify, then merge" combin
 
 ## Step 4 — deltas
 
-If `previous-cards.json` exists, report only what changed: cards that are new since it, items that left the digest (merged, closed, or answered), and any item appearing for the third-or-more run with an unchanged recommendation — that last one is a signal the recommendation is being ignored or is wrong, and it is worth saying so plainly. Skip the section entirely on the first run.
+Skip this step entirely on the first run. Otherwise match today's cards against `previous-cards.json` by item, and treat each one by what actually changed:
+
+- **New** — not in the previous cards. `runs_seen: 1`. It competes for a card slot normally.
+- **Changed** — the recommendation, state, or blocking evidence moved (checks went red, commits superseded the verdict, someone replied, it started conflicting). Reset `runs_seen` to 1 and give it a card: this is news.
+- **Unchanged** — same item, same recommendation, same blockers. Increment `runs_seen`. **It does not get a card again.** It drops to a single line under "Carried over", freeing its slot for something the team has not seen.
+- **Gone** — in the previous cards, absent today because it merged, closed, or was answered. One delta line, then it is finished with.
+
+A maintainer who reads this every morning must never see the same card twice. Repeating an unactioned item verbatim is how the previous digest became wallpaper: if the reader has already decided not to act, restating the decision in full changes nothing and costs the space where a new decision would have gone.
+
+At `runs_seen` of 3 or more, stop restating and escalate instead. Three mornings without action means the recommendation is being ignored, is wrong, or is aimed at the wrong person — say which you think it is, in the carried-over line, and name a different actor or a different disposition if you have one. That judgment is worth more than a fourth restatement.
 
 ## Step 5 — write the digest
 
@@ -215,11 +227,15 @@ Discord-flavored markdown, masked links (`/pull/<n>` for PRs, `/issues/<n>` for 
 **⏳ Waiting on others**
 - [#<n>](<url>) — <actor>: <the exact outstanding ask>, <k>d ago
 
+**🔁 Carried over**
+- [#<n>](<url>) — day <runs_seen>: <the unchanged ask, in one clause>
+- [#<n>](<url>) — **day <runs_seen>, still nothing**: <why you think it is stuck, and what you would change about the ask>
+
 **🗑️ Suggested closures**
 - [#<n>](<url>) — <category>: <evidence> (<confidence>)
 
 **🔄 Since the last digest**
-- <new / resolved / repeated items, one line each, max 3>
+- <resolved and newly-arrived items, one line each, max 3>
 
 **📊 Queue** — <P> open PRs (<c> conflicting, <f> failing checks) · <I> open issues (<u> external, no team reply) · [full queue](https://github.com/${{ github.repository }}/pulls)
 ```
@@ -227,11 +243,12 @@ Discord-flavored markdown, masked links (`/pull/<n>` for PRs, `/issues/<n>` for 
 Rules:
 
 - Omit any section whose list is empty, header included. The queue line is the only one that always appears.
-- Caps: 5 cards total across the two card sections, 2 batches, 3 waiting-on entries, 3 suggested closures, 3 delta lines.
+- Caps: 5 cards total across the two card sections, 2 batches, 3 waiting-on entries, 4 carried-over lines, 3 suggested closures, 3 delta lines.
+- Carried-over lines never consume a card slot — that is the point of the section. If fewer than five items deserve cards today, publish fewer; do not promote a carried-over item back to a card just to fill the space.
 - Every card ends in an arrow line naming an action a specific person can take. If you cannot write that line, the card does not belong in the digest.
 - State recommendations as recommendations, with the confidence attached. Do not hedge them into uselessness, and do not present them as decisions already made.
 - Never reproduce the queue. The `full queue` link covers everything you left out.
-- If you are over budget, tighten the prose first — the evidence and arrow lines are usually a third longer than they need to be, and every card costs ~120 characters in link URLs alone. Only once they are tight, drop whole sections bottom-up: deltas, then suggested closures, then waiting-on, then batches. Never trim "Decide today".
+- If you are over budget, tighten the prose first — the evidence and arrow lines are usually a third longer than they need to be, and every card costs ~120 characters in link URLs alone. Only once they are tight, drop whole sections bottom-up: deltas, then suggested closures, then carried-over, then waiting-on, then batches. Never trim "Decide today", and never drop a carried-over line at `runs_seen` 3 or more — an escalation is the one thing in that section worth the characters.
 
 ## Step 6 — emit
 

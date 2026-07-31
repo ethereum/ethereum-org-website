@@ -26,7 +26,9 @@ Mergeability is read twice: GitHub computes it lazily, so the first query mostly
 
 **2. The analyst prompt** builds a decision card per candidate (intent, state, recommended disposition, the human decision still required, waiting-on actor, impact, effort, risk, related items, lane, confidence, evidence, analyzed SHA), clusters related work, ranks by *human decision required × impact × ease of action*, and publishes at most five cards. The AI verdict is one input to readiness, never the readiness state itself.
 
-**3. Deltas.** The cards are cached (`intake-cards-<run id>`, restored by prefix) and read back on the next run, so the digest can report what is new, what left the queue, and what keeps reappearing with an unchanged recommendation. The first run — and any run after the 7-day cache eviction — simply omits the section.
+**3. Deltas, and not repeating yourself.** The cards are cached (`intake-cards-<run id>`, restored by prefix) and read back on the next run. An item whose recommendation has not changed does not get a card a second time — it drops to a one-line "Carried over" entry, so the slot goes to something the team has not already seen. At three runs without action the line stops restating the ask and says why it thinks the item is stuck.
+
+Only one prior run is handed to the agent, so `runs_seen` and `first_seen` live inside the cards and are carried forward each run; that is what makes "third morning in a row" knowable at all. A changed recommendation resets the count, because that is new news rather than an old ask repeating. The first run — and any run after the 7-day cache eviction — omits all of this and starts clean.
 
 ## Promoting it out of shadow mode
 
