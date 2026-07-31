@@ -65,6 +65,8 @@
   "page-apps-info-creator": "Творець",
   "page-apps-info-last-updated": "Останнє оновлення",
   "page-apps-gallery-title": "Галерея",
+  "page-apps-gallery-screenshot-alt": "Скриншот {index} застосунку {appName}, що демонструє інтерфейс застосунку",
+  "page-apps-gallery-modal-title": "Скриншоти {appName}",
   "page-apps-more-apps-like-this": "Більше схожих застосунків",
   "page-apps-by-company": "від {company}",
   "page-apps-today": "Сьогодні",
