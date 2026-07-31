@@ -65,6 +65,8 @@
   "page-apps-info-creator": "సృష్టికర్త",
   "page-apps-info-last-updated": "చివరిగా అప్‌డేట్ చేయబడింది",
   "page-apps-gallery-title": "గ్యాలరీ",
+  "page-apps-gallery-screenshot-alt": "అప్లికేషన్ ఇంటర్‌ఫేస్‌ను చూపుతున్న {appName} యొక్క స్క్రీన్‌షాట్ {index}",
+  "page-apps-gallery-modal-title": "{appName} స్క్రీన్‌షాట్‌లు",
   "page-apps-more-apps-like-this": "ఇలాంటి మరిన్ని యాప్‌లు",
   "page-apps-by-company": "{company} ద్వారా",
   "page-apps-today": "ఈ రోజు",
