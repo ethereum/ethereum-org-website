@@ -2,7 +2,9 @@
 
 The weekday digest that turns the open queue into a short list of maintainer decisions, rather than a copy of GitHub's issue and PR lists.
 
-It runs as `intake-decisions.md` (gh-aw), currently **in shadow mode** alongside the existing `team-digest.md`. Shadow mode means it publishes to the workflow run summary and changes nothing else — no labels, no comments, no post to the team channel unless a webhook is explicitly configured.
+It runs as `intake-decisions.md` (gh-aw), weekday mornings at 07:00, posting to the team Discord channel via `DISCORD_INTAKE_WEBHOOK_URL` and to the workflow run summary. It replaces `team-digest.md`, which is deleted — the two would otherwise post to the same channel every morning.
+
+It reads only: the token is scoped `contents/issues/pull-requests: read`, so it cannot label, comment, or close anything regardless of what the prompt says.
 
 ## Why it exists
 
@@ -30,14 +32,15 @@ Mergeability is read twice: GitHub computes it lazily, so the first query mostly
 
 Only one prior run is handed to the agent, so `runs_seen` and `first_seen` live inside the cards and are carried forward each run; that is what makes "third morning in a row" knowable at all. A changed recommendation resets the count, because that is new news rather than an old ask repeating. The first run — and any run after the 7-day cache eviction — omits all of this and starts clean.
 
-## Promoting it out of shadow mode
+## Operating it
 
-1. Watch a few runs in the Actions run summary. The full card set, including cards that did not make the digest, is in the collapsed JSON block.
-2. To trial it in a side channel, set the `DISCORD_INTAKE_SHADOW_WEBHOOK_URL` secret. Without it the workflow posts nowhere.
-3. To cut over: point the workflow at `DISCORD_INTAKE_WEBHOOK_URL`, drop `(shadow)` from the workflow name, and delete `team-digest.md` and `team-digest.lock.yml`. Run `gh aw compile` after any edit.
+- `gh aw run intake-decisions` dispatches a run on demand. The scheduled trigger only fires on the default branch, so a run from a feature branch has to be dispatched manually.
+- The run summary carries the digest plus **every** card built, including the ones that did not make it — that collapsed JSON block is the place to check whether a ranking decision was reasonable.
+- To stop it posting while keeping the analysis, unset `DISCORD_INTAKE_WEBHOOK_URL`; the publish step skips and the run summary still gets written.
+- Run `gh aw compile` after editing the `.md`, and commit the regenerated `.lock.yml` with it.
 
 ## Known coupling
 
-The collector parses the reviewer's rendered verdict header (`First-pass review — <verdict>`). `shared/pr-review-core.md` carries a comment saying so. Changing the header wording without updating both consumers makes the detection silently always-false — which is how the original digest's readiness check would have degraded unnoticed.
+The collector parses the reviewer's rendered verdict header (`First-pass review — <verdict>`). `shared/pr-review-core.md` carries a comment saying so. Changing the header wording without updating the collector makes the detection silently always-false — which is how the original digest's readiness check would have degraded unnoticed.
 
 The next iterations make the reviewer and triager emit this card schema directly, so the digest becomes almost deterministic, and split "AI pre-triaged" from "human triaged" in the label lifecycle.

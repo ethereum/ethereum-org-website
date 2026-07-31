@@ -1,5 +1,5 @@
-# gh-aw-metadata: {"schema_version":"v4","frontmatter_hash":"8f9795816ffa52db30db5e1e57aff616885eb193f181be6d641145d8181fa4a9","body_hash":"3a99c9d21d83321bd9e41208dc53ad72a7c707e7dc2fcd159b2363ffdd15ec5d","compiler_version":"v0.81.6","strict":true,"agent_id":"claude","engine_versions":{"claude":"2.1.191"}}
-# gh-aw-manifest: {"version":1,"secrets":["ANTHROPIC_API_KEY","DISCORD_INTAKE_SHADOW_WEBHOOK_URL","GH_AW_GITHUB_MCP_SERVER_TOKEN","GH_AW_GITHUB_TOKEN","GITHUB_TOKEN"],"actions":[{"repo":"actions/cache/restore","sha":"27d5ce7f107fe9357f9df03efb73ab90386fccae","version":"v5.0.5"},{"repo":"actions/cache/save","sha":"27d5ce7f107fe9357f9df03efb73ab90386fccae","version":"v5.0.5"},{"repo":"actions/checkout","sha":"9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0","version":"v7.0.0"},{"repo":"actions/download-artifact","sha":"3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c","version":"v8.0.1"},{"repo":"actions/github-script","sha":"3a2844b7e9c422d3c10d287c895573f7108da1b3","version":"v9.0.0"},{"repo":"actions/setup-node","sha":"48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e","version":"v6.4.0"},{"repo":"actions/upload-artifact","sha":"043fb46d1a93c77aae656e7c1c64a875d1fc6a0a","version":"v7.0.1"},{"repo":"github/gh-aw-actions/setup","sha":"ba6380cc6e5be5d21677bebe04d52fb48e3abec7","version":"v0.81.6"}],"containers":[{"image":"ghcr.io/github/gh-aw-firewall/agent:0.27.11","digest":"sha256:979723c628182da7729333f2208bb249fd25ddee579645cf9a3892d681a929c7","pinned_image":"ghcr.io/github/gh-aw-firewall/agent:0.27.11@sha256:979723c628182da7729333f2208bb249fd25ddee579645cf9a3892d681a929c7"},{"image":"ghcr.io/github/gh-aw-firewall/api-proxy:0.27.11","digest":"sha256:807e4831999b44513b0a66e5859d478dc4da7ae74ab1918cec967d513f95bf9d","pinned_image":"ghcr.io/github/gh-aw-firewall/api-proxy:0.27.11@sha256:807e4831999b44513b0a66e5859d478dc4da7ae74ab1918cec967d513f95bf9d"},{"image":"ghcr.io/github/gh-aw-firewall/squid:0.27.11","digest":"sha256:ff27ea0525ad953a6adee28a5fbe9d2e22be47dbec755c15767af4ea3f91df7d","pinned_image":"ghcr.io/github/gh-aw-firewall/squid:0.27.11@sha256:ff27ea0525ad953a6adee28a5fbe9d2e22be47dbec755c15767af4ea3f91df7d"},{"image":"ghcr.io/github/gh-aw-mcpg:v0.3.30","digest":"sha256:35625d1a2269b1238606078c879f59a91cffc4ac33eb54bf39c6418822c1a8be","pinned_image":"ghcr.io/github/gh-aw-mcpg:v0.3.30@sha256:35625d1a2269b1238606078c879f59a91cffc4ac33eb54bf39c6418822c1a8be"},{"image":"ghcr.io/github/gh-aw-node","digest":"sha256:529d02eb970b1161aa25c593a9c3df57fdfad5a8add328cb3b6eccef66f3183b","pinned_image":"ghcr.io/github/gh-aw-node@sha256:529d02eb970b1161aa25c593a9c3df57fdfad5a8add328cb3b6eccef66f3183b"},{"image":"ghcr.io/github/github-mcp-server:v1.4.0","digest":"sha256:2afb26356481d1a350e14544a6e160f7f7ec1561a1ea309b823665abf0309036","pinned_image":"ghcr.io/github/github-mcp-server:v1.4.0@sha256:2afb26356481d1a350e14544a6e160f7f7ec1561a1ea309b823665abf0309036"}]}
+# gh-aw-metadata: {"schema_version":"v4","frontmatter_hash":"aa650114db1f277502ebe8bafa0c619a078cea057f76e2849411d0dab5fba849","body_hash":"3a99c9d21d83321bd9e41208dc53ad72a7c707e7dc2fcd159b2363ffdd15ec5d","compiler_version":"v0.81.6","strict":true,"agent_id":"claude","engine_versions":{"claude":"2.1.191"}}
+# gh-aw-manifest: {"version":1,"secrets":["ANTHROPIC_API_KEY","DISCORD_INTAKE_WEBHOOK_URL","GH_AW_GITHUB_MCP_SERVER_TOKEN","GH_AW_GITHUB_TOKEN","GITHUB_TOKEN"],"actions":[{"repo":"actions/cache/restore","sha":"27d5ce7f107fe9357f9df03efb73ab90386fccae","version":"v5.0.5"},{"repo":"actions/cache/save","sha":"27d5ce7f107fe9357f9df03efb73ab90386fccae","version":"v5.0.5"},{"repo":"actions/checkout","sha":"9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0","version":"v7.0.0"},{"repo":"actions/download-artifact","sha":"3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c","version":"v8.0.1"},{"repo":"actions/github-script","sha":"3a2844b7e9c422d3c10d287c895573f7108da1b3","version":"v9.0.0"},{"repo":"actions/setup-node","sha":"48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e","version":"v6.4.0"},{"repo":"actions/upload-artifact","sha":"043fb46d1a93c77aae656e7c1c64a875d1fc6a0a","version":"v7.0.1"},{"repo":"github/gh-aw-actions/setup","sha":"ba6380cc6e5be5d21677bebe04d52fb48e3abec7","version":"v0.81.6"}],"containers":[{"image":"ghcr.io/github/gh-aw-firewall/agent:0.27.11","digest":"sha256:979723c628182da7729333f2208bb249fd25ddee579645cf9a3892d681a929c7","pinned_image":"ghcr.io/github/gh-aw-firewall/agent:0.27.11@sha256:979723c628182da7729333f2208bb249fd25ddee579645cf9a3892d681a929c7"},{"image":"ghcr.io/github/gh-aw-firewall/api-proxy:0.27.11","digest":"sha256:807e4831999b44513b0a66e5859d478dc4da7ae74ab1918cec967d513f95bf9d","pinned_image":"ghcr.io/github/gh-aw-firewall/api-proxy:0.27.11@sha256:807e4831999b44513b0a66e5859d478dc4da7ae74ab1918cec967d513f95bf9d"},{"image":"ghcr.io/github/gh-aw-firewall/squid:0.27.11","digest":"sha256:ff27ea0525ad953a6adee28a5fbe9d2e22be47dbec755c15767af4ea3f91df7d","pinned_image":"ghcr.io/github/gh-aw-firewall/squid:0.27.11@sha256:ff27ea0525ad953a6adee28a5fbe9d2e22be47dbec755c15767af4ea3f91df7d"},{"image":"ghcr.io/github/gh-aw-mcpg:v0.3.30","digest":"sha256:35625d1a2269b1238606078c879f59a91cffc4ac33eb54bf39c6418822c1a8be","pinned_image":"ghcr.io/github/gh-aw-mcpg:v0.3.30@sha256:35625d1a2269b1238606078c879f59a91cffc4ac33eb54bf39c6418822c1a8be"},{"image":"ghcr.io/github/gh-aw-node","digest":"sha256:529d02eb970b1161aa25c593a9c3df57fdfad5a8add328cb3b6eccef66f3183b","pinned_image":"ghcr.io/github/gh-aw-node@sha256:529d02eb970b1161aa25c593a9c3df57fdfad5a8add328cb3b6eccef66f3183b"},{"image":"ghcr.io/github/github-mcp-server:v1.4.0","digest":"sha256:2afb26356481d1a350e14544a6e160f7f7ec1561a1ea309b823665abf0309036","pinned_image":"ghcr.io/github/github-mcp-server:v1.4.0@sha256:2afb26356481d1a350e14544a6e160f7f7ec1561a1ea309b823665abf0309036"}]}
 # This file was automatically generated by gh-aw (v0.81.6). DO NOT EDIT. To debug this workflow, load the skill at https://github.com/github/gh-aw/blob/main/debug.md
 #
 #    ___                   _   _      
@@ -23,11 +23,11 @@
 #
 # For more information: https://github.github.com/gh-aw/introduction/overview/
 #
-# Weekday-morning decision digest — ranked maintainer decisions with recommendations, review batches, and deltas, built from a deterministic evidence collector
+# Weekday-morning decision digest — ranked maintainer decisions with recommendations, review batches, and deltas, built from a deterministic evidence collector. Replaces the Intake Digest.
 #
 # Secrets used:
 #   - ANTHROPIC_API_KEY
-#   - DISCORD_INTAKE_SHADOW_WEBHOOK_URL
+#   - DISCORD_INTAKE_WEBHOOK_URL
 #   - GH_AW_GITHUB_MCP_SERVER_TOKEN
 #   - GH_AW_GITHUB_TOKEN
 #   - GITHUB_TOKEN
@@ -51,11 +51,11 @@
 #   - ghcr.io/github/gh-aw-node@sha256:529d02eb970b1161aa25c593a9c3df57fdfad5a8add328cb3b6eccef66f3183b
 #   - ghcr.io/github/github-mcp-server:v1.4.0@sha256:2afb26356481d1a350e14544a6e160f7f7ec1561a1ea309b823665abf0309036
 
-name: "Intake Decisions (shadow)"
+name: "Intake Decisions"
 on:
   schedule:
-  - cron: "18 7 * * 1-5"
-    # Friendly format: daily around 07:20 on weekdays (scattered)
+  - cron: "53 6 * * 1-5"
+    # Friendly format: daily around 07:00 on weekdays (scattered)
   workflow_dispatch:
     inputs:
       aw_context:
@@ -69,7 +69,7 @@ permissions: {}
 concurrency:
   group: "gh-aw-${{ github.workflow }}"
 
-run-name: "Intake Decisions (shadow)"
+run-name: "Intake Decisions"
 
 jobs:
   activation:
@@ -103,7 +103,7 @@ jobs:
           job-name: ${{ github.job }}
           safe-output-artifact-client: ${{ env.GH_AW_MAX_DAILY_AI_CREDITS != '' }}
         env:
-          GH_AW_SETUP_WORKFLOW_NAME: "Intake Decisions (shadow)"
+          GH_AW_SETUP_WORKFLOW_NAME: "Intake Decisions"
           GH_AW_CURRENT_WORKFLOW_REF: ${{ github.repository }}/.github/workflows/intake-decisions.lock.yml@${{ github.ref }}
           GH_AW_INFO_VERSION: "2.1.191"
           GH_AW_INFO_AWF_VERSION: "v0.27.11"
@@ -117,7 +117,7 @@ jobs:
           GH_AW_INFO_VERSION: "2.1.191"
           GH_AW_INFO_AGENT_VERSION: "2.1.191"
           GH_AW_INFO_CLI_VERSION: "v0.81.6"
-          GH_AW_INFO_WORKFLOW_NAME: "Intake Decisions (shadow)"
+          GH_AW_INFO_WORKFLOW_NAME: "Intake Decisions"
           GH_AW_INFO_EXPERIMENTAL: "false"
           GH_AW_INFO_SUPPORTS_TOOLS_ALLOWLIST: "true"
           GH_AW_INFO_STAGED: "false"
@@ -163,7 +163,7 @@ jobs:
         if: ${{ env.GH_AW_MAX_DAILY_AI_CREDITS != '' }}
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
-          GH_AW_WORKFLOW_NAME: "Intake Decisions (shadow)"
+          GH_AW_WORKFLOW_NAME: "Intake Decisions"
           GH_AW_WORKFLOW_ID: "intake-decisions"
           GH_AW_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           GH_AW_WORKFLOW_DISPATCH_AW_CONTEXT: ${{ github.event.inputs.aw_context || '' }}
@@ -418,7 +418,7 @@ jobs:
           trace-id: ${{ needs.activation.outputs.setup-trace-id }}
           parent-span-id: ${{ needs.activation.outputs.setup-parent-span-id || needs.activation.outputs.setup-span-id }}
         env:
-          GH_AW_SETUP_WORKFLOW_NAME: "Intake Decisions (shadow)"
+          GH_AW_SETUP_WORKFLOW_NAME: "Intake Decisions"
           GH_AW_CURRENT_WORKFLOW_REF: ${{ github.repository }}/.github/workflows/intake-decisions.lock.yml@${{ github.ref }}
           GH_AW_INFO_VERSION: "2.1.191"
           GH_AW_INFO_AWF_VERSION: "v0.27.11"
@@ -526,9 +526,9 @@ jobs:
           mkdir -p "${RUNNER_TEMP}/gh-aw/safeoutputs"
           mkdir -p /tmp/gh-aw/safeoutputs
           mkdir -p /tmp/gh-aw/mcp-logs/safeoutputs
-          cat > "${RUNNER_TEMP}/gh-aw/safeoutputs/config.json" << 'GH_AW_SAFE_OUTPUTS_CONFIG_0a3c037a7e6f5221_EOF'
-          {"create_report_incomplete_issue":{},"decision-digest":{"description":"Publish the decision digest — always to the run summary, to Discord only when a shadow webhook is configured","inputs":{"cards":{"default":null,"description":"The decision cards backing the digest, as a compact JSON array","required":true,"type":"string"},"content":{"default":null,"description":"The digest as Discord-flavored markdown (plain markdown, no HTML)","required":true,"type":"string"}},"output":"Decision digest published"},"missing_data":{},"missing_tool":{},"noop":{"max":1,"report-as-issue":"false"},"report_incomplete":{}}
-          GH_AW_SAFE_OUTPUTS_CONFIG_0a3c037a7e6f5221_EOF
+          cat > "${RUNNER_TEMP}/gh-aw/safeoutputs/config.json" << 'GH_AW_SAFE_OUTPUTS_CONFIG_6300e8b333186434_EOF'
+          {"create_report_incomplete_issue":{},"decision-digest":{"description":"Publish the decision digest to the team Discord channel, and to the run summary","inputs":{"cards":{"default":null,"description":"The decision cards backing the digest, as a compact JSON array","required":true,"type":"string"},"content":{"default":null,"description":"The digest as Discord-flavored markdown (plain markdown, no HTML)","required":true,"type":"string"}},"output":"Decision digest published"},"missing_data":{},"missing_tool":{},"noop":{"max":1,"report-as-issue":"false"},"report_incomplete":{}}
+          GH_AW_SAFE_OUTPUTS_CONFIG_6300e8b333186434_EOF
       - name: Generate Safe Outputs Tools
         env:
           GH_AW_TOOLS_META_JSON: |
@@ -537,7 +537,7 @@ jobs:
               "repo_params": {},
               "dynamic_tools": [
                 {
-                  "description": "Publish the decision digest — always to the run summary, to Discord only when a shadow webhook is configured",
+                  "description": "Publish the decision digest to the team Discord channel, and to the run summary",
                   "inputSchema": {
                     "additionalProperties": false,
                     "properties": {
@@ -1068,7 +1068,7 @@ jobs:
           trace-id: ${{ needs.activation.outputs.setup-trace-id }}
           parent-span-id: ${{ needs.activation.outputs.setup-parent-span-id || needs.activation.outputs.setup-span-id }}
         env:
-          GH_AW_SETUP_WORKFLOW_NAME: "Intake Decisions (shadow)"
+          GH_AW_SETUP_WORKFLOW_NAME: "Intake Decisions"
           GH_AW_CURRENT_WORKFLOW_REF: ${{ github.repository }}/.github/workflows/intake-decisions.lock.yml@${{ github.ref }}
           GH_AW_INFO_VERSION: "2.1.191"
           GH_AW_INFO_AWF_VERSION: "v0.27.11"
@@ -1175,7 +1175,7 @@ jobs:
         env:
           GH_AW_AGENT_OUTPUT: ${{ steps.setup-agent-output-env.outputs.GH_AW_AGENT_OUTPUT }}
           GH_AW_NOOP_MAX: "1"
-          GH_AW_WORKFLOW_NAME: "Intake Decisions (shadow)"
+          GH_AW_WORKFLOW_NAME: "Intake Decisions"
           GH_AW_WORKFLOW_SOURCE_URL: "${{ github.server_url }}/${{ github.repository }}/blob/${{ github.ref_name }}/.github/workflows/intake-decisions.md"
           GH_AW_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           GH_AW_AGENT_CONCLUSION: ${{ needs.agent.result }}
@@ -1196,7 +1196,7 @@ jobs:
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           GH_AW_AGENT_OUTPUT: ${{ steps.setup-agent-output-env.outputs.GH_AW_AGENT_OUTPUT }}
-          GH_AW_WORKFLOW_NAME: "Intake Decisions (shadow)"
+          GH_AW_WORKFLOW_NAME: "Intake Decisions"
           GH_AW_WORKFLOW_SOURCE_URL: "${{ github.server_url }}/${{ github.repository }}/blob/${{ github.ref_name }}/.github/workflows/intake-decisions.md"
           GH_AW_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           GH_AW_DETECTION_CONCLUSION: ${{ needs.detection.outputs.detection_conclusion }}
@@ -1214,7 +1214,7 @@ jobs:
         env:
           GH_AW_AGENT_OUTPUT: ${{ steps.setup-agent-output-env.outputs.GH_AW_AGENT_OUTPUT }}
           GH_AW_MISSING_TOOL_CREATE_ISSUE: "true"
-          GH_AW_WORKFLOW_NAME: "Intake Decisions (shadow)"
+          GH_AW_WORKFLOW_NAME: "Intake Decisions"
           GH_AW_WORKFLOW_SOURCE_URL: "${{ github.server_url }}/${{ github.repository }}/blob/${{ github.ref_name }}/.github/workflows/intake-decisions.md"
         with:
           github-token: ${{ secrets.GH_AW_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
@@ -1229,7 +1229,7 @@ jobs:
         env:
           GH_AW_AGENT_OUTPUT: ${{ steps.setup-agent-output-env.outputs.GH_AW_AGENT_OUTPUT }}
           GH_AW_REPORT_INCOMPLETE_CREATE_ISSUE: "true"
-          GH_AW_WORKFLOW_NAME: "Intake Decisions (shadow)"
+          GH_AW_WORKFLOW_NAME: "Intake Decisions"
           GH_AW_WORKFLOW_SOURCE_URL: "${{ github.server_url }}/${{ github.repository }}/blob/${{ github.ref_name }}/.github/workflows/intake-decisions.md"
         with:
           github-token: ${{ secrets.GH_AW_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
@@ -1244,7 +1244,7 @@ jobs:
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           GH_AW_AGENT_OUTPUT: ${{ steps.setup-agent-output-env.outputs.GH_AW_AGENT_OUTPUT }}
-          GH_AW_WORKFLOW_NAME: "Intake Decisions (shadow)"
+          GH_AW_WORKFLOW_NAME: "Intake Decisions"
           GH_AW_WORKFLOW_SOURCE_URL: "${{ github.server_url }}/${{ github.repository }}/blob/${{ github.ref_name }}/.github/workflows/intake-decisions.md"
           GH_AW_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           GH_AW_AGENT_CONCLUSION: ${{ needs.agent.result }}
@@ -1317,7 +1317,7 @@ jobs:
         run: |
           set -euo pipefail
           {
-            echo "## Intake decisions (shadow run)"
+            echo "## Intake decisions"
             echo
             cat /tmp/digest.md
             echo
@@ -1331,11 +1331,11 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
         env:
           GH_AW_AGENT_OUTPUT: ${{ runner.temp }}/gh-aw/safe-jobs/agent_output.json
-      - name: Post to shadow Discord channel
+      - name: Post to Discord
         run: |
           set -euo pipefail
           if [ -z "${WEBHOOK_URL:-}" ]; then
-            echo "No shadow webhook configured — run summary only." && exit 0
+            echo "No webhook configured — run summary only." && exit 0
           fi
           split -C 1900 /tmp/digest.md /tmp/digest-chunk-
           for chunk in /tmp/digest-chunk-*; do
@@ -1347,7 +1347,7 @@ jobs:
           done
         env:
           GH_AW_AGENT_OUTPUT: ${{ runner.temp }}/gh-aw/safe-jobs/agent_output.json
-          WEBHOOK_URL: ${{ secrets.DISCORD_INTAKE_SHADOW_WEBHOOK_URL }}
+          WEBHOOK_URL: ${{ secrets.DISCORD_INTAKE_WEBHOOK_URL }}
       - name: Save cards for tomorrow's delta
         uses: actions/cache/save@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         env:
@@ -1381,7 +1381,7 @@ jobs:
           trace-id: ${{ needs.activation.outputs.setup-trace-id }}
           parent-span-id: ${{ needs.activation.outputs.setup-parent-span-id || needs.activation.outputs.setup-span-id }}
         env:
-          GH_AW_SETUP_WORKFLOW_NAME: "Intake Decisions (shadow)"
+          GH_AW_SETUP_WORKFLOW_NAME: "Intake Decisions"
           GH_AW_CURRENT_WORKFLOW_REF: ${{ github.repository }}/.github/workflows/intake-decisions.lock.yml@${{ github.ref }}
           GH_AW_INFO_VERSION: "2.1.191"
           GH_AW_INFO_AWF_VERSION: "v0.27.11"
@@ -1454,8 +1454,8 @@ jobs:
         if: always() && steps.detection_guard.outputs.run_detection == 'true'
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
-          WORKFLOW_NAME: "Intake Decisions (shadow)"
-          WORKFLOW_DESCRIPTION: "Weekday-morning decision digest — ranked maintainer decisions with recommendations, review batches, and deltas, built from a deterministic evidence collector"
+          WORKFLOW_NAME: "Intake Decisions"
+          WORKFLOW_DESCRIPTION: "Weekday-morning decision digest — ranked maintainer decisions with recommendations, review batches, and deltas, built from a deterministic evidence collector. Replaces the Intake Digest."
           HAS_PATCH: ${{ needs.agent.outputs.has_patch }}
         with:
           script: |
@@ -1628,7 +1628,7 @@ jobs:
       GH_AW_RUNTIME_FEATURES: ${{ vars.GH_AW_RUNTIME_FEATURES }}
       GH_AW_THREAT_DETECTION_AIC: ${{ needs.detection.outputs.aic }}
       GH_AW_WORKFLOW_ID: "intake-decisions"
-      GH_AW_WORKFLOW_NAME: "Intake Decisions (shadow)"
+      GH_AW_WORKFLOW_NAME: "Intake Decisions"
       GH_AW_WORKFLOW_SOURCE_URL: "${{ github.server_url }}/${{ github.repository }}/blob/${{ github.ref_name }}/.github/workflows/intake-decisions.md"
     outputs:
       code_push_failure_count: ${{ steps.process_safe_outputs.outputs.code_push_failure_count }}
@@ -1647,7 +1647,7 @@ jobs:
           trace-id: ${{ needs.activation.outputs.setup-trace-id }}
           parent-span-id: ${{ needs.activation.outputs.setup-parent-span-id || needs.activation.outputs.setup-span-id }}
         env:
-          GH_AW_SETUP_WORKFLOW_NAME: "Intake Decisions (shadow)"
+          GH_AW_SETUP_WORKFLOW_NAME: "Intake Decisions"
           GH_AW_CURRENT_WORKFLOW_REF: ${{ github.repository }}/.github/workflows/intake-decisions.lock.yml@${{ github.ref }}
           GH_AW_INFO_VERSION: "2.1.191"
           GH_AW_INFO_AWF_VERSION: "v0.27.11"

@@ -1,8 +1,8 @@
 ---
-name: Intake Decisions (shadow)
-description: Weekday-morning decision digest — ranked maintainer decisions with recommendations, review batches, and deltas, built from a deterministic evidence collector
+name: Intake Decisions
+description: Weekday-morning decision digest — ranked maintainer decisions with recommendations, review batches, and deltas, built from a deterministic evidence collector. Replaces the Intake Digest.
 on:
-  schedule: daily around 07:20 on weekdays
+  schedule: daily around 07:00 on weekdays
   workflow_dispatch:
 permissions:
   contents: read
@@ -19,7 +19,7 @@ tools:
 safe-outputs:
   jobs:
     decision-digest:
-      description: Publish the decision digest — always to the run summary, to Discord only when a shadow webhook is configured
+      description: Publish the decision digest to the team Discord channel, and to the run summary
       runs-on: ubuntu-latest
       output: Decision digest published
       inputs:
@@ -52,7 +52,7 @@ safe-outputs:
           run: |
             set -euo pipefail
             {
-              echo "## Intake decisions (shadow run)"
+              echo "## Intake decisions"
               echo
               cat /tmp/digest.md
               echo
@@ -64,13 +64,13 @@ safe-outputs:
               echo
               echo "</details>"
             } >> "$GITHUB_STEP_SUMMARY"
-        - name: Post to shadow Discord channel
+        - name: Post to Discord
           env:
-            WEBHOOK_URL: ${{ secrets.DISCORD_INTAKE_SHADOW_WEBHOOK_URL }}
+            WEBHOOK_URL: ${{ secrets.DISCORD_INTAKE_WEBHOOK_URL }}
           run: |
             set -euo pipefail
             if [ -z "${WEBHOOK_URL:-}" ]; then
-              echo "No shadow webhook configured — run summary only." && exit 0
+              echo "No webhook configured — run summary only." && exit 0
             fi
             split -C 1900 /tmp/digest.md /tmp/digest-chunk-
             for chunk in /tmp/digest-chunk-*; do
