@@ -361,16 +361,95 @@ export type IncrementalSafetyIssue = IncrementalHazard | StructuralRegression
 
 export type IncrementalFallbackStage = "preflight" | "post-assembly"
 
-function stripFences(text: string): string {
-  return text.replace(/```[\s\S]*?```/g, "")
+/** Destination token without a Markdown link's optional title. */
+function markdownDestination(target: string): string {
+  const trimmed = target.trim()
+  if (trimmed.startsWith("<")) {
+    const closingBracket = trimmed.indexOf(">")
+    if (closingBracket !== -1) return trimmed.slice(0, closingBracket + 1)
+  }
+  const whitespace = trimmed.search(/\s/)
+  return whitespace === -1 ? trimmed : trimmed.slice(0, whitespace)
+}
+
+function normalizedMarkdownHref(target: string): string {
+  const destination = markdownDestination(target)
+  return destination.startsWith("<") && destination.endsWith(">")
+    ? destination.slice(1, -1)
+    : destination
 }
 
 function hrefList(text: string): string[] {
-  const body = stripFences(text)
-  return [
-    ...[...body.matchAll(/\]\(([^)\s]+)\)/g)].map((m) => m[1]),
-    ...[...body.matchAll(/href="([^"]+)"/g)].map((m) => m[1]),
-  ]
+  const hrefs: string[] = []
+  for (const node of walk(parseMarkdown(text, PIPELINE_CONFIG))) {
+    if (node.elementType === "link" && typeof node.meta?.href === "string") {
+      hrefs.push(normalizedMarkdownHref(node.meta.href))
+    } else if (
+      node.elementType === "image" &&
+      typeof node.meta?.src === "string"
+    ) {
+      hrefs.push(normalizedMarkdownHref(node.meta.src))
+    } else if (
+      node.elementType === "html-tag" &&
+      typeof node.meta?.href === "string"
+    ) {
+      hrefs.push(node.meta.href)
+    } else if (
+      node.elementType === "component-attribute" &&
+      node.meta?.name === "href" &&
+      typeof node.value === "string"
+    ) {
+      hrefs.push(node.value)
+    }
+  }
+  return hrefs
+}
+
+/** Replace only a Markdown link destination, preserving any locale title. */
+function replaceMarkdownDestination(
+  text: string,
+  oldTarget: string,
+  newTarget: string
+): string {
+  const oldDestination = markdownDestination(oldTarget)
+  const newDestination = markdownDestination(newTarget)
+  if (!oldDestination || !newDestination) return text
+
+  if (oldDestination === newDestination) {
+    const exactTarget = new RegExp(
+      `(\\]\\(\\s*)${escapeRegex(oldTarget.trim())}(?=\\s*\\))`,
+      "g"
+    )
+    return text.replace(
+      exactTarget,
+      (_, prefix: string) => `${prefix}${newTarget.trim()}`
+    )
+  }
+
+  const destinationPattern = new RegExp(
+    `(\\]\\(\\s*)${escapeRegex(oldDestination)}(?=\\s|\\))`,
+    "g"
+  )
+  return text.replace(
+    destinationPattern,
+    (_, prefix: string) => `${prefix}${newDestination}`
+  )
+}
+
+function replaceQuotedAttributeValue(
+  text: string,
+  attribute: string,
+  oldValue: string,
+  newValue: string
+): string {
+  const pattern = new RegExp(
+    `(\\b${escapeRegex(attribute)}\\s*=\\s*)(["'])${escapeRegex(oldValue)}\\2`,
+    "g"
+  )
+  return text.replace(
+    pattern,
+    (_, prefix: string, quote: string) => `${prefix}${quote}${newValue}${quote}`
+  )
 }
 
 /** Multiset difference: items in `actual` that `expected` does not account for. */
@@ -1174,20 +1253,20 @@ function pipelineMarkdown(
       (change.elementType === "link" || change.elementType === "image") &&
       (change.key === "href" || change.key === "src")
     ) {
-      const pattern = new RegExp(
-        `\\]\\(${escapeRegex(change.oldValue)}\\)`,
-        "g"
-      )
       result = applyInSection(result, scopeId, (scope) =>
-        scope.replace(pattern, `](${change.newValue})`)
+        replaceMarkdownDestination(scope, change.oldValue!, change.newValue!)
       )
       continue
     }
 
     if (change.elementType === "html-tag" && change.key === "href") {
-      const pattern = new RegExp(`href="${escapeRegex(change.oldValue)}"`, "g")
       result = applyInSection(result, scopeId, (scope) =>
-        scope.replace(pattern, `href="${change.newValue}"`)
+        replaceQuotedAttributeValue(
+          scope,
+          "href",
+          change.oldValue!,
+          change.newValue!
+        )
       )
       continue
     }

@@ -609,6 +609,82 @@ Beta-Text mit [anderem](https://b.example/).
   })
 })
 
+test.describe("link syntax safety", () => {
+  test("redirects a single-quoted HTML href and validates the result", () => {
+    const englishA = `## Links {#links}
+
+Read <a href='/old/'>the guide</a>.
+`
+    const englishB = englishA.replace("/old/", "/new/")
+    const localeA = `## Links {#links}
+
+Lesen Sie <a href='/old/'>den Leitfaden</a>.
+`
+
+    expect(findIncrementalHazards(englishA, englishB)).toEqual([])
+    const result = pipeline(englishA, englishB, localeA, "markdown")
+    expect(result).toContain("href='/new/'")
+    expect(result).not.toContain("href='/old/'")
+    expect(
+      findStructuralRegressions(englishA, localeA, englishB, result)
+    ).toEqual([])
+  })
+
+  test("reports a stale single-quoted HTML href before commit", () => {
+    const englishA = `## Links {#links}
+
+<a href='/old/'>Guide</a>
+`
+    const englishB = englishA.replace("/old/", "/new/")
+    const localeA = englishA.replace("Guide", "Leitfaden")
+
+    expect(
+      findStructuralRegressions(englishA, localeA, englishB, localeA)
+    ).toEqual(
+      expect.arrayContaining([expect.objectContaining({ kind: "href" })])
+    )
+  })
+
+  test("redirects a titled Markdown link without replacing its locale title", () => {
+    const englishA = `## Links {#links}
+
+[Guide](https://example.org/old "English title")
+`
+    const englishB = englishA.replace(
+      "https://example.org/old",
+      "https://example.org/new"
+    )
+    const localeA = `## Links {#links}
+
+[Leitfaden](https://example.org/old "Lokalisierter Titel")
+`
+
+    const result = pipeline(englishA, englishB, localeA, "markdown")
+    expect(result).toContain(
+      '[Leitfaden](https://example.org/new "Lokalisierter Titel")'
+    )
+    expect(
+      findStructuralRegressions(englishA, localeA, englishB, result)
+    ).toEqual([])
+  })
+
+  test("rejects a partial redirect of repeated single-quoted HTML hrefs", () => {
+    const englishA = `## Links {#links}
+
+<a href='/old/'>First</a>
+<a href='/old/'>Second</a>
+`
+    const englishB = englishA.replace(
+      "<a href='/old/'>First</a>",
+      "<a href='/new/'>First</a>"
+    )
+
+    expect(findIncrementalHazards(englishA, englishB)).toContainEqual(
+      expect.objectContaining({ kind: "ambiguous-href" })
+    )
+  })
+})
+
 // ===================================================================
 // Fail-closed boundary for changes the body-only contract cannot apply
 // ===================================================================
