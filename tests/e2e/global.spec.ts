@@ -77,6 +77,7 @@ test.describe("Global", () => {
       await homePage.switchToLanguage("ar", /^العربية Arabic/i)
       await homePage.assertUrlMatches(/\/ar(\/|$)/)
       await expect(page.locator("html")).toHaveAttribute("lang", "ar")
+      await expect(page.locator("html")).toHaveAttribute("dir", "rtl")
     }
 
     test("nav flips logo and search button when switching to RTL via language picker", async ({
