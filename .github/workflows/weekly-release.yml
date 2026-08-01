@@ -146,7 +146,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           pr_number: ${{ needs.prepare.outputs.pr_number }}
-          required_checks: "Build website,Lint,netlify/ethereumorg/deploy-preview"
+          required_checks: "Release gate,netlify/ethereumorg/deploy-preview"
           timeout_seconds: "3600"
           poll_interval_seconds: "120"
 
