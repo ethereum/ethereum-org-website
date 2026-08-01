@@ -70,11 +70,13 @@ branch, or all release PRs will be blocked without a job able to report it.
 3. Rerun a failed job once only when the failure is demonstrably transient. Code,
    content, and deterministic test failures require a release-blocking fix from a
    branch based on `staging`, followed by a back-merge into `dev`.
-4. If automated release review fails, leave the deploy PR open and treat it as
-   unreviewed. A maintainer must run the checklist in
-   `.claude/commands/review-release.md`, post the result on the PR, and complete
-   the preview and Chromatic review manually. The automation failure is not an
-   approval and must never be bypassed by merging with admin privileges.
+4. If automated release review fails, download the
+   `review-release-execution-log` artifact from the weekly release run and leave
+   the deploy PR open. CI may still be green, but the release remains unreviewed.
+   A maintainer must run the checklist in `.claude/commands/review-release.md`,
+   post the result on the PR, and complete the preview and Chromatic review
+   manually. An automation failure is neither a release failure nor an approval,
+   and must never be bypassed by merging with admin privileges.
 
 ### Rollback {#rollback}
 
