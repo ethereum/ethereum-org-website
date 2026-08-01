@@ -95,6 +95,17 @@ test("rejects an incorrect signature before processing the payload", async () =>
   expect(response.status).toBe(401)
 })
 
+test("rejects a malformed signature before processing the payload", async () => {
+  globalThis.fetch = async () => {
+    throw new Error("Discord must not be called")
+  }
+
+  const body = JSON.stringify(issuePayload())
+  const response = await POST(webhookRequest(body, "sha256=not-a-digest"))
+
+  expect(response.status).toBe(401)
+})
+
 test("accepts a valid signed ping without triggering unrelated work", async () => {
   globalThis.fetch = async () => {
     throw new Error("Discord must not be called")
@@ -140,6 +151,13 @@ test("rejects a signed body over the streaming size limit", async () => {
 
 test("rejects malformed JSON even when its signature is valid", async () => {
   const body = "not-json"
+  const response = await POST(webhookRequest(body, sign(body)))
+
+  expect(response.status).toBe(400)
+})
+
+test("rejects a malformed issue payload with a valid signature", async () => {
+  const body = JSON.stringify(issuePayload({ issue: {} }))
   const response = await POST(webhookRequest(body, sign(body)))
 
   expect(response.status).toBe(400)
