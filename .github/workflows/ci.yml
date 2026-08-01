@@ -22,11 +22,11 @@ env:
 # gating automatically via `needs:` (skipped jobs propagate).
 #
 # Exception: Storybook Chromatic (`visual-tests`) runs on every non-draft PR
-# whose head branch belongs to this repository. Forks cannot read the project
-# secret and are intentionally excluded. The merge gate for tested changes is
-# Chromatic's own "UI Tests" check (posted by the Chromatic GitHub App), which
-# updates live as a maintainer accepts/rejects -- so this job just publishes and
-# exits 0.
+# whose head branch belongs to this repository. Forks and Dependabot cannot read
+# the project secret and are intentionally excluded. The merge gate for tested
+# changes is Chromatic's own "UI Tests" check (posted by the Chromatic GitHub
+# App), which updates live as a maintainer accepts/rejects -- so this job just
+# publishes and exits 0.
 #
 # `fetch-depth: 0` is set selectively: lint needs it for `git diff`, and the
 # two Chromatic jobs need it for baseline detection. Other jobs use the default
@@ -85,6 +85,7 @@ jobs:
     if: >-
       github.event_name == 'pull_request'
       && github.repository == 'ethereum/ethereum-org-website'
+      && github.actor != 'dependabot[bot]'
       && github.event.pull_request.draft == false
       && github.event.pull_request.head.repo.full_name == github.repository
       && github.event.pull_request.head.repo.id == github.repository_id
