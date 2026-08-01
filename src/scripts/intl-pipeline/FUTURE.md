@@ -12,11 +12,11 @@
 
 **Proposed solution:** Recursive key comparison that walks the full object tree, reporting missing/added/renamed keys at any depth.
 
-### 1b. Send heading lines to the LLM as translatable content
+### 1b. Avoid full fallback for heading changes
 
-**Problem:** `buildSectionList` sends a section's body and passes its heading text as a prompt attribute, so headings are never translated by the incremental path. Phase 5 now supplies the heading deterministically (issue #18940), which keeps structure intact but leaves two gaps: a newly added section gets english-B's heading line until the next full pass, and a section whose English heading was relabelled (a rename with `labelHashChanged`) keeps its old translated label.
+**Current safe behavior:** `buildSectionList` sends a section body and passes its heading as prompt context. New sections and heading relabels therefore fail the incremental preflight and use full translation for that file. This prevents English headings or stale translated headings from shipping, at the cost of a larger LLM call.
 
-**Proposed solution:** Include the heading line in TRANSLATE content and validate that the response's `{#id}` matches, instead of routing the label around the model. Touches the prompt contract, `extractSections`, and `replaceSections`, so it needs its own change.
+**Possible optimization:** Include the heading line in TRANSLATE content and validate its level and `{#id}` before assembly. This changes the prompt contract, `extractSections`, and `replaceSections`; keep the full-file fallback until that path has equivalent structure tests.
 
 ---
 

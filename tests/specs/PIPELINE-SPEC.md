@@ -82,6 +82,8 @@ Given an English content change (A -> B), update all locale translations with mi
 - No false positives (unchanged content reported as changed)
 - No false negatives (actual changes missed)
 
+**Production preflight:** Before an `auto` task calls the section translator, `findIncrementalHazards` rejects changes the current body-only response contract cannot apply safely. New or relabelled headings, translatable frontmatter changes, heading level/parent/order changes, and ambiguous partial updates to a repeated href fall back to full translation for that file. No incremental output or manifest is written for a rejected attempt.
+
 ---
 
 ## Phase 2: Routing
@@ -296,13 +298,12 @@ For frontmatter translatable fields:
 Splice the LLM-translated sections into the deterministically-updated locale file:
 
 1. For each translated section, find its position in the locale file (by heading ID)
-2. **Section replacement**: replace the section body, and supply the heading line deterministically -- the locale's own heading for an existing section, english-B's for a newly added one. The LLM contract is body-only (`buildSectionList` sends `section.body` and passes the heading as a prompt attribute), so a heading line must never be taken from the model response. If a response does contain one it is used, with its `{#id}` forced back to the expected anchor. An empty response is discarded rather than written back. This is safe because Phase 3 did not modify llm-required sections.
-3. For new sections, insert at the correct position (matching english-B section order)
-4. For translated frontmatter fields, replace the value in the frontmatter block
+2. **Section replacement**: replace the section body, and supply the locale's heading line deterministically. The LLM contract is body-only (`buildSectionList` sends `section.body` and passes the heading as a prompt attribute), so an echoed model heading is discarded. An empty response is also discarded rather than written back.
+3. New headings, relabelled headings, reordered/reparented headings, and translatable frontmatter changes are handled by the production preflight's per-file full fallback.
 
 **Section boundaries:** A section's content in the locale file is defined as: from its heading line (inclusive) to the line before the next heading line of any level (exclusive). This avoids the complexity of same-level vs nested heading tracking. Section removal is the exception -- it needs same-or-shallower level tracking so subsections go with their parent.
 
-**Post-assembly invariants:** the merged output is compared to english-B on heading count, `{#anchor}` set and link/href multiset, measured against the same comparison for english-A vs locale-A so that pre-existing drift (roughly 7% of locale files differ on anchors before any run) is not reported. Any regression the run introduced -- a dropped anchor, a heading that disappeared, a new href that never landed, a stale href english-B removed -- discards the merge and falls the file back to `runFullTranslation`. `findStructuralRegressions` in `pipeline.ts`; markdown only.
+**Post-assembly invariants:** the merged output is compared to english-B on heading count, `{#anchor}` multiset, heading levels, parent relationships, document order, and link/href multiset. The comparison subtracts the english-A vs locale-A baseline so pre-existing drift is not reported. Any regression introduced by this run discards the merge and calls `runFullTranslation` before content or manifests are recorded. Full translations use the same checks without a baseline exemption and fail the task before commit if structure is still invalid. `findStructuralRegressions` and `findFullTranslationStructuralRegressions` in `pipeline.ts`; markdown only.
 
 **Test assertions:**
 
@@ -452,7 +453,7 @@ Given a sequence of pipeline runs against the same base:
 ## Open questions
 
 - **Structural mismatch handling:** When a locale file has fewer inline elements than English (e.g., Urdu drops 2 of 4 links in a sentence), this is a structural integrity violation. The pipeline should flag this for human review rather than silently skipping. How this flag is surfaced (PR comment, log warning, separate report) is TBD.
-- **Duplicate inert values in one section:** If the same URL appears twice in a section and only one instance changed, match-by-value is ambiguous. May need surrounding context (the paragraph) as a tiebreaker.
+- **Duplicate inert values in one section:** Partial updates to a repeated href now fall back to full translation. A contextual matcher could make this case incremental without weakening the fail-closed behavior.
 - **Code fence insertion point:** When adding a structural code fence to a section, where exactly within the section? English-B position relative to other elements? Needs implementation-level definition.
 - **Partial failure strategy:** Currently all-or-nothing (don't stamp manifests if any LLM call fails). Acceptable for v1 but wasteful on retry. May revisit for per-section stamping later.
 

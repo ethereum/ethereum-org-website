@@ -61,9 +61,10 @@ import {
 import { LLM, MANIFESTS_DIR } from "./constants"
 import type { LlmTranslator } from "./pipeline"
 import {
-  findStructuralRegressions,
+  findFullTranslationStructuralRegressions,
   getLlmSectionIds,
   pipeline,
+  runIncrementalWithStructuralFallback,
 } from "./pipeline"
 
 // ---------------------------------------------------------------------------
@@ -432,6 +433,17 @@ async function runFullTranslation(
     }
   }
 
+  const structuralRegressions = findFullTranslationStructuralRegressions(
+    file.content,
+    finalContent,
+    file.type
+  )
+  if (structuralRegressions.length > 0) {
+    throw new Error(
+      `[${locale}] ${file.path}: full translation failed structural validation (${structuralRegressions.map((regression) => regression.detail).join("; ")}); aborting before content or manifest commit`
+    )
+  }
+
   // Build the manifests BEFORE recording any blob. Manifest construction is
   // pure and can throw (parse/serialize); doing it first means a builder error
   // aborts the task without leaving content recorded sans its manifest -- the
@@ -528,97 +540,93 @@ async function runIncremental(
   }
 
   const englishB = file.content
-
-  const llmSectionIds = getLlmSectionIds(englishA, englishB, file.type)
-  log(`[${locale}] ${file.path}: ${llmSectionIds.length} section(s) need LLM`)
-
-  let translator: LlmTranslator | undefined
   let tokens = { input: 0, output: 0 }
-  if (llmSectionIds.length > 0 && isLlmAvailable()) {
-    const geminiResult = await buildGeminiTranslator(
-      englishB,
-      localeContent,
-      file.type,
-      file.path,
-      locale,
-      llmSectionIds
-    )
-    translator = geminiResult.translator
-    tokens = geminiResult.tokens
-  }
 
-  const result = pipeline(
+  return runIncrementalWithStructuralFallback({
     englishA,
     englishB,
-    localeContent,
-    file.type,
-    translator
-  )
+    localeA: localeContent,
+    format: file.type,
+    generateIncremental: async () => {
+      const llmSectionIds = getLlmSectionIds(englishA, englishB, file.type)
+      log(
+        `[${locale}] ${file.path}: ${llmSectionIds.length} section(s) need LLM`
+      )
 
-  // Post-assembly invariants: if the merge lost or duplicated structure relative
-  // to English, discard it and retranslate the file rather than commit it.
-  const regressions = findStructuralRegressions(
-    englishA,
-    localeContent,
-    englishB,
-    result,
-    file.type
-  )
-  if (regressions.length > 0) {
-    log(
-      `[${locale}] ${file.path}: structural regression (${regressions.map((r) => r.detail).join("; ")}), falling back to full translation`
-    )
-    return runFullTranslation(
-      file,
-      locale,
-      destPath,
-      committer,
-      baseBranchSha,
-      committedFiles
-    )
-  }
-
-  // Phase 4b: JSX attribute translation pass (markdown only)
-  let finalContent = result
-  if (file.type === "markdown") {
-    const leaves = extractAttributeLeaves(file.content)
-    if (leaves.length > 0) {
-      const glossaryTerms = await loadGlossary(file.content, locale)
-      const attrResult = await translateJsxAttributes({
-        leaves,
-        localeContent: finalContent,
-        targetLanguage: locale,
-        glossary: glossaryTerms,
-        filePath: file.path,
-      })
-      finalContent = attrResult.content
-      if (attrResult.appliedCount > 0 || attrResult.failedCount > 0) {
-        log(
-          `[${locale}] ${file.path}: jsx-attrs translated=${attrResult.appliedCount} skipped=${attrResult.skippedCount} failed=${attrResult.failedCount}`
+      let translator: LlmTranslator | undefined
+      if (llmSectionIds.length > 0 && isLlmAvailable()) {
+        const geminiResult = await buildGeminiTranslator(
+          englishB,
+          localeContent,
+          file.type,
+          file.path,
+          locale,
+          llmSectionIds
         )
+        translator = geminiResult.translator
+        tokens = geminiResult.tokens
       }
-      if (attrResult.failedCount > 0) {
-        throw new Error(
-          `[${locale}] ${file.path}: ${attrResult.failedCount} jsx-attr leaf(s) failed to translate; aborting before manifest stamp`
-        )
+
+      return pipeline(englishA, englishB, localeContent, file.type, translator)
+    },
+    fallbackToFull: (issues, stage) => {
+      log(
+        `[${locale}] ${file.path}: incremental ${stage} rejected (${issues.map((issue) => issue.detail).join("; ")}), falling back to full translation`
+      )
+      return runFullTranslation(
+        file,
+        locale,
+        destPath,
+        committer,
+        baseBranchSha,
+        committedFiles
+      )
+    },
+    acceptIncremental: async (result) => {
+      // Phase 4b: JSX attribute translation pass (markdown only)
+      let finalContent = result
+      if (file.type === "markdown") {
+        const leaves = extractAttributeLeaves(file.content)
+        if (leaves.length > 0) {
+          const glossaryTerms = await loadGlossary(file.content, locale)
+          const attrResult = await translateJsxAttributes({
+            leaves,
+            localeContent: finalContent,
+            targetLanguage: locale,
+            glossary: glossaryTerms,
+            filePath: file.path,
+          })
+          finalContent = attrResult.content
+          if (attrResult.appliedCount > 0 || attrResult.failedCount > 0) {
+            log(
+              `[${locale}] ${file.path}: jsx-attrs translated=${attrResult.appliedCount} skipped=${attrResult.skippedCount} failed=${attrResult.failedCount}`
+            )
+          }
+          if (attrResult.failedCount > 0) {
+            throw new Error(
+              `[${locale}] ${file.path}: ${attrResult.failedCount} jsx-attr leaf(s) failed to translate; aborting before manifest stamp`
+            )
+          }
+        }
       }
-    }
-  }
 
-  // Build the source manifest before recording any blob (see runFullTranslation):
-  // a builder throw must not leave content recorded without its manifest.
-  const sourceManifest =
-    file.type === "markdown"
-      ? buildMarkdownManifest(englishB, file.path, baseBranchSha)
-      : buildJsonManifest(englishB, file.path, baseBranchSha)
-  const smDest = getManifestPath(destPath, "source")
+      // Build the source manifest before recording any blob (see
+      // runFullTranslation): a builder throw must not leave content recorded
+      // without its manifest.
+      const sourceManifest =
+        file.type === "markdown"
+          ? buildMarkdownManifest(englishB, file.path, baseBranchSha)
+          : buildJsonManifest(englishB, file.path, baseBranchSha)
+      const smDest = getManifestPath(destPath, "source")
 
-  await committer.commitFile(destPath, finalContent, locale)
-  committedFiles.push({ path: destPath, content: finalContent })
-  await committer.commitFile(smDest, sourceManifest, locale)
+      await committer.commitFile(destPath, finalContent, locale)
+      committedFiles.push({ path: destPath, content: finalContent })
+      await committer.commitFile(smDest, sourceManifest, locale)
 
-  log(`[${locale}] ${destPath}: committed (incremental)`)
-  return { tokens }
+      log(`[${locale}] ${destPath}: committed (incremental)`)
+      return { tokens }
+    },
+  })
 }
 
 // ---------------------------------------------------------------------------

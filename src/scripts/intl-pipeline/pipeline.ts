@@ -102,6 +102,7 @@ export function getSectionOrder(text: string): string[] {
 interface HeadingInfo {
   level: number
   id: string | null
+  label: string
   lineIdx: number
 }
 
@@ -121,6 +122,7 @@ function scanHeadings(text: string): HeadingInfo[] {
     out.push({
       level: m[1].length,
       id: m[2].match(/\{#([^}]+)\}/)?.[1] ?? null,
+      label: m[2].replace(/\s*\{#[^}]+\}\s*$/, "").trim(),
       lineIdx: i,
     })
   }
@@ -278,18 +280,27 @@ function withAnchor(headingLine: string, sectionId: string): string {
   return `${trimmed.replace(/\s*\{#[^}]*\}\s*$/, "")} {#${sectionId}}`
 }
 
+function headingLabel(headingLine: string): string {
+  return headingLine
+    .replace(/^#{1,6}\s+/, "")
+    .replace(/\s*\{#[^}]+\}\s*$/, "")
+    .trim()
+}
+
 /**
  * Join a heading line with an LLM section translation.
  *
  * The prompt sends the heading as an attribute and asks only for body content
  * back, so the heading must be supplied here rather than trusted to appear in
- * the model output. A model that echoes one anyway wins (it is the fresher
- * label), with its anchor forced back to the expected ID.
+ * the model output. Ordinary body updates discard an echoed heading. The pure
+ * transformer still accepts one for known heading additions/relabels, while
+ * production routes those changes to full translation before this path.
  */
 function assembleSection(
   headingLine: string,
   translated: string,
-  sectionId: string
+  sectionId: string,
+  acceptEchoedHeading: boolean
 ): string {
   const body = translated.replace(/^\s+/, "").trimEnd()
   const firstBreak = body.indexOf("\n")
@@ -297,7 +308,9 @@ function assembleSection(
   if (/^#{1,6}\s/.test(firstLine)) {
     const rest =
       firstBreak === -1 ? "" : body.slice(firstBreak + 1).replace(/^\n+/, "")
-    const heading = withAnchor(firstLine, sectionId)
+    const heading = acceptEchoedHeading
+      ? withAnchor(firstLine, sectionId)
+      : headingLine
     return rest ? `${heading}\n\n${rest}` : heading
   }
   return body ? `${headingLine}\n\n${body}` : headingLine
@@ -320,9 +333,33 @@ function spliceSection(
 // ---------------------------------------------------------------------------
 
 export interface StructuralRegression {
-  kind: "anchor" | "heading-count" | "href"
+  kind:
+    | "anchor"
+    | "heading-count"
+    | "heading-level"
+    | "heading-parent"
+    | "heading-order"
+    | "href"
   detail: string
 }
+
+export interface IncrementalHazard {
+  kind:
+    | "analysis"
+    | "heading-addition"
+    | "heading-label"
+    | "heading-level"
+    | "heading-parent"
+    | "heading-order"
+    | "unanchored-heading"
+    | "frontmatter-translation"
+    | "ambiguous-href"
+  detail: string
+}
+
+export type IncrementalSafetyIssue = IncrementalHazard | StructuralRegression
+
+export type IncrementalFallbackStage = "preflight" | "post-assembly"
 
 function stripFences(text: string): string {
   return text.replace(/```[\s\S]*?```/g, "")
@@ -353,19 +390,102 @@ interface StructuralDelta {
   missingAnchors: string[]
   extraAnchors: string[]
   headingDelta: number
+  levelMismatches: string[]
+  parentMismatches: string[]
+  orderMismatches: string[]
   missingHrefs: string[]
   extraHrefs: string[]
 }
 
+interface AnchoredHeading {
+  id: string
+  level: number
+  label: string
+  parentId: string | null
+}
+
+function anchoredHeadings(text: string): AnchoredHeading[] {
+  const stack: HeadingInfo[] = []
+  const out: AnchoredHeading[] = []
+  for (const heading of scanHeadings(text)) {
+    while (stack.length && stack[stack.length - 1].level >= heading.level) {
+      stack.pop()
+    }
+    if (heading.id) {
+      out.push({
+        id: heading.id,
+        level: heading.level,
+        label: heading.label,
+        parentId:
+          [...stack].reverse().find((candidate) => candidate.id)?.id ?? null,
+      })
+    }
+    stack.push(heading)
+  }
+  return out
+}
+
+function headingMismatchLists(
+  english: string,
+  locale: string
+): {
+  levels: string[]
+  parents: string[]
+  order: string[]
+} {
+  const englishHeadings = anchoredHeadings(english)
+  const localeHeadings = anchoredHeadings(locale)
+  const localeById = new Map(
+    localeHeadings.map((heading) => [heading.id, heading])
+  )
+
+  const levels: string[] = []
+  const parents: string[] = []
+  for (const heading of englishHeadings) {
+    const localeHeading = localeById.get(heading.id)
+    if (!localeHeading) continue
+    if (localeHeading.level !== heading.level) {
+      levels.push(`${heading.id}:${heading.level}->${localeHeading.level}`)
+    }
+    if (localeHeading.parentId !== heading.parentId) {
+      parents.push(
+        `${heading.id}:${heading.parentId ?? "root"}->${localeHeading.parentId ?? "root"}`
+      )
+    }
+  }
+
+  const localePositions = new Map(
+    localeHeadings.map((heading, index) => [heading.id, index])
+  )
+  const commonEnglish = englishHeadings.filter((heading) =>
+    localeById.has(heading.id)
+  )
+  const order: string[] = []
+  for (let i = 0; i < commonEnglish.length; i++) {
+    for (let j = i + 1; j < commonEnglish.length; j++) {
+      const first = commonEnglish[i].id
+      const second = commonEnglish[j].id
+      if (localePositions.get(first)! > localePositions.get(second)!) {
+        order.push(`${first} must precede ${second}`)
+      }
+    }
+  }
+  return { levels, parents, order }
+}
+
 function structuralDelta(english: string, locale: string): StructuralDelta {
-  const enAnchors = [...anchorSet(english)]
-  const locAnchors = [...anchorSet(locale)]
+  const enAnchors = anchoredHeadings(english).map((heading) => heading.id)
+  const locAnchors = anchoredHeadings(locale).map((heading) => heading.id)
   const enHrefs = hrefList(english)
   const locHrefs = hrefList(locale)
+  const headingMismatches = headingMismatchLists(english, locale)
   return {
     missingAnchors: surplus(locAnchors, enAnchors),
     extraAnchors: surplus(enAnchors, locAnchors),
     headingDelta: scanHeadings(english).length - scanHeadings(locale).length,
+    levelMismatches: headingMismatches.levels,
+    parentMismatches: headingMismatches.parents,
+    orderMismatches: headingMismatches.order,
     missingHrefs: surplus(locHrefs, enHrefs),
     extraHrefs: surplus(enHrefs, locHrefs),
   }
@@ -399,10 +519,37 @@ export function findStructuralRegressions(
   for (const id of surplus(before.extraAnchors, after.extraAnchors)) {
     out.push({ kind: "anchor", detail: `{#${id}} not in English` })
   }
-  if (Math.abs(after.headingDelta) > Math.abs(before.headingDelta)) {
+  if (after.headingDelta !== before.headingDelta) {
     out.push({
       kind: "heading-count",
       detail: `heading count off by ${after.headingDelta} (was ${before.headingDelta})`,
+    })
+  }
+  for (const mismatch of surplus(
+    before.levelMismatches,
+    after.levelMismatches
+  )) {
+    out.push({
+      kind: "heading-level",
+      detail: `heading level changed: ${mismatch}`,
+    })
+  }
+  for (const mismatch of surplus(
+    before.parentMismatches,
+    after.parentMismatches
+  )) {
+    out.push({
+      kind: "heading-parent",
+      detail: `heading parent changed: ${mismatch}`,
+    })
+  }
+  for (const mismatch of surplus(
+    before.orderMismatches,
+    after.orderMismatches
+  )) {
+    out.push({
+      kind: "heading-order",
+      detail: `heading order changed: ${mismatch}`,
     })
   }
   for (const href of surplus(before.missingHrefs, after.missingHrefs)) {
@@ -412,6 +559,227 @@ export function findStructuralRegressions(
     out.push({ kind: "href", detail: `stale ${href} left in locale` })
   }
   return out
+}
+
+/** Full translations have no historical locale drift to preserve. */
+export function findFullTranslationStructuralRegressions(
+  english: string,
+  translated: string,
+  format: "markdown" | "json" = "markdown"
+): StructuralRegression[] {
+  return findStructuralRegressions("", "", english, translated, format)
+}
+
+function countValues(values: string[]): Map<string, number> {
+  const counts = new Map<string, number>()
+  for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1)
+  return counts
+}
+
+/**
+ * English changes the body-only incremental contract cannot apply safely.
+ * These are rejected before an LLM call or blob write and use full translation
+ * for this file only.
+ */
+export function findIncrementalHazards(
+  englishA: string,
+  englishB: string,
+  format: "markdown" | "json" = "markdown",
+  config: Partial<ContentTreeConfig> = PIPELINE_CONFIG
+): IncrementalHazard[] {
+  if (format !== "markdown") return []
+
+  let changes: ChangeSet
+  try {
+    const treeA = parseMarkdown(englishA, config)
+    const treeB = parseMarkdown(englishB, config)
+    changes = extractChanges(treeA, treeB)
+  } catch (error) {
+    return [
+      {
+        kind: "analysis",
+        detail: `could not classify English structure: ${error instanceof Error ? error.message : String(error)}`,
+      },
+    ]
+  }
+
+  const hazards: IncrementalHazard[] = []
+  const headingsA = anchoredHeadings(englishA)
+  const headingsB = anchoredHeadings(englishB)
+  const byIdA = new Map(headingsA.map((heading) => [heading.id, heading]))
+  const byIdB = new Map(headingsB.map((heading) => [heading.id, heading]))
+  const renameToNew = new Map(
+    changes.sectionRenames.map((rename) => [rename.oldId, rename.newId])
+  )
+  const renameToOld = new Map(
+    changes.sectionRenames.map((rename) => [rename.newId, rename.oldId])
+  )
+
+  const mappedOldId = (newId: string): string | null => {
+    if (byIdA.has(newId)) return newId
+    return renameToOld.get(newId) ?? null
+  }
+  const mappedNewId = (oldId: string): string | null => {
+    const renamed = renameToNew.get(oldId)
+    if (renamed && byIdB.has(renamed)) return renamed
+    return byIdB.has(oldId) ? oldId : null
+  }
+
+  const duplicateCountsA = countValues(headingsA.map((heading) => heading.id))
+  const duplicateCountsB = countValues(headingsB.map((heading) => heading.id))
+  for (const [id, count] of duplicateCountsB) {
+    if (count > (duplicateCountsA.get(id) ?? 0)) {
+      hazards.push({
+        kind: "heading-addition",
+        detail: `{#${id}} is duplicated in the new English structure`,
+      })
+    }
+  }
+
+  for (const headingB of headingsB) {
+    const oldId = mappedOldId(headingB.id)
+    if (!oldId) {
+      hazards.push({
+        kind: "heading-addition",
+        detail: `new section {#${headingB.id}} needs a translated heading`,
+      })
+      continue
+    }
+    const headingA = byIdA.get(oldId)
+    if (!headingA) continue
+    if (headingA.label !== headingB.label) {
+      hazards.push({
+        kind: "heading-label",
+        detail: `{#${headingB.id}} label changed and the incremental response is body-only`,
+      })
+    }
+    if (headingA.level !== headingB.level) {
+      hazards.push({
+        kind: "heading-level",
+        detail: `{#${headingB.id}} moved from h${headingA.level} to h${headingB.level}`,
+      })
+    }
+
+    const oldParent = headingA.parentId ? mappedNewId(headingA.parentId) : null
+    if (oldParent !== headingB.parentId) {
+      hazards.push({
+        kind: "heading-parent",
+        detail: `{#${headingB.id}} moved from {#${oldParent ?? "root"}} to {#${headingB.parentId ?? "root"}}`,
+      })
+    }
+  }
+
+  const oldOrderAfterDeletesAndRenames = headingsA
+    .map((heading) => mappedNewId(heading.id))
+    .filter((id): id is string => id !== null)
+  const existingNewOrder = headingsB
+    .filter((heading) => mappedOldId(heading.id) !== null)
+    .map((heading) => heading.id)
+  if (
+    oldOrderAfterDeletesAndRenames.join("\n") !== existingNewOrder.join("\n")
+  ) {
+    hazards.push({
+      kind: "heading-order",
+      detail: "existing sections changed document order",
+    })
+  }
+
+  const unanchoredA = scanHeadings(englishA)
+    .filter((heading) => !heading.id)
+    .map((heading) => `${heading.level}:${heading.label}`)
+  const unanchoredB = scanHeadings(englishB)
+    .filter((heading) => !heading.id)
+    .map((heading) => `${heading.level}:${heading.label}`)
+  if (unanchoredA.join("\n") !== unanchoredB.join("\n")) {
+    hazards.push({
+      kind: "unanchored-heading",
+      detail: "an unanchored heading was added, removed, moved, or relabelled",
+    })
+  }
+
+  for (const change of changes.changes) {
+    if (
+      change.elementType === "frontmatter-field" &&
+      change.contentType === "translatable"
+    ) {
+      hazards.push({
+        kind: "frontmatter-translation",
+        detail: `frontmatter field ${change.key ?? change.path} needs translation`,
+      })
+    }
+  }
+
+  for (const headingB of headingsB) {
+    const oldId = mappedOldId(headingB.id)
+    if (!oldId) continue
+    const sectionA = findSection(englishA, oldId)
+    const sectionB = findSection(englishB, headingB.id)
+    if (!sectionA || !sectionB) continue
+    const hrefsA = hrefList(englishA.slice(sectionA.start, sectionA.end))
+    const hrefsB = hrefList(englishB.slice(sectionB.start, sectionB.end))
+    const countsA = countValues(hrefsA)
+    const countsB = countValues(hrefsB)
+    for (const [href, oldCount] of countsA) {
+      const newCount = countsB.get(href) ?? 0
+      if (oldCount <= 1 || newCount >= oldCount) continue
+      const added = [...countsB].filter(
+        ([candidate, count]) => count > (countsA.get(candidate) ?? 0)
+      )
+      const unambiguousWholeReplacement =
+        newCount === 0 &&
+        added.length === 1 &&
+        added[0][1] - (countsA.get(added[0][0]) ?? 0) === oldCount
+      if (!unambiguousWholeReplacement) {
+        hazards.push({
+          kind: "ambiguous-href",
+          detail: `{#${headingB.id}} changes only some repeated occurrences of ${href}`,
+        })
+      }
+    }
+  }
+
+  return hazards
+}
+
+interface IncrementalSafetyOptions<T> {
+  englishA: string
+  englishB: string
+  localeA: string
+  format: "markdown" | "json"
+  generateIncremental: () => string | Promise<string>
+  acceptIncremental: (content: string) => T | Promise<T>
+  fallbackToFull: (
+    issues: IncrementalSafetyIssue[],
+    stage: IncrementalFallbackStage
+  ) => T | Promise<T>
+}
+
+/** Execute the exact preflight -> incremental -> invariant -> commit boundary. */
+export async function runIncrementalWithStructuralFallback<T>(
+  options: IncrementalSafetyOptions<T>
+): Promise<T> {
+  const hazards = findIncrementalHazards(
+    options.englishA,
+    options.englishB,
+    options.format
+  )
+  if (hazards.length > 0) {
+    return options.fallbackToFull(hazards, "preflight")
+  }
+
+  const result = await options.generateIncremental()
+  const regressions = findStructuralRegressions(
+    options.englishA,
+    options.localeA,
+    options.englishB,
+    result,
+    options.format
+  )
+  if (regressions.length > 0) {
+    return options.fallbackToFull(regressions, "post-assembly")
+  }
+
+  return options.acceptIncremental(result)
 }
 
 function parseFrontmatter(
@@ -999,7 +1367,12 @@ function pipelineMarkdown(
       if (!prevSec) continue
       // New section: no locale heading exists yet, so English-B's stands in when
       // the model returns body only.
-      const section = assembleSection(enBSec.headingLine, translated, sectionId)
+      const section = assembleSection(
+        enBSec.headingLine,
+        translated,
+        sectionId,
+        true
+      )
       result =
         result.slice(0, prevSec.end) +
         section +
@@ -1013,10 +1386,21 @@ function pipelineMarkdown(
     // An empty model response must never be written back: it would delete the
     // whole section, heading included.
     if (!translated.trim()) continue
+    const previousId =
+      renames.find((rename) => rename.newId === sectionId)?.oldId ?? sectionId
+    const enASec = findSection(englishA, previousId)
+    const headingChanged =
+      enASec !== null &&
+      headingLabel(enASec.headingLine) !== headingLabel(enBSec.headingLine)
     result = spliceSection(
       result,
       localeSec,
-      assembleSection(localeSec.headingLine, translated, sectionId)
+      assembleSection(
+        localeSec.headingLine,
+        translated,
+        sectionId,
+        headingChanged
+      )
     )
   }
 

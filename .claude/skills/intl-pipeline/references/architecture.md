@@ -23,6 +23,10 @@ Parses english-A and english-B into content trees (`parseMarkdown` or `parseJson
 
 No false positives (unchanged content reported as changed). No false negatives (actual changes missed).
 
+### Production safety preflight
+
+Before `auto` calls the section translator, `findIncrementalHazards` rejects English changes the current body-only contract cannot represent without guessing: new or relabelled headings, translatable frontmatter, heading level/parent/order changes, and partial changes to a repeated href in one section. The orchestrator skips incremental generation and runs full translation for that file only. Other files and languages remain incremental.
+
 ## Phase 2: Routing
 
 Classifies each section into three lists:
@@ -72,9 +76,9 @@ For each llm-required section:
 
 JSX components in the normalized path are replaced with `<HTML-PLACEHOLDER-COMPONENT-* />` placeholders BEFORE the prompt is built. Translatable attribute values are extracted as separate leaves and handled by Phase 4b. Non-normalized path (JSON files) preserves component tags raw with a "preserve exactly" prompt rule.
 
-New sections: send english-B section content, get fresh translation.
+New sections and relabelled headings use per-file full translation because the incremental response contains only a section body and cannot supply a trustworthy translated heading.
 
-Frontmatter translatable fields: extract new value, send with locale-A context, get translated value.
+Changed translatable frontmatter fields also use per-file full translation until the incremental prompt has an explicit frontmatter response contract.
 
 ## Phase 4b: JSX Attribute Translation Pass
 
@@ -98,11 +102,12 @@ Manifest impact: source manifest unchanged (source didn't change); translation m
 Splices LLM-translated sections (Phase 4) into the deterministically-updated locale file (Phase 3 output):
 
 1. For each translated section, find its position by heading ID
-2. **Section replacement**: replace the section body; the heading line is supplied deterministically (the locale's own for an existing section, english-B's for a new one). The LLM contract is body-only, so a heading is never taken from the model response -- and an empty response is discarded rather than written back.
-3. For new sections, insert at the position matching english-B's section order
-4. For translated frontmatter fields, replace the value in the frontmatter block
+2. **Section replacement**: replace the section body; the heading line is supplied deterministically from the locale. The LLM contract is body-only, so an echoed model heading is discarded, and an empty response is never written back.
+3. Production preflight routes new headings, heading relabels/reorders, and translatable frontmatter to full translation before this phase.
 
-**Post-assembly invariants** (`findStructuralRegressions`, markdown only): the merged output is compared to english-B on heading count, `{#anchor}` set and href multiset, minus the same comparison for english-A vs locale-A so pre-existing drift isn't counted. Any regression this run introduced discards the merge and falls that file back to `runFullTranslation`. This is what makes `auto` safe as the default; `mode=full` is the fallback, not the routine choice.
+**Post-assembly invariants** (`findStructuralRegressions`, markdown only): the merged output is compared to english-B on heading count, `{#anchor}` multiset, heading levels, parent relationships, document order, and href multiset, minus the same comparison for english-A vs locale-A so pre-existing drift isn't counted. Any regression this run introduced discards the merge and falls that file back to `runFullTranslation` before content or manifests are recorded.
+
+Full translations run the same checks without a baseline exemption. A structurally invalid full result fails the file before content or manifest commit.
 
 ## Phase 6: Manifest Update
 
@@ -129,8 +134,8 @@ Splices LLM-translated sections (Phase 4) into the deterministically-updated loc
 
 Surfaced in `tests/specs/PIPELINE-SPEC.md`; load that doc when you hit one:
 
-- Structural mismatch handling when a locale drops inline elements vs. English (e.g., Urdu drops 2 of 4 links in a sentence). Pipeline should flag, not silently skip — exact surfacing TBD.
-- Duplicate inert values within one section (same URL twice, only one changed): match-by-value is ambiguous. Surrounding paragraph context may be a tiebreaker.
+- Existing locale drift remains baseline-exempt during incremental runs. A targeted full translation is still required to repair old files that already have missing inline elements.
+- Partial changes to duplicate hrefs now fail closed to per-file full translation. A future contextual matcher could make this case incremental again.
 - Code fence insertion point for added structural fences — needs implementation-level definition relative to other elements.
 - Partial-failure strategy is currently all-or-nothing on manifest stamping. Wasteful on retry; may revisit for per-section stamping later.
 

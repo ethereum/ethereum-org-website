@@ -19,9 +19,12 @@ import { join } from "node:path"
 import { expect, test } from "@playwright/test"
 
 import {
+  findFullTranslationStructuralRegressions,
+  findIncrementalHazards,
   findStructuralRegressions,
   getLlmSectionIds,
   pipeline,
+  runIncrementalWithStructuralFallback,
 } from "../../../src/scripts/intl-pipeline"
 import { findSection } from "../../../src/scripts/intl-pipeline/pipeline"
 
@@ -30,6 +33,7 @@ import { findSection } from "../../../src/scripts/intl-pipeline/pipeline"
 // ---------------------------------------------------------------------------
 
 const FIXTURES = join(__dirname, "../../fixtures/incremental")
+const REPO_ROOT = join(__dirname, "../../..")
 const read = (p: string) => readFileSync(join(FIXTURES, p), "utf-8")
 
 const readCase = (name: string) => ({
@@ -214,7 +218,7 @@ Alter Text.
     expect(result).not.toContain("Alter Text.")
   })
 
-  test("a model-echoed heading keeps the expected anchor", () => {
+  test("a model-echoed heading cannot replace the locale heading", () => {
     const enA = `## Section one {#one}
 
 Old text.
@@ -232,9 +236,10 @@ Alter Text.
       enB,
       locale,
       "markdown",
-      () => "## Abschnitt eins {#wrong-anchor}\n\nNeuer Text."
+      () => "## Hallucinated heading {#wrong-anchor}\n\nNeuer Text."
     )
     expect(result).toContain("## Abschnitt eins {#one}")
+    expect(result).not.toContain("Hallucinated heading")
     expect(result).not.toContain("{#wrong-anchor}")
   })
 
@@ -602,4 +607,324 @@ Beta-Text mit [anderem](https://b.example/).
       )
     ).toBe(true)
   })
+})
+
+// ===================================================================
+// Fail-closed boundary for changes the body-only contract cannot apply
+// ===================================================================
+
+test.describe("incremental preflight", () => {
+  test("heading relabel, nested move, and addition use full-file fallback", () => {
+    const englishA = read("safety/heading-move/english-a.md")
+    const englishB = read("safety/heading-move/english-b.md")
+    const kinds = new Set(
+      findIncrementalHazards(englishA, englishB).map((hazard) => hazard.kind)
+    )
+
+    expect(kinds).toContain("heading-label")
+    expect(kinds).toContain("heading-parent")
+    expect(kinds).toContain("heading-order")
+    expect(kinds).toContain("heading-addition")
+  })
+
+  test("a translatable frontmatter title change uses full-file fallback", () => {
+    const englishA = `---
+title: Old title
+---
+
+## Alpha {#alpha}
+
+Body.
+`
+    const englishB = englishA.replace("title: Old title", "title: New title")
+    expect(findIncrementalHazards(englishA, englishB)).toContainEqual(
+      expect.objectContaining({ kind: "frontmatter-translation" })
+    )
+  })
+
+  test("a partial redirect of a repeated href is rejected as ambiguous", () => {
+    const englishA = read("safety/duplicate-link/english-a.md")
+    const englishB = read("safety/duplicate-link/english-b.md")
+    expect(findIncrementalHazards(englishA, englishB)).toContainEqual(
+      expect.objectContaining({ kind: "ambiguous-href" })
+    )
+  })
+
+  test("a unique href redirect remains safe for deterministic propagation", () => {
+    const englishA = `## Links {#links}
+
+Read the [guide](https://example.org/old).
+`
+    const englishB = englishA.replace(
+      "https://example.org/old",
+      "https://example.org/new"
+    )
+    expect(findIncrementalHazards(englishA, englishB)).toEqual([])
+  })
+})
+
+test.describe("fallback call chain", () => {
+  test("preflight rejection calls full translation before generation or commit", async () => {
+    const englishA = read("safety/heading-move/english-a.md")
+    const englishB = read("safety/heading-move/english-b.md")
+    const localeA = read("safety/heading-move/locale-a.de.md")
+    let generated = false
+    let accepted = false
+    let fallbackStage = ""
+
+    const outcome = await runIncrementalWithStructuralFallback({
+      englishA,
+      englishB,
+      localeA,
+      format: "markdown",
+      generateIncremental: () => {
+        generated = true
+        return localeA
+      },
+      acceptIncremental: () => {
+        accepted = true
+        return "incremental"
+      },
+      fallbackToFull: (issues, stage) => {
+        fallbackStage = stage
+        expect(issues.length).toBeGreaterThan(0)
+        return "full"
+      },
+    })
+
+    expect(outcome).toBe("full")
+    expect(fallbackStage).toBe("preflight")
+    expect(generated).toBe(false)
+    expect(accepted).toBe(false)
+  })
+
+  test("a malformed assembled heading is discarded before commit", async () => {
+    const englishA = `## Alpha {#alpha}
+
+Old body.
+
+## Beta {#beta}
+
+Kept body.
+`
+    const englishB = englishA.replace("Old body.", "New body.")
+    const localeA = `## Alpha {#alpha}
+
+Alter Text.
+
+## Beta {#beta}
+
+Behalten.
+`
+    let accepted = false
+    let fallbackStage = ""
+
+    const outcome = await runIncrementalWithStructuralFallback({
+      englishA,
+      englishB,
+      localeA,
+      format: "markdown",
+      generateIncremental: () =>
+        localeA.replace("## Alpha {#alpha}", "### Alpha {#alpha}"),
+      acceptIncremental: () => {
+        accepted = true
+        return "incremental"
+      },
+      fallbackToFull: (issues, stage) => {
+        fallbackStage = stage
+        expect(issues).toContainEqual(
+          expect.objectContaining({ kind: "heading-level" })
+        )
+        return "full"
+      },
+    })
+
+    expect(outcome).toBe("full")
+    expect(fallbackStage).toBe("post-assembly")
+    expect(accepted).toBe(false)
+  })
+})
+
+test.describe("heading topology invariants", () => {
+  const english = `## Alpha {#alpha}
+
+Alpha body.
+
+### Child {#child}
+
+Child body.
+
+## Beta {#beta}
+
+Beta body.
+`
+  const locale = `## Alpha {#alpha}
+
+Alpha-Text.
+
+### Kind {#child}
+
+Kind-Text.
+
+## Beta {#beta}
+
+Beta-Text.
+`
+
+  test("detects a new heading order regression", () => {
+    const swapped = `## Beta {#beta}
+
+Beta-Text.
+
+## Alpha {#alpha}
+
+Alpha-Text.
+
+### Kind {#child}
+
+Kind-Text.
+`
+    expect(
+      findStructuralRegressions(english, locale, english, swapped)
+    ).toContainEqual(expect.objectContaining({ kind: "heading-order" }))
+  })
+
+  test("detects a child moved under a different parent", () => {
+    const reparented = `## Alpha {#alpha}
+
+Alpha-Text.
+
+## Beta {#beta}
+
+Beta-Text.
+
+### Kind {#child}
+
+Kind-Text.
+`
+    const regressions = findStructuralRegressions(
+      english,
+      locale,
+      english,
+      reparented
+    )
+    expect(regressions).toContainEqual(
+      expect.objectContaining({ kind: "heading-parent" })
+    )
+    expect(regressions).toContainEqual(
+      expect.objectContaining({ kind: "heading-order" })
+    )
+  })
+
+  test("historical missing headings cannot mask a newly added heading", () => {
+    const englishA = `${english}
+## Gamma {#gamma}
+
+Gamma body.
+
+## Delta {#delta}
+
+Delta body.
+`
+    const localeA = locale
+    const localeB = `${locale}
+## Hallucinated {#hallucinated}
+
+Hallucinated body.
+`
+
+    expect(
+      findStructuralRegressions(englishA, localeA, englishA, localeB)
+    ).toContainEqual(expect.objectContaining({ kind: "heading-count" }))
+  })
+
+  test("full translation validation has no baseline exemption", () => {
+    const missingChild = locale.replace(
+      `### Kind {#child}
+
+Kind-Text.
+
+`,
+      ""
+    )
+    const regressions = findFullTranslationStructuralRegressions(
+      english,
+      missingChild
+    )
+    expect(regressions).toContainEqual(
+      expect.objectContaining({ kind: "anchor" })
+    )
+    expect(regressions).toContainEqual(
+      expect.objectContaining({ kind: "heading-count" })
+    )
+  })
+})
+
+test("24 configured locales pass a no-write structural canary", () => {
+  const config = JSON.parse(
+    readFileSync(join(REPO_ROOT, "i18n.config.json"), "utf-8")
+  ) as Array<{ code: string }>
+  const locales = config.map(({ code }) => code).filter((code) => code !== "en")
+  expect(locales).toHaveLength(24)
+
+  const relativePath = "contributing/translation-program/index.md"
+  const englishPath = join(REPO_ROOT, "public/content", relativePath)
+  const englishA = readFileSync(englishPath, "utf-8")
+  const oldHref =
+    "https://github.com/ethereum/ethereum-org-website/issues/new/choose"
+  const canaryHref = "https://example.invalid/intl-structural-canary"
+  const redirectedEnglish = englishA.replace(oldHref, canaryHref)
+  expect(findIncrementalHazards(englishA, redirectedEnglish)).toEqual([])
+
+  const deleted = findSection(englishA, "starting-a-translation-program")
+  expect(deleted).not.toBeNull()
+  const deletionEnglish =
+    englishA.slice(0, deleted!.start) + englishA.slice(deleted!.end)
+  expect(findIncrementalHazards(englishA, deletionEnglish)).toEqual([])
+
+  for (const locale of locales) {
+    const localePath = join(
+      REPO_ROOT,
+      "public/content/translations",
+      locale,
+      relativePath
+    )
+    const localeA = readFileSync(localePath, "utf-8")
+
+    const redirected = pipeline(
+      englishA,
+      redirectedEnglish,
+      localeA,
+      "markdown"
+    )
+    expect(redirected, `${locale}: redirect`).toContain(canaryHref)
+    expect(
+      findStructuralRegressions(
+        englishA,
+        localeA,
+        redirectedEnglish,
+        redirected
+      ),
+      `${locale}: redirect invariants`
+    ).toEqual([])
+
+    const withoutDeletedSection = pipeline(
+      englishA,
+      deletionEnglish,
+      localeA,
+      "markdown"
+    )
+    expect(withoutDeletedSection, `${locale}: section deletion`).not.toContain(
+      "{#starting-a-translation-program}"
+    )
+    expect(
+      findStructuralRegressions(
+        englishA,
+        localeA,
+        deletionEnglish,
+        withoutDeletedSection
+      ),
+      `${locale}: deletion invariants`
+    ).toEqual([])
+  }
 })
