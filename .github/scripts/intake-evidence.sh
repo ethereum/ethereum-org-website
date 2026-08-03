@@ -24,7 +24,7 @@ query($owner: String!, $name: String!, $endCursor: String) {
       pageInfo { hasNextPage endCursor }
       nodes {
         number title url body createdAt updatedAt isDraft
-        author { login }
+        author { login __typename }
         authorAssociation
         additions deletions changedFiles
         mergeable
@@ -66,7 +66,7 @@ query($owner: String!, $name: String!, $endCursor: String) {
       pageInfo { hasNextPage endCursor }
       nodes {
         number title url body createdAt updatedAt
-        author { login }
+        author { login __typename }
         authorAssociation
         labels(first: 20) { nodes { name } }
         assignees(first: 5) { nodes { login } }
@@ -105,6 +105,7 @@ PR_TRANSFORM='
       number, title, url,
       author: .author.login,
       isTeam: (.authorAssociation | team),
+      isBot: is_bot,
       isDraft, createdAt, updatedAt,
       ageDays: (.createdAt | days_since),
       idleDays: (.updatedAt | days_since),
@@ -156,6 +157,7 @@ ISSUE_TRANSFORM='
       number, title, url,
       author: .author.login,
       isTeam: (.authorAssociation | team),
+      isBot: is_bot,
       createdAt, updatedAt,
       ageDays: (.createdAt | days_since),
       idleDays: (.updatedAt | days_since),
@@ -208,7 +210,7 @@ fi
 # so candidate selection has to start from an index that covers 100% of the queue.
 jq -s '{
   prs: (.[0] | map({
-    n: .number, t: (.title[0:70]), a: .author, team: .isTeam, draft: .isDraft,
+    n: .number, t: (.title[0:70]), a: .author, team: .isTeam, bot: .isBot, draft: .isDraft,
     age: .ageDays, idle: .idleDays, merge: .mergeable, ci: .ci.state,
     fail: (.ci.failing | length), rd: .reviewDecision,
     ai: (if .aiReview == null then null
@@ -217,7 +219,7 @@ jq -s '{
     files: .size.files, linked: .linkedIssues, labels: .labels
   })),
   issues: (.[1] | map({
-    n: .number, t: (.title[0:70]), a: .author, team: .isTeam,
+    n: .number, t: (.title[0:70]), a: .author, team: .isTeam, bot: .isBot,
     age: .ageDays, idle: .idleDays, comments: .humanCommentCount,
     answered: .answeredByTeam, assigned: (.assignees | length > 0), labels: .labels
   }))
