@@ -1,6 +1,7 @@
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 
+import AgentPrompt from "@/components/AgentPrompt"
 import ContentFeedback from "@/components/ContentFeedback"
 import Contributors from "@/components/Contributors"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
@@ -30,6 +31,7 @@ import guideHeroImg from "@/public/images/heroes/guides-hub-hero.jpg"
 
 // Static layout components
 export const staticComponents = {
+  AgentPrompt,
   Alert,
   Callout,
   Contributors,

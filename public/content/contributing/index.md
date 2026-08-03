@@ -9,6 +9,16 @@ Ethereum.org is an open-source run project with **12 000+** contributors that he
 
 We are a welcoming community that will help you grow and educate in the [Ethereum](/) ecosystem while also meaningfully contribute and get relevant practical experience!
 
+## Contribute with your AI agent {#contribute-with-your-ai-agent}
+
+Already using an AI coding agent like Claude Code, Cursor, or GitHub Copilot? Let it do the heavy lifting. Point it at our guides and it can prepare a well-formed pull request for you — adding a wallet, developer tool, exchange, or layer 2, or editing content. Paste this prompt:
+
+<AgentPrompt prompt="I want to contribute to ethereum.org. Read https://ethereum.org/contributing/ and the guide for what I want to add, then help me prepare a GitHub pull request step by step." />
+
+Your agent can also read the site's machine-readable index at [ethereum.org/llms.txt](/llms.txt), and the developer-documentation index at [ethereum.org/developers/docs/llms.txt](/developers/docs/llms.txt), to understand how everything is organized before it navigates or edits.
+
+Whether a change is written by you or your agent, it still goes through the same [GitHub pull request review](#how-to-update-content) by our maintainers — so nothing skips a human.
+
 ## Ways to contribute {#ways-to-contribute}
 
 **Translations**
