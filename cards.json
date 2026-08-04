@@ -1,0 +1,280 @@
+[
+  {
+    "item": "PR #18700",
+    "intent": "Return 400 instead of 500 for malformed percent-encoded URLs",
+    "state": "blocked",
+    "recommended_disposition": "verify_then_merge",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Review and clear branch-protection block"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "Issue #17967",
+      "PR #18821"
+    ],
+    "owner_lane": "code",
+    "confidence": 0.78,
+    "evidence": [
+      "Fixes recovery-agent incident #17967",
+      "CI SUCCESS",
+      "mergeState BLOCKED, not CLEAN",
+      "ai looks-mergeable"
+    ],
+    "analyzed_sha": "186b298",
+    "first_seen": "2026-08-04",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #18821",
+    "intent": "Skip Next.js image optimization for volatile remote images causing 400s",
+    "state": "blocked",
+    "recommended_disposition": "verify_then_merge",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Review and clear branch-protection block"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "Issue #18796",
+      "PR #18700"
+    ],
+    "owner_lane": "code",
+    "confidence": 0.78,
+    "evidence": [
+      "Fixes recovery-agent incident #18796",
+      "CI SUCCESS",
+      "mergeState BLOCKED",
+      "ai looks-mergeable"
+    ],
+    "analyzed_sha": "e335f83",
+    "first_seen": "2026-08-04",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #18876",
+    "intent": "Add DeFi quiz questions resolving issue #17280",
+    "state": "waiting-on-contributor",
+    "recommended_disposition": "request_changes",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "contributor",
+        "action": "Address wackerow's review comment"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "Issue #17280",
+      "PR #18877"
+    ],
+    "owner_lane": "content",
+    "confidence": 0.7,
+    "evidence": [
+      "lastHumanComment isTeam=true (wackerow)",
+      "CI SUCCESS",
+      "idle 11d"
+    ],
+    "analyzed_sha": "470e609",
+    "first_seen": "2026-08-04",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #18918",
+    "intent": "Add ethereum.org-hosted walletless-dapps tutorial (implements #18052)",
+    "state": "waiting-on-contributor",
+    "recommended_disposition": "request_changes",
+    "next_human_decision": "Does conceptual walletless content belong as a tutorial, or as a guide/docs page?",
+    "waiting_on": [
+      {
+        "actor": "contributor",
+        "action": "Fix frontmatter and failing deploy-preview build"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "Issue #18052"
+    ],
+    "owner_lane": "technical-content",
+    "confidence": 0.82,
+    "evidence": [
+      "4 CI checks failing incl netlify deploy-preview",
+      "humanCommentCount 0 — nobody replied",
+      "external contributor, idle 7d",
+      "ai needs-work"
+    ],
+    "analyzed_sha": "ba23523",
+    "first_seen": "2026-08-04",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #18923",
+    "intent": "Add accounts quiz — lead of a 9-PR team quiz series (all approved, green, blocked)",
+    "state": "blocked",
+    "recommended_disposition": "merge",
+    "next_human_decision": "Why are 9 approved, green PRs BLOCKED — is a second required review or CODEOWNER approval missing?",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Identify branch-protection block and merge the batch"
+      }
+    ],
+    "impact": "high",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "PR #18913",
+      "PR #18910",
+      "PR #18909",
+      "PR #18908",
+      "PR #18907",
+      "PR #18906",
+      "PR #18905",
+      "PR #18902"
+    ],
+    "owner_lane": "content",
+    "confidence": 0.72,
+    "evidence": [
+      "9 PRs each pettinarip APPROVED",
+      "CI SUCCESS",
+      "mergeState BLOCKED, reviewDecision null",
+      "team-authored (myelinated-wackerow)"
+    ],
+    "analyzed_sha": "0d31a8e",
+    "first_seen": "2026-08-04",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #18941",
+    "intent": "Make intl-pipeline incremental propagation structurally safe (fixes locale corruption)",
+    "state": "decision-needed",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "Adopt team fix #18941, competing non-team fail-closed #18952, or both?",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Choose approach and review/approve"
+      }
+    ],
+    "impact": "high",
+    "effort_to_unblock": "small",
+    "risk": "medium",
+    "related_items": [
+      "Issue #18940",
+      "PR #18952",
+      "PR #18896",
+      "Issue #18891"
+    ],
+    "owner_lane": "tooling",
+    "confidence": 0.8,
+    "evidence": [
+      "Fixes active corruption of up to 24 locale files (#18940)",
+      "team-authored, CI SUCCESS, BLOCKED",
+      "competing approach #18952 is CLEAN but ai needs-work",
+      "non-team pillowtalk-Qy commented on both"
+    ],
+    "analyzed_sha": "6126795",
+    "first_seen": "2026-08-04",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #18952",
+    "intent": "Fail-closed boundary for intl incremental propagation (complements #18941)",
+    "state": "decision-needed",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "See #18941 — competing approach to the same corruption bug",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Decide alongside #18941"
+      }
+    ],
+    "impact": "high",
+    "effort_to_unblock": "small",
+    "risk": "medium",
+    "related_items": [
+      "Issue #18940",
+      "PR #18941"
+    ],
+    "owner_lane": "tooling",
+    "confidence": 0.65,
+    "evidence": [
+      "mergeState CLEAN",
+      "ai needs-work",
+      "non-team author pillowtalk-Qy",
+      "overlaps team PR #18941"
+    ],
+    "analyzed_sha": "e81d158",
+    "first_seen": "2026-08-04",
+    "runs_seen": 1
+  },
+  {
+    "item": "Issue #18049",
+    "intent": "Remove dead Scout Game entry from /apps (domain no longer resolves)",
+    "state": "decision-needed",
+    "recommended_disposition": "request_changes",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Remove the Scout Game entry from apps data"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "content",
+    "confidence": 0.85,
+    "evidence": [
+      "dig confirms scoutgame.xyz does not resolve",
+      "humanCommentCount 0",
+      "idle 29d",
+      "clear, no judgment needed"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-08-04",
+    "runs_seen": 1
+  },
+  {
+    "item": "Issue #18422",
+    "intent": "Vague Spanish-language bug report about being redirected and stuck",
+    "state": "suggest-close",
+    "recommended_disposition": "close",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Request reproduction steps or close as needs-info"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "product",
+    "confidence": 0.55,
+    "evidence": [
+      "No usable reproduction steps",
+      "idle 18d",
+      "1 comment, answeredByTeam false"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-08-04",
+    "runs_seen": 1
+  }
+]
