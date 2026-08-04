@@ -7,6 +7,7 @@
 # verdict, and who last spoke.
 #
 # Env: REPO (owner/name), GH_TOKEN. Writes to $OUT_DIR (default /tmp/gh-aw/agent):
+#   queue-index.jsonl one compact line per open item, the whole queue
 #   open-prs.json     one record per open PR
 #   open-issues.json  one record per open issue
 #   queue-stats.json  repo-level counts
@@ -199,9 +200,25 @@ ISSUE_TRANSFORM='
     })
 | sort_by(.number)'
 
+# GitHub's GraphQL gateway drops these queries with a 502 during rough patches —
+# observed three times in a few minutes, then not once in twelve later attempts.
+# Piping a failed response straight into jq turned that into a parse error and
+# lost the whole morning's digest, so retry until the response is complete JSON
+# with every page's `repository` present.
 collect() {
-  gh api graphql --paginate -F owner="$OWNER" -F name="$NAME" -f query="$1" \
-    | jq -s --argjson bodyChars 600 --argjson commentChars 400 "$HELPERS $2"
+  local raw="$OUT_DIR/.raw-response.json" attempt
+  for attempt in 1 2 3 4 5; do
+    if gh api graphql --paginate -F owner="$OWNER" -F name="$NAME" -f query="$1" > "$raw" \
+       && jq -se 'length > 0 and all(.[]; .data.repository != null)' "$raw" > /dev/null 2>&1; then
+      jq -s --argjson bodyChars 600 --argjson commentChars 400 "$HELPERS $2" "$raw"
+      rm -f "$raw"
+      return 0
+    fi
+    echo "GraphQL attempt $attempt/5 returned no usable response" >&2
+    if [ "$attempt" -lt 5 ]; then sleep $((attempt * 5)); fi
+  done
+  echo "GraphQL collection failed after 5 attempts" >&2
+  return 1
 }
 
 collect "$PR_QUERY" "$PR_TRANSFORM" > "$OUT_DIR/open-prs.json"
@@ -214,7 +231,10 @@ for _ in 1 2 3; do
   jq -e 'any(.[]; .mergeable == "UNKNOWN" or .mergeState == "UNKNOWN")' \
     "$OUT_DIR/open-prs.json" > /dev/null || break
   sleep 10
-  gh api graphql --paginate -F owner="$OWNER" -F name="$NAME" -f query='
+  # A failed refresh is not fatal: the records already carry a mergeState, and
+  # UNKNOWN is documented to the agent as "not verified". Losing the digest over
+  # a flaky follow-up query would be the worse trade.
+  if ! gh api graphql --paginate -F owner="$OWNER" -F name="$NAME" -f query='
     query($owner: String!, $name: String!, $endCursor: String) {
       repository(owner: $owner, name: $name) {
         pullRequests(states: OPEN, first: 100, after: $endCursor) {
@@ -222,9 +242,14 @@ for _ in 1 2 3; do
           nodes { number mergeable mergeStateStatus }
         }
       }
-    }' \
-    | jq -s '[ .[].data.repository.pullRequests.nodes[] ] | INDEX(.number | tostring)' \
-      > "$OUT_DIR/mergeable.json"
+    }' > "$OUT_DIR/.mergeable-raw.json" \
+    || ! jq -se '[ .[].data.repository.pullRequests.nodes[] ] | INDEX(.number | tostring)' \
+         "$OUT_DIR/.mergeable-raw.json" > "$OUT_DIR/mergeable.json" 2>/dev/null; then
+    echo "Mergeability refresh failed; keeping the values already collected" >&2
+    rm -f "$OUT_DIR/.mergeable-raw.json" "$OUT_DIR/mergeable.json"
+    break
+  fi
+  rm -f "$OUT_DIR/.mergeable-raw.json"
   jq --slurpfile fresh "$OUT_DIR/mergeable.json" '
     map(. as $pr
         | ($fresh[0][$pr.number | tostring]) as $f
@@ -237,11 +262,15 @@ for _ in 1 2 3; do
   rm -f "$OUT_DIR/mergeable.json"
 done
 
-# One line per open item, small enough to read whole. The detail files are big
-# enough that an agent reading them can truncate and never know what it skipped,
-# so candidate selection has to start from an index that covers 100% of the queue.
-jq -s '{
-  prs: (.[0] | map({
+# One line per open item, so candidate selection can start from something that
+# covers 100% of the queue — the detail files are big enough that an agent
+# reading them truncates and never knows what it skipped. Emitted compact (one
+# item per line, PRs then issues, newest first) because pretty-printing this ran
+# to ~2,700 lines, which truncates at a file-read cap just like the detail files
+# and so reintroduced the exact blind spot the index exists to close.
+jq -s -c '
+  (.[0] | sort_by(-.number) | .[] | {
+    k: "pr",
     n: .number, t: (.title[0:70]), a: .author, team: .isTeam, bot: .isBot, draft: .isDraft,
     age: .ageDays, idle: .idleDays, merge: .mergeable, ms: .mergeState, ci: .ci.state,
     fail: (.ci.failing | length), rd: .reviewDecision,
@@ -250,13 +279,14 @@ jq -s '{
          elif .aiReview.supersededByCommits then (.aiReview.verdict + "/stale")
          else .aiReview.verdict end),
     files: .size.files, linked: .linkedIssues, labels: .labels
-  })),
-  issues: (.[1] | map({
+  }),
+  (.[1] | sort_by(-.number) | .[] | {
+    k: "issue",
     n: .number, t: (.title[0:70]), a: .author, team: .isTeam, bot: .isBot,
     age: .ageDays, idle: .idleDays, comments: .humanCommentCount,
     answered: .answeredByTeam, assigned: (.assignees | length > 0), labels: .labels
-  }))
-}' "$OUT_DIR/open-prs.json" "$OUT_DIR/open-issues.json" > "$OUT_DIR/queue-index.json"
+  })
+' "$OUT_DIR/open-prs.json" "$OUT_DIR/open-issues.json" > "$OUT_DIR/queue-index.jsonl"
 
 jq -n \
   --slurpfile prs "$OUT_DIR/open-prs.json" \
