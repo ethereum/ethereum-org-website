@@ -384,13 +384,7 @@ import { Input } from "@/components/ui/input"
 
 **Props**: `size: md | sm`, `hasError: boolean`. (Default omits `size` from `InputHTMLAttributes` to free the prop.)
 
-### `Textarea`
-
-```tsx
-import { Textarea } from "@/components/ui/textarea"
-```
-
-Same shape as `Input`.
+> `Textarea` was removed in August 2026 (zero consumers after the enterprise-page deprecation). It was the stock shadcn primitive -- re-add from shadcn if a multi-line input is ever needed.
 
 ### `Checkbox` / `Switch`
 
@@ -790,13 +784,7 @@ The remaining `*Banner*`-named files at the root of `src/components/` are:
 - `TranslationBanner` -- floating Arabic/Urdu translation feedback CTA; still a raw `<aside>` (deprecation candidate -- could be migrated to `<Alert variant="banner">` next time it's touched)
 - (The legacy `Callout` / `CalloutBanner` / `CalloutSSR` / `CalloutBannerSSR` files at the root of `src/components/` were unified into `@/components/ui/callout` — see `canonical-imports.md` and `callout-walkthrough.md`. Unrelated to the top-of-page ribbon.)
 
-### `Faq`
-
-```tsx
-import { Faq, FaqContent, FaqItem, FaqTrigger } from "@/components/Faq"
-```
-
-Compositional FAQ primitive. Stories exist; ready for use in pages that need an expandable Q&A list.
+> `Faq` (a compositional Q&A wrapper over the Accordion primitives) was removed in August 2026 -- its last consumers were the enterprise pages. For an expandable Q&A list today, reach for `ExpandableCard` (`@/components/ExpandableCard`), which is where recent designs land. If a centralized topic-tagged FAQ dataset ever arrives, the old component is restorable from git history (`src/components/Faq/`) but is unlikely to be the right basis.
 
 ### `MdComponents`
 
@@ -821,6 +809,21 @@ Use the fragment for any off-ratio clip — screen captures usually are. It's pr
 
 - `@/components/PageHero` (old default export) -- the canonical `PageHero` is a named export from `@/components/Hero`.
 - `@/hooks/useColorModeValue` -- Chakra leftover; use Tailwind `dark:` variant
+
+### Removed August 2026 (restorable from git history)
+
+Deleted as part of the Storybook reorg (issue #18967, Phase 0) after verifying zero consumers -- alias imports, relative imports, the MDX registry, and markdown tags across all locales. Listed so a future search finds the removal rather than assuming the component never existed:
+
+- `Faq/` -- see the note in the Content section above; prefer `ExpandableCard`
+- `ui/textarea.tsx` -- stock shadcn primitive, re-addable from shadcn
+- `CodeModal.tsx`
+- `GitStars.tsx`
+- `IntersectionObserverReveal.tsx` -- its `ValuesMarquee` integration was removed
+- `StatErrorMessage.tsx`
+- `UpgradeTableOfContents.tsx`
+- `ScrollDepthTracker.tsx` -- built for the Feb 2026 homepage A/B test
+
+`src/components/AB/` looks equally orphaned but is **kept deliberately** -- zero consumers is the normal state between experiments. See `docs/ab-testing.md`.
 
 ### Markdown shortcode wrapper
 
