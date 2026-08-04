@@ -1,8 +1,34 @@
 import type { CommunityPick } from "@/lib/types"
 
+import { uploadToS3 } from "../s3"
+
 import { fetchRetry } from "./fetchRetry"
 
 export const FETCH_COMMUNITY_PICKS_TASK_ID = "fetch-community-picks"
+
+const AVATAR_PREFIX = "community/picks"
+
+/**
+ * Re-host each pick's Twitter avatar (served by unavatar.io) on our S3 bucket
+ * so /apps never hot-links a third-party avatar host. Leaves avatarImage empty
+ * on failure, letting the card fall back to the member's initial.
+ */
+async function withMirroredAvatars(
+  picks: CommunityPick[]
+): Promise<CommunityPick[]> {
+  return Promise.all(
+    picks.map(async (pick) => {
+      const handle = pick.twitterHandle?.replace("@", "").trim()
+      if (!handle) return { ...pick, avatarImage: "" }
+
+      const avatarImage = await uploadToS3(
+        `https://unavatar.io/twitter/${handle}`,
+        AVATAR_PREFIX
+      )
+      return { ...pick, avatarImage: avatarImage ?? "" }
+    })
+  )
+}
 
 /**
  * Fetch community picks data from Google Sheets.
@@ -54,5 +80,5 @@ export async function fetchCommunityPicks(): Promise<CommunityPick[]> {
     `Successfully fetched ${communityPicks.length} community picks from Google Sheets`
   )
 
-  return communityPicks
+  return withMirroredAvatars(communityPicks)
 }

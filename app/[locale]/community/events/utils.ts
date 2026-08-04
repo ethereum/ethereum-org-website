@@ -55,11 +55,15 @@ interface MeetupGroup {
   bannerImage?: string
 }
 
-function transformMeetupGroup(group: MeetupGroup, locale: string): EventItem {
+function transformMeetupGroup(
+  group: MeetupGroup,
+  locale: string,
+  imageMap: Record<string, string>
+): EventItem {
   return {
     title: group.title,
-    logoImage: group.logoImage || "",
-    bannerImage: group.bannerImage || "",
+    logoImage: resolveMeetupImage(group.logoImage, imageMap),
+    bannerImage: resolveMeetupImage(group.bannerImage, imageMap),
     startTime: "",
     endTime: null,
     location: localizeLocation(group.location, locale),
@@ -73,11 +77,30 @@ function transformMeetupGroup(group: MeetupGroup, locale: string): EventItem {
 }
 
 /**
+ * Swap a hot-linked meetup image for its S3-hosted copy. Falls back to the
+ * original URL so a meetup added since the last image sync still renders.
+ */
+function resolveMeetupImage(
+  url: string | undefined,
+  imageMap: Record<string, string>
+): string {
+  if (!url) return ""
+  return imageMap[url] || url
+}
+
+/**
  * Get meetup groups from community-meetups.json
  * These are ongoing community groups (not individual events with dates)
+ *
+ * imageMap comes from getMeetupImages(). It is passed in rather than fetched
+ * here because this module is also imported by client components, which must
+ * not pull the data-layer (and its node built-ins) into the browser bundle.
  */
-export function getMeetupGroups(locale: string): EventItem[] {
+export function getMeetupGroups(
+  locale: string,
+  imageMap: Record<string, string> = {}
+): EventItem[] {
   return (communityMeetups as MeetupGroup[])
-    .map((group) => transformMeetupGroup(group, locale))
+    .map((group) => transformMeetupGroup(group, locale, imageMap))
     .sort((a, b) => a.title.localeCompare(b.title))
 }
