@@ -300,6 +300,15 @@ jobs:
 
   page-visual-tests:
     name: Page visual snapshots (Playwright + Chromatic)
+    # This job also publishes with a project token, so it must follow the same
+    # trusted-source boundary as Storybook visual regression.
+    if: >-
+      github.event_name == 'pull_request'
+      && github.repository == 'ethereum/ethereum-org-website'
+      && github.actor != 'dependabot[bot]'
+      && github.event.pull_request.draft == false
+      && github.event.pull_request.head.repo.full_name == github.repository
+      && github.event.pull_request.head.repo.id == github.repository_id
     needs: build
     runs-on: ubuntu-latest
     container:
