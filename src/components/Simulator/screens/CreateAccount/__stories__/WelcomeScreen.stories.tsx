@@ -6,7 +6,7 @@ import { WelcomeScreen as Component } from "../WelcomeScreen"
 
 const meta = {
   title:
-    "Molecules / Display Content / Simulator / CreateAccount Screen / WelcomeScreen",
+    "Components / Features / Simulator / Screens / CreateAccount / WelcomeScreen",
   component: Component,
   parameters: {
     layout: "fullscreen",

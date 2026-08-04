@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs"
 import { PieChart } from "."
 
 const meta = {
-  title: "Molecules / Display Content / PieChart",
+  title: "Components / Data Viz / PieChart",
   component: PieChart,
   parameters: {
     layout: "padded",

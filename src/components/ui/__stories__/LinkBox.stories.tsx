@@ -4,7 +4,7 @@ import { BaseLink } from "../Link"
 import { LinkBox, LinkOverlay } from "../link-box"
 
 const meta = {
-  title: "UI / LinkBox",
+  title: "UI / Navigation / LinkBox",
   component: LinkBox,
   parameters: {
     chromatic: { disableSnapshot: true },

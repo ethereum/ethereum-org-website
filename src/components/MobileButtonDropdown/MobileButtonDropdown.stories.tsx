@@ -5,7 +5,7 @@ import type { List } from "@/components/ButtonDropdown"
 import MobileButtonDropdown from "."
 
 const meta = {
-  title: "Components / Widgets / MobileButtonDropdown",
+  title: "Components / MobileButtonDropdown",
   component: MobileButtonDropdown,
   parameters: {
     chromatic: { disableSnapshot: true },

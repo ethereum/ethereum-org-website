@@ -4,7 +4,7 @@ import { HStack, VStack } from "../flex"
 import Switch from "../switch"
 
 const meta = {
-  title: "UI / Primitives / Switch",
+  title: "UI / Forms / Switch",
   component: Switch,
   parameters: {
     chromatic: { disableSnapshot: true },

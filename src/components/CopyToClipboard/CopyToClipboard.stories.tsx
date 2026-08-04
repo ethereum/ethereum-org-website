@@ -6,7 +6,7 @@ import { VStack } from "@/components/ui/flex"
 import CopyToClipboard, { CopyButton } from "."
 
 const meta = {
-  title: "Components / Content / CopyToClipboard",
+  title: "Components / CopyToClipboard",
   component: CopyToClipboard,
   parameters: {
     chromatic: { disableSnapshot: true },

@@ -11,7 +11,7 @@ import {
 } from "../breadcrumb"
 
 const meta = {
-  title: "UI / Primitives / Breadcrumb",
+  title: "UI / Navigation / Breadcrumb",
   component: Breadcrumb,
   parameters: {
     chromatic: { disableSnapshot: true },

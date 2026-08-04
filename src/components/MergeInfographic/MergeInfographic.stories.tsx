@@ -5,7 +5,7 @@ import { langViewportModes } from "@/storybook/modes"
 import MergeInfographicComponent from "."
 
 const meta = {
-  title: "Atoms / Media & Icons / MergeInfographic",
+  title: "Components / MergeInfographic",
   component: MergeInfographicComponent,
   parameters: {
     layout: "fullscreen",

@@ -16,7 +16,7 @@ const TooltipContent = () => (
 )
 
 const meta = {
-  title: "Molecules / Overlay Content / Tooltip",
+  title: "Components / Tooltip",
   component: TooltipComponent,
   args: {
     content: <TooltipContent />,

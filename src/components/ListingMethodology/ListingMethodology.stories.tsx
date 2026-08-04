@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/nextjs"
 import ListingMethodology from "."
 
 const meta = {
-  title: "Components / Widgets / ListingMethodology",
+  title: "Components / ListingMethodology",
   component: ListingMethodology,
   parameters: {
     chromatic: { disableSnapshot: true },

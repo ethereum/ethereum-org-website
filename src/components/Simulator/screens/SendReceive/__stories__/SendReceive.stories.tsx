@@ -7,7 +7,7 @@ import { Template } from "@/components/Simulator/Template"
 import { SendReceive } from ".."
 
 const meta = {
-  title: "Molecules / Display Content / Simulator / SendReceive Screen",
+  title: "Components / Features / Simulator / Screens / SendReceive",
   component: SendReceive,
   parameters: {
     layout: "fullscreen",

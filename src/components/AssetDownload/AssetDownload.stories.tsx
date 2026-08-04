@@ -6,7 +6,7 @@ import ethDiamondBlack from "@/public/images/assets/eth-diamond-black.png"
 import hero from "@/public/images/home/hero.png"
 
 const meta = {
-  title: "Molecules / Display Content / AssetDownload",
+  title: "Components / AssetDownload",
   component: AssetDownload,
   parameters: {
     layout: "centered",

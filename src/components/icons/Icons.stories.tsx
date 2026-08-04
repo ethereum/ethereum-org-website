@@ -95,7 +95,7 @@ import {
 import { EthHomeIcon, FeedbackThumbsUpIcon } from "."
 
 const meta = {
-  title: "Atoms / Media & Icons / Icons",
+  title: "Components / Icons",
 } satisfies Meta
 
 export default meta

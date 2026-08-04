@@ -13,7 +13,7 @@ import {
 import { VStack } from "../flex"
 
 const meta = {
-  title: "Molecules / Action Feedback / Alerts",
+  title: "UI / Alert",
   component: Alert,
   parameters: {
     docs: {

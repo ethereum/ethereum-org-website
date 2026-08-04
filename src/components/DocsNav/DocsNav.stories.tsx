@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/nextjs"
 import DocsNavComponent from "."
 
 const meta = {
-  title: "Molecules / Navigation / DocsNav",
+  title: "Components / Navigation / DocsNav",
   component: DocsNavComponent,
   parameters: {
     nextjs: {

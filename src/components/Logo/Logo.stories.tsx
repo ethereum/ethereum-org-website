@@ -4,7 +4,7 @@ import { Meta, StoryObj } from "@storybook/nextjs"
 import LogoComponent from "."
 
 const meta = {
-  title: "Atoms / Media & Icons / Logo",
+  title: "Components / Logo",
   component: LogoComponent,
 } satisfies Meta<typeof LogoComponent>
 

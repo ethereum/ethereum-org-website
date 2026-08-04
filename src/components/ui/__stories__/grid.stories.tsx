@@ -4,7 +4,7 @@ import { Meta, StoryObj } from "@storybook/nextjs"
 import { Grid } from "@/components/ui/grid"
 
 const meta = {
-  title: "UI / Primitives / Grid",
+  title: "UI / Layout / Grid",
   component: Grid,
   parameters: {
     layout: "fullscreen",

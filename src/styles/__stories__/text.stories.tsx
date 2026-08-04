@@ -1,14 +1,14 @@
 import * as React from "react"
 import { Meta, StoryObj } from "@storybook/nextjs"
 
+import Translation from "@/components/Translation"
+import { Center, Flex, Stack, VStack } from "@/components/ui/flex"
+import LinkComponent from "@/components/ui/Link"
+
 import { cn } from "@/lib/utils/cn"
 
-import Translation from "../../Translation"
-import { Center, Flex, Stack, VStack } from "../flex"
-import LinkComponent from "../Link"
-
 const meta = {
-  title: "Atoms / Typography / Text",
+  title: "Design System / Typography / Text",
   parameters: {
     layout: "none",
   },

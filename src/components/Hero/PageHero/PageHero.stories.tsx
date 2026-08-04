@@ -8,7 +8,7 @@ import PageHeroComponent, { type PageHeroProps } from "."
 import heroImg from "@/public/images/upgrades/merge.png"
 
 const meta = {
-  title: "Organisms / Layouts / Hero",
+  title: "Components / Heroes / PageHero",
   component: PageHeroComponent,
   parameters: {
     layout: "none",

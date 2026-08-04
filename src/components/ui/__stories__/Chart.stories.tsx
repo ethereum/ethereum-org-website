@@ -24,7 +24,7 @@ import {
 } from "../chart"
 
 const meta = {
-  title: "UI / Chart",
+  title: "UI / Data Display / Chart",
   component: ChartContainer,
   parameters: {
     chromatic: { disableSnapshot: true },

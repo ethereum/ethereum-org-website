@@ -10,7 +10,7 @@ import {
 import { HStack, VStack } from "../flex"
 
 const meta = {
-  title: "UI / Primitives / Collapsible",
+  title: "UI / Collapsible",
   component: Collapsible,
   parameters: {
     chromatic: { disableSnapshot: true },

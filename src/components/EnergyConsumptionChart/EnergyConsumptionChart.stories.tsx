@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/nextjs"
 import ChartComponent from "."
 
 const meta = {
-  title: "Molecules / Display Content / Charts / Energy Consumption",
+  title: "Components / Data Viz / EnergyConsumptionChart",
   component: ChartComponent,
 } satisfies Meta<typeof ChartComponent>
 

@@ -10,9 +10,11 @@ import type { StorybookConfig } from "@storybook/nextjs"
  */
 const config: StorybookConfig = {
   stories: [
+    // Recursive everywhere: a story nested a directory deeper than expected
+    // would otherwise never load, with no error to say so.
     "../src/components/**/*.stories.{ts,tsx}",
-    "../src/layouts/stories/*.stories.tsx",
-    "../src/styles/__stories__/*.stories.tsx",
+    "../src/layouts/**/*.stories.{ts,tsx}",
+    "../src/styles/**/*.stories.{ts,tsx}",
     "../app/**/*.stories.{ts,tsx}",
   ],
 

@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs"
 import ModalComponent from "../dialog-modal"
 
 const meta = {
-  title: "UI / Modal",
+  title: "UI / Overlays / Modal",
   component: ModalComponent,
   parameters: {
     chromatic: { disableSnapshot: true },

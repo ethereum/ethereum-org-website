@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs"
 import { EdgeScrollContainer, EdgeScrollItem } from "../edge-scroll-container"
 
 const meta = {
-  title: "UI / EdgeScrollContainer",
+  title: "UI / Layout / EdgeScrollContainer",
   component: EdgeScrollContainer,
   decorators: [
     (Story) => (

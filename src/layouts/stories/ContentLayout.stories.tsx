@@ -7,7 +7,7 @@ import { langViewportModes } from "@/storybook/modes"
 import { ContentLayout as ContentLayoutComponent } from "../ContentLayout"
 
 const meta = {
-  title: "Templates / ContentLayout",
+  title: "Layouts / ContentLayout",
   component: ContentLayoutComponent,
   parameters: {
     layout: "fullscreen",

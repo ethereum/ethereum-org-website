@@ -15,7 +15,7 @@ import {
 import { Flex } from "../flex"
 
 const meta = {
-  title: "UI / Primitives / Dialog",
+  title: "UI / Overlays / Dialog",
   component: Dialog,
   parameters: {
     chromatic: { disableSnapshot: true },

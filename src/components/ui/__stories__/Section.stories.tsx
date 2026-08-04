@@ -9,7 +9,7 @@ import {
 } from "../section"
 
 const meta = {
-  title: "UI / Section",
+  title: "UI / Layout / Section",
   component: Section,
   parameters: {
     chromatic: { disableSnapshot: true },

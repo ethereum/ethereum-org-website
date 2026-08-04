@@ -5,7 +5,7 @@ import { CreateAccountIcon } from "../icons"
 import { PathButton as PathButtonComponent } from "../PathButton"
 
 const meta = {
-  title: "Molecules / Display Content / Simulator / PathButton",
+  title: "Components / Features / Simulator / PathButton",
   component: PathButtonComponent,
   decorators: [
     (Story) => (

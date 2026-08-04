@@ -10,7 +10,7 @@ import {
 } from "./mockMdxData"
 
 const meta = {
-  title: "UI / Table",
+  title: "UI / Data Display / Table",
   component: Table,
   decorators: [
     (Story) => (

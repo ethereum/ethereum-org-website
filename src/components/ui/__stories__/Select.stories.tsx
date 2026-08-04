@@ -13,7 +13,7 @@ import {
 } from "../select"
 
 const meta = {
-  title: "UI / Primitives / Select",
+  title: "UI / Forms / Select",
   component: Select,
   parameters: {
     chromatic: { disableSnapshot: true },

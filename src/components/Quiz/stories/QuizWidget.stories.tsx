@@ -6,7 +6,7 @@ import { StandaloneQuizClient } from "../QuizWidget/QuizWidgetClient"
 import { LAYER_2_QUIZ_KEY, layer2Questions } from "./utils"
 
 const meta = {
-  title: "Molecules / Display Content / Quiz / QuizWidget",
+  title: "Components / Features / Quiz / QuizWidget",
   component: StandaloneQuizClient,
   args: {
     quizKey: LAYER_2_QUIZ_KEY,

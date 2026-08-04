@@ -15,7 +15,7 @@ const SendReceiveIcon = (props: SVGProps<SVGElement>) => (
 SendReceiveIcon.displayName = "SendReceiveIcon"
 
 const meta = {
-  title: "Molecules / Display Content / Simulator / Explanation",
+  title: "Components / Features / Simulator / Explanation",
   component: ExplanationComponent,
   parameters: {
     chromatic: {

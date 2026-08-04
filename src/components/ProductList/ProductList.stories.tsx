@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/nextjs"
 import ProductList, { type ProductListContent } from "."
 
 const meta = {
-  title: "Components / Content / ProductList",
+  title: "Components / ProductList",
   component: ProductList,
   parameters: {
     chromatic: { disableSnapshot: true },

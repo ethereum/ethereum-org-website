@@ -73,7 +73,7 @@ const tocItems: ToCItem[] = [
 ]
 
 const meta = {
-  title: "Molecules / Navigation / TableOfContents",
+  title: "Components / Navigation / TableOfContents",
   component: TableOfContentsComponent,
   parameters: {
     layout: "fullscreen",

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs"
 import CopyPageButton from "."
 
 const meta = {
-  title: "Molecules / Actions / CopyPageButton",
+  title: "Components / Site Chrome / CopyPageButton",
   component: CopyPageButton,
   parameters: {
     layout: "centered",

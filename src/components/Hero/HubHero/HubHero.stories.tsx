@@ -8,7 +8,7 @@ import HubHeroComponent, { type HubHeroProps } from "./"
 import learnHubHeroImg from "@/public/images/heroes/learn-hub-hero.png"
 
 const meta = {
-  title: "Organisms / Layouts / Hero",
+  title: "Components / Heroes / HubHero",
   component: HubHeroComponent,
   parameters: {
     layout: "none",

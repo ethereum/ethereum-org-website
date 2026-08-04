@@ -5,7 +5,7 @@ import { VStack } from "@/components/ui/flex"
 import SocialListItem from "."
 
 const meta = {
-  title: "Components / Widgets / SocialListItem",
+  title: "Components / SocialListItem",
   component: SocialListItem,
   parameters: {
     chromatic: { disableSnapshot: true },

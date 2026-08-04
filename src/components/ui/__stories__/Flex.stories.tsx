@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs"
 import { Center, Flex, HStack, Stack, VStack } from "../flex"
 
 const meta = {
-  title: "UI / Flex",
+  title: "UI / Layout / Flex",
   component: Flex,
   parameters: {
     chromatic: { disableSnapshot: true },

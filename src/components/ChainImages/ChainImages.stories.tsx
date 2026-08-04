@@ -5,7 +5,7 @@ import { VStack } from "@/components/ui/flex"
 import ChainImages from "."
 
 const meta = {
-  title: "Components / Widgets / ChainImages",
+  title: "Components / ChainImages",
   component: ChainImages,
   parameters: {
     chromatic: { disableSnapshot: true },

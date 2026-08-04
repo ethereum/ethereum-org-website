@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs"
 import { ScrollArea, ScrollBar } from "../scroll-area"
 
 const meta = {
-  title: "UI / Primitives / ScrollArea",
+  title: "UI / ScrollArea",
   component: ScrollArea,
   parameters: {
     chromatic: { disableSnapshot: true },

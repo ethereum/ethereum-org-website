@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/nextjs"
 import Footer from "."
 
 const meta = {
-  title: "Components / Layout / Footer",
+  title: "Components / Site Chrome / Footer",
   component: Footer,
   parameters: {
     chromatic: { disableSnapshot: true },

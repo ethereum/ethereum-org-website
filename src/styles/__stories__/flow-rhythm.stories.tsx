@@ -20,7 +20,7 @@ import { Button } from "@/components/ui/buttons/Button"
  * Spec: .claude/skills/design-system/references/typography-spacing-flow-spec.md
  */
 const meta = {
-  title: "Atoms / Typography / Flow Rhythm",
+  title: "Design System / Typography / FlowRhythm",
   parameters: {
     layout: "fullscreen",
     chromatic: {

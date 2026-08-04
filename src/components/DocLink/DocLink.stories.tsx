@@ -5,7 +5,7 @@ import { VStack } from "../ui/flex"
 import DocLink from "."
 
 const meta = {
-  title: "Molecules / Navigation / DocLink",
+  title: "Components / Navigation / DocLink",
   component: DocLink,
 } satisfies Meta<typeof DocLink>
 

@@ -13,7 +13,7 @@ import {
 } from "../sheet"
 
 const meta = {
-  title: "UI / Primitives / Sheet",
+  title: "UI / Overlays / Sheet",
   component: Sheet,
   parameters: {
     chromatic: { disableSnapshot: true },

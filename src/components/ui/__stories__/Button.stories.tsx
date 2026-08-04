@@ -5,7 +5,7 @@ import { Button, type ButtonVariantProps } from "../buttons/Button"
 import { HStack, VStack } from "../flex"
 
 const meta = {
-  title: "UI / Button",
+  title: "UI / Actions / Button",
   component: Button,
   args: {
     children: "What is Ethereum?",

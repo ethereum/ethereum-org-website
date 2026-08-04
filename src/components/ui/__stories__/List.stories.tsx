@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs"
 import { List, ListItem, OrderedList, UnorderedList } from "../list"
 
 const meta = {
-  title: "UI / List",
+  title: "UI / Data Display / List",
   component: List,
   parameters: {
     chromatic: { disableSnapshot: true },

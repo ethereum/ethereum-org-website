@@ -7,7 +7,7 @@ import { HomeScreen as Component } from "../HomeScreen"
 
 const meta = {
   title:
-    "Molecules / Display Content / Simulator / CreateAccount Screen / HomeScreen",
+    "Components / Features / Simulator / Screens / CreateAccount / HomeScreen",
   component: Component,
   parameters: {
     layout: "fullscreen",

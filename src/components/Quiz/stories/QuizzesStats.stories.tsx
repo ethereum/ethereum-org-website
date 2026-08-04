@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs"
 import QuizzesStats from "../QuizzesStats"
 
 const meta = {
-  title: "Molecules / Display Content / Quiz / QuizzesStats",
+  title: "Components / Features / Quiz / QuizzesStats",
   component: QuizzesStats,
   args: {
     averageScoresArray: [],

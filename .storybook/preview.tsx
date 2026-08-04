@@ -68,7 +68,7 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ["Atoms", "Molecules", "Organisms", "Templates", "Pages"],
+        order: ["Design System", "UI", "Components", "Layouts", "Pages"],
       },
     },
     layout: "centered",

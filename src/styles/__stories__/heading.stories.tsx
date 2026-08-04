@@ -1,10 +1,10 @@
 import * as React from "react"
 import { Meta, StoryObj } from "@storybook/nextjs"
 
-import { Center, Stack } from "../flex"
+import { Center, Stack } from "@/components/ui/flex"
 
 const meta = {
-  title: "Atoms / Typography / Heading",
+  title: "Design System / Typography / Heading",
   parameters: {
     layout: null,
     chromatic: {

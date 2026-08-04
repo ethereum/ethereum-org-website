@@ -5,7 +5,7 @@ import { Center } from "@/components/ui/flex"
 import GlossaryTooltipComponent from "."
 
 const meta = {
-  title: "Molecules / Overlay Content / Glossary Tooltip",
+  title: "Components / Content / Glossary / Tooltip",
   component: GlossaryTooltipComponent,
   args: {
     termKey: "bridge",

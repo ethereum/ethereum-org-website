@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs"
 import TagFilter, { type TagFilterProps } from "../tag-filter"
 
 const meta = {
-  title: "UI / TagFilter",
+  title: "UI / Data Display / TagFilter",
   component: TagFilter,
   decorators: [
     (Story) => (

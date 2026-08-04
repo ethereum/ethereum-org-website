@@ -10,7 +10,7 @@ import {
 } from "../popover"
 
 const meta = {
-  title: "UI / Primitives / Popover",
+  title: "UI / Overlays / Popover",
   component: Popover,
   parameters: {
     chromatic: { disableSnapshot: true },

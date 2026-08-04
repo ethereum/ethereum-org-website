@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../tabs"
 
 const meta = {
-  title: "UI / Primitives / Tabs",
+  title: "UI / Navigation / Tabs",
   component: Tabs,
   parameters: {
     chromatic: { disableSnapshot: true },

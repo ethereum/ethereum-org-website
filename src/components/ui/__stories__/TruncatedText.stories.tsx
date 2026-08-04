@@ -4,7 +4,7 @@ import { VStack } from "../flex"
 import TruncatedText from "../TruncatedText"
 
 const meta = {
-  title: "UI / TruncatedText",
+  title: "UI / Data Display / TruncatedText",
   component: TruncatedText,
   parameters: {
     chromatic: { disableSnapshot: true },

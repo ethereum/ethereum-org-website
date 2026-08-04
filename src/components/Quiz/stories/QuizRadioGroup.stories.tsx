@@ -8,7 +8,7 @@ import { QuizRadioGroup } from "../QuizWidget/QuizRadioGroup"
 import { LAYER_2_QUIZ_TITLE_KEY, layer2Questions } from "./utils"
 
 const meta = {
-  title: "Molecules / Display Content / Quiz / QuizWidget / RadioGroup",
+  title: "Components / Features / Quiz / QuizWidget / RadioGroup",
   component: QuizRadioGroup,
   decorators: [
     (Story, { args }) => {

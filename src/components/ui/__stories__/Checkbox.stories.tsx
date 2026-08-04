@@ -4,7 +4,7 @@ import Checkbox, { type CheckboxProps } from "../checkbox"
 import { HStack, VStack } from "../flex"
 
 const meta = {
-  title: "UI / Primitives / Checkbox",
+  title: "UI / Forms / Checkbox",
   component: Checkbox,
   parameters: {
     chromatic: { disableSnapshot: true },

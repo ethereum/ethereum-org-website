@@ -14,7 +14,7 @@ import { GeneratingKeys } from "../GeneratingKeys"
 
 const meta = {
   title:
-    "Molecules / Display Content / Simulator / CreateAccount Screen / GeneratingKeys",
+    "Components / Features / Simulator / Screens / CreateAccount / GeneratingKeys",
   component: GeneratingKeys,
   parameters: {
     layout: "fullscreen",

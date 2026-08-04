@@ -5,7 +5,7 @@ import { Stack } from "../ui/flex"
 import BreadcrumbsComponent from "."
 
 const meta = {
-  title: "Molecules / Navigation / Breadcrumbs",
+  title: "Components / Navigation / Breadcrumbs",
   component: BreadcrumbsComponent,
 } satisfies Meta<typeof BreadcrumbsComponent>
 

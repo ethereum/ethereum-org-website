@@ -7,7 +7,7 @@ import { Stack } from "../ui/flex"
 import FeedbackWidget from "./"
 
 const meta = {
-  title: "FeedbackWidget",
+  title: "Components / Site Chrome / FeedbackWidget",
   parameters: {
     layout: "fullscreen",
   },

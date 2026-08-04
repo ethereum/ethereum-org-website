@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/nextjs"
 import Nav from "."
 
 const meta = {
-  title: "Components / Layout / Nav",
+  title: "Components / Site Chrome / Nav",
   component: Nav,
   parameters: {
     chromatic: { disableSnapshot: true },

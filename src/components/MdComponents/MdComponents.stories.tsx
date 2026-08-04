@@ -6,7 +6,7 @@ import { viewportModes } from "@/storybook/modes"
 import MdComponentSet from "."
 
 const meta = {
-  title: "Molecules / Display Content / MdComponents",
+  title: "Components / Content / MdComponents",
   parameters: {
     layout: "none",
     chromatic: {

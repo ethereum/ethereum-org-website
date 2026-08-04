@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/buttons/Button"
 import { ClickAnimation } from "../ClickAnimation"
 
 const meta = {
-  title: "Molecules / Display Content / Simulator / ClickAnimation",
+  title: "Components / Features / Simulator / ClickAnimation",
   component: ClickAnimation,
   decorators: [
     (Story) => (

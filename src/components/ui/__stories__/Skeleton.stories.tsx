@@ -10,7 +10,7 @@ import {
 } from "../skeleton"
 
 const meta = {
-  title: "UI / Skeleton",
+  title: "UI / Layout / Skeleton",
   component: Skeleton,
   parameters: {
     chromatic: { disableSnapshot: true },

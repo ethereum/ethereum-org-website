@@ -5,7 +5,7 @@ import InlineLink, { BaseLink, LinkWithArrow } from "../Link"
 import { ListItem, UnorderedList } from "../list"
 
 const meta = {
-  title: "UI / Link",
+  title: "UI / Navigation / Link",
   component: InlineLink,
   decorators: [
     (Story) => (

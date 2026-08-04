@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/nextjs"
 import { SupportedLanguagesTooltip } from "."
 
 const meta = {
-  title: "Components / Widgets / SupportedLanguagesTooltip",
+  title: "Components / SupportedLanguagesTooltip",
   component: SupportedLanguagesTooltip,
   parameters: {
     chromatic: { disableSnapshot: true },

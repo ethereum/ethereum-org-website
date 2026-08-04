@@ -114,7 +114,7 @@ const walletsData = [
 ]
 
 const meta = {
-  title: "Pages / Special cases / Find Wallet Product Table",
+  title: "Components / Features / FindWalletProductTable",
   component: FindWalletProductTable,
   decorators: [
     (Story) => (

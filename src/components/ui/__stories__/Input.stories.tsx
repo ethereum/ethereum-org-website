@@ -4,7 +4,7 @@ import { VStack } from "../flex"
 import Input from "../input"
 
 const meta = {
-  title: "UI / Primitives / Input",
+  title: "UI / Forms / Input",
   component: Input,
   parameters: {
     docs: {

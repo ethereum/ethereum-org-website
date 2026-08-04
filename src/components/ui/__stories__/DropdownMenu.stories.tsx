@@ -19,7 +19,7 @@ import {
 } from "../dropdown-menu"
 
 const meta = {
-  title: "UI / Primitives / DropdownMenu",
+  title: "UI / Overlays / DropdownMenu",
   component: DropdownMenu,
   parameters: {
     chromatic: { disableSnapshot: true },

@@ -6,7 +6,7 @@ import { InitialWordDisplay as Component } from "../InitialWordDisplay"
 
 const meta = {
   title:
-    "Molecules / Display Content / Simulator / CreateAccount Screen / InitialWordDisplay",
+    "Components / Features / Simulator / Screens / CreateAccount / InitialWordDisplay",
   component: Component,
   parameters: {
     layout: "fullscreen",

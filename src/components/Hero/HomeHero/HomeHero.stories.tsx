@@ -5,7 +5,7 @@ import { langViewportModes } from "@/storybook/modes"
 import HomeHeroComponent from "."
 
 const meta = {
-  title: "Organisms / Layouts / Hero",
+  title: "Components / Heroes / HomeHero",
   component: HomeHeroComponent,
   parameters: {
     layout: "none",

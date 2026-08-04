@@ -7,7 +7,7 @@ import type { SectionNavDetails } from "@/lib/types"
 import TabNav, { StickyContainer } from "../TabNav"
 
 const meta = {
-  title: "UI / TabNav",
+  title: "UI / Navigation / TabNav",
   component: TabNav,
   parameters: {
     chromatic: { disableSnapshot: true },

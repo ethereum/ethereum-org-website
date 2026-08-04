@@ -5,7 +5,7 @@ import { Button } from "../buttons/Button"
 import { PersistentPanel } from "../persistent-panel"
 
 const meta = {
-  title: "UI / PersistentPanel",
+  title: "UI / Data Display / PersistentPanel",
   component: PersistentPanel,
   args: {
     open: false,

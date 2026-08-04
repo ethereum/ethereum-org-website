@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs"
 import { TerminalTypewriter } from "../terminal-typewriter"
 
 const meta = {
-  title: "UI / TerminalTypewriter",
+  title: "UI / Data Display / TerminalTypewriter",
   component: TerminalTypewriter,
   decorators: [
     (Story) => (

@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/nextjs"
 import ContributorsView, { type Contributor } from "./ContributorsView"
 
 const meta = {
-  title: "Molecules / Display Content / Contributors",
+  title: "Components / Content / Contributors",
   component: ContributorsView,
   parameters: {
     layout: "fullscreen",

@@ -15,7 +15,7 @@ import {
 } from "../command"
 
 const meta = {
-  title: "UI / Primitives / Command",
+  title: "UI / Overlays / Command",
   component: Command,
   parameters: {
     chromatic: { disableSnapshot: true },

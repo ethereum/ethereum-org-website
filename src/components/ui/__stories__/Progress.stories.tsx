@@ -4,7 +4,7 @@ import { VStack } from "../flex"
 import { Progress } from "../progress"
 
 const meta = {
-  title: "UI / Primitives / Progress",
+  title: "UI / Data Display / Progress",
   component: Progress,
   parameters: {
     chromatic: { disableSnapshot: true },

@@ -8,7 +8,7 @@ import { QuizContent } from "../QuizWidget/QuizContent"
 import { LAYER_2_QUIZ_TITLE_KEY, layer2Questions } from "./utils"
 
 const meta = {
-  title: "Molecules / Display Content / Quiz / QuizWidget / ButtonGroup",
+  title: "Components / Features / Quiz / QuizWidget / ButtonGroup",
   component: QuizButtonGroup,
   args: {
     answerStatus: undefined,

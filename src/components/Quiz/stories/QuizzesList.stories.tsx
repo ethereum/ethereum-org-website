@@ -15,7 +15,7 @@ import QuizzesListComponent from "../QuizzesList"
  */
 
 const meta = {
-  title: "Molecules / Display Content / Quiz / QuizzesList",
+  title: "Components / Features / Quiz / QuizzesList",
   component: QuizzesListComponent,
   args: {
     content: ethereumBasicsQuizzes,

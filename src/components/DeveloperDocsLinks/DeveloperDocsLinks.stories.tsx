@@ -5,7 +5,7 @@ import { langViewportModes } from "../../../.storybook/modes"
 import DeveloperDocsLinksComponent from "."
 
 const meta = {
-  title: "Molecules / Navigation / DeveloperDocsLinks",
+  title: "Components / Navigation / DeveloperDocsLinks",
   component: DeveloperDocsLinksComponent,
   parameters: {
     layout: "fullscreen",

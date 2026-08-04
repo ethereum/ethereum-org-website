@@ -9,7 +9,7 @@ import { WalletHome as Component } from ".."
 import NFTImage from "@/public/images/deep-panic.png"
 
 const meta = {
-  title: "Molecules / Display Content / Simulator / WalletHome",
+  title: "Components / Features / Simulator / WalletHome",
   component: Component,
   parameters: {
     layout: "fullscreen",

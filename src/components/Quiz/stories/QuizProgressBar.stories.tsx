@@ -9,7 +9,7 @@ import { QuizProgressBar } from "../QuizWidget/QuizProgressBar"
 import { LAYER_2_QUIZ_KEY, layer2Questions } from "./utils"
 
 const meta = {
-  title: "Molecules / Display Content / Quiz / QuizWidget / ProgressBar",
+  title: "Components / Features / Quiz / QuizWidget / ProgressBar",
   component: QuizProgressBar,
   args: {
     questions: layer2Questions,

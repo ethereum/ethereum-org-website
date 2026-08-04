@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/nextjs"
 import GlossaryDefinitionComponent from "."
 
 const meta = {
-  title: "GlossaryDefinition",
+  title: "Components / Content / Glossary / Definition",
   component: GlossaryDefinitionComponent,
 } as Meta<typeof GlossaryDefinitionComponent>
 

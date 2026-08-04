@@ -4,7 +4,7 @@ import { HStack, VStack } from "../flex"
 import { Tag, TagButton, TagsInlineText } from "../tag"
 
 const meta = {
-  title: "UI / Tag",
+  title: "UI / Actions / Tag",
   component: Tag,
   parameters: {
     chromatic: { disableSnapshot: true },

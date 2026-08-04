@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs"
 import Component from "."
 
 const meta = {
-  title: "Atoms / Media & Icons / ListenToPlayer",
+  title: "Components / Content / ListenToPlayer",
   component: Component,
   args: {
     slug: "/eth/",

@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/nextjs"
 import TranslationChartImageComponent from "."
 
 const meta = {
-  title: "Atoms / Media & Icons / TranslationChartImage",
+  title: "Components / TranslationChartImage",
   component: TranslationChartImageComponent,
   parameters: {
     layout: "fullscreen",

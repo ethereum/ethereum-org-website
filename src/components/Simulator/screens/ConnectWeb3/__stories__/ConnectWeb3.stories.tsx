@@ -7,7 +7,7 @@ import { Template } from "@/components/Simulator/Template"
 import { ConnectWeb3 as Component } from "../"
 
 const meta = {
-  title: "Molecules / Display Content / Simulator / ConnectWeb3 Screen",
+  title: "Components / Features / Simulator / Screens / ConnectWeb3",
   component: Component,
   parameters: {
     layout: "fullscreen",

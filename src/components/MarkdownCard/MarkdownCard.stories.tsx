@@ -8,7 +8,7 @@ import { Grid } from "../ui/grid"
 import CardComponent, { MarkdownCardProps } from "."
 
 const meta = {
-  title: "UI / Cards / MarkdownCard",
+  title: "Components / Cards / MarkdownCard",
   component: CardComponent,
   parameters: { layout: "fullscreen" },
   decorators: [

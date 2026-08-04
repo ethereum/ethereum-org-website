@@ -7,7 +7,7 @@ import { QuizSummary } from "../QuizWidget/QuizSummary"
 import { LAYER_2_QUIZ_TITLE_KEY, layer2Questions } from "./utils"
 
 const meta = {
-  title: "Molecules / Display Content / Quiz / QuizWidget / Summary",
+  title: "Components / Features / Quiz / QuizWidget / Summary",
   component: QuizSummary,
   args: {
     questionsLength: layer2Questions.length,

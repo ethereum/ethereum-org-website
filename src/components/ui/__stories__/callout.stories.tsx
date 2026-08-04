@@ -17,7 +17,7 @@ import manAndDog from "@/public/images/man-and-dog-playing.png"
 import walking from "@/public/images/walking.png"
 
 const meta = {
-  title: "UI / Primitives / Callout",
+  title: "UI / Data Display / Callout",
   component: Callout,
   parameters: {
     // Default preview is layout: "centered" (flex-centered, content-width).

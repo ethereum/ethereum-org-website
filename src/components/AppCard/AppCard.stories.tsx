@@ -10,7 +10,7 @@ import TruncatedText from "@/components/ui/TruncatedText"
 import AppCard from "."
 
 const meta = {
-  title: "Molecules / Display Content / AppCard",
+  title: "Components / Cards / AppCard",
   component: AppCard,
   decorators: [
     (Story) => (

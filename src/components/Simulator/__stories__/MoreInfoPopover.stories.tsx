@@ -6,7 +6,7 @@ import { Flex } from "@/components/ui/flex"
 import { MoreInfoPopover as MoreInfoPopoverComponent } from "../MoreInfoPopover"
 
 const meta = {
-  title: "Molecules / Display Content / Simulator / MoreInfoPopover",
+  title: "Components / Features / Simulator / MoreInfoPopover",
   component: MoreInfoPopoverComponent,
   decorators: [
     (Story) => (

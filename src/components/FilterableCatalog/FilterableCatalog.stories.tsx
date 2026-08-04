@@ -11,7 +11,7 @@ import type {
 import { toggleId } from "./utils"
 
 const meta = {
-  title: "Components / FilterableCatalog",
+  title: "Components / Features / FilterableCatalog",
   component: FilterableCatalog,
   parameters: {
     layout: "padded",

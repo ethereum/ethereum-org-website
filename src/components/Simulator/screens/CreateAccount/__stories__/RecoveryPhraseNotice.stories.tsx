@@ -6,7 +6,7 @@ import { RecoveryPhraseNotice as Component } from "../RecoveryPhraseNotice"
 
 const meta = {
   title:
-    "Molecules / Display Content / Simulator / CreateAccount Screen / RecoveryPhraseNotice",
+    "Components / Features / Simulator / Screens / CreateAccount / RecoveryPhraseNotice",
   component: Component,
   parameters: {
     layout: "fullscreen",

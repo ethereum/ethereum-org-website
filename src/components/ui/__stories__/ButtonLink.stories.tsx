@@ -4,7 +4,7 @@ import { ButtonLink, type ButtonVariantProps } from "../buttons/Button"
 import { HStack, VStack } from "../flex"
 
 const meta = {
-  title: "UI / ButtonLink",
+  title: "UI / Actions / ButtonLink",
   component: ButtonLink,
   args: {
     href: "#",

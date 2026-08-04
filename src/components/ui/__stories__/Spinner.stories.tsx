@@ -4,7 +4,7 @@ import { HStack, VStack } from "../flex"
 import { Spinner } from "../spinner"
 
 const meta = {
-  title: "UI / Spinner",
+  title: "UI / Data Display / Spinner",
   component: Spinner,
   parameters: {
     chromatic: { disableSnapshot: true },

@@ -5,7 +5,7 @@ import { HStack } from "../ui/flex"
 import Select from "./"
 
 const meta = {
-  title: "Atoms / Form / Dropdown",
+  title: "Components / Forms / Select",
   component: Select,
   parameters: {
     // TODO: Remove this when this story file becomes the primary one

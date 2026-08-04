@@ -7,7 +7,7 @@ import PathwayCard from "@/components/cards/pathway-card"
 import walletCardImg from "@/public/images/homepage/features/global.png"
 
 const meta = {
-  title: "Cards / PathwayCard",
+  title: "Components / Cards / PathwayCard",
   component: PathwayCard,
   parameters: {
     layout: "centered",

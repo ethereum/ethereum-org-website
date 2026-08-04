@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/nextjs"
 import CallToContributeComponent from "."
 
 const meta = {
-  title: "Molecules / Navigation / CallToContribute",
+  title: "Components / CallToContribute",
   component: CallToContributeComponent,
   args: {
     editPath:

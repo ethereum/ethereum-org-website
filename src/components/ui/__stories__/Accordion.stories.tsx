@@ -8,7 +8,7 @@ import {
 } from "../accordion"
 
 const meta = {
-  title: "UI / Accordion",
+  title: "UI / Data Display / Accordion",
   component: Accordion,
   decorators: [
     (Story) => (

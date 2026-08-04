@@ -14,7 +14,7 @@ import { InteractiveWordSelector as Component } from "../InteractiveWordSelector
 
 const meta = {
   title:
-    "Molecules / Display Content / Simulator / CreateAccount Screen / InteractiveWordSelector",
+    "Components / Features / Simulator / Screens / CreateAccount / InteractiveWordSelector",
   component: Component,
   parameters: {
     layout: "fullscreen",

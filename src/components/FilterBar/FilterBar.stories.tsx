@@ -4,7 +4,7 @@ import type { Meta } from "@storybook/nextjs"
 import FilterBar from "./"
 
 const meta = {
-  title: "Molecules / Navigation / FilterBar",
+  title: "Components / Navigation / FilterBar",
   component: FilterBar,
   parameters: {
     layout: "fullscreen",

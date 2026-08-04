@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/nextjs"
 import TranslationBanner from "."
 
 const meta = {
-  title: "Components / Callouts / TranslationBanner",
+  title: "Components / Site Chrome / TranslationBanner",
   component: TranslationBanner,
   parameters: {
     chromatic: { disableSnapshot: true },

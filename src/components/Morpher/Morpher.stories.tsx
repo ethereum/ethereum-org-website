@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/nextjs"
 import Morpher from "."
 
 const meta = {
-  title: "Components / Widgets / Morpher",
+  title: "Components / Morpher",
   component: Morpher,
   parameters: {
     chromatic: { disableSnapshot: true },

@@ -16,7 +16,7 @@ const SAMPLE = {
 }
 
 const meta = {
-  title: "UI / Avatar",
+  title: "UI / Data Display / Avatar",
   component: Avatar,
   args: SAMPLE,
   parameters: {
