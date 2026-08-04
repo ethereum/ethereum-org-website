@@ -175,6 +175,12 @@ export const getEventsData = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
+export const getMeetupImages = createCachedGetter(
+  dataLayer.getMeetupImages,
+  ["meetup-images"],
+  CACHE_REVALIDATE_DAY
+)
+
 export const getDeveloperToolsData = createCachedGetter(
   dataLayer.getDeveloperToolsData,
   ["developer-tools-data"],

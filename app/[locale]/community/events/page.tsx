@@ -45,7 +45,7 @@ import { SECTION_IDS } from "./constants"
 import PageJsonLD from "./page-jsonld"
 import { getMeetupGroups, mapEventTranslations } from "./utils"
 
-import { getEventsData } from "@/lib/data"
+import { getEventsData, getMeetupImages } from "@/lib/data"
 import ethereumEverywhereLogo from "@/public/images/community/ethereum-everywhere-logo.png"
 import geodeLabsLogo from "@/public/images/community/geode-labs-logo.png"
 import heroImage from "@/public/images/enterprise-eth.png"
@@ -89,7 +89,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       !e.eventTypes?.includes("conference") &&
       !e.eventTypes?.includes("hackathon")
   )
-  const meetupGroups = getMeetupGroups(locale)
+  const meetupGroups = getMeetupGroups(locale, (await getMeetupImages()) ?? {})
   const meetups = [...apiMeetups, ...meetupGroups]
 
   // Continent labels for tabs

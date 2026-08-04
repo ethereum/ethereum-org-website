@@ -19,7 +19,7 @@ import { getMeetupGroups, mapEventTranslations, sanitize } from "../utils"
 
 import PageJsonLD from "./page-jsonld"
 
-import { getEventsData } from "@/lib/data"
+import { getEventsData, getMeetupImages } from "@/lib/data"
 
 const safeDecodeURIComponent = (str: string) => {
   try {
@@ -45,7 +45,7 @@ const Page = async (props: {
   const tCommon = await getTranslations("common")
 
   const apiEvents = mapEventTranslations(_events, t, locale)
-  const meetupGroups = getMeetupGroups(locale)
+  const meetupGroups = getMeetupGroups(locale, (await getMeetupImages()) ?? {})
   const events = [...apiEvents, ...meetupGroups]
 
   const filteredEvents = ((): EventItem[] => {
