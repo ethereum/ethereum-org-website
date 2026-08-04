@@ -50,7 +50,7 @@ const WalletCard = memo(function WalletCard({
             className="text-lg font-bold text-body no-underline hover:text-body"
             matomoEvent={{
               eventCategory: "find-wallet",
-              eventAction: "expanded",
+              eventAction: "open_wallet_modal",
               eventName: wallet.name,
             }}
           >
