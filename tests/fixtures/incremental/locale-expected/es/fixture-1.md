@@ -47,6 +47,7 @@ Estas cuatro libertades son la base filosófica de todo el movimiento del softwa
 La palabra "free" (libre/gratis) en el software libre se refiere a la libertad, no al costo. El software privativo puede ser gratuito y el software libre puede venderse comercialmente. Consulte la [filosofía de GNU](https://www.gnu.org/philosophy/free-sw.html) para obtener una explicación detallada.
 
 </InfoBanner>
+
 ## Elegir una licencia {#choosing-a-license}
 
 ### Licencias copyleft {#copyleft-licenses}
@@ -83,11 +84,30 @@ La desventaja es que algunas empresas evitan las dependencias con licencia copyl
 Consulte las <a href="https://www.gnu.org/licenses/gpl-faq.html#AllCompatibility">preguntas frecuentes sobre la GPL</a> para conocer las dudas comunes sobre el cumplimiento del copyleft.
 
 </ExpandableCard>
+
 ### Licencias permisivas {#permissive-licenses}
 
 Las licencias permisivas como `MIT` y `Apache-2.0` permiten derivados privativos. La `BSD-2-Clause` es otra opción permisiva popular con restricciones mínimas.
 
 ```python
+# Ejemplo: cargar la licencia de un proyecto desde el disco
+def read_license(path: str) -> str:
+  """Leer y devolver el contenido de un archivo LICENSE."""
+  with open(path, "r") as f:
+    return f.read()
+
+# Verificar si la licencia es permisiva
+def is_permissive(license_text: str) -> bool:
+  permissive_keywords = ["MIT", "Apache", "BSD"]
+  return any(kw in license_text for kw in permissive_keywords)
+```
+
+La principal ventaja de las licencias permisivas es la máxima adopción. Es más probable que las empresas utilicen y contribuyan a proyectos con licencias permisivas porque no hay restricciones sobre cómo se puede usar el código.
+
+Puede desplegar proyectos usando [Repositorios de GitHub](https://github.com/new) en cualquier plataforma de alojamiento, y verificar el cumplimiento con [SPDX](https://spdx.org/).
+
+Use [Remix](https://remix.ethereum.org/) en [Holesky](https://holesky.dev/) con un [explorador de bloques](https://eth.blockscout.com/) para probar [contratos inteligentes](/glossary/#smart-contract) antes de desplegar en producción.
+
 ### Tabla comparativa {#comparison-table}
 
 | Licencia | Tipo | Obras derivadas | Concesión de patentes |
@@ -100,51 +120,6 @@ Las licencias permisivas como `MIT` y `Apache-2.0` permiten derivados privativos
 | BSD-2-Clause | Permisiva | Cualquier licencia | No |
 | MPL-2.0 | Copyleft a nivel de archivo | Los archivos modificados deben ser MPL | Sí |
 
-## Colaboración comunitaria {#community-collaboration}
-
-### Contribuir a proyectos {#how-to-contribute}
-
-Contribuir al código abierto comienza por comprender el flujo de trabajo del proyecto. La mayoría de los proyectos utilizan issue trackers para coordinar el trabajo y pull requests para proponer cambios.
-
-<ButtonLink href="/contributing/quick-start/">Comience a contribuir hoy</ButtonLink>
-
-<DocLink href="/contributing/getting-started/">
-  Cómo contribuir a este proyecto
-</DocLink>
-
-<DocLink href="/community/" className="featured">
-  Únase a nuestra comunidad
-</DocLink>
-
-Antes de enviar una contribución, siempre revise el archivo `CONTRIBUTING.md` del proyecto para conocer las pautas. El estilo de código, los requisitos de prueba y los procesos de revisión varían entre proyectos.
-
-```md
-## Plantilla de Pull Request
-
-**Descripción:** Breve resumen de los cambios
-**Issue relacionado:** Enlace al issue que esto aborda
-**Pruebas:** ¿Cómo se probó esto?
-```
-
-### <Emoji text=":star:" size={1} className="me-2" /> Mejores prácticas para la revisión de código {#code-review}
-
-La revisión de código es esencial para mantener la calidad en proyectos colaborativos. Los revisores deben verificar la exactitud, la consistencia del estilo y los posibles problemas de seguridad.
-
-<Alert variant="update">
-<AlertEmoji text=":eyes:"/>
-<AlertContent>
-<AlertDescription>
-  Las buenas revisiones de código se centran en la lógica y el diseño, no solo en el formato. Utilice herramientas automatizadas como linters para la aplicación del estilo, y reserve la revisión humana para decisiones arquitectónicas y casos extremos.
-</AlertDescription>
-</AlertContent>
-</Alert>
-
-<QuizWidget quizKey="oss-licensing-v2" />
-
-
-## Licencia dual {#dual-licensing}
-
-Algunos proyectos ofrecen su código bajo dos licencias simultáneamente. Esto permite a los usuarios comerciales comprar una licencia privativa mientras mantienen la versión de código abierto disponible bajo términos copyleft. Proyectos como [Qt](https://www.qt.io/licensing/) y [MySQL](https://www.mysql.com/about/legal/licensing/) utilizan este modelo.
 ## Cumplimiento y auditoría {#compliance-and-auditing}
 
 Las organizaciones que utilizan software de código abierto deben rastrear sus dependencias y garantizar el cumplimiento de las licencias<sup>1</sup>. Herramientas como [FOSSA](https://fossa.com/) y [Snyk](https://snyk.io/) pueden automatizar este proceso.
@@ -198,6 +173,51 @@ Revise el [glosario de términos](/glossary/) completo para obtener definiciones
 
 </div>
 </Alert>
+
+## Colaboración comunitaria {#community-collaboration}
+
+### Contribuir a proyectos {#how-to-contribute}
+
+Contribuir al código abierto comienza por comprender el flujo de trabajo del proyecto. La mayoría de los proyectos utilizan issue trackers para coordinar el trabajo y pull requests para proponer cambios.
+
+<ButtonLink href="/contributing/quick-start/">Comience a contribuir hoy</ButtonLink>
+
+<DocLink href="/contributing/getting-started/">
+  Cómo contribuir a este proyecto
+</DocLink>
+
+<DocLink href="/community/" className="featured">
+  Únase a nuestra comunidad
+</DocLink>
+
+Antes de enviar una contribución, siempre revise el archivo `CONTRIBUTING.md` del proyecto para conocer las pautas. El estilo de código, los requisitos de prueba y los procesos de revisión varían entre proyectos.
+
+```md
+## Plantilla de Pull Request
+
+**Descripción:** Breve resumen de los cambios
+**Issue relacionado:** Enlace al issue que esto aborda
+**Pruebas:** ¿Cómo se probó esto?
+```
+
+### <Emoji text=":star:" size={1} className="me-2" /> Mejores prácticas para la revisión de código {#code-review}
+
+La revisión de código es esencial para mantener la calidad en proyectos colaborativos. Los revisores deben verificar la exactitud, la consistencia del estilo y los posibles problemas de seguridad.
+
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent>
+<AlertDescription>
+  Las buenas revisiones de código se centran en la lógica y el diseño, no solo en el formato. Utilice herramientas automatizadas como linters para la aplicación del estilo, y reserve la revisión humana para decisiones arquitectónicas y casos extremos.
+</AlertDescription>
+</AlertContent>
+</Alert>
+
+<QuizWidget quizKey="oss-licensing-v2" />
+
+## Licencia dual {#dual-licensing}
+
+Algunos proyectos ofrecen su código bajo dos licencias simultáneamente. Esto permite a los usuarios comerciales comprar una licencia privativa mientras mantienen la versión de código abierto disponible bajo términos copyleft. Proyectos como [Qt](https://www.qt.io/licensing/) y [MySQL](https://www.mysql.com/about/legal/licensing/) utilizan este modelo.
 
 ## Lecturas adicionales {#further-reading}
 
