@@ -51,6 +51,14 @@ ALL anchor tags. Auto-detects external (new tab + sr-only "(opens in new tab)"),
 
 `"use client"` because of `usePathname` and tracking.
 
+### `ArrowNext` / `ArrowPrev` (`ui/arrow`)
+
+```tsx
+import { ArrowNext, ArrowPrev } from "@/components/ui/arrow"
+```
+
+RTL-aware Lucide `ArrowRight`/`ArrowLeft` wrappers (bake in `rtl:-scale-x-100`). Use for directional "forward/back" arrows -- `LinkWithArrow` and `CardLinkFake`'s `withForwardArrow` both render `ArrowNext`. Chevron equivalents: `ChevronNext`/`ChevronPrev` from `@/components/Chevron`.
+
 ## Cards & Containers
 
 ### `Card` (+ parts)
@@ -59,11 +67,13 @@ ALL anchor tags. Auto-detects external (new tab + sr-only "(opens in new tab)"),
 import {
   Card,
   CardBanner,
+  CardButtonFake,
   CardContent,
   CardEmoji,
   CardFooter,
   CardHeader,
   CardIconContainer,
+  CardLinkFake,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
@@ -85,7 +95,7 @@ The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card
     <CardParagraph>Description</CardParagraph>
   </CardContent>
   <CardFooter>
-    <ButtonLink href="...">CTA</ButtonLink>
+    <CardButtonFake>CTA</CardButtonFake>
   </CardFooter>
 </Card>
 ```
@@ -95,7 +105,9 @@ The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card
 - `variant`: `base` (default, `bg-background-highlight` grey) | `nested` (`bg-background`, use when inside a colored section) | `ghost` (no bg; auto-widens `--banner-radius`; as a link, fills with `bg-background-highlight` on hover instead of an outline ring) | `header-bar` (highlight only on the header, bordered card, header laid out as an icon+text row with bottom border — all baked in, just drop a `CardHeader` inside).
 - **Link hover is variant-aware** (auto, from `href`): `ghost` link cards fill with `bg-background-highlight` and drop the outline; `base`/`nested`/`header-bar` link cards keep the `ring-primary-hover` outline. Driven by an internal `interactive` compound variant, not a prop.
 - `size`: `lg | base (default) | md | sm | xs`. Controls `--card-pad` (between/around parts) and `--content-space` (within `CardContent`). `xs` = zero padding for edge-to-edge banner imagery.
-- `href`: pass to wrap in `BaseLink` and get whole-card-clickable behavior with `group/link` propagation.
+- `href`: wraps in `BaseLink` for whole-card-clickable behavior with `group/link` propagation. An `href` card **auto-applies `hoverLift`** and the outline/fill -- don't pass `hoverLift` on a link card.
+- `hoverLift` (pass by hand only on **non-link** action cards): raises the card on hover (+1% scale + shadow, 300ms; the scale is `motion-safe`-gated). `border`: static `ring-border` edge.
+- **Single-CTA `href` cards render the CTA as `CardButtonFake` (button-shaped) or `CardLinkFake` (text link), never a real `ButtonLink`/`Button`/`LinkWithArrow`** -- a real interactive element nested in the card's anchor is invalid HTML. `CardButtonFake` mirrors `Button` (`variant`/`size`/`isSecondary`, `withChevron`, `hideArrow`); `CardLinkFake` mirrors a text link (`withForwardArrow`, `hideArrow`; external NE arrow automatic). See `card-walkthrough.md`.
 - Card is always vertical (`flex flex-col`); there is no `orientation` variant.
 
 **`CardHeader`**: no own variants. The parent `Card variant="header-bar"` applies the row layout / bottom border to descendant headers automatically.
@@ -108,20 +120,21 @@ The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card
 
 **`CardFooter` variants**:
 
-- `buttons`: `full (default)` stretches buttons/ButtonLinks to full width with centered text | `compact` sizes them to fit | `inherit` opts out so children render at intrinsic width.
+- `buttons`: `responsive (default)` full-width on a narrow card, shrink-to-fit once wide (`@container`) | `full` always full-width centered | `compact` always shrink-to-fit | `inherit` opts out (used by `CardLinkFake`).
 
 **`CardBanner` variants**:
 
 - `background`: `body (default)` | `accent-a` | `accent-b` | `accent-c` | `primary` | `none`. `none` only when the image won't cover the full rectangle.
 - `size`: `full | lg | base (default) | sm | thumbnail-lg | thumbnail`. Use these instead of `className="h-..."` to stay on-rhythm. `thumbnail-lg` is a 128px square; `thumbnail` is 64px — both `shrink-0` for small logo/icon placements.
 - `fit`: `cover (default) | contain`. With `fit="contain"` and a single `<Image>` child, the banner auto-clones the image as a blurred backdrop. Two children breaks the magic.
-- `zoom`: `true (default) | false`. Controls hover zoom propagation from a parent `group/link`.
+- `zoom`: opt-in boolean, **off by default**. Pass `zoom` to propagate a parent `group/link` hover into an image scale-up (media/thumbnail tiles). No `zoom={false}` -- omit to keep the image static.
 - Placement: inside `CardHeader` (default; keeps banner radius concentric and gives link-hover room). Bare direct child of `Card` only for a true edge-to-edge image, paired with `size="xs"` so radii match (a bare banner on a padded size / link card mismatches corner radius — see gotchas).
 
 **`CardTitle` variants**:
 
-- `variant`: `semibold | bold (default) | black`.
+- `size`: `sm` (text-lg) | omit (text-2xl) | `lg` (text-3xl). Weight is always `font-black` -- there is no per-weight variant.
 - `spacing` (gap before a following `CardParagraph` only): `quarter (default) | none | inherit`. Uses `:has(+...)` selector.
+- Does not underline on card hover (the card's outline/fill + lift carry the click signal).
 - **`asChild`**: required when `<h3>` would break the document's heading outline. Pass your own semantic tag inside.
 
 **`CardParagraph` variants**:

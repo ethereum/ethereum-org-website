@@ -1,4 +1,3 @@
-import { pick } from "lodash"
 import {
   ArrowLeftRight,
   ChartNoAxesCombined,
@@ -6,18 +5,13 @@ import {
   Lightbulb,
   Sparkle,
 } from "lucide-react"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, ToCItem } from "@/lib/types"
 
 import BigNumber from "@/components/BigNumber"
 import PathwayCard from "@/components/cards/pathway-card"
 import PageHero from "@/components/Hero/PageHero"
-import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
@@ -27,6 +21,7 @@ import {
   AlertIcon,
   AlertTitle,
 } from "@/components/ui/alert"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardContent,
@@ -42,7 +37,7 @@ import VideoWatch from "@/components/Videos/VideoWatch"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { numberFormat, numberToPercent } from "@/lib/utils/numbers"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import { getIdFromHash } from "@/lib/utils/url"
 
 import PageJsonLD from "./page-jsonld"
 
@@ -57,10 +52,6 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   setRequestLocale(locale)
 
   const t = await getTranslations("page-privacy")
-
-  const allMessages = await getMessages({ locale })
-  const requiredNamespaces = getRequiredNamespacesForPage("/privacy/")
-  const messages = pick(allMessages, requiredNamespaces)
 
   const { contributors, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("privacy", locale)
@@ -95,11 +86,6 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       url: "#getting-started",
     },
   ]
-
-  const getId = (input: string) => {
-    const parts = input.split("#")
-    return parts.length > 1 ? parts[1] : ""
-  }
 
   return (
     <>
@@ -151,7 +137,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </CardContent>
         </Card>
 
-        <Section id={getId(tocItems[0].url)}>
+        <Section id={getIdFromHash(tocItems[0].url)}>
           <h2>{tocItems[0].title}</h2>
           <p>
             {t.rich("page-privacy-data-against-you-description-1", {
@@ -204,7 +190,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </Alert>
         </Section>
 
-        <Section id={getId(tocItems[1].url)}>
+        <Section id={getIdFromHash(tocItems[1].url)}>
           <h2>{tocItems[1].title}</h2>
           <p>
             {t.rich("page-privacy-private-moments-description-1", {
@@ -267,7 +253,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <VideoWatch slug="metadata-surveillance-and-nym" />
         </Section>
 
-        <Section id={getId(tocItems[2].url)}>
+        <Section id={getIdFromHash(tocItems[2].url)}>
           <h2>{tocItems[2].title}</h2>
           <p>
             {t.rich("page-privacy-targeting-description-1", {
@@ -320,7 +306,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </Grid>
         </Section>
 
-        <Section id={getId(tocItems[3].url)}>
+        <Section id={getIdFromHash(tocItems[3].url)}>
           <h2>{tocItems[3].title}</h2>
           <p>{t("page-privacy-nothing-to-hide-description-1")}</p>
           <p>
@@ -375,7 +361,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </Alert>
         </Section>
 
-        <Section id={getId(tocItems[4].url)}>
+        <Section id={getIdFromHash(tocItems[4].url)}>
           <h2>{tocItems[4].title}</h2>
           <p>{t("page-privacy-what-protects-description-1")}</p>
           <p>
@@ -421,7 +407,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <VideoWatch slug="surveillance-silence-reclaiming-privacy" />
         </Section>
 
-        <Section id={getId(tocItems[5].url)}>
+        <Section id={getIdFromHash(tocItems[5].url)}>
           <h2>{tocItems[5].title}</h2>
           <p>
             {t.rich("page-privacy-default-description-1", { strong: Strong })}
@@ -432,9 +418,16 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <p>
             {t.rich("page-privacy-default-description-3", { strong: Strong })}
           </p>
+          <ButtonLink
+            href="/roadmap/privacy/"
+            variant="outline"
+            data-flow="cta"
+          >
+            {t("page-privacy-default-cta")}
+          </ButtonLink>
         </Section>
 
-        <Section id={getId(tocItems[6].url)}>
+        <Section id={getIdFromHash(tocItems[6].url)}>
           <h2>{tocItems[6].title}</h2>
           <p>{t("page-privacy-getting-started-description-1")}</p>
           <p>{t("page-privacy-getting-started-description-2")}</p>
@@ -454,9 +447,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
         </Section>
 
         <Section id="quiz-section">
-          <I18nProvider locale={locale} messages={messages}>
-            <StandaloneQuizWidget quizKey="privacy" />
-          </I18nProvider>
+          <StandaloneQuizWidget quizKey="privacy" />
         </Section>
       </ContentLayout>
     </>

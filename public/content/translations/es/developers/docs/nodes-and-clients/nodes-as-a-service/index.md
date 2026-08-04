@@ -47,14 +47,14 @@ Al usar un servicio de nodos, está centralizando el aspecto de infraestructura 
 
 Lea más sobre los [beneficios de ejecutar su propio nodo](/developers/docs/nodes-and-clients/#benefits-to-you).
 
-## Servicios de nodos populares
+## Servicios de nodos populares {#popular-node-services}
 
 Aquí hay una lista de algunos de los proveedores de nodos de Ethereum más populares, ¡no dude en agregar los que falten! Cada servicio de nodos ofrece diferentes beneficios y características además de niveles gratuitos o de pago, debe investigar cuáles se adaptan mejor a sus necesidades antes de tomar una decisión.
 
 - [**Alchemy**](https://alchemy.com/)
   - [Documentación](https://www.alchemy.com/docs/)
   - Características
-    - El nivel gratuito más grande con 300 millones de unidades de cómputo por mes (~30 millones de solicitudes getLatestBlock)
+    - El nivel gratuito más grande con 300 millones de unidades de cómputo por mes (\~30 millones de solicitudes getLatestBlock)
     - Soporte multicadena para Polygon, Starknet, Optimism, Arbitrum
     - Impulsa ~70 % de las aplicaciones descentralizadas (dapps) de Ethereum más grandes y del volumen de transacciones de finanzas descentralizadas (DeFi)
     - Alertas de webhook en tiempo real a través de Alchemy Notify

@@ -3,7 +3,7 @@ import BetterUserExperienceIcon from "./better-user-experience.svg"
 import CheaperTransactionsIcon from "./cheaper-transactions.svg"
 import DankshardingIcon from "./danksharding.svg"
 import ExtraSecurityIcon from "./extra-security.svg"
-import FutureProofingIcon from "./future-proofing.svg"
+import PrivacyIcon from "./privacy.svg"
 import ProposerBuilderSeparationIcon from "./proposer-builder-separation.svg"
 import SecretLeaderElectionIcon from "./secret-leader-election.svg"
 import SingleSlotFinalityIcon from "./single-slot-finality.svg"
@@ -17,7 +17,7 @@ export {
   CheaperTransactionsIcon,
   DankshardingIcon,
   ExtraSecurityIcon,
-  FutureProofingIcon,
+  PrivacyIcon,
   ProposerBuilderSeparationIcon,
   SecretLeaderElectionIcon,
   SingleSlotFinalityIcon,

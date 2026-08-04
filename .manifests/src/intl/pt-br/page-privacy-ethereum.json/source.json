@@ -1,0 +1,907 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-privacy-ethereum.json",
+  "generatedAt": "2026-07-29T05:46:04.363Z",
+  "rootHash": "5a1caed35c36",
+  "tree": {
+    "contentHash": "dba6e5a6de26",
+    "anchorHash": "f605c2d2ade9",
+    "children": {
+      "page-privacy-ethereum-meta-title": {
+        "contentHash": "d452cb414fe3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-meta-description": {
+        "contentHash": "27e5101c720e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-title": {
+        "contentHash": "d452cb414fe3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-hero-description": {
+        "contentHash": "4d04f83166c9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-hero-cta": {
+        "contentHash": "d98fb5c0b118",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-summary-title": {
+        "contentHash": "8e76a94ac832",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-summary-item-1": {
+        "contentHash": "3ae4d7042545",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "c0e6c11fb10f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-summary-item-2": {
+        "contentHash": "287c8dce7ff0",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "91f4729834f9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-summary-item-3": {
+        "contentHash": "f6a004e98117",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "966869f19f79",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-summary-item-4": {
+        "contentHash": "00b2745863bf",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "8ceb8f87e1b2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-data-terms-title": {
+        "contentHash": "8b73e644bc8d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-data-terms-description-1": {
+        "contentHash": "0f10d6b08f25",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "0a8f65137df7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-data-terms-description-2": {
+        "contentHash": "8a2c01c0ddec",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-data-terms-description-3": {
+        "contentHash": "1e2b36c5fc80",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-mandate-quote-1": {
+        "contentHash": "0fd295e5ec99",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-mandate-quote-2": {
+        "contentHash": "48ac271e255d",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "ec163bc92f00",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-mandate-source": {
+        "contentHash": "2a1a0e74b6d8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-challenge-title": {
+        "contentHash": "a90fc1c1fda1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-challenge-description-1": {
+        "contentHash": "8bbfb349cc24",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-challenge-description-2": {
+        "contentHash": "291e9025d2ec",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "7513a7dbe7cd",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-challenge-description-3": {
+        "contentHash": "bbd08c1f4a5c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-challenge-description-4": {
+        "contentHash": "ffab0956b700",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "0d5ae5b3fa33",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-transition-title": {
+        "contentHash": "3fd5d5dc786b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-transition-description-1": {
+        "contentHash": "f35ac448199f",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "cb04ab0ee1eb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-transition-list-reads": {
+        "contentHash": "5a464e6ff87b",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "c08a4d31a98d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-transition-list-writes": {
+        "contentHash": "f667793c0abb",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "6fda9277c9d6",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-transition-list-proving": {
+        "contentHash": "b611cf116c8d",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "b7f20cf595b2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-transition-roadmap-cta": {
+        "contentHash": "84dc08a1a329",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-protecting-title": {
+        "contentHash": "a89c5653cfcb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-protecting-description-1": {
+        "contentHash": "2c871f2ca3ac",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "79fb75b96890",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-protecting-description-2": {
+        "contentHash": "fd83e660b9a7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-identity-title": {
+        "contentHash": "a888d878bd10",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-identity-description-1": {
+        "contentHash": "5dd89c4bb231",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "4412f3911b9e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-identity-description-2": {
+        "contentHash": "acbed926f537",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "acc10945ffad",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-identity-description-3": {
+        "contentHash": "1c0423308a91",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "dca1c96c8c05",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-identity-case-study-title": {
+        "contentHash": "b9acaa488590",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-identity-case-study-body": {
+        "contentHash": "189779d30531",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-identity-case-study-cta": {
+        "contentHash": "8fc95e39e667",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "5931a567de99",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-identity-apps-title": {
+        "contentHash": "46262636b5cd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-identity-apps-cta": {
+        "contentHash": "ba1a3e7df42a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-governance-title": {
+        "contentHash": "4f8f5240981f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-governance-description-1": {
+        "contentHash": "b6918f38b0a4",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "964a41b86758",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-governance-description-2": {
+        "contentHash": "6bd2ed4ce2dc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-governance-list-1": {
+        "contentHash": "3ac1d8ec5c08",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-governance-list-2": {
+        "contentHash": "47d429660785",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-governance-list-3": {
+        "contentHash": "a070b2d25209",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-governance-description-3": {
+        "contentHash": "f5f5409e8a69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-governance-description-4": {
+        "contentHash": "c9c789782757",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "d0228ac8c267",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-governance-description-5": {
+        "contentHash": "eab3e4b22335",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "813123c5d35e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-governance-description-6": {
+        "contentHash": "1629e5e53563",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "cead7f3c73d4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-governance-apps-title": {
+        "contentHash": "94c4101032af",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-communication-title": {
+        "contentHash": "7e028fe97893",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-communication-description-1": {
+        "contentHash": "8f111ab2d22d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-communication-remember-title": {
+        "contentHash": "dbd741fd9ea6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-communication-remember-body": {
+        "contentHash": "e3839fe9225a",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "ea744f3f43aa",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-communication-description-2": {
+        "contentHash": "4f970835125d",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "9f57ecd14034",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-communication-description-3": {
+        "contentHash": "d9c264c95b2f",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "a1d347927f0f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-communication-apps-title": {
+        "contentHash": "021c411fb499",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-stealth-title": {
+        "contentHash": "bb9bb97d947b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-stealth-description-1": {
+        "contentHash": "5d4fcd92644b",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "a9e38513196c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-stealth-description-2": {
+        "contentHash": "973bdf6b1752",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-stealth-description-3": {
+        "contentHash": "1b1071e9c8ca",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "5a83d2b335d4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-stealth-apps-title": {
+        "contentHash": "2a1bb18bbec0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-stealth-apps-cta": {
+        "contentHash": "be54604b4a1d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-payments-title": {
+        "contentHash": "d1215b9e6229",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-payments-description-1": {
+        "contentHash": "172bc9b6047e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-payments-description-2": {
+        "contentHash": "535134eafe8e",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "f51ca3a80837",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-payments-description-3": {
+        "contentHash": "94d1d41cb894",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "a256c2e99126",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-payments-description-4": {
+        "contentHash": "daa02853d9fd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-payments-list-poi": {
+        "contentHash": "5cbe2c3e57b5",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "ab591e547635",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-payments-list-asp": {
+        "contentHash": "58945ba6d256",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "b237159c6f47",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-payments-description-5": {
+        "contentHash": "657f83702f99",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-payments-apps-title": {
+        "contentHash": "284aa2a0e9bf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-l2-title": {
+        "contentHash": "e3b12739c6fa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-l2-description-1": {
+        "contentHash": "7b3aaf666969",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-l2-description-2": {
+        "contentHash": "829086689b04",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "2c1d392662b4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-l2-description-3": {
+        "contentHash": "c9f7f5068c11",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "ad0885ea9170",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-l2-description-4": {
+        "contentHash": "071f381de668",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-l2-list-title": {
+        "contentHash": "b21a2015a3da",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-l2-list-aztec": {
+        "contentHash": "578111fe60cb",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "94562309f8e6",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-l2-list-fairblock": {
+        "contentHash": "678d51981944",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "07e67ca3e181",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-l2-list-silentdata": {
+        "contentHash": "e0e4e40efe3f",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "fb766979db14",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-l2-list-starknet": {
+        "contentHash": "8db95e893103",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "1ca01ae49483",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-l2-cta": {
+        "contentHash": "0e4913f4bf9b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-selective-title": {
+        "contentHash": "fa3631e6b978",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-selective-description-1": {
+        "contentHash": "d3afb1216c6f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-selective-list-1": {
+        "contentHash": "ce08920eba02",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-selective-list-2": {
+        "contentHash": "d5eb40a75a76",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-selective-list-3": {
+        "contentHash": "3e991b522c26",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-selective-description-2": {
+        "contentHash": "a5a6e4b444c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-whats-next-title": {
+        "contentHash": "eaf380e7f604",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-whats-next-description-1": {
+        "contentHash": "a44877d58656",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-whats-next-description-2": {
+        "contentHash": "55ba220ac1cb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-whats-next-description-3": {
+        "contentHash": "7b79fb5fdf07",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-reading-title": {
+        "contentHash": "4ae2f5bc81b5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-reading-1": {
+        "contentHash": "36d29ea87223",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "291bfeda822d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-reading-2": {
+        "contentHash": "ae8577db0717",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "328f9db708b3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-reading-3": {
+        "contentHash": "f15babbc7283",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "dae3ab368e6c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-reading-4": {
+        "contentHash": "0b9c7a440951",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "221d718879f7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-reading-5": {
+        "contentHash": "a4e4f2fcd104",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "96004b24f052",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-reading-6": {
+        "contentHash": "b5b8ae64f2e4",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "ab26d6e2bf11",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-reading-7": {
+        "contentHash": "baf183329d2d",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "bdd3cc8ecdbc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-reading-8": {
+        "contentHash": "3575b3aafa3b",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "948b34d3923d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-reading-9": {
+        "contentHash": "a58a5c1ff152",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "50816b3a0eab",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-reading-10": {
+        "contentHash": "03b92633cfb6",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "f18a0152a3fa",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-reading-11": {
+        "contentHash": "6bfa0d19cfd5",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "380734077e3f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-reading-12": {
+        "contentHash": "810bf9db8da8",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "be558bcbbb38",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-reading-13": {
+        "contentHash": "ec6a4fe4683a",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "3dde5c11fcb7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-reading-14": {
+        "contentHash": "cd0605badef8",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "39bbc6c1b0b1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-reading-15": {
+        "contentHash": "441b6886f72f",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "9d0e710a16fe",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-reading-16": {
+        "contentHash": "bec9801a32d2",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "66e6a8820d4b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-ethereum-pathway-1-title": {
+        "contentHash": "955579b60518",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-pathway-1-description": {
+        "contentHash": "afe492c59ce7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-pathway-1-badge": {
+        "contentHash": "d70604e84304",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-pathway-2-title": {
+        "contentHash": "d075380f5776",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-ethereum-pathway-2-description": {
+        "contentHash": "493c9aeb55ac",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-privacy-ethereum-meta-title",
+      "page-privacy-ethereum-meta-description",
+      "page-privacy-ethereum-title",
+      "page-privacy-ethereum-hero-description",
+      "page-privacy-ethereum-hero-cta",
+      "page-privacy-ethereum-summary-title",
+      "page-privacy-ethereum-summary-item-1",
+      "page-privacy-ethereum-summary-item-2",
+      "page-privacy-ethereum-summary-item-3",
+      "page-privacy-ethereum-summary-item-4",
+      "page-privacy-ethereum-data-terms-title",
+      "page-privacy-ethereum-data-terms-description-1",
+      "page-privacy-ethereum-data-terms-description-2",
+      "page-privacy-ethereum-data-terms-description-3",
+      "page-privacy-ethereum-mandate-quote-1",
+      "page-privacy-ethereum-mandate-quote-2",
+      "page-privacy-ethereum-mandate-source",
+      "page-privacy-ethereum-challenge-title",
+      "page-privacy-ethereum-challenge-description-1",
+      "page-privacy-ethereum-challenge-description-2",
+      "page-privacy-ethereum-challenge-description-3",
+      "page-privacy-ethereum-challenge-description-4",
+      "page-privacy-ethereum-transition-title",
+      "page-privacy-ethereum-transition-description-1",
+      "page-privacy-ethereum-transition-list-reads",
+      "page-privacy-ethereum-transition-list-writes",
+      "page-privacy-ethereum-transition-list-proving",
+      "page-privacy-ethereum-transition-roadmap-cta",
+      "page-privacy-ethereum-protecting-title",
+      "page-privacy-ethereum-protecting-description-1",
+      "page-privacy-ethereum-protecting-description-2",
+      "page-privacy-ethereum-identity-title",
+      "page-privacy-ethereum-identity-description-1",
+      "page-privacy-ethereum-identity-description-2",
+      "page-privacy-ethereum-identity-description-3",
+      "page-privacy-ethereum-identity-case-study-title",
+      "page-privacy-ethereum-identity-case-study-body",
+      "page-privacy-ethereum-identity-case-study-cta",
+      "page-privacy-ethereum-identity-apps-title",
+      "page-privacy-ethereum-identity-apps-cta",
+      "page-privacy-ethereum-governance-title",
+      "page-privacy-ethereum-governance-description-1",
+      "page-privacy-ethereum-governance-description-2",
+      "page-privacy-ethereum-governance-list-1",
+      "page-privacy-ethereum-governance-list-2",
+      "page-privacy-ethereum-governance-list-3",
+      "page-privacy-ethereum-governance-description-3",
+      "page-privacy-ethereum-governance-description-4",
+      "page-privacy-ethereum-governance-description-5",
+      "page-privacy-ethereum-governance-description-6",
+      "page-privacy-ethereum-governance-apps-title",
+      "page-privacy-ethereum-communication-title",
+      "page-privacy-ethereum-communication-description-1",
+      "page-privacy-ethereum-communication-remember-title",
+      "page-privacy-ethereum-communication-remember-body",
+      "page-privacy-ethereum-communication-description-2",
+      "page-privacy-ethereum-communication-description-3",
+      "page-privacy-ethereum-communication-apps-title",
+      "page-privacy-ethereum-stealth-title",
+      "page-privacy-ethereum-stealth-description-1",
+      "page-privacy-ethereum-stealth-description-2",
+      "page-privacy-ethereum-stealth-description-3",
+      "page-privacy-ethereum-stealth-apps-title",
+      "page-privacy-ethereum-stealth-apps-cta",
+      "page-privacy-ethereum-payments-title",
+      "page-privacy-ethereum-payments-description-1",
+      "page-privacy-ethereum-payments-description-2",
+      "page-privacy-ethereum-payments-description-3",
+      "page-privacy-ethereum-payments-description-4",
+      "page-privacy-ethereum-payments-list-poi",
+      "page-privacy-ethereum-payments-list-asp",
+      "page-privacy-ethereum-payments-description-5",
+      "page-privacy-ethereum-payments-apps-title",
+      "page-privacy-ethereum-l2-title",
+      "page-privacy-ethereum-l2-description-1",
+      "page-privacy-ethereum-l2-description-2",
+      "page-privacy-ethereum-l2-description-3",
+      "page-privacy-ethereum-l2-description-4",
+      "page-privacy-ethereum-l2-list-title",
+      "page-privacy-ethereum-l2-list-aztec",
+      "page-privacy-ethereum-l2-list-fairblock",
+      "page-privacy-ethereum-l2-list-silentdata",
+      "page-privacy-ethereum-l2-list-starknet",
+      "page-privacy-ethereum-l2-cta",
+      "page-privacy-ethereum-selective-title",
+      "page-privacy-ethereum-selective-description-1",
+      "page-privacy-ethereum-selective-list-1",
+      "page-privacy-ethereum-selective-list-2",
+      "page-privacy-ethereum-selective-list-3",
+      "page-privacy-ethereum-selective-description-2",
+      "page-privacy-ethereum-whats-next-title",
+      "page-privacy-ethereum-whats-next-description-1",
+      "page-privacy-ethereum-whats-next-description-2",
+      "page-privacy-ethereum-whats-next-description-3",
+      "page-privacy-ethereum-reading-title",
+      "page-privacy-ethereum-reading-1",
+      "page-privacy-ethereum-reading-2",
+      "page-privacy-ethereum-reading-3",
+      "page-privacy-ethereum-reading-4",
+      "page-privacy-ethereum-reading-5",
+      "page-privacy-ethereum-reading-6",
+      "page-privacy-ethereum-reading-7",
+      "page-privacy-ethereum-reading-8",
+      "page-privacy-ethereum-reading-9",
+      "page-privacy-ethereum-reading-10",
+      "page-privacy-ethereum-reading-11",
+      "page-privacy-ethereum-reading-12",
+      "page-privacy-ethereum-reading-13",
+      "page-privacy-ethereum-reading-14",
+      "page-privacy-ethereum-reading-15",
+      "page-privacy-ethereum-reading-16",
+      "page-privacy-ethereum-pathway-1-title",
+      "page-privacy-ethereum-pathway-1-description",
+      "page-privacy-ethereum-pathway-1-badge",
+      "page-privacy-ethereum-pathway-2-title",
+      "page-privacy-ethereum-pathway-2-description"
+    ]
+  },
+  "sourceCommitSha": "bff6b26a8b30b949a9a730f3427af6918af7bb68"
+}

@@ -50,7 +50,7 @@ const LatestCard = ({
     customEventOptions={customEventOptions}
   >
     <CardHeader>
-      <CardBanner className="aspect-video h-auto">
+      <CardBanner className="aspect-video h-auto" zoom>
         <CardImage src={image} />
       </CardBanner>
     </CardHeader>

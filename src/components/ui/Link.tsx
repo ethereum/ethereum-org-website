@@ -1,7 +1,7 @@
 "use client"
 
 import { AnchorHTMLAttributes, ComponentProps, forwardRef } from "react"
-import { ArrowRight, ExternalLink, Mail } from "lucide-react"
+import { ExternalLink, Mail } from "lucide-react"
 import NextLink from "next/link"
 import { useTranslations } from "next-intl"
 
@@ -13,6 +13,8 @@ import { getRelativePath } from "@/lib/utils/relativePath"
 import * as url from "@/lib/utils/url"
 
 import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
+
+import { ArrowNext } from "./arrow"
 
 import { Link as I18nLink } from "@/i18n/navigation"
 import { usePathname } from "@/i18n/navigation"
@@ -198,7 +200,7 @@ export const LinkWithArrow = forwardRef<HTMLAnchorElement, LinkProps>(
     >
       <span className="group-hover:underline">{children}</span>
       &nbsp;
-      <ArrowRight className="mb-1 inline size-[1em] rtl:-scale-x-100" />
+      <ArrowNext className="mb-1 inline size-[1em]" />
     </BaseLink>
   )
 )

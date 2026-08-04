@@ -5,7 +5,7 @@ description: Playwright + Chromatic full-page visual tests for ethereum.org. Tri
 
 # Page Visual Tests (Playwright + Chromatic)
 
-This repo has two Chromatic projects: Storybook (the `visual-tests` job in `.github/workflows/ci.yml`, which calls `chromaui/action` directly; `pnpm chromatic` still exists for local runs) and **page visual tests** (the `page-visual-tests` job in ci.yml + `pnpm chromatic:pages`). This skill is the second one only.
+This repo has two Chromatic projects: Storybook (the `visual-tests` job in `.github/workflows/ci.yml`, which calls `chromaui/action` directly; `pnpm chromatic` needs `CHROMATIC_STORYBOOK_TOKEN`) and **page visual tests** (the `page-visual-tests` job in ci.yml + `pnpm chromatic:pages`, which needs `CHROMATIC_PAGES_TOKEN`). This skill is the second one only.
 
 The Playwright suite captures DOM archives (not PNGs) per page × viewport; Chromatic re-renders them in the cloud to diff. A green local `pnpm test:visual` just means archives were produced — the diff happens after upload.
 
