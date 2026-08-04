@@ -338,6 +338,114 @@ test.describe("Phase 2: Routing", () => {
   })
 })
 
+test.describe("Frontmatter key propagation", () => {
+  const englishA = `---
+title: English title
+image: /hero.png
+---
+
+Body`
+  const localeA = `---
+title: Título traducido
+image: /hero.png
+---
+
+Cuerpo`
+
+  test("inserts a new inert key in English key order", () => {
+    const englishB = `---
+title: English title
+template: roadmap
+image: /hero.png
+---
+
+Body`
+    const calls: string[] = []
+
+    const result = pipeline(
+      englishA,
+      englishB,
+      localeA,
+      "markdown",
+      (sectionId) => {
+        calls.push(sectionId)
+        return ""
+      }
+    )
+
+    expect(calls).toEqual([])
+    expect(result).toContain(
+      `title: Título traducido
+template: roadmap
+image: /hero.png`
+    )
+  })
+
+  test("routes a new translatable key through the LLM", () => {
+    const englishB = `---
+title: English title
+description: New description
+image: /hero.png
+---
+
+Body`
+    const calls: Array<{ sectionId: string; content: string }> = []
+
+    const result = pipeline(
+      englishA,
+      englishB,
+      localeA,
+      "markdown",
+      (sectionId, content) => {
+        calls.push({ sectionId, content })
+        return "Descripción nueva"
+      }
+    )
+
+    expect(calls).toEqual([
+      {
+        sectionId: "frontmatter:description",
+        content: "New description",
+      },
+    ])
+    expect(result).toContain(
+      `title: Título traducido
+description: Descripción nueva
+image: /hero.png`
+    )
+  })
+
+  test("removes a deleted frontmatter key", () => {
+    const englishWithTemplate = `---
+title: English title
+template: roadmap
+image: /hero.png
+---
+
+Body`
+    const localeWithTemplate = `---
+title: Título traducido
+template: roadmap
+image: /hero.png
+---
+
+Cuerpo`
+
+    const result = pipeline(
+      englishWithTemplate,
+      englishA,
+      localeWithTemplate,
+      "markdown"
+    )
+
+    expect(result).not.toContain("template:")
+    expect(result).toContain(
+      `title: Título traducido
+image: /hero.png`
+    )
+  })
+})
+
 // ===================================================================
 // PHASE 3-5: Pipeline output -- fails until implemented
 // ===================================================================
