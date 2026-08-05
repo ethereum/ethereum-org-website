@@ -9,10 +9,18 @@ Algolia's dashboard, not in this repo).
 ## What this does
 
 Crawls production `ethereum.org` for **en / ar / zh** (the eval locale set) and
-writes records into a single Typesense collection (`ethereumorg`). Language is
-auto-derived from each page's `<html lang="">` attribute into the `language`
-field — the same mechanism Algolia uses — so the app can filter with
-`filter_by: language:=<locale>`.
+writes records into a single Typesense collection (`ethereumorg`), so the app can
+filter with `filter_by: language:=<locale>`.
+
+The `language` field is populated from the `<meta name="docsearch:language">` tag
+that `src/lib/utils/metadata.ts` emits on every page — the scraper copies any
+`docsearch:*` meta into every record it extracts. **This tag must be live on
+production before a scrape can pick it up.**
+
+> Do **not** assume `language` is derived from `<html lang="">`. That is a feature
+> of Algolia's *hosted* crawler (what `docs/site-search.md` describes), not of the
+> self-hosted `docsearch-scraper` this is a fork of. An earlier version of this
+> file claimed otherwise, which is why the field sat empty across two scrapes.
 
 ## Running (on the Typesense host)
 

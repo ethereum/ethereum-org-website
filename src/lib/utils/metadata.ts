@@ -146,6 +146,9 @@ export const getMetadata = async ({
     },
     other: {
       "docsearch:description": description,
+      // Populates the `language` field search filters on; the scraper does not
+      // derive it from `<html lang>`. See typesense/README.md.
+      "docsearch:language": locale,
     },
   }
 

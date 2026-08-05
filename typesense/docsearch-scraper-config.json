@@ -5,7 +5,11 @@
     "https://ethereum.org/ar/",
     "https://ethereum.org/zh/"
   ],
-  "sitemap_urls": ["https://ethereum.org/sitemap.xml"],
+  "sitemap_urls": [
+    "https://ethereum.org/sitemaps/sitemap/en.xml",
+    "https://ethereum.org/sitemaps/sitemap/ar.xml",
+    "https://ethereum.org/sitemaps/sitemap/zh.xml"
+  ],
   "stop_urls": ["/api/", "\\.(png|jpg|jpeg|svg|gif|webp|ico|css|js)$"],
   "selectors": {
     "default": {
