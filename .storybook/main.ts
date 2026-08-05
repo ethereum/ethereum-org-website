@@ -48,6 +48,13 @@ const config: StorybookConfig = {
       config.resolve.alias = {
         ...config.resolve.alias,
         "@/storybook/*": path.resolve(process.cwd(), ".storybook"),
+        // Async server components render in the browser here, where the real
+        // helpers throw. See the shim's header for why this is a swap, not a
+        // fake. `$` keeps it an exact-request match.
+        "next-intl/server$": path.resolve(
+          process.cwd(),
+          ".storybook/next-intl-server.tsx"
+        ),
       }
     }
 

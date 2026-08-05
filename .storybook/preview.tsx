@@ -7,6 +7,7 @@ import ThemeProvider from "@/components/ThemeProvider"
 import { TooltipProvider } from "@/components/ui/tooltip"
 
 import nextIntl, { baseLocales } from "./next-intl"
+import { setStorybookLocale } from "./next-intl-server"
 import { withNextThemes } from "./withNextThemes"
 
 import "../src/styles/global.css"
@@ -38,6 +39,13 @@ export const breakpointSet: [token: string, value: string][] = [
 
 const preview: Preview = {
   decorators: [
+    // Republishes the toolbar locale for the `next-intl/server` shim, which is
+    // outside React and so can't read the provider's context. Must stay ahead
+    // of the story in this list so it lands before an async component runs.
+    (Story, context) => {
+      setStorybookLocale(context.globals.locale ?? nextIntl.defaultLocale)
+      return <Story />
+    },
     withNextThemes({
       themes: {
         light: "light",
