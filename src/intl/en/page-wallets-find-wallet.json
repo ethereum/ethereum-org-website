@@ -6,6 +6,7 @@
   "page-find-wallet-last-updated": "Last updated",
   "page-find-wallet-meta-description": "Compare Ethereum wallets side by side. Filter by features like hardware wallet support, open source, self-custody, multi-chain, staking, NFT support, and more to find the right wallet for you.",
   "page-find-wallet-meta-title": "Find and compare Ethereum wallets",
+  "page-find-wallet-meta-description-fallback": "{wallet} — Ethereum wallet for {devices}. Supports {networkCount, plural, one {{networkCountFormatted} network} other {{networkCountFormatted} networks}} and {languageCount, plural, one {{languageCountFormatted} language} other {{languageCountFormatted} languages}}.",
   "page-find-wallet-title": "Choose your wallet",
   "page-find-wallet-table-title": "Browse all wallets",
   "page-find-wallet-results-label": "Wallets found",

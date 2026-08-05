@@ -10,6 +10,7 @@ import type {
 import { formatDate } from "@/lib/utils/date"
 import { getLanguageCodeName } from "@/lib/utils/intl"
 import { stripMarkdown } from "@/lib/utils/md"
+import { numberFormat } from "@/lib/utils/numbers"
 import { seededShuffle } from "@/lib/utils/random"
 import { capitalize } from "@/lib/utils/string"
 import { slugify } from "@/lib/utils/url"
@@ -19,7 +20,12 @@ import {
   getSupportedLocaleWallets,
 } from "@/lib/utils/wallets"
 
-import { getWalletDevices, type WalletDeviceId } from "@/data/wallets/devices"
+import {
+  buildDeviceLabels,
+  getDeviceLabels,
+  getWalletDevices,
+  type WalletDeviceId,
+} from "@/data/wallets/devices"
 import {
   getWalletAdvancedFlags,
   type WalletFeatureKey,
@@ -162,6 +168,43 @@ export const toCatalogCard = (wallet: CatalogWallet): CatalogWalletCard => ({
     descriptionStripped: wallet.descriptionStripped,
   }),
 })
+
+type WalletTranslator = (
+  key: string,
+  values?: Record<string, string | number>
+) => string
+
+/**
+ * No wallet carries a `description` today, so without this the meta
+ * description and JSON-LD of all 49 detail pages would be the bare wallet
+ * name. Returns undefined when the data can't fill the sentence; a real
+ * description always wins over this.
+ */
+export function buildWalletMetaDescription(
+  wallet: CatalogWallet,
+  t: WalletTranslator,
+  locale: string
+): string | undefined {
+  const devices = getDeviceLabels(wallet.devices, buildDeviceLabels(t))
+  const networkCount = wallet.supported_chains.length
+  const languageCount = wallet.languages_supported.length
+  if (!devices.length || !networkCount || !languageCount) return undefined
+
+  const nf = numberFormat(locale)
+  return t("page-find-wallet-meta-description-fallback", {
+    wallet: wallet.name,
+    devices: new Intl.ListFormat(locale, {
+      style: "long",
+      type: "conjunction",
+    }).format(devices),
+    // Counts drive plural selection; the formatted twins carry the locale's
+    // numbering system, which ICU's `#` would bypass for ur.
+    networkCount,
+    networkCountFormatted: nf.format(networkCount),
+    languageCount,
+    languageCountFormatted: nf.format(languageCount),
+  })
+}
 
 export function enrichWallet(
   wallet: WalletData,

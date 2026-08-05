@@ -4,7 +4,10 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 import type { CatalogWallet } from "@/lib/utils/walletData"
-import { getWalletPlatforms } from "@/lib/utils/walletData"
+import {
+  buildWalletMetaDescription,
+  getWalletPlatforms,
+} from "@/lib/utils/walletData"
 
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
@@ -26,6 +29,8 @@ export default async function WalletDetailPageJsonLD({
     `/wallets/find-wallet/${wallet.slug}/`
   )
   const os = getWalletPlatforms(wallet)
+  const description =
+    wallet.descriptionStripped ?? buildWalletMetaDescription(wallet, t, locale)
 
   const sameAs = [
     wallet.twitter,
@@ -43,9 +48,7 @@ export default async function WalletDetailPageJsonLD({
         "@type": "WebPage",
         "@id": url,
         name: wallet.name,
-        ...(wallet.descriptionStripped && {
-          description: wallet.descriptionStripped,
-        }),
+        ...(description && { description }),
         url,
         inLanguage: locale,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -81,9 +84,7 @@ export default async function WalletDetailPageJsonLD({
         "@type": "SoftwareApplication",
         "@id": `${url}#wallet`,
         name: wallet.name,
-        ...(wallet.descriptionStripped && {
-          description: wallet.descriptionStripped,
-        }),
+        ...(description && { description }),
         url: wallet.url,
         applicationCategory: "Cryptocurrency Wallet",
         ...(os.length > 0 && { operatingSystem: os.join(", ") }),

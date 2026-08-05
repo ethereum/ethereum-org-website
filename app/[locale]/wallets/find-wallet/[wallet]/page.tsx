@@ -18,6 +18,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import { getLocaleFormattedDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import {
+  buildWalletMetaDescription,
   getRelatedWallets,
   getWalletBySlug,
   toCatalogCard,
@@ -252,11 +253,20 @@ export async function generateMetadata(props: {
   const wallet = getWalletBySlug(walletSlug, locale)
   if (!wallet) return {}
 
+  const t = await getTranslations({
+    locale,
+    namespace: "page-wallets-find-wallet",
+  })
+  const description =
+    wallet.descriptionStripped ??
+    buildWalletMetaDescription(wallet, t, locale) ??
+    wallet.name
+
   return await getMetadata({
     locale,
     slug: ["wallets", "find-wallet", walletSlug],
     title: wallet.name,
-    description: wallet.descriptionStripped?.slice(0, 160) ?? wallet.name,
+    description: description.slice(0, 160),
     image: "/images/wallets/wallet-hero.png",
   })
 }
