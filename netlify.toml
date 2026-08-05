@@ -47,11 +47,33 @@
   included_files = ["i18n.config.json", "src/intl/**/*", "src/data-layer/mocks/**/*"]
 
 # Matomo AI tracker (see netlify/edge-functions/matomo-ai-tracker/README.md).
-# Gated by MATOMO_AI_TRACKER_ENABLED; canary scope while the Measurement
-# Protocol pipeline is verified, broaden after clean production data.
+# Gated per deploy context by MATOMO_AI_TRACKER_ENABLED. excludedPath only
+# trims edge invocation cost on asset routes; the function's own
+# URL_EXCLUDE_REGEX is the tracking-side backstop for anything that slips
+# through.
 [[edge_functions]]
   function = "matomo-ai-tracker"
-  path = "/learn/*"
+  path = "/*"
+  excludedPath = [
+    "/_next/*",
+    "/api/*",
+    "/.netlify/*",
+    "/.well-known/*",
+    "/images/*",
+    "/content/*",
+    "/videos/*",
+    "/audio/*",
+    "/code-examples/*",
+    "/reports/*",
+    "/*.css",
+    "/*.js",
+    "/*.map",
+    "/*.json",
+    "/*.ico",
+    "/*.txt",
+    "/*.xml",
+    "/*.webmanifest"
+  ]
 
 # Override SITE_URL for named branches with custom subdomains so canonical
 # URLs and OG metadata use the custom domain instead of *.netlify.app.
