@@ -1,9 +1,69 @@
 [
   {
+    "item": "Issue #18891",
+    "intent": "intl-pipeline silently drops newly added frontmatter keys and stamps manifests current, hiding the gap",
+    "state": "decision-needed",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "Is this still unfixed after the merged pipeline corruption fixes, or already covered?",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Confirm bug is still live; if so route PR #18896"
+      }
+    ],
+    "impact": "high",
+    "effort_to_unblock": "medium",
+    "risk": "medium",
+    "related_items": [
+      "PR #18896"
+    ],
+    "owner_lane": "tooling",
+    "confidence": 0.6,
+    "evidence": [
+      "team-authored bug, idle 12d, no team reply",
+      "PR #18896 (external) closes it but is CONFLICTING",
+      "manifests stamped current => gap invisible to future runs"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-08-05",
+    "runs_seen": 1
+  },
+  {
+    "item": "Issue #18967",
+    "intent": "Reorganize Storybook into a repo-mirrored taxonomy, remove dead components, close coverage gaps",
+    "state": "decision-needed",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "Approve the taxonomy design once, then land the 3 stacked PRs in order",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Review the reorg design and its 3 PRs"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "medium",
+    "risk": "low",
+    "related_items": [
+      "PR #18969",
+      "PR #18970",
+      "PR #18971"
+    ],
+    "owner_lane": "tooling",
+    "confidence": 0.8,
+    "evidence": [
+      "team-authored tracking issue",
+      "3 implementing PRs open, CI green",
+      "author posted a self-correction on phase-1 defects"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-08-05",
+    "runs_seen": 1
+  },
+  {
     "item": "PR #18700",
     "intent": "Return 400 instead of 500 for malformed percent-encoded URLs",
     "state": "blocked",
-    "recommended_disposition": "verify_then_merge",
+    "recommended_disposition": "needs_domain_review",
     "next_human_decision": "",
     "waiting_on": [
       {
@@ -24,17 +84,17 @@
       "Fixes recovery-agent incident #17967",
       "CI SUCCESS",
       "mergeState BLOCKED, not CLEAN",
-      "ai looks-mergeable"
+      "idle 14d"
     ],
     "analyzed_sha": "186b298",
     "first_seen": "2026-08-04",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #18821",
     "intent": "Skip Next.js image optimization for volatile remote images causing 400s",
     "state": "blocked",
-    "recommended_disposition": "verify_then_merge",
+    "recommended_disposition": "needs_domain_review",
     "next_human_decision": "",
     "waiting_on": [
       {
@@ -55,11 +115,11 @@
       "Fixes recovery-agent incident #18796",
       "CI SUCCESS",
       "mergeState BLOCKED",
-      "ai looks-mergeable"
+      "idle 13d"
     ],
     "analyzed_sha": "e335f83",
     "first_seen": "2026-08-04",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #18876",
@@ -85,10 +145,40 @@
     "evidence": [
       "lastHumanComment isTeam=true (wackerow)",
       "CI SUCCESS",
-      "idle 11d"
+      "idle 12d"
     ],
     "analyzed_sha": "470e609",
     "first_seen": "2026-08-04",
+    "runs_seen": 2
+  },
+  {
+    "item": "PR #18896",
+    "intent": "Extend intl pipeline to propagate added/removed frontmatter keys (closes #18891)",
+    "state": "decision-needed",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "Is #18891 still live post pipeline-fix merges; if so, ask author to rebase then domain-review",
+    "waiting_on": [
+      {
+        "actor": "contributor",
+        "action": "Rebase onto main (currently CONFLICTING)"
+      }
+    ],
+    "impact": "high",
+    "effort_to_unblock": "medium",
+    "risk": "medium",
+    "related_items": [
+      "Issue #18891"
+    ],
+    "owner_lane": "tooling",
+    "confidence": 0.6,
+    "evidence": [
+      "Closes open bug #18891",
+      "mergeState DIRTY / CONFLICTING",
+      "CI SUCCESS but idle 8d, external author",
+      "ai looks-mergeable (not superseded)"
+    ],
+    "analyzed_sha": "3948c50",
+    "first_seen": "2026-08-05",
     "runs_seen": 1
   },
   {
@@ -96,7 +186,7 @@
     "intent": "Add ethereum.org-hosted walletless-dapps tutorial (implements #18052)",
     "state": "waiting-on-contributor",
     "recommended_disposition": "request_changes",
-    "next_human_decision": "Does conceptual walletless content belong as a tutorial, or as a guide/docs page?",
+    "next_human_decision": "Does conceptual walletless content belong as a tutorial, or a guide/docs page?",
     "waiting_on": [
       {
         "actor": "contributor",
@@ -114,29 +204,30 @@
     "evidence": [
       "4 CI checks failing incl netlify deploy-preview",
       "humanCommentCount 0 — nobody replied",
-      "external contributor, idle 7d",
+      "external contributor, idle 8d",
       "ai needs-work"
     ],
     "analyzed_sha": "ba23523",
     "first_seen": "2026-08-04",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #18923",
-    "intent": "Add accounts quiz — lead of a 9-PR team quiz series (all approved, green, blocked)",
+    "intent": "Accounts quiz — lead of a ~10-PR team quiz series, each approved, green, and BLOCKED",
     "state": "blocked",
     "recommended_disposition": "merge",
-    "next_human_decision": "Why are 9 approved, green PRs BLOCKED — is a second required review or CODEOWNER approval missing?",
+    "next_human_decision": "Why are ~10 approved, green PRs BLOCKED — missing second required review or CODEOWNER?",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Identify branch-protection block and merge the batch"
+        "action": "Identify branch-protection block and land the batch"
       }
     ],
     "impact": "high",
     "effort_to_unblock": "small",
     "risk": "low",
     "related_items": [
+      "PR #18934",
       "PR #18913",
       "PR #18910",
       "PR #18909",
@@ -149,89 +240,146 @@
     "owner_lane": "content",
     "confidence": 0.72,
     "evidence": [
-      "9 PRs each pettinarip APPROVED",
-      "CI SUCCESS",
+      "each PR one approving review, CI SUCCESS",
       "mergeState BLOCKED, reviewDecision null",
-      "team-authored (myelinated-wackerow)"
+      "team-authored (myelinated-wackerow)",
+      "series grew by #18934 since last run"
     ],
     "analyzed_sha": "0d31a8e",
     "first_seen": "2026-08-04",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
-    "item": "PR #18941",
-    "intent": "Make intl-pipeline incremental propagation structurally safe (fixes locale corruption)",
-    "state": "decision-needed",
+    "item": "PR #18966",
+    "intent": "Fix /layer-2 average tx cost reading $0.00 by using 2-sig-fig formatting for sub-cent fees",
+    "state": "blocked",
     "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Adopt team fix #18941, competing non-team fail-closed #18952, or both?",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Choose approach and review/approve"
-      }
-    ],
-    "impact": "high",
-    "effort_to_unblock": "small",
-    "risk": "medium",
-    "related_items": [
-      "Issue #18940",
-      "PR #18952",
-      "PR #18896",
-      "Issue #18891"
-    ],
-    "owner_lane": "tooling",
-    "confidence": 0.8,
-    "evidence": [
-      "Fixes active corruption of up to 24 locale files (#18940)",
-      "team-authored, CI SUCCESS, BLOCKED",
-      "competing approach #18952 is CLEAN but ai needs-work",
-      "non-team pillowtalk-Qy commented on both"
-    ],
-    "analyzed_sha": "6126795",
-    "first_seen": "2026-08-04",
-    "runs_seen": 1
-  },
-  {
-    "item": "PR #18952",
-    "intent": "Fail-closed boundary for intl incremental propagation (complements #18941)",
-    "state": "decision-needed",
-    "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "See #18941 — competing approach to the same corruption bug",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Decide alongside #18941"
-      }
-    ],
-    "impact": "high",
-    "effort_to_unblock": "small",
-    "risk": "medium",
-    "related_items": [
-      "Issue #18940",
-      "PR #18941"
-    ],
-    "owner_lane": "tooling",
-    "confidence": 0.65,
-    "evidence": [
-      "mergeState CLEAN",
-      "ai needs-work",
-      "non-team author pillowtalk-Qy",
-      "overlaps team PR #18941"
-    ],
-    "analyzed_sha": "e81d158",
-    "first_seen": "2026-08-04",
-    "runs_seen": 1
-  },
-  {
-    "item": "Issue #18049",
-    "intent": "Remove dead Scout Game entry from /apps (domain no longer resolves)",
-    "state": "decision-needed",
-    "recommended_disposition": "request_changes",
     "next_human_decision": "",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Remove the Scout Game entry from apps data"
+        "action": "Approve the 1-file fix; block is a missing review"
+      }
+    ],
+    "impact": "high",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "code",
+    "confidence": 0.86,
+    "evidence": [
+      "Visible prod bug: /layer-2 avg tx cost shows $0.00",
+      "1 file, CI SUCCESS, team-authored",
+      "mergeState BLOCKED with 0 reviews",
+      "swaps formatPriceUSD -> formatSmallUSD (already used on /resources)"
+    ],
+    "analyzed_sha": "f55eb85",
+    "first_seen": "2026-08-05",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #18969",
+    "intent": "Storybook reorg phase 0 — delete 8 zero-consumer components",
+    "state": "blocked",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Review; land first in the stack"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "Issue #18967",
+      "PR #18970",
+      "PR #18971"
+    ],
+    "owner_lane": "tooling",
+    "confidence": 0.8,
+    "evidence": [
+      "8 dead components, deletions grep-verified",
+      "CI SUCCESS, ai not superseded",
+      "mergeState BLOCKED (needs review)"
+    ],
+    "analyzed_sha": "a41a81f",
+    "first_seen": "2026-08-05",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #18970",
+    "intent": "Storybook reorg phase 1 — retitle 117 stories to a path-mirrored taxonomy (metadata-only)",
+    "state": "blocked",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Review with phase 0; land after #18969"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "Issue #18967",
+      "PR #18969",
+      "PR #18971"
+    ],
+    "owner_lane": "tooling",
+    "confidence": 0.8,
+    "evidence": [
+      "mergeState CLEAN, CI SUCCESS",
+      "108 single-line title changes + storySort order",
+      "stacked on phase 0"
+    ],
+    "analyzed_sha": "40c5767",
+    "first_seen": "2026-08-05",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #18971",
+    "intent": "Storybook reorg phase 2 — test enforcing story-title taxonomy",
+    "state": "blocked",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Review with stack; land after #18970"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "Issue #18967",
+      "PR #18969",
+      "PR #18970"
+    ],
+    "owner_lane": "tooling",
+    "confidence": 0.8,
+    "evidence": [
+      "mergeState CLEAN, CI SUCCESS",
+      "single Playwright unit spec, 1 file",
+      "prevents taxonomy re-drift"
+    ],
+    "analyzed_sha": "f2422df",
+    "first_seen": "2026-08-05",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #18975",
+    "intent": "Update execution bounty-hunters leaderboard data (follow-up to #18968)",
+    "state": "blocked",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Quick data review then merge"
       }
     ],
     "impact": "low",
@@ -239,42 +387,14 @@
     "risk": "low",
     "related_items": [],
     "owner_lane": "content",
-    "confidence": 0.85,
+    "confidence": 0.6,
     "evidence": [
-      "dig confirms scoutgame.xyz does not resolve",
-      "humanCommentCount 0",
-      "idle 29d",
-      "clear, no judgment needed"
+      "single JSON data file",
+      "external author, brand new (age 0)",
+      "CI SUCCESS, mergeState BLOCKED"
     ],
-    "analyzed_sha": null,
-    "first_seen": "2026-08-04",
-    "runs_seen": 1
-  },
-  {
-    "item": "Issue #18422",
-    "intent": "Vague Spanish-language bug report about being redirected and stuck",
-    "state": "suggest-close",
-    "recommended_disposition": "close",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Request reproduction steps or close as needs-info"
-      }
-    ],
-    "impact": "low",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [],
-    "owner_lane": "product",
-    "confidence": 0.55,
-    "evidence": [
-      "No usable reproduction steps",
-      "idle 18d",
-      "1 comment, answeredByTeam false"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-08-04",
+    "analyzed_sha": "9b0ea78",
+    "first_seen": "2026-08-05",
     "runs_seen": 1
   }
 ]
