@@ -10,6 +10,7 @@ import CardComponent, { MarkdownCardProps } from "."
 const meta = {
   title: "Components / Cards / MarkdownCard",
   component: CardComponent,
+  tags: ["autodocs"],
   parameters: { layout: "fullscreen" },
   decorators: [
     (Story) => (

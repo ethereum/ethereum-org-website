@@ -15,6 +15,7 @@ import {
 const meta = {
   title: "Layouts / Tutorial",
   component: TutorialLayout,
+  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
     chromatic: { modes: { ...langViewportModes } },

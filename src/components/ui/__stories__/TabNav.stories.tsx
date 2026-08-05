@@ -9,6 +9,7 @@ import TabNav, { StickyContainer } from "../TabNav"
 const meta = {
   title: "UI / Navigation / TabNav",
   component: TabNav,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

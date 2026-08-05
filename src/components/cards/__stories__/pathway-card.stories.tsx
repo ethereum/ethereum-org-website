@@ -9,6 +9,7 @@ import walletCardImg from "@/public/images/homepage/features/global.png"
 const meta = {
   title: "Components / Cards / PathwayCard",
   component: PathwayCard,
+  tags: ["autodocs"],
   parameters: {
     layout: "centered",
     chromatic: { disableSnapshot: true },

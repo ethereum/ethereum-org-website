@@ -6,6 +6,7 @@ import ModalComponent from "../dialog-modal"
 const meta = {
   title: "UI / Overlays / Modal",
   component: ModalComponent,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
   },

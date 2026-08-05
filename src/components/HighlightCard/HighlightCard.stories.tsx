@@ -8,6 +8,7 @@ import { HighlightCard, HighlightCardContent, HighlightStack, IconBox } from "."
 const meta = {
   title: "Components / Cards / HighlightCard",
   component: HighlightCard,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

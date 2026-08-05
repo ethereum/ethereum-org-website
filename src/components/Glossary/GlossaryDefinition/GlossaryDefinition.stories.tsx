@@ -5,6 +5,7 @@ import GlossaryDefinitionComponent from "."
 const meta = {
   title: "Components / Content / Glossary / Definition",
   component: GlossaryDefinitionComponent,
+  tags: ["autodocs"],
 } as Meta<typeof GlossaryDefinitionComponent>
 
 export default meta

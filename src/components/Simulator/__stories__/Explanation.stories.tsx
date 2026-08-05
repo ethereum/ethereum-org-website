@@ -17,6 +17,7 @@ SendReceiveIcon.displayName = "SendReceiveIcon"
 const meta = {
   title: "Components / Features / Simulator / Explanation",
   component: ExplanationComponent,
+  tags: ["autodocs"],
   parameters: {
     chromatic: {
       modes: pickBy(viewportModes, (arg) =>

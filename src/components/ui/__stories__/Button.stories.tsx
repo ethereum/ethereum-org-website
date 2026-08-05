@@ -7,6 +7,7 @@ import { HStack, VStack } from "../flex"
 const meta = {
   title: "UI / Actions / Button",
   component: Button,
+  tags: ["autodocs"],
   args: {
     children: "What is Ethereum?",
   },

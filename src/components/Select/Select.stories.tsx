@@ -7,6 +7,7 @@ import Select from "./"
 const meta = {
   title: "Components / Forms / Select",
   component: Select,
+  tags: ["autodocs"],
   parameters: {
     // TODO: Remove this when this story file becomes the primary one
     chromatic: { disableSnapshot: true },

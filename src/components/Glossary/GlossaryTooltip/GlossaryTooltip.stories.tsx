@@ -7,6 +7,7 @@ import GlossaryTooltipComponent from "."
 const meta = {
   title: "Components / Content / Glossary / Tooltip",
   component: GlossaryTooltipComponent,
+  tags: ["autodocs"],
   args: {
     termKey: "bridge",
     children: "bridge",

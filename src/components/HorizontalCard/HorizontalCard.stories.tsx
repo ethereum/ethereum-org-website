@@ -8,6 +8,7 @@ import HorizontalCard from "."
 const meta = {
   title: "Components / Cards / HorizontalCard",
   component: HorizontalCard,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

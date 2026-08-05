@@ -21,6 +21,7 @@ import {
 const meta = {
   title: "UI / Overlays / DropdownMenu",
   component: DropdownMenu,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

@@ -6,6 +6,7 @@ import Component from "."
 const meta = {
   title: "Components / Content / ListenToPlayer",
   component: Component,
+  tags: ["autodocs"],
   args: {
     slug: "/eth/",
   },

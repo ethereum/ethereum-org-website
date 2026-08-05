@@ -8,6 +8,7 @@ import { MoreInfoPopover as MoreInfoPopoverComponent } from "../MoreInfoPopover"
 const meta = {
   title: "Components / Features / Simulator / MoreInfoPopover",
   component: MoreInfoPopoverComponent,
+  tags: ["autodocs"],
   decorators: [
     (Story) => (
       <Flex className="h-80 w-96 items-center justify-center">

@@ -7,6 +7,7 @@ import CommentCard from "."
 const meta = {
   title: "Components / Cards / CommentCard",
   component: CommentCard,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

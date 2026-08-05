@@ -17,6 +17,7 @@ import { Flex } from "../flex"
 const meta = {
   title: "UI / Overlays / Dialog",
   component: Dialog,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

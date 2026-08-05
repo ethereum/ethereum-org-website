@@ -15,6 +15,7 @@ import { VStack } from "../flex"
 const meta = {
   title: "UI / Alert",
   component: Alert,
+  tags: ["autodocs"],
   parameters: {
     docs: {
       description: {

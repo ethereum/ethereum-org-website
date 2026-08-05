@@ -7,6 +7,7 @@ import MobileButtonDropdown from "."
 const meta = {
   title: "Components / MobileButtonDropdown",
   component: MobileButtonDropdown,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

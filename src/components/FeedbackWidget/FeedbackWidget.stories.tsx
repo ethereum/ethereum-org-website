@@ -12,6 +12,7 @@ const meta = {
     layout: "fullscreen",
   },
   component: FeedbackWidget,
+  tags: ["autodocs"],
   decorators: [
     (Story) => (
       <Stack className="relative min-h-[100vh] gap-0">

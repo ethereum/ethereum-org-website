@@ -18,6 +18,7 @@ const SAMPLE = {
 const meta = {
   title: "UI / Data Display / Avatar",
   component: Avatar,
+  tags: ["autodocs"],
   args: SAMPLE,
   parameters: {
     docs: {

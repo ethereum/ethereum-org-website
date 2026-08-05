@@ -8,6 +8,7 @@ import { LAYER_2_QUIZ_KEY, layer2Questions } from "./utils"
 const meta = {
   title: "Components / Features / Quiz / QuizWidget",
   component: StandaloneQuizClient,
+  tags: ["autodocs"],
   args: {
     quizKey: LAYER_2_QUIZ_KEY,
   },

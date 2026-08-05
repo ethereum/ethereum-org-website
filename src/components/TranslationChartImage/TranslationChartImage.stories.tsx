@@ -5,6 +5,7 @@ import TranslationChartImageComponent from "."
 const meta = {
   title: "Components / TranslationChartImage",
   component: TranslationChartImageComponent,
+  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
   },

@@ -9,6 +9,7 @@ import EventCard from "./event-card"
 const meta = {
   title: "Pages / Community Events / EventCard",
   component: EventCard,
+  tags: ["autodocs"],
   decorators: [
     (Story) => (
       <div className="max-w-[720px]">

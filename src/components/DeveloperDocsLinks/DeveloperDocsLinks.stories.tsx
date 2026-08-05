@@ -7,6 +7,7 @@ import DeveloperDocsLinksComponent from "."
 const meta = {
   title: "Components / Navigation / DeveloperDocsLinks",
   component: DeveloperDocsLinksComponent,
+  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
     chromatic: {

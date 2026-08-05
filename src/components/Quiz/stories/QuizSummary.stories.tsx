@@ -9,6 +9,7 @@ import { LAYER_2_QUIZ_TITLE_KEY, layer2Questions } from "./utils"
 const meta = {
   title: "Components / Features / Quiz / QuizWidget / Summary",
   component: QuizSummary,
+  tags: ["autodocs"],
   args: {
     questionsLength: layer2Questions.length,
   },

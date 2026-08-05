@@ -15,6 +15,7 @@ import {
 const meta = {
   title: "UI / Overlays / Sheet",
   component: Sheet,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

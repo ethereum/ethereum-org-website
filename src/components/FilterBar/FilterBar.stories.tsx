@@ -6,6 +6,7 @@ import FilterBar from "./"
 const meta = {
   title: "Components / Navigation / FilterBar",
   component: FilterBar,
+  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
   },

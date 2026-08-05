@@ -7,6 +7,7 @@ import HomeHeroComponent from "."
 const meta = {
   title: "Components / Heroes / HomeHero",
   component: HomeHeroComponent,
+  tags: ["autodocs"],
   parameters: {
     layout: "none",
     chromatic: {

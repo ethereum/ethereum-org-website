@@ -15,6 +15,7 @@ import {
 const meta = {
   title: "Layouts / Docs",
   component: DocsLayout,
+  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
     // DocsNav does `pathname.indexOf(...)` to mark the active page; without a

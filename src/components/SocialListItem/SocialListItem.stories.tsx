@@ -7,6 +7,7 @@ import SocialListItem from "."
 const meta = {
   title: "Components / SocialListItem",
   component: SocialListItem,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

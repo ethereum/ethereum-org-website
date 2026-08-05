@@ -10,6 +10,7 @@ import {
 const meta = {
   title: "UI / Data Display / Accordion",
   component: Accordion,
+  tags: ["autodocs"],
   decorators: [
     (Story) => (
       <div className="w-[420px]">

@@ -7,6 +7,7 @@ import DocLink from "."
 const meta = {
   title: "Components / Navigation / DocLink",
   component: DocLink,
+  tags: ["autodocs"],
 } satisfies Meta<typeof DocLink>
 
 export default meta

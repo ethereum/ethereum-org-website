@@ -5,6 +5,7 @@ import { PieChart } from "."
 const meta = {
   title: "Components / Data Viz / PieChart",
   component: PieChart,
+  tags: ["autodocs"],
   parameters: {
     layout: "padded",
   },

@@ -9,6 +9,7 @@ import { SendReceive } from ".."
 const meta = {
   title: "Components / Features / Simulator / Screens / SendReceive",
   component: SendReceive,
+  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
   },

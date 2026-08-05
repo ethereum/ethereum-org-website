@@ -5,6 +5,7 @@ import { ScrollArea, ScrollBar } from "../scroll-area"
 const meta = {
   title: "UI / ScrollArea",
   component: ScrollArea,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

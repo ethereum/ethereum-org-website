@@ -5,6 +5,7 @@ import ChartComponent from "."
 const meta = {
   title: "Components / Data Viz / EnergyConsumptionChart",
   component: ChartComponent,
+  tags: ["autodocs"],
 } satisfies Meta<typeof ChartComponent>
 
 export default meta

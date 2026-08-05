@@ -9,6 +9,7 @@ const meta = {
   title:
     "Components / Features / Simulator / Screens / CreateAccount / HomeScreen",
   component: Component,
+  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
   },

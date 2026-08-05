@@ -5,6 +5,7 @@ import ProductList, { type ProductListContent } from "."
 const meta = {
   title: "Components / ProductList",
   component: ProductList,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

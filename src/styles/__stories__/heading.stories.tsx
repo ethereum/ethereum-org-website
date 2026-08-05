@@ -5,6 +5,7 @@ import { Center, Stack } from "@/components/ui/flex"
 
 const meta = {
   title: "Design System / Typography / Heading",
+  tags: ["autodocs"],
   parameters: {
     layout: null,
     chromatic: {

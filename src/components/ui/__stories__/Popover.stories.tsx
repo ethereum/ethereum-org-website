@@ -12,6 +12,7 @@ import {
 const meta = {
   title: "UI / Overlays / Popover",
   component: Popover,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

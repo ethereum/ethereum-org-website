@@ -5,6 +5,7 @@ import ContributorsView, { type Contributor } from "./ContributorsView"
 const meta = {
   title: "Components / Content / Contributors",
   component: ContributorsView,
+  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
   },

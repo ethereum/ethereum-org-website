@@ -6,6 +6,7 @@ import Switch from "../switch"
 const meta = {
   title: "UI / Forms / Switch",
   component: Switch,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

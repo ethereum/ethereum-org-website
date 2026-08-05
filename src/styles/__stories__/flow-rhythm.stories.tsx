@@ -21,6 +21,7 @@ import { Button } from "@/components/ui/buttons/Button"
  */
 const meta = {
   title: "Design System / Typography / FlowRhythm",
+  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
     chromatic: {

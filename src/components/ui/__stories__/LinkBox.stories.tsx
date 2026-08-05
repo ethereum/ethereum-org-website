@@ -6,6 +6,7 @@ import { LinkBox, LinkOverlay } from "../link-box"
 const meta = {
   title: "UI / Navigation / LinkBox",
   component: LinkBox,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

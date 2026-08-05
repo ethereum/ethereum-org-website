@@ -19,6 +19,7 @@ import walking from "@/public/images/walking.png"
 const meta = {
   title: "UI / Data Display / Callout",
   component: Callout,
+  tags: ["autodocs"],
   parameters: {
     // Default preview is layout: "centered" (flex-centered, content-width).
     // Callout has no intrinsic width — it relies on its parent in real pages —

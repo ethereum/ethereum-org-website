@@ -10,6 +10,7 @@ import { LAYER_2_QUIZ_TITLE_KEY, layer2Questions } from "./utils"
 const meta = {
   title: "Components / Features / Quiz / QuizWidget / RadioGroup",
   component: QuizRadioGroup,
+  tags: ["autodocs"],
   decorators: [
     (Story, { args }) => {
       const t = useTranslations("common")

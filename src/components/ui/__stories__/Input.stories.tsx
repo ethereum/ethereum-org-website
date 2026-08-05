@@ -6,6 +6,7 @@ import Input from "../input"
 const meta = {
   title: "UI / Forms / Input",
   component: Input,
+  tags: ["autodocs"],
   parameters: {
     docs: {
       description: {

@@ -7,6 +7,7 @@ import MergeInfographicComponent from "."
 const meta = {
   title: "Components / MergeInfographic",
   component: MergeInfographicComponent,
+  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
     chromatic: {

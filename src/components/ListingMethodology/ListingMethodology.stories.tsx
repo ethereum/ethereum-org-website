@@ -5,6 +5,7 @@ import ListingMethodology from "."
 const meta = {
   title: "Components / ListingMethodology",
   component: ListingMethodology,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

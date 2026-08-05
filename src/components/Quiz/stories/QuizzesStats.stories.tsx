@@ -5,6 +5,7 @@ import QuizzesStats from "../QuizzesStats"
 const meta = {
   title: "Components / Features / Quiz / QuizzesStats",
   component: QuizzesStats,
+  tags: ["autodocs"],
   args: {
     averageScoresArray: [],
     completedQuizzes: {

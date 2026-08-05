@@ -6,6 +6,7 @@ import TruncatedText from "../TruncatedText"
 const meta = {
   title: "UI / Data Display / TruncatedText",
   component: TruncatedText,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

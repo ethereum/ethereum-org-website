@@ -5,6 +5,7 @@ import { Center, Flex, HStack, Stack, VStack } from "../flex"
 const meta = {
   title: "UI / Layout / Flex",
   component: Flex,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

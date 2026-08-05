@@ -96,6 +96,7 @@ import { EthHomeIcon, FeedbackThumbsUpIcon } from "."
 
 const meta = {
   title: "Components / Icons",
+  tags: ["autodocs"],
 } satisfies Meta
 
 export default meta

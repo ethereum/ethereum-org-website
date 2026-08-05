@@ -10,6 +10,7 @@ import heroImg from "@/public/images/upgrades/merge.png"
 const meta = {
   title: "Components / Heroes / PageHero",
   component: PageHeroComponent,
+  tags: ["autodocs"],
   parameters: {
     layout: "none",
     // asPath lets the Breadcrumbs component resolve the "home" crumb label

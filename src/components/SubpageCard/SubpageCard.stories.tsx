@@ -6,6 +6,7 @@ import SubpageCard from "."
 const meta = {
   title: "Components / Cards / SubpageCard",
   component: SubpageCard,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

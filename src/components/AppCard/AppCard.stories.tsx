@@ -12,6 +12,7 @@ import AppCard from "."
 const meta = {
   title: "Components / Cards / AppCard",
   component: AppCard,
+  tags: ["autodocs"],
   decorators: [
     (Story) => (
       <div className="max-w-md">

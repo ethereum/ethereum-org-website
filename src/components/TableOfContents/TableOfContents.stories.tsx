@@ -75,6 +75,7 @@ const tocItems: ToCItem[] = [
 const meta = {
   title: "Components / Navigation / TableOfContents",
   component: TableOfContentsComponent,
+  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
   },

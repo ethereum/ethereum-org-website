@@ -5,6 +5,7 @@ import { EdgeScrollContainer, EdgeScrollItem } from "../edge-scroll-container"
 const meta = {
   title: "UI / Layout / EdgeScrollContainer",
   component: EdgeScrollContainer,
+  tags: ["autodocs"],
   decorators: [
     (Story) => (
       <div className="mx-auto max-w-screen-2xl px-4 py-8 md:px-8">

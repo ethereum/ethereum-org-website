@@ -76,7 +76,14 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ["Design System", "UI", "Components", "Layouts", "Pages"],
+        order: [
+          "Overview",
+          "Design System",
+          "UI",
+          "Components",
+          "Layouts",
+          "Pages",
+        ],
       },
     },
     layout: "centered",

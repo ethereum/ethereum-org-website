@@ -8,6 +8,7 @@ const meta = {
   title:
     "Components / Features / Simulator / Screens / CreateAccount / WelcomeScreen",
   component: Component,
+  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
   },

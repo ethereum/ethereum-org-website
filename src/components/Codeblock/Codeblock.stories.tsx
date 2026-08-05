@@ -5,6 +5,7 @@ import Codeblock from "."
 const meta = {
   title: "Components / Content / Codeblock",
   component: Codeblock,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

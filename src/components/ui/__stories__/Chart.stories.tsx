@@ -26,6 +26,7 @@ import {
 const meta = {
   title: "UI / Data Display / Chart",
   component: ChartContainer,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

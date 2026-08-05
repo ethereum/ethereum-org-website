@@ -6,6 +6,7 @@ import ContentFeedback from "./ContentFeedback"
 const meta = {
   title: "Components / ContentFeedback",
   component: ContentFeedback,
+  tags: ["autodocs"],
   parameters: {
     layout: "padded",
   },

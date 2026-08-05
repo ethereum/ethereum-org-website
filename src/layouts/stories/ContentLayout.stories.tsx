@@ -9,6 +9,7 @@ import { ContentLayout as ContentLayoutComponent } from "../ContentLayout"
 const meta = {
   title: "Layouts / ContentLayout",
   component: ContentLayoutComponent,
+  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
     chromatic: {

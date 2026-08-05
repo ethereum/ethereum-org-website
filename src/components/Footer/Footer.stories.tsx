@@ -5,6 +5,7 @@ import Footer from "."
 const meta = {
   title: "Components / Site Chrome / Footer",
   component: Footer,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     layout: "fullscreen",

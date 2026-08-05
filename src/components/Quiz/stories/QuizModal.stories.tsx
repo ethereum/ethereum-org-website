@@ -16,6 +16,7 @@ type ModalPropsAndWidgetArgs = ComponentProps<typeof QuizzesModal> & {
 const meta = {
   title: "Components / Features / Quiz / Modal",
   component: QuizzesModal,
+  tags: ["autodocs"],
   args: {
     isQuizModalOpen: true,
     quizStatus: "neutral",

@@ -10,6 +10,7 @@ import type { StorybookConfig } from "@storybook/nextjs"
  */
 const config: StorybookConfig = {
   stories: [
+    "./Overview.mdx",
     // Recursive everywhere: a story nested a directory deeper than expected
     // would otherwise never load, with no error to say so.
     "../src/components/**/*.stories.{ts,tsx}",

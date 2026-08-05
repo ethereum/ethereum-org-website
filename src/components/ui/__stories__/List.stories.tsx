@@ -5,6 +5,7 @@ import { List, ListItem, OrderedList, UnorderedList } from "../list"
 const meta = {
   title: "UI / Data Display / List",
   component: List,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

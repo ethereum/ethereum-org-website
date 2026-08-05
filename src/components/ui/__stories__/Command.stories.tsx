@@ -17,6 +17,7 @@ import {
 const meta = {
   title: "UI / Overlays / Command",
   component: Command,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

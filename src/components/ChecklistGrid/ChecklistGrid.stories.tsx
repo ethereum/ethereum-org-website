@@ -5,6 +5,7 @@ import ChecklistGrid from "."
 const meta = {
   title: "Components / ChecklistGrid",
   component: ChecklistGrid,
+  tags: ["autodocs"],
   parameters: {
     docs: {
       description: {

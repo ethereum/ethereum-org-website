@@ -8,6 +8,7 @@ import CopyToClipboard, { CopyButton } from "."
 const meta = {
   title: "Components / CopyToClipboard",
   component: CopyToClipboard,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

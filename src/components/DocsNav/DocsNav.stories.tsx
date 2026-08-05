@@ -5,6 +5,7 @@ import DocsNavComponent from "."
 const meta = {
   title: "Components / Navigation / DocsNav",
   component: DocsNavComponent,
+  tags: ["autodocs"],
   parameters: {
     nextjs: {
       appDirectory: true,

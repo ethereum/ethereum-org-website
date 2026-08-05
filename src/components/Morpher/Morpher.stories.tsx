@@ -5,6 +5,7 @@ import Morpher from "."
 const meta = {
   title: "Components / Morpher",
   component: Morpher,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

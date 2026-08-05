@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils/cn"
 
 const meta = {
   title: "Design System / Typography / Text",
+  tags: ["autodocs"],
   parameters: {
     layout: "none",
   },

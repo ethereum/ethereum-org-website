@@ -5,6 +5,7 @@ import { SupportedLanguagesTooltip } from "."
 const meta = {
   title: "Components / SupportedLanguagesTooltip",
   component: SupportedLanguagesTooltip,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

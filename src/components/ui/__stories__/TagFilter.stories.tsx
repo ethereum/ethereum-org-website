@@ -6,6 +6,7 @@ import TagFilter, { type TagFilterProps } from "../tag-filter"
 const meta = {
   title: "UI / Data Display / TagFilter",
   component: TagFilter,
+  tags: ["autodocs"],
   decorators: [
     (Story) => (
       <div className="w-[640px]">

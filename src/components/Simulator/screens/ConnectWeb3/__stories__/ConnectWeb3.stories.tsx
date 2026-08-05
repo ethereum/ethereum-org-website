@@ -9,6 +9,7 @@ import { ConnectWeb3 as Component } from "../"
 const meta = {
   title: "Components / Features / Simulator / Screens / ConnectWeb3",
   component: Component,
+  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
   },

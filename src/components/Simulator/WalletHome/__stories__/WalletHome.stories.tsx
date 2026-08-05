@@ -11,6 +11,7 @@ import NFTImage from "@/public/images/deep-panic.png"
 const meta = {
   title: "Components / Features / Simulator / WalletHome",
   component: Component,
+  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
   },

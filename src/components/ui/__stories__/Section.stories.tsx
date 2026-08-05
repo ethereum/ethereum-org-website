@@ -11,6 +11,7 @@ import {
 const meta = {
   title: "UI / Layout / Section",
   component: Section,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

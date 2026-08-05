@@ -5,6 +5,7 @@ import Nav from "."
 const meta = {
   title: "Components / Site Chrome / Nav",
   component: Nav,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     layout: "fullscreen",

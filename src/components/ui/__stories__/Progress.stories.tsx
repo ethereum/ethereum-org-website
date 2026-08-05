@@ -6,6 +6,7 @@ import { Progress } from "../progress"
 const meta = {
   title: "UI / Data Display / Progress",
   component: Progress,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

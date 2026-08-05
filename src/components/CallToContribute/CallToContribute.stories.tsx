@@ -5,6 +5,7 @@ import CallToContributeComponent from "."
 const meta = {
   title: "Components / CallToContribute",
   component: CallToContributeComponent,
+  tags: ["autodocs"],
   args: {
     editPath:
       "https://github.com/ethereum/ethereum-org-website/tree/dev/public/content/developers/docs/index.md",

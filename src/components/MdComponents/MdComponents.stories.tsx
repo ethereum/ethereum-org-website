@@ -7,6 +7,7 @@ import MdComponentSet from "."
 
 const meta = {
   title: "Components / Content / MdComponents",
+  tags: ["autodocs"],
   parameters: {
     layout: "none",
     chromatic: {

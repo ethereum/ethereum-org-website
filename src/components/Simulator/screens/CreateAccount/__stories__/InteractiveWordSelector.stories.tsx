@@ -16,6 +16,7 @@ const meta = {
   title:
     "Components / Features / Simulator / Screens / CreateAccount / InteractiveWordSelector",
   component: Component,
+  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
   },

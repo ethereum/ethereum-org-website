@@ -16,6 +16,7 @@ const meta = {
   title:
     "Components / Features / Simulator / Screens / CreateAccount / GeneratingKeys",
   component: GeneratingKeys,
+  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
   },

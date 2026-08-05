@@ -116,6 +116,7 @@ const walletsData = [
 const meta = {
   title: "Components / Features / FindWalletProductTable",
   component: FindWalletProductTable,
+  tags: ["autodocs"],
   decorators: [
     (Story) => (
       <div className="mx-auto max-w-screen-2xl">

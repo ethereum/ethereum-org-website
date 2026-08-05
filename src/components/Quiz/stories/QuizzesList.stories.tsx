@@ -17,6 +17,7 @@ import QuizzesListComponent from "../QuizzesList"
 const meta = {
   title: "Components / Features / Quiz / QuizzesList",
   component: QuizzesListComponent,
+  tags: ["autodocs"],
   args: {
     content: ethereumBasicsQuizzes,
     headingId: "basics",

@@ -7,6 +7,7 @@ import { PathButton as PathButtonComponent } from "../PathButton"
 const meta = {
   title: "Components / Features / Simulator / PathButton",
   component: PathButtonComponent,
+  tags: ["autodocs"],
   decorators: [
     (Story) => (
       <div className="grid w-[300px]">

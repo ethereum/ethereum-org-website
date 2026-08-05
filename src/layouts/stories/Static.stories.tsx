@@ -15,6 +15,7 @@ import {
 const meta = {
   title: "Layouts / Static",
   component: StaticLayout,
+  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
     chromatic: { modes: { ...langViewportModes } },

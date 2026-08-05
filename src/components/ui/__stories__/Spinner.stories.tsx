@@ -6,6 +6,7 @@ import { Spinner } from "../spinner"
 const meta = {
   title: "UI / Data Display / Spinner",
   component: Spinner,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

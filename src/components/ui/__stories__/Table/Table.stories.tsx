@@ -12,6 +12,7 @@ import {
 const meta = {
   title: "UI / Data Display / Table",
   component: Table,
+  tags: ["autodocs"],
   decorators: [
     (Story) => (
       <Flex className="max-w-screen-md flex-col gap-12">

@@ -6,6 +6,7 @@ import { TerminalTypewriter } from "../terminal-typewriter"
 const meta = {
   title: "UI / Data Display / TerminalTypewriter",
   component: TerminalTypewriter,
+  tags: ["autodocs"],
   decorators: [
     (Story) => (
       <div className="w-[42rem]">

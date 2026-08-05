@@ -12,6 +12,7 @@ import { HStack, VStack } from "../flex"
 const meta = {
   title: "UI / Collapsible",
   component: Collapsible,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

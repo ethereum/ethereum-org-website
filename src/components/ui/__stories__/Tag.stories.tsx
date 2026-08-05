@@ -6,6 +6,7 @@ import { Tag, TagButton, TagsInlineText } from "../tag"
 const meta = {
   title: "UI / Actions / Tag",
   component: Tag,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

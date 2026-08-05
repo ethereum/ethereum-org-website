@@ -7,6 +7,7 @@ import { ListItem, UnorderedList } from "../list"
 const meta = {
   title: "UI / Navigation / Link",
   component: InlineLink,
+  tags: ["autodocs"],
   decorators: [
     (Story) => (
       <Center className="max-w-prose">

@@ -13,6 +13,7 @@ import { toggleId } from "./utils"
 const meta = {
   title: "Components / Features / FilterableCatalog",
   component: FilterableCatalog,
+  tags: ["autodocs"],
   parameters: {
     layout: "padded",
   },

@@ -11,6 +11,7 @@ import { LAYER_2_QUIZ_KEY, layer2Questions } from "./utils"
 const meta = {
   title: "Components / Features / Quiz / QuizWidget / ProgressBar",
   component: QuizProgressBar,
+  tags: ["autodocs"],
   args: {
     questions: layer2Questions,
   },

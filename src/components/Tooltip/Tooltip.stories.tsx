@@ -18,6 +18,7 @@ const TooltipContent = () => (
 const meta = {
   title: "Components / Tooltip",
   component: TooltipComponent,
+  tags: ["autodocs"],
   args: {
     content: <TooltipContent />,
     children: (

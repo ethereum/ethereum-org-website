@@ -12,6 +12,7 @@ import {
 const meta = {
   title: "UI / Layout / Skeleton",
   component: Skeleton,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {

@@ -7,6 +7,7 @@ import { PersistentPanel } from "../persistent-panel"
 const meta = {
   title: "UI / Data Display / PersistentPanel",
   component: PersistentPanel,
+  tags: ["autodocs"],
   args: {
     open: false,
     children: null,

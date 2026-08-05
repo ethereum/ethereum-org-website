@@ -8,6 +8,7 @@ import { ClickAnimation } from "../ClickAnimation"
 const meta = {
   title: "Components / Features / Simulator / ClickAnimation",
   component: ClickAnimation,
+  tags: ["autodocs"],
   decorators: [
     (Story) => (
       <div className="relative">

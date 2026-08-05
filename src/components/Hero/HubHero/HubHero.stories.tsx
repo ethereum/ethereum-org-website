@@ -10,6 +10,7 @@ import learnHubHeroImg from "@/public/images/heroes/learn-hub-hero.png"
 const meta = {
   title: "Components / Heroes / HubHero",
   component: HubHeroComponent,
+  tags: ["autodocs"],
   parameters: {
     layout: "none",
     chromatic: {

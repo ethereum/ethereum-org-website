@@ -5,6 +5,7 @@ import TranslationBanner from "."
 const meta = {
   title: "Components / Site Chrome / TranslationBanner",
   component: TranslationBanner,
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     layout: "fullscreen",
