@@ -32,3 +32,21 @@
 - The `mode=full` regeneration replaced the standard `完全形` with the non-standard katakana calque `フルフォーム` in three places including the `{#short-vs-full-forms}` heading. Reverted to `完全形`.
 - Not patched: half-width parens around Japanese text in two spots (the file otherwise uses full-width), and `これの重要な側面は` (unnatural; dev had `この重要な側面の1つは`).
 - Win from the same run: restored `訪問者がどのように自認しているかに関係なく` ("regardless of how they identify"), a source clause dev's ja had dropped entirely.
+
+## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 9.3/10
+Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
+
+**Fixed in this branch:**
+
+- #43 blank line before `{#validators-keys}` restored
+- #44 `Arbitrum One` de-hybridised in `app-session-description`
+
+**Open (native call needed):**
+
+- #45 "free-est" -> `最も自由` (liberty sense) rather than free-of-charge.
+- "sealed auctions" -> `シールドオークション`, which Japanese readers parse as "**shield** auction"; use `封印`/`密封入札`.
+
+**Notes:**
+
+- `ciphernodes` -> `サイファーノード` is permitted by the CJK-phonetic group rule.
+- Minor interpunct variance in non-glossary compounds (`ステルス・アドレス` vs `メッセージングアプリ`) is normal Japanese, not an error.

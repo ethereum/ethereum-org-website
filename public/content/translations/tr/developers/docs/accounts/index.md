@@ -105,7 +105,9 @@ Kontrat hesapları da 42 karakterlik onaltılık bir adrese sahiptir:
 
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
-Sözleşme adresi genellikle bir sözleşme Ethereum Blokzinciri'ne dağıtıldığında verilir. Adres, oluşturucunun adresinden ve o adresten gönderilen işlem sayısından ("nonce") gelir.
+Sözleşme adresi genellikle bir sözleşme Ethereum Blokzincirine dağıtıldığında verilir. Adres, oluşturucunun adresinden ve o adresten gönderilen işlem sayısından ("nonce") gelir. `CREATE` işlemi bir adresi bu şekilde türetir.
+
+Sözleşmeler ayrıca, adresi oluşturucunun adresinden, oluşturucunun seçtiği bir değerden ("salt") ve sözleşmenin oluşturma kodunun bir hash'inden türeten [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014) ile de dağıtılabilir. Hiçbir nonce dahil edilmez, bu nedenle adres sözleşme var olmadan önce hesaplanabilir ve oluşturucu bu arada ne kadar başka işlem gönderirse göndersin aynı kalır. Bu, henüz dağıtılmamış bir sözleşmeye referans vermeyi mümkün kılar.
 
 ## Doğrulayıcı anahtarları {#validators-keys}
 

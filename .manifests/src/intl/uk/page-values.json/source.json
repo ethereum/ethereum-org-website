@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-values.json",
-  "generatedAt": "2026-07-29T05:47:13.848Z",
-  "rootHash": "4658c7c4438d",
+  "generatedAt": "2026-07-30T05:22:36.914Z",
+  "rootHash": "16024d52e828",
   "tree": {
-    "contentHash": "8f96e0618263",
-    "anchorHash": "fd48e0db3f90",
+    "contentHash": "17bf20ac3b68",
+    "anchorHash": "45503ae9f3dc",
     "children": {
       "page-values-meta-title": {
         "contentHash": "b3bb96be5919",
@@ -31,13 +31,15 @@
         "contentHash": "c259eda20bf3",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-values-cost-inevitable-strong": {
-        "contentHash": "aa467d6dc062",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-values-cost-inevitable-continued": {
-        "contentHash": "b8e5e1430110",
-        "anchorHash": "e3b0c44298fc"
+      "page-values-cost-inevitable": {
+        "contentHash": "06e3bd2d4296",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "ceabee0fd38d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
       },
       "page-values-card-privacy-title": {
         "contentHash": "54a57c3147c4",
@@ -56,7 +58,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-values-card-open-source-description": {
-        "contentHash": "849361b2d912",
+        "contentHash": "a529498f1c01",
         "anchorHash": "e3b0c44298fc"
       },
       "page-values-card-censorship-resistance-title": {
@@ -72,7 +74,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-values-card-security-description": {
-        "contentHash": "a529498f1c01",
+        "contentHash": "849361b2d912",
         "anchorHash": "e3b0c44298fc"
       },
       "page-values-internet-title": {
@@ -87,37 +89,45 @@
         "contentHash": "79e9758375aa",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-values-internet-list-open-code-strong": {
-        "contentHash": "67e096afc29d",
-        "anchorHash": "e3b0c44298fc"
-      },
       "page-values-internet-list-open-code": {
-        "contentHash": "e288914b78fd",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-values-internet-list-privacy-strong": {
-        "contentHash": "54a57c3147c4",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "d9fb253b7b94",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "a0aa3d5e41cb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
       },
       "page-values-internet-list-privacy": {
-        "contentHash": "7a1b266acc53",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-values-internet-list-censorship-strong": {
-        "contentHash": "cae4d9818fc9",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "e510a963acdb",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "8f6f6b1af9e1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
       },
       "page-values-internet-list-censorship": {
-        "contentHash": "c6fba5999f64",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-values-internet-list-security-strong": {
-        "contentHash": "8f6fb4eb7f42",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "eff4a5b7328a",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "efaf4b03aba4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
       },
       "page-values-internet-list-security": {
-        "contentHash": "8c18d5b23a9e",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "031f2884cc4e",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "bb7ba1d4fd6b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
       },
       "page-values-internet-p3": {
         "contentHash": "eb492b131cd7",
@@ -171,8 +181,7 @@
       "page-values-hero-description",
       "page-values-cost-title",
       "page-values-cost-description",
-      "page-values-cost-inevitable-strong",
-      "page-values-cost-inevitable-continued",
+      "page-values-cost-inevitable",
       "page-values-card-privacy-title",
       "page-values-card-privacy-description",
       "page-values-card-privacy-cta",
@@ -185,13 +194,9 @@
       "page-values-internet-title",
       "page-values-internet-p1",
       "page-values-internet-p2",
-      "page-values-internet-list-open-code-strong",
       "page-values-internet-list-open-code",
-      "page-values-internet-list-privacy-strong",
       "page-values-internet-list-privacy",
-      "page-values-internet-list-censorship-strong",
       "page-values-internet-list-censorship",
-      "page-values-internet-list-security-strong",
       "page-values-internet-list-security",
       "page-values-internet-p3",
       "page-values-faq-title",
@@ -206,5 +211,5 @@
       "page-values-faq-4-p1"
     ]
   },
-  "sourceCommitSha": "bff6b26a8b30b949a9a730f3427af6918af7bb68"
+  "sourceCommitSha": "813cae0fef45154817a18d95b432c551420c7054"
 }

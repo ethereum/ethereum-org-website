@@ -44,3 +44,24 @@ Left unfixed: choosing the right Tamil term for "trade-offs" (compromises/downsi
 - **2 criticals, hand-fixed:** `contributing/translation-program/index.md` lines 7 and 25 kept present tense (`முயற்சியாகும்`/`மாற்றுகிறது`, `கொண்டுள்ளது`) after English moved to past, so the page opened describing the Translation Program as ongoing two paragraphs above the notice it is closing. Fixed to `முயற்சியாக இருந்தது`/`மாற்றியது` and `கொண்டிருந்தது`. See known-patterns #33 -- Tamil needs explicit past marking; it will not fall out of a tense-only English edit.
 - **Collateral regressions from the full-file retranslation** (left unfixed, need native judgment): `முக்கிய பகுதியாக` -> `திறவுகோல் பகுதியாக` ("keyhole part") at line 39; idiomatic `ஆங்கிலம் பேசாதவர்கள்` -> calque `ஆங்கிலம் அல்லாத பேச்சாளர்கள்`; sentence-final periods dropped at lines 69 and 71. All three were *correct* on dev before this run.
 - **Terminology:** "onboarding" rendered as the stilted calque `பயனர் இணைவு` on the program page, contributing page and page-collectibles, while `get-involved` uses the cleaner `இணைத்துக்கொள்வதில்லை` in the same PR. Prefer the latter.
+
+## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 8.9/10
+Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
+
+**Fixed in this branch:**
+
+- #43 blank line before `{#validators-keys}` restored
+- #44 `Arbitrum One` de-hybridised in `app-session-description`
+
+**Open (native call needed):**
+
+- #48 "exposure" -> `ஆபத்து` (danger), a **regression** from the pre-PR `அம்பலப்படுத்துதலாக`.
+- zero-knowledge spelled two ways inside this one PR: `பூஜ்ஜிய-அறிவு` (freedom-tool) vs `பூஜ்ய-அறிவு` (semaphore, zkpdf + 4 pre-existing). Normalize to `பூஜ்ய-அறிவு`.
+- "payments" split `கட்டணம்` (fee/charge, file-dominant) vs `கொடுப்பனவுகள்`; "onion" transliterated in session but Latin in 3xpl.
+- "deploy" -> `பயன்படுத்து` ("use") in the accounts markdown — matches the file's pre-existing convention (L7/18/23), so any fix must be file-wide, not line-local. Better: `நிறுவ`/`களமிறக்க`.
+- Nested parenthetical for the salt gloss: `("சால்ட்" (salt))`. `கையாளுவிகள்` for "handlers" should be `கையாளிகள்`.
+
+**Notes:**
+
+- `அச்சிட்டு` for mint matches this file's 7 pre-existing mint strings — internally consistent, so not flagged despite reading closer to "stamp/print".
+- `key` did **not** regress to `திறவுகோல்` this run (the #18935 failure), and "salt" was resolved as the cryptographic term with an English gloss rather than culinary `உப்பு`.

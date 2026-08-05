@@ -39,3 +39,25 @@
 - Traditional characters clean throughout, zero Simplified leakage; terminology internally consistent (`翻譯計畫`/`譯者`) including `get-involved`, where zh drifted.
 - This run also cleaned up a stale 您/你 register inconsistency on the program page.
 - `remains a priority` overstated as `首要任務`.
+
+## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 9.0/10
+Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
+
+**Fixed in this branch:**
+
+- #42 `{#contract-accounts}` heading restored from the pre-PR blob
+- #43 blank line before `{#validators-keys}` restored
+
+**Open (native call needed):**
+
+- #46 `密碼節點`, which in Taiwan usage parses as "password node".
+- `讓你被關閉` for a person is a regression from the pre-PR `被封殺`; `關閉` takes accounts/services, not people.
+- `預設` ("by default") for "by-design"; #45 `最自由` for "free-est".
+- `您` in `app-asphodel-prologue-description` while every other player-addressing game entry in the file uses `你`.
+- All four `page-values-internet-list-*` items were restructured so the bolded value name no longer leads the item, unlike English. Fidelity improved, list scannability worse.
+
+**Notes:**
+
+- The collateral `同樣具有` -> `也有一個` reword is meaning-neutral and safe to leave, though `一個 42 個字元` stacks 個 twice.
+- Taiwan-vs-mainland choices are correct throughout (程式碼/實作/最佳化/生物辨識/螢幕截圖/網路, 雜湊 not 哈希); no Simplified leakage and no recurrence of the `智慧合約` regression logged for this locale.
+- `處理常式` for "handler" is the correct MS zh-tw term.

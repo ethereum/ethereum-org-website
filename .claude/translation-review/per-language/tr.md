@@ -43,3 +43,23 @@
 **Fixed (critical):** `Blok önericilerinin` -> `Blok teklifçilerinin` (`roadmap/privacy` L58, compound entry `block proposer = blok teklifçisi`). The embedded video transcript uses `teklif edici`/`teklifçi` throughout, making `önerici` the outlier.
 
 **Not fixed (warning):** `private` rendered `gizli` in the roadmap page but `özel` in the video embedded on that same page; PIR expanded two different ways. Visible side by side, worth a follow-up decision.
+
+## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 9.0/10
+Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
+
+**Fixed in this branch:**
+
+- #42 `{#contract-accounts}` heading restored from the pre-PR blob
+- #43 blank line before `{#validators-keys}` restored
+
+**Open (native call needed):**
+
+- `private` -> `özel` in the two new messaging strings vs `gizli` in 9 sibling `private*` strings in the same file — recurrence of the split logged for tr in PR #18925. `özel` also collides with `özel anahtar` (private key).
+- #46 `şifreleme düğümleri`.
+- `` `CREATE` işlemi `` collides with `işlem` = transaction 20 words earlier in the same sentence; the tr docs corpus uses `işlem kodu` for opcode (6x).
+- `autobattler` half-translated as `otomatik savaşçı` (the unit, not the genre) while `roguelike` stays English; the tr corpus keeps genre names English.
+
+**Notes:**
+
+- **The `kontrat` vs `sözleşme` mix is glossary-prescribed, not a defect.** ETHGlossary has both `contract account => kontrat hesabı` (compound) and `contract => Sözleşme` (bare), so the restored heading `Kontrat hesapları` alongside body `Sözleşme adresi` is correct. Do not auto-normalize — see #30 for the inverse failure.
+- `hash'inden` matches the corpus apostrophe convention (80x `hash'i`). The `page-values` rewrites are genuine improvements, including separating inspect=`incelemek` from audit=`denetlemek`.

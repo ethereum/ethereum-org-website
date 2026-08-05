@@ -71,6 +71,7 @@
   "tool-ens-description": "以太坊域名服务 (ENS) 是以太坊的去中心化命名协议。将人类可读的名称映射到地址、头像和其他记录。开发者文档涵盖 CCIP Read、合约和集成。包含用于解析和管理的 ENSJS SDK。",
   "tool-ens-mcp-server-description": "用于以太坊域名服务 (ENS) 的 MCP 服务器，使代理能够解析名称、反向查找地址、检查可用性并检索 ENS 记录。",
   "tool-enso-build-description": "Enso 是区块链捷径。你构建和在链上发布的最快方式。\n通过将所有链上交互映射到共享引擎，Enso 让你能够专注于你的产品。",
+  "tool-envio-description": "Envio 是一个多链索引框架，支持 TypeScript、JavaScript 或 ReScript 处理程序。当你需要跨多个 EVM 链使用由 Postgres 支持的单一 GraphQL API 时，它通过 HyperSync 而不是 RPC 进行同步。",
   "tool-erc-4337-documentation-description": "ERC-4337 账户抽象的完整指南 - 智能账户、打包器 (bundler)、代付合约 (paymaster) 等等",
   "tool-ercx-token-test-library-description": "ERCx 是一个用于 ERC 代币标准的全面开源测试库，包含涵盖 ERC-20、ERC-721、ERC-1155 和 ERC-4626 实现的 500 多个独立测试。",
   "tool-erpc-description": "eRPC 位于你的 RPC 提供商之前，用于添加缓存、故障转移和路由，并针对仪表板、索引器和多租户后端等读取密集型工作负载进行了优化。",

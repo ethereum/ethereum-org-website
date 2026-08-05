@@ -22,3 +22,19 @@
 - **Instruction-level semantic error, fixed:** grammatical "imperative" rendered as `అత్యవసరంగా` ("urgent"), i.e. "button translations should be urgent". Now `ఆజ్ఞార్థకంగా`.
 - Left for follow-up: `నవీకరణలు`/`అప్‌డేట్‌లు`/`అప్‌డేట్` three-way split for "updates" on the resources page, and `Proz term search` left in English where id/vi/sw all localize it.
 - Watch item for future te patches: inflected forms carry ZWNJ (U+200C) invisibly -- `ప్రోగ్రామ్‌లో`, `‌కు`, `‌ను`, `‌లను`. Copy lines verbatim, never retype. See known-patterns #36.
+
+## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 9.6/10
+Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
+
+**Fixed in this branch:**
+
+- #43 blank line before `{#validators-keys}` restored
+
+**Open (native call needed):**
+
+- `app-the-interfold-description` "independent parties" -> `స్వతంత్ర పార్టీలను`; `పార్టీ` defaults to the political sense and the same sentence already contains voting/governance. te's own third-party precedent is `పక్షం` (11 uses), and hi/mr both use `पक्ष`.
+
+**Notes:**
+
+- `లేయర్ 2 (l2)` with lowercase l2 is a pre-existing locale-wide pattern (94 occurrences), also in bn/ta/mr — not a new defect.
+- Every flagged polysemy trap ("mint", "mixing", "state", "key", "compliance", "governance") resolved to the rendering te already uses elsewhere in the locale.
