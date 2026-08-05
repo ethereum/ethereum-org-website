@@ -1,6 +1,6 @@
 ---
-title: "ابتدائی افراد کے لیے ہیلو ورلڈ اسمارٹ کانٹریکٹ - فل اسٹیک"
-description: "ایتھریم پر ایک سادہ اسمارٹ کانٹریکٹ لکھنے اور ڈیپلائے کرنے کے بارے میں تعارفی ٹیوٹوریل۔"
+title: "ابتدائی افراد کے لیے ہیلو ورلڈ سمارٹ کنٹریکٹ - فل اسٹیک"
+description: "ایتھیریم پر ایک سادہ سمارٹ کنٹریکٹ لکھنے اور تعینات کرنے کے بارے میں تعارفی ٹیوٹوریل۔"
 author: "nstrike2"
 breadcrumb: "ہیلو ورلڈ فل اسٹیک"
 tags:
@@ -8,7 +8,7 @@ tags:
     "Solidity",
     "Hardhat",
     "Alchemy",
-    "اسمارٹ کانٹریکٹس",
+    "سمارٹ کنٹریکٹس",
     "تعیناتی",
     "بلاک ایکسپلورر",
     "فرنٹ اینڈ",
@@ -20,75 +20,69 @@ lang: ur
 published: 2021-10-25
 ---
 
-یہ گائیڈ آپ کے لیے ہے اگر آپ بلاک چین ڈیولپمنٹ میں نئے ہیں اور نہیں جانتے کہ کہاں سے شروع کرنا ہے یا اسمارٹ کانٹریکٹس کو کیسے ڈیپلائے کرنا اور ان کے ساتھ کیسے تعامل کرنا ہے۔ ہم [MetaMask](https://metamask.io)، [Solidity](https://docs.soliditylang.org/en/v0.8.0/)، [Hardhat](https://hardhat.org)، اور [Alchemy](https://alchemy.com/eth) کا استعمال کرتے ہوئے Goerli ٹیسٹ نیٹ ورک پر ایک سادہ اسمارٹ کانٹریکٹ بنانے اور ڈیپلائے کرنے کے عمل سے گزریں گے۔
+یہ گائیڈ آپ کے لیے ہے اگر آپ بلاک چین ڈیولپمنٹ میں نئے ہیں اور نہیں جانتے کہ کہاں سے شروعات کرنی ہے یا سمارٹ کنٹریکٹس کو کیسے تعینات کرنا ہے اور ان کے ساتھ کیسے تعامل کرنا ہے۔ ہم [میٹاماسک](https://metamask.io)، [Solidity](https://docs.soliditylang.org/en/v0.8.0/)، [Hardhat](https://hardhat.org)، اور [Alchemy](https://alchemy.com/eth) کا استعمال کرتے ہوئے گورلی آزمائشی نیٹ ورک پر ایک سادہ سمارٹ کنٹریکٹ بنانے اور تعینات کرنے کے عمل سے گزریں گے۔
 
 اس ٹیوٹوریل کو مکمل کرنے کے لیے آپ کو ایک Alchemy اکاؤنٹ کی ضرورت ہوگی۔ [مفت اکاؤنٹ کے لیے سائن اپ کریں](https://www.alchemy.com/)۔
 
-اگر آپ کو کسی بھی مقام پر سوالات ہوں، تو بلا جھجھک [Alchemy Discord](https://discord.gg/gWuC7zB) میں رابطہ کریں!
+اگر آپ کے کسی بھی موقع پر سوالات ہوں، تو بلا جھجھک [Alchemy ڈسکارڈ](https://discord.gg/gWuC7zB) میں رابطہ کریں!
 
-## حصہ 1 - Hardhat کا استعمال کرتے ہوئے اپنا اسمارٹ کانٹریکٹ بنائیں اور ڈیپلائے کریں {#part-1}
+## حصہ 1 - <span dir="ltr">Hardhat</span> کا استعمال کرتے ہوئے اپنا سمارٹ کنٹریکٹ بنائیں اور تعینات کریں {#part-1}
 
 ### ایتھیریم نیٹ ورک سے جڑیں {#connect-to-the-ethereum-network}
 
-ایتھیریم چین پر درخواستیں بھیجنے کے کئی طریقے ہیں۔ سادگی کے لیے، ہم Alchemy پر ایک مفت اکاؤنٹ استعمال کریں گے، جو کہ ایک بلاک چین ڈیولپر پلیٹ فارم اور API ہے جو ہمیں خود نوڈ چلائے بغیر ایتھیریم چین کے ساتھ بات چیت کرنے کی سہولت دیتا ہے۔ Alchemy میں نگرانی اور تجزیات کے لیے ڈیولپر ٹولز بھی موجود ہیں؛ ہم اس ٹیوٹوریل میں ان کا فائدہ اٹھائیں گے تاکہ یہ سمجھ سکیں کہ ہمارے اسمارٹ کانٹریکٹ کی ڈیپلائمنٹ کے پس منظر میں کیا ہو رہا ہے۔
+ایتھیریم چین کو درخواستیں بھیجنے کے کئی طریقے ہیں۔ سادگی کے لیے، ہم <span dir="ltr">Alchemy</span> پر ایک مفت اکاؤنٹ استعمال کریں گے، جو ایک بلاک چین ڈیولپر پلیٹ فارم اور <span dir="ltr">API</span> ہے جو ہمیں خود نوڈ چلائے بغیر ایتھیریم چین کے ساتھ بات چیت کرنے کی سہولت دیتا ہے۔ <span dir="ltr">Alchemy</span> میں نگرانی اور تجزیات کے لیے ڈیولپر ٹولز بھی موجود ہیں؛ ہم اس ٹیوٹوریل میں ان کا فائدہ اٹھائیں گے تاکہ یہ سمجھ سکیں کہ ہماری سمارٹ کنٹریکٹ کی تعیناتی میں اندرونی طور پر کیا ہو رہا ہے۔
 
-### اپنی ایپ اور API کلید بنائیں {#create-your-app-and-api-key}
+### اپنی ایپ اور <span dir="ltr">API</span> کلید بنائیں
 
-ایک بار جب آپ Alchemy اکاؤنٹ بنا لیتے ہیں، تو آپ ایک ایپ بنا کر API کلید تیار کر سکتے ہیں۔ یہ آپ کو Goerli ٹیسٹ نیٹ پر درخواستیں بھیجنے کی اجازت دے گا۔ اگر آپ ٹیسٹ نیٹس سے واقف نہیں ہیں تو آپ [نیٹ ورک کے انتخاب کے لیے Alchemy کی گائیڈ پڑھ سکتے ہیں](https://www.alchemy.com/docs/choosing-a-web3-network)۔
+ایک بار جب آپ <span dir="ltr">Alchemy</span> اکاؤنٹ بنا لیتے ہیں، تو آپ ایک ایپ بنا کر <span dir="ltr">API</span> کلید تیار کر سکتے ہیں۔ یہ آپ کو <span dir="ltr">Sepolia</span> آزمائشی نیٹ ورک پر درخواستیں بھیجنے کی اجازت دے گا۔ اگر آپ آزمائشی نیٹ ورکس سے واقف نہیں ہیں تو آپ [نیٹ ورک منتخب کرنے کے لیے <span dir="ltr">Alchemy</span> کی گائیڈ پڑھ سکتے ہیں](https://www.alchemy.com/docs/choosing-a-web3-network)۔
 
-Alchemy ڈیش بورڈ پر، نیویگیشن بار میں **Apps** ڈراپ ڈاؤن تلاش کریں اور **Create App** پر کلک کریں۔
+<span dir="ltr">Alchemy</span> ڈیش بورڈ پر، نیویگیشن بار میں **<span dir="ltr">Apps</span>** ڈراپ ڈاؤن تلاش کریں اور **<span dir="ltr">Create App</span>** پر کلک کریں۔
 
 ![Hello world create app](./hello-world-create-app.png)
 
-اپنی ایپ کو '_Hello World_' کا نام دیں اور ایک مختصر تفصیل لکھیں۔ اپنے ماحول کے طور پر **Staging** اور اپنے نیٹ ورک کے طور پر **Goerli** کو منتخب کریں۔
+اپنی ایپ کو '_<span dir="ltr">Hello World</span>_' کا نام دیں اور ایک مختصر تفصیل لکھیں۔ اپنے ماحول کے طور پر **<span dir="ltr">Staging</span>** اور اپنے نیٹ ورک کے طور پر **<span dir="ltr">Sepolia</span>** کو منتخب کریں۔
 
 ![create app view hello world](./create-app-view-hello-world.png)
 
-_نوٹ: یقینی بنائیں کہ آپ **Goerli** کو منتخب کریں، ورنہ یہ ٹیوٹوریل کام نہیں کرے گا۔_
+_نوٹ: **<span dir="ltr">Sepolia</span>** کو منتخب کرنا یقینی بنائیں، ورنہ یہ ٹیوٹوریل کام نہیں کرے گا۔_
 
-**Create app** پر کلک کریں۔ آپ کی ایپ نیچے دیے گئے ٹیبل میں ظاہر ہو جائے گی۔
+**<span dir="ltr">Create app</span>** پر کلک کریں۔ آپ کی ایپ نیچے دیے گئے ٹیبل میں ظاہر ہو جائے گی۔
+### ایک ایتھیریم اکاؤنٹ بنائیں
 
-### ایک ایتھیریم اکاؤنٹ بنائیں {#create-an-ethereum-account}
+آپ کو ٹرانزیکشنز بھیجنے اور وصول کرنے کے لیے ایک ایتھیریم اکاؤنٹ کی ضرورت ہے۔ ہم میٹاماسک استعمال کریں گے، جو براؤزر میں ایک ورچوئل والیٹ ہے اور صارفین کو اپنے ایتھیریم اکاؤنٹ کا پتہ منظم کرنے کی سہولت دیتا ہے۔
 
-ٹرانزیکشنز بھیجنے اور وصول کرنے کے لیے آپ کو ایک ایتھیریم اکاؤنٹ کی ضرورت ہے۔ ہم MetaMask استعمال کریں گے، جو براؤزر میں ایک ورچوئل والیٹ ہے اور صارفین کو اپنے ایتھیریم اکاؤنٹ کے ایڈریس کا انتظام کرنے کی سہولت دیتا ہے۔
-
-آپ [یہاں](https://metamask.io/download) سے مفت میں MetaMask ڈاؤن لوڈ کر کے اکاؤنٹ بنا سکتے ہیں۔ جب آپ اکاؤنٹ بنا رہے ہوں، یا اگر آپ کے پاس پہلے سے اکاؤنٹ موجود ہے، تو یقینی بنائیں کہ اوپر دائیں جانب "Goerli Test Network" پر سوئچ کر لیں (تاکہ ہم اصلی پیسوں کے ساتھ کام نہ کر رہے ہوں)۔
-
-### مرحلہ 4: Faucet سے ایتھر شامل کریں {#step-4-add-ether-from-a-faucet}
-
-اپنے اسمارٹ کانٹریکٹ کو ٹیسٹ نیٹ ورک پر ڈیپلائے کرنے کے لیے، آپ کو کچھ نقلی ETH کی ضرورت ہوگی۔ Goerli نیٹ ورک پر ETH حاصل کرنے کے لیے، ایک Goerli faucet پر جائیں اور اپنا Goerli اکاؤنٹ ایڈریس درج کریں۔ نوٹ کریں کہ Goerli faucets حال ہی میں کچھ غیر معتبر ہو سکتے ہیں - آزمانے کے لیے آپشنز کی فہرست کے لیے [ٹیسٹ نیٹ ورکس کا صفحہ](/developers/docs/networks/#goerli) دیکھیں:
+آپ [یہاں](https://metamask.io/download) سے مفت میں میٹاماسک ڈاؤن لوڈ کر کے اکاؤنٹ بنا سکتے ہیں۔ جب آپ اکاؤنٹ بنا رہے ہوں، یا اگر آپ کے پاس پہلے سے ہی ایک اکاؤنٹ موجود ہے، تو یقینی بنائیں کہ اوپر دائیں جانب موجود "<span dir="ltr">Sepolia Test Network</span>" پر سوئچ کر لیں (تاکہ ہم حقیقی پیسوں کے ساتھ کام نہ کر رہے ہوں)۔
+اپنے سمارٹ کنٹریکٹ کو آزمائشی نیٹ ورک پر تعینات کرنے کے لیے، آپ کو کچھ نقلی <span dir="ltr">ETH</span> کی ضرورت ہوگی۔ <span dir="ltr">Sepolia</span> نیٹ ورک پر <span dir="ltr">ETH</span> حاصل کرنے کے لیے، <span dir="ltr">Sepolia</span> فوسٹ پر جائیں اور اپنا <span dir="ltr">Sepolia</span> اکاؤنٹ کا پتہ درج کریں۔ آزمانے کے لیے اختیارات کی فہرست کے لیے [آزمائشی نیٹ ورکس کا صفحہ](/developers/docs/networks/#sepolia) دیکھیں:
 
 _نوٹ: نیٹ ورک کے ہجوم کی وجہ سے، اس میں کچھ وقت لگ سکتا ہے۔_
 ``
-
 ### مرحلہ 5: اپنا بیلنس چیک کریں {#step-5-check-your-balance}
 
-یہ دوبارہ چیک کرنے کے لیے کہ ETH آپ کے والیٹ میں موجود ہے، آئیے [Alchemy کے کمپوزر ٹول](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D) کا استعمال کرتے ہوئے ایک [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) درخواست کریں۔ یہ ہمارے والیٹ میں موجود ETH کی مقدار واپس کرے گا۔ مزید جاننے کے لیے [کمپوزر ٹول استعمال کرنے کے طریقے پر Alchemy کا مختصر ٹیوٹوریل](https://youtu.be/r6sjRxBZJuU) دیکھیں۔
+یہ دوبارہ چیک کرنے کے لیے کہ <span dir="ltr">ETH</span> آپ کے والیٹ میں موجود ہے، آئیے [<span dir="ltr">Alchemy</span> کے سینڈ باکس ٹول](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) کا استعمال کرتے ہوئے ایک [<span dir="ltr">eth_getBalance</span>](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) درخواست کریں۔ یہ ہمارے والیٹ میں موجود <span dir="ltr">ETH</span> کی رقم واپس کرے گا۔ مزید جاننے کے لیے [کمپوزر ٹول استعمال کرنے کے طریقے پر <span dir="ltr">Alchemy</span> کا مختصر ٹیوٹوریل](https://youtu.be/r6sjRxBZJuU) دیکھیں۔
 
-اپنا MetaMask اکاؤنٹ ایڈریس درج کریں اور **Send Request** پر کلک کریں۔ آپ کو ایک جواب نظر آئے گا جو نیچے دیے گئے کوڈ اسنیپٹ جیسا ہوگا۔
+اپنے میٹاماسک اکاؤنٹ کا پتہ درج کریں اور **<span dir="ltr">Send Request</span>** پر کلک کریں۔ آپ کو ایک جواب نظر آئے گا جو نیچے دیے گئے کوڈ کے ٹکڑے جیسا ہوگا۔
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
 ```
 
-> _نوٹ: یہ نتیجہ wei میں ہے، ETH میں نہیں۔ Wei کو ایتھر کی سب سے چھوٹی اکائی کے طور پر استعمال کیا جاتا ہے۔_
+> _نوٹ: یہ نتیجہ <span dir="ltr">wei</span> میں ہے، <span dir="ltr">ETH</span> میں نہیں۔ <span dir="ltr">Wei</span> کو ایتھر کی سب سے چھوٹی اکائی کے طور پر استعمال کیا جاتا ہے۔_
 
-شکر ہے! ہمارے نقلی پیسے وہاں موجود ہیں۔
+شکر ہے! ہمارا سارا نقلی پیسہ وہیں موجود ہے۔
+### مرحلہ 6: اپنا پروجیکٹ شروع (initialize) کریں {#step-6-initialize-our-project}
 
-### مرحلہ 6: ہمارے پروجیکٹ کو شروع کریں {#step-6-initialize-our-project}
-
-سب سے پہلے، ہمیں اپنے پروجیکٹ کے لیے ایک فولڈر بنانا ہوگا۔ اپنی کمانڈ لائن پر جائیں اور درج ذیل درج کریں:
+سب سے پہلے، ہمیں اپنے پروجیکٹ کے لیے ایک فولڈر بنانے کی ضرورت ہوگی۔ اپنی کمانڈ لائن پر جائیں اور درج ذیل درج کریں۔
 
 ```
 mkdir hello-world
 cd hello-world
 ```
 
-اب جب کہ ہم اپنے پروجیکٹ فولڈر کے اندر ہیں، ہم پروجیکٹ کو شروع کرنے کے لیے `npm init` استعمال کریں گے۔
+اب چونکہ ہم اپنے پروجیکٹ فولڈر کے اندر ہیں، ہم پروجیکٹ کو شروع (initialize) کرنے کے لیے `npm init` کا استعمال کریں گے۔
 
-> اگر آپ کے پاس ابھی تک npm انسٹال نہیں ہے، تو [Node.js اور npm انسٹال کرنے کے لیے ان ہدایات](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) پر عمل کریں۔
+> اگر آپ کے پاس ابھی تک <span dir="ltr">npm</span> انسٹال نہیں ہے، تو <span dir="ltr">Node.js</span> اور <span dir="ltr">npm</span> انسٹال کرنے کے لیے [<span dir="ltr">Node.js</span> کی انسٹالیشن کی ہدایات](https://nodejs.org/en/download/) پر عمل کریں۔
 
-اس ٹیوٹوریل کے مقصد کے لیے، اس سے کوئی فرق نہیں پڑتا کہ آپ ابتدائی سوالات کا کیا جواب دیتے ہیں۔ حوالے کے لیے ہم نے اسے اس طرح کیا ہے:
+اس ٹیوٹوریل کے مقصد کے لیے، اس سے کوئی فرق نہیں پڑتا کہ آپ شروعاتی (initialization) سوالات کے کیا جواب دیتے ہیں۔ حوالے کے لیے ہم نے اسے اس طرح کیا ہے:
 
 ```
 package name: (hello-world)
@@ -116,11 +110,10 @@ About to write to /Users/.../.../.../hello-world/package.json:
 }
 ```
 
-package.json کو منظور کریں اور ہم تیار ہیں!
+<span dir="ltr">package.json</span> کو منظور کریں اور ہم آگے بڑھنے کے لیے تیار ہیں!
+### مرحلہ 7: <span dir="ltr">Hardhat</span> ڈاؤن لوڈ کریں {#step-7-download-hardhat}
 
-### مرحلہ 7: Hardhat ڈاؤن لوڈ کریں {#step-7-download-hardhat}
-
-Hardhat آپ کے ایتھیریم سافٹ ویئر کو مرتب (compile)، ڈیپلائے، ٹیسٹ اور ڈیبگ کرنے کے لیے ایک ڈیولپمنٹ ماحول ہے۔ یہ لائیو چین پر ڈیپلائے کرنے سے پہلے مقامی طور پر اسمارٹ کانٹریکٹس اور dapps بناتے وقت ڈیولپرز کی مدد کرتا ہے۔
+<span dir="ltr">Hardhat</span> آپ کے ایتھیریم سافٹ ویئر کو مرتب کرنے، تعینات کرنے، ٹیسٹ کرنے اور ڈیبگ کرنے کے لیے ایک ڈیولپمنٹ ماحول ہے۔ یہ لائیو چین پر تعینات کرنے سے پہلے مقامی طور پر سمارٹ کنٹریکٹس اور غیر مرکزی ایپلی کیشنز (<span dir="ltr">dapps</span>) بنانے میں ڈیولپرز کی مدد کرتا ہے۔
 
 ہمارے `hello-world` پروجیکٹ کے اندر چلائیں:
 
@@ -128,9 +121,9 @@ Hardhat آپ کے ایتھیریم سافٹ ویئر کو مرتب (compile)، �
 npm install --save-dev hardhat
 ```
 
-[انسٹالیشن کی ہدایات](https://hardhat.org/getting-started/#overview) پر مزید تفصیلات کے لیے اس صفحے کو دیکھیں۔
+[انسٹالیشن کی ہدایات](https://hardhat.org/getting-started/#overview) پر مزید تفصیلات کے لیے یہ صفحہ دیکھیں۔
 
-### مرحلہ 8: Hardhat پروجیکٹ بنائیں {#step-8-create-hardhat-project}
+### مرحلہ 8: <span dir="ltr">Hardhat</span> پروجیکٹ بنائیں {#step-8-create-hardhat-project}
 
 ہمارے `hello-world` پروجیکٹ فولڈر کے اندر، چلائیں:
 
@@ -138,7 +131,7 @@ npm install --save-dev hardhat
 npx hardhat
 ```
 
-اس کے بعد آپ کو ایک خوش آمدید کا پیغام اور یہ منتخب کرنے کا آپشن نظر آنا چاہیے کہ آپ کیا کرنا چاہتے ہیں۔ "create an empty hardhat.config.js" کو منتخب کریں:
+اس کے بعد آپ کو ایک خوش آمدید کا پیغام اور یہ منتخب کرنے کا اختیار نظر آنا چاہیے کہ آپ کیا کرنا چاہتے ہیں۔ "<span dir="ltr">create an empty hardhat.config.js</span>" کو منتخب کریں:
 
 ```
 888    888                      888 888               888
@@ -162,53 +155,53 @@ Quit
 
 ### مرحلہ 9: پروجیکٹ فولڈرز شامل کریں {#step-9-add-project-folders}
 
-پروجیکٹ کو منظم رکھنے کے لیے، آئیے دو نئے فولڈرز بنائیں۔ کمانڈ لائن میں، اپنے `hello-world` پروجیکٹ کی روٹ ڈائرکٹری پر جائیں اور ٹائپ کریں:
+پروجیکٹ کو منظم رکھنے کے لیے، آئیے دو نئے فولڈرز بنائیں۔ کمانڈ لائن میں، اپنے `hello-world` پروجیکٹ کی روٹ ڈائریکٹری پر جائیں اور ٹائپ کریں:
 
 ```
 mkdir contracts
 mkdir scripts
 ```
 
-- `contracts/` وہ جگہ ہے جہاں ہم اپنی ہیلو ورلڈ اسمارٹ کانٹریکٹ کوڈ فائل رکھیں گے
-- `scripts/` وہ جگہ ہے جہاں ہم اپنے کانٹریکٹ کو ڈیپلائے کرنے اور اس کے ساتھ بات چیت کرنے کے لیے اسکرپٹس رکھیں گے
+- `contracts/` وہ جگہ ہے جہاں ہم اپنی ہیلو ورلڈ سمارٹ کنٹریکٹ کوڈ فائل رکھیں گے
+- `scripts/` وہ جگہ ہے جہاں ہم اپنے کنٹریکٹ کو تعینات کرنے اور اس کے ساتھ بات چیت کرنے کے لیے سکرپٹس رکھیں گے
 
-### مرحلہ 10: اپنا کانٹریکٹ لکھیں {#step-10-write-our-contract}
+### مرحلہ 10: اپنا کنٹریکٹ لکھیں {#step-10-write-our-contract}
 
 آپ شاید خود سے پوچھ رہے ہوں گے کہ ہم کوڈ کب لکھنے والے ہیں؟ اب وقت آ گیا ہے!
 
-اپنے پسندیدہ ایڈیٹر میں hello-world پروجیکٹ کھولیں۔ اسمارٹ کانٹریکٹس عام طور پر Solidity میں لکھے جاتے ہیں، جسے ہم اپنا اسمارٹ کانٹریکٹ لکھنے کے لیے استعمال کریں گے۔‌
+اپنے پسندیدہ ایڈیٹر میں <span dir="ltr">hello-world</span> پروجیکٹ کھولیں۔ سمارٹ کنٹریکٹس عام طور پر <span dir="ltr">Solidity</span> میں لکھے جاتے ہیں، جسے ہم اپنا سمارٹ کنٹریکٹ لکھنے کے لیے استعمال کریں گے۔‌
 
-1. `contracts` فولڈر میں جائیں اور `HelloWorld.sol` کے نام سے ایک نئی فائل بنائیں۔
-2. ذیل میں ایک نمونہ Hello World اسمارٹ کانٹریکٹ ہے جسے ہم اس ٹیوٹوریل کے لیے استعمال کریں گے۔ نیچے دیے گئے مواد کو `HelloWorld.sol` فائل میں کاپی کریں۔
+1. `contracts` فولڈر میں جائیں اور `HelloWorld.sol` کے نام سے ایک نئی فائل بنائیں
+2. ذیل میں ایک نمونہ <span dir="ltr">Hello World</span> سمارٹ کنٹریکٹ ہے جسے ہم اس ٹیوٹوریل کے لیے استعمال کریں گے۔ ذیل کے مواد کو `HelloWorld.sol` فائل میں کاپی کریں۔
 
-_نوٹ: یہ سمجھنے کے لیے کہ یہ کانٹریکٹ کیا کرتا ہے، تبصرے (comments) ضرور پڑھیں۔_
+_نوٹ: یہ سمجھنے کے لیے کہ یہ کنٹریکٹ کیا کرتا ہے، تبصرے (comments) ضرور پڑھیں۔_
 
 ```
-// Specifies the version of Solidity, using semantic versioning.
-// Learn more: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
+// سیمینٹک ورژننگ کا استعمال کرتے ہوئے، Solidity کا ورژن متعین کرتا ہے۔
+// مزید جانیں: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
 pragma solidity >=0.7.3;
 
-// Defines a contract named `HelloWorld`.
-// A contract is a collection of functions and data (its state). Once deployed, a contract resides at a specific address on the Ethereum blockchain. Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// `HelloWorld` نامی کنٹریکٹ کی وضاحت کرتا ہے۔
+// کنٹریکٹ فنکشنز اور ڈیٹا (اس کی حالت) کا مجموعہ ہوتا ہے۔ ایک بار تعینات ہونے کے بعد، کنٹریکٹ ایتھیریم بلاک چین پر ایک مخصوص پتے پر موجود ہوتا ہے۔ مزید جانیں: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
 contract HelloWorld {
 
-   //Emitted when update function is called
-   //Smart contract events are a way for your contract to communicate that something happened on the blockchain to your app front-end, which can be 'listening' for certain events and take action when they happen.
+   // اپ ڈیٹ فنکشن کال ہونے پر خارج (emit) ہوتا ہے
+   // سمارٹ کنٹریکٹ ایونٹس آپ کے کنٹریکٹ کے لیے یہ بتانے کا ایک طریقہ ہیں کہ بلاک چین پر کچھ ہوا ہے، جسے آپ کی ایپ کا فرنٹ اینڈ 'سن' سکتا ہے اور ان کے ہونے پر کارروائی کر سکتا ہے۔
    event UpdatedMessages(string oldStr, string newStr);
 
-   // Declares a state variable `message` of type `string`.
-   // State variables are variables whose values are permanently stored in contract storage. The keyword `public` makes variables accessible from outside a contract and creates a function that other contracts or clients can call to access the value.
+   // `string` قسم کے ایک سٹیٹ ویری ایبل `message` کا اعلان کرتا ہے۔
+   // سٹیٹ ویری ایبلز وہ ویری ایبلز ہوتے ہیں جن کی قدریں مستقل طور پر کنٹریکٹ سٹوریج میں محفوظ ہوتی ہیں۔ کلیدی لفظ `public` ویری ایبلز کو کنٹریکٹ کے باہر سے قابل رسائی بناتا ہے اور ایک ایسا فنکشن بناتا ہے جسے دوسرے کنٹریکٹس یا کلائنٹس قدر تک رسائی کے لیے کال کر سکتے ہیں۔
    string public message;
 
-   // Similar to many class-based object-oriented languages, a constructor is a special function that is only executed upon contract creation.
-   // Constructors are used to initialize the contract's data. Learn more:https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+   // بہت سی کلاس پر مبنی آبجیکٹ اورینٹڈ زبانوں کی طرح، کنسٹرکٹر ایک خاص فنکشن ہوتا ہے جو صرف کنٹریکٹ بننے پر ہی چلتا ہے۔
+   // کنسٹرکٹرز کا استعمال کنٹریکٹ کے ڈیٹا کو شروع کرنے کے لیے کیا جاتا ہے۔ مزید جانیں:https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
    constructor(string memory initMessage) {
 
-      // Accepts a string argument `initMessage` and sets the value into the contract's `message` storage variable).
+      // ایک سٹرنگ آرگومنٹ `initMessage` قبول کرتا ہے اور قدر کو کنٹریکٹ کے `message` سٹوریج ویری ایبل میں سیٹ کرتا ہے۔
       message = initMessage;
    }
 
-   // A public function that accepts a string argument and updates the `message` storage variable.
+   // ایک عوامی فنکشن جو ایک سٹرنگ آرگومنٹ قبول کرتا ہے اور `message` سٹوریج ویری ایبل کو اپ ڈیٹ کرتا ہے۔
    function update(string memory newMessage) public {
       string memory oldMsg = message;
       message = newMessage;
@@ -217,63 +210,64 @@ contract HelloWorld {
 }
 ```
 
-یہ ایک بنیادی اسمارٹ کانٹریکٹ ہے جو بننے پر ایک پیغام محفوظ کرتا ہے۔ اسے `update` فنکشن کو کال کر کے اپ ڈیٹ کیا جا سکتا ہے۔
+یہ ایک بنیادی سمارٹ کنٹریکٹ ہے جو بننے پر ایک پیغام محفوظ کرتا ہے۔ اسے `update` فنکشن کو کال کر کے اپ ڈیٹ کیا جا سکتا ہے۔
 
-### مرحلہ 11: MetaMask اور Alchemy کو اپنے پروجیکٹ سے جوڑیں {#step-11-connect-metamask-alchemy-to-your-project}
+### مرحلہ 11: میٹاماسک اور <span dir="ltr">Alchemy</span> کو اپنے پروجیکٹ سے جوڑیں {#step-11-connect-metamask-alchemy-to-your-project}
 
-ہم نے ایک MetaMask والیٹ، Alchemy اکاؤنٹ بنا لیا ہے، اور اپنا اسمارٹ کانٹریکٹ لکھ لیا ہے، اب وقت آ گیا ہے کہ ان تینوں کو آپس میں جوڑیں۔
+ہم نے ایک میٹاماسک والیٹ، <span dir="ltr">Alchemy</span> اکاؤنٹ بنا لیا ہے، اور اپنا سمارٹ کنٹریکٹ لکھ لیا ہے، اب وقت آ گیا ہے کہ ان تینوں کو آپس میں جوڑیں۔
 
-آپ کے والیٹ سے بھیجی گئی ہر ٹرانزیکشن کے لیے آپ کی منفرد پرائیویٹ کلید کا استعمال کرتے ہوئے دستخط کی ضرورت ہوتی ہے۔ ہمارے پروگرام کو یہ اجازت فراہم کرنے کے لیے، ہم اپنی پرائیویٹ کلید کو محفوظ طریقے سے ایک انوائرنمنٹ (environment) فائل میں اسٹور کر سکتے ہیں۔ ہم یہاں Alchemy کے لیے ایک API کلید بھی اسٹور کریں گے۔
+آپ کے والیٹ سے بھیجی جانے والی ہر ٹرانزیکشن کے لیے آپ کی منفرد نجی کلید کا استعمال کرتے ہوئے دستخط کی ضرورت ہوتی ہے۔ ہمارے پروگرام کو یہ اجازت فراہم کرنے کے لیے، ہم اپنی نجی کلید کو محفوظ طریقے سے ایک انوائرنمنٹ (environment) فائل میں محفوظ کر سکتے ہیں۔ ہم یہاں <span dir="ltr">Alchemy</span> کے لیے ایک <span dir="ltr">API</span> کلید بھی محفوظ کریں گے۔
 
-> ٹرانزیکشنز بھیجنے کے بارے میں مزید جاننے کے لیے، web3 کا استعمال کرتے ہوئے ٹرانزیکشنز بھیجنے پر [یہ ٹیوٹوریل](https://www.alchemy.com/docs/hello-world-smart-contract#step-11-connect-metamask--alchemy-to-your-project) دیکھیں۔
+> ٹرانزیکشنز بھیجنے کے بارے میں مزید جاننے کے لیے، <span dir="ltr">Web3</span> کا استعمال کرتے ہوئے ٹرانزیکشنز بھیجنے پر [یہ ٹیوٹوریل](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) دیکھیں۔
 
-سب سے پہلے، اپنی پروجیکٹ ڈائرکٹری میں dotenv پیکیج انسٹال کریں:
+سب سے پہلے، اپنی پروجیکٹ ڈائریکٹری میں <span dir="ltr">dotenv</span> پیکیج انسٹال کریں:
 
 ```
 npm install dotenv --save
 ```
 
-پھر، پروجیکٹ کی روٹ ڈائرکٹری میں ایک `.env` فائل بنائیں۔ اس میں اپنی MetaMask پرائیویٹ کلید اور HTTP Alchemy API URL شامل کریں۔
+پھر، پروجیکٹ کی روٹ ڈائریکٹری میں ایک `.env` فائل بنائیں۔ اس میں اپنی میٹاماسک نجی کلید اور <span dir="ltr">HTTP Alchemy API URL</span> شامل کریں۔
 
 آپ کی انوائرنمنٹ فائل کا نام `.env` ہونا چاہیے ورنہ اسے انوائرنمنٹ فائل کے طور پر تسلیم نہیں کیا جائے گا۔
 
-اسے `process.env` یا `.env-custom` یا کوئی اور نام نہ دیں۔
+اس کا نام `process.env` یا `.env-custom` یا کچھ اور نہ رکھیں۔
 
-- اپنی پرائیویٹ کلید ایکسپورٹ کرنے کے لیے [ان ہدایات](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) پر عمل کریں
-- HTTP Alchemy API URL حاصل کرنے کے لیے نیچے دیکھیں
+- اپنی نجی کلید برآمد کرنے کے لیے [ان ہدایات](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) پر عمل کریں
+- <span dir="ltr">HTTP Alchemy API URL</span> حاصل کرنے کے لیے نیچے دیکھیں
 
-![Animated walkthrough of getting an Alchemy API key](./get-alchemy-api-key.gif)
+![Animated walkthrough of getting an Alchemy API key](./get-alchemy-api-key.mp4#1280x696)
 
-آپ کا `.env` کچھ اس طرح نظر آنا چاہیے:
+آپ کی `.env` کچھ اس طرح دکھنی چاہیے:
 
 ```
 API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
 PRIVATE_KEY = "your-metamask-private-key"
 ```
 
-انہیں دراصل اپنے کوڈ سے جوڑنے کے لیے، ہم مرحلہ 13 پر اپنی `hardhat.config.js` فائل میں ان متغیرات (variables) کا حوالہ دیں گے۔
+انہیں دراصل اپنے کوڈ سے جوڑنے کے لیے، ہم مرحلہ 13 میں اپنی `hardhat.config.js` فائل میں ان ویری ایبلز کا حوالہ دیں گے۔
 
-### مرحلہ 12: Ethers.js انسٹال کریں {#step-12-install-ethersjs}
+### مرحلہ 12: <span dir="ltr">Ethers.js</span> انسٹال کریں {#step-12-install-ethersjs}
 
-Ethers.js ایک لائبریری ہے جو [معیاری JSON-RPC طریقوں](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) کو زیادہ صارف دوست طریقوں کے ساتھ لپیٹ کر ایتھیریم کے ساتھ بات چیت کرنے اور درخواستیں بھیجنے کو آسان بناتی ہے۔
+<span dir="ltr">Ethers.js</span> ایک لائبریری ہے جو [معیاری <span dir="ltr">JSON-RPC</span> طریقوں](/developers/docs/apis/json-rpc/) کو زیادہ صارف دوست طریقوں کے ساتھ لپیٹ کر ایتھیریم کے ساتھ بات چیت کرنے اور درخواستیں بھیجنے کو آسان بناتی ہے۔
 
-Hardhat ہمیں اضافی ٹولنگ اور توسیعی فعالیت کے لیے [پلگ انز](https://hardhat.org/plugins/) کو مربوط کرنے کی اجازت دیتا ہے۔ ہم کانٹریکٹ کی ڈیپلائمنٹ کے لیے [Ethers پلگ ان](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) کا فائدہ اٹھائیں گے۔
+<span dir="ltr">Hardhat</span> ہمیں اضافی ٹولنگ اور توسیعی فعالیت کے لیے [پلگ انز](https://hardhat.org/plugins/) کو مربوط کرنے کی اجازت دیتا ہے۔ ہم کنٹریکٹ کی تعیناتی کے لیے [<span dir="ltr">Ethers</span> پلگ ان](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) کا فائدہ اٹھائیں گے۔
 
-اپنی پروجیکٹ ڈائرکٹری میں ٹائپ کریں:
+اپنی پروجیکٹ ڈائریکٹری میں ٹائپ کریں:
 
 ```bash
 npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 ```
 
-### مرحلہ 13: hardhat.config.js کو اپ ڈیٹ کریں {#step-13-update-hardhat-configjs}
+### مرحلہ 13: <span dir="ltr">hardhat.config.js</span> کو اپ ڈیٹ کریں {#step-13-update-hardhat-configjs}
 
 ہم نے اب تک کئی انحصار (dependencies) اور پلگ انز شامل کیے ہیں، اب ہمیں `hardhat.config.js` کو اپ ڈیٹ کرنے کی ضرورت ہے تاکہ ہمارے پروجیکٹ کو ان سب کے بارے میں معلوم ہو۔
 
-اپنے `hardhat.config.js` کو اپ ڈیٹ کریں تاکہ یہ اس طرح نظر آئے:
+اپنی `hardhat.config.js` کو اپ ڈیٹ کریں تاکہ یہ اس طرح دکھے:
 
 ```javascript
-/* *
- * @type import('hardhat/config').HardhatUserConfig */
+/**
+ * @type import('hardhat/config').HardhatUserConfig
+ */
 
 require("dotenv").config()
 require("@nomiclabs/hardhat-ethers")
@@ -287,15 +281,15 @@ module.exports = {
     hardhat: {},
     goerli: {
       url: API_URL,
-      accounts: [`0x${PRIVATE_KEY}`],
+      accounts: [`<span dir="ltr">0x</span>${PRIVATE_KEY}`],
     },
   },
 }
 ```
 
-### مرحلہ 14: اپنے کانٹریکٹ کو مرتب (Compile) کریں {#step-14-compile-our-contract}
+### مرحلہ 14: اپنا کنٹریکٹ مرتب (compile) کریں {#step-14-compile-our-contract}
 
-یہ یقینی بنانے کے لیے کہ اب تک سب کچھ کام کر رہا ہے، آئیے اپنے کانٹریکٹ کو مرتب کریں۔ `compile` ٹاسک بلٹ ان hardhat ٹاسکس میں سے ایک ہے۔
+یہ یقینی بنانے کے لیے کہ اب تک سب کچھ کام کر رہا ہے، آئیے اپنے کنٹریکٹ کو مرتب کریں۔ `compile` ٹاسک بلٹ ان <span dir="ltr">Hardhat</span> ٹاسکس میں سے ایک ہے۔
 
 کمانڈ لائن سے چلائیں:
 
@@ -303,11 +297,11 @@ module.exports = {
 npx hardhat compile
 ```
 
-آپ کو `SPDX license identifier not provided in source file` کے بارے میں ایک وارننگ مل سکتی ہے، لیکن اس کے بارے میں فکر کرنے کی ضرورت نہیں ہے — امید ہے کہ باقی سب کچھ ٹھیک لگ رہا ہوگا! اگر نہیں، تو آپ ہمیشہ [Alchemy discord](https://discord.gg/u72VCg3) میں پیغام بھیج سکتے ہیں۔
+آپ کو `SPDX license identifier not provided in source file` کے بارے میں ایک انتباہ مل سکتا ہے، لیکن اس کے بارے میں فکر کرنے کی ضرورت نہیں ہے — امید ہے کہ باقی سب کچھ ٹھیک لگ رہا ہے! اگر نہیں، تو آپ ہمیشہ [<span dir="ltr">Alchemy</span> ڈسکارڈ](https://discord.gg/u72VCg3) میں پیغام بھیج سکتے ہیں۔
 
-### مرحلہ 15: اپنی ڈیپلائے اسکرپٹ لکھیں {#step-15-write-our-deploy-script}
+### مرحلہ 15: اپنی تعیناتی کی سکرپٹ لکھیں {#step-15-write-our-deploy-script}
 
-اب جب کہ ہمارا کانٹریکٹ لکھا جا چکا ہے اور ہماری کنفیگریشن فائل تیار ہے، اب وقت آ گیا ہے کہ ہم اپنی کانٹریکٹ ڈیپلائے اسکرپٹ لکھیں۔
+اب جب کہ ہمارا کنٹریکٹ لکھا جا چکا ہے اور ہماری کنفیگریشن فائل تیار ہے، اب وقت آ گیا ہے کہ ہم اپنے کنٹریکٹ کی تعیناتی کی سکرپٹ لکھیں۔
 
 `scripts/` فولڈر میں جائیں اور `deploy.js` کے نام سے ایک نئی فائل بنائیں، اور اس میں درج ذیل مواد شامل کریں:
 
@@ -315,7 +309,7 @@ npx hardhat compile
 async function main() {
   const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
-  // ڈپلائمنٹ شروع کریں، ایک promise واپس کرتا ہے جو کنٹریکٹ آبجیکٹ پر resolve ہوتا ہے
+  // تعیناتی شروع کریں، ایک promise واپس کر رہا ہے جو ایک کنٹریکٹ آبجیکٹ پر resolve ہوتا ہے
   const hello_world = await HelloWorld.deploy("Hello World!")
   console.log("Contract deployed to address:", hello_world.address)
 }
@@ -328,26 +322,26 @@ main()
   })
 ```
 
-Hardhat اپنے [کانٹریکٹس ٹیوٹوریل](https://hardhat.org/tutorial/testing-contracts.html#writing-tests) میں یہ بتانے کا ایک حیرت انگیز کام کرتا ہے کہ کوڈ کی ان میں سے ہر ایک لائن کیا کرتی ہے، ہم نے یہاں ان کی وضاحتیں اپنائی ہیں۔
+<span dir="ltr">Hardhat</span> اپنے [کنٹریکٹس ٹیوٹوریل](https://hardhat.org/tutorial/testing-contracts.html#writing-tests) میں یہ بتانے کا ایک حیرت انگیز کام کرتا ہے کہ کوڈ کی ان میں سے ہر ایک لائن کیا کرتی ہے، ہم نے ان کی وضاحتوں کو یہاں اپنایا ہے۔
 
 ```javascript
 const HelloWorld = await ethers.getContractFactory("HelloWorld")
 ```
 
-ethers.js میں ایک `ContractFactory` ایک تجرید (abstraction) ہے جو نئے اسمارٹ کانٹریکٹس کو ڈیپلائے کرنے کے لیے استعمال ہوتی ہے، لہذا یہاں `HelloWorld` ہمارے ہیلو ورلڈ کانٹریکٹ کی مثالوں (instances) کے لیے ایک [فیکٹری](<https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)>) ہے۔ `hardhat-ethers` پلگ ان `ContractFactory` اور `Contract` کا استعمال کرتے وقت، مثالیں پہلے سے طے شدہ طور پر پہلے دستخط کنندہ (مالک) سے جڑی ہوتی ہیں۔
+<span dir="ltr">ethers.js</span> میں ایک `ContractFactory` ایک تجرید (abstraction) ہے جو نئے سمارٹ کنٹریکٹس کو تعینات کرنے کے لیے استعمال ہوتی ہے، لہذا یہاں `HelloWorld` ہمارے ہیلو ورلڈ کنٹریکٹ کی مثالوں (instances) کے لیے ایک [فیکٹری](<https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)>) ہے۔ `hardhat-ethers` پلگ ان `ContractFactory` اور `Contract` کا استعمال کرتے وقت، مثالیں پہلے سے طے شدہ طور پر پہلے دستخط کنندہ (مالک) سے جڑی ہوتی ہیں۔
 
 ```javascript
 const hello_world = await HelloWorld.deploy()
 ```
 
-ایک `ContractFactory` پر `deploy()` کو کال کرنے سے ڈیپلائمنٹ شروع ہو جائے گی، اور ایک `Promise` واپس آئے گا جو ایک `Contract` آبجیکٹ میں حل ہوتا ہے۔ یہ وہ آبجیکٹ ہے جس میں ہمارے ہر اسمارٹ کانٹریکٹ فنکشن کے لیے ایک طریقہ (method) موجود ہے۔
+`ContractFactory` پر `deploy()` کو کال کرنے سے تعیناتی شروع ہو جائے گی، اور ایک `Promise` واپس آئے گا جو ایک `Contract` آبجیکٹ میں حل ہوتا ہے۔ یہ وہ آبجیکٹ ہے جس میں ہمارے ہر سمارٹ کنٹریکٹ فنکشن کے لیے ایک طریقہ (method) موجود ہے۔
 
-### مرحلہ 16: اپنا کانٹریکٹ ڈیپلائے کریں {#step-16-deploy-our-contract}
+### مرحلہ 16: اپنا کنٹریکٹ تعینات کریں
 
-ہم آخر کار اپنا اسمارٹ کانٹریکٹ ڈیپلائے کرنے کے لیے تیار ہیں! کمانڈ لائن پر جائیں اور چلائیں:
+ہم بالآخر اپنا سمارٹ کنٹریکٹ تعینات کرنے کے لیے تیار ہیں! کمانڈ لائن پر جائیں اور چلائیں:
 
 ```bash
-npx hardhat run scripts/deploy.js --network goerli
+npx hardhat run scripts/deploy.js --network sepolia
 ```
 
 اس کے بعد آپ کو کچھ اس طرح نظر آنا چاہیے:
@@ -356,33 +350,32 @@ npx hardhat run scripts/deploy.js --network goerli
 Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 ```
 
-**براہ کرم اس ایڈریس کو محفوظ کر لیں**۔ ہم اسے بعد میں ٹیوٹوریل میں استعمال کریں گے۔
+**براہ کرم اس پتے کو محفوظ کر لیں**۔ ہم اسے ٹیوٹوریل میں بعد میں استعمال کریں گے۔
 
-اگر ہم [Goerli etherscan](https://goerli.etherscan.io) پر جائیں اور اپنے کانٹریکٹ ایڈریس کو تلاش کریں تو ہمیں یہ دیکھنے کے قابل ہونا چاہیے کہ اسے کامیابی کے ساتھ ڈیپلائے کر دیا گیا ہے۔ ٹرانزیکشن کچھ اس طرح نظر آئے گی:
+اگر ہم [<span dir="ltr">Sepolia Etherscan</span>](https://sepolia.etherscan.io) پر جائیں اور اپنے کنٹریکٹ کا پتہ تلاش کریں تو ہمیں یہ نظر آنا چاہیے کہ اسے کامیابی کے ساتھ تعینات کر دیا گیا ہے۔ ٹرانزیکشن کچھ اس طرح نظر آئے گی:
 
 ![](./etherscan-contract.png)
 
-`From` ایڈریس آپ کے MetaMask اکاؤنٹ ایڈریس سے مماثل ہونا چاہیے اور `To` ایڈریس میں **Contract Creation** لکھا ہوگا۔ اگر ہم ٹرانزیکشن پر کلک کریں گے تو ہمیں `To` فیلڈ میں اپنا کانٹریکٹ ایڈریس نظر آئے گا۔
+`From` کا پتہ آپ کے میٹاماسک اکاؤنٹ کے پتے سے مماثل ہونا چاہیے اور `To` کے پتے میں **<span dir="ltr">Contract Creation</span>** لکھا ہوگا۔ اگر ہم ٹرانزیکشن پر کلک کریں تو ہمیں `To` فیلڈ میں اپنے کنٹریکٹ کا پتہ نظر آئے گا۔
 
 ![](./etherscan-transaction.png)
 
-مبارک ہو! آپ نے ابھی ایک ایتھیریم ٹیسٹ نیٹ پر ایک اسمارٹ کانٹریکٹ ڈیپلائے کیا ہے۔
+مبارک ہو! آپ نے ابھی ایک ایتھیریم آزمائشی نیٹ ورک پر ایک سمارٹ کنٹریکٹ تعینات کیا ہے۔
 
-یہ سمجھنے کے لیے کہ پس منظر میں کیا ہو رہا ہے، آئیے اپنے [Alchemy ڈیش بورڈ](https://dashboard.alchemy.com/explorer) میں Explorer ٹیب پر جائیں۔ اگر آپ کے پاس متعدد Alchemy ایپس ہیں تو یقینی بنائیں کہ ایپ کے لحاظ سے فلٹر کریں اور **Hello World** کو منتخب کریں۔
+یہ سمجھنے کے لیے کہ اندرونی طور پر کیا ہو رہا ہے، آئیے اپنے [<span dir="ltr">Alchemy</span> ڈیش بورڈ](https://dashboard.alchemy.com/explorer) میں <span dir="ltr">Explorer</span> ٹیب پر چلتے ہیں۔ اگر آپ کے پاس متعدد <span dir="ltr">Alchemy</span> ایپس ہیں تو یقینی بنائیں کہ ایپ کے لحاظ سے فلٹر کریں اور **<span dir="ltr">Hello World</span>** کو منتخب کریں۔
 
 ![](./hello-world-explorer.png)
 
-یہاں آپ کو مٹھی بھر JSON-RPC طریقے نظر آئیں گے جو Hardhat/Ethers نے ہمارے لیے پس منظر میں بنائے تھے جب ہم نے `.deploy()` فنکشن کو کال کیا تھا۔ یہاں دو اہم طریقے [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) ہیں، جو ہمارے کانٹریکٹ کو Goerli چین پر لکھنے کی درخواست ہے، اور [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash) ہے، جو ہیش دیے جانے پر ہماری ٹرانزیکشن کے بارے میں معلومات پڑھنے کی درخواست ہے۔ ٹرانزیکشنز بھیجنے کے بارے میں مزید جاننے کے لیے، [Web3 کا استعمال کرتے ہوئے ٹرانزیکشنز بھیجنے پر ہمارا ٹیوٹوریل](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) دیکھیں۔
+یہاں آپ کو چند <span dir="ltr">JSON-RPC</span> طریقے نظر آئیں گے جو <span dir="ltr">Hardhat/Ethers</span> نے ہمارے لیے اندرونی طور پر بنائے جب ہم نے `.deploy()` فنکشن کو کال کیا۔ یہاں دو اہم طریقے [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction) ہیں، جو ہمارے کنٹریکٹ کو <span dir="ltr">Sepolia</span> چین پر لکھنے کی درخواست ہے، اور [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash) ہے، جو ہیش دیے جانے پر ہماری ٹرانزیکشن کے بارے میں معلومات پڑھنے کی درخواست ہے۔ ٹرانزیکشنز بھیجنے کے بارے میں مزید جاننے کے لیے، <span dir="ltr">Web3</span> کا استعمال کرتے ہوئے ٹرانزیکشنز بھیجنے پر [ہمارا ٹیوٹوریل](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) دیکھیں۔
+## حصہ 2: اپنے سمارٹ کنٹریکٹ کے ساتھ تعامل کریں {#part-2-interact-with-your-smart-contract}
 
-## حصہ 2: اپنے اسمارٹ کانٹریکٹ کے ساتھ تعامل کریں {#part-2-interact-with-your-smart-contract}
+اب چونکہ ہم نے کامیابی کے ساتھ گورلی نیٹ ورک پر ایک سمارٹ کنٹریکٹ تعینات کر دیا ہے، تو آئیے سیکھتے ہیں کہ اس کے ساتھ کیسے تعامل کیا جائے۔
 
-اب جب کہ ہم نے کامیابی کے ساتھ Goerli نیٹ ورک پر ایک اسمارٹ کانٹریکٹ ڈیپلائے کر لیا ہے، تو آئیے سیکھتے ہیں کہ اس کے ساتھ کیسے تعامل (interact) کیا جائے۔
+### ایک <span dir="ltr">interact.js</span> فائل بنائیں {#create-a-interactjs-file}
 
-### ایک interact.js فائل بنائیں {#create-a-interactjs-file}
+یہ وہ فائل ہے جہاں ہم اپنا تعامل کا اسکرپٹ لکھیں گے۔ ہم <span dir="ltr">Ethers.js</span> لائبریری استعمال کریں گے جسے آپ نے پہلے حصہ 1 میں انسٹال کیا تھا۔
 
-یہ وہ فائل ہے جہاں ہم اپنی interaction اسکرپٹ لکھیں گے۔ ہم Ethers.js لائبریری استعمال کریں گے جسے آپ نے پہلے حصہ 1 میں انسٹال کیا تھا۔
-
-اپنے `scripts/` فولڈر کے اندر، `interact.js` کے نام سے ایک نئی فائل بنائیں اور درج ذیل کوڈ شامل کریں:
+`scripts/` فولڈر کے اندر، `interact.js` کے نام سے ایک نئی فائل بنائیں اور درج ذیل کوڈ شامل کریں:
 
 ```javascript
 // interact.js
@@ -392,11 +385,11 @@ const PRIVATE_KEY = process.env.PRIVATE_KEY
 const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS
 ```
 
-### اپنی .env فائل کو اپ ڈیٹ کریں {#update-your-env-file}
+### اپنی <span dir="ltr">.env</span> فائل کو اپ ڈیٹ کریں {#update-your-env-file}
 
-ہم نئے انوائرنمنٹ ویری ایبلز (environment variables) استعمال کریں گے، اس لیے ہمیں انہیں اس `.env` فائل میں ڈیفائن کرنے کی ضرورت ہے جو [ہم نے پہلے بنائی تھی](#step-11-connect-metamask-&-alchemy-to-your-project)۔
+ہم نئے انوائرنمنٹ ویری ایبلز استعمال کریں گے، اس لیے ہمیں انہیں اس `.env` فائل میں متعین کرنے کی ضرورت ہے جو [ہم نے پہلے بنائی تھی](#step-11-connect-metamask-alchemy-to-your-project)۔
 
-ہمیں اپنی Alchemy کی `API_KEY` اور اس `CONTRACT_ADDRESS` کے لیے ایک ڈیفینیشن شامل کرنے کی ضرورت ہوگی جہاں آپ کا اسمارٹ کانٹریکٹ ڈیپلائے کیا گیا تھا۔
+ہمیں اپنی Alchemy `API_KEY` اور اس `CONTRACT_ADDRESS` کے لیے ایک تعریف شامل کرنے کی ضرورت ہوگی جہاں آپ کا سمارٹ کنٹریکٹ تعینات کیا گیا تھا۔
 
 آپ کی `.env` فائل کچھ اس طرح دکھنی چاہیے:
 
@@ -409,9 +402,9 @@ PRIVATE_KEY = "<your-metamask-private-key>"
 CONTRACT_ADDRESS = "0x<your contract address>"
 ```
 
-### اپنے کانٹریکٹ کا ABI حاصل کریں {#grab-your-contract-ABI}
+### اپنے کنٹریکٹ کا ABI حاصل کریں {#grab-your-contract-abi}
 
-ہمارا کانٹریکٹ [ABI (Application Binary Interface)](/glossary/#abi) ہمارے اسمارٹ کانٹریکٹ کے ساتھ تعامل کرنے کا انٹرفیس ہے۔ Hardhat خود بخود ایک ABI تیار کرتا ہے اور اسے `HelloWorld.json` میں محفوظ کرتا ہے۔ ABI کو استعمال کرنے کے لیے، ہمیں اپنی `interact.js` فائل میں کوڈ کی درج ذیل لائنیں شامل کر کے اس کے مواد کو پارس (parse) کرنا ہوگا:
+ہمارے کنٹریکٹ کا [ABI (Application Binary Interface)](/glossary/#abi) ہمارے سمارٹ کنٹریکٹ کے ساتھ تعامل کرنے کا انٹرفیس ہے۔ Hardhat خود بخود ایک ABI تیار کرتا ہے اور اسے `HelloWorld.json` میں محفوظ کرتا ہے۔ ABI استعمال کرنے کے لیے، ہمیں اپنی `interact.js` فائل میں کوڈ کی درج ذیل لائنیں شامل کر کے مواد کو پارس کرنے کی ضرورت ہوگی:
 
 ```javascript
 // interact.js
@@ -424,35 +417,35 @@ const contract = require("../artifacts/contracts/HelloWorld.sol/HelloWorld.json"
 console.log(JSON.stringify(contract.abi))
 ```
 
-اپنے ABI کو کنسول پر پرنٹ ہوتا دیکھنے کے لیے، اپنے ٹرمینل پر جائیں اور رن کریں:
+اپنے ABI کو کنسول پر پرنٹ ہوتا دیکھنے کے لیے، اپنے ٹرمینل پر جائیں اور چلائیں:
 
 ```bash
 npx hardhat run scripts/interact.js
 ```
 
-### اپنے کانٹریکٹ کا ایک instance بنائیں {#create-an-instance-of-your-contract}
+### اپنے کنٹریکٹ کی ایک مثال (instance) بنائیں {#create-an-instance-of-your-contract}
 
-اپنے کانٹریکٹ کے ساتھ تعامل کرنے کے لیے، ہمیں اپنے کوڈ میں ایک کانٹریکٹ instance بنانے کی ضرورت ہے۔ Ethers.js کے ساتھ ایسا کرنے کے لیے، ہمیں تین تصورات کے ساتھ کام کرنا ہوگا:
+اپنے کنٹریکٹ کے ساتھ تعامل کرنے کے لیے، ہمیں اپنے کوڈ میں ایک کنٹریکٹ کی مثال بنانے کی ضرورت ہے۔ <span dir="ltr">Ethers.js</span> کے ساتھ ایسا کرنے کے لیے، ہمیں تین تصورات کے ساتھ کام کرنے کی ضرورت ہوگی:
 
-1. Provider - ایک نوڈ پرووائیڈر جو آپ کو بلاک چین تک پڑھنے اور لکھنے (read and write) کی رسائی دیتا ہے
-2. Signer - ایک Ethereum اکاؤنٹ کی نمائندگی کرتا ہے جو ٹرانزیکشنز پر دستخط کر سکتا ہے
-3. Contract - ایک Ethers.js آبجیکٹ جو آن چین ڈیپلائے کیے گئے کسی مخصوص کانٹریکٹ کی نمائندگی کرتا ہے
+1. پرووائیڈر (پرووائیڈر) - ایک نوڈ پرووائیڈر جو آپ کو بلاک چین تک پڑھنے اور لکھنے کی رسائی دیتا ہے
+2. سائنر (سائنر) - ایک ایتھیریم اکاؤنٹ کی نمائندگی کرتا ہے جو ٹرانزیکشنز پر دستخط کر سکتا ہے
+3. کنٹریکٹ (Contract) - ایک <span dir="ltr">Ethers.js</span> آبجیکٹ جو آن چین تعینات کردہ ایک مخصوص کنٹریکٹ کی نمائندگی کرتا ہے
 
-ہم کانٹریکٹ کا instance بنانے کے لیے پچھلے مرحلے سے کانٹریکٹ ABI کا استعمال کریں گے:
+ہم کنٹریکٹ کی مثال بنانے کے لیے پچھلے مرحلے سے کنٹریکٹ ABI کا استعمال کریں گے:
 
 ```javascript
 // interact.js
 
-// پرووائیڈر
+// Provider
 const alchemyProvider = new ethers.providers.AlchemyProvider(
   (network = "goerli"),
   API_KEY
 )
 
-// سائنر
+// Signer
 const signer = new ethers.Wallet(PRIVATE_KEY, alchemyProvider)
 
-// کنٹریکٹ
+// Contract
 const helloWorldContract = new ethers.Contract(
   CONTRACT_ADDRESS,
   contract.abi,
@@ -460,15 +453,15 @@ const helloWorldContract = new ethers.Contract(
 )
 ```
 
-Providers، Signers، اور Contracts کے بارے میں مزید جاننے کے لیے [ethers.js کی دستاویزات](https://docs.ethers.io/v5/) دیکھیں۔
+پرووائیڈرز، سائنرز، اور کنٹریکٹس کے بارے میں مزید جانیں [<span dir="ltr">ethers.js</span> کی دستاویزات](https://docs.ethers.io/v5/) میں۔
 
-### init میسج پڑھیں {#read-the-init-message}
+### ابتدائی پیغام (init message) پڑھیں {#read-the-init-message}
 
-یاد ہے جب ہم نے اپنا کانٹریکٹ `initMessage = "Hello world!"` کے ساتھ ڈیپلائے کیا تھا؟ اب ہم اپنے اسمارٹ کانٹریکٹ میں محفوظ اس میسج کو پڑھنے اور اسے کنسول پر پرنٹ کرنے جا رہے ہیں۔
+یاد ہے جب ہم نے اپنا کنٹریکٹ `initMessage = "Hello world!"` کے ساتھ تعینات کیا تھا؟ اب ہم اپنے سمارٹ کنٹریکٹ میں محفوظ اس پیغام کو پڑھنے اور اسے کنسول پر پرنٹ کرنے جا رہے ہیں۔
 
-JavaScript میں، نیٹ ورکس کے ساتھ تعامل کرتے وقت asynchronous فنکشنز استعمال کیے جاتے ہیں۔ asynchronous فنکشنز کے بارے میں مزید جاننے کے لیے، [یہ میڈیم آرٹیکل پڑھیں](https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff)۔
+جاوا اسکرپٹ میں، نیٹ ورکس کے ساتھ تعامل کرتے وقت غیر مطابقت پذیر (asynchronous) فنکشنز استعمال ہوتے ہیں۔ غیر مطابقت پذیر فنکشنز کے بارے میں مزید جاننے کے لیے، [یہ میڈیم (Medium) آرٹیکل پڑھیں](https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff)۔
 
-ہمارے اسمارٹ کانٹریکٹ میں `message` فنکشن کو کال کرنے اور init میسج پڑھنے کے لیے نیچے دیا گیا کوڈ استعمال کریں:
+ہمارے سمارٹ کنٹریکٹ میں `message` فنکشن کو کال کرنے اور ابتدائی پیغام پڑھنے کے لیے نیچے دیا گیا کوڈ استعمال کریں:
 
 ```javascript
 // interact.js
@@ -482,19 +475,19 @@ async function main() {
 main()
 ```
 
-ٹرمینل میں `npx hardhat run scripts/interact.js` کا استعمال کرتے ہوئے فائل کو رن کرنے کے بعد ہمیں یہ جواب نظر آنا چاہیے:
+ٹرمینل میں `npx hardhat run scripts/interact.js` کا استعمال کرتے ہوئے فائل کو چلانے کے بعد ہمیں یہ جواب دیکھنا چاہیے:
 
 ```
 The message is: Hello world!
 ```
 
-مبارک ہو! آپ نے ابھی کامیابی کے ساتھ Ethereum بلاک چین سے اسمارٹ کانٹریکٹ کا ڈیٹا پڑھ لیا ہے، بہت خوب!
+مبارک ہو! آپ نے ابھی کامیابی کے ساتھ ایتھیریم بلاک چین سے سمارٹ کنٹریکٹ کا ڈیٹا پڑھ لیا ہے، بہت خوب!
 
-### میسج کو اپ ڈیٹ کریں {#update-the-message}
+### پیغام کو اپ ڈیٹ کریں {#update-the-message}
 
-صرف میسج پڑھنے کے بجائے، ہم `update` فنکشن کا استعمال کرتے ہوئے اپنے اسمارٹ کانٹریکٹ میں محفوظ کردہ میسج کو اپ ڈیٹ بھی کر سکتے ہیں! ہے نا زبردست؟
+صرف پیغام پڑھنے کے بجائے، ہم `update` فنکشن کا استعمال کرتے ہوئے اپنے سمارٹ کنٹریکٹ میں محفوظ کردہ پیغام کو اپ ڈیٹ بھی کر سکتے ہیں! ہے نا زبردست؟
 
-میسج کو اپ ڈیٹ کرنے کے لیے، ہم براہ راست اپنے instantiated Contract آبجیکٹ پر `update` فنکشن کو کال کر سکتے ہیں:
+پیغام کو اپ ڈیٹ کرنے کے لیے، ہم براہ راست اپنے بنائے گئے کنٹریکٹ آبجیکٹ پر `update` فنکشن کو کال کر سکتے ہیں:
 
 ```javascript
 // interact.js
@@ -512,11 +505,11 @@ async function main() {
 main()
 ```
 
-نوٹ کریں کہ لائن 11 پر، ہم واپس کیے گئے ٹرانزیکشن آبجیکٹ پر `.wait()` کو کال کرتے ہیں۔ یہ اس بات کو یقینی بناتا ہے کہ ہماری اسکرپٹ فنکشن سے باہر نکلنے سے پہلے بلاک چین پر ٹرانزیکشن کے مائن ہونے کا انتظار کرے۔ اگر `.wait()` کال شامل نہیں کی گئی ہے، تو ہو سکتا ہے کہ اسکرپٹ کو کانٹریکٹ میں اپ ڈیٹ شدہ `message` کی ویلیو نظر نہ آئے۔
+نوٹ کریں کہ لائن 11 پر، ہم واپس کیے گئے ٹرانزیکشن آبجیکٹ پر `.wait()` کو کال کرتے ہیں۔ یہ اس بات کو یقینی بناتا ہے کہ ہمارا اسکرپٹ فنکشن سے باہر نکلنے سے پہلے بلاک چین پر ٹرانزیکشن کے مائن ہونے کا انتظار کرے۔ اگر `.wait()` کال شامل نہیں کی گئی ہے، تو ہو سکتا ہے کہ اسکرپٹ کو کنٹریکٹ میں اپ ڈیٹ شدہ `message` ویلیو نظر نہ آئے۔
 
-### نیا میسج پڑھیں {#read-the-new-message}
+### نیا پیغام پڑھیں
 
-اپ ڈیٹ شدہ `message` کی ویلیو کو پڑھنے کے لیے آپ کو [پچھلے مرحلے](#read-the-init-message) کو دہرانے کے قابل ہونا چاہیے۔ ایک لمحہ نکالیں اور دیکھیں کہ کیا آپ اس نئی ویلیو کو پرنٹ کرنے کے لیے ضروری تبدیلیاں کر سکتے ہیں!
+آپ اپ ڈیٹ شدہ `message` کی قدر پڑھنے کے لیے [پچھلے مرحلے](#read-the-init-message) کو دہرانے کے قابل ہونے چاہئیں۔ تھوڑا وقت نکالیں اور دیکھیں کہ کیا آپ اس نئی قدر کو پرنٹ کرنے کے لیے ضروری تبدیلیاں کر سکتے ہیں!
 
 اگر آپ کو اشارے کی ضرورت ہے، تو یہاں بتایا گیا ہے کہ اس مقام پر آپ کی `interact.js` فائل کیسی دکھنی چاہیے:
 
@@ -531,14 +524,14 @@ const contract = require("../artifacts/contracts/HelloWorld.sol/HelloWorld.json"
 
 // پرووائیڈر - Alchemy
 const alchemyProvider = new ethers.providers.AlchemyProvider(
-  (network = "goerli"),
+  (network = "sepolia"),
   API_KEY
 )
 
 // سائنر - آپ
 const signer = new ethers.Wallet(PRIVATE_KEY, alchemyProvider)
 
-// کنٹریکٹ انسٹینس
+// کنٹریکٹ کی مثال (instance)
 const helloWorldContract = new ethers.Contract(
   CONTRACT_ADDRESS,
   contract.abi,
@@ -560,9 +553,9 @@ async function main() {
 main()
 ```
 
-اب بس اسکرپٹ کو رن کریں اور آپ کو پرانا میسج، اپ ڈیٹ ہونے کا اسٹیٹس، اور نیا میسج اپنے ٹرمینل پر پرنٹ ہوتا نظر آنا چاہیے!
+اب بس اسکرپٹ چلائیں اور آپ کو پرانا پیغام، اپ ڈیٹ ہونے کی حالت، اور نیا پیغام اپنے ٹرمینل پر پرنٹ ہوتا نظر آنا چاہیے!
 
-`npx hardhat run scripts/interact.js --network goerli`
+`npx hardhat run scripts/interact.js --network sepolia`
 
 ```
 The message is: Hello World!
@@ -570,27 +563,26 @@ Updating the message...
 The new message is: This is the new message.
 ```
 
-اس اسکرپٹ کو رن کرتے وقت، آپ محسوس کر سکتے ہیں کہ نیا میسج لوڈ ہونے سے پہلے `Updating the message...` کا مرحلہ لوڈ ہونے میں کچھ وقت لیتا ہے۔ یہ مائننگ کے عمل کی وجہ سے ہے؛ اگر آپ ٹرانزیکشنز کے مائن ہونے کے دوران انہیں ٹریک کرنے کے بارے میں متجسس ہیں، تو ٹرانزیکشن کا اسٹیٹس دیکھنے کے لیے [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) پر جائیں۔ اگر ٹرانزیکشن ڈراپ ہو جاتی ہے، تو [Goerli Etherscan](https://goerli.etherscan.io) کو چیک کرنا اور اپنے ٹرانزیکشن ہیش کو تلاش کرنا بھی مددگار ثابت ہوتا ہے۔
+اس اسکرپٹ کو چلاتے وقت، آپ محسوس کر سکتے ہیں کہ نیا پیغام لوڈ ہونے سے پہلے `Updating the message...` کے مرحلے کو لوڈ ہونے میں کچھ وقت لگتا ہے۔ یہ مائننگ کے عمل کی وجہ سے ہے؛ اگر آپ ٹرانزیکشنز کے مائن ہونے کے دوران انہیں ٹریک کرنے کے بارے میں متجسس ہیں، تو ٹرانزیکشن کی حالت دیکھنے کے لیے [<span dir="ltr">Alchemy mempool</span>](https://dashboard.alchemy.com/mempool) دیکھیں۔ اگر ٹرانزیکشن ڈراپ ہو جاتی ہے، تو [<span dir="ltr">Sepolia Etherscan</span>](https://sepolia.etherscan.io) چیک کرنا اور اپنے ٹرانزیکشن ہیش کو تلاش کرنا بھی مددگار ثابت ہوتا ہے۔
+## حصہ 3: اپنے سمارٹ کنٹریکٹ کو Etherscan پر شائع کریں {#part-3-publish-your-smart-contract-to-etherscan}
 
-## حصہ 3: اپنے اسمارٹ کانٹریکٹ کو Etherscan پر شائع کریں {#part-3-publish-your-smart-contract-to-etherscan}
+آپ نے اپنے سمارٹ کنٹریکٹ کو حقیقت کا روپ دینے کے لیے تمام محنت کر لی ہے؛ اب اسے دنیا کے ساتھ شیئر کرنے کا وقت آ گیا ہے!
 
-آپ نے اپنے اسمارٹ کانٹریکٹ کو حقیقت کا روپ دینے کے لیے تمام تر محنت کر لی ہے؛ اب وقت آ گیا ہے کہ اسے دنیا کے ساتھ شیئر کریں!
+Etherscan پر اپنے سمارٹ کنٹریکٹ کی تصدیق کر کے، کوئی بھی آپ کا سورس کوڈ دیکھ سکتا ہے اور آپ کے سمارٹ کنٹریکٹ کے ساتھ تعامل کر سکتا ہے۔ آئیے شروع کرتے ہیں!
 
-Etherscan پر اپنے اسمارٹ کانٹریکٹ کی تصدیق کر کے، کوئی بھی آپ کا سورس کوڈ دیکھ سکتا ہے اور آپ کے اسمارٹ کانٹریکٹ کے ساتھ تعامل (interact) کر سکتا ہے۔ آئیے شروع کرتے ہیں!
+### مرحلہ 1: اپنے Etherscan اکاؤنٹ پر ایک API کلید تیار کریں {#step-1-generate-an-api-key-on-your-etherscan-account}
 
-### مرحلہ 1: اپنے Etherscan اکاؤنٹ پر ایک API Key بنائیں {#step-1-generate-an-api-key-on-your-etherscan-account}
-
-یہ تصدیق کرنے کے لیے کہ آپ اس اسمارٹ کانٹریکٹ کے مالک ہیں جسے آپ شائع کرنے کی کوشش کر رہے ہیں، ایک Etherscan API Key کا ہونا ضروری ہے۔
+یہ تصدیق کرنے کے لیے کہ آپ اس سمارٹ کنٹریکٹ کے مالک ہیں جسے آپ شائع کرنے کی کوشش کر رہے ہیں، ایک Etherscan API کلید ضروری ہے۔
 
 اگر آپ کے پاس پہلے سے Etherscan اکاؤنٹ نہیں ہے، تو [اکاؤنٹ کے لیے سائن اپ کریں](https://etherscan.io/register)۔
 
-لاگ ان ہونے کے بعد، نیویگیشن بار میں اپنا یوزر نیم تلاش کریں، اس پر ہوور (hover) کریں اور **My profile** بٹن کو منتخب کریں۔
+لاگ ان ہونے کے بعد، نیویگیشن بار میں اپنا صارف نام تلاش کریں، اس پر ہوور کریں اور **<span dir="ltr">My profile</span>** بٹن کو منتخب کریں۔
 
-اپنے پروفائل پیج پر، آپ کو ایک سائیڈ نیویگیشن بار نظر آئے گا۔ سائیڈ نیویگیشن بار سے، **API Keys** کو منتخب کریں۔ اس کے بعد، ایک نئی API key بنانے کے لیے "Add" بٹن دبائیں، اپنی ایپ کا نام **hello-world** رکھیں اور **Create New API Key** بٹن دبائیں۔
+اپنے پروفائل صفحہ پر، آپ کو ایک سائیڈ نیویگیشن بار نظر آنا چاہیے۔ سائیڈ نیویگیشن بار سے، **<span dir="ltr">API Keys</span>** کو منتخب کریں۔ اس کے بعد، ایک نئی API کلید بنانے کے لیے "<span dir="ltr">Add</span>" بٹن دبائیں، اپنی ایپ کا نام **<span dir="ltr">hello-world</span>** رکھیں اور **<span dir="ltr">Create New API Key</span>** بٹن دبائیں۔
 
-آپ کی نئی API key کو API key ٹیبل میں ظاہر ہونا چاہیے۔ API key کو اپنے کلپ بورڈ پر کاپی کریں۔
+آپ کی نئی API کلید کو API کلید کے ٹیبل میں ظاہر ہونا چاہیے۔ API کلید کو اپنے کلپ بورڈ پر کاپی کریں۔
 
-اس کے بعد، ہمیں Etherscan API key کو اپنی `.env` فائل میں شامل کرنے کی ضرورت ہے۔
+اس کے بعد، ہمیں Etherscan API کلید کو اپنی `.env` فائل میں شامل کرنے کی ضرورت ہے۔
 
 اسے شامل کرنے کے بعد، آپ کی `.env` فائل کچھ اس طرح دکھنی چاہیے:
 
@@ -602,17 +594,17 @@ CONTRACT_ADDRESS = "your-contract-address"
 ETHERSCAN_API_KEY = "your-etherscan-key"
 ```
 
-### Hardhat کے ذریعے ڈیپلائے کیے گئے اسمارٹ کانٹریکٹس {#hardhat-deployed-smart-contracts}
+### Hardhat کے ذریعے تعینات کردہ سمارٹ کنٹریکٹس {#hardhat-deployed-smart-contracts}
 
-#### hardhat-etherscan انسٹال کریں {#install-hardhat-etherscan}
+#### <span dir="ltr">hardhat-etherscan</span> انسٹال کریں {#install-hardhat-etherscan}
 
-Hardhat کا استعمال کرتے ہوئے اپنے کانٹریکٹ کو Etherscan پر شائع کرنا سیدھا اور آسان ہے۔ شروع کرنے کے لیے آپ کو سب سے پہلے `hardhat-etherscan` پلگ ان انسٹال کرنے کی ضرورت ہوگی۔ `hardhat-etherscan` خود بخود Etherscan پر اسمارٹ کانٹریکٹ کے سورس کوڈ اور ABI کی تصدیق کر دے گا۔ اسے شامل کرنے کے لیے، `hello-world` ڈائریکٹری میں رن کریں:
+Hardhat کا استعمال کرتے ہوئے اپنے کنٹریکٹ کو Etherscan پر شائع کرنا سیدھا اور آسان ہے۔ شروع کرنے کے لیے آپ کو سب سے پہلے `hardhat-etherscan` پلگ ان انسٹال کرنے کی ضرورت ہوگی۔ `hardhat-etherscan` خود بخود Etherscan پر سمارٹ کنٹریکٹ کے سورس کوڈ اور <span dir="ltr">ABI</span> کی تصدیق کر دے گا۔ اسے شامل کرنے کے لیے، `hello-world` ڈائرکٹری میں چلائیں:
 
 ```text
 npm install --save-dev @nomiclabs/hardhat-etherscan
 ```
 
-ایک بار انسٹال ہونے کے بعد، اپنی `hardhat.config.js` کے اوپری حصے میں درج ذیل اسٹیٹمنٹ شامل کریں، اور Etherscan کنفیگریشن کے اختیارات شامل کریں:
+ایک بار انسٹال ہونے کے بعد، اپنی `hardhat.config.js` کے اوپری حصے میں درج ذیل بیان شامل کریں، اور Etherscan کنفیگریشن کے اختیارات شامل کریں:
 
 ```javascript
 // hardhat.config.js
@@ -630,28 +622,28 @@ module.exports = {
     hardhat: {},
     goerli: {
       url: API_URL,
-      accounts: [`0x${PRIVATE_KEY}`],
+      accounts: [`<span dir="ltr">0x</span>${PRIVATE_KEY}`],
     },
   },
   etherscan: {
     // Etherscan کے لیے آپ کی API کلید
-    // https://etherscan.io/ سے ایک حاصل کریں
+    // اسے https://etherscan.io/ سے حاصل کریں
     apiKey: ETHERSCAN_API_KEY,
   },
 }
 ```
 
-#### Etherscan پر اپنے اسمارٹ کانٹریکٹ کی تصدیق کریں {#verify-your-smart-contract-on-etherscan}
+#### Etherscan پر اپنے سمارٹ کنٹریکٹ کی تصدیق کریں
 
-یقینی بنائیں کہ تمام فائلیں محفوظ (save) ہو چکی ہیں اور تمام `.env` ویری ایبلز درست طریقے سے کنفیگر کیے گئے ہیں۔
+یقینی بنائیں کہ تمام فائلیں محفوظ ہیں اور تمام `.env` متغیرات درست طریقے سے کنفیگر کیے گئے ہیں۔
 
-کانٹریکٹ کا ایڈریس، اور وہ نیٹ ورک جہاں اسے ڈیپلائے کیا گیا ہے، پاس کرتے ہوئے `verify` ٹاسک رن کریں:
+کنٹریکٹ کا پتہ اور وہ نیٹ ورک جہاں اسے تعینات کیا گیا ہے، پاس کرتے ہوئے `verify` ٹاسک چلائیں:
 
 ```text
-npx hardhat verify --network goerli DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
+npx hardhat verify --network sepolia DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
 ```
 
-یقینی بنائیں کہ `DEPLOYED_CONTRACT_ADDRESS` Goerli ٹیسٹ نیٹ ورک پر آپ کے ڈیپلائے کیے گئے اسمارٹ کانٹریکٹ کا ایڈریس ہے۔ اس کے علاوہ، آخری آرگومنٹ (`'Hello World!'`) وہی اسٹرنگ ویلیو ہونی چاہیے جو [حصہ 1 میں ڈیپلائے کے مرحلے کے دوران](#write-our-deploy-script) استعمال کی گئی تھی۔
+یقینی بنائیں کہ `DEPLOYED_CONTRACT_ADDRESS` Sepolia آزمائشی نیٹ ورک پر آپ کے تعینات کردہ سمارٹ کنٹریکٹ کا پتہ ہے۔ اس کے علاوہ، آخری آرگومنٹ (`'Hello World!'`) وہی سٹرنگ ویلیو ہونی چاہیے جو [حصہ 1 میں تعیناتی کے مرحلے کے دوران](#step-15-write-our-deploy-script) استعمال کی گئی تھی۔
 
 اگر سب کچھ ٹھیک رہا، تو آپ کو اپنے ٹرمینل میں درج ذیل پیغام نظر آئے گا:
 
@@ -662,51 +654,50 @@ for verification on Etherscan. Waiting for verification result...
 
 
 Successfully verified contract HelloWorld on Etherscan.
-https: // goerli.etherscan.io/address/<contract-address>#contracts
+https://sepolia.etherscan.io/address/<contract-address>#contracts
 ```
 
-مبارک ہو! آپ کے اسمارٹ کانٹریکٹ کا کوڈ Etherscan پر موجود ہے!
+مبارک ہو! آپ کے سمارٹ کنٹریکٹ کا کوڈ Etherscan پر موجود ہے!
+### Etherscan پر اپنا سمارٹ کنٹریکٹ دیکھیں! {#check-out-your-smart-contract-on-etherscan}
 
-### Etherscan پر اپنا اسمارٹ کانٹریکٹ دیکھیں! {#check-out-your-smart-contract-on-etherscan}
+جب آپ اپنے ٹرمینل میں فراہم کردہ لنک پر جاتے ہیں، تو آپ کو Etherscan پر شائع شدہ اپنا سمارٹ کنٹریکٹ کوڈ اور <span dir="ltr">ABI</span> نظر آنا چاہیے!
 
-جب آپ اپنے ٹرمینل میں فراہم کردہ لنک پر جائیں گے، تو آپ کو Etherscan پر شائع شدہ اپنا اسمارٹ کانٹریکٹ کوڈ اور ABI نظر آنا چاہیے!
+**واہ - آپ نے کر دکھایا چیمپ! اب کوئی بھی آپ کے سمارٹ کنٹریکٹ کو کال کر سکتا ہے یا اس میں لکھ سکتا ہے! ہم یہ دیکھنے کے لیے بے تاب ہیں کہ آپ آگے کیا بناتے ہیں!**
 
-**واہ - آپ نے کمال کر دیا چیمپ! اب کوئی بھی آپ کے اسمارٹ کانٹریکٹ کو کال کر سکتا ہے یا اس میں لکھ سکتا ہے! ہم یہ دیکھنے کے لیے بے تاب ہیں کہ آپ آگے کیا بناتے ہیں!**
-
-## حصہ 4 - اپنے اسمارٹ کانٹریکٹ کو فرنٹ اینڈ کے ساتھ مربوط کرنا {#part-4-integrating-your-smart-contract-with-the-frontend}
+## حصہ 4 - اپنے سمارٹ کنٹریکٹ کو فرنٹ اینڈ کے ساتھ مربوط کرنا {#part-4-integrating-your-smart-contract-with-the-frontend}
 
 اس ٹیوٹوریل کے اختتام تک، آپ جان جائیں گے کہ کیسے:
 
-- ایک MetaMask والیٹ کو اپنی ڈیپ (dapp) سے منسلک کریں
-- [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) API کا استعمال کرتے ہوئے اپنے اسمارٹ کانٹریکٹ سے ڈیٹا پڑھیں
-- MetaMask کا استعمال کرتے ہوئے Ethereum ٹرانزیکشنز پر دستخط کریں
+- ایک میٹاماسک والیٹ کو اپنی غیر مرکزی ایپلی کیشن (dapp) سے منسلک کریں
+- [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) API کا استعمال کرتے ہوئے اپنے سمارٹ کنٹریکٹ سے ڈیٹا پڑھیں
+- میٹاماسک کا استعمال کرتے ہوئے ایتھیریم ٹرانزیکشنز پر دستخط کریں
 
-اس ڈیپ کے لیے، ہم اپنے فرنٹ اینڈ فریم ورک کے طور پر [React](https://react.dev/) کا استعمال کریں گے؛ تاہم، یہ نوٹ کرنا ضروری ہے کہ ہم اس کے بنیادی اصولوں کو سمجھنے میں زیادہ وقت صرف نہیں کریں گے، کیونکہ ہماری زیادہ تر توجہ اپنے پروجیکٹ میں Web3 کی فعالیت لانے پر ہوگی۔
+اس dapp کے لیے، ہم [React](https://react.dev/) کو اپنے فرنٹ اینڈ فریم ورک کے طور پر استعمال کریں گے؛ تاہم، یہ نوٹ کرنا ضروری ہے کہ ہم اس کے بنیادی اصولوں کو سمجھنے میں زیادہ وقت صرف نہیں کریں گے، کیونکہ ہماری زیادہ تر توجہ اپنے پروجیکٹ میں Web3 کی فعالیت لانے پر ہوگی۔
 
-ایک شرط کے طور پر، آپ کو React کی ابتدائی سطح کی سمجھ ہونی چاہیے۔ اگر نہیں، تو ہم تجویز کرتے ہیں کہ آپ آفیشل [Intro to React tutorial](https://react.dev/learn) مکمل کریں۔
+ایک شرط کے طور پر، آپ کو React کی ابتدائی سطح کی سمجھ ہونی چاہیے۔ اگر نہیں، تو ہم تجویز کرتے ہیں کہ آپ آفیشل [Intro to React ٹیوٹوریل](https://react.dev/learn) مکمل کریں۔
 
-### اسٹارٹر فائلز کلون کریں {#clone-the-starter-files}
+### اسٹارٹر فائلز کو کلون کریں {#clone-the-starter-files}
 
-سب سے پہلے، اس پروجیکٹ کے لیے اسٹارٹر فائلز حاصل کرنے کے لیے [hello-world-part-four GitHub repository](https://github.com/alchemyplatform/hello-world-part-four-tutorial) پر جائیں اور اس ریپوزٹری کو اپنی لوکل مشین پر کلون کریں۔
+سب سے پہلے، اس پروجیکٹ کے لیے اسٹارٹر فائلز حاصل کرنے کے لیے [hello-world-part-four GitHub ریپوزٹری](https://github.com/alchemyplatform/hello-world-part-four-tutorial) پر جائیں اور اس ریپوزٹری کو اپنی مقامی مشین پر کلون کریں۔
 
-کلون شدہ ریپوزٹری کو لوکلی کھولیں۔ غور کریں کہ اس میں دو فولڈرز ہیں: `starter-files` اور `completed`۔
+کلون شدہ ریپوزٹری کو مقامی طور پر کھولیں۔ غور کریں کہ اس میں دو فولڈرز ہیں: `starter-files` اور `completed`۔
 
-- `starter-files`- **ہم اس ڈائرکٹری میں کام کریں گے**، ہم UI کو آپ کے Ethereum والیٹ اور اس اسمارٹ کانٹریکٹ سے جوڑیں گے جسے ہم نے [حصہ 3](#part-3) میں Etherscan پر پبلش کیا تھا۔
+- `starter-files`- **ہم اس ڈائرکٹری میں کام کریں گے**، ہم UI کو آپ کے ایتھیریم والیٹ اور اس سمارٹ کنٹریکٹ سے جوڑیں گے جسے ہم نے [حصہ 3](#part-3-publish-your-smart-contract-to-etherscan) میں Etherscan پر شائع کیا تھا۔
 - `completed` میں مکمل ٹیوٹوریل موجود ہے اور اگر آپ کہیں پھنس جائیں تو اسے صرف ایک حوالے کے طور پر استعمال کیا جانا چاہیے۔
 
 اس کے بعد، اپنے پسندیدہ کوڈ ایڈیٹر میں `starter-files` کی اپنی کاپی کھولیں، اور پھر `src` فولڈر میں جائیں۔
 
-ہم جو بھی کوڈ لکھیں گے وہ `src` فولڈر کے اندر ہوگا۔ ہم اپنے پروجیکٹ کو Web3 کی فعالیت دینے کے لیے `HelloWorld.js` کمپوننٹ اور `util/interact.js` جاوا اسکرپٹ فائلوں میں ترمیم کریں گے۔
+ہم جو بھی کوڈ لکھیں گے وہ `src` فولڈر کے اندر ہوگا۔ ہم اپنے پروجیکٹ کو Web3 کی فعالیت دینے کے لیے `HelloWorld.js` جزو اور `util/interact.js` جاوا اسکرپٹ فائلوں میں ترمیم کریں گے۔
 
 ### اسٹارٹر فائلز چیک کریں {#check-out-the-starter-files}
 
-کوڈنگ شروع کرنے سے پہلے، آئیے دیکھتے ہیں کہ اسٹارٹر فائلوں میں ہمیں کیا فراہم کیا گیا ہے۔
+اس سے پہلے کہ ہم کوڈنگ شروع کریں، آئیے دریافت کریں کہ اسٹارٹر فائلوں میں ہمیں کیا فراہم کیا گیا ہے۔
 
-#### اپنا ری ایکٹ پروجیکٹ چلائیں {#get-your-react-project-running}
+#### اپنا React پروجیکٹ چلائیں {#get-your-react-project-running}
 
 آئیے اپنے براؤزر میں React پروجیکٹ چلا کر شروعات کریں۔ React کی خوبصورتی یہ ہے کہ ایک بار جب ہمارا پروجیکٹ ہمارے براؤزر میں چلنے لگتا ہے، تو ہم جو بھی تبدیلیاں محفوظ کرتے ہیں وہ ہمارے براؤزر میں لائیو اپ ڈیٹ ہو جائیں گی۔
 
-پروجیکٹ کو چلانے کے لیے، `starter-files` فولڈر کی روٹ ڈائرکٹری میں جائیں، اور پروجیکٹ کی ڈیپینڈینسیز (dependencies) انسٹال کرنے کے لیے اپنے ٹرمینل میں `npm install` چلائیں:
+پروجیکٹ کو چلانے کے لیے، `starter-files` فولڈر کی روٹ ڈائرکٹری میں جائیں، اور پروجیکٹ کی انحصار (dependencies) کو انسٹال کرنے کے لیے اپنے ٹرمینل میں `npm install` چلائیں:
 
 ```bash
 cd starter-files
@@ -719,15 +710,15 @@ npm install
 npm start
 ```
 
-ایسا کرنے سے آپ کے براؤزر میں [http://localhost:3000/](http://localhost:3000/) کھل جانا چاہیے، جہاں آپ کو ہمارے پروجیکٹ کا فرنٹ اینڈ نظر آئے گا۔ یہ ایک فیلڈ \(آپ کے اسمارٹ کانٹریکٹ میں محفوظ کردہ پیغام کو اپ ڈیٹ کرنے کی جگہ\)، ایک "Connect Wallet" بٹن، اور ایک "Update" بٹن پر مشتمل ہونا چاہیے۔
+ایسا کرنے سے آپ کے براؤزر میں [http://localhost:3000/](http://localhost:3000/) کھل جانا چاہیے، جہاں آپ کو ہمارے پروجیکٹ کا فرنٹ اینڈ نظر آئے گا۔ اس میں ایک فیلڈ (آپ کے سمارٹ کنٹریکٹ میں محفوظ کردہ پیغام کو اپ ڈیٹ کرنے کی جگہ)، ایک "Connect Wallet" بٹن، اور ایک "Update" بٹن شامل ہونا چاہیے۔
 
 اگر آپ کسی بھی بٹن پر کلک کرنے کی کوشش کرتے ہیں، تو آپ دیکھیں گے کہ وہ کام نہیں کرتے—اس کی وجہ یہ ہے کہ ہمیں ابھی بھی ان کی فعالیت کو پروگرام کرنے کی ضرورت ہے۔
 
-#### `HelloWorld.js` کمپوننٹ {#the-helloworld-js-component}
+#### `HelloWorld.js` جزو {#the-helloworld-js-component}
 
-آئیے اپنے ایڈیٹر میں `src` فولڈر میں واپس جائیں اور `HelloWorld.js` فائل کھولیں۔ یہ بہت اہم ہے کہ ہم اس فائل میں موجود ہر چیز کو سمجھیں، کیونکہ یہ وہ بنیادی React کمپوننٹ ہے جس پر ہم کام کریں گے۔
+آئیے اپنے ایڈیٹر میں `src` فولڈر میں واپس جائیں اور `HelloWorld.js` فائل کھولیں۔ یہ بہت اہم ہے کہ ہم اس فائل میں موجود ہر چیز کو سمجھیں، کیونکہ یہ وہ بنیادی React جزو ہے جس پر ہم کام کریں گے۔
 
-اس فائل کے اوپری حصے میں، آپ دیکھیں گے کہ ہمارے پاس کئی امپورٹ اسٹیٹمنٹس ہیں جو ہمارے پروجیکٹ کو چلانے کے لیے ضروری ہیں، بشمول React لائبریری، useEffect اور useState ہکس، `./util/interact.js` سے کچھ آئٹمز (ہم جلد ہی ان کی مزید تفصیلات بیان کریں گے!)، اور Alchemy کا لوگو۔
+اس فائل کے اوپری حصے میں، آپ دیکھیں گے کہ ہمارے پاس کئی امپورٹ اسٹیٹمنٹس ہیں جو ہمارے پروجیکٹ کو چلانے کے لیے ضروری ہیں، جن میں React لائبریری، useEffect اور useState ہکس، `./util/interact.js` سے کچھ آئٹمز (ہم جلد ہی ان کی مزید تفصیلات بیان کریں گے!)، اور Alchemy کا لوگو شامل ہیں۔
 
 ```javascript
 // HelloWorld.js
@@ -745,64 +736,64 @@ import {
 import alchemylogo from "./alchemylogo.svg"
 ```
 
-اس کے بعد، ہمارے پاس ہمارے اسٹیٹ (state) ویری ایبلز ہیں جنہیں ہم مخصوص ایونٹس کے بعد اپ ڈیٹ کریں گے۔
+اس کے بعد، ہمارے پاس ہمارے حالت (state) متغیرات ہیں جنہیں ہم مخصوص واقعات کے بعد اپ ڈیٹ کریں گے۔
 
 ```javascript
 // HelloWorld.js
 
-// سٹیٹ ویری ایبلز
+//حالت کے متغیرات
 const [walletAddress, setWallet] = useState("")
 const [status, setStatus] = useState("")
 const [message, setMessage] = useState("No connection to the network.")
 const [newMessage, setNewMessage] = useState("")
 ```
 
-یہاں بتایا گیا ہے کہ ہر ویری ایبل کس چیز کی نمائندگی کرتا ہے:
+یہاں بتایا گیا ہے کہ ہر متغیر کس چیز کی نمائندگی کرتا ہے:
 
-- `walletAddress` - ایک اسٹرنگ جو صارف کے والیٹ کا ایڈریس محفوظ کرتی ہے
-- `status`- ایک اسٹرنگ جو ایک مددگار پیغام محفوظ کرتی ہے جو صارف کی رہنمائی کرتا ہے کہ ڈیپ کے ساتھ کیسے تعامل کیا جائے
-- `message` - ایک اسٹرنگ جو اسمارٹ کانٹریکٹ میں موجودہ پیغام کو محفوظ کرتی ہے
-- `newMessage` - ایک اسٹرنگ جو اس نئے پیغام کو محفوظ کرتی ہے جسے اسمارٹ کانٹریکٹ میں لکھا جائے گا
+- `walletAddress` - ایک سٹرنگ جو صارف کے والیٹ کا پتہ محفوظ کرتی ہے
+- `status`- ایک سٹرنگ جو ایک مددگار پیغام محفوظ کرتی ہے جو صارف کی رہنمائی کرتا ہے کہ dapp کے ساتھ کیسے تعامل کیا جائے
+- `message` - ایک سٹرنگ جو سمارٹ کنٹریکٹ میں موجودہ پیغام کو محفوظ کرتی ہے
+- `newMessage` - ایک سٹرنگ جو نیا پیغام محفوظ کرتی ہے جسے سمارٹ کنٹریکٹ میں لکھا جائے گا
 
-اسٹیٹ ویری ایبلز کے بعد، آپ کو پانچ غیر نافذ شدہ (un-implemented) فنکشنز نظر آئیں گے: `useEffect`، `addSmartContractListener`، `addWalletListener`، `connectWalletPressed`، اور `onUpdatePressed`۔ ہم ذیل میں وضاحت کریں گے کہ وہ کیا کرتے ہیں:
+حالت کے متغیرات کے بعد، آپ کو پانچ غیر نافذ شدہ فنکشنز نظر آئیں گے: `useEffect` ،`addSmartContractListener`، `addWalletListener` ، `connectWalletPressed`، اور `onUpdatePressed`۔ ہم ذیل میں وضاحت کریں گے کہ وہ کیا کرتے ہیں:
 
 ```javascript
 // HelloWorld.js
 
-// صرف ایک بار کال کیا جاتا ہے
+//صرف ایک بار کال کیا گیا
 useEffect(async () => {
-  // TODO: امپلیمنٹ کریں
+  //TODO: لاگو کریں
 }, [])
 
 function addSmartContractListener() {
-  // TODO: امپلیمنٹ کریں
+  //TODO: لاگو کریں
 }
 
 function addWalletListener() {
-  // TODO: امپلیمنٹ کریں
+  //TODO: لاگو کریں
 }
 
 const connectWalletPressed = async () => {
-  // TODO: امپلیمنٹ کریں
+  //TODO: لاگو کریں
 }
 
 const onUpdatePressed = async () => {
-  // TODO: امپلیمنٹ کریں
+  //TODO: لاگو کریں
 }
 ```
 
-- [`useEffect`](https://legacy.reactjs.org/docs/hooks-effect.html)- یہ ایک React ہک ہے جسے آپ کے کمپوننٹ کے رینڈر ہونے کے بعد کال کیا جاتا ہے۔ چونکہ اس میں ایک خالی ایرے `[]` پراپ پاس کیا گیا ہے \(لائن 4 دیکھیں\)، اس لیے اسے صرف کمپوننٹ کے _پہلے_ رینڈر پر کال کیا جائے گا۔ یہاں ہم اپنے اسمارٹ کانٹریکٹ میں محفوظ کردہ موجودہ پیغام کو لوڈ کریں گے، اپنے اسمارٹ کانٹریکٹ اور والیٹ لسنرز کو کال کریں گے، اور اپنے UI کو اپ ڈیٹ کریں گے تاکہ یہ ظاہر ہو سکے کہ آیا کوئی والیٹ پہلے سے منسلک ہے یا نہیں۔
-- `addSmartContractListener`- یہ فنکشن ایک لسنر سیٹ اپ کرتا ہے جو ہمارے HelloWorld کانٹریکٹ کے `UpdatedMessages` ایونٹ پر نظر رکھے گا اور جب ہمارے اسمارٹ کانٹریکٹ میں پیغام تبدیل ہوگا تو ہمارے UI کو اپ ڈیٹ کرے گا۔
-- `addWalletListener`- یہ فنکشن ایک لسنر سیٹ اپ کرتا ہے جو صارف کے MetaMask والیٹ کی اسٹیٹ میں تبدیلیوں کا پتہ لگاتا ہے، جیسے کہ جب صارف اپنا والیٹ منقطع کرتا ہے یا ایڈریس تبدیل کرتا ہے۔
-- `connectWalletPressed`- اس فنکشن کو صارف کے MetaMask والیٹ کو ہماری ڈیپ سے منسلک کرنے کے لیے کال کیا جائے گا۔
-- `onUpdatePressed` - اس فنکشن کو اس وقت کال کیا جائے گا جب صارف اسمارٹ کانٹریکٹ میں محفوظ کردہ پیغام کو اپ ڈیٹ کرنا چاہے گا۔
+- [`useEffect`](https://legacy.reactjs.org/docs/hooks-effect.html)- یہ ایک React ہک ہے جسے آپ کے جزو کے رینڈر ہونے کے بعد کال کیا جاتا ہے۔ چونکہ اس میں ایک خالی سرنی (array) `[]` پراپ پاس کیا گیا ہے (لائن 4 دیکھیں)، اسے صرف جزو کے _پہلے_ رینڈر پر کال کیا جائے گا۔ یہاں ہم اپنے سمارٹ کنٹریکٹ میں محفوظ کردہ موجودہ پیغام کو لوڈ کریں گے، اپنے سمارٹ کنٹریکٹ اور والیٹ کے سامعین (listeners) کو کال کریں گے، اور اپنے UI کو اپ ڈیٹ کریں گے تاکہ یہ ظاہر ہو سکے کہ آیا کوئی والیٹ پہلے سے منسلک ہے۔
+- `addSmartContractListener`- یہ فنکشن ایک سامع (listener) سیٹ کرتا ہے جو ہمارے HelloWorld کنٹریکٹ کے `UpdatedMessages` ایونٹ پر نظر رکھے گا اور جب ہمارے سمارٹ کنٹریکٹ میں پیغام تبدیل ہوگا تو ہمارے UI کو اپ ڈیٹ کرے گا۔
+- `addWalletListener`- یہ فنکشن ایک سامع سیٹ کرتا ہے جو صارف کے میٹاماسک والیٹ کی حالت میں تبدیلیوں کا پتہ لگاتا ہے، جیسے کہ جب صارف اپنا والیٹ منقطع کرتا ہے یا پتے تبدیل کرتا ہے۔
+- `connectWalletPressed`- اس فنکشن کو صارف کے میٹاماسک والیٹ کو ہمارے dapp سے منسلک کرنے کے لیے کال کیا جائے گا۔
+- `onUpdatePressed` - اس فنکشن کو اس وقت کال کیا جائے گا جب صارف سمارٹ کنٹریکٹ میں محفوظ کردہ پیغام کو اپ ڈیٹ کرنا چاہے گا۔
 
-اس فائل کے آخر کے قریب، ہمارے پاس اپنے کمپوننٹ کا UI ہے۔
+اس فائل کے آخر کے قریب، ہمارے پاس اپنے جزو کا UI ہے۔
 
 ```javascript
 // HelloWorld.js
 
-// ہمارے کمپوننٹ کا UI
+//ہمارے جزو کا UI
 return (
   <div id="container">
     <img id="logo" src={alchemylogo}></img>
@@ -841,32 +832,32 @@ return (
 )
 ```
 
-اگر آپ اس کوڈ کا بغور جائزہ لیں، تو آپ دیکھیں گے کہ ہم اپنے UI میں اپنے مختلف اسٹیٹ ویری ایبلز کہاں استعمال کرتے ہیں:
+اگر آپ اس کوڈ کا بغور جائزہ لیں، تو آپ دیکھیں گے کہ ہم اپنے UI میں اپنے مختلف حالت کے متغیرات کو کہاں استعمال کرتے ہیں:
 
-- لائنز 6-12 پر، اگر صارف کا والیٹ منسلک ہے \(یعنی، `walletAddress.length > 0`\), تو ہم "walletButton" آئی ڈی والے بٹن میں صارف کے `walletAddress` کا ایک مختصر ورژن دکھاتے ہیں؛ بصورت دیگر یہ صرف "Connect Wallet" کہتا ہے۔
-- لائن 17 پر، ہم اسمارٹ کانٹریکٹ میں محفوظ کردہ موجودہ پیغام دکھاتے ہیں، جو `message` اسٹرنگ میں کیپچر کیا گیا ہے۔
-- لائنز 23-26 پر، جب ٹیکسٹ فیلڈ میں ان پٹ تبدیل ہوتا ہے تو ہم اپنے `newMessage` اسٹیٹ ویری ایبل کو اپ ڈیٹ کرنے کے لیے ایک [کنٹرولڈ کمپوننٹ](https://legacy.reactjs.org/docs/forms.html#controlled-components) استعمال کرتے ہیں۔
+- لائنز 6-12 پر، اگر صارف کا والیٹ منسلک ہے (یعنی، `walletAddress.length > 0`)، تو ہم "walletButton" آئی ڈی والے بٹن میں صارف کے `walletAddress` کا ایک مختصر ورژن دکھاتے ہیں؛ بصورت دیگر یہ صرف "Connect Wallet" کہتا ہے۔
+- لائن 17 پر، ہم سمارٹ کنٹریکٹ میں محفوظ کردہ موجودہ پیغام دکھاتے ہیں، جو `message` سٹرنگ میں کیپچر کیا گیا ہے۔
+- لائنز 23-26 پر، جب ٹیکسٹ فیلڈ میں ان پٹ تبدیل ہوتا ہے تو ہم اپنے `newMessage` حالت کے متغیر کو اپ ڈیٹ کرنے کے لیے ایک [کنٹرولڈ جزو](https://legacy.reactjs.org/docs/forms.html#controlled-components) استعمال کرتے ہیں۔
 
-ہمارے اسٹیٹ ویری ایبلز کے علاوہ، آپ یہ بھی دیکھیں گے کہ `connectWalletPressed` اور `onUpdatePressed` فنکشنز کو اس وقت کال کیا جاتا ہے جب بالترتیب `publishButton` اور `walletButton` آئی ڈی والے بٹنوں پر کلک کیا جاتا ہے۔
+ہمارے حالت کے متغیرات کے علاوہ، آپ یہ بھی دیکھیں گے کہ `connectWalletPressed` اور `onUpdatePressed` فنکشنز کو اس وقت کال کیا جاتا ہے جب بالترتیب `publishButton` اور `walletButton` آئی ڈی والے بٹنوں پر کلک کیا جاتا ہے۔
 
-آخر میں، آئیے دیکھتے ہیں کہ یہ `HelloWorld.js` کمپوننٹ کہاں شامل کیا گیا ہے۔
+آخر میں، آئیے اس بات پر توجہ دیں کہ یہ `HelloWorld.js` جزو کہاں شامل کیا گیا ہے۔
 
-اگر آپ `App.js` فائل میں جاتے ہیں، جو کہ React میں مرکزی کمپوننٹ ہے اور دیگر تمام کمپوننٹس کے لیے ایک کنٹینر کے طور پر کام کرتا ہے، تو آپ دیکھیں گے کہ ہمارا `HelloWorld.js` کمپوننٹ لائن 7 پر انجیکٹ کیا گیا ہے۔
+اگر آپ `App.js` فائل میں جاتے ہیں، جو React میں مرکزی جزو ہے اور دیگر تمام اجزاء کے لیے ایک کنٹینر کے طور پر کام کرتا ہے، تو آپ دیکھیں گے کہ ہمارا `HelloWorld.js` جزو لائن 7 پر شامل کیا گیا ہے۔
 
-آخر میں، آئیے آپ کے لیے فراہم کردہ ایک اور فائل، `interact.js` فائل کو چیک کرتے ہیں۔
+آخر میں، آئیے آپ کے لیے فراہم کردہ ایک اور فائل، `interact.js` فائل کو چیک کریں۔
 
 #### `interact.js` فائل {#the-interact-js-file}
 
-چونکہ ہم [M-V-C](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) پیراڈائم (paradigm) کی پیروی کرنا چاہتے ہیں، اس لیے ہم ایک الگ فائل چاہیں گے جس میں ہماری ڈیپ کی لاجک، ڈیٹا، اور قواعد کو منظم کرنے کے لیے ہمارے تمام فنکشنز موجود ہوں، اور پھر ہم ان فنکشنز کو اپنے فرنٹ اینڈ \(ہمارے `HelloWorld.js` کمپوننٹ\) میں ایکسپورٹ کر سکیں۔
+چونکہ ہم [M-V-C](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) پیراڈائم کی پیروی کرنا چاہتے ہیں، اس لیے ہم ایک الگ فائل چاہیں گے جس میں ہمارے dapp کی منطق، ڈیٹا، اور قواعد کو منظم کرنے کے لیے ہمارے تمام فنکشنز موجود ہوں، اور پھر ان فنکشنز کو اپنے فرنٹ اینڈ (ہمارے `HelloWorld.js` جزو) میں ایکسپورٹ کرنے کے قابل ہوں۔
 
-👆🏽ہماری `interact.js` فائل کا بالکل یہی مقصد ہے!
+👆🏽یہ ہماری `interact.js` فائل کا بالکل یہی مقصد ہے!
 
-اپنی `src` ڈائرکٹری میں `util` فولڈر میں جائیں، اور آپ دیکھیں گے کہ ہم نے `interact.js` نامی ایک فائل شامل کی ہے جس میں ہمارے اسمارٹ کانٹریکٹ کے تعامل اور والیٹ کے تمام فنکشنز اور ویری ایبلز شامل ہوں گے۔
+اپنی `src` ڈائرکٹری میں `util` فولڈر میں جائیں، اور آپ دیکھیں گے کہ ہم نے `interact.js` نامی ایک فائل شامل کی ہے جس میں ہمارے سمارٹ کنٹریکٹ کے تعامل اور والیٹ کے تمام فنکشنز اور متغیرات شامل ہوں گے۔
 
 ```javascript
 // interact.js
 
-// export const helloWorldContract;
+//export const helloWorldContract;
 
 export const loadCurrentMessage = async () => {}
 
@@ -877,103 +868,55 @@ const getCurrentWalletConnected = async () => {}
 export const updateMessage = async (message) => {}
 ```
 
-آپ فائل کے اوپری حصے میں دیکھیں گے کہ ہم نے `helloWorldContract` آبجیکٹ کو کمنٹ آؤٹ کر دیا ہے۔ اس ٹیوٹوریل میں بعد میں، ہم اس آبجیکٹ کو ان کمنٹ کریں گے اور اس ویری ایبل میں اپنے اسمارٹ کانٹریکٹ کو انسٹینشی ایٹ (instantiate) کریں گے، جسے ہم پھر اپنے `HelloWorld.js` کمپوننٹ میں ایکسپورٹ کریں گے۔
+آپ فائل کے اوپری حصے میں دیکھیں گے کہ ہم نے `helloWorldContract` آبجیکٹ کو کمنٹ آؤٹ کر دیا ہے۔ اس ٹیوٹوریل میں بعد میں، ہم اس آبجیکٹ کو ان کمنٹ کریں گے اور اس متغیر میں اپنے سمارٹ کنٹریکٹ کو انسٹینشیٹ (instantiate) کریں گے، جسے ہم پھر اپنے `HelloWorld.js` جزو میں ایکسپورٹ کریں گے۔
 
 ہمارے `helloWorldContract` آبجیکٹ کے بعد چار غیر نافذ شدہ فنکشنز درج ذیل کام کرتے ہیں:
 
-- `loadCurrentMessage` - یہ فنکشن اسمارٹ کانٹریکٹ میں محفوظ کردہ موجودہ پیغام کو لوڈ کرنے کی لاجک کو ہینڈل کرتا ہے۔ یہ [Alchemy Web3 API](https://github.com/alchemyplatform/alchemy-web3) کا استعمال کرتے ہوئے Hello World اسمارٹ کانٹریکٹ کو ایک _read_ کال کرے گا۔
-- `connectWallet` - یہ فنکشن صارف کے MetaMask کو ہماری ڈیپ سے منسلک کرے گا۔
-- `getCurrentWalletConnected` - یہ فنکشن چیک کرے گا کہ آیا پیج لوڈ ہونے پر کوئی Ethereum اکاؤنٹ پہلے سے ہی ہماری ڈیپ سے منسلک ہے اور اس کے مطابق ہمارے UI کو اپ ڈیٹ کرے گا۔
-- `updateMessage` - یہ فنکشن اسمارٹ کانٹریکٹ میں محفوظ کردہ پیغام کو اپ ڈیٹ کرے گا۔ یہ Hello World اسمارٹ کانٹریکٹ کو ایک _write_ کال کرے گا، لہذا پیغام کو اپ ڈیٹ کرنے کے لیے صارف کے MetaMask والیٹ کو ایک Ethereum ٹرانزیکشن پر دستخط کرنے ہوں گے۔
+- `loadCurrentMessage` - یہ فنکشن سمارٹ کنٹریکٹ میں محفوظ کردہ موجودہ پیغام کو لوڈ کرنے کی منطق کو سنبھالتا ہے۔ یہ [Alchemy Web3 API](https://github.com/alchemyplatform/alchemy-web3) کا استعمال کرتے ہوئے Hello World سمارٹ کنٹریکٹ کو ایک _read_ کال کرے گا۔
+- `connectWallet` - یہ فنکشن صارف کے میٹاماسک کو ہمارے dapp سے منسلک کرے گا۔
+- `getCurrentWalletConnected` - یہ فنکشن چیک کرے گا کہ آیا صفحہ لوڈ ہونے پر کوئی ایتھیریم اکاؤنٹ پہلے سے ہی ہمارے dapp سے منسلک ہے اور اس کے مطابق ہمارے UI کو اپ ڈیٹ کرے گا۔
+- `updateMessage` - یہ فنکشن سمارٹ کنٹریکٹ میں محفوظ کردہ پیغام کو اپ ڈیٹ کرے گا۔ یہ Hello World سمارٹ کنٹریکٹ کو ایک _write_ کال کرے گا، لہذا صارف کے میٹاماسک والیٹ کو پیغام کو اپ ڈیٹ کرنے کے لیے ایک ایتھیریم ٹرانزیکشن پر دستخط کرنے ہوں گے۔
 
-اب جب کہ ہم سمجھ گئے ہیں کہ ہم کس چیز کے ساتھ کام کر رہے ہیں، آئیے معلوم کرتے ہیں کہ اپنے اسمارٹ کانٹریکٹ سے کیسے پڑھا جائے!
+اب جب کہ ہم سمجھ گئے ہیں کہ ہم کس چیز کے ساتھ کام کر رہے ہیں، آئیے معلوم کریں کہ اپنے سمارٹ کنٹریکٹ سے کیسے پڑھا جائے!
 
-### مرحلہ 3: اپنے اسمارٹ کانٹریکٹ سے پڑھیں {#step-3-read-from-your-smart-contract}
+### مرحلہ 3: اپنے سمارٹ کنٹریکٹ سے پڑھیں {#step-3-read-from-your-smart-contract}
 
-اپنے اسمارٹ کانٹریکٹ سے پڑھنے کے لیے، آپ کو کامیابی کے ساتھ درج ذیل کو سیٹ اپ کرنے کی ضرورت ہوگی:
+اپنے سمارٹ کنٹریکٹ سے پڑھنے کے لیے، آپ کو کامیابی کے ساتھ درج ذیل کو ترتیب دینے کی ضرورت ہوگی:
 
-- Ethereum چین سے ایک API کنکشن
-- آپ کے اسمارٹ کانٹریکٹ کا ایک لوڈ شدہ انسٹینس (instance)
-- آپ کے اسمارٹ کانٹریکٹ فنکشن کو کال کرنے کے لیے ایک فنکشن
-- ایک لسنر جو اس وقت اپ ڈیٹس پر نظر رکھے جب آپ اسمارٹ کانٹریکٹ سے جو ڈیٹا پڑھ رہے ہیں وہ تبدیل ہو جائے
+- ایتھیریم چین سے ایک API کنکشن
+- آپ کے سمارٹ کنٹریکٹ کی ایک لوڈ شدہ مثال (instance)
+- آپ کے سمارٹ کنٹریکٹ فنکشن کو کال کرنے کے لیے ایک فنکشن
+- جب آپ سمارٹ کنٹریکٹ سے جو ڈیٹا پڑھ رہے ہیں وہ تبدیل ہوتا ہے تو اپ ڈیٹس پر نظر رکھنے کے لیے ایک سامع (listener)
 
-یہ بہت سارے مراحل کی طرح لگ سکتا ہے، لیکن فکر نہ کریں! ہم آپ کو مرحلہ وار بتائیں گے کہ ان میں سے ہر ایک کو کیسے کرنا ہے! :\)
+یہ بہت سارے مراحل کی طرح لگ سکتا ہے، لیکن فکر نہ کریں! ہم آپ کو مرحلہ وار بتائیں گے کہ ان میں سے ہر ایک کو کیسے کرنا ہے! :)
 
-#### Ethereum چین سے ایک API کنکشن قائم کریں {#establish-an-api-connection-to-the-ethereum-chain}
+#### ایتھیریم چین سے ایک <span dir="ltr">API</span> کنکشن قائم کریں {#establish-an-api-connection-to-the-ethereum-chain}
 
-تو یاد ہے کہ اس ٹیوٹوریل کے حصہ 2 میں، ہم نے اپنے [اسمارٹ کانٹریکٹ سے پڑھنے کے لیے اپنی Alchemy Web3 کلید کا استعمال کیا تھا](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library)؟ آپ کو چین سے پڑھنے کے لیے اپنی ڈیپ میں بھی ایک Alchemy Web3 کلید کی ضرورت ہوگی۔
+تو کیا آپ کو یاد ہے کہ اس ٹیوٹوریل کے حصہ 2 میں، ہم نے اپنے سمارٹ کنٹریکٹ سے پڑھنے کے لیے اپنی <span dir="ltr">Alchemy Web3</span> کلید کا استعمال کیسے کیا تھا؟ آپ کو چین سے پڑھنے کے لیے اپنی غیر مرکزی ایپلی کیشن (dapp) میں بھی ایک <span dir="ltr">Alchemy Web3</span> کلید کی ضرورت ہوگی۔
 
-اگر آپ کے پاس یہ پہلے سے نہیں ہے، تو سب سے پہلے اپنی `starter-files` کی روٹ ڈائرکٹری میں جا کر اور اپنے ٹرمینل میں درج ذیل کو چلا کر [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) انسٹال کریں:
+اگر آپ کے پاس یہ پہلے سے موجود نہیں ہے، تو سب سے پہلے اپنی `starter-files` کی روٹ ڈائرکٹری میں جا کر اور اپنے ٹرمینل میں درج ذیل کو چلا کر [<span dir="ltr">Alchemy Web3</span>](https://github.com/alchemyplatform/alchemy-web3) انسٹال کریں:
 
 ```text
 npm install @alch/alchemy-web3
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) دراصل [Web3.js](https://docs.web3js.org/) کے گرد ایک ریپر (wrapper) ہے، جو ایک web3 ڈیولپر کے طور پر آپ کی زندگی کو آسان بنانے کے لیے بہتر API طریقے اور دیگر اہم فوائد فراہم کرتا ہے۔ اسے اس طرح ڈیزائن کیا گیا ہے کہ اس میں کم سے کم کنفیگریشن کی ضرورت ہو تاکہ آپ اسے فوراً اپنی ایپ میں استعمال کرنا شروع کر سکیں!
+[<span dir="ltr">Alchemy Web3</span>](https://github.com/alchemyplatform/alchemy-web3) دراصل [<span dir="ltr">Web3.js</span>](https://docs.web3js.org/) کے گرد ایک ریپر (wrapper) ہے، جو بہتر <span dir="ltr">API</span> طریقے اور دیگر اہم فوائد فراہم کرتا ہے تاکہ ایک <span dir="ltr">Web3</span> ڈیولپر کے طور پر آپ کی زندگی آسان ہو سکے۔ اسے اس طرح ڈیزائن کیا گیا ہے کہ اس میں کم سے کم کنفیگریشن کی ضرورت ہو تاکہ آپ اسے فوراً اپنی ایپ میں استعمال کرنا شروع کر سکیں!
 
-پھر، اپنی پروجیکٹ ڈائرکٹری میں [dotenv](https://www.npmjs.com/package/dotenv) پیکیج انسٹال کریں، تاکہ ہمارے پاس اپنی API کلید حاصل کرنے کے بعد اسے محفوظ کرنے کے لیے ایک محفوظ جگہ ہو۔
+پھر، اپنی پروجیکٹ ڈائرکٹری میں [<span dir="ltr">dotenv</span>](https://www.npmjs.com/package/dotenv) پیکیج انسٹال کریں، تاکہ اسے حاصل کرنے کے بعد ہمارے پاس اپنی <span dir="ltr">API</span> کلید کو محفوظ کرنے کے لیے ایک محفوظ جگہ ہو۔
 
 ```text
 npm install dotenv --save
 ```
 
-اپنی ڈیپ کے لیے، **ہم اپنی HTTP API کلید کے بجائے اپنی Websockets API کلید استعمال کریں گے**، کیونکہ یہ ہمیں ایک ایسا لسنر سیٹ اپ کرنے کی اجازت دے گا جو اسمارٹ کانٹریکٹ میں محفوظ کردہ پیغام کے تبدیل ہونے کا پتہ لگاتا ہے۔
+اپنے <span dir="ltr">dapp</span> کے لیے، **ہم اپنی <span dir="ltr">HTTP API</span> کلید کے بجائے اپنی <span dir="ltr">Websockets API</span> کلید استعمال کریں گے**، کیونکہ یہ ہمیں ایک ایسا سامع (listener) سیٹ کرنے کی اجازت دے گا جو سمارٹ کنٹریکٹ میں محفوظ کردہ پیغام کے تبدیل ہونے کا پتہ لگاتا ہے۔
 
-ایک بار جب آپ کے پاس اپنی API کلید آجائے، تو اپنی روٹ ڈائرکٹری میں ایک `.env` فائل بنائیں اور اس میں اپنا Alchemy Websockets url شامل کریں۔ اس کے بعد، آپ کی `.env` فائل کچھ اس طرح دکھنی چاہیے:
-
-```javascript
-REACT_APP_ALCHEMY_KEY = wss: // eth-goerli.ws.alchemyapi.io/v2/<key>
-```
-
-اب، ہم اپنی ڈیپ میں اپنا Alchemy Web3 اینڈ پوائنٹ سیٹ اپ کرنے کے لیے تیار ہیں! آئیے اپنے `interact.js` پر واپس چلتے ہیں، جو ہمارے `util` فولڈر کے اندر موجود ہے اور فائل کے اوپری حصے میں درج ذیل کوڈ شامل کریں:
+ایک بار جب آپ اپنی <span dir="ltr">API</span> کلید حاصل کر لیں، تو اپنی روٹ ڈائرکٹری میں ایک `.env` فائل بنائیں اور اس میں اپنا <span dir="ltr">Alchemy Websockets URL</span> شامل کریں۔ اس کے بعد، آپ کی `.env` فائل کچھ اس طرح دکھنی چاہیے:
 
 ```javascript
-// interact.js
-
-require("dotenv").config()
-const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY
-const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
-const web3 = createAlchemyWeb3(alchemyKey)
-
-// export const helloWorldContract;
+REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<key>
 ```
 
-اوپر، ہم نے سب سے پہلے اپنی `.env` فائل سے Alchemy کلید امپورٹ کی اور پھر اپنا Alchemy Web3 اینڈ پوائنٹ قائم کرنے کے لیے اپنی `alchemyKey` کو `createAlchemyWeb3` میں پاس کیا۔
-
-اس اینڈ پوائنٹ کے تیار ہونے کے ساتھ، اب وقت آگیا ہے کہ ہم اپنا اسمارٹ کانٹریکٹ لوڈ کریں!
-
-#### اپنا Hello World اسمارٹ کانٹریکٹ لوڈ کرنا {#loading-your-hello-world-smart-contract}
-
-اپنا Hello World اسمارٹ کانٹریکٹ لوڈ کرنے کے لیے، آپ کو اس کے کانٹریکٹ ایڈریس اور ABI کی ضرورت ہوگی، یہ دونوں Etherscan پر مل سکتے ہیں اگر آپ نے [اس ٹیوٹوریل کا حصہ 3](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan) مکمل کر لیا ہے۔
-
-#### Etherscan سے اپنے کانٹریکٹ کا ABI کیسے حاصل کریں {#how-to-get-your-contract-abi-from-etherscan}
-
-اگر آپ نے اس ٹیوٹوریل کا حصہ 3 چھوڑ دیا ہے، تو آپ ایڈریس [0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code) کے ساتھ HelloWorld کانٹریکٹ استعمال کر سکتے ہیں۔ اس کا ABI [یہاں](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code) پایا جا سکتا ہے۔
-
-ایک کانٹریکٹ ABI یہ بتانے کے لیے ضروری ہے کہ کانٹریکٹ کون سا فنکشن شروع کرے گا اور ساتھ ہی یہ یقینی بنانے کے لیے بھی کہ فنکشن اس فارمیٹ میں ڈیٹا واپس کرے گا جس کی آپ توقع کر رہے ہیں۔ ایک بار جب ہم اپنا کانٹریکٹ ABI کاپی کر لیں، تو آئیے اسے اپنی `src` ڈائرکٹری میں `contract-abi.json` نامی JSON فائل کے طور پر محفوظ کریں۔
-
-آپ کی contract-abi.json آپ کے src فولڈر میں محفوظ ہونی چاہیے۔
-
-اپنے کانٹریکٹ ایڈریس، ABI، اور Alchemy Web3 اینڈ پوائنٹ سے لیس ہو کر، ہم اپنے اسمارٹ کانٹریکٹ کا ایک انسٹینس لوڈ کرنے کے لیے [contract method](https://docs.web3js.org/api/web3-eth-contract/class/Contract) استعمال کر سکتے ہیں۔ اپنے کانٹریکٹ ABI کو `interact.js` فائل میں امپورٹ کریں اور اپنا کانٹریکٹ ایڈریس شامل کریں۔
-
-```javascript
-// interact.js
-
-const contractABI = require("../contract-abi.json")
-const contractAddress = "0x6f3f635A9762B47954229Ea479b4541eAF402A6A"
-```
-
-اب ہم آخر کار اپنے `helloWorldContract` ویری ایبل کو ان کمنٹ کر سکتے ہیں، اور اپنے AlchemyWeb3 اینڈ پوائنٹ کا استعمال کرتے ہوئے اسمارٹ کانٹریکٹ کو لوڈ کر سکتے ہیں:
-
-```javascript
-// interact.js
-export const helloWorldContract = new web3.eth.Contract(
-  contractABI,
-  contractAddress
-)
-```
-
-خلاصہ کرنے کے لیے، آپ کے `interact.js` کی پہلی 12 لائنیں اب کچھ اس طرح دکھنی چاہئیں:
+اب، ہم اپنے <span dir="ltr">dapp</span> میں اپنا <span dir="ltr">Alchemy Web3</span> اینڈ پوائنٹ سیٹ کرنے کے لیے تیار ہیں! آئیے اپنی `interact.js` پر واپس چلتے ہیں، جو ہمارے `util` فولڈر کے اندر موجود ہے اور فائل کے اوپری حصے میں درج ذیل کوڈ شامل کریں:
 
 ```javascript
 // interact.js
@@ -983,6 +926,54 @@ const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(alchemyKey)
 
+//export const helloWorldContract;
+```
+
+اوپر، ہم نے سب سے پہلے اپنی `.env` فائل سے <span dir="ltr">Alchemy</span> کلید امپورٹ کی اور پھر اپنا <span dir="ltr">Alchemy Web3</span> اینڈ پوائنٹ قائم کرنے کے لیے اپنی `alchemyKey` کو `createAlchemyWeb3` میں پاس کیا۔
+
+اس اینڈ پوائنٹ کے تیار ہونے کے بعد، اب وقت آ گیا ہے کہ ہم اپنا سمارٹ کنٹریکٹ لوڈ کریں!
+#### اپنا Hello World سمارٹ کنٹریکٹ لوڈ کرنا {#loading-your-hello-world-smart-contract}
+
+اپنے Hello World سمارٹ کنٹریکٹ کو لوڈ کرنے کے لیے، آپ کو اس کے کنٹریکٹ کا پتہ اور ABI درکار ہوگا، یہ دونوں Etherscan پر مل سکتے ہیں اگر آپ نے [اس ٹیوٹوریل کا حصہ 3](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan) مکمل کر لیا ہے۔
+
+#### <span dir="ltr">Etherscan</span> سے اپنے کنٹریکٹ کا <span dir="ltr">ABI</span> کیسے حاصل کریں
+
+اگر آپ نے اس ٹیوٹوریل کا حصہ <span dir="ltr">3</span> چھوڑ دیا ہے، تو پہلے اپنا <span dir="ltr">HelloWorld</span> کنٹریکٹ تعینات کریں اور اس کی تصدیق کریں۔ پھر اس کا <span dir="ltr">ABI</span> کاپی کرنے کے لیے [<span dir="ltr">Sepolia Etherscan</span>](https://sepolia.etherscan.io) پر اپنے کنٹریکٹ کا صفحہ کھولیں۔
+
+ایک کنٹریکٹ کا <span dir="ltr">ABI</span> یہ بتانے کے لیے ضروری ہے کہ کنٹریکٹ کس فنکشن کو کال کرے گا اور ساتھ ہی یہ یقینی بنانے کے لیے بھی کہ فنکشن اسی فارمیٹ میں ڈیٹا واپس کرے گا جس کی آپ توقع کر رہے ہیں۔ ایک بار جب ہم اپنے کنٹریکٹ کا <span dir="ltr">ABI</span> کاپی کر لیں، تو آئیے اسے آپ کی `src` ڈائرکٹری میں `contract-abi.json` نامی <span dir="ltr">JSON</span> فائل کے طور پر محفوظ کریں۔
+
+آپ کی `contract-abi.json` آپ کے `src` فولڈر میں محفوظ ہونی چاہیے۔
+
+اپنے کنٹریکٹ کے پتے، <span dir="ltr">ABI</span>، اور <span dir="ltr">Alchemy Web3</span> اینڈ پوائنٹ کے ساتھ، ہم اپنے سمارٹ کنٹریکٹ کی ایک مثال (instance) لوڈ کرنے کے لیے [کنٹریکٹ کے طریقہ کار](https://docs.web3js.org/api/web3-eth-contract/class/Contract) کا استعمال کر سکتے ہیں۔ اپنے کنٹریکٹ کا <span dir="ltr">ABI</span> `interact.js` فائل میں امپورٹ کریں اور اپنے کنٹریکٹ کا پتہ شامل کریں۔
+
+```javascript
+// interact.js
+
+const contractABI = require("../contract-abi.json")
+// اپنا کنٹریکٹ کا پتہ یہاں استعمال کریں
+const contractAddress = "0x..."
+```
+
+اب ہم آخر کار اپنے `helloWorldContract` متغیر کو ان کمنٹ کر سکتے ہیں، اور اپنے <span dir="ltr">AlchemyWeb3</span> اینڈ پوائنٹ کا استعمال کرتے ہوئے سمارٹ کنٹریکٹ کو لوڈ کر سکتے ہیں:
+
+```javascript
+// interact.js
+export const helloWorldContract = new web3.eth.Contract(
+  contractABI,
+  contractAddress
+)
+```
+
+خلاصہ کرنے کے لیے، آپ کی `interact.js` کی پہلی <span dir="ltr">12</span> لائنیں اب اس طرح دکھنی چاہئیں:
+
+```javascript
+// interact.js
+
+require("dotenv").config()
+const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY
+const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
+const web3 = createAlchemyWeb3(alchemyKey)
+
 const contractABI = require("../contract-abi.json")
 const contractAddress = "0x6f3f635A9762B47954229Ea479b4541eAF402A6A"
 
@@ -992,11 +983,10 @@ export const helloWorldContract = new web3.eth.Contract(
 )
 ```
 
-اب جب کہ ہمارا کانٹریکٹ لوڈ ہو چکا ہے، ہم اپنا `loadCurrentMessage` فنکشن نافذ کر سکتے ہیں!
+اب جب کہ ہم نے اپنا کنٹریکٹ لوڈ کر لیا ہے، ہم اپنا `loadCurrentMessage` فنکشن نافذ کر سکتے ہیں!
+#### اپنی `interact.js` فائل میں `loadCurrentMessage` کو نافذ کرنا {#implementing-loadcurrentmessage-in-your-interact-js-file}
 
-#### اپنی `interact.js` فائل میں `loadCurrentMessage` کو نافذ کرنا {#implementing-loadCurrentMessage-in-your-interact-js-file}
-
-یہ فنکشن بہت آسان ہے۔ ہم اپنے کانٹریکٹ سے پڑھنے کے لیے ایک سادہ async web3 کال کرنے جا رہے ہیں۔ ہمارا فنکشن اسمارٹ کانٹریکٹ میں محفوظ کردہ پیغام واپس کرے گا:
+یہ فنکشن بہت آسان ہے۔ ہم اپنے کنٹریکٹ سے پڑھنے کے لیے ایک سادہ async web3 کال کرنے جا رہے ہیں۔ ہمارا فنکشن سمارٹ کنٹریکٹ میں محفوظ کردہ پیغام واپس کرے گا:
 
 اپنی `interact.js` فائل میں `loadCurrentMessage` کو درج ذیل میں اپ ڈیٹ کریں:
 
@@ -1009,31 +999,31 @@ export const loadCurrentMessage = async () => {
 }
 ```
 
-چونکہ ہم اس اسمارٹ کانٹریکٹ کو اپنے UI میں دکھانا چاہتے ہیں، اس لیے آئیے اپنے `HelloWorld.js` کمپوننٹ میں `useEffect` فنکشن کو درج ذیل میں اپ ڈیٹ کریں:
+چونکہ ہم اس سمارٹ کنٹریکٹ کو اپنے UI میں دکھانا چاہتے ہیں، اس لیے آئیے اپنے `HelloWorld.js` جزو میں `useEffect` فنکشن کو درج ذیل میں اپ ڈیٹ کریں:
 
 ```javascript
 // HelloWorld.js
 
-// صرف ایک بار کال کیا جاتا ہے
+//صرف ایک بار کال کیا گیا
 useEffect(async () => {
   const message = await loadCurrentMessage()
   setMessage(message)
 }, [])
 ```
 
-نوٹ کریں، ہم صرف یہ چاہتے ہیں کہ ہمارا `loadCurrentMessage` کمپوننٹ کے پہلے رینڈر کے دوران ایک بار کال کیا جائے۔ ہم جلد ہی اسمارٹ کانٹریکٹ میں پیغام تبدیل ہونے کے بعد UI کو خود بخود اپ ڈیٹ کرنے کے لیے `addSmartContractListener` نافذ کریں گے۔
+نوٹ کریں، ہم صرف یہ چاہتے ہیں کہ ہمارا `loadCurrentMessage` جزو کے پہلے رینڈر کے دوران ایک بار کال کیا جائے۔ ہم جلد ہی `addSmartContractListener` کو نافذ کریں گے تاکہ سمارٹ کنٹریکٹ میں پیغام تبدیل ہونے کے بعد UI خود بخود اپ ڈیٹ ہو جائے۔
 
-اس سے پہلے کہ ہم اپنے لسنر کی طرف بڑھیں، آئیے دیکھتے ہیں کہ اب تک ہمارے پاس کیا ہے! اپنی `HelloWorld.js` اور `interact.js` فائلیں محفوظ کریں، اور پھر [http://localhost:3000/](http://localhost:3000/) پر جائیں
+اس سے پہلے کہ ہم اپنے سامع (listener) کی طرف بڑھیں، آئیے چیک کریں کہ اب تک ہمارے پاس کیا ہے! اپنی `HelloWorld.js` اور `interact.js` فائلیں محفوظ کریں، اور پھر [http://localhost:3000/](http://localhost:3000/) پر جائیں
 
-آپ دیکھیں گے کہ موجودہ پیغام اب "No connection to the network" نہیں کہتا۔ اس کے بجائے یہ اسمارٹ کانٹریکٹ میں محفوظ کردہ پیغام کو ظاہر کرتا ہے۔ زبردست!
+آپ دیکھیں گے کہ موجودہ پیغام اب "No connection to the network" نہیں کہتا۔ اس کے بجائے یہ سمارٹ کنٹریکٹ میں محفوظ کردہ پیغام کو ظاہر کرتا ہے۔ زبردست!
 
-#### آپ کا UI اب اسمارٹ کانٹریکٹ میں محفوظ کردہ پیغام کو ظاہر کرنا چاہیے {#your-UI-should-now-reflect-the-message-stored-in-the-smart-contract}
+#### آپ کا UI اب سمارٹ کنٹریکٹ میں محفوظ کردہ پیغام کو ظاہر کرنا چاہیے {#your-ui-should-now-reflect-the-message-stored-in-the-smart-contract}
 
-اب اس لسنر کی بات کرتے ہیں...
+اب اس سامع (listener) کی بات کرتے ہیں...
 
-#### `addSmartContractListener` نافذ کریں {#implement-addsmartcontractlistener}
+#### `addSmartContractListener` کو نافذ کریں {#implement-addsmartcontractlistener}
 
-اگر آپ اس `HelloWorld.sol` فائل کو یاد کریں جو ہم نے [اس ٹیوٹوریل سیریز کے حصہ 1](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract) میں لکھی تھی، تو آپ کو یاد ہوگا کہ ایک اسمارٹ کانٹریکٹ ایونٹ ہے جسے `UpdatedMessages` کہا جاتا ہے جو ہمارے اسمارٹ کانٹریکٹ کے `update` فنکشن کو شروع کرنے کے بعد خارج (emit) ہوتا ہے \(لائنز 9 اور 27 دیکھیں\):
+اگر آپ اس `HelloWorld.sol` فائل کو یاد کریں جو ہم نے [اس ٹیوٹوریل سیریز کے حصہ 1](#step-10-write-our-contract) میں لکھی تھی، تو آپ کو یاد ہوگا کہ `UpdatedMessages` نامی ایک سمارٹ کنٹریکٹ ایونٹ ہے جو ہمارے سمارٹ کنٹریکٹ کے `update` فنکشن کو طلب (invoke) کیے جانے کے بعد خارج (emit) ہوتا ہے (لائنز 9 اور 27 دیکھیں):
 
 ```javascript
 // HelloWorld.sol
@@ -1042,27 +1032,27 @@ useEffect(async () => {
 // مزید جانیں: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
 pragma solidity ^0.7.3;
 
-// `HelloWorld` نامی کنٹریکٹ کی وضاحت کرتا ہے۔
-// کنٹریکٹ فنکشنز اور ڈیٹا (اس کی سٹیٹ) کا مجموعہ ہوتا ہے۔ ایک بار ڈپلائے ہونے کے بعد، کنٹریکٹ ایتھیریم بلاک چین پر ایک مخصوص ایڈریس پر موجود ہوتا ہے۔ مزید جانیں: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// `HelloWorld` نامی ایک کنٹریکٹ کی وضاحت کرتا ہے۔
+// ایک کنٹریکٹ فنکشنز اور ڈیٹا (اس کی حالت) کا مجموعہ ہے۔ ایک بار تعینات ہونے کے بعد، ایک کنٹریکٹ ایتھیریم بلاک چین پر ایک مخصوص پتہ پر رہتا ہے۔ مزید جانیں: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
 contract HelloWorld {
 
-   // جب اپ ڈیٹ فنکشن کال کیا جاتا ہے تو ایمٹ (emit) ہوتا ہے
-   // سمارٹ کنٹریکٹ ایونٹس آپ کے کنٹریکٹ کے لیے یہ بتانے کا ایک طریقہ ہیں کہ بلاک چین پر کچھ ہوا ہے تاکہ آپ کی ایپ کا فرنٹ اینڈ، جو مخصوص ایونٹس کو 'سن' رہا ہو، ان کے ہونے پر ایکشن لے سکے۔
+   //جب اپ ڈیٹ فنکشن کو کال کیا جاتا ہے تو خارج ہوتا ہے
+   //سمارٹ کنٹریکٹ ایونٹس آپ کے کنٹریکٹ کے لیے یہ بتانے کا ایک طریقہ ہیں کہ بلاک چین پر کچھ ہوا ہے آپ کی ایپ کے فرنٹ اینڈ کو، جو کچھ مخصوص ایونٹس کے لیے 'سن' سکتا ہے اور ان کے ہونے پر کارروائی کر سکتا ہے۔
    event UpdatedMessages(string oldStr, string newStr);
 
-   // `string` ٹائپ کے ایک سٹیٹ ویری ایبل `message` کا اعلان کرتا ہے۔
-   // سٹیٹ ویری ایبلز وہ ویری ایبلز ہیں جن کی ویلیوز مستقل طور پر کنٹریکٹ سٹوریج میں محفوظ ہوتی ہیں۔ `public` کی ورڈ ویری ایبلز کو کنٹریکٹ کے باہر سے قابل رسائی بناتا ہے اور ایک فنکشن بناتا ہے جسے دوسرے کنٹریکٹس یا کلائنٹس ویلیو تک رسائی کے لیے کال کر سکتے ہیں۔
+   // `string` قسم کے ایک حالت کے متغیر `message` کا اعلان کرتا ہے۔
+   // حالت کے متغیرات وہ متغیرات ہیں جن کی قدریں مستقل طور پر کنٹریکٹ کی سٹوریج میں محفوظ ہوتی ہیں۔ کلیدی لفظ `public` متغیرات کو کنٹریکٹ کے باہر سے قابل رسائی بناتا ہے اور ایک فنکشن بناتا ہے جسے دوسرے کنٹریکٹ یا کلائنٹس قدر تک رسائی کے لیے کال کر سکتے ہیں۔
    string public message;
 
-   // بہت سی کلاس پر مبنی آبجیکٹ اورینٹڈ زبانوں کی طرح، کنسٹرکٹر ایک خاص فنکشن ہے جو صرف کنٹریکٹ بننے پر ہی ایگزیکیوٹ ہوتا ہے۔
-   // کنسٹرکٹرز کا استعمال کنٹریکٹ کے ڈیٹا کو انیشلائز کرنے کے لیے کیا جاتا ہے۔ مزید جانیں: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+   // بہت سی کلاس پر مبنی آبجیکٹ اورینٹڈ زبانوں کی طرح، کنسٹرکٹر ایک خاص فنکشن ہے جو صرف کنٹریکٹ کی تخلیق پر عمل میں لایا جاتا ہے۔
+   // کنسٹرکٹرز کا استعمال کنٹریکٹ کے ڈیٹا کو شروع کرنے کے لیے کیا جاتا ہے۔ مزید جانیں:https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
    constructor(string memory initMessage) {
 
-      // ایک سٹرنگ آرگومنٹ `initMessage` قبول کرتا ہے اور ویلیو کو کنٹریکٹ کے `message` سٹوریج ویری ایبل میں سیٹ کرتا ہے۔
+      // ایک سٹرنگ آرگومنٹ `initMessage` کو قبول کرتا ہے اور قدر کو کنٹریکٹ کے `message` سٹوریج متغیر میں سیٹ کرتا ہے)۔
       message = initMessage;
    }
 
-   // ایک پبلک فنکشن جو سٹرنگ آرگومنٹ قبول کرتا ہے اور `message` سٹوریج ویری ایبل کو اپ ڈیٹ کرتا ہے۔
+   // ایک پبلک فنکشن جو ایک سٹرنگ آرگومنٹ کو قبول کرتا ہے اور `message` سٹوریج متغیر کو اپ ڈیٹ کرتا ہے۔
    function update(string memory newMessage) public {
       string memory oldMsg = message;
       message = newMessage;
@@ -1071,9 +1061,9 @@ contract HelloWorld {
 }
 ```
 
-اسمارٹ کانٹریکٹ ایونٹس آپ کے کانٹریکٹ کے لیے یہ بتانے کا ایک طریقہ ہیں کہ بلاک چین پر کچھ ہوا ہے \(یعنی، ایک _ایونٹ_ ہوا تھا\) آپ کی فرنٹ اینڈ ایپلیکیشن کو، جو مخصوص ایونٹس کو 'سن' سکتی ہے اور ان کے ہونے پر کارروائی کر سکتی ہے۔
+سمارٹ کنٹریکٹ ایونٹس آپ کے کنٹریکٹ کے لیے یہ بتانے کا ایک طریقہ ہیں کہ بلاک چین پر کچھ ہوا ہے (یعنی، ایک _ایونٹ_ ہوا ہے) آپ کی فرنٹ اینڈ ایپلیکیشن کو، جو مخصوص ایونٹس کے لیے 'سن' سکتی ہے اور ان کے ہونے پر کارروائی کر سکتی ہے۔
 
-`addSmartContractListener` فنکشن خاص طور پر ہمارے Hello World اسمارٹ کانٹریکٹ کے `UpdatedMessages` ایونٹ کو سنے گا، اور نیا پیغام دکھانے کے لیے ہمارے UI کو اپ ڈیٹ کرے گا۔
+یہ `addSmartContractListener` فنکشن خاص طور پر ہمارے Hello World سمارٹ کنٹریکٹ کے `UpdatedMessages` ایونٹ کو سنے گا، اور نیا پیغام دکھانے کے لیے ہمارے UI کو اپ ڈیٹ کرے گا۔
 
 `addSmartContractListener` کو درج ذیل میں تبدیل کریں:
 
@@ -1093,12 +1083,12 @@ function addSmartContractListener() {
 }
 ```
 
-آئیے تفصیل سے دیکھتے ہیں کہ جب لسنر کسی ایونٹ کا پتہ لگاتا ہے تو کیا ہوتا ہے:
+آئیے تفصیل سے دیکھتے ہیں کہ جب سامع (listener) کسی ایونٹ کا پتہ لگاتا ہے تو کیا ہوتا ہے:
 
-- اگر ایونٹ کے خارج ہونے پر کوئی خرابی پیش آتی ہے، تو یہ ہمارے `status` اسٹیٹ ویری ایبل کے ذریعے UI میں ظاہر ہوگا۔
-- بصورت دیگر، ہم واپس کیے گئے `data` آبجیکٹ کا استعمال کریں گے۔ `data.returnValues` ایک ایرے ہے جو صفر پر انڈیکس کیا گیا ہے جہاں ایرے میں پہلا عنصر پچھلے پیغام کو محفوظ کرتا ہے اور دوسرا عنصر اپ ڈیٹ شدہ پیغام کو محفوظ کرتا ہے۔ مجموعی طور پر، ایک کامیاب ایونٹ پر ہم اپنی `message` اسٹرنگ کو اپ ڈیٹ شدہ پیغام پر سیٹ کریں گے، `newMessage` اسٹرنگ کو صاف کریں گے، اور اپنے `status` اسٹیٹ ویری ایبل کو اپ ڈیٹ کریں گے تاکہ یہ ظاہر ہو سکے کہ ہمارے اسمارٹ کانٹریکٹ پر ایک نیا پیغام پبلش کیا گیا ہے۔
+- اگر ایونٹ کے خارج ہونے پر کوئی خرابی پیش آتی ہے، تو یہ ہمارے `status` حالت کے متغیر کے ذریعے UI میں ظاہر ہوگا۔
+- بصورت دیگر، ہم واپس کیے گئے `data` آبجیکٹ کا استعمال کریں گے۔ `data.returnValues` صفر پر انڈیکس کی گئی ایک سرنی (array) ہے جہاں سرنی کا پہلا عنصر پچھلا پیغام محفوظ کرتا ہے اور دوسرا عنصر اپ ڈیٹ شدہ پیغام محفوظ کرتا ہے۔ مجموعی طور پر، ایک کامیاب ایونٹ پر ہم اپنی `message` سٹرنگ کو اپ ڈیٹ شدہ پیغام پر سیٹ کریں گے، `newMessage` سٹرنگ کو صاف کریں گے، اور اپنے `status` حالت کے متغیر کو اپ ڈیٹ کریں گے تاکہ یہ ظاہر ہو سکے کہ ہمارے سمارٹ کنٹریکٹ پر ایک نیا پیغام شائع کیا گیا ہے۔
 
-آخر میں، آئیے اپنے لسنر کو اپنے `useEffect` فنکشن میں کال کریں تاکہ یہ `HelloWorld.js` کمپوننٹ کے پہلے رینڈر پر انیشلائز (initialize) ہو جائے۔ مجموعی طور پر، آپ کا `useEffect` فنکشن کچھ اس طرح دکھنا چاہیے:
+آخر میں، آئیے اپنے سامع کو اپنے `useEffect` فنکشن میں کال کریں تاکہ یہ `HelloWorld.js` جزو کے پہلے رینڈر پر شروع (initialize) ہو جائے۔ مجموعی طور پر، آپ کا `useEffect` فنکشن اس طرح دکھنا چاہیے:
 
 ```javascript
 // HelloWorld.js
@@ -1110,43 +1100,38 @@ useEffect(async () => {
 }, [])
 ```
 
-اب جب کہ ہم اپنے اسمارٹ کانٹریکٹ سے پڑھنے کے قابل ہو گئے ہیں، تو یہ معلوم کرنا بھی بہت اچھا ہوگا کہ اس پر کیسے لکھا جائے! تاہم، اپنی ڈیپ پر لکھنے کے لیے، ہمارے پاس پہلے اس سے منسلک ایک Ethereum والیٹ ہونا چاہیے۔
+اب جب کہ ہم اپنے سمارٹ کنٹریکٹ سے پڑھنے کے قابل ہو گئے ہیں، تو یہ جاننا بھی بہت اچھا ہوگا کہ اس میں کیسے لکھا جائے! تاہم، اپنے dapp میں لکھنے کے لیے، ہمارے پاس پہلے اس سے منسلک ایک ایتھیریم والیٹ ہونا چاہیے۔
 
-لہذا، آگے ہم اپنا Ethereum والیٹ \(MetaMask\) سیٹ اپ کرنے اور پھر اسے اپنی ڈیپ سے منسلک کرنے کا کام کریں گے!
+لہذا، آگے ہم اپنا ایتھیریم والیٹ (میٹاماسک) ترتیب دینے اور پھر اسے اپنے dapp سے منسلک کرنے کا کام کریں گے!
 
-### مرحلہ 4: اپنا Ethereum والیٹ سیٹ اپ کریں {#step-4-set-up-your-ethereum-wallet}
+### مرحلہ 4: اپنا ایتھیریم والیٹ ترتیب دیں {#step-4-set-up-your-ethereum-wallet}
 
-Ethereum چین پر کچھ بھی لکھنے کے لیے، صارفین کو اپنے ورچوئل والیٹ کی پرائیویٹ کیز (private keys) کا استعمال کرتے ہوئے ٹرانزیکشنز پر دستخط کرنے ہوں گے۔ اس ٹیوٹوریل کے لیے، ہم [MetaMask](https://metamask.io/) استعمال کریں گے، جو براؤزر میں ایک ورچوئل والیٹ ہے جسے آپ کے Ethereum اکاؤنٹ ایڈریس کو منظم کرنے کے لیے استعمال کیا جاتا ہے، کیونکہ یہ آخری صارف کے لیے اس ٹرانزیکشن پر دستخط کرنے کو بہت آسان بنا دیتا ہے۔
+ایتھیریم چین پر کچھ بھی لکھنے کے لیے، صارفین کو اپنے ورچوئل والیٹ کی نجی کلیدوں (private keys) کا استعمال کرتے ہوئے ٹرانزیکشنز پر دستخط کرنے ہوں گے۔ اس ٹیوٹوریل کے لیے، ہم [میٹاماسک](https://metamask.io/) استعمال کریں گے، جو براؤزر میں ایک ورچوئل والیٹ ہے جسے آپ کے ایتھیریم اکاؤنٹ کا پتہ منظم کرنے کے لیے استعمال کیا جاتا ہے، کیونکہ یہ آخری صارف کے لیے اس ٹرانزیکشن پر دستخط کرنے کو بہت آسان بنا دیتا ہے۔
 
-اگر آپ اس بارے میں مزید سمجھنا چاہتے ہیں کہ Ethereum پر ٹرانزیکشنز کیسے کام کرتی ہیں، تو Ethereum فاؤنڈیشن کا [یہ صفحہ](/developers/docs/transactions/) دیکھیں۔
+اگر آپ اس بارے میں مزید سمجھنا چاہتے ہیں کہ ایتھیریم پر ٹرانزیکشنز کیسے کام کرتی ہیں، تو ایتھیریم فاؤنڈیشن کا [یہ صفحہ](/developers/docs/transactions/) دیکھیں۔
 
-#### MetaMask ڈاؤن لوڈ کریں {#download-metamask}
+آپ [یہاں](https://metamask.io/download) مفت میں میٹاماسک اکاؤنٹ ڈاؤن لوڈ اور بنا سکتے ہیں۔ جب آپ اکاؤنٹ بنا رہے ہوں، یا اگر آپ کے پاس پہلے سے ہی ایک اکاؤنٹ ہے، تو یقینی بنائیں کہ اوپر دائیں جانب "Sepolia آزمائشی نیٹ ورک" پر سوئچ کریں \(تاکہ ہم اصلی رقم کے ساتھ کام نہ کر رہے ہوں\)۔
+#### ایک فوسٹ سے ایتھر شامل کریں
 
-آپ [یہاں](https://metamask.io/download) مفت میں MetaMask ڈاؤن لوڈ کر سکتے ہیں اور اکاؤنٹ بنا سکتے ہیں۔ جب آپ اکاؤنٹ بنا رہے ہوں، یا اگر آپ کے پاس پہلے سے ہی کوئی اکاؤنٹ ہے، تو یقینی بنائیں کہ اوپری دائیں جانب "Goerli Test Network" پر سوئچ کریں \(تاکہ ہم حقیقی رقم کے ساتھ کام نہ کر رہے ہوں\)۔
-
-#### Faucet سے ایتھر شامل کریں {#add-ether-from-a-faucet}
-
-Ethereum بلاک چین پر ٹرانزیکشن پر دستخط کرنے کے لیے، ہمیں کچھ جعلی Eth کی ضرورت ہوگی۔ Eth حاصل کرنے کے لیے آپ [FaucETH](https://fauceth.komputing.org) پر جا سکتے ہیں اور اپنا Goerli اکاؤنٹ ایڈریس درج کر سکتے ہیں، "Request funds" پر کلک کریں، پھر ڈراپ ڈاؤن میں "Ethereum Testnet Goerli" کو منتخب کریں اور آخر میں دوبارہ "Request funds" بٹن پر کلک کریں۔ آپ کو جلد ہی اپنے MetaMask اکاؤنٹ میں Eth نظر آنا چاہیے!
-
+ایتھیریم بلاک چین پر ٹرانزیکشن پر دستخط کرنے کے لیے، ہمیں کچھ نقلی <span dir="ltr">Eth</span> کی ضرورت ہوگی۔ <span dir="ltr">Eth</span> حاصل کرنے کے لیے آپ [آزمائشی نیٹ ورکس کے صفحے](/developers/docs/networks/#sepolia) پر درج ایک <span dir="ltr">Sepolia</span> فوسٹ پر جا سکتے ہیں اور اپنا <span dir="ltr">Sepolia</span> اکاؤنٹ کا پتہ درج کر سکتے ہیں۔ اس کے فوراً بعد آپ کو اپنے میٹاماسک اکاؤنٹ میں <span dir="ltr">Eth</span> نظر آنا چاہیے!
 #### اپنا بیلنس چیک کریں {#check-your-balance}
 
-یہ دوبارہ چیک کرنے کے لیے کہ ہمارا بیلنس موجود ہے، آئیے [Alchemy’s composer tool](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D) کا استعمال کرتے ہوئے ایک [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) درخواست کریں۔ یہ ہمارے والیٹ میں Eth کی مقدار واپس کرے گا۔ اپنا MetaMask اکاؤنٹ ایڈریس درج کرنے اور "Send Request" پر کلک کرنے کے بعد، آپ کو اس طرح کا جواب نظر آنا چاہیے:
+یہ دوبارہ چیک کرنے کے لیے کہ ہمارا بیلنس موجود ہے، آئیے [<span dir="ltr">Alchemy</span> کے سینڈ باکس ٹول](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) کا استعمال کرتے ہوئے ایک [<span dir="ltr">eth_getBalance</span>](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) درخواست کریں۔ یہ ہمارے والیٹ میں موجود <span dir="ltr">Eth</span> کی مقدار واپس کرے گا۔ اپنا میٹاماسک اکاؤنٹ کا پتہ درج کرنے اور "<span dir="ltr">Send Request</span>" پر کلک کرنے کے بعد، آپ کو اس طرح کا جواب نظر آنا چاہیے:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**نوٹ:** یہ نتیجہ wei میں ہے eth میں نہیں۔ Wei کو ایتھر کی سب سے چھوٹی اکائی کے طور پر استعمال کیا جاتا ہے۔ wei سے eth میں تبدیلی یہ ہے: <span dir="ltr">1 eth = 10¹⁸ wei</span>۔ لہذا اگر ہم 0xde0b6b3a7640000 کو ڈیسیمل میں تبدیل کرتے ہیں تو ہمیں <span dir="ltr">1\*10¹⁸</span> ملتا ہے جو 1 eth کے برابر ہے۔
+**نوٹ:** یہ نتیجہ <span dir="ltr">wei</span> میں ہے، <span dir="ltr">eth</span> میں نہیں۔ <span dir="ltr">Wei</span> کو ایتھر کی سب سے چھوٹی اکائی کے طور پر استعمال کیا جاتا ہے۔ <span dir="ltr">wei</span> سے <span dir="ltr">eth</span> میں تبدیلی یہ ہے: <span dir="ltr">1 eth = 10¹⁸ wei</span>۔ لہذا اگر ہم <span dir="ltr">0xde0b6b3a7640000</span> کو اعشاریہ (decimal) میں تبدیل کریں تو ہمیں <span dir="ltr">1\*10¹⁸</span> ملتا ہے جو <span dir="ltr">1 eth</span> کے برابر ہے۔
 
-شکر ہے! ہماری جعلی رقم پوری طرح موجود ہے! 🤑
+شکر ہے! ہمارے تمام نقلی پیسے وہاں موجود ہیں! 🤑
+### مرحلہ 5: میٹاماسک کو اپنے UI سے منسلک کریں {#step-5-connect-metamask-to-your-ui}
 
-### مرحلہ 5: MetaMask کو اپنے UI سے منسلک کریں {#step-5-connect-metamask-to-your-UI}
+اب جب کہ ہمارا میٹاماسک والیٹ ترتیب دیا جا چکا ہے، آئیے اپنے dapp کو اس سے منسلک کریں!
 
-اب جب کہ ہمارا MetaMask والیٹ سیٹ اپ ہو چکا ہے، آئیے اپنی ڈیپ کو اس سے منسلک کریں!
+#### `connectWallet` فنکشن {#the-connectwallet-function}
 
-#### `connectWallet` فنکشن {#the-connectWallet-function}
-
-اپنی `interact.js` فائل میں، آئیے `connectWallet` فنکشن نافذ کریں، جسے ہم پھر اپنے `HelloWorld.js` کمپوننٹ میں کال کر سکتے ہیں۔
+اپنی `interact.js` فائل میں، آئیے `connectWallet` فنکشن کو نافذ کریں، جسے ہم پھر اپنے `HelloWorld.js` جزو میں کال کر سکتے ہیں۔
 
 آئیے `connectWallet` کو درج ذیل میں تبدیل کریں:
 
@@ -1189,24 +1174,24 @@ export const connectWallet = async () => {
 }
 ```
 
-تو کوڈ کا یہ بڑا بلاک بالکل کیا کرتا ہے؟
+تو کوڈ کا یہ بڑا بلاک دراصل کیا کرتا ہے؟
 
 خیر، سب سے پہلے، یہ چیک کرتا ہے کہ آیا آپ کے براؤزر میں `window.ethereum` فعال ہے۔
 
-`window.ethereum` ایک عالمی API ہے جسے MetaMask اور دیگر والیٹ فراہم کنندگان کے ذریعے انجیکٹ کیا جاتا ہے جو ویب سائٹس کو صارفین کے Ethereum اکاؤنٹس کی درخواست کرنے کی اجازت دیتا ہے۔ اگر منظور ہو جائے، تو یہ ان بلاک چینز سے ڈیٹا پڑھ سکتا ہے جن سے صارف منسلک ہے، اور تجویز کر سکتا ہے کہ صارف پیغامات اور ٹرانزیکشنز پر دستخط کرے۔ مزید معلومات کے لیے [MetaMask docs](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) دیکھیں!
+`window.ethereum` ایک عالمی API ہے جسے میٹاماسک اور دیگر والیٹ فراہم کنندگان کے ذریعے انجیکٹ کیا جاتا ہے جو ویب سائٹس کو صارفین کے ایتھیریم اکاؤنٹس کی درخواست کرنے کی اجازت دیتا ہے۔ اگر منظور ہو جائے، تو یہ ان بلاک چینز سے ڈیٹا پڑھ سکتا ہے جن سے صارف منسلک ہے، اور تجویز کر سکتا ہے کہ صارف پیغامات اور ٹرانزیکشنز پر دستخط کرے۔ مزید معلومات کے لیے [میٹاماسک کی دستاویزات](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) دیکھیں!
 
-اگر `window.ethereum` موجود _نہیں_ ہے، تو اس کا مطلب ہے کہ MetaMask انسٹال نہیں ہے۔ اس کے نتیجے میں ایک JSON آبجیکٹ واپس کیا جاتا ہے، جہاں واپس کیا گیا `address` ایک خالی اسٹرنگ ہوتا ہے، اور `status` JSX آبجیکٹ یہ بتاتا ہے کہ صارف کو MetaMask انسٹال کرنا چاہیے۔
+اگر `window.ethereum` موجود _نہیں_ ہے، تو اس کا مطلب ہے کہ میٹاماسک انسٹال نہیں ہے۔ اس کے نتیجے میں ایک JSON آبجیکٹ واپس کیا جاتا ہے، جہاں واپس کیا گیا `address` ایک خالی سٹرنگ ہے، اور `status` JSX آبجیکٹ یہ بتاتا ہے کہ صارف کو میٹاماسک انسٹال کرنا چاہیے۔
 
 اب اگر `window.ethereum` موجود _ہے_، تو تب چیزیں دلچسپ ہو جاتی ہیں۔
 
-ایک try/catch لوپ کا استعمال کرتے ہوئے، ہم [`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts) کو کال کر کے MetaMask سے منسلک ہونے کی کوشش کریں گے۔ اس فنکشن کو کال کرنے سے براؤزر میں MetaMask کھل جائے گا، جس کے ذریعے صارف کو اپنا والیٹ آپ کی ڈیپ سے منسلک کرنے کا اشارہ کیا جائے گا۔
+ایک try/catch لوپ کا استعمال کرتے ہوئے، ہم [`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts) کو کال کر کے میٹاماسک سے منسلک ہونے کی کوشش کریں گے۔ اس فنکشن کو کال کرنے سے براؤزر میں میٹاماسک کھل جائے گا، جس کے ذریعے صارف کو اپنا والیٹ آپ کے dapp سے منسلک کرنے کا کہا جائے گا۔
 
-- اگر صارف منسلک ہونے کا انتخاب کرتا ہے، تو `method: "eth_requestAccounts"` ایک ایرے واپس کرے گا جس میں صارف کے وہ تمام اکاؤنٹ ایڈریسز شامل ہوں گے جو ڈیپ سے منسلک ہوئے تھے۔ مجموعی طور پر، ہمارا `connectWallet` فنکشن ایک JSON آبجیکٹ واپس کرے گا جس میں اس ایرے کا _پہلا_ `address` \(لائن 9 دیکھیں\) اور ایک `status` پیغام شامل ہوگا جو صارف کو اسمارٹ کانٹریکٹ پر ایک پیغام لکھنے کا اشارہ کرتا ہے۔
-- اگر صارف کنکشن کو مسترد کر دیتا ہے، تو JSON آبجیکٹ میں واپس کیے گئے `address` کے لیے ایک خالی اسٹرنگ اور ایک `status` پیغام شامل ہوگا جو یہ ظاہر کرتا ہے کہ صارف نے کنکشن کو مسترد کر دیا ہے۔
+- اگر صارف منسلک ہونے کا انتخاب کرتا ہے، تو `method: "eth_requestAccounts"` ایک سرنی (array) واپس کرے گا جس میں صارف کے ان تمام اکاؤنٹس کے پتے شامل ہوں گے جو dapp سے منسلک ہوئے ہیں۔ مجموعی طور پر، ہمارا `connectWallet` فنکشن ایک JSON آبجیکٹ واپس کرے گا جس میں اس سرنی کا _پہلا_ `address` (لائن 9 دیکھیں) اور ایک `status` پیغام شامل ہوگا جو صارف کو سمارٹ کنٹریکٹ میں پیغام لکھنے کی ترغیب دیتا ہے۔
+- اگر صارف کنکشن کو مسترد کر دیتا ہے، تو JSON آبجیکٹ میں واپس کیے گئے `address` کے لیے ایک خالی سٹرنگ اور ایک `status` پیغام شامل ہوگا جو یہ ظاہر کرتا ہے کہ صارف نے کنکشن کو مسترد کر دیا ہے۔
 
-اب جب کہ ہم نے یہ `connectWallet` فنکشن لکھ لیا ہے، اگلا مرحلہ اسے اپنے `HelloWorld.js` کمپوننٹ میں کال کرنا ہے۔
+اب جب کہ ہم نے یہ `connectWallet` فنکشن لکھ لیا ہے، اگلا مرحلہ اسے اپنے `HelloWorld.js` جزو میں کال کرنا ہے۔
 
-#### `connectWallet` فنکشن کو اپنے `HelloWorld.js` UI کمپوننٹ میں شامل کریں {#add-the-connectWallet-function-to-your-HelloWorld-js-ui-component}
+#### اپنے `HelloWorld.js` UI جزو میں `connectWallet` فنکشن شامل کریں {#add-the-connectwallet-function-to-your-helloworld-js-ui-component}
 
 `HelloWorld.js` میں `connectWalletPressed` فنکشن پر جائیں، اور اسے درج ذیل میں اپ ڈیٹ کریں:
 
@@ -1220,21 +1205,21 @@ const connectWalletPressed = async () => {
 }
 ```
 
-غور کریں کہ ہماری زیادہ تر فعالیت کو `interact.js` فائل سے ہمارے `HelloWorld.js` کمپوننٹ سے کیسے الگ (abstract) کیا گیا ہے؟ یہ اس لیے ہے تاکہ ہم M-V-C پیراڈائم کی تعمیل کریں!
+غور کریں کہ ہماری زیادہ تر فعالیت کو `interact.js` فائل سے ہمارے `HelloWorld.js` جزو سے کیسے الگ (abstract) کیا گیا ہے؟ یہ اس لیے ہے تاکہ ہم M-V-C پیراڈائم کی تعمیل کر سکیں!
 
-`connectWalletPressed` میں، ہم بس اپنے امپورٹ کردہ `connectWallet` فنکشن کو ایک await کال کرتے ہیں، اور اس کے جواب کا استعمال کرتے ہوئے، ہم اپنے `status` اور `walletAddress` ویری ایبلز کو ان کے اسٹیٹ ہکس کے ذریعے اپ ڈیٹ کرتے ہیں۔
+`connectWalletPressed` میں، ہم بس اپنے امپورٹ کردہ `connectWallet` فنکشن کو ایک await کال کرتے ہیں، اور اس کے جواب کا استعمال کرتے ہوئے، ہم اپنے `status` اور `walletAddress` متغیرات کو ان کے اسٹیٹ ہکس کے ذریعے اپ ڈیٹ کرتے ہیں۔
 
-اب، آئیے دونوں فائلوں \(`HelloWorld.js` اور `interact.js`\) کو محفوظ کریں اور اب تک کے اپنے UI کی جانچ کریں۔
+اب، آئیے دونوں فائلوں (`HelloWorld.js` اور `interact.js`) کو محفوظ کریں اور اب تک کے اپنے UI کی جانچ کریں۔
 
 اپنے براؤزر کو [http://localhost:3000/](http://localhost:3000/) صفحہ پر کھولیں، اور صفحے کے اوپری دائیں جانب "Connect Wallet" بٹن دبائیں۔
 
-اگر آپ کے پاس MetaMask انسٹال ہے، تو آپ کو اپنا والیٹ اپنی ڈیپ سے منسلک کرنے کا اشارہ کیا جانا چاہیے۔ منسلک ہونے کی دعوت قبول کریں۔
+اگر آپ کے پاس میٹاماسک انسٹال ہے، تو آپ کو اپنا والیٹ اپنے dapp سے منسلک کرنے کا کہا جائے گا۔ منسلک ہونے کی دعوت قبول کریں۔
 
-آپ کو دیکھنا چاہیے کہ والیٹ بٹن اب ظاہر کرتا ہے کہ آپ کا ایڈریس منسلک ہے! زبردست 🔥
+آپ کو دیکھنا چاہیے کہ والیٹ کا بٹن اب ظاہر کرتا ہے کہ آپ کا پتہ منسلک ہے! زبردست 🔥
 
-اس کے بعد، صفحہ کو ریفریش کرنے کی کوشش کریں... یہ عجیب ہے۔ ہمارا والیٹ بٹن ہمیں MetaMask کو منسلک کرنے کا اشارہ کر رہا ہے، حالانکہ یہ پہلے سے ہی منسلک ہے...
+اس کے بعد، صفحہ کو ریفریش کرنے کی کوشش کریں... یہ عجیب ہے۔ ہمارا والیٹ بٹن ہمیں میٹاماسک کو منسلک کرنے کا کہہ رہا ہے، حالانکہ یہ پہلے سے ہی منسلک ہے...
 
-تاہم، ڈرنے کی کوئی بات نہیں! ہم `getCurrentWalletConnected` کو نافذ کر کے آسانی سے اس مسئلے کو حل کر سکتے ہیں، جو یہ چیک کرے گا کہ آیا کوئی ایڈریس پہلے سے ہی ہماری ڈیپ سے منسلک ہے اور اس کے مطابق ہمارے UI کو اپ ڈیٹ کرے گا!
+تاہم، ڈرنے کی کوئی بات نہیں! ہم `getCurrentWalletConnected` کو نافذ کر کے آسانی سے اس مسئلے کو حل کر سکتے ہیں، جو یہ چیک کرے گا کہ آیا کوئی پتہ پہلے سے ہی ہمارے dapp سے منسلک ہے اور اس کے مطابق ہمارے UI کو اپ ڈیٹ کرے گا!
 
 #### `getCurrentWalletConnected` فنکشن {#the-getcurrentwalletconnected-function}
 
@@ -1285,11 +1270,11 @@ export const getCurrentWalletConnected = async () => {
 }
 ```
 
-یہ کوڈ اس `connectWallet` فنکشن سے _بہت_ ملتا جلتا ہے جو ہم نے ابھی پچھلے مرحلے میں لکھا تھا۔
+یہ کوڈ اس `connectWallet` فنکشن سے _بہت_ ملتا جلتا ہے جو ہم نے پچھلے مرحلے میں لکھا تھا۔
 
-بنیادی فرق یہ ہے کہ `eth_requestAccounts` طریقہ کار کو کال کرنے کے بجائے، جو صارف کے لیے اپنا والیٹ منسلک کرنے کے لیے MetaMask کھولتا ہے، یہاں ہم `eth_accounts` طریقہ کار کو کال کرتے ہیں، جو بس ایک ایرے واپس کرتا ہے جس میں فی الحال ہماری ڈیپ سے منسلک MetaMask ایڈریسز شامل ہوتے ہیں۔
+بنیادی فرق یہ ہے کہ `eth_requestAccounts` طریقہ کار کو کال کرنے کے بجائے، جو صارف کے لیے اپنا والیٹ منسلک کرنے کے لیے میٹاماسک کھولتا ہے، یہاں ہم `eth_accounts` طریقہ کار کو کال کرتے ہیں، جو بس ایک سرنی واپس کرتا ہے جس میں فی الحال ہمارے dapp سے منسلک میٹاماسک پتے شامل ہوتے ہیں۔
 
-اس فنکشن کو عمل میں دیکھنے کے لیے، آئیے اسے اپنے `HelloWorld.js` کمپوننٹ کے `useEffect` فنکشن میں کال کریں:
+اس فنکشن کو کام کرتے ہوئے دیکھنے کے لیے، آئیے اسے اپنے `HelloWorld.js` جزو کے `useEffect` فنکشن میں کال کریں:
 
 ```javascript
 // HelloWorld.js
@@ -1305,15 +1290,15 @@ useEffect(async () => {
 }, [])
 ```
 
-غور کریں، ہم اپنے `walletAddress` اور `status` اسٹیٹ ویری ایبلز کو اپ ڈیٹ کرنے کے لیے `getCurrentWalletConnected` کی اپنی کال کے جواب کا استعمال کرتے ہیں۔
+غور کریں، ہم اپنے `walletAddress` اور `status` حالت کے متغیرات کو اپ ڈیٹ کرنے کے لیے `getCurrentWalletConnected` کو کی گئی اپنی کال کے جواب کا استعمال کرتے ہیں۔
 
-اب جب کہ آپ نے یہ کوڈ شامل کر لیا ہے، آئیے اپنے براؤزر ونڈو کو ریفریش کرنے کی کوشش کریں۔
+اب جب کہ آپ نے یہ کوڈ شامل کر لیا ہے، آئیے اپنے براؤزر کی ونڈو کو ریفریش کرنے کی کوشش کریں۔
 
-بہت خوب! بٹن کو یہ بتانا چاہیے کہ آپ منسلک ہیں، اور آپ کے منسلک والیٹ کے ایڈریس کا پیش نظارہ دکھانا چاہیے - یہاں تک کہ آپ کے ریفریش کرنے کے بعد بھی!
+بہت خوب! بٹن کو یہ بتانا چاہیے کہ آپ منسلک ہیں، اور آپ کے منسلک والیٹ کے پتے کا پیش نظارہ دکھانا چاہیے - یہاں تک کہ آپ کے ریفریش کرنے کے بعد بھی!
 
-#### `addWalletListener` نافذ کریں {#implement-addwalletlistener}
+#### `addWalletListener` کو نافذ کریں {#implement-addwalletlistener}
 
-ہمارے ڈیپ والیٹ سیٹ اپ کا آخری مرحلہ والیٹ لسنر کو نافذ کرنا ہے تاکہ جب ہمارے والیٹ کی اسٹیٹ تبدیل ہو تو ہمارا UI اپ ڈیٹ ہو جائے، جیسے کہ جب صارف منقطع ہوتا ہے یا اکاؤنٹس تبدیل کرتا ہے۔
+ہمارے dapp والیٹ سیٹ اپ کا آخری مرحلہ والیٹ سامع (listener) کو نافذ کرنا ہے تاکہ جب ہمارے والیٹ کی حالت تبدیل ہو، جیسے کہ جب صارف منقطع ہوتا ہے یا اکاؤنٹس تبدیل کرتا ہے، تو ہمارا UI اپ ڈیٹ ہو جائے۔
 
 اپنی `HelloWorld.js` فائل میں، اپنے `addWalletListener` فنکشن کو درج ذیل کے طور پر تبدیل کریں:
 
@@ -1346,9 +1331,9 @@ function addWalletListener() {
 
 مجھے یقین ہے کہ اس مقام پر آپ کو یہ سمجھنے کے لیے ہماری مدد کی بھی ضرورت نہیں ہے کہ یہاں کیا ہو رہا ہے، لیکن مکمل ہونے کے مقاصد کے لیے، آئیے اسے جلدی سے تفصیل سے دیکھتے ہیں:
 
-- سب سے پہلے، ہمارا فنکشن چیک کرتا ہے کہ آیا `window.ethereum` فعال ہے \(یعنی، MetaMask انسٹال ہے\)۔
-  - اگر ایسا نہیں ہے، تو ہم بس اپنے `status` اسٹیٹ ویری ایبل کو ایک JSX اسٹرنگ پر سیٹ کرتے ہیں جو صارف کو MetaMask انسٹال کرنے کا اشارہ کرتا ہے۔
-  - اگر یہ فعال ہے، تو ہم لائن 3 پر لسنر `window.ethereum.on("accountsChanged")` سیٹ اپ کرتے ہیں جو MetaMask والیٹ میں اسٹیٹ کی تبدیلیوں کو سنتا ہے، جس میں وہ وقت شامل ہے جب صارف ڈیپ سے ایک اضافی اکاؤنٹ منسلک کرتا ہے، اکاؤنٹس تبدیل کرتا ہے، یا کسی اکاؤنٹ کو منقطع کرتا ہے۔ اگر کم از کم ایک اکاؤنٹ منسلک ہے، تو `walletAddress` اسٹیٹ ویری ایبل کو لسنر کے ذریعے واپس کیے گئے `accounts` ایرے میں پہلے اکاؤنٹ کے طور پر اپ ڈیٹ کیا جاتا ہے۔ بصورت دیگر، `walletAddress` کو ایک خالی اسٹرنگ کے طور پر سیٹ کیا جاتا ہے۔
+- سب سے پہلے، ہمارا فنکشن چیک کرتا ہے کہ آیا `window.ethereum` فعال ہے (یعنی، میٹاماسک انسٹال ہے)۔
+  - اگر ایسا نہیں ہے، تو ہم بس اپنے `status` حالت کے متغیر کو ایک JSX سٹرنگ پر سیٹ کرتے ہیں جو صارف کو میٹاماسک انسٹال کرنے کی ترغیب دیتی ہے۔
+  - اگر یہ فعال ہے، تو ہم لائن 3 پر سامع `window.ethereum.on("accountsChanged")` ترتیب دیتے ہیں جو میٹاماسک والیٹ میں حالت کی تبدیلیوں کو سنتا ہے، جس میں وہ وقت شامل ہے جب صارف dapp سے ایک اضافی اکاؤنٹ منسلک کرتا ہے، اکاؤنٹس تبدیل کرتا ہے، یا کسی اکاؤنٹ کو منقطع کرتا ہے۔ اگر کم از کم ایک اکاؤنٹ منسلک ہے، تو `walletAddress` حالت کا متغیر سامع کے ذریعے واپس کی گئی `accounts` سرنی میں پہلے اکاؤنٹ کے طور پر اپ ڈیٹ ہو جاتا ہے۔ بصورت دیگر، `walletAddress` کو ایک خالی سٹرنگ کے طور پر سیٹ کیا جاتا ہے۔
 
 آخر میں، ہمیں اسے اپنے `useEffect` فنکشن میں کال کرنا چاہیے:
 
@@ -1368,23 +1353,23 @@ useEffect(async () => {
 }, [])
 ```
 
-اور بس! ہم نے کامیابی کے ساتھ اپنے والیٹ کی تمام فعالیت کی پروگرامنگ مکمل کر لی ہے! اب اپنے آخری کام کی طرف: اپنے اسمارٹ کانٹریکٹ میں محفوظ کردہ پیغام کو اپ ڈیٹ کرنا!
+اور بس! ہم نے کامیابی کے ساتھ اپنے والیٹ کی تمام فعالیت کی پروگرامنگ مکمل کر لی ہے! اب ہمارے آخری کام کی طرف: ہمارے سمارٹ کنٹریکٹ میں محفوظ کردہ پیغام کو اپ ڈیٹ کرنا!
 
-### مرحلہ 6: `updateMessage` فنکشن نافذ کریں {#step-6-implement-the-updateMessage-function}
+### مرحلہ 6: `updateMessage` فنکشن کو نافذ کریں {#step-6-implement-the-updatemessage-function}
 
-ٹھیک ہے دوستو، ہم آخری مرحلے پر پہنچ گئے ہیں! اپنی `interact.js` فائل کے `updateMessage` میں، ہم درج ذیل کام کرنے جا رہے ہیں:
+ٹھیک ہے دوستو، ہم آخری مرحلے پر پہنچ گئے ہیں! آپ کی `interact.js` فائل کے `updateMessage` میں، ہم درج ذیل کام کرنے جا رہے ہیں:
 
-1. یقینی بنائیں کہ جو پیغام ہم اپنے اسمارٹ کانٹریکٹ میں پبلش کرنا چاہتے ہیں وہ درست ہے
-2. MetaMask کا استعمال کرتے ہوئے اپنی ٹرانزیکشن پر دستخط کریں
-3. اس فنکشن کو اپنے `HelloWorld.js` فرنٹ اینڈ کمپوننٹ سے کال کریں
+1. اس بات کو یقینی بنائیں کہ جو پیغام ہم اپنے سمارٹ کنٹریکٹ میں شائع کرنا چاہتے ہیں وہ درست ہے
+2. میٹاماسک کا استعمال کرتے ہوئے اپنی ٹرانزیکشن پر دستخط کریں
+3. اس فنکشن کو اپنے `HelloWorld.js` فرنٹ اینڈ جزو سے کال کریں
 
-اس میں زیادہ وقت نہیں لگے گا؛ آئیے اس ڈیپ کو ختم کریں!
+اس میں زیادہ وقت نہیں لگے گا؛ آئیے اس dapp کو ختم کریں!
 
-#### ان پٹ ایرر ہینڈلنگ {#input-error-handling}
+#### ان پٹ کی خرابیوں کو سنبھالنا {#input-error-handling}
 
-فطری طور پر، فنکشن کے آغاز میں کسی قسم کی ان پٹ ایرر ہینڈلنگ کا ہونا سمجھ میں آتا ہے۔
+فطری طور پر، فنکشن کے آغاز میں کسی قسم کی ان پٹ کی خرابیوں کو سنبھالنے (error handling) کا ہونا سمجھ میں آتا ہے۔
 
-ہم چاہیں گے کہ ہمارا فنکشن جلد واپس آ جائے اگر کوئی MetaMask ایکسٹینشن انسٹال نہیں ہے، کوئی والیٹ منسلک نہیں ہے \(یعنی، پاس کیا گیا `address` ایک خالی اسٹرنگ ہے\)، یا `message` ایک خالی اسٹرنگ ہے۔ آئیے `updateMessage` میں درج ذیل ایرر ہینڈلنگ شامل کریں:
+ہم چاہیں گے کہ ہمارا فنکشن جلد واپس آ جائے اگر کوئی میٹاماسک ایکسٹینشن انسٹال نہیں ہے، کوئی والیٹ منسلک نہیں ہے (یعنی، پاس کیا گیا `address` ایک خالی سٹرنگ ہے)، یا `message` ایک خالی سٹرنگ ہے۔ آئیے `updateMessage` میں درج ذیل ایرر ہینڈلنگ شامل کریں:
 
 ```javascript
 // interact.js
@@ -1405,23 +1390,23 @@ export const updateMessage = async (address, message) => {
 }
 ```
 
-اب جب کہ اس میں مناسب ان پٹ ایرر ہینڈلنگ ہے، اب وقت آگیا ہے کہ MetaMask کے ذریعے ٹرانزیکشن پر دستخط کریں!
+اب جب کہ اس میں مناسب ان پٹ ایرر ہینڈلنگ موجود ہے، اب وقت آگیا ہے کہ میٹاماسک کے ذریعے ٹرانزیکشن پر دستخط کیے جائیں!
 
 #### اپنی ٹرانزیکشن پر دستخط کرنا {#signing-our-transaction}
 
-اگر آپ پہلے ہی روایتی web3 Ethereum ٹرانزیکشنز کے ساتھ آرام دہ ہیں، تو جو کوڈ ہم آگے لکھیں گے وہ بہت مانوس ہوگا۔ اپنے ان پٹ ایرر ہینڈلنگ کوڈ کے نیچے، `updateMessage` میں درج ذیل شامل کریں:
+اگر آپ پہلے ہی روایتی web3 ایتھیریم ٹرانزیکشنز کے ساتھ آرام دہ ہیں، تو جو کوڈ ہم آگے لکھیں گے وہ بہت مانوس ہوگا۔ اپنے ان پٹ ایرر ہینڈلنگ کوڈ کے نیچے، `updateMessage` میں درج ذیل شامل کریں:
 
 ```javascript
 // interact.js
 
-// ٹرانزیکشن پیرامیٹرز سیٹ کریں
+//ٹرانزیکشن کے پیرامیٹرز سیٹ کریں
 const transactionParameters = {
-  to: contractAddress, // کنٹریکٹ پبلیکیشنز کے علاوہ درکار ہے۔
-  from: address, // صارف کے فعال ایڈریس سے مماثل ہونا چاہیے۔
+  to: contractAddress, // کنٹریکٹ کی اشاعتوں کے علاوہ درکار ہے۔
+  from: address, // صارف کے فعال پتہ سے مماثل ہونا چاہیے۔
   data: helloWorldContract.methods.update(message).encodeABI(),
 }
 
-// ٹرانزیکشن سائن کریں
+//ٹرانزیکشن پر دستخط کریں
 try {
   const txHash = await window.ethereum.request({
     method: "eth_sendTransaction",
@@ -1447,26 +1432,26 @@ try {
 }
 ```
 
-آئیے تفصیل سے دیکھتے ہیں کہ کیا ہو رہا ہے۔ سب سے پہلے، ہم اپنے ٹرانزیکشنز کے پیرامیٹرز سیٹ اپ کرتے ہیں، جہاں:
+آئیے تفصیل سے دیکھتے ہیں کہ کیا ہو رہا ہے۔ سب سے پہلے، ہم اپنے ٹرانزیکشنز کے پیرامیٹرز ترتیب دیتے ہیں، جہاں:
 
-- `to` وصول کنندہ کا ایڈریس \(ہمارا اسمارٹ کانٹریکٹ\) بتاتا ہے
-- `from` ٹرانزیکشن کے دستخط کنندہ کو بتاتا ہے، وہ `address` ویری ایبل جو ہم نے اپنے فنکشن میں پاس کیا تھا
-- `data` میں ہمارے Hello World اسمارٹ کانٹریکٹ کے `update` طریقہ کار کی کال شامل ہے، جو ہمارے `message` اسٹرنگ ویری ایبل کو ان پٹ کے طور پر وصول کرتی ہے
+- `to` وصول کنندہ کا پتہ (ہمارا سمارٹ کنٹریکٹ) بتاتا ہے
+- `from` ٹرانزیکشن پر دستخط کرنے والے کو بتاتا ہے، وہ `address` متغیر جو ہم نے اپنے فنکشن میں پاس کیا تھا
+- `data` میں ہمارے Hello World سمارٹ کنٹریکٹ کے `update` طریقہ کار کی کال شامل ہے، جو ہمارے `message` سٹرنگ متغیر کو ان پٹ کے طور پر وصول کرتی ہے
 
-پھر، ہم ایک await کال کرتے ہیں، `window.ethereum.request`، جہاں ہم MetaMask سے ٹرانزیکشن پر دستخط کرنے کو کہتے ہیں۔ غور کریں، لائنز 11 اور 12 پر، ہم اپنا eth طریقہ کار، `eth_sendTransaction` بتا رہے ہیں اور اپنے `transactionParameters` پاس کر رہے ہیں۔
+پھر، ہم ایک await کال کرتے ہیں، `window.ethereum.request`، جہاں ہم میٹاماسک سے ٹرانزیکشن پر دستخط کرنے کو کہتے ہیں۔ غور کریں، لائنز 11 اور 12 پر، ہم اپنا eth طریقہ کار، `eth_sendTransaction` بتا رہے ہیں اور اپنا `transactionParameters` پاس کر رہے ہیں۔
 
-اس مقام پر، براؤزر میں MetaMask کھل جائے گا، اور صارف کو ٹرانزیکشن پر دستخط کرنے یا اسے مسترد کرنے کا اشارہ کرے گا۔
+اس مقام پر، میٹاماسک براؤزر میں کھل جائے گا، اور صارف کو ٹرانزیکشن پر دستخط کرنے یا اسے مسترد کرنے کا کہے گا۔
 
-- اگر ٹرانزیکشن کامیاب ہو جاتی ہے، تو فنکشن ایک JSON آبجیکٹ واپس کرے گا جہاں `status` JSX اسٹرنگ صارف کو اپنی ٹرانزیکشن کے بارے میں مزید معلومات کے لیے Etherscan چیک کرنے کا اشارہ کرتی ہے۔
-- اگر ٹرانزیکشن ناکام ہو جاتی ہے، تو فنکشن ایک JSON آبجیکٹ واپس کرے گا جہاں `status` اسٹرنگ ایرر کا پیغام بتاتی ہے۔
+- اگر ٹرانزیکشن کامیاب ہو جاتی ہے، تو فنکشن ایک JSON آبجیکٹ واپس کرے گا جہاں `status` JSX سٹرنگ صارف کو اپنی ٹرانزیکشن کے بارے میں مزید معلومات کے لیے Etherscan چیک کرنے کی ترغیب دیتی ہے۔
+- اگر ٹرانزیکشن ناکام ہو جاتی ہے، تو فنکشن ایک JSON آبجیکٹ واپس کرے گا جہاں `status` سٹرنگ خرابی کا پیغام بتاتی ہے۔
 
-مجموعی طور پر، ہمارا `updateMessage` فنکشن کچھ اس طرح دکھنا چاہیے:
+مجموعی طور پر، ہمارا `updateMessage` فنکشن اس طرح دکھنا چاہیے:
 
 ```javascript
 // interact.js
 
 export const updateMessage = async (address, message) => {
-  // ان پٹ ایرر ہینڈلنگ
+  //ان پٹ ایرر ہینڈلنگ
   if (!window.ethereum || address === null) {
     return {
       status:
@@ -1480,14 +1465,14 @@ export const updateMessage = async (address, message) => {
     }
   }
 
-  // ٹرانزیکشن پیرامیٹرز سیٹ کریں
+  //ٹرانزیکشن کے پیرامیٹرز سیٹ کریں
   const transactionParameters = {
-    to: contractAddress, // کنٹریکٹ پبلیکیشنز کے علاوہ درکار ہے۔
-    from: address, // صارف کے فعال ایڈریس سے مماثل ہونا چاہیے۔
+    to: contractAddress, // کنٹریکٹ کی اشاعتوں کے علاوہ درکار ہے۔
+    from: address, // صارف کے فعال پتہ سے مماثل ہونا چاہیے۔
     data: helloWorldContract.methods.update(message).encodeABI(),
   }
 
-  // ٹرانزیکشن سائن کریں
+  //ٹرانزیکشن پر دستخط کریں
   try {
     const txHash = await window.ethereum.request({
       method: "eth_sendTransaction",
@@ -1514,11 +1499,11 @@ export const updateMessage = async (address, message) => {
 }
 ```
 
-آخر میں، ہمیں اپنے `updateMessage` فنکشن کو اپنے `HelloWorld.js` کمپوننٹ سے منسلک کرنے کی ضرورت ہے۔
+آخر میں، ہمیں اپنے `updateMessage` فنکشن کو اپنے `HelloWorld.js` جزو سے منسلک کرنے کی ضرورت ہے۔
 
 #### `updateMessage` کو `HelloWorld.js` فرنٹ اینڈ سے منسلک کریں {#connect-updatemessage-to-the-helloworld-js-frontend}
 
-ہمارے `onUpdatePressed` فنکشن کو امپورٹ کردہ `updateMessage` فنکشن کو ایک await کال کرنی چاہیے اور `status` اسٹیٹ ویری ایبل کو تبدیل کرنا چاہیے تاکہ یہ ظاہر ہو سکے کہ ہماری ٹرانزیکشن کامیاب ہوئی یا ناکام:
+ہمارے `onUpdatePressed` فنکشن کو امپورٹ کردہ `updateMessage` فنکشن کو ایک await کال کرنی چاہیے اور `status` حالت کے متغیر کو تبدیل کرنا چاہیے تاکہ یہ ظاہر ہو سکے کہ ہماری ٹرانزیکشن کامیاب ہوئی یا ناکام:
 
 ```javascript
 // HelloWorld.js
@@ -1529,18 +1514,18 @@ const onUpdatePressed = async () => {
 }
 ```
 
-یہ بہت صاف اور سادہ ہے۔ اور اندازہ لگائیں کیا... آپ کی ڈیپ مکمل ہو گئی ہے!!!
+یہ بہت صاف اور سادہ ہے۔ اور اندازہ لگائیں کیا... آپ کا DAPP مکمل ہو گیا ہے!!!
 
 آگے بڑھیں اور **Update** بٹن کی جانچ کریں!
 
-### اپنی خود کی کسٹم ڈیپ بنائیں {#make-your-own-custom-dapp}
+### اپنا خود کا کسٹم dapp بنائیں {#make-your-own-custom-dapp}
 
 واہ، آپ ٹیوٹوریل کے اختتام تک پہنچ گئے! خلاصہ کرنے کے لیے، آپ نے سیکھا کہ کیسے:
 
-- ایک MetaMask والیٹ کو اپنے ڈیپ پروجیکٹ سے منسلک کریں
-- [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) API کا استعمال کرتے ہوئے اپنے اسمارٹ کانٹریکٹ سے ڈیٹا پڑھیں
-- MetaMask کا استعمال کرتے ہوئے Ethereum ٹرانزیکشنز پر دستخط کریں
+- ایک میٹاماسک والیٹ کو اپنے dapp پروجیکٹ سے منسلک کریں
+- [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) API کا استعمال کرتے ہوئے اپنے سمارٹ کنٹریکٹ سے ڈیٹا پڑھیں
+- میٹاماسک کا استعمال کرتے ہوئے ایتھیریم ٹرانزیکشنز پر دستخط کریں
 
-اب آپ اس ٹیوٹوریل سے حاصل کردہ مہارتوں کو لاگو کر کے اپنا خود کا کسٹم ڈیپ پروجیکٹ بنانے کے لیے پوری طرح تیار ہیں! ہمیشہ کی طرح، اگر آپ کے کوئی سوالات ہیں، تو [Alchemy Discord](https://discord.gg/gWuC7zB) میں مدد کے لیے ہم سے رابطہ کرنے میں ہچکچاہٹ محسوس نہ کریں۔ 🧙‍♂️
+اب آپ اس ٹیوٹوریل سے حاصل کردہ مہارتوں کو لاگو کر کے اپنا خود کا کسٹم dapp پروجیکٹ بنانے کے لیے پوری طرح لیس ہیں! ہمیشہ کی طرح، اگر آپ کے کوئی سوالات ہیں، تو [Alchemy ڈسکارڈ](https://discord.gg/gWuC7zB) میں مدد کے لیے ہم سے رابطہ کرنے میں ہچکچاہٹ محسوس نہ کریں۔ 🧙‍♂️
 
 ایک بار جب آپ یہ ٹیوٹوریل مکمل کر لیں، تو ہمیں بتائیں کہ آپ کا تجربہ کیسا رہا یا اگر آپ کی کوئی رائے ہے تو ہمیں ٹوئٹر پر [@alchemyplatform](https://twitter.com/AlchemyPlatform) ٹیگ کر کے بتائیں!

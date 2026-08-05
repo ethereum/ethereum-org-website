@@ -1,17 +1,15 @@
 ---
-title: Resources for translators
+title: Resources
+metaTitle: Resources for translators
 lang: en
 description: Useful resources for ethereum.org translators
 ---
-
-# Resources {#resources}
 
 You can find some useful guides and tools for ethereum.org translators, as well as translation communities and updates below.
 
 ## Guides {#guides}
 
 - [Translation style guide](/contributing/translation-program/translators-guide/) _– instructions and tips for ethereum.org translators_
-- [Translation FAQs](/contributing/translation-program/faq/) _– frequently asked questions and answers about the ethereum.org Translation Program_
 - [Crowdin online editor guide](https://support.crowdin.com/online-editor/) _– an in-depth guide to using the Crowdin online editor and some of Crowdin's advanced features_
 
 ## Tools {#tools}

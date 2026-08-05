@@ -1,3 +1,5 @@
+import { Grid } from "@/components/ui/grid"
+
 import { safeShuffle } from "@/lib/utils/random"
 
 import stakingProducts from "@/data/staking-products.json"
@@ -115,11 +117,11 @@ const StakingProductsCardGrid = ({
   const rankedProducts = getRankedProducts(category)
 
   return (
-    <div className="mx-0 my-12 grid grid-cols-fill-4 gap-6">
+    <Grid className="mx-0 my-12">
       {rankedProducts.map((product) => (
         <StakingProductCard key={product.name} product={product} />
       ))}
-    </div>
+    </Grid>
   )
 }
 

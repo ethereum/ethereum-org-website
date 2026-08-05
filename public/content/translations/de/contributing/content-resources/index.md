@@ -1,14 +1,12 @@
 ---
-title: "Hinzufügen von Inhaltsressourcen"
+title: Inhaltsressourcen hinzufügen
 lang: de
-description: "Unsere Kriterien für die Auflistung von Inhaltsressourcen auf ethereum.org"
+description: Unsere Kriterien für die Auflistung von Inhaltsressourcen auf ethereum.org
 ---
 
-# Hinzufügen von Inhaltsressourcen {#adding-content-resources}
+Wir können nicht hoffen, alles rund um Ethereum abzudecken, daher versuchen wir, einige der brillanten Artikel, Tutorials, Newsletter, Jobbörsen und verschiedenen Inhaltsressourcen zu präsentieren, die die Community erstellt. Diese bieten oft tiefergehende Informationen zu Themen, an denen Benutzer interessiert sein könnten.
 
-Wir können unmöglich alles rund um Ethereum abdecken, daher versuchen wir, einige der brillanten Artikel, Tutorials, Newsletter, Jobbörsen und verschiedenen Inhaltsressourcen zu präsentieren, die die Community erstellt. Diese bieten oft tiefergehende Informationen zu Themen, an denen Benutzer interessiert sein könnten.
-
-Wenn es eine Inhaltsressource gibt, von der Sie der Meinung sind, dass sie zu einer Seite hinzugefügt werden sollte, können Sie diese gerne an einer geeigneten Stelle vorschlagen.
+Wenn es eine Inhaltsressource gibt, von der du denkst, dass sie zu einer Seite hinzugefügt werden sollte, kannst du sie gerne an einer passenden Stelle vorschlagen.
 
 ## Wie wir entscheiden {#how-we-decide}
 
@@ -23,9 +21,9 @@ Lernressourcen werden nach den folgenden Kriterien bewertet:
 
 ---
 
-## Fügen Sie Ihre Inhaltsressource hinzu {#add-your-content-resource}
+## Füge deine Inhaltsressource hinzu {#add-your-content-resource}
 
-Wenn Sie eine Inhaltsressource zu ethereum.org hinzufügen möchten und diese die Kriterien erfüllt, erstellen Sie ein Issue auf GitHub.
+Wenn du eine Inhaltsressource zu ethereum.org hinzufügen möchtest und sie die Kriterien erfüllt, erstelle ein Issue auf GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
   Issue erstellen

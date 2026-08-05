@@ -56,19 +56,27 @@ export class FindWalletPage extends BasePage {
    * Click on a persona filter and return the expected count
    */
   async selectPersonaFilter(personaName: string) {
-    const personaButton = this.presetFiltersContainer.getByRole("button", {
-      name: new RegExp(personaName, "i"),
+    const personaNamePattern = new RegExp(personaName, "i")
+
+    // Persona cards are <label>s wrapping a visually hidden checkbox
+    // (PresetFilters.tsx); clicking the label forwards to the checkbox
+    const personaCard = this.presetFiltersContainer
+      .locator("label")
+      .filter({ hasText: personaNamePattern })
+    const personaCheckbox = this.presetFiltersContainer.getByRole("checkbox", {
+      name: personaNamePattern,
     })
 
-    await personaButton.click()
+    await personaCard.click()
+    await expect(personaCheckbox).toBeChecked()
 
-    // Extract the counter from the button text
-    const counterText = await personaButton.textContent()
+    // Extract the counter from the card text
+    const counterText = await personaCard.textContent()
     const match = counterText?.match(/\((\d+)\)/)
 
     if (!match) {
       throw new Error(
-        `Could not extract count from persona button: ${counterText}`
+        `Could not extract count from persona card: ${counterText}`
       )
     }
 

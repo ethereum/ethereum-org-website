@@ -1,0 +1,423 @@
+{
+  "version": 1,
+  "locale": "uk",
+  "translatedAt": "2026-06-19T18:54:44.503Z",
+  "englishManifestHash": "317a58a4fe7e",
+  "placeholderOrder": [
+    "LINK-c42188",
+    "LINK-5e5e9b",
+    "LINK-6857cb",
+    "LINK-1200a5",
+    "LINK-456e6f",
+    "LINK-0ab4bf",
+    "LINK-42f5ed",
+    "LINK-e160db",
+    "LINK-45613c",
+    "LINK-cd127b",
+    "LINK-97a275",
+    "LINK-180478",
+    "LINK-b989ff",
+    "LINK-d750db",
+    "LINK-3f7928",
+    "LINK-368503",
+    "LINK-cd6eee",
+    "LINK-a23556",
+    "LINK-e272ad",
+    "LINK-2c97c4",
+    "LINK-aaaae0",
+    "LINK-938919",
+    "LINK-da3754",
+    "LINK-e1d7eb",
+    "LINK-6329fb",
+    "LINK-febafb",
+    "LINK-86f1e9",
+    "LINK-5e7181",
+    "LINK-76c2d4",
+    "LINK-7abeb9",
+    "LINK-1036c4",
+    "LINK-64babf",
+    "LINK-3a67ab",
+    "LINK-dbd5fb",
+    "LINK-8ee1aa",
+    "LINK-5ac034",
+    "LINK-326b04",
+    "LINK-8771fa",
+    "LINK-14242f",
+    "LINK-5dd857",
+    "LINK-241dbd",
+    "LINK-aec917",
+    "LINK-f2b193",
+    "LINK-d07ef1",
+    "LINK-d8b13a",
+    "LINK-5e5e9b",
+    "LINK-09ee9f",
+    "LINK-df9231",
+    "LINK-60821c",
+    "LINK-7f9fc0",
+    "LINK-05fb8b",
+    "LINK-f9fbf8",
+    "LINK-2dc299",
+    "LINK-836e04",
+    "LINK-7e304f",
+    "LINK-9e7ac1",
+    "LINK-1aab0a",
+    "LINK-879dda",
+    "LINK-0ead3a"
+  ],
+  "placeholderMap": {
+    "LINK-c42188": {
+      "type": "link",
+      "values": {
+        "url": "/learn/"
+      }
+    },
+    "LINK-5e5e9b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/"
+      }
+    },
+    "LINK-6857cb": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained"
+      }
+    },
+    "LINK-1200a5": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract"
+      }
+    },
+    "LINK-456e6f": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract"
+      }
+    },
+    "LINK-0ab4bf": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment"
+      }
+    },
+    "LINK-42f5ed": {
+      "type": "link",
+      "values": {
+        "url": "https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023"
+      }
+    },
+    "LINK-e160db": {
+      "type": "link",
+      "values": {
+        "url": "https://web3py.readthedocs.io/en/latest/overview.html"
+      }
+    },
+    "LINK-45613c": {
+      "type": "link",
+      "values": {
+        "url": "https://snakecharmers.ethereum.org/python-ecosystem/"
+      }
+    },
+    "LINK-cd127b": {
+      "type": "link",
+      "values": {
+        "url": "https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/"
+      }
+    },
+    "LINK-97a275": {
+      "type": "link",
+      "values": {
+        "url": "https://snakecharmers.ethereum.org/prize-worthy/"
+      }
+    },
+    "LINK-180478": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/"
+      }
+    },
+    "LINK-b989ff": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e"
+      }
+    },
+    "LINK-d750db": {
+      "type": "link",
+      "values": {
+        "url": "https://www.dappuniversity.com/articles/web3-py-intro"
+      }
+    },
+    "LINK-3f7928": {
+      "type": "link",
+      "values": {
+        "url": "https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py"
+      }
+    },
+    "LINK-368503": {
+      "type": "link",
+      "values": {
+        "url": "https://snakecharmers.ethereum.org/intro-to-ape/"
+      }
+    },
+    "LINK-cd6eee": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=tE-8bG35VNw"
+      }
+    },
+    "LINK-a23556": {
+      "type": "link",
+      "values": {
+        "url": "https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d"
+      }
+    },
+    "LINK-e272ad": {
+      "type": "link",
+      "values": {
+        "url": "https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988"
+      }
+    },
+    "LINK-2c97c4": {
+      "type": "link",
+      "values": {
+        "url": "https://snakecharmers.ethereum.org/subscriptions/"
+      }
+    },
+    "LINK-aaaae0": {
+      "type": "link",
+      "values": {
+        "url": "https://snakecharmers.ethereum.org/websocketprovider/"
+      }
+    },
+    "LINK-938919": {
+      "type": "link",
+      "values": {
+        "url": "https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/"
+      }
+    },
+    "LINK-da3754": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither"
+      }
+    },
+    "LINK-e1d7eb": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.chain.link/blockchain-fintech-defi-tutorial-lending-borrowing-python/"
+      }
+    },
+    "LINK-6329fb": {
+      "type": "link",
+      "values": {
+        "url": "https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58"
+      }
+    },
+    "LINK-febafb": {
+      "type": "link",
+      "values": {
+        "url": "https://dev.to/patrickalphac/using-brownie-for-to-deploy-smart-contracts-1kkp"
+      }
+    },
+    "LINK-86f1e9": {
+      "type": "link",
+      "values": {
+        "url": "https://www.freecodecamp.org/news/how-to-make-an-nft-and-render-on-opensea-marketplace/"
+      }
+    },
+    "LINK-5e7181": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/web3.py"
+      }
+    },
+    "LINK-76c2d4": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/vyper/"
+      }
+    },
+    "LINK-7abeb9": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ApeWorX/ape"
+      }
+    },
+    "LINK-1036c4": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/py-evm"
+      }
+    },
+    "LINK-64babf": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/eth-tester"
+      }
+    },
+    "LINK-3a67ab": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/eth-utils/"
+      }
+    },
+    "LINK-dbd5fb": {
+      "type": "link",
+      "values": {
+        "url": "https://pypi.org/project/py-solc-x/"
+      }
+    },
+    "LINK-8ee1aa": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/makerdao/pymaker"
+      }
+    },
+    "LINK-5ac034": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/signinwithethereum/siwe-py"
+      }
+    },
+    "LINK-326b04": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/tradingstrategy-ai/web3-ethereum-defi"
+      }
+    },
+    "LINK-8771fa": {
+      "type": "link",
+      "values": {
+        "url": "https://getwake.io"
+      }
+    },
+    "LINK-14242f": {
+      "type": "link",
+      "values": {
+        "url": "https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity"
+      }
+    },
+    "LINK-5dd857": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/defipy-devs/defipy"
+      }
+    },
+    "LINK-241dbd": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/trinity"
+      }
+    },
+    "LINK-aec917": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/arjunaskykok/mamba"
+      }
+    },
+    "LINK-f2b193": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/eth-brownie/brownie"
+      }
+    },
+    "LINK-d07ef1": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/pydevp2p"
+      }
+    },
+    "LINK-d8b13a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/py-wasm"
+      }
+    },
+    "LINK-09ee9f": {
+      "type": "link",
+      "values": {
+        "url": "https://yearn.finance/"
+      }
+    },
+    "LINK-df9231": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/yearn/yearn-vaults"
+      }
+    },
+    "LINK-60821c": {
+      "type": "link",
+      "values": {
+        "url": "https://www.curve.finance/"
+      }
+    },
+    "LINK-7f9fc0": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/curvefi/curve-contract"
+      }
+    },
+    "LINK-05fb8b": {
+      "type": "link",
+      "values": {
+        "url": "https://badger.com/"
+      }
+    },
+    "LINK-f9fbf8": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Badger-Finance/badger-system"
+      }
+    },
+    "LINK-2dc299": {
+      "type": "link",
+      "values": {
+        "url": "https://sushi.com/"
+      }
+    },
+    "LINK-836e04": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/sushiswap/sushi-vesting-protocols"
+      }
+    },
+    "LINK-7e304f": {
+      "type": "link",
+      "values": {
+        "url": "https://alphaventuredao.io/"
+      }
+    },
+    "LINK-9e7ac1": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/AlphaFinanceLab/alpha-staking-contract"
+      }
+    },
+    "LINK-1aab0a": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/9zk7snTfWe"
+      }
+    },
+    "LINK-879dda": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/SdvKC79cJk"
+      }
+    },
+    "LINK-0ead3a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/vyperlang/vyper/wiki/Vyper-tools-and-resources"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T18:54:44.503Z",
+      "status": "success"
+    }
+  }
+}

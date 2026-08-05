@@ -1,6 +1,10 @@
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { X } from "lucide-react"
+import {
+  tv,
+  type VariantProps as TailwindVariantProps,
+} from "tailwind-variants"
 import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
@@ -10,7 +14,7 @@ import Emoji, { type EmojiProps } from "../Emoji"
 import { Button } from "./buttons/Button"
 
 const alertVariants = cva(
-  "flex gap-4 items-center rounded-lg border p-4 text-body/70",
+  "flex gap-4 items-center rounded-base border p-4 text-body/80 **:[:is(h2,h3,h4,h5,h6,strong)]:text-body",
   {
     variants: {
       variant: {
@@ -64,18 +68,32 @@ const AlertContent = React.forwardRef<
 ))
 AlertContent.displayName = "AlertContent"
 
+const alertTitleVariants = tv({
+  base: "text-body",
+  variants: {
+    size: {
+      base: "font-bold",
+      lg: "text-2xl font-black",
+    },
+  },
+  defaultVariants: {
+    size: "base",
+  },
+})
+
 export interface AlertTitleProps
-  extends React.HTMLAttributes<HTMLParagraphElement> {
+  extends React.HTMLAttributes<HTMLParagraphElement>,
+    TailwindVariantProps<typeof alertTitleVariants> {
   asChild?: boolean
 }
 
 const AlertTitle = React.forwardRef<HTMLParagraphElement, AlertTitleProps>(
-  ({ className, asChild, ...props }, ref) => {
+  ({ className, asChild, size, ...props }, ref) => {
     const Comp = asChild ? Slot : "p"
     return (
       <Comp
         ref={ref}
-        className={cn("font-bold text-body dark:text-body", className)}
+        className={cn(alertTitleVariants({ size }), className)}
         {...props}
       />
     )
@@ -98,9 +116,14 @@ const AlertDescription = React.forwardRef<
 ))
 AlertDescription.displayName = "AlertDescription"
 
+/**
+ * Dismiss control for an `Alert`. Env-agnostic: the caller owns the
+ * (required) `aria-label` and any dismissal behaviour (`onClick`), so it
+ * composes into server or client trees alike.
+ */
 const AlertCloseButton = React.forwardRef<
   HTMLButtonElement,
-  React.ButtonHTMLAttributes<HTMLButtonElement>
+  React.ButtonHTMLAttributes<HTMLButtonElement> & { "aria-label": string }
 >(({ className, ...props }, ref) => (
   <Button
     ref={ref}
@@ -109,7 +132,6 @@ const AlertCloseButton = React.forwardRef<
     {...props}
   >
     <X className="h-6 w-6" />
-    <span className="sr-only">Close</span>
   </Button>
 ))
 AlertCloseButton.displayName = "AlertCloseButton"

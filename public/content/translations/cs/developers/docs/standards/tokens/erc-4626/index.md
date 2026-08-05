@@ -1,52 +1,51 @@
 ---
 title: "Standard tokenizovaného trezoru ERC-4626"
-description: "Standard pro výnosové trezory."
+description: "Standard pro trezory nesoucí výnos."
 lang: cs
 ---
 
-## Úvod {#introduction}
+## Úvod
 
-ERC-4626 je standard, který optimalizuje a sjednocuje technické parametry výnosových trezorů. Poskytuje standardní API pro tokenizované výnosové trezory, které představují podíly na jednom základním tokenu ERC-20. ERC-4626 také definuje volitelné rozšíření pro tokenizované trezory využívající ERC-20, které nabízí základní funkce pro vkládání, vybírání tokenů a čtení zůstatků.
+ERC-4626 je standard pro optimalizaci a sjednocení technických parametrů výnosových trezorů. Poskytuje standardní API pro tokenizované výnosové trezory, které představují podíly jediného podkladového ERC-20 tokenu. ERC-4626 také nastiňuje volitelné rozšíření pro tokenizované trezory využívající ERC-20, které nabízí základní funkce pro vkládání, výběr tokenů a čtení zůstatků.
 
 **Role ERC-4626 ve výnosových trezorech**
 
-Trhy s půjčkami, agregátory a tokeny s vnitřním úročením pomáhají uživatelům dosáhnout největšího výnosu z jejich kryptotokenů. Tyto strategie se provádějí s mírnými variacemi, což může být náchylné k chybám nebo plýtvání vývojovými zdroji.
+Trhy pro půjčování, agregátory a tokeny, které samy o sobě nesou úrok, pomáhají uživatelům najít nejlepší výnos z jejich krypto tokenů prováděním různých strategií. Tyto strategie se provádějí s mírnými odchylkami, což může být náchylné k chybám nebo to může plýtvat vývojářskými zdroji.
 
-ERC-4626 ve výnosových trezorech sníží náročnost integrace a otevře přístup k výnosům v různých aplikacích s minimálním specializovaným úsilím od vývojářů tím, že vytvoří konzistentnější a robustnější implementační vzory.
+ERC-4626 ve výnosových trezorech sníží úsilí při integraci a odemkne přístup k výnosům v různých aplikacích s malým specializovaným úsilím ze strany vývojářů tím, že vytvoří konzistentnější a robustnější implementační vzory.
 
 Token ERC-4626 je plně popsán v [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
 
-**Asynchronní rozšíření trezoru (ERC-7540)**
+**Rozšíření pro asynchronní trezory (ERC-7540)**
 
-ERC-4626 je optimalizován pro atomické vklady a odkupy až do určitého limitu. Pokud je limitu dosaženo, nelze odeslat žádné nové vklady ani odkupy. Toto omezení nefunguje dobře pro žádný systém chytrých kontraktů s asynchronními akcemi nebo zpožděními jako předpokladem pro propojení s trezorem (např. protokoly reálných aktiv, protokoly pro půjčky s nedostatečným zajištěním, protokoly pro cross-chain půjčky, tokeny likvidního stakingu nebo bezpečnostní moduly pojištění).
+ERC-4626 je optimalizován pro atomické vklady a odkupy až do určitého limitu. Pokud je limit dosažen, nelze odeslat žádné nové vklady ani odkupy. Toto omezení nefunguje dobře pro žádný systém chytrých kontraktů s asynchronními akcemi nebo zpožděními jako předpokladem pro interakci s trezorem (např. protokoly reálných aktiv, protokoly pro půjčování s nedostatečným zajištěním, meziřetězcové protokoly pro půjčování, tokeny likvidního stakingu (LST) nebo moduly pojistné bezpečnosti).
 
-ERC-7540 rozšiřuje použitelnost trezorů ERC-4626 pro asynchronní případy použití. Stávající rozhraní trezoru (`deposit`/`withdraw`/`mint`/`redeem`) je plně využito k nárokování asynchronních požadavků.
+ERC-7540 rozšiřuje užitečnost trezorů ERC-4626 pro asynchronní případy použití. Stávající rozhraní trezoru (`deposit`/`withdraw`/`mint`/`redeem`) je plně využito k nárokování asynchronních požadavků.
 
-Rozšíření ERC-7540 je plně popsáno v [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
+Zjistěte více o [asynchronních tokenizovaných trezorech ERC-7540](/developers/docs/standards/tokens/erc-7540/).
 
-**Rozšíření trezoru s více aktivy (ERC-7575)**
+**Rozšíření pro trezory s více aktivy (ERC-7575)**
 
-Jedním z chybějících případů použití, který ERC-4626 nepodporuje, jsou trezory, které mají více aktiv nebo vstupních bodů, jako jsou tokeny poskytovatele likvidity (LP). Ty jsou obecně těžkopádné nebo nevyhovující kvůli požadavku, aby samotný standard ERC-4626 byl ERC-20.
+Jedním chybějícím případem použití, který ERC-4626 nepodporuje, jsou trezory, které mají více aktiv nebo vstupních bodů, jako jsou tokeny poskytovatele likvidity (LP). Ty jsou obecně nepraktické nebo nevyhovující kvůli požadavku, aby samotný ERC-4626 byl ERC-20.
 
-ERC-7575 přidává podporu pro trezory s více aktivy externalizací implementace tokenu ERC-20 z implementace ERC-4626.
+ERC-7575 přidává podporu pro trezory s více aktivy tím, že externalizuje implementaci ERC-20 tokenu z implementace ERC-4626.
 
 Rozšíření ERC-7575 je plně popsáno v [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575).
-
 ## Předpoklady {#prerequisites}
 
-Pro lepší pochopení této stránky doporučujeme nejprve přečíst si o [standardech tokenů](/developers/docs/standards/tokens/) a [ERC-20](/developers/docs/standards/tokens/erc-20/).
+Pro lepší pochopení této stránky doporučujeme nejprve si přečíst o [standardech tokenů](/developers/docs/standards/tokens/) a [ERC-20](/developers/docs/standards/tokens/erc-20/).
 
 ## Funkce a vlastnosti ERC-4626: {#body}
 
 ### Metody {#methods}
 
-#### aktivum {#asset}
+#### asset {#asset}
 
 ```solidity
 function asset() public view returns (address assetTokenAddress)
 ```
 
-Tato funkce vrací adresu základního tokenu, který je používán pro účetnictví, vklady a výběry v trezoru.
+Tato funkce vrací adresu podkladového tokenu používaného pro trezor k účtování, vkládání a výběrům.
 
 #### totalAssets {#totalassets}
 
@@ -54,7 +53,7 @@ Tato funkce vrací adresu základního tokenu, který je používán pro účetn
 function totalAssets() public view returns (uint256)
 ```
 
-Tato funkce vrací celkové množství základních aktiv držených v trezoru.
+Tato funkce vrací celkové množství podkladových aktiv držených trezorem.
 
 #### convertToShares {#convertoshares}
 
@@ -78,7 +77,7 @@ Tato funkce vrací množství `assets`, které by trezor vyměnil za poskytnuté
 function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 ```
 
-Tato funkce vrací maximální množství podkladových aktiv, které lze vložit v jediném volání [`deposit`](#deposit), přičemž jsou podíly vyraženy pro `receiver`.
+Tato funkce vrací maximální množství podkladových aktiv, které lze vložit v jediném volání [`deposit`](#deposit), přičemž podíly jsou raženy pro `receiver`.
 
 #### previewDeposit {#previewdeposit}
 
@@ -94,7 +93,7 @@ Tato funkce umožňuje uživatelům simulovat účinky jejich vkladu v aktuáln�
 function deposit(uint256 assets, address receiver) public returns (uint256 shares)
 ```
 
-Tato funkce vkládá `assets` podkladových tokenů do trezoru a uděluje `receiver`ovi vlastnictví `shares`.
+Tato funkce vloží `assets` podkladových tokenů do trezoru a udělí vlastnictví `shares` uživateli `receiver`.
 
 #### maxMint {#maxmint}
 
@@ -102,7 +101,7 @@ Tato funkce vkládá `assets` podkladových tokenů do trezoru a uděluje `recei
 function maxMint(address receiver) public view returns (uint256 maxShares)
 ```
 
-Tato funkce vrací maximální množství podílů, které mohou být vyraženy v jediném volání [`mint`](#mint), přičemž jsou podíly vyraženy pro `receiver`.
+Tato funkce vrací maximální množství podílů, které lze razit v jediném volání [`mint`](#mint), přičemž podíly jsou raženy pro `receiver`.
 
 #### previewMint {#previewmint}
 
@@ -110,7 +109,7 @@ Tato funkce vrací maximální množství podílů, které mohou být vyraženy 
 function previewMint(uint256 shares) public view returns (uint256 assets)
 ```
 
-Tato funkce umožňuje uživatelům simulovat účinky své ražby v aktuálním bloku.
+Tato funkce umožňuje uživatelům simulovat účinky jejich ražby v aktuálním bloku.
 
 #### mint {#mint}
 
@@ -118,7 +117,7 @@ Tato funkce umožňuje uživatelům simulovat účinky své ražby v aktuálním
 function mint(uint256 shares, address receiver) public returns (uint256 assets)
 ```
 
-Tato funkce razí přesně `shares` podílů trezoru `receiver`ovi, a to vložením `assets` podkladových tokenů.
+Tato funkce vyrazí přesně `shares` podílů trezoru pro `receiver` vložením `assets` podkladových tokenů.
 
 #### maxWithdraw {#maxwithdraw}
 
@@ -126,7 +125,7 @@ Tato funkce razí přesně `shares` podílů trezoru `receiver`ovi, a to vložen
 function maxWithdraw(address owner) public view returns (uint256 maxAssets)
 ```
 
-Tato funkce vrací maximální množství podkladových aktiv, které lze vybrat ze zůstatku `owner`a jediným voláním [`withdraw`](#withdraw).
+Tato funkce vrací maximální množství podkladových aktiv, které lze vybrat ze zůstatku `owner` jediným voláním [`withdraw`](#withdraw).
 
 #### previewWithdraw {#previewwithdraw}
 
@@ -134,7 +133,7 @@ Tato funkce vrací maximální množství podkladových aktiv, které lze vybrat
 function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 ```
 
-Tato funkce umožňuje uživatelům simulovat účinky svého výběru v aktuálním bloku.
+Tato funkce umožňuje uživatelům simulovat účinky jejich výběru v aktuálním bloku.
 
 #### withdraw {#withdraw}
 
@@ -142,7 +141,7 @@ Tato funkce umožňuje uživatelům simulovat účinky svého výběru v aktuál
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-Tato funkce spálí `shares` od `owner`a a odešle z trezoru přesně `assets` tokenů `receiver`ovi.
+Tato funkce spálí `shares` od `owner` a odešle přesně `assets` tokenů z trezoru uživateli `receiver`.
 
 #### maxRedeem {#maxredeem}
 
@@ -150,7 +149,7 @@ Tato funkce spálí `shares` od `owner`a a odešle z trezoru přesně `assets` t
 function maxRedeem(address owner) public view returns (uint256 maxShares)
 ```
 
-Tato funkce vrací maximální množství podílů, které lze odkoupit ze zůstatku `owner`a prostřednictvím volání [`redeem`](#redeem).
+Tato funkce vrací maximální množství podílů, které lze odkoupit ze zůstatku `owner` prostřednictvím volání [`redeem`](#redeem).
 
 #### previewRedeem {#previewredeem}
 
@@ -158,7 +157,7 @@ Tato funkce vrací maximální množství podílů, které lze odkoupit ze zůst
 function previewRedeem(uint256 shares) public view returns (uint256 assets)
 ```
 
-Tato funkce umožňuje uživatelům simulovat účinky svého odkupu v aktuálním bloku.
+Tato funkce umožňuje uživatelům simulovat účinky jejich odkupu v aktuálním bloku.
 
 #### redeem {#redeem}
 
@@ -166,7 +165,7 @@ Tato funkce umožňuje uživatelům simulovat účinky svého odkupu v aktuáln�
 function redeem(uint256 shares, address receiver, address owner) public returns (uint256 assets)
 ```
 
-Tato funkce odkoupí určitý počet `shares` od `owner`a a odešle `assets` podkladového tokenu z trezoru `receiver`ovi.
+Tato funkce odkoupí konkrétní počet `shares` od `owner` a odešle `assets` podkladového tokenu z trezoru uživateli `receiver`.
 
 #### totalSupply {#totalsupply}
 
@@ -174,7 +173,7 @@ Tato funkce odkoupí určitý počet `shares` od `owner`a a odešle `assets` pod
 function totalSupply() public view returns (uint256)
 ```
 
-Vrací celkový počet neodkoupených podílů v trezoru v oběhu.
+Vrací celkový počet neodkoupených podílů trezoru v oběhu.
 
 #### balanceOf {#balanceof}
 
@@ -182,17 +181,17 @@ Vrací celkový počet neodkoupených podílů v trezoru v oběhu.
 function balanceOf(address owner) public view returns (uint256)
 ```
 
-Vrací celkové množství podílů v trezoru, které `owner` aktuálně má.
+Vrací celkové množství podílů trezoru, které `owner` aktuálně má.
 
-### Mapa rozhraní {#mapOfTheInterface}
+### Mapa rozhraní {#mapoftheinterface}
 
-![Mapa rozhraní ERC-4626](./map-of-erc-4626.png)
+![Map of the ERC-4626 interface](./map-of-erc-4626.png)
 
 ### Události {#events}
 
-#### Událost vkladu
+#### Událost vkladu {#deposit-event}
 
-**MUSÍ** být emitována při vložení tokenů do trezoru pomocí metod [`mint`](#mint) a [`deposit`](#deposit).
+**MUSÍ** být vyvolána, když jsou tokeny vloženy do trezoru prostřednictvím metod [`mint`](#mint) a [`deposit`](#deposit).
 
 ```solidity
 event Deposit(
@@ -203,11 +202,11 @@ event Deposit(
 )
 ```
 
-Kde `sender` je uživatel, který vyměnil `assets` za `shares` a převedl tyto `shares` na `owner`a.
+Kde `sender` je uživatel, který vyměnil `assets` za `shares` a převedl tyto `shares` na `owner`.
 
-#### Událost výběru
+#### Událost výběru {#withdraw-event}
 
-**MUSÍ** být emitována, když jsou podíly vybrány z trezoru vkladatelem v metodách [`redeem`](#redeem) nebo [`withdraw`](#withdraw).
+**MUSÍ** být vyvolána, když jsou podíly vybrány z trezoru vkladatelem v metodách [`redeem`](#redeem) nebo [`withdraw`](#withdraw).
 
 ```solidity
 event Withdraw(
@@ -219,9 +218,9 @@ event Withdraw(
 )
 ```
 
-Kde `sender` je uživatel, který spustil výběr a vyměnil `shares` ve vlastnictví `owner`a za `assets`. `receiver` je uživatel, který obdržel vybrané `assets`.
+Kde `sender` je uživatel, který inicioval výběr a vyměnil `shares`, vlastněné `owner`, za `assets`. `receiver` je uživatel, který obdržel vybrané `assets`.
 
 ## Další čtení {#further-reading}
 
 - [EIP-4626: Standard tokenizovaného trezoru](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-4626: GitHub repozitář](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)
+- [ERC-4626: Repozitář na GitHubu](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)

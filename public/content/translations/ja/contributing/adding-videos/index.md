@@ -18,6 +18,7 @@ ethereum.orgは中立的で教育的なリソースです。ビデオギャラ�
 
 当サイトでは、特定の製品、トークン、または商用サービスの宣伝を主目的とするビデオは掲載しません。
 
+
 ## 掲載基準 {#criteria-for-inclusion}
 
 ### 必須条件 {#must-haves}
@@ -33,6 +34,7 @@ ethereum.orgは中立的で教育的なリソースです。ビデオギャラ�
 - **トランスクリプト（文字起こし）がある** – トランスクリプト付きのビデオは、アクセシビリティとSEOを向上させます。用意できない場合は、ethereum.orgチームが作成をサポートします。
 - **信頼できる情報源からの提供** – 確立された教育者、研究者、および情報源からのコンテンツが優先されます。
 - **タイムリーかつエバーグリーン** – 時間の経過とともに古くなる素材よりも、長期にわたって関連性を保つコンテンツが好まれます。
+
 
 ## ビデオの追加方法 {#how-to-add-a-video}
 
@@ -121,25 +123,10 @@ title: "..."
 
 トランスクリプトがない場合は、本文を空のままにしておけば、チームが作成します。
 
-#### ステップ4: トピックタグを選択する {#step-4}
-
-ギャラリーで使用されている既存のカテゴリーに一致するトピックタグを選択します。現在のカテゴリーとそのタグは以下の通りです。
-
-- **イーサリアムの仕組み**: `how-ethereum-works`、`consensus`、`blockchain`、`cryptography`、`accounts`、`ethereum`、`intro`、`transactions`、`pos`、`smart-contracts`
-- **ネットワークのアップグレード**: `network-upgrades`、`upgrades`、`pectra`、`dencun`、`eip-4844`、`blobs`、`fusaka`
-- **ロードマップと優先事項**: `roadmap-and-priorities`、`pbs`、`mev`
-- **スケーリングとレイヤー2**: `scaling-and-layer-2`、`scaling`、`layer-2`、`rollups`、`optimistic-rollups`、`zk-rollups`
-- **ユースケース**: `use-cases`、`defi`、`finance`、`nfts`、`erc-721`、`erc-1155`、`lending`、`dapps`、`restaking`、`eigenlayer`、`dao`、`identity`、`desci`、`refi`
-- **プライバシーとセキュリティ**: `privacy-and-security`、`privacy`、`authentication`
-- **コミュニティストーリー**: `community-stories`、`contributing`、`translations`、`community`
-
-ビデオがギャラリーのカテゴリーシェルフに確実に表示されるようにするには、少なくとも1つのカテゴリーキータグ（ケバブケースの太字の名前、例: `use-cases`や`scaling-and-layer-2`）を含めてください。認識されたカテゴリータグがないビデオは、「すべて」のビューと検索結果にのみ表示されます。
-
-新しいタグを使用することもできます。これらは将来のカテゴリーのグループ化に利用できるようになります。
-
 #### ステップ5: PRを提出する {#step-5}
 
 `dev`ブランチに変更を加えたプルリクエストを作成します。チームが提出内容をレビューし、フィードバックを提供します。
+
 
 ## メンテナンス {#maintenance}
 
@@ -150,6 +137,7 @@ title: "..."
 - ホスティングやYouTubeのリンクが機能しているか
 
 掲載されているビデオに問題があることに気づいた場合は、[イシューを作成する](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml)か、[website@ethereum.org](mailto:website@ethereum.org)宛てにメールを送信してください。
+
 
 ## 利用規約 {#terms-of-use}
 

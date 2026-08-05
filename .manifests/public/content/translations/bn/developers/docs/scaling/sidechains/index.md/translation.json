@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "locale": "bn",
+  "translatedAt": "2026-06-19T18:57:22.339Z",
+  "englishManifestHash": "b7084533fdef",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-64cc9d",
+    "LINK-f9bc7f",
+    "LINK-935e0d",
+    "LINK-110521",
+    "LINK-880a41",
+    "LINK-2a8f74",
+    "LINK-6c2d21",
+    "LINK-87fea2",
+    "LINK-23d88c",
+    "LINK-71c926",
+    "LINK-c3b131",
+    "LINK-454666",
+    "LINK-5bbb7f",
+    "LINK-bb4ba0",
+    "LINK-1f6415",
+    "LINK-e32bcc",
+    "LINK-881244",
+    "LINK-396970",
+    "LINK-6cbb8b",
+    "LINK-1eebb8",
+    "LINK-f61a02",
+    "LINK-7f5b1b"
+  ],
+  "placeholderMap": {
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-64cc9d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/"
+      }
+    },
+    "LINK-f9bc7f": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2/"
+      }
+    },
+    "LINK-935e0d": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2021/05/23/scaling.html"
+      }
+    },
+    "LINK-110521": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/poa/"
+      }
+    },
+    "LINK-880a41": {
+      "type": "link",
+      "values": {
+        "url": "https://en.bitcoin.it/wiki/Delegated_proof_of_stake"
+      }
+    },
+    "LINK-2a8f74": {
+      "type": "link",
+      "values": {
+        "url": "https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained"
+      }
+    },
+    "LINK-6c2d21": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/blocks/#block-time"
+      }
+    },
+    "LINK-87fea2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/blocks/#block-size"
+      }
+    },
+    "LINK-23d88c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#why-should-i-run-an-ethereum-node"
+      }
+    },
+    "LINK-71c926": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-c3b131": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/languages/"
+      }
+    },
+    "LINK-454666": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/dapps/"
+      }
+    },
+    "LINK-5bbb7f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-bb4ba0": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/"
+      }
+    },
+    "LINK-1f6415": {
+      "type": "link",
+      "values": {
+        "url": "/bridges/"
+      }
+    },
+    "LINK-e32bcc": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/bridges/#how-do-bridges-work"
+      }
+    },
+    "LINK-881244": {
+      "type": "link",
+      "values": {
+        "url": "https://polygon.technology/solutions/polygon-pos"
+      }
+    },
+    "LINK-396970": {
+      "type": "link",
+      "values": {
+        "url": "https://skale.network/"
+      }
+    },
+    "LINK-6cbb8b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.gnosischain.com/"
+      }
+    },
+    "LINK-1eebb8": {
+      "type": "link",
+      "values": {
+        "url": "https://loomx.io/"
+      }
+    },
+    "LINK-f61a02": {
+      "type": "link",
+      "values": {
+        "url": "https://www.metis.io/"
+      }
+    },
+    "LINK-7f5b1b": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T18:57:22.339Z",
+      "status": "success"
+    }
+  }
+}

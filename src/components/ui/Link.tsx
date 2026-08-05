@@ -1,8 +1,9 @@
 "use client"
 
 import { AnchorHTMLAttributes, ComponentProps, forwardRef } from "react"
-import { ArrowRight, ExternalLink, Mail } from "lucide-react"
+import { ExternalLink, Mail } from "lucide-react"
 import NextLink from "next/link"
+import { useTranslations } from "next-intl"
 
 import { MatomoEventOptions } from "@/lib/types"
 
@@ -13,22 +14,20 @@ import * as url from "@/lib/utils/url"
 
 import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 
-import { useRtlFlip } from "@/hooks/useRtlFlip"
+import { ArrowNext } from "./arrow"
+
 import { Link as I18nLink } from "@/i18n/navigation"
 import { usePathname } from "@/i18n/navigation"
 
-export const ExternalLinkIcon = () => {
-  const { twFlipForRtl } = useRtlFlip()
-  return (
-    <ExternalLink
-      data-label="arrow"
-      className={cn(
-        "ms-1 !mb-0.5 inline-block size-[0.875em] max-h-4 max-w-4 shrink-0",
-        twFlipForRtl
-      )}
-    />
-  )
-}
+export const ExternalLinkIcon = ({ className }: { className?: string }) => (
+  <ExternalLink
+    data-label="arrow"
+    className={cn(
+      "ms-1 mb-0.5! inline-block size-[0.875em] max-h-4 max-w-4 shrink-0 rtl:-scale-x-100",
+      className
+    )}
+  />
+)
 
 type BaseProps = {
   hideArrow?: boolean
@@ -67,6 +66,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   }: LinkProps,
   ref
 ) {
+  const t = useTranslations("common")
   const pathname = usePathname()
   if (!href) {
     // If troubleshooting this warning, check for multiple h1's in markdown content—these will result in broken id hrefs
@@ -137,7 +137,9 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         )}
         <span className="sr-only select-none">
           &nbsp;
-          {isMailto ? "(opens email client)" : "(opens in a new tab)"}
+          {isMailto
+            ? t("link-mailto-assistive-text")
+            : t("link-external-assistive-text")}
         </span>
         {!hideArrow && !isMailto && <ExternalLinkIcon />}
       </a>
@@ -187,23 +189,20 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
 BaseLink.displayName = "BaseLink"
 
 export const LinkWithArrow = forwardRef<HTMLAnchorElement, LinkProps>(
-  ({ children, className, ...props }: LinkProps, ref) => {
-    const { twFlipForRtl } = useRtlFlip()
-    return (
-      <BaseLink
-        className={cn(
-          "group block w-fit no-underline visited:text-primary-visited",
-          className
-        )}
-        ref={ref}
-        {...props}
-      >
-        <span className="group-hover:underline">{children}</span>
-        &nbsp;
-        <ArrowRight className={cn("mb-1 inline size-[1em]", twFlipForRtl)} />
-      </BaseLink>
-    )
-  }
+  ({ children, className, ...props }: LinkProps, ref) => (
+    <BaseLink
+      className={cn(
+        "group block w-fit no-underline visited:text-primary-visited",
+        className
+      )}
+      ref={ref}
+      {...props}
+    >
+      <span className="group-hover:underline">{children}</span>
+      &nbsp;
+      <ArrowNext className="mb-1 inline size-[1em]" />
+    </BaseLink>
+  )
 )
 LinkWithArrow.displayName = "LinkWithArrow"
 

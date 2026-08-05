@@ -1,18 +1,16 @@
 ---
-title: "Design-Ressourcen hinzufügen"
-description: "Richtlinien und Anforderungen zur Sicherstellung der Qualität von Design-Materialien auf ethereum.org"
+title: Design-Ressourcen hinzufügen
+description: Richtlinien und Anforderungen zur Sicherstellung der Qualität von Design-Materialien auf ethereum.org
 lang: de
 ---
 
-# Design-Ressourcen hinzufügen {#adding-design-resources}
-
 Jeder kann neue Design-Materialien für die Seite [Design und UX im Web3](/developers/docs/design-and-ux/) vorschlagen.
 
-Bitte beachte, dass der Fokus dieser Seite darauf liegt, angehenden Web3-Designern einen Mehrwert zu bieten. Der Design-Bereich ist nicht dazu da, für deine Dienstleistungen, Produkte oder Plattformen zu werben.
+Beachte, dass der Fokus dieser Seite darauf liegt, angehenden Web3-Designern einen Mehrwert zu bieten. Der Design-Bereich ist nicht dazu da, für deine Dienstleistungen, Produkte oder Plattformen zu werben.
 
-Um sicherzustellen, dass wir einen hohen Informationsstandard aufrechterhalten und wertvolle Erkenntnisse fördern, haben wir eine Auflistungsrichtlinie festgelegt:
+Um sicherzustellen, dass wir einen hohen Informationsstandard aufrechterhalten und wertvolle Erkenntnisse fördern, haben wir eine Listungsrichtlinie festgelegt:
 
-## Forschungsstudien und Dashboards {#Research-studies}
+## Forschungsstudien und Dashboards {#research-studies}
 
 1. Solide Methodik
 
@@ -30,11 +28,11 @@ a. Das Thema der Forschung sollte für Web3-Designer relevant sein und gängige 
 
 a. Das Hauptziel des Textes sollte der Austausch von Erkenntnissen sein und nicht die Werbung für ein bestimmtes Projekt oder Unternehmen.
 
-## Artikel {#Articles}
+## Artikel {#articles}
 
-1. Relevanz für Web3-Designer/-Forscher und gängige Web3-Design-Anwendungsfälle
+1. Relevanz für Web3-Designer/Forscher und gängige Web3-Design-Anwendungsfälle
 
-a. Das Thema des Artikels sollte für Web3-Designer und -Forscher relevant sein und sich auf gängige Web3-Design-Anwendungsfälle konzentrieren.
+a. Das Thema des Artikels sollte für Web3-Designer und Forscher relevant sein und sich auf gängige Web3-Design-Anwendungsfälle konzentrieren.
 
 2. Grundlegende Schreibqualität
 
@@ -48,7 +46,7 @@ c. Der Schreibstil sollte prägnant und auf den Punkt gebracht sein.
 
 a. Das Hauptziel des Artikels sollte der Austausch von Erkenntnissen sein und nicht die Werbung für ein bestimmtes Projekt oder Unternehmen.
 
-## Communitys / DAOs {#Communities-and-DAOs}
+## Communitys / DAOs {#communities-and-daos}
 
 1. Die Website muss klar angeben, wie man der DAO/Community beitreten kann
 
@@ -64,6 +62,6 @@ a. Die Discord-Community sollte eine lebendige und engagierte Kommunikation aufw
 
 b. Moderatoren sollten aktiv an der Pflege der Community und der Moderation von Diskussionen beteiligt sein.
 
-c. Die Community sollte in den letzten zwei Wochen eine Erfolgsbilanz wertvoller und produktiver Gespräche vorweisen können.
+c. Die Community sollte nachweislich in den letzten zwei Wochen wertvolle und produktive Gespräche geführt haben.
 
-Durch die Einhaltung dieser Kriterien möchten wir ein florierendes und wissensaustauschendes Umfeld innerhalb unserer Community fördern. Wir glauben, dass diese Whitelisting-Richtlinie sicherstellt, dass unsere Nutzer Zugang zu zuverlässigen, relevanten und aufschlussreichen Ressourcen haben. Vielen Dank für dein Verständnis und deine Kooperation bei der Aufrechterhaltung der Inhaltsqualität auf unserer Plattform.
+Durch die Einhaltung dieser Kriterien möchten wir ein florierendes und wissensaustauschendes Umfeld innerhalb unserer Community fördern. Wir glauben, dass diese Whitelisting-Richtlinie sicherstellt, dass unsere Nutzer Zugang zu zuverlässigen, relevanten und aufschlussreichen Ressourcen haben. Vielen Dank für dein Verständnis und deine Mitarbeit bei der Aufrechterhaltung der Inhaltsqualität auf unserer Plattform.

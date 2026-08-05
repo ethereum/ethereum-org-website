@@ -3,21 +3,24 @@ import { expect, test } from "@playwright/test"
 /**
  * Regression test for https://github.com/ethereum/ethereum-org-website/issues/17777
  *
- * Pages that use EdgeScrollContainer must not leak horizontal overflow to the
+ * Pages with inner horizontal scroll areas (EdgeScrollContainer, the
+ * find-wallet persona strip, etc.) must not leak horizontal overflow into the
  * document scroll area. Asserting on both `scrollWidth` and an actual
  * `scrollBy` is intentional: each catches a different class of regression
  * (layout vs. containment).
  */
 
-const pagesWithEdgeScroll = [
+const pagesWithInnerHorizontalScroll = [
   "/community/events/",
   "/community/events/conferences/",
   "/developers/",
   "/developers/tools/",
+  // Persona filter strip — see PresetFilters (FieldSet `relative overflow-x-clip`)
+  "/wallets/find-wallet/",
 ]
 
 test.describe("No horizontal page overflow", () => {
-  for (const url of pagesWithEdgeScroll) {
+  for (const url of pagesWithInnerHorizontalScroll) {
     test(url, async ({ page }) => {
       const response = await page.goto(url)
       expect(response?.status(), `failed to load ${url}`).toBeLessThan(400)

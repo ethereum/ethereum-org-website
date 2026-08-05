@@ -6,21 +6,39 @@ The most common source of "one-off styling" in this codebase is ad-hoc spacing a
 
 Headings (`<h1>`-`<h6>`) are styled by `src/styles/base.css` element defaults. **Just write the semantic tag.** Don't reinvent with `<div className="text-Xxl font-bold">`.
 
-| Tag | Default sizing | When to use |
-|---|---|---|
-| `<h1>` | `text-4xl lg:text-5xl font-bold` | Page title -- ONE per page |
-| `<h2>` | `text-3xl lg:text-4xl font-bold` | Top-level section title |
-| `<h3>` | `text-2xl lg:text-3xl font-bold` | Subsection title |
-| `<h4>` | `text-xl lg:text-2xl font-bold` | Sub-subsection title |
-| `<h5>` | `text-lg font-bold` | Small heading |
-| `<h6>` | `text-base font-bold` | Smallest heading; also used in `Alert`/`Callout` titles |
+Sizing for each level lives in one place: the `text-h1`-`text-h6` utilities in `src/styles/utilities.css`. Each bundles the **font-size and line-height** for that level (responsive). `base.css` `@apply`s `text-h1` to `<h1>`, `text-h2` to `<h2>`, and so on -- so these utilities are the single source of truth for heading sizing.
+
+All headings default to `font-black` (weight 900) via `base.css`. The `text-h*` utilities carry size/line-height **only** -- not the weight. **Do not re-apply a weight** on a real heading -- a hardcoded `font-bold`/`font-semibold` sits in the utilities layer and silently overrides the base `font-black`, which is exactly the drift the heading-weight standardization removed. If you need a lighter weight for an eyebrow/kicker/label, that's a deliberate `font-normal`/`font-medium` choice, not a default.
+
+| Tag | Sizing utility | Expands to | When to use |
+|---|---|---|---|
+| `<h1>` | `text-h1` | `text-4xl lg:text-5xl` | Page title -- ONE per page |
+| `<h2>` | `text-h2` | `text-3xl lg:text-4xl` | Top-level section title |
+| `<h3>` | `text-h3` | `text-2xl lg:text-3xl` | Subsection title |
+| `<h4>` | `text-h4` | `text-xl lg:text-2xl` | Sub-subsection title |
+| `<h5>` | `text-h5` | `text-md lg:text-xl` | Small heading |
+| `<h6>` | `text-h6` | `text-sm lg:text-md` | Smallest heading; also used in `Alert`/`Callout` titles |
+
+### Matching a heading size on any element
+
+To make a non-heading element read at a given heading level's size, apply the utility -- never reconstruct the responsive pair by hand:
+
+```tsx
+// Wrong -- hand-reconstructs h2 sizing; drifts when the scale changes
+<p className="text-3xl lg:text-4xl">Looks like an h2</p>
+
+// Right -- one token, stays in sync with base.css
+<p className="text-h2">Looks like an h2</p>
+```
+
+This is size and line-height only -- it does not apply `font-black`. Set weight separately on a non-heading element if the design wants it.
 
 ### Overrides
 
-If you need a heading at a different size (because the design calls for it), override on the element:
+If you need a real heading at a different level's size (because the design calls for it), reuse the matching utility on the element:
 
 ```tsx
-<h2 className="text-4xl lg:text-5xl">A larger h2</h2>
+<h2 className="text-h1">A larger h2</h2>
 ```
 
 Don't override structurally (e.g., using `<h1>` for an `<h3>`-sized element just to get the size). Heading hierarchy matters for screen readers.
@@ -31,16 +49,79 @@ Don't go from `<h2>` to `<h4>`. Screen reader users navigate by heading level, a
 
 ### Hero "title" vs "header"
 
-`Hero/*` components use:
-- `header` -- a small uppercase eyebrow, rendered as `<h1>` (intentional in `HubHero` and `PageHero`). In `PageHero`, supplying `header` demotes `title` to `<h2>`, so the eyebrow is the page `<h1>`.
-- `title` -- the visible large title (the `<h1>` when no `header` eyebrow is passed)
-- `description` -- the lead paragraph
+**`PageHero` and `HubHero` do NOT share a prop shape -- confirm which hero you're in before assigning `title`/`header`.**
 
-In `PageHero` the eyebrow slot is a discriminated union: pass **either** `breadcrumbs` (a `{ slug }` object or a custom `<Breadcrumb>` element) **or** `header` -- not both. Don't conflate these fields. See `references/page-hero-walkthrough.md`.
+`PageHero`:
+- `title` -- the large visible title, and **always** the page `<h1>`. There is **no** `header` prop (it was removed).
+- `breadcrumbs` (required) fills the slot above the title -- a `{ slug }` object or a custom `<Breadcrumb>` element; an optional `eyebrow` (`ReactNode`) renders between the breadcrumbs and the title for a status indicator/tag.
+- The hero aside is a discriminated union: `heroImg` **or** `heroComponent`, never both (`heroImg` stacks above the text on mobile; `heroComponent` folds beside it).
 
-### The "page title" gap
+`HubHero` (the names read *backwards* vs their apparent meaning):
+- `title` -- a small uppercase eyebrow, rendered as `<h1>` (e.g. `title="Developers"` on `/developers/`).
+- `header` -- the large heading: an `<h2>` when `title` is set, the `<h1>` when it isn't. So a hub passes the section name as `title` and the marketing line as `header`.
 
-There's a recurring `text-[2.5rem]` arbitrary value in `MdComponents` for in-article page titles. This is a known gap pending a `--text-page-title` token decision. Until that lands, the arbitrary value is the convention there; don't reinvent your own page-title size. (Note: `PageHero` does **not** use this value -- its title is `text-3xl ... lg:text-6xl` -- so don't copy `text-[2.5rem]` into hero work.)
+`description` is the lead paragraph in both. See `references/page-hero-walkthrough.md`.
+
+### Markdown page titles
+
+In-article (markdown) page titles render as a plain `<h1>` from the layout (`Docs`/`Static`/`Tutorial`) -- the `text-4xl lg:text-5xl` default, no special token. (Historical note: this used to be a `text-[2.5rem]` arbitrary value in `MdComponents`; it's been removed.) `PageHero` owns hero titles separately (`text-3xl ... lg:text-6xl`) -- don't copy hero sizes into article titles or vice versa.
+
+## Content Spacing: the `.flow` rhythm
+
+For prose-like content -- a sequence of mixed headings, paragraphs, and lists -- vertical spacing is owned by the opt-in **`.flow`** system, not by per-element `mt-*`/`mb-*`. Add `flow` to the content region and write semantic tags; the rhythm is automatic.
+
+```tsx
+<div className="flow">
+  <h2>Section title</h2>
+  <p>Body copy. No margin classes needed.</p>
+  <h3>Subsection</h3>
+  <p>More copy.</p>
+</div>
+```
+
+It's already applied in markdown content -- the `MainArticle` in the `ContentLayout`, `Docs`, `Static`, and `Tutorial` layouts -- so MDX prose just works. On React pages, add `flow` to a prose region yourself (it is **not** a default on `MainArticle`, since many pages use it as a grid/layout container).
+
+**The rhythm.** One responsive base unit `--space` (`--spacing(4)` = 16px mobile, `--spacing(6)` = 24px from `lg`); every gap is a `margin-top` multiple of it:
+
+| Gap | Multiple | mobile / desktop |
+|---|---|---|
+| default -- any block to any block (heading->content, p->p, p->list, image->p) | `1x` | 16 / 24 |
+| between list items (`li`->`li`) | `0.5x` | 8 / 12 |
+| above a subsection heading (`h3`/`h4`) | `2x` | 32 / 48 |
+| above a section boundary (a top-level `h1`/`h2`, or a `<section>`) | `3x` | 48 / 72 |
+| above a CTA/button group (`[data-flow="cta"]`) | `2x` | 32 / 48 |
+
+The designers' "heading hugs the content it introduces" effect is the `1x` default *below* a heading combined with the larger gap *above* it (3:1 for a section, 2:1 for a subsection) -- not a special tight value.
+
+**Scope.** `flow` styles the direct children of the region *and* the direct children of any `<section>` one level inside it -- so wrap a group of `<h2>` + content in `<Section>`/`<section>` and it gets the rhythm without its own `flow` class. A component that renders its own `<section>` but manages its own spacing opts out with `data-flow="skip"`. The rules are zero-specificity (`:where()`), so a plain utility class still overrides any gap when you genuinely need an exception.
+
+**To nest a group, reach for `<section>` (or `<Section>`), not `<div>`.** Flow reaches one level into a `<section>`, but a `<div>` is opaque to it -- its children get no rhythm at all:
+
+```tsx
+// children space correctly -- flow reaches one level into <section>
+<div className="flow">
+  <h2>Title</h2>
+  <section>
+    <h3>Subsection</h3>
+    <p>Spaced.</p>
+    <p>Spaced.</p>
+  </section>
+</div>
+
+// the <div> blocks flow -- its children get NO rhythm
+<div className="flow">
+  <h2>Title</h2>
+  <div>
+    <h3>Subsection</h3>
+    <p>No space above me.</p>
+    <p>No space above me.</p>
+  </div>
+</div>
+```
+
+**`.flow` vs `Stack`/`gap`.** Use `.flow` for *prose* (mixed heading/paragraph/list streams). Use `Stack`/`gap-*` (below) for *composition* -- repeated like-shaped blocks (cards, grid items, control rows). Don't put both on the same container.
+
+Full design rationale and edge cases: `references/typography-spacing-flow-spec.md`.
 
 ## Spacing Scale
 
@@ -60,7 +141,7 @@ If you do need a fractional value, prefer scale syntax over arbitrary syntax. Se
 | Between content blocks within a section | `gap-12` (48px) or `gap-16` (64px) |
 | Between sections on a page | `gap-16` to `gap-24` (64-96px) |
 | Section padding (vertical) | `py-16` to `py-24` |
-| Container horizontal padding | Handled by `Section`/page layout, not per-component |
+| Container horizontal padding | The `page` padding token (`px-page`), via `Section`/page layout -- not per-component |
 
 These are heuristics, not rules. Match what surrounding components use rather than picking arbitrarily.
 
@@ -80,7 +161,7 @@ import { Stack } from "@/components/ui/flex"
 `Stack` defaults to `flex flex-col gap-2`. It also has a `separator` prop:
 
 ```tsx
-<Stack separator={<Divider />}>{items}</Stack>
+<Stack separator={<HR />}>{items}</Stack>
 ```
 
 `HStack` (`flex-row items-center`) and `VStack` (`flex-col items-center`) are also available.
@@ -88,6 +169,65 @@ import { Stack } from "@/components/ui/flex"
 ### `Section` for page-level padding
 
 `@/components/ui/section` handles the `<section>` wrapper with appropriate scroll-margin (so sticky-nav doesn't clip the heading when navigating to anchors). Use it for top-level page sections instead of writing your own `<section className="...">` chain.
+
+### Page padding (`--page-pad`), rhythm (`--space`), hero (`--hero-pad`) tokens
+
+Three responsive design tokens back the standard page metrics; all are registered in `theme.css` so they generate Tailwind spacing utilities (full table in `references/tokens.md`):
+
+- **`--page-pad`** -- standard page/section horizontal padding: `--spacing(4)` (1rem) on mobile, `--spacing(8)` (2rem) from `md`. Use the `page` utilities (`px-page`, `p-page`, `pb-page`, `gap-page`, and the `*-page-2x` step) instead of hard-coding `px-4 md:px-8` or an arbitrary `px-(--page-pad)`. Keeps horizontal page padding consistent across pages. If you must hand-roll a full-bleed breakout, pair `px-page` with `-mx-page` (never a fixed `-mx-8`) so the negative margin tracks the responsive token and stays aligned across the `md` boundary -- but prefer a primitive's built-in full-bleed treatment (`Alert variant="banner"`, `HubHero`, `Card variant="ghost"`/`size="xs"`) over hand-rolling.
+- **`--space`** -- the `.flow` rhythm base (`--spacing(4)` mobile, `--spacing(6)` from `lg`). `.flow` applies it automatically; when you need the same unit *manually* (an explicit gap or margin outside a flow region), reach for the `space` utilities (`mt-space`, `gap-space`, `space-y-space-2x`, `mt-space-half`, `mt-space-3x`, ...) rather than re-deriving `mt-4 lg:mt-6`.
+- **`--hero-pad`** -- `PageHero`'s internal padding (`--spacing(8)`, 2rem). Use the `hero` utilities (`p-hero`, `px-hero`, `py-hero-2x`, `pe-hero`, `*-hero-half/-1.5x/-2x/-3x`) rather than arbitrary `p-(--pad)`/`calc(var(--pad)*1.5)`. Mostly internal to `PageHero`, but available for hero-adjacent chrome.
+
+Prefer these tokens over the raw scale for page padding, flow rhythm, and hero padding so the metrics stay coherent and scale from a single variable.
+
+**Canonical app-page skeleton.** Non-markdown pages (`app/[locale]/<route>/page.tsx`) compose these:
+
+```tsx
+import PageJsonLD from "./page-jsonld"  // import the page's JSON-LD component as `PageJsonLD` -- same name on every page
+
+<>
+  <PageJsonLD locale={locale} contributors={contributors} ... />
+  <PageHero breadcrumbs={{ slug: "<route>" }} title={...} description={...} />  {/* or HubHero */}
+
+  <main className="px-page pt-page-2x pb-page">       {/* horizontal page padding ONCE here */}
+    <MainArticle className="flow *:[section]:py-space">  {/* flow rhythm; vertical section padding via the selector */}
+      <Section id="overview">                          {/* chunk with header IDs for anchor nav */}
+        <h2>Overview</h2>                              {/* semantic tags; size from base.css, rhythm from flow */}
+        <p>...</p>
+      </Section>
+
+      <Section id="how-it-works" data-flow="skip" className="flex gap-space-2x *:flex-1 max-lg:flex-col">
+        {/* every Section gets an id -- even flex/grid rows (see rule below) */}
+        <div className="flow">...</div>
+        <div className="relative max-lg:min-h-64">      {/* image fills the text-driven row height */}
+          <Image className="absolute inset-0 size-full object-contain" ... />
+        </div>
+      </Section>
+
+      <FileContributors className="border-t" ... />     {/* credits the article -> stays INSIDE */}
+    </MainArticle>
+
+    {/* End-of-page actions live OUTSIDE the article -- page-level UI, not a <section>; <main> already pads them */}
+    <ContentFeedback />
+  </main>
+</>
+```
+
+**`<Section>` lives *inside* `MainArticle`.** The component is the unit of article content -- it inherits the `flow` rhythm and the `*:[section]:px-page` / `*:[section]:py-space` selectors that `MainArticle` sets, and none of that applies outside it. Don't put a `<Section>` above or below `<main>` (or outside `MainArticle`). For hero-adjacent bands, sticky sub-navs, or other page-level chrome that sits outside the article, use a plain `<section>`/`<div>` with explicit classes instead. (Every page in the app follows this -- `Section` only ever appears inside `MainArticle`.)
+
+**Every `<Section>` gets a stable, unique `id`.** This is not optional and not just for sections wired to a `TabNav` today: the `id` is the anchor target for in-page nav, sidebars, and external deep links, and it pairs with the Section's built-in `scroll-mt` so those jumps land cleanly under any sticky header. Use a short kebab-case slug that names the section's *content* (`id="overview"`, `id="how-it-works"`), never a positional name (`id="section-2"`). The rule covers **every** section, including flex/grid `data-flow="skip"` rows -- an id-less section is an un-targetable hole in the page outline. (The merged `community` page predates this rule and is inconsistent; match the rule, not that page.)
+
+**Where horizontal padding goes.** Prefer `px-page` on `<main>` once (as above) -- it pads the whole page, including end-of-page actions, with no per-section repetition. Only move it to `*:[section]:px-page` on `MainArticle` when sections have **edge-to-edge backgrounds** that must reach the viewport edges (full-bleed colored/highlight bands): with `px-page` on `<main>` those bands get squeezed and leave side whitespace, so the padding has to live on each section's content instead. Pick one model per page; don't combine them.
+
+**Exempting one full-bleed section under `*:[section]:px-page`.** A self-padding, full-width widget (a data table with its own internal `px-*`, an edge-to-edge banner) shouldn't get the selector's page padding on top. If it's the **first** section, `*:[section]:not-first:px-page` pads every section *except* it -- no override needed. Otherwise reach for a plain `<div>` (not matched by `[section]`) rather than trying to zero it out: a bare `px-0` on the `<Section>` **loses** to the selector on specificity. `*:[section]:px-page` compiles to `:is(.parent > *):is(section)` (0,1,1), which beats `.px-0` (0,1,0), so the padding wins silently; `px-0!` works but is a smell. (Verified against Tailwind v4's `*`-variant output.)
+
+**Vertical section rhythm.** `*:[section]:py-space` (or `py-space-2x`) on `MainArticle` gives every direct-child `<Section>` consistent top/bottom padding. The `.flow` rhythm still owns gaps *between* a section's own children.
+
+The blanket selector is the right default, but vertical breathing room is partly a per-section visual call: full-bleed background bands and big-card sections usually want more (`py-space-3x`), while primarily-text or small-card sections look right on the default. When a page mixes both, a uniform `*:[section]:py-*` tends to over-pad the lighter sections -- in that case drop the selector and set `py-space-*` per `<Section>` instead. (Horizontal `*:[section]:px-page` stays uniform regardless; this judgment is vertical-only.)
+
+**Flex/grid sections opt out of flow.** A `<Section>` that is itself a flex or grid container (a text+image row, a card grid) must carry `data-flow="skip"`, or the `.flow` rule will add a `margin-top` to its 2nd+ children and offset them within the row/grid. This holds at **any nesting depth** -- the flow scope is a descendant selector (`:where(.flow, .flow section:not([data-flow="skip"]))`), so a *nested* flex/grid section needs `skip` too. Prose-stack sections (heading + paragraphs + a single grid) stay non-skip and inherit rhythm from the parent flow.
+
+**Side image filling a text-driven height.** To let the text column dictate a row's height while a decorative image sits beside it, make the image cell `relative` (a flex `*:flex-1` track) and the image `absolute inset-0 size-full object-contain`; add `max-lg:min-h-*` so the cell still has height when the row stacks on mobile. This beats guessing a `max-h-*` cap. Tune the image `sizes` to the real rendered width (a fixed px like `360px` for a height-capped side image; breakpoint `vw` for a full-width card-grid banner).
 
 ## Logical Spacing for RTL
 
@@ -136,14 +276,18 @@ Tailwind text size utilities. Pair with leading utilities (`leading-base`, `lead
 | `text-xs` | 12px | Tags, captions, helper text |
 | `text-sm` | 14px | Secondary body, button labels (sm) |
 | `text-base` | 16px | Body text default |
-| `text-md` | 18px | Slightly emphasized body |
-| `text-lg` | 20px | Lead paragraphs, h5 |
-| `text-xl` | 24px | h4 (mobile) |
-| `text-2xl` | 28px | h3 (mobile), h4 (desktop) |
-| `text-3xl` | 32px | h2 (mobile), h3 (desktop) |
-| `text-4xl` | 40px | h1 (mobile), h2 (desktop) |
+| `text-md` | 16px | Same font-size as `text-base` (`--text-md` is `1rem`; only line-height differs) -- prefer `text-base` |
+| `text-lg` | 18px | Lead paragraphs |
+| `text-xl` | 20px | h4 (mobile) |
+| `text-2xl` | 24px | h3 (mobile), h4 (desktop) |
+| `text-3xl` | 30px | h2 (mobile), h3 (desktop) |
+| `text-4xl` | 36px | h1 (mobile), h2 (desktop) |
 | `text-5xl` | 48px | h1 (desktop) |
-| `text-6xl` / `text-7xl` | 56-72px | Special: `HomeHero` only |
+| `text-6xl` / `text-7xl` | 60-64px | Special: `HomeHero` only |
+
+Sizes are the `--text-*` tokens in `theme.css` (the authoritative source). Note `text-md` resolves to `1rem` -- the same font-size as `text-base` (only line-height differs) -- so **prefer `text-base`** for body copy; `text-md` reads like a distinct step but isn't one.
+
+The "Common use" column maps these raw sizes to heading levels for reference. When your intent is "match a heading level's size," reach for the `text-h1`-`text-h6` utilities (see "Heading Sizes" above) instead of the raw class -- they bundle the responsive size + line-height and track `base.css`.
 
 Use semantic tokens (`text-body`, `text-body-medium`, `text-body-light`, `text-primary`, etc.) for color. See `references/tokens.md`.
 
@@ -153,7 +297,7 @@ Use semantic tokens (`text-body`, `text-body-medium`, `text-body-light`, `text-p
 
 ## Arbitrary Values
 
-Quick rule: prefer scale syntax over arbitrary syntax even for fractional values. See `references/tokens.md` for the full discussion. For grid templates specifically, check the existing custom `grid-cols-*` utilities (`grid-cols-bento`, `grid-cols-fill-N`, `grid-cols-fit-4`) before reaching for arbitrary track sizes -- documented in `tokens.md` under "Custom Utilities -- Grid templates."
+Quick rule: prefer scale syntax over arbitrary syntax even for fractional values. See `references/tokens.md` for the full discussion. For responsive card/item grids, use the `Grid` component (`@/components/ui/grid`) or its `grid-cols-auto-*` utility rather than arbitrary track sizes; `grid-cols-bento` covers the bento layout -- documented in `tokens.md` under "Grid templates."
 
 ## Common One-Off Styling Anti-Patterns
 
@@ -165,6 +309,6 @@ These are the recurring patterns that cause "every page looks slightly different
 4. **`<div className="text-5xl font-bold">` for headings** -- use `<h1>`-`<h6>`
 5. **Page-level `<section className="my-32 py-16 px-4">`** -- use `Section`
 6. **Page-level horizontal padding hand-rolled** -- check the page layout, not the section
-7. **Arbitrary `text-[2.5rem]` for in-article titles** -- known gap; don't add new instances
+7. **Per-element `mt-*`/`mb-*` chains on prose** -- add `.flow` to the content region and let the rhythm own the spacing
 
 The pattern: when you reach for arbitrary values or inline class chains, pause and check whether a primitive already does this. The answer is almost always yes.

@@ -12,6 +12,7 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
 import { Section, SectionHeader } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
@@ -19,11 +20,9 @@ import { numberFormat } from "@/lib/utils/numbers"
 
 import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
 
-import { ChevronNext } from "../Chevron"
-
+import learnImage from "@/public/images/heroes/guides-hub-hero.jpg"
+import enterpriseImage from "@/public/images/heroes/roadmap-hub-hero.jpg"
 import developersImage from "@/public/images/homepage/get-started/developers.png"
-import enterpriseImage from "@/public/images/homepage/get-started/enterprise.png"
-import learnImage from "@/public/images/homepage/get-started/learn.png"
 
 type GetStartedGridProps = {
   className?: string
@@ -95,7 +94,7 @@ const GetStartedGrid = async ({
 
   return (
     <Section id="get-started" className={cn("relative", className)}>
-      <div className="flex flex-col gap-12 rounded-t-4xl bg-radial-a px-4 pt-20 pb-8 md:px-8">
+      <div className="flex flex-col gap-12 rounded-t-4xl bg-radial-primary px-4 pt-20 pb-8 md:px-8">
         <div className="flex flex-col items-center gap-2 text-center">
           <SectionHeader className="mt-0 mb-0">
             {t("page-index-get-started-title")}
@@ -105,12 +104,10 @@ const GetStartedGrid = async ({
           </p>
         </div>
 
-        <div className="mx-auto grid w-7xl max-w-full grid-cols-fill-3 gap-8">
+        <Grid columns={3} size="wide" className="mx-auto w-7xl max-w-full">
           {cards.map((card) => (
             <Card
               key={card.title}
-              className="border transition-colors hover:border-primary-hover"
-              variant="nested"
               href={card.href}
               size="lg"
               customEventOptions={{
@@ -118,9 +115,11 @@ const GetStartedGrid = async ({
                 eventAction: "section_click",
                 eventName: `get_started/${card.id}`,
               }}
+              variant="nested"
+              border
             >
               <CardHeader>
-                <CardBanner zoom={false}>
+                <CardBanner>
                   <Image
                     src={card.image}
                     alt=""
@@ -163,14 +162,11 @@ const GetStartedGrid = async ({
                 </ul>
               </CardContent>
               <CardFooter>
-                <CardButtonFake>
-                  {card.cta}
-                  <ChevronNext className="size-5" />
-                </CardButtonFake>
+                <CardButtonFake withChevron>{card.cta}</CardButtonFake>
               </CardFooter>
             </Card>
           ))}
-        </div>
+        </Grid>
       </div>
     </Section>
   )

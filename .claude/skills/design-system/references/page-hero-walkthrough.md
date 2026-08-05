@@ -8,16 +8,15 @@ A worked example of adding a page hero correctly.
 
 | Hero | When to use |
 |---|---|
-| `PageHero` | The workhorse for most internal pages. 2-column with image, breadcrumb (or `header` eyebrow), and up to two buttons -- **or** text-only when you omit `heroImg`. Absorbed the former `ContentHero` and `SimpleHero`. |
+| `PageHero` | The workhorse for most internal pages. 2-column with breadcrumbs, an optional `eyebrow`, an aside (`heroImg` **or** `heroComponent`), and up to two buttons -- **or** text-only when you pass neither aside. With `variant="no-divider"` and no aside/`description` it's the minimal breadcrumb + h1 article hero (the `StaticLayout` default). Absorbed the former `ContentHero`, `SimpleHero`, and `MdxHero`. |
 | `HubHero` | Hub/landing pages: full-bleed background image with overlay text card. |
 | `HomeHero` | Homepage only. Async server component with optimized image loading. |
-| `MdxHero` | Long-form articles: minimal breadcrumb + h1, optimized for reading. |
 
 If none of these fit, **stop and ask**. Don't invent a new hero. Always import `PageHero` as a named export from `@/components/Hero`.
 
 ## Step 2: Compose
 
-Prop order convention (include only what's present): `breadcrumbs` **or** `header`, then `heroImg`, `title`, `description`, `buttons`, `variant`, `className`.
+Prop order convention (include only what's present, matching the component's argument order): `breadcrumbs`, `eyebrow`, `heroImg` **or** `heroComponent`, `title`, `description`, `buttons`, `blurDataURL`, `variant`, `className`.
 
 ### `PageHero` with breadcrumbs (most common)
 
@@ -46,24 +45,44 @@ export default async function Page() {
 }
 ```
 
-`breadcrumbs` accepts either a `{ slug }` object (rendered by the standardized `Breadcrumbs` component) **or** a fully custom `<Breadcrumb>` element -- reach for the custom element when the slug-derived links don't map to real routes. With `breadcrumbs`, `title` is the page `<h1>`.
+`breadcrumbs` accepts either a `{ slug }` object (rendered by the standardized `Breadcrumbs` component) **or** a fully custom `<Breadcrumb>` element -- reach for the custom element when the slug-derived links don't map to real routes. `title` is always the page `<h1>`.
 
-### `PageHero` with an eyebrow (`header`)
+### `PageHero` with an `eyebrow`
 
-`breadcrumbs` and `header` are **mutually exclusive** (a discriminated union). Pass `header` instead of `breadcrumbs` to render a small uppercase eyebrow as the `<h1>` in the breadcrumb slot; this demotes `title` to `<h2>` (the same structure as `HubHero`).
+`eyebrow` is an optional `ReactNode` rendered between the breadcrumbs and the title -- use it for a small status indicator, tag, or label. It does not change the heading hierarchy (`title` stays the `<h1>`).
 
 ```tsx
 <PageHero
-  header={t("hero-eyebrow")}
-  heroImg={heroImg}
+  breadcrumbs={{ slug: "/bug-bounty/" }}
+  eyebrow={
+    <div className="flex items-center gap-2">
+      <div className="size-2 rounded-full bg-success" />
+      <p className="text-sm uppercase">{t("status-active")}</p>
+    </div>
+  }
   title={t("hero-title")}
   description={t("hero-description")}
 />
 ```
 
-### `PageHero` text-only (no image)
+> There is no `header` prop. (It was removed -- it previously rendered a small uppercase eyebrow as the `<h1>` and demoted `title` to `<h2>`. The title is now always the `<h1>`; use breadcrumbs for the slot above it and `eyebrow` for anything extra.)
 
-Omit `heroImg` for a text-only hero. Add `variant="no-divider"` when the next section already supplies its own top border (otherwise you'll get a double rule).
+### `PageHero` with a `heroComponent` (instead of an image)
+
+Pass `heroComponent` (a `ReactNode`) to render an arbitrary widget -- a leaderboard, stats panel, etc. -- where the image would sit. `heroImg` and `heroComponent` are **mutually exclusive** at the type level (a discriminated union; passing both is a compile error). The difference is mobile stacking: a `heroImg` stacks **above** the text, while a `heroComponent` folds **below** it. Both sit beside the text on desktop.
+
+```tsx
+<PageHero
+  breadcrumbs={{ slug: "/bug-bounty/" }}
+  heroComponent={<Leaderboard content={topHunters} />}
+  title={t("hero-title")}
+  description={t("hero-description")}
+/>
+```
+
+### `PageHero` text-only (no aside)
+
+Omit both `heroImg` and `heroComponent` for a text-only hero. Add `variant="no-divider"` when the next section already supplies its own top border (otherwise you'll get a double rule).
 
 ```tsx
 <PageHero
@@ -74,12 +93,16 @@ Omit `heroImg` for a text-only hero. Add `variant="no-divider"` when the next se
 />
 ```
 
-### `MdxHero` (article-style)
+### `PageHero` article-style (replaces the former `MdxHero`)
+
+For the minimal breadcrumb + h1 reading hero (what `StaticLayout` renders for non-hub pages), use a text-only `PageHero` with `variant="no-divider"` and no `description`. `description` is optional on `PageHero`, so omitting it yields just the breadcrumb and title.
 
 ```tsx
-import { MdxHero } from "@/components/Hero"
-
-<MdxHero breadcrumbs={{ slug: "/developers/docs/" }} title={t("title")} />
+<PageHero
+  breadcrumbs={{ slug }}
+  title={frontmatter.title}
+  variant="no-divider"
+/>
 ```
 
 ## Step 3: Translation, not English
@@ -101,7 +124,7 @@ The page above is a Server Component (default), so it uses `getTranslations` fro
 // DON'T: Inline a hero from scratch
 <section className="relative">
   <h1 className="mt-8 mb-4 text-md uppercase font-normal">{eyebrow}</h1>
-  <h2 className="mt-8 mb-0 text-[2.5rem] !leading-xs font-bold lg:mt-12 lg:text-5xl">{title}</h2>
+  <h2 className="mt-8 mb-0 text-[2.5rem] !leading-xs lg:mt-12 lg:text-5xl">{title}</h2>
   <p className="mt-4 mb-8 text-xl !leading-xs lg:text-2xl">{description}</p>
   <div className="flex gap-4">{buttons}</div>
 </section>
@@ -118,7 +141,7 @@ Reasons it's wrong:
 
 - [ ] Imports the hero as a named export from `@/components/Hero`
 - [ ] Picks the right Hero variant for the page type
-- [ ] Passes exactly one of `breadcrumbs` or `header` to `PageHero` (they're mutually exclusive)
+- [ ] Passes `breadcrumbs` to `PageHero`; uses at most one aside (`heroImg` **or** `heroComponent`, never both)
 - [ ] All copy comes from `t()` -- no hard-coded English
 - [ ] Hero image is passed as a static import (`heroImg={heroImage}`)
 - [ ] Breadcrumbs are populated (most pages should have them)

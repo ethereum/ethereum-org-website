@@ -1,6 +1,6 @@
 "use client"
 
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import { Lang, Skill, TranslationKey } from "@/lib/types"
 import { TutorialFrontmatter } from "@/lib/interfaces"
@@ -17,24 +17,21 @@ import { Flex } from "./ui/flex"
 import InlineLink from "./ui/Link"
 import { Tag } from "./ui/tag"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 export type TutorialMetadataProps = {
   frontmatter: TutorialFrontmatter
   timeToRead: number
 }
 
+// Key within the "page-developers-tutorials" namespace
 export const getSkillTranslationId = (skill: Skill): TranslationKey =>
-  `page-developers-tutorials:page-tutorial-${
-    Skill[skill.toUpperCase() as keyof typeof Skill]
-  }`
+  `page-tutorial-${Skill[skill.toUpperCase() as keyof typeof Skill]}`
 
 const TutorialMetadata = ({
   frontmatter,
   timeToRead,
 }: TutorialMetadataProps) => {
   const locale = useLocale()
-  const { t } = useTranslation("page-developers-tutorials")
+  const t = useTranslations("page-developers-tutorials")
 
   const hasSource = frontmatter.source && frontmatter.sourceUrl
   const published = frontmatter.published
@@ -50,7 +47,7 @@ const TutorialMetadata = ({
       {hasTopRow && (
         <Flex className="mb-8 w-full items-center justify-between">
           {hasTags && (
-            <Flex className="w-full flex-wrap">
+            <Flex className="w-full flex-wrap gap-2">
               <TutorialTags tags={frontmatter.tags!} />
             </Flex>
           )}

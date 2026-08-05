@@ -1,17 +1,25 @@
 import type { ImageProps } from "next/image"
 
 import { Image } from "@/components/Image"
-import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Flex } from "@/components/ui/flex"
-import { List, ListItem } from "@/components/ui/list"
+import {
+  Card,
+  CardBanner,
+  CardButtonFake,
+  CardContent,
+  CardFooter,
+  CardParagraph,
+  CardTitle,
+} from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
 
 import { cn } from "@/lib/utils/cn"
 
-type Content = {
+export type ProductListContent = {
   title: string
-  description: string
-  contentItems?: React.ReactNode[]
-  link?: string
+  description: React.ReactNode | React.ReactNode[]
+  href: string
+  /** Complete, self-descriptive CTA label, e.g. "Visit EigenLayer" */
+  ctaLabel: string
   image?: ImageProps["src"]
   alt?: string
   id?: string
@@ -19,84 +27,93 @@ type Content = {
 }
 
 export type ProductListProps = {
-  content: Content[]
+  content: ProductListContent[]
   category?: string
-  actionLabel: string
+  columns?: 2
+  parentHeadingLevel?: 1 | 2 | 3
 }
 
-const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
-  const CATEGORY_NAME = "category-name"
+const ProductList = ({
+  content,
+  category,
+  columns,
+  parentHeadingLevel = 2,
+}: ProductListProps) => {
+  const CategoryHeading = `h${parentHeadingLevel + 1}` as "h2" | "h3" | "h4"
+  const ProductHeading = `h${parentHeadingLevel + (category ? 2 : 1)}` as
+    | "h2"
+    | "h3"
+    | "h4"
+    | "h5"
 
   return (
-    <div className="w-full">
+    <div className="mb-4 w-full space-y-space">
       {category && (
-        <h3
-          id={CATEGORY_NAME}
-          className="mt-10 mb-0 border-b-2 border-border pb-4 text-2xl"
-        >
+        <CategoryHeading className="mt-space-2x border-b pb-space-half text-h3">
           {category}
-        </h3>
+        </CategoryHeading>
       )}
-      <List aria-labelledby={CATEGORY_NAME} className="m-0 mb-4">
+      <Grid columns={columns || 1} size="wider">
         {content.map(
           (
             {
               title,
               description,
-              link,
+              href,
+              ctaLabel,
               image,
-              alt,
+              alt = "",
               id,
-              contentItems,
               className,
             },
             idx
-          ) => (
-            <ListItem
-              key={id || idx}
-              color="text"
-              className={cn(
-                "mt-8 mb-0 flex pb-4",
-                idx !== content.length - 1 && "border-b",
-                className
-              )}
-            >
-              <div className="w-20">
+          ) => {
+            const descriptions = Array.isArray(description)
+              ? description
+              : [description]
+            return (
+              <Card
+                key={id || idx}
+                variant="ghost"
+                href={href}
+                className={cn("@container/card flex-row", className)}
+              >
                 {image && (
-                  <Image
-                    src={image}
-                    alt={alt || ""}
-                    width={66}
-                    height={66}
-                    className="rounded-xl shadow-lg dark:shadow-body-light"
-                  />
+                  <CardContent className="flex-none pe-0">
+                    <CardBanner
+                      background="none"
+                      fit="contain"
+                      size="thumbnail"
+                    >
+                      <Image src={image} alt={alt} width={128} height={128} />
+                    </CardBanner>
+                  </CardContent>
                 )}
-              </div>
-              <Flex className="ms-4 w-full flex-col justify-between pb-4 sm:flex-row">
-                <div className="flex flex-1 flex-col gap-2">
-                  <div className="text-xl font-bold">{title}</div>
-                  <div className="mb-0 text-sm opacity-60">{description}</div>
-                  {contentItems && (
-                    <div className="mb-0 flex flex-col gap-2 text-sm">
-                      {contentItems}
-                    </div>
-                  )}
+                <div className="flex flex-col">
+                  <CardContent>
+                    <CardTitle asChild>
+                      <ProductHeading>{title}</ProductHeading>
+                    </CardTitle>
+                    {descriptions.map((desc, i) => (
+                      <CardParagraph key={i}>{desc}</CardParagraph>
+                    ))}
+                  </CardContent>
+                  {/* Full-width CTA when the card is narrow; fit-content once
+                      the card is wide enough (most visible at 1 column). */}
+                  <CardFooter className="mt-auto" buttons="inherit">
+                    <CardButtonFake
+                      variant="outline"
+                      className="w-full @md/card:w-fit"
+                    >
+                      {ctaLabel}
+                    </CardButtonFake>
+                  </CardFooter>
                 </div>
-                {link && (
-                  <ButtonLink
-                    variant="outline"
-                    href={link}
-                    className="ms-0 mt-4 min-h-fit gap-0 self-center rounded-xs px-6 py-1 sm:ms-8 sm:mt-0"
-                  >
-                    {actionLabel}
-                    <span className="sr-only">to {title} website</span>
-                  </ButtonLink>
-                )}
-              </Flex>
-            </ListItem>
-          )
+              </Card>
+            )
+          }
         )}
-      </List>
+      </Grid>
     </div>
   )
 }

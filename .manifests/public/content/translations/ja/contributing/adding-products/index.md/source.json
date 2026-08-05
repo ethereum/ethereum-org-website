@@ -1,0 +1,244 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/contributing/adding-products/index.md",
+  "generatedAt": "2026-06-08T07:49:08.585Z",
+  "rootHash": "a447e9d5923d",
+  "tree": {
+    "contentHash": "b38b33a9cab9",
+    "anchorHash": "c805701262ba",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "1557c0c94091",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:metaTitle": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "2b0088c852a3"
+      },
+      "frontmatter:description": {
+        "contentHash": "00d603041632",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:0": {
+        "contentHash": "258869426bcb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "decision-framework": {
+        "contentHash": "a06e5f383875",
+        "anchorHash": "e2c84f5cb440",
+        "labelHash": "09f808a5016b",
+        "children": {
+          "_label": {
+            "contentHash": "09f808a5016b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "criteria-for-inclusion-the-must-haves": {
+            "contentHash": "6c54156d5bd6",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "c0101a929d45",
+            "children": {
+              "_label": {
+                "contentHash": "c0101a929d45",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "285ed798a317",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "criteria-for-ranking-the-nice-to-haves": {
+            "contentHash": "c769309c8fce",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "922b0210e37c",
+            "children": {
+              "_label": {
+                "contentHash": "922b0210e37c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "57e9037a8026",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "criteria-for-inclusion-the-must-haves",
+          "criteria-for-ranking-the-nice-to-haves"
+        ]
+      },
+      "criteria-in-practice": {
+        "contentHash": "7cd62d387ecf",
+        "anchorHash": "c61a93daea92",
+        "labelHash": "43092ac55de7",
+        "children": {
+          "_label": {
+            "contentHash": "43092ac55de7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "9669f464d700",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "product-ordering": {
+            "contentHash": "1715faee5a7e",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "363f873a4a48",
+            "children": {
+              "_label": {
+                "contentHash": "363f873a4a48",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "cf494f4067a5",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "terms-of-use": {
+            "contentHash": "8e1b968cb057",
+            "anchorHash": "7387a265c2e5",
+            "labelHash": "8c45a486e4b1",
+            "children": {
+              "_label": {
+                "contentHash": "8c45a486e4b1",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "299712208760",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "eb43b9b04b89",
+                "anchorHash": "d04de55860e6"
+              },
+              "prose:2": {
+                "contentHash": "c76503395908",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "product-ordering",
+          "terms-of-use"
+        ]
+      },
+      "maintenance": {
+        "contentHash": "df3b0456857d",
+        "anchorHash": "c429542b4e47",
+        "labelHash": "17ccfa5b681e",
+        "children": {
+          "_label": {
+            "contentHash": "17ccfa5b681e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "433473d5c98e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f3a0b68bee88",
+            "anchorHash": "92144b06ff14"
+          },
+          "prose:3": {
+            "contentHash": "1bc6b4e3fc08",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "06f2ca801efd",
+            "anchorHash": "ea72e69696b6"
+          },
+          "prose:4": {
+            "contentHash": "cd98bef7d97c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "add-your-product": {
+        "contentHash": "ed40691a305f",
+        "anchorHash": "2b7492d94297",
+        "labelHash": "63fc84138c5c",
+        "children": {
+          "_label": {
+            "contentHash": "63fc84138c5c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "fc6290472529",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "dbf8e2588c6e",
+            "anchorHash": "61016dfb4844",
+            "children": {
+              "attr:href": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "dfa8ed011fcc"
+              },
+              "prose:0": {
+                "contentHash": "01caf8c50bb0",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:href",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:metaTitle",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:0",
+      "decision-framework",
+      "criteria-in-practice",
+      "maintenance",
+      "add-your-product"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

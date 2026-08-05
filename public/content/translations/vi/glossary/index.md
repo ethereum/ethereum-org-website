@@ -1,10 +1,10 @@
 ---
-title: "Thuật ngữ về Ethereum"
-description: "Một danh sách chủ giải về những thuật ngữ chuyên ngành và không chuyên ngành liên quan đển Ethereum"
+title: Thuật ngữ
+metaTitle: Thuật ngữ Ethereum
+description: Một bảng thuật ngữ chưa hoàn chỉnh về các thuật ngữ kỹ thuật và phi kỹ thuật liên quan đến Ethereum
 lang: vi
+authors: ["Andreas Antonopoulos"]
 ---
-
-# Thuật ngữ {#ethereum-glossary}
 
 ## \# {#section-numbers}
 
@@ -494,12 +494,12 @@ lang: vi
 
 ## Nguồn {#sources}
 
-_Một phần được cung cấp bởi [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) của [Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) theo CC-BY-SA_
+_Được cung cấp một phần bởi [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) của [Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) theo giấy phép CC-BY-SA_
 
 <Divider />
 
 ## Đóng góp cho trang này {#contribute-to-this-page}
 
-Chúng tôi có quên mất điều gì không? Có sự nhầm lẫn? Hãy giúp chúng tôi đóng góp cải thiện mục chú giải này trên GitHub!
+Chúng tôi có bỏ sót điều gì không? Có điều gì không chính xác không? Hãy giúp chúng tôi cải thiện bằng cách đóng góp cho bảng thuật ngữ này trên GitHub!
 
 [Tìm hiểu thêm về cách đóng góp](/contributing/adding-glossary-terms)

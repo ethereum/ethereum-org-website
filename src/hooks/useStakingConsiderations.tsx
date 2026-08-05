@@ -1,4 +1,5 @@
 import { ElementType, useState } from "react"
+import { useTranslations } from "next-intl"
 
 import type { MatomoEventOptions, StakingPage } from "@/lib/types"
 
@@ -17,8 +18,6 @@ import {
 } from "@/components/icons/staking"
 import { StakingConsiderationsProps } from "@/components/Staking/StakingConsiderations"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 type DataType = {
   title: string
   description: string
@@ -33,7 +32,7 @@ export const useStakingConsiderations = ({
   page,
 }: StakingConsiderationsProps) => {
   const [activeIndex, setActiveIndex] = useState(0)
-  const { t } = useTranslation("page-staking")
+  const t = useTranslations("page-staking")
 
   const data: { [key in StakingPage]: DataType[] } = {
     solo: [
@@ -401,8 +400,6 @@ export const useStakingConsiderations = ({
   }
 
   const indicatorSvgStyle = { width: 20, height: "auto" }
-  const StyledSvg = () =>
-    Svg ? <Svg className="size-[4.5rem]" /> : <div className="hidden" />
 
   return {
     title,
@@ -413,7 +410,7 @@ export const useStakingConsiderations = ({
     dropdownLinks,
     handleSelection,
     indicatorSvgStyle,
-    StyledSvg,
+    Svg,
     pageData,
     activeIndex,
   }

@@ -12,13 +12,6 @@ import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
 import WithdrawalsTabComparison from "@/components/Staking/WithdrawalsTabComparison"
 import UpgradeStatus from "@/components/UpgradeStatus"
 
-const CardGrid = (props: ChildOnlyProp) => (
-  <div
-    className="m-auto grid grid-cols-1 gap-8 md:m-0 md:grid-cols-3 [&_h3]:mt-0"
-    {...props}
-  />
-)
-
 const TableContainer = (props: ChildOnlyProp) => (
   <div className="mx-auto w-fit lg:mx-0" {...props} />
 )
@@ -27,7 +20,6 @@ const TableContainer = (props: ChildOnlyProp) => (
 // The layout itself lives in `src/layouts/Topic.tsx`; per-section config is
 // in `src/data/topics/staking.ts`.
 export const stakingComponents = {
-  CardGrid,
   DocLink,
   ProductDisclaimer,
   StakingComparison,

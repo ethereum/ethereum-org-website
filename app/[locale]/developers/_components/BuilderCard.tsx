@@ -1,8 +1,8 @@
 import { Image } from "@/components/Image"
-import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardBanner,
+  CardButtonFake,
   CardContent,
   CardFooter,
   CardHeader,
@@ -18,7 +18,16 @@ type BuildCardProps = {
 }
 
 const BuilderCard = ({ path }: BuildCardProps) => (
-  <Card variant="ghost" className="border">
+  <Card
+    href={path.href}
+    variant="ghost"
+    className="border"
+    customEventOptions={{
+      eventCategory: "top_boxes",
+      eventAction: "click",
+      eventName: path.tag,
+    }}
+  >
     <CardHeader>
       <CardBanner fit="contain" background="none">
         <Image
@@ -38,22 +47,11 @@ const BuilderCard = ({ path }: BuildCardProps) => (
           {path.tag}
         </Tag>
       )}
-      <CardTitle variant="semibold">{path.title}</CardTitle>
+      <CardTitle size="sm">{path.title}</CardTitle>
       <CardParagraph size="sm">{path.description}</CardParagraph>
     </CardContent>
     <CardFooter>
-      <ButtonLink
-        href={path.href}
-        className="sm:w-fit"
-        customEventOptions={{
-          eventCategory: "top_boxes",
-          eventAction: "click",
-          eventName: path.tag,
-        }}
-        rel="noopener"
-      >
-        {path.button}
-      </ButtonLink>
+      <CardButtonFake>{path.button}</CardButtonFake>
     </CardFooter>
   </Card>
 )

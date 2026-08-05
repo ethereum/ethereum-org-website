@@ -1,0 +1,1268 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/security/index.md",
+  "generatedAt": "2026-06-08T10:54:03.851Z",
+  "rootHash": "7f0456edcad4",
+  "tree": {
+    "contentHash": "669df36bb27f",
+    "anchorHash": "146ebd46eee3",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "d9e12940a383",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "2769cac1b79b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:0": {
+        "contentHash": "5d4702c0f745",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "component:4": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "crypto-security": {
+        "contentHash": "3de823b1f6f3",
+        "anchorHash": "7f4202ec4e53",
+        "labelHash": "02f5216d2637",
+        "children": {
+          "_label": {
+            "contentHash": "02f5216d2637",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "level-up-your-knowledge": {
+            "contentHash": "24795ee554d4",
+            "anchorHash": "eacf5cea304d",
+            "labelHash": "e467735b1caf",
+            "children": {
+              "_label": {
+                "contentHash": "e467735b1caf",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "f80163ed8fdd",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "a13bebeb57e1",
+                "anchorHash": "8a5edab28263"
+              },
+              "prose:2": {
+                "contentHash": "10160fc2f3f9",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:4": {
+                "contentHash": "8c9cd4e1411f",
+                "anchorHash": "7f28ba2ab395",
+                "children": {
+                  "attr:href": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "b2b55c156bde"
+                  },
+                  "prose:0": {
+                    "contentHash": "ac6e184ddd15",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:href",
+                  "prose:0"
+                ]
+              },
+              "component:5": {
+                "contentHash": "b81d5b8f1eca",
+                "anchorHash": "337cc1ae806a",
+                "children": {
+                  "attr:href": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "db0b5977176b"
+                  },
+                  "prose:0": {
+                    "contentHash": "34cf0a0dc30d",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:href",
+                  "prose:0"
+                ]
+              },
+              "component:6": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2",
+              "component:4",
+              "component:5",
+              "component:6"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "level-up-your-knowledge"
+        ]
+      },
+      "wallet-security": {
+        "contentHash": "cd26f620757f",
+        "anchorHash": "a4fc74035fb6",
+        "labelHash": "e9923e791b98",
+        "children": {
+          "_label": {
+            "contentHash": "e9923e791b98",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "protect-private-keys": {
+            "contentHash": "712273c956bb",
+            "anchorHash": "7d3e7837dcae",
+            "labelHash": "a48f61f9808f",
+            "children": {
+              "_label": {
+                "contentHash": "a48f61f9808f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "f87ee05aa32b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:2": {
+                "contentHash": "9ca0ddf7d1a7",
+                "anchorHash": "5af215c8608b",
+                "children": {
+                  "attr:href": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "aeb8a6ee9055"
+                  },
+                  "prose:0": {
+                    "contentHash": "95eea2744e25",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:href",
+                  "prose:0"
+                ]
+              },
+              "screenshot-private-keys": {
+                "contentHash": "636774ffc92e",
+                "anchorHash": "4b9f7d802648",
+                "labelHash": "3c7a0a7975a2",
+                "children": {
+                  "_label": {
+                    "contentHash": "3c7a0a7975a2",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:0": {
+                    "contentHash": "166d255a3201",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:0"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "component:2",
+              "screenshot-private-keys"
+            ]
+          },
+          "use-hardware-wallet": {
+            "contentHash": "12409c99a485",
+            "anchorHash": "22e47520e53c",
+            "labelHash": "ead04c4270e4",
+            "children": {
+              "_label": {
+                "contentHash": "ead04c4270e4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "1997ae7cac9c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "try-hardware-wallet": {
+                "contentHash": "b300864c3196",
+                "anchorHash": "e6b6016b5fbd",
+                "labelHash": "0ddf0f05a5fe",
+                "children": {
+                  "_label": {
+                    "contentHash": "0ddf0f05a5fe",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:2": {
+                    "contentHash": "3973e022e932",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "ee69eb4afc76",
+                    "anchorHash": "96368f490811"
+                  },
+                  "prose:3": {
+                    "contentHash": "3973e022e932",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:1": {
+                    "contentHash": "0d6d23e72e8d",
+                    "anchorHash": "3fc050a29672"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:2",
+                  "link:0",
+                  "prose:3",
+                  "link:1"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "try-hardware-wallet"
+            ]
+          },
+          "double-check-transactions": {
+            "contentHash": "71b3484b1c06",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "25ff30d9d1c1",
+            "children": {
+              "_label": {
+                "contentHash": "25ff30d9d1c1",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "22e58819d811",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "spend-limits": {
+            "contentHash": "9400955997f2",
+            "anchorHash": "c7afe4993e3b",
+            "labelHash": "a5323d56c7ab",
+            "children": {
+              "_label": {
+                "contentHash": "a5323d56c7ab",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "8b5787658a47",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "d8d58a776ff6",
+                "anchorHash": "e99a14df0c81"
+              },
+              "component:3": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "component:3"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "protect-private-keys",
+          "use-hardware-wallet",
+          "double-check-transactions",
+          "spend-limits"
+        ]
+      },
+      "common-scams": {
+        "contentHash": "64fa1e303f9e",
+        "anchorHash": "fc107edb7eaf",
+        "labelHash": "af68b4a5d599",
+        "children": {
+          "_label": {
+            "contentHash": "af68b4a5d599",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "e5e42cded722",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "ad-phishing": {
+            "contentHash": "7087d93d9e55",
+            "anchorHash": "817f0324d3b8",
+            "labelHash": "832e20ddc0a5",
+            "children": {
+              "_label": {
+                "contentHash": "832e20ddc0a5",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "image:0": {
+                "contentHash": "ea4e991b87ba",
+                "anchorHash": "a449f33bdbb6"
+              },
+              "prose:2": {
+                "contentHash": "03f63293b743",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "492646eeb472",
+                "anchorHash": "b73393768b1a"
+              },
+              "prose:3": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "image:0",
+              "prose:2",
+              "link:1",
+              "prose:3"
+            ]
+          },
+          "giveaway": {
+            "contentHash": "0a03f27b096c",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "811694ef5cdc",
+            "children": {
+              "_label": {
+                "contentHash": "811694ef5cdc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "dded7205a5c5",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "social-media-hacks": {
+            "contentHash": "268024782152",
+            "anchorHash": "3377b53ad0d9",
+            "labelHash": "97e7a71fcd2d",
+            "children": {
+              "_label": {
+                "contentHash": "97e7a71fcd2d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "6ed7bc5028c2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "image:0": {
+                "contentHash": "83531e175b18",
+                "anchorHash": "4b469c8a6137"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "image:0"
+            ]
+          },
+          "celebrity-giveaway": {
+            "contentHash": "2584e5aeeed3",
+            "anchorHash": "331fe25378b7",
+            "labelHash": "30e441d71888",
+            "children": {
+              "_label": {
+                "contentHash": "30e441d71888",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "7e2070109f54",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "image:0": {
+                "contentHash": "16f4ab101cc1",
+                "anchorHash": "063051a5b604"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "image:0"
+            ]
+          },
+          "support-scams": {
+            "contentHash": "d1c8ce0c6fbe",
+            "anchorHash": "862c7dbf4bbb",
+            "labelHash": "c6ec94cd3d40",
+            "children": {
+              "_label": {
+                "contentHash": "c6ec94cd3d40",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "749d26070ab0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "image:0": {
+                "contentHash": "1ec9cb80a4d7",
+                "anchorHash": "3bb00d373884"
+              },
+              "prose:2": {
+                "contentHash": "1b697be85bc0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:4": {
+                "contentHash": "303ff679b031",
+                "anchorHash": "95d6791c83b1",
+                "children": {
+                  "attr:variant": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "2937013f2181"
+                  },
+                  "component:0": {
+                    "contentHash": "4b9f7d802648",
+                    "anchorHash": "0fea193c6419",
+                    "children": {
+                      "attr:text": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "a4d984cc026b"
+                      }
+                    }
+                  },
+                  "component:1": {
+                    "contentHash": "89b3f12e2a24",
+                    "anchorHash": "fb3c2f4b6ca6",
+                    "children": {
+                      "component:0": {
+                        "contentHash": "a8ebadb995aa",
+                        "anchorHash": "4b9f7d802648",
+                        "children": {
+                          "prose:0": {
+                            "contentHash": "30a604dc9067",
+                            "anchorHash": "e3b0c44298fc"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "childrenOrder": [
+                  "attr:variant",
+                  "component:0",
+                  "component:1"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "image:0",
+              "prose:2",
+              "component:4"
+            ]
+          },
+          "eth2-token-scam": {
+            "contentHash": "897ea19a8dd2",
+            "anchorHash": "66bda7fc6c4e",
+            "labelHash": "900733bb02ff",
+            "children": {
+              "_label": {
+                "contentHash": "900733bb02ff",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "e51dfac40a08",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "c09500586c2c",
+                "anchorHash": "77488c35533d"
+              },
+              "prose:3": {
+                "contentHash": "857b79badeea",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "90955af7df3c",
+                "anchorHash": "35b4f72a770b"
+              },
+              "prose:4": {
+                "contentHash": "5a23766ee235",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          },
+          "phishing-scams": {
+            "contentHash": "67dfbbbb5110",
+            "anchorHash": "0e85c3b1fbf7",
+            "labelHash": "efeec6246c2b",
+            "children": {
+              "_label": {
+                "contentHash": "efeec6246c2b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "90016f898ace",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "de54104d7093",
+                "anchorHash": "fbe9d25eab69"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0"
+            ]
+          },
+          "broker-scams": {
+            "contentHash": "05f1a3e77d8e",
+            "anchorHash": "b63bc152644e",
+            "labelHash": "55f3819ee246",
+            "children": {
+              "_label": {
+                "contentHash": "55f3819ee246",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "451dcd43b5bd",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "image:0": {
+                "contentHash": "edd3c7380683",
+                "anchorHash": "407381c8fe92"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "image:0"
+            ]
+          },
+          "mining-pool-scams": {
+            "contentHash": "c4930d437d49",
+            "anchorHash": "8954e929ace6",
+            "labelHash": "bbff44582ca0",
+            "children": {
+              "_label": {
+                "contentHash": "bbff44582ca0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "46c14b129de1",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "fc49b684619b",
+                "anchorHash": "77719b337f69"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0"
+            ]
+          },
+          "airdrop-scams": {
+            "contentHash": "b99193cfce55",
+            "anchorHash": "221f5c401847",
+            "labelHash": "8f9b8bb47dc3",
+            "children": {
+              "_label": {
+                "contentHash": "8f9b8bb47dc3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "f99dc600122c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "e908ede74123",
+                "anchorHash": "71b460b7f1b4"
+              },
+              "component:3": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "component:3"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "ad-phishing",
+          "giveaway",
+          "social-media-hacks",
+          "celebrity-giveaway",
+          "support-scams",
+          "eth2-token-scam",
+          "phishing-scams",
+          "broker-scams",
+          "mining-pool-scams",
+          "airdrop-scams"
+        ]
+      },
+      "web-security": {
+        "contentHash": "ac4bfd50d3f5",
+        "anchorHash": "03b0daec1519",
+        "labelHash": "e091ed64e221",
+        "children": {
+          "_label": {
+            "contentHash": "e091ed64e221",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "use-strong-passwords": {
+            "contentHash": "3cb4279b7709",
+            "anchorHash": "f199b76994fe",
+            "labelHash": "624b158104c0",
+            "children": {
+              "_label": {
+                "contentHash": "624b158104c0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "c7606357dbfc",
+                "anchorHash": "10a1369bdc94"
+              },
+              "prose:1": {
+                "contentHash": "c3fa7d3cab43",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-fence:3": {
+                "contentHash": "547b5cd897ee",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "abeda719accd",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "good-password-practices": {
+                "contentHash": "72e582713cc0",
+                "anchorHash": "c589d1f551dc",
+                "labelHash": "2d73a82e6660",
+                "children": {
+                  "_label": {
+                    "contentHash": "2d73a82e6660",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:1": {
+                    "contentHash": "6a674df6ca4d",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "ca0ad5abbcaa",
+                    "anchorHash": "58434206ca84"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:1",
+                  "link:0"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "link:0",
+              "prose:1",
+              "code-fence:3",
+              "prose:1",
+              "link:0",
+              "prose:2",
+              "good-password-practices"
+            ]
+          },
+          "use-unique-passwords": {
+            "contentHash": "e6a9d0c0b80c",
+            "anchorHash": "b713d3bf19b2",
+            "labelHash": "7855ff46420c",
+            "children": {
+              "_label": {
+                "contentHash": "7855ff46420c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "d0a709f79ee5",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "2622519f013f",
+                "anchorHash": "4533c1ea5b3e"
+              },
+              "prose:2": {
+                "contentHash": "784a2d74bea4",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "use-password-manager": {
+            "contentHash": "0d1708690be6",
+            "anchorHash": "e7a0c26cee48",
+            "labelHash": "2d537aee3eda",
+            "children": {
+              "_label": {
+                "contentHash": "2d537aee3eda",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:1": {
+                "contentHash": "0218f95d0bd4",
+                "anchorHash": "e3a96fda1356",
+                "children": {
+                  "attr:variant": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "2937013f2181"
+                  },
+                  "component:0": {
+                    "contentHash": "4b9f7d802648",
+                    "anchorHash": "3df6662f9563",
+                    "children": {
+                      "attr:text": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "bb3fc0c17a32"
+                      }
+                    }
+                  },
+                  "component:1": {
+                    "contentHash": "a8178a2f572f",
+                    "anchorHash": "fb3c2f4b6ca6",
+                    "children": {
+                      "component:0": {
+                        "contentHash": "0366e0e4194d",
+                        "anchorHash": "4b9f7d802648",
+                        "children": {
+                          "prose:0": {
+                            "contentHash": "70cde154bfbe",
+                            "anchorHash": "e3b0c44298fc"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "childrenOrder": [
+                  "attr:variant",
+                  "component:0",
+                  "component:1"
+                ]
+              },
+              "prose:1": {
+                "contentHash": "3536274cd363",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "image:0": {
+                "contentHash": "5ea2ee024908",
+                "anchorHash": "1a0fd2308df4"
+              },
+              "try-password-manager": {
+                "contentHash": "9ac4058a42e8",
+                "anchorHash": "9c3bce3b76d8",
+                "labelHash": "13fc49a89bdb",
+                "children": {
+                  "_label": {
+                    "contentHash": "13fc49a89bdb",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:4": {
+                    "contentHash": "3973e022e932",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "fb54e0f95e21",
+                    "anchorHash": "67805718b311"
+                  },
+                  "prose:5": {
+                    "contentHash": "3973e022e932",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:1": {
+                    "contentHash": "d2ccd00e79bc",
+                    "anchorHash": "1622ddfe53cc"
+                  },
+                  "prose:6": {
+                    "contentHash": "3973e022e932",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:2": {
+                    "contentHash": "4a9e4a5e58be",
+                    "anchorHash": "a72551848dc7"
+                  },
+                  "prose:7": {
+                    "contentHash": "7db7175c14fe",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:3": {
+                    "contentHash": "e64349950c5f",
+                    "anchorHash": "787acdeb9fa7"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:4",
+                  "link:0",
+                  "prose:5",
+                  "link:1",
+                  "prose:6",
+                  "link:2",
+                  "prose:7",
+                  "link:3"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "component:1",
+              "prose:1",
+              "image:0",
+              "try-password-manager"
+            ]
+          },
+          "two-factor-authentication": {
+            "contentHash": "f47cb196a1ef",
+            "anchorHash": "5b509fe6f90d",
+            "labelHash": "5f0b7024136e",
+            "children": {
+              "_label": {
+                "contentHash": "5f0b7024136e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "b0238e341549",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:2": {
+                "contentHash": "47885a45b388",
+                "anchorHash": "4a1f1fdd5ee2",
+                "children": {
+                  "attr:variant": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "2937013f2181"
+                  },
+                  "component:0": {
+                    "contentHash": "4b9f7d802648",
+                    "anchorHash": "0fea193c6419",
+                    "children": {
+                      "attr:text": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "a4d984cc026b"
+                      }
+                    }
+                  },
+                  "component:1": {
+                    "contentHash": "f4ae9dd51c21",
+                    "anchorHash": "6bf0c0c92ca2",
+                    "children": {
+                      "component:0": {
+                        "contentHash": "ba9ea155c2c4",
+                        "anchorHash": "2f7c563add5e",
+                        "children": {
+                          "prose:3": {
+                            "contentHash": "38bdea0be20f",
+                            "anchorHash": "e3b0c44298fc"
+                          },
+                          "html-tag:0": {
+                            "contentHash": "225f8144e53e",
+                            "anchorHash": "de7eb3db39fa"
+                          },
+                          "prose:4": {
+                            "contentHash": "7689a64eb8c5",
+                            "anchorHash": "e3b0c44298fc"
+                          },
+                          "html-tag:1": {
+                            "contentHash": "be18832c6824",
+                            "anchorHash": "75133358aaf9"
+                          },
+                          "prose:5": {
+                            "contentHash": "7175517a370b",
+                            "anchorHash": "e3b0c44298fc"
+                          },
+                          "html-tag:2": {
+                            "contentHash": "61d13f2a4afa",
+                            "anchorHash": "13297109840a"
+                          },
+                          "prose:6": {
+                            "contentHash": "cdb4ee2aea69",
+                            "anchorHash": "e3b0c44298fc"
+                          }
+                        },
+                        "childrenOrder": [
+                          "prose:3",
+                          "html-tag:0",
+                          "prose:4",
+                          "html-tag:1",
+                          "prose:5",
+                          "html-tag:2",
+                          "prose:6"
+                        ]
+                      }
+                    }
+                  }
+                },
+                "childrenOrder": [
+                  "attr:variant",
+                  "component:0",
+                  "component:1"
+                ]
+              },
+              "security-keys": {
+                "contentHash": "342dea5b62e8",
+                "anchorHash": "22ea120eb6a3",
+                "labelHash": "433fdf145982",
+                "children": {
+                  "_label": {
+                    "contentHash": "433fdf145982",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:1": {
+                    "contentHash": "a50eab612d68",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "ac54a91af6f3",
+                    "anchorHash": "2b8a27c47c3f"
+                  },
+                  "prose:2": {
+                    "contentHash": "d92181a9dd52",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "component:4": {
+                    "contentHash": "f5818652a990",
+                    "anchorHash": "1b853c3ec208",
+                    "children": {
+                      "attr:slug": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "e43b8d1e2563"
+                      },
+                      "attr:startTime": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "ce16559af2ca"
+                      }
+                    },
+                    "childrenOrder": [
+                      "attr:slug",
+                      "attr:startTime"
+                    ]
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:1",
+                  "link:0",
+                  "prose:2",
+                  "component:4"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "component:2",
+              "security-keys"
+            ]
+          },
+          "uninstall-browser-extensions": {
+            "contentHash": "651776aa8816",
+            "anchorHash": "88ee0838240f",
+            "labelHash": "2f658910642d",
+            "children": {
+              "_label": {
+                "contentHash": "2f658910642d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "d4ee4425da42",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "browser-extension-safety": {
+                "contentHash": "7c19f8ed7ebe",
+                "anchorHash": "04e60f5bd0d1",
+                "labelHash": "51e98f739a41",
+                "children": {
+                  "_label": {
+                    "contentHash": "51e98f739a41",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:1": {
+                    "contentHash": "4b3324349c7e",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "d2b6c352c31f",
+                    "anchorHash": "561836e8bc50"
+                  },
+                  "component:3": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:1",
+                  "link:0",
+                  "component:3"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "browser-extension-safety"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "use-strong-passwords",
+          "use-unique-passwords",
+          "use-password-manager",
+          "two-factor-authentication",
+          "uninstall-browser-extensions"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "6f7da2ec4f64",
+        "anchorHash": "0fe4fc32bb45",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "reading-web-security": {
+            "contentHash": "4d09e693c87b",
+            "anchorHash": "5a3f49e48175",
+            "labelHash": "6527e3f25301",
+            "children": {
+              "_label": {
+                "contentHash": "6527e3f25301",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:3": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "feb920f25fc9",
+                "anchorHash": "618fd3f7449b"
+              },
+              "prose:4": {
+                "contentHash": "7579e72da57b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "07a504bde68f",
+                "anchorHash": "e89615726f98"
+              },
+              "prose:5": {
+                "contentHash": "290845bad3f5",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "c02ea0e6d4f9",
+                "anchorHash": "cd73bf94db4d"
+              },
+              "prose:6": {
+                "contentHash": "0391d79f4e44",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:3",
+              "link:0",
+              "prose:4",
+              "link:1",
+              "prose:5",
+              "link:2",
+              "prose:6"
+            ]
+          },
+          "reading-crypto-security": {
+            "contentHash": "691c5e07623a",
+            "anchorHash": "d5ca6a05c1d2",
+            "labelHash": "e5312418cc7e",
+            "children": {
+              "_label": {
+                "contentHash": "e5312418cc7e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:4": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "adc2d813bd85",
+                "anchorHash": "699fa32a24d6"
+              },
+              "prose:5": {
+                "contentHash": "0df29538a036",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "93aa57686e4c",
+                "anchorHash": "ad5c842ede13"
+              },
+              "prose:6": {
+                "contentHash": "86b0b65f4075",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "2bf9e81739dc",
+                "anchorHash": "b5ecb95dadfd"
+              },
+              "prose:7": {
+                "contentHash": "0df29538a036",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "c52b5400c38b",
+                "anchorHash": "0d85e8ed3de0"
+              },
+              "prose:8": {
+                "contentHash": "218b5409f097",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:4",
+              "link:0",
+              "prose:5",
+              "link:1",
+              "prose:6",
+              "link:2",
+              "prose:7",
+              "link:3",
+              "prose:8"
+            ]
+          },
+          "reading-scam-education": {
+            "contentHash": "2f71e4a967c8",
+            "anchorHash": "80f2c538c417",
+            "labelHash": "c1454bb9037b",
+            "children": {
+              "_label": {
+                "contentHash": "c1454bb9037b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:4": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "d3d977edf09b",
+                "anchorHash": "1a15925e0cf0"
+              },
+              "prose:5": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "0b4f27db89da",
+                "anchorHash": "0d4e715c33b7"
+              },
+              "prose:6": {
+                "contentHash": "0df29538a036",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "67e97b45a78c",
+                "anchorHash": "34c10e06d8eb"
+              },
+              "prose:7": {
+                "contentHash": "70832a227685",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "de965ad3c944",
+                "anchorHash": "447a6adc8e2d"
+              },
+              "prose:8": {
+                "contentHash": "23ce2af91e88",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:10": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "b68fe80e108a",
+                "children": {
+                  "attr:quizKey": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "5d2d3ceb7abe"
+                  }
+                }
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:4",
+              "link:0",
+              "prose:5",
+              "link:1",
+              "prose:6",
+              "link:2",
+              "prose:7",
+              "link:3",
+              "prose:8",
+              "component:10"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "reading-web-security",
+          "reading-crypto-security",
+          "reading-scam-education"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:0",
+      "component:4",
+      "crypto-security",
+      "wallet-security",
+      "common-scams",
+      "web-security",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

@@ -1,80 +1,81 @@
 ---
-title: Beacon chain
-description: Jifunze juu ya Mnyororo Kioleza - Kisasisho kilichoanzishwa na Ethereum ya uthibitisho-wa-hisa.
+title: Mnyororo wa Beacon
+description: Jifunze kuhusu Mnyororo wa Beacon - sasisho lililoanzisha Uthibitisho wa Dau kwenye Ethereum.
 lang: sw
 template: upgrade
 image: /images/upgrades/core.png
-alt:
+alt: 
 summaryPoints:
-  - "Mnyororo Kioleza ulianzisha uthibitisho-wa-hisa kwa mfumo wa ikolojia wa Ethereum."
-  - "Uliunganishwa na mnyororo asilia wa uthibitishaji-wa-kazi wa Ethereum mnamo Septemba 2022."
-  - "Mnyororo Kioleza ulianzisha mantiki ya makubaliano na itifaki ya uvumi wa bloku ambayo sasa inalinda Ethereum."
+  - "Mnyororo wa Beacon ulianzisha Uthibitisho wa Dau (PoS) kwenye mfumo wa ikolojia wa Ethereum."
+  - "Uliunganishwa na mnyororo wa asili wa Uthibitisho wa Kazi wa Ethereum mnamo Septemba 2022."
+  - "Mnyororo wa Beacon ulianzisha mantiki ya mwafaka na itifaki ya usambazaji wa kitalu ambayo sasa inalinda Ethereum."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
-  Mnyororo Kioleza ulizinduliwa mnamo Desemba 1, 2020, na kurasimisha uthibitisho-wa-hisa kama utaratibu wa makubaliano wa Ethereum kwa sasisho la Muungano mnamo Septemba 15, 2022.
+  Mnyororo wa Beacon ulizinduliwa mnamo Desemba 1, 2020, na kurasimisha Uthibitisho wa Dau (PoS) kama utaratibu wa makubaliano wa Ethereum kupitia sasisho la Unganisho mnamo Septemba 15, 2022.
 </UpgradeStatus>
 
-## Mnyororo Kioleza ni nini? {#what-is-the-beacon-chain}
+## Mnyororo wa Beacon ni nini? {#what-is-the-beacon-chain}
 
-Mnyororo Kioleza ni jina la mnyororo wa bloku asilia wa uthibitisho-wa-hisa uliyozinduliwa mnamo 2020. Uliundwa ili kuhakikisha mantiki ya makubaliano ya uthibitisho-wa-hisa ilikuwa thabiti na endelevu kabla ya kuiwezesha kwenye Mtandao Mkuu wa Ethereum. Kwa hivyo, uliendeshwa sambamba na Ethereum asilia ya uthibitishaji-wa-kazi. Mnyororo Kioleza ulikuwa mnyororo wa bloku 'tupu', lakini kuzima uthibitishaji-wa-kazi na kuwasha uthibitisho-wa-hisa kwenye Ethereum kulihitaji kuuelekeza Mnyororo Kioleza kukubali data za miamala kutoka kwa programu za utekelezaji, kuzikusanya katika bloku na kisha kuzipanga kuwa mnyororo wa bloku kwa kutumia utaratibu wa makubaliano unaotegemea uthibitisho-wa-hisa. Wakati huo huo, wateja asilia wa Ethereum walizima uchimbaji wao, uenezaji wa bloku na mantiki ya makubaliano, na kukabidhi yote hayo kwa Mnyororo Kioleza. Tukio hili lilijulikana kama [Muungano](/roadmap/merge/). Mara tu Muungano ulipotokea, hakukuwa tena na minyororo miwili ya bloku. Badala yake, kulikuwa na Ethereum moja tu ya uthibitisho-wa-hisa, ambayo sasa inahitaji wateja wawili tofauti kwa kila nodi. Mnyororo Kioleza sasa ni safu ya makubaliano, mtandao wa rika-kwa-rika wa wateja wa makubaliano ambao hushughulikia uvumi wa bloku na mantiki ya makubaliano, huku wateja asilia wakiunda safu ya utekelezaji, ambayo inawajibika kwa uvumi na utekelezaji wa miamala, na kudhibiti hali ya Ethereum. Safu hizi mbili zinaweza kuwasiliana kwa kutumia Engine API.
+Mnyororo wa Beacon ni jina la mnyororo wa vitalu wa asili wa Uthibitisho wa Dau (PoS) uliozinduliwa mwaka 2020. Uliundwa ili kuhakikisha mantiki ya mwafaka ya Uthibitisho wa Dau ilikuwa thabiti na endelevu kabla ya kuiwezesha kwenye Mtandao Mkuu wa [Ethereum](/). Kwa hivyo, ulifanya kazi sambamba na Ethereum ya asili ya Uthibitisho wa Kazi (PoW). Mnyororo wa Beacon ulikuwa mnyororo wa vitalu 'vitupu', lakini kuzima Uthibitisho wa Kazi na kuwasha Uthibitisho wa Dau kwenye Ethereum kulihitaji kuuelekeza Mnyororo wa Beacon kukubali data ya muamala kutoka kwa wateja wa tabaka la utekelezaji, kuikusanya kwenye vitalu na kisha kuipanga kwenye mnyororo wa vitalu kwa kutumia utaratibu wa makubaliano unaotegemea Uthibitisho wa Dau. Wakati huo huo, wateja wa asili wa Ethereum walizima uchimbaji wao, usambazaji wa kitalu na mantiki ya mwafaka, na kukabidhi yote hayo kwa Mnyororo wa Beacon. Tukio hili lilijulikana kama [Unganisho](/roadmap/merge/). Baada ya Unganisho kutokea, hakukuwa tena na minyororo miwili ya vitalu. Badala yake, kulikuwa na Ethereum moja tu ya Uthibitisho wa Dau, ambayo sasa inahitaji wateja wawili tofauti kwa kila nodi. Mnyororo wa Beacon sasa ni tabaka la mwafaka, mtandao wa rika-kwa-rika wa wateja wa mwafaka unaoshughulikia usambazaji wa kitalu na mantiki ya mwafaka, huku wateja wa asili wakiunda tabaka la utekelezaji, ambalo linawajibika kwa kusambaza na kutekeleza miamala, na kusimamia hali ya Ethereum. Matabaka haya mawili yanaweza kuwasiliana kwa kutumia Engine API.
 
-## Myororo wa Kioleza ni nini? {#what-does-the-beacon-chain-do}
+## Mnyororo wa Beacon unafanya nini? {#what-does-the-beacon-chain-do}
 
-Mnyororo Kioleza ni jina lililopewa leja ya akaunti iliyoendesha na kuratibu mtandao wa [waweka hisa](/staking/) wa Ethereum kabla ya waweka hisa hao kuanza kuthibitisha bloku halisi za Ethereum. Hata hivyo, haichakati miamala wala kushughulikia mwingiliano wa mikataba-erevu kwa sababu hilo linafanywa katika safu ya utekelezaji.
-Mnyororo Kioleza unawajibika kwa mambo kama vile kushughulikia bloku na uthibitishaji, kuendesha algoriti ya kuchagua uma, na kudhibiti zawadi na adhabu.
+Mnyororo wa Beacon ni jina lililopewa leja ya akaunti iliyoendesha na kuratibu mtandao wa [waweka dhamana](/staking/) wa Ethereum kabla ya waweka dhamana hao kuanza kuthibitisha vitalu halisi vya Ethereum. Hata hivyo, hauchakati miamala au kushughulikia mwingiliano wa mkataba mahiri kwa sababu hilo linafanywa katika tabaka la utekelezaji.
+Mnyororo wa Beacon unawajibika kwa mambo kama vile kushughulikia kitalu na uthibitisho, kuendesha algoriti ya kuchagua mchepuko, na kusimamia zawadi na adhabu.
 Soma zaidi kwenye [ukurasa wetu wa usanifu wa nodi](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
 
-## Athari za Mnyororo Kioleza {#beacon-chain-features}
+## Athari za Mnyororo wa Beacon {#beacon-chain-features}
 
-### Utangulizi wa kusimamisha {#introducing-staking}
+### Kuanzisha uwekaji dhamana {#introducing-staking}
 
-Mnyororo Kioleza ulianzisha [uthibitisho-wa-hisa](/developers/docs/consensus-mechanisms/pos/) kwa Ethereum. Hii huiweka Ethereum salama na huwapatia wathibitishaji ETH zaidi katika mchakato huo. Kiutendaji, kusimamisha kunahusisha kusimamisha ETH ili kuwezesha programu ya mthibitishaji. Kama mweka hisa, unaendesha programu ambayo huunda na kuthibitisha bloku mpya katika mnyororo.
+Mnyororo wa Beacon ulianzisha [Uthibitisho wa Dau (PoS)](/developers/docs/consensus-mechanisms/pos/) kwenye Ethereum. Hii huweka Ethereum salama na kuwapatia wathibitishaji ETH zaidi katika mchakato huo. Katika uhalisia, uwekaji dhamana unahusisha kuweka dhamana ya ETH ili kuwezesha programu ya mthibitishaji. Kama mweka dhamana, unaendesha programu inayounda na kuthibitisha vitalu vipya kwenye mnyororo.
 
-Kusimamisha hutumikia madhumuni sawa na yale ambayo [uchimbaji](/developers/docs/consensus-mechanisms/pow/mining/) ulivyokuwa ukitumika, lakini ni tofauti kwa njia nyingi. Uchimbaji ulihitaji matumizi makubwa ya awali katika mfumo wa maunzi yenye nguvu na matumizi ya nishati, na kusababisha uchumi wa kiwango, na kukuza umilikaji wa kati. Uchimbaji pia haukuja na hitaji lolote la kufungia mali kama dhamana, na kupunguza uwezo wa itifaki kuwaadhibu wahusika wabaya baada ya shambulio.
+Uwekaji dhamana unatumika kwa madhumuni sawa na yale ambayo [uchimbaji](/developers/docs/consensus-mechanisms/pow/mining/) ulikuwa ukiyafanya, lakini ni tofauti kwa njia nyingi. Uchimbaji ulihitaji matumizi makubwa ya awali kwa njia ya vifaa vyenye nguvu na matumizi ya nishati, na kusababisha unafuu wa gharama kutokana na ukubwa, na kukuza uwekaji kati. Uchimbaji pia haukuja na hitaji lolote la kufungia rasilimali kama dhamana, na hivyo kupunguza uwezo wa itifaki wa kuwaadhibu watendaji wabaya baada ya shambulio.
 
-Mpito kuelekea uthibitisho-wa-hisa uliifanya Ethereum kuwa salama zaidi na yenye ugatuaji mkubwa ikilinganishwa na uthibitishaji-wa-kazi. Kadiri watu wengi wanavyoshiriki katika mtandao, ndivyo unavyozidi kuwa na ugatuaji na salama dhidi ya mashambulizi.
+Mabadiliko kuelekea kwenye Uthibitisho wa Dau yaliifanya Ethereum kuwa salama zaidi na iliyogatuliwa ikilinganishwa na Uthibitisho wa Kazi. Kadiri watu wengi wanavyoshiriki kwenye mtandao, ndivyo unavyozidi kuwa uliogatuliwa na salama dhidi ya mashambulizi.
+
 
 <Alert variant="update">
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-  Ikiwa una nia ya kuwa mthibitishaji na kusaidia kulinda Ethereum, [jifunze zaidi kuhusu kusimamisha](/staking/).
+  Ikiwa una nia ya kuwa mthibitishaji na kusaidia kulinda Ethereum, [jifunze zaidi kuhusu uwekaji dhamana](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-### Kuweka mipangilio kwa ajili ya ugawanyaji {#setting-up-for-sharding}
+### Kujiandaa kwa ajili ya shadi {#setting-up-for-sharding}
 
-Tangu Mnyororo Kioleza ulipoungana na Mtandao Mkuu asilia wa Ethereum, jumuiya ya Ethereum ilianza kutafuta njia za kuongeza ukubwa wa mtandao.
+Tangu Mnyororo wa Beacon ulipounganishwa na Mtandao Mkuu wa asili wa Ethereum, jamii ya Ethereum ilianza kuangalia jinsi ya kuongeza uwezo wa mtandao.
 
-Uthibitisho-wa-hisa una faida ya kuwa na sajili ya wazalishaji wote wa bloku walioidhinishwa wakati wowote, kila mmoja akiwa na ETH kama hisa. Sajili hii inaandaa jukwaa la uwezo wa kugawanya na kutawala lakini kwa uhakika inagawanya majukumu maalum ya mtandao.
+Uthibitisho wa Dau una faida ya kuwa na sajili ya wazalishaji wote wa kitalu walioidhinishwa wakati wowote, kila mmoja akiwa na ETH iliyowekwa dhamana. Sajili hii inaweka msingi wa uwezo wa kugawanya na kutawala lakini kwa kutegemewa kugawanya majukumu maalum ya mtandao.
 
-Wajibu huu ni kinyume na uthibitishaji-wa-kazi, ambapo wachimbaji hawana wajibu kwa mtandao na wanaweza kuacha uchimbaji na kuzima programu zao za nodi kabisa papo hapo bila matokeo yoyote. Pia hakuna sajili ya wapendekezaji wa bloku wanaojulikana na hakuna njia ya kuaminika ya kugawanya majukumu ya mtandao kwa usalama.
+Jukumu hili ni tofauti na Uthibitisho wa Kazi, ambapo wachimbaji hawana wajibu kwa mtandao na wangeweza kuacha kuchimba na kuzima programu zao za nodi moja kwa moja kwa muda mfupi bila madhara yoyote. Pia hakuna sajili ya wapendekezaji wa kitalu wanaojulikana na hakuna njia ya kutegemewa ya kugawanya majukumu ya mtandao kwa usalama.
 
-[Zaidi kuhusu ugawanyaji](/roadmap/danksharding/)
+[Zaidi kuhusu shadi](/roadmap/danksharding/)
 
 ## Uhusiano kati ya masasisho {#relationship-between-upgrades}
 
-Visasisho vyote vya Eth2 vinahusiana kwa kiasi fulani. Basi hebu tukumbushe jinsi mnyororo wa Beacon(Kioleza) unavyoathiri visasisho vingine.
+Masasisho yote ya Ethereum yanahusiana kwa kiasi fulani. Kwa hivyo hebu tujikumbushe jinsi Mnyororo wa Beacon unavyoathiri masasisho mengine.
 
-### Mnyororo Kioleza na Muungano {#merge-and-beacon-chain}
+### Mnyororo wa Beacon na Unganisho {#merge-and-beacon-chain}
 
-Hapo awali, Mnyororo Kioleza ulikuwepo kando na Mtandao Mkuu wa Ethereum, lakini viliunganishwa mnamo 2022.
+Mwanzoni, Mnyororo wa Beacon ulikuwepo kando na Mtandao Mkuu wa Ethereum, lakini iliunganishwa mwaka wa 2022.
 
 <ButtonLink href="/roadmap/merge/">
-  Muungano
+  Unganisho
 </ButtonLink>
 
-### Vigawe na Mnyororo Kioleza {#shards-and-beacon-chain}
+### Shadi na Mnyororo wa Beacon {#shards-and-beacon-chain}
 
-Ugawanyaji unaweza kuingia kwa usalama tu katika mfumo wa ikolojia wa Ethereum kukiwa na utaratibu wa makubaliano wa uthibitisho-wa-hisa. Mnyororo Kioleza ulianzisha kusimamisha, ambayo 'iliunganishwa' na Mtandao Mkuu, na kuandaa njia kwa ajili ya ugawanyaji kusaidia kuongeza zaidi ukubwa wa Ethereum.
+Shadi inaweza tu kuingia kwa usalama kwenye mfumo wa ikolojia wa Ethereum kukiwa na utaratibu wa makubaliano wa Uthibitisho wa Dau. Mnyororo wa Beacon ulianzisha uwekaji dhamana, ambao 'uliunganishwa' na Mtandao Mkuu, na kufungua njia kwa shadi kusaidia zaidi kuongeza uwezo wa Ethereum.
 
 <ButtonLink href="/roadmap/danksharding/">
-  Minyororo ya Vigawe
+  Minyororo ya shadi
 </ButtonLink>
 
-## Masomo Zaidi
+## Kusoma zaidi {#further-reading}
 
 - [Zaidi kuhusu usanifu wa nodi](/developers/docs/nodes-and-clients/node-architecture)
-- [Zaidi kuhusu uthibitisho-wa-hisa](/developers/docs/consensus-mechanisms/pos)
+- [Zaidi kuhusu Uthibitisho wa Dau](/developers/docs/consensus-mechanisms/pos)

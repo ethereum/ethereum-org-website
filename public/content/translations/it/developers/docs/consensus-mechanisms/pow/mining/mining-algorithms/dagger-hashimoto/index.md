@@ -4,22 +4,22 @@ description: Uno sguardo dettagliato all'algoritmo Dagger-Hashimoto.
 lang: it
 ---
 
-Dagger-Hashimoto è stata l'implementazione di ricerca e la specifica originale per l'algoritmo di mining di Ethereum. Dagger-Hashimoto è stato sostituito da [Ethash](#ethash). Il mining è stato completamente disattivato con [Il Merge](/roadmap/merge/) il 15 settembre 2022. Da allora, Ethereum è stato messo in sicurezza utilizzando invece un meccanismo di [prova di stake](/developers/docs/consensus-mechanisms/pos). Questa pagina è di interesse storico: le informazioni qui contenute non sono più rilevanti per l'Ethereum post-Merge.
+Dagger-Hashimoto è stata l'implementazione di ricerca e la specifica originale per l'algoritmo di minaggio di Ethereum. Dagger-Hashimoto è stato sostituito da [Ethash](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/#ethash). Il minaggio è stato disattivato completamente con [The Merge](/roadmap/merge/) il 15 settembre 2022. Da allora, Ethereum è stato protetto utilizzando invece un meccanismo di [Proof-of-Stake (PoS)](/developers/docs/consensus-mechanisms/pos). Questa pagina è di interesse storico: le informazioni qui contenute non sono più rilevanti per l'Ethereum post-Merge.
 
 ## Prerequisiti {#prerequisites}
 
-Per comprendere meglio questa pagina, ti consigliamo di leggere prima il [consenso basato sulla prova di lavoro](/developers/docs/consensus-mechanisms/pow), il [mining](/developers/docs/consensus-mechanisms/pow/mining) e gli [algoritmi di mining](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms).
+Per comprendere meglio questa pagina, ti consigliamo di leggere prima il [consenso basato sulla Prova di lavoro (PoW)](/developers/docs/consensus-mechanisms/pow), il [minaggio](/developers/docs/consensus-mechanisms/pow/mining) e gli [algoritmi di minaggio](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms).
 
 ## Dagger-Hashimoto {#dagger-hashimoto}
 
 Dagger-Hashimoto mira a soddisfare due obiettivi:
 
-1.  **Resistenza agli ASIC**: il vantaggio derivante dalla creazione di hardware specializzato per l'algoritmo dovrebbe essere il più piccolo possibile
-2.  **Verificabilità del client leggero**: un blocco dovrebbe essere verificabile in modo efficiente da un client leggero.
+1.  **Resistenza agli ASIC**: il vantaggio derivante dalla creazione di hardware specializzato per l'algoritmo dovrebbe essere il più ridotto possibile
+2.  **Verificabilità da parte dei client leggeri**: un blocco dovrebbe essere verificabile in modo efficiente da un client leggero.
 
-Con un'ulteriore modifica, specifichiamo anche come soddisfare un terzo obiettivo, se lo si desidera, ma al costo di una maggiore complessità:
+Con un'ulteriore modifica, specifichiamo anche come soddisfare un terzo obiettivo, se desiderato, ma al costo di una maggiore complessità:
 
-**Archiviazione dell'intera catena**: il mining dovrebbe richiedere l'archiviazione dello stato completo della blockchain (a causa della struttura irregolare del trie dello stato di Ethereum, prevediamo che sarà possibile una certa potatura, in particolare di alcuni contratti usati di frequente, ma vogliamo ridurla al minimo).
+**Archiviazione dell'intera catena**: il minaggio dovrebbe richiedere l'archiviazione dello stato completo della blockchain (a causa della struttura irregolare del trie di stato di Ethereum, prevediamo che sarà possibile un po' di sfoltimento, in particolare di alcuni contratti usati di frequente, ma vogliamo ridurlo al minimo).
 
 ## Generazione del DAG {#dag-generation}
 
@@ -45,7 +45,7 @@ def decode_int(s):
     return x
 ```
 
-Supponiamo poi che `sha3` sia una funzione che accetta un intero e restituisce un intero, e `dbl_sha3` sia una funzione double-sha3; se si converte questo codice di riferimento in un'implementazione, utilizzare:
+Supponiamo poi che `sha3` sia una funzione che accetta un intero e restituisce un intero, e che `dbl_sha3` sia una funzione double-sha3; se si converte questo codice di riferimento in un'implementazione, utilizzare:
 
 ```python
 from pyethereum import utils
@@ -65,24 +65,24 @@ def dbl_sha3(x):
 I parametri utilizzati per l'algoritmo sono:
 
 ```python
-SAFE_PRIME_512 = 2**512 - 38117 # Il più grande numero primo sicuro minore di 2**512
+SAFE_PRIME_512 = 2**512 - 38117     # Il più grande numero primo sicuro minore di 2**512
 
 params = {
-      "n": 4000055296 * 8 // NUM_BITS, # Dimensione del dataset (4 Gigabyte); DEVE ESSERE UN MULTIPLO DI 65536
-      "n_inc": 65536, # Incremento del valore di n per periodo; DEVE ESSERE UN MULTIPLO DI 65536
-                                        # con epochtime=20000 dà una crescita di 882 MB all'anno
-      "cache_size": 2500, # Dimensione della cache del light client (può essere scelta dal light
-                                        # client; non fa parte delle specifiche dell'algoritmo)
-      "diff": 2**14, # Difficoltà (regolata durante la valutazione del blocco)
-      "epochtime": 100000, # Lunghezza di un'epoca in blocchi (con quale frequenza viene aggiornato il dataset)
-      "k": 1, # Numero di genitori di un nodo
-      "w": w, # Usato per l'hash dell'esponenziazione modulare
-      "accesses": 200, # Numero di accessi al dataset durante hashimoto
-      "P": SAFE_PRIME_512 # Numero primo sicuro per l'hash e la generazione di numeri casuali
+      "n": 4000055296 * 8 // NUM_BITS,  # Dimensione del dataset (4 Gigabyte); DEVE ESSERE UN MULTIPLO DI 65536
+      "n_inc": 65536,                   # Incremento del valore di n per periodo; DEVE ESSERE UN MULTIPLO DI 65536
+                                        # con epochtime=20000 fornisce una crescita di 882 MB all'anno
+      "cache_size": 2500,               # Dimensione della cache del client leggero (può essere scelta dal client
+                                        # leggero; non fa parte delle specifiche dell'algoritmo)
+      "diff": 2**14,                    # Difficoltà (regolata durante la valutazione del blocco)
+      "epochtime": 100000,              # Lunghezza di un'epoca in blocchi (con quale frequenza viene aggiornato il dataset)
+      "k": 1,                           # Numero di genitori di un nodo
+      "w": w,                          # Usato per l'hashing con esponenziazione modulare
+      "accesses": 200,                  # Numero di accessi al dataset durante hashimoto
+      "P": SAFE_PRIME_512               # Numero primo sicuro per l'hashing e la generazione di numeri casuali
 }
 ```
 
-In questo caso `P` è un numero primo scelto in modo tale che `log₂(P)` sia solo leggermente inferiore a 512, il che corrisponde ai 512 bit che abbiamo utilizzato per rappresentare i nostri numeri. Nota che solo l'ultima metà del DAG deve essere effettivamente archiviata, quindi il requisito di RAM de facto parte da 1 GB e cresce di 441 MB all'anno.
+`P` in questo caso è un numero primo scelto in modo tale che `log₂(P)` sia appena inferiore a 512, il che corrisponde ai 512 bit che abbiamo utilizzato per rappresentare i nostri numeri. Nota che solo l'ultima metà del DAG deve essere effettivamente archiviata, quindi il requisito di RAM de facto parte da 1 GB e cresce di 441 MB all'anno.
 
 ### Costruzione del grafo Dagger {#dagger-graph-building}
 
@@ -101,13 +101,13 @@ def produce_dag(params, seed, length):
     return o
 ```
 
-Essenzialmente, inizia un grafo come un singolo nodo, `sha3(seed)`, e da lì inizia ad aggiungere sequenzialmente altri nodi basati su nodi precedenti casuali. Quando viene creato un nuovo nodo, viene calcolata una potenza modulare del seme per selezionare casualmente alcuni indici minori di `i` (usando `x % i` sopra), e i valori dei nodi a quegli indici vengono utilizzati in un calcolo per generare un nuovo valore per `x`, che viene poi inserito in una piccola funzione di prova di lavoro (basata su XOR) per generare infine il valore del grafo all'indice `i`. La logica alla base di questo particolare design è forzare l'accesso sequenziale del DAG; il valore successivo del DAG a cui si accederà non può essere determinato finché non si conosce il valore corrente. Infine, l'esponenziazione modulare esegue ulteriormente l'hash del risultato.
+Essenzialmente, inizia un grafo come un singolo nodo, `sha3(seed)`, e da lì inizia ad aggiungere sequenzialmente altri nodi basati su nodi precedenti casuali. Quando viene creato un nuovo nodo, viene calcolata una potenza modulare del seme per selezionare casualmente alcuni indici inferiori a `i` (utilizzando `x % i` sopra), e i valori dei nodi a quegli indici vengono utilizzati in un calcolo per generare un nuovo valore per `x`, che viene poi inserito in una piccola funzione di prova di lavoro (basata su XOR) per generare infine il valore del grafo all'indice `i`. La logica alla base di questo particolare design è forzare l'accesso sequenziale del DAG; il valore successivo del DAG a cui si accederà non può essere determinato finché non si conosce il valore corrente. Infine, l'esponenziazione modulare esegue ulteriormente l'hashing del risultato.
 
 Questo algoritmo si basa su diversi risultati della teoria dei numeri. Consulta l'appendice di seguito per una discussione.
 
 ## Valutazione del client leggero {#light-client-evaluation}
 
-La costruzione del grafo di cui sopra intende consentire la ricostruzione di ciascun nodo nel grafo calcolando un sottoalbero di un piccolo numero di nodi e richiedendo solo una piccola quantità di memoria ausiliaria. Nota che con k=1, il sottoalbero è solo una catena di valori che arriva fino al primo elemento nel DAG.
+La costruzione del grafo di cui sopra intende consentire la ricostruzione di ciascun nodo nel grafo calcolando un sottoalbero di un numero limitato di nodi e richiedendo solo una piccola quantità di memoria ausiliaria. Nota che con k=1, il sottoalbero è solo una catena di valori che arriva fino al primo elemento nel DAG.
 
 La funzione di calcolo del client leggero per il DAG funziona come segue:
 
@@ -131,13 +131,13 @@ def quick_calc(params, seed, p):
     return quick_calc_cached(p)
 ```
 
-Essenzialmente, è semplicemente una riscrittura dell'algoritmo di cui sopra che rimuove il ciclo di calcolo dei valori per l'intero DAG e sostituisce la precedente ricerca del nodo con una chiamata ricorsiva o una ricerca nella cache. Nota che per `k=1` la cache non è necessaria, sebbene un'ulteriore ottimizzazione precalcoli effettivamente le prime migliaia di valori del DAG e li mantenga come cache statica per i calcoli; consulta l'appendice per un'implementazione del codice di questo.
+Essenzialmente, è semplicemente una riscrittura dell'algoritmo precedente che rimuove il ciclo di calcolo dei valori per l'intero DAG e sostituisce la precedente ricerca del nodo con una chiamata ricorsiva o una ricerca nella cache. Nota che per `k=1` la cache non è necessaria, sebbene un'ulteriore ottimizzazione precalcoli effettivamente le prime migliaia di valori del DAG e li mantenga come cache statica per i calcoli; consulta l'appendice per un'implementazione del codice di questo.
 
 ## Doppio buffer di DAG {#double-buffer}
 
-In un client completo, viene utilizzato un [_doppio buffer_](https://wikipedia.org/wiki/Multiple_buffering) di 2 DAG prodotti dalla formula precedente. L'idea è che i DAG vengano prodotti ogni numero `epochtime` di blocchi in base ai parametri di cui sopra. Invece di utilizzare l'ultimo DAG prodotto, il client utilizza quello precedente. Il vantaggio di questo è che consente di sostituire i DAG nel tempo senza dover incorporare un passaggio in cui i minatori devono ricalcolare improvvisamente tutti i dati. Altrimenti, c'è il potenziale per un brusco rallentamento temporaneo nell'elaborazione della catena a intervalli regolari e un aumento drammatico della centralizzazione. Di conseguenza, rischi di attacco del 51% in quei pochi minuti prima che tutti i dati vengano ricalcolati.
+In un client completo, viene utilizzato un [_doppio buffer_](https://wikipedia.org/wiki/Multiple_buffering) di 2 DAG prodotti dalla formula precedente. L'idea è che i DAG vengano prodotti ogni numero `epochtime` di blocchi in base ai parametri sopra indicati. Invece di utilizzare l'ultimo DAG prodotto, il client utilizza quello precedente. Il vantaggio di questo approccio è che consente di sostituire i DAG nel tempo senza dover incorporare un passaggio in cui i minatori devono improvvisamente ricalcolare tutti i dati. Altrimenti, c'è il potenziale per un brusco rallentamento temporaneo nell'elaborazione della catena a intervalli regolari e un aumento drastico della centralizzazione. Di conseguenza, si presenterebbero rischi di attacco del 51% in quei pochi minuti prima che tutti i dati vengano ricalcolati.
 
-L'algoritmo utilizzato per generare l'insieme di DAG utilizzati per calcolare il lavoro per un blocco è il seguente:
+L'algoritmo utilizzato per generare l'insieme di DAG usati per calcolare il lavoro per un blocco è il seguente:
 
 ```python
 def get_prevhash(n):
@@ -164,7 +164,7 @@ def get_daggerset(params, block):
     dagsz = get_dagsize(params, block)
     seedset = get_seedset(params, block)
     if seedset["front_hash"] <= 0:
-        # Nessun back buffer è possibile, crea solo il front buffer
+        # Non è possibile alcun back buffer, crea solo il front buffer
         return {"front": {"dag": produce_dag(params, seedset["front_hash"], dagsz),
                           "block_number": 0}}
     else:
@@ -189,7 +189,7 @@ def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
     return txid_mix ^ (nonce << 192)
 ```
 
-Sfortunatamente, sebbene Hashimoto sia considerato intensivo per la RAM, si basa sull'aritmetica a 256 bit, che ha un notevole sovraccarico computazionale. Tuttavia, Dagger-Hashimoto utilizza solo i 64 bit meno significativi durante l'indicizzazione del suo set di dati per risolvere questo problema.
+Sfortunatamente, sebbene Hashimoto sia considerato RAM hard, si basa su un'aritmetica a 256 bit, che ha un notevole sovraccarico computazionale. Tuttavia, Dagger-Hashimoto utilizza solo i 64 bit meno significativi durante l'indicizzazione del suo set di dati per risolvere questo problema.
 
 ```python
 def hashimoto(dag, dagsize, params, header, nonce):
@@ -200,7 +200,7 @@ def hashimoto(dag, dagsize, params, header, nonce):
     return dbl_sha3(mix)
 ```
 
-L'uso del doppio SHA3 consente una forma di pre-verifica quasi istantanea a zero dati, verificando solo che sia stato fornito un valore intermedio corretto. Questo livello esterno di prova di lavoro è altamente compatibile con gli ASIC e piuttosto debole, ma esiste per rendere gli attacchi DDoS ancora più difficili poiché quella piccola quantità di lavoro deve essere svolta per produrre un blocco che non verrà rifiutato immediatamente. Ecco la versione per client leggero:
+L'uso del doppio SHA3 consente una forma di pre-verifica a zero dati, quasi istantanea, verificando solo che sia stato fornito un valore intermedio corretto. Questo livello esterno di prova di lavoro è altamente compatibile con gli ASIC e piuttosto debole, ma esiste per rendere gli attacchi DDoS ancora più difficili poiché quella piccola quantità di lavoro deve essere svolta per produrre un blocco che non verrà rifiutato immediatamente. Ecco la versione per client leggero:
 
 ```python
 def quick_hashimoto(seed, dagsize, params, header, nonce):
@@ -211,9 +211,9 @@ def quick_hashimoto(seed, dagsize, params, header, nonce):
     return dbl_sha3(mix)
 ```
 
-## Mining e verifica {#mining-and-verifying}
+## Minaggio e verifica {#mining-and-verifying}
 
-Ora, mettiamo tutto insieme nell'algoritmo di mining:
+Ora, mettiamo tutto insieme nell'algoritmo di minaggio:
 
 ```python
 def mine(daggerset, params, block):
@@ -239,7 +239,7 @@ def verify(daggerset, params, block, nonce):
     return result * params["diff"] < 2**256
 ```
 
-Verifica compatibile con il client leggero:
+Verifica compatibile con i client leggeri:
 
 ```python
 def light_verify(params, header, nonce):
@@ -260,7 +260,7 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 
 ## Appendice {#appendix}
 
-Come notato sopra, l'RNG utilizzato per la generazione del DAG si basa su alcuni risultati della teoria dei numeri. In primo luogo, forniamo la garanzia che l'RNG di Lehmer che è alla base della variabile `picker` abbia un periodo ampio. In secondo luogo, mostriamo che `pow(x,3,P)` non mapperà `x` a `1` o `P-1` a condizione che `x ∈ [2,P-2]` per iniziare. Infine, mostriamo che `pow(x,3,P)` ha un basso tasso di collisione quando trattato come una funzione di hashing.
+Come notato sopra, l'RNG utilizzato per la generazione del DAG si basa su alcuni risultati della teoria dei numeri. In primo luogo, forniamo la garanzia che l'RNG di Lehmer che è alla base della variabile `picker` abbia un periodo ampio. In secondo luogo, mostriamo che `pow(x,3,P)` non mapperà `x` su `1` o `P-1` a condizione che `x ∈ [2,P-2]` per iniziare. Infine, mostriamo che `pow(x,3,P)` ha un basso tasso di collisione quando viene trattato come una funzione di hash.
 
 ### Generatore di numeri casuali di Lehmer {#lehmer-random-number}
 
@@ -277,11 +277,11 @@ L'ordine di `x` non può essere `1`, poiché per il Piccolo Teorema di Fermat ab
 
 <pre>x<sup>P-1</sup> mod P ≡ 1</pre>
 
-Quindi `x` deve essere un'identità moltiplicativa di `ℤ/nℤ`, che è unica. Poiché abbiamo supposto che `x ≠ 1` per ipotesi, questo non è possibile.
+Quindi `x` deve essere un'identità moltiplicativa di `ℤ/nℤ`, che è unica. Poiché abbiamo ipotizzato che `x ≠ 1` per ipotesi, questo non è possibile.
 
 L'ordine di `x` non può essere `2` a meno che `x = P-1`, poiché ciò violerebbe il fatto che `P` sia primo.
 
-Dalla proposizione precedente, possiamo riconoscere che l'iterazione di `(picker * init) % P` avrà una lunghezza del ciclo di almeno `(P-1)/2`. Questo perché abbiamo selezionato `P` in modo che sia un numero primo sicuro approssimativamente uguale a una potenza superiore di due, e `init` è nell'intervallo `[2,2**256+1]`. Data la grandezza di `P`, non dovremmo mai aspettarci un ciclo dall'esponenziazione modulare.
+Dalla proposizione precedente, possiamo riconoscere che l'iterazione di `(picker * init) % P` avrà una lunghezza del ciclo di almeno `(P-1)/2`. Questo perché abbiamo selezionato `P` in modo che sia un numero primo sicuro approssimativamente uguale a una potenza superiore di due, e `init` si trova nell'intervallo `[2,2**256+1]`. Data la grandezza di `P`, non dovremmo mai aspettarci un ciclo dall'esponenziazione modulare.
 
 Quando assegniamo la prima cella nel DAG (la variabile etichettata `init`), calcoliamo `pow(sha3(seed) + 2, 3, P)`. A prima vista, questo non garantisce che il risultato non sia né `1` né `P-1`. Tuttavia, poiché `P-1` è un numero primo sicuro, abbiamo la seguente garanzia aggiuntiva, che è un corollario dell'Osservazione 1:
 
@@ -291,11 +291,11 @@ Quando assegniamo la prima cella nel DAG (la variabile etichettata `init`), calc
 
 Per determinati valori di `P` e `w`, la funzione `pow(x, w, P)` potrebbe avere molte collisioni. Ad esempio, `pow(x,9,19)` assume solo i valori `{1,18}`.
 
-Dato che `P` è primo, allora un `w` appropriato per una funzione di hashing di esponenziazione modulare può essere scelto utilizzando il seguente risultato:
+Dato che `P` è primo, allora un `w` appropriato per una funzione di hash di esponenziazione modulare può essere scelto utilizzando il seguente risultato:
 
-> Osservazione 3. Sia `P` un numero primo; `w` e `P-1` sono coprimi se e solo se per tutti gli `a` e `b` in `ℤ/Pℤ`:<center>`aʷ mod P ≡ bʷ mod P` se e solo se `a mod P ≡ b mod P`</center>
+> Osservazione 3. Sia `P` un numero primo; `w` e `P-1` sono coprimi se e solo se per tutti i `a` e `b` in `ℤ/Pℤ`:<center>`aʷ mod P ≡ bʷ mod P` se e solo se `a mod P ≡ b mod P`</center>
 
-Pertanto, dato che `P` è primo e `w` è coprimo rispetto a `P-1`, abbiamo che `|{pow(x, w, P) : x ∈ ℤ}| = P`, il che implica che la funzione di hashing ha il tasso di collisione minimo possibile.
+Pertanto, dato che `P` è primo e `w` è coprimo rispetto a `P-1`, abbiamo che `|{pow(x, w, P) : x ∈ ℤ}| = P`, il che implica che la funzione di hash ha il tasso di collisione minimo possibile.
 
 Nel caso speciale in cui `P` sia un numero primo sicuro come abbiamo selezionato, allora `P-1` ha solo i fattori 1, 2, `(P-1)/2` e `P-1`. Poiché `P` > 7, sappiamo che 3 è coprimo rispetto a `P-1`, quindi `w=3` soddisfa la proposizione precedente.
 

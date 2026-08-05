@@ -1,31 +1,31 @@
 ---
 title: "Wprowadzenie do węzłów rozruchowych Ethereum"
-description: "Podstawowe informacje, których potrzebujesz, aby zrozumieć węzły rozruchowe"
+description: "Podstawowe informacje potrzebne do zrozumienia węzłów rozruchowych"
 lang: pl
 ---
 
-Kiedy nowy węzeł dołącza do sieci Ethereum, to potrzebuje on połączyć się z węzłami, które już są w sieci, aby móc odkryć nowych rówieśników. Te punkty wejścia do sieci Ethereum są nazywane węzłami rozruchowymi. Klienty zazwyczaj mają zakodowaną w siebie listę węzłów rozruchowych. Te węzły rozruchowe są zazwyczaj uruchamiane przez zespół DevOps Fundacji Ethereum lub zespoły samych klientów. Należy zapamiętać, że węzły rozruchowe nie tym samym co węzły statyczne. Węzły statyczne są w kółko wywoływane, podczas gdy węzły rozruchowe są wywoływane, tylko gdy nie ma wystarczającej ilości rówieśników, do których można się podłączyć lub gdy węzeł potrzebuje utworzyć trochę nowych połączeń.
+Kiedy nowy węzeł dołącza do sieci Ethereum, musi połączyć się z węzłami, które już są w sieci, aby następnie odkryć nowych peerów. Te punkty wejścia do sieci Ethereum nazywane są węzłami rozruchowymi. Klienci zazwyczaj mają wbudowaną na stałe listę węzłów rozruchowych. Te węzły rozruchowe są zazwyczaj utrzymywane przez zespół devops Fundacji Ethereum lub same zespoły tworzące klientów. Należy pamiętać, że węzły rozruchowe to nie to samo co węzły statyczne. Z węzłami statycznymi łączymy się wielokrotnie, podczas gdy węzły rozruchowe są wywoływane tylko wtedy, gdy nie ma wystarczającej liczby peerów do połączenia i węzeł musi zainicjować nowe połączenia.
 
-## Połącz z węzłem rozruchowym {#connect-to-a-bootnode}
+## Łączenie z węzłem rozruchowym {#connect-to-a-bootnode}
 
-Większość klientów ma wbudowaną listę węzłów rozruchowych, ale możesz również uruchomić własny węzeł rozruchowy lub użyć takiego, który nie znajduje się na zakodowanej na stałe liście klienta. W takim przypadku możesz określić je podczas uruchamiania swojego klienta w następujący sposób (ten przykład jest dla Geth, sprawdź dokumentację swojego klienta po więcej informacji):
+Większość klientów ma wbudowaną listę węzłów rozruchowych, ale możesz również chcieć uruchomić własny węzeł rozruchowy lub użyć takiego, który nie jest częścią wbudowanej listy klienta. W takim przypadku możesz je określić podczas uruchamiania klienta w następujący sposób (przykład dotyczy Geth, sprawdź dokumentację swojego klienta):
 
 ```
-geth --bootnodes "enode://<node ID>@<IP address>:<port>"
+geth --bootnodes "enode://<ID węzła>@<adres IP>:<port>"
 ```
 
-## Uruchom węzeł rozruchowy {#run-a-bootnode}
+## Uruchamianie węzła rozruchowego {#run-a-bootnode}
 
-Węzły rozruchowe to pełne węzły, które nie znajdują się za NAT ([translacja adresów sieciowych](https://www.geeksforgeeks.org/network-address-translation-nat/)). Każdy pełny węzeł może zachowywać się jak węzeł rozruchowy, dopóki jest publicznie dostępny.
+Węzły rozruchowe to pełne węzły, które nie znajdują się za NAT-em ([Translacja adresów sieciowych](https://www.geeksforgeeks.org/network-address-translation-nat/)). Każdy pełny węzeł może pełnić rolę węzła rozruchowego, o ile jest publicznie dostępny.
 
-Po uruchomieniu węzła powinien on zarejestrować Twój [enode](/developers/docs/networking-layer/network-addresses/#enode), który jest publicznym identyfikatorem pozwalającym innym na połączenie się z Twoim węzłem.
+Kiedy uruchamiasz węzeł, powinien on zapisać w logach twój [enode](/developers/docs/networking-layer/network-addresses/#enode), który jest publicznym identyfikatorem, jakiego inni mogą użyć do połączenia się z twoim węzłem.
 
-Ten enode jest zazwyczaj generowany po każdym restarcie, a więc upewnij się, aby znaleźć w dokumentacji swojego klienta to, w jaki sposób stworzyć stały enode dla Twojego węzła rozruchowego.
+Enode jest zazwyczaj generowany na nowo przy każdym restarcie, więc upewnij się, że sprawdziłeś w dokumentacji swojego klienta, jak wygenerować stały enode dla twojego węzła rozruchowego.
 
-Aby być dobrym węzłem rozruchowym, dobrym pomysłem jest zwiększenie maksymalnej liczby rówieśników, którzy mogą się z nim połączyć. Uruchamianie węzła rozruchowego z wieloma rówieśnikami znacznie zwiększy wymagania przepustowości.
+Aby być dobrym węzłem rozruchowym, warto zwiększyć maksymalną liczbę peerów, którzy mogą się z nim połączyć. Uruchomienie węzła rozruchowego z wieloma peerami znacznie zwiększy zapotrzebowanie na przepustowość łącza.
 
 ## Dostępne węzły rozruchowe {#available-bootnodes}
 
-Lista wbudowanych węzłów rozruchowych w go-ethereum znajduje się [tutaj](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go#L23). Te węzły rozruchowe są utrzymywane przez Fundację Ethereum oraz zespół go-ethereum.
+Listę wbudowanych węzłów rozruchowych w go-ethereum można znaleźć [tutaj](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go#L23). Te węzły rozruchowe są utrzymywane przez Fundację Ethereum oraz zespół go-ethereum.
 
-Dostępne są również inne listy węzłów rozruchowych utrzymywanych przez wolontariuszy. Upewnij się, aby zawsze uwzględnić przynajmniej jeden oficjalny węzeł rozruchowy, inaczej może Cię dotknąć atak zaćmienia (atak, w którym złośliwy podmiot odizolowuje określonego użytkownika lub węzeł od reszty sieci peer-to-peer).
+Dostępne są również inne listy węzłów rozruchowych utrzymywane przez wolontariuszy. Upewnij się, że zawsze uwzględniasz co najmniej jeden oficjalny węzeł rozruchowy, w przeciwnym razie możesz paść ofiarą ataku typu eclipse (eclipse attack).

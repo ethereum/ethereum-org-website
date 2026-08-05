@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-layer-2-networks.json",
-  "generatedAt": "2026-05-26T09:57:18.036Z",
-  "rootHash": "12d333c1d409",
+  "generatedAt": "2026-07-22T22:40:25.265Z",
+  "rootHash": "5dc2368e4f30",
   "tree": {
-    "contentHash": "e108f6cb2045",
-    "anchorHash": "22842a0421db",
+    "contentHash": "440de3fd176a",
+    "anchorHash": "2ab634304644",
     "children": {
       "page-layer-2-networks-hero-description": {
         "contentHash": "70936828adf2",
@@ -175,12 +175,36 @@
         "contentHash": "7549564bd3b8",
         "anchorHash": "e3b0c44298fc"
       },
+      "page-layer-2-networks-usage-nft": {
+        "contentHash": "35987a0f9ae7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-networks-usage-defi": {
+        "contentHash": "3871f97fc9a1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-networks-usage-social": {
+        "contentHash": "f1b7505afa5c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-networks-usage-token-transfers": {
+        "contentHash": "de5416d99b37",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-networks-usage-unlabeled": {
+        "contentHash": "e3561d324a21",
+        "anchorHash": "e3b0c44298fc"
+      },
       "page-layer-2-networks-no-data-available": {
         "contentHash": "d2d2d48c815b",
         "anchorHash": "e3b0c44298fc"
       },
       "page-layer-2-networks-links": {
         "contentHash": "9024c197d849",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-networks-actions": {
+        "contentHash": "ff8059dc6752",
         "anchorHash": "e3b0c44298fc"
       },
       "page-layer-2-networks-official-website": {
@@ -271,29 +295,15 @@
         "contentHash": "7b7bbdec9841",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-layer-2-network-maturity-component-1": {
-        "contentHash": "7d28f138378a",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-layer-2-network-maturity-component-2": {
-        "contentHash": "4e8e05f2d36f",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-layer-2-network-maturity-component-3": {
-        "contentHash": "8d33d57a0ea5",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-layer-2-network-maturity-component-4": {
-        "contentHash": "d3b7f9b392ee",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-layer-2-network-maturity-component-5": {
-        "contentHash": "ebd22b171709",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-layer-2-network-maturity-component-6": {
-        "contentHash": "3bb8e0e002c3",
-        "anchorHash": "e3b0c44298fc"
+      "page-layer-2-network-maturity-intro": {
+        "contentHash": "6321f5be2b73",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "1aaf6ec17f8b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
       },
       "page-layer-2-network-maturity-component-7": {
         "contentHash": "dc97b6a3e236",
@@ -387,8 +397,14 @@
       "page-layer-2-networks-token-used-to-pay",
       "page-layer-2-networks-network-usage",
       "page-layer-2-networks-network-usage-overview",
+      "page-layer-2-networks-usage-nft",
+      "page-layer-2-networks-usage-defi",
+      "page-layer-2-networks-usage-social",
+      "page-layer-2-networks-usage-token-transfers",
+      "page-layer-2-networks-usage-unlabeled",
       "page-layer-2-networks-no-data-available",
       "page-layer-2-networks-links",
+      "page-layer-2-networks-actions",
       "page-layer-2-networks-official-website",
       "page-layer-2-networks-risk-analysis",
       "page-layer-2-networks-assessment-by-l2beat",
@@ -411,12 +427,7 @@
       "page-layer-2-networks-transaction-fee-description",
       "page-layer-2-networks-transaction-see-networks",
       "page-layer-2-network-maturity-component-title",
-      "page-layer-2-network-maturity-component-1",
-      "page-layer-2-network-maturity-component-2",
-      "page-layer-2-network-maturity-component-3",
-      "page-layer-2-network-maturity-component-4",
-      "page-layer-2-network-maturity-component-5",
-      "page-layer-2-network-maturity-component-6",
+      "page-layer-2-network-maturity-intro",
       "page-layer-2-network-maturity-component-7",
       "page-layer-2-network-maturity-component-8",
       "page-layer-2-network-maturity-component-9",
@@ -431,5 +442,5 @@
       "page-layer-2-network-maturity-component-18"
     ]
   },
-  "sourceCommitSha": "3ec7d2cd6ede59940bb02b21be2e5d211370a724"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

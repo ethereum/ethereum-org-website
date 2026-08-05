@@ -1,6 +1,6 @@
 "use client"
 
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 
@@ -15,7 +15,6 @@ import { WEBSITE_EMAIL } from "@/lib/constants"
 import Select from "../Select"
 
 import { useCentralizedExchanges } from "@/hooks/useCentralizedExchanges"
-import { useTranslation } from "@/hooks/useTranslation"
 
 const ListContainer = (props: ChildOnlyProp) => (
   <div className="mt-16 flex flex-col gap-4" {...props} />
@@ -37,7 +36,10 @@ const SuccessContainer = (props: ChildOnlyProp) => (
 )
 
 const EmptyStateText = (props: ChildOnlyProp) => (
-  <p className="m-8 max-w-[450px] text-center text-xl" {...props} />
+  <p
+    className="m-8 max-w-[450px] text-center text-xl text-body-medium"
+    {...props}
+  />
 )
 
 const NoResults = ({ children }) => (
@@ -53,7 +55,7 @@ const NoResults = ({ children }) => (
 
 const NoResultsSingle = ({ children }) => (
   <div className="mt-6 flex flex-col items-center justify-center">
-    <p className="mb-16 max-w-[450px]">
+    <p className="mb-16 max-w-[450px] text-body-medium">
       {/* TODO: Fix `children` structure to include email link within i18n string */}
       {children}{" "}
       <InlineLink href={`mailto:${WEBSITE_EMAIL}`}>{WEBSITE_EMAIL}</InlineLink>.
@@ -67,7 +69,7 @@ type CentralizedExchangesProps = { lastDataUpdateDate: string }
 const CentralizedExchanges = ({
   lastDataUpdateDate,
 }: CentralizedExchangesProps) => {
-  const { t } = useTranslation("page-get-eth")
+  const t = useTranslations("page-get-eth")
   const locale = useLocale()
   const {
     selectOptions,
@@ -94,14 +96,6 @@ const CentralizedExchanges = ({
           className="z-50"
         />
       </div>
-      {!hasSelectedCountry && (
-        <EmptyStateContainer>
-          <Emoji text=":world_map:" className="text-[80px]" />
-          <EmptyStateText>
-            {t("page-get-eth-exchanges-empty-state-text")}
-          </EmptyStateText>
-        </EmptyStateContainer>
-      )}
       {/* No results */}
       {hasSelectedCountry && !hasExchangeResults && (
         <ResultsContainer>
@@ -115,12 +109,14 @@ const CentralizedExchanges = ({
         <>
           <ResultsContainer>
             <ListContainer>
-              <h3 className="text-xl font-semibold md:text-2xl">
+              <h3 className="text-xl md:text-2xl">
                 {t("page-get-eth-exchanges-header-exchanges")}
               </h3>
               {hasExchangeResults && (
                 <SuccessContainer>
-                  <p>{t("page-get-eth-exchanges-success-exchange")}</p>
+                  <p className="text-body-medium">
+                    {t("page-get-eth-exchanges-success-exchange")}
+                  </p>
                   <CardList items={filteredExchanges} />
                 </SuccessContainer>
               )}
@@ -131,7 +127,7 @@ const CentralizedExchanges = ({
               )}
             </ListContainer>
           </ResultsContainer>
-          <p className="mt-16 max-w-screen-lg">
+          <p className="mt-16 max-w-screen-lg text-body-medium">
             {t("page-get-eth-exchanges-disclaimer")}{" "}
             <InlineLink href={`mailto:${WEBSITE_EMAIL}`}>
               {WEBSITE_EMAIL}

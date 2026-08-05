@@ -1,59 +1,59 @@
 ---
-title: "Úvod do smart kontraktů"
-description: "Přehled smart kontraktů se zaměřením na jejich jedinečné vlastnosti a omezení."
+title: "Úvod do chytrých kontraktů"
+description: "Přehled chytrých kontraktů se zaměřením na jejich jedinečné vlastnosti a omezení."
 lang: cs
 ---
 
-## Co je to smart kontrakt? {#what-is-a-smart-contract}
+## Co je to chytrý kontrakt? {#what-is-a-smart-contract}
 
-„Smart kontrakt“ je jednoduše program, který je spuštěn na blockchainu Ethereum. Je to sbírka kódu (jeho funkcí) a dat (jeho stavu), které sídlí na specifické adrese na blockchainu Ethereum.
+„Chytrý kontrakt“ je jednoduše program, který běží na blockchainu [Etherea](/). Je to sbírka kódu (jeho funkcí) a dat (jeho stavu), která se nachází na konkrétní adrese na blockchainu Etherea.
 
-Chytré kontrakty jsou typem [účtu na Ethereu](/developers/docs/accounts/). To znamená, že mají zůstatek a mohou být cílem transakcí. Nejsou však ovládány uživatelem, místo toho jsou nasazeny na síť a běží podle toho, jak jsou naprogramovány. Uživatelé pak mohou interagovat se smart kontraktem prostřednictvím transakcí, které spouštějí funkce definované na smart kontraktu. Smart kontrakty mohou definovat pravidla, podobně jako běžné smlouvy, a automaticky je vynucovat prostřednictvím kódu. Smart kontrakty nelze ve výchozím nastavení smazat a interakce s nimi jsou nevratné.
+Chytré kontrakty jsou typem [účtu na Ethereu](/developers/docs/accounts/). To znamená, že mají zůstatek a mohou být cílem transakcí. Nejsou však ovládány uživatelem, místo toho jsou nasazeny do sítě a běží podle naprogramování. Uživatelské účty pak mohou s chytrým kontraktem interagovat odesíláním transakcí, které spustí funkci definovanou v chytrém kontraktu. Chytré kontrakty mohou definovat pravidla, podobně jako běžný kontrakt, a automaticky je vynucovat prostřednictvím kódu. Chytré kontrakty nelze ve výchozím nastavení smazat a interakce s nimi jsou nevratné.
 
 ## Předpoklady {#prerequisites}
 
-Pokud teprve začínáte nebo hledáte méně technický úvod, doporučujeme naši [úvodní příručku k chytrým kontraktům](/smart-contracts/).
+Pokud teprve začínáte nebo hledáte méně technický úvod, doporučujeme náš [úvod do chytrých kontraktů](/smart-contracts/).
 
-Než se pustíte do světa chytrých kontraktů, přečtěte si o [účtech](/developers/docs/accounts/), [transakcích](/developers/docs/transactions/) a [Ethereum Virtual Machine (EVM)](/developers/docs/evm/).
+Než se vrhnete do světa chytrých kontraktů, ujistěte se, že jste si přečetli o [účtech](/developers/docs/accounts/), [transakcích](/developers/docs/transactions/) a [virtuálním stroji Etherea](/developers/docs/evm/).
 
 ## Digitální prodejní automat {#a-digital-vending-machine}
 
-Možná nejlepší metaforou pro chytrý kontrakt je prodejní automat, jak ho popsal [Nick Szabo](https://unenumerated.blogspot.com/). S těmi správnými vstupy je zaručen určitý výstup.
+Asi nejlepší metaforou pro chytrý kontrakt je prodejní automat, jak jej popsal [Nick Szabo](https://unenumerated.blogspot.com/). Se správnými vstupy je zaručen určitý výstup.
 
-Pakliže chcete svačinu z prodejního automatu:
+Chcete-li získat svačinu z prodejního automatu:
 
 ```
-peníze + výběr občerstvení = vydané občerstvení
+peníze + výběr svačiny = vydaná svačina
 ```
 
-Tato logika je naprogramována do automatu.
+Tato logika je naprogramována v prodejním automatu.
 
-Smart kontrakt má do sebe naprogramovanou logiku, podobně jako prodejní automat. Zde je jednoduchý příklad, jak by takový prodejní automat vypadal, kdyby to byl smart kontrakt napsaný v Solidity:
+Chytrý kontrakt má, podobně jako prodejní automat, naprogramovanou logiku. Zde je jednoduchý příklad toho, jak by tento prodejní automat vypadal, kdyby to byl chytrý kontrakt napsaný v jazyce Solidity:
 
 ```solidity
 pragma solidity 0.8.7;
 
 contract VendingMachine {
 
-    // Deklarace stavových proměnných kontraktu
+    // Deklarovat stavové proměnné kontraktu
     address public owner;
     mapping (address => uint) public cupcakeBalances;
 
     // Když je kontrakt 'VendingMachine' nasazen:
-    // 1. nastaví adresu nasazujícího jako vlastníka kontraktu
-    // 2. nastaví zůstatek cupcake v nasazeném chytrém kontraktu na 100
+    // 1. nastavit nasazující adresu jako vlastníka kontraktu
+    // 2. nastavit zůstatek cupcaků nasazeného chytrého kontraktu na 100
     constructor() {
         owner = msg.sender;
         cupcakeBalances[address(this)] = 100;
     }
 
-    // Umožní vlastníkovi navýšit zůstatek cupcake v chytrém kontraktu
+    // Umožnit vlastníkovi zvýšit zůstatek cupcaků chytrého kontraktu
     function refill(uint amount) public {
         require(msg.sender == owner, "Only the owner can refill.");
         cupcakeBalances[address(this)] += amount;
     }
 
-    // Umožní komukoliv zakoupit cupcake
+    // Umožnit komukoliv nakupovat cupcaky
     function purchase(uint amount) public payable {
         require(msg.value >= amount * 1 ether, "You must pay at least 1 ETH per cupcake");
         require(cupcakeBalances[address(this)] >= amount, "Not enough cupcakes in stock to complete this purchase");
@@ -63,40 +63,40 @@ contract VendingMachine {
 }
 ```
 
-Podobně jako prodejní automat odstraňuje potřebu zaměstnance prodejce, smart kontrakty mohou nahradit prostředníky v mnoha průmyslových odvětvích.
+Stejně jako prodejní automat odstraňuje potřebu zaměstnance prodejce, mohou chytré kontrakty nahradit zprostředkovatele v mnoha odvětvích.
 
-## Bez povolení {#permissionless}
+## Nevyžadující povolení {#permissionless}
 
-Kdokoli může napsat smart kontrakt a vypustit ho na síť. Stačí se naučit programovat v [jazyce pro chytré kontrakty](/developers/docs/smart-contracts/languages/) a mít dostatek ETH k nasazení vašeho kontraktu. Nasazení chytrého kontraktu je technicky transakce, takže musíte zaplatit [gas](/developers/docs/gas/) stejným způsobem, jako platíte gas za jednoduchý převod ETH. Náklady na palivo jsou však při nasazení kontraktu mnohem vyšší.
+Kdokoli může napsat chytrý kontrakt a nasadit jej do sítě. Stačí se jen naučit programovat v [jazyce pro chytré kontrakty](/developers/docs/smart-contracts/languages/) a mít dostatek ETH na nasazení vašeho kontraktu. Nasazení chytrého kontraktu je technicky vzato transakce, takže musíte zaplatit [gas](/developers/docs/gas/) stejným způsobem, jako musíte platit gas za jednoduchý převod ETH. Náklady na gas pro nasazení kontraktu jsou však mnohem vyšší.
 
-Ethereum má programovací jazyky pro psaní smart kontraktů, které jsou vývojářsky přívětivé:
+Ethereum má pro psaní chytrých kontraktů jazyky přívětivé pro vývojáře:
 
 - Solidity
 - Vyper
 
 [Více o jazycích](/developers/docs/smart-contracts/languages/)
 
-Je však třeba je před nasazením zkompilovat, aby je Virtuální stroj Etherea mohl interpretovat a uložit. [Více o kompilaci](/developers/docs/smart-contracts/compiling/)
+Před nasazením však musí být zkompilovány, aby virtuální stroj Etherea mohl kontrakt interpretovat a uložit. [Více o kompilaci](/developers/docs/smart-contracts/compiling/)
 
-## Složitelnost {#composability}
+## Skládatelnost {#composability}
 
-Chytré kontrakty na Ethereu jsou veřejné a lze je považovat za otevřená API. To znamená, že ve svém smart kontraktu můžete volat jiné smart kontrakty, což značně rozšiřuje vaše možnosti. Kontrakty mohou dokonce nasazovat další kontrakty.
+Chytré kontrakty jsou na Ethereu veřejné a lze je považovat za otevřená API. To znamená, že ve svém vlastním chytrém kontraktu můžete volat jiné chytré kontrakty, a tím výrazně rozšířit to, co je možné. Kontrakty mohou dokonce nasazovat další kontrakty.
 
-Zjistěte více o [složitelnosti chytrých kontraktů](/developers/docs/smart-contracts/composability/).
+Zjistěte více o [skládatelnosti chytrých kontraktů](/developers/docs/smart-contracts/composability/).
 
 ## Omezení {#limitations}
 
-Samotné chytré kontrakty nemohou získávat informace o „skutečných“ událostech, protože nemohou získávat data ze zdrojů mimo blockchain. To znamená, že nemohou reagovat na události ve skutečném světě. Tento design je úmyslný. Spoléhat se na externí informace by mohlo ohrozit konsenzus, což je důležité pro bezpečnost a decentralizaci.
+Samotné chytré kontrakty nemohou získávat informace o událostech v „reálném světě“, protože nemohou načítat data z offchain zdrojů. To znamená, že nemohou reagovat na události v reálném světě. To je záměr. Spoléhání se na externí informace by mohlo ohrozit konsensus, který je důležitý pro bezpečnost a decentralizaci.
 
-Nicméně je důležité, aby blockchainové aplikace mohly používat data, která jsou mimo blockchain. Řešením jsou [orákula](/developers/docs/oracles/), což jsou nástroje, které přijímají data mimo blockchain a zpřístupňují je chytrým kontraktům.
+Pro blockchainové aplikace je však důležité, aby mohly využívat offchain data. Řešením jsou [orákula](/developers/docs/oracles/), což jsou nástroje, které přijímají offchain data a zpřístupňují je chytrým kontraktům.
 
-Dalším omezením smart kontraktů je maximální velikost kontraktu. Smart kontrakt může mít maximálně 24 Kb, jinak dojde k vyčerpání paliva. Tomu se lze vyhnout použitím [The Diamond Pattern](https://eips.ethereum.org/EIPS/eip-2535).
+Dalším omezením chytrých kontraktů je maximální velikost kontraktu. Chytrý kontrakt může mít maximálně 24 KB, jinak mu dojde gas. To lze obejít pomocí [vzoru Diamond](https://eips.ethereum.org/EIPS/eip-2535).
 
 ## Multisig kontrakty {#multisig}
 
-Multisig (vícepodpisové) kontrakty jsou smart kontraktové účty, které vyžadují více platných podpisů k provedení transakce. To je velmi užitečné pro zabránění jednotlivým bodům selhání u kontraktů držících značné množství etheru nebo jiných tokenů. Multisigy také mohou rozdělit odpovědnost za provádění kontraktů a správu klíčů mezi více stran a zabraňují ztrátě prostředků v případě ztráty jediného soukromého klíče. Z těchto důvodů lze multisig kontrakty použít pro jednoduchou správu DAO. Multisigy vyžadují N podpisů z M možných přijatelných podpisů (kde N ≤ M a M > 1) k provedení. Běžně se používají hodnoty `N = 3, M = 5` a `N = 4, M = 7`. Multisig 4/7 vyžaduje čtyři ze sedmi možných platných podpisů. To znamená, že prostředky jsou stále dostupné, i když jsou ztraceny tři podpisy. V tomto případě to také znamená, že většina držitelů klíčů musí souhlasit a podepsat, aby mohl být kontrakt exekuován.
+Multisig kontrakty (s vícenásobným podpisem) jsou účty chytrých kontraktů, které k provedení transakce vyžadují více platných podpisů. To je velmi užitečné pro zamezení jediným bodům selhání u kontraktů, které drží značné množství etheru nebo jiných tokenů. Multisig kontrakty také rozdělují odpovědnost za provádění kontraktu a správu klíčů mezi více stran a zabraňují tomu, aby ztráta jednoho soukromého klíče vedla k nevratné ztrátě prostředků. Z těchto důvodů lze multisig kontrakty použít pro jednoduchou správu DAO. Multisig kontrakty vyžadují k provedení N podpisů z M možných přijatelných podpisů (kde N ≤ M a M > 1). Běžně se používají `N = 3, M = 5` a `N = 4, M = 7`. Multisig 4/7 vyžaduje čtyři ze sedmi možných platných podpisů. To znamená, že prostředky jsou stále dostupné, i když se ztratí tři podpisy. V tomto případě to také znamená, že většina držitelů klíčů musí souhlasit a podepsat, aby se kontrakt mohl provést.
 
-## Zdroje k chytrým kontraktům {#smart-contract-resources}
+## Zdroje o chytrých kontraktech {#smart-contract-resources}
 
 **OpenZeppelin Contracts -** **_Knihovna pro bezpečný vývoj chytrých kontraktů._**
 
@@ -108,5 +108,9 @@ Multisig (vícepodpisové) kontrakty jsou smart kontraktové účty, které vyž
 
 - [Coinbase: Co je to chytrý kontrakt?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
 - [Chainlink: Co je to chytrý kontrakt?](https://chain.link/education/smart-contracts)
-- [Video: Jednoduše vysvětleno – Chytré kontrakty](https://youtu.be/ZE2HxTmxfrI)
-- [Cyfrin Updraft: Web3 výuková a auditovací platforma](https://updraft.cyfrin.io)
+- [Video: Jednoduše vysvětleno - Chytré kontrakty](https://youtu.be/ZE2HxTmxfrI)
+- [Cyfrin Updraft: Platforma pro výuku a auditování Web3](https://updraft.cyfrin.io)
+
+## Návody: Podpisy chytrých kontraktů (EIP-1271) na Ethereu {#tutorials}
+
+- [EIP-1271: Podepisování a ověřování podpisů chytrých kontraktů](/developers/tutorials/eip-1271-smart-contract-signatures/) _– Jak EIP-1271 umožňuje chytrým kontraktům ověřovat podpisy, s ukázkou implementace Safe._

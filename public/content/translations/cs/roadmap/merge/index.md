@@ -1,221 +1,227 @@
 ---
-title: "Sloučení"
-description: "Zjistěte více o Sloučení – když hlavní síť Ethereum přešla na důkaz podílem."
+title: Merge
+description: "Přečtěte si o Merge – kdy Ethereum Mainnet přešel na důkaz podílem (PoS)."
 lang: cs
 template: upgrade
 image: /images/upgrades/merge.png
-alt:
+alt: 
 summaryPoints:
-  - "Hlavní síť Ethereum používá důkaz podílem, ale ne vždy tomu tak bylo."
-  - "Upgrade z původního mechanismu důkazu prací na důkaz podílem se nazývá Sloučení."
-  - "Sloučení označuje sloučení původní hlavní sítě Ethereum s odděleným blockchainem založeným na důkazu podílem nazývaným Řetězová vazba, které nyní existují jako jeden řetězec."
-  - "Sloučení snížilo spotřebu energie potřebné k provozu Etherea přibližně o 99,95 %."
+  - "Ethereum Mainnet využívá důkaz podílem (PoS), ale nebylo tomu tak vždy."
+  - "Aktualizace z původního mechanismu důkazu prací (PoW) na důkaz podílem (PoS) se nazývala Merge."
+  - "Merge označuje sloučení původního Ethereum Mainnetu s odděleným blockchainem s důkazem podílem (PoS) zvaným Beacon chain, které nyní existují jako jeden řetězec."
+  - "Merge snížil spotřebu energie Etherea o ~99,95 %."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
-  Sloučení bylo provedeno 15. září 2022. Tento krok dokončil přechod Etherea na konsensuální mechanismus důkaz podílem a oficiálně odstranil důkaz prací, čímž snížil spotřebu energie přibližně o 99,95 %.
+  Merge proběhl 15. září 2022. Tím byl dokončen přechod Etherea na konsensus důkazu podílem (PoS), oficiálně byl ukončen důkaz prací (PoW) a spotřeba energie se snížila o ~99,95 %.
 </UpgradeStatus>
 
-## Co bylo Sloučení? {#what-is-the-merge}
+## Co byl Merge? {#what-is-the-merge}
 
-Sloučení bylo spojením původní exekuční vrstvy Etherea (hlavní sítě, která existuje od [počátku](/ethereum-forks/#frontier)) s její novou konsensuální vrstvou s důkazem podílem, Řetězovou vazbou. To eliminovalo potřebu energeticky náročného těžení a místo toho umožnilo zabezpečení sítě pomocí uzamčeného ETH. Byl to opravdu zajímavý krok k naplnění vize Etherea — větší škálovatelnost, bezpečnost a udržitelnost.
+Merge bylo spojení původní exekuční vrstvy Etherea (Mainnetu, který existoval od [genesis](/ethereum-forks/#frontier)) s jeho novou vrstvou konsensu s důkazem podílem (PoS), Beacon chainem. Eliminoval potřebu energeticky náročné těžby a místo toho umožnil zabezpečení sítě pomocí stakovaného ETH. Byl to skutečně vzrušující krok k realizaci vize [Etherea](/) – větší škálovatelnosti, bezpečnosti a udržitelnosti.
 
 <MergeInfographic />
 
-Původně byl [Beacon Chain](/roadmap/beacon-chain/) spuštěn odděleně od [hlavní sítě](/glossary/#mainnet). Hlavní síť Etherea – se všemi svými účty, zůstatky, chytrými kontrakty a stavem blockchainu – byla nadále zabezpečována [důkazem prací](/developers/docs/consensus-mechanisms/pow/), i když Řetězová vazba běžela souběžně a používala [důkaz podílem](/developers/docs/consensus-mechanisms/pos/). Sloučení byl okamžik, kdy se tyto dva systémy konečně spojily a důkaz prací byl trvale nahrazen důkazem podílem.
+Zpočátku byl [Beacon chain](/roadmap/beacon-chain/) spuštěn odděleně od [Mainnetu](/glossary/#mainnet). Ethereum Mainnet – se všemi svými účty, zůstatky, chytrými kontrakty a stavem blockchainu – byl nadále zabezpečen [důkazem prací (PoW)](/developers/docs/consensus-mechanisms/pow/), i když Beacon chain běžel paralelně pomocí [důkazu podílem (PoS)](/developers/docs/consensus-mechanisms/pos/). Merge nastal, když se tyto dva systémy konečně spojily a důkaz prací (PoW) byl trvale nahrazen důkazem podílem (PoS).
 
-Představte si Ethereum jako vesmírnou loď, která byla vypuštěna předtím, než byla zcela připravena na mezihvězdné putování. S Řetězovou vazbou komunita postavila nový motor a zpevněný trup. Po pečlivém testování nastal čas vyměnit starý motor za nový během letu. Tím se nový, efektivnější motor zapojil do existující lodi, což jí umožnilo urazit velké vzdálenosti a vydat se hlouběji do vesmíru.
+Představte si Ethereum jako vesmírnou loď, která odstartovala dříve, než byla zcela připravena na mezihvězdnou cestu. S Beacon chainem komunita postavila nový motor a zpevněný trup. Po rozsáhlém testování nastal čas vyměnit starý motor za nový za letu. Tím se nový, účinnější motor začlenil do stávající lodi, což jí umožnilo urazit pořádné světelné roky a vydat se do vesmíru.
 
-## Sloučení s hlavní sítí {#merging-with-mainnet}
+## Sloučení s Mainnetem {#merging-with-mainnet}
 
-Důkaz prací zabezpečoval hlavní síť Ethereum od začátku (Genesis) až do Sloučení. To umožnilo vznik blockchainu Etherea, na který jsme všichni zvyklí, v červenci 2015, se všemi jeho známými funkcemi — transakcemi, chytrými kontrakty, účty atd.
+Důkaz prací (PoW) zabezpečoval Ethereum Mainnet od genesis až po Merge. To umožnilo, aby v červenci 2015 vznikl blockchain Etherea, na který jsme všichni zvyklí, se všemi jeho známými funkcemi – transakcemi, chytrými kontrakty, účty atd.
 
-V průběhu historie Etherea vývojáři připravovali přechod z důkazu prací na důkaz podílem. 1. prosince 2020 byla vytvořena Řetězová vazba jako blockchain oddělený od hlavní sítě, který běžel paralelně.
+V průběhu historie Etherea se vývojáři připravovali na případný přechod od důkazu prací (PoW) k důkazu podílem (PoS). Dne 1. prosince 2020 byl vytvořen Beacon chain jako samostatný blockchain k Mainnetu, který běžel paralelně.
 
-Řetězová vazba původně nezpracovávala transakce hlavní sítě. Místo toho dosahovala konsensu o svém vlastním stavu tím, že se dohodla na aktivních validátorech a zůstatcích na jejich účtech. Po rozsáhlém testování nastal čas, aby Řetězová vazba dosahovala konsensu o skutečných datech. Po Sloučení se Řetězová vazba stala konsensuálním motorem pro všechna data sítě, včetně transakcí exekuční vrstvy a zůstatků na účtech.
+Beacon chain původně nezpracovával transakce Mainnetu. Místo toho dosahoval konsensu o svém vlastním stavu tím, že se shodoval na aktivních validátorech a zůstatcích na jejich účtech. Po rozsáhlém testování nastal čas, aby Beacon chain dosáhl konsensu o datech z reálného světa. Po Merge se Beacon chain stal motorem konsensu pro všechna síťová data, včetně transakcí exekuční vrstvy a zůstatků na účtech.
 
-Sloučení představovalo oficiální přechod na používání Řetězové vazby jako pohonu pro vytváření bloků. Těžba už není prostředkem k vytváření platných bloků. Místo toho tuto roli převzali validátoři důkazu podílem, kteří nyní zpracovávají platnost všech transakcí a navrhují bloky.
+Merge představoval oficiální přechod na používání Beacon chainu jako motoru pro produkci bloků. Těžba již není prostředkem k produkci platných bloků. Místo toho tuto roli převzali validátoři důkazu podílem (PoS) a nyní jsou zodpovědní za zpracování platnosti všech transakcí a navrhování bloků.
 
-Historie nebyla během Sloučení vymazána. Jak se hlavní síť sloučila s Řetězovou vazbou, sloučila se také celá transakční historie Etherea.
+Při Merge se neztratila žádná historie. Když se Mainnet sloučil s Beacon chainem, sloučila se s ním i celá transakční historie Etherea.
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Tento přechod na důkaz podílem změnil způsob, jakým je ether vydáván. Zjistěte více o [vydávání etheru před a po Sloučení](/roadmap/merge/issuance/).
+Tento přechod na důkaz podílem (PoS) změnil způsob emise etheru. Přečtěte si více o [emisi etheru před a po Merge](/roadmap/merge/issuance/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ### Uživatelé a držitelé {#users-holders}
 
-**Sloučení nezměnilo nic pro držitele/uživatele.**
+**Merge pro držitele/uživatele nic nezměnil.**
 
-_Jednu věc je třeba zdůraznit_: Jako uživatel nebo držitel ETH či jakéhokoli jiného digitálního aktiva na Ethereu, stejně jako stakeři, kteří neprovozují uzel, **nemusíte se svými prostředky nebo peněženkou kvůli Sloučení nic dělat.** ETH je prostě ETH. Neexistuje něco jako „starý ETH“/„nový ETH“ nebo „ETH1“/„ETH2“ a peněženky fungují po Sloučení úplně stejně jako předtím — lidé, kteří vám říkají něco jiného, jsou s největší pravděpodobností podvodníci.
+_To stojí za zopakování_: Jako uživatel nebo držitel ETH či jakéhokoli jiného digitálního aktiva na Ethereu, stejně jako stakeři, kteří neprovozují uzel, **nemusíte se svými prostředky nebo peněženkou kvůli Merge dělat vůbec nic.** ETH je prostě ETH. Neexistuje nic jako „staré ETH“/„nové ETH“ nebo „Eth1“/„Eth2“ a peněženky fungují po Merge úplně stejně jako předtím – lidé, kteří vám tvrdí opak, jsou pravděpodobně podvodníci.
 
-Navzdory přechodu z důkazu prací na důkaz podílem zůstala celá historie Etherea od genesis neporušená a nezměněná. Jakékoliv prostředky držené ve vaší peněžence před Sloučením jsou stále přístupné i po Sloučení. **Nemusíte pro to vůbec nic udělat.**
+Navzdory výměně důkazu prací (PoW) zůstala celá historie Etherea od genesis nedotčena a přechodem na důkaz podílem (PoS) se nezměnila. Jakékoli prostředky držené ve vaší peněžence před Merge jsou přístupné i po Merge. **Z vaší strany není vyžadována žádná akce k aktualizaci.**
 
-[Více o zabezpečení Etherea](/security/#eth2-token-scam)
+[Více o bezpečnosti Etherea](/security/#eth2-token-scam)
 
 ### Provozovatelé uzlů a vývojáři dapp {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Provozovatelé stakovacích uzlů a poskytovatelé"
-contentPreview="Pokud stakujete a provozujete si vlastní uzel nebo jste poskytovatelem infrastruktury, je tu pár věcí, o kterých byste měli po Sloučení vědět."
+title="Provozovatelé a poskytovatelé staking uzlů"
+contentPreview="Pokud jste staker provozující vlastní uzel nebo poskytovatel infrastruktury uzlů, je několik věcí, o kterých byste po Merge měli vědět."
 id="staking-node-operators">
 
-Klíčové akční položky zahrnují:
+Klíčové kroky zahrnují:
 
-1. Spusťte _oba_ klienty: konsensuálního i exekučního; koncové body třetích stran pro získání exekučních dat po Sloučení nefungují.
-2. Autentizujte exekučního i konsensuálního klienta s použitím sdíleného JWT klíče, aby spolu mohli komunikovat v zabezpečeném prostředí.
-3. Nastavte adresu pro „příjem odměn“ abyste mohli dostat transakční poplatky/MEV, které si vyděláte.
+1. Spusťte _jak_ konsensuální klient, tak exekuční klient; koncové body třetích stran pro získání exekučních dat od Merge již nefungují.
+2. Ověřte exekuční i konsensuální klienty pomocí sdíleného tajemství JWT, aby mohly bezpečně komunikovat.
+3. Nastavte adresu `fee recipient` pro příjem získaných spropitných z transakčních poplatků/MEV.
 
-Pokud neprovedete první dvě výše uvedené položky, vámi provozovaný síťový uzel bude považován za „offline“, dokud nebudou obě vrstvy synchronizovány a autentizovány.
+Nedokončení prvních dvou výše uvedených bodů bude mít za následek, že váš uzel bude považován za „offline“, dokud nebudou obě vrstvy synchronizovány a ověřeny.
 
-Pokud nenastavíte adresu pro „příjem odměn“, váš validátor bude stále fungovat jako obvykle, ale poplatky a MEV, které byste jinak získali v blocích navržených vaším validátorem, budou spáleny.
+Nenastavení `fee recipient` sice umožní vašemu validátoru chovat se jako obvykle, ale přijdete o nespálená spropitná z poplatků a jakékoli MEV, které byste jinak získali v blocích, jež váš validátor navrhne.
 </ExpandableCard>
 
 <ExpandableCard
 title="Provozovatelé nevalidujících uzlů a poskytovatelé infrastruktury"
-contentPreview="Pokud provozujete nevalidující uzel Etherea, největší změnou po Sloučení byl požadavek na spuštění klientů pro obě vrstvy: exekuční i konsensuální."
+contentPreview="Pokud provozujete nevalidující uzel Etherea, nejvýznamnější změnou, která přišla s Merge, byl požadavek na provozování klientů JAK pro exekuční vrstvu, TAK pro vrstvu konsensu."
 id="node-operators">
 
-Před Sloučením byl exekuční klient (například Geth, Erigon, Besu nebo Nethermind) dostačující pro příjem, správné ověření a šíření bloků distribuovaných sítí. Platnost transakcí obsažených v exekuční zprávě _po Sloučení_ závisí i na platnosti „konsensuálního bloku“, ve kterém je obsažena.
+Až do Merge stačil exekuční klient (jako Go Ethereum (Geth), Erigon, Besu nebo Nethermind) k přijímání, správnému ověřování a šíření bloků, které si síť předávala. _Po Merge_ nyní platnost transakcí obsažených v exekučním payloadu závisí také na platnosti „bloku konsensu“, ve kterém je obsažen.
 
-Výsledkem je, že kompletní síťový uzel Etherea nyní potřebuje jak klienta exekučního, tak konsensuálního. Tyto dva klienty spolupracují prostřednictvím nového Engine API. Engine API vyžaduje autentizaci pomocí JWT klíče, který je poskytován oběma klientům a umožňuje jim tak bezpečnou komunikaci.
+V důsledku toho nyní plný uzel Etherea vyžaduje jak exekuční klient, tak konsensuální klient. Tyto dva klienty spolupracují pomocí nového Engine API. Engine API vyžaduje ověření pomocí tajemství JWT, které je poskytnuto oběma klientům a umožňuje bezpečnou komunikaci.
 
-Klíčové akční položky zahrnují:
+Klíčové kroky zahrnují:
 
-- Nainstalujte si konsensuálního klienta navíc k exekučnímu klientovi
-- Autentizujte exekučního a konsensuálního klienta pomocí sdíleného tajemství JWT, aby spolu mohli bezpečně komunikovat.
+- Nainstalujte konsensuální klient navíc k exekučnímu klientovi
+- Ověřte exekuční a konsensuální klienty pomocí sdíleného tajemství JWT, aby spolu mohly bezpečně komunikovat.
 
-Nesplnění výše uvedených položek povede k tomu, že váš uzel se bude jevit jako „offline“, dokud nebudou obě vrstvy synchronizovány a autentizovány.
+Nedokončení výše uvedených bodů bude mít za následek, že se váš uzel bude jevit jako „offline“, dokud nebudou obě vrstvy synchronizovány a ověřeny.
+
 </ExpandableCard>
 
 <ExpandableCard
 title="Vývojáři dapp a chytrých kontraktů"
-contentPreview="Sloučení bylo navrženo tak, aby mělo minimální dopad na vývojáře chytrých kontraktů a dapp."
+contentPreview="Merge byl navržen tak, aby měl minimální dopad na vývojáře chytrých kontraktů a dapp."
 id="developers">
 
-Sloučení přineslo změny v konsensu, což zahrnuje i změny týkající se:
+Merge přinesl změny v konsensu, což zahrnuje i změny týkající se:
 
 <ul>
   <li>struktury bloku</li>
   <li>časování slotů/bloků</li>
-  <li>změn opcode</li>
-  <li>zdrojů náhodnosti na blockchainu</li>
-  <li>konceptu <em>bezpečného prvního prvku</em> a <em>finalizovaných bloků</em></li>
+  <li>změn operačních kódů (opcode)</li>
+  <li>zdrojů onchain náhodnosti</li>
+  <li>konceptu <em>bezpečné hlavy (safe head)</em> a <em>finalizovaných bloků</em></li>
 </ul>
 
-Více informací najdete v tomto příspěvku na blogu od Tima Beika o tom, <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">jak Sloučení ovlivňuje aplikační vrstvu Etherea</a>.
+Pro více informací se podívejte na tento blogový příspěvek od Tima Beika o tom, <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">jak Merge ovlivňuje aplikační vrstvu Etherea</a>.
+
 </ExpandableCard>
 
-## Sloučení a spotřeba energie {#merge-and-energy}
+## Merge a spotřeba energie {#merge-and-energy}
 
-Sloučení znamenalo pro Ethereum konec důkazu prací a zahájilo éru udržitelnějšího, ekologičtějšího Etherea. Spotřeba energie Ethereem klesla odhadem o 99,95 %, což činí Ethereum ekologickým blockchainem. Zjistěte více o [spotřebě energie Etherea](/energy-consumption/).
+Merge znamenal konec důkazu prací (PoW) pro Ethereum a odstartoval éru udržitelnějšího a ekologičtějšího Etherea. Spotřeba energie Etherea klesla odhadem o 99,95 %, čímž se Ethereum stalo zeleným blockchainem. Přečtěte si více o [spotřebě energie Etherea](/energy-consumption/).
 
-## Sloučení a škálování {#merge-and-scaling}
+## Merge a škálování {#merge-and-scaling}
 
-Sloučení také připravilo půdu pro další vylepšení škálovatelnosti, která nebyla s důkazem prací možná, a přiblížilo tak Ethereum o krok blíže k dosažení plného rozsahu, bezpečnosti a udržitelnosti, ke kterým směřuje [jeho plán](/roadmap/).
+Merge také připravil půdu pro další aktualizace škálovatelnosti, které nebyly v rámci důkazu prací (PoW) možné, a posunul Ethereum o krok blíže k dosažení plného rozsahu, bezpečnosti a udržitelnosti, k nimž směřuje [jeho roadmapa](/roadmap/).
 
-## Mylné představy o Sloučení {#misconceptions}
+## Mylné představy o Merge {#misconceptions}
 
 <ExpandableCard
-title="Mylná představa: „K provozování uzlu je třeba stakovat 32 ETH.“"
-contentPreview="Nepravda. Kdokoli si může synchronizovat vlastní, sebou ověřenou kopii Etherea (tj. provozovat uzel). Žádné ETH není potřeba – ani před Sloučením, ani po Sloučení, nikdy.">
+title="Mýtus: &quot;Provozování uzlu vyžaduje staking 32 ETH.&quot;"
+contentPreview="Nepravda. Kdokoli si může svobodně synchronizovat vlastní, samostatně ověřenou kopii Etherea (tj. provozovat uzel). Není k tomu potřeba žádné ETH – ani před Merge, ani po Merge, prostě nikdy.">
 
-Existují dva typy síťových uzlů Etherea: Uzly, které mohou navrhovat bloky, a uzly, které nemohou.
+Existují dva typy uzlů Etherea: uzly, které mohou navrhovat bloky, a uzly, které nemohou.
 
-Uzly, které navrhují bloky, jsou pouze malou částí celkového počtu uzlů na Ethereu. Tato kategorie zahrnuje těžební uzly pod důkazem prací (proof-of-work, PoW) a validační uzly pod důkazem podílem (proof-of-stake, PoS). Tato kategorie vyžaduje investici ekonomických zdrojů (například GPU hashovací výkon v případě důkazu prací nebo uzamčené ETH v případě důkazu podílem) výměnou za možnost občas navrhnout další blok a získat protokolové odměny.
+Uzly, které navrhují bloky, tvoří pouze malý počet z celkového počtu uzlů na Ethereu. Do této kategorie patří těžební uzly v rámci důkazu prací (PoW) a uzly validátorů v rámci důkazu podílem (PoS). Tato kategorie vyžaduje vložení ekonomických zdrojů (jako je hashovací výkon GPU u důkazu prací nebo stakované ETH u důkazu podílem) výměnou za možnost občas navrhnout další blok a získat odměny protokolu.
 
-Ostatní uzly v síti (tj. většina) nemusí investovat žádné ekonomické zdroje nad rámec běžného počítače s 1–2 TB dostupného úložiště a internetového připojení. Tyto síťové uzly nenavrhují bloky, ale stále hrají klíčovou roli při zabezpečení sítě tím, že kontrolují platnost nových bloků a ověřují je podle pravidel konsensu sítě. Pokud je blok platný, uzel pokračuje v jeho šíření sítí. Pokud je blok z jakéhokoli důvodu neplatný, software síťového uzlu jej odmítne jako neplatný a přestane jej šířit.
+Ostatní uzly v síti (tj. většina) nemusí vkládat žádné ekonomické zdroje nad rámec běžného počítače s 1-2 TB dostupného úložiště a připojením k internetu. Tyto uzly nenavrhují bloky, ale přesto hrají klíčovou roli při zabezpečení sítě tím, že volají k odpovědnosti všechny navrhovatele bloků – naslouchají novým blokům a při jejich přijetí ověřují jejich platnost podle pravidel konsenzu sítě. Pokud je blok platný, uzel jej dále šíří sítí. Pokud je blok z jakéhokoli důvodu neplatný, software uzlu jej bude ignorovat jako neplatný a zastaví jeho šíření.
 
-Spuštění uzlu, který nenavrhuje bloky, je možné pro každého pod konsensuálním mechanismem (důkaz prací nebo důkaz podílem) a <em>doporučuje se všem uživatelům</em>, pokud k tomu mají volné prostředky. Provozování takového uzlu je pro Ethereum velmi cenné a poskytuje jednotlivcům, kteří ho provozují, dodatečné výhody, jako je zvýšená bezpečnost, soukromí a odolnost proti cenzuře.
+Provozování uzlu, který neprodukuje bloky, je možné pro kohokoli v rámci obou mechanismů konsensu (důkaz prací i důkaz podílem); všem uživatelům se to <em>důrazně doporučuje</em>, pokud k tomu mají prostředky. Provozování uzlu je pro Ethereum nesmírně cenné a každému jednotlivci, který jej provozuje, přináší další výhody, jako je lepší bezpečnost, soukromí a odolnost vůči cenzuře.
 
-Schopnost každého spustit svůj vlastní uzel je <em>naprostým základem</em> pro udržení decentralizace sítě Ethereum.
+Možnost kohokoli provozovat vlastní uzel je <em>naprosto nezbytná</em> pro zachování decentralizace sítě Ethereum.
 
 [Více o provozování vlastního uzlu](/run-a-node/)
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Mylná představa: „Sloučení snížilo poplatky za plyn.“"
-contentPreview="Nepravda. Sloučení bylo změnou mechanismu konsensu, nikoli rozšířením kapacity sítě, a nikdy nemělo za cíl snížit poplatky za plyn.">
+title="Mýtus: &quot;Merge nesnížil poplatky za gas.&quot;"
+contentPreview="Nepravda. Merge byl změnou mechanismu konsensu, nikoli rozšířením kapacity sítě, a nikdy neměl za cíl snížit poplatky za gas.">
 
-Transakční poplatky jsou výsledkem poptávky na síti v poměru k její kapacitě. Sloučení zrušilo používání důkazu prací, došlo k přechodu na důkaz podílem z důvodu konsensu, ale nezměnilo významně žádné parametry, které přímo ovlivňují kapacitu nebo propustnost sítě.
+Poplatky za gas jsou produktem poptávky v síti v poměru k její kapacitě. Merge ukončil používání důkazu prací (PoW) a přešel na důkaz podílem (PoS) pro konsensus, ale nijak významně nezměnil žádné parametry, které by přímo ovlivňovaly kapacitu nebo propustnost sítě.
 
-S <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">plánem orientovaným na rollupy</a> se úsilí zaměřuje na škálování uživatelské aktivity na [druhé vrstvě](/layer-2/), zatímco hlavní síť na první vrstvě funguje jako bezpečná decentralizovaná vypořádací vrstva optimalizovaná pro ukládání dat rollupů, což vede k exponenciálnímu snížení nákladů na transakce na rollupech. Přechod na důkaz podílem je klíčovým předpokladem pro realizaci tohoto cíle. [Více o palivu a poplatcích.](/developers/docs/gas/)
+S <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">roadmapou zaměřenou na rollupy</a> se úsilí soustředí na škálování uživatelské aktivity na [vrstvě 2 (l2)](/layer-2/), přičemž vrstva 1 (l1) Mainnetu slouží jako bezpečná decentralizovaná vrstva pro vypořádání optimalizovaná pro ukládání dat rollupů, což pomůže exponenciálně zlevnit transakce rollupů. Přechod na důkaz podílem (PoS) je kritickým předpokladem k realizaci tohoto cíle. [Více o gasu a poplatcích.](/developers/docs/gas/)
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Mylná představa: „Sloučení podstatně zrychlilo transakce.“"
-contentPreview="Nepravda. Ačkoli existují drobné změny, rychlost transakcí na první vrstvě je většinou stejná jako před Sloučením.">
-„Rychlost“ transakce lze měřit několika způsoby, včetně doby potřebné pro zařazení do bloku a doby do finalizace. Oba tyto aspekty se mírně změnily, ale ne tak, aby to uživatelé zaznamenali.
+title="Mýtus: &quot;Transakce byly díky Merge podstatně zrychleny.&quot;"
+contentPreview="Nepravda. Ačkoli existují drobné změny, rychlost transakcí je nyní na vrstvě 1 většinou stejná jako před Merge.">
+„Rychlost“ transakce lze měřit několika způsoby, včetně času do zařazení do bloku a času do finalizace. Obojí se mírně mění, ale ne tak, aby si toho uživatelé všimli.
 
-Historicky, na důkazu prací, bylo cílem mít nový blok přibližně každých 13,3 sekundy. Na důkazu podílem se sloty objevují přesně každých 12 sekund, z nichž každý je příležitostí pro validátora publikovat blok. Většina slotů obsahuje bloky, ale nutně ne všechny (např. když je validátor offline). V případě důkazu podílem se bloky produkují přibližně o 10 % častěji než v případě důkazu prací. Tento rozdíl je poměrně nevýznamný a je nepravděpodobné, že by byl uživateli zaznamenán.
+Historicky bylo u důkazu prací (PoW) cílem mít nový blok každých ~13,3 sekundy. V rámci důkazu podílem (PoS) se sloty objevují přesně každých 12 sekund, přičemž každý z nich je příležitostí pro validátora publikovat blok. Většina slotů má bloky, ale ne nutně všechny (např. validátor je offline). V důkazu podílem (PoS) jsou bloky produkovány o ~10 % častěji než u důkazu prací (PoW). Byla to poměrně nevýznamná změna a je nepravděpodobné, že by si jí uživatelé všimli.
 
-Důkaz podílem zavedl koncept finalizace transakcí, který dříve neexistoval. V případě důkazu prací se schopnost vrátit blok stává exponenciálně obtížnější s každým dalším blokem těženým po této transakci, ale nikdy nedosáhne nuly. V případě důkazu podílem jsou bloky seskupeny do epoch (6,4minutové úseky času obsahující 32 šancí na blok), o kterých validátoři hlasují. Když epocha skončí, validátoři hlasují o tom, zda ji lze považovat za „ověřenou“. Pokud se validátoři dohodnou na justifikaci epochy, bude finalizována v následující epoše. Vrátit finalizované transakce je ekonomicky neproveditelné, protože by to vyžadovalo zisk a spálení více než jedné třetiny celkového uzamčeného ETH.
+Důkaz podílem (PoS) zavedl koncept finality transakcí, který dříve neexistoval. U důkazu prací (PoW) je schopnost zvrátit blok exponenciálně obtížnější s každým dalším blokem vytěženým nad transakcí, ale nikdy nedosáhne úplné nuly. V rámci důkazu podílem (PoS) jsou bloky sdružovány do epoch (časové úseky o délce 6,4 minuty obsahující 32 šancí na bloky), o kterých validátoři hlasují. Když epocha skončí, validátoři hlasují o tom, zda epochu považovat za „ospravedlněnou“. Pokud se validátoři shodnou na ospravedlnění epochy, je v další epoše finalizována. Zrušení finalizovaných transakcí je ekonomicky neproveditelné, protože by vyžadovalo získání a spálení více než jedné třetiny celkového stakovaného ETH.
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Mylná představa: „Sloučení umožnilo výběry stakovaných ETH.“"
-contentPreview="Nepravda, ale výběry stakovaných ETH byly od té doby povoleny prostřednictvím vylepšení Shanghai/Capella.">
+title="Mýtus: &quot;Merge umožnil výběry ze stakingu.&quot;"
+contentPreview="Nepravda, ale výběry ze stakingu byly od té doby umožněny prostřednictvím upgradu Šanghaj/Capella.">
 
-Bezprostředně po Sloučení mohli uzamykatelé přistupovat pouze k odměnám za poplatky a MEV, které získali v důsledku navrhování bloků. Tyto odměny jsou připisovány na účet, který sám o sobě vkladový není a který ovládá validátor (známý jako <em>příjemce poplatků</em>), a jsou dostupné okamžitě. Tyto odměny jsou oddělené od protokolových odměn za vykonávání funkcí validátora.
+Zpočátku po Merge měli stakeři přístup pouze ke spropitným z poplatků a MEV, které získali jako výsledek návrhů bloků. Tyto odměny jsou připisovány na nestakovací účet kontrolovaný validátorem (známý jako <em>příjemce poplatků</em>) a jsou k dispozici okamžitě. Tyto odměny jsou oddělené od odměn protokolu za plnění povinností validátora.
 
-Po vylepšení sítě Shanghai/Capella mohou nyní uzamykatelé určit <em>adresu pro výběr</em>, kde mohou začít přijímat automatické výplaty jakéhokoliv přebytku zůstatku uzamčení (množství větší než je 32 ETH z protokolových odměn). Toto vylepšení také umožnilo validátorovi odemknout a získat celý svůj zůstatek po vystoupení ze sítě.
+Od aktualizace sítě Šanghaj/Capella mohou nyní stakeři určit <em>adresu pro výběr</em>, aby začali dostávat automatické výplaty jakéhokoli přebytečného stakovacího zůstatku (ETH nad 32 z odměn protokolu). Tato aktualizace také umožnila validátorovi odemknout a získat zpět celý svůj zůstatek při výstupu ze sítě.
 
-[Více o výběrech uzamčených prostředků](/staking/withdrawals/)
+[Více o výběrech ze stakingu](/staking/withdrawals/)
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Mylná představa: „Když je Sloučení dokončeno a výběry jsou povoleny, všichni stakeři mohou odejít najednou.“"
-contentPreview="Nepravda. Odchod validátorů je z bezpečnostních důvodů omezen.">
-Od vylepšení Shanghai/Capella, které povolilo výběry, jsou validátoři motivováni k výběru svého zůstatku uzamčených prostředků nad 32 ETH, protože tyto prostředky nepřispívají k výnosu a jinak by ležely nevyužity. V závislosti na APR (určeném celkovým množstvím uzamčeného ETH) mohou být motivováni k vystoupení ze svých validátorů, aby si vymohli celý svůj zůstatek, nebo případně uzamknout ještě více pomocí svých odměn, aby získali větší výnos.
+title="Mýtus: &quot;Nyní, když je Merge dokončen a výběry jsou povoleny, by všichni stakeři mohli vystoupit najednou.&quot;"
+contentPreview="Nepravda. Výstupy validátorů jsou z bezpečnostních důvodů rychlostně omezeny.">
+Vzhledem k tomu, že aktualizace Šanghaj/Capella umožnila výběry, jsou validátoři motivováni k výběru svého stakovacího zůstatku nad 32 ETH, protože tyto prostředky nezvyšují výnos a jsou jinak uzamčeny. V závislosti na APR (určeném celkovým stakovaným ETH) mohou být motivováni k výstupu svého validátoru (nebo validátorů), aby získali zpět celý svůj zůstatek, nebo případně stakovali ještě více pomocí svých odměn, aby získali větší výnos.
 
-Důležité upozornění: Úplné vystoupení validátorů je omezeno protokolem, a pouze určité množství validátorů může vystoupit během jedné epochy (každých 6,4 minuty). Tento limit se mění v závislosti na počtu aktivních validátorů, ale vychází přibližně na 0,33 % celkového uzamčeného ETH, které může být vybráno ze sítě za jeden den.
+Důležité upozornění: úplné výstupy validátorů jsou protokolem rychlostně omezeny a za epochu (každých 6,4 minuty) může vystoupit pouze určitý počet validátorů. Tento limit kolísá v závislosti na počtu aktivních validátorů, ale vychází na přibližně 0,33 % z celkového stakovaného ETH, které může být ze sítě vybráno za jediný den.
 
-To brání masovému exodu uzamčených prostředků. Dále to zabraňuje potenciálnímu útočníkovi, který má přístup k velké části celkového uzamčeného ETH, aby spáchal trestný čin a vystoupil či vybral všechny zůstatky vadných validátorů v jedné epoše, než protokol uplatní trest.
+To zabraňuje masovému odlivu stakovaných prostředků. Dále to brání potenciálnímu útočníkovi s přístupem k velké části celkového stakovaného ETH spáchat přestupek podléhající penalizaci a vystoupit/vybrat všechny zůstatky provinilých validátorů ve stejné epoše, než protokol stihne uplatnit penalizaci (slashing).
 
-APR je také úmyslně dynamický, což umožňuje trhu uzamykatelů vyvážit, kolik jsou ochotni být placeni za zabezpečení sítě. Pokud je sazba příliš nízká, validátoři vystoupí rychlostí omezenou protokolem. Tento krok postupně zvýší APR pro všechny, kteří zůstanou, a znovu přiláká nové nebo vracející se uzamykatele.
+APR je také záměrně dynamické, což umožňuje trhu stakerů vyvážit, kolik jsou ochotni dostat zaplaceno za pomoc se zabezpečením sítě. Pokud je sazba příliš nízká, validátoři budou vystupovat rychlostí omezenou protokolem. Postupně to zvýší APR pro všechny, kteří zůstanou, což opět přiláká nové nebo vracející se stakery.
 </ExpandableCard>
 
-## Co se stalo s Eth2? {#eth2}
+## Co se stalo s „Eth2“? {#eth2}
 
-Termín Eth2 už se nepoužívá. Po sloučení Eth1 a Eth2 do jednoho řetězce již není potřeba rozlišovat mezi dvěma sítěmi Ethereum; existuje pouze Ethereum.
+Termín „Eth2“ byl zrušen. Po sloučení „Eth1“ a „Eth2“ do jediného řetězce již není nutné rozlišovat mezi dvěma sítěmi Etherea; existuje pouze Ethereum.
 
-Aby nedošlo ke zmatku, komunita tyto termíny aktualizovala:
+Aby se omezil zmatek, komunita tyto termíny aktualizovala:
 
-- Eth1 je nyní „exekuční vrstva“, která zpracovává transakce a exekuci.
-- Eth2 je nyní „vrstva konsenzu“, která se zabývá konsensem důkazu podílem.
+- „Eth1“ je nyní „exekuční vrstva“, která zpracovává transakce a exekuci.
+- „Eth2“ je nyní „vrstva konsensu“, která zpracovává konsensus důkazu podílem (PoS).
 
-Tyto změny termínů slouží pouze k úpravě názvosloví. Cíle ani plán Etherea se nemění.
+Tyto terminologické aktualizace mění pouze konvence pojmenování; nemění to cíle ani roadmapu Etherea.
 
 [Přečtěte si více o přejmenování „Eth2“](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
 
-## Vztah mezi vylepšeními {#relationship-between-upgrades}
+## Vztah mezi aktualizacemi {#relationship-between-upgrades}
 
-Všechna vylepšení Etherea jsou vzájemně provázaná. Pojďme si tedy připomenout, jak Sloučení souvisí s ostatními vylepšeními.
+Všechny aktualizace Etherea spolu do jisté míry souvisejí. Pojďme si tedy shrnout, jak Merge souvisí s ostatními aktualizacemi.
 
-### Sloučení a Řetězová vazba {#merge-and-beacon-chain}
+### Merge a Beacon chain {#merge-and-beacon-chain}
 
-Sloučení představuje formální přijetí Řetězové vazby jako nové konsensuální vrstvy k původní exekuční vrstvě, hlavní síti. Od Sloučení jsou validátoři přidělováni k zabezpečení hlavní sítě Etherea a těžba pomocí [důkazu prací](/developers/docs/consensus-mechanisms/pow/) již není platným způsobem produkce bloků.
+Merge představuje formální přijetí Beacon chainu jako nové vrstvy konsensu k původní exekuční vrstvě Mainnetu. Od Merge jsou validátoři přiděleni k zabezpečení Ethereum Mainnetu a těžba na [důkazu prací (PoW)](/developers/docs/consensus-mechanisms/pow/) již není platným prostředkem produkce bloků.
 
-Bloky jsou nyní navrhovány validujícími uzly, které mají uzamčené ETH, výměnou za právo účastnit se konsensu. Tato vylepšení připravují půdu pro budoucí škálovací vylepšení, včetně tříštění.
+Bloky jsou místo toho navrhovány validujícími uzly, které stakovaly ETH výměnou za právo účastnit se konsensu. Tyto aktualizace připravily půdu pro budoucí aktualizace škálovatelnosti, včetně shardingu.
 
 <ButtonLink href="/roadmap/beacon-chain/">
-  Řetězová vazba
+  Beacon chain
 </ButtonLink>
 
-### Sloučení a vylepšení Shanghai {#merge-and-shanghai}
+### Merge a aktualizace Šanghaj {#merge-and-shanghai}
 
-Aby se usnadnilo a maximalizovalo zaměření na úspěšný přechod na důkaz podílem, vylepšení Sloučení z počátku nezahrnovalo některé očekávané funkce, jako je možnost vybrat uzamčené ETH. Tato funkčnost byla umožněna samostatně s vylepšením Shanghai/Capella.
+Aby se zjednodušilo a maximalizovalo soustředění na úspěšný přechod na důkaz podílem (PoS), aktualizace Merge nezahrnovala některé očekávané funkce, jako je možnost vybrat stakované ETH. Tato funkcionalita byla povolena samostatně s aktualizací Šanghaj/Capella.
 
-Zvědavci se mohou dozvědět více v prezentaci [Co se stane po Sloučení](https://youtu.be/7ggwLccuN5s?t=101) od Vitalika na akci ETHGlobal v dubnu 2021.
+Pro zvědavé, přečtěte si více o tom, [co se stane po Merge](https://youtu.be/7ggwLccuN5s?t=101), jak to prezentoval Vitalik na události ETHGlobal v dubnu 2021.
 
-### Sloučení a sharding {#merge-and-data-sharding}
+### Merge a sharding {#merge-and-data-sharding}
 
-Původní plán byl pracovat na tříštění před Sloučením, aby se zlepšila škálovatelnost. S boomem [řešení škálování druhé vrstvy](/layer-2/) však dostal přednost nejprve přechod z důkazu prací na důkaz podílem.
+Původně bylo v plánu pracovat na shardingu před Merge, aby se vyřešila škálovatelnost. S rozmachem [řešení škálování na vrstvě 2 (l2)](/layer-2/) se však priorita přesunula na to, aby se nejprve vyměnil důkaz prací (PoW) za důkaz podílem (PoS).
 
-Plány na tříštění se rychle vyvíjejí, ale vzhledem k úspěchu technologií druhé vrstvy pro škálování exekuce transakcí, se přesunuly na hledání optimálního způsobu, jak distribuovat zátěž, kterou způsobuje uchovávání komprimovaných calldat z kontraktů rollupů, což umožní exponenciální růst kapacity sítě. To by nebylo možné bez předchozího přechodu na důkaz podílem.
+Plány pro sharding se rychle vyvíjejí, ale vzhledem k vzestupu a úspěchu technologií vrstvy 2 (l2) pro škálování exekuce transakcí se plány shardingu přesunuly k nalezení nejoptimálnějšího způsobu, jak rozložit zátěž ukládání komprimovaných dat volání (call data) z kontraktů rollupů, což umožní exponenciální růst kapacity sítě. To by nebylo možné bez předchozího přechodu na důkaz podílem (PoS).
 
 <ButtonLink href="/roadmap/danksharding/">
   Sharding

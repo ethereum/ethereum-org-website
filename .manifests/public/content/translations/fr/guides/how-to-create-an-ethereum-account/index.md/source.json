@@ -1,0 +1,388 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/guides/how-to-create-an-ethereum-account/index.md",
+  "generatedAt": "2026-06-30T00:50:28.196Z",
+  "rootHash": "1f4936c262da",
+  "tree": {
+    "contentHash": "cb966f34335d",
+    "anchorHash": "9b67befd47f3",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "98647d7f95d2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:metaTitle": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "f434d7dbb52e"
+      },
+      "frontmatter:description": {
+        "contentHash": "86cd5cff009c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:1": {
+        "contentHash": "4747d1cf1b57",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "35987a0f9ae7",
+        "anchorHash": "05ba8199b43a"
+      },
+      "prose:2": {
+        "contentHash": "0e73d3e51159",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "step-1-choose-a-wallet": {
+        "contentHash": "1bab894d4621",
+        "anchorHash": "db4d342fec56",
+        "labelHash": "c9a29b952fb4",
+        "children": {
+          "_label": {
+            "contentHash": "c9a29b952fb4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c20b4bf91c00",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "a372e90a7dca",
+            "anchorHash": "30f9844cbffa",
+            "children": {
+              "attr:href": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "a16dbfe881c7"
+              },
+              "prose:0": {
+                "contentHash": "fb29b6111e16",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:href",
+              "prose:0"
+            ]
+          },
+          "prose:1": {
+            "contentHash": "a63043dc3dda",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "0c6a5e5490b8",
+            "anchorHash": "a7ec23e4ca9d"
+          },
+          "prose:2": {
+            "contentHash": "1cc544638ce3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2",
+          "prose:1",
+          "image:0",
+          "prose:2"
+        ]
+      },
+      "step-2-download-and-install-your-wallet-app": {
+        "contentHash": "38eb3a2b7e86",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "1fef4f88dc7e",
+        "children": {
+          "_label": {
+            "contentHash": "1fef4f88dc7e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "0f4e9e8d601c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "step-3-open-the-app-and-create-your-ethereum-account": {
+        "contentHash": "24b5f530f3c9",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "fb0f32a0174c",
+        "children": {
+          "_label": {
+            "contentHash": "fb0f32a0174c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c89bd58ba25e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "step-4-store-your-recovery-phrase": {
+        "contentHash": "8f575659baf5",
+        "anchorHash": "ca63fcb25a31",
+        "labelHash": "525fe0375839",
+        "children": {
+          "_label": {
+            "contentHash": "525fe0375839",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "7f8c94e3895c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "1d2a4ad1aab6",
+            "anchorHash": "d18be10e5d3e",
+            "children": {
+              "component:0": {
+                "contentHash": "b3ddf7e5852e",
+                "anchorHash": "5e6bdf157a40",
+                "children": {
+                  "attr:variant": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "2937013f2181"
+                  },
+                  "component:0": {
+                    "contentHash": "4b9f7d802648",
+                    "anchorHash": "491aaf33b92d",
+                    "children": {
+                      "attr:text": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "252d79a64486"
+                      }
+                    }
+                  },
+                  "component:1": {
+                    "contentHash": "e803400a8f7e",
+                    "anchorHash": "45ba72802ea7",
+                    "children": {
+                      "attr:className": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "be1d9714ad52"
+                      },
+                      "prose:0": {
+                        "contentHash": "23d21a720255",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "component:1": {
+                        "contentHash": "297183898be7",
+                        "anchorHash": "666fb16ac03f",
+                        "children": {
+                          "attr:href": {
+                            "contentHash": "e3b0c44298fc",
+                            "anchorHash": "ee3a75b31775"
+                          },
+                          "prose:0": {
+                            "contentHash": "2b58bdf9f156",
+                            "anchorHash": "e3b0c44298fc"
+                          }
+                        },
+                        "childrenOrder": [
+                          "attr:href",
+                          "prose:0"
+                        ]
+                      }
+                    },
+                    "childrenOrder": [
+                      "attr:className",
+                      "prose:0",
+                      "component:1"
+                    ]
+                  }
+                },
+                "childrenOrder": [
+                  "attr:variant",
+                  "component:0",
+                  "component:1"
+                ]
+              }
+            }
+          },
+          "prose:1": {
+            "contentHash": "d230452c0cfd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "d7c49aeeec20",
+            "anchorHash": "65c77e41e1a7"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2",
+          "prose:1",
+          "link:0"
+        ]
+      },
+      "frequently-asked-questions": {
+        "contentHash": "534f88e1b3ea",
+        "anchorHash": "4cf00452dc8e",
+        "labelHash": "e956a9404b46",
+        "children": {
+          "_label": {
+            "contentHash": "e956a9404b46",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "are-my-wallet-and-my-ethereum-account-the-same": {
+            "contentHash": "9578de011c24",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "9188a973e19a",
+            "children": {
+              "_label": {
+                "contentHash": "9188a973e19a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "6db821a138a6",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "can-i-send-bitcoin-to-an-ethereum-address-or-ether-to-a-bitcoin-address": {
+            "contentHash": "35cb150b060e",
+            "anchorHash": "ebfac3aac799",
+            "labelHash": "4600f6055840",
+            "children": {
+              "_label": {
+                "contentHash": "4600f6055840",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "e454423f376f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "34cbf8586f59",
+                "anchorHash": "fba5b5bf3eac"
+              },
+              "prose:2": {
+                "contentHash": "133121c94d5e",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "if-i-own-an-eth-address-do-i-own-the-same-address-on-other-blockchains": {
+            "contentHash": "ee2330a2812b",
+            "anchorHash": "a384c9966ba6",
+            "labelHash": "07be9b417fa3",
+            "children": {
+              "_label": {
+                "contentHash": "07be9b417fa3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "2f7610c4a8ad",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "d80c9bf910f1",
+                "anchorHash": "e11c21197f9a"
+              },
+              "prose:3": {
+                "contentHash": "615034301753",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "a330395cc0a5",
+                "anchorHash": "07d2711554ff"
+              },
+              "prose:4": {
+                "contentHash": "d74522f59a08",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          },
+          "is-having-my-own-wallet-safer-than-keeping-my-funds-on-an-exchange": {
+            "contentHash": "6457adc9a59e",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "bef1c6004479",
+            "children": {
+              "_label": {
+                "contentHash": "bef1c6004479",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "fd5a95576d2c",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "if-i-lose-my-phonehardware-wallet-do-i-need-to-use-the-same-wallet-app-again-to-recover-the-lost-funds": {
+            "contentHash": "546696238849",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "414db37de5ff",
+            "children": {
+              "_label": {
+                "contentHash": "414db37de5ff",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "a4606566c09a",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "are-my-wallet-and-my-ethereum-account-the-same",
+          "can-i-send-bitcoin-to-an-ethereum-address-or-ether-to-a-bitcoin-address",
+          "if-i-own-an-eth-address-do-i-own-the-same-address-on-other-blockchains",
+          "is-having-my-own-wallet-safer-than-keeping-my-funds-on-an-exchange",
+          "if-i-lose-my-phonehardware-wallet-do-i-need-to-use-the-same-wallet-app-again-to-recover-the-lost-funds"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:metaTitle",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "step-1-choose-a-wallet",
+      "step-2-download-and-install-your-wallet-app",
+      "step-3-open-the-app-and-create-your-ethereum-account",
+      "step-4-store-your-recovery-phrase",
+      "frequently-asked-questions"
+    ]
+  },
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+}

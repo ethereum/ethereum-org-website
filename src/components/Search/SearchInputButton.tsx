@@ -1,15 +1,14 @@
 import * as React from "react"
+import { useTranslations } from "next-intl"
 import { DocSearchButton } from "typesense-docsearch-react"
 
 import { cn } from "@/lib/utils/cn"
 
 import { Button, type ButtonProps } from "../ui/buttons/Button"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 const SearchInputButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, ...props }, ref) => {
-    const { t } = useTranslation("common")
+    const t = useTranslations("common")
 
     return (
       <Button

@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/community-stories.json",
+  "generatedAt": "2026-07-10T23:44:00.910Z",
+  "rootHash": "1e06a43d36c1",
+  "tree": {
+    "contentHash": "bb4a1ef7d76f",
+    "anchorHash": "5b588589798c",
+    "children": {
+      "story-suraj-sharma": {
+        "contentHash": "175ef6512143",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-jatin-pandya": {
+        "contentHash": "b205d695b617",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-bhawna-chauhan": {
+        "contentHash": "0c3acd995224",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-inhwan": {
+        "contentHash": "4319bf9454b1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-thomas": {
+        "contentHash": "166c88f71a71",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-anon-canada": {
+        "contentHash": "4a5854dfef0a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-shangzi": {
+        "contentHash": "8085928cb21f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-emmanuel": {
+        "contentHash": "332400362340",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-thiago": {
+        "contentHash": "e44e8af56420",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-dorgo-eth": {
+        "contentHash": "f5cf1043d0f8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-casio": {
+        "contentHash": "efd7440424e4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-abbas": {
+        "contentHash": "02c96f368079",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-charles": {
+        "contentHash": "7627309ccbbc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-sebastian": {
+        "contentHash": "5b992d437506",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-lida": {
+        "contentHash": "35d5dc0b27ec",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-yamille": {
+        "contentHash": "e7d34e9294ef",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-cryptonautas": {
+        "contentHash": "b07280443645",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-0x3liza-eth": {
+        "contentHash": "4edbfcc7c5d4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-facu": {
+        "contentHash": "c0fe05b56458",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-nico-gnosis-pay": {
+        "contentHash": "4344c5525c91",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-nico-bolivia": {
+        "contentHash": "1c401172643b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-imrulo-eth": {
+        "contentHash": "30b3636ae652",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-rodrigo-nunez": {
+        "contentHash": "68114cc203fd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-mesoreefdao": {
+        "contentHash": "80a640956d00",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-samuel": {
+        "contentHash": "1c0c74d37976",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-alex": {
+        "contentHash": "1945aa9ab926",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "story-suraj-sharma",
+      "story-jatin-pandya",
+      "story-bhawna-chauhan",
+      "story-inhwan",
+      "story-thomas",
+      "story-anon-canada",
+      "story-shangzi",
+      "story-emmanuel",
+      "story-thiago",
+      "story-dorgo-eth",
+      "story-casio",
+      "story-abbas",
+      "story-charles",
+      "story-sebastian",
+      "story-lida",
+      "story-yamille",
+      "story-cryptonautas",
+      "story-0x3liza-eth",
+      "story-facu",
+      "story-nico-gnosis-pay",
+      "story-nico-bolivia",
+      "story-imrulo-eth",
+      "story-rodrigo-nunez",
+      "story-mesoreefdao",
+      "story-samuel",
+      "story-alex"
+    ]
+  },
+  "sourceCommitSha": "04f10b37df0eb7e29b3032cab1d9c881c65b4778"
+}

@@ -1,12 +1,61 @@
-import type { Story } from "../../app/[locale]/10years/_components/types"
+import type { StoryData } from "@/lib/types"
 
-const tenYearStories: Story[] = [
+// `storyKey` references the story copy in src/intl/en/community-stories.json
+// (namespace "community-stories") so it can be translated like any other UI
+// string. `storyOriginal` preserves the story verbatim as submitted; stories
+// submitted in English carry the English text here.
+export const newStories: StoryData[] = [
+  // ─────────────────────────────────────────────────────────────────
+  // New community stories for /stories/ page
+  //   - Use full ISO dates, e.g. "2026-06-10"
+  // ─────────────────────────────────────────────────────────────────
   {
-    storyEnglish:
-      "I had a transaction with a friend who was overseas, and I was surprised that sending and receiving money through Ethereum was much faster and easier than I thought. It's much more transparent than the existing banking system, and there are no complicated procedures in the middle.",
+    storyKey: "story-suraj-sharma",
+    originalLocale: "en",
     storyOriginal:
-      "특히 해외에 있는 친구랑 거래를 할 일이 있었는데, 이더리움을 통해 돈을 보내고 받는 게 생각보다 훨씬 빠르고 간편해서 놀랐어요. 기존 은행 시스템보다 훨씬 투명하고, 중간에 복잡한 절차도 없고요. 작은 경험들이긴 하지만 이런 것들이 쌓이면서 제 삶에도, 그리고 제 주변에도 이더리움이 긍정적인 변화를 주고 있다는 걸 느껴요.\n",
-    category: "International transfers, Transparency",
+      "Talent in India is not limited to metros. I've seen curious and capable developers who just lacked early exposure to protocols, grants and global conversations. Ethereum gives us open access, open source code, open communities, open coordination. That permissionless layer is powerful.",
+    category: "Open Access",
+    name: "Suraj Sharma",
+    date: "2026-04-13",
+    country: "India",
+    twitter: "https://x.com/EFDevcon/status/2043673169056133579?s=20",
+    region: "",
+  },
+  {
+    storyKey: "story-jatin-pandya",
+    originalLocale: "en",
+    storyOriginal:
+      "ETHIndia 2022 was a turning point. The energy of hundreds of developers shipping at midnight convinced me this ecosystem was worth committing to. I went from participant to mentor to organizer. Ethereum taught me that communities ship. I saw firsthand how one ecosystem could spawn an entire generation of Indian builders. Ethereum gave that talent a global stage. Developers here aren't just building for India anymore; now they are building for the world.",
+    category: "Community Collaboration, Builder Culture",
+    name: "Jatin Pandya",
+    date: "2026-03-17",
+    country: "India",
+    twitter: "https://x.com/EFDevcon/status/2033874812637221297?s=20",
+    region: "",
+  },
+  {
+    storyKey: "story-bhawna-chauhan",
+    originalLocale: "en",
+    storyOriginal:
+      "I discovered Ethereum, and that moment completely redirected my life. It wasn't just a career change, it was a new beginning. Driven by curiosity, I dived headfirst into the Bitcoin whitepaper and the fundamentals of Ethereum. That curiosity soon turned into a passion for building. The thrill of winning a track prize at my first online hackathon was the spark I needed. Since then, I haven't stopped building and shipping.",
+    category: "Builder Culture",
+    name: "Bhawna Chauhan",
+    date: "2026-03-08",
+    country: "India",
+    twitter: "https://x.com/EFDevcon/status/2030613582124397001?s=20",
+    region: "",
+  },
+]
+
+// 10-year anniversary submissions (2025; "DD.M." shorthand dates). Campaign-
+// specific, so /community "Ethereum voices" shuffles them for variety.
+export const anniversaryStories: StoryData[] = [
+  {
+    storyKey: "story-inhwan",
+    originalLocale: "ko",
+    storyOriginal:
+      "특히 해외에 있는 친구랑 거래를 할 일이 있었는데, 이더리움을 통해 돈을 보내고 받는 게 생각보다 훨씬 빠르고 간편해서 놀랐어요. 기존 은행 시스템보다 훨씬 투명하고, 중간에 복잡한 절차도 없고요. 작은 경험들이긴 하지만 이런 것들이 쌓이면서 제 삶에도, 그리고 제 주변에도 이더리움이 긍정적인 변화를 주고 있다는 걸 느껴요.",
+    category: "International Transfers, Transparency",
     name: "Inhwan",
     date: "11.4.",
     country: "South Korea",
@@ -14,10 +63,11 @@ const tenYearStories: Story[] = [
     region: "#REF!",
   },
   {
-    storyEnglish:
+    storyKey: "story-thomas",
+    originalLocale: "en",
+    storyOriginal:
       "Ethereum has empowered Kenyan communities by improving financial inclusion, supporting agriculture, fostering education, and enabling cost-effective remittances. big up to ETH",
-    storyOriginal: "",
-    category: "Financial Inclusion, International transfers",
+    category: "Financial Inclusion, International Transfers",
     name: "Thomas",
     date: "10.4.",
     country: "Kenya",
@@ -25,9 +75,10 @@ const tenYearStories: Story[] = [
     region: "#REF!",
   },
   {
-    storyEnglish:
+    storyKey: "story-anon-canada",
+    originalLocale: "en",
+    storyOriginal:
       "Self-custody in the increasingly restrictive (and sometimes even hostile) world of traditional finance has opened the doors to a parallel system of finance for me.",
-    storyOriginal: "",
     category: "Self-Custody",
     name: "Anon",
     date: "10.4.",
@@ -36,10 +87,10 @@ const tenYearStories: Story[] = [
     region: "#REF!",
   },
   {
-    storyEnglish:
-      "In the past, when the community held some charity events, the fund raising channels were limited and the management transparency was low. With the decentralized nature of Ethereum, we can launch crowdfunding activities worldwide, and all fund flows can be clearly recorded on the blockchain. Community members can check the use of funds at any time, which not only broadens the source of funds, but also improves the transparency and credibility of fund management.",
+    storyKey: "story-shangzi",
+    originalLocale: "zh",
     storyOriginal:
-      "以往社区举办一些公益活动时，资金募集渠道有限且管理透明度低。借助以太坊的去中心化特性，我们可以在全球范围内发起众筹活动，并且所有的资金流向都能在区块链上清晰记录。社区成员可以随时查看资金的使用情况，这不仅拓宽了资金来源，还提高了资金管理的透明度和公信力。\n",
+      "以往社区举办一些公益活动时，资金募集渠道有限且管理透明度低。借助以太坊的去中心化特性，我们可以在全球范围内发起众筹活动，并且所有的资金流向都能在区块链上清晰记录。社区成员可以随时查看资金的使用情况，这不仅拓宽了资金来源，还提高了资金管理的透明度和公信力。",
     category: "Community Collaboration, Transparency",
     name: "Shangzi",
     date: "14.4.",
@@ -48,9 +99,10 @@ const tenYearStories: Story[] = [
     region: "#REF!",
   },
   {
-    storyEnglish:
+    storyKey: "story-emmanuel",
+    originalLocale: "en",
+    storyOriginal:
       "Ethereum has reduce poverty on average Nigeria youth. Young guys and ladies either trade or writing codes. This has help to reduce unemployment in my community.",
-    storyOriginal: "",
     category: "Financial Inclusion",
     name: "Emmanuel",
     date: "9.4.",
@@ -59,10 +111,11 @@ const tenYearStories: Story[] = [
     region: "#REF!",
   },
   {
-    storyEnglish:
+    storyKey: "story-thiago",
+    originalLocale: "en",
+    storyOriginal:
       "In emerging regions, instability, distrust, and social inequality are commonplace. Ethereum offers not only a technological alternative, but a philosophical one. It allows us to build systems where transparency is default, trust is programmable, and access is open.",
-    storyOriginal: "",
-    category: "Self-custody, Transparency, Community Collaboration",
+    category: "Self-Custody, Transparency, Community Collaboration",
     name: "Thiago",
     date: "15.4.",
     country: "Brazil",
@@ -70,10 +123,11 @@ const tenYearStories: Story[] = [
     region: "#REF!",
   },
   {
-    storyEnglish:
+    storyKey: "story-dorgo-eth",
+    originalLocale: "en",
+    storyOriginal:
       "In March 2020, toward the end of the COVID pandemic, I simply decided to try buying crypto. I bought Bitcoin and Ethereum without really understanding the difference between them at the time. Now, I’m an ETH maxi. As a citizen of my country, I’ve always been interested in one question: why can laws be so easily ignored? How can we make contracts enforceable and finally make the law work? Today, after five years on my crypto journey, I have the answer. And that answer is Ethereum — a tool for autonomous individuals. I believe in a bright future for humanity. I believe in a bright future for Ethereum. Thanks to every builder for making this future real.",
-    storyOriginal: "",
-    category: "Self-custody, Transparency",
+    category: "Self-Custody, Transparency",
     name: "Dorgo.eth",
     date: "15.4.",
     country: "Ukraine",
@@ -81,9 +135,10 @@ const tenYearStories: Story[] = [
     region: "#REF!",
   },
   {
-    storyEnglish:
+    storyKey: "story-casio",
+    originalLocale: "en",
+    storyOriginal:
       "How DeFi has made an impact on my life: Spent 8 years working regular jobs, perfect credit, no debt and all banks denied my loan apps after months of back n forth. In less than 30 minutes I took a loan agains't my ETH which allowed me to buy the land and start construction.",
-    storyOriginal: "",
     category: "Financial Inclusion",
     name: "Casio",
     date: "24.3.",
@@ -92,10 +147,11 @@ const tenYearStories: Story[] = [
     region: "-",
   },
   {
-    storyEnglish:
+    storyKey: "story-abbas",
+    originalLocale: "en",
+    storyOriginal:
       "Sent some money back home to Afghanistan to support my family with stablecoins and turns out exchange centers are willing to pay an extra 10$ on 1000$ because there's more demand to keep their capital in stablecoins than holding US Dollars in fiat. Reasons? 1. Government can't control their money 2. Easier to transfer across the country and outside of the country as well. 3. Banks are very difficult to deal with 4. Since the demand for stables is high, They can transfer it to fiat whenever they want. Some of you may not see it because you're focused on memecoins but people with genuine problems are turning to crypto.",
-    storyOriginal: "",
-    category: "International transfers, Self-custody",
+    category: "International Transfers, Self-Custody",
     name: "Abbas",
     date: "23.1.",
     country: "Afghanistan",
@@ -103,10 +159,11 @@ const tenYearStories: Story[] = [
     region: "Asia",
   },
   {
-    storyEnglish:
+    storyKey: "story-charles",
+    originalLocale: "en",
+    storyOriginal:
       "I started as a local group in my city Warri south of Nigeria, two years ago, has metamorphosed into a vibrant community of over 400 people with some already developing smart contracts and getting immersed in Ethereum. One of the most significant differences Ethereum made in my community - the web3 Warri - was bringing together individuals with no background in blockchain and transforming them into smart contracts developers. Ethereum has helped my community - the web3 Warri - overcome some of these challenges 1. Centralization: Members of my community now understand that they have control over how they use the internet and their data 2. Seamless and cross-border payments: Most members of my community work as freelancers and remote workers. And receiving their payments have already been a challenger but with Ethereum, they have been able to receive their payments via stable coins and in almost an instance. 3. They also don't need to provide numerous documents to support their identity in making and receiving payments.",
-    storyOriginal: "",
-    category: "International transfers, Financial Inclusion, Self-custody",
+    category: "International Transfers, Financial Inclusion, Self-Custody",
     name: "Charles",
     date: "16.4.",
     country: "Nigeria",
@@ -114,14 +171,15 @@ const tenYearStories: Story[] = [
     region: "#REF!",
   },
   {
-    storyEnglish:
+    storyKey: "story-sebastian",
+    originalLocale: "en",
+    storyOriginal:
       "Ethereum has made a huge difference in my life. Around eight months ago, I didn’t know much about development within the blockchain space. But as I started exploring and joined Web3 communities in Costa Rica like Dojo Coding and Web3Mentorhood, my perspective on Web3 completely changed.\n" +
       "\n" +
       "Thanks to Ethereum and these communities, I’ve had access to opportunities I never imagined. For instance, I was able to travel outside my country for the first time through Web3 initiatives—something I hadn't achieved through Web2-related activities. Ethereum has also helped spark events in Costa Rica, strengthening crypto adoption and building a more vibrant local ecosystem.\n" +
       "\n" +
       "Personally, Ethereum has opened my eyes to a world full of possibilities: collaborating with people from around the globe, constantly learning, and dreaming about building solutions that truly make an impact.",
-    storyOriginal: "",
-    category: "Community collaboration",
+    category: "Community Collaboration",
     name: "Sebastián",
     date: "16.4.",
     country: "Costa Rica",
@@ -129,38 +187,39 @@ const tenYearStories: Story[] = [
     region: "#REF!",
   },
   {
-    storyEnglish:
-      "I couldn't withdraw funds on offshore cryptocurrency apps, but Ethereum made it so easy.",
+    storyKey: "story-lida",
+    originalLocale: "fa",
     storyOriginal:
-      "من نمی‌توانستم برداشت مالی در اپلیکیشن های رمز ارز برون مرزی داشته باشم ولی اتریوم این کار رو به این راحتی انجام داد.        ",
-    category: "Financial inclusion, International transfers",
+      "من نمی‌توانستم برداشت مالی در اپلیکیشن های رمز ارز برون مرزی داشته باشم ولی اتریوم این کار رو به این راحتی انجام داد.",
+    category: "Financial Inclusion, International Transfers",
     name: "Lida",
     date: "17.4.",
     country: "Iran",
-    twitter:
-      "من نمی‌توانستم برداشت مالی در اپلیکیشن های رمز ارز برون مرزی داشته باشم ولی اتریوم این کار رو به این راحتی انجام داد.",
+    twitter: "",
     region: "#REF!",
   },
   {
-    storyEnglish:
+    storyKey: "story-yamille",
+    originalLocale: "en",
+    storyOriginal:
       "Ethereum helped us break down many barriers we took for granted. Not just technical ones, but also mental ones: believing that technology was foreign, that you had to speak a certain language, live in a certain place, or have a specific profile to access real opportunities.\n" +
       "\n" +
       "For me and my community, it opened the door to global spaces, where what matters is what you contribute, not where you come from. It allowed us to explore, learn, and build on what we already knew but with a totally new vision.\n" +
       "\n" +
       "And that also showed us that we can be in both worlds—creative and technological—and add value from there.",
-    storyOriginal: "",
     category: "Community Collaboration",
-    name: "Yamille\t",
+    name: "Yamille",
     date: "17.4.",
     country: "Peru",
-    twitter: "https://x.com/yamiyami_eth\t",
+    twitter: "https://x.com/yamiyami_eth",
     region: "#REF!",
   },
   {
-    storyEnglish:
+    storyKey: "story-cryptonautas",
+    originalLocale: "en",
+    storyOriginal:
       "what people have used the most are remittances, I believe that’s the most common use and it’s very useful",
-    storyOriginal: "",
-    category: "Financial inclusion, International transfers",
+    category: "Financial Inclusion, International Transfers",
     name: "Cryptonautas",
     date: "20.4.",
     country: "Mexico",
@@ -168,22 +227,24 @@ const tenYearStories: Story[] = [
     region: "#REF!",
   },
   {
-    storyEnglish:
+    storyKey: "story-0x3liza-eth",
+    originalLocale: "en",
+    storyOriginal:
       "Growing up in Argentina, I experienced how economic instability, inflation, and a lack of trust in institutions can deeply affect daily life. These challenges pushed me to explore alternative systems that don’t rely on centralized authorities or intermediaries. That’s how I found Ethereum, and it’s made a profound difference in how I view the future.\n" +
       "\n" +
       "Ethereum offered me and my community a new way to think about trust, identity, and value. It’s not just a technology; it’s a tool for empowerment. With this public good, financial inclusion becomes real. People who were previously shut out of traditional systems now have access to decentralized finance, secure transactions, and even new forms of income and expression through NFTs, DAOs, and other innovations.",
-    storyOriginal: "",
-    category: "Self-custody, Community Collaboration",
-    name: " 0x3liza.eth",
+    category: "Self-Custody, Community Collaboration",
+    name: "0x3liza.eth",
     date: "20.4.",
     country: "Argentina",
     twitter: "https://x.com/Elizapancake01",
     region: "#REF!",
   },
   {
-    storyEnglish:
+    storyKey: "story-facu",
+    originalLocale: "en",
+    storyOriginal:
       "Ethereum has helped Argentinians overcome the limits of a broken financial system. It gave us a way to earn and save (mostly in stablecoins), despite inflation, currency controls, and constant uncertainty.",
-    storyOriginal: "",
     category: "Financial Inclusion",
     name: "Facu",
     date: "24.4.",
@@ -192,9 +253,10 @@ const tenYearStories: Story[] = [
     region: "#REF!",
   },
   {
-    storyEnglish:
+    storyKey: "story-nico-gnosis-pay",
+    originalLocale: "en",
+    storyOriginal:
       "I use Ethereum on a daily basis. With my Gnosis Pay card it's very easy to link my wallet to my daily expenses, and the best of it all is that I can leverage DeFi at the same time. That means that even my current account is earning yield, while keeping my funds accessible and easy to spend.",
-    storyOriginal: "",
     category: "Payments",
     name: "Nico",
     date: "25.4.",
@@ -203,10 +265,11 @@ const tenYearStories: Story[] = [
     region: "Europe",
   },
   {
-    storyEnglish:
+    storyKey: "story-nico-bolivia",
+    originalLocale: "en",
+    storyOriginal:
       "My family lives in Bolivia, and when my brother went to study abroad it was extremely expensive to send him money. Bank transfers are extremely expensive, and solutions like MoneyGram or Western Union would take huge cuts on the transfer. It was a big relief when we discovered that we could send him money with crypto at a fraction of the cost.",
-    storyOriginal: "",
-    category: "International transfers",
+    category: "International Transfers",
     name: "Nico",
     date: "25.4.",
     country: "Netherlands",
@@ -214,36 +277,8 @@ const tenYearStories: Story[] = [
     region: "Europe",
   },
   {
-    storyEnglish:
-      "I'm Cuban. I live in Serbia.\n" +
-      "From Cuba, opening a bank account was almost impossible.\n" +
-      "Paying online… even more difficult.\n" +
-      "\n" +
-      "When I arrived in Serbia, I thought everything would be easier.\n" +
-      "But in 2021, something happened to me that I'll never forget.\n" +
-      "A client asked me for a website. He paid me via PayPal.\n" +
-      "And PayPal… blocked my money.\n" +
-      "Just when I needed it most.\n" +
-      "\n" +
-      "That same day, I started looking for solutions.\n" +
-      "And I found Ethereum.\n" +
-      "\n" +
-      "That's when everything changed.\n" +
-      "Thanks to Ethereum, I was able to receive direct payments.\n" +
-      "Without banks. Without blocks. Without asking permission.\n" +
-      "\n" +
-      "Since then, I fell in love with Ethereum.\n" +
-      "Because it's not just money.\n" +
-      "It's freedom.\n" +
-      "It's being able to work and get paid, no matter where you come from.\n" +
-      "\n" +
-      "Every time I have something on another network, I try to move it to Ethereum.\n" +
-      "Because I believe in its potential.\n" +
-      "In its ability to give opportunities to people like me.\n" +
-      "People who come from countries where the system closes its doors to you.\n" +
-      "\n" +
-      "For me, Ethereum isn't just technology.\n" +
-      "It's a tool for living a better life.",
+    storyKey: "story-imrulo-eth",
+    originalLocale: "es",
     storyOriginal:
       "Soy cubano. Vivo en Serbia.\n" +
       "Desde Cuba, abrir una cuenta bancaria era casi imposible.\n" +
@@ -274,39 +309,42 @@ const tenYearStories: Story[] = [
       "\n" +
       "Ethereum, para mí, no es solo tecnología.\n" +
       "Es una herramienta para vivir mejor.",
-    category: "International transfers",
-    name: "imrulo.eth        ",
+    category: "International Transfers",
+    name: "imrulo.eth",
     date: "26.4.",
     country: "Serbia",
-    twitter: "https://farcaster.xyz/guinoki.eth        ",
+    twitter: "https://farcaster.xyz/guinoki.eth",
     region: "Europe",
   },
   {
-    storyEnglish:
+    storyKey: "story-rodrigo-nunez",
+    originalLocale: "en",
+    storyOriginal:
       "Ethereum has helped our community overcome several significant challenges, particularly around transparency, trust, and efficient resource allocation. By leveraging smart contracts, we have been able to automate and secure the distribution of funding for social impact projects, ensuring that resources are used for their intended purposes and that all transactions are transparent and publicly auditable. This has greatly reduced the risk of mismanagement and fostered greater trust among stakeholders.",
-    storyOriginal: "",
     category: "Transparency, Community Collaboration",
-    name: "Rodrigo NuñΞz        ",
+    name: "Rodrigo NuñΞz",
     date: "28.4.",
     country: "Mexico",
-    twitter: "https://x.com/Cypherpunkfish1        ",
+    twitter: "https://x.com/Cypherpunkfish1",
     region: "#REF!",
   },
   {
-    storyEnglish:
+    storyKey: "story-mesoreefdao",
+    originalLocale: "en",
+    storyOriginal:
       "We are using Ethereum to create new coordination mechanisms within a DeSciDAO, allowing us to allocate various forms of capital with smart contracts and accelerate research and citizen science in coral reef conservation initiatives and programs in Mesoamerica, with plans to scale these efforts worldwide.",
-    storyOriginal: "",
     category: "Transparency, Community Collaboration",
-    name: "MesoReefDAO        ",
+    name: "MesoReefDAO",
     date: "28.4.",
     country: "Mexico",
-    twitter: "https://x.com/MesoReefDAO        ",
+    twitter: "https://x.com/MesoReefDAO",
     region: "#REF!",
   },
   {
-    storyEnglish:
-      "Before Ethereum, opportunities for many developers like me, especially in Nigeria and across Africa, were very limited. Access to global tech communities, funding, mentorship, and even simply being seen was incredibly hard. Ethereum changed that for me and for many people I know. It helped us overcome barriers of geography, background, and limited resources. Through Ethereum, we could contribute to open-source projects, earn real experience, build real products, and be part of something bigger than ourselves, without needing permission from institutions or borders. ",
-    storyOriginal: "",
+    storyKey: "story-samuel",
+    originalLocale: "en",
+    storyOriginal:
+      "Before Ethereum, opportunities for many developers like me, especially in Nigeria and across Africa, were very limited. Access to global tech communities, funding, mentorship, and even simply being seen was incredibly hard. Ethereum changed that for me and for many people I know. It helped us overcome barriers of geography, background, and limited resources. Through Ethereum, we could contribute to open-source projects, earn real experience, build real products, and be part of something bigger than ourselves, without needing permission from institutions or borders.",
     category: "Community Collaboration",
     name: "Samuel",
     date: "28.4.",
@@ -315,17 +353,19 @@ const tenYearStories: Story[] = [
     region: "#REF!",
   },
   {
-    storyEnglish:
-      "I use Ethereum on a day-to-day basis to build art projects, deploy websites via ENS, manage my tokens, and anonymize accounts to create new projects unrelated to me.",
+    storyKey: "story-alex",
+    originalLocale: "fr",
     storyOriginal:
       "J'utilise Ethereum au jour le jour pour construire des projets artistiques, déployer des sites web via ENS, gérer mes tokens, et anonymiser des comptes pour créer de nouveaux projets non reliées à moi.",
     category: "",
     name: "Alex",
-    date: "5.5",
+    date: "5.5.",
     country: "France",
     twitter: "",
     region: "",
   },
 ]
+
+const tenYearStories: StoryData[] = [...newStories, ...anniversaryStories]
 
 export default tenYearStories

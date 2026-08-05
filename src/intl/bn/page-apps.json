@@ -18,7 +18,7 @@
   "page-apps-categories-title": "অ্যাপ্লিকেশন ক্যাটাগরি",
   "page-apps-community-picks-title": "কমিউনিটির পছন্দ",
   "page-apps-meta-title": "ইথেরিয়াম-এর সেরা ক্রিপ্টো অ্যাপ",
-  "page-apps-meta-description": "ইথেরিয়াম-এ ক্রিপ্টো অ্যাপ আবিষ্কার করুন: DeFi, NFT, সোশ্যাল, গেমিং, সেতু, গোপনীয়তা, প্রোডাক্টিভিটি এবং DAO বিকেন্দ্রীকৃত অ্যাপ্লিকেশন (dapp) এক্সপ্লোর করুন। ট্রেড, উপার্জন এবং ইন্টারঅ্যাক্ট করার জন্য বিশ্বস্ত অনচেইন অ্যাপ খুঁজুন।",
+  "page-apps-meta-description": "ইথেরিয়াম-এ অ্যাপগুলো আবিষ্কার করুন: DeFi, NFT, সোশ্যাল, গেমিং, সেতু, গোপনীয়তা এবং DAO। ক্রিপ্টো ট্রেড করতে, উপার্জন করতে এবং ইন্টারঅ্যাক্ট করতে বিশ্বস্ত অনচেইন অ্যাপগুলো খুঁজুন।",
   "page-apps-category-defi-name": "DeFi",
   "page-apps-category-defi-description": "বিকেন্দ্রীভূত অর্থব্যবস্থা (DeFi) হলো বিকেন্দ্রীকৃত অ্যাপ্লিকেশন (dapp)-এর একটি ক্যাটাগরি যা ব্যবহারকারীদের তাদের ক্রিপ্টো অ্যাসেট ঋণ প্রদান, ঋণ গ্রহণ, ট্রেড এবং সুদ উপার্জন করতে দেয়।",
   "page-apps-category-defi-meta-title": "ইথেরিয়াম DeFi অ্যাপের তালিকা — ঋণ প্রদান, ঋণ গ্রহণ এবং ইল্ড",
@@ -66,6 +66,7 @@
   "page-apps-info-last-updated": "সর্বশেষ আপডেট",
   "page-apps-gallery-title": "গ্যালারি",
   "page-apps-more-apps-like-this": "এরকম আরও অ্যাপ",
+  "page-apps-by-company": "{company} দ্বারা",
   "page-apps-today": "আজ",
   "page-apps-one-day-ago": "1 দিন আগে",
   "page-apps-days-ago": "{days} দিন আগে"

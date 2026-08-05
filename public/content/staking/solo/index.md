@@ -29,11 +29,11 @@ A home staker receives rewards directly from the protocol for keeping their vali
 
 Home staking comes with more responsibility but provides you with maximum control over your funds and staking setup.
 
-<CardGrid>
+<Grid>
   <Card title="Earn fresh ETH" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
   <Card title="Full control" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
   <Card title="Network security" emoji="🔐" description="Home staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
-</CardGrid>
+</Grid>
 
 ## Considerations before home staking {#considerations-before-staking-solo}
 

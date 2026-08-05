@@ -39,13 +39,7 @@ const CalloutRoot = React.forwardRef<
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof variants>
 >(({ className, variant, children, ...props }, ref) => (
   <aside ref={ref} className={cn(variants({ variant }), className)} {...props}>
-    <div
-      className={cn(
-        "flex flex-col @3xl/callout:flex-row-reverse",
-        "rounded-2xl",
-        "bg-card-gradient-secondary"
-      )}
-    >
+    <div className="flex flex-col rounded-base bg-linear-primary @3xl/callout:flex-row-reverse">
       {children}
     </div>
   </aside>
@@ -108,8 +102,8 @@ const CalloutButtons = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "pt-//4 mt-auto flex flex-wrap gap-4 max-sm:flex-col",
-      "*:w-full *:text-center sm:*:w-fit", // Button styling
+      "mt-auto flex flex-wrap gap-4 @max-md/content:flex-col",
+      "**:w-full **:text-center @md/content:*:w-fit", // Button styling
       className
     )}
     {...props}

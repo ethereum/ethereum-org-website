@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "locale": "es",
+  "translatedAt": "2026-06-17T21:35:25.871Z",
+  "englishManifestHash": "2453c5ec5ba3",
+  "placeholderOrder": [
+    "LINK-6e2c85",
+    "LINK-cd977e",
+    "LINK-a21a82",
+    "LINK-1baecb",
+    "LINK-2655ce",
+    "LINK-5b5d4e",
+    "LINK-9e73d1",
+    "LINK-56d3dc",
+    "LINK-4c3a70",
+    "LINK-656e6f",
+    "LINK-964445",
+    "LINK-1ebaee",
+    "LINK-b522ab",
+    "LINK-8f1f3a",
+    "LINK-f6ae0c",
+    "LINK-97a89d",
+    "LINK-110521"
+  ],
+  "placeholderMap": {
+    "LINK-6e2c85": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#sybil-attack"
+      }
+    },
+    "LINK-cd977e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/intro-to-ethereum/"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-1baecb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/"
+      }
+    },
+    "LINK-2655ce": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-5b5d4e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/gasper/"
+      }
+    },
+    "LINK-9e73d1": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/abs/1710.09437"
+      }
+    },
+    "LINK-56d3dc": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/abs/2003.03052"
+      }
+    },
+    "LINK-4c3a70": {
+      "type": "link",
+      "values": {
+        "url": "https://academy.binance.com/en/articles/what-is-a-blockchain-consensus-algorithm"
+      }
+    },
+    "LINK-656e6f": {
+      "type": "link",
+      "values": {
+        "url": "https://blockonomi.com/nakamoto-consensus/"
+      }
+    },
+    "LINK-964445": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d"
+      }
+    },
+    "LINK-1ebaee": {
+      "type": "link",
+      "values": {
+        "url": "https://eprint.iacr.org/2016/555.pdf"
+      }
+    },
+    "LINK-b522ab": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Byzantine_fault"
+      }
+    },
+    "LINK-8f1f3a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/"
+      }
+    },
+    "LINK-f6ae0c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/mining/"
+      }
+    },
+    "LINK-97a89d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-110521": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/poa/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T21:35:25.871Z",
+      "status": "success"
+    }
+  }
+}

@@ -1,0 +1,341 @@
+{
+  "version": 1,
+  "locale": "tr",
+  "translatedAt": "2026-06-16T22:03:55.779Z",
+  "englishManifestHash": "44acdbf15125",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-fba412",
+    "LINK-2655ce",
+    "LINK-d28038",
+    "LINK-e550fe",
+    "LINK-4cc558",
+    "CODE-1f97d6",
+    "CODE-df7e70",
+    "CODE-fc314b",
+    "CODE-fc314b",
+    "CODE-6b23c0",
+    "CODE-df7e70",
+    "CODE-fc314b",
+    "CODE-df7e70",
+    "CODE-6b23c0",
+    "CODE-3f39d5",
+    "CODE-df7e70",
+    "CODE-3f39d5",
+    "CODE-6b23c0",
+    "CODE-3f39d5",
+    "CODE-fc314b",
+    "CODE-6b23c0",
+    "LINK-e002d6",
+    "LINK-2c970f",
+    "LINK-4cc558",
+    "LINK-ac49f8",
+    "LINK-c5bb87",
+    "IMAGE-07e2da",
+    "LINK-89b3ff",
+    "LINK-5c3293",
+    "LINK-f1c862",
+    "LINK-d7dcbf",
+    "CODE-559aea",
+    "CODE-df7e70",
+    "CODE-559aea",
+    "CODE-df7e70",
+    "CODE-df7e70",
+    "CODE-559aea",
+    "LINK-b431d8",
+    "LINK-fdbfe3",
+    "LINK-ea3162",
+    "CODE-1b16b1",
+    "LINK-929b76",
+    "LINK-5168df",
+    "LINK-25539f",
+    "LINK-52c874",
+    "LINK-79d48d",
+    "LINK-116a4a",
+    "LINK-d62c25",
+    "LINK-aaac3c",
+    "LINK-66de8a",
+    "LINK-e4d218",
+    "LINK-f94623",
+    "LINK-a7168d",
+    "LINK-90516a",
+    "LINK-2c5b96",
+    "LINK-c0e929",
+    "LINK-caa3ca",
+    "LINK-cf5ca3",
+    "LINK-b1035e",
+    "LINK-4c06a2"
+  ],
+  "placeholderMap": {
+    "CODE-df7e70": {
+      "type": "inline-code",
+      "values": {
+        "content": "B"
+      }
+    },
+    "CODE-1f97d6": {
+      "type": "inline-code",
+      "values": {
+        "content": "n+1"
+      }
+    },
+    "CODE-fc314b": {
+      "type": "inline-code",
+      "values": {
+        "content": "n+2"
+      }
+    },
+    "CODE-6b23c0": {
+      "type": "inline-code",
+      "values": {
+        "content": "C"
+      }
+    },
+    "CODE-3f39d5": {
+      "type": "inline-code",
+      "values": {
+        "content": "D"
+      }
+    },
+    "CODE-559aea": {
+      "type": "inline-code",
+      "values": {
+        "content": "A"
+      }
+    },
+    "CODE-1b16b1": {
+      "type": "inline-code",
+      "values": {
+        "content": "n"
+      }
+    },
+    "IMAGE-07e2da": {
+      "type": "image",
+      "values": {
+        "path": "reorg-schematic.png"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-fba412": {
+      "type": "link",
+      "values": {
+        "url": "https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs"
+      }
+    },
+    "LINK-2655ce": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-d28038": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/rewards-and-penalties"
+      }
+    },
+    "LINK-e550fe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/gasper"
+      }
+    },
+    "LINK-4cc558": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/pdf/2102.02247.pdf"
+      }
+    },
+    "LINK-2c970f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=6vzXwwk12ZE"
+      }
+    },
+    "LINK-e002d6": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/plgVdz-ORe-fGjK06BZ_3A#Fork-choice-by-block-slot-pair"
+      }
+    },
+    "LINK-ac49f8": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/pdf/2009.04987.pdf"
+      }
+    },
+    "LINK-c5bb87": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/abs/2110.10086#"
+      }
+    },
+    "LINK-89b3ff": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/pull/2730"
+      }
+    },
+    "LINK-5c3293": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/prevention-of-bouncing-attack-on-ffg/6114"
+      }
+    },
+    "LINK-f1c862": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/change-fork-choice-rule-to-mitigate-balancing-and-reorging-attacks/11127"
+      }
+    },
+    "LINK-d7dcbf": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/balancing-attack-lmd-edition/11853"
+      }
+    },
+    "LINK-b431d8": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/pull/2845"
+      }
+    },
+    "LINK-fdbfe3": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/avalanche-attack-on-proof-of-stake-ghost/11854/3"
+      }
+    },
+    "LINK-ea3162": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/pdf/2203.01315.pdf"
+      }
+    },
+    "LINK-929b76": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739"
+      }
+    },
+    "LINK-5168df": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@vbuterin/single_slot_finality"
+      }
+    },
+    "LINK-25539f": {
+      "type": "link",
+      "values": {
+        "url": "https://econcs.pku.edu.cn/wine2020/wine2020/Workshop/GTiB20_paper_8.pdf"
+      }
+    },
+    "LINK-52c874": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity"
+      }
+    },
+    "LINK-79d48d": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/secret-non-single-leader-election/11789"
+      }
+    },
+    "LINK-116a4a": {
+      "type": "link",
+      "values": {
+        "url": "https://youtu.be/1m12zgJ42dI?t=1712"
+      }
+    },
+    "LINK-d62c25": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/timeliness-detectors-and-51-attack-recovery-in-blockchains/6925"
+      }
+    },
+    "LINK-aaac3c": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/responding-to-51-attacks-in-casper-ffg/6363"
+      }
+    },
+    "LINK-66de8a": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/skylar_eth/status/1551798684727508992?s=20&t=oHZ1xv8QZdOgAXhxZKtHEw"
+      }
+    },
+    "LINK-e4d218": {
+      "type": "link",
+      "values": {
+        "url": "/ethereum-forks/#dao-fork-summary"
+      }
+    },
+    "LINK-f94623": {
+      "type": "link",
+      "values": {
+        "url": "/ethereum-forks/#tangerine-whistle"
+      }
+    },
+    "LINK-a7168d": {
+      "type": "link",
+      "values": {
+        "url": "https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs"
+      }
+    },
+    "LINK-90516a": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2016/05/09/on-settlement-finality"
+      }
+    },
+    "LINK-2c5b96": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/abs/2003.03052"
+      }
+    },
+    "LINK-c0e929": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/abs/1710.09437"
+      }
+    },
+    "LINK-caa3ca": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/pdf/2003.03052.pdf"
+      }
+    },
+    "LINK-cf5ca3": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/pull/2730"
+      }
+    },
+    "LINK-b1035e": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/prevention-of-bouncing-attack-on-ffg/6114"
+      }
+    },
+    "LINK-4c06a2": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/secret-non-single-leader-election/11789"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T22:03:55.779Z",
+      "status": "success"
+    }
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-values.json",
+  "generatedAt": "2026-07-29T05:46:40.323Z",
+  "rootHash": "4658c7c4438d",
+  "tree": {
+    "contentHash": "8f96e0618263",
+    "anchorHash": "fd48e0db3f90",
+    "children": {
+      "page-values-meta-title": {
+        "contentHash": "b3bb96be5919",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-meta-description": {
+        "contentHash": "f6d622cfebee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-hero-header": {
+        "contentHash": "b3bb96be5919",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-hero-description": {
+        "contentHash": "f6d622cfebee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-cost-title": {
+        "contentHash": "329f8ab59975",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-cost-description": {
+        "contentHash": "c259eda20bf3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-cost-inevitable-strong": {
+        "contentHash": "aa467d6dc062",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-cost-inevitable-continued": {
+        "contentHash": "b8e5e1430110",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-card-privacy-title": {
+        "contentHash": "54a57c3147c4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-card-privacy-description": {
+        "contentHash": "4c75afd7ee5a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-card-privacy-cta": {
+        "contentHash": "d075380f5776",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-card-open-source-title": {
+        "contentHash": "fdb627efb86b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-card-open-source-description": {
+        "contentHash": "849361b2d912",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-card-censorship-resistance-title": {
+        "contentHash": "236f3aafc904",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-card-censorship-resistance-description": {
+        "contentHash": "c0b06c255e71",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-card-security-title": {
+        "contentHash": "8f6fb4eb7f42",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-card-security-description": {
+        "contentHash": "a529498f1c01",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-internet-title": {
+        "contentHash": "3f9c8f8c2e4e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-internet-p1": {
+        "contentHash": "6c58cac9c15a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-internet-p2": {
+        "contentHash": "79e9758375aa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-internet-list-open-code-strong": {
+        "contentHash": "67e096afc29d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-internet-list-open-code": {
+        "contentHash": "e288914b78fd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-internet-list-privacy-strong": {
+        "contentHash": "54a57c3147c4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-internet-list-privacy": {
+        "contentHash": "7a1b266acc53",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-internet-list-censorship-strong": {
+        "contentHash": "cae4d9818fc9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-internet-list-censorship": {
+        "contentHash": "c6fba5999f64",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-internet-list-security-strong": {
+        "contentHash": "8f6fb4eb7f42",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-internet-list-security": {
+        "contentHash": "8c18d5b23a9e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-internet-p3": {
+        "contentHash": "eb492b131cd7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-faq-title": {
+        "contentHash": "a3d458e1bd1e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-faq-image-alt": {
+        "contentHash": "b7dd241fb873",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-faq-1-title": {
+        "contentHash": "12786c53ec2d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-faq-1-p1": {
+        "contentHash": "93493de9dfb3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-faq-2-title": {
+        "contentHash": "533a7720e38a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-faq-2-p1": {
+        "contentHash": "e2b0a9a25511",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-faq-3-title": {
+        "contentHash": "a6bcb99dd285",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-faq-3-p1": {
+        "contentHash": "da80e34b409a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-faq-4-title": {
+        "contentHash": "fec864d58822",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-faq-4-p1": {
+        "contentHash": "da991b384efa",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-values-meta-title",
+      "page-values-meta-description",
+      "page-values-hero-header",
+      "page-values-hero-description",
+      "page-values-cost-title",
+      "page-values-cost-description",
+      "page-values-cost-inevitable-strong",
+      "page-values-cost-inevitable-continued",
+      "page-values-card-privacy-title",
+      "page-values-card-privacy-description",
+      "page-values-card-privacy-cta",
+      "page-values-card-open-source-title",
+      "page-values-card-open-source-description",
+      "page-values-card-censorship-resistance-title",
+      "page-values-card-censorship-resistance-description",
+      "page-values-card-security-title",
+      "page-values-card-security-description",
+      "page-values-internet-title",
+      "page-values-internet-p1",
+      "page-values-internet-p2",
+      "page-values-internet-list-open-code-strong",
+      "page-values-internet-list-open-code",
+      "page-values-internet-list-privacy-strong",
+      "page-values-internet-list-privacy",
+      "page-values-internet-list-censorship-strong",
+      "page-values-internet-list-censorship",
+      "page-values-internet-list-security-strong",
+      "page-values-internet-list-security",
+      "page-values-internet-p3",
+      "page-values-faq-title",
+      "page-values-faq-image-alt",
+      "page-values-faq-1-title",
+      "page-values-faq-1-p1",
+      "page-values-faq-2-title",
+      "page-values-faq-2-p1",
+      "page-values-faq-3-title",
+      "page-values-faq-3-p1",
+      "page-values-faq-4-title",
+      "page-values-faq-4-p1"
+    ]
+  },
+  "sourceCommitSha": "bff6b26a8b30b949a9a730f3427af6918af7bb68"
+}

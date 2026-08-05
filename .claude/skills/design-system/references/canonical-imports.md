@@ -23,6 +23,7 @@ import {
 The canonical card primitive. Composable parts. If `href` is provided, the card auto-wraps in `BaseLink` and propagates a `group/link` class so descendant text can react to card-level hover.
 
 `CardBanner` props worth knowing:
+
 - `background`: `"accent-a" | "accent-b" | "accent-c" | "primary" | "body" | "none"` (default `body`)
 - `size`: `"full" | "lg" | "base" | "sm" | "thumbnail-lg" | "thumbnail"` (default `base`)
 - `fit`: `"cover" | "contain"` (default `cover`)
@@ -37,6 +38,16 @@ The `<Card>` MDX shortcode (registered in `MdComponents`) is backed by `@/compon
 ### Domain-specific cards exist (`AppCard`, `EthPriceCard`, etc.)
 
 These are feature components. Don't reuse them outside their domain.
+
+### Use `@/components/ui/grid` to lay out a collection of cards/items
+
+```tsx
+import { Grid } from "@/components/ui/grid"
+```
+
+`<Grid columns={N}>` instead of hand-rolling `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3`. Renders at most `columns` columns and folds down responsively; tune the per-item min width with `size` and switch `auto-fill`→`auto-fit` with `fit`. See `components.md` for the variant matrix. (The raw `grid-cols-auto-*` utility backs it; the older `grid-cols-fill-*` / `grid-cols-fit-*` classes are legacy.)
+
+Exception: a _fixed_ set of **4 cards** that must reflow **symmetrically** (`4 → 2×2 → 1`, never a lone 3-up row) wants `<Grid balanced={4}>` (a fixed breakpoint ladder that overrides `columns`; `balanced={2}` exists for a fixed pair) or an explicit breakpoint grid — auto-fill would introduce an orphan intermediate row.
 
 ## Modal / Dialog
 
@@ -117,9 +128,9 @@ import InlineLink from "@/components/ui/Link"
 
 // Named exports for specific uses:
 import {
-  BaseLink,        // No visited styling. Use inside LinkOverlay or as ButtonLink's asChild slot.
-  LinkWithArrow,   // Explicit CTA arrow. Reserved for unique cases where the arrow is part of the design intent.
-  ExternalLinkIcon // Just the icon component (rare).
+  BaseLink, // No visited styling. Use inside LinkOverlay or as ButtonLink's asChild slot.
+  LinkWithArrow, // Explicit CTA arrow. Reserved for unique cases where the arrow is part of the design intent.
+  ExternalLinkIcon, // Just the icon component (rare).
 } from "@/components/ui/Link"
 ```
 
@@ -144,7 +155,9 @@ For when an entire card should be clickable but contains other interactive eleme
       <BaseLink href="/x">Title</BaseLink>
     </LinkOverlay>
   </h3>
-  <p>Other content; the LinkOverlay's :before pseudo covers the whole LinkBox.</p>
+  <p>
+    Other content; the LinkOverlay's :before pseudo covers the whole LinkBox.
+  </p>
 </LinkBox>
 ```
 
@@ -153,15 +166,16 @@ If you use `LinkBox` without `LinkOverlay` somewhere inside, the whole-card-clic
 ## Heroes
 
 ```tsx
-import { HomeHero, HubHero, MdxHero, PageHero } from "@/components/Hero"
+import { HomeHero, HubHero, PageHero } from "@/components/Hero"
 ```
 
 | Hero | Use case |
 |---|---|
-| `PageHero` | The workhorse for most internal pages. 2-column with image, breadcrumb (or `header` eyebrow), and up to two buttons -- **or** text-only when you omit `heroImg`. |
+| `PageHero` | The workhorse for most internal pages. 2-column with breadcrumbs, an optional `eyebrow`, an aside (`heroImg` **or** `heroComponent`), and up to two buttons -- **or** text-only when you pass neither aside. With `variant="no-divider"` and no aside/`description`, it's the minimal breadcrumb + h1 article hero (the `StaticLayout` default). |
 | `HubHero` | Full-bleed hero image with overlay text card. |
 | `HomeHero` | Homepage only. Async server component. |
-| `MdxHero` | Minimal: breadcrumb + h1. For long-form articles. |
+
+> The former `MdxHero` (minimal breadcrumb + h1 for long-form articles) was removed. Use `PageHero` text-only with `variant="no-divider"` instead.
 
 ### `PageHero` props
 
@@ -171,7 +185,7 @@ import { HomeHero, HubHero, MdxHero, PageHero } from "@/components/Hero"
 import { PageHero } from "@/components/Hero"
 ```
 
-Pass `breadcrumbs` **or** `header` (mutually exclusive eyebrow slot), plus `heroImg` (optional -- omit for text-only), `title`, `description`, `buttons` (up to two), and `variant`.
+Pass `breadcrumbs` (a `{ slug }` object or a custom `<Breadcrumb>` element), an optional `eyebrow` (`ReactNode` above the title), an optional aside -- `heroImg` **or** `heroComponent`, mutually exclusive (omit both for text-only) -- plus `title`, `description`, `buttons` (up to two), and `variant`. `title` is always the `<h1>` (there is no `header` prop).
 
 ## Banners / Callouts / Alerts
 
@@ -183,10 +197,10 @@ import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"
 
 One primitive covers both shapes via `variant`:
 
-| Use case | Variant |
-|---|---|
-| In-prose notice | `info` `error` `success` `warning` `update` |
-| Full-bleed top-of-page ribbon (white-on-primary) | `banner` |
+| Use case                                         | Variant                                     |
+| ------------------------------------------------ | ------------------------------------------- |
+| In-prose notice                                  | `info` `error` `success` `warning` `update` |
+| Full-bleed top-of-page ribbon (white-on-primary) | `banner`                                    |
 
 ```tsx
 // Top-of-page ribbon:
@@ -227,12 +241,7 @@ import Callout, {
 Server-renderable, takes literal `title` / `description` strings (call site resolves intl). Optional `image` banner (overhangs the gradient card); omit for a content-only callout. `variant`: `base` (default) | `sm`. Children render as buttons via `CalloutButtons`.
 
 ```tsx
-<Callout
-  image={someImage}
-  alt="..."
-  title={t("...")}
-  description={t("...")}
->
+<Callout image={someImage} alt="..." title={t("...")} description={t("...")}>
   <ButtonLink href="/...">{t("...")}</ButtonLink>
 </Callout>
 ```
@@ -264,13 +273,7 @@ URL-fragment-driven section navigation. Uses `useActiveHash` to highlight the cu
 ## Layout primitives
 
 ```tsx
-import {
-  Center,
-  Flex,
-  HStack,
-  Stack,
-  VStack,
-} from "@/components/ui/flex"
+import { Center, Flex, HStack, Stack, VStack } from "@/components/ui/flex"
 ```
 
 `Stack` (default `flex-col gap-2`) supports a `separator` prop that clones a separator element between children. Use these instead of writing `flex flex-col gap-2` everywhere.
@@ -278,7 +281,12 @@ import {
 ## Avatars
 
 ```tsx
-import { Avatar, AvatarImage, AvatarFallback, AvatarGroup } from "@/components/ui/avatar"
+import {
+  Avatar,
+  AvatarImage,
+  AvatarFallback,
+  AvatarGroup,
+} from "@/components/ui/avatar"
 ```
 
 Don't inline a `<div className="rounded-full">` for a user avatar -- use `AvatarFallback`.
@@ -287,14 +295,22 @@ Don't inline a `<div className="rounded-full">` for a user avatar -- use `Avatar
 
 ```tsx
 import { Tag, TagButton } from "@/components/ui/tag"
+import TagFilter from "@/components/ui/tag-filter"
 ```
 
-Big variant matrix: `status` × `variant` × `size`. See `references/components.md` for the full set.
+Big variant matrix: `status` × `variant` × `size`. See `references/components.md` for the full set. `TagFilter` is the controlled multi-select chip filter for tag-filtered lists -- prefer it over a hand-rolled `TagButton` row.
 
 ## Tables
 
 ```tsx
-import { Table, TableHeader, TableBody, TableRow, TableCell, TableHead } from "@/components/ui/table"
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableRow,
+  TableCell,
+  TableHead,
+} from "@/components/ui/table"
 ```
 
 Variants: `simple | minimal | minimal-striped | simple-striped | product | highlight-first-column`.

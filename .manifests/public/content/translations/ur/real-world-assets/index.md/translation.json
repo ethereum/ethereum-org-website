@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "locale": "ur",
+  "translatedAt": "2026-06-17T01:10:32.032Z",
+  "englishManifestHash": "85d63b08d30e",
+  "placeholderOrder": [
+    "LINK-f8fc74",
+    "LINK-757114",
+    "COMPONENT-23ab09",
+    "COMPONENT-0e503d",
+    "COMPONENT-8c7723",
+    "COMPONENT-bde9d7",
+    "COMPONENT-85e0ed",
+    "COMPONENT-197b0a",
+    "LINK-b3b17c",
+    "LINK-96590f",
+    "LINK-b245c7",
+    "LINK-657468",
+    "LINK-d434b0",
+    "LINK-3a6c71",
+    "LINK-d8b475",
+    "LINK-ea9d1e",
+    "LINK-f0e982",
+    "LINK-f50108",
+    "LINK-22ef67",
+    "LINK-1207a4",
+    "LINK-e6af14",
+    "LINK-76dfa4",
+    "LINK-aeb5fe"
+  ],
+  "placeholderMap": {
+    "COMPONENT-23ab09": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": ":house_buildings:"
+      }
+    },
+    "COMPONENT-0e503d": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": "🛒"
+      }
+    },
+    "COMPONENT-8c7723": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": "🌏"
+      }
+    },
+    "COMPONENT-bde9d7": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": "🖼️"
+      }
+    },
+    "COMPONENT-85e0ed": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": "💰"
+      }
+    },
+    "COMPONENT-197b0a": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": "👩‍💻"
+      }
+    },
+    "LINK-f8fc74": {
+      "type": "link",
+      "values": {
+        "url": "https://www.paxos.com/"
+      }
+    },
+    "LINK-757114": {
+      "type": "link",
+      "values": {
+        "url": "https://gold.tether.to/"
+      }
+    },
+    "LINK-b3b17c": {
+      "type": "link",
+      "values": {
+        "url": "https://realt.co/"
+      }
+    },
+    "LINK-96590f": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/labsgroupio"
+      }
+    },
+    "LINK-b245c7": {
+      "type": "link",
+      "values": {
+        "url": "https://securitize.io/"
+      }
+    },
+    "LINK-657468": {
+      "type": "link",
+      "values": {
+        "url": "https://www.masterworks.com/"
+      }
+    },
+    "LINK-d434b0": {
+      "type": "link",
+      "values": {
+        "url": "https://www.artory.com/"
+      }
+    },
+    "LINK-3a6c71": {
+      "type": "link",
+      "values": {
+        "url": "https://courtyard.io/"
+      }
+    },
+    "LINK-d8b475": {
+      "type": "link",
+      "values": {
+        "url": "/smart-contracts/"
+      }
+    },
+    "LINK-ea9d1e": {
+      "type": "link",
+      "values": {
+        "url": "/nft/"
+      }
+    },
+    "LINK-f0e982": {
+      "type": "link",
+      "values": {
+        "url": "https://www.britannica.com/money/real-world-asset-tokenization"
+      }
+    },
+    "LINK-f50108": {
+      "type": "link",
+      "values": {
+        "url": "https://www.weforum.org/stories/2024/12/tokenization-blockchain-assets-finance/"
+      }
+    },
+    "LINK-22ef67": {
+      "type": "link",
+      "values": {
+        "url": "https://www.forbes.com/sites/irinaheaver/2024/03/14/what-crypto-investors-need-to-know-about-tokenizing-real-world-assets/"
+      }
+    },
+    "LINK-1207a4": {
+      "type": "link",
+      "values": {
+        "url": "https://www.britannica.com/money/how-smart-contracts-work"
+      }
+    },
+    "LINK-e6af14": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/coinmonks/how-tokenized-real-world-assets-are-transforming-defi-4e040f28732a"
+      }
+    },
+    "LINK-76dfa4": {
+      "type": "link",
+      "values": {
+        "url": "https://www.bitdegree.org/crypto/tutorials/what-is-rwa-in-crypto"
+      }
+    },
+    "LINK-aeb5fe": {
+      "type": "link",
+      "values": {
+        "url": "https://www.forbes.com/digital-assets/categories/real-world-assets-rwa/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T01:10:32.032Z",
+      "status": "success"
+    }
+  }
+}

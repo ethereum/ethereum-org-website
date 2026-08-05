@@ -1,18 +1,16 @@
 ---
-title: Common misconceptions about Ethereum
-description: Clearing up the most common misunderstandings about how Ethereum works.
+title: 关于以太坊的常见误解
+description: 澄清关于以太坊运作方式的最常见误解。
 lang: zh
 ---
 
-# Common misconceptions about Ethereum {#misconceptions}
-
 ## 以太坊是一家公司吗？ {#not-a-company}
 
-Ethereum is open-source, decentralized technology maintained by thousands of contributors worldwide. There is no company called "Ethereum" that manages accounts, holds funds, or provides customer support.
+以太坊是由全球数千名贡献者维护的开源、去中心化技术。没有一家名为“以太坊”的公司来管理账户、持有资金或提供客户支持。
 
-The [Ethereum Foundation](https://ethereum.foundation/) is a non-profit organization that supports Ethereum's development, but it does not own or control the network. No single entity does.
+[以太坊基金会](https://ethereum.foundation/)是一个支持以太坊发展的非营利组织，但它并不拥有或控制该网络。没有任何单一实体拥有或控制它。
 
-**[ethereum.org](/)** is a community-run educational resource. It is not an exchange, wallet, or financial institution. It does not hold any user funds and cannot access any accounts.
+**[ethereum.org](/)** 是一个由社区运营的教育资源。它不是交易所、钱包或金融机构。它不持有任何用户资金，也无法访问任何账户。
 
 <DocLink href="/what-is-ethereum/">
   什么是以太坊？
@@ -20,54 +18,54 @@ The [Ethereum Foundation](https://ethereum.foundation/) is a non-profit organiza
 
 ## 有人可以恢复或冻结我的资金吗？ {#no-fund-access}
 
-Unlike a bank, there is no central authority on Ethereum that can freeze, seize, or recover funds. The person holding the private keys (or seed phrase) has full and sole control over a wallet.
+与银行不同，以太坊上没有可以冻结、没收或恢复资金的中央机构。持有私钥（或助记词）的人对钱包拥有完全且唯一的控制权。
 
-This means:
+这意味着：
 
-- **No one can recover funds** you sent to the wrong address
-- **No one can reverse** a transaction after it is confirmed
-- **No one can freeze** your wallet or block your transactions
-- **No one can reset your password** if you lose your seed phrase
+- **没有人能恢复**你发送到错误地址的资金
+- **没有人能撤销**已确认的交易
+- **没有人能冻结**你的钱包或阻止你的交易
+- 如果你丢失了助记词，**没有人能重置你的密码**
 
-This is why protecting your seed phrase is critical. It is the only way to access your wallet. If it is lost or stolen, there is no recovery option.
+这就是为什么保护你的助记词至关重要。这是访问你钱包的唯一方式。如果它丢失或被盗，没有任何恢复选项。
 
 <DocLink href="/security/">
-  以太坊安全和预防诈骗
+  以太坊安全与防骗
 </DocLink>
 
-## 我还能挖以太坊吗？ {#no-mining}
+## 我还能在以太坊上挖矿吗？ {#no-mining}
 
-Ethereum switched from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glossary/#pos) during [The Merge](/roadmap/merge/) in September 2022. Mining is no longer possible on Ethereum.
+以太坊在 2022 年 9 月的[合并](/roadmap/merge/)期间，从[工作量证明 (PoW)](/glossary/#pow)切换到了[权益证明 (PoS)](/glossary/#pos)。在以太坊上挖矿已不再可能。
 
-The network is now secured by validators who [stake](/glossary/#staking) ETH. Anyone can participate:
+该网络现在由[质押](/glossary/#staking) ETH 的验证者来保障安全。任何人都可以参与：
 
-- **Solo staking:** Run your own validator with 32 ETH—[learn more](/staking/solo/)
-- **Staking as a service:** Delegate node operation while keeping your keys—[learn more](/staking/saas/)
-- **Pooled staking:** Stake with less than 32 ETH by joining a pool—[learn more](/staking/pools/)
+- **独立质押：** 使用 32 个 ETH 运行你自己的验证者——[了解更多](/staking/solo/)
+- **质押即服务：** 委托节点运营，同时保留你的密钥——[了解更多](/staking/saas/)
+- **联合质押：** 通过加入质押池，使用少于 32 个 ETH 进行质押——[了解更多](/staking/pools/)
 
 <DocLink href="/staking/">
-  Learn more about staking
+  了解更多关于质押的信息
 </DocLink>
 
-## 以太坊有支持团队吗？ {#no-support-team}
+## 有以太坊支持团队吗？ {#no-support-team}
 
-Looking for "official Ethereum support" is similar to looking for "official internet support." This of course doesn't exist, but depending on your issue you may be able to seek out support from your internet service provider, your router hardware manufacturer, or one of the companies behind the device, app or website you're using.
+寻找“官方以太坊支持”就像寻找“官方互联网支持”一样。这当然是不存在的，但根据你的问题，你也许可以向你的互联网服务提供商、路由器硬件制造商，或者你正在使用的设备、应用程序或网站背后的公司寻求支持。
 
-Ethereum is similar. There is no company, support team, or help desk behind Ethereum as a whole, but depending on the issue you may find help by reaching out to your _wallet provider_, _staking service_, _exchange_, _financial institution_ or the _team maintaining an app_ you're using.
+以太坊也是如此。整个以太坊背后没有公司、支持团队或帮助台，但根据具体问题，你可以通过联系你的_钱包提供商_、_质押服务_、_交易所_、_金融机构_或_你正在使用的应用程序的维护团队_来寻求帮助。
 
-Since Ethereum is publicly transparent by default, you may also find [block explorers](/developers/docs/data-and-analytics/block-explorers/), [analytics tools](/developers/tools/analytics/), and other [online investigation resources](/community/support/scams/#analyze) useful in looking into a problem directly.
+由于以太坊默认是公开透明的，你可能还会发现[区块浏览器](/developers/docs/data-and-analytics/block-explorers/)、[分析工具](/developers/tools/analytics/)以及其他[在线调查资源](/community/support/scams/#analyze)对于直接调查问题很有用。
 
-That said, no one from Ethereum or ethereum.org will ever:
+话虽如此，以太坊或 ethereum.org 的任何人都绝不会：
 
-- Contact you via direct message
-- Ask for your seed phrase or private keys
-- Ask you to send ETH to verify your wallet
-- Offer to help you recover funds for a fee
+- 通过私信联系你
+- 索要你的助记词或私钥
+- 要求你发送 ETH 以验证你的钱包
+- 提出收费帮你恢复资金
 
-**Anyone doing any of the above is trying to scam you.**
+**任何做上述任何事情的人都是在试图诈骗你。**
 
-If you need help, the real communities that can assist are listed on the [support page](/community/support/). These are volunteer-run, open communities—not official support channels.
+如果你需要帮助，能够提供协助的真实社区已列在[支持页面](/community/support/)上。这些是由志愿者运营的开放社区——而非官方支持渠道。
 
 <DocLink href="/security/">
-  以太坊安全和预防诈骗
+  以太坊安全与防骗
 </DocLink>

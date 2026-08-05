@@ -1,5 +1,5 @@
 {
-  "page-what-is-ethereum-meta-title": "이더리움이란 무엇인가요? (완벽 가이드) | ethereum.org",
+  "page-what-is-ethereum-meta-title": "이더리움이란 무엇인가요? (완벽 가이드)",
   "page-what-is-ethereum-meta-description": "이더리움이 무엇인지, 어떻게 작동하는지, 어떤 역할을 하는지, 그리고 어떻게 사용하거나 구축을 시작할 수 있는지에 대한 전체적인 개요입니다. 알기 쉽게 설명해 드립니다.",
   "page-what-is-ethereum-title": "이더리움이란 무엇인가요?",
   "page-what-is-ethereum-hero-description-1": "이더리움은 암호화폐 이더(ETH)로 구동되는 탈중앙화 블록체인 네트워크이자 소프트웨어 개발 플랫폼입니다.",
@@ -156,7 +156,7 @@
   "page-what-is-ethereum-roadmap-title": "2026년 이더리움 로드맵은 무엇인가요?",
   "page-what-is-ethereum-roadmap-intro-1": "이더리움은 고정된 로드맵을 따르지 않습니다. 공유된 비전을 따릅니다.",
   "page-what-is-ethereum-roadmap-intro-2": "네트워크 업그레이드는 EIP로 이루어지며 전 세계 기여자들이 공개적으로 개발합니다. 무슨 일이 일어날지 결정하는 중앙 팀은 없으며, 단지 사람들이 사용자의 요구에 기반하여 유용하다고 믿는 것을 구축할 뿐입니다.",
-  "page-what-is-ethereum-roadmap-intro-3": "푸사카는 2025년 12월에 출시된 가장 최근의 업그레이드입니다. 더 효율적인 레이어 2 (l2) 데이터 가용성을 위해 PeerDAS를 도입하고 기본 가스 한도를 약 6,000만으로 높였습니다. 2026년을 내다보면, 글램스테르담이 개발 중이며 2026년 상반기에 예상됩니다.",
+  "page-what-is-ethereum-roadmap-intro-3": "푸사카는 2025년 12월에 출시된 가장 최근의 업그레이드입니다. 더 효율적인 레이어 2 (l2) 데이터 가용성을 위해 PeerDAS를 도입했으며, 기본 가스 한도를 약 6,000만으로 상향했습니다. 2026년을 내다보면, 글램스테르담이 개발 중이며 2026년 하반기에 출시될 예정입니다.",
   "page-what-is-ethereum-roadmap-priorities-intro": "<a>앞으로의</a> 이더리움 우선순위는 다음과 같습니다:",
   "page-what-is-ethereum-roadmap-priority-1": "핵심 프로토콜과 레이어 2 (l2)를 모두에게 더 빠르고 저렴하게 만들기",
   "page-what-is-ethereum-roadmap-priority-2": "사용자와 개발자의 경험 개선하기",

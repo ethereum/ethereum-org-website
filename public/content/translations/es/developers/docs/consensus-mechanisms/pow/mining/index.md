@@ -1,5 +1,5 @@
 ---
-title: Minado
+title: "Minería"
 description: "Una explicación de cómo funcionaba la minería en Ethereum."
 lang: es
 ---
@@ -8,79 +8,79 @@ lang: es
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-La prueba de trabajo ya no es la base del mecanismo de consenso de Ethereum, lo que significa que la minería se ha desactivado. En lugar de ello, Ethereum está asegurado por validadores que participan en ETH. Puede comenzar hoy mismo a participar en ETH. Descubrá más cosas sobre <a href='/roadmap/merge/'>La Fusión</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>la prueba de participación (PoS)</a> y <a href='/staking/'>la participación</a>. Esta página es para interés histórico solamente.
+La prueba de trabajo (PoW) ya no es la base del mecanismo de consenso de Ethereum, lo que significa que la minería se ha apagado. En su lugar, [Ethereum](/) está protegido por validadores que hacen staking de ETH. Puedes empezar a hacer staking de tus ETH hoy mismo. Lee más sobre <a href='/roadmap/merge/'>La Fusión</a>, la <a href='/developers/docs/consensus-mechanisms/pos/'>prueba de participación (PoS)</a> y el <a href='/staking/'>staking</a>. Esta página es solo de interés histórico.
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ## Requisitos previos {#prerequisites}
 
-Para entender mejor esta página, le recomendamos que primero lea sobre [transacciones](/developers/docs/transactions/), [bloques](/developers/docs/blocks/) y [prueba de trabajo](/developers/docs/consensus-mechanisms/pow/).
+Para entender mejor esta página, te recomendamos que primero leas sobre las [transacciones](/developers/docs/transactions/), los [bloques](/developers/docs/blocks/) y la [prueba de trabajo (PoW)](/developers/docs/consensus-mechanisms/pow/).
 
 ## ¿Qué es la minería de Ethereum? {#what-is-ethereum-mining}
 
-La minería es el proceso de crear un bloque de transacciones que se añadirán a la cadena de bloques de Ethereum en la estructura de prueba de trabajo ahora obsoleta.
+La minería es el proceso de crear un bloque de transacciones para ser añadido a la cadena de bloques de Ethereum en la arquitectura de prueba de trabajo de Ethereum, ahora obsoleta.
 
-La palabra minería tiene su origen en el contexto de la analogía del oro para las criptomonedas. El oro o los metales preciosos son escasos, así como los tókenes digitales, y la única forma de aumentar el volumen total en un sistema de prueba de trabajo es a través de la minería. En la prueba de trabajo de Ethereum, el único modo de emisión era a través de la minería. Sin embargo, a diferencia del oro o los metales preciosos, la minería de Ethereum también fue la manera de proteger la red mediante la creación, comprobación, publicación y propagación de bloques en la cadena de bloques.
+La palabra minería se origina en el contexto de la analogía del oro para las criptomonedas. El oro o los metales preciosos son escasos, al igual que los tokens digitales, y la única forma de aumentar el volumen total en un sistema de prueba de trabajo es a través de la minería. En el Ethereum de prueba de trabajo, el único modo de emisión era a través de la minería. Sin embargo, a diferencia del oro o los metales preciosos, la minería de Ethereum también era la forma de asegurar la red mediante la creación, verificación, publicación y propagación de bloques en la cadena de bloques.
 
-Minar ethereum = Proteger la red
+Minar ether = Asegurar la red
 
-La minería es el alma de la prueba de trabajo. Los mineros de Ethereum (es decir, los ordenadores que ejecutan el software) utilizan su tiempo y su potencia informática para procesar transacciones y producir bloques antes de pasar a la prueba de participación.
+La minería es el elemento vital de cualquier cadena de bloques de prueba de trabajo. Los mineros de Ethereum (computadoras que ejecutan software) utilizaban su tiempo y poder de cómputo para procesar transacciones y producir bloques antes de la transición a la prueba de participación.
 
 ## ¿Por qué existen los mineros? {#why-do-miners-exist}
 
-En sistemas descentralizados como Ethereum, necesitamos cerciorarnos de que todo el mundo está de acuerdo en el orden de las transacciones. Los mineros ayudaron a que esto ocurriera resolviendo rompecabezas de cálculo difíciles para producir bloques, protegiendo de esta manera la red contra ataques.
+En sistemas descentralizados como Ethereum, necesitamos asegurarnos de que todos estén de acuerdo en el orden de las transacciones. Los mineros ayudaban a que esto sucediera resolviendo acertijos computacionalmente difíciles para producir bloques, asegurando la red contra ataques.
 
 [Más sobre la prueba de trabajo](/developers/docs/consensus-mechanisms/pow/)
 
-Cualquiera era capaz de minar en la red Ethereum usando su ordenador. Sin embargo, no todos pueden minar ether (ETH) de forma rentable. En la mayoría de los casos, los mineros tuvieron que comprar hardware de computación dedicado y tener acceso a fuentes de energía baratas. Un ordenador corriente era poco probable que obtuviera suficientes recompensas de bloqueo para cubrir los costes asociados a la minería.
+Anteriormente, cualquiera podía minar en la red Ethereum usando su computadora. Sin embargo, no todos podían minar ether (ETH) de manera rentable. En la mayoría de los casos, los mineros tenían que comprar hardware informático dedicado y tener acceso a fuentes de energía económicas. Era poco probable que una computadora promedio ganara suficientes recompensas de bloque para cubrir los costos asociados de la minería.
 
 ### Costo de la minería {#cost-of-mining}
 
-- Costes potenciales del hardware necesario para construir y mantener una plataforma de minado
-- Coste eléctrico para alimentar la plataforma de minado
-- Si se está minando en grupo, normalmente, los grupos de minado cobran una tarifa porcentual fija por cada bloque generado por el grupo.
-- Coste potencial del equipo para respaldar la plataforma de minado (ventilación, monitoreo de energía, cableado eléctrico, etc.)
+- Costos potenciales del hardware necesario para construir y mantener un equipo de minería
+- Costo eléctrico de alimentar el equipo de minería
+- Si minabas en un pool, estos pools normalmente cobraban una tarifa porcentual fija de cada bloque generado por el pool
+- Costo potencial del equipo para dar soporte al equipo de minería (ventilación, monitoreo de energía, cableado eléctrico, etc.)
 
-Para explorar más a fondo la rentabilidad de la minería, use una calculadora de minería, como la que proporciona [Etherscan](https://etherscan.io/ether-mining-calculator).
+Para explorar más a fondo la rentabilidad de la minería, usa una calculadora de minería, como la que proporciona [Etherscan](https://etherscan.io/ether-mining-calculator).
 
 ## Cómo se minaban las transacciones de Ethereum {#how-ethereum-transactions-were-mined}
 
-A continuación se proporciona una descripción general de cómo se minaron las transacciones en la prueba de trabajo de Ethereum. Puede encontrar una descripción análoga de este proceso para la prueba de participación de Ethereum [aquí](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos).
+A continuación se ofrece una descripción general de cómo se minaban las transacciones en la prueba de trabajo de Ethereum. Se puede encontrar una descripción análoga de este proceso para la prueba de participación de Ethereum [aquí](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos).
 
 1. Un usuario escribe y firma una solicitud de [transacción](/developers/docs/transactions/) con la clave privada de alguna [cuenta](/developers/docs/accounts/).
-2. El usuario transmite la solicitud de transacción a toda la red de Ethereum desde algún [nodo](/developers/docs/nodes-and-clients/).
-3. Al enterarse de la nueva solicitud de la transacción, cada nodo de la red Ethereum agrega la solicitud a sus bases de datos temporales locales (mempool), una lista que incluye todas las solicitudes de transacciones de las que se obtiene información, pero que todavía no se han comprometido a la blockchain de un bloque.
-4. En algún momento, un nodo de minería agrega varias docenas o cientos de solicitudes de transacción en un [bloque](/developers/docs/blocks/) potencial, de manera que se maximicen las [comisiones por transacción](/developers/docs/gas/) que ganan sin dejar de respetar el límite de gas del bloque. A continuación, el nodo de minería debe:
-   1. Verifica la validez de cada solicitud de transacción (es decir, que nadie esté intentando transferir ether desde una cuenta para la que no ha generado una firma, que la solicitud no esté mal formada, etc.) y luego ejecuta el código de la solicitud, alterando el estado de su copia local de la EVM. El minero otorga la comisión por transacción para cada solicitud de transacción a su propia cuenta.
-   2. Comienza el proceso de producción del «certificado de legitimidad» de la prueba de trabajo para el bloque potencial, una vez que todas las solicitudes de transacción en el bloque se han verificado y ejecutado en la copia local de la EVM.
-5. En algún momento en el futuro, un minero finalizará la producción de un certificado para un bloque que incluye nuestra solicitud de transacción específica. A continuación, el minero transmite el bloque completo, que incluye el certificado y una suma de verificación del nuevo estado del EVM mencionado.
-6. Otros nodos obtienen información acerca del nuevo bloque. Los nodos validan el certificado, ejecutan todas las transacciones en el bloque (lo que incluye la transacción originalmente emitida por nuestro usuario) y comprueban que la suma de verificación de su estado nuevo de la EVM después de la ejecución de todas las transacciones coincide con la suma de verificación del estado reclamado por el bloque del minero. Solo entonces estos nodos anexan este bloque a la cola de su blockchain y aceptan el nuevo estado de la EVM como el estado canónico.
-7. Cada nodo elimina todas las transacciones en el nuevo bloque de su memoria local de solicitudes de transacciones insatisfechas.
-8. Los nuevos nodos que se unen a la red descargan todos los bloques de manera secuencia, incluido el bloque que contiene nuestra transacción de interés. Estos nodos inicializan una copia de la EVM local (que se inicia como una EVM de estado en blanco) y, a continuación, atraviesan el proceso de ejecución de cada transacción en cada bloque encima de su copia de la EVM local, verificando así las sumas de comprobación de estado en cada bloque a lo largo del proceso.
+2. El usuario transmite la solicitud de transacción a toda la red Ethereum desde algún [nodo](/developers/docs/nodes-and-clients/).
+3. Al enterarse de la nueva solicitud de transacción, cada nodo de la red Ethereum añade la solicitud a su mempool local, una lista de todas las solicitudes de transacciones de las que han oído hablar y que aún no se han confirmado en la cadena de bloques dentro de un bloque.
+4. En algún momento, un nodo minero agrega varias docenas o cientos de solicitudes de transacciones en un [bloque](/developers/docs/blocks/) potencial, de una manera que maximiza las [tarifas de transacción](/developers/docs/gas/) que ganan mientras se mantienen por debajo del límite de gas del bloque. El nodo minero entonces:
+   1. Verifica la validez de cada solicitud de transacción (es decir, que nadie esté intentando transferir ether de una cuenta para la que no ha producido una firma, que la solicitud no esté mal formada, etc.), y luego ejecuta el código de la solicitud, alterando el estado de su copia local de la EVM. El minero otorga la tarifa de transacción por cada una de estas solicitudes de transacción a su propia cuenta.
+   2. Comienza el proceso de producir el "certificado de legitimidad" de prueba de trabajo para el bloque potencial, una vez que todas las solicitudes de transacciones en el bloque han sido verificadas y ejecutadas en la copia local de la EVM.
+5. Eventualmente, un minero terminará de producir un certificado para un bloque que incluye nuestra solicitud de transacción específica. El minero luego transmite el bloque completado, que incluye el certificado y una suma de comprobación (checksum) del nuevo estado reclamado de la EVM.
+6. Otros nodos se enteran del nuevo bloque. Verifican el certificado, ejecutan todas las transacciones en el bloque ellos mismos (incluyendo la transacción transmitida originalmente por nuestro usuario), y verifican que la suma de comprobación de su nuevo estado de la EVM después de la ejecución de todas las transacciones coincida con la suma de comprobación del estado reclamado por el bloque del minero. Solo entonces estos nodos añaden este bloque al final de su cadena de bloques, y aceptan el nuevo estado de la EVM como el estado canónico.
+7. Cada nodo elimina todas las transacciones en el nuevo bloque de su mempool local de solicitudes de transacciones no cumplidas.
+8. Los nuevos nodos que se unen a la red descargan todos los bloques en secuencia, incluyendo el bloque que contiene nuestra transacción de interés. Inicializan una copia local de la EVM (que comienza como una EVM en estado en blanco), y luego pasan por el proceso de ejecutar cada transacción en cada bloque sobre su copia local de la EVM, verificando las sumas de comprobación del estado en cada bloque a lo largo del camino.
 
-Cada transacción se mina una vez (es decir, se incluye en un nuevo bloque y se propaga por primera vez), pero cada participante la ejecuta y la verifica durante el proceso de anticipar el estado exacto de la EVM. Esto resalta uno de los mantras centrales de la cadena de bloques: **No confíe, verifique**.
+Cada transacción se mina (se incluye en un nuevo bloque y se propaga por primera vez) una vez, pero es ejecutada y verificada por cada participante en el proceso de avanzar el estado canónico de la EVM. Esto resalta uno de los mantras centrales de la cadena de bloques: **No confíes, verifica**.
 
-## Bloques ommer (tío) {#ommer-blocks}
+## Bloques ommer (tíos) {#ommer-blocks}
 
-La minería de bloques en la prueba de trabajo era probabilística, lo que significaba que a veces se publicaban dos bloques válidos simultáneamente debido a la latencia de la red. En este caso, el protocolo tenía que determinar la cadena más larga (y, por tanto, más "válida") y, al mismo tiempo, garantizar la equidad hacia los mineros recompensando parcialmente el bloque válido propuesto no incluido. Esto fomentó una mayor descentralización de la red, ya que los mineros más pequeños, que podrían enfrentarse a una mayor latencia, aún podían generar beneficios a través de las recompensas por bloques [ommer](/glossary/#ommer).
+La minería de bloques en la prueba de trabajo era probabilística, lo que significa que a veces se publicaban dos bloques válidos simultáneamente debido a la latencia de la red. En este caso, el protocolo tenía que determinar la cadena más larga (y por lo tanto más "válida") mientras aseguraba la equidad hacia los mineros recompensando parcialmente el bloque válido propuesto no incluido. Esto fomentaba una mayor descentralización de la red, ya que los mineros más pequeños, que podrían enfrentar una mayor latencia, aún podían generar retornos a través de las recompensas de [bloque ommer](/glossary/#ommer).
 
-«Ommer» es el término de género neutro preferido para referirse al hermano de un bloque padre, aunque algunas veces, se le denomina «tío». **Desde el paso de Ethereum a la prueba de participación, los bloques ommer ya no se minan**, ya que solo se elige un proponente en cada intervalo. Puede ver este cambio consultando el [gráfico histórico](https://ycharts.com/indicators/ethereum_uncle_rate) de los bloques ommer minados.
+El término "ommer" es el término preferido de género neutro para el hermano de un bloque padre, pero a veces también se le llama "tío" (uncle). **Desde el paso de Ethereum a la prueba de participación, los bloques ommer ya no se minan**, ya que solo se elige un proponente en cada slot. Puedes ver este cambio viendo el [gráfico histórico](https://ycharts.com/indicators/ethereum_uncle_rate) de los bloques ommer minados.
 
 ## Una demostración visual {#a-visual-demo}
 
-Observe a Austin mientras le guía por el proceso de minado y la cadena de bloques de la prueba de trabajo.
+Mira a Austin guiarte a través de la minería y la cadena de bloques de prueba de trabajo.
 
-<YouTube id="zcX7OJ-L8XQ" />
+<VideoWatch slug="blockchain-eth-build" />
 
 ## El algoritmo de minería {#mining-algorithm}
 
-La red principal de Ethereum solo ha utilizado un algoritmo de minería: ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/). Ethash fue el sucesor de un algoritmo de I+D original conocido como ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/).
+La red principal de Ethereum solo usó un algoritmo de minería: ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/). Ethash fue el sucesor de un algoritmo original de I+D conocido como ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/).
 
-[Más sobre los algoritmos de minería](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/).
+[Más sobre algoritmos de minería](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/).
 
 ## Temas relacionados {#related-topics}
 
 - [Gas](/developers/docs/gas/)
 - [EVM](/developers/docs/evm/)
-- [Prueba de trabajo](/developers/docs/consensus-mechanisms/pow/)
+- [Prueba de trabajo (PoW)](/developers/docs/consensus-mechanisms/pow/)

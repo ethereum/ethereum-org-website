@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-apps.json",
-  "generatedAt": "2026-05-26T16:34:57.187Z",
-  "rootHash": "cc2207d66e71",
+  "generatedAt": "2026-07-22T22:33:29.376Z",
+  "rootHash": "3cea39a62a75",
   "tree": {
-    "contentHash": "ca58a1193dc6",
-    "anchorHash": "cdc2b392ee16",
+    "contentHash": "8930f6ac3485",
+    "anchorHash": "9c41be841505",
     "children": {
       "page-apps-all-apps": {
         "contentHash": "01bed311e7d0",
@@ -84,7 +84,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-apps-meta-description": {
-        "contentHash": "66f3c4be7e87",
+        "contentHash": "466f0d4ac4dc",
         "anchorHash": "e3b0c44298fc"
       },
       "page-apps-category-defi-name": {
@@ -289,6 +289,24 @@
         "contentHash": "5da04a5d9a6e",
         "anchorHash": "e3b0c44298fc"
       },
+      "page-apps-by-company": {
+        "contentHash": "8ba4913c3918",
+        "anchorHash": "bd2eba3faf1b",
+        "children": {
+          "prose:1": {
+            "contentHash": "a7e2d26e8d15",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "262fb619bef1"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      },
       "page-apps-today": {
         "contentHash": "2b065c7c9ce4",
         "anchorHash": "e3b0c44298fc"
@@ -384,10 +402,11 @@
       "page-apps-info-last-updated",
       "page-apps-gallery-title",
       "page-apps-more-apps-like-this",
+      "page-apps-by-company",
       "page-apps-today",
       "page-apps-one-day-ago",
       "page-apps-days-ago"
     ]
   },
-  "sourceCommitSha": "a8478a15398e05bbd134fb0d64575a708b5b3efd"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-staking-deposit-contract.json",
+  "generatedAt": "2026-06-16T15:53:56.852Z",
+  "rootHash": "c560a0fed615",
+  "tree": {
+    "contentHash": "971e61c52855",
+    "anchorHash": "5b588589798c",
+    "children": {
+      "page-staking-deposit-contract-address": {
+        "contentHash": "47ed4fe49c8e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-address-caption": {
+        "contentHash": "a9436561919b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-address-check-btn": {
+        "contentHash": "8eda0fb708c2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-checkbox1": {
+        "contentHash": "9348492c4cf5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-checkbox2": {
+        "contentHash": "63a7b286c63b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-checkbox3": {
+        "contentHash": "c8bbc7bf71a9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-confirm-address": {
+        "contentHash": "cb7c1c8d478a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-copied": {
+        "contentHash": "4f5c960ed6c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-copy": {
+        "contentHash": "7c4e5224f9d4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-blockexplorer": {
+        "contentHash": "893e77c31fd4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-h2": {
+        "contentHash": "b4c2832cfe43",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-launchpad": {
+        "contentHash": "badad6695aa2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-launchpad-2": {
+        "contentHash": "fb21cc25c4ea",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-meta-desc": {
+        "contentHash": "c31fab1cb1b2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-meta-title": {
+        "contentHash": "3d398a728316",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-read-aloud": {
+        "contentHash": "2bd3048fef8c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-reveal-address-btn": {
+        "contentHash": "0a2622d45340",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-staking": {
+        "contentHash": "84750d91ff35",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-staking-check": {
+        "contentHash": "7395257d8f27",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-staking-check-desc": {
+        "contentHash": "39a315392d05",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-staking-more-link": {
+        "contentHash": "69d6e676fc84",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-stop-reading": {
+        "contentHash": "78be99f18a5c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-subtitle": {
+        "contentHash": "c4273b77a87f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-warning": {
+        "contentHash": "4811b87d8ebf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-warning-2": {
+        "contentHash": "d2b946d6ce3f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-title": {
+        "contentHash": "0d61707a01a6",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-staking-deposit-contract-address",
+      "page-staking-deposit-contract-address-caption",
+      "page-staking-deposit-contract-address-check-btn",
+      "page-staking-deposit-contract-checkbox1",
+      "page-staking-deposit-contract-checkbox2",
+      "page-staking-deposit-contract-checkbox3",
+      "page-staking-deposit-contract-confirm-address",
+      "page-staking-deposit-contract-copied",
+      "page-staking-deposit-contract-copy",
+      "page-staking-deposit-contract-blockexplorer",
+      "page-staking-deposit-contract-h2",
+      "page-staking-deposit-contract-launchpad",
+      "page-staking-deposit-contract-launchpad-2",
+      "page-staking-deposit-contract-meta-desc",
+      "page-staking-deposit-contract-meta-title",
+      "page-staking-deposit-contract-read-aloud",
+      "page-staking-deposit-contract-reveal-address-btn",
+      "page-staking-deposit-contract-staking",
+      "page-staking-deposit-contract-staking-check",
+      "page-staking-deposit-contract-staking-check-desc",
+      "page-staking-deposit-contract-staking-more-link",
+      "page-staking-deposit-contract-stop-reading",
+      "page-staking-deposit-contract-subtitle",
+      "page-staking-deposit-contract-warning",
+      "page-staking-deposit-contract-warning-2",
+      "page-staking-deposit-contract-title"
+    ]
+  },
+  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+}

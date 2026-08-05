@@ -1,5 +1,5 @@
 {
-  "page-what-is-ethereum-meta-title": "イーサリアムとは？ (完全ガイド) | ethereum.org",
+  "page-what-is-ethereum-meta-title": "イーサリアムとは？（完全ガイド）",
   "page-what-is-ethereum-meta-description": "イーサリアムとは何か、その仕組み、何ができるのか、そしてどのように使い始めたり構築したりするのかについての完全な概要。わかりやすい言葉で解説します。",
   "page-what-is-ethereum-title": "イーサリアムとは？",
   "page-what-is-ethereum-hero-description-1": "イーサリアムは、暗号資産イーサ (ETH) を基盤とする、分散型ブロックチェーン・ネットワークおよびソフトウェア開発プラットフォームです。",
@@ -156,7 +156,7 @@
   "page-what-is-ethereum-roadmap-title": "2026年のイーサリアムのロードマップとは何ですか？",
   "page-what-is-ethereum-roadmap-intro-1": "イーサリアムは固定されたロードマップには従いません。共有されたビジョンに従います。",
   "page-what-is-ethereum-roadmap-intro-2": "ネットワークのアップグレードはEIPとして行われ、世界中の貢献者によって公に開発されます。何が起こるかを決定する中央チームは存在せず、ユーザーのニーズに基づいて有用だと信じるものを構築する人々がいるだけです。",
-  "page-what-is-ethereum-roadmap-intro-3": "フサカは2025年12月にローンチされた最新のアップグレードです。より効率的なレイヤー2 (L2)のデータ可用性のためにPeerDASを導入し、デフォルトのガス・リミットを約6,000万に引き上げました。2026年に向けて、グラムステルダムが開発中であり、2026年上半期に予定されています。",
+  "page-what-is-ethereum-roadmap-intro-3": "フサカは2025年12月にローンチされた最新のアップグレードです。より効率的なレイヤー2 (L2)のデータ可用性を実現するためにPeerDASを導入し、デフォルトのガス・リミットを約6,000万に引き上げました。2026年に向けては、グラムステルダムが開発中であり、2026年下半期に予定されています。",
   "page-what-is-ethereum-roadmap-priorities-intro": "<a>今後の展望</a>として、イーサリアムの優先事項には以下が含まれます：",
   "page-what-is-ethereum-roadmap-priority-1": "コアプロトコルとそのレイヤー2 (L2)を、すべての人にとってより速く、より安価にすること",
   "page-what-is-ethereum-roadmap-priority-2": "ユーザーと開発者のエクスペリエンスを向上させること",

@@ -1,6 +1,6 @@
 {
-  "page-index-meta-title": "ایتھیریم - ⁦Ethereum.org⁩ کی جانب سے مکمل گائیڈ",
-  "page-index-meta-description": "ایتھیریم رقم اور نئی قسم کی ایپلی کیشنز کے لیے ایک عالمی، غیر مرکزی پلیٹ فارم ہے۔ ایتھیریم پر، آپ اپنی رقم، ڈیٹا، اور شناخت کو خود کنٹرول کرتے ہیں۔ کسی بینک، کسی درمیانی شخص، یا کسی اجازت کی ضرورت نہیں ہے۔",
+  "page-index-meta-title": "ایتھیریم - ⁦ethereum.org⁩ کی جانب سے مکمل گائیڈ",
+  "page-index-meta-description": "ایتھیریم پائیدار ایپس اور انفراسٹرکچر کے لیے ایک لامركزی پلیٹ فارم ہے۔ کسی بینک یا درمیانی شخص کی ضرورت کے بغیر اپنے پیسے، ڈیٹا، اور شناخت کو کنٹرول کریں۔",
   "page-index-description": "جدید ایپس اور بلاک چین نیٹ ورکس کے لیے معروف پلیٹ فارم",
   "page-index-title": "ایتھیریم میں خوش آمدید",
   "page-index-hero-image-alt": "ایک مستقبل کے شہر کی تصویر، جو ایتھیریم ایکو سسٹم کی نمائندگی کرتی ہے۔",
@@ -41,14 +41,14 @@
   "page-index-carousel-privacy-ethereum-label": "ایتھیریم ایپس",
   "page-index-carousel-privacy-ethereum-value": "بنیادی طور پر نجی",
   "page-index-carousel-remittances-tag": "سرحد پار ادائیگیاں",
-  "page-index-carousel-remittances-title": "گھر پیسے بھیجیں صرف {minutes} منٹ میں",
+  "page-index-carousel-remittances-title": "⁦{seconds}⁩ سیکنڈ میں گھر پیسے بھیجیں",
   "page-index-carousel-remittances-subtitle": "⁦{wireFee}⁩ وائر فیس اور ⁦{days}+⁩ دن کے انتظار سے بچیں۔",
   "page-index-carousel-remittances-description": "دنیا میں کہیں بھی، کسی کو بھی صرف ⁦{txFee}⁩ میں <stablecoinsLink>سٹیبل کوائنز</stablecoinsLink> بھیجیں۔ انہیں فنڈز تقریباً فوری طور پر موصول ہو جاتے ہیں۔",
   "page-index-carousel-remittances-cta": "خود آزما کر دیکھیں",
   "page-index-carousel-remittances-traditional-label": "وائر ٹرانسفر",
   "page-index-carousel-remittances-traditional-value": "⁦{min}-{max}⁩ دن",
   "page-index-carousel-remittances-ethereum-label": "ایتھیریم",
-  "page-index-carousel-remittances-ethereum-value": "{minutes} منٹ",
+  "page-index-carousel-remittances-ethereum-value": "⁦{seconds}⁩ سیکنڈ",
   "page-index-carousel-borrowing-tag": "مالیاتی رسائی",
   "page-index-carousel-borrowing-title": "کریڈٹ ہسٹری کے بغیر قرض گیری",
   "page-index-carousel-borrowing-subtitle": "شروع کرنے کے لیے آپ کو کریڈٹ سکور کی ضرورت نہیں ہے۔",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "نجی اور اجازت یافتہ نیٹ ورکس",
   "page-index-get-started-enterprise-bullet-3": "ادارہ جاتی وسائل",
   "page-index-get-started-enterprise-cta": "انٹرپرائز دریافت کریں",
-  "page-index-simulator-cta": "مزید گائیڈز آزمائیں"
+  "page-index-simulator-cta": "مزید گائیڈز آزمائیں",
+  "page-index-latest-updates-title": "ایتھیریم کی تازہ ترین اپ ڈیٹس",
+  "page-index-latest-updates-cta": "مزید دیکھیں"
 }

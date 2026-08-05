@@ -24,6 +24,7 @@ import { join } from "node:path"
 import { expect, test } from "@playwright/test"
 
 import { pipeline } from "../../../src/scripts/intl-pipeline"
+import { findSection } from "../../../src/scripts/intl-pipeline/pipeline"
 
 // ---------------------------------------------------------------------------
 // Fixtures
@@ -80,14 +81,18 @@ test.describe("Phase 1: Markdown change detection", () => {
   const cs = extractChanges(treeA, treeB)
   const dr = diff(treeA, treeB)
 
+  // NOTE: counts updated for intl-content-tree >= 0.3.1, whose improved
+  // component-attribute extraction changes this fixture's diff totals
+  // (+1 node-level change, +1 inertDrift, -1 unchanged vs 0.3.0).
+
   // --- DiffResult section-level ---
 
-  test("28 unchanged entries", () => {
-    expect(dr.unchanged).toHaveLength(28)
+  test("27 unchanged entries", () => {
+    expect(dr.unchanged).toHaveLength(27)
   })
 
-  test("7 inertDrift entries", () => {
-    expect(dr.inertDrift).toHaveLength(7)
+  test("8 inertDrift entries", () => {
+    expect(dr.inertDrift).toHaveLength(8)
     const ids = dr.inertDrift.map((e) => e.id)
     expect(ids).toContain("frontmatter:image")
     expect(ids).toContain("code-review")
@@ -141,8 +146,8 @@ test.describe("Phase 1: Markdown change detection", () => {
 
   // --- ChangeSet node-level ---
 
-  test("30 node-level changes", () => {
-    expect(cs.changes).toHaveLength(30)
+  test("31 node-level changes", () => {
+    expect(cs.changes).toHaveLength(31)
   })
 
   test("1 section rename: contributing-to-projects -> how-to-contribute", () => {
@@ -606,18 +611,13 @@ for (const lang of LANGS) {
       EN_B_MD,
       locA(lang, "md"),
       "markdown",
-      (sectionId, _englishContent) => {
-        // Mock LLM: extract section from locale-B by heading ID
+      (sectionId, englishContent) => {
+        // Mock LLM: extract section from locale-B by heading ID, using the same
+        // fence-aware boundaries as the pipeline (a naive `\n#` search cuts at
+        // comments and headings inside code fences)
         const lb = locB(lang, "md")
-        const pattern = new RegExp(
-          `(^#{1,6}\\s+[^\\n]*\\{#${sectionId}\\}[^\\n]*$)`,
-          "m"
-        )
-        const match = lb.match(pattern)
-        if (!match) return _englishContent
-        const start = lb.indexOf(match[0])
-        const nextH = lb.indexOf("\n#", start + 1)
-        return lb.slice(start, nextH > -1 ? nextH : undefined).trim()
+        const sec = findSection(lb, sectionId)
+        return sec ? lb.slice(sec.start, sec.end).trim() : englishContent
       }
     )
     expect(result).toBe(expected)

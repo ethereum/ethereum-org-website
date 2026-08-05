@@ -4,8 +4,6 @@ description: A how to guide on revoking exploitative smart contract token access
 lang: en
 ---
 
-# How to revoke smart contract access to your crypto funds {#how-to-revoke-smart-contract-access-to-your-crypto-funds}
-
 This guide will teach you how to view a list of all [smart contracts](/glossary/#smart-contract) you have allowed access to your funds and how to cancel them.
 
 Sometimes malicious developers build backdoors into smart contracts that allow access to the funds of unaware users who interact with the smart contract. What often happens is that such platforms ask the user for permission to spend an **unlimited number of tokens** in an attempt to save small amounts of [gas](/glossary/#gas) in the future, but this comes with increased risk.

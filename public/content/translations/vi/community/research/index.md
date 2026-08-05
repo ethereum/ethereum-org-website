@@ -1,399 +1,397 @@
 ---
-title: "Những đề tài nghiên cứu phát triển Ethereum"
-description: "Khám phá mô hình nghiên cứu mở và tham gia đóng góp."
+title: Các lĩnh vực nghiên cứu đang hoạt động của Ethereum
+description: Khám phá các lĩnh vực nghiên cứu mở khác nhau và tìm hiểu cách tham gia.
 lang: vi
 ---
 
-# Nghiên cứu phát triển Ethereum {#active-areas-of-ethereum-research}
+Một trong những điểm mạnh chính của Ethereum là có một cộng đồng kỹ thuật và nghiên cứu tích cực không ngừng cải thiện nó. Nhiều người nhiệt huyết, có kỹ năng trên toàn thế giới muốn cống hiến cho các vấn đề nổi bật trong Ethereum, nhưng không phải lúc nào cũng dễ dàng tìm ra những vấn đề đó là gì. Trang này phác thảo các lĩnh vực nghiên cứu đang hoạt động chính như một hướng dẫn sơ bộ về những công nghệ tiên tiến nhất của Ethereum.
 
-Một trong những thế mạnh cốt lõi của Ethereum là việc có một cộng đồng tập hợp những nghiên cứu sinh và kĩ sư liên tục tham gia cải thiện, phát triển hệ sinh thái. Nhiều cá nhân với kĩ năng và đam mê rất sẵn sàng tham gia vào giải quyết những vấn đề tồn đọng trong hệ sinh thái Ethereum, nhưng lại gặp khó khăn trong việc tiếp cận những vấn đề đó. Trang thông tin này giúp trình bày những đề tài nghiên cứu trọng yếu mà Ethereum đang hướng tới.
+## Cách thức hoạt động của nghiên cứu Ethereum {#how-ethereum-research-works}
 
-## Hoạt động tham gia nghiên cứu Ethereum được triển khai như thế nào? {#how-ethereum-research-works}
+Nghiên cứu Ethereum mang tính mở và minh bạch, thể hiện các nguyên tắc của [khoa học phi tập trung (desci)](https://hackernoon.com/desci-decentralized-science-as-our-chance-to-recover-the-real-science). Văn hóa ở đây là làm cho các công cụ và kết quả nghiên cứu trở nên cởi mở và có tính tương tác nhất có thể, ví dụ: thông qua các sổ tay có thể thực thi. Nghiên cứu Ethereum tiến triển nhanh chóng, với những phát hiện mới được đăng tải và thảo luận công khai trên các diễn đàn như [ethresear.ch](https://ethresear.ch/) thay vì tiếp cận cộng đồng thông qua các ấn phẩm truyền thống sau nhiều vòng bình duyệt.
 
-Tham gia nghiên cứu Ethereum là một hoạt động công khai, thừa kế những quy tắc của [Khoa học phi tập trung (DeSci)](https://hackernoon.com/desci-decentralized-science-as-our-chance-to-recover-the-real-science). Mục tiêu là hướng tới việc biến các công cụ và kết quả nghiên cứu trở nên thân thiện nhất có thể, ví dụ, thông qua các sổ tay thực thi. Hoạt động nghiên cứu Ethereum diễn ra với tốc độ rất nhanh, với việc các sáng kiến, thông tin mới sẽ liên tục được đăng và thảo luận trên các trang thông tin như [ethresear.ch](https://ethresear.ch/) thay vì thông qua các hình thức đăng tải truyền thống yêu cầu quy trình đánh giá phức tạp.
+## Tài nguyên nghiên cứu chung {#general-research-resources}
 
-## Tài liệu nghiên cứu tổng hợp {#general-research-resources}
+Bất kể chủ đề cụ thể là gì, có vô số thông tin về nghiên cứu Ethereum có thể được tìm thấy tại [ethresear.ch](https://ethresear.ch) và [kênh Discord Eth R&D](https://discord.gg/qGpsxSA). Đây là những nơi chính mà các nhà nghiên cứu Ethereum thảo luận về những ý tưởng và cơ hội phát triển mới nhất.
 
-Đối với bất kì đề tài cụ thể nào, luôn luôn có các nguồn thông tin chất lượng có thể được tìm thấy ở [ethresear.ch](https://ethresear.ch) và kênh Discord Eth R&D (https://discord.gg/qGpsxSA). Tại đây cộng đồng các nhà nghiên cứu về Ethereum cùng thảo luận những ý tưởng và cơ hội phát triển mới nhất.
-
-Bản báo cáo được phát hành vào tháng Năm 2022 bởi [DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) sẽ cung cấp một cái nhìn bao quát hơn về kế hoạch phát triển của Ethereum.
+Báo cáo này được xuất bản vào tháng 5 năm 2022 bởi [DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) cung cấp một cái nhìn tổng quan tốt về lộ trình Ethereum.
 
 ## Nguồn tài trợ {#sources-of-funding}
 
-Bạn có thể tham gia nghiên cứu cùng Ethereum và được trả tiền cho những đóng góp của bạn! Ví dụ, [Quỹ Ethereum](/foundation/) gần đây đã triển khai một [Chương trình tài trợ cho các đóng góp về học thuật](https://esp.ethereum.foundation/academic-grants). Bạn có thể tìm hiểu thêm về các hoạt động và cơ hội tài trợ sắp tới hay đang được triển khai ở [trang tài trợ của Ethereum](/community/grants/).
+Bạn có thể tham gia vào nghiên cứu Ethereum và được trả tiền cho việc đó! Ví dụ, [Tổ chức Ethereum](/foundation/) gần đây đã tổ chức một [vòng tài trợ Trợ cấp Học thuật](https://esp.ethereum.foundation/academic-grants). Bạn có thể tìm thấy thông tin về các cơ hội tài trợ đang hoạt động và sắp tới trên [trang trợ cấp Ethereum](/community/grants/).
 
-## Nghiên cứu về giao thức {#protocol-research}
+## Nghiên cứu Giao thức {#protocol-research}
 
-Nghiên cứu về giao thức sẽ bao gồm những yếu tố liên quan đến lớp nền tảng của Ethereum - những quy tắc định hình cách các kết nối giữa các nút, trao đổi và lưu trữ thông tin trên Ethereum và cách đạt được sự đồng thuận về trạng thái của chuỗi khối. Nghiên cứu về giao thức được chia thành hai đề mục tiên quyết: đồng thuận và thực thi.
+Nghiên cứu Giao thức liên quan đến lớp cơ sở của Ethereum - tập hợp các quy tắc xác định cách các nút kết nối, giao tiếp, trao đổi và lưu trữ dữ liệu Ethereum và đạt được đồng thuận về trạng thái của Chuỗi khối. Nghiên cứu Giao thức được chia thành hai danh mục cấp cao nhất: đồng thuận và thực thi.
 
-### Cơ chế đồng thuận {#consensus}
+### Đồng thuận {#consensus}
 
-Nghiên cứu về cơ chế đồng thuận sẽ liên quan đến [Cơ chế bảo chứng cổ phần của Ethereum](/developers/docs/consensus-mechanisms/pos/). Một số ví dụ cho các đề tài nghiên cứu về cơ chế đồng thuận bao gồm:
+Nghiên cứu đồng thuận liên quan đến [cơ chế Bằng chứng cổ phần (PoS) của Ethereum](/developers/docs/consensus-mechanisms/pos/). Một số chủ đề nghiên cứu đồng thuận ví dụ là:
 
-- xác định và vá những lỗ hổng bảo mật;
-- đo lường nền kinh tế tiền điện tử;
-- cải thiện bảo mật hoặc hiệu suất của việc triển khai bộ xử lý;
-- và phát triển các bộ xử lý con.
+- xác định và vá các lỗ hổng;
+- định lượng bảo mật kinh tế học mật mã;
+- tăng cường bảo mật hoặc hiệu suất của các triển khai máy khách;
+- và phát triển các máy khách nhẹ.
 
-Bên cạnh những nghiên cứu mang tính phát triển, một số cơ chế cốt lõi trong việc thiết kế lại giao thức, ví dụ như Quyết định cuối cùng trong một lượt duy nhất, cũng đang được nghiên cứu để mở ra những cơ hội cải tiến Ethereum. Ngoài ra, mức độ hiệu quả, an toàn, và theo dõi hệ thống mạng ngang hàng giữa các bộ xử lý cơ chế đồng thuận cũng là những đề tài nghiên cứu quan trọng.
+Cùng với nghiên cứu hướng tới tương lai, một số thiết kế lại cơ bản của Giao thức, chẳng hạn như tính chung cuộc trong một slot, đang được nghiên cứu để cho phép những cải tiến đáng kể đối với Ethereum. Hơn nữa, tính hiệu quả, an toàn và giám sát mạng lưới ngang hàng giữa các ứng dụng khách đồng thuận cũng là những chủ đề nghiên cứu quan trọng.
 
-#### Tài liệu tham khảo {#background-reading}
+#### Tài liệu đọc thêm {#background-reading}
 
-- [Giới thiệu về Cơ chế bảo chứng cổ phần](/developers/docs/consensus-mechanisms/pos/)
-- [Nghiên cứu về Casper-FFG](https://arxiv.org/abs/1710.09437)
-- [Giải thích về Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
-- [Nghiên cứu về Gasper](https://arxiv.org/abs/2003.03052)
+- [Giới thiệu về Bằng chứng cổ phần (PoS)](/developers/docs/consensus-mechanisms/pos/)
+- [Bài báo về Casper FFG](https://arxiv.org/abs/1710.09437)
+- [Giải thích về Casper FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
+- [Bài báo về Gasper](https://arxiv.org/abs/2003.03052)
 
-#### Những nghiên cứu gần đây {#recent-research}
+#### Nghiên cứu gần đây {#recent-research}
 
-- [Bài nghiên cứu của Ethresear.ch về Sự đồng thuận](https://ethresear.ch/c/consensus/29)
-- [Vấn đề giữa tính khả dụng và tính quyết định cuối cùng](https://arxiv.org/abs/2009.04987)
-- [Quyết định cuối cùng trong một lượt hoặc vòng duy nhất](https://ethresear.ch/t/a-model-for-cumulative-committee-based-finality/10259)
-- [Tách biệt nhóm đề xuất và nhóm xây dựng chuỗi khối](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
+- [Đồng thuận trên Ethresear.ch](https://ethresear.ch/c/consensus/29)
+- [Tình thế tiến thoái lưỡng nan về Tính khả dụng/Tính chung cuộc](https://arxiv.org/abs/2009.04987)
+- [Tính chung cuộc trong một slot](https://ethresear.ch/t/a-model-for-cumulative-committee-based-finality/10259)
+- [Tách biệt người đề xuất và người xây dựng (PBS)](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
 
 ### Thực thi {#execution}
 
-Lớp thực thi liên quan đến việc xử lí các giao dịch, vận hành [Máy ảo Ethereum (EVM)](/developers/docs/evm/) và khởi tạo các thông tin thực thi để gửi tới lớp đồng thuận. Những nội dung nghiên cứu nổi bật bao gồm:
+Lớp thực thi liên quan đến việc thực thi các giao dịch, chạy [Máy ảo Ethereum (EVM)](/developers/docs/evm/) và tạo các tải trọng thực thi để chuyển đến lớp đồng thuận. Có nhiều lĩnh vực nghiên cứu đang hoạt động, bao gồm:
 
-- xây dựng các cơ chế hỗ trợ bộ xử lí nhỏ;
-- nghiên cứu về giới hạn gas;
-- và tích hợp các cấu trúc dữ liệu mới (ví dụ: Verkle Tries).
+- xây dựng hỗ trợ máy khách nhẹ;
+- nghiên cứu giới hạn Gas;
+- và kết hợp các cấu trúc dữ liệu mới (ví dụ: cây Verkle).
 
-#### Tài liệu tham khảo {#background-reading-1}
+#### Tài liệu đọc thêm {#background-reading-1}
 
-- [Giới thiệu về Máy ảo Ethereum](/developers/docs/evm)
-- [Nghiên cứu về lớp thực thi của Etheresear.ch](https://ethresear.ch/c/execution-layer-research/37)
+- [Giới thiệu về EVM](/developers/docs/evm)
+- [Lớp thực thi trên Ethresear.ch](https://ethresear.ch/c/execution-layer-research/37)
 
-#### Những nghiên cứu gần đây {#recent-research-1}
+#### Nghiên cứu gần đây {#recent-research-1}
 
-- [Những phương pháp tối ưu cơ sở dữ liệu](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md)
-- [Hết hạn dữ liệu trạng thái](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
-- [Những điều kiện hết hạn dữ liệu trạng thái](https://hackmd.io/@vbuterin/state_expiry_paths)
-- [Đề xuất Verkle và cơ chế hết hạn dữ liệu trạng thái](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
-- [Quản lý lịch sử dữ liệu](https://eips.ethereum.org/EIPS/eip-4444)
+- [Tối ưu hóa cơ sở dữ liệu](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md)
+- [Hết hạn trạng thái](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
+- [Các con đường dẫn đến hết hạn trạng thái](https://hackmd.io/@vbuterin/state_expiry_paths)
+- [Đề xuất Verkle và hết hạn trạng thái](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
+- [Quản lý lịch sử](https://eips.ethereum.org/EIPS/eip-4444)
 - [Cây Verkle](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
-- [Mẫu kiểm tra tính sẵn sàng dữ liệu](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
+- [Lấy mẫu tính khả dụng của dữ liệu](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
-## Phát triển bộ xử lí {#client-development}
+## Phát triển Máy khách {#client-development}
 
-Các bộ xử lí Ethereum là các phần mềm triển khai của giao thức Ethereum. Việc phát triển các bộ xử lí Ethereum giúp triển khai các nghiên cứu về giao thức thành các phần mềm thực tế. Phát triển các bộ xử lí Ethereum bao gồm việc nâng cấp cấu hình của bộ xử lí cũng như xây dựng các phầm mềm cụ thể.
+Các máy khách Ethereum là các bản triển khai của Giao thức Ethereum. Việc phát triển máy khách biến các kết quả từ nghiên cứu Giao thức thành hiện thực bằng cách xây dựng chúng vào các máy khách này. Phát triển máy khách bao gồm việc cập nhật các thông số kỹ thuật của máy khách cũng như xây dựng các bản triển khai cụ thể.
 
-Một nút Ethereum yêu cầu phải chạy hai phần mềm:
+Một nút Ethereum được yêu cầu chạy hai phần mềm:
 
-1. một bộ xử lí cơ chế đồng thuận để cập nhật thông tin mới nhất của chuỗi khối, gửi thông tin khối và xử lí logic đồng thuận
-2. một bộ xử lí thực thi để hỗ trợ Máy ảo Ethereum và thực hiện các giao dịch, cũng như các hợp đồng thông minh
+1. một ứng dụng khách đồng thuận để theo dõi phần đầu của Chuỗi khối, truyền bá các khối và xử lý logic đồng thuận
+2. một máy khách thực thi để hỗ trợ Máy ảo Ethereum và thực thi các giao dịch và hợp đồng thông minh
 
-Tham khảo [Nút và bộ xử lí](/developers/docs/nodes-and-clients/) để có thêm thông tin về các nút, bộ xử lí và danh sách các phần mềm sẵn có. Bạn cũng có thể tìm thấy lịch sử của tất cả các đợt nâng cấp của Ethereum ở [trang lịch sử](/ethereum-forks/).
+Xem [trang nút và máy khách](/developers/docs/nodes-and-clients/) để biết thêm chi tiết về các nút và máy khách cũng như danh sách tất cả các bản triển khai máy khách hiện tại. Bạn cũng có thể tìm thấy lịch sử của tất cả các bản nâng cấp Ethereum trên [trang lịch sử](/ethereum-forks/).
 
-### Các ứng dụng thực thi {#execution-clients}
+### Máy khách thực thi {#execution-clients}
 
-- [Thông số ứng dụng thực thi](https://github.com/ethereum/execution-specs)
-- [Thông số API thực thi](https://github.com/ethereum/execution-apis)
+- [Thông số kỹ thuật máy khách thực thi](https://github.com/ethereum/execution-specs)
+- [Thông số kỹ thuật API thực thi](https://github.com/ethereum/execution-apis)
 
-### Các ứng dụng đồng thuận {#consensus-clients}
+### Ứng dụng khách đồng thuận {#consensus-clients}
 
-- [Thông số ứng dụng đồng thuận](https://github.com/ethereum/consensus-specs)
-- [Thông số API Beacon](https://ethereum.github.io/beacon-APIs/#/Beacon/getStateRoot)
+- [Thông số kỹ thuật ứng dụng khách đồng thuận](https://github.com/ethereum/consensus-specs)
+- [Thông số kỹ thuật API Beacon](https://ethereum.github.io/beacon-APIs/#/Beacon/getStateRoot)
 
-## Thay đổi quy mô và hiệu suất {#scaling-and-performance}
+## Mở rộng quy mô và hiệu suất {#scaling-and-performance}
 
-Thay đổi quy mô cho Ethereum là một đề tài lớn đối với nhiều nhà nghiên cứu Ethereum. Những hướng tiếp cận hiện tại bao gồm chuyển các giao dịch lên các giải pháp mở rộng và tối ưu để rẻ nhất về giá sử dụng các khối dữ liệu. Các thông tin giới thiệu về việc thay đổi quy mô cho Ethereum có sẵn ở trang [Thay đổi quy mô](/developers/docs/scaling).
+Mở rộng quy mô Ethereum là một lĩnh vực trọng tâm lớn đối với các nhà nghiên cứu Ethereum. Các phương pháp tiếp cận hiện tại bao gồm việc chuyển các giao dịch sang các bản cuộn và làm cho chúng rẻ nhất có thể bằng cách sử dụng các blob dữ liệu. Thông tin giới thiệu về việc mở rộng quy mô Ethereum có sẵn trên [trang mở rộng quy mô](/developers/docs/scaling) của chúng tôi.
 
 ### Lớp 2 {#layer-2}
 
-Hiện tại đã có một vài giao thức Lớp 2 thực thiện thay đổi quy mô cho Ethereum sử dụng các kĩ thuật khác nhau để gom nhiều giao dịch thành một và đảm bảo chúng trên Lớp 1 của Ethereum. Đây là một chủ đề đang phát triển rất nhanh, với nhiều tiềm năng nghiên cứu và phát triển.
+Hiện có một số Giao thức lớp 2 (l2) mở rộng quy mô Ethereum bằng cách sử dụng các kỹ thuật khác nhau để gom lô các giao dịch và bảo mật chúng trên lớp 1 (l1) của Ethereum. Đây là một chủ đề đang phát triển rất nhanh với nhiều tiềm năng nghiên cứu và phát triển.
 
-#### Tài liệu tham khảo {#background-reading-2}
+#### Tài liệu đọc thêm {#background-reading-2}
 
 - [Giới thiệu về lớp 2](/layer-2/)
-- [Polynya: Giải pháp mở rộng, tính sẵn sàng dữ liệu và chuỗi mô-đun](https://polynya.medium.com/rollups-data-availability-layers-modular-blockchains-introductory-meta-post-5a1e7a60119d)
+- [Polynya: Bản cuộn, DA và các chuỗi mô-đun](https://polynya.medium.com/rollups-data-availability-layers-modular-blockchains-introductory-meta-post-5a1e7a60119d)
 
-#### Những nghiên cứu gần đây {#recent-research-2}
+#### Nghiên cứu gần đây {#recent-research-2}
 
-- [Cơ chế sắp xếp công bằng của Arbitrum cho các công cụ sắp xếp](https://eprint.iacr.org/2021/1465)
-- [Nghiên cứu của Etheresear.ch về lớp 2](https://ethresear.ch/c/layer-2/32)
-- [Lộ trình tập trung vào Rollup](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
-- [L2Beat](https://l2beat.com/)
+- [Sắp xếp công bằng cho các trình tự tự động (sequencer) của Arbitrum](https://eprint.iacr.org/2021/1465)
+- [Lớp 2 trên Ethresear.ch](https://ethresear.ch/c/layer-2/32)
+- [Lộ trình lấy Rollup làm trung tâm](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
+- [L2BEAT](https://l2beat.com/)
 
-### Cầu {#bridges}
+### Cầu nối {#bridges}
 
-Một đề tài liên quan đến lớp 2 cần được quan tâm nghiên cứu và phát triển hơn đó là các cầu an toàn và hiệu suất cao. Bao gồm các cầu giữa các Lớp 2 khác nhau và các cầu giữa Lớp 1 và Lớp 2. Đây là một đề tài nghiên cứu tương đối quan trọng bởi vì cầu thường được nhắm tới bởi các hacker.
+Một lĩnh vực cụ thể của lớp 2 đòi hỏi nhiều nghiên cứu và phát triển hơn là các cầu nối an toàn và hiệu suất cao. Điều này bao gồm các cầu nối giữa các lớp 2 khác nhau và các cầu nối giữa lớp 1 và lớp 2. Đây là một lĩnh vực nghiên cứu đặc biệt quan trọng vì các cầu nối thường là mục tiêu của tin tặc.
 
-#### Tài liệu tham khảo {#background-reading-3}
+#### Tài liệu đọc thêm {#background-reading-3}
 
-- [Giới thiệu về cầu chuỗi khối](/bridges/)
-- [Quan điểm của Vitalik về cầu](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
-- [Các bài viết về cầu chuỗi khối](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
-- [Các giá trị được lưu trữ trong cầu](https://dune.com/eliasimos/Bridge-Away-\(from-Ethereum\))
+- [Giới thiệu về cầu nối Chuỗi khối](/bridges/)
+- [Vitalik nói về cầu nối](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
+- [Bài viết về cầu nối Chuỗi khối](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
+- [Giá trị bị khóa trong các cầu nối](<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)>)
 
-#### Các nghiên cứu gần đây {#recent-research-3}
+#### Nghiên cứu gần đây {#recent-research-3}
 
-- [Đánh giá các cầu chuỗi khối](https://stonecoldpat.github.io/images/validatingbridges.pdf)
+- [Xác thực các cầu nối](https://stonecoldpat.github.io/images/validatingbridges.pdf)
 
-### Phân mảnh dữ liệu {#sharding}
+### Phân mảnh {#sharding}
 
-Phân mảnh blockchain của Ethereum từ lâu đã là một phần trong lộ trình phát triển. Tuy nhiên, các giải pháp thay đổi quy mô như "Danksharding" lại đang được quan tâm nhiều hơn.
+Phân mảnh Chuỗi khối của Ethereum từ lâu đã là một phần của lộ trình phát triển. Tuy nhiên, các giải pháp mở rộng quy mô mới như "danksharding" hiện đang chiếm vị trí trung tâm.
 
-Bản tiền thân của Danksharding đầy đủ, được gọi là Proto-Danksharding, đã được triển khai sau bản nâng cấp mạng Cancun-Deneb ("Dencun").
+Tiền thân của danksharding đầy đủ được gọi là Proto-Danksharding đã đi vào hoạt động cùng với bản nâng cấp Dencun (Cancun-Deneb) của mạng lưới.
 
-[Thông tin về bản cập nhật Dencun](/roadmap/dencun/)
+[Tìm hiểu thêm về bản nâng cấp Dencun](/roadmap/dencun/)
 
-#### Tài liệu tham khảo {#background-reading-4}
+#### Tài liệu đọc thêm {#background-reading-4}
 
-- [Các ghi chú về Proto-Danksharding](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
-- [Video về Danksharding từ Bankless](https://www.youtube.com/watch?v=N5p0TB77flM)
-- [Tuyển tập nghiên cứu về Phân mảnh Ethereum](https://notes.ethereum.org/@serenity/H1PGqDhpm?type=view)
-- [Nghiên cứu về Danksharding của Polynya](https://polynya.medium.com/danksharding-36dc0c8067fe)
+- [Ghi chú về Proto-Danksharding](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
+- [Video về danksharding của Bankless](https://www.youtube.com/watch?v=N5p0TB77flM)
+- [Bản tóm tắt nghiên cứu phân mảnh Ethereum](https://notes.ethereum.org/@serenity/H1PGqDhpm?type=view)
+- [danksharding (Polynya)](https://polynya.medium.com/danksharding-36dc0c8067fe)
 
-#### Những nghiên cứu gần đây {#recent-research-4}
+#### Nghiên cứu gần đây {#recent-research-4}
 
 - [EIP-4844: Proto-Danksharding](https://eips.ethereum.org/EIPS/eip-4844)
-- [Nhận định của Vitalik về phân mảnh dữ liệu và lấy mẫu các dữ liệu khả dụng](https://hackmd.io/@vbuterin/sharding_proposal)
+- [Vitalik nói về phân mảnh và lấy mẫu tính khả dụng của dữ liệu](https://hackmd.io/@vbuterin/sharding_proposal)
 
 ### Phần cứng {#hardware}
 
-[Vận hành nút](/developers/docs/nodes-and-clients/run-a-node/) trên các phần cứng đơn giản là điều kiện tiên quyết để duy trì tính phi tập trung của Ethereum. Chính vì thế nên việc liên tục nghiên cứu giảm nhẹ cấu hình phần cứng để vận hành nút là một lĩnh vực nghiên cứu quan trọng.
+[Chạy các nút](/developers/docs/nodes-and-clients/run-a-node/) trên phần cứng khiêm tốn là nền tảng để giữ cho Ethereum phi tập trung. Do đó, nghiên cứu tích cực về việc giảm thiểu các yêu cầu phần cứng để chạy các nút là một lĩnh vực nghiên cứu quan trọng.
 
-#### Tài liệu tham khảo {#background-reading-5}
+#### Tài liệu đọc thêm {#background-reading-5}
 
-- [Chạy Ethereum trên kiến trúc ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)
+- [Ethereum trên ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)
 
-#### Những nghiên cứu gần đây {#recent-research-5}
+#### Nghiên cứu gần đây {#recent-research-5}
 
-- [ecdsa trên FPGAs](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
+- [ECDSA trên FPGA](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
 
 ## Bảo mật {#security}
 
-Bảo mật là một đề tài lớn, có thể bao gồm việc phòng chống hành vi lặp lại và lừa đảo, bảo mật ví, bảo mật phần cứng, bảo mật tiền điện tử, săn lỗi và kiểm thử các ứng dụng, phần mềm, cũng như quản lý khóa. Việc đóng góp hiểu biết cho những nội dung này sẽ hỗ trợ phát triển sự đón nhận từ thị trường truyền thống.
+Bảo mật là một chủ đề rộng có thể bao gồm phòng chống thư rác/lừa đảo, bảo mật Ví, bảo mật phần cứng, bảo mật kinh tế học mật mã, săn lỗi và thử nghiệm các ứng dụng và phần mềm máy khách cũng như quản lý khóa. Đóng góp kiến thức trong các lĩnh vực này sẽ giúp thúc đẩy việc áp dụng rộng rãi.
 
-### Mật mã học & bằng chứng không kiến thức {#cryptography--zkp}
+### Mật mã học & ZKP {#cryptography--zkp}
 
-Các bằng chứng không kiến thức (ZKP) và mật mã học đóng vai trò quan trọng trong việc xây dựng tính riêng tư và bảo mật cho Ethereum cùng các ứng dụng của giao thức. Bằng chứng không kiến thức là một lĩnh vực còn khá mới nhưng đang được phát triển nhanh chóng, với nhiều cơ hội nghiên cứu và phát triển. Một số hướng nghiên cứu tiềm năng bao gồm phát triển các cách triển khai hiệu quả hơn của [thuật toán băm Keccak](https://hackmd.io/sK7v0lr8Txi1bgION1rRpw?view#Overview), tìm ra các cơ chế cam kết đa thức tối ưu hơn so với hiện tại, hoặc giảm chi phí của các mạch tạo khóa công khai ecdsa và xác minh chữ ký.
+Bằng chứng không kiến thức (ZKP) và mật mã học rất quan trọng để xây dựng quyền riêng tư và bảo mật vào Ethereum và các ứng dụng của nó. Không tri thức là một không gian tương đối non trẻ nhưng phát triển nhanh chóng với nhiều cơ hội nghiên cứu và phát triển mở. Một số khả năng bao gồm phát triển các bản triển khai hiệu quả hơn của [thuật toán băm Keccak](https://hackmd.io/sK7v0lr8Txi1bgION1rRpw?view#Overview), tìm kiếm các cam kết đa thức tốt hơn so với hiện tại hoặc giảm chi phí tạo khóa công khai ECDSA và các mạch xác minh chữ ký.
 
-#### Tài liệu tham khảo {#background-reading-6}
+#### Tài liệu đọc thêm {#background-reading-6}
 
-- [Blog của 0xparc](https://0xparc.org/blog)
+- [Blog 0xparc](https://0xparc.org/blog)
 - [zkp.science](https://zkp.science/)
-- [Zero Knowledge podcast](https://zeroknowledge.fm/)
+- [Podcast Zero Knowledge](https://zeroknowledge.fm/)
 
-#### Những nghiên cứu gần đây {#recent-research-6}
+#### Nghiên cứu gần đây {#recent-research-6}
 
-- [Những nghiên cứu mới về mật mã đường cong elliptic](https://ethresear.ch/t/the-ec-fft-algorithm-without-elliptic-curve-and-isogenies/11346)
-- [Ethresear.ch ZK](https://ethresear.ch/c/zk-s-nt-arks/13)
+- [Tiến bộ gần đây trong mật mã học đường cong elliptic](https://ethresear.ch/t/the-ec-fft-algorithm-without-elliptic-curve-and-isogenies/11346)
+- [ZK trên Ethresear.ch](https://ethresear.ch/c/zk-s-nt-arks/13)
 
 ### Ví {#wallets}
 
-Ví Ethereum có thể là các tiện ích mở rộng trên trình duyệt, các ứng dụng trên máy tính và điện thoại hay các hợp đồng thông minh trên Ethereum. Hiện nay đã nhiều nghiên cứu liên quan đến phát triển các ví khôi phục chung nhằm giảm bớt rủi ro liên quan đến việc quản lý khóa cá nhân của người dùng. Song song với sự phát triển của các ví là những nghiên cứu về các hình thức trừu tượng hóa tài khoản khác, cũng là một nghiên cứu mới nổi quan trọng.
+Ví Ethereum có thể là tiện ích mở rộng trình duyệt, ứng dụng trên máy tính để bàn và thiết bị di động hoặc hợp đồng thông minh trên Ethereum. Có nghiên cứu tích cực về các Ví khôi phục xã hội giúp giảm thiểu một số rủi ro liên quan đến việc quản lý khóa của người dùng cá nhân. Gắn liền với sự phát triển của Ví là nghiên cứu về các hình thức trừu tượng hóa tài khoản thay thế, đây là một lĩnh vực nghiên cứu mới nổi quan trọng.
 
-#### Tài liệu tham khảo {#background-reading-7}
+#### Tài liệu đọc thêm {#background-reading-7}
 
-- [Giới thiệu về ví](/wallets/)
-- [Giới thiệu về bảo mật ví](/security/)
-- [Nghiên cứu về bảo mật của Etheresear.ch](https://ethresear.ch/tag/security)
-- [Trừu tượng hóa tài khoản EIP-2938](https://eips.ethereum.org/EIPS/eip-2938)
-- [Trừu tượng hóa tài khoản EIP-4337](https://eips.ethereum.org/EIPS/eip-4337)
+- [Giới thiệu về Ví](/wallets/)
+- [Giới thiệu về bảo mật Ví](/security/)
+- [Bảo mật trên Ethresear.ch](https://ethresear.ch/tag/security)
+- [EIP-2938: Trừu tượng hóa tài khoản](https://eips.ethereum.org/EIPS/eip-2938)
+- [EIP-4337: Trừu tượng hóa tài khoản](https://eips.ethereum.org/EIPS/eip-4337)
 
-#### Những nghiên cứu gần đây {#recent-research-7}
+#### Nghiên cứu gần đây {#recent-research-7}
 
-- [Ví hợp đồng thông minh tập trung vào khả năng xác thực](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
+- [Ví hợp đồng thông minh tập trung vào xác thực](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
 - [Tương lai của các tài khoản](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
-- [Mã vận hành AUTH và AUTHCALL EIP-3074](https://eips.ethereum.org/EIPS/eip-3074)
-- [Đăng tải mã qua một địa chỉ tài khoản do người dùng sở hữu](https://eips.ethereum.org/EIPS/eip-5003)
+- [EIP-3074: Các Opcode AUTH và AUTHCALL](https://eips.ethereum.org/EIPS/eip-3074)
+- [Xuất bản mã tại một Địa chỉ EOA](https://eips.ethereum.org/EIPS/eip-5003)
 
-## Cộng đồng, giáo dục và truyền thông tiếp cận {#community-education-and-outreach}
+## Cộng đồng, giáo dục và tiếp cận {#community-education-and-outreach}
 
-Việc đưa người dùng mới đến với Ethereum đòi hỏi phải có những tài liệu giáo dục mới và các cách tiếp cận truyền thông hiệu quả hơn. Bao gồm một số hình thức như các bài viết blog và báo, sách, podcast, meme, tài liệu giảng dạy, sự kiện và bất kỳ hình thức nào khác giúp xây dựng cộng đồng, chào đón người mới và nâng cao hiểu biết của mọi người về Ethereum.
+Việc tiếp nhận người dùng mới vào Ethereum đòi hỏi các tài nguyên giáo dục và phương pháp tiếp cận mới. Điều này có thể bao gồm các bài đăng trên blog và bài viết, sách, podcast, meme, tài nguyên giảng dạy, sự kiện và bất kỳ thứ gì khác giúp xây dựng cộng đồng, chào đón những người mới bắt đầu và giáo dục mọi người về Ethereum.
 
-### Trải nghiệm người dùng và giao diện người dùng {#uxui}
+### UX/UI {#uxui}
 
-Để thu hút thêm nhiều người dùng đến với Ethereum, hệ sinh thái cần cải thiện trải nghiệm và giao diện người dùng. Việc này yêu cầu các nhà thiết kế và chuyên gia về sản phẩm phải xem xét lại cách thiết kế ví và ứng dụng.
+Để tiếp nhận người dùng nhiều hơn vào Ethereum, hệ sinh thái phải cải thiện UX/UI. Điều này sẽ yêu cầu các nhà thiết kế và chuyên gia sản phẩm xem xét lại thiết kế của Ví và ứng dụng.
 
-#### Tài liệu tham khảo {#background-reading-8}
+#### Tài liệu đọc thêm {#background-reading-8}
 
-- [Báo cáo về Trải nghiệm người dùng và giao diện người dùng của Ethresear.ch](https://ethresear.ch/c/ui-ux/24)
+- [UX/UI trên Ethresear.ch](https://ethresear.ch/c/ui-ux/24)
 
-#### Những nghiên cứu gần đây {#recent-research-8}
+#### Nghiên cứu gần đây {#recent-research-8}
 
-- [Kênh Discord về thiết kế trong Web3](https://discord.gg/FsCFPMTSm9)
-- [Các quy tắc về thiết kế trong Web3](https://www.web3designprinciples.com/)
-- [Thảo luận về trải nghiệm người dùng của Ethereum Magicians](https://ethereum-magicians.org/t/og-council-ux-follow-up/9032/3)
+- [Discord Thiết kế Web3](https://discord.gg/FsCFPMTSm9)
+- [Các nguyên tắc thiết kế Web3](https://www.web3designprinciples.com/)
+- [Thảo luận về UX của Ethereum Magicians](https://ethereum-magicians.org/t/og-council-ux-follow-up/9032/3)
 
-### Kinh tế {#economics}
+### Kinh tế học {#economics}
 
-Nghiên cứu kinh tế trong Ethereum thường đi theo hai hướng tiếp cận: kiểm chứng tính bảo mật của các cơ chế dựa trên khuyến khích kinh tế ("vi mô"), và phân tích các dòng giá trị giữa các giao thức, ứng dụng và người dùng ("vĩ mô"). Trong đó nhiều yếu tố kinh tế tài sản số phức tạp liên quan đến tài sản gốc của Ethereum (ether) và các loại token được xây dựng trên đó (ví dụ như các NFT và các token theo chuẩn ERC20).
+Nghiên cứu kinh tế học trong Ethereum nhìn chung tuân theo hai cách tiếp cận: xác thực tính bảo mật của các cơ chế dựa trên các ưu đãi kinh tế ("kinh tế vi mô") và phân tích các luồng giá trị giữa các Giao thức, ứng dụng và người dùng ("kinh tế vĩ mô"). Có những yếu tố kinh tế học mật mã phức tạp liên quan đến tài sản gốc của Ethereum (ether) và các token được xây dựng trên nó (ví dụ: NFT và token ERC-20).
 
-#### Tài liệu tham khảo {#background-reading-9}
+#### Tài liệu đọc thêm {#background-reading-9}
 
-- [Nghiên cứu về cơ chế khuyến khích bền vững](https://rig.ethereum.org/)
-- [Hội thảo chuyên đề của ETHconomics ở sự kiện Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
+- [Nhóm Ưu đãi Mạnh mẽ (Robust Incentives Group)](https://rig.ethereum.org/)
+- [Hội thảo ETHconomics tại Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
-#### Những nghiên cứu gần đây {#recent-research-9}
+#### Nghiên cứu gần đây {#recent-research-9}
 
-- [Nghiên cứu thực nghiệm cơ chế EIP-1559](https://arxiv.org/abs/2201.05574)
+- [Phân tích thực nghiệm về EIP-1559](https://arxiv.org/abs/2201.05574)
 - [Cân bằng nguồn cung lưu hành](https://ethresear.ch/t/circulating-supply-equilibrium-for-ethereum-and-minimum-viable-issuance-during-the-proof-of-stake-era/10954)
-- [Định lượng MEV: Mức độ che giấu và khó phát hiện của hệ thống](https://arxiv.org/abs/2101.05511)
+- [Định lượng MEV: Khu rừng tối đến mức nào?](https://arxiv.org/abs/2101.05511)
 
 ### Không gian khối và thị trường phí {#blockspace-fee-markets}
 
-Thị trường không gian khối quản lý việc cung cấp thông tin của người dùng cuối, trực tiếp thông qua Lớp 1 của Ethereum hoặc trên các mạng lưới cầu nối như các giải pháp mở rộng (Lớp 2). Trên Ethereum, các giao dịch được gửi tới thị trường phí triển khai trực tiếp trong giao thức dựa vào EIP-1559, giúp bảo vệ chuỗi khối khỏi các hành vi lặp lại hoặc tắc nghẽn giá. Ở trên cả hai lớp, các giao dịch đều có thể phát sinh các tác động ngoại lai, hay còn được gọi là Giá trị khai thác tối đa (MEV), qua đó tạo nên các cấu trúc thị trường mới để khai thác hoặc quản lí những tác động ngoại lai này.
+Thị trường không gian khối quản lý việc đưa vào các giao dịch của người dùng cuối, trực tiếp trên Ethereum (lớp 1) hoặc trên các mạng lưới được kết nối, ví dụ: các bản cuộn (lớp 2). Trên Ethereum, các giao dịch được gửi đến thị trường phí được triển khai trong Giao thức dưới dạng EIP-1559, bảo vệ Chuỗi khỏi thư rác và định giá tắc nghẽn. Trên cả hai lớp, các giao dịch có thể tạo ra các ngoại ứng, được gọi là Giá trị có thể trích xuất tối đa (MEV), điều này tạo ra các cấu trúc thị trường mới để nắm bắt hoặc quản lý các ngoại ứng này.
 
-#### Tài liệu tham khảo {#background-reading-10}
+#### Tài liệu đọc thêm {#background-reading-10}
 
-- [Thiết kế cơ chế phí giao dịch cho blockchain Ethereum: Phân tích về mặt kinh tế của EIP-1559 (Tim Roughgarden, 2020)](https://timroughgarden.org/papers/eip1559.pdf)
-- [Mô phỏng của EIP-1559 (Robust Incentives Group)](https://ethereum.github.io/abm1559)
-- [Kinh tế của giải pháp mở rộng dựa vào các nguyên lý cơ bản](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
-- [Flash Boys 2.0: Ưu tiên, sắp xếp lại giao dịch và sự không ổn định của cơ chế đồng thuận trên các sàn giao dịch phi tập trung](https://arxiv.org/abs/1904.05234)
+- [Thiết kế Cơ chế Phí giao dịch cho Chuỗi khối Ethereum: Phân tích Kinh tế về EIP-1559 (Tim Roughgarden, 2020)](https://timroughgarden.org/papers/eip1559.pdf)
+- [Mô phỏng EIP-1559 (Nhóm Ưu đãi Mạnh mẽ)](https://ethereum.github.io/abm1559)
+- [Kinh tế học Rollup từ các nguyên tắc cơ bản](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
+- [Flash Boys 2.0: Chạy trước (Frontrunning), Sắp xếp lại Giao dịch và Sự bất ổn định Đồng thuận trong các Sàn giao dịch Phi tập trung](https://arxiv.org/abs/1904.05234)
 
-#### Những nghiên cứu gần đây {#recent-research-10}
+#### Nghiên cứu gần đây {#recent-research-10}
 
 - [Video thuyết trình về EIP-1559 đa chiều](https://youtu.be/QbR4MTgnCko)
-- [Giá trị khai thác tối đa xuyên miền](https://arxiv.org/abs/2112.01472)
-- [Đấu giá giá trị khai thác tối đa](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
+- [MEV xuyên miền](https://arxiv.org/abs/2112.01472)
+- [Đấu giá MEV](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
-### Phần thưởng của cơ chế bảo chứng bằng cổ phần {#proof-of-stake-incentives}
+### Các ưu đãi Bằng chứng cổ phần {#proof-of-stake-incentives}
 
-Những bên xác thực sẽ sử dụng tài sản gốc của Ethereum (ether) để thế chấp cho các hành vi không trung thực. Nền kinh tế tài sản mã hóa của cơ chế này sẽ quyết định tính bảo mật của mạng lưới. Các bên xác thực tinh vi có thể khai thác các yếu tố phức tạp của lớp phần thưởng để thực hiện những cuộc tấn công có chủ đích.
+Các trình xác thực sử dụng tài sản gốc của Ethereum (ether) làm tài sản thế chấp chống lại hành vi không trung thực. Kinh tế học mật mã của điều này quyết định tính bảo mật của mạng lưới. Các trình xác thực tinh vi có thể khai thác các sắc thái của lớp ưu đãi để khởi chạy các cuộc tấn công rõ ràng.
 
-#### Tài liệu tham khảo {#background-reading-11}
+#### Tài liệu đọc thêm {#background-reading-11}
 
-- [Mô hình kinh tế chuyên sâu của Ethereum](https://github.com/CADLabs/ethereum-economic-model)
-- [Mô phỏng mô hình phần thưởng của cơ chế bảo chứng bằng cổ phần (Robust Incentives Group)](https://ethereum.github.io/beaconrunner/)
+- [Lớp học chuyên sâu về kinh tế học Ethereum và mô hình kinh tế](https://github.com/CADLabs/ethereum-economic-model)
+- [Mô phỏng các ưu đãi PoS (Nhóm Ưu đãi Mạnh mẽ)](https://ethereum.github.io/beaconrunner/)
 
-#### Những nghiên cứu gần đây {#recent-research-11}
+#### Nghiên cứu gần đây {#recent-research-11}
 
-- [Tăng khả năng chống kiểm duyệt giao dịch thông qua tách biệt bên khởi tạo và xây dựng khối (PBS)](https://notes.ethereum.org/s3JToeApTx6CKLJt8AbhFQ)
-- Ba cuộc tấn công vào cơ chế bảo chứng bằng cổ phần của Ethereum
+- [Tăng cường khả năng chống kiểm duyệt của các giao dịch theo cơ chế tách biệt người đề xuất và người xây dựng (PBS)](https://notes.ethereum.org/s3JToeApTx6CKLJt8AbhFQ)
+- [Ba cuộc tấn công vào Ethereum PoS](https://arxiv.org/abs/2110.10086)
 
-### Kí gửi và phái sinh {#liquid-staking-and-derivatives}
+### Đặt cọc thanh khoản và các công cụ phái sinh {#liquid-staking-and-derivatives}
 
-Kí gửi cho phép những người dùng có ít hơn 32 ETH nhận được lãi kí gửi thông qua việc trao đổi ether để nhận về một token đại diện cho khoản ether kí gửi có thể được sử dụng trong tài chính phi tập trung. Tuy nhiên, các ưu đãi và động lực thị trường liên quan đến đặt cược thanh khoản vẫn đang được khám phá, cũng như tác động của nó đối với tính bảo mật của Ethereum (ví dụ: rủi ro tập trung hóa).
+Đặt cọc thanh khoản cho phép người dùng có ít hơn 32 ETH nhận được lợi suất đặt cọc bằng cách hoán đổi ether lấy một token đại diện cho ether đã đặt cọc có thể được sử dụng trong DeFi. Tuy nhiên, các ưu đãi và động lực thị trường liên quan đến đặt cọc thanh khoản vẫn đang được khám phá, cũng như tác động của nó đối với bảo mật của Ethereum (ví dụ: rủi ro tập trung hóa).
 
-#### Tài liệu tham khảo {#background-reading-12}
+#### Tài liệu đọc thêm {#background-reading-12}
 
-- [Nghiên cứu về kí gửi của Ethresear.ch](https://ethresear.ch/search?q=liquid%20staking)
-- [Lido: Hành trình hướng tới kí gửi Ethereum minh bạch](https://blog.lido.fi/the-road-to-trustless-ethereum-staking/)
-- [Giới thiệu về giao thức kí gửi Rocket Pool](https://medium.com/rocket-pool/rocket-pool-staking-protocol-part-1-8be4859e5fbd)
+- [Đặt cọc thanh khoản trên Ethresear.ch](https://ethresear.ch/search?q=liquid%20staking)
+- [Lido: Con đường dẫn đến việc đặt cọc Ethereum không cần tin cậy](https://blog.lido.fi/the-road-to-trustless-ethereum-staking/)
+- [Rocket Pool: Giới thiệu Giao thức đặt cọc](https://medium.com/rocket-pool/rocket-pool-staking-protocol-part-1-8be4859e5fbd)
 
-#### Những nghiên cứu gần đây {#recent-research-12}
+#### Nghiên cứu gần đây {#recent-research-12}
 
-- [Xử lí cơ chế rút kí gửi của Lido](https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
-- [Thông tin xác thực rút kí gửi](https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722)
-- [Những rủi ro của phái sinh tài sản kí gửi](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
+- [Xử lý rút tiền từ Lido](https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
+- [Thông tin xác thực rút tiền](https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722)
+- [Rủi ro của các Công cụ Phái sinh Đặt cọc Thanh khoản](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
 
-## Kiểm thử {#testing}
+## Thử nghiệm {#testing}
 
 ### Xác minh hình thức {#formal-verification}
 
-Xác minh hình thức là quá trình viết mã để kiểm chứng rằng các đặc tính về cơ chế đồng thuận của Ethereum hoàn toàn chính xác và không có lỗi. Hiện nay, có một phiên bản khả dụng của các đặc tính trên được viết bằng Python cần được bảo trì và phát triển liên tục. Các nghiên cứu sâu hơn có thể giúp cải thiện phiên bản Python trên và bổ sung các công cụ có khả năng kiểm tra tính đúng đắn cũng như phát hiện các vấn đề tiềm ẩn một cách vững chắc hơn.
+Xác minh hình thức là việc viết mã để xác minh rằng các thông số kỹ thuật đồng thuận của Ethereum là chính xác và không có lỗi. Có một phiên bản có thể thực thi của thông số kỹ thuật được viết bằng Python yêu cầu bảo trì và phát triển. Nghiên cứu sâu hơn có thể giúp cải thiện việc triển khai Python của thông số kỹ thuật và thêm các công cụ có thể xác minh tính chính xác một cách mạnh mẽ hơn và xác định các vấn đề.
 
-#### Tài liệu tham khảo {#background-reading-13}
+#### Tài liệu đọc thêm {#background-reading-13}
 
 - [Giới thiệu về xác minh hình thức](https://ptolemy.berkeley.edu/projects/embedded/research/vis/doc/VisUser/vis_user/node4.html)
 - [Xác minh hình thức (Intel)](https://www.cl.cam.ac.uk/~jrh13/papers/mark10.pdf)
 
-#### Những nghiên cứu gần đây {#recent-research-13}
+#### Nghiên cứu gần đây {#recent-research-13}
 
-- [Xác minh hình thức cho hợp đồng kí gửi](https://github.com/runtimeverification/deposit-contract-verification)
-- [Xác minh hình thức cho các đặc tính của chuỗi Beacon](https://github.com/runtimeverification/deposit-contract-verification)
+- [Xác minh hình thức của hợp đồng tiền gửi](https://github.com/runtimeverification/deposit-contract-verification)
+- [Xác minh hình thức của thông số kỹ thuật Chuỗi Beacon](https://github.com/runtimeverification/deposit-contract-verification)
 
 ## Khoa học dữ liệu và phân tích {#data-science-and-analytics}
 
-Nhu cầu trong việc có thêm các công cụ phân tích dữ liệu và bảng thông tin để cung cấp các thông tin chi tiết về hoạt động của Ethereum và trạng thái vận hành của mạng lưới.
+Cần có thêm các công cụ phân tích dữ liệu và bảng điều khiển cung cấp thông tin chi tiết về hoạt động trên Ethereum và tình trạng của mạng lưới.
 
-### Tài liệu tham khảo {#background-reading-14}
+### Tài liệu đọc thêm {#background-reading-14}
 
 - [Dune Analytics](https://dune.com/browse/dashboards)
-- [Bảng thông tin của Client diversity](https://clientdiversity.org/)
+- [Bảng điều khiển sự đa dạng máy khách](https://clientdiversity.org/)
 
-#### Những nghiên cứu gần đây {#recent-research-14}
+#### Nghiên cứu gần đây {#recent-research-14}
 
-- [Phân tích dữ liệu của Robust Incentives Group](https://rig.ethereum.org/)
+- [Phân tích Dữ liệu của Nhóm Ưu đãi Mạnh mẽ](https://rig.ethereum.org/)
 
-## Các ứng dụng và bộ công cụ {#apps-and-tooling}
+## Ứng dụng và công cụ {#apps-and-tooling}
 
-Tầng ứng dụng hỗ trợ một hệ sinh thái đa dạng các chương trình có chức năng thực hiện việc xử lý và hoàn tất giao dịch trên lớp nền tảng của Ethereum. Các đội ngũ phát triển luôn cố gắng nghiên cứu những cách mới để tận dụng Ethereum nhằm tạo ra các phiên bản có thể kết hợp, không cần cấp phép và có khả năng chống kiểm duyệt của những ứng dụng Web2 quan trọng, hoặc sáng tạo ra những ý tưởng hoàn toàn mới thuộc về Web3. Bên cạnh đó, những bộ công cụ mới cũng được phát triển liên tục giúp việc xây dựng các ứng dụng phi tập trung đơn giản hơn.
+Lớp ứng dụng hỗ trợ một hệ sinh thái đa dạng gồm các chương trình giải quyết các giao dịch trên lớp cơ sở của Ethereum. Các nhóm phát triển không ngừng tìm ra những cách mới để tận dụng Ethereum nhằm tạo ra các phiên bản có khả năng kết hợp, không cần cấp phép và chống kiểm duyệt của các ứng dụng Web2 quan trọng hoặc tạo ra các khái niệm hoàn toàn mới dành riêng cho Web3. Đồng thời, các công cụ mới đang được phát triển giúp việc xây dựng các ứng dụng phi tập trung (dapp) trên Ethereum trở nên bớt phức tạp hơn.
 
-### Tài chính phi tập trung {#defi}
+### DeFi {#defi}
 
-Tài chính phi tập trung (DeFi) là một trong những lớp ứng dụng chính được xây dựng trên nền tảng Ethereum. DeFi hướng đến việc tạo ra những "khối Lego tài chính" có thể kết hợp, cho phép người dùng lưu trữ, chuyển giao, cho vay, đi vay và đầu tư tài sản mã hóa thông qua các hợp đồng thông minh. DeFi là một lĩnh vực phát triển với tốc độ nhanh và được cập nhật liên tục. Việc nghiên cứu về các giao thức an toàn, hiệu quả và dễ tiếp cận luôn luôn cần thiết.
+Tài chính phi tập trung (DeFi) là một trong những lớp ứng dụng chính được xây dựng trên Ethereum. DeFi nhằm mục đích tạo ra các "lego tiền tệ" có khả năng kết hợp cho phép người dùng lưu trữ, chuyển, cho vay, đi vay và đầu tư tài sản tiền mã hóa bằng cách sử dụng các hợp đồng thông minh. DeFi là một không gian phát triển nhanh chóng và liên tục được cập nhật. Nghiên cứu về các Giao thức an toàn, hiệu quả và dễ tiếp cận là điều liên tục cần thiết.
 
-#### Tài liệu tham khảo {#background-reading-15}
+#### Tài liệu đọc thêm {#background-reading-15}
 
-- [Tài chính phi tập trung](/defi/)
-- [Coinbase: Tài chính phi tập trung là gì](https://www.coinbase.com/learn/crypto-basics/what-is-defi)
+- [DeFi](/defi/)
+- [Coinbase: DeFi là gì?](https://www.coinbase.com/learn/crypto-basics/what-is-defi)
 
-#### Những nghiên cứu gần đây {#recent-research-15}
+#### Nghiên cứu gần đây {#recent-research-15}
 
-- [Tài chính phi tập trung, nhưng quyền sở hữu tập trung?](https://arxiv.org/pdf/2012.09306.pdf)
-- [Optimism: Hành trình hướng tới các giao dịch dưới 1 đô](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92)
+- [Tài chính phi tập trung, quyền sở hữu tập trung?](https://arxiv.org/pdf/2012.09306.pdf)
+- [Optimism: Con đường dẫn đến các giao dịch dưới một đô la](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92)
 
-### Tổ chức quản trị phi tập trung {#daos}
+### DAO {#daos}
 
-Một ứng dụng thực tế quan trọng của Ethereum là khả năng tổ chức theo hình thức phi tập trung thông qua việc sử dụng các Tổ chức quản trị phi tập trung. Có rất nhiều nghiên cứu đang được tiến hành về cách các Tổ chức quản trị phi tập trung trên Ethereum có thể được phát triển và sử dụng để thực thi các hình thức quản trị tiên tiến hơn, với tư cách là một công cụ điều phối tối giản về mặt niềm tin, qua đó mở rộng đáng kể các lựa chọn của con người vượt ra ngoài khuôn khổ truyền thống của các công ty và tổ chức.
+Một trường hợp sử dụng có tác động lớn đối với Ethereum là khả năng tổ chức theo cách phi tập trung thông qua việc sử dụng các DAO. Có rất nhiều nghiên cứu tích cực về cách các DAO trên Ethereum có thể được phát triển và sử dụng để thực thi các hình thức Quản trị được cải thiện, như một công cụ điều phối tối thiểu hóa niềm tin, mở rộng đáng kể các lựa chọn của mọi người vượt ra ngoài các tập đoàn và tổ chức truyền thống.
 
-#### Tài liệu tham khảo {#background-reading-16}
+#### Tài liệu đọc thêm {#background-reading-16}
 
-- [Giới thiệu về các tổ chức quản trị phi tập trung](/dao/)
-- [Dao Collective](https://daocollective.xyz/)
+- [Giới thiệu về DAO](/dao/)
+- [DAO Collective](https://daocollective.xyz/)
 
-#### Những nghiên cứu gần đây {#recent-research-16}
+#### Nghiên cứu gần đây {#recent-research-16}
 
-- [Bản đồ hệ sinh thái DAO](https://www.researchgate.net/publication/358694594_Mapping_out_the_DAO_Ecosystem_and_Assessing_DAO_Autonomy)
+- [Lập bản đồ hệ sinh thái DAO](https://www.researchgate.net/publication/358694594_Mapping_out_the_DAO_Ecosystem_and_Assessing_DAO_Autonomy)
 
-### Công cụ nhà phát triển {#developer-tools}
+### Công cụ dành cho nhà phát triển {#developer-tools}
 
-Các công cụ dành cho nhà phát triển Ethereum đang liên tục được cải tiến. Có rất nhiều hoạt động nghiên cứu và phát triển đang diễn xoay quanh lĩnh vực này.
+Các công cụ dành cho nhà phát triển Ethereum đang được cải thiện nhanh chóng. Có rất nhiều nghiên cứu và phát triển tích cực cần thực hiện trong lĩnh vực chung này.
 
-#### Tài liệu tham khảo {#background-reading-17}
+#### Tài liệu đọc thêm {#background-reading-17}
 
-- [Hệ thống công cụ theo ngôn ngữ lập trình](/developers/docs/programming-languages/)
-- [Các cấu trúc nền tảng cho nhà phát triển](/developers/docs/frameworks/)
-- [Danh sách công cụ dành cho nhà phát triển cơ chế đồng thuận](https://github.com/ConsenSys/ethereum-developer-tools-list)
-- [Các tiêu chuẩn của token](/developers/docs/standards/tokens/)
-- [[CryptoDevHub: Bộ công cụ cho máy ảo Ethereum](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
+- [Công cụ theo ngôn ngữ lập trình](/developers/docs/programming-languages/)
+- [Các Framework dành cho nhà phát triển](/developers/docs/frameworks/)
+- [Danh sách công cụ dành cho nhà phát triển đồng thuận](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Các tiêu chuẩn token](/developers/docs/standards/tokens/)
+- [CryptoDevHub: Các công cụ EVM](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
 
-#### Những nghiên cứu gần đây {#recent-research-17}
+#### Nghiên cứu gần đây {#recent-research-17}
 
-- [Kênh công cụ phát triển cơ chế đồng thuận trong Discord R&D Ethereum](https://discordapp.com/channels/595666850260713488/746343380900118528)
+- [Kênh Công cụ Đồng thuận trên Discord Eth R&D](https://discordapp.com/channels/595666850260713488/746343380900118528)
 
-### Trình cung cấp dữ liệu ngoài chuỗi {#oracles}
+### Oracle {#oracles}
 
-Trình cung cấp dữ liệu ngoài chuỗi cho phép đưa dữ liệu ngoài chuỗi vào chuỗi khối mà không phụ thuộc vào quyền kiểm soát tập trung hay sự cho phép của bên thứ ba. Việc đưa những dữ liệu này lên chuỗi khối cho phép các ứng dụng phi tập trung phản ứng với các sự kiện xảy ra ngoài thế giới thực, chẳng hạn như biến động giá của tài sản ngoài chuỗi, các sự kiện trong ứng dụng ngoài chuỗi, hoặc thậm chí là thay đổi thời tiết.
+Các oracle nhập dữ liệu ngoài chuỗi vào Chuỗi khối theo cách không cần cấp phép và phi tập trung. Việc đưa dữ liệu này lên chuỗi cho phép các dapp phản ứng với các hiện tượng trong thế giới thực như biến động giá của các tài sản trong thế giới thực, các sự kiện trong các ứng dụng ngoài chuỗi hoặc thậm chí là những thay đổi về thời tiết.
 
-#### Tài liệu tham khảo {#background-reading-18}
+#### Tài liệu đọc thêm {#background-reading-18}
 
-- [Giới thiệu về Trình cung cấp dữ liệu ngoài chuỗi](/developers/docs/oracles/)
+- [Giới thiệu về Oracle](/developers/docs/oracles/)
 
-#### Những nghiên cứu gần đây {#recent-research-18}
+#### Nghiên cứu gần đây {#recent-research-18}
 
-- [Khảo sát về các trình cung cấp dữ liệu ngoài chuỗi](https://arxiv.org/pdf/2004.07140.pdf)
-- [Tài liệu trắng của Chainlink](https://chain.link/whitepaper)
+- [Khảo sát về các oracle Chuỗi khối](https://arxiv.org/pdf/2004.07140.pdf)
+- [Sách trắng Chainlink](https://chain.link/whitepaper)
 
 ### Bảo mật ứng dụng {#app-security}
 
-Các vụ tấn công trên Ethereum thường khai thác các lỗ hổng trong từng ứng dụng riêng lẻ, thay vì tấn công giao thức. Các hacker và nhà phát triển ứng dụng liên tục hướng tới việc phát triển các phương thức tấn công và phòng thủ mới. Điều này có nghĩa việc nghiên cứu và phát triển là luôn luôn cần thiết để bảo vệ những ứng dụng khỏi các cuộc tấn công.
+Các vụ hack trên Ethereum thường khai thác các lỗ hổng trong các ứng dụng riêng lẻ thay vì trong chính Giao thức. Tin tặc và các nhà phát triển ứng dụng đang bị cuốn vào một cuộc chạy đua vũ trang để phát triển các cuộc tấn công và phòng thủ mới. Điều này có nghĩa là luôn cần có những nghiên cứu và phát triển quan trọng để giữ cho các ứng dụng an toàn trước các vụ hack.
 
-#### Tài liệu tham khảo {#background-reading-19}
+#### Tài liệu đọc thêm {#background-reading-19}
 
-- [Báo cáo về đợt tấn công vào Wormhole](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
-- [Danh sách phân tích hậu sự cố các vụ tấn công vào hợp đồng Ethereum](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
+- [Báo cáo khai thác Wormhole](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
+- [Danh sách các bài phân tích sau sự cố hack hợp đồng Ethereum](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
 - [Rekt News](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
-#### Những nghiên cứu gần đây {#recent-research-19}
+#### Nghiên cứu gần đây {#recent-research-19}
 
-- [Báo cáo về các ứng dụng từ Ethresear.ch](https://ethresear.ch/c/applications/18)
+- [Các ứng dụng trên Ethresear.ch](https://ethresear.ch/c/applications/18)
 
-### Hệ thống công nghệ {#technology-stack}
+### Ngăn xếp công nghệ {#technology-stack}
 
-Việc phát triển hệ thống công nghệ của Ethereum theo mô hình phi tập trung là một đề tài nghiên cứu thiết yếu. Hiện nay các ứng dụng phi tập trung trên Ethereum vẫn thường có một vài yếu tố mang tính tập trung do phải dựa vào các công cụ hay hạ tầng tập trung.
+Phi tập trung hóa toàn bộ ngăn xếp công nghệ Ethereum là một lĩnh vực nghiên cứu quan trọng. Hiện tại, các dapp trên Ethereum thường có một số điểm tập trung hóa vì chúng dựa vào các công cụ hoặc cơ sở hạ tầng tập trung.
 
-#### Tài liệu tham khảo {#background-reading-20}
+#### Tài liệu đọc thêm {#background-reading-20}
 
-- [Hệ thống công nghệ của Ethereum](/developers/docs/ethereum-stack/)
-- [Coinbase: Giới thiệu về công nghệ Web3](https://blog.coinbase.com/a-simple-guide-to-the-web3-stack-785240e557f0)
-- [Giới thiệu về các hợp đồng thông minh](/developers/docs/smart-contracts/)
+- [Ngăn xếp Ethereum](/developers/docs/ethereum-stack/)
+- [Coinbase: Giới thiệu về Ngăn xếp Web3](https://blog.coinbase.com/a-simple-guide-to-the-web3-stack-785240e557f0)
+- [Giới thiệu về hợp đồng thông minh](/developers/docs/smart-contracts/)
 - [Giới thiệu về lưu trữ phi tập trung](/developers/docs/storage/)
 
-#### Những nghiên cứu gần đây {#recent-research-20}
+#### Nghiên cứu gần đây {#recent-research-20}
 
-- [Kết hợp các hợp đồng thông minh](/developers/docs/smart-contracts/composability/)
+- [Khả năng kết hợp của hợp đồng thông minh](/developers/docs/smart-contracts/composability/)

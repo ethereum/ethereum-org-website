@@ -1,12 +1,12 @@
 {
   "energy-consumption-chart-airbnb-label": "AirBnB",
-  "energy-consumption-chart-btc-pow-label": "Uthibitisho-wa-Kazi wa Bitcoin",
-  "energy-consumption-chart-eth-pos-label": "Uthibitisho-wa-Hisa wa Ethereum",
-  "energy-consumption-chart-eth-pow-label": "Uthibitisho-wa-Kazi wa Ethereum",
-  "energy-consumption-chart-gaming-us-label": "Michezo ukiwa Marekani",
-  "energy-consumption-chart-global-data-centers-label": "Kituo cha data cha Kimataifa",
+  "energy-consumption-chart-btc-pow-label": "BTC PoW",
+  "energy-consumption-chart-eth-pos-label": "ETH PoS",
+  "energy-consumption-chart-eth-pow-label": "ETH PoW",
+  "energy-consumption-chart-gaming-us-label": "Michezo ya video nchini Marekani",
+  "energy-consumption-chart-global-data-centers-label": "Vituo vya data duniani",
   "energy-consumption-chart-netflix-label": "Netflix",
   "energy-consumption-chart-paypal-label": "PayPal",
-  "energy-consumption-gold-mining-cbeci-label": "Uchimbaji wa Dhahabu",
-  "energy-consumption-chart-legend": "Matumiz ya nishati ya mwaka kwa lisaa la Terawati/mwaka"
+  "energy-consumption-gold-mining-cbeci-label": "Uchimbaji wa dhahabu",
+  "energy-consumption-chart-legend": "Matumizi ya Nishati ya Kila Mwaka katika TWh/mwaka"
 }

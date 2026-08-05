@@ -1,77 +1,76 @@
 ---
-title: "Часто задаваемые вопросы"
-description: Common Ethereum questions about wallets, transactions, staking, and more.
+title: Часто задаваемые вопросы
+description: Частые вопросы об Эфириуме, касающиеся кошельков, транзакций, стейкинга и многого другого.
 lang: ru
 ---
 
-# Часто задаваемые вопросы {#faq}
+## Я отправил криптовалюту на неправильный адрес {#wrong-wallet}
 
-## I sent crypto to the wrong address {#wrong-wallet}
+Транзакция, отправленная в Эфириуме, необратима. К сожалению, если вы отправили ETH или токены на неправильный кошелек, отменить транзакцию невозможно.
 
-Транзакция, отправленная на Ethereum, необратима. Unfortunately, if you sent ETH or tokens to the wrong wallet, there is no way to reverse the transaction.
+**Что вы можете сделать:**
 
-**What you can do:**
+- **Если вы знаете владельца адреса**, свяжитесь с ним напрямую и попросите вернуть средства
+- **Если адрес принадлежит бирже или известному сервису**, обратитесь в их службу поддержки, так как они могут помочь
+- **Если вы отправили токены на адрес контракта**, проверьте, есть ли у контракта функция вывода или восстановления (это бывает редко)
 
-- **If you know the owner of the address**, contact them directly and ask them to return the funds
-- **If the address belongs to an exchange or known service**, contact their support team, as they may be able to help
-- **If you sent tokens to a contract address**, check whether the contract has a withdrawal or recovery function (this is rare)
+В большинстве случаев вернуть средства невозможно. Ни одна центральная организация, юридическое или физическое лицо не владеет Эфириумом, а это значит, что никто не может отменять транзакции. Всегда дважды проверяйте адрес получателя перед подтверждением.
 
-In most cases, there is no way to recover the funds. No central organization, entity, or person owns Ethereum, which means no one can reverse transactions. Always double-check the recipient address before confirming.
+## Я потерял доступ к своему кошельку {#lost-wallet-access}
 
-## I lost access to my wallet {#lost-wallet-access}
+Ваши варианты восстановления зависят от типа используемого вами кошелька.
 
-Your recovery options depend on the type of wallet you use.
+### Если у вас есть сид-фраза (фраза восстановления) {#if-you-have-your-seed-phrase-recovery-phrase}
 
-### If you have your seed phrase (recovery phrase)
+Вы можете восстановить свой кошелек в любом совместимом приложении-кошельке, используя свою сид-фразу. Вот почему крайне важно надежно хранить сид-фразу в автономном режиме (офлайн). Инструкции по восстановлению можно найти в документации поставщика вашего кошелька.
 
-You can restore your wallet in any compatible wallet app using your seed phrase. This is why it is critical to keep your seed phrase stored safely offline. Check your wallet provider's documentation for restore instructions.
+### Если вы потеряли свою сид-фразу {#if-you-have-lost-your-seed-phrase}
 
-### If you have lost your seed phrase
+Без вашей сид-фразы или закрытых ключей ваши средства не могут быть восстановлены. Никто, включая ethereum.org, не может сбросить ваш пароль или восстановить доступ к кошельку для самостоятельного хранения.
 
-Without your seed phrase or private keys, your funds cannot be recovered. No one, including ethereum.org, can reset your password or restore access to a self-custody wallet.
+### Если ваш аккаунт находится на бирже {#if-your-account-is-on-an-exchange}
 
-### If your account is on an exchange
-
-If your account is on a centralized exchange like Coinbase, Binance, or Kraken, contact the exchange's support team directly. They control accounts on their platform and may be able to help with password resets or account recovery.
+Если ваш аккаунт находится на централизованной бирже, такой как Coinbase, Binance или Kraken, обратитесь напрямую в службу поддержки биржи. Они контролируют аккаунты на своей платформе и могут помочь со сбросом пароля или восстановлением аккаунта.
 
 <Alert variant="warning">
 <AlertEmoji text=":shield:"/>
 <AlertContent>
 <AlertDescription>
 
-**Never share your seed phrase with anyone** claiming to help you recover your wallet. This is one of the most common scam tactics. No legitimate service will ever ask for your seed phrase.
+**Никогда и никому не сообщайте свою сид-фразу**, даже если вам предлагают помощь в восстановлении кошелька. Это одна из самых распространенных мошеннических тактик. Ни один законный сервис никогда не попросит вашу сид-фразу.
+
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 <DocLink href="/guides/how-to-use-a-wallet/">
-  How to use a wallet
+  Как пользоваться кошельком
 </DocLink>
 
-## My transaction is stuck or pending {#stuck-transaction}
+## Моя транзакция застряла или находится в статусе ожидающей {#stuck-transaction}
 
-Transactions on Ethereum can get stuck when the gas fee you set was lower than what the network currently requires. Most wallets let you fix this:
+Транзакции в Эфириуме могут застрять, если установленная вами комиссия за газ оказалась ниже той, которая требуется сети в данный момент. Большинство кошельков позволяют это исправить:
 
-- **Speed up:** Resubmit the same transaction with a higher gas fee
-- **Cancel:** Send a 0 ETH transaction to your own address using the same nonce as the pending transaction
+- **Ускорить:** повторно отправьте ту же транзакцию с более высокой комиссией за газ
+- **Отменить:** отправьте транзакцию на 0 ETH на свой собственный адрес, используя тот же нонс, что и у ожидающей транзакции
 
-### Helpful guides
+### Полезные руководства {#helpful-guides}
 
-- [How to speed up or cancel a pending transaction on MetaMask](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
-- [Как отменить ожидающие транзакции Ethereum](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
+- [Как ускорить или отменить ожидающую транзакцию в МетаМаск](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
+- [Как отменить ожидающие транзакции в Эфириуме](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-## Как мне получить Ethereum в бесплатной раздаче? {#giveaway-scam}
+## Как мне востребовать Эфириум в раздаче? {#giveaway-scam}
 
-Раздачи Ethereum — это мошенничество, предназначенное для кражи ваших эфиров (ETH). Do not be tempted by offers that seem too good to be true. If you send ETH to a giveaway address, you will not receive a giveaway, and you will not be able to recover your funds.
+Раздачи Эфириума — это мошенничество, направленное на кражу ваших ETH. Не поддавайтесь на предложения, которые кажутся слишком хорошими, чтобы быть правдой. Если вы отправите ETH на адрес раздачи, вы ничего не получите и не сможете вернуть свои средства.
 
 [Подробнее о предотвращении мошенничества](/security/#common-scams)
 
-## How do I stake ETH? {#how-to-stake}
+## Как мне стейкать ETH? {#how-to-stake}
 
-Чтобы стать валидатором, нужно стать дольщиком 32 ETH в депозитном контракте Ethereum и установить узел валидатора. You can also participate with less ETH through staking pools.
+Чтобы стать валидатором, вы должны застейкать 32 ETH в депозитный контракт Эфириума и настроить узел валидатора. Вы также можете участвовать с меньшим количеством ETH через пулы для стейкинга.
 
-More information is available on our [staking pages](/staking/) and at [the staking launchpad](https://launchpad.ethereum.org/).
+Дополнительная информация доступна на наших [страницах о стейкинге](/staking/) и на [панели запуска стейкинга](https://launchpad.ethereum.org/).
 
-## Как я могу добыть Ethereum? {#mining-ethereum}
+## Как мне майнить Эфириум? {#mining-ethereum}
 
-Майнинг Ethereum стал невозможен. Mining was switched off when Ethereum moved from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glossary/#pos) during [The Merge](/roadmap/merge/) in September 2022. Теперь вместо майнеров в Ethereum появились валидаторы. Любой желающий может [стейкать](/glossary/#staking) ETH и получать вознаграждения за стейкинг, запуская программное обеспечение валидатора для защиты сети.
+Майнинг Эфириума больше невозможен. Майнинг был отключен, когда Эфириум перешел от [доказательства выполнения работы (PoW)](/glossary/#pow) к [доказательству доли владения](/glossary/#pos) во время [Слияния](/roadmap/merge/) в сентябре 2022 года. Теперь вместо майнеров в Эфириуме работают валидаторы. Любой желающий может [стейкать](/glossary/#staking) ETH и получать вознаграждения за стейкинг, запуская программное обеспечение валидатора для обеспечения безопасности сети.

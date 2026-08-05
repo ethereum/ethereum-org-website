@@ -7,24 +7,30 @@ import {
   CardEmoji,
   CardFooter,
   CardHeader,
+  CardIconContainer,
   CardParagraph,
   CardProps,
   CardTitle,
 } from "../ui/card"
+
+type MarkdownCardIconProps =
+  | { emoji?: string; icon?: never }
+  | { emoji?: never; icon?: ReactNode }
 
 type MarkdownCardCTAProps =
   | { ctaLabel: ReactNode; href: string }
   | { ctaLabel?: never; href?: never }
 
 export type MarkdownCardProps = {
-  emoji?: string
   title?: ReactNode
   description?: ReactNode
-} & MarkdownCardCTAProps &
+} & MarkdownCardIconProps &
+  MarkdownCardCTAProps &
   CardProps
 
 const MarkdownCard = ({
   emoji,
+  icon,
   title,
   description,
   children,
@@ -33,9 +39,13 @@ const MarkdownCard = ({
   ...props
 }: MarkdownCardProps) => (
   <Card {...props}>
-    {emoji && (
+    {(emoji || icon) && (
       <CardHeader>
-        <CardEmoji text={emoji} />
+        {emoji ? (
+          <CardEmoji text={emoji} />
+        ) : (
+          <CardIconContainer>{icon}</CardIconContainer>
+        )}
       </CardHeader>
     )}
     <CardContent>

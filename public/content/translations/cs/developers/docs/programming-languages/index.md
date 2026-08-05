@@ -1,17 +1,17 @@
 ---
 title: "Programovací jazyky"
-description: "Objevte vývojářské zdroje informací pro Ethereum v různých programovacích jazycích, včetně JavaScript, Python, Go, Rust a dalších."
+description: "Objevte zdroje pro vývoj na Ethereu pro různé programovací jazyky, včetně JavaScriptu, Pythonu, Go, Rustu a dalších."
 lang: cs
 ---
 
-Častou mylnou představou je, že vývojáři musí psát [chytré kontrakty](/developers/docs/smart-contracts/), aby mohli stavět na Ethereu. To není pravda.
+Častým omylem je, že vývojáři musí psát [chytré kontrakty](/developers/docs/smart-contracts/), aby mohli stavět na Ethereu. To není pravda.
 Jednou z krás sítě Ethereum a její komunity je, že se můžete [zapojit](/community/) v téměř jakémkoli programovacím jazyce.
 
-Ethereum a jeho komunita podporují open source. Komunitní projekty - implementace klientů, API, vývojové frameworky, testovací nástroje - existují v široké škále jazyků.
+Ethereum a jeho komunita podporují open source. Můžete najít komunitní projekty – implementace klientů, API, vývojové frameworky, testovací nástroje – v široké škále jazyků.
 
-## Vyberte si jazyk {#data}
+## Vyberte si svůj jazyk {#data}
 
-Vyberte svůj oblíbený programovací jazyk a podívejte se na projekty, zdroje a virtuální komunity:
+Vyberte si svůj oblíbený programovací jazyk a najděte projekty, zdroje a virtuální komunity:
 
 - [Ethereum pro vývojáře v Dartu](/developers/docs/programming-languages/dart/)
 - [Ethereum pro vývojáře v Delphi](/developers/docs/programming-languages/delphi/)
@@ -26,8 +26,6 @@ Vyberte svůj oblíbený programovací jazyk a podívejte se na projekty, zdroje
 
 ### Co když můj jazyk není podporován {#other-lang}
 
-Chcete-li přidat odkazy na zdroje informací nebo na virtuální komunitu pro další programovací jazyk, můžete o novou stránku požádat [otevřením „issue“](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
+Pokud chcete odkázat na zdroje nebo upozornit na virtuální komunitu pro další programovací jazyk, můžete požádat o novou stránku [otevřením issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
-Pokud chcete psát kód pro komunikaci s blockchainem pomocí aktuálně nepodporovaného jazyka,
-můžete se k síti Ethereum připojit pomocí [rozhraní JSON-RPC](/developers/docs/apis/json-rpc/). Jakýkoliv programovací
-jazyk, který umí pracovat s TCP/IP, může toto rozhraní použít.
+Pokud chcete pouze psát kód pro komunikaci s blockchainem pomocí aktuálně nepodporovaného jazyka, můžete k připojení k síti Ethereum použít [rozhraní JSON-RPC](/developers/docs/apis/json-rpc/). Toto rozhraní může využít jakýkoli programovací jazyk, který umí používat TCP/IP.

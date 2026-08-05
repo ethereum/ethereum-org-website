@@ -1,5 +1,5 @@
 {
-  "page-what-is-ethereum-meta-title": "什么是以太坊？（完整指南） | ethereum.org",
+  "page-what-is-ethereum-meta-title": "什么是以太坊？（完整指南）",
   "page-what-is-ethereum-meta-description": "全面概述什么是以太坊、它的工作原理、它的作用以及如何开始使用或在它之上进行构建。用通俗易懂的语言解释。",
   "page-what-is-ethereum-title": "什么是以太坊？",
   "page-what-is-ethereum-hero-description-1": "以太坊是一个去中心化的区块链网络和软件开发平台，由加密货币以太币 (ETH) 提供动力。",
@@ -156,7 +156,7 @@
   "page-what-is-ethereum-roadmap-title": "2026 年的以太坊路线图是什么？",
   "page-what-is-ethereum-roadmap-intro-1": "以太坊没有固定的路线图。它遵循的是一个共同的愿景。",
   "page-what-is-ethereum-roadmap-intro-2": "网络升级以 EIP 的形式进行，由世界各地的贡献者公开开发。没有中央团队决定会发生什么，只有人们根据用户需求构建他们认为有用的东西。",
-  "page-what-is-ethereum-roadmap-intro-3": "弗萨卡是最近的一次升级，于 2025 年 12 月推出。它引入了 PeerDAS 以实现更高效的二层网络 (l2) 数据可用性，并将默认 gas 上限提高到约 6000 万。展望 2026 年，格拉姆斯特丹正在开发中，预计将于 2026 年上半年推出。",
+  "page-what-is-ethereum-roadmap-intro-3": "弗萨卡是最近的一次升级，于 2025 年 12 月推出。它引入了 PeerDAS 以实现更高效的二层网络 (l2) 数据可用性，并将默认 gas 上限提高至约 6000 万。展望 2026 年，格拉姆斯特丹正在开发中，预计将于 2026 年下半年推出。",
   "page-what-is-ethereum-roadmap-priorities-intro": "<a>展望未来</a>，以太坊的优先事项包括：",
   "page-what-is-ethereum-roadmap-priority-1": "让核心协议及其二层网络 (l2) 对所有人来说更快、更便宜",
   "page-what-is-ethereum-roadmap-priority-2": "改善用户和开发者的体验",

@@ -1,0 +1,220 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md",
+  "generatedAt": "2026-06-16T22:14:58.012Z",
+  "rootHash": "f59797ef3924",
+  "tree": {
+    "contentHash": "7538b34ab988",
+    "anchorHash": "611fc3372fa7",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "556c3ee68063",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "a3448c89e506",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:0": {
+        "contentHash": "5de5ffb5ea16",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prerequisites": {
+        "contentHash": "c6dc8fe62277",
+        "anchorHash": "e1030385a4d7",
+        "labelHash": "865514682d01",
+        "children": {
+          "_label": {
+            "contentHash": "865514682d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "6060a49f5e18",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "769e0b8515e3",
+            "anchorHash": "0e500613f6a4"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "problems-ws-solves": {
+        "contentHash": "6669c9da039c",
+        "anchorHash": "5eb493ceb97f",
+        "labelHash": "663a00e16110",
+        "children": {
+          "_label": {
+            "contentHash": "663a00e16110",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "2a445ed51880",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "a13bebeb57e1",
+            "anchorHash": "8a5edab28263"
+          },
+          "prose:2": {
+            "contentHash": "e7f58d7b2602",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "ws-checkpoints": {
+        "contentHash": "04c2cbd0da67",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "df4767a2ff36",
+        "children": {
+          "_label": {
+            "contentHash": "df4767a2ff36",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "9ae08ce2cd48",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "difference-between-ws-and-finalized-blocks": {
+        "contentHash": "fc8f03e2b5cf",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "0169f3f6e795",
+        "children": {
+          "_label": {
+            "contentHash": "0169f3f6e795",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "de388f12d7f6",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "how-weak-is-weak": {
+        "contentHash": "8e8ff34ab33e",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "65bfa25b6a36",
+        "children": {
+          "_label": {
+            "contentHash": "65bfa25b6a36",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "98a015a637ee",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "44c83d6d348b",
+        "anchorHash": "d8a0a1d8a6b9",
+        "labelHash": "bd2e42f237b3",
+        "children": {
+          "_label": {
+            "contentHash": "bd2e42f237b3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "869cd29e49ef",
+            "anchorHash": "9e71426e075a"
+          },
+          "prose:6": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "9b37c2eac0cd",
+            "anchorHash": "f1ca5f242868"
+          },
+          "prose:7": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "a931a16b2fd5",
+            "anchorHash": "f77359e7f56e"
+          },
+          "prose:8": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "951d3779d846",
+            "anchorHash": "460b6180d6e5"
+          },
+          "prose:9": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "a266481f9c78",
+            "anchorHash": "811f4ef9f505"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:0",
+      "prerequisites",
+      "problems-ws-solves",
+      "ws-checkpoints",
+      "difference-between-ws-and-finalized-blocks",
+      "how-weak-is-weak",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+}

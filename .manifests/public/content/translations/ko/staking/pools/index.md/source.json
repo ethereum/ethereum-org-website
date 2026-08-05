@@ -1,0 +1,461 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/staking/pools/index.md",
+  "generatedAt": "2026-06-18T00:50:46.895Z",
+  "rootHash": "979bb6321cee",
+  "tree": {
+    "contentHash": "06a7a55415b7",
+    "anchorHash": "2071caad14e9",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "f72b4371e7b0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "ba6c87edc3fb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d9a998cac660"
+      },
+      "frontmatter:emoji": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "cfe6e3139bc8"
+      },
+      "frontmatter:image": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "787db491bbdb"
+      },
+      "frontmatter:alt": {
+        "contentHash": "43fb851a79ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:sidebarDepth": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d4735e3a265e"
+      },
+      "frontmatter:summaryPoints": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-staking-pools": {
+        "contentHash": "0978001a176b",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "05f0125ceec3",
+        "children": {
+          "_label": {
+            "contentHash": "05f0125ceec3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "648461c2f16d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "why-stake-with-a-pool": {
+        "contentHash": "10a2468880c5",
+        "anchorHash": "8715fc0a20f6",
+        "labelHash": "25ca22ffcb65",
+        "children": {
+          "_label": {
+            "contentHash": "25ca22ffcb65",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "2be1289b1bd0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "ecc10fbee403",
+            "anchorHash": "28704a15211d"
+          },
+          "prose:2": {
+            "contentHash": "e204ad1b5b35",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:4": {
+            "contentHash": "4dbc4711018d",
+            "anchorHash": "dcc17d542e74",
+            "children": {
+              "component:0": {
+                "contentHash": "2b0a82adfdeb",
+                "anchorHash": "c2857de83f13",
+                "children": {
+                  "attr:title": {
+                    "contentHash": "c999a2c4547a",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:description": {
+                    "contentHash": "29ec53e4e2b9",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:emoji": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "486681b31566"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:title",
+                  "attr:description",
+                  "attr:emoji"
+                ]
+              },
+              "component:1": {
+                "contentHash": "bda89319d1e4",
+                "anchorHash": "39cd7cc96b29",
+                "children": {
+                  "attr:title": {
+                    "contentHash": "992786538a69",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:description": {
+                    "contentHash": "c13119a2374e",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:emoji": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "6e9749c8dc2c"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:title",
+                  "attr:description",
+                  "attr:emoji"
+                ]
+              },
+              "component:2": {
+                "contentHash": "777ed47599c2",
+                "anchorHash": "976404e1bd1a",
+                "children": {
+                  "attr:title": {
+                    "contentHash": "f2339e5f67b3",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:description": {
+                    "contentHash": "a940d6f88cde",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:emoji": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "5858297dd641"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:title",
+                  "attr:description",
+                  "attr:emoji"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "component:0",
+              "component:1",
+              "component:2"
+            ]
+          },
+          "component:5": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "3b28779835e3",
+            "children": {
+              "attr:page": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "ab92f3d518a5"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2",
+          "component:4",
+          "component:5"
+        ]
+      },
+      "what-to-consider": {
+        "contentHash": "4cd91b873dff",
+        "anchorHash": "2bb344707b1d",
+        "labelHash": "33595b218818",
+        "children": {
+          "_label": {
+            "contentHash": "33595b218818",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "17613379c2ac",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "a13bebeb57e1",
+            "anchorHash": "8a5edab28263"
+          },
+          "prose:3": {
+            "contentHash": "98ca30eb11c2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "070c3f8973a8",
+            "anchorHash": "ab7a165c0027"
+          },
+          "prose:4": {
+            "contentHash": "f70614558e75",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:6": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "3b28779835e3",
+            "children": {
+              "attr:page": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "ab92f3d518a5"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4",
+          "component:6"
+        ]
+      },
+      "explore-staking-pools": {
+        "contentHash": "81c9107a975c",
+        "anchorHash": "531209462fb0",
+        "labelHash": "c40c74a7684f",
+        "children": {
+          "_label": {
+            "contentHash": "c40c74a7684f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "905c803735d4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:3": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "3b28779835e3",
+            "children": {
+              "attr:category": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "ab92f3d518a5"
+              }
+            }
+          },
+          "prose:4": {
+            "contentHash": "9f14dde7a758",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "8ce04ec9d1a0",
+            "anchorHash": "63aedaf4407d"
+          },
+          "prose:5": {
+            "contentHash": "c8d01838981e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:1": {
+            "contentHash": "08cc36794621",
+            "anchorHash": "eaa33fb6a698"
+          },
+          "prose:6": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:2": {
+            "contentHash": "c60f13d769b9",
+            "anchorHash": "eaa33fb6a698"
+          },
+          "prose:7": {
+            "contentHash": "729d02636dc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "6c4943d4d337",
+            "anchorHash": "abba9ba57319"
+          },
+          "prose:8": {
+            "contentHash": "89a73ffd8e7a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2",
+          "component:3",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "html-tag:1",
+          "prose:6",
+          "html-tag:2",
+          "prose:7",
+          "link:3",
+          "prose:8"
+        ]
+      },
+      "faq": {
+        "contentHash": "088ee066ccc3",
+        "anchorHash": "a4a5dcb99163",
+        "labelHash": "e956a9404b46",
+        "children": {
+          "_label": {
+            "contentHash": "e956a9404b46",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:1": {
+            "contentHash": "b19d0b888139",
+            "anchorHash": "f5818652a990",
+            "children": {
+              "attr:title": {
+                "contentHash": "5d1140270c99",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "e27b12d730b0",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "prose:0"
+            ]
+          },
+          "component:2": {
+            "contentHash": "934adfb9568a",
+            "anchorHash": "6b4ef9b88538",
+            "children": {
+              "attr:title": {
+                "contentHash": "839a486eb5ec",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "0fb2d2bd65d3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "html-tag:0": {
+                "contentHash": "3a1fb0864f52",
+                "anchorHash": "119224e9c252"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "prose:1",
+              "html-tag:0"
+            ]
+          },
+          "component:3": {
+            "contentHash": "92c9bd5e04cc",
+            "anchorHash": "f5818652a990",
+            "children": {
+              "attr:title": {
+                "contentHash": "a12e6304f87b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "08358fb9326c",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "component:1",
+          "component:2",
+          "component:3"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "081780ba564e",
+        "anchorHash": "56414099829d",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "3a1a9744e21c",
+            "anchorHash": "00a776608398"
+          },
+          "prose:4": {
+            "contentHash": "b534ceaa146a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "a35a59f1733a",
+            "anchorHash": "30c6a340f28e"
+          },
+          "prose:5": {
+            "contentHash": "020bedb2f571",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "4584b03e49eb",
+            "anchorHash": "ec123813aeb4"
+          },
+          "prose:6": {
+            "contentHash": "e954dbb7ccf0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:template",
+      "frontmatter:emoji",
+      "frontmatter:image",
+      "frontmatter:alt",
+      "frontmatter:sidebarDepth",
+      "frontmatter:summaryPoints",
+      "what-are-staking-pools",
+      "why-stake-with-a-pool",
+      "what-to-consider",
+      "explore-staking-pools",
+      "faq",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}

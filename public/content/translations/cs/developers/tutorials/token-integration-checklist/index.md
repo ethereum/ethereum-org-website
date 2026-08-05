@@ -4,12 +4,10 @@ description: "Kontrolní seznam věcí, které je třeba zvážit při interakci
 author: "Trailofbits"
 lang: cs
 tags:
-  [
-    "solidity",
-    "smart kontrakt účty",
-    "bezpečnost",
-    "tokeny"
-  ]
+  - solidity
+  - chytré kontrakty
+  - bezpečnost
+  - tokeny
 skill: intermediate
 breadcrumb: "Integrace tokenů"
 published: 2020-08-13
@@ -17,71 +15,71 @@ source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 
-Při interakci s libovolnými tokeny postupujte podle tohoto kontrolního seznamu. Ujistěte se, že rozumíte rizikům spojeným s každou položkou, a odůvodněte jakékoli výjimky z těchto pravidel.
+Při interakci s libovolnými tokeny postupujte podle tohoto kontrolního seznamu. Ujistěte se, že rozumíte rizikům spojeným s každou položkou, a zdůvodněte případné výjimky z těchto pravidel.
 
-Pro usnadnění lze všechny nástroje Slither [utilities](https://github.com/crytic/slither#tools) spustit přímo na adrese tokenu, například:
+Pro usnadnění lze všechny [nástroje](https://github.com/crytic/slither#tools) Slither spustit přímo na adrese tokenu, například:
 
-[Návod k použití Slitheru](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+[Návod na používání nástroje Slither](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
 ```bash
 slither-check-erc 0xdac17f958d2ee523a2206206994597c13d831ec7 TetherToken
 ```
 
-Abyste mohli postupovat podle tohoto kontrolního seznamu, budete chtít mít pro daný token tento výstup ze Slitheru:
+Abyste mohli postupovat podle tohoto kontrolního seznamu, budete pro daný token potřebovat tento výstup z nástroje Slither:
 
 ```bash
-- slither-check-erc [cíl] [názevSmlouvy] [volitelné: --erc ČÍSLO_ERC]
-- slither [cíl] --print human-summary
-- slither [cíl] --print contract-summary
-- slither-prop . --contract NázevSmlouvy # vyžaduje konfiguraci a použití nástrojů Echidna a Manticore
+- slither-check-erc [target] [contractName] [optional: --erc ERC_NUMBER]
+- slither [target] --print human-summary
+- slither [target] --print contract-summary
+- slither-prop . --contract ContractName # vyžaduje konfiguraci a použití Echidny a Manticore
 ```
 
-## Obecná doporučení {#general-considerations}
+## Obecné úvahy {#general-considerations}
 
-- **Smlouva prošla bezpečnostním auditem.** Vyhněte se interakci se smlouvami, které bezpečnostní audit nemají. Zkontrolujte délku hodnocení (tzv. „level of effort“), reputaci bezpečnostní firmy a počet i závažnost zjištění.
-- **Kontaktovali jste vývojáře.** Možná budete muset jejich tým upozornit na nějaký incident. Příslušné kontakty hledejte na [blockchain-security-contacts](https://github.com/crytic/blockchain-security-contacts).
-- **Mají bezpečnostní mailing list pro kritická oznámení.** Jejich tým by měl informovat uživatele (jako jste vy!) když se objeví kritické problémy nebo když dojde k aktualizacím.
+- **Kontrakt prošel bezpečnostním auditem.** Vyhněte se interakci s kontrakty, které nemají bezpečnostní audit. Zkontrolujte délku hodnocení (tzv. „úroveň úsilí“), pověst bezpečnostní firmy a počet a závažnost nálezů.
+- **Kontaktovali jste vývojáře.** Možná budete muset jejich tým upozornit na incident. Vhodné kontakty hledejte na [blockchain-security-contacts](https://github.com/crytic/blockchain-security-contacts).
+- **Mají bezpečnostní e-mailovou konferenci pro kritická oznámení.** Jejich tým by měl uživatele (jako jste vy!) informovat, když jsou zjištěny kritické problémy nebo když dojde k aktualizacím.
 
 ## Shoda s ERC {#erc-conformity}
 
-Slither obsahuje nástroj, [slither-check-erc](https://github.com/crytic/slither/wiki/ERC-Conformance), který kontroluje shodu tokenu s mnoha souvisejícími standardy ERC. Pomocí slither-check-erc zkontrolujte, že:
+Slither obsahuje nástroj [slither-check-erc](https://github.com/crytic/slither/wiki/ERC-Conformance), který kontroluje shodu tokenu s mnoha souvisejícími standardy ERC. Použijte slither-check-erc k ověření, že:
 
-- **Funkce transfer a transferFrom vracejí booleovskou hodnotu.** Některé tokeny u těchto funkcí booleovskou hodnotu nevracejí. V důsledku toho mohou jejich volání ve smlouvě selhat.
-- **Funkce name, decimals a symbol jsou přítomny, pokud se používají.** Tyto funkce jsou ve standardu ERC20 volitelné a nemusí být k dispozici.
-- **Funkce Decimals vrací uint8.** Několik tokenů nesprávně vrací uint256. Pokud tomu tak je, ujistěte se, že vrácená hodnota je nižší než 255.
-- **Token zmírňuje známý [souběh (race condition) ERC20](https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729).** Standard ERC20 má známý souběh (race condition), který musí být zmírněn, aby se zabránilo útočníkům v krádeži tokenů.
-- **Token není tokenem ERC777 a nemá žádné volání externí funkce v transfer a transferFrom.** Externí volání ve funkcích převodu mohou vést k opětovnému vstupu (reentrancy).
+- **Funkce transfer a transferFrom vracejí boolean.** Některé tokeny u těchto funkcí nevracejí boolean. V důsledku toho může jejich volání v kontraktu selhat.
+- **Funkce name, decimals a symbol jsou přítomny, pokud se používají.** Tyto funkce jsou ve standardu ERC-20 volitelné a nemusí být přítomny.
+- **Funkce decimals vrací uint8.** Některé tokeny nesprávně vracejí uint256. Pokud je tomu tak, ujistěte se, že vrácená hodnota je menší než 255.
+- **Token zmírňuje známý [souběh (race condition) ERC-20](https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729).** Standard ERC-20 má známý problém se souběhem, který musí být ošetřen, aby se zabránilo útočníkům v krádeži tokenů.
+- **Token není tokenem ERC-777 a nemá žádné volání externí funkce v transfer a transferFrom.** Externí volání ve funkcích pro převod mohou vést k útokům typu reentrancy.
 
-Slither obsahuje nástroj [slither-prop](https://github.com/crytic/slither/wiki/Property-generation), který generuje jednotkové testy a bezpečnostní vlastnosti, jež mohou odhalit mnoho běžných chyb ERC. Pomocí slither-prop zkontrolujte, že:
+Slither obsahuje nástroj [slither-prop](https://github.com/crytic/slither/wiki/Property-generation), který generuje jednotkové testy a bezpečnostní vlastnosti, jež mohou odhalit mnoho běžných chyb ERC. Použijte slither-prop k ověření, že:
 
-- **Smlouva projde všemi jednotkovými testy a bezpečnostními vlastnostmi z nástroje slither-prop.** Spusťte vygenerované jednotkové testy, poté zkontrolujte vlastnosti pomocí [Echidny](https://github.com/crytic/echidna) a [Manticore](https://manticore.readthedocs.io/en/latest/verifier.html).
+- **Kontrakt projde všemi jednotkovými testy a bezpečnostními vlastnostmi ze slither-prop.** Spusťte vygenerované jednotkové testy a poté zkontrolujte vlastnosti pomocí nástrojů [Echidna](https://github.com/crytic/echidna) a [Manticore](https://manticore.readthedocs.io/en/latest/verifier.html).
 
-Nakonec existují určité vlastnosti, které je obtížné identifikovat automaticky. Ručně zkontrolujte, zda platí následující podmínky:
+Nakonec existují určité charakteristiky, které je obtížné identifikovat automaticky. Tyto podmínky zkontrolujte ručně:
 
-- **Funkce transfer a transferFrom by si neměly účtovat poplatek.** Deflační tokeny mohou vést k neočekávanému chování.
-- **Potenciální úrok získaný z tokenu je zohledněn.** Některé tokeny rozdělují úrok držitelům tokenů. Tento úrok může zůstat ve smlouvě „uvězněn“, pokud se s ním nepočítá.
+- **Funkce transfer a transferFrom by neměly účtovat poplatek.** Deflační tokeny mohou vést k neočekávanému chování.
+- **Je zohledněn potenciální úrok získaný z tokenu.** Některé tokeny rozdělují úrok držitelům tokenů. Tento úrok by mohl uvíznout v kontraktu, pokud by nebyl zohledněn.
 
-## Struktura kontraktu {#contract-composition}
+## Složení kontraktu {#contract-composition}
 
-- **Kontrakt se vyhýbá zbytečné složitosti.** Token by měl být jednoduchý kontrakt; token se složitým kódem vyžaduje vyšší standard revize. Použijte nástroj [human-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) od Slitheru k identifikaci složitého kódu.
-- **Kontrakt používá SafeMath.** Kontrakty, které nepoužívají SafeMath, vyžadují vyšší standard revize. Zkontrolujte ručně, zda kontrakt používá SafeMath.
-- **Kontrakt má pouze několik funkcí nesouvisejících s tokenem.** Funkce nesouvisející s tokenem zvyšují pravděpodobnost výskytu chyby v kontraktu. Pomocí [contract-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) od Slitheru si udělejte obecný přehled o kódu použitém v kontraktu.
-- **Token má pouze jednu adresu.** Tokeny s více vstupními body pro aktualizaci zůstatku mohou narušit interní účetnictví založené na adrese (např. `balances[token_address][msg.sender]` nemusí odrážet skutečný zůstatek).
+- **Kontrakt se vyhýbá zbytečné složitosti.** Token by měl být jednoduchý kontrakt; token se složitým kódem vyžaduje vyšší standard kontroly. K identifikaci složitého kódu použijte [human-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) nástroje Slither.
+- **Kontrakt používá SafeMath.** Kontrakty, které nepoužívají SafeMath, vyžadují vyšší standard kontroly. Ručně zkontrolujte kontrakt na použití SafeMath.
+- **Kontrakt má pouze několik funkcí nesouvisejících s tokenem.** Funkce nesouvisející s tokenem zvyšují pravděpodobnost problému v kontraktu. K celkovému přezkoumání kódu použitého v kontraktu použijte [contract-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) nástroje Slither.
+- **Token má pouze jednu adresu.** Tokeny s více vstupními body pro aktualizace zůstatků mohou narušit interní účetnictví založené na adrese (např. `balances[token_address][msg.sender]` nemusí odrážet skutečný zůstatek).
 
 ## Oprávnění vlastníka {#owner-privileges}
 
-- **Token nelze upgradovat.** Upgradovatelné kontrakty mohou v průběhu času měnit svá pravidla. Pomocí nástroje [human-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) od Slitheru zjistěte, zda je kontrakt upgradovatelný.
-- **Vlastník má omezené schopnosti ražby.** Zlomyslní nebo kompromitovaní vlastníci mohou schopnosti ražby zneužít. Pro kontrolu schopnosti ražby použijte [human-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) od Slitheru a zvažte ruční kontrolu kódu.
-- **Token nelze pozastavit.** Zlomyslní nebo kompromitovaní vlastníci mohou „uvěznit“ kontrakty, které se spoléhají na pozastavitelné tokeny. Ručně identifikujte kód umožňující pozastavení.
-- **Vlastník nemůže dát kontrakt na černou listinu.** Zlomyslní nebo kompromitovaní vlastníci mohou „uvěznit“ kontrakty, které se spoléhají na tokeny s černou listinou. Funkce černé listiny identifikujte ručně.
-- **Tým, který za tokenem stojí, je známý a může být pohnán k odpovědnosti za zneužití.** Kontrakty s anonymními vývojářskými týmy nebo sídlící v právních útočištích by měly vyžadovat vyšší standard revize.
+- **Token nelze aktualizovat (není upgradeable).** Aktualizovatelné kontrakty mohou v průběhu času měnit svá pravidla. Pomocí nástroje [human-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) od Slitheru zjistěte, zda je kontrakt aktualizovatelný.
+- **Vlastník má omezené možnosti ražení.** Zlomyslní nebo kompromitovaní vlastníci mohou zneužít možnosti ražení. K přezkoumání možností ražení použijte [human-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) nástroje Slither a zvažte ruční kontrolu kódu.
+- **Token nelze pozastavit (není pausable).** Zlomyslní nebo kompromitovaní vlastníci mohou uvěznit kontrakty spoléhající na pozastavitelné tokeny. Pozastavitelný kód identifikujte ručně.
+- **Vlastník nemůže kontrakt zařadit na černou listinu (blacklist).** Zlomyslní nebo kompromitovaní vlastníci mohou uvěznit kontrakty spoléhající na tokeny s černou listinou. Funkce černé listiny identifikujte ručně.
+- **Tým stojící za tokenem je známý a může být pohnán k odpovědnosti za zneužití.** Kontrakty s anonymními vývojářskými týmy nebo ty, které sídlí v právních útočištích, by měly vyžadovat vyšší standard kontroly.
 
 ## Vzácnost tokenu {#token-scarcity}
 
-Kontrola problémů se vzácností tokenů vyžaduje ruční revizi. Zkontrolujte následující podmínky:
+Kontrola problémů se vzácností tokenu vyžaduje ruční přezkoumání. Zkontrolujte tyto podmínky:
 
-- **Žádný uživatel nevlastní většinu zásoby.** Pokud několik uživatelů vlastní většinu tokenů, mohou ovlivnit operace založené na rozdělení tokenů.
-- **Celková zásoba je dostatečná.** Tokeny s nízkou celkovou zásobou lze snadno zmanipulovat.
-- **Tokeny se nacházejí na více než jen několika burzách.** Pokud jsou všechny tokeny na jedné burze, její kompromitace může ohrozit kontrakt, který na daný token spoléhá.
-- **Uživatelé rozumí souvisejícím rizikům velkých fondů nebo bleskových půjček.** Kontrakty spoléhající na zůstatek tokenů musí pečlivě zvážit útočníky s velkými finančními prostředky nebo útoky prostřednictvím bleskových půjček.
-- **Token neumožňuje bleskovou ražbu**. Blesková ražba může vést k podstatným výkyvům v zůstatku a celkové zásobě, což vyžaduje přísné a komplexní kontroly přetečení (overflow) v rámci fungování tokenu.
+- **Žádný uživatel nevlastní většinu nabídky.** Pokud několik uživatelů vlastní většinu tokenů, mohou ovlivňovat operace na základě rozdělení tokenu.
+- **Celková nabídka je dostatečná.** S tokeny s nízkou celkovou nabídkou lze snadno manipulovat.
+- **Tokeny se nacházejí na více než několika burzách.** Pokud jsou všechny tokeny na jedné burze, kompromitace burzy může kompromitovat kontrakt spoléhající na daný token.
+- **Uživatelé chápou související rizika velkých fondů nebo bleskových půjček (flash loans).** Kontrakty spoléhající na zůstatek tokenů musí pečlivě brát v úvahu útočníky s velkými prostředky nebo útoky prostřednictvím bleskových půjček.
+- **Token neumožňuje bleskové ražení (flash minting)**. Bleskové ražení může vést k podstatným výkyvům v zůstatku a celkové nabídce, což vyžaduje přísné a komplexní kontroly přetečení při operacích s tokenem.

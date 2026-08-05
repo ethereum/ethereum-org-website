@@ -1,7 +1,7 @@
 import { Image } from "@/components/Image"
-import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
+  CardButtonFake,
   CardContent,
   CardParagraph,
   CardTitle,
@@ -24,11 +24,17 @@ const SpeedRunCard = ({
   className,
 }: SpeedRunCardProps) => (
   <Card
+    href="https://speedrunethereum.com/"
     variant="ghost"
     className={cn(
-      "relative min-h-112 overflow-hidden rounded-b-none",
+      "relative min-h-112 overflow-hidden rounded-b-none hover:bg-inherit hover:shadow-none",
       className
     )}
+    customEventOptions={{
+      eventCategory: "top_boxes",
+      eventAction: "click",
+      eventName: "speedrun",
+    }}
     data-label="speedrunethereum-banner"
   >
     <Image
@@ -39,20 +45,9 @@ const SpeedRunCard = ({
     />
 
     <CardContent>
-      <CardTitle variant="black">{title}</CardTitle>
+      <CardTitle size="lg">{title}</CardTitle>
       <CardParagraph>{description}</CardParagraph>
-      <ButtonLink
-        href="https://speedrunethereum.com/"
-        className="sm:w-fit"
-        customEventOptions={{
-          eventCategory: "top_boxes",
-          eventAction: "click",
-          eventName: "speedrun",
-        }}
-        rel="noopener"
-      >
-        {ctaLabel}
-      </ButtonLink>
+      <CardButtonFake className="sm:w-fit">{ctaLabel}</CardButtonFake>
     </CardContent>
   </Card>
 )

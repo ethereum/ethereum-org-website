@@ -1,153 +1,153 @@
 ---
 title: Bloklar
-description: "Ethereum blok zincirindeki blokların veri yapıları, neden gerekli oldukları ve nasıl oluşturuldukları hakkında bir tanıtım."
+description: "Ethereum blokzincirindeki bloklara genel bir bakış – veri yapıları, neden gerekli oldukları ve nasıl oluşturuldukları."
 lang: tr
 ---
 
-Bloklar, zincirde yer alan bir önceki blok hakkındaki hash değerlerini barındıran işlem gruplarıdır. Bu, blokları birbirine (bir zincir hâlinde) bağlar çünkü hash değerleri blok verilerinden kriptografik olarak türetilir. Bu, geçmişteki herhangi bir bloktaki tek bir değişikliğin sonraki tüm hash değerlerini değiştirerek tüm blokları geçersiz kılacağı ve bu durum blok zincirini yürüten herkes tarafından fark edileceği için dolandırıcılığı önler.
+Bloklar, zincirdeki bir önceki bloğun hash'ini içeren işlem gruplarıdır. Bu, blokları birbirine (bir zincir halinde) bağlar çünkü hash'ler kriptografik olarak blok verilerinden türetilir. Bu durum dolandırıcılığı önler, çünkü geçmişteki herhangi bir blokta yapılacak tek bir değişiklik, sonraki tüm hash'ler değişeceği ve blokzinciri çalıştıran herkes bunu fark edeceği için sonraki tüm blokları geçersiz kılacaktır.
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
-Bloklar, yeni başlayanlar için uygun bir konudur. Ancak bu sayfayı daha iyi anlamanıza yardımcı olması için öncelikle [Hesaplar](/developers/docs/accounts/), [İşlemler](/developers/docs/transactions/) ve [Ethereum'a giriş](/developers/docs/intro-to-ethereum/) yazılarımızı okumanızı öneririz.
+Bloklar, yeni başlayanlar için oldukça uygun bir konudur. Ancak bu sayfayı daha iyi anlamanıza yardımcı olmak için öncelikle [Hesaplar](/developers/docs/accounts/), [İşlemler](/developers/docs/transactions/) ve [Ethereum'a giriş](/developers/docs/intro-to-ethereum/) bölümlerimizi okumanızı öneririz.
 
-## Bloklar neden gerekli? {#why-blocks}
+## Neden bloklar? {#why-blocks}
 
-Ethereum ağındaki tüm katılımcıların senkronize durumlarını sürdürmesini ve işlemlerin kesin geçmişi üzerinde anlaşmasını sağlamak için işlemleri bloklar hâlinde topluyoruz. Bu, düzinelerce (veya yüzlerce) işlemin aynı anda yapıldığı, üzerinde anlaşmaya varıldığı ve senkronize edildiği anlamına gelir.
+[Ethereum](/) ağındaki tüm katılımcıların senkronize bir durumu korumasını ve işlemlerin kesin geçmişi üzerinde mutabakata varmasını sağlamak için işlemleri bloklar halinde gruplandırıyoruz. Bu, düzinelerce (veya yüzlerce) işlemin aynı anda taahhüt edildiği, üzerinde anlaşıldığı ve senkronize edildiği anlamına gelir.
 
-![Bir bloktaki işlemin durum değişikliklerine neden olduğunu gösteren bir diyagram](./tx-block.png)
-_Diyagram [Resimli Ethereum EVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) kaynağından uyarlanmıştır_
+![A diagram showing transaction in a block causing state changes](./tx-block.png)
+_Diyagram [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)'dan uyarlanmıştır_
 
-Kod girişleri arasında belirli bir süre tanıyarak ağ katılımcıları için yeterli zamanı veriyoruz: işlem talepleri saniye başına düzinelerce oluşsa da bloklar Ethereum üzerinde on iki saniyede bir yaratılmaktadır ve oluşmaktadır.
+Taahhütleri aralıklı hale getirerek, tüm ağ katılımcılarına mutabakata varmaları için yeterli zaman tanıyoruz: işlem talepleri saniyede onlarca kez gerçekleşse bile, bloklar Ethereum'da yalnızca on iki saniyede bir oluşturulur ve taahhüt edilir.
 
-## Bloklar nasıl çalışır? {#how-blocks-work}
+## Bloklar nasıl çalışır {#how-blocks-work}
 
-İşlem geçmişini korumak için, bloklar titizlikle sıralanır (oluşturulan her yeni blok, önceki bloğa bir referans içerir) ve bloklar içindeki işlemler de titizlikle sıralanır. Herhangi bir zamanda olabilecek nadir durumlar dışında ağdaki tüm katılımcılar, blokların tam sayısı ve geçmişi konusunda mutabıktır ve mevcut aktif işlem taleplerini bir sonraki blokta gruplandırmak için çalışmaktadır.
+İşlem geçmişini korumak için bloklar kesin bir şekilde sıralanır (oluşturulan her yeni blok, ebeveyn bloğuna bir referans içerir) ve bloklar içindeki işlemler de kesin bir şekilde sıralanır. Nadir durumlar dışında, herhangi bir zamanda, ağdaki tüm katılımcılar blokların tam sayısı ve geçmişi konusunda hemfikirdir ve mevcut canlı işlem taleplerini bir sonraki blokta gruplandırmak için çalışırlar.
 
-Bir blok, ağ üzerinden rastgele seçilmiş doğruluyacılar tarafından bir araya getirildiğinde ağın geri kalanına yayılır, bütün düğümler bu bloku kendi blok zincirlerinin sonuna ekler ve yeni bloku yaratmak için yeni bir doğrulayıcı seçilir. Bu blok birleştirme süreci ve taahtütname/mutabakat süreci şu anda Ethereum'un "hisse ispatı" protokolü tarafından özelleştiriliyor.
+Bir blok, ağ üzerinde rastgele seçilen bir doğrulayıcı tarafından bir araya getirildikten sonra ağın geri kalanına yayılır; tüm düğümler bu bloğu kendi blokzincirlerinin sonuna ekler ve bir sonraki bloğu oluşturmak için yeni bir doğrulayıcı seçilir. Kesin blok oluşturma süreci ve taahhüt/mutabakat süreci şu anda Ethereum'un "Hisse Kanıtı (PoS)" protokolü tarafından belirlenmektedir.
 
-## Hisse ispatı protokolü {#proof-of-stake-protocol}
+## Hisse Kanıtı (PoS) protokolü {#proof-of-stake-protocol}
 
-Hisse ispatının anlamı aşağıdaki gibidir:
+Hisse Kanıtı (PoS) şu anlama gelir:
 
-- Doğrulayıcı düğümler, kötü davranışlara karşı bir teminat olarak yatırım sözleşmesine 32 ETH hisselemek zorundadır. Bu, ağın korunmasına yardımcı olur çünkü gerçek anlamda dürüst olmayan aktivite hisselerin kısmen veya tamamen yok olmasına yol açabilir.
-- Her bir yuvada (12 saniyelik boşluklara ayrılmış) bir doğrulayıcı, blok önerici olarak seçilir. Doğrulayıcılar işlemleri paketler, yürütür ve yeni "duruma" karar verirler. Bu bilgileri bir bloka atar ve öbür doğrulayıcılara iletirler.
-- Yeni blokun haberini alan diğer doğrulayıcılar küresel durum değişim önerisine uydukarını güvence altına almak için işlemleri tekrar yürütürler. Blokun geçerli olduğunu varsayarsak kendi veritabanlarına ekler.
-- Eğer bir doğrulayıcı çelişen iki blok hakkında bir haber alırsa en çok ETH hisselemiş olanı çatal seçim algoritmasını kullanarak seçer.
+- Doğrulayıcı düğümler, kötü davranışlara karşı teminat olarak bir yatırma sözleşmesine 32 ETH stake etmek zorundadır. Bu, ağı korumaya yardımcı olur çünkü kanıtlanabilir şekilde dürüst olmayan faaliyetler, bu stake'in bir kısmının veya tamamının yok edilmesine yol açar.
+- Her slotta (on iki saniye arayla) bir doğrulayıcı rastgele olarak blok teklifçisi seçilir. İşlemleri bir araya getirir, yürütür ve yeni bir 'durum' belirlerler. Bu bilgileri bir blok içine sarar ve diğer doğrulayıcılara iletirler.
+- Yeni bloğu duyan diğer doğrulayıcılar, küresel durumdaki önerilen değişiklikle aynı fikirde olduklarından emin olmak için işlemleri yeniden yürütürler. Bloğun geçerli olduğunu varsayarak, onu kendi veritabanlarına eklerler.
+- Bir doğrulayıcı aynı slot için birbiriyle çelişen iki blok duyarsa, en çok stake edilen ETH tarafından desteklenen bloğu seçmek için çatal seçimi algoritmalarını kullanır.
 
-[Hisse ispatı hakkında daha fazlası](/developers/docs/consensus-mechanisms/pos)
+[Hisse Kanıtı (PoS) hakkında daha fazlası](/developers/docs/consensus-mechanisms/pos)
 
-## Bir blokta neler yer alır? {#block-anatomy}
+## Bir bloğun içinde ne var? {#block-anatomy}
 
-Bir blok içinde barındırılan çok fazla bilgi vardır. En yüksek düzeyde, bir blok aşağıdaki alanları barındırır:
+Bir bloğun içinde pek çok bilgi bulunur. En üst düzeyde bir blok aşağıdaki alanları içerir:
 
-| Alan             | Açıklama                                               |
-| :--------------- | :----------------------------------------------------- |
-| `yuva`           | blokun ait olduğu yuva                                 |
-| `proposer_index` | bloku öneren doğrulayıcının kimliği                    |
-| `parent_root`    | önceki blokun karması                                  |
-| `state_root`     | durum nesnesinin kök karması                           |
-| `şablon`         | aşağıda tanımlandığı gibi birkaç alan içeren bir nesne |
+| Alan            | Açıklama                                           |
+| :--------------- | :---------------------------------------------------- |
+| `slot`           | bloğun ait olduğu slot                         |
+| `proposer_index` | bloğu teklif eden doğrulayıcının kimliği (ID)           |
+| `parent_root`    | önceki bloğun hash'i                       |
+| `state_root`     | durum nesnesinin kök hash'i                     |
+| `body`           | aşağıda tanımlandığı gibi çeşitli alanlar içeren bir nesne |
 
-Blok `body`'si kendi içinde çeşitli alanlar içerir:
+Blok `body` kendi içinde çeşitli alanlar içerir:
 
-| Alan                 | Açıklama                                                                   |
-| :------------------- | :------------------------------------------------------------------------- |
-| `randao_reveal`      | bir sonraki blok önericisini seçmek için kullanılan değer                  |
-| `eth1_data`          | depozito sözleşmesi hakkında bilgi                                         |
-| `graffiti`           | blokları etiketlemek için kullanılan keyfi veriler                         |
-| `proposer_slashings` | kesilecek doğrulayıcıların listesi                                         |
-| `attester_slashings` | kesilecek tasdik edenlerin listesi                                         |
-| `tasdikler`          | önceki yuvalar için yapılan tasdiklerin listesi                            |
-| `depozitolar`        | depozito sözleşmesine yeni depozito listesi                                |
-| `voluntary_exits`    | ağdan çıkan doğrulayıcıların listesi                                       |
-| `sync_aggregate`     | hafif istemcilere hizmet etmek için kullanılan doğrulayıcıların alt kümesi |
-| `execution_payload`  | yürütüm istemcisinden geçirilen işlemler                                   |
+| Alan                | Açıklama                                      |
+| :------------------- | :----------------------------------------------- |
+| `randao_reveal`      | bir sonraki blok teklifçisini seçmek için kullanılan bir değer   |
+| `eth1_data`          | yatırma sözleşmesi hakkında bilgi           |
+| `graffiti`           | blokları etiketlemek için kullanılan rastgele veriler                |
+| `proposer_slashings` | ceza kesintisi uygulanacak doğrulayıcıların listesi                 |
+| `attester_slashings` | ceza kesintisi uygulanacak onaylayıcıların listesi                  |
+| `attestations`       | önceki slotlara karşı yapılan onayların listesi |
+| `deposits`           | yatırma sözleşmesine yapılan yeni yatırımların listesi     |
+| `voluntary_exits`    | ağdan çıkan doğrulayıcıların listesi           |
+| `sync_aggregate`     | hafif istemcilere hizmet vermek için kullanılan doğrulayıcıların alt kümesi |
+| `execution_payload`  | yürütme istemcisinden aktarılan işlemler    |
 
-`attestations` alanı, bloktaki tüm tasdiklerin bir listesini içerir. Tasdiklerin, birkaç veri parçası içeren kendi veri türleri vardır. Her tasdik şunları içerir:
+`attestations` alanı, bloktaki tüm onayların bir listesini içerir. Onaylar, birkaç veri parçasını içeren kendi veri türlerine sahiptir. Her onay şunları içerir:
 
-| Alan               | Açıklama                                                        |
-| :----------------- | :-------------------------------------------------------------- |
-| `aggregation_bits` | bu tasdiğe hangi doğrulayıcıların katıldığının bir listesi      |
-| `veriler`          | birden çok alt alana sahip bir barındırıcı                      |
-| `i̇mza`            | bir doğrulayıcı kümesinin `data` bölümü üzerindeki toplu imzası |
+| Alan              | Açıklama                                                    |
+| :----------------- | :------------------------------------------------------------- |
+| `aggregation_bits` | bu onaya hangi doğrulayıcıların katıldığının bir listesi    |
+| `data`             | birden fazla alt alan içeren bir kapsayıcı                            |
+| `signature`        | bir dizi doğrulayıcının `data` kısmına karşı toplu imzası |
 
-`attestation` içindeki `data` alanı aşağıdakileri içerir:
+`attestation` içindeki `data` alanı şunları içerir:
 
-| Alan                | Açıklama                                                   |
-| :------------------ | :--------------------------------------------------------- |
-| `yuva`              | tasdiğe bağlı yuva alanı                                   |
-| `dizin`             | tasdik eden doğrulayıcılar için endeksler                  |
-| `beacon_block_root` | zincirin başı olarak görülen İşaretçi bloğunun kök karması |
-| `kaynak`            | gerekçeli son denetim noktası                              |
-| `target`            | son dönem sınır bloku                                      |
+| Alan               | Açıklama                                                     |
+| :------------------ | :-------------------------------------------------------------- |
+| `slot`              | onayın ilgili olduğu slot                             |
+| `index`             | onaylayan doğrulayıcılar için endeksler                                |
+| `beacon_block_root` | zincirin başı olarak görülen işaret bloğunun kök hash'i |
+| `source`            | son gerekçelendirilmiş kontrol noktası                                   |
+| `target`            | en son dönem sınırı bloğu                                 |
 
-`execution_payload` içindeki işlemlerin yürütülmesi genel durumu günceller. Tüm istemciler, yeni durumun yeni bloktaki `state_root` alanıyla eşleştiğinden emin olmak için `execution_payload` içindeki işlemleri yeniden yürütür. Bu, müşteriler tarafından yeni bir blokun kendi blok zincirlere eklenmesi için geçerli ve güvenli olduğunun söylenmesidir. `execution_payload`'ın kendisi birkaç alana sahip bir nesnedir. Ayrıca, yürütme verileri hakkında önemli özet bilgiler içeren bir `execution_payload_header` da vardır. Bu veri yapıları şu şekilde organize edilmiştir:
+`execution_payload` içindeki işlemleri yürütmek küresel durumu günceller. Tüm istemciler, yeni durumun yeni bloktaki `state_root` alanıyla eşleştiğinden emin olmak için `execution_payload` içindeki işlemleri yeniden yürütür. İstemciler yeni bir bloğun geçerli ve blokzincirlerine eklenmesinin güvenli olduğunu bu şekilde anlayabilirler. `execution payload`'ün kendisi çeşitli alanlara sahip bir nesnedir. Ayrıca yürütme verileri hakkında önemli özet bilgiler içeren bir `execution_payload_header` da vardır. Bu veri yapıları aşağıdaki gibi düzenlenmiştir:
 
 `execution_payload_header` aşağıdaki alanları içerir:
 
-| Alan                | Açıklama                                                              |
-| :------------------ | :-------------------------------------------------------------------- |
-| `parent_hash`       | üst blokun karması                                                    |
-| `fee_recipient`     | işlem ücretlerinin ödeneceği hesap adresi                             |
-| `state_root`        | bloka değişimleri uyguladıktan sonraki küresel durum için kök karması |
-| `receipts_root`     | işlem makbuzları karması                                              |
-| `logs_bloom`        | olay günlüklerini içeren veri yapısı                                  |
-| `prev_randao`       | rastgele doğrulayıcı seçiminde kullanılan değer                       |
-| `block_number`      | mevcut blokun numarası                                                |
+| Alan               | Açıklama                                                         |
+| :------------------ | :------------------------------------------------------------------ |
+| `parent_hash`       | ebeveyn bloğunun hash'i                                            |
+| `fee_recipient`     | işlem ücretlerinin ödeneceği hesap adresi                      |
+| `state_root`        | bu bloktaki değişiklikleri uyguladıktan sonra küresel durum için kök hash |
+| `receipts_root`     | işlem makbuzları trie'sinin hash'i                               |
+| `logs_bloom`        | olay günlüklerini içeren veri yapısı                                |
+| `prev_randao`       | rastgele doğrulayıcı seçiminde kullanılan değer                            |
+| `block_number`      | mevcut bloğun numarası                                     |
 | `gas_limit`         | bu blokta izin verilen maksimum gaz                                   |
-| `gas_used`          | bu blokta kullanılan net gaz miktarı                                  |
-| `timestamp`         | blok süresi                                                           |
-| `extra_data`        | i̇steğe bağlı ham bayt olarak eklenen veri                            |
-| `base_fee_per_gas`  | ana ücret değeri                                                      |
-| `block_hash`        | Uygulama blokunun özeti                                               |
-| `transactions_root` | yükteki işlemlerin kök karması                                        |
-| `withdrawal_root`   | yükteki para çekme işlemlerinin kök karması                           |
+| `gas_used`          | bu blokta kullanılan gerçek gaz miktarı                         |
+| `timestamp`         | blok süresi                                                      |
+| `extra_data`        | ham baytlar olarak rastgele ek veriler                              |
+| `base_fee_per_gas`  | taban ücret değeri                                                  |
+| `block_hash`        | Yürütme bloğunun hash'i                                             |
+| `transactions_root` | yükteki işlemlerin kök hash'i                        |
+| `withdrawal_root`   | yükteki çekim işlemlerinin kök hash'i                         |
 
-`execution_payload`'ın kendisi aşağıdakileri içerir (bunun, işlemlerin kök karması yerine gerçek işlem listesini ve para çekme bilgilerini içermesi dışında başlıkla aynı olduğuna dikkat edin):
+`execution_payload`'ün kendisi aşağıdakileri içerir (bunun, işlemlerin kök hash'i yerine işlemlerin ve çekim bilgilerinin gerçek listesini içermesi dışında başlıkla aynı olduğuna dikkat edin):
 
-| Alan               | Açıklama                                                              |
-| :----------------- | :-------------------------------------------------------------------- |
-| `parent_hash`      | üst blokun karması                                                    |
-| `fee_recipient`    | işlem ücretlerinin ödeneceği hesap adresi                             |
-| `state_root`       | bloka değişimleri uyguladıktan sonraki küresel durum için kök karması |
-| `receipts_root`    | işlem makbuzları karması                                              |
-| `logs_bloom`       | olay günlüklerini içeren veri yapısı                                  |
-| `prev_randao`      | rastgele doğrulayıcı seçiminde kullanılan değer                       |
-| `block_number`     | mevcut blokun numarası                                                |
+| Alan              | Açıklama                                                         |
+| :----------------- | :------------------------------------------------------------------ |
+| `parent_hash`      | ebeveyn bloğunun hash'i                                            |
+| `fee_recipient`    | işlem ücretlerinin ödeneceği hesap adresi                      |
+| `state_root`       | bu bloktaki değişiklikleri uyguladıktan sonra küresel durum için kök hash |
+| `receipts_root`    | işlem makbuzları trie'sinin hash'i                               |
+| `logs_bloom`       | olay günlüklerini içeren veri yapısı                                |
+| `prev_randao`      | rastgele doğrulayıcı seçiminde kullanılan değer                            |
+| `block_number`     | mevcut bloğun numarası                                     |
 | `gas_limit`        | bu blokta izin verilen maksimum gaz                                   |
-| `gas_used`         | bu blokta kullanılan net gaz miktarı                                  |
-| `timestamp`        | blok süresi                                                           |
-| `extra_data`       | i̇steğe bağlı ham bayt olarak eklenen veri                            |
-| `base_fee_per_gas` | ana ücret değeri                                                      |
-| `block_hash`       | Uygulama blokunun özeti                                               |
-| `i̇şlemler`        | yürütülecek işlemlerin listesi                                        |
-| `para çekmeler`    | para çekme nesnelerinin listesi                                       |
+| `gas_used`         | bu blokta kullanılan gerçek gaz miktarı                         |
+| `timestamp`        | blok süresi                                                      |
+| `extra_data`       | ham baytlar olarak rastgele ek veriler                              |
+| `base_fee_per_gas` | taban ücret değeri                                                  |
+| `block_hash`       | Yürütme bloğunun hash'i                                             |
+| `transactions`     | yürütülecek işlemlerin listesi                                 |
+| `withdrawals`      | çekim nesnelerinin listesi                                          |
 
-`withdrawals` listesi aşağıdaki gibi `withdrawal` nesnelerinden oluşur:
+`withdrawals` listesi, aşağıdaki şekilde yapılandırılmış `withdrawal` nesnelerini içerir:
 
-| Alan             | Açıklama                  |
-| :--------------- | :------------------------ |
-| `adres`          | para çekilen hesap adresi |
-| `miktar`         | para çekme miktarı        |
-| `dizin`          | para çekme endeksi değeri |
-| `validatorIndex` | doğrulayıcı endeks değeri |
+| Alan            | Açıklama                        |
+| :--------------- | :--------------------------------- |
+| `address`        | çekim yapan hesap adresi |
+| `amount`         | çekim miktarı                  |
+| `index`          | çekim endeks değeri             |
+| `validatorIndex` | doğrulayıcı endeks değeri              |
 
 ## Blok süresi {#block-time}
 
-Blok süresi, blokların ayrılması sırasındaki süreye karşılık gelir. Ethereum'da zaman, "yuva" adı verilen 12 saniyelik birimlere bölünmüştür. Her bir yuvada blok önermek için tek bir doğrulayıcı seçilmiştir. Tüm doğrulayıcıların çevrimiçi ve tam anlamıyla işlevsel olduğunu varsayarsak her bir yuvada bir blok oluşacaktır, bu da blok zamanının 12 saniye olduğu anlamına gelir. Ancak bazen doğrulayıcılar, blok önerisine çağrıldıklarında çevrimdışı olabilir, bu da kimi zaman yuvaların boş olacağı anlamına gelir.
+Blok süresi, blokları ayıran zamanı ifade eder. Ethereum'da zaman, 'slot' adı verilen on iki saniyelik birimlere bölünmüştür. Her slotta bir blok teklif etmek için tek bir doğrulayıcı seçilir. Tüm doğrulayıcıların çevrimiçi ve tamamen işlevsel olduğu varsayıldığında, her slotta bir blok olacaktır, bu da blok süresinin 12 saniye olduğu anlamına gelir. Ancak, bazen doğrulayıcılar bir blok teklif etmeye çağrıldıklarında çevrimdışı olabilirler, bu da slotların bazen boş kalabileceği anlamına gelir.
 
-Bu uygulama; blok sürelerinin tahmin edilebilir olduğu ve protokolün hedef madencilik zorluğu tarafından ayarlanan iş ispatı temelli sistemlerden ayrılır. Ethereum'un [ortalama blok süresi](https://etherscan.io/chart/blocktime), yeni 12 saniyelik blok süresinin tutarlılığına dayanarak iş ispatından hisse ispatına geçişin açıkça anlaşılabileceği mükemmel bir örnektir.
+Bu uygulama, blok sürelerinin olasılıksal olduğu ve protokolün hedef madencilik zorluğu tarafından ayarlandığı İş Kanıtı (PoW) tabanlı sistemlerden farklıdır. Ethereum'un [ortalama blok süresi](https://etherscan.io/chart/blocktime), İş Kanıtı'ndan (PoW) Hisse Kanıtı'na (PoS) geçişin yeni 12 saniyelik blok süresinin tutarlılığına dayanılarak açıkça anlaşılabildiği bunun mükemmel bir örneğidir.
 
 ## Blok boyutu {#block-size}
 
-Son olarak önemli bir not: Blokların kendileri de boyut olarak sınırlandırılmıştır. Her blokun hedef boyutu 30 milyon gazdır ama blok boyutu ağ isteklerine göre 60 milyon gaz olan blok limitine kadar (blok boyutu hedefinin 2 katı) artabilir veya azalabilir. Bloğun gaz limiti, önceki bloğun gaz limitine kıyasla 1/1024 oranında yukarı ya da aşağı yönde ayarlanabilir. Sonuç olarak, doğrulayıcılar bloğun gaz limitini mutabakat yoluyla değiştirebilir. Bloktaki işlemlerden kesilen toplam gaz miktarı, blokun gaz limitinden daha az olmalıdır. Bu, blok boyutunun keyfi olarak belirlenememesini sağladığı için önemlidir. Bloklar keyfi boyutlarda olabilseydi, daha az performans gösteren tam düğümler, alan ve hız gereksinimleri nedeniyle yavaş yavaş ağa ayak uyduramazlardı. Blok ne kadar büyük olursa onu bir sonraki yuvada zamanında işlemek için gereken işlemci gücü de o denli büyük olacaktır. Bu blok boyutlarına üst sınırlar koyarak direnen bir merkezileştirici kuvvet.
+Son önemli bir not da blokların boyutlarının sınırlı olmasıdır. Her bloğun hedef boyutu 30 milyon gazdır ancak blokların boyutu, 60 milyon gazlık (hedef blok boyutunun 2 katı) blok limitine kadar ağ taleplerine göre artacak veya azalacaktır. Blok gaz limiti, önceki bloğun gaz limitinden 1/1024 oranında yukarı veya aşağı ayarlanabilir. Sonuç olarak, doğrulayıcılar mutabakat yoluyla blok gaz limitini değiştirebilirler. Bloktaki tüm işlemler tarafından harcanan toplam gaz miktarı, blok gaz limitinden az olmalıdır. Bu önemlidir çünkü blokların keyfi olarak büyük olmamasını sağlar. Bloklar keyfi olarak büyük olabilseydi, daha az performanslı tam düğümler alan ve hız gereksinimleri nedeniyle yavaş yavaş ağa ayak uyduramaz hale gelirdi. Blok ne kadar büyük olursa, onları bir sonraki slot için zamanında işlemek için gereken hesaplama gücü de o kadar büyük olur. Bu, blok boyutlarının sınırlandırılmasıyla direnilen merkezileştirici bir güçtür.
 
-## Daha fazla kaynak {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
-_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
+_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
-## Alakalı başlıklar {#related-topics}
+## İlgili konular {#related-topics}
 
 - [İşlemler](/developers/docs/transactions/)
 - [Gaz](/developers/docs/gas/)
-- [Hisse ispatı](/developers/docs/consensus-mechanisms/pos)
+- [Hisse Kanıtı (PoS)](/developers/docs/consensus-mechanisms/pos)

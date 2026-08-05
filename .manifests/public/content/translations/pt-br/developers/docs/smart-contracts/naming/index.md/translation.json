@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "locale": "pt-br",
+  "translatedAt": "2026-06-17T22:57:50.744Z",
+  "englishManifestHash": "c7a92eb84d24",
+  "placeholderOrder": [
+    "LINK-a4d8c4",
+    "LINK-3ce634",
+    "CODE-43ccf0",
+    "CODE-14e56c",
+    "LINK-da09ab",
+    "CODE-08d589",
+    "CODE-7942ea",
+    "CODE-0cf6e2",
+    "CODE-bf258b",
+    "CODE-e6da47",
+    "CODE-4a7a51",
+    "CODE-66d47b",
+    "CODE-17af7c",
+    "CODE-d80c9b",
+    "LINK-fde661",
+    "LINK-3ce634",
+    "LINK-1f498f",
+    "LINK-4df898",
+    "LINK-3ce634",
+    "LINK-6ff2fc",
+    "CODE-17af7c",
+    "CODE-c344ba",
+    "CODE-c344ba",
+    "LINK-061452",
+    "LINK-bd5544"
+  ],
+  "placeholderMap": {
+    "CODE-43ccf0": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x8f8e...f9e3"
+      }
+    },
+    "CODE-14e56c": {
+      "type": "inline-code",
+      "values": {
+        "content": "v2.myapp.eth"
+      }
+    },
+    "CODE-08d589": {
+      "type": "inline-code",
+      "values": {
+        "content": "104.18.176.152"
+      }
+    },
+    "CODE-7942ea": {
+      "type": "inline-code",
+      "values": {
+        "content": "uniswap.eth"
+      }
+    },
+    "CODE-0cf6e2": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x58068646C148E313CB414E85d2Fe89dDc3426870"
+      }
+    },
+    "CODE-bf258b": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x580...870"
+      }
+    },
+    "CODE-e6da47": {
+      "type": "inline-code",
+      "values": {
+        "content": "uniswap.org"
+      }
+    },
+    "CODE-4a7a51": {
+      "type": "inline-code",
+      "values": {
+        "content": "v4.contracts.uniswap.eth"
+      }
+    },
+    "CODE-66d47b": {
+      "type": "inline-code",
+      "values": {
+        "content": "myapp.eth"
+      }
+    },
+    "CODE-17af7c": {
+      "type": "inline-code",
+      "values": {
+        "content": "v1.myapp.eth"
+      }
+    },
+    "CODE-d80c9b": {
+      "type": "inline-code",
+      "values": {
+        "content": "address"
+      }
+    },
+    "CODE-c344ba": {
+      "type": "inline-code",
+      "values": {
+        "content": ".eth"
+      }
+    },
+    "LINK-a4d8c4": {
+      "type": "link",
+      "values": {
+        "url": "https://ens.domains/"
+      }
+    },
+    "LINK-3ce634": {
+      "type": "link",
+      "values": {
+        "url": "https://www.enscribe.xyz"
+      }
+    },
+    "LINK-da09ab": {
+      "type": "link",
+      "values": {
+        "url": "https://ens.domains/"
+      }
+    },
+    "LINK-fde661": {
+      "type": "link",
+      "values": {
+        "url": "https://app.ens.domains"
+      }
+    },
+    "LINK-1f498f": {
+      "type": "link",
+      "values": {
+        "url": "https://app.ens.domains/"
+      }
+    },
+    "LINK-4df898": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ens.domains/web/naming-contracts/"
+      }
+    },
+    "LINK-6ff2fc": {
+      "type": "link",
+      "values": {
+        "url": "https://app.enscribe.xyz"
+      }
+    },
+    "LINK-061452": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ens.domains/web/naming-contracts/"
+      }
+    },
+    "LINK-bd5544": {
+      "type": "link",
+      "values": {
+        "url": "https://www.enscribe.xyz/docs"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T22:57:50.744Z",
+      "status": "success"
+    }
+  }
+}

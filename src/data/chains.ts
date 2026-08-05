@@ -528,6 +528,17 @@ const chains = [
     chain: "river",
   },
   {
+    name: "BattleChain Mainnet",
+    infoURL: "https://battlechain.com",
+    chainId: 626,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "Redstone",
     infoURL: "https://redstone.xyz",
     chainId: 690,
@@ -1034,6 +1045,17 @@ const chains = [
     chain: "MegaETH",
   },
   {
+    name: "Robinhood Chain",
+    infoURL: "https://docs.robinhood.com/chain",
+    chainId: 4663,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "OEV Network",
     infoURL: "https://api3.org/oev/",
     chainId: 4913,
@@ -1186,6 +1208,17 @@ const chains = [
       decimals: 18,
     },
     chain: "Polynomial",
+  },
+  {
+    name: "ACME Mainnet Stealth",
+    infoURL: "",
+    chainId: 8224,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ASM",
   },
   {
     name: "B3",
@@ -2465,6 +2498,17 @@ const chains = [
       decimals: 18,
     },
     chain: "NEAR",
+  },
+  {
+    name: "Crynux on Near",
+    infoURL: "https://crynux.io",
+    chainId: 1313161911,
+    nativeCurrency: {
+      name: "Crynux",
+      symbol: "CNX",
+      decimals: 18,
+    },
+    chain: "ETH",
   },
   {
     name: "RARI Chain Mainnet",

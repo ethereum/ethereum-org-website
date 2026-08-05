@@ -1,79 +1,65 @@
 ---
-title: Mpango wa tafsiri
+title: Programu ya Kutafsiri
 lang: sw
-description: Taarifa kuhusu Mpango wa Tafsiri wa ethereum.org
+description: Taarifa kuhusu Programu ya Kutafsiri ya ethereum.org
 ---
 
-# Mpango wa Tafsiri {#translation-program}
-
-Mpango wa Tafsiri ni juhudi shirikishi ya kutafsiri ethereum.org katika lugha tofauti ili kufanya tovuti ipatikane zaidi na mabilioni ya watu wasiozungumza Kiingereza kote ulimwenguni.
+Programu ya Kutafsiri ilikuwa juhudi ya ushirikiano ya kutafsiri ethereum.org katika lugha tofauti, na kufanya tovuti iweze kufikiwa zaidi na mabilioni ya watu wasiozungumza Kiingereza duniani kote.
 
 ![](./enterprise-eth.png)
 
-## Tusaidie kutafsiri {#help-us-translate}
+## Hali ya programu {#program-status}
 
-Mpango wa Tafsiri wa ethereum.org uko wazi na mtu yeyote anaweza kuchangia!
+Programu ya Kutafsiri ya ethereum.org inafikia ukingoni na haifanyi tena uingizaji wa watafsiri wapya. Mradi wa Crowdin unafungwa, na hatupokei mawasilisho mapya ya tafsiri kupitia mradi huo.
 
-1. Utahitaji kuingia katika akaunti yako ya Crowdin au ujisajili.
-2. Chagua lugha unayotaka kuchangia.
-3. Kabla ya kuanza, tafadhali angalia mwongozo wa [Jinsi ya kutafsiri](/contributing/translation-program/how-to-translate/) ili kujifunza jinsi ya kutumia Crowdin, na [Mwongozo wa Mtindo wa Tafsiri](/contributing/translation-program/translators-guide/) kwa vidokezo na mbinu bora.
-4. Tafsiri za mashine hazitakubaliwa.
-5. Tafsiri zote hukaguliwa kabla ya kuongezwa kwenye tovuti, kwa hivyo kutakuwa na ucheleweshaji mfupi kabla ya tafsiri zako kuonekana.
+Tunashukuru sana maelfu ya watafsiri wa jamii ambao walifanya ethereum.org ipatikane katika lugha nyingi kwa miaka mingi—kazi yao inasalia moja kwa moja kwenye tovuti, na utambuzi wao kwenye kurasa za [shukrani](/contributing/translation-program/acknowledgements/) na [wachangiaji](/contributing/translation-program/contributors/) unasalia palepale.
 
-_Jiunge na [Discord ya ethereum.org](https://discord.gg/ethereum-org) ili kushirikiana kwenye tafsiri, kuuliza maswali, kushiriki maoni na mawazo, au kujiunga na kikundi cha tafsiri._
+Ukigundua kosa katika tafsiri iliyopo, tafadhali [fungua suala kwenye GitHub](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
-<ButtonLink href="https://crowdin.com/project/ethereum-org/">
-  Anza kutafsiri
-</ButtonLink>
+_Jiunge na [Discord ya ethereum.org](https://discord.gg/ethereum-org) ili kuuliza maswali au kushiriki maoni._
 
-## Kuhusu Mpango wa Tafsiri {#about-us}
+## Kuhusu Programu ya Kutafsiri {#about-us}
 
-Jamii ya Ethereu inalenga kuwa ya ulimwengu wote na inayojumuisha, japo maudhui yake yanahudumia wazungumzaji wa kiingereza tu, na ikiacha watu bilioni 6 wasiozungumza kiingereza. Ili Ethereum.org ifanye kazi kama lango la Ethereum kwa jamii duniani kote, tunaamini kutoa maudhui ya Ethereum kwa wasiozungumza kiingereza katika lugha zao ni kitu muhimu.
+Jamii ya [Ethereum](/) inalenga kuwa ya kimataifa na jumuishi, lakini maudhui yake mengi yanahudumia wazungumzaji wa Kiingereza pekee, na kuwaacha nje watu bilioni 6 wasiozungumza Kiingereza duniani. Ili ethereum.org ifanye kazi kama lango la kuingia kwenye Ethereum kwa jamii ya ulimwenguni kote, tunaamini kutoa maudhui ya Ethereum kwa watu wasiozungumza Kiingereza katika lugha zao za asili ni muhimu.
 
-Programu ya Ufasiri wa ethereum.org unalenga kuifanya Ethereum kupatikana kwa kila mmoja kwa kufasiri ethereum.org na maudhui mengine ya Ethereum kwenda katika lugha nyingi iwezekanavyo.
-
-Soma zaidi kuhusu [dhamira na maono](/contributing/translation-program/mission-and-vision) ya Mpango wa Tafsiri wa ethereum.org.
+Programu ya Kutafsiri ya ethereum.org ililenga kufanya Ethereum ifikiwe na kila mtu kwa kutafsiri ethereum.org na maudhui mengine ya Ethereum katika lugha nyingi iwezekanavyo.
 
 ### Maendeleo yetu hadi sasa {#our-progress}
 
-- [**6,900 +** watafsiri](/contributing/translation-program/contributors/)
-- **Lugha 68** ziko hai kwenye tovuti
-- [**milioni 2.89** za maneno yaliyotafsiriwa mwaka wa 2024](/contributing/translation-program/acknowledgements/)
+- [Watafsiri **6,900 +**](/contributing/translation-program/contributors/)
+- Lugha **68** zinapatikana moja kwa moja kwenye tovuti
+- [Maneno **milioni 2.89** yaliyotafsiriwa mwaka wa 2024](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 
 ### Shukrani {#acknowledgements}
 
-Ethereum.org inatafsiriwa na maelfu ya wanajamii na wao ndio sehemu muhimu ya Mpango wa Tafsiri.
-Tunataka kuwashukuru watafsiri wetu na kuwaunga mkono katika njia zao za kikazi. Hizi ni baadhi ya shukrani zetu kwa watafsiri:
+Ethereum.org imetafsiriwa na maelfu ya wanajamii, na wao ni sehemu muhimu ya Programu ya Kutafsiri.
+Tunataka kuwatambua watafsiri wetu na kuwaunga mkono katika njia zao za kikazi. Hapa kuna baadhi ya shukrani zetu kwa watafsiri:
 
 #### Cheti {#certificate}
 
-Ikiwa umechangia katika Mpango wa Tafsiri na angalau maneno 5,000 uliyotafsiri yameidhinishwa, unastahiki cheti cha mtafsiri wa ethereum.org. [Zaidi kuhusu vyeti](/contributing/translation-program/acknowledgements/#certificate)
+Ikiwa umechangia kwenye Programu ya Kutafsiri na angalau maneno 5,000 uliyotafsiri yameidhinishwa, unastahiki kupata cheti cha mtafsiri cha ethereum.org. [Zaidi kuhusu vyeti](/contributing/translation-program/acknowledgements/#certificate)
 
 #### OATs {#oats}
 
-Wachangiaji katika Mpango wa Tafsiri wanastahiki OATs (tokeni za mafanikio za onchain) tofauti kulingana na idadi ya maneno waliyotafsiri mwaka wa 2024. OATs ni NFTs zinazothibitisha mchango wako kwa Mpango wa Tafsiri wa ethereum.org. [Zaidi kuhusu OATs](/contributing/translation-program/acknowledgements/#oats)
+Wachangiaji wa Programu ya Kutafsiri wanastahiki kupata OATs (onchain achievement tokens - tokeni za mafanikio mnyororoni) tofauti kulingana na idadi yao ya maneno yaliyotafsiriwa mwaka wa 2024. OATs ni NFTs zinazothibitisha mchango wako kwenye Programu ya Kutafsiri ya ethereum.org. [Zaidi kuhusu OATs](/contributing/translation-program/acknowledgements/#oats)
 
 #### Shukrani kwa watafsiri {#translator-acknowledgements}
 
-Shukrani za hadharani kwa watafsiri wetu wakuu kwa kutumia [bao za wanaoongoza](/contributing/translation-program/acknowledgements/) na [orodha ya wachangiaji wote kwenye Mpango wa Tafsiri](/contributing/translation-program/contributors/).
+Shukrani za hadharani kwa watafsiri wetu wakuu kwa kutumia [bao za viongozi](/contributing/translation-program/acknowledgements/) na [orodha ya wachangiaji wote kwenye Programu ya Kutafsiri](/contributing/translation-program/contributors/).
 
 #### Zawadi {#rewards}
 
-Hapo awali, tumewazawadia wachangiaji wetu wenye bidii zaidi kwa kuwapa tiketi za mikutano ya Ethereum kama vile [Devcon](https://devcon.org/en/) na [Devconnect](https://devconnect.org/), pamoja na bidhaa za kipekee za ethereum.org.
-
-Tunafikiria kila mara njia mpya na bunifu za kuwazawadia wachangiaji wetu, kwa hivyo kaa nasi!
+Hapo awali, tumewazawadia wachangiaji wetu wanaofanya kazi zaidi tiketi za mikutano ya Ethereum kama vile [Devcon](https://devcon.org/en/) na [Devconnect](https://devconnect.org/), pamoja na bidhaa za kipekee za ethereum.org.
 
 ### Miongozo na rasilimali {#guides-and-resources}
 
-Ikiwa unachangia katika Mpango wa Tafsiri au unafikiria kujihusisha, unapaswa kuangalia miongozo ya tafsiri hapa chini:
+Nyenzo hizi za marejeleo zinasalia kupatikana kwa jamii za watafsiri na miradi inayoendesha programu zao wenyewe:
 
-- [Mwongozo wa Mtindo wa Tafsiri](/contributing/translation-program/translators-guide/) _– maagizo na vidokezo kwa watafsiri wa ethereum.org_
-- [Maswali Yanayoulizwa Mara kwa Mara Kuhusu Tafsiri](/contributing/translation-program/faq/) _– maswali na majibu yanayoulizwa mara kwa mara kuhusu Mpango wa Tafsiri wa ethereum.org_
-- [Mwongozo wa mhariri wa mtandaoni wa Crowdin](https://support.crowdin.com/online-editor/) _– mwongozo wa kina wa kutumia mhariri wa mtandaoni wa Crowdin na baadhi ya vipengele vya hali ya juu vya Crowdin_
+- [Mwongozo wa Mtindo wa Kutafsiri](/contributing/translation-program/translators-guide/) _– maagizo na vidokezo kwa watafsiri wa ethereum.org_
 
-Kwa zana zingine muhimu za tafsiri, jumuiya za watafsiri na machapisho ya blogu ya Mpango wa Tafsiri, tafadhali tembelea [ukurasa wa Rasilimali](/contributing/translation-program/resources/).
+Kwa zana zingine muhimu za kutafsiri, jamii za watafsiri na machapisho ya blogu ya Programu ya Kutafsiri, tafadhali tembelea [Ukurasa wa rasilimali](/contributing/translation-program/resources/).
 
 ## Wasiliana nasi {#get-in-touch}
 
@@ -81,11 +67,10 @@ Je, una maswali yoyote? Au unataka kushirikiana na timu yetu na watafsiri wengin
 
 Unaweza pia kuwasiliana nasi kupitia translations@ethereum.org
 
-## Kuanzisha mpango wako wa tafsiri {#starting-a-translation-program}
+## Kuanzisha programu yako mwenyewe ya kutafsiri {#starting-a-translation-program}
 
-Tumejitolea kutafsiri maudhui ya Ethereum katika lugha nyingi iwezekanavyo na kufanya maudhui ya kielimu yapatikane kwa kila mtu.
-Kulingana na mwelekeo wetu kwenye tafsiri, tunataka kusaidia miradi mingine ya Ethereum kupanga, kusimamia, na kuboresha juhudi zao za tafsiri.
+Kufanya maudhui ya elimu yapatikane kwa kila mtu kunasalia kuwa kipaumbele kwa ethereum.org, na tunataka kusaidia miradi mingine ya Ethereum kupanga, kusimamia, na kuboresha juhudi zao za kutafsiri.
 
-Kwa sababu hii, tumeunda [kitabu cha mwongozo cha Mpango wa Tafsiri](/contributing/translation-program/playbook/) ambacho kina vidokezo na mbinu bora tulizojifunza katika mchakato wa kutafsiri ethereum.org.
+Kwa sababu hii, tumeunda [Kitabu cha mbinu cha Programu ya Kutafsiri](/contributing/translation-program/playbook/) ambacho kina baadhi ya vidokezo na mbinu bora tulizojifunza katika mchakato wa kutafsiri ethereum.org.
 
-Unataka kushirikiana zaidi au kutumia baadhi ya rasilimali zetu za tafsiri? Una maoni yoyote kuhusu kitabu cha mwongozo? Tungependa kusikia kutoka kwako kupitia translations@ethereum.org.
+Unataka kushirikiana zaidi au kutumia baadhi ya rasilimali zetu za kutafsiri? Una maoni yoyote kuhusu kitabu cha mbinu? Tungependa kusikia kutoka kwako kupitia translations@ethereum.org.

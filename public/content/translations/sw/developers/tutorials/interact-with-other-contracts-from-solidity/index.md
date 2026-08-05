@@ -1,10 +1,10 @@
 ---
 title: Kuingiliana na mikataba mingine kutoka Solidity
-description: Jinsi ya kupeleka mkataba-erevu kutoka kwa mkataba uliopo na kuingiliana nao
+description: Jinsi ya kusambaza mkataba mahiri kutoka kwenye mkataba uliopo na kuingiliana nao
 author: "jdourlens"
-tags: ["smart contracts", "solidity", "remix", "deploying", "composability"]
+tags: ["mikataba mahiri", "Solidity", "Remix", "kusambaza", "utunzi"]
 skill: advanced
-breadcrumb: "Mwingiliano wa mikataba"
+breadcrumb: Mwingiliano wa mikataba
 lang: sw
 published: 2020-04-05
 source: EthereumDev
@@ -12,9 +12,9 @@ sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Katika mafunzo yaliyopita tulijifunza mengi [jinsi ya kupeleka mkataba-erevu wako wa kwanza](/developers/tutorials/deploying-your-first-smart-contract/) na kuongeza baadhi ya vipengele kwake kama vile [kudhibiti ufikiaji kwa virekebishaji](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) au [kushughulikia makosa katika Solidity](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/). Katika funzo hili tutajifunza jinsi ya kupeleka mkataba-erevu kutoka kwa mkataba uliopo na kuingiliana nao.
+Katika mafunzo yaliyopita tulijifunza mengi kuhusu [jinsi ya kusambaza mkataba mahiri wako wa kwanza](/developers/tutorials/deploying-your-first-smart-contract/) na kuongeza baadhi ya vipengele kwake kama vile [kudhibiti ufikiaji kwa kutumia virekebishaji](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) au [ushughulikiaji wa makosa katika Solidity](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/). Katika mafunzo haya tutajifunza jinsi ya kusambaza mkataba mahiri kutoka kwenye mkataba uliopo na kuingiliana nao.
 
-Tutaunda mkataba unaomwezesha mtu yeyote kuwa na mkataba-erevu wake wa `Counter` kwa kuunda kiwanda chake, jina lake litakuwa `CounterFactory`. Kwanza huu hapa msimbo wa mkataba-erevu wetu wa awali wa `Counter`:
+Tutaunda mkataba unaomwezesha mtu yeyote kuwa na mkataba mahiri wake wa `Counter` kwa kuunda kiwanda chake, jina lake litakuwa `CounterFactory`. Kwanza hapa kuna msimbo wa mkataba mahiri wetu wa awali wa `Counter`:
 
 ```solidity
 pragma solidity 0.5.17;
@@ -27,12 +27,12 @@ contract Counter {
 
 
      modifier onlyOwner(address caller) {
-        require(caller == _owner, "Wewe si mmiliki wa mkataba");
+        require(caller == _owner, "You're not the owner of the contract");
         _;
     }
 
     modifier onlyFactory() {
-        require(msg.sender == _factory, "Unahitaji kutumia kiwanda");
+        require(msg.sender == _factory, "You need to use the factory");
         _;
     }
 
@@ -52,19 +52,19 @@ contract Counter {
 }
 ```
 
-Kumbuka kuwa tumerekebisha kidogo msimbo wa mkataba ili kufuatilia anwani ya kiwanda na anwani ya mmiliki wa mkataba. Unapoita msimbo wa mkataba kutoka kwa mkataba mwingine, `msg.sender` itarejelea anwani ya kiwanda chetu cha mkataba. Hili ni **jambo muhimu sana kuelewa** kwani kutumia mkataba kuingiliana na mikataba mingine ni jambo la kawaida. Kwa hivyo unapaswa kuwa mwangalifu kuhusu nani ni mtumaji katika visa tata.
+Kumbuka kwamba tulibadilisha kidogo msimbo wa mkataba ili kufuatilia anwani ya kiwanda na anwani ya mmiliki wa mkataba. Unapoita msimbo wa mkataba kutoka kwenye mkataba mwingine, msg.sender itarejelea anwani ya kiwanda chetu cha mkataba. Hili ni **suala muhimu sana kuelewa** kwani kutumia mkataba kuingiliana na mikataba mingine ni jambo la kawaida. Kwa hivyo unapaswa kuwa mwangalifu kuhusu nani ni mtumaji katika hali ngumu.
 
-Kwa ajili hii, pia tuliongeza kirekebishaji cha `onlyFactory` kinachohakikisha kuwa chaguo za kukokotoa zinazobadilisha hali zinaweza kuitwa tu na kiwanda ambacho kitapitisha mwitaji halisi kama kigezo.
+Kwa hili pia tuliongeza kirekebishaji cha `onlyFactory` ambacho kinahakikisha kwamba kipengele cha kubadilisha hali kinaweza kuitwa tu na kiwanda ambacho kitapisha mpigaji wa asili kama kigezo.
 
-Ndani ya `CounterFactory` yetu mpya ambayo itasimamia Kaunta zingine zote, tutaongeza ramani ambayo itahusisha mmiliki na anwani ya mkataba wake wa kaunta:
+Ndani ya `CounterFactory` yetu mpya ambayo itasimamia Counters zingine zote, tutaongeza ramani (mapping) ambayo itahusisha mmiliki na anwani ya mkataba wake wa counter:
 
 ```solidity
 mapping(address => Counter) _counters;
 ```
 
-Katika Ethereum, ramani ni sawa na vitu katika javascript, zinawezesha kuweka ufunguo wa aina A kwa thamani ya aina B. Katika hali hii tunapanga anwani ya mmiliki na mfano wa Kaunta yake.
+Katika Ethereum, ramani (mapping) ni sawa na vitu (objects) katika JavaScript, zinawezesha kuweka ramani ya ufunguo wa aina A kwa thamani ya aina B. Katika kesi hii tunaweka ramani ya anwani ya mmiliki na mfano wa Counter yake.
 
-Kuanzisha Kaunta mpya kwa ajili ya mtu kutaonekana kama hivi:
+Kuanzisha Counter mpya kwa ajili ya mtu kutaonekana hivi:
 
 ```solidity
   function createCounter() public {
@@ -73,9 +73,9 @@ Kuanzisha Kaunta mpya kwa ajili ya mtu kutaonekana kama hivi:
   }
 ```
 
-Kwanza tunakagua kama mtu huyo tayari anamiliki kaunta. Ikiwa hamiliki kaunta, tunaanzisha kaunta mpya kwa kupitisha anwani yake kwa kijenzi cha `Counter` na kukabidhi mfano mpya ulioundwa kwenye ramani.
+Kwanza tunaangalia ikiwa mtu huyo tayari anamiliki counter. Ikiwa hamiliki counter tunaanzisha counter mpya kwa kupitisha anwani yake kwenye konstrukta ya `Counter` na kugawa mfano ulioundwa hivi karibuni kwenye ramani.
 
-Ili kupata hesabu ya Kaunta maalum itaonekana kama hivi:
+Ili kupata hesabu ya Counter maalum itaonekana hivi:
 
 ```solidity
 function getCount(address account) public view returns (uint256) {
@@ -88,9 +88,9 @@ function getMyCount() public view returns (uint256) {
 }
 ```
 
-Chaguo la kwanza la kukokotoa hukagua ikiwa mkataba wa Kaunta upo kwa anwani fulani na kisha huita mbinu ya `getCount` kutoka kwa mfano. Chaguo la pili la kukokotoa: `getMyCount` ni njia fupi tu ya kupitisha `msg.sender` moja kwa moja kwenye chaguo la kukokotoa la `getCount`.
+Kazi ya kwanza inaangalia ikiwa mkataba wa Counter upo kwa anwani iliyotolewa na kisha inaita mbinu ya `getCount` kutoka kwenye mfano. Kazi ya pili: `getMyCount` ni njia fupi tu ya kupitisha msg.sender moja kwa moja kwenye kazi ya `getCount`.
 
-Chaguo la kukokotoa la `increment` linafanana kabisa lakini hupitisha mtumaji asili wa muamala kwa mkataba wa `Counter`:
+Kazi ya `increment` inafanana sana lakini inapitisha mtumaji wa asili wa muamala kwenye mkataba wa `Counter`:
 
 ```solidity
 function increment() public {
@@ -99,11 +99,11 @@ function increment() public {
   }
 ```
 
-Kumbuka kwamba ikiitwa mara nyingi sana, kaunta yetu inaweza kuwa mwathirika wa kufurika. Unapaswa kutumia [maktaba ya SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/) kadri iwezekanavyo ili kujikinga na hali hii inayowezekana.
+Kumbuka kwamba ikiwa itaitwa mara nyingi sana, counter yetu inaweza kuwa mwathirika wa mzidio. Unapaswa kutumia maktaba ya [SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/) kadiri iwezekanavyo ili kujilinda kutokana na hali hii inayowezekana.
 
-Ili kupeleka mkataba wetu, utahitaji kutoa msimbo wa `CounterFactory` na `Counter`. Wakati wa kupeleka kwa mfano katika Remix utahitaji kuchagua CounterFactory.
+Ili kusambaza mkataba wetu, utahitaji kutoa msimbo wa `CounterFactory` na `Counter`. Wakati wa kusambaza kwa mfano katika Remix utahitaji kuchagua CounterFactory.
 
-Huu hapa msimbo kamili:
+Hapa kuna msimbo kamili:
 
 ```solidity
 pragma solidity 0.5.17;
@@ -116,12 +116,12 @@ contract Counter {
 
 
      modifier onlyOwner(address caller) {
-        require(caller == _owner, "Wewe si mmiliki wa mkataba");
+        require(caller == _owner, "You're not the owner of the contract");
         _;
     }
 
     modifier onlyFactory() {
-        require(msg.sender == _factory, "Unahitaji kutumia kiwanda");
+        require(msg.sender == _factory, "You need to use the factory");
         _;
     }
 
@@ -166,8 +166,8 @@ contract CounterFactory {
 }
 ```
 
-Baada ya kuandaa, katika sehemu ya kupeleka ya Remix utachagua kiwanda kitakachopelekwa:
+Baada ya ukusanyaji, katika sehemu ya kusambaza ya Remix utachagua kiwanda kitakachosambazwa:
 
-![Ukichagua kiwanda cha kupelekwa katika Remix](./counterfactory-deploy.png)
+![Selecting the factory to be deployed in Remix](./counterfactory-deploy.png)
 
-Kisha unaweza kucheza na kiwanda chako cha mkataba na uangalie mabadiliko ya thamani. Ikiwa ungependa kuita mkataba-erevu kutoka kwa anwani tofauti utahitaji kubadilisha anwani katika uteuzi wa Akaunti ya Remix.
+Kisha unaweza kucheza na kiwanda chako cha mkataba na kuangalia thamani ikibadilika. Ikiwa ungependa kuita mkataba mahiri kutoka kwenye anwani tofauti utahitaji kubadilisha anwani katika sehemu ya kuchagua Akaunti ya Remix.

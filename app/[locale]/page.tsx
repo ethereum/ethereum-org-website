@@ -11,6 +11,7 @@ import type { PageParams } from "@/lib/types"
 import HomeHero from "@/components/Hero/HomeHero"
 import FeatureCards from "@/components/Homepage/FeatureCards"
 import GetStartedGrid from "@/components/Homepage/GetStartedGrid"
+import LatestUpdates from "@/components/Homepage/LatestUpdates"
 import TrustLogos from "@/components/Homepage/TrustLogos"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
@@ -62,7 +63,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const allMessages = await getMessages()
   const glossary = allMessages["glossary-tooltip"] as Record<string, string>
   const messages = {
-    ...pick(allMessages, "page-index", "component-wallet-simulator"),
+    ...pick(
+      allMessages,
+      "page-index",
+      "component-swiper",
+      "component-wallet-simulator"
+    ),
     "glossary-tooltip": pick(glossary, [
       "nft-term",
       "nft-definition",
@@ -122,6 +128,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
             <FeatureCards eventCategory={eventCategory} />
 
+            <LatestUpdates eventCategory={eventCategory} />
+
             <GetStartedGrid eventCategory={eventCategory} />
           </div>
         </MainArticle>
@@ -135,6 +143,8 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
 
   try {
     const t = await getTranslations("page-index")

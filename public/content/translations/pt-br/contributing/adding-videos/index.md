@@ -18,6 +18,7 @@ O ethereum.org é um recurso educacional neutro. A galeria de vídeos é selecio
 
 O site não lista vídeos que promovem principalmente um produto específico, token ou serviço comercial.
 
+
 ## Critérios de inclusão {#criteria-for-inclusion}
 
 ### Requisitos obrigatórios {#must-haves}
@@ -33,6 +34,7 @@ O site não lista vídeos que promovem principalmente um produto específico, to
 - **Possui uma transcrição** – Vídeos com transcrições melhoram a acessibilidade e o SEO. Se você não tiver uma, a equipe do ethereum.org pode ajudar a gerá-la.
 - **De uma fonte confiável** – Conteúdo de educadores, pesquisadores e fontes estabelecidas recebe prioridade.
 - **Atemporal e duradouro** – Conteúdo que permanece relevante ao longo do tempo é preferido em relação a materiais sensíveis ao tempo.
+
 
 ## Como adicionar um vídeo {#how-to-add-a-video}
 
@@ -121,25 +123,10 @@ Use cabeçalhos `###` com marcações de tempo para marcar as seções principai
 
 Se você não tiver uma transcrição, pode deixar o corpo vazio e a equipe gerará uma.
 
-#### Etapa 4: Escolher tags de tópicos {#step-4}
-
-Escolha tags de tópicos que correspondam às categorias existentes usadas na galeria. As categorias atuais e suas tags incluem:
-
-- **Como o Ethereum funciona**: `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
-- **Atualizações da rede**: `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
-- **Roteiro e prioridades**: `roadmap-and-priorities`, `pbs`, `mev`
-- **Escalonamento e camada 2 (l2)**: `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
-- **Casos de uso**: `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
-- **Privacidade e segurança**: `privacy-and-security`, `privacy`, `authentication`
-- **Histórias da comunidade**: `community-stories`, `contributing`, `translations`, `community`
-
-Para garantir que seu vídeo apareça em uma prateleira de categoria da galeria, inclua pelo menos uma tag de chave de categoria (o nome em negrito em kebab-case, por exemplo, `use-cases` ou `scaling-and-layer-2`). Vídeos sem uma tag de categoria reconhecida aparecerão apenas na visualização "Todos" e nos resultados de pesquisa.
-
-Você também pode usar novas tags — elas estarão disponíveis para futuros agrupamentos de categorias.
-
 #### Etapa 5: Enviar seu PR {#step-5}
 
 Abra um pull request com suas alterações para a branch `dev`. A equipe revisará seu envio e fornecerá feedback.
+
 
 ## Manutenção {#maintenance}
 
@@ -150,6 +137,7 @@ Os vídeos listados são revisados rotineiramente para garantir que:
 - Tenham links de hospedagem/YouTube funcionando
 
 Se você notar um problema com um vídeo listado, [crie uma issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) ou envie um e-mail para [website@ethereum.org](mailto:website@ethereum.org).
+
 
 ## Termos de uso {#terms-of-use}
 

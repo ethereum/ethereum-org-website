@@ -1,6 +1,6 @@
 {
-  "page-index-meta-title": "Ethereum – kompletny przewodnik od Ethereum.org",
-  "page-index-meta-description": "Ethereum to globalna, zdecentralizowana platforma dla pieniędzy i nowych rodzajów aplikacji. W Ethereum to Ty kontrolujesz swoje pieniądze, dane i tożsamość. Bez banków, bez pośredników, bez pytania o pozwolenie.",
+  "page-index-meta-title": "Ethereum - kompletny przewodnik od ethereum.org",
+  "page-index-meta-description": "Ethereum to zdecentralizowana platforma dla odpornych aplikacji i infrastruktury. Kontroluj swoje pieniądze, dane i tożsamość bez udziału banku czy pośrednika.",
   "page-index-description": "Wiodąca platforma dla innowacyjnych aplikacji i sieci blockchain",
   "page-index-title": "Witamy w Ethereum",
   "page-index-hero-image-alt": "Ilustracja futurystycznego miasta reprezentująca ekosystem Ethereum.",
@@ -41,14 +41,14 @@
   "page-index-carousel-privacy-ethereum-label": "APLIKACJE ETHEREUM",
   "page-index-carousel-privacy-ethereum-value": "Domyślnie prywatne",
   "page-index-carousel-remittances-tag": "PŁATNOŚCI TRANSGRANICZNE",
-  "page-index-carousel-remittances-title": "Wyślij pieniądze do domu w {minutes} minut",
+  "page-index-carousel-remittances-title": "Wyślij pieniądze do domu w {seconds} sekund",
   "page-index-carousel-remittances-subtitle": "Pomiń opłatę za przelew w wysokości {wireFee} i ponad {days}-dniowy czas oczekiwania.",
   "page-index-carousel-remittances-description": "Wysyłaj <stablecoinsLink>stablecoiny</stablecoinsLink> do każdego, w dowolne miejsce na świecie, za jedyne {txFee}. Odbiorca otrzyma środki niemal natychmiast.",
   "page-index-carousel-remittances-cta": "Wypróbuj samodzielnie",
   "page-index-carousel-remittances-traditional-label": "PRZELEW BANKOWY",
   "page-index-carousel-remittances-traditional-value": "{min}-{max} dni",
   "page-index-carousel-remittances-ethereum-label": "ETHEREUM",
-  "page-index-carousel-remittances-ethereum-value": "{minutes} minut",
+  "page-index-carousel-remittances-ethereum-value": "{seconds} sekund",
   "page-index-carousel-borrowing-tag": "DOSTĘP DO FINANSÓW",
   "page-index-carousel-borrowing-title": "Pożyczaj bez historii kredytowej",
   "page-index-carousel-borrowing-subtitle": "Nie potrzebujesz zdolności kredytowej, aby zacząć.",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "Sieci prywatne i wymagające zezwolenia",
   "page-index-get-started-enterprise-bullet-3": "Zasoby instytucjonalne",
   "page-index-get-started-enterprise-cta": "Odkryj rozwiązania dla przedsiębiorstw",
-  "page-index-simulator-cta": "Wypróbuj więcej przewodników"
+  "page-index-simulator-cta": "Wypróbuj więcej przewodników",
+  "page-index-latest-updates-title": "Najnowsze aktualizacje Ethereum",
+  "page-index-latest-updates-cta": "Zobacz więcej"
 }

@@ -4,7 +4,7 @@
 
 Always lazy-load anything above ~20KB gz: Swiper, Prism (`prism-react-renderer`), Solidity highlighting, Radix Dialog bodies, modals, accordion content below the fold, chart libraries.
 
-Consolidate `next/dynamic` imports in `app/[locale]/_components/*LazyImports.tsx` with `ssr: false`:
+Consolidate `next/dynamic` imports in a per-route lazy-imports module with `ssr: false` — existing examples: `app/[locale]/resources/_components/LazyImports.tsx` and `app/[locale]/_components/HomepageLazy.tsx`:
 
 ```tsx
 const CodeExamples = dynamic(() => import(".../CodeExamples"), { ssr: false })

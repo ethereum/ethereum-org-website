@@ -1,11 +1,11 @@
 ---
-title: Prague-Electra (Pectra)
+title: Pectra
+metaTitle: Prague-Electra (Pectra)
 description: Learn about the Pectra protocol upgrade
 lang: en
+template: upgrade
 authors: ["Nixo", "Mario Havel"]
 ---
-
-# Pectra {#pectra}
 
 The Pectra network upgrade followed [Dencun](/roadmap/dencun/) and brought changes to both the execution and consensus layer of Ethereum. The shortened name Pectra is a combination of Prague and Electra, which are the respective names for the execution and consensus layer specification changes. Together, these changes bring a number of improvements to [Ethereum](/) users, developers and validators.
 
@@ -122,7 +122,6 @@ _Ethereum Pectra Upgrade: What Stakers Need to Know — Blockdaemon_
 
 - [Ethereum roadmap](/roadmap/)
 - [Pectra FAQ](https://epf.wiki/#/wiki/pectra-faq)
-- [Pectra.wtf info page](https://pectra.wtf)
 - [How Pectra enhances staker experience](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [EIP7702 info page](https://eip7702.io/)
 - [Pectra devnets](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

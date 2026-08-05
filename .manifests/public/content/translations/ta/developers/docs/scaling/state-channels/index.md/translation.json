@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "locale": "ta",
+  "translatedAt": "2026-06-17T22:47:21.057Z",
+  "englishManifestHash": "23b77e7d5590",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-061e30",
+    "LINK-3dc3d4",
+    "LINK-4c2e44",
+    "LINK-29bdaa",
+    "LINK-8db804",
+    "LINK-3dc3d4",
+    "LINK-76de4c",
+    "LINK-b83bf4",
+    "LINK-b87a50",
+    "LINK-50f66e",
+    "LINK-e55b86",
+    "LINK-29839c",
+    "LINK-40af1a",
+    "LINK-ee3efd",
+    "LINK-251c4a",
+    "LINK-b95e51",
+    "LINK-e77f9d",
+    "LINK-4bad2b"
+  ],
+  "placeholderMap": {
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-061e30": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/"
+      }
+    },
+    "LINK-3dc3d4": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2/"
+      }
+    },
+    "LINK-4c2e44": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/#multisig"
+      }
+    },
+    "LINK-29bdaa": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/#multisig"
+      }
+    },
+    "LINK-8db804": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#fraud-proof"
+      }
+    },
+    "LINK-76de4c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/sidechains/"
+      }
+    },
+    "LINK-b83bf4": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/#rollups"
+      }
+    },
+    "LINK-b87a50": {
+      "type": "link",
+      "values": {
+        "url": "https://l2fees.info/"
+      }
+    },
+    "LINK-50f66e": {
+      "type": "link",
+      "values": {
+        "url": "https://en.bitcoin.it/wiki/Hash_Time_Locked_Contracts"
+      }
+    },
+    "LINK-e55b86": {
+      "type": "link",
+      "values": {
+        "url": "https://connext.network/"
+      }
+    },
+    "LINK-29839c": {
+      "type": "link",
+      "values": {
+        "url": "https://perun.network/"
+      }
+    },
+    "LINK-40af1a": {
+      "type": "link",
+      "values": {
+        "url": "https://raiden.network/"
+      }
+    },
+    "LINK-ee3efd": {
+      "type": "link",
+      "values": {
+        "url": "https://statechannels.org/"
+      }
+    },
+    "LINK-251c4a": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4"
+      }
+    },
+    "LINK-b95e51": {
+      "type": "link",
+      "values": {
+        "url": "https://www.jeffcoleman.ca/state-channels/"
+      }
+    },
+    "LINK-e77f9d": {
+      "type": "link",
+      "values": {
+        "url": "https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/"
+      }
+    },
+    "LINK-4bad2b": {
+      "type": "link",
+      "values": {
+        "url": "https://ieeexplore.ieee.org/document/9627997"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T22:47:21.057Z",
+      "status": "success"
+    }
+  }
+}

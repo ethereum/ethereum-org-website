@@ -13,11 +13,11 @@ Dovresti comprendere i fondamenti di Ethereum e del [software client](/developer
 
 ## Strutture dati {#data-structures}
 
-### Trie di Merkle Patricia {#patricia-merkle-tries}
+### Trie di Patricia Merkle {#patricia-merkle-tries}
 
-I Trie di Merkle Patricia sono strutture che codificano coppie chiave-valore in un trie deterministico e autenticato crittograficamente. Questi sono ampiamente utilizzati in tutto il livello di esecuzione di Ethereum.
+I Trie di Patricia Merkle sono strutture che codificano coppie chiave-valore in un trie deterministico e autenticato crittograficamente. Questi sono ampiamente utilizzati in tutto il livello di esecuzione di Ethereum.
 
-[Maggiori informazioni sui Trie di Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)
+[Maggiori informazioni sui Trie di Patricia Merkle](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)
 
 ### Recursive Length Prefix {#recursive-length-prefix}
 

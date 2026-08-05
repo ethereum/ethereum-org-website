@@ -1,6 +1,6 @@
 ---
 title: Standar Token ERC-223
-description: Gambaran umum tentang standar token fungible ERC-223, cara kerjanya, dan perbandingannya dengan ERC-20.
+description: Gambaran umum tentang standar token sepadan (fungible) ERC-223, cara kerjanya, dan perbandingannya dengan ERC-20.
 lang: id
 ---
 
@@ -8,15 +8,15 @@ lang: id
 
 ### Apa itu ERC-223? {#what-is-erc223}
 
-ERC-223 adalah standar untuk token fungible, mirip dengan standar ERC-20. Perbedaan utamanya adalah ERC-223 tidak hanya mendefinisikan API token tetapi juga logika untuk mentransfer token dari pengirim ke penerima. Ini memperkenalkan model komunikasi yang memungkinkan transfer token ditangani di sisi penerima.
+ERC-223 adalah standar untuk token sepadan (fungible), mirip dengan standar ERC-20. Perbedaan utamanya adalah ERC-223 tidak hanya mendefinisikan API token tetapi juga logika untuk mentransfer token dari pengirim ke penerima. Standar ini memperkenalkan model komunikasi yang memungkinkan transfer token ditangani di sisi penerima.
 
 ### Perbedaan dari ERC-20 {#erc20-differences}
 
-ERC-223 mengatasi beberapa batasan ERC-20 dan memperkenalkan metode interaksi baru antara kontrak token dan kontrak yang mungkin menerima token. Ada beberapa hal yang dimungkinkan dengan ERC-223 tetapi tidak dengan ERC-20:
+ERC-223 mengatasi beberapa batasan ERC-20 dan memperkenalkan metode interaksi baru antara kontrak token dan kontrak yang mungkin menerima token tersebut. Ada beberapa hal yang dapat dilakukan dengan ERC-223 tetapi tidak dengan ERC-20:
 
-- Penanganan transfer token di sisi penerima: Penerima dapat mendeteksi bahwa token ERC-223 sedang didepositkan.
-- Penolakan token yang dikirim secara tidak benar: Jika pengguna mengirim token ERC-223 ke kontrak yang tidak seharusnya menerima token, kontrak dapat menolak transaksi, mencegah hilangnya token.
-- Metadata dalam transfer: Token ERC-223 dapat menyertakan metadata, memungkinkan informasi arbitrer dilampirkan pada transaksi token.
+- Penanganan transfer token di sisi penerima: Penerima dapat mendeteksi bahwa token ERC-223 sedang disetorkan.
+- Penolakan token yang dikirim secara tidak benar: Jika pengguna mengirim token ERC-223 ke kontrak yang tidak seharusnya menerima token, kontrak tersebut dapat menolak transaksi, sehingga mencegah hilangnya token.
+- Metadata dalam transfer: Token ERC-223 dapat menyertakan metadata, yang memungkinkan informasi arbitrer dilampirkan pada transaksi token.
 
 ## Prasyarat {#prerequisites}
 
@@ -27,9 +27,9 @@ ERC-223 mengatasi beberapa batasan ERC-20 dan memperkenalkan metode interaksi ba
 
 ## Isi {#body}
 
-ERC-223 adalah standar token yang mengimplementasikan API untuk token di dalam kontrak pintar. Ini juga mendeklarasikan API untuk kontrak yang seharusnya menerima token ERC-223. Kontrak yang tidak mendukung API Penerima ERC-223 tidak dapat menerima token ERC-223, mencegah kesalahan pengguna.
+ERC-223 adalah standar token yang mengimplementasikan API untuk token di dalam kontrak pintar. Standar ini juga mendeklarasikan API untuk kontrak yang seharusnya menerima token ERC-223. Kontrak yang tidak mendukung API Penerima ERC-223 tidak dapat menerima token ERC-223, sehingga mencegah kesalahan pengguna.
 
-Jika sebuah kontrak pintar mengimplementasikan metode dan peristiwa berikut, itu dapat disebut kontrak token yang kompatibel dengan ERC-223. Setelah diterapkan, kontrak tersebut akan bertanggung jawab untuk melacak token yang dibuat di Ethereum.
+Jika sebuah kontrak pintar mengimplementasikan metode dan peristiwa berikut, kontrak tersebut dapat disebut sebagai kontrak token yang kompatibel dengan ERC-223. Setelah diterapkan, kontrak ini akan bertanggung jawab untuk melacak token yang dibuat di Ethereum.
 
 Kontrak tidak diwajibkan untuk hanya memiliki fungsi-fungsi ini dan pengembang dapat menambahkan fitur lain dari standar token yang berbeda ke kontrak ini. Misalnya, fungsi `approve` dan `transferFrom` bukan bagian dari standar ERC-223 tetapi fungsi-fungsi ini dapat diimplementasikan jika diperlukan.
 
@@ -55,7 +55,7 @@ Kontrak yang seharusnya menerima token ERC-223 harus mengimplementasikan metode 
 function tokenReceived(address _from, uint _value, bytes calldata _data)
 ```
 
-Jika token ERC-223 dikirim ke kontrak yang tidak mengimplementasikan fungsi `tokenReceived(..)` maka transfer harus gagal dan token tidak boleh dipindahkan dari saldo pengirim.
+Jika token ERC-223 dikirim ke kontrak yang tidak mengimplementasikan fungsi `tokenReceived(..)`, maka transfer harus gagal dan token tidak boleh dipindahkan dari saldo pengirim.
 
 ### Peristiwa {#events}
 
@@ -65,7 +65,7 @@ event Transfer(address indexed _from, address indexed _to, uint256 _value, bytes
 
 ### Contoh {#examples}
 
-API token ERC-223 mirip dengan ERC-20, jadi dari sudut pandang pengembangan UI tidak ada perbedaan. Satu-satunya pengecualian di sini adalah bahwa token ERC-223 mungkin tidak memiliki fungsi `approve` + `transferFrom` karena ini bersifat opsional untuk standar ini.
+API token ERC-223 mirip dengan ERC-20, jadi dari sudut pandang pengembangan antarmuka pengguna (UI) tidak ada perbedaan. Satu-satunya pengecualian di sini adalah token ERC-223 mungkin tidak memiliki fungsi `approve` + `transferFrom` karena fungsi-fungsi ini bersifat opsional untuk standar ini.
 
 #### Contoh Solidity {#solidity-example}
 
@@ -115,7 +115,7 @@ contract VeryBasicERC223Token {
 }
 ```
 
-Sekarang kita ingin kontrak lain menerima deposit `tokenA` dengan asumsi bahwa tokenA adalah token ERC-223. Kontrak harus menerima hanya tokenA dan menolak token lainnya. Ketika kontrak menerima tokenA, kontrak harus memancarkan peristiwa `Deposit()` dan meningkatkan nilai variabel `deposits` internal.
+Sekarang kita ingin kontrak lain menerima setoran `tokenA` dengan asumsi bahwa tokenA adalah token ERC-223. Kontrak tersebut harus menerima hanya tokenA dan menolak token lainnya. Ketika kontrak menerima tokenA, kontrak tersebut harus memancarkan peristiwa `Deposit()` dan meningkatkan nilai variabel `deposits` internal.
 
 Berikut adalah kodenya:
 
@@ -123,14 +123,14 @@ Berikut adalah kodenya:
 contract RecipientContract is IERC223Recipient {
     event Deposit(address whoSentTheTokens);
     uint256 deposits = 0;
-    address tokenA; // The only token that we want to accept. // Satu-satunya token yang ingin kami terima.
+    address tokenA; // Satu-satunya token yang ingin kami terima.
     function tokenReceived(address _from, uint _value, bytes memory _data) public override
     {
-        // It is important to understand that within this function // Penting untuk dipahami bahwa di dalam fungsi ini
-        // msg.sender is the address of a token that is being received, // msg.sender adalah alamat dari token yang sedang diterima,
-        // msg.value  is always 0 as the token contract does not own or send ether in most cases, // msg.value  selalu 0 karena kontrak token tidak memiliki atau mengirim ether pada sebagian besar kasus,
-        // _from      is the sender of the token transfer, // _from      adalah pengirim dari transfer token,
-        // _value     is the amount of tokens that was deposited. // _value     adalah jumlah token yang disetorkan.
+        // Penting untuk dipahami bahwa di dalam fungsi ini
+        // msg.sender adalah alamat dari token yang sedang diterima,
+        // msg.value  selalu 0 karena kontrak token tidak memiliki atau mengirim Ether dalam sebagian besar kasus,
+        // _from      adalah pengirim dari transfer token,
+        // _value     adalah jumlah token yang disetorkan.
         require(msg.sender == tokenA);
         deposits += _value;
         emit Deposit(_from);
@@ -144,27 +144,27 @@ contract RecipientContract is IERC223Recipient {
 
 Transaksi akan gagal, dan transfer token tidak akan terjadi. Token akan dikembalikan ke alamat pengirim.
 
-### Bagaimana kita bisa melakukan deposit ke kontrak ini? {#contract-deposits}
+### Bagaimana cara kita melakukan setoran ke kontrak ini? {#contract-deposits}
 
 Panggil fungsi `transfer(address,uint256)` atau `transfer(address,uint256,bytes)` dari token ERC-223, dengan menentukan alamat `RecipientContract`.
 
 ### Apa yang akan terjadi jika kita mentransfer token ERC-20 ke kontrak ini? {#erc-20-transfers}
 
-Jika token ERC-20 dikirim ke `RecipientContract`, token akan ditransfer, tetapi transfer tidak akan dikenali (tidak ada peristiwa `Deposit()` yang akan dipicu, dan nilai deposit tidak akan berubah). Deposit ERC-20 yang tidak diinginkan tidak dapat disaring atau dicegah.
+Jika token ERC-20 dikirim ke `RecipientContract`, token akan ditransfer, tetapi transfer tersebut tidak akan dikenali (tidak ada peristiwa `Deposit()` yang akan dipicu, dan nilai setoran tidak akan berubah). Setoran ERC-20 yang tidak diinginkan tidak dapat disaring atau dicegah.
 
-### Bagaimana jika kita ingin mengeksekusi beberapa fungsi setelah deposit token selesai? {#function-execution}
+### Bagaimana jika kita ingin mengeksekusi suatu fungsi setelah setoran token selesai? {#function-execution}
 
-Ada beberapa cara untuk melakukannya. Dalam contoh ini kita akan mengikuti metode yang membuat transfer ERC-223 identik dengan transfer ether:
+Ada beberapa cara untuk melakukannya. Dalam contoh ini kita akan mengikuti metode yang membuat transfer ERC-223 identik dengan transfer Ether:
 
 ```solidity
 contract RecipientContract is IERC223Recipient {
     event Foo();
     event Bar(uint256 someNumber);
-    address tokenA; // The only token that we want to accept. // Satu-satunya token yang ingin kami terima.
+    address tokenA; // Satu-satunya token yang ingin kami terima.
     function tokenReceived(address _from, uint _value, bytes memory _data) public override
     {
         require(msg.sender == tokenA);
-        address(this).call(_data); // Handle incoming transaction and perform a subsequent function call. // Menangani transaksi masuk dan melakukan pemanggilan fungsi berikutnya.
+        address(this).call(_data); // Tangani transaksi masuk dan lakukan pemanggilan fungsi selanjutnya.
     }
     function foo() public
     {
@@ -177,11 +177,11 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-Ketika `RecipientContract` menerima token ERC-223, kontrak akan mengeksekusi fungsi yang dienkode sebagai parameter `_data` dari transaksi token, identik dengan bagaimana transaksi ether mengenkode panggilan fungsi sebagai `data` transaksi. Baca [bidang data](/developers/docs/transactions/#the-data-field) untuk informasi lebih lanjut.
+Ketika `RecipientContract` menerima token ERC-223, kontrak akan mengeksekusi fungsi yang dienkode sebagai parameter `_data` dari transaksi token, identik dengan bagaimana transaksi Ether mengenkode panggilan fungsi sebagai `data` transaksi. Baca [bidang data](/developers/docs/transactions/#the-data-field) untuk informasi lebih lanjut.
 
-Dalam contoh di atas, token ERC-223 harus ditransfer ke alamat `RecipientContract` dengan fungsi `transfer(address,uin256,bytes calldata _data)`. Jika parameter data adalah `0xc2985578` (tanda tangan dari fungsi `foo()`) maka fungsi foo() akan dipanggil setelah deposit token diterima dan peristiwa Foo() akan dipicu.
+Dalam contoh di atas, token ERC-223 harus ditransfer ke alamat `RecipientContract` dengan fungsi `transfer(address,uin256,bytes calldata _data)`. Jika parameter data adalah `0xc2985578` (tanda tangan dari fungsi `foo()`) maka fungsi foo() akan dipanggil setelah setoran token diterima dan peristiwa Foo() akan dipicu.
 
-Parameter juga dapat dienkode dalam `data` transfer token, misalnya kita dapat memanggil fungsi bar() dengan nilai 12345 untuk `_someNumber`. Dalam hal ini `data` harus berupa `0x0423a13200000000000000000000000000000000000000000000000000000000000004d2` di mana `0x0423a132` adalah tanda tangan dari fungsi `bar(uint256)` dan `00000000000000000000000000000000000000000000000000000000000004d2` adalah 12345 sebagai uint256.
+Parameter juga dapat dienkode dalam `data` dari transfer token, misalnya kita dapat memanggil fungsi bar() dengan nilai 12345 untuk `_someNumber`. Dalam hal ini `data` harus berupa `0x0423a13200000000000000000000000000000000000000000000000000000000000004d2` di mana `0x0423a132` adalah tanda tangan dari fungsi `bar(uint256)` dan `00000000000000000000000000000000000000000000000000000000000004d2` adalah 12345 sebagai uint256.
 
 ## Batasan {#limitations}
 

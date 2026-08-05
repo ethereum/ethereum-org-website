@@ -1,0 +1,1594 @@
+{
+  "version": 1,
+  "locale": "uk",
+  "translatedAt": "2026-06-18T00:04:01.190Z",
+  "englishManifestHash": "9ef409b7a543",
+  "placeholderOrder": [
+    "LINK-19e6e5",
+    "LINK-c6b559",
+    "LINK-c66bc0",
+    "LINK-df1de8",
+    "LINK-fbfa9e",
+    "LINK-34265f",
+    "LINK-6a2a99",
+    "IMAGE-d0471f",
+    "IMAGE-65300c",
+    "LINK-f9ea87",
+    "LINK-96d4eb",
+    "LINK-97d164",
+    "LINK-2ab690",
+    "LINK-cc950d",
+    "CODEBLOCK-7e6aee",
+    "CODEBLOCK-357223",
+    "CODE-5eb4ee",
+    "LINK-560306",
+    "CODEBLOCK-20f618",
+    "CODE-afa27b",
+    "CODEBLOCK-e234b6",
+    "LINK-88781b",
+    "CODE-afa27b",
+    "CODEBLOCK-6e88a6",
+    "CODEBLOCK-f58f1e",
+    "CODE-cf4ef7",
+    "CODE-afa27b",
+    "CODEBLOCK-4286b8",
+    "CODE-9cc6f2",
+    "CODE-a3e5b0",
+    "CODE-b094db",
+    "CODE-601b9b",
+    "CODE-601b9b",
+    "CODEBLOCK-fd34b5",
+    "CODE-872e4e",
+    "CODE-ab530a",
+    "CODE-473287",
+    "CODE-efa1f3",
+    "CODE-c510b8",
+    "CODE-ab530a",
+    "CODE-ab530a",
+    "CODE-293701",
+    "LINK-504e67",
+    "CODEBLOCK-065740",
+    "CODE-e9cbb0",
+    "CODE-e9cbb0",
+    "CODE-a97d74",
+    "CODE-e0d0f9",
+    "LINK-5ebe14",
+    "IMAGE-851c74",
+    "CODE-e9cbb0",
+    "CODEBLOCK-0de450",
+    "CODE-cf4ef7",
+    "LINK-93f834",
+    "LINK-70d023",
+    "LINK-459fd8",
+    "CODEBLOCK-275a3a",
+    "CODE-cf4ef7",
+    "CODE-cf4ef7",
+    "CODEBLOCK-b3535c",
+    "CODE-eba8dc",
+    "CODEBLOCK-093b55",
+    "CODE-86b4f8",
+    "LINK-5715b2",
+    "CODE-a3e5b0",
+    "CODE-c34f3d",
+    "CODEBLOCK-55c952",
+    "LINK-dd6f99",
+    "CODEBLOCK-a022d3",
+    "CODE-05e080",
+    "CODE-872e4e",
+    "LINK-91b55a",
+    "CODE-57a849",
+    "CODE-05e080",
+    "CODE-a6f5b0",
+    "CODEBLOCK-6682e7",
+    "CODE-4bef04",
+    "CODE-05e080",
+    "CODE-1eec97",
+    "CODE-a6f5b0",
+    "CODEBLOCK-0ea66f",
+    "CODEBLOCK-28fd39",
+    "LINK-e72391",
+    "IMAGE-bde0c5",
+    "CODE-218197",
+    "CODE-f4b06e",
+    "CODE-f4b06e",
+    "IMAGE-e53e17",
+    "LINK-e57d9b",
+    "IMAGE-adb510",
+    "CODE-322c90",
+    "LINK-52e588",
+    "CODE-4731fa",
+    "LINK-8dae3f",
+    "CODE-3aa327",
+    "LINK-cffd09",
+    "CODE-a3e5b0",
+    "CODE-1fa251",
+    "CODEBLOCK-85c77a",
+    "CODE-e9cbb0",
+    "LINK-280813",
+    "CODE-ccae6d",
+    "CODE-6eb641",
+    "CODE-e9cbb0",
+    "CODEBLOCK-eef7c8",
+    "LINK-fd6ae6",
+    "CODE-77f730",
+    "CODE-1fa251",
+    "CODEBLOCK-d860ab",
+    "CODEBLOCK-592c2c",
+    "CODEBLOCK-b4b30e",
+    "CODEBLOCK-b2bb99",
+    "LINK-75fce4",
+    "CODE-869c26",
+    "LINK-7104e1",
+    "CODE-ab530a",
+    "CODEBLOCK-b03c8b",
+    "CODE-0e85e3",
+    "CODEBLOCK-74f865",
+    "CODE-293701",
+    "CODE-293701",
+    "CODEBLOCK-3e4b4c",
+    "CODE-fc1391",
+    "CODE-fc1391",
+    "CODE-ab530a",
+    "LINK-97e143",
+    "CODE-ab530a",
+    "CODE-1fa251",
+    "CODEBLOCK-ea0b1b",
+    "CODE-c910c0",
+    "CODEBLOCK-28cad6",
+    "CODE-7a7ce3",
+    "LINK-3d285e",
+    "LINK-f906a8",
+    "LINK-183b1a",
+    "CODE-e9cbb0",
+    "CODE-e9cbb0",
+    "CODEBLOCK-a02c24",
+    "CODE-ee12f3",
+    "CODE-ee12f3",
+    "CODE-afa27b",
+    "CODEBLOCK-e1a6f3",
+    "CODE-cf4ef7",
+    "CODEBLOCK-61ff00",
+    "CODE-e9cbb0",
+    "CODE-a12dd3",
+    "CODEBLOCK-de3382",
+    "CODE-3998a2",
+    "CODE-9e63e3",
+    "LINK-d2eb28",
+    "CODEBLOCK-7955f8",
+    "LINK-5c230f",
+    "LINK-eb5ea9",
+    "LINK-1569ec",
+    "LINK-d25513",
+    "CODE-d8defe",
+    "CODE-4ddb3e",
+    "CODE-d8defe",
+    "LINK-35c8a9",
+    "CODE-4ddb3e",
+    "CODE-d8defe",
+    "CODE-25a663",
+    "CODE-25a663",
+    "CODE-797027",
+    "CODE-06309a",
+    "CODE-d8defe",
+    "CODE-3a2dc0",
+    "CODEBLOCK-8e86e6",
+    "CODE-06bf4a",
+    "CODEBLOCK-80f5b9",
+    "LINK-d7c214",
+    "CODE-797027",
+    "CODE-25a663",
+    "CODE-797027",
+    "CODE-d5989d",
+    "CODEBLOCK-018c88",
+    "CODEBLOCK-ba2eba",
+    "CODE-1319ba",
+    "CODE-073c16",
+    "CODE-ab530a",
+    "CODE-921cfe",
+    "CODE-b6e70b",
+    "CODE-d23ed4",
+    "CODE-02a963",
+    "CODE-7569af",
+    "CODE-47c4d6",
+    "CODEBLOCK-a16dda",
+    "LINK-72d43b",
+    "CODE-b6e70b",
+    "CODE-4f53cd",
+    "CODE-d23ed4",
+    "CODE-d99696",
+    "CODE-02a963",
+    "CODE-7569af",
+    "CODE-47c4d6",
+    "CODEBLOCK-df8c3e",
+    "CODE-363ba1",
+    "CODE-1319ba",
+    "CODE-ab530a",
+    "LINK-765aed",
+    "CODE-921cfe",
+    "CODE-7569af",
+    "CODE-47c4d6",
+    "CODE-f10a55",
+    "CODE-1820e4",
+    "CODE-797027",
+    "CODE-9b5b59",
+    "CODE-797027",
+    "CODE-1fa251",
+    "CODE-1fa251",
+    "LINK-ad2f2e",
+    "CODE-797027",
+    "CODE-1fa251",
+    "CODE-9342af",
+    "CODE-25a663",
+    "CODE-1fa251",
+    "CODEBLOCK-44ed75",
+    "CODE-afd5be",
+    "CODE-797027",
+    "CODE-afd5be",
+    "CODE-5bfcf6",
+    "LINK-a950a9",
+    "CODE-283d00",
+    "CODE-de61d1",
+    "CODE-400c71",
+    "LINK-79163f",
+    "LINK-9844e6",
+    "CODE-d8defe",
+    "CODEBLOCK-73578d",
+    "LINK-9844e6",
+    "LINK-fd1ffc",
+    "LINK-80b192",
+    "CODEBLOCK-13d8cf",
+    "CODE-e9cbb0",
+    "CODE-e9cbb0",
+    "CODEBLOCK-cd4de4",
+    "CODE-1fa251",
+    "CODE-9342af",
+    "CODEBLOCK-37991d",
+    "CODE-e9cbb0",
+    "CODE-558f3b",
+    "CODE-825015",
+    "LINK-7fbe97",
+    "LINK-5fcc7a",
+    "LINK-f8c2bc",
+    "CODE-b8bcd2",
+    "CODE-25a663",
+    "LINK-490ba7",
+    "CODE-1fa251",
+    "CODEBLOCK-ad1dd2",
+    "CODE-afd5be",
+    "CODEBLOCK-4bb509",
+    "CODE-1fa251",
+    "CODEBLOCK-89a648",
+    "CODE-5bfcf6",
+    "CODE-5bfcf6",
+    "CODE-1fa251",
+    "CODE-5bfcf6",
+    "CODE-1fa251",
+    "CODEBLOCK-51847a",
+    "CODE-b6e70b",
+    "CODE-797027",
+    "CODEBLOCK-d4b682",
+    "CODE-5bfcf6",
+    "CODE-d23ed4",
+    "CODE-797027",
+    "CODE-1fa251",
+    "LINK-d7c214",
+    "CODE-d23ed4",
+    "CODE-601b9b",
+    "LINK-59128f",
+    "CODE-d99696",
+    "CODE-293701",
+    "CODEBLOCK-8c7558",
+    "CODE-d23ed4",
+    "CODE-d99696",
+    "CODE-d23ed4",
+    "CODEBLOCK-d537b0",
+    "CODE-073c16",
+    "CODE-3a6eb0",
+    "CODE-6141da",
+    "CODE-ab530a",
+    "CODE-921cfe",
+    "CODE-073c16",
+    "CODE-b6e70b",
+    "CODE-797027",
+    "CODE-b6e70b",
+    "CODEBLOCK-731ac3",
+    "LINK-5c9ac9",
+    "LINK-0eaf8d",
+    "LINK-f9ea87",
+    "LINK-d06e9a",
+    "LINK-97d164",
+    "LINK-2ab690",
+    "CODEBLOCK-c9fedc",
+    "CODE-283d00",
+    "CODE-1fa251",
+    "CODE-283d00",
+    "CODE-797027",
+    "CODE-283d00",
+    "CODEBLOCK-c96152",
+    "CODE-b08881",
+    "CODE-b08881",
+    "LINK-0fc8df",
+    "CODE-b08881",
+    "CODE-d80c9b",
+    "CODE-073c16",
+    "CODE-b08881",
+    "LINK-436a98",
+    "CODE-c436b6",
+    "CODE-e35109",
+    "CODE-283d00",
+    "CODE-d80c9b",
+    "CODE-073c16",
+    "CODE-d80c9b",
+    "CODE-073c16",
+    "CODE-283d00",
+    "CODE-797027",
+    "CODE-283d00",
+    "CODE-797027",
+    "CODE-7569af",
+    "CODE-797027",
+    "CODEBLOCK-d2e5a0",
+    "CODE-797027",
+    "CODE-1fa251",
+    "CODE-7569af",
+    "CODE-283d00",
+    "CODE-073c16",
+    "CODE-1319ba",
+    "CODE-797027",
+    "CODE-1fa251",
+    "LINK-d7c214",
+    "CODE-de61d1",
+    "CODE-de61d1",
+    "CODE-de61d1",
+    "CODE-1fa251",
+    "CODEBLOCK-aef2b1",
+    "CODE-283d00",
+    "CODE-4100e4",
+    "CODE-062b91",
+    "CODE-b6e70b",
+    "CODE-797027",
+    "CODEBLOCK-a999c5",
+    "CODE-de61d1",
+    "CODE-1319ba",
+    "CODE-073c16",
+    "CODE-02a963",
+    "CODE-797027",
+    "CODE-02a963",
+    "CODEBLOCK-5c092c",
+    "CODE-b08881",
+    "CODE-073c16",
+    "CODE-dd8de1",
+    "CODE-1319ba",
+    "CODE-bc62a3",
+    "CODE-1319ba",
+    "CODE-b6e70b",
+    "CODEBLOCK-152af2",
+    "CODE-400c71",
+    "CODE-400c71",
+    "CODE-1fa251",
+    "CODE-797027",
+    "CODE-d80c9b",
+    "CODE-ab530a",
+    "CODE-400c71",
+    "CODEBLOCK-3ad759",
+    "CODE-400c71",
+    "CODEBLOCK-586f46",
+    "CODE-663ea1",
+    "CODE-75857a",
+    "CODE-d80c9b",
+    "CODE-3a6eb0",
+    "CODE-293701",
+    "CODE-ab530a",
+    "CODE-afaf54",
+    "CODE-beee7c",
+    "CODE-c2b5a7",
+    "CODE-073c16",
+    "CODE-073c16",
+    "CODE-400c71",
+    "CODEBLOCK-bd1c83",
+    "CODE-400c71",
+    "CODE-797027",
+    "CODE-400c71",
+    "CODE-797027",
+    "CODE-47c4d6",
+    "CODE-400c71",
+    "CODE-073c16",
+    "CODEBLOCK-b6fa27",
+    "LINK-5c230f",
+    "LINK-34265f",
+    "LINK-12fe4f"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-7e6aee": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-357223": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-20f618": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e234b6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6e88a6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f58f1e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4286b8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fd34b5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-872e4e": {
+      "type": "inline-code",
+      "values": {
+        "content": "HelloWorld"
+      }
+    },
+    "CODE-ab530a": {
+      "type": "inline-code",
+      "values": {
+        "content": "message"
+      }
+    },
+    "CODE-473287": {
+      "type": "inline-code",
+      "values": {
+        "content": "string"
+      }
+    },
+    "CODE-efa1f3": {
+      "type": "inline-code",
+      "values": {
+        "content": "public"
+      }
+    },
+    "CODE-c510b8": {
+      "type": "inline-code",
+      "values": {
+        "content": "initMessage"
+      }
+    },
+    "CODEBLOCK-065740": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0de450": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-275a3a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b3535c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-093b55": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-55c952": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a022d3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6682e7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0ea66f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-28fd39": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-85c77a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-eef7c8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d860ab": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-592c2c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b4b30e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b2bb99": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b03c8b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-74f865": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3e4b4c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ea0b1b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-28cad6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a02c24": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e1a6f3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-61ff00": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-de3382": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7955f8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8e86e6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-80f5b9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-018c88": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ba2eba": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a16dda": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-df8c3e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-44ed75": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-73578d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-13d8cf": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-cd4de4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-37991d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ad1dd2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4bb509": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-89a648": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-51847a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d4b682": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8c7558": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d537b0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-731ac3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c9fedc": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c96152": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d2e5a0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-aef2b1": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a999c5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5c092c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-152af2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3ad759": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-586f46": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-bd1c83": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b6fa27": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-5eb4ee": {
+      "type": "inline-code",
+      "values": {
+        "content": "npm init"
+      }
+    },
+    "CODE-afa27b": {
+      "type": "inline-code",
+      "values": {
+        "content": "hello-world"
+      }
+    },
+    "CODE-cf4ef7": {
+      "type": "inline-code",
+      "values": {
+        "content": "hardhat.config.js"
+      }
+    },
+    "CODE-9cc6f2": {
+      "type": "inline-code",
+      "values": {
+        "content": "contracts/"
+      }
+    },
+    "CODE-a3e5b0": {
+      "type": "inline-code",
+      "values": {
+        "content": "scripts/"
+      }
+    },
+    "CODE-b094db": {
+      "type": "inline-code",
+      "values": {
+        "content": "contracts"
+      }
+    },
+    "CODE-601b9b": {
+      "type": "inline-code",
+      "values": {
+        "content": "HelloWorld.sol"
+      }
+    },
+    "CODE-293701": {
+      "type": "inline-code",
+      "values": {
+        "content": "update"
+      }
+    },
+    "CODE-e9cbb0": {
+      "type": "inline-code",
+      "values": {
+        "content": ".env"
+      }
+    },
+    "CODE-a97d74": {
+      "type": "inline-code",
+      "values": {
+        "content": "process.env"
+      }
+    },
+    "CODE-e0d0f9": {
+      "type": "inline-code",
+      "values": {
+        "content": ".env-custom"
+      }
+    },
+    "CODE-eba8dc": {
+      "type": "inline-code",
+      "values": {
+        "content": "compile"
+      }
+    },
+    "CODE-86b4f8": {
+      "type": "inline-code",
+      "values": {
+        "content": "SPDX license identifier not provided in source file"
+      }
+    },
+    "CODE-c34f3d": {
+      "type": "inline-code",
+      "values": {
+        "content": "deploy.js"
+      }
+    },
+    "CODE-05e080": {
+      "type": "inline-code",
+      "values": {
+        "content": "ContractFactory"
+      }
+    },
+    "CODE-57a849": {
+      "type": "inline-code",
+      "values": {
+        "content": "hardhat-ethers"
+      }
+    },
+    "CODE-a6f5b0": {
+      "type": "inline-code",
+      "values": {
+        "content": "Contract"
+      }
+    },
+    "CODE-4bef04": {
+      "type": "inline-code",
+      "values": {
+        "content": "deploy()"
+      }
+    },
+    "CODE-1eec97": {
+      "type": "inline-code",
+      "values": {
+        "content": "Promise"
+      }
+    },
+    "CODE-218197": {
+      "type": "inline-code",
+      "values": {
+        "content": "From"
+      }
+    },
+    "CODE-f4b06e": {
+      "type": "inline-code",
+      "values": {
+        "content": "To"
+      }
+    },
+    "CODE-322c90": {
+      "type": "inline-code",
+      "values": {
+        "content": ".deploy()"
+      }
+    },
+    "CODE-4731fa": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_sendRawTransaction"
+      }
+    },
+    "CODE-3aa327": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_getTransactionByHash"
+      }
+    },
+    "CODE-1fa251": {
+      "type": "inline-code",
+      "values": {
+        "content": "interact.js"
+      }
+    },
+    "CODE-ccae6d": {
+      "type": "inline-code",
+      "values": {
+        "content": "API_KEY"
+      }
+    },
+    "CODE-6eb641": {
+      "type": "inline-code",
+      "values": {
+        "content": "CONTRACT_ADDRESS"
+      }
+    },
+    "CODE-77f730": {
+      "type": "inline-code",
+      "values": {
+        "content": "HelloWorld.json"
+      }
+    },
+    "CODE-869c26": {
+      "type": "inline-code",
+      "values": {
+        "content": "initMessage = \"Hello world!\""
+      }
+    },
+    "CODE-0e85e3": {
+      "type": "inline-code",
+      "values": {
+        "content": "npx hardhat run scripts/interact.js"
+      }
+    },
+    "CODE-fc1391": {
+      "type": "inline-code",
+      "values": {
+        "content": ".wait()"
+      }
+    },
+    "CODE-c910c0": {
+      "type": "inline-code",
+      "values": {
+        "content": "npx hardhat run scripts/interact.js --network goerli"
+      }
+    },
+    "CODE-7a7ce3": {
+      "type": "inline-code",
+      "values": {
+        "content": "Updating the message..."
+      }
+    },
+    "CODE-ee12f3": {
+      "type": "inline-code",
+      "values": {
+        "content": "hardhat-etherscan"
+      }
+    },
+    "CODE-a12dd3": {
+      "type": "inline-code",
+      "values": {
+        "content": "verify"
+      }
+    },
+    "CODE-3998a2": {
+      "type": "inline-code",
+      "values": {
+        "content": "DEPLOYED_CONTRACT_ADDRESS"
+      }
+    },
+    "CODE-9e63e3": {
+      "type": "inline-code",
+      "values": {
+        "content": "'Hello World!'"
+      }
+    },
+    "CODE-d8defe": {
+      "type": "inline-code",
+      "values": {
+        "content": "starter-files"
+      }
+    },
+    "CODE-4ddb3e": {
+      "type": "inline-code",
+      "values": {
+        "content": "completed"
+      }
+    },
+    "CODE-25a663": {
+      "type": "inline-code",
+      "values": {
+        "content": "src"
+      }
+    },
+    "CODE-797027": {
+      "type": "inline-code",
+      "values": {
+        "content": "HelloWorld.js"
+      }
+    },
+    "CODE-06309a": {
+      "type": "inline-code",
+      "values": {
+        "content": "util/interact.js"
+      }
+    },
+    "CODE-3a2dc0": {
+      "type": "inline-code",
+      "values": {
+        "content": "npm install"
+      }
+    },
+    "CODE-06bf4a": {
+      "type": "inline-code",
+      "values": {
+        "content": "npm start"
+      }
+    },
+    "CODE-d5989d": {
+      "type": "inline-code",
+      "values": {
+        "content": "./util/interact.js"
+      }
+    },
+    "CODE-1319ba": {
+      "type": "inline-code",
+      "values": {
+        "content": "walletAddress"
+      }
+    },
+    "CODE-073c16": {
+      "type": "inline-code",
+      "values": {
+        "content": "status"
+      }
+    },
+    "CODE-921cfe": {
+      "type": "inline-code",
+      "values": {
+        "content": "newMessage"
+      }
+    },
+    "CODE-b6e70b": {
+      "type": "inline-code",
+      "values": {
+        "content": "useEffect"
+      }
+    },
+    "CODE-d23ed4": {
+      "type": "inline-code",
+      "values": {
+        "content": "addSmartContractListener"
+      }
+    },
+    "CODE-02a963": {
+      "type": "inline-code",
+      "values": {
+        "content": "addWalletListener"
+      }
+    },
+    "CODE-7569af": {
+      "type": "inline-code",
+      "values": {
+        "content": "connectWalletPressed"
+      }
+    },
+    "CODE-47c4d6": {
+      "type": "inline-code",
+      "values": {
+        "content": "onUpdatePressed"
+      }
+    },
+    "CODE-4f53cd": {
+      "type": "inline-code",
+      "values": {
+        "content": "[]"
+      }
+    },
+    "CODE-d99696": {
+      "type": "inline-code",
+      "values": {
+        "content": "UpdatedMessages"
+      }
+    },
+    "CODE-363ba1": {
+      "type": "inline-code",
+      "values": {
+        "content": "walletAddress.length > 0"
+      }
+    },
+    "CODE-f10a55": {
+      "type": "inline-code",
+      "values": {
+        "content": "publishButton"
+      }
+    },
+    "CODE-1820e4": {
+      "type": "inline-code",
+      "values": {
+        "content": "walletButton"
+      }
+    },
+    "CODE-9b5b59": {
+      "type": "inline-code",
+      "values": {
+        "content": "App.js"
+      }
+    },
+    "CODE-9342af": {
+      "type": "inline-code",
+      "values": {
+        "content": "util"
+      }
+    },
+    "CODE-afd5be": {
+      "type": "inline-code",
+      "values": {
+        "content": "helloWorldContract"
+      }
+    },
+    "CODE-5bfcf6": {
+      "type": "inline-code",
+      "values": {
+        "content": "loadCurrentMessage"
+      }
+    },
+    "CODE-283d00": {
+      "type": "inline-code",
+      "values": {
+        "content": "connectWallet"
+      }
+    },
+    "CODE-de61d1": {
+      "type": "inline-code",
+      "values": {
+        "content": "getCurrentWalletConnected"
+      }
+    },
+    "CODE-400c71": {
+      "type": "inline-code",
+      "values": {
+        "content": "updateMessage"
+      }
+    },
+    "CODE-558f3b": {
+      "type": "inline-code",
+      "values": {
+        "content": "alchemyKey"
+      }
+    },
+    "CODE-825015": {
+      "type": "inline-code",
+      "values": {
+        "content": "createAlchemyWeb3"
+      }
+    },
+    "CODE-b8bcd2": {
+      "type": "inline-code",
+      "values": {
+        "content": "contract-abi.json"
+      }
+    },
+    "CODE-3a6eb0": {
+      "type": "inline-code",
+      "values": {
+        "content": "data"
+      }
+    },
+    "CODE-6141da": {
+      "type": "inline-code",
+      "values": {
+        "content": "data.returnValues"
+      }
+    },
+    "CODE-b08881": {
+      "type": "inline-code",
+      "values": {
+        "content": "window.ethereum"
+      }
+    },
+    "CODE-d80c9b": {
+      "type": "inline-code",
+      "values": {
+        "content": "address"
+      }
+    },
+    "CODE-c436b6": {
+      "type": "inline-code",
+      "values": {
+        "content": "window.ethereum.request({ method: \"eth_requestAccounts\" });"
+      }
+    },
+    "CODE-e35109": {
+      "type": "inline-code",
+      "values": {
+        "content": "method: \"eth_requestAccounts\""
+      }
+    },
+    "CODE-4100e4": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_requestAccounts"
+      }
+    },
+    "CODE-062b91": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_accounts"
+      }
+    },
+    "CODE-dd8de1": {
+      "type": "inline-code",
+      "values": {
+        "content": "window.ethereum.on(\"accountsChanged\")"
+      }
+    },
+    "CODE-bc62a3": {
+      "type": "inline-code",
+      "values": {
+        "content": "accounts"
+      }
+    },
+    "CODE-663ea1": {
+      "type": "inline-code",
+      "values": {
+        "content": "to"
+      }
+    },
+    "CODE-75857a": {
+      "type": "inline-code",
+      "values": {
+        "content": "from"
+      }
+    },
+    "CODE-afaf54": {
+      "type": "inline-code",
+      "values": {
+        "content": "window.ethereum.request"
+      }
+    },
+    "CODE-beee7c": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_sendTransaction"
+      }
+    },
+    "CODE-c2b5a7": {
+      "type": "inline-code",
+      "values": {
+        "content": "transactionParameters"
+      }
+    },
+    "IMAGE-d0471f": {
+      "type": "image",
+      "values": {
+        "path": "./hello-world-create-app.png"
+      }
+    },
+    "IMAGE-65300c": {
+      "type": "image",
+      "values": {
+        "path": "./create-app-view-hello-world.png"
+      }
+    },
+    "IMAGE-851c74": {
+      "type": "image",
+      "values": {
+        "path": "./get-alchemy-api-key.gif"
+      }
+    },
+    "IMAGE-bde0c5": {
+      "type": "image",
+      "values": {
+        "path": "./etherscan-contract.png"
+      }
+    },
+    "IMAGE-e53e17": {
+      "type": "image",
+      "values": {
+        "path": "./etherscan-transaction.png"
+      }
+    },
+    "IMAGE-adb510": {
+      "type": "image",
+      "values": {
+        "path": "./hello-world-explorer.png"
+      }
+    },
+    "LINK-19e6e5": {
+      "type": "link",
+      "values": {
+        "url": "https://metamask.io"
+      }
+    },
+    "LINK-c6b559": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.0/"
+      }
+    },
+    "LINK-c66bc0": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org"
+      }
+    },
+    "LINK-df1de8": {
+      "type": "link",
+      "values": {
+        "url": "https://alchemy.com/eth"
+      }
+    },
+    "LINK-fbfa9e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/"
+      }
+    },
+    "LINK-34265f": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/gWuC7zB"
+      }
+    },
+    "LINK-6a2a99": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/docs/choosing-a-web3-network"
+      }
+    },
+    "LINK-f9ea87": {
+      "type": "link",
+      "values": {
+        "url": "https://metamask.io/download"
+      }
+    },
+    "LINK-96d4eb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networks/#goerli"
+      }
+    },
+    "LINK-97d164": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance"
+      }
+    },
+    "LINK-2ab690": {
+      "type": "link",
+      "values": {
+        "url": "https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D"
+      }
+    },
+    "LINK-cc950d": {
+      "type": "link",
+      "values": {
+        "url": "https://youtu.be/r6sjRxBZJuU"
+      }
+    },
+    "LINK-560306": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm"
+      }
+    },
+    "LINK-88781b": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/getting-started/#overview"
+      }
+    },
+    "LINK-504e67": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/docs/hello-world-smart-contract#step-11-connect-metamask--alchemy-to-your-project"
+      }
+    },
+    "LINK-5ebe14": {
+      "type": "link",
+      "values": {
+        "url": "https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key"
+      }
+    },
+    "LINK-93f834": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc"
+      }
+    },
+    "LINK-70d023": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/plugins/"
+      }
+    },
+    "LINK-459fd8": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers"
+      }
+    },
+    "LINK-5715b2": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/u72VCg3"
+      }
+    },
+    "LINK-dd6f99": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/tutorial/testing-contracts.html#writing-tests"
+      }
+    },
+    "LINK-91b55a": {
+      "type": "link",
+      "values": {
+        "url": "<https://en.wikipedia.org/wiki/Factory_(object-oriented_programming"
+      }
+    },
+    "LINK-e72391": {
+      "type": "link",
+      "values": {
+        "url": "https://goerli.etherscan.io"
+      }
+    },
+    "LINK-e57d9b": {
+      "type": "link",
+      "values": {
+        "url": "https://dashboard.alchemy.com/explorer"
+      }
+    },
+    "LINK-52e588": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction"
+      }
+    },
+    "LINK-8dae3f": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash"
+      }
+    },
+    "LINK-cffd09": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/sending-transactions-using-web3-and-alchemy/"
+      }
+    },
+    "LINK-280813": {
+      "type": "link",
+      "values": {
+        "url": "#step-11-connect-metamask-alchemy-to-your-project"
+      }
+    },
+    "LINK-fd6ae6": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#abi"
+      }
+    },
+    "LINK-75fce4": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ethers.io/v5/"
+      }
+    },
+    "LINK-7104e1": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff"
+      }
+    },
+    "LINK-97e143": {
+      "type": "link",
+      "values": {
+        "url": "#read-the-init-message"
+      }
+    },
+    "LINK-3d285e": {
+      "type": "link",
+      "values": {
+        "url": "https://dashboard.alchemyapi.io/mempool"
+      }
+    },
+    "LINK-f906a8": {
+      "type": "link",
+      "values": {
+        "url": "https://goerli.etherscan.io"
+      }
+    },
+    "LINK-183b1a": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/register"
+      }
+    },
+    "LINK-d2eb28": {
+      "type": "link",
+      "values": {
+        "url": "#step-15-write-our-deploy-script"
+      }
+    },
+    "LINK-5c230f": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemy.com/alchemy/documentation/alchemy-web3"
+      }
+    },
+    "LINK-eb5ea9": {
+      "type": "link",
+      "values": {
+        "url": "https://react.dev/"
+      }
+    },
+    "LINK-1569ec": {
+      "type": "link",
+      "values": {
+        "url": "https://react.dev/learn"
+      }
+    },
+    "LINK-d25513": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/alchemyplatform/hello-world-part-four-tutorial"
+      }
+    },
+    "LINK-35c8a9": {
+      "type": "link",
+      "values": {
+        "url": "#part-3-publish-your-smart-contract-to-etherscan"
+      }
+    },
+    "LINK-d7c214": {
+      "type": "link",
+      "values": {
+        "url": "http://localhost:3000/"
+      }
+    },
+    "LINK-72d43b": {
+      "type": "link",
+      "values": {
+        "url": "https://legacy.reactjs.org/docs/hooks-effect.html"
+      }
+    },
+    "LINK-765aed": {
+      "type": "link",
+      "values": {
+        "url": "https://legacy.reactjs.org/docs/forms.html#controlled-components"
+      }
+    },
+    "LINK-ad2f2e": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller"
+      }
+    },
+    "LINK-a950a9": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/alchemyplatform/alchemy-web3"
+      }
+    },
+    "LINK-79163f": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library"
+      }
+    },
+    "LINK-9844e6": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/alchemyplatform/alchemy-web3"
+      }
+    },
+    "LINK-fd1ffc": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.web3js.org/"
+      }
+    },
+    "LINK-80b192": {
+      "type": "link",
+      "values": {
+        "url": "https://www.npmjs.com/package/dotenv"
+      }
+    },
+    "LINK-7fbe97": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan"
+      }
+    },
+    "LINK-5fcc7a": {
+      "type": "link",
+      "values": {
+        "url": "https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code"
+      }
+    },
+    "LINK-f8c2bc": {
+      "type": "link",
+      "values": {
+        "url": "https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code"
+      }
+    },
+    "LINK-490ba7": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.web3js.org/api/web3-eth-contract/class/Contract"
+      }
+    },
+    "LINK-59128f": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract"
+      }
+    },
+    "LINK-5c9ac9": {
+      "type": "link",
+      "values": {
+        "url": "https://metamask.io/"
+      }
+    },
+    "LINK-0eaf8d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-d06e9a": {
+      "type": "link",
+      "values": {
+        "url": "https://fauceth.komputing.org"
+      }
+    },
+    "LINK-0fc8df": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents"
+      }
+    },
+    "LINK-436a98": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts"
+      }
+    },
+    "LINK-12fe4f": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/AlchemyPlatform"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T00:04:01.190Z",
+      "status": "success"
+    }
+  }
+}

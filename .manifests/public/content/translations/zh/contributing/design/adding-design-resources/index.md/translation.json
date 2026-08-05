@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "locale": "zh",
+  "translatedAt": "2026-06-08T08:20:43.192Z",
+  "englishManifestHash": "b75625a1d3b5",
+  "placeholderOrder": [
+    "LINK-af6505"
+  ],
+  "placeholderMap": {
+    "LINK-af6505": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/design-and-ux/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T08:20:43.192Z",
+      "status": "success"
+    }
+  }
+}

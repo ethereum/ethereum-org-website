@@ -1,0 +1,589 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-privacy.json",
+  "generatedAt": "2026-07-27T19:26:56.731Z",
+  "rootHash": "e6697bd23b1b",
+  "tree": {
+    "contentHash": "72ba99cb64d6",
+    "anchorHash": "11b23b9c0703",
+    "children": {
+      "page-privacy-meta-title": {
+        "contentHash": "f450074f3d49",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-meta-description": {
+        "contentHash": "26081d63394a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-title": {
+        "contentHash": "54a57c3147c4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-hero-description": {
+        "contentHash": "26081d63394a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-hero-cta": {
+        "contentHash": "d98fb5c0b118",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-summary-title": {
+        "contentHash": "8e76a94ac832",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-summary-item-1": {
+        "contentHash": "bcc4a6b68bd1",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "f28a6e6bbec3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-summary-item-2": {
+        "contentHash": "53754733ef0d",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "23262177f6ed",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-summary-item-3": {
+        "contentHash": "b93ceb446808",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "c0f85a240515",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-summary-item-4": {
+        "contentHash": "a9265898f23d",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "b8f8469217c9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-data-against-you-title": {
+        "contentHash": "25feb17d5b98",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-data-against-you-description-1": {
+        "contentHash": "1a986a8847b1",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "5acd8ce0c059",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-data-against-you-description-2": {
+        "contentHash": "8da426691529",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "af91d8de2966",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-data-against-you-description-3": {
+        "contentHash": "0d905c9a08fd",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "d564bcae7f2e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-data-against-you-description-4": {
+        "contentHash": "468673a0ce7a",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "207cdbd07673",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-remember-data-title": {
+        "contentHash": "a42ebea3a5fe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-remember-data-description-1": {
+        "contentHash": "54b840ea87f7",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "db6f2218a917",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-remember-data-description-2": {
+        "contentHash": "573e00e9181b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-remember-data-description-3": {
+        "contentHash": "b179f199c4aa",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "dc26dc45db3c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-private-moments-title": {
+        "contentHash": "aa4d5810029f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-private-moments-description-1": {
+        "contentHash": "19fa9d47cf14",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "8760e70d76aa",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-private-moments-description-2": {
+        "contentHash": "e9162e6f563c",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "83f74ec408f1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-metric-1-description": {
+        "contentHash": "8faf8038abf1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-metric-2-description": {
+        "contentHash": "a508d6d5e65f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-metric-3-description": {
+        "contentHash": "7cf3cd25fdd6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-metric-value-plus": {
+        "contentHash": "d863150c0f18",
+        "anchorHash": "c1998519ea77",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "db9a5a9b5a4c"
+          },
+          "prose:1": {
+            "contentHash": "a318c24216de",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:1"
+        ]
+      },
+      "page-privacy-metric-value-times": {
+        "contentHash": "bbf14f6e855d",
+        "anchorHash": "c1998519ea77",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "db9a5a9b5a4c"
+          },
+          "prose:1": {
+            "contentHash": "8db71ed28b0f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:1"
+        ]
+      },
+      "page-privacy-private-moments-description-3": {
+        "contentHash": "a13e86ccfd3f",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "ec049d4dcf53",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-private-moments-description-4": {
+        "contentHash": "63e732378c05",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "07de54e2d071",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-targeting-title": {
+        "contentHash": "77b29911d37f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-targeting-description-1": {
+        "contentHash": "b7d21a3d3c01",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "53ecf13765a1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-targeting-description-2": {
+        "contentHash": "38397d9871f8",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "e81e14b6025c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-targeting-list-1": {
+        "contentHash": "03d05d18788e",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "ecbc249851d9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-targeting-list-2": {
+        "contentHash": "0f86c8471680",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "60937693e75b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-targeting-list-3": {
+        "contentHash": "395c99d6e68e",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "8fed8e50db84",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-targeting-list-4": {
+        "contentHash": "73f9e6015bb9",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "7f324cde3f5d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-targeting-list-5": {
+        "contentHash": "099f30d4c7a8",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "7f48932162e4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-targeting-example-1": {
+        "contentHash": "620b7fb18234",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "031cac7fedc4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-targeting-example-2": {
+        "contentHash": "eae11e78c4d7",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "7765ac94a02d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-nothing-to-hide-title": {
+        "contentHash": "4896b5a83bd0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-nothing-to-hide-description-1": {
+        "contentHash": "5ca4d692c936",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-nothing-to-hide-description-2": {
+        "contentHash": "5d35fc7dcd80",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "7189210690f7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-remember-surveillance-title": {
+        "contentHash": "4aef20aa804f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-remember-surveillance-description": {
+        "contentHash": "d6e68ad68713",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-nothing-to-hide-description-3": {
+        "contentHash": "d5ccd8e245a3",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "1cf2c578f35a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-nothing-to-hide-description-4": {
+        "contentHash": "a423e0a1dd37",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "5e7a0b29fb79",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-nothing-to-hide-description-5": {
+        "contentHash": "6286ccfaa278",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "ccd0ad9c3bbf",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-crowd-title": {
+        "contentHash": "c8bd5b1528dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-crowd-description-1": {
+        "contentHash": "f47cedbfc605",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-crowd-description-2": {
+        "contentHash": "87ef9f6a0639",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-what-protects-title": {
+        "contentHash": "72d663cca4e8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-what-protects-description-1": {
+        "contentHash": "473947e7f66b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-what-protects-description-2": {
+        "contentHash": "50a386ca478a",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "84671cd46f9b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-what-protects-card-1-title": {
+        "contentHash": "eb9001cfa91d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-what-protects-card-1-description": {
+        "contentHash": "a8c02e4cd1df",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-what-protects-card-2-title": {
+        "contentHash": "360170372727",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-what-protects-card-2-description": {
+        "contentHash": "3087857cbdcc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-what-protects-card-3-title": {
+        "contentHash": "8a46e9cd5722",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-what-protects-card-3-description": {
+        "contentHash": "58b2cb1a7c80",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-default-title": {
+        "contentHash": "db703a020798",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-default-description-1": {
+        "contentHash": "37ba1680d878",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "7542251f77e8",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-default-description-2": {
+        "contentHash": "e117ae47453a",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "56dfe5da90a4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-default-description-3": {
+        "contentHash": "f761c32f7c91",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "a0f6ffcca13a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-default-cta": {
+        "contentHash": "23f44691f18e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-getting-started-title": {
+        "contentHash": "831d0f72d242",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-getting-started-description-1": {
+        "contentHash": "6334fa375acc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-getting-started-description-2": {
+        "contentHash": "68c1667de352",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-pathway-1-title": {
+        "contentHash": "955579b60518",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-pathway-1-description": {
+        "contentHash": "afe492c59ce7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-pathway-1-badge": {
+        "contentHash": "d70604e84304",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-pathway-2-title": {
+        "contentHash": "d452cb414fe3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-pathway-2-description": {
+        "contentHash": "0991440be564",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-privacy-meta-title",
+      "page-privacy-meta-description",
+      "page-privacy-title",
+      "page-privacy-hero-description",
+      "page-privacy-hero-cta",
+      "page-privacy-summary-title",
+      "page-privacy-summary-item-1",
+      "page-privacy-summary-item-2",
+      "page-privacy-summary-item-3",
+      "page-privacy-summary-item-4",
+      "page-privacy-data-against-you-title",
+      "page-privacy-data-against-you-description-1",
+      "page-privacy-data-against-you-description-2",
+      "page-privacy-data-against-you-description-3",
+      "page-privacy-data-against-you-description-4",
+      "page-privacy-remember-data-title",
+      "page-privacy-remember-data-description-1",
+      "page-privacy-remember-data-description-2",
+      "page-privacy-remember-data-description-3",
+      "page-privacy-private-moments-title",
+      "page-privacy-private-moments-description-1",
+      "page-privacy-private-moments-description-2",
+      "page-privacy-metric-1-description",
+      "page-privacy-metric-2-description",
+      "page-privacy-metric-3-description",
+      "page-privacy-metric-value-plus",
+      "page-privacy-metric-value-times",
+      "page-privacy-private-moments-description-3",
+      "page-privacy-private-moments-description-4",
+      "page-privacy-targeting-title",
+      "page-privacy-targeting-description-1",
+      "page-privacy-targeting-description-2",
+      "page-privacy-targeting-list-1",
+      "page-privacy-targeting-list-2",
+      "page-privacy-targeting-list-3",
+      "page-privacy-targeting-list-4",
+      "page-privacy-targeting-list-5",
+      "page-privacy-targeting-example-1",
+      "page-privacy-targeting-example-2",
+      "page-privacy-nothing-to-hide-title",
+      "page-privacy-nothing-to-hide-description-1",
+      "page-privacy-nothing-to-hide-description-2",
+      "page-privacy-remember-surveillance-title",
+      "page-privacy-remember-surveillance-description",
+      "page-privacy-nothing-to-hide-description-3",
+      "page-privacy-nothing-to-hide-description-4",
+      "page-privacy-nothing-to-hide-description-5",
+      "page-privacy-crowd-title",
+      "page-privacy-crowd-description-1",
+      "page-privacy-crowd-description-2",
+      "page-privacy-what-protects-title",
+      "page-privacy-what-protects-description-1",
+      "page-privacy-what-protects-description-2",
+      "page-privacy-what-protects-card-1-title",
+      "page-privacy-what-protects-card-1-description",
+      "page-privacy-what-protects-card-2-title",
+      "page-privacy-what-protects-card-2-description",
+      "page-privacy-what-protects-card-3-title",
+      "page-privacy-what-protects-card-3-description",
+      "page-privacy-default-title",
+      "page-privacy-default-description-1",
+      "page-privacy-default-description-2",
+      "page-privacy-default-description-3",
+      "page-privacy-default-cta",
+      "page-privacy-getting-started-title",
+      "page-privacy-getting-started-description-1",
+      "page-privacy-getting-started-description-2",
+      "page-privacy-pathway-1-title",
+      "page-privacy-pathway-1-description",
+      "page-privacy-pathway-1-badge",
+      "page-privacy-pathway-2-title",
+      "page-privacy-pathway-2-description"
+    ]
+  },
+  "sourceCommitSha": "4a7c0fa2a3ee82737bedc324112b0f3d16f22030"
+}

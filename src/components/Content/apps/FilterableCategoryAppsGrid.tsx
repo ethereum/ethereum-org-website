@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl"
 import AppCard from "@/components/AppCard"
 import FilterBar from "@/components/FilterBar"
 import { Button } from "@/components/ui/buttons/Button"
+import { Grid } from "@/components/ui/grid"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { slugify } from "@/lib/utils/url"
@@ -71,7 +72,7 @@ const FilterableCategoryAppsGrid = ({
           eventName: "",
         }}
       />
-      <div className="grid grid-cols-fill-4 gap-6 md:gap-12">
+      <Grid>
         {displayApps.map((app) => (
           <AppCard
             key={app.name}
@@ -87,7 +88,7 @@ const FilterableCategoryAppsGrid = ({
             }}
           />
         ))}
-      </div>
+      </Grid>
       {!filterBy && limit && limit < filteredApps.length && (
         <Button
           variant="outline"

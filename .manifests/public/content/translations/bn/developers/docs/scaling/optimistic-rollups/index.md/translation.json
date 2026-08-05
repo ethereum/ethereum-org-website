@@ -1,0 +1,343 @@
+{
+  "version": 1,
+  "locale": "bn",
+  "translatedAt": "2026-06-17T22:36:18.492Z",
+  "englishManifestHash": "29058db0bec9",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-76de4c",
+    "LINK-1c6dc8",
+    "CODE-6ba9f2",
+    "LINK-a58e78",
+    "LINK-061e30",
+    "LINK-3dc3d4",
+    "CODE-6ba9f2",
+    "LINK-a58e78",
+    "LINK-65c42f",
+    "LINK-037c8e",
+    "LINK-cadfd1",
+    "LINK-0e456b",
+    "LINK-149ae7",
+    "LINK-76de4c",
+    "CODE-6ba9f2",
+    "LINK-a58e78",
+    "LINK-d0d588",
+    "LINK-9464be",
+    "CODE-6ba9f2",
+    "CODE-6ba9f2",
+    "LINK-dfc295",
+    "CODE-6ba9f2",
+    "LINK-58ecac",
+    "CODE-6ba9f2",
+    "CODE-6ba9f2",
+    "CODE-6ba9f2",
+    "CODE-6ba9f2",
+    "CODE-6ba9f2",
+    "LINK-d96d53",
+    "CODE-f6dcab",
+    "CODE-6ba9f2",
+    "CODE-6ba9f2",
+    "LINK-4d5ec8",
+    "LINK-e115ea",
+    "LINK-b20517",
+    "LINK-1e4854",
+    "LINK-6258d8",
+    "LINK-71c926",
+    "LINK-c7d589",
+    "LINK-70edb1",
+    "CODE-fa2c8c",
+    "LINK-37f8a6",
+    "CODE-fa2c8c",
+    "CODE-6ba9f2",
+    "LINK-1ede08",
+    "LINK-c0e28e",
+    "CODE-6ba9f2",
+    "LINK-e0377b",
+    "LINK-5180c3",
+    "LINK-c4c673",
+    "LINK-cd3e6d",
+    "CODE-1945d2",
+    "COMPONENT-000000",
+    "LINK-d812b5",
+    "LINK-8cc06e",
+    "LINK-17f6dc",
+    "LINK-fc8443",
+    "LINK-e2d888",
+    "LINK-d56ab8",
+    "LINK-881934",
+    "LINK-73e6e7",
+    "LINK-021d52"
+  ],
+  "placeholderMap": {
+    "CODE-6ba9f2": {
+      "type": "inline-code",
+      "values": {
+        "content": "calldata"
+      }
+    },
+    "CODE-f6dcab": {
+      "type": "inline-code",
+      "values": {
+        "content": "appendSequencerBatch()"
+      }
+    },
+    "CODE-fa2c8c": {
+      "type": "inline-code",
+      "values": {
+        "content": "blob"
+      }
+    },
+    "CODE-1945d2": {
+      "type": "inline-code",
+      "values": {
+        "content": "CALLDATA"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-76de4c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/sidechains/"
+      }
+    },
+    "LINK-1c6dc8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/plasma/"
+      }
+    },
+    "LINK-a58e78": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/danksharding/"
+      }
+    },
+    "LINK-061e30": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/"
+      }
+    },
+    "LINK-3dc3d4": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2/"
+      }
+    },
+    "LINK-65c42f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/zk-rollups"
+      }
+    },
+    "LINK-037c8e": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#validity-proof"
+      }
+    },
+    "LINK-cadfd1": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#fraud-proof"
+      }
+    },
+    "LINK-0e456b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/#offchain-scaling"
+      }
+    },
+    "LINK-149ae7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-d0d588": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-availability/"
+      }
+    },
+    "LINK-9464be": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-dfc295": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/anatomy/#memory"
+      }
+    },
+    "LINK-58ecac": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs"
+      }
+    },
+    "LINK-d96d53": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591"
+      }
+    },
+    "LINK-4d5ec8": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/danksharding"
+      }
+    },
+    "LINK-e115ea": {
+      "type": "link",
+      "values": {
+        "url": "/whitepaper/#merkle-trees"
+      }
+    },
+    "LINK-b20517": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/merkle-proofs-for-offline-data-integrity/"
+      }
+    },
+    "LINK-1e4854": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/dapps/"
+      }
+    },
+    "LINK-6258d8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/bridges/"
+      }
+    },
+    "LINK-71c926": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-c7d589": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.github.io/yellowpaper/paper.pdf"
+      }
+    },
+    "LINK-70edb1": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "LINK-37f8a6": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4844"
+      }
+    },
+    "LINK-1ede08": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/blob/81f3ea8322aff6b9fb15132d050f8f98b16bdba4/configs/mainnet.yaml#L147"
+      }
+    },
+    "LINK-c0e28e": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1559"
+      }
+    },
+    "LINK-e0377b": {
+      "type": "link",
+      "values": {
+        "url": "https://l2fees.info/"
+      }
+    },
+    "LINK-5180c3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/blocks/#block-size"
+      }
+    },
+    "LINK-c4c673": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2021/01/05/rollup.html"
+      }
+    },
+    "LINK-cd3e6d": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/danksharding/"
+      }
+    },
+    "LINK-d812b5": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/overviews/optimistic-rollups"
+      }
+    },
+    "LINK-8cc06e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction"
+      }
+    },
+    "LINK-17f6dc": {
+      "type": "link",
+      "values": {
+        "url": "https://www.bankless.com/the-essential-guide-to-arbitrum"
+      }
+    },
+    "LINK-fc8443": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups"
+      }
+    },
+    "LINK-e2d888": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s"
+      }
+    },
+    "LINK-d56ab8": {
+      "type": "link",
+      "values": {
+        "url": "https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work"
+      }
+    },
+    "LINK-881934": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52"
+      }
+    },
+    "LINK-73e6e7": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/overviews/optimistic-virtual-machine"
+      }
+    },
+    "LINK-021d52": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/optimism-std-bridge-annotated-code/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T22:36:18.492Z",
+      "status": "success"
+    }
+  }
+}

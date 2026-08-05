@@ -1,0 +1,491 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/consensus-mechanisms/pow/mining/index.md",
+  "generatedAt": "2026-06-16T22:16:21.501Z",
+  "rootHash": "2f8904ff3066",
+  "tree": {
+    "contentHash": "77fb61adda51",
+    "anchorHash": "7ccf60bb8fbe",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "bf94ba9e2d86",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "7f3fa9b59765",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "component:3": {
+        "contentHash": "3c0c0d23da5b",
+        "anchorHash": "267b376852ef",
+        "children": {
+          "attr:variant": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "2937013f2181"
+          },
+          "component:0": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "ba4f05c59229",
+            "children": {
+              "attr:text": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "c3ced01ac64d"
+              }
+            }
+          },
+          "component:1": {
+            "contentHash": "066885877478",
+            "anchorHash": "e8d46b5ac289",
+            "children": {
+              "component:0": {
+                "contentHash": "2425e12ab802",
+                "anchorHash": "461cb55f4273",
+                "children": {
+                  "prose:4": {
+                    "contentHash": "827074360d69",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "a13bebeb57e1",
+                    "anchorHash": "8a5edab28263"
+                  },
+                  "prose:5": {
+                    "contentHash": "130b3477d6e1",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "html-tag:1": {
+                    "contentHash": "c09500586c2c",
+                    "anchorHash": "7ec949681315"
+                  },
+                  "prose:6": {
+                    "contentHash": "d03502c43d74",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "html-tag:2": {
+                    "contentHash": "769e0b8515e3",
+                    "anchorHash": "1cf357718a1b"
+                  },
+                  "prose:7": {
+                    "contentHash": "4aa9bfd2f175",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "html-tag:3": {
+                    "contentHash": "d9a998cac660",
+                    "anchorHash": "8836a53c1e46"
+                  },
+                  "prose:8": {
+                    "contentHash": "e470a750a9dd",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "prose:4",
+                  "link:0",
+                  "prose:5",
+                  "html-tag:1",
+                  "prose:6",
+                  "html-tag:2",
+                  "prose:7",
+                  "html-tag:3",
+                  "prose:8"
+                ]
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "attr:variant",
+          "component:0",
+          "component:1"
+        ]
+      },
+      "prerequisites": {
+        "contentHash": "9e9008e58d8b",
+        "anchorHash": "d5c0bb899e5d",
+        "labelHash": "865514682d01",
+        "children": {
+          "_label": {
+            "contentHash": "865514682d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "ed40dad09508",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "81dc075c3d55",
+            "anchorHash": "d20c9fa6d21a"
+          },
+          "prose:4": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "2a12da17d27c",
+            "anchorHash": "5fdb077865bd"
+          },
+          "prose:5": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "673993a95ab9",
+            "anchorHash": "d61a7ea1fcd6"
+          },
+          "prose:6": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6"
+        ]
+      },
+      "what-is-ethereum-mining": {
+        "contentHash": "fa6f84503dd5",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "0893ecdb7b2e",
+        "children": {
+          "_label": {
+            "contentHash": "0893ecdb7b2e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "41ee1b988bbc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "why-do-miners-exist": {
+        "contentHash": "2cdd28ac5632",
+        "anchorHash": "7ca3bae97052",
+        "labelHash": "89692a69b91d",
+        "children": {
+          "_label": {
+            "contentHash": "89692a69b91d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "f9145ab62379",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "0ae965365586",
+            "anchorHash": "d61a7ea1fcd6"
+          },
+          "prose:2": {
+            "contentHash": "38d6b023dcf9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "cost-of-mining": {
+            "contentHash": "542cf9e87118",
+            "anchorHash": "f992c60797ec",
+            "labelHash": "f7d5c2c88b65",
+            "children": {
+              "_label": {
+                "contentHash": "f7d5c2c88b65",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "3d5aa4b7c82e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "d0299bb7f22b",
+                "anchorHash": "c0a6a59c08b8"
+              },
+              "prose:2": {
+                "contentHash": "eaa66d50f79e",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2",
+          "cost-of-mining"
+        ]
+      },
+      "how-ethereum-transactions-were-mined": {
+        "contentHash": "12205715c951",
+        "anchorHash": "062baf2cfa34",
+        "labelHash": "d889c1ec7e61",
+        "children": {
+          "_label": {
+            "contentHash": "d889c1ec7e61",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:6": {
+            "contentHash": "5cd3bd1a198c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "fcec91509759",
+            "anchorHash": "146c1dbff343"
+          },
+          "prose:7": {
+            "contentHash": "ed1389ca298a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "ce922519a3c3",
+            "anchorHash": "d20c9fa6d21a"
+          },
+          "prose:8": {
+            "contentHash": "d0c44cfd58c8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "9af211329b2f",
+            "anchorHash": "d094984b1eaf"
+          },
+          "prose:9": {
+            "contentHash": "9315c4ca54b1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "545ea5384610",
+            "anchorHash": "94d095604d5e"
+          },
+          "prose:10": {
+            "contentHash": "407244f31ab8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "496aca80e4d8",
+            "anchorHash": "5fdb077865bd"
+          },
+          "prose:11": {
+            "contentHash": "98d0981ab028",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "ce4a30862013",
+            "anchorHash": "d08920759d1c"
+          },
+          "prose:12": {
+            "contentHash": "f39bd0f61145",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:6",
+          "link:0",
+          "prose:7",
+          "link:1",
+          "prose:8",
+          "link:2",
+          "prose:9",
+          "link:3",
+          "prose:10",
+          "link:4",
+          "prose:11",
+          "link:5",
+          "prose:12"
+        ]
+      },
+      "ommer-blocks": {
+        "contentHash": "b6219c903660",
+        "anchorHash": "4cb574b3f49d",
+        "labelHash": "f6e72ba5ddbf",
+        "children": {
+          "_label": {
+            "contentHash": "f6e72ba5ddbf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "484e467565a8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "2eafbb86940f",
+            "anchorHash": "829770c619a5"
+          },
+          "prose:3": {
+            "contentHash": "efe3f62f59b6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "6203482257cf",
+            "anchorHash": "5afc75617ec0"
+          },
+          "prose:4": {
+            "contentHash": "c9d59ce6e144",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "a-visual-demo": {
+        "contentHash": "6894aadc92ae",
+        "anchorHash": "a186c58b7d29",
+        "labelHash": "464ee43a76e4",
+        "children": {
+          "_label": {
+            "contentHash": "464ee43a76e4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "9c94468950fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "c02cd8f839e2",
+            "children": {
+              "attr:slug": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "577e3c73fe70"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2"
+        ]
+      },
+      "mining-algorithm": {
+        "contentHash": "5c48f928a118",
+        "anchorHash": "246c8b4a60db",
+        "labelHash": "7073039b4987",
+        "children": {
+          "_label": {
+            "contentHash": "7073039b4987",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "d61e3a78c47d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "1822cc100fa5",
+            "anchorHash": "990d172124b7"
+          },
+          "prose:4": {
+            "contentHash": "766461b4c0ac",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "fa3204f696f4",
+            "anchorHash": "243792edadca"
+          },
+          "prose:5": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "06dbf12826a7",
+            "anchorHash": "570b768bee4e"
+          },
+          "prose:6": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6"
+        ]
+      },
+      "related-topics": {
+        "contentHash": "a7f4bae7111e",
+        "anchorHash": "704a7a58ce00",
+        "labelHash": "5a38da0df0ab",
+        "children": {
+          "_label": {
+            "contentHash": "5a38da0df0ab",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "e23a445d0fa7",
+            "anchorHash": "d08920759d1c"
+          },
+          "prose:4": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "f7925209bc63",
+            "anchorHash": "f68a48502f68"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "735f891366e9",
+            "anchorHash": "d61a7ea1fcd6"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "component:3",
+      "prerequisites",
+      "what-is-ethereum-mining",
+      "why-do-miners-exist",
+      "how-ethereum-transactions-were-mined",
+      "ommer-blocks",
+      "a-visual-demo",
+      "mining-algorithm",
+      "related-topics"
+    ]
+  },
+  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+}

@@ -43,7 +43,12 @@ function youtubeThumbnailUrl(youtubeId: string, quality: "sd" | "hq"): string {
  * under public/content/videos/ that have an index.md).
  */
 async function discoverVideoSlugs(token: string): Promise<string[]> {
-  const url = `${GITHUB_API_BASE}/git/trees/master?recursive=1`
+  // Fetch only the videos subtree, not the whole repo recursively. A recursive
+  // tree of the full repo exceeds GitHub's truncation limit (~100k entries / 7MB),
+  // and when truncated the public/content/videos/ paths are silently dropped,
+  // yielding zero slugs (and an empty thumbnail map that wipes the cached blob).
+  const treePath = encodeURIComponent("public/content/videos")
+  const url = `${GITHUB_API_BASE}/git/trees/master:${treePath}`
   const response = await fetchRetry(url, {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -52,26 +57,22 @@ async function discoverVideoSlugs(token: string): Promise<string[]> {
   })
 
   if (!response.ok) {
-    throw new Error(`Failed to fetch repo tree: ${response.status}`)
+    throw new Error(`Failed to fetch videos tree: ${response.status}`)
   }
 
   const data = await response.json()
-  const tree: GitTreeItem[] = data.tree
-
-  const slugs: string[] = []
-  for (const item of tree) {
-    if (item.type !== "blob") continue
-    if (!item.path.startsWith(VIDEOS_PATH_PREFIX)) continue
-    if (!item.path.endsWith(VIDEO_INDEX_SUFFIX)) continue
-
-    const inner = item.path.slice(
-      VIDEOS_PATH_PREFIX.length,
-      -VIDEO_INDEX_SUFFIX.length
+  // The videos directory holds ~dozens of entries, well under the truncation
+  // limit, but guard defensively: a truncated response would under-report slugs.
+  if (data.truncated) {
+    throw new Error(
+      "Videos tree response was truncated; aborting to avoid wiping the thumbnail map"
     )
-    // Skip nested paths (none expected, kept defensive)
-    if (!inner.includes("/")) slugs.push(inner)
   }
-  return slugs
+
+  // Subtree entries are relative to the videos directory: each immediate
+  // subdirectory (type "tree") is a video slug.
+  const tree: GitTreeItem[] = data.tree
+  return tree.filter((item) => item.type === "tree").map((item) => item.path)
 }
 
 /**
@@ -181,6 +182,15 @@ export async function fetchVideoThumbnails(): Promise<Record<string, string>> {
   console.log(
     `Video thumbnail sync complete: ${Object.keys(thumbnailMap).length}/${slugs.length} uploaded`
   )
+
+  // Never persist an empty map: a fully-empty result always signals a fetch
+  // failure (there are always videos in the repo). Throwing here leaves the
+  // previously cached blob intact instead of wiping every thumbnail sitewide.
+  if (Object.keys(thumbnailMap).length === 0) {
+    throw new Error(
+      "Video thumbnail sync produced an empty map; refusing to overwrite cached blob"
+    )
+  }
 
   return thumbnailMap
 }

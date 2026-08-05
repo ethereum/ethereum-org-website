@@ -1,32 +1,32 @@
 ---
-title: "Khối đề xuất"
-description: "Giải thích cách các khối được đề xuất trong Ethereum bằng chứng cổ phần."
+title: "Đề xuất khối"
+description: "Giải thích về cách các khối được đề xuất trong Ethereum bằng chứng cổ phần."
 lang: vi
 ---
 
-Các khối là những đơn vị cơ bản của chuỗi khối. Các khối là những đơn vị thông tin riêng biệt được chuyển qua lại giữa các nút, được đồng thuận và được thêm vào cơ sở dữ liệu của mỗi nút. Trang này giải thích cách chúng được tạo ra.
+Các khối là đơn vị cơ bản của Chuỗi khối. Các khối là những đơn vị thông tin rời rạc được truyền giữa các nút, được đồng thuận và thêm vào cơ sở dữ liệu của mỗi nút. Trang này giải thích cách chúng được tạo ra.
 
 ## Điều kiện tiên quyết {#prerequisites}
 
-Việc đề xuất khối là một phần của giao thức bằng chứng cổ phần. Để giúp bạn hiểu trang này, chúng tôi khuyên bạn nên đọc về [bằng chứng cổ phần](/developers/docs/consensus-mechanisms/pos/) và [kiến trúc khối](/developers/docs/blocks/).
+Đề xuất khối là một phần của Giao thức Bằng chứng cổ phần (PoS). Để giúp hiểu trang này, chúng tôi khuyên bạn nên đọc về [bằng chứng cổ phần](/developers/docs/consensus-mechanisms/pos/) và [kiến trúc khối](/developers/docs/blocks/).
 
 ## Ai tạo ra các khối? {#who-produces-blocks}
 
-Các tài khoản trình xác thực đề xuất các khối. Các tài khoản trình xác thực được quản lý bởi các nhà điều hành nút, những người chạy phần mềm trình xác thực như một phần của máy khách thực thi và máy khách đồng thuận của họ và đã ký gửi ít nhất 32 ETH vào hợp đồng ký gửi. Tuy nhiên, mỗi trình xác thực chỉ thỉnh thoảng chịu trách nhiệm đề xuất một khối. Ethereum đo lường thời gian bằng slot và epoch. Mỗi slot dài mười hai giây, và 32 slot (6,4 phút) tạo thành một epoch. Mỗi slot là một cơ hội để thêm một khối mới trên Ethereum.
+Các tài khoản trình xác thực đề xuất các khối. Các tài khoản trình xác thực được quản lý bởi các nhà điều hành nút, những người chạy phần mềm trình xác thực như một phần của máy khách thực thi và máy khách đồng thuận của họ, đồng thời đã gửi ít nhất 32 ETH vào hợp đồng tiền gửi. Tuy nhiên, mỗi trình xác thực chỉ thỉnh thoảng mới chịu trách nhiệm đề xuất một khối. [Ethereum](/) đo lường thời gian bằng các khe và Kỷ nguyên. Mỗi khe kéo dài mười hai giây và 32 khe (6,4 phút) tạo thành một Kỷ nguyên. Mỗi khe là một cơ hội để thêm một khối mới trên Ethereum.
 
 ### Lựa chọn ngẫu nhiên {#random-selection}
 
-Một trình xác thực duy nhất được chọn một cách giả ngẫu nhiên để đề xuất một khối trong mỗi slot. Không có cái gọi là sự ngẫu nhiên thực sự trong một chuỗi khối bởi vì nếu mỗi nút tạo ra các số ngẫu nhiên thực sự, chúng sẽ không thể đạt được sự đồng thuận. Thay vào đó, mục đích là làm cho quy trình lựa chọn trình xác thực không thể đoán trước được. Sự ngẫu nhiên được thực hiện trên Ethereum bằng cách sử dụng một thuật toán gọi là RANDAO, thuật toán này trộn một hàm băm từ người đề xuất khối với một hạt giống được cập nhật mỗi khối. Giá trị này được sử dụng để chọn một người xác thực cụ thể từ tổng bộ người xác thực. Việc lựa chọn trình xác thực được ấn định trước hai epoch như một cách để bảo vệ chống lại một số loại thao túng hạt giống nhất định.
+Một trình xác thực duy nhất được chọn một cách giả ngẫu nhiên để đề xuất một khối trong mỗi khe. Không có tính ngẫu nhiên thực sự trong một Chuỗi khối vì nếu mỗi nút tạo ra các số ngẫu nhiên thực sự, chúng sẽ không thể đạt được đồng thuận. Thay vào đó, mục tiêu là làm cho quá trình chọn trình xác thực trở nên không thể đoán trước. Tính ngẫu nhiên đạt được trên Ethereum bằng cách sử dụng một thuật toán gọi là RANDAO, thuật toán này trộn một Mã băm từ người đề xuất khối với một hạt giống (seed) được cập nhật ở mỗi khối. Giá trị này được sử dụng để chọn một trình xác thực cụ thể từ tổng số tập hợp trình xác thực. Việc chọn trình xác thực được cố định trước hai Kỷ nguyên như một cách để bảo vệ chống lại một số loại thao túng hạt giống.
 
-Mặc dù các trình xác thực thêm vào RANDAO trong mỗi slot, giá trị RANDAO toàn cục chỉ được cập nhật một lần mỗi epoch. Để tính toán chỉ số của người đề xuất khối tiếp theo, giá trị RANDAO được trộn với số slot để tạo ra một giá trị duy nhất trong mỗi slot. Xác suất một trình xác thực cá nhân được chọn không đơn giản là `1/N` (với `N` = tổng số trình xác thực đang hoạt động). Thay vào đó, nó được tính trọng số theo số dư ETH hiệu quả của mỗi trình xác thực. Số dư hiệu quả tối đa là 32 ETH (điều này có nghĩa là `số dư < 32 ETH` dẫn đến trọng số thấp hơn so với `số dư == 32 ETH`, nhưng `số dư > 32 ETH` không dẫn đến trọng số cao hơn so với `số dư == 32 ETH`).
+Mặc dù các trình xác thực thêm vào RANDAO trong mỗi khe, giá trị RANDAO toàn cục chỉ được cập nhật một lần mỗi Kỷ nguyên. Để tính toán chỉ số của người đề xuất khối tiếp theo, giá trị RANDAO được trộn với số khe để tạo ra một giá trị duy nhất trong mỗi khe. Xác suất một trình xác thực cá nhân được chọn không đơn giản là `1/N` (trong đó `N` = tổng số trình xác thực đang hoạt động). Thay vào đó, nó được tính trọng số theo số dư ETH hiệu dụng của mỗi trình xác thực. Số dư hiệu dụng tối đa là 32 ETH (điều này có nghĩa là `balance < 32 ETH` dẫn đến trọng số thấp hơn so với `balance == 32 ETH`, nhưng `balance > 32 ETH` không dẫn đến trọng số cao hơn so với `balance == 32 ETH`).
 
-Chỉ một người đề xuất khối được chọn trong mỗi slot. Trong điều kiện bình thường, một người tạo khối duy nhất sẽ tạo và phát hành một khối duy nhất trong slot dành riêng cho họ. Việc tạo hai khối cho cùng một slot là một hành vi có thể bị cắt giảm, thường được gọi là "nhập nhằng".
+Chỉ có một người đề xuất khối được chọn trong mỗi khe. Trong điều kiện bình thường, một người tạo khối duy nhất sẽ tạo và phát hành một khối duy nhất trong khe dành riêng cho họ. Việc tạo hai khối cho cùng một khe là một vi phạm có thể bị phạt cắt giảm, thường được gọi là "xác nhận nước đôi".
 
 ## Khối được tạo ra như thế nào? {#how-is-a-block-created}
 
-Người đề xuất khối dự kiến sẽ phát một khối beacon đã ký, khối này xây dựng trên đỉnh đầu gần đây nhất của chuỗi theo góc nhìn của thuật toán lựa chọn phân nhánh do họ tự chạy cục bộ. Thuật toán lựa chọn phân nhánh áp dụng bất kỳ sự chứng thực nào đang chờ trong hàng đợi còn sót lại từ slot trước, sau đó tìm khối có trọng lượng chứng thực tích lũy lớn nhất trong lịch sử của nó. Khối đó là khối cha của khối mới do người đề xuất tạo ra.
+Người đề xuất khối được kỳ vọng sẽ phát sóng một khối beacon đã ký, được xây dựng trên đỉnh của phần đầu gần nhất của Chuỗi theo góc nhìn từ thuật toán chọn nhánh chạy cục bộ của riêng họ. Thuật toán chọn nhánh áp dụng bất kỳ chứng thực nào đang xếp hàng chờ còn sót lại từ khe trước đó, sau đó tìm khối có trọng số chứng thực tích lũy lớn nhất trong lịch sử của nó. Khối đó là khối cha của khối mới do người đề xuất tạo ra.
 
-Người đề xuất khối tạo ra một khối bằng cách thu thập dữ liệu từ cơ sở dữ liệu cục bộ và góc nhìn về chuỗi của riêng nó. Nội dung của khối được hiển thị trong đoạn mã dưới đây:
+Người đề xuất khối tạo ra một khối bằng cách thu thập dữ liệu từ cơ sở dữ liệu cục bộ của chính nó và góc nhìn về Chuỗi. Nội dung của khối được hiển thị trong đoạn mã dưới đây:
 
 ```rust
 class BeaconBlockBody(Container):
@@ -42,28 +42,28 @@ class BeaconBlockBody(Container):
     execution_payload: ExecutionPayload
 ```
 
-Trường `randao_reveal` nhận một giá trị ngẫu nhiên có thể xác minh mà người đề xuất khối tạo ra bằng cách ký vào số epoch hiện tại. `eth1_data` là một phiếu bầu cho góc nhìn của người đề xuất khối về hợp đồng ký gửi, bao gồm gốc của cây Merkle ký gửi và tổng số lượng ký gửi cho phép các khoản ký gửi mới được xác minh. `graffiti` là một trường tùy chọn có thể được sử dụng để thêm một thông điệp vào khối. `proposer_slashings` và `attester_slashings` là các trường chứa bằng chứng cho thấy một số trình xác thực nhất định đã thực hiện các hành vi có thể bị cắt giảm theo góc nhìn của người đề xuất về chuỗi. `deposits` là một danh sách các khoản ký gửi của trình xác thực mới mà người đề xuất khối biết, và `voluntary_exits` là một danh sách các trình xác thực muốn thoát mà người đề xuất khối đã nghe nói đến trên mạng gossip của lớp đồng thuận. `sync_aggregate` là một vector cho thấy những trình xác thực nào trước đây đã được chỉ định vào một ủy ban đồng bộ (một tập hợp con các trình xác thực phục vụ dữ liệu máy khách nhẹ) và đã tham gia vào việc ký dữ liệu.
+Trường `randao_reveal` nhận một giá trị ngẫu nhiên có thể xác minh mà người đề xuất khối tạo ra bằng việc ký số Kỷ nguyên hiện tại. `eth1_data` là một phiếu bầu cho góc nhìn của người đề xuất khối về hợp đồng tiền gửi, bao gồm gốc của trie Merkle tiền gửi và tổng số tiền gửi cho phép xác minh các khoản tiền gửi mới. `graffiti` là một trường tùy chọn có thể được sử dụng để thêm một thông điệp vào khối. `proposer_slashings` và `attester_slashings` là các trường chứa bằng chứng cho thấy một số trình xác thực nhất định đã phạm phải các vi phạm có thể bị phạt cắt giảm theo góc nhìn của người đề xuất về Chuỗi. `deposits` là danh sách các khoản tiền gửi mới của trình xác thực mà người đề xuất khối biết đến, và `voluntary_exits` là danh sách các trình xác thực muốn thoát mà người đề xuất khối đã nghe được trên mạng lưới tin đồn của lớp đồng thuận. `sync_aggregate` là một vector cho thấy những trình xác thực nào trước đây đã được chỉ định vào một ủy ban đồng bộ (một tập hợp con các trình xác thực phục vụ dữ liệu máy khách nhẹ) và đã tham gia vào việc ký dữ liệu.
 
-`execution_payload` cho phép thông tin về các giao dịch được chuyển qua lại giữa máy khách thực thi và máy khách đồng thuận. `execution_payload` là một khối dữ liệu thực thi được lồng vào bên trong một khối beacon. Các trường bên trong `execution_payload` phản ánh cấu trúc khối được nêu trong Sách vàng Ethereum, ngoại trừ việc không có ommer và `prev_randao` tồn tại thay cho `difficulty`. Máy khách thực thi có quyền truy cập vào một nhóm giao dịch cục bộ mà nó đã nghe được trên mạng gossip của riêng mình. Các giao dịch này được thực thi cục bộ để tạo ra một cây trie trạng thái được cập nhật, được gọi là trạng thái sau. Các giao dịch được bao gồm trong `execution_payload` dưới dạng một danh sách được gọi là `transactions` và trạng thái sau được cung cấp trong trường `state-root`.
+`execution_payload` cho phép thông tin về các giao dịch được truyền giữa máy khách thực thi và máy khách đồng thuận. `execution_payload` là một khối dữ liệu thực thi được lồng bên trong một khối beacon. Các trường bên trong `execution_payload` phản ánh cấu trúc khối được phác thảo trong sách vàng Ethereum, ngoại trừ việc không có các ommer và `prev_randao` tồn tại thay cho `difficulty`. Máy khách thực thi có quyền truy cập vào một nhóm giao dịch cục bộ mà nó đã nghe được trên mạng lưới tin đồn của riêng nó. Các giao dịch này được thực thi cục bộ để tạo ra một trie trạng thái được cập nhật, được gọi là trạng thái sau (post-state). Các giao dịch được bao gồm trong `execution_payload` dưới dạng một danh sách gọi là `transactions` và trạng thái sau được cung cấp trong trường `state-root`.
 
-Tất cả các dữ liệu này được thu thập trong một khối beacon, được ký và phát đến các máy ngang hàng của người đề xuất khối, những máy này sẽ lan truyền nó đến các máy ngang hàng của họ, v.v.
+Tất cả những dữ liệu này được thu thập trong một khối beacon, được ký và phát sóng tới các nút ngang hàng của người đề xuất khối, những người này sau đó sẽ truyền bá nó tới các nút ngang hàng của họ, v.v.
 
 Đọc thêm về [cấu trúc của các khối](/developers/docs/blocks).
 
 ## Điều gì xảy ra với khối? {#what-happens-to-blocks}
 
-Khối được thêm vào cơ sở dữ liệu cục bộ của người đề xuất khối và được phát đến các máy ngang hàng qua mạng gossip của lớp đồng thuận. Khi một trình xác thực nhận được khối, nó sẽ xác minh dữ liệu bên trong đó, bao gồm việc kiểm tra rằng khối đó có khối cha chính xác, tương ứng với slot chính xác, chỉ số người đề xuất là chỉ số được mong đợi, việc tiết lộ RANDAO là hợp lệ và người đề xuất không bị cắt giảm. `execution_payload` được tách ra, và máy khách thực thi của trình xác thực sẽ thực thi lại các giao dịch trong danh sách để kiểm tra sự thay đổi trạng thái được đề xuất. Giả sử khối vượt qua tất cả các kiểm tra này, mỗi trình xác thực sẽ thêm khối đó vào chuỗi chính tắc của riêng mình. Quy trình sau đó bắt đầu lại trong slot tiếp theo.
+Khối được thêm vào cơ sở dữ liệu cục bộ của người đề xuất khối và được phát sóng tới các nút ngang hàng qua mạng lưới tin đồn của lớp đồng thuận. Khi một trình xác thực nhận được khối, nó sẽ xác minh dữ liệu bên trong đó, bao gồm việc kiểm tra xem khối có đúng khối cha hay không, có tương ứng với đúng khe hay không, chỉ số người đề xuất có đúng như mong đợi hay không, tiết lộ RANDAO có hợp lệ hay không và người đề xuất không bị phạt cắt giảm. `execution_payload` được gỡ gói và máy khách thực thi của trình xác thực sẽ thực thi lại các giao dịch trong danh sách để kiểm tra sự thay đổi trạng thái được đề xuất. Giả sử khối vượt qua tất cả các bước kiểm tra này, mỗi trình xác thực sẽ thêm khối vào Chuỗi chính tắc của riêng nó. Quá trình này sau đó bắt đầu lại ở khe tiếp theo.
 
 ## Phần thưởng khối {#block-rewards}
 
-Người đề xuất khối nhận được thanh toán cho công việc của họ. Có một `base_reward` được tính như một hàm của số lượng trình xác thực đang hoạt động và số dư hiệu quả của chúng. Người đề xuất khối sau đó nhận được một phần của `base_reward` cho mỗi sự chứng thực hợp lệ có trong khối; càng nhiều trình xác thực chứng thực cho khối, phần thưởng của người đề xuất khối càng lớn. Cũng có một phần thưởng cho việc báo cáo các trình xác thực nên bị cắt giảm, bằng `1/512 * số dư hiệu quả` cho mỗi trình xác thực bị cắt giảm.
+Người đề xuất khối nhận được khoản thanh toán cho công việc của họ. Có một `base_reward` được tính toán như một hàm của số lượng trình xác thực đang hoạt động và số dư hiệu dụng của họ. Người đề xuất khối sau đó nhận được một phần của `base_reward` cho mỗi chứng thực hợp lệ được bao gồm trong khối; càng nhiều trình xác thực chứng thực cho khối, phần thưởng của người đề xuất khối càng lớn. Ngoài ra còn có phần thưởng cho việc báo cáo các trình xác thực đáng bị phạt cắt giảm, bằng `1/512 * effective balance` cho mỗi trình xác thực bị phạt cắt giảm.
 
-[Thông tin thêm về phần thưởng và hình phạt](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)
+[Tìm hiểu thêm về phần thưởng và hình phạt](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)
 
 ## Đọc thêm {#further-reading}
 
 - [Giới thiệu về các khối](/developers/docs/blocks/)
-- [Giới thiệu về Cơ chế bảo chứng cổ phần](/developers/docs/consensus-mechanisms/pos/)
-- [Thông số kỹ thuật đồng thuận của Ethereum](https://github.com/ethereum/consensus-specs)
+- [Giới thiệu về bằng chứng cổ phần](/developers/docs/consensus-mechanisms/pos/)
+- [Thông số kỹ thuật đồng thuận Ethereum](https://github.com/ethereum/consensus-specs)
 - [Giới thiệu về Gasper](/developers/docs/consensus-mechanisms/pos/gasper/)
 - [Nâng cấp Ethereum](https://eth2book.info/)

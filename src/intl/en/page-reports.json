@@ -5,7 +5,8 @@
   "page-reports-intro": "Use these reports to learn how analysts describe Ethereum: how it works, what it is used for, and how it fits into the wider tech and financial systems. Each report is published by a named institution and links out to the publisher's own site.",
   "page-reports-pdf-size": "PDF {size}",
   "page-reports-web-article": "Web article",
-  "page-reports-suggest-heading": "Suggest a report",
-  "page-reports-suggest-body": "Know an institutional report about Ethereum that should be listed here? Open an issue with the title, publisher, date, and link.",
+  "page-reports-suggest-heading": "Want to see more reports?",
+  "page-reports-suggest-body": "Explore a wider, community-maintained collection of Ethereum research, or suggest a report to add to this page.",
+  "page-reports-more-cta": "Browse more on ethereumadoption.com",
   "page-reports-suggest-cta": "Suggest a report on GitHub"
 }

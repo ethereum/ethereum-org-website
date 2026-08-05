@@ -1,0 +1,380 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/programming-languages/elixir/index.md",
+  "generatedAt": "2026-06-17T22:19:00.831Z",
+  "rootHash": "07285ef2d9c7",
+  "tree": {
+    "contentHash": "9e13898922df",
+    "anchorHash": "f035311113c9",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "9dd51a5c9763",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "e21e29c035aa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:incomplete": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "fcbcf165908d"
+      },
+      "prose:0": {
+        "contentHash": "39a6248d3078",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "getting-started-with-smart-contracts-and-solidity": {
+        "contentHash": "d8a2a9d8583b",
+        "anchorHash": "a48afc0c5e36",
+        "labelHash": "7cd37d52b081",
+        "children": {
+          "_label": {
+            "contentHash": "7cd37d52b081",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:6": {
+            "contentHash": "b25b3a1caf2b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f8af7777bb8f",
+            "anchorHash": "da6930f1ec2d"
+          },
+          "prose:7": {
+            "contentHash": "7175517a370b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "d896c4bde8a6",
+            "anchorHash": "10260c8eaaaa"
+          },
+          "prose:8": {
+            "contentHash": "b220a64f849c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "f01579475e2d",
+            "anchorHash": "5458a066d411"
+          },
+          "prose:9": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "9254611895b7",
+            "anchorHash": "7365a1c17c2a"
+          },
+          "prose:10": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "9ead8cce16b3",
+            "anchorHash": "a9c9e19634cc"
+          },
+          "prose:11": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "bd76d1850071",
+            "anchorHash": "6586070dede3"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:6",
+          "link:0",
+          "prose:7",
+          "link:1",
+          "prose:8",
+          "link:2",
+          "prose:9",
+          "link:3",
+          "prose:10",
+          "link:4",
+          "prose:11",
+          "link:5"
+        ]
+      },
+      "beginner-articles": {
+        "contentHash": "e27a3bc05098",
+        "anchorHash": "9c6a055b4828",
+        "labelHash": "f28ba693d94f",
+        "children": {
+          "_label": {
+            "contentHash": "f28ba693d94f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "fd6d25806376",
+            "anchorHash": "0850a3cd1220"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "a1a2e215fc14",
+            "anchorHash": "6ab881c85690"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1"
+        ]
+      },
+      "intermediate-articles": {
+        "contentHash": "4fa70821466a",
+        "anchorHash": "79e127abe51d",
+        "labelHash": "a2555da8e22a",
+        "children": {
+          "_label": {
+            "contentHash": "a2555da8e22a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "8ece4ee372d2",
+            "anchorHash": "e4dc4d3f88bc"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "8332a95ba4a0",
+            "anchorHash": "a904692ff70a"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1"
+        ]
+      },
+      "elixir-projects-and-tools": {
+        "contentHash": "09308dc38565",
+        "anchorHash": "9da1c54eef07",
+        "labelHash": "1f0956d7e5eb",
+        "children": {
+          "_label": {
+            "contentHash": "1f0956d7e5eb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "active": {
+            "contentHash": "e8312906d00d",
+            "anchorHash": "b648dff2cea4",
+            "labelHash": "92340695899b",
+            "children": {
+              "_label": {
+                "contentHash": "92340695899b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:7": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "eb2bf4246646",
+                "anchorHash": "ac46597e78e6"
+              },
+              "prose:8": {
+                "contentHash": "8682ef0be174",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "721745487b78",
+                "anchorHash": "24d61824d18c"
+              },
+              "prose:9": {
+                "contentHash": "317b193cd85b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "4e2bf998d93b",
+                "anchorHash": "92306629c9a7"
+              },
+              "prose:10": {
+                "contentHash": "f07c0d36b5c2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "bba0e20ee30c",
+                "anchorHash": "373b870d5103"
+              },
+              "prose:11": {
+                "contentHash": "47c6a3855cf6",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "be5f89f79c00",
+                "anchorHash": "e38702c7ef54"
+              },
+              "prose:12": {
+                "contentHash": "3355a8d00d6e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:5": {
+                "contentHash": "2f64552be2ef",
+                "anchorHash": "b067b8eea45c"
+              },
+              "prose:13": {
+                "contentHash": "85aa88006ff5",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:6": {
+                "contentHash": "f65463e79750",
+                "anchorHash": "54a0ad4a8811"
+              },
+              "prose:14": {
+                "contentHash": "af79c9782e4d",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:7",
+              "link:0",
+              "prose:8",
+              "link:1",
+              "prose:9",
+              "link:2",
+              "prose:10",
+              "link:3",
+              "prose:11",
+              "link:4",
+              "prose:12",
+              "link:5",
+              "prose:13",
+              "link:6",
+              "prose:14"
+            ]
+          },
+          "archived--no-longer-maintained": {
+            "contentHash": "43b10b8ab3a3",
+            "anchorHash": "7c80b1a39e4b",
+            "labelHash": "9614276913e2",
+            "children": {
+              "_label": {
+                "contentHash": "9614276913e2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:4": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "c69ea13227ba",
+                "anchorHash": "8936dace3ff6"
+              },
+              "prose:5": {
+                "contentHash": "a3af36e9eaa8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "808d924fa14c",
+                "anchorHash": "25cc468d3e8d"
+              },
+              "prose:6": {
+                "contentHash": "e2eb8dd11c8c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "c1212091aa78",
+                "anchorHash": "dc9849034d37"
+              },
+              "prose:7": {
+                "contentHash": "622688bf0a9c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "6d82dce82cc6",
+                "anchorHash": "10260c8eaaaa"
+              },
+              "prose:8": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:4",
+              "link:0",
+              "prose:5",
+              "link:1",
+              "prose:6",
+              "link:2",
+              "prose:7",
+              "link:3",
+              "prose:8"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "active",
+          "archived--no-longer-maintained"
+        ]
+      },
+      "elixir-community-contributors": {
+        "contentHash": "9e041fb2b30b",
+        "anchorHash": "9ca2e2d9347e",
+        "labelHash": "301720393516",
+        "children": {
+          "_label": {
+            "contentHash": "301720393516",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "b344d80e24a3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "41f00f4d3c8f",
+            "anchorHash": "d7f728efc374"
+          },
+          "prose:2": {
+            "contentHash": "3e93c134f8bc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:incomplete",
+      "prose:0",
+      "getting-started-with-smart-contracts-and-solidity",
+      "beginner-articles",
+      "intermediate-articles",
+      "elixir-projects-and-tools",
+      "elixir-community-contributors"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}

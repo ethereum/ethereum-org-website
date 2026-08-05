@@ -3,6 +3,7 @@
 ## What we're building
 
 A developer changes an English content file. The pipeline runs. For every locale:
+
 - If the change was a URL, path, attribute, code, or structural element: the locale file is updated instantly by a script. No LLM. No cost. No delay.
 - If the change was actual prose: only the specific changed section is sent to the LLM. The response is spliced back in. Everything else in the file is untouched.
 - The developer doesn't think about translations. It just works.
@@ -10,6 +11,7 @@ A developer changes an English content file. The pipeline runs. For every locale
 ## What success looks like
 
 Given the test fixtures (28 markdown mutations, 10 JSON mutations across inert, translatable, structural, rename, add, remove, and reorder change types), the pipeline:
+
 - Produces correct locale-B from locale-A for all three test languages (es, ko, ur)
 - Makes zero unnecessary LLM calls (nothing sent to the LLM that a script could handle)
 - Corrupts zero existing translations (unchanged content is byte-for-byte identical)
@@ -50,17 +52,20 @@ Given an English content change (A -> B), update all locale translations with mi
 **Output:** ChangeSet (from intl-content-tree's `extractChanges`), DiffResult (from `diff`)
 
 **What it does:**
+
 1. Parse english-A into a tree: `parseMarkdown(englishA, config)` or `parseJson(englishA, config)`
 2. Parse english-B into a tree: same
 3. Run `extractChanges(treeA, treeB)` to get a `ChangeSet`
 4. Run `diff(treeA, treeB)` to get the section-level `DiffResult`
 
 **ChangeSet contains:**
+
 - `changes`: array of `NodeChange` (action: update/add/remove, with path, elementType, contentType, old/new values)
 - `relocations`: array of `NodeRelocation` (same hash, different path)
 - `sectionRenames`: array of `SectionRename` (heading ID changed, content overlaps)
 
 **DiffResult contains (section-level classifications):**
+
 - `unchanged`: sections with no changes at all
 - `inertDrift`: sections where only inert content changed
 - `structuralDrift`: sections where structure changed but no prose changed
@@ -71,6 +76,7 @@ Given an English content change (A -> B), update all locale translations with mi
 - `reordered`: sections in different positions
 
 **Test assertions:**
+
 - Given fixture-a.md and fixture-b.md, the ChangeSet contains exactly the expected changes per SPEC.md mutation table
 - Given fixture-a.json and fixture-b.json, same
 - No false positives (unchanged content reported as changed)
@@ -82,23 +88,24 @@ Given an English content change (A -> B), update all locale translations with mi
 
 **Input:** ChangeSet, DiffResult
 **Output:** Three work lists:
-  1. **deterministic**: sections/changes that can be applied by script (inert-only sections, structural-only sections, renames, removals, reorders)
-  2. **llm-required**: sections that need the LLM (sections with translatable prose changes, new sections)
-  3. **no-op**: unchanged sections (do nothing)
+
+1. **deterministic**: sections/changes that can be applied by script (inert-only sections, structural-only sections, renames, removals, reorders)
+2. **llm-required**: sections that need the LLM (sections with translatable prose changes, new sections)
+3. **no-op**: unchanged sections (do nothing)
 
 **What it does:**
 Classify each section into one of the three lists based on the DiffResult:
 
-| DiffResult classification | Route | Reason |
-|--------------------------|-------|--------|
-| unchanged | no-op | Nothing changed |
-| inertDrift | deterministic | Only URLs/paths/attributes changed |
-| structuralDrift | deterministic | Nodes added/removed but no prose changed |
-| translatableDrift | llm-required | Prose text changed (may also contain inert changes) |
-| added | llm-required | Brand new section, needs fresh translation |
-| removed | deterministic | Delete from locale |
-| renamed | deterministic | Update heading ID in locale |
-| reordered | deterministic | Reorder sections in locale |
+| DiffResult classification | Route         | Reason                                              |
+| ------------------------- | ------------- | --------------------------------------------------- |
+| unchanged                 | no-op         | Nothing changed                                     |
+| inertDrift                | deterministic | Only URLs/paths/attributes changed                  |
+| structuralDrift           | deterministic | Nodes added/removed but no prose changed            |
+| translatableDrift         | llm-required  | Prose text changed (may also contain inert changes) |
+| added                     | llm-required  | Brand new section, needs fresh translation          |
+| removed                   | deterministic | Delete from locale                                  |
+| renamed                   | deterministic | Update heading ID in locale                         |
+| reordered                 | deterministic | Reorder sections in locale                          |
 
 **Mixed sections (both inert and translatable changes):** When a section has `translatableDrift`, it goes entirely to the llm-required list. The LLM receives english-B content which already contains the correct inert values. Phase 3 does NOT apply inert changes to llm-required sections -- the LLM handoff handles everything for that section, similar to a full translation.
 
@@ -109,10 +116,12 @@ For example, if diff returns `translatableDrift` for both `choosing-a-license` (
 **Caveat:** A parent section may have BOTH its own prose change AND a child section change. In that case, both the parent's own content (excluding children) and the child section are separate LLM entries. The pipeline must handle parent-level prose separately from nested child sections.
 
 **Frontmatter fields** are classified independently (each field is its own node in the tree):
+
 - `description`, `title`, `alt`, `summaryPoints`, `tags` -> translatable (llm-required if changed)
 - `image`, `lang`, `template`, `published` -> inert (deterministic if changed)
 
 **Test assertions:**
+
 - Given the ChangeSet from Phase 1, routing produces the correct work lists
 - Each of the 28 MD mutations and 10 JSON mutations lands in the correct list
 - Sections with mixed changes (e.g., #copyleft-licenses with both inert and translatable) go entirely to llm-required
@@ -129,6 +138,7 @@ For example, if diff returns `translatableDrift` for both `choosing-a-license` (
 **Important:** Phase 3 ONLY operates on sections in the deterministic list. Sections routed to llm-required are left untouched -- their changes (including any inert changes within them) are handled entirely by the LLM in Phase 4.
 
 **Operation ordering for markdown:**
+
 1. Heading ID renames (so subsequent operations can find sections by their new IDs)
 2. Section removals
 3. Inert value updates (scoped to deterministic sections only)
@@ -137,6 +147,7 @@ For example, if diff returns `translatableDrift` for both `choosing-a-license` (
 
 **Inert value replacement algorithm (markdown):**
 Replacements must be precise, not naive find/replace:
+
 1. Scope the replacement to the narrowest heading section (by `{#id}`)
 2. Use element-type context patterns to disambiguate (e.g., `href="oldValue"` for links, `` `oldValue` `` for inline code)
 3. Match by OLD VALUE, not by position. Translated sentences may reorder inline elements due to different word order (SOV languages like Korean, Urdu). The 2nd link in English may be the 4th link in Korean. Always find the element by its current value.
@@ -152,18 +163,19 @@ The links are in reverse order. If `url2` changes from `sepolia.dev` to `holesky
 
 **What it does for markdown:**
 
-| Change type | How to apply |
-|------------|-------------|
-| Inert value update (href, src, id, etc.) | Scoped find/replace using context pattern + occurrence counting |
-| Heading ID rename | Find `{#old-id}` in locale file, replace with `{#new-id}` |
-| Component removal (`<Divider />`) | Find the component in locale file, remove it and normalize surrounding whitespace |
-| Component/code fence addition | Find insertion point by section heading, insert content from english-B |
-| Attribute addition (className) | Find the component tag in locale file by existing attributes, add the new attribute |
-| Section removal | Find section by heading ID, remove heading + content until next same-level heading |
-| Section reorder | Reorder sections in locale file to match english-B section order |
-| Relocation | Move content from old position to new position |
+| Change type                              | How to apply                                                                                                                                                                                       |
+| ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Inert value update (href, src, id, etc.) | Scoped find/replace using context pattern + occurrence counting                                                                                                                                    |
+| Heading ID rename                        | Find `{#old-id}` in locale file, replace with `{#new-id}`                                                                                                                                          |
+| Component removal                        | Find the component in the locale file by tag name + its inert attribute values (never by position), remove it and normalize surrounding whitespace. Only as many copies as english-B actually lost |
+| Component/code fence addition            | Find insertion point by section heading, insert content from english-B                                                                                                                             |
+| Attribute addition (className)           | Find the component tag in locale file by existing attributes, add the new attribute                                                                                                                |
+| Section removal                          | Find section by heading ID, remove heading + content until the next same-or-shallower heading, stopping early at any heading whose anchor still exists in english-B                                |
+| Section reorder                          | Reorder sections in locale file to match english-B section order                                                                                                                                   |
+| Relocation                               | Move content from old position to new position                                                                                                                                                     |
 
 **What it does for JSON:**
+
 - Inert value updates: `JSON.parse`, walk to key, apply targeted replacement within the value string (for hrefs, ICU variables), `JSON.stringify` with 2-space indent
 - Key removal: delete the key from the parsed object
 - Key reorder: reorder keys to match english-B key order
@@ -172,10 +184,12 @@ The links are in reverse order. If `url2` changes from `sepolia.dev` to `holesky
 
 **Frontmatter (markdown):**
 Frontmatter is a distinct scope (YAML key-value pairs between `---` markers). For inert frontmatter fields:
+
 - Find the key line (e.g., `image: /old/path.png`)
 - Replace the value portion only, preserving the key and any YAML formatting
 
 **Test assertions:**
+
 - Each inert change from the mutation table is correctly applied
 - Unchanged prose is byte-for-byte identical to locale-A
 - No locale prose is modified by this phase
@@ -196,30 +210,36 @@ Frontmatter is a distinct scope (YAML key-value pairs between `---` markers). Fo
 
 **What it does:**
 For each section in the llm-required list:
+
 1. Extract the section content from english-B (by heading ID)
 2. Include surrounding context from locale-A (neighboring sections) for translation quality
 3. Send to LLM with instructions:
+
    - Translate only the provided section
    - Preserve all markdown formatting, components, links, code fences
    - Do NOT translate code bodies, URLs, or heading IDs
    - Return ONLY the translated section content
 
-   JSX components are not directly visible to the LLM in the normalized path -- the content normalizer replaces components with `<HTML-PLACEHOLDER-COMPONENT-* />` placeholders before the prompt is built, and translatable attribute *values* are extracted as separate leaves. The dedicated JSX Attribute Translation Pass (Phase 4b) handles those leaves after this phase. The non-normalized fallback path (used for e.g. JSON files) does see raw component tags; in that case the prompt rule is "preserve components and their attributes exactly" because attribute translation in the same call is unreliable.
+   JSX components are not directly visible to the LLM in the normalized path -- the content normalizer replaces components with `<HTML-PLACEHOLDER-COMPONENT-* />` placeholders before the prompt is built, and translatable attribute _values_ are extracted as separate leaves. The dedicated JSX Attribute Translation Pass (Phase 4b) handles those leaves after this phase. The non-normalized fallback path (used for e.g. JSON files) does see raw component tags; in that case the prompt rule is "preserve components and their attributes exactly" because attribute translation in the same call is unreliable.
+
 4. Receive translated section
 
 The LLM receives english-B content, which already contains all inert values (new URLs, new attributes, etc.). The LLM is expected to preserve these as-is. This is the same behavior as a full translation -- the LLM never sees old inert values.
 
 For new sections (added):
+
 1. Extract the new section from english-B
 2. Send to LLM for fresh translation
 3. Receive translated section
 
 For frontmatter translatable fields:
+
 1. Extract the field value from english-B (e.g., new description text)
 2. Send to LLM with the locale-A version as context
 3. Receive translated value
 
 **Test assertions (with mocked LLM):**
+
 - The mock receives exactly the sections classified as llm-required in Phase 2
 - The mock receives the correct english-B content for each section
 - The mock does NOT receive unchanged or inert-only sections
@@ -236,6 +256,7 @@ For frontmatter translatable fields:
 **Why this is a separate pass:** JSX components like `<ExpandableCard title="..." eventCategory="..." />` have a mix of translatable (`title`) and non-translatable (`eventCategory`, `href`, `src`) attributes. The Phase 4 LLM prompt instructs the model to preserve component tags and attribute names exactly to avoid breaking JSX. Doing the same prompt-based translation on attribute values is unreliable -- the LLM either over-translates (breaks `eventName` analytics tags) or under-translates (the bug that motivated this pass). A dedicated, narrowly-scoped pass with an allow-list is safer.
 
 **What it does:**
+
 1. Parse english-B into a content tree (already done in Phase 1; reuse).
 2. Walk the tree for nodes where `elementType === "component-attribute"`.
 3. For each such node, check:
@@ -251,10 +272,12 @@ For frontmatter translatable fields:
 8. Failure isolation: if the LLM returns a malformed batch (wrong count, missing fields), skip those leaves and continue. The locale file is left untouched for those attrs; a warning is logged.
 
 **Manifest impact:**
+
 - Source manifest: unchanged (the source content didn't change; we just translated previously-untranslated leaves).
 - Translation manifest: updated to reflect the now-translated values. Subsequent runs will see no drift on these leaves.
 
 **Test assertions:**
+
 - Translatable attrs (`title`, `description`, etc.) on JSX components in the output are translated.
 - Non-translatable attrs (`eventCategory`, `eventName`, `href`, `src`) in the output are byte-for-byte identical to english-B.
 - Values that look like URLs, paths, or identifiers (per the heuristic) are not translated even if they appear under a translatable attribute name.
@@ -271,14 +294,18 @@ For frontmatter translatable fields:
 
 **What it does:**
 Splice the LLM-translated sections into the deterministically-updated locale file:
+
 1. For each translated section, find its position in the locale file (by heading ID)
-2. **Section replacement**: replace the section content from its heading line to the line before the next heading (any level). This is safe because Phase 3 did not modify llm-required sections.
+2. **Section replacement**: replace the section body, and supply the heading line deterministically -- the locale's own heading for an existing section, english-B's for a newly added one. The LLM contract is body-only (`buildSectionList` sends `section.body` and passes the heading as a prompt attribute), so a heading line must never be taken from the model response. If a response does contain one it is used, with its `{#id}` forced back to the expected anchor. An empty response is discarded rather than written back. This is safe because Phase 3 did not modify llm-required sections.
 3. For new sections, insert at the correct position (matching english-B section order)
 4. For translated frontmatter fields, replace the value in the frontmatter block
 
-**Section boundaries:** A section's content in the locale file is defined as: from its heading line (inclusive) to the line before the next heading line of any level (exclusive). This avoids the complexity of same-level vs nested heading tracking.
+**Section boundaries:** A section's content in the locale file is defined as: from its heading line (inclusive) to the line before the next heading line of any level (exclusive). This avoids the complexity of same-level vs nested heading tracking. Section removal is the exception -- it needs same-or-shallower level tracking so subsections go with their parent.
+
+**Post-assembly invariants:** the merged output is compared to english-B on heading count, `{#anchor}` set and link/href multiset, measured against the same comparison for english-A vs locale-A so that pre-existing drift (roughly 7% of locale files differ on anchors before any run) is not reported. Any regression the run introduced -- a dropped anchor, a heading that disappeared, a new href that never landed, a stale href english-B removed -- discards the merge and falls the file back to `runFullTranslation`. `findStructuralRegressions` in `pipeline.ts`; markdown only.
 
 **Test assertions:**
+
 - Final output contains all deterministic changes from Phase 3
 - Final output contains all LLM translations from Phase 4
 - Unchanged sections are byte-for-byte identical to locale-A
@@ -295,10 +322,12 @@ Splice the LLM-translated sections into the deterministically-updated locale fil
 **Output:** updated source manifest + updated translation manifest
 
 There are TWO manifests per file:
+
 - **Source manifest** (`.manifest-source.json`): Merkle tree of the English content. Used to detect what changed in English between runs. Contains `sourceCommitSha` for retrieving old English via git.
 - **Translation manifest** (`.manifest-translation.json`): Merkle tree of the locale content, mirroring the English tree structure. Tracks per-section hashes so the pipeline knows which sections are up to date in each locale. Also records the structural mapping between English and locale elements, enabling the pipeline to target the correct element in the locale file when the corresponding English element changes.
 
 **What it does:**
+
 1. Serialize english-B tree as the new source manifest
 2. Record the current git SHA as `sourceCommitSha` in the source manifest
 3. Update the translation manifest to reflect the new locale state
@@ -307,6 +336,7 @@ There are TWO manifests per file:
 **On partial failure:** If Phase 4 fails for some sections (LLM error), do NOT update either manifest. The next run should re-detect those changes and retry. Only stamp manifests when all changes are successfully applied.
 
 **Test assertions:**
+
 - Source manifest rootHash matches english-B tree hash
 - sourceCommitSha is populated
 - Manifest version is correct
@@ -317,6 +347,7 @@ There are TWO manifests per file:
 ## End-to-End Test
 
 Run against all three test languages to cover different script types and word orders:
+
 - **es** (Spanish): Latin script, SVO word order (similar to English)
 - **ko** (Korean): Hangul script, SOV word order (inline elements reordered)
 - **ur** (Urdu): Arabic script, RTL, SOV word order
@@ -324,6 +355,7 @@ Run against all three test languages to cover different script types and word or
 **Input:** fixture-a.md, fixture-b.md, locale-a/{lang}/fixture.md
 **Mock:** LLM returns corresponding sections from locale-b/{lang}/fixture.md
 **Expected output (locale-B):** locale file that has:
+
 - All 28 MD mutations correctly reflected in the output:
   - Inert mutations in deterministic-only sections: applied by Phase 3 scripts
   - Inert mutations in llm-required sections: present because the LLM received english-B (which has the new values)
@@ -337,6 +369,7 @@ Run against all three test languages to cover different script types and word or
 Same pattern for JSON fixtures (per language).
 
 **SOV-specific assertions (ko, ur):**
+
 - Multi-link inert propagation: when one of four links changes its href, verify the correct link is updated even though inline element order differs from English
 - Inline code replacement: verify the correct inline code is updated regardless of position in the translated sentence
 
@@ -353,11 +386,13 @@ Each base branch has a corresponding pending branch: `intl/pending-<base>` (for 
 **Lifecycle:**
 
 1. **First run (pending does not exist):**
+
    - Create `intl/pending-<base>` from `<base>` HEAD
    - Translate, stamp manifests, merge into pending
    - Open PR: `intl/pending-<base>` → `<base>`
 
 2. **Subsequent run (pending exists):**
+
    - Merge `<base>` into pending first. This brings in any new English that landed on base since the previous run. **Fail fast** if the merge conflicts -- do not do any translation work.
    - Use pending's state as the baseline: the pipeline's local working tree and temp branch both derive from pending (not base). Drift detection compares current English against the manifests on pending (which are stamped to the previous run's commit), not against base.
    - Translate only what changed since the last stamp.
@@ -371,6 +406,7 @@ Each base branch has a corresponding pending branch: `intl/pending-<base>` (for 
 Without this, a second run against the same base would re-translate English that the first run already handled. Non-deterministic LLM output means Run 2's translations would differ from Run 1's for the same sections, producing merge conflicts on the pending branch after expensive translation work.
 
 With pending-as-baseline:
+
 - The manifests on pending are authoritative. "What changed" is measured from the last stamp, not from base.
 - Sections already translated in Run 1 are unchanged for Run 2 (same English → same stamped hash → no drift).
 - Run 2 translates only the delta introduced since Run 1 (new PRs merged to base between runs).
@@ -397,6 +433,7 @@ The pipeline is the single propagator of English changes into non-English files.
 **Not allowed:** Hand-editing a locale file to reflect an English change. This desynchronises the manifest from reality; the next run will either re-translate over your edit or produce merge conflicts.
 
 **If an English-to-locale sync is genuinely needed** (e.g. a structural change that would break the build if not propagated immediately):
+
 1. Only do this when the pending branch for the base does not exist. If one exists, merge or close it first.
 2. Make the edit directly to `<base>`.
 3. Trigger `intl-pipeline.yml` with `stamp_only: true`. This updates the manifests to reflect the current file state without calling the LLM, telling the next incremental run that the current state is canonical.
@@ -404,6 +441,7 @@ The pipeline is the single propagator of English changes into non-English files.
 ### Summary: orchestration contract
 
 Given a sequence of pipeline runs against the same base:
+
 - Each run's output is deterministic given its inputs (current English + pending manifests).
 - The pending branch is the sole accumulator. Each run advances it forward.
 - Merge conflicts (base-into-pending, tmp-into-pending) abort the run with a clear error. They never corrupt existing translations or silently drop work.

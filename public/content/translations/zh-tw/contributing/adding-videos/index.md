@@ -18,6 +18,7 @@ Ethereum.org 是一個中立的教育資源。影片庫的策展目的是：
 
 本網站不會上架主要用於推廣特定產品、代幣或商業服務的影片。
 
+
 ## 收錄標準 {#criteria-for-inclusion}
 
 ### 必備條件 {#must-haves}
@@ -33,6 +34,7 @@ Ethereum.org 是一個中立的教育資源。影片庫的策展目的是：
 - **附有逐字稿** – 附有逐字稿的影片能改善無障礙體驗與搜尋引擎最佳化 (SEO)。如果你沒有逐字稿，ethereum.org 團隊可以協助產生。
 - **來自可信來源** – 來自知名教育工作者、研究人員與來源的內容將獲優先考慮。
 - **具時效性與長青** – 隨著時間推移仍具相關性的內容，優於具時效限制的素材。
+
 
 ## 如何新增影片 {#how-to-add-a-video}
 
@@ -121,25 +123,10 @@ title: "..."
 
 如果你沒有逐字稿，可以將內文留空，團隊會協助產生。
 
-#### 步驟 4：選擇主題標籤 {#step-4}
-
-挑選與影片庫中現有分類相符的主題標籤。目前的分類及其標籤包含：
-
-- **以太坊如何運作**：`how-ethereum-works`、`consensus`、`blockchain`、`cryptography`、`accounts`、`ethereum`、`intro`、`transactions`、`pos`、`smart-contracts`
-- **網路升級**：`network-upgrades`、`upgrades`、`pectra`、`dencun`、`eip-4844`、`blobs`、`fusaka`
-- **路線圖與優先事項**：`roadmap-and-priorities`、`pbs`、`mev`
-- **擴容與第二層 (L2)**：`scaling-and-layer-2`、`scaling`、`layer-2`、`rollups`、`optimistic-rollups`、`zk-rollups`
-- **使用案例**：`use-cases`、`defi`、`finance`、`nfts`、`erc-721`、`erc-1155`、`lending`、`dapps`、`restaking`、`eigenlayer`、`dao`、`identity`、`desci`、`refi`
-- **隱私與安全**：`privacy-and-security`、`privacy`、`authentication`
-- **社群故事**：`community-stories`、`contributing`、`translations`、`community`
-
-為確保你的影片出現在影片庫的分類架上，請至少包含一個分類關鍵標籤（以 kebab-case 格式表示的粗體名稱，例如 `use-cases` 或 `scaling-and-layer-2`）。沒有可識別分類標籤的影片將只會出現在「全部」檢視與搜尋結果中。
-
-你也可以使用新標籤——它們將可用於未來的分類群組。
-
 #### 步驟 5：提交你的 PR {#step-5}
 
 將你的變更建立一個拉取請求 (Pull Request) 到 `dev` 分支。團隊將會審查你的提交並提供回饋。
+
 
 ## 維護 {#maintenance}
 
@@ -150,6 +137,7 @@ title: "..."
 - 具有可正常運作的託管/YouTube 連結
 
 如果你發現已上架的影片有問題，請[建立一個 issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) 或發送電子郵件至 [website@ethereum.org](mailto:website@ethereum.org)。
+
 
 ## 使用條款 {#terms-of-use}
 

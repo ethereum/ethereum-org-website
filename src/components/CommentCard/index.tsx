@@ -18,7 +18,7 @@ const CommentCard = ({
   return (
     <Card
       className={cn(
-        "mx-auto h-fit max-w-[400px] space-y-4 rounded-2xl border bg-background-highlight p-6 [&_[data-label='avatar']]:bg-accent-c",
+        "mx-auto h-fit max-w-[400px] space-y-4 rounded-base border bg-background-highlight p-6 [&_[data-label='avatar']]:bg-accent-c",
         className
       )}
     >
