@@ -30,6 +30,9 @@ const SKIP_DIRS = new Set(["node_modules", ".next", "storybook-static"])
 /** `Section / Group / Name` -- " / "-separated, no bare slashes in a segment. */
 const TITLE_FORMAT = /^[^/]+(?: \/ [^/]+)+$/
 
+/** `app-card.stories.tsx` -- kebab-case, matching the repo's file convention. */
+const FILENAME_FORMAT = /^[a-z0-9]+(-[a-z0-9]+)*\.stories\.tsx?$/
+
 const findStoryFiles = (dir: string): string[] => {
   const out: string[] = []
   for (const entry of readdirSync(path.join(REPO_ROOT, dir))) {
@@ -124,6 +127,18 @@ test.describe("Storybook title taxonomy", () => {
   test("story files are discovered", () => {
     // Guards against a silently broken walker turning the rest into no-ops.
     expect(storyFiles.length).toBeGreaterThan(100)
+  })
+
+  test("story filenames are kebab-case", () => {
+    const wrong = storyFiles.filter(
+      (f) => !FILENAME_FORMAT.test(path.basename(f))
+    )
+    expect(
+      wrong,
+      "story filenames are kebab-case (app-card.stories.tsx) even inside a " +
+        "PascalCase component directory -- component filenames are a separate " +
+        "migration and are not covered by this rule"
+    ).toEqual([])
   })
 
   test("every story file lives somewhere the taxonomy covers", () => {

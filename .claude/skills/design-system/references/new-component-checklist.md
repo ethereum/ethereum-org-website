@@ -23,13 +23,13 @@ If you've justified the new file, continue.
 
 ## File Structure
 
-For `ui/` primitives: source co-located in `src/components/ui/`, stories under `src/components/ui/__stories__/` (NOT co-located alongside the source). Story filename casing is inconsistent in-tree (roughly two-thirds PascalCase, one-third matching the kebab-case source) and has no functional effect -- titles drive everything. Match the file you're adding alongside; don't rename existing ones.
+For `ui/` primitives: source co-located in `src/components/ui/`, stories under `src/components/ui/__stories__/` (NOT co-located alongside the source). **Story filenames are kebab-case**, matching the repo's file convention and enforced by `tests/unit/storybook/story-titles.spec.ts` -- so `app-card.stories.tsx`, not `AppCard.stories.tsx`, even inside a PascalCase component directory (component filenames are a separate migration; don't rename those here).
 
 ```
 src/components/ui/
   my-component.tsx                      # Source
   __stories__/
-    MyComponent.stories.tsx             # Story (REQUIRED for ui/ primitives)
+    my-component.stories.tsx            # Story (REQUIRED for ui/ primitives)
 ```
 
 For feature components with sub-parts, use a directory and co-locate the story:
@@ -37,7 +37,7 @@ For feature components with sub-parts, use a directory and co-locate the story:
 ```
 src/components/MyComponent/
   index.tsx
-  MyComponent.stories.tsx
+  my-component.stories.tsx
   SubComponent.tsx
   useMyComponent.ts  (if there's a custom hook)
 ```
@@ -167,7 +167,7 @@ See `references/a11y.md`.
 ## Storybook Story (REQUIRED for `ui/`)
 
 ```tsx
-// src/components/ui/__stories__/MyComponent.stories.tsx
+// src/components/ui/__stories__/my-component.stories.tsx
 import type { Meta, StoryObj } from "@storybook/nextjs"
 import { MyComponent } from "../my-component"
 
@@ -244,7 +244,7 @@ The test also requires an explicit title on every story and rejects duplicates: 
 
 ### Story
 
-- [ ] `MyComponent.stories.tsx` exists
+- [ ] `my-component.stories.tsx` exists
 - [ ] Story shows all variants
 - [ ] Title follows the hierarchy convention
 

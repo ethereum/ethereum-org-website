@@ -183,7 +183,7 @@ For pipeline mechanics, recovery, manifests, ETHGlossary integration, and the `i
 
 ### Storybook stories
 
-**Location**: `__stories__/` for flat directories (`ui/`, `styles/`), co-located `X.stories.tsx` for foldered components. Story globs are recursive, so nesting works, but match the neighbours.
+**Location**: `__stories__/` for flat directories (`ui/`, `styles/`), co-located for foldered components. Story globs are recursive, so nesting works. **Filenames are kebab-case** (`app-card.stories.tsx`) even inside a PascalCase component directory -- enforced by the test below.
 
 **Title**: `Section / Group / Name`. The section is derived from the file path -- not a judgment call:
 

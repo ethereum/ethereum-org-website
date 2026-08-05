@@ -31,7 +31,7 @@ src/
 └── components/
     └── ComponentA/
         ├── index.tsx
-        ├── ComponentA.stories.tsx
+        ├── component-a.stories.tsx
         └── // Any other files as applicable (utils, child components, useHook, etc.)
 ```
 
@@ -59,6 +59,8 @@ export const Basic: Story = {}
 - If the story does not need any args or any custom rendering, it should be left as an empty object. Otherwise, use the `render` option to explicitly write the rendering of the story: i.e., `render: () => <Component />`
 
 We maintain this structure for every story file, regardless of simplicity.
+
+Story filenames are **kebab-case** (`component-a.stories.tsx`), matching the repo's file convention, even where the component directory is still PascalCase. This is enforced by `tests/unit/storybook/story-titles.spec.ts`.
 
 ## Story titles
 
