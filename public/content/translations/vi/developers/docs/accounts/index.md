@@ -97,6 +97,8 @@ Có thể tạo ra các khóa công khai mới từ khóa riêng tư của bạn
 
 Bạn cần một khóa riêng tư để ký các thông điệp và các giao dịch nhằm xuất ra một chữ ký. Những người khác sau đó có thể lấy chữ ký để suy ra khóa công khai của bạn, chứng minh tác giả của thông điệp. Trong ứng dụng của mình, bạn có thể sử dụng một thư viện JavaScript để gửi các giao dịch đến mạng lưới.
 
+## Các tài khoản hợp đồng {#contract-accounts}
+
 Các tài khoản hợp đồng cũng có một địa chỉ thập lục phân dài 42 ký tự:
 
 Ví dụ:
@@ -106,6 +108,7 @@ Ví dụ:
 Địa chỉ hợp đồng thường được cấp khi một hợp đồng được triển khai lên Chuỗi khối Ethereum. Địa chỉ này bắt nguồn từ địa chỉ của người tạo và số lượng giao dịch được gửi từ địa chỉ đó ("nonce"). Đây là cách hoạt động `CREATE` suy ra một địa chỉ.
 
 Các hợp đồng cũng có thể được triển khai bằng [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), hoạt động này suy ra địa chỉ từ địa chỉ của người tạo, một giá trị do người tạo chọn ("salt") và mã băm của mã tạo hợp đồng. Không có nonce nào tham gia vào quá trình này, do đó địa chỉ có thể được tính toán trước khi hợp đồng tồn tại và giữ nguyên bất kể người tạo có gửi bao nhiêu giao dịch khác trong thời gian đó. Điều này cho phép tham chiếu đến một hợp đồng chưa được triển khai.
+
 ## Các khóa trình xác thực {#validators-keys}
 
 Cũng có một loại khóa khác trong Ethereum, được giới thiệu khi Ethereum chuyển từ cơ chế đồng thuận Bằng chứng công việc (PoW) sang Bằng chứng cổ phần (PoS). Đây là các khóa 'BLS' và chúng được sử dụng để xác định các trình xác thực. Các khóa này có thể được tổng hợp một cách hiệu quả để giảm băng thông cần thiết cho mạng lưới đạt được sự đồng thuận. Nếu không có sự tổng hợp khóa này, khoản đặt cọc tối thiểu cho một trình xác thực sẽ cao hơn nhiều.

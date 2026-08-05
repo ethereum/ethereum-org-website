@@ -97,6 +97,8 @@ Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 
 Bir imza çıktısı veren mesajları ve işlemleri imzalamak için bir özel anahtara ihtiyacınız vardır. Başkaları daha sonra açık anahtarınızı türetmek için imzayı alabilir ve mesajın yazarını kanıtlayabilir. Uygulamanızda, ağa işlemler göndermek için bir JavaScript kütüphanesi kullanabilirsiniz.
 
+## Kontrat hesapları {#contract-accounts}
+
 Kontrat hesapları da 42 karakterlik onaltılık bir adrese sahiptir:
 
 Örnek:
@@ -106,6 +108,7 @@ Kontrat hesapları da 42 karakterlik onaltılık bir adrese sahiptir:
 Sözleşme adresi genellikle bir sözleşme Ethereum Blokzincirine dağıtıldığında verilir. Adres, oluşturucunun adresinden ve o adresten gönderilen işlem sayısından ("nonce") gelir. `CREATE` işlemi bir adresi bu şekilde türetir.
 
 Sözleşmeler ayrıca, adresi oluşturucunun adresinden, oluşturucunun seçtiği bir değerden ("salt") ve sözleşmenin oluşturma kodunun bir hash'inden türeten [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014) ile de dağıtılabilir. Hiçbir nonce dahil edilmez, bu nedenle adres sözleşme var olmadan önce hesaplanabilir ve oluşturucu bu arada ne kadar başka işlem gönderirse göndersin aynı kalır. Bu, henüz dağıtılmamış bir sözleşmeye referans vermeyi mümkün kılar.
+
 ## Doğrulayıcı anahtarları {#validators-keys}
 
 Ethereum'da, Ethereum İş Kanıtı'ndan (PoW) Hisse Kanıtı (PoS) tabanlı mutabakata geçtiğinde tanıtılan başka bir anahtar türü daha vardır. Bunlar 'BLS' anahtarlarıdır ve doğrulayıcıları tanımlamak için kullanılırlar. Bu anahtarlar, ağın mutabakata varması için gereken bant genişliğini azaltmak amacıyla verimli bir şekilde birleştirilebilir. Bu anahtar birleştirme olmadan, bir doğrulayıcı için minimum stake çok daha yüksek olurdu.

@@ -97,6 +97,8 @@ Il est possible de dériver de nouvelles clés publiques à partir de votre clé
 
 Vous avez besoin d'une clé privée pour signer des messages et des transactions qui produisent une signature. D'autres peuvent ensuite prendre la signature pour dériver votre clé publique, prouvant ainsi l'auteur du message. Dans votre application, vous pouvez utiliser une bibliothèque JavaScript pour envoyer des transactions au réseau.
 
+## Comptes de contrat {#contract-accounts}
+
 Les comptes de contrat ont également une adresse hexadécimale de 42 caractères :
 
 Exemple :
@@ -106,6 +108,7 @@ Exemple :
 L'adresse du contrat est généralement donnée lorsqu'un contrat est déployé sur la chaîne de blocs Ethereum. L'adresse provient de l'adresse du créateur et du nombre de transactions envoyées depuis cette adresse (le « nonce »). C'est ainsi que l'opération `CREATE` dérive une adresse.
 
 Les contrats peuvent également être déployés avec [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), qui dérive l'adresse à partir de l'adresse du créateur, d'une valeur choisie par le créateur (le « sel »), et d'un hash du code de création du contrat. Aucun nonce n'est impliqué, l'adresse peut donc être calculée avant que le contrat n'existe et reste la même quel que soit le nombre d'autres transactions que le créateur envoie entre-temps. Cela permet de référencer un contrat qui n'a pas encore été déployé.
+
 ## Clés de validateur {#validators-keys}
 
 Il existe également un autre type de clé dans Ethereum, introduit lorsqu'Ethereum est passé d'un consensus basé sur la preuve de travail (PoW) à la preuve d'enjeu (PoS). Ce sont les clés « BLS » et elles sont utilisées pour identifier les validateurs. Ces clés peuvent être agrégées efficacement pour réduire la bande passante requise pour que le réseau parvienne à un consensus. Sans cette agrégation de clés, la mise minimale pour un validateur serait beaucoup plus élevée.

@@ -97,6 +97,8 @@ Inawezekana kupata funguo mpya za umma kutoka kwa ufunguo wako wa siri, lakini h
 
 Unahitaji ufunguo wa siri ili kusaini ujumbe na miamala ambayo hutoa sahihi. Wengine wanaweza kisha kuchukua sahihi ili kupata ufunguo wako wa umma, kuthibitisha mwandishi wa ujumbe. Katika programu yako, unaweza kutumia maktaba ya JavaScript kutuma miamala kwenye mtandao.
 
+## Akaunti za mkataba {#contract-accounts}
+
 Akaunti za mkataba pia zina anwani ya heksadesimali yenye herufi 42:
 
 Mfano:
@@ -106,6 +108,7 @@ Mfano:
 Anwani ya mkataba kwa kawaida hutolewa wakati mkataba unaposambazwa kwenye Mnyororo wa Vitalu wa Ethereum. Anwani inatokana na anwani ya muundaji na idadi ya miamala iliyotumwa kutoka kwenye anwani hiyo ("nonsi"). Hivi ndivyo operesheni ya `CREATE` inavyopata anwani.
 
 Mikataba pia inaweza kusambazwa kwa kutumia [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), ambayo hupata anwani kutoka kwa anwani ya muundaji, thamani anayochagua muundaji ("salt"), na heshi ya msimbo wa uundaji wa mkataba. Hakuna nonsi inayohusika, kwa hivyo anwani inaweza kukokotolewa kabla ya mkataba kuwepo na inabaki vile vile bila kujali ni miamala mingapi mingine ambayo muundaji anatuma kwa wakati huo. Hii inafanya iwezekane kurejelea mkataba ambao haujasambazwa bado.
+
 ## Funguo za mthibitishaji {#validators-keys}
 
 Pia kuna aina nyingine ya ufunguo katika Ethereum, iliyoanzishwa wakati Ethereum ilipobadilika kutoka Uthibitisho wa Kazi (PoW) kwenda kwenye mwafaka unaotegemea Uthibitisho wa Dau (PoS). Hizi ni funguo za 'BLS' na zinatumika kutambua wathibitishaji. Funguo hizi zinaweza kujumlishwa kwa ufanisi ili kupunguza kipimo data kinachohitajika kwa mtandao kufikia mwafaka. Bila ujumlishaji huu wa funguo, dhamana ya chini zaidi kwa mthibitishaji ingekuwa kubwa zaidi.

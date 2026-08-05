@@ -97,6 +97,8 @@ Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 
 Você precisa de uma chave privada para assinar mensagens e transações que geram uma assinatura. Outros podem então pegar a assinatura para derivar sua chave pública, provando a autoria da mensagem. Em seu aplicativo, você pode usar uma biblioteca JavaScript para enviar transações para a rede.
 
+## Contas de contrato {#contract-accounts}
+
 As contas de contrato também têm um endereço hexadecimal de 42 caracteres:
 
 Exemplo:
@@ -106,6 +108,7 @@ Exemplo:
 O endereço do contrato geralmente é fornecido quando um contrato é implantado na blockchain da Ethereum. O endereço vem do endereço do criador e do número de transações enviadas a partir desse endereço (o “nonce”). É assim que a operação `CREATE` deriva um endereço.
 
 Os contratos também podem ser implantados com [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), que deriva o endereço a partir do endereço do criador, um valor que o criador escolhe (o “salt”) e um hash do código de criação do contrato. Nenhum nonce está envolvido, portanto, o endereço pode ser calculado antes que o contrato exista e permanece o mesmo, não importa quantas outras transações o criador envie nesse meio tempo. Isso torna possível referenciar um contrato que ainda não foi implantado.
+
 ## Chaves de validador {#validators-keys}
 
 Há também outro tipo de chave na Ethereum, introduzido quando a Ethereum mudou do consenso baseado em Prova de Trabalho (PoW) para Prova de Participação (PoS). Estas são as chaves 'BLS' e são usadas para identificar validadores. Essas chaves podem ser agregadas de forma eficiente para reduzir a largura de banda necessária para que a rede chegue a um consenso. Sem essa agregação de chaves, o stake mínimo para um validador seria muito maior.

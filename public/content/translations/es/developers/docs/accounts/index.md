@@ -108,6 +108,7 @@ Ejemplo:
 La dirección del contrato generalmente se asigna cuando un contrato se implementa en la cadena de bloques de Ethereum. La dirección proviene de la dirección del creador y del número de transacciones enviadas desde esa dirección (el "nonce"). Así es como la operación `CREATE` deriva una dirección.
 
 Los contratos también se pueden implementar con [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), que deriva la dirección a partir de la dirección del creador, un valor que el creador elige (la "sal") y un hash del código de creación del contrato. No hay ningún nonce involucrado, por lo que la dirección se puede calcular antes de que el contrato exista y se mantiene igual sin importar cuántas otras transacciones envíe el creador mientras tanto. Esto hace posible hacer referencia a un contrato que aún no se ha implementado.
+
 ## Claves de validador {#validators-keys}
 
 También hay otro tipo de clave en Ethereum, introducida cuando Ethereum cambió del consenso basado en prueba de trabajo (PoW) a prueba de participación (PoS). Estas son las claves 'BLS' y se utilizan para identificar a los validadores. Estas claves se pueden agregar de manera eficiente para reducir el ancho de banda requerido para que la red llegue a un consenso. Sin esta agregación de claves, la participación mínima para un validador sería mucho mayor.

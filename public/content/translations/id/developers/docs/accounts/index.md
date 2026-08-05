@@ -108,6 +108,7 @@ Contoh:
 Alamat kontrak biasanya diberikan saat sebuah kontrak diterapkan ke rantai blok Ethereum. Alamat tersebut berasal dari alamat pembuat dan jumlah transaksi yang dikirim dari alamat tersebut ("nonce"). Beginilah cara operasi `CREATE` menurunkan sebuah alamat.
 
 Kontrak juga dapat diterapkan dengan [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), yang menurunkan alamat dari alamat pembuat, nilai yang dipilih pembuat ("salt"), dan hash dari kode pembuatan kontrak. Tidak melibatkan nonce, sehingga alamat dapat dihitung sebelum kontrak ada dan tetap sama tidak peduli berapa banyak transaksi lain yang dikirim pembuat sementara itu. Hal ini memungkinkan untuk merujuk pada kontrak yang belum diterapkan.
+
 ## Kunci validator {#validators-keys}
 
 Ada juga jenis kunci lain di Ethereum, yang diperkenalkan saat Ethereum beralih dari konsensus berbasis Bukti Kerja (PoW) ke Bukti Kepemilikan (PoS). Ini adalah kunci 'BLS' dan digunakan untuk mengidentifikasi validator. Kunci-kunci ini dapat diagregasi secara efisien untuk mengurangi bandwidth yang diperlukan jaringan untuk mencapai konsensus. Tanpa agregasi kunci ini, stake minimum untuk seorang validator akan jauh lebih tinggi.
