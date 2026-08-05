@@ -15,11 +15,14 @@ export default async function FindWalletPageJsonLD({
   contributors,
   wallets,
 }: {
-  locale: Lang | undefined
+  locale: Lang
   contributors: FileContributor[]
   wallets: WalletData[]
 }) {
-  const t = await getTranslations("page-wallets-find-wallet")
+  const t = await getTranslations({
+    locale,
+    namespace: "page-wallets-find-wallet",
+  })
 
   const url = normalizeUrlForJsonLd(locale, `/wallets/find-wallet/`)
 
@@ -80,56 +83,59 @@ export default async function FindWalletPageJsonLD({
         name: t("page-find-wallet-title"),
         description: t("page-find-wallet-meta-description"),
         numberOfItems: wallets.length,
-        itemListElement: wallets.map((wallet, index) => ({
-          "@type": "ListItem",
-          position: index + 1,
-          item: {
-            "@type": "SoftwareApplication",
-            name: wallet.name,
-            url: wallet.url,
-            applicationCategory: "Cryptocurrency Wallet",
-            ...(getWalletPlatforms(wallet).length > 0 && {
-              operatingSystem: getWalletPlatforms(wallet).join(", "),
-            }),
-            offers: {
-              "@type": "Offer",
-              price: "0",
-              priceCurrency: "USD",
+        itemListElement: wallets.map((wallet, index) => {
+          const os = getWalletPlatforms(wallet)
+          return {
+            "@type": "ListItem",
+            position: index + 1,
+            item: {
+              "@type": "SoftwareApplication",
+              name: wallet.name,
+              url: wallet.url,
+              applicationCategory: "Cryptocurrency Wallet",
+              ...(os.length > 0 && {
+                operatingSystem: os.join(", "),
+              }),
+              offers: {
+                "@type": "Offer",
+                price: "0",
+                priceCurrency: "USD",
+              },
+              additionalProperty: [
+                {
+                  "@type": "PropertyValue",
+                  name: "Open Source",
+                  value: wallet.open_source ? "Yes" : "No",
+                },
+                {
+                  "@type": "PropertyValue",
+                  name: "Self Custody",
+                  value: wallet.non_custodial ? "Yes" : "No",
+                },
+                {
+                  "@type": "PropertyValue",
+                  name: "Hardware Wallet Support",
+                  value: wallet.hardware_support ? "Yes" : "No",
+                },
+                {
+                  "@type": "PropertyValue",
+                  name: "Layer 2 Support",
+                  value: wallet.layer_2 ? "Yes" : "No",
+                },
+                {
+                  "@type": "PropertyValue",
+                  name: "Staking",
+                  value: wallet.staking ? "Yes" : "No",
+                },
+                {
+                  "@type": "PropertyValue",
+                  name: "NFT Support",
+                  value: wallet.nft_support ? "Yes" : "No",
+                },
+              ],
             },
-            additionalProperty: [
-              {
-                "@type": "PropertyValue",
-                name: "Open Source",
-                value: wallet.open_source ? "Yes" : "No",
-              },
-              {
-                "@type": "PropertyValue",
-                name: "Self Custody",
-                value: wallet.non_custodial ? "Yes" : "No",
-              },
-              {
-                "@type": "PropertyValue",
-                name: "Hardware Wallet Support",
-                value: wallet.hardware_support ? "Yes" : "No",
-              },
-              {
-                "@type": "PropertyValue",
-                name: "Layer 2 Support",
-                value: wallet.layer_2 ? "Yes" : "No",
-              },
-              {
-                "@type": "PropertyValue",
-                name: "Staking",
-                value: wallet.staking ? "Yes" : "No",
-              },
-              {
-                "@type": "PropertyValue",
-                name: "NFT Support",
-                value: wallet.nft_support ? "Yes" : "No",
-              },
-            ],
-          },
-        })),
+          }
+        }),
       },
     ],
   }

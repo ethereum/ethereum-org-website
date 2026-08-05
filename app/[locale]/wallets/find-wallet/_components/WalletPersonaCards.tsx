@@ -4,47 +4,16 @@ import { BaseLink } from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 
-import { WALLET_PERSONAS, type WalletPersonaId } from "@/data/wallets/personas"
+import {
+  PERSONA_STYLES,
+  WALLET_PERSONAS,
+  type WalletPersonaId,
+} from "@/data/wallets/personas"
 
 type WalletPersonaCardsProps = {
   locale: string
   personaCounts: Record<WalletPersonaId, number>
   currentPersonaId?: WalletPersonaId
-}
-
-// Keyed by id, not array position, so reordering WALLET_PERSONAS can't desync
-// a card from its color. Class strings must stay literal for Tailwind's
-// scanner. Chip counterpart: `PERSONA_TAG_STATUS`.
-type PersonaColor = { text: string; border: string; bgTint: string }
-
-const PERSONA_COLORS: Record<WalletPersonaId, PersonaColor> = {
-  "new-to-crypto": {
-    text: "text-primary",
-    border: "border-primary",
-    bgTint: "bg-primary/10",
-  },
-  developer: {
-    text: "text-accent-b",
-    border: "border-accent-b",
-    bgTint: "bg-accent-b/10",
-  },
-  finance: {
-    text: "text-accent-c",
-    border: "border-accent-c",
-    bgTint: "bg-accent-c/10",
-  },
-  hardware: {
-    text: "text-accent-a",
-    border: "border-accent-a",
-    bgTint: "bg-accent-a/10",
-  },
-  // No accent-d token exists, so nfts rides the warning/yellow family — the
-  // same tokens behind its `tag-yellow` chip.
-  nfts: {
-    text: "text-warning-dark dark:text-yellow-500",
-    border: "border-warning-dark dark:border-yellow-500",
-    bgTint: "bg-warning-dark/10 dark:bg-yellow-500/10",
-  },
 }
 
 /**
@@ -72,7 +41,7 @@ const WalletPersonaCards = async ({
       >
         {WALLET_PERSONAS.map((persona) => {
           const isActive = currentPersonaId === persona.id
-          const color = PERSONA_COLORS[persona.id]
+          const color = PERSONA_STYLES[persona.id]
           const count = personaCounts[persona.id]
           return (
             <li key={persona.id} className="grid-rows-1 pb-5">

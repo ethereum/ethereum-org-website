@@ -64,13 +64,51 @@ export type PersonaTagStatus =
   | "accent-c"
   | "tag-yellow"
 
-/** Keep in sync with `PERSONA_COLORS` in WalletPersonaCards. */
-export const PERSONA_TAG_STATUS: Record<WalletPersonaId, PersonaTagStatus> = {
-  "new-to-crypto": "primary",
-  developer: "accent-b",
-  finance: "accent-c",
-  hardware: "accent-a",
-  nfts: "tag-yellow",
+type PersonaStyle = {
+  /** `Tag` status for the chip on wallet cards. */
+  tag: PersonaTagStatus
+  text: string
+  border: string
+  bgTint: string
+}
+
+/**
+ * Chip and card colors in one place so they cannot desync. Keyed by id, not
+ * array position, so reordering `WALLET_PERSONAS` is safe. Class strings must
+ * stay literal for Tailwind's scanner.
+ */
+export const PERSONA_STYLES: Record<WalletPersonaId, PersonaStyle> = {
+  "new-to-crypto": {
+    tag: "primary",
+    text: "text-primary",
+    border: "border-primary",
+    bgTint: "bg-primary/10",
+  },
+  developer: {
+    tag: "accent-b",
+    text: "text-accent-b",
+    border: "border-accent-b",
+    bgTint: "bg-accent-b/10",
+  },
+  finance: {
+    tag: "accent-c",
+    text: "text-accent-c",
+    border: "border-accent-c",
+    bgTint: "bg-accent-c/10",
+  },
+  hardware: {
+    tag: "accent-a",
+    text: "text-accent-a",
+    border: "border-accent-a",
+    bgTint: "bg-accent-a/10",
+  },
+  // No accent-d token exists, so nfts rides the warning/yellow family.
+  nfts: {
+    tag: "tag-yellow",
+    text: "text-warning-dark dark:text-yellow-500",
+    border: "border-warning-dark dark:border-yellow-500",
+    bgTint: "bg-warning-dark/10 dark:bg-yellow-500/10",
+  },
 }
 
 export const WALLET_PERSONA_IDS = WALLET_PERSONAS.map(

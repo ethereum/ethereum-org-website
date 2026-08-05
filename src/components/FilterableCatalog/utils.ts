@@ -7,5 +7,5 @@ export function toggleId(ids: string[], id: string): string[] {
 /** Normalize a filter-state slot to an array; a single-select string widens. */
 export const asArray = (value: string | string[] | undefined): string[] => {
   if (Array.isArray(value)) return value
-  return value === undefined ? [] : [value]
+  return value ? [value] : []
 }

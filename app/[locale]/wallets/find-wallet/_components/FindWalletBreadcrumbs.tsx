@@ -29,7 +29,7 @@ const FindWalletBreadcrumbs = async ({
   const dir = isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"
 
   const separator = (
-    <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
+    <BreadcrumbSeparator className="mx-[0.625rem] text-gray-400">
       /
     </BreadcrumbSeparator>
   )
@@ -42,11 +42,11 @@ const FindWalletBreadcrumbs = async ({
         </BreadcrumbItem>
         {separator}
         <BreadcrumbItem>
-          <BreadcrumbLink href="/wallets">{t("wallets")}</BreadcrumbLink>
+          <BreadcrumbLink href="/wallets/">{t("wallets")}</BreadcrumbLink>
         </BreadcrumbItem>
         {separator}
         <BreadcrumbItem>
-          <BreadcrumbLink href="/wallets/find-wallet">
+          <BreadcrumbLink href="/wallets/find-wallet/">
             {t("find-wallet")}
           </BreadcrumbLink>
         </BreadcrumbItem>

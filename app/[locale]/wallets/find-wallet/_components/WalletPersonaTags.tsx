@@ -4,10 +4,7 @@ import { memo } from "react"
 
 import { Tag } from "@/components/ui/tag"
 
-import {
-  PERSONA_TAG_STATUS,
-  type WalletPersonaId,
-} from "@/data/wallets/personas"
+import { PERSONA_STYLES, type WalletPersonaId } from "@/data/wallets/personas"
 
 type WalletPersonaTagsProps = {
   personas: WalletPersonaId[]
@@ -27,7 +24,7 @@ const WalletPersonaTags = ({ personas, labels }: WalletPersonaTagsProps) => {
         <Tag
           key={persona}
           variant="subtle"
-          status={PERSONA_TAG_STATUS[persona]}
+          status={PERSONA_STYLES[persona].tag}
           size="small"
         >
           {labels[persona]}

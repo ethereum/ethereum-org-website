@@ -8,6 +8,17 @@ import Tooltip from "@/components/Tooltip"
 import { appOnlyNetworks } from "@/data/networks/app-networks"
 import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
 
+const networkData = [ethereumNetworkData, ...layer2Data, ...appOnlyNetworks]
+
+/**
+ * Chains this component can actually draw. Callers must guard on this rather
+ * than the raw list, or a chain missing from `networkData` renders an empty row.
+ */
+export const getRenderableChains = (chains: ChainName[]): ChainName[] =>
+  chains.filter((chain) =>
+    networkData.some((network) => network.chainName === chain)
+  )
+
 interface ChainImagesProps {
   chains: ChainName[]
   size?: number
@@ -27,11 +38,7 @@ const ChainImages = ({
   className = "",
   nested,
 }: ChainImagesProps) => {
-  const networkData = [ethereumNetworkData, ...layer2Data, ...appOnlyNetworks]
-
-  const filteredChains = chains.filter((chain) =>
-    networkData.some((network) => network.chainName === chain)
-  )
+  const filteredChains = getRenderableChains(chains)
 
   return (
     <div className={`flex flex-row ${className}`}>

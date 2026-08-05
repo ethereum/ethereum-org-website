@@ -27,13 +27,24 @@ export class FindWalletPage extends BasePage {
     await expect(this.pageHeading).toBeVisible()
   }
 
-  async getResultsCount(): Promise<number> {
+  private async parseResultsCounter(): Promise<{
+    shown: number
+    total: number
+  }> {
     const text = await this.resultsCounter.textContent()
-    const match = text?.match(/:\s*(\d+)\s*\//)
+    const match = text?.match(/:\s*(\d+)\s*\/\s*(\d+)/)
     if (!match) {
       throw new Error(`Could not parse results counter: ${text}`)
     }
-    return parseInt(match[1], 10)
+    return { shown: parseInt(match[1], 10), total: parseInt(match[2], 10) }
+  }
+
+  async getResultsCount(): Promise<number> {
+    return (await this.parseResultsCounter()).shown
+  }
+
+  async getTotalCount(): Promise<number> {
+    return (await this.parseResultsCounter()).total
   }
 
   async openPersona(personaSlug: string) {
@@ -56,7 +67,7 @@ export class FindWalletPage extends BasePage {
 
   async toggleDeviceFilter(label: string) {
     await this.openFiltersIfCollapsed()
-    await this.clickFilterOption(label)
+    await this.clickFilterOption(/^Device/, label)
   }
 
   async toggleAdvancedFilter(label: string) {
@@ -65,11 +76,23 @@ export class FindWalletPage extends BasePage {
     if ((await group.getAttribute("aria-expanded")) === "false") {
       await group.click()
     }
-    await this.clickFilterOption(label)
+    await this.clickFilterOption(/^Advanced filters/, label)
   }
 
-  private async clickFilterOption(label: string) {
-    await this.page
+  /**
+   * Scoped to the group's own Collapsible content via Radix's `aria-controls`,
+   * so a prefix like "Hardware" can't reach "Hardware wallet support" in
+   * another group when the sidebar is reordered.
+   */
+  private async clickFilterOption(groupName: RegExp, label: string) {
+    const contentId = await this.page
+      .getByRole("button", { name: groupName })
+      .first()
+      .getAttribute("aria-controls")
+    const scope = contentId
+      ? this.page.locator(`[id="${contentId}"]`)
+      : this.page.locator("body")
+    await scope
       .locator("label:visible")
       .filter({ hasText: new RegExp(`^${label}`) })
       .first()

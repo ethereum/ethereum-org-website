@@ -19,7 +19,7 @@ test.describe("Find Wallet Page", () => {
     await findWalletPage.openPersona("nfts")
     const count = await findWalletPage.getResultsCount()
     expect(count).toBeGreaterThan(0)
-    expect(count).toBeLessThanOrEqual(49)
+    expect(count).toBeLessThanOrEqual(await findWalletPage.getTotalCount())
   })
 
   test("device filter narrows the results", async () => {

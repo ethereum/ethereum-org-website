@@ -4,7 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { ChainName, Lang, PageParams } from "@/lib/types"
 
-import ChainImages from "@/components/ChainImages"
+import ChainImages, { getRenderableChains } from "@/components/ChainImages"
 import ContentFeedback from "@/components/ContentFeedback"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import Discord from "@/components/icons/discord.svg"
@@ -65,6 +65,7 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
 
   const deviceLabelMap = buildDeviceLabels(t)
   const deviceLabels = getDeviceLabels(wallet.devices, deviceLabelMap)
+  const chains = getRenderableChains(wallet.supported_chains as ChainName[])
   const personaLabels = buildPersonaLabels(t)
   const relatedWallets = getRelatedWallets(wallet, locale)
 
@@ -127,12 +128,7 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
                     </p>
                   )}
 
-                  {wallet.supported_chains.length > 0 && (
-                    <ChainImages
-                      chains={wallet.supported_chains as ChainName[]}
-                      nested
-                    />
-                  )}
+                  {chains.length > 0 && <ChainImages chains={chains} nested />}
 
                   {wallet.supportedLanguages.length > 0 && (
                     <p className="text-sm text-body-medium">

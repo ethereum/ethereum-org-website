@@ -5,7 +5,7 @@ import type { ReactNode } from "react"
 
 import type { ChainName, Lang } from "@/lib/types"
 
-import ChainImages from "@/components/ChainImages"
+import ChainImages, { getRenderableChains } from "@/components/ChainImages"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import Discord from "@/components/icons/discord.svg"
 import Twitter from "@/components/icons/twitter.svg"
@@ -70,6 +70,7 @@ export default async function InterceptedWalletModal(props: {
   const tCommon = await getTranslations({ locale, namespace: "common" })
 
   const deviceLabels = getDeviceLabels(wallet.devices, buildDeviceLabels(t))
+  const chains = getRenderableChains(wallet.supported_chains as ChainName[])
 
   const detailHref = getPathname({
     href: `/wallets/find-wallet/${wallet.slug}/`,
@@ -94,10 +95,10 @@ export default async function InterceptedWalletModal(props: {
         )}
 
         <div className="flex flex-col gap-2">
-          {wallet.supported_chains.length > 0 && (
+          {chains.length > 0 && (
             <DetailRow label={t("page-find-wallet-network-support")}>
               <ChainImages
-                chains={wallet.supported_chains as ChainName[]}
+                chains={chains}
                 className="flex-wrap justify-end gap-1"
                 nested
               />
