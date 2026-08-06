@@ -13,6 +13,8 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { getQuizStats } from "@/data-layer"
+
 import QuizzesPage from "./_components/quizzes"
 import QuizzesPageJsonLD from "./page-jsonld"
 
@@ -32,10 +34,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     locale as Lang
   )
 
+  // Null until the daily Matomo fetch lands; the community panel hides in that case
+  const communityStats = await getQuizStats()
+
   return (
     <I18nProvider locale={locale} messages={messages}>
       <QuizzesPageJsonLD locale={locale} contributors={contributors} />
-      <QuizzesPage />
+      <QuizzesPage communityStats={communityStats} />
     </I18nProvider>
   )
 }

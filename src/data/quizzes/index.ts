@@ -1,4 +1,4 @@
-import type { QuizzesSection, RawQuizzes } from "@/lib/types"
+import type { QuizzesHubSection, QuizzesSection, RawQuizzes } from "@/lib/types"
 
 import { addNextQuiz } from "@/components/Quiz/utils"
 
@@ -112,7 +112,7 @@ const quizzes = {
     ],
   },
   "energy-consumption": {
-    title: "energy-consumption",
+    title: "learn-quizzes:page-energy-consumption",
     questions: [
       "energy-consumption-1",
       "energy-consumption-2",
@@ -210,129 +210,78 @@ const quizzes = {
   },
 } satisfies RawQuizzes
 
-const ethereumBasicsQuizzesRaw: QuizzesSection[] = [
+// Hub sections, in display order. Each section is ordered beginner to advanced
+// so the "next quiz" chain climbs in difficulty.
+const quizzesSectionsRaw: QuizzesHubSection[] = [
   {
-    id: "what-is-ethereum",
-    level: "beginner",
+    id: "basics",
+    titleKey: "basics",
+    descriptionKey: "basics-description",
+    quizzes: [
+      { id: "what-is-ethereum", level: "beginner" },
+      { id: "what-is-ether", level: "beginner" },
+      { id: "what-are-apps", level: "beginner" },
+      { id: "web3", level: "beginner" },
+      { id: "energy-consumption", level: "beginner" },
+    ],
   },
   {
-    id: "what-is-ether",
-    level: "beginner",
+    id: "wallets-security-privacy",
+    titleKey: "wallets-security-privacy",
+    descriptionKey: "wallets-security-privacy-description",
+    quizzes: [
+      { id: "wallets", level: "beginner" },
+      { id: "security", level: "beginner" },
+      { id: "privacy", level: "beginner" },
+      { id: "zero-knowledge-proofs", level: "intermediate" },
+    ],
   },
   {
-    id: "wallets",
-    level: "beginner",
+    id: "apps-and-money",
+    titleKey: "apps-and-money",
+    descriptionKey: "apps-and-money-description",
+    quizzes: [
+      { id: "nfts", level: "beginner" },
+      { id: "stablecoins", level: "beginner" },
+      { id: "defi", level: "beginner" },
+      { id: "daos", level: "intermediate" },
+      { id: "payments", level: "intermediate" },
+    ],
   },
   {
-    id: "web3",
-    level: "beginner",
+    id: "how-ethereum-works",
+    titleKey: "how-ethereum-works",
+    descriptionKey: "how-ethereum-works-description",
+    quizzes: [
+      { id: "accounts", level: "beginner" },
+      { id: "smart-contracts", level: "beginner" },
+      { id: "transactions", level: "intermediate" },
+      { id: "blocks", level: "intermediate" },
+      { id: "gas", level: "advanced" },
+      { id: "evm", level: "advanced" },
+    ],
   },
   {
-    id: "security",
-    level: "beginner",
-  },
-  {
-    id: "privacy",
-    level: "beginner",
-  },
-  {
-    id: "smart-contracts",
-    level: "beginner",
-  },
-  {
-    id: "what-are-apps",
-    level: "beginner",
-  },
-  {
-    id: "energy-consumption",
-    level: "beginner",
+    id: "scaling-staking-nodes",
+    titleKey: "scaling-staking-nodes",
+    descriptionKey: "scaling-staking-nodes-description",
+    quizzes: [
+      { id: "bridges", level: "beginner" },
+      { id: "layer-2", level: "intermediate" },
+      { id: "run-a-node", level: "intermediate" },
+      { id: "merge", level: "intermediate" },
+      { id: "staking-solo", level: "advanced" },
+      { id: "scaling", level: "advanced" },
+    ],
   },
 ]
-export const ethereumBasicsQuizzes: QuizzesSection[] = addNextQuiz(
-  ethereumBasicsQuizzesRaw
+
+export const quizzesSections: QuizzesHubSection[] = quizzesSectionsRaw.map(
+  (section) => ({ ...section, quizzes: addNextQuiz(section.quizzes) })
 )
 
-const usingEthereumQuizzesRaw: QuizzesSection[] = [
-  {
-    id: "nfts",
-    level: "beginner",
-  },
-  {
-    id: "stablecoins",
-    level: "beginner",
-  },
-  {
-    id: "defi",
-    level: "beginner",
-  },
-  {
-    id: "bridges",
-    level: "beginner",
-  },
-  {
-    id: "layer-2",
-    level: "intermediate",
-  },
-  {
-    id: "daos",
-    level: "intermediate",
-  },
-  {
-    id: "run-a-node",
-    level: "intermediate",
-  },
-  {
-    id: "merge",
-    level: "intermediate",
-  },
-  {
-    id: "zero-knowledge-proofs",
-    level: "intermediate",
-  },
-  {
-    id: "payments",
-    level: "intermediate",
-  },
-  {
-    id: "blocks",
-    level: "intermediate",
-  },
-  {
-    id: "accounts",
-    level: "intermediate",
-  },
-  {
-    id: "scaling",
-    level: "advanced",
-  },
-  {
-    id: "staking-solo",
-    level: "advanced",
-  },
-  {
-    id: "gas",
-    level: "advanced",
-  },
-]
-
-export const usingEthereumQuizzes: QuizzesSection[] = addNextQuiz(
-  usingEthereumQuizzesRaw
-)
-
-// Quizzes drawn from the developer docs, on the mechanics of the network itself
-const howEthereumWorksQuizzesRaw: QuizzesSection[] = [
-  {
-    id: "transactions",
-    level: "intermediate",
-  },
-  {
-    id: "evm",
-    level: "advanced",
-  },
-]
-
-export const howEthereumWorksQuizzes: QuizzesSection[] = addNextQuiz(
-  howEthereumWorksQuizzesRaw
+export const allQuizzesInOrder: QuizzesSection[] = quizzesSections.flatMap(
+  (section) => section.quizzes
 )
 
 export default quizzes

@@ -6,6 +6,12 @@ const meta = {
   title: "Molecules / Display Content / Quiz / QuizzesStats",
   component: QuizzesStats,
   args: {
+    communityStats: {
+      averageScore: 67.4,
+      questionsAnswered: 100000,
+      retryRate: 15.6,
+      timestamp: 0,
+    },
     averageScoresArray: [],
     completedQuizzes: {
       "layer-2": [false, 0],

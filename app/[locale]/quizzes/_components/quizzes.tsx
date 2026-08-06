@@ -18,11 +18,8 @@ import { Flex, HStack, Stack } from "@/components/ui/flex"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import {
-  ethereumBasicsQuizzes,
-  howEthereumWorksQuizzes,
-  usingEthereumQuizzes,
-} from "@/data/quizzes"
+import { quizzesSections } from "@/data/quizzes"
+import type { QuizStatsData } from "@/data-layer/fetchers/fetchQuizStats"
 
 import { INITIAL_QUIZ } from "@/lib/constants"
 
@@ -36,7 +33,11 @@ const handleGHAdd = () =>
     eventName: "GH_add",
   })
 
-const QuizzesPage = () => {
+const QuizzesPage = ({
+  communityStats,
+}: {
+  communityStats: QuizStatsData | null
+}) => {
   const t = useTranslations("learn-quizzes")
   const tCommon = useTranslations("common")
 
@@ -79,24 +80,15 @@ const QuizzesPage = () => {
           <Flex className="gap-x-20 max-lg:flex-col-reverse">
             <Stack className="flex-1 gap-10">
               <div>
-                <QuizzesList
-                  content={ethereumBasicsQuizzes}
-                  headingId={t("basics")}
-                  descriptionId={t("basics-description")}
-                  {...commonQuizListProps}
-                />
-                <QuizzesList
-                  content={usingEthereumQuizzes}
-                  headingId={t("using-ethereum")}
-                  descriptionId={t("using-ethereum-description")}
-                  {...commonQuizListProps}
-                />
-                <QuizzesList
-                  content={howEthereumWorksQuizzes}
-                  headingId={t("how-ethereum-works")}
-                  descriptionId={t("how-ethereum-works-description")}
-                  {...commonQuizListProps}
-                />
+                {quizzesSections.map((section) => (
+                  <QuizzesList
+                    key={section.id}
+                    content={section.quizzes}
+                    headingId={t(section.titleKey)}
+                    descriptionId={t(section.descriptionKey)}
+                    {...commonQuizListProps}
+                  />
+                ))}
               </div>
               <Flex className="items-center justify-between bg-background-highlight p-8 max-xl:flex-col max-xl:gap-4 lg:rounded-lg">
                 <div className="max-xl:text-center">
@@ -118,6 +110,7 @@ const QuizzesPage = () => {
             </Stack>
             <div className="flex-1">
               <QuizzesStats
+                communityStats={communityStats}
                 averageScoresArray={userStats.average}
                 completedQuizzes={userStats.completed}
                 totalCorrectAnswers={userStats.score}

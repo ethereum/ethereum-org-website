@@ -235,12 +235,20 @@ export type RawQuiz = {
 
 export type QuizStatus = "neutral" | "success" | "error"
 
-type QuizLevel = "beginner" | "intermediate" | "advanced"
+export type QuizLevel = "beginner" | "intermediate" | "advanced"
 
 export type QuizzesSection = {
   id: QuizKey
   level: QuizLevel
   next?: QuizKey
+}
+
+/** A hub section. Adding one here is enough: the hub and getNextQuiz both derive from it. */
+export type QuizzesHubSection = {
+  id: string
+  titleKey: string
+  descriptionKey: string
+  quizzes: QuizzesSection[]
 }
 
 export type RawQuizzes = Record<string, RawQuiz>

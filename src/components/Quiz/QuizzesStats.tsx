@@ -7,7 +7,9 @@ import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "../../data/quizzes"
+import type { QuizStatsData } from "@/data-layer/fetchers/fetchQuizStats"
+
+import { allQuizzesInOrder } from "../../data/quizzes"
 import { TrophyIcon } from "../icons/quiz"
 import { Button } from "../ui/buttons/Button"
 import { Center, Flex, HStack, Stack } from "../ui/flex"
@@ -38,20 +40,22 @@ type QuizzesStatsProps = {
   totalCorrectAnswers: number
   averageScoresArray: number[]
   completedQuizzes: CompletedQuizzes
+  /** Null when the Matomo fetch has not populated the blob yet */
+  communityStats: QuizStatsData | null
 }
 
 const QuizzesStats = ({
   totalCorrectAnswers,
   averageScoresArray,
   completedQuizzes,
+  communityStats,
 }: QuizzesStatsProps) => {
   const locale = useLocale()
   const t = useTranslations("learn-quizzes")
   const numberOfCompletedQuizzes = getNumberOfCompletedQuizzes(completedQuizzes)
 
   // These values are not fixed but calculated each time, can't be moved to /constants
-  const totalQuizzesNumber =
-    ethereumBasicsQuizzes.length + usingEthereumQuizzes.length
+  const totalQuizzesNumber = allQuizzesInOrder.length
   const totalQuizzesPoints = getTotalQuizzesPoints()
 
   const {
@@ -59,7 +63,7 @@ const QuizzesStats = ({
     formattedCollectiveQuestionsAnswered,
     formattedCollectiveAverageScore,
     formattedCollectiveRetryRate,
-  } = getFormattedStats(locale, averageScoresArray)
+  } = getFormattedStats(locale, averageScoresArray, communityStats)
 
   return (
     <div>
@@ -121,41 +125,42 @@ const QuizzesStats = ({
           </div>
         </div>
 
-        {/* community stats */}
-        <Stack className="gap-6 border-none bg-background-highlight p-8 lg:rounded-lg">
-          <span className="text-xl font-bold">{t("community-stats")}</span>
+        {/* community stats -- omitted entirely when Matomo data is unavailable */}
+        {communityStats && (
+          <Stack className="gap-6 border-none bg-background-highlight p-8 lg:rounded-lg">
+            <span className="text-xl font-bold">{t("community-stats")}</span>
 
-          <Flex className="m-0 gap-x-20 gap-y-6 max-md:flex-col" asChild>
-            <UnorderedList>
-              {(
-                [
-                  {
-                    labelId: "average-score",
-                    value: formattedCollectiveAverageScore,
-                  },
-                  {
-                    labelId: "questions-answered",
-                    value: formattedCollectiveQuestionsAnswered + "+",
-                  },
-                  {
-                    labelId: "retry",
-                    value: formattedCollectiveRetryRate,
-                  },
-                ] satisfies Array<{ labelId: string; value: string }>
-              ).map(({ labelId, value }) => (
-                <Stack key={labelId} className="m-0 gap-0" asChild>
-                  <ListItem>
-                    <span className="text-body">
-                      <Translation id={labelId} ns="learn-quizzes" />
-                    </span>
-                    {/* Data from Matomo, manually updated */}
-                    <span>{value}</span>
-                  </ListItem>
-                </Stack>
-              ))}
-            </UnorderedList>
-          </Flex>
-        </Stack>
+            <Flex className="m-0 gap-x-20 gap-y-6 max-md:flex-col" asChild>
+              <UnorderedList>
+                {(
+                  [
+                    {
+                      labelId: "average-score",
+                      value: formattedCollectiveAverageScore,
+                    },
+                    {
+                      labelId: "questions-answered",
+                      value: formattedCollectiveQuestionsAnswered + "+",
+                    },
+                    {
+                      labelId: "retry",
+                      value: formattedCollectiveRetryRate,
+                    },
+                  ] satisfies Array<{ labelId: string; value: string }>
+                ).map(({ labelId, value }) => (
+                  <Stack key={labelId} className="m-0 gap-0" asChild>
+                    <ListItem>
+                      <span className="text-body">
+                        <Translation id={labelId} ns="learn-quizzes" />
+                      </span>
+                      <span>{value}</span>
+                    </ListItem>
+                  </Stack>
+                ))}
+              </UnorderedList>
+            </Flex>
+          </Stack>
+        )}
       </Stack>
     </div>
   )

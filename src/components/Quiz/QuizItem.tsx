@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl"
 
-import type { QuizzesSection } from "@/lib/types"
+import type { QuizLevel, QuizzesSection } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -9,7 +9,13 @@ import Translation from "../Translation"
 import { Button } from "../ui/buttons/Button"
 import { Flex, Stack } from "../ui/flex"
 import { ListItem } from "../ui/list"
-import { Tag } from "../ui/tag"
+import { Tag, type TagProps } from "../ui/tag"
+
+const LEVEL_STATUS: Record<QuizLevel, NonNullable<TagProps["status"]>> = {
+  beginner: "tag-green",
+  intermediate: "tag-yellow",
+  advanced: "tag-red",
+}
 
 export type QuizzesListItemProps = Omit<QuizzesSection, "id"> & {
   isCompleted: boolean
@@ -53,7 +59,7 @@ const QuizItem = ({
             </Tag>
 
             {/* difficulty - label */}
-            <Tag>{level.toUpperCase()}</Tag>
+            <Tag status={LEVEL_STATUS[level]}>{level.toUpperCase()}</Tag>
           </Flex>
         </Stack>
 

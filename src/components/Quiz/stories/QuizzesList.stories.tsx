@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import type { CompletedQuizzes } from "@/lib/types"
 
-import { ethereumBasicsQuizzes } from "@/data/quizzes"
+import { quizzesSections } from "@/data/quizzes"
 
 import QuizzesListComponent from "../QuizzesList"
 
@@ -18,7 +18,7 @@ const meta = {
   title: "Molecules / Display Content / Quiz / QuizzesList",
   component: QuizzesListComponent,
   args: {
-    content: ethereumBasicsQuizzes,
+    content: quizzesSections[0].quizzes,
     headingId: "basics",
     descriptionId: "basics-description",
     userStats: {

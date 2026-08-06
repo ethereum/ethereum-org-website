@@ -25,8 +25,6 @@
   "submit-answer": "Check answer",
   "test-your-knowledge": "Test your Ethereum knowledge",
   "try-again": "Try again",
-  "using-ethereum": "Using Ethereum",
-  "using-ethereum-description": "Delve into the real-world applications of Ethereum and uncover how this revolutionary blockchain platform is reshaping industries. This is a great way to make sure you understand things well enough before you start using cryptocurrencies actively.",
   "want-more-quizzes": "Want to see more quizzes here?",
   "your-results": "Your results",
   "your-total": "Your total points",
@@ -1230,5 +1228,12 @@
   "transactions-7-c-label": "The block containing it is upgraded to “justified” and then “finalized”",
   "transactions-7-c-explanation": "Once a block is finalized, undoing it would take a network level attack that destroys an enormous amount of staked ETH.",
   "transactions-7-d-label": "Nothing further, inclusion in a block is already the final word",
-  "transactions-7-d-explanation": "Inclusion makes a transaction successful, but the stronger guarantee arrives later, when the block is justified and then finalized."
+  "transactions-7-d-explanation": "Inclusion makes a transaction successful, but the stronger guarantee arrives later, when the block is justified and then finalized.",
+  "wallets-security-privacy": "Wallets, security and privacy",
+  "wallets-security-privacy-description": "How you hold your own keys, keep your funds safe, and control what you reveal when you use Ethereum.",
+  "apps-and-money": "Apps and money",
+  "apps-and-money-description": "The things people actually do onchain, from collectibles and stable value to lending, trading and paying each other.",
+  "scaling-staking-nodes": "Scaling, staking and nodes",
+  "scaling-staking-nodes-description": "How Ethereum grows beyond mainnet, and how validators and node operators keep the network running.",
+  "page-energy-consumption": "Ethereum: a green and efficient blockchain"
 }

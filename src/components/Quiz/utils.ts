@@ -6,17 +6,8 @@ import type {
 
 import { numberFormat } from "@/lib/utils/numbers"
 
-import allQuizzesData, {
-  ethereumBasicsQuizzes,
-  howEthereumWorksQuizzes,
-  usingEthereumQuizzes,
-} from "@/data/quizzes"
-
-import {
-  TOTAL_QUIZ_AVERAGE_SCORE,
-  TOTAL_QUIZ_QUESTIONS_ANSWERED,
-  TOTAL_QUIZ_RETRY_RATE,
-} from "@/lib/constants"
+import allQuizzesData, { allQuizzesInOrder } from "@/data/quizzes"
+import type { QuizStatsData } from "@/data-layer/fetchers/fetchQuizStats"
 
 export const getTotalQuizzesPoints = () =>
   Object.values(allQuizzesData)
@@ -31,13 +22,7 @@ export const getNumberOfCompletedQuizzes = (quizzes: CompletedQuizzes) =>
     .filter((v) => v).length
 
 export const getNextQuiz = (currentQuiz?: string) => {
-  // Every hub section must be listed, or its quizzes have no "next quiz"
-  const allQuizzes = [
-    ...ethereumBasicsQuizzes,
-    ...usingEthereumQuizzes,
-    ...howEthereumWorksQuizzes,
-  ]
-  const nextQuiz = allQuizzes.find((quiz) => quiz.id === currentQuiz)
+  const nextQuiz = allQuizzesInOrder.find((quiz) => quiz.id === currentQuiz)
 
   return nextQuiz ? nextQuiz.next : undefined
 }
@@ -62,7 +47,11 @@ export const shareOnTwitter = ({ score, total }: QuizShareStats): void => {
 const mean = (values: number[]) =>
   values.length > 0 ? values.reduce((a, b) => a + b, 0) / values.length : 0
 
-export const getFormattedStats = (locale: string, valueSet: number[]) => {
+export const getFormattedStats = (
+  locale: string,
+  valueSet: number[],
+  communityStats: QuizStatsData | null
+) => {
   // Initialize number and percent formatters
   const numberFormatter = numberFormat(locale, {
     style: "decimal",
@@ -78,20 +67,16 @@ export const getFormattedStats = (locale: string, valueSet: number[]) => {
 
   const computedAverage = valueSet.length > 0 ? mean(valueSet) : 0
 
-  // Convert collective stats to fraction for percentage format
-  const normalizedCollectiveAverageScore = TOTAL_QUIZ_AVERAGE_SCORE / 100
-  const normalizedCollectiveRetryRate = TOTAL_QUIZ_RETRY_RATE / 100
-
   return {
     formattedUserAverageScore: percentFormatter.format(computedAverage / 100), // Normalize user average
     formattedCollectiveQuestionsAnswered: numberFormatter.format(
-      TOTAL_QUIZ_QUESTIONS_ANSWERED
+      communityStats?.questionsAnswered ?? 0
     ),
     formattedCollectiveAverageScore: percentFormatter.format(
-      normalizedCollectiveAverageScore
+      (communityStats?.averageScore ?? 0) / 100
     ),
     formattedCollectiveRetryRate: percentFormatter.format(
-      normalizedCollectiveRetryRate
+      (communityStats?.retryRate ?? 0) / 100
     ),
   }
 }
