@@ -30,9 +30,10 @@ import FindWalletPageJsonLD from "./page-jsonld"
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations("page-wallets-find-wallet")
 
   setRequestLocale(locale)
+
+  const t = await getTranslations("page-wallets-find-wallet")
 
   const supportedLocaleWallets = getSupportedLocaleWallets(locale!)
   const noSupportedLocaleWallets = getNonSupportedLocaleWallets(locale!)
