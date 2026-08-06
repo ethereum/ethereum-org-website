@@ -28,6 +28,10 @@ type ModalParams = { locale: string; wallet: string }
 
 const LANGUAGES_SHOWN = 5
 
+// Without this the interceptor is uncacheable and re-renders on every modal
+// open; the standalone `[wallet]` page already sets it.
+export const revalidate = false
+
 const DetailRow = ({
   label,
   tooltip,
