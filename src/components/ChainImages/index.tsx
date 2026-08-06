@@ -55,9 +55,13 @@ const ChainImages = ({
             }}
           >
             <Tooltip content={chainData?.name || ""} nested={nested}>
+              {/* Without width/height next/image falls back to the source's
+                  intrinsic size and fetches up to w=1920 for these ~24px icons. */}
               <Image
                 src={chainData?.logo || ""}
                 alt={`${chain} blockchain network`}
+                width={size}
+                height={size}
                 className="block rounded-full"
                 style={{
                   objectFit: "contain",
