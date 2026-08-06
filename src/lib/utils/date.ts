@@ -1,3 +1,5 @@
+import type { PartialDate } from "@/data/upgrades/types"
+
 import { DEFAULT_LOCALE } from "../constants"
 import type { Lang } from "../types"
 
@@ -69,6 +71,36 @@ export const formatDate = (
     year: "numeric",
     ...options,
   }).format(new Date(date))
+}
+
+/**
+ * Format a {@link PartialDate} at whatever precision it carries: a year, a
+ * quarter, a month and year, or a full date. Used by the upgrade data layer,
+ * where a date is only ever as precise as its source.
+ *
+ * Built through `dateTimeFormat` so Arabic and Urdu get the right numbering
+ * system, and pinned to UTC so a `{ year, month, day }` never renders as the
+ * previous day for viewers behind UTC.
+ *
+ * Quarters can't go through `Intl` — there is no quarter skeleton, and "Q4
+ * 2026" is written very differently across locales — so the caller passes a
+ * `formatQuarter` that renders a translated pattern. It is required rather than
+ * optional so a quarter date can never silently degrade to just its year.
+ */
+export const formatPartialDate = (
+  { year, quarter, month, day }: PartialDate,
+  locale: string = DEFAULT_LOCALE,
+  formatQuarter: (quarter: number, year: number) => string
+) => {
+  if (quarter) return formatQuarter(quarter, year)
+
+  const date = new Date(Date.UTC(year, (month ?? 1) - 1, day ?? 1))
+  return dateTimeFormat(locale, {
+    timeZone: "UTC",
+    year: "numeric",
+    ...(month && { month: "long" }),
+    ...(day && { day: "numeric" }),
+  }).format(date)
 }
 
 export const formatDateRange = (

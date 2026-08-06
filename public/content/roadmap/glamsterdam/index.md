@@ -5,11 +5,10 @@ lang: en
 template: upgrade
 ---
 
+<UpgradeSummary slug="glamsterdam" />
+
 <Alert variant="update">
 <AlertContent>
-<AlertTitle>
-Glamsterdam is an upcoming Ethereum upgrade planned for Q4 2026
-</AlertTitle>
 <AlertDescription>
 The Glamsterdam upgrade is only a single step in Ethereum's long-term development goals. Learn more about [the protocol roadmap](/roadmap/) and [previous upgrades](/ethereum-forks/).
 </AlertDescription>
