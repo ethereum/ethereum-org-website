@@ -30,6 +30,7 @@ const meta = {
       bridges: [false, 0],
       payments: [false, 0],
       blocks: [false, 0],
+      accounts: [false, 0],
     },
     totalCorrectAnswers: 0,
   },
