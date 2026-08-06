@@ -10,8 +10,8 @@ const quizzes = {
       "what-is-ethereum-1",
       "what-is-ethereum-2",
       "what-is-ethereum-3",
-      "what-is-ethereum-4",
-      "what-is-ethereum-5",
+      "what-is-ethereum-6",
+      "what-is-ethereum-7",
     ],
   },
   "what-is-ether": {
@@ -19,7 +19,7 @@ const quizzes = {
     questions: [
       "what-is-ether-1",
       "what-is-ether-2",
-      "what-is-ether-3",
+      "what-is-ether-5",
       "what-is-ether-4",
     ],
   },
@@ -111,6 +111,16 @@ const quizzes = {
       "smart-contracts-4",
     ],
   },
+  "energy-consumption": {
+    title: "energy-consumption",
+    questions: [
+      "energy-consumption-1",
+      "energy-consumption-2",
+      "energy-consumption-3",
+      "energy-consumption-4",
+      "energy-consumption-5",
+    ],
+  },
   privacy: {
     title: "learn-quizzes:page-privacy",
     questions: [
@@ -120,6 +130,66 @@ const quizzes = {
       "privacy-4",
       "privacy-5",
       "privacy-6",
+    ],
+  },
+  "zero-knowledge-proofs": {
+    title: "zero-knowledge-proofs",
+    questions: ["zkp-1", "zkp-2", "zkp-3", "zkp-4", "zkp-5", "zkp-6", "zkp-7"],
+  },
+  "what-are-apps": {
+    title: "what-are-apps",
+    questions: [
+      "what-are-apps-1",
+      "what-are-apps-2",
+      "what-are-apps-3",
+      "what-are-apps-4",
+      "what-are-apps-5",
+      "what-are-apps-6",
+    ],
+  },
+  bridges: {
+    title: "bridges",
+    questions: [
+      "bridges-1",
+      "bridges-2",
+      "bridges-3",
+      "bridges-4",
+      "bridges-5",
+      "bridges-6",
+    ],
+  },
+  payments: {
+    title: "payments-page",
+    questions: [
+      "payments-1",
+      "payments-2",
+      "payments-3",
+      "payments-4",
+      "payments-5",
+      "payments-6",
+    ],
+  },
+  blocks: {
+    title: "learn-quizzes:page-blocks",
+    questions: [
+      "blocks-1",
+      "blocks-2",
+      "blocks-3",
+      "blocks-4",
+      "blocks-5",
+      "blocks-6",
+    ],
+  },
+  accounts: {
+    title: "learn-quizzes:page-accounts",
+    questions: [
+      "accounts-1",
+      "accounts-2",
+      "accounts-3",
+      "accounts-4",
+      "accounts-5",
+      "accounts-6",
+      "accounts-7",
     ],
   },
   evm: {
@@ -157,6 +227,14 @@ const ethereumBasicsQuizzesRaw: QuizzesSection[] = [
     id: "smart-contracts",
     level: "beginner",
   },
+  {
+    id: "what-are-apps",
+    level: "beginner",
+  },
+  {
+    id: "energy-consumption",
+    level: "beginner",
+  },
 ]
 export const ethereumBasicsQuizzes: QuizzesSection[] = addNextQuiz(
   ethereumBasicsQuizzesRaw
@@ -176,6 +254,10 @@ const usingEthereumQuizzesRaw: QuizzesSection[] = [
     level: "beginner",
   },
   {
+    id: "bridges",
+    level: "beginner",
+  },
+  {
     id: "layer-2",
     level: "intermediate",
   },
@@ -189,6 +271,22 @@ const usingEthereumQuizzesRaw: QuizzesSection[] = [
   },
   {
     id: "merge",
+    level: "intermediate",
+  },
+  {
+    id: "zero-knowledge-proofs",
+    level: "intermediate",
+  },
+  {
+    id: "payments",
+    level: "intermediate",
+  },
+  {
+    id: "blocks",
+    level: "intermediate",
+  },
+  {
+    id: "accounts",
     level: "intermediate",
   },
   {

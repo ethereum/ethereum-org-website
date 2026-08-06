@@ -23,11 +23,11 @@ import {
   CardContent,
   CardFooter,
   CardHeader,
+  CardLinkFake,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
-import { LinkWithArrow } from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -279,7 +279,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <Section id="rollup-cards">
             <Grid columns={2} size="wide">
               {rollupCards.map((card, idx) => (
-                <Card key={idx} hoverLift>
+                <Card key={idx} href={card.childLink}>
                   <CardHeader>
                     <CardBanner
                       fit="contain"
@@ -294,9 +294,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     <CardParagraph>{card.description}</CardParagraph>
                   </CardContent>
                   <CardFooter>
-                    <LinkWithArrow href={card.childLink}>
+                    <CardLinkFake withForwardArrow>
                       {card.childSentence}
-                    </LinkWithArrow>
+                    </CardLinkFake>
                   </CardFooter>
                 </Card>
               ))}

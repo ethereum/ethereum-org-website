@@ -406,30 +406,6 @@ const CollectiblesCurrentYear = ({
 
           <p className="mt-2">{t("page-collectibles-translations-desc")}</p>
 
-          <Accordion type="single" collapsible>
-            <AccordionItem value="item-1" className="mt-4">
-              <AccordionTrigger className="w-full justify-start !border-none !px-0 py-2 font-bold hover:bg-transparent [&[data-state=open]]:bg-transparent">
-                {t("page-collectibles-instructions-label")}
-              </AccordionTrigger>
-              <AccordionContent className="text-base">
-                <OrderedList className="ms-3 mb-0">
-                  <ListItem>
-                    <Translation
-                      id="page-collectibles-translations-instructions-1"
-                      ns="page-collectibles"
-                    />
-                  </ListItem>
-                  <ListItem>
-                    {t("page-collectibles-translations-instructions-2")}
-                  </ListItem>
-                  <ListItem className="mb-0">
-                    {t("page-collectibles-translations-instructions-3")}
-                  </ListItem>
-                </OrderedList>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-
           <HighlightCardGrid className="mt-4">
             <HighlightCard>
               <HighlightCardBody
@@ -466,7 +442,7 @@ const CollectiblesCurrentYear = ({
                 </CheckList>
               </HighlightCardBody>
               <HighlightCardFooter href="/contributing/translation-program/">
-                {t("page-collectibles-get-started")}
+                {t("common:learn-more")}
               </HighlightCardFooter>
             </HighlightCard>
           </HighlightCardGrid>

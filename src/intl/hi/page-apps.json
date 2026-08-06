@@ -65,6 +65,8 @@
   "page-apps-info-creator": "निर्माता",
   "page-apps-info-last-updated": "अंतिम बार अपडेट किया गया",
   "page-apps-gallery-title": "गैलरी",
+  "page-apps-gallery-screenshot-alt": "एप्लिकेशन इंटरफ़ेस दिखाने वाला {appName} का स्क्रीनशॉट {index}",
+  "page-apps-gallery-modal-title": "{appName} के स्क्रीनशॉट",
   "page-apps-more-apps-like-this": "इस तरह के और ऐप्स",
   "page-apps-by-company": "{company} द्वारा",
   "page-apps-today": "आज",

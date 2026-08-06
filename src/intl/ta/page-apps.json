@@ -65,6 +65,8 @@
   "page-apps-info-creator": "உருவாக்கியவர்",
   "page-apps-info-last-updated": "கடைசியாகப் புதுப்பிக்கப்பட்டது",
   "page-apps-gallery-title": "தொகுப்பு",
+  "page-apps-gallery-screenshot-alt": "செயலி இடைமுகத்தைக் காட்டும் {appName} இன் திரைப்பிடிப்பு {index}",
+  "page-apps-gallery-modal-title": "{appName} திரைப்பிடிப்புகள்",
   "page-apps-more-apps-like-this": "இது போன்ற மேலும் பல செயலிகள்",
   "page-apps-by-company": "{company} ஆல்",
   "page-apps-today": "இன்று",

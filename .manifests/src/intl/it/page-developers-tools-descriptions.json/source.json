@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-developers-tools-descriptions.json",
-  "generatedAt": "2026-07-22T22:36:23.017Z",
-  "rootHash": "1af5ad145bed",
+  "generatedAt": "2026-08-05T05:28:17.514Z",
+  "rootHash": "778166848c2d",
   "tree": {
-    "contentHash": "338264b39174",
-    "anchorHash": "049be9c976dc",
+    "contentHash": "2f1e2907e6c2",
+    "anchorHash": "7a33d4223768",
     "children": {
       "tool-aave-description": {
         "contentHash": "48fc576dee63",
@@ -293,6 +293,10 @@
       },
       "tool-enso-build-description": {
         "contentHash": "d13fbd79471a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-envio-description": {
+        "contentHash": "6b2254ae8dc2",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-erc-4337-documentation-description": {
@@ -1261,6 +1265,7 @@
       "tool-ens-description",
       "tool-ens-mcp-server-description",
       "tool-enso-build-description",
+      "tool-envio-description",
       "tool-erc-4337-documentation-description",
       "tool-ercx-token-test-library-description",
       "tool-erpc-description",
@@ -1486,5 +1491,5 @@
       "tool-zokrates-description"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "729918a20bdc32ba5f177eef1ff4712846b5dcbd"
 }

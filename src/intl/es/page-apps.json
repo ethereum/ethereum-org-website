@@ -65,6 +65,8 @@
   "page-apps-info-creator": "Creador",
   "page-apps-info-last-updated": "Última actualización",
   "page-apps-gallery-title": "Galería",
+  "page-apps-gallery-screenshot-alt": "Captura de pantalla {index} de {appName} mostrando la interfaz de la aplicación",
+  "page-apps-gallery-modal-title": "Capturas de pantalla de {appName}",
   "page-apps-more-apps-like-this": "Más aplicaciones como esta",
   "page-apps-by-company": "por {company}",
   "page-apps-today": "Hoy",

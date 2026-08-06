@@ -275,7 +275,7 @@ const VideoGalleryFilter = ({
               size="sm"
             >
               <CardHeader>
-                <CardBanner className="aspect-video h-auto">
+                <CardBanner className="aspect-video h-auto" zoom>
                   <Image
                     src={video.thumbnailUrl}
                     alt={video.title}

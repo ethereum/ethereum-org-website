@@ -1,10 +1,10 @@
 {
   "version": 1,
   "sourceFile": "public/content/web3/index.md",
-  "generatedAt": "2026-06-30T01:02:05.383Z",
-  "rootHash": "53b7cfa6c969",
+  "generatedAt": "2026-07-28T21:56:07.779Z",
+  "rootHash": "73614a3fa03c",
   "tree": {
-    "contentHash": "c5bc3a128c31",
+    "contentHash": "b3eed584a052",
     "anchorHash": "78e270333851",
     "children": {
       "frontmatter:title": {
@@ -505,7 +505,7 @@
         ]
       },
       "web3-limitations": {
-        "contentHash": "85965602b8e0",
+        "contentHash": "b804eac2a192",
         "anchorHash": "8f7cd2a2b5f8",
         "labelHash": "94f0307d118f",
         "children": {
@@ -586,7 +586,7 @@
             ]
           },
           "education": {
-            "contentHash": "a4003e1ae7f4",
+            "contentHash": "a0fe9eb4dcc4",
             "anchorHash": "d6a8a179c1a6",
             "labelHash": "512ab3c6b986",
             "children": {
@@ -603,7 +603,7 @@
                 "anchorHash": "fce3af398480"
               },
               "prose:3": {
-                "contentHash": "76348c33886a",
+                "contentHash": "eb3c1832100b",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:1": {
@@ -611,7 +611,7 @@
                 "anchorHash": "0e85b8b4d243"
               },
               "prose:4": {
-                "contentHash": "226668150a97",
+                "contentHash": "22fa654e0ebc",
                 "anchorHash": "e3b0c44298fc"
               }
             },
@@ -842,5 +842,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "f99d74bf2ad4ecaa64f42bc984735fecc8fe83af"
 }

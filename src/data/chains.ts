@@ -2500,6 +2500,17 @@ const chains = [
     chain: "NEAR",
   },
   {
+    name: "Crynux on Near",
+    infoURL: "https://crynux.io",
+    chainId: 1313161911,
+    nativeCurrency: {
+      name: "Crynux",
+      symbol: "CNX",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "RARI Chain Mainnet",
     infoURL: "https://rarichain.org/",
     chainId: 1380012617,
