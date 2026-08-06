@@ -5,8 +5,6 @@ lang: en
 template: upgrade
 ---
 
-<UpgradeSummary slug="glamsterdam" />
-
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>

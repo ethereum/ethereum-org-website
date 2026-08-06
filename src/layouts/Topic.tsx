@@ -9,11 +9,13 @@ import PageActions from "@/components/PageActions"
 import { Alert } from "@/components/ui/alert"
 import InlineLink from "@/components/ui/Link"
 import { List, ListItem } from "@/components/ui/list"
+import UpgradeSummary from "@/components/UpgradeSummary"
 
 import { getEditPath } from "@/lib/utils/editPath"
 import { buildTopicDropdown } from "@/lib/utils/topicDropdown"
 
 import type { TopicConfig } from "@/data/topics"
+import { upgrades } from "@/data/upgrades"
 
 import { ContentLayout } from "./ContentLayout"
 
@@ -50,6 +52,11 @@ export const TopicLayout = async ({
         `Add an entry to src/data/topics/ and route through topics[layout].`
     )
   }
+
+  // `slug` is locale-independent ("roadmap/glamsterdam"), so its last segment
+  // is a stable key into the upgrade data on every locale.
+  const upgradeKey = slug.split("/").filter(Boolean).pop()
+  const upgradeSlug = upgradeKey && upgrades[upgradeKey] ? upgradeKey : null
 
   const t = await getTranslations(config.translationNs)
 
@@ -124,6 +131,17 @@ export const TopicLayout = async ({
         editPath={getEditPath(slug)}
         className="-ms-2 mb-8 [&+h2]:mt-0!"
       />
+      {/*
+        Rendered here rather than as an MDX tag so that every locale gets it
+        without waiting for the intl-pipeline to propagate a tag into 24
+        translated files — the facts live in one place, so they should render
+        everywhere at once.
+
+        The switch is *data presence*, not layout type: six pages use
+        `template: upgrade` (beacon-chain, dencun, fusaka, glamsterdam, merge,
+        pectra) and only those with a file in `src/data/upgrades` get a block.
+      */}
+      {upgradeSlug && <UpgradeSummary slug={upgradeSlug} />}
       {children}
     </ContentLayout>
   )
