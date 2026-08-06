@@ -28,9 +28,11 @@ import ManDogeImage from "@/public/images/start-with-ethereum/man-doge-playing.p
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations("page-start")
 
+  // Set locale before next-intl APIs so on-demand renders stay static
   setRequestLocale(locale)
+
+  const t = await getTranslations("page-start")
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
