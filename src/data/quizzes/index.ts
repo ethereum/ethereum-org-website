@@ -126,6 +126,17 @@ const quizzes = {
     title: "zero-knowledge-proofs",
     questions: ["zkp-1", "zkp-2", "zkp-3", "zkp-4", "zkp-5", "zkp-6", "zkp-7"],
   },
+  "what-are-apps": {
+    title: "what-are-apps",
+    questions: [
+      "what-are-apps-1",
+      "what-are-apps-2",
+      "what-are-apps-3",
+      "what-are-apps-4",
+      "what-are-apps-5",
+      "what-are-apps-6",
+    ],
+  },
 } satisfies RawQuizzes
 
 const ethereumBasicsQuizzesRaw: QuizzesSection[] = [
@@ -155,6 +166,10 @@ const ethereumBasicsQuizzesRaw: QuizzesSection[] = [
   },
   {
     id: "smart-contracts",
+    level: "beginner",
+  },
+  {
+    id: "what-are-apps",
     level: "beginner",
   },
 ]

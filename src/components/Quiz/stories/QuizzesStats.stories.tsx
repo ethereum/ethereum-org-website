@@ -26,6 +26,7 @@ const meta = {
       gas: [false, 0],
       privacy: [false, 0],
       "zero-knowledge-proofs": [false, 0],
+      "what-are-apps": [false, 0],
     },
     totalCorrectAnswers: 0,
   },
