@@ -159,6 +159,17 @@ const quizzes = {
       "payments-6",
     ],
   },
+  blocks: {
+    title: "learn-quizzes:page-blocks",
+    questions: [
+      "blocks-1",
+      "blocks-2",
+      "blocks-3",
+      "blocks-4",
+      "blocks-5",
+      "blocks-6",
+    ],
+  },
 } satisfies RawQuizzes
 
 const ethereumBasicsQuizzesRaw: QuizzesSection[] = [
@@ -238,6 +249,10 @@ const usingEthereumQuizzesRaw: QuizzesSection[] = [
   },
   {
     id: "payments",
+    level: "intermediate",
+  },
+  {
+    id: "blocks",
     level: "intermediate",
   },
   {

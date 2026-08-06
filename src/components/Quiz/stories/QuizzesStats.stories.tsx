@@ -29,6 +29,7 @@ const meta = {
       "what-are-apps": [false, 0],
       bridges: [false, 0],
       payments: [false, 0],
+      blocks: [false, 0],
     },
     totalCorrectAnswers: 0,
   },
