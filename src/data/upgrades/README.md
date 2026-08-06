@@ -23,6 +23,10 @@ Strongest to weakest claim: `live` running now · `confirmed` date set via ACD �
 `anticipated` expected, no date · `projected` inferred from the mainnet target ·
 `complete` finished. The UI must never render a weaker status as a settled one.
 
+An undated future fork gets **no milestone entry at all**. `UpgradePhase` already
+encodes the sequence (`devnet` → `testnet` → `scheduled`), so the phase carries
+the shape and milestones carry the facts. A missing testnet fork is not a gap.
+
 ## Status is confidence, not kind
 
 `EipStatus` answers "how firm is this", never "what kind of change is this".
