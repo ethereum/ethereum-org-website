@@ -168,6 +168,19 @@ Chromatic is a visual testing tool that scans every possible UI state across bro
 
 When creating a story, Chromatic creates a "snapshot" of it and sets it as a baseline. This baseline is also approved or denied before merging into the project. Whenever there are changes that affect the component, Chromatic will create a new snapshot to analyze. If there are changes, Chromatic will provide them for a reviewer to accept or decline, and be able to provide any further comments.
 
+### Publishing builds
+
+CI publishes on every non-draft PR, so you don't normally need to run Chromatic yourself. Snapshots are billed against a monthly quota shared by the whole team, and a local run of `pnpm chromatic` costs up to a full rebuild, so prefer letting CI do it.
+
+If you do need a local run, the repo has two Chromatic projects and each script takes its own token:
+
+| Script | Token | Project |
+| --- | --- | --- |
+| `pnpm chromatic` | `CHROMATIC_STORYBOOK_TOKEN` | Storybook components |
+| `pnpm chromatic:pages` | `CHROMATIC_PAGES_TOKEN` | Full-page visual tests |
+
+Both must be exported in your shell — `.env.local` won't work, since the scripts expand them before Chromatic starts. Each script fails immediately if its token is missing, which is deliberate: a single shared token would let a page-test token publish a Storybook build into the wrong project.
+
 ### Story Modes
 
 Depending on the component, we might look for more than just one snapshot per story. In some cases, we might want multiple snapshots showing the story rendered at various viewport widths or in different languages, a combination of both, etc. These are referred to as [Story Modes](https://www.chromatic.com/docs/modes/). Examples of applicable components include the `Footer` and the `HubHero`.

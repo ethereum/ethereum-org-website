@@ -17,7 +17,7 @@ The rule is NOT "never edit locales." It IS "don't hand-propagate English update
 - **Not allowed:** Editing a locale to reflect a new English value (URL change, attribute change, restructured paragraph). The manifest map becomes wrong.
 - **If English-to-locale sync is genuinely urgent** (build-breaking structural change with no pending PR open): make the English edit, then trigger `intl-pipeline.yml` with `stamp_only: true` to refresh manifests without translation. Safe only when no `intl/pending-{base}` branch exists for that base.
 
-**Deletions go through English too.** The pipeline propagates only what *changes* in canonical English; it never scans for unused or orphaned strings. To remove a string, delete it from English (`src/intl/en/` or the English content) first — the pipeline then propagates the removal to the locales. Nothing auto-prunes a key just because code stopped referencing it.
+**Deletions go through English too.** The pipeline propagates only what *changes* in canonical English; it never scans for unused or orphaned strings, and there is no mechanism that auto-removes an orphaned English string — it only propagates English to the other locales. To remove a string — including a key that code has stopped referencing (an orphaned key) — delete it from the English source (`src/intl/en/` or the English content); the pipeline then propagates that removal to the locales on its next run. Do **not** hand-delete the locale copies, that is hand-propagation and the pipeline handles it. Orphaning a string is therefore a signal to clean it up: delete it from English, English-only.
 
 ## Top Rules
 

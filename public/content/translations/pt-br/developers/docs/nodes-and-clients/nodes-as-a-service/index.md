@@ -47,14 +47,14 @@ Ao usar um serviço de nó, você está centralizando o aspecto de infraestrutur
 
 Leia mais sobre os [benefícios de executar o seu próprio nó](/developers/docs/nodes-and-clients/#benefits-to-you).
 
-## Serviços de nó populares
+## Serviços de nó populares {#popular-node-services}
 
 Aqui está uma lista de alguns dos provedores de nó do Ethereum mais populares, sinta-se à vontade para adicionar qualquer um que esteja faltando! Cada serviço de nó oferece diferentes benefícios e recursos, além de níveis gratuitos ou pagos, você deve investigar quais se adequam melhor às suas necessidades antes de tomar uma decisão.
 
 - [**Alchemy**](https://alchemy.com/)
   - [Documentação](https://www.alchemy.com/docs/)
   - Recursos
-    - Maior nível gratuito com 300 milhões de unidades de computação por mês (~30 milhões de solicitações getLatestBlock)
+    - Maior nível gratuito com 300 milhões de unidades de computação por mês (\~30 milhões de solicitações getLatestBlock)
     - Suporte multicadeia para Polygon, Starknet, Optimism, Arbitrum
     - Impulsionando ~70% dos maiores aplicativos descentralizados (dapps) do Ethereum e volume de transações de finanças descentralizadas (DeFi)
     - Alertas de webhook em tempo real via Alchemy Notify

@@ -1,17 +1,23 @@
 {
   "version": 1,
   "locale": "hi",
-  "translatedAt": "2026-06-08T08:24:07.821Z",
-  "englishManifestHash": "90b9b5b64a3f",
+  "translatedAt": "2026-07-28T22:15:52.060Z",
+  "englishManifestHash": "2424519a1eef",
   "placeholderOrder": [
     "LINK-a21a82",
-    "LINK-43417f",
+    "LINK-ac6f75",
+    "LINK-ae8c7a",
     "LINK-e873ee",
     "LINK-a9f7af",
     "LINK-95e7e8",
+    "LINK-245ebf",
+    "LINK-3530a2",
     "LINK-72df26",
-    "LINK-a01f09",
+    "LINK-c94958",
+    "LINK-4ed212",
+    "LINK-c5b989",
     "LINK-837103",
+    "LINK-a01f09",
     "LINK-e05109",
     "LINK-4ed14b",
     "LINK-96a38f",
@@ -25,8 +31,6 @@
     "LINK-a0bdd3",
     "LINK-02e5c7",
     "LINK-8eab9b",
-    "LINK-ae8c7a",
-    "LINK-0cc943",
     "LINK-72f811",
     "LINK-c1da92",
     "LINK-4eeac0",
@@ -58,7 +62,13 @@
         "url": "/"
       }
     },
-    "LINK-43417f": {
+    "LINK-ac6f75": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues/new/choose"
+      }
+    },
+    "LINK-ae8c7a": {
       "type": "link",
       "values": {
         "url": "/contributing/translation-program/"
@@ -82,22 +92,52 @@
         "url": "/contributing/#how-to-update-content"
       }
     },
+    "LINK-245ebf": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/adding-articles/"
+      }
+    },
+    "LINK-3530a2": {
+      "type": "link",
+      "values": {
+        "url": "/latest/"
+      }
+    },
     "LINK-72df26": {
       "type": "link",
       "values": {
         "url": "/contributing/content-resources/"
       }
     },
-    "LINK-a01f09": {
+    "LINK-c94958": {
       "type": "link",
       "values": {
-        "url": "/contributing/design/adding-design-resources/"
+        "url": "/contributing/adding-reports/"
+      }
+    },
+    "LINK-4ed212": {
+      "type": "link",
+      "values": {
+        "url": "/reports/"
+      }
+    },
+    "LINK-c5b989": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/adding-community-stories/"
       }
     },
     "LINK-837103": {
       "type": "link",
       "values": {
         "url": "/contributing/quizzes/"
+      }
+    },
+    "LINK-a01f09": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/design/adding-design-resources/"
       }
     },
     "LINK-e05109": {
@@ -176,18 +216,6 @@
       "type": "link",
       "values": {
         "url": "https://discord.gg/ethereum-org"
-      }
-    },
-    "LINK-ae8c7a": {
-      "type": "link",
-      "values": {
-        "url": "/contributing/translation-program/"
-      }
-    },
-    "LINK-0cc943": {
-      "type": "link",
-      "values": {
-        "url": "https://crowdin.com/project/ethereum-org"
       }
     },
     "LINK-72f811": {
@@ -271,7 +299,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-08T08:24:07.821Z",
+      "translatedAt": "2026-07-28T22:15:52.060Z",
       "status": "success"
     }
   }

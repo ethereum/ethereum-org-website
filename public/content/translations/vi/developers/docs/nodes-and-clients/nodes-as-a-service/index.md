@@ -47,14 +47,14 @@ Bằng cách sử dụng dịch vụ nút, bạn đang tập trung hóa khía c�
 
 Đọc thêm về [lợi ích của việc tự chạy nút của riêng bạn](/developers/docs/nodes-and-clients/#benefits-to-you).
 
-## Các dịch vụ nút phổ biến
+## Các dịch vụ nút phổ biến {#popular-node-services}
 
 Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ biến nhất, hãy thoải mái bổ sung bất kỳ nhà cung cấp nào còn thiếu! Mỗi dịch vụ nút cung cấp các lợi ích và tính năng khác nhau bên cạnh các gói miễn phí hoặc trả phí, bạn nên tìm hiểu xem dịch vụ nào phù hợp nhất với nhu cầu của mình trước khi đưa ra quyết định.
 
 - [**Alchemy**](https://alchemy.com/)
   - [Tài liệu](https://www.alchemy.com/docs/)
   - Tính năng
-    - Gói miễn phí lớn nhất với 300 triệu đơn vị tính toán mỗi tháng (~30 triệu yêu cầu getLatestBlock)
+    - Gói miễn phí lớn nhất với 300 triệu đơn vị tính toán mỗi tháng (\~30 triệu yêu cầu getLatestBlock)
     - Hỗ trợ đa Chuỗi cho Polygon, Starknet, Optimism, Arbitrum
     - Cung cấp sức mạnh cho ~70% các ứng dụng phi tập trung (dapp) Ethereum lớn nhất và khối lượng giao dịch tài chính phi tập trung (DeFi)
     - Cảnh báo webhook theo thời gian thực thông qua Alchemy Notify

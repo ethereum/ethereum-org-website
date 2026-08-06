@@ -201,7 +201,7 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
     image: GlamsterdamImage,
     releaseName: "Glamsterdam",
     plannedReleaseYear: "2026",
-    displayDate: "H2 2026",
+    displayDate: "Q4 2026",
     href: "/roadmap/glamsterdam/",
     content: (
       <>

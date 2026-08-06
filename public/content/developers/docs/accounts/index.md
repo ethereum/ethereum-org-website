@@ -105,7 +105,9 @@ Example:
 
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
-The contract address is usually given when a contract is deployed to the Ethereum Blockchain. The address comes from the creator's address and the number of transactions sent from that address (the “nonce”).
+The contract address is usually given when a contract is deployed to the Ethereum Blockchain. The address comes from the creator's address and the number of transactions sent from that address (the “nonce”). This is how the `CREATE` operation derives an address.
+
+Contracts can also be deployed with [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), which derives the address from the creator's address, a value the creator picks (the “salt”), and a hash of the contract's creation code. No nonce is involved, so the address can be calculated before the contract exists and stays the same no matter how many other transactions the creator sends in the meantime. This makes it possible to reference a contract that has not been deployed yet.
 
 ## Validator keys {#validators-keys}
 

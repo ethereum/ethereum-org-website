@@ -1,10 +1,6 @@
 "use client"
 
-import {
-  Swiper,
-  SwiperNavigation,
-  SwiperSlide,
-} from "@/components/ui/swiper"
+import { Swiper, SwiperNavigation, SwiperSlide } from "@/components/ui/swiper"
 
 import type { DevelopersPath } from "../../types"
 import BuilderCard from "../BuilderCard"
