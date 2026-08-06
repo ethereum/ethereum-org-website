@@ -1,7 +1,7 @@
 ---
 title: Pengantar Web3
 metaTitle: Apa itu Web3 dan mengapa ini penting?
-description: Pengantar Web3—evolusi berikutnya dari World Wide Web—dan mengapa ini penting.
+description: "Pengantar Web3—evolusi berikutnya dari World Wide Web—dan mengapa ini penting."
 lang: id
 ---
 
@@ -128,9 +128,9 @@ Hambatan teknis untuk masuk menggunakan Web3 saat ini terlalu tinggi. Pengguna h
 
 ### Edukasi {#education}
 
-Web3 memperkenalkan paradigma baru yang mewajibkan pembelajaran model mental yang berbeda dari yang digunakan di Web 2.0. Dorongan edukasi serupa terjadi ketika Web 1.0 mendapatkan popularitas pada akhir 1990-an; para pendukung world wide web menggunakan serangkaian teknik edukasi untuk mendidik publik mulai dari metafora sederhana (jalan raya informasi, peramban, berselancar di web) hingga [siaran televisi](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 tidaklah sulit, tetapi berbeda. Inisiatif edukasi yang menginformasikan pengguna Web2 tentang paradigma Web3 ini sangat penting untuk keberhasilannya.
+Web3 memperkenalkan paradigma baru yang mensyaratkan pembelajaran model mental yang berbeda dari yang digunakan di Web2.0. Dorongan edukasi serupa terjadi ketika Web1.0 mulai populer pada akhir 1990-an; para pendukung world wide web menggunakan serangkaian teknik edukasi untuk mendidik publik mulai dari metafora sederhana (jalan raya informasi, peramban, berselancar di web) hingga [siaran televisi](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 tidaklah sulit, tetapi berbeda. Inisiatif edukasi yang menginformasikan pengguna Web2 tentang paradigma Web3 ini sangat penting bagi keberhasilannya.
 
-Ethereum.org berkontribusi pada edukasi Web3 melalui [Program Terjemahan](/contributing/translation-program/) kami, yang bertujuan untuk menerjemahkan konten penting Ethereum ke sebanyak mungkin bahasa.
+Ethereum.org telah berkontribusi pada edukasi Web3 melalui [Program Terjemahan](/contributing/translation-program/)-nya, yang membuat konten Ethereum yang penting tersedia dalam puluhan bahasa.
 
 ### Infrastruktur tersentralisasi {#centralized-infrastructure}
 

@@ -47,14 +47,14 @@ Kwa kutumia huduma ya nodi unaweka kati kipengele cha miundombinu cha bidhaa yak
 
 Soma zaidi kuhusu [faida za kuendesha nodi yako mwenyewe](/developers/docs/nodes-and-clients/#benefits-to-you).
 
-## Huduma maarufu za nodi
+## Huduma maarufu za nodi {#popular-node-services}
 
 Hapa kuna orodha ya baadhi ya watoa huduma maarufu wa nodi za Ethereum, jisikie huru kuongeza yoyote ambayo haipo! Kila huduma ya nodi inatoa faida na vipengele tofauti pamoja na viwango vya bure au vya kulipia, unapaswa kuchunguza ni zipi zinazofaa zaidi mahitaji yako kabla ya kufanya uamuzi.
 
 - [**Alchemy**](https://alchemy.com/)
   - [Nyaraka](https://www.alchemy.com/docs/)
   - Vipengele
-    - Kiwango kikubwa zaidi cha bure chenye vitengo vya kompyuta 300M kwa mwezi (~maombi 30M ya getLatestBlock)
+    - Kiwango kikubwa zaidi cha bure chenye vitengo vya kompyuta 300M kwa mwezi (\~maombi 30M ya getLatestBlock)
     - Usaidizi wa minyororo mingi kwa Polygon, Starknet, Optimism, Arbitrum
     - Inawezesha ~70% ya programu tumizi zilizogatuliwa (dapps) kubwa zaidi za Ethereum na kiasi cha miamala ya fedha zilizogatuliwa (DeFi)
     - Arifa za webhook za wakati halisi kupitia Alchemy Notify

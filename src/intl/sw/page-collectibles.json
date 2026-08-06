@@ -59,9 +59,6 @@
   "page-collectibles-translations-250": "Beji ya maneno 250",
   "page-collectibles-translations-50000": "Beji ya maneno 50,000",
   "page-collectibles-translations-badge-desc": "Kwa lugha yoyote.",
-  "page-collectibles-translations-desc": "Watumiaji wengi hawazungumzi Kiingereza, kwa hivyo ni muhimu kusaidia kutafsiri makala zetu kwa lugha nyingine, hakuna uzoefu wa kutafsiri unaohitajika.",
-  "page-collectibles-translations-instructions-1": "Jisajili kwenye <a href=\"https://crowdin.com/project/ethereum-org\">Crowdin</a>",
-  "page-collectibles-translations-instructions-2": "Chagua lugha",
-  "page-collectibles-translations-instructions-3": "Anza kutafsiri",
+  "page-collectibles-translations-desc": "Beji hizi zinatambua michango ya zamani kwenye Programu ya Tafsiri ya ethereum.org, ambayo inafikia kikomo na haifanyi tena uingizaji wa watafsiri wapya.",
   "page-collectibles-translations-title": "Tafsiri"
 }

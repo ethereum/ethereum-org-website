@@ -98,9 +98,11 @@ Manifest impact: source manifest unchanged (source didn't change); translation m
 Splices LLM-translated sections (Phase 4) into the deterministically-updated locale file (Phase 3 output):
 
 1. For each translated section, find its position by heading ID
-2. **Section replacement**: replace content from its heading line (inclusive) to the line before the next heading of any level (exclusive). Safe because Phase 3 didn't modify llm-required sections.
+2. **Section replacement**: replace the section body; the heading line is supplied deterministically (the locale's own for an existing section, english-B's for a new one). The LLM contract is body-only, so a heading is never taken from the model response -- and an empty response is discarded rather than written back.
 3. For new sections, insert at the position matching english-B's section order
 4. For translated frontmatter fields, replace the value in the frontmatter block
+
+**Post-assembly invariants** (`findStructuralRegressions`, markdown only): the merged output is compared to english-B on heading count, `{#anchor}` set and href multiset, minus the same comparison for english-A vs locale-A so pre-existing drift isn't counted. Any regression this run introduced discards the merge and falls that file back to `runFullTranslation`. This is what makes `auto` safe as the default; `mode=full` is the fallback, not the routine choice.
 
 ## Phase 6: Manifest Update
 
@@ -113,15 +115,15 @@ Splices LLM-translated sections (Phase 4) into the deterministically-updated loc
 
 ## Test assertions (per phase, high level)
 
-| Phase | What tests check |
-|---|---|
-| 1 | ChangeSet contains exactly the expected node changes; DiffResult sections classified correctly |
-| 2 | Each fixture mutation lands in the correct work list; mixed sections route entirely to llm-required |
-| 3 | Inert changes applied to correct elements (match by value, not position); unchanged prose byte-identical; llm-required sections not modified |
-| 4 | Mock LLM receives only the llm-required sections; receives english-B content (not english-A) |
-| 4b | Translatable attrs translated; non-translatable preserved; idempotent on re-run; malformed batch isolated |
-| 5 | All deterministic + LLM changes present; unchanged sections byte-identical; section order matches english-B |
-| 6 | Source manifest rootHash matches english-B tree; sourceCommitSha populated; neither manifest written on any failure |
+| Phase | What tests check                                                                                                                             |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1     | ChangeSet contains exactly the expected node changes; DiffResult sections classified correctly                                               |
+| 2     | Each fixture mutation lands in the correct work list; mixed sections route entirely to llm-required                                          |
+| 3     | Inert changes applied to correct elements (match by value, not position); unchanged prose byte-identical; llm-required sections not modified |
+| 4     | Mock LLM receives only the llm-required sections; receives english-B content (not english-A)                                                 |
+| 4b    | Translatable attrs translated; non-translatable preserved; idempotent on re-run; malformed batch isolated                                    |
+| 5     | All deterministic + LLM changes present; unchanged sections byte-identical; section order matches english-B                                  |
+| 6     | Source manifest rootHash matches english-B tree; sourceCommitSha populated; neither manifest written on any failure                          |
 
 ## Open questions / known gaps
 

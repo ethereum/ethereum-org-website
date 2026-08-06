@@ -47,14 +47,14 @@ Korzystając z usługi węzła, centralizujesz aspekt infrastrukturalny swojego 
 
 Przeczytaj więcej o [korzyściach z uruchomienia własnego węzła](/developers/docs/nodes-and-clients/#benefits-to-you).
 
-## Popularne usługi węzłów
+## Popularne usługi węzłów {#popular-node-services}
 
 Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum. Śmiało dodaj tych, których brakuje! Każda usługa węzła oferuje inne korzyści i funkcje, a także darmowe lub płatne plany. Przed podjęciem decyzji warto sprawdzić, która z nich najlepiej odpowiada Twoim potrzebom.
 
 - [**Alchemy**](https://alchemy.com/)
   - [Dokumentacja](https://www.alchemy.com/docs/)
   - Funkcje
-    - Największy darmowy plan z 300 mln jednostek obliczeniowych miesięcznie (~30 mln żądań getLatestBlock)
+    - Największy darmowy plan z 300 mln jednostek obliczeniowych miesięcznie (\~30 mln żądań getLatestBlock)
     - Obsługa wielu łańcuchów dla Polygon, Starknet, Optimism, Arbitrum
     - Obsługa ~70% największych zdecentralizowanych aplikacji (dapp) na Ethereum i wolumenu transakcji zdecentralizowanych finansów (DeFi)
     - Alerty webhook w czasie rzeczywistym za pośrednictwem Alchemy Notify

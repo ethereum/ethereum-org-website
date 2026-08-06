@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-privacy.json",
-  "generatedAt": "2026-07-09T16:05:13.737Z",
-  "rootHash": "17b4b44800c4",
+  "generatedAt": "2026-07-27T19:26:56.010Z",
+  "rootHash": "e6697bd23b1b",
   "tree": {
-    "contentHash": "0147fff41435",
-    "anchorHash": "1bc1218da23c",
+    "contentHash": "72ba99cb64d6",
+    "anchorHash": "11b23b9c0703",
     "children": {
       "page-privacy-meta-title": {
         "contentHash": "f450074f3d49",
@@ -473,6 +473,10 @@
           }
         }
       },
+      "page-privacy-default-cta": {
+        "contentHash": "23f44691f18e",
+        "anchorHash": "e3b0c44298fc"
+      },
       "page-privacy-getting-started-title": {
         "contentHash": "831d0f72d242",
         "anchorHash": "e3b0c44298fc"
@@ -570,6 +574,7 @@
       "page-privacy-default-description-1",
       "page-privacy-default-description-2",
       "page-privacy-default-description-3",
+      "page-privacy-default-cta",
       "page-privacy-getting-started-title",
       "page-privacy-getting-started-description-1",
       "page-privacy-getting-started-description-2",
@@ -580,5 +585,5 @@
       "page-privacy-pathway-2-description"
     ]
   },
-  "sourceCommitSha": "73db1b970781222c17537888185fa59351c70041"
+  "sourceCommitSha": "4a7c0fa2a3ee82737bedc324112b0f3d16f22030"
 }

@@ -93,7 +93,7 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
                     className="border"
                   >
                     <CardHeader>
-                      <CardBanner className="h-40">
+                      <CardBanner className="h-40" zoom>
                         <Image
                           src={story.image}
                           alt=""
@@ -139,7 +139,7 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
                   size="sm"
                 >
                   <CardHeader>
-                    <CardBanner className="aspect-video h-auto">
+                    <CardBanner className="aspect-video h-auto" zoom>
                       {video.thumbnailUrl ? (
                         <Image
                           src={video.thumbnailUrl}

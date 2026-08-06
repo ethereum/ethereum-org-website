@@ -65,6 +65,8 @@
   "page-apps-info-creator": "Tvůrce",
   "page-apps-info-last-updated": "Naposledy aktualizováno",
   "page-apps-gallery-title": "Galerie",
+  "page-apps-gallery-screenshot-alt": "Snímek obrazovky {index} aplikace {appName} zobrazující rozhraní aplikace",
+  "page-apps-gallery-modal-title": "Snímky obrazovky {appName}",
   "page-apps-more-apps-like-this": "Další podobné aplikace",
   "page-apps-by-company": "od {company}",
   "page-apps-today": "Dnes",
