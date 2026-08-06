@@ -31,6 +31,7 @@ const meta = {
       payments: [false, 0],
       blocks: [false, 0],
       accounts: [false, 0],
+      "energy-consumption": [false, 0],
     },
     totalCorrectAnswers: 0,
   },
