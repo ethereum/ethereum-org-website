@@ -32,6 +32,7 @@ const meta = {
       blocks: [false, 0],
       accounts: [false, 0],
       "energy-consumption": [false, 0],
+      evm: [false, 0],
     },
     totalCorrectAnswers: 0,
   },
