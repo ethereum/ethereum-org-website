@@ -39,25 +39,36 @@ export type MilestoneStatus =
 /**
  * EIP inclusion status, using the All Core Devs vocabulary.
  * `pfi` proposed, `cfi` considered, `sfi` scheduled, `dfi` declined.
+ *
+ * This expresses *confidence*, never *kind*. Networking EIPs are `sfi` like any
+ * other scheduled EIP — the meta EIP's "Networking" grouping is a category, and
+ * categories do not belong in a confidence enum. See `README.md`.
  */
 export type EipStatus = "pfi" | "cfi" | "sfi" | "dfi" | "declined"
+
+/**
+ * A date carrying only the precision that has a source behind it: a year, a
+ * year and month, or an exact day. One field rather than a separate `window`
+ * string and `date`, so the two can never disagree.
+ *
+ * There is deliberately no quarter or half-year granularity — see `README.md`.
+ * The union shape makes a day-without-a-month a type error.
+ */
+export type PartialDate =
+  | { year: number; month?: never; day?: never }
+  | { year: number; month: number; day?: never }
+  | { year: number; month: number; day: number }
 
 /** A dated step on the way to mainnet: a devnet, a testnet fork, activation. */
 export interface Milestone {
   name: string
-  /** Human-readable period, e.g. "August 2026". Always present. */
-  window: string
-  /** ISO `YYYY-MM-DD`, or `null` when no exact date is set. */
-  date: string | null
+  when: PartialDate
   status: MilestoneStatus
 }
 
 /** When the upgrade is expected on mainnet. */
 export interface MainnetTarget {
-  /** Human-readable period, e.g. "2026". Always present. */
-  window: string
-  /** ISO `YYYY-MM-DD`, or `null` until an activation date is set. */
-  date: string | null
+  when: PartialDate
   /** True only once the mainnet epoch is confirmed via ACD. */
   confirmed: boolean
 }
