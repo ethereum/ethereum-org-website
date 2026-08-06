@@ -204,7 +204,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <p className="max-w-3xl text-lg">
               <Translation id="page-roadmap:page-roadmap-changes-coming-description" />
             </p>
-            <Grid className="grid-cols-1! md:grid-cols-2! xl:grid-cols-5!">
+            <Grid balanced={4}>
               {changesComingItems.map((item) => (
                 <Card key={item.title} href={item.button.href}>
                   <CardHeader className="flex items-center justify-between gap-4">

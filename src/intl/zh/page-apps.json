@@ -65,6 +65,8 @@
   "page-apps-info-creator": "创建者",
   "page-apps-info-last-updated": "最后更新",
   "page-apps-gallery-title": "图库",
+  "page-apps-gallery-screenshot-alt": "展示应用界面的 {appName} 屏幕截图 {index}",
+  "page-apps-gallery-modal-title": "{appName} 屏幕截图",
   "page-apps-more-apps-like-this": "更多类似应用",
   "page-apps-by-company": "由 {company} 开发",
   "page-apps-today": "今天",
