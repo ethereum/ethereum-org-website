@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import type { MotionProps } from "motion/react"
 import { useLocale } from "next-intl"
 
@@ -12,13 +12,23 @@ import type { NavSectionKey, NavSections } from "../types"
 import { useEventListener } from "@/hooks/useEventListener"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
+// How long the pointer must rest on a section before the open is reported.
+// The menu opens on hover, so a sweep across the bar would otherwise report
+// every section it passed over.
+const OPEN_DWELL_MS = 300
+
 export const useNavMenu = (sections: NavSections) => {
   const { direction } = useRtlFlip()
   const locale = useLocale()
   const [activeSection, setActiveSection] = useState<NavSectionKey | null>(null)
-  // Sections already reported this session. Nav lives in the persistent layout,
-  // so this survives client-side navigation and resets only on a full page load
-  const trackedSections = useRef(new Set<NavSectionKey>())
+  const dwellTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  useEffect(
+    () => () => {
+      if (dwellTimer.current) clearTimeout(dwellTimer.current)
+    },
+    []
+  )
 
   // Focus corresponding nav section when number keys pressed
   useEventListener("keydown", (event) => {
@@ -53,17 +63,18 @@ export const useNavMenu = (sections: NavSections) => {
     const sectionKey = getEnglishSectionName(activeSection)
     setActiveSection(sectionKey)
 
-    // Radix clears the value on close; only opens are counted. Hover opens the
-    // menu, so a section is reported once and then muted for the rest of the
-    // session -- a mouse sweep across the bar can't inflate the count.
-    if (!sectionKey || trackedSections.current.has(sectionKey)) return
-    trackedSections.current.add(sectionKey)
+    // Moving on cancels the pending open, so only the section the pointer
+    // settles on is reported. Radix clears the value on close.
+    if (dwellTimer.current) clearTimeout(dwellTimer.current)
+    if (!sectionKey) return
 
-    trackCustomEvent({
-      eventCategory: "Desktop navigation menu",
-      eventAction: "Section changed",
-      eventName: `Open section: ${locale} - ${sectionKey}`,
-    })
+    dwellTimer.current = setTimeout(() => {
+      trackCustomEvent({
+        eventCategory: "Desktop navigation menu",
+        eventAction: "Section changed",
+        eventName: `Open section: ${locale} - ${sectionKey}`,
+      })
+    }, OPEN_DWELL_MS)
   }
 
   const isOpen = activeSection !== null

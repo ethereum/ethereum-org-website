@@ -1,6 +1,5 @@
 "use client"
 
-import { useRef } from "react"
 import { Languages, Menu } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 import * as TabsPrimitive from "@radix-ui/react-tabs"
@@ -102,21 +101,13 @@ export default function MobileMenuContent() {
 function NavigationContent({ className }: { className?: string }) {
   const locale = useLocale()
   const { linkSections } = useNavigation()
-  // Section toggles already reported. The panel stays mounted, so this survives
-  // close/reopen and client-side navigation, resetting only on a full page load
-  const reported = useRef(new Set<string>())
 
-  const trackSectionToggle = (key: string, open: boolean) => {
-    const direction = open ? "Open" : "Close"
-    if (reported.current.has(`${key}:${direction}`)) return
-    reported.current.add(`${key}:${direction}`)
-
+  const trackSectionToggle = (key: string, open: boolean) =>
     trackCustomEvent({
       eventCategory: "Mobile navigation menu",
       eventAction: "Section changed",
-      eventName: `${direction} section: ${locale} - ${key}`,
+      eventName: `${open ? "Open" : "Close"} section: ${locale} - ${key}`,
     })
-  }
 
   return (
     <nav className={cn("p-0", className)}>
