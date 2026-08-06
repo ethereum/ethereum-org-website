@@ -65,6 +65,8 @@
   "page-apps-info-creator": "تخلیق کار",
   "page-apps-info-last-updated": "آخری اپ ڈیٹ",
   "page-apps-gallery-title": "گیلری",
+  "page-apps-gallery-screenshot-alt": "{appName} کا سکرین شاٹ {index} جس میں ایپلی کیشن کا انٹرفیس دکھایا گیا ہے",
+  "page-apps-gallery-modal-title": "{appName} کے سکرین شاٹس",
   "page-apps-more-apps-like-this": "اس جیسی مزید ایپس",
   "page-apps-by-company": "{company} کی جانب سے",
   "page-apps-today": "آج",

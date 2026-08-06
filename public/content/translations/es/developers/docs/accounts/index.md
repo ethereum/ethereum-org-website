@@ -105,7 +105,9 @@ Ejemplo:
 
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
-La dirección del contrato generalmente se proporciona cuando se implementa un contrato en la cadena de bloques de Ethereum. La dirección proviene de la dirección del creador y del número de transacciones enviadas desde esa dirección (el "nonce").
+La dirección del contrato generalmente se asigna cuando un contrato se implementa en la cadena de bloques de Ethereum. La dirección proviene de la dirección del creador y del número de transacciones enviadas desde esa dirección (el "nonce"). Así es como la operación `CREATE` deriva una dirección.
+
+Los contratos también se pueden implementar con [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), que deriva la dirección a partir de la dirección del creador, un valor que el creador elige (la "sal") y un hash del código de creación del contrato. No hay ningún nonce involucrado, por lo que la dirección se puede calcular antes de que el contrato exista y se mantiene igual sin importar cuántas otras transacciones envíe el creador mientras tanto. Esto hace posible hacer referencia a un contrato que aún no se ha implementado.
 
 ## Claves de validador {#validators-keys}
 

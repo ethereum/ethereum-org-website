@@ -71,6 +71,7 @@
   "tool-ens-description": "이더리움 네임 서비스(ENS)는 이더리움을 위한 탈중앙화된 네이밍 프로토콜입니다. 사람이 읽을 수 있는 이름을 주소, 아바타 및 기타 레코드에 매핑합니다. 개발자 문서는 CCIP Read, 컨트랙트 및 통합을 다룹니다. 확인 및 관리를 위한 ENSJS SDK가 포함되어 있습니다.",
   "tool-ens-mcp-server-description": "이더리움 네임 서비스(ENS)를 위한 MCP 서버로, 에이전트가 이름을 확인하고, 주소를 역방향 조회하고, 가용성을 확인하고, ENS 레코드를 검색할 수 있도록 합니다.",
   "tool-enso-build-description": "Enso는 블록체인 지름길입니다. 온체인에서 구축하고 출시하는 가장 빠른 방법입니다.\n모든 온체인 상호 작용을 공유 엔진에 매핑함으로써 Enso는 제품에 집중할 수 있도록 해줍니다.",
+  "tool-envio-description": "Envio는 여러 EVM 체인에 걸쳐 하나의 Postgres 기반 GraphQL API가 필요할 때 RPC 대신 HyperSync를 통해 동기화하는 TypeScript, JavaScript 또는 ReScript 핸들러를 갖춘 멀티체인 인덱싱 프레임워크입니다.",
   "tool-erc-4337-documentation-description": "ERC-4337 계정 추상화에 대한 완벽한 가이드 - 스마트 계정, 번들러, 페이마스터 등",
   "tool-ercx-token-test-library-description": "ERCx는 ERC-20, ERC-721, ERC-1155 및 ERC-4626 구현 전반에 걸쳐 500개 이상의 개별 테스트를 특징으로 하는 ERC 토큰 표준을 위한 포괄적인 오픈 소스 테스트 라이브러리입니다.",
   "tool-erpc-description": "eRPC는 RPC 공급자 앞에 위치하여 대시보드, 인덱서 및 다중 테넌트 백엔드와 같이 읽기 작업이 많은 워크로드에 맞게 조정된 캐싱, 장애 조치 및 라우팅을 추가합니다.",

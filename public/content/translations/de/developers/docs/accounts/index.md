@@ -105,7 +105,9 @@ Beispiel:
 
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
-Die Vertragsadresse wird normalerweise vergeben, wenn ein Vertrag auf der Ethereum-Blockchain bereitgestellt wird. Die Adresse ergibt sich aus der Adresse des Erstellers und der Anzahl der von dieser Adresse gesendeten Transaktionen (der „Nonce“).
+Die Vertragsadresse wird normalerweise vergeben, wenn ein Vertrag auf der Ethereum-Blockchain bereitgestellt wird. Die Adresse ergibt sich aus der Adresse des Erstellers und der Anzahl der von dieser Adresse gesendeten Transaktionen (der „Nonce“). Auf diese Weise leitet die `CREATE`-Operation eine Adresse ab.
+
+Verträge können auch mit [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014) bereitgestellt werden, was die Adresse aus der Adresse des Erstellers, einem vom Ersteller gewählten Wert (dem „Salt“) und einem Hash des Erstellungscodes des Vertrags ableitet. Dabei ist keine Nonce involviert, sodass die Adresse berechnet werden kann, bevor der Vertrag existiert, und sie bleibt gleich, unabhängig davon, wie viele andere Transaktionen der Ersteller in der Zwischenzeit sendet. Dies macht es möglich, auf einen Vertrag zu verweisen, der noch nicht bereitgestellt wurde.
 
 ## Validator-Schlüssel {#validators-keys}
 

@@ -59,9 +59,6 @@
   "page-collectibles-translations-250": "250 শব্দের ব্যাজ",
   "page-collectibles-translations-50000": "50,000 শব্দের ব্যাজ",
   "page-collectibles-translations-badge-desc": "যেকোনো ভাষায়।",
-  "page-collectibles-translations-desc": "বেশিরভাগ ব্যবহারকারী ইংরেজিতে কথা বলেন না, তাই আমাদের আর্টিকেলগুলো অন্যান্য ভাষায় অনুবাদ করতে সাহায্য করা অত্যন্ত গুরুত্বপূর্ণ, এর জন্য কোনো অনুবাদের অভিজ্ঞতার প্রয়োজন নেই।",
-  "page-collectibles-translations-instructions-1": "<a href=\"https://crowdin.com/project/ethereum-org\">Crowdin</a>-এ নিবন্ধন করুন",
-  "page-collectibles-translations-instructions-2": "ভাষা নির্বাচন করুন",
-  "page-collectibles-translations-instructions-3": "অনুবাদ শুরু করুন",
+  "page-collectibles-translations-desc": "এই ব্যাজগুলো ethereum.org অনুবাদ প্রোগ্রামে অতীতের অবদানগুলোকে স্বীকৃতি দেয়, যা গুটিয়ে নেওয়া হচ্ছে এবং নতুন কোনো অনুবাদককে আর অনবোর্ডিং করা হচ্ছে না।",
   "page-collectibles-translations-title": "অনুবাদ"
 }

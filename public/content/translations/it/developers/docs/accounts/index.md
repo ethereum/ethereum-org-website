@@ -105,7 +105,9 @@ Esempio:
 
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
-L'indirizzo del contratto viene solitamente fornito quando un contratto viene distribuito sulla blockchain di Ethereum. L'indirizzo deriva dall'indirizzo del creatore e dal numero di transazioni inviate da quell'indirizzo (il "nonce").
+L'indirizzo del contratto viene solitamente assegnato quando un contratto viene distribuito sulla blockchain di Ethereum. L'indirizzo deriva dall'indirizzo del creatore e dal numero di transazioni inviate da tale indirizzo (il "nonce"). Questo è il modo in cui l'operazione `CREATE` deriva un indirizzo.
+
+I contratti possono anche essere distribuiti con [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), che deriva l'indirizzo dall'indirizzo del creatore, da un valore scelto dal creatore (il "salt") e da un hash del codice di creazione del contratto. Non è coinvolto alcun nonce, quindi l'indirizzo può essere calcolato prima che il contratto esista e rimane lo stesso indipendentemente da quante altre transazioni il creatore invia nel frattempo. Ciò rende possibile fare riferimento a un contratto che non è stato ancora distribuito.
 
 ## Chiavi del validatore {#validators-keys}
 

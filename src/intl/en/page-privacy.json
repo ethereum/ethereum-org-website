@@ -62,6 +62,7 @@
   "page-privacy-default-description-1": "It does not have to be this way. It is possible to build systems where <strong>privacy is the default</strong>, designed so people do not have to assemble, monitor, and protect their privacy at all times. Technology that works like a sanctuary: permissionless, and within reach of everyone.",
   "page-privacy-default-description-2": "<strong>This is part of why Ethereum exists.</strong> To be clear, this is hard and unfinished work. Ethereum is a public and transparent ledger by design, which is its own privacy challenge; to solve it, Ethereum's active privacy roadmap is transitioning the network to a privacy-by-default architecture. Today, Ethereum is home to advanced privacy-preserving technologies like zero-knowledge proofs, which let you prove something is true without revealing the underlying data.",
   "page-privacy-default-description-3": "<strong>A different future is possible</strong>, one where privacy is built in and protecting it no longer takes a fight.",
+  "page-privacy-default-cta": "Explore the privacy roadmap",
   "page-privacy-getting-started-title": "Getting started",
   "page-privacy-getting-started-description-1": "It's easy to start protecting your privacy online. You can secure your personal data by switching your everyday apps to privacy-preserving alternatives.",
   "page-privacy-getting-started-description-2": "Ethereum powers a landscape of tools that allow you to securely verify your digital identity, cast secret-ballot votes, coordinate confidentially, and more.",

@@ -1,0 +1,246 @@
+{
+  "version": 1,
+  "locale": "pt-br",
+  "translatedAt": "2026-07-27T19:07:31.295Z",
+  "englishManifestHash": "9c98a48dea0b",
+  "placeholderOrder": [
+    "LINK-80c564",
+    "LINK-af6d29",
+    "LINK-46977c",
+    "LINK-f69acd",
+    "LINK-4d922a",
+    "LINK-88f35f",
+    "LINK-d08112",
+    "LINK-0358ba",
+    "LINK-c9540f",
+    "COMPONENT-426850",
+    "LINK-4a194d",
+    "LINK-d08112",
+    "LINK-d70f5a",
+    "LINK-03926d",
+    "LINK-488e78",
+    "LINK-d795bc",
+    "LINK-47e9a3",
+    "LINK-d9cef4",
+    "LINK-7f476c",
+    "LINK-bbbff6",
+    "LINK-f7eaef",
+    "LINK-66ac30",
+    "LINK-5b9062",
+    "LINK-d50956",
+    "LINK-d08112",
+    "LINK-1c8218",
+    "LINK-c0ee0b",
+    "LINK-e459f2",
+    "LINK-dd9889",
+    "LINK-a467ca",
+    "LINK-d50956",
+    "LINK-47eade",
+    "LINK-b06262",
+    "LINK-1d9049",
+    "LINK-d795bc",
+    "LINK-fb1c07"
+  ],
+  "placeholderMap": {
+    "COMPONENT-426850": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "/roadmap/privacy",
+        "eventName": "clicked how do frame transactions enable privacy?"
+      }
+    },
+    "LINK-80c564": {
+      "type": "link",
+      "values": {
+        "url": "https://pse.dev/blog/pse-roadmap-2025"
+      }
+    },
+    "LINK-af6d29": {
+      "type": "link",
+      "values": {
+        "url": "https://privreads.ethereum.foundation/feed/anon-rpc/"
+      }
+    },
+    "LINK-46977c": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Oblivious_RAM"
+      }
+    },
+    "LINK-f69acd": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Private_information_retrieval"
+      }
+    },
+    "LINK-4d922a": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-8141"
+      }
+    },
+    "LINK-88f35f": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/account-abstraction/"
+      }
+    },
+    "LINK-d08112": {
+      "type": "link",
+      "values": {
+        "url": "https://forkcast.org/upgrade/hegota/"
+      }
+    },
+    "LINK-0358ba": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/glamsterdam/"
+      }
+    },
+    "LINK-c9540f": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/security/quantum-resistance/"
+      }
+    },
+    "LINK-4a194d": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7805"
+      }
+    },
+    "LINK-d70f5a": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-8250"
+      }
+    },
+    "LINK-03926d": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-8182"
+      }
+    },
+    "LINK-488e78": {
+      "type": "link",
+      "values": {
+        "url": "/zero-knowledge-proofs/"
+      }
+    },
+    "LINK-d795bc": {
+      "type": "link",
+      "values": {
+        "url": "https://ethproofs.org/csp-benchmarks"
+      }
+    },
+    "LINK-47e9a3": {
+      "type": "link",
+      "values": {
+        "url": "https://ethproofs.org"
+      }
+    },
+    "LINK-d9cef4": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/security/quantum-resistance/"
+      }
+    },
+    "LINK-7f476c": {
+      "type": "link",
+      "values": {
+        "url": "https://pse.dev/projects/zk-id"
+      }
+    },
+    "LINK-bbbff6": {
+      "type": "link",
+      "values": {
+        "url": "https://maci.pse.dev/"
+      }
+    },
+    "LINK-f7eaef": {
+      "type": "link",
+      "values": {
+        "url": "https://clr.fund/"
+      }
+    },
+    "LINK-66ac30": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.rarimo.com/freedom-tool/"
+      }
+    },
+    "LINK-5b9062": {
+      "type": "link",
+      "values": {
+        "url": "https://rarimo.medium.com/russian-opposition-use-rarimos-freedom-tool-to-launch-surveillance-free-voting-app-0d73ebea5e8a"
+      }
+    },
+    "LINK-d50956": {
+      "type": "link",
+      "values": {
+        "url": "https://strawmap.org/"
+      }
+    },
+    "LINK-1c8218": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/glamsterdam/"
+      }
+    },
+    "LINK-c0ee0b": {
+      "type": "link",
+      "values": {
+        "url": "/governance/"
+      }
+    },
+    "LINK-e459f2": {
+      "type": "link",
+      "values": {
+        "url": "/privacy/"
+      }
+    },
+    "LINK-dd9889": {
+      "type": "link",
+      "values": {
+        "url": "https://pse.dev/blog/pse-roadmap-2025"
+      }
+    },
+    "LINK-a467ca": {
+      "type": "link",
+      "values": {
+        "url": "/foundation/mandate/"
+      }
+    },
+    "LINK-47eade": {
+      "type": "link",
+      "values": {
+        "url": "/zero-knowledge-proofs/"
+      }
+    },
+    "LINK-b06262": {
+      "type": "link",
+      "values": {
+        "url": "/decentralized-identity/"
+      }
+    },
+    "LINK-1d9049": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@niard/KohakuRoadmap"
+      }
+    },
+    "LINK-fb1c07": {
+      "type": "link",
+      "values": {
+        "url": "https://zkevm.ethereum.foundation/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-07-27T19:07:31.295Z",
+      "status": "success"
+    }
+  }
+}

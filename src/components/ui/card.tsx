@@ -10,6 +10,7 @@ import { isExternal } from "@/lib/utils/url"
 import { ChevronNext } from "../Chevron"
 
 import { Button, type ButtonProps } from "./buttons/Button"
+import { ArrowNext } from "./arrow"
 import { BaseLink, ExternalLinkIcon, LinkProps } from "./Link"
 
 const cardVariants = cva(
@@ -96,7 +97,8 @@ const Card = React.forwardRef<HTMLDivElement | HTMLAnchorElement, CardProps>(
       cardVariants({
         variant,
         size,
-        hoverLift,
+        // Link cards (href) always lift; non-link cards opt in via the prop.
+        hoverLift: hoverLift ?? !!href,
         border,
         interactive: !!href,
       }),
@@ -110,8 +112,7 @@ const Card = React.forwardRef<HTMLDivElement | HTMLAnchorElement, CardProps>(
           className={classes}
           customEventOptions={customEventOptions}
           hideArrow
-          // Card hides BaseLink's trailing arrow; instead a CardButtonFake CTA
-          // surfaces it on the button via this flag (see CardButtonFake).
+          // Fake CTA components surface the external arrow (via data-external), not BaseLink.
           data-external={isExternal(href) || undefined}
           {...props}
         />
@@ -205,12 +206,9 @@ const CardFooter = React.forwardRef<
 CardFooter.displayName = "CardFooter"
 
 /**
- * Presentational mirror of `Button` rendered as a non-interactive `<div>`, for use
- * inside a `Card` that has an `href` (where the whole card is the anchor and a real
- * `Button`/`ButtonLink` would nest an interactive element inside the link). Reuses all
- * Button styling via `asChild`; Button's `hover-link` variant makes its hover state
- * fire off the card's `group/link`, so hovering anywhere on the card is visually
- * identical to hovering the button itself -- no hover styles are duplicated here.
+ * Presentational `<div>` mirror of `Button` (via `asChild`) for the single CTA of an
+ * `href` Card, where a real `Button`/`ButtonLink` would nest interactive content in the
+ * card's anchor. Hover rides the card's `group/link`. See the design-system skill.
  */
 type CardButtonFakeProps = React.HTMLAttributes<HTMLDivElement> &
   Pick<ButtonProps, "variant" | "size" | "isSecondary"> & {
@@ -235,15 +233,11 @@ const CardButtonFake = React.forwardRef<HTMLDivElement, CardButtonFakeProps>(
     <Button asChild variant={variant} size={size} isSecondary={isSecondary}>
       <div ref={ref} data-label="button-link" className={className} {...props}>
         {children}
-        {/* Hidden unless the enclosing link Card is external (data-external on
-            the group/link anchor). The card anchor already carries the sr-only
-            "opens in a new tab" text, so this glyph is purely visual. */}
+        {/* External NE arrow: only on external Cards (data-external on group/link). */}
         {!hideArrow && (
           <ExternalLinkIcon className="hidden group-data-external/link:inline-block" />
         )}
-        {/* Optional Chevron indicator. External links hide Chevron and show
-            ExternalLinkIcon instead by deafult. If `hideArrow` also applied,
-            external link arrow hidden and replaced with chevron. */}
+        {/* Optional chevron; external Cards show the NE arrow instead unless hideArrow. */}
         {withChevron && (
           <ChevronNext
             className={cn(
@@ -257,6 +251,47 @@ const CardButtonFake = React.forwardRef<HTMLDivElement, CardButtonFakeProps>(
   )
 )
 CardButtonFake.displayName = "CardButtonFake"
+
+/**
+ * Presentational `<div>` mirror of a text link for the single CTA of an `href` Card,
+ * where a real link would nest an anchor in the card's anchor. Underline and trailing-icon
+ * logic ride the card's `group/link` and mirror `CardButtonFake`. See the design-system skill.
+ */
+type CardLinkFakeProps = React.HTMLAttributes<HTMLDivElement> & {
+  withForwardArrow?: boolean
+  hideArrow?: boolean
+}
+
+const CardLinkFake = React.forwardRef<HTMLDivElement, CardLinkFakeProps>(
+  ({ className, withForwardArrow, hideArrow, children, ...props }, ref) => (
+    <div
+      ref={ref}
+      data-label="card-link"
+      className={cn(
+        "block w-fit text-primary no-underline",
+        "group-hover/link:text-primary-hover group-focus/link:text-primary-hover",
+        className
+      )}
+      {...props}
+    >
+      <span className="group-hover/link:underline group-focus/link:underline">
+        {children}
+      </span>
+      {/* External NE arrow: only on external Cards (data-external on group/link). */}
+      {!hideArrow && (
+        <ExternalLinkIcon className="hidden group-data-external/link:inline-block" />
+      )}
+      {/* Optional forward arrow; external Cards show the NE arrow instead unless hideArrow. */}
+      {withForwardArrow && (
+        <span className={cn(!hideArrow && "group-data-external/link:hidden")}>
+          &nbsp;
+          <ArrowNext className="mb-1 inline size-[1em]" />
+        </span>
+      )}
+    </div>
+  )
+)
+CardLinkFake.displayName = "CardLinkFake"
 
 const CardEmoji = React.forwardRef<
   HTMLDivElement,
@@ -315,14 +350,12 @@ const cardBannerVariants = cva(
       },
       zoom: {
         true: "group-hover/link:[&_img]:scale-110 group-hover/link:[&_img]:duration-300 group-focus/link:[&_img]:scale-110 group-focus/link:[&_img]:duration-300",
-        false: "",
       },
     },
     defaultVariants: {
       background: "body",
       size: "base",
       fit: "cover",
-      zoom: true,
     },
   }
 )
@@ -381,27 +414,24 @@ const CardBanner = React.forwardRef<HTMLDivElement, CardBannerProps>(
 )
 CardBanner.displayName = "CardBanner"
 
-const titleVariants = cva(
-  "group-hover/link:underline group-focus/link:underline text-pretty text-2xl",
-  {
-    variants: {
-      size: {
-        sm: "text-lg",
-        lg: "text-3xl",
-      },
-      spacing: {
-        quarter:
-          "[&:has(+[data-label=card-paragraph])]:mb-[calc(var(--content-space)_/_4)]",
-        none: "[&:has(+[data-label=card-paragraph])]:mb-0",
-        inherit: "",
-      },
+const titleVariants = cva("text-pretty text-2xl", {
+  variants: {
+    size: {
+      sm: "text-lg",
+      lg: "text-3xl",
     },
+    spacing: {
+      quarter:
+        "[&:has(+[data-label=card-paragraph])]:mb-[calc(var(--content-space)_/_4)]",
+      none: "[&:has(+[data-label=card-paragraph])]:mb-0",
+      inherit: "",
+    },
+  },
 
-    defaultVariants: {
-      spacing: "quarter",
-    },
-  }
-)
+  defaultVariants: {
+    spacing: "quarter",
+  },
+})
 
 const CardTitle = React.forwardRef<
   HTMLHeadingElement,
@@ -460,6 +490,7 @@ export {
   CardFooter,
   CardHeader,
   CardIconContainer,
+  CardLinkFake,
   CardParagraph,
   CardTitle,
 }

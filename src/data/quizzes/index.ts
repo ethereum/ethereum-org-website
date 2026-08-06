@@ -10,8 +10,8 @@ const quizzes = {
       "what-is-ethereum-1",
       "what-is-ethereum-2",
       "what-is-ethereum-3",
-      "what-is-ethereum-4",
-      "what-is-ethereum-5",
+      "what-is-ethereum-6",
+      "what-is-ethereum-7",
     ],
   },
   "what-is-ether": {
@@ -19,7 +19,7 @@ const quizzes = {
     questions: [
       "what-is-ether-1",
       "what-is-ether-2",
-      "what-is-ether-3",
+      "what-is-ether-5",
       "what-is-ether-4",
     ],
   },
@@ -122,6 +122,10 @@ const quizzes = {
       "privacy-6",
     ],
   },
+  "zero-knowledge-proofs": {
+    title: "zero-knowledge-proofs",
+    questions: ["zkp-1", "zkp-2", "zkp-3", "zkp-4", "zkp-5", "zkp-6", "zkp-7"],
+  },
   "what-are-apps": {
     title: "what-are-apps",
     questions: [
@@ -200,6 +204,10 @@ const usingEthereumQuizzesRaw: QuizzesSection[] = [
   },
   {
     id: "merge",
+    level: "intermediate",
+  },
+  {
+    id: "zero-knowledge-proofs",
     level: "intermediate",
   },
   {

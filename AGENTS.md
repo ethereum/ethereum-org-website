@@ -109,7 +109,7 @@ pnpm test:visual           # Playwright + Chromatic full-page visual tests
 # Storybook
 pnpm storybook             # Start Storybook dev server
 pnpm build-storybook       # Build Storybook
-pnpm chromatic             # Run Chromatic visual tests
+pnpm chromatic             # Storybook Chromatic (needs CHROMATIC_STORYBOOK_TOKEN)
 
 # Content Management
 pnpm lint:md               # Lint English markdown content
