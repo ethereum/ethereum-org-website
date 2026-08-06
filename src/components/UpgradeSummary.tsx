@@ -6,7 +6,12 @@ import { Tag } from "@/components/ui/tag"
 import { formatPartialDate } from "@/lib/utils/date"
 import { numberFormat } from "@/lib/utils/numbers"
 
-import { type Milestone, type MilestoneKind, upgrades } from "@/data/upgrades"
+import {
+  type Milestone,
+  type MilestoneKind,
+  upgrades,
+  type UpgradeStatus,
+} from "@/data/upgrades"
 
 export type UpgradeSummaryProps = {
   /** Key into `src/data/upgrades`, e.g. "glamsterdam". */
@@ -24,6 +29,14 @@ export type UpgradeSummaryProps = {
  */
 const STAGE_LABEL_KEYS: Partial<Record<MilestoneKind, string>> = {
   devnet: "page-roadmap-upgrade-status-phase-devnet",
+}
+
+/**
+ * Fallback for an upgrade with nothing running yet — Hegotá has only projected
+ * milestones, so there is no stage to read and its `status` is all we have.
+ */
+const STATUS_LABEL_KEYS: Partial<Record<UpgradeStatus, string>> = {
+  planning: "page-roadmap-upgrade-status-phase-planning",
 }
 
 const MILESTONE_LABEL_KEYS: Record<MilestoneKind, string> = {
@@ -68,7 +81,9 @@ const UpgradeSummary = async ({ slug }: UpgradeSummaryProps) => {
 
   const target = upgrade.mainnetTarget
   const running = upgrade.milestones.find((m) => m.status === "live")
-  const stageLabelKey = running && STAGE_LABEL_KEYS[running.kind]
+  const stageLabelKey = running
+    ? STAGE_LABEL_KEYS[running.kind]
+    : STATUS_LABEL_KEYS[upgrade.status]
 
   // `live` is happening now rather than next, so a running devnet is not the
   // answer to "what comes next". The mainnet row already states the target, so
