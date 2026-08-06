@@ -229,6 +229,7 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
     releaseName: "Hegotá",
     plannedReleaseYear: "2027",
     displayDate: "2027",
+    href: "/roadmap/hegota/",
     content: (
       <>
         <p>
