@@ -1,3 +1,4 @@
+import EipTag from "@/components/EipTag"
 import MergeArticleList from "@/components/MergeArticleList"
 import MergeInfographic from "@/components/MergeInfographic"
 import UpgradeStatus from "@/components/UpgradeStatus"
@@ -12,6 +13,10 @@ import UpgradeStatus from "@/components/UpgradeStatus"
 // with `UpgradeStatus` below, the "when shipping" aside on the Beacon Chain
 // and Merge pages.
 export const upgradeComponents = {
+  // Unlike `UpgradeSummary`, this one has to be a tag: only the markdown knows
+  // which section documents which EIP, so there is nothing for the layout to
+  // derive it from. Coverage is enforced by tests/unit/roadmap/eip-tags.spec.ts.
+  EipTag,
   MergeArticleList,
   MergeInfographic,
   UpgradeStatus,

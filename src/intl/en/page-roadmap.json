@@ -124,5 +124,7 @@
   "page-roadmap-upgrade-quarter": "Q{quarter} {year}",
   "page-roadmap-upgrade-milestone-devnet": "Devnet-{version}",
   "page-roadmap-upgrade-milestone-testnet": "{network} fork",
-  "page-roadmap-upgrade-milestone-mainnet": "Mainnet activation"
+  "page-roadmap-upgrade-milestone-mainnet": "Mainnet activation",
+  "page-roadmap-eip-status-scheduled": "Scheduled for inclusion",
+  "page-roadmap-eip-status-included": "Included"
 }
