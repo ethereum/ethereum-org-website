@@ -27,6 +27,7 @@ const meta = {
       privacy: [false, 0],
       "zero-knowledge-proofs": [false, 0],
       "what-are-apps": [false, 0],
+      bridges: [false, 0],
     },
     totalCorrectAnswers: 0,
   },
