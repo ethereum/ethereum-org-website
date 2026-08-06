@@ -4,7 +4,7 @@ import type {
   QuizzesSection,
 } from "@/lib/types"
 
-import { numberFormat } from "@/lib/utils/numbers"
+import { numberFormat, numberToPercent } from "@/lib/utils/numbers"
 
 import allQuizzesData, { allQuizzesInOrder } from "@/data/quizzes"
 import type { QuizStatsData } from "@/data-layer/fetchers/fetchQuizStats"
@@ -44,6 +44,9 @@ export const shareOnTwitter = ({ score, total }: QuizShareStats): void => {
   )
 }
 
+// These are averages over large samples; more precision than this is noise.
+const PERCENT_OPTIONS: Intl.NumberFormatOptions = { maximumFractionDigits: 1 }
+
 const mean = (values: number[]) =>
   values.length > 0 ? values.reduce((a, b) => a + b, 0) / values.length : 0
 
@@ -52,32 +55,23 @@ export const getFormattedStats = (
   valueSet: number[],
   communityStats: QuizStatsData | null
 ) => {
-  // Initialize number and percent formatters
-  const numberFormatter = numberFormat(locale, {
-    style: "decimal",
-    minimumSignificantDigits: 1,
-    maximumSignificantDigits: 3,
-  })
-
-  const percentFormatter = numberFormat(locale, {
-    style: "percent",
-    minimumSignificantDigits: 1,
-    maximumSignificantDigits: 3,
-  })
+  // Exact, since these come from a daily Matomo fetch: rounding made the old
+  // hard-coded figures read as invented.
+  const numberFormatter = numberFormat(locale, { style: "decimal" })
 
   const computedAverage = valueSet.length > 0 ? mean(valueSet) : 0
+  const asPercent = (value: number) =>
+    numberToPercent(value / 100, locale, PERCENT_OPTIONS)
 
   return {
-    formattedUserAverageScore: percentFormatter.format(computedAverage / 100), // Normalize user average
+    formattedUserAverageScore: asPercent(computedAverage),
     formattedCollectiveQuestionsAnswered: numberFormatter.format(
       communityStats?.questionsAnswered ?? 0
     ),
-    formattedCollectiveAverageScore: percentFormatter.format(
-      (communityStats?.averageScore ?? 0) / 100
+    formattedCollectiveAverageScore: asPercent(
+      communityStats?.averageScore ?? 0
     ),
-    formattedCollectiveRetryRate: percentFormatter.format(
-      (communityStats?.retryRate ?? 0) / 100
-    ),
+    formattedCollectiveRetryRate: asPercent(communityStats?.retryRate ?? 0),
   }
 }
 

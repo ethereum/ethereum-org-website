@@ -5,6 +5,7 @@ import { CompletedQuizzes, QuizShareStats } from "@/lib/types"
 import Twitter from "@/components/icons/twitter.svg"
 import Translation from "@/components/Translation"
 
+import { formatDate } from "@/lib/utils/date"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import type { QuizStatsData } from "@/data-layer/fetchers/fetchQuizStats"
@@ -52,7 +53,20 @@ const QuizzesStats = ({
 }: QuizzesStatsProps) => {
   const locale = useLocale()
   const t = useTranslations("learn-quizzes")
+  const tCommon = useTranslations("common")
   const numberOfCompletedQuizzes = getNumberOfCompletedQuizzes(completedQuizzes)
+
+  // Pinned to UTC so server and client render identically; a local-timezone
+  // stamp would only agree after hydration.
+  const lastUpdated =
+    communityStats &&
+    formatDate(new Date(communityStats.timestamp).toISOString(), locale, {
+      month: "short",
+      hour: "numeric",
+      minute: "2-digit",
+      timeZone: "UTC",
+      timeZoneName: "short",
+    })
 
   // These values are not fixed but calculated each time, can't be moved to /constants
   const totalQuizzesNumber = allQuizzesInOrder.length
@@ -140,7 +154,7 @@ const QuizzesStats = ({
                     },
                     {
                       labelId: "questions-answered",
-                      value: formattedCollectiveQuestionsAnswered + "+",
+                      value: formattedCollectiveQuestionsAnswered,
                     },
                     {
                       labelId: "retry",
@@ -159,6 +173,12 @@ const QuizzesStats = ({
                 ))}
               </UnorderedList>
             </Flex>
+
+            {lastUpdated && (
+              <span className="text-sm text-body-medium">
+                {tCommon("last-updated")}: {lastUpdated}
+              </span>
+            )}
           </Stack>
         )}
       </Stack>
