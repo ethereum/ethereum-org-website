@@ -59,10 +59,10 @@ Ikiwa wewe si msanidi programu, inaweza kuwa vigumu kujua pa kuanzia katika Ethe
 
 - Kuna simu nyingi za jamii za programu huria, na kuwa na waandishi wa dondoo ni msaada mkubwa. Ikiwa una nia, jiunge na [Discord ya Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu), na ujitambulishe!
 
-### Tafsiri maudhui ya Ethereum katika lugha yako ya asili {#translate-ethereum}
+### Saidia kuboresha maudhui ya Ethereum yaliyotafsiriwa {#translate-ethereum}
 
-- ethereum.org inasimamia Programu ya Kutafsiri inayotafsiri tovuti, na rasilimali nyingine, katika lugha nyingi tofauti
-- Jua jinsi ya kushiriki [hapa](/contributing/translation-program)
+- Programu ya Tafsiri ya ethereum.org inafikia ukingoni na haifanyi tena uingizaji wa watafsiri wapya—tazama [ukurasa wa programu](/contributing/translation-program/) kwa hali na historia yake
+- Bado unaweza kusaidia kwa [kuripoti makosa katika tafsiri zilizopo](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 
 ### Endesha nodi {#run-a-node}
 

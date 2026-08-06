@@ -47,14 +47,14 @@ Bir düğüm hizmeti kullanarak ürününüzün altyapı yönünü merkezileşti
 
 [Kendi düğümünüzü çalıştırmanın faydaları](/developers/docs/nodes-and-clients/#benefits-to-you) hakkında daha fazla bilgi edinin.
 
-## Popüler düğüm hizmetleri
+## Popüler düğüm hizmetleri {#popular-node-services}
 
 İşte en popüler Ethereum düğüm sağlayıcılarından bazılarının bir listesi, eksik olanları eklemekten çekinmeyin! Her düğüm hizmeti, ücretsiz veya ücretli katmanlara ek olarak farklı avantajlar ve özellikler sunar, bir karar vermeden önce hangilerinin ihtiyaçlarınıza en uygun olduğunu araştırmalısınız.
 
 - [**Alchemy**](https://alchemy.com/)
   - [Belgeler](https://www.alchemy.com/docs/)
   - Özellikler
-    - Ayda 300 milyon işlem birimi (~30 milyon getLatestBlock isteği) ile en büyük ücretsiz katman
+    - Ayda 300 milyon işlem birimi (\~30 milyon getLatestBlock isteği) ile en büyük ücretsiz katman
     - Polygon, Starknet, Optimism, Arbitrum için çoklu zincir desteği
     - En büyük Ethereum merkeziyetsiz uygulamalarının (dapp) ve merkeziyetsiz finans (DeFi) işlem hacminin ~%70'ine güç sağlar
     - Alchemy Notify aracılığıyla gerçek zamanlı webhook uyarıları

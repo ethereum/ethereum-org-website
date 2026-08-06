@@ -58,9 +58,9 @@ const UseCaseCard = ({
   description: string
   ctaLabel: string
 }) => (
-  <Card href={href} hoverLift>
+  <Card href={href}>
     <CardHeader>
-      <CardBanner background="none" fit="contain" zoom={false}>
+      <CardBanner background="none" fit="contain">
         <Image
           src={image}
           alt=""

@@ -46,7 +46,6 @@ import PageJsonLD from "./page-jsonld"
 import { getMeetupGroups, mapEventTranslations } from "./utils"
 
 import { getEventsData } from "@/lib/data"
-import ethereumEverywhereLogo from "@/public/images/community/ethereum-everywhere-logo.png"
 import geodeLabsLogo from "@/public/images/community/geode-labs-logo.png"
 import heroImage from "@/public/images/enterprise-eth.png"
 import organizerImage from "@/public/images/people-learning.png"
@@ -415,147 +414,77 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               {t("page-events-section-support-subtitle")}
             </p>
 
-            <Grid columns={2} size="wide">
-              {/* Ethereum Everywhere Card */}
-              <Card size="lg" hoverLift className="bg-tint-accent-a">
-                <CardHeader className="flex items-center gap-3">
-                  <div className="size-16 overflow-hidden rounded-full">
-                    <Image src={ethereumEverywhereLogo} alt="" sizes="4rem" />
-                  </div>
-                  <h3 className="text-h4">
-                    {t("page-events-support-ethereum-everywhere")}
-                  </h3>
-                </CardHeader>
+            {/* Geode Labs Card */}
+            <Card size="lg" hoverLift className="max-w-3xl bg-tint-accent-c">
+              <CardHeader className="flex items-center gap-3">
+                <div className="size-16 overflow-hidden rounded-full">
+                  <Image src={geodeLabsLogo} alt="" sizes="4rem" />
+                </div>
+                <h3 className="text-h4">
+                  {t("page-events-support-geode-labs")}
+                </h3>
+              </CardHeader>
 
-                <CardContent>
-                  <p>
-                    {t("page-events-support-ethereum-everywhere-description")}
-                  </p>
+              <CardContent className="[&_a]:no-underline">
+                <p>{t("page-events-support-geode-labs-description")}</p>
 
-                  <p className="mb-space-half">
-                    <strong>
-                      {t("page-events-support-ethereum-everywhere-guidance")}
-                    </strong>
-                  </p>
-                  <p>
-                    {t(
-                      "page-events-support-ethereum-everywhere-guidance-description"
-                    )}
-                  </p>
+                <Link
+                  href="https://geode.build/grants"
+                  className="mb-space-half block font-bold"
+                  customEventOptions={{
+                    eventCategory: "Events",
+                    eventAction: "organizer",
+                    eventName: "geode_grants",
+                  }}
+                >
+                  {t("page-events-support-geode-labs-grants")}
+                </Link>
+                <p>{t("page-events-support-geode-labs-grants-description")}</p>
 
-                  <p className="mb-space-half">
-                    <strong>
-                      {t("page-events-support-ethereum-everywhere-resources")}
-                    </strong>
-                  </p>
-                  <p>
-                    {t(
-                      "page-events-support-ethereum-everywhere-resources-description"
-                    )}
-                  </p>
+                <Link
+                  href="https://localethereum.substack.com/"
+                  className="mb-space-half block font-bold"
+                  customEventOptions={{
+                    eventCategory: "Events",
+                    eventAction: "organizer",
+                    eventName: "geode_local",
+                  }}
+                >
+                  {t("page-events-support-geode-labs-local")}
+                </Link>
+                <p>{t("page-events-support-geode-labs-local-description")}</p>
 
-                  <p className="mb-space-half">
-                    <strong>
-                      {t("page-events-support-ethereum-everywhere-connections")}
-                    </strong>
-                  </p>
-                  <p>
-                    {t(
-                      "page-events-support-ethereum-everywhere-connections-description"
-                    )}
-                  </p>
-                </CardContent>
+                <Link
+                  href="https://ethstars.xyz"
+                  className="mb-space-half block font-bold"
+                  customEventOptions={{
+                    eventCategory: "Events",
+                    eventAction: "organizer",
+                    eventName: "geode_stars",
+                  }}
+                >
+                  {t("page-events-support-geode-labs-ethstars")}
+                </Link>
+                <p>
+                  {t("page-events-support-geode-labs-ethstars-description")}
+                </p>
+              </CardContent>
 
-                <CardFooter>
-                  <ButtonLink
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSeA-W8iy2PJxrY3TD4lMYXyky_wLd4QB_7NRwqSxCd0e19MUg/viewform"
-                    size="lg"
-                    className="lg:w-fit!"
-                    customEventOptions={{
-                      eventCategory: "Events",
-                      eventAction: "organizer",
-                      eventName: "EE_get_in_touch",
-                    }}
-                  >
-                    {t("page-events-get-in-touch")}
-                  </ButtonLink>
-                </CardFooter>
-              </Card>
-
-              {/* Geode Labs Card */}
-              <Card size="lg" hoverLift className="bg-tint-accent-c">
-                <CardHeader className="flex items-center gap-3">
-                  <div className="size-16 overflow-hidden rounded-full">
-                    <Image src={geodeLabsLogo} alt="" sizes="4rem" />
-                  </div>
-                  <h3 className="text-h4">
-                    {t("page-events-support-geode-labs")}
-                  </h3>
-                </CardHeader>
-
-                <CardContent className="[&_a]:no-underline">
-                  <p>{t("page-events-support-geode-labs-description")}</p>
-
-                  <Link
-                    href="https://geode.build/grants"
-                    className="mb-space-half block font-bold"
-                    customEventOptions={{
-                      eventCategory: "Events",
-                      eventAction: "organizer",
-                      eventName: "geode_grants",
-                    }}
-                  >
-                    {t("page-events-support-geode-labs-grants")}
-                  </Link>
-                  <p>
-                    {t("page-events-support-geode-labs-grants-description")}
-                  </p>
-
-                  <Link
-                    href="https://localethereum.substack.com/"
-                    className="mb-space-half block font-bold"
-                    customEventOptions={{
-                      eventCategory: "Events",
-                      eventAction: "organizer",
-                      eventName: "geode_local",
-                    }}
-                  >
-                    {t("page-events-support-geode-labs-local")}
-                  </Link>
-                  <p>{t("page-events-support-geode-labs-local-description")}</p>
-
-                  <Link
-                    href="https://ethstars.xyz"
-                    className="mb-space-half block font-bold"
-                    customEventOptions={{
-                      eventCategory: "Events",
-                      eventAction: "organizer",
-                      eventName: "geode_stars",
-                    }}
-                  >
-                    {t("page-events-support-geode-labs-ethstars")}
-                  </Link>
-                  <p>
-                    {t("page-events-support-geode-labs-ethstars-description")}
-                  </p>
-                </CardContent>
-
-                <CardFooter>
-                  <ButtonLink
-                    href="https://geode.build/"
-                    size="lg"
-                    className="lg:w-fit!"
-                    customEventOptions={{
-                      eventCategory: "Events",
-                      eventAction: "organizer",
-                      eventName: "Geode_get_in_touch",
-                    }}
-                  >
-                    {t("page-events-get-in-touch")}
-                  </ButtonLink>
-                </CardFooter>
-              </Card>
-            </Grid>
+              <CardFooter>
+                <ButtonLink
+                  href="https://geode.build/"
+                  size="lg"
+                  className="lg:w-fit!"
+                  customEventOptions={{
+                    eventCategory: "Events",
+                    eventAction: "organizer",
+                    eventName: "Geode_get_in_touch",
+                  }}
+                >
+                  {t("page-events-get-in-touch")}
+                </ButtonLink>
+              </CardFooter>
+            </Card>
           </Section>
         </MainArticle>
       </main>

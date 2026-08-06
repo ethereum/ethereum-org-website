@@ -1,21 +1,21 @@
 ---
-title: Průvodce stylem překladů pro ethereum.org
-metaTitle: Průvodce pro překladatele
+title: "Průvodce stylem překladů pro ethereum.org"
+metaTitle: "Průvodce pro překladatele"
 lang: cs
-description: Pokyny a tipy pro překladatele ethereum.org
+description: "Pokyny a tipy pro překladatele ethereum.org"
 ---
 
 Průvodce stylem překladů pro ethereum.org obsahuje některé z nejdůležitějších pokynů, instrukcí a tipů pro překladatele, které nám pomáhají s lokalizací webu.
 
 Tento dokument slouží jako obecný průvodce a není specifický pro žádný konkrétní jazyk.
 
-Pokud máte jakékoli dotazy, návrhy nebo zpětnou vazbu, neváhejte se na nás obrátit na adrese translations@ethereum.org, pošlete zprávu uživateli @ethdotorg na platformě Crowdin nebo [se připojte na náš Discord](https://discord.gg/ethereum-org), kde nám můžete napsat do kanálu #translations nebo kontaktovat kteréhokoli člena týmu.
+Pokud máte jakékoli dotazy, návrhy nebo zpětnou vazbu, neváhejte se na nás obrátit na adrese translations@ethereum.org, pošlete zprávu uživateli @ethdotorg na platformě Crowdin, nebo [se připojte na náš Discord](https://discord.gg/ethereum-org), kde nám můžete napsat do kanálu #translations nebo kontaktovat kteréhokoli člena týmu.
 
 ## Používání platformy Crowdin {#using-crowdin}
 
-Základní pokyny, jak se připojit k projektu na platformě Crowdin a jak používat její online editor, najdete na [stránce Překladatelského programu](/contributing/translation-program/#how-to-translate).
+Projekt ethereum.org na platformě Crowdin se uzavírá a již nepřijímá nové příspěvky (viz [stav překladatelského programu](/contributing/translation-program/#program-status)). Níže uvedené pokyny zůstávají jako reference pro překladatelské komunity, které Crowdin používají pro své vlastní projekty.
 
-Pokud byste se chtěli o platformě Crowdin a používání některých jejích pokročilých funkcí dozvědět více, [znalostní báze Crowdin](https://support.crowdin.com/online-editor/) obsahuje spoustu podrobných průvodců a přehledů všech jejích funkcí.
+Pokud byste se chtěli o platformě Crowdin a používání některých jejích pokročilých funkcí dozvědět více, [znalostní báze Crowdin](https://support.crowdin.com/online-editor/) obsahuje spoustu podrobných průvodců a přehledů všech funkcí platformy Crowdin.
 
 ## Zachycení podstaty zprávy {#capturing-the-essence}
 
@@ -23,7 +23,7 @@ Při překládání obsahu ethereum.org se vyhněte doslovným překladům.
 
 Je důležité, aby překlady zachytily podstatu zprávy. To může znamenat přeformulování určitých frází nebo použití popisných překladů namísto překládání obsahu slovo od slova.
 
-Různé jazyky mají různá gramatická pravidla, zvyklosti a slovosled. Při překládání mějte na paměti, jak jsou věty strukturovány v cílových jazycích, a vyhněte se doslovnému překladu anglického originálu, protože to může vést ke špatné stavbě vět a horší čitelnosti.
+Různé jazyky mají různá gramatická pravidla, zvyklosti a slovosled. Při překládání mějte prosím na paměti, jak jsou věty strukturovány v cílových jazycích, a vyhněte se doslovnému překladu anglického originálu, protože to může vést ke špatné stavbě vět a horší čitelnosti.
 
 Místo překládání zdrojového textu slovo od slova doporučujeme přečíst si celou větu a přizpůsobit ji tak, aby odpovídala zvyklostem cílového jazyka.
 
@@ -35,21 +35,21 @@ Používání formálního oslovení nám umožňuje vyhnout se tomu, abychom zn
 
 Většina indoevropských a afroasijských jazyků používá rodově specifická osobní zájmena ve druhé osobě, která rozlišují mezi mužem a ženou. Při oslovování uživatele nebo používání přivlastňovacích zájmen se můžeme vyhnout předpokladům o pohlaví návštěvníka, protože formální oslovení je obecně použitelné a konzistentní bez ohledu na to, jak se identifikuje.
 
-## Jednoduchá a srozumitelná slovní zásoba a význam {#simple-vocabulary}
+## Jednoduchá a jasná slovní zásoba a význam {#simple-vocabulary}
 
-Naším cílem je, aby byl obsah na webu srozumitelný co největšímu počtu lidí.
+Naším cílem je, aby byl obsah na webu srozumitelný pro co nejvíce lidí.
 
 Ve většině případů toho lze snadno dosáhnout používáním krátkých a jednoduchých slov, která jsou snadno srozumitelná. Pokud pro určité slovo existuje ve vašem jazyce více možných překladů se stejným významem, nejlepší volbou je nejčastěji to nejkratší slovo, které jasně odráží daný význam.
 
 ## Systém písma {#writing-system}
 
-Ethereum.org je k dispozici v řadě jazyků, které používají alternativní systémy písma (nebo skripty) k latince.
+Web Ethereum.org je dostupný v řadě jazyků, které používají alternativní systémy písma (nebo skripty) k latince.
 
 Veškerý obsah by měl být přeložen pomocí správného systému písma pro váš jazyk a neměl by obsahovat žádná slova napsaná latinkou.
 
 Při překládání obsahu byste měli zajistit, aby byly překlady konzistentní a neobsahovaly žádné znaky latinky.
 
-Častou mylnou představou je, že by se Ethereum mělo vždy psát latinkou. To je většinou nesprávné, používejte prosím pravopis slova Ethereum, který je přirozený pro váš jazyk (např. 以太坊 v čínštině, إيثيريوم v arabštině atd.).
+Častou mylnou představou je, že by se slovo Ethereum mělo vždy psát latinkou. To je většinou nesprávné, používejte prosím pravopis slova Ethereum, který je přirozený pro váš jazyk (např. 以太坊 v čínštině, إيثيريوم v arabštině atd.).
 
 **Výše uvedené neplatí pro jazyky, kde by se vlastní jména zpravidla neměla překládat.**
 
@@ -59,9 +59,9 @@ Některé stránky obsahují metadata, jako jsou 'title', 'lang', 'description',
 
 Obsah, který by překladatelé nikdy neměli překládat, při nahrávání nových stránek na Crowdin skrýváme, což znamená, že všechna metadata viditelná pro překladatele na platformě Crowdin by měla být přeložena.
 
-Buďte prosím obzvláště opatrní při překladu jakýchkoli řetězců, kde je zdrojový text 'en'. To představuje jazyk, ve kterém je stránka k dispozici, a měl by být přeložen na [kód jazyka ISO pro váš jazyk](https://www.andiamo.co.uk/resources/iso-language-codes/). Tyto řetězce by měly být vždy překládány pomocí znaků latinky, nikoli pomocí písma, které je přirozené pro cílový jazyk.
+Buďte prosím obzvláště opatrní při překládání jakýchkoli řetězců, kde je zdrojový text 'en'. To představuje jazyk, ve kterém je stránka k dispozici, a mělo by to být přeloženo na [kód jazyka ISO pro váš jazyk](https://www.andiamo.co.uk/resources/iso-language-codes/). Tyto řetězce by měly být vždy překládány pomocí latinky, nikoli pomocí písma, které je přirozené pro cílový jazyk.
 
-Pokud si nejste jisti, jaký kód jazyka použít, můžete zkontrolovat překladovou paměť na platformě Crowdin nebo najít kód jazyka pro váš jazyk v URL adrese stránky v online editoru Crowdin.
+Pokud si nejste jisti, jaký kód jazyka použít, můžete zkontrolovat překladovou paměť v platformě Crowdin nebo najít kód jazyka pro váš jazyk v URL adrese stránky v online editoru Crowdin.
 
 Několik příkladů kódů jazyků pro nejrozšířenější jazyky:
 
@@ -85,7 +85,7 @@ Níže najdete několik příkladů toho, jak tyto řetězce vypadají pro přek
 Crowdin má vestavěnou funkci, která varuje překladatele, když se chystají udělat chybu. Crowdin vás na to automaticky upozorní před uložením překladu, pokud zapomenete zahrnout značku ze zdroje, přeložíte prvky, které by se překládat neměly, přidáte několik po sobě jdoucích mezer, zapomenete na interpunkci na konci věty atd.
 Pokud uvidíte takové varování, vraťte se prosím a navrhovaný překlad si znovu zkontrolujte.
 
-**Tato varování nikdy neignorujte, protože obvykle znamenají, že je něco špatně nebo že v překladu chybí klíčová část zdrojového textu.**
+**Tato varování nikdy neignorujte, protože obvykle znamenají, že je něco špatně, nebo že v překladu chybí klíčová část zdrojového textu.**
 
 Příklad varování platformy Crowdin, když do překladu zapomenete přidat značku:
 ![Example of a Crowdin warning](./crowdin-warning-example.png)
@@ -96,14 +96,14 @@ Velká část zdrojového obsahu obsahuje značky a proměnné, které jsou v ed
 
 **Nastavení platformy Crowdin**
 
-Pro snazší správu značek a jejich kopírování přímo ze zdroje doporučujeme změnit nastavení v editoru Crowdin.
+Aby byla správa značek jednodušší a bylo možné je kopírovat přímo ze zdroje, doporučujeme změnit nastavení v editoru Crowdin.
 
 1. Otevřete nastavení
    ![How to open settings in the editor](./editor-settings.png)
 
-2. Přejděte dolů do sekce „Zobrazování HTML značek“ (HTML tags displaying)
+2. Přejděte dolů do sekce „Zobrazení HTML značek“ (HTML tags displaying)
 
-3. Vyberte „Skrýt“ (Hide)
+3. Vyberte možnost „Skrýt“ (Hide)
    ![Please select 'Hide'](./hide-tags.png)
 
 4. Klikněte na „Uložit“ (Save)
@@ -157,7 +157,7 @@ nonce - _Nepřeložitelný text_
 
 ![Example of code snippets.png](./example-of-code-snippets.png)
 
-Zdrojový text obsahuje také zkrácené značky, které obsahují pouze čísla, což znamená, že jejich funkce není na první pohled zřejmá. Najetím myší na tyto značky přesně uvidíte, jakou funkci plní.
+Zdrojový text obsahuje také zkrácené značky, které obsahují pouze čísla, což znamená, že jejich funkce není na první pohled zřejmá. Najetím myší na tyto značky můžete přesně vidět, jakou funkci plní.
 
 V níže uvedeném příkladu můžete vidět, že najetí myší na značku `<0>` ukazuje, že představuje `<code>` a obsahuje úryvek kódu, proto by se obsah uvnitř těchto značek neměl překládat.
 
@@ -165,7 +165,7 @@ V níže uvedeném příkladu můžete vidět, že najetí myší na značku `<0
 
 ## Krátké vs. plné tvary/zkratky {#short-vs-full-forms}
 
-Na webu se používá spousta zkratek, např. dapps, NFT, DAO, DeFi atd. Tyto zkratky se běžně používají v angličtině a většina návštěvníků webu je zná.
+Na webu se používá spousta zkratek, např. dapps, NFT, DAO, DeFi atd. Tyto zkratky se běžně používají v angličtině a většina návštěvníků webu je s nimi obeznámena.
 
 Vzhledem k tomu, že v jiných jazycích obvykle nemají zavedené překlady, nejlepším způsobem, jak k těmto a podobným termínům přistupovat, je poskytnout popisný překlad plného tvaru a do závorek přidat anglickou zkratku.
 
@@ -181,7 +181,7 @@ Některé termíny nemusí mít v jiných jazycích zavedené překlady a jsou �
 
 Ačkoli překlad těchto termínů může znít nepřirozeně, protože anglická verze se běžně používá i v jiných jazycích, důrazně se doporučuje je překládat.
 
-Při jejich překladu se nebojte být kreativní, použijte popisné překlady nebo je jednoduše přeložte doslovně.
+Při jejich překládání se nebojte být kreativní, použijte popisné překlady nebo je jednoduše přeložte doslovně.
 
 **Důvodem, proč by se většina termínů měla překládat, místo aby se některé ponechaly v angličtině, je skutečnost, že tato nová terminologie se v budoucnu více rozšíří, jakmile začne Ethereum a související technologie používat více lidí. Pokud chceme do tohoto prostoru přivést více lidí z celého světa, musíme poskytnout srozumitelnou terminologii v co nejvíce jazycích, i když si ji budeme muset vytvořit sami.**
 
@@ -189,17 +189,17 @@ Při jejich překladu se nebojte být kreativní, použijte popisné překlady n
 
 Web obsahuje řadu tlačítek, která by se měla překládat jinak než ostatní obsah.
 
-Text tlačítka lze identifikovat zobrazením kontextových snímků obrazovky, které jsou spojeny s většinou řetězců, nebo kontrolou kontextu v editoru, který obsahuje slovo „button“.
+Text tlačítka lze identifikovat zobrazením snímků obrazovky s kontextem, které jsou spojeny s většinou řetězců, nebo kontrolou kontextu v editoru, který obsahuje slovo „button“.
 
 Překlady tlačítek by měly být co nejkratší, aby se předešlo problémům s formátováním. Překlady tlačítek by navíc měly být v rozkazovacím způsobu, tj. měly by představovat příkaz nebo požadavek.
 
 ![How to find a button.png](./how-to-find-a-button.png)
 
-## Překlad s ohledem na inkluzivitu {#translating-for-inclusivity}
+## Překládání s ohledem na inkluzivitu {#translating-for-inclusivity}
 
-Návštěvníci ethereum.org pocházejí z celého světa a z různých prostředí. Jazyk na webu by proto měl být neutrální, vstřícný ke všem a neměl by nikoho vylučovat.
+Návštěvníci webu ethereum.org pocházejí z celého světa a z různých prostředí. Jazyk na webu by proto měl být neutrální, vstřícný ke všem a neměl by nikoho vylučovat.
 
-Důležitým aspektem je genderová neutralita. Toho lze snadno dosáhnout používáním formálního oslovení (vykání) a vyhýbáním se jakýmkoli rodově specifickým slovům v překladech.
+Důležitým aspektem toho je genderová neutralita. Toho lze snadno dosáhnout používáním formálního oslovení (vykání) a vyhýbáním se jakýmkoli rodově specifickým slovům v překladech.
 
 Další formou inkluzivity je snaha překládat pro globální publikum, nikoli specificky pro jakoukoli zemi, rasu nebo region.
 
@@ -223,17 +223,17 @@ Několik příkladů toho, na co si dát obzvlášť pozor:
 
 **Mezery**
 
-- Pravidla pravopisu definují používání mezer pro každý jazyk. Protože se mezery používají všude, patří tato pravidla k těm nejodlišnějším a mezery jsou jedním z nejčastěji chybně překládaných prvků.
+- Pravidla pravopisu definují použití mezer pro každý jazyk. Protože se mezery používají všude, patří tato pravidla k těm nejodlišnějším a mezery jsou jedním z nejčastěji chybně překládaných prvků.
 - Některé běžné rozdíly v mezerách mezi angličtinou a jinými jazyky:
   - Mezera před měrnými jednotkami a měnami (např. USD, EUR, kB, MB)
-  - Mezera před značkami stupňů (např. °C, ℉)
+  - Mezera před znaky stupňů (např. °C, ℉)
   - Mezera před některými interpunkčními znaménky, zejména před výpustkou (…)
   - Mezera před a za lomítky (/)
 
 **Seznamy**
 
 - Každý jazyk má rozmanitý a složitý soubor pravidel pro psaní seznamů. Ta se mohou od angličtiny výrazně lišit.
-- V některých jazycích musí první slovo každého nového řádku začínat velkým písmenem, zatímco v jiných by nové řádky měly začínat malými písmeny. Mnoho jazyků má také různá pravidla pro psaní velkých písmen v seznamech v závislosti na délce každého řádku.
+- V některých jazycích musí být první slovo každého nového řádku napsáno s velkým písmenem, zatímco v jiných by nové řádky měly začínat malými písmeny. Mnoho jazyků má také různá pravidla pro psaní velkých písmen v seznamech v závislosti na délce každého řádku.
 - Totéž platí pro interpunkci položek na řádku. Interpunkce na konci seznamů může být tečka (**.**), čárka (**,**) nebo středník (**;**) v závislosti na jazyce.
 
 **Uvozovky**
@@ -261,23 +261,23 @@ Několik příkladů toho, na co si dát obzvlášť pozor:
     - Angličtina – **1,000.50**
     - Španělština – **1.000,50**
     - Francouzština – **1 000,50**
-- Dalším důležitým aspektem při překladu čísel je znak procenta. Lze jej zapsat různými způsoby: **100%**, **100 %** nebo **%100**.
+- Dalším důležitým aspektem při překládání čísel je znak procenta. Lze jej zapsat různými způsoby: **100%**, **100 %** nebo **%100**.
 - A konečně, záporná čísla se mohou zobrazovat různě v závislosti na jazyce: -100, 100-, (100) nebo [100].
 
 **Data**
 
-- Při překladu dat existuje řada aspektů a rozdílů v závislosti na jazyce. Patří mezi ně formát data, oddělovač, psaní velkých písmen a úvodní nuly. Existují také rozdíly mezi plnými a číselnými daty.
+- Při překládání dat existuje řada aspektů a rozdílů v závislosti na jazyce. Patří mezi ně formát data, oddělovač, psaní velkých písmen a úvodní nuly. Existují také rozdíly mezi daty vypsanými slovy a číselnými daty.
   - Několik příkladů různých formátů data:
-    - Britská angličtina (dd/mm/yyyy) – 1st January, 2022
-    - Americká angličtina (mm/dd/yyyy) – January 1st, 2022
-    - Čínština (yyyy-mm-dd) – 2022 年 1 月 1 日
-    - Francouzština (dd/mm/yyyy) – 1er janvier 2022
-    - Italština (dd/mm/yyyy) – 1º gennaio 2022
-    - Němčina (dd/mm/yyyy) – 1. Januar 2022
+    - Britská angličtina (dd/mm/rrrr) – 1st January, 2022
+    - Americká angličtina (mm/dd/rrrr) – January 1st, 2022
+    - Čínština (rrrr-mm-dd) – 2022 年 1 月 1 日
+    - Francouzština (dd/mm/rrrr) – 1er janvier 2022
+    - Italština (dd/mm/rrrr) – 1º gennaio 2022
+    - Němčina (dd/mm/rrrr) – 1. Januar 2022
 
 **Měny**
 
-- Překlad měn může být náročný kvůli různým formátům, zvyklostem a převodům. Obecně platí, že měny ponechte stejné jako ve zdroji. Pro usnadnění čtenáři můžete do závorek přidat svou místní měnu a převod.
+- Překládání měn může být náročné kvůli různým formátům, zvyklostem a převodům. Obecně platí, že měny ponechte stejné jako ve zdroji. Pro usnadnění čtenáři můžete do závorek přidat svou místní měnu a převod.
 - Mezi hlavní rozdíly v psaní měn v různých jazycích patří umístění symbolu, desetinné čárky vs. desetinné tečky, mezery a zkratky vs. symboly.
   - Umístění symbolu: $100 nebo 100$
   - Desetinné čárky vs. desetinné tečky: 100,50$ nebo 100.50$
@@ -287,12 +287,12 @@ Několik příkladů toho, na co si dát obzvlášť pozor:
 **Měrné jednotky**
 
 - Obecně platí, že měrné jednotky ponechte podle zdroje. Pokud vaše země používá jiný systém, můžete do závorek uvést převod.
-- Kromě lokalizace měrných jednotek je také důležité vzít na vědomí rozdíly v tom, jak jazyky k těmto jednotkám přistupují. Hlavním rozdílem je mezera mezi číslem a jednotkou, která se může lišit v závislosti na jazyce. Příklady zahrnují 100kB vs. 100 kB nebo 50ºF vs. 50 ºF.
+- Kromě lokalizace měrných jednotek je také důležité vzít na vědomí rozdíly v tom, jak k těmto jednotkám přistupují jednotlivé jazyky. Hlavním rozdílem je mezera mezi číslem a jednotkou, která se může lišit v závislosti na jazyce. Příklady zahrnují 100kB vs. 100 kB nebo 50ºF vs. 50 ºF.
 
 ## Závěr {#conclusion}
 
-Překládání ethereum.org je skvělá příležitost, jak se dozvědět o různých aspektech Etherea.
+Překládání webu ethereum.org je skvělou příležitostí, jak se dozvědět o různých aspektech Etherea.
 
 Při překládání se snažte nespěchat. Buďte v klidu a bavte se!
 
-Děkujeme, že jste se zapojili do Překladatelského programu a pomáháte nám zpřístupnit web širšímu publiku. Komunita Etherea je globální a jsme rádi, že jste její součástí!
+Děkujeme, že jste se zapojili do překladatelského programu a pomáháte nám zpřístupnit web širšímu publiku. Komunita Etherea je globální a jsme rádi, že jste její součástí!

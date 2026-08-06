@@ -65,6 +65,8 @@
   "page-apps-info-creator": "クリエイター",
   "page-apps-info-last-updated": "最終更新",
   "page-apps-gallery-title": "ギャラリー",
+  "page-apps-gallery-screenshot-alt": "アプリケーションのインターフェースを示す {appName} のスクリーンショット {index}",
+  "page-apps-gallery-modal-title": "{appName} のスクリーンショット",
   "page-apps-more-apps-like-this": "類似のアプリ",
   "page-apps-by-company": "{company} 提供",
   "page-apps-today": "今日",
