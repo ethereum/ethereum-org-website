@@ -59,10 +59,10 @@ lang: zh-tw
 
 - 有許多開源社群會議，有筆記員會是很大的幫助。如果你感興趣，請加入 [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu) 並自我介紹！
 
-### 將以太坊內容翻譯成你的母語 {#translate-ethereum}
+### 協助改善以太坊的翻譯內容 {#translate-ethereum}
 
-- ethereum.org 維護著一個翻譯計畫，將網站和其他資源翻譯成許多不同的語言
-- 在[這裡](/contributing/translation-program)了解如何參與
+- ethereum.org 翻譯計畫已進入尾聲，且不再招募新翻譯人員——請參閱[計畫頁面](/contributing/translation-program/)以了解其狀態與歷史
+- 你仍然可以透過[回報現有翻譯中的錯誤](https://github.com/ethereum/ethereum-org-website/issues/new/choose)來提供協助
 
 ### 運行節點 {#run-a-node}
 

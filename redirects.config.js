@@ -14,6 +14,11 @@ module.exports = [
   ["/cli", "/developers/"],
   ["/greeter", "/developers/"],
   ["/roadmap/vision", "/roadmap/"],
+  ["/roadmap/future-proofing", "/roadmap/security/"],
+  [
+    "/roadmap/future-proofing/quantum-resistance",
+    "/roadmap/security/quantum-resistance/",
+  ],
   ["/search", "/"],
   ["/garden", "/roadmap/"],
   ["/download", "/wallets/find-wallet/"],
@@ -126,7 +131,19 @@ module.exports = [
   ["/dapps", "/apps/"],
   [
     "/contributing/translation-program/translation-guide",
-    "/contributing/translation-program/faq/",
+    "/contributing/translation-program/",
+  ],
+  [
+    "/contributing/translation-program/faq",
+    "/contributing/translation-program/",
+  ],
+  [
+    "/contributing/translation-program/how-to-translate",
+    "/contributing/translation-program/",
+  ],
+  [
+    "/contributing/translation-program/mission-and-vision",
+    "/contributing/translation-program/",
   ],
   [
     "/contributing/translation-program/content-versions",

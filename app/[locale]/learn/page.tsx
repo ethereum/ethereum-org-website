@@ -13,6 +13,7 @@ import Callout from "@/components/ui/callout"
 import {
   Card,
   CardBanner,
+  CardButtonFake,
   CardContent,
   CardFooter,
   CardHeader,
@@ -73,9 +74,9 @@ const LearnCard = ({
   description: string
   ctaLabel: string
 }) => (
-  <Card>
+  <Card href={href}>
     <CardHeader>
-      <CardBanner background="none" fit="contain">
+      <CardBanner background="none" fit="contain" zoom>
         <Image
           src={image}
           alt=""
@@ -88,7 +89,7 @@ const LearnCard = ({
       <CardParagraph>{description}</CardParagraph>
     </CardContent>
     <CardFooter>
-      <ButtonLink href={href}>{ctaLabel}</ButtonLink>
+      <CardButtonFake>{ctaLabel}</CardButtonFake>
     </CardFooter>
   </Card>
 )

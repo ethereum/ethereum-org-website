@@ -59,10 +59,10 @@ lang: ko
 
 - 수많은 오픈 소스 커뮤니티 회의가 열리며, 노트 작성자가 있으면 큰 도움이 됩니다. 관심이 있으시다면 [Ethereum Cat Herders 디스코드](https://discord.com/invite/Nz6rtfJ8Cu)에 참여하여 자신을 소개해 보세요!
 
-### 이더리움 콘텐츠를 모국어로 번역하기 {#translate-ethereum}
+### 이더리움 번역 콘텐츠 개선 돕기 {#translate-ethereum}
 
-- ethereum.org는 웹사이트 및 기타 리소스를 다양한 언어로 번역하는 번역 프로그램을 운영하고 있습니다.
-- 참여 방법은 [여기](/contributing/translation-program)에서 확인하세요.
+- ethereum.org 번역 프로그램은 마무리되고 있으며 더 이상 새로운 번역가를 온보딩하지 않습니다. 프로그램의 상태와 연혁에 대해서는 [프로그램 페이지](/contributing/translation-program/)를 확인하세요.
+- [기존 번역의 오류를 제보](https://github.com/ethereum/ethereum-org-website/issues/new/choose)하여 여전히 도움을 주실 수 있습니다.
 
 ### 노드 실행하기 {#run-a-node}
 
