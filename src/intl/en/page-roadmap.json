@@ -114,5 +114,12 @@
   "page-roadmap-glamsterdam-bal-item-2": "Maps dependencies upfront for faster syncs, parallel execution, and parallel disk reads",
   "page-roadmap-glamsterdam-bal-item-3": "Lowers gas for state-heavy apps and improves gas cost predictability",
   "page-roadmap-hegota-discussed-title": "Planned for Hegotá",
-  "page-roadmap-hegota-discussed-item-1": "Proposals are currently under discussion"
+  "page-roadmap-hegota-discussed-item-1": "Proposals are currently under discussion",
+  "page-roadmap-upgrade-status-heading": "Upgrade status",
+  "page-roadmap-upgrade-status-phase-devnet": "Testing on devnets",
+  "page-roadmap-upgrade-status-target": "Expected on mainnet",
+  "page-roadmap-upgrade-status-not-confirmed": "Date not yet confirmed",
+  "page-roadmap-upgrade-status-next": "Next milestone",
+  "page-roadmap-upgrade-status-verified": "Status checked",
+  "page-roadmap-upgrade-status-track": "Track live progress on Forkcast"
 }
