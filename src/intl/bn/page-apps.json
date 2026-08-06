@@ -65,6 +65,8 @@
   "page-apps-info-creator": "নির্মাতা",
   "page-apps-info-last-updated": "সর্বশেষ আপডেট",
   "page-apps-gallery-title": "গ্যালারি",
+  "page-apps-gallery-screenshot-alt": "অ্যাপ্লিকেশন ইন্টারফেস দেখানো {appName}-এর স্ক্রিনশট {index}",
+  "page-apps-gallery-modal-title": "{appName} স্ক্রিনশট",
   "page-apps-more-apps-like-this": "এরকম আরও অ্যাপ",
   "page-apps-by-company": "{company} দ্বারা",
   "page-apps-today": "আজ",

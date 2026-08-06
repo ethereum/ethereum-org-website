@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "11.17.0",
+  "version": "11.18.0",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -155,7 +155,7 @@
     "minimist": "^1.2.8",
     "plaiceholder": "^3.0.0",
     "polished": "^4.2.2",
-    "postcss": "^8.5.18",
+    "postcss": "^8.5.23",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "raw-loader": "^4.0.2",

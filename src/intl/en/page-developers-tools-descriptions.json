@@ -71,6 +71,7 @@
   "tool-ens-description": "Ethereum Name Service (ENS) is a decentralized naming protocol for Ethereum. Map human-readable names to addresses, avatars, and other records. Developer docs cover CCIP Read, contracts, and integration. Includes ENSJS SDK for resolution and management.",
   "tool-ens-mcp-server-description": "MCP server for Ethereum Name Service (ENS), enabling agents to resolve names, reverse-lookup addresses, check availability, and retrieve ENS records.",
   "tool-enso-build-description": "Enso is blockchain shortcuts. Your fastest way to build and launch onchain.\nBy mapping all onchain interactions to a shared engine, Enso lets you focus on your product.",
+  "tool-envio-description": "Envio is a multichain indexing framework with TypeScript, JavaScript, or ReScript handlers that syncs over HyperSync rather than RPC when you need one Postgres-backed GraphQL API across several EVM chains.",
   "tool-erc-4337-documentation-description": "Complete guide to ERC-4337 Account Abstraction - smart accounts, bundlers, paymasters, and more",
   "tool-ercx-token-test-library-description": "ERCx is a comprehensive open-source testing library for ERC token standards, featuring over 500 individual tests across ERC-20, ERC-721, ERC-1155, and ERC-4626 implementations.",
   "tool-erpc-description": "eRPC sits in front of your RPC providers to add caching, failover, and routing tuned for read-heavy workloads like dashboards, indexers, and multi-tenant backends.",

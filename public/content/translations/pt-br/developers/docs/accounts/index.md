@@ -105,7 +105,9 @@ Exemplo:
 
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
-O endereço do contrato geralmente é fornecido quando um contrato é implantado na blockchain da Ethereum. O endereço vem do endereço do criador e do número de transações enviadas desse endereço (o "nonce").
+O endereço do contrato geralmente é fornecido quando um contrato é implantado na blockchain da Ethereum. O endereço vem do endereço do criador e do número de transações enviadas a partir desse endereço (o “nonce”). É assim que a operação `CREATE` deriva um endereço.
+
+Os contratos também podem ser implantados com [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), que deriva o endereço a partir do endereço do criador, um valor que o criador escolhe (o “salt”) e um hash do código de criação do contrato. Nenhum nonce está envolvido, portanto, o endereço pode ser calculado antes que o contrato exista e permanece o mesmo, não importa quantas outras transações o criador envie nesse meio tempo. Isso torna possível referenciar um contrato que ainda não foi implantado.
 
 ## Chaves de validador {#validators-keys}
 

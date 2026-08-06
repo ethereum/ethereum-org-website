@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/docs/accounts/index.md",
-  "generatedAt": "2026-06-18T20:35:47.064Z",
-  "rootHash": "f1c07ae5055b",
+  "generatedAt": "2026-07-30T05:22:41.722Z",
+  "rootHash": "faafa24fd5c4",
   "tree": {
-    "contentHash": "43ced62bec0d",
-    "anchorHash": "bbe6b3221712",
+    "contentHash": "862f8f067077",
+    "anchorHash": "6c6a70482b6a",
     "children": {
       "frontmatter:title": {
         "contentHash": "e231c2975f71",
@@ -332,15 +332,15 @@
         ]
       },
       "contract-accounts": {
-        "contentHash": "9de1cba9722c",
-        "anchorHash": "0425485ce015",
+        "contentHash": "ae5d1e3f1fb5",
+        "anchorHash": "4d4c25de5c26",
         "labelHash": "2d70e676a358",
         "children": {
           "_label": {
             "contentHash": "2d70e676a358",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:1": {
+          "prose:3": {
             "contentHash": "1a6a44f848eb",
             "anchorHash": "e3b0c44298fc"
           },
@@ -348,16 +348,36 @@
             "contentHash": "e3b0c44298fc",
             "anchorHash": "c85d05177d3b"
           },
-          "prose:2": {
-            "contentHash": "8892e1dd9895",
+          "prose:4": {
+            "contentHash": "13bdae0c1ff4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "fde9c5013bf5"
+          },
+          "prose:5": {
+            "contentHash": "f81d2856ffee",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "459de4553172",
+            "anchorHash": "9d6e8c178ca9"
+          },
+          "prose:6": {
+            "contentHash": "b542c5ae73ce",
             "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:1",
+          "prose:3",
           "inline-code:0",
-          "prose:2"
+          "prose:4",
+          "inline-code:1",
+          "prose:5",
+          "link:2",
+          "prose:6"
         ]
       },
       "validators-keys": {
@@ -533,5 +553,5 @@
       "related-topics"
     ]
   },
-  "sourceCommitSha": "aaeb4f67fd616782cfcbaceb7a776b26c0578df4"
+  "sourceCommitSha": "813cae0fef45154817a18d95b432c551420c7054"
 }

@@ -65,6 +65,8 @@
   "page-apps-info-creator": "Pembuat",
   "page-apps-info-last-updated": "Terakhir diperbarui",
   "page-apps-gallery-title": "Galeri",
+  "page-apps-gallery-screenshot-alt": "Tangkapan layar {index} dari {appName} yang menampilkan antarmuka aplikasi",
+  "page-apps-gallery-modal-title": "Tangkapan layar {appName}",
   "page-apps-more-apps-like-this": "Lebih banyak aplikasi seperti ini",
   "page-apps-by-company": "oleh {company}",
   "page-apps-today": "Hari ini",
