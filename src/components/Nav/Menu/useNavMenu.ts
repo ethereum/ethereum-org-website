@@ -1,7 +1,9 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import type { MotionProps } from "motion/react"
+import { useLocale } from "next-intl"
 
 import { isModified } from "@/lib/utils/keyboard"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { MAIN_NAV_ID, SECTION_LABELS } from "@/lib/constants"
 
@@ -12,7 +14,11 @@ import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 export const useNavMenu = (sections: NavSections) => {
   const { direction } = useRtlFlip()
+  const locale = useLocale()
   const [activeSection, setActiveSection] = useState<NavSectionKey | null>(null)
+  // Sections already reported this session. Nav lives in the persistent layout,
+  // so this survives client-side navigation and resets only on a full page load
+  const trackedSections = useRef(new Set<NavSectionKey>())
 
   // Focus corresponding nav section when number keys pressed
   useEventListener("keydown", (event) => {
@@ -44,7 +50,20 @@ export const useNavMenu = (sections: NavSections) => {
   }
 
   const handleSectionChange = (activeSection: string) => {
-    setActiveSection(getEnglishSectionName(activeSection))
+    const sectionKey = getEnglishSectionName(activeSection)
+    setActiveSection(sectionKey)
+
+    // Radix clears the value on close; only opens are counted. Hover opens the
+    // menu, so a section is reported once and then muted for the rest of the
+    // session -- a mouse sweep across the bar can't inflate the count.
+    if (!sectionKey || trackedSections.current.has(sectionKey)) return
+    trackedSections.current.add(sectionKey)
+
+    trackCustomEvent({
+      eventCategory: "Desktop navigation menu",
+      eventAction: "Section changed",
+      eventName: `Open section: ${locale} - ${sectionKey}`,
+    })
   }
 
   const isOpen = activeSection !== null

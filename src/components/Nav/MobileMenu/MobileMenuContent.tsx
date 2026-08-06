@@ -1,5 +1,6 @@
 "use client"
 
+import { useRef } from "react"
 import { Languages, Menu } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 import * as TabsPrimitive from "@radix-ui/react-tabs"
@@ -18,6 +19,7 @@ import {
 import { SheetFooter, SheetHeader } from "@/components/ui/sheet"
 
 import { cn } from "@/lib/utils/cn"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import { slugify } from "@/lib/utils/url"
 
@@ -100,6 +102,21 @@ export default function MobileMenuContent() {
 function NavigationContent({ className }: { className?: string }) {
   const locale = useLocale()
   const { linkSections } = useNavigation()
+  // Section toggles already reported. The panel stays mounted, so this survives
+  // close/reopen and client-side navigation, resetting only on a full page load
+  const reported = useRef(new Set<string>())
+
+  const trackSectionToggle = (key: string, open: boolean) => {
+    const direction = open ? "Open" : "Close"
+    if (reported.current.has(`${key}:${direction}`)) return
+    reported.current.add(`${key}:${direction}`)
+
+    trackCustomEvent({
+      eventCategory: "Mobile navigation menu",
+      eventAction: "Section changed",
+      eventName: `${direction} section: ${locale} - ${key}`,
+    })
+  }
 
   return (
     <nav className={cn("p-0", className)}>
@@ -110,6 +127,7 @@ function NavigationContent({ className }: { className?: string }) {
           <Collapsible
             key={key}
             className="border-b border-body-light first:border-t"
+            onOpenChange={(open) => trackSectionToggle(key, open)}
           >
             <CollapsibleTrigger
               data-testid={`mobile-menu-collapsible-${slugify(label)}`}
