@@ -13,13 +13,6 @@ import { execFileSync } from "child_process"
 import * as fs from "fs"
 import * as path from "path"
 
-import {
-  diff,
-  extractChanges,
-  parseJson,
-  parseMarkdown,
-} from "intl-content-tree"
-
 import i18nConfig from "../../../i18n.config.json"
 
 import {
@@ -67,7 +60,11 @@ import {
 } from "./config"
 import { LLM, MANIFESTS_DIR } from "./constants"
 import type { LlmTranslator } from "./pipeline"
-import { pipeline, PIPELINE_CONFIG } from "./pipeline"
+import {
+  findStructuralRegressions,
+  getLlmSectionIds,
+  pipeline,
+} from "./pipeline"
 
 // ---------------------------------------------------------------------------
 // Types
@@ -374,40 +371,6 @@ async function buildGeminiTranslator(
   }
 }
 
-/**
- * Identify which sections need LLM translation.
- */
-function getLlmSectionIds(
-  englishA: string,
-  englishB: string,
-  fileType: "markdown" | "json"
-): string[] {
-  const parse = fileType === "markdown" ? parseMarkdown : parseJson
-  const treeA = parse(englishA, PIPELINE_CONFIG)
-  const treeB = parse(englishB, PIPELINE_CONFIG)
-  const dr = diff(treeA, treeB)
-  const cs = extractChanges(treeA, treeB)
-
-  const tdPaths = dr.translatableDrift.map((e: { path: string }) => e.path)
-  const leafTdPaths = tdPaths.filter(
-    (p: string) =>
-      !tdPaths.some((o: string) => o !== p && o.startsWith(p + "/"))
-  )
-  const leafTdIds = dr.translatableDrift
-    .filter((e: { path: string }) => leafTdPaths.includes(e.path))
-    .map((e: { id: string }) => e.id)
-    .filter((id: string) => !id.startsWith("frontmatter:"))
-
-  const renamedNewIds = new Set(
-    cs.sectionRenames.map((r: { newId: string }) => r.newId)
-  )
-  const addedIds = dr.added
-    .filter((e: { id: string }) => !renamedNewIds.has(e.id))
-    .map((e: { id: string }) => e.id)
-
-  return [...leafTdIds, ...addedIds]
-}
-
 // ---------------------------------------------------------------------------
 // Full Translation
 // ---------------------------------------------------------------------------
@@ -591,6 +554,29 @@ async function runIncremental(
     file.type,
     translator
   )
+
+  // Post-assembly invariants: if the merge lost or duplicated structure relative
+  // to English, discard it and retranslate the file rather than commit it.
+  const regressions = findStructuralRegressions(
+    englishA,
+    localeContent,
+    englishB,
+    result,
+    file.type
+  )
+  if (regressions.length > 0) {
+    log(
+      `[${locale}] ${file.path}: structural regression (${regressions.map((r) => r.detail).join("; ")}), falling back to full translation`
+    )
+    return runFullTranslation(
+      file,
+      locale,
+      destPath,
+      committer,
+      baseBranchSha,
+      committedFiles
+    )
+  }
 
   // Phase 4b: JSX attribute translation pass (markdown only)
   let finalContent = result

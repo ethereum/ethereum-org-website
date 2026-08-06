@@ -65,6 +65,8 @@
   "page-apps-info-creator": "المنشئ",
   "page-apps-info-last-updated": "آخر تحديث",
   "page-apps-gallery-title": "المعرض",
+  "page-apps-gallery-screenshot-alt": "لقطة الشاشة ⁦{index}⁩ لـ ⁦{appName}⁩ تعرض واجهة التطبيق",
+  "page-apps-gallery-modal-title": "لقطات شاشة ⁦{appName}⁩",
   "page-apps-more-apps-like-this": "المزيد من التطبيقات المشابهة",
   "page-apps-by-company": "بواسطة {company}",
   "page-apps-today": "اليوم",

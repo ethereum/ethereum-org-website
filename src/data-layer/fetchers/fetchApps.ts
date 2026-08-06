@@ -1,6 +1,6 @@
 import { AppCategoryEnum, AppData } from "@/lib/types"
 
-import { uploadToS3 } from "@/data-layer/s3"
+import { uploadManyToS3, uploadToS3 } from "@/data-layer/s3"
 
 import { fetchRetry } from "./fetchRetry"
 
@@ -158,8 +158,13 @@ async function uploadAppImages(apps: AppData[]): Promise<AppData[]> {
       const bannerImage = app.bannerImage
         ? ((await uploadToS3(app.bannerImage, "apps/banners")) ?? "")
         : app.bannerImage
+      // Drop failed uploads: an external URL would 400 in next/image, since only
+      // the S3 host is in remotePatterns.
+      const screenshots = (
+        await uploadManyToS3(app.screenshots, "apps/screenshots")
+      ).filter((url): url is string => Boolean(url))
 
-      return { ...app, image, bannerImage }
+      return { ...app, image, bannerImage, screenshots }
     })
   )
 }

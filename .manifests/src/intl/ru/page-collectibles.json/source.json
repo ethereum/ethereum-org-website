@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-collectibles.json",
-  "generatedAt": "2026-06-16T15:19:26.956Z",
-  "rootHash": "312e8f816e6f",
+  "generatedAt": "2026-07-28T21:56:39.580Z",
+  "rootHash": "46b9b0c3a6ed",
   "tree": {
-    "contentHash": "8e93922c6c6d",
-    "anchorHash": "f7e2f05eaf08",
+    "contentHash": "add9f33cf991",
+    "anchorHash": "56eceb103593",
     "children": {
       "page-collectibles-already-desc": {
         "contentHash": "14ad5df25dd5",
@@ -300,33 +300,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-collectibles-translations-desc": {
-        "contentHash": "1287dce57f3b",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-collectibles-translations-instructions-1": {
-        "contentHash": "a35ad89443f8",
-        "anchorHash": "107b6e344fce",
-        "children": {
-          "prose:1": {
-            "contentHash": "4b415d08c8f5",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "html-tag:0": {
-            "contentHash": "dae45f8c8e6b",
-            "anchorHash": "acdbf55e512f"
-          }
-        },
-        "childrenOrder": [
-          "prose:1",
-          "html-tag:0"
-        ]
-      },
-      "page-collectibles-translations-instructions-2": {
-        "contentHash": "71a202e24721",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-collectibles-translations-instructions-3": {
-        "contentHash": "787bc8432e0e",
+        "contentHash": "1db38cf59398",
         "anchorHash": "e3b0c44298fc"
       },
       "page-collectibles-translations-title": {
@@ -396,11 +370,8 @@
       "page-collectibles-translations-50000",
       "page-collectibles-translations-badge-desc",
       "page-collectibles-translations-desc",
-      "page-collectibles-translations-instructions-1",
-      "page-collectibles-translations-instructions-2",
-      "page-collectibles-translations-instructions-3",
       "page-collectibles-translations-title"
     ]
   },
-  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+  "sourceCommitSha": "f99d74bf2ad4ecaa64f42bc984735fecc8fe83af"
 }

@@ -16,3 +16,31 @@
 - Latin-script (brands stay Latin).
 - No semantic inversions, no translated hrefs, no cross-script contamination, no transliterated domains. ICU placeholders and rich-text tags intact.
 - The placeholder leak was a pipeline artifact (count mismatch in HTML restore), fixed in `json-batcher.ts`/`gemini.ts`; see `docs/solutions/logic-errors/intl-pipeline-html-placeholder-leak.md`.
+
+## PR #18925 (privacy roadmap + 2 video transcripts) -- 2026-07-27 -- 9.5/10
+
+**Fixed (critical):** `receipts` rendered in the retail sense `paragonów` (shop receipts) instead of the Ethereum sense (`ethereum-privacy-stack-andy-guzman` L105) -> `pokwitowań`. The same PR used `pokwitowań` correctly for "receipt-freeness" in `roadmap/privacy` L102.
+
+**Not fixed (warning):** `walidatory` vs `walidatorzy` (non-personal vs personal plural) both used for validators.
+
+## Glossary Anchors (pl)
+- receipt = pokwitowanie (NEVER `paragon` — that is a shop receipt)
+
+## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 9.1/10
+Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
+
+**Fixed in this branch:**
+
+- #42 `{#contract-accounts}` heading restored from the pre-PR blob
+- #43 blank line before `{#validators-keys}` restored
+
+**Open (native call needed):**
+
+- #46 `ciphernodes` -> `węzłów szyfrujących`. The pl agent graded this **critical**; 14 other locales graded the same calque defensible, which is why it was left for an English-side fix rather than a one-locale edit.
+- `app-kohaku-description` "adopt" -> `zaadaptować` (adapt/modify).
+- `page-values-internet-list-open-code` regressed `w którym` to the colloquial `gdzie` with a non-spatial antecedent.
+
+**Notes:**
+
+- **Do not "fix" „sól" for salt.** Polish cryptography standardly uses *sól*, and the definitional framing plus quotes make the term-of-art reading unambiguous.
+- `budowniczowie` for "builders" is house-consistent (31 occurrences in `src/intl/pl`). `wybijasz` for game-mint matches existing NFT usage.
