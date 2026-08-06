@@ -33,6 +33,7 @@ const meta = {
       accounts: [false, 0],
       "energy-consumption": [false, 0],
       evm: [false, 0],
+      transactions: [false, 0],
     },
     totalCorrectAnswers: 0,
   },
