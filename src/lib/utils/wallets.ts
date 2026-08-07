@@ -132,12 +132,14 @@ export const formatWalletFees = (
   locale: string,
   t: WalletFeeTFunc
 ): string => {
-  // Node and browser ICU emit different non-breaking space variants around
-  // range dashes; normalize to plain spaces to avoid hydration mismatches
+  // Node and browser ICU disagree on which thin/narrow space they emit around
+  // range dashes; normalize those to avoid hydration mismatches, but leave NBSP
+  // alone -- it separates the value from its unit (e.g. de "0,05-0,7 %")
   const formatRange = (
     fmt: Intl.NumberFormat,
     [min, max]: [min: number, max: number]
-  ) => fmt.formatRange(min, max).replace(/\s+/g, " ")
+  ) =>
+    fmt.formatRange(min, max).replace(/[\u2000-\u200a\u202f\u205f\u3000]/g, " ")
 
   // Data stores human-readable percents (0.875 -> "0.875%")
   const percent = (amount: WalletFeeAmount) =>

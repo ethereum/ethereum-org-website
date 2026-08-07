@@ -119,7 +119,6 @@
   "page-find-wallet-fee-label-swap-bridge": "Swap/bridge fee",
   "page-find-wallet-fee-free-tier-plans": "Free tier, paid plans from {value}/month",
   "page-find-wallet-fee-qualifier-free-under-fox-discounts": "{value} (free under {usd}, FOX-holder discounts)",
-  "page-find-wallet-fee-qualifier-lower-for-token-holders": "{value} (lower for token holders)",
   "page-find-wallet-fee-qualifier-lower-with-premium": "{value} (lower with Premium)",
   "page-find-wallet-fee-qualifier-of-rewards": "{value} of rewards",
   "page-find-wallet-fee-qualifier-per-card": "{value}/card",

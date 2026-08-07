@@ -793,7 +793,6 @@ export type WalletFeeQualifier =
   | "of-rewards"
   | "per-card"
   | "lower-with-premium"
-  | "lower-for-token-holders"
   | "tpt-holder-discounts"
   /** Requires `qualifierPercent` */
   | "stablecoins"
