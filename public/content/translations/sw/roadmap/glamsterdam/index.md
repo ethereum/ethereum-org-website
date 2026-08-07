@@ -285,14 +285,6 @@ Ndiyo, Glamsterdam ina uwezekano mkubwa wa kupunguza ada kwa watumiaji wa kila s
 
 Kwa kuongezea, kwa uendelevu wa muda mrefu, Glamsterdam inaleta Orodha za Ufikiaji za Kiwango cha Kitalu (BALs). Hii inawezesha uchakataji sambamba na kuandaa tabaka la 1 (l1) kushughulikia kwa usalama vikomo vya juu vya gesi vya jumla katika siku zijazo, ambayo ina uwezekano wa kupunguza gharama za gesi kwa kila muamala kadiri uwezo unavyokua.
 
-### Je, kutakuwa na mabadiliko yoyote kwenye mikataba yangu mahiri iliyopo baada ya Glamsterdam?
-
-Mikataba iliyopo itaendelea kufanya kazi kama kawaida baada ya Glamsterdam. Wasanidi huenda wakapata zana mpya kadhaa na wanapaswa kukagua matumizi yao ya gesi:
-
-- Kuongeza ukubwa wa juu zaidi wa mkataba (au EIP-7954) kunaruhusu wasanidi kusambaza programu kubwa zaidi, na kuongeza kikomo cha ukubwa wa juu zaidi wa mkataba kutoka takriban 24KiB hadi 64KiB.
-- Usambazaji wa Awali wa Kiwanda wa Kibainishi (au EIP-7997) unaleta mkataba wa kiwanda wa ulimwengu wote, uliojengewa ndani. Unaruhusu wasanidi kusambaza programu zao na mikoba ya mkataba mahiri kwenye anwani sawa kabisa katika minyororo yote ya EVM inayoshiriki.
-- Ikiwa programu yako inategemea ufuatiliaji changamano ili kupata hamisho la ETH, Hamisho na uchomaji wa ETH hutoa logi (au EIP-7708) itakuruhusu kubadili na kutumia logi kwa uhasibu rahisi na wa kutegemewa zaidi.
-- Ongezeko la gharama ya gesi ya uundaji wa hali (au EIP-8037) na sasisho la gharama ya gesi ya ufikiaji wa hali (au EIP-8038) yanaleta miundo mipya ya uendelevu ambayo itabadilisha baadhi ya gharama za usambazaji wa mkataba, kwa kuwa kuunda akaunti mpya au uhifadhi wa kudumu kutakuwa na ada mpya isiyobadilika iliyosanifiwa kulingana na ukubwa wa data iliyoundwa.
 ### Je, Glamsterdam itaathiri vipi uhifadhi wa nodi na mahitaji ya maunzi? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 
 EIPs nyingi zinazozingatiwa kwa Glamsterdam zinashughulikia kikomo cha zuio cha utendaji cha ukuaji wa hali:

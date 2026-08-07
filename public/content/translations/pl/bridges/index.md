@@ -1,7 +1,7 @@
 ---
 title: Mosty blockchain
-metaTitle: Wprowadzenie do mostów blockchain
-description: Mosty pozwalają użytkownikom na przenoszenie środków między różnymi blockchainami
+metaTitle: "Wprowadzenie do mostów blockchain"
+description: "Mosty pozwalają użytkownikom na przenoszenie środków między różnymi blockchainami"
 lang: pl
 ---
 
@@ -135,6 +135,7 @@ Mosty mają kluczowe znaczenie dla onboardingu użytkowników do warstwy 2 (L2) 
 <Divider />
 
 ## Dalsza lektura {#further-reading}
+
 - [EIP-5164: Wykonywanie międzyłańcuchowe](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 czerwca 2022 r. - Brendan Asselstine_
 - [Ramy ryzyka L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5 lipca 2022 r. - Bartek Kiepuszewski_
 - [„Dlaczego przyszłość będzie wielołańcuchowa, ale nie międzyłańcuchowa.”](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 stycznia 2022 r. - Vitalik Buterin_

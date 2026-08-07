@@ -285,14 +285,6 @@ Ya, Glamsterdam kemungkinan besar akan mengurangi biaya untuk pengguna sehari-ha
 
 Selain itu, untuk keberlanjutan jangka panjang, Glamsterdam memperkenalkan Daftar Akses Tingkat Blok (BAL). Hal ini memungkinkan pemrosesan paralel dan mempersiapkan lapisan 1 (l1) untuk menangani batas gas keseluruhan yang lebih tinggi dengan aman di masa mendatang, yang kemungkinan akan mengurangi biaya gas per transaksi seiring dengan pertumbuhan kapasitas.
 
-### Apakah akan ada perubahan pada kontrak pintar saya yang sudah ada pasca-Glamsterdam?
-
-Kontrak yang ada akan terus berfungsi secara normal setelah Glamsterdam. Pengembang kemungkinan akan mendapatkan beberapa alat baru dan harus meninjau penggunaan gas mereka:
-
-- Peningkatan ukuran kontrak maksimum (atau EIP-7954) memungkinkan pengembang untuk menyebarkan aplikasi yang lebih besar, menaikkan batas ukuran kontrak maksimum dari sekitar 24KiB menjadi 64KiB.
-- Penyebaran Awal Pabrik Deterministik (atau EIP-7997) memperkenalkan kontrak pabrik bawaan yang universal. Ini memungkinkan pengembang untuk menyebarkan aplikasi dan dompet kontrak pintar mereka ke alamat yang sama persis di semua rantai EVM yang berpartisipasi.
-- Jika aplikasi Anda bergantung pada pelacakan kompleks untuk menemukan transfer ETH, Transfer dan pembakaran ETH memancarkan Log (atau EIP-7708) akan memungkinkan Anda beralih menggunakan Log untuk akuntansi yang lebih sederhana dan andal.
-- Peningkatan biaya gas pembuatan state (atau EIP-8037) dan Pembaruan biaya gas akses state (atau EIP-8038) memperkenalkan model keberlanjutan baru yang akan mengubah biaya penyebaran kontrak tertentu, karena membuat akun baru atau penyimpanan permanen akan memiliki biaya tetap standar baru berdasarkan ukuran data yang dibuat.
 ### Bagaimana Glamsterdam akan memengaruhi penyimpanan node dan persyaratan perangkat keras? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 
 Beberapa EIP yang sedang dipertimbangkan untuk Glamsterdam mengatasi penurunan kinerja (cliff) dari pertumbuhan state:

@@ -1,7 +1,7 @@
 ---
 title: Pontes de blockchain
-metaTitle: Introdução às pontes de blockchain
-description: As pontes permitem que os usuários movam seus fundos entre diferentes blockchains
+metaTitle: "Introdução às pontes de blockchain"
+description: "As pontes permitem que os usuários movam seus fundos entre diferentes blockchains"
 lang: pt-br
 ---
 
@@ -135,6 +135,7 @@ As pontes são cruciais para a integração de usuários nas l2s do Ethereum, e 
 <Divider />
 
 ## Leitura adicional {#further-reading}
+
 - [EIP-5164: Execução Cross-Chain](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 de junho de 2022 - Brendan Asselstine_
 - [Estrutura de Risco de L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5 de julho de 2022 - Bartek Kiepuszewski_
 - ["Por que o futuro será multi-chain, mas não será cross-chain."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 de janeiro de 2022 - Vitalik Buterin_

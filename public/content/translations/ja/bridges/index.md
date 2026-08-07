@@ -1,7 +1,7 @@
 ---
-title: ブロックチェーン・ブリッジ
-metaTitle: ブロックチェーン・ブリッジの紹介
-description: ブリッジを使用すると、ユーザーは異なるブロックチェーン間で資金を移動できます
+title: "ブロックチェーン・ブリッジ"
+metaTitle: "ブロックチェーン・ブリッジの紹介"
+description: "ブリッジを使用すると、ユーザーは異なるブロックチェーン間で資金を移動できます"
 lang: ja
 ---
 
@@ -135,6 +135,7 @@ _Web3は、それぞれ独自の機能とトレードオフを持つレイヤー
 <Divider />
 
 ## 参考文献 {#further-reading}
+
 - [EIP-5164: クロスチェーン実行](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _2022年6月18日 - Brendan Asselstine_
 - [L2Bridge リスク・フレームワーク](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _2022年7月5日 - Bartek Kiepuszewski_
 - [「未来はマルチチェーンになるが、クロスチェーンにはならない理由」](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _2022年1月8日 - Vitalik Buterin_

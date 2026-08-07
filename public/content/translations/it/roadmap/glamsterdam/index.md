@@ -285,14 +285,6 @@ Sì, molto probabilmente Glamsterdam ridurrà le commissioni per gli utenti di t
 
 Inoltre, per la sostenibilità a lungo termine, Glamsterdam introduce le liste di accesso a livello di blocco (BAL). Ciò abilita l'elaborazione parallela e prepara il layer 1 (l1) a gestire in sicurezza limiti di gas complessivi più elevati in futuro, il che probabilmente ridurrà i costi del gas per transazione man mano che la capacità cresce.
 
-### Ci saranno modifiche ai miei smart contract esistenti dopo Glamsterdam?
-
-I contratti esistenti continueranno a funzionare normalmente dopo Glamsterdam. Gli sviluppatori avranno probabilmente a disposizione diversi nuovi strumenti e dovrebbero rivedere il loro utilizzo di gas:
-
-- L'aumento delle dimensioni massime del contratto (o EIP-7954) consente agli sviluppatori di distribuire applicazioni più grandi, innalzando il limite massimo delle dimensioni del contratto da circa 24 KiB a 64 KiB.
-- La predistribuzione deterministica della factory (o EIP-7997) introduce un contratto factory universale e integrato. Consente agli sviluppatori di distribuire le loro applicazioni e i portafogli smart contract esattamente allo stesso indirizzo su tutte le catene EVM partecipanti.
-- Se la tua app si basa su un tracciamento complesso per trovare i trasferimenti di ETH, I trasferimenti e i burn di ETH emettono un log (o EIP-7708) ti consentirà di passare all'utilizzo dei log per una contabilità più semplice e affidabile.
-- L'aumento del costo del gas per la creazione dello stato (o EIP-8037) e l'aggiornamento del costo del gas per l'accesso allo stato (o EIP-8038) introducono nuovi modelli di sostenibilità che modificheranno alcuni costi di distribuzione dei contratti, poiché la creazione di nuovi account o di archiviazione permanente avrà una nuova commissione fissa standardizzata basata sulle dimensioni dei dati creati.
 ### In che modo Glamsterdam influirà sull'archiviazione dei nodi e sui requisiti hardware? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 
 Diversi EIP in fase di valutazione per Glamsterdam affrontano il crollo delle prestazioni dovuto alla crescita dello stato:

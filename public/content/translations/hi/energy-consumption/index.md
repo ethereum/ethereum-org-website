@@ -1,11 +1,11 @@
 ---
-title: इथेरियम का ऊर्जा व्यय
-metaTitle: इथेरियम ऊर्जा खपत
-description: इथेरियम की ऊर्जा खपत को समझने के लिए आवश्यक बुनियादी जानकारी।
+title: "इथेरियम का ऊर्जा व्यय"
+metaTitle: "इथेरियम ऊर्जा खपत"
+description: "इथेरियम की ऊर्जा खपत को समझने के लिए आवश्यक बुनियादी जानकारी।"
 lang: hi
 ---
 
-[इथेरियम](/) एक ग्रीन ब्लॉकचेन है। इथेरियम का [प्रूफ-ऑफ़-स्टेक (PoS)](/developers/docs/consensus-mechanisms/pos) सर्वसम्मति तंत्र [नेटवर्क को सुरक्षित करने के लिए ऊर्जा](/developers/docs/consensus-mechanisms/pow) के बजाय ETH का उपयोग करता है। पूरे वैश्विक नेटवर्क में इथेरियम की ऊर्जा खपत लगभग [~0.0026 TWh/yr](https://carbon-ratings.com/eth-report-2022) है।
+[इथेरियम](/) एक ग्रीन ब्लॉकचेन है। इथेरियम का [प्रूफ-ऑफ़-स्टेक (PoS)](/developers/docs/consensus-mechanisms/pos) सर्वसम्मति तंत्र [नेटवर्क को सुरक्षित करने के लिए ऊर्जा](/developers/docs/consensus-mechanisms/pow) के बजाय ETH का उपयोग करता है। पूरे वैश्विक नेटवर्क में इथेरियम की ऊर्जा खपत लगभग [\~0.0026 TWh/yr](https://carbon-ratings.com/eth-report-2022) है।
 
 इथेरियम के लिए ऊर्जा खपत का अनुमान [CCRI (क्रिप्टो कार्बन रेटिंग्स इंस्टीट्यूट)](https://carbon-ratings.com) के एक अध्ययन से आता है। उन्होंने इथेरियम नेटवर्क की बिजली खपत और कार्बन फुटप्रिंट का बॉटम-अप अनुमान तैयार किया ([रिपोर्ट देखें](https://carbon-ratings.com/eth-report-2022))। उन्होंने विभिन्न हार्डवेयर और क्लाइंट सॉफ़्टवेयर कॉन्फ़िगरेशन वाले विभिन्न नोड्स की बिजली खपत को मापा। नेटवर्क की वार्षिक बिजली खपत के लिए अनुमानित **2,601 MWh** (0.0026 TWh) क्षेत्रीय-विशिष्ट कार्बन तीव्रता कारकों को लागू करते हुए **870 टन CO2e** के वार्षिक कार्बन उत्सर्जन से मेल खाता है। जैसे-जैसे नोड्स नेटवर्क में प्रवेश करते हैं और छोड़ते हैं, यह मान बदलता रहता है - आप [कैम्ब्रिज ब्लॉकचेन नेटवर्क सस्टेनेबिलिटी सूचकांक](https://ccaf.io/cbnsi/ethereum) द्वारा 7-दिवसीय रोलिंग औसत अनुमान का उपयोग करके नज़र रख सकते हैं (ध्यान दें कि वे अपने अनुमानों के लिए थोड़ी अलग विधि का उपयोग करते हैं - विवरण उनकी साइट पर उपलब्ध है)।
 
@@ -24,8 +24,8 @@ lang: hi
 | PoW इथेरियम        |                 21                  |           8,100x           |                                                                    [स्रोत](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
 | Google              |                 19                  |           7,300x           |                                           [स्रोत](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
 | नेटफ्लिक्स             |                0.457                |            176x            | [स्रोत](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
-| पेपाल              |                0.26                 |            100x            |                                 [स्रोत](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf>)                                  |
-| AirBnB              |                0.02                 |             8x             |                              [स्रोत](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                              |
+| पेपाल              |                0.26                 |            100x            |                                 [स्रोत](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1)>).pdf>)                                  |
+| AirBnB              |                0.02                 |             8x             |                              [स्रोत](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final)>).pdf>)                              |
 | **PoS इथेरियम**    |             **0.0026**              |           **1x**           |                                                               [स्रोत](https://carbon-ratings.com/eth-report-2022)                                                                |
 
 \*इसमें पीसी, लैपटॉप और गेमिंग कंसोल जैसे एंड-यूज़र डिवाइस शामिल हैं।

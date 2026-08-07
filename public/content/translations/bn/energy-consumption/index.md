@@ -1,11 +1,11 @@
 ---
-title: ইথেরিয়ামের শক্তি ব্যয়
-metaTitle: ইথেরিয়ামের শক্তি খরচ
-description: ইথেরিয়ামের শক্তি খরচ বোঝার জন্য আপনার প্রয়োজনীয় প্রাথমিক তথ্য।
+title: "ইথেরিয়ামের শক্তি ব্যয়"
+metaTitle: "ইথেরিয়ামের শক্তি খরচ"
+description: "ইথেরিয়ামের শক্তি খরচ বোঝার জন্য আপনার প্রয়োজনীয় প্রাথমিক তথ্য।"
 lang: bn
 ---
 
-[ইথেরিয়াম](/) হলো একটি পরিবেশবান্ধব ব্লকচেইন। ইথেরিয়ামের [প্রুফ-অফ-স্টেক (PoS)](/developers/docs/consensus-mechanisms/pos) কনসেনসাস মেকানিজম [নেটওয়ার্ক সুরক্ষিত করতে শক্তির](/developers/docs/consensus-mechanisms/pow) পরিবর্তে ETH ব্যবহার করে। সমগ্র গ্লোবাল নেটওয়ার্ক জুড়ে ইথেরিয়ামের শক্তি খরচ প্রায় [~0.0026 TWh/yr](https://carbon-ratings.com/eth-report-2022)।
+[ইথেরিয়াম](/) হলো একটি পরিবেশবান্ধব ব্লকচেইন। ইথেরিয়ামের [প্রুফ-অফ-স্টেক (PoS)](/developers/docs/consensus-mechanisms/pos) কনসেনসাস মেকানিজম [নেটওয়ার্ক সুরক্ষিত করতে শক্তির](/developers/docs/consensus-mechanisms/pow) পরিবর্তে ETH ব্যবহার করে। সমগ্র গ্লোবাল নেটওয়ার্ক জুড়ে ইথেরিয়ামের শক্তি খরচ প্রায় [\~0.0026 TWh/yr](https://carbon-ratings.com/eth-report-2022)।
 
 ইথেরিয়ামের শক্তি খরচের অনুমানটি [CCRI (ক্রিপ্টো কার্বন রেটিংস ইনস্টিটিউট)](https://carbon-ratings.com)-এর একটি গবেষণা থেকে এসেছে। তারা ইথেরিয়াম নেটওয়ার্কের বিদ্যুৎ খরচ এবং কার্বন ফুটপ্রিন্টের বটম-আপ অনুমান তৈরি করেছে ([রিপোর্টটি দেখুন](https://carbon-ratings.com/eth-report-2022))। তারা বিভিন্ন হার্ডওয়্যার এবং ক্লায়েন্ট সফ্টওয়্যার কনফিগারেশন সহ বিভিন্ন নোডের বিদ্যুৎ খরচ পরিমাপ করেছে। নেটওয়ার্কের বার্ষিক বিদ্যুৎ খরচের জন্য আনুমানিক **2,601 MWh** (0.0026 TWh) অঞ্চল-নির্দিষ্ট কার্বন তীব্রতা ফ্যাক্টর প্রয়োগ করে বার্ষিক কার্বন নির্গমনের **870 tonnes CO2e**-এর সমতুল্য। নেটওয়ার্কে নোড প্রবেশ এবং ত্যাগ করার সাথে সাথে এই মানটি পরিবর্তিত হয় - আপনি [কেমব্রিজ ব্লকচেইন নেটওয়ার্ক সাসটেইনেবিলিটি সূচক](https://ccaf.io/cbnsi/ethereum)-এর একটি রোলিং 7-দিনের গড় অনুমান ব্যবহার করে এর ট্র্যাক রাখতে পারেন (মনে রাখবেন যে তারা তাদের অনুমানের জন্য কিছুটা ভিন্ন পদ্ধতি ব্যবহার করে - তাদের সাইটে বিস্তারিত উপলব্ধ)।
 
@@ -24,8 +24,8 @@ lang: bn
 | PoW ইথেরিয়াম        |                 21                  |           8,100x           |                                                                    [উৎস](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
 | গুগল              |                 19                  |           7,300x           |                                           [উৎস](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
 | নেটফ্লিক্স             |                0.457                |            176x            | [উৎস](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
-| পেপ্যাল              |                0.26                 |            100x            |                                 [উৎস](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf>)                                  |
-| এয়ারবিএনবি              |                0.02                 |             8x             |                              [উৎস](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                              |
+| পেপ্যাল              |                0.26                 |            100x            |                                 [উৎস](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1)>).pdf>)                                  |
+| এয়ারবিএনবি              |                0.02                 |             8x             |                              [উৎস](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final)>).pdf>)                              |
 | **PoS ইথেরিয়াম**    |             **0.0026**              |           **1x**           |                                                               [উৎস](https://carbon-ratings.com/eth-report-2022)                                                                |
 
 \*পিসি, ল্যাপটপ এবং গেমিং কনসোলের মতো এন্ড-ইউজার ডিভাইসগুলি অন্তর্ভুক্ত।

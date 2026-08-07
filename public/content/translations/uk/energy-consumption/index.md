@@ -1,11 +1,11 @@
 ---
-title: Енергоспоживання Етеріуму
-metaTitle: Енергоспоживання Етеріуму
-description: Основна інформація, необхідна для розуміння енергоспоживання Етеріуму.
+title: "Енергоспоживання Етеріуму"
+metaTitle: "Енергоспоживання Етеріуму"
+description: "Основна інформація, необхідна для розуміння енергоспоживання Етеріуму."
 lang: uk
 ---
 
-[Етеріум](/) — це екологічний блокчейн. [Доказ частки (PoS)](/developers/docs/consensus-mechanisms/pos) як механізм консенсусу Етеріуму використовує ETH замість [енергії для захисту мережі](/developers/docs/consensus-mechanisms/pow). Енергоспоживання Етеріуму становить приблизно [~0,0026 ТВт·год/рік](https://carbon-ratings.com/eth-report-2022) у всій глобальній мережі.
+[Етеріум](/) — це екологічний блокчейн. [Доказ частки (PoS)](/developers/docs/consensus-mechanisms/pos) як механізм консенсусу Етеріуму використовує ETH замість [енергії для захисту мережі](/developers/docs/consensus-mechanisms/pow). Енергоспоживання Етеріуму становить приблизно [\~0,0026 ТВт·год/рік](https://carbon-ratings.com/eth-report-2022) у всій глобальній мережі.
 
 Оцінка енергоспоживання Етеріуму базується на дослідженні [CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com). Вони створили висхідні оцінки споживання електроенергії та вуглецевого сліду мережі Етеріум ([див. звіт](https://carbon-ratings.com/eth-report-2022)). Вони виміряли споживання електроенергії різними вузлами з різними конфігураціями апаратного забезпечення та клієнтського програмного забезпечення. Орієнтовні **2601 МВт·год** (0,0026 ТВт·год) річного споживання електроенергії мережею відповідають щорічним викидам вуглецю у розмірі **870 тонн CO2e** із застосуванням регіональних коефіцієнтів інтенсивності викидів вуглецю. Це значення змінюється в міру того, як вузли приєднуються до мережі та залишають її — ви можете відстежувати це за допомогою ковзної 7-денної середньої оцінки від [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum) (зверніть увагу, що вони використовують дещо інший метод для своїх оцінок — деталі доступні на їхньому сайті).
 
@@ -24,8 +24,8 @@ lang: uk
 | PoW Етеріум         |                 21                  |           8 100x           |                                                                    [джерело](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
 | Google              |                 19                  |           7 300x           |                                           [джерело](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
 | Netflix             |                0,457                |            176x            | [джерело](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
-| PayPal              |                0,26                 |            100x            |                                 [джерело](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf>)                                  |
-| AirBnB              |                0,02                 |             8x             |                              [джерело](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                              |
+| PayPal              |                0,26                 |            100x            |                                 [джерело](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1)>).pdf>)                                  |
+| AirBnB              |                0,02                 |             8x             |                              [джерело](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final)>).pdf>)                              |
 | **PoS Етеріум**     |             **0,0026**              |           **1x**           |                                                               [джерело](https://carbon-ratings.com/eth-report-2022)                                                                |
 
 \*Включає пристрої кінцевих користувачів, такі як ПК, ноутбуки та ігрові консолі.

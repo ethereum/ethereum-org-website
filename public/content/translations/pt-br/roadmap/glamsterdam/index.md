@@ -294,14 +294,6 @@ Sim, a Glamsterdam muito provavelmente reduzirá as taxas para usuários comuns!
 
 Além disso, para sustentabilidade a longo prazo, a Glamsterdam introduz Listas de Acesso em Nível de Bloco (BALs). Isso permite o processamento paralelo e prepara a L1 para lidar com segurança com limites de gas gerais mais altos no futuro, o que provavelmente reduzirá os custos de gas por transação à medida que a capacidade cresce.
 
-### Haverá alguma alteração nos meus contratos inteligentes existentes após a Glamsterdam?
-
-Os contratos existentes continuarão a funcionar normalmente após a Glamsterdam. Os desenvolvedores provavelmente obterão várias ferramentas novas e devem revisar seu uso de gas:
-
-- O Aumento do tamanho máximo do contrato (ou EIP-7954) permite que os desenvolvedores implantem aplicativos maiores, elevando o limite de tamanho máximo do contrato de aproximadamente 24 KiB para 64 KiB.
-- A Pré-implantação de Fábrica Determinística (ou EIP-7997) introduz um contrato de fábrica universal e integrado. Ela permite que os desenvolvedores implantem seus aplicativos e carteiras de contratos inteligentes exatamente no mesmo endereço em todas as cadeias EVM participantes.
-- Se o seu aplicativo depende de rastreamento complexo para encontrar transferências de ETH, Transferências e queimas de ETH emitem um log (ou EIP-7708) permitirá que você mude para o uso de logs para uma contabilidade mais simples e confiável.
-- O Aumento do custo de gas para criação de estado (ou EIP-8037) e a Atualização do custo de gas para acesso ao estado (ou EIP-8038) introduzem novos modelos de sustentabilidade que alterarão certos custos de implantação de contratos, pois a criação de novas contas ou armazenamento permanente terá uma nova taxa fixa padronizada com base no tamanho dos dados criados.
 ### Como a Glamsterdam afetará o armazenamento do nó e os requisitos de hardware? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 
 Várias EIPs sob consideração para a Glamsterdam abordam o declínio acentuado de desempenho do crescimento do estado:

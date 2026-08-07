@@ -1,11 +1,11 @@
 ---
-title: Gasto energético de Ethereum
-metaTitle: Consumo de energía de Ethereum
-description: La información básica que necesita para entender el consumo de energía de Ethereum.
+title: "Gasto energético de Ethereum"
+metaTitle: "Consumo de energía de Ethereum"
+description: "La información básica que necesita para entender el consumo de energía de Ethereum."
 lang: es
 ---
 
-[Ethereum](/) es una cadena de bloques ecológica. El mecanismo de consenso de [prueba de participación (PoS)](/developers/docs/consensus-mechanisms/pos) de Ethereum utiliza ETH en lugar de [energía para proteger la red](/developers/docs/consensus-mechanisms/pow). El consumo de energía de Ethereum es de aproximadamente [~0,0026 TWh/año](https://carbon-ratings.com/eth-report-2022) en toda la red global.
+[Ethereum](/) es una cadena de bloques ecológica. El mecanismo de consenso de [prueba de participación (PoS)](/developers/docs/consensus-mechanisms/pos) de Ethereum utiliza ETH en lugar de [energía para proteger la red](/developers/docs/consensus-mechanisms/pow). El consumo de energía de Ethereum es de aproximadamente [\~0,0026 TWh/año](https://carbon-ratings.com/eth-report-2022) en toda la red global.
 
 La estimación del consumo de energía de Ethereum proviene de un estudio del [CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com). Generaron estimaciones ascendentes (bottom-up) del consumo de electricidad y la huella de carbono de la red Ethereum ([ver el informe](https://carbon-ratings.com/eth-report-2022)). Midieron el consumo de electricidad de diferentes nodos con varias configuraciones de hardware y software de cliente. Los **2601 MWh** (0,0026 TWh) estimados para el consumo anual de electricidad de la red corresponden a unas emisiones anuales de carbono de **870 toneladas de CO2e** aplicando factores de intensidad de carbono específicos de cada región. Este valor cambia a medida que los nodos entran y salen de la red; puede realizar un seguimiento utilizando una estimación de promedio móvil de 7 días del [Índice de Sostenibilidad de la Red Blockchain de Cambridge](https://ccaf.io/cbnsi/ethereum) (tenga en cuenta que utilizan un método ligeramente diferente para sus estimaciones; los detalles están disponibles en su sitio web).
 
@@ -24,8 +24,8 @@ El gráfico anterior muestra el consumo de energía estimado en TWh/año para Et
 | Ethereum PoW        |                 21                  |           8.100x           |                                                                    [fuente](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
 | Google              |                 19                  |           7.300x           |                                           [fuente](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
 | Netflix             |                0,457                |            176x            | [fuente](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
-| PayPal              |                0,26                 |            100x            |                                 [fuente](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf>)                                  |
-| AirBnB              |                0,02                 |             8x             |                              [fuente](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                              |
+| PayPal              |                0,26                 |            100x            |                                 [fuente](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1)>).pdf>)                                  |
+| AirBnB              |                0,02                 |             8x             |                              [fuente](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final)>).pdf>)                              |
 | **Ethereum PoS**    |             **0,0026**              |           **1x**           |                                                               [fuente](https://carbon-ratings.com/eth-report-2022)                                                                |
 
 \*Incluye dispositivos de usuario final como PC, computadoras portátiles y consolas de videojuegos.

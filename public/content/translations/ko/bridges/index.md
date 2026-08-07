@@ -1,7 +1,7 @@
 ---
-title: 블록체인 브릿지
-metaTitle: 블록체인 브릿지 소개
-description: 브릿지를 통해 사용자는 서로 다른 블록체인 간에 자금을 이동할 수 있습니다.
+title: "블록체인 브릿지"
+metaTitle: "블록체인 브릿지 소개"
+description: "브릿지를 통해 사용자는 서로 다른 블록체인 간에 자금을 이동할 수 있습니다."
 lang: ko
 ---
 
@@ -135,6 +135,7 @@ _Web3는 고유한 기능과 장단점을 갖춘 레이어 1 (l1) 블록체인 �
 <Divider />
 
 ## 더 읽어보기 {#further-reading}
+
 - [EIP-5164: 크로스체인 실행](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _2022년 6월 18일 - 브렌던 아셀스틴(Brendan Asselstine)_
 - [L2Bridge 위험 프레임워크](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _2022년 7월 5일 - 바르텍 키에푸셰프스키(Bartek Kiepuszewski)_
 - ["미래가 멀티체인이 될 것이지만 크로스체인은 아닐 이유"](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _2022년 1월 8일 - 비탈릭 부테린(Vitalik Buterin)_

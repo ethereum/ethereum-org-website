@@ -1,7 +1,7 @@
 ---
-title: 이더리움의 에너지 소비량
-metaTitle: 이더리움 에너지 소비량
-description: 이더리움의 에너지 소비량을 이해하는 데 필요한 기본 정보입니다.
+title: "이더리움의 에너지 소비량"
+metaTitle: "이더리움 에너지 소비량"
+description: "이더리움의 에너지 소비량을 이해하는 데 필요한 기본 정보입니다."
 lang: ko
 ---
 
@@ -24,8 +24,8 @@ lang: ko
 | 작업증명(PoW) 이더리움        |                 21                  |           8,100배           |                                                                    [출처](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
 | Google              |                 19                  |           7,300배           |                                           [출처](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
 | 넷플릭스             |                0.457                |            176배            | [출처](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
-| 페이팔              |                0.26                 |            100배            |                                 [출처](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf>)                                  |
-| AirBnB              |                0.02                 |             8배             |                              [출처](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                              |
+| 페이팔              |                0.26                 |            100배            |                                 [출처](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1)>).pdf>)                                  |
+| AirBnB              |                0.02                 |             8배             |                              [출처](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final)>).pdf>)                              |
 | **지분 증명(PoS) 이더리움**    |             **0.0026**              |           **1배**           |                                                               [출처](https://carbon-ratings.com/eth-report-2022)                                                                |
 
 \*PC, 노트북, 게임 콘솔과 같은 최종 사용자 기기를 포함합니다.

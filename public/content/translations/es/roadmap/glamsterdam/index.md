@@ -294,13 +294,6 @@ La característica principal es ePBS (EIP-7732), que separa la pesada tarea de v
 
 Además, para la sostenibilidad a largo plazo, Glamsterdam introduce las listas de acceso a nivel de bloque (BAL). Esto habilita el procesamiento en paralelo y prepara a la L1 para manejar de forma segura límites de gas generales más altos en el futuro, lo que probablemente reducirá los costos de gas por transacción a medida que crezca la capacidad.
 
-### ¿Habrá algún cambio en mis contratos inteligentes existentes después de Glamsterdam?
-Los contratos existentes continuarán funcionando normalmente después de Glamsterdam. Es probable que los desarrolladores obtengan varias herramientas nuevas y deban revisar su uso de gas:
-
-- El aumento del tamaño máximo del contrato (o EIP-7954) permite a los desarrolladores desplegar aplicaciones más grandes, elevando el límite de tamaño máximo del contrato de aproximadamente 24 KiB a 64 KiB.
-- El despliegue previo de fábrica determinista (o EIP-7997) introduce un contrato de fábrica universal e integrado. Permite a los desarrolladores desplegar sus aplicaciones y billeteras de contratos inteligentes en exactamente la misma dirección en todas las cadenas EVM participantes.
-- Si tu aplicación depende de un rastreo complejo para encontrar transferencias de ETH, Las transferencias y quemas de ETH emiten un registro (o EIP-7708) te permitirá cambiar al uso de registros para una contabilidad más simple y confiable.
-- El aumento del costo de gas para la creación de estado (o EIP-8037) y la actualización del costo de gas para el acceso al estado (o EIP-8038) introducen nuevos modelos de sostenibilidad que cambiarán ciertos costos de despliegue de contratos, ya que la creación de nuevas cuentas o almacenamiento permanente tendrá una nueva tarifa fija estandarizada basada en el tamaño de los datos creados.
 ### ¿Cómo afectará Glamsterdam al almacenamiento de los nodos y a los requisitos de hardware? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 
 Múltiples EIP bajo consideración para Glamsterdam abordan la caída del rendimiento del crecimiento del estado:

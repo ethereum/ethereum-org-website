@@ -294,14 +294,6 @@ Evet, Glamsterdam büyük olasılıkla günlük kullanıcılar için ücretleri 
 
 Buna ek olarak, uzun vadeli sürdürülebilirlik için Glamsterdam, Blok Düzeyinde Erişim Listeleri (BAL'ler) sunar. Bu, paralel işlemeyi etkinleştirir ve L1'i gelecekte daha yüksek genel gaz limitlerini güvenli bir şekilde idare etmeye hazırlar, bu da kapasite büyüdükçe işlem başına gaz maliyetlerini muhtemelen azaltacaktır.
 
-### Glamsterdam sonrası mevcut akıllı sözleşmelerimde herhangi bir değişiklik olacak mı?
-
-Mevcut sözleşmeler Glamsterdam'dan sonra normal şekilde çalışmaya devam edecektir. Geliştiriciler muhtemelen birkaç yeni araç edinecek ve gaz kullanımlarını gözden geçirmelidir:
-
-- Maksimum sözleşme boyutunu artırma (veya EIP-7954), geliştiricilerin daha büyük uygulamalar dağıtmasına olanak tanıyarak maksimum sözleşme boyutu sınırını kabaca 24KiB'den 64KiB'ye çıkarır.
-- Deterministik Fabrika Ön Dağıtımı (veya EIP-7997), evrensel, yerleşik bir fabrika sözleşmesi sunar. Geliştiricilerin uygulamalarını ve akıllı sözleşme cüzdanlarını katılan tüm EVM zincirlerinde tam olarak aynı adrese dağıtmalarına olanak tanır.
-- Uygulamanız ETH transferlerini bulmak için karmaşık izlemeye dayanıyorsa, ETH transferleri ve yakımları bir günlük yayar (veya EIP-7708), daha basit ve güvenilir muhasebe için günlükleri kullanmaya geçmenize olanak tanır.
-- Durum oluşturma gaz maliyeti artışı (veya EIP-8037) ve durum erişimi gaz maliyeti güncellemesi (veya EIP-8038), yeni hesaplar veya kalıcı depolama oluşturmak, oluşturulan verilerin boyutuna bağlı olarak yeni bir standartlaştırılmış sabit ücrete sahip olacağından, belirli sözleşme dağıtım maliyetlerini değiştirecek yeni sürdürülebilirlik modelleri sunar.
 ### Glamsterdam düğüm depolama ve donanım gereksinimlerini nasıl etkileyecek? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 
 Glamsterdam için değerlendirilen birden fazla EIP, durum büyümesinin performans uçurumunu ele almaktadır:

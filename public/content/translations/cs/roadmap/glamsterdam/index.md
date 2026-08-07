@@ -285,13 +285,6 @@ Ano, Glamsterdam s největší pravděpodobností sníží poplatky pro běžné
 
 Kromě toho pro dlouhodobou udržitelnost zavádí Glamsterdam seznamy přístupů na úrovni bloku (BALs). To umožňuje paralelní zpracování a připravuje vrstvu 1 (l1) na bezpečné zvládnutí vyšších celkových limitů plynu v budoucnu, což pravděpodobně sníží náklady na gas na transakci s rostoucí kapacitou.
 
-### Dojde po Glamsterdamu k nějakým změnám v mých stávajících chytrých kontraktech?
-Stávající kontrakty budou po Glamsterdamu nadále normálně fungovat. Vývojáři pravděpodobně získají několik nových nástrojů a měli by zkontrolovat své využití gasu:
-
-- Zvýšení maximální velikosti kontraktu (neboli EIP-7954) umožňuje vývojářům nasazovat větší aplikace, čímž se zvyšuje limit maximální velikosti kontraktu zhruba z 24 KiB na 64 KiB.
-- Deterministické předběžné nasazení továrny (neboli EIP-7997) zavádí univerzální, vestavěný tovární kontrakt. Umožňuje vývojářům nasadit své aplikace a peněženky s chytrými kontrakty na přesně stejnou adresu napříč všemi zúčastněnými EVM řetězci.
-- Pokud vaše aplikace spoléhá na složité trasování k nalezení převodů ETH, Převody a spalování ETH emitují log (neboli EIP-7708) vám umožní přejít na používání logů pro jednodušší a spolehlivější účtování.
-- Zvýšení nákladů na gas za vytvoření stavu (neboli EIP-8037) a Aktualizace nákladů na gas za přístup ke stavu (neboli EIP-8038) zavádějí nové modely udržitelnosti, které změní určité náklady na nasazení kontraktu, protože vytváření nových účtů nebo trvalého úložiště bude mít nový standardizovaný fixní poplatek založený na velikosti vytvořených dat.
 ### Jak Glamsterdam ovlivní úložiště uzlů a hardwarové požadavky? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 
 Několik EIP zvažovaných pro Glamsterdam řeší výkonnostní propad růstu stavu:
