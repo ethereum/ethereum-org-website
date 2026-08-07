@@ -33,9 +33,9 @@ Diese Verbesserungen stellen sicher, dass Ethereum schnell, erschwinglich und de
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Hinweis: Dieser Artikel hebt derzeit eine Auswahl von EIPs hervor, deren Aufnahme in Glamsterdam in Betracht gezogen wird. Weitere Vorschläge, die aktiv in Devnets getestet werden, umfassen EIP-7778, EIP-7843, EIP-7976, EIP-7981 und EIP-8024. Die neuesten Status-Updates findest du beim [Glamsterdam-Upgrade auf Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Hinweis: Dieser Artikel hebt eine Auswahl von EIPs hervor, deren Aufnahme in Glamsterdam geplant ist. Weitere geplante Vorschläge, die in Devnets getestet werden, umfassen EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 und EIP-8282. Die neuesten Status-Updates findest du unter [Glamsterdam-Upgrade auf Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
-Wenn du ein EIP hinzufügen möchtest, das für Glamsterdam in Betracht gezogen wird, aber noch nicht auf dieser Seite steht, [erfahre hier, wie du zu ethereum.org beitragen kannst](/contributing/).
+Wenn du ein EIP hinzufügen möchtest, das für Glamsterdam in Betracht gezogen wird, aber noch nicht zu dieser Seite hinzugefügt wurde, [erfahre hier, wie du zu ethereum.org beitragen kannst](/contributing/).
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -44,10 +44,9 @@ Das Glamsterdam-Upgrade konzentriert sich auf drei Hauptziele:
 
 - Beschleunigung der Verarbeitung (Parallelisierung): Neuorganisation der Art und Weise, wie das Netzwerk Datenabhängigkeiten aufzeichnet, sodass es viele Transaktionen sicher gleichzeitig verarbeiten kann, anstatt in einer langsamen, sequenziellen Reihenfolge.
 - Erweiterung der Kapazität: Aufteilung der schweren Arbeit beim Erstellen und Verifizieren von Blöcken, wodurch das Netzwerk mehr Zeit erhält, größere Datenmengen zu verbreiten, ohne langsamer zu werden.
-- Verhinderung von Datenbankaufblähung (Nachhaltigkeit): Anpassung der Netzwerkgebühren, um die langfristigen Hardwarekosten für die Speicherung neuer Daten genau widerzuspiegeln, was zukünftige Erhöhungen des Gaslimits ermöglicht und gleichzeitig Leistungseinbußen der Hardware verhindert.
+- Verhinderung von Datenbankaufblähung (Nachhaltigkeit): Anpassung der Netzwerkgebühren, um die langfristigen Hardwarekosten für die Speicherung neuer Daten genau widerzuspiegeln, was zukünftige Erhöhungen des Gaslimits ermöglicht und gleichzeitig eine Verschlechterung der Hardwareleistung verhindert.
 
 Kurz gesagt wird Glamsterdam strukturelle Änderungen einführen, um sicherzustellen, dass das Netzwerk bei steigender Kapazität nachhaltig bleibt und die Leistung hoch bleibt.
-
 
 ## Layer 1 (L1) skalieren & parallele Verarbeitung {#scale-l1}
 
@@ -165,28 +164,25 @@ Da Blöcke von geslashten Proposern automatisch als ungültig abgelehnt werden, 
 
 **Ressourcen**: [Technische Spezifikation zu EIP-8045](https://eips.ethereum.org/EIPS/eip-8045)
 
-### Austritte die Konsolidierungswarteschlange nutzen lassen {#let-exits-use-the-consolidation-queue}
+### Erhöhung des Churn-Limits für Austritte und Konsolidierungen {#increase-exit-and-consolidation-churn}
 
-- Schließt ein Schlupfloch, das es Validatoren mit hohem Guthaben ermöglicht, das Netzwerk über die Konsolidierungswarteschlange schneller zu verlassen als kleinere Validatoren
-- Ermöglicht es regulären Austritten, in diese zweite Warteschlange überzulaufen, wenn sie freie Kapazitäten hat, was die Zeiten für Staking-Abhebungen in Zeiten hohen Aufkommens reduziert
-- Behält strenge Sicherheit bei, um zu vermeiden, dass die Kernsicherheitsgrenzen von Ethereum geändert oder das Netzwerk geschwächt wird
+- Reduziert die Abhebungszeiten beim Staking erheblich, indem die Austrittskapazität mit der Gesamtmenge der gestakten ETH skaliert, anstatt auf eine feste Rate begrenzt zu sein
+- Gibt Validator-Konsolidierungen ihre eigene dedizierte Warteschlangenkapazität, was den Übergang zu größeren, effizienteren Validatoren beschleunigt
+- Erhält die Netzwerksicherheit durch sorgfältig analysierte Sicherheitsparameter
 
-Seit das [Pectra-Upgrade](/roadmap/pectra) das maximale effektive Guthaben für Ethereum-Validatoren von 32 ETH auf 2.048 ETH erhöht hat, ermöglicht ein technisches Schlupfloch Validatoren mit hohem Guthaben, das Netzwerk über die Konsolidierungswarteschlange schneller zu verlassen als kleinere Validatoren.
+Das Churn-Limit von Ethereum ist ein Sicherheitslimit für die Rate, mit der Validatoren eintreten, austreten oder ihre gestakten ETH zusammenführen (konsolidieren) können, um sicherzustellen, dass die Sicherheit des Netzwerks niemals destabilisiert wird. Heute teilen sich Austritte und Aktivierungen ein einziges gedeckeltes Limit, sodass Staker in Zeiten hoher Nachfrage mit langen Wartezeiten rechnen müssen, um ihre ETH abzuheben. Konsolidierungen, bei denen Validatoren zu größeren mit bis zu 2.048 ETH verschmelzen (ermöglicht durch das [Pectra-Upgrade](/roadmap/pectra)), konkurrieren ebenfalls um diese begrenzte Kapazität, was bedeutet, dass die Konsolidierung des gesamten Validator-Sets bei der aktuellen Rate Jahre dauern würde.
 
-**Austritte die Konsolidierungswarteschlange nutzen lassen (oder EIP-8080)** demokratisiert die Konsolidierungswarteschlange für alle Staking-Austritte und schafft eine einzige, faire Schlange für alle.
+**Erhöhung des Churn-Limits für Austritte und Konsolidierungen (oder EIP-8061)** organisiert diese Limits in separate Spuren neu:
 
-Um aufzuschlüsseln, wie das heute funktioniert:
+- Validator-Aktivierungen behalten ihr bestehendes gedeckeltes Limit unverändert bei
+- Austritte sind nicht mehr gedeckelt und skalieren stattdessen mit der Gesamtmenge der gestakten ETH
+- Konsolidierungen erhalten ihre eigene dedizierte Kapazität, die etwa halb so groß ist wie das kombinierte Aktivierungs-Austritts-Limit
 
-- Das Churn-Limit von Ethereum ist ein Sicherheitslimit für die Rate, mit der Validatoren eintreten, austreten oder ihre gestakten ETH zusammenführen (konsolidieren) können, um sicherzustellen, dass die Sicherheit des Netzwerks niemals destabilisiert wird
-- Da eine Validator-Konsolidierung eine schwerere Aktion mit mehr beweglichen Teilen ist als ein Standard-Validator-Austritt, verbraucht sie einen größeren Teil dieses Sicherheitsbudgets (Churn-Limit)
-- Konkret schreibt das Protokoll vor, dass die genauen Sicherheitskosten eines Standard-Austritts zwei Drittel (2/3) der Kosten einer Konsolidierung betragen
+Bei den aktuellen Staking-Niveaus erhöht dies die Austrittskapazität um etwa das Vierfache und die Konsolidierungskapazität um etwa das Zweifache, was bedeutet, dass Staker ihre ETH in Zeiten hoher Nachfrage viel schneller abheben können und das Netzwerk schneller zu einem kleineren, effizienteren Validator-Set übergeht.
 
-Fairere Austrittswarteschlangen werden es Standard-Austritten ermöglichen, in Zeiten hoher Austrittsnachfrage ungenutzten Platz aus der Konsolidierungswarteschlange zu leihen, wobei ein „3 für 2“-Wechselkurs angewendet wird (für jeweils 2 ungenutzte Konsolidierungsplätze kann das Netzwerk sicher 3 Standard-Austritte verarbeiten). Dieser 3/2-Churn-Faktor gleicht die Nachfrage über die Konsolidierungs- und Austrittswarteschlangen hinweg aus.
+Da Stake schneller in das Netzwerk hinein- und herausbewegt werden kann, halbiert die Änderung in etwa die Zeit, die ein Knoten offline bleiben kann, bevor er einen aktuellen vertrauenswürdigen Checkpoint benötigt, um dem Netzwerk wieder sicher beizutreten (die Periode der schwachen Subjektivität, von etwa 15,7 Tagen auf etwa 7 Tage). Dieser Kompromiss wurde sorgfältig analysiert, um sicherzustellen, dass die Netzwerksicherheit aufrechterhalten wird.
 
-Die Demokratisierung des Zugangs zur Konsolidierungswarteschlange wird die Geschwindigkeit, mit der Benutzer ihren Stake in Zeiten hoher Nachfrage abheben können, um das bis zu 2,5-fache erhöhen, ohne die Netzwerksicherheit zu beeinträchtigen.
-
-**Ressourcen**: [Technische Spezifikation zu EIP-8080](https://eips.ethereum.org/EIPS/eip-8080)
-
+**Ressourcen**: [Technische Spezifikation zu EIP-8061](https://eips.ethereum.org/EIPS/eip-8061)
 
 ## Verbesserung der Benutzer- und Entwicklererfahrung {#improve-user-developer-experience}
 
