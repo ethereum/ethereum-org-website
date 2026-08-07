@@ -5,7 +5,6 @@ import type { QuizLevel, QuizzesSection } from "@/lib/types"
 import { cn } from "@/lib/utils/cn"
 
 import { GreenTickIcon } from "../icons/quiz"
-import Translation from "../Translation"
 import { Button } from "../ui/buttons/Button"
 import { Flex, Stack } from "../ui/flex"
 import { ListItem } from "../ui/list"
@@ -16,6 +15,10 @@ const LEVEL_STATUS: Record<QuizLevel, NonNullable<TagProps["status"]>> = {
   intermediate: "tag-yellow",
   advanced: "tag-red",
 }
+
+// Quiz titles are common-namespace keys, except those pointing into
+// learn-quizzes with this legacy prefix.
+const LEARN_QUIZZES_PREFIX = "learn-quizzes:"
 
 export type QuizzesListItemProps = Omit<QuizzesSection, "id"> & {
   isCompleted: boolean
@@ -32,19 +35,25 @@ const QuizItem = ({
   handleStart,
 }: QuizzesListItemProps) => {
   const t = useTranslations("learn-quizzes")
+  const tCommon = useTranslations("common")
+
+  const title = titleId.startsWith(LEARN_QUIZZES_PREFIX)
+    ? t(titleId.slice(LEARN_QUIZZES_PREFIX.length))
+    : tCommon(titleId)
 
   return (
     <ListItem
       className={cn(
+        "@container",
         isCompleted ? "text-body-medium" : "text-body",
-        "mb-0 border-b border-disabled py-4 font-bold [counter-increment:_list-counter] lg:px-4"
+        "border-b border-disabled py-4 font-bold [counter-increment:list-counter]"
       )}
     >
-      <Flex className="justify-between max-lg:flex-col lg:items-center">
-        <Stack className="max-lg:mb-5">
+      <Flex className="justify-between @max-lg:flex-col @lg:items-center">
+        <Stack className="@max-lg:mb-5">
           <Flex className="items-center gap-2">
             <span className="before:content-[counter(list-counter)_'._']">
-              <Translation id={titleId} />
+              {title}
             </span>
 
             {/* Show green tick if quizz was completed only */}
@@ -54,7 +63,7 @@ const QuizItem = ({
           {/* Labels */}
           <Flex className="gap-3 font-normal">
             {/* number of questions - label */}
-            <Tag className="lg:-ms-2">
+            <Tag className="@lg:-ms-2">
               {`${numberOfQuestions} ${t("questions")}`}
             </Tag>
 
@@ -64,15 +73,13 @@ const QuizItem = ({
         </Stack>
 
         {/* Start Button */}
-        <div className="max-lg:w-full">
-          <Button
-            variant="outline"
-            className="max-lg:w-full"
-            onClick={handleStart}
-          >
-            <Translation id="learn-quizzes:start" />
-          </Button>
-        </div>
+        <Button
+          variant="outline"
+          className="w-full @lg:w-auto"
+          onClick={handleStart}
+        >
+          {t("start")}
+        </Button>
       </Flex>
     </ListItem>
   )

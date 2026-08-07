@@ -3,8 +3,8 @@ import { useLocale, useTranslations } from "next-intl"
 import { CompletedQuizzes, QuizShareStats } from "@/lib/types"
 
 import Twitter from "@/components/icons/twitter.svg"
-import Translation from "@/components/Translation"
 
+import { cn } from "@/lib/utils/cn"
 import { formatDate } from "@/lib/utils/date"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -14,6 +14,7 @@ import { allQuizzesInOrder } from "../../data/quizzes"
 import { TrophyIcon } from "../icons/quiz"
 import { Button } from "../ui/buttons/Button"
 import { Center, Flex, HStack, Stack } from "../ui/flex"
+import { Grid } from "../ui/grid"
 import { ListItem, UnorderedList } from "../ui/list"
 import { Progress } from "../ui/progress"
 
@@ -80,109 +81,100 @@ const QuizzesStats = ({
   } = getFormattedStats(locale, averageScoresArray, communityStats)
 
   return (
-    <div>
-      <Stack className="gap-4 lg:mt-12 lg:gap-2">
-        {/* user stats */}
-        <div className="grid columns-1 gap-6 rounded-none border-none bg-background-highlight p-8 lg:columns-2 lg:gap-4 lg:rounded-lg">
-          <div className="order-1 self-center">
-            <span className="text-xl font-bold max-lg:text-center">
-              {t("your-total")}
-            </span>
-          </div>
-
-          <div className="order-3 lg:order-2 lg:justify-self-end">
-            <Button
-              variant="outline"
-              onClick={() =>
-                handleShare({
-                  score: totalCorrectAnswers,
-                  total: totalQuizzesPoints,
-                })
-              }
-              className="max-lg:w-full"
-            >
-              <Twitter />
-              {t("share-results")}
-            </Button>
-          </div>
-
-          <div className="order-2 lg:order-3 lg:col-span-2">
-            <Stack className="gap-2">
-              <HStack className="gap-4 max-lg:justify-center">
-                <Center className="size-16 rounded-full bg-primary">
-                  <TrophyIcon className="text-[35.62px] text-background" />
-                </Center>
-                <span className="text-5xl leading-base font-bold">
-                  {totalCorrectAnswers}
-                  <span className="text-body-medium">
-                    /{totalQuizzesPoints}
-                  </span>
-                </span>
-              </HStack>
-
-              <Progress
-                value={(totalCorrectAnswers / totalQuizzesPoints) * 100}
-                className="h-2.5 bg-primary-low-contrast [&>div]:bg-primary"
-              />
-
-              <Flex className="gap-x-10 max-lg:flex-col">
-                <span className="text-body-medium max-lg:mt-2">
-                  {t("average-score")} {formattedUserAverageScore}
-                </span>
-
-                <span className="text-body-medium">
-                  {t("completed")} {numberOfCompletedQuizzes}/
-                  {totalQuizzesNumber}
-                </span>
-              </Flex>
-            </Stack>
-          </div>
-        </div>
-
-        {/* community stats -- omitted entirely when Matomo data is unavailable */}
-        {communityStats && (
-          <Stack className="gap-6 border-none bg-background-highlight p-8 lg:rounded-lg">
-            <span className="text-xl font-bold">{t("community-stats")}</span>
-
-            <Flex className="m-0 gap-x-20 gap-y-6 max-md:flex-col" asChild>
-              <UnorderedList>
-                {(
-                  [
-                    {
-                      labelId: "average-score",
-                      value: formattedCollectiveAverageScore,
-                    },
-                    {
-                      labelId: "questions-answered",
-                      value: formattedCollectiveQuestionsAnswered,
-                    },
-                    {
-                      labelId: "retry",
-                      value: formattedCollectiveRetryRate,
-                    },
-                  ] satisfies Array<{ labelId: string; value: string }>
-                ).map(({ labelId, value }) => (
-                  <Stack key={labelId} className="m-0 gap-0" asChild>
-                    <ListItem>
-                      <span className="text-body">
-                        <Translation id={labelId} ns="learn-quizzes" />
-                      </span>
-                      <span>{value}</span>
-                    </ListItem>
-                  </Stack>
-                ))}
-              </UnorderedList>
-            </Flex>
-
-            {lastUpdated && (
-              <span className="text-sm text-body-medium">
-                {tCommon("last-updated")}: {lastUpdated}
-              </span>
-            )}
-          </Stack>
+    <Grid columns={2} size="wider">
+      {/* user stats */}
+      <Stack
+        className={cn(
+          "gap-space rounded-base bg-background-highlight p-8",
+          !communityStats && "md:col-span-2"
         )}
+      >
+        <Flex className="items-center justify-between gap-4 max-sm:flex-col max-sm:items-stretch">
+          <span className="text-xl font-bold">{t("your-total")}</span>
+
+          <Button
+            variant="outline"
+            onClick={() =>
+              handleShare({
+                score: totalCorrectAnswers,
+                total: totalQuizzesPoints,
+              })
+            }
+          >
+            <Twitter />
+            {t("share-results")}
+          </Button>
+        </Flex>
+
+        <Stack className="gap-2">
+          <HStack className="gap-4">
+            <Center className="size-16 rounded-full bg-primary">
+              <TrophyIcon className="text-4xl text-background" />
+            </Center>
+            <span className="text-h2 font-bold">
+              {totalCorrectAnswers}
+              <span className="text-body-medium">/{totalQuizzesPoints}</span>
+            </span>
+          </HStack>
+
+          <Progress
+            value={(totalCorrectAnswers / totalQuizzesPoints) * 100}
+            className="h-2.5 bg-primary-low-contrast [&>div]:bg-primary"
+          />
+
+          <Flex className="gap-x-10 gap-y-2 max-sm:flex-col">
+            <span className="text-body-medium">
+              {t("average-score")} {formattedUserAverageScore}
+            </span>
+
+            <span className="text-body-medium">
+              {t("completed")} {numberOfCompletedQuizzes}/{totalQuizzesNumber}
+            </span>
+          </Flex>
+        </Stack>
       </Stack>
-    </div>
+
+      {/* community stats -- omitted entirely when Matomo data is unavailable */}
+      {communityStats && (
+        <Stack className="gap-space rounded-base bg-background-highlight p-8">
+          <span className="text-xl font-bold">{t("community-stats")}</span>
+
+          <Flex className="m-0 gap-x-20 gap-y-6 max-md:flex-col" asChild>
+            <UnorderedList>
+              {(
+                [
+                  {
+                    labelId: "average-score",
+                    value: formattedCollectiveAverageScore,
+                  },
+                  {
+                    labelId: "questions-answered",
+                    value: formattedCollectiveQuestionsAnswered,
+                  },
+                  {
+                    labelId: "retry",
+                    value: formattedCollectiveRetryRate,
+                  },
+                ] satisfies Array<{ labelId: string; value: string }>
+              ).map(({ labelId, value }) => (
+                <Stack key={labelId} className="m-0 gap-0" asChild>
+                  <ListItem>
+                    <span className="text-body">{t(labelId)}</span>
+                    <span>{value}</span>
+                  </ListItem>
+                </Stack>
+              ))}
+            </UnorderedList>
+          </Flex>
+
+          {lastUpdated && (
+            <span className="text-sm text-body-medium">
+              {tCommon("last-updated")}: {lastUpdated}
+            </span>
+          )}
+        </Stack>
+      )}
+    </Grid>
   )
 }
 

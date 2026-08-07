@@ -8,10 +8,12 @@ import allQuizzesData from "@/data/quizzes"
 
 import { Stack } from "../ui/flex"
 import { OrderedList } from "../ui/list"
+import { Section } from "../ui/section"
 
 import QuizItem from "./QuizItem"
 
 type QuizzesListProps = {
+  sectionId: string
   userStats: UserStats
   content: QuizzesSection[]
   headingId: string
@@ -21,6 +23,7 @@ type QuizzesListProps = {
 }
 
 const QuizzesList = ({
+  sectionId,
   content,
   userStats,
   headingId,
@@ -28,13 +31,15 @@ const QuizzesList = ({
   quizHandler,
   modalHandler,
 }: QuizzesListProps) => (
-  <Stack className="gap-8 pt-12 max-lg:px-8">
-    <Stack className="gap-8">
+  // data-flow="skip" so the flow rhythm doesn't add margins between the two
+  // columns; spacing within the header column is set here instead.
+  <Section id={sectionId} variant="responsiveFlex" data-flow="skip">
+    <Stack className="gap-2 md:w-80 md:shrink-0 lg:w-96">
       <h2>{headingId}</h2>
       <p>{descriptionId}</p>
     </Stack>
 
-    <OrderedList className="m-0 list-none [counter-reset:_list-counter]">
+    <OrderedList className="ms-0 w-full max-w-3xl list-none [counter-reset:list-counter]">
       {content.map((listItem) => {
         const handleStart = () => {
           quizHandler(listItem.id)
@@ -59,7 +64,7 @@ const QuizzesList = ({
         )
       })}
     </OrderedList>
-  </Stack>
+  </Section>
 )
 
 export default QuizzesList

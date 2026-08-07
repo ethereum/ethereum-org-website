@@ -18,9 +18,10 @@ const meta = {
   title: "Molecules / Display Content / Quiz / QuizzesList",
   component: QuizzesListComponent,
   args: {
+    sectionId: quizzesSections[0].id,
     content: quizzesSections[0].quizzes,
-    headingId: "basics",
-    descriptionId: "basics-description",
+    headingId: quizzesSections[0].titleKey,
+    descriptionId: quizzesSections[0].descriptionKey,
     userStats: {
       score: 0,
       average: [],

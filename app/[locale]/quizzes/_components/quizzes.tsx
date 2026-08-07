@@ -5,7 +5,6 @@ import { useTranslations } from "next-intl"
 import { QuizKey, QuizStatus } from "@/lib/types"
 
 import ContentFeedback from "@/components/ContentFeedback"
-import { HubHero } from "@/components/Hero"
 import Github from "@/components/icons/github.svg"
 import MainArticle from "@/components/MainArticle"
 import QuizWidget from "@/components/Quiz/QuizWidget/QuizWidgetClient"
@@ -14,7 +13,7 @@ import QuizzesModal from "@/components/Quiz/QuizzesModal"
 import QuizzesStats from "@/components/Quiz/QuizzesStats"
 import { useLocalQuizData } from "@/components/Quiz/useLocalQuizData"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Flex, HStack, Stack } from "@/components/ui/flex"
+import { Flex } from "@/components/ui/flex"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -24,7 +23,6 @@ import type { QuizStatsData } from "@/data-layer/fetchers/fetchQuizStats"
 import { INITIAL_QUIZ } from "@/lib/constants"
 
 import { useDisclosure } from "@/hooks/useDisclosure"
-import HeroImage from "@/public/images/heroes/quizzes-hub-hero.png"
 
 const handleGHAdd = () =>
   trackCustomEvent({
@@ -39,7 +37,6 @@ const QuizzesPage = ({
   communityStats: QuizStatsData | null
 }) => {
   const t = useTranslations("learn-quizzes")
-  const tCommon = useTranslations("common")
 
   const [userStats, updateUserStats] = useLocalQuizData()
   const [quizStatus, setQuizStatus] = useState<QuizStatus>("neutral")
@@ -57,71 +54,60 @@ const QuizzesPage = ({
 
   return (
     <>
-      <MainArticle>
-        <HubHero
-          title={tCommon("quizzes-title")}
-          description={t("quizzes-subtitle")}
-          header={t("test-your-knowledge")}
-          heroImg={HeroImage}
+      <QuizzesModal
+        isQuizModalOpen={isOpen}
+        onQuizModalOpenChange={setValue}
+        quizStatus={quizStatus}
+      >
+        <QuizWidget
+          quizKey={currentQuiz}
+          currentHandler={setCurrentQuiz}
+          statusHandler={setQuizStatus}
+          updateUserStats={updateUserStats}
         />
-        <QuizzesModal
-          isQuizModalOpen={isOpen}
-          onQuizModalOpenChange={setValue}
-          quizStatus={quizStatus}
-        >
-          <QuizWidget
-            quizKey={currentQuiz}
-            currentHandler={setCurrentQuiz}
-            statusHandler={setQuizStatus}
-            updateUserStats={updateUserStats}
+      </QuizzesModal>
+
+      <main className="px-page pt-space-3x pb-page">
+        <MainArticle className="flow space-y-space-3x">
+          <QuizzesStats
+            communityStats={communityStats}
+            averageScoresArray={userStats.average}
+            completedQuizzes={userStats.completed}
+            totalCorrectAnswers={userStats.score}
           />
-        </QuizzesModal>
-        <div className="mb-12 lg:px-8 lg:py-4">
-          <Flex className="gap-x-20 max-lg:flex-col-reverse">
-            <Stack className="flex-1 gap-10">
-              <div>
-                {quizzesSections.map((section) => (
-                  <QuizzesList
-                    key={section.id}
-                    content={section.quizzes}
-                    headingId={t(section.titleKey)}
-                    descriptionId={t(section.descriptionKey)}
-                    {...commonQuizListProps}
-                  />
-                ))}
-              </div>
-              <Flex className="items-center justify-between bg-background-highlight p-8 max-xl:flex-col max-xl:gap-4 lg:rounded-lg">
-                <div className="max-xl:text-center">
-                  <p className="font-bold">{t("want-more-quizzes")}</p>
-                  <p>{t("contribute")}</p>
-                </div>
-                <ButtonLink
-                  href="/contributing/quizzes/"
-                  variant="outline"
-                  hideArrow
-                  onClick={handleGHAdd}
-                >
-                  <HStack className="gap-0">
-                    <Github className="me-2 text-2xl text-body" />
-                    {t("add-quiz")}
-                  </HStack>
-                </ButtonLink>
-              </Flex>
-            </Stack>
-            <div className="flex-1">
-              <QuizzesStats
-                communityStats={communityStats}
-                averageScoresArray={userStats.average}
-                completedQuizzes={userStats.completed}
-                totalCorrectAnswers={userStats.score}
-              />
+
+          {quizzesSections.map((section) => (
+            <QuizzesList
+              key={section.id}
+              sectionId={section.id}
+              content={section.quizzes}
+              headingId={t(section.titleKey)}
+              descriptionId={t(section.descriptionKey)}
+              {...commonQuizListProps}
+            />
+          ))}
+
+          <Flex
+            data-flow="cta"
+            className="max-w-3xl items-center justify-between gap-4 rounded-base bg-background-highlight p-page max-md:flex-col max-md:text-center"
+          >
+            <div>
+              <p className="font-bold">{t("want-more-quizzes")}</p>
+              <p>{t("contribute")}</p>
             </div>
+            <ButtonLink
+              href="/contributing/quizzes/"
+              variant="outline"
+              hideArrow
+              onClick={handleGHAdd}
+            >
+              <Github className="me-2 text-2xl" />
+              {t("add-quiz")}
+            </ButtonLink>
           </Flex>
-        </div>
-        <div className="w-full px-8 py-4">
-          <ContentFeedback />
-        </div>
-      </MainArticle>
+        </MainArticle>
+        <ContentFeedback />
+      </main>
     </>
   )
 }

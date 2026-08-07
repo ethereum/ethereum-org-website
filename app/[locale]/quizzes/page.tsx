@@ -7,6 +7,7 @@ import {
 
 import type { Lang, PageParams } from "@/lib/types"
 
+import HubHero from "@/components/Hero/HubHero"
 import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -16,13 +17,20 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { getQuizStats } from "@/data-layer"
 
 import QuizzesPage from "./_components/quizzes"
-import QuizzesPageJsonLD from "./page-jsonld"
+import PageJsonLD from "./page-jsonld"
+
+import heroImg from "@/public/images/heroes/quizzes-hub-hero.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
 
+  // Must precede any next-intl call, or the locale is read from headers and the
+  // page silently drops from static to dynamic rendering.
   setRequestLocale(locale)
+
+  const t = await getTranslations("learn-quizzes")
+  const tCommon = await getTranslations("common")
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -38,10 +46,20 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const communityStats = await getQuizStats()
 
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <QuizzesPageJsonLD locale={locale} contributors={contributors} />
-      <QuizzesPage communityStats={communityStats} />
-    </I18nProvider>
+    <>
+      <PageJsonLD locale={locale} contributors={contributors} />
+
+      <HubHero
+        heroImg={heroImg}
+        title={tCommon("quizzes-title")}
+        header={t("test-your-knowledge")}
+        description={t("quizzes-subtitle")}
+      />
+
+      <I18nProvider locale={locale} messages={messages}>
+        <QuizzesPage communityStats={communityStats} />
+      </I18nProvider>
+    </>
   )
 }
 
