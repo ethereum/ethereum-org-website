@@ -34,12 +34,12 @@ const QuizzesList = ({
   // data-flow="skip" so the flow rhythm doesn't add margins between the two
   // columns; spacing within the header column is set here instead.
   <Section id={sectionId} variant="responsiveFlex" data-flow="skip">
-    <Stack className="gap-2 md:w-80 md:shrink-0 lg:w-96">
+    <Stack className="flex-1 gap-2">
       <h2>{headingId}</h2>
       <p>{descriptionId}</p>
     </Stack>
 
-    <OrderedList className="ms-0 w-full max-w-3xl list-none [counter-reset:list-counter]">
+    <OrderedList className="ms-0 mb-0 flex-2 list-none overflow-hidden rounded-base border bg-background [counter-reset:list-counter]">
       {content.map((listItem) => {
         const handleStart = () => {
           quizHandler(listItem.id)

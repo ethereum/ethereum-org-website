@@ -2,6 +2,8 @@ import { useTranslations } from "next-intl"
 
 import type { QuizLevel, QuizzesSection } from "@/lib/types"
 
+import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
+
 import { cn } from "@/lib/utils/cn"
 
 import { GreenTickIcon } from "../icons/quiz"
@@ -42,14 +44,19 @@ const QuizItem = ({
     : tCommon(titleId)
 
   return (
-    <ListItem
-      className={cn(
-        isCompleted ? "text-body-medium" : "text-body",
-        "border-b border-disabled py-4 font-bold [counter-increment:list-counter]"
-      )}
-    >
-      <Flex className="justify-between max-sm:flex-col sm:items-center">
-        <Stack className="max-sm:mb-5">
+    // The whole row is clickable via LinkOverlay's ::before, the same pattern
+    // CardList uses. Overlaying the real Button keeps one tab stop and native
+    // keyboard handling, which a click handler on the row would not.
+    <LinkBox asChild>
+      <ListItem
+        className={cn(
+          isCompleted ? "text-body-medium" : "text-body",
+          "m-0 flex justify-between gap-4 p-4 font-bold transition-colors",
+          "not-last:border-b hover:bg-background-highlight",
+          "[counter-increment:list-counter] max-sm:flex-col sm:items-center"
+        )}
+      >
+        <Stack>
           <Flex className="items-center gap-2">
             <span className="before:content-[counter(list-counter)_'._']">
               {title}
@@ -62,25 +69,24 @@ const QuizItem = ({
           {/* Labels */}
           <Flex className="gap-3 font-normal">
             {/* number of questions - label */}
-            <Tag className="sm:-ms-2">
-              {`${numberOfQuestions} ${t("questions")}`}
-            </Tag>
+            <Tag>{`${numberOfQuestions} ${t("questions")}`}</Tag>
 
             {/* difficulty - label */}
             <Tag status={LEVEL_STATUS[level]}>{level.toUpperCase()}</Tag>
           </Flex>
         </Stack>
 
-        {/* Start Button */}
-        <Button
-          variant="outline"
-          className="w-full sm:w-auto"
-          onClick={handleStart}
-        >
-          {t("start")}
-        </Button>
-      </Flex>
-    </ListItem>
+        <LinkOverlay asChild>
+          <Button
+            variant="outline"
+            className="w-full sm:w-auto"
+            onClick={handleStart}
+          >
+            {t("start")}
+          </Button>
+        </LinkOverlay>
+      </ListItem>
+    </LinkBox>
   )
 }
 
