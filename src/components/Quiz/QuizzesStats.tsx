@@ -85,7 +85,7 @@ const QuizzesStats = ({
       {/* user stats */}
       <Stack
         className={cn(
-          "gap-space rounded-base bg-background-highlight p-8",
+          "gap-space rounded-base bg-background-highlight p-page",
           !communityStats && "md:col-span-2"
         )}
       >
@@ -136,7 +136,7 @@ const QuizzesStats = ({
 
       {/* community stats -- omitted entirely when Matomo data is unavailable */}
       {communityStats && (
-        <Stack className="gap-space rounded-base bg-background-highlight p-8">
+        <Stack className="gap-space rounded-base bg-background-highlight p-page">
           <span className="text-xl font-bold">{t("community-stats")}</span>
 
           <Flex className="m-0 gap-x-20 gap-y-6 max-md:flex-col" asChild>
