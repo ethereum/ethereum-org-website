@@ -62,6 +62,34 @@ test.describe("buildMatomoPayload", () => {
     expect(payload?.cdt).toBe("2025-02-18 12:00:01")
   })
 
+  test("records the normalized public URL for internal rewrites", () => {
+    const response = new Response(null, { status: 200 })
+    const payload = buildMatomoPayload(
+      new Request("https://example.com/en/ab-code/abc123/learn/", {
+        headers: { "user-agent": "AgentX" },
+      }),
+      response,
+      10,
+      config
+    )
+    expect(payload?.url).toBe("https://example.com/learn/")
+  })
+
+  test("tracks llms.txt and flags it as a document", () => {
+    const response = new Response(null, { status: 200 })
+    const payload = buildMatomoPayload(
+      new Request("https://example.com/llms.txt", {
+        headers: { "user-agent": "AgentX" },
+      }),
+      response,
+      10,
+      config
+    )
+    expect(payload).not.toBeNull()
+    expect(payload?.url).toBe("https://example.com/llms.txt")
+    expect(payload?.download).toBe("https://example.com/llms.txt")
+  })
+
   test("returns null when user agent is not allowlisted", () => {
     const cfg = getConfig({
       MATOMO_URL: "https://analytics.example.com",

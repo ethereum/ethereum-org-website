@@ -85,7 +85,7 @@ test.describe("Edge function handler", () => {
     )
   })
 
-  test("returns fallback when origin fails but still tracks", async () => {
+  test("rethrows when origin fails (platform bypass) but still tracks", async () => {
     setNetlifyEnv(env)
     fetchStub = stubGlobalFetch(() =>
       Promise.resolve(new Response(null, { status: 204 }))
@@ -94,17 +94,19 @@ test.describe("Edge function handler", () => {
       Promise.reject(new Error("boom"))
     )
 
-    const response = await handler(
-      new Request("https://example.com/path", {
-        headers: { "user-agent": "AgentX" },
-      }),
-      context
-    )
+    await expect(
+      handler(
+        new Request("https://example.com/path", {
+          headers: { "user-agent": "AgentX" },
+        }),
+        context
+      )
+    ).rejects.toThrow("boom")
 
-    expect(response.status).toBe(502)
     expect(tracked).toHaveLength(1)
     await tracked[0]
     expect(fetchStub.calls).toHaveLength(1)
+    expect(String(fetchStub.calls[0][0])).toContain("http_status=502")
     expect(consoleSpies.calls.error).toContainEqual([
       "Origin request failed",
       { error: "boom" },

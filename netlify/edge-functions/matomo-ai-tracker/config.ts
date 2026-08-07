@@ -25,8 +25,10 @@ const defaultAllowlistPattern = `(?:${defaultUserAgentPatterns
 const defaultHttpMethodAllowlist = ["GET"]
 const defaultDocumentPattern =
   "^[^?]+\\.(?:pdf|docx?|xlsx?|pptx?|csv|json|txt|xml|epub|mobi|azw3|mp3|mp4|mpe?g|webm|mov|avi|ogg|wav|flac|zip|gz|gzip|tgz|tar|bz2|tbz|7z|rar|dmg|exe|msi|apk|jar|md5|sig)(?:\\?|$)"
+// Deviates from upstream: "txt" removed from the exclude list so llms.txt
+// fetches are tracked (robots.txt is excluded at the netlify.toml layer)
 const defaultUrlExcludePattern =
-  "^[^?]+\\.(?:css|js|mjs|map|json|xml|webmanifest|manifest|png|jpe?g|gif|webp|avif|svg|ico|bmp|tiff?|woff2?|ttf|otf|eot|rss|atom|wasm|txt)(?:\\?|$)"
+  "^[^?]+\\.(?:css|js|mjs|map|json|xml|webmanifest|manifest|png|jpe?g|gif|webp|avif|svg|ico|bmp|tiff?|woff2?|ttf|otf|eot|rss|atom|wasm)(?:\\?|$)"
 
 export function getConfig(
   env: Partial<Env> & Record<string, string | undefined>

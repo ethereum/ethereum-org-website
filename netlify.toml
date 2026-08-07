@@ -65,12 +65,12 @@
     "/audio/*",
     "/code-examples/*",
     "/reports/*",
+    "/robots.txt",
     "/*.css",
     "/*.js",
     "/*.map",
     "/*.json",
     "/*.ico",
-    "/*.txt",
     "/*.xml",
     "/*.webmanifest"
   ]

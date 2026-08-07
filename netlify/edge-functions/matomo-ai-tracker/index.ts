@@ -95,14 +95,19 @@ export default async function handler(
       error: message,
     })
 
-    const fallback = new Response("Bad Gateway", {
-      status: 502,
-    })
-
     const durationMs = Date.now() - start
 
-    context.waitUntil(trackRequest(request, fallback, durationMs, config))
+    // Record the failure for the report's 5xx column, then rethrow so
+    // onError: "bypass" serves origin instead of a hand-rolled error page
+    context.waitUntil(
+      trackRequest(
+        request,
+        new Response(null, { status: 502 }),
+        durationMs,
+        config
+      )
+    )
 
-    return fallback
+    throw err
   }
 }
