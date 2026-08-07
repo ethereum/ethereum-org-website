@@ -47,39 +47,38 @@ lang: ar
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## أدوات لإنشاء التطبيقات اللامركزية (dapps) {#dapp-tools}
+## أدوات لإنشاء التطبيقات اللامركزية (dapps)
 
-**Scaffold-ETH _- جرب Solidity بسرعة باستخدام واجهة أمامية تتكيف مع عقدك الذكي._**
+**<span dir="ltr">Scaffold-ETH 2</span> _- جرب <span dir="ltr">Solidity</span> بسرعة باستخدام واجهة أمامية تتكيف مع عقدك الذكي._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [تطبيق لامركزي (dapp) كمثال](https://punkwallet.io/)
 
-**Create Eth App _- أنشئ تطبيقات مدعومة بإيثيريوم بأمر واحد._**
+**<span dir="ltr">Create Eth App</span> _- أنشئ تطبيقات مدعومة بإيثيريوم بأمر واحد._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**One Click Dapp _- أداة مجانية ومفتوحة المصدر (FOSS) لإنشاء واجهات أمامية للتطبيقات اللامركزية من [ABI](/glossary/#abi)._**
+**<span dir="ltr">One Click Dapp</span> _- أداة مجانية ومفتوحة المصدر (<span dir="ltr">FOSS</span>) لإنشاء واجهات أمامية للتطبيقات اللامركزية (dapps) من [ABI](/glossary/#abi)._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
-**Etherflow _- أداة مجانية ومفتوحة المصدر (FOSS) لمطوري إيثيريوم لاختبار العقدة الخاصة بهم، وتكوين وتصحيح استدعاءات RPC من المتصفح._**
+**<span dir="ltr">Etherflow</span> _- أداة مجانية ومفتوحة المصدر (<span dir="ltr">FOSS</span>) لمطوري إيثيريوم لاختبار عقدتهم، وإنشاء وتصحيح استدعاءات <span dir="ltr">RPC</span> من المتصفح._**
 
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
-**thirdweb _- حزم تطوير البرمجيات (SDKs) بكل لغة، وعقود ذكية، وأدوات، وبنية تحتية لتطوير Web3._**
+**<span dir="ltr">thirdweb</span> _- حزم تطوير البرمجيات (<span dir="ltr">SDKs</span>) بكل لغة، وعقود ذكية، وأدوات، وبنية تحتية لتطوير <span dir="ltr">Web3</span>._**
 
 - [الصفحة الرئيسية](https://thirdweb.com/)
 - [الوثائق](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Crossmint _- منصة تطوير Web3 على مستوى المؤسسات لنشر العقود الذكية، وتمكين مدفوعات بطاقات الائتمان والمدفوعات عبر السلاسل، واستخدام واجهات برمجة التطبيقات (APIs) لإنشاء وتوزيع وبيع وتخزين وتعديل الرموز غير القابلة للاستبدال (NFTs)._**
+**<span dir="ltr">Crossmint</span> _- منصة تطوير <span dir="ltr">Web3</span> على مستوى المؤسسات لنشر العقود الذكية، وتمكين مدفوعات بطاقات الائتمان والمدفوعات عبر السلاسل، واستخدام واجهات برمجة التطبيقات (<span dir="ltr">APIs</span>) لإنشاء وتوزيع وبيع وتخزين وتعديل الرموز غير القابلة للاستبدال (<span dir="ltr">NFTs</span>)._**
 
 - [crossmint.com](https://www.crossmint.com)
 - [الوثائق](https://docs.crossmint.com)
 - [ديسكورد](https://discord.com/invite/crossmint)
-
 ## قراءات إضافية {#further-reading}
 
 - [استكشف التطبيقات اللامركزية (dapps)](/apps)

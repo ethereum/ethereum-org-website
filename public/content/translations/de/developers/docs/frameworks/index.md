@@ -28,9 +28,9 @@ wie zum Beispiel:
 
 Bevor Sie sich mit Frameworks befassen, empfehlen wir Ihnen, zuerst unsere Einführung in [Dapps](/developers/docs/dapps/) und den [Ethereum-Stack](/developers/docs/ethereum-stack/) zu lesen.
 
-## Verfügbare Frameworks {#available-frameworks}
+## Verfügbare Frameworks
 
-**Foundry** - **_Foundry ist ein blitzschnelles, portables und modulares Toolkit für die Entwicklung von Ethereum-Anwendungen_**
+**Foundry** - **_Foundry ist ein blitzschnelles, portables und modulares Toolkit für die Entwicklung von Ethereum-Anwendungen._**
 
 - [Foundry installieren](https://book.getfoundry.sh/)
 - [Foundry-Buch](https://book.getfoundry.sh/)
@@ -42,7 +42,7 @@ Bevor Sie sich mit Frameworks befassen, empfehlen wir Ihnen, zuerst unsere Einf�
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-**Ape -** **_Das Smart-Contract-Entwicklungstool für Pythonistas, Datenwissenschaftler und Sicherheitsexperten._**
+**Ape -** **_Das Smart-Contract-Entwicklungstool für Python-Entwickler, Datenwissenschaftler und Sicherheitsexperten._**
 
 - [Dokumentation](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
@@ -59,21 +59,22 @@ Bevor Sie sich mit Frameworks befassen, empfehlen wir Ihnen, zuerst unsere Einf�
 - [Beispiele](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_Erstellen Sie Ethereum-basierte Apps mit einem einzigen Befehl. Bietet eine große Auswahl an UI-Frameworks und Vorlagen für dezentralisierte Finanzen (DeFi)._**
+**Create Eth App -** **_Erstellen Sie Ethereum-basierte Apps mit einem einzigen Befehl. Bietet eine große Auswahl an UI-Frameworks und Vorlagen für Dezentralisierte Finanzen (DeFi)._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Vorlagen](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-Eth -** **_Ethers.js + Hardhat + React-Komponenten und Hooks für Web3: Alles, was Sie benötigen, um mit der Entwicklung dezentraler Anwendungen auf Basis von Smart Contracts zu beginnen._**
+**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem und RainbowKit mit Hardhat oder Foundry nach Wahl: Hot-Reload für Verträge, benutzerdefinierte React-Hooks, eine Burner-Wallet und ein lokales Faucet sowie Erweiterungsmodule für die Full-Stack-Entwicklung von dezentralen Anwendungen (Dapps)._**
 
+- [Website](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Web3-Entwicklungsplattform, die es Blockchain-Entwicklern ermöglicht, Smart Contracts zu erstellen, zu testen, zu debuggen, zu überwachen und zu betreiben sowie die Dapp-UX zu verbessern._**
+**Tenderly -** **_Web3-Entwicklungsplattform, die es Blockchain-Entwicklern ermöglicht, Smart Contracts zu erstellen, zu testen, zu debuggen, zu überwachen und zu betreiben sowie die UX von Dapps zu verbessern._**
 
 - [Website](https://tenderly.co/)
 - [Dokumentation](https://docs.tenderly.co/)
 
-**The Graph -** **_The Graph zur effizienten Abfrage von Blockchain-Daten._**
+**The Graph -** **_The Graph für die effiziente Abfrage von Blockchain-Daten._**
 
 - [Website](https://thegraph.com/)
 - [Tutorial](/developers/tutorials/the-graph-fixing-web3-data-querying/)
@@ -111,9 +112,9 @@ Bevor Sie sich mit Frameworks befassen, empfehlen wir Ihnen, zuerst unsere Einf�
 
 - [Dokumentation](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
-- **Brownie wird derzeit nicht mehr gewartet**
+- **Brownie wird derzeit nicht mehr gepflegt**
 
-**OpenZeppelin SDK -** **_Das ultimative Smart-Contract-Toolkit: Eine Suite von Tools, die Ihnen bei der Entwicklung, Kompilierung, Aktualisierung, Bereitstellung und Interaktion mit Smart Contracts helfen._**
+**OpenZeppelin SDK -** **_Das ultimative Smart-Contract-Toolkit: Eine Suite von Tools, die Ihnen helfen, Smart Contracts zu entwickeln, zu kompilieren, zu aktualisieren, bereitzustellen und mit ihnen zu interagieren._**
 
 - [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
@@ -138,7 +139,7 @@ Bevor Sie sich mit Frameworks befassen, empfehlen wir Ihnen, zuerst unsere Einf�
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS Code-Erweiterung](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_Modulares und agnostisches Open-Source-Framework, das es Entwicklern dezentraler Anwendungen leicht macht, dezentrale Identitäten und überprüfbare Anmeldeinformationen in ihre Anwendungen zu integrieren._**
+**Veramo -** **_Modulares und agnostisches Open-Source-Framework, das es Entwicklern von Dapps leicht macht, dezentrale Identitäten und verifizierbare Nachweise in ihre Anwendungen zu integrieren._**
 
 - [Startseite](https://veramo.io/)
 - [Dokumentation](https://veramo.io/docs/basics/introduction)
@@ -146,6 +147,10 @@ Bevor Sie sich mit Frameworks befassen, empfehlen wir Ihnen, zuerst unsere Einf�
 - [Discord](https://discord.com/invite/FRRBdjemHV)
 - [NPM-Paket](https://www.npmjs.com/package/@veramo/core)
 
+**Moccasin -** **_Ein schnelles, pythonisches Smart-Contract-Entwicklungs- und Test-Framework für Vyper, basierend auf Titanoboa._**
+
+- [Dokumentation](https://cyfrin.github.io/moccasin/)
+- [GitHub](https://github.com/Cyfrin/moccasin)
 ## Weiterführende Literatur {#further-reading}
 
 _Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_

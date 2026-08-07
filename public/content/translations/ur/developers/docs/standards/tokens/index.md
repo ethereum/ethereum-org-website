@@ -29,10 +29,13 @@ incomplete: true
 
 [<span dir="ltr">ERC</span>](https://eips.ethereum.org/erc) تجاویز کی مکمل فہرست۔
 
-## مزید مطالعہ {#further-reading}
+## مزید مطالعہ
 
 _کسی ایسے کمیونٹی وسیلے کے بارے میں جانتے ہیں جس نے آپ کی مدد کی ہو؟ اس صفحے میں ترمیم کریں اور اسے شامل کریں!_
 
+- [ٹوکن انضمام کی چیک لسٹ](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md) - _Trail of Bits_
+- [اوپن زیپلن دستاویزات: ٹوکنز](https://docs.openzeppelin.com/contracts/5.x/tokens) - _اوپن زیپلن_
+- [ٹوکن انضمام کے خطرات (<span dir="ltr">PDF</span>)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _اوپن زیپلن_
 ## متعلقہ ٹیوٹوریلز {#related-tutorials}
 
 - [ٹوکن انضمام کی چیک لسٹ](/developers/tutorials/token-integration-checklist/) _– ٹوکنز کے ساتھ تعامل کرتے وقت غور کرنے والی چیزوں کی ایک چیک لسٹ۔_

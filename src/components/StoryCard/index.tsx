@@ -27,7 +27,7 @@ type StoryCardProps = {
 }
 
 /**
- * A single community story card with a flip toggle (English <-> original
+ * A single community story card with a flip toggle (localized <-> original
  * language) and an optional read-more expander. Self-contained state so it
  * can be dropped into any layout (single-column list on /10years, masonry on
  * /stories).
@@ -38,12 +38,15 @@ const StoryCard = ({
   expandable = true,
   showDate = true,
 }: StoryCardProps) => {
-  const t = useTranslations("common")
+  const t = useTranslations("component-story-card")
   const [isFlipped, setIsFlipped] = useState(false)
   const [isExpanded, setIsExpanded] = useState(false)
   const [isFading, setIsFading] = useState(false)
 
-  const hasOriginal = !!story.storyOriginal
+  // No flip when the localized copy matches the original (e.g. an English
+  // submission viewed in English, or a locale still falling back to English)
+  const hasOriginal =
+    !!story.storyOriginal && story.storyOriginal !== story.story
   const showOriginal = isFlipped && hasOriginal
 
   const handleFlip = () => {
@@ -97,7 +100,7 @@ const StoryCard = ({
                 expandable && !isExpanded && "line-clamp-3"
               )}
             >
-              {showOriginal ? story.storyOriginal : story.storyEnglish}
+              {showOriginal ? story.storyOriginal : story.story}
             </p>
             {expandable && !isExpanded && (
               <div className="mb-2">
@@ -111,7 +114,7 @@ const StoryCard = ({
                     eventCategory: "community-stories",
                   }}
                 >
-                  {t("story-card-read-more")}
+                  {t("read-more")}
                 </Button>
               </div>
             )}
@@ -120,9 +123,7 @@ const StoryCard = ({
           {hasOriginal && (
             <div>
               <p className="text-xs text-body-medium">
-                {showOriginal
-                  ? t("story-card-original-language")
-                  : t("story-card-english-translation")}
+                {showOriginal ? t("original-language") : t("translation")}
               </p>
               <Button
                 onClick={handleFlip}
@@ -134,9 +135,7 @@ const StoryCard = ({
                   eventCategory: "community-stories",
                 }}
               >
-                {showOriginal
-                  ? t("story-card-show-english")
-                  : t("story-card-show-original")}
+                {showOriginal ? t("show-translation") : t("show-original")}
               </Button>
             </div>
           )}

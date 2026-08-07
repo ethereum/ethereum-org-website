@@ -14,6 +14,11 @@ module.exports = [
   ["/cli", "/developers/"],
   ["/greeter", "/developers/"],
   ["/roadmap/vision", "/roadmap/"],
+  ["/roadmap/future-proofing", "/roadmap/security/"],
+  [
+    "/roadmap/future-proofing/quantum-resistance",
+    "/roadmap/security/quantum-resistance/",
+  ],
   ["/search", "/"],
   ["/garden", "/roadmap/"],
   ["/download", "/wallets/find-wallet/"],
@@ -126,7 +131,19 @@ module.exports = [
   ["/dapps", "/apps/"],
   [
     "/contributing/translation-program/translation-guide",
-    "/contributing/translation-program/faq/",
+    "/contributing/translation-program/",
+  ],
+  [
+    "/contributing/translation-program/faq",
+    "/contributing/translation-program/",
+  ],
+  [
+    "/contributing/translation-program/how-to-translate",
+    "/contributing/translation-program/",
+  ],
+  [
+    "/contributing/translation-program/mission-and-vision",
+    "/contributing/translation-program/",
   ],
   [
     "/contributing/translation-program/content-versions",
@@ -227,6 +244,7 @@ module.exports = [
   ["/developers/docs/privacy-enhancements", "/privacy/ethereum/"],
   ["/developers/docs/wallets", "/wallets/"],
   ["/blog", "https://blog.ethereum.org"],
+  ["/latest/feed.xml", "/latest/feed/"],
   // Storybook (Chromatic) convenience redirects
   ["/storybook", "https://master--63b7ea99632763723c7f4d6b.chromatic.com/"],
   ["/storybook/dev", "https://dev--63b7ea99632763723c7f4d6b.chromatic.com/"],

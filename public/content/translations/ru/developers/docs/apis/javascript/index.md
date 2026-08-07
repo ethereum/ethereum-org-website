@@ -237,7 +237,7 @@ ethers.utils.formatEther(balance)
 - [Служебные функции Web3js](https://docs.web3js.org/api/web3-utils)
 - [Служебные функции Ethers](https://docs.ethers.org/v6/api/utils/)
 
-## Доступные библиотеки {#available-libraries}
+## Доступные библиотеки
 
 **Web3.js —** **_JavaScript API для Эфириума._**
 
@@ -253,7 +253,7 @@ ethers.utils.formatEther(balance)
 **The Graph —** **_Протокол для индексирования данных Эфириума и IPFS и их запроса с использованием GraphQL._**
 
 - [The Graph](https://thegraph.com)
-- [Обозреватель Graph](https://thegraph.com/explorer)
+- [Graph Explorer](https://thegraph.com/explorer)
 - [Документация](https://thegraph.com/docs)
 - [GitHub](https://github.com/graphprotocol)
 - [Дискорд](https://thegraph.com/discord)
@@ -263,10 +263,20 @@ ethers.utils.formatEther(balance)
 - [Документация](https://www.alchemy.com/docs)
 - [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
 
-**Viem —** **_Интерфейс TypeScript для Эфириума._**
+**viem —** **_Интерфейс TypeScript для Эфириума._**
 
 - [Документация](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
+
+**wagmi —** **_Библиотека хуков React для Эфириума, созданная на базе viem._**
+
+- [Документация](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit —** **_Библиотека React для добавления подключения кошелька к децентрализованным приложениям (dapp), созданная на базе wagmi и viem._**
+
+- [Документация](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
 
 **Codex —** **_API обогащенных данных блокчейна в реальном времени для десятков сетей._**
 
@@ -279,7 +289,6 @@ ethers.utils.formatEther(balance)
 
 - [Документация](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
-
 ## Дополнительная литература {#further-reading}
 
 _Знаете ресурс сообщества, который вам помог? Отредактируйте эту страницу и добавьте его!_

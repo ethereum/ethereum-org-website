@@ -1,5 +1,5 @@
 import { Globe, Info } from "lucide-react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import { FilterOption, Lang, WalletData } from "@/lib/types"
 
@@ -15,8 +15,6 @@ import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 import { getLocaleFormattedDate } from "@/lib/utils/date"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 const SocialLink = (props) => (
   <InlineLink
@@ -38,7 +36,7 @@ const WalletSubComponent = ({
 }: WalletSubComponentProps) => {
   const locale = useLocale()
 
-  const { t } = useTranslation("page-wallets-find-wallet")
+  const t = useTranslations("page-wallets-find-wallet")
   const walletFiltersOptions: FilterOption[] = useWalletFilters()
 
   const walletFilterDisplayOrder = [

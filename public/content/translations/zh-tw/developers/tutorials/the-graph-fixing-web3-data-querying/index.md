@@ -84,7 +84,7 @@ GameContract.events.BetPlaced({
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 
-![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.gif)
+![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.mp4#910x692)
 
 這兩張圖片幾乎捕捉了 GraphQL 的精髓。透過右邊的查詢，我們可以精確定義我們想要的資料，因此我們可以在一次請求中獲得所有內容，而且不多不少正是我們需要的。GraphQL 伺服器會處理所有所需資料的獲取，因此對於前端消費者來說非常容易使用。如果你有興趣，[這裡有一個很好的解釋](https://www.apollographql.com/blog/graphql-explained)，說明伺服器究竟是如何處理查詢的。
 

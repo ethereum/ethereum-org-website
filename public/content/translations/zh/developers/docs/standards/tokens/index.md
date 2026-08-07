@@ -29,10 +29,13 @@ incomplete: true
 
 [ERC](https://eips.ethereum.org/erc) 提案的完整列表。
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读
 
-_知道对您有帮助的社区资源吗？编辑本页面并添加它！_
+_知道有什么对您有帮助的社区资源吗？编辑本页面并添加它！_
 
+- [代币集成清单](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md) - _Trail of Bits_
+- [欧本齐柏林文档：代币](https://docs.openzeppelin.com/contracts/5.x/tokens) - _欧本齐柏林_
+- [代币集成的危险 (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _欧本齐柏林_
 ## 相关教程 {#related-tutorials}
 
 - [代币集成清单](/developers/tutorials/token-integration-checklist/) _– 与代币交互时需要考虑的事项清单。_

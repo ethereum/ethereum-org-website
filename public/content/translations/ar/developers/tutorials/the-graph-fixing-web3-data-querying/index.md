@@ -84,7 +84,7 @@ GameContract.events.BetPlaced({
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 
-![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.gif)
+![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.mp4#910x692)
 
 تلتقط الصورتان إلى حد كبير جوهر `GraphQL`. باستخدام الاستعلام الموجود على اليمين، يمكننا تحديد البيانات التي نريدها بالضبط، لذلك نحصل على كل شيء في طلب واحد ولا شيء أكثر مما نحتاجه بالضبط. يتعامل خادم `GraphQL` مع جلب جميع البيانات المطلوبة، لذلك من السهل جداً على جانب المستهلك في الواجهة الأمامية استخدامه. [هذا شرح رائع](https://www.apollographql.com/blog/graphql-explained) لكيفية تعامل الخادم بالضبط مع الاستعلام إذا كنت مهتماً.
 

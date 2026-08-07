@@ -41,9 +41,11 @@ import heroImg from "@/public/images/wallets/wallet-hero.png"
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations("page-wallets")
 
+  // Set locale before next-intl APIs so on-demand renders stay static
   setRequestLocale(locale)
+
+  const t = await getTranslations("page-wallets")
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -385,6 +387,9 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  // Set locale before next-intl APIs so on-demand renders stay static
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-wallets")
 

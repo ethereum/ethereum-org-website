@@ -59,9 +59,6 @@
   "page-collectibles-translations-250": "Значок за 250 слов",
   "page-collectibles-translations-50000": "Значок за 50 000 слов",
   "page-collectibles-translations-badge-desc": "На любой язык.",
-  "page-collectibles-translations-desc": "Большинство пользователей не говорят по-английски, поэтому крайне важно помогать переводить наши статьи на другие языки, опыт перевода не требуется.",
-  "page-collectibles-translations-instructions-1": "Зарегистрируйтесь на <a href=\"https://crowdin.com/project/ethereum-org\">Crowdin</a>",
-  "page-collectibles-translations-instructions-2": "Выберите язык",
-  "page-collectibles-translations-instructions-3": "Начните переводить",
+  "page-collectibles-translations-desc": "Эти значки отмечают прошлый вклад в Программу переводов ethereum.org, которая завершает свою работу и больше не проводит онбординг новых переводчиков.",
   "page-collectibles-translations-title": "Переводы"
 }

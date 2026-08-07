@@ -64,7 +64,7 @@ lang: ar
 - قاموا بتخزين حصة للتصويت على قرارات الحبكة مباشرة في المشغل
 - ربحوا رمز <span dir="ltr">ERC-20</span> مميز (رمز الانتباه الخاص بنا) 
 
-![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4)
+![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4#800x400)
 
 تم إصدار رمز <span dir="ltr">ERC-20</span> المميز على منحنى ترابط. كلما كنت مبكرًا وأكثر تفاعلاً، زادت أرباحك. تمت عمليات التصويت (مثل تسمية الشخصية الرئيسية ميراي) عبر <span dir="ltr">Snapshot</span>. 
 

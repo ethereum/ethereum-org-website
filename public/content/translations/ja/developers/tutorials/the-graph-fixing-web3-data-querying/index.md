@@ -84,7 +84,7 @@ GameContract.events.BetPlaced({
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 
-![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.gif)
+![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.mp4#910x692)
 
 この2つの画像は、GraphQLの本質をよく表しています。右側のクエリを使用すると、必要なデータを正確に定義できるため、1回のリクエストですべてを取得でき、必要なもの以外は取得しません。GraphQLサーバーが必要なすべてのデータの取得を処理するため、フロントエンドのコンシューマー側にとって非常に使いやすくなっています。興味がある場合は、サーバーがクエリを正確に処理する方法について[こちらでわかりやすく説明されています](https://www.apollographql.com/blog/graphql-explained)。
 

@@ -29,10 +29,13 @@ Estos son algunos de los estándares de tokens más populares en Ethereum:
 
 La lista completa de propuestas de [ERC](https://eips.ethereum.org/erc).
 
-## Lecturas adicionales {#further-reading}
+## Lecturas adicionales
 
-_¿Conoces algún recurso de la comunidad que te haya servido de ayuda? ¡Edita esta página y añádelo!_
+_¿Conoces algún recurso de la comunidad que te haya ayudado? ¡Edita esta página y añádelo!_
 
+- [Lista de verificación de integración de tokens](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md) - _Trail of Bits_
+- [Documentación de OpenZeppelin: Tokens](https://docs.openzeppelin.com/contracts/5.x/tokens) - _OpenZeppelin_
+- [Los peligros de la integración de tokens (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _OpenZeppelin_
 ## Tutoriales relacionados {#related-tutorials}
 
 - [Lista de verificación de integración de tokens](/developers/tutorials/token-integration-checklist/) _– Una lista de verificación de aspectos a tener en cuenta al interactuar con tokens._

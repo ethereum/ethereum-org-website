@@ -8,6 +8,7 @@ import { numberFormat } from "@/lib/utils/numbers"
 
 import allQuizzesData, {
   ethereumBasicsQuizzes,
+  howEthereumWorksQuizzes,
   usingEthereumQuizzes,
 } from "@/data/quizzes"
 
@@ -30,7 +31,12 @@ export const getNumberOfCompletedQuizzes = (quizzes: CompletedQuizzes) =>
     .filter((v) => v).length
 
 export const getNextQuiz = (currentQuiz?: string) => {
-  const allQuizzes = [...ethereumBasicsQuizzes, ...usingEthereumQuizzes]
+  // Every hub section must be listed, or its quizzes have no "next quiz"
+  const allQuizzes = [
+    ...ethereumBasicsQuizzes,
+    ...usingEthereumQuizzes,
+    ...howEthereumWorksQuizzes,
+  ]
   const nextQuiz = allQuizzes.find((quiz) => quiz.id === currentQuiz)
 
   return nextQuiz ? nextQuiz.next : undefined

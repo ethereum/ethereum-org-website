@@ -32,35 +32,31 @@ published: 2021-10-25
 
 イーサリアムチェーンにリクエストを送信する方法はたくさんあります。ここではシンプルにするため、ブロックチェーン開発者向けプラットフォームおよびAPIであるAlchemyの無料アカウントを使用します。これにより、自分でノードを実行することなくイーサリアムチェーンと通信できるようになります。Alchemyには監視や分析のための開発者ツールも備わっており、このチュートリアルではこれらを活用して、スマート・コントラクトのデプロイの内部で何が起こっているのかを理解します。
 
-### アプリとAPIキーの作成 {#create-your-app-and-api-key}
+### アプリとAPIキーの作成
+Alchemyアカウントを作成したら、アプリを作成してAPIキーを生成できます。これにより、Sepoliaテストネットにリクエストを送信できるようになります。テストネットに馴染みがない場合は、[ネットワークの選択に関するAlchemyのガイド](https://www.alchemy.com/docs/choosing-a-web3-network)をお読みください。
 
-Alchemyアカウントを作成したら、アプリを作成してAPIキーを生成できます。これにより、ゴエリテストネットへのリクエストが可能になります。テストネットに馴染みがない場合は、[ネットワークの選択に関するAlchemyのガイド](https://www.alchemy.com/docs/choosing-a-web3-network)をお読みください。
-
-Alchemyのダッシュボードで、ナビゲーションバーの**Apps**ドロップダウンを見つけ、**Create App**をクリックします。
+Alchemyのダッシュボードで、ナビゲーションバーにある**Apps**ドロップダウンを見つけ、**Create App**をクリックします。
 
 ![Hello world create app](./hello-world-create-app.png)
 
-アプリに「_Hello World_」という名前を付け、短い説明を書きます。環境（Environment）として**Staging**を、ネットワークとして**Goerli**を選択します。
+アプリに「_Hello World_」という名前を付け、短い説明を記述します。環境として**Staging**を、ネットワークとして**Sepolia**を選択します。
 
 ![create app view hello world](./create-app-view-hello-world.png)
 
-_注: 必ず**Goerli**を選択してください。そうしないと、このチュートリアルは機能しません。_
+_注: 必ず**Sepolia**を選択してください。そうしないと、このチュートリアルは機能しません。_
 
-<strong>Create app</strong>をクリックします。アプリが下の表に表示されます。
+**Create app**をクリックします。アプリが下の表に表示されます。
+### イーサリアムアカウントの作成
 
-### イーサリアムアカウントの作成 {#create-an-ethereum-account}
+トランザクションを送受信するには、イーサリアムのアカウントが必要です。ここでは、ユーザーがイーサリアムのアカウントアドレスを管理できるブラウザ内の仮想ウォレットであるメタマスクを使用します。
 
-トランザクションを送受信するには、イーサリアムアカウントが必要です。ここでは、ユーザーがブラウザ上でイーサリアムアカウントのアドレスを管理できる仮想ウォレットであるメタマスクを使用します。
+メタマスクのアカウントは、[こちら](https://metamask.io/download)から無料でダウンロードして作成できます。アカウントを作成する際、またはすでにアカウントを持っている場合は、右上のネットワークを「Sepoliaテストネットワーク」に切り替えてください（実際の資金を扱わないようにするためです）。
+### ステップ4: フォーセットからイーサを追加する
 
-メタマスクのアカウントは[こちら](https://metamask.io/download)から無料でダウンロードして作成できます。アカウントを作成する際、またはすでにアカウントを持っている場合は、右上で「Goerli Test Network」に切り替えてください（実際の資金を扱わないようにするためです）。
+スマート・コントラクトをテストネットワークにデプロイするには、テスト用のETHが必要です。SepoliaネットワークでETHを取得するには、Sepoliaのフォーセットにアクセスし、Sepoliaのアカウントアドレスを入力します。試すことができるオプションのリストについては、[テストネットワークのページ](/developers/docs/networks/#sepolia)を参照してください。
 
-### ステップ4: フォーセットからイーサを追加する {#step-4-add-ether-from-a-faucet}
-
-テストネットワークにスマート・コントラクトをデプロイするには、テスト用のETHが必要です。ゴエリネットワークでETHを取得するには、ゴエリのフォーセットにアクセスし、ゴエリアカウントのアドレスを入力します。最近、ゴエリのフォーセットは少し不安定になることがあるため、試せるオプションのリストについては[テストネットワークのページ](/developers/docs/networks/#goerli)を参照してください。
-
-_注: ネットワークの混雑状況により、これには少し時間がかかる場合があります。_
+_注: ネットワークの混雑状況により、これにはしばらく時間がかかる場合があります。_
 ``
-
 ### ステップ5: 残高を確認する {#step-5-check-your-balance}
 
 ウォレットにETHがあることを再確認するために、[Alchemyのサンドボックスツール](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)を使用して[eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance)リクエストを送信してみましょう。これにより、ウォレット内のETHの量が返されます。詳細については、[コンポーザーツールの使用方法に関するAlchemyの短いチュートリアル](https://youtu.be/r6sjRxBZJuU)を確認してください。
@@ -240,7 +236,7 @@ npm install dotenv --save
 - 秘密鍵をエクスポートするには、[こちらの手順](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key)に従ってください
 - HTTP Alchemy API URLの取得については以下を参照してください
 
-![Animated walkthrough of getting an Alchemy API key](./get-alchemy-api-key.gif)
+![Animated walkthrough of getting an Alchemy API key](./get-alchemy-api-key.mp4#1280x696)
 
 `.env`ファイルは次のようになります。
 
@@ -341,12 +337,12 @@ const hello_world = await HelloWorld.deploy()
 
 `ContractFactory`で`deploy()`を呼び出すとデプロイが開始され、`Contract`オブジェクトに解決される`Promise`が返されます。これは、スマート・コントラクトの各関数のメソッドを持つオブジェクトです。
 
-### ステップ16: コントラクトをデプロイする {#step-16-deploy-our-contract}
+### ステップ16: コントラクトをデプロイする
 
-ついにスマート・コントラクトをデプロイする準備が整いました！コマンドラインに移動して以下を実行します。
+いよいよスマート・コントラクトをデプロイする準備が整いました！コマンドラインに移動して、以下を実行します。
 
 ```bash
-npx hardhat run scripts/deploy.js --network goerli
+npx hardhat run scripts/deploy.js --network sepolia
 ```
 
 すると、次のような出力が表示されるはずです。
@@ -357,11 +353,11 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 **このアドレスを保存してください**。チュートリアルの後半で使用します。
 
-[ゴエリのEtherscan](https://goerli.etherscan.io)にアクセスしてコントラクトのアドレスを検索すると、正常にデプロイされたことが確認できるはずです。トランザクションは次のようになります。
+[Sepolia Etherscan](https://sepolia.etherscan.io)にアクセスしてコントラクトのアドレスを検索すると、正常にデプロイされたことが確認できるはずです。トランザクションは次のようになります。
 
 ![](./etherscan-contract.png)
 
-`From`のアドレスはメタマスクのアカウントアドレスと一致し、`To`のアドレスには**Contract Creation**と表示されます。トランザクションをクリックすると、`To`フィールドにコントラクトのアドレスが表示されます。
+`From`アドレスはあなたのメタマスクのアカウントアドレスと一致し、`To`アドレスには**Contract Creation**と表示されます。トランザクションをクリックすると、`To`フィールドにコントラクトのアドレスが表示されます。
 
 ![](./etherscan-transaction.png)
 
@@ -371,8 +367,7 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 ![](./hello-world-explorer.png)
 
-ここでは、`.deploy()`関数を呼び出したときに、Hardhat/Ethersが内部で実行したいくつかのJSON-RPCメソッドを確認できます。ここで重要な2つのメソッドは、ゴエリチェーンにコントラクトを書き込むためのリクエストである[`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction)と、ハッシュを指定してトランザクションに関する情報を読み取るためのリクエストである[`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash)です。トランザクションの送信について詳しくは、[Web3を使用したトランザクションの送信に関するチュートリアル](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)を確認してください。
-
+ここでは、`.deploy()`関数を呼び出したときに、Hardhat/Ethersが内部で作成したいくつかのJSON-RPCメソッドを確認できます。ここで重要な2つのメソッドは、Sepoliaチェーンにコントラクトを書き込むためのリクエストである[`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction)と、ハッシュを指定してトランザクションに関する情報を読み取るためのリクエストである[`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash)です。トランザクションの送信について詳しくは、[Web3を使用したトランザクションの送信に関するチュートリアル](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)を確認してください。
 ## パート2: スマート・コントラクトとのやり取り {#part-2-interact-with-your-smart-contract}
 
 ゴエリ・ネットワークへのスマート・コントラクトのデプロイに成功したので、次はそれとやり取りする方法を学びましょう。
@@ -513,11 +508,11 @@ main()
 
 11行目で、返されたトランザクションオブジェクトに対して`.wait()`を呼び出していることに注意してください。これにより、関数を終了する前に、スクリプトがブロックチェーン上でトランザクションがマイニングされるのを待機するようになります。`.wait()`の呼び出しが含まれていない場合、スクリプトはコントラクト内の更新された`message`の値を認識できない可能性があります。
 
-### 新しいメッセージの読み取り {#read-the-new-message}
+### 新しいメッセージの読み取り
 
 [前のステップ](#read-the-init-message)を繰り返して、更新された`message`の値を読み取ることができるはずです。少し時間を取って、その新しい値を出力するために必要な変更を加えられるか試してみてください！
 
-ヒントが必要な場合、現時点での`interact.js`ファイルは次のようになります。
+ヒントが必要な場合、この時点での`interact.js`ファイルは次のようになります。
 
 ```javascript
 // interact.js
@@ -530,14 +525,14 @@ const contract = require("../artifacts/contracts/HelloWorld.sol/HelloWorld.json"
 
 // プロバイダー - Alchemy
 const alchemyProvider = new ethers.providers.AlchemyProvider(
-  (network = "goerli"),
+  (network = "sepolia"),
   API_KEY
 )
 
-// サイナー - あなた
+// 署名者 - あなた
 const signer = new ethers.Wallet(PRIVATE_KEY, alchemyProvider)
 
-// コントラクトインスタンス
+// コントラクトのインスタンス
 const helloWorldContract = new ethers.Contract(
   CONTRACT_ADDRESS,
   contract.abi,
@@ -561,7 +556,7 @@ main()
 
 あとはスクリプトを実行するだけで、古いメッセージ、更新ステータス、そして新しいメッセージがターミナルに出力されるのを確認できるはずです！
 
-`npx hardhat run scripts/interact.js --network goerli`
+`npx hardhat run scripts/interact.js --network sepolia`
 
 ```
 The message is: Hello World!
@@ -569,8 +564,7 @@ Updating the message...
 The new message is: This is the new message.
 ```
 
-スクリプトの実行中、新しいメッセージが読み込まれる前に`Updating the message...`のステップで少し時間がかかることに気づくかもしれません。これはマイニングプロセスによるものです。マイニング中のトランザクションの追跡に興味がある場合は、[Alchemyのメンプール](https://dashboard.alchemy.com/mempool)にアクセスしてトランザクションのステータスを確認してください。トランザクションがドロップされた場合は、[Goerli Etherscan](https://goerli.etherscan.io)を確認し、トランザクションハッシュを検索するのも役立ちます。
-
+このスクリプトを実行している間、新しいメッセージが読み込まれる前に`Updating the message...`のステップで読み込みに少し時間がかかることに気づくかもしれません。これはマイニングプロセスによるものです。マイニング中のトランザクションの追跡に興味がある場合は、[Alchemy mempool](https://dashboard.alchemy.com/mempool)にアクセスしてトランザクションのステータスを確認してください。トランザクションがドロップされた場合は、[Sepolia Etherscan](https://sepolia.etherscan.io)を確認し、トランザクションハッシュを検索することも役立ちます。
 ## パート3: スマート・コントラクトをEtherscanに公開する {#part-3-publish-your-smart-contract-to-etherscan}
 
 スマート・コントラクトを完成させるための大変な作業はすべて終わりました。次はそれを世界と共有する番です！
@@ -640,17 +634,16 @@ module.exports = {
 }
 ```
 
-#### Etherscanでスマート・コントラクトを検証する {#verify-your-smart-contract-on-etherscan}
-
+#### Etherscanでスマート・コントラクトを検証する
 すべてのファイルが保存され、すべての`.env`変数が正しく設定されていることを確認します。
 
 コントラクトのアドレスとデプロイ先のネットワークを渡して、`verify`タスクを実行します。
 
 ```text
-npx hardhat verify --network goerli DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
+npx hardhat verify --network sepolia DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
 ```
 
-`DEPLOYED_CONTRACT_ADDRESS`が、ゴエリのテストネットにデプロイされたスマート・コントラクトのアドレスであることを確認してください。また、最後の引数（`'Hello World!'`）は、[パート1のデプロイ手順](#step-15-write-our-deploy-script)で使用したのと同じ文字列値である必要があります。
+`DEPLOYED_CONTRACT_ADDRESS`が、Sepoliaテストネットワークにデプロイされたスマート・コントラクトのアドレスであることを確認してください。また、最後の引数（`'Hello World!'`）は、[パート1のデプロイ手順](#step-15-write-our-deploy-script)で使用したのと同じ文字列値である必要があります。
 
 すべてがうまくいけば、ターミナルに次のメッセージが表示されます。
 
@@ -661,11 +654,10 @@ for verification on Etherscan. Waiting for verification result...
 
 
 Successfully verified contract HelloWorld on Etherscan.
-https://goerli.etherscan.io/address/<contract-address>#contracts
+https://sepolia.etherscan.io/address/<contract-address>#contracts
 ```
 
 おめでとうございます！あなたのスマート・コントラクトのコードがEtherscanに公開されました！
-
 ### Etherscanでスマート・コントラクトを確認しましょう！ {#check-out-your-smart-contract-on-etherscan}
 
 ターミナルに表示されたリンクにアクセスすると、Etherscanに公開されたスマート・コントラクトのコードとABIを確認できるはずです！
@@ -944,24 +936,25 @@ const web3 = createAlchemyWeb3(alchemyKey)
 
 Hello Worldスマート・コントラクトを読み込むには、そのコントラクトアドレスとABIが必要です。これらは両方とも、[このチュートリアルのパート3](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)を完了していればEtherscanで見つけることができます。
 
-#### EtherscanからコントラクトABIを取得する方法 {#how-to-get-your-contract-abi-from-etherscan}
+#### EtherscanからコントラクトABIを取得する方法
 
-このチュートリアルのパート3をスキップした場合は、アドレス[0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code)のHelloWorldコントラクトを使用できます。そのABIは[こちら](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code)にあります。
+このチュートリアルのパート3をスキップした場合は、まず独自のHelloWorldコントラクトをデプロイして検証してください。次に、[Sepolia Etherscan](https://sepolia.etherscan.io)でコントラクトのページを開き、そのABIをコピーします。
 
-コントラクトABIは、コントラクトがどの関数を呼び出すかを指定し、関数が期待する形式でデータを返すことを保証するために必要です。コントラクトABIをコピーしたら、`src`ディレクトリに`contract-abi.json`というJSONファイルとして保存しましょう。
+コントラクトABIは、コントラクトがどの関数を呼び出すかを指定し、その関数が期待する形式でデータを返すことを保証するために必要です。コントラクトABIをコピーしたら、`src`ディレクトリに`contract-abi.json`という名前のJSONファイルとして保存しましょう。
 
 contract-abi.jsonはsrcフォルダーに保存する必要があります。
 
-コントラクトアドレス、ABI、およびAlchemy Web3エンドポイントが揃ったので、[contractメソッド](https://docs.web3js.org/api/web3-eth-contract/class/Contract)を使用してスマート・コントラクトのインスタンスを読み込むことができます。コントラクトABIを`interact.js`ファイルにインポートし、コントラクトアドレスを追加します。
+コントラクトのアドレス、ABI、およびAlchemy Web3エンドポイントが揃ったので、[contractメソッド](https://docs.web3js.org/api/web3-eth-contract/class/Contract)を使用してスマート・コントラクトのインスタンスを読み込むことができます。コントラクトABIを`interact.js`ファイルにインポートし、コントラクトのアドレスを追加します。
 
 ```javascript
 // interact.js
 
 const contractABI = require("../contract-abi.json")
-const contractAddress = "0x6f3f635A9762B47954229Ea479b4541eAF402A6A"
+// ここにコントラクトのアドレスを使用します
+const contractAddress = "0x..."
 ```
 
-これでようやく`helloWorldContract`変数のコメントを解除し、AlchemyWeb3エンドポイントを使用してスマート・コントラクトを読み込むことができます。
+これでようやく`helloWorldContract`変数のコメントを解除し、Alchemy Web3エンドポイントを使用してスマート・コントラクトを読み込むことができます。
 
 ```javascript
 // interact.js
@@ -971,7 +964,7 @@ export const helloWorldContract = new web3.eth.Contract(
 )
 ```
 
-まとめると、`interact.js`の最初の12行は次のようになります。
+おさらいすると、`interact.js`の最初の12行は次のようになります。
 
 ```javascript
 // interact.js
@@ -991,7 +984,6 @@ export const helloWorldContract = new web3.eth.Contract(
 ```
 
 コントラクトが読み込まれたので、`loadCurrentMessage`関数を実装できます！
-
 #### `interact.js`ファイルでの`loadCurrentMessage`の実装 {#implementing-loadcurrentmessage-in-your-interact-js-file}
 
 この関数は非常にシンプルです。コントラクトから読み取るために、シンプルな非同期Web3呼び出しを行います。この関数は、スマート・コントラクトに保存されているメッセージを返します。
@@ -1118,14 +1110,12 @@ useEffect(async () => {
 
 イーサリアムでのトランザクションの仕組みについてさらに詳しく知りたい場合は、イーサリアム財団の[こちらのページ](/developers/docs/transactions/)を確認してください。
 
-#### メタマスクのダウンロード {#download-metamask}
+#### メタマスクのダウンロード
 
-[こちら](https://metamask.io/download)から無料でメタマスクをダウンロードしてアカウントを作成できます。アカウントを作成する際、またはすでにアカウントを持っている場合は、右上の「Goerli Test Network」に切り替えてください（実際のお金を扱わないようにするためです）。
+[こちら](https://metamask.io/download)から無料でメタマスクをダウンロードし、アカウントを作成できます。アカウントを作成する際、またはすでにアカウントをお持ちの場合は、右上のネットワークを「Sepoliaテストネットワーク」に切り替えてください \(実際の資金を扱わないようにするためです\)。
+#### フォーセットからイーサを追加する
 
-#### フォーセットからイーサを追加する {#add-ether-from-a-faucet}
-
-イーサリアムブロックチェーンでトランザクションに署名するには、偽のETHが必要です。ETHを取得するには、[FaucETH](https://fauceth.komputing.org)にアクセスしてゴエリアカウントアドレスを入力し、「Request funds」をクリックして、ドロップダウンで「Ethereum Testnet Goerli」を選択し、最後に「Request funds」ボタンをもう一度クリックします。すぐにメタマスクアカウントにETHが表示されるはずです！
-
+イーサリアムのブロックチェーン上でトランザクションに署名するには、テスト用のETHが必要です。ETHを取得するには、[テストネットワークのページ](/developers/docs/networks/#sepolia)に記載されているSepoliaのフォーセットにアクセスし、Sepoliaのアカウントアドレスを入力します。すぐにメタマスクのアカウントにETHが反映されるはずです！
 #### 残高の確認 {#check-your-balance}
 
 残高があることを再確認するために、[Alchemyのサンドボックスツール](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)を使用して[eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance)リクエストを行ってみましょう。これにより、ウォレット内のETHの量が返されます。メタマスクのアカウントアドレスを入力して「Send Request」をクリックすると、次のような応答が表示されるはずです。

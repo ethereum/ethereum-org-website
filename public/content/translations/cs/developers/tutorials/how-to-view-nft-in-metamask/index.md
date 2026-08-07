@@ -19,7 +19,7 @@ Jako předpoklad byste již měli mít nainstalovaný MetaMask na mobilu a měl 
 
 V horní části aplikace stiskněte tlačítko „Wallet“ (Peněženka), po kterém budete vyzváni k výběru sítě. Vzhledem k tomu, že naše NFT bylo vyraženo v síti Sepolia, budete chtít jako svou síť vybrat Sepolia.
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
 
 ## Krok 2: Přidejte svůj sběratelský předmět do MetaMasku {#add-nft-to-metamask}
 
@@ -29,6 +29,6 @@ Jakmile budete v síti Sepolia, vyberte záložku „Collectibles“ (Sběratels
 
 Možná budete muset několikrát obnovit stránku, abyste své NFT viděli — ale bude tam <Emoji text="😄" size={1} />!
 
-![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
 
 Gratulujeme! Úspěšně jste vyrazili NFT a nyní si ho můžete zobrazit! Nemůžeme se dočkat, až uvidíme, jak vezmete svět NFT útokem!

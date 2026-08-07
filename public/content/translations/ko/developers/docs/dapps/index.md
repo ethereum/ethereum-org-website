@@ -47,9 +47,7 @@ dapp을 소개하려면, 더 나은 용어가 없으므로 dapp의 백엔드라�
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## dapp 생성 도구 {#dapp-tools}
-
-**Scaffold-ETH _- 스마트 컨트랙트에 맞춰 조정되는 프론트엔드를 사용하여 Solidity를 빠르게 실험해 보세요._**
+**Scaffold-ETH 2 _- 스마트 컨트랙트에 맞게 조정되는 프론트엔드를 사용하여 Solidity를 빠르게 실험해 보세요._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [예제 dapp](https://punkwallet.io/)
@@ -74,12 +72,11 @@ dapp을 소개하려면, 더 나은 용어가 없으므로 dapp의 백엔드라�
 - [문서](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Crossmint _- 스마트 컨트랙트를 배포하고, 신용카드 및 크로스 체인 결제를 활성화하며, API를 사용하여 NFT를 생성, 배포, 판매, 저장 및 편집할 수 있는 엔터프라이즈급 Web3 개발 플랫폼입니다._**
+**Crossmint _- 스마트 컨트랙트를 배포하고, 신용카드 및 크로스 체인 결제를 지원하며, API를 사용하여 NFT를 생성, 배포, 판매, 저장 및 편집할 수 있는 엔터프라이즈급 Web3 개발 플랫폼입니다._**
 
 - [crossmint.com](https://www.crossmint.com)
 - [문서](https://docs.crossmint.com)
 - [디스코드](https://discord.com/invite/crossmint)
-
 ## 더 읽을거리 {#further-reading}
 
 - [dapp 탐색하기](/apps)

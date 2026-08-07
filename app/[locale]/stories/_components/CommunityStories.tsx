@@ -92,9 +92,9 @@ const CommunityStories = ({ stories }: CommunityStoriesProps) => {
       {/* CSS multi-column gives true masonry packing with zero JS, so the
           server and client render identical markup (no hydration mismatch). */}
       <div className="gap-6 sm:columns-2 lg:columns-3 xl:columns-4">
-        {visibleStories.map((story, index) => (
+        {visibleStories.map((story) => (
           <StoryCard
-            key={`${story.name}-${index}`}
+            key={story.storyKey}
             story={story}
             expandable={false}
             showDate={false}
@@ -111,6 +111,7 @@ const CommunityStories = ({ stories }: CommunityStoriesProps) => {
                 Math.min(n + STORIES_SHOWN, filteredStories.length)
               )
             }
+            className="max-sm:w-full"
             variant="outline"
             customEventOptions={{
               eventAction: "click",

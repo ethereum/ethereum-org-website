@@ -21,14 +21,13 @@ sidebarDepth: 2
 
 `/ip4/192.168.22.27/tcp/33000/p2p/5t7Nv7dG2d6ffbvAiewVsEwWweU3LdebSqX2y1bPrW8br`
 
-## Enode {#enode}
+## Enode
 
-enode 是一种使用 URL 地址格式来标识以太坊节点的方法。十六进制的节点 ID 编码在 URL 的用户名部分，并使用 @ 符号与主机分隔。主机名只能指定为 IP 地址；不允许使用 DNS 名称。主机名部分中的端口是 TCP 监听端口。如果 TCP 和 UDP（发现）端口不同，则将 UDP 端口指定为查询参数“discport”。
+Enode 是一种使用 URL 地址格式来标识以太坊节点的方法。十六进制的节点 ID 编码在 URL 的用户名部分，并使用 @ 符号与主机分隔。规范仅将主机名定义为 IP 地址；然而，大多数客户端（如 Geth 和贝苏）也在此处接受 DNS 名称，并在启动时将其解析为 IP 地址。这是特定于客户端的行为，而不是标准的一部分。主机名部分中的端口是 TCP 监听端口。如果 TCP 和 UDP（发现）端口不同，则 UDP 端口将指定为查询参数“discport”。
 
 在以下示例中，节点 URL 描述了一个 IP 地址为 `10.3.58.6`、TCP 端口为 `30303` 且 UDP 发现端口为 `30301` 的节点。
 
 `enode://6f8a80d14311c39f35f516fa664deaaaa13e85b2f7493f37f6144d86991ec012937307647bd3b9a82abe2974e1407241d54947bbb39763a4cac9f77166ad92a0@10.3.58.6:30303?discport=30301`
-
 ## 以太坊节点记录 (ENR) {#enr}
 
 以太坊节点记录 (ENR) 是以太坊上网络地址的标准化格式。它们取代了 multiaddr 和 enode。它们特别有用，因为它们允许节点之间进行更多的信息交换。ENR 包含签名、序列号以及详细说明用于生成和验证签名的身份方案的字段。ENR 还可以填充组织为键值对的任意数据。这些键值对包含节点的 IP 地址以及有关节点能够使用的子协议的信息。共识客户端使用[特定的 ENR 结构](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#enr-structure)来识别引导节点，并且还包含一个 `eth2` 字段，其中包含有关当前以太坊分叉和证明 gossip 子网的信息（这会将节点连接到一组特定的对等节点，这些对等节点的证明会被聚合在一起）。

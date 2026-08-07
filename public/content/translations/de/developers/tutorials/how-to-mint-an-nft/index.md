@@ -77,7 +77,7 @@ Sobald du ein Konto erstellt hast:
 
 Für die eher visuellen Lerner sind die obigen Schritte hier zusammengefasst:
 
-![How to upload your image to Pinata](./instructionsPinata.gif)
+![How to upload your image to Pinata](./instructionsPinata.mp4#712x376)
 
 Nun wollen wir ein weiteres Dokument auf Pinata hochladen. Aber bevor wir das tun, müssen wir es erstellen!
 
@@ -105,7 +105,7 @@ Du kannst die Daten im JSON gerne ändern. Du kannst den Abschnitt „attributes
 
 Sobald du mit der Bearbeitung der JSON-Datei fertig bist, speichere sie und lade sie auf Pinata hoch, indem du dieselben Schritte wie beim Hochladen des Bildes befolgst.
 
-![How to upload your nft-metadata.json to Pinata](./uploadPinata.gif)
+![How to upload your nft-metadata.json to Pinata](./uploadPinata.mp4#1280x676)
 
 ## Schritt 5: Eine Instanz deines Vertrags erstellen {#instance-contract}
 

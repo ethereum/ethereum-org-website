@@ -59,9 +59,6 @@
   "page-collectibles-translations-250": "Huy hiệu 250 từ",
   "page-collectibles-translations-50000": "Huy hiệu 50.000 từ",
   "page-collectibles-translations-badge-desc": "Sang bất kỳ ngôn ngữ nào.",
-  "page-collectibles-translations-desc": "Hầu hết người dùng không nói tiếng Anh, do đó việc giúp dịch các bài viết của chúng tôi sang các ngôn ngữ khác là rất quan trọng, không cần kinh nghiệm dịch thuật.",
-  "page-collectibles-translations-instructions-1": "Đăng ký trên <a href=\"https://crowdin.com/project/ethereum-org\">Crowdin</a>",
-  "page-collectibles-translations-instructions-2": "Chọn ngôn ngữ",
-  "page-collectibles-translations-instructions-3": "Bắt đầu dịch",
+  "page-collectibles-translations-desc": "Những huy hiệu này công nhận các đóng góp trước đây cho Chương trình Dịch thuật ethereum.org, chương trình này đang dần khép lại và không còn tiếp nhận dịch giả mới.",
   "page-collectibles-translations-title": "Bản dịch"
 }

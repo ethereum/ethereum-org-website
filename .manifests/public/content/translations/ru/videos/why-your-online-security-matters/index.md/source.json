@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/why-your-online-security-matters/index.md",
+  "generatedAt": "2026-07-23T00:40:13.503Z",
+  "rootHash": "5333840ffe8b",
+  "tree": {
+    "contentHash": "5000639aee26",
+    "anchorHash": "9ff7a0954a62",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "d0ae56dbb8d8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "713c2fd4298c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "79094821b992"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "2e9289a1d9eb"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d18aaabaf086"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "0cb1dd1d18fd"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "089343fc4bc0"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d4e11841abf2"
+      },
+      "prose:1": {
+        "contentHash": "ebe4973a11f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "deb6e23c175a"
+      },
+      "prose:2": {
+        "contentHash": "720bf8273b79",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "youve-got-nothing-to-hide-right-000": {
+        "contentHash": "53349642ff57",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "c0b75324faf2",
+        "children": {
+          "_label": {
+            "contentHash": "c0b75324faf2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4c2cfe4a2a3c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-right-to-privacy-130": {
+        "contentHash": "d3ec494d9008",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "5517c4efb210",
+        "children": {
+          "_label": {
+            "contentHash": "5517c4efb210",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "bbdc144b0975",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "youve-got-nothing-to-hide-right-000",
+      "the-right-to-privacy-130"
+    ]
+  },
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+}

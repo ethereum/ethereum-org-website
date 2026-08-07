@@ -71,7 +71,7 @@ Inaweza kufanya hesabu, kuunda sarafu, kuhifadhi data, kufua [NFTs](/glossary/#n
 
 - [Sarafu thabiti (Stablecoins)](/stablecoins/)
 - [Kuunda na kusambaza mali za kipekee za kidijitali](/nft/)
-- [Soko la kubadilisha fedha la kiotomatiki na wazi](/get-eth/#dex)
+- [Soko la kubadilisha fedha la kiotomatiki na wazi](/defi/#swaps)
 - [Michezo iliyogatuliwa](/apps/categories/gaming)
 - [Sera ya bima inayolipa kiotomatiki](https://etherisc.com/)
 - [Kiwango kinachoruhusu watu kuunda sarafu zilizobinafsishwa, zinazoingiliana](/developers/docs/standards/tokens/)

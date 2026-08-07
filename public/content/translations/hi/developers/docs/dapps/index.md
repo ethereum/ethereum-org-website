@@ -47,9 +47,9 @@ dapps का परिचय देने के लिए, हमें स्�
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## dapps बनाने के लिए टूल {#dapp-tools}
+## विकेंद्रीकृत एप्लिकेशन (dapp) बनाने के लिए टूल
 
-**Scaffold-ETH _- आपके स्मार्ट अनुबंध के अनुकूल फ्रंटएंड का उपयोग करके Solidity के साथ तेज़ी से प्रयोग करें।_**
+**Scaffold-ETH 2 _- आपके स्मार्ट अनुबंध के अनुकूल होने वाले फ्रंटएंड का उपयोग करके Solidity के साथ तेज़ी से प्रयोग करें।_**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [उदाहरण dapp](https://punkwallet.io/)
@@ -58,7 +58,7 @@ dapps का परिचय देने के लिए, हमें स्�
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**One Click Dapp _- [ABI](/glossary/#abi) से dapp फ्रंटएंड जनरेट करने के लिए FOSS टूल।_**
+**One Click Dapp _- एक [ABI](/glossary/#abi) से dapp फ्रंटएंड जनरेट करने के लिए FOSS टूल।_**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
@@ -74,12 +74,11 @@ dapps का परिचय देने के लिए, हमें स्�
 - [दस्तावेज़ीकरण](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Crossmint _- स्मार्ट अनुबंधों को तैनात करने, क्रेडिट-कार्ड और क्रॉस चेन भुगतान सक्षम करने, और NFT बनाने, वितरित करने, बेचने, संग्रहीत करने और संपादित करने के लिए API का उपयोग करने के लिए एंटरप्राइज़-ग्रेड Web3 विकास प्लेटफ़ॉर्म।_**
+**Crossmint _- स्मार्ट अनुबंध तैनात करने, क्रेडिट-कार्ड और क्रॉस-चेन भुगतान सक्षम करने, और NFT बनाने, वितरित करने, बेचने, संग्रहीत करने और संपादित करने के लिए API का उपयोग करने के लिए एंटरप्राइज़-ग्रेड Web3 विकास प्लेटफ़ॉर्म।_**
 
 - [crossmint.com](https://www.crossmint.com)
 - [दस्तावेज़ीकरण](https://docs.crossmint.com)
 - [डिस्कॉर्ड](https://discord.com/invite/crossmint)
-
 ## आगे की पढ़ाई {#further-reading}
 
 - [dapps एक्सप्लोर करें](/apps)

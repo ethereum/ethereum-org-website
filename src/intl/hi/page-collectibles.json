@@ -59,9 +59,6 @@
   "page-collectibles-translations-250": "250 शब्दों का बैज",
   "page-collectibles-translations-50000": "50,000 शब्दों का बैज",
   "page-collectibles-translations-badge-desc": "किसी भी भाषा में।",
-  "page-collectibles-translations-desc": "अधिकांश उपयोगकर्ता अंग्रेजी नहीं बोलते हैं, इसलिए हमारे लेखों का अन्य भाषाओं में अनुवाद करने में मदद करना महत्वपूर्ण है, इसके लिए किसी अनुवाद अनुभव की आवश्यकता नहीं है।",
-  "page-collectibles-translations-instructions-1": "<a href=\"https://crowdin.com/project/ethereum-org\">Crowdin</a> पर रजिस्टर करें",
-  "page-collectibles-translations-instructions-2": "भाषा चुनें",
-  "page-collectibles-translations-instructions-3": "अनुवाद शुरू करें",
+  "page-collectibles-translations-desc": "ये बैज ethereum.org अनुवाद कार्यक्रम में पिछले योगदानों को मान्यता देते हैं, जो अब बंद हो रहा है और नए अनुवादकों की ऑनबोर्डिंग नहीं कर रहा है।",
   "page-collectibles-translations-title": "अनुवाद"
 }

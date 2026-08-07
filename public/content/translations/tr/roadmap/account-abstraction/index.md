@@ -2,6 +2,7 @@
 title: Hesap soyutlama
 description: Ethereum'un kullanıcı hesaplarını daha basit ve daha güvenli hale getirme planlarına genel bir bakış
 lang: tr
+template: roadmap
 summaryPoints:
   - Hesap soyutlama, akıllı sözleşme cüzdanları oluşturmayı çok daha kolay hale getirir
   - Akıllı sözleşme cüzdanları, Ethereum hesaplarına erişimi yönetmeyi çok daha kolay hale getirir

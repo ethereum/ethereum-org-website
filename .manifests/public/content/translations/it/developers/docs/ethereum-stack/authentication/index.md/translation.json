@@ -1,0 +1,225 @@
+{
+  "version": 1,
+  "locale": "it",
+  "translatedAt": "2026-07-22T22:50:47.037Z",
+  "englishManifestHash": "c5bb429c96a2",
+  "placeholderOrder": [
+    "LINK-f48efd",
+    "LINK-a64d8b",
+    "LINK-b091a8",
+    "LINK-d5c791",
+    "CODEBLOCK-71c845",
+    "LINK-3a9ad3",
+    "LINK-35fc3d",
+    "LINK-49e87f",
+    "CODEBLOCK-6343fa",
+    "CODEBLOCK-46d959",
+    "LINK-a96bca",
+    "LINK-3ac8fe",
+    "LINK-92cae4",
+    "LINK-a05703",
+    "CODE-ec92be",
+    "CODE-21a31f",
+    "CODEBLOCK-6a9056",
+    "LINK-a4d8c4",
+    "CODE-4decc2",
+    "LINK-addf9b",
+    "LINK-96d6a9",
+    "LINK-32f2dc",
+    "LINK-a20897",
+    "LINK-8fdf35",
+    "LINK-2eb649",
+    "LINK-89c662",
+    "LINK-6977dd",
+    "LINK-2b6e8c",
+    "LINK-a695ae",
+    "LINK-4c60c1",
+    "LINK-76fc9d"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-71c845": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6343fa": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-46d959": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6a9056": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-ec92be": {
+      "type": "inline-code",
+      "values": {
+        "content": "useAccount"
+      }
+    },
+    "CODE-21a31f": {
+      "type": "inline-code",
+      "values": {
+        "content": "useConnect"
+      }
+    },
+    "CODE-4decc2": {
+      "type": "inline-code",
+      "values": {
+        "content": "vitalik.eth"
+      }
+    },
+    "LINK-f48efd": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts/"
+      }
+    },
+    "LINK-a64d8b": {
+      "type": "link",
+      "values": {
+        "url": "/wallets/"
+      }
+    },
+    "LINK-b091a8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts/#externally-owned-accounts-and-key-pairs"
+      }
+    },
+    "LINK-d5c791": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4361"
+      }
+    },
+    "LINK-3a9ad3": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/spruceid/siwe"
+      }
+    },
+    "LINK-35fc3d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/spruceid/siwe-rs"
+      }
+    },
+    "LINK-49e87f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/spruceid/siwe-go"
+      }
+    },
+    "LINK-a96bca": {
+      "type": "link",
+      "values": {
+        "url": "https://www.rainbowkit.com/"
+      }
+    },
+    "LINK-3ac8fe": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.family.co/connectkit"
+      }
+    },
+    "LINK-92cae4": {
+      "type": "link",
+      "values": {
+        "url": "https://reown.com/appkit"
+      }
+    },
+    "LINK-a05703": {
+      "type": "link",
+      "values": {
+        "url": "https://wagmi.sh"
+      }
+    },
+    "LINK-a4d8c4": {
+      "type": "link",
+      "values": {
+        "url": "https://ens.domains/"
+      }
+    },
+    "LINK-addf9b": {
+      "type": "link",
+      "values": {
+        "url": "https://attest.org/"
+      }
+    },
+    "LINK-96d6a9": {
+      "type": "link",
+      "values": {
+        "url": "https://www.w3.org/TR/did-core/"
+      }
+    },
+    "LINK-32f2dc": {
+      "type": "link",
+      "values": {
+        "url": "https://ceramic.network/"
+      }
+    },
+    "LINK-a20897": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4361"
+      }
+    },
+    "LINK-8fdf35": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.login.xyz/"
+      }
+    },
+    "LINK-2eb649": {
+      "type": "link",
+      "values": {
+        "url": "https://auth0.com/blog/sign-in-with-ethereum-siwe-now-available-on-auth0/"
+      }
+    },
+    "LINK-89c662": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.reown.com/appkit/authentication"
+      }
+    },
+    "LINK-6977dd": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ens.domains/"
+      }
+    },
+    "LINK-2b6e8c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts/"
+      }
+    },
+    "LINK-a695ae": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/javascript/"
+      }
+    },
+    "LINK-4c60c1": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/backend/"
+      }
+    },
+    "LINK-76fc9d": {
+      "type": "link",
+      "values": {
+        "url": "/wallets/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-07-22T22:50:47.037Z",
+      "status": "success"
+    }
+  }
+}

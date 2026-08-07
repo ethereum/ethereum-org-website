@@ -60,10 +60,22 @@ Ili kuanza, tembelea [mwongozo wa kuanza haraka wa Ethereum](https://academy.sub
 
 Ili kuanza, tembelea [nyaraka](https://docs.codex.io), jaribu [Kichunguzi](https://docs.codex.io/explore), au jisajili kwenye [dashibodi](https://dashboard.codex.io/signup).
 
+
+## Mobula
+
+[Mobula](https://mobula.io/) ni API ya data ya kripto yenye utendaji wa juu inayotoa data ya soko ya wakati halisi na ya kihistoria, data fafanuzi ya tokeni, potifolio za mikoba, na uchanganuzi mnyororoni kwenye minyororo ya vitalu 90+. Wasanidi wanaweza kufikia vituo vya mwisho vya REST na GraphQL kwa bei za tokeni, mitaji ya soko, viwango vya biashara, data ya ukwasi, na salio la mikoba ya minyororo mingi bila kuendesha miundombinu yao wenyewe. Mobula inatoa mipango ya bure (maombi 100K/kwa mwezi) na ya kulipia kwa programu tumizi za uzalishaji.
+
+Ili kuanza, tembelea [nyaraka](https://docs.mobula.io), chunguza [rejeleo la API](https://docs.mobula.io/reference/), au jisajili kwenye [dashibodi](https://mobula.io/).
 ## Lugha ya Kuuliza ya EVM {#evm-query-language}
 
 Lugha ya Kuuliza ya EVM (EQL) ni lugha inayofanana na SQL iliyoundwa kuuliza minyororo ya EVM (Mashine Pepe ya Ethereum). Lengo kuu la EQL ni kusaidia maswali changamano ya uhusiano kwenye raia wa daraja la kwanza wa mnyororo wa EVM (vitalu, akaunti, na miamala) huku ikiwapa wasanidi na watafiti sintaksia rahisi kwa matumizi ya kila siku. Pamoja na EQL, wasanidi wanaweza kuchukua data ya mnyororo wa vitalu kwa kutumia sintaksia inayofahamika kama ya SQL na kuondoa hitaji la msimbo changamano wa boilerplate. EQL inasaidia maombi ya kawaida ya data ya mnyororo wa vitalu (k.m., kurejesha nonsi na salio la akaunti kwenye Ethereum au kuchukua ukubwa wa kitalu cha sasa na muhuri wa muda) na inaendelea kuongeza usaidizi kwa maombi na seti za vipengele changamano zaidi.
 
+
+## Envio
+
+[Envio](https://envio.dev/) ni mfumo wa kufaharisi unaogeuza matukio mnyororoni kuwa API ya GraphQL inayoweza kuulizwa. Inasaidia Ethereum na mnyororo wowote unaoendana na EVM. Wasanidi huandika vidhibiti vya matukio katika TypeScript, JavaScript, au ReScript ili kutoa data ya wakati halisi na ya kihistoria, pamoja na usaidizi wa upangaji upya, ufaharisishaji wa minyororo mingi, na upangishaji unaosimamiwa kwenye Envio Cloud au kujipangisha.
+
+Ili kuanza, fuata [mwongozo wa kuanza haraka wa HyperIndex](https://docs.envio.dev/docs/HyperIndex/quickstart) ili kuunda, kusambaza, na kuuliza mfaharisishaji.
 ## Usomaji Zaidi {#further-reading}
 
 - [Kuchunguza Data ya Kripto I: Usanifu wa Mtiririko wa Data](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)

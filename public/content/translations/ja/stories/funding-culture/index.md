@@ -64,7 +64,7 @@ lang: ja
 - プレイヤー内で直接プロットの決定に投票するためにステーク
 - ERC-20（私たちのアテンショントークン）を獲得 
 
-![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4)
+![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4#800x400)
 
 このERC-20はボンディングカーブに基づいて発行されました。早くから参加し、より深く関与するほど、多くのトークンを獲得できました。（主人公をミライと名付けるなどの）投票はSnapshotを通じて行われました。 
 
