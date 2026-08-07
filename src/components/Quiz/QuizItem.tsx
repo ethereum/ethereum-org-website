@@ -44,13 +44,12 @@ const QuizItem = ({
   return (
     <ListItem
       className={cn(
-        "@container",
         isCompleted ? "text-body-medium" : "text-body",
         "border-b border-disabled py-4 font-bold [counter-increment:list-counter]"
       )}
     >
-      <Flex className="justify-between @max-lg:flex-col @lg:items-center">
-        <Stack className="@max-lg:mb-5">
+      <Flex className="justify-between max-sm:flex-col sm:items-center">
+        <Stack className="max-sm:mb-5">
           <Flex className="items-center gap-2">
             <span className="before:content-[counter(list-counter)_'._']">
               {title}
@@ -63,7 +62,7 @@ const QuizItem = ({
           {/* Labels */}
           <Flex className="gap-3 font-normal">
             {/* number of questions - label */}
-            <Tag className="@lg:-ms-2">
+            <Tag className="sm:-ms-2">
               {`${numberOfQuestions} ${t("questions")}`}
             </Tag>
 
@@ -75,7 +74,7 @@ const QuizItem = ({
         {/* Start Button */}
         <Button
           variant="outline"
-          className="w-full @lg:w-auto"
+          className="w-full sm:w-auto"
           onClick={handleStart}
         >
           {t("start")}
