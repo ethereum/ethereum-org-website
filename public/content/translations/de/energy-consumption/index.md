@@ -1,11 +1,11 @@
 ---
 title: Ethereums Energieverbrauch
 metaTitle: Ethereum-Energieverbrauch
-description: Die grundlegenden Informationen, die du benötigst, um den Energieverbrauch von Ethereum zu verstehen.
+description: "Die grundlegenden Informationen, die du benötigst, um den Energieverbrauch von Ethereum zu verstehen."
 lang: de
 ---
 
-[Ethereum](/) ist eine grüne Blockchain. Ethereums [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos)-Konsensmechanismus verwendet ETH anstelle von [Energie, um das Netzwerk zu sichern](/developers/docs/consensus-mechanisms/pow). Der Energieverbrauch von Ethereum beträgt im gesamten globalen Netzwerk ungefähr [~0,0026 TWh/Jahr](https://carbon-ratings.com/eth-report-2022).
+[Ethereum](/) ist eine grüne Blockchain. Ethereums [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos)-Konsensmechanismus verwendet ETH anstelle von [Energie, um das Netzwerk zu sichern](/developers/docs/consensus-mechanisms/pow). Der Energieverbrauch von Ethereum beträgt im gesamten globalen Netzwerk ungefähr [\~0,0026 TWh/Jahr](https://carbon-ratings.com/eth-report-2022).
 
 Die Schätzung des Energieverbrauchs für Ethereum stammt aus einer Studie des [CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com). Sie erstellten Bottom-up-Schätzungen des Stromverbrauchs und des CO2-Fußabdrucks des Ethereum-Netzwerks ([siehe Bericht](https://carbon-ratings.com/eth-report-2022)). Sie maßen den Stromverbrauch verschiedener Nodes mit unterschiedlichen Hardware- und Client-Software-Konfigurationen. Die geschätzten **2.601 MWh** (0,0026 TWh) für den jährlichen Stromverbrauch des Netzwerks entsprechen jährlichen CO2-Emissionen von **870 Tonnen CO2e** unter Anwendung regionalspezifischer CO2-Intensitätsfaktoren. Dieser Wert ändert sich, wenn Nodes dem Netzwerk beitreten oder es verlassen – du kannst dies anhand eines gleitenden 7-Tage-Durchschnitts des [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum) verfolgen (beachte, dass sie für ihre Schätzungen eine leicht abweichende Methode verwenden – Details dazu auf ihrer Website).
 
@@ -24,8 +24,8 @@ Das obige Diagramm zeigt den geschätzten Energieverbrauch in TWh/Jahr für Ethe
 | PoW-Ethereum        |                 21                  |           8.100x           |                                                                    [Quelle](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
 | Google              |                 19                  |           7.300x           |                                           [Quelle](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
 | Netflix             |                0,457                |            176x            | [Quelle](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
-| PayPal              |                0,26                 |            100x            |                                 [Quelle](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf>)                                  |
-| AirBnB              |                0,02                 |             8x             |                              [Quelle](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                              |
+| PayPal              |                0,26                 |            100x            |                                 [Quelle](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1)>).pdf>)                                  |
+| AirBnB              |                0,02                 |             8x             |                              [Quelle](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final)>).pdf>)                              |
 | **PoS-Ethereum**    |             **0,0026**              |           **1x**           |                                                               [Quelle](https://carbon-ratings.com/eth-report-2022)                                                                |
 
 \*Schließt Endbenutzergeräte wie PCs, Laptops und Spielkonsolen ein.

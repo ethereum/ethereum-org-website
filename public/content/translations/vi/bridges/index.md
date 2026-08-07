@@ -1,7 +1,7 @@
 ---
-title: Cầu nối chuỗi khối
-metaTitle: Giới thiệu về cầu nối chuỗi khối
-description: Cầu nối cho phép người dùng chuyển tiền của họ qua các chuỗi khối khác nhau
+title: "Cầu nối chuỗi khối"
+metaTitle: "Giới thiệu về cầu nối chuỗi khối"
+description: "Cầu nối cho phép người dùng chuyển tiền của họ qua các chuỗi khối khác nhau"
 lang: vi
 ---
 
@@ -135,6 +135,7 @@ Cầu nối rất quan trọng đối với việc tiếp nhận người dùng 
 <Divider />
 
 ## Đọc thêm {#further-reading}
+
 - [EIP-5164: Thực thi chuỗi chéo](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 tháng 6, 2022 - Brendan Asselstine_
 - [Khung rủi ro L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5 tháng 7, 2022 - Bartek Kiepuszewski_
 - ["Tại sao tương lai sẽ là đa chuỗi, nhưng sẽ không phải là chuỗi chéo."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 tháng 1, 2022 - Vitalik Buterin_

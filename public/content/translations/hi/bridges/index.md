@@ -1,7 +1,7 @@
 ---
-title: ब्लॉकचेन सेतु
-metaTitle: ब्लॉकचेन सेतु का परिचय
-description: सेतु उपयोगकर्ताओं को विभिन्न ब्लॉकचेन के बीच अपने फंड को ट्रांसफर करने की अनुमति देते हैं
+title: "ब्लॉकचेन सेतु"
+metaTitle: "ब्लॉकचेन सेतु का परिचय"
+description: "सेतु उपयोगकर्ताओं को विभिन्न ब्लॉकचेन के बीच अपने फंड को ट्रांसफर करने की अनुमति देते हैं"
 lang: hi
 ---
 
@@ -135,6 +135,7 @@ _Web3 लेयर 1 (l1) ब्लॉकचेन और लेयर 2 (l2) �
 <Divider />
 
 ## आगे की पढ़ाई {#further-reading}
+
 - [EIP-5164: क्रॉस-चेन निष्पादन](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 जून, 2022 - ब्रेंडन एसेल्स्टाइन_
 - [L2Bridge जोखिम ढांचा](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5 जुलाई, 2022 - बार्टेक कीपुस्ज़ेव्स्की_
 - ["भविष्य मल्टी-चेन क्यों होगा, लेकिन यह क्रॉस-चेन नहीं होगा।"](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 जनवरी, 2022 - विटालिक बुटेरिन_

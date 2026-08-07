@@ -1,7 +1,7 @@
 ---
-title: ब्लॉकचेन सेतू
-metaTitle: ब्लॉकचेन सेतूंचा परिचय
-description: सेतू वापरकर्त्यांना त्यांचा निधी वेगवेगळ्या ब्लॉकचेनवर हलवण्याची परवानगी देतात
+title: "ब्लॉकचेन सेतू"
+metaTitle: "ब्लॉकचेन सेतूंचा परिचय"
+description: "सेतू वापरकर्त्यांना त्यांचा निधी वेगवेगळ्या ब्लॉकचेनवर हलवण्याची परवानगी देतात"
 lang: mr
 ---
 
@@ -135,6 +135,7 @@ _Web3 आता स्तर १ (L1) ब्लॉकचेन आणि स्�
 <Divider />
 
 ## पुढील वाचन {#further-reading}
+
 - [EIP-5164: क्रॉस-चेन एक्झिक्यूशन](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 जून 2022 - ब्रेंडन ॲसेलस्टाईन_
 - [L2Bridge जोखीम फ्रेमवर्क](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5 जुलै 2022 - बार्टेक किपुस्झेव्स्की_
 - ["भविष्य मल्टी-चेन का असेल, पण ते क्रॉस-चेन नसेल."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 जानेवारी 2022 - विटालिक बुटेरिन_

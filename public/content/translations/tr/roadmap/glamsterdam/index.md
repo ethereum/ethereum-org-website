@@ -33,23 +33,21 @@ Bu iyileştirmeler, evde [düğüm](/glossary/#node) çalıştıran kişiler iç
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Not: Bu makale şu anda Glamsterdam'a dahil edilmesi düşünülen EIP'lerin bir seçkisini öne çıkarmaktadır. Geliştirici ağlarında (devnet) aktif olarak test edilen ek teklifler arasında EIP-7778, EIP-7843, EIP-7976, EIP-7981 ve EIP-8024 bulunmaktadır. En son durum güncellemeleri için [Forkcast'teki Glamsterdam yükseltmesini](https://forkcast.org/upgrade/glamsterdam) görüntüleyin.
+Not: Bu makale, Glamsterdam'a dahil edilmesi planlanan EIP'lerin bir seçkisini öne çıkarmaktadır. Geliştirici ağlarında (devnet) test edilen diğer planlanmış teklifler arasında EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 ve EIP-8282 bulunmaktadır. En son durum güncellemeleri için [Forkcast'teki Glamsterdam yükseltmesini](https://forkcast.org/upgrade/glamsterdam) görüntüleyin.
 
 Glamsterdam için değerlendirilen ancak henüz bu sayfaya eklenmemiş bir EIP eklemek istiyorsanız, [ethereum.org'a nasıl katkıda bulunacağınızı buradan öğrenin](/contributing/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Glamsterdam yükseltmesi üç ana hedefe odaklanır:
+Glamsterdam yükseltmesi üç ana hedefe odaklanmaktadır:
 
-- İşlemleri hızlandırma (paralelleştirme): Ağın veri bağımlılıklarını kaydetme şeklini yeniden düzenleyerek, yavaş ve tek tek bir sıra yerine birçok işlemi aynı anda güvenli bir şekilde işleyebilmesini sağlamak.
+- İşlemleri hızlandırma (paralelleştirme): Ağın veri bağımlılıklarını kaydetme şeklini yeniden düzenleyerek, yavaş ve tek tek ilerleyen bir sıra yerine birçok işlemi aynı anda güvenli bir şekilde işleyebilmesini sağlamak.
 - Kapasiteyi genişletme: Blok oluşturma ve doğrulamanın ağır yükünü bölerek, ağa yavaşlamadan daha büyük miktarda veriyi yayması için daha fazla zaman tanımak.
 - Veritabanı şişkinliğini önleme (sürdürülebilirlik): Ağ ücretlerini, yeni verileri depolamanın uzun vadeli donanım maliyetini doğru bir şekilde yansıtacak şekilde ayarlamak, donanım performansının düşmesini önlerken gelecekteki gaz limiti artışlarının önünü açmak.
 
-Kısacası Glamsterdam, ağ kapasitesini artırırken sürdürülebilir kalmasını ve performansın yüksek kalmasını sağlamak için yapısal değişiklikler getirecektir.
+Kısacası Glamsterdam, ağ kapasitesini artırırken sürdürülebilir kalmasını ve performansın yüksek kalmasını sağlamak için yapısal değişiklikler sunacaktır.
 
-
-Anlamlı L1 ölçeklendirmesi, protokol dışı güven varsayımlarından ve sıralı yürütme kısıtlamalarından uzaklaşmayı gerektirir. Glamsterdam, belirli blok oluşturma görevlerinin ayrılmasını protokole dahil ederek ve ağın paralel işlemeye hazırlanmasına olanak tanıyan yeni veri yapıları sunarak bu sorunu ele alır.
 ## L1'i ölçeklendirme ve paralel işleme {#scale-l1}
 
 Anlamlı bir katman 1 (L1) ölçeklendirmesi, protokol dışı güven varsayımlarından ve seri yürütme kısıtlamalarından uzaklaşmayı gerektirir. Glamsterdam, belirli blok oluşturma görevlerinin ayrımını protokole dahil ederek ve ağın paralel işlemeye hazırlanmasını sağlayan yeni veri yapıları sunarak bu sorunu çözer.
@@ -168,30 +166,26 @@ Kesintiye uğramış teklif edicilerden gelen bloklar otomatik olarak geçersiz 
 
 **Kaynaklar**: [EIP-8045 teknik spesifikasyonu](https://eips.ethereum.org/EIPS/eip-8045)
 
-### Çıkışların konsolidasyon kuyruğunu kullanmasına izin verme {#let-exits-use-the-consolidation-queue}
+### Çıkışların konsolidasyon kuyruğunu kullanmasına izin verme {#increase-exit-and-consolidation-churn}
 
-- Yüksek bakiyeli doğrulayıcıların konsolidasyon kuyruğu aracılığıyla ağdan daha küçük doğrulayıcılara göre daha hızlı çıkmasına olanak tanıyan bir boşluğu kapatır
-- Düzenli çıkışların boş kapasitesi olduğunda bu ikinci kuyruğa taşmasına izin vererek, yüksek hacimli dönemlerde staking çekim sürelerini azaltır
-- Ethereum'un temel güvenlik sınırlarını değiştirmekten veya ağı zayıflatmaktan kaçınmak için sıkı güvenliği korur
+- Çıkış kapasitesinin sabit bir oranda sınırlandırılmak yerine stake edilen toplam ETH miktarıyla ölçeklenmesine izin vererek staking çekim sürelerini önemli ölçüde azaltır
+- Doğrulayıcı birleştirmelerine (konsolidasyon) kendi özel sıra kapasitelerini vererek daha büyük, daha verimli doğrulayıcılara geçişi hızlandırır
+- Dikkatlice analiz edilmiş güvenlik parametreleri aracılığıyla ağ güvenliğini korur
 
-[Pectra yükseltmesi](/roadmap/pectra) Ethereum doğrulayıcıları için maksimum efektif bakiyeyi 32 ETH'den 2.048 ETH'ye çıkardığından beri, teknik bir boşluk yüksek bakiyeli doğrulayıcıların konsolidasyon kuyruğu aracılığıyla ağdan daha küçük doğrulayıcılara göre daha hızlı çıkmasına olanak tanır.
+Ethereum'un dalgalanma limiti, ağın güvenliğinin hiçbir zaman bozulmamasını sağlamak için doğrulayıcıların stake ettikleri ETH ile girebilecekleri, çıkabilecekleri veya birleşebilecekleri (konsolide olabilecekleri) hıza yönelik bir güvenlik sınırıdır. Bugün, çıkışlar ve etkinleştirmeler tek bir üst sınırı paylaşmaktadır, bu nedenle yüksek talep dönemlerinde staker'lar ETH'lerini çekmek için uzun bekleyişlerle karşılaşabilirler. Doğrulayıcıların 2.048 ETH'ye kadar daha büyük doğrulayıcılar halinde birleştiği konsolidasyonlar da ([Pectra yükseltmesi](/roadmap/pectra) ile etkinleştirilmiştir) bu sınırlı kapasite için rekabet eder, bu da tüm doğrulayıcı setini konsolide etmenin mevcut hızda yıllar alacağı anlamına gelir.
 
-**Çıkışların konsolidasyon kuyruğunu kullanmasına izin verme (veya EIP-8080)**, konsolidasyon kuyruğunu tüm staking çıkışları için demokratikleştirerek herkes için tek ve adil bir sıra oluşturur.
+**Çıkış ve konsolidasyon dalgalanmasını artırma (veya EIP-8061)** bu sınırları ayrı şeritler halinde yeniden düzenler:
 
-Bunun bugün nasıl çalıştığını açıklamak gerekirse:
+- Doğrulayıcı etkinleştirmeleri mevcut üst sınırlarını değişmeden korur
+- Çıkışlar artık sınırlandırılmaz ve bunun yerine stake edilen toplam ETH miktarıyla ölçeklenir
+- Konsolidasyonlar, birleşik etkinleştirme-çıkış sınırının kabaca yarısı büyüklüğünde kendi özel kapasitelerini elde eder
 
-- Ethereum'un dalgalanma limiti, ağın güvenliğinin asla istikrarsızlaşmamasını sağlamak için doğrulayıcıların stake ettikleri ETH'leri ile girebilecekleri, çıkabilecekleri veya birleştirebilecekleri (konsolide edebilecekleri) oran üzerindeki bir güvenlik sınırıdır
-- Bir doğrulayıcı konsolidasyonu, standart bir doğrulayıcı çıkışından daha fazla hareketli parçaya sahip daha ağır bir eylem olduğundan, bu güvenlik bütçesinin (dalgalanma limiti) daha büyük bir bölümünü tüketir
-- Spesifik olarak protokol, bir standart çıkışın tam güvenlik maliyetinin bir konsolidasyon maliyetinin üçte ikisi (2/3) olduğunu dikte eder
+Mevcut staking seviyelerinde bu, çıkış kapasitesini kabaca 4 kat ve konsolidasyon kapasitesini kabaca 2 kat artırır, bu da staker'ların yüksek talep dönemlerinde ETH'lerini çok daha hızlı çekebilecekleri ve ağın daha küçük, daha verimli bir doğrulayıcı setine daha hızlı geçiş yapacağı anlamına gelir.
 
-Daha adil çıkış kuyrukları, standart çıkışların yüksek çıkış talebi dönemlerinde konsolidasyon kuyruğundan kullanılmayan alanı ödünç almasına olanak tanıyacak ve "2'ye 3" değişim oranı uygulayacaktır (kullanılmayan her 2 konsolidasyon noktası için ağ 3 standart çıkışı güvenli bir şekilde işleyebilir). Bu 3/2 dalgalanma faktörü, konsolidasyon ve çıkış kuyrukları arasındaki talebi dengeler.
+Stake ağa daha hızlı girip çıkabildiğinden, bu değişiklik bir düğümün ağa güvenli bir şekilde yeniden katılmak için yakın zamandaki güvenilir bir kontrol noktasına ihtiyaç duymadan önce çevrimdışı kalabileceği süreyi kabaca yarıya indirir (zayıf öznellik süresi, yaklaşık 15,7 günden yaklaşık 7 güne). Bu ödünleşim, ağ güvenliğinin korunmasını sağlamak için dikkatlice analiz edilmiştir.
 
-Konsolidasyon kuyruğuna erişimi demokratikleştirmek, kullanıcıların yüksek talep dönemlerinde stake'lerinden çıkma hızını ağ güvenliğinden ödün vermeden 2,5 kata kadar artıracaktır.
+**Kaynaklar**: [EIP-8061 teknik spesifikasyonu](https://eips.ethereum.org/EIPS/eip-8061)
 
-**Kaynaklar**: [EIP-8080 teknik spesifikasyonu](https://eips.ethereum.org/EIPS/eip-8080)
-
-
-Ethereum'un Glamsterdam yükseltmesi, kullanıcı deneyimini iyileştirmeyi, veri keşfedilebilirliğini artırmayı ve eşzamanlama hatalarını önlemek için artan mesaj boyutlarını idare etmeyi amaçlamaktadır. Bu, ağ ölçeklendikçe teknik aksaklıkları önlerken zincir içi neler olup bittiğini izlemeyi kolaylaştırır.
 ## Kullanıcı ve geliştirici deneyimini iyileştirme {#improve-user-developer-experience}
 
 Ethereum'un Glamsterdam yükseltmesi, kullanıcı deneyimini iyileştirmeyi, veri keşfedilebilirliğini artırmayı ve eşzamanlama hatalarını önlemek için artan mesaj boyutlarını idare etmeyi amaçlamaktadır. Bu, ağ ölçeklendikçe teknik aksaklıkları önlerken zincir içi neler olup bittiğini izlemeyi kolaylaştırır.
@@ -300,14 +294,6 @@ Evet, Glamsterdam büyük olasılıkla günlük kullanıcılar için ücretleri 
 
 Buna ek olarak, uzun vadeli sürdürülebilirlik için Glamsterdam, Blok Düzeyinde Erişim Listeleri (BAL'ler) sunar. Bu, paralel işlemeyi etkinleştirir ve L1'i gelecekte daha yüksek genel gaz limitlerini güvenli bir şekilde idare etmeye hazırlar, bu da kapasite büyüdükçe işlem başına gaz maliyetlerini muhtemelen azaltacaktır.
 
-### Glamsterdam sonrası mevcut akıllı sözleşmelerimde herhangi bir değişiklik olacak mı?
-
-Mevcut sözleşmeler Glamsterdam'dan sonra normal şekilde çalışmaya devam edecektir. Geliştiriciler muhtemelen birkaç yeni araç edinecek ve gaz kullanımlarını gözden geçirmelidir:
-
-- Maksimum sözleşme boyutunu artırma (veya EIP-7954), geliştiricilerin daha büyük uygulamalar dağıtmasına olanak tanıyarak maksimum sözleşme boyutu sınırını kabaca 24KiB'den 64KiB'ye çıkarır.
-- Deterministik Fabrika Ön Dağıtımı (veya EIP-7997), evrensel, yerleşik bir fabrika sözleşmesi sunar. Geliştiricilerin uygulamalarını ve akıllı sözleşme cüzdanlarını katılan tüm EVM zincirlerinde tam olarak aynı adrese dağıtmalarına olanak tanır.
-- Uygulamanız ETH transferlerini bulmak için karmaşık izlemeye dayanıyorsa, ETH transferleri ve yakımları bir günlük yayar (veya EIP-7708), daha basit ve güvenilir muhasebe için günlükleri kullanmaya geçmenize olanak tanır.
-- Durum oluşturma gaz maliyeti artışı (veya EIP-8037) ve durum erişimi gaz maliyeti güncellemesi (veya EIP-8038), yeni hesaplar veya kalıcı depolama oluşturmak, oluşturulan verilerin boyutuna bağlı olarak yeni bir standartlaştırılmış sabit ücrete sahip olacağından, belirli sözleşme dağıtım maliyetlerini değiştirecek yeni sürdürülebilirlik modelleri sunar.
 ### Glamsterdam düğüm depolama ve donanım gereksinimlerini nasıl etkileyecek? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 
 Glamsterdam için değerlendirilen birden fazla EIP, durum büyümesinin performans uçurumunu ele almaktadır:

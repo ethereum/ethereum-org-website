@@ -1,11 +1,11 @@
 ---
-title: इथेरियमचा ऊर्जेचा वापर
-metaTitle: इथेरियमचा ऊर्जेचा वापर
-description: इथेरियमचा ऊर्जेचा वापर समजून घेण्यासाठी आवश्यक असलेली मूलभूत माहिती.
+title: "इथेरियमचा ऊर्जेचा वापर"
+metaTitle: "इथेरियमचा ऊर्जेचा वापर"
+description: "इथेरियमचा ऊर्जेचा वापर समजून घेण्यासाठी आवश्यक असलेली मूलभूत माहिती."
 lang: mr
 ---
 
-[इथेरियम](/) ही एक हरित ब्लॉकचेन आहे. इथेरियमची [प्रूफ-ऑफ-स्टेक (PoS)](/developers/docs/consensus-mechanisms/pos) सहमती यंत्रणा [नेटवर्क सुरक्षित करण्यासाठी ऊर्जेऐवजी](/developers/docs/consensus-mechanisms/pow) ETH चा वापर करते. संपूर्ण जागतिक नेटवर्कवर इथेरियमचा ऊर्जेचा वापर अंदाजे [~0.0026 TWh/yr](https://carbon-ratings.com/eth-report-2022) आहे.
+[इथेरियम](/) ही एक हरित ब्लॉकचेन आहे. इथेरियमची [प्रूफ-ऑफ-स्टेक (PoS)](/developers/docs/consensus-mechanisms/pos) सहमती यंत्रणा [नेटवर्क सुरक्षित करण्यासाठी ऊर्जेऐवजी](/developers/docs/consensus-mechanisms/pow) ETH चा वापर करते. संपूर्ण जागतिक नेटवर्कवर इथेरियमचा ऊर्जेचा वापर अंदाजे [\~0.0026 TWh/yr](https://carbon-ratings.com/eth-report-2022) आहे.
 
 इथेरियमच्या ऊर्जेच्या वापराचा अंदाज [CCRI (क्रिप्टो कार्बन रेटिंग्ज इन्स्टिट्यूट)](https://carbon-ratings.com) च्या अभ्यासातून आला आहे. त्यांनी इथेरियम नेटवर्कच्या विजेच्या वापराचे आणि कार्बन फूटप्रिंटचे तळापासून वरपर्यंत (bottom-up) अंदाज तयार केले ([अहवाल पहा](https://carbon-ratings.com/eth-report-2022)). त्यांनी विविध हार्डवेअर आणि क्लायंट सॉफ्टवेअर कॉन्फिगरेशन असलेल्या वेगवेगळ्या नोड्सच्या विजेच्या वापराचे मोजमाप केले. नेटवर्कच्या वार्षिक विजेच्या वापरासाठी अंदाजित **2,601 MWh** (0.0026 TWh) हे प्रदेश-विशिष्ट कार्बन तीव्रता घटक लागू करून **870 टन CO2e** च्या वार्षिक कार्बन उत्सर्जनाशी संबंधित आहे. नेटवर्कमध्ये नोड्स प्रवेश करतात आणि बाहेर पडतात तसे हे मूल्य बदलते - तुम्ही [केंब्रिज ब्लॉकचेन नेटवर्क सस्टेनेबिलिटी इंडेक्स](https://ccaf.io/cbnsi/ethereum) द्वारे 7-दिवसांच्या रोलिंग सरासरी अंदाजाचा वापर करून याचा मागोवा ठेवू शकता (लक्षात घ्या की ते त्यांच्या अंदाजांसाठी थोडी वेगळी पद्धत वापरतात - तपशील त्यांच्या साइटवर उपलब्ध आहेत).
 
@@ -24,8 +24,8 @@ lang: mr
 | PoW इथेरियम        |                 21                  |           8,100x           |                                                                    [स्रोत](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
 | गुगल              |                 19                  |           7,300x           |                                           [स्रोत](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
 | नेटफ्लिक्स्             |                0.457                |            176x            | [स्रोत](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
-| पेपल्              |                0.26                 |            100x            |                                 [स्रोत](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf>)                                  |
-| AirBnB              |                0.02                 |             8x             |                              [स्रोत](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                              |
+| पेपल्              |                0.26                 |            100x            |                                 [स्रोत](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1)>).pdf>)                                  |
+| AirBnB              |                0.02                 |             8x             |                              [स्रोत](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final)>).pdf>)                              |
 | **PoS इथेरियम**    |             **0.0026**              |           **1x**           |                                                               [स्रोत](https://carbon-ratings.com/eth-report-2022)                                                                |
 
 \*यामध्ये पीसी, लॅपटॉप आणि गेमिंग कन्सोल यांसारख्या अंतिम वापरकर्त्याच्या उपकरणांचा समावेश आहे.

@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/learn-quizzes.json",
-  "generatedAt": "2026-07-29T05:39:42.029Z",
-  "rootHash": "627c17231d57",
+  "generatedAt": "2026-08-07T06:02:44.185Z",
+  "rootHash": "5554f701e177",
   "tree": {
-    "contentHash": "9be4cabdf7a9",
-    "anchorHash": "28b2f7778eba",
+    "contentHash": "2309c6969af1",
+    "anchorHash": "6de6192205f1",
     "children": {
       "add-quiz": {
         "contentHash": "acb537ff65b3",
@@ -318,6 +318,78 @@
         "contentHash": "8d7ab1bfbe73",
         "anchorHash": "e3b0c44298fc"
       },
+      "what-is-ethereum-6-prompt": {
+        "contentHash": "d9b54e4257ea",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ethereum-6-a-label": {
+        "contentHash": "b2f3e5596ab8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ethereum-6-a-explanation": {
+        "contentHash": "772865242865",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ethereum-6-b-label": {
+        "contentHash": "47ede1276d61",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ethereum-6-b-explanation": {
+        "contentHash": "5104ba4c1365",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ethereum-6-c-label": {
+        "contentHash": "6ab0fb937a5b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ethereum-6-c-explanation": {
+        "contentHash": "f08ad3f399a5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ethereum-6-d-label": {
+        "contentHash": "78689066cf8e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ethereum-6-d-explanation": {
+        "contentHash": "68e8a65b7429",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ethereum-7-prompt": {
+        "contentHash": "bdf375a48b10",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ethereum-7-a-label": {
+        "contentHash": "b4994f0a5e37",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ethereum-7-a-explanation": {
+        "contentHash": "6990e424f7c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ethereum-7-b-label": {
+        "contentHash": "9a05922ffd98",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ethereum-7-b-explanation": {
+        "contentHash": "73d350e2719f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ethereum-7-c-label": {
+        "contentHash": "bf2c7a4490b0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ethereum-7-c-explanation": {
+        "contentHash": "c9835f566100",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ethereum-7-d-label": {
+        "contentHash": "b193be64d006",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ethereum-7-d-explanation": {
+        "contentHash": "e9573dabeff4",
+        "anchorHash": "e3b0c44298fc"
+      },
       "what-is-ether-1-prompt": {
         "contentHash": "9a362b75f72b",
         "anchorHash": "e3b0c44298fc"
@@ -460,6 +532,42 @@
       },
       "what-is-ether-4-d-explanation": {
         "contentHash": "8a82faff6f2a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ether-5-prompt": {
+        "contentHash": "fb554fc5e606",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ether-5-a-label": {
+        "contentHash": "0df11c0b4468",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ether-5-a-explanation": {
+        "contentHash": "a2b7bcd51ced",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ether-5-b-label": {
+        "contentHash": "cd6f7c2e35d4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ether-5-b-explanation": {
+        "contentHash": "721be0b9b28f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ether-5-c-label": {
+        "contentHash": "4ff30bb84396",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ether-5-c-explanation": {
+        "contentHash": "8effcaeb8c49",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ether-5-d-label": {
+        "contentHash": "6ebabc45be10",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ether-5-d-explanation": {
+        "contentHash": "d6c4ba04efb0",
         "anchorHash": "e3b0c44298fc"
       },
       "web3-1-prompt": {
@@ -3001,6 +3109,1850 @@
       "privacy-6-d-explanation": {
         "contentHash": "3fb9dc08172d",
         "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-1-prompt": {
+        "contentHash": "33dcabf2e51e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-1-a-label": {
+        "contentHash": "caf3ecd4226f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-1-a-explanation": {
+        "contentHash": "3865f0ab41fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-1-b-label": {
+        "contentHash": "03cf0cb1acf2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-1-b-explanation": {
+        "contentHash": "377a9d5589f2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-1-c-label": {
+        "contentHash": "c192d7b9c9eb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-1-c-explanation": {
+        "contentHash": "969b361cc3a5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-1-d-label": {
+        "contentHash": "b41141bfb198",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-1-d-explanation": {
+        "contentHash": "6b8b74bd0d30",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-2-prompt": {
+        "contentHash": "4353bf1243d9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-2-a-label": {
+        "contentHash": "dbf3c7f05a75",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-2-a-explanation": {
+        "contentHash": "6c44df58d691",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-2-b-label": {
+        "contentHash": "066915ee3977",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-2-b-explanation": {
+        "contentHash": "3d7b50515b38",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-2-c-label": {
+        "contentHash": "cfdbc3544c96",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-2-c-explanation": {
+        "contentHash": "2a70a96a7262",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-2-d-label": {
+        "contentHash": "7fb3bbfbbcb5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-2-d-explanation": {
+        "contentHash": "cb79c5067593",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-3-prompt": {
+        "contentHash": "d4c496116065",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-3-a-label": {
+        "contentHash": "52e05262fb98",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-3-a-explanation": {
+        "contentHash": "3e8c86e7b0ba",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-3-b-label": {
+        "contentHash": "8ea90e4c5900",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-3-b-explanation": {
+        "contentHash": "956ccc53fb3f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-3-c-label": {
+        "contentHash": "7029b1d065c4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-3-c-explanation": {
+        "contentHash": "56d75224dad1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-3-d-label": {
+        "contentHash": "afcb74fb5601",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-3-d-explanation": {
+        "contentHash": "927c5be1c16e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-4-prompt": {
+        "contentHash": "fafc239faa2c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-4-a-label": {
+        "contentHash": "7e8ead571636",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-4-a-explanation": {
+        "contentHash": "0014c9e49f62",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-4-b-label": {
+        "contentHash": "ab3a6722f11e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-4-b-explanation": {
+        "contentHash": "a785c8351903",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-4-c-label": {
+        "contentHash": "74f495bd7bd8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-4-c-explanation": {
+        "contentHash": "907f12fc2b5a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-4-d-label": {
+        "contentHash": "28ba4be91b15",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-4-d-explanation": {
+        "contentHash": "dfa0c2223943",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-5-prompt": {
+        "contentHash": "0d663b60f200",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-5-a-label": {
+        "contentHash": "2b95860253de",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-5-a-explanation": {
+        "contentHash": "e92053386ccc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-5-b-label": {
+        "contentHash": "c1cd6341381e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-5-b-explanation": {
+        "contentHash": "9a0b4de84504",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-5-c-label": {
+        "contentHash": "457ef9474636",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-5-c-explanation": {
+        "contentHash": "9ad5e2969f10",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-5-d-label": {
+        "contentHash": "f4476a12e414",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-5-d-explanation": {
+        "contentHash": "1cfe1a1f5161",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-6-prompt": {
+        "contentHash": "d97eadd282ad",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-6-a-label": {
+        "contentHash": "84376be29caf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-6-a-explanation": {
+        "contentHash": "762aa279b4db",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-6-b-label": {
+        "contentHash": "d5c4230eddeb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-6-b-explanation": {
+        "contentHash": "464af4f3f969",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-6-c-label": {
+        "contentHash": "b3043bde139a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-6-c-explanation": {
+        "contentHash": "ec847ff3cc7b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-6-d-label": {
+        "contentHash": "ba3c8bbdfe5e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-6-d-explanation": {
+        "contentHash": "727a76929d9b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-7-prompt": {
+        "contentHash": "9c948c8bc2de",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-7-a-label": {
+        "contentHash": "3cbc87c7681f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-7-a-explanation": {
+        "contentHash": "63847a29aac9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zkp-7-b-label": {
+        "contentHash": "60a33e6cf515",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-1-prompt": {
+        "contentHash": "cc14d58b10d4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-1-a-label": {
+        "contentHash": "5146b9f879db",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-1-a-explanation": {
+        "contentHash": "969734f9b65e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-1-b-label": {
+        "contentHash": "a253d1713b91",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-1-b-explanation": {
+        "contentHash": "ad32cbd08c6f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-1-c-label": {
+        "contentHash": "51821ea36a11",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-1-c-explanation": {
+        "contentHash": "5a37b9a126ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-1-d-label": {
+        "contentHash": "8fe86f89e491",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-1-d-explanation": {
+        "contentHash": "5d935c530939",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-2-prompt": {
+        "contentHash": "d406008ac05f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-2-a-label": {
+        "contentHash": "a0affb8bbda0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-2-a-explanation": {
+        "contentHash": "940975a33330",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-2-b-label": {
+        "contentHash": "7d55da890cb9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-2-c-label": {
+        "contentHash": "78b3985c2938",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-2-d-label": {
+        "contentHash": "369560db0357",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-2-d-explanation": {
+        "contentHash": "7f2db0492fcd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-3-prompt": {
+        "contentHash": "9d89ea4b018d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-3-a-label": {
+        "contentHash": "585b4162a6d6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-3-a-explanation": {
+        "contentHash": "4977e6a41e94",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-3-b-label": {
+        "contentHash": "82d9f2258a79",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-3-b-explanation": {
+        "contentHash": "0d9d79dbedc9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-3-c-label": {
+        "contentHash": "ed3f177bebbb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-3-c-explanation": {
+        "contentHash": "5967bdd3b248",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-3-d-label": {
+        "contentHash": "491c1737858f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-3-d-explanation": {
+        "contentHash": "fe97caa60623",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-4-prompt": {
+        "contentHash": "fef98fe9924c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-4-a-label": {
+        "contentHash": "093cbd61300d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-4-a-explanation": {
+        "contentHash": "1696bcdeddff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-4-b-label": {
+        "contentHash": "4f9c94a6cb11",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-4-b-explanation": {
+        "contentHash": "8d8fb77f749a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-4-c-label": {
+        "contentHash": "17a2d8a9c7cf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-4-c-explanation": {
+        "contentHash": "826dfaa3d5ec",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-4-d-label": {
+        "contentHash": "e1d78514ceb4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-4-d-explanation": {
+        "contentHash": "6c8076b43785",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-5-prompt": {
+        "contentHash": "0e43e703f698",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-5-a-label": {
+        "contentHash": "91b7043df1ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-5-a-explanation": {
+        "contentHash": "0e19a71fb5c2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-5-b-label": {
+        "contentHash": "2f6970e623c6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-5-b-explanation": {
+        "contentHash": "19ce4b138790",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-5-c-label": {
+        "contentHash": "545e35b2e5f2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-5-c-explanation": {
+        "contentHash": "cf7250d0af50",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-5-d-label": {
+        "contentHash": "a126237d3364",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-5-d-explanation": {
+        "contentHash": "2dd4774a96e0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-6-prompt": {
+        "contentHash": "1c8b2888fd75",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-6-a-label": {
+        "contentHash": "3cbc87c7681f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-6-a-explanation": {
+        "contentHash": "3fcdb2f120b8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps-6-b-label": {
+        "contentHash": "60a33e6cf515",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-1-prompt": {
+        "contentHash": "84c3e96bfaa6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-1-a-label": {
+        "contentHash": "9ae2b9355791",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-1-a-explanation": {
+        "contentHash": "2714ea15674f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-1-b-label": {
+        "contentHash": "c8470c9ea2f8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-1-b-explanation": {
+        "contentHash": "94d44cd83e14",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-1-c-label": {
+        "contentHash": "31b64cf4f87d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-1-c-explanation": {
+        "contentHash": "520d0d3a39ec",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-1-d-label": {
+        "contentHash": "0ba92081db7c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-1-d-explanation": {
+        "contentHash": "57570749a601",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-2-prompt": {
+        "contentHash": "f392a9c9ffd5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-2-a-label": {
+        "contentHash": "b807630486c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-2-a-explanation": {
+        "contentHash": "1393d5bd3ce1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-2-b-label": {
+        "contentHash": "8785d141d214",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-2-b-explanation": {
+        "contentHash": "7705bc7a1780",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-2-c-label": {
+        "contentHash": "dbdfad3b417a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-2-c-explanation": {
+        "contentHash": "8988c0d5924c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-2-d-label": {
+        "contentHash": "dc92a2fcaced",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-2-d-explanation": {
+        "contentHash": "2516ef7a9c75",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-3-prompt": {
+        "contentHash": "d51acd19a080",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-3-a-label": {
+        "contentHash": "6bae09cae44d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-3-a-explanation": {
+        "contentHash": "750d26d8b5b8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-3-b-label": {
+        "contentHash": "7a4d8b63d163",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-3-b-explanation": {
+        "contentHash": "9a48217eb54a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-3-c-label": {
+        "contentHash": "fd485fc0730b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-3-c-explanation": {
+        "contentHash": "25237d4f96e1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-3-d-label": {
+        "contentHash": "d076deffbd62",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-3-d-explanation": {
+        "contentHash": "329d35abfc02",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-4-prompt": {
+        "contentHash": "ac1708fe34db",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-4-a-label": {
+        "contentHash": "59aef8109a4b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-4-a-explanation": {
+        "contentHash": "ad377d4cf0de",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-4-b-label": {
+        "contentHash": "535e2814fca2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-4-b-explanation": {
+        "contentHash": "31bf336e2c70",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-4-c-label": {
+        "contentHash": "256b61bb55f6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-4-c-explanation": {
+        "contentHash": "8197b730cf7a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-4-d-label": {
+        "contentHash": "8853732edcd2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-4-d-explanation": {
+        "contentHash": "14b0f69cfabb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-5-prompt": {
+        "contentHash": "83d083df1c68",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-5-a-label": {
+        "contentHash": "4f852174ca13",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-5-a-explanation": {
+        "contentHash": "765944099055",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-5-b-label": {
+        "contentHash": "f0042c6fee56",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-5-b-explanation": {
+        "contentHash": "5b0b67f24efb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-5-c-label": {
+        "contentHash": "6cb55a7e6e40",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-5-c-explanation": {
+        "contentHash": "56307b3661fb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-5-d-label": {
+        "contentHash": "7022484d6b25",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-5-d-explanation": {
+        "contentHash": "c381e15376db",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-6-prompt": {
+        "contentHash": "a6cd95bf2c42",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-6-a-label": {
+        "contentHash": "3cbc87c7681f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-6-a-explanation": {
+        "contentHash": "72658f795f53",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges-6-b-label": {
+        "contentHash": "60a33e6cf515",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-1-prompt": {
+        "contentHash": "d450cffb582c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-1-a-label": {
+        "contentHash": "efa3e7c0ee2e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-1-a-explanation": {
+        "contentHash": "88324b549677",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-1-b-label": {
+        "contentHash": "e56df349c7ca",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-1-b-explanation": {
+        "contentHash": "d233f3694e4c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-1-c-label": {
+        "contentHash": "af71d913404b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-1-c-explanation": {
+        "contentHash": "7a960e1de1ce",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-1-d-label": {
+        "contentHash": "89604a793c76",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-1-d-explanation": {
+        "contentHash": "45e9a8e339fd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-2-prompt": {
+        "contentHash": "950ed3498dee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-2-a-label": {
+        "contentHash": "68bb27aac372",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-2-a-explanation": {
+        "contentHash": "a7e705091cfb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-2-b-label": {
+        "contentHash": "857683a4914d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-2-b-explanation": {
+        "contentHash": "f1b4cbf14217",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-2-c-label": {
+        "contentHash": "0929e2954012",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-2-c-explanation": {
+        "contentHash": "da42fb54aa96",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-2-d-label": {
+        "contentHash": "4cf0b788e65e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-2-d-explanation": {
+        "contentHash": "e560ec334ba9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-3-prompt": {
+        "contentHash": "e818747ff6a1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-3-a-label": {
+        "contentHash": "75738b474c72",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-3-a-explanation": {
+        "contentHash": "69d8ddb2b0a3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-3-b-label": {
+        "contentHash": "c74c4d27b406",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-3-b-explanation": {
+        "contentHash": "3055da02d281",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-3-c-label": {
+        "contentHash": "fccb32f67b50",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-3-c-explanation": {
+        "contentHash": "533a140b6757",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-3-d-label": {
+        "contentHash": "8f648f9d0340",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-3-d-explanation": {
+        "contentHash": "367ccb174328",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-4-prompt": {
+        "contentHash": "f220964820dc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-4-a-label": {
+        "contentHash": "c4264a4ffad1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-4-a-explanation": {
+        "contentHash": "df545db93017",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-4-b-label": {
+        "contentHash": "54abddccb011",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-4-b-explanation": {
+        "contentHash": "5e45b7b8e662",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-4-c-label": {
+        "contentHash": "adc973f26f0a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-4-c-explanation": {
+        "contentHash": "ab463ee30ef5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-4-d-label": {
+        "contentHash": "a76ea13bba44",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-4-d-explanation": {
+        "contentHash": "16dbe16501ca",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-5-prompt": {
+        "contentHash": "f63269eabbc5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-5-a-label": {
+        "contentHash": "3cbc87c7681f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-5-a-explanation": {
+        "contentHash": "462d8ccd137a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-5-b-label": {
+        "contentHash": "60a33e6cf515",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-6-prompt": {
+        "contentHash": "ab4a7e32f42e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-6-a-label": {
+        "contentHash": "5fb65340d755",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-6-a-explanation": {
+        "contentHash": "de97fd4acdb2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-6-b-label": {
+        "contentHash": "0a334a0e6c23",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-6-b-explanation": {
+        "contentHash": "52a505df3cae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-6-c-label": {
+        "contentHash": "a76e8ae0a4c6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-6-c-explanation": {
+        "contentHash": "f32609c3bcbd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-6-d-label": {
+        "contentHash": "dd2092d0ee3b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-6-d-explanation": {
+        "contentHash": "11d5b4a98991",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-blocks": {
+        "contentHash": "1cd5a6687bb7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-1-prompt": {
+        "contentHash": "5f743c6a9f08",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-1-a-label": {
+        "contentHash": "75d91c7b8a61",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-1-a-explanation": {
+        "contentHash": "1eef48d184cc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-1-b-label": {
+        "contentHash": "c9e38212849f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-1-b-explanation": {
+        "contentHash": "98622cb7b5bb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-1-c-label": {
+        "contentHash": "d26ebb44d5c7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-1-c-explanation": {
+        "contentHash": "60af66a9e224",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-1-d-label": {
+        "contentHash": "3ff255a21ca9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-1-d-explanation": {
+        "contentHash": "cc6e069983aa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-2-prompt": {
+        "contentHash": "c4bbfbd8b0dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-2-a-label": {
+        "contentHash": "5f423321dfca",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-2-a-explanation": {
+        "contentHash": "4efedacf9ac3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-2-b-label": {
+        "contentHash": "d88f0024df60",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-2-b-explanation": {
+        "contentHash": "4c1d631579b3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-2-c-label": {
+        "contentHash": "cc7506be6af8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-2-c-explanation": {
+        "contentHash": "cf45d09ce736",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-2-d-label": {
+        "contentHash": "0c12e66e7538",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-2-d-explanation": {
+        "contentHash": "b6e4dd032669",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-3-prompt": {
+        "contentHash": "5038f57f96c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-3-a-label": {
+        "contentHash": "1bf6a232e00b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-3-a-explanation": {
+        "contentHash": "31109f0dcbbe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-3-b-label": {
+        "contentHash": "b7dea06c74b8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-3-b-explanation": {
+        "contentHash": "21843c3c9264",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-3-c-label": {
+        "contentHash": "cc8a241b40ee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-3-c-explanation": {
+        "contentHash": "8f978bba7f1f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-3-d-label": {
+        "contentHash": "93f267f5ead3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-3-d-explanation": {
+        "contentHash": "dc5a53c3b5e5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-4-prompt": {
+        "contentHash": "ef1f82d4683d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-4-a-label": {
+        "contentHash": "4ca0a29ca8e1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-4-a-explanation": {
+        "contentHash": "85e5f14587d5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-4-b-label": {
+        "contentHash": "945c64f94126",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-4-b-explanation": {
+        "contentHash": "10ef45ffd8e7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-4-c-label": {
+        "contentHash": "ea7af9149f4d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-4-c-explanation": {
+        "contentHash": "4c7190a23a3a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-4-d-label": {
+        "contentHash": "bc9b92c807e5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-4-d-explanation": {
+        "contentHash": "0882f30bb8cc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-5-prompt": {
+        "contentHash": "2e3dc4243452",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-5-a-label": {
+        "contentHash": "3cbc87c7681f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-5-a-explanation": {
+        "contentHash": "74483f765217",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-5-b-label": {
+        "contentHash": "60a33e6cf515",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-6-prompt": {
+        "contentHash": "2d4d79078865",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-6-a-label": {
+        "contentHash": "e2311051f944",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-6-a-explanation": {
+        "contentHash": "874f22b3160b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-6-b-label": {
+        "contentHash": "f2ad923645b7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-6-b-explanation": {
+        "contentHash": "e9df5b2d7009",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-6-c-label": {
+        "contentHash": "8bbd0e7cf9fe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-6-c-explanation": {
+        "contentHash": "678565032801",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-6-d-label": {
+        "contentHash": "2038135d6325",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "blocks-6-d-explanation": {
+        "contentHash": "c8303614037a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-accounts": {
+        "contentHash": "e231c2975f71",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-1-prompt": {
+        "contentHash": "ac316d68742a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-1-a-label": {
+        "contentHash": "b7b4583dc10e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-1-a-explanation": {
+        "contentHash": "cf14ea8047a5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-1-b-label": {
+        "contentHash": "126f4546e176",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-1-b-explanation": {
+        "contentHash": "d7a5a9612531",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-1-c-label": {
+        "contentHash": "2753d388d04d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-1-c-explanation": {
+        "contentHash": "f2b6f0615db8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-1-d-label": {
+        "contentHash": "f8e6b6937c61",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-1-d-explanation": {
+        "contentHash": "2a69098919fd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-2-prompt": {
+        "contentHash": "5697e9845ef3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-2-a-label": {
+        "contentHash": "a31dd2b6b97f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-2-a-explanation": {
+        "contentHash": "079f046dcece",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-2-b-label": {
+        "contentHash": "e72b9bae5d04",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-2-b-explanation": {
+        "contentHash": "f2aee611da9e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-2-c-label": {
+        "contentHash": "12fc93d44e46",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-2-c-explanation": {
+        "contentHash": "fe837570aed2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-2-d-label": {
+        "contentHash": "ef63f5fb74c9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-2-d-explanation": {
+        "contentHash": "5d533911b1c0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-3-prompt": {
+        "contentHash": "0765ad9c57b1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-3-a-label": {
+        "contentHash": "08fda4c7c55a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-3-a-explanation": {
+        "contentHash": "b6189a789aa1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-3-b-label": {
+        "contentHash": "57e7ca6fad84",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-3-b-explanation": {
+        "contentHash": "004b01c30fb0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-3-c-label": {
+        "contentHash": "b20e4c8d5b14",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-3-c-explanation": {
+        "contentHash": "64f00fb56726",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-3-d-label": {
+        "contentHash": "cffe8d4ffa9d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-3-d-explanation": {
+        "contentHash": "24db0f4d4e3c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-4-prompt": {
+        "contentHash": "82a8d5a04455",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-4-a-label": {
+        "contentHash": "3cbc87c7681f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-4-a-explanation": {
+        "contentHash": "98a2e3e498ae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-4-b-label": {
+        "contentHash": "60a33e6cf515",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-5-prompt": {
+        "contentHash": "5b4dbf5d7022",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-5-a-label": {
+        "contentHash": "d93cae94100e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-5-a-explanation": {
+        "contentHash": "de2a70594432",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-5-b-label": {
+        "contentHash": "15571e6258ae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-5-b-explanation": {
+        "contentHash": "1bd7d74f6eba",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-5-c-label": {
+        "contentHash": "9328f1ff02fa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-5-c-explanation": {
+        "contentHash": "610214f7ffb3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-5-d-label": {
+        "contentHash": "889c7bec32dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-5-d-explanation": {
+        "contentHash": "2b7616dc5ced",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-6-prompt": {
+        "contentHash": "2b69d7993b91",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-6-a-label": {
+        "contentHash": "cac2a9a1f881",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-6-a-explanation": {
+        "contentHash": "1209ad80cd80",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-6-b-label": {
+        "contentHash": "672f3eb448b1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-6-b-explanation": {
+        "contentHash": "51de207bbec7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-6-c-label": {
+        "contentHash": "a6119bef3a3a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-6-c-explanation": {
+        "contentHash": "f89f2b2b55cd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-6-d-label": {
+        "contentHash": "6f32ba2038e5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-6-d-explanation": {
+        "contentHash": "438c37e6294e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-7-prompt": {
+        "contentHash": "5033534eb80a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-7-a-label": {
+        "contentHash": "1fd33cd4428d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-7-a-explanation": {
+        "contentHash": "a1e7e538edc3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-7-b-label": {
+        "contentHash": "2ac88b4ffa08",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-7-b-explanation": {
+        "contentHash": "4bc4ce28d495",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-7-c-label": {
+        "contentHash": "2dd2b8e9dc5e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-7-c-explanation": {
+        "contentHash": "152828ab7c3b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-7-d-label": {
+        "contentHash": "2bb9c9ea3e11",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "accounts-7-d-explanation": {
+        "contentHash": "5b3d3df650f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-1-prompt": {
+        "contentHash": "948a6ae85805",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-1-a-label": {
+        "contentHash": "dae2bf3b3c24",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-1-a-explanation": {
+        "contentHash": "046cff13346e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-1-b-label": {
+        "contentHash": "73f05ce02875",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-1-b-explanation": {
+        "contentHash": "d2fe23ba116d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-1-c-label": {
+        "contentHash": "fef490465b52",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-1-c-explanation": {
+        "contentHash": "1f4c7998e683",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-1-d-label": {
+        "contentHash": "3288724d4ccc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-1-d-explanation": {
+        "contentHash": "b866c654cdec",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-2-prompt": {
+        "contentHash": "b18adbc277fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-2-a-label": {
+        "contentHash": "9a6ac0b71697",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-2-a-explanation": {
+        "contentHash": "3619a5f997b3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-2-b-label": {
+        "contentHash": "8bb808d412b0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-2-b-explanation": {
+        "contentHash": "c907d6f77670",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-2-c-label": {
+        "contentHash": "f32dca1b372b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-2-c-explanation": {
+        "contentHash": "867aa24bc935",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-2-d-label": {
+        "contentHash": "dee5bc8897f0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-2-d-explanation": {
+        "contentHash": "8a7830101d10",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-3-prompt": {
+        "contentHash": "9f26aa0207af",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-3-a-label": {
+        "contentHash": "3cbc87c7681f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-3-a-explanation": {
+        "contentHash": "e49ee6c1f169",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-3-b-label": {
+        "contentHash": "60a33e6cf515",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-4-prompt": {
+        "contentHash": "8eb29ffb660d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-4-a-label": {
+        "contentHash": "411d6b55c5b3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-4-a-explanation": {
+        "contentHash": "e647012d150d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-4-b-label": {
+        "contentHash": "23a9e6f16609",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-4-b-explanation": {
+        "contentHash": "4340f6c41d30",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-4-c-label": {
+        "contentHash": "33185d42bcb7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-4-c-explanation": {
+        "contentHash": "a4f72d6071de",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-4-d-label": {
+        "contentHash": "cee8e74f4c53",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-4-d-explanation": {
+        "contentHash": "47d6d1a0a501",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-5-prompt": {
+        "contentHash": "d732079b62a6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-5-a-label": {
+        "contentHash": "8ed1de7e9ebe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-5-a-explanation": {
+        "contentHash": "9859a47a766d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-5-b-label": {
+        "contentHash": "ec0caab3ba0f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-5-b-explanation": {
+        "contentHash": "9e4b99e9f211",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-5-c-label": {
+        "contentHash": "07feb92dd26b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-5-c-explanation": {
+        "contentHash": "806947dde8cd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-5-d-label": {
+        "contentHash": "897c8df3420e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-5-d-explanation": {
+        "contentHash": "e50d1048f9c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "how-ethereum-works": {
+        "contentHash": "060d957bd9bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "how-ethereum-works-description": {
+        "contentHash": "862d3f800898",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-1-prompt": {
+        "contentHash": "711be060c524",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-1-a-label": {
+        "contentHash": "3cbc87c7681f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-1-a-explanation": {
+        "contentHash": "b388b2b6aa6d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-1-b-label": {
+        "contentHash": "60a33e6cf515",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-2-prompt": {
+        "contentHash": "52c5aa5e00d7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-2-a-label": {
+        "contentHash": "2c0deeedd589",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-2-a-explanation": {
+        "contentHash": "3e8fe275b1ae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-2-b-label": {
+        "contentHash": "ab2acc07fee0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-2-b-explanation": {
+        "contentHash": "9529c27c4323",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-2-c-label": {
+        "contentHash": "7e53e756b6ae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-2-c-explanation": {
+        "contentHash": "52edc98df42a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-2-d-label": {
+        "contentHash": "6e7e185f4132",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-2-d-explanation": {
+        "contentHash": "b5e8939d5f67",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-3-prompt": {
+        "contentHash": "3390f87cf62b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-3-a-label": {
+        "contentHash": "62ece591d200",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-3-a-explanation": {
+        "contentHash": "1990e367ac6f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-3-b-label": {
+        "contentHash": "237ee1a98673",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-3-b-explanation": {
+        "contentHash": "6ee61f8a06e4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-3-c-label": {
+        "contentHash": "277595aa72b5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-3-c-explanation": {
+        "contentHash": "564b88944509",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-3-d-label": {
+        "contentHash": "edf46dccf55e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-3-d-explanation": {
+        "contentHash": "58779a45940b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-4-prompt": {
+        "contentHash": "9b4405ef1bbf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-4-a-label": {
+        "contentHash": "169c3a011bef",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-4-a-explanation": {
+        "contentHash": "2eb99cb3ecd2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-4-b-label": {
+        "contentHash": "e5c36553adf6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-4-b-explanation": {
+        "contentHash": "89e8a0ffb421",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-4-c-label": {
+        "contentHash": "3774e5de1cc1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-4-c-explanation": {
+        "contentHash": "9286a529c758",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-4-d-label": {
+        "contentHash": "8c97a0c4574a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-4-d-explanation": {
+        "contentHash": "2c2db90b579a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-5-prompt": {
+        "contentHash": "dc44427275d9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-5-a-label": {
+        "contentHash": "33835f581f7b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-5-a-explanation": {
+        "contentHash": "998012094ae5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-5-b-label": {
+        "contentHash": "1b05435e9bf8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-5-b-explanation": {
+        "contentHash": "218d06d5612a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-5-c-label": {
+        "contentHash": "1b3aa97e07c7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-5-c-explanation": {
+        "contentHash": "04297dbb2ace",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-5-d-label": {
+        "contentHash": "7254d924b423",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-5-d-explanation": {
+        "contentHash": "ae9d12a7fe52",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-6-prompt": {
+        "contentHash": "500ff23407e1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-6-a-label": {
+        "contentHash": "9be5547c14a4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-6-a-explanation": {
+        "contentHash": "b1bae84cfe4d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-6-b-label": {
+        "contentHash": "140a6007d6e2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-6-b-explanation": {
+        "contentHash": "3bb61a36d0fb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-6-c-label": {
+        "contentHash": "d2e3e47dafad",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-6-c-explanation": {
+        "contentHash": "f1117971cacb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-6-d-label": {
+        "contentHash": "32a2ce808f7e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm-6-d-explanation": {
+        "contentHash": "4e60fe8e02be",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-1-prompt": {
+        "contentHash": "341bb1c9deee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-1-a-label": {
+        "contentHash": "dd08c903f0df",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-1-a-explanation": {
+        "contentHash": "9dcdf0b7d63f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-1-b-label": {
+        "contentHash": "dbb24daa0047",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-1-b-explanation": {
+        "contentHash": "99652bcb3205",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-1-c-label": {
+        "contentHash": "fb9f028630ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-1-c-explanation": {
+        "contentHash": "8d0ddb7d800e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-1-d-label": {
+        "contentHash": "cec0efe7a245",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-1-d-explanation": {
+        "contentHash": "847dece9b2cf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-2-prompt": {
+        "contentHash": "b46b3cee078d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-2-a-label": {
+        "contentHash": "a7edf8e6f965",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-2-a-explanation": {
+        "contentHash": "e0153ed3a564",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-2-b-label": {
+        "contentHash": "6001cf3e31e2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-2-b-explanation": {
+        "contentHash": "8960eab04bbd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-2-c-label": {
+        "contentHash": "c5aeef07dd14",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-2-c-explanation": {
+        "contentHash": "9005fd42d5e7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-2-d-label": {
+        "contentHash": "30c2ee443a48",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-2-d-explanation": {
+        "contentHash": "adcd3bdd505f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-3-prompt": {
+        "contentHash": "f16031e5e258",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-3-a-label": {
+        "contentHash": "0b40640a8133",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-3-a-explanation": {
+        "contentHash": "94f77825a13a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-3-b-label": {
+        "contentHash": "bbc9232a9d78",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-3-b-explanation": {
+        "contentHash": "3f6d8501803e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-3-c-label": {
+        "contentHash": "a6f2d51db5e7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-3-c-explanation": {
+        "contentHash": "199d158d8cd3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-3-d-label": {
+        "contentHash": "92a4f00b4e72",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-3-d-explanation": {
+        "contentHash": "dafe187f437d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-4-prompt": {
+        "contentHash": "3d14884c35d3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-4-a-label": {
+        "contentHash": "a1b660e1e9eb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-4-a-explanation": {
+        "contentHash": "3c3ec986c17f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-4-b-label": {
+        "contentHash": "5458e71f7236",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-4-b-explanation": {
+        "contentHash": "b1b96a3b2c33",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-4-c-label": {
+        "contentHash": "6e01c8a1e2be",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-4-c-explanation": {
+        "contentHash": "84701cfee419",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-4-d-label": {
+        "contentHash": "5501e7aca078",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-4-d-explanation": {
+        "contentHash": "223e0b82ae01",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-5-prompt": {
+        "contentHash": "d2c2b98f0b8b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-5-a-label": {
+        "contentHash": "48267494057a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-5-a-explanation": {
+        "contentHash": "5e6cd0becb07",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-5-b-label": {
+        "contentHash": "9f5d45769b39",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-5-b-explanation": {
+        "contentHash": "d55f7fc78107",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-5-c-label": {
+        "contentHash": "607169be5fb2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-5-c-explanation": {
+        "contentHash": "6c224638cc91",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-5-d-label": {
+        "contentHash": "fa0097b23120",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-5-d-explanation": {
+        "contentHash": "fdfaedb7a497",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-6-prompt": {
+        "contentHash": "72a974aae092",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-6-a-label": {
+        "contentHash": "3cbc87c7681f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-6-a-explanation": {
+        "contentHash": "b62296426af9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-6-b-label": {
+        "contentHash": "60a33e6cf515",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-7-prompt": {
+        "contentHash": "e4040412505e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-7-a-label": {
+        "contentHash": "2b91af2f0001",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-7-a-explanation": {
+        "contentHash": "52a238683cae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-7-b-label": {
+        "contentHash": "605b69de1851",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-7-b-explanation": {
+        "contentHash": "9a939f357176",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-7-c-label": {
+        "contentHash": "8ca5979214da",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-7-c-explanation": {
+        "contentHash": "8e560cbe43a2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-7-d-label": {
+        "contentHash": "b4bd408547aa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions-7-d-explanation": {
+        "contentHash": "9443a04a392d",
+        "anchorHash": "e3b0c44298fc"
       }
     },
     "childrenOrder": [
@@ -3077,6 +5029,24 @@
       "what-is-ethereum-5-c-explanation",
       "what-is-ethereum-5-d-label",
       "what-is-ethereum-5-d-explanation",
+      "what-is-ethereum-6-prompt",
+      "what-is-ethereum-6-a-label",
+      "what-is-ethereum-6-a-explanation",
+      "what-is-ethereum-6-b-label",
+      "what-is-ethereum-6-b-explanation",
+      "what-is-ethereum-6-c-label",
+      "what-is-ethereum-6-c-explanation",
+      "what-is-ethereum-6-d-label",
+      "what-is-ethereum-6-d-explanation",
+      "what-is-ethereum-7-prompt",
+      "what-is-ethereum-7-a-label",
+      "what-is-ethereum-7-a-explanation",
+      "what-is-ethereum-7-b-label",
+      "what-is-ethereum-7-b-explanation",
+      "what-is-ethereum-7-c-label",
+      "what-is-ethereum-7-c-explanation",
+      "what-is-ethereum-7-d-label",
+      "what-is-ethereum-7-d-explanation",
       "what-is-ether-1-prompt",
       "what-is-ether-1-a-label",
       "what-is-ether-1-a-explanation",
@@ -3113,6 +5083,15 @@
       "what-is-ether-4-c-explanation",
       "what-is-ether-4-d-label",
       "what-is-ether-4-d-explanation",
+      "what-is-ether-5-prompt",
+      "what-is-ether-5-a-label",
+      "what-is-ether-5-a-explanation",
+      "what-is-ether-5-b-label",
+      "what-is-ether-5-b-explanation",
+      "what-is-ether-5-c-label",
+      "what-is-ether-5-c-explanation",
+      "what-is-ether-5-d-label",
+      "what-is-ether-5-d-explanation",
       "web3-1-prompt",
       "web3-1-a-label",
       "web3-1-a-explanation",
@@ -3747,8 +5726,469 @@
       "privacy-6-c-label",
       "privacy-6-c-explanation",
       "privacy-6-d-label",
-      "privacy-6-d-explanation"
+      "privacy-6-d-explanation",
+      "zkp-1-prompt",
+      "zkp-1-a-label",
+      "zkp-1-a-explanation",
+      "zkp-1-b-label",
+      "zkp-1-b-explanation",
+      "zkp-1-c-label",
+      "zkp-1-c-explanation",
+      "zkp-1-d-label",
+      "zkp-1-d-explanation",
+      "zkp-2-prompt",
+      "zkp-2-a-label",
+      "zkp-2-a-explanation",
+      "zkp-2-b-label",
+      "zkp-2-b-explanation",
+      "zkp-2-c-label",
+      "zkp-2-c-explanation",
+      "zkp-2-d-label",
+      "zkp-2-d-explanation",
+      "zkp-3-prompt",
+      "zkp-3-a-label",
+      "zkp-3-a-explanation",
+      "zkp-3-b-label",
+      "zkp-3-b-explanation",
+      "zkp-3-c-label",
+      "zkp-3-c-explanation",
+      "zkp-3-d-label",
+      "zkp-3-d-explanation",
+      "zkp-4-prompt",
+      "zkp-4-a-label",
+      "zkp-4-a-explanation",
+      "zkp-4-b-label",
+      "zkp-4-b-explanation",
+      "zkp-4-c-label",
+      "zkp-4-c-explanation",
+      "zkp-4-d-label",
+      "zkp-4-d-explanation",
+      "zkp-5-prompt",
+      "zkp-5-a-label",
+      "zkp-5-a-explanation",
+      "zkp-5-b-label",
+      "zkp-5-b-explanation",
+      "zkp-5-c-label",
+      "zkp-5-c-explanation",
+      "zkp-5-d-label",
+      "zkp-5-d-explanation",
+      "zkp-6-prompt",
+      "zkp-6-a-label",
+      "zkp-6-a-explanation",
+      "zkp-6-b-label",
+      "zkp-6-b-explanation",
+      "zkp-6-c-label",
+      "zkp-6-c-explanation",
+      "zkp-6-d-label",
+      "zkp-6-d-explanation",
+      "zkp-7-prompt",
+      "zkp-7-a-label",
+      "zkp-7-a-explanation",
+      "zkp-7-b-label",
+      "what-are-apps-1-prompt",
+      "what-are-apps-1-a-label",
+      "what-are-apps-1-a-explanation",
+      "what-are-apps-1-b-label",
+      "what-are-apps-1-b-explanation",
+      "what-are-apps-1-c-label",
+      "what-are-apps-1-c-explanation",
+      "what-are-apps-1-d-label",
+      "what-are-apps-1-d-explanation",
+      "what-are-apps-2-prompt",
+      "what-are-apps-2-a-label",
+      "what-are-apps-2-a-explanation",
+      "what-are-apps-2-b-label",
+      "what-are-apps-2-c-label",
+      "what-are-apps-2-d-label",
+      "what-are-apps-2-d-explanation",
+      "what-are-apps-3-prompt",
+      "what-are-apps-3-a-label",
+      "what-are-apps-3-a-explanation",
+      "what-are-apps-3-b-label",
+      "what-are-apps-3-b-explanation",
+      "what-are-apps-3-c-label",
+      "what-are-apps-3-c-explanation",
+      "what-are-apps-3-d-label",
+      "what-are-apps-3-d-explanation",
+      "what-are-apps-4-prompt",
+      "what-are-apps-4-a-label",
+      "what-are-apps-4-a-explanation",
+      "what-are-apps-4-b-label",
+      "what-are-apps-4-b-explanation",
+      "what-are-apps-4-c-label",
+      "what-are-apps-4-c-explanation",
+      "what-are-apps-4-d-label",
+      "what-are-apps-4-d-explanation",
+      "what-are-apps-5-prompt",
+      "what-are-apps-5-a-label",
+      "what-are-apps-5-a-explanation",
+      "what-are-apps-5-b-label",
+      "what-are-apps-5-b-explanation",
+      "what-are-apps-5-c-label",
+      "what-are-apps-5-c-explanation",
+      "what-are-apps-5-d-label",
+      "what-are-apps-5-d-explanation",
+      "what-are-apps-6-prompt",
+      "what-are-apps-6-a-label",
+      "what-are-apps-6-a-explanation",
+      "what-are-apps-6-b-label",
+      "bridges-1-prompt",
+      "bridges-1-a-label",
+      "bridges-1-a-explanation",
+      "bridges-1-b-label",
+      "bridges-1-b-explanation",
+      "bridges-1-c-label",
+      "bridges-1-c-explanation",
+      "bridges-1-d-label",
+      "bridges-1-d-explanation",
+      "bridges-2-prompt",
+      "bridges-2-a-label",
+      "bridges-2-a-explanation",
+      "bridges-2-b-label",
+      "bridges-2-b-explanation",
+      "bridges-2-c-label",
+      "bridges-2-c-explanation",
+      "bridges-2-d-label",
+      "bridges-2-d-explanation",
+      "bridges-3-prompt",
+      "bridges-3-a-label",
+      "bridges-3-a-explanation",
+      "bridges-3-b-label",
+      "bridges-3-b-explanation",
+      "bridges-3-c-label",
+      "bridges-3-c-explanation",
+      "bridges-3-d-label",
+      "bridges-3-d-explanation",
+      "bridges-4-prompt",
+      "bridges-4-a-label",
+      "bridges-4-a-explanation",
+      "bridges-4-b-label",
+      "bridges-4-b-explanation",
+      "bridges-4-c-label",
+      "bridges-4-c-explanation",
+      "bridges-4-d-label",
+      "bridges-4-d-explanation",
+      "bridges-5-prompt",
+      "bridges-5-a-label",
+      "bridges-5-a-explanation",
+      "bridges-5-b-label",
+      "bridges-5-b-explanation",
+      "bridges-5-c-label",
+      "bridges-5-c-explanation",
+      "bridges-5-d-label",
+      "bridges-5-d-explanation",
+      "bridges-6-prompt",
+      "bridges-6-a-label",
+      "bridges-6-a-explanation",
+      "bridges-6-b-label",
+      "payments-1-prompt",
+      "payments-1-a-label",
+      "payments-1-a-explanation",
+      "payments-1-b-label",
+      "payments-1-b-explanation",
+      "payments-1-c-label",
+      "payments-1-c-explanation",
+      "payments-1-d-label",
+      "payments-1-d-explanation",
+      "payments-2-prompt",
+      "payments-2-a-label",
+      "payments-2-a-explanation",
+      "payments-2-b-label",
+      "payments-2-b-explanation",
+      "payments-2-c-label",
+      "payments-2-c-explanation",
+      "payments-2-d-label",
+      "payments-2-d-explanation",
+      "payments-3-prompt",
+      "payments-3-a-label",
+      "payments-3-a-explanation",
+      "payments-3-b-label",
+      "payments-3-b-explanation",
+      "payments-3-c-label",
+      "payments-3-c-explanation",
+      "payments-3-d-label",
+      "payments-3-d-explanation",
+      "payments-4-prompt",
+      "payments-4-a-label",
+      "payments-4-a-explanation",
+      "payments-4-b-label",
+      "payments-4-b-explanation",
+      "payments-4-c-label",
+      "payments-4-c-explanation",
+      "payments-4-d-label",
+      "payments-4-d-explanation",
+      "payments-5-prompt",
+      "payments-5-a-label",
+      "payments-5-a-explanation",
+      "payments-5-b-label",
+      "payments-6-prompt",
+      "payments-6-a-label",
+      "payments-6-a-explanation",
+      "payments-6-b-label",
+      "payments-6-b-explanation",
+      "payments-6-c-label",
+      "payments-6-c-explanation",
+      "payments-6-d-label",
+      "payments-6-d-explanation",
+      "page-blocks",
+      "blocks-1-prompt",
+      "blocks-1-a-label",
+      "blocks-1-a-explanation",
+      "blocks-1-b-label",
+      "blocks-1-b-explanation",
+      "blocks-1-c-label",
+      "blocks-1-c-explanation",
+      "blocks-1-d-label",
+      "blocks-1-d-explanation",
+      "blocks-2-prompt",
+      "blocks-2-a-label",
+      "blocks-2-a-explanation",
+      "blocks-2-b-label",
+      "blocks-2-b-explanation",
+      "blocks-2-c-label",
+      "blocks-2-c-explanation",
+      "blocks-2-d-label",
+      "blocks-2-d-explanation",
+      "blocks-3-prompt",
+      "blocks-3-a-label",
+      "blocks-3-a-explanation",
+      "blocks-3-b-label",
+      "blocks-3-b-explanation",
+      "blocks-3-c-label",
+      "blocks-3-c-explanation",
+      "blocks-3-d-label",
+      "blocks-3-d-explanation",
+      "blocks-4-prompt",
+      "blocks-4-a-label",
+      "blocks-4-a-explanation",
+      "blocks-4-b-label",
+      "blocks-4-b-explanation",
+      "blocks-4-c-label",
+      "blocks-4-c-explanation",
+      "blocks-4-d-label",
+      "blocks-4-d-explanation",
+      "blocks-5-prompt",
+      "blocks-5-a-label",
+      "blocks-5-a-explanation",
+      "blocks-5-b-label",
+      "blocks-6-prompt",
+      "blocks-6-a-label",
+      "blocks-6-a-explanation",
+      "blocks-6-b-label",
+      "blocks-6-b-explanation",
+      "blocks-6-c-label",
+      "blocks-6-c-explanation",
+      "blocks-6-d-label",
+      "blocks-6-d-explanation",
+      "page-accounts",
+      "accounts-1-prompt",
+      "accounts-1-a-label",
+      "accounts-1-a-explanation",
+      "accounts-1-b-label",
+      "accounts-1-b-explanation",
+      "accounts-1-c-label",
+      "accounts-1-c-explanation",
+      "accounts-1-d-label",
+      "accounts-1-d-explanation",
+      "accounts-2-prompt",
+      "accounts-2-a-label",
+      "accounts-2-a-explanation",
+      "accounts-2-b-label",
+      "accounts-2-b-explanation",
+      "accounts-2-c-label",
+      "accounts-2-c-explanation",
+      "accounts-2-d-label",
+      "accounts-2-d-explanation",
+      "accounts-3-prompt",
+      "accounts-3-a-label",
+      "accounts-3-a-explanation",
+      "accounts-3-b-label",
+      "accounts-3-b-explanation",
+      "accounts-3-c-label",
+      "accounts-3-c-explanation",
+      "accounts-3-d-label",
+      "accounts-3-d-explanation",
+      "accounts-4-prompt",
+      "accounts-4-a-label",
+      "accounts-4-a-explanation",
+      "accounts-4-b-label",
+      "accounts-5-prompt",
+      "accounts-5-a-label",
+      "accounts-5-a-explanation",
+      "accounts-5-b-label",
+      "accounts-5-b-explanation",
+      "accounts-5-c-label",
+      "accounts-5-c-explanation",
+      "accounts-5-d-label",
+      "accounts-5-d-explanation",
+      "accounts-6-prompt",
+      "accounts-6-a-label",
+      "accounts-6-a-explanation",
+      "accounts-6-b-label",
+      "accounts-6-b-explanation",
+      "accounts-6-c-label",
+      "accounts-6-c-explanation",
+      "accounts-6-d-label",
+      "accounts-6-d-explanation",
+      "accounts-7-prompt",
+      "accounts-7-a-label",
+      "accounts-7-a-explanation",
+      "accounts-7-b-label",
+      "accounts-7-b-explanation",
+      "accounts-7-c-label",
+      "accounts-7-c-explanation",
+      "accounts-7-d-label",
+      "accounts-7-d-explanation",
+      "energy-consumption-1-prompt",
+      "energy-consumption-1-a-label",
+      "energy-consumption-1-a-explanation",
+      "energy-consumption-1-b-label",
+      "energy-consumption-1-b-explanation",
+      "energy-consumption-1-c-label",
+      "energy-consumption-1-c-explanation",
+      "energy-consumption-1-d-label",
+      "energy-consumption-1-d-explanation",
+      "energy-consumption-2-prompt",
+      "energy-consumption-2-a-label",
+      "energy-consumption-2-a-explanation",
+      "energy-consumption-2-b-label",
+      "energy-consumption-2-b-explanation",
+      "energy-consumption-2-c-label",
+      "energy-consumption-2-c-explanation",
+      "energy-consumption-2-d-label",
+      "energy-consumption-2-d-explanation",
+      "energy-consumption-3-prompt",
+      "energy-consumption-3-a-label",
+      "energy-consumption-3-a-explanation",
+      "energy-consumption-3-b-label",
+      "energy-consumption-4-prompt",
+      "energy-consumption-4-a-label",
+      "energy-consumption-4-a-explanation",
+      "energy-consumption-4-b-label",
+      "energy-consumption-4-b-explanation",
+      "energy-consumption-4-c-label",
+      "energy-consumption-4-c-explanation",
+      "energy-consumption-4-d-label",
+      "energy-consumption-4-d-explanation",
+      "energy-consumption-5-prompt",
+      "energy-consumption-5-a-label",
+      "energy-consumption-5-a-explanation",
+      "energy-consumption-5-b-label",
+      "energy-consumption-5-b-explanation",
+      "energy-consumption-5-c-label",
+      "energy-consumption-5-c-explanation",
+      "energy-consumption-5-d-label",
+      "energy-consumption-5-d-explanation",
+      "how-ethereum-works",
+      "how-ethereum-works-description",
+      "evm-1-prompt",
+      "evm-1-a-label",
+      "evm-1-a-explanation",
+      "evm-1-b-label",
+      "evm-2-prompt",
+      "evm-2-a-label",
+      "evm-2-a-explanation",
+      "evm-2-b-label",
+      "evm-2-b-explanation",
+      "evm-2-c-label",
+      "evm-2-c-explanation",
+      "evm-2-d-label",
+      "evm-2-d-explanation",
+      "evm-3-prompt",
+      "evm-3-a-label",
+      "evm-3-a-explanation",
+      "evm-3-b-label",
+      "evm-3-b-explanation",
+      "evm-3-c-label",
+      "evm-3-c-explanation",
+      "evm-3-d-label",
+      "evm-3-d-explanation",
+      "evm-4-prompt",
+      "evm-4-a-label",
+      "evm-4-a-explanation",
+      "evm-4-b-label",
+      "evm-4-b-explanation",
+      "evm-4-c-label",
+      "evm-4-c-explanation",
+      "evm-4-d-label",
+      "evm-4-d-explanation",
+      "evm-5-prompt",
+      "evm-5-a-label",
+      "evm-5-a-explanation",
+      "evm-5-b-label",
+      "evm-5-b-explanation",
+      "evm-5-c-label",
+      "evm-5-c-explanation",
+      "evm-5-d-label",
+      "evm-5-d-explanation",
+      "evm-6-prompt",
+      "evm-6-a-label",
+      "evm-6-a-explanation",
+      "evm-6-b-label",
+      "evm-6-b-explanation",
+      "evm-6-c-label",
+      "evm-6-c-explanation",
+      "evm-6-d-label",
+      "evm-6-d-explanation",
+      "transactions-1-prompt",
+      "transactions-1-a-label",
+      "transactions-1-a-explanation",
+      "transactions-1-b-label",
+      "transactions-1-b-explanation",
+      "transactions-1-c-label",
+      "transactions-1-c-explanation",
+      "transactions-1-d-label",
+      "transactions-1-d-explanation",
+      "transactions-2-prompt",
+      "transactions-2-a-label",
+      "transactions-2-a-explanation",
+      "transactions-2-b-label",
+      "transactions-2-b-explanation",
+      "transactions-2-c-label",
+      "transactions-2-c-explanation",
+      "transactions-2-d-label",
+      "transactions-2-d-explanation",
+      "transactions-3-prompt",
+      "transactions-3-a-label",
+      "transactions-3-a-explanation",
+      "transactions-3-b-label",
+      "transactions-3-b-explanation",
+      "transactions-3-c-label",
+      "transactions-3-c-explanation",
+      "transactions-3-d-label",
+      "transactions-3-d-explanation",
+      "transactions-4-prompt",
+      "transactions-4-a-label",
+      "transactions-4-a-explanation",
+      "transactions-4-b-label",
+      "transactions-4-b-explanation",
+      "transactions-4-c-label",
+      "transactions-4-c-explanation",
+      "transactions-4-d-label",
+      "transactions-4-d-explanation",
+      "transactions-5-prompt",
+      "transactions-5-a-label",
+      "transactions-5-a-explanation",
+      "transactions-5-b-label",
+      "transactions-5-b-explanation",
+      "transactions-5-c-label",
+      "transactions-5-c-explanation",
+      "transactions-5-d-label",
+      "transactions-5-d-explanation",
+      "transactions-6-prompt",
+      "transactions-6-a-label",
+      "transactions-6-a-explanation",
+      "transactions-6-b-label",
+      "transactions-7-prompt",
+      "transactions-7-a-label",
+      "transactions-7-a-explanation",
+      "transactions-7-b-label",
+      "transactions-7-b-explanation",
+      "transactions-7-c-label",
+      "transactions-7-c-explanation",
+      "transactions-7-d-label",
+      "transactions-7-d-explanation"
     ]
   },
-  "sourceCommitSha": "bff6b26a8b30b949a9a730f3427af6918af7bb68"
+  "sourceCommitSha": "3c76f545357f4d2d02a6f906d4b647d531be7088"
 }

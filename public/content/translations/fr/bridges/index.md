@@ -1,7 +1,7 @@
 ---
-title: Ponts de chaîne de blocs
-metaTitle: Introduction aux ponts de chaîne de blocs
-description: Les ponts permettent aux utilisateurs de déplacer leurs fonds à travers différentes chaînes de blocs
+title: "Ponts de chaîne de blocs"
+metaTitle: "Introduction aux ponts de chaîne de blocs"
+description: "Les ponts permettent aux utilisateurs de déplacer leurs fonds à travers différentes chaînes de blocs"
 lang: fr
 ---
 
@@ -135,6 +135,7 @@ Les ponts sont cruciaux pour l'intégration des utilisateurs sur les l2 d'Ethere
 <Divider />
 
 ## Lectures complémentaires {#further-reading}
+
 - [EIP-5164 : Exécution inter-chaîne](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 juin 2022 - Brendan Asselstine_
 - [Cadre de risque L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5 juillet 2022 - Bartek Kiepuszewski_
 - [« Pourquoi l'avenir sera multi-chaîne, mais ne sera pas inter-chaîne. »](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 janvier 2022 - Vitalik Buterin_

@@ -1,11 +1,11 @@
 ---
-title: Zużycie energii przez Ethereum
-metaTitle: Zużycie energii przez Ethereum
-description: Podstawowe informacje, których potrzebujesz, aby zrozumieć zużycie energii przez Ethereum.
+title: "Zużycie energii przez Ethereum"
+metaTitle: "Zużycie energii przez Ethereum"
+description: "Podstawowe informacje, których potrzebujesz, aby zrozumieć zużycie energii przez Ethereum."
 lang: pl
 ---
 
-[Ethereum](/) to ekologiczny blockchain. [Dowód stawki (PoS)](/developers/docs/consensus-mechanisms/pos) jako mechanizm konsensusu Ethereum wykorzystuje ETH zamiast [energii do zabezpieczania sieci](/developers/docs/consensus-mechanisms/pow). Zużycie energii przez Ethereum wynosi około [~0,0026 TWh/rok](https://carbon-ratings.com/eth-report-2022) w całej globalnej sieci.
+[Ethereum](/) to ekologiczny blockchain. [Dowód stawki (PoS)](/developers/docs/consensus-mechanisms/pos) jako mechanizm konsensusu Ethereum wykorzystuje ETH zamiast [energii do zabezpieczania sieci](/developers/docs/consensus-mechanisms/pow). Zużycie energii przez Ethereum wynosi około [\~0,0026 TWh/rok](https://carbon-ratings.com/eth-report-2022) w całej globalnej sieci.
 
 Szacunki dotyczące zużycia energii przez Ethereum pochodzą z badania [CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com). Wygenerowali oni oddolne szacunki zużycia energii elektrycznej i śladu węglowego sieci Ethereum ([zobacz raport](https://carbon-ratings.com/eth-report-2022)). Zmierzyli zużycie energii elektrycznej przez różne węzły o różnych konfiguracjach sprzętowych i oprogramowania klienckiego. Szacowane **2601 MWh** (0,0026 TWh) rocznego zużycia energii elektrycznej przez sieć odpowiada rocznej emisji dwutlenku węgla na poziomie **870 ton CO2e** przy zastosowaniu specyficznych dla danego regionu wskaźników intensywności emisji. Wartość ta zmienia się w miarę jak węzły dołączają do sieci i ją opuszczają – można to śledzić za pomocą 7-dniowej średniej kroczącej szacowanej przez [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum) (należy pamiętać, że używają oni nieco innej metody do swoich szacunków – szczegóły dostępne na ich stronie).
 
@@ -24,8 +24,8 @@ Powyższy wykres przedstawia szacowane zużycie energii w TWh/rok dla Ethereum w
 | PoW Ethereum        |                 21                  |           8 100x           |                                                                    [źródło](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
 | Google              |                 19                  |           7 300x           |                                           [źródło](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
 | Netflix             |                0,457                |            176x            | [źródło](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
-| PayPal              |                0,26                 |            100x            |                                 [źródło](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf>)                                  |
-| AirBnB              |                0,02                 |             8x             |                              [źródło](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                              |
+| PayPal              |                0,26                 |            100x            |                                 [źródło](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1)>).pdf>)                                  |
+| AirBnB              |                0,02                 |             8x             |                              [źródło](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final)>).pdf>)                              |
 | **PoS Ethereum**    |             **0,0026**              |           **1x**           |                                                               [źródło](https://carbon-ratings.com/eth-report-2022)                                                                |
 
 \*Obejmuje urządzenia użytkowników końcowych, takie jak komputery PC, laptopy i konsole do gier.

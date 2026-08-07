@@ -1,11 +1,11 @@
 ---
-title: Ethereum'un enerji harcaması
-metaTitle: Ethereum Enerji Tüketimi
-description: Ethereum'un enerji tüketimini anlamak için ihtiyacınız olan temel bilgiler.
+title: "Ethereum'un enerji harcaması"
+metaTitle: "Ethereum Enerji Tüketimi"
+description: "Ethereum'un enerji tüketimini anlamak için ihtiyacınız olan temel bilgiler."
 lang: tr
 ---
 
-[Ethereum](/) yeşil bir Blokzincirdir. Ethereum'un [Hisse Kanıtı (PoS)](/developers/docs/consensus-mechanisms/pos) mutabakat mekanizması, [ağı güvence altına almak için enerji](/developers/docs/consensus-mechanisms/pow) yerine ETH kullanır. Ethereum'un enerji tüketimi, tüm küresel ağ genelinde yaklaşık [~0,0026 TWh/yıl](https://carbon-ratings.com/eth-report-2022)'dır.
+[Ethereum](/) yeşil bir Blokzincirdir. Ethereum'un [Hisse Kanıtı (PoS)](/developers/docs/consensus-mechanisms/pos) mutabakat mekanizması, [ağı güvence altına almak için enerji](/developers/docs/consensus-mechanisms/pow) yerine ETH kullanır. Ethereum'un enerji tüketimi, tüm küresel ağ genelinde yaklaşık [\~0,0026 TWh/yıl](https://carbon-ratings.com/eth-report-2022)'dır.
 
 Ethereum için enerji tüketimi tahmini, bir [CCRI (Kripto Karbon Derecelendirme Enstitüsü)](https://carbon-ratings.com) çalışmasından gelmektedir. Ethereum ağının elektrik tüketimi ve karbon ayak izi hakkında aşağıdan yukarıya tahminler ürettiler ([rapora bakın](https://carbon-ratings.com/eth-report-2022)). Çeşitli donanım ve istemci yazılımı yapılandırmalarına sahip farklı düğümlerin elektrik tüketimini ölçtüler. Ağın yıllık elektrik tüketimi için tahmin edilen **2.601 MWh** (0,0026 TWh), bölgeye özgü karbon yoğunluğu faktörleri uygulandığında yıllık **870 ton CO2e** karbon emisyonuna karşılık gelmektedir. Bu değer, düğümler ağa girip çıktıkça değişir; [Cambridge Blokzincir Ağı Sürdürülebilirlik Endeksi](https://ccaf.io/cbnsi/ethereum) tarafından sağlanan 7 günlük hareketli ortalama tahminini kullanarak bunu takip edebilirsiniz (tahminleri için biraz farklı bir yöntem kullandıklarını unutmayın - ayrıntılar sitelerinde mevcuttur).
 
@@ -24,8 +24,8 @@ Yukarıdaki grafik, diğer bazı ürünler ve endüstrilerle karşılaştırıld
 | PoW Ethereum        |                 21                  |           8.100x           |                                                                    [kaynak](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
 | Google              |                 19                  |           7.300x           |                                           [kaynak](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
 | Netflix             |                0,457                |            176x            | [kaynak](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
-| PayPal              |                0,26                 |            100x            |                                 [kaynak](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf>)                                  |
-| AirBnB              |                0,02                 |             8x             |                              [kaynak](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                              |
+| PayPal              |                0,26                 |            100x            |                                 [kaynak](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1)>).pdf>)                                  |
+| AirBnB              |                0,02                 |             8x             |                              [kaynak](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final)>).pdf>)                              |
 | **PoS Ethereum**    |             **0,0026**              |           **1x**           |                                                               [kaynak](https://carbon-ratings.com/eth-report-2022)                                                                |
 
 \*PC'ler, dizüstü bilgisayarlar ve oyun konsolları gibi son kullanıcı cihazlarını içerir.

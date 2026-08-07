@@ -33,7 +33,7 @@ Te ulepszenia zapewniają, że Ethereum pozostanie szybkie, przystępne cenowo i
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Uwaga: Ten artykuł obecnie podkreśla wybór propozycji EIP rozważanych do włączenia w aktualizacji Glamsterdam. Dodatkowe propozycje aktywnie testowane w sieciach deweloperskich (devnetach) obejmują EIP-7778, EIP-7843, EIP-7976, EIP-7981 i EIP-8024. Aby uzyskać najnowsze informacje o statusie, zobacz [aktualizację Glamsterdam na Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Uwaga: Ten artykuł wyróżnia wybrane propozycje EIP zaplanowane do włączenia w aktualizacji Glamsterdam. Dodatkowe zaplanowane propozycje testowane w sieciach deweloperskich (devnets) obejmują EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 i EIP-8282. Aby uzyskać najnowsze informacje o statusie, zobacz [aktualizację Glamsterdam na Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
 Jeśli chcesz dodać EIP, który jest rozważany dla Glamsterdam, ale nie został jeszcze dodany do tej strony, [dowiedz się, jak współtworzyć ethereum.org tutaj](/contributing/).
 </AlertDescription>
@@ -43,11 +43,10 @@ Jeśli chcesz dodać EIP, który jest rozważany dla Glamsterdam, ale nie zosta�
 Aktualizacja Glamsterdam skupia się na trzech głównych celach:
 
 - Przyspieszenie przetwarzania (równoległość): Reorganizacja sposobu, w jaki sieć rejestruje zależności danych, aby mogła bezpiecznie przetwarzać wiele transakcji w tym samym czasie, zamiast w powolnej sekwencji jedna po drugiej.
-- Zwiększenie pojemności: Podział ciężkiej pracy związanej z tworzeniem i weryfikacją bloków, co daje sieci więcej czasu na propagację większych ilości danych bez spowalniania.
-- Zapobieganie rozrostowi bazy danych (zrównoważony rozwój): Dostosowanie opłat sieciowych, aby dokładnie odzwierciedlały długoterminowe koszty sprzętowe przechowywania nowych danych, odblokowując przyszłe wzrosty limitu gazu przy jednoczesnym zapobieganiu spadkowi wydajności sprzętu.
+- Zwiększenie pojemności: Podział ciężkiej pracy związanej z tworzeniem i weryfikacją bloków, dając sieci więcej czasu na propagację większych ilości danych bez spowalniania.
+- Zapobieganie rozrostowi bazy danych (zrównoważony rozwój): Dostosowanie opłat sieciowych, aby dokładnie odzwierciedlały długoterminowy koszt sprzętowy przechowywania nowych danych, odblokowując przyszłe wzrosty limitu gazu, jednocześnie zapobiegając spadkowi wydajności sprzętu.
 
-Krótko mówiąc, Glamsterdam wprowadzi zmiany strukturalne, aby zapewnić, że w miarę zwiększania pojemności sieci, pozostanie ona zrównoważona, a wydajność utrzyma się na wysokim poziomie.
-
+Krótko mówiąc, Glamsterdam wprowadzi zmiany strukturalne, aby zapewnić, że w miarę jak sieć zwiększa pojemność, pozostaje zrównoważona, a wydajność utrzymuje się na wysokim poziomie.
 
 ## Skalowanie warstwy 1 (L1) i przetwarzanie równoległe {#scale-l1}
 
@@ -165,28 +164,25 @@ Ponieważ bloki od ukaranych cięciem proponujących są automatycznie odrzucane
 
 **Zasoby**: [Specyfikacja techniczna EIP-8045](https://eips.ethereum.org/EIPS/eip-8045)
 
-### Pozwolenie wyjściom na korzystanie z kolejki konsolidacji {#let-exits-use-the-consolidation-queue}
+### Zwiększenie limitu rotacji dla wyjść i konsolidacji {#increase-exit-and-consolidation-churn}
 
-- Zamyka lukę, która pozwala walidatorom z wysokim saldem na szybsze wyjście z sieci niż mniejszym walidatorom za pośrednictwem kolejki konsolidacji
-- Pozwala na przepełnienie regularnych wyjść do tej drugiej kolejki, gdy ma ona wolną pojemność, skracając czas wypłat ze stakingu w okresach dużego natężenia
-- Utrzymuje ścisłe bezpieczeństwo, aby uniknąć zmiany podstawowych limitów bezpieczeństwa Ethereum lub osłabienia sieci
+- Znacznie skraca czas wypłat ze stakingu, pozwalając na skalowanie pojemności wyjść wraz z całkowitą ilością stakowanego ETH, zamiast ograniczania jej do stałej wartości
+- Daje konsolidacjom walidatorów ich własną, dedykowaną pojemność kolejki, przyspieszając przejście na większe, bardziej wydajne walidatory
+- Utrzymuje bezpieczeństwo sieci poprzez starannie przeanalizowane parametry bezpieczeństwa
 
-Odkąd [aktualizacja Pectra](/roadmap/pectra) zwiększyła maksymalne efektywne saldo dla walidatorów Ethereum z 32 ETH do 2048 ETH, techniczna luka pozwala walidatorom z wysokim saldem na szybsze wyjście z sieci niż mniejszym walidatorom za pośrednictwem kolejki konsolidacji.
+Limit rotacji w Ethereum to limit bezpieczeństwa określający tempo, w jakim walidatory mogą wchodzić, wychodzić lub łączyć (konsolidować) swoje stakowane ETH, aby zapewnić, że bezpieczeństwo sieci nigdy nie zostanie zdestabilizowane. Obecnie wyjścia i aktywacje współdzielą jeden ograniczony limit, więc w okresach wysokiego popytu stakerzy mogą napotkać długie czasy oczekiwania na wypłatę swojego ETH. Konsolidacje, w których walidatory łączą się w większe, posiadające do 2048 ETH (umożliwione przez [aktualizację Pectra](/roadmap/pectra)), również konkurują o tę ograniczoną pojemność, co oznacza, że skonsolidowanie pełnego zestawu walidatorów zajęłoby lata przy obecnym tempie.
 
-**Pozwolenie wyjściom na korzystanie z kolejki konsolidacji (czyli EIP-8080)** demokratyzuje kolejkę konsolidacji dla wszystkich wyjść ze stakingu, tworząc jedną, sprawiedliwą linię dla wszystkich.
+**Zwiększenie limitu rotacji dla wyjść i konsolidacji (czyli EIP-8061)** reorganizuje te limity w oddzielne ścieżki:
 
-Aby przeanalizować, jak to działa dzisiaj:
+- Aktywacje walidatorów zachowują swój obecny, ograniczony limit bez zmian
+- Wyjścia nie są już ograniczone i zamiast tego skalują się wraz z całkowitą ilością stakowanego ETH
+- Konsolidacje otrzymują własną, dedykowaną pojemność, stanowiącą mniej więcej połowę połączonego limitu aktywacji i wyjść
 
-- Limit rotacji Ethereum to limit bezpieczeństwa dotyczący tempa, w jakim walidatorzy mogą wchodzić, wychodzić lub łączyć (konsolidować) swoje stakowane ETH, aby zapewnić, że bezpieczeństwo sieci nigdy nie zostanie zdestabilizowane
-- Ponieważ konsolidacja walidatora jest cięższym działaniem z większą liczbą ruchomych części niż standardowe wyjście walidatora, pochłania ona większą część tego budżetu bezpieczeństwa (limitu rotacji)
-- W szczególności protokół dyktuje, że dokładny koszt bezpieczeństwa jednego standardowego wyjścia wynosi dwie trzecie (2/3) kosztu jednej konsolidacji
+Przy obecnych poziomach stakingu zwiększa to pojemność wyjść około 4-krotnie, a pojemność konsolidacji około 2-krotnie, co oznacza, że stakerzy mogą wypłacać swoje ETH znacznie szybciej w okresach wysokiego popytu, a sieć szybciej przechodzi na mniejszy, bardziej wydajny zestaw walidatorów.
 
-Sprawiedliwsze kolejki wyjścia pozwolą standardowym wyjściom na pożyczanie niewykorzystanego miejsca z kolejki konsolidacji w okresach wysokiego popytu na wyjścia, stosując kurs wymiany „3 za 2” (na każde 2 niewykorzystane miejsca konsolidacji sieć może bezpiecznie przetworzyć 3 standardowe wyjścia). Ten współczynnik rotacji 3/2 równoważy popyt w kolejkach konsolidacji i wyjścia.
+Ponieważ stawka może szybciej wchodzić i wychodzić z sieci, zmiana ta w przybliżeniu o połowę skraca czas, przez jaki węzeł może pozostać offline, zanim będzie potrzebował niedawnego zaufanego punktu kontrolnego, aby bezpiecznie ponownie dołączyć do sieci (okres słabej subiektywności, z około 15,7 dnia do około 7 dni). Ten kompromis został starannie przeanalizowany, aby zapewnić utrzymanie bezpieczeństwa sieci.
 
-Demokratyzacja dostępu do kolejki konsolidacji zwiększy prędkość, z jaką użytkownicy mogą wycofać swoją stawkę w okresach wysokiego popytu, nawet 2,5-krotnie, bez narażania bezpieczeństwa sieci.
-
-**Zasoby**: [Specyfikacja techniczna EIP-8080](https://eips.ethereum.org/EIPS/eip-8080)
-
+**Zasoby**: [Specyfikacja techniczna EIP-8061](https://eips.ethereum.org/EIPS/eip-8061)
 
 ## Poprawa doświadczenia użytkowników i deweloperów {#improve-user-developer-experience}
 
@@ -289,13 +285,6 @@ Tak, Glamsterdam najprawdopodobniej obniży opłaty dla codziennych użytkownik�
 
 Ponadto, w celu zapewnienia długoterminowego zrównoważonego rozwoju, Glamsterdam wprowadza listy dostępu na poziomie bloku (BALs). Umożliwia to przetwarzanie równoległe i przygotowuje warstwę 1 (L1) do bezpiecznej obsługi wyższych ogólnych limitów gazu w przyszłości, co prawdopodobnie obniży koszty gazu na transakcję w miarę wzrostu pojemności.
 
-### Czy po aktualizacji Glamsterdam zajdą jakieś zmiany w moich istniejących inteligentnych kontraktach?
-Istniejące kontrakty będą nadal działać normalnie po aktualizacji Glamsterdam. Deweloperzy prawdopodobnie otrzymają kilka nowych narzędzi i powinni przejrzeć swoje zużycie gazu:
-
-- Zwiększenie maksymalnego rozmiaru kontraktu (czyli EIP-7954) pozwala deweloperom na wdrażanie większych aplikacji, podnosząc limit maksymalnego rozmiaru kontraktu z około 24 KiB do 64 KiB.
-- Deterministyczne wstępne wdrożenie fabryki (czyli EIP-7997) wprowadza uniwersalny, wbudowany kontrakt fabryki. Pozwala to deweloperom na wdrażanie swoich aplikacji i portfeli inteligentnych kontraktów pod dokładnie tym samym adresem we wszystkich uczestniczących łańcuchach EVM.
-- Jeśli Twoja aplikacja opiera się na złożonym śledzeniu w celu znalezienia transferów ETH, Transfery i spalanie ETH emitują log (czyli EIP-7708) pozwoli Ci przejść na korzystanie z logów w celu prostszego i bardziej niezawodnego księgowania.
-- Wzrost kosztu gazu za tworzenie stanu (czyli EIP-8037) oraz aktualizacja kosztu gazu za dostęp do stanu (czyli EIP-8038) wprowadzają nowe modele zrównoważonego rozwoju, które zmienią niektóre koszty wdrożenia kontraktu, ponieważ tworzenie nowych kont lub trwałej pamięci masowej będzie miało nową, ustandaryzowaną stałą opłatę opartą na rozmiarze utworzonych danych.
 ### Jak Glamsterdam wpłynie na pamięć masową węzłów i wymagania sprzętowe? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 
 Wiele propozycji EIP rozważanych dla Glamsterdam rozwiązuje problem spadku wydajności związanego ze wzrostem stanu:

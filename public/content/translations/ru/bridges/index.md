@@ -1,7 +1,7 @@
 ---
-title: Блокчейн-мосты
-metaTitle: Введение в блокчейн-мосты
-description: Мосты позволяют пользователям переводить свои средства между различными блокчейнами
+title: "Блокчейн-мосты"
+metaTitle: "Введение в блокчейн-мосты"
+description: "Мосты позволяют пользователям переводить свои средства между различными блокчейнами"
 lang: ru
 ---
 
@@ -135,6 +135,7 @@ _Web3 превратился в экосистему блокчейнов уро
 <Divider />
 
 ## Дополнительная литература {#further-reading}
+
 - [EIP-5164: Кроссчейн-выполнение](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) — _18 июня 2022 г. — Брендан Асселстайн (Brendan Asselstine)_
 - [Система оценки рисков L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) — _5 июля 2022 г. — Бартек Кепушевски (Bartek Kiepuszewski)_
 - [«Почему будущее будет мультичейн, но не кроссчейн»](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) — _8 января 2022 г. — Виталик Бутерин (Vitalik Buterin)_
