@@ -175,10 +175,15 @@ export const getEventsData = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
+/**
+ * No revalidation: the images this maps are the ones in community-meetups.json,
+ * which only changes on deploy. Refreshing on deploy keeps the events pages
+ * static.
+ */
 export const getMeetupImages = createCachedGetter(
   dataLayer.getMeetupImages,
   ["meetup-images"],
-  CACHE_REVALIDATE_DAY
+  false
 )
 
 export const getDeveloperToolsData = createCachedGetter(
