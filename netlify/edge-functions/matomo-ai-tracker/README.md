@@ -12,7 +12,7 @@ Tracks user-driven AI chatbot traffic (ChatGPT-User, Claude-User, Gemini-Deep-Re
 
 The function is declared in `netlify.toml` for all page routes (`/*` with asset routes excluded to save edge invocations — pages are the only thing worth tracking) and gated per deploy context by the `MATOMO_AI_TRACKER_ENABLED` env var, which is the rollout mechanism. It fails open: platform-level errors and origin failures bypass to origin (`onError: "bypass"`, declared inline in `index.ts` — netlify.toml has no `on_error` key), config errors pass the request through untracked, and tracking runs after the response via `context.waitUntil()`.
 
-Framework middleware runs before this function, so URLs arrive post-rewrite; tracked URLs are normalized back to their public form (default-locale `/en` prefix stripped, A/B `ab-code` variant routes mapped to the tested path). `llms.txt` fetches are deliberately tracked (flagged as document downloads); `robots.txt` is excluded.
+Framework middleware runs before this function, so URLs arrive post-rewrite; tracked URLs are normalized back to their public form (default-locale `/en` prefix stripped, A/B `ab-code` variant routes mapped to the tested path). `llms.txt` fetches are deliberately tracked as plain pageviews — Matomo's bot telemetry drops download-flagged hits from the AI Chatbots report, so `txt` is removed from both default regexes; `robots.txt` is excluded.
 
 ## Environment
 

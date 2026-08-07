@@ -75,7 +75,7 @@ test.describe("buildMatomoPayload", () => {
     expect(payload?.url).toBe("https://example.com/learn/")
   })
 
-  test("tracks llms.txt and flags it as a document", () => {
+  test("tracks llms.txt as a plain pageview (no download flag)", () => {
     const response = new Response(null, { status: 200 })
     const payload = buildMatomoPayload(
       new Request("https://example.com/llms.txt", {
@@ -87,7 +87,7 @@ test.describe("buildMatomoPayload", () => {
     )
     expect(payload).not.toBeNull()
     expect(payload?.url).toBe("https://example.com/llms.txt")
-    expect(payload?.download).toBe("https://example.com/llms.txt")
+    expect(payload).not.toHaveProperty("download")
   })
 
   test("returns null when user agent is not allowlisted", () => {

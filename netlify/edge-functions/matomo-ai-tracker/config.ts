@@ -23,8 +23,11 @@ const defaultAllowlistPattern = `(?:${defaultUserAgentPatterns
   .map(escapeRegex)
   .join("|")})`
 const defaultHttpMethodAllowlist = ["GET"]
+// Deviates from upstream: "txt" removed so llms.txt hits stay pageviews --
+// Matomo's bot telemetry does not surface download-flagged hits in the AI
+// Chatbots report (verified empirically on site 43)
 const defaultDocumentPattern =
-  "^[^?]+\\.(?:pdf|docx?|xlsx?|pptx?|csv|json|txt|xml|epub|mobi|azw3|mp3|mp4|mpe?g|webm|mov|avi|ogg|wav|flac|zip|gz|gzip|tgz|tar|bz2|tbz|7z|rar|dmg|exe|msi|apk|jar|md5|sig)(?:\\?|$)"
+  "^[^?]+\\.(?:pdf|docx?|xlsx?|pptx?|csv|json|xml|epub|mobi|azw3|mp3|mp4|mpe?g|webm|mov|avi|ogg|wav|flac|zip|gz|gzip|tgz|tar|bz2|tbz|7z|rar|dmg|exe|msi|apk|jar|md5|sig)(?:\\?|$)"
 // Deviates from upstream: "txt" removed from the exclude list so llms.txt
 // fetches are tracked (robots.txt is excluded at the netlify.toml layer)
 const defaultUrlExcludePattern =
