@@ -41,6 +41,9 @@ import heroImg from "@/public/images/upgrades/merge.png"
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
+
   const t = await getTranslations("page-founders")
 
   const supportTags = {
