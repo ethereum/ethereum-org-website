@@ -28,12 +28,12 @@ Questi miglioramenti assicurano che Ethereum rimanga veloce, conveniente e decen
 
 <VideoWatch slug="ethereum-evolution-glamsterdam" />
 
-## Miglioramenti presi in considerazione per Glamsterdam {#improvements-in-glamsterdam}
+## Miglioramenti in Glamsterdam {#improvements-in-glamsterdam}
 
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Nota: questo articolo evidenzia attualmente una selezione di EIP presi in considerazione per l'inclusione in Glamsterdam. Ulteriori proposte attivamente in fase di test nelle devnet includono EIP-7778, EIP-7843, EIP-7976, EIP-7981 ed EIP-8024. Per gli ultimi aggiornamenti sullo stato, visualizza l'[aggiornamento Glamsterdam su Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Nota: questo articolo evidenzia una selezione di EIP programmati per l'inclusione in Glamsterdam. Ulteriori proposte programmate in fase di test nelle devnet includono EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 ed EIP-8282. Per gli ultimi aggiornamenti sullo stato, visualizza l'[aggiornamento Glamsterdam su Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
 Se desideri aggiungere un EIP in fase di valutazione per Glamsterdam, ma che non è ancora stato aggiunto a questa pagina, [scopri come contribuire a ethereum.org qui](/contributing/).
 </AlertDescription>
@@ -46,8 +46,7 @@ L'aggiornamento Glamsterdam si concentra su tre obiettivi principali:
 - Espandere la capacità: suddividere il lavoro pesante di creazione e verifica dei blocchi, dando alla rete più tempo per propagare quantità maggiori di dati senza rallentare.
 - Prevenire il gonfiamento del database (sostenibilità): adeguare le commissioni di rete per riflettere accuratamente il costo hardware a lungo termine dell'archiviazione di nuovi dati, sbloccando futuri aumenti del limite di gas e prevenendo al contempo il degrado delle prestazioni hardware.
 
-In breve, Glamsterdam introdurrà cambiamenti strutturali per garantire che, man mano che la rete aumenta la capacità, rimanga sostenibile e le prestazioni restino elevate.
-
+In breve, Glamsterdam introdurrà modifiche strutturali per garantire che, man mano che la rete aumenta la capacità, rimanga sostenibile e le prestazioni restino elevate.
 
 ## Scalare il layer 1 (l1) e l'elaborazione parallela {#scale-l1}
 
@@ -165,28 +164,25 @@ Poiché i blocchi provenienti da proponenti penalizzati vengono automaticamente 
 
 **Risorse**: [Specifica tecnica dell'EIP-8045](https://eips.ethereum.org/EIPS/eip-8045)
 
-### Consentire alle uscite di utilizzare la coda di consolidamento {#let-exits-use-the-consolidation-queue}
+### Aumentare il churn di uscita e consolidamento {#increase-exit-and-consolidation-churn}
 
-- Chiude una scappatoia che consente ai validatori con saldi elevati di uscire dalla rete più rapidamente rispetto ai validatori più piccoli tramite la coda di consolidamento
-- Consente alle uscite regolari di riversarsi in questa seconda coda quando ha capacità di riserva, riducendo i tempi di prelievo dello staking durante i periodi di volume elevato
-- Mantiene una rigorosa sicurezza per evitare di alterare i limiti di sicurezza principali di Ethereum o di indebolire la rete
+- Riduce significativamente i tempi di prelievo dello staking consentendo alla capacità di uscita di scalare con la quantità totale di ETH messi in staking, invece di essere limitata a un tasso fisso
+- Offre ai consolidamenti dei validatori la propria capacità di coda dedicata, accelerando la transizione verso validatori più grandi ed efficienti
+- Mantiene la sicurezza della rete attraverso parametri di sicurezza attentamente analizzati
 
-Da quando l'[aggiornamento Pectra](/roadmap/pectra) ha aumentato il saldo effettivo massimo per i validatori di Ethereum da 32 ETH a 2.048 ETH, una scappatoia tecnica consente ai validatori con saldi elevati di uscire dalla rete più velocemente rispetto ai validatori più piccoli tramite la coda di consolidamento.
+Il limite di churn di Ethereum è un limite di sicurezza sulla velocità con cui i validatori possono entrare, uscire o unire (consolidare) i propri ETH messi in staking, per garantire che la sicurezza della rete non venga mai destabilizzata. Oggi, le uscite e le attivazioni condividono un unico limite massimo, quindi durante i periodi di forte domanda gli staker possono affrontare lunghe attese per prelevare i propri ETH. Anche i consolidamenti, in cui i validatori si uniscono in validatori più grandi con un massimo di 2.048 ETH (abilitati dall'[aggiornamento Pectra](/roadmap/pectra)), competono per questa capacità limitata, il che significa che consolidare l'intero set di validatori richiederebbe anni al ritmo attuale.
 
-**Consentire alle uscite di utilizzare la coda di consolidamento (o EIP-8080)** democratizza la coda di consolidamento per tutte le uscite dallo staking, creando un'unica fila equa per tutti.
+**Aumentare il churn di uscita e consolidamento (o EIP-8061)** riorganizza questi limiti in corsie separate:
 
-Per analizzare come funziona oggi:
+- Le attivazioni dei validatori mantengono il loro limite massimo esistente, invariato
+- Le uscite non sono più limitate e scalano invece con la quantità totale di ETH messi in staking
+- I consolidamenti ottengono la propria capacità dedicata, grande circa la metà del limite combinato di attivazione-uscita
 
-- Il limite di churn di Ethereum è un limite di sicurezza sulla velocità con cui i validatori possono entrare, uscire o unire (consolidare) i propri ETH in staking, per garantire che la sicurezza della rete non venga mai destabilizzata
-- Poiché il consolidamento di un validatore è un'azione più pesante con più parti in movimento rispetto a un'uscita standard di un validatore, consuma una porzione maggiore di questo budget di sicurezza (limite di churn)
-- Nello specifico, il protocollo stabilisce che l'esatto costo di sicurezza di un'uscita standard è pari a due terzi (2/3) del costo di un consolidamento
+Agli attuali livelli di staking, ciò aumenta la capacità di uscita di circa 4 volte e la capacità di consolidamento di circa 2 volte, il che significa che gli staker possono prelevare i propri ETH molto più velocemente durante i periodi di forte domanda e la rete passa più rapidamente a un set di validatori più piccolo ed efficiente.
 
-Code di uscita più eque consentiranno alle uscite standard di prendere in prestito spazio inutilizzato dalla coda di consolidamento durante i periodi di elevata domanda di uscita, applicando un tasso di cambio "3 per 2" (per ogni 2 posti di consolidamento inutilizzati, la rete può elaborare in sicurezza 3 uscite standard). Questo fattore di churn 3/2 bilancia la domanda tra le code di consolidamento e di uscita.
+Poiché lo stake può entrare e uscire dalla rete più velocemente, la modifica dimezza all'incirca il tempo in cui un nodo può rimanere offline prima di aver bisogno di un checkpoint fidato recente per ricongiungersi in sicurezza alla rete (il periodo di soggettività debole, da circa 15,7 giorni a circa 7 giorni). Questo compromesso è stato attentamente analizzato per garantire il mantenimento della sicurezza della rete.
 
-Democratizzare l'accesso alla coda di consolidamento aumenterà la velocità con cui gli utenti possono ritirare il proprio stake durante i periodi di forte domanda fino a 2,5 volte, senza compromettere la sicurezza della rete.
-
-**Risorse**: [Specifica tecnica dell'EIP-8080](https://eips.ethereum.org/EIPS/eip-8080)
-
+**Risorse**: [Specifica tecnica dell'EIP-8061](https://eips.ethereum.org/EIPS/eip-8061)
 
 ## Migliorare l'esperienza di utenti e sviluppatori {#improve-user-developer-experience}
 
