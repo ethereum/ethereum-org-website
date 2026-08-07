@@ -58,7 +58,7 @@ const quizzes = {
     questions: ["gas-1", "gas-2", "gas-3", "gas-4", "gas-5"],
   },
   daos: {
-    title: "DAOs",
+    title: "learn-quizzes:page-daos",
     questions: ["daos-1", "daos-2", "daos-3", "daos-4", "daos-5"],
   },
   "staking-solo": {
@@ -99,7 +99,7 @@ const quizzes = {
     ],
   },
   defi: {
-    title: "DeFi",
+    title: "learn-quizzes:page-defi",
     questions: ["defi-1", "defi-2", "defi-3", "defi-4", "defi-5"],
   },
   "smart-contracts": {
