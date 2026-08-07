@@ -33,9 +33,9 @@ Essas melhorias garantem que o Ethereum permaneça rápido, acessível e descent
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Nota: Este artigo destaca atualmente uma seleção de EIPs sendo consideradas para inclusão na Glamsterdam. Propostas adicionais sendo ativamente testadas em redes de desenvolvimento (devnets) incluem EIP-7778, EIP-7843, EIP-7976, EIP-7981 e EIP-8024. Para as atualizações de status mais recentes, veja a [atualização Glamsterdam no Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Nota: Este artigo destaca uma seleção de EIPs programadas para inclusão na Glamsterdam. Propostas adicionais programadas que estão sendo testadas em devnets incluem EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 e EIP-8282. Para as atualizações de status mais recentes, veja a [atualização Glamsterdam no Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
-Se você quiser adicionar uma EIP que está sob consideração para a Glamsterdam, mas ainda não foi adicionada a esta página, [aprenda como contribuir para o ethereum.org aqui](/contributing/).
+Se você quiser adicionar uma EIP que está sob consideração para a Glamsterdam, mas ainda não foi adicionada a esta página, [saiba como contribuir para o ethereum.org aqui](/contributing/).
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -48,8 +48,6 @@ A atualização Glamsterdam concentra-se em três objetivos principais:
 
 Em suma, a Glamsterdam introduzirá mudanças estruturais para garantir que, à medida que a rede aumenta a capacidade, ela permaneça sustentável e o desempenho continue alto.
 
-
-A escalabilidade significativa da camada 1 (l1) exige o afastamento de premissas de confiança fora do protocolo e de restrições de execução em série. A Glamsterdam aborda isso consagrando a separação de certas funções de construção de blocos e introduzindo novas estruturas de dados que permitem que a rede se prepare para o processamento paralelo.
 ## Escalar a L1 e processamento paralelo {#scale-l1}
 
 O dimensionamento significativo da camada 1 (l1) exige o afastamento de premissas de confiança fora do protocolo e restrições de execução em série. A Glamsterdam aborda isso consagrando a separação de certas funções de construção de blocos e introduzindo novas estruturas de dados que permitem que a rede se prepare para o processamento paralelo.
@@ -168,30 +166,26 @@ Como os blocos de proponentes penalizados são automaticamente rejeitados como i
 
 **Recursos**: [Especificação técnica da EIP-8045](https://eips.ethereum.org/EIPS/eip-8045)
 
-### Permitir que as saídas usem a fila de consolidação {#let-exits-use-the-consolidation-queue}
+### Permitir que as saídas usem a fila de consolidação {#increase-exit-and-consolidation-churn}
 
-- Fecha uma brecha que permite que validadores de alto saldo saiam da rede mais rapidamente do que validadores menores por meio da fila de consolidação
-- Permite que saídas regulares transbordem (overflow) para esta segunda fila quando ela tem capacidade ociosa, reduzindo os tempos de saque de staking durante períodos de alto volume
-- Mantém segurança estrita para evitar alterar os limites de segurança principais do Ethereum ou enfraquecer a rede
+- Reduz significativamente os tempos de saque de staking, permitindo que a capacidade de saída escale com a quantidade total de ETH em stake, em vez de ser limitada a uma taxa fixa
+- Dá às consolidações de validadores sua própria capacidade de fila dedicada, acelerando a transição para validadores maiores e mais eficientes
+- Mantém a segurança da rede por meio de parâmetros de segurança cuidadosamente analisados
 
-Desde que a [atualização Pectra](/roadmap/pectra) aumentou o saldo efetivo máximo para validadores do Ethereum de 32 ETH para 2.048 ETH, uma brecha técnica permite que validadores de alto saldo saiam da rede mais rápido do que validadores menores por meio da fila de consolidação.
+O limite de rotatividade do Ethereum é um limite de segurança na taxa em que os validadores podem entrar, sair ou fundir (consolidar) seu ETH em stake, para garantir que a segurança da rede nunca seja desestabilizada. Hoje, saídas e ativações compartilham um único limite máximo, portanto, durante períodos de alta demanda, os stakers podem enfrentar longas esperas para sacar seu ETH. As consolidações, onde os validadores se fundem em validadores maiores com até 2.048 ETH (habilitado pela [atualização Pectra](/roadmap/pectra)), também competem por essa capacidade limitada, o que significa que consolidar todo o conjunto de validadores levaria anos na taxa atual.
 
-**Permitir que as saídas usem a fila de consolidação (ou EIP-8080)** democratiza a fila de consolidação para todas as saídas de staking, criando uma fila única e justa para todos.
+**Aumentar o limite de rotatividade de saída e consolidação (ou EIP-8061)** reorganiza esses limites em faixas separadas:
 
-Para detalhar como isso funciona hoje:
+- As ativações de validadores mantêm seu limite máximo existente, inalterado
+- As saídas não são mais limitadas e, em vez disso, escalam com a quantidade total de ETH em stake
+- As consolidações ganham sua própria capacidade dedicada, com cerca de metade do tamanho do limite combinado de ativação-saída
 
-- O limite de rotatividade do Ethereum é um limite de segurança na taxa em que os validadores podem entrar, sair ou mesclar (consolidar) seu ETH em stake, para garantir que a segurança da rede nunca seja desestabilizada
-- Como a consolidação de um validador é uma ação mais pesada com mais partes móveis do que uma saída padrão de validador, ela consome uma porção maior desse orçamento de segurança (limite de rotatividade)
-- Especificamente, o protocolo dita que o custo exato de segurança de uma saída padrão é de dois terços (2/3) do custo de uma consolidação
+Nos níveis atuais de staking, isso aumenta a capacidade de saída em cerca de 4x e a capacidade de consolidação em cerca de 2x, o que significa que os stakers podem sacar seu ETH muito mais rápido durante períodos de alta demanda e a rede transita mais rapidamente para um conjunto de validadores menor e mais eficiente.
 
-Filas de saída mais justas permitirão que saídas padrão peguem emprestado espaço não utilizado da fila de consolidação durante períodos de alta demanda de saída, aplicando uma taxa de câmbio de "3 por 2" (para cada 2 vagas de consolidação não utilizadas, a rede pode processar com segurança 3 saídas padrão). Esse fator de rotatividade de 3/2 equilibra a demanda entre as filas de consolidação e de saída.
+Como o stake pode entrar e sair da rede mais rapidamente, a mudança reduz pela metade o tempo que um nó pode permanecer offline antes de precisar de um ponto de verificação confiável recente para retornar com segurança à rede (o período de subjetividade fraca, de cerca de 15,7 dias para cerca de 7 dias). Essa compensação foi cuidadosamente analisada para garantir que a segurança da rede seja mantida.
 
-Democratizar o acesso à fila de consolidação aumentará a velocidade com que os usuários podem sair de seu stake durante períodos de alta demanda em até 2,5x, sem comprometer a segurança da rede.
+**Recursos**: [Especificação técnica da EIP-8061](https://eips.ethereum.org/EIPS/eip-8061)
 
-**Recursos**: [Especificação técnica da EIP-8080](https://eips.ethereum.org/EIPS/eip-8080)
-
-
-A atualização Glamsterdam do Ethereum visa melhorar a experiência do usuário, aprimorar a descoberta de dados e lidar com o aumento do tamanho das mensagens para evitar falhas de sincronização. Isso torna mais fácil rastrear o que está acontecendo onchain, ao mesmo tempo em que evita problemas técnicos à medida que a rede escala.
 ## Melhorar a experiência do usuário e do desenvolvedor {#improve-user-developer-experience}
 
 A atualização Glamsterdam do Ethereum visa melhorar a experiência do usuário, aprimorar a descoberta de dados e lidar com o aumento do tamanho das mensagens para evitar falhas de sincronização. Isso torna mais fácil rastrear o que está acontecendo onchain, ao mesmo tempo em que evita problemas técnicos à medida que a rede escala.
