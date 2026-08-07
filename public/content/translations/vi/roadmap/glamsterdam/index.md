@@ -33,7 +33,7 @@ Những cải tiến này đảm bảo Ethereum vẫn nhanh chóng, giá cả ph
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Lưu ý: Bài viết này hiện nêu bật một số EIP đang được xem xét để đưa vào Glamsterdam. Các đề xuất bổ sung đang được tích cực thử nghiệm trên devnet bao gồm EIP-7778, EIP-7843, EIP-7976, EIP-7981 và EIP-8024. Để biết các cập nhật trạng thái mới nhất, hãy xem [bản nâng cấp Glamsterdam trên Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Lưu ý: Bài viết này nêu bật một số EIP được lên kế hoạch đưa vào Glamsterdam. Các đề xuất bổ sung đã được lên lịch đang được thử nghiệm trên các mạng phát triển bao gồm EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 và EIP-8282. Để biết các cập nhật trạng thái mới nhất, hãy xem [bản nâng cấp Glamsterdam trên Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
 Nếu bạn muốn thêm một EIP đang được xem xét cho Glamsterdam nhưng chưa được thêm vào trang này, [hãy tìm hiểu cách đóng góp cho ethereum.org tại đây](/contributing/).
 </AlertDescription>
@@ -43,11 +43,10 @@ Nếu bạn muốn thêm một EIP đang được xem xét cho Glamsterdam nhưn
 Bản nâng cấp Glamsterdam tập trung vào ba mục tiêu chính:
 
 - Tăng tốc độ xử lý (song song hóa): Tổ chức lại cách mạng lưới ghi lại các phụ thuộc dữ liệu, để nó có thể xử lý an toàn nhiều giao dịch cùng một lúc thay vì theo một trình tự chậm chạp, từng cái một.
-- Mở rộng công suất: Chia nhỏ công việc nặng nhọc của việc tạo và xác thực khối, giúp mạng lưới có thêm thời gian để truyền tải lượng dữ liệu lớn hơn mà không bị chậm lại.
-- Ngăn chặn phình to cơ sở dữ liệu (tính bền vững): Điều chỉnh phí mạng lưới để phản ánh chính xác chi phí phần cứng dài hạn của việc lưu trữ dữ liệu mới, mở khóa các đợt tăng giới hạn gas trong tương lai đồng thời ngăn chặn sự suy giảm hiệu suất phần cứng.
+- Mở rộng công suất: Chia nhỏ công việc nặng nhọc là tạo và xác minh các khối, giúp mạng lưới có thêm thời gian để truyền tải lượng dữ liệu lớn hơn mà không bị chậm lại.
+- Ngăn chặn phình to cơ sở dữ liệu (tính bền vững): Điều chỉnh phí mạng lưới để phản ánh chính xác chi phí phần cứng dài hạn của việc lưu trữ dữ liệu mới, gỡ bỏ rào cản cho việc tăng giới hạn gas trong tương lai đồng thời ngăn chặn sự suy giảm hiệu suất phần cứng.
 
-Tóm lại, Glamsterdam sẽ giới thiệu các thay đổi cấu trúc để đảm bảo rằng khi mạng lưới tăng công suất, nó vẫn bền vững và hiệu suất vẫn ở mức cao.
-
+Tóm lại, Glamsterdam sẽ giới thiệu các thay đổi về cấu trúc để đảm bảo rằng khi mạng lưới tăng công suất, nó vẫn bền vững và hiệu suất vẫn ở mức cao.
 
 ## Mở rộng quy mô lớp 1 (l1) & xử lý song song {#scale-l1}
 
@@ -166,28 +165,25 @@ Bởi vì các khối từ những người đề xuất bị phạt cắt giả
 
 **Tài nguyên**: [Đặc tả kỹ thuật EIP-8045](https://eips.ethereum.org/EIPS/eip-8045)
 
-### Cho phép các lượt thoát sử dụng hàng đợi hợp nhất {#let-exits-use-the-consolidation-queue}
+### Tăng giới hạn ra vào cho việc thoát và hợp nhất {#increase-exit-and-consolidation-churn}
 
-- Đóng một lỗ hổng cho phép các trình xác thực có số dư cao thoát khỏi mạng lưới nhanh hơn các trình xác thực nhỏ hơn thông qua hàng đợi hợp nhất
-- Cho phép các lượt thoát thông thường tràn vào hàng đợi thứ hai này khi nó có công suất dự phòng, giảm thời gian rút tiền đặt cọc trong các giai đoạn khối lượng cao
-- Duy trì bảo mật nghiêm ngặt để tránh thay đổi các giới hạn an toàn cốt lõi của Ethereum hoặc làm suy yếu mạng lưới
+- Giảm đáng kể thời gian rút tiền đặt cọc bằng cách cho phép công suất thoát mở rộng theo tổng số lượng ETH được đặt cọc, thay vì bị giới hạn ở một tỷ lệ cố định
+- Cung cấp cho việc hợp nhất trình xác thực công suất hàng đợi chuyên dụng riêng, đẩy nhanh quá trình chuyển đổi sang các trình xác thực lớn hơn, hiệu quả hơn
+- Duy trì bảo mật mạng lưới thông qua các thông số an toàn được phân tích cẩn thận
 
-Kể từ khi [bản nâng cấp Pectra](/roadmap/pectra) tăng số dư hiệu quả tối đa cho các trình xác thực Ethereum từ 32 ETH lên 2.048 ETH, một lỗ hổng kỹ thuật cho phép các trình xác thực có số dư cao thoát khỏi mạng lưới nhanh hơn các trình xác thực nhỏ hơn thông qua hàng đợi hợp nhất.
+Giới hạn ra vào của Ethereum là một giới hạn an toàn về tốc độ mà các trình xác thực có thể tham gia, thoát hoặc kết hợp (hợp nhất) số ETH được đặt cọc của họ, để đảm bảo an ninh của mạng lưới không bao giờ bị mất ổn định. Ngày nay, việc thoát và sự kích hoạt chia sẻ một giới hạn chung, vì vậy trong những giai đoạn nhu cầu cao, những người đặt cọc có thể phải đối mặt với thời gian chờ đợi lâu để rút ETH của họ. Việc hợp nhất, nơi các trình xác thực kết hợp thành các trình xác thực lớn hơn với tối đa 2.048 ETH (được kích hoạt bởi [bản nâng cấp Pectra](/roadmap/pectra)), cũng cạnh tranh cho công suất hạn chế này, có nghĩa là việc hợp nhất toàn bộ tập hợp trình xác thực sẽ mất nhiều năm với tốc độ hiện tại.
 
-**Cho phép các lượt thoát sử dụng hàng đợi hợp nhất (hoặc EIP-8080)** dân chủ hóa hàng đợi hợp nhất cho tất cả các lượt thoát đặt cọc, tạo ra một hàng duy nhất, công bằng cho mọi người.
+**Tăng giới hạn ra vào cho việc thoát và hợp nhất (hoặc EIP-8061)** tổ chức lại các giới hạn này thành các làn đường riêng biệt:
 
-Để phân tích cách thức hoạt động của điều này ngày nay:
+- Sự kích hoạt trình xác thực giữ nguyên giới hạn hiện tại của chúng, không thay đổi
+- Việc thoát không còn bị giới hạn và thay vào đó mở rộng theo tổng số lượng ETH được đặt cọc
+- Việc hợp nhất có công suất chuyên dụng riêng, bằng khoảng một nửa kích thước của giới hạn kích hoạt-thoát kết hợp
 
-- Giới hạn ra vào của Ethereum là một giới hạn an toàn về tỷ lệ mà các trình xác thực có thể tham gia, thoát hoặc hợp nhất (củng cố) ETH đã đặt cọc của họ, để đảm bảo an ninh của mạng lưới không bao giờ bị mất ổn định
-- Bởi vì việc hợp nhất trình xác thực là một hành động nặng nề hơn với nhiều bộ phận chuyển động hơn so với việc thoát trình xác thực tiêu chuẩn, nó tiêu tốn một phần lớn hơn của ngân sách an toàn này (giới hạn ra vào)
-- Cụ thể, Giao thức quy định rằng chi phí bảo mật chính xác của một lượt thoát tiêu chuẩn bằng hai phần ba (2/3) chi phí của một lần hợp nhất
+Ở mức độ đặt cọc hiện tại, điều này làm tăng công suất thoát lên khoảng 4 lần và công suất hợp nhất lên khoảng 2 lần, có nghĩa là những người đặt cọc có thể rút ETH của họ nhanh hơn nhiều trong các giai đoạn nhu cầu cao và mạng lưới chuyển đổi nhanh hơn sang một tập hợp trình xác thực nhỏ hơn, hiệu quả hơn.
 
-Các hàng đợi thoát công bằng hơn sẽ cho phép các lượt thoát tiêu chuẩn mượn không gian chưa sử dụng từ hàng đợi hợp nhất trong các giai đoạn có nhu cầu thoát cao, áp dụng tỷ giá hối đoái "3 đổi 2" (cứ 2 vị trí hợp nhất chưa sử dụng, mạng lưới có thể xử lý an toàn 3 lượt thoát tiêu chuẩn). Hệ số ra vào 3/2 này cân bằng nhu cầu trên các hàng đợi hợp nhất và thoát.
+Bởi vì khoản đặt cọc có thể di chuyển vào và ra khỏi mạng lưới nhanh hơn, sự thay đổi này làm giảm khoảng một nửa thời gian một nút có thể duy trì ngoại tuyến trước khi nó cần một điểm kiểm tra đáng tin cậy gần đây để tham gia lại mạng lưới một cách an toàn (giai đoạn tính chủ quan yếu, từ khoảng 15,7 ngày xuống còn khoảng 7 ngày). Sự đánh đổi này đã được phân tích cẩn thận để đảm bảo an ninh mạng lưới được duy trì.
 
-Việc dân chủ hóa quyền truy cập vào hàng đợi hợp nhất sẽ tăng tốc độ mà người dùng có thể thoát khoản đặt cọc của họ trong các giai đoạn nhu cầu cao lên tới 2,5 lần, mà không làm tổn hại đến an ninh mạng lưới.
-
-**Tài nguyên**: [Đặc tả kỹ thuật EIP-8080](https://eips.ethereum.org/EIPS/eip-8080)
-
+**Tài nguyên**: [Đặc tả kỹ thuật EIP-8061](https://eips.ethereum.org/EIPS/eip-8061)
 
 ## Cải thiện trải nghiệm người dùng & nhà phát triển {#improve-user-developer-experience}
 
