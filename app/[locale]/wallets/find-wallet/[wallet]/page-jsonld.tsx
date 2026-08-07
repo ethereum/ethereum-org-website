@@ -11,6 +11,7 @@ import {
 
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
+import { WALLET_APPLICATION_CATEGORY } from "@/lib/jsonld/software"
 
 export default async function WalletDetailPageJsonLD({
   locale,
@@ -86,7 +87,7 @@ export default async function WalletDetailPageJsonLD({
         name: wallet.name,
         ...(description && { description }),
         url: wallet.url,
-        applicationCategory: "Cryptocurrency Wallet",
+        ...WALLET_APPLICATION_CATEGORY,
         ...(os.length > 0 && { operatingSystem: os.join(", ") }),
         ...(wallet.repo_url && { codeRepository: wallet.repo_url }),
         ...(sameAs.length > 0 && { sameAs }),

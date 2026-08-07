@@ -1,14 +1,16 @@
 import { getTranslations } from "next-intl/server"
 
-import { FileContributor, Lang, WalletData } from "@/lib/types"
+import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+import type { CatalogWallet } from "@/lib/utils/walletData"
 import { getWalletPlatforms } from "@/lib/utils/walletData"
 
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
+import { WALLET_APPLICATION_CATEGORY } from "@/lib/jsonld/software"
 
 export default async function FindWalletPageJsonLD({
   locale,
@@ -17,7 +19,7 @@ export default async function FindWalletPageJsonLD({
 }: {
   locale: Lang
   contributors: FileContributor[]
-  wallets: WalletData[]
+  wallets: CatalogWallet[]
 }) {
   const t = await getTranslations({
     locale,
@@ -85,14 +87,21 @@ export default async function FindWalletPageJsonLD({
         numberOfItems: wallets.length,
         itemListElement: wallets.map((wallet, index) => {
           const os = getWalletPlatforms(wallet)
+          const detailUrl = normalizeUrlForJsonLd(
+            locale,
+            `/wallets/find-wallet/${wallet.slug}/`
+          )
           return {
             "@type": "ListItem",
             position: index + 1,
             item: {
               "@type": "SoftwareApplication",
+              // Same node as the detail page's, so a wallet is one entity
+              // across the index, its persona pages, and its own page.
+              "@id": `${detailUrl}#wallet`,
               name: wallet.name,
               url: wallet.url,
-              applicationCategory: "Cryptocurrency Wallet",
+              ...WALLET_APPLICATION_CATEGORY,
               ...(os.length > 0 && {
                 operatingSystem: os.join(", "),
               }),

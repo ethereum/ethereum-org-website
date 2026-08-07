@@ -7,6 +7,7 @@ import type { CatalogWallet } from "@/lib/utils/walletData"
 
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
+import { WALLET_APPLICATION_CATEGORY } from "@/lib/jsonld/software"
 
 type Persona = {
   id: string
@@ -87,27 +88,33 @@ export default async function PersonaPageJsonLD({
         name,
         description: t(persona.descKey),
         numberOfItems: wallets.length,
-        itemListElement: wallets.map((wallet, index) => ({
-          "@type": "ListItem",
-          position: index + 1,
-          item: {
-            "@type": "SoftwareApplication",
-            name: wallet.name,
-            ...(wallet.descriptionStripped && {
-              description: wallet.descriptionStripped,
-            }),
-            url: normalizeUrlForJsonLd(
-              locale,
-              `/wallets/find-wallet/${wallet.slug}/`
-            ),
-            applicationCategory: "Cryptocurrency Wallet",
-            offers: {
-              "@type": "Offer",
-              price: "0",
-              priceCurrency: "USD",
+        itemListElement: wallets.map((wallet, index) => {
+          const detailUrl = normalizeUrlForJsonLd(
+            locale,
+            `/wallets/find-wallet/${wallet.slug}/`
+          )
+          return {
+            "@type": "ListItem",
+            position: index + 1,
+            item: {
+              "@type": "SoftwareApplication",
+              // Same node as the detail page's, so a wallet is one entity
+              // across the index, its persona pages, and its own page.
+              "@id": `${detailUrl}#wallet`,
+              name: wallet.name,
+              ...(wallet.descriptionStripped && {
+                description: wallet.descriptionStripped,
+              }),
+              url: wallet.url,
+              ...WALLET_APPLICATION_CATEGORY,
+              offers: {
+                "@type": "Offer",
+                price: "0",
+                priceCurrency: "USD",
+              },
             },
-          },
-        })),
+          }
+        }),
       },
     ],
   }
