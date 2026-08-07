@@ -4,11 +4,11 @@
     "intent": "intl-pipeline silently drops newly added frontmatter keys and stamps manifests current, hiding the gap",
     "state": "decision-needed",
     "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Is this still unfixed after the merged pipeline fixes; if so route PR #18896",
+    "next_human_decision": "Is this still live after the merged pipeline fixes; if so route PR #18896 (still CONFLICTING)",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Confirm bug is live; if so route PR #18896"
+        "action": "Confirm bug is live; route/rebase PR #18896"
       }
     ],
     "impact": "high",
@@ -20,23 +20,23 @@
     "owner_lane": "tooling",
     "confidence": 0.6,
     "evidence": [
-      "team-authored bug, idle 13d, no team reply",
+      "team-authored bug, idle 14d, no team reply",
       "PR #18896 closes it but is CONFLICTING"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-05",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "Issue #18967",
     "intent": "Reorganize Storybook into a repo-mirrored taxonomy, remove dead components, close coverage gaps",
     "state": "decision-needed",
     "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Approve the taxonomy design once, then land the stacked phase PRs in order",
+    "next_human_decision": "Approve taxonomy once, then land the stacked phase PRs in order",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Review the reorg design and its stacked PRs"
+        "action": "Review the reorg design and land its stacked PRs"
       }
     ],
     "impact": "medium",
@@ -54,23 +54,60 @@
     "owner_lane": "tooling",
     "confidence": 0.8,
     "evidence": [
-      "team-authored tracking issue, answered+assigned",
-      "implementing stack grew from 3 to 7 PRs"
+      "team tracking issue, answered+assigned",
+      "7-PR implementing stack open"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-05",
-    "runs_seen": 2
+    "runs_seen": 3
+  },
+  {
+    "item": "Issue #18995 (SEO audit cluster #18977-#18996)",
+    "intent": "konopkja's coordinated SEO audit: broken JSON-LD, crawler-invisible content, sitemap gaps, CI guard, glossary-URL RFC",
+    "state": "decision-needed",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "Green+review the first ready fix PR #19001 and fast-track the two live prod bugs, or hold for a full SEO sprint?",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Triage: review #19001; fast-track #18979 & #18980"
+      }
+    ],
+    "impact": "high",
+    "effort_to_unblock": "medium",
+    "risk": "medium",
+    "related_items": [
+      "Issue #18977",
+      "Issue #18978",
+      "Issue #18979",
+      "Issue #18980",
+      "Issue #18981",
+      "Issue #18982",
+      "Issue #18983",
+      "Issue #18996",
+      "PR #19001"
+    ],
+    "owner_lane": "code",
+    "confidence": 0.8,
+    "evidence": [
+      "cluster grew to 9 issues (2 new today)",
+      "external PR #19001 with tests now implements #18995 (checks red)",
+      "#18979 ships raw i18n keys as JSON-LD; #18980 FAQPage asserts absent answers"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-08-06",
+    "runs_seen": 1
   },
   {
     "item": "PR #18700",
     "intent": "Return 400 instead of 500 for malformed percent-encoded URLs (fixes recovery incident #17967)",
     "state": "blocked",
     "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "",
+    "next_human_decision": "wackerow noted the 302 lands on a browser-default dead-end page — accept that tradeoff or ask for a themed page?",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Review and clear the missing-review block"
+        "action": "Resolve the dead-end-page note and clear the missing-review block"
       }
     ],
     "impact": "medium",
@@ -81,15 +118,15 @@
       "PR #18821"
     ],
     "owner_lane": "code",
-    "confidence": 0.78,
+    "confidence": 0.75,
     "evidence": [
-      "Fixes recovery-agent incident #17967",
+      "Fixes recovery incident #17967",
       "CI SUCCESS, mergeState BLOCKED",
-      "idle 15d, no maintainer action in 3 runs"
+      "idle 15d, no maintainer action in 4 runs"
     ],
     "analyzed_sha": "186b298",
     "first_seen": "2026-08-04",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "PR #18821",
@@ -100,7 +137,7 @@
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Review and clear the missing-review block"
+        "action": "Review; batch with #18700 & #18966 to one reviewer"
       }
     ],
     "impact": "medium",
@@ -113,24 +150,24 @@
     "owner_lane": "code",
     "confidence": 0.78,
     "evidence": [
-      "Fixes recovery-agent incident #18796",
-      "CI SUCCESS, mergeState BLOCKED",
-      "idle 14d, no maintainer action in 3 runs"
+      "Fixes recovery incident #18796",
+      "CI SUCCESS, mergeState BLOCKED, 0 reviews",
+      "idle 14d, no maintainer action in 4 runs"
     ],
     "analyzed_sha": "e335f83",
     "first_seen": "2026-08-04",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "PR #18876",
-    "intent": "Add DeFi quiz questions resolving issue #17280",
+    "intent": "Replace (not add) DeFi quiz questions resolving issue #17280",
     "state": "waiting-on-contributor",
     "recommended_disposition": "request_changes",
-    "next_human_decision": "",
+    "next_human_decision": "If the author never justifies deleting the existing questions, close rather than merge a swap",
     "waiting_on": [
       {
         "actor": "contributor",
-        "action": "Address wackerow's review comment"
+        "action": "Answer wackerow's question about deleting existing questions"
       }
     ],
     "impact": "low",
@@ -141,15 +178,15 @@
       "PR #18877"
     ],
     "owner_lane": "content",
-    "confidence": 0.7,
+    "confidence": 0.72,
     "evidence": [
-      "lastHumanComment isTeam=true (wackerow)",
-      "CI SUCCESS",
-      "ball is with contributor, idle 13d"
+      "lastHumanComment isTeam=true (wackerow), 15d unanswered",
+      "idle 0 is a bot AI re-review, not a real reply",
+      "PR replaces existing questions rather than adding"
     ],
     "analyzed_sha": "470e609",
     "first_seen": "2026-08-04",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "PR #18896",
@@ -178,18 +215,18 @@
     ],
     "analyzed_sha": "3948c50",
     "first_seen": "2026-08-05",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "PR #18918",
     "intent": "Add ethereum.org-hosted walletless-dapps tutorial (implements #18052)",
     "state": "waiting-on-contributor",
     "recommended_disposition": "request_changes",
-    "next_human_decision": "Does conceptual walletless content belong as a tutorial, or a guide/docs page?",
+    "next_human_decision": "Comment the trivial fixes (lang/published frontmatter) or close — 4 runs of silence is the worst option",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Comment the fixes needed (frontmatter + netlify) or close"
+        "action": "Comment the fixes needed or close"
       }
     ],
     "impact": "medium",
@@ -207,51 +244,14 @@
     ],
     "analyzed_sha": "ba23523",
     "first_seen": "2026-08-04",
-    "runs_seen": 3
-  },
-  {
-    "item": "PR #18923 (quiz series)",
-    "intent": "~10-PR team quiz series, each approved, green, and BLOCKED on reviewDecision null",
-    "state": "blocked",
-    "recommended_disposition": "merge",
-    "next_human_decision": "A reviewer can't clear this — needs a repo admin to add the 2nd required review or adjust branch protection",
-    "waiting_on": [
-      {
-        "actor": "repo-admin",
-        "action": "Add 2nd required review / CODEOWNER approval or adjust protection, then land batch"
-      }
-    ],
-    "impact": "high",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "PR #18934",
-      "PR #18913",
-      "PR #18910",
-      "PR #18909",
-      "PR #18908",
-      "PR #18907",
-      "PR #18906",
-      "PR #18905",
-      "PR #18902"
-    ],
-    "owner_lane": "content",
-    "confidence": 0.72,
-    "evidence": [
-      "each PR one approving team review, CI SUCCESS",
-      "mergeState BLOCKED, reviewDecision null",
-      "unmoved 3 runs — block is structural, not per-PR"
-    ],
-    "analyzed_sha": "0d31a8e",
-    "first_seen": "2026-08-04",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "PR #18966",
-    "intent": "Fix /layer-2 average tx cost reading $0.00 by using 2-sig-fig formatting for sub-cent fees",
+    "intent": "Fix /layer-2 average tx cost reading $0.00 by using significant-figure formatting for sub-cent fees",
     "state": "blocked",
     "recommended_disposition": "merge",
-    "next_human_decision": "",
+    "next_human_decision": "None — 1-file prod-bug fix blocked only on a missing review; assign a reviewer or self-merge",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -261,17 +261,20 @@
     "impact": "high",
     "effort_to_unblock": "small",
     "risk": "low",
-    "related_items": [],
+    "related_items": [
+      "PR #18700",
+      "PR #18821"
+    ],
     "owner_lane": "code",
     "confidence": 0.86,
     "evidence": [
       "Visible prod bug: /layer-2 avg tx cost shows $0.00",
       "1 file, CI SUCCESS, team-authored",
-      "mergeState BLOCKED with 0 reviews"
+      "mergeState BLOCKED with 0 reviews, unmoved 3 runs"
     ],
     "analyzed_sha": "f55eb85",
     "first_seen": "2026-08-05",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "PR #18969",
@@ -297,12 +300,12 @@
     "confidence": 0.8,
     "evidence": [
       "8 dead components",
-      "CI SUCCESS, now has 1 approving review",
+      "CI SUCCESS, 1 approving review",
       "mergeState BLOCKED"
     ],
     "analyzed_sha": "a41a81f",
     "first_seen": "2026-08-05",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #18970",
@@ -313,7 +316,7 @@
     "waiting_on": [
       {
         "actor": "contributor",
-        "action": "Green the re-running checks"
+        "action": "Green the failing checks"
       }
     ],
     "impact": "low",
@@ -327,13 +330,13 @@
     "owner_lane": "tooling",
     "confidence": 0.75,
     "evidence": [
-      "new commits landed — AI verdict superseded",
-      "CI rollup FAILURE with a pending check",
-      "mergeState BLOCKED"
+      "CI rollup FAILURE",
+      "mergeState BLOCKED",
+      "1 approving review"
     ],
     "analyzed_sha": "40c5767",
     "first_seen": "2026-08-06",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #18971",
@@ -344,7 +347,7 @@
     "waiting_on": [
       {
         "actor": "contributor",
-        "action": "Green the re-running checks"
+        "action": "Green the failing checks"
       }
     ],
     "impact": "low",
@@ -358,13 +361,13 @@
     "owner_lane": "tooling",
     "confidence": 0.75,
     "evidence": [
-      "new commits landed — AI verdict superseded",
-      "CI rollup FAILURE with a pending check",
-      "mergeState BLOCKED"
+      "CI rollup FAILURE",
+      "mergeState BLOCKED",
+      "1 approving review"
     ],
     "analyzed_sha": "f2422df",
     "first_seen": "2026-08-06",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #18985",
@@ -387,13 +390,12 @@
     "owner_lane": "tooling",
     "confidence": 0.78,
     "evidence": [
-      "ci.failing includes 'E2E tests'",
-      "mergeState UNSTABLE",
-      "AI verdict superseded by later commits"
+      "ci.failing includes a check",
+      "mergeState UNSTABLE"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-06",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #18987",
@@ -417,12 +419,11 @@
     "confidence": 0.7,
     "evidence": [
       "mergeState CLEAN, CI SUCCESS",
-      "stacked on unmerged earlier phases",
-      "ai needs-work/stale"
+      "stacked on unmerged earlier phases"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-06",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #18988",
@@ -450,7 +451,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-06",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #18989",
@@ -478,68 +479,122 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-06",
+    "runs_seen": 2
+  },
+  {
+    "item": "PR #18991",
+    "intent": "Add typed upgrade-status data layer for roadmap pages (PR1 of a 6-PR stack fixing stale roadmap pages)",
+    "state": "blocked",
+    "recommended_disposition": "verify_then_merge",
+    "next_human_decision": "Confirm PR2 #18993's layout-rendered vs MDX-embedded approach to unblock the whole stack",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Review PR1 (data-only, green) and answer #18993's design question"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "medium",
+    "risk": "low",
+    "related_items": [
+      "PR #18993",
+      "PR #18998",
+      "PR #19000"
+    ],
+    "owner_lane": "code",
+    "confidence": 0.75,
+    "evidence": [
+      "data-only, CI SUCCESS, mergeState BLOCKED (missing review)",
+      "green Chromatic confirms preview unchanged",
+      "new external stack, roadmap pages go stale ~2wk after each edit"
+    ],
+    "analyzed_sha": "3d8663b",
+    "first_seen": "2026-08-07",
     "runs_seen": 1
   },
   {
-    "item": "PR #18976",
-    "intent": "Add a new bounty-hunter leaderboard entry (SorryNotSorry)",
-    "state": "blocked",
+    "item": "PR #18993",
+    "intent": "Render the upgrade-status data layer as an UpgradeSummary block on roadmap pages (PR2 of the stack)",
+    "state": "decision-needed",
     "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "Layout-rendered vs MDX-embedded — author assessed layout works for all 24 translated pages; confirm it",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Answer the layout design question; author is waiting"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "medium",
+    "risk": "low",
+    "related_items": [
+      "PR #18991"
+    ],
+    "owner_lane": "code",
+    "confidence": 0.7,
+    "evidence": [
+      "mergeState UNSTABLE, failing agent/conclusion checks",
+      "author posted a detailed feasibility comment awaiting a call",
+      "based on #18991, not dev"
+    ],
+    "analyzed_sha": "1a59814",
+    "first_seen": "2026-08-07",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19001",
+    "intent": "Preserve unresolved author names in JSON-LD instead of silently dropping them (fixes SEO issue #18995)",
+    "state": "waiting-on-ci",
+    "recommended_disposition": "request_changes",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "contributor",
+        "action": "Green the failing required check"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "Issue #18995"
+    ],
+    "owner_lane": "code",
+    "confidence": 0.75,
+    "evidence": [
+      "external author, ships with tests",
+      "ai looks-mergeable but CI state FAILURE",
+      "closes SEO-cluster issue #18995"
+    ],
+    "analyzed_sha": "9a02958",
+    "first_seen": "2026-08-07",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19002",
+    "intent": "Add Matomo tracking for top-level nav menu interactions (desktop opens never tracked; mobile lost coverage)",
+    "state": "blocked",
+    "recommended_disposition": "verify_then_merge",
     "next_human_decision": "",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Product review of the single data entry"
+        "action": "Provide the required review (konopkja's suggestions already applied)"
       }
     ],
     "impact": "low",
     "effort_to_unblock": "small",
     "risk": "low",
     "related_items": [],
-    "owner_lane": "product",
-    "confidence": 0.6,
+    "owner_lane": "tooling",
+    "confidence": 0.7,
     "evidence": [
-      "single data file",
-      "external author, brand new (age 0)",
-      "CI SUCCESS, needs product review label"
+      "team-authored, CI SUCCESS",
+      "reviewDecision REVIEW_REQUIRED, 0 formal reviews",
+      "konopkja's review suggestions applied per author"
     ],
-    "analyzed_sha": null,
-    "first_seen": "2026-08-06",
-    "runs_seen": 1
-  },
-  {
-    "item": "SEO audit cluster (#18977-#18983)",
-    "intent": "Coordinated SEO audit filed today: broken structured data, crawler-invisible content, sitemap gaps, a CI guard, and a glossary-URL RFC",
-    "state": "decision-needed",
-    "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Fast-track the two live-in-prod JSON-LD bugs now, or batch the whole audit into an SEO sprint?",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Triage: fast-track #18979 & #18980; schedule the rest"
-      }
-    ],
-    "impact": "high",
-    "effort_to_unblock": "medium",
-    "risk": "medium",
-    "related_items": [
-      "Issue #18977",
-      "Issue #18978",
-      "Issue #18979",
-      "Issue #18980",
-      "Issue #18981",
-      "Issue #18982",
-      "Issue #18983"
-    ],
-    "owner_lane": "code",
-    "confidence": 0.8,
-    "evidence": [
-      "7 issues filed same day by konopkja, all dev-required/SEO",
-      "#18979 ships raw i18n keys as JSON-LD in prod",
-      "#18980 FAQPage asserts 4 answers absent from the page — Google penalty risk"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-08-06",
+    "analyzed_sha": "ba2d3f8",
+    "first_seen": "2026-08-07",
     "runs_seen": 1
   }
 ]
