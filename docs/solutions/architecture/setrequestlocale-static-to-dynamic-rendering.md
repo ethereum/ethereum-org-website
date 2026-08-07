@@ -118,7 +118,7 @@ When authoring any route under `app/[locale]/`:
 1. **`setRequestLocale(locale)` is the first line** of every page and every `generateMetadata` that uses next-intl -- before `getTranslations`, `getLocale`, `getMetadata`, `getMdMetadata`, or any other next-intl call.
 2. **Remember the helpers count.** `getMetadata`/`getMdMetadata` call `getTranslations("common")` internally; passing them `locale` does not prime the cache.
 3. **Test an on-demand URL**, not just a valid page. A bogus slug or invalid-locale path (`/api/<anything>`) is what exercises the header-read path; valid prerendered routes hide the bug. `/api/<real-page-slug>` is the sharpest probe: `proxy.ts`'s matcher excludes `api`, `_next`, `_vercel`, `.well-known` and any dotted path, so next-intl's middleware never normalizes the segment and it lands in `[locale]`.
-4. **Audit by AST, not grep.** A file-level `grep setRequestLocale` gives false negatives -- most affected pages already call it in `generateMetadata`, so the file matches while the `Page` body is still broken. Check ordering per entry point (default export, `generateMetadata`, `generateViewport`) and count only bare-form calls as at risk.
+4. **The `local/set-request-locale-first` ESLint rule enforces this** (`.eslint-rules/`), scoped to route entry files in `.eslintrc.json`. Don't audit by grep: a file-level `grep setRequestLocale` gives false negatives, since most affected pages already call it in `generateMetadata` -- the file matches while the `Page` body is still broken.
 
 ## Related
 

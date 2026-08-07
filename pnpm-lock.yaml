@@ -325,6 +325,9 @@ importers:
       eslint-config-prettier:
         specifier: ^9
         version: 9.1.0(eslint@8.57.1)
+      eslint-plugin-local:
+        specifier: file:.eslint-rules
+        version: file:.eslint-rules
       eslint-plugin-simple-import-sort:
         specifier: ^10.0.0
         version: 10.0.0(eslint@8.57.1)
@@ -7025,6 +7028,9 @@ packages:
     engines: {node: '>=4.0'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9
+
+  eslint-plugin-local@file:.eslint-rules:
+    resolution: {directory: .eslint-rules, type: directory}
 
   eslint-plugin-react-hooks@5.2.0:
     resolution: {integrity: sha512-+f15FfK64YQwZdJNELETdn5ibXEUQmW1DZL6KXhNnc2heoy/sg9VJJeT7n8TlMWouzWqSWavFkIhHyIbIAEapg==}
@@ -20468,6 +20474,8 @@ snapshots:
       object.fromentries: 2.0.8
       safe-regex-test: 1.1.0
       string.prototype.includes: 2.0.1
+
+  eslint-plugin-local@file:.eslint-rules: {}
 
   eslint-plugin-react-hooks@5.2.0(eslint@8.57.1):
     dependencies:
