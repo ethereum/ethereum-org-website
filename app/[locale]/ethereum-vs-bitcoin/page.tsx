@@ -31,7 +31,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   const t = await getTranslations("page-ethereum-vs-bitcoin")
 
-  const { contributors, lastEditLocaleTimestamp } =
+  const { contributors, lastEditLocaleTimestamp, latestCommitDate } =
     await getAppPageContributorInfo("ethereum-vs-bitcoin", locale as Lang)
 
   const tocItems: ToCItem[] = [
@@ -93,7 +93,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     <>
       <PageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        latestCommitDate={latestCommitDate}
         contributors={contributors}
       />
 

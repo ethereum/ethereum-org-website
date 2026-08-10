@@ -9,7 +9,7 @@ import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function WalletsPageJsonLD({
   locale,
-  lastEditLocaleTimestamp,
+  latestCommitDate,
   contributors,
 }) {
   const t = await getTranslations("page-find-wallet")
@@ -76,7 +76,7 @@ export default async function WalletsPageJsonLD({
           description:
             "Complete guide to Ethereum wallets, types, features, and how to use them safely",
         },
-        dateModified: lastEditLocaleTimestamp,
+        dateModified: latestCommitDate,
       },
     ],
   }

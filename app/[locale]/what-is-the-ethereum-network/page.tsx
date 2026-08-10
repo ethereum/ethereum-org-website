@@ -31,7 +31,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   const t = await getTranslations("page-what-is-the-ethereum-network")
 
-  const { contributors, lastEditLocaleTimestamp } =
+  const { contributors, lastEditLocaleTimestamp, latestCommitDate } =
     await getAppPageContributorInfo(
       "what-is-the-ethereum-network",
       locale as Lang
@@ -64,7 +64,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     <>
       <PageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        latestCommitDate={latestCommitDate}
         contributors={contributors}
       />
 

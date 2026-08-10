@@ -70,7 +70,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/staking")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const { contributors, lastEditLocaleTimestamp } =
+  const { contributors, lastEditLocaleTimestamp, latestCommitDate } =
     await getAppPageContributorInfo("staking", locale as Lang)
 
   const t = await getTranslations("page-staking")
@@ -139,7 +139,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     <>
       <StakingPageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        latestCommitDate={latestCommitDate}
         contributors={contributors}
       />
 

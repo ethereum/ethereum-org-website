@@ -11,11 +11,11 @@ import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function WhatIsTheEthereumNetworkPageJsonLD({
   locale,
-  lastEditLocaleTimestamp,
+  latestCommitDate,
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  latestCommitDate: string
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-what-is-the-ethereum-network")
@@ -88,7 +88,7 @@ export default async function WhatIsTheEthereumNetworkPageJsonLD({
           description:
             "Comprehensive guide to the Ethereum network, including fees, staking, layer 2 solutions, and live network data",
         },
-        dateModified: lastEditLocaleTimestamp,
+        dateModified: latestCommitDate,
       },
     ],
   }
