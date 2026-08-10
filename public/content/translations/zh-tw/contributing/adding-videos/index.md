@@ -1,12 +1,10 @@
 ---
 title: "新增影片"
-description: "在 ethereum.org 新增影片的政策"
+description: "ethereum.org 的新增影片政策"
 lang: zh-tw
 ---
 
-# 新增影片 {#adding-videos}
-
-[ethereum.org 影片庫](/videos/)收錄了來自社群創作者與可信來源中，關於以太坊與以太坊生態系的影片。任何人都可以建議新增影片。
+[ethereum.org 影片庫](/videos/)收錄了來自社群創作者與可信來源的以太坊及以太坊生態系相關影片。任何人都可以建議新增影片。
 
 ## 上架政策 {#listing-policy}
 
@@ -14,33 +12,31 @@ Ethereum.org 是一個中立的教育資源。影片庫的策展目的是：
 
 - <strong>教育</strong>使用者了解以太坊技術、生態系與社群
 - <strong>保持準確</strong>的技術內容
-- **保持相關性**，與以太坊社群緊密連結
+- **保持與以太坊社群的相關性**
 
 本網站不會上架主要用於推廣特定產品、代幣或商業服務的影片。
-
 
 ## 收錄標準 {#criteria-for-inclusion}
 
 ### 必備條件 {#must-haves}
 
-- **以太坊為重點** – 影片必須主要關於以太坊、其技術、生態系或社群。只有在實質上支援或關聯到網站上的教育頁面，或提及以太坊時，才接受關於一般區塊鏈主題的影片。
+- **以太坊為核心** – 影片必須主要關於以太坊、其技術、生態系或社群。關於一般區塊鏈主題的影片，只有在實質上支援或關聯到網站上的教育頁面，或提及以太坊時，才能被接受。
 - **教育價值** – 影片應教導觀眾關於以太坊的知識，或讚揚全球以太坊社群。不接受宣傳或行銷內容。
 - **資訊準確** – 技術內容必須符合事實且為最新資訊。關於已棄用功能的過時影片可能會被移除。
-- **製作水準** – 影片應具備合理清晰的音訊與畫質。
-- **公開可用** – 影片必須託管在開放資源或如 YouTube 等可存取的平台上，且可免費觀看，無付費牆或註冊要求。
+- **製作精良** – 影片應具備合理清晰的音訊與視訊品質。
+- **公開可用** – 影片必須託管於開放資源或如 YouTube 等可存取的平台上，且可免費存取，無付費牆或註冊要求。
 
 ### 加分條件 {#nice-to-haves}
 
-- **附有逐字稿** – 附有逐字稿的影片能改善無障礙體驗與搜尋引擎最佳化 (SEO)。如果你沒有逐字稿，ethereum.org 團隊可以協助產生。
+- **附有逐字稿** – 附有逐字稿的影片能改善無障礙體驗與 SEO。如果你沒有逐字稿，ethereum.org 團隊可以協助產生。
 - **來自可信來源** – 來自知名教育工作者、研究人員與來源的內容將獲優先考慮。
-- **具時效性與長青** – 隨著時間推移仍具相關性的內容，優於具時效限制的素材。
-
+- **及時且歷久彌新** – 隨著時間推移仍具相關性的內容，優先於具時效性的素材。
 
 ## 如何新增影片 {#how-to-add-a-video}
 
 ### 選項 1：建立 Issue {#open-an-issue}
 
-如果你想建議一部影片，但不希望自己建立檔案，請建立一個包含影片詳細資訊的 GitHub issue，貢獻者會協助你新增。
+如果你想建議一部影片，但不希望自己建立檔案，請建立一個包含影片詳細資訊的 GitHub issue，貢獻者可以協助你新增。
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?template=suggest_video.yaml">
   建議影片
@@ -52,17 +48,17 @@ Ethereum.org 是一個中立的教育資源。影片庫的策展目的是：
 
 #### 步驟 1：建立影片檔案 {#step-1}
 
-在以下路徑建立一個新目錄與 `index.md` 檔案：
+在以下位置建立新目錄與 `index.md` 檔案：
 
 ```
 public/content/videos/{your-video-slug}/index.md
 ```
 
-代稱 (slug) 應為 URL 安全、小寫，並使用連字號（例如：`blockchain-101-visual-demo`）。
+slug 應為 URL 安全、小寫，並使用連字號（例如：`blockchain-101-visual-demo`）。
 
 #### 步驟 2：新增 Frontmatter {#step-2}
 
-將以下 YAML frontmatter 新增至你的 `index.md` 中：
+將以下 YAML frontmatter 新增至你的 `index.md`：
 
 ```yaml
 ---
@@ -83,7 +79,7 @@ author: Channel Name
 
 **欄位參考：**
 
-| 欄位 | 必填 | 描述 |
+| 欄位 | 必填 | 說明 |
 |---|---|---|
 | `title` | 是 | 影片標題 |
 | `description` | 是 | 1–3 句的摘要 |
@@ -95,7 +91,7 @@ author: Channel Name
 | `topic` | 是 | 用於影片庫篩選的主題標籤陣列 |
 | `format` | 是 | `explainer`、`presentation`、`interview`、`tutorial` 或 `panel` |
 | `author` | 是 | 創作者或頻道名稱 |
-| `breadcrumb` | 否 | 用於導覽列 (breadcrumb) 的自訂簡短標籤 |
+| `breadcrumb` | 否 | 用於導覽標記 (breadcrumb) 的自訂簡短標籤 |
 | `customThumbnailUrl` | 否 | 自訂縮圖 URL（預設為 YouTube 縮圖） |
 
 #### 步驟 3：新增逐字稿（建議） {#step-3}
@@ -105,7 +101,7 @@ author: Channel Name
 ```markdown
 ---
 title: "..."
-# ... 其餘的 frontmatter
+# ... 其餘 frontmatter
 ---
 
 影片內容的簡短介紹。
@@ -123,21 +119,41 @@ title: "..."
 
 如果你沒有逐字稿，可以將內文留空，團隊會協助產生。
 
+#### 步驟 4：選擇主題標籤 {#step-4}
+
+從下方清單中挑選主題標籤。每個標籤都直接對應到影片庫中的一個篩選類別 — 請完全依照顯示的標籤名稱使用。
+
+一部影片可以有多個標籤，以出現在多個影片庫篩選條件中：
+
+| 標籤 | 影片庫篩選條件 |
+|---|---|
+| `how-ethereum-works` | 以太坊如何運作 |
+| `network-upgrades` | 網路升級 |
+| `roadmap-and-priorities` | 路線圖與優先事項 |
+| `scaling-and-layer-2` | 擴容與第二層 (L2) |
+| `use-cases` | 使用案例 |
+| `privacy` | 隱私 |
+| `security` | 安全性 |
+| `community-stories` | 社群故事 |
+| `events` | 事件 |
+
+每部影片都應至少擁有此清單中的一個標籤。沒有可識別標籤的影片將只會出現在「全部」檢視與搜尋結果中。
+
+`community-stories` 標籤也會讓影片出現在[故事頁面](/stories/)上。
+
 #### 步驟 5：提交你的 PR {#step-5}
 
-將你的變更建立一個拉取請求 (Pull Request) 到 `dev` 分支。團隊將會審查你的提交並提供回饋。
-
+建立一個包含你變更的拉取請求 (Pull Request) 至 `dev` 分支。團隊將會審查你的提交並提供回饋。
 
 ## 維護 {#maintenance}
 
-已上架的影片會定期接受審查，以確保它們：
+上架的影片會定期接受審查，以確保它們：
 
-- 仍符合上架標準
+- 仍然符合上架標準
 - 包含準確、最新的資訊
-- 具有可正常運作的託管/YouTube 連結
+- 擁有可正常運作的託管/YouTube 連結
 
-如果你發現已上架的影片有問題，請[建立一個 issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) 或發送電子郵件至 [website@ethereum.org](mailto:website@ethereum.org)。
-
+如果你發現上架影片有問題，請[建立 issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) 或發送電子郵件至 [website@ethereum.org](mailto:website@ethereum.org)。
 
 ## 使用條款 {#terms-of-use}
 

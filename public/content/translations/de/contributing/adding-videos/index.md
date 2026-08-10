@@ -4,65 +4,61 @@ description: "Die Richtlinie zum Hinzufügen von Videos zu ethereum.org"
 lang: de
 ---
 
-# Videos hinzufügen {#adding-videos}
-
-Die [ethereum.org-Videogalerie](/videos/) präsentiert Videos über Ethereum und das Ethereum-Ökosystem von Community-Erstellern und vertrauenswürdigen Quellen. Jeder kann ein Video vorschlagen, das hinzugefügt werden soll.
+Die [ethereum.org-Videogalerie](/videos/) bietet Videos über Ethereum und das Ethereum-Ökosystem von Community-Erstellern und vertrauenswürdigen Quellen. Jeder kann ein Video vorschlagen, das hinzugefügt werden soll.
 
 ## Listungsrichtlinie {#listing-policy}
 
 Ethereum.org ist eine neutrale, lehrreiche Ressource. Die Videogalerie wird kuratiert, um:
 
 - Nutzer über die Ethereum-Technologie, das Ökosystem und die Community **aufzuklären**
-- in ihren technischen Inhalten **korrekt zu bleiben**
-- für die Ethereum-Community **relevant zu bleiben**
+- In ihren technischen Inhalten **präzise zu bleiben**
+- Für die Ethereum-Community **relevant zu bleiben**
 
 Die Website listet keine Videos auf, die in erster Linie ein bestimmtes Produkt, einen bestimmten Token oder eine kommerzielle Dienstleistung bewerben.
 
-
 ## Aufnahmekriterien {#criteria-for-inclusion}
 
-### Grundvoraussetzungen {#must-haves}
+### Muss-Kriterien {#must-haves}
 
-- **Fokus auf Ethereum** – Das Video muss sich in erster Linie um Ethereum, seine Technologie, sein Ökosystem oder seine Community drehen. Videos über allgemeine Blockchain-Themen sind nur dann akzeptabel, wenn sie eine Bildungsseite auf der Website wesentlich unterstützen oder sich darauf beziehen oder Ethereum erwähnen.
+- **Fokus auf Ethereum** – Das Video muss sich in erster Linie um Ethereum, seine Technologie, sein Ökosystem oder seine Community drehen. Videos über allgemeine Blockchain-Themen sind nur dann akzeptabel, wenn sie eine Bildungsseite auf der Website wesentlich unterstützen oder sich darauf beziehen oder auf Ethereum verweisen.
 - **Pädagogischer Wert** – Das Video sollte den Zuschauern etwas über Ethereum beibringen oder die globale Ethereum-Community feiern. Werbe- oder Marketinginhalte werden nicht akzeptiert.
-- **Korrekte Informationen** – Der technische Inhalt muss sachlich richtig und aktuell sein. Veraltete Videos über nicht mehr unterstützte Funktionen können entfernt werden.
+- **Genaue Informationen** – Der technische Inhalt muss sachlich richtig und aktuell sein. Veraltete Videos über nicht mehr unterstützte Funktionen können entfernt werden.
 - **Produktionsqualität** – Das Video sollte eine angemessen klare Audio- und Videoqualität aufweisen.
-- **Öffentlich verfügbar** – Das Video muss auf einer offenen Ressource oder einer zugänglichen Plattform wie YouTube gehostet werden und ohne Paywall oder Anmeldepflicht frei zugänglich sein.
+- **Öffentlich verfügbar** – Das Video muss auf einer offenen Ressource oder einer zugänglichen Plattform wie YouTube gehostet werden und ohne Paywall oder Anmeldeanforderung frei zugänglich sein.
 
 ### Wünschenswert {#nice-to-haves}
 
-- **Verfügt über ein Transkript** – Videos mit Transkripten verbessern die Barrierefreiheit und SEO. Wenn Sie keines haben, kann das ethereum.org-Team bei der Erstellung helfen.
-- **Von einer glaubwürdigen Quelle** – Inhalte von etablierten Pädagogen, Forschern und Quellen haben Vorrang.
-- **Zeitlos und dauerhaft relevant** – Inhalte, die über die Zeit hinweg relevant bleiben, werden gegenüber zeitkritischem Material bevorzugt.
+- **Hat ein Transkript** – Videos mit Transkripten verbessern die Barrierefreiheit und SEO. Wenn du keines hast, kann das ethereum.org-Team bei der Erstellung helfen.
+- **Aus einer glaubwürdigen Quelle** – Inhalte von etablierten Pädagogen, Forschern und Quellen haben Vorrang.
+- **Zeitgemäß und zeitlos** – Inhalte, die über die Zeit hinweg relevant bleiben, werden gegenüber zeitkritischem Material bevorzugt.
 
-
-## So fügen Sie ein Video hinzu {#how-to-add-a-video}
+## So fügst du ein Video hinzu {#how-to-add-a-video}
 
 ### Option 1: Ein Issue eröffnen {#open-an-issue}
 
-Wenn Sie ein Video vorschlagen möchten, aber die Dateien nicht selbst erstellen wollen, eröffnen Sie ein GitHub-Issue mit den Videodetails, und ein Mitwirkender kann Ihnen beim Hinzufügen helfen.
+Wenn du ein Video vorschlagen möchtest, aber die Dateien nicht selbst erstellen willst, eröffne ein GitHub-Issue mit den Videodetails und ein Mitwirkender kann dir beim Hinzufügen helfen.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?template=suggest_video.yaml">
   Ein Video vorschlagen
 </ButtonLink>
 
-### Option 2: Einen Pull Request erstellen {#open-a-pull-request}
+### Option 2: Einen Pull Request eröffnen {#open-a-pull-request}
 
-Wenn Sie das Video selbst hinzufügen möchten, befolgen Sie diese Schritte:
+Wenn du das Video selbst hinzufügen möchtest, befolge diese Schritte:
 
 #### Schritt 1: Die Videodatei erstellen {#step-1}
 
-Erstellen Sie ein neues Verzeichnis und eine `index.md`-Datei unter:
+Erstelle ein neues Verzeichnis und eine `index.md`-Datei unter:
 
 ```
-public/content/videos/{ihr-video-slug}/index.md
+public/content/videos/{dein-video-slug}/index.md
 ```
 
 Der Slug sollte URL-sicher und kleingeschrieben sein sowie Bindestriche verwenden (z. B. `blockchain-101-visual-demo`).
 
 #### Schritt 2: Frontmatter hinzufügen {#step-2}
 
-Fügen Sie das folgende YAML-Frontmatter zu Ihrer `index.md` hinzu:
+Füge das folgende YAML-Frontmatter zu deiner `index.md` hinzu:
 
 ```yaml
 ---
@@ -100,7 +96,7 @@ author: Channel Name
 
 #### Schritt 3: Ein Transkript hinzufügen (empfohlen) {#step-3}
 
-Fügen Sie unter dem Frontmatter `---` das Videotranskript im Markdown-Format hinzu:
+Füge unter dem Frontmatter `---` das Videotranskript im Markdown-Format hinzu:
 
 ```markdown
 ---
@@ -119,26 +115,46 @@ Transkripttext für diesen Abschnitt...
 Weiterer Transkripttext...
 ```
 
-Verwenden Sie `###`-Überschriften mit Zeitstempeln, um wichtige Abschnitte zu markieren. Dies macht das Transkript leicht überfliegbar und verbessert die SEO.
+Verwende `###`-Überschriften mit Zeitstempeln, um wichtige Abschnitte zu markieren. Dies macht das Transkript überschaubar und verbessert die SEO.
 
-Wenn Sie kein Transkript haben, können Sie den Textkörper leer lassen, und das Team wird eines erstellen.
+Wenn du kein Transkript hast, kannst du den Textkörper leer lassen und das Team wird eines erstellen.
 
-#### Schritt 5: Ihren PR einreichen {#step-5}
+#### Schritt 4: Themen-Tags auswählen {#step-4}
 
-Erstellen Sie einen Pull Request mit Ihren Änderungen für den Branch `dev`. Das Team wird Ihre Einreichung überprüfen und Feedback geben.
+Wähle Themen-Tags aus der folgenden Liste aus. Jeder Tag ist direkt einer Filterkategorie in der Videogalerie zugeordnet – verwende den Tag-Namen genau wie abgebildet.
 
+Ein Video kann mehrere Tags haben, um in mehreren Galeriefiltern zu erscheinen:
+
+| Tag | Galeriefilter |
+|---|---|
+| `how-ethereum-works` | Wie Ethereum funktioniert |
+| `network-upgrades` | Netzwerk-Upgrades |
+| `roadmap-and-priorities` | Roadmap & Prioritäten |
+| `scaling-and-layer-2` | Skalierung & Layer 2 |
+| `use-cases` | Anwendungsfälle |
+| `privacy` | Privatsphäre |
+| `security` | Sicherheit |
+| `community-stories` | Community-Geschichten |
+| `events` | Ereignisse |
+
+Jedes Video sollte mindestens einen Tag aus dieser Liste haben. Videos ohne einen erkannten Tag erscheinen nur in der Ansicht „Alle“ und in den Suchergebnissen.
+
+Der Tag `community-stories` bewirkt auch, dass ein Video auf der [Geschichten-Seite](/stories/) erscheint.
+
+#### Schritt 5: Deinen PR einreichen {#step-5}
+
+Eröffne einen Pull Request mit deinen Änderungen am `dev`-Branch. Das Team wird deine Einreichung überprüfen und Feedback geben.
 
 ## Wartung {#maintenance}
 
-Gelistete Videos werden regelmäßig überprüft, um sicherzustellen, dass sie:
+Gelistete Videos werden routinemäßig überprüft, um sicherzustellen, dass sie:
 
-- weiterhin die Aufnahmekriterien erfüllen
-- korrekte, aktuelle Informationen enthalten
-- über funktionierende Hosting-/YouTube-Links verfügen
+- Weiterhin die Aufnahmekriterien erfüllen
+- Genaue, aktuelle Informationen enthalten
+- Funktionierende Hosting-/YouTube-Links haben
 
-Wenn Ihnen ein Problem mit einem gelisteten Video auffällt, [erstellen Sie ein Issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) oder senden Sie eine E-Mail an [website@ethereum.org](mailto:website@ethereum.org).
-
+Wenn dir ein Problem mit einem gelisteten Video auffällt, [erstelle ein Issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) oder sende eine E-Mail an [website@ethereum.org](mailto:website@ethereum.org).
 
 ## Nutzungsbedingungen {#terms-of-use}
 
-Bitte beachten Sie die [Nutzungsbedingungen](/terms-of-use/) von ethereum.org. Die Informationen auf ethereum.org werden ausschließlich zu allgemeinen Informationszwecken bereitgestellt.
+Bitte beachte die [Nutzungsbedingungen](/terms-of-use/) von ethereum.org. Die Informationen auf ethereum.org werden ausschließlich zu allgemeinen Informationszwecken bereitgestellt.

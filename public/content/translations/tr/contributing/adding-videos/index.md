@@ -1,12 +1,10 @@
 ---
-title: Video Ekleme
+title: Video ekleme
 description: "ethereum.org'a video ekleme politikası"
 lang: tr
 ---
 
-# Video Ekleme {#adding-videos}
-
-[ethereum.org video galerisi](/videos/), topluluk içerik üreticilerinden ve güvenilir kaynaklardan Ethereum ve Ethereum ekosistemi hakkında videolar içerir. Herkes eklenecek bir video önerebilir.
+[ethereum.org video galerisi](/videos/), topluluk içerik oluşturucularından ve güvenilir kaynaklardan Ethereum ve Ethereum ekosistemi hakkında videolar içerir. Herkes eklenecek bir video önerebilir.
 
 ## Listeleme politikası {#listing-policy}
 
@@ -18,12 +16,11 @@ Ethereum.org tarafsız, eğitici bir kaynaktır. Video galerisi şunlar için de
 
 Site, öncelikli olarak belirli bir ürünü, Token'ı veya ticari hizmeti tanıtan videoları listelemez.
 
-
 ## Dahil edilme kriterleri {#criteria-for-inclusion}
 
 ### Olmazsa olmazlar {#must-haves}
 
-- **Ethereum odaklı** – Video öncelikli olarak Ethereum, teknolojisi, ekosistemi veya topluluğu hakkında olmalıdır. Genel Blokzincir konuları hakkındaki videolar, yalnızca sitedeki eğitici bir sayfayı önemli ölçüde destekliyor veya onunla ilişkiliyse ya da Ethereum'a atıfta bulunuyorsa kabul edilebilir.
+- **Ethereum odaklı** – Video öncelikli olarak Ethereum, teknolojisi, ekosistemi veya topluluğu hakkında olmalıdır. Genel Blokzincir konularıyla ilgili videolar, yalnızca sitedeki eğitici bir sayfayı önemli ölçüde destekliyor veya onunla ilişkiliyse ya da Ethereum'a atıfta bulunuyorsa kabul edilebilir.
 - **Eğitici değer** – Video, izleyicilere Ethereum hakkında bir şeyler öğretmeli veya küresel Ethereum topluluğunu kutlamalıdır. Promosyon veya pazarlama içeriği kabul edilmeyecektir.
 - **Doğru bilgi** – Teknik içerik olgusal olarak doğru ve güncel olmalıdır. Kullanımdan kaldırılan özellikler hakkındaki güncel olmayan videolar kaldırılabilir.
 - **Kaliteli prodüksiyon** – Video makul ölçüde net bir ses ve görüntü kalitesine sahip olmalıdır.
@@ -31,10 +28,9 @@ Site, öncelikli olarak belirli bir ürünü, Token'ı veya ticari hizmeti tanı
 
 ### Olsa iyi olurlar {#nice-to-haves}
 
-- **Transkripti olması** – Transkripti olan videolar erişilebilirliği ve SEO'yu iyileştirir. Eğer bir transkriptiniz yoksa, ethereum.org ekibi bir tane oluşturmanıza yardımcı olabilir.
+- **Bir döküme sahip olması** – Dökümü olan videolar erişilebilirliği ve SEO'yu iyileştirir. Eğer bir dökümünüz yoksa, ethereum.org ekibi bir tane oluşturmanıza yardımcı olabilir.
 - **Güvenilir bir kaynaktan olması** – Köklü eğitimcilerden, araştırmacılardan ve kaynaklardan gelen içeriklere öncelik verilir.
-- **Zamanında ve her zaman geçerli** – Zaman içinde geçerliliğini koruyan içerikler, zamana duyarlı materyallere tercih edilir.
-
+- **Zamanında ve eskimeyen** – Zamanla alakalı kalmaya devam eden içerikler, zamana duyarlı materyallere tercih edilir.
 
 ## Nasıl video eklenir {#how-to-add-a-video}
 
@@ -58,7 +54,7 @@ Videoyu kendiniz eklemek isterseniz şu adımları izleyin:
 public/content/videos/{videonuzun-kisa-adi}/index.md
 ```
 
-Kısa ad (slug) URL için güvenli, küçük harfli olmalı ve kısa çizgiler kullanmalıdır (örn. `blockchain-101-visual-demo`).
+Kısa ad (slug) URL için güvenli, küçük harfli olmalı ve kısa çizgiler kullanmalıdır (ör. `blockchain-101-visual-demo`).
 
 #### 2. Adım: Frontmatter ekleyin {#step-2}
 
@@ -88,19 +84,19 @@ author: Channel Name
 | `title` | Evet | Video başlığı |
 | `description` | Evet | 1–3 cümlelik özet |
 | `lang` | Evet | Şimdilik her zaman `en` |
-| `youtubeId` | Evet | YouTube video kimliği (URL'de `v=` kısmından sonraki bölüm) |
+| `youtubeId` | Evet | YouTube video kimliği (`v=` sonrasındaki URL'den) |
 | `uploadDate` | Evet | `YYYY-MM-DD` formatında orijinal yükleme tarihi |
 | `duration` | Evet | `H:MM:SS` veya `M:SS` olarak video uzunluğu |
 | `educationLevel` | Evet | `beginner`, `intermediate` veya `advanced` |
 | `topic` | Evet | Galeri filtrelemesi için konu etiketleri dizisi |
 | `format` | Evet | `explainer`, `presentation`, `interview`, `tutorial` veya `panel` |
-| `author` | Evet | İçerik üreticisi veya kanal adı |
+| `author` | Evet | İçerik oluşturucu veya kanal adı |
 | `breadcrumb` | Hayır | İçerik haritası (breadcrumb) gezinmesi için özel kısa etiket |
-| `customThumbnailUrl` | Hayır | Özel küçük resim URL'si (varsayılan olarak YouTube küçük resmi kullanılır) |
+| `customThumbnailUrl` | Hayır | Özel küçük resim URL'si (varsayılan olarak YouTube küçük resmidir) |
 
-#### 3. Adım: Bir transkript ekleyin (önerilir) {#step-3}
+#### 3. Adım: Bir döküm ekleyin (önerilir) {#step-3}
 
-Frontmatter `---` kısmının altına, video transkriptini markdown formatında ekleyin:
+Frontmatter `---` işaretinin altına, video dökümünü markdown formatında ekleyin:
 
 ```markdown
 ---
@@ -112,33 +108,53 @@ Video içeriğine kısa bir giriş.
 
 ### Bölüm Başlığı (0:00)
 
-Bu bölüm için transkript metni...
+Bu bölüm için döküm metni...
 
 ### Sonraki Bölüm (5:30)
 
-Daha fazla transkript metni...
+Daha fazla döküm metni...
 ```
 
-Ana bölümleri işaretlemek için zaman damgalarına sahip `###` başlıklarını kullanın. Bu, transkripti taranabilir hale getirir ve SEO'yu iyileştirir.
+Ana bölümleri işaretlemek için zaman damgalı `###` başlıklarını kullanın. Bu, dökümü taranabilir hale getirir ve SEO'yu iyileştirir.
 
-Eğer bir transkriptiniz yoksa, gövdeyi boş bırakabilirsiniz ve ekip bir tane oluşturacaktır.
+Eğer bir dökümünüz yoksa, gövdeyi boş bırakabilirsiniz ve ekip bir tane oluşturacaktır.
+
+#### 4. Adım: Konu etiketlerini seçin {#step-4}
+
+Aşağıdaki listeden konu etiketlerini seçin. Her etiket doğrudan video galerisindeki bir filtre kategorisiyle eşleşir — etiket adını tam olarak gösterildiği gibi kullanın.
+
+Bir video, birden fazla galeri filtresinde görünmek için birden fazla etikete sahip olabilir:
+
+| Etiket | Galeri filtresi |
+|---|---|
+| `how-ethereum-works` | Ethereum Nasıl Çalışır |
+| `network-upgrades` | Ağ Yükseltmeleri |
+| `roadmap-and-priorities` | Yol Haritası ve Öncelikler |
+| `scaling-and-layer-2` | Ölçeklendirme ve Katman 2 |
+| `use-cases` | Kullanım Durumları |
+| `privacy` | Gizlilik |
+| `security` | Güvenlik |
+| `community-stories` | Topluluk Hikayeleri |
+| `events` | Etkinlikler |
+
+Her videonun bu listeden en az bir etiketi olmalıdır. Tanınan bir etiketi olmayan videolar yalnızca "Tümü" görünümünde ve arama sonuçlarında görünecektir.
+
+`community-stories` etiketi ayrıca bir videonun [Hikayeler sayfasında](/stories/) görünmesini sağlar.
 
 #### 5. Adım: PR'ınızı gönderin {#step-5}
 
 Değişikliklerinizle birlikte `dev` dalına (branch) bir çekme isteği (pull request) açın. Ekip gönderiminizi inceleyecek ve geri bildirim sağlayacaktır.
 
-
 ## Bakım {#maintenance}
 
-Listelenen videolar, aşağıdakilerden emin olmak için düzenli olarak incelenir:
+Listelenen videolar, aşağıdakilerden emin olmak için rutin olarak incelenir:
 
-- Listeleme kriterlerini hâlâ karşıladığından
-- Doğru ve güncel bilgiler içerdiğinden
+- Listeleme kriterlerini hala karşıladığından
+- Doğru, güncel bilgiler içerdiğinden
 - Çalışan barındırma/YouTube bağlantılarına sahip olduğundan
 
 Listelenen bir videoyla ilgili bir sorun fark ederseniz, [bir sorun (issue) oluşturun](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) veya [website@ethereum.org](mailto:website@ethereum.org) adresine bir e-posta gönderin.
 
-
 ## Kullanım koşulları {#terms-of-use}
 
-Lütfen ethereum.org'un [kullanım koşullarına](/terms-of-use/) başvurun. ethereum.org'daki bilgiler yalnızca genel bilgilendirme amacıyla sağlanmaktadır.
+Lütfen ethereum.org'un [kullanım koşullarına](/terms-of-use/) bakın. ethereum.org'daki bilgiler yalnızca genel bilgi amaçlı sağlanmaktadır.

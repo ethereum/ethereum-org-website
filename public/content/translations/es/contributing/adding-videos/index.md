@@ -4,9 +4,7 @@ description: "La política para añadir videos a ethereum.org"
 lang: es
 ---
 
-# Añadir videos {#adding-videos}
-
-La [galería de videos de ethereum.org](/videos/) presenta videos sobre Ethereum y el ecosistema de Ethereum de creadores de la comunidad y fuentes confiables. Cualquiera puede sugerir que se añada un video.
+La [galería de videos de ethereum.org](/videos/) presenta videos sobre Ethereum y el ecosistema de Ethereum de creadores de la comunidad y fuentes confiables. Cualquier persona puede sugerir que se añada un video.
 
 ## Política de inclusión {#listing-policy}
 
@@ -14,17 +12,16 @@ Ethereum.org es un recurso educativo y neutral. La galería de videos está sele
 
 - **Educar** a los usuarios sobre la tecnología, el ecosistema y la comunidad de Ethereum
 - **Mantener la precisión** en su contenido técnico
-- **Seguir siendo relevante** para la comunidad de Ethereum
+- **Mantener la relevancia** para la comunidad de Ethereum
 
 El sitio no incluye videos que promuevan principalmente un producto, token o servicio comercial específico.
-
 
 ## Criterios de inclusión {#criteria-for-inclusion}
 
 ### Requisitos indispensables {#must-haves}
 
 - **Enfocado en Ethereum**: el video debe tratar principalmente sobre Ethereum, su tecnología, ecosistema o comunidad. Los videos sobre temas generales de la cadena de bloques solo son aceptables si respaldan o se relacionan sustancialmente con una página educativa del sitio, o si hacen referencia a Ethereum.
-- **Valor educativo**: el video debe enseñar a los espectadores algo sobre Ethereum o celebrar a la comunidad global de Ethereum. No se aceptará contenido promocional o de marketing.
+- **Valor educativo**: el video debe enseñar a los espectadores algo sobre Ethereum o celebrar la comunidad global de Ethereum. No se aceptará contenido promocional o de marketing.
 - **Información precisa**: el contenido técnico debe ser objetivamente correcto y estar actualizado. Los videos desactualizados sobre características obsoletas pueden ser eliminados.
 - **Producción de calidad**: el video debe tener una calidad de audio y video razonablemente clara.
 - **Disponibilidad pública**: el video debe estar alojado en un recurso abierto o en una plataforma accesible como YouTube, y ser de libre acceso sin un muro de pago o requisito de registro.
@@ -33,24 +30,23 @@ El sitio no incluye videos que promuevan principalmente un producto, token o ser
 
 - **Tener una transcripción**: los videos con transcripciones mejoran la accesibilidad y el SEO. Si no tiene una, el equipo de ethereum.org puede ayudar a generarla.
 - **Provenir de una fuente creíble**: el contenido de educadores, investigadores y fuentes establecidas recibe prioridad.
-- **Oportuno y atemporal**: se prefiere el contenido que sigue siendo relevante a lo largo del tiempo sobre el material que depende del tiempo.
-
+- **Oportuno y atemporal**: se prefiere el contenido que sigue siendo relevante a lo largo del tiempo sobre el material sensible al tiempo.
 
 ## Cómo añadir un video {#how-to-add-a-video}
 
-### Opción 1: Abrir un problema (issue) {#open-an-issue}
+### Opción 1: Abrir un issue {#open-an-issue}
 
-Si desea sugerir un video pero no quiere crear los archivos usted mismo, abra un problema (issue) en GitHub con los detalles del video y un colaborador podrá ayudarle a añadirlo.
+Si desea sugerir un video pero no quiere crear los archivos usted mismo, abra un issue en GitHub con los detalles del video y un colaborador podrá ayudarle a añadirlo.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?template=suggest_video.yaml">
   Sugerir un video
 </ButtonLink>
 
-### Opción 2: Abrir una solicitud de extracción (pull request) {#open-a-pull-request}
+### Opción 2: Abrir un pull request {#open-a-pull-request}
 
 Si desea añadir el video usted mismo, siga estos pasos:
 
-#### Paso 1: Crear el archivo de video {#step-1}
+#### Paso 1: Crear el archivo del video {#step-1}
 
 Cree un nuevo directorio y un archivo `index.md` en:
 
@@ -92,10 +88,10 @@ author: Channel Name
 | `uploadDate` | Sí | Fecha de subida original en formato `YYYY-MM-DD` |
 | `duration` | Sí | Duración del video como `H:MM:SS` o `M:SS` |
 | `educationLevel` | Sí | `beginner`, `intermediate` o `advanced` |
-| `topic` | Sí | Matriz de etiquetas de temas para filtrar la galería |
+| `topic` | Sí | Matriz de etiquetas de temas para el filtrado de la galería |
 | `format` | Sí | `explainer`, `presentation`, `interview`, `tutorial` o `panel` |
 | `author` | Sí | Nombre del creador o del canal |
-| `breadcrumb` | No | Etiqueta corta personalizada para la navegación de migas de pan |
+| `breadcrumb` | No | Etiqueta corta personalizada para la navegación por migas de pan |
 | `customThumbnailUrl` | No | URL de miniatura personalizada (por defecto es la miniatura de YouTube) |
 
 #### Paso 3: Añadir una transcripción (recomendado) {#step-3}
@@ -123,22 +119,42 @@ Use encabezados `###` con marcas de tiempo para señalar las secciones principal
 
 Si no tiene una transcripción, puede dejar el cuerpo vacío y el equipo generará una.
 
+#### Paso 4: Elegir etiquetas de temas {#step-4}
+
+Elija etiquetas de temas de la lista a continuación. Cada etiqueta se asigna directamente a una categoría de filtro en la galería de videos; use el nombre de la etiqueta exactamente como se muestra.
+
+Un video puede tener múltiples etiquetas para aparecer en múltiples filtros de la galería:
+
+| Etiqueta | Filtro de la galería |
+|---|---|
+| `how-ethereum-works` | Cómo funciona Ethereum |
+| `network-upgrades` | Actualizaciones de la red |
+| `roadmap-and-priorities` | Hoja de ruta y prioridades |
+| `scaling-and-layer-2` | Escalabilidad y capa 2 (l2) |
+| `use-cases` | Casos de uso |
+| `privacy` | Privacidad |
+| `security` | Seguridad |
+| `community-stories` | Historias de la comunidad |
+| `events` | Eventos |
+
+Cada video debe tener al menos una etiqueta de esta lista. Los videos sin una etiqueta reconocida solo aparecerán en la vista "Todos" y en los resultados de búsqueda.
+
+La etiqueta `community-stories` también hace que un video aparezca en la [página de Historias](/stories/).
+
 #### Paso 5: Enviar su PR {#step-5}
 
-Abra una solicitud de extracción (pull request) con sus cambios a la rama `dev`. El equipo revisará su envío y le proporcionará comentarios.
-
+Abra un pull request con sus cambios a la rama `dev`. El equipo revisará su envío y proporcionará comentarios.
 
 ## Mantenimiento {#maintenance}
 
-Los videos incluidos se revisan de forma rutinaria para garantizar que:
+Los videos listados se revisan de forma rutinaria para garantizar que:
 
 - Sigan cumpliendo con los criterios de inclusión
 - Contengan información precisa y actualizada
 - Tengan enlaces de alojamiento/YouTube que funcionen
 
-Si nota algún problema con un video incluido, [cree un problema (issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) o envíe un correo electrónico a [website@ethereum.org](mailto:website@ethereum.org).
-
+Si nota un problema con un video listado, [cree un issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) o envíe un correo electrónico a [website@ethereum.org](mailto:website@ethereum.org).
 
 ## Términos de uso {#terms-of-use}
 
-Consulte los [términos de uso](/terms-of-use/) de ethereum.org. La información en ethereum.org se proporciona únicamente con fines de información general.
+Por favor, consulte los [términos de uso](/terms-of-use/) de ethereum.org. La información en ethereum.org se proporciona únicamente con fines de información general.
