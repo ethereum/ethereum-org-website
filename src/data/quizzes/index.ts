@@ -220,17 +220,17 @@ const quizzesSectionsRaw: QuizzesHubSection[] = [
     quizzes: [
       { id: "what-is-ethereum", level: "beginner" },
       { id: "what-is-ether", level: "beginner" },
+      { id: "wallets", level: "beginner" },
       { id: "what-are-apps", level: "beginner" },
       { id: "web3", level: "beginner" },
       { id: "energy-consumption", level: "beginner" },
     ],
   },
   {
-    id: "wallets-security-privacy",
-    titleKey: "wallets-security-privacy",
-    descriptionKey: "wallets-security-privacy-description",
+    id: "security-and-privacy",
+    titleKey: "security-and-privacy",
+    descriptionKey: "security-and-privacy-description",
     quizzes: [
-      { id: "wallets", level: "beginner" },
       { id: "security", level: "beginner" },
       { id: "privacy", level: "beginner" },
       { id: "zero-knowledge-proofs", level: "intermediate" },
