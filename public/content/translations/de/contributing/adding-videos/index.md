@@ -1,6 +1,6 @@
 ---
-title: Videos hinzufügen
-description: Die Richtlinie zum Hinzufügen von Videos zu ethereum.org
+title: "Videos hinzufügen"
+description: "Die Richtlinie zum Hinzufügen von Videos zu ethereum.org"
 lang: de
 ---
 

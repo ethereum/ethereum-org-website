@@ -1,6 +1,6 @@
 ---
-title: ভিডিও যোগ করা
-description: ethereum.org-এ ভিডিও যোগ করার নীতিমালা
+title: "ভিডিও যোগ করা"
+description: "ethereum.org-এ ভিডিও যোগ করার নীতিমালা"
 lang: bn
 ---
 

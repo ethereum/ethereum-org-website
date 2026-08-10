@@ -1,6 +1,6 @@
 ---
-title: Dodawanie filmów
-description: Zasady dodawania filmów na ethereum.org
+title: "Dodawanie filmów"
+description: "Zasady dodawania filmów na ethereum.org"
 lang: pl
 ---
 

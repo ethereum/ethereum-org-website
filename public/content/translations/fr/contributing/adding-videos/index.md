@@ -1,6 +1,6 @@
 ---
-title: Ajouter des vidéos
-description: La politique d'ajout de vidéos sur ethereum.org
+title: "Ajouter des vidéos"
+description: "La politique d'ajout de vidéos sur ethereum.org"
 lang: fr
 ---
 

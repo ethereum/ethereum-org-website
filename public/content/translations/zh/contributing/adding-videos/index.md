@@ -1,6 +1,6 @@
 ---
-title: 添加视频
-description: 在 ethereum.org 上添加视频的政策
+title: "添加视频"
+description: "在 ethereum.org 上添加视频的政策"
 lang: zh
 ---
 
@@ -10,8 +10,8 @@ lang: zh
 
 Ethereum.org 是一个中立的教育资源。视频库的策划旨在：
 
-- **教育**用户了解以太坊技术、生态系统和社区
-- **保持准确**的技术内容
+- <strong>教育</strong>用户了解以太坊技术、生态系统和社区
+- <strong>保持准确</strong>的技术内容
 - **保持相关性**，紧贴以太坊社区
 
 本网站不收录主要用于推广特定产品、代币或商业服务的视频。

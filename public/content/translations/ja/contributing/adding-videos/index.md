@@ -1,6 +1,6 @@
 ---
-title: ビデオの追加
-description: ethereum.orgにビデオを追加するためのポリシー
+title: "ビデオの追加"
+description: "ethereum.orgにビデオを追加するためのポリシー"
 lang: ja
 ---
 

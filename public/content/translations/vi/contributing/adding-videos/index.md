@@ -1,6 +1,6 @@
 ---
-title: Thêm video
-description: Chính sách thêm video vào ethereum.org
+title: "Thêm video"
+description: "Chính sách thêm video vào ethereum.org"
 lang: vi
 ---
 
