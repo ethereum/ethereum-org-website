@@ -39,3 +39,21 @@
 **Fixed (critical):** the inverse of this file's #18344 false positive. Here the noun phrase genuinely used the bare entry: `důkazů s nulovým vědomím` at lines 16/82/94/106/120/132 -> `s nulovou znalostí` (compound entry). The link text on 132 pointed at `/zero-knowledge-proofs/` whose own cs title uses the compound form, so the visible text disagreed with its target.
 
 Adjectival uses correctly left on the bare entry: L88 `důkaz skutečně s nulovým vědomím`, L90 `spíše stručná než s nulovým vědomím` + `na skutečné nulové vědomí`, L104 `ověřování pasů`, L122 `hlasování`. The #18344 note stands — check which sense before touching either form.
+
+## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 9.2/10
+Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
+
+**Fixed in this branch:**
+
+- #43 blank line before `{#validators-keys}` restored
+
+**Open (native call needed):**
+
+- #46 `ciphernodes` -> `šifrovacích uzlů`.
+- `šifrovaná spouštěcí prostředí` reads "launch environments"; execution = `prostředí pro vykonávání`. Mitigated by the retained English + `E3s`.
+- `uzavřené aukce` reads "closed/restricted auctions" rather than sealed-bid (`aukce s uzavřenými nabídkami`).
+
+**Notes:**
+
+- The new `důkazech s nulovou znalostí` is the **glossary-correct** form. Three pre-existing out-of-scope strings in the same file still use `s nulovým vědomím` for the proof sense — the old ones are the drift. Do not "fix" the new string.
+- `smlouva` in `app-zkpdf-description` is correct (legal paper document per the glossary note), not a `kontrakt` deviation. `razíte` for game-mint matches 5 existing uses.

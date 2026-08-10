@@ -12,6 +12,12 @@
 
 **Proposed solution:** Recursive key comparison that walks the full object tree, reporting missing/added/renamed keys at any depth.
 
+### 1b. Send heading lines to the LLM as translatable content
+
+**Problem:** `buildSectionList` sends a section's body and passes its heading text as a prompt attribute, so headings are never translated by the incremental path. Phase 5 now supplies the heading deterministically (issue #18940), which keeps structure intact but leaves two gaps: a newly added section gets english-B's heading line until the next full pass, and a section whose English heading was relabelled (a rename with `labelHashChanged`) keeps its old translated label.
+
+**Proposed solution:** Include the heading line in TRANSLATE content and validate that the response's `{#id}` matches, instead of routing the label around the model. Touches the prompt contract, `extractSections`, and `replaceSections`, so it needs its own change.
+
 ---
 
 ## Pipeline Features
@@ -31,6 +37,7 @@
 **Problem:** Content changes merged to dev currently require manual triggering of the translation pipeline.
 
 **Proposed solution:**
+
 - GitHub Action that watches for merges to dev affecting `public/content/` or `src/intl/en/`
 - Automatically triggers the translation workflow for changed files
 - Should respect a cooldown/batch window to avoid triggering on every small merge
@@ -40,6 +47,7 @@
 **Problem:** Many languages were translated before current pipeline improvements. Those translations have the same class of issues found in Arabic (brand garbles, wrong compounds, etc.).
 
 **Proposed solution:** After pending language reviews are complete:
+
 - Run the full sanitizer against every translated language
 - Apply transliteration banks and language-group-specific rules
 - Re-translate files flagged as having too many issues
@@ -53,6 +61,7 @@
 **Problem:** Educational diagrams and infographics contain English text that remains untranslated, creating a jarring experience on otherwise fully translated pages.
 
 **Proposed approach:**
+
 - Use Gemini's image generation capabilities to edit text within images
 - Build a pipeline: identify images with translatable text, extract, translate, generate localized variants
 - Track image freshness the same way as content files (by source SHA)
@@ -68,6 +77,7 @@
 **Problem:** Glossary, translation pipeline, and (future) image pipeline are embedded in the repo. Creates bloat and prevents reuse.
 
 **Proposed approach:** Phased extraction:
+
 1. Extract glossary (data + lookup) into its own package
 2. Extract pipeline core (prompt builder, normalizer, batcher, language groups) once stable
 3. Repo-specific glue (Actions, sanitizer, manifests) stays in ethereum-org-website

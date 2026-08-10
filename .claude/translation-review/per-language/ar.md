@@ -102,3 +102,21 @@ Key terms to verify in future reviews:
 - The terms-without-established-translations line invented `(PoW)`/`(PoS)` abbreviations not in the source and dropped the English glosses, leaving `التخزين` ("storage", a weak rendering of *staking*) with nothing to disambiguate it. Restored to full English glosses.
 - Not patched: tashkeel dropped from ~6 passive verbs while others kept theirs (internally inconsistent but not wrong), and موضع -> وضع for "placement" (vaguer, not incorrect).
 - Wins from the same run: `الأسماء الصحيحة` -> `أسماء الأعلام` (correct term for proper nouns), `نص الكتابة` -> `نظام الكتابة`, and three new LTR spans on the date-format examples.
+
+## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 9.6/10
+Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
+
+**Fixed in this branch:**
+
+- #42 `{#contract-accounts}` heading restored from the pre-PR blob
+- #43 blank line before `{#validators-keys}` restored
+- #44 `Arbitrum One` de-hybridised in `app-session-description`
+
+**Open (native call needed):**
+
+- `app-session-description` was the only brand issue and it is fixed; nothing else substantive.
+
+**Notes:**
+
+- `salt` is LTR-wrapped consistently with the 11 existing `<span dir="ltr">` spans in the same file.
+- `بسك` for game-sense mint is the established ar crypto verb (5 prior uses), not the coin-minting failure mode.

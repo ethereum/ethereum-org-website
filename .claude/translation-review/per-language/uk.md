@@ -22,3 +22,21 @@
 **Fixed (critical):** `пропонентів блоків` -> `пропонувачів блоків` (`roadmap/privacy` L58). `пропонент` appears nowhere else in the uk tree; 26 files use `пропонувач`, 21 use `пропонувальник`.
 
 **Not fixed (warning):** 4 Latin speaker labels (known-patterns #31); stray U+2066/U+2069 bidi isolates around "Ethereum" in `ethereum-privacy-stack-andy-guzman` L17 with no counterpart in English — invisible when rendered, but a pipeline artifact worth stripping upstream.
+
+## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 9.2/10
+Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
+
+**Fixed in this branch:**
+
+- #43 blank line before `{#validators-keys}` restored
+
+**Open (native call needed):**
+
+- #46 `шифровузлів` — a coinage appearing nowhere else in the uk tree.
+- #45 `найвільніші`.
+- `page-values-card-open-source-description` was rewritten active -> passive with an instrumental agent, which reads heavier than the string it replaced and clashes with its own active sibling `page-values-internet-list-open-code`.
+
+**Notes:**
+
+- uk is the only locale that got #47 right, rendering gatekeeper as `контролер` consistently with its own `page-values-faq-3-p1`.
+- Terminology was verified against corpus frequency rather than intuition: `ончейн` (120 vs 21), `будівельник` (~75), `рівня 2 (l2)` lowercase (66 vs 11), `карбувати` for mint (14), `доведення з нульовим розголошенням` (124+).
