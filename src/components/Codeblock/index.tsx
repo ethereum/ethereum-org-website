@@ -1,9 +1,21 @@
 import React from "react"
 
 import CodeblockClient from "./CodeblockClient"
-import { getCodeText } from "./getCodeText"
 
 import { highlight, resolveLang } from "@/lib/shiki"
+
+const getValidChildrenForCodeblock = (child: unknown): string | undefined => {
+  try {
+    if (typeof child !== "string") {
+      const element = child as React.ReactElement<{ children: unknown }>
+      return getValidChildrenForCodeblock(element.props.children)
+    } else {
+      return child
+    }
+  } catch {
+    console.error(`Codeblock children is not valid`)
+  }
+}
 
 export type CodeblockProps = React.HTMLAttributes<HTMLDivElement> & {
   allowCollapse?: boolean
@@ -41,7 +53,12 @@ const Codeblock = async ({
   fromHomepage = false,
   className,
 }: CodeblockProps) => {
-  const codeText = getCodeText(children)
+  const codeText = React.Children.toArray(children)
+    .map((child) => {
+      if (!child) return
+      return getValidChildrenForCodeblock(child)
+    })
+    .join("")
 
   let langClass: string
   if (React.isValidElement<{ className?: string }>(children)) {
