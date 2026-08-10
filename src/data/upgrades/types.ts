@@ -44,7 +44,7 @@ export type MilestoneStatus =
  * other scheduled EIP — the meta EIP's "Networking" grouping is a category, and
  * categories do not belong in a confidence enum. See `README.md`.
  */
-export type EipStatus = "pfi" | "cfi" | "sfi" | "dfi" | "declined"
+export type EipStatus = "pfi" | "cfi" | "sfi" | "dfi"
 
 /**
  * A date carrying only the precision that has a source behind it: a year, a
