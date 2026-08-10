@@ -136,6 +136,11 @@ const AlertCloseButton = React.forwardRef<
 ))
 AlertCloseButton.displayName = "AlertCloseButton"
 
+/**
+ * @deprecated Use `AlertIcon` with a Lucide icon instead. Alert glyphs are
+ * moving from emoji to icons; `AlertEmoji` is retained only for content that
+ * has not been migrated yet.
+ */
 const AlertEmoji = ({ className, ...props }: EmojiProps) => (
   <Emoji
     className={cn(
@@ -146,15 +151,22 @@ const AlertEmoji = ({ className, ...props }: EmojiProps) => (
   />
 )
 
-const AlertIcon = ({
-  className,
-  children,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div
-    className={cn("mt-0.5 shrink-0 self-start [&>svg]:size-6", className)}
-    {...props}
-  >
+const alertIconVariants = tv({
+  base: "mt-0.5 shrink-0 self-start [&>svg]:size-6",
+  variants: {
+    size: {
+      lg: "[&>svg]:size-10",
+      xl: "[&>svg]:size-12",
+    },
+  },
+})
+
+export interface AlertIconProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    TailwindVariantProps<typeof alertIconVariants> {}
+
+const AlertIcon = ({ className, children, size, ...props }: AlertIconProps) => (
+  <div className={cn(alertIconVariants({ size }), className)} {...props}>
     {children}
   </div>
 )
