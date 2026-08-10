@@ -78,6 +78,7 @@ const WalletCard = memo(function WalletCard({
                 </span>
               )}
             </p>
+            {wallet.fees && <p>{wallet.fees}</p>}
           </div>
         </div>
       </LinkBox>
