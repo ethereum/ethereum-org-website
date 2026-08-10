@@ -20,11 +20,20 @@ export type UpgradePhase =
   | "activated"
 
 /**
- * How strong a claim we are making about a milestone. Ordered from strongest
- * to weakest evidence; the UI must never render a weaker status as a settled
- * one.
+ * How strong a claim we are making about a milestone.
+ *
+ * `complete` is the one settled value: the milestone happened, so there is
+ * nothing left to qualify. The remaining four are claims about the future,
+ * listed strongest to weakest evidence, and the UI must never render a weaker
+ * one as though it were settled.
+ *
+ * The distinction consumers actually make today is `complete` vs everything
+ * else — the status block picks the first milestone that is not `complete` and
+ * calls it "next".
  */
 export type MilestoneStatus =
+  /** Happened and is finished. */
+  | "complete"
   /** Currently running. */
   | "live"
   /** Date set via ACD. */
@@ -33,8 +42,6 @@ export type MilestoneStatus =
   | "anticipated"
   /** Inferred from the mainnet target; the weakest claim. */
   | "projected"
-  /** Happened and is finished. */
-  | "complete"
 
 /**
  * EIP inclusion status, using the All Core Devs vocabulary.

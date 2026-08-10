@@ -19,9 +19,10 @@ public testnet forks running · `scheduled` mainnet epoch confirmed via ACD ·
 
 ## Milestone `status`
 
-Strongest to weakest claim: `live` running now · `confirmed` date set via ACD ·
-`anticipated` expected, no date · `projected` inferred from the mainnet target ·
-`complete` finished. The UI must never render a weaker status as a settled one.
+`complete` is the one settled value — the milestone happened. The other four are
+claims about the future, strongest to weakest: `live` running now · `confirmed`
+date set via ACD · `anticipated` expected, no date · `projected` inferred from
+the mainnet target. The UI must never render a weaker one as a settled one.
 
 An undated future fork gets **no milestone entry at all**. `UpgradePhase` already
 encodes the sequence (`devnet` → `testnet` → `scheduled`), so the phase carries
