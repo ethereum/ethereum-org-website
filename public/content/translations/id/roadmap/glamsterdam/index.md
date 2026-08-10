@@ -5,12 +5,10 @@ lang: id
 template: upgrade
 ---
 
-# Glamsterdam {#glamsterdam}
-
 <Alert variant="update">
 <AlertContent>
 <AlertTitle>
-Glamsterdam adalah peningkatan Ethereum mendatang yang direncanakan untuk paruh kedua tahun 2026
+Glamsterdam adalah peningkatan Ethereum mendatang yang direncanakan untuk Q4 2026
 </AlertTitle>
 <AlertDescription>
 Peningkatan Glamsterdam hanyalah satu langkah dalam tujuan pengembangan jangka panjang Ethereum. Pelajari lebih lanjut tentang [peta jalan protokol](/roadmap/) dan [peningkatan sebelumnya](/ethereum-forks/).
@@ -149,7 +147,7 @@ Dengan menetapkan harga tindakan akses state secara lebih akurat, Ethereum dapat
 
 ## Ketahanan jaringan {#network-resilience}
 
-Penyempurnaan tugas validator dan proses keluar memastikan stabilitas jaringan selama peristiwa pemotongan massal dan mendemokratisasi likuiditas. Peningkatan ini membuat jaringan lebih stabil dan memastikan bahwa semua peserta, besar dan kecil, diperlakukan secara adil.
+Penyempurnaan tugas validator dan proses keluar memastikan stabilitas jaringan selama peristiwa pemotongan massal dan mempercepat seberapa cepat staker dapat memindahkan stake mereka. Peningkatan ini membuat jaringan lebih stabil dan memastikan bahwa semua peserta, besar dan kecil, diperlakukan secara adil.
 
 ### Mengecualikan validator yang dipotong dari pengusulan {#exclude-slashed-validators}
 
@@ -284,6 +282,15 @@ Fitur utamanya adalah ePBS (EIP-7732), yang memisahkan tugas berat memvalidasi t
 Ya, Glamsterdam kemungkinan besar akan mengurangi biaya untuk pengguna sehari-hari! Mengurangi gas transaksi intrinsik (atau EIP-2780) mengurangi biaya dasar untuk mengirim ETH, membuat ETH jauh lebih murah untuk digunakan pada pembayaran sehari-hari.
 
 Selain itu, untuk keberlanjutan jangka panjang, Glamsterdam memperkenalkan Daftar Akses Tingkat Blok (BAL). Hal ini memungkinkan pemrosesan paralel dan mempersiapkan lapisan 1 (l1) untuk menangani batas gas keseluruhan yang lebih tinggi dengan aman di masa mendatang, yang kemungkinan akan mengurangi biaya gas per transaksi seiring dengan pertumbuhan kapasitas.
+
+### Apakah akan ada perubahan pada kontrak pintar saya yang sudah ada pasca-Glamsterdam? {#will-my-smart-contracts-change}
+
+Kontrak yang ada akan terus berfungsi secara normal setelah Glamsterdam. Pengembang kemungkinan akan mendapatkan beberapa alat baru dan harus meninjau penggunaan gas mereka:
+
+- Peningkatan ukuran kontrak maksimum (atau EIP-7954) memungkinkan pengembang untuk menyebarkan aplikasi yang lebih besar, menaikkan batas ukuran kontrak maksimum dari sekitar 24KiB menjadi 64KiB.
+- Penyebaran Awal Pabrik Deterministik (atau EIP-7997) memperkenalkan kontrak pabrik bawaan yang universal. Ini memungkinkan pengembang untuk menyebarkan aplikasi dan dompet kontrak pintar mereka ke alamat yang sama persis di semua rantai EVM yang berpartisipasi.
+- Jika aplikasi Anda bergantung pada pelacakan kompleks untuk menemukan transfer ETH, Transfer dan pembakaran ETH memancarkan Log (atau EIP-7708) akan memungkinkan Anda beralih menggunakan Log untuk akuntansi yang lebih sederhana dan andal.
+- Peningkatan biaya gas pembuatan state (atau EIP-8037) dan Pembaruan biaya gas akses state (atau EIP-8038) memperkenalkan model keberlanjutan baru yang akan mengubah biaya penyebaran kontrak tertentu, karena membuat akun baru atau penyimpanan permanen akan memiliki biaya tetap standar baru berdasarkan ukuran data yang dibuat.
 
 ### Bagaimana Glamsterdam akan memengaruhi penyimpanan node dan persyaratan perangkat keras? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 

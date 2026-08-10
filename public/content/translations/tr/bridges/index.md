@@ -141,3 +141,5 @@ Köprüler, kullanıcıların Ethereum L2'lerine sisteme katılımı ve hatta fa
 - ["Gelecek neden çok zincirli olacak, ancak zincirler arası olmayacak."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 Ocak 2022 - Vitalik Buterin_
 - [Güvenli Zincirler Arası Birlikte Çalışabilirlik İçin Paylaşılan Güvenlikten Yararlanma: Lagrange Durum Komiteleri ve Ötesi](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 Haziran 2024 - Emmanuel Awosika_
 - [Rollup Birlikte Çalışabilirlik Çözümlerinin Durumu](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 Haziran 2024 - Alex Hook_
+
+<QuizWidget quizKey="bridges" />

@@ -55,7 +55,7 @@ lang: ko
       <p>
         신원 관리 시스템에 ZKP를 사용하는 실제 사례는 이더리움을 기반으로 구축된 부탄 왕국의 국가 디지털 신원(NDI) 시스템입니다. 부탄의 NDI는 ZKP를 사용하여 시민들이 신분증의 민감한 개인 데이터를 공개하지 않고도 "나는 시민입니다" 또는 "나는 18세 이상입니다"와 같은 자신에 대한 사실을 암호학적으로 증명할 수 있도록 합니다.
       </p>
-      <p></p>
+      <p>
         <a href="/decentralized-identity/#national-and-government-id">탈중앙화 신원증명 (DID) 사례 연구</a>에서 부탄 NDI에 대해 자세히 알아보세요.
       </p>
  
@@ -239,3 +239,7 @@ ZK-스탁은 보안을 위해 충돌 저항성 해시 함수에만 의존하기 
 - [영지식 증명(ZKP)이 자기 주권 신원의 판도를 바꾸는 이유](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
 - [EIP-7503 설명: ZK 증명으로 이더리움에서 프라이빗 전송 활성화](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [ZK 카드 게임: ZK 기초 및 실제 사용 사례를 배우는 게임](https://github.com/ZK-card/zk-cards) - _ZK-Cards_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

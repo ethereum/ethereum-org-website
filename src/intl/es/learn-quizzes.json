@@ -852,7 +852,7 @@
   "what-are-apps-3-c-label": "Nada: asumes el riesgo y esperas que el desconocido pague",
   "what-are-apps-3-c-explanation": "Eliminar al intermediario no significa eliminar la garantía. El propio código de la aplicación hace cumplir los términos.",
   "what-are-apps-3-d-label": "Un moderador que revisa la transacción antes de que se procese",
-  "what-are-apps-3-d-explanation": "No hay ningún intermediario que apruebe la actividad. Cualquiera que tenga una billetera puede usar la aplicación directamente.",
+  "what-are-apps-3-d-explanation": "No hay ningún guardián que apruebe la actividad. Cualquiera que tenga una billetera puede usar la aplicación directamente.",
   "what-are-apps-4-prompt": "Cuando usas una aplicación de Ethereum, ¿a quién pertenecen los datos que creas?",
   "what-are-apps-4-a-label": "La empresa que desarrolló la aplicación",
   "what-are-apps-4-a-explanation": "Con las aplicaciones tradicionales, los datos que creas generalmente no son tuyos. Nadie controla una aplicación de Ethereum, por lo que ninguna empresa termina siendo dueña de tus datos ni vendiéndolos.",

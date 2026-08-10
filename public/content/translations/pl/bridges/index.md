@@ -141,3 +141,5 @@ Mosty mają kluczowe znaczenie dla onboardingu użytkowników do warstwy 2 (L2) 
 - [„Dlaczego przyszłość będzie wielołańcuchowa, ale nie międzyłańcuchowa.”](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 stycznia 2022 r. - Vitalik Buterin_
 - [Wykorzystanie współdzielonego bezpieczeństwa do bezpiecznej interoperacyjności międzyłańcuchowej: Komitety stanu Lagrange'a i nie tylko](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 czerwca 2024 r. - Emmanuel Awosika_
 - [Stan rozwiązań interoperacyjności rollupów](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 czerwca 2024 r. - Alex Hook_
+
+<QuizWidget quizKey="bridges" />

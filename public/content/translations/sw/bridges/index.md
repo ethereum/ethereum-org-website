@@ -141,3 +141,5 @@ Madaraja ni muhimu kwa uingizaji wa watumiaji kwenye tabaka la 2 (l2) la Ethereu
 - ["Kwa nini siku zijazo zitakuwa za minyororo mingi, lakini hazitakuwa za mtambuko-mnyororo."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _Januari 8, 2022 - Vitalik Buterin_
 - [Kutumia Usalama wa Pamoja kwa Mwingiliano Salama wa Mtambuko-Mnyororo: Kamati za Hali za Lagrange na Zaidi](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _Juni 12, 2024 - Emmanuel Awosika_
 - [Hali ya Suluhu za Mwingiliano wa Rollup](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _Juni 20, 2024 - Alex Hook_
+
+<QuizWidget quizKey="bridges" />

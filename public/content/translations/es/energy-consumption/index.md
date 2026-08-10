@@ -24,8 +24,8 @@ El gráfico anterior muestra el consumo de energía estimado en TWh/año para Et
 | Ethereum PoW        |                 21                  |           8.100x           |                                                                    [fuente](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
 | Google              |                 19                  |           7.300x           |                                           [fuente](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
 | Netflix             |                0,457                |            176x            | [fuente](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
-| PayPal              |                0,26                 |            100x            |                                 [fuente](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1)>).pdf>)                                  |
-| AirBnB              |                0,02                 |             8x             |                              [fuente](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final)>).pdf>)                              |
+| PayPal              |                0,26                 |            100x            |                                 [fuente](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf>)                                  |
+| AirBnB              |                0,02                 |             8x             |                              [fuente](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                              |
 | **Ethereum PoS**    |             **0,0026**              |           **1x**           |                                                               [fuente](https://carbon-ratings.com/eth-report-2022)                                                                |
 
 \*Incluye dispositivos de usuario final como PC, computadoras portátiles y consolas de videojuegos.
@@ -83,3 +83,5 @@ Las plataformas de financiación de bienes públicos nativas de la Web3, como [G
 
 - [La cadena de balizas](/roadmap/beacon-chain)
 - [La Fusión](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />

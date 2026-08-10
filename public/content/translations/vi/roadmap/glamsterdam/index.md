@@ -5,12 +5,10 @@ lang: vi
 template: upgrade
 ---
 
-# Glamsterdam {#glamsterdam}
-
 <Alert variant="update">
 <AlertContent>
 <AlertTitle>
-Glamsterdam là một bản nâng cấp Ethereum sắp tới dự kiến vào nửa cuối năm 2026
+Glamsterdam là một bản nâng cấp Ethereum sắp tới dự kiến vào quý 4 năm 2026
 </AlertTitle>
 <AlertDescription>
 Bản nâng cấp Glamsterdam chỉ là một bước duy nhất trong các mục tiêu phát triển dài hạn của Ethereum. Tìm hiểu thêm về [lộ trình Giao thức](/roadmap/) và [các bản nâng cấp trước đó](/ethereum-forks/).
@@ -146,11 +144,9 @@ Bằng cách định giá các hành động truy cập trạng thái chính xá
 
 **Tài nguyên**: [Đặc tả kỹ thuật EIP-8038](https://eips.ethereum.org/EIPS/eip-8038)
 
-
-Những tinh chỉnh đối với nhiệm vụ của trình xác thực và quy trình thoát đảm bảo sự ổn định của mạng lưới trong các sự kiện phạt cắt giảm hàng loạt và dân chủ hóa Thanh khoản. Những cải tiến này làm cho mạng lưới ổn định hơn và đảm bảo rằng tất cả những người tham gia, dù lớn hay nhỏ, đều được đối xử công bằng.
 ## Khả năng phục hồi của mạng lưới {#network-resilience}
 
-Các tinh chỉnh đối với nhiệm vụ của trình xác thực và quy trình thoát đảm bảo sự ổn định của mạng lưới trong các sự kiện phạt cắt giảm hàng loạt và dân chủ hóa Thanh khoản. Những cải tiến này làm cho mạng lưới ổn định hơn và đảm bảo rằng tất cả những người tham gia, dù lớn hay nhỏ, đều được đối xử công bằng.
+Các tinh chỉnh đối với nhiệm vụ của trình xác thực và quy trình thoát đảm bảo sự ổn định của mạng lưới trong các sự kiện phạt cắt giảm hàng loạt và tăng tốc độ mà những người đặt cọc có thể di chuyển khoản đặt cọc của mình. Những cải tiến này làm cho mạng lưới ổn định hơn và đảm bảo rằng tất cả những người tham gia, dù lớn hay nhỏ, đều được đối xử công bằng.
 
 ### Loại trừ các trình xác thực bị phạt cắt giảm khỏi việc đề xuất {#exclude-slashed-validators}
 
@@ -285,6 +281,15 @@ Tính năng nổi bật là ePBS (EIP-7732), giúp tách biệt nhiệm vụ n�
 Có, Glamsterdam rất có thể sẽ giảm phí cho người dùng hàng ngày! Giảm gas giao dịch nội tại (hoặc EIP-2780) làm giảm phí cơ sở cho việc gửi ETH, làm cho ETH rẻ hơn nhiều để sử dụng cho các khoản thanh toán hàng ngày.
 
 Ngoài ra, vì tính bền vững lâu dài, Glamsterdam giới thiệu Danh sách truy cập cấp độ khối (BAL). Điều này cho phép xử lý song song và chuẩn bị cho lớp 1 (l1) để xử lý an toàn các giới hạn gas tổng thể cao hơn trong tương lai, điều này có khả năng sẽ làm giảm chi phí gas cho mỗi giao dịch khi công suất tăng lên.
+
+### Có bất kỳ thay đổi nào đối với các hợp đồng thông minh hiện có của tôi sau Glamsterdam không? {#will-my-smart-contracts-change}
+
+Các hợp đồng hiện có sẽ tiếp tục hoạt động bình thường sau Glamsterdam. Các nhà phát triển có thể sẽ nhận được một số công cụ mới và nên xem xét việc sử dụng gas của họ:
+
+- Tăng kích thước hợp đồng tối đa (hoặc EIP-7954) cho phép các nhà phát triển triển khai các ứng dụng lớn hơn, nâng giới hạn kích thước hợp đồng tối đa từ khoảng 24KiB lên 64KiB.
+- Triển khai trước nhà máy xác định (hoặc EIP-7997) giới thiệu một hợp đồng nhà máy phổ quát, được tích hợp sẵn. Nó cho phép các nhà phát triển triển khai các ứng dụng và Ví hợp đồng thông minh của họ đến cùng một Địa chỉ chính xác trên tất cả các Chuỗi EVM tham gia.
+- Nếu ứng dụng của bạn dựa vào việc theo dõi phức tạp để tìm các khoản chuyển ETH, Các khoản chuyển và đốt ETH phát ra một Nhật ký (hoặc EIP-7708) sẽ cho phép bạn chuyển sang sử dụng Nhật ký để hạch toán đơn giản và đáng tin cậy hơn.
+- Tăng chi phí gas tạo trạng thái (hoặc EIP-8037) và Cập nhật chi phí gas truy cập trạng thái (hoặc EIP-8038) giới thiệu các mô hình bền vững mới sẽ thay đổi một số chi phí triển khai hợp đồng nhất định, vì việc tạo các Tài khoản mới hoặc lưu trữ vĩnh viễn sẽ có một khoản phí cố định được tiêu chuẩn hóa mới dựa trên kích thước của dữ liệu được tạo.
 
 ### Glamsterdam sẽ ảnh hưởng như thế nào đến lưu trữ nút và các yêu cầu phần cứng? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 

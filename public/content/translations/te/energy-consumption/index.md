@@ -24,8 +24,8 @@ lang: te
 | PoW ఎథీరియం        |                 21                  |           8,100x           |                                                                    [మూలం](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
 | Google              |                 19                  |           7,300x           |                                           [మూలం](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
 | నెట్‌ఫ్లిక్స్             |                0.457                |            176x            | [మూలం](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
-| పేపాల్              |                0.26                 |            100x            |                                 [మూలం](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1)>).pdf>)                                  |
-| AirBnB              |                0.02                 |             8x             |                              [మూలం](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final)>).pdf>)                              |
+| పేపాల్              |                0.26                 |            100x            |                                 [మూలం](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf>)                                  |
+| AirBnB              |                0.02                 |             8x             |                              [మూలం](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                              |
 | **PoS ఎథీరియం**    |             **0.0026**              |           **1x**           |                                                               [మూలం](https://carbon-ratings.com/eth-report-2022)                                                                |
 
 \*PCలు, ల్యాప్‌టాప్‌లు మరియు గేమింగ్ కన్సోల్‌ల వంటి తుది వినియోగదారు పరికరాలను కలిగి ఉంటుంది.
@@ -83,3 +83,5 @@ lang: te
 
 - [బీకన్ చైన్](/roadmap/beacon-chain)
 - [ది మెర్జ్](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />

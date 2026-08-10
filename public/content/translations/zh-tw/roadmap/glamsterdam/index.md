@@ -5,12 +5,10 @@ lang: zh-tw
 template: upgrade
 ---
 
-# 格蘭斯特丹 {#glamsterdam}
-
 <Alert variant="update">
 <AlertContent>
 <AlertTitle>
-格蘭斯特丹 (Glamsterdam) 是計畫於 2026 年下半年進行的以太坊升級
+格蘭斯特丹 (Glamsterdam) 是計畫於 2026 年第四季進行的以太坊升級
 </AlertTitle>
 <AlertDescription>
 格蘭斯特丹升級只是以太坊長期發展目標中的一步。了解更多關於[協定路線圖](/roadmap/)與[先前的升級](/ethereum-forks/)。
@@ -149,7 +147,7 @@ EIP-8037 還引入了儲備池模型來更可預測地管理這些成本；狀�
 
 ## 網路韌性 {#network-resilience}
 
-對驗證者職責與退出流程的改良確保了在大規模罰沒事件期間的網路穩定性，並使流動性民主化。這些改進使網路更加穩定，並確保所有參與者（無論大小）都受到公平對待。
+對驗證者職責與退出流程的改良確保了在大規模罰沒事件期間的網路穩定性，並加快了質押者移動其質押的速度。這些改進使網路更加穩定，並確保所有參與者（無論大小）都受到公平對待。
 
 ### 排除被罰沒的驗證者進行提案 {#exclude-slashed-validators}
 
@@ -284,6 +282,15 @@ ETH 轉帳與銷毀發出日誌 (ETH transfers and burns emit a log，或 EIP-77
 是的，格蘭斯特丹極有可能會降低日常使用者的費用！降低內在交易 Gas (Reduce intrinsic transaction gas，或 EIP-2780) 降低了發送 ETH 的基礎費用，使得使用 ETH 進行日常支付變得便宜得多。
 
 此外，為了長期永續性，格蘭斯特丹引入了區塊級存取清單 (BALs)。這實現了平行處理，並為 L1 在未來安全處理更高的整體 Gas 限制做好了準備，隨著容量的增長，這可能會降低每筆交易的 Gas 成本。
+
+### 在格蘭斯特丹升級之後，我現有的智能合約會有任何改變嗎？ {#will-my-smart-contracts-change}
+
+現有的合約在格蘭斯特丹升級後將繼續正常運作。開發人員可能會獲得幾個新工具，並且應該審查他們的 Gas 使用量：
+
+- 增加最大合約大小 (Increase maximum contract size，或 EIP-7954) 允許開發人員部署更大的應用程式，將最大合約大小限制從大約 24KiB 提高到 64KiB。
+- 確定性工廠預先部署 (Deterministic factory predeploy，或 EIP-7997) 引入了一個通用的、內建的工廠合約。它允許開發人員將他們的應用程式與智能合約錢包部署到所有參與的 EVM 鏈上完全相同的地址。
+- 如果您的應用程式依賴複雜的追蹤來尋找 ETH 轉帳，ETH 轉帳與銷毀發出日誌 (ETH transfers and burns emit a log，或 EIP-7708) 將允許您改用日誌來進行更簡單、更可靠的記帳。
+- 狀態建立 Gas 成本增加 (State creation gas cost increase，或 EIP-8037) 與狀態存取 Gas 成本更新 (state-access gas cost update，或 EIP-8038) 引入了新的永續性模型，這將改變某些合約部署成本，因為建立新帳戶或永久儲存將根據建立的資料大小收取新的標準化固定費用。
 
 ### 格蘭斯特丹將如何影響節點儲存與硬體要求？ {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 

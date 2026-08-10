@@ -24,8 +24,8 @@ lang: zh
 | PoW 以太坊        |                 21                  |           8,100x           |                                                                    [来源](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
 | 谷歌              |                 19                  |           7,300x           |                                           [来源](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
 | 网飞             |                0.457                |            176x            | [来源](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
-| 贝宝              |                0.26                 |            100x            |                                 [来源](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1)>).pdf>)                                  |
-| 爱彼迎              |                0.02                 |             8x             |                              [来源](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final)>).pdf>)                              |
+| 贝宝              |                0.26                 |            100x            |                                 [来源](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf>)                                  |
+| 爱彼迎              |                0.02                 |             8x             |                              [来源](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                              |
 | **PoS 以太坊**    |             **0.0026**              |           **1x**           |                                                               [来源](https://carbon-ratings.com/eth-report-2022)                                                                |
 
 \*包括个人电脑、笔记本电脑和游戏机等终端用户设备。
@@ -83,3 +83,5 @@ Web3 原生公共物品融资平台（如 [Gitcoin](https://gitcoin.co)）开展
 
 - [信标链](/roadmap/beacon-chain)
 - [合并](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />

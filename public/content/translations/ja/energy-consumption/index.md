@@ -24,8 +24,8 @@ lang: ja
 | PoWイーサリアム        |                 21                  |           8,100倍           |                                                                    [情報源](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
 | Google              |                 19                  |           7,300倍           |                                           [情報源](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
 | ネットフリックス             |                0.457                |            176倍            | [情報源](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
-| ペイパル              |                0.26                 |            100倍            |                                 [情報源](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1)>).pdf>)                                  |
-| AirBnB              |                0.02                 |             8倍             |                              [情報源](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final)>).pdf>)                              |
+| ペイパル              |                0.26                 |            100倍            |                                 [情報源](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf>)                                  |
+| AirBnB              |                0.02                 |             8倍             |                              [情報源](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                              |
 | **PoSイーサリアム**    |             **0.0026**              |           **1倍**           |                                                               [情報源](https://carbon-ratings.com/eth-report-2022)                                                                |
 
 \*PC、ノートパソコン、ゲーム機などのエンドユーザーデバイスを含みます。
@@ -83,3 +83,5 @@ CCRIは、マージによってイーサリアムの年換算電力消費量が*
 
 - [ビーコン・チェーン](/roadmap/beacon-chain)
 - [マージ](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />

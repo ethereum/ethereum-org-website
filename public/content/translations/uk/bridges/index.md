@@ -141,3 +141,5 @@ _Web3 перетворився на екосистему блокчейнів р
 - [«Чому майбутнє буде мультичейн, але не кросчейн»](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) — _8 січня 2022 р. — Віталік Бутерін (Vitalik Buterin)_
 - [Використання спільної безпеки для безпечної кросчейн-інтероперабельності: комітети стану Lagrange та інше](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) — _12 червня 2024 р. — Еммануель Авосіка (Emmanuel Awosika)_
 - [Стан рішень для інтероперабельності ролапів](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) — _20 червня 2024 р. — Алекс Хук (Alex Hook)_
+
+<QuizWidget quizKey="bridges" />

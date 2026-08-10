@@ -141,3 +141,5 @@ _Web3 এখন লেয়ার ১ (L1) ব্লকচেইন এবং �
 - ["কেন ভবিষ্যৎ মাল্টি-চেইন হবে, কিন্তু ক্রস-চেইন হবে না।"](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 জানুয়ারি, 2022 - ভিটালিক বুটেরিন (Vitalik Buterin)_
 - [নিরাপদ ক্রস-চেইন আন্তঃকার্যক্ষমতার জন্য শেয়ার্ড সিকিউরিটি কাজে লাগানো: ল্যাগ্রাঞ্জ স্টেট কমিটি এবং এর বাইরে](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 জুন, 2024 - ইমানুয়েল আওসিকা (Emmanuel Awosika)_
 - [রোলআপ আন্তঃকার্যক্ষমতা সলিউশনের স্টেট](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 জুন, 2024 - অ্যালেক্স হুক (Alex Hook)_
+
+<QuizWidget quizKey="bridges" />

@@ -141,3 +141,5 @@ _Web3 लेयर 1 (l1) ब्लॉकचेन और लेयर 2 (l2) �
 - ["भविष्य मल्टी-चेन क्यों होगा, लेकिन यह क्रॉस-चेन नहीं होगा।"](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 जनवरी, 2022 - विटालिक बुटेरिन_
 - [सुरक्षित क्रॉस-चेन अंतर-संचालनीयता के लिए साझा सुरक्षा का उपयोग: लैग्रेंज स्थिति समितियां और उससे आगे](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 जून, 2024 - इमैनुएल अवोसिका_
 - [रोलअप अंतर-संचालनीयता समाधानों की स्थिति](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 जून, 2024 - एलेक्स हुक_
+
+<QuizWidget quizKey="bridges" />

@@ -5,12 +5,10 @@ lang: fr
 template: upgrade
 ---
 
-# Glamsterdam {#glamsterdam}
-
 <Alert variant="update">
 <AlertContent>
 <AlertTitle>
-Glamsterdam est une prochaine mise à jour d'Ethereum prévue pour le second semestre 2026
+Glamsterdam est une prochaine mise à jour d'Ethereum prévue pour le quatrième trimestre 2026
 </AlertTitle>
 <AlertDescription>
 La mise à jour Glamsterdam n'est qu'une étape dans les objectifs de développement à long terme d'Ethereum. Apprenez-en plus sur [la feuille de route du protocole](/roadmap/) et [les mises à jour précédentes](/ethereum-forks/).
@@ -149,7 +147,7 @@ En tarifiant plus précisément les actions d'accès à l'état, Ethereum peut �
 
 ## Résilience du réseau {#network-resilience}
 
-Les améliorations apportées aux tâches des validateurs et aux processus de sortie garantissent la stabilité du réseau lors d'événements de réduction (slashing) massifs et démocratisent la liquidité. Ces améliorations rendent le réseau plus stable et garantissent que tous les participants, grands et petits, sont traités équitablement.
+Les améliorations apportées aux tâches des validateurs et aux processus de sortie garantissent la stabilité du réseau lors d'événements de réduction massifs et accélèrent la vitesse à laquelle les stakers peuvent déplacer leur mise. Ces améliorations rendent le réseau plus stable et garantissent que tous les participants, grands et petits, sont traités équitablement.
 
 ### Exclure les validateurs sanctionnés de la proposition {#exclude-slashed-validators}
 
@@ -242,12 +240,6 @@ Ce changement empêcherait les échecs de synchronisation du réseau pendant les
 
 **Ressources** : [Spécification technique de l'EIP-7975](https://eips.ethereum.org/EIPS/eip-7975)
 
-
-- [Feuille de route d'Ethereum](/roadmap/)
-- [Forkcast : Glamsterdam](https://forkcast.org/upgrade/glamsterdam)
-- [Méta-EIP Glamsterdam](https://eips.ethereum.org/EIPS/eip-7773)
-- [Annonce sur le blog de la mise à jour des priorités du protocole pour 2026](https://blog.ethereum.org/2026/02/18/protocol-priorities-update-2026)
-- [Podcast The Daily Gwei Refuel - L'Ethereum post-quantique, Glamsterdam arrive](https://www.youtube.com/watch?v=qx9sd50uQjQ)
 ## Lectures complémentaires {#further-reading}
 
 - [Feuille de route d'Ethereum](/roadmap/)
@@ -291,6 +283,15 @@ La fonctionnalité phare est l'ePBS (EIP-7732), qui sépare la lourde tâche de 
 Oui, Glamsterdam réduira très probablement les frais pour les utilisateurs quotidiens ! La réduction du gaz intrinsèque des transactions (ou EIP-2780) réduit les frais de base pour l'envoi d'ETH, rendant l'ETH beaucoup moins cher à utiliser pour les paiements quotidiens.
 
 De plus, pour une durabilité à long terme, Glamsterdam introduit les listes d'accès au niveau du bloc (BAL). Cela permet un traitement parallèle et prépare la couche 1 (l1) à gérer en toute sécurité des limites de gaz globales plus élevées à l'avenir, ce qui réduira probablement les coûts en gaz par transaction à mesure que la capacité augmentera.
+
+### Y aura-t-il des changements pour mes contrats intelligents existants après Glamsterdam ? {#will-my-smart-contracts-change}
+
+Les contrats existants continueront de fonctionner normalement après Glamsterdam. Les développeurs obtiendront probablement plusieurs nouveaux outils et devraient revoir leur utilisation de gaz :
+
+- L'augmentation de la taille maximale des contrats (ou EIP-7954) permet aux développeurs de déployer des applications plus volumineuses, faisant passer la limite de taille maximale des contrats d'environ 24 Kio à 64 Kio.
+- Le pré-déploiement d'usine déterministe (ou EIP-7997) introduit un contrat d'usine universel et intégré. Il permet aux développeurs de déployer leurs applications et leurs portefeuilles de contrats intelligents à la même adresse exacte sur toutes les chaînes EVM participantes.
+- Si votre application s'appuie sur un traçage complexe pour trouver les transferts d'ETH, les transferts et les destructions d'ETH émettent un journal (ou EIP-7708) vous permettra de passer à l'utilisation de journaux pour une comptabilité plus simple et plus fiable.
+- L'augmentation du coût en gaz de la création d'état (ou EIP-8037) et la mise à jour du coût en gaz de l'accès à l'état (ou EIP-8038) introduisent de nouveaux modèles de durabilité qui modifieront certains coûts de déploiement de contrats, car la création de nouveaux comptes ou d'un stockage permanent aura de nouveaux frais fixes standardisés basés sur la taille des données créées.
 
 ### Comment Glamsterdam affectera-t-elle le stockage des nœuds et les exigences matérielles ? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 

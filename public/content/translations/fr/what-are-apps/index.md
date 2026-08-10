@@ -79,3 +79,7 @@ Lorsque les applications sont toutes construites sur Ethereum, elles sont toutes
 <ExpandableCard title="Quel est le meilleur portefeuille crypto ?" visible>
   <p>Un portefeuille crypto vous permet de conserver vos jetons et de gérer votre compte Ethereum. Il existe de nombreux excellents portefeuilles, chacun ayant un objectif différent. Pour savoir quel portefeuille vous convient le mieux, consultez notre [liste de portefeuilles](/wallets/find-wallet).</p>
 </ExpandableCard>
+
+<Divider />
+
+<QuizWidget quizKey="what-are-apps" />

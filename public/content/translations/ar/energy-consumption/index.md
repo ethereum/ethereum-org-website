@@ -24,8 +24,8 @@ lang: ar
 | إيثيريوم القائم على إثبات العمل (PoW) |                 21                  |           <span dir="ltr">8,100x</span>           |                                                                    [المصدر](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
 | جوجل              |                 19                  |           <span dir="ltr">7,300x</span>           |                                           [المصدر](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
 | نتفليكس             |                <span dir="ltr">0.457</span>                |            <span dir="ltr">176x</span>            | [المصدر](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
-| باي بال              |                <span dir="ltr">0.26</span>                 |            <span dir="ltr">100x</span>            |                                 [المصدر](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1)>).pdf>)                                  |
-| AirBnB              |                <span dir="ltr">0.02</span>                 |             <span dir="ltr">8x</span>             |                              [المصدر](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final)>).pdf>)                              |
+| باي بال              |                <span dir="ltr">0.26</span>                 |            <span dir="ltr">100x</span>            |                                 [المصدر](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf>)                                  |
+| AirBnB              |                <span dir="ltr">0.02</span>                 |             <span dir="ltr">8x</span>             |                              [المصدر](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                              |
 | **إيثيريوم القائم على إثبات الحصة (PoS)**    |             **<span dir="ltr">0.0026</span>**              |           **<span dir="ltr">1x</span>**           |                                                               [المصدر](https://carbon-ratings.com/eth-report-2022)                                                                |
 
 \*يشمل أجهزة المستخدم النهائي مثل أجهزة الكمبيوتر الشخصية والمحمولة وأجهزة الألعاب.
@@ -83,3 +83,5 @@ lang: ar
 
 - [سلسلة المنارة](/roadmap/beacon-chain)
 - [الدمج](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />

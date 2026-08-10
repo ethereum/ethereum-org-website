@@ -5,12 +5,10 @@ lang: tr
 template: upgrade
 ---
 
-# Glamsterdam {#glamsterdam}
-
 <Alert variant="update">
 <AlertContent>
 <AlertTitle>
-Glamsterdam, 2026'nın ikinci yarısı için planlanan yaklaşan bir Ethereum yükseltmesidir
+Glamsterdam, 2026'nın 4. çeyreği için planlanan yaklaşan bir Ethereum yükseltmesidir
 </AlertTitle>
 <AlertDescription>
 Glamsterdam yükseltmesi, Ethereum'un uzun vadeli gelişim hedeflerinde yalnızca tek bir adımdır. [Protokol yol haritası](/roadmap/) ve [önceki yükseltmeler](/ethereum-forks/) hakkında daha fazla bilgi edinin.
@@ -102,8 +100,6 @@ Blok Erişim Listesi Değişimi (eth/71 veya EIP-8159), blok düzeyinde erişim 
 - [EIP-7928 teknik spesifikasyonu](https://eips.ethereum.org/EIPS/eip-7928)
 - [EIP-8159 teknik spesifikasyonu](https://eips.ethereum.org/EIPS/eip-8159)
 
-
-Ethereum ağı daha hızlı büyüdükçe, kullanım maliyetinin Ethereum'u çalıştıran donanım üzerindeki yıpranma ve aşınma ile eşleştiğinden emin olmak önemlidir. Ağın güvenli bir şekilde ölçeklenebilmesi ve daha fazla işlem işleyebilmesi için genel kapasite sınırlarını artırması gerekmektedir.
 ## Ağ sürdürülebilirliği {#network-sustainability}
 
 Ethereum ağı daha hızlı büyüdükçe, onu kullanma maliyetinin Ethereum'u çalıştıran donanımdaki aşınma ve yıpranmayla eşleştiğinden emin olmak önemlidir. Ağın güvenli bir şekilde ölçeklenmesi ve daha fazla işlem yapabilmesi için genel kapasite sınırlarını artırması gerekir.
@@ -147,11 +143,9 @@ Durum erişimi eylemlerini daha doğru fiyatlandırarak Ethereum, kazara veya ka
 
 **Kaynaklar**: [EIP-8038 teknik spesifikasyonu](https://eips.ethereum.org/EIPS/eip-8038)
 
-
-Doğrulayıcı görevlerinde ve çıkış süreçlerinde yapılan iyileştirmeler, kitlesel kesinti olayları sırasında ağ istikrarını sağlar ve likiditeyi demokratikleştirir. Bu iyileştirmeler ağı daha istikrarlı hale getirir ve büyük veya küçük tüm katılımcılara adil davranılmasını sağlar.
 ## Ağ dayanıklılığı {#network-resilience}
 
-Doğrulayıcı görevlerinde ve çıkış süreçlerinde yapılan iyileştirmeler, kitlesel kesinti (slashing) olayları sırasında ağ kararlılığını sağlar ve likiditeyi demokratikleştirir. Bu iyileştirmeler ağı daha istikrarlı hale getirir ve büyük veya küçük tüm katılımcılara adil davranılmasını sağlar.
+Doğrulayıcı görevlerinde ve çıkış süreçlerinde yapılan iyileştirmeler, kitlesel kesinti (slashing) olayları sırasında ağ kararlılığını sağlar ve staker'ların stake'lerini taşıma hızını artırır. Bu iyileştirmeler ağı daha istikrarlı hale getirir ve büyük veya küçük tüm katılımcılara adil davranılmasını sağlar.
 
 ### Kesintiye uğramış doğrulayıcıları teklif etmekten hariç tutma {#exclude-slashed-validators}
 
@@ -244,12 +238,6 @@ Bu değişiklik, yoğun aktivite dönemlerinde ağ eşzamanlama hatalarını ön
 
 **Kaynaklar**: [EIP-7975 teknik spesifikasyonu](https://eips.ethereum.org/EIPS/eip-7975)
 
-
-- [Ethereum yol haritası](/roadmap/)
-- [Forkcast: Glamsterdam](https://forkcast.org/upgrade/glamsterdam)
-- [Glamsterdam Meta EIP](https://eips.ethereum.org/EIPS/eip-7773)
-- [2026 için Protokol Öncelikleri Güncellemesi blog duyurusu](https://blog.ethereum.org/2026/02/18/protocol-priorities-update-2026)
-- [The Daily Gwei Refuel podcast'i - Kuantum sonrası Ethereum, Glamsterdam geliyor](https://www.youtube.com/watch?v=qx9sd50uQjQ)
 ## Daha fazla okuma {#further-reading}
 
 - [Ethereum yol haritası](/roadmap/)
@@ -293,6 +281,15 @@ Glamsterdam Ana Ağda etkinleştirilmeden önce kurulumunuzu doğrulamak için t
 Evet, Glamsterdam büyük olasılıkla günlük kullanıcılar için ücretleri düşürecektir! İçsel işlem gazını azaltma (veya EIP-2780), ETH göndermek için taban ücreti düşürerek ETH'yi günlük ödemeler için kullanmayı çok daha ucuz hale getirir.
 
 Buna ek olarak, uzun vadeli sürdürülebilirlik için Glamsterdam, Blok Düzeyinde Erişim Listeleri (BAL'ler) sunar. Bu, paralel işlemeyi etkinleştirir ve L1'i gelecekte daha yüksek genel gaz limitlerini güvenli bir şekilde idare etmeye hazırlar, bu da kapasite büyüdükçe işlem başına gaz maliyetlerini muhtemelen azaltacaktır.
+
+### Glamsterdam sonrası mevcut akıllı sözleşmelerimde herhangi bir değişiklik olacak mı? {#will-my-smart-contracts-change}
+
+Mevcut sözleşmeler Glamsterdam'dan sonra normal şekilde çalışmaya devam edecektir. Geliştiriciler muhtemelen birkaç yeni araç edinecek ve gaz kullanımlarını gözden geçirmelidir:
+
+- Maksimum sözleşme boyutunu artırma (veya EIP-7954), geliştiricilerin daha büyük uygulamalar dağıtmasına olanak tanıyarak maksimum sözleşme boyutu sınırını kabaca 24KiB'den 64KiB'ye çıkarır.
+- Deterministik Fabrika Ön Dağıtımı (veya EIP-7997), evrensel, yerleşik bir fabrika sözleşmesi sunar. Geliştiricilerin uygulamalarını ve akıllı sözleşme cüzdanlarını katılan tüm EVM zincirlerinde tam olarak aynı adrese dağıtmalarına olanak tanır.
+- Uygulamanız ETH transferlerini bulmak için karmaşık izlemeye dayanıyorsa, ETH transferleri ve yakımları bir günlük yayar (veya EIP-7708), daha basit ve güvenilir muhasebe için günlükleri kullanmaya geçmenize olanak tanır.
+- Durum oluşturma gaz maliyeti artışı (veya EIP-8037) ve durum erişimi gaz maliyeti güncellemesi (veya EIP-8038), yeni hesaplar veya kalıcı depolama oluşturmak, oluşturulan verilerin boyutuna bağlı olarak yeni bir standartlaştırılmış sabit ücrete sahip olacağından, belirli sözleşme dağıtım maliyetlerini değiştirecek yeni sürdürülebilirlik modelleri sunar.
 
 ### Glamsterdam düğüm depolama ve donanım gereksinimlerini nasıl etkileyecek? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 

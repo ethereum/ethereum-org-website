@@ -24,8 +24,8 @@ lang: uk
 | PoW Етеріум         |                 21                  |           8 100x           |                                                                    [джерело](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
 | Google              |                 19                  |           7 300x           |                                           [джерело](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
 | Netflix             |                0,457                |            176x            | [джерело](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
-| PayPal              |                0,26                 |            100x            |                                 [джерело](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1)>).pdf>)                                  |
-| AirBnB              |                0,02                 |             8x             |                              [джерело](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final)>).pdf>)                              |
+| PayPal              |                0,26                 |            100x            |                                 [джерело](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf>)                                  |
+| AirBnB              |                0,02                 |             8x             |                              [джерело](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                              |
 | **PoS Етеріум**     |             **0,0026**              |           **1x**           |                                                               [джерело](https://carbon-ratings.com/eth-report-2022)                                                                |
 
 \*Включає пристрої кінцевих користувачів, такі як ПК, ноутбуки та ігрові консолі.
@@ -83,3 +83,5 @@ lang: uk
 
 - [Сигнальний ланцюг](/roadmap/beacon-chain)
 - [Злиття](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />

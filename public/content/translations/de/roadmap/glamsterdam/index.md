@@ -5,12 +5,10 @@ lang: de
 template: upgrade
 ---
 
-# Glamsterdam {#glamsterdam}
-
 <Alert variant="update">
 <AlertContent>
 <AlertTitle>
-Glamsterdam ist ein bevorstehendes Ethereum-Upgrade, das für das zweite Halbjahr 2026 geplant ist
+Glamsterdam ist ein bevorstehendes Ethereum-Upgrade, das für das vierte Quartal 2026 geplant ist
 </AlertTitle>
 <AlertDescription>
 Das Glamsterdam-Upgrade ist nur ein einzelner Schritt in den langfristigen Entwicklungszielen von Ethereum. Erfahre mehr über [die Protokoll-Roadmap](/roadmap/) und [frühere Upgrades](/ethereum-forks/).
@@ -149,7 +147,7 @@ Durch eine genauere Bepreisung von Zustandszugriffsaktionen kann Ethereum widers
 
 ## Netzwerk-Widerstandsfähigkeit {#network-resilience}
 
-Verfeinerungen der Validator-Aufgaben und Austrittsprozesse gewährleisten die Netzwerkstabilität bei Massen-Slashing-Ereignissen und demokratisieren die Liquidität. Diese Verbesserungen machen das Netzwerk stabiler und stellen sicher, dass alle Teilnehmer, ob groß oder klein, fair behandelt werden.
+Verfeinerungen der Validator-Aufgaben und Austrittsprozesse gewährleisten die Netzwerkstabilität bei Massen-Slashing-Ereignissen und beschleunigen, wie schnell Staker ihren Stake bewegen können. Diese Verbesserungen machen das Netzwerk stabiler und stellen sicher, dass alle Teilnehmer, ob groß oder klein, fair behandelt werden.
 
 ### Geslashte Validatoren vom Vorschlagen ausschließen {#exclude-slashed-validators}
 
@@ -284,6 +282,15 @@ Das Hauptmerkmal ist ePBS (EIP-7732), das die schwere Aufgabe der Validierung vo
 Ja, Glamsterdam wird höchstwahrscheinlich die Gebühren für alltägliche Benutzer senken! Die Reduzierung des intrinsischen Transaktionsgases (oder EIP-2780) senkt die Grundgebühr für das Senden von ETH, wodurch die Nutzung von ETH für alltägliche Zahlungen viel günstiger wird.
 
 Darüber hinaus führt Glamsterdam für die langfristige Nachhaltigkeit Block-Level Access Lists (BALs) ein. Dies ermöglicht eine parallele Verarbeitung und bereitet Layer 1 (L1) darauf vor, in Zukunft höhere Gesamt-Gaslimits sicher zu handhaben, was wahrscheinlich die Gaskosten pro Transaktion senken wird, wenn die Kapazität wächst.
+
+### Wird es nach Glamsterdam Änderungen an meinen bestehenden Smart Contracts geben? {#will-my-smart-contracts-change}
+
+Bestehende Verträge werden nach Glamsterdam weiterhin normal funktionieren. Entwickler werden wahrscheinlich mehrere neue Tools erhalten und sollten ihren Gasverbrauch überprüfen:
+
+- Die Erhöhung der maximalen Vertragsgröße (oder EIP-7954) ermöglicht es Entwicklern, größere Anwendungen bereitzustellen, wodurch das Limit für die maximale Vertragsgröße von etwa 24 KiB auf 64 KiB angehoben wird.
+- Deterministisches Factory-Predeploy (oder EIP-7997) führt einen universellen, integrierten Factory-Vertrag ein. Es ermöglicht Entwicklern, ihre Anwendungen und Smart-Contract-Wallets auf genau derselben Adresse über alle teilnehmenden EVM-Chains hinweg bereitzustellen.
+- Wenn deine App auf komplexes Tracing angewiesen ist, um ETH-Transfers zu finden, wird „ETH-Transfers und -Burns geben ein Log aus“ (oder EIP-7708) es dir ermöglichen, für eine einfachere und zuverlässigere Buchhaltung auf die Verwendung von Logs umzusteigen.
+- Die Erhöhung der Gaskosten für die Zustandserstellung (oder EIP-8037) und die Aktualisierung der Gaskosten für den Zustandszugriff (oder EIP-8038) führen neue Nachhaltigkeitsmodelle ein, die bestimmte Kosten für die Bereitstellung von Verträgen ändern werden, da die Erstellung neuer Konten oder permanenten Speichers eine neue standardisierte Festgebühr basierend auf der Größe der erstellten Daten haben wird.
 
 ### Wie wird sich Glamsterdam auf die Speicher- und Hardwareanforderungen von Knoten auswirken? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 

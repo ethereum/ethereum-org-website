@@ -55,7 +55,7 @@ lang: te
       <p>
         గుర్తింపు నిర్వహణ వ్యవస్థల కోసం ZKPని ఉపయోగించటానికి వాస్తవ-ప్రపంచ ఉదాహరణ ఎథీరియంపై నిర్మించబడిన కింగ్‌డమ్ ఆఫ్ భూటాన్ యొక్క నేషనల్ డిజిటల్ ID (NDI) సిస్టమ్. భూటాన్ యొక్క NDI పౌరులు తమ IDలోని సున్నితమైన వ్యక్తిగత డేటాను బహిర్గతం చేయకుండా, "నేను పౌరుడిని" లేదా "నా వయస్సు 18 ఏళ్లు పైబడి ఉంది" వంటి వాస్తవాలను గూఢలిపి శాస్త్రపరంగా నిరూపించుకోవడానికి ZKPలను ఉపయోగిస్తుంది.
       </p>
-      <p></p>
+      <p>
         <a href="/decentralized-identity/#national-and-government-id">వికేంద్రీకృత గుర్తింపు కేస్ స్టడీ</a>లో భూటాన్ NDI గురించి మరింత తెలుసుకోండి.
       </p>
  
@@ -239,3 +239,7 @@ MACIని ఉపయోగించడానికి కోఆర్డిన�
 - [స్వీయ-సార్వభౌమ గుర్తింపు కోసం శూన్య-జ్ఞాన నిరూపణలు (ZKPs) ఎందుకు గేమ్ ఛేంజర్](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
 - [EIP-7503 వివరణ: ZK నిరూపణలతో ఎథీరియంలో ప్రైవేట్ బదిలీలను ప్రారంభించడం](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [ZK కార్డ్ గేమ్: ZK ప్రాథమికాలను మరియు నిజ జీవిత వినియోగ సందర్భాలను తెలుసుకోవడానికి గేమ్](https://github.com/ZK-card/zk-cards) - _ZK-Cards_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

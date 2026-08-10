@@ -24,8 +24,8 @@ lang: bn
 | PoW ইথেরিয়াম        |                 21                  |           8,100x           |                                                                    [উৎস](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
 | গুগল              |                 19                  |           7,300x           |                                           [উৎস](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
 | নেটফ্লিক্স             |                0.457                |            176x            | [উৎস](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
-| পেপ্যাল              |                0.26                 |            100x            |                                 [উৎস](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1)>).pdf>)                                  |
-| এয়ারবিএনবি              |                0.02                 |             8x             |                              [উৎস](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final)>).pdf>)                              |
+| পেপ্যাল              |                0.26                 |            100x            |                                 [উৎস](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf>)                                  |
+| এয়ারবিএনবি              |                0.02                 |             8x             |                              [উৎস](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                              |
 | **PoS ইথেরিয়াম**    |             **0.0026**              |           **1x**           |                                                               [উৎস](https://carbon-ratings.com/eth-report-2022)                                                                |
 
 \*পিসি, ল্যাপটপ এবং গেমিং কনসোলের মতো এন্ড-ইউজার ডিভাইসগুলি অন্তর্ভুক্ত।
@@ -83,3 +83,5 @@ Web3 নেটিভ সর্বজনীন সম্পদ ফান্ডি
 
 - [বিকন চেইন](/roadmap/beacon-chain)
 - [দ্য মার্জ](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />

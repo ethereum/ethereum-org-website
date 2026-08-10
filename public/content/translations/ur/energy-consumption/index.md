@@ -24,8 +24,8 @@ lang: ur
 | <span dir="ltr">PoW</span> ایتھیریم        |                 <span dir="ltr">21</span>                  |           <span dir="ltr">8,100x</span>           |                                                                    [ماخذ](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
 | گوگل              |                 <span dir="ltr">19</span>                  |           <span dir="ltr">7,300x</span>           |                                           [ماخذ](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
 | نیٹ فلکس             |                <span dir="ltr">0.457</span>                |            <span dir="ltr">176x</span>            | [ماخذ](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
-| پے پال              |                <span dir="ltr">0.26</span>                 |            <span dir="ltr">100x</span>            |                                 [ماخذ](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1)>).pdf>)                                  |
-| <span dir="ltr">AirBnB</span>              |                <span dir="ltr">0.02</span>                 |             <span dir="ltr">8x</span>             |                              [ماخذ](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final)>).pdf>)                              |
+| پے پال              |                <span dir="ltr">0.26</span>                 |            <span dir="ltr">100x</span>            |                                 [ماخذ](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf>)                                  |
+| <span dir="ltr">AirBnB</span>              |                <span dir="ltr">0.02</span>                 |             <span dir="ltr">8x</span>             |                              [ماخذ](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                              |
 | **<span dir="ltr">PoS</span> ایتھیریم**    |             **<span dir="ltr">0.0026</span>**              |           **<span dir="ltr">1x</span>**           |                                                               [ماخذ](https://carbon-ratings.com/eth-report-2022)                                                                |
 
 \*اس میں اینڈ یوزر ڈیوائسز جیسے پی سی، لیپ ٹاپ، اور گیمنگ کنسولز شامل ہیں۔
@@ -83,3 +83,5 @@ lang: ur
 
 - [بیکن چین](/roadmap/beacon-chain)
 - [دی مرج](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />

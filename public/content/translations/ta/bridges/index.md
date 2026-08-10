@@ -141,3 +141,5 @@ _Web3 ஆனது அடுக்கு 1 (l1) தொகுதிச்சங�
 - ["எதிர்காலம் ஏன் பல-சங்கிலியாக இருக்கும், ஆனால் அது குறுக்கு-சங்கிலியாக இருக்காது."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _ஜனவரி 8, 2022 - விட்டாலிக் புட்டெரின்_
 - [பாதுகாப்பான குறுக்கு-சங்கிலி பரிமாற்று இயங்குதன்மைக்கு பகிரப்பட்ட பாதுகாப்பைப் பயன்படுத்துதல்: லாக்ரேஞ்ச் நிலை குழுக்கள் மற்றும் அதற்கு அப்பால்](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _ஜூன் 12, 2024 - இம்மானுவேல் அவோசிகா_
 - [ரோலப் பரிமாற்று இயங்குதன்மை தீர்வுகளின் நிலை](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _ஜூன் 20, 2024 - அலெக்ஸ் ஹூக்_
+
+<QuizWidget quizKey="bridges" />

@@ -5,12 +5,10 @@ lang: cs
 template: upgrade
 ---
 
-# Glamsterdam {#glamsterdam}
-
 <Alert variant="update">
 <AlertContent>
 <AlertTitle>
-Glamsterdam je nadcházející upgrade Etherea plánovaný na druhou polovinu roku 2026
+Glamsterdam je nadcházející upgrade Etherea plánovaný na 4. čtvrtletí 2026
 </AlertTitle>
 <AlertDescription>
 Upgrade Glamsterdam je pouze jedním krokem v dlouhodobých cílech vývoje Etherea. Přečtěte si více o [plánu vývoje protokolu](/roadmap/) a [předchozích upgradech](/ethereum-forks/).
@@ -44,7 +42,7 @@ Upgrade Glamsterdam se zaměřuje na tři hlavní cíle:
 
 - Zrychlení zpracování (paralelizace): Reorganizace způsobu, jakým síť zaznamenává datové závislosti, aby mohla bezpečně zpracovávat mnoho transakcí současně namísto pomalého, postupného zpracování jedné po druhé.
 - Rozšíření kapacity: Rozdělení náročné práce při vytváření a ověřování bloků, což síti poskytne více času na šíření většího množství dat bez zpomalení.
-- Prevence bobtnání databáze (udržitelnost): Úprava síťových poplatků tak, aby přesně odrážely dlouhodobé hardwarové náklady na ukládání nových dat, což odblokuje budoucí zvyšování limitu plynu a zároveň zabrání zhoršení výkonu hardwaru.
+- Prevence bobtnání databáze (udržitelnost): Úprava síťových poplatků tak, aby přesně odrážely dlouhodobé hardwarové náklady na ukládání nových dat, což odblokuje budoucí zvyšování limitu gasu a zároveň zabrání zhoršení výkonu hardwaru.
 
 Stručně řečeno, Glamsterdam zavede strukturální změny, které zajistí, že s tím, jak síť zvyšuje kapacitu, zůstane udržitelná a výkon zůstane vysoký.
 
@@ -117,13 +115,13 @@ Přidávání nových účtů, tokenů a [chytrých kontraktů](/glossary/#smart
 
 Některé akce, které vytvářejí stav na Ethereu, jako je vytváření nových účtů nebo nasazení velkých chytrých kontraktů, byly relativně levné ve srovnání s trvalým úložným prostorem, který zabírají na uzlech sítě, například nasazení kontraktu je na bajt výrazně levnější než vytváření úložných slotů.
 
-Bez úprav by se růst stavu Etherea stal neudržitelným, protože síť škáluje směrem k hranici limitu plynu 200 milionů umožněné Glamsterdamem (přičemž vývojáři v současné době testují s referenčním limitem plynu bloku 150 milionů, aby odvodili přesné ceny stavu).
+Bez úprav by se růst stavu Etherea stal neudržitelným, protože síť škáluje směrem k hranici limitu gasu 200 milionů umožněné Glamsterdamem (přičemž vývojáři v současné době testují s referenčním limitem gasu bloku 150 milionů, aby odvodili přesné ceny stavu).
 
 **Zvýšení nákladů na gas za vytvoření stavu (neboli EIP-8037)** harmonizuje náklady tím, že je váže na skutečnou velikost vytvářených dat, a aktualizuje poplatky tak, aby byly úměrné množství trvalých dat, která operace vytváří nebo ke kterým přistupuje.
 
 EIP-8037 také zavádí model rezervoáru pro předvídatelnější řízení těchto nákladů; poplatky za gas stavu čerpají nejprve z `state_gas_reservoir` a operační kód `GAS` vrací pouze `gas_left`, což zabraňuje exekučním rámcům ve špatném výpočtu dostupného gasu. Na podporu toho dostávají základní úlohy na pozadí dodatečný povolený limit paliva, který jde přímo do této vyhrazené rezervy, což zajišťuje, že kritické síťové operace neselžou jen proto, že ukládání trvalých dat vyžaduje více zdrojů.
 
-Před EIP-8037 sdílely výpočetní práce (aktivní zpracování) i trvalé ukládání dat (uložení chytrého kontraktu do databáze sítě) stejný limit plynu. Model rezervoáru rozděluje účtování: limit plynu pro skutečnou výpočetní práci transakce (zpracování) a pro dlouhodobé ukládání dat (gas stavu). Oddělení těchto dvou pomáhá zabránit tomu, aby samotná velikost dat aplikace vyčerpala limit plynu; pokud vývojáři poskytnou dostatek prostředků k naplnění rezervoáru pro ukládání dat, mohou nasadit mnohem větší a složitější chytré kontrakty.
+Před EIP-8037 sdílely výpočetní práce (aktivní zpracování) i trvalé ukládání dat (uložení chytrého kontraktu do databáze sítě) stejný limit gasu. Model rezervoáru rozděluje účtování: limit gasu pro skutečnou výpočetní práci transakce (zpracování) a pro dlouhodobé ukládání dat (gas stavu). Oddělení těchto dvou pomáhá zabránit tomu, aby samotná velikost dat aplikace vyčerpala limit gasu; pokud vývojáři poskytnou dostatek prostředků k naplnění rezervoáru pro ukládání dat, mohou nasadit mnohem větší a složitější chytré kontrakty.
 
 Přesnější a předvídatelnější oceňování ukládání dat pomůže Ethereu bezpečně zvýšit jeho rychlost a kapacitu bez bobtnání databáze. Tato udržitelnost umožní provozovatelům uzlů nadále používat (relativně) cenově dostupný hardware po mnoho let, čímž udrží domácí staking přístupný pro zachování decentralizace sítě.
 
@@ -142,14 +140,14 @@ V důsledku toho jsou některé specifické příkazy v současné době podhodn
 
 Sladění nákladů na přístup ke stavu také pomáhá učinit Ethereum odolnějším. Protože tyto náročné akce čtení dat jsou uměle levné, mohl by škodlivý útočník spamovat síť tisíci složitých datových požadavků v jediném bloku, než by dosáhl limitu poplatků sítě, což by mohlo způsobit zastavení nebo pád sítě (útok typu odepření služby). I bez škodlivého úmyslu nejsou vývojáři ekonomicky motivováni k vytváření efektivních aplikací, pokud je čtení síťových dat příliš levné.
 
-Přesnějším oceněním akcí přístupu ke stavu může být Ethereum odolnější vůči náhodným nebo úmyslným zpomalením, zatímco sladění síťových nákladů s hardwarovou zátěží se ukazuje jako udržitelnější základ pro budoucí zvyšování limitu plynu.
+Přesnějším oceněním akcí přístupu ke stavu může být Ethereum odolnější vůči náhodným nebo úmyslným zpomalením, zatímco sladění síťových nákladů s hardwarovou zátěží se ukazuje jako udržitelnější základ pro budoucí zvyšování limitu gasu.
 
 **Zdroje**: [Technická specifikace EIP-8038](https://eips.ethereum.org/EIPS/eip-8038)
 
 
 ## Odolnost sítě {#network-resilience}
 
-Vylepšení povinností validátorů a procesů výstupu zajišťují stabilitu sítě během událostí hromadné penalizace a demokratizují likviditu. Tato vylepšení činí síť stabilnější a zajišťují, že se všemi účastníky, velkými i malými, je zacházeno spravedlivě.
+Vylepšení povinností validátorů a procesů výstupu zajišťují stabilitu sítě během událostí hromadné penalizace a urychlují to, jak rychle mohou stakeři přesouvat svůj stake. Tato vylepšení činí síť stabilnější a zajišťují, že se všemi účastníky, velkými i malými, je zacházeno spravedlivě.
 
 ### Vyloučení penalizovaných validátorů z navrhování {#exclude-slashed-validators}
 
@@ -193,7 +191,7 @@ Upgrade Glamsterdam Etherea si klade za cíl zlepšit uživatelskou zkušenost, 
 - Snižuje základní poplatek za transakce, čímž snižuje celkové náklady na jednoduchou nativní platbu v ETH
 - Činí menší převody dostupnějšími, čímž zvyšuje životaschopnost Etherea jako běžného prostředku směny
 
-Všechny transakce na Ethereu mají dnes paušální základní poplatek za plyn, bez ohledu na to, jak jednoduché nebo složité je jejich zpracování. **Snížení vnitřního gasu transakce (neboli EIP-2780)** navrhuje snížení tohoto základního poplatku, aby byl standardní převod ETH mezi existujícími účty až o **71 % levnější**.
+Všechny transakce na Ethereu mají dnes paušální základní poplatek za gas, bez ohledu na to, jak jednoduché nebo složité je jejich zpracování. **Snížení vnitřního gasu transakce (neboli EIP-2780)** navrhuje snížení tohoto základního poplatku, aby byl standardní převod ETH mezi existujícími účty až o **71 % levnější**.
 
 Snížení vnitřního gasu transakce funguje tak, že rozděluje transakční poplatek tak, aby odrážel pouze základní, nezbytnou práci, kterou počítače provozující síť skutečně dělají, jako je ověření digitálního podpisu a aktualizace zůstatku. Protože základní platba v ETH neprovádí složitý kód ani nenese další data, tento návrh by snížil její poplatek tak, aby odpovídal její lehké stopě.
 
@@ -283,7 +281,16 @@ Hlavní funkcí je ePBS (EIP-7732), která odděluje náročný úkol validace s
 
 Ano, Glamsterdam s největší pravděpodobností sníží poplatky pro běžné uživatele! Snížení vnitřního gasu transakce (neboli EIP-2780) snižuje základní poplatek za odesílání ETH, díky čemuž je používání ETH pro každodenní platby mnohem levnější.
 
-Kromě toho pro dlouhodobou udržitelnost zavádí Glamsterdam seznamy přístupů na úrovni bloku (BALs). To umožňuje paralelní zpracování a připravuje vrstvu 1 (l1) na bezpečné zvládnutí vyšších celkových limitů plynu v budoucnu, což pravděpodobně sníží náklady na gas na transakci s rostoucí kapacitou.
+Kromě toho pro dlouhodobou udržitelnost zavádí Glamsterdam seznamy přístupů na úrovni bloku (BALs). To umožňuje paralelní zpracování a připravuje vrstvu 1 (l1) na bezpečné zvládnutí vyšších celkových limitů gasu v budoucnu, což pravděpodobně sníží náklady na gas na transakci s rostoucí kapacitou.
+
+### Dojde po Glamsterdamu k nějakým změnám v mých stávajících chytrých kontraktech? {#will-my-smart-contracts-change}
+
+Stávající kontrakty budou po Glamsterdamu nadále normálně fungovat. Vývojáři pravděpodobně získají několik nových nástrojů a měli by zkontrolovat své využití gasu:
+
+- Zvýšení maximální velikosti kontraktu (neboli EIP-7954) umožňuje vývojářům nasazovat větší aplikace, čímž se zvyšuje limit maximální velikosti kontraktu zhruba z 24 KiB na 64 KiB.
+- Deterministické předběžné nasazení továrny (neboli EIP-7997) zavádí univerzální, vestavěný tovární kontrakt. Umožňuje vývojářům nasadit své aplikace a peněženky s chytrými kontrakty na přesně stejnou adresu napříč všemi zúčastněnými EVM řetězci.
+- Pokud vaše aplikace spoléhá na složité trasování k nalezení převodů ETH, Převody a spalování ETH emitují log (neboli EIP-7708) vám umožní přejít na používání logů pro jednodušší a spolehlivější účtování.
+- Zvýšení nákladů na gas za vytvoření stavu (neboli EIP-8037) a Aktualizace nákladů na gas za přístup ke stavu (neboli EIP-8038) zavádějí nové modely udržitelnosti, které změní určité náklady na nasazení kontraktu, protože vytváření nových účtů nebo trvalého úložiště bude mít nový standardizovaný fixní poplatek založený na velikosti vytvořených dat.
 
 ### Jak Glamsterdam ovlivní úložiště uzlů a hardwarové požadavky? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 

@@ -239,3 +239,7 @@ Le ZK-STARK est considéré comme immunisé contre la menace de l'informatique q
 - [Pourquoi les preuves à divulgation nulle de connaissance (ZKP) changent la donne pour l'identité auto-souveraine](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
 - [EIP-7503 expliqué : permettre des transferts privés sur Ethereum avec des preuves ZK](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [Jeu de cartes ZK : jeu pour apprendre les principes fondamentaux de ZK et les cas d'utilisation réels](https://github.com/ZK-card/zk-cards) - _ZK-Cards_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

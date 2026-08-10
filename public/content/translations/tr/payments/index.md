@@ -206,3 +206,7 @@ Hızlı afet yardımını kolaylaştırmaktan küresel çalışanları güçlend
   </ButtonLink>
 </AlertContent>
 </Alert>
+
+<Divider />
+
+<QuizWidget quizKey="payments" />

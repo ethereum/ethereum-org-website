@@ -5,12 +5,10 @@ lang: it
 template: upgrade
 ---
 
-# Glamsterdam {#glamsterdam}
-
 <Alert variant="update">
 <AlertContent>
 <AlertTitle>
-Glamsterdam è un imminente aggiornamento di Ethereum previsto per la seconda metà del 2026
+Glamsterdam è un imminente aggiornamento di Ethereum previsto per il Q4 2026
 </AlertTitle>
 <AlertDescription>
 L'aggiornamento Glamsterdam è solo un singolo passo negli obiettivi di sviluppo a lungo termine di Ethereum. Scopri di più sulla [roadmap del protocollo](/roadmap/) e sui [precedenti aggiornamenti](/ethereum-forks/).
@@ -149,7 +147,7 @@ Prezzando le azioni di accesso allo stato in modo più accurato, Ethereum può e
 
 ## Resilienza della rete {#network-resilience}
 
-I perfezionamenti ai compiti dei validatori e ai processi di uscita garantiscono la stabilità della rete durante eventi di slashing di massa e democratizzano la liquidità. Questi miglioramenti rendono la rete più stabile e assicurano che tutti i partecipanti, grandi e piccoli, siano trattati in modo equo.
+I perfezionamenti ai compiti dei validatori e ai processi di uscita garantiscono la stabilità della rete durante eventi di slashing di massa e accelerano la velocità con cui gli staker possono spostare il proprio stake. Questi miglioramenti rendono la rete più stabile e assicurano che tutti i partecipanti, grandi e piccoli, siano trattati in modo equo.
 
 ### Escludere i validatori penalizzati (slashed) dalle proposte {#exclude-slashed-validators}
 
@@ -284,6 +282,15 @@ La funzionalità principale è l'ePBS (EIP-7732), che separa il pesante compito 
 Sì, molto probabilmente Glamsterdam ridurrà le commissioni per gli utenti di tutti i giorni! La riduzione del gas intrinseco delle transazioni (o EIP-2780) riduce la commissione di base per l'invio di ETH, rendendo gli ETH molto più economici da utilizzare per i pagamenti quotidiani.
 
 Inoltre, per la sostenibilità a lungo termine, Glamsterdam introduce le liste di accesso a livello di blocco (BAL). Ciò abilita l'elaborazione parallela e prepara il layer 1 (l1) a gestire in sicurezza limiti di gas complessivi più elevati in futuro, il che probabilmente ridurrà i costi del gas per transazione man mano che la capacità cresce.
+
+### Ci saranno modifiche ai miei smart contract esistenti dopo Glamsterdam? {#will-my-smart-contracts-change}
+
+I contratti esistenti continueranno a funzionare normalmente dopo Glamsterdam. Gli sviluppatori avranno probabilmente a disposizione diversi nuovi strumenti e dovrebbero rivedere il loro utilizzo di gas:
+
+- L'aumento delle dimensioni massime del contratto (o EIP-7954) consente agli sviluppatori di distribuire applicazioni più grandi, innalzando il limite massimo delle dimensioni del contratto da circa 24 KiB a 64 KiB.
+- La predistribuzione deterministica della factory (o EIP-7997) introduce un contratto factory universale e integrato. Consente agli sviluppatori di distribuire le loro applicazioni e i portafogli smart contract esattamente allo stesso indirizzo su tutte le catene EVM partecipanti.
+- Se la tua app si basa su un tracciamento complesso per trovare i trasferimenti di ETH, I trasferimenti e i burn di ETH emettono un log (o EIP-7708) ti consentirà di passare all'utilizzo dei log per una contabilità più semplice e affidabile.
+- L'aumento del costo del gas per la creazione dello stato (o EIP-8037) e l'aggiornamento del costo del gas per l'accesso allo stato (o EIP-8038) introducono nuovi modelli di sostenibilità che modificheranno alcuni costi di distribuzione dei contratti, poiché la creazione di nuovi account o di archiviazione permanente avrà una nuova commissione fissa standardizzata basata sulle dimensioni dei dati creati.
 
 ### In che modo Glamsterdam influirà sull'archiviazione dei nodi e sui requisiti hardware? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 

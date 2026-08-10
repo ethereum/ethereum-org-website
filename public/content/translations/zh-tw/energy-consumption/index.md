@@ -24,8 +24,8 @@ lang: zh-tw
 | PoW 以太坊        |                 21                  |           8,100x           |                                                                    [來源](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
 | Google              |                 19                  |           7,300x           |                                           [來源](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
 | 網飛             |                0.457                |            176x            | [來源](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
-| PayPal              |                0.26                 |            100x            |                                 [來源](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1)>).pdf>)                                  |
-| AirBnB              |                0.02                 |             8x             |                              [來源](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final)>).pdf>)                              |
+| PayPal              |                0.26                 |            100x            |                                 [來源](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf>)                                  |
+| AirBnB              |                0.02                 |             8x             |                              [來源](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                              |
 | **PoS 以太坊**    |             **0.0026**              |           **1x**           |                                                               [來源](https://carbon-ratings.com/eth-report-2022)                                                                |
 
 \*包含個人電腦、筆記型電腦和遊戲機等終端使用者裝置。
@@ -83,3 +83,5 @@ Web3 原生的公共財資助平台（如 [Gitcoin](https://gitcoin.co)）舉辦
 
 - [信標鏈](/roadmap/beacon-chain)
 - [合併](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />

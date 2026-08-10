@@ -141,3 +141,5 @@ As pontes são cruciais para a integração de usuários nas l2s do Ethereum, e 
 - ["Por que o futuro será multi-chain, mas não será cross-chain."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 de janeiro de 2022 - Vitalik Buterin_
 - [Aproveitando a Segurança Compartilhada para Interoperabilidade Cross-Chain Segura: Comitês de Estado Lagrange e Além](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 de junho de 2024 - Emmanuel Awosika_
 - [O Estado das Soluções de Interoperabilidade de Rollup](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 de junho de 2024 - Alex Hook_
+
+<QuizWidget quizKey="bridges" />

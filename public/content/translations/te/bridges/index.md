@@ -141,3 +141,5 @@ _Web3 అనేది లేయర్ 1 (l1) బ్లాక్‌చైన్�
 - ["భవిష్యత్తు ఎందుకు మల్టీ-చైన్‌గా ఉంటుంది, కానీ అది క్రాస్-చైన్‌గా ఉండదు."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _జనవరి 8, 2022 - విటాలిక్ బుటెరిన్_
 - [సురక్షితమైన క్రాస్-చైన్ పరస్పర అనుసంధానత కోసం భాగస్వామ్య భద్రతను ఉపయోగించడం: లాగ్రాంజ్ స్టేట్ కమిటీలు మరియు అంతకు మించి](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _జూన్ 12, 2024 - ఇమ్మాన్యుయేల్ అవోసికా_
 - [రోలప్ పరస్పర అనుసంధానత పరిష్కారాల స్థితి](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _జూన్ 20, 2024 - అలెక్స్ హుక్_
+
+<QuizWidget quizKey="bridges" />
