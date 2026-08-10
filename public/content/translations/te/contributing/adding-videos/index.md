@@ -130,7 +130,7 @@ title: "..."
 | `how-ethereum-works` | ఎథీరియం ఎలా పనిచేస్తుంది |
 | `network-upgrades` | నెట్‌వర్క్ అప్‌గ్రేడ్‌లు |
 | `roadmap-and-priorities` | రోడ్‌మ్యాప్ & ప్రాధాన్యతలు |
-| `scaling-and-layer-2` | స్కేలింగ్ & లేయర్ 2 (l2) |
+| `scaling-and-layer-2` | స్కేలింగ్ & లేయర్ 2 |
 | `use-cases` | వినియోగ సందర్భాలు |
 | `privacy` | గోప్యత |
 | `security` | భద్రత |

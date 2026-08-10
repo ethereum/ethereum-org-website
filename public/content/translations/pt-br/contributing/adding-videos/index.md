@@ -130,7 +130,7 @@ Um vídeo pode ter várias tags para aparecer em vários filtros da galeria:
 | `how-ethereum-works` | Como o Ethereum funciona |
 | `network-upgrades` | Atualizações da rede |
 | `roadmap-and-priorities` | Roteiro e prioridades |
-| `scaling-and-layer-2` | Escalonamento e camada 2 (l2) |
+| `scaling-and-layer-2` | Escalonamento e camada 2 |
 | `use-cases` | Casos de uso |
 | `privacy` | Privacidade |
 | `security` | Segurança |

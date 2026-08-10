@@ -135,7 +135,7 @@ Film może mieć wiele tagów, aby pojawiać się w wielu filtrach galerii:
 | `privacy` | Prywatność |
 | `security` | Bezpieczeństwo |
 | `community-stories` | Historie społeczności |
-| `events` | Zdarzenia |
+| `events` | Wydarzenia |
 
 Każdy film powinien mieć co najmniej jeden tag z tej listy. Filmy bez rozpoznanego tagu pojawią się tylko w widoku „Wszystkie” i wynikach wyszukiwania.
 

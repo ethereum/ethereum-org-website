@@ -127,15 +127,15 @@ Sebuah video dapat memiliki beberapa tag untuk muncul di beberapa filter galeri:
 
 | Tag | Filter galeri |
 |---|---|
-| `how-ethereum-works` | Cara Kerja Ethereum |
-| `network-upgrades` | Peningkatan Jaringan |
-| `roadmap-and-priorities` | Peta Jalan & Prioritas |
-| `scaling-and-layer-2` | Penskalaan & Lapisan 2 |
-| `use-cases` | Kasus Penggunaan |
+| `how-ethereum-works` | Cara kerja Ethereum |
+| `network-upgrades` | Peningkatan jaringan |
+| `roadmap-and-priorities` | Peta jalan & prioritas |
+| `scaling-and-layer-2` | Penskalaan & lapisan 2 (l2) |
+| `use-cases` | Kasus penggunaan |
 | `privacy` | Privasi |
 | `security` | Keamanan |
-| `community-stories` | Cerita Komunitas |
-| `events` | Peristiwa |
+| `community-stories` | Cerita komunitas |
+| `events` | Acara |
 
 Setiap video harus memiliki setidaknya satu tag dari daftar ini. Video tanpa tag yang dikenali hanya akan muncul dalam tampilan "Semua" dan hasil pencarian.
 

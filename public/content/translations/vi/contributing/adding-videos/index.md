@@ -129,7 +129,7 @@ Một video có thể có nhiều thẻ để xuất hiện trong nhiều bộ l
 |---|---|
 | `how-ethereum-works` | Cách Ethereum hoạt động |
 | `network-upgrades` | Nâng cấp mạng lưới |
-| `roadmap-and-priorities` | Lộ trình & Ưu tiên |
+| `roadmap-and-priorities` | Lộ trình & ưu tiên |
 | `scaling-and-layer-2` | Mở rộng quy mô & lớp 2 (l2) |
 | `use-cases` | Các trường hợp sử dụng |
 | `privacy` | Quyền riêng tư |

@@ -135,7 +135,7 @@ title: "..."
 | `privacy` | 隐私 |
 | `security` | 安全 |
 | `community-stories` | 社区故事 |
-| `events` | 事件 |
+| `events` | 活动 |
 
 每个视频都应至少包含此列表中的一个标签。没有可识别标签的视频将仅出现在“全部”视图和搜索结果中。
 

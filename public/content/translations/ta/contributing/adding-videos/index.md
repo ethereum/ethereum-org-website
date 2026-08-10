@@ -129,9 +129,9 @@ title: "..."
 |---|---|
 | `how-ethereum-works` | எத்திரியம் எவ்வாறு செயல்படுகிறது |
 | `network-upgrades` | பிணைய மேம்படுத்தல்கள் |
-| `roadmap-and-priorities` | வழிகாட்டி வரைபடம் & முன்னுரிமைகள் |
-| `scaling-and-layer-2` | அளவிடுதல் & அடுக்கு 2 (l2) |
-| `use-cases` | பயன்பாட்டு நிகழ்வுகள் |
+| `roadmap-and-priorities` | திட்ட வரைபடம் மற்றும் முன்னுரிமைகள் |
+| `scaling-and-layer-2` | அளவிடுதல் மற்றும் அடுக்கு 2 (l2) |
+| `use-cases` | பயன்பாட்டு நேர்வுகள் |
 | `privacy` | தனியுரிமை |
 | `security` | பாதுகாப்பு |
 | `community-stories` | சமூகக் கதைகள் |

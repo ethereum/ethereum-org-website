@@ -130,7 +130,7 @@ title: "..."
 | `how-ethereum-works` | イーサリアムの仕組み |
 | `network-upgrades` | ネットワークのアップグレード |
 | `roadmap-and-priorities` | ロードマップと優先事項 |
-| `scaling-and-layer-2` | スケーリングとレイヤー2 |
+| `scaling-and-layer-2` | スケーリングとレイヤー2 (L2) |
 | `use-cases` | ユースケース |
 | `privacy` | プライバシー |
 | `security` | セキュリティ |

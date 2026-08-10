@@ -130,7 +130,7 @@ Un video puede tener múltiples etiquetas para aparecer en múltiples filtros de
 | `how-ethereum-works` | Cómo funciona Ethereum |
 | `network-upgrades` | Actualizaciones de la red |
 | `roadmap-and-priorities` | Hoja de ruta y prioridades |
-| `scaling-and-layer-2` | Escalabilidad y capa 2 (l2) |
+| `scaling-and-layer-2` | Escalabilidad y capa 2 |
 | `use-cases` | Casos de uso |
 | `privacy` | Privacidad |
 | `security` | Seguridad |

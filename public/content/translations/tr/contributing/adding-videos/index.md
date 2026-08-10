@@ -28,7 +28,7 @@ Site, öncelikli olarak belirli bir ürünü, Token'ı veya ticari hizmeti tanı
 
 ### Olsa iyi olurlar {#nice-to-haves}
 
-- **Bir döküme sahip olması** – Dökümü olan videolar erişilebilirliği ve SEO'yu iyileştirir. Eğer bir dökümünüz yoksa, ethereum.org ekibi bir tane oluşturmanıza yardımcı olabilir.
+- **Bir transkripte sahip olması** – Transkripti olan videolar erişilebilirliği ve SEO'yu iyileştirir. Eğer bir transkriptiniz yoksa, ethereum.org ekibi bir tane oluşturmanıza yardımcı olabilir.
 - **Güvenilir bir kaynaktan olması** – Köklü eğitimcilerden, araştırmacılardan ve kaynaklardan gelen içeriklere öncelik verilir.
 - **Zamanında ve eskimeyen** – Zamanla alakalı kalmaya devam eden içerikler, zamana duyarlı materyallere tercih edilir.
 
@@ -94,9 +94,9 @@ author: Channel Name
 | `breadcrumb` | Hayır | İçerik haritası (breadcrumb) gezinmesi için özel kısa etiket |
 | `customThumbnailUrl` | Hayır | Özel küçük resim URL'si (varsayılan olarak YouTube küçük resmidir) |
 
-#### 3. Adım: Bir döküm ekleyin (önerilir) {#step-3}
+#### 3. Adım: Bir transkript ekleyin (önerilir) {#step-3}
 
-Frontmatter `---` işaretinin altına, video dökümünü markdown formatında ekleyin:
+Frontmatter `---` işaretinin altına, video transkriptini markdown formatında ekleyin:
 
 ```markdown
 ---
@@ -108,16 +108,16 @@ Video içeriğine kısa bir giriş.
 
 ### Bölüm Başlığı (0:00)
 
-Bu bölüm için döküm metni...
+Bu bölüm için transkript metni...
 
 ### Sonraki Bölüm (5:30)
 
-Daha fazla döküm metni...
+Daha fazla transkript metni...
 ```
 
-Ana bölümleri işaretlemek için zaman damgalı `###` başlıklarını kullanın. Bu, dökümü taranabilir hale getirir ve SEO'yu iyileştirir.
+Ana bölümleri işaretlemek için zaman damgalı `###` başlıklarını kullanın. Bu, transkripti taranabilir hale getirir ve SEO'yu iyileştirir.
 
-Eğer bir dökümünüz yoksa, gövdeyi boş bırakabilirsiniz ve ekip bir tane oluşturacaktır.
+Eğer bir transkriptiniz yoksa, gövdeyi boş bırakabilirsiniz ve ekip bir tane oluşturacaktır.
 
 #### 4. Adım: Konu etiketlerini seçin {#step-4}
 
@@ -127,14 +127,14 @@ Bir video, birden fazla galeri filtresinde görünmek için birden fazla etikete
 
 | Etiket | Galeri filtresi |
 |---|---|
-| `how-ethereum-works` | Ethereum Nasıl Çalışır |
-| `network-upgrades` | Ağ Yükseltmeleri |
-| `roadmap-and-priorities` | Yol Haritası ve Öncelikler |
-| `scaling-and-layer-2` | Ölçeklendirme ve Katman 2 |
-| `use-cases` | Kullanım Durumları |
+| `how-ethereum-works` | Ethereum nasıl çalışır |
+| `network-upgrades` | Ağ yükseltmeleri |
+| `roadmap-and-priorities` | Yol haritası ve öncelikler |
+| `scaling-and-layer-2` | Ölçeklendirme ve katman 2 |
+| `use-cases` | Kullanım durumları |
 | `privacy` | Gizlilik |
 | `security` | Güvenlik |
-| `community-stories` | Topluluk Hikayeleri |
+| `community-stories` | Topluluk hikayeleri |
 | `events` | Etkinlikler |
 
 Her videonun bu listeden en az bir etiketi olmalıdır. Tanınan bir etiketi olmayan videolar yalnızca "Tümü" görünümünde ve arama sonuçlarında görünecektir.
@@ -149,7 +149,7 @@ Değişikliklerinizle birlikte `dev` dalına (branch) bir çekme isteği (pull r
 
 Listelenen videolar, aşağıdakilerden emin olmak için rutin olarak incelenir:
 
-- Listeleme kriterlerini hala karşıladığından
+- Listeleme kriterlerini hâlâ karşıladığından
 - Doğru, güncel bilgiler içerdiğinden
 - Çalışan barındırma/YouTube bağlantılarına sahip olduğundan
 

@@ -130,7 +130,7 @@ title: "..."
 | `how-ethereum-works` | इथेरियम कैसे काम करता है |
 | `network-upgrades` | नेटवर्क अपग्रेड |
 | `roadmap-and-priorities` | रोडमैप और प्राथमिकताएँ |
-| `scaling-and-layer-2` | स्केलिंग और लेयर 2 (l2) |
+| `scaling-and-layer-2` | स्केलिंग और लेयर 2 |
 | `use-cases` | उपयोग के मामले |
 | `privacy` | गोपनीयता |
 | `security` | सुरक्षा |

@@ -128,16 +128,16 @@ Une vidéo peut avoir plusieurs balises pour apparaître dans plusieurs filtres 
 | Balise | Filtre de la galerie |
 |---|---|
 | `how-ethereum-works` | Comment fonctionne Ethereum |
-| `network-upgrades` | Mises à niveau du réseau |
+| `network-upgrades` | Mises à jour du réseau |
 | `roadmap-and-priorities` | Feuille de route et priorités |
-| `scaling-and-layer-2` | Mise à l'échelle et couche 2 (l2) |
+| `scaling-and-layer-2` | Mise à l'échelle et couche 2 |
 | `use-cases` | Cas d'utilisation |
 | `privacy` | Confidentialité |
 | `security` | Sécurité |
 | `community-stories` | Histoires de la communauté |
 | `events` | Événements |
 
-Chaque vidéo doit avoir au moins une balise de cette liste. Les vidéos sans balise reconnue n'apparaîtront que dans la vue « Toutes » et dans les résultats de recherche.
+Chaque vidéo doit avoir au moins une balise de cette liste. Les vidéos sans balise reconnue n'apparaîtront que dans la vue « Tous » et dans les résultats de recherche.
 
 La balise `community-stories` fait également apparaître une vidéo sur la [page des Histoires](/stories/).
 

@@ -127,14 +127,14 @@ Video inaweza kuwa na lebo nyingi ili kuonekana katika vichujio vingi vya matunz
 
 | Lebo | Kichujio cha matunzio |
 |---|---|
-| `how-ethereum-works` | Jinsi Ethereum Inavyofanya Kazi |
-| `network-upgrades` | Maboresho ya Mtandao |
-| `roadmap-and-priorities` | Ramani ya Njia na Vipaumbele |
-| `scaling-and-layer-2` | Kuongeza Uwezo na Tabaka la 2 |
-| `use-cases` | Matukio ya Matumizi |
+| `how-ethereum-works` | Jinsi Ethereum inavyofanya kazi |
+| `network-upgrades` | Maboresho ya mtandao |
+| `roadmap-and-priorities` | Ramani ya njia na vipaumbele |
+| `scaling-and-layer-2` | Kuongeza uwezo na tabaka la 2 |
+| `use-cases` | Mifano ya matumizi |
 | `privacy` | Faragha |
 | `security` | Usalama |
-| `community-stories` | Hadithi za Jamii |
+| `community-stories` | Hadithi za jamii |
 | `events` | Matukio |
 
 Kila video inapaswa kuwa na angalau lebo moja kutoka kwenye orodha hii. Video zisizo na lebo inayotambulika zitaonekana tu katika mwonekano wa "Zote" na matokeo ya utafutaji.
