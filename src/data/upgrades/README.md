@@ -5,6 +5,11 @@ status. One file per upgrade, typed by `types.ts`. **Prose stays in
 `public/content/`** — these files exist so refreshing a date does not require
 editing an explainer. If a value here is wrong, fix it here.
 
+**Rationale belongs in this README, not in comments inside the data files.**
+These files are meant to be machine-writable, and anything that regenerates one
+from a template will silently drop inline comments. Record *why* a value is what
+it is here, where it survives.
+
 ## Sources of truth
 
 [Forkcast](https://forkcast.org) and the upgrade's meta EIP, nothing else. Facts
