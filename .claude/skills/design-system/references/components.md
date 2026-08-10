@@ -492,8 +492,8 @@ Notice/callout primitive. Covers both inline article callouts and the full-bleed
 - `AlertContent` -- wraps the body (flex column, takes remaining width)
 - `AlertTitle` -- bold standard-font-size lead-in line for an alert. Renders `<p>` (not a heading -- changed from `<h6>` to avoid jumping heading levels in flow content); `asChild` available for `Slot`. **Use this whenever an alert needs a bold opening line** -- don't roll your own `<p><strong>...</strong></p>`.
 - `AlertDescription` -- prose container for the alert body. Handles paragraph spacing internally (first `<p>` has `mt-0`, last has `mb-0`, others have `mb-4`). **Wrap body paragraphs in this** -- don't apply your own `mt-`/`mb-` classes to paragraphs inside an Alert.
-- `AlertEmoji` -- emoji glyph aligned to start
-- `AlertIcon` -- Lucide-style SVG slot (inherits variant's text color)
+- `AlertEmoji` -- **deprecated**: emoji glyph aligned to start. Alert glyphs are moving to Lucide icons; use `AlertIcon` for new content
+- `AlertIcon` -- Lucide-style SVG slot (inherits variant's text color). Child SVG is 24px; `size="lg"` (40px) and `size="xl"` (48px) scale it up -- use the variant, not a `[&>svg]:size-*` override
 - `AlertCloseButton` -- dismiss button (`<X />`)
 
 **Anti-pattern**: don't manually compose a bold-lead-in-plus-body shape with inline `<strong>` and margin classes:

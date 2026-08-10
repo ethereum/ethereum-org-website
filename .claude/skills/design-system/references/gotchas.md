@@ -30,7 +30,7 @@ Heroes are named exports of `@/components/Hero`: `PageHero` (the workhorse), `Hu
 
 ### Image imports are camelCase -- but SVG-as-component can't be
 
-Name raster image imports (`.png`/`.webp` used as `src` / `StaticImageData`) in **camelCase** (`heroImage`, `manDogCardImage`). SVGs are the exception: `@svgr/webpack` makes `import X from "foo.svg"` a **React component** rendered `<X />`, and JSX reads a lowercase-initial tag as a DOM element -- so a camelCase SVG import silently renders a bogus `<foo />` instead of the icon. To satisfy the camelCase convention *and* render, either store the (camelCase) import in a **capitalized** field and destructure it (`{ Icon: robustImage }` -> `<Icon />`, e.g. in a data-driven `.map`), or import the URL form (`import robustImage from "foo.svg?url"`) and use `<Image src={robustImage} …>`. Don't reach for `?url` blindly -- it yields a plain URL string, so `<Image>` then needs explicit `width`/`height`.
+Name raster image imports (`.png`/`.webp` used as `src` / `StaticImageData`) in **camelCase** (`heroImage`, `manDogCardImage`). SVGs are the exception: `@svgr/webpack` makes `import X from "foo.svg"` a **React component** rendered `<X />`, and JSX reads a lowercase-initial tag as a DOM element -- so a camelCase SVG import silently renders a bogus `<foo />` instead of the icon. To satisfy the camelCase convention _and_ render, either store the (camelCase) import in a **capitalized** field and destructure it (`{ Icon: robustImage }` -> `<Icon />`, e.g. in a data-driven `.map`), or import the URL form (`import robustImage from "foo.svg?url"`) and use `<Image src={robustImage} …>`. Don't reach for `?url` blindly -- it yields a plain URL string, so `<Image>` then needs explicit `width`/`height`.
 
 ## Component Behaviors You'd Miss
 
@@ -80,7 +80,7 @@ If you're writing `flex items-center gap-X rounded-Y border bg-... p-Z` to make 
 
 ### Using `cva` for new components
 
-The team prefers `tailwind-variants` (`tv`) for new and refactored work. No bulk migration of existing `cva` components -- swap to `tv` opportunistically when you're touching one for another reason. For *new* components, always use `tv`.
+The team prefers `tailwind-variants` (`tv`) for new and refactored work. No bulk migration of existing `cva` components -- swap to `tv` opportunistically when you're touching one for another reason. For _new_ components, always use `tv`.
 
 ## Hidden Side Effects
 
@@ -104,9 +104,21 @@ The legacy `Callout.tsx`/`CalloutSSR.tsx` and `CalloutBanner.tsx`/`CalloutBanner
 
 `@/components/ui/Link.tsx` and `@/components/ui/buttons/Button.tsx` auto-fire Matomo events when `customEventOptions` is omitted (with sensible defaults). Manually wiring `trackCustomEvent` in a new component is usually unnecessary if you're using these primitives.
 
+### A horizontal scroller in the article column pushes the ToC off-screen
+
+`ContentLayout` lays the article and the ToC `<aside>` out as a flex row from `lg` up. The article is a flex item with the default `min-width: auto`, so it can never shrink below its content's **intrinsic minimum** -- and a horizontal scroller (`overflow-x-auto` around a wide tab row or a `min-w-*` table) still reports its full un-scrolled width there. `min-width` on the scroller does **not** help: it lowers a floor, it doesn't cap what the element contributes upward. The article then freezes at `max-w-4xl` and shoves the aside past the viewport edge, giving the whole page a horizontal scrollbar just above `lg`.
+
+**Put `contain-inline-size` on the scroll container** (or a block-level wrapper of it) so it sizes as if it had no inline content. Two live examples: `StakingConsiderations` (wraps a `TabNav`) and the at-a-glance table in `app/[locale]/staking/page.tsx`. Don't apply it to an element that is itself a flex item in a shrink-to-fit context -- containment collapses it to zero width (this is why the fix can't live inside `TabNav`, whose wrapper is a flex item on `/developers/tutorials/`).
+
+### `cn()` can silently drop a custom utility that looks like a Tailwind one
+
+`cn()` runs `tailwind-merge`, which classifies classes by name pattern and keeps only the last of any conflicting pair. A project utility whose name shadows a native pattern gets mis-grouped: `text-h1`-`text-h6` read as **text-color**, so `cn("text-h2", "text-primary")` returned just `text-primary` and the heading silently rendered at its default size (this shipped in the staking option boxes). `bg-tint-*`/`bg-fade-*` had the same problem against `bg-color`.
+
+Both are now taught to `tailwind-merge` in `src/lib/utils/cn.ts` via `extendTailwindMerge`. **Any new utility named like a native one needs a matching `classGroups` entry there** -- and if a class you passed to `cn()` seems to have no effect, check its group before touching the CSS.
+
 ### A `.flow` `<Section>` that is a flex/grid row silently offsets its items
 
-The `.flow` rhythm adds `margin-top` to 2nd+ children of any section it scopes -- and its scope is a *descendant* selector (`.flow section:not([data-flow="skip"])`), so it reaches **nested** sections too. A `<Section>` that is itself a flex/grid container (text+image row, card grid) therefore needs `data-flow="skip"`, or its image/2nd column gets pushed down within the row. Easy to miss on a nested section. See `spacing-typography.md`.
+The `.flow` rhythm adds `margin-top` to 2nd+ children of any section it scopes -- and its scope is a _descendant_ selector (`.flow section:not([data-flow="skip"])`), so it reaches **nested** sections too. A `<Section>` that is itself a flex/grid container (text+image row, card grid) therefore needs `data-flow="skip"`, or its image/2nd column gets pushed down within the row. Easy to miss on a nested section. See `spacing-typography.md`.
 
 ## Tokens That Aren't Real
 
