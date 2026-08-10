@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/zero-knowledge-proofs/index.md",
-  "generatedAt": "2026-06-30T01:02:27.196Z",
-  "rootHash": "0f296667ff6b",
+  "generatedAt": "2026-08-07T06:17:46.390Z",
+  "rootHash": "0d9d6fac7a4e",
   "tree": {
-    "contentHash": "77e122a22906",
-    "anchorHash": "4b85560f1fc8",
+    "contentHash": "84486fcad21d",
+    "anchorHash": "9408bb65c845",
     "children": {
       "frontmatter:title": {
         "contentHash": "b27a6a2ef1a6",
@@ -804,8 +804,8 @@
         ]
       },
       "further-reading": {
-        "contentHash": "a1446963f370",
-        "anchorHash": "25e1371d4d65",
+        "contentHash": "cfc7a10e0268",
+        "anchorHash": "61504e29bfca",
         "labelHash": "4082f515b2f4",
         "children": {
           "_label": {
@@ -887,6 +887,20 @@
           "prose:18": {
             "contentHash": "60adc101dd9a",
             "anchorHash": "e3b0c44298fc"
+          },
+          "component:20": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:21": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "6fc734f89628",
+            "children": {
+              "attr:quizKey": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "7a13e7cfb990"
+              }
+            }
           }
         },
         "childrenOrder": [
@@ -909,7 +923,9 @@
           "link:7",
           "prose:17",
           "link:8",
-          "prose:18"
+          "prose:18",
+          "component:20",
+          "component:21"
         ]
       }
     },
@@ -929,5 +945,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "3c76f545357f4d2d02a6f906d4b647d531be7088"
 }

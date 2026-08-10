@@ -668,3 +668,51 @@ Reviewers: on any virtue-becomes-harm construction ("transparency into exposure"
 - **The plasma retranslations are a net upgrade with consistency debt.** ru replaced non-glossary forms throughout (`офф-чейн`, `ролл-апы`, `обязательства по состоянию`, `вайтпейпер`) and restored 3 missing heading anchors + 1 link; vi has zero glossary deviations across 60 matched terms. Both then split load-bearing vocabulary inside the one fresh file — ru: Mainnet, contract/smart-contract, block producer; vi: funds (3 forms), malicious (2), data unavailability (2), cryptographic proof (2), rollup (3). Full-file retranslation trades old wrong terms for new inconsistent ones; budget review attention accordingly (#33's collateral-drift warning applies to terminology, not just tense).
 - **#41 recurred:** `accounts/index.md` shipped translated content in all 24 locales with `source.json` bumped to 2026-07-30 and `translation.json` still reading 2026-06-18. Record-keeping only, per #41 — the incremental gate never reads `translation.json`.
 - **`kontrat` vs `sözleşme` in tr is not a defect.** The restored heading reads `Kontrat hesapları` while the body says `Sözleşme adresi`; ETHGlossary has both `contract account => kontrat hesabı` (compound) and `contract => Sözleşme` (bare), so the mix is exactly what the glossary prescribes. Do not auto-normalize it — see #30 for the inverse failure.
+
+### 49. A JSX component added to an English page is NEVER propagated to any locale (CRITICAL — pipeline coverage gap)
+
+When a component with no translatable text is appended to an English page, the pipeline does not carry it into any locale. PR #19015: `<QuizWidget quizKey="..." />` (and the `<Divider />` above it, where present) was added to 8 English pages by the quiz-expansion effort and was missing from **all 24 locales on all 8 pages — 192 files**. The quiz *strings* were fully translated in every locale (`learn-quizzes.json`, full key parity for all 8 quizzes), so the only thing missing was the one-line component invocation: every non-English reader silently lost the end-of-page quiz.
+
+The pipeline **can** carry the component — 217 already-translated files elsewhere in the tree contain `<QuizWidget>` — so this is an incremental-propagation gap on newly added components, not a policy.
+
+**Detect deterministically:** per file, diff the count of each `<Component` between English and each locale. A component present in English and absent in 24/24 locales is a coverage gap, never per-language error (the same logic as #29's extraction gap).
+
+**Repair by hand is correct and safe:** the block requires zero translation. Copy the trailing component block verbatim from the English source and append it, preserving the blank-line separation. Verify the referenced `quizKey` has full string coverage in every locale *first* — if the strings are missing, the widget renders broken.
+
+### 50. The angle-bracket autolink corruption of #3 also appears as a MOVED `>`, not only a dropped one (CRITICAL)
+
+Pattern 3's last row covers a *dropped* `>` in `[t](<url_(qual)>)`. PR #19015 produced the sibling form: the `>` was **moved to before the file extension**, giving `[src](<https://…PayPal-(1)>).pdf>)` — a broken href plus a literal `).pdf>)` rendered as visible junk. **All 24 locales, both table rows of `energy-consumption/index.md`, 48 dead links**, and PR-introduced (zero occurrences pre-PR).
+
+**The regex matters.** A naive `\]\(<[^)]*?>\)` finds nothing, because the URL itself contains `)`. Grep for the tell instead: `>\)\.[a-z]+>\)` (or simply `>)\.pdf`). Fix is `s/>\)\.pdf>\)/.pdf>)/`. Add this to the standard deterministic sweep — the MDX compiler does **not** flag it, so it ships silently.
+
+### 51. One English commit can propagate its STRUCTURAL edits and silently drop its PROSE edits (CRITICAL)
+
+#32/#35 frame incremental-merge damage as deleted headings and spliced links. PR #19015 shows a quieter variant: of the 6 changes in English commit `0e42e1a2ee`, **4 landed in all 24 locales and 2 did not** — and the 2 that failed were both single-clause prose edits inside otherwise-updated paragraphs:
+
+| English change | Propagated? |
+|---|---|
+| section retitle, note rewrite, whole EIP-8080→8061 section body, resources link | 24/24 ✅ |
+| `H2 2026` → `Q4 2026` in the alert | 0/24 ❌ |
+| `democratize liquidity` → `speed up how quickly stakers can move their stake` | 0/24 ❌ |
+
+The same run also deleted a whole FAQ section (#32) in 24/24. So a run can be simultaneously right about the hard parts and wrong about the easy ones — **"the big restructure came through" is not evidence the small edits did.**
+
+**Detect deterministically:** enumerate the English commit's changed lines (`git show <sha> -- <path> | grep -E '^[+-][^+-]'`) and assert each one's counterpart changed in every locale. Anchor on a distinctive token from the new English (a date, an EIP number, a renamed noun) — set-based anchor/link diffs pass cleanly here because neither stale clause carried a link or an anchor.
+
+**Repair choice hinges on the line count, not the pattern.** Two stale prose lines × 24 is cheaper and lower-risk to hand-patch from per-locale agent output than a `mode=full` re-run, which would also discard hand-repairs already made to the same file (#34) and invite collateral drift (#33). Reserve `mode=full` for when whole sections are missing or the count runs past a handful of lines per locale.
+
+### 52. Balanced `<strong>` count mismatches in SOV/RTL locales are CORRECT — do not flag (REVIEW HYGIENE)
+
+English bolds a contiguous verb+object (`<strong>Distribute public funds</strong> and benefits…`). In SOV and verb-final languages the verb moves to the end, so the bolded phrase legitimately splits into two discontiguous runs and the locale ships **two** balanced `<strong>` pairs where English has one. PR #19015: 26 such mismatches across bn/hi/ja/ko/ta/tr/ur/zh/zh-tw in `page-what-is-ethereum.json`, every one correct.
+
+**The discriminator is direction, not count:** `translated > english` and balanced = legitimate redistribution; `translated < english` = a genuinely dropped emphasis (one real case in #19015: bn lost the `<strong>` around `DeFi`). Confirm the key renders through `t.rich` — next-intl accepts repeated tags, so the split is safe. Same family as the ar/ko redistributions noted under PR #18739.
+
+### All 24 languages -- glamsterdam + core docs + what-is-ethereum, Reviewed PR #19015 (intl/pending-dev)
+- 24 langs x 11-12 files (8-9 markdown + `common.json` / `learn-quizzes.json` / `page-what-is-ethereum.json`) = 200 markdown + 72 JSON. Pages: `bridges`, `developers/docs/{blocks,evm,transactions}`, `energy-consumption`, `payments`, `roadmap/glamsterdam`, `what-are-apps`, plus `zero-knowledge-proofs` in 8 locales. Fleet avg (pre-fix) **8.4**.
+- Scores: ru 9.6, zh 9.4, bn 9.1, fr/zh-tw 9.0, hi 8.9, pl/pt-br 8.8, id/it/ko 8.7, tr 8.6, mr 8.5, ja/te/uk/vi 8.4, de 8.3, es 7.7, ur 7.5, cs/ta 7.4, ar 7.2, sw 6.2.
+- **The Netlify build was RED on arrival.** Cause: `<p>` collapsed to `<p></p>` in `zero-knowledge-proofs/index.md` in 8 locales (bn hi ko mr ta te tr ur), orphaning the following `</p>` -> `Unexpected closing tag </p>, expected closing tag for <AlertDescription>`. Fixed; 200/200 compile clean and a scoped `NEXT_PUBLIC_BUILD_LOCALES` build passes.
+- **Deterministic sweeps found every structural defect; no agent surfaced any of them first** (#25 again). Five fleet-wide finds: the build-breaker (8 locales), #50 `.pdf` autolink corruption (24 locales, 48 links), #32 deleted FAQ section `{#will-my-smart-contracts-change}` (24 locales), #49 missing `<QuizWidget>` (192 files), and 13 ghost duplicate blocks (7 locales). Agents then supplied the judgment layer *and* the per-locale replacement prose the sweeps could not write.
+- **Resuming a finished per-language agent to request one exact line is the cheapest way to hand-patch a fleet-wide prose defect.** 18 agents were resumed from transcript for the #51 lines; each returned a full grammatical line in seconds with its locale context still loaded, avoiding both a `mode=full` re-run and reviewer-authored prose in 24 languages (#36).
+- **Confirmed clean fleet-wide:** JSON validity 72/72, full key parity, ICU placeholders, rich-text tag sets (modulo #52), zero `HTML-PLACEHOLDER` leaks, no untranslated English prose chunks (vi's historical failure mode absent), no ticker/domain typos, no transliterated domains. One real cross-script contamination: a Bengali word `বিপুল` inside Tamil prose in `ta/zero-knowledge-proofs`.
+- **Recurring per-locale glossary regressions, all fixed against ETHGlossary + the locale's own corpus:** cs `gas`->`plyn` (42 sites across 5 files, while cs `common.json` had it right); sw `client`->`mteja` (customer) instead of `kiteja` (31 sites, worst score of the fleet); the `actor`->film-performer polyseme (#37b) recurring in bn/hi/mr/ur; fr `créneau`->`slot` reversion and bare `L1`/`L2` nav strings; pl `receipt`->`paragon` (till receipt); es untranslated `banks` and `Merge`; it/es `gatekeeper` collapsing onto `intermediario` (#47 recurred); mr `miners`->`खनिज` (mineral); te/ar/mr `zero-knowledge proof` nav labels disagreeing with their own page titles.
+- **The stray `# <Title> {#anchor}` h1 in translated `roadmap/glamsterdam` (24/24) is PRE-EXISTING**, inherited from the h1 -> `frontmatter.title` migration (`d9f62fb787`); English has no h1 and the locales still carry one. It is corpus-wide, not this PR's regression — left alone, still owed a dedicated sweep.

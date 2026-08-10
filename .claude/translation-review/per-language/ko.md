@@ -35,3 +35,9 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 
 - The collateral `갖습니다` -> `가집니다` reword on the 42-character-address sentence is **neutral** — both are standard 합니다체 forms of 가지다.
 - `page-values-cost-inevitable` fixed a real prior error: old `이 모든 것이 불가피한 것은 아닙니다` was a partial negation ("not *all* of this is inevitable"); new `이 중 어느 것도` correctly renders "none of this".
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 8.7/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- `exposure` -> `노출` in `bridges/index.md` (was `투자`/invest, which the next sentence contradicts); ko `learn-quizzes.json` already used 노출 for the identical English. Open: L2/wallet brand names Latin-vs-Hangul split in `page-what-is-ethereum.json`.
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).

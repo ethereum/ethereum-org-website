@@ -238,3 +238,7 @@ _هل تعرف موردًا مجتمعيًا ساعدك؟ قم بتعديل هذ
 - [الحسابات](/developers/docs/accounts/)
 - [آلة إيثيريوم الافتراضية (EVM)](/developers/docs/evm/)
 - [الغاز](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

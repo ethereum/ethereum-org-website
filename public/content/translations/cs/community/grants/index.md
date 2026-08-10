@@ -4,8 +4,6 @@ description: "Seznam grantových programů napříč ekosystémem Etherea."
 lang: cs
 ---
 
-# Granty Etherea {#ethereum-grants}
-
 Níže uvedené programy nabízejí různé finanční granty pro projekty, které pracují na podpoře úspěchu a růstu ekosystému [Etherea](/). Použijte to jako průvodce k nalezení a žádosti o finanční prostředky, které pomohou k úspěchu vašeho dalšího projektu na Ethereu.
 
 Tento seznam spravuje naše komunita. Pokud zde něco chybí nebo je nesprávné, upravte prosím tuto stránku!

@@ -151,3 +151,5 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 - [Transazioni](/developers/docs/transactions/)
 - [Gas](/developers/docs/gas/)
 - [Proof-of-Stake (PoS)](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

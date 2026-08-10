@@ -239,3 +239,7 @@ ZK-STARK gilt als immun gegen die Bedrohung durch Quantencomputing, da es sich f
 - [Warum Zero-Knowledge-Beweise (ZKPs) ein Game Changer für selbstsouveräne Identität sind](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
 - [EIP-7503 erklärt: Ermöglichung privater Transfers auf Ethereum mit ZK-Beweisen](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [ZK-Kartenspiel: Spiel zum Erlernen von ZK-Grundlagen und realen Anwendungsfällen](https://github.com/ZK-card/zk-cards) - _ZK-Cards_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

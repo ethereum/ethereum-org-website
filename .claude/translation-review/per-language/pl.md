@@ -44,3 +44,9 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 
 - **Do not "fix" „sól" for salt.** Polish cryptography standardly uses *sól*, and the definitional framing plus quotes make the term-of-art reading unambiguous.
 - `budowniczowie` for "builders" is house-consistent (31 occurrences in `src/intl/pl`). `wybijasz` for game-mint matches existing NFT usage.
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 8.8/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- `receipt` -> `pokwitowanie` in both `receipts_root` table rows (was `paragon`, a till receipt) -- glamsterdam and learn-quizzes already had it right. Dropped `[aktualizacji London](/ethereum-forks/#london)` restored.
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).

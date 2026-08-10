@@ -238,3 +238,7 @@ _Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie die
 - [Konten](/developers/docs/accounts/)
 - [Ethereum Virtual Machine (EVM)](/developers/docs/evm/)
 - [Gas](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

@@ -1,7 +1,7 @@
 ---
-title: 以太坊的能源消耗
-metaTitle: 以太坊能源消耗
-description: 了解以太坊能源消耗所需的基本信息。
+title: "以太坊的能源消耗"
+metaTitle: "以太坊能源消耗"
+description: "了解以太坊能源消耗所需的基本信息。"
 lang: zh
 ---
 
@@ -83,3 +83,5 @@ Web3 原生公共物品融资平台（如 [Gitcoin](https://gitcoin.co)）开展
 
 - [信标链](/roadmap/beacon-chain)
 - [合并](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />

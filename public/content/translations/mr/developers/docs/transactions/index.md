@@ -238,3 +238,7 @@ _तुम्हाला मदत केलेल्या एखाद्य�
 - [खाती](/developers/docs/accounts/)
 - [इथेरियम व्हर्च्युअल मशीन (EVM)](/developers/docs/evm/)
 - [गॅस](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />
