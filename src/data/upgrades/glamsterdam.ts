@@ -45,6 +45,6 @@ export const glamsterdam = {
     { id: 7708, status: "sfi", headliner: false },
     { id: 7975, status: "sfi", headliner: false },
   ],
-  "facts-verified": "2026-08-06",
+  "facts-verified": "2026-08-10",
   "source-url": "https://forkcast.org/upgrade/glamsterdam",
 } satisfies UpgradeData
