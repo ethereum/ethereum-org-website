@@ -1,6 +1,13 @@
 import type { QuizzesHubSection, QuizzesSection, RawQuizzes } from "@/lib/types"
 
-import { addNextQuiz } from "@/components/Quiz/utils"
+// Lives here rather than in components/Quiz/utils.ts: that module imports this
+// one, so exporting it from there is a cycle -- and one whose TDZ error only
+// surfaces depending on which side a consumer imports first.
+const addNextQuiz = (quizzes: QuizzesSection[]) =>
+  quizzes.map((quiz, idx) => ({
+    ...quiz,
+    next: quizzes[idx + 1]?.id,
+  }))
 
 // Declare hash-map of quizzes based on slug key
 const quizzes = {

@@ -1,8 +1,4 @@
-import type {
-  CompletedQuizzes,
-  QuizShareStats,
-  QuizzesSection,
-} from "@/lib/types"
+import type { CompletedQuizzes, QuizShareStats } from "@/lib/types"
 
 import { numberFormat, numberToPercent } from "@/lib/utils/numbers"
 
@@ -47,36 +43,29 @@ export const shareOnTwitter = ({ score, total }: QuizShareStats): void => {
 // These are averages over large samples; more precision than this is noise.
 const PERCENT_OPTIONS: Intl.NumberFormatOptions = { maximumFractionDigits: 1 }
 
+// Values arrive as 0-100, not 0-1.
+const asPercent = (value: number, locale: string) =>
+  numberToPercent(value / 100, locale, PERCENT_OPTIONS)
+
 const mean = (values: number[]) =>
   values.length > 0 ? values.reduce((a, b) => a + b, 0) / values.length : 0
 
-export const getFormattedStats = (
+export const getFormattedUserAverageScore = (
   locale: string,
-  valueSet: number[],
-  communityStats: QuizStatsData | null
-) => {
-  // Exact, since these come from a daily Matomo fetch: rounding made the old
-  // hard-coded figures read as invented.
-  const numberFormatter = numberFormat(locale, { style: "decimal" })
+  valueSet: number[]
+) => asPercent(mean(valueSet), locale)
 
-  const computedAverage = valueSet.length > 0 ? mean(valueSet) : 0
-  const asPercent = (value: number) =>
-    numberToPercent(value / 100, locale, PERCENT_OPTIONS)
-
-  return {
-    formattedUserAverageScore: asPercent(computedAverage),
-    formattedCollectiveQuestionsAnswered: numberFormatter.format(
-      communityStats?.questionsAnswered ?? 0
-    ),
-    formattedCollectiveAverageScore: asPercent(
-      communityStats?.averageScore ?? 0
-    ),
-    formattedCollectiveRetryRate: asPercent(communityStats?.retryRate ?? 0),
-  }
-}
-
-export const addNextQuiz = (quizzes: QuizzesSection[]) =>
-  quizzes.map((quiz, idx) => ({
-    ...quiz,
-    next: quizzes[idx + 1]?.id,
-  }))
+/** Label/value rows for the community stats panel, in display order. */
+export const getCommunityStatRows = (
+  locale: string,
+  { averageScore, questionsAnswered, retryRate }: QuizStatsData
+) => [
+  { labelId: "average-score", value: asPercent(averageScore, locale) },
+  {
+    labelId: "questions-answered",
+    // Exact, since these come from a daily Matomo fetch: rounding made the old
+    // hard-coded figures read as invented.
+    value: numberFormat(locale, { style: "decimal" }).format(questionsAnswered),
+  },
+  { labelId: "retry", value: asPercent(retryRate, locale) },
+]

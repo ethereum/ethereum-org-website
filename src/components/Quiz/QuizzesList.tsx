@@ -31,15 +31,24 @@ const QuizzesList = ({
   quizHandler,
   modalHandler,
 }: QuizzesListProps) => (
-  // data-flow="skip" so the flow rhythm doesn't add margins between the two
-  // columns; spacing within the header column is set here instead.
-  <Section id={sectionId} variant="responsiveFlex" data-flow="skip">
-    <Stack className="flex-1 gap-2">
+  // data-flow="skip" so the flow rhythm doesn't add margins between columns.
+  // Grid, not the responsiveFlex variant: `flex-basis: 0` is floored by an
+  // item's own padding/border, so this bordered list and the padded callout
+  // below landed on different 1/3 splits. `minmax(0, 1fr)` tracks don't.
+  <Section
+    id={sectionId}
+    className="grid gap-space-2x md:grid-cols-3"
+    data-flow="skip"
+  >
+    {/* Sticks alongside the list once the two columns exist. `self-start` +
+        `h-fit` are required: a stretched grid item fills the row and has no
+        room to travel. `top-24` clears the sticky nav (h-19). */}
+    <Stack className="h-fit gap-2 self-start md:sticky md:top-24">
       <h2>{headingId}</h2>
       <p>{descriptionId}</p>
     </Stack>
 
-    <OrderedList className="ms-0 mb-0 flex-2 list-none overflow-hidden rounded-base border bg-background [counter-reset:list-counter]">
+    <OrderedList className="ms-0 mb-0 list-none overflow-hidden rounded-base border bg-background [counter-reset:list-counter] md:col-span-2">
       {content.map((listItem) => {
         const handleStart = () => {
           quizHandler(listItem.id)
