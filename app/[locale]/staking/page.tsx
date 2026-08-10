@@ -228,7 +228,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       ],
       image: cexImg,
       imageAlt: "",
-      href: "/staking/pools/",
+      // There is no CEX page; the pools page covers custodial products in this section
+      href: "/staking/pools/#opaque-pooled-products",
       buttonLabel: t("page-staking-more-on-cex"),
     },
   ]
