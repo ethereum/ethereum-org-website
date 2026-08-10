@@ -348,7 +348,8 @@ export const useCentralizedExchanges = () => {
     trackCustomEvent({
       eventCategory: `Country input`,
       eventAction: `Selected`,
-      eventName: selectedOption.value,
+      // Locale-stable code; localized names fragment analytics per language
+      eventName: selectedOption.countryCode,
     })
     setSelectedCountry(selectedOption)
   }
