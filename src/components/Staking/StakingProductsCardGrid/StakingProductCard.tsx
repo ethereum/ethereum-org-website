@@ -214,7 +214,7 @@ export const StakingProductCard = async ({
       </CardContent>
       <CardFooter>
         {validSocials.length > 0 && (
-          <div className="flex items-center justify-center">
+          <div className="flex w-full items-center justify-center">
             <CardParagraph className="me-2 text-body-medium">
               {t("page-staking-products-follow")}
             </CardParagraph>
