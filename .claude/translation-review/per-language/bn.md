@@ -28,3 +28,9 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - **Protect from naive auto-fix:** `app-zkpdf-description` renders "legal contracts" as `আইনি চুক্তি`, not the glossary's `কন্ট্রাক্ট`. That is correct — the glossary note reserves `চুক্তি` for traditional legal documents.
 - The `page-values` reword is a net fidelity gain: moving `গোপনীয়তা ছাড়া` ahead of the bolded head noun fixes an English-word-order calque.
 - **Sweep gotcha:** a `[ऀ-ॿ]` Devanagari-leak check fires on every bn string, because Bengali shares the danda `।` U+0964 with the Devanagari block.
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 9.1/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- Two corrupted words that destroyed a negation, both fixed: `প্রয়োজন হবে ঘন` -> `হবে না` (transactions -- view/pure calls need NO gas) and `থাকেবিধা নেই` -> `থাকে না` (payments). `actor` -> `পক্ষ` (was অভিনেতা, film performer). Dropped `<strong>` around DeFi restored.
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).

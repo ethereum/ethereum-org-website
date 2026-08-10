@@ -65,3 +65,9 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 
 - `அச்சிட்டு` for mint matches this file's 7 pre-existing mint strings — internally consistent, so not flagged despite reading closer to "stamp/print".
 - `key` did **not** regress to `திறவுகோல்` this run (the #18935 failure), and "salt" was resolved as the cryptographic term with an English gloss rather than culinary `உப்பு`.
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 7.4/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- Cross-script contamination fixed: a Bengali word `বিপুল` inside Tamil prose in `zero-knowledge-proofs` -> `பெரும்`. Open: `shared key` -> `விசை` where the glossary bare entry is `திறவுகோல்` (3 sites); `trade-offs` -> the swap sense `பரிமாற்றம்` (2 sites); `Twitter` left Latin against the glossary; `exposure` flattened to "obtain".
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
