@@ -129,6 +129,8 @@
   "page-find-wallet-methodology-criterion-ethereum-focused": "Is Ethereum-focused, with Ethereum or a Layer 2 set as the default network.",
   "page-find-wallet-methodology-verification": "Listings are not static. Wallet providers are required to resubmit information every six months. If a team does not respond, we remove the wallet. This keeps the directory accurate as products evolve.",
   "page-find-wallet-methodology-filters": "Filter toggles on this page (open source, self-custody, hardware wallet support, and others) reflect attributes tracked per wallet. Each listing also shows the date its information was last verified.",
+  "page-find-wallet-fee-row-label": "What you pay for",
+  "page-find-wallet-fee-row-tooltip": "Fees the wallet provider charges for its own services, such as swaps or the device itself. Network transaction fees are set by Ethereum, not the wallet.",
   "page-find-wallet-fee-item": "{label}: {value}",
   "page-find-wallet-fee-label-buy": "Buy fee",
   "page-find-wallet-fee-label-buy-sell": "Buy/sell fee",
