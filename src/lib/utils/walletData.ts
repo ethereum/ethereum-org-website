@@ -15,6 +15,7 @@ import { seededShuffle } from "@/lib/utils/random"
 import { capitalize } from "@/lib/utils/string"
 import { slugify } from "@/lib/utils/url"
 import {
+  formatWalletFees,
   getNonSupportedLocaleWallets,
   getSupportedLanguages,
   getSupportedLocaleWallets,
@@ -149,9 +150,16 @@ export type CatalogWalletCard = Pick<
   | "languages_supported"
   | "buy_crypto"
   | "withdraw_crypto"
->
+> & {
+  /** Already formatted, e.g. "Swap fee: 0.3%" — see `toCatalogCard`. */
+  fees?: string
+}
 
-export const toCatalogCard = (wallet: CatalogWallet): CatalogWalletCard => ({
+export const toCatalogCard = (
+  wallet: CatalogWallet,
+  // Fees are formatted here so the ~20 fee intl keys never reach the client.
+  intl: { t: WalletTranslator; locale: string }
+): CatalogWalletCard => ({
   slug: wallet.slug,
   name: wallet.name,
   image: wallet.image,
@@ -166,6 +174,9 @@ export const toCatalogCard = (wallet: CatalogWallet): CatalogWalletCard => ({
   // Omit the key rather than serialize a null.
   ...(wallet.descriptionStripped && {
     descriptionStripped: wallet.descriptionStripped,
+  }),
+  ...(wallet.fees?.length && {
+    fees: formatWalletFees(wallet.fees, intl.locale, intl.t),
   }),
 })
 

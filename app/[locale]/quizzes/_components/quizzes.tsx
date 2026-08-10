@@ -18,7 +18,11 @@ import { Flex, HStack, Stack } from "@/components/ui/flex"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "@/data/quizzes"
+import {
+  ethereumBasicsQuizzes,
+  howEthereumWorksQuizzes,
+  usingEthereumQuizzes,
+} from "@/data/quizzes"
 
 import { INITIAL_QUIZ } from "@/lib/constants"
 
@@ -85,6 +89,12 @@ const QuizzesPage = () => {
                   content={usingEthereumQuizzes}
                   headingId={t("using-ethereum")}
                   descriptionId={t("using-ethereum-description")}
+                  {...commonQuizListProps}
+                />
+                <QuizzesList
+                  content={howEthereumWorksQuizzes}
+                  headingId={t("how-ethereum-works")}
+                  descriptionId={t("how-ethereum-works-description")}
                   {...commonQuizListProps}
                 />
               </div>

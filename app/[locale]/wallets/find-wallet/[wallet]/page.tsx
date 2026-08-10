@@ -23,6 +23,7 @@ import {
   getWalletBySlug,
   toCatalogCard,
 } from "@/lib/utils/walletData"
+import { formatWalletFees } from "@/lib/utils/wallets"
 
 import { buildDeviceLabels, getDeviceLabels } from "@/data/wallets/devices"
 import {
@@ -136,6 +137,12 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
                       {wallet.supportedLanguages.join(", ")}
                     </p>
                   )}
+
+                  {wallet.fees?.length ? (
+                    <p className="text-sm text-body-medium">
+                      {formatWalletFees(wallet.fees, locale, t)}
+                    </p>
+                  ) : null}
                 </div>
 
                 <div className="flex flex-wrap gap-2">
@@ -220,7 +227,7 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
                   {relatedWallets.map((related) => (
                     <WalletCard
                       key={related.slug}
-                      wallet={toCatalogCard(related)}
+                      wallet={toCatalogCard(related, { t, locale })}
                       deviceLabels={deviceLabelMap}
                       personaLabels={personaLabels}
                     />

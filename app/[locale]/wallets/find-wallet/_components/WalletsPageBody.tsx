@@ -125,7 +125,9 @@ const WalletsPageBody = async ({
           key={currentPersonaId ?? "all"}
           locale={locale}
           // Slim projection: only what the island reads crosses to the client.
-          wallets={wallets.map(toCatalogCard)}
+          wallets={wallets.map((wallet) =>
+            toCatalogCard(wallet, { t, locale })
+          )}
           networks={networks}
           languages={languages}
           advancedFilters={advancedFilters}

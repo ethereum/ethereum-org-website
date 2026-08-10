@@ -16,6 +16,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import InlineLink from "@/components/ui/Link"
 
 import { getWalletBySlug } from "@/lib/utils/walletData"
+import { formatWalletFees } from "@/lib/utils/wallets"
 
 import { buildDeviceLabels, getDeviceLabels } from "@/data/wallets/devices"
 import { CROPS_PROPERTIES } from "@/data/wallets/features"
@@ -130,6 +131,17 @@ export default async function InterceptedWalletModal(props: {
               </span>
             </DetailRow>
           )}
+
+          {wallet.fees?.length ? (
+            <DetailRow
+              label={t("page-find-wallet-fee-row-label")}
+              tooltip={t("page-find-wallet-fee-row-tooltip")}
+            >
+              <span className="font-bold text-body">
+                {formatWalletFees(wallet.fees, locale, t)}
+              </span>
+            </DetailRow>
+          ) : null}
 
           {CROPS_PROPERTIES.map((feature) => {
             const supported = Boolean(wallet[feature.key])
