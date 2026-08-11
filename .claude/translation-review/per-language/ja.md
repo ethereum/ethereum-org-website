@@ -50,3 +50,9 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 
 - `ciphernodes` -> `サイファーノード` is permitted by the CJK-phonetic group rule.
 - Minor interpunct variance in non-glossary compounds (`ステルス・アドレス` vs `メッセージングアプリ`) is normal Japanese, not an error.
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 8.4/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- No fixes applied. Open and well-evidenced: ETHGlossary-covered brands left in Latin in `learn-quizzes.json`/`page-what-is-ethereum.json` (Optimism, Arbitrum, Facebook, Twitter, Aave, MakerDAO, Geth) while the SAME files transliterate フェイスブック/ツイッター/ユニスワップ correctly elsewhere -- mechanical, but wants a native pass.
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).

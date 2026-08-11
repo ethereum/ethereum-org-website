@@ -1,7 +1,7 @@
 ---
-title: 블록체인 브릿지
-metaTitle: 블록체인 브릿지 소개
-description: 브릿지를 통해 사용자는 서로 다른 블록체인 간에 자금을 이동할 수 있습니다.
+title: "블록체인 브릿지"
+metaTitle: "블록체인 브릿지 소개"
+description: "브릿지를 통해 사용자는 서로 다른 블록체인 간에 자금을 이동할 수 있습니다."
 lang: ko
 ---
 
@@ -56,7 +56,7 @@ _Web3는 고유한 기능과 장단점을 갖춘 레이어 1 (l1) 블록체인 �
 
 ### 네이티브 암호화폐 자산 소유 {#own-native}
 
-네이티브 비트코인(BTC)을 소유하고 싶지만 이더리움 메인넷에만 자금이 있다고 가정해 보겠습니다. 이더리움에서 BTC에 투자하려면 WBTC(Wrapped Bitcoin)를 구매할 수 있습니다. 그러나 WBTC는 이더리움 네트워크의 네이티브 [ERC-20](/glossary/#erc-20) 토큰으로, 비트코인 블록체인의 원본 자산이 아니라 이더리움 버전의 비트코인임을 의미합니다. 네이티브 BTC를 소유하려면 브릿지를 사용하여 이더리움에서 비트코인으로 자산을 브릿징해야 합니다. 이렇게 하면 WBTC가 브릿징되어 네이티브 BTC로 변환됩니다. 반대로, BTC를 소유하고 있고 이를 이더리움 [탈중앙화 금융 (DeFi)](/glossary/#defi) 프로토콜에서 사용하고 싶을 수도 있습니다. 이 경우에는 반대 방향으로 브릿징하여 BTC를 WBTC로 변환한 다음 이더리움에서 자산으로 사용해야 합니다.
+네이티브 비트코인(BTC)을 소유하고 싶지만 이더리움 메인넷에만 자금이 있다고 가정해 보겠습니다. 이더리움에서 BTC에 대한 노출을 얻으려면 WBTC(Wrapped Bitcoin)를 구매할 수 있습니다. 그러나 WBTC는 이더리움 네트워크의 네이티브 [ERC-20](/glossary/#erc-20) 토큰으로, 비트코인 블록체인의 원본 자산이 아니라 이더리움 버전의 비트코인임을 의미합니다. 네이티브 BTC를 소유하려면 브릿지를 사용하여 이더리움에서 비트코인으로 자산을 브릿징해야 합니다. 이렇게 하면 WBTC가 브릿징되어 네이티브 BTC로 변환됩니다. 반대로, BTC를 소유하고 있고 이를 이더리움 [탈중앙화 금융 (DeFi)](/glossary/#defi) 프로토콜에서 사용하고 싶을 수도 있습니다. 이 경우에는 반대 방향으로 브릿징하여 BTC를 WBTC로 변환한 다음 이더리움에서 자산으로 사용해야 합니다.
 
 <Alert variant="update">
 <AlertEmoji text=":bulb:"/>
@@ -135,8 +135,11 @@ _Web3는 고유한 기능과 장단점을 갖춘 레이어 1 (l1) 블록체인 �
 <Divider />
 
 ## 더 읽어보기 {#further-reading}
+
 - [EIP-5164: 크로스체인 실행](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _2022년 6월 18일 - 브렌던 아셀스틴(Brendan Asselstine)_
 - [L2Bridge 위험 프레임워크](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _2022년 7월 5일 - 바르텍 키에푸셰프스키(Bartek Kiepuszewski)_
 - ["미래가 멀티체인이 될 것이지만 크로스체인은 아닐 이유"](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _2022년 1월 8일 - 비탈릭 부테린(Vitalik Buterin)_
 - [안전한 크로스체인 상호운용성을 위한 공유 보안 활용: 라그랑주 상태 위원회 및 그 너머](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _2024년 6월 12일 - 에마뉘엘 아워시카(Emmanuel Awosika)_
 - [롤업 상호운용성 솔루션의 상태](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _2024년 6월 20일 - 알렉스 훅(Alex Hook)_
+
+<QuizWidget quizKey="bridges" />

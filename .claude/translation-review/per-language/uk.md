@@ -40,3 +40,9 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 
 - uk is the only locale that got #47 right, rendering gatekeeper as `контролер` consistently with its own `page-values-faq-3-p1`.
 - Terminology was verified against corpus frequency rather than intuition: `ончейн` (120 vs 21), `будівельник` (~75), `рівня 2 (l2)` lowercase (66 vs 11), `карбувати` for mint (14), `доведення з нульовим розголошенням` (124+).
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 8.4/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- Heading fix: `## Стійкість мережі {#network-resilience}` -> `## Опірність мережі`, which had collapsed onto the identical rendering of `{#network-sustainability}` and produced duplicate-looking TOC entries. Its agent correctly cleared the PBS compound-vs-bare split as glossary-prescribed (#30).
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).

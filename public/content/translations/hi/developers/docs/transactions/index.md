@@ -238,3 +238,7 @@ _क्या आप किसी ऐसे सामुदायिक सं�
 - [खाते](/developers/docs/accounts/)
 - [इथेरियम वर्चुअल मशीन (EVM)](/developers/docs/evm/)
 - [गैस](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

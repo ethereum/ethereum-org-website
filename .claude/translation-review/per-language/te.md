@@ -38,3 +38,9 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 
 - `లేయర్ 2 (l2)` with lowercase l2 is a pre-existing locale-wide pattern (94 occurrences), also in bn/ta/mr — not a new defect.
 - Every flagged polysemy trap ("mint", "mixing", "state", "key", "compliance", "governance") resolved to the rendering te already uses elsewhere in the locale.
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 8.4/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- `Geth` -> `గెత్` in `transactions` (the only Latin instance in the whole te tree). `common.json` zero-knowledge-proofs `రుజువులు` -> `నిరూపణలు`, matching the glossary, the page title and the zkp quiz keys. **Its worst historical failure mode -- reported-speech negation flipping via `-మని` -- did NOT recur** despite targeted stress-testing.
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).

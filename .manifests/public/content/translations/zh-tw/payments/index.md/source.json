@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/payments/index.md",
-  "generatedAt": "2026-06-18T00:37:36.822Z",
-  "rootHash": "b1f0765ced73",
+  "generatedAt": "2026-08-07T06:11:36.313Z",
+  "rootHash": "b25ff8f9dd8f",
   "tree": {
-    "contentHash": "df186b638de6",
-    "anchorHash": "a8d6f9cd5ad7",
+    "contentHash": "a2d2218f0ed9",
+    "anchorHash": "b7bab7905109",
     "children": {
       "frontmatter:title": {
         "contentHash": "e731b2c33eaf",
@@ -606,8 +606,8 @@
         ]
       },
       "ethereum-vs-fiat": {
-        "contentHash": "7bab72d05ddc",
-        "anchorHash": "86f975fb3732",
+        "contentHash": "d3046e749313",
+        "anchorHash": "06eb81a77c81",
         "labelHash": "8fa8447b3b57",
         "children": {
           "_label": {
@@ -676,8 +676,8 @@
             ]
           },
           "transparency": {
-            "contentHash": "ff01134294dd",
-            "anchorHash": "8a9371acde63",
+            "contentHash": "9878b5e9e390",
+            "anchorHash": "30a5d8e92603",
             "labelHash": "8b773803e66e",
             "children": {
               "_label": {
@@ -767,6 +767,20 @@
                   "component:0",
                   "component:1"
                 ]
+              },
+              "component:5": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:6": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "5adb08677d65",
+                "children": {
+                  "attr:quizKey": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "df384ae97c77"
+                  }
+                }
               }
             },
             "childrenOrder": [
@@ -774,7 +788,9 @@
               "prose:0",
               "component:2",
               "prose:0",
-              "component:4"
+              "component:4",
+              "component:5",
+              "component:6"
             ]
           }
         },
@@ -810,5 +826,5 @@
       "ethereum-vs-fiat"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "3c76f545357f4d2d02a6f906d4b647d531be7088"
 }

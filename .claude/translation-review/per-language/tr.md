@@ -63,3 +63,9 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 
 - **The `kontrat` vs `sözleşme` mix is glossary-prescribed, not a defect.** ETHGlossary has both `contract account => kontrat hesabı` (compound) and `contract => Sözleşme` (bare), so the restored heading `Kontrat hesapları` alongside body `Sözleşme adresi` is correct. Do not auto-normalize — see #30 for the inverse failure.
 - `hash'inden` matches the corpus apostrophe convention (80x `hash'i`). The `page-values` rewrites are genuine improvements, including separating inspect=`incelemek` from audit=`denetlemek`.
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 8.6/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- `stablecoin` had three competing forms in one PR; `common.json`'s spaced `Sabit coin'ler` -> fused `Sabitcoin'ler` (locale convention, ~130 occurrences elsewhere). Open: the stale form `sabit para` still in 6 sites of `payments/index.md`. **None of the historical tr failure modes recurred** -- no katillik, MeFi, Markette, Müşteriler, no PoS/PoW inversion.
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).

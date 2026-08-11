@@ -5,12 +5,10 @@ lang: pt-br
 template: upgrade
 ---
 
-# Glamsterdam {#glamsterdam}
-
 <Alert variant="update">
 <AlertContent>
 <AlertTitle>
-Glamsterdam é uma futura atualização do Ethereum planejada para o segundo semestre de 2026
+Glamsterdam é uma futura atualização do Ethereum planejada para o quarto trimestre de 2026
 </AlertTitle>
 <AlertDescription>
 A atualização Glamsterdam é apenas um único passo nos objetivos de desenvolvimento de longo prazo do Ethereum. Saiba mais sobre [o roteiro do protocolo](/roadmap/) e [atualizações anteriores](/ethereum-forks/).
@@ -33,9 +31,9 @@ Essas melhorias garantem que o Ethereum permaneça rápido, acessível e descent
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Nota: Este artigo destaca atualmente uma seleção de EIPs sendo consideradas para inclusão na Glamsterdam. Propostas adicionais sendo ativamente testadas em redes de desenvolvimento (devnets) incluem EIP-7778, EIP-7843, EIP-7976, EIP-7981 e EIP-8024. Para as atualizações de status mais recentes, veja a [atualização Glamsterdam no Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Nota: Este artigo destaca uma seleção de EIPs programadas para inclusão na Glamsterdam. Propostas adicionais programadas que estão sendo testadas em devnets incluem EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 e EIP-8282. Para as atualizações de status mais recentes, veja a [atualização Glamsterdam no Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
-Se você quiser adicionar uma EIP que está sob consideração para a Glamsterdam, mas ainda não foi adicionada a esta página, [aprenda como contribuir para o ethereum.org aqui](/contributing/).
+Se você quiser adicionar uma EIP que está sob consideração para a Glamsterdam, mas ainda não foi adicionada a esta página, [saiba como contribuir para o ethereum.org aqui](/contributing/).
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -48,8 +46,6 @@ A atualização Glamsterdam concentra-se em três objetivos principais:
 
 Em suma, a Glamsterdam introduzirá mudanças estruturais para garantir que, à medida que a rede aumenta a capacidade, ela permaneça sustentável e o desempenho continue alto.
 
-
-A escalabilidade significativa da camada 1 (l1) exige o afastamento de premissas de confiança fora do protocolo e de restrições de execução em série. A Glamsterdam aborda isso consagrando a separação de certas funções de construção de blocos e introduzindo novas estruturas de dados que permitem que a rede se prepare para o processamento paralelo.
 ## Escalar a L1 e processamento paralelo {#scale-l1}
 
 O dimensionamento significativo da camada 1 (l1) exige o afastamento de premissas de confiança fora do protocolo e restrições de execução em série. A Glamsterdam aborda isso consagrando a separação de certas funções de construção de blocos e introduzindo novas estruturas de dados que permitem que a rede se prepare para o processamento paralelo.
@@ -104,8 +100,6 @@ A Troca de Lista de Acesso de Bloco (eth/71 ou EIP-8159) é a companheira de red
 - [Especificação técnica da EIP-7928](https://eips.ethereum.org/EIPS/eip-7928)
 - [Especificação técnica da EIP-8159](https://eips.ethereum.org/EIPS/eip-8159)
 
-
-À medida que a rede Ethereum cresce mais rápido, é importante garantir que o custo de usá-la corresponda ao desgaste do hardware que executa o Ethereum. A rede precisa aumentar seus limites gerais de capacidade para escalar com segurança e processar mais transações.
 ## Sustentabilidade da rede {#network-sustainability}
 
 À medida que a rede Ethereum cresce mais rápido, é importante garantir que o custo de usá-la corresponda ao desgaste do hardware que executa o Ethereum. A rede precisa aumentar seus limites de capacidade geral para escalar com segurança e processar mais transações.
@@ -149,11 +143,9 @@ Ao precificar as ações de acesso ao estado com mais precisão, o Ethereum pode
 
 **Recursos**: [Especificação técnica da EIP-8038](https://eips.ethereum.org/EIPS/eip-8038)
 
-
-Refinamentos nas funções dos validadores e nos processos de saída garantem a estabilidade da rede durante eventos de penalização em massa e democratizam a liquidez. Essas melhorias tornam a rede mais estável e garantem que todos os participantes, grandes e pequenos, sejam tratados de forma justa.
 ## Resiliência da rede {#network-resilience}
 
-Refinamentos nas funções dos validadores e nos processos de saída garantem a estabilidade da rede durante eventos de penalização em massa (slashing) e democratizam a liquidez. Essas melhorias tornam a rede mais estável e garantem que todos os participantes, grandes e pequenos, sejam tratados de forma justa.
+Refinamentos nas funções dos validadores e nos processos de saída garantem a estabilidade da rede durante eventos de penalização em massa (slashing) e aceleram a rapidez com que os stakers podem movimentar seu stake. Essas melhorias tornam a rede mais estável e garantem que todos os participantes, grandes e pequenos, sejam tratados de forma justa.
 
 ### Excluir validadores penalizados de propor {#exclude-slashed-validators}
 
@@ -168,30 +160,26 @@ Como os blocos de proponentes penalizados são automaticamente rejeitados como i
 
 **Recursos**: [Especificação técnica da EIP-8045](https://eips.ethereum.org/EIPS/eip-8045)
 
-### Permitir que as saídas usem a fila de consolidação {#let-exits-use-the-consolidation-queue}
+### Permitir que as saídas usem a fila de consolidação {#increase-exit-and-consolidation-churn}
 
-- Fecha uma brecha que permite que validadores de alto saldo saiam da rede mais rapidamente do que validadores menores por meio da fila de consolidação
-- Permite que saídas regulares transbordem (overflow) para esta segunda fila quando ela tem capacidade ociosa, reduzindo os tempos de saque de staking durante períodos de alto volume
-- Mantém segurança estrita para evitar alterar os limites de segurança principais do Ethereum ou enfraquecer a rede
+- Reduz significativamente os tempos de saque de staking, permitindo que a capacidade de saída escale com a quantidade total de ETH em stake, em vez de ser limitada a uma taxa fixa
+- Dá às consolidações de validadores sua própria capacidade de fila dedicada, acelerando a transição para validadores maiores e mais eficientes
+- Mantém a segurança da rede por meio de parâmetros de segurança cuidadosamente analisados
 
-Desde que a [atualização Pectra](/roadmap/pectra) aumentou o saldo efetivo máximo para validadores do Ethereum de 32 ETH para 2.048 ETH, uma brecha técnica permite que validadores de alto saldo saiam da rede mais rápido do que validadores menores por meio da fila de consolidação.
+O limite de rotatividade do Ethereum é um limite de segurança na taxa em que os validadores podem entrar, sair ou fundir (consolidar) seu ETH em stake, para garantir que a segurança da rede nunca seja desestabilizada. Hoje, saídas e ativações compartilham um único limite máximo, portanto, durante períodos de alta demanda, os stakers podem enfrentar longas esperas para sacar seu ETH. As consolidações, onde os validadores se fundem em validadores maiores com até 2.048 ETH (habilitado pela [atualização Pectra](/roadmap/pectra)), também competem por essa capacidade limitada, o que significa que consolidar todo o conjunto de validadores levaria anos na taxa atual.
 
-**Permitir que as saídas usem a fila de consolidação (ou EIP-8080)** democratiza a fila de consolidação para todas as saídas de staking, criando uma fila única e justa para todos.
+**Aumentar o limite de rotatividade de saída e consolidação (ou EIP-8061)** reorganiza esses limites em faixas separadas:
 
-Para detalhar como isso funciona hoje:
+- As ativações de validadores mantêm seu limite máximo existente, inalterado
+- As saídas não são mais limitadas e, em vez disso, escalam com a quantidade total de ETH em stake
+- As consolidações ganham sua própria capacidade dedicada, com cerca de metade do tamanho do limite combinado de ativação-saída
 
-- O limite de rotatividade do Ethereum é um limite de segurança na taxa em que os validadores podem entrar, sair ou mesclar (consolidar) seu ETH em stake, para garantir que a segurança da rede nunca seja desestabilizada
-- Como a consolidação de um validador é uma ação mais pesada com mais partes móveis do que uma saída padrão de validador, ela consome uma porção maior desse orçamento de segurança (limite de rotatividade)
-- Especificamente, o protocolo dita que o custo exato de segurança de uma saída padrão é de dois terços (2/3) do custo de uma consolidação
+Nos níveis atuais de staking, isso aumenta a capacidade de saída em cerca de 4x e a capacidade de consolidação em cerca de 2x, o que significa que os stakers podem sacar seu ETH muito mais rápido durante períodos de alta demanda e a rede transita mais rapidamente para um conjunto de validadores menor e mais eficiente.
 
-Filas de saída mais justas permitirão que saídas padrão peguem emprestado espaço não utilizado da fila de consolidação durante períodos de alta demanda de saída, aplicando uma taxa de câmbio de "3 por 2" (para cada 2 vagas de consolidação não utilizadas, a rede pode processar com segurança 3 saídas padrão). Esse fator de rotatividade de 3/2 equilibra a demanda entre as filas de consolidação e de saída.
+Como o stake pode entrar e sair da rede mais rapidamente, a mudança reduz pela metade o tempo que um nó pode permanecer offline antes de precisar de um ponto de verificação confiável recente para retornar com segurança à rede (o período de subjetividade fraca, de cerca de 15,7 dias para cerca de 7 dias). Essa compensação foi cuidadosamente analisada para garantir que a segurança da rede seja mantida.
 
-Democratizar o acesso à fila de consolidação aumentará a velocidade com que os usuários podem sair de seu stake durante períodos de alta demanda em até 2,5x, sem comprometer a segurança da rede.
+**Recursos**: [Especificação técnica da EIP-8061](https://eips.ethereum.org/EIPS/eip-8061)
 
-**Recursos**: [Especificação técnica da EIP-8080](https://eips.ethereum.org/EIPS/eip-8080)
-
-
-A atualização Glamsterdam do Ethereum visa melhorar a experiência do usuário, aprimorar a descoberta de dados e lidar com o aumento do tamanho das mensagens para evitar falhas de sincronização. Isso torna mais fácil rastrear o que está acontecendo onchain, ao mesmo tempo em que evita problemas técnicos à medida que a rede escala.
 ## Melhorar a experiência do usuário e do desenvolvedor {#improve-user-developer-experience}
 
 A atualização Glamsterdam do Ethereum visa melhorar a experiência do usuário, aprimorar a descoberta de dados e lidar com o aumento do tamanho das mensagens para evitar falhas de sincronização. Isso torna mais fácil rastrear o que está acontecendo onchain, ao mesmo tempo em que evita problemas técnicos à medida que a rede escala.
@@ -250,12 +238,6 @@ Essa mudança evitaria falhas de sincronização da rede durante períodos de at
 
 **Recursos**: [Especificação técnica da EIP-7975](https://eips.ethereum.org/EIPS/eip-7975)
 
-
-- [Roteiro do Ethereum](/roadmap/)
-- [Forkcast: Glamsterdam](https://forkcast.org/upgrade/glamsterdam)
-- [Meta EIP da Glamsterdam](https://eips.ethereum.org/EIPS/eip-7773)
-- [Anúncio no blog sobre a Atualização de Prioridades do Protocolo para 2026](https://blog.ethereum.org/2026/02/18/protocol-priorities-update-2026)
-- [Podcast The Daily Gwei Refuel - Ethereum pós-quântico, a Glamsterdam está chegando](https://www.youtube.com/watch?v=qx9sd50uQjQ)
 ## Leitura adicional {#further-reading}
 
 - [Roteiro do Ethereum](/roadmap/)
@@ -300,7 +282,7 @@ Sim, a Glamsterdam muito provavelmente reduzirá as taxas para usuários comuns!
 
 Além disso, para sustentabilidade a longo prazo, a Glamsterdam introduz Listas de Acesso em Nível de Bloco (BALs). Isso permite o processamento paralelo e prepara a L1 para lidar com segurança com limites de gas gerais mais altos no futuro, o que provavelmente reduzirá os custos de gas por transação à medida que a capacidade cresce.
 
-### Haverá alguma alteração nos meus contratos inteligentes existentes após a Glamsterdam?
+### Haverá alguma alteração nos meus contratos inteligentes existentes após a Glamsterdam? {#will-my-smart-contracts-change}
 
 Os contratos existentes continuarão a funcionar normalmente após a Glamsterdam. Os desenvolvedores provavelmente obterão várias ferramentas novas e devem revisar seu uso de gas:
 
@@ -308,6 +290,7 @@ Os contratos existentes continuarão a funcionar normalmente após a Glamsterdam
 - A Pré-implantação de Fábrica Determinística (ou EIP-7997) introduz um contrato de fábrica universal e integrado. Ela permite que os desenvolvedores implantem seus aplicativos e carteiras de contratos inteligentes exatamente no mesmo endereço em todas as cadeias EVM participantes.
 - Se o seu aplicativo depende de rastreamento complexo para encontrar transferências de ETH, Transferências e queimas de ETH emitem um log (ou EIP-7708) permitirá que você mude para o uso de logs para uma contabilidade mais simples e confiável.
 - O Aumento do custo de gas para criação de estado (ou EIP-8037) e a Atualização do custo de gas para acesso ao estado (ou EIP-8038) introduzem novos modelos de sustentabilidade que alterarão certos custos de implantação de contratos, pois a criação de novas contas ou armazenamento permanente terá uma nova taxa fixa padronizada com base no tamanho dos dados criados.
+
 ### Como a Glamsterdam afetará o armazenamento do nó e os requisitos de hardware? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 
 Várias EIPs sob consideração para a Glamsterdam abordam o declínio acentuado de desempenho do crescimento do estado:

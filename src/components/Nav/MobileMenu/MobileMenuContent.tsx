@@ -18,6 +18,7 @@ import {
 import { SheetFooter, SheetHeader } from "@/components/ui/sheet"
 
 import { cn } from "@/lib/utils/cn"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import { slugify } from "@/lib/utils/url"
 
@@ -101,6 +102,13 @@ function NavigationContent({ className }: { className?: string }) {
   const locale = useLocale()
   const { linkSections } = useNavigation()
 
+  const trackSectionToggle = (key: string, open: boolean) =>
+    trackCustomEvent({
+      eventCategory: "Mobile navigation menu",
+      eventAction: "Section changed",
+      eventName: `${open ? "Open" : "Close"} section: ${locale} - ${key}`,
+    })
+
   return (
     <nav className={cn("p-0", className)}>
       {SECTION_LABELS.map((key) => {
@@ -110,6 +118,7 @@ function NavigationContent({ className }: { className?: string }) {
           <Collapsible
             key={key}
             className="border-b border-body-light first:border-t"
+            onOpenChange={(open) => trackSectionToggle(key, open)}
           >
             <CollapsibleTrigger
               data-testid={`mobile-menu-collapsible-${slugify(label)}`}
