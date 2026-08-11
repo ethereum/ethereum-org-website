@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-wallets-find-wallet.json",
-  "generatedAt": "2026-07-22T22:43:29.467Z",
-  "rootHash": "018973f876fd",
+  "generatedAt": "2026-08-11T04:48:40.140Z",
+  "rootHash": "99180c039b7f",
   "tree": {
-    "contentHash": "2611346e4e4f",
-    "anchorHash": "e3345c01e36b",
+    "contentHash": "9cc1fe8c3504",
+    "anchorHash": "f0746169cb5c",
     "children": {
       "page-find-wallet-clear": {
         "contentHash": "7179ea0035fc",
@@ -489,6 +489,266 @@
       "page-find-wallet-methodology-filters": {
         "contentHash": "026c25265b8d",
         "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-fee-item": {
+        "contentHash": "cd5404b48263",
+        "anchorHash": "cbf976913181",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "1f0b60b0b03a"
+          },
+          "prose:2": {
+            "contentHash": "e7ac0786668e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "db9a5a9b5a4c"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:2",
+          "icu:1"
+        ]
+      },
+      "page-find-wallet-fee-label-buy": {
+        "contentHash": "8e7f2629819b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-fee-label-buy-sell": {
+        "contentHash": "d59bf32703be",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-fee-label-device": {
+        "contentHash": "6ba0bdeccb42",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-fee-label-shield-unshield": {
+        "contentHash": "b7b810fdda23",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-fee-label-staking": {
+        "contentHash": "c650bab0bf82",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-fee-label-swap": {
+        "contentHash": "52195e8616df",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-fee-label-swap-bridge": {
+        "contentHash": "89f3a890f4c6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-fee-free-tier-plans": {
+        "contentHash": "f9fbcbd3cc53",
+        "anchorHash": "152f80ef0583",
+        "children": {
+          "prose:1": {
+            "contentHash": "57349b5ff8ba",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "db9a5a9b5a4c"
+          },
+          "prose:2": {
+            "contentHash": "eec5d08bc9b2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0",
+          "prose:2"
+        ]
+      },
+      "page-find-wallet-fee-qualifier-free-under-fox-discounts": {
+        "contentHash": "a64ac1944404",
+        "anchorHash": "6abb77c73414",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "db9a5a9b5a4c"
+          },
+          "prose:2": {
+            "contentHash": "798ff8bdb957",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "ecec759e1b36"
+          },
+          "prose:3": {
+            "contentHash": "3ba5edd8000e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:2",
+          "icu:1",
+          "prose:3"
+        ]
+      },
+      "page-find-wallet-fee-qualifier-lower-with-premium": {
+        "contentHash": "5515d60fdc77",
+        "anchorHash": "c1998519ea77",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "db9a5a9b5a4c"
+          },
+          "prose:1": {
+            "contentHash": "b16c1871a8a6",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:1"
+        ]
+      },
+      "page-find-wallet-fee-qualifier-of-rewards": {
+        "contentHash": "93c675aba0b7",
+        "anchorHash": "c1998519ea77",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "db9a5a9b5a4c"
+          },
+          "prose:1": {
+            "contentHash": "cd6300dedd1c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:1"
+        ]
+      },
+      "page-find-wallet-fee-qualifier-per-card": {
+        "contentHash": "5f377e2d3e2a",
+        "anchorHash": "c1998519ea77",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "db9a5a9b5a4c"
+          },
+          "prose:1": {
+            "contentHash": "6a9f6d959b59",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:1"
+        ]
+      },
+      "page-find-wallet-fee-qualifier-stablecoins": {
+        "contentHash": "24c30b6aa439",
+        "anchorHash": "a09cf8dcb6b9",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "db9a5a9b5a4c"
+          },
+          "prose:2": {
+            "contentHash": "32ebb1abcc1c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "67a4f2cc0484"
+          },
+          "prose:3": {
+            "contentHash": "2bd86f7d14d9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:2",
+          "icu:1",
+          "prose:3"
+        ]
+      },
+      "page-find-wallet-fee-qualifier-stablecoins-lower-l2": {
+        "contentHash": "09247dbc7c33",
+        "anchorHash": "a09cf8dcb6b9",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "db9a5a9b5a4c"
+          },
+          "prose:2": {
+            "contentHash": "32ebb1abcc1c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "67a4f2cc0484"
+          },
+          "prose:3": {
+            "contentHash": "5650a300b60c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:2",
+          "icu:1",
+          "prose:3"
+        ]
+      },
+      "page-find-wallet-fee-qualifier-tpt-holder-discounts": {
+        "contentHash": "444ae686ac6d",
+        "anchorHash": "c1998519ea77",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "db9a5a9b5a4c"
+          },
+          "prose:1": {
+            "contentHash": "71d2afa987a7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:1"
+        ]
+      },
+      "page-find-wallet-fee-value-from": {
+        "contentHash": "188d77131ea6",
+        "anchorHash": "47ef438e6c51",
+        "children": {
+          "prose:1": {
+            "contentHash": "75857a458999",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "db9a5a9b5a4c"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      },
+      "page-find-wallet-fee-value-set-by-provider": {
+        "contentHash": "8b030037333a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-fee-value-undisclosed": {
+        "contentHash": "dc9c833495c5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-fee-value-variable": {
+        "contentHash": "3b325109deb0",
+        "anchorHash": "e3b0c44298fc"
       }
     },
     "childrenOrder": [
@@ -601,8 +861,28 @@
       "page-find-wallet-methodology-criterion-ux",
       "page-find-wallet-methodology-criterion-ethereum-focused",
       "page-find-wallet-methodology-verification",
-      "page-find-wallet-methodology-filters"
+      "page-find-wallet-methodology-filters",
+      "page-find-wallet-fee-item",
+      "page-find-wallet-fee-label-buy",
+      "page-find-wallet-fee-label-buy-sell",
+      "page-find-wallet-fee-label-device",
+      "page-find-wallet-fee-label-shield-unshield",
+      "page-find-wallet-fee-label-staking",
+      "page-find-wallet-fee-label-swap",
+      "page-find-wallet-fee-label-swap-bridge",
+      "page-find-wallet-fee-free-tier-plans",
+      "page-find-wallet-fee-qualifier-free-under-fox-discounts",
+      "page-find-wallet-fee-qualifier-lower-with-premium",
+      "page-find-wallet-fee-qualifier-of-rewards",
+      "page-find-wallet-fee-qualifier-per-card",
+      "page-find-wallet-fee-qualifier-stablecoins",
+      "page-find-wallet-fee-qualifier-stablecoins-lower-l2",
+      "page-find-wallet-fee-qualifier-tpt-holder-discounts",
+      "page-find-wallet-fee-value-from",
+      "page-find-wallet-fee-value-set-by-provider",
+      "page-find-wallet-fee-value-undisclosed",
+      "page-find-wallet-fee-value-variable"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "8826969b6017af05006a2fdaa3c02985c92f9bb0"
 }
