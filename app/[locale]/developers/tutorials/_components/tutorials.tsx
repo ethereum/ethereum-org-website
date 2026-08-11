@@ -38,7 +38,16 @@ import { DEFAULT_LOCALE } from "@/lib/constants"
 const MAX_DEFAULT_TAGS = 12
 
 const published = (locale: string, published: string) => {
-  const localeTimestamp = getLocaleTimestamp(locale as Lang, published)
+  // Publish dates are date-only strings, so they parse as UTC midnight. Without
+  // a pinned timeZone, Intl formats them in the runtime's zone -- the server
+  // (UTC) and a browser behind UTC disagree by a day, which both renders the
+  // wrong date and breaks hydration now that this list is server-rendered.
+  const localeTimestamp = getLocaleTimestamp(locale as Lang, published, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  })
 
   return localeTimestamp !== "Invalid Date" ? (
     <span>
