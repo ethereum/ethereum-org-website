@@ -141,6 +141,12 @@ Use logical equivalents: `inset-s-`, `inset-e-`, `ms-`, `me-`, `ps-`, `pe-`. The
 
 `<Translation>` server-renders fine on its own, but it turns a `/glossary/#term` link into `GlossaryTooltip` -- a `"use client"` component reading the `glossary-tooltip` namespace from the client context. So a page with a glossary-link `<Translation>` must wrap it in `I18nProvider` (carrying that namespace), even if it has no other client i18n. A plain `<a href="/foo">` does NOT trigger this. See `server-vs-client.md`.
 
+### A nested `I18nProvider` replaces the outer messages, it does not merge
+
+`I18nProvider` wraps `NextIntlClientProvider`, and a nested one **overrides** what an ancestor supplied rather than adding to it. The root layout ships only `common`, so wrapping part of a page in a provider carrying just `glossary-tooltip` silently strips `common` from every client component inside it -- `ExpandableCard` rendered a lowercase "more" (the `getMessageFallback` key tail) on `/staking/` until `common` was re-listed.
+
+**Always include every namespace the subtree needs, `common` included.** The markdown route models this: `getRequiredNamespacesForPage` starts from `baseNamespaces = ["common"]` and adds the rest. The tell for a missing namespace is lowercase, hyphenated key-tail text where a label belongs -- and it only shows after hydration, since server rendering resolves messages from the request context regardless.
+
 ### `toLocaleString` / `Intl.NumberFormat` without locale wrappers
 
 Use `numberFormat()` from `@/lib/utils/numbers` and `dateTimeFormat()` from `@/lib/utils/date`. They handle Urdu/Arabic numbering systems and calendar correctly.
