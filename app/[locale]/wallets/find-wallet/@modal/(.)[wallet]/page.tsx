@@ -15,6 +15,7 @@ import Tooltip from "@/components/Tooltip"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import InlineLink from "@/components/ui/Link"
 
+import { cn } from "@/lib/utils/cn"
 import { getWalletBySlug } from "@/lib/utils/walletData"
 import { formatWalletFees } from "@/lib/utils/wallets"
 
@@ -36,14 +37,27 @@ export const revalidate = false
 const DetailRow = ({
   label,
   tooltip,
+  roomyLabel,
   children,
 }: {
   label: string
   tooltip?: string
+  /**
+   * Floors the label column. Both sides of the row shrink to min-content by
+   * default, so a long label next to a long value collapses to one word per
+   * line. Only set this where both are long -- it costs the value width, which
+   * wraps shorter values that would otherwise fit on one line.
+   */
+  roomyLabel?: boolean
   children: ReactNode
 }) => (
   <div className="flex items-center justify-between gap-4 rounded-lg bg-background-highlight px-4 py-3">
-    <div className="flex items-center gap-1.5 text-sm text-body-medium">
+    <div
+      className={cn(
+        "flex items-center gap-1.5 text-sm text-body-medium",
+        roomyLabel && "min-w-[35%]"
+      )}
+    >
       <span>{label}</span>
       {tooltip && (
         <Tooltip nested content={<p className="text-body">{tooltip}</p>}>
@@ -136,6 +150,7 @@ export default async function InterceptedWalletModal(props: {
             <DetailRow
               label={t("page-find-wallet-fee-row-label")}
               tooltip={t("page-find-wallet-fee-row-tooltip")}
+              roomyLabel
             >
               <span className="font-bold text-body">
                 {formatWalletFees(wallet.fees, locale, t)}
