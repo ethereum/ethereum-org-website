@@ -8,7 +8,7 @@ We release twice a week, on **Tuesday and Thursday at 14:00 UTC**. Each release 
 
 Releases are driven by the `Release` GitHub Actions workflow (`.github/workflows/weekly-release.yml`), which can also be triggered manually via `workflow_dispatch` if a release needs to go out off-schedule.
 
-If a deploy PR from a previous run is still open when the next run fires, the new run **skips itself** and posts a note to Discord rather than stacking a second release on top. In practice that means an unmerged Tuesday release pushes its contents into the Thursday one.
+If a deploy PR from a previous run is still open when the next run fires, the new run **skips itself** and posts a note to Discord rather than stacking a second release on top. For example, if Tuesday's deploy PR is still open on Thursday, the Tuesday release remains pending and no Thursday release is prepared; the next release is deferred until that PR is closed.
 
 ## Deploy process
 
@@ -32,7 +32,7 @@ The typical workflow is as follows:
 Note that the `vX.Y.Z` tag is cut on `dev` during step 3, and the GitHub Release is published before the deploy PR merges. Merging into `master` is what puts the release live.
 
 ```
-master  O (tag) - - - - - - - - - - - - O (tag)
+master  O - - - - - - - - - - - - - - - O
 
         |                             /
 
@@ -40,7 +40,7 @@ staging O - - - - - - - - - O - - - O
 
         |                 /          \
 
-dev     O - - - - O - - - - O - - O - O
+dev     O (tag) - O - - - - O - - O - O (tag)
 
           \       \        /      /
 
