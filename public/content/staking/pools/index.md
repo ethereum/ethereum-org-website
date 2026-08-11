@@ -101,7 +101,7 @@ To tell a transparent pool from an opaque product, ask:
 The more of these questions a provider can only answer with "trust us," the more opaque the product.
 
 <Alert variant="warning">
-<AlertEmoji text="⚠️"/>
+<AlertIcon size="lg"><TriangleAlert /></AlertIcon>
 <AlertContent>
 <AlertDescription>
 Some products advertise "enhanced" or "boosted" yield by combining staking with **restaking**, a use case for LSTs that commits staked ETH to secure additional protocols under additional slashing conditions. Restaking is a separate risk category and novel application built on top of LSTs, not a form of direct staking participation. If a yield figure is meaningfully higher than the core network staking rate, you should ask exactly where the extra yield comes from. [What is restaking?](/restaking/)

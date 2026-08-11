@@ -9,6 +9,7 @@ import {
   MonitorCheck,
   ShieldHalf,
   Split,
+  TriangleAlert,
 } from "lucide-react"
 
 import type { ChildOnlyProp } from "@/lib/types"
@@ -57,6 +58,7 @@ export const stakingComponents = {
   StakingLaunchpadWidget,
   StakingProductsCardGrid,
   TableContainer,
+  TriangleAlert,
   UpgradeStatus,
   WithdrawalCredentials,
   WithdrawalsTabComparison,

@@ -49,7 +49,7 @@ Before the Shanghai/Capella upgrade, you couldn't use or access your staked ETH.
 Validator accounts are required to provide a withdrawal address before they can access and withdraw accrued network rewards, or process a full withdrawal upon exiting staking.
 
 <Alert variant="warning">
-<AlertEmoji text="⚠️"/>
+<AlertIcon size="lg"><TriangleAlert /></AlertIcon>
 <AlertContent>
 <AlertDescription>
 **Each validator account can only be assigned a single withdrawal address, one time.** Once an address is chosen and submitted to the consensus layer, this cannot be undone or changed again. Double-check ownership and accuracy of the address provided before submitting.
@@ -71,7 +71,7 @@ With compounding enabled:
 - Multiple validators can be **consolidated** into a single compounding validator, reducing operational overhead
 
 <Alert variant="warning">
-<AlertEmoji text="⚠️"/>
+<AlertIcon size="lg"><TriangleAlert /></AlertIcon>
 <AlertContent>
 <AlertDescription>
 **Converting from Type 1 to Type 2 withdrawal credentials is irreversible.** Use the [Staking Launchpad](https://launchpad.ethereum.org/validator-actions) as the official tool for this conversion. For more details on the conversion process, risks, and consolidation, see the [MaxEB deep-dive](/roadmap/pectra/maxeb/).
@@ -107,7 +107,7 @@ Check out this explanation of Ethereum staking withdrawals by Finematics:
 When a validator is scheduled to propose the next block, it is required to build a withdrawal queue, of up to 16 eligible withdrawals. This is done by originally starting with validator index 0, determining if there is an eligible withdrawal for this account per the rules of the protocol, and adding it to the queue if there is. The validator set to propose the following block will pick up where the last one left off, progressing in order indefinitely.
 
 <Alert variant="update">
-<AlertEmoji text="🕛"/>
+<AlertIcon size="xl"><Clock /></AlertIcon>
 <AlertContent>
 <AlertDescription>
 Think about an analog clock. The hand on the clock points to the hour, progresses in one direction, doesn’t skip any hours, and eventually wraps around to the beginning again after the last number is reached.
