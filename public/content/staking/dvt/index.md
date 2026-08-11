@@ -2,6 +2,8 @@
 title: Distributed validator technology
 description: Distributed validator technology enables the distributed operation of an Ethereum validator by multiple parties.
 lang: en
+template: staking
+sidebarDepth: 2
 ---
 
 Distributed validator technology (DVT) is an approach to validator security that spreads out key management and signing responsibilities across multiple parties, to reduce single points of failure, and increase validator resiliency.
