@@ -1,4 +1,5 @@
 import { Fragment } from "react"
+import { pick } from "lodash"
 import {
   CircleAlert,
   CircleDotDashed,
@@ -9,12 +10,17 @@ import {
   ThumbsUp,
   Workflow,
 } from "lucide-react"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import type { Lang, PageParams, StakingStatsData } from "@/lib/types"
 
 import ExpandableCard from "@/components/ExpandableCard"
 import PageHero from "@/components/Hero/PageHero"
+import I18nProvider from "@/components/I18nProvider"
 import {
   BenefitBetterSecurityIcon,
   BenefitEarnRewardsIcon,
@@ -100,6 +106,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     await getAppPageContributorInfo("staking", locale as Lang)
 
   const t = await getTranslations("page-staking")
+
+  // Glossary tooltips mount client-side, so their namespace has to reach the
+  // client; the root layout only provides `common`. A nested provider replaces
+  // the outer messages rather than merging, so `common` has to be re-listed.
+  const clientMessages = pick(await getMessages({ locale }), [
+    "common",
+    "glossary-tooltip",
+  ])
 
   const benefits = [
     {
@@ -422,7 +436,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     },
     faq: {
       id: "faq",
-      title: t("page-staking-toc-faq"),
+      title: t("page-staking-faq-title"),
     },
     further: {
       id: "further",
@@ -464,320 +478,330 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           />
         }
       >
-        <Section id={tocItems.whatIsStaking.id}>
-          <h2>{tocItems.whatIsStaking.title}</h2>
-          <p>{t("page-staking-section-what-p1")}</p>
-          <p>
-            <Translation id="page-staking:page-staking-section-what-p2" />
-          </p>
-          <p>{t("page-staking-section-what-p3")}</p>
-        </Section>
+        <I18nProvider locale={locale} messages={clientMessages}>
+          <Section id={tocItems.whatIsStaking.id}>
+            <h2>{tocItems.whatIsStaking.title}</h2>
+            <p>{t("page-staking-section-what-p1")}</p>
+            <p>
+              <Translation id="page-staking:page-staking-section-what-p2" />
+            </p>
+            <p>{t("page-staking-section-what-p3")}</p>
+          </Section>
 
-        <Section id={tocItems.whyStakeYourEth.id}>
-          <h2>{tocItems.whyStakeYourEth.title}</h2>
-          <Grid columns={3}>
-            {benefits.map(({ title, description, Icon, ctaLabel, href }) => (
-              <Card key={title} href={href}>
-                <CardContent>
-                  <CardIconContainer>
-                    <Icon className="text-primary" />
-                  </CardIconContainer>
-                  <CardTitle>{title}</CardTitle>
-                  <CardParagraph>{description}</CardParagraph>
-                  {href && ctaLabel && <CardLinkFake>{ctaLabel}</CardLinkFake>}
-                </CardContent>
-              </Card>
-            ))}
-          </Grid>
-        </Section>
+          <Section id={tocItems.whyStakeYourEth.id}>
+            <h2>{tocItems.whyStakeYourEth.title}</h2>
+            <Grid columns={3}>
+              {benefits.map(({ title, description, Icon, ctaLabel, href }) => (
+                <Card key={title} href={href}>
+                  <CardContent>
+                    <CardIconContainer>
+                      <Icon className="text-primary" />
+                    </CardIconContainer>
+                    <CardTitle>{title}</CardTitle>
+                    <CardParagraph>{description}</CardParagraph>
+                    {href && ctaLabel && (
+                      <CardLinkFake>{ctaLabel}</CardLinkFake>
+                    )}
+                  </CardContent>
+                </Card>
+              ))}
+            </Grid>
+          </Section>
 
-        <Section id={tocItems.howToStakeYourEth.id}>
-          <h2>{tocItems.howToStakeYourEth.title}</h2>
-          <p>{t("page-staking-section-how-to-p1")}</p>
-          <p>{t("page-staking-section-how-to-p2")}</p>
-          <div className="flex flex-col gap-8 py-space" data-flow="skip">
-            {stakingOptions.map(
-              ({
-                title,
-                titleColor,
-                boxClasses,
-                tagClasses,
-                pills,
-                paragraphs,
-                image,
-                imageAlt,
-                href,
-                buttonLabel,
-              }) => (
-                <div
-                  key={title}
-                  className={cn(
-                    "flex flex-col gap-6 rounded-4xl border p-6 md:p-12",
-                    boxClasses
-                  )}
-                >
-                  <div className="flex flex-col-reverse gap-6 sm:flex-row sm:items-center sm:justify-between">
-                    <div className="flex flex-col gap-4">
-                      <h3 className={cn("text-h2", titleColor)}>{title}</h3>
-                      <div className="flex flex-wrap gap-2">
-                        {pills.map((pill) => (
-                          <Tag
-                            key={pill}
-                            status="normal"
-                            variant="subtle"
-                            size="small"
-                            className={tagClasses}
-                          >
-                            {pill}
-                          </Tag>
-                        ))}
-                      </div>
-                    </div>
-                    <Image
-                      src={image}
-                      alt={imageAlt}
-                      className="h-40 w-auto max-w-full self-center object-contain"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-4">
-                    {paragraphs.map((paragraph, idx) => (
-                      <p key={idx}>{paragraph}</p>
-                    ))}
-                  </div>
-                  <ButtonLink href={href} className="w-fit">
-                    {buttonLabel}
-                  </ButtonLink>
-                </div>
-              )
-            )}
-          </div>
-          <p>{t.rich("page-staking-hierarchy-subtext", { em: Emphasis })}</p>
-        </Section>
-
-        <HR variant="narrow" />
-
-        <Section id={tocItems.comparisonOfOptions.id}>
-          <h2>{tocItems.comparisonOfOptions.title}</h2>
-          <p>{t("page-staking-section-comparison-subtitle")}</p>
-
-          <div
-            className={cn(
-              "grid auto-cols-fr auto-rows-[minmax(0,auto)] gap-x-1",
-              // Sub-header label rows
-              "**:[h4]:mb-space **:[h4]:border-b **:[h4]:border-body **:[h4]:bg-background-highlight **:[h4]:p-4 **:[h4]:text-base",
-              // Full-width text-centered button links
-              "**:data-[label=button-link]:w-full **:data-[label=button-link]:text-center",
-              // Mobile: stack the three columns with space between them
-              "[grid-template-areas:'solo-title''solo-rewards''solo-risks''solo-reqs''solo-cta''saas-title''saas-rewards''saas-risks''saas-reqs''saas-cta''pool-title''pool-rewards''pool-risks''pool-reqs''pool-cta']",
-              // Desktop: aligned three-column comparison
-              "xl:gap-y-0 xl:[grid-template-areas:'solo-title_saas-title_pool-title''solo-rewards_saas-rewards_pool-rewards''solo-risks_saas-risks_pool-risks''solo-reqs_saas-reqs_pool-reqs''solo-cta_saas-cta_pool-cta']",
-              "**:has-data-[label=button-link]:mt-space **:has-data-[label=button-link]:max-xl:pb-space-3x!"
-            )}
-          >
-            {comparisonColumns.map(
-              ({
-                area,
-                title,
-                Glyph,
-                glyphClasses,
-                rewards,
-                risks,
-                requirements,
-                href,
-                buttonLabel,
-              }) => (
-                <Fragment key={area}>
+          <Section id={tocItems.howToStakeYourEth.id}>
+            <h2>{tocItems.howToStakeYourEth.title}</h2>
+            <p>{t("page-staking-section-how-to-p1")}</p>
+            <p>{t("page-staking-section-how-to-p2")}</p>
+            <div className="flex flex-col gap-8 py-space" data-flow="skip">
+              {stakingOptions.map(
+                ({
+                  title,
+                  titleColor,
+                  boxClasses,
+                  tagClasses,
+                  pills,
+                  paragraphs,
+                  image,
+                  imageAlt,
+                  href,
+                  buttonLabel,
+                }) => (
                   <div
-                    className="flex items-center gap-4 border-b border-body bg-background-highlight p-4"
-                    style={{ gridArea: `${area}-title` }}
-                  >
-                    <div
-                      className={cn(
-                        "flex size-12 shrink-0 items-center justify-center rounded-full",
-                        glyphClasses
-                      )}
-                    >
-                      <Glyph className="size-7" />
-                    </div>
-                    <h3 className="text-2xl">{title}</h3>
-                  </div>
-                  <div style={{ gridArea: `${area}-rewards` }}>
-                    <h4>
-                      {t("page-staking-section-comparison-rewards-title")}
-                    </h4>
-                    <UnorderedList className="pe-4 text-sm">
-                      {rewards.map((item, idx) => (
-                        <ListItem key={idx}>{item}</ListItem>
-                      ))}
-                    </UnorderedList>
-                  </div>
-                  <div style={{ gridArea: `${area}-risks` }}>
-                    <h4>{t("page-staking-section-comparison-risks-title")}</h4>
-                    <UnorderedList className="pe-4 text-sm">
-                      {risks.map((item, idx) => (
-                        <ListItem key={idx}>{item}</ListItem>
-                      ))}
-                    </UnorderedList>
-                  </div>
-                  <div style={{ gridArea: `${area}-reqs` }}>
-                    <h4>
-                      {t("page-staking-section-comparison-requirements-title")}
-                    </h4>
-                    <UnorderedList className="pe-4 text-sm">
-                      {requirements.map((item, idx) => (
-                        <ListItem key={idx}>{item}</ListItem>
-                      ))}
-                    </UnorderedList>
-                  </div>
-                  <div style={{ gridArea: `${area}-cta` }} className="px-2">
-                    <ButtonLink href={href}>{buttonLabel}</ButtonLink>
-                  </div>
-                </Fragment>
-              )
-            )}
-          </div>
-
-          <h3 className="mt-space-2x">{t("page-staking-glance-title")}</h3>
-          <p>{t("page-staking-glance-description")}</p>
-          {/* `contain-inline-size` stops the table's min-width leaking out as an
-              intrinsic minimum, which would stop the article shrinking and push
-              the ToC aside off-screen just above the lg breakpoint */}
-          <div className="w-full overflow-x-auto contain-inline-size">
-            <table className="w-full min-w-200 border-collapse overflow-hidden rounded-base">
-              <thead>
-                <tr className="border-b border-body bg-background-highlight">
-                  {glanceColumns.map((column) => (
-                    <th
-                      key={column}
-                      className="p-4 text-start align-bottom text-sm font-black"
-                    >
-                      {column}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {glanceRows.map(({ title, Glyph, cells }) => (
-                  <tr
                     key={title}
-                    className="border-body bg-background-highlight not-last:border-b"
+                    className={cn(
+                      "flex flex-col gap-6 rounded-4xl border p-6 md:p-12",
+                      boxClasses
+                    )}
                   >
-                    <td className="p-4 align-top">
-                      <div className="flex flex-col gap-2">
-                        <Glyph className="size-8 text-primary" />
-                        <span className="font-black">{title}</span>
-                      </div>
-                    </td>
-                    {cells.map(({ level, text }, idx) => (
-                      <td key={idx} className="p-4 align-top text-sm">
-                        <div className="flex flex-col gap-2">
-                          <Indicator level={level} />
-                          <span>{text}</span>
+                    <div className="flex flex-col-reverse gap-6 sm:flex-row sm:items-center sm:justify-between">
+                      <div className="flex flex-col gap-4">
+                        <h3 className={cn("text-h2", titleColor)}>{title}</h3>
+                        <div className="flex flex-wrap gap-2">
+                          {pills.map((pill) => (
+                            <Tag
+                              key={pill}
+                              status="normal"
+                              variant="subtle"
+                              size="small"
+                              className={tagClasses}
+                            >
+                              {pill}
+                            </Tag>
+                          ))}
                         </div>
-                      </td>
+                      </div>
+                      <Image
+                        src={image}
+                        alt={imageAlt}
+                        className="h-40 w-auto max-w-full self-center object-contain"
+                      />
+                    </div>
+                    <div className="flex flex-col gap-4">
+                      {paragraphs.map((paragraph, idx) => (
+                        <p key={idx}>{paragraph}</p>
+                      ))}
+                    </div>
+                    <ButtonLink href={href} className="w-fit">
+                      {buttonLabel}
+                    </ButtonLink>
+                  </div>
+                )
+              )}
+            </div>
+            <p>{t.rich("page-staking-hierarchy-subtext", { em: Emphasis })}</p>
+          </Section>
+
+          <HR variant="narrow" />
+
+          <Section id={tocItems.comparisonOfOptions.id}>
+            <h2>{tocItems.comparisonOfOptions.title}</h2>
+            <p>{t("page-staking-section-comparison-subtitle")}</p>
+
+            <div
+              className={cn(
+                "grid auto-cols-fr auto-rows-[minmax(0,auto)] gap-x-1",
+                // Sub-header label rows
+                "**:[h4]:mb-space **:[h4]:border-b **:[h4]:border-body **:[h4]:bg-background-highlight **:[h4]:p-4 **:[h4]:text-base",
+                // Full-width text-centered button links
+                "**:data-[label=button-link]:w-full **:data-[label=button-link]:text-center",
+                // Mobile: stack the three columns with space between them
+                "[grid-template-areas:'solo-title''solo-rewards''solo-risks''solo-reqs''solo-cta''saas-title''saas-rewards''saas-risks''saas-reqs''saas-cta''pool-title''pool-rewards''pool-risks''pool-reqs''pool-cta']",
+                // Desktop: aligned three-column comparison
+                "xl:gap-y-0 xl:[grid-template-areas:'solo-title_saas-title_pool-title''solo-rewards_saas-rewards_pool-rewards''solo-risks_saas-risks_pool-risks''solo-reqs_saas-reqs_pool-reqs''solo-cta_saas-cta_pool-cta']",
+                "**:has-data-[label=button-link]:mt-space **:has-data-[label=button-link]:max-xl:pb-space-3x!"
+              )}
+            >
+              {comparisonColumns.map(
+                ({
+                  area,
+                  title,
+                  Glyph,
+                  glyphClasses,
+                  rewards,
+                  risks,
+                  requirements,
+                  href,
+                  buttonLabel,
+                }) => (
+                  <Fragment key={area}>
+                    <div
+                      className="flex items-center gap-4 border-b border-body bg-background-highlight p-4"
+                      style={{ gridArea: `${area}-title` }}
+                    >
+                      <div
+                        className={cn(
+                          "flex size-12 shrink-0 items-center justify-center rounded-full",
+                          glyphClasses
+                        )}
+                      >
+                        <Glyph className="size-7" />
+                      </div>
+                      <h3 className="text-2xl">{title}</h3>
+                    </div>
+                    <div style={{ gridArea: `${area}-rewards` }}>
+                      <h4>
+                        {t("page-staking-section-comparison-rewards-title")}
+                      </h4>
+                      <UnorderedList className="pe-4 text-sm">
+                        {rewards.map((item, idx) => (
+                          <ListItem key={idx}>{item}</ListItem>
+                        ))}
+                      </UnorderedList>
+                    </div>
+                    <div style={{ gridArea: `${area}-risks` }}>
+                      <h4>
+                        {t("page-staking-section-comparison-risks-title")}
+                      </h4>
+                      <UnorderedList className="pe-4 text-sm">
+                        {risks.map((item, idx) => (
+                          <ListItem key={idx}>{item}</ListItem>
+                        ))}
+                      </UnorderedList>
+                    </div>
+                    <div style={{ gridArea: `${area}-reqs` }}>
+                      <h4>
+                        {t(
+                          "page-staking-section-comparison-requirements-title"
+                        )}
+                      </h4>
+                      <UnorderedList className="pe-4 text-sm">
+                        {requirements.map((item, idx) => (
+                          <ListItem key={idx}>{item}</ListItem>
+                        ))}
+                      </UnorderedList>
+                    </div>
+                    <div style={{ gridArea: `${area}-cta` }} className="px-2">
+                      <ButtonLink href={href}>{buttonLabel}</ButtonLink>
+                    </div>
+                  </Fragment>
+                )
+              )}
+            </div>
+
+            <h3 className="mt-space-2x">{t("page-staking-glance-title")}</h3>
+            <p>{t("page-staking-glance-description")}</p>
+            {/* `contain-inline-size` stops the table's min-width leaking out as an
+                intrinsic minimum, which would stop the article shrinking and push
+                the ToC aside off-screen just above the lg breakpoint */}
+            <div className="w-full overflow-x-auto contain-inline-size">
+              <table className="w-full min-w-200 border-collapse overflow-hidden rounded-base">
+                <thead>
+                  <tr className="border-b border-body bg-background-highlight">
+                    {glanceColumns.map((column) => (
+                      <th
+                        key={column}
+                        className="p-4 text-start align-bottom text-sm font-black"
+                      >
+                        {column}
+                      </th>
                     ))}
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p>
-            <Translation id="page-staking:page-staking-glance-restaking" />
-          </p>
-        </Section>
+                </thead>
+                <tbody>
+                  {glanceRows.map(({ title, Glyph, cells }) => (
+                    <tr
+                      key={title}
+                      className="border-body bg-background-highlight not-last:border-b"
+                    >
+                      <td className="p-4 align-top">
+                        <div className="flex flex-col gap-2">
+                          <Glyph className="size-8 text-primary" />
+                          <span className="font-black">{title}</span>
+                        </div>
+                      </td>
+                      {cells.map(({ level, text }, idx) => (
+                        <td key={idx} className="p-4 align-top text-sm">
+                          <div className="flex flex-col gap-2">
+                            <Indicator level={level} />
+                            <span>{text}</span>
+                          </div>
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <Translation id="page-staking:page-staking-glance-restaking" />
+            </p>
+          </Section>
 
-        <HR variant="narrow" />
+          <HR variant="narrow" />
 
-        <StakingCommunityCallout id={tocItems.joinTheCommunity.id} />
+          <StakingCommunityCallout id={tocItems.joinTheCommunity.id} />
 
-        <Section id={tocItems.faq.id}>
-          <h2>{t("page-staking-faq-title")}</h2>
-          <AccordionContainer>
-            <ExpandableCard title={t("page-staking-faq-4-question")}>
-              <p>{t("page-staking-faq-4-answer-p1")}</p>
-              <p>{t("page-staking-faq-4-answer-p2")}</p>
-              <p>{t("page-staking-faq-4-answer-p3")}</p>
-              <ButtonLink className="self-start" href="/roadmap/merge/">
-                {t("page-upgrades-merge-btn")}
-              </ButtonLink>
-            </ExpandableCard>
-            <ExpandableCard title={t("page-staking-faq-5-question")}>
-              <p>{t("page-staking-faq-5-answer-p1")}</p>
-              <p>{t("page-staking-faq-5-answer-p2")}</p>
-              <ButtonLink className="self-start" href="/staking/withdrawals/">
-                {t("page-staking-faq-5-answer-link")}
-              </ButtonLink>
-            </ExpandableCard>
-            <ExpandableCard title={t("page-staking-faq-6-question")}>
-              {t("page-staking-faq-6-answer")}
-            </ExpandableCard>
-            <ExpandableCard title={t("page-staking-faq-7-question")}>
-              {t("page-staking-faq-7-answer")}
-            </ExpandableCard>
-            <ExpandableCard title={t("page-staking-faq-1-question")}>
-              {t.rich("page-staking-faq-1-answer", { em: Emphasis })}
-            </ExpandableCard>
-            <ExpandableCard title={t("page-staking-faq-2-question")}>
-              {t("page-staking-faq-2-answer")}
-            </ExpandableCard>
-            <ExpandableCard title={t("page-staking-faq-3-question")}>
-              <p>{t("page-staking-faq-3-answer-p1")}</p>
-              <p>
-                <Translation id="page-staking:page-staking-faq-3-answer-p2" />
-              </p>
-            </ExpandableCard>
-            <ExpandableCard title={t("page-staking-faq-8-question")}>
-              <p>{t("page-staking-faq-8-answer")}</p>
-              <ButtonLink className="self-start" href="/restaking/">
-                {t("page-staking-faq-8-answer-link")}
-              </ButtonLink>
-            </ExpandableCard>
-          </AccordionContainer>
-        </Section>
+          <Section id={tocItems.faq.id}>
+            <h2>{tocItems.faq.title}</h2>
+            <AccordionContainer>
+              <ExpandableCard title={t("page-staking-faq-4-question")}>
+                <p>{t("page-staking-faq-4-answer-p1")}</p>
+                <p>{t("page-staking-faq-4-answer-p2")}</p>
+                <p>{t("page-staking-faq-4-answer-p3")}</p>
+                <ButtonLink className="self-start" href="/roadmap/merge/">
+                  {t("page-upgrades-merge-btn")}
+                </ButtonLink>
+              </ExpandableCard>
+              <ExpandableCard title={t("page-staking-faq-5-question")}>
+                <p>{t("page-staking-faq-5-answer-p1")}</p>
+                <p>{t("page-staking-faq-5-answer-p2")}</p>
+                <ButtonLink className="self-start" href="/staking/withdrawals/">
+                  {t("page-staking-faq-5-answer-link")}
+                </ButtonLink>
+              </ExpandableCard>
+              <ExpandableCard title={t("page-staking-faq-6-question")}>
+                {t("page-staking-faq-6-answer")}
+              </ExpandableCard>
+              <ExpandableCard title={t("page-staking-faq-7-question")}>
+                {t("page-staking-faq-7-answer")}
+              </ExpandableCard>
+              <ExpandableCard title={t("page-staking-faq-1-question")}>
+                {t.rich("page-staking-faq-1-answer", { em: Emphasis })}
+              </ExpandableCard>
+              <ExpandableCard title={t("page-staking-faq-2-question")}>
+                {t("page-staking-faq-2-answer")}
+              </ExpandableCard>
+              <ExpandableCard title={t("page-staking-faq-3-question")}>
+                <p>{t("page-staking-faq-3-answer-p1")}</p>
+                <p>
+                  <Translation id="page-staking:page-staking-faq-3-answer-p2" />
+                </p>
+              </ExpandableCard>
+              <ExpandableCard title={t("page-staking-faq-8-question")}>
+                <p>{t("page-staking-faq-8-answer")}</p>
+                <ButtonLink className="self-start" href="/restaking/">
+                  {t("page-staking-faq-8-answer-link")}
+                </ButtonLink>
+              </ExpandableCard>
+            </AccordionContainer>
+          </Section>
 
-        <Section id={tocItems.further.id}>
-          <h2>{tocItems.further.title}</h2>
-          <UnorderedList>
-            <ListItem>
-              <InlineLink href="/roadmap/pectra/">
-                {t("page-staking-further-reading-1-link")}
-              </InlineLink>
-            </ListItem>
-            <ListItem>
-              <InlineLink href="https://notes.ethereum.org/9l707paQQEeI-GPzVK02lA?view#">
-                {t("page-staking-further-reading-2-link")}
-              </InlineLink>{" "}
-              -{" "}
-              <i>{t("page-staking-further-reading-author-vitalik-buterin")}</i>
-            </ListItem>
-            <ListItem>
-              <InlineLink href="https://eth2book.info/latest/">
-                {t("page-staking-further-reading-4-link")}
-              </InlineLink>{" "}
-              - <i>{t("page-staking-further-reading-4-author")}</i>
-            </ListItem>
-            <ListItem>
-              <InlineLink href="https://www.attestant.io/posts/">
-                {t("page-staking-further-reading-6-link")}
-              </InlineLink>
-            </ListItem>
-            <ListItem>
-              <InlineLink href="https://beaconcha.in/education">
-                {t("page-staking-further-reading-8-link")}
-              </InlineLink>
-            </ListItem>
-            <ListItem>
-              <InlineLink href="https://launchpad.ethereum.org/en/faq">
-                {t("page-staking-further-reading-9-link")}
-              </InlineLink>
-            </ListItem>
-            <ListItem>
-              <InlineLink href="https://ethstaker.gitbook.io/ethstaker-knowledge-base/">
-                {t("page-staking-further-reading-10-link")}
-              </InlineLink>
-            </ListItem>
-          </UnorderedList>
-        </Section>
+          <Section id={tocItems.further.id}>
+            <h2>{tocItems.further.title}</h2>
+            <UnorderedList>
+              <ListItem>
+                <InlineLink href="/roadmap/pectra/">
+                  {t("page-staking-further-reading-1-link")}
+                </InlineLink>
+              </ListItem>
+              <ListItem>
+                <InlineLink href="https://notes.ethereum.org/9l707paQQEeI-GPzVK02lA?view#">
+                  {t("page-staking-further-reading-2-link")}
+                </InlineLink>{" "}
+                -{" "}
+                <i>
+                  {t("page-staking-further-reading-author-vitalik-buterin")}
+                </i>
+              </ListItem>
+              <ListItem>
+                <InlineLink href="https://eth2book.info/latest/">
+                  {t("page-staking-further-reading-4-link")}
+                </InlineLink>{" "}
+                - <i>{t("page-staking-further-reading-4-author")}</i>
+              </ListItem>
+              <ListItem>
+                <InlineLink href="https://www.attestant.io/posts/">
+                  {t("page-staking-further-reading-6-link")}
+                </InlineLink>
+              </ListItem>
+              <ListItem>
+                <InlineLink href="https://beaconcha.in/education">
+                  {t("page-staking-further-reading-8-link")}
+                </InlineLink>
+              </ListItem>
+              <ListItem>
+                <InlineLink href="https://launchpad.ethereum.org/en/faq">
+                  {t("page-staking-further-reading-9-link")}
+                </InlineLink>
+              </ListItem>
+              <ListItem>
+                <InlineLink href="https://ethstaker.gitbook.io/ethstaker-knowledge-base/">
+                  {t("page-staking-further-reading-10-link")}
+                </InlineLink>
+              </ListItem>
+            </UnorderedList>
+          </Section>
+        </I18nProvider>
       </ContentLayout>
     </>
   )
