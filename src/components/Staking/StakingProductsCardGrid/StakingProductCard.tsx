@@ -202,7 +202,7 @@ export const StakingProductCard = async ({
             <ListItem
               key={idx}
               className={cn(
-                "my-4 flex items-center gap-1 text-base/none",
+                "flex items-center gap-1 text-base/none",
                 status !== "false" && "text-body!"
               )}
             >

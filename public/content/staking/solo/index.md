@@ -81,8 +81,6 @@ Different from inactivity penalties for being offline, <em>slashing</em> is a mu
 
 ## Comparison of staking options {#comparison-of-staking-options}
 
-There is no one-size-fits-all solution for staking, and each is unique. Here we'll compare some of the risks, rewards and requirements of the different ways you can stake.
-
 <StakingComparison page="solo" />
 
 ## How it works {#how-it-works}
