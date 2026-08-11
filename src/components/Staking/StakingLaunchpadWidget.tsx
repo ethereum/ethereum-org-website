@@ -21,10 +21,10 @@ const StakingLaunchpadWidget = () => {
   })
 
   return (
-    <div className="flex flex-col items-center gap-8 rounded-4xl bg-background-highlight p-6 lg:flex-row lg:items-start lg:justify-between lg:p-12">
+    <div className="flex flex-col items-center gap-8 rounded-4xl bg-background-highlight p-6 xl:flex-row xl:items-start xl:justify-between xl:p-12">
       {/* Prose cap only applies once the image sits alongside; stacked, the text
           fills the container */}
-      <div className="flow lg:max-w-prose">
+      <div className="flow xl:max-w-prose">
         <p>
           {t.rich("page-staking-launchpad-widget-p1", {
             network: CANONICAL_STAKING_TESTNET,
@@ -81,7 +81,7 @@ const StakingLaunchpadWidget = () => {
       <Image
         src={rhinoImg}
         alt={t("page-staking-image-alt")}
-        className="h-auto w-72 max-w-full shrink-0 object-contain lg:self-center"
+        className="h-auto w-72 max-w-full shrink-0 object-contain xl:self-center"
       />
     </div>
   )
