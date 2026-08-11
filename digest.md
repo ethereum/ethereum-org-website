@@ -1,30 +1,38 @@
-**Intake decisions — 2026-08-10**
-2 decisions · 1 batch · 70 open PRs / 85 open issues
+**Intake decisions — 2026-08-11**
+4 decisions · 1 batch · 74 open PRs / 87 open issues
 
 **🧭 Decide today**
-**1. [#18995](https://github.com/ethereum/ethereum-org-website/issues/18995) — SEO cluster: two fixes now green** · code · impact high, effort small
-[#19022](https://github.com/ethereum/ethereum-org-website/pull/19022) (fixes the live prod bug where raw i18n keys ship as JSON-LD on /wallets/ and /quizzes/) and [#19017](https://github.com/ethereum/ethereum-org-website/pull/19017) (drops the unsupported VideoObject transcript) are both green, test-covered, blocked only on review. [#19001](https://github.com/ethereum/ethereum-org-website/pull/19001) is still red.
-→ **Fast-track the two green fixes rather than holding for a full SEO sprint; bounce #19001 for green** (0.82)
+**1. [#18993](https://github.com/ethereum/ethereum-org-website/pull/18993) — Upgrade-status block on roadmap pages** · code · impact med
+Went CLEAN overnight; blocked on one call — nloureiro assessed layout-rendered works across all 24 translated pages vs embedding in MDX. PR1 [#18991](https://github.com/ethereum/ethereum-org-website/pull/18991) (data layer) is green underneath; answering unblocks the stack.
+→ **Confirm layout-rendered over MDX, then review #18991 + #18993 together** (0.72)
 
-**2. [#19016](https://github.com/ethereum/ethereum-org-website/pull/19016) — One sweep retires the recovery i18n bug class** · code · impact high, effort small
-pettinarip's AST-verified sweep sets request locale across all [locale] pages plus an eslint rule — replacing the 11 per-route recovery PRs and closing their gaps. Green, blocked only on the required review; straggler [#18999](https://github.com/ethereum/ethereum-org-website/pull/18999) is superseded by it.
-→ **Review + merge the sweep, then close #18999 as consolidated** (0.78)
+**✅ Verify, then merge**
+**2. [#19027](https://github.com/ethereum/ethereum-org-website/pull/19027) — ethereum-vs-bitcoin quiz** · content
+Team-authored and the only CLEAN PR in the queue — merge button is green.
+→ **Verify the quiz answers read correctly, then merge** (0.85)
+
+**3. [#19029](https://github.com/ethereum/ethereum-org-website/pull/19029) — Accurate sitemap lastmod dates** · code · impact high
+Green, review-only; fixes #18982 — sitemap ships zero lastmod across ~17.5k URLs.
+→ **Verify lastmod resolves per-URL on the preview, then merge** (0.8)
+
+**4. [#19026](https://github.com/ethereum/ethereum-org-website/pull/19026) — Drop duplicate "last updated" in upgrade hero** · code
+Green, review-only; fixes #19025 — date + stray rule render twice in the hero on all upgrade pages.
+→ **Verify on an upgrade-page preview, then merge** (0.78)
 
 **🧩 Review batches**
-- **Storybook reorg (#18967)** — [#18969](https://github.com/ethereum/ethereum-org-website/pull/18969) (phase 0, dead-code, green +1 approval), [#18970](https://github.com/ethereum/ethereum-org-website/pull/18970)/[#18971](https://github.com/ethereum/ethereum-org-website/pull/18971) (red). Phases 4–6 are now CLEAN but sit behind these. Land phase 0, green the red middle, later phases fall through.
+- **SEO JSON-LD** — [#19022](https://github.com/ethereum/ethereum-org-website/pull/19022) (raw i18n keys served as JSON-LD on /wallets/ + /quizzes/, high) and [#19017](https://github.com/ethereum/ethereum-org-website/pull/19017) (VideoObject transcript) are green + e2e-tested and share the generator; [#19001](https://github.com/ethereum/ethereum-org-website/pull/19001) still red. Review the two green together.
+
+**⏳ Waiting on others**
+- [#18876](https://github.com/ethereum/ethereum-org-website/pull/18876) — contributor: still owes a reason for deleting rather than adding DeFi quiz questions
 
 **🔁 Carried over**
-- [#18966](https://github.com/ethereum/ethereum-org-website/pull/18966) — **day 4, still nothing**: /layer-2 "$0.00" prod-stat fix, 1 file, green. Not a decision — the block is that no one owns the review. Assign an owner or self-merge; a fifth restatement won't move it.
-- [#18918](https://github.com/ethereum/ethereum-org-website/pull/18918) — **day 5, still nothing**: walletless-dapps tutorial, 4 red checks, zero replies ever. The trivial ask (lang/published frontmatter) was never posted to the author. Post it or close.
-- [#18876](https://github.com/ethereum/ethereum-org-website/pull/18876) — **day 5**: DeFi quiz swap, author owes a reason for deleting existing questions. If still silent, close.
-- [#18896](https://github.com/ethereum/ethereum-org-website/pull/18896) — **day 4**: intl frontmatter-propagation fix for #18891, still CONFLICTING. If merged pipeline work covers #18891, close; else ask for the rebase.
+- [#19016](https://github.com/ethereum/ethereum-org-website/pull/19016) — day 2: i18n locale sweep is one review from retiring the recovery bug class; green, high-impact — assign a reviewer.
+- [#18966](https://github.com/ethereum/ethereum-org-website/pull/18966) — **day 5, still nothing**: /layer-2 "$0.00" fix, 1 file, green, unowned. An unassigned review, not a decision — self-merge or name an owner.
+- [#18918](https://github.com/ethereum/ethereum-org-website/pull/18918) — **day 6, still nothing**: walletless tutorial, 4 red checks, zero replies ever. The trivial frontmatter ask never reached the author — post it or close.
+- [#18896](https://github.com/ethereum/ethereum-org-website/pull/18896) — day 5: intl frontmatter fix for #18891, still CONFLICTING; new sibling bug #19031 says the gap is widening — ask for the rebase.
 
 **🗑️ Suggested closures**
-- [#19020](https://github.com/ethereum/ethereum-org-website/pull/19020) — low-value README edit, labelled recommend-close (0.7)
-- [#17263](https://github.com/ethereum/ethereum-org-website/pull/17263) — stale draft, 133d idle, conflicting (0.7)
+- [#19019](https://github.com/ethereum/ethereum-org-website/issues/19019) — placeholder "[Content] <short summary>" issue, already labelled invalid (0.85)
+- [#17263](https://github.com/ethereum/ethereum-org-website/pull/17263) — day 3: stale draft, 134d idle, conflicting (0.7)
 
-**🔄 Since the last digest**
-- Resolved: recovery fixes #18700 & #18821, nav-tracking #19002, per-route recovery PRs (folded into #19016).
-- New: SEO fixes #19022/#19017, i18n sweep #19016, wackerow's pipeline PR #19015 (red).
-
-**📊 Queue** — 70 open PRs (16 conflicting, 7 failing checks) · 85 open issues (56 external, no team reply) · [full queue](https://github.com/ethereum/ethereum-org-website/pulls)
+**📊 Queue** — 74 open PRs (16 conflicting, 4 failing) · 87 open issues (57 external, no team reply) · [full queue](https://github.com/ethereum/ethereum-org-website/pulls)
