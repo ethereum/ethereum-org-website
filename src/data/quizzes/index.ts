@@ -203,6 +203,17 @@ const quizzes = {
     title: "evm",
     questions: ["evm-1", "evm-2", "evm-3", "evm-4", "evm-5", "evm-6"],
   },
+  "proof-of-stake": {
+    title: "learn-quizzes:page-proof-of-stake",
+    questions: [
+      "proof-of-stake-1",
+      "proof-of-stake-2",
+      "proof-of-stake-3",
+      "proof-of-stake-4",
+      "proof-of-stake-5",
+      "proof-of-stake-6",
+    ],
+  },
   transactions: {
     title: "transactions",
     questions: [
@@ -277,6 +288,7 @@ const quizzesSectionsRaw: QuizzesHubSection[] = [
       { id: "layer-2", level: "intermediate" },
       { id: "run-a-node", level: "intermediate" },
       { id: "merge", level: "intermediate" },
+      { id: "proof-of-stake", level: "intermediate" },
       { id: "staking-solo", level: "advanced" },
       { id: "scaling", level: "advanced" },
     ],
