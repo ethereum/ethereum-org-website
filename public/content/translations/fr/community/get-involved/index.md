@@ -59,10 +59,10 @@ Si vous n'êtes pas développeur, il peut être difficile de savoir par où comm
 
 - Il existe de nombreux appels communautaires open source, et avoir des preneurs de notes est d'une aide précieuse. Si vous êtes intéressé, rejoignez le [Discord des Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) et présentez-vous !
 
-### Traduire le contenu d'Ethereum dans votre langue maternelle {#translate-ethereum}
+### Aidez à améliorer le contenu traduit d'Ethereum {#translate-ethereum}
 
-- ethereum.org gère un programme de traduction qui traduit le site Web, ainsi que d'autres ressources, dans de nombreuses langues différentes
-- Découvrez comment vous impliquer [ici](/contributing/translation-program)
+- Le programme de traduction d'ethereum.org touche à sa fin et n'intègre plus de nouveaux traducteurs — consultez la [page du programme](/contributing/translation-program/) pour connaître son statut et son historique
+- Vous pouvez toujours aider en [signalant les erreurs dans les traductions existantes](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 
 ### Exécuter un nœud {#run-a-node}
 

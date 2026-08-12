@@ -81,7 +81,7 @@ node scripts/mint-nft.js
 
 காட்சிகள் மூலம் கற்பவர்களுக்கு, மேலே உள்ள படிகள் இங்கே சுருக்கப்பட்டுள்ளன:
 
-![How to upload your image to Pinata](./instructionsPinata.gif)
+![How to upload your image to Pinata](./instructionsPinata.mp4#712x376)
 
 இப்போது, நாம் Pinata-இல் மேலும் ஒரு ஆவணத்தைப் பதிவேற்றப் போகிறோம். ஆனால் அதைச் செய்வதற்கு முன், நாம் அதை உருவாக்க வேண்டும்!
 
@@ -109,7 +109,7 @@ json-இல் உள்ள தரவை நீங்கள் தாராள�
 
 JSON கோப்பைத் திருத்தி முடித்ததும், அதைச் சேமித்து, படத்தைப் பதிவேற்றுவதற்கு நாம் செய்த அதே படிகளைப் பின்பற்றி Pinata-இல் பதிவேற்றவும்.
 
-![How to upload your nft-metadata.json to Pinata](./uploadPinata.gif)
+![How to upload your nft-metadata.json to Pinata](./uploadPinata.mp4#1280x676)
 
 ## படி 5: உங்கள் ஒப்பந்தத்தின் ஒரு நிகழ்வை (instance) உருவாக்குங்கள் {#instance-contract}
 

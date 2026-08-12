@@ -51,13 +51,19 @@ export function useMediaQuery(
 
 type MediaQueryCallback = (event: MediaQueryListEvent) => void
 
+type LegacyMediaQueryList = MediaQueryList & {
+  addListener: (callback: MediaQueryCallback) => void
+  removeListener: (callback: MediaQueryCallback) => void
+}
+
 function listen(query: MediaQueryList, callback: MediaQueryCallback) {
-  // Use deprecated `addListener` and `removeListener` to support Safari < 14 (#135)
-  try {
+  if (typeof query.addEventListener === "function") {
     query.addEventListener("change", callback)
     return () => query.removeEventListener("change", callback)
-  } catch (e) {
-    query.addListener(callback)
-    return () => query.removeListener(callback)
   }
+
+  // Support older Safari versions that predate MediaQueryList EventTarget.
+  const legacyQuery = query as LegacyMediaQueryList
+  legacyQuery.addListener(callback)
+  return () => legacyQuery.removeListener(callback)
 }

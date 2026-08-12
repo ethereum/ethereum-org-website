@@ -4,43 +4,39 @@ description: "Zásady pro přidávání videí na ethereum.org"
 lang: cs
 ---
 
-# Přidávání videí {#adding-videos}
-
-Ve [videogalerii ethereum.org](/videos/) najdete videa o Ethereu a ekosystému Etherea od tvůrců z komunity a důvěryhodných zdrojů. Kdokoli může navrhnout video k přidání.
+[Videogalerie ethereum.org](/videos/) obsahuje videa o Ethereu a ekosystému Etherea od tvůrců z komunity a důvěryhodných zdrojů. Kdokoli může navrhnout video k přidání.
 
 ## Zásady pro zařazení {#listing-policy}
 
 Ethereum.org je neutrální vzdělávací zdroj. Videogalerie je spravována tak, aby:
 
-- **Vzdělávala** uživatele o technologii Etherea, jeho ekosystému a komunitě
+- **Vzdělávala** uživatele o technologii, ekosystému a komunitě Etherea
 - **Zůstala přesná** ve svém technickém obsahu
 - **Zůstala relevantní** pro komunitu Etherea
 
 Stránka nezařazuje videa, která primárně propagují konkrétní produkt, token nebo komerční službu.
 
-
 ## Kritéria pro zařazení {#criteria-for-inclusion}
 
 ### Nutné požadavky {#must-haves}
 
-- **Zaměření na Ethereum** – Video musí být primárně o Ethereu, jeho technologii, ekosystému nebo komunitě. Videa o obecných tématech týkajících se blockchainu jsou přijatelná pouze tehdy, pokud podstatně podporují nebo se vztahují ke vzdělávací stránce na webu, případně pokud odkazují na Ethereum.
+- **Zaměření na Ethereum** – Video musí být primárně o Ethereu, jeho technologii, ekosystému nebo komunitě. Videa o obecných tématech blockchainu jsou přijatelná pouze tehdy, pokud podstatně podporují nebo se vztahují k nějaké vzdělávací stránce na webu, případně pokud odkazují na Ethereum.
 - **Vzdělávací hodnota** – Video by mělo diváky něco naučit o Ethereu nebo oslavovat globální komunitu Etherea. Propagační nebo marketingový obsah nebude přijat.
-- **Přesné informace** – Technický obsah musí být fakticky správný a aktuální. Zastaralá videa o zrušených funkcích mohou být odstraněna.
-- **Kvalitní zpracování** – Video by mělo mít přiměřeně čistou kvalitu zvuku a obrazu.
-- **Veřejně dostupné** – Video musí být hostováno na otevřeném zdroji nebo přístupné platformě, jako je YouTube, a musí být volně přístupné bez placené brány (paywall) nebo nutnosti registrace.
+- **Přesné informace** – Technický obsah musí být fakticky správný a aktuální. Zastaralá videa o ukončených funkcích mohou být odstraněna.
+- **Kvalitní produkce** – Video by mělo mít přiměřeně čistou kvalitu zvuku a obrazu.
+- **Veřejně dostupné** – Video musí být hostováno na otevřeném zdroji nebo přístupné platformě, jako je YouTube, a musí být volně přístupné bez paywallu nebo nutnosti registrace.
 
 ### Výhodou {#nice-to-haves}
 
-- **Obsahuje přepis** – Videa s přepisy zlepšují přístupnost a SEO. Pokud jej nemáte, tým ethereum.org vám může pomoci s jeho vytvořením.
+- **Má přepis** – Videa s přepisy zlepšují přístupnost a SEO. Pokud jej nemáte, tým ethereum.org vám může pomoci jej vygenerovat.
 - **Z důvěryhodného zdroje** – Obsah od zavedených vzdělavatelů, výzkumníků a zdrojů má prioritu.
-- **Aktuální a nadčasové** – Obsah, který zůstává relevantní v průběhu času, je upřednostňován před materiálem citlivým na čas.
-
+- **Nadčasovost** – Obsah, který zůstává relevantní v průběhu času, je upřednostňován před materiálem citlivým na čas.
 
 ## Jak přidat video {#how-to-add-a-video}
 
 ### Možnost 1: Otevřít issue {#open-an-issue}
 
-Pokud byste chtěli navrhnout video, ale nechcete sami vytvářet soubory, otevřete na GitHubu issue s podrobnostmi o videu a některý z přispěvatelů vám jej pomůže přidat.
+Pokud byste chtěli navrhnout video, ale nechcete sami vytvářet soubory, otevřete issue na GitHubu s podrobnostmi o videu a některý z přispěvatelů vám jej pomůže přidat.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?template=suggest_video.yaml">
   Navrhnout video
@@ -50,9 +46,9 @@ Pokud byste chtěli navrhnout video, ale nechcete sami vytvářet soubory, otev�
 
 Pokud byste chtěli video přidat sami, postupujte podle těchto kroků:
 
-#### Krok 1: Vytvoření souboru s videem {#step-1}
+#### Krok 1: Vytvoření souboru videa {#step-1}
 
-Vytvořte nový adresář a soubor `index.md` v:
+Vytvořte nový adresář a soubor `index.md` na adrese:
 
 ```
 public/content/videos/{vas-slug-videa}/index.md
@@ -81,22 +77,22 @@ author: Channel Name
 ---
 ```
 
-**Přehled polí:**
+**Reference polí:**
 
 | Pole | Povinné | Popis |
 |---|---|---|
 | `title` | Ano | Název videa |
-| `description` | Ano | Shrnutí o délce 1–3 vět |
+| `description` | Ano | Shrnutí o 1–3 větách |
 | `lang` | Ano | Prozatím vždy `en` |
-| `youtubeId` | Ano | ID videa na YouTube (z URL za `v=`) |
+| `youtubeId` | Ano | ID videa na YouTube (z URL po `v=`) |
 | `uploadDate` | Ano | Původní datum nahrání ve formátu `YYYY-MM-DD` |
 | `duration` | Ano | Délka videa jako `H:MM:SS` nebo `M:SS` |
 | `educationLevel` | Ano | `beginner`, `intermediate` nebo `advanced` |
-| `topic` | Ano | Pole tematických štítků pro filtrování v galerii |
+| `topic` | Ano | Pole štítků témat pro filtrování v galerii |
 | `format` | Ano | `explainer`, `presentation`, `interview`, `tutorial` nebo `panel` |
-| `author` | Ano | Jméno tvůrce nebo název kanálu |
+| `author` | Ano | Jméno tvůrce nebo kanálu |
 | `breadcrumb` | Ne | Vlastní krátký štítek pro drobečkovou navigaci |
-| `customThumbnailUrl` | Ne | Vlastní URL náhledu (výchozí je náhled z YouTube) |
+| `customThumbnailUrl` | Ne | Vlastní URL miniatury (výchozí je miniatura z YouTube) |
 
 #### Krok 3: Přidání přepisu (doporučeno) {#step-3}
 
@@ -119,14 +115,35 @@ Text přepisu pro tuto sekci...
 Další text přepisu...
 ```
 
-K označení hlavních sekcí použijte nadpisy `###` s časovými značkami. Díky tomu bude přepis snadno čitelný a zlepší se SEO.
+Použijte nadpisy `###` s časovými značkami k označení hlavních sekcí. Díky tomu je přepis snadno čitelný a zlepšuje se SEO.
 
 Pokud nemáte přepis, můžete nechat tělo prázdné a tým jej vygeneruje.
+
+#### Krok 4: Výběr štítků témat {#step-4}
+
+Vyberte štítky témat ze seznamu níže. Každý štítek se přímo mapuje na kategorii filtru ve videogalerii — použijte název štítku přesně tak, jak je zobrazen.
+
+Video může mít více štítků, aby se zobrazilo ve více filtrech galerie:
+
+| Štítek | Filtr galerie |
+|---|---|
+| `how-ethereum-works` | Jak funguje Ethereum |
+| `network-upgrades` | Aktualizace sítě |
+| `roadmap-and-priorities` | Plán a priority |
+| `scaling-and-layer-2` | Škálování a vrstva 2 (l2) |
+| `use-cases` | Případy užití |
+| `privacy` | Soukromí |
+| `security` | Bezpečnost |
+| `community-stories` | Příběhy komunity |
+| `events` | Události |
+
+Každé video by mělo mít alespoň jeden štítek z tohoto seznamu. Videa bez rozpoznaného štítku se zobrazí pouze v zobrazení „Vše“ a ve výsledcích vyhledávání.
+
+Štítek `community-stories` také způsobí, že se video zobrazí na [stránce Příběhy](/stories/).
 
 #### Krok 5: Odeslání vašeho PR {#step-5}
 
 Otevřete pull request s vašimi změnami do větve `dev`. Tým vaši žádost zkontroluje a poskytne zpětnou vazbu.
-
 
 ## Údržba {#maintenance}
 
@@ -137,7 +154,6 @@ Zařazená videa jsou pravidelně kontrolována, aby se zajistilo, že:
 - Mají funkční odkazy na hosting/YouTube
 
 Pokud si všimnete problému se zařazeným videem, [vytvořte issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) nebo pošlete e-mail na [website@ethereum.org](mailto:website@ethereum.org).
-
 
 ## Podmínky použití {#terms-of-use}
 

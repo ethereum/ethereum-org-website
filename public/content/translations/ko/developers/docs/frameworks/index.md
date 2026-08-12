@@ -20,7 +20,7 @@ lang: ko
 
 프레임워크에 대해 자세히 알아보기 전에, 먼저 [디앱(dapp)](/developers/docs/dapps/)과 [이더리움 스택](/developers/docs/ethereum-stack/)에 대한 소개를 읽어보시기를 권장합니다.
 
-## 사용 가능한 프레임워크 {#available-frameworks}
+## 사용 가능한 프레임워크
 
 **Foundry** - **_Foundry는 이더리움 애플리케이션 개발을 위한 매우 빠르고 이식성이 뛰어나며 모듈화된 툴킷입니다._**
 
@@ -51,16 +51,17 @@ lang: ko
 - [예제](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [디스코드](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_명령어 하나로 이더리움 기반 앱을 생성합니다. 선택할 수 있는 다양한 UI 프레임워크와 탈중앙화 금융 (DeFi) 템플릿을 제공합니다._**
+**Create Eth App -** **_명령어 하나로 이더리움 기반 앱을 생성합니다. 선택할 수 있는 다양한 UI 프레임워크와 탈중앙화 금융 (DeFi) 템플릿이 함께 제공됩니다._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [템플릿](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-Eth -** **_Web3를 위한 Ethers.js + Hardhat + React 컴포넌트 및 훅: 스마트 컨트랙트 기반의 탈중앙화 애플리케이션 구축을 시작하는 데 필요한 모든 것을 제공합니다._**
+**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem 및 RainbowKit과 함께 Hardhat 또는 Foundry를 선택할 수 있습니다. 컨트랙트 핫 리로드, 사용자 지정 React 훅, 버너 지갑 및 로컬 퍼싯, 풀스택 탈중앙화 애플리케이션 (dapp) 개발을 위한 확장 모듈을 제공합니다._**
 
+- [웹사이트](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_블록체인 개발자가 스마트 컨트랙트를 구축, 테스트, 디버그, 모니터링 및 운영하고 디앱(dapp) UX를 개선할 수 있도록 지원하는 Web3 개발 플랫폼입니다._**
+**Tenderly -** **_블록체인 개발자가 스마트 컨트랙트를 구축, 테스트, 디버그, 모니터링 및 운영하고 dapp UX를 개선할 수 있도록 지원하는 Web3 개발 플랫폼입니다._**
 
 - [웹사이트](https://tenderly.co/)
 - [문서](https://docs.tenderly.co/)
@@ -87,7 +88,7 @@ lang: ko
 - [문서](https://portal.thirdweb.com/sdk/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Chainstack -** **_Web3(이더리움 및 기타) 개발 플랫폼입니다._**
+**Chainstack -** **_Web3 (이더리움 및 기타) 개발 플랫폼입니다._**
 
 - [chainstack.com](https://www.chainstack.com/)
 - [GitHub](https://github.com/chainstack)
@@ -112,11 +113,11 @@ lang: ko
 - [커뮤니티 포럼](https://forum.openzeppelin.com/c/support/17)
 - **오픈제플린 SDK 개발이 종료되었습니다**
 
-**Catapulta -** **_멀티 체인 스마트 컨트랙트 배포 도구로, 블록 탐색기에서의 검증을 자동화하고, 배포된 스마트 컨트랙트를 추적하며, 배포 보고서를 공유할 수 있는 Foundry 및 Hardhat 프로젝트용 플러그 앤 플레이 도구입니다._**
+**Catapulta -** **_멀티 체인 스마트 컨트랙트 배포 도구로, 블록 탐색기에서의 검증을 자동화하고, 배포된 스마트 컨트랙트를 추적하며, 배포 보고서를 공유하고, Foundry 및 Hardhat 프로젝트를 위한 플러그 앤 플레이를 지원합니다._**
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (Covalent 제공) -** **_GoldRush는 개발자, 분석가 및 기업을 위한 가장 포괄적인 블록체인 데이터 API 제품군을 제공합니다. 탈중앙화 금융 (DeFi) 대시보드, 지갑, 트레이딩 봇, AI 에이전트 또는 규정 준수 플랫폼 등 무엇을 구축하든, 데이터 API는 필요한 필수 온체인 데이터에 빠르고 정확하며 개발자 친화적인 액세스를 제공합니다._**
+**GoldRush (Covalent 기반) -** **_GoldRush는 개발자, 분석가 및 기업을 위한 가장 포괄적인 블록체인 데이터 API 제품군을 제공합니다. DeFi 대시보드, 지갑, 트레이딩 봇, AI 에이전트 또는 규정 준수 플랫폼 등 무엇을 구축하든, 데이터 API는 필요한 필수 온체인 데이터에 빠르고 정확하며 개발자 친화적인 액세스를 제공합니다._**
 
 - [웹사이트](https://goldrush.dev/)
 - [문서](https://goldrush.dev/docs/chains/ethereum)
@@ -130,7 +131,7 @@ lang: ko
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS Code 확장 프로그램](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_탈중앙화 애플리케이션 개발자가 애플리케이션에 탈중앙화 신원 및 검증 가능한 자격 증명을 쉽게 구축할 수 있도록 지원하는 오픈 소스, 모듈식 및 불가지론적 프레임워크입니다._**
+**Veramo -** **_오픈 소스이며 모듈화되어 있고 특정 기술에 종속되지 않는 프레임워크로, dapp 개발자가 애플리케이션에 탈중앙화 신원 및 검증 가능한 자격 증명을 쉽게 구축할 수 있도록 합니다._**
 
 - [홈페이지](https://veramo.io/)
 - [문서](https://veramo.io/docs/basics/introduction)
@@ -138,6 +139,10 @@ lang: ko
 - [디스코드](https://discord.com/invite/FRRBdjemHV)
 - [NPM 패키지](https://www.npmjs.com/package/@veramo/core)
 
+**Moccasin -** **_Titanoboa를 기반으로 구축된 Vyper를 위한 빠르고 Pythonic한 스마트 컨트랙트 개발 및 테스트 프레임워크입니다._**
+
+- [문서](https://cyfrin.github.io/moccasin/)
+- [GitHub](https://github.com/Cyfrin/moccasin)
 ## 더 읽어보기 {#further-reading}
 
 _도움이 된 커뮤니티 리소스를 알고 계신가요? 이 페이지를 편집하여 추가해 주세요!_

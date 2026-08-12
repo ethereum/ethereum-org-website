@@ -151,3 +151,5 @@ _هل تعرف موردًا مجتمعيًا ساعدك؟ قم بتعديل هذ
 - [المعاملات](/developers/docs/transactions/)
 - [الغاز](/developers/docs/gas/)
 - [إثبات الحصة (PoS)](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

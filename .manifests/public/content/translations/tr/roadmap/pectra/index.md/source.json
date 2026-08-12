@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/pectra/index.md",
-  "generatedAt": "2026-06-30T00:53:01.482Z",
-  "rootHash": "72040e9edf74",
+  "generatedAt": "2026-07-23T00:23:40.514Z",
+  "rootHash": "6657e5ed60f7",
   "tree": {
-    "contentHash": "190572ad660d",
-    "anchorHash": "5d4c269c0fc0",
+    "contentHash": "01d29058a375",
+    "anchorHash": "2351d61422d1",
     "children": {
       "frontmatter:title": {
         "contentHash": "e84deb0fe6a2",
@@ -22,6 +22,10 @@
       "frontmatter:lang": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "7fef9479c8bc"
       },
       "frontmatter:authors": {
         "contentHash": "e3b0c44298fc",
@@ -55,7 +59,7 @@
         "contentHash": "111871bee3b6",
         "anchorHash": "e3b0c44298fc"
       },
-      "component:12": {
+      "component:13": {
         "contentHash": "4017434b51d3",
         "anchorHash": "f3451d4448cb",
         "children": {
@@ -796,6 +800,7 @@
       "frontmatter:metaTitle",
       "frontmatter:description",
       "frontmatter:lang",
+      "frontmatter:template",
       "frontmatter:authors",
       "prose:3",
       "link:0",
@@ -804,7 +809,7 @@
       "prose:5",
       "inline-code:2",
       "prose:6",
-      "component:12",
+      "component:13",
       "new-improvements",
       "client-impact",
       "scam-alert",
@@ -812,5 +817,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

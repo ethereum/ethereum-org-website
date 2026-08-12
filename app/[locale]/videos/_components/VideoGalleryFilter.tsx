@@ -12,6 +12,7 @@ import {
   Card,
   CardBanner,
   CardContent,
+  CardHeader,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
@@ -46,6 +47,7 @@ const VideoGalleryFilter = ({
   categories,
 }: VideoGalleryFilterProps) => {
   const t = useTranslations("page-videos")
+  const tCommon = useTranslations("common")
 
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [searchQuery, setSearchQuery] = useState("")
@@ -159,7 +161,7 @@ const VideoGalleryFilter = ({
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
           {/* Search input */}
           <div className="relative w-full sm:max-w-xs">
-            <Search className="pointer-events-none absolute start-3 top-1/2 size-4 -translate-y-1/2 text-body-medium" />
+            <Search className="pointer-events-none absolute inset-s-3 top-1/2 size-4 -translate-y-1/2 text-body-medium" />
             <Input
               type="text"
               placeholder={t("page-videos-search-placeholder")}
@@ -169,12 +171,15 @@ const VideoGalleryFilter = ({
               className="w-full ps-9 text-sm"
             />
             {searchQuery && (
-              <button
+              <Button
+                variant="ghost"
+                size="sm"
                 onClick={() => setSearchQuery("")}
-                className="absolute end-3 top-1/2 -translate-y-1/2 text-body-medium hover:text-body"
+                aria-label={tCommon("clear")}
+                className="absolute inset-e-1 top-1/2 -translate-y-1/2 text-body-medium hover:text-body"
               >
-                <X className="size-4" />
-              </button>
+                <X />
+              </Button>
             )}
           </div>
 
@@ -269,18 +274,23 @@ const VideoGalleryFilter = ({
               variant="ghost"
               size="sm"
             >
-              <CardBanner className="aspect-video h-auto">
-                <Image
-                  src={video.thumbnailUrl}
-                  alt={video.title}
-                  width={480}
-                  height={270}
-                  sizes="(max-width: 479px) 100vw, (max-width: 991px) 50vw, 33vw"
-                  loading="lazy"
-                />
-              </CardBanner>
+              <CardHeader>
+                <CardBanner className="aspect-video h-auto" zoom>
+                  <Image
+                    src={video.thumbnailUrl}
+                    alt={video.title}
+                    width={480}
+                    height={270}
+                    sizes="(max-width: 479px) 100vw, (max-width: 991px) 50vw, 33vw"
+                    loading="lazy"
+                  />
+                </CardBanner>
+              </CardHeader>
               <CardContent>
-                <CardTitle size="sm">{video.title}</CardTitle>
+                {/* Flat gallery under the hero h1 -> each card title is an h2 */}
+                <CardTitle size="sm" asChild>
+                  <h2>{video.title}</h2>
+                </CardTitle>
                 <CardParagraph size="sm" className="line-clamp-2">
                   {video.description}
                 </CardParagraph>

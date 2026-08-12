@@ -143,10 +143,8 @@ Hay varias herramientas disponibles para gestionar las consolidaciones. La herra
 
 ## Preguntas frecuentes {#faq}
 
-### ¿Optar por participar cambia mi suerte en las propuestas o mis recompensas? {#change-luck-or-rewards}
-
-No. Optar por participar no disminuye tus posibilidades de propuesta: tus deberes y la selección de propuestas siguen siendo los mismos. Por ejemplo, si tienes dos validadores de 32 ETH frente a un validador de 64 ETH, tendrás las mismas posibilidades totales de ser seleccionado para proponer un bloque y ganar recompensas.
-
+### ¿Optar por participar cambia mi suerte en las propuestas o mis recompensas?
+No. Optar por participar no disminuye tu probabilidad de proponer: tus deberes y la selección de propuestas siguen siendo los mismos. Por ejemplo, si tienes dos validadores de 32 ETH frente a un validador de 64 ETH, tendrás las mismas posibilidades totales de ser seleccionado para proponer un bloque y ganar recompensas.
 ### ¿Optar por participar cambia mi riesgo de recorte? {#change-slashing-risk}
 
 Para los operadores más pequeños o no profesionales, la respuesta corta es no. La respuesta más larga es que, para los operadores profesionales que ejecutan muchos validadores por nodo con alertas rápidas, la consolidación en menos validadores puede reducir su capacidad de reaccionar ante un recorte y prevenir eventos en cascada. La *penalización* inicial por recorte para todos los validadores se ha reducido drásticamente de 1 ETH (por cada 32 ETH) a 0,0078125 ETH (por cada 32 ETH) para compensar este riesgo.

@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, ToCItem } from "@/lib/types"
 
@@ -14,14 +14,15 @@ import { Section } from "@/components/ui/section"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
+import { getIdFromHash } from "@/lib/utils/url"
 
 import PageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
 import developersHubImg from "@/public/images/heroes/developers-hub-hero.png"
 import layer2HubImg from "@/public/images/heroes/layer-2-hub-hero.png"
-import layer2LearnHeroImg from "@/public/images/layer-2/learn-hero.png"
 import manDogPlayingImg from "@/public/images/man-and-dog-playing.png"
+import layer2LearnHeroImg from "@/public/images/network-column-rooftop-piping-construction.png"
 import computerImg from "@/public/images/what-is-ethereum-network/computer_alone.png"
 import heroImg from "@/public/images/what-is-ethereum-network/what-is-ethereum-network.png"
 
@@ -59,11 +60,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     },
   ]
 
-  const getId = (input: string) => {
-    const parts = input.split("#")
-    return parts.length > 1 ? parts[1] : ""
-  }
-
   return (
     <>
       <PageJsonLD
@@ -94,7 +90,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         variant="narrow"
       >
-        <Section id={getId(tocItems[0].url)}>
+        <Section id={getIdFromHash(tocItems[0].url)}>
           <p>{t("page-what-is-ethereum-network-section-description-1")}</p>
           <p>
             {t.rich("page-what-is-ethereum-network-section-description-2", {
@@ -161,14 +157,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </p>
         </Section>
 
-        <Section aria-labelledby={getId(tocItems[1].url)}>
+        <Section aria-labelledby={getIdFromHash(tocItems[1].url)}>
           <Image
             src={developersHubImg}
             alt=""
             sizes={`(max-width: 832px) calc(100vw - 32px), (max-width: ${screens.lg}) 800px, (max-width: ${screens.xl}) calc(100vw - 480px), 800px`}
             className="mx-auto rounded-base"
           />
-          <h2 id={getId(tocItems[1].url)}>{tocItems[1].title}</h2>
+          <h2 id={getIdFromHash(tocItems[1].url)}>{tocItems[1].title}</h2>
           <p>{t("page-what-is-ethereum-network-gas-section-description-1")}</p>
           <p>
             {t.rich("page-what-is-ethereum-network-gas-section-description-2", {
@@ -220,14 +216,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </LinkWithArrow>
         </Section>
 
-        <Section aria-labelledby={getId(tocItems[2].url)}>
+        <Section aria-labelledby={getIdFromHash(tocItems[2].url)}>
           <Image
             src={manDogPlayingImg}
             alt=""
             sizes="(max-width: 448px) calc(100vw - 32px), 448px"
             className="mx-auto max-w-md"
           />
-          <h2 id={getId(tocItems[2].url)}>{tocItems[2].title}</h2>
+          <h2 id={getIdFromHash(tocItems[2].url)}>{tocItems[2].title}</h2>
           <p>
             {t.rich(
               "page-what-is-ethereum-network-staking-section-description-1",
@@ -320,14 +316,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </div>
         </Section>
 
-        <Section aria-labelledby={getId(tocItems[3].url)}>
+        <Section aria-labelledby={getIdFromHash(tocItems[3].url)}>
           <Image
             src={layer2HubImg}
             alt=""
             sizes={`(max-width: 832px) calc(100vw - 32px), (max-width: ${screens.lg}) 800px, (max-width: ${screens.xl}) calc(100vw - 480px), 800px`}
             className="mx-auto rounded-base"
           />
-          <h2 id={getId(tocItems[3].url)}>{tocItems[3].title}</h2>
+          <h2 id={getIdFromHash(tocItems[3].url)}>{tocItems[3].title}</h2>
           <p>
             {t.rich(
               "page-what-is-ethereum-network-layer-2s-section-description-1",
@@ -427,14 +423,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </LinkWithArrow>
         </Section>
 
-        <Section aria-labelledby={getId(tocItems[4].url)}>
+        <Section aria-labelledby={getIdFromHash(tocItems[4].url)}>
           <Image
             src={layer2LearnHeroImg}
             alt=""
             sizes="(max-width: 384px) calc(100vw - 32px), 384px"
             className="mx-auto max-w-sm"
           />
-          <h2 id={getId(tocItems[4].url)}>{tocItems[4].title}</h2>
+          <h2 id={getIdFromHash(tocItems[4].url)}>{tocItems[4].title}</h2>
           <p>
             {t(
               "page-what-is-ethereum-network-live-network-data-section-description-1"
@@ -622,6 +618,8 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-what-is-the-ethereum-network")
 

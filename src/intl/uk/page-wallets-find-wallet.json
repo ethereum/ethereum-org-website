@@ -39,6 +39,7 @@
   "page-find-wallet-buy-crypto-desc": "Купуйте крипто за фіат безпосередньо в гаманці \n *Примітка: купівля крипто може залежати від регіону",
   "page-find-wallet-sell-for-fiat": "Продаж за готівку",
   "page-find-wallet-sell-for-fiat-desc": "Продавайте крипто за фіат безпосередньо в гаманці \n *Примітка: виведення крипто може залежати від регіону",
+  "page-find-wallet-network-support": "Підтримка мереж",
   "page-find-wallet-multisig": "Мультипідпис",
   "page-find-wallet-multisig-desc": "Гаманці, які вимагають кілька підписів для авторизації транзакції",
   "page-find-wallet-social-recovery": "Соціальне відновлення",

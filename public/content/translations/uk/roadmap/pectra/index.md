@@ -3,6 +3,7 @@ title: "Пектра"
 metaTitle: "Прага-Електра (Пектра)"
 description: "Дізнайтеся про оновлення протоколу Пектра"
 lang: uk
+template: upgrade
 authors: ["Nixo", "Маріо Гавел"]
 ---
 

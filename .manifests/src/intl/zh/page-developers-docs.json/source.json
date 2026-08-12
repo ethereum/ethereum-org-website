@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-developers-docs.json",
-  "generatedAt": "2026-06-29T23:47:57.935Z",
-  "rootHash": "81b53e65e705",
+  "generatedAt": "2026-07-22T22:35:15.853Z",
+  "rootHash": "df9ae61c1fb6",
   "tree": {
-    "contentHash": "1f53c770218e",
-    "anchorHash": "3e2772382b70",
+    "contentHash": "e7305f8ceb29",
+    "anchorHash": "bb976a3dd643",
     "children": {
       "docs-nav-accounts": {
         "contentHash": "8a7c8b67fe8b",
@@ -17,6 +17,14 @@
       },
       "docs-nav-advanced": {
         "contentHash": "9f088dbebd6c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-authentication": {
+        "contentHash": "66880d2d8216",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-authentication-description": {
+        "contentHash": "b383c171a62e",
         "anchorHash": "e3b0c44298fc"
       },
       "docs-nav-backend-apis": {
@@ -221,6 +229,10 @@
       },
       "docs-nav-integrated-development-environments-ides-description": {
         "contentHash": "25ac5e8725e2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-interacting-with-smart-contracts": {
+        "contentHash": "22a72cebcec0",
         "anchorHash": "e3b0c44298fc"
       },
       "docs-nav-intro-to-dapps": {
@@ -628,6 +640,8 @@
       "docs-nav-accounts",
       "docs-nav-accounts-description",
       "docs-nav-advanced",
+      "docs-nav-authentication",
+      "docs-nav-authentication-description",
       "docs-nav-backend-apis",
       "docs-nav-block-explorers",
       "docs-nav-blocks",
@@ -679,6 +693,7 @@
       "docs-nav-heuristics-for-web3",
       "docs-nav-integrated-development-environments-ides",
       "docs-nav-integrated-development-environments-ides-description",
+      "docs-nav-interacting-with-smart-contracts",
       "docs-nav-intro-to-dapps",
       "docs-nav-intro-to-dapps-description",
       "docs-nav-intro-to-ether",
@@ -781,5 +796,5 @@
       "previous"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

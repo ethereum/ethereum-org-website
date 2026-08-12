@@ -1,11 +1,11 @@
+import { useTranslations } from "next-intl"
+
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { Button } from "../ui/buttons/Button"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 const FindWalletsNoResults = ({ resetFilters }) => {
-  const { t } = useTranslation("page-wallets-find-wallet")
+  const t = useTranslations("page-wallets-find-wallet")
 
   // Track empty state
   trackCustomEvent({

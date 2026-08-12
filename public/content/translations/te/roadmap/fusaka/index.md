@@ -3,6 +3,7 @@ title: "ఫుసాకా 🦓"
 metaTitle: ఫులు-ఒసాకా (ఫుసాకా)
 description: ఫుసాకా ప్రోటోకాల్ నవీకరణ గురించి తెలుసుకోండి
 lang: te
+template: upgrade
 authors: ["నిక్సో", "మారియో హావెల్"]
 ---
 

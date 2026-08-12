@@ -73,12 +73,17 @@ export const formatCompactNumber = (
     ...options,
   }).format(value)
 
-export const formatPriceUSD = (value: number, locale: string): string => {
+export const formatPriceUSD = (
+  value: number,
+  locale: string,
+  options?: Intl.NumberFormatOptions
+): string => {
   return numberFormat(locale, {
     style: "currency",
     currency: "USD",
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
+    ...options,
   }).format(value)
 }
 

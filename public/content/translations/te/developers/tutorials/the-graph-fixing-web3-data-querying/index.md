@@ -84,7 +84,7 @@ GameContract.events.BetPlaced({
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 
-![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.gif)
+![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.mp4#910x692)
 
 ఈ రెండు చిత్రాలు GraphQL యొక్క సారాంశాన్ని చాలా వరకు సంగ్రహిస్తాయి. కుడివైపున ఉన్న క్వెరీతో మనకు ఖచ్చితంగా ఏ డేటా కావాలో నిర్వచించవచ్చు, కాబట్టి అక్కడ మనం ఒకే అభ్యర్థనలో ప్రతిదీ పొందుతాము మరియు మనకు అవసరమైన దానికంటే ఎక్కువ ఏమీ ఉండదు. అవసరమైన మొత్తం డేటాను పొందే పనిని GraphQL సర్వర్ నిర్వహిస్తుంది, కాబట్టి ఫ్రంటెండ్ వినియోగదారు వైపు ఉపయోగించడం చాలా సులభం. మీకు ఆసక్తి ఉంటే, సర్వర్ క్వెరీని ఖచ్చితంగా ఎలా నిర్వహిస్తుందో చెప్పడానికి [ఇది ఒక మంచి వివరణ](https://www.apollographql.com/blog/graphql-explained).
 

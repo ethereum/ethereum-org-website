@@ -2950,7 +2950,7 @@ function fixBareRtlDates(
   let fixCount = 0
 
   // Split out frontmatter to avoid touching date-like strings in YAML
-  const fmRe = /^(---\n[\s\S]*?\n---\n)/
+  const fmRe = /^(---\n[\s\S]*?\n---(?:\n|$))/
   const fmMatch = content.match(fmRe)
   const frontmatter = fmMatch ? fmMatch[1] : ""
   let body = fmMatch ? content.slice(frontmatter.length) : content
@@ -2993,7 +2993,7 @@ function fixBareRtlEquations(
   let fixCount = 0
 
   // Split out frontmatter
-  const fmRe = /^(---\n[\s\S]*?\n---\n)/
+  const fmRe = /^(---\n[\s\S]*?\n---(?:\n|$))/
   const fmMatch = content.match(fmRe)
   const frontmatter = fmMatch ? fmMatch[1] : ""
   let body = fmMatch ? content.slice(frontmatter.length) : content
@@ -3104,7 +3104,7 @@ function fixBareRtlValues(
   if (!RTL_LOCALES.has(locale)) return { content, fixCount: 0 }
   let fixCount = 0
 
-  const fmRe = /^(---\n[\s\S]*?\n---\n)/
+  const fmRe = /^(---\n[\s\S]*?\n---(?:\n|$))/
   const fmMatch = content.match(fmRe)
   const frontmatter = fmMatch ? fmMatch[1] : ""
   let body = fmMatch ? content.slice(frontmatter.length) : content
@@ -4247,7 +4247,7 @@ function escapeTildeStrikethrough(content: string): {
   // Skip frontmatter
   let frontmatter = ""
   let body = content
-  const fmMatch = content.match(/^---\n[\s\S]*?\n---\n/)
+  const fmMatch = content.match(/^---\n[\s\S]*?\n---(?:\n|$)/)
   if (fmMatch) {
     frontmatter = fmMatch[0]
     body = content.slice(frontmatter.length)

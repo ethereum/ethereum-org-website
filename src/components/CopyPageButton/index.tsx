@@ -9,7 +9,8 @@ import {
   FileText,
   Loader2,
 } from "lucide-react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
+import * as Sentry from "@sentry/nextjs"
 
 import type { MatomoEventOptions } from "@/lib/types"
 
@@ -30,7 +31,6 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import { DEFAULT_LOCALE, SITE_URL } from "@/lib/constants"
 
 import { useClipboard } from "@/hooks/useClipboard"
-import { useTranslation } from "@/hooks/useTranslation"
 
 type CopyPageButtonProps = {
   slug: string
@@ -98,7 +98,7 @@ const CopyPageButton = ({
   isTranslated = true,
   className,
 }: CopyPageButtonProps) => {
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
   const locale = useLocale()
   const { onCopy, hasCopied } = useClipboard({ timeout: 2000 })
   const [isLoading, setIsLoading] = useState(false)
@@ -133,7 +133,9 @@ const CopyPageButton = ({
       const text = await res.text()
       await onCopy(text)
     } catch (error) {
+      // Silent failure for the user: the button just resets, so report it
       console.error("Failed to copy page markdown:", error)
+      Sentry.captureException(error, { extra: { mdPath } })
     } finally {
       clearTimeout(showLoadingTimer)
       if (loadingShownAt !== null) {

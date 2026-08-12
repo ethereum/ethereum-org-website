@@ -59,9 +59,6 @@
   "page-collectibles-translations-250": "شارة ⁦250⁩ كلمة",
   "page-collectibles-translations-50000": "شارة ⁦50,000⁩ كلمة",
   "page-collectibles-translations-badge-desc": "إلى أي لغة.",
-  "page-collectibles-translations-desc": "معظم المستخدمين لا يتحدثون الإنجليزية، لذلك من الضروري المساعدة في ترجمة مقالاتنا إلى لغات أخرى، ولا حاجة لخبرة سابقة في الترجمة.",
-  "page-collectibles-translations-instructions-1": "سجل في <a href=\"https://crowdin.com/project/ethereum-org\">Crowdin</a>",
-  "page-collectibles-translations-instructions-2": "اختر اللغة",
-  "page-collectibles-translations-instructions-3": "ابدأ الترجمة",
+  "page-collectibles-translations-desc": "تُقدر هذه الشارات المساهمات السابقة في برنامج ترجمة ⁦ethereum.org⁩، والذي يتم إنهاؤه تدريجيًا ولم يعد يقوم بتهيئة مترجمين جدد.",
   "page-collectibles-translations-title": "الترجمات"
 }

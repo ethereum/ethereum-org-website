@@ -1,6 +1,6 @@
 "use client"
-
 import { Fragment, useState } from "react"
+import { useTranslations } from "next-intl"
 
 import type { StablecoinType } from "@/lib/types"
 
@@ -21,8 +21,6 @@ import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 
-import useTranslation from "@/hooks/useTranslation"
-
 export type TableRow = {
   name: string
   marketCap: string
@@ -41,7 +39,7 @@ export type StablecoinsTableProps = {
 const PAGE_SIZE = 10
 
 const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
-  const { t } = useTranslation("page-stablecoins")
+  const t = useTranslations("page-stablecoins")
 
   const [visibleRows, setVisibleRows] = useState(PAGE_SIZE)
 

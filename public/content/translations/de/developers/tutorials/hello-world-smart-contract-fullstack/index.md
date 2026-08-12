@@ -32,35 +32,31 @@ Wenn du an irgendeinem Punkt Fragen hast, kannst du dich gerne im [Alchemy Disco
 
 Es gibt viele Möglichkeiten, Anfragen an die Ethereum-Chain zu stellen. Der Einfachheit halber verwenden wir ein kostenloses Konto bei Alchemy, einer Blockchain-Entwicklerplattform und API, die es uns ermöglicht, mit der Ethereum-Chain zu kommunizieren, ohne selbst einen Knoten betreiben zu müssen. Alchemy verfügt auch über Entwicklertools für Überwachung und Analysen; wir werden diese in diesem Tutorial nutzen, um zu verstehen, was bei unserer Smart-Contract-Bereitstellung im Hintergrund passiert.
 
-### Erstellen Sie Ihre App und Ihren API-Schlüssel {#create-your-app-and-api-key}
+### Erstelle deine App und deinen API-Schlüssel
 
-Sobald Sie ein Alchemy-Konto erstellt haben, können Sie einen API-Schlüssel generieren, indem Sie eine App erstellen. Dies ermöglicht es Ihnen, Anfragen an das Goerli-Testnetz zu stellen. Wenn Sie nicht mit Testnetzen vertraut sind, können Sie [Alchemys Leitfaden zur Auswahl eines Netzwerks lesen](https://www.alchemy.com/docs/choosing-a-web3-network).
+Sobald du ein Alchemy-Konto erstellt hast, kannst du einen API-Schlüssel generieren, indem du eine App erstellst. Dies ermöglicht es dir, Anfragen an das Sepolia-Testnetz zu stellen. Wenn du mit Testnetzen nicht vertraut bist, kannst du [Alchemys Leitfaden zur Auswahl eines Netzwerks lesen](https://www.alchemy.com/docs/choosing-a-web3-network).
 
-Suchen Sie im Alchemy-Dashboard das Dropdown-Menü **Apps** in der Navigationsleiste und klicken Sie auf **Create App**.
+Suche auf dem Alchemy-Dashboard das Dropdown-Menü **Apps** in der Navigationsleiste und klicke auf **Create App**.
 
 ![Hello world create app](./hello-world-create-app.png)
 
-Geben Sie Ihrer App den Namen „_Hello World_“ und schreiben Sie eine kurze Beschreibung. Wählen Sie **Staging** als Ihre Umgebung und **Goerli** als Ihr Netzwerk.
+Gib deiner App den Namen „_Hello World_“ und schreibe eine kurze Beschreibung. Wähle **Staging** als deine Umgebung und **Sepolia** als dein Netzwerk.
 
 ![create app view hello world](./create-app-view-hello-world.png)
 
-_Hinweis: Stellen Sie sicher, dass Sie **Goerli** auswählen, da dieses Tutorial sonst nicht funktioniert._
+_Hinweis: Stelle sicher, dass du **Sepolia** auswählst, da dieses Tutorial sonst nicht funktioniert._
 
-Klicken Sie auf **Create app**. Ihre App wird in der Tabelle unten angezeigt.
-
-### Erstellen Sie ein Ethereum-Konto {#create-an-ethereum-account}
+Klicke auf **Create app**. Deine App wird in der Tabelle unten angezeigt.
+### Ein Ethereum-Konto erstellen
 
 Sie benötigen ein Ethereum-Konto, um Transaktionen zu senden und zu empfangen. Wir verwenden MetaMask, eine virtuelle Wallet im Browser, mit der Benutzer ihre Ethereum-Konto-Adresse verwalten können.
 
-Sie können [hier](https://metamask.io/download) kostenlos MetaMask herunterladen und ein Konto erstellen. Wenn Sie ein Konto erstellen oder bereits eines haben, stellen Sie sicher, dass Sie oben rechts zum „Goerli Test Network“ wechseln (damit wir nicht mit echtem Geld hantieren).
-
-### Schritt 4: Ether von einem Faucet hinzufügen {#step-4-add-ether-from-a-faucet}
-
-Um Ihren Smart Contract im Testnetz bereitzustellen, benötigen Sie etwas falsches ETH. Um ETH im Goerli-Netzwerk zu erhalten, gehen Sie zu einem Goerli-Faucet und geben Sie Ihre Goerli-Konto-Adresse ein. Beachten Sie, dass Goerli-Faucets in letzter Zeit etwas unzuverlässig sein können – auf der [Testnetz-Seite](/developers/docs/networks/#goerli) finden Sie eine Liste mit Optionen zum Ausprobieren:
+Sie können [hier](https://metamask.io/download) kostenlos MetaMask herunterladen und ein Konto erstellen. Wenn Sie ein Konto erstellen oder bereits eines haben, achten Sie darauf, oben rechts zum „Sepolia-Testnetz“ zu wechseln (damit wir nicht mit echtem Geld hantieren).
+### Schritt 4: Ether von einem Faucet hinzufügen
+Um Ihren Smart Contract im Testnetzwerk bereitzustellen, benötigen Sie etwas falsches ETH. Um ETH im Sepolia-Netzwerk zu erhalten, gehen Sie zu einem Sepolia-Faucet und geben Sie Ihre Sepolia-Konto-Adresse ein. Auf der [Seite für Testnetzwerke](/developers/docs/networks/#sepolia) finden Sie eine Liste mit Optionen zum Ausprobieren:
 
 _Hinweis: Aufgrund von Netzwerküberlastung kann dies eine Weile dauern._
 ``
-
 ### Schritt 5: Ihr Guthaben überprüfen {#step-5-check-your-balance}
 
 Um sicherzugehen, dass sich die ETH in Ihrer Wallet befinden, stellen wir eine [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance)-Anfrage über [Alchemys Sandbox-Tool](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Dies gibt die Menge an ETH in unserer Wallet zurück. Um mehr zu erfahren, sehen Sie sich [Alchemys kurzes Tutorial zur Verwendung des Composer-Tools](https://youtu.be/r6sjRxBZJuU) an.
@@ -240,7 +236,7 @@ Nennen Sie sie nicht `process.env` oder `.env-custom` oder irgendwie anders.
 - Folgen Sie [dieser Anleitung](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key), um Ihren privaten Schlüssel zu exportieren
 - Siehe unten, um die HTTP-Alchemy-API-URL zu erhalten
 
-![Animated walkthrough of getting an Alchemy API key](./get-alchemy-api-key.gif)
+![Animated walkthrough of getting an Alchemy API key](./get-alchemy-api-key.mp4#1280x696)
 
 Ihre `.env` sollte so aussehen:
 
@@ -341,12 +337,11 @@ const hello_world = await HelloWorld.deploy()
 
 Der Aufruf von `deploy()` auf einer `ContractFactory` startet die Bereitstellung und gibt ein `Promise` zurück, das in ein `Contract`-Objekt aufgelöst wird. Dies ist das Objekt, das eine Methode für jede unserer Smart-Contract-Funktionen hat.
 
-### Schritt 16: Unseren Vertrag bereitstellen {#step-16-deploy-our-contract}
-
+### Schritt 16: Unseren Vertrag bereitstellen
 Wir sind endlich bereit, unseren Smart Contract bereitzustellen! Navigieren Sie zur Kommandozeile und führen Sie Folgendes aus:
 
 ```bash
-npx hardhat run scripts/deploy.js --network goerli
+npx hardhat run scripts/deploy.js --network sepolia
 ```
 
 Sie sollten dann in etwa Folgendes sehen:
@@ -357,22 +352,21 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 **Bitte speichern Sie diese Adresse**. Wir werden sie später im Tutorial verwenden.
 
-Wenn wir zum [Goerli-Etherscan](https://goerli.etherscan.io) gehen und nach unserer Vertragsadresse suchen, sollten wir sehen können, dass er erfolgreich bereitgestellt wurde. Die Transaktion wird in etwa so aussehen:
+Wenn wir zu [Sepolia Etherscan](https://sepolia.etherscan.io) gehen und nach unserer Vertragsadresse suchen, sollten wir sehen können, dass er erfolgreich bereitgestellt wurde. Die Transaktion wird in etwa so aussehen:
 
 ![](./etherscan-contract.png)
 
-Die `From`-Adresse sollte mit Ihrer MetaMask-Konto-Adresse übereinstimmen und bei der `To`-Adresse wird **Contract Creation** stehen. Wenn wir in die Transaktion klicken, sehen wir unsere Vertragsadresse im Feld `To`.
+Die `From`-Adresse sollte mit Ihrer MetaMask-Konto-Adresse übereinstimmen und bei der `To`-Adresse wird **Contract Creation** stehen. Wenn wir in die Transaktion klicken, sehen wir unsere Vertragsadresse im `To`-Feld.
 
 ![](./etherscan-transaction.png)
 
 Glückwunsch! Sie haben gerade einen Smart Contract in einem Ethereum-Testnetz bereitgestellt.
 
-Um zu verstehen, was im Hintergrund passiert, navigieren wir zum Explorer-Tab in unserem [Alchemy-Dashboard](https://dashboard.alchemy.com/explorer). Wenn Sie mehrere Alchemy-Apps haben, stellen Sie sicher, dass Sie nach App filtern und **Hello World** auswählen.
+Um zu verstehen, was im Hintergrund passiert, navigieren wir zum Tab „Explorer“ in unserem [Alchemy-Dashboard](https://dashboard.alchemy.com/explorer). Wenn Sie mehrere Alchemy-Apps haben, stellen Sie sicher, dass Sie nach App filtern und **Hello World** auswählen.
 
 ![](./hello-world-explorer.png)
 
-Hier sehen Sie eine Handvoll JSON-RPC-Methoden, die Hardhat/Ethers im Hintergrund für uns ausgeführt haben, als wir die Funktion `.deploy()` aufgerufen haben. Zwei wichtige Methoden hierbei sind [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction), was die Anfrage ist, unseren Vertrag auf die Goerli-Chain zu schreiben, und [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash), was eine Anfrage ist, um Informationen über unsere Transaktion anhand des Hashes zu lesen. Um mehr über das Senden von Transaktionen zu erfahren, sehen Sie sich [unser Tutorial zum Senden von Transaktionen mit Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) an.
-
+Hier sehen Sie eine Handvoll JSON-RPC-Methoden, die Hardhat/Ethers im Hintergrund für uns ausgeführt haben, als wir die Funktion `.deploy()` aufgerufen haben. Zwei wichtige Methoden hierbei sind [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction), was die Anfrage ist, unseren Vertrag auf die Sepolia-Chain zu schreiben, und [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash), was eine Anfrage ist, um Informationen über unsere Transaktion anhand des Hashes zu lesen. Um mehr über das Senden von Transaktionen zu erfahren, sehen Sie sich [unser Tutorial zum Senden von Transaktionen mit Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) an.
 ## Teil 2: Interaktion mit Ihrem Smart Contract {#part-2-interact-with-your-smart-contract}
 
 Nachdem wir nun erfolgreich einen Smart Contract im Goerli-Netzwerk bereitgestellt haben, wollen wir lernen, wie wir mit ihm interagieren können.
@@ -513,11 +507,11 @@ main()
 
 Beachten Sie, dass wir in Zeile 11 einen Aufruf von `.wait()` auf dem zurückgegebenen Transaktionsobjekt durchführen. Dies stellt sicher, dass unser Skript darauf wartet, dass die Transaktion auf der Blockchain gemint wird, bevor die Funktion beendet wird. Wenn der Aufruf von `.wait()` nicht enthalten ist, sieht das Skript möglicherweise nicht den aktualisierten Wert von `message` im Vertrag.
 
-### Lesen der neuen Nachricht {#read-the-new-message}
+### Lesen der neuen Nachricht
 
 Sie sollten in der Lage sein, den [vorherigen Schritt](#read-the-init-message) zu wiederholen, um den aktualisierten Wert von `message` zu lesen. Nehmen Sie sich einen Moment Zeit und prüfen Sie, ob Sie die notwendigen Änderungen vornehmen können, um diesen neuen Wert auszugeben!
 
-Wenn Sie einen Hinweis benötigen, sehen Sie hier, wie Ihre `interact.js`-Datei an diesem Punkt aussehen sollte:
+Wenn Sie einen Hinweis benötigen, sehen Sie hier, wie Ihre Datei `interact.js` an diesem Punkt aussehen sollte:
 
 ```javascript
 // interact.js
@@ -530,7 +524,7 @@ const contract = require("../artifacts/contracts/HelloWorld.sol/HelloWorld.json"
 
 // Provider - Alchemy
 const alchemyProvider = new ethers.providers.AlchemyProvider(
-  (network = "goerli"),
+  (network = "sepolia"),
   API_KEY
 )
 
@@ -559,9 +553,9 @@ async function main() {
 main()
 ```
 
-Führen Sie nun einfach das Skript aus und Sie sollten die alte Nachricht, den Aktualisierungsstatus und die neue Nachricht in Ihrem Terminal ausgegeben sehen!
+Führen Sie nun einfach das Skript aus, und Sie sollten die alte Nachricht, den Aktualisierungsstatus und die neue Nachricht in Ihrem Terminal ausgegeben sehen!
 
-`npx hardhat run scripts/interact.js --network goerli`
+`npx hardhat run scripts/interact.js --network sepolia`
 
 ```
 The message is: Hello World!
@@ -569,8 +563,7 @@ Updating the message...
 The new message is: This is the new message.
 ```
 
-Während Sie dieses Skript ausführen, werden Sie vielleicht bemerken, dass der Schritt `Updating the message...` eine Weile zum Laden braucht, bevor die neue Nachricht geladen wird. Das liegt am Mining-Prozess; wenn Sie neugierig sind und Transaktionen verfolgen möchten, während sie gemint werden, besuchen Sie den [Alchemy-Mempool](https://dashboard.alchemy.com/mempool), um den Status einer Transaktion zu sehen. Wenn die Transaktion verworfen wird, ist es auch hilfreich, [Goerli Etherscan](https://goerli.etherscan.io) zu überprüfen und nach Ihrem Transaktions-Hash zu suchen.
-
+Während Sie dieses Skript ausführen, werden Sie vielleicht bemerken, dass der Schritt `Updating the message...` eine Weile zum Laden braucht, bevor die neue Nachricht geladen wird. Das liegt am Mining-Prozess; wenn Sie neugierig sind und Transaktionen verfolgen möchten, während sie gemint werden, besuchen Sie den [Alchemy-Mempool](https://dashboard.alchemy.com/mempool), um den Status einer Transaktion zu sehen. Wenn die Transaktion verworfen wird, ist es auch hilfreich, [Sepolia Etherscan](https://sepolia.etherscan.io) zu überprüfen und nach Ihrem Transaktions-Hash zu suchen.
 ## Teil 3: Veröffentliche deinen Smart Contract auf Etherscan {#part-3-publish-your-smart-contract-to-etherscan}
 
 Du hast die ganze harte Arbeit geleistet, um deinen Smart Contract zum Leben zu erwecken; jetzt ist es an der Zeit, ihn mit der Welt zu teilen!
@@ -640,17 +633,17 @@ module.exports = {
 }
 ```
 
-#### Verifiziere deinen Smart Contract auf Etherscan {#verify-your-smart-contract-on-etherscan}
+#### Verifiziere deinen Smart Contract auf Etherscan
 
-Stelle sicher, dass alle Dateien gespeichert sind und alle Variablen in `.env` korrekt konfiguriert sind.
+Stelle sicher, dass alle Dateien gespeichert und alle `.env`-Variablen korrekt konfiguriert sind.
 
-Führe den Task `verify` aus und übergib die Vertragsadresse sowie das Netzwerk, in dem er bereitgestellt wurde:
+Führe die Aufgabe `verify` aus und übergib die Vertragsadresse sowie das Netzwerk, in dem er bereitgestellt wurde:
 
 ```text
-npx hardhat verify --network goerli DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
+npx hardhat verify --network sepolia DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
 ```
 
-Stelle sicher, dass `DEPLOYED_CONTRACT_ADDRESS` die Adresse deines bereitgestellten Smart Contracts im Goerli-Testnetz ist. Außerdem muss das letzte Argument (`'Hello World!'`) derselbe String-Wert sein, der [während des Bereitstellungsschritts in Teil 1](#step-15-write-our-deploy-script) verwendet wurde.
+Stelle sicher, dass `DEPLOYED_CONTRACT_ADDRESS` die Adresse deines bereitgestellten Smart Contracts im Sepolia-Testnetz ist. Außerdem muss das letzte Argument (`'Hello World!'`) derselbe String-Wert sein, der [während des Bereitstellungsschritts in Teil 1](#step-15-write-our-deploy-script) verwendet wurde.
 
 Wenn alles gut geht, wirst du die folgende Nachricht in deinem Terminal sehen:
 
@@ -661,11 +654,10 @@ for verification on Etherscan. Waiting for verification result...
 
 
 Successfully verified contract HelloWorld on Etherscan.
-https://goerli.etherscan.io/address/<contract-address>#contracts
+https://sepolia.etherscan.io/address/<contract-address>#contracts
 ```
 
 Glückwunsch! Der Code deines Smart Contracts ist auf Etherscan!
-
 ### Sieh dir deinen Smart Contract auf Etherscan an! {#check-out-your-smart-contract-on-etherscan}
 
 Wenn du zu dem in deinem Terminal angegebenen Link navigierst, solltest du den Code deines Smart Contracts und die ABI sehen können, die auf Etherscan veröffentlicht wurden!
@@ -944,11 +936,11 @@ Mit diesem bereiten Endpunkt ist es an der Zeit, unseren Smart Contract zu laden
 
 Um Ihren Hello World Smart Contract zu laden, benötigen Sie dessen Vertragsadresse und ABI. Beides finden Sie auf Etherscan, wenn Sie [Teil 3 dieses Tutorials](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan) abgeschlossen haben.
 
-#### So erhalten Sie Ihre Vertrags-ABI von Etherscan {#how-to-get-your-contract-abi-from-etherscan}
+#### So erhalten Sie die ABI Ihres Vertrags von Etherscan
 
-Wenn Sie Teil 3 dieses Tutorials übersprungen haben, können Sie den HelloWorld-Vertrag mit der Adresse [0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code) verwenden. Seine ABI finden Sie [hier](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code).
+Wenn Sie Teil 3 dieses Tutorials übersprungen haben, stellen Sie zuerst Ihren eigenen HelloWorld-Vertrag bereit und verifizieren Sie ihn. Öffnen Sie dann Ihre Vertragsseite auf [Sepolia Etherscan](https://sepolia.etherscan.io), um dessen ABI zu kopieren.
 
-Eine Vertrags-ABI ist notwendig, um anzugeben, welche Funktion ein Vertrag aufrufen wird, und um sicherzustellen, dass die Funktion Daten in dem von Ihnen erwarteten Format zurückgibt. Sobald wir unsere Vertrags-ABI kopiert haben, speichern wir sie als JSON-Datei namens `contract-abi.json` in Ihrem Verzeichnis `src`.
+Eine Vertrags-ABI ist notwendig, um anzugeben, welche Funktion ein Vertrag aufrufen wird, sowie um sicherzustellen, dass die Funktion Daten in dem von Ihnen erwarteten Format zurückgibt. Sobald wir unsere Vertrags-ABI kopiert haben, speichern wir sie als JSON-Datei namens `contract-abi.json` in Ihrem `src`-Verzeichnis.
 
 Ihre contract-abi.json sollte in Ihrem src-Ordner gespeichert werden.
 
@@ -958,7 +950,8 @@ Ausgestattet mit unserer Vertragsadresse, ABI und dem Alchemy Web3-Endpunkt kön
 // interact.js
 
 const contractABI = require("../contract-abi.json")
-const contractAddress = "0x6f3f635A9762B47954229Ea479b4541eAF402A6A"
+// Verwenden Sie hier Ihre Vertragsadresse
+const contractAddress = "0x..."
 ```
 
 Wir können nun endlich unsere Variable `helloWorldContract` einkommentieren und den Smart Contract über unseren AlchemyWeb3-Endpunkt laden:
@@ -991,7 +984,6 @@ export const helloWorldContract = new web3.eth.Contract(
 ```
 
 Da wir nun unseren Vertrag geladen haben, können wir unsere Funktion `loadCurrentMessage` implementieren!
-
 #### Implementierung von `loadCurrentMessage` in Ihrer Datei `interact.js` {#implementing-loadcurrentmessage-in-your-interact-js-file}
 
 Diese Funktion ist super einfach. Wir werden einen einfachen asynchronen Web3-Aufruf durchführen, um aus unserem Vertrag zu lesen. Unsere Funktion wird die im Smart Contract gespeicherte Nachricht zurückgeben:
@@ -1118,14 +1110,12 @@ Um etwas in die Ethereum-Chain zu schreiben, müssen Benutzer Transaktionen mit 
 
 Wenn Sie mehr darüber verstehen möchten, wie Transaktionen auf Ethereum funktionieren, sehen Sie sich [diese Seite](/developers/docs/transactions/) der Ethereum Foundation an.
 
-#### MetaMask herunterladen {#download-metamask}
+#### MetaMask herunterladen
 
-Sie können [hier](https://metamask.io/download) kostenlos ein MetaMask-Konto herunterladen und erstellen. Wenn Sie ein Konto erstellen oder bereits eines haben, stellen Sie sicher, dass Sie oben rechts zum „Goerli Test Network“ wechseln (damit wir nicht mit echtem Geld hantieren).
+Du kannst MetaMask [hier](https://metamask.io/download) kostenlos herunterladen und ein Konto erstellen. Wenn du ein Konto erstellst oder bereits eines hast, achte darauf, oben rechts zum „Sepolia Test Network“ zu wechseln \(damit wir nicht mit echtem Geld hantieren\).
+#### Ether aus einem Faucet hinzufügen
 
-#### Ether von einem Faucet hinzufügen {#add-ether-from-a-faucet}
-
-Um eine Transaktion auf der Ethereum-Blockchain zu signieren, benötigen wir etwas Fake-ETH. Um ETH zu erhalten, können Sie zum [FaucETH](https://fauceth.komputing.org) gehen und Ihre Goerli-Kontoadresse eingeben, auf „Request funds“ klicken, dann im Dropdown-Menü „Ethereum Testnet Goerli“ auswählen und schließlich erneut auf die Schaltfläche „Request funds“ klicken. Sie sollten kurz darauf ETH in Ihrem MetaMask-Konto sehen!
-
+Um eine Transaktion auf der Ethereum-Blockchain zu signieren, benötigen wir etwas Test-ETH. Um ETH zu erhalten, können Sie zu einem Sepolia-Faucet gehen, das auf der [Seite für Testnetze](/developers/docs/networks/#sepolia) aufgeführt ist, und Ihre Sepolia-Konto-Adresse eingeben. Kurz darauf sollten Sie ETH in Ihrem MetaMask-Konto sehen!
 #### Überprüfen Sie Ihr Guthaben {#check-your-balance}
 
 Um sicherzugehen, dass unser Guthaben vorhanden ist, stellen wir eine [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance)-Anfrage über das [Sandbox-Tool von Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Dies gibt die Menge an ETH in unserer Wallet zurück. Nachdem Sie Ihre MetaMask-Konto-Adresse eingegeben und auf „Send Request“ geklickt haben, sollten Sie eine Antwort wie diese sehen:

@@ -35,12 +35,13 @@ import {
   CardFooter,
   CardHeader,
   CardIconContainer,
+  CardLinkFake,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
 import Eyebrow from "@/components/ui/eyebrow"
 import { Grid } from "@/components/ui/grid"
-import InlineLink, { LinkWithArrow } from "@/components/ui/Link"
+import InlineLink from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -189,7 +190,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               <Grid columns={3}>
                 {waysToGetEth.map(
                   ({ icon: Icon, title, description, linkText, href }) => (
-                    <Card key={href + String(title)} hoverLift>
+                    <Card key={href + String(title)} href={href}>
                       <CardHeader>
                         <CardIconContainer>
                           <Icon />
@@ -200,7 +201,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                         <CardParagraph>{description}</CardParagraph>
                       </CardContent>
                       <CardFooter buttons="inherit">
-                        <LinkWithArrow href={href}>{linkText}</LinkWithArrow>
+                        <CardLinkFake withForwardArrow>{linkText}</CardLinkFake>
                       </CardFooter>
                     </Card>
                   )
@@ -291,7 +292,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               </Grid>
 
               <Grid columns={3} className="mt-space-2x">
-                <Card variant="nested" hoverLift>
+                <Card variant="nested" href="/wallets/">
                   <CardContent>
                     <CardTitle>
                       {t("page-get-eth-protect-eth-in-wallet")}
@@ -299,9 +300,9 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                     <CardParagraph>
                       {t("page-get-eth-protect-eth-desc")}
                     </CardParagraph>
-                    <InlineLink href="/wallets/">
+                    <CardLinkFake>
                       {t("page-get-eth-your-address-wallet-link")}
-                    </InlineLink>
+                    </CardLinkFake>
                   </CardContent>
                 </Card>
 
@@ -327,7 +328,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                   </CardContent>
                 </Card>
 
-                <Card variant="nested" hoverLift>
+                <Card variant="nested" href="/security/">
                   <CardContent>
                     <CardTitle>
                       {t("page-get-eth-wallet-instructions")}
@@ -335,9 +336,9 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                     <CardParagraph>
                       {t("page-get-eth-wallet-instructions-lost")}
                     </CardParagraph>
-                    <InlineLink href="/security/">
+                    <CardLinkFake>
                       {t("page-get-eth-more-on-security")}
-                    </InlineLink>
+                    </CardLinkFake>
                   </CardContent>
                 </Card>
               </Grid>
@@ -382,6 +383,8 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-get-eth")
 

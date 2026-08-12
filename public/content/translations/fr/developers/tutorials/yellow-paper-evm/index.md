@@ -13,22 +13,21 @@ published: 2022-05-15
 
 ## Quel livre jaune ? {#which-yellow-paper}
 
-Comme presque tout le reste dans Ethereum, le livre jaune évolue avec le temps. Pour pouvoir faire référence à une version spécifique, j'ai mis en ligne [la version actuelle au moment de la rédaction](yellow-paper-berlin.pdf). Les numéros de section, de page et d'équation que j'utilise feront référence à cette version. Il est recommandé de l'avoir ouvert dans une autre fenêtre pendant la lecture de ce document.
+Comme presque tout le reste dans Ethereum, le livre jaune évolue avec le temps. Pour pouvoir faire référence à une version spécifique, j'ai mis en ligne [la version actuelle au moment de la rédaction](https://ethereum.github.io/yellowpaper/paper.pdf). Les numéros de section, de page et d'équation que j'utilise feront référence à cette version. Il est recommandé de l'avoir ouvert dans une autre fenêtre pendant la lecture de ce document.
 
 ### Pourquoi l'EVM ? {#why-the-evm}
 
 Le livre jaune original a été rédigé tout au début du développement d'Ethereum. Il décrit le mécanisme de consensus original basé sur la preuve de travail (PoW) qui était initialement utilisé pour sécuriser le réseau. Cependant, Ethereum a abandonné la preuve de travail et a commencé à utiliser un consensus basé sur la preuve d'enjeu (PoS) en septembre 2022. Ce tutoriel se concentrera sur les parties du livre jaune définissant la machine virtuelle Ethereum (EVM). L'EVM n'a pas été modifiée par la transition vers la preuve d'enjeu (à l'exception de la valeur de retour du code d'opération DIFFICULTY).
 
-## 9 Modèle d'exécution {#9-execution-model}
+## 9 Modèle d'exécution
 
-Cette section (p. 12-14) comprend la majeure partie de la définition de l'EVM.
+Cette section (p. 14-16) inclut la majeure partie de la définition de l'EVM.
 
-Le terme _état du système_ inclut tout ce que vous devez savoir sur le système pour l'exécuter. Dans un ordinateur classique, cela signifie la mémoire, le contenu des registres, etc.
+Le terme _état du système_ inclut tout ce que vous devez savoir sur le système pour l'exécuter. Dans un ordinateur typique, cela signifie la mémoire, le contenu des registres, etc.
 
-Une [machine de Turing](https://en.wikipedia.org/wiki/Turing_machine) est un modèle de calcul. Essentiellement, il s'agit d'une version simplifiée d'un ordinateur, dont il est prouvé qu'elle a la même capacité à exécuter des calculs qu'un ordinateur normal (tout ce qu'un ordinateur peut calculer, une machine de Turing peut le calculer et vice versa). Ce modèle permet de prouver plus facilement divers théorèmes sur ce qui est calculable et ce qui ne l'est pas.
+Une [machine de Turing](https://en.wikipedia.org/wiki/Turing_machine) est un modèle de calcul. Essentiellement, il s'agit d'une version simplifiée d'un ordinateur, dont il est prouvé qu'elle a la même capacité à exécuter des calculs qu'un ordinateur normal (tout ce qu'un ordinateur peut calculer, une machine de Turing peut le calculer et vice versa). Ce modèle facilite la démonstration de divers théorèmes sur ce qui est calculable et ce qui ne l'est pas.
 
-Le terme [Turing-complet](https://en.wikipedia.org/wiki/Turing_completeness) désigne un ordinateur capable d'exécuter les mêmes calculs qu'une machine de Turing. Les machines de Turing peuvent entrer dans des boucles infinies, ce qui n'est pas le cas de l'EVM car elle manquerait de gaz, elle n'est donc que quasi-Turing-complète.
-
+Le terme [Turing-complet](https://en.wikipedia.org/wiki/Turing_completeness) désigne un ordinateur capable d'exécuter les mêmes calculs qu'une machine de Turing. Les machines de Turing peuvent entrer dans des boucles infinies, ce qui est impossible pour l'EVM car elle manquerait de gaz, elle n'est donc que quasi-Turing-complète.
 ## 9.1 Bases {#91-basics}
 
 Cette section présente les bases de l'EVM et la compare à d'autres modèles de calcul.
@@ -60,14 +59,13 @@ Le terme exécution exceptionnelle désigne une exception qui provoque l'arrêt 
 
 Cette section explique comment les frais de gaz sont calculés. Il y a trois coûts :
 
-### Coût du code d'opération {#opcode-cost}
+### Coût du code d'opération
 
-Le coût inhérent au code d'opération spécifique. Pour obtenir cette valeur, trouvez le groupe de coût du code d'opération dans l'Annexe H (p. 28, sous l'équation (327)), et trouvez le groupe de coût dans l'équation (324). Cela vous donne une fonction de coût, qui dans la plupart des cas utilise les paramètres de l'Annexe G (p. 27).
+Le coût inhérent du code d'opération spécifique. Pour obtenir cette valeur, trouvez le groupe de coût du code d'opération dans l'Annexe H (p. 29, sous l'équation (329)), et trouvez le groupe de coût dans l'équation (326). Cela vous donne une fonction de coût, qui dans la plupart des cas utilise des paramètres de l'Annexe G (p. 28).
 
 Par exemple, le code d'opération [`CALLDATACOPY`](https://www.evm.codes/#37) est membre du groupe _W<sub>copy</sub>_. Le coût du code d'opération pour ce groupe est _G<sub>verylow</sub>+G<sub>copy</sub>×⌈μ<sub>s</sub>[2]÷32⌉_. En regardant l'Annexe G, nous voyons que les deux constantes sont 3, ce qui nous donne _3+3×⌈μ<sub>s</sub>[2]÷32⌉_.
 
-Nous devons encore déchiffrer l'expression _⌈μ<sub>s</sub>[2]÷32⌉_. La partie la plus externe, _⌈ \<valeur\> ⌉_ est la fonction plafond, une fonction qui, pour une valeur donnée, renvoie le plus petit entier qui n'est pas inférieur à la valeur. Par exemple, _⌈2.5⌉ = ⌈3⌉ = 3_. La partie interne est _μ<sub>s</sub>[2]÷32_. En regardant la section 3 (Conventions) à la p. 3, _μ_ est l'état de la machine. L'état de la machine est défini dans la section 9.4.1 à la p. 13. Selon cette section, l'un des paramètres de l'état de la machine est _s_ pour la pile. En rassemblant tout cela, il semble que _μ<sub>s</sub>[2]_ soit l'emplacement n°2 dans la pile. En regardant [le code d'opération](https://www.evm.codes/#37), l'emplacement n°2 dans la pile est la taille des données en octets. En regardant les autres codes d'opération du groupe W<sub>copy</sub>, [`CODECOPY`](https://www.evm.codes/#39) et [`RETURNDATACOPY`](https://www.evm.codes/#3e), ils ont également une taille de données au même emplacement. Donc _⌈μ<sub>s</sub>[2]÷32⌉_ est le nombre de mots de 32 octets requis pour stocker les données en cours de copie. En rassemblant tout, le coût inhérent de [`CALLDATACOPY`](https://www.evm.codes/#37) est de 3 gaz plus 3 par mot de données copié.
-
+Nous devons encore déchiffrer l'expression _⌈μ<sub>s</sub>[2]÷32⌉_. La partie la plus externe, _⌈ \<value\> ⌉_ est la fonction plafond, une fonction qui, pour une valeur donnée, renvoie le plus petit entier qui n'est pas inférieur à la valeur. Par exemple, _⌈2.5⌉ = ⌈3⌉ = 3_. La partie interne est _μ<sub>s</sub>[2]÷32_. En regardant la section 3 (Conventions) à la p. 3, _μ_ est l'état de la machine. L'état de la machine est défini dans la section 9.4.1 à la p. 15. Selon cette section, l'un des paramètres de l'état de la machine est _s_ pour la pile. En rassemblant tout cela, il semble que _μ<sub>s</sub>[2]_ soit l'emplacement n°2 dans la pile. En regardant [le code d'opération](https://www.evm.codes/#37), l'emplacement n°2 dans la pile est la taille des données en octets. En regardant les autres codes d'opération du groupe W<sub>copy</sub>, [`CODECOPY`](https://www.evm.codes/#39) et [`RETURNDATACOPY`](https://www.evm.codes/#3e), ils ont également une taille de données au même emplacement. Donc _⌈μ<sub>s</sub>[2]÷32⌉_ est le nombre de mots de 32 octets requis pour stocker les données copiées. En rassemblant tout cela, le coût inhérent de [`CALLDATACOPY`](https://www.evm.codes/#37) est de 3 gaz plus 3 par mot de données copiées.
 ### Coût d'exécution {#running-cost}
 
 Le coût d'exécution du code que nous appelons.
@@ -75,19 +73,18 @@ Le coût d'exécution du code que nous appelons.
 - Dans le cas de [`CREATE`](https://www.evm.codes/#f0) et [`CREATE2`](https://www.evm.codes/#f5), le constructeur du nouveau contrat.
 - Dans le cas de [`CALL`](https://www.evm.codes/#f1), [`CALLCODE`](https://www.evm.codes/#f2), [`STATICCALL`](https://www.evm.codes/#fa), ou [`DELEGATECALL`](https://www.evm.codes/#f4), le contrat que nous appelons.
 
-### Coût d'expansion de la mémoire {#expanding-memory-cost}
+### Coût d'extension de la mémoire
 
-Le coût d'expansion de la mémoire (si nécessaire).
+Le coût d'extension de la mémoire (si nécessaire).
 
-Dans l'équation 324, cette valeur est écrite comme _C<sub>mem</sub>(μ<sub>i</sub>')-C<sub>mem</sub>(μ<sub>i</sub>)_. En regardant à nouveau la section 9.4.1, nous voyons que _μ<sub>i</sub>_ est le nombre de mots en mémoire. Donc _μ<sub>i</sub>_ est le nombre de mots en mémoire avant le code d'opération et _μ<sub>i</sub>'_ est le nombre de mots en mémoire après le code d'opération.
+Dans l'équation 326, cette valeur est écrite comme _C<sub>mem</sub>(μ<sub>i</sub>')-C<sub>mem</sub>(μ<sub>i</sub>)_. En regardant à nouveau la section 9.4.1, nous voyons que _μ<sub>i</sub>_ est le nombre de mots en mémoire. Donc _μ<sub>i</sub>_ est le nombre de mots en mémoire avant le code d'opération et _μ<sub>i</sub>'_ est le nombre de mots en mémoire après le code d'opération.
 
-La fonction _C<sub>mem</sub>_ est définie dans l'équation 326 : _C<sub>mem</sub>(a) = G<sub>memory</sub> × a + ⌊a<sup>2</sup> ÷ 512⌋_. _⌊x⌋_ est la fonction partie entière par défaut (plancher), une fonction qui, pour une valeur donnée, renvoie le plus grand entier qui n'est pas supérieur à la valeur. Par exemple, _⌊2.5⌋ = ⌊2⌋ = 2._ Lorsque _a < √512_, _a<sup>2</sup> < 512_, et le résultat de la fonction plancher est zéro. Donc pour les 22 premiers mots (704 octets), le coût augmente de façon linéaire avec le nombre de mots mémoire requis. Au-delà de ce point, _⌊a<sup>2</sup> ÷ 512⌋_ est positif. Lorsque la mémoire requise est suffisamment élevée, le coût en gaz est proportionnel au carré de la quantité de mémoire.
+La fonction _C<sub>mem</sub>_ est définie dans l'équation 328 : _C<sub>mem</sub>(a) = G<sub>memory</sub> × a + ⌊a<sup>2</sup> ÷ 512⌋_. _⌊x⌋_ est la fonction plancher, une fonction qui, pour une valeur donnée, renvoie le plus grand entier qui n'est pas supérieur à la valeur. Par exemple, _⌊2.5⌋ = ⌊2⌋ = 2._ Lorsque _a < √512_, _a<sup>2</sup> < 512_, et le résultat de la fonction plancher est zéro. Donc pour les 22 premiers mots (704 octets), le coût augmente linéairement avec le nombre de mots mémoire requis. Au-delà de ce point, _⌊a<sup>2</sup> ÷ 512⌋_ est positif. Lorsque la mémoire requise est suffisamment élevée, le coût en gaz est proportionnel au carré de la quantité de mémoire.
 
-**Remarque** : ces facteurs n'influencent que le coût _inhérent_ en gaz - ils ne prennent pas en compte le marché des frais ou les pourboires aux validateurs qui déterminent combien un utilisateur final doit payer - il s'agit simplement du coût brut d'exécution d'une opération particulière sur l'EVM.
+**Remarque** : ces facteurs n'influencent que le coût _inhérent_ en gaz - cela ne prend pas en compte le marché des frais ou les pourboires aux validateurs qui déterminent combien un utilisateur final doit payer - il s'agit simplement du coût brut d'exécution d'une opération particulière sur l'EVM.
 
 [En savoir plus sur le gaz](/developers/docs/gas/).
-
-## 9.3 Environnement d'exécution {#93-execution-env}
+## 9.3 Environnement d'exécution
 
 L'environnement d'exécution est un n-uplet, _I_, qui inclut des informations qui ne font pas partie de l'état de la chaîne de blocs ou de l'EVM.
 
@@ -109,15 +106,14 @@ Quelques autres paramètres sont nécessaires pour comprendre le reste de la sec
 | Paramètre | Défini dans la section   | Signification                                                                                                                                                                                                                  |
 | --------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | _σ_       | 2 (p. 2, équation 1) | L'état de la chaîne de blocs                                                                                                                                                                                              |
-| _g_       | 9.3 (p. 13)          | Gaz restant                                                                                                                                                                                                            |
-| _A_       | 6.1 (p. 8)           | Sous-état accumulé (modifications prévues à la fin de la transaction)                                                                                                                                                       |
-| _o_       | 9.3 (p. 13)          | Sortie - le résultat renvoyé dans le cas d'une transaction interne (lorsqu'un contrat en appelle un autre) et des appels aux fonctions de vue (lorsque vous demandez simplement des informations, il n'est donc pas nécessaire d'attendre une transaction) |
-
-## 9.4 Aperçu de l'exécution {#94-execution-overview}
+| _g_       | 9.3 (p. 14)          | Gaz restant                                                                                                                                                                                                            |
+| _A_       | 6.1 (p. 9)           | Sous-état accumulé (modifications prévues pour la fin de la transaction)                                                                                                                                                       |
+| _o_       | 9.3 (p. 14)          | Sortie - le résultat renvoyé dans le cas d'une transaction interne (lorsqu'un contrat en appelle un autre) et des appels aux fonctions de vue (lorsque vous demandez simplement des informations, il n'est donc pas nécessaire d'attendre une transaction) |
+## 9.4 Aperçu de l'exécution
 
 Maintenant que nous avons tous les préliminaires, nous pouvons enfin commencer à travailler sur le fonctionnement de l'EVM.
 
-Les équations 137-142 nous donnent les conditions initiales pour exécuter l'EVM :
+Les équations 146-151 nous donnent les conditions initiales pour l'exécution de l'EVM :
 
 | Symbole           | Valeur initiale | Signification                                                                                                                                                                                                                                                     |
 | ---------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -128,20 +124,19 @@ Les équations 137-142 nous donnent les conditions initiales pour exécuter l'EV
 | _μ<sub>s</sub>_  | _()_          | La pile, initialement vide                                                                                                                                                                                                                                  |
 | _μ<sub>o</sub>_  | _∅_           | La sortie, ensemble vide jusqu'à ce que nous nous arrêtions avec des données de retour ([`RETURN`](https://www.evm.codes/#f3) ou [`REVERT`](https://www.evm.codes/#fd)) ou sans ([`STOP`](https://www.evm.codes/#00) ou [`SELFDESTRUCT`](https://www.evm.codes/#ff)). |
 
-L'équation 143 nous indique qu'il y a quatre conditions possibles à chaque instant pendant l'exécution, et ce qu'il faut en faire :
+L'équation 152 nous indique qu'il y a quatre conditions possibles à chaque instant pendant l'exécution, et ce qu'il faut en faire :
 
-1.  `Z(σ,μ,A,I)`. Z représente une fonction qui teste si une opération crée une transition d'état invalide (voir [arrêt exceptionnel](#942-exceptional-halt)). Si elle est évaluée à Vrai (True), le nouvel état est identique à l'ancien (sauf que le gaz est brûlé) car les modifications n'ont pas été implémentées.
+1.  `Z(σ,μ,A,I)`. Z représente une fonction qui teste si une opération crée une transition d'état invalide (voir [arrêt exceptionnel](#942-exceptional-halt)). Si elle est évaluée à Vrai, le nouvel état est identique à l'ancien (sauf que le gaz est brûlé) car les modifications n'ont pas été implémentées.
 2.  Si le code d'opération en cours d'exécution est [`REVERT`](https://www.evm.codes/#fd), le nouvel état est le même que l'ancien état, une partie du gaz est perdue.
 3.  Si la séquence d'opérations est terminée, comme indiqué par un [`RETURN`](https://www.evm.codes/#f3)), l'état est mis à jour vers le nouvel état.
-4.  Si nous ne sommes pas dans l'une des conditions de fin 1 à 3, l'exécution continue.
-
+4.  Si nous ne sommes pas dans l'une des conditions de fin 1-3, continuez l'exécution.
 ## 9.4.1 État de la machine {#941-machine-state}
 
 Cette section explique l'état de la machine plus en détail. Elle précise que _w_ est le code d'opération actuel. Si _μ<sub>pc</sub>_ est inférieur à _||I<sub>b</sub>||_, la longueur du code, alors cet octet (_I<sub>b</sub>[μ<sub>pc</sub>]_) est le code d'opération. Sinon, le code d'opération est défini comme [`STOP`](https://www.evm.codes/#00).
 
 Comme il s'agit d'une [machine à pile](https://en.wikipedia.org/wiki/Stack_machine), nous devons garder une trace du nombre d'éléments retirés (_δ_) et ajoutés (_α_) par chaque code d'opération.
 
-## 9.4.2 Arrêt exceptionnel {#942-exceptional-halt}
+## 9.4.2 Arrêt exceptionnel
 
 Cette section définit la fonction _Z_, qui spécifie quand nous avons une terminaison anormale. Il s'agit d'une fonction [booléenne](https://en.wikipedia.org/wiki/Boolean_data_type), elle utilise donc [_∨_ pour un OU logique](https://en.wikipedia.org/wiki/Logical_disjunction) et [_∧_ pour un ET logique](https://en.wikipedia.org/wiki/Logical_conjunction).
 
@@ -170,33 +165,31 @@ Nous avons un arrêt exceptionnel si l'une de ces conditions est vraie :
   Dépassement de capacité de la pile. Si l'exécution du code d'opération entraîne une pile de plus de 1024 éléments, abandonnez.
 
 - **_¬I<sub>w</sub> ∧ W(w,μ)_**
-  Sommes-nous en cours d'exécution statique ([¬ est la négation](https://en.wikipedia.org/wiki/Negation) et _I<sub>w</sub>_ est vrai lorsque nous sommes autorisés à modifier l'état de la chaîne de blocs) ? Si c'est le cas, et que nous essayons une opération de changement d'état, cela ne peut pas se produire.
+  Sommes-nous en cours d'exécution statique ([¬ est la négation](https://en.wikipedia.org/wiki/Negation) et _I<sub>w</sub>_ est vrai lorsque nous sommes autorisés à modifier l'état de la chaîne de blocs) ? Si c'est le cas, et que nous essayons une opération de modification d'état, cela ne peut pas se produire.
 
-  La fonction _W(w,μ)_ est définie plus loin dans l'équation 150. _W(w,μ)_ est vraie si l'une de ces conditions est vraie :
+  La fonction _W(w,μ)_ est définie plus loin dans l'équation 159. _W(w,μ)_ est vraie si l'une de ces conditions est vraie :
 
   - **_w ∈ \{CREATE, CREATE2, SSTORE, SELFDESTRUCT}_**
     Ces codes d'opération modifient l'état, soit en créant un nouveau contrat, en stockant une valeur, ou en détruisant le contrat actuel.
 
   - **_LOG0≤w ∧ w≤LOG4_**
     Si nous sommes appelés statiquement, nous ne pouvons pas émettre d'entrées de journal.
-    Les codes d'opération de journal sont tous compris entre [`LOG0` (A0)](https://www.evm.codes/#a0) et [`LOG4` (A4)](https://www.evm.codes/#a4).
+    Les codes d'opération de journal sont tous dans la plage comprise entre [`LOG0` (A0)](https://www.evm.codes/#a0) et [`LOG4` (A4)](https://www.evm.codes/#a4).
     Le nombre après le code d'opération de journal spécifie combien de sujets l'entrée de journal contient.
   - **_w=CALL ∧ μ<sub>s</sub>[2]≠0_**
     Vous pouvez appeler un autre contrat lorsque vous êtes statique, mais si vous le faites, vous ne pouvez pas lui transférer d'ETH.
 
 - **_w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>_**
   Vous ne pouvez pas exécuter [`SSTORE`](https://www.evm.codes/#55) à moins d'avoir plus de G<sub>callstipend</sub> (défini à 2300 dans l'Annexe G) gaz.
+## 9.4.3 Validité de la destination de saut
 
-## 9.4.3 Validité de la destination de saut {#943-jump-dest-valid}
+Ici, nous définissons formellement ce que sont les codes d'opération [`JUMPDEST`](https://www.evm.codes/#5b). Nous ne pouvons pas simplement chercher la valeur d'octet 0x5B, car elle pourrait se trouver à l'intérieur d'un PUSH (et donc être des données et non un code d'opération).
 
-Ici, nous définissons formellement ce que sont les codes d'opération [`JUMPDEST`](https://www.evm.codes/#5b). Nous ne pouvons pas simplement chercher la valeur d'octet 0x5B, car elle pourrait se trouver à l'intérieur d'un PUSH (et donc être une donnée et non un code d'opération).
+Dans l'équation (162), nous définissons une fonction, _N(i,w)_. Le premier paramètre, _i_, est l'emplacement du code d'opération. Le second, _w_, est le code d'opération lui-même. Si _w∈[PUSH1, PUSH32]_, cela signifie que le code d'opération est un PUSH (les crochets définissent une plage qui inclut les extrémités). Dans ce cas, le prochain code d'opération est à _i+2+(w−PUSH1)_. Pour [`PUSH1`](https://www.evm.codes/#60), nous devons avancer de deux octets (le PUSH lui-même et la valeur d'un octet), pour [`PUSH2`](https://www.evm.codes/#61), nous devons avancer de trois octets car il s'agit d'une valeur de deux octets, etc. Tous les autres codes d'opération de l'EVM ne font qu'un octet de long, donc dans tous les autres cas _N(i,w)=i+1_.
 
-Dans l'équation (153), nous définissons une fonction, _N(i,w)_. Le premier paramètre, _i_, est l'emplacement du code d'opération. Le second, _w_, est le code d'opération lui-même. Si _w∈[PUSH1, PUSH32]_, cela signifie que le code d'opération est un PUSH (les crochets définissent une plage qui inclut les extrémités). Dans ce cas, le prochain code d'opération se trouve à _i+2+(w−PUSH1)_. Pour [`PUSH1`](https://www.evm.codes/#60), nous devons avancer de deux octets (le PUSH lui-même et la valeur d'un octet), pour [`PUSH2`](https://www.evm.codes/#61), nous devons avancer de trois octets car il s'agit d'une valeur de deux octets, etc. Tous les autres codes d'opération de l'EVM ne font qu'un octet de long, donc dans tous les autres cas _N(i,w)=i+1_.
+Cette fonction est utilisée dans l'équation (161) pour définir _D<sub>J</sub>(c,i)_, qui est l'[ensemble](<https://en.wikipedia.org/wiki/Set_(mathematics)>) de toutes les destinations de saut valides dans le code _c_, en commençant par l'emplacement du code d'opération _i_. Cette fonction est définie de manière récursive. Si _i≥||c||_, cela signifie que nous sommes à la fin ou après la fin du code. Nous n'allons plus trouver de destinations de saut, donc renvoyez simplement l'ensemble vide.
 
-Cette fonction est utilisée dans l'équation (152) pour définir _D<sub>J</sub>(c,i)_, qui est l'[ensemble](<https://en.wikipedia.org/wiki/Set_(mathematics)>) de toutes les destinations de saut valides dans le code _c_, en commençant par l'emplacement du code d'opération _i_. Cette fonction est définie de manière récursive. Si _i≥||c||_, cela signifie que nous sommes à la fin ou après la fin du code. Nous n'allons plus trouver de destinations de saut, donc nous renvoyons simplement l'ensemble vide.
-
-Dans tous les autres cas, nous examinons le reste du code en passant au code d'opération suivant et en obtenant l'ensemble à partir de celui-ci. _c[i]_ est le code d'opération actuel, donc _N(i,c[i])_ est l'emplacement du prochain code d'opération. _D<sub>J</sub>(c,N(i,c[i]))_ est donc l'ensemble des destinations de saut valides qui commence au prochain code d'opération. Si le code d'opération actuel n'est pas un `JUMPDEST`, renvoyez simplement cet ensemble. S'il s'agit de `JUMPDEST`, incluez-le dans l'ensemble de résultats et renvoyez-le.
-
+Dans tous les autres cas, nous examinons le reste du code en passant au code d'opération suivant et en obtenant l'ensemble à partir de celui-ci. _c[i]_ est le code d'opération actuel, donc _N(i,c[i])_ est l'emplacement du code d'opération suivant. _D<sub>J</sub>(c,N(i,c[i]))_ est donc l'ensemble des destinations de saut valides qui commence au code d'opération suivant. Si le code d'opération actuel n'est pas un `JUMPDEST`, renvoyez simplement cet ensemble. S'il s'agit d'un `JUMPDEST`, incluez-le dans l'ensemble de résultats et renvoyez-le.
 ## 9.4.4 Arrêt normal {#944-normal-halt}
 
 La fonction d'arrêt _H_ peut renvoyer trois types de valeurs.
@@ -205,9 +198,9 @@ La fonction d'arrêt _H_ peut renvoyer trois types de valeurs.
 - Si nous avons un code d'opération d'arrêt qui ne produit pas de sortie (soit [`STOP`](https://www.evm.codes/#00) soit [`SELFDESTRUCT`](https://www.evm.codes/#ff)), renvoyez une séquence d'octets de taille zéro comme valeur de retour. Notez que c'est très différent de l'ensemble vide. Cette valeur signifie que l'EVM s'est réellement arrêtée, il n'y a simplement aucune donnée de retour à lire.
 - Si nous avons un code d'opération d'arrêt qui produit une sortie (soit [`RETURN`](https://www.evm.codes/#f3) soit [`REVERT`](https://www.evm.codes/#fd)), renvoyez la séquence d'octets spécifiée par ce code d'opération. Cette séquence est extraite de la mémoire, la valeur en haut de la pile (_μ<sub>s</sub>[0]_) est le premier octet, et la valeur qui la suit (_μ<sub>s</sub>[1]_) est la longueur.
 
-## H.2 Jeu d'instructions {#h2-instruction-set}
+## H.2 Jeu d'instructions
 
-Avant de passer à la dernière sous-section de l'EVM, 9.5, examinons les instructions elles-mêmes. Elles sont définies dans l'Annexe H.2 qui commence à la p. 29. Tout ce qui n'est pas spécifié comme changeant avec ce code d'opération spécifique est censé rester le même. Les variables qui changent sont spécifiées avec un \<quelque chose\>′.
+Avant de passer à la dernière sous-section de l'EVM, 9.5, examinons les instructions elles-mêmes. Elles sont définies dans l'Annexe H.2 qui commence à la p. 30. Tout ce qui n'est pas spécifié comme changeant avec ce code d'opération spécifique est censé rester le même. Les variables qui changent sont spécifiées avec un \<quelque chose\>′.
 
 Par exemple, regardons le code d'opération [`ADD`](https://www.evm.codes/#01).
 
@@ -216,57 +209,55 @@ Par exemple, regardons le code d'opération [`ADD`](https://www.evm.codes/#01).
 |  0x01 | ADD      | 2   | 1   | Opération d'addition.                                       |
 |       |          |     |     | _μ′<sub>s</sub>[0] ≡ μ<sub>s</sub>[0] + μ<sub>s</sub>[1]_ |
 
-_δ_ est le nombre de valeurs que nous retirons de la pile. Dans ce cas, deux, car nous additionnons les deux valeurs supérieures.
+_δ_ est le nombre de valeurs que nous retirons de la pile. Dans ce cas deux, car nous additionnons les deux valeurs supérieures.
 
-_α_ est le nombre de valeurs que nous rajoutons. Dans ce cas, une, la somme.
+_α_ est le nombre de valeurs que nous rajoutons. Dans ce cas une, la somme.
 
 Donc le nouveau sommet de la pile (_μ′<sub>s</sub>[0]_) est la somme de l'ancien sommet de la pile (_μ<sub>s</sub>[0]_) et de l'ancienne valeur en dessous (_μ<sub>s</sub>[1]_).
 
-Au lieu de passer en revue tous les codes d'opération avec une liste interminable, cet article n'explique que les codes d'opération qui introduisent quelque chose de nouveau.
+Au lieu de passer en revue tous les codes d'opération avec une "liste à en perdre la vue", cet article n'explique que les codes d'opération qui introduisent quelque chose de nouveau.
 
 | Valeur | Mnémonique  | δ   | α   | Description                                                                                                |
 | ----: | --------- | --- | --- | ---------------------------------------------------------------------------------------------------------- |
-|  0x20 | KECCAK256 | 2   | 1   | Calcule le hachage Keccak-256.                                                                                   |
+|  0x20 | KECCAK256 | 2   | 1   | Calculer le hash Keccak-256.                                                                                   |
 |       |           |     |     | _μ′<sub>s</sub>[0] ≡ KEC(μ<sub>m</sub>[μ<sub>s</sub>[0] . . . (μ<sub>s</sub>[0] + μ<sub>s</sub>[1] − 1)])_ |
 |       |           |     |     | _μ′<sub>i</sub> ≡ M(μ<sub>i</sub>,μ<sub>s</sub>[0],μ<sub>s</sub>[1])_                                      |
 
-C'est le premier code d'opération qui accède à la mémoire (dans ce cas, en lecture seule). Cependant, il pourrait s'étendre au-delà des limites actuelles de la mémoire, nous devons donc mettre à jour _μ<sub>i</sub>._ Nous faisons cela en utilisant la fonction _M_ définie dans l'équation 328 à la p. 29.
+C'est le premier code d'opération qui accède à la mémoire (dans ce cas, en lecture seule). Cependant, il pourrait s'étendre au-delà des limites actuelles de la mémoire, nous devons donc mettre à jour _μ<sub>i</sub>._ Nous le faisons en utilisant la fonction _M_ définie dans l'équation 330 à la p. 30.
 
 | Valeur | Mnémonique | δ   | α   | Description                       |
 | ----: | -------- | --- | --- | --------------------------------- |
-|  0x31 | BALANCE  | 1   | 1   | Obtient le solde du compte donné. |
+|  0x31 | BALANCE  | 1   | 1   | Obtenir le solde du compte donné. |
 |       |          |     |     | ...                               |
 
 L'adresse dont nous devons trouver le solde est _μ<sub>s</sub>[0] mod 2<sup>160</sup>_. Le sommet de la pile est l'adresse, mais comme les adresses ne font que 160 bits, nous calculons la valeur [modulo](https://en.wikipedia.org/wiki/Modulo_operation) 2<sup>160</sup>.
 
-Si _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] ≠ ∅_, cela signifie qu'il y a des informations sur cette adresse. Dans ce cas, _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>]<sub>b</sub>_ est le solde de cette adresse. Si _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] = ∅_, cela signifie que cette adresse n'est pas initialisée et que le solde est nul. Vous pouvez voir la liste des champs d'information du compte dans la section 4.1 à la p. 4.
+Si _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] ≠ ∅_, cela signifie qu'il y a des informations sur cette adresse. Dans ce cas, _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>]<sub>b</sub>_ est le solde de cette adresse. Si _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] = ∅_, cela signifie que cette adresse n'est pas initialisée et que le solde est nul. Vous pouvez voir la liste des champs d'informations de compte dans la section 4.1 à la p. 4.
 
-La deuxième équation, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub>[0] mod 2<sup>160</sup>}_, est liée à la différence de coût entre l'accès au stockage chaud (stockage qui a été récemment consulté et qui est susceptible d'être mis en cache) et au stockage froid (stockage qui n'a pas été consulté et qui est susceptible de se trouver dans un stockage plus lent et plus coûteux à récupérer). _A<sub>a</sub>_ est la liste des adresses précédemment consultées par la transaction, qui devraient donc être moins chères d'accès, comme défini dans la section 6.1 à la p. 8. Vous pouvez en savoir plus sur ce sujet dans l'[EIP-2929](https://eips.ethereum.org/EIPS/eip-2929).
+La deuxième équation, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub>[0] mod 2<sup>160</sup>}_, est liée à la différence de coût entre l'accès au stockage chaud (stockage qui a été récemment consulté et qui est susceptible d'être mis en cache) et au stockage froid (stockage qui n'a pas été consulté et qui est susceptible de se trouver dans un stockage plus lent et plus coûteux à récupérer). _A<sub>a</sub>_ est la liste des adresses précédemment consultées par la transaction, qui devraient donc être moins chères d'accès, comme défini dans la section 6.1 à la p. 9. Vous pouvez en savoir plus sur ce sujet dans l'[EIP-2929](https://eips.ethereum.org/EIPS/eip-2929).
 
 | Valeur | Mnémonique | δ   | α   | Description                             |
 | ----: | -------- | --- | --- | --------------------------------------- |
-|  0x8F | DUP16    | 16  | 17  | Duplique le 16ème élément de la pile.              |
+|  0x8F | DUP16    | 16  | 17  | Dupliquer le 16ème élément de la pile.              |
 |       |          |     |     | _μ′<sub>s</sub>[0] ≡ μ<sub>s</sub>[15]_ |
 
-Notez que pour utiliser n'importe quel élément de la pile, nous devons le retirer, ce qui signifie que nous devons également retirer tous les éléments de la pile qui se trouvent au-dessus de lui. Dans le cas de [`DUP<n>`](https://www.evm.codes/#8f) et [`SWAP<n>`](https://www.evm.codes/#9f), cela signifie devoir retirer puis rajouter jusqu'à seize valeurs.
-
-## 9.5 Le cycle d'exécution {#95-exec-cycle}
+Notez que pour utiliser n'importe quel élément de la pile, nous devons le retirer, ce qui signifie que nous devons également retirer tous les éléments de la pile au-dessus de lui. Dans le cas de [`DUP<n>`](https://www.evm.codes/#8f) et [`SWAP<n>`](https://www.evm.codes/#9f), cela signifie devoir retirer puis rajouter jusqu'à seize valeurs.
+## 9.5 Le cycle d'exécution
 
 Maintenant que nous avons toutes les parties, nous pouvons enfin comprendre comment le cycle d'exécution de l'EVM est documenté.
 
-L'équation (155) indique qu'étant donné l'état :
+L'équation (164) indique qu'étant donné l'état :
 
 - _σ_ (état global de la chaîne de blocs)
 - _μ_ (état de l'EVM)
-- _A_ (sous-état, modifications devant se produire à la fin de la transaction)
+- _A_ (sous-état, modifications à apporter à la fin de la transaction)
 - _I_ (environnement d'exécution)
 
 Le nouvel état est _(σ', μ', A', I')_.
 
-Les équations (156)-(158) définissent la pile et sa modification due à un code d'opération (_μ<sub>s</sub>_). L'équation (159) est la modification du gaz (_μ<sub>g</sub>_). L'équation (160) est la modification du compteur de programme (_μ<sub>pc</sub>_). Enfin, les équations (161)-(164) précisent que les autres paramètres restent les mêmes, à moins qu'ils ne soient explicitement modifiés par le code d'opération.
+Les équations (165)-(167) définissent la pile et sa modification due à un code d'opération (_μ<sub>s</sub>_). L'équation (168) est la modification du gaz (_μ<sub>g</sub>_). L'équation (169) est la modification du compteur de programme (_μ<sub>pc</sub>_). Enfin, les équations (170)-(173) spécifient que les autres paramètres restent les mêmes, à moins qu'ils ne soient explicitement modifiés par le code d'opération.
 
 Avec cela, l'EVM est entièrement définie.
-
 ## Conclusion {#conclusion}
 
 La notation mathématique est précise et a permis au livre jaune de spécifier chaque détail d'Ethereum. Cependant, elle présente quelques inconvénients :

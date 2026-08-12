@@ -4,34 +4,31 @@ description: "Một tiêu chuẩn cho các kho tiền sinh lời."
 lang: vi
 ---
 
-## Giới thiệu {#introduction}
-
-ERC-4626 là một tiêu chuẩn để tối ưu hóa và thống nhất các thông số kỹ thuật của các kho tiền sinh lời. Nó cung cấp một API tiêu chuẩn cho các kho tiền sinh lời được token hóa đại diện cho cổ phần của một token ERC-20 cơ sở duy nhất. ERC-4626 cũng phác thảo một tiện ích mở rộng tùy chọn cho các kho tiền được token hóa sử dụng ERC-20, cung cấp chức năng cơ bản để gửi tiền, rút tiền token và đọc số dư.
+ERC-4626 là một tiêu chuẩn để tối ưu hóa và thống nhất các thông số kỹ thuật của các kho tiền sinh lời (yield-bearing vaults). Nó cung cấp một API tiêu chuẩn cho các kho tiền sinh lời được token hóa, đại diện cho cổ phần của một token ERC-20 cơ sở duy nhất. ERC-4626 cũng phác thảo một tiện ích mở rộng tùy chọn cho các kho tiền được token hóa sử dụng ERC-20, cung cấp chức năng cơ bản để gửi tiền, rút tiền token và đọc số dư.
 
 **Vai trò của ERC-4626 trong các kho tiền sinh lời**
 
-Các thị trường cho vay, công cụ tổng hợp và các token có khả năng sinh lãi nội tại giúp người dùng tìm thấy lợi nhuận tốt nhất trên các token tiền mã hóa của họ bằng cách thực hiện các chiến lược khác nhau. Các chiến lược này được thực hiện với một chút biến thể, điều này có thể dễ gây ra lỗi hoặc lãng phí tài nguyên phát triển.
+Các thị trường cho vay, công cụ tổng hợp và các token có bản chất sinh lãi giúp người dùng tìm thấy lợi nhuận tốt nhất trên các token tiền mã hóa của họ bằng cách thực hiện các chiến lược khác nhau. Các chiến lược này được thực hiện với một chút khác biệt, điều này có thể dễ gây ra lỗi hoặc lãng phí tài nguyên phát triển.
 
-ERC-4626 trong các kho tiền sinh lời sẽ làm giảm nỗ lực tích hợp và mở khóa quyền truy cập vào lợi nhuận trong các ứng dụng khác nhau với ít nỗ lực chuyên môn từ các nhà phát triển bằng cách tạo ra các mô hình triển khai nhất quán và mạnh mẽ hơn.
+ERC-4626 trong các kho tiền sinh lời sẽ làm giảm nỗ lực tích hợp và mở khóa quyền truy cập vào lợi nhuận trong các ứng dụng khác nhau với ít nỗ lực chuyên môn từ các nhà phát triển bằng cách tạo ra các mẫu triển khai nhất quán và mạnh mẽ hơn.
 
 Token ERC-4626 được mô tả đầy đủ trong [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
 
 **Tiện ích mở rộng kho tiền bất đồng bộ (ERC-7540)**
 
-ERC-4626 được tối ưu hóa cho các khoản tiền gửi và quy đổi nguyên tử (atomic) lên đến một giới hạn. Nếu đạt đến giới hạn, không có khoản tiền gửi hoặc quy đổi mới nào có thể được gửi. Hạn chế này không hoạt động tốt đối với bất kỳ hệ thống hợp đồng thông minh nào có các hành động bất đồng bộ hoặc sự chậm trễ như một điều kiện tiên quyết để giao tiếp với Kho tiền (ví dụ: các giao thức tài sản thế giới thực, các giao thức cho vay dưới mức thế chấp, các giao thức cho vay chuỗi chéo, token staking thanh khoản (LST) hoặc các mô-đun an toàn bảo hiểm).
+ERC-4626 được tối ưu hóa cho các khoản tiền gửi và quy đổi nguyên tử (atomic) cho đến một giới hạn nhất định. Nếu đạt đến giới hạn, không có khoản tiền gửi hoặc quy đổi mới nào có thể được gửi. Hạn chế này không hoạt động tốt đối với bất kỳ hệ thống hợp đồng thông minh nào có các hành động bất đồng bộ hoặc độ trễ như một điều kiện tiên quyết để giao tiếp với Kho tiền (ví dụ: các giao thức tài sản thế giới thực, giao thức cho vay dưới mức thế chấp, giao thức cho vay chuỗi chéo, các token staking thanh khoản (LST) hoặc các mô-đun an toàn bảo hiểm).
 
-ERC-7540 mở rộng tiện ích của các Kho tiền ERC-4626 cho các trường hợp sử dụng bất đồng bộ. Giao diện Kho tiền hiện có (`deposit`/`withdraw`/`mint`/`redeem`) được sử dụng đầy đủ để yêu cầu nhận các Yêu cầu bất đồng bộ.
+ERC-7540 mở rộng tiện ích của các Kho tiền ERC-4626 cho các trường hợp sử dụng bất đồng bộ. Giao diện Kho tiền hiện tại (`deposit`/`withdraw`/`mint`/`redeem`) được sử dụng triệt để để yêu cầu nhận các Yêu cầu bất đồng bộ.
 
-Tiện ích mở rộng ERC-7540 được mô tả đầy đủ trong [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
+Tìm hiểu thêm về [Kho tiền được token hóa bất đồng bộ ERC-7540](/developers/docs/standards/tokens/erc-7540/).
 
 **Tiện ích mở rộng kho tiền đa tài sản (ERC-7575)**
 
-Một trường hợp sử dụng còn thiếu không được ERC-4626 hỗ trợ là các Kho tiền có nhiều tài sản hoặc điểm vào như Token của nhà cung cấp thanh khoản (LP). Những điều này thường cồng kềnh hoặc không tuân thủ do yêu cầu của ERC-4626 là bản thân nó phải là một ERC-20.
+Một trường hợp sử dụng còn thiếu không được ERC-4626 hỗ trợ là các Kho tiền có nhiều tài sản hoặc điểm vào như các Token của nhà cung cấp thanh khoản (LP). Những kho tiền này thường cồng kềnh hoặc không tuân thủ do yêu cầu của ERC-4626 là bản thân nó phải là một ERC-20.
 
-ERC-7575 bổ sung hỗ trợ cho các Kho tiền có nhiều tài sản bằng cách tách biệt việc triển khai token ERC-20 khỏi việc triển khai ERC-4626.
+ERC-7575 bổ sung hỗ trợ cho các Kho tiền có nhiều tài sản bằng cách tách biệt việc triển khai token ERC-20 ra khỏi việc triển khai ERC-4626.
 
 Tiện ích mở rộng ERC-7575 được mô tả đầy đủ trong [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575).
-
 ## Điều kiện tiên quyết {#prerequisites}
 
 Để hiểu rõ hơn về trang này, chúng tôi khuyên bạn trước tiên nên đọc về [các tiêu chuẩn token](/developers/docs/standards/tokens/) và [ERC-20](/developers/docs/standards/tokens/erc-20/).

@@ -268,6 +268,16 @@ ethers.utils.formatEther(balance)
 - [Documentation](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
+**wagmi -** **_React hooks library for Ethereum, built on top of viem._**
+
+- [Documentation](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_React library for adding wallet connection to dapps, built on wagmi and viem._**
+
+- [Documentation](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
+
 **Codex -** **_Real-time, enriched blockchain data API across dozens of chains._**
 
 - [Documentation](https://docs.codex.io)

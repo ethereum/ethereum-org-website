@@ -55,12 +55,13 @@ incomplete: true
 
 ## Python ప్రాజెక్ట్‌లు మరియు టూల్స్ {#python-projects-and-tools}
 
-### యాక్టివ్: {#active}
-
+### క్రియాశీలమైనవి:
 - [Web3.py](https://github.com/ethereum/web3.py) - _ఎథీరియంతో ఇంటరాక్ట్ అవ్వడానికి Python లైబ్రరీ_
 - [Vyper](https://github.com/ethereum/vyper/) - _EVM కోసం పైథానిక్ స్మార్ట్ కాంట్రాక్ట్ భాష_
-- [Ape](https://github.com/ApeWorX/ape) - _పైథానిస్టాలు, డేటా సైంటిస్ట్‌లు మరియు సెక్యూరిటీ ప్రొఫెషనల్స్ కోసం స్మార్ట్ కాంట్రాక్ట్ డెవలప్‌మెంట్ టూల్_
-- [py-evm](https://github.com/ethereum/py-evm) - _ఎథీరియం వర్చువల్ మెషీన్ యొక్క అమలు_
+- [Titanoboa](https://github.com/vyperlang/titanoboa/) - _Vyper యొక్క స్థానిక టెస్టింగ్ టూల్; మెయిన్‌నెట్ ఫోర్కింగ్, డీబగ్గింగ్ మరియు అందమైన ట్రేస్‌బ్యాక్‌లతో కూడిన ఇంటర్‌ప్రెటర్_
+- [Moccasin](https://github.com/Cyfrin/moccasin) - _Titanoboaపై నిర్మించబడిన Vyper మరియు Python కోసం స్మార్ట్ కాంట్రాక్ట్ డెవలప్‌మెంట్ మరియు టెస్టింగ్ ఫ్రేమ్‌వర్క్_
+- [Ape](https://github.com/ApeWorX/ape) - _పైథానిస్టాలు, డేటా సైంటిస్టులు మరియు సెక్యూరిటీ ప్రొఫెషనల్స్ కోసం స్మార్ట్ కాంట్రాక్ట్ డెవలప్‌మెంట్ టూల్_
+- [py-evm](https://github.com/ethereum/py-evm) - _ఎథీరియం వర్చువల్ మెషిన్ యొక్క అమలు_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _ఎథీరియం-ఆధారిత అప్లికేషన్‌లను పరీక్షించడానికి టూల్స్_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _ఎథీరియం సంబంధిత కోడ్‌బేస్‌లతో పనిచేయడానికి యుటిలిటీ ఫంక్షన్‌లు_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _0.5.x మద్దతుతో solc Solidity కంపైలర్ చుట్టూ Python ర్యాపర్_
@@ -68,8 +69,7 @@ incomplete: true
 - [siwe](https://github.com/signinwithethereum/siwe-py) - _Python కోసం ఎథీరియంతో సైన్ ఇన్ చేయండి (SIWE)_
 - [ఎథీరియం ఇంటిగ్రేషన్‌ల కోసం Web3 వికేంద్రీకృత ఫైనాన్స్ (DeFi)](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _ERC-20, యూనిస్వాప్ మరియు ఇతర ప్రసిద్ధ ప్రాజెక్ట్‌ల కోసం సిద్ధంగా ఉన్న ఇంటిగ్రేషన్‌లతో కూడిన Python ప్యాకేజీ_
 - [Wake](https://getwake.io) - _కాంట్రాక్ట్‌ల టెస్టింగ్, ఫజ్జింగ్, డిప్లాయ్‌మెంట్, వల్నరబిలిటీ స్కానింగ్ మరియు కోడ్ నావిగేషన్ కోసం ఆల్-ఇన్-వన్ Python ఫ్రేమ్‌వర్క్ (లాంగ్వేజ్ సర్వర్ - [Solidity కోసం టూల్స్](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
-- [DeFiPy](https://github.com/defipy-devs/defipy) - _యూనిస్వాప్ V2/V3, Balancer మరియు Curve అంతటా వికేంద్రీకృత ఫైనాన్స్ (DeFi) విశ్లేషణలు మరియు స్వయంచాలక మార్కెట్ మేకర్ (amm) అనుకరణ కోసం Python SDK_
-
+- [DeFiPy](https://github.com/defipy-devs/defipy) - _యూనిస్వాప్ V2/V3, Balancer మరియు Curve అంతటా వికేంద్రీకృత ఫైనాన్స్ (DeFi) అనలిటిక్స్ మరియు స్వయంచాలక మార్కెట్ మేకర్ (amm) సిమ్యులేషన్ కోసం Python SDK_
 ### ఆర్కైవ్ చేయబడినవి / ఇకపై నిర్వహించబడనివి: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _ఎథీరియం Python క్లయింట్_

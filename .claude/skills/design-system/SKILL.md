@@ -26,7 +26,7 @@ When the existing primitive doesn't quite fit, the answer is usually "add a vari
 2. **No raw color values.** Use semantic tokens (`text-body`, `bg-background`, `border-border`, `text-primary`). Hex literals and `rgb()` calls bypass dark mode.
 3. **Prefer adding a variant** to an existing primitive over creating a new component. Card, Button, Alert, Tag are the most common targets.
 4. **Server Components by default.** Only `"use client"` when you need state, effects, browser APIs, or inline event handlers.
-5. **All text is translatable.** `getTranslations` (server) or `useTranslations` (client) from `next-intl`. Never hard-code user-facing English.
+5. **All text is translatable.** `getTranslations` from `next-intl/server` (server) or `useTranslations` from `next-intl` (client). One namespace-bound `t` per namespace -- bind a second function (e.g. `const tCommon = useTranslations("common")`) to access another namespace. The legacy `@/hooks/useTranslation` wrapper is deprecated for new code. Never hard-code user-facing English. **In an `app/[locale]/` page or `generateMetadata`, call `setRequestLocale(locale)` before any next-intl API** or on-demand renders throw `static to dynamic ... reason: headers` -- see `references/i18n-rtl.md`.
 6. **Logical CSS for direction.** Use `ms-`/`me-`/`ps-`/`pe-`/`inset-s-`/`inset-e-`/`border-s`/`border-e`/`text-start`/`text-end`. The site supports Arabic and Urdu (RTL). Hard-coded `left-`/`right-`/`ml-`/`mr-`/`pl-`/`pr-` breaks RTL.
 7. **Locale-aware formatters.** `numberFormat()` from `@/lib/utils/numbers`, `dateTimeFormat()` from `@/lib/utils/date`. Never `toLocaleString` / `Intl.NumberFormat` directly.
 8. **`useRtlFlip()` for directional icons** (right-pointing arrows/chevrons). Or use `ChevronNext`/`ChevronPrev` from `@/components/Chevron`.
@@ -93,7 +93,7 @@ Only **two** project shadows exist, both in `utilities.css`, for the brand-tinte
 - `shadow-primary-xl` -- `shadow-xl` tinted with `primary-low-contrast`, for large framed / window-style boxes.
 - `shadow-primary-no-blur-*` -- functional, spacing-scaled solid (no-blur) offset (`-1` = 4px, `-0.5` = 2px) in `primary-low-contrast`, for hard hover offsets.
 
-Before reaching for anything new: a default almost always fits, and a **hover lift is the `hover-lift-*` utility** (`-xs`/`-base`/`-sm`/`-md`) or `Card hoverLift` -- not a bespoke shadow swap. If you genuinely need a custom shadow, write it as a **raw `box-shadow`** (like the two above), never an arbitrary `shadow-[...]`: arbitrary shadows route their color through `--tw-shadow-color`, which the global `* { dark:shadow-body }` rule overrides in dark mode, silently graying your color. Raw `box-shadow` utilities are immune.
+Before reaching for anything new: a default almost always fits, and a **hover lift is the `hover-lift-*` utility** (`-xs`/`-base`/`-sm`/`-md`) or `Card hoverLift` -- not a bespoke shadow swap. Those utilities gate their scale behind `motion-safe:`, so the shadow step alone carries the cue under `prefers-reduced-motion`; do the same for any new hover transform. If you genuinely need a custom shadow, write it as a **raw `box-shadow`** (like the two above), never an arbitrary `shadow-[...]`: arbitrary shadows route their color through `--tw-shadow-color`, which the global `* { dark:shadow-body }` rule overrides in dark mode, silently graying your color. Raw `box-shadow` utilities are immune.
 
 ### One stray `toLocaleString` in `ui/chart.tsx:241`
 
@@ -132,7 +132,7 @@ Pull these in only when the trigger applies. Don't read them all upfront.
 - **`references/gotchas.md`** -- Load when you hit unexpected behavior in a primitive (auto-blur backdrop, slot-prop coupling, hidden client boundary, etc.) or want the long-tail confusion patterns beyond what's inline above.
 - **`references/variant-vs-new.md`** -- Load when you're tempted to create a new component file. Read this first to confirm whether a variant is the right answer.
 - **`references/cleanup-playbook.md`** -- Load when refactoring existing code that has anti-patterns (one-off styling, raw `<a>`/`<button>`, hex colors, hard-coded English, etc.). The "old pattern -> new pattern" map.
-- **`references/i18n-rtl.md`** -- Load when adding user-facing text, formatting numbers/dates, working with directional spacing, or writing translation keys.
+- **`references/i18n-rtl.md`** -- Load when adding user-facing text, formatting numbers/dates, working with directional spacing, writing translation keys, or authoring an `app/[locale]/` page or `generateMetadata` (the `setRequestLocale`-first rule).
 - **`references/server-vs-client.md`** -- Load when deciding whether to mark a component `"use client"`, structuring a page that mixes static and interactive parts, or refactoring across the SSR boundary.
 - **`references/a11y.md`** -- Load when adding interactive elements (modals, dropdowns, custom click targets), building forms, or working with images and headings.
 - **`references/card-walkthrough.md`** -- Load when starting any card-shaped UI work; an end-to-end worked example.

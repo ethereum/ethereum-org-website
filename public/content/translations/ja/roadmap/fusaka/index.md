@@ -3,6 +3,7 @@ title: "フサカ 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
 description: フサカ・プロトコル・アップグレードについて学ぶ
 lang: ja
+template: upgrade
 authors: ["Nixo", "マリオ・ハベル"]
 ---
 

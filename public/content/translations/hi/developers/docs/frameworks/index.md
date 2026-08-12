@@ -20,7 +20,7 @@ lang: hi
 
 फ्रेमवर्क में गहराई से जाने से पहले, हम अनुशंसा करते हैं कि आप पहले [dapps](/developers/docs/dapps/) और [इथेरियम स्टैक](/developers/docs/ethereum-stack/) के हमारे परिचय को पढ़ें।
 
-## उपलब्ध फ्रेमवर्क {#available-frameworks}
+## उपलब्ध फ्रेमवर्क
 
 **Foundry** - **_Foundry इथेरियम एप्लिकेशन विकास के लिए एक बेहद तेज़, पोर्टेबल और मॉड्यूलर टूलकिट है_**
 
@@ -34,7 +34,7 @@ lang: hi
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-**Ape -** **_Python विशेषज्ञों, डेटा वैज्ञानिकों और सुरक्षा पेशेवरों के लिए स्मार्ट अनुबंध विकास टूल।_**
+**Ape -** **_Pythonistas, डेटा वैज्ञानिकों और सुरक्षा पेशेवरों के लिए स्मार्ट अनुबंध विकास टूल।_**
 
 - [दस्तावेज़ीकरण](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
@@ -45,7 +45,7 @@ lang: hi
 - [दस्तावेज़ीकरण](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
-**ethers-kt -** **_EVM-आधारित ब्लॉकचेन के लिए एसिंक (Async), उच्च-प्रदर्शन वाली Kotlin/Java/Android लाइब्रेरी।_**
+**ethers-kt -** **_EVM-आधारित ब्लॉकचेन के लिए एसिंक, उच्च-प्रदर्शन वाली Kotlin/Java/Android लाइब्रेरी।_**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [उदाहरण](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
@@ -56,11 +56,12 @@ lang: hi
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [टेम्प्लेट](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-ETH -** **_Web3 के लिए Ethers.js + Hardhat + React कंपोनेंट्स और हुक्स: स्मार्ट अनुबंधों द्वारा संचालित विकेंद्रीकृत एप्लिकेशन बनाना शुरू करने के लिए आवश्यक सब कुछ।_**
+**Scaffold-ETH 2 -** **_Hardhat या Foundry की आपकी पसंद के साथ Next.js, Wagmi, Viem और RainbowKit: अनुबंध हॉट रीलोड, कस्टम React हुक, एक बर्नर वॉलेट और स्थानीय फॉसेट, और फुल-स्टैक विकेंद्रीकृत एप्लिकेशन (dapp) विकास के लिए एक्सटेंशन मॉड्यूल।_**
 
+- [वेबसाइट](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Web3 विकास प्लेटफ़ॉर्म जो ब्लॉकचेन डेवलपर्स को स्मार्ट अनुबंध बनाने, परीक्षण करने, डिबग करने, मॉनिटर करने और संचालित करने तथा dapp UX को बेहतर बनाने में सक्षम बनाता है।_**
+**Tenderly -** **_Web3 विकास प्लेटफ़ॉर्म जो ब्लॉकचेन डेवलपर्स को स्मार्ट अनुबंध बनाने, परीक्षण करने, डीबग करने, मॉनिटर करने और संचालित करने और dapp UX को बेहतर बनाने में सक्षम बनाता है।_**
 
 - [वेबसाइट](https://tenderly.co/)
 - [दस्तावेज़ीकरण](https://docs.tenderly.co/)
@@ -82,7 +83,7 @@ lang: hi
 - [GitHub](https://github.com/node-real)
 - [डिस्कॉर्ड](https://discord.gg/V5k5gsuE)
 
-**thirdweb SDK -** **_हमारे शक्तिशाली SDKs और CLI का उपयोग करके ऐसे Web3 एप्लिकेशन बनाएं जो आपके स्मार्ट अनुबंधों के साथ इंटरैक्ट कर सकें।_**
+**thirdweb SDK -** **_हमारे शक्तिशाली SDK और CLI का उपयोग करके ऐसे Web3 एप्लिकेशन बनाएं जो आपके स्मार्ट अनुबंधों के साथ इंटरैक्ट कर सकें।_**
 
 - [दस्तावेज़ीकरण](https://portal.thirdweb.com/sdk/)
 - [GitHub](https://github.com/thirdweb-dev/)
@@ -109,28 +110,28 @@ lang: hi
 
 - [ओपनजेपेलिन Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
-- [कम्युनिटी फोरम](https://forum.openzeppelin.com/c/support/17)
+- [कम्युनिटी फ़ोरम](https://forum.openzeppelin.com/c/support/17)
 - **ओपनजेपेलिन SDK का विकास समाप्त हो गया है**
 
-**Catapulta -** **_मल्टी-चेन स्मार्ट अनुबंध तैनाती टूल, ब्लॉक एक्सप्लोरर में सत्यापन को स्वचालित करता है, तैनात स्मार्ट अनुबंधों का ट्रैक रखता है और तैनाती रिपोर्ट साझा करता है, Foundry और Hardhat प्रोजेक्ट्स के लिए प्लग-एन-प्ले।_**
+**Catapulta -** **_मल्टी-चेन स्मार्ट अनुबंध तैनाती टूल, ब्लॉक एक्सप्लोरर में सत्यापन को स्वचालित करें, तैनात स्मार्ट अनुबंधों का ट्रैक रखें और तैनाती रिपोर्ट साझा करें, Foundry और Hardhat प्रोजेक्ट्स के लिए प्लग-एन-प्ले।_**
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (Covalent द्वारा संचालित) -** **_GoldRush डेवलपर्स, विश्लेषकों और उद्यमों के लिए सबसे व्यापक ब्लॉकचेन डेटा API सूट प्रदान करता है। चाहे आप DeFi डैशबोर्ड, वॉलेट, ट्रेडिंग बॉट, एआई एजेंट या अनुपालन प्लेटफ़ॉर्म बना रहे हों, डेटा APIs आपके लिए आवश्यक ऑनचेन डेटा तक तेज़, सटीक और डेवलपर-अनुकूल पहुँच प्रदान करते हैं_**
+**GoldRush (Covalent द्वारा संचालित) -** **_GoldRush डेवलपर्स, विश्लेषकों और उद्यमों के लिए सबसे व्यापक ब्लॉकचेन डेटा API सूट प्रदान करता है। चाहे आप एक DeFi डैशबोर्ड, एक वॉलेट, एक ट्रेडिंग बॉट, एक एआई एजेंट या एक अनुपालन प्लेटफ़ॉर्म बना रहे हों, डेटा API आपको आवश्यक ऑनचेन डेटा तक तेज़, सटीक और डेवलपर-अनुकूल पहुंच प्रदान करते हैं_**
 
 - [वेबसाइट](https://goldrush.dev/)
 - [दस्तावेज़ीकरण](https://goldrush.dev/docs/chains/ethereum)
 - [GitHub](https://github.com/covalenthq)
 - [डिस्कॉर्ड](https://www.covalenthq.com/discord/)
 
-**Wake -** **_अनुबंध परीक्षण, फ़ज़िंग (fuzzing), तैनाती, भेद्यता स्कैनिंग और कोड नेविगेशन के लिए ऑल-इन-वन Python फ्रेमवर्क।_**
+**Wake -** **_अनुबंध परीक्षण, फ़ज़िंग, तैनाती, भेद्यता स्कैनिंग और कोड नेविगेशन के लिए ऑल-इन-वन Python फ्रेमवर्क।_**
 
 - [होमपेज](https://getwake.io/)
 - [दस्तावेज़ीकरण](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS Code एक्सटेंशन](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_ओपन सोर्स, मॉड्यूलर और एग्नॉस्टिक फ्रेमवर्क जो विकेंद्रीकृत एप्लिकेशन डेवलपर्स के लिए अपने एप्लिकेशन में विकेंद्रीकृत पहचान और सत्यापन योग्य क्रेडेंशियल्स बनाना आसान बनाता है।_**
+**Veramo -** **_ओपन सोर्स, मॉड्यूलर और एग्नोस्टिक फ्रेमवर्क जो विकेंद्रीकृत एप्लिकेशन डेवलपर्स के लिए अपने एप्लिकेशन में विकेंद्रीकृत पहचान और सत्यापन योग्य क्रेडेंशियल बनाना आसान बनाता है।_**
 
 - [होमपेज](https://veramo.io/)
 - [दस्तावेज़ीकरण](https://veramo.io/docs/basics/introduction)
@@ -138,6 +139,10 @@ lang: hi
 - [डिस्कॉर्ड](https://discord.com/invite/FRRBdjemHV)
 - [NPM पैकेज](https://www.npmjs.com/package/@veramo/core)
 
+**Moccasin -** **_Titanoboa पर निर्मित, Vyper के लिए एक तेज़, Pythonic स्मार्ट अनुबंध विकास और परीक्षण फ्रेमवर्क।_**
+
+- [दस्तावेज़ीकरण](https://cyfrin.github.io/moccasin/)
+- [GitHub](https://github.com/Cyfrin/moccasin)
 ## आगे की पढ़ाई {#further-reading}
 
 _क्या आप किसी ऐसे कम्युनिटी संसाधन के बारे में जानते हैं जिसने आपकी मदद की हो? इस पेज को संपादित करें और इसे जोड़ें!_

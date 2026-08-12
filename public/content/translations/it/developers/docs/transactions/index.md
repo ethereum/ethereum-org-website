@@ -238,3 +238,7 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 - [Account](/developers/docs/accounts/)
 - [Ethereum Virtual Machine (EVM)](/developers/docs/evm/)
 - [Gas](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

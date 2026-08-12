@@ -59,9 +59,6 @@
   "page-collectibles-translations-250": "Lencana 250 kata",
   "page-collectibles-translations-50000": "Lencana 50.000 kata",
   "page-collectibles-translations-badge-desc": "Ke bahasa apa pun.",
-  "page-collectibles-translations-desc": "Sebagian besar pengguna tidak berbicara bahasa Inggris, oleh karena itu sangat penting untuk membantu menerjemahkan artikel kami ke bahasa lain, tidak diperlukan pengalaman menerjemahkan.",
-  "page-collectibles-translations-instructions-1": "Daftar di <a href=\"https://crowdin.com/project/ethereum-org\">Crowdin</a>",
-  "page-collectibles-translations-instructions-2": "Pilih bahasa",
-  "page-collectibles-translations-instructions-3": "Mulai menerjemahkan",
+  "page-collectibles-translations-desc": "Lencana ini mengakui kontribusi masa lalu pada Program Terjemahan ethereum.org, yang sedang dihentikan secara bertahap dan tidak lagi melakukan orientasi penerjemah baru.",
   "page-collectibles-translations-title": "Terjemahan"
 }
