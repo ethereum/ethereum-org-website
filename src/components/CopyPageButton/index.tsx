@@ -10,6 +10,7 @@ import {
   Loader2,
 } from "lucide-react"
 import { useLocale } from "next-intl"
+import * as Sentry from "@sentry/nextjs"
 
 import type { MatomoEventOptions } from "@/lib/types"
 
@@ -25,7 +26,6 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 import { cn } from "@/lib/utils/cn"
-import { logger } from "@/lib/utils/logger"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { DEFAULT_LOCALE, SITE_URL } from "@/lib/constants"
@@ -73,20 +73,20 @@ const CopyPageMenuItem = ({
       className="group flex items-start gap-3 px-3 py-2.5 no-underline hover:no-underline"
     >
       <span
-        className="text-body mt-0.5 flex size-5 shrink-0 items-center justify-center"
+        className="mt-0.5 flex size-5 shrink-0 items-center justify-center text-body"
         aria-hidden="true"
       >
         {icon}
       </span>
       <span className="flex min-w-0 flex-1 flex-col gap-0.5">
-        <span className="text-body flex items-center justify-between gap-2 text-sm font-semibold leading-tight">
+        <span className="flex items-center justify-between gap-2 text-sm leading-tight font-semibold text-body">
           <span className="truncate">{title}</span>
           <ArrowUpRight
-            className="text-body-medium group-hover:text-primary-hover size-3.5 shrink-0 transition"
+            className="size-3.5 shrink-0 text-body-medium transition group-hover:text-primary-hover"
             aria-hidden="true"
           />
         </span>
-        <span className="text-body-medium text-xs leading-snug">
+        <span className="text-xs leading-snug text-body-medium">
           {description}
         </span>
       </span>
@@ -134,7 +134,9 @@ const CopyPageButton = ({
       const text = await res.text()
       await onCopy(text)
     } catch (error) {
-      logger.error("Failed to copy page markdown", error, { mdPath })
+      // Silent failure for the user: the button just resets, so report it
+      console.error("Failed to copy page markdown:", error)
+      Sentry.captureException(error, { extra: { mdPath } })
     } finally {
       clearTimeout(showLoadingTimer)
       if (loadingShownAt !== null) {

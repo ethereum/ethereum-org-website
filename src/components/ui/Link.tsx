@@ -7,7 +7,6 @@ import NextLink from "next/link"
 import { MatomoEventOptions } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
-import { logger } from "@/lib/utils/logger"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getRelativePath } from "@/lib/utils/relativePath"
 import * as url from "@/lib/utils/url"
@@ -20,7 +19,7 @@ import { usePathname } from "@/i18n/navigation"
 export const ExternalLinkIcon = () => (
   <ExternalLink
     data-label="arrow"
-    className="mb-0.5! ms-1 inline-block size-[0.875em] max-h-4 max-w-4 shrink-0 rtl:-scale-x-100"
+    className="ms-1 mb-0.5! inline-block size-[0.875em] max-h-4 max-w-4 shrink-0 rtl:-scale-x-100"
   />
 )
 
@@ -64,7 +63,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   const pathname = usePathname()
   if (!href) {
     // If troubleshooting this warning, check for multiple h1's in markdown content—these will result in broken id hrefs
-    logger.warn("Link component missing href prop", { pathname })
+    console.warn(`Link component missing href prop, pathname: ${pathname}`)
     return <a {...props} />
   }
 
@@ -122,7 +121,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         {isMailto ? (
           <span className="text-nowrap">
             {!hideArrow && (
-              <Mail className="!mb-0.5 me-1 inline-block size-[1em] shrink-0" />
+              <Mail className="me-1 !mb-0.5 inline-block size-[1em] shrink-0" />
             )}
             {children}
           </span>
@@ -184,7 +183,7 @@ export const LinkWithArrow = forwardRef<HTMLAnchorElement, LinkProps>(
   ({ children, className, ...props }: LinkProps, ref) => (
     <BaseLink
       className={cn(
-        "visited:text-primary-visited group block w-fit no-underline",
+        "group block w-fit no-underline visited:text-primary-visited",
         className
       )}
       ref={ref}

@@ -3,7 +3,6 @@ import type { GHIssue } from "@/lib/types"
 import Emoji from "@/components/Emoji"
 
 import { cn } from "@/lib/utils/cn"
-import { logger } from "@/lib/utils/logger"
 
 import { getGFIs } from "@/data-layer"
 
@@ -22,14 +21,14 @@ const IssuesList = async ({ className }: IssuesListProps) => {
   try {
     issues = (await getGFIs()) ?? []
   } catch (error) {
-    logger.warn("Failed to fetch GFIs for IssuesList", { error })
+    console.warn("Failed to fetch GFIs for IssuesList:", error)
   }
 
   return (
     <Grid className={cn("my-7", className)}>
       {issues.map((issue) => (
         <Stack
-          className="border-border gap-4 rounded-md border p-4"
+          className="gap-4 rounded-md border border-border p-4"
           key={issue.title}
         >
           <Stack className="gap-2">

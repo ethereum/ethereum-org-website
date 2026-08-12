@@ -11,7 +11,6 @@ import {
   TableRow,
 } from "@/components/ui/table"
 
-import { logger } from "@/lib/utils/logger"
 import { formatSmallUSD } from "@/lib/utils/numbers"
 
 interface GasTableLabels {
@@ -46,9 +45,7 @@ const GasTable = ({ labels, locale, initialData }: GasTableProps) => {
       .then((fresh) => {
         if (fresh) setData(fresh)
       })
-      .catch((error) =>
-        logger.warn("Failed to refresh gas/ETH price", { error })
-      )
+      .catch((err) => console.warn("Failed to refresh gas/ETH price", err))
   }, [])
 
   const calculateCost = (gasUnits: number) => {

@@ -1,5 +1,3 @@
-import { logger } from "@/lib/utils/logger"
-
 import { SITE_URL } from "@/lib/constants"
 
 import type { ABTestAssignment, ABTestConfig } from "./types"
@@ -13,7 +11,7 @@ const getABTestConfigs = async (): Promise<Record<string, ABTestConfig>> => {
     if (!response.ok) return {}
     return await response.json()
   } catch (error) {
-    logger.error("[AB Config] Failed to fetch", error)
+    console.error("[AB Config] Failed to fetch:", error)
     return {}
   }
 }

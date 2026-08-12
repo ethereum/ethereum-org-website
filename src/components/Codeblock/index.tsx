@@ -1,7 +1,5 @@
 import React from "react"
 
-import { logger } from "@/lib/utils/logger"
-
 import CodeblockClient from "./CodeblockClient"
 
 import { highlight, resolveLang } from "@/lib/shiki"
@@ -14,8 +12,8 @@ const getValidChildrenForCodeblock = (child: unknown): string | undefined => {
     } else {
       return child
     }
-  } catch (error) {
-    logger.error("Codeblock children is not valid", error)
+  } catch {
+    console.error(`Codeblock children is not valid`)
   }
 }
 

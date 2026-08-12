@@ -1,4 +1,4 @@
-import { logger } from "@/lib/utils/logger"
+import * as Sentry from "@sentry/nextjs"
 
 import { KNOWN_ORGANIZATIONS } from "./organizations"
 import { KNOWN_PERSONS } from "./persons"
@@ -29,7 +29,7 @@ export const organizationReference = (
  * display name, or GitHub handle. Keys are lowercased for
  * case-insensitive lookup.
  *
- * Warns if two entities claim the same alias.
+ * Warns (console + Sentry) if two entities claim the same alias.
  */
 const ENTITY_ALIASES: Record<string, KnownEntity> = buildEntityAliases()
 
@@ -41,11 +41,8 @@ function buildEntityAliases(): Record<string, KnownEntity> {
     const existing = aliases[lower]
     if (existing && existing !== entity) {
       const message = `JSON-LD alias collision: "${alias}" maps to both ${existing["@id"]} and ${entity["@id"]}. Keeping the first.`
-      logger.warn(message, {
-        alias,
-        existingId: existing["@id"],
-        entityId: entity["@id"],
-      })
+      console.warn(message)
+      Sentry.captureMessage(message, "warning")
       return
     }
     aliases[lower] = entity
