@@ -234,11 +234,11 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       category: t("page-open-source-app-duckduckgo-category"),
     },
     {
-      id: "proton-mail",
-      href: "https://proton.me/mail",
-      name: t("page-open-source-app-proton-mail-name"),
-      description: t("page-open-source-app-proton-mail-description"),
-      category: t("page-open-source-app-proton-mail-category"),
+      id: "cryptomator",
+      href: "https://cryptomator.org",
+      name: t("page-open-source-app-cryptomator-name"),
+      description: t("page-open-source-app-cryptomator-description"),
+      category: t("page-open-source-app-cryptomator-category"),
     },
     {
       id: "thunderbird",
@@ -262,11 +262,11 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       category: t("page-open-source-app-organic-maps-category"),
     },
     {
-      id: "proton-drive",
-      href: "https://proton.me/drive",
-      name: t("page-open-source-app-proton-drive-name"),
-      description: t("page-open-source-app-proton-drive-description"),
-      category: t("page-open-source-app-proton-drive-category"),
+      id: "vlc",
+      href: "https://www.videolan.org/vlc/",
+      name: t("page-open-source-app-vlc-name"),
+      description: t("page-open-source-app-vlc-description"),
+      category: t("page-open-source-app-vlc-category"),
     },
   ].map((app) => ({ ...app, logo: `/images/open-source/${app.id}.png` }))
 
