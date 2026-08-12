@@ -28,9 +28,9 @@ takich jak:
 
 Przed zagłębieniem się we frameworki, zalecamy najpierw przeczytać nasze wprowadzenie do [dapp](/developers/docs/dapps/) oraz [stosu Ethereum](/developers/docs/ethereum-stack/).
 
-## Dostępne frameworki {#available-frameworks}
+## Dostępne frameworki
 
-**Foundry** - **_Foundry to niezwykle szybki, przenośny i modułowy zestaw narzędzi do tworzenia aplikacji na Ethereum_**
+**Foundry** - **_Foundry to niesamowicie szybki, przenośny i modułowy zestaw narzędzi do tworzenia aplikacji na Ethereum_**
 
 - [Zainstaluj Foundry](https://book.getfoundry.sh/)
 - [Książka o Foundry](https://book.getfoundry.sh/)
@@ -47,7 +47,7 @@ Przed zagłębieniem się we frameworki, zalecamy najpierw przeczytać nasze wpr
 - [Dokumentacja](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
 
-**Web3j -** **_Platforma do tworzenia aplikacji blockchain na maszynie wirtualnej Javy (JVM)._**
+**Web3j -** **_Platforma do tworzenia aplikacji blockchain na JVM._**
 
 - [Strona główna](https://www.web3labs.com/web3j-sdk)
 - [Dokumentacja](https://docs.web3j.io)
@@ -64,11 +64,12 @@ Przed zagłębieniem się we frameworki, zalecamy najpierw przeczytać nasze wpr
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Szablony](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-ETH -** **_Ethers.js + Hardhat + komponenty i hooki React dla Web3: wszystko, czego potrzebujesz, aby zacząć budować zdecentralizowane aplikacje oparte na inteligentnych kontraktach._**
+**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem i RainbowKit z wyborem Hardhat lub Foundry: przeładowywanie kontraktów na żywo, niestandardowe hooki React, portfel jednorazowy i lokalny kranik oraz moduły rozszerzeń do tworzenia zdecentralizowanych aplikacji (dapp) typu full-stack._**
 
+- [Strona internetowa](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Platforma programistyczna Web3, która umożliwia programistom blockchain budowanie, testowanie, debugowanie, monitorowanie i obsługę inteligentnych kontraktów oraz poprawę UX dapp._**
+**Tenderly -** **_Platforma programistyczna Web3, która umożliwia programistom blockchain budowanie, testowanie, debugowanie, monitorowanie i obsługę inteligentnych kontraktów oraz poprawę UX dappów._**
 
 - [Strona internetowa](https://tenderly.co/)
 - [Dokumentacja](https://docs.tenderly.co/)
@@ -113,18 +114,18 @@ Przed zagłębieniem się we frameworki, zalecamy najpierw przeczytać nasze wpr
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **Brownie nie jest obecnie utrzymywane**
 
-**OpenZeppelin SDK -** **_Ostateczny zestaw narzędzi dla inteligentnych kontraktów: pakiet narzędzi pomagających w tworzeniu, kompilacji, aktualizacji, wdrażaniu i interakcji z inteligentnymi kontraktami._**
+**OpenZeppelin SDK -** **_Kompleksowy zestaw narzędzi dla inteligentnych kontraktów: pakiet narzędzi pomagających w tworzeniu, kompilacji, aktualizacji, wdrażaniu i interakcji z inteligentnymi kontraktami._**
 
 - [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Forum społeczności](https://forum.openzeppelin.com/c/support/17)
 - **Rozwój OpenZeppelin SDK został zakończony**
 
-**Catapulta -** **_Wielołańcuchowe narzędzie do wdrażania inteligentnych kontraktów, automatyzuje weryfikacje w eksploratorach bloków, śledzi wdrożone inteligentne kontrakty i udostępnia raporty z wdrożeń, działa na zasadzie plug-n-play dla projektów Foundry i Hardhat._**
+**Catapulta -** **_Wielosieciowe narzędzie do wdrażania inteligentnych kontraktów, automatyzujące weryfikacje w eksploratorach bloków, śledzące wdrożone inteligentne kontrakty i udostępniające raporty z wdrożeń, działające na zasadzie plug-and-play dla projektów Foundry i Hardhat._**
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (wspierane przez Covalent) -** **_GoldRush oferuje najbardziej wszechstronny pakiet API danych blockchain dla programistów, analityków i przedsiębiorstw. Niezależnie od tego, czy budujesz pulpit nawigacyjny DeFi, portfel, bota handlowego, agenta AI czy platformę zgodności, interfejsy API danych zapewniają szybki, dokładny i przyjazny dla programistów dostęp do niezbędnych danych onchain, których potrzebujesz_**
+**GoldRush (wspierane przez Covalent) -** **_GoldRush oferuje najbardziej wszechstronny pakiet API danych blockchain dla programistów, analityków i przedsiębiorstw. Niezależnie od tego, czy budujesz pulpit nawigacyjny DeFi, portfel, bota handlowego, agenta AI, czy platformę zgodności, interfejsy API danych zapewniają szybki, dokładny i przyjazny dla programistów dostęp do niezbędnych danych onchain, których potrzebujesz_**
 
 - [Strona internetowa](https://goldrush.dev/)
 - [Dokumentacja](https://goldrush.dev/docs/chains/ethereum)
@@ -138,7 +139,7 @@ Przed zagłębieniem się we frameworki, zalecamy najpierw przeczytać nasze wpr
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [Rozszerzenie VS Code](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_Modułowy i agnostyczny framework open source, który ułatwia programistom zdecentralizowanych aplikacji wbudowywanie zdecentralizowanych tożsamości i weryfikowalnych poświadczeń w ich aplikacje._**
+**Veramo -** **_Modułowy i agnostyczny framework open source, który ułatwia programistom zdecentralizowanych aplikacji (dapp) wbudowywanie zdecentralizowanych tożsamości i weryfikowalnych danych uwierzytelniających w ich aplikacje._**
 
 - [Strona główna](https://veramo.io/)
 - [Dokumentacja](https://veramo.io/docs/basics/introduction)
@@ -146,6 +147,10 @@ Przed zagłębieniem się we frameworki, zalecamy najpierw przeczytać nasze wpr
 - [Discord](https://discord.com/invite/FRRBdjemHV)
 - [Pakiet NPM](https://www.npmjs.com/package/@veramo/core)
 
+**Moccasin -** **_Szybki, pythonowy framework do tworzenia i testowania inteligentnych kontraktów dla języka Vyper, zbudowany na Titanoboa._**
+
+- [Dokumentacja](https://cyfrin.github.io/moccasin/)
+- [GitHub](https://github.com/Cyfrin/moccasin)
 ## Dalsza lektura {#further-reading}
 
 _Znasz zasób społeczności, który Ci pomógł? Edytuj tę stronę i dodaj go!_

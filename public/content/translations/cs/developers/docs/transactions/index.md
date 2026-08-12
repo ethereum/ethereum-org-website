@@ -19,7 +19,7 @@ _Diagram upraven podle [Ethereum EVM illustrated](https://takenobu-hs.github.io/
 
 Transakce, které mění stav EVM, musí být vysílány do celé sítě. Jakýkoli uzel může vysílat požadavek na provedení transakce v EVM; poté validátor transakci provede a rozšíří výslednou změnu stavu do zbytku sítě.
 
-Transakce vyžadují poplatek a musí být zahrnuty do ověřeného bloku. Abychom tento přehled zjednodušili, poplatky za plyn (gas fees) a validaci probereme jinde.
+Transakce vyžadují poplatek a musí být zahrnuty do ověřeného bloku. Abychom tento přehled zjednodušili, poplatky za gas (gas fees) a validaci probereme jinde.
 
 Odeslaná transakce obsahuje následující informace:
 
@@ -160,7 +160,7 @@ Aby tedy Bob mohl poslat Alici 1 ETH při `baseFeePerGas` (základním poplatku)
 0,0042 ETH
 ```
 
-Bobův účet bude zatížen částkou **-1,0042 ETH** (1 ETH pro Alici + 0,0042 ETH na poplatcích za plyn).
+Bobův účet bude zatížen částkou **-1,0042 ETH** (1 ETH pro Alici + 0,0042 ETH na poplatcích za gas).
 
 Na účet Alice bude připsáno **+1,0 ETH**.
 
@@ -200,7 +200,7 @@ Podívejte se, jak vás Austin provede transakcemi, gasem a těžbou.
 
 ## Typovaná obálka transakce {#typed-transaction-envelope}
 
-Ethereum mělo původně jeden formát pro transakce. Každá transakce obsahovala nonce, cenu plynu (gas price), limit plynu (gas limit), adresu příjemce (to), hodnotu (value), data, v, r a s. Tato pole jsou [zakódována pomocí RLP](/developers/docs/data-structures-and-encoding/rlp/), aby vypadala nějak takto:
+Ethereum mělo původně jeden formát pro transakce. Každá transakce obsahovala nonce, cenu gasu (gas price), limit gasu (gas limit), adresu příjemce (to), hodnotu (value), data, v, r a s. Tato pole jsou [zakódována pomocí RLP](/developers/docs/data-structures-and-encoding/rlp/), aby vypadala nějak takto:
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
@@ -217,11 +217,11 @@ Kde jsou pole definována jako:
 
 Na základě hodnoty `TransactionType` lze transakci klasifikovat jako:
 
-1. **Transakce typu 0 (Legacy):** Původní formát transakcí používaný od spuštění Etherea. Neobsahují funkce z [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), jako jsou dynamické výpočty poplatků za plyn nebo seznamy přístupů pro chytré kontrakty. Starší (legacy) transakce postrádají specifickou předponu označující jejich typ v serializované podobě a při použití kódování [Recursive Length Prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp) začínají bajtem `0xf8`. Hodnota TransactionType pro tyto transakce je `0x0`.
+1. **Transakce typu 0 (Legacy):** Původní formát transakcí používaný od spuštění Etherea. Neobsahují funkce z [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), jako jsou dynamické výpočty poplatků za gas nebo seznamy přístupů pro chytré kontrakty. Starší (legacy) transakce postrádají specifickou předponu označující jejich typ v serializované podobě a při použití kódování [Recursive Length Prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp) začínají bajtem `0xf8`. Hodnota TransactionType pro tyto transakce je `0x0`.
 
 2. **Transakce typu 1:** Tyto transakce, představené v [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) jako součást [aktualizace Berlín](/ethereum-forks/#berlin) na Ethereu, obsahují parametr `accessList`. Tento seznam specifikuje adresy a klíče úložiště, ke kterým transakce očekává přístup, což pomáhá potenciálně snížit náklady na [gas](/developers/docs/gas/) u složitých transakcí zahrnujících chytré kontrakty. Změny trhu s poplatky podle EIP-1559 nejsou v transakcích typu 1 zahrnuty. Transakce typu 1 také obsahují parametr `yParity`, který může být buď `0x0` nebo `0x1`, což indikuje paritu hodnoty y podpisu secp256k1. Jsou identifikovány tím, že začínají bajtem `0x01`, a jejich hodnota TransactionType je `0x1`.
 
-3. **Transakce typu 2**, běžně označované jako transakce EIP-1559, jsou transakce představené v [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) v rámci aktualizace London (London Upgrade) na Ethereu. Staly se standardním typem transakcí v síti Ethereum. Tyto transakce zavádějí nový mechanismus trhu s poplatky, který zlepšuje předvídatelnost rozdělením transakčního poplatku na základní poplatek a prioritní poplatek. Začínají bajtem `0x02` a obsahují pole jako `maxPriorityFeePerGas` a `maxFeePerGas`. Transakce typu 2 jsou nyní výchozí díky své flexibilitě a efektivitě, a jsou obzvláště oblíbené v obdobích vysokého přetížení sítě pro svou schopnost pomoci uživatelům předvídatelněji spravovat transakční poplatky. Hodnota TransactionType pro tyto transakce je `0x2`.
+3. **Transakce typu 2**, běžně označované jako transakce EIP-1559, jsou transakce představené v [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) v rámci [aktualizace London](/ethereum-forks/#london) na Ethereu. Staly se standardním typem transakcí v síti Ethereum. Tyto transakce zavádějí nový mechanismus trhu s poplatky, který zlepšuje předvídatelnost rozdělením transakčního poplatku na základní poplatek a prioritní poplatek. Začínají bajtem `0x02` a obsahují pole jako `maxPriorityFeePerGas` a `maxFeePerGas`. Transakce typu 2 jsou nyní výchozí díky své flexibilitě a efektivitě, a jsou obzvláště oblíbené v obdobích vysokého přetížení sítě pro svou schopnost pomoci uživatelům předvídatelněji spravovat transakční poplatky. Hodnota TransactionType pro tyto transakce je `0x2`.
 
 4. **Transakce typu 3 (Blob)** byly představeny v [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) jako součást [aktualizace Dencun](/ethereum-forks/#dencun) na Ethereu. Tyto transakce jsou navrženy tak, aby efektivněji zpracovávaly data typu „blob“ (Binary Large Objects), což přináší výhody zejména pro rollupy na vrstvě 2 (L2) tím, že poskytují způsob, jak odesílat data do sítě Ethereum s nižšími náklady. Blob transakce obsahují další pole, jako jsou `blobVersionedHashes`, `maxFeePerBlobGas` a `blobGasPrice`. Začínají bajtem `0x03` a jejich hodnota TransactionType je `0x3`. Blob transakce představují významné zlepšení v dostupnosti dat a možnostech škálování Etherea.
 
@@ -238,3 +238,7 @@ _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidej
 - [Účty](/developers/docs/accounts/)
 - [Virtuální stroj Etherea (EVM)](/developers/docs/evm/)
 - [Gas](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

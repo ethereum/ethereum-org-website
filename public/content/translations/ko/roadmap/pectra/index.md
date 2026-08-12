@@ -3,6 +3,7 @@ title: "펙트라"
 metaTitle: "프라하-엘렉트라 (펙트라)"
 description: "펙트라 프로토콜 업그레이드에 대해 알아보세요"
 lang: ko
+template: upgrade
 authors: ["Nixo", "Mario Havel"]
 ---
 

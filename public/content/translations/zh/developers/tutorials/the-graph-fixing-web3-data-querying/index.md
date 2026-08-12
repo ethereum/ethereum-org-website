@@ -84,7 +84,7 @@ GameContract.events.BetPlaced({
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 
-![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.gif)
+![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.mp4#910x692)
 
 这两张图片很好地捕捉了 GraphQL 的本质。通过右侧的查询，我们可以准确定义我们想要的数据，因此我们在一个请求中获得了所有内容，并且不多不少正是我们需要的。GraphQL 服务器处理所有所需数据的获取，因此前端消费者使用起来极其简单。如果你感兴趣，[这里有一个很好的解释](https://www.apollographql.com/blog/graphql-explained)，说明了服务器究竟是如何处理查询的。
 

@@ -1,55 +1,22 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-developers-tools-descriptions.json",
-  "generatedAt": "2026-05-26T16:53:43.627Z",
-  "rootHash": "c267aed4475a",
+  "generatedAt": "2026-08-05T05:28:09.251Z",
+  "rootHash": "778166848c2d",
   "tree": {
-    "contentHash": "ecf672a03b25",
-    "anchorHash": "a7858fddc517",
+    "contentHash": "2f1e2907e6c2",
+    "anchorHash": "7a33d4223768",
     "children": {
       "tool-aave-description": {
-        "contentHash": "33069f0b8dff",
+        "contentHash": "48fc576dee63",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-abi-ninja-description": {
-        "contentHash": "0f845ed2bf07",
-        "anchorHash": "c5e67f1273bb",
-        "children": {
-          "prose:2": {
-            "contentHash": "d67eb95164c6",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "image:0": {
-            "contentHash": "783513593760",
-            "anchorHash": "e45136ce7575"
-          },
-          "prose:3": {
-            "contentHash": "5cedc7a69e4a",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "image:1": {
-            "contentHash": "191c47678c58",
-            "anchorHash": "a3348351b0f4"
-          },
-          "prose:4": {
-            "contentHash": "368c1b1765d8",
-            "anchorHash": "e3b0c44298fc"
-          }
-        },
-        "childrenOrder": [
-          "prose:2",
-          "image:0",
-          "prose:3",
-          "image:1",
-          "prose:4"
-        ]
-      },
-      "tool-abiexplorer-description": {
-        "contentHash": "bf611cf494db",
+        "contentHash": "25bf031e623d",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-abstractionkit-account-abstraction-library-description": {
-        "contentHash": "8aa5d7799ad7",
+        "contentHash": "20719fa23724",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-academy-description": {
@@ -57,59 +24,87 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-ackee-description": {
-        "contentHash": "6d79efe1ea22",
+        "contentHash": "d31b912bde2f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-across-skills-description": {
+        "contentHash": "c3653f7a8ced",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-act-description": {
-        "contentHash": "e79051c37ac9",
+        "contentHash": "a2b8f6fc8ca3",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-aderyn-description": {
-        "contentHash": "99808915a31b",
-        "anchorHash": "4b9f7d802648",
-        "children": {
-          "prose:0": {
-            "contentHash": "ebb2d0810a14",
-            "anchorHash": "e3b0c44298fc"
-          }
-        }
+        "contentHash": "6886d67485dd",
+        "anchorHash": "e3b0c44298fc"
       },
       "tool-agenthub-by-allium-description": {
-        "contentHash": "e71c4bda87a8",
+        "contentHash": "a8a28b26fd6d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-alchemy-description": {
+        "contentHash": "7508b513ae55",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-alchemy-university-description": {
+        "contentHash": "3bf2924224d8",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-alloy-description": {
-        "contentHash": "5b1f371f0afc",
+        "contentHash": "5b2c386a806d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-anon-aadhaar-description": {
+        "contentHash": "e1171f925f8d",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-ape-framework-description": {
         "contentHash": "284748220a9f",
         "anchorHash": "e3b0c44298fc"
       },
+      "tool-api3-dao-description": {
+        "contentHash": "4cb40f0691b3",
+        "anchorHash": "e3b0c44298fc"
+      },
       "tool-aragon-osx-description": {
-        "contentHash": "eb798ea31c26",
+        "contentHash": "b0c73b83cbe5",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-aws-kms-and-yubihsm-signer-for-op-stack-description": {
-        "contentHash": "1cf82774717c",
+        "contentHash": "f693e3bf6ed3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-aztec-description": {
+        "contentHash": "525888fcf493",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-band-protocol-description": {
+        "contentHash": "260d67a718cb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-bankr-skills-description": {
+        "contentHash": "b918ad99e957",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-base-mcp-description": {
+        "contentHash": "1ffde25fb8af",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-bitrefill-skill-description": {
+        "contentHash": "e03b65b0674d",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-black-scholes-librarycompiler-go-and-rust-description": {
-        "contentHash": "41cc47c4e4b9",
+        "contentHash": "e8cd544c0021",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-blobscan-description": {
-        "contentHash": "74ab3085e8fc",
-        "anchorHash": "4b9f7d802648",
-        "children": {
-          "prose:0": {
-            "contentHash": "d7d9f4b3b4f3",
-            "anchorHash": "e3b0c44298fc"
-          }
-        }
+        "contentHash": "3bcd154ca330",
+        "anchorHash": "e3b0c44298fc"
       },
       "tool-blockflow-description": {
-        "contentHash": "708241cd41f1",
+        "contentHash": "6fbb4984f42d",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-blockhead-description": {
@@ -121,11 +116,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-blockscout-open-source-block-explorer-description": {
-        "contentHash": "876560a58273",
+        "contentHash": "ff66d6a1cc43",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-blocksmithjs-description": {
-        "contentHash": "500a90c81f16",
+        "contentHash": "d35a53cde5fb",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-bloctopus-description": {
@@ -133,7 +128,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-bonadocs-description": {
-        "contentHash": "22da547f97bb",
+        "contentHash": "8c7ca5a9bc4a",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-brahma-description": {
@@ -144,16 +139,20 @@
         "contentHash": "98f6622a1e82",
         "anchorHash": "e3b0c44298fc"
       },
+      "tool-buidlguidl-ctf-description": {
+        "contentHash": "adcc0620a916",
+        "anchorHash": "e3b0c44298fc"
+      },
       "tool-bulloak-description": {
         "contentHash": "7e542e8e45db",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-callthis-description": {
-        "contentHash": "67ae767e7ea1",
+        "contentHash": "d4e3ddd1406e",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-candides-smart-account-contracts-description": {
-        "contentHash": "b29cbb32d4ea",
+        "contentHash": "6497861c45db",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-cannon-description": {
@@ -164,40 +163,80 @@
         "contentHash": "7f99aceb219a",
         "anchorHash": "e3b0c44298fc"
       },
+      "tool-chainlink-description": {
+        "contentHash": "09a0e7f2b1c2",
+        "anchorHash": "e3b0c44298fc"
+      },
       "tool-chimera-description": {
         "contentHash": "9d30fed7000a",
         "anchorHash": "e3b0c44298fc"
       },
-      "tool-clear-wallet-description": {
-        "contentHash": "499e612b286a",
+      "tool-chronicle-description": {
+        "contentHash": "f0335f44012a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-circom-description": {
+        "contentHash": "0ecd4ab8d768",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-circom-mpc-description": {
+        "contentHash": "5e341cfd2215",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-codetracer-description": {
         "contentHash": "5b7ff52b9a6e",
         "anchorHash": "e3b0c44298fc"
       },
+      "tool-coingecko-mcp-description": {
+        "contentHash": "85e212cc8509",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-cookbook-ai-description": {
+        "contentHash": "91077eef7466",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-coordinape-description": {
+        "contentHash": "14783588d548",
+        "anchorHash": "e3b0c44298fc"
+      },
       "tool-crawling-the-ethereum-p2p-network-with-nebula-description": {
-        "contentHash": "50c3dfea01fc",
+        "contentHash": "368f4be4c183",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-create2deployer-description": {
-        "contentHash": "5937e2924550",
+        "contentHash": "c9c67548737c",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-createx-description": {
-        "contentHash": "b7a6dd195d9e",
+        "contentHash": "b9c277e80dff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-cryo-mcp-description": {
+        "contentHash": "01e0463a6643",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-crytic-properties-description": {
-        "contentHash": "6e89684049ed",
+        "contentHash": "deb5ab5ed701",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-curvegrid-multibaas-description": {
-        "contentHash": "8f2981670d49",
+        "contentHash": "b11e215eef13",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-cyfrin-solskill-description": {
+        "contentHash": "0b4bcf4f912f",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-daimo-pay-description": {
         "contentHash": "84df443896aa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-damn-vulnerable-defi-description": {
+        "contentHash": "1b51192bb4b2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-daohaus-description": {
+        "contentHash": "bd9cb665041d",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-debridge-description": {
@@ -208,47 +247,45 @@
         "contentHash": "884fabb5ebb9",
         "anchorHash": "e3b0c44298fc"
       },
-      "tool-defillama-description": {
-        "contentHash": "945391c2a19b",
+      "tool-defi-skills-description": {
+        "contentHash": "bdf8a204d7aa",
         "anchorHash": "e3b0c44298fc"
       },
-      "tool-deo-ai-ethereum-developer-assistant-description": {
-        "contentHash": "cd95f392cf2e",
+      "tool-defillama-description": {
+        "contentHash": "fa9ee978a9dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-defillama-skills-description": {
+        "contentHash": "ac7e9b79ae38",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-derive-exchange-sdk-and-vault-executors-description": {
-        "contentHash": "082872caad33",
+        "contentHash": "3b3e9fc4cfa3",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-dexkit-description": {
         "contentHash": "4565faf9153e",
         "anchorHash": "e3b0c44298fc"
       },
-      "tool-diamondscaffold-simplifying-eip-2535-diamond-architecture-development-description": {
-        "contentHash": "dc1495f01bef",
+      "tool-diamondscaffold-description": {
+        "contentHash": "d62b3c0137aa",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-diffuse-data-feeds-description": {
-        "contentHash": "731844be2c2a",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "tool-distributler-multi-token-sender-for-optimism-base-arbitrum-description": {
-        "contentHash": "88838b77a42e",
+        "contentHash": "21c4d804cd8e",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-edb-the-ethereum-project-debugger-description": {
-        "contentHash": "45995c4dc23a",
+        "contentHash": "c54a8f05b0f4",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-eiptools-description": {
-        "contentHash": "26afddf4a02a",
-        "anchorHash": "4b9f7d802648",
-        "children": {
-          "prose:0": {
-            "contentHash": "ea30210d9717",
-            "anchorHash": "e3b0c44298fc"
-          }
-        }
+        "contentHash": "8afe3a58f7fd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-ens-description": {
+        "contentHash": "7c94e43ee0aa",
+        "anchorHash": "e3b0c44298fc"
       },
       "tool-ens-mcp-server-description": {
         "contentHash": "c6fd14f20ff0",
@@ -258,28 +295,36 @@
         "contentHash": "d13fbd79471a",
         "anchorHash": "e3b0c44298fc"
       },
+      "tool-envio-description": {
+        "contentHash": "6b2254ae8dc2",
+        "anchorHash": "e3b0c44298fc"
+      },
       "tool-erc-4337-documentation-description": {
         "contentHash": "6eab558cbe9b",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-ercx-token-test-library-description": {
-        "contentHash": "224908c3131c",
+        "contentHash": "fc46d094f673",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-erpc-description": {
-        "contentHash": "40bb09271d9f",
+        "contentHash": "3124131d1020",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-eth-mcp-description": {
         "contentHash": "d4b1563c3491",
         "anchorHash": "e3b0c44298fc"
       },
+      "tool-eth-protocol-expert-description": {
+        "contentHash": "d6d507445a43",
+        "anchorHash": "e3b0c44298fc"
+      },
       "tool-ethdebug-description": {
-        "contentHash": "2ba5e7480daf",
+        "contentHash": "abddd8e9cd8e",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-ethereum-attestation-service-eas-description": {
-        "contentHash": "6cab0312eb7d",
+        "contentHash": "b64aa6a24e89",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-ethereum-bloom-filters-description": {
@@ -295,7 +340,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-ethereum-mcp-ethcf-description": {
-        "contentHash": "76370ae68601",
+        "contentHash": "d3a84420b3ad",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-ethereum-multicall-description": {
@@ -304,10 +349,6 @@
       },
       "tool-ethereum-rpc-mcp-server-description": {
         "contentHash": "b04bc39c6def",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "tool-ethereum-wingman-description": {
-        "contentHash": "23c8be79b36d",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-ethereumrb-description": {
@@ -319,27 +360,35 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-ethernal-description": {
-        "contentHash": "e74bdf08c8f3",
+        "contentHash": "e3427de985ee",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-ethernaut-cli-description": {
-        "contentHash": "5a13595c8da5",
+        "contentHash": "799eb5bce2e0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-etherscan-description": {
+        "contentHash": "3fbdef34bcbe",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-ethersjs-description": {
-        "contentHash": "bbe0d77f4832",
+        "contentHash": "c4cfebeebf41",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-etherspot-description": {
-        "contentHash": "20ac4f6341a2",
+        "contentHash": "11ee1c530ccb",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-ethpm-description": {
         "contentHash": "35f6a071210f",
         "anchorHash": "e3b0c44298fc"
       },
-      "tool-evm-explorer-description": {
-        "contentHash": "be3e5f095dc4",
+      "tool-ethskills-description": {
+        "contentHash": "7eae482e5acd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-ethux-design-description": {
+        "contentHash": "0fbd7a6ae7d7",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-evm-mcp-server-by-mcpdotdirect-description": {
@@ -347,7 +396,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-evm-rpcs-list-description": {
-        "contentHash": "a5eb0c032b05",
+        "contentHash": "3b03899e6629",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-evmc-description": {
@@ -359,35 +408,39 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-evmtools-description": {
-        "contentHash": "6e4ca911adec",
+        "contentHash": "53cc2c6545e1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-excubiae-description": {
+        "contentHash": "ce402f902e3c",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-executooor-description": {
-        "contentHash": "1776fddf6b92",
+        "contentHash": "9abd20e63ba0",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-explorer-description": {
-        "contentHash": "7de27bcf40a8",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "tool-farcaster-attestation-description": {
-        "contentHash": "64682c16279b",
+        "contentHash": "5620362efba2",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-fe-language-description": {
-        "contentHash": "f9595e5f9796",
+        "contentHash": "d39b7baaa0ad",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-fealloc-description": {
         "contentHash": "9e53df0f8d9e",
         "anchorHash": "e3b0c44298fc"
       },
+      "tool-fluid-skill-description": {
+        "contentHash": "1f64d66d5c40",
+        "anchorHash": "e3b0c44298fc"
+      },
       "tool-forge-stack-tracer-description": {
-        "contentHash": "d3866cecac3e",
+        "contentHash": "98aa0befbcc0",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-foundry-description": {
-        "contentHash": "73803af2ac4b",
+        "contentHash": "26bab2bb38d0",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-foundry-devops-description": {
@@ -403,15 +456,19 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-foundry-storage-check-description": {
-        "contentHash": "0925e44a634f",
+        "contentHash": "dd4da21a1eec",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-framesjs-description": {
-        "contentHash": "b6fbebe8f83c",
+        "contentHash": "de9f1e968414",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-gas-network-description": {
+        "contentHash": "79644f9b1f36",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-gdweb3-description": {
-        "contentHash": "62d4c8e8bcb3",
+        "contentHash": "2be229ea1222",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-gelato-automate-sdk-description": {
@@ -419,7 +476,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-gelato-relay-sdk-description": {
-        "contentHash": "e9fbd879f1bb",
+        "contentHash": "4c7fc09012ee",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-go-ethereum-hdwallet-description": {
@@ -427,15 +484,23 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-go-libp2p-description": {
-        "contentHash": "828870cb741e",
+        "contentHash": "cfbbd5f2f5db",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-governance-onchain-paymaster-description": {
-        "contentHash": "9d1d68555d2a",
+        "contentHash": "3ec1e445b0f0",
         "anchorHash": "e3b0c44298fc"
       },
-      "tool-growthepie-ethereum-and-superchain-analytics-description": {
-        "contentHash": "1e86c0e32585",
+      "tool-growthepie-ethereum-analytics-description": {
+        "contentHash": "693a870672b0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-hackenproof-triage-skill-description": {
+        "contentHash": "2552fb204d8e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-halo2-description": {
+        "contentHash": "7cd52a7301e6",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-hardhat-description": {
@@ -454,60 +519,56 @@
         "contentHash": "9a8d52a34c72",
         "anchorHash": "e3b0c44298fc"
       },
+      "tool-herd-explorer-description": {
+        "contentHash": "c346c0498bba",
+        "anchorHash": "e3b0c44298fc"
+      },
       "tool-hermes-a-gossipsub-listener-and-tracer-for-libp2p-based-networks-description": {
-        "contentHash": "c4741648b95f",
+        "contentHash": "a4d908ceb2cc",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-hevm-description": {
-        "contentHash": "5d87d304d527",
+        "contentHash": "b81687429d61",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-impersonatorxyz-description": {
-        "contentHash": "06fbf6af225b",
-        "anchorHash": "4b9f7d802648",
-        "children": {
-          "prose:0": {
-            "contentHash": "aa1d2335e7d8",
-            "anchorHash": "e3b0c44298fc"
-          }
-        }
+        "contentHash": "d7fcc1720b8e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-infura-description": {
+        "contentHash": "cece1e630619",
+        "anchorHash": "e3b0c44298fc"
       },
       "tool-intellij-solidity-description": {
         "contentHash": "b43e00bf27ad",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-ipfs-description": {
-        "contentHash": "7cb79239ce1b",
-        "anchorHash": "4b9f7d802648",
-        "children": {
-          "prose:0": {
-            "contentHash": "f9eebf89eb38",
-            "anchorHash": "e3b0c44298fc"
-          }
-        }
+        "contentHash": "e562489cf088",
+        "anchorHash": "e3b0c44298fc"
       },
       "tool-jiffyscan-description": {
         "contentHash": "6c1dfd2f554b",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-js-libp2p-description": {
-        "contentHash": "bd1757f09a2a",
+        "contentHash": "1e8c9a07e72f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-juicebox-description": {
+        "contentHash": "32df58598a8d",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-k-semantics-of-the-ethereum-virtual-machine-evm-description": {
-        "contentHash": "5f2414bd0d1e",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "tool-keccak256js-description": {
-        "contentHash": "f47c95104627",
+        "contentHash": "e1079edf70d9",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-kontrol-formal-verification-tool-based-on-foundry-and-kevm-description": {
-        "contentHash": "1be3f3682fa6",
+        "contentHash": "7189fb6d29c8",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-kurtosis-description": {
-        "contentHash": "4b6d489b8032",
+        "contentHash": "9e3055160f60",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-l2pass-description": {
@@ -531,7 +592,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-loop-decoder-description": {
-        "contentHash": "5157858742c1",
+        "contentHash": "38a74645fc0b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-maci-description": {
+        "contentHash": "ee6ff26eb22a",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-mcp-etherscan-server-description": {
@@ -547,11 +612,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-miniapp-starters-description": {
-        "contentHash": "fccab7249c19",
+        "contentHash": "816cdc08c9b5",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-mint-club-description": {
-        "contentHash": "fea207fdd96f",
+        "contentHash": "befadc25625c",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-mobile-wallet-protocol-in-unity-description": {
@@ -559,15 +624,31 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-moccasin-description": {
-        "contentHash": "0b3b78b60402",
+        "contentHash": "f7333799f7bd",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-modular-account-description": {
         "contentHash": "35dbf71231ec",
         "anchorHash": "e3b0c44298fc"
       },
+      "tool-mopro-description": {
+        "contentHash": "59e96b69a1cc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-morpho-agents-description": {
+        "contentHash": "5a32f2b6e155",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-mpz-description": {
+        "contentHash": "827bab1fec34",
+        "anchorHash": "e3b0c44298fc"
+      },
       "tool-multicaller-description": {
-        "contentHash": "3158865184ab",
+        "contentHash": "12872e177572",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-nani-qwen-35-2b-description": {
+        "contentHash": "ca0233f8e2ed",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-nethereum-description": {
@@ -575,49 +656,43 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-nftscan-description": {
-        "contentHash": "a70627727d47",
+        "contentHash": "4632d6347e72",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-noble-cryptography-description": {
-        "contentHash": "84d89d571dcd",
-        "anchorHash": "4b9f7d802648",
-        "children": {
-          "prose:0": {
-            "contentHash": "4c6a931546f8",
-            "anchorHash": "e3b0c44298fc"
-          }
-        }
+        "contentHash": "dde17b3320a2",
+        "anchorHash": "e3b0c44298fc"
       },
       "tool-node-guardians-description": {
         "contentHash": "22a3206aafc4",
         "anchorHash": "e3b0c44298fc"
       },
-      "tool-op-ens-gateway-by-optidomains-description": {
-        "contentHash": "a68487357462",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "tool-op-stack-deployer-description": {
-        "contentHash": "325e83f96b18",
+      "tool-noir-description": {
+        "contentHash": "1d60445803eb",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-openocean-description": {
-        "contentHash": "366489fe20d4",
+        "contentHash": "b738e99ad467",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-openrpc-description": {
-        "contentHash": "245ea7ca6c21",
+        "contentHash": "fc33cadb728e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-opensea-skills-description": {
+        "contentHash": "53a219b5e4e2",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-openzeppelin-contracts-description": {
         "contentHash": "4b3242175fef",
         "anchorHash": "e3b0c44298fc"
       },
-      "tool-opstack-kit-description": {
-        "contentHash": "7a843d5c559f",
+      "tool-openzeppelin-skills-description": {
+        "contentHash": "fd616946a10f",
         "anchorHash": "e3b0c44298fc"
       },
-      "tool-opup-description": {
-        "contentHash": "3729dca57dab",
+      "tool-opstack-kit-description": {
+        "contentHash": "cf83d9031cad",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-orbitdb-description": {
@@ -628,20 +703,36 @@
         "contentHash": "69300f4dd63f",
         "anchorHash": "e3b0c44298fc"
       },
+      "tool-p0tion-description": {
+        "contentHash": "188f0bf304c6",
+        "anchorHash": "e3b0c44298fc"
+      },
       "tool-partyapp-party-protocol-description": {
-        "contentHash": "6f7d2f180208",
+        "contentHash": "32ddeacab1f2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-pashov-audit-group-skills-description": {
+        "contentHash": "08d9aedbe2ad",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-passport-xyz-gitcoin-passport-description": {
-        "contentHash": "6a17e20b2297",
+        "contentHash": "19282825d936",
         "anchorHash": "e3b0c44298fc"
       },
-      "tool-patterns-wallet-analytics-crm-description": {
-        "contentHash": "baa32df450b0",
+      "tool-pendle-ai-description": {
+        "contentHash": "7bce0c284371",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-perpetual-powers-of-tau-description": {
+        "contentHash": "105686676190",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-pod2-description": {
+        "contentHash": "926d572257b9",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-ponder-description": {
-        "contentHash": "0e8cf72e9180",
+        "contentHash": "c8c2e80c46f6",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-prbmath-description": {
@@ -656,24 +747,48 @@
         "contentHash": "2c4f6ae66074",
         "anchorHash": "e3b0c44298fc"
       },
+      "tool-pyth-network-description": {
+        "contentHash": "d49ed36fca43",
+        "anchorHash": "e3b0c44298fc"
+      },
       "tool-quicknode-mcp-server-description": {
         "contentHash": "f9c40e795990",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-quillshield-security-skills-description": {
+        "contentHash": "cc6ca3ae7419",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-railgun-description": {
+        "contentHash": "5cf9fce66e00",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-rainbowkit-theme-generator-description": {
         "contentHash": "dc260eb44527",
         "anchorHash": "e3b0c44298fc"
       },
+      "tool-rareskills-description": {
+        "contentHash": "35c19a525067",
+        "anchorHash": "e3b0c44298fc"
+      },
       "tool-react-native-passkeys-description": {
-        "contentHash": "44c64ef8f397",
+        "contentHash": "99fa236cc463",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-redprint-description": {
-        "contentHash": "d1000ca25861",
+        "contentHash": "2193f2f9409f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-redstone-oracles-description": {
+        "contentHash": "3c852c2c99d4",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-remix-project-description": {
         "contentHash": "9d835cb188cc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-request-wallet-sign-description": {
+        "contentHash": "254b059b522a",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-revm-description": {
@@ -681,37 +796,51 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-rindexer-description": {
-        "contentHash": "faf691918daa",
+        "contentHash": "afb3ce027f4e",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-router-protocol-description": {
-        "contentHash": "3775ed78fe56",
+        "contentHash": "ecd7db162fed",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-rundler-description": {
-        "contentHash": "e8672cbbaa46",
+        "contentHash": "6892dd35c0d7",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-rust-libp2p-description": {
-        "contentHash": "30e58cbd89ca",
+        "contentHash": "18c956c07a8f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-sablier-agent-skills-description": {
+        "contentHash": "0ee62904fcbf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-sc-auditor-description": {
+        "contentHash": "96cf8b062e8c",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-scaffold-eth-2-description": {
-        "contentHash": "c44f452fe34d",
-        "anchorHash": "4b9f7d802648",
-        "children": {
-          "prose:0": {
-            "contentHash": "0aecfab98884",
-            "anchorHash": "e3b0c44298fc"
-          }
-        }
+        "contentHash": "7866d822ada9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-scv-scan-description": {
+        "contentHash": "5a8a444817a9",
+        "anchorHash": "e3b0c44298fc"
       },
       "tool-seamless-protocol-description": {
         "contentHash": "4190b5c978b7",
         "anchorHash": "e3b0c44298fc"
       },
+      "tool-self-protocol-description": {
+        "contentHash": "709584dec496",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-semaphore-description": {
+        "contentHash": "d0b1709f18b5",
+        "anchorHash": "e3b0c44298fc"
+      },
       "tool-simbolik-solidity-debugger-description": {
-        "contentHash": "7639d3bf4c09",
+        "contentHash": "a6c548630279",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-simple-uniswap-sdk-description": {
@@ -719,11 +848,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-siwa-description": {
-        "contentHash": "388d94d6912f",
+        "contentHash": "e1d5eb11572a",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-skandha-erc-4337-bundler-description": {
-        "contentHash": "115ba9a7a683",
+        "contentHash": "408c8c2591f4",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-slicekiterc8128-description": {
@@ -731,19 +860,31 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-slither-description": {
-        "contentHash": "1a786bee55d0",
+        "contentHash": "cbc6ec9e3998",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-slither-mcp-server-description": {
+        "contentHash": "f65ba2581462",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-snapshot-description": {
-        "contentHash": "747c8672cfd3",
+        "contentHash": "45cb488850e9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-snarkjs-description": {
+        "contentHash": "b4f39db6973a",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-snekmate-description": {
-        "contentHash": "e9bf31945432",
+        "contentHash": "193becd7e3be",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-solady-description": {
-        "contentHash": "1edd79c0af01",
+        "contentHash": "cd91d676c023",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-solar-description": {
+        "contentHash": "c8cacb169863",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-solarity-description": {
@@ -755,7 +896,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-solhint-description": {
-        "contentHash": "8bee89ea23a3",
+        "contentHash": "f6c693879ba3",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-solid-grinder-description": {
@@ -763,11 +904,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-solide-description": {
-        "contentHash": "36f2ac6d7250",
+        "contentHash": "d3b50bf5ce42",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-solidity-bytes-arrays-utils-library-description": {
-        "contentHash": "4805f2c12c00",
+        "contentHash": "01ca7b345c52",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-solidity-coverage-description": {
@@ -778,20 +919,32 @@
         "contentHash": "e24df1ebc875",
         "anchorHash": "e3b0c44298fc"
       },
-      "tool-solidity-security-description": {
-        "contentHash": "88dcdf60c5ae",
-        "anchorHash": "e3b0c44298fc"
-      },
       "tool-solidity-testing-handbook-description": {
         "contentHash": "ec8189a0471e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-solidityguard-description": {
+        "contentHash": "2a7674cd73e1",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-solizard-description": {
         "contentHash": "54f854d90e78",
         "anchorHash": "e3b0c44298fc"
       },
+      "tool-solmate-description": {
+        "contentHash": "3203a5f829c4",
+        "anchorHash": "e3b0c44298fc"
+      },
       "tool-solodit-description": {
-        "contentHash": "5c354aeef898",
+        "contentHash": "cd9e4ae65692",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-solx-description": {
+        "contentHash": "8486d88d99a3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-sonobe-description": {
+        "contentHash": "ccf698341206",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-sourcify-description": {
@@ -807,19 +960,19 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-stargate-finance-description": {
-        "contentHash": "9c6d7dd6a57e",
+        "contentHash": "6e0513d56bb9",
         "anchorHash": "e3b0c44298fc"
       },
-      "tool-stereum-l2-optimism-integration-description": {
-        "contentHash": "f4616c7b348a",
+      "tool-steer-cli-description": {
+        "contentHash": "1bca509a8b36",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-stereum-description": {
+        "contentHash": "a4247e3be25a",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-superbeam-description": {
-        "contentHash": "03f08e690209",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "tool-superfuse-description": {
-        "contentHash": "eb40f9842e2c",
+        "contentHash": "53786d77df5a",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-superui-description": {
@@ -831,63 +984,75 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-swiss-knifexyz-description": {
-        "contentHash": "c981c74dc810",
+        "contentHash": "90f0792fc12b",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-synpress-description": {
-        "contentHash": "d2d4f98db909",
+        "contentHash": "1cb305765c59",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-tachyon-description": {
         "contentHash": "d478d637c5ab",
         "anchorHash": "e3b0c44298fc"
       },
+      "tool-tally-description": {
+        "contentHash": "78f1aaa02e09",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-tellor-description": {
+        "contentHash": "1ad0cd67175a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-tenderly-mcp-description": {
+        "contentHash": "d07de135edf4",
+        "anchorHash": "e3b0c44298fc"
+      },
       "tool-tevm-description": {
-        "contentHash": "5569c2fdae6e",
+        "contentHash": "df47750f86ba",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-the-ethernaut-description": {
-        "contentHash": "6db6142752d4",
+        "contentHash": "6b953c01ff8b",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-thirdweb-description": {
-        "contentHash": "8be9e56b9377",
+        "contentHash": "f14afe929149",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-titan-layer-description": {
-        "contentHash": "abb992347352",
+        "contentHash": "d25fcd868290",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-titanoboa-description": {
-        "contentHash": "79b8b61ebab9",
+        "contentHash": "8b9e31a6983a",
         "anchorHash": "e3b0c44298fc"
       },
-      "tool-token-historical-balance-description": {
-        "contentHash": "91450303f980",
+      "tool-tor-js-description": {
+        "contentHash": "0072efcd5523",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-trail-of-bits-skills-marketplace-description": {
         "contentHash": "b52c593e65f2",
         "anchorHash": "e3b0c44298fc"
       },
-      "tool-turtleshell-description": {
-        "contentHash": "2b0e440e06db",
-        "anchorHash": "e3b0c44298fc"
-      },
       "tool-txtx-description": {
         "contentHash": "4504a3c8200f",
         "anchorHash": "e3b0c44298fc"
       },
+      "tool-uma-oracle-description": {
+        "contentHash": "9bb24dcc94c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-uniswap-ai-description": {
+        "contentHash": "cd18d26ec30b",
+        "anchorHash": "e3b0c44298fc"
+      },
       "tool-unruggable-description": {
-        "contentHash": "aa35d26121ab",
+        "contentHash": "d9de3d5eb900",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-updraft-description": {
-        "contentHash": "83befd0bd711",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "tool-upnode-deploy-description": {
-        "contentHash": "716fec50d6e9",
+        "contentHash": "2edb630120e6",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-utp-java-library-description": {
@@ -895,7 +1060,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-variancedart-description": {
-        "contentHash": "023feb8e6421",
+        "contentHash": "bb2c239caa15",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-velodrome-finance-description": {
@@ -903,25 +1068,23 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-verifereum-description": {
-        "contentHash": "b9f7a334981c",
+        "contentHash": "e5e3f2aeedfd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-verifiable-ubt-description": {
+        "contentHash": "70a021538265",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-viem-tracer-description": {
-        "contentHash": "0b33b02bd123",
-        "anchorHash": "4b9f7d802648",
-        "children": {
-          "prose:0": {
-            "contentHash": "44dd3a2e08d6",
-            "anchorHash": "e3b0c44298fc"
-          }
-        }
+        "contentHash": "418d0ada97bd",
+        "anchorHash": "e3b0c44298fc"
       },
       "tool-viem-typescript-interface-for-ethereum-description": {
-        "contentHash": "4d6659ed7f41",
+        "contentHash": "be86a14a8946",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-voltaire-account-abstraction-bundler-description": {
-        "contentHash": "34f1381bfc62",
+        "contentHash": "b24ce3742edb",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-voltaire-description": {
@@ -929,11 +1092,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-vscode-solidity-extension-description": {
-        "contentHash": "274116358a51",
+        "contentHash": "d099b8e8c826",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-vscode-solidity-inspector-description": {
-        "contentHash": "77e652e96c6a",
+        "contentHash": "1edb87d695a2",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-vyper-description": {
@@ -945,19 +1108,27 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-wagmi-reactive-primitives-for-ethereum-apps-description": {
-        "contentHash": "8213fcd6cbfa",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "tool-wakeup-labs-rollup-as-a-service-for-the-op-stack-description": {
-        "contentHash": "6384b8904459",
+        "contentHash": "543bb7148bc5",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-wallet-test-framework-description": {
-        "contentHash": "5fe8f4fa2d6f",
+        "contentHash": "3e3e272f3f9e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-walletchan-mcp-description": {
+        "contentHash": "92b99be45368",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-walnut-description": {
+        "contentHash": "c4f6e00b2015",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-web2-id-nullifiers-voprf-description": {
+        "contentHash": "f0fc3935e22d",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-web3gpt-description": {
-        "contentHash": "b54b714a5ed7",
+        "contentHash": "460b2f44abcd",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-web3j-description": {
@@ -969,7 +1140,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-whatsabi-description": {
-        "contentHash": "b5da1e1449d8",
+        "contentHash": "894f6e50978d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-witnet-description": {
+        "contentHash": "09e523232a1e",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-xdeployer-description": {
@@ -977,7 +1152,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-zabi-description": {
-        "contentHash": "022ed487d585",
+        "contentHash": "ffb21f3f2130",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-zerion-api-mcp-server-description": {
+        "contentHash": "89fd08708792",
         "anchorHash": "e3b0c44298fc"
       },
       "tool-zink-language-description": {
@@ -985,24 +1164,57 @@
         "anchorHash": "e3b0c44298fc"
       },
       "tool-zk-email-description": {
-        "contentHash": "a1802184e4fb",
+        "contentHash": "2514b4f21c35",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-zk-kit-description": {
+        "contentHash": "b484e52b76b3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-zkid-description": {
+        "contentHash": "e457aca19a37",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-zkp2p-description": {
+        "contentHash": "fc28fd6f264c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-zkpassport-description": {
+        "contentHash": "c7173e5b94d4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-zktls-tlsnotary-description": {
+        "contentHash": "43df93555ffa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tool-zokrates-description": {
+        "contentHash": "45b02754cb8a",
         "anchorHash": "e3b0c44298fc"
       }
     },
     "childrenOrder": [
       "tool-aave-description",
       "tool-abi-ninja-description",
-      "tool-abiexplorer-description",
       "tool-abstractionkit-account-abstraction-library-description",
       "tool-academy-description",
       "tool-ackee-description",
+      "tool-across-skills-description",
       "tool-act-description",
       "tool-aderyn-description",
       "tool-agenthub-by-allium-description",
+      "tool-alchemy-description",
+      "tool-alchemy-university-description",
       "tool-alloy-description",
+      "tool-anon-aadhaar-description",
       "tool-ape-framework-description",
+      "tool-api3-dao-description",
       "tool-aragon-osx-description",
       "tool-aws-kms-and-yubihsm-signer-for-op-stack-description",
+      "tool-aztec-description",
+      "tool-band-protocol-description",
+      "tool-bankr-skills-description",
+      "tool-base-mcp-description",
+      "tool-bitrefill-skill-description",
       "tool-black-scholes-librarycompiler-go-and-rust-description",
       "tool-blobscan-description",
       "tool-blockflow-description",
@@ -1014,37 +1226,51 @@
       "tool-bonadocs-description",
       "tool-brahma-description",
       "tool-brownie-description",
+      "tool-buidlguidl-ctf-description",
       "tool-bulloak-description",
       "tool-callthis-description",
       "tool-candides-smart-account-contracts-description",
       "tool-cannon-description",
       "tool-chain-abstraction-with-4337-description",
+      "tool-chainlink-description",
       "tool-chimera-description",
-      "tool-clear-wallet-description",
+      "tool-chronicle-description",
+      "tool-circom-description",
+      "tool-circom-mpc-description",
       "tool-codetracer-description",
+      "tool-coingecko-mcp-description",
+      "tool-cookbook-ai-description",
+      "tool-coordinape-description",
       "tool-crawling-the-ethereum-p2p-network-with-nebula-description",
       "tool-create2deployer-description",
       "tool-createx-description",
+      "tool-cryo-mcp-description",
       "tool-crytic-properties-description",
       "tool-curvegrid-multibaas-description",
+      "tool-cyfrin-solskill-description",
       "tool-daimo-pay-description",
+      "tool-damn-vulnerable-defi-description",
+      "tool-daohaus-description",
       "tool-debridge-description",
       "tool-decentxyz-description",
+      "tool-defi-skills-description",
       "tool-defillama-description",
-      "tool-deo-ai-ethereum-developer-assistant-description",
+      "tool-defillama-skills-description",
       "tool-derive-exchange-sdk-and-vault-executors-description",
       "tool-dexkit-description",
-      "tool-diamondscaffold-simplifying-eip-2535-diamond-architecture-development-description",
+      "tool-diamondscaffold-description",
       "tool-diffuse-data-feeds-description",
-      "tool-distributler-multi-token-sender-for-optimism-base-arbitrum-description",
       "tool-edb-the-ethereum-project-debugger-description",
       "tool-eiptools-description",
+      "tool-ens-description",
       "tool-ens-mcp-server-description",
       "tool-enso-build-description",
+      "tool-envio-description",
       "tool-erc-4337-documentation-description",
       "tool-ercx-token-test-library-description",
       "tool-erpc-description",
       "tool-eth-mcp-description",
+      "tool-eth-protocol-expert-description",
       "tool-ethdebug-description",
       "tool-ethereum-attestation-service-eas-description",
       "tool-ethereum-bloom-filters-description",
@@ -1053,25 +1279,27 @@
       "tool-ethereum-mcp-ethcf-description",
       "tool-ethereum-multicall-description",
       "tool-ethereum-rpc-mcp-server-description",
-      "tool-ethereum-wingman-description",
       "tool-ethereumrb-description",
       "tool-etherml-description",
       "tool-ethernal-description",
       "tool-ethernaut-cli-description",
+      "tool-etherscan-description",
       "tool-ethersjs-description",
       "tool-etherspot-description",
       "tool-ethpm-description",
-      "tool-evm-explorer-description",
+      "tool-ethskills-description",
+      "tool-ethux-design-description",
       "tool-evm-mcp-server-by-mcpdotdirect-description",
       "tool-evm-rpcs-list-description",
       "tool-evmc-description",
       "tool-evmstate-description",
       "tool-evmtools-description",
+      "tool-excubiae-description",
       "tool-executooor-description",
       "tool-explorer-description",
-      "tool-farcaster-attestation-description",
       "tool-fe-language-description",
       "tool-fealloc-description",
+      "tool-fluid-skill-description",
       "tool-forge-stack-tracer-description",
       "tool-foundry-description",
       "tool-foundry-devops-description",
@@ -1079,26 +1307,31 @@
       "tool-foundry-mcp-server-description",
       "tool-foundry-storage-check-description",
       "tool-framesjs-description",
+      "tool-gas-network-description",
       "tool-gdweb3-description",
       "tool-gelato-automate-sdk-description",
       "tool-gelato-relay-sdk-description",
       "tool-go-ethereum-hdwallet-description",
       "tool-go-libp2p-description",
       "tool-governance-onchain-paymaster-description",
-      "tool-growthepie-ethereum-and-superchain-analytics-description",
+      "tool-growthepie-ethereum-analytics-description",
+      "tool-hackenproof-triage-skill-description",
+      "tool-halo2-description",
       "tool-hardhat-description",
       "tool-hardhat-gas-reporter-description",
       "tool-hats-protocol-description",
       "tool-hax-description",
+      "tool-herd-explorer-description",
       "tool-hermes-a-gossipsub-listener-and-tracer-for-libp2p-based-networks-description",
       "tool-hevm-description",
       "tool-impersonatorxyz-description",
+      "tool-infura-description",
       "tool-intellij-solidity-description",
       "tool-ipfs-description",
       "tool-jiffyscan-description",
       "tool-js-libp2p-description",
+      "tool-juicebox-description",
       "tool-k-semantics-of-the-ethereum-virtual-machine-evm-description",
-      "tool-keccak256js-description",
       "tool-kontrol-formal-verification-tool-based-on-foundry-and-kevm-description",
       "tool-kurtosis-description",
       "tool-l2pass-description",
@@ -1107,6 +1340,7 @@
       "tool-light-account-description",
       "tool-llamapay-description",
       "tool-loop-decoder-description",
+      "tool-maci-description",
       "tool-mcp-etherscan-server-description",
       "tool-medusa-description",
       "tool-merkletreejs-description",
@@ -1115,48 +1349,70 @@
       "tool-mobile-wallet-protocol-in-unity-description",
       "tool-moccasin-description",
       "tool-modular-account-description",
+      "tool-mopro-description",
+      "tool-morpho-agents-description",
+      "tool-mpz-description",
       "tool-multicaller-description",
+      "tool-nani-qwen-35-2b-description",
       "tool-nethereum-description",
       "tool-nftscan-description",
       "tool-noble-cryptography-description",
       "tool-node-guardians-description",
-      "tool-op-ens-gateway-by-optidomains-description",
-      "tool-op-stack-deployer-description",
+      "tool-noir-description",
       "tool-openocean-description",
       "tool-openrpc-description",
+      "tool-opensea-skills-description",
       "tool-openzeppelin-contracts-description",
+      "tool-openzeppelin-skills-description",
       "tool-opstack-kit-description",
-      "tool-opup-description",
       "tool-orbitdb-description",
       "tool-otterscan-description",
+      "tool-p0tion-description",
       "tool-partyapp-party-protocol-description",
+      "tool-pashov-audit-group-skills-description",
       "tool-passport-xyz-gitcoin-passport-description",
-      "tool-patterns-wallet-analytics-crm-description",
+      "tool-pendle-ai-description",
+      "tool-perpetual-powers-of-tau-description",
+      "tool-pod2-description",
       "tool-ponder-description",
       "tool-prbmath-description",
       "tool-prettier-solidity-description",
       "tool-privacy-builder-pack-description",
+      "tool-pyth-network-description",
       "tool-quicknode-mcp-server-description",
+      "tool-quillshield-security-skills-description",
+      "tool-railgun-description",
       "tool-rainbowkit-theme-generator-description",
+      "tool-rareskills-description",
       "tool-react-native-passkeys-description",
       "tool-redprint-description",
+      "tool-redstone-oracles-description",
       "tool-remix-project-description",
+      "tool-request-wallet-sign-description",
       "tool-revm-description",
       "tool-rindexer-description",
       "tool-router-protocol-description",
       "tool-rundler-description",
       "tool-rust-libp2p-description",
+      "tool-sablier-agent-skills-description",
+      "tool-sc-auditor-description",
       "tool-scaffold-eth-2-description",
+      "tool-scv-scan-description",
       "tool-seamless-protocol-description",
+      "tool-self-protocol-description",
+      "tool-semaphore-description",
       "tool-simbolik-solidity-debugger-description",
       "tool-simple-uniswap-sdk-description",
       "tool-siwa-description",
       "tool-skandha-erc-4337-bundler-description",
       "tool-slicekiterc8128-description",
       "tool-slither-description",
+      "tool-slither-mcp-server-description",
       "tool-snapshot-description",
+      "tool-snarkjs-description",
       "tool-snekmate-description",
       "tool-solady-description",
+      "tool-solar-description",
       "tool-solarity-description",
       "tool-solc-select-description",
       "tool-solhint-description",
@@ -1165,38 +1421,45 @@
       "tool-solidity-bytes-arrays-utils-library-description",
       "tool-solidity-coverage-description",
       "tool-solidity-description",
-      "tool-solidity-security-description",
       "tool-solidity-testing-handbook-description",
+      "tool-solidityguard-description",
       "tool-solizard-description",
+      "tool-solmate-description",
       "tool-solodit-description",
+      "tool-solx-description",
+      "tool-sonobe-description",
       "tool-sourcify-description",
       "tool-speedrunethereum-description",
       "tool-splits-description",
       "tool-stargate-finance-description",
-      "tool-stereum-l2-optimism-integration-description",
+      "tool-steer-cli-description",
+      "tool-stereum-description",
       "tool-superbeam-description",
-      "tool-superfuse-description",
       "tool-superui-description",
       "tool-surl-description",
       "tool-swiss-knifexyz-description",
       "tool-synpress-description",
       "tool-tachyon-description",
+      "tool-tally-description",
+      "tool-tellor-description",
+      "tool-tenderly-mcp-description",
       "tool-tevm-description",
       "tool-the-ethernaut-description",
       "tool-thirdweb-description",
       "tool-titan-layer-description",
       "tool-titanoboa-description",
-      "tool-token-historical-balance-description",
+      "tool-tor-js-description",
       "tool-trail-of-bits-skills-marketplace-description",
-      "tool-turtleshell-description",
       "tool-txtx-description",
+      "tool-uma-oracle-description",
+      "tool-uniswap-ai-description",
       "tool-unruggable-description",
       "tool-updraft-description",
-      "tool-upnode-deploy-description",
       "tool-utp-java-library-description",
       "tool-variancedart-description",
       "tool-velodrome-finance-description",
       "tool-verifereum-description",
+      "tool-verifiable-ubt-description",
       "tool-viem-tracer-description",
       "tool-viem-typescript-interface-for-ethereum-description",
       "tool-voltaire-account-abstraction-bundler-description",
@@ -1206,17 +1469,27 @@
       "tool-vyper-description",
       "tool-w3pk-description",
       "tool-wagmi-reactive-primitives-for-ethereum-apps-description",
-      "tool-wakeup-labs-rollup-as-a-service-for-the-op-stack-description",
       "tool-wallet-test-framework-description",
+      "tool-walletchan-mcp-description",
+      "tool-walnut-description",
+      "tool-web2-id-nullifiers-voprf-description",
       "tool-web3gpt-description",
       "tool-web3j-description",
       "tool-web3py-description",
       "tool-whatsabi-description",
+      "tool-witnet-description",
       "tool-xdeployer-description",
       "tool-zabi-description",
+      "tool-zerion-api-mcp-server-description",
       "tool-zink-language-description",
-      "tool-zk-email-description"
+      "tool-zk-email-description",
+      "tool-zk-kit-description",
+      "tool-zkid-description",
+      "tool-zkp2p-description",
+      "tool-zkpassport-description",
+      "tool-zktls-tlsnotary-description",
+      "tool-zokrates-description"
     ]
   },
-  "sourceCommitSha": "a8478a15398e05bbd134fb0d64575a708b5b3efd"
+  "sourceCommitSha": "729918a20bdc32ba5f177eef1ff4712846b5dcbd"
 }

@@ -84,7 +84,7 @@ Lass uns zuerst über GraphQL sprechen, das ursprünglich von Facebook entworfen
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 
-![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.gif)
+![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.mp4#910x692)
 
 Die beiden Bilder erfassen im Grunde die Essenz von GraphQL. Mit der Abfrage auf der rechten Seite können wir genau definieren, welche Daten wir wollen, sodass wir alles in einer einzigen Anfrage erhalten und nicht mehr als genau das, was wir brauchen. Ein GraphQL-Server übernimmt das Abrufen aller erforderlichen Daten, was die Nutzung für die Frontend-Konsumentenseite unglaublich einfach macht. [Dies ist eine schöne Erklärung](https://www.apollographql.com/blog/graphql-explained) darüber, wie genau der Server eine Abfrage verarbeitet, falls du interessiert bist.
 

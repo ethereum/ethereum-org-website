@@ -105,7 +105,9 @@ Příklad:
 
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
-Adresa kontraktu je obvykle přidělena, když je kontrakt nasazen na blockchain Etherea. Adresa vychází z adresy tvůrce a počtu transakcí odeslaných z této adresy („nonce“).
+Adresa kontraktu je obvykle přidělena, když je kontrakt nasazen na blockchain Etherea. Adresa vychází z adresy tvůrce a počtu transakcí odeslaných z této adresy („nonce“). Tímto způsobem odvozuje adresu operace `CREATE`.
+
+Kontrakty lze také nasadit pomocí [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), která odvozuje adresu z adresy tvůrce, hodnoty, kterou tvůrce zvolí („salt“), a hashe kódu pro vytvoření kontraktu. Není zde použita žádná nonce, takže adresu lze vypočítat ještě předtím, než kontrakt existuje, a zůstává stejná bez ohledu na to, kolik dalších transakcí tvůrce mezitím odešle. Díky tomu je možné odkazovat na kontrakt, který ještě nebyl nasazen.
 
 ## Klíče validátoru {#validators-keys}
 

@@ -64,7 +64,7 @@ Notre première expérience a été une série animée appelée [White Rabbit](h
 - Ils ont staké pour voter sur les décisions de l'intrigue directement dans le lecteur
 - Ils ont gagné un ERC-20 (notre jeton d'attention) 
 
-![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4)
+![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4#800x400)
 
 L'ERC-20 a été émis sur une courbe d'offre (bonding curve). Plus vous étiez impliqué tôt et activement, plus vous gagniez. Les votes (comme le fait de nommer le personnage principal Mirai) se sont déroulés via Snapshot. 
 

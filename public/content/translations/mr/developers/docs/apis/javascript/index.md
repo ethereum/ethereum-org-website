@@ -237,20 +237,20 @@ ethers.utils.formatEther(balance)
 - [Web3js युटिलिटी फंक्शन्स](https://docs.web3js.org/api/web3-utils)
 - [Ethers युटिलिटी फंक्शन्स](https://docs.ethers.org/v6/api/utils/)
 
-## उपलब्ध लायब्ररीज् {#available-libraries}
+## उपलब्ध लायब्ररीज्
 
 **Web3.js -** **_इथेरियम JavaScript API._**
 
 - [डॉक्युमेंटेशन](https://docs.web3js.org)
 - [GitHub](https://github.com/ethereum/web3.js)
 
-**Ethers.js -** **_JavaScript आणि TypeScript मध्ये संपूर्ण इथेरियम वॉलेट अंमलबजावणी आणि युटिलिटीज._**
+**Ethers.js -** **_JavaScript आणि TypeScript मधील संपूर्ण इथेरियम वॉलेट अंमलबजावणी आणि युटिलिटीज._**
 
 - [Ethers.js होम](https://ethers.org/)
 - [डॉक्युमेंटेशन](https://docs.ethers.io)
 - [GitHub](https://github.com/ethers-io/ethers.js)
 
-**The Graph -** **_इथेरियम आणि IPFS डेटा इंडेक्स करण्यासाठी आणि GraphQL वापरून त्याची क्वेरी करण्यासाठी एक प्रोटोकॉल._**
+**The Graph -** **_इथेरियम आणि IPFS डेटा इंडेक्स करण्यासाठी आणि GraphQL वापरून क्वेरी करण्यासाठी एक प्रोटोकॉल._**
 
 - [The Graph](https://thegraph.com)
 - [Graph एक्सप्लोरर](https://thegraph.com/explorer)
@@ -268,6 +268,16 @@ ethers.utils.formatEther(balance)
 - [डॉक्युमेंटेशन](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
+**wagmi -** **_viem वर तयार केलेली, इथेरियमसाठी React हुक्स लायब्ररी._**
+
+- [डॉक्युमेंटेशन](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_wagmi आणि viem वर तयार केलेली, विकेंद्रित ॲप्लिकेशन्स (dapps) मध्ये वॉलेट कनेक्शन जोडण्यासाठी React लायब्ररी._**
+
+- [डॉक्युमेंटेशन](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
+
 **Codex -** **_अनेक चेन्सवरील रिअल-टाइम, समृद्ध ब्लॉकचेन डेटा API._**
 
 - [डॉक्युमेंटेशन](https://docs.codex.io)
@@ -279,7 +289,6 @@ ethers.utils.formatEther(balance)
 
 - [डॉक्युमेंटेशन](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
-
 ## पुढील वाचन {#further-reading}
 
 _तुम्हाला मदत केलेल्या एखाद्या कम्युनिटी रिसोर्सबद्दल माहिती आहे का? हे पेज संपादित करा आणि ते जोडा!_

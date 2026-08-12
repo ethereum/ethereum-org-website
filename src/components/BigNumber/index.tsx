@@ -24,9 +24,11 @@ const bigNumberVariants = cva("flex shrink-0 flex-col self-stretch py-8", {
       default: "flex-1",
       light: "",
     },
+    center: { true: "items-center text-center mx-auto" },
   },
   defaultVariants: {
     variant: "default",
+    center: true,
   },
 })
 
@@ -62,6 +64,7 @@ const BigNumber = async ({
   lastUpdated,
   className,
   variant,
+  center,
 }: BigNumberProps) => {
   const locale = await getLocale()
   const t = await getTranslations("common")
@@ -75,7 +78,7 @@ const BigNumber = async ({
   return (
     <div
       data-label="big-number"
-      className={cn(bigNumberVariants({ variant }), className)}
+      className={cn(bigNumberVariants({ variant, center }), className)}
       itemScope
       itemType="https://schema.org/Observation"
     >

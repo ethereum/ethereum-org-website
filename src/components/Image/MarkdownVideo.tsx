@@ -17,17 +17,21 @@ type MarkdownVideoProps = {
   orientation?: VideoOrientation
 }
 
+// `#WxH` src fragment = the clip's intrinsic dimensions (`./demo.mp4#800x400`).
+// Browsers strip fragments before requesting, so the asset URL stays canonical.
+const parseDimensionsFragment = (src: string) => {
+  const match = src.match(/#(\d+)x(\d+)$/)
+  if (!match) return undefined
+  return { width: Number(match[1]), height: Number(match[2]) }
+}
+
 /**
- * Renders a short, silent, looping clip authored in markdown as `![](./x.mp4)`.
- *
- * The modern GIF replacement: a `<video>` sized by a fixed CSS aspect ratio (no
- * CLS, no `next/image` — that pipeline can't optimize video anyway), that only
- * plays while on-screen (battery/bandwidth) and never autoplays under
- * `prefers-reduced-motion`. Controls are always available so users can pause
- * looping motion. Clips are standardized to one of two ratios at authoring time;
- * orientation is chosen from the markdown via a `-portrait` filename suffix.
- * Mirrors the orientation handling of the `YouTube` embed (`aspect-9/16
- * max-h-105`).
+ * Short, silent, looping clip authored in markdown as `![](./x.mp4)` — the
+ * modern GIF replacement. Plays only while on-screen; controls are always
+ * available and it never autoplays under `prefers-reduced-motion`. A `#WxH`
+ * src fragment sizes the box to the clip's own ratio; without one, a fixed
+ * 16:9 / 9:16 (`-portrait`) box letterboxes the clip. Details: design-system
+ * skill.
  */
 const MarkdownVideo = ({
   src,
@@ -35,7 +39,10 @@ const MarkdownVideo = ({
   poster,
   orientation = "landscape",
 }: MarkdownVideoProps) => {
-  const isPortrait = orientation === "portrait"
+  const dimensions = parseDimensionsFragment(src)
+  const isPortrait = dimensions
+    ? dimensions.height > dimensions.width
+    : orientation === "portrait"
 
   const ref = useRef<HTMLVideoElement>(null)
   const inView = useInView(ref, { margin: "200px 0px" })
@@ -72,14 +79,27 @@ const MarkdownVideo = ({
         disableRemotePlayback
         aria-label={alt || undefined}
         src={src}
-        // `object-contain` is a safety net: a clip that isn't exactly the
-        // standard ratio letterboxes inside the fixed box rather than shifting
-        // layout or distorting.
+        // Attributes size the element before metadata loads; explicit
+        // aspect-ratio reserves the box (attr mapping is unreliable on video).
+        width={dimensions?.width}
+        height={dimensions?.height}
+        style={
+          dimensions
+            ? { aspectRatio: `${dimensions.width} / ${dimensions.height}` }
+            : undefined
+        }
         className={cn(
-          "h-auto rounded-base object-contain",
-          isPortrait
-            ? "aspect-9/16 max-h-105 w-auto"
-            : "aspect-video w-full max-w-full"
+          "h-auto rounded-base",
+          dimensions
+            ? isPortrait
+              ? "max-h-160 w-auto"
+              : "w-full max-w-full"
+            : [
+                "object-contain",
+                isPortrait
+                  ? "aspect-9/16 max-h-105 w-auto"
+                  : "aspect-video w-full max-w-full",
+              ]
         )}
       />
     </span>

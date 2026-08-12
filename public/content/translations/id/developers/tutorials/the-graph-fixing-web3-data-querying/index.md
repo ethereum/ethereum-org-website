@@ -89,7 +89,7 @@ Pertama mari kita bicara tentang GraphQL, yang awalnya dirancang dan diimplement
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 
-![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.gif)
+![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.mp4#910x692)
 
 Kedua gambar tersebut cukup banyak menangkap esensi dari GraphQL. Dengan kueri di sebelah kanan kita dapat menentukan dengan tepat data apa yang kita inginkan, jadi di sana kita mendapatkan semuanya dalam satu permintaan dan tidak lebih dari apa yang kita butuhkan. Server GraphQL menangani pengambilan semua data yang diperlukan, sehingga sangat mudah digunakan oleh sisi konsumen frontend. [Ini adalah penjelasan yang bagus](https://www.apollographql.com/blog/graphql-explained) tentang bagaimana tepatnya server menangani kueri jika Anda tertarik.
 

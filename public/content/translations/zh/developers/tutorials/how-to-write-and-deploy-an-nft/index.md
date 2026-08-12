@@ -227,7 +227,7 @@ Hardhat 是一个用于编译、部署、测试和调试以太坊软件的开发
 
 - 请参阅下文以获取 HTTP Alchemy API URL 并将其复制到剪贴板
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.mp4#842x480)
 
 你的 `.env` 现在应该如下所示：
 

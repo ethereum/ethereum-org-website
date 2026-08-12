@@ -47,9 +47,8 @@ Un contrat intelligent est un code qui réside sur la chaîne de blocs Ethereum 
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## Outils pour créer des dapps {#dapp-tools}
-
-**Scaffold-ETH _- Expérimentez rapidement avec Solidity en utilisant un front-end qui s'adapte à votre contrat intelligent._**
+## Outils pour créer des applications décentralisées (dapps)
+**Scaffold-ETH 2 _- Expérimentez rapidement avec Solidity à l'aide d'un front-end qui s'adapte à votre contrat intelligent._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Exemple de dapp](https://punkwallet.io/)
@@ -58,7 +57,7 @@ Un contrat intelligent est un code qui réside sur la chaîne de blocs Ethereum 
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**One Click Dapp _- Outil FOSS pour générer des front-ends de dapp à partir d'une [ABI](/glossary/#abi)._**
+**One Click Dapp _- Outil FOSS pour générer des front-ends de dapps à partir d'une [ABI](/glossary/#abi)._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
@@ -79,7 +78,6 @@ Un contrat intelligent est un code qui réside sur la chaîne de blocs Ethereum 
 - [crossmint.com](https://www.crossmint.com)
 - [Documentation](https://docs.crossmint.com)
 - [Discord](https://discord.com/invite/crossmint)
-
 ## Lectures complémentaires {#further-reading}
 
 - [Explorer les dapps](/apps)

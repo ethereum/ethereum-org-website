@@ -64,7 +64,7 @@ lang: zh-tw
 - 質押以直接在播放器中對劇情決定進行投票
 - 賺取了 ERC-20（我們的注意力代幣） 
 
-![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4)
+![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4#800x400)
 
 該 ERC-20 是在聯合曲線 (bonding curve) 上發行的。你越早參與且參與度越高，賺取的就越多。投票（例如為主角命名為 Mirai）是透過 Snapshot 進行的。 
 

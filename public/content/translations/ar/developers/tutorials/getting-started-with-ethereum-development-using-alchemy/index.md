@@ -37,7 +37,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 يمكنك أيضًا سحب مفاتيح API الحالية عن طريق التمرير فوق "Apps" (التطبيقات) وتحديد أحدها. يمكنك "View Key" (عرض المفتاح) هنا، بالإضافة إلى "Edit App" (تعديل التطبيق) لإدراج نطاقات معينة في القائمة البيضاء، ورؤية العديد من أدوات المطورين، وعرض التحليلات.
 
-![Gif showing a user how to pull API keys](./pull-api-keys.gif)
+![Gif showing a user how to pull API keys](./pull-api-keys.mp4#600x340)
 
 ## 3. إجراء طلب من سطر الأوامر {#make-a-request-from-the-command-line}
 

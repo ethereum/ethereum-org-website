@@ -63,7 +63,11 @@ export const getAppPageContributorInfo = async (
   )
 
   const latestCommitDate = getAppPageLastCommitDate(gitHubContributors)
-  const lastEditLocaleTimestamp = getLocaleTimestamp(locale, latestCommitDate)
+  // Guard the empty sentinel: getLocaleTimestamp(locale, "") would format an
+  // Invalid Date, so keep the timestamp empty when there is no commit date.
+  const lastEditLocaleTimestamp = latestCommitDate
+    ? getLocaleTimestamp(locale, latestCommitDate)
+    : ""
 
   // if (
   //   (!uniqueGitHubContributors.length || !lastEditLocaleTimestamp) &&

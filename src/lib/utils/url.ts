@@ -61,6 +61,9 @@ export const isHrefActive = (
 
 export const isHash = (href: string): boolean => href.startsWith("#")
 
+/** Extract the fragment id from a hash href (e.g. "#getting-started" -> "getting-started"). */
+export const getIdFromHash = (href: string): string => href.split("#")[1] ?? ""
+
 export const addSlashes = (href: string): string => {
   if (isExternal(href)) return href
   return join("/", href, "/")

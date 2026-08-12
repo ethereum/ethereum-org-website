@@ -17,14 +17,13 @@ buttons:
     isSecondary: false
 ---
 
-## 이더리움 게이밍 {#gaming-on-ethereum}
+## 이더리움 게이밍
 
-이더리움 게이밍은 특정 기능을 위해 블록체인을 사용하는 게임부터 전체 게임 세계가 온체인에 존재하는 게임까지 다양한 형태로 제공됩니다. 이더리움 블록체인은 다양한 방식으로 게임에 활용될 수 있습니다. 게임은 통화를 전송 가능한 토큰으로 저장하거나 기타 게임 내 자산(캐릭터, 장비, 펫 등)을 [대체 불가능한 토큰(NFT)](/nft/) 형태로 저장할 수 있습니다. 또한 게임은 스마트 컨트랙트를 활용하여 로직, 규칙 및 상태를 온체인에서 호스팅할 수 있습니다. 이러한 게임을 흔히 '완전한 온체인 게임(fully onchain games)'이라고 부릅니다.
+이더리움 게이밍은 특정 기능을 위해 블록체인을 사용하는 게임부터 전체 게임 세계가 온체인에 존재하는 게임까지 다양한 형태로 제공됩니다. 이더리움 블록체인은 다양한 방식으로 게임에 활용될 수 있습니다. 게임은 통화를 전송 가능한 토큰으로 저장하거나 다른 게임 내 자산(캐릭터, 장비, 펫 등)을 [대체 불가능한 토큰(NFT)](/nft/) 형태로 저장할 수 있습니다. 또한 게임은 스마트 컨트랙트를 활용하여 로직, 규칙 및 상태를 온체인에 호스팅할 수 있습니다. 이러한 게임을 일반적으로 "완전한 온체인 게임"이라고 합니다.
 
-이더리움 생태계에는 이더리움 메인넷의 보안 보장을 상속받으면서 이더리움의 확장을 돕고 특화된 사용 사례를 지원하는 [레이어 2 (l2) 블록체인](/layer-2/learn/)도 포함되어 있습니다. l2 네트워크는 더 빠른 확정 시간과 낮은 수수료 덕분에 온체인 게임과 커뮤니티에 추가적인 이점을 제공하여 게임 플레이의 접근성을 높일 수 있습니다.
+이더리움 생태계에는 이더리움 메인넷의 보안 보장을 상속받으면서 이더리움의 규모를 확장하고 특수한 사용 사례를 지원하는 [레이어 2 (l2) 블록체인](/layer-2/learn/)도 포함되어 있습니다. l2 네트워크는 더 빠른 확정 시간과 더 낮은 수수료로 인해 온체인 게임과 커뮤니티에 추가적인 이점을 제공하여 게임 플레이에 더 쉽게 접근할 수 있도록 합니다.
 
-[레이어 1 (l1)](/roadmap/scaling/)이 확장됨에 따라 게임들이 이더리움 메인넷으로 돌아오기 시작했습니다. 한 가지 예로 현재 이더리움 l1에서 플레이 테스트 중인 완전한 온체인 게임인 [Asphodel](https://x.com/asph0d37)이 있습니다. 하지만 대부분의 게임은 여전히 더 낮은 수수료의 이점을 누리기 위해 l2 솔루션을 활용합니다.
-
+[레이어 1 (l1)이 확장](/roadmap/scaling/)됨에 따라 게임들이 이더리움 메인넷으로 돌아오기 시작했습니다. 한 가지 예로 2026년 7월 이더리움 l1에 출시된 완전한 온체인 게임인 [Asphodel: Prologue](https://play.asphodel.io/)가 있습니다. 하지만 대부분의 게임은 더 낮은 수수료의 이점을 누리기 위해 여전히 l2 솔루션을 활용하고 있습니다.
 ## 이더리움 게이밍의 부상 {#rise-of-ethereum-gaming}
 
 EVE Online, World of Warcraft, MapleStory, RuneScape와 같은 전통적인 MMO는 가상 경제가 현실 세계의 가치를 창출할 수 있음을 증명했습니다. 플레이어들은 수입을 얻기 위해 골드를 파밍했고, EVE의 경제는 실제 금융 시스템을 반영했으며, 모드 문화(Counter-Strike, DotA 2, Minecraft 서버)는 플레이어들이 기존 세계를 바탕으로 새로운 것을 구성하고 싶어 한다는 것을 보여주었습니다. 비탈릭이 [World of Warcraft의 너프에 대해 크게 좌절했던 유명한 일화](https://youtu.be/Letsfuhpobw?t=140)조차도 폐쇄적인 게임 생태계의 문제점을 보여주는 초기 상징이 되었습니다. 하지만 스튜디오가 모든 것을 통제했습니다. 그들은 계정을 정지시키거나, 서버를 폐쇄하거나, 플레이어가 만든 콘텐츠의 소유권을 주장할 수 있었습니다.
@@ -33,19 +32,17 @@ EVE Online, World of Warcraft, MapleStory, RuneScape와 같은 전통적인 MMO�
 
 이더리움 블록체인은 규칙을 임의로 변경할 수 없고, 상태를 삭제할 수 없으며, 네트워크가 존재하는 한 누구나 계속 유지되는 확장 기능을 구축할 수 있는 세계를 가능하게 했습니다. 이것은 이더리움이 기본적으로 제공하는 기능입니다.
 
-## 이더리움 게이밍 생태계 개요 {#ethereums-gaming-ecosystem-overview}
-
-- **레이어 2 (l2):** 더 저렴한 수수료와 짧은 트랜잭션 시간 덕분에 이더리움 l2는 게임이 출시되는 일반적인 장소가 되었습니다. l2 환경은 계속 진화하고 있으며, Ronin(원래 Axie Infinity의 사이드체인)과 같은 선도적인 Web3 게이밍 생태계는 최근 이더리움 레이어 2 아키텍처로 전환하여 게임에 최적화된 인프라를 유지하면서 이더리움의 보안 보장을 상속받았습니다. 현재 게이밍을 주도하는 l2로는 [Ronin](https://www.roninchain.com/), [스타크넷](https://www.starknet.io/), [Abstract](https://abs.xyz/), [Immutable](https://www.immutable.com/), [Base](https://www.base.org/)가 있습니다.
-- **인프라:** 온체인 게임 개발을 더 쉽게 만들기 위해 다양한 도구 스택이 존재합니다. [Cartridge](https://cartridge.gg/)(세션 키, 페이마스터를 통한 가스 없는 트랜잭션, Cartridge Controller를 통한 WebAuthn 기반 인증 제공), [Dojo](https://dojoengine.org/)(네이티브 계정 추상화를 지원하는 증명 가능한 게임 프레임워크), [MUD](https://mud.dev/)(EVM 기반 온체인 게임 엔진) 등이 있습니다. [Proof of Play](https://proofofplay.com/) 및 [Thirdweb](https://thirdweb.com/)과 같은 다른 도구들은 개발자가 웹2와 유사한 사용자 경험을 갖춘 게임을 구축할 수 있도록 지원합니다.
-- **게이밍 커뮤니티:** 이더리움의 게이밍 생태계는 플레이어 협력을 위한 게이밍 길드([YGG](https://x.com/YieldGuild), [MANA Gaming](https://x.com/ManaGamingBR), [WASD](https://x.com/WASD_0x), [LegacyGG](https://x.com/Lgc_GG), [Gaming Grid](https://x.com/GamingGridx), [OLAGG](https://x.com/OLAGuildGames) 등), [GAM3S.GG](https://games.gg/)와 같은 디스커버리 플랫폼, 게임 분석 및 생태계 소식을 다루는 [Gaming Daily](https://x.com/GamingDailyx)와 같은 미디어 매체의 지원을 받습니다. [FOCGERS](https://x.com/FOCGERS)처럼 이 모든 영역을 아우르는 곳도 있습니다.
-- **게임 장르:** 특정 게임 장르는 **영구적인 상태**, **검증 가능한 로직**, <strong>플레이어 소유 경제</strong>라는 이더리움 블록체인의 고유한 특성과 자연스럽게 일치합니다. 개발자들은 통합에 대해 각기 다른 방식으로 접근합니다. 어떤 이들은 모든 로직과 상태가 블록체인에 존재하는 완전한 온체인 게임을 구축하는 반면, 다른 이들은 NFT 치장 아이템과 같은 자산 소유권을 위해 블록체인을 최소한으로 사용합니다. 개발자들은 다음과 같이 온체인 아키텍처에서 가장 큰 이점을 얻을 수 있는 게임 플레이 유형을 발견하고 있습니다.
-   1. **던전 크롤러 및 로그라이크:** 검증 가능한 최고 점수를 제공하는 Loot Survivor의 완전한 온체인 영구 죽음(permadeath) 던전, 미로 탐험과 탈중앙화 금융 (DeFi) 메커니즘을 결합한 Onchain Heroes의 Maze of Gains 및 Axie 테마의 리스킨 버전인 Axie: Den of Mysteries가 있습니다.
-   2. **MMO:** PvP 및 탈출(extraction) 메커니즘을 갖춘 Cambria의 Gold Rush 시즌제 risk-to-earn MMO로, 안전 지대를 벗어나는 모든 발걸음에 실제 스테이크가 걸려 있습니다. 대규모 진영전을 특징으로 하는 ForTheKingdom의 완전한 온체인 MMO 전략 게임도 있습니다. Ronin 기반의 온체인 MMO인 Axie Infinity: Atia's Legacy에서는 플레이어가 실제 스테이크를 걸고 PvE 던전과 PvP 전투를 벌입니다. 
-   3. **4X 전략 및 대전략:** 온체인에서 영원히 실행되는 게임인 Conquest.eth는 플레이어가 행성에 토큰을 스테이킹하여 함대를 생산하고 동맹을 맺는 우주 정복 및 외교 무허가성 게임입니다. Realms는 이더리움 4X 메커니즘을 판타지 설정으로 가져와, 플레이어가 Realms(토지 NFT)를 제어하여 자원을 채굴하고, 군대를 양성하며, 완전히 플레이어 주도적인 경제 내에서 복잡한 외교에 참여합니다. Dark Forest는 영지식 증명(ZK-proof) 전장의 안개 메커니즘으로 이 장르를 개척했으며, 현재 DFArchon에 의해 커뮤니티 포크로 유지 관리되고 있습니다.
-   4. **전략 및 전술:** Realms에는 Blitz의 강렬한 1시간 바이인 기반 전략 매치가 포함되어 있으며, 출시 예정인 Asphodel 오토배틀러는 이더리움 메인넷에서 플레이 테스트 중입니다.
-   5. **트레이딩 카드 게임:** Showdown은 트레이딩 카드 게임의 전략과 포커의 강렬함을 결합했습니다. Axie Infinity Classic은 체스, 포커, 포켓몬의 조합이며, 수백만 명의 플레이어를 달성한 최초의 Web3 게임입니다.
+## 이더리움 게이밍 생태계 개요
+- **레이어 2 (l2):** 더 저렴한 수수료와 짧은 트랜잭션 시간 덕분에 이더리움 l2는 게임이 출시되는 일반적인 장소가 되었습니다. l2 환경은 계속 진화하고 있으며, Ronin(원래 Axie Infinity를 위한 사이드체인)과 같은 선도적인 Web3 게이밍 생태계는 최근 이더리움의 보안 보장을 상속받으면서 게이밍에 최적화된 인프라를 유지하는 이더리움 레이어 2 아키텍처로 전환했습니다. 현재 게이밍을 위한 선도적인 l2에는 [Ronin](https://www.roninchain.com/), [스타크넷](https://www.starknet.io/), [Abstract](https://abs.xyz/), [Base](https://www.base.org/)가 있습니다.
+- **인프라:** 온체인 게임 개발을 더 쉽게 만들기 위해 다양한 도구 스택이 존재합니다. [Cartridge](https://cartridge.gg/)(세션 키, 페이마스터를 통한 가스 없는 트랜잭션, Cartridge Controller를 통한 WebAuthn 기반 인증 제공), [Dojo](https://dojoengine.org/)(기본 계정 추상화 지원을 갖춘 증명 가능한 게임 프레임워크), [MUD](https://mud.dev/)(EVM 기반 온체인 게임 엔진) 등이 있습니다. [Proof of Play](https://proofofplay.com/) 및 [Thirdweb](https://thirdweb.com/)과 같은 다른 도구들은 개발자가 웹2와 유사한 사용자 경험을 가진 게임을 구축할 수 있도록 합니다.
+- **게이밍 커뮤니티:** 이더리움의 게이밍 생태계는 플레이어 협력을 위한 게이밍 길드([YGG](https://x.com/YieldGuild), [MANA Gaming](https://x.com/ManaGamingBR), [WASD](https://x.com/WASD_0x), [LegacyGG](https://x.com/Lgc_GG), [Gaming Grid](https://x.com/GamingGridx), [OLAGG](https://x.com/OLAGuildGames) 포함), [GAM3S.GG](https://games.gg/)와 같은 디스커버리 플랫폼, 게임 분석 및 생태계 보도를 위한 [Gaming Daily](https://x.com/GamingDailyx)와 같은 미디어 매체의 지원을 받습니다. [FOCGERS](https://x.com/FOCGERS)처럼 이 모든 것을 아우르는 곳도 있습니다.
+- **게임 장르:** 특정 게임 장르는 **지속적인 상태**, **검증 가능한 로직**, **플레이어 소유 경제**라는 이더리움 블록체인의 고유한 특성과 자연스럽게 일치합니다. 개발자들은 통합에 다르게 접근합니다. 일부는 모든 로직과 상태가 블록체인에 존재하는 완전한 온체인 게임을 구축하는 반면, 다른 일부는 NFT 치장 아이템과 같은 자산 소유권을 위해 블록체인을 최소한으로 사용합니다. 개발자들은 다음과 같이 온체인 아키텍처에서 가장 큰 이점을 얻는 게임 플레이 유형을 발견하고 있습니다.
+   1. **던전 크롤러 및 로그라이크:** 검증 가능한 최고 점수를 제공하는 Loot Survivor의 완전한 온체인 영구 죽음(permadeath) 던전, 미로 탐험과 탈중앙화 금융(DeFi) 메커니즘을 결합한 Onchain Heroes의 Maze of Gains 및 Axie 테마의 리스킨인 Axie: Den of Mysteries가 있습니다.
+   2. **MMO:** 안전 지대를 벗어나는 모든 발걸음에 실제 스테이크가 걸려 있는 PvP 및 추출 메커니즘을 갖춘 Cambria의 Gold Rush 시즌제 risk-to-earn MMO가 있습니다. 대규모 진영전을 특징으로 하는 ForTheKingdom의 완전한 온체인 MMO 전략 게임도 있습니다. 플레이어가 PvE 던전과 실제 스테이크가 걸린 PvP 전투를 통해 싸우는 Ronin 기반의 온체인 MMO인 Axie Infinity: Atia's Legacy도 있습니다. 
+   3. **4X 전략 및 대전략:** 플레이어가 행성에 토큰을 스테이킹하여 함대를 생산하고 동맹을 맺는 무허가성 우주 정복 및 외교 게임인 Conquest.eth는 온체인에서 영원히 실행됩니다. Realms는 [Eternum](/apps/eternum/)의 4X 메커니즘을 판타지 설정으로 가져와, 플레이어가 Realms(토지 NFT)를 통제하여 자원을 채굴하고, 군대를 구축하며, 완전히 플레이어 주도적인 경제 내에서 복잡한 외교에 참여합니다. Dark Forest는 영지식 증명(ZK-proof) 전장의 안개(fog of war) 메커니즘으로 이 장르를 개척했으며 현재 DFArchon에 의해 커뮤니티 포크로 유지 관리되고 있습니다.
+   4. **전략 및 전술:** Realms에는 Blitz의 강렬한 1시간 바이인(buy-in) 기반 전략 매치가 포함되어 있으며, Asphodel: Prologue 오토배틀러가 최근 이더리움 메인넷에 출시되었습니다.
+   5. **트레이딩 카드 게임:** Showdown은 트레이딩 카드 게임 전략과 포커의 강렬함을 결합합니다. Axie Infinity Classic은 체스, 포커, 포켓몬의 조합이며 수백만 명의 플레이어를 달성한 최초의 Web3 게임입니다.
    6. **경쟁 아레나:** 플레이어가 빠른 속도의 1대1 데스매치 결투에 ETH를 스테이킹하는 Cambria의 Duel Arena가 있습니다. 플레이어가 커스터마이징 가능한 메카를 조종하는 경쟁 메카 배틀 아레나인 AveForge도 있습니다.
-
 ## 추천 게임 {#games}
 
 <CategoryAppsGrid category="gaming" />

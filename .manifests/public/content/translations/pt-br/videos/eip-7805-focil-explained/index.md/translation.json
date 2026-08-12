@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "locale": "pt-br",
+  "translatedAt": "2026-07-27T19:18:30.876Z",
+  "englishManifestHash": "7640b090fa85",
+  "placeholderOrder": [
+    "LINK-10c1a7",
+    "LINK-5b3485"
+  ],
+  "placeholderMap": {
+    "LINK-10c1a7": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7805"
+      }
+    },
+    "LINK-5b3485": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=cUGyLx-mf6I"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-07-27T19:18:30.876Z",
+      "status": "success"
+    }
+  }
+}

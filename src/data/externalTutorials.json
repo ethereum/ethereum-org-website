@@ -574,7 +574,7 @@
   {
     "url": "https://speedrunethereum.com/challenge/tokenization",
     "title": "Tokenization",
-    "description": "Build, mint, and transfer your own ERC721",
+    "description": "Build, mint, and transfer your own ERC721. A Speedrun Ethereum challenge.",
     "author": "Austin Griffith",
     "authorGithub": "https://github.com/austintgriffith",
     "tags": [
@@ -596,7 +596,7 @@
   {
     "url": "https://speedrunethereum.com/challenge/decentralized-staking",
     "title": "Decentralized Staking App",
-    "description": "Build, test, and deploy your own decentralized staking app",
+    "description": "Build, test, and deploy your own decentralized staking app. A Speedrun Ethereum challenge.",
     "author": "Austin Griffith",
     "authorGithub": "https://github.com/austintgriffith",
     "tags": [
@@ -617,7 +617,7 @@
   {
     "url": "https://speedrunethereum.com/challenge/token-vendor",
     "title": "Token Vendor",
-    "description": "Build a vending machine to buy and sell your own ERC20",
+    "description": "Build a vending machine to buy and sell your own ERC20. A Speedrun Ethereum challenge.",
     "author": "Austin Griffith",
     "authorGithub": "https://github.com/austintgriffith",
     "tags": [
@@ -640,7 +640,7 @@
   {
     "url": "https://speedrunethereum.com/challenge/dice-game",
     "title": "Dice Game",
-    "description": "Deploy a contract to attack a DiceGame contract and predict the randomness so you only roll winners",
+    "description": "Deploy a contract to attack a DiceGame contract and predict the randomness so you only roll winners. A Speedrun Ethereum challenge.",
     "author": "Austin Griffith",
     "authorGithub": "https://github.com/austintgriffith",
     "tags": [
@@ -662,7 +662,7 @@
   {
     "url": "https://speedrunethereum.com/challenge/dex",
     "title": "Build a DEX",
-    "description": "Deploy a decentralized exchange to swap an ERC20 and ETH",
+    "description": "Deploy a decentralized exchange to swap an ERC20 and ETH. A Speedrun Ethereum challenge.",
     "author": "Austin Griffith",
     "authorGithub": "https://github.com/austintgriffith",
     "tags": [
@@ -683,9 +683,9 @@
     "publishDate": "04/24/2024"
   },
   {
-    "url": "https://github.com/scaffold-eth/se-2-challenges/tree/challenge-6-multisig",
+    "url": "https://speedrunethereum.com/challenge/multisig",
     "title": "Multisig wallet",
-    "description": "Deploy a multi-signature wallet where enough signatures are required to execute a transaction",
+    "description": "Deploy a multi-signature wallet where enough signatures are required to execute a transaction. A Speedrun Ethereum challenge.",
     "author": "Austin Griffith",
     "authorGithub": "https://github.com/austintgriffith",
     "tags": [
@@ -704,6 +704,120 @@
     "timeToRead": "90",
     "lang": "en",
     "publishDate": "04/24/2024"
+  },
+  {
+    "url": "https://speedrunethereum.com/challenge/oracles",
+    "title": "Oracles",
+    "description": "Build three oracle architectures in Solidity (whitelist, staking, and optimistic) with dispute resolution and economic incentives. A Speedrun Ethereum challenge.",
+    "author": "BuidlGuidl",
+    "authorGithub": "https://github.com/BuidlGuidl",
+    "tags": [
+      "solidity",
+      "smart contracts",
+      "react",
+      "nextjs",
+      "wagmi",
+      "javascript",
+      "typescript",
+      "frontend",
+      "oracles"
+    ],
+    "skillLevel": "intermediate",
+    "timeToRead": "60",
+    "lang": "en",
+    "publishDate": "07/21/2026"
+  },
+  {
+    "url": "https://speedrunethereum.com/challenge/over-collateralized-lending",
+    "title": "Over-Collateralized Lending",
+    "description": "Build an over-collateralized lending protocol in Solidity with liquidations and flash loans. A Speedrun Ethereum challenge.",
+    "author": "BuidlGuidl",
+    "authorGithub": "https://github.com/BuidlGuidl",
+    "tags": [
+      "solidity",
+      "smart contracts",
+      "react",
+      "nextjs",
+      "wagmi",
+      "javascript",
+      "typescript",
+      "frontend",
+      "defi"
+    ],
+    "skillLevel": "intermediate",
+    "timeToRead": "60",
+    "lang": "en",
+    "publishDate": "07/21/2026"
+  },
+  {
+    "url": "https://speedrunethereum.com/challenge/stablecoins",
+    "title": "Stablecoins",
+    "description": "Build an algorithmic stablecoin in Solidity with collateralization, liquidations, and incentives that maintain the peg. A Speedrun Ethereum challenge.",
+    "author": "BuidlGuidl",
+    "authorGithub": "https://github.com/BuidlGuidl",
+    "tags": [
+      "solidity",
+      "smart contracts",
+      "react",
+      "nextjs",
+      "wagmi",
+      "javascript",
+      "typescript",
+      "frontend",
+      "defi",
+      "ERC-20"
+    ],
+    "skillLevel": "advanced",
+    "timeToRead": "90",
+    "lang": "en",
+    "publishDate": "07/21/2026"
+  },
+  {
+    "url": "https://speedrunethereum.com/challenge/prediction-markets",
+    "title": "Prediction Markets",
+    "description": "Build a decentralized prediction market in Solidity, from market creation and betting to oracle-based outcome resolution. A Speedrun Ethereum challenge.",
+    "author": "BuidlGuidl",
+    "authorGithub": "https://github.com/BuidlGuidl",
+    "tags": [
+      "solidity",
+      "smart contracts",
+      "react",
+      "nextjs",
+      "wagmi",
+      "javascript",
+      "typescript",
+      "frontend",
+      "defi",
+      "oracles",
+      "ERC-20"
+    ],
+    "skillLevel": "advanced",
+    "timeToRead": "90",
+    "lang": "en",
+    "publishDate": "07/21/2026"
+  },
+  {
+    "url": "https://speedrunethereum.com/challenge/zk-voting",
+    "title": "ZK Voting",
+    "description": "Build a privacy-preserving voting dApp in Solidity and Noir, using zero-knowledge proofs, Merkle trees, and nullifiers. A Speedrun Ethereum challenge.",
+    "author": "BuidlGuidl",
+    "authorGithub": "https://github.com/BuidlGuidl",
+    "tags": [
+      "solidity",
+      "smart contracts",
+      "react",
+      "nextjs",
+      "wagmi",
+      "javascript",
+      "typescript",
+      "frontend",
+      "privacy",
+      "cryptography"
+    ],
+    "skillLevel": "advanced",
+    "timeToRead": "90",
+    "lang": "en",
+    "publishDate": "07/21/2026"
   },
   {
     "url": "https://www.cyfrin.io/blog/secure-dapps-against-ui-spoofing-part-1-decoding-transactions",

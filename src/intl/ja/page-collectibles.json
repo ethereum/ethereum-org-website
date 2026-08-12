@@ -59,9 +59,6 @@
   "page-collectibles-translations-250": "250ワードバッジ",
   "page-collectibles-translations-50000": "50,000ワードバッジ",
   "page-collectibles-translations-badge-desc": "任意の言語へ。",
-  "page-collectibles-translations-desc": "ほとんどのユーザーは英語を話さないため、記事を他の言語に翻訳する手助けが不可欠です。翻訳の経験は必要ありません。",
-  "page-collectibles-translations-instructions-1": "<a href=\"https://crowdin.com/project/ethereum-org\">Crowdin</a>に登録する",
-  "page-collectibles-translations-instructions-2": "言語を選択する",
-  "page-collectibles-translations-instructions-3": "翻訳を開始する",
+  "page-collectibles-translations-desc": "これらのバッジは、ethereum.org翻訳プログラムへの過去の貢献を称えるものです。このプログラムは現在終了に向かっており、新規翻訳者のオンボーディングは行っていません。",
   "page-collectibles-translations-title": "翻訳"
 }

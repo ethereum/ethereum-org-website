@@ -2,6 +2,7 @@
 title: 單槽最終性
 description: 單槽最終性的解釋
 lang: zh-tw
+template: roadmap
 ---
 
 一個 [以太坊](/) 區塊大約需要 15 分鐘才能已定案。然而，我們可以讓以太坊的共識機制更有效率地驗證區塊，並大幅縮短達到最終性的時間。區塊可以在同一個時槽中被提案並已定案，而不需要等待 15 分鐘。這個概念被稱為**單槽最終性 (SSF)**。
@@ -31,7 +32,7 @@ lang: zh-tw
 
 ## 實現 SSF 的途徑 {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title="為什麼我們現在還無法實現 SSF？" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 目前的共識機制結合了來自多個驗證者（稱為委員會）的證明，以減少每個驗證者在驗證區塊時必須處理的訊息數量。每個驗證者都有機會在每個紀元（32 個時槽）中進行證明，但在每個時槽中，只有一部分被稱為「委員會」的驗證者進行證明。他們透過劃分為子網路來實現這一點，在子網路中，少數驗證者被選為「聚合者」。這些聚合者各自將他們從其子網路中其他驗證者那裡看到的所有簽章組合成一個單一的聚合簽章。包含最多個人貢獻數量的聚合者會將其聚合簽章傳遞給區塊提案者，區塊提案者將其與來自其他委員會的聚合簽章一起包含在區塊中。
 

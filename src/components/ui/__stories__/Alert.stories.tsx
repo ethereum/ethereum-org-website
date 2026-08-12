@@ -118,6 +118,33 @@ export const WithIcon: Story = {
   ),
 }
 
+export const TitleSizes: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "`AlertTitle` accepts a `size` variant: `base` (default, bold body size) or `lg` for prominent callout headings.",
+      },
+    },
+  },
+  render: (args) => (
+    <div className="flex w-lg flex-col gap-4">
+      <Alert {...args}>
+        <AlertContent>
+          <AlertTitle>{DEMO_TITLE}</AlertTitle>
+          <AlertDescription>{DEMO_DESC}</AlertDescription>
+        </AlertContent>
+      </Alert>
+      <Alert variant="update" {...args}>
+        <AlertContent>
+          <AlertTitle size="lg">{DEMO_TITLE}</AlertTitle>
+          <AlertDescription>{DEMO_DESC}</AlertDescription>
+        </AlertContent>
+      </Alert>
+    </div>
+  ),
+}
+
 export const WithEmoji: Story = {
   parameters: {
     chromatic: { disableSnapshot: true },

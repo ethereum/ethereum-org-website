@@ -3,6 +3,7 @@ title: "فوساكا 🦓"
 metaTitle: "فولو-أوساكا (فوساكا)"
 description: "تعرف على ترقية بروتوكول فوساكا"
 lang: ar
+template: upgrade
 authors: ["Nixo", "ماريو هافيل"]
 ---
 

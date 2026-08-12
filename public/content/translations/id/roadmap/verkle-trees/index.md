@@ -2,6 +2,7 @@
 title: Pohon Verkle
 description: Deskripsi tingkat tinggi tentang pohon Verkle dan bagaimana mereka akan digunakan untuk meningkatkan Ethereum
 lang: id
+template: roadmap
 summaryPoints:
   - Temukan apa itu pohon Verkle
   - Baca mengapa Pohon Verkle adalah peningkatan yang berguna untuk Ethereum

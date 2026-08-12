@@ -39,6 +39,7 @@
   "page-find-wallet-buy-crypto-desc": "Achetez de la crypto avec de la monnaie fiduciaire directement dans le portefeuille \n *Remarque : l'achat de crypto peut dépendre de la région",
   "page-find-wallet-sell-for-fiat": "Vendre contre des espèces",
   "page-find-wallet-sell-for-fiat-desc": "Vendez de la crypto contre de la monnaie fiduciaire directement dans le portefeuille \n *Remarque : le retrait de crypto peut dépendre de la région",
+  "page-find-wallet-network-support": "Prise en charge des réseaux",
   "page-find-wallet-multisig": "Multisig",
   "page-find-wallet-multisig-desc": "Portefeuilles nécessitant plusieurs signatures pour autoriser une transaction",
   "page-find-wallet-social-recovery": "Récupération sociale",

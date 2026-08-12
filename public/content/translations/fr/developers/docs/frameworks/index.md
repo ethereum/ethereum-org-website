@@ -28,9 +28,9 @@ telles que :
 
 Avant de vous plonger dans les frameworks, nous vous recommandons de lire d'abord notre introduction aux [dapps](/developers/docs/dapps/) et à la [pile Ethereum](/developers/docs/ethereum-stack/).
 
-## Frameworks disponibles {#available-frameworks}
+## Frameworks disponibles
 
-**Foundry** - **_Foundry est une boîte à outils extrêmement rapide, portable et modulaire pour le développement d'applications Ethereum_**
+**Foundry** - **_Foundry est une boîte à outils ultra-rapide, portable et modulaire pour le développement d'applications Ethereum._**
 
 - [Installer Foundry](https://book.getfoundry.sh/)
 - [Livre Foundry](https://book.getfoundry.sh/)
@@ -47,13 +47,13 @@ Avant de vous plonger dans les frameworks, nous vous recommandons de lire d'abor
 - [Documentation](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
 
-**Web3j -** **_Une plateforme pour développer des applications de chaîne de blocs sur la JVM._**
+**Web3j -** **_Une plateforme pour développer des applications sur chaîne de blocs sur la JVM._**
 
 - [Page d'accueil](https://www.web3labs.com/web3j-sdk)
 - [Documentation](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
-**ethers-kt -** **_Bibliothèque Kotlin/Java/Android asynchrone et haute performance pour les chaînes de blocs basées sur l'EVM._**
+**ethers-kt -** **_Bibliothèque asynchrone et haute performance en Kotlin/Java/Android pour les chaînes de blocs basées sur l'EVM._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Exemples](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
@@ -64,11 +64,12 @@ Avant de vous plonger dans les frameworks, nous vous recommandons de lire d'abor
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Modèles](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-ETH -** **_Composants et hooks Ethers.js + Hardhat + React pour le Web3 : tout ce dont vous avez besoin pour commencer à créer des applications décentralisées propulsées par des contrats intelligents._**
+**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem et RainbowKit avec votre choix de Hardhat ou Foundry : rechargement à chaud des contrats, hooks React personnalisés, un portefeuille jetable et un faucet local, ainsi que des modules d'extension pour le développement d'applications décentralisées (dapp) full-stack._**
 
+- [Site Web](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Plateforme de développement Web3 qui permet aux développeurs de chaîne de blocs de créer, tester, déboguer, surveiller et exploiter des contrats intelligents et d'améliorer l'expérience utilisateur (UX) des dapps._**
+**Tenderly -** **_Plateforme de développement Web3 qui permet aux développeurs de chaînes de blocs de créer, tester, déboguer, surveiller et exploiter des contrats intelligents et d'améliorer l'expérience utilisateur des dapps._**
 
 - [Site Web](https://tenderly.co/)
 - [Documentation](https://docs.tenderly.co/)
@@ -90,7 +91,7 @@ Avant de vous plonger dans les frameworks, nous vous recommandons de lire d'abor
 - [GitHub](https://github.com/node-real)
 - [Discord](https://discord.gg/V5k5gsuE)
 
-**SDK thirdweb -** **_Créez des applications Web3 qui peuvent interagir avec vos contrats intelligents à l'aide de nos puissants SDK et de notre interface en ligne de commande (CLI)._**
+**thirdweb SDK -** **_Créez des applications Web3 qui peuvent interagir avec vos contrats intelligents à l'aide de nos puissants SDK et de notre interface en ligne de commande (CLI)._**
 
 - [Documentation](https://portal.thirdweb.com/sdk/)
 - [GitHub](https://github.com/thirdweb-dev/)
@@ -113,9 +114,9 @@ Avant de vous plonger dans les frameworks, nous vous recommandons de lire d'abor
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **Brownie n'est actuellement plus maintenu**
 
-**SDK OpenZeppelin -** **_La boîte à outils ultime pour les contrats intelligents : une suite d'outils pour vous aider à développer, compiler, mettre à niveau, déployer et interagir avec des contrats intelligents._**
+**OpenZeppelin SDK -** **_La boîte à outils ultime pour les contrats intelligents : une suite d'outils pour vous aider à développer, compiler, mettre à niveau, déployer et interagir avec des contrats intelligents._**
 
-- [SDK OpenZeppelin Defender](https://docs.openzeppelin.com/defender/sdk)
+- [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Forum de la communauté](https://forum.openzeppelin.com/c/support/17)
 - **Le développement du SDK OpenZeppelin est terminé**
@@ -124,7 +125,7 @@ Avant de vous plonger dans les frameworks, nous vous recommandons de lire d'abor
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (propulsé par Covalent) -** **_GoldRush offre la suite d'API de données de chaîne de blocs la plus complète pour les développeurs, les analystes et les entreprises. Que vous construisiez un tableau de bord DeFi, un portefeuille, un bot de trading, un agent IA ou une plateforme de conformité, les API de données fournissent un accès rapide, précis et convivial pour les développeurs aux données onchain essentielles dont vous avez besoin_**
+**GoldRush (propulsé par Covalent) -** **_GoldRush offre la suite d'API de données de chaîne de blocs la plus complète pour les développeurs, les analystes et les entreprises. Que vous construisiez un tableau de bord de finance décentralisée (DeFi), un portefeuille, un bot de trading, un agent IA ou une plateforme de conformité, les API de données fournissent un accès rapide, précis et convivial pour les développeurs aux données onchain essentielles dont vous avez besoin._**
 
 - [Site Web](https://goldrush.dev/)
 - [Documentation](https://goldrush.dev/docs/chains/ethereum)
@@ -146,6 +147,10 @@ Avant de vous plonger dans les frameworks, nous vous recommandons de lire d'abor
 - [Discord](https://discord.com/invite/FRRBdjemHV)
 - [Paquet NPM](https://www.npmjs.com/package/@veramo/core)
 
+**Moccasin -** **_Un framework de développement et de test de contrats intelligents rapide et Pythonique pour Vyper, construit sur Titanoboa._**
+
+- [Documentation](https://cyfrin.github.io/moccasin/)
+- [GitHub](https://github.com/Cyfrin/moccasin)
 ## Lectures complémentaires {#further-reading}
 
 _Vous connaissez une ressource communautaire qui vous a aidé ? Modifiez cette page et ajoutez-la !_

@@ -143,10 +143,7 @@ Kuna zana kadhaa zinazopatikana za kudhibiti ujumuishaji. Zana rasmi, iliyoundwa
 
 ## Maswali Yanayoulizwa Mara kwa Mara {#faq}
 
-### Je, kuchagua kushiriki kunabadilisha bahati yangu ya pendekezo au tuzo? {#change-luck-or-rewards}
-
-Hapana. Kuchagua kushiriki hakupunguzi nafasi yako ya pendekezo - majukumu yako na uteuzi wa pendekezo unabaki vile vile. Kwa mfano, ikiwa una wathibitishaji wawili wa 32 ETH dhidi ya mthibitishaji mmoja wa 64 ETH, utakuwa na nafasi sawa za jumla za kuchaguliwa kupendekeza kitalu na kupata tuzo.
-
+Hapana. Kuchagua kushiriki hakupunguzi nafasi yako ya kutoa pendekezo - majukumu yako na uteuzi wa pendekezo hubaki vile vile. Kwa mfano, ikiwa una wathibitishaji wawili wa 32 ETH dhidi ya mthibitishaji mmoja wa 64 ETH, utakuwa na jumla ya nafasi sawa za kuchaguliwa kupendekeza kitalu na kuchuma tuzo.
 ### Je, kuchagua kushiriki kunabadilisha hatari yangu ya ukataji? {#change-slashing-risk}
 
 Kwa waendeshaji wadogo au wasio wa kitaalamu, jibu fupi ni hapana. Jibu refu ni kwamba, kwa waendeshaji wa kitaalamu wanaoendesha wathibitishaji wengi kwa kila nodi na arifa za haraka, kujumuisha kuwa wathibitishaji wachache kunaweza kupunguza uwezo wao wa kukabiliana na ukataji na kuzuia matukio mfululizo. *Adhabu* ya awali ya ukataji kwa wathibitishaji wote imepunguzwa kwa kiasi kikubwa kutoka 1 ETH (kwa kila 32 ETH) hadi 0.0078125 ETH (kwa kila 32 ETH) ili kufidia hatari hii.

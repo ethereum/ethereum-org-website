@@ -3,6 +3,7 @@ title: Cancun-Deneb (Dencun)
 metaTitle: Cancun-Deneb (Dencun) FAQ
 description: Häufig gestellte Fragen zum Cancun-Deneb (Dencun) Netzwerk-Upgrade
 lang: de
+template: upgrade
 ---
 
 Cancun-Deneb (Dencun) ist ein Upgrade für das Ethereum-Netzwerk, das **Proto-Danksharding (EIP-4844)** aktiviert und temporäre Daten-**Blobs** für günstigeren [Layer 2 (L2)](/glossary/#layer-2)-Rollup-Speicher einführt.

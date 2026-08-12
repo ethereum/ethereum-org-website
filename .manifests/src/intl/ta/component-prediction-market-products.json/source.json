@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/component-prediction-market-products.json",
+  "generatedAt": "2026-07-22T22:31:58.809Z",
+  "rootHash": "b7af9487d900",
+  "tree": {
+    "contentHash": "0145cc8535e7",
+    "anchorHash": "b49985368529",
+    "children": {
+      "augur-cta": {
+        "contentHash": "d726af61186f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "augur-description": {
+        "contentHash": "206cde5c5169",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "augur-title": {
+        "contentHash": "731cf1a8f620",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "kalshi-cta": {
+        "contentHash": "66124cd53c80",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "kalshi-description": {
+        "contentHash": "4511db3ed43d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "kalshi-title": {
+        "contentHash": "0d894d2263ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "polymarket-cta": {
+        "contentHash": "6bcdd18db78f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "polymarket-description": {
+        "contentHash": "3573e14d3f12",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "polymarket-title": {
+        "contentHash": "f5645b41c8d9",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "augur-cta",
+      "augur-description",
+      "augur-title",
+      "kalshi-cta",
+      "kalshi-description",
+      "kalshi-title",
+      "polymarket-cta",
+      "polymarket-description",
+      "polymarket-title"
+    ]
+  },
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+}

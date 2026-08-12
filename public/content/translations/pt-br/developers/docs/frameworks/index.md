@@ -26,16 +26,16 @@ como:
 
 Antes de mergulhar nos frameworks, recomendamos que você leia primeiro nossa introdução aos [aplicativos descentralizados (dapps)](/developers/docs/dapps/) e à [pilha do Ethereum](/developers/docs/ethereum-stack/).
 
-## Frameworks disponíveis {#available-frameworks}
+## Frameworks disponíveis
 
-**Foundry** - **_O Foundry é um kit de ferramentas incrivelmente rápido, portátil e modular para o desenvolvimento de aplicativos Ethereum_**
+**Foundry** - **_O Foundry é um kit de ferramentas incrivelmente rápido, portátil e modular para o desenvolvimento de aplicativos no Ethereum_**
 
 - [Instalar o Foundry](https://book.getfoundry.sh/)
 - [Livro do Foundry](https://book.getfoundry.sh/)
 - [Chat da comunidade do Foundry no Telegram](https://t.me/foundry_support)
 - [Awesome Foundry](https://github.com/crisgarner/awesome-foundry)
 
-**Hardhat -** **_Ambiente de desenvolvimento Ethereum para profissionais._**
+**Hardhat -** **_Ambiente de desenvolvimento no Ethereum para profissionais._**
 
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
@@ -45,25 +45,26 @@ Antes de mergulhar nos frameworks, recomendamos que você leia primeiro nossa in
 - [Documentação](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
 
-**Web3j -** **_Uma plataforma para o desenvolvimento de aplicativos blockchain na JVM._**
+**Web3j -** **_Uma plataforma para o desenvolvimento de aplicativos em blockchain na JVM._**
 
 - [Página inicial](https://www.web3labs.com/web3j-sdk)
 - [Documentação](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
-**ethers-kt -** **_Biblioteca assíncrona e de alto desempenho em Kotlin/Java/Android para blockchains baseadas em EVM._**
+**ethers-kt -** **_Biblioteca assíncrona e de alto desempenho em Kotlin/Java/Android para blockchains baseadas na EVM._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Exemplos](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_Crie aplicativos baseados em Ethereum com um único comando. Vem com uma ampla oferta de frameworks de interface de usuário (UI) e modelos de finanças descentralizadas (DeFi) para escolher._**
+**Create Eth App -** **_Crie aplicativos baseados no Ethereum com um único comando. Vem com uma ampla oferta de frameworks de interface de usuário e modelos de finanças descentralizadas (DeFi) para escolher._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Modelos](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-Eth -** **_Ethers.js + Hardhat + componentes e hooks em React para Web3: tudo o que você precisa para começar a construir aplicativos descentralizados alimentados por contratos inteligentes._**
+**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem e RainbowKit com a sua escolha de Hardhat ou Foundry: recarregamento rápido (hot reload) de contratos, hooks personalizados do React, uma carteira descartável (burner wallet) e faucet local, além de módulos de extensão para o desenvolvimento full-stack de aplicativos descentralizados (dapps)._**
 
+- [Site](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
 **Tenderly -** **_Plataforma de desenvolvimento Web3 que permite aos desenvolvedores de blockchain construir, testar, depurar, monitorar e operar contratos inteligentes e melhorar a experiência do usuário (UX) de dapps._**
@@ -76,13 +77,13 @@ Antes de mergulhar nos frameworks, recomendamos que você leia primeiro nossa in
 - [Site](https://thegraph.com/)
 - [Tutorial](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 
-**Alchemy -** **_Plataforma de desenvolvimento Ethereum._**
+**Alchemy -** **_Plataforma de desenvolvimento no Ethereum._**
 
 - [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
 
-**NodeReal -** **_Plataforma de desenvolvimento Ethereum._**
+**NodeReal -** **_Plataforma de desenvolvimento no Ethereum._**
 
 - [Nodereal.io](https://nodereal.io/)
 - [GitHub](https://github.com/node-real)
@@ -93,19 +94,19 @@ Antes de mergulhar nos frameworks, recomendamos que você leia primeiro nossa in
 - [Documentação](https://portal.thirdweb.com/sdk/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Chainstack -** **_Plataforma de desenvolvimento Web3 (Ethereum e outros)._**
+**Chainstack -** **_Plataforma de desenvolvimento Web3 (Ethereum e outras)._**
 
 - [chainstack.com](https://www.chainstack.com/)
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_Plataforma de desenvolvimento Web3 de nível corporativo, que permite construir aplicativos de NFT em todas as principais cadeias EVM (e outras)._**
+**Crossmint -** **_Plataforma de desenvolvimento Web3 de nível empresarial, que permite construir aplicativos de NFT em todas as principais cadeias EVM (e outras)._**
 
 - [Site](https://www.crossmint.com)
 - [Documentação](https://docs.crossmint.com)
 - [Discord](https://discord.com/invite/crossmint)
 
-**Brownie -** **_Ambiente de desenvolvimento e framework de testes baseado em Python._**
+**Brownie -** **_Ambiente de desenvolvimento e framework de testes baseados em Python._**
 
 - [Documentação](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
@@ -136,7 +137,7 @@ Antes de mergulhar nos frameworks, recomendamos que você leia primeiro nossa in
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [Extensão do VS Code](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_Framework de código aberto, modular e agnóstico que facilita para os desenvolvedores de aplicativos descentralizados a construção de identidades descentralizadas e credenciais verificáveis em seus aplicativos._**
+**Veramo -** **_Framework de código aberto, modular e agnóstico que facilita para os desenvolvedores de aplicativos descentralizados (dapps) a construção de identidades descentralizadas e credenciais verificáveis em seus aplicativos._**
 
 - [Página inicial](https://veramo.io/)
 - [Documentação](https://veramo.io/docs/basics/introduction)
@@ -144,6 +145,10 @@ Antes de mergulhar nos frameworks, recomendamos que você leia primeiro nossa in
 - [Discord](https://discord.com/invite/FRRBdjemHV)
 - [Pacote NPM](https://www.npmjs.com/package/@veramo/core)
 
+**Moccasin -** **_Um framework de desenvolvimento e teste de contratos inteligentes rápido e pythônico para Vyper, construído no Titanoboa._**
+
+- [Documentação](https://cyfrin.github.io/moccasin/)
+- [GitHub](https://github.com/Cyfrin/moccasin)
 ## Leitura adicional {#further-reading}
 
 _Conhece um recurso da comunidade que o ajudou? Edite esta página e adicione-o!_

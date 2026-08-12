@@ -84,7 +84,7 @@ Nejprve si promluvme o GraphQL, které původně navrhl a implementoval Facebook
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 
-![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.gif)
+![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.mp4#910x692)
 
 Tyto dva obrázky v podstatě vystihují podstatu GraphQL. Pomocí dotazu vpravo můžeme přesně definovat, jaká data chceme, takže získáme vše v jednom požadavku a nic víc než to, co přesně potřebujeme. Server GraphQL se stará o načtení všech požadovaných dat, takže je pro frontendového konzumenta neuvěřitelně snadné jej používat. Pokud vás to zajímá, [zde je pěkné vysvětlení](https://www.apollographql.com/blog/graphql-explained) toho, jak přesně server zpracovává dotaz.
 

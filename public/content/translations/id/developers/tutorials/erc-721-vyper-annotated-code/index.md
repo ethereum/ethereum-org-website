@@ -26,7 +26,7 @@ Kontrak ini ditulis dalam [Vyper](https://vyper.readthedocs.io/en/latest/index.h
 # Dimodifikasi dari: https://github.com/vyperlang/vyper/blob/de74722bf2d8718cca46902be165f9fe0e3641dd/examples/tokens/ERC721.vy
 ```
 
-Komentar di Vyper, seperti di Python, dimulai dengan sebuah hash (`#`) dan berlanjut hingga akhir baris. Komentar yang menyertakan `@<keyword>` digunakan oleh [NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html) untuk menghasilkan dokumentasi yang dapat dibaca manusia.
+Komentar di Vyper, seperti di Python, dimulai dengan sebuah hash (`ethereum.ercs`) dan berlanjut hingga akhir baris. Komentar yang menyertakan `@<keyword>` digunakan oleh [NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html) untuk menghasilkan dokumentasi yang dapat dibaca manusia.
 
 ```python
 from vyper.interfaces import ERC721
@@ -40,33 +40,46 @@ Definisi antarmuka ditulis dalam Python, bukan Vyper, karena antarmuka digunakan
 
 Baris pertama mengimpor antarmuka, dan yang kedua menentukan bahwa kita mengimplementasikannya di sini.
 
-### Antarmuka ERC721Receiver {#receiver-interface}
+```python
+#pragma version >0.3.10
+```
 
 ```python
-# Antarmuka untuk kontrak yang dipanggil oleh safeTransferFrom()
+#pragma version >0.3.10
+```
+### Antarmuka ERC721Receiver
+
+```python
+# Interface for the contract called by safeTransferFrom()
 interface ERC721Receiver:
     def onERC721Received(
 ```
 
 ERC-721 mendukung dua jenis transfer:
 
-- `transferFrom`, yang memungkinkan pengirim menentukan alamat tujuan mana pun dan menempatkan tanggung jawab transfer pada pengirim. Ini berarti Anda dapat mentransfer ke alamat yang tidak valid, yang dalam hal ini NFT akan hilang selamanya.
-- `safeTransferFrom`, yang memeriksa apakah alamat tujuan adalah sebuah kontrak. Jika ya, kontrak ERC-721 bertanya kepada kontrak penerima apakah ia ingin menerima NFT tersebut.
+- `transferFrom`, yang memungkinkan pengirim menentukan alamat tujuan mana pun dan menempatkan tanggung jawab
+  untuk transfer pada pengirim. Ini berarti Anda dapat mentransfer ke alamat yang tidak valid, yang dalam hal ini
+  NFT akan hilang selamanya.
+- `safeTransferFrom`, yang memeriksa apakah alamat tujuan adalah sebuah kontrak. Jika ya, kontrak ERC-721
+  bertanya kepada kontrak penerima apakah ia ingin menerima NFT tersebut.
 
-Untuk menjawab permintaan `safeTransferFrom`, kontrak penerima harus mengimplementasikan `ERC721Receiver`.
+Untuk menjawab permintaan `safeTransferFrom`, sebuah kontrak penerima harus mengimplementasikan `ERC721Receiver`.
 
 ```python
             _operator: address,
             _from: address,
 ```
 
-Alamat `_from` adalah pemilik token saat ini. Alamat `_operator` adalah pihak yang meminta transfer (keduanya mungkin tidak sama, karena adanya jatah).
+Alamat `_from` adalah pemilik token saat ini. Alamat `_operator` adalah alamat yang
+meminta transfer (keduanya mungkin tidak sama, karena adanya jatah). Berdasarkan konvensi, sebagian besar parameter
+fungsi dalam kontrak ini dimulai dengan garis bawah (`_`).
 
 ```python
             _tokenId: uint256,
 ```
 
-ID token ERC-721 berukuran 256 bit. Biasanya ID ini dibuat dengan melakukan proses hash pada deskripsi dari apa pun yang diwakili oleh token tersebut.
+ID token ERC-721 berukuran 256 bit. Biasanya ID ini dibuat dengan melakukan proses hash pada deskripsi dari apa pun
+yang diwakili oleh token tersebut.
 
 ```python
             _data: Bytes[1024]
@@ -75,71 +88,45 @@ ID token ERC-721 berukuran 256 bit. Biasanya ID ini dibuat dengan melakukan pros
 Permintaan tersebut dapat memiliki hingga 1024 bita data pengguna.
 
 ```python
-        ) -> bytes32: view
+        ) -> bytes4: nonpayable
 ```
 
-Untuk mencegah kasus di mana sebuah kontrak secara tidak sengaja menerima transfer, nilai kembaliannya bukanlah boolean, melainkan 256 bit dengan nilai tertentu.
-
-Fungsi ini adalah `view`, yang berarti ia dapat membaca state dari rantai blok, tetapi tidak dapat memodifikasinya.
-
-### Peristiwa {#events}
+Untuk mencegah kasus di mana sebuah kontrak secara tidak sengaja menerima transfer, nilai kembaliannya bukanlah boolean,
+melainkan nilai empat bita tertentu, yaitu pemilih fungsi dari `onERC721Received`. Fungsi ini bersifat `nonpayable` karena sebuah
+kontrak penerima dapat mengubah state-nya sendiri ketika menerima sebuah token.
+### Peristiwa
 
 [Peristiwa](/developers/docs/smart-contracts/anatomy/#events-and-logs)
-dipancarkan untuk memberi tahu pengguna dan server di luar rantai blok tentang peristiwa tersebut. Perhatikan bahwa konten peristiwa tidak tersedia untuk kontrak di rantai blok.
+dipancarkan untuk memberi tahu pengguna dan server di luar rantai blok tentang peristiwa. Perhatikan bahwa konten peristiwa
+tidak tersedia untuk kontrak di rantai blok. Tiga peristiwa ERC-721 didefinisikan oleh antarmuka `IERC721` yang kita
+impor, sehingga kontrak ini tidak mendeklarasikannya sendiri; kontrak ini memancarkannya dengan `log IERC721.<Event>(...)`, seperti yang akan kita lihat
+dalam fungsi transfer di bawah ini.
 
-```python
-# @dev Memancarkan peristiwa ketika kepemilikan NFT apa pun berubah melalui mekanisme apa pun. Peristiwa ini dipancarkan ketika NFT
-#      diciptakan (`from` == 0) dan dihancurkan (`to` == 0). Pengecualian: selama pembuatan kontrak, sejumlah
-#      NFT dapat diciptakan dan ditetapkan tanpa memancarkan peristiwa Transfer. Pada saat
-#      transfer apa pun, alamat yang disetujui untuk NFT tersebut (jika ada) diatur ulang menjadi tidak ada.
-# @param _from Pengirim NFT (jika alamat adalah alamat nol, ini menunjukkan penciptaan token).
-# @param _to Penerima NFT (jika alamat adalah alamat nol, ini menunjukkan penghancuran token).
-# @param _tokenId NFT yang ditransfer.
-event Transfer:
-    sender: indexed(address)
-    receiver: indexed(address)
-    tokenId: indexed(uint256)
-```
+`Transfer` (`sender`, `receiver`, `token_id`) melaporkan perubahan kepemilikan sebuah NFT. Ini mirip dengan
+peristiwa Transfer ERC-20, kecuali bahwa kita melaporkan `token_id` alih-alih jumlah. Tidak ada yang memiliki alamat nol, jadi berdasarkan
+konvensi kita menggunakannya untuk melaporkan pembuatan dan penghancuran token. Satu pengecualian adalah pembuatan kontrak, di mana
+sejumlah NFT dapat dibuat dan ditetapkan tanpa memancarkan `Transfer`.
 
-Ini mirip dengan peristiwa Transfer ERC-20, kecuali bahwa kita melaporkan `tokenId` alih-alih jumlah. Tidak ada yang memiliki alamat nol, jadi berdasarkan konvensi kita menggunakannya untuk melaporkan penciptaan dan penghancuran token.
+Persetujuan ERC-721 mirip dengan jatah ERC-20: alamat tertentu diizinkan untuk mentransfer token tertentu,
+dan `Approval` (`owner`, `approved`, `token_id`) dipancarkan setiap kali alamat yang disetujui tersebut ditetapkan atau ditegaskan kembali.
+Ini memberikan mekanisme bagi kontrak untuk merespons ketika mereka menerima sebuah token. Kontrak tidak dapat mendengarkan peristiwa, jadi jika
+Anda hanya mentransfer token kepada mereka, mereka tidak "tahu" tentang hal itu. Dengan cara ini, pemilik pertama-tama mengirimkan persetujuan dan
+kemudian mengirimkan permintaan ke kontrak: "Saya menyetujui Anda untuk mentransfer token X, tolong lakukan ...". Ini adalah pilihan
+desain untuk membuat standar ERC-721 mirip dengan standar ERC-20. Karena token ERC-721 tidak sepadan (non-fungible), sebuah
+kontrak juga dapat mengidentifikasi bahwa ia mendapatkan token tertentu dengan melihat kepemilikan token tersebut.
 
-```python
-# @dev Ini memancarkan peristiwa ketika alamat yang disetujui untuk sebuah NFT diubah atau ditegaskan kembali. Alamat nol
-#      menunjukkan tidak ada alamat yang disetujui. Ketika peristiwa Transfer dipancarkan, ini juga
-#      menunjukkan bahwa alamat yang disetujui untuk NFT tersebut (jika ada) diatur ulang menjadi tidak ada.
-# @param _owner Pemilik NFT.
-# @param _approved Alamat yang kami setujui.
-# @param _tokenId NFT yang kami setujui.
-event Approval:
-    owner: indexed(address)
-    approved: indexed(address)
-    tokenId: indexed(uint256)
-```
+Terakhir, `ApprovalForAll` (`owner`, `operator`, `approved`) dipancarkan ketika seorang _operator_ diaktifkan atau dinonaktifkan untuk
+seorang pemilik. Terkadang berguna untuk memiliki operator yang dapat mengelola semua token akun dari jenis tertentu
+(yang dikelola oleh kontrak tertentu), mirip dengan surat kuasa. Misalnya, saya mungkin ingin memberikan
+kuasa semacam itu kepada kontrak yang memeriksa apakah saya belum menghubunginya selama enam bulan, dan jika demikian mendistribusikan aset saya kepada
+ahli waris saya (jika salah satu dari mereka memintanya, kontrak tidak dapat melakukan apa pun tanpa dipanggil oleh sebuah transaksi). Di ERC-20
+kita bisa saja memberikan jatah yang tinggi ke kontrak warisan, tetapi itu tidak berfungsi untuk ERC-721 karena tokennya
+tidak sepadan. Ini adalah padanannya. Nilai `approved` memberi tahu kita apakah peristiwa tersebut untuk persetujuan, atau
+penarikan persetujuan.
+### Variabel State
 
-Persetujuan ERC-721 mirip dengan jatah ERC-20. Alamat tertentu diizinkan untuk mentransfer token tertentu. Ini memberikan mekanisme bagi kontrak untuk merespons saat mereka menerima token. Kontrak tidak dapat mendengarkan peristiwa, jadi jika Anda hanya mentransfer token kepada mereka, mereka tidak akan "tahu" tentang hal itu. Dengan cara ini pemilik pertama-tama mengirimkan persetujuan dan kemudian mengirimkan permintaan ke kontrak: "Saya menyetujui Anda untuk mentransfer token X, silakan lakukan ...".
-
-Ini adalah pilihan desain untuk membuat standar ERC-721 mirip dengan standar ERC-20. Karena token ERC-721 tidak sepadan, sebuah kontrak juga dapat mengidentifikasi bahwa ia mendapatkan token tertentu dengan melihat kepemilikan token tersebut.
-
-```python
-# @dev Ini memancarkan peristiwa ketika operator diaktifkan atau dinonaktifkan untuk seorang pemilik. Operator dapat mengelola
-#      semua NFT milik pemilik tersebut.
-# @param _owner Pemilik NFT.
-# @param _operator Alamat yang kami tetapkan hak operatornya.
-# @param _approved Status hak operator (true jika hak operator diberikan dan false jika
-# dicabut).
-event ApprovalForAll:
-    owner: indexed(address)
-    operator: indexed(address)
-    approved: bool
-```
-
-Terkadang berguna untuk memiliki _operator_ yang dapat mengelola semua token akun dari jenis tertentu (yang dikelola oleh kontrak tertentu), mirip dengan surat kuasa. Misalnya, saya mungkin ingin memberikan kuasa tersebut kepada kontrak yang memeriksa apakah saya belum menghubunginya selama enam bulan, dan jika demikian mendistribusikan aset saya kepada ahli waris saya (jika salah satu dari mereka memintanya, kontrak tidak dapat melakukan apa pun tanpa dipanggil oleh sebuah transaksi). Di ERC-20 kita bisa saja memberikan jatah yang tinggi ke kontrak warisan, tetapi itu tidak berlaku untuk ERC-721 karena tokennya tidak sepadan. Ini adalah padanannya.
-
-Nilai `approved` memberi tahu kita apakah peristiwa tersebut untuk persetujuan, atau penarikan persetujuan.
-
-### Variabel State {#state-vars}
-
-Variabel-variabel ini berisi state token saat ini: mana yang tersedia dan siapa pemiliknya. Sebagian besar dari ini adalah objek `HashMap`, [pemetaan searah yang ada di antara dua tipe](https://vyper.readthedocs.io/en/latest/types.html#mappings).
+Variabel-variabel ini berisi state token saat ini: mana yang tersedia dan siapa pemiliknya. Sebagian besar dari ini
+adalah objek `HashMap`, [pemetaan searah yang ada di antara dua tipe](https://vyper.readthedocs.io/en/latest/types.html#mappings).
 
 ```python
 # @dev Pemetaan dari ID NFT ke alamat yang memilikinya.
@@ -149,56 +136,68 @@ idToOwner: HashMap[uint256, address]
 idToApprovals: HashMap[uint256, address]
 ```
 
-Identitas pengguna dan kontrak di Ethereum diwakili oleh alamat 160-bit. Kedua variabel ini memetakan dari ID token ke pemiliknya dan mereka yang disetujui untuk mentransfernya (maksimal satu untuk masing-masing). Di Ethereum, data yang tidak diinisialisasi selalu nol, jadi jika tidak ada pemilik atau pentransfer yang disetujui, nilai untuk token tersebut adalah nol.
+Identitas pengguna dan kontrak di Ethereum diwakili oleh alamat 160-bit. Kedua variabel ini memetakan
+dari ID token ke pemiliknya dan mereka yang disetujui untuk mentransfernya (maksimal satu untuk masing-masing). Di Ethereum,
+data yang tidak diinisialisasi selalu nol, jadi jika tidak ada pemilik atau pentransfer yang disetujui, nilai untuk token tersebut
+adalah nol.
 
 ```python
-# @dev Pemetaan dari alamat pemilik ke jumlah token miliknya.
+# @dev Pemetaan dari alamat pemilik ke jumlah tokennya.
 ownerToNFTokenCount: HashMap[address, uint256]
 ```
 
-Variabel ini menyimpan jumlah token untuk setiap pemilik. Tidak ada pemetaan dari pemilik ke token, jadi satu-satunya cara untuk mengidentifikasi token yang dimiliki oleh pemilik tertentu adalah dengan melihat kembali riwayat peristiwa rantai blok dan melihat peristiwa `Transfer` yang sesuai. Kita dapat menggunakan variabel ini untuk mengetahui kapan kita memiliki semua NFT dan tidak perlu melihat lebih jauh ke masa lalu.
+Variabel ini menyimpan jumlah token untuk setiap pemilik. Tidak ada pemetaan dari pemilik ke token, jadi
+satu-satunya cara untuk mengidentifikasi token yang dimiliki oleh pemilik tertentu adalah dengan melihat kembali riwayat peristiwa rantai blok
+dan melihat peristiwa `Transfer` yang sesuai. Kita dapat menggunakan variabel ini untuk mengetahui kapan kita memiliki semua NFT dan tidak
+perlu melihat lebih jauh ke masa lalu.
 
-Perhatikan bahwa algoritma ini hanya berfungsi untuk antarmuka pengguna dan server eksternal. Kode yang berjalan di rantai blok itu sendiri tidak dapat membaca peristiwa masa lalu.
+Perhatikan bahwa algoritma ini hanya berfungsi untuk antarmuka pengguna dan server eksternal. Kode yang berjalan di rantai blok
+itu sendiri tidak dapat membaca peristiwa masa lalu.
 
 ```python
 # @dev Pemetaan dari alamat pemilik ke pemetaan alamat operator.
 ownerToOperators: HashMap[address, HashMap[address, bool]]
 ```
 
-Sebuah akun mungkin memiliki lebih dari satu operator. `HashMap` sederhana tidak cukup untuk melacaknya, karena setiap kunci mengarah ke satu nilai. Sebagai gantinya, Anda dapat menggunakan `HashMap[address, bool]` sebagai nilainya. Secara bawaan, nilai untuk setiap alamat adalah `False`, yang berarti ia bukan operator. Anda dapat mengatur nilai ke `True` sesuai kebutuhan.
+Sebuah akun mungkin memiliki lebih dari satu operator. `HashMap` sederhana tidak cukup untuk
+melacak mereka, karena setiap kunci mengarah ke satu nilai. Sebagai gantinya, Anda dapat menggunakan
+`HashMap[address, bool]` sebagai nilainya. Secara bawaan, nilai untuk setiap alamat adalah `False`, yang berarti ia
+bukanlah operator. Anda dapat mengatur nilai menjadi `True` sesuai kebutuhan.
 
 ```python
 # @dev Alamat pencetak, yang dapat mencetak token
 minter: address
 ```
 
-Token baru harus dibuat dengan suatu cara. Dalam kontrak ini ada satu entitas yang diizinkan untuk melakukannya, yaitu `minter`. Ini kemungkinan cukup untuk sebuah permainan, misalnya. Untuk tujuan lain, mungkin perlu membuat logika bisnis yang lebih rumit.
+Token baru harus dibuat dengan suatu cara. Dalam kontrak ini ada satu entitas yang diizinkan untuk melakukannya, yaitu
+`minter`. Ini kemungkinan cukup untuk sebuah permainan, misalnya. Untuk tujuan lain, mungkin perlu
+untuk membuat logika bisnis yang lebih rumit.
 
 ```python
-# @dev Pemetaan ID antarmuka ke bool tentang apakah itu didukung atau tidak
-supportedInterfaces: HashMap[bytes32, bool]
-
-# @dev ID antarmuka ERC-165 dari ERC-165
-ERC165_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000000000000000000000000000000000000001ffc9a7
-
-# @dev ID antarmuka ERC-165 dari ERC-721
-ERC721_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000000000000000000000000000000000000080ac58cd
+# @dev Daftar statis dari id antarmuka ERC165 yang didukung
+SUPPORTED_INTERFACES: constant(bytes4[2]) = [
+    # ID antarmuka ERC165 dari ERC165
+    0x01ffc9a7,
+    # ID antarmuka ERC165 dari ERC721
+    0x80ac58cd,
+]
 ```
 
-[ERC-165](https://eips.ethereum.org/EIPS/eip-165) menentukan mekanisme bagi kontrak untuk mengungkapkan bagaimana aplikasi dapat berkomunikasi dengannya, dan ERC mana yang dipatuhinya. Dalam hal ini, kontrak mematuhi ERC-165 dan ERC-721.
-
+[ERC-165](https://eips.ethereum.org/EIPS/eip-165) menentukan mekanisme bagi sebuah kontrak untuk mengungkapkan bagaimana aplikasi
+dapat berkomunikasi dengannya, ERC mana yang dipatuhinya. `SUPPORTED_INTERFACES` adalah daftar konstan dari dua ID antarmuka
+empat bita yang dipatuhi kontrak ini: ERC-165 itu sendiri dan ERC-721.
 ### Fungsi {#functions}
 
 Ini adalah fungsi-fungsi yang benar-benar mengimplementasikan ERC-721.
 
-#### Konstruktor {#constructor}
+#### Konstruktor
 
 ```python
-@external
+@deploy
 def __init__():
 ```
 
-Di Vyper, seperti di Python, fungsi konstruktor disebut `__init__`.
+Di Vyper, seperti di Python, fungsi konstruktor disebut `__init__`. Fungsi ini ditandai dengan dekorasi `@deploy`, yang berarti ia berjalan sekali, ketika kontrak disebarkan.
 
 ```python
     """
@@ -206,52 +205,56 @@ Di Vyper, seperti di Python, fungsi konstruktor disebut `__init__`.
     """
 ```
 
-Di Python, dan di Vyper, Anda juga dapat membuat komentar dengan menentukan string multi-baris (yang dimulai dan diakhiri dengan `"""`), dan tidak menggunakannya dengan cara apa pun. Komentar ini juga dapat menyertakan [NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html).
+Di Python, dan di Vyper, Anda juga dapat membuat komentar dengan menentukan string multi-baris (yang dimulai dan diakhiri
+dengan `"""`), dan tidak menggunakannya dengan cara apa pun. Komentar ini juga dapat menyertakan
+[NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html).
 
 ```python
-    self.supportedInterfaces[ERC165_INTERFACE_ID] = True
-    self.supportedInterfaces[ERC721_INTERFACE_ID] = True
     self.minter = msg.sender
 ```
 
-Untuk mengakses variabel state Anda menggunakan `self.<variable name>` (sekali lagi, sama seperti di Python).
+Untuk mengakses variabel state, Anda menggunakan `self.<nama variabel>` (sekali lagi, sama seperti di Python). Konstruktor mencatat
+akun yang menyebarkan kontrak sebagai `minter`.
+#### Fungsi View
 
-#### Fungsi View {#views}
-
-Ini adalah fungsi-fungsi yang tidak memodifikasi state dari rantai blok, dan oleh karena itu dapat dieksekusi secara gratis jika dipanggil secara eksternal. Jika fungsi view dipanggil oleh sebuah kontrak, fungsi tersebut tetap harus dieksekusi di setiap node dan oleh karena itu membutuhkan biaya gas.
+Ini adalah fungsi-fungsi yang tidak mengubah state rantai blok, dan oleh karena itu dapat dieksekusi secara
+gratis jika dipanggil secara eksternal. Jika fungsi view dipanggil oleh sebuah kontrak, fungsi tersebut tetap harus dieksekusi di
+setiap node dan oleh karena itu membutuhkan biaya gas.
 
 ```python
 @view
 @external
 ```
 
-Kata kunci sebelum definisi fungsi yang dimulai dengan tanda at (`@`) disebut _dekorasi_. Mereka menentukan keadaan di mana suatu fungsi dapat dipanggil.
+Kata kunci sebelum definisi fungsi yang dimulai dengan tanda at (`@`) ini disebut _dekorasi_. Mereka
+menentukan keadaan di mana sebuah fungsi dapat dipanggil.
 
 - `@view` menentukan bahwa fungsi ini adalah sebuah view.
 - `@external` menentukan bahwa fungsi khusus ini dapat dipanggil oleh transaksi dan oleh kontrak lain.
 
 ```python
-def supportsInterface(_interfaceID: bytes32) -> bool:
+def supportsInterface(interface_id: bytes4) -> bool:
 ```
 
 Berbeda dengan Python, Vyper adalah [bahasa bertipe statis](https://wikipedia.org/wiki/Type_system#Static_type_checking).
-Anda tidak dapat mendeklarasikan variabel, atau parameter fungsi, tanpa mengidentifikasi [tipe data](https://vyper.readthedocs.io/en/latest/types.html). Dalam hal ini parameter masukannya adalah `bytes32`, nilai 256-bit (256 bit adalah ukuran kata asli dari [Ethereum Virtual Machine](/developers/docs/evm/)). Keluarannya adalah nilai boolean. Berdasarkan konvensi, nama parameter fungsi dimulai dengan garis bawah (`_`).
+Anda tidak dapat mendeklarasikan variabel, atau parameter fungsi, tanpa mengidentifikasi [tipe data](https://vyper.readthedocs.io/en/latest/types.html). Dalam hal ini parameter inputnya adalah `bytes4`, nilai empat bita, dan outputnya adalah nilai
+boolean.
 
 ```python
     """
     @dev Identifikasi antarmuka ditentukan dalam ERC-165.
-    @param _interfaceID Id dari antarmuka
+    @param interface_id Id dari antarmuka
     """
-    return self.supportedInterfaces[_interfaceID]
+    return interface_id in SUPPORTED_INTERFACES
 ```
 
-Mengembalikan nilai dari HashMap `self.supportedInterfaces`, yang diatur dalam konstruktor (`__init__`).
+Mengembalikan `True` jika `interface_id` adalah salah satu ID antarmuka dalam daftar `SUPPORTED_INTERFACES`.
 
 ```python
 ### FUNGSI VIEW ###
 ```
 
-Ini adalah fungsi-fungsi view yang membuat informasi tentang token tersedia bagi pengguna dan kontrak lain.
+Ini adalah fungsi view yang membuat informasi tentang token tersedia bagi pengguna dan kontrak lain.
 
 ```python
 @view
@@ -260,12 +263,13 @@ def balanceOf(_owner: address) -> uint256:
     """
     @dev Mengembalikan jumlah NFT yang dimiliki oleh `_owner`.
          Menghasilkan galat jika `_owner` adalah alamat nol. NFT yang ditetapkan ke alamat nol dianggap tidak valid.
-    @param _owner Alamat yang akan dikueri saldonya.
+    @param _owner Alamat yang saldonya akan ditanyakan.
     """
-    assert _owner != ZERO_ADDRESS
+    assert _owner != empty(address)
 ```
 
-Baris ini [menegaskan](https://vyper.readthedocs.io/en/latest/statements.html#assert) bahwa `_owner` bukan nol. Jika ya, terjadi kesalahan dan operasi dikembalikan.
+Baris ini [menegaskan](https://vyper.readthedocs.io/en/latest/statements.html#assert) bahwa `_owner` bukanlah
+alamat nol, yang ditulis sebagai `empty(address)`. Jika ya, ada kesalahan dan operasi dikembalikan.
 
 ```python
     return self.ownerToNFTokenCount[_owner]
@@ -280,24 +284,25 @@ def ownerOf(_tokenId: uint256) -> address:
     """
     owner: address = self.idToOwner[_tokenId]
     # Menghasilkan galat jika `_tokenId` bukan NFT yang valid
-    assert owner != ZERO_ADDRESS
+    assert owner != empty(address)
     return owner
 ```
 
-Di Ethereum Virtual Machine (EVM), penyimpanan apa pun yang tidak memiliki nilai yang tersimpan di dalamnya adalah nol.
-Jika tidak ada token di `_tokenId` maka nilai `self.idToOwner[_tokenId]` adalah nol. Dalam hal itu fungsi mengembalikan.
+Di Mesin Virtual Ethereum (EVM), penyimpanan apa pun yang tidak memiliki nilai yang disimpan di dalamnya adalah nol.
+Jika tidak ada token di `_tokenId` maka nilai `self.idToOwner[_tokenId]` adalah nol. Dalam
+kasus tersebut, fungsi dikembalikan.
 
 ```python
 @view
 @external
 def getApproved(_tokenId: uint256) -> address:
     """
-    @dev Mendapatkan alamat yang disetujui untuk satu NFT.
+    @dev Dapatkan alamat yang disetujui untuk satu NFT.
          Menghasilkan galat jika `_tokenId` bukan NFT yang valid.
-    @param _tokenId ID NFT untuk dikueri persetujuannya.
+    @param _tokenId ID NFT yang persetujuannya akan ditanyakan.
     """
     # Menghasilkan galat jika `_tokenId` bukan NFT yang valid
-    assert self.idToOwner[_tokenId] != ZERO_ADDRESS
+    assert self.idToOwner[_tokenId] != empty(address)
     return self.idToApprovals[_tokenId]
 ```
 
@@ -318,10 +323,9 @@ def isApprovedForAll(_owner: address, _operator: address) -> bool:
 
 Fungsi ini memeriksa apakah `_operator` diizinkan untuk mengelola semua token `_owner` dalam kontrak ini.
 Karena bisa ada beberapa operator, ini adalah HashMap dua tingkat.
+#### Fungsi Pembantu Transfer
 
-#### Fungsi Pembantu Transfer {#transfer-helpers}
-
-Fungsi-fungsi ini mengimplementasikan operasi yang merupakan bagian dari mentransfer atau mengelola token.
+Fungsi-fungsi ini mengimplementasikan operasi yang merupakan bagian dari transfer atau pengelolaan token.
 
 ```python
 
@@ -331,13 +335,14 @@ Fungsi-fungsi ini mengimplementasikan operasi yang merupakan bagian dari mentran
 @internal
 ```
 
-Dekorasi ini, `@internal`, berarti bahwa fungsi tersebut hanya dapat diakses dari fungsi lain dalam kontrak yang sama. Berdasarkan konvensi, nama fungsi ini juga dimulai dengan garis bawah (`_`).
+Dekorasi ini, `@internal`, berarti bahwa fungsi tersebut hanya dapat diakses dari fungsi lain di dalam
+kontrak yang sama. Berdasarkan konvensi, nama fungsi ini juga dimulai dengan garis bawah (`_`).
 
 ```python
 def _isApprovedOrOwner(_spender: address, _tokenId: uint256) -> bool:
     """
     @dev Mengembalikan apakah pembelanja yang diberikan dapat mentransfer ID token yang diberikan
-    @param spender alamat pembelanja untuk dikueri
+    @param spender alamat pembelanja yang akan ditanyakan
     @param tokenId uint256 ID token yang akan ditransfer
     @return bool apakah msg.sender disetujui untuk ID token yang diberikan,
         adalah operator dari pemilik, atau adalah pemilik token
@@ -349,40 +354,41 @@ def _isApprovedOrOwner(_spender: address, _tokenId: uint256) -> bool:
     return (spenderIsOwner or spenderIsApproved) or spenderIsApprovedForAll
 ```
 
-Ada tiga cara di mana sebuah alamat dapat diizinkan untuk mentransfer token:
+Ada tiga cara di mana sebuah alamat dapat diizinkan untuk mentransfer sebuah token:
 
 1. Alamat tersebut adalah pemilik token
-2. Alamat tersebut disetujui untuk membelanjakan token itu
+2. Alamat tersebut disetujui untuk membelanjakan token tersebut
 3. Alamat tersebut adalah operator untuk pemilik token
 
-Fungsi di atas dapat berupa view karena tidak mengubah state. Untuk mengurangi biaya operasi, fungsi apa pun yang _dapat_ berupa view _seharusnya_ menjadi view.
+Fungsi di atas dapat berupa view karena tidak mengubah state. Untuk mengurangi biaya operasi, setiap
+fungsi yang _dapat_ berupa view _seharusnya_ berupa view.
 
 ```python
 @internal
 def _addTokenTo(_to: address, _tokenId: uint256):
     """
-    @dev Menambahkan NFT ke alamat yang diberikan
+    @dev Tambahkan NFT ke alamat yang diberikan
          Menghasilkan galat jika `_tokenId` dimiliki oleh seseorang.
     """
     # Menghasilkan galat jika `_tokenId` dimiliki oleh seseorang
-    assert self.idToOwner[_tokenId] == ZERO_ADDRESS
-    # Mengubah pemilik
+    assert self.idToOwner[_tokenId] == empty(address)
+    # Ubah pemilik
     self.idToOwner[_tokenId] = _to
-    # Mengubah pelacakan jumlah
+    # Ubah pelacakan jumlah
     self.ownerToNFTokenCount[_to] += 1
 
 
 @internal
 def _removeTokenFrom(_from: address, _tokenId: uint256):
     """
-    @dev Menghapus NFT dari alamat yang diberikan
+    @dev Hapus NFT dari alamat yang diberikan
          Menghasilkan galat jika `_from` bukan pemilik saat ini.
     """
     # Menghasilkan galat jika `_from` bukan pemilik saat ini
     assert self.idToOwner[_tokenId] == _from
-    # Mengubah pemilik
-    self.idToOwner[_tokenId] = ZERO_ADDRESS
-    # Mengubah pelacakan jumlah
+    # Ubah pemilik
+    self.idToOwner[_tokenId] = empty(address)
+    # Ubah pelacakan jumlah
     self.ownerToNFTokenCount[_from] -= 1
 ```
 
@@ -392,25 +398,26 @@ Ketika ada masalah dengan transfer, kita mengembalikan panggilan tersebut.
 @internal
 def _clearApproval(_owner: address, _tokenId: uint256):
     """
-    @dev Menghapus persetujuan dari alamat yang diberikan
+    @dev Hapus persetujuan dari alamat yang diberikan
          Menghasilkan galat jika `_owner` bukan pemilik saat ini.
     """
     # Menghasilkan galat jika `_owner` bukan pemilik saat ini
     assert self.idToOwner[_tokenId] == _owner
-    if self.idToApprovals[_tokenId] != ZERO_ADDRESS:
-        # Mengatur ulang persetujuan
-        self.idToApprovals[_tokenId] = ZERO_ADDRESS
+    if self.idToApprovals[_tokenId] != empty(address):
+        # Atur ulang persetujuan
+        self.idToApprovals[_tokenId] = empty(address)
 ```
 
 Hanya ubah nilai jika perlu. Variabel state hidup di penyimpanan. Menulis ke penyimpanan adalah
-salah satu operasi paling mahal yang dilakukan EVM (Ethereum Virtual Machine) (dalam hal
-[gas](/developers/docs/gas/)). Oleh karena itu, ada baiknya untuk meminimalkannya, bahkan menulis nilai yang ada pun memiliki biaya yang tinggi.
+salah satu operasi paling mahal yang dilakukan EVM (Mesin Virtual Ethereum) (dalam hal
+[gas](/developers/docs/gas/)). Oleh karena itu, merupakan ide yang baik untuk meminimalkannya, bahkan menulis
+nilai yang ada memiliki biaya yang tinggi.
 
 ```python
 @internal
 def _transferFrom(_from: address, _to: address, _tokenId: uint256, _sender: address):
     """
-    @dev Mengeksekusi transfer NFT.
+    @dev Eksekusi transfer sebuah NFT.
          Menghasilkan galat kecuali `msg.sender` adalah pemilik saat ini, operator yang sah, atau alamat
          yang disetujui untuk NFT ini. (CATATAN: `msg.sender` tidak diizinkan dalam fungsi privat jadi teruskan `_sender`.)
          Menghasilkan galat jika `_to` adalah alamat nol.
@@ -420,32 +427,34 @@ def _transferFrom(_from: address, _to: address, _tokenId: uint256, _sender: addr
 ```
 
 Kita memiliki fungsi internal ini karena ada dua cara untuk mentransfer token (biasa dan aman), tetapi
-kita hanya menginginkan satu lokasi dalam kode tempat kita melakukannya untuk mempermudah audit.
+kita hanya menginginkan satu lokasi dalam kode di mana kita melakukannya untuk mempermudah audit.
 
 ```python
-    # Memeriksa persyaratan
+    # Periksa persyaratan
     assert self._isApprovedOrOwner(_sender, _tokenId)
     # Menghasilkan galat jika `_to` adalah alamat nol
-    assert _to != ZERO_ADDRESS
-    # Menghapus persetujuan. Menghasilkan galat jika `_from` bukan pemilik saat ini
+    assert _to != empty(address)
+    # Hapus persetujuan. Menghasilkan galat jika `_from` bukan pemilik saat ini
     self._clearApproval(_from, _tokenId)
-    # Menghapus NFT. Menghasilkan galat jika `_tokenId` bukan NFT yang valid
+    # Hapus NFT. Menghasilkan galat jika `_tokenId` bukan NFT yang valid
     self._removeTokenFrom(_from, _tokenId)
-    # Menambahkan NFT
+    # Tambahkan NFT
     self._addTokenTo(_to, _tokenId)
-    # Mencatat transfer
-    log Transfer(_from, _to, _tokenId)
+    # Catat transfer
+    log IERC721.Transfer(sender=_from, receiver=_to, token_id=_tokenId)
 ```
 
 Untuk memancarkan peristiwa di Vyper, Anda menggunakan pernyataan `log` ([lihat di sini untuk detail lebih lanjut](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)).
-
-#### Fungsi Transfer {#transfer-funs}
+Karena peristiwa tersebut milik antarmuka yang diimpor, kita merujuknya sebagai `IERC721.Transfer` dan meneruskan bidangnya dengan
+kata kunci.
+#### Fungsi Transfer
 
 ```python
 
 ### FUNGSI TRANSFER ###
 
 @external
+@payable
 def transferFrom(_from: address, _to: address, _tokenId: uint256):
     """
     @dev Menghasilkan galat kecuali `msg.sender` adalah pemilik saat ini, operator yang sah, atau alamat
@@ -454,7 +463,7 @@ def transferFrom(_from: address, _to: address, _tokenId: uint256):
          Menghasilkan galat jika `_to` adalah alamat nol.
          Menghasilkan galat jika `_tokenId` bukan NFT yang valid.
     @notice Pemanggil bertanggung jawab untuk mengonfirmasi bahwa `_to` mampu menerima NFT atau jika tidak
-            NFT tersebut mungkin hilang secara permanen.
+            mereka mungkin akan hilang secara permanen.
     @param _from Pemilik NFT saat ini.
     @param _to Pemilik baru.
     @param _tokenId NFT yang akan ditransfer.
@@ -462,11 +471,15 @@ def transferFrom(_from: address, _to: address, _tokenId: uint256):
     self._transferFrom(_from, _to, _tokenId, msg.sender)
 ```
 
-Fungsi ini memungkinkan Anda mentransfer ke alamat mana pun. Kecuali alamat tersebut adalah pengguna, atau kontrak yang
+Fungsi ini memungkinkan Anda mentransfer ke alamat sembarang. Kecuali alamat tersebut adalah pengguna, atau kontrak yang
 tahu cara mentransfer token, token apa pun yang Anda transfer akan tersangkut di alamat tersebut dan tidak berguna.
+
+Dekorasi `@payable` ada di sini karena antarmuka `IERC721` mendeklarasikan `transferFrom`, `safeTransferFrom`, dan
+`approve` sebagai payable, sehingga kontrak yang mengimplementasikan antarmuka tersebut harus cocok dengan tanda tangan tersebut.
 
 ```python
 @external
+@payable
 def safeTransferFrom(
         _from: address,
         _to: address,
@@ -480,9 +493,8 @@ def safeTransferFrom(
          Menghasilkan galat jika `_from` bukan pemilik saat ini.
          Menghasilkan galat jika `_to` adalah alamat nol.
          Menghasilkan galat jika `_tokenId` bukan NFT yang valid.
-         Jika `_to` adalah kontrak pintar, ini memanggil `onERC721Received` pada `_to` dan menghasilkan galat jika
+         Jika `_to` adalah kontrak pintar, ia memanggil `onERC721Received` pada `_to` dan menghasilkan galat jika
          nilai kembaliannya bukan `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`.
-         CATATAN: bytes4 direpresentasikan oleh bytes32 dengan padding
     @param _from Pemilik NFT saat ini.
     @param _to Pemilik baru.
     @param _tokenId NFT yang akan ditransfer.
@@ -491,46 +503,48 @@ def safeTransferFrom(
     self._transferFrom(_from, _to, _tokenId, msg.sender)
 ```
 
-Tidak apa-apa untuk melakukan transfer terlebih dahulu karena jika ada masalah kita akan mengembalikannya,
-jadi semua yang dilakukan dalam panggilan akan dibatalkan.
+Tidak masalah untuk melakukan transfer terlebih dahulu karena jika ada masalah kita akan tetap mengembalikannya,
+sehingga semua yang dilakukan dalam panggilan akan dibatalkan.
 
 ```python
-    if _to.is_contract: # memeriksa apakah `_to` adalah alamat kontrak
+    if _to.is_contract: # periksa apakah `_to` adalah alamat kontrak
 ```
 
-Pertama periksa untuk melihat apakah alamat tersebut adalah sebuah kontrak (jika memiliki kode). Jika tidak, asumsikan itu adalah alamat pengguna
-dan pengguna akan dapat menggunakan token atau mentransfernya. Namun jangan biarkan hal itu membuat Anda terlena
-dalam rasa aman yang palsu. Anda bisa kehilangan token, bahkan dengan `safeTransferFrom`, jika Anda mentransfernya
-ke alamat yang tidak ada seorang pun yang mengetahui kunci privatnya.
+Pertama periksa untuk melihat apakah alamat tersebut adalah kontrak (jika memiliki kode). Jika tidak, asumsikan itu adalah alamat
+pengguna dan pengguna akan dapat menggunakan token atau mentransfernya. Tetapi jangan biarkan hal itu meninabobokan Anda
+ke dalam rasa aman yang palsu. Anda bisa kehilangan token, bahkan dengan `safeTransferFrom`, jika Anda mentransfernya
+ke alamat yang kunci privatnya tidak diketahui oleh siapa pun.
 
 ```python
-        returnValue: bytes32 = ERC721Receiver(_to).onERC721Received(msg.sender, _from, _tokenId, _data)
+        returnValue: bytes4 = extcall ERC721Receiver(_to).onERC721Received(msg.sender, _from, _tokenId, _data)
 ```
 
-Panggil kontrak target untuk melihat apakah ia dapat menerima token ERC-721.
+Panggil kontrak target untuk melihat apakah ia dapat menerima token ERC-721. Vyper 0.4 mewajibkan panggilan ke kontrak lain untuk
+ditandai, sehingga panggilan diawali dengan `extcall`.
 
 ```python
         # Menghasilkan galat jika tujuan transfer adalah kontrak yang tidak mengimplementasikan 'onERC721Received'
-        assert returnValue == method_id("onERC721Received(address,address,uint256,bytes)", output_type=bytes32)
+        assert returnValue == method_id("onERC721Received(address,address,uint256,bytes)", output_type=bytes4)
 ```
 
-Jika tujuannya adalah sebuah kontrak, tetapi kontrak yang tidak menerima token ERC-721 (atau yang memutuskan untuk tidak menerima transfer
+Jika tujuannya adalah kontrak, tetapi kontrak yang tidak menerima token ERC-721 (atau yang memutuskan untuk tidak menerima transfer
 khusus ini), kembalikan.
 
 ```python
 @external
+@payable
 def approve(_approved: address, _tokenId: uint256):
     """
-    @dev Menetapkan atau menegaskan kembali alamat yang disetujui untuk sebuah NFT. Alamat nol menunjukkan tidak ada alamat yang disetujui.
+    @dev Tetapkan atau tegaskan kembali alamat yang disetujui untuk sebuah NFT. Alamat nol menunjukkan tidak ada alamat yang disetujui.
          Menghasilkan galat kecuali `msg.sender` adalah pemilik NFT saat ini, atau operator yang sah dari pemilik saat ini.
-         Menghasilkan galat jika `_tokenId` bukan NFT yang valid. (CATATAN: Ini tidak ditulis dalam EIP)
-         Menghasilkan galat jika `_approved` adalah pemilik saat ini. (CATATAN: Ini tidak ditulis dalam EIP)
+         Menghasilkan galat jika `_tokenId` bukan NFT yang valid. (CATATAN: Ini tidak tertulis di EIP)
+         Menghasilkan galat jika `_approved` adalah pemilik saat ini. (CATATAN: Ini tidak tertulis di EIP)
     @param _approved Alamat yang akan disetujui untuk ID NFT yang diberikan.
     @param _tokenId ID token yang akan disetujui.
     """
     owner: address = self.idToOwner[_tokenId]
     # Menghasilkan galat jika `_tokenId` bukan NFT yang valid
-    assert owner != ZERO_ADDRESS
+    assert owner != empty(address)
     # Menghasilkan galat jika `_approved` adalah pemilik saat ini
     assert _approved != owner
 ```
@@ -538,36 +552,35 @@ def approve(_approved: address, _tokenId: uint256):
 Berdasarkan konvensi, jika Anda tidak ingin memiliki pemberi persetujuan, Anda menunjuk alamat nol, bukan diri Anda sendiri.
 
 ```python
-    # Memeriksa persyaratan
+    # Periksa persyaratan
     senderIsOwner: bool = self.idToOwner[_tokenId] == msg.sender
     senderIsApprovedForAll: bool = (self.ownerToOperators[owner])[msg.sender]
     assert (senderIsOwner or senderIsApprovedForAll)
 ```
 
-Untuk mengatur persetujuan, Anda bisa menjadi pemilik, atau operator yang diberi wewenang oleh pemilik.
+Untuk menetapkan persetujuan, Anda bisa menjadi pemilik, atau operator yang diberi wewenang oleh pemilik.
 
 ```python
-    # Menetapkan persetujuan
+    # Tetapkan persetujuan
     self.idToApprovals[_tokenId] = _approved
-    log Approval(owner, _approved, _tokenId)
+    log IERC721.Approval(owner=owner, approved=_approved, token_id=_tokenId)
 
 
 @external
 def setApprovalForAll(_operator: address, _approved: bool):
     """
-    @dev Mengaktifkan atau menonaktifkan persetujuan untuk pihak ketiga ("operator") untuk mengelola semua
+    @dev Mengaktifkan atau menonaktifkan persetujuan bagi pihak ketiga ("operator") untuk mengelola semua
          aset `msg.sender`. Ini juga memancarkan peristiwa ApprovalForAll.
-         Menghasilkan galat jika `_operator` adalah `msg.sender`. (CATATAN: Ini tidak ditulis dalam EIP)
+         Menghasilkan galat jika `_operator` adalah `msg.sender`. (CATATAN: Ini tidak tertulis di EIP)
     @notice Ini berfungsi bahkan jika pengirim tidak memiliki token apa pun pada saat itu.
-    @param _operator Alamat untuk ditambahkan ke kumpulan operator yang sah.
+    @param _operator Alamat yang akan ditambahkan ke kumpulan operator yang sah.
     @param _approved True jika operator disetujui, false untuk mencabut persetujuan.
     """
     # Menghasilkan galat jika `_operator` adalah `msg.sender`
     assert _operator != msg.sender
     self.ownerToOperators[msg.sender][_operator] = _approved
-    log ApprovalForAll(msg.sender, _operator, _approved)
+    log IERC721.ApprovalForAll(owner=msg.sender, operator=_operator, approved=_approved)
 ```
-
 #### Mencetak Token Baru dan Menghancurkan yang Sudah Ada {#mint-burn}
 
 Akun yang membuat kontrak adalah `minter`, pengguna super yang berwenang untuk mencetak

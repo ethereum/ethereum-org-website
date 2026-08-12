@@ -3,6 +3,7 @@ title: "Fusaka 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
 description: Jifunze kuhusu sasisho la itifaki ya Fusaka
 lang: sw
+template: upgrade
 authors: ["Nixo", "Mario Havel"]
 ---
 
