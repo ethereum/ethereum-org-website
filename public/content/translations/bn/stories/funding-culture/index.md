@@ -64,7 +64,7 @@ DeFi মিম অ্যানিমেটর থেকে ইথেরিয়া
 - সরাসরি প্লেয়ারে প্লটের সিদ্ধান্তের ওপর ভোট দিতে স্টেক করেছেন
 - একটি ERC-20 (আমাদের অ্যাটেনশন টোকেন) উপার্জন করেছেন 
 
-![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4)
+![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4#800x400)
 
 ERC-20 টোকেনটি একটি বন্ডিং কার্ভে ইস্যু করা হয়েছিল। আপনি যত আগে এবং যত বেশি যুক্ত ছিলেন, তত বেশি উপার্জন করেছেন। ভোটগুলো (যেমন মূল চরিত্রের নাম Mirai রাখা) Snapshot-এর মাধ্যমে হয়েছিল। 
 

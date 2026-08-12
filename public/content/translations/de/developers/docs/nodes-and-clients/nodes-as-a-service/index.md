@@ -49,19 +49,19 @@ Lesen Sie mehr über die [Vorteile des Betriebs eines eigenen Knotens](/develope
 
 ## Beliebte Knoten-Dienste {#popular-node-services}
 
-Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Sie gerne fehlende hinzu! Jeder Knoten-Dienst bietet neben kostenlosen oder kostenpflichtigen Stufen unterschiedliche Vorteile und Funktionen. Sie sollten vor einer Entscheidung prüfen, welche am besten zu Ihren Anforderungen passen.
+Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Sie gerne fehlende hinzu! Jeder Knoten-Dienst bietet neben kostenlosen oder kostenpflichtigen Tarifen unterschiedliche Vorteile und Funktionen. Sie sollten vor einer Entscheidung prüfen, welche am besten zu Ihren Anforderungen passen.
 
 - [**Alchemy**](https://alchemy.com/)
   - [Dokumentation](https://www.alchemy.com/docs/)
   - Funktionen
-    - Größte kostenlose Stufe mit 300 Mio. Recheneinheiten pro Monat (\~30 Mio. getLatestBlock-Anfragen)
+    - Größter kostenloser Tarif mit 300 Mio. Recheneinheiten pro Monat (\~30 Mio. getLatestBlock-Anfragen)
     - Multichain-Unterstützung für Polygon, Starknet, Optimism, Arbitrum
-    - Betreibt ~70 % der größten dezentralen Anwendungen (Dapps) auf Ethereum und des Transaktionsvolumens im Bereich der dezentralisierten Finanzen (DeFi)
+    - Unterstützt ~70 % der größten dezentralen Anwendungen (Dapps) auf Ethereum und des Transaktionsvolumens im Bereich dezentralisierte Finanzen (DeFi)
     - Echtzeit-Webhook-Benachrichtigungen über Alchemy Notify
-    - Erstklassiger Support und Zuverlässigkeit / Stabilität
-    - Alchemys NFT-API
+    - Erstklassiger Support und Zuverlässigkeit/Stabilität
+    - NFT-API von Alchemy
     - Dashboard mit Request Explorer, Mempool Watcher und Composer
-    - Integrierter Zugang zum Testnet-Faucet
+    - Integrierter Zugang zu Testnet-Faucets
     - Aktive Discord-Ersteller-Community mit 18.000 Nutzern
 
 - [**Allnodes**](https://www.allnodes.com/)
@@ -73,18 +73,18 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
     - Dedizierte Archiv-Knoten für 30+ Blockchains
     - Verfügbar in 3 Regionen (USA, EU, Asien)
     - Snapshots für 100+ Blockchains auf [PublicNode](https://www.publicnode.com/snapshots)
-    - Technischer 24/7-Support mit 99,90 % - 99,98 % Uptime-SLA (abhängig vom Plan).
-    - Preisgestaltung pro Stunde
+    - Technischer 24/7-Support mit 99,90 % - 99,98 % Uptime-SLA (abhängig vom Tarif).
+    - Stundenweise Abrechnung
     - Zahlung mit Kreditkarte, PayPal oder Krypto
 
 - [**All That Node**](https://allthatnode.com/)
   - [Dokumentation](https://docs.allthatnode.com/)
   - Funktionen
-    - 50.000 Anfragen pro Tag in der kostenlosen Stufe
+    - 50.000 Anfragen pro Tag im kostenlosen Tarif
     - Unterstützung für über 40 Protokolle
     - JSON-RPC (EVM, Tendermint), REST und Websocket-APIs werden unterstützt
     - Unbegrenzter Zugriff auf Archivdaten
-    - Technischer 24/7-Support und über 99,9 % Betriebszeit
+    - Technischer 24/7-Support und über 99,9 % Verfügbarkeit
     - Faucet auf mehreren Chains verfügbar
     - Unbegrenzter Endpunktzugriff mit einer unbegrenzten Anzahl von API-Schlüsseln
     - Trace/Debug-API wird unterstützt
@@ -97,16 +97,16 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
     - Verfügbar in sechs Regionen
     - JSON-RPC über HTTP und sichere WebSockets
     - Unterstützt 3 Chains
-    - SLAs, AWS-Support 24/7
+    - SLAs, AWS-Support rund um die Uhr
     - Go Ethereum (Geth) und Lighthouse
 
 - [**Ankr**](https://www.ankr.com/)
   - [Dokumentation](https://docs.ankr.com/)
   - Funktionen
     - Ankr-Protokoll – offener Zugang zu öffentlichen RPC-API-Endpunkten für 8+ Chains
-    - Load-Balancing und Überwachung des Knotenzustands für ein schnelles und zuverlässiges Gateway zum nächstgelegenen verfügbaren Knoten
-    - Premium-Stufe, die WSS-Endpunkte und unbegrenzte Ratenlimits ermöglicht
-    - Ein-Klick-Bereitstellung von Full Nodes und Validator-Knoten für 40+ Chains
+    - Lastausgleich und Überwachung des Knoten-Zustands für ein schnelles und zuverlässiges Gateway zum nächstgelegenen verfügbaren Knoten
+    - Premium-Tarif, der WSS-Endpunkte und unbegrenzte Ratenlimits ermöglicht
+    - Bereitstellung von Full Nodes und Validator-Knoten mit einem Klick für 40+ Chains
     - Skalierung nach Bedarf
     - Analyse-Tools
     - Dashboard
@@ -120,10 +120,10 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
     - Multi-Region-Knoten-Hosting
     - Dezentrale Infrastruktur
     - Öffentliche API
-    - Dedizierter kostenloser Plan
+    - Dedizierter kostenloser Tarif
     - Multichain-Unterstützung (17+ Blockchains)
     - Archiv-Knoten
-    - 24/7 Discord-Support
+    - 24/7-Discord-Support
     - 24/7-Überwachung und Benachrichtigungen
     - Ein Gesamt-SLA von 99,9 %
     - Zahlung in Krypto
@@ -138,14 +138,14 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
 - [**BlockPI**](https://blockpi.io/)
   - [Dokumentation](https://docs.blockpi.io/)
   - Funktionen
-    - Robuste & verteilte Knotenstruktur
+    - Robuste und verteilte Knoten-Struktur
     - Bis zu 40 HTTPS- und WSS-Endpunkte
     - Kostenloses Anmeldepaket und monatliches Paket
     - Trace-Methode + Unterstützung für Archivdaten
     - Pakete mit bis zu 90 Tagen Gültigkeit
-    - Benutzerdefinierter Plan und Pay-as-you-go-Zahlung
+    - Benutzerdefinierter Tarif und nutzungsbasierte Zahlung
     - Zahlung in Krypto
-    - Direkter Support & technischer Support
+    - Direkter Support und technischer Support
 
 - [**Chainbase**](https://www.chainbase.com/)
   - [Dokumentation](https://docs.chainbase.com)
@@ -166,7 +166,7 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
     - Dedizierte Full Nodes und Archiv-Knoten
     - Schnelle Synchronisierungszeit für dedizierte Bereitstellungen
     - Bring Your Own Cloud
-    - Preisgestaltung pro Stunde
+    - Stundenweise Abrechnung
     - Direkter 24/7-Support
 
 - [**dRPC**](https://drpc.org/)
@@ -176,11 +176,11 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
     - API-Unterstützung für 185 Netzwerke
     - Verteilter Pool von 40+ Anbietern
     - Globale Abdeckung mit neun (9) Geo-Clustern
-    - KI-gestütztes Load-Balancing-System
-    - Pay-as-you-go-Pauschalpreise – keine Preiserhöhungen, kein Verfall, keine Bindung
+    - KI-gestütztes Lastausgleichssystem
+    - Nutzungsbasierte Pauschalpreise – keine Preiserhöhungen, kein Verfall, keine Bindung
     - Unbegrenzte Schlüssel, granulare Schlüsselanpassungen, Teamrollen, Front-End-Schutz
     - Methoden-Pauschale von 20 Recheneinheiten (CUs) pro Methode
-    - [Chain-Liste öffentlicher Endpunkte](https://drpc.org/chainlist)
+    - [Liste öffentlicher Endpunkt-Chains](https://drpc.org/chainlist)
     - [Preisrechner](https://drpc.org/pricing#calculator)
   - NodeCore: Open-Source-Stack für Organisationen, die volle Kontrolle wünschen
 
@@ -198,7 +198,7 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
 
 - [**InfStones**](https://infstones.com/)
   - Funktionen
-    - Kostenlose Stufenoption
+    - Kostenlose Tarifoption
     - Skalierung nach Bedarf
     - Analysen
     - Dashboard
@@ -211,7 +211,7 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
 - [**Infura**](https://infura.io/)
   - [Dokumentation](https://infura.io/docs)
   - Funktionen
-    - Kostenlose Stufenoption
+    - Kostenlose Tarifoption
     - Skalierung nach Bedarf
     - Kostenpflichtige Archivdaten
     - Direkter Support
@@ -220,8 +220,8 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
 - [**Kaleido**](https://kaleido.io/)
   - [Dokumentation](https://docs.kaleido.io/)
   - Funktionen
-    - Kostenlose Einsteigerstufe
-    - Ein-Klick-Bereitstellung von Ethereum-Knoten
+    - Kostenloser Einsteigertarif
+    - Bereitstellung von Ethereum-Knoten mit einem Klick
     - Anpassbare Clients und Algorithmen (Geth, Quorum & Besu || PoA, IBFT & Raft)
     - 500+ Verwaltungs- und Service-APIs
     - RESTful-Schnittstelle für die Übermittlung von Ethereum-Transaktionen (unterstützt durch Apache Kafka)
@@ -233,7 +233,7 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
     - Verwaltung privater Schlüssel über Cloud-HSM
     - Ethereum Mainnet-Tethering
     - ISO 27k- und SOC 2, Typ 2-Zertifizierungen
-    - Dynamische Laufzeitkonfiguration (z. B. Hinzufügen von Cloud-Integrationen, Ändern von Knoten-Ingresses usw.)
+    - Dynamische Laufzeitkonfiguration (z. B. Hinzufügen von Cloud-Integrationen, Ändern von Knoten-Zugängen usw.)
     - Unterstützung für Multi-Cloud-, Multi-Region- und hybride Bereitstellungsorchestrierungen
     - Einfache stündliche SaaS-basierte Preisgestaltung
     - SLAs und 24/7-Support
@@ -242,7 +242,7 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
   - [Dokumentation](https://docs.lavanet.xyz/)
   - Funktionen
     - Kostenlose Testnetz-Nutzung
-    - Dezentrale Redundanz für hohe Betriebszeit
+    - Dezentrale Redundanz für hohe Verfügbarkeit
     - Open-Source
     - Vollständig dezentrales SDK
     - Ethers.js-Integration
@@ -274,11 +274,11 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
 - [**NodeFlare**](https://nodeflare.app/)
   - [Dokumentation](https://nodeflare.app/docs/quick-start)
   - Funktionen
-    - 8 EVM-Chains einschließlich Ethereum, Base, Arbitrum One und Optimism
-    - 4 Regionen (Europa, Asien, Nordamerika) mit automatischem Failover zum nächstgelegenen fehlerfreien Knoten
-    - Kostenloser öffentlicher Endpunkt (kein API-Schlüssel) + kostenloser Plan mit 3 Mio. Recheneinheiten/Monat
+    - 23 EVM-Chains, einschließlich Ethereum, Base, Arbitrum One & Nova, Optimism, Linea und Unichain
+    - 5 Regionen (Europa, Großbritannien, Asien, US-Ost, US-West) mit automatischem Failover zum nächstgelegenen fehlerfreien Knoten
+    - Kostenloser öffentlicher Endpunkt (kein API-Schlüssel) + kostenloser Tarif mit 3 Mio. Recheneinheiten/Monat
     - Abrechnung nach Recheneinheiten – zahlen Sie nur für das, was Sie nutzen, aufwendigere Aufrufe kosten mehr
-    - Keine Drosselung bei kostenpflichtigen Plänen
+    - Keine Drosselung bei kostenpflichtigen Tarifen
 
 - [**NOWNodes**](https://nownodes.io/)
   - Funktionen
@@ -294,29 +294,29 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
   - [Dokumentation](https://docs.pokt.network/)
   - Funktionen
     - Dezentrales RPC-Protokoll und Marktplatz
-    - Kostenlose Stufe mit 1 Mio. Anfragen pro Tag (pro Endpunkt, max. 2)
+    - Kostenloser Tarif mit 1 Mio. Anfragen pro Tag (pro Endpunkt, max. 2)
     - Pre-Stake+-Programm (wenn Sie mehr als 1 Mio. Anfragen pro Tag benötigen)
     - 15+ unterstützte Blockchains
     - 6400+ Knoten, die POKT für die Bereitstellung von Anwendungen verdienen
-    - Unterstützung für Archiv-Knoten, Archiv-Knoten mit Tracing & Testnetz-Knoten
+    - Unterstützung für Archiv-Knoten, Archiv-Knoten mit Tracing und Testnetz-Knoten
     - Client-Diversität für Ethereum Mainnet-Knoten
     - Kein Single Point of Failure
     - Keine Ausfallzeiten
-    - Kostengünstige Near-Zero-Tokenomics (einmaliges Staken von POKT für Netzwerkbandbreite)
+    - Kostengünstige Near-Zero-Tokenomics (einmaliges Staking von POKT für Netzwerkbandbreite)
     - Keine monatlichen versunkenen Kosten, machen Sie Ihre Infrastruktur zu einem Vermögenswert
-    - In das Protokoll integriertes Load-Balancing
+    - In das Protokoll integrierter Lastausgleich
     - Unendliche Skalierung der Anzahl von Anfragen pro Tag und Knoten pro Stunde nach Bedarf
     - Die privateste, zensurresistenteste Option
     - Praktischer Entwickler-Support
-    - [Pocket Portal](https://bit.ly/ETHorg_POKTportal)-Dashboard und Analysen
+    - [Pocket Portal](https://bit.ly/ETHorg_POKTportal)-Dashboard und -Analysen
 
 - [**QuickNode**](https://www.quicknode.com)
   - [Dokumentation](https://www.quicknode.com/docs/)
   - Funktionen
-    - Technischer 24/7-Support & Entwickler-Discord-Community
+    - Technischer 24/7-Support und Entwickler-Discord-Community
     - Geografisch ausbalanciertes, Multi-Cloud/Metal-Netzwerk mit geringer Latenz
     - Multichain-Unterstützung (Optimism, Arbitrum, Polygon + 11 weitere)
-    - Mittlere Schichten für Geschwindigkeit & Stabilität (Call-Routing, Cache, Indizierung)
+    - Mittlere Schichten für Geschwindigkeit und Stabilität (Anrufweiterleitung, Cache, Indizierung)
     - Smart-Contract-Überwachung über Webhooks
     - Intuitives Dashboard, Analyse-Suite, RPC-Composer
     - Erweiterte Sicherheitsfunktionen (JWT, Maskierung, Whitelisting)
@@ -327,7 +327,7 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
 - [**Rivet**](https://rivet.cloud/)
   - [Dokumentation](https://rivet.readthedocs.io/en/latest/)
   - Funktionen
-    - Kostenlose Stufenoption
+    - Kostenlose Tarifoption
     - Skalierung nach Bedarf
 
 - [**SenseiNode**](https://senseinode.com)
@@ -349,18 +349,18 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
     - Bring Your Own Cloud
     - Analyse-Tools
     - Dashboard
-    - Preisgestaltung pro Stunde
+    - Stundenweise Abrechnung
     - Direkter Support
 
 - [**Tenderly**](https://tenderly.co/web3-gateway)
   - [Dokumentation](https://docs.tenderly.co/web3-gateway/web3-gateway)
   - Funktionen
-    - Kostenlose Stufe mit 25 Millionen Tenderly-Einheiten pro Monat
+    - Kostenloser Tarif mit 25 Millionen Tenderly-Einheiten pro Monat
     - Kostenloser Zugriff auf historische Daten
     - Bis zu 8-mal schnellere leseintensive Workloads
     - 100 % konsistenter Lesezugriff
     - JSON-RPC-Endpunkte
-    - UI-basierter RPC-Request-Builder und Request-Vorschau
+    - UI-basierter RPC-Anfrage-Ersteller und Anfrage-Vorschau
     - Eng integriert mit den Entwicklungs-, Debugging- und Test-Tools von Tenderly
     - Transaktionssimulationen
     - Nutzungsanalysen und Filterung
@@ -370,12 +370,12 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
 - [**Tokenview**](https://services.tokenview.io/)
   - [Dokumentation](https://services.tokenview.io/docs?type=nodeService)
   - Funktionen
-    - Technischer 24/7-Support & Entwickler-Telegram-Community
+    - Technischer 24/7-Support und Entwickler-Telegram-Community
     - Multichain-Unterstützung (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Classic)
     - Sowohl RPC- als auch WSS-Endpunkte sind offen nutzbar
     - Unbegrenzter Zugriff auf die Archivdaten-API
     - Dashboard mit Request Explorer und Mempool Watcher
-    - NFT-Daten-API und Webhook-Benachrichtigungen
+    - NFT-Daten-API und Webhook-Benachrichtigung
     - Zahlung in Krypto
     - Externer Support für zusätzliche Verhaltensanforderungen
 
@@ -394,24 +394,22 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
 - [**ZMOK**](https://zmok.io/)
   - [Dokumentation](https://docs.zmok.io/)
   - Funktionen
-    - Front-Running als Dienstleistung
+    - Front-Running as a Service
     - Globaler Transaktions-Mempool mit Such-/Filtermethoden
     - Unbegrenzte TX-Gebühr und unendliches Gas für das Senden von Transaktionen
-    - Schnellster Abruf des neuen Blocks und Lesen der Blockchain
+    - Schnellstes Abrufen des neuen Blocks und Lesen der Blockchain
     - Garantie für den besten Preis pro API-Aufruf
 
 - [**Zeeve**](https://www.zeeve.io/)
   - [Dokumentation](https://www.zeeve.io/docs/)
   - Funktionen
     - No-Code-Automatisierungsplattform auf Unternehmensniveau, die Bereitstellung, Überwachung und Verwaltung von Blockchain-Knoten und -Netzwerken bietet
-    - 30+ unterstützte Protokolle & Integrationen, und es werden mehr
-    - Mehrwertige Web3-Infrastrukturdienste wie dezentraler Speicher, dezentrale Identität (DID) und Blockchain-Ledger-Daten-APIs für reale Anwendungsfälle
+    - 30+ unterstützte Protokolle und Integrationen, und es werden mehr
+    - Mehrwert-Web3-Infrastrukturdienste wie dezentraler Speicher, dezentrale Identität (DID) und Blockchain-Ledger-Daten-APIs für reale Anwendungsfälle
     - 24/7-Support und proaktive Überwachung gewährleisten jederzeit die Gesundheit der Knoten.
     - RPC-Endpunkte bieten authentifizierten Zugriff auf APIs, problemlose Verwaltung mit intuitivem Dashboard und Analysen.
-    - Bietet sowohl Managed-Cloud- als auch Bring-Your-Own-Cloud-Optionen zur Auswahl und unterstützt alle großen Cloud-Anbieter wie AWS, Azure, Google Cloud, Digital Ocean sowie On-Premise.
+    - Bietet sowohl Managed-Cloud- als auch Bring-Your-Own-Cloud-Optionen zur Auswahl und unterstützt alle großen Cloud-Anbieter wie AWS, Azure, Google Cloud, Digital Ocean und On-Premise.
     - Wir verwenden intelligentes Routing, um jedes Mal den Knoten zu erreichen, der Ihrem Benutzer am nächsten ist
-
-
 ## Weiterführende Literatur {#further-reading}
 
 - [Liste von Ethereum-Knoten-Diensten](https://ethereumnodes.com/)

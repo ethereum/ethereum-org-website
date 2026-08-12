@@ -237,7 +237,7 @@ ethers.utils.formatEther(balance)
 - [Web3js یوٹیلیٹی فنکشنز](https://docs.web3js.org/api/web3-utils)
 - [Ethers یوٹیلیٹی فنکشنز](https://docs.ethers.org/v6/api/utils/)
 
-## دستیاب لائبریریاں {#available-libraries}
+## دستیاب لائبریریاں
 
 **Web3.js -** **_ایتھیریم JavaScript API۔_**
 
@@ -253,12 +253,12 @@ ethers.utils.formatEther(balance)
 **The Graph -** **_ایتھیریم اور IPFS ڈیٹا کو انڈیکس کرنے اور GraphQL کا استعمال کرتے ہوئے اس سے استفسار کرنے کا ایک پروٹوکول۔_**
 
 - [The Graph](https://thegraph.com)
-- [گراف ایکسپلورر](https://thegraph.com/explorer)
+- [Graph ایکسپلورر](https://thegraph.com/explorer)
 - [دستاویزات](https://thegraph.com/docs)
 - [GitHub](https://github.com/graphprotocol)
 - [ڈسکارڈ](https://thegraph.com/discord)
 
-**Alchemy SDK -** **_بہتر APIs کے ساتھ Ethers.js کے گرد ریپر (Wrapper)۔_**
+**Alchemy SDK -** **_بہتر APIs کے ساتھ Ethers.js کے گرد ایک ریپر۔_**
 
 - [دستاویزات](https://www.alchemy.com/docs)
 - [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
@@ -267,6 +267,16 @@ ethers.utils.formatEther(balance)
 
 - [دستاویزات](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
+
+**wagmi -** **_ایتھیریم کے لیے React ہکس کی لائبریری، جو viem پر مبنی ہے۔_**
+
+- [دستاویزات](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_غیر مرکزی ایپلی کیشنز (dapps) میں والیٹ کنکشن شامل کرنے کے لیے React لائبریری، جو wagmi اور viem پر مبنی ہے۔_**
+
+- [دستاویزات](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
 
 **Codex -** **_درجنوں چینز پر ریئل ٹائم، افزودہ بلاک چین ڈیٹا API۔_**
 
@@ -279,7 +289,6 @@ ethers.utils.formatEther(balance)
 
 - [دستاویزات](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
-
 ## مزید مطالعہ {#further-reading}
 
 _کسی ایسے کمیونٹی وسیلے کے بارے میں جانتے ہیں جس نے آپ کی مدد کی ہو؟ اس صفحے میں ترمیم کریں اور اسے شامل کریں!_

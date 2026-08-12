@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/component-story-card.json",
+  "generatedAt": "2026-07-11T18:00:17.719Z",
+  "rootHash": "1e8b7362e1f4",
+  "tree": {
+    "contentHash": "20484d0391ad",
+    "anchorHash": "fadbe909da84",
+    "children": {
+      "read-more": {
+        "contentHash": "83b794145c0c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "read-less": {
+        "contentHash": "dbda1af80148",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "show-original": {
+        "contentHash": "16194a69c43d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "show-translation": {
+        "contentHash": "4f8f5dd5cc7b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "original-language": {
+        "contentHash": "c5c60a2af071",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "translation": {
+        "contentHash": "6fbd766b1a71",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "read-more",
+      "read-less",
+      "show-original",
+      "show-translation",
+      "original-language",
+      "translation"
+    ]
+  },
+  "sourceCommitSha": "8e25023e1d2afab19c877d669db09cea9e0e4ab4"
+}

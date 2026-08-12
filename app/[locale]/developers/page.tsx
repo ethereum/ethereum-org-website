@@ -1,12 +1,18 @@
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { pick } from "lodash"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
 import BigNumber from "@/components/BigNumber"
+import ChecklistGrid from "@/components/ChecklistGrid"
 import ContentFeedback from "@/components/ContentFeedback"
 import { CopyButton } from "@/components/CopyToClipboard"
 import { HubHero } from "@/components/Hero"
-import { CheckCircle } from "@/components/icons/CheckCircle"
+import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import CardImage from "@/components/Image/CardImage"
 import MainArticle from "@/components/MainArticle"
@@ -14,6 +20,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardBanner,
+  CardButtonFake,
   CardContent,
   CardFooter,
   CardHeader,
@@ -54,32 +61,6 @@ import dogeImage from "@/public/images/doge-computer.png"
 import fallbackThumbnail from "@/public/images/eth-glyph-thumbnail.png"
 import heroImage from "@/public/images/heroes/developers-hub-hero.png"
 
-const WhyGrid = ({
-  items,
-}: {
-  items: { heading: string; description: string }[]
-}) => {
-  return (
-    <div
-      className={cn(
-        "rounded-4xl border border-accent-c/20",
-        "grid grid-cols-1 gap-6 p-8 md:grid-cols-2 md:p-14",
-        "bg-tint-accent-c from-70%"
-      )}
-    >
-      {items.map(({ heading, description }) => (
-        <div className="flex gap-1.5" key={heading}>
-          <CheckCircle />
-          <div className="space-y-1">
-            <h3 className="text-lg font-bold">{heading}</h3>
-            <p className="text-body-medium">{description}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  )
-}
-
 const DocsColumn = ({
   heading,
   links,
@@ -107,6 +88,10 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
   setRequestLocale(locale)
   const t = await getTranslations("page-developers-index")
   const tCommon = await getTranslations("common")
+
+  // client messages for the swipers (the page has no root I18nProvider)
+  const allMessages = await getMessages({ locale })
+  const messages = pick(allMessages, "component-swiper")
 
   const paths = await getBuilderPaths()
   const speedRunDetails = {
@@ -182,7 +167,12 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
 
             {/* Mobile */}
             <div className="-mx-page md:hidden">
-              <BuilderSwiper paths={paths} speedRunDetails={speedRunDetails} />
+              <I18nProvider locale={locale} messages={messages}>
+                <BuilderSwiper
+                  paths={paths}
+                  speedRunDetails={speedRunDetails}
+                />
+              </I18nProvider>
             </div>
           </Section>
 
@@ -218,7 +208,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 </BigNumber>
               </div>
             </div>
-            <WhyGrid items={whyGridItems} />
+            <ChecklistGrid items={whyGridItems} />
           </Section>
 
           {/* ETHSKILLS */}
@@ -277,7 +267,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
 
             <Grid columns={2} size="wide">
               {/* Quickstart your idea */}
-              <Card variant="nested" size="lg">
+              <Card variant="nested" size="lg" hoverLift>
                 <CardHeader>
                   <CardBanner background="none" size="lg">
                     <Image
@@ -337,7 +327,16 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
               </Card>
 
               {/* Get help */}
-              <Card variant="nested" size="lg">
+              <Card
+                href="https://ethereum.stackexchange.com/"
+                variant="nested"
+                size="lg"
+                customEventOptions={{
+                  eventCategory: "mid_boxes",
+                  eventAction: "click",
+                  eventName: "stack-exchange",
+                }}
+              >
                 <CardHeader>
                   <CardBanner background="none" size="lg">
                     <Image
@@ -357,23 +356,23 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                   </CardParagraph>
                 </CardContent>
                 <CardFooter>
-                  <ButtonLink
-                    variant="outline"
-                    isSecondary
-                    href="https://ethereum.stackexchange.com/"
-                    customEventOptions={{
-                      eventCategory: "mid_boxes",
-                      eventAction: "click",
-                      eventName: "stack-exchange",
-                    }}
-                  >
+                  <CardButtonFake variant="outline" isSecondary>
                     {t("page-developers-stack-exchange")}
-                  </ButtonLink>
+                  </CardButtonFake>
                 </CardFooter>
               </Card>
 
               {/* Resources */}
-              <Card variant="nested" size="lg">
+              <Card
+                href="/developers/learning-tools/"
+                variant="nested"
+                size="lg"
+                customEventOptions={{
+                  eventCategory: "mid_boxes",
+                  eventAction: "click",
+                  eventName: "play-with-code",
+                }}
+              >
                 <CardHeader>
                   <CardBanner background="none" size="lg" fit="contain">
                     <Image
@@ -392,23 +391,23 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                   </CardParagraph>
                 </CardContent>
                 <CardFooter>
-                  <ButtonLink
-                    variant="outline"
-                    isSecondary
-                    href="/developers/learning-tools/"
-                    customEventOptions={{
-                      eventCategory: "mid_boxes",
-                      eventAction: "click",
-                      eventName: "play-with-code",
-                    }}
-                  >
+                  <CardButtonFake variant="outline" isSecondary>
                     {t("page-developers-play-code")}
-                  </ButtonLink>
+                  </CardButtonFake>
                 </CardFooter>
               </Card>
 
               {/* Tutorials */}
-              <Card variant="nested" size="lg">
+              <Card
+                href="/developers/tutorials/"
+                variant="nested"
+                size="lg"
+                customEventOptions={{
+                  eventCategory: "mid_boxes",
+                  eventAction: "click",
+                  eventName: "view-tutorials",
+                }}
+              >
                 <CardHeader>
                   <CardBanner background="none" size="lg" fit="contain">
                     <Image
@@ -427,18 +426,9 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                   </CardParagraph>
                 </CardContent>
                 <CardFooter>
-                  <ButtonLink
-                    variant="outline"
-                    isSecondary
-                    href="/developers/tutorials/"
-                    customEventOptions={{
-                      eventCategory: "mid_boxes",
-                      eventAction: "click",
-                      eventName: "view-tutorials",
-                    }}
-                  >
+                  <CardButtonFake variant="outline" isSecondary>
                     {t("page-developers-learn-tutorials-cta")}
-                  </ButtonLink>
+                  </CardButtonFake>
                 </CardFooter>
               </Card>
             </Grid>
@@ -450,19 +440,21 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             <p>{t("page-developers-video-courses-desc")}</p>
 
             {/* Desktop */}
-            <div className="relative flex w-screen gap-6 overflow-x-auto pb-2 max-2xl:-mx-page max-2xl:px-page max-sm:hidden lg:gap-8 2xl:w-full">
+            <div className="relative flex w-screen gap-4 overflow-x-auto p-px pb-2 max-2xl:-mx-page max-2xl:px-page max-sm:hidden 2xl:w-full">
               {courses.map((course, idx) => (
                 <VideoCourseCard
                   key={idx}
                   course={course}
-                  className="w-[20%] max-w-[271px] flex-1 max-2xl:min-w-[20rem] xl:w-full"
+                  className="w-[20%] flex-1 max-2xl:min-w-[20rem] xl:w-full"
                 />
               ))}
             </div>
 
             {/* Mobile */}
             <div className="w-screen max-xl:-ms-page sm:hidden xl:w-full">
-              <VideoCourseSwiper courses={courses} />
+              <I18nProvider locale={locale} messages={messages}>
+                <VideoCourseSwiper courses={courses} />
+              </I18nProvider>
             </div>
           </Section>
 
@@ -489,7 +481,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                       size="sm"
                     >
                       <CardHeader>
-                        <CardBanner size="sm">
+                        <CardBanner size="sm" zoom>
                           {post.image ? (
                             <Image
                               src={post.image}
@@ -709,7 +701,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                     key={event.id}
                     asChild
                     className={cn(
-                      "ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]",
+                      "ms-4 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]",
                       "*:max-w-md *:min-w-72 *:flex-1"
                     )}
                   >
@@ -723,13 +715,19 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                       variant="ghost"
                       size="sm"
                     >
-                      <CardBanner size="sm">
-                        {bannerImage ? (
-                          <CardImage src={bannerImage} />
-                        ) : (
-                          <Image src={fallbackThumbnail} alt="" sizes="276px" />
-                        )}
-                      </CardBanner>
+                      <CardHeader>
+                        <CardBanner size="sm" zoom>
+                          {bannerImage ? (
+                            <CardImage src={bannerImage} />
+                          ) : (
+                            <Image
+                              src={fallbackThumbnail}
+                              alt=""
+                              sizes="276px"
+                            />
+                          )}
+                        </CardBanner>
+                      </CardHeader>
                       <CardContent>
                         <CardTitle>{title}</CardTitle>
                         <CardParagraph variant="subtitle" size="sm">
@@ -813,6 +811,8 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-developers-index")
 

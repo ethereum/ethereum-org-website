@@ -231,7 +231,7 @@ Hardhat হলো আপনার ইথেরিয়াম সফটওয়্
 
 - HTTP Alchemy API URL পেতে নিচে দেখুন এবং এটি আপনার ক্লিপবোর্ডে কপি করুন
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.mp4#842x480)
 
 আপনার `.env` এখন এরকম দেখতে হওয়া উচিত:
 

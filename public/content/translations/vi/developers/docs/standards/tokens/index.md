@@ -29,10 +29,13 @@ Dưới đây là một số tiêu chuẩn token phổ biến nhất trên Ether
 
 Danh sách đầy đủ các đề xuất [ERC](https://eips.ethereum.org/erc).
 
-## Đọc thêm {#further-reading}
+## Đọc thêm
 
-_Bạn biết một tài nguyên cộng đồng nào đó đã giúp ích cho bạn? Hãy chỉnh sửa trang này và thêm nó vào!_
+_Bạn biết một tài nguyên cộng đồng nào đó hữu ích? Hãy chỉnh sửa trang này và thêm nó vào!_
 
+- [Danh sách kiểm tra tích hợp token](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md) - _Trail of Bits_
+- [Tài liệu OpenZeppelin: Các token](https://docs.openzeppelin.com/contracts/5.x/tokens) - _OpenZeppelin_
+- [Những nguy hiểm của việc tích hợp token (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _OpenZeppelin_
 ## Các hướng dẫn liên quan {#related-tutorials}
 
 - [Danh sách kiểm tra tích hợp token](/developers/tutorials/token-integration-checklist/) _– Một danh sách các điều cần xem xét khi tương tác với các token._

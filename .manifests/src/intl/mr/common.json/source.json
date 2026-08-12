@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/common.json",
-  "generatedAt": "2026-06-29T23:46:39.216Z",
-  "rootHash": "860d0a37c7f3",
+  "generatedAt": "2026-08-07T05:02:37.305Z",
+  "rootHash": "d36b8e554add",
   "tree": {
-    "contentHash": "504e61bfe801",
-    "anchorHash": "ce8a00a0515c",
+    "contentHash": "abbd8fb8f882",
+    "anchorHash": "3cb14658cc92",
     "children": {
       "about-ethereum-org": {
         "contentHash": "9aafb3686977",
@@ -67,8 +67,16 @@
         "contentHash": "fd215ca4b497",
         "anchorHash": "e3b0c44298fc"
       },
+      "agent-tooling": {
+        "contentHash": "6157ff96ba11",
+        "anchorHash": "e3b0c44298fc"
+      },
       "ai-agents": {
         "contentHash": "3d9e43485a12",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-integration": {
+        "contentHash": "cfdddb5e9661",
         "anchorHash": "e3b0c44298fc"
       },
       "apps": {
@@ -141,6 +149,10 @@
       },
       "content-standardization": {
         "contentHash": "f1854793f823",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "contract-tooling": {
+        "contentHash": "6d26d8c2fc81",
         "anchorHash": "e3b0c44298fc"
       },
       "contributing": {
@@ -366,6 +378,10 @@
         "contentHash": "5d2c6743b87c",
         "anchorHash": "e3b0c44298fc"
       },
+      "education-standards": {
+        "contentHash": "7fbf171be369",
+        "anchorHash": "e3b0c44298fc"
+      },
       "ef-blog": {
         "contentHash": "9362e5809fd0",
         "anchorHash": "e3b0c44298fc"
@@ -501,6 +517,10 @@
         "contentHash": "8d14f6e72de8",
         "anchorHash": "e3b0c44298fc"
       },
+      "evm": {
+        "contentHash": "6676f17ddccb",
+        "anchorHash": "e3b0c44298fc"
+      },
       "feedback-card-prompt-article": {
         "contentHash": "1faa5076774f",
         "anchorHash": "e3b0c44298fc"
@@ -588,10 +608,6 @@
         "contentHash": "218197693424",
         "anchorHash": "e3b0c44298fc"
       },
-      "future-proofing": {
-        "contentHash": "d35c1e677306",
-        "anchorHash": "e3b0c44298fc"
-      },
       "gas": {
         "contentHash": "d85b58b6125d",
         "anchorHash": "e3b0c44298fc"
@@ -650,10 +666,6 @@
       },
       "jobs": {
         "contentHash": "2f17a0f8d518",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "kraken-logo": {
-        "contentHash": "11e6ccd62e9f",
         "anchorHash": "e3b0c44298fc"
       },
       "language-am": {
@@ -976,6 +988,14 @@
         "contentHash": "bfa0cab91d75",
         "anchorHash": "e3b0c44298fc"
       },
+      "link-external-assistive-text": {
+        "contentHash": "1d1833565142",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link-mailto-assistive-text": {
+        "contentHash": "7311cdb9c6e0",
+        "anchorHash": "e3b0c44298fc"
+      },
       "loading": {
         "contentHash": "47d2a515ef2f",
         "anchorHash": "e3b0c44298fc"
@@ -1002,26 +1022,6 @@
       },
       "nav-about-description": {
         "contentHash": "6672284d705e",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-advanced-description": {
-        "contentHash": "3bcbd3353d70",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-advanced-label": {
-        "contentHash": "9f088dbebd6c",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-ai-agents-description": {
-        "contentHash": "93aebc90f70e",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-basics-description": {
-        "contentHash": "3ce8dffec782",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-basics-label": {
-        "contentHash": "8fdd2ee8475e",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-brand-assets-description": {
@@ -1068,14 +1068,6 @@
         "contentHash": "04b9f0eb98cc",
         "anchorHash": "e3b0c44298fc"
       },
-      "nav-code-tutorials-description": {
-        "contentHash": "4615dd2fd7dc",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-code-tutorials-label": {
-        "contentHash": "e9f5b79c2405",
-        "anchorHash": "e3b0c44298fc"
-      },
       "nav-collectibles-description": {
         "contentHash": "3b2a42b171cf",
         "anchorHash": "e3b0c44298fc"
@@ -1108,28 +1100,12 @@
         "contentHash": "b359f96d24e1",
         "anchorHash": "e3b0c44298fc"
       },
-      "nav-dao-description": {
-        "contentHash": "6457f1fece9c",
-        "anchorHash": "e3b0c44298fc"
-      },
       "nav-data-analytics-description": {
         "contentHash": "e31b053f2489",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-data-analytics-label": {
         "contentHash": "788981c69e4a",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-apps-description": {
-        "contentHash": "5c4b5a0b4124",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-desci-description": {
-        "contentHash": "ddb9de5a3a60",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-desoc-description": {
-        "contentHash": "ecbb41642d93",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-developers-docs": {
@@ -1150,10 +1126,6 @@
       },
       "nav-devcon-label": {
         "contentHash": "fb7c67ccf472",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-did-description": {
-        "contentHash": "2b7b75fea3b9",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-docs-description": {
@@ -1196,24 +1168,12 @@
         "contentHash": "3f136dc1fc54",
         "anchorHash": "e3b0c44298fc"
       },
-      "nav-emerging-description": {
-        "contentHash": "0fd03ccfd02f",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-emerging-label": {
-        "contentHash": "eac0addff433",
-        "anchorHash": "e3b0c44298fc"
-      },
       "nav-energy-consumption-description": {
         "contentHash": "72a6f727867d",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-energy-consumption-label": {
         "contentHash": "f794597f5b8f",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-enterprise-description": {
-        "contentHash": "d9b55ed8a085",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-ercs-description": {
@@ -1240,24 +1200,12 @@
         "contentHash": "b1cc2e711844",
         "anchorHash": "e3b0c44298fc"
       },
-      "nav-ethereum-org-description": {
-        "contentHash": "fff5a82078c3",
-        "anchorHash": "e3b0c44298fc"
-      },
       "nav-ethereum-networks": {
         "contentHash": "52281e65571f",
         "anchorHash": "e3b0c44298fc"
       },
-      "nav-ethereum-networks-description": {
-        "contentHash": "382579127533",
-        "anchorHash": "e3b0c44298fc"
-      },
       "nav-ethereum-vs-bitcoin-description": {
         "contentHash": "ddb0a1d3b90b",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-ethereum-history-founder-and-ownership-description": {
-        "contentHash": "6eb8fb1e5b06",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-ethereum-wallets-description": {
@@ -1270,18 +1218,6 @@
       },
       "nav-events-calendar-label": {
         "contentHash": "3ac6ecc4b6ea",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-events-description": {
-        "contentHash": "f158f44c38df",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-events-irl-description": {
-        "contentHash": "46d96d559703",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-events-label": {
-        "contentHash": "3b2a8baa8cea",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-explore-apps-description": {
@@ -1300,10 +1236,6 @@
         "contentHash": "41744416458a",
         "anchorHash": "e3b0c44298fc"
       },
-      "nav-events-online-description": {
-        "contentHash": "cc4cc6ed65d9",
-        "anchorHash": "e3b0c44298fc"
-      },
       "nav-find-l2-description": {
         "contentHash": "129c6419e93f",
         "anchorHash": "e3b0c44298fc"
@@ -1318,10 +1250,6 @@
       },
       "nav-find-wallet-label": {
         "contentHash": "aecbd96c0c74",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-gaming-description": {
-        "contentHash": "512b21a18bc0",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-founders-description": {
@@ -1348,10 +1276,6 @@
         "contentHash": "2cba40c2541b",
         "anchorHash": "e3b0c44298fc"
       },
-      "nav-get-started-description": {
-        "contentHash": "9eb86c220fd8",
-        "anchorHash": "e3b0c44298fc"
-      },
       "nav-governance-description": {
         "contentHash": "f49ba0d357e0",
         "anchorHash": "e3b0c44298fc"
@@ -1362,46 +1286,6 @@
       },
       "nav-grants-description": {
         "contentHash": "13349f22a05a",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-guide-create-account-description": {
-        "contentHash": "5caacae5092d",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-guide-create-account-label": {
-        "contentHash": "98647d7f95d2",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-guide-overview-description": {
-        "contentHash": "1b77ee04f698",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-guide-revoke-access-description": {
-        "contentHash": "65c35389e088",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-guide-revoke-access-label": {
-        "contentHash": "3ab4053af45c",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-guide-use-wallet-description": {
-        "contentHash": "034be3dae879",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-guide-use-wallet-label": {
-        "contentHash": "2b58bdf9f156",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-guides-description": {
-        "contentHash": "c768c778be7d",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-guides-label": {
-        "contentHash": "fda608dc3be2",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-history-description": {
-        "contentHash": "bdeaadc3c2e3",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-history-founders-description": {
@@ -1472,20 +1356,8 @@
         "contentHash": "d978b9572d52",
         "anchorHash": "e3b0c44298fc"
       },
-      "nav-networks-introduction-label": {
-        "contentHash": "b605350bc002",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-networks-introduction-description": {
-        "contentHash": "53cc802341dd",
-        "anchorHash": "e3b0c44298fc"
-      },
       "nav-networks-explore-networks-label": {
         "contentHash": "41744416458a",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-networks-explore-networks-description": {
-        "contentHash": "d93070f99c33",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-networks-learn-label": {
@@ -1494,10 +1366,6 @@
       },
       "nav-networks-learn-description": {
         "contentHash": "b91e9dc30d04",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-nft-description": {
-        "contentHash": "4056cfee6b6f",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-online-communities-description": {
@@ -1548,10 +1416,6 @@
         "contentHash": "2a2499f1f86d",
         "anchorHash": "e3b0c44298fc"
       },
-      "nav-refi-description": {
-        "contentHash": "de20cb8d714b",
-        "anchorHash": "e3b0c44298fc"
-      },
       "nav-reports-description": {
         "contentHash": "5699ba1aec1f",
         "anchorHash": "e3b0c44298fc"
@@ -1560,28 +1424,16 @@
         "contentHash": "dacca3cba3f3",
         "anchorHash": "e3b0c44298fc"
       },
-      "nav-research-description": {
-        "contentHash": "b33190c4d97a",
+      "nav-roadmap-account-abstraction": {
+        "contentHash": "2ebcf10050c2",
         "anchorHash": "e3b0c44298fc"
       },
-      "nav-research-label": {
-        "contentHash": "1e91cc66da1d",
+      "nav-roadmap-danksharding": {
+        "contentHash": "d5c7c6294c3d",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-roadmap-description": {
         "contentHash": "b533eb80a154",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-roadmap-future-description": {
-        "contentHash": "b5b26dd03df3",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-roadmap-future-label": {
-        "contentHash": "d35c1e677306",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-roadmap-future-proofing": {
-        "contentHash": "d35c1e677306",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-roadmap-home": {
@@ -1604,6 +1456,22 @@
         "contentHash": "edbc8cbbe264",
         "anchorHash": "e3b0c44298fc"
       },
+      "nav-roadmap-pbs": {
+        "contentHash": "f04af9b1aa1c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-privacy-description": {
+        "contentHash": "05c5c80f0538",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-privacy-label": {
+        "contentHash": "54a57c3147c4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-quantum-resistance": {
+        "contentHash": "e456dd4f208f",
+        "anchorHash": "e3b0c44298fc"
+      },
       "nav-roadmap-scaling": {
         "contentHash": "f1766cc4ec8d",
         "anchorHash": "e3b0c44298fc"
@@ -1614,6 +1482,10 @@
       },
       "nav-roadmap-scaling-label": {
         "contentHash": "2fc8de069189",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-secret-leader-election": {
+        "contentHash": "9d1a2ca7f4a1",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-roadmap-security": {
@@ -1628,6 +1500,14 @@
         "contentHash": "b209561576f3",
         "anchorHash": "e3b0c44298fc"
       },
+      "nav-roadmap-single-slot-finality": {
+        "contentHash": "26be487ae07f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-statelessness": {
+        "contentHash": "6c88f20571b1",
+        "anchorHash": "e3b0c44298fc"
+      },
       "nav-roadmap-user-experience": {
         "contentHash": "7e9c787bf519",
         "anchorHash": "e3b0c44298fc"
@@ -1640,8 +1520,12 @@
         "contentHash": "7e9c787bf519",
         "anchorHash": "e3b0c44298fc"
       },
-      "nav-rwa-description": {
-        "contentHash": "ad022c2ebb7c",
+      "nav-roadmap-verkle-trees": {
+        "contentHash": "fdf6b8b2922f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-zkevm": {
+        "contentHash": "84685178c6df",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-run-a-node-description": {
@@ -1666,14 +1550,6 @@
       },
       "nav-security-description": {
         "contentHash": "cc0b3cd29676",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-set-up-local-env-description": {
-        "contentHash": "ee9a8bc8ca05",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-set-up-local-env-label": {
-        "contentHash": "7083b66ab10f",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-privacy-description": {
@@ -1716,18 +1592,6 @@
         "contentHash": "395d76497810",
         "anchorHash": "e3b0c44298fc"
       },
-      "nav-stake-label": {
-        "contentHash": "8939aea8419b",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-staking-home-description": {
-        "contentHash": "81365c66130c",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-staking-home-label": {
-        "contentHash": "25406e75840d",
-        "anchorHash": "e3b0c44298fc"
-      },
       "nav-staking-pool-description": {
         "contentHash": "c1d3a610c8e8",
         "anchorHash": "e3b0c44298fc"
@@ -1741,7 +1605,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "nav-staking-saas-label": {
-        "contentHash": "4c31dec05833",
+        "contentHash": "6561796cd0de",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-staking-solo-description": {
@@ -1764,10 +1628,6 @@
         "contentHash": "e2718f208216",
         "anchorHash": "e3b0c44298fc"
       },
-      "nav-start-get-started-description": {
-        "contentHash": "d0b438999db0",
-        "anchorHash": "e3b0c44298fc"
-      },
       "nav-start-with-crypto-title": {
         "contentHash": "2adc964c0847",
         "anchorHash": "e3b0c44298fc"
@@ -1777,7 +1637,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "nav-translation-program-description": {
-        "contentHash": "5ec659d8681f",
+        "contentHash": "88017b3ca923",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-tutorials-description": {
@@ -1806,6 +1666,14 @@
       },
       "nav-trillion-dollar-security-label": {
         "contentHash": "5e7e0f90e03e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-values-description": {
+        "contentHash": "38fde2913087",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-values-label": {
+        "contentHash": "b3bb96be5919",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-videos-description": {
@@ -1848,8 +1716,8 @@
         "contentHash": "2753fe349ea5",
         "anchorHash": "e3b0c44298fc"
       },
-      "nav-zkp-description": {
-        "contentHash": "d157dad01986",
+      "network-infrastructure": {
+        "contentHash": "ff99932523e7",
         "anchorHash": "e3b0c44298fc"
       },
       "nft-page": {
@@ -1888,10 +1756,6 @@
         "contentHash": "14b26622d3f9",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-languages-interested": {
-        "contentHash": "8fe21fcdda9c",
-        "anchorHash": "e3b0c44298fc"
-      },
       "page-languages-learn-more": {
         "contentHash": "f9a3728f484a",
         "anchorHash": "e3b0c44298fc"
@@ -1900,13 +1764,15 @@
         "contentHash": "64e76d18f94f",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-languages-want-more-link": {
-        "contentHash": "87730412fde5",
-        "anchorHash": "e3b0c44298fc"
-      },
       "page-languages-want-more-paragraph": {
-        "contentHash": "34784d7f9812",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "84083a8122df",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "d9299c2797bc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
       },
       "page-last-updated": {
         "contentHash": "381e0362f381",
@@ -2034,6 +1900,10 @@
         "contentHash": "8f6fb4eb7f42",
         "anchorHash": "e3b0c44298fc"
       },
+      "security-testing": {
+        "contentHash": "cf78e9359e4f",
+        "anchorHash": "e3b0c44298fc"
+      },
       "see-contributors": {
         "contentHash": "bdcc1746e82a",
         "anchorHash": "e3b0c44298fc"
@@ -2052,26 +1922,6 @@
       },
       "show-less": {
         "contentHash": "94ea9b1d33a0",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "story-card-read-more": {
-        "contentHash": "83b794145c0c",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "story-card-show-original": {
-        "contentHash": "16194a69c43d",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "story-card-show-english": {
-        "contentHash": "f827a6514dfa",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "story-card-original-language": {
-        "contentHash": "c5c60a2af071",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "story-card-english-translation": {
-        "contentHash": "3c1709cef10c",
         "anchorHash": "e3b0c44298fc"
       },
       "single-slot-finality": {
@@ -2134,20 +1984,8 @@
         "contentHash": "ea93d6a262ec",
         "anchorHash": "e3b0c44298fc"
       },
-      "translation-banner-body-new": {
-        "contentHash": "f6a424e9fcdd",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "translation-banner-body-update": {
-        "contentHash": "a82d5e9c3a2b",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "translation-banner-button-see-english": {
-        "contentHash": "98ffb7043357",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "translation-banner-button-translate-page": {
-        "contentHash": "24287921c4c5",
+      "transactions": {
+        "contentHash": "3e5136fd4b11",
         "anchorHash": "e3b0c44298fc"
       },
       "translation-banner-no-bugs-content": {
@@ -2160,14 +1998,6 @@
       },
       "translation-banner-no-bugs-title": {
         "contentHash": "7bec46938a56",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "translation-banner-title-new": {
-        "contentHash": "5a7d17cab663",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "translation-banner-title-update": {
-        "contentHash": "1803c9b871c9",
         "anchorHash": "e3b0c44298fc"
       },
       "translation-program": {
@@ -2311,7 +2141,9 @@
       "adding-reports",
       "adding-staking-products",
       "adding-wallets",
+      "agent-tooling",
       "ai-agents",
+      "app-integration",
       "apps",
       "aria-toggle-menu-button",
       "aria-toggle-search-button",
@@ -2330,6 +2162,7 @@
       "contact",
       "content-resources",
       "content-standardization",
+      "contract-tooling",
       "contributing",
       "contributors",
       "contributors-thanks",
@@ -2381,6 +2214,7 @@
       "documentation",
       "down",
       "edit-page",
+      "education-standards",
       "ef-blog",
       "eips",
       "energy-consumption",
@@ -2410,6 +2244,7 @@
       "ethereum-wallets",
       "ethereum-whitepaper",
       "events",
+      "evm",
       "feedback-card-prompt-article",
       "feedback-card-prompt-page",
       "feedback-card-prompt-tutorial",
@@ -2427,7 +2262,6 @@
       "find-wallet",
       "founders",
       "from",
-      "future-proofing",
       "gas",
       "get-eth",
       "get-involved",
@@ -2443,7 +2277,6 @@
       "how-to-use-a-wallet",
       "image",
       "jobs",
-      "kraken-logo",
       "language-am",
       "language-be",
       "language-ar",
@@ -2524,6 +2357,8 @@
       "less",
       "light-mode",
       "light-mode-aria-label",
+      "link-external-assistive-text",
+      "link-mailto-assistive-text",
       "loading",
       "loading-error-refresh",
       "meetups",
@@ -2531,11 +2366,6 @@
       "merge",
       "more",
       "nav-about-description",
-      "nav-advanced-description",
-      "nav-advanced-label",
-      "nav-ai-agents-description",
-      "nav-basics-description",
-      "nav-basics-label",
       "nav-brand-assets-description",
       "nav-brand-assets-label",
       "nav-bridges-description",
@@ -2547,8 +2377,6 @@
       "nav-builders-home-label",
       "nav-business-description",
       "nav-code-of-conduct",
-      "nav-code-tutorials-description",
-      "nav-code-tutorials-label",
       "nav-collectibles-description",
       "nav-collectibles-label",
       "nav-connect-description",
@@ -2557,18 +2385,13 @@
       "nav-context-label",
       "nav-contribute-description",
       "nav-contribute-label",
-      "nav-dao-description",
       "nav-data-analytics-description",
       "nav-data-analytics-label",
-      "nav-apps-description",
-      "nav-desci-description",
-      "nav-desoc-description",
       "nav-developers-docs",
       "nav-development-description",
       "nav-development-label",
       "nav-devcon-description",
       "nav-devcon-label",
-      "nav-did-description",
       "nav-docs-description",
       "nav-docs-design-description",
       "nav-docs-design-label",
@@ -2579,58 +2402,36 @@
       "nav-docs-stack-label",
       "nav-eip-description",
       "nav-eip-label",
-      "nav-emerging-description",
-      "nav-emerging-label",
       "nav-energy-consumption-description",
       "nav-energy-consumption-label",
-      "nav-enterprise-description",
       "nav-ercs-description",
       "nav-ercs-label",
       "nav-ethereum-explained-description",
       "nav-ethereum-explained-label",
       "nav-ethereum-foundation-description",
       "nav-ethereum-foundation-label",
-      "nav-ethereum-org-description",
       "nav-ethereum-networks",
-      "nav-ethereum-networks-description",
       "nav-ethereum-vs-bitcoin-description",
-      "nav-ethereum-history-founder-and-ownership-description",
       "nav-ethereum-wallets-description",
       "nav-events-calendar-description",
       "nav-events-calendar-label",
-      "nav-events-description",
-      "nav-events-irl-description",
-      "nav-events-label",
       "nav-explore-apps-description",
       "nav-explore-apps-label",
       "nav-explore-networks-description",
       "nav-explore-networks-label",
-      "nav-events-online-description",
       "nav-find-l2-description",
       "nav-find-l2-label",
       "nav-find-wallet-description",
       "nav-find-wallet-label",
-      "nav-gaming-description",
       "nav-founders-description",
       "nav-gas-fees-description",
       "nav-gas-fees-label",
       "nav-get-eth-description",
       "nav-get-involved-description",
       "nav-get-involved-label",
-      "nav-get-started-description",
       "nav-governance-description",
       "nav-governance-label",
       "nav-grants-description",
-      "nav-guide-create-account-description",
-      "nav-guide-create-account-label",
-      "nav-guide-overview-description",
-      "nav-guide-revoke-access-description",
-      "nav-guide-revoke-access-label",
-      "nav-guide-use-wallet-description",
-      "nav-guide-use-wallet-label",
-      "nav-guides-description",
-      "nav-guides-label",
-      "nav-history-description",
       "nav-history-founders-description",
       "nav-history-founders-label",
       "nav-history-label",
@@ -2648,13 +2449,9 @@
       "nav-learn-by-coding-label",
       "nav-learn-ethereum-development-description",
       "nav-start-building-description",
-      "nav-networks-introduction-label",
-      "nav-networks-introduction-description",
       "nav-networks-explore-networks-label",
-      "nav-networks-explore-networks-description",
       "nav-networks-learn-label",
       "nav-networks-learn-description",
-      "nav-nft-description",
       "nav-online-communities-description",
       "nav-online-communities-label",
       "nav-open-research-description",
@@ -2667,38 +2464,40 @@
       "nav-primary",
       "nav-quizzes-description",
       "nav-quizzes-label",
-      "nav-refi-description",
       "nav-reports-description",
       "nav-reports-label",
-      "nav-research-description",
-      "nav-research-label",
+      "nav-roadmap-account-abstraction",
+      "nav-roadmap-danksharding",
       "nav-roadmap-description",
-      "nav-roadmap-future-description",
-      "nav-roadmap-future-label",
-      "nav-roadmap-future-proofing",
       "nav-roadmap-home",
       "nav-roadmap-label",
       "nav-roadmap-options",
       "nav-roadmap-options-alt",
       "nav-roadmap-overview-description",
+      "nav-roadmap-pbs",
+      "nav-roadmap-privacy-description",
+      "nav-roadmap-privacy-label",
+      "nav-roadmap-quantum-resistance",
       "nav-roadmap-scaling",
       "nav-roadmap-scaling-description",
       "nav-roadmap-scaling-label",
+      "nav-roadmap-secret-leader-election",
       "nav-roadmap-security",
       "nav-roadmap-security-description",
       "nav-roadmap-security-label",
+      "nav-roadmap-single-slot-finality",
+      "nav-roadmap-statelessness",
       "nav-roadmap-user-experience",
       "nav-roadmap-ux-description",
       "nav-roadmap-ux-label",
-      "nav-rwa-description",
+      "nav-roadmap-verkle-trees",
+      "nav-roadmap-zkevm",
       "nav-run-a-node-description",
       "nav-see-all-guides-description",
       "nav-see-all-guides-label",
       "nav-see-all-use-cases-description",
       "nav-see-all-use-cases-label",
       "nav-security-description",
-      "nav-set-up-local-env-description",
-      "nav-set-up-local-env-label",
       "nav-privacy-description",
       "nav-smart-contracts-description",
       "nav-stablecoins-description",
@@ -2709,9 +2508,6 @@
       "nav-staying-safe-description",
       "nav-staying-safe-label",
       "nav-stake-description",
-      "nav-stake-label",
-      "nav-staking-home-description",
-      "nav-staking-home-label",
       "nav-staking-pool-description",
       "nav-staking-pool-label",
       "nav-staking-saas-description",
@@ -2721,7 +2517,6 @@
       "nav-staking-solo-label",
       "nav-stories-description",
       "nav-stories-label",
-      "nav-start-get-started-description",
       "nav-start-with-crypto-title",
       "nav-start-with-crypto-description",
       "nav-translation-program-description",
@@ -2732,6 +2527,8 @@
       "nav-technical-history-label",
       "nav-trillion-dollar-security-description",
       "nav-trillion-dollar-security-label",
+      "nav-values-description",
+      "nav-values-label",
       "nav-videos-description",
       "nav-videos-label",
       "nav-what-is-ether-description",
@@ -2742,7 +2539,7 @@
       "nav-where-to-start-description",
       "nav-where-to-start-label",
       "nav-whitepaper-description",
-      "nav-zkp-description",
+      "network-infrastructure",
       "nft-page",
       "nfts",
       "no",
@@ -2752,10 +2549,8 @@
       "page-actions",
       "page-languages-filter-label",
       "page-languages-filter-placeholder",
-      "page-languages-interested",
       "page-languages-learn-more",
       "page-languages-want-more-header",
-      "page-languages-want-more-link",
       "page-languages-want-more-paragraph",
       "page-last-updated",
       "page-not-found",
@@ -2787,16 +2582,12 @@
       "search-ethereum-org",
       "secret-leader-election",
       "security",
+      "security-testing",
       "see-contributors",
       "start-building",
       "show-all",
       "show-more",
       "show-less",
-      "story-card-read-more",
-      "story-card-show-original",
-      "story-card-show-english",
-      "story-card-original-language",
-      "story-card-english-translation",
       "single-slot-finality",
       "site-description",
       "skip-to-main-content",
@@ -2812,15 +2603,10 @@
       "terms-and-conditions",
       "terms-of-use",
       "tools",
-      "translation-banner-body-new",
-      "translation-banner-body-update",
-      "translation-banner-button-see-english",
-      "translation-banner-button-translate-page",
+      "transactions",
       "translation-banner-no-bugs-content",
       "translation-banner-no-bugs-dont-show-again",
       "translation-banner-no-bugs-title",
-      "translation-banner-title-new",
-      "translation-banner-title-update",
       "translation-program",
       "translator",
       "reports",
@@ -2854,5 +2640,5 @@
       "region-sint-eustatius-netherlands"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "3c76f545357f4d2d02a6f906d4b647d531be7088"
 }

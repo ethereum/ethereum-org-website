@@ -140,6 +140,7 @@ This table summarizes the different clients. All of them pass [client tests](htt
 | [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), Fast, [Full](#full-sync)               | Archive, Pruned |
 | [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Fast](#fast-sync), [Full](#full-sync) | Archive, Pruned |
 | [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Full](#full-sync)                                         | Archive, Pruned |
+| [ethrex](https://ethrex.xyz/)                                            | Rust       | Linux, macOS          | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Full](#full-sync)                     | Pruned          |
 | [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Full](#full-sync)                                         | Archive, Pruned |
 | [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Hoodi          | [Full](#full-sync)                                         | Pruned          |
 
@@ -156,6 +157,12 @@ Besu's extensive [documentation](https://besu.hyperledger.org/en/stable/) will g
 ### Erigon {#erigon}
 
 Erigon, formerly known as Turbo‐Geth, started as a fork of Go Ethereum oriented toward speed and disk‐space efficiency. Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages under development. Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using around 2TB of disk space, in under 3 days.
+
+### ethrex {#ethrex}
+
+ethrex is a minimalist, modular Ethereum execution client written in Rust and developed by LambdaClass. It is built with zero-knowledge proving in mind, and the same codebase can run both as an L1 execution client and as a multi-prover ZK-Rollup (L2). It is dual licensed under the Apache 2.0 and MIT licenses.
+
+Learn more by reading the [ethrex documentation](https://docs.ethrex.xyz/) or checking out the [ethrex GitHub repo](https://github.com/lambdaclass/ethrex).
 
 ### Go Ethereum {#geth}
 

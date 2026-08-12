@@ -253,10 +253,10 @@ Determine which files to test from the PR context (e.g., `gaming/index.md`). The
 ```bash
 # Language-level scoping (still processes every file for that language):
 TARGET_LANGUAGES={LANGUAGE} \
-  npx ts-node -O '{"module":"commonjs"}' ./src/scripts/intl-pipeline/intl-sanitizer.ts
+  pnpm exec tsx ./src/scripts/intl-pipeline/intl-sanitizer.ts
 
 # Preferred for single files — inline script calling processMarkdownFile directly:
-npx ts-node -O '{"module":"commonjs"}' -e '
+pnpm exec tsx -e '
 const { _testOnly } = require("./src/scripts/intl-pipeline/intl-sanitizer");
 const fs = require("fs");
 const file = "public/content/translations/{LANGUAGE}/{PAGE_PATH}";
@@ -302,7 +302,7 @@ Test the same page in 2-3 other languages to check for false positives. **NEVER 
 ```bash
 # Test the same page path in a few other languages
 for lang in es tr ja; do
-  npx ts-node -O '{"module":"commonjs"}' -e "
+  pnpm exec tsx -e "
     const { _testOnly } = require('./src/scripts/intl-pipeline/intl-sanitizer');
     const fs = require('fs');
     const file = 'public/content/translations/$lang/{PAGE_PATH}';
@@ -390,7 +390,7 @@ npx playwright test --project=unit tests/unit/intl-pipeline/sanitizer/
 
 ### Run sanitizer against a language
 ```bash
-TARGET_LANGUAGES=ja npx ts-node -O '{"module":"commonjs"}' ./src/scripts/intl-pipeline/intl-sanitizer.ts
+TARGET_LANGUAGES=ja pnpm exec tsx ./src/scripts/intl-pipeline/intl-sanitizer.ts
 ```
 
 ### Key files

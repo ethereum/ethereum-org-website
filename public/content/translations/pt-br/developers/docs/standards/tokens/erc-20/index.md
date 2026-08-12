@@ -177,13 +177,12 @@ Alguns padrões alternativos surgiram desse problema, como o [ERC-223](/develope
 - [OpenZeppelin - Implementação do ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Guia para tokens ERC-20 em Solidity](https://www.alchemy.com/overviews/erc20-solidity)
 
-## Outros padrões de token fungível {#fungible-token-standards}
-
+## Outros padrões de tokens fungíveis
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - Cofres tokenizados](/developers/docs/standards/tokens/erc-4626)
-
+- [ERC-7540 - Cofres tokenizados assíncronos](/developers/docs/standards/tokens/erc-7540)
 ## Tutoriais: Construa com ERC-20 no Ethereum {#tutorials}
 
 - [Passo a passo do contrato ERC-20](/developers/tutorials/erc20-annotated-code/) _– Um passo a passo anotado linha por linha da implementação do contrato ERC-20 do OpenZeppelin._

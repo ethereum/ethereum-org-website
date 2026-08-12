@@ -2,6 +2,7 @@
 title: Tajná volba lídra
 description: Vysvětlení, jak může tajná volba lídra pomoci chránit validátory před útoky
 lang: cs
+template: roadmap
 summaryPoints:
   - IP adresy navrhovatelů bloků mohou být známy předem, což je činí zranitelnými vůči útokům.
   - Tajná volba lídra skrývá identitu validátorů, takže je nelze zjistit předem.

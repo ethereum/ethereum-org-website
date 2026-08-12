@@ -30,7 +30,14 @@ function toEventNode(event: EventItem) {
     }),
     location: event.isOnline
       ? { "@type": "VirtualLocation", url: event.link }
-      : { "@type": "Place", name: event.location },
+      : {
+          "@type": "Place",
+          name: event.location,
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: event.location,
+          },
+        },
     eventAttendanceMode: event.isOnline
       ? "https://schema.org/OnlineEventAttendanceMode"
       : "https://schema.org/OfflineEventAttendanceMode",

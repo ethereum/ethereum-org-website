@@ -55,21 +55,20 @@ Kripto para ve Blokzincir teknolojisinin avantajlarından yararlanan merkeziyets
 
 ## Python projeleri ve araçları {#python-projects-and-tools}
 
-### Aktif: {#active}
-
 - [Web3.py](https://github.com/ethereum/web3.py) - _Ethereum ile etkileşim kurmak için Python kütüphanesi_
 - [Vyper](https://github.com/ethereum/vyper/) - _EVM için Pythonik Akıllı Sözleşme Dili_
+- [Titanoboa](https://github.com/vyperlang/titanoboa/) - _Vyper'ın yerel test aracı; Ana Ağ çatallama, hata ayıklama ve güzel geri izlemelere sahip bir yorumlayıcı_
+- [Moccasin](https://github.com/Cyfrin/moccasin) - _Titanoboa üzerine inşa edilmiş, Vyper ve Python için bir akıllı sözleşme geliştirme ve test çerçevesi_
 - [Ape](https://github.com/ApeWorX/ape) - _Python geliştiricileri, Veri Bilimcileri ve Güvenlik Uzmanları için akıllı sözleşme geliştirme aracı_
 - [py-evm](https://github.com/ethereum/py-evm) - _Ethereum Sanal Makinesi uygulaması_
-- [eth-tester](https://github.com/ethereum/eth-tester) - _Ethereum tabanlı uygulamaları test etme araçları_
+- [eth-tester](https://github.com/ethereum/eth-tester) - _Ethereum tabanlı uygulamaları test etmek için araçlar_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _Ethereum ile ilgili kod tabanlarıyla çalışmak için yardımcı işlevler_
-- [py-solc-x](https://pypi.org/project/py-solc-x/) - _0.5.x desteği ile solc Solidity derleyicisi etrafında Python sarmalayıcısı_
+- [py-solc-x](https://pypi.org/project/py-solc-x/) - _0.5.x desteğine sahip solc Solidity derleyicisi etrafında Python sarmalayıcısı_
 - [pymaker](https://github.com/makerdao/pymaker) - _Maker sözleşmeleri için Python API'si_
 - [siwe](https://github.com/signinwithethereum/siwe-py) - _Python için Ethereum ile Giriş Yap (SIWE)_
-- [Ethereum entegrasyonları için Web3 DeFi](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _ERC-20, Uniswap ve diğer popüler projeler için hazır entegrasyonlara sahip bir Python paketi_
-- [Wake](https://getwake.io) - _Sözleşme testi, fuzzing, dağıtım, güvenlik açığı taraması ve kod gezinmesi için hepsi bir arada Python çerçevesi (dil sunucusu - [Solidity Araçları](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
-- [DeFiPy](https://github.com/defipy-devs/defipy) - _Uniswap V2/V3, Balancer ve Curve genelinde merkeziyetsiz finans (DeFi) analitiği ve otomatik piyasa yapıcı (AMM) simülasyonu için Python SDK'sı_
-
+- [Ethereum entegrasyonları için Web3 merkeziyetsiz finans (DeFi)](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _ERC-20, Uniswap ve diğer popüler projeler için hazır entegrasyonlara sahip bir Python paketi_
+- [Wake](https://getwake.io) - _Sözleşme testi, bulanıklaştırma (fuzzing), dağıtım, güvenlik açığı taraması ve kod gezinmesi için hepsi bir arada Python çerçevesi (dil sunucusu - [Solidity İçin Araçlar](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
+- [DeFiPy](https://github.com/defipy-devs/defipy) - _Uniswap V2/V3, Balancer ve Curve genelinde DeFi analitiği ve otomatik piyasa yapıcı (AMM) simülasyonu için Python SDK'sı_
 ### Arşivlenmiş / Artık bakımı yapılmayan: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _Ethereum Python istemcisi_

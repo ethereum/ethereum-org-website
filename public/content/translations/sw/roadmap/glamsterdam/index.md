@@ -2,14 +2,13 @@
 title: Glamsterdam
 description: Jifunze kuhusu uboreshaji wa itifaki ya Glamsterdam
 lang: sw
+template: upgrade
 ---
-
-# Glamsterdam {#glamsterdam}
 
 <Alert variant="update">
 <AlertContent>
 <AlertTitle>
-Glamsterdam ni uboreshaji ujao wa Ethereum uliopangwa kufanyika katika nusu ya pili ya mwaka 2026
+Glamsterdam ni uboreshaji ujao wa Ethereum uliopangwa kufanyika katika robo ya nne ya mwaka 2026
 </AlertTitle>
 <AlertDescription>
 Uboreshaji wa Glamsterdam ni hatua moja tu katika malengo ya maendeleo ya muda mrefu ya Ethereum. Jifunze zaidi kuhusu [ramani ya njia ya itifaki](/roadmap/) na [uboreshaji uliopita](/ethereum-forks/).
@@ -27,26 +26,25 @@ Maboresho haya yanahakikisha Ethereum inasalia kuwa ya haraka, nafuu, na iliyoga
 
 <VideoWatch slug="ethereum-evolution-glamsterdam" />
 
-## Maboresho yanayozingatiwa kwa Glamsterdam {#improvements-in-glamsterdam}
+## Maboresho katika Glamsterdam {#improvements-in-glamsterdam}
 
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Kumbuka: Makala haya kwa sasa yanaangazia uteuzi wa EIPs zinazozingatiwa kujumuishwa katika Glamsterdam. Mapendekezo ya ziada yanayojaribiwa kikamilifu katika mitandao ya majaribio ya wasanidi (devnets) yanajumuisha EIP-7778, EIP-7843, EIP-7976, EIP-7981, na EIP-8024. Kwa masasisho ya hivi punde ya hali, tazama [uboreshaji wa Glamsterdam kwenye Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Kumbuka: Makala haya yanaangazia uteuzi wa EIPs zilizopangwa kujumuishwa katika Glamsterdam. Mapendekezo ya ziada yaliyopangwa ambayo yanajaribiwa katika mitandao ya wasanidi (devnets) yanajumuisha EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246, na EIP-8282. Kwa masasisho ya hivi punde ya hali, tazama [uboreshaji wa Glamsterdam kwenye Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
-Ikiwa unataka kuongeza EIP ambayo inazingatiwa kwa Glamsterdam, lakini bado haijaongezwa kwenye ukurasa huu, [jifunze jinsi ya kuchangia kwenye ethereum.org hapa](/contributing/).
+Ikiwa unataka kuongeza EIP ambayo inazingatiwa kwa Glamsterdam, lakini haijaongezwa kwenye ukurasa huu bado, [jifunze jinsi ya kuchangia kwenye ethereum.org hapa](/contributing/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Uboreshaji wa Glamsterdam unajikita katika malengo makuu matatu:
+Uboreshaji wa Glamsterdam unalenga malengo makuu matatu:
 
-- Kuharakisha uchakataji (usambamba): Kupanga upya jinsi mtandao unavyorekodi utegemezi wa data, ili uweze kuchakata miamala mingi kwa usalama kwa wakati mmoja badala ya mfuatano wa polepole, wa moja baada ya nyingine.
+- Kuharakisha uchakataji (usambamba): Kupanga upya jinsi mtandao unavyorekodi utegemezi wa data, ili uweze kuchakata kwa usalama miamala mingi kwa wakati mmoja badala ya mfululizo wa polepole, wa moja baada ya nyingine.
 - Kupanua uwezo: Kugawanya kazi nzito ya kuunda na kuthibitisha vitalu, kuupa mtandao muda zaidi wa kueneza kiasi kikubwa cha data bila kupunguza kasi.
-- Kuzuia uvimbe wa hifadhidata (uendelevu): Kurekebisha ada za mtandao ili kuakisi kwa usahihi gharama ya maunzi ya muda mrefu ya kuhifadhi data mpya, kufungua ongezeko la kikomo cha gesi la siku zijazo huku ukizuia kushuka kwa utendaji wa maunzi.
+- Kuzuia uvimbe wa hifadhidata (uendelevu): Kurekebisha ada za mtandao ili kuakisi kwa usahihi gharama ya muda mrefu ya maunzi ya kuhifadhi data mpya, kufungulia ongezeko la kikomo cha gesi la siku zijazo huku ikizuia kushuka kwa utendaji wa maunzi.
 
-Kwa ufupi, Glamsterdam italeta mabadiliko ya kimuundo ili kuhakikisha kwamba kadiri mtandao unavyoongeza uwezo, unasalia kuwa endelevu na utendaji unabaki juu.
-
+Kwa ufupi, Glamsterdam italeta mabadiliko ya kisanifu ili kuhakikisha kwamba kadiri mtandao unavyoongeza uwezo, unasalia kuwa endelevu na utendaji unabaki kuwa wa juu.
 
 ## Kuongeza uwezo wa tabaka la 1 (l1) na uchakataji sambamba {#scale-l1}
 
@@ -95,7 +93,7 @@ Usomaji sambamba wa diski uliowezeshwa na BALs utakuwa hatua muhimu kuelekea sik
 
 #### Ubadilishanaji wa Orodha ya Ufikiaji wa Kitalu wa eth/71 {#bale}
 
-Ubadilishanaji wa Orodha ya Ufikiaji wa Kitalu (eth/71 au EIP-8159) ni mshirika wa moja kwa moja wa kimtandao kwa orodha za ufikiaji za kiwango cha kitalu. Wakati BALs zinafungua utekelezaji sambamba, eth/71 inaboresha itifaki ya rika-kwa-rika ili kuruhusu nodi kushiriki orodha hizi kwenye mtandao. Sasa inahitajika kwa wateja wote wa tabaka la utekelezaji, ubadilishanaji wa orodha ya ufikiaji wa kitalu utawezesha usawazishaji wa haraka na kuruhusu nodi kufanya masasisho ya hali yasiyo na utekelezaji.
+Ubadilishanaji wa Orodha ya Ufikiaji wa Kitalu (eth/71 au EIP-8159) ni mshirika wa moja kwa moja wa kimtandao kwa orodha za ufikiaji za kiwango cha kitalu. Wakati BALs zinafungua utekelezaji sambamba, eth/71 inaboresha itifaki ya rika-kwa-rika ili kuruhusu nodi kushiriki orodha hizi kwenye mtandao. Sasa inahitajika kwa viteja vyote vya tabaka la utekelezaji, ubadilishanaji wa orodha ya ufikiaji wa kitalu utawezesha usawazishaji wa haraka na kuruhusu nodi kufanya masasisho ya hali yasiyo na utekelezaji.
 
 **Rasilimali**:
 
@@ -149,7 +147,7 @@ Kwa kupanga bei ya vitendo vya ufikiaji wa hali kwa usahihi zaidi Ethereum inawe
 
 ## Uthabiti wa mtandao {#network-resilience}
 
-Maboresho ya majukumu ya mthibitishaji na michakato ya kujitoa yanahakikisha uthabiti wa mtandao wakati wa matukio ya ukataji wa watu wengi na kuweka ukwasi kidemokrasia. Maboresho haya yanafanya mtandao kuwa thabiti zaidi na kuhakikisha kwamba washiriki wote, wakubwa na wadogo, wanatendewa kwa haki.
+Maboresho ya majukumu ya mthibitishaji na michakato ya kujitoa yanahakikisha uthabiti wa mtandao wakati wa matukio ya ukataji wa watu wengi na kuongeza kasi ya jinsi waweka dhamana wanavyoweza kuhamisha dhamana yao. Maboresho haya yanafanya mtandao kuwa thabiti zaidi na kuhakikisha kwamba washiriki wote, wakubwa na wadogo, wanatendewa kwa haki.
 
 ### Kuwatenga wathibitishaji waliokatwa kupendekeza {#exclude-slashed-validators}
 
@@ -164,28 +162,25 @@ Kwa sababu vitalu kutoka kwa wapendekezaji waliokatwa vinakataliwa kiotomatiki k
 
 **Rasilimali**: [Uainisho wa kiufundi wa EIP-8045](https://eips.ethereum.org/EIPS/eip-8045)
 
-### Ruhusu kujitoa kutumie foleni ya ujumuishaji {#let-exits-use-the-consolidation-queue}
+### Kuongeza upokezanaji wa kujitoa na uunganishaji {#increase-exit-and-consolidation-churn}
 
-- Hufunga mwanya unaoruhusu wathibitishaji wenye salio kubwa kujitoa kwenye mtandao haraka zaidi kuliko wathibitishaji wadogo kupitia foleni ya ujumuishaji
-- Huruhusu kujitoa kwa kawaida kuwa na mzidio kwenye foleni hii ya pili inapokuwa na uwezo wa ziada, ikipunguza nyakati za utoaji wa uwekaji dhamana wakati wa vipindi vya kiasi kikubwa
-- Hudumisha usalama mkali ili kuepuka kubadilisha vikomo vya usalama vya msingi vya Ethereum au kudhoofisha mtandao
+- Hupunguza kwa kiasi kikubwa muda wa utoaji wa uwekaji dhamana kwa kuruhusu uwezo wa kujitoa kuongezeka kulingana na kiasi cha jumla cha ETH iliyowekwa dhamana, badala ya kuwekewa kikomo kwa kiwango kisichobadilika
+- Hupa uunganishaji wa mthibitishaji uwezo wao wenyewe maalum wa foleni, ikiharakisha mpito kuelekea wathibitishaji wakubwa na wenye ufanisi zaidi
+- Hudumisha usalama wa mtandao kupitia vigezo vya usalama vilivyochanganuliwa kwa uangalifu
 
-Tangu [uboreshaji wa Pectra](/roadmap/pectra) uongeze salio la juu zaidi linalofaa kwa wathibitishaji wa Ethereum kutoka 32 ETH hadi 2,048 ETH, mwanya wa kiufundi unaruhusu wathibitishaji wenye salio kubwa kujitoa kwenye mtandao haraka zaidi kuliko wathibitishaji wadogo kupitia foleni ya ujumuishaji.
+Kikomo cha upokezanaji cha Ethereum ni kikomo cha usalama cha kiwango ambacho wathibitishaji wanaweza kuingia, kujitoa, au kuunganisha ETH yao iliyowekwa dhamana, ili kuhakikisha usalama wa mtandao hauvurugwi kamwe. Leo, kujitoa na uanzishaji vinashiriki kikomo kimoja kilichowekwa, kwa hivyo wakati wa vipindi vya mahitaji makubwa waweka dhamana wanaweza kukabiliwa na usubiri wa muda mrefu ili kutoa ETH yao. Uunganishaji, ambapo wathibitishaji wanaungana kuwa wakubwa zaidi wenye hadi ETH 2,048 (iliyowezeshwa na [uboreshaji wa Pectra](/roadmap/pectra)), pia hushindania uwezo huu mdogo, ikimaanisha kuunganisha seti kamili ya wathibitishaji kungechukua miaka kwa kiwango cha sasa.
 
-**Ruhusu kujitoa kutumie foleni ya ujumuishaji (au EIP-8080)** huweka kidemokrasia foleni ya ujumuishaji kwa kujitoa kote kwa uwekaji dhamana, ikitengeneza mstari mmoja, wa haki kwa kila mtu.
+**Kuongeza upokezanaji wa kujitoa na uunganishaji (au EIP-8061)** hupanga upya vikomo hivi katika njia tofauti:
 
-Ili kuchanganua jinsi hii inavyofanya kazi leo:
+- Uanzishaji wa mthibitishaji huweka kikomo chao kilichopo, bila kubadilika
+- Kujitoa hakuwekewi kikomo tena na badala yake huongezeka kulingana na kiasi cha jumla cha ETH iliyowekwa dhamana
+- Uunganishaji hupata uwezo wao wenyewe maalum, takriban nusu ya ukubwa wa kikomo cha pamoja cha uanzishaji na kujitoa
 
-- Kikomo cha upokezanaji cha Ethereum ni kikomo cha usalama kwenye kiwango ambacho wathibitishaji wanaweza kuingia, kujitoa, au kuunganisha (kujumuisha) ETH yao iliyowekwa dhamana, ili kuhakikisha usalama wa mtandao hauyumbishwi kamwe
-- Kwa sababu ujumuishaji wa mthibitishaji ni kitendo kizito zaidi chenye sehemu nyingi zinazosonga kuliko kujitoa kwa mthibitishaji wa kawaida, inakula sehemu kubwa ya bajeti hii ya usalama (kikomo cha upokezanaji)
-- Hasa, itifaki inaamuru kwamba gharama halisi ya usalama ya kujitoa moja kwa kawaida ni theluthi mbili (2/3) ya gharama ya ujumuishaji mmoja
+Kwa viwango vya sasa vya uwekaji dhamana, hii inaongeza uwezo wa kujitoa kwa takriban mara 4 na uwezo wa uunganishaji kwa takriban mara 2, ikimaanisha waweka dhamana wanaweza kutoa ETH yao haraka sana wakati wa vipindi vya mahitaji makubwa na mtandao hupitia mpito haraka zaidi kuelekea seti ndogo na yenye ufanisi zaidi ya wathibitishaji.
 
-Foleni za kujitoa za haki zaidi zitaruhusu kujitoa kwa kawaida kuazima nafasi isiyotumika kutoka kwenye foleni ya ujumuishaji wakati wa vipindi vya mahitaji makubwa ya kujitoa, ikitumia kiwango cha ubadilishaji cha "3 kwa 2" (kwa kila nafasi 2 za ujumuishaji zisizotumika, mtandao unaweza kuchakata kwa usalama kujitoa 3 kwa kawaida). Sababu hii ya upokezanaji ya 3/2 inasawazisha mahitaji katika foleni za ujumuishaji na kujitoa.
+Kwa sababu dhamana inaweza kuingia na kutoka kwenye mtandao haraka zaidi, mabadiliko haya hupunguza kwa takriban nusu muda ambao nodi inaweza kubaki nje ya mtandao kabla ya kuhitaji kituo cha ukaguzi cha hivi karibuni kinachoaminika ili kujiunga tena na mtandao kwa usalama (kipindi cha udhanifu dhaifu, kutoka takriban siku 15.7 hadi takriban siku 7). Ubadilishanaji huu ulichanganuliwa kwa uangalifu ili kuhakikisha usalama wa mtandao unadumishwa.
 
-Kuweka kidemokrasia ufikiaji wa foleni ya ujumuishaji kutaongeza kasi ambayo watumiaji wanaweza kutoa dhamana yao wakati wa vipindi vya mahitaji makubwa kwa hadi mara 2.5, bila kuhatarisha usalama wa mtandao.
-
-**Rasilimali**: [Uainisho wa kiufundi wa EIP-8080](https://eips.ethereum.org/EIPS/eip-8080)
-
+**Rasilimali**: [Uainisho wa kiufundi wa EIP-8061](https://eips.ethereum.org/EIPS/eip-8061)
 
 ## Kuboresha uzoefu wa mtumiaji na msanidi {#improve-user-developer-experience}
 
@@ -239,7 +234,7 @@ Hii itafanya iwe rahisi zaidi na ya kutegemewa kwa mikoba, mabadilishano, na wae
 
 Kadiri tunavyoongeza kiasi cha kazi ambacho Ethereum inaweza kufanya, orodha za stakabadhi za vitendo hivyo (rekodi za data za miamala hii) zinakuwa kubwa sana kiasi kwamba zinaweza kusababisha nodi za mtandao kushindwa wakati wa kujaribu kusawazisha data na nyingine.
 
-Sasa ni hitaji kwa wateja wote wa tabaka la utekelezaji, orodha za stakabadhi za kitalu kiasi za eth/70 (au EIP-7975) zinaleta njia mpya kwa nodi kuzungumza na nyingine (eth/70) ambayo inaruhusu orodha hizi kubwa kugawanywa katika vipande vidogo, vinavyodhibitika zaidi. eth/70 inaleta mfumo wa kurasa kwa itifaki ya mawasiliano ya mtandao ambayo inaruhusu nodi kuvunja orodha za stakabadhi za kitalu na kuomba data kwa usalama katika vipande vidogo, vinavyodhibitika zaidi.
+Sasa ni hitaji kwa viteja vyote vya tabaka la utekelezaji, orodha za stakabadhi za kitalu kiasi za eth/70 (au EIP-7975) zinaleta njia mpya kwa nodi kuzungumza na nyingine (eth/70) ambayo inaruhusu orodha hizi kubwa kugawanywa katika vipande vidogo, vinavyodhibitika zaidi. eth/70 inaleta mfumo wa kurasa kwa itifaki ya mawasiliano ya mtandao ambayo inaruhusu nodi kuvunja orodha za stakabadhi za kitalu na kuomba data kwa usalama katika vipande vidogo, vinavyodhibitika zaidi.
 
 Mabadiliko haya yangezuia kushindwa kwa usawazishaji wa mtandao wakati wa vipindi vya shughuli nzito. Hatimaye, inafungua njia kwa Ethereum kuongeza uwezo wake wa kitalu, na kuchakata miamala zaidi kwa kila kitalu katika siku zijazo, bila kulemea maunzi ya kimwili yanayosawazisha mnyororo.
 
@@ -266,15 +261,15 @@ Mabadiliko haya yangezuia kushindwa kwa usawazishaji wa mtandao wakati wa vipind
 
 ### Je, uboreshaji wa Glamsterdam unaathiri nodi na wathibitishaji wote wa Ethereum? {#does-the-glamsterdam-upgrade-affect-all-ethereum-nodes-and-validators}
 
-Ndiyo, uboreshaji wa Glamsterdam unahitaji masasisho kwa [wateja wa utekelezaji na wateja wa mwafaka](/developers/docs/nodes-and-clients/) wote. Kwa sababu uboreshaji huu unaleta Utengano wa Mpendekezaji na Mjengaji Uliowekwa Rasmi (ePBS), waendeshaji wa nodi watahitaji kuhakikisha wateja wao wamesasishwa ili kushughulikia njia mpya ambazo vitalu vinajengwa, kuthibitishwa, na kushuhudiwa na mtandao.
+Ndiyo, uboreshaji wa Glamsterdam unahitaji masasisho kwa [viteja vya utekelezaji na viteja vya mwafaka](/developers/docs/nodes-and-clients/) vyote. Kwa sababu uboreshaji huu unaleta Utengano wa Mpendekezaji na Mjengaji Uliowekwa Rasmi (ePBS), waendeshaji wa nodi watahitaji kuhakikisha viteja vyao vimesasishwa ili kushughulikia njia mpya ambazo vitalu vinajengwa, kuthibitishwa, na kushuhudiwa na mtandao.
 
-Wateja wote wakuu wa Ethereum watatoa matoleo yanayounga mkono mchepuo mgumu yaliyowekwa alama kama kipaumbele cha juu. Unaweza kufuatilia wakati matoleo haya yatapatikana katika hazina za GitHub za mteja, [chaneli zao za Discord](https://ethstaker.org/support), [Discord ya EthStaker](https://dsc.gg/ethstaker), au kwa kujiandikisha kwenye blogu ya Ethereum kwa masasisho ya itifaki.
+Viteja vyote vikuu vya Ethereum vitatoa matoleo yanayounga mkono mchepuo mgumu yaliyowekwa alama kama kipaumbele cha juu. Unaweza kufuatilia wakati matoleo haya yatapatikana katika hazina za GitHub za kiteja, [chaneli zao za Discord](https://ethstaker.org/support), [Discord ya EthStaker](https://dsc.gg/ethstaker), au kwa kujiandikisha kwenye blogu ya Ethereum kwa masasisho ya itifaki.
 
-Ili kudumisha usawazishaji na mtandao wa Ethereum baada ya uboreshaji, waendeshaji wa nodi lazima wahakikishe wanaendesha toleo la mteja linaloungwa mkono. Kumbuka kwamba taarifa kuhusu matoleo ya mteja inategemea wakati, na watumiaji wanapaswa kurejelea masasisho ya hivi punde kwa maelezo ya sasa zaidi.
+Ili kudumisha usawazishaji na mtandao wa Ethereum baada ya uboreshaji, waendeshaji wa nodi lazima wahakikishe wanaendesha toleo la kiteja linaloungwa mkono. Kumbuka kwamba taarifa kuhusu matoleo ya kiteja inategemea wakati, na watumiaji wanapaswa kurejelea masasisho ya hivi punde kwa maelezo ya sasa zaidi.
 
 ### Kama mweka dhamana, ninahitaji kufanya nini kwa uboreshaji wa Glamsterdam? {#as-a-staker-what-do-i-need-to-do-for-the-glamsterdam-upgrade}
 
-Kama ilivyo kwa kila uboreshaji wa mtandao, hakikisha unasasisha wateja wako kwa matoleo ya hivi punde yaliyowekwa alama ya usaidizi wa Glamsterdam. Fuatilia masasisho katika orodha ya barua pepe na [Matangazo ya Itifaki kwenye Blogu ya EF](https://blog.ethereum.org/category/protocol) ili kupata taarifa kuhusu matoleo.
+Kama ilivyo kwa kila uboreshaji wa mtandao, hakikisha unasasisha viteja vyako kwa matoleo ya hivi punde yaliyowekwa alama ya usaidizi wa Glamsterdam. Fuatilia masasisho katika orodha ya barua pepe na [Matangazo ya Itifaki kwenye Blogu ya EF](https://blog.ethereum.org/category/protocol) ili kupata taarifa kuhusu matoleo.
 
 Ili kuthibitisha usanidi wako kabla Glamsterdam haijawezeshwa kwenye Mtandao Mkuu, unaweza kuendesha mthibitishaji kwenye mitandao ya majaribio. Michepuo ya mtandao wa majaribio pia inatangazwa katika orodha ya barua pepe na blogu.
 
@@ -290,12 +285,12 @@ Kwa kuongezea, kwa uendelevu wa muda mrefu, Glamsterdam inaleta Orodha za Ufikia
 
 ### Je, kutakuwa na mabadiliko yoyote kwenye mikataba yangu mahiri iliyopo baada ya Glamsterdam? {#will-my-smart-contracts-change}
 
-Mikataba iliyopo itaendelea kufanya kazi kama kawaida baada ya Glamsterdam. Wasanidi wana uwezekano wa kupata zana kadhaa mpya na wanapaswa kukagua matumizi yao ya gesi:
+Mikataba iliyopo itaendelea kufanya kazi kama kawaida baada ya Glamsterdam. Wasanidi huenda wakapata zana mpya kadhaa na wanapaswa kukagua matumizi yao ya gesi:
 
-- Kuongeza ukubwa wa juu zaidi wa mkataba (au EIP-7954) huruhusu wasanidi kusambaza programu kubwa zaidi, ikipandisha kikomo cha ukubwa wa juu zaidi wa mkataba kutoka takriban 24KiB hadi 32KiB.
-- Usambazaji wa awali wa kiwanda wa kibainishi (au EIP-7997) huleta mkataba wa kiwanda wa ulimwengu wote, uliojengewa ndani. Inaruhusu wasanidi kusambaza programu zao na mikoba ya mkataba mahiri kwenye anwani sawa kabisa katika minyororo yote inayoshiriki ya EVM.
-- Ikiwa programu yako inategemea ufuatiliaji changamano kupata hamisho la ETH, hamisho na uchomaji wa ETH hutoa logi (au EIP-7708) itakuruhusu kubadili kutumia logi kwa uhasibu rahisi na wa kutegemewa zaidi.
-- Ongezeko la gharama ya gesi ya uundaji wa hali (au EIP-8037) na sasisho la gharama ya gesi ya ufikiaji wa hali (au EIP-8038) huleta miundo mipya ya uendelevu ambayo itabadilisha gharama fulani za usambazaji wa mkataba, kwani kuunda akaunti mpya au uhifadhi wa kudumu kutakuwa na ada mpya isiyobadilika iliyosanifiwa kulingana na ukubwa wa data iliyoundwa.
+- Kuongeza ukubwa wa juu zaidi wa mkataba (au EIP-7954) kunaruhusu wasanidi kusambaza programu kubwa zaidi, na kuongeza kikomo cha ukubwa wa juu zaidi wa mkataba kutoka takriban 24KiB hadi 64KiB.
+- Usambazaji wa Awali wa Kiwanda wa Kibainishi (au EIP-7997) unaleta mkataba wa kiwanda wa ulimwengu wote, uliojengewa ndani. Unaruhusu wasanidi kusambaza programu zao na mikoba ya mkataba mahiri kwenye anwani sawa kabisa katika minyororo yote ya EVM inayoshiriki.
+- Ikiwa programu yako inategemea ufuatiliaji changamano ili kupata hamisho la ETH, Hamisho na uchomaji wa ETH hutoa logi (au EIP-7708) itakuruhusu kubadili na kutumia logi kwa uhasibu rahisi na wa kutegemewa zaidi.
+- Ongezeko la gharama ya gesi ya uundaji wa hali (au EIP-8037) na sasisho la gharama ya gesi ya ufikiaji wa hali (au EIP-8038) yanaleta miundo mipya ya uendelevu ambayo itabadilisha baadhi ya gharama za usambazaji wa mkataba, kwa kuwa kuunda akaunti mpya au uhifadhi wa kudumu kutakuwa na ada mpya isiyobadilika iliyosanifiwa kulingana na ukubwa wa data iliyoundwa.
 
 ### Je, Glamsterdam itaathiri vipi uhifadhi wa nodi na mahitaji ya maunzi? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 

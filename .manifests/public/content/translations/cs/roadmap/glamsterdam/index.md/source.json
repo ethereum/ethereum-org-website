@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/glamsterdam/index.md",
-  "generatedAt": "2026-06-08T10:20:33.994Z",
-  "rootHash": "c40a539f8ff7",
+  "generatedAt": "2026-08-07T06:13:12.090Z",
+  "rootHash": "8e22d219cc7f",
   "tree": {
-    "contentHash": "f79c12290cf3",
-    "anchorHash": "5322cfe97e43",
+    "contentHash": "26faac4ec17e",
+    "anchorHash": "33f4d2cf9592",
     "children": {
       "frontmatter:title": {
         "contentHash": "e2c1912b24c8",
@@ -19,8 +19,12 @@
         "contentHash": "e3b0c44298fc",
         "anchorHash": "dbd3a49d0d90"
       },
-      "component:3": {
-        "contentHash": "935d15f6f702",
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "7fef9479c8bc"
+      },
+      "component:4": {
+        "contentHash": "beeb09e1fe63",
         "anchorHash": "061a2212602c",
         "children": {
           "attr:variant": {
@@ -28,15 +32,15 @@
             "anchorHash": "2937013f2181"
           },
           "component:0": {
-            "contentHash": "4f6477b9f0ab",
+            "contentHash": "67e079b29f74",
             "anchorHash": "f6100d9f0659",
             "children": {
               "component:0": {
-                "contentHash": "79709e41934e",
+                "contentHash": "0b89a1488217",
                 "anchorHash": "4b9f7d802648",
                 "children": {
                   "prose:0": {
-                    "contentHash": "ba5139ea51ba",
+                    "contentHash": "bd02547cfc69",
                     "anchorHash": "e3b0c44298fc"
                   }
                 }
@@ -118,7 +122,7 @@
         "contentHash": "e73fdebac5bd",
         "anchorHash": "e3b0c44298fc"
       },
-      "component:12": {
+      "component:13": {
         "contentHash": "4b9f7d802648",
         "anchorHash": "ed6d0da8a1a5",
         "children": {
@@ -129,16 +133,16 @@
         }
       },
       "improvements-in-glamsterdam": {
-        "contentHash": "a87089c7f264",
+        "contentHash": "eacd3972119f",
         "anchorHash": "89622158d50c",
-        "labelHash": "fe8cf94db06a",
+        "labelHash": "bdda2cd5d59b",
         "children": {
           "_label": {
-            "contentHash": "fe8cf94db06a",
+            "contentHash": "bdda2cd5d59b",
             "anchorHash": "e3b0c44298fc"
           },
           "component:1": {
-            "contentHash": "176e69f53682",
+            "contentHash": "6c08879e71eb",
             "anchorHash": "23cebcd0ac3d",
             "children": {
               "attr:variant": {
@@ -146,15 +150,15 @@
                 "anchorHash": "06271baf4953"
               },
               "component:0": {
-                "contentHash": "2332dd82d567",
+                "contentHash": "34a6fc48e50a",
                 "anchorHash": "1024db4ed843",
                 "children": {
                   "component:0": {
-                    "contentHash": "ad7180d37697",
+                    "contentHash": "3e3b6c6bd174",
                     "anchorHash": "83625f34f396",
                     "children": {
                       "prose:2": {
-                        "contentHash": "017928be6808",
+                        "contentHash": "ee5350489b99",
                         "anchorHash": "e3b0c44298fc"
                       },
                       "link:0": {
@@ -458,8 +462,8 @@
         ]
       },
       "network-resilience": {
-        "contentHash": "91622df8e11e",
-        "anchorHash": "186358e70e48",
+        "contentHash": "17ecec6a732f",
+        "anchorHash": "6da7f08e2abe",
         "labelHash": "8ad1bc112fdd",
         "children": {
           "_label": {
@@ -467,7 +471,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:0": {
-            "contentHash": "308bba7d8653",
+            "contentHash": "c4653f8db5aa",
             "anchorHash": "e3b0c44298fc"
           },
           "exclude-slashed-validators": {
@@ -494,17 +498,17 @@
               "link:0"
             ]
           },
-          "let-exits-use-the-consolidation-queue": {
-            "contentHash": "a2d0968ba0e9",
-            "anchorHash": "eaad3a40d06b",
-            "labelHash": "96c1ad5275d2",
+          "increase-exit-and-consolidation-churn": {
+            "contentHash": "e106efd1dce3",
+            "anchorHash": "0a481c62eba5",
+            "labelHash": "91fda19dbac1",
             "children": {
               "_label": {
-                "contentHash": "96c1ad5275d2",
+                "contentHash": "91fda19dbac1",
                 "anchorHash": "e3b0c44298fc"
               },
               "prose:2": {
-                "contentHash": "190c061ae616",
+                "contentHash": "3f58e7953a6b",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:0": {
@@ -512,12 +516,12 @@
                 "anchorHash": "af345cf3e364"
               },
               "prose:3": {
-                "contentHash": "8f30c5264e89",
+                "contentHash": "6b74483ca2de",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:1": {
-                "contentHash": "a3cf9dd69ff3",
-                "anchorHash": "d5678609449b"
+                "contentHash": "5aba56e18ce8",
+                "anchorHash": "db2ea773326b"
               }
             },
             "childrenOrder": [
@@ -533,7 +537,7 @@
           "_label",
           "prose:0",
           "exclude-slashed-validators",
-          "let-exits-use-the-consolidation-queue"
+          "increase-exit-and-consolidation-churn"
         ]
       },
       "improve-user-developer-experience": {
@@ -720,7 +724,7 @@
         ]
       },
       "faq": {
-        "contentHash": "9533a9d07ffa",
+        "contentHash": "113990932f70",
         "anchorHash": "c98e0219901a",
         "labelHash": "dbc468a14b60",
         "children": {
@@ -879,7 +883,7 @@
             ]
           },
           "will-my-smart-contracts-change": {
-            "contentHash": "333a81fe297c",
+            "contentHash": "cd21c822117b",
             "anchorHash": "4b9f7d802648",
             "labelHash": "8c77ff46233b",
             "children": {
@@ -888,7 +892,7 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "prose:0": {
-                "contentHash": "5bb645227b19",
+                "contentHash": "1c3344b699f3",
                 "anchorHash": "e3b0c44298fc"
               }
             },
@@ -933,7 +937,8 @@
       "frontmatter:title",
       "frontmatter:description",
       "frontmatter:lang",
-      "component:3",
+      "frontmatter:template",
+      "component:4",
       "link:0",
       "prose:4",
       "link:1",
@@ -942,7 +947,7 @@
       "prose:6",
       "link:3",
       "prose:7",
-      "component:12",
+      "component:13",
       "improvements-in-glamsterdam",
       "scale-l1",
       "network-sustainability",
@@ -952,5 +957,5 @@
       "faq"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "3c76f545357f4d2d02a6f906d4b647d531be7088"
 }

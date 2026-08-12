@@ -49,30 +49,30 @@ Przeczytaj więcej o [korzyściach z uruchomienia własnego węzła](/developers
 
 ## Popularne usługi węzłów {#popular-node-services}
 
-Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmiało dodaj tych, których brakuje! Każda usługa węzła oferuje inne korzyści i funkcje, a także darmowe lub płatne plany. Przed podjęciem decyzji powinieneś sprawdzić, które z nich najlepiej odpowiadają Twoim potrzebom.
+Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum. Śmiało dodaj tych, których brakuje! Każda usługa węzła oferuje inne korzyści i funkcje, a także darmowe lub płatne plany. Przed podjęciem decyzji warto sprawdzić, która z nich najlepiej odpowiada Twoim potrzebom.
 
 - [**Alchemy**](https://alchemy.com/)
   - [Dokumentacja](https://www.alchemy.com/docs/)
   - Funkcje
     - Największy darmowy plan z 300 mln jednostek obliczeniowych miesięcznie (\~30 mln żądań getLatestBlock)
     - Obsługa wielu łańcuchów dla Polygon, Starknet, Optimism, Arbitrum
-    - Obsługuje ~70% największych zdecentralizowanych aplikacji (dapp) Ethereum i wolumenu transakcji zdecentralizowanych finansów (DeFi)
+    - Obsługa ~70% największych zdecentralizowanych aplikacji (dapp) na Ethereum i wolumenu transakcji zdecentralizowanych finansów (DeFi)
     - Alerty webhook w czasie rzeczywistym za pośrednictwem Alchemy Notify
     - Najlepsze w swojej klasie wsparcie oraz niezawodność / stabilność
     - API NFT od Alchemy
-    - Pulpit nawigacyjny z Request Explorer, Mempool Watcher i Composer
+    - Panel nawigacyjny z Request Explorer, Mempool Watcher i Composer
     - Zintegrowany dostęp do kranika sieci testowej
     - Aktywna społeczność budowniczych na Discordzie licząca 18 tys. użytkowników
 
 - [**Allnodes**](https://www.allnodes.com/)
   - [Dokumentacja](https://docs.allnodes.com/)
   - Funkcje
-    - Brak limitów zapytań z tokenem PublicNode utworzonym na stronie portfolio Allnodes.
+    - Brak limitów przepustowości dzięki tokenowi PublicNode utworzonemu na stronie portfolio Allnodes.
     - Skupione na prywatności darmowe punkty końcowe RPC (ponad 100 blockchainów) na [PublicNode](https://www.publicnode.com)
-    - Dedykowane węzły bez limitów zapytań dla ponad 90 blockchainów
+    - Dedykowane węzły bez limitów przepustowości dla ponad 90 blockchainów
     - Dedykowane węzły archiwalne dla ponad 30 blockchainów
     - Dostępne w 3 regionach (USA, UE, Azja)
-    - Migawki (snapshots) dla ponad 100 blockchainów na [PublicNode](https://www.publicnode.com/snapshots)
+    - Migawki dla ponad 100 blockchainów na [PublicNode](https://www.publicnode.com/snapshots)
     - Całodobowe wsparcie techniczne z SLA na poziomie 99,90%-99,98% czasu sprawności (w zależności od planu).
     - Cennik godzinowy
     - Płatność kartą kredytową, PayPal lub krypto
@@ -83,10 +83,10 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmia
     - 50 000 żądań dziennie w darmowym planie
     - Obsługa ponad 40 protokołów
     - Obsługa API JSON-RPC (EVM, Tendermint), REST i Websocket
-    - Nielimitowany dostęp do danych archiwalnych
+    - Nieograniczony dostęp do danych archiwalnych
     - Całodobowe wsparcie techniczne i ponad 99,9% czasu sprawności
     - Kranik dostępny na wielu łańcuchach
-    - Nielimitowany dostęp do punktów końcowych z nieograniczoną liczbą kluczy API
+    - Nieograniczony dostęp do punktów końcowych z nielimitowaną liczbą kluczy API
     - Obsługa API Trace/Debug
     - Zautomatyzowane aktualizacje
 
@@ -96,20 +96,20 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmia
     - W pełni zarządzane węzły Ethereum
     - Dostępne w sześciu regionach
     - JSON-RPC przez HTTP i bezpieczne WebSockets
-    - Obsługuje 3 łańcuchy
+    - Obsługa 3 łańcuchów
     - SLA, całodobowe wsparcie AWS
-    - Go-ethereum i Lighthouse
+    - Go Ethereum (Geth) i Lighthouse
 
 - [**Ankr**](https://www.ankr.com/)
   - [Dokumentacja](https://docs.ankr.com/)
   - Funkcje
     - Protokół Ankr - otwarty dostęp do publicznych punktów końcowych API RPC dla ponad 8 łańcuchów
     - Równoważenie obciążenia i monitorowanie stanu węzłów dla szybkiej i niezawodnej bramy do najbliższego dostępnego węzła
-    - Plan Premium umożliwiający punkt końcowy WSS i brak limitów zapytań
+    - Plan Premium umożliwiający punkt końcowy WSS i brak limitu przepustowości
     - Wdrożenie pełnego węzła i węzła walidatora jednym kliknięciem dla ponad 40 łańcuchów
     - Skalowanie w miarę potrzeb
     - Narzędzia analityczne
-    - Pulpit nawigacyjny
+    - Panel nawigacyjny
     - Punkty końcowe RPC, HTTPS i WSS
     - Bezpośrednie wsparcie
 
@@ -131,7 +131,7 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmia
 - [**BlockDaemon**](https://blockdaemon.com/)
   - [Dokumentacja](https://ubiquity.docs.blockdaemon.com/)
   - Korzyści
-    - Pulpit nawigacyjny
+    - Panel nawigacyjny
     - Rozliczenie za węzeł
     - Analityka
 
@@ -143,7 +143,7 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmia
     - Darmowy pakiet powitalny i pakiet miesięczny
     - Metoda Trace + obsługa danych archiwalnych
     - Pakiety ważne do 90 dni
-    - Niestandardowy plan i płatność zgodnie z użyciem (pay as you go)
+    - Niestandardowy plan i płatność w miarę użycia
     - Płatność w krypto
     - Bezpośrednie wsparcie i wsparcie techniczne
 
@@ -152,8 +152,8 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmia
   - Funkcje
     - Wysoce dostępna, szybka i skalowalna usługa RPC
     - Obsługa wielu łańcuchów
-    - Darmowe taryfy
-    - Przyjazny dla użytkownika pulpit nawigacyjny
+    - Darmowe plany
+    - Przyjazny dla użytkownika panel nawigacyjny
     - Zapewnia usługi danych blockchain wykraczające poza RPC
 
 - [**Chainstack**](https://chainstack.com/)
@@ -165,7 +165,7 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmia
     - Punkty końcowe RPC i WSS
     - Dedykowane pełne węzły i węzły archiwalne
     - Szybki czas synchronizacji dla dedykowanych wdrożeń
-    - Przynieś własną chmurę (Bring your cloud)
+    - Przynieś własną chmurę
     - Cennik godzinowy
     - Bezpośrednie całodobowe wsparcie
 
@@ -177,9 +177,9 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmia
     - Rozproszona pula ponad 40 dostawców
     - Globalny zasięg z dziewięcioma (9) klastrami geograficznymi
     - System równoważenia obciążenia oparty na sztucznej inteligencji
-    - Płatność zgodnie z użyciem ze stałą stawką — bez podwyżek, bez wygasania, bez długoterminowych zobowiązań
+    - Zryczałtowane ceny w modelu pay-as-you-go — bez podwyżek, bez wygasania, bez długoterminowych zobowiązań
     - Nielimitowane klucze, szczegółowe dostosowywanie kluczy, role w zespole, ochrona front-endu
-    - Stała stawka za metody wynosząca 20 jednostek obliczeniowych (CU) na metodę
+    - Zryczałtowana stawka za metody na poziomie 20 jednostek obliczeniowych (CU) za metodę
     - [Lista łańcuchów publicznych punktów końcowych](https://drpc.org/chainlist)
     - [Kalkulator cen](https://drpc.org/pricing#calculator)
   - NodeCore: stos open-source dla organizacji chcących pełnej kontroli
@@ -201,7 +201,7 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmia
     - Opcja darmowego planu
     - Skalowanie w miarę potrzeb
     - Analityka
-    - Pulpit nawigacyjny
+    - Panel nawigacyjny
     - Unikalne punkty końcowe API
     - Dedykowane pełne węzły
     - Szybki czas synchronizacji dla dedykowanych wdrożeń
@@ -215,14 +215,14 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmia
     - Skalowanie w miarę potrzeb
     - Płatne dane archiwalne
     - Bezpośrednie wsparcie
-    - Pulpit nawigacyjny
+    - Panel nawigacyjny
 
 - [**Kaleido**](https://kaleido.io/)
   - [Dokumentacja](https://docs.kaleido.io/)
   - Funkcje
     - Darmowy plan startowy
     - Wdrożenie węzła Ethereum jednym kliknięciem
-    - Konfigurowalne klienty i algorytmy (Geth, Quorum i Besu || PoA, IBFT i Raft)
+    - Konfigurowalne klienty i algorytmy (Go Ethereum (Geth), Quorum i Besu || dowód autorytetu (PoA), IBFT i Raft)
     - Ponad 500 administracyjnych i usługowych API
     - Interfejs RESTful do przesyłania transakcji Ethereum (oparty na Apache Kafka)
     - Strumienie wychodzące do dostarczania zdarzeń (oparte na Apache Kafka)
@@ -231,7 +231,7 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmia
     - Zaawansowane zarządzanie użytkownikami zarówno dla administratorów, jak i użytkowników końcowych
     - Wysoce skalowalna, odporna infrastruktura klasy korporacyjnej
     - Zarządzanie kluczami prywatnymi w chmurze HSM
-    - Tethering do sieci głównej Ethereum
+    - Powiązanie z siecią główną Ethereum
     - Certyfikaty ISO 27k i SOC 2, Typ 2
     - Dynamiczna konfiguracja w czasie wykonywania (np. dodawanie integracji z chmurą, zmiana wejść węzłów itp.)
     - Obsługa orkiestracji wdrożeń wielochmurowych, wieloregionalnych i hybrydowych
@@ -256,9 +256,9 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmia
     - Darmowe współdzielone węzły
     - Darmowe współdzielone węzły archiwalne
     - Skupienie na prywatności (polityka braku logów)
-    - Obsługa wielu łańcuchów (cross-chain)
+    - Obsługa wielu łańcuchów
     - Skalowanie w miarę potrzeb
-    - Pulpit nawigacyjny
+    - Panel nawigacyjny
     - Unikalne SDK Ethereum
     - Unikalne punkty końcowe API
     - Bezpośrednie wsparcie techniczne
@@ -267,18 +267,18 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmia
   - [Dokumentacja](https://docs.nodereal.io/docs/introduction)
   - Funkcje
     - Niezawodne, szybkie i skalowalne usługi API RPC
-    - Ulepszone API dla programistów Web3
+    - Ulepszone API dla deweloperów Web3
     - Obsługa wielu łańcuchów
     - Rozpocznij za darmo
 
 - [**NodeFlare**](https://nodeflare.app/)
   - [Dokumentacja](https://nodeflare.app/docs/quick-start)
   - Funkcje
-    - 8 łańcuchów EVM, w tym Ethereum, Base, Arbitrum One i Optimism
-    - 4 regiony (Europa, Azja, Ameryka Północna) z automatycznym przełączaniem awaryjnym na najbliższy sprawny węzeł
+    - 23 łańcuchy EVM, w tym Ethereum, Base, Arbitrum One i Nova, Optimism, Linea oraz Unichain
+    - 5 regionów (Europa, Wielka Brytania, Azja, Wschodnie Wybrzeże USA, Zachodnie Wybrzeże USA) z automatycznym przełączaniem awaryjnym na najbliższy sprawny węzeł
     - Darmowy publiczny punkt końcowy (bez klucza API) + darmowy plan z 3 mln jednostek obliczeniowych miesięcznie
     - Rozliczanie w jednostkach obliczeniowych — płać tylko za to, z czego korzystasz, cięższe wywołania kosztują więcej
-    - Brak ograniczania przepustowości (throttling) w płatnych planach
+    - Brak ograniczania przepustowości w płatnych planach
 
 - [**NOWNodes**](https://nownodes.io/)
   - Funkcje
@@ -298,8 +298,8 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmia
     - Program Pre-Stake+ (jeśli potrzebujesz więcej niż 1 mln żądań dziennie)
     - Obsługa ponad 15 blockchainów
     - Ponad 6400 węzłów zarabiających POKT za obsługę aplikacji
-    - Obsługa węzłów archiwalnych, węzłów archiwalnych z funkcją Tracing i węzłów sieci testowej
-    - Różnorodność klientów węzłów w sieci głównej Ethereum
+    - Obsługa węzłów archiwalnych, węzłów archiwalnych z funkcją śledzenia i węzłów sieci testowej
+    - Różnorodność klientów węzłów sieci głównej Ethereum
     - Brak pojedynczego punktu awarii
     - Zerowy czas przestoju
     - Opłacalna tokenomika bliska zeru (stakuj POKT raz, aby uzyskać przepustowość sieci)
@@ -307,22 +307,22 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmia
     - Równoważenie obciążenia wbudowane w protokół
     - Nieskończone skalowanie liczby żądań dziennie i węzłów na godzinę w miarę potrzeb
     - Najbardziej prywatna, odporna na cenzurę opcja
-    - Praktyczne wsparcie dla programistów
-    - Pulpit nawigacyjny i analityka [Pocket Portal](https://bit.ly/ETHorg_POKTportal)
+    - Praktyczne wsparcie dla deweloperów
+    - Panel nawigacyjny i analityka [Pocket Portal](https://bit.ly/ETHorg_POKTportal)
 
 - [**QuickNode**](https://www.quicknode.com)
   - [Dokumentacja](https://www.quicknode.com/docs/)
   - Funkcje
-    - Całodobowe wsparcie techniczne i społeczność programistów na Discordzie
+    - Całodobowe wsparcie techniczne i społeczność deweloperów na Discordzie
     - Zrównoważona geograficznie, wielochmurowa/sprzętowa sieć o niskich opóźnieniach
     - Obsługa wielu łańcuchów (Optimism, Arbitrum, Polygon + 11 innych)
     - Warstwy pośrednie dla szybkości i stabilności (routing wywołań, pamięć podręczna, indeksowanie)
-    - Monitorowanie inteligentnych kontraktów za pomocą Webhooków
-    - Intuicyjny pulpit nawigacyjny, pakiet analityczny, kompozytor RPC
+    - Monitorowanie inteligentnych kontraktów za pomocą webhooków
+    - Intuicyjny panel nawigacyjny, pakiet analityczny, kompozytor RPC
     - Zaawansowane funkcje bezpieczeństwa (JWT, maskowanie, białe listy)
     - API danych i analityki NFT
     - [Certyfikat SOC2](https://www.quicknode.com/security)
-    - Odpowiednie dla programistów i przedsiębiorstw
+    - Odpowiednie dla deweloperów i przedsiębiorstw
 
 - [**Rivet**](https://rivet.cloud/)
   - [Dokumentacja](https://rivet.readthedocs.io/en/latest/)
@@ -334,7 +334,7 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmia
   - [Dokumentacja](https://docs.senseinode.com/)
   - Funkcje
     - Węzły dedykowane i współdzielone
-    - Pulpit nawigacyjny
+    - Panel nawigacyjny
     - Hosting poza AWS u wielu dostawców hostingu w różnych lokalizacjach w Ameryce Łacińskiej
     - Klienty Prysm i Lighthouse
 
@@ -346,9 +346,9 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmia
     - Obsługa GraphQL
     - Punkty końcowe RPC i WSS
     - Dedykowane pełne węzły
-    - Przynieś własną chmurę (Bring your cloud)
+    - Przynieś własną chmurę
     - Narzędzia analityczne
-    - Pulpit nawigacyjny
+    - Panel nawigacyjny
     - Cennik godzinowy
     - Bezpośrednie wsparcie
 
@@ -357,10 +357,10 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmia
   - Funkcje
     - Darmowy plan obejmujący 25 milionów jednostek Tenderly miesięcznie
     - Darmowy dostęp do danych historycznych
-    - Do 8x szybsze obciążenia z dużą ilością odczytów
+    - Do 8x szybsze obciążenia z dużą liczbą odczytów
     - W 100% spójny dostęp do odczytu
     - Punkty końcowe JSON-RPC
-    - Kreator żądań RPC oparty na interfejsie użytkownika i podgląd żądań
+    - Oparty na interfejsie użytkownika kreator żądań RPC i podgląd żądań
     - Ściśle zintegrowane z narzędziami Tenderly do programowania, debugowania i testowania
     - Symulacje transakcji
     - Analityka użycia i filtrowanie
@@ -370,11 +370,11 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmia
 - [**Tokenview**](https://services.tokenview.io/)
   - [Dokumentacja](https://services.tokenview.io/docs?type=nodeService)
   - Funkcje
-    - Całodobowe wsparcie techniczne i społeczność programistów na Telegramie
+    - Całodobowe wsparcie techniczne i społeczność deweloperów na Telegramie
     - Obsługa wielu łańcuchów (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Classic)
     - Zarówno punkty końcowe RPC, jak i WSS są otwarte do użytku
-    - Nielimitowany dostęp do API danych archiwalnych
-    - Pulpit nawigacyjny z Request Explorer i Mempool Watcher
+    - Nieograniczony dostęp do API danych archiwalnych
+    - Panel nawigacyjny z Request Explorer i Mempool Watcher
     - API danych NFT i powiadomienia Webhook
     - Płatność w krypto
     - Zewnętrzne wsparcie dla dodatkowych wymagań dotyczących zachowania
@@ -385,7 +385,7 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmia
     - Niezawodność danych
     - Nieprzerwane połączenie bez przestojów
     - Automatyzacja procesów
-    - Darmowe taryfy
+    - Darmowe plany
     - Wysokie limity, które odpowiadają każdemu użytkownikowi
     - Obsługa różnych węzłów
     - Skalowanie zasobów
@@ -394,7 +394,7 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmia
 - [**ZMOK**](https://zmok.io/)
   - [Dokumentacja](https://docs.zmok.io/)
   - Funkcje
-    - Wyprzedzanie transakcji (front-running) jako usługa
+    - Wyprzedzanie transakcji jako usługa
     - Globalny mempool transakcji z metodami wyszukiwania/filtrowania
     - Nielimitowana opłata za transakcję i nieskończony gaz do wysyłania transakcji
     - Najszybsze pobieranie nowego bloku i odczyt blockchaina
@@ -404,14 +404,12 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmia
   - [Dokumentacja](https://www.zeeve.io/docs/)
   - Funkcje
     - Platforma automatyzacji no-code klasy korporacyjnej zapewniająca wdrażanie, monitorowanie i zarządzanie węzłami i sieciami blockchain
-    - Ponad 30 obsługiwanych protokołów i integracji, a wciąż dodawane są kolejne
+    - Ponad 30 obsługiwanych protokołów i integracji, a wciąż dodawane są nowe
     - Usługi infrastruktury Web3 o wartości dodanej, takie jak zdecentralizowane przechowywanie, zdecentralizowana tożsamość i API danych księgi blockchain dla rzeczywistych przypadków użycia
-    - Całodobowe wsparcie i proaktywne monitorowanie zapewniają ciągłą sprawność węzłów.
-    - Punkty końcowe RPC oferują uwierzytelniony dostęp do API, bezproblemowe zarządzanie dzięki intuicyjnemu pulpitowi nawigacyjnemu i analityce.
-    - Zapewnia do wyboru opcje zarządzanej chmury i własnej chmury (bring your own cloud) oraz obsługuje wszystkich głównych dostawców chmury, takich jak AWS, Azure, Google Cloud, Digital Ocean, a także rozwiązania lokalne (on-premise).
+    - Całodobowe wsparcie i proaktywne monitorowanie zapewniają stały stan zdrowia węzłów.
+    - Punkty końcowe RPC oferują uwierzytelniony dostęp do API, bezproblemowe zarządzanie dzięki intuicyjnemu panelowi nawigacyjnemu i analityce.
+    - Zapewnia do wyboru zarówno zarządzaną chmurę, jak i opcję przyniesienia własnej chmury, a także obsługuje wszystkich głównych dostawców chmury, takich jak AWS, Azure, Google Cloud, Digital Ocean oraz rozwiązania lokalne (on-premise).
     - Używamy inteligentnego routingu, aby za każdym razem trafiać do węzła znajdującego się najbliżej Twojego użytkownika
-
-
 ## Dalsza lektura {#further-reading}
 
 - [Lista usług węzłów Ethereum](https://ethereumnodes.com/)

@@ -156,6 +156,7 @@
   "sim-cw-connect-disclaimer": "Menghubungkan ke situs web tidak akan membagikan informasi pribadi atau rahasia apa pun dengan pemilik situs.",
   "sim-cw-your-collection": "Koleksi Anda ({count})",
   "sim-cw-nft-title": "Seni yang keren",
+  "sim-cw-nft-alt": "Gambar NFT",
   "sim-cw-nft-actions-tooltip": "Ini adalah beberapa hal yang dapat Anda lakukan sebagai pemilik NFT Anda",
   "sim-cw-set-price": "Tetapkan harga",
   "sim-cw-auction-item": "Lelang item",

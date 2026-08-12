@@ -47,39 +47,38 @@ Chytrý kontrakt je kód, který žije na blockchainu Etherea a běží přesně
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## Nástroje pro tvorbu dapp {#dapp-tools}
+## Nástroje pro tvorbu dapp
 
-**Scaffold-ETH _– Rychle experimentujte se Solidity pomocí frontendu, který se přizpůsobí vašemu chytrému kontraktu._**
+**Scaffold-ETH 2 _- Rychle experimentujte se Solidity pomocí frontendu, který se přizpůsobí vašemu chytrému kontraktu._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Ukázková dapp](https://punkwallet.io/)
 
-**Create Eth App _– Vytvářejte aplikace poháněné Ethereem pomocí jednoho příkazu._**
+**Create Eth App _- Vytvářejte aplikace poháněné Ethereem pomocí jednoho příkazu._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**One Click Dapp _– FOSS nástroj pro generování frontendů dapp z [ABI](/glossary/#abi)._**
+**One Click Dapp _- FOSS nástroj pro generování frontendů dapp z [ABI](/glossary/#abi)._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
-**Etherflow _– FOSS nástroj pro vývojáře na Ethereu k testování jejich uzlu a sestavování a ladění RPC volání z prohlížeče._**
+**Etherflow _- FOSS nástroj pro vývojáře na Ethereu k testování jejich uzlu a sestavování a ladění RPC volání z prohlížeče._**
 
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
-**thirdweb _– SDK v každém jazyce, chytré kontrakty, nástroje a infrastruktura pro vývoj ve Web3._**
+**thirdweb _- SDK v každém jazyce, chytré kontrakty, nástroje a infrastruktura pro vývoj ve Web3._**
 
 - [Domovská stránka](https://thirdweb.com/)
 - [Dokumentace](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Crossmint _– Podniková platforma pro vývoj ve Web3 k nasazování chytrých kontraktů, umožnění plateb kreditními kartami a cross-chain plateb a používání API k vytváření, distribuci, prodeji, ukládání a úpravám NFT._**
+**Crossmint _- Vývojová platforma pro Web3 na podnikové úrovni pro nasazování chytrých kontraktů, umožnění plateb kreditními kartami a cross-chain plateb a používání API k vytváření, distribuci, prodeji, ukládání a úpravám NFT._**
 
 - [crossmint.com](https://www.crossmint.com)
 - [Dokumentace](https://docs.crossmint.com)
 - [Discord](https://discord.com/invite/crossmint)
-
 ## Další čtení {#further-reading}
 
 - [Prozkoumejte dapp](/apps)

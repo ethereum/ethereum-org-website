@@ -1,13 +1,13 @@
 import { expect, userEvent, waitFor, within } from "storybook/test"
 import type { Meta, StoryObj } from "@storybook/nextjs"
 
-import { StandaloneQuizWidget } from "../QuizWidget"
+import { StandaloneQuizClient } from "../QuizWidget/QuizWidgetClient"
 
 import { LAYER_2_QUIZ_KEY, layer2Questions } from "./utils"
 
 const meta = {
   title: "Molecules / Display Content / Quiz / QuizWidget",
-  component: StandaloneQuizWidget,
+  component: StandaloneQuizClient,
   args: {
     quizKey: LAYER_2_QUIZ_KEY,
   },
@@ -18,7 +18,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof StandaloneQuizWidget>
+} satisfies Meta<typeof StandaloneQuizClient>
 
 export default meta
 

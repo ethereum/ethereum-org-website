@@ -1,22 +1,22 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/pectra/7702/index.md",
-  "generatedAt": "2026-06-08T10:30:34.185Z",
-  "rootHash": "223d09081b9f",
+  "generatedAt": "2026-07-23T00:22:05.482Z",
+  "rootHash": "06f34e68ebfd",
   "tree": {
-    "contentHash": "164c3ea5e58f",
-    "anchorHash": "5e10c44b6a1d",
+    "contentHash": "194f2bc72ff7",
+    "anchorHash": "7cf021c0edbe",
     "children": {
       "frontmatter:title": {
-        "contentHash": "7fe46197f7d3",
+        "contentHash": "9911e2dbaee6",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:metaTitle": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "dcf3d76c1e3b"
+        "anchorHash": "0dbbceaf1d87"
       },
       "frontmatter:description": {
-        "contentHash": "5d9ab6104be1",
+        "contentHash": "1683f59f85e7",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -24,7 +24,7 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "abstract": {
-        "contentHash": "713d11bf0b5e",
+        "contentHash": "ffe80763f9f7",
         "anchorHash": "d4a33b2ef658",
         "labelHash": "d21b4a64a2d8",
         "children": {
@@ -33,7 +33,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:0": {
-            "contentHash": "a732fef3e9d8",
+            "contentHash": "950e48dada93",
             "anchorHash": "e3b0c44298fc"
           },
           "code-fence:2": {
@@ -63,7 +63,7 @@
         ]
       },
       "best-practices": {
-        "contentHash": "8345028fec2b",
+        "contentHash": "ffb31733e4e7",
         "anchorHash": "530ae3bad3cf",
         "labelHash": "bfb6cf2330e2",
         "children": {
@@ -72,11 +72,11 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:10": {
-            "contentHash": "1833b3b29d84",
+            "contentHash": "1ccf01c217c4",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
-            "contentHash": "fb9cb2678435",
+            "contentHash": "d3c479bfd158",
             "anchorHash": "a3e97dccf97b"
           },
           "prose:11": {
@@ -112,7 +112,7 @@
             "anchorHash": "5ade3d1f2719"
           },
           "prose:15": {
-            "contentHash": "4a5a6dbf00f7",
+            "contentHash": "892e22d32375",
             "anchorHash": "e3b0c44298fc"
           },
           "inline-code:5": {
@@ -120,7 +120,7 @@
             "anchorHash": "5fa3e0e7942b"
           },
           "prose:16": {
-            "contentHash": "5262c854a42b",
+            "contentHash": "a3e828aeaf00",
             "anchorHash": "e3b0c44298fc"
           },
           "link:6": {
@@ -182,7 +182,7 @@
         ]
       },
       "security-considerations": {
-        "contentHash": "f82ea7132434",
+        "contentHash": "c4d41abaf0d8",
         "anchorHash": "77451cb2af65",
         "labelHash": "b01b27c87550",
         "children": {
@@ -327,11 +327,11 @@
             "anchorHash": "2813957e9776"
           },
           "prose:34": {
-            "contentHash": "91628c381bc7",
+            "contentHash": "d765c9bffc74",
             "anchorHash": "e3b0c44298fc"
           },
           "known-implementations": {
-            "contentHash": "8482424f564e",
+            "contentHash": "c3ed65f9d2cf",
             "anchorHash": "613474ad0ae6",
             "labelHash": "a43daf6365ee",
             "children": {
@@ -340,7 +340,7 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "prose:12": {
-                "contentHash": "770817e42e9a",
+                "contentHash": "a4603b399307",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:0": {
@@ -511,7 +511,7 @@
         ]
       },
       "hardware-wallet-guidelines": {
-        "contentHash": "450fce0fb410",
+        "contentHash": "36d2963f5762",
         "anchorHash": "d87b33cf0297",
         "labelHash": "0f3d2f2a9e81",
         "children": {
@@ -520,11 +520,11 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:0": {
-            "contentHash": "46f8399306e1",
+            "contentHash": "0e826526424f",
             "anchorHash": "e3b0c44298fc"
           },
           "integration-scenarios-for-companion-apps": {
-            "contentHash": "f94b21013fcb",
+            "contentHash": "0739c8988acb",
             "anchorHash": "a38519008361",
             "labelHash": "9ac5800cfdff",
             "children": {
@@ -571,7 +571,7 @@
                 ]
               },
               "common-delegation": {
-                "contentHash": "43947cac27b4",
+                "contentHash": "51b0fd35be4f",
                 "anchorHash": "4b9f7d802648",
                 "labelHash": "ddb82004eddf",
                 "children": {
@@ -580,7 +580,7 @@
                     "anchorHash": "e3b0c44298fc"
                   },
                   "prose:0": {
-                    "contentHash": "01023649f35c",
+                    "contentHash": "840517844f0a",
                     "anchorHash": "e3b0c44298fc"
                   }
                 },
@@ -590,7 +590,7 @@
                 ]
               },
               "custom-delegation": {
-                "contentHash": "16860f4bdc90",
+                "contentHash": "e78856776482",
                 "anchorHash": "4b9f7d802648",
                 "labelHash": "516033cd930a",
                 "children": {
@@ -599,7 +599,7 @@
                     "anchorHash": "e3b0c44298fc"
                   },
                   "prose:0": {
-                    "contentHash": "5b90114f3a88",
+                    "contentHash": "67db2baf6934",
                     "anchorHash": "e3b0c44298fc"
                   }
                 },
@@ -636,5 +636,5 @@
       "hardware-wallet-guidelines"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

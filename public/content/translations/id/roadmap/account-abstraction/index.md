@@ -2,6 +2,7 @@
 title: Abstraksi akun
 description: Gambaran umum tentang rencana Ethereum untuk membuat akun pengguna menjadi lebih sederhana dan lebih aman
 lang: id
+template: roadmap
 summaryPoints:
   - Abstraksi akun membuatnya jauh lebih mudah untuk membangun dompet kontrak pintar
   - Dompet kontrak pintar membuatnya jauh lebih mudah untuk mengelola akses ke akun Ethereum

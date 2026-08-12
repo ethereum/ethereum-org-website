@@ -237,49 +237,58 @@ ethers.utils.formatEther(balance)
 - [Web3js उपयोगिता फ़ंक्शन](https://docs.web3js.org/api/web3-utils)
 - [Ethers उपयोगिता फ़ंक्शन](https://docs.ethers.org/v6/api/utils/)
 
-## उपलब्ध लाइब्रेरी {#available-libraries}
+## उपलब्ध लाइब्रेरी
 
 **Web3.js -** **_इथेरियम JavaScript API._**
 
-- [दस्तावेज़ीकरण](https://docs.web3js.org)
+- [दस्तावेज़](https://docs.web3js.org)
 - [GitHub](https://github.com/ethereum/web3.js)
 
-**Ethers.js -** **_JavaScript और TypeScript में पूर्ण इथेरियम वॉलेट कार्यान्वयन और उपयोगिताएँ।_**
+**Ethers.js -** **_JavaScript और TypeScript में संपूर्ण इथेरियम वॉलेट कार्यान्वयन और उपयोगिताएँ।_**
 
 - [Ethers.js होम](https://ethers.org/)
-- [दस्तावेज़ीकरण](https://docs.ethers.io)
+- [दस्तावेज़](https://docs.ethers.io)
 - [GitHub](https://github.com/ethers-io/ethers.js)
 
-**The Graph -** **_इथेरियम और IPFS डेटा को अनुक्रमित (indexing) करने और GraphQL का उपयोग करके इसे क्वेरी करने के लिए एक प्रोटोकॉल।_**
+**The Graph -** **_इथेरियम और IPFS डेटा को अनुक्रमित (index) करने और GraphQL का उपयोग करके इसे क्वेरी करने के लिए एक प्रोटोकॉल।_**
 
 - [The Graph](https://thegraph.com)
 - [Graph एक्सप्लोरर](https://thegraph.com/explorer)
-- [दस्तावेज़ीकरण](https://thegraph.com/docs)
+- [दस्तावेज़](https://thegraph.com/docs)
 - [GitHub](https://github.com/graphprotocol)
 - [डिस्कॉर्ड](https://thegraph.com/discord)
 
 **Alchemy SDK -** **_उन्नत API के साथ Ethers.js के चारों ओर रैपर।_**
 
-- [दस्तावेज़ीकरण](https://www.alchemy.com/docs)
+- [दस्तावेज़](https://www.alchemy.com/docs)
 - [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
 
 **viem -** **_इथेरियम के लिए TypeScript इंटरफ़ेस।_**
 
-- [दस्तावेज़ीकरण](https://viem.sh)
+- [दस्तावेज़](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-**Codex -** **_दर्जनों चेन में रीयल-टाइम, समृद्ध ब्लॉकचेन डेटा API।_**
+**wagmi -** **_इथेरियम के लिए React हुक्स लाइब्रेरी, जो viem के ऊपर बनाई गई है।_**
 
-- [दस्तावेज़ीकरण](https://docs.codex.io)
+- [दस्तावेज़](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_विकेंद्रीकृत एप्लिकेशन (dapp) में वॉलेट कनेक्शन जोड़ने के लिए React लाइब्रेरी, जो wagmi और viem पर बनाई गई है।_**
+
+- [दस्तावेज़](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
+
+**Codex -** **_दर्जनों चेन (chains) में रीयल-टाइम, समृद्ध ब्लॉकचेन डेटा API।_**
+
+- [दस्तावेज़](https://docs.codex.io)
 - [एक्सप्लोरर](https://docs.codex.io/explore)
 - [GitHub](https://github.com/Codex-Data)
 - [डिस्कॉर्ड](https://discord.com/invite/mFpUhT3vAq)
 
-**Drift -** **_अंतर्निहित कैशिंग, हुक और टेस्ट मॉक्स के साथ TypeScript मेटा-लाइब्रेरी।_**
+**Drift -** **_अंतर्निहित कैशिंग, हुक्स और टेस्ट मॉक्स के साथ TypeScript मेटा-लाइब्रेरी।_**
 
-- [दस्तावेज़ीकरण](https://ryangoree.github.io/drift/)
+- [दस्तावेज़](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
-
 ## आगे की पढ़ाई {#further-reading}
 
 _क्या आप किसी ऐसे सामुदायिक संसाधन के बारे में जानते हैं जिसने आपकी मदद की? इस पेज को संपादित करें और इसे जोड़ें!_

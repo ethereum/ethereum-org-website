@@ -126,6 +126,10 @@ module.exports = (phase) => {
     serverExternalPackages: ["pino-pretty", "lokijs", "encoding"],
     trailingSlash: true,
     images: {
+      // Disable Next's on-disk image LRU: its eager mkdir('.next/cache/images')
+      // crashes on Netlify's read-only Lambda FS as an unhandled rejection.
+      // Images are served via Netlify's image CDN (NEXT_FORCE_EDGE_IMAGES) anyway.
+      maximumDiskCacheSize: 0,
       qualities: [5, 10, 20, 35, 40, 75, 90, 100],
       deviceSizes: [640, 750, 828, 1080, 1200, 1504, 1920],
       remotePatterns: [

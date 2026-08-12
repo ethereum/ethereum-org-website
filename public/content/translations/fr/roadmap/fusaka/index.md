@@ -3,6 +3,7 @@ title: "Fusaka 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
 description: Découvrez la mise à jour du protocole Fusaka
 lang: fr
+template: upgrade
 authors: ["Nixo", "Mario Havel"]
 ---
 

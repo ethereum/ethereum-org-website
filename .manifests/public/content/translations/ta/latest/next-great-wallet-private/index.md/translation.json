@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "locale": "ta",
+  "translatedAt": "2026-07-23T00:14:38.960Z",
+  "englishManifestHash": "30ecd6a17bb1",
+  "placeholderOrder": [
+    "LINK-717389",
+    "LINK-7da7d2",
+    "LINK-7f6a7a",
+    "LINK-f24b9c",
+    "LINK-e7f94c",
+    "LINK-dad71c",
+    "LINK-f73514",
+    "LINK-84d536",
+    "LINK-82c968",
+    "LINK-31d416",
+    "LINK-487940",
+    "LINK-ff923f",
+    "LINK-2ac747",
+    "LINK-59a455",
+    "LINK-94c5fb",
+    "LINK-239cd8",
+    "LINK-a2e07f",
+    "LINK-ed8f4d",
+    "LINK-5e72d0",
+    "LINK-d01612",
+    "LINK-6c24b6",
+    "LINK-4ad3ed",
+    "LINK-82c968",
+    "LINK-239cd8",
+    "LINK-94c5fb",
+    "LINK-a2e07f",
+    "LINK-ed8f4d",
+    "LINK-e63d0d",
+    "LINK-d01612"
+  ],
+  "placeholderMap": {
+    "LINK-717389": {
+      "type": "link",
+      "values": {
+        "url": "https://fc20.ifca.ai/preproceedings/31.pdf"
+      }
+    },
+    "LINK-7da7d2": {
+      "type": "link",
+      "values": {
+        "url": "https://www.theopensourcepress.com/crypto-wallet-ip-exposure-scorecard-2026/"
+      }
+    },
+    "LINK-7f6a7a": {
+      "type": "link",
+      "values": {
+        "url": "https://cakewallet.com/"
+      }
+    },
+    "LINK-f24b9c": {
+      "type": "link",
+      "values": {
+        "url": "https://www.coindesk.com/business/2022/12/06/consensys-to-update-metamask-crypto-wallet-in-response-to-privacy-backlash"
+      }
+    },
+    "LINK-e7f94c": {
+      "type": "link",
+      "values": {
+        "url": "https://consensys.io/blog/consensys-data-retention-update"
+      }
+    },
+    "LINK-dad71c": {
+      "type": "link",
+      "values": {
+        "url": "https://www.coindesk.com/markets/2026/02/02/crypto-crime-is-getting-violent-wrench-attacks-jumped-75-in-2026"
+      }
+    },
+    "LINK-f73514": {
+      "type": "link",
+      "values": {
+        "url": "https://cointelegraph.com/news/europe-crypto-wrench-attacks-losses-101m-certik-report"
+      }
+    },
+    "LINK-84d536": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/ethereum-privacy-the-road-to-self-sovereignty/22115"
+      }
+    },
+    "LINK-82c968": {
+      "type": "link",
+      "values": {
+        "url": "https://railgun.org/"
+      }
+    },
+    "LINK-31d416": {
+      "type": "link",
+      "values": {
+        "url": "https://dune.com/railgun_project/railgun"
+      }
+    },
+    "LINK-487940": {
+      "type": "link",
+      "values": {
+        "url": "https://defillama.com/protocol/railgun"
+      }
+    },
+    "LINK-ff923f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.techflowpost.com/en-US/article/30477"
+      }
+    },
+    "LINK-2ac747": {
+      "type": "link",
+      "values": {
+        "url": "https://wublock.substack.com/p/ethereum-privacys-https-moment-from"
+      }
+    },
+    "LINK-59a455": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-5564"
+      }
+    },
+    "LINK-94c5fb": {
+      "type": "link",
+      "values": {
+        "url": "https://tornadocash.eth.limo/"
+      }
+    },
+    "LINK-239cd8": {
+      "type": "link",
+      "values": {
+        "url": "https://privacypools.com/"
+      }
+    },
+    "LINK-a2e07f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/a16z/helios"
+      }
+    },
+    "LINK-ed8f4d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/corpus-core/colibri-stateless"
+      }
+    },
+    "LINK-5e72d0": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/kohaku"
+      }
+    },
+    "LINK-d01612": {
+      "type": "link",
+      "values": {
+        "url": "https://www.walletbeat.fyi/"
+      }
+    },
+    "LINK-6c24b6": {
+      "type": "link",
+      "values": {
+        "url": "https://www.theopensourcepress.com/crypto-wallet-ip-exposure-scorecard-2026/"
+      }
+    },
+    "LINK-4ad3ed": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-5564"
+      }
+    },
+    "LINK-e63d0d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/kohaku"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-07-23T00:14:38.960Z",
+      "status": "success"
+    }
+  }
+}

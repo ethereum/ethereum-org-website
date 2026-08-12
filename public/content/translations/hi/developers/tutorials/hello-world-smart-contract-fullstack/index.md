@@ -32,35 +32,31 @@ published: 2021-10-25
 
 इथेरियम चेन पर अनुरोध करने के कई तरीके हैं। सरलता के लिए, हम Alchemy पर एक मुफ़्त खाते का उपयोग करेंगे, जो एक ब्लॉकचेन डेवलपर प्लेटफ़ॉर्म और API है जो हमें स्वयं नोड चलाए बिना इथेरियम चेन के साथ संवाद करने की अनुमति देता है। Alchemy में निगरानी और विश्लेषण के लिए डेवलपर टूल भी हैं; हम इस ट्यूटोरियल में इनका लाभ उठाएंगे ताकि यह समझ सकें कि हमारे स्मार्ट अनुबंध की तैनाती में आंतरिक रूप से (under the hood) क्या हो रहा है।
 
-### अपना ऐप और API कुंजी बनाएं {#create-your-app-and-api-key}
+### अपना ऐप और API कुंजी बनाएं
 
-एक बार जब आप Alchemy खाता बना लेते हैं, तो आप एक ऐप बनाकर API कुंजी उत्पन्न कर सकते हैं। यह आपको गोएर्ली टेस्टनेट पर अनुरोध करने की अनुमति देगा। यदि आप टेस्टनेट से परिचित नहीं हैं तो आप [नेटवर्क चुनने के लिए Alchemy की मार्गदर्शिका पढ़ सकते हैं](https://www.alchemy.com/docs/choosing-a-web3-network)।
+एक बार जब आप एक Alchemy खाता बना लेते हैं, तो आप एक ऐप बनाकर एक API कुंजी उत्पन्न कर सकते हैं। यह आपको Sepolia टेस्टनेट पर अनुरोध करने की अनुमति देगा। यदि आप टेस्टनेट से परिचित नहीं हैं तो आप [नेटवर्क चुनने के लिए Alchemy की गाइड पढ़ सकते हैं](https://www.alchemy.com/docs/choosing-a-web3-network)।
 
-Alchemy डैशबोर्ड पर, नेविगेशन बार में **Apps** ड्रॉपडाउन खोजें और **Create App** पर क्लिक करें।
+Alchemy डैशबोर्ड पर, नेविगेशन बार में **Apps** ड्रॉपडाउन ढूंढें और **Create App** पर क्लिक करें。
 
-![Hello world create app](./hello-world-create-app.png)
+![Hello world ऐप बनाएं](./hello-world-create-app.png)
 
-अपने ऐप को '_Hello World_' नाम दें और एक संक्षिप्त विवरण लिखें। अपने वातावरण के रूप में **Staging** और अपने नेटवर्क के रूप में **Goerli** चुनें।
+अपने ऐप को '_Hello World_' नाम दें और एक संक्षिप्त विवरण लिखें। अपने वातावरण (environment) के रूप में **Staging** और अपने नेटवर्क के रूप में **Sepolia** चुनें。
 
-![create app view hello world](./create-app-view-hello-world.png)
+![ऐप व्यू hello world बनाएं](./create-app-view-hello-world.png)
 
-_नोट: **Goerli** चुनना सुनिश्चित करें, अन्यथा यह ट्यूटोरियल काम नहीं करेगा।_
+_नोट: **Sepolia** चुनना सुनिश्चित करें, अन्यथा यह ट्यूटोरियल काम नहीं करेगा।_
 
 **Create app** पर क्लिक करें। आपका ऐप नीचे दी गई तालिका में दिखाई देगा।
+### एक इथेरियम खाता बनाएं
+लेन-देन भेजने और प्राप्त करने के लिए आपको एक इथेरियम खाते की आवश्यकता होती है। हम मेटामास्क का उपयोग करेंगे, जो ब्राउज़र में एक वर्चुअल वॉलेट है जो उपयोगकर्ताओं को अपने इथेरियम खाता पते को प्रबंधित करने की अनुमति देता है।
 
-### एक इथेरियम खाता बनाएं {#create-an-ethereum-account}
+आप [यहाँ](https://metamask.io/download) मुफ़्त में मेटामास्क डाउनलोड कर सकते हैं और खाता बना सकते हैं। जब आप एक खाता बना रहे हों, या यदि आपके पास पहले से ही एक खाता है, तो सुनिश्चित करें कि आप ऊपरी दाएं कोने में "Sepolia टेस्ट नेटवर्क" पर स्विच कर लें (ताकि हम असली पैसे के साथ काम न कर रहे हों)।
+### चरण 4: फॉसेट से ईथर जोड़ें
 
-लेन-देन भेजने और प्राप्त करने के लिए आपको एक इथेरियम खाते की आवश्यकता है। हम मेटामास्क का उपयोग करेंगे, जो ब्राउज़र में एक वर्चुअल वॉलेट है जो उपयोगकर्ताओं को अपने इथेरियम खाता पता प्रबंधित करने देता है।
+अपने स्मार्ट अनुबंध को टेस्ट नेटवर्क पर तैनात करने के लिए, आपको कुछ नकली ETH की आवश्यकता होगी। Sepolia नेटवर्क पर ETH प्राप्त करने के लिए, Sepolia फॉसेट पर जाएं और अपना Sepolia खाता पता दर्ज करें। आजमाने के विकल्पों की सूची के लिए [टेस्ट नेटवर्क पेज](/developers/docs/networks/#sepolia) देखें:
 
-आप [यहाँ](https://metamask.io/download) मुफ़्त में मेटामास्क खाता डाउनलोड कर सकते हैं और बना सकते हैं। जब आप एक खाता बना रहे हों, या यदि आपके पास पहले से ही एक खाता है, तो सुनिश्चित करें कि आप ऊपरी दाएं कोने में "Goerli Test Network" पर स्विच करें (ताकि हम असली पैसे के साथ काम न कर रहे हों)।
-
-### चरण 4: फॉसेट से ईथर जोड़ें {#step-4-add-ether-from-a-faucet}
-
-अपने स्मार्ट अनुबंध को टेस्ट नेटवर्क पर तैनात करने के लिए, आपको कुछ नकली ETH की आवश्यकता होगी। गोएर्ली नेटवर्क पर ETH प्राप्त करने के लिए, गोएर्ली फॉसेट पर जाएं और अपना गोएर्ली खाता पता दर्ज करें। ध्यान दें कि गोएर्ली फॉसेट हाल ही में थोड़े अविश्वसनीय हो सकते हैं - आज़माने के विकल्पों की सूची के लिए [टेस्ट नेटवर्क पृष्ठ](/developers/docs/networks/#goerli) देखें:
-
-_नोट: नेटवर्क की भीड़ के कारण, इसमें कुछ समय लग सकता है।_
+_नोट: नेटवर्क कंजेशन के कारण, इसमें कुछ समय लग सकता है।_
 ``
-
 ### चरण 5: अपना बैलेंस जांचें {#step-5-check-your-balance}
 
 यह दोबारा जांचने के लिए कि आपके वॉलेट में ETH है, आइए [Alchemy के सैंडबॉक्स टूल](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) का उपयोग करके एक [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) अनुरोध करें। यह हमारे वॉलेट में ETH की मात्रा वापस कर देगा। अधिक जानने के लिए [कंपोज़र टूल का उपयोग कैसे करें, इस पर Alchemy का संक्षिप्त ट्यूटोरियल](https://youtu.be/r6sjRxBZJuU) देखें।
@@ -240,7 +236,7 @@ npm install dotenv --save
 - अपनी निजी कुंजी निर्यात करने के लिए [इन निर्देशों](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) का पालन करें
 - HTTP Alchemy API URL प्राप्त करने के लिए नीचे देखें
 
-![Animated walkthrough of getting an Alchemy API key](./get-alchemy-api-key.gif)
+![Animated walkthrough of getting an Alchemy API key](./get-alchemy-api-key.mp4#1280x696)
 
 आपका `.env` इस तरह दिखना चाहिए:
 
@@ -341,12 +337,11 @@ const hello_world = await HelloWorld.deploy()
 
 `ContractFactory` पर `deploy()` को कॉल करने से तैनाती शुरू हो जाएगी, और एक `Promise` वापस आ जाएगा जो एक `Contract` ऑब्जेक्ट में रिज़ॉल्व होता है। यह वह ऑब्जेक्ट है जिसमें हमारे प्रत्येक स्मार्ट अनुबंध फ़ंक्शन के लिए एक विधि है।
 
-### चरण 16: अपना अनुबंध तैनात करें {#step-16-deploy-our-contract}
-
+### चरण 16: अपना अनुबंध तैनात करें
 हम अंततः अपना स्मार्ट अनुबंध तैनात करने के लिए तैयार हैं! कमांड लाइन पर जाएं और चलाएं:
 
 ```bash
-npx hardhat run scripts/deploy.js --network goerli
+npx hardhat run scripts/deploy.js --network sepolia
 ```
 
 इसके बाद आपको कुछ ऐसा दिखाई देना चाहिए:
@@ -355,24 +350,23 @@ npx hardhat run scripts/deploy.js --network goerli
 Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 ```
 
-**कृपया इस पते को सहेजें**। हम ट्यूटोरियल में बाद में इसका उपयोग करेंगे।
+**कृपया इस पते को सहेज लें**। हम ट्यूटोरियल में बाद में इसका उपयोग करेंगे。
 
-यदि हम [गोएर्ली Etherscan](https://goerli.etherscan.io) पर जाते हैं और अपने अनुबंध पते की खोज करते हैं तो हमें यह देखने में सक्षम होना चाहिए कि इसे सफलतापूर्वक तैनात किया गया है। लेन-देन कुछ इस तरह दिखेगा:
+यदि हम [Sepolia Etherscan](https://sepolia.etherscan.io) पर जाते हैं और अपने अनुबंध पते को खोजते हैं, तो हमें यह देखने में सक्षम होना चाहिए कि इसे सफलतापूर्वक तैनात किया गया है। लेन-देन कुछ इस तरह दिखेगा:
 
 ![](./etherscan-contract.png)
 
-`From` पता आपके मेटामास्क खाता पते से मेल खाना चाहिए और `To` पते पर **Contract Creation** लिखा होगा। यदि हम लेन-देन पर क्लिक करते हैं तो हम `To` फ़ील्ड में अपना अनुबंध पता देखेंगे।
+`From` पता आपके मेटामास्क खाता पते से मेल खाना चाहिए और `To` पते में **Contract Creation** लिखा होगा। यदि हम लेन-देन पर क्लिक करते हैं तो हम `To` फ़ील्ड में अपना अनुबंध पता देखेंगे。
 
 ![](./etherscan-transaction.png)
 
-बधाई हो! आपने अभी-अभी एक इथेरियम टेस्टनेट पर एक स्मार्ट अनुबंध तैनात किया है।
+बधाई हो! आपने अभी-अभी इथेरियम टेस्टनेट पर एक स्मार्ट अनुबंध तैनात किया है।
 
-आंतरिक रूप से (under the hood) क्या हो रहा है, यह समझने के लिए, आइए अपने [Alchemy डैशबोर्ड](https://dashboard.alchemy.com/explorer) में एक्सप्लोरर टैब पर जाएं। यदि आपके पास कई Alchemy ऐप हैं तो ऐप द्वारा फ़िल्टर करना सुनिश्चित करें और **Hello World** चुनें।
+आंतरिक रूप से (under the hood) क्या हो रहा है, यह समझने के लिए, आइए अपने [Alchemy डैशबोर्ड](https://dashboard.alchemy.com/explorer) में Explorer टैब पर नेविगेट करें। यदि आपके पास कई Alchemy ऐप हैं तो ऐप द्वारा फ़िल्टर करना सुनिश्चित करें और **Hello World** चुनें。
 
 ![](./hello-world-explorer.png)
 
-यहां आपको कुछ JSON-RPC विधियां दिखाई देंगी जो Hardhat/Ethers ने हमारे लिए आंतरिक रूप से बनाई थीं जब हमने `.deploy()` फ़ंक्शन को कॉल किया था। यहां दो महत्वपूर्ण विधियां [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction) हैं, जो हमारे अनुबंध को गोएर्ली चेन पर लिखने का अनुरोध है, और [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash) है, जो हैश दिए जाने पर हमारे लेन-देन के बारे में जानकारी पढ़ने का अनुरोध है। लेन-देन भेजने के बारे में अधिक जानने के लिए, [Web3 का उपयोग करके लेन-देन भेजने पर हमारा ट्यूटोरियल](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) देखें।
-
+यहां आपको कुछ JSON-RPC विधियां दिखाई देंगी जो Hardhat/Ethers ने हमारे लिए आंतरिक रूप से (under the hood) बनाई थीं जब हमने `.deploy()` फ़ंक्शन को कॉल किया था। यहां दो महत्वपूर्ण विधियां हैं [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction), जो हमारे अनुबंध को Sepolia चेन पर लिखने का अनुरोध है, और [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash), जो हैश दिए जाने पर हमारे लेन-देन के बारे में जानकारी पढ़ने का अनुरोध है। लेन-देन भेजने के बारे में अधिक जानने के लिए, Web3 का उपयोग करके लेन-देन भेजने पर [हमारा ट्यूटोरियल](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) देखें।
 ## भाग 2: अपने स्मार्ट अनुबंध के साथ इंटरैक्ट करें {#part-2-interact-with-your-smart-contract}
 
 अब जब हमने गोएर्ली नेटवर्क पर सफलतापूर्वक एक स्मार्ट अनुबंध तैनात कर दिया है, तो आइए जानें कि इसके साथ कैसे इंटरैक्ट किया जाए।
@@ -513,11 +507,11 @@ main()
 
 ध्यान दें कि लाइन 11 पर, हम लौटाए गए लेन-देन ऑब्जेक्ट पर `.wait()` को कॉल करते हैं। यह सुनिश्चित करता है कि हमारी स्क्रिप्ट फ़ंक्शन से बाहर निकलने से पहले ब्लॉकचेन पर लेन-देन के माइन होने की प्रतीक्षा करे। यदि `.wait()` कॉल शामिल नहीं है, तो स्क्रिप्ट अनुबंध में अपडेट किए गए `message` मान को नहीं देख पाएगी।
 
-### नया संदेश पढ़ें {#read-the-new-message}
+### नया संदेश पढ़ें
 
-अपडेट किए गए `message` मान को पढ़ने के लिए आपको [पिछले चरण](#read-the-init-message) को दोहराने में सक्षम होना चाहिए। थोड़ा समय लें और देखें कि क्या आप उस नए मान को प्रिंट करने के लिए आवश्यक बदलाव कर सकते हैं!
+अपडेट किए गए `message` मान को पढ़ने के लिए आपको [पिछले चरण](#read-the-init-message) को दोहराने में सक्षम होना चाहिए। थोड़ा समय लें और देखें कि क्या आप उस नए मान को प्रिंट करने के लिए आवश्यक परिवर्तन कर सकते हैं!
 
-यदि आपको किसी संकेत की आवश्यकता है, तो इस बिंदु पर आपकी `interact.js` फ़ाइल कुछ इस तरह दिखनी चाहिए:
+यदि आपको किसी संकेत की आवश्यकता है, तो यहां बताया गया है कि इस बिंदु पर आपकी `interact.js` फ़ाइल कैसी दिखनी चाहिए:
 
 ```javascript
 // interact.js
@@ -530,7 +524,7 @@ const contract = require("../artifacts/contracts/HelloWorld.sol/HelloWorld.json"
 
 // प्रदाता - Alchemy
 const alchemyProvider = new ethers.providers.AlchemyProvider(
-  (network = "goerli"),
+  (network = "sepolia"),
   API_KEY
 )
 
@@ -559,9 +553,9 @@ async function main() {
 main()
 ```
 
-अब बस स्क्रिप्ट को रन करें और आप अपने टर्मिनल पर पुराना संदेश, अपडेटिंग स्थिति और नया संदेश प्रिंट होते हुए देख पाएंगे!
+अब बस स्क्रिप्ट चलाएं और आपको अपने टर्मिनल पर पुराना संदेश, अपडेटिंग स्थिति और नया संदेश प्रिंट होता हुआ दिखाई देना चाहिए!
 
-`npx hardhat run scripts/interact.js --network goerli`
+`npx hardhat run scripts/interact.js --network sepolia`
 
 ```
 The message is: Hello World!
@@ -569,8 +563,7 @@ Updating the message...
 The new message is: This is the new message.
 ```
 
-उस स्क्रिप्ट को रन करते समय, आप देख सकते हैं कि नया संदेश लोड होने से पहले `Updating the message...` चरण लोड होने में थोड़ा समय लेता है। ऐसा माइनिंग प्रक्रिया के कारण होता है; यदि आप लेन-देन के माइन होने के दौरान उन्हें ट्रैक करने के बारे में उत्सुक हैं, तो लेन-देन की स्थिति देखने के लिए [Alchemy मेमपूल](https://dashboard.alchemy.com/mempool) पर जाएं। यदि लेन-देन ड्रॉप हो जाता है, तो [गोएर्ली Etherscan](https://goerli.etherscan.io) की जांच करना और अपने लेन-देन हैश को खोजना भी मददगार होता है।
-
+उस स्क्रिप्ट को चलाते समय, आप देख सकते हैं कि नया संदेश लोड होने से पहले `Updating the message...` चरण लोड होने में थोड़ा समय लेता है। ऐसा माइनिंग प्रक्रिया के कारण होता है; यदि आप लेन-देन के माइन होने के दौरान उन्हें ट्रैक करने के बारे में उत्सुक हैं, तो लेन-देन की स्थिति देखने के लिए [Alchemy mempool](https://dashboard.alchemy.com/mempool) पर जाएं। यदि लेन-देन ड्रॉप हो जाता है, तो [Sepolia Etherscan](https://sepolia.etherscan.io) की जांच करना और अपने लेन-देन हैश को खोजना भी मददगार होता है।
 ## भाग 3: अपने स्मार्ट अनुबंध को Etherscan पर प्रकाशित करें {#part-3-publish-your-smart-contract-to-etherscan}
 
 आपने अपने स्मार्ट अनुबंध को जीवंत करने के लिए बहुत मेहनत की है; अब इसे दुनिया के साथ साझा करने का समय आ गया है!
@@ -640,19 +633,19 @@ module.exports = {
 }
 ```
 
-#### Etherscan पर अपने स्मार्ट अनुबंध को सत्यापित करें {#verify-your-smart-contract-on-etherscan}
+#### Etherscan पर अपना स्मार्ट अनुबंध सत्यापित करें
 
-सुनिश्चित करें कि सभी फ़ाइलें सहेजी गई हैं और सभी `.env` चर (variables) सही ढंग से कॉन्फ़िगर किए गए हैं।
+सुनिश्चित करें कि सभी फ़ाइलें सहेजी गई हैं और सभी `.env` चर सही ढंग से कॉन्फ़िगर किए गए हैं।
 
-अनुबंध का पता, और उस नेटवर्क को पास करते हुए जहां इसे तैनात किया गया है, `verify` कार्य चलाएं:
+अनुबंध का पता और उस नेटवर्क को पास करते हुए जहाँ इसे तैनात किया गया है, `verify` कार्य चलाएं:
 
 ```text
-npx hardhat verify --network goerli DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
+npx hardhat verify --network sepolia DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
 ```
 
-सुनिश्चित करें कि `DEPLOYED_CONTRACT_ADDRESS` गोएर्ली टेस्ट नेटवर्क पर आपके तैनात स्मार्ट अनुबंध का पता है। इसके अलावा, अंतिम तर्क (argument) (`'Hello World!'`) वही स्ट्रिंग मान होना चाहिए जिसका उपयोग [भाग 1 में तैनाती चरण के दौरान](#step-15-write-our-deploy-script) किया गया था।
+सुनिश्चित करें कि `DEPLOYED_CONTRACT_ADDRESS` Sepolia टेस्ट नेटवर्क पर आपके तैनात स्मार्ट अनुबंध का पता है। साथ ही, अंतिम तर्क (`'Hello World!'`) वही स्ट्रिंग मान होना चाहिए जिसका उपयोग [भाग 1 में तैनाती चरण के दौरान](#step-15-write-our-deploy-script) किया गया था।
 
-यदि सब कुछ ठीक रहा, तो आपको अपने टर्मिनल में निम्नलिखित संदेश दिखाई देगा:
+यदि सब कुछ ठीक रहता है, तो आपको अपने टर्मिनल में निम्नलिखित संदेश दिखाई देगा:
 
 ```text
 Successfully submitted source code for contract
@@ -661,11 +654,10 @@ for verification on Etherscan. Waiting for verification result...
 
 
 Successfully verified contract HelloWorld on Etherscan.
-https://goerli.etherscan.io/address/<contract-address>#contracts
+https://sepolia.etherscan.io/address/<contract-address>#contracts
 ```
 
 बधाई हो! आपका स्मार्ट अनुबंध कोड Etherscan पर है!
-
 ### Etherscan पर अपना स्मार्ट अनुबंध देखें! {#check-out-your-smart-contract-on-etherscan}
 
 जब आप अपने टर्मिनल में दिए गए लिंक पर नेविगेट करते हैं, तो आपको Etherscan पर प्रकाशित अपना स्मार्ट अनुबंध कोड और ABI देखने में सक्षम होना चाहिए!
@@ -944,24 +936,24 @@ const web3 = createAlchemyWeb3(alchemyKey)
 
 अपने Hello World स्मार्ट अनुबंध को लोड करने के लिए, आपको इसके अनुबंध पते और ABI की आवश्यकता होगी, यदि आपने [इस ट्यूटोरियल का भाग 3](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan) पूरा कर लिया है तो ये दोनों Etherscan पर पाए जा सकते हैं।
 
-#### Etherscan से अपना अनुबंध ABI कैसे प्राप्त करें {#how-to-get-your-contract-abi-from-etherscan}
+#### Etherscan से अपने अनुबंध का ABI कैसे प्राप्त करें
+यदि आपने इस ट्यूटोरियल का भाग 3 छोड़ दिया है, तो पहले अपना खुद का HelloWorld अनुबंध तैनात करें और सत्यापित करें। फिर इसका ABI कॉपी करने के लिए [Sepolia Etherscan](https://sepolia.etherscan.io) पर अपना अनुबंध पृष्ठ खोलें।
 
-यदि आपने इस ट्यूटोरियल का भाग 3 छोड़ दिया है, तो आप पता [0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code) वाले HelloWorld अनुबंध का उपयोग कर सकते हैं। इसका ABI [यहाँ](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code) पाया जा सकता है।
-
-एक अनुबंध ABI यह निर्दिष्ट करने के लिए आवश्यक है कि अनुबंध किस फ़ंक्शन को लागू करेगा और साथ ही यह सुनिश्चित करेगा कि फ़ंक्शन उस प्रारूप में डेटा वापस करेगा जिसकी आप अपेक्षा कर रहे हैं। एक बार जब हम अपने अनुबंध ABI की प्रतिलिपि बना लेते हैं, तो आइए इसे अपनी `src` डायरेक्टरी में `contract-abi.json` नामक JSON फ़ाइल के रूप में सहेजें।
+एक अनुबंध ABI यह निर्दिष्ट करने के लिए आवश्यक है कि अनुबंध किस फ़ंक्शन को लागू करेगा और साथ ही यह सुनिश्चित करेगा कि फ़ंक्शन उस प्रारूप में डेटा वापस करेगा जिसकी आप अपेक्षा कर रहे हैं। एक बार जब हम अपने अनुबंध का ABI कॉपी कर लेते हैं, तो आइए इसे अपनी `src` डायरेक्टरी में `contract-abi.json` नामक JSON फ़ाइल के रूप में सहेजें।
 
 आपका contract-abi.json आपके src फ़ोल्डर में संग्रहीत होना चाहिए।
 
-हमारे अनुबंध पते, ABI और Alchemy Web3 एंडपॉइंट से लैस होकर, हम अपने स्मार्ट अनुबंध का एक इंस्टेंस लोड करने के लिए [contract method](https://docs.web3js.org/api/web3-eth-contract/class/Contract) का उपयोग कर सकते हैं। अपने अनुबंध ABI को `interact.js` फ़ाइल में आयात करें और अपना अनुबंध पता जोड़ें।
+अपने अनुबंध पते, ABI और Alchemy Web3 एंडपॉइंट से लैस होकर, हम अपने स्मार्ट अनुबंध का एक इंस्टेंस लोड करने के लिए [contract method](https://docs.web3js.org/api/web3-eth-contract/class/Contract) का उपयोग कर सकते हैं। अपने अनुबंध ABI को `interact.js` फ़ाइल में आयात करें और अपना अनुबंध पता जोड़ें।
 
 ```javascript
 // interact.js
 
 const contractABI = require("../contract-abi.json")
-const contractAddress = "0x6f3f635A9762B47954229Ea479b4541eAF402A6A"
+// यहां अपने अनुबंध पते का उपयोग करें
+const contractAddress = "0x..."
 ```
 
-अब हम अंततः अपने `helloWorldContract` चर को अनकमेंट कर सकते हैं, और अपने AlchemyWeb3 एंडपॉइंट का उपयोग करके स्मार्ट अनुबंध को लोड कर सकते हैं:
+अब हम अंततः अपने `helloWorldContract` चर को अनकमेंट कर सकते हैं, और अपने AlchemyWeb3 एंडपॉइंट का उपयोग करके स्मार्ट अनुबंध लोड कर सकते हैं:
 
 ```javascript
 // interact.js
@@ -971,7 +963,7 @@ export const helloWorldContract = new web3.eth.Contract(
 )
 ```
 
-संक्षेप में, आपके `interact.js` की पहली 12 लाइनें अब इस तरह दिखनी चाहिए:
+संक्षेप में, आपके `interact.js` की पहली 12 पंक्तियाँ अब इस तरह दिखनी चाहिए:
 
 ```javascript
 // interact.js
@@ -991,7 +983,6 @@ export const helloWorldContract = new web3.eth.Contract(
 ```
 
 अब जब हमारा अनुबंध लोड हो गया है, तो हम अपना `loadCurrentMessage` फ़ंक्शन लागू कर सकते हैं!
-
 #### अपनी `interact.js` फ़ाइल में `loadCurrentMessage` लागू करना {#implementing-loadcurrentmessage-in-your-interact-js-file}
 
 यह फ़ंक्शन बहुत सरल है। हम अपने अनुबंध से पढ़ने के लिए एक साधारण async web3 कॉल करने जा रहे हैं। हमारा फ़ंक्शन स्मार्ट अनुबंध में संग्रहीत संदेश वापस करेगा:
@@ -1118,14 +1109,10 @@ useEffect(async () => {
 
 यदि आप इस बारे में अधिक समझना चाहते हैं कि इथेरियम पर लेन-देन कैसे काम करता है, तो इथेरियम फाउंडेशन के [इस पेज](/developers/docs/transactions/) को देखें।
 
-#### मेटामास्क डाउनलोड करें {#download-metamask}
+आप [यहाँ](https://metamask.io/download) मुफ़्त में मेटामास्क डाउनलोड कर सकते हैं और खाता बना सकते हैं। जब आप खाता बना रहे हों, या यदि आपके पास पहले से कोई खाता है, तो सुनिश्चित करें कि आप ऊपर दाईं ओर “Sepolia टेस्ट नेटवर्क” पर स्विच करें \(ताकि हम असली पैसे से लेन-देन न कर रहे हों\)।
+#### फॉसेट से ईथर जोड़ें
 
-आप [यहाँ](https://metamask.io/download) मुफ्त में मेटामास्क खाता डाउनलोड और बना सकते हैं। जब आप एक खाता बना रहे हों, या यदि आपके पास पहले से ही एक खाता है, तो सुनिश्चित करें कि ऊपर दाईं ओर "Goerli Test Network" पर स्विच करें \(ताकि हम वास्तविक पैसे से न खेलें\)।
-
-#### फॉसेट से ईथर जोड़ें {#add-ether-from-a-faucet}
-
-इथेरियम ब्लॉकचेन पर लेन-देन पर हस्ताक्षर करने के लिए, हमें कुछ नकली Eth की आवश्यकता होगी। Eth प्राप्त करने के लिए आप [FaucETH](https://fauceth.komputing.org) पर जा सकते हैं और अपना गोएर्ली खाता पता दर्ज कर सकते हैं, "Request funds" पर क्लिक करें, फिर ड्रॉपडाउन में "Ethereum Testnet Goerli" चुनें और अंत में फिर से "Request funds" बटन पर क्लिक करें। आपको जल्द ही अपने मेटामास्क खाते में Eth दिखाई देना चाहिए!
-
+इथेरियम ब्लॉकचेन पर लेन-देन पर हस्ताक्षर करने के लिए, हमें कुछ नकली ETH की आवश्यकता होगी। ETH प्राप्त करने के लिए आप [टेस्ट नेटवर्क पेज](/developers/docs/networks/#sepolia) पर सूचीबद्ध Sepolia फॉसेट पर जा सकते हैं और अपना Sepolia खाता पता दर्ज कर सकते हैं। इसके तुरंत बाद आपको अपने मेटामास्क खाते में ETH दिखाई देना चाहिए!
 #### अपना बैलेंस जांचें {#check-your-balance}
 
 यह दोबारा जांचने के लिए कि हमारा बैलेंस वहां है, आइए [Alchemy के सैंडबॉक्स टूल](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) का उपयोग करके एक [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) अनुरोध करें। यह हमारे वॉलेट में Eth की मात्रा वापस कर देगा। अपना मेटामास्क खाता पता दर्ज करने और “Send Request” पर क्लिक करने के बाद, आपको इस तरह की प्रतिक्रिया दिखाई देनी चाहिए:

@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-roadmap.json",
-  "generatedAt": "2026-06-29T23:50:40.560Z",
-  "rootHash": "c6856b629d3b",
+  "generatedAt": "2026-07-27T19:27:14.912Z",
+  "rootHash": "7294b02f1cef",
   "tree": {
-    "contentHash": "69cf5700a99a",
-    "anchorHash": "625c80a19531",
+    "contentHash": "27fee54537ea",
+    "anchorHash": "8f795bcdda29",
     "children": {
       "page-roadmap-title": {
         "contentHash": "be50ffa0fc02",
@@ -50,11 +50,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-roadmap-cheaper-transactions-description": {
-        "contentHash": "c65064d856eb",
+        "contentHash": "e2bcc6ded693",
         "anchorHash": "e3b0c44298fc"
       },
       "page-roadmap-cheaper-transactions-button": {
-        "contentHash": "985227cef2d3",
+        "contentHash": "849519a20ffc",
         "anchorHash": "e3b0c44298fc"
       },
       "page-roadmap-extra-security-title": {
@@ -78,19 +78,19 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-roadmap-better-user-experience-button": {
-        "contentHash": "60adab3674a9",
+        "contentHash": "108dd10986eb",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-roadmap-future-proofing-title": {
-        "contentHash": "d35c1e677306",
+      "page-roadmap-privacy-title": {
+        "contentHash": "f2f071cd4040",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-roadmap-future-proofing-description": {
-        "contentHash": "d1216fafbf7d",
+      "page-roadmap-privacy-description": {
+        "contentHash": "1cb62e2d0057",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-roadmap-future-proofing-button": {
-        "contentHash": "8747f88fdd88",
+      "page-roadmap-privacy-button": {
+        "contentHash": "09f091889f3c",
         "anchorHash": "e3b0c44298fc"
       },
       "page-roadmap-why-need-title": {
@@ -505,6 +505,30 @@
         "contentHash": "088234e748f2",
         "anchorHash": "e3b0c44298fc"
       },
+      "page-roadmap-fusaka-bpo-title": {
+        "contentHash": "7a09a51f4f0a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-fusaka-bpo-item-1": {
+        "contentHash": "3cd18c52346e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-fusaka-bpo-item-2": {
+        "contentHash": "a11dfcae2817",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-fusaka-gas-title": {
+        "contentHash": "246f88240369",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-fusaka-gas-item-1": {
+        "contentHash": "1dfdb1709cb9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-fusaka-gas-item-2": {
+        "contentHash": "548d68f3b6a8",
+        "anchorHash": "e3b0c44298fc"
+      },
       "page-roadmap-fusaka-additional-title": {
         "contentHash": "68841a81a73d",
         "anchorHash": "e3b0c44298fc"
@@ -574,9 +598,9 @@
       "page-roadmap-better-user-experience-title",
       "page-roadmap-better-user-experience-description",
       "page-roadmap-better-user-experience-button",
-      "page-roadmap-future-proofing-title",
-      "page-roadmap-future-proofing-description",
-      "page-roadmap-future-proofing-button",
+      "page-roadmap-privacy-title",
+      "page-roadmap-privacy-description",
+      "page-roadmap-privacy-button",
       "page-roadmap-why-need-title",
       "page-roadmap-why-need-description",
       "page-roadmap-how-defined-title",
@@ -656,6 +680,12 @@
       "page-roadmap-fusaka-peerdas-title",
       "page-roadmap-fusaka-peerdas-item-1",
       "page-roadmap-fusaka-peerdas-item-2",
+      "page-roadmap-fusaka-bpo-title",
+      "page-roadmap-fusaka-bpo-item-1",
+      "page-roadmap-fusaka-bpo-item-2",
+      "page-roadmap-fusaka-gas-title",
+      "page-roadmap-fusaka-gas-item-1",
+      "page-roadmap-fusaka-gas-item-2",
       "page-roadmap-fusaka-additional-title",
       "page-roadmap-fusaka-additional-item-1",
       "page-roadmap-fusaka-additional-item-2",
@@ -671,5 +701,5 @@
       "page-roadmap-hegota-discussed-item-1"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "4a7c0fa2a3ee82737bedc324112b0f3d16f22030"
 }

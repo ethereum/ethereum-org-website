@@ -2,6 +2,7 @@
 title: Abstrakcja konta
 description: Przegląd planów Ethereum dotyczących uproszczenia i zwiększenia bezpieczeństwa kont użytkowników
 lang: pl
+template: roadmap
 summaryPoints:
   - Abstrakcja konta znacznie ułatwia tworzenie portfeli opartych na inteligentnych kontraktach
   - Portfele oparte na inteligentnych kontraktach znacznie ułatwiają zarządzanie dostępem do kont Ethereum

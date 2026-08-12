@@ -39,6 +39,7 @@
   "page-find-wallet-buy-crypto-desc": "Mua tiền mã hóa bằng tiền pháp định trực tiếp trong ví \n *Lưu ý: việc mua tiền mã hóa có thể tùy thuộc vào từng khu vực",
   "page-find-wallet-sell-for-fiat": "Bán lấy tiền mặt",
   "page-find-wallet-sell-for-fiat-desc": "Bán tiền mã hóa sang tiền pháp định trực tiếp trong ví \n *Lưu ý: việc rút tiền mã hóa có thể tùy thuộc vào từng khu vực",
+  "page-find-wallet-network-support": "Hỗ trợ mạng lưới",
   "page-find-wallet-multisig": "Đa chữ ký",
   "page-find-wallet-multisig-desc": "Các ví yêu cầu nhiều chữ ký để ủy quyền một giao dịch",
   "page-find-wallet-social-recovery": "Khôi phục xã hội",

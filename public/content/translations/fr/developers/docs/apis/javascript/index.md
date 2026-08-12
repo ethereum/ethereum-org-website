@@ -237,9 +237,9 @@ ethers.utils.formatEther(balance)
 - [Fonctions utilitaires de Web3.js](https://docs.web3js.org/api/web3-utils)
 - [Fonctions utilitaires d'Ethers](https://docs.ethers.org/v6/api/utils/)
 
-## Bibliothèques disponibles {#available-libraries}
+## Bibliothèques disponibles
 
-**Web3.js -** **_API JavaScript Ethereum._**
+**Web3.js -** **_API JavaScript pour Ethereum._**
 
 - [Documentation](https://docs.web3js.org)
 - [GitHub](https://github.com/ethereum/web3.js)
@@ -250,25 +250,35 @@ ethers.utils.formatEther(balance)
 - [Documentation](https://docs.ethers.io)
 - [GitHub](https://github.com/ethers-io/ethers.js)
 
-**The Graph -** **_Un protocole pour indexer les données Ethereum et IPFS et les interroger à l'aide de GraphQL._**
+**The Graph -** **_Un protocole pour indexer les données d'Ethereum et d'IPFS et les interroger à l'aide de GraphQL._**
 
 - [The Graph](https://thegraph.com)
-- [Explorateur Graph](https://thegraph.com/explorer)
+- [Graph Explorer](https://thegraph.com/explorer)
 - [Documentation](https://thegraph.com/docs)
 - [GitHub](https://github.com/graphprotocol)
 - [Discord](https://thegraph.com/discord)
 
-**Alchemy SDK -** **_Enveloppe (wrapper) autour d'Ethers.js avec des API améliorées._**
+**Alchemy SDK -** **_Wrapper autour d'Ethers.js avec des API améliorées._**
 
 - [Documentation](https://www.alchemy.com/docs)
 - [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
 
-**Viem -** **_Interface TypeScript pour Ethereum._**
+**viem -** **_Interface TypeScript pour Ethereum._**
 
 - [Documentation](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-**Codex -** **_API de données de chaîne de blocs enrichies en temps réel sur des dizaines de chaînes._**
+**wagmi -** **_Bibliothèque de hooks React pour Ethereum, construite sur viem._**
+
+- [Documentation](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_Bibliothèque React pour ajouter la connexion de portefeuille aux applications décentralisées (dapps), construite sur wagmi et viem._**
+
+- [Documentation](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
+
+**Codex -** **_API de données de chaîne de blocs enrichies en temps réel à travers des dizaines de chaînes._**
 
 - [Documentation](https://docs.codex.io)
 - [Explorateur](https://docs.codex.io/explore)
@@ -279,7 +289,6 @@ ethers.utils.formatEther(balance)
 
 - [Documentation](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
-
 ## Complément d'information {#further-reading}
 
 _Vous connaissez une ressource communautaire qui vous a aidé ? Modifiez cette page et ajoutez-la !_ 

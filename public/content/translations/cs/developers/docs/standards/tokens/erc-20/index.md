@@ -175,13 +175,12 @@ Z tohoto problému vzešly některé alternativní standardy, jako je [ERC-223](
 - [OpenZeppelin - Implementace ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Průvodce tokeny ERC-20 v Solidity](https://www.alchemy.com/overviews/erc20-solidity)
 
-## Další standardy zaměnitelných tokenů {#fungible-token-standards}
-
+## Další standardy zaměnitelných tokenů
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - Tokenizované trezory](/developers/docs/standards/tokens/erc-4626)
-
+- [ERC-7540 - Asynchronní tokenizované trezory](/developers/docs/standards/tokens/erc-7540)
 ## Návody: Vývoj s ERC-20 na Ethereu {#tutorials}
 
 - [Průvodce kontraktem ERC-20](/developers/tutorials/erc20-annotated-code/) _– Komentovaný průvodce implementací kontraktu ERC-20 od OpenZeppelin řádek po řádku._

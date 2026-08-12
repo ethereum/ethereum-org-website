@@ -2,6 +2,7 @@
 title: Abstracción de cuentas
 description: Una descripción general de los planes de Ethereum para hacer que las cuentas de usuario sean más simples y seguras
 lang: es
+template: roadmap
 summaryPoints:
   - La abstracción de cuentas hace que sea mucho más fácil crear billeteras de contratos inteligentes
   - Las billeteras de contratos inteligentes hacen que sea mucho más fácil gestionar el acceso a las cuentas de Ethereum

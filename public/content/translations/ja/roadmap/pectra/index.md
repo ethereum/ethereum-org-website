@@ -3,6 +3,7 @@ title: "ペクトラ"
 metaTitle: "Prague-Electra (ペクトラ)"
 description: "ペクトラ・プロトコル・アップグレードについて学ぶ"
 lang: ja
+template: upgrade
 authors: ["Nixo", "マリオ・ハベル"]
 ---
 

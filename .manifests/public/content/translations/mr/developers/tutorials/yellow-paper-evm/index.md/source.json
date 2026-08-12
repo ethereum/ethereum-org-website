@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/tutorials/yellow-paper-evm/index.md",
-  "generatedAt": "2026-06-19T23:31:05.553Z",
-  "rootHash": "6f3029cd946f",
+  "generatedAt": "2026-07-23T00:01:18.646Z",
+  "rootHash": "596389cda58e",
   "tree": {
-    "contentHash": "46de7284831d",
-    "anchorHash": "9f2c7d4c6e6f",
+    "contentHash": "bb7bacf188c7",
+    "anchorHash": "2146ce8c6e72",
     "children": {
       "frontmatter:title": {
         "contentHash": "0f93a34886f3",
@@ -57,7 +57,7 @@
       },
       "which-yellow-paper": {
         "contentHash": "a3a958bedc75",
-        "anchorHash": "3a2d498c8910",
+        "anchorHash": "4c9e6fba0db4",
         "labelHash": "7858c4af2324",
         "children": {
           "_label": {
@@ -70,7 +70,7 @@
           },
           "link:0": {
             "contentHash": "b2de6d6ffba1",
-            "anchorHash": "fbfcdd928dca"
+            "anchorHash": "de75f70e7c5e"
           },
           "prose:2": {
             "contentHash": "c0efd595f151",
@@ -105,7 +105,7 @@
         ]
       },
       "9-execution-model": {
-        "contentHash": "51fd5e475807",
+        "contentHash": "6a9638bdd21b",
         "anchorHash": "db5febc9b552",
         "labelHash": "c9e39afc692e",
         "children": {
@@ -114,7 +114,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:2": {
-            "contentHash": "171ba544e355",
+            "contentHash": "d2f333fe7123",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
@@ -320,7 +320,7 @@
         ]
       },
       "92-fees-overview": {
-        "contentHash": "da0c544c584a",
+        "contentHash": "b261267cf8d2",
         "anchorHash": "f0798888d6df",
         "labelHash": "4a338b8a9a1c",
         "children": {
@@ -333,7 +333,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "opcode-cost": {
-            "contentHash": "bea92f49aa32",
+            "contentHash": "b2a4d57acc91",
             "anchorHash": "c0ba9c92b97a",
             "labelHash": "60867e7e72f2",
             "children": {
@@ -342,7 +342,7 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "prose:5": {
-                "contentHash": "af48f6a7b384",
+                "contentHash": "aa4cbabcecc7",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:0": {
@@ -350,7 +350,7 @@
                 "anchorHash": "41e37b26fefa"
               },
               "prose:6": {
-                "contentHash": "48a5efa355a9",
+                "contentHash": "9800bcdd87a8",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:1": {
@@ -481,7 +481,7 @@
             ]
           },
           "expanding-memory-cost": {
-            "contentHash": "4bd359411404",
+            "contentHash": "4d5869673ab7",
             "anchorHash": "35038a8ebcf9",
             "labelHash": "45bfdc609561",
             "children": {
@@ -490,7 +490,7 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "prose:1": {
-                "contentHash": "dbba0d54d3be",
+                "contentHash": "40e52fe5b873",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:0": {
@@ -519,7 +519,7 @@
         ]
       },
       "93-execution-env": {
-        "contentHash": "eab3f51e59b1",
+        "contentHash": "2062ae853787",
         "anchorHash": "8b4025d3a8b4",
         "labelHash": "e608cca0608c",
         "children": {
@@ -672,7 +672,7 @@
             "anchorHash": "e7d5221c14eb"
           },
           "prose:36": {
-            "contentHash": "376222f494d9",
+            "contentHash": "026cf6a89472",
             "anchorHash": "e3b0c44298fc"
           }
         },
@@ -718,7 +718,7 @@
         ]
       },
       "94-execution-overview": {
-        "contentHash": "e3f81706323e",
+        "contentHash": "5464acfc4219",
         "anchorHash": "23d831714ada",
         "labelHash": "5cb61bd5a3c9",
         "children": {
@@ -727,7 +727,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:8": {
-            "contentHash": "2823d205938f",
+            "contentHash": "dc3612589afe",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
@@ -759,7 +759,7 @@
             "anchorHash": "48243ae2e46f"
           },
           "prose:12": {
-            "contentHash": "05548d7b3534",
+            "contentHash": "0efbcb236ed9",
             "anchorHash": "e3b0c44298fc"
           },
           "inline-code:4": {
@@ -856,7 +856,7 @@
         ]
       },
       "942-exceptional-halt": {
-        "contentHash": "b3a023a9ee6b",
+        "contentHash": "d151042d55d1",
         "anchorHash": "8393fe68ad46",
         "labelHash": "60e8a49183fa",
         "children": {
@@ -953,7 +953,7 @@
             "anchorHash": "bf81d262e060"
           },
           "prose:26": {
-            "contentHash": "ce4254612f4d",
+            "contentHash": "3fe54001ff6e",
             "anchorHash": "e3b0c44298fc"
           },
           "icu:14": {
@@ -1025,7 +1025,7 @@
         ]
       },
       "943-jump-dest-valid": {
-        "contentHash": "2bc9921cb7f3",
+        "contentHash": "6b90610905bf",
         "anchorHash": "d7ae487b78d4",
         "labelHash": "9e5f3c4f90d7",
         "children": {
@@ -1042,7 +1042,7 @@
             "anchorHash": "44c17ddcc2ef"
           },
           "prose:7": {
-            "contentHash": "d9da6e27a718",
+            "contentHash": "08c700a7ace2",
             "anchorHash": "e3b0c44298fc"
           },
           "link:1": {
@@ -1058,7 +1058,7 @@
             "anchorHash": "2c70f6d3ea1a"
           },
           "prose:9": {
-            "contentHash": "3e6fc4368f12",
+            "contentHash": "fa2863c56b39",
             "anchorHash": "e3b0c44298fc"
           },
           "link:3": {
@@ -1163,7 +1163,7 @@
         ]
       },
       "h2-instruction-set": {
-        "contentHash": "b919843f3c8a",
+        "contentHash": "96c00b5415d4",
         "anchorHash": "e44090094df5",
         "labelHash": "a85183283549",
         "children": {
@@ -1172,7 +1172,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:5": {
-            "contentHash": "306ba73e430c",
+            "contentHash": "1fbaa74c0c1d",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
@@ -1180,7 +1180,7 @@
             "anchorHash": "4453621b1a30"
           },
           "prose:6": {
-            "contentHash": "11292d3c1d3f",
+            "contentHash": "75ef455326b6",
             "anchorHash": "e3b0c44298fc"
           },
           "link:1": {
@@ -1188,7 +1188,7 @@
             "anchorHash": "10b568afe18c"
           },
           "prose:7": {
-            "contentHash": "6da9020f0464",
+            "contentHash": "4cc6759642ed",
             "anchorHash": "e3b0c44298fc"
           },
           "link:2": {
@@ -1232,7 +1232,7 @@
         ]
       },
       "95-exec-cycle": {
-        "contentHash": "12e9b6acd0d2",
+        "contentHash": "0bbd9ffd0c2c",
         "anchorHash": "4b9f7d802648",
         "labelHash": "bf88bd3aa351",
         "children": {
@@ -1241,7 +1241,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:0": {
-            "contentHash": "5a1b49f125a1",
+            "contentHash": "a6f620bdc05b",
             "anchorHash": "e3b0c44298fc"
           }
         },
@@ -1328,5 +1328,5 @@
       "conclusion"
     ]
   },
-  "sourceCommitSha": "1d108007c381bf3350d7e706746f624a9050ea3e"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

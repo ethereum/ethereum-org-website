@@ -1,11 +1,10 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import { useLocale, useTranslations } from "next-intl"
 
 import { Flex, Stack } from "@/components/ui/flex"
 
-import { dateTimeFormat } from "@/lib/utils/date"
+import { dateTimeFormat, getValidDate } from "@/lib/utils/date"
 import { numberFormat } from "@/lib/utils/numbers"
 
 import networkUpgradeSummaryData from "@/data/networkUpgradeSummaryData"
@@ -18,7 +17,6 @@ type NetworkUpgradeSummaryProps = {
 }
 
 const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
-  const [formattedUTC, setFormattedUTC] = useState("")
   const locale = useLocale()
   const t = useTranslations("page-history")
 
@@ -30,22 +28,20 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
     epochNumber,
     slotNumber,
   } = networkUpgradeSummaryData[name]
-  // TODO fix dateTimeAsString
 
-  // calculate date format only on the client side to avoid hydration issues
-  useEffect(() => {
-    const date = new Date(dateTimeAsString as string)
-    const formattedDate = dateTimeFormat(locale, {
-      timeZone: "UTC",
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-      hour: "numeric",
-      minute: "numeric",
-      second: "numeric",
-    }).format(date)
-    setFormattedUTC(`${formattedDate} +UTC`)
-  }, [dateTimeAsString, locale])
+  const upgradeDate = getValidDate(dateTimeAsString)
+  const formattedUTC = upgradeDate
+    ? dateTimeFormat(locale, {
+        timeZone: "UTC",
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+        timeZoneName: "short",
+      }).format(upgradeDate)
+    : null
 
   const blockTypeTranslation = (translationKey, explorerUrl, number) => {
     return (
@@ -61,7 +57,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
 
   return (
     <Stack>
-      {dateTimeAsString && (
+      {formattedUTC && (
         <Flex>
           <Emoji className="me-2 text-sm" text=":calendar:" />
           <p className="font-monospace">{formattedUTC}</p>

@@ -71,7 +71,7 @@ Chúng có thể thực hiện các phép tính, tạo ra tiền tệ, lưu tr�
 
 - [Stablecoin](/stablecoins/)
 - [Tạo và phân phối các tài sản kỹ thuật số độc nhất](/nft/)
-- [Một sàn giao dịch tiền tệ mở, tự động](/get-eth/#dex)
+- [Một sàn giao dịch tiền tệ mở, tự động](/defi/#swaps)
 - [Trò chơi phi tập trung](/apps/categories/gaming)
 - [Một hợp đồng bảo hiểm tự động chi trả](https://etherisc.com/)
 - [Một tiêu chuẩn cho phép mọi người tạo ra các loại tiền tệ tùy chỉnh, có khả năng tương tác](/developers/docs/standards/tokens/)

@@ -64,7 +64,7 @@ Eksperimen pertama kami adalah serial anime berjudul [White Rabbit](https://www.
 - Melakukan stake untuk memilih keputusan alur cerita secara langsung di dalam pemutar video
 - Mendapatkan ERC-20 (token perhatian kami) 
 
-![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4)
+![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4#800x400)
 
 ERC-20 tersebut diterbitkan pada kurva ikatan (bonding curve). Semakin awal dan semakin aktif Anda terlibat, semakin banyak yang Anda hasilkan. Pemungutan suara (seperti memberi nama karakter utama Mirai) dilakukan melalui Snapshot. 
 

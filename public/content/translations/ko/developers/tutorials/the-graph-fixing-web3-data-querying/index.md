@@ -84,7 +84,7 @@ GameContract.events.BetPlaced({
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 
-![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.gif)
+![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.mp4#910x692)
 
 이 두 이미지는 GraphQL의 핵심을 잘 보여줍니다. 오른쪽의 쿼리를 사용하면 원하는 데이터를 정확히 정의할 수 있으므로, 단일 요청으로 필요한 모든 것을 가져오고 불필요한 데이터는 받지 않습니다. GraphQL 서버가 필요한 모든 데이터를 가져오는 작업을 처리하므로 프론트엔드 소비자 측에서 사용하기가 매우 쉽습니다. 관심이 있으시다면 서버가 쿼리를 정확히 어떻게 처리하는지에 대한 [좋은 설명](https://www.apollographql.com/blog/graphql-explained)을 참고하세요.
 

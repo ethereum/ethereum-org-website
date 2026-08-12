@@ -1,5 +1,5 @@
 import { Fragment } from "react"
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { PageParams, ToCItem } from "@/lib/types"
 import type { Lang } from "@/lib/types"
@@ -13,6 +13,7 @@ import Callout from "@/components/ui/callout"
 import {
   Card,
   CardBanner,
+  CardButtonFake,
   CardContent,
   CardFooter,
   CardHeader,
@@ -27,7 +28,7 @@ import { Section } from "@/components/ui/section"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
-import LearnPageJsonLD from "./page-jsonld"
+import PageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
 import developersEthBlocks from "@/public/images/developers-eth-blocks.png"
@@ -48,9 +49,9 @@ const AdditionalDocReading = ({
   heading: string
   docLinks: DocLinkProps[]
 }) => (
-  <div className="mt-24 space-y-8">
-    <h3 className="text-center text-md lg:text-xl">{heading}</h3>
-    <div className="flex flex-col gap-4 xl:mx-36">
+  <div className="flow mt-space-3x">
+    <h3 className="text-center text-h5">{heading}</h3>
+    <div className="flow xl:mx-36">
       {docLinks.map(({ children, ...rest }) => (
         <DocLink key={rest.href} {...rest}>
           {children}
@@ -73,9 +74,9 @@ const LearnCard = ({
   description: string
   ctaLabel: string
 }) => (
-  <Card>
+  <Card href={href}>
     <CardHeader>
-      <CardBanner background="none" fit="contain">
+      <CardBanner background="none" fit="contain" zoom>
         <Image
           src={image}
           alt=""
@@ -88,7 +89,7 @@ const LearnCard = ({
       <CardParagraph>{description}</CardParagraph>
     </CardContent>
     <CardFooter>
-      <ButtonLink href={href}>{ctaLabel}</ButtonLink>
+      <CardButtonFake>{ctaLabel}</CardButtonFake>
     </CardFooter>
   </Card>
 )
@@ -230,7 +231,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
   return (
     <>
-      <LearnPageJsonLD locale={locale} contributors={contributors} />
+      <PageJsonLD locale={locale} contributors={contributors} />
 
       <ContentLayout
         tocItems={tocData}
@@ -466,6 +467,8 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-learn")
 

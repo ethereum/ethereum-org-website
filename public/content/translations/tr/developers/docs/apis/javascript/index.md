@@ -237,14 +237,14 @@ ethers.utils.formatEther(balance)
 - [Web3js yardımcı işlevleri](https://docs.web3js.org/api/web3-utils)
 - [Ethers yardımcı işlevleri](https://docs.ethers.org/v6/api/utils/)
 
-## Mevcut kütüphaneler {#available-libraries}
+## Mevcut kütüphaneler
 
-**Web3.js -** **_Ethereum JavaScript API._**
+**Web3.js -** **_Ethereum JavaScript API'si._**
 
 - [Belgeler](https://docs.web3js.org)
 - [GitHub](https://github.com/ethereum/web3.js)
 
-**Ethers.js -** **_JavaScript ve TypeScript'te eksiksiz Ethereum cüzdan uygulaması ve yardımcı programları._**
+**Ethers.js -** **_JavaScript ve TypeScript'te tam Ethereum cüzdan uygulaması ve yardımcı programları._**
 
 - [Ethers.js ana sayfası](https://ethers.org/)
 - [Belgeler](https://docs.ethers.io)
@@ -253,7 +253,7 @@ ethers.utils.formatEther(balance)
 **The Graph -** **_Ethereum ve IPFS verilerini indekslemek ve GraphQL kullanarak sorgulamak için bir protokol._**
 
 - [The Graph](https://thegraph.com)
-- [Graph Gezgini](https://thegraph.com/explorer)
+- [Graph Explorer](https://thegraph.com/explorer)
 - [Belgeler](https://thegraph.com/docs)
 - [GitHub](https://github.com/graphprotocol)
 - [Discord](https://thegraph.com/discord)
@@ -268,6 +268,16 @@ ethers.utils.formatEther(balance)
 - [Belgeler](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
+**wagmi -** **_viem üzerine inşa edilmiş, Ethereum için React hooks kütüphanesi._**
+
+- [Belgeler](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_wagmi ve viem üzerine inşa edilmiş, merkeziyetsiz uygulamalara (dapp) cüzdan bağlantısı eklemek için React kütüphanesi._**
+
+- [Belgeler](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
+
 **Codex -** **_Düzinelerce zincirde gerçek zamanlı, zenginleştirilmiş blokzincir veri API'si._**
 
 - [Belgeler](https://docs.codex.io)
@@ -275,11 +285,10 @@ ethers.utils.formatEther(balance)
 - [GitHub](https://github.com/Codex-Data)
 - [Discord](https://discord.com/invite/mFpUhT3vAq)
 
-**Drift -** **_Yerleşik önbelleğe alma, kancalar (hooks) ve test taklitleri (mocks) içeren TypeScript meta kütüphanesi._**
+**Drift -** **_Yerleşik önbelleğe alma, hook'lar ve test mock'ları içeren TypeScript meta kütüphanesi._**
 
 - [Belgeler](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
-
 ## Daha fazla bilgi {#further-reading}
 
 _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve ekleyin!_
