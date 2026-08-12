@@ -37,7 +37,7 @@ Alchemy 계정 생성은 간단합니다. [여기에서 무료로 가입하세�
 
 “Apps(앱)” 위에 마우스를 올리고 하나를 선택하여 기존 API 키를 가져올 수도 있습니다. 여기에서 “View Key”를 할 수 있을 뿐만 아니라, “Edit App(앱 편집)”을 통해 특정 도메인을 화이트리스트에 추가하고, 여러 개발자 도구를 확인하며, 분석 데이터를 볼 수 있습니다.
 
-![Gif showing a user how to pull API keys](./pull-api-keys.gif)
+![Gif showing a user how to pull API keys](./pull-api-keys.mp4#600x340)
 
 ## 3. 명령줄에서 요청하기 {#make-a-request-from-the-command-line}
 

@@ -353,7 +353,7 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
                         : "normal"
                 }
               >
-                <Translation id={getSkillTranslationId(tutorial.skill)} />
+                {t(getSkillTranslationId(tutorial.skill))}
               </Tag>
             )}
           </Flex>

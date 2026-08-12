@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-layer-2-networks.json",
-  "generatedAt": "2026-07-10T18:59:12.649Z",
-  "rootHash": "7d0f12df3c83",
+  "generatedAt": "2026-07-22T22:40:35.071Z",
+  "rootHash": "5dc2368e4f30",
   "tree": {
-    "contentHash": "fe26a21e989a",
-    "anchorHash": "0b073b6d0789",
+    "contentHash": "440de3fd176a",
+    "anchorHash": "2ab634304644",
     "children": {
       "page-layer-2-networks-hero-description": {
         "contentHash": "70936828adf2",
@@ -295,29 +295,15 @@
         "contentHash": "7b7bbdec9841",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-layer-2-network-maturity-component-1": {
-        "contentHash": "7d28f138378a",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-layer-2-network-maturity-component-2": {
-        "contentHash": "4e8e05f2d36f",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-layer-2-network-maturity-component-3": {
-        "contentHash": "8d33d57a0ea5",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-layer-2-network-maturity-component-4": {
-        "contentHash": "d3b7f9b392ee",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-layer-2-network-maturity-component-5": {
-        "contentHash": "ebd22b171709",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-layer-2-network-maturity-component-6": {
-        "contentHash": "3bb8e0e002c3",
-        "anchorHash": "e3b0c44298fc"
+      "page-layer-2-network-maturity-intro": {
+        "contentHash": "6321f5be2b73",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "1aaf6ec17f8b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
       },
       "page-layer-2-network-maturity-component-7": {
         "contentHash": "dc97b6a3e236",
@@ -441,12 +427,7 @@
       "page-layer-2-networks-transaction-fee-description",
       "page-layer-2-networks-transaction-see-networks",
       "page-layer-2-network-maturity-component-title",
-      "page-layer-2-network-maturity-component-1",
-      "page-layer-2-network-maturity-component-2",
-      "page-layer-2-network-maturity-component-3",
-      "page-layer-2-network-maturity-component-4",
-      "page-layer-2-network-maturity-component-5",
-      "page-layer-2-network-maturity-component-6",
+      "page-layer-2-network-maturity-intro",
       "page-layer-2-network-maturity-component-7",
       "page-layer-2-network-maturity-component-8",
       "page-layer-2-network-maturity-component-9",
@@ -461,5 +442,5 @@
       "page-layer-2-network-maturity-component-18"
     ]
   },
-  "sourceCommitSha": "aae4c11f0311b735c0567206673f79e1f00141cd"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

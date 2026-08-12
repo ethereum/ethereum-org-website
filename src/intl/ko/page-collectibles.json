@@ -59,9 +59,6 @@
   "page-collectibles-translations-250": "250단어 배지",
   "page-collectibles-translations-50000": "50,000단어 배지",
   "page-collectibles-translations-badge-desc": "모든 언어에 해당합니다.",
-  "page-collectibles-translations-desc": "대부분의 사용자는 영어를 사용하지 않으므로 문서를 다른 언어로 번역하는 데 도움을 주는 것이 매우 중요합니다. 번역 경험이 없어도 괜찮습니다.",
-  "page-collectibles-translations-instructions-1": "<a href=\"https://crowdin.com/project/ethereum-org\">Crowdin</a>에 가입합니다.",
-  "page-collectibles-translations-instructions-2": "언어를 선택합니다.",
-  "page-collectibles-translations-instructions-3": "번역을 시작합니다.",
+  "page-collectibles-translations-desc": "이 배지는 ethereum.org 번역 프로그램에 대한 과거의 기여를 인정합니다. 해당 프로그램은 현재 종료 수순을 밟고 있으며 더 이상 새로운 번역가를 온보딩하지 않습니다.",
   "page-collectibles-translations-title": "번역"
 }

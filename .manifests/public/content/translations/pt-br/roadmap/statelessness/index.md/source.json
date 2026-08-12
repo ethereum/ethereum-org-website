@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/statelessness/index.md",
-  "generatedAt": "2026-06-30T00:53:03.653Z",
-  "rootHash": "83ba954dea3d",
+  "generatedAt": "2026-07-23T00:25:11.698Z",
+  "rootHash": "0654a537f49e",
   "tree": {
-    "contentHash": "d54c64093453",
-    "anchorHash": "3b39dcb184fb",
+    "contentHash": "e9ddaf60554e",
+    "anchorHash": "8967845c15e6",
     "children": {
       "frontmatter:title": {
         "contentHash": "cc2bc5908f84",
@@ -18,6 +18,10 @@
       "frontmatter:lang": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "3de1580490d2"
       },
       "prose:1": {
         "contentHash": "9b1147e1153c",
@@ -432,6 +436,7 @@
       "frontmatter:title",
       "frontmatter:description",
       "frontmatter:lang",
+      "frontmatter:template",
       "prose:1",
       "link:0",
       "prose:2",
@@ -442,5 +447,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

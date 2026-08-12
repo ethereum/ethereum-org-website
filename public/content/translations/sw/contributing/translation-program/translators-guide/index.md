@@ -13,7 +13,7 @@ Ikiwa una maswali, mapendekezo au maoni yoyote, jisikie huru kuwasiliana nasi ku
 
 ## Kutumia Crowdin {#using-crowdin}
 
-Unaweza kupata maagizo ya kimsingi kuhusu jinsi ya kujiunga na mradi katika Crowdin na jinsi ya kutumia kihariri cha mtandaoni cha Crowdin kwenye [Ukurasa wa Programu ya Utafsiri](/contributing/translation-program/#how-to-translate).
+Mradi wa Crowdin wa ethereum.org unafungwa na haupokei tena michango mipya (tazama [Hali ya Programu ya Utafsiri](/contributing/translation-program/#program-status)). Mwongozo ulio hapa chini unasalia kama marejeleo kwa jamii za utafsiri zinazotumia Crowdin kwa miradi yao wenyewe.
 
 Ikiwa ungependa kujifunza zaidi kuhusu Crowdin na kutumia baadhi ya vipengele vyake vya hali ya juu, [kumbukumbu ya maarifa ya Crowdin](https://support.crowdin.com/online-editor/) ina miongozo mingi ya kina na muhtasari wa utendaji wote wa Crowdin.
 
@@ -29,11 +29,11 @@ Badala ya kutafsiri maandishi ya chanzo neno kwa neno, inashauriwa usome sentens
 
 ## Rasmi dhidi ya isiyo rasmi {#formal-vs-informal}
 
-Tunatumia mtindo rasmi wa kuhutubia, ambao daima ni wa heshima na unaofaa kwa wageni wote.
+Tunatumia namna rasmi ya kuhutubia, ambayo daima ni ya heshima na inafaa kwa wageni wote.
 
-Kutumia mtindo rasmi wa kuhutubia huturuhusu kuepuka kusikika kama sio rasmi au wa kuudhi, na hufanya kazi bila kujali umri na jinsia ya mgeni.
+Kutumia namna rasmi ya kuhutubia huturuhusu kuepuka kusikika kama sio rasmi au kuudhi, na hufanya kazi bila kujali umri na jinsia ya mgeni.
 
-Lugha nyingi za Kiindo-Ulaya na Kiafrika-Kiasia hutumia viwakilishi vya nafsi ya pili vinavyozingatia jinsia, ambavyo hutofautisha kati ya mwanamume na mwanamke. Tunapomhutubia mtumiaji au kutumia viwakilishi vimilikishi, tunaweza kuepuka kudhani jinsia ya mgeni, kwani mtindo rasmi wa kuhutubia unatumika kwa ujumla na unalingana, bila kujali jinsi wanavyojitambulisha.
+Lugha nyingi za Kiindo-Ulaya na Kiafrika-Kiasia hutumia viwakilishi vya nafsi ya pili vinavyozingatia jinsia, ambavyo hutofautisha kati ya mwanamume na mwanamke. Tunapomhutubia mtumiaji au kutumia viwakilishi vimilikishi, tunaweza kuepuka kudhani jinsia ya mgeni, kwani namna rasmi ya kuhutubia inatumika kwa ujumla na ni thabiti, bila kujali jinsi wanavyojitambulisha.
 
 ## Msamiati na maana rahisi na wazi {#simple-vocabulary}
 
@@ -47,7 +47,7 @@ Ethereum.org inapatikana katika lugha kadhaa, ikitumia mifumo mbadala ya uandish
 
 Maudhui yote yanapaswa kutafsiriwa kwa kutumia mfumo sahihi wa uandishi kwa lugha yako, na hayapaswi kujumuisha maneno yoyote, yaliyoandikwa kwa kutumia herufi za Kilatini.
 
-Unapotafsiri maudhui, unapaswa kuhakikisha kuwa tafsiri zinalingana na hazijumuishi herufi zozote za Kilatini.
+Unapotafsiri maudhui, unapaswa kuhakikisha kuwa tafsiri ni thabiti na hazijumuishi herufi zozote za Kilatini.
 
 Dhana potofu ya kawaida ni kwamba Ethereum inapaswa kuandikwa kwa Kilatini kila wakati. Hili mara nyingi si sahihi, tafadhali tumia tahajia ya Ethereum, asili ya lugha yako (k.m., 以太坊 kwa Kichina, إيثيريوم kwa Kiarabu, n.k.).
 
@@ -71,9 +71,9 @@ Baadhi ya mifano ya misimbo ya lugha kwa lugha zinazozungumzwa sana:
 - Kihindi - hi
 - Kihispania - es
 
-## Majina ya makala za nje {#external-articles}
+## Vichwa vya makala za nje {#external-articles}
 
-Baadhi ya mifuatano ina majina ya makala za nje. Kurasa zetu nyingi za nyaraka za wasanidi programu zina viungo vya makala za nje kwa usomaji zaidi. Mifuatano iliyo na majina ya makala inahitaji kutafsiriwa, bila kujali lugha ya makala, ili kuhakikisha matumizi thabiti zaidi kwa wageni wanaotazama ukurasa katika lugha yao.
+Baadhi ya mifuatano ina vichwa vya makala za nje. Kurasa zetu nyingi za nyaraka za wasanidi programu zina viungo vya makala za nje kwa usomaji zaidi. Mifuatano iliyo na vichwa vya makala inahitaji kutafsiriwa, bila kujali lugha ya makala, ili kuhakikisha matumizi thabiti zaidi kwa wageni wanaotazama ukurasa katika lugha yao.
 
 Unaweza kupata baadhi ya mifano ya jinsi mifuatano hii inavyoonekana kwa watafsiri na jinsi ya kuitambua hapa chini (viungo vya makala vinaweza kupatikana zaidi chini ya kurasa hizi, katika sehemu ya 'Usomaji zaidi'):
 
@@ -82,7 +82,7 @@ Unaweza kupata baadhi ya mifano ya jinsi mifuatano hii inavyoonekana kwa watafsi
 
 ## Maonyo ya Crowdin {#crowdin-warnings}
 
-Crowdin ina kipengele kilichojengewa ndani ambacho huonya watafsiri wanapokaribia kufanya kosa. Crowdin itakuonya kiotomatiki kuhusu hili kabla ya kuhifadhi tafsiri yako ikiwa utasahau kujumuisha lebo kutoka kwenye chanzo, kutafsiri vipengele ambavyo havipaswi kutafsiriwa, kuongeza nafasi kadhaa mfululizo, kusahau uakifishaji wa mwisho, n.k.
+Crowdin ina kipengele kilichojengewa ndani ambacho huwaonya watafsiri wanapokaribia kufanya kosa. Crowdin itakuonya kiotomatiki kuhusu hili kabla ya kuhifadhi tafsiri yako ikiwa utasahau kujumuisha lebo kutoka kwenye chanzo, kutafsiri vipengele ambavyo havipaswi kutafsiriwa, kuongeza nafasi kadhaa mfululizo, kusahau uakifishaji wa mwisho, n.k.
 Ukiona onyo kama hili, tafadhali rudi nyuma na uangalie mara mbili tafsiri iliyopendekezwa.
 
 **Usipuuze kamwe maonyo haya, kwani kwa kawaida yanamaanisha kuwa kuna kitu kibaya, au kwamba tafsiri inakosa sehemu muhimu ya maandishi ya chanzo.**
@@ -113,7 +113,7 @@ Unapotafsiri, kubofya lebo hii kutakili kiotomatiki lebo kamili kwenye uwanja wa
 
 **Viungo**
 
-Unaweza kugundua viungo kamili vya kurasa kwenye ethereum.org au tovuti nyingine.
+Unaweza kugundua viungo kamili vya kurasa kwenye ethereum.org au tovuti zingine.
 
 Hivi vinapaswa kufanana na chanzo na visibadilishwe au kutafsiriwa. Ikiwa utatafsiri kiungo au kukibadilisha kwa njia yoyote, hata kuondoa tu sehemu yake, kama vile mkwaju (/), hii itasababisha viungo vilivyovunjika na visivyoweza kutumika.
 
@@ -145,19 +145,19 @@ Iliyogatuliwa - _Maandishi yanayoweza kutafsiriwa_
 
 ![Example of 'strong' tags.png](./example-of-strong-tags.png)
 
-Vijisehemu vya msimbo vinapaswa kushughulikiwa kwa njia tofauti kidogo na lebo nyingine, kwa kuwa vina msimbo ambao haupaswi kutafsiriwa.
+Vijisehemu vya msimbo vinapaswa kushughulikiwa kwa njia tofauti kidogo na lebo zingine, kwa kuwa vina msimbo ambao haupaswi kutafsiriwa.
 
-Mfano: `<code>`nonsi`</code>`
+Mfano: `<code>`nonce`</code>`
 
 `<code>` - _Lebo ya kufungua, ambayo ina kijisehemu cha msimbo_
 
-nonsi - _Maandishi yasiyoweza kutafsiriwa_
+nonce - _Maandishi yasiyoweza kutafsiriwa_
 
 `</code>` - _Lebo ya kufunga_
 
 ![Example of code snippets.png](./example-of-code-snippets.png)
 
-Maandishi ya chanzo pia yana lebo zilizofupishwa, ambazo zina nambari pekee, ikimaanisha kuwa kazi yake haionekani mara moja. Unaweza kuelekeza kipanya juu ya lebo hizi ili kuona hasa kazi gani zinafanya.
+Maandishi ya chanzo pia yana lebo zilizofupishwa, ambazo zina nambari pekee, ikimaanisha kuwa kazi yake haionekani mara moja. Unaweza kuelekeza kipanya juu ya lebo hizi ili kuona hasa kazi zinazofanya.
 
 Katika mfano hapa chini, unaweza kuona kwamba kuelekeza kipanya juu ya lebo ya `<0>` kunaonyesha kuwa inawakilisha `<code>` na ina kijisehemu cha msimbo, kwa hivyo maudhui ndani ya lebo hizi hayapaswi kutafsiriwa.
 
@@ -167,7 +167,7 @@ Katika mfano hapa chini, unaweza kuona kwamba kuelekeza kipanya juu ya lebo ya `
 
 Kuna vifupisho vingi vinavyotumika kwenye tovuti, k.m., dapps, NFT, DAO, DeFi, n.k. Vifupisho hivi hutumiwa sana kwa Kiingereza na wageni wengi wa tovuti wanavifahamu.
 
-Kwa kuwa kwa kawaida havina tafsiri zilizothibitishwa katika lugha nyingine, njia bora ya kushughulikia haya na maneno yanayofanana ni kutoa tafsiri fafanuzi ya umbo kamili, na kuongeza kifupisho cha Kiingereza kwenye mabano.
+Kwa kuwa kwa kawaida havina tafsiri zilizothibitishwa katika lugha zingine, njia bora ya kushughulikia maneno haya na yanayofanana ni kutoa tafsiri fafanuzi ya umbo kamili, na kuongeza kifupisho cha Kiingereza kwenye mabano.
 
 Usitafsiri vifupisho hivi, kwa kuwa watu wengi hawatavifahamu, na matoleo yaliyofasiriwa hayataleta maana sana kwa wageni wengi.
 
@@ -177,13 +177,13 @@ Mfano wa jinsi ya kutafsiri dapps:
 
 ## Maneno yasiyo na tafsiri zilizothibitishwa {#terms-without-established-translations}
 
-Baadhi ya maneno yanaweza yasiwe na tafsiri zilizothibitishwa katika lugha nyingine, na yanajulikana sana kwa neno asili la Kiingereza. Maneno kama haya mara nyingi yanajumuisha dhana mpya zaidi, kama vile Uthibitisho wa Kazi (PoW), Uthibitisho wa Dau (PoS), Mnyororo wa Beacon, uwekaji dhamana, n.k.
+Baadhi ya maneno yanaweza yasiwe na tafsiri zilizothibitishwa katika lugha zingine, na yanajulikana sana kwa neno asili la Kiingereza. Maneno kama haya mara nyingi yanajumuisha dhana mpya zaidi, kama vile Uthibitisho wa Kazi (PoW), Uthibitisho wa Dau (PoS), Mnyororo wa Beacon, uwekaji dhamana, n.k.
 
-Ingawa kutafsiri maneno haya kunaweza kusikika si kwa asili, kwa kuwa toleo la Kiingereza hutumiwa sana katika lugha nyingine pia, inashauriwa sana yatafsiriwe.
+Ingawa kutafsiri maneno haya kunaweza kusikika si kwa asili, kwa kuwa toleo la Kiingereza hutumiwa sana katika lugha zingine pia, inashauriwa sana yatafsiriwe.
 
 Unapoyatafsiri, jisikie huru kuwa mbunifu, tumia tafsiri fafanuzi, au yatafsiri tu neno kwa neno.
 
-**Sababu kwa nini maneno mengi yanapaswa kutafsiriwa, badala ya kuacha baadhi kwa Kiingereza, ni ukweli kwamba istilahi hii mpya itaenea zaidi katika siku zijazo, kadiri watu wengi wanavyoanza kutumia Ethereum na teknolojia zinazohusiana. Ikiwa tunataka kuingiza watu wengi zaidi kutoka kote ulimwenguni kwenye nafasi hii, tunahitaji kutoa istilahi inayoeleweka katika lugha nyingi iwezekanavyo, hata kama tunahitaji kuiunda sisi wenyewe.**
+**Sababu kwa nini maneno mengi yanapaswa kutafsiriwa, badala ya kuacha baadhi kwa Kiingereza, ni ukweli kwamba istilahi hii mpya itaenea zaidi katika siku zijazo, kadiri watu wengi wanavyoanza kutumia Ethereum na teknolojia zinazohusiana. Ikiwa tunataka kuingiza watu wengi zaidi kutoka kote ulimwenguni kwenye nafasi hii, tunahitaji kutoa istilahi inayoeleweka katika lugha nyingi iwezekanavyo, hata kama tunahitaji kuiunda wenyewe.**
 
 ## Vitufe na CTA {#buttons-and-ctas}
 
@@ -199,7 +199,7 @@ Tafsiri za vitufe zinapaswa kuwa fupi iwezekanavyo, ili kuzuia kutolingana kwa u
 
 Wageni wa Ethereum.org wanatoka kote ulimwenguni na kutoka asili tofauti. Lugha kwenye tovuti inapaswa kwa hivyo kuwa ya upande wowote, inayokaribisha kila mtu na isiyotenga.
 
-Kipengele muhimu cha hili ni kutoegemea jinsia yoyote. Hili linaweza kufikiwa kwa urahisi kwa kutumia mtindo rasmi wa kuhutubia, na kuepuka maneno yoyote yanayozingatia jinsia katika tafsiri.
+Kipengele muhimu cha hili ni kutoegemea jinsia yoyote. Hili linaweza kufikiwa kwa urahisi kwa kutumia namna rasmi ya kuhutubia, na kuepuka maneno yoyote yanayozingatia jinsia katika tafsiri.
 
 Aina nyingine ya ujumuishaji ni kujaribu kutafsiri kwa hadhira ya kimataifa, si mahususi kwa nchi, rangi au eneo lolote.
 
@@ -218,23 +218,23 @@ Baadhi ya mifano ya kile cha kuzingatia hasa:
 **Uwekaji wa herufi kubwa**
 
 - Kuna tofauti kubwa katika uwekaji wa herufi kubwa katika lugha tofauti.
-- Katika Kiingereza, ni kawaida kuweka herufi kubwa kwa maneno yote katika majina na vyeo, miezi na siku, majina ya lugha, sikukuu, n.k. Katika lugha nyingine nyingi, hii si sahihi kisarufi, kwani zina sheria tofauti za uwekaji wa herufi kubwa.
+- Katika Kiingereza, ni kawaida kuweka herufi kubwa kwa maneno yote katika vichwa na majina, miezi na siku, majina ya lugha, sikukuu, n.k. Katika lugha nyingine nyingi, hii si sahihi kisarufi, kwani zina sheria tofauti za uwekaji wa herufi kubwa.
 - Baadhi ya lugha pia zina sheria kuhusu kuweka herufi kubwa kwa viwakilishi vya nafsi, nomino, na vivumishi fulani, ambavyo haviwekwi herufi kubwa katika Kiingereza.
 
 **Nafasi**
 
 - Sheria za tahajia hufafanua matumizi ya nafasi kwa kila lugha. Kwa sababu nafasi hutumiwa kila mahali, sheria hizi ni baadhi ya zile tofauti zaidi, na nafasi ni baadhi ya vipengele vinavyotafsiriwa vibaya zaidi.
-- Baadhi ya tofauti za kawaida katika nafasi kati ya Kiingereza na lugha nyingine:
+- Baadhi ya tofauti za kawaida katika nafasi kati ya Kiingereza na lugha zingine:
   - Nafasi kabla ya vipimo na sarafu (k.m., USD, EUR, kB, MB)
-  - Nafasi kabla ya alama za digrii (k.m., °C, ℉)
+  - Nafasi kabla ya alama za nyuzi (k.m., °C, ℉)
   - Nafasi kabla ya baadhi ya alama za uakifishaji, hasa alama ya dukuduku (…)
   - Nafasi kabla na baada ya mikwaju (/)
 
 **Orodha**
 
 - Kila lugha ina seti tofauti na changamano ya sheria za kuandika orodha. Hizi zinaweza kuwa tofauti sana na Kiingereza.
-- Katika baadhi ya lugha, neno la kwanza la kila mstari mpya linahitaji kuwekwa herufi kubwa, wakati katika nyingine, mistari mipya inapaswa kuanza na herufi ndogo. Lugha nyingi pia zina sheria tofauti kuhusu uwekaji wa herufi kubwa katika orodha, kulingana na urefu wa kila mstari.
-- Hali kadhalika inatumika kwa uakifishaji wa vipengee vya mstari. Uakifishaji wa mwisho katika orodha unaweza kuwa nukta (**.**), mkato (**,**), au nuktapeta (**;**), kulingana na lugha.
+- Katika baadhi ya lugha, neno la kwanza la kila mstari mpya linahitaji kuwekwa herufi kubwa, wakati katika zingine, mistari mipya inapaswa kuanza na herufi ndogo. Lugha nyingi pia zina sheria tofauti kuhusu uwekaji wa herufi kubwa katika orodha, kulingana na urefu wa kila mstari.
+- Hali kadhalika inatumika kwa uakifishaji wa vipengee vya mstari. Uakifishaji wa mwisho katika orodha unaweza kuwa nukta (**.**), mkato (**,**), au nuktapindu (**;**), kulingana na lugha.
 
 **Alama za nukuu**
 
@@ -256,7 +256,7 @@ Baadhi ya mifano ya kile cha kuzingatia hasa:
 
 **Nambari**
 
-- Tofauti kuu katika kuandika nambari katika lugha tofauti ni kitenganishi kinachotumika kwa desimali na maelfu. Kwa maelfu, hii inaweza kuwa nukta, mkato au nafasi. Vile vile, baadhi ya lugha hutumia nukta ya desimali, wakati nyingine hutumia mkato wa desimali.
+- Tofauti kuu katika kuandika nambari katika lugha tofauti ni kitenganishi kinachotumika kwa desimali na maelfu. Kwa maelfu, hii inaweza kuwa nukta, mkato au nafasi. Vile vile, baadhi ya lugha hutumia nukta ya desimali, wakati zingine hutumia mkato wa desimali.
   - Baadhi ya mifano ya nambari kubwa:
     - Kiingereza – **1,000.50**
     - Kihispania – **1.000,50**
@@ -287,7 +287,7 @@ Baadhi ya mifano ya kile cha kuzingatia hasa:
 **Vipimo**
 
 - Kama sheria ya jumla, tafadhali weka vipimo kulingana na chanzo. Ikiwa nchi yako inatumia mfumo tofauti, unaweza kujumuisha ubadilishaji kwenye mabano.
-- Kando na ujanibishaji wa vipimo, ni muhimu pia kutambua tofauti katika jinsi lugha zinavyoshughulikia vipimo hivi. Tofauti kuu ni nafasi kati ya nambari na kipimo, ambayo inaweza kuwa tofauti, kulingana na lugha. Mifano ya hii ni pamoja na 100kB dhidi ya 100 kB au 50ºF dhidi ya 50 ºF.
+- Kando na ujanibishaji wa vipimo, ni muhimu pia kutambua tofauti katika jinsi lugha zinavyoshughulikia vipimo hivi. Tofauti kuu ni nafasi kati ya nambari na kipimo, ambayo inaweza kuwa tofauti, kulingana na lugha. Mifano ya hili ni pamoja na 100kB dhidi ya 100 kB au 50ºF dhidi ya 50 ºF.
 
 ## Hitimisho {#conclusion}
 
@@ -295,4 +295,4 @@ Kutafsiri ethereum.org ni fursa nzuri ya kujifunza kuhusu vipengele tofauti vya 
 
 Unapotafsiri, jaribu kutofanya haraka. Chukua muda wako na ufurahie!
 
-Asante kwa kuhusika na Programu ya Utafsiri na kutusaidia kufanya tovuti ipatikane kwa hadhira pana zaidi. Jumuiya ya Ethereum ni ya kimataifa, na tunafurahi kuwa wewe ni sehemu yake!
+Asante kwa kuhusika na Programu ya Utafsiri na kutusaidia kufanya tovuti ipatikane kwa hadhira pana. Jamii ya Ethereum ni ya kimataifa, na tunafurahi kuwa wewe ni sehemu yake!

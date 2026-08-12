@@ -239,3 +239,7 @@ lang: ar
 - [لماذا تعتبر إثباتات المعرفة الصفرية (ZKPs) مغيرًا لقواعد اللعبة بالنسبة للهوية ذاتية السيادة](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _فرانكلين أوهايجبولام_
 - [شرح <span dir="ltr">EIP-7503</span>: تمكين التحويلات الخاصة على إيثيريوم باستخدام إثباتات المعرفة الصفرية](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _إيمانويل أوسيكا_
 - [لعبة بطاقات ZK: لعبة لتعلم أساسيات ZK وحالات الاستخدام الواقعية](https://github.com/ZK-card/zk-cards) - _<span dir="ltr">ZK-Cards</span>_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

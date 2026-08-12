@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md",
-  "generatedAt": "2026-06-30T00:06:01.106Z",
-  "rootHash": "fc25ad5e5600",
+  "generatedAt": "2026-07-22T23:43:38.811Z",
+  "rootHash": "4be620c9e83d",
   "tree": {
     "contentHash": "6a2fff7a6151",
-    "anchorHash": "1de59e6fd9c4",
+    "anchorHash": "99ca21711d3d",
     "children": {
       "frontmatter:title": {
         "contentHash": "7ee01cb337b8",
@@ -94,7 +94,7 @@
       },
       "create-an-alchemy-app": {
         "contentHash": "6abe0e7b29f4",
-        "anchorHash": "36c30147e280",
+        "anchorHash": "fab0474e7666",
         "labelHash": "7fa6672195c7",
         "children": {
           "_label": {
@@ -139,7 +139,7 @@
           },
           "image:4": {
             "contentHash": "2f1dbb945de0",
-            "anchorHash": "1247eb2d4245"
+            "anchorHash": "9857280048ba"
           }
         },
         "childrenOrder": [
@@ -538,5 +538,5 @@
       "write-your-first-web3-script"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

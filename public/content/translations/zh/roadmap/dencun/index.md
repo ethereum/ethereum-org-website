@@ -3,6 +3,7 @@ title: 坎昆-Deneb (Dencun)
 metaTitle: 坎昆-Deneb (Dencun) 常见问题解答
 description: 关于坎昆-Deneb (Dencun) 网络升级的常见问题解答
 lang: zh
+template: upgrade
 ---
 
 坎昆-Deneb (Dencun) 是对以太坊网络的一次升级，它激活了 **Proto-Danksharding (EIP-4844)**，引入了临时数据**斑点**，从而为 [二层网络 (l2)](/glossary/#layer-2) Rollup 提供更便宜的存储。

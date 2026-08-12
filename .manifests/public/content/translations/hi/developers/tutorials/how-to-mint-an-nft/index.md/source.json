@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/tutorials/how-to-mint-an-nft/index.md",
-  "generatedAt": "2026-06-30T00:43:47.282Z",
-  "rootHash": "a0225c0b5c35",
+  "generatedAt": "2026-07-22T23:53:09.575Z",
+  "rootHash": "710bd0229a82",
   "tree": {
     "contentHash": "82c11be10071",
-    "anchorHash": "2d27454596e3",
+    "anchorHash": "b86e8f8ee1ec",
     "children": {
       "frontmatter:title": {
         "contentHash": "3e7f957f7b3c",
@@ -235,7 +235,7 @@
       },
       "config-meta": {
         "contentHash": "0b26c513bc79",
-        "anchorHash": "8bed25399fc7",
+        "anchorHash": "40988b9de18d",
         "labelHash": "4ded78d80a45",
         "children": {
           "_label": {
@@ -280,7 +280,7 @@
           },
           "image:4": {
             "contentHash": "898cb259fbd9",
-            "anchorHash": "fe210421d0bb"
+            "anchorHash": "295d5fbf9bd5"
           },
           "prose:11": {
             "contentHash": "b84a59093f4a",
@@ -304,7 +304,7 @@
           },
           "image:0": {
             "contentHash": "b9e01ab98fa5",
-            "anchorHash": "78c832a66eb8"
+            "anchorHash": "b65d1e37872b"
           }
         },
         "childrenOrder": [
@@ -595,7 +595,7 @@
       },
       "call-mintnft-fn": {
         "contentHash": "b2656674d2b1",
-        "anchorHash": "c09d88eca3b6",
+        "anchorHash": "2144df19b27e",
         "labelHash": "2a741196a60f",
         "children": {
           "_label": {
@@ -753,5 +753,5 @@
       "call-mintnft-fn"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

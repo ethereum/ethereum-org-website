@@ -22,10 +22,9 @@ export type TutorialMetadataProps = {
   timeToRead: number
 }
 
+// Key within the "page-developers-tutorials" namespace
 export const getSkillTranslationId = (skill: Skill): TranslationKey =>
-  `page-developers-tutorials:page-tutorial-${
-    Skill[skill.toUpperCase() as keyof typeof Skill]
-  }`
+  `page-tutorial-${Skill[skill.toUpperCase() as keyof typeof Skill]}`
 
 const TutorialMetadata = ({
   frontmatter,

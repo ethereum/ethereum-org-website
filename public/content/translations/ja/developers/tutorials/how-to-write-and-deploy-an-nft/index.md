@@ -227,7 +227,7 @@ ERC-721のコンストラクタでは、「MyNFT」と「NFT」という2つの�
 
 - 以下の手順でHTTP Alchemy API URLを取得し、クリップボードにコピーします。
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.mp4#842x480)
 
 `.env`は次のようになります。
 

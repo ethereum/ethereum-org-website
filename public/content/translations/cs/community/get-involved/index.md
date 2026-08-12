@@ -59,10 +59,10 @@ Pokud nejste vývojář, může být těžké zjistit, kde v Ethereu začít. Zd
 
 - Existuje mnoho open-source komunitních hovorů a mít zapisovatele je obrovská pomoc. Pokud máte zájem, připojte se na [Discord Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) a představte se!
 
-### Překládejte obsah o Ethereu do svého rodného jazyka {#translate-ethereum}
+### Pomozte vylepšit přeložený obsah o Ethereu {#translate-ethereum}
 
-- ethereum.org udržuje překladatelský program, který překládá webové stránky a další zdroje do mnoha různých jazyků
-- Zjistěte, jak se zapojit [zde](/contributing/translation-program)
+- Překladatelský program ethereum.org se chýlí ke konci a již neprovádí onboarding nových překladatelů – informace o jeho stavu a historii najdete na [stránce programu](/contributing/translation-program/)
+- Stále můžete pomoci tím, že [nahlásíte chyby ve stávajících překladech](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 
 ### Provozujte uzel {#run-a-node}
 

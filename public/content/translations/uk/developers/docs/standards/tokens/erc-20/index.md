@@ -175,13 +175,13 @@ print("Addr Balance:", addr_balance)
 - [ОупенЗеппелін — Реалізація ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy — Посібник з токенів ERC-20 у Solidity](https://www.alchemy.com/overviews/erc20-solidity)
 
-## Інші стандарти взаємозамінних токенів {#fungible-token-standards}
+## Інші стандарти взаємозамінних токенів
 
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 — Токенізовані сховища](/developers/docs/standards/tokens/erc-4626)
-
+- [ERC-7540 — Асинхронні токенізовані сховища](/developers/docs/standards/tokens/erc-7540)
 ## Посібники: Створення з ERC-20 в Етеріумі {#tutorials}
 
 - [Огляд контракту ERC-20](/developers/tutorials/erc20-annotated-code/) _— Порядковий анотований огляд реалізації контракту ERC-20 від ОупенЗеппелін._

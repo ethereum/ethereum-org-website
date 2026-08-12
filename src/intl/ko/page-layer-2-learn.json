@@ -37,7 +37,7 @@
   "page-layer-2-learn-rollupCards-optimistic-description": "옵티미스틱 롤업은 트랜잭션이 유효하다고 가정하지만, 유효하지 않은 트랜잭션이 의심될 경우 이의를 제기할 수 있는 결함 증명을 사용합니다. 유효하지 않은 트랜잭션이 의심되면 결함 증명을 실행하여 실제로 그런 일이 발생했는지 확인합니다.",
   "page-layer-2-learn-rollupCards-optimistic-childSentence": "옵티미스틱 롤업에 대해 더 알아보기",
   "page-layer-2-learn-rollupCards-zk-title": "영지식 롤업",
-  "page-layer-2-learn-rollupCards-zk-description": "영지식 롤업은 트랜잭션 연산이 오프체인에서 계산된 후, 해당 데이터가 유효성 증명과 함께 이더리움 메인넷에 제공되는 유효성 증명 방식을 사용합니다.",
+  "page-layer-2-learn-rollupCards-zk-description": "영지식 롤업은 유효성 증명을 사용합니다. 트랜잭션 계산은 오프체인에서 수행되며, 이후 이 데이터는 유효성에 대한 증명과 함께 이더리움 메인넷에 제공됩니다.",
   "page-layer-2-learn-rollupCards-zk-childSentence": "zk-롤업에 대해 더 알아보기",
   "page-layer-2-learn-dyor-title": "직접 조사하기: 레이어 2의 위험성",
   "page-layer-2-learn-dyor-1": "레이어 2 체인은 이더리움으로부터 보안을 상속받기 때문에 이상적으로는 l1 이더리움만큼 안전합니다. 하지만 많은 <strong>프로젝트가 아직 초기 단계이며 다소 실험적</strong>입니다. 수년간의 연구 개발 끝에 이더리움을 확장할 많은 l2 기술이 2021년에 출시되었습니다. 이는 이러한 l2가 안전하지 않다는 의미가 아니라, 아직 어떤 레이어 2도 이더리움 메인넷만큼 실전 테스트를 거치지 않았다는 뜻입니다. 항상 직접 조사(DYOR)를 수행하고 관련된 위험을 감수할 수 있는지 결정하세요.",

@@ -79,3 +79,7 @@ Ketika semua aplikasi dibangun di Ethereum, semuanya kompatibel. Sebuah token un
 <ExpandableCard title="Apa dompet kripto terbaik?" visible>
   <p>Dompet kripto memungkinkan Anda menyimpan token dan mengelola akun Ethereum Anda. Ada banyak dompet hebat, masing-masing melayani tujuan yang berbeda. Untuk mengetahui dompet mana yang terbaik untuk Anda, kunjungi [daftar dompet](/wallets/find-wallet) kami.</p>
 </ExpandableCard>
+
+<Divider />
+
+<QuizWidget quizKey="what-are-apps" />

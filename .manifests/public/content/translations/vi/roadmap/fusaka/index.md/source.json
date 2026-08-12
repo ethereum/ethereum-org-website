@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/fusaka/index.md",
-  "generatedAt": "2026-06-08T10:18:17.432Z",
-  "rootHash": "67f558495c4b",
+  "generatedAt": "2026-07-23T00:16:36.353Z",
+  "rootHash": "1414b211455f",
   "tree": {
-    "contentHash": "a8319ae7868f",
-    "anchorHash": "bc4d4c823d6a",
+    "contentHash": "b2544aa1e28d",
+    "anchorHash": "e24f65417f81",
     "children": {
       "frontmatter:title": {
         "contentHash": "364ef645943a",
@@ -22,6 +22,10 @@
       "frontmatter:lang": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "7fef9479c8bc"
       },
       "frontmatter:authors": {
         "contentHash": "e3b0c44298fc",
@@ -47,7 +51,7 @@
         "contentHash": "269295e11d33",
         "anchorHash": "e3b0c44298fc"
       },
-      "component:10": {
+      "component:11": {
         "contentHash": "1330129f33a0",
         "anchorHash": "f3451d4448cb",
         "children": {
@@ -100,7 +104,7 @@
           "component:0"
         ]
       },
-      "component:11": {
+      "component:12": {
         "contentHash": "4b9f7d802648",
         "anchorHash": "5774dffda81d",
         "children": {
@@ -1383,18 +1387,19 @@
       "frontmatter:metaTitle",
       "frontmatter:description",
       "frontmatter:lang",
+      "frontmatter:template",
       "frontmatter:authors",
       "prose:2",
       "link:0",
       "prose:3",
       "link:1",
       "prose:4",
-      "component:10",
       "component:11",
+      "component:12",
       "improvements-in-fusaka",
       "faq",
       "further-reading"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

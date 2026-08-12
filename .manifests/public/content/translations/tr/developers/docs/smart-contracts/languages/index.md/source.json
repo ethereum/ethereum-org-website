@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/docs/smart-contracts/languages/index.md",
-  "generatedAt": "2026-06-30T00:01:57.534Z",
-  "rootHash": "b5c90f0b6213",
+  "generatedAt": "2026-07-22T23:26:10.824Z",
+  "rootHash": "3540927d09e3",
   "tree": {
-    "contentHash": "21aff4df4579",
-    "anchorHash": "a86b9a6393e7",
+    "contentHash": "cbfb94df8a8e",
+    "anchorHash": "e32755a13b94",
     "children": {
       "frontmatter:title": {
         "contentHash": "db9fcb06dc66",
@@ -299,23 +299,31 @@
         ]
       },
       "vyper": {
-        "contentHash": "e294c69ff450",
-        "anchorHash": "d539b8ef8a1c",
+        "contentHash": "b5a682230be4",
+        "anchorHash": "9d3c3e2350ea",
         "labelHash": "f33ac7f36711",
         "children": {
           "_label": {
             "contentHash": "f33ac7f36711",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:1": {
-            "contentHash": "8f3ac7d72836",
+          "prose:2": {
+            "contentHash": "1702d5c9d546",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
+            "contentHash": "18e0057245bc",
+            "anchorHash": "f2baa5e33ce4"
+          },
+          "prose:3": {
+            "contentHash": "bf89ce96e88d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
             "contentHash": "c1257cb1d268",
             "anchorHash": "aebe07426837"
           },
-          "prose:2": {
+          "prose:4": {
             "contentHash": "cdb4ee2aea69",
             "anchorHash": "e3b0c44298fc"
           },
@@ -680,9 +688,11 @@
         },
         "childrenOrder": [
           "_label",
-          "prose:1",
-          "link:0",
           "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4",
           "important-links-1",
           "example"
         ]
@@ -1103,5 +1113,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

@@ -156,6 +156,7 @@
   "sim-cw-connect-disclaimer": "Połączenie ze stroną nie spowoduje udostępnienia właścicielom witryny żadnych danych osobowych ani poufnych informacji.",
   "sim-cw-your-collection": "Twoja kolekcja ({count})",
   "sim-cw-nft-title": "Fajne dzieło",
+  "sim-cw-nft-alt": "Obraz NFT",
   "sim-cw-nft-actions-tooltip": "Oto kilka rzeczy, które możesz zrobić jako właściciel swoich NFT",
   "sim-cw-set-price": "Ustal cenę",
   "sim-cw-auction-item": "Wystaw na aukcję",

@@ -156,6 +156,7 @@
   "sim-cw-connect-disclaimer": "వెబ్‌సైట్‌కి కనెక్ట్ చేయడం వలన సైట్ యజమానులతో ఎలాంటి వ్యక్తిగత లేదా సురక్షిత సమాచారం భాగస్వామ్యం చేయబడదు.",
   "sim-cw-your-collection": "మీ సేకరణ ({count})",
   "sim-cw-nft-title": "కూల్ ఆర్ట్",
+  "sim-cw-nft-alt": "NFT చిత్రం",
   "sim-cw-nft-actions-tooltip": "మీ NFTల యజమానిగా మీరు చేయగలిగే కొన్ని పనులు ఇవి",
   "sim-cw-set-price": "ధరను నిర్ణయించండి",
   "sim-cw-auction-item": "వేలం వస్తువు",

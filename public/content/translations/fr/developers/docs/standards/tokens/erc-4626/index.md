@@ -4,9 +4,9 @@ description: "Une norme pour les coffres-forts générateurs de rendement."
 lang: fr
 ---
 
-## Introduction {#introduction}
+## Introduction
 
-L'ERC-4626 est une norme permettant d'optimiser et d'unifier les paramètres techniques des coffres-forts générateurs de rendement. Il fournit une API standard pour les coffres-forts tokenisés générateurs de rendement qui représentent des parts d'un seul jeton ERC-20 sous-jacent. L'ERC-4626 décrit également une extension facultative pour les coffres-forts tokenisés utilisant l'ERC-20, offrant des fonctionnalités de base pour le dépôt, le retrait de jetons et la lecture des soldes.
+L'ERC-4626 est une norme permettant d'optimiser et d'unifier les paramètres techniques des coffres-forts générateurs de rendement. Il fournit une API standard pour les coffres-forts générateurs de rendement tokenisés qui représentent des parts d'un seul jeton ERC-20 sous-jacent. L'ERC-4626 décrit également une extension facultative pour les coffres-forts tokenisés utilisant l'ERC-20, offrant des fonctionnalités de base pour le dépôt, le retrait de jetons et la lecture des soldes.
 
 **Le rôle de l'ERC-4626 dans les coffres-forts générateurs de rendement**
 
@@ -18,11 +18,11 @@ Le jeton ERC-4626 est décrit en détail dans l'[EIP-4626](https://eips.ethereum
 
 **Extension de coffre-fort asynchrone (ERC-7540)**
 
-L'ERC-4626 est optimisé pour les dépôts et les rachats atomiques jusqu'à une certaine limite. Si la limite est atteinte, aucun nouveau dépôt ou rachat ne peut être soumis. Cette limitation ne fonctionne pas bien pour tout système de contrat intelligent avec des actions asynchrones ou des délais comme condition préalable à l'interface avec le coffre-fort (par exemple, les protocoles d'actifs du monde réel, les protocoles de prêt sous-collatéralisés, les protocoles de prêt inter-chaîne, les jetons de staking liquide (LST) ou les modules de sécurité d'assurance).
+L'ERC-4626 est optimisé pour les dépôts et rachats atomiques jusqu'à une certaine limite. Si la limite est atteinte, aucun nouveau dépôt ou rachat ne peut être soumis. Cette limitation ne fonctionne pas bien pour tout système de contrat intelligent avec des actions asynchrones ou des délais comme condition préalable à l'interface avec le coffre-fort (par exemple, les protocoles d'actifs du monde réel, les protocoles de prêt sous-collatéralisés, les protocoles de prêt inter-chaîne, les jetons de staking liquide (LST) ou les modules de sécurité d'assurance).
 
 L'ERC-7540 étend l'utilité des coffres-forts ERC-4626 pour les cas d'utilisation asynchrones. L'interface existante du coffre-fort (`deposit`/`withdraw`/`mint`/`redeem`) est pleinement utilisée pour réclamer des requêtes asynchrones.
 
-L'extension ERC-7540 est décrite en détail dans l'[ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
+En savoir plus sur les [coffres-forts tokenisés asynchrones ERC-7540](/developers/docs/standards/tokens/erc-7540/).
 
 **Extension de coffre-fort multi-actifs (ERC-7575)**
 
@@ -31,7 +31,6 @@ Un cas d'utilisation manquant qui n'est pas pris en charge par l'ERC-4626 concer
 L'ERC-7575 ajoute la prise en charge des coffres-forts avec plusieurs actifs en externalisant l'implémentation du jeton ERC-20 de l'implémentation de l'ERC-4626.
 
 L'extension ERC-7575 est décrite en détail dans l'[ERC-7575](https://eips.ethereum.org/EIPS/eip-7575).
-
 ## Prérequis {#prerequisites}
 
 Pour mieux comprendre cette page, nous vous recommandons de lire d'abord les informations sur les [normes de jetons](/developers/docs/standards/tokens/) et l'[ERC-20](/developers/docs/standards/tokens/erc-20/).

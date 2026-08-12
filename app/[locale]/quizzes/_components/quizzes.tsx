@@ -8,7 +8,7 @@ import ContentFeedback from "@/components/ContentFeedback"
 import { HubHero } from "@/components/Hero"
 import Github from "@/components/icons/github.svg"
 import MainArticle from "@/components/MainArticle"
-import QuizWidget from "@/components/Quiz/QuizWidget"
+import QuizWidget from "@/components/Quiz/QuizWidget/QuizWidgetClient"
 import QuizzesList from "@/components/Quiz/QuizzesList"
 import QuizzesModal from "@/components/Quiz/QuizzesModal"
 import QuizzesStats from "@/components/Quiz/QuizzesStats"
@@ -18,7 +18,11 @@ import { Flex, HStack, Stack } from "@/components/ui/flex"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "@/data/quizzes"
+import {
+  ethereumBasicsQuizzes,
+  howEthereumWorksQuizzes,
+  usingEthereumQuizzes,
+} from "@/data/quizzes"
 
 import { INITIAL_QUIZ } from "@/lib/constants"
 
@@ -85,6 +89,12 @@ const QuizzesPage = () => {
                   content={usingEthereumQuizzes}
                   headingId={t("using-ethereum")}
                   descriptionId={t("using-ethereum-description")}
+                  {...commonQuizListProps}
+                />
+                <QuizzesList
+                  content={howEthereumWorksQuizzes}
+                  headingId={t("how-ethereum-works")}
+                  descriptionId={t("how-ethereum-works-description")}
                   {...commonQuizListProps}
                 />
               </div>

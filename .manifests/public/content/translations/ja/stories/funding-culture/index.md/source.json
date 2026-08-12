@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/stories/funding-culture/index.md",
-  "generatedAt": "2026-06-30T00:58:35.496Z",
-  "rootHash": "643d4e12b501",
+  "generatedAt": "2026-07-23T00:26:19.171Z",
+  "rootHash": "360871f5580c",
   "tree": {
     "contentHash": "2be76f9b560f",
-    "anchorHash": "28168e609927",
+    "anchorHash": "35a9a2e02cfa",
     "children": {
       "frontmatter:title": {
         "contentHash": "66644dd2f720",
@@ -166,7 +166,7 @@
       },
       "building-a-studio-without-gatekeepers": {
         "contentHash": "3ded15ba540c",
-        "anchorHash": "93c8309f44e8",
+        "anchorHash": "34f712d16e5a",
         "labelHash": "1a256eb6bc08",
         "children": {
           "_label": {
@@ -203,7 +203,7 @@
           },
           "image:3": {
             "contentHash": "baf5e3076efc",
-            "anchorHash": "c66b37e15d2e"
+            "anchorHash": "63ff9e685c1f"
           },
           "prose:10": {
             "contentHash": "220d5a242d3e",
@@ -372,5 +372,5 @@
       "proving-the-system-works"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

@@ -370,7 +370,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         key={name}
                         href={href}
                         size="lg"
-                        hoverLift
                         className="row-span-3 grid grid-rows-subgrid gap-0"
                       >
                         <CardHeader className="my-auto">

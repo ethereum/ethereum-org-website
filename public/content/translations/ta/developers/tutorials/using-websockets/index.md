@@ -39,7 +39,7 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 தொடங்க, உங்கள் செயலிக்கான WebSocket URL-ஐப் பயன்படுத்தி ஒரு WebSocket-ஐத் திறக்கவும். [உங்கள் கட்டுப்பாட்டுப் பலகத்தில் (dashboard)](https://dashboard.alchemy.com/) செயலியின் பக்கத்தைத் திறந்து "View Key" என்பதைக் கிளிக் செய்வதன் மூலம் உங்கள் செயலியின் WebSocket URL-ஐக் கண்டறியலாம். WebSockets-க்கான உங்கள் செயலியின் URL, HTTP கோரிக்கைகளுக்கான அதன் URL-இலிருந்து வேறுபட்டது என்பதை நினைவில் கொள்ளவும், ஆனால் இரண்டையும் "View Key" என்பதைக் கிளிக் செய்வதன் மூலம் கண்டறியலாம்.
 
-![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.gif)
+![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.mp4#602x280)
 
 [Alchemy API குறிப்பில்](https://www.alchemy.com/docs/reference/api-overview) பட்டியலிடப்பட்டுள்ள எந்தவொரு API-களையும் WebSocket வழியாகப் பயன்படுத்தலாம். அவ்வாறு செய்ய, HTTP POST கோரிக்கையின் உடலாக (body) அனுப்பப்படும் அதே பேலோடைப் (payload) பயன்படுத்தவும், ஆனால் அதற்குப் பதிலாக அந்த பேலோடை WebSocket மூலம் அனுப்பவும்.
 

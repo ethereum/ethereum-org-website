@@ -3,6 +3,7 @@ title: "பெக்ட்ரா"
 metaTitle: "ப்ராக்-எலக்ட்ரா (பெக்ட்ரா)"
 description: "பெக்ட்ரா நெறிமுறை மேம்பாடு பற்றி அறிக"
 lang: ta
+template: upgrade
 authors: ["நிக்ஸோ", "மரியோ ஹாவெல்"]
 ---
 

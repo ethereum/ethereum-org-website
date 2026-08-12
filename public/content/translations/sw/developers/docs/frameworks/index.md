@@ -22,9 +22,9 @@ kama vile:
 
 Kabla ya kuzama kwenye mifumo, tunapendekeza usome kwanza utangulizi wetu wa [dapps](/developers/docs/dapps/) na [mrundikano wa Ethereum](/developers/docs/ethereum-stack/).
 
-## Mifumo inayopatikana {#available-frameworks}
+## Mifumo inayopatikana
 
-**Foundry** - **_Foundry ni zana ya haraka sana, inayobebeka na ya kawaida kwa uundaji wa programu za Ethereum_**
+**Foundry** - **_Foundry ni seti ya zana ya haraka sana, inayobebeka na ya kimoduli kwa uundaji wa programu za Ethereum_**
 
 - [Sakinisha Foundry](https://book.getfoundry.sh/)
 - [Kitabu cha Foundry](https://book.getfoundry.sh/)
@@ -36,7 +36,7 @@ Kabla ya kuzama kwenye mifumo, tunapendekeza usome kwanza utangulizi wetu wa [da
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-**Ape -** **_Zana ya uundaji wa mkataba mahiri kwa Wataalamu wa Python, Wanasayansi wa Data, na Wataalamu wa Usalama._**
+**Ape -** **_Zana ya uundaji wa mkataba mahiri kwa Wana-Python, Wanasayansi wa Data, na Wataalamu wa Usalama._**
 
 - [Nyaraka](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
@@ -53,21 +53,22 @@ Kabla ya kuzama kwenye mifumo, tunapendekeza usome kwanza utangulizi wetu wa [da
 - [Mifano](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_Unda programu zinazoendeshwa na Ethereum kwa amri moja. Inakuja na toleo pana la mifumo ya UI na violezo vya fedha zilizogatuliwa (DeFi) vya kuchagua._**
+**Create Eth App -** **_Unda programu zinazoendeshwa na Ethereum kwa amri moja. Inakuja na ofa pana ya mifumo ya UI na violezo vya fedha zilizogatuliwa (DeFi) vya kuchagua._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Violezo](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-Eth -** **_Ethers.js + Hardhat + Vipengele vya React na ndoano (hooks) za Web3: kila kitu unachohitaji ili kuanza kujenga programu tumizi zilizogatuliwa zinazoendeshwa na mikataba mahiri._**
+**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem na RainbowKit na chaguo lako la Hardhat au Foundry: upakiaji upya wa haraka wa mkataba, ndoano maalum za React, mkoba wa burner na bomba la ndani, na moduli za ugani kwa uundaji wa programu tumizi iliyogatuliwa (dapp) wa mrundikano kamili._**
 
+- [Tovuti](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Jukwaa la uundaji la Web3 ambalo huwawezesha wasanidi wa mnyororo wa vitalu kujenga, kujaribu, kutatua, kufuatilia, na kuendesha mikataba mahiri na kuboresha UX ya dapp._**
+**Tenderly -** **_Jukwaa la uundaji la Web3 linalowezesha waundaji wa mnyororo wa vitalu kujenga, kujaribu, kutatua, kufuatilia, na kuendesha mikataba mahiri na kuboresha UX ya dapp._**
 
 - [Tovuti](https://tenderly.co/)
 - [Nyaraka](https://docs.tenderly.co/)
 
-**The Graph -** **_The Graph kwa ajili ya kuuliza data ya mnyororo wa vitalu kwa ufanisi._**
+**The Graph -** **_The Graph kwa kuuliza data ya mnyororo wa vitalu kwa ufanisi._**
 
 - [Tovuti](https://thegraph.com/)
 - [Mafunzo](/developers/tutorials/the-graph-fixing-web3-data-querying/)
@@ -89,13 +90,13 @@ Kabla ya kuzama kwenye mifumo, tunapendekeza usome kwanza utangulizi wetu wa [da
 - [Nyaraka](https://portal.thirdweb.com/sdk/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Chainstack -** **_Jukwaa la Uundaji la Web3 (Ethereum na mengineyo)._**
+**Chainstack -** **_Jukwaa la Uundaji la Web3 (Ethereum na vinginevyo)._**
 
 - [chainstack.com](https://www.chainstack.com/)
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_Jukwaa la uundaji la Web3 la kiwango cha biashara, ambalo hukuruhusu kujenga programu za NFT kwenye minyororo yote mikuu ya EVM (na mingineyo)._**
+**Crossmint -** **_Jukwaa la uundaji la Web3 la kiwango cha biashara, ambalo linakuruhusu kujenga programu za NFT kwenye minyororo yote mikuu Minyororo ya EVM (na mingine)._**
 
 - [Tovuti](https://www.crossmint.com)
 - [Nyaraka](https://docs.crossmint.com)
@@ -107,18 +108,18 @@ Kabla ya kuzama kwenye mifumo, tunapendekeza usome kwanza utangulizi wetu wa [da
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **Brownie kwa sasa haitunzwi**
 
-**OpenZeppelin SDK -** **_Zana Kuu ya Mkataba Mahiri: Mkusanyiko wa zana za kukusaidia kuunda, kukusanya, kuboresha, kusambaza na kuingiliana na mikataba mahiri._**
+**OpenZeppelin SDK -** **_Seti Kuu ya Zana ya Mkataba Mahiri: Mkusanyiko wa zana za kukusaidia kuunda, kukusanya, kuboresha, kusambaza na kuingiliana na mikataba mahiri._**
 
 - [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Jukwaa la Jamii](https://forum.openzeppelin.com/c/support/17)
-- **Uundaji wa OpenZeppelin SDK umefikia kikomo**
+- **Uundaji wa OpenZeppelin SDK umekwisha**
 
-**Catapulta -** **_Zana ya usambazaji wa mikataba mahiri ya minyororo mingi, otomatisha uthibitishaji katika vivinjari vya kitalu, fuatilia mikataba mahiri iliyosambazwa na ushiriki ripoti za usambazaji, chomeka-na-cheza (plug-n-play) kwa miradi ya Foundry na Hardhat._**
+**Catapulta -** **_Zana ya usambazaji wa mikataba mahiri ya minyororo mingi, otomatisha uthibitishaji katika vigunduzi vya kitalu, fuatilia mikataba mahiri iliyosambazwa na ushiriki ripoti za usambazaji, chomeka-na-cheza kwa miradi ya Foundry na Hardhat._**
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (inayoendeshwa na Covalent) -** **_GoldRush inatoa mkusanyiko wa kina zaidi wa API ya data ya mnyororo wa vitalu kwa wasanidi, wachambuzi, na biashara. Iwe unajenga dashibodi ya fedha zilizogatuliwa (DeFi), mkoba, roboti ya biashara, ajenti wa akili bandia au jukwaa la kufuata sheria, API za data hutoa ufikiaji wa haraka, sahihi, na unaofaa kwa msanidi kwa data muhimu ya mnyororoni unayohitaji_**
+**GoldRush (inayoendeshwa na Covalent) -** **_GoldRush inatoa seti kamili zaidi ya API ya data ya mnyororo wa vitalu kwa waundaji, wachambuzi, na biashara. Iwe unajenga dashibodi ya DeFi, mkoba, boti ya biashara, ajenti wa akili bandia au jukwaa la kufuata, API za data hutoa ufikiaji wa haraka, sahihi, na rafiki kwa waundaji kwa data muhimu ya mnyororoni unayohitaji_**
 
 - [Tovuti](https://goldrush.dev/)
 - [Nyaraka](https://goldrush.dev/docs/chains/ethereum)
@@ -132,7 +133,7 @@ Kabla ya kuzama kwenye mifumo, tunapendekeza usome kwanza utangulizi wetu wa [da
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [Kiendelezi cha VS Code](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_Mfumo wa chanzo wazi, wa kawaida na usio na upendeleo ambao hurahisisha wasanidi wa programu tumizi iliyogatuliwa kujenga vitambulisho vilivyogatuliwa na vitambulisho vinavyoweza kuthibitishwa kwenye programu zao._**
+**Veramo -** **_Mfumo wa chanzo wazi, wa kimoduli na usio na upendeleo ambao hurahisisha waundaji wa programu tumizi iliyogatuliwa kujenga vitambulisho vilivyogatuliwa na vitambulisho vinavyoweza kuthibitishwa kwenye programu zao._**
 
 - [Ukurasa wa nyumbani](https://veramo.io/)
 - [Nyaraka](https://veramo.io/docs/basics/introduction)
@@ -140,6 +141,10 @@ Kabla ya kuzama kwenye mifumo, tunapendekeza usome kwanza utangulizi wetu wa [da
 - [Discord](https://discord.com/invite/FRRBdjemHV)
 - [Kifurushi cha NPM](https://www.npmjs.com/package/@veramo/core)
 
+**Moccasin -** **_Mfumo wa haraka, wa Pythonic wa uundaji na majaribio ya mkataba mahiri kwa Vyper, uliojengwa kwenye Titanoboa._**
+
+- [Nyaraka](https://cyfrin.github.io/moccasin/)
+- [GitHub](https://github.com/Cyfrin/moccasin)
 ## Usomaji zaidi {#further-reading}
 
 _Unajua rasilimali ya jamii iliyokusaidia? Hariri ukurasa huu na uiongeze!_
