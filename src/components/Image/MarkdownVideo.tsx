@@ -27,11 +27,11 @@ const parseDimensionsFragment = (src: string) => {
 
 /**
  * Short, silent, looping clip authored in markdown as `![](./x.mp4)` — the
- * modern GIF replacement. Plays only while on-screen; controls are always
- * available and it never autoplays under `prefers-reduced-motion`. A `#WxH`
- * src fragment sizes the box to the clip's own ratio; without one, a fixed
- * 16:9 / 9:16 (`-portrait`) box letterboxes the clip. Details: design-system
- * skill.
+ * modern GIF replacement. Plays only while on-screen and never autoplays under
+ * `prefers-reduced-motion`; controls are always exposed so the looping motion
+ * can be stopped (WCAG 2.2.2). A `#WxH` src fragment sizes the box to the
+ * clip's own ratio; without one, a fixed 16:9 / 9:16 (`-portrait`) box
+ * letterboxes the clip. Details: design-system skill.
  */
 const MarkdownVideo = ({
   src,
@@ -52,11 +52,15 @@ const MarkdownVideo = ({
   const isClient = useIsClient()
 
   const shouldPlay = isClient && inView && !prefersReducedMotion
+  // A pause the user asked for has to survive scrolling away and back, or the
+  // in-view effect below just restarts the clip they stopped (WCAG 2.2.2).
+  const userPaused = useRef(false)
 
   useEffect(() => {
     const video = ref.current
     if (!video) return
     if (shouldPlay) {
+      if (userPaused.current) return
       // play() rejects if interrupted (e.g. scrolled away mid-start); ignore.
       void video.play().catch(() => {})
     } else {
@@ -71,7 +75,7 @@ const MarkdownVideo = ({
         loop
         muted
         playsInline
-        preload="auto"
+        preload="metadata"
         poster={poster}
         controls
         controlsList="nodownload noremoteplayback"
@@ -79,6 +83,15 @@ const MarkdownVideo = ({
         disableRemotePlayback
         aria-label={alt || undefined}
         src={src}
+        // `pause` is dispatched asynchronously, so the effect's own out-of-view
+        // pause always lands on a render where `shouldPlay` is already false —
+        // a pause seen while it's still true came from the user.
+        onPause={() => {
+          if (shouldPlay) userPaused.current = true
+        }}
+        onPlay={() => {
+          userPaused.current = false
+        }}
         // Attributes size the element before metadata loads; explicit
         // aspect-ratio reserves the box (attr mapping is unreliable on video).
         width={dimensions?.width}
