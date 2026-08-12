@@ -2,10 +2,9 @@ import { DEFAULT_LOCALE } from "../constants"
 import type { Lang } from "../types"
 
 /**
- * Falls back to DEFAULT_LOCALE when `locale` is not a structurally valid
- * BCP 47 tag (e.g. a crawler-supplied path segment like "undefined" or
- * "wp_admin" reaching generateMetadata before the layout's locale guard
- * runs). Intl constructors throw a RangeError on such tags (#18013).
+ * Intl constructors throw a RangeError on structurally invalid BCP 47 tags
+ * ("undefined", "en_US", ""), so any locale that isn't route-validated falls
+ * back to DEFAULT_LOCALE here rather than 500ing the render (#18013).
  */
 export function safeLocale(locale: string): string {
   try {
