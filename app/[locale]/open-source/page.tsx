@@ -11,6 +11,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, ToCItem } from "@/lib/types"
 
+import AppCard from "@/components/AppCard"
 import PageHero from "@/components/Hero/PageHero"
 import { Strong } from "@/components/IntlStringElements"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -181,8 +182,11 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     },
   ]
 
-  // The nine apps shown in the design. Logos are still placeholders in Figma,
-  // so the cards ship without an icon slot until real assets exist.
+  // The nine apps shown in the design, rendered with the same `AppCard` the
+  // Figma cards were drawn from (64px logo + name + expandable description +
+  // category tag) -- see /privacy/ethereum/. These are mainstream FLOSS tools
+  // rather than Ethereum apps, so they aren't in the apps dataset and the list
+  // is local; `AppCard` falls back to a placeholder glyph if a logo is missing.
   const apps = [
     {
       id: "bitwarden",
@@ -247,7 +251,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       description: t("page-open-source-app-proton-drive-description"),
       category: t("page-open-source-app-proton-drive-category"),
     },
-  ]
+  ].map((app) => ({ ...app, logo: `/images/open-source/${app.id}.png` }))
 
   return (
     <>
@@ -437,16 +441,15 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
 
           <h3>{t("page-open-source-apps-title")}</h3>
           <Grid columns={3} size="narrow">
-            {apps.map(({ id, href, name, description, category }) => (
-              <Card key={id} href={href} size="md">
-                <CardContent>
-                  <CardTitle size="sm" asChild>
-                    <h4>{name}</h4>
-                  </CardTitle>
-                  <CardParagraph>{description}</CardParagraph>
-                  <CardParagraph size="sm">{category}</CardParagraph>
-                </CardContent>
-              </Card>
+            {apps.map(({ id, href, name, description, category, logo }) => (
+              <AppCard
+                key={id}
+                name={name}
+                description={description}
+                thumbnail={logo}
+                tags={[category]}
+                href={href}
+              />
             ))}
           </Grid>
         </Section>
