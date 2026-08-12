@@ -182,11 +182,28 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     },
   ]
 
-  // The nine apps shown in the design, rendered with the same `AppCard` the
+  // The nine apps shown in the design, rendered with `AppCard` -- the same
+  // component `CategoryAppsGrid` renders on /privacy/ethereum/, and the one the
   // Figma cards were drawn from (64px logo + name + expandable description +
-  // category tag) -- see /privacy/ethereum/. These are mainstream FLOSS tools
-  // rather than Ethereum apps, so they aren't in the apps dataset and the list
-  // is local; `AppCard` falls back to a placeholder glyph if a logo is missing.
+  // tag). These are mainstream FLOSS tools rather than Ethereum apps, so they
+  // aren't in the apps dataset and the list is local; `AppCard` falls back to a
+  // placeholder glyph if a logo is missing.
+  //
+  // TODO: once the apps data layer carries these, this block and the `<Grid>`
+  // below collapse to `<CategoryAppsGrid category="open-source" hideFilter />`.
+  // That needs, in order:
+  //   1. an "Open source" tab in the apps sheet (GOOGLE_SHEET_ID_DAPPS), rows
+  //      with `ready=true` and `discover`/`highlight` false -- the Discover and
+  //      Highlighted rows on /apps/ flatten every data key (lib/utils/apps.ts);
+  //   2. `fetchApps.ts` to allow that tab through (it currently drops any sheet
+  //      whose name isn't an AppCategoryEnum value);
+  //   3. `translationRegistry.ts` to skip that key when building /apps/<slug>/
+  //      paths, or every entry gets an Ethereum-app detail page and a sitemap
+  //      entry.
+  // Deliberately NOT adding an AppCategoryEnum value: `AppCategories` is an
+  // exhaustive Record, so a new member forces an `appsCategories` entry, which
+  // publishes a catalog tile and an /apps/categories/<slug>/ page for a list
+  // that is meant to live only on this page.
   const apps = [
     {
       id: "bitwarden",
