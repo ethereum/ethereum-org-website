@@ -1,6 +1,112 @@
 {
-  "averageScore": 69.98158463195207,
+  "averageScore": 69.9816,
   "questionsAnswered": 1098539,
   "retryRate": 24.682237043928346,
+  "byQuiz": {
+    "what-is-ethereum": {
+      "averageScore": 69.2001,
+      "questionsAnswered": 136134
+    },
+    "what-is-ether": {
+      "averageScore": 64.8807,
+      "questionsAnswered": 90403
+    },
+    "wallets": {
+      "averageScore": 74.3677,
+      "questionsAnswered": 69568
+    },
+    "what-are-apps": {
+      "averageScore": 63.1781,
+      "questionsAnswered": 73896
+    },
+    "web3": {
+      "averageScore": 79.9752,
+      "questionsAnswered": 65453
+    },
+    "energy-consumption": {
+      "averageScore": 78.6255,
+      "questionsAnswered": 52794
+    },
+    "security": {
+      "averageScore": 78.762,
+      "questionsAnswered": 49372
+    },
+    "privacy": {
+      "averageScore": 75.1037,
+      "questionsAnswered": 44853
+    },
+    "zero-knowledge-proofs": {
+      "averageScore": 59.1287,
+      "questionsAnswered": 51593
+    },
+    "nfts": {
+      "averageScore": 76.9216,
+      "questionsAnswered": 86052
+    },
+    "stablecoins": {
+      "averageScore": 72.1451,
+      "questionsAnswered": 23995
+    },
+    "defi": {
+      "averageScore": 67.5842,
+      "questionsAnswered": 25269
+    },
+    "daos": {
+      "averageScore": 66.0893,
+      "questionsAnswered": 26682
+    },
+    "payments": {
+      "averageScore": 71.1046,
+      "questionsAnswered": 26948
+    },
+    "accounts": {
+      "averageScore": 80.3002,
+      "questionsAnswered": 70452
+    },
+    "smart-contracts": {
+      "averageScore": 61.3047,
+      "questionsAnswered": 19850
+    },
+    "transactions": {
+      "averageScore": 70.7822,
+      "questionsAnswered": 21804
+    },
+    "blocks": {
+      "averageScore": 68.6035,
+      "questionsAnswered": 25674
+    },
+    "gas": {
+      "averageScore": 58.2663,
+      "questionsAnswered": 17527
+    },
+    "evm": {
+      "averageScore": 59.4045,
+      "questionsAnswered": 18892
+    },
+    "bridges": {
+      "averageScore": 73.8317,
+      "questionsAnswered": 21840
+    },
+    "layer-2": {
+      "averageScore": 46.1459,
+      "questionsAnswered": 14229
+    },
+    "run-a-node": {
+      "averageScore": 55.6299,
+      "questionsAnswered": 20078
+    },
+    "merge": {
+      "averageScore": 55.7248,
+      "questionsAnswered": 13027
+    },
+    "staking-solo": {
+      "averageScore": 58.1638,
+      "questionsAnswered": 21970
+    },
+    "scaling": {
+      "averageScore": 59.5088,
+      "questionsAnswered": 10184
+    }
+  },
   "timestamp": 1786057850729
 }
