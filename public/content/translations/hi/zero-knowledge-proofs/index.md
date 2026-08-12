@@ -1,7 +1,7 @@
 ---
-title: शून्य-ज्ञान प्रमाण क्या हैं?
-metaTitle: शून्य-ज्ञान प्रमाण
-description: शुरुआती लोगों के लिए शून्य-ज्ञान प्रमाण का एक गैर-तकनीकी परिचय।
+title: "शून्य-ज्ञान प्रमाण क्या हैं?"
+metaTitle: "शून्य-ज्ञान प्रमाण"
+description: "शुरुआती लोगों के लिए शून्य-ज्ञान प्रमाण का एक गैर-तकनीकी परिचय।"
 lang: hi
 ---
 
@@ -58,8 +58,10 @@ lang: hi
       <p>
         <a href="/decentralized-identity/#national-and-government-id">विकेंद्रीकृत पहचान केस स्टडी</a> में भूटान NDI के बारे में अधिक जानें।
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### मानवता का प्रमाण (Proof of Humanity) {#proof-of-humanity}
@@ -104,7 +106,7 @@ World ID एथेरियम फाउंडेशन में [PSE टीम
 
 ब्लॉकचेन वोटिंग योजनाओं में कई अनुकूल विशेषताएं हैं: वे पूरी तरह से ऑडिट करने योग्य हैं, हमलों के खिलाफ सुरक्षित हैं, सेंसरशिप के प्रतिरोधी हैं, और भौगोलिक बाधाओं से मुक्त हैं। लेकिन ऑनचेन वोटिंग योजनाएं भी **मिलीभगत (collusion)** की समस्या से अछूती नहीं हैं।
 
-"दूसरों को धोखा देकर, ठगकर और गुमराह करके खुली प्रतिस्पर्धा को सीमित करने के लिए समन्वय" के रूप में परिभाषित, मिलीभगत एक दुर्भावनापूर्ण अभिनेता का रूप ले सकती है जो रिश्वत देकर मतदान को प्रभावित करता है। उदाहरण के लिए, ऐलिस को मतपत्र पर `option B` के लिए वोट करने के लिए बॉब से रिश्वत मिल सकती है, भले ही वह `option A` पसंद करती हो।
+"दूसरों को धोखा देकर, ठगकर और गुमराह करके खुली प्रतिस्पर्धा को सीमित करने के लिए समन्वय" के रूप में परिभाषित, मिलीभगत एक दुर्भावनापूर्ण पक्ष का रूप ले सकती है जो रिश्वत देकर मतदान को प्रभावित करता है। उदाहरण के लिए, ऐलिस को मतपत्र पर `option B` के लिए वोट करने के लिए बॉब से रिश्वत मिल सकती है, भले ही वह `option A` पसंद करती हो।
 
 रिश्वतखोरी और मिलीभगत किसी भी प्रक्रिया की प्रभावशीलता को सीमित करती है जो सिग्नलिंग तंत्र के रूप में मतदान का उपयोग करती है (विशेषकर जहां उपयोगकर्ता यह साबित कर सकते हैं कि उन्होंने कैसे मतदान किया)। इसके महत्वपूर्ण परिणाम हो सकते हैं, खासकर जहां वोट दुर्लभ संसाधनों को आवंटित करने के लिए जिम्मेदार होते हैं।
 
@@ -235,5 +237,9 @@ MACI का उपयोग करने के लिए समन्वयक 
 - [ZK-STARKs — क्वांटम कंप्यूटर के खिलाफ भी सत्यापन योग्य विश्वास बनाएं](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [zk-SNARKs कैसे संभव हैं, इसका एक अनुमानित परिचय](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [शून्य-ज्ञान प्रमाण (ZKPs) स्व-संप्रभु पहचान के लिए गेम चेंजर क्यों हैं](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
-- [EIP-7503 समझाया गया: ZK प्रमाण के साथ इथेरियम पर निजी हस्तांतरण सक्षम करना](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Emmanuel Awosika_
+- [EIP-7503 समझाया गया: ZK प्रमाण के साथ इथेरियम पर निजी हस्तांतरण सक्षम करना](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [ZK कार्ड गेम: ZK बुनियादी बातों और वास्तविक जीवन के उपयोग के मामलों को सीखने के लिए गेम](https://github.com/ZK-card/zk-cards) - _ZK-Cards_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

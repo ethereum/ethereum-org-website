@@ -1,6 +1,6 @@
 ---
-title: 어떻게 참여할 수 있나요?
-description: 이더리움 커뮤니티에 참여하는 방법.
+title: "어떻게 참여할 수 있나요?"
+description: "이더리움 커뮤니티에 참여하는 방법."
 lang: ko
 ---
 
@@ -11,7 +11,7 @@ lang: ko
 ## 개발자 <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - [ethereum.org/developers/](/developers/)에서 이더리움에 대해 알아보고 사용해 보세요.
-- 가까운 곳에서 열리는 [ETHGlobal](https://ethglobal.co/) 해커톤에 참석해 보세요!
+- 가까운 곳에서 열리는 [ETHGlobal](https://ethglobal.com/) 해커톤에 참석해 보세요!
 - [자신의 전문 분야나 선호하는 프로그래밍 언어와 관련된 프로젝트](/developers/docs/programming-languages/)를 확인해 보세요.
 - [합의 및 실행 계층 회의(Consensus and Execution Layer calls)](https://www.youtube.com/@EthereumProtocol/streams)를 시청하거나 참여해 보세요.
 - [생태계 지원 프로그램(Ecosystem Support Program) 위시리스트](https://esp.ethereum.foundation/wishlist/) - 이더리움 생태계 지원 프로그램에서 적극적으로 보조금 지원을 받고자 하는 도구, 문서 및 인프라 분야입니다.
@@ -27,7 +27,7 @@ lang: ko
 - 이더리움 개선 제안(EIP)을 작성하거나 검토하세요.
   - EIP 작성하기
     1. [Ethereum Magicians](https://ethereum-magicians.org)에 아이디어를 제출하세요.
-    2. [EIP-1](https://eips.ethereum.org/EIPS/eip-1)을 읽어보세요. - **네, 그것이 문서의 _전부_입니다.**
+    2. [EIP-1](https://eips.ethereum.org/EIPS/eip-1)을 읽어보세요. - **네, 그것이 문서의 <em>전부</em>입니다.**
     3. EIP-1의 지침을 따르세요. 초안을 작성할 때 참고하세요.
   - [EIP 에디터](https://eips.ethereum.org/EIPS/eip-5069)가 되는 방법을 알아보세요.
     - 지금 바로 EIP를 동료 검토(peer-review)할 수 있습니다! [`e-review` 태그가 있는 열린 PR](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review)을 확인해 보세요. `discussion-to` 링크에서 기술적인 피드백을 제공하세요.
@@ -59,10 +59,10 @@ lang: ko
 
 - 수많은 오픈 소스 커뮤니티 회의가 열리며, 노트 작성자가 있으면 큰 도움이 됩니다. 관심이 있으시다면 [Ethereum Cat Herders 디스코드](https://discord.com/invite/Nz6rtfJ8Cu)에 참여하여 자신을 소개해 보세요!
 
-### 이더리움 콘텐츠를 모국어로 번역하기 {#translate-ethereum}
+### 이더리움 번역 콘텐츠 개선 돕기 {#translate-ethereum}
 
-- ethereum.org는 웹사이트 및 기타 리소스를 다양한 언어로 번역하는 번역 프로그램을 운영하고 있습니다.
-- 참여 방법은 [여기](/contributing/translation-program)에서 확인하세요.
+- ethereum.org 번역 프로그램은 마무리되고 있으며 더 이상 새로운 번역가를 온보딩하지 않습니다. 프로그램의 상태와 연혁에 대해서는 [프로그램 페이지](/contributing/translation-program/)를 확인하세요.
+- [기존 번역의 오류를 제보](https://github.com/ethereum/ethereum-org-website/issues/new/choose)하여 여전히 도움을 주실 수 있습니다.
 
 ### 노드 실행하기 {#run-a-node}
 
@@ -80,7 +80,7 @@ ETH를 스테이킹하면 보상을 받는 동시에 이더리움 네트워크�
 
 이더리움 생태계는 공공재와 영향력 있는 프로젝트에 자금을 지원하는 것을 사명으로 삼고 있습니다. 아주 적은 금액의 기부로도 지지를 표하고 중요한 작업이 실현되도록 도울 수 있습니다.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## 금융 전문가 및 회계사 <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

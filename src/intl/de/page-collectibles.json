@@ -59,9 +59,6 @@
   "page-collectibles-translations-250": "Badge für 250 Wörter",
   "page-collectibles-translations-50000": "Badge für 50.000 Wörter",
   "page-collectibles-translations-badge-desc": "In eine beliebige Sprache.",
-  "page-collectibles-translations-desc": "Die meisten Nutzer sprechen kein Englisch, daher ist es wichtig, bei der Übersetzung unserer Artikel in andere Sprachen zu helfen. Es sind keine Übersetzungserfahrungen erforderlich.",
-  "page-collectibles-translations-instructions-1": "Registriere dich auf <a href=\"https://crowdin.com/project/ethereum-org\">Crowdin</a>",
-  "page-collectibles-translations-instructions-2": "Sprache auswählen",
-  "page-collectibles-translations-instructions-3": "Mit dem Übersetzen beginnen",
+  "page-collectibles-translations-desc": "Diese Badges würdigen frühere Beiträge zum ethereum.org-Übersetzungsprogramm, das ausläuft und kein Onboarding für neue Übersetzer mehr durchführt.",
   "page-collectibles-translations-title": "Übersetzungen"
 }

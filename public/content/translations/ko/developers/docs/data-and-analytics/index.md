@@ -60,10 +60,22 @@ The Graph를 사용하면 개발자는 다음과 같은 이점을 얻을 수 있
 
 시작하려면 [문서](https://docs.codex.io)를 방문하거나 [탐색기](https://docs.codex.io/explore)를 사용해 보거나 [대시보드](https://dashboard.codex.io/signup)에서 가입하세요.
 
+
+## Mobula
+
+[Mobula](https://mobula.io/)는 90개 이상의 블록체인에 걸쳐 실시간 및 과거 시장 데이터, 토큰 메타데이터, 지갑 포트폴리오 및 온체인 분석을 제공하는 고성능 암호화폐 데이터 API입니다. 개발자는 자체 인프라를 실행하지 않고도 토큰 가격, 시가총액, 거래량, 유동성 데이터 및 다중 체인 지갑 잔액에 대한 REST 및 GraphQL 엔드포인트에 접근할 수 있습니다. Mobula는 프로덕션 애플리케이션을 위해 무료(월 10만 건의 요청) 및 유료 플랜을 모두 제공합니다.
+
+시작하려면 [문서](https://docs.mobula.io)를 방문하거나 [API 참조](https://docs.mobula.io/reference/)를 탐색하거나 [대시보드](https://mobula.io/)에서 가입하세요.
 ## EVM 쿼리 언어 {#evm-query-language}
 
 EVM 쿼리 언어(EQL)는 EVM(이더리움 가상 머신) 체인을 쿼리하도록 설계된 SQL 유사 언어입니다. EQL의 궁극적인 목표는 EVM 체인의 일급 객체(블록, 계정 및 트랜잭션)에 대한 복잡한 관계형 쿼리를 지원하는 동시에 개발자와 연구원에게 일상적인 사용을 위한 인체공학적 구문을 제공하는 것입니다. EQL을 사용하면 개발자는 친숙한 SQL 유사 구문을 사용하여 블록체인 데이터를 가져올 수 있으며 복잡한 보일러플레이트 코드가 필요하지 않습니다. EQL은 표준 블록체인 데이터 요청(예: 이더리움에서 계정의 논스 및 잔액 검색 또는 현재 블록 크기 및 타임스탬프 가져오기)을 지원하며 더 복잡한 요청 및 기능 세트에 대한 지원을 지속적으로 추가하고 있습니다.
 
+
+## Envio
+
+[Envio](https://envio.dev/)는 온체인 이벤트를 쿼리 가능한 GraphQL API로 변환하는 인덱싱 프레임워크입니다. 이더리움 및 모든 EVM 호환 체인을 지원합니다. 개발자는 TypeScript, JavaScript 또는 ReScript로 이벤트 핸들러를 작성하여 재구성 지원, 다중 체인 인덱싱, Envio Cloud의 관리형 호스팅 또는 자체 호스팅과 함께 실시간 및 과거 데이터를 제공할 수 있습니다.
+
+시작하려면 [HyperIndex 빠른 시작](https://docs.envio.dev/docs/HyperIndex/quickstart)을 따라 인덱서를 생성, 배포 및 쿼리해 보세요.
 ## 더 읽을거리 {#further-reading}
 
 - [암호화폐 데이터 탐색 I: 데이터 흐름 아키텍처](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
@@ -75,7 +87,7 @@ EVM 쿼리 언어(EQL)는 EVM(이더리움 가상 머신) 체인을 쿼리하도
 - [Dune 기초](https://docs.dune.com/#dune-basics)
 - [SubQuery 이더리움 빠른 시작 가이드](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [SQD 네트워크 개요](https://docs.sqd.dev/)
-- [EVM 쿼리 언어](https://eql.sh/blog/alpha-release-notes)
+- [EVM 쿼리 언어](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 
 ## 튜토리얼: 데이터 및 분석 / 이더리움의 SQL {#tutorials}
 

@@ -32,38 +32,34 @@ Pokud budete mít kdykoli nějaké dotazy, neváhejte se ozvat na [Discordu Alch
 
 Existuje mnoho způsobů, jak zadávat požadavky na řetězec Ethereum. Pro zjednodušení použijeme bezplatný účet na Alchemy, což je vývojářská platforma a API pro blockchain, která nám umožňuje komunikovat s řetězcem Ethereum, aniž bychom museli sami provozovat uzel. Alchemy má také vývojářské nástroje pro monitorování a analytiku; v tomto tutoriálu je využijeme k tomu, abychom pochopili, co se děje pod pokličkou při nasazení našeho chytrého kontraktu.
 
-### Vytvoření aplikace a klíče API {#create-your-app-and-api-key}
+### Vytvoření vaší aplikace a klíče API
 
-Jakmile si vytvoříte účet na Alchemy, můžete si vytvořením aplikace vygenerovat klíč API. To vám umožní zadávat požadavky na testnet Goerli. Pokud testnety neznáte, můžete si [přečíst průvodce Alchemy pro výběr sítě](https://www.alchemy.com/docs/choosing-a-web3-network).
+Jakmile si vytvoříte účet na Alchemy, můžete si vygenerovat klíč API vytvořením aplikace. To vám umožní zadávat požadavky na testnet Sepolia. Pokud testnety neznáte, můžete si [přečíst průvodce Alchemy pro výběr sítě](https://www.alchemy.com/docs/choosing-a-web3-network).
 
 Na řídicím panelu Alchemy najděte v navigačním panelu rozbalovací nabídku **Apps** a klikněte na **Create App**.
 
 ![Hello world create app](./hello-world-create-app.png)
 
-Pojmenujte svou aplikaci „_Hello World_“ a napište krátký popis. Jako prostředí (environment) vyberte **Staging** a jako síť (network) **Goerli**.
+Pojmenujte svou aplikaci „_Hello World_“ a napište krátký popis. Jako své prostředí vyberte **Staging** a jako svou síť **Sepolia**.
 
 ![create app view hello world](./create-app-view-hello-world.png)
 
-_Poznámka: ujistěte se, že jste vybrali **Goerli**, jinak tento tutoriál nebude fungovat._
+_Poznámka: Ujistěte se, že jste vybrali síť **Sepolia**, jinak tento tutoriál nebude fungovat._
 
 Klikněte na **Create app**. Vaše aplikace se objeví v tabulce níže.
+### Vytvoření účtu na Ethereu
 
-### Vytvoření účtu Ethereum {#create-an-ethereum-account}
+K odesílání a přijímání transakcí potřebujete účet na Ethereu. Použijeme MetaMask, virtuální peněženku v prohlížeči, která uživatelům umožňuje spravovat adresu jejich účtu na Ethereu.
 
-K odesílání a přijímání transakcí potřebujete účet Ethereum. Použijeme MetaMask, virtuální peněženku v prohlížeči, která uživatelům umožňuje spravovat adresu jejich účtu Ethereum.
+MetaMask si můžete zdarma stáhnout a vytvořit si účet [zde](https://metamask.io/download). Při vytváření účtu, nebo pokud již účet máte, se ujistěte, že jste vpravo nahoře přepnuli na „Sepolia Test Network“ (abychom nepracovali se skutečnými penězi).
+### Krok 4: Přidání etheru z faucetu
+Abyste mohli nasadit svůj chytrý kontrakt na testnet, budete potřebovat nějaké falešné ETH. Chcete-li získat ETH v síti Sepolia, přejděte na faucet sítě Sepolia a zadejte adresu svého účtu Sepolia. Podívejte se na [stránku o testnetech](/developers/docs/networks/#sepolia), kde najdete seznam možností k vyzkoušení:
 
-Účet MetaMask si můžete zdarma stáhnout a vytvořit [zde](https://metamask.io/download). Při vytváření účtu, nebo pokud již účet máte, se ujistěte, že jste vpravo nahoře přepnuli na „Goerli Test Network“ (abychom nepracovali se skutečnými penězi).
-
-### Krok 4: Přidání etheru z faucetu {#step-4-add-ether-from-a-faucet}
-
-K nasazení vašeho chytrého kontraktu do testovací sítě budete potřebovat nějaké falešné ETH. Chcete-li získat ETH v síti Goerli, přejděte na faucet Goerli a zadejte adresu svého účtu Goerli. Upozorňujeme, že faucety Goerli mohou být v poslední době poněkud nespolehlivé – seznam možností, které můžete vyzkoušet, najdete na [stránce testovacích sítí](/developers/docs/networks/#goerli):
-
-_Poznámka: kvůli přetížení sítě to může chvíli trvat._
+_Poznámka: Kvůli přetížení sítě to může chvíli trvat._
 ``
+### Krok 5: Zkontrolujte svůj zůstatek {#step-5-check-your-balance}
 
-### Krok 5: Kontrola zůstatku {#step-5-check-your-balance}
-
-Abychom si ověřili, že je ETH ve vaší peněžence, vytvořme požadavek [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) pomocí [nástroje composer od Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Tím se vrátí množství ETH v naší peněžence. Chcete-li se dozvědět více, podívejte se na [krátký tutoriál Alchemy o tom, jak používat nástroj composer](https://youtu.be/r6sjRxBZJuU).
+Abychom si ověřili, že je ETH ve vaší peněžence, vytvořme požadavek [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) pomocí [sandboxového nástroje Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Tím se vrátí množství ETH v naší peněžence. Chcete-li se dozvědět více, podívejte se na [krátký tutoriál Alchemy o tom, jak používat nástroj composer](https://youtu.be/r6sjRxBZJuU).
 
 Zadejte adresu svého účtu MetaMask a klikněte na **Send Request**. Uvidíte odpověď, která vypadá jako fragment kódu níže.
 
@@ -73,8 +69,7 @@ Zadejte adresu svého účtu MetaMask a klikněte na **Send Request**. Uvidíte 
 
 > _Poznámka: Tento výsledek je ve wei, nikoli v ETH. Wei se používá jako nejmenší nominální hodnota etheru._
 
-Uf! Naše falešné peníze jsou tam.
-
+Uf! Naše falešné peníze tam všechny jsou.
 ### Krok 6: Inicializace našeho projektu {#step-6-initialize-our-project}
 
 Nejprve budeme muset vytvořit složku pro náš projekt. Přejděte do příkazového řádku a zadejte následující.
@@ -86,7 +81,7 @@ cd hello-world
 
 Nyní, když jsme ve složce našeho projektu, použijeme `npm init` k inicializaci projektu.
 
-> Pokud ještě nemáte nainstalované npm, postupujte podle [těchto pokynů k instalaci Node.js a npm](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm).
+> Pokud ještě nemáte nainstalované npm, postupujte podle [pokynů k instalaci Node.js](https://nodejs.org/en/download/) a nainstalujte Node.js a npm.
 
 Pro účely tohoto tutoriálu nezáleží na tom, jak odpovíte na inicializační otázky. Zde je pro referenci ukázka, jak jsme to udělali my:
 
@@ -116,8 +111,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
 }
 ```
 
-Schvalte soubor package.json a můžeme začít!
-
+Potvrďte package.json a můžeme začít!
 ### Krok 7: Stažení Hardhat {#step-7-download-hardhat}
 
 Hardhat je vývojové prostředí pro kompilaci, nasazení, testování a ladění vašeho softwaru pro Ethereum. Pomáhá vývojářům při lokálním vytváření chytrých kontraktů a decentralizovaných aplikací (dapp) před jejich nasazením do živého řetězce.
@@ -225,7 +219,7 @@ Vytvořili jsme peněženku MetaMask, účet Alchemy a napsali náš chytrý kon
 
 Každá transakce odeslaná z vaší peněženky vyžaduje podpis pomocí vašeho jedinečného soukromého klíče. Abychom našemu programu poskytli toto oprávnění, můžeme náš soukromý klíč bezpečně uložit do souboru prostředí (environment file). Zde také uložíme klíč API pro Alchemy.
 
-> Chcete-li se dozvědět více o odesílání transakcí, podívejte se na [tento tutoriál](https://www.alchemy.com/docs/hello-world-smart-contract#step-11-connect-metamask--alchemy-to-your-project) o odesílání transakcí pomocí Web3.
+> Chcete-li se dozvědět více o odesílání transakcí, podívejte se na [tento tutoriál](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) o odesílání transakcí pomocí Web3.
 
 Nejprve nainstalujte balíček dotenv v adresáři vašeho projektu:
 
@@ -242,7 +236,7 @@ Nepojmenovávejte ho `process.env` ani `.env-custom` ani nijak jinak.
 - Postupujte podle [těchto pokynů](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) pro export vašeho soukromého klíče
 - Níže se dozvíte, jak získat HTTP URL API Alchemy
 
-![Animated walkthrough of getting an Alchemy API key](./get-alchemy-api-key.gif)
+![Animated walkthrough of getting an Alchemy API key](./get-alchemy-api-key.mp4#1280x696)
 
 Váš soubor `.env` by měl vypadat takto:
 
@@ -255,7 +249,7 @@ Abychom je skutečně propojili s naším kódem, odkážeme na tyto proměnné 
 
 ### Krok 12: Instalace Ethers.js {#step-12-install-ethersjs}
 
-Ethers.js je knihovna, která usnadňuje interakci a zadávání požadavků na Ethereum tím, že obaluje [standardní metody JSON-RPC](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) uživatelsky přívětivějšími metodami.
+Ethers.js je knihovna, která usnadňuje interakci a zadávání požadavků na Ethereum tím, že obaluje [standardní metody JSON-RPC](/developers/docs/apis/json-rpc/) uživatelsky přívětivějšími metodami.
 
 Hardhat nám umožňuje integrovat [pluginy](https://hardhat.org/plugins/) pro další nástroje a rozšířenou funkcionalitu. Pro nasazení kontraktu využijeme [plugin Ethers](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers).
 
@@ -314,7 +308,7 @@ Přejděte do složky `scripts/` a vytvořte nový soubor s názvem `deploy.js`,
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.getKontraktFactory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // Zahájí nasazení a vrátí promise, který se vyhodnotí jako objekt kontraktu
   const hello_world = await HelloWorld.deploy("Hello World!")
@@ -343,12 +337,12 @@ const hello_world = await HelloWorld.deploy()
 
 Volání `deploy()` na `ContractFactory` zahájí nasazení a vrátí `Promise`, který se přeloží na objekt `Contract`. Toto je objekt, který má metodu pro každou z funkcí našeho chytrého kontraktu.
 
-### Krok 16: Nasazení našeho kontraktu {#step-16-deploy-our-contract}
+### Krok 16: Nasazení našeho kontraktu
 
 Konečně jsme připraveni nasadit náš chytrý kontrakt! Přejděte do příkazového řádku a spusťte:
 
 ```bash
-npx hardhat run scripts/deploy.js --network goerli
+npx hardhat run scripts/deploy.js --network sepolia
 ```
 
 Poté byste měli vidět něco jako:
@@ -359,22 +353,21 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 **Tuto adresu si prosím uložte**. Budeme ji používat později v tutoriálu.
 
-Pokud přejdeme na [Etherscan sítě Goerli](https://goerli.etherscan.io) a vyhledáme adresu našeho kontraktu, měli bychom vidět, že byl úspěšně nasazen. Transakce bude vypadat nějak takto:
+Pokud přejdeme na [Sepolia Etherscan](https://sepolia.etherscan.io) a vyhledáme adresu našeho kontraktu, měli bychom vidět, že byl úspěšně nasazen. Transakce bude vypadat nějak takto:
 
 ![](./etherscan-contract.png)
 
-Adresa `From` by se měla shodovat s adresou vašeho účtu MetaMask a adresa `To` bude uvádět **Contract Creation**. Pokud klikneme na transakci, uvidíme adresu našeho kontraktu v poli `To`.
+Adresa `From` by se měla shodovat s adresou vašeho účtu MetaMask a u adresy `To` bude uvedeno **Contract Creation**. Pokud klikneme na transakci, uvidíme adresu našeho kontraktu v poli `To`.
 
 ![](./etherscan-transaction.png)
 
 Gratulujeme! Právě jste nasadili chytrý kontrakt na testnet Etherea.
 
-Abychom pochopili, jak to funguje uvnitř, přejděme na kartu Explorer na našem [řídicím panelu Alchemy](https://dashboard.alchemy.com/explorer). Pokud máte více aplikací Alchemy, nezapomeňte filtrovat podle aplikace a vybrat **Hello World**.
+Abychom pochopili, co se děje pod pokličkou, přejděme na kartu Explorer v našem [řídicím panelu Alchemy](https://dashboard.alchemy.com/explorer). Pokud máte více aplikací Alchemy, nezapomeňte filtrovat podle aplikace a vybrat **Hello World**.
 
 ![](./hello-world-explorer.png)
 
-Zde uvidíte hrstku metod JSON-RPC, které pro nás Hardhat/Ethers na pozadí vytvořily, když jsme zavolali funkci `.deploy()`. Dvě důležité metody jsou zde [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), což je požadavek na zápis našeho kontraktu do řetězce Goerli, a [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash), což je požadavek na přečtení informací o naší transakci na základě hashe. Chcete-li se dozvědět více o odesílání transakcí, podívejte se na [náš tutoriál o odesílání transakcí pomocí Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
-
+Zde uvidíte hrstku metod JSON-RPC, které pro nás Hardhat/Ethers pod pokličkou vytvořily, když jsme zavolali funkci `.deploy()`. Dvě důležité metody zde jsou [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction), což je požadavek na zápis našeho kontraktu do řetězce Sepolia, a [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash), což je požadavek na přečtení informací o naší transakci na základě hashe. Chcete-li se dozvědět více o odesílání transakcí, podívejte se na [náš tutoriál o odesílání transakcí pomocí Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 ## Část 2: Interakce s vaším chytrým kontraktem {#part-2-interact-with-your-smart-contract}
 
 Nyní, když jsme úspěšně nasadili chytrý kontrakt do sítě Goerli, pojďme se naučit, jak s ním interagovat.
@@ -486,7 +479,7 @@ main()
 Po spuštění souboru pomocí `npx hardhat run scripts/interact.js` v terminálu bychom měli vidět tuto odpověď:
 
 ```
-Zpráva je: Hello world!
+The message is: Hello world!
 ```
 
 Gratulujeme! Právě jste úspěšně přečetli data chytrého kontraktu z blockchainu Ethereum, jen tak dál!
@@ -515,9 +508,9 @@ main()
 
 Všimněte si, že na řádku 11 voláme `.wait()` na vráceném objektu transakce. To zajišťuje, že náš skript před ukončením funkce počká, až bude transakce vytěžena na blockchainu. Pokud volání `.wait()` není zahrnuto, skript nemusí v kontraktu vidět aktualizovanou hodnotu `message`.
 
-### Přečtěte si novou zprávu {#read-the-new-message}
+### Přečtěte si novou zprávu
 
-Měli byste být schopni zopakovat [předchozí krok](#read-the-init-message) a přečíst aktualizovanou hodnotu `message`. Udělejte si chvilku a zjistěte, zda dokážete provést změny potřebné k vypsání této nové hodnoty!
+Měli byste být schopni zopakovat [předchozí krok](#read-the-init-message) a přečíst si aktualizovanou hodnotu `message`. Udělejte si chvilku a zkuste, zda dokážete provést potřebné změny k vypsání této nové hodnoty!
 
 Pokud potřebujete nápovědu, zde je ukázka, jak by měl váš soubor `interact.js` v tuto chvíli vypadat:
 
@@ -532,7 +525,7 @@ const contract = require("../artifacts/contracts/HelloWorld.sol/HelloWorld.json"
 
 // poskytovatel - Alchemy
 const alchemyProvider = new ethers.providers.AlchemyProvider(
-  (network = "goerli"),
+  (network = "sepolia"),
   API_KEY
 )
 
@@ -563,16 +556,15 @@ main()
 
 Nyní stačí skript spustit a ve vašem terminálu byste měli vidět vypsanou starou zprávu, stav aktualizace a novou zprávu!
 
-`npx hardhat run scripts/interact.js --network goerli`
+`npx hardhat run scripts/interact.js --network sepolia`
 
 ```
-Zpráva je: Hello World!
-Aktualizuje se zpráva...
-Nová zpráva je: This is the new message.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
-Při spouštění tohoto skriptu si můžete všimnout, že krok `Updating the message...` chvíli trvá, než se načte nová zpráva. Je to způsobeno procesem těžby; pokud vás zajímá sledování transakcí během jejich těžby, navštivte [mempool Alchemy](https://dashboard.alchemyapi.io/mempool), kde uvidíte stav transakce. Pokud je transakce zahozena, je také užitečné zkontrolovat [Goerli Etherscan](https://goerli.etherscan.io) a vyhledat hash vaší transakce.
-
+Při spouštění tohoto skriptu si možná všimnete, že krok `Updating the message...` chvíli trvá, než se načte nová zpráva. Je to způsobeno procesem těžby; pokud vás zajímá sledování transakcí během jejich těžby, navštivte [mempool Alchemy](https://dashboard.alchemy.com/mempool), kde uvidíte stav transakce. Pokud je transakce zahozena, je také užitečné zkontrolovat [Sepolia Etherscan](https://sepolia.etherscan.io) a vyhledat hash vaší transakce.
 ## Část 3: Publikování vašeho chytrého kontraktu na Etherscan {#part-3-publish-your-smart-contract-to-etherscan}
 
 Odvedli jste spoustu těžké práce, abyste svůj chytrý kontrakt oživili; teď je čas se o něj podělit se světem!
@@ -642,17 +634,15 @@ module.exports = {
 }
 ```
 
-#### Ověření vašeho chytrého kontraktu na Etherscanu {#verify-your-smart-contract-on-etherscan}
+Ujistěte se, že jsou všechny soubory uloženy a všechny proměnné v `.env` jsou správně nakonfigurovány.
 
-Ujistěte se, že jsou všechny soubory uloženy a všechny proměnné `.env` jsou správně nakonfigurovány.
-
-Spusťte úlohu `verify` a předejte adresu kontraktu a síť, do které je nasazen:
+Spusťte úlohu `verify`, které předáte adresu kontraktu a síť, do které je nasazen:
 
 ```text
-npx hardhat verify --network goerli DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
+npx hardhat verify --network sepolia DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
 ```
 
-Ujistěte se, že `DEPLOYED_CONTRACT_ADDRESS` je adresa vašeho nasazeného chytrého kontraktu v testnetu Goerli. Také poslední argument (`'Hello World!'`) musí být stejná textová hodnota, jaká byla použita [během kroku nasazení v části 1](#step-15-write-our-deploy-script).
+Ujistěte se, že `DEPLOYED_CONTRACT_ADDRESS` je adresa vašeho nasazeného chytrého kontraktu na testnetu Sepolia. Také poslední argument (`'Hello World!'`) musí být stejná řetězcová hodnota, jaká byla použita [během kroku nasazení v 1. části](#step-15-write-our-deploy-script).
 
 Pokud vše půjde dobře, uvidíte ve svém terminálu následující zprávu:
 
@@ -663,11 +653,10 @@ for verification on Etherscan. Waiting for verification result...
 
 
 Successfully verified contract HelloWorld on Etherscan.
-https://goerli.etherscan.io/address/<contract-address>#contracts
+https://sepolia.etherscan.io/address/<contract-address>#contracts
 ```
 
 Gratulujeme! Kód vašeho chytrého kontraktu je na Etherscanu!
-
 ### Prohlédněte si svůj chytrý kontrakt na Etherscanu! {#check-out-your-smart-contract-on-etherscan}
 
 Když přejdete na odkaz uvedený ve vašem terminálu, měli byste vidět kód vašeho chytrého kontraktu a ABI publikované na Etherscanu!
@@ -679,7 +668,7 @@ Když přejdete na odkaz uvedený ve vašem terminálu, měli byste vidět kód 
 Na konci tohoto tutoriálu budete vědět, jak:
 
 - Připojit peněženku MetaMask k vaší decentralizované aplikaci (dapp)
-- Číst data z vašeho chytrého kontraktu pomocí API [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
+- Číst data z vašeho chytrého kontraktu pomocí API [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)
 - Podepisovat transakce na Ethereu pomocí MetaMasku
 
 Pro tuto dapp budeme jako náš frontendový framework používat [React](https://react.dev/); je však důležité poznamenat, že nebudeme trávit mnoho času rozebíráním jeho základů, protože se zaměříme hlavně na to, jak do našeho projektu přinést funkcionalitu Web3.
@@ -902,31 +891,31 @@ Může to znít jako spousta kroků, ale nebojte se! Provedeme vás tím, jak ud
 
 #### Vytvoření připojení API k řetězci Etherea {#establish-an-api-connection-to-the-ethereum-chain}
 
-Pamatujete si, jak jsme ve 2. části tohoto tutoriálu použili náš [klíč Alchemy Web3 ke čtení z našeho chytrého kontraktu](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library)? Klíč Alchemy Web3 budete potřebovat i ve své dapp, abyste mohli číst z řetězce.
+Vzpomínáte si, jak jsme ve 2. části tohoto tutoriálu použili náš klíč Alchemy Web3 ke čtení z našeho chytrého kontraktu? Klíč Alchemy Web3 budete potřebovat také ve své decentralizované aplikaci (dapp) ke čtení z řetězce.
 
-Pokud jej ještě nemáte, nejprve si nainstalujte [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) tak, že přejdete do kořenového adresáře vašeho `starter-files` a ve svém terminálu spustíte následující:
+Pokud jej ještě nemáte, nejprve si nainstalujte [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) tak, že přejdete do kořenového adresáře vašich `starter-files` a ve svém terminálu spustíte následující příkaz:
 
 ```text
 npm install @alch/alchemy-web3
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) je wrapper kolem [Web3.js](https://docs.web3js.org/), který poskytuje vylepšené metody API a další klíčové výhody, jež vám usnadní život jako vývojáři Web3. Je navržen tak, aby vyžadoval minimální konfiguraci, takže jej můžete začít používat ve své aplikaci hned teď!
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) je obálka (wrapper) kolem [Web3.js](https://docs.web3js.org/), která poskytuje vylepšené metody API a další klíčové výhody, jež vám usnadní život jako vývojáři Web3. Je navržena tak, aby vyžadovala minimální konfiguraci, takže ji můžete ve své aplikaci začít používat hned!
 
-Poté si do adresáře projektu nainstalujte balíček [dotenv](https://www.npmjs.com/package/dotenv), abychom měli bezpečné místo pro uložení našeho klíče API poté, co jej získáme.
+Poté nainstalujte balíček [dotenv](https://www.npmjs.com/package/dotenv) v adresáři vašeho projektu, abychom měli bezpečné místo pro uložení našeho klíče API poté, co jej získáme.
 
 ```text
 npm install dotenv --save
 ```
 
-Pro naši dapp **budeme používat náš klíč Websockets API** místo našeho klíče HTTP API, protože nám to umožní nastavit posluchače, který detekuje, když se zpráva uložená v chytrém kontraktu změní.
+Pro naši dapp **budeme používat náš klíč API pro Websockets** místo našeho klíče API pro HTTP, protože nám to umožní nastavit posluchače, který detekuje, když se zpráva uložená v chytrém kontraktu změní.
 
-Jakmile budete mít svůj klíč API, vytvořte ve svém kořenovém adresáři soubor `.env` a přidejte do něj svou URL adresu Alchemy Websockets. Poté by měl váš soubor `.env` vypadat takto:
+Jakmile budete mít svůj klíč API, vytvořte v kořenovém adresáři soubor `.env` a přidejte do něj svou URL adresu Alchemy Websockets. Poté by měl váš soubor `.env` vypadat takto:
 
 ```javascript
-REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<klíč>
+REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<key>
 ```
 
-Nyní jsme připraveni nastavit náš koncový bod Alchemy Web3 v naší dapp! Vraťme se k našemu `interact.js`, který je vnořený do naší složky `util`, a přidejme na začátek souboru následující kód:
+Nyní jsme připraveni nastavit náš koncový bod Alchemy Web3 v naší dapp! Vraťme se k našemu souboru `interact.js`, který je vnořený ve složce `util`, a přidejme na začátek souboru následující kód:
 
 ```javascript
 // interact.js
@@ -942,18 +931,17 @@ const web3 = createAlchemyWeb3(alchemyKey)
 Výše jsme nejprve importovali klíč Alchemy z našeho souboru `.env` a poté jsme předali náš `alchemyKey` do `createAlchemyWeb3`, abychom vytvořili náš koncový bod Alchemy Web3.
 
 S tímto připraveným koncovým bodem je čas načíst náš chytrý kontrakt!
-
 #### Načtení vašeho chytrého kontraktu Hello World {#loading-your-hello-world-smart-contract}
 
 K načtení vašeho chytrého kontraktu Hello World budete potřebovat adresu jeho kontraktu a ABI, obojí lze najít na Etherscanu, pokud jste dokončili [3. část tohoto tutoriálu.](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)
 
-#### Jak získat ABI vašeho kontraktu z Etherscanu {#how-to-get-your-contract-abi-from-etherscan}
+#### Jak získat ABI vašeho kontraktu z Etherscanu
 
-Pokud jste 3. část tohoto tutoriálu přeskočili, můžete použít kontrakt HelloWorld s adresou [0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code). Jeho ABI naleznete [zde](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code).
+Pokud jste přeskočili 3. část tohoto tutoriálu, nejprve nasaďte a ověřte svůj vlastní kontrakt HelloWorld. Poté otevřete stránku svého kontraktu na [Sepolia Etherscan](https://sepolia.etherscan.io) a zkopírujte jeho ABI.
 
-ABI kontraktu je nezbytné pro specifikaci toho, kterou funkci kontrakt vyvolá, a také pro zajištění toho, že funkce vrátí data ve formátu, který očekáváte. Jakmile zkopírujeme ABI našeho kontraktu, uložme jej jako soubor JSON s názvem `contract-abi.json` ve vašem adresáři `src`.
+ABI kontraktu je nezbytné pro určení, kterou funkci kontrakt vyvolá, a také pro zajištění toho, že funkce vrátí data ve formátu, který očekáváte. Jakmile zkopírujeme ABI našeho kontraktu, uložme jej jako soubor JSON s názvem `contract-abi.json` do vašeho adresáře `src`.
 
-Váš contract-abi.json by měl být uložen ve vaší složce src.
+Váš soubor contract-abi.json by měl být uložen ve vaší složce src.
 
 Vyzbrojeni adresou našeho kontraktu, ABI a koncovým bodem Alchemy Web3 můžeme použít [metodu contract](https://docs.web3js.org/api/web3-eth-contract/class/Contract) k načtení instance našeho chytrého kontraktu. Importujte ABI vašeho kontraktu do souboru `interact.js` a přidejte adresu vašeho kontraktu.
 
@@ -961,7 +949,8 @@ Vyzbrojeni adresou našeho kontraktu, ABI a koncovým bodem Alchemy Web3 můžem
 // interact.js
 
 const contractABI = require("../contract-abi.json")
-const contractAddress = "0x6f3f635A9762B47954229Ea479b4541eAF402A6A"
+// Zde použijte adresu vašeho kontraktu
+const contractAddress = "0x..."
 ```
 
 Nyní můžeme konečně odkomentovat naši proměnnou `helloWorldContract` a načíst chytrý kontrakt pomocí našeho koncového bodu AlchemyWeb3:
@@ -974,7 +963,7 @@ export const helloWorldContract = new web3.eth.Contract(
 )
 ```
 
-Abychom to shrnuli, prvních 12 řádků vašeho `interact.js` by nyní mělo vypadat takto:
+Abychom to shrnuli, prvních 12 řádků vašeho souboru `interact.js` by nyní mělo vypadat takto:
 
 ```javascript
 // interact.js
@@ -994,7 +983,6 @@ export const helloWorldContract = new web3.eth.Contract(
 ```
 
 Nyní, když máme náš kontrakt načtený, můžeme implementovat naši funkci `loadCurrentMessage`!
-
 #### Implementace `loadCurrentMessage` ve vašem souboru `interact.js` {#implementing-loadcurrentmessage-in-your-interact-js-file}
 
 Tato funkce je super jednoduchá. Provedeme jednoduché asynchronní volání web3 pro čtení z našeho kontraktu. Naše funkce vrátí zprávu uloženou v chytrém kontraktu:
@@ -1034,7 +1022,7 @@ A když už mluvíme o tom posluchači...
 
 #### Implementace `addSmartContractListener` {#implement-addsmartcontractlistener}
 
-Pokud si vzpomenete na soubor `HelloWorld.sol`, který jsme napsali v [1. části této série tutoriálů](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract), vybavíte si, že existuje událost chytrého kontraktu s názvem `UpdatedMessages`, která je emitována po vyvolání funkce `update` našeho chytrého kontraktu (viz řádky 9 a 27):
+Pokud si vzpomenete na soubor `HelloWorld.sol`, který jsme napsali v [1. části této série tutoriálů](#step-10-write-our-contract), vybavíte si, že existuje událost chytrého kontraktu s názvem `UpdatedMessages`, která je emitována po vyvolání funkce `update` našeho chytrého kontraktu (viz řádky 9 a 27):
 
 ```javascript
 // HelloWorld.sol
@@ -1121,17 +1109,14 @@ Aby uživatelé mohli zapsat cokoli do řetězce Etherea, musí podepisovat tran
 
 Pokud chcete lépe porozumět tomu, jak fungují transakce na Ethereu, podívejte se na [tuto stránku](/developers/docs/transactions/) od Ethereum Foundation.
 
-#### Stažení MetaMasku {#download-metamask}
+#### Stažení MetaMasku
 
-MetaMask si můžete zdarma stáhnout a vytvořit si účet [zde](https://metamask.io/download). Když si vytváříte účet, nebo pokud již účet máte, nezapomeňte se vpravo nahoře přepnout na „Goerli Test Network“ (abychom nepracovali se skutečnými penězi).
-
-#### Přidání etheru z faucetu {#add-ether-from-a-faucet}
-
-K podepsání transakce na blockchainu Etherea budeme potřebovat nějaké falešné ETH. Chcete-li získat ETH, můžete přejít na [FaucETH](https://fauceth.komputing.org) a zadat adresu svého účtu na Goerli, kliknout na „Request funds“ (Požádat o prostředky), poté v rozbalovací nabídce vybrat „Ethereum Testnet Goerli“ a nakonec znovu kliknout na tlačítko „Request funds“. Brzy poté byste měli vidět ETH na svém účtu MetaMask!
-
+Můžete si zdarma stáhnout a vytvořit účet MetaMask [zde](https://metamask.io/download). Při vytváření účtu, nebo pokud již účet máte, se ujistěte, že jste vpravo nahoře přepnuli na testnet Sepolia \(abychom nepracovali se skutečnými penězi\).
+#### Přidání etheru z faucetu
+Abychom mohli podepsat transakci na blockchainu Etherea, budeme potřebovat nějaké falešné ETH. Chcete-li získat ETH, můžete přejít na faucet sítě Sepolia uvedený na [stránce testnetů](/developers/docs/networks/#sepolia) a zadat adresu svého účtu na síti Sepolia. Brzy poté byste měli vidět ETH na svém účtu v MetaMasku!
 #### Kontrola vašeho zůstatku {#check-your-balance}
 
-Abychom si ověřili, že tam náš zůstatek je, proveďme požadavek [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) pomocí [nástroje composer od Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). To vrátí množství ETH v naší peněžence. Poté, co zadáte adresu svého účtu MetaMask a kliknete na „Send Request“ (Odeslat požadavek), měli byste vidět odpověď jako je tato:
+Abychom si ověřili, že tam náš zůstatek je, pošleme požadavek [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) pomocí [nástroje sandbox od Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). To nám vrátí množství ETH v naší peněžence. Po zadání adresy vašeho účtu MetaMask a kliknutí na „Send Request“ byste měli vidět odpověď podobnou této:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
@@ -1139,8 +1124,7 @@ Abychom si ověřili, že tam náš zůstatek je, proveďme požadavek [eth_getB
 
 **POZNÁMKA:** Tento výsledek je ve wei, nikoli v ETH. Wei se používá jako nejmenší nominální hodnota etheru. Převod z wei na ETH je: 1 ETH = 10¹⁸ wei. Pokud tedy převedeme 0xde0b6b3a7640000 do desítkové soustavy, dostaneme 1\*10¹⁸, což se rovná 1 ETH.
 
-Uf! Naše falešné peníze jsou všechny tam! 🤑
-
+Uf! Všechny naše falešné peníze tam jsou! 🤑
 ### Krok 5: Připojení MetaMasku k vašemu UI {#step-5-connect-metamask-to-your-ui}
 
 Nyní, když je naše peněženka MetaMask nastavena, připojme k ní naši dapp!
@@ -1539,7 +1523,7 @@ Běžte do toho a vyzkoušejte tlačítko **Update**!
 Jupííí, dostali jste se na konec tutoriálu! Abychom to shrnuli, naučili jste se, jak:
 
 - Připojit peněženku MetaMask k vašemu projektu dapp
-- Číst data z vašeho chytrého kontraktu pomocí API [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
+- Číst data z vašeho chytrého kontraktu pomocí API [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)
 - Podepisovat transakce na Ethereu pomocí MetaMasku
 
 Nyní jste plně vybaveni k tomu, abyste uplatnili dovednosti z tohoto tutoriálu k vybudování vlastního projektu dapp! Jako vždy, pokud máte nějaké dotazy, neváhejte se na nás obrátit s prosbou o pomoc na [Discordu Alchemy](https://discord.gg/gWuC7zB). 🧙‍♂️

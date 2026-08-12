@@ -2,12 +2,13 @@
 title: Glamsterdam
 description: Learn about the Glamsterdam protocol upgrade
 lang: en
+template: upgrade
 ---
 
 <Alert variant="update">
 <AlertContent>
 <AlertTitle>
-Glamsterdam is an upcoming Ethereum upgrade planned for H2 2026
+Glamsterdam is an upcoming Ethereum upgrade planned for Q4 2026
 </AlertTitle>
 <AlertDescription>
 The Glamsterdam upgrade is only a single step in Ethereum's long-term development goals. Learn more about [the protocol roadmap](/roadmap/) and [previous upgrades](/ethereum-forks/).
@@ -25,12 +26,12 @@ These improvements ensure Ethereum remains fast, affordable, and decentralized a
 
 <VideoWatch slug="ethereum-evolution-glamsterdam" />
 
-## Improvements considered for Glamsterdam {#improvements-in-glamsterdam}
+## Improvements in Glamsterdam {#improvements-in-glamsterdam}
 
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Note: This article currently highlights a selection of EIPs being considered for inclusion in Glamsterdam. Additional proposals actively being tested in devnets include EIP-7778, EIP-7843, EIP-7976, EIP-7981, and EIP-8024. For the latest status updates, view the [Glamsterdam upgrade on Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Note: This article highlights a selection of EIPs scheduled for inclusion in Glamsterdam. Additional scheduled proposals being tested in devnets include EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246, and EIP-8282. For the latest status updates, view the [Glamsterdam upgrade on Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
 If you want to add an EIP that's under consideration for Glamsterdam, but hasn't been added to this page yet, [learn how to contribute to ethereum.org here](/contributing/).
 </AlertDescription>
@@ -144,7 +145,7 @@ By pricing state-access actions more accurately Ethereum can be more resilient a
 
 ## Network resilience {#network-resilience}
 
-Refinements to validator duties and exit processes ensure network stability during mass-slashing events and democratize liquidity. These improvements make the network more stable and ensure that all participants, large and small, are treated fairly.
+Refinements to validator duties and exit processes ensure network stability during mass-slashing events and speed up how quickly stakers can move their stake. These improvements make the network more stable and ensure that all participants, large and small, are treated fairly.
 
 ### Exclude slashed validators from proposing {#exclude-slashed-validators}
 
@@ -159,27 +160,25 @@ Because blocks from slashed proposers are automatically rejected as invalid, thi
 
 **Resources**: [EIP-8045 technical specification](https://eips.ethereum.org/EIPS/eip-8045)
 
-### Let exits use the consolidation queue {#let-exits-use-the-consolidation-queue}
+### Increase exit and consolidation churn {#increase-exit-and-consolidation-churn}
 
-- Closes a loophole that allows high-balance validators to exit the network more quickly than smaller validators via the consolidation queue
-- Allows regular exits to overflow into this second queue when it has spare capacity, reducing staking withdrawal times during high-volume periods
-- Maintains strict security to avoid altering Ethereum's core safety limits or weakening the network
+- Significantly reduces staking withdrawal times by letting exit capacity scale with the total amount of ETH staked, instead of being capped at a fixed rate
+- Gives validator consolidations their own dedicated queue capacity, speeding up the transition to larger, more efficient validators
+- Maintains network security through carefully analyzed safety parameters
 
-Since the [Pectra upgrade](/roadmap/pectra) increased the maximum effective balance for Ethereum validators from 32 ETH to 2,048 ETH, a technical loophole allows high-balance validators to exit the network faster than smaller validators via the consolidation queue.
+Ethereum's churn limit is a safety limit on the rate at which validators can enter, exit, or merge (consolidate) their staked ETH, to ensure the network's security is never destabilized. Today, exits and activations share a single capped limit, so during periods of high demand stakers can face long waits to withdraw their ETH. Consolidations, where validators merge into larger ones with up to 2,048 ETH (enabled by the [Pectra upgrade](/roadmap/pectra)), also compete for this limited capacity, meaning consolidating the full validator set would take years at the current rate.
 
-**Let exits use the consolidation queue (or EIP-8080)** democratizes the consolidation queue for all staking exits, creating a single, fair line for everyone.
+**Increase exit and consolidation churn (or EIP-8061)** reorganizes these limits into separate lanes:
 
-To break down how this works today:
+- Validator activations keep their existing capped limit, unchanged
+- Exits are no longer capped and instead scale with the total amount of ETH staked
+- Consolidations get their own dedicated capacity, roughly half the size of the combined activation-exit limit
 
-- Ethereum's churn limit is a safety limit on the rate at which validators can enter, exit, or merge (consolidate) their staked ETH, to ensure the network's security is never destabilized
-- Because a validator consolidation is a heavier action with more moving parts than a standard validator exit, it eats up a larger portion of this safety budget (churn limit)
-- Specifically, the protocol dictates that the exact security cost of one standard exit is two-thirds (2/3) the cost of one consolidation
+At current staking levels, this increases exit capacity by roughly 4x and consolidation capacity by roughly 2x, meaning stakers can withdraw their ETH much faster during high-demand periods and the network transitions more quickly to a smaller, more efficient validator set.
 
-Fairer exit queues will allow standard exits to borrow unused space from the consolidation queue during periods of high exit demand, applying a "3 for 2" exchange rate (for every 2 unused consolidation spots, the network can safely process 3 standard exits). This 3/2 churn factor balances demand across the consolidation and exit queues.
+Because stake can move in and out of the network faster, the change roughly halves the time a node can remain offline before it needs a recent trusted checkpoint to safely rejoin the network (the weak subjectivity period, from about 15.7 days to about 7 days). This trade-off was carefully analyzed to ensure network security is maintained.
 
-Democratizing access to the consolidation queue will increase the speed at which users can exit their stake during high-demand periods by up to 2.5x, without compromising network security.
-
-**Resources**: [EIP-8080 technical specification](https://eips.ethereum.org/EIPS/eip-8080)
+**Resources**: [EIP-8061 technical specification](https://eips.ethereum.org/EIPS/eip-8061)
 
 ## Improve user & developer experience {#improve-user-developer-experience}
 
@@ -284,7 +283,7 @@ In addition, for long-term sustainability, Glamsterdam introduces Block-Level Ac
 
 Existing contracts will continue to function normally after Glamsterdam. Developers will likely get several new tools and should review their gas usage:
 
-- Increase maximum contract size (or EIP-7954) allows developers to deploy larger applications, raising the maximum contract size limit from roughly 24KiB to 32KiB.
+- Increase maximum contract size (or EIP-7954) allows developers to deploy larger applications, raising the maximum contract size limit from roughly 24KiB to 64KiB.
 - Deterministic factory predeploy (or EIP-7997) introduces a universal, built-in factory contract. It allows developers to deploy their applications and smart contract wallets to the exact same address across all participating EVM chains.
 - If your app relies on complex tracing to find ETH transfers, ETH transfers and burns emit a log (or EIP-7708) will allow you to switch to using logs for more simple and reliable accounting.
 - State creation gas cost increase (or EIP-8037) and state-access gas cost update (or EIP-8038) introduce new sustainability models that will change certain contract deployment costs, as creating new accounts or permanent storage will have a new standardized fixed fee based on the size of the data created.

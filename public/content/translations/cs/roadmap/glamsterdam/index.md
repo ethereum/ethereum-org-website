@@ -2,14 +2,13 @@
 title: Glamsterdam
 description: "Přečtěte si o upgradu protokolu Glamsterdam"
 lang: cs
+template: upgrade
 ---
-
-# Glamsterdam {#glamsterdam}
 
 <Alert variant="update">
 <AlertContent>
 <AlertTitle>
-Glamsterdam je nadcházející upgrade Etherea plánovaný na druhou polovinu roku 2026
+Glamsterdam je nadcházející upgrade Etherea plánovaný na 4. čtvrtletí 2026
 </AlertTitle>
 <AlertDescription>
 Upgrade Glamsterdam je pouze jedním krokem v dlouhodobých cílech vývoje Etherea. Přečtěte si více o [plánu vývoje protokolu](/roadmap/) a [předchozích upgradech](/ethereum-forks/).
@@ -32,21 +31,20 @@ Tato vylepšení zajišťují, že Ethereum zůstane rychlé, cenově dostupné 
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Poznámka: Tento článek v současné době zdůrazňuje výběr EIP zvažovaných pro zahrnutí do upgradu Glamsterdam. Mezi další návrhy aktivně testované v devnetech patří EIP-7778, EIP-7843, EIP-7976, EIP-7981 a EIP-8024. Nejnovější aktualizace stavu najdete v [upgradu Glamsterdam na Forkcastu](https://forkcast.org/upgrade/glamsterdam).
+Poznámka: Tento článek zdůrazňuje výběr EIP naplánovaných k zahrnutí do upgradu Glamsterdam. Mezi další plánované návrhy testované v devnetech patří EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 a EIP-8282. Nejnovější aktualizace stavu najdete na stránce [upgrade Glamsterdam na Forkcastu](https://forkcast.org/upgrade/glamsterdam).
 
-Pokud chcete přidat EIP, které se zvažuje pro Glamsterdam, ale ještě nebylo na tuto stránku přidáno, [zjistěte, jak přispět na ethereum.org zde](/contributing/).
+Pokud chcete přidat EIP, o kterém se uvažuje pro Glamsterdam, ale ještě nebyl na tuto stránku přidán, [zjistěte, jak přispět na ethereum.org zde](/contributing/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Upgrade Glamsterdam se soustředí na tři hlavní cíle:
+Upgrade Glamsterdam se zaměřuje na tři hlavní cíle:
 
-- Zrychlení zpracování (paralelizace): Reorganizace způsobu, jakým síť zaznamenává datové závislosti, aby mohla bezpečně zpracovávat mnoho transakcí současně namísto pomalé sekvence jedné po druhé.
+- Zrychlení zpracování (paralelizace): Reorganizace způsobu, jakým síť zaznamenává datové závislosti, aby mohla bezpečně zpracovávat mnoho transakcí současně namísto pomalého, postupného zpracování jedné po druhé.
 - Rozšíření kapacity: Rozdělení náročné práce při vytváření a ověřování bloků, což síti poskytne více času na šíření většího množství dat bez zpomalení.
-- Prevence bobtnání databáze (udržitelnost): Úprava síťových poplatků tak, aby přesně odrážely dlouhodobé hardwarové náklady na ukládání nových dat, odblokování budoucího zvyšování limitu plynu a zároveň zabránění degradaci výkonu hardwaru.
+- Prevence bobtnání databáze (udržitelnost): Úprava síťových poplatků tak, aby přesně odrážely dlouhodobé hardwarové náklady na ukládání nových dat, což odblokuje budoucí zvyšování limitu gasu a zároveň zabrání zhoršení výkonu hardwaru.
 
-Stručně řečeno, Glamsterdam zavede strukturální změny, které zajistí, že s rostoucí kapacitou sítě zůstane udržitelná a výkon zůstane vysoký.
-
+Stručně řečeno, Glamsterdam zavede strukturální změny, které zajistí, že s tím, jak síť zvyšuje kapacitu, zůstane udržitelná a výkon zůstane vysoký.
 
 ## Škálování l1 a paralelní zpracování {#scale-l1}
 
@@ -117,13 +115,13 @@ Přidávání nových účtů, tokenů a [chytrých kontraktů](/glossary/#smart
 
 Některé akce, které vytvářejí stav na Ethereu, jako je vytváření nových účtů nebo nasazení velkých chytrých kontraktů, byly relativně levné ve srovnání s trvalým úložným prostorem, který zabírají na uzlech sítě, například nasazení kontraktu je na bajt výrazně levnější než vytváření úložných slotů.
 
-Bez úprav by se růst stavu Etherea stal neudržitelným, protože síť škáluje směrem k hranici limitu plynu 200 milionů umožněné Glamsterdamem (přičemž vývojáři v současné době testují s referenčním limitem plynu bloku 150 milionů, aby odvodili přesné ceny stavu).
+Bez úprav by se růst stavu Etherea stal neudržitelným, protože síť škáluje směrem k hranici limitu gasu 200 milionů umožněné Glamsterdamem (přičemž vývojáři v současné době testují s referenčním limitem gasu bloku 150 milionů, aby odvodili přesné ceny stavu).
 
 **Zvýšení nákladů na gas za vytvoření stavu (neboli EIP-8037)** harmonizuje náklady tím, že je váže na skutečnou velikost vytvářených dat, a aktualizuje poplatky tak, aby byly úměrné množství trvalých dat, která operace vytváří nebo ke kterým přistupuje.
 
 EIP-8037 také zavádí model rezervoáru pro předvídatelnější řízení těchto nákladů; poplatky za gas stavu čerpají nejprve z `state_gas_reservoir` a operační kód `GAS` vrací pouze `gas_left`, což zabraňuje exekučním rámcům ve špatném výpočtu dostupného gasu. Na podporu toho dostávají základní úlohy na pozadí dodatečný povolený limit paliva, který jde přímo do této vyhrazené rezervy, což zajišťuje, že kritické síťové operace neselžou jen proto, že ukládání trvalých dat vyžaduje více zdrojů.
 
-Před EIP-8037 sdílely výpočetní práce (aktivní zpracování) i trvalé ukládání dat (uložení chytrého kontraktu do databáze sítě) stejný limit plynu. Model rezervoáru rozděluje účtování: limit plynu pro skutečnou výpočetní práci transakce (zpracování) a pro dlouhodobé ukládání dat (gas stavu). Oddělení těchto dvou pomáhá zabránit tomu, aby samotná velikost dat aplikace vyčerpala limit plynu; pokud vývojáři poskytnou dostatek prostředků k naplnění rezervoáru pro ukládání dat, mohou nasadit mnohem větší a složitější chytré kontrakty.
+Před EIP-8037 sdílely výpočetní práce (aktivní zpracování) i trvalé ukládání dat (uložení chytrého kontraktu do databáze sítě) stejný limit gasu. Model rezervoáru rozděluje účtování: limit gasu pro skutečnou výpočetní práci transakce (zpracování) a pro dlouhodobé ukládání dat (gas stavu). Oddělení těchto dvou pomáhá zabránit tomu, aby samotná velikost dat aplikace vyčerpala limit gasu; pokud vývojáři poskytnou dostatek prostředků k naplnění rezervoáru pro ukládání dat, mohou nasadit mnohem větší a složitější chytré kontrakty.
 
 Přesnější a předvídatelnější oceňování ukládání dat pomůže Ethereu bezpečně zvýšit jeho rychlost a kapacitu bez bobtnání databáze. Tato udržitelnost umožní provozovatelům uzlů nadále používat (relativně) cenově dostupný hardware po mnoho let, čímž udrží domácí staking přístupný pro zachování decentralizace sítě.
 
@@ -142,14 +140,14 @@ V důsledku toho jsou některé specifické příkazy v současné době podhodn
 
 Sladění nákladů na přístup ke stavu také pomáhá učinit Ethereum odolnějším. Protože tyto náročné akce čtení dat jsou uměle levné, mohl by škodlivý útočník spamovat síť tisíci složitých datových požadavků v jediném bloku, než by dosáhl limitu poplatků sítě, což by mohlo způsobit zastavení nebo pád sítě (útok typu odepření služby). I bez škodlivého úmyslu nejsou vývojáři ekonomicky motivováni k vytváření efektivních aplikací, pokud je čtení síťových dat příliš levné.
 
-Přesnějším oceněním akcí přístupu ke stavu může být Ethereum odolnější vůči náhodným nebo úmyslným zpomalením, zatímco sladění síťových nákladů s hardwarovou zátěží se ukazuje jako udržitelnější základ pro budoucí zvyšování limitu plynu.
+Přesnějším oceněním akcí přístupu ke stavu může být Ethereum odolnější vůči náhodným nebo úmyslným zpomalením, zatímco sladění síťových nákladů s hardwarovou zátěží se ukazuje jako udržitelnější základ pro budoucí zvyšování limitu gasu.
 
 **Zdroje**: [Technická specifikace EIP-8038](https://eips.ethereum.org/EIPS/eip-8038)
 
 
 ## Odolnost sítě {#network-resilience}
 
-Vylepšení povinností validátorů a procesů výstupu zajišťují stabilitu sítě během událostí hromadné penalizace a demokratizují likviditu. Tato vylepšení činí síť stabilnější a zajišťují, že se všemi účastníky, velkými i malými, je zacházeno spravedlivě.
+Vylepšení povinností validátorů a procesů výstupu zajišťují stabilitu sítě během událostí hromadné penalizace a urychlují to, jak rychle mohou stakeři přesouvat svůj stake. Tato vylepšení činí síť stabilnější a zajišťují, že se všemi účastníky, velkými i malými, je zacházeno spravedlivě.
 
 ### Vyloučení penalizovaných validátorů z navrhování {#exclude-slashed-validators}
 
@@ -164,28 +162,25 @@ Protože bloky od penalizovaných navrhovatelů jsou automaticky odmítnuty jako
 
 **Zdroje**: [Technická specifikace EIP-8045](https://eips.ethereum.org/EIPS/eip-8045)
 
-### Umožnění výstupům používat konsolidační frontu {#let-exits-use-the-consolidation-queue}
+### Zvýšení fluktuace výstupů a konsolidací {#increase-exit-and-consolidation-churn}
 
-- Uzavírá mezeru, která umožňuje validátorům s vysokým zůstatkem opustit síť rychleji než menším validátorům prostřednictvím konsolidační fronty
-- Umožňuje běžným výstupům přetéct do této druhé fronty, když má volnou kapacitu, což zkracuje dobu výběru ze stakingu během období s vysokým objemem
-- Udržuje přísnou bezpečnost, aby se zabránilo změně základních bezpečnostních limitů Etherea nebo oslabení sítě
+- Výrazně zkracuje dobu výběru ze stakingu tím, že umožňuje škálovat kapacitu výstupů s celkovým množstvím stakovaného ETH, namísto toho, aby byla omezena pevnou sazbou
+- Poskytuje konsolidacím validátorů jejich vlastní vyhrazenou kapacitu fronty, což urychluje přechod na větší a efektivnější validátory
+- Udržuje bezpečnost sítě prostřednictvím pečlivě analyzovaných bezpečnostních parametrů
 
-Vzhledem k tomu, že [upgrade Pectra](/roadmap/pectra) zvýšil maximální efektivní zůstatek pro validátory Etherea z 32 ETH na 2 048 ETH, technická mezera umožňuje validátorům s vysokým zůstatkem opustit síť rychleji než menším validátorům prostřednictvím konsolidační fronty.
+Limit fluktuace Etherea je bezpečnostní limit rychlosti, jakou mohou validátory vstupovat, vystupovat nebo slučovat (konsolidovat) své stakované ETH, aby se zajistilo, že bezpečnost sítě nebude nikdy destabilizována. Dnes výstupy a aktivace sdílejí jeden zastropovaný limit, takže v obdobích vysoké poptávky mohou stakeři čelit dlouhému čekání na výběr svého ETH. Konsolidace, při kterých se validátory slučují do větších s až 2 048 ETH (umožněno [upgradem Pectra](/roadmap/pectra)), také soutěží o tuto omezenou kapacitu, což znamená, že konsolidace celé sady validátorů by při současném tempu trvala roky.
 
-**Umožnění výstupům používat konsolidační frontu (neboli EIP-8080)** demokratizuje konsolidační frontu pro všechny výstupy ze stakingu a vytváří jedinou spravedlivou frontu pro všechny.
+**Zvýšení fluktuace výstupů a konsolidací (neboli EIP-8061)** reorganizuje tyto limity do samostatných pruhů:
 
-Abychom si rozebrali, jak to funguje dnes:
+- Aktivace validátorů si zachovávají svůj stávající zastropovaný limit beze změny
+- Výstupy již nejsou zastropovány a místo toho se škálují s celkovým množstvím stakovaného ETH
+- Konsolidace získávají svou vlastní vyhrazenou kapacitu, zhruba poloviční oproti kombinovanému limitu aktivací a výstupů
 
-- Limit fluktuace Etherea je bezpečnostní limit rychlosti, jakou mohou validátoři vstupovat, vystupovat nebo slučovat (konsolidovat) své stakované ETH, aby se zajistilo, že bezpečnost sítě nebude nikdy destabilizována
-- Protože konsolidace validátoru je náročnější akce s více pohyblivými částmi než standardní výstup validátoru, spotřebovává větší část tohoto bezpečnostního rozpočtu (limitu fluktuace)
-- Konkrétně protokol diktuje, že přesné bezpečnostní náklady na jeden standardní výstup jsou dvě třetiny (2/3) nákladů na jednu konsolidaci
+Při současných úrovních stakingu to zvyšuje kapacitu výstupů zhruba 4x a kapacitu konsolidací zhruba 2x, což znamená, že stakeři mohou vybírat své ETH mnohem rychleji během období vysoké poptávky a síť rychleji přechází na menší a efektivnější sadu validátorů.
 
-Spravedlivější fronty výstupů umožní standardním výstupům vypůjčit si nevyužité místo z konsolidační fronty během období vysoké poptávky po výstupech s uplatněním směnného kurzu „3 za 2“ (na každá 2 nevyužitá konsolidační místa může síť bezpečně zpracovat 3 standardní výstupy). Tento faktor fluktuace 3/2 vyrovnává poptávku napříč konsolidačními a výstupními frontami.
+Protože se stake může pohybovat do sítě a ze sítě rychleji, tato změna zhruba na polovinu zkracuje dobu, po kterou může uzel zůstat offline, než bude potřebovat nedávný důvěryhodný kontrolní bod, aby se mohl bezpečně znovu připojit k síti (období slabé subjektivity, z přibližně 15,7 dne na přibližně 7 dní). Tento kompromis byl pečlivě analyzován, aby bylo zajištěno zachování bezpečnosti sítě.
 
-Demokratizace přístupu ke konsolidační frontě zvýší rychlost, jakou mohou uživatelé vybrat svůj stake během období vysoké poptávky, až 2,5krát, aniž by byla ohrožena bezpečnost sítě.
-
-**Zdroje**: [Technická specifikace EIP-8080](https://eips.ethereum.org/EIPS/eip-8080)
-
+**Zdroje**: [Technická specifikace EIP-8061](https://eips.ethereum.org/EIPS/eip-8061)
 
 ## Zlepšení uživatelské a vývojářské zkušenosti {#improve-user-developer-experience}
 
@@ -196,7 +191,7 @@ Upgrade Glamsterdam Etherea si klade za cíl zlepšit uživatelskou zkušenost, 
 - Snižuje základní poplatek za transakce, čímž snižuje celkové náklady na jednoduchou nativní platbu v ETH
 - Činí menší převody dostupnějšími, čímž zvyšuje životaschopnost Etherea jako běžného prostředku směny
 
-Všechny transakce na Ethereu mají dnes paušální základní poplatek za plyn, bez ohledu na to, jak jednoduché nebo složité je jejich zpracování. **Snížení vnitřního gasu transakce (neboli EIP-2780)** navrhuje snížení tohoto základního poplatku, aby byl standardní převod ETH mezi existujícími účty až o **71 % levnější**.
+Všechny transakce na Ethereu mají dnes paušální základní poplatek za gas, bez ohledu na to, jak jednoduché nebo složité je jejich zpracování. **Snížení vnitřního gasu transakce (neboli EIP-2780)** navrhuje snížení tohoto základního poplatku, aby byl standardní převod ETH mezi existujícími účty až o **71 % levnější**.
 
 Snížení vnitřního gasu transakce funguje tak, že rozděluje transakční poplatek tak, aby odrážel pouze základní, nezbytnou práci, kterou počítače provozující síť skutečně dělají, jako je ověření digitálního podpisu a aktualizace zůstatku. Protože základní platba v ETH neprovádí složitý kód ani nenese další data, tento návrh by snížil její poplatek tak, aby odpovídal její lehké stopě.
 
@@ -286,16 +281,16 @@ Hlavní funkcí je ePBS (EIP-7732), která odděluje náročný úkol validace s
 
 Ano, Glamsterdam s největší pravděpodobností sníží poplatky pro běžné uživatele! Snížení vnitřního gasu transakce (neboli EIP-2780) snižuje základní poplatek za odesílání ETH, díky čemuž je používání ETH pro každodenní platby mnohem levnější.
 
-Kromě toho pro dlouhodobou udržitelnost zavádí Glamsterdam seznamy přístupů na úrovni bloku (BALs). To umožňuje paralelní zpracování a připravuje vrstvu 1 (l1) na bezpečné zvládnutí vyšších celkových limitů plynu v budoucnu, což pravděpodobně sníží náklady na gas na transakci s rostoucí kapacitou.
+Kromě toho pro dlouhodobou udržitelnost zavádí Glamsterdam seznamy přístupů na úrovni bloku (BALs). To umožňuje paralelní zpracování a připravuje vrstvu 1 (l1) na bezpečné zvládnutí vyšších celkových limitů gasu v budoucnu, což pravděpodobně sníží náklady na gas na transakci s rostoucí kapacitou.
 
 ### Dojde po Glamsterdamu k nějakým změnám v mých stávajících chytrých kontraktech? {#will-my-smart-contracts-change}
 
 Stávající kontrakty budou po Glamsterdamu nadále normálně fungovat. Vývojáři pravděpodobně získají několik nových nástrojů a měli by zkontrolovat své využití gasu:
 
-- Zvýšení maximální velikosti kontraktu (neboli EIP-7954) umožňuje vývojářům nasadit větší aplikace, čímž se zvyšuje limit maximální velikosti kontraktu ze zhruba 24 KiB na 32 KiB.
+- Zvýšení maximální velikosti kontraktu (neboli EIP-7954) umožňuje vývojářům nasazovat větší aplikace, čímž se zvyšuje limit maximální velikosti kontraktu zhruba z 24 KiB na 64 KiB.
 - Deterministické předběžné nasazení továrny (neboli EIP-7997) zavádí univerzální, vestavěný tovární kontrakt. Umožňuje vývojářům nasadit své aplikace a peněženky s chytrými kontrakty na přesně stejnou adresu napříč všemi zúčastněnými EVM řetězci.
-- Pokud se vaše aplikace spoléhá na složité sledování při hledání převodů ETH, Převody a spalování ETH emitují log (neboli EIP-7708) vám umožní přejít na používání logů pro jednodušší a spolehlivější účtování.
-- Zvýšení nákladů na gas za vytvoření stavu (neboli EIP-8037) a aktualizace nákladů na gas za přístup ke stavu (neboli EIP-8038) zavádějí nové modely udržitelnosti, které změní určité náklady na nasazení kontraktu, protože vytváření nových účtů nebo trvalého úložiště bude mít nový standardizovaný pevný poplatek založený na velikosti vytvořených dat.
+- Pokud vaše aplikace spoléhá na složité trasování k nalezení převodů ETH, Převody a spalování ETH emitují log (neboli EIP-7708) vám umožní přejít na používání logů pro jednodušší a spolehlivější účtování.
+- Zvýšení nákladů na gas za vytvoření stavu (neboli EIP-8037) a Aktualizace nákladů na gas za přístup ke stavu (neboli EIP-8038) zavádějí nové modely udržitelnosti, které změní určité náklady na nasazení kontraktu, protože vytváření nových účtů nebo trvalého úložiště bude mít nový standardizovaný fixní poplatek založený na velikosti vytvořených dat.
 
 ### Jak Glamsterdam ovlivní úložiště uzlů a hardwarové požadavky? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 

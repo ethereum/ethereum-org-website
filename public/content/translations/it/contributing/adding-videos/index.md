@@ -4,9 +4,7 @@ description: La politica per l'aggiunta di video su ethereum.org
 lang: it
 ---
 
-# Aggiungere video {#adding-videos}
-
-La [galleria video di ethereum.org](/videos/) presenta video su Ethereum e sull'ecosistema di Ethereum da parte di creatori della community e fonti affidabili. Chiunque può suggerire l'aggiunta di un video.
+La [galleria video di ethereum.org](/videos/) presenta video su Ethereum e sull'ecosistema di Ethereum realizzati da creatori della community e fonti affidabili. Chiunque può suggerire l'aggiunta di un video.
 
 ## Politica di inserimento {#listing-policy}
 
@@ -14,27 +12,25 @@ Ethereum.org è una risorsa educativa e neutrale. La galleria video è curata pe
 
 - **Educare** gli utenti sulla tecnologia, l'ecosistema e la community di Ethereum
 - **Rimanere accurata** nei suoi contenuti tecnici
-- **Rimanere pertinente** per la community di Ethereum
+- **Restare rilevante** per la community di Ethereum
 
 Il sito non elenca video che promuovono principalmente un prodotto specifico, un token o un servizio commerciale.
-
 
 ## Criteri di inclusione {#criteria-for-inclusion}
 
 ### Requisiti fondamentali {#must-haves}
 
-- **Incentrato su Ethereum** – Il video deve riguardare principalmente Ethereum, la sua tecnologia, il suo ecosistema o la sua community. I video su argomenti generali della blockchain sono accettabili solo se supportano o si riferiscono in modo sostanziale a una pagina educativa del sito, o se fanno riferimento a Ethereum.
+- **Incentrato su Ethereum** – Il video deve riguardare principalmente Ethereum, la sua tecnologia, il suo ecosistema o la sua community. I video su argomenti generali legati alla blockchain sono accettabili solo se supportano o si riferiscono in modo sostanziale a una pagina educativa del sito, o se menzionano Ethereum.
 - **Valore educativo** – Il video dovrebbe insegnare agli spettatori qualcosa su Ethereum o celebrare la community globale di Ethereum. I contenuti promozionali o di marketing non saranno accettati.
 - **Informazioni accurate** – Il contenuto tecnico deve essere corretto nei fatti e aggiornato. I video obsoleti su funzionalità deprecate potrebbero essere rimossi.
 - **Produzione di qualità** – Il video dovrebbe avere una qualità audio e video ragionevolmente chiara.
-- **Disponibile pubblicamente** – Il video deve essere ospitato su una risorsa aperta o su una piattaforma accessibile come YouTube, ed essere liberamente accessibile senza paywall o requisiti di registrazione.
+- **Disponibile pubblicamente** – Il video deve essere ospitato su una risorsa aperta o su una piattaforma accessibile come YouTube, ed essere liberamente accessibile senza paywall o obbligo di registrazione.
 
-### Caratteristiche gradite {#nice-to-haves}
+### Requisiti preferenziali {#nice-to-haves}
 
 - **Presenza di una trascrizione** – I video con trascrizioni migliorano l'accessibilità e la SEO. Se non ne hai una, il team di ethereum.org può aiutarti a generarla.
-- **Da una fonte credibile** – I contenuti provenienti da educatori, ricercatori e fonti affermate hanno la priorità.
-- **Attuale e sempreverde** – I contenuti che rimangono pertinenti nel tempo sono preferiti rispetto al materiale sensibile al fattore tempo.
-
+- **Provenienza da una fonte credibile** – I contenuti provenienti da educatori, ricercatori e fonti affermate hanno la priorità.
+- **Attuale e sempreverde** – I contenuti che rimangono rilevanti nel tempo sono preferiti rispetto al materiale legato a un periodo specifico.
 
 ## Come aggiungere un video {#how-to-add-a-video}
 
@@ -55,7 +51,7 @@ Se desideri aggiungere il video tu stesso, segui questi passaggi:
 Crea una nuova directory e un file `index.md` in:
 
 ```
-public/content/videos/{slug-del-tuo-video}/index.md
+public/content/videos/{your-video-slug}/index.md
 ```
 
 Lo slug dovrebbe essere sicuro per gli URL, in minuscolo e utilizzare i trattini (es. `blockchain-101-visual-demo`).
@@ -92,7 +88,7 @@ author: Channel Name
 | `uploadDate` | Sì | Data di caricamento originale nel formato `YYYY-MM-DD` |
 | `duration` | Sì | Durata del video come `H:MM:SS` o `M:SS` |
 | `educationLevel` | Sì | `beginner`, `intermediate` o `advanced` |
-| `topic` | Sì | Array di tag di argomenti per il filtraggio della galleria |
+| `topic` | Sì | Array di tag degli argomenti per il filtraggio della galleria |
 | `format` | Sì | `explainer`, `presentation`, `interview`, `tutorial` o `panel` |
 | `author` | Sì | Nome del creatore o del canale |
 | `breadcrumb` | No | Etichetta breve personalizzata per la navigazione breadcrumb |
@@ -125,24 +121,29 @@ Se non hai una trascrizione, puoi lasciare il corpo vuoto e il team ne genererà
 
 #### Passaggio 4: Scegliere i tag degli argomenti {#step-4}
 
-Scegli i tag degli argomenti che corrispondono alle categorie esistenti utilizzate nella galleria. Le categorie attuali e i relativi tag includono:
+Scegli i tag degli argomenti dall'elenco sottostante. Ogni tag corrisponde direttamente a una categoria di filtro nella galleria video: usa il nome del tag esattamente come mostrato.
 
-- **Come funziona Ethereum**: `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
-- **Aggiornamenti della rete**: `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
-- **Roadmap e priorità**: `roadmap-and-priorities`, `pbs`, `mev`
-- **Scalabilità e layer 2**: `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
-- **Casi d'uso**: `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
-- **Privacy e sicurezza**: `privacy-and-security`, `privacy`, `authentication`
-- **Storie della community**: `community-stories`, `contributing`, `translations`, `community`
+Un video può avere più tag per apparire in più filtri della galleria:
 
-Per assicurarti che il tuo video appaia in uno scaffale di categoria della galleria, includi almeno un tag chiave di categoria (il nome in grassetto in kebab-case, es. `use-cases` o `scaling-and-layer-2`). I video senza un tag di categoria riconosciuto appariranno solo nella vista "Tutti" e nei risultati di ricerca.
+| Tag | Filtro della galleria |
+|---|---|
+| `how-ethereum-works` | Come funziona Ethereum |
+| `network-upgrades` | Aggiornamenti della rete |
+| `roadmap-and-priorities` | Roadmap e priorità |
+| `scaling-and-layer-2` | Scalabilità e layer 2 |
+| `use-cases` | Casi d'uso |
+| `privacy` | Privacy |
+| `security` | Sicurezza |
+| `community-stories` | Storie della community |
+| `events` | Eventi |
 
-Puoi anche utilizzare nuovi tag: saranno disponibili per futuri raggruppamenti di categorie.
+Ogni video dovrebbe avere almeno un tag da questo elenco. I video senza un tag riconosciuto appariranno solo nella vista "Tutti" e nei risultati di ricerca.
+
+Il tag `community-stories` fa sì che un video appaia anche nella [pagina delle Storie](/stories/).
 
 #### Passaggio 5: Inviare la PR {#step-5}
 
-Apri una pull request con le tue modifiche al branch `dev`. Il team esaminerà la tua richiesta e fornirà un feedback.
-
+Apri una pull request con le tue modifiche verso il branch `dev`. Il team esaminerà la tua richiesta e fornirà un feedback.
 
 ## Manutenzione {#maintenance}
 
@@ -153,7 +154,6 @@ I video elencati vengono regolarmente revisionati per garantire che:
 - Abbiano link di hosting/YouTube funzionanti
 
 Se noti un problema con un video elencato, [crea una issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) o invia un'email a [website@ethereum.org](mailto:website@ethereum.org).
-
 
 ## Termini di utilizzo {#terms-of-use}
 

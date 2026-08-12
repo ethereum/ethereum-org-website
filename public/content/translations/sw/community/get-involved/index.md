@@ -11,7 +11,7 @@ Anza kwa kusoma kuhusu dhamira na maadili ya ethereum.org katika [kanuni zetu za
 ## Wasanidi Programu <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Jifunze kuhusu na ujaribu Ethereum kwenye [ethereum.org/developers/](/developers/)
-- Hudhuria hackathon ya [ETHGlobal](https://ethglobal.co/) karibu nawe!
+- Hudhuria hackathon ya [ETHGlobal](https://ethglobal.com/) karibu nawe!
 - Angalia [miradi inayohusiana na eneo lako la utaalamu au lugha ya programu unayopendelea](/developers/docs/programming-languages/)
 - Tazama au ushiriki katika [simu za Mwafaka na Tabaka la Utekelezaji](https://www.youtube.com/@EthereumProtocol/streams)
 - [Orodha ya matamanio ya Programu ya Usaidizi wa Ekolojia](https://esp.ethereum.foundation/wishlist/) - zana, nyaraka, na maeneo ya miundombinu ambapo Programu ya Usaidizi wa Ekolojia ya Ethereum inatafuta kikamilifu maombi ya ruzuku
@@ -59,10 +59,10 @@ Ikiwa wewe si msanidi programu, inaweza kuwa vigumu kujua pa kuanzia katika Ethe
 
 - Kuna simu nyingi za jamii za programu huria, na kuwa na waandishi wa dondoo ni msaada mkubwa. Ikiwa una nia, jiunge na [Discord ya Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu), na ujitambulishe!
 
-### Tafsiri maudhui ya Ethereum katika lugha yako ya asili {#translate-ethereum}
+### Saidia kuboresha maudhui ya Ethereum yaliyotafsiriwa {#translate-ethereum}
 
-- ethereum.org inasimamia Programu ya Kutafsiri inayotafsiri tovuti, na rasilimali nyingine, katika lugha nyingi tofauti
-- Jua jinsi ya kushiriki [hapa](/contributing/translation-program)
+- Programu ya Tafsiri ya ethereum.org inafikia ukingoni na haifanyi tena uingizaji wa watafsiri wapya—tazama [ukurasa wa programu](/contributing/translation-program/) kwa hali na historia yake
+- Bado unaweza kusaidia kwa [kuripoti makosa katika tafsiri zilizopo](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 
 ### Endesha nodi {#run-a-node}
 
@@ -80,7 +80,7 @@ Kwa kuweka dhamana ya ETH yako unaweza kupata tuzo huku ukisaidia kulinda mtanda
 
 Ekolojia ya Ethereum ina dhamira ya kufadhili bidhaa za umma na miradi yenye athari. Kwa michango midogo sana unaweza kuonyesha msaada wako na kuruhusu kazi muhimu kufanikiwa.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Wataalamu wa Fedha na Wahasibu <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

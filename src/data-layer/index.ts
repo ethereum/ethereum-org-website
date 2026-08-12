@@ -17,7 +17,7 @@ import type {
 import type { CommunityEventsReturnType } from "@/lib/interfaces"
 
 import type { DeveloperToolsDataEnvelope } from "./fetchers/developer-tools/utils"
-import type { BlobscanStats } from "./fetchers/fetchBlobscanStats"
+import type { BlobStats } from "./fetchers/fetchBlobStats"
 import type { GasPriceData } from "./fetchers/fetchGasPrice"
 import type { CoinGeckoCoinMarketResponse } from "./fetchers/fetchStablecoinsData"
 import type { GlossaryEntry } from "./fetchers/fetchTranslationGlossary"
@@ -36,7 +36,7 @@ export const getCommunityPicks = () => get<CommunityPick[]>(KEYS.COMMUNITY_PICKS
 export const getCalendarEvents = () => get<CommunityEventsReturnType>(KEYS.CALENDAR_EVENTS)
 export const getRSSData = () => get<RSSItem[][]>(KEYS.RSS)
 export const getAttestantPosts = () => get<RSSItem[]>(KEYS.POSTS)
-export const getBlobscanStats = () => get<BlobscanStats>(KEYS.BLOBSCAN_STATS)
+export const getBlobStats = () => get<BlobStats>(KEYS.BLOB_STATS)
 export const getEthereumMarketcapData = () => get<MetricReturnData>(KEYS.ETHEREUM_MARKETCAP)
 export const getEthereumStablecoinsMcapData = () => get<MetricReturnData>(KEYS.ETHEREUM_STABLECOINS_MCAP)
 export const getGasPriceData = () => get<GasPriceData>(KEYS.GAS_PRICE)

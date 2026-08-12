@@ -1,6 +1,6 @@
 ---
-title: Як я можу долучитися?
-description: Як долучитися до спільноти Етеріуму.
+title: "Як я можу долучитися?"
+description: "Як долучитися до спільноти Етеріуму."
 lang: uk
 ---
 
@@ -11,7 +11,7 @@ lang: uk
 ## Розробники <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Дізнайтеся більше та спробуйте Етеріум на [ethereum.org/developers/](/developers/)
-- Відвідайте хакатон [ETHGlobal](https://ethglobal.co/) поблизу вас!
+- Відвідайте хакатон [ETHGlobal](https://ethglobal.com/) поблизу вас!
 - Перегляньте [проєкти, пов'язані з вашою сферою знань або обраною мовою програмування](/developers/docs/programming-languages/)
 - Дивіться або беріть участь у [дзвінках щодо консенсусу та рівня виконання](https://www.youtube.com/@EthereumProtocol/streams)
 - [Список побажань Ecosystem Support Program](https://esp.ethereum.foundation/wishlist/) — інструменти, документація та інфраструктура, для яких Програма підтримки екосистеми Етеріуму активно шукає заявки на гранти
@@ -59,10 +59,10 @@ lang: uk
 
 - Існує багато дзвінків спільноти з відкритим вихідним кодом, і наявність людей, які ведуть нотатки, є величезною допомогою. Якщо вам це цікаво, приєднуйтесь до [Discord Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) та розкажіть про себе!
 
-### Перекладайте контент про Етеріум рідною мовою {#translate-ethereum}
+### Допоможіть покращити перекладений контент про Етеріум {#translate-ethereum}
 
-- ethereum.org підтримує Програму перекладу, яка перекладає вебсайт та інші ресурси багатьма різними мовами
-- Дізнайтеся, як долучитися, [тут](/contributing/translation-program)
+- Програма перекладу ethereum.org згортається і більше не проводить онбординг нових перекладачів — дивіться [сторінку програми](/contributing/translation-program/) для отримання інформації про її статус та історію
+- Ви все ще можете допомогти, [повідомляючи про помилки в існуючих перекладах](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 
 ### Запустіть вузол {#run-a-node}
 
@@ -80,7 +80,7 @@ lang: uk
 
 Екосистема Етеріуму має на меті фінансувати суспільні блага та впливові проєкти. За допомогою дуже невеликих пожертв ви можете висловити свою підтримку та дозволити реалізувати важливу роботу.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Фінансові спеціалісти та бухгалтери <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

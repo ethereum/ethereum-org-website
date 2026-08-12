@@ -134,7 +134,7 @@ _आकृती [Ethereum EVM illustrated](https://takenobu-hs.github.io/downlo
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _ओपन सोर्स व्यवहार गॅस किंमत अंदाजक_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _व्यवहार शुल्क कमी करण्यासाठी आणि पैसे वाचवण्यासाठी इथेरियम आणि L2 गॅसच्या किमतींचे निरीक्षण करा आणि ट्रॅक करा_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _गॅसचा अंदाज लावणारे क्रोम् एक्स्टेंशन जे Type 0 लेगसी व्यवहार आणि Type 2 EIP-1559 व्यवहार या दोन्हींना समर्थन देते._
-- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _मुख्यनेट, आर्बिट्रम् आणि पॉलिगॉन् वरील विविध प्रकारच्या व्यवहारांसाठी तुमच्या स्थानिक चलनात गॅस शुल्काची गणना करा._
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _मुख्यनेट, आर्बिट्रम् आणि पॉलिगॉन् वरील विविध प्रकारच्या व्यवहारांसाठी तुमच्या स्थानिक चलनात गॅस शुल्काची गणना करा._
 
 ## संबंधित साधने {#related-tools}
 

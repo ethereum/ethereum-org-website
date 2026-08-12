@@ -184,7 +184,7 @@ function auctionEnd() external {
 
 ### إرشادات لتشغيل الاختبار القائم على الخصائص للعقود الذكية {#running-property-based-tests}
 
-يبدأ تشغيل الاختبار القائم على الخصائص عادةً بتحديد خاصية (على سبيل المثال، عدم وجود [تجاوز السعة للأعداد الصحيحة](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)) أو مجموعة من الخصائص التي تريد التحقق منها في عقد ذكي. قد تحتاج أيضًا إلى تحديد نطاق من القيم التي يمكن للبرنامج من خلالها إنشاء بيانات لمدخلات المعاملة عند كتابة اختبارات الخصائص.
+يبدأ تشغيل الاختبار القائم على الخصائص عادةً بتحديد خاصية (على سبيل المثال، عدم وجود [تجاوز السعة للأعداد الصحيحة](https://github.com/ConsenSysDiligence/mythril/wiki/Integer-Overflow)) أو مجموعة من الخصائص التي تريد التحقق منها في عقد ذكي. قد تحتاج أيضًا إلى تحديد نطاق من القيم التي يمكن للبرنامج من خلالها إنشاء بيانات لمدخلات المعاملة عند كتابة اختبارات الخصائص.
 
 بمجرد تكوينها بشكل صحيح، ستقوم أداة اختبار الخصائص بتنفيذ وظائف عقودك الذكية بمدخلات تم إنشاؤها عشوائيًا. إذا كانت هناك أي انتهاكات للتأكيد، فيجب أن تحصل على تقرير ببيانات إدخال ملموسة تنتهك الخاصية قيد التقييم. راجع بعض الأدلة أدناه للبدء في تشغيل الاختبار القائم على الخصائص باستخدام أدوات مختلفة:
 
@@ -195,7 +195,7 @@ function auctionEnd() external {
 - **[الاختبار العشوائي للعقود باستخدام إيكيدنا](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
 - **[الاختبار العشوائي للعقود باستخدام Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[التنفيذ الرمزي للعقود الذكية باستخدام مانتيكور](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
-- **[التنفيذ الرمزي للعقود الذكية باستخدام Mythril](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
+- **[التنفيذ الرمزي للعقود الذكية باستخدام Mythril](https://github.com/ConsenSysDiligence/mythril/blob/develop/docs/source/tutorial.rst)**
 
 ## الاختبار اليدوي للعقود الذكية {#manual-testing-for-smart-contracts}
 
@@ -289,7 +289,7 @@ function auctionEnd() external {
 
 - **[مانتيكور](https://manticore.readthedocs.io/en/latest/index.html)** - _إطار عمل للتنفيذ الرمزي الديناميكي لتحليل رمز البايت لآلة إيثيريوم الافتراضية (EVM)._
 
-- **[Mythril](https://github.com/ConsenSys/mythril-classic)** - _أداة تقييم رمز البايت لآلة إيثيريوم الافتراضية (EVM) لاكتشاف الثغرات الأمنية في العقد باستخدام تحليل التلوث (taint analysis)، والتحليل الرمزي الملموس (concolic analysis)، والتحقق من تدفق التحكم._
+- **[Mythril](https://github.com/ConsenSysDiligence/mythril)** - _أداة تقييم رمز البايت لآلة إيثيريوم الافتراضية (EVM) لاكتشاف الثغرات الأمنية في العقد باستخدام تحليل التلوث (taint analysis)، والتحليل الرمزي الملموس (concolic analysis)، والتحقق من تدفق التحكم._
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribble هي لغة مواصفات وأداة تحقق في وقت التشغيل تتيح لك إضافة تعليقات توضيحية للعقود الذكية بخصائص تسمح لك باختبار العقود تلقائيًا باستخدام أدوات مثل Diligence Fuzzing أو MythX._
 

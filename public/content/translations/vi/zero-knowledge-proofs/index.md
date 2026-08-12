@@ -1,7 +1,7 @@
 ---
-title: Bằng chứng không kiến thức là gì?
-metaTitle: Bằng chứng không kiến thức
-description: Giới thiệu phi kỹ thuật về bằng chứng không kiến thức dành cho người mới bắt đầu.
+title: "Bằng chứng không kiến thức là gì?"
+metaTitle: "Bằng chứng không kiến thức"
+description: "Giới thiệu phi kỹ thuật về bằng chứng không kiến thức dành cho người mới bắt đầu."
 lang: vi
 ---
 
@@ -58,8 +58,10 @@ Bằng chứng không kiến thức đặc biệt hữu ích trong bối cảnh 
       <p>
         Tìm hiểu thêm về NDI của Bhutan trong <a href="/decentralized-identity/#national-and-government-id">nghiên cứu tình huống về Danh tính phi tập trung</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### Bằng chứng nhân tính {#proof-of-humanity}
@@ -235,5 +237,9 @@ ZK-STARK được coi là miễn nhiễm với mối đe dọa của điện to�
 - [ZK-STARKs — Tạo niềm tin có thể xác minh, ngay cả với Máy tính lượng tử](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [Giới thiệu sơ lược về cách zk-SNARKs có thể thực hiện được](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [Tại sao Bằng chứng không kiến thức (ZKP) là yếu tố thay đổi cuộc chơi đối với Danh tính tự chủ](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
-- [Giải thích EIP-7503: Kích hoạt chuyển khoản riêng tư trên Ethereum với Bằng chứng ZK](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Emmanuel Awosika_
+- [Giải thích EIP-7503: Kích hoạt chuyển khoản riêng tư trên Ethereum với Bằng chứng ZK](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [Trò chơi thẻ bài ZK: trò chơi để tìm hiểu các nguyên tắc cơ bản của ZK và các trường hợp sử dụng trong đời thực](https://github.com/ZK-card/zk-cards) - _ZK-Cards_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

@@ -1,8 +1,9 @@
 ---
-title: Пектра
-metaTitle: Prague-Electra (Пектра)
-description: Узнайте об обновлении протокола Пектра
+title: "Пектра"
+metaTitle: "Prague-Electra (Пектра)"
+description: "Узнайте об обновлении протокола Пектра"
 lang: ru
+template: upgrade
 authors: ["Nixo", "Марио Хавел"]
 ---
 
@@ -121,7 +122,6 @@ _Обновление Эфириума Пектра: что нужно знат�
 
 - [Дорожная карта Эфириума](/roadmap/)
 - [FAQ по Пектра](https://epf.wiki/#/wiki/pectra-faq)
-- [Информационная страница Pectra.wtf](https://pectra.wtf)
 - [Как Пектра улучшает опыт стейкеров](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [Информационная страница EIP-7702](https://eip7702.io/)
+- [Информационная страница EIP7702](https://eip7702.io/)
 - [Девнеты Пектра](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

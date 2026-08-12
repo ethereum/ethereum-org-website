@@ -1,7 +1,7 @@
 ---
-title: Web3 简介
-metaTitle: 什么是 Web3 以及它为什么重要？
-description: Web3（万维网的下一次演进）简介及其重要性。
+title: "Web3 简介"
+metaTitle: "什么是 Web3 以及它为什么重要？"
+description: "Web3（万维网的下一次演进）简介及其重要性。"
 lang: zh
 ---
 
@@ -128,9 +128,9 @@ Web3 使用像 [ETH](/glossary/#ether) 这样的代币直接在浏览器中汇�
 
 ### 教育 {#education}
 
-Web3 引入了新的范式，需要学习与 Web 2.0 中使用的不同的心智模型。在 20 世纪 90 年代末 Web 1.0 普及的过程中，也发生过类似的教育活动；万维网的支持者使用了一系列教育技术来教育公众，从简单的隐喻（信息高速公路、浏览器、网上冲浪）到[电视广播](https://www.youtube.com/watch?v=SzQLI7BxfYI)。Web3 并不难，但它有所不同。向 Web2 用户普及这些 Web3 范式的教育举措对其成功至关重要。
+Web3 引入了新的范式，这要求人们学习与 Web 2.0 不同的心智模型。在 20 世纪 90 年代末 Web 1.0 普及之时，也发生过类似的教育运动；万维网的支持者使用了大量的教育手段来向公众普及，从简单的隐喻（信息高速公路、浏览器、网上冲浪）到[电视广播](https://www.youtube.com/watch?v=SzQLI7BxfYI)。Web3 并不难，只是有所不同。向 Web2 用户普及这些 Web3 范式的教育举措对其成功至关重要。
 
-Ethereum.org 通过我们的[翻译计划](/contributing/translation-program/)为 Web3 教育做出贡献，旨在将重要的以太坊内容翻译成尽可能多的语言。
+Ethereum.org 通过其[翻译计划](/contributing/translation-program/)为 Web3 教育做出了贡献，使得重要的以太坊内容能够以数十种语言呈现。
 
 ### 中心化基础设施 {#centralized-infrastructure}
 

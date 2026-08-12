@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/community/get-involved/index.md",
-  "generatedAt": "2026-06-08T07:13:01.109Z",
-  "rootHash": "75c2ecf63ab6",
+  "generatedAt": "2026-07-28T21:54:20.785Z",
+  "rootHash": "98319c15ef07",
   "tree": {
-    "contentHash": "a62a01caa924",
-    "anchorHash": "4bc97a12e698",
+    "contentHash": "9c4290431f43",
+    "anchorHash": "e26ee4418e27",
     "children": {
       "frontmatter:title": {
         "contentHash": "759088733728",
@@ -33,7 +33,7 @@
       },
       "developers": {
         "contentHash": "daae92789477",
-        "anchorHash": "9e8e0af9b03f",
+        "anchorHash": "02a2b8a19469",
         "labelHash": "9b30ac6650b7",
         "children": {
           "_label": {
@@ -54,7 +54,7 @@
           },
           "link:1": {
             "contentHash": "58c45f156e35",
-            "anchorHash": "d9696d5c2954"
+            "anchorHash": "030e06e4d170"
           },
           "prose:10": {
             "contentHash": "60f049edf90c",
@@ -295,8 +295,8 @@
         ]
       },
       "non-technical": {
-        "contentHash": "2d66830d867b",
-        "anchorHash": "12fa1ed95f21",
+        "contentHash": "aeace514f87b",
+        "anchorHash": "4fc3fe274f65",
         "labelHash": "37527855d096",
         "children": {
           "_label": {
@@ -395,27 +395,37 @@
             ]
           },
           "translate-ethereum": {
-            "contentHash": "3349631efb03",
-            "anchorHash": "362dc2229409",
-            "labelHash": "580e1e8d2cee",
+            "contentHash": "91b1b94ebfb2",
+            "anchorHash": "469715398a28",
+            "labelHash": "e36a39fbab49",
             "children": {
               "_label": {
-                "contentHash": "580e1e8d2cee",
+                "contentHash": "e36a39fbab49",
                 "anchorHash": "e3b0c44298fc"
               },
-              "prose:1": {
-                "contentHash": "c25cddcbccbb",
+              "prose:2": {
+                "contentHash": "fd535cc742b1",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:0": {
-                "contentHash": "fcec91509759",
-                "anchorHash": "be4ece9c0bdd"
+                "contentHash": "b7678efb9992",
+                "anchorHash": "0e85b8b4d243"
+              },
+              "prose:3": {
+                "contentHash": "c18a53e1afd3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "d1e79a063f84",
+                "anchorHash": "eac9a19718c6"
               }
             },
             "childrenOrder": [
               "_label",
-              "prose:1",
-              "link:0"
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1"
             ]
           },
           "run-a-node": {
@@ -468,7 +478,7 @@
           },
           "support-projects": {
             "contentHash": "7081d0897d18",
-            "anchorHash": "45b7c92ffd44",
+            "anchorHash": "ba59cb0f2fe6",
             "labelHash": "8666a2d99fc5",
             "children": {
               "_label": {
@@ -481,7 +491,7 @@
               },
               "link:0": {
                 "contentHash": "f24403e9a771",
-                "anchorHash": "2914a28c28c2"
+                "anchorHash": "d7a430c41d47"
               },
               "prose:3": {
                 "contentHash": "3973e022e932",
@@ -921,5 +931,5 @@
       "decentralized-autonomous-organizations-daos"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "f99d74bf2ad4ecaa64f42bc984735fecc8fe83af"
 }

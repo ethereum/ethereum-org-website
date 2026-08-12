@@ -5,6 +5,7 @@ import {
   Card,
   CardBanner,
   CardContent,
+  CardHeader,
   CardParagraph,
   type CardProps,
   CardTitle,
@@ -48,9 +49,11 @@ const LatestCard = ({
     size="md"
     customEventOptions={customEventOptions}
   >
-    <CardBanner className="aspect-video h-auto">
-      <CardImage src={image} />
-    </CardBanner>
+    <CardHeader>
+      <CardBanner className="aspect-video h-auto" zoom>
+        <CardImage src={image} />
+      </CardBanner>
+    </CardHeader>
     <CardContent>
       <CardTitle>{title}</CardTitle>
 

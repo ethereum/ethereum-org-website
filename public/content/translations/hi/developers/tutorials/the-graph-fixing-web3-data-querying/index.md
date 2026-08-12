@@ -84,7 +84,7 @@ GameContract.events.BetPlaced({
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 
-![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.gif)
+![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.mp4#910x692)
 
 ये दोनों चित्र काफी हद तक GraphQL के सार को पकड़ते हैं। दाईं ओर की क्वेरी के साथ हम ठीक से परिभाषित कर सकते हैं कि हमें कौन सा डेटा चाहिए, इसलिए वहां हमें एक ही अनुरोध में सब कुछ मिल जाता है और हमें जो चाहिए उससे अधिक कुछ नहीं मिलता। एक GraphQL सर्वर आवश्यक सभी डेटा प्राप्त करने का काम संभालता है, इसलिए फ्रंटएंड उपभोक्ता पक्ष के लिए इसका उपयोग करना अविश्वसनीय रूप से आसान है। यदि आप रुचि रखते हैं तो [यह एक अच्छी व्याख्या है](https://www.apollographql.com/blog/graphql-explained) कि सर्वर वास्तव में किसी क्वेरी को कैसे संभालता है।
 

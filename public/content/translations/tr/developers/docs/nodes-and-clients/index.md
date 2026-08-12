@@ -157,6 +157,12 @@ Besu'nun kapsamlı [belgeleri](https://besu.hyperledger.org/en/stable/), özelli
 
 Eskiden Turbo-Geth olarak bilinen Erigon, hız ve disk alanı verimliliğine yönelik bir Go Ethereum çatallanması olarak başladı. Erigon, şu anda Go ile yazılmış ancak diğer dillerdeki uygulamaları geliştirilmekte olan, tamamen yeniden mimarilendirilmiş bir Ethereum uygulamasıdır. Erigon'un amacı, Ethereum'un daha hızlı, daha modüler ve daha optimize edilmiş bir uygulamasını sağlamaktır. Yaklaşık 2 TB disk alanı kullanarak 3 günden kısa bir sürede tam bir arşiv düğümü eşzamanlaması gerçekleştirebilir.
 
+
+### ethrex
+
+ethrex, Rust ile yazılmış ve LambdaClass tarafından geliştirilmiş minimalist, modüler bir Ethereum yürütme istemcisidir. Sıfır bilgi ispatı göz önünde bulundurularak oluşturulmuştur ve aynı kod tabanı hem bir katman 1 (l1) yürütme istemcisi hem de çoklu kanıtlayıcılı bir ZK-Rollup (katman 2 (l2)) olarak çalışabilir. Apache 2.0 ve MIT lisansları altında çift lisanslıdır.
+
+[ethrex belgelerini](https://docs.ethrex.xyz/) okuyarak veya [ethrex GitHub deposuna](https://github.com/lambdaclass/ethrex) göz atarak daha fazla bilgi edinin.
 ### Go Ethereum {#geth}
 
 Go Ethereum (kısaca Geth), Ethereum protokolünün orijinal uygulamalarından biridir. Şu anda, en büyük kullanıcı tabanına ve kullanıcılar ile geliştiriciler için çeşitli araçlara sahip en yaygın istemcidir. Go ile yazılmıştır, tamamen açık kaynaklıdır ve GNU LGPL v3 altında lisanslanmıştır.

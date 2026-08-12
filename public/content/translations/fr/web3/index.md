@@ -1,7 +1,7 @@
 ---
 title: Introduction au Web3
 metaTitle: Qu'est-ce que le Web3 et pourquoi est-il important ?
-description: Une introduction au Web3 — la prochaine évolution du World Wide Web — et pourquoi il est important.
+description: "Une introduction au Web3 — la prochaine évolution du World Wide Web — et pourquoi il est important."
 lang: fr
 ---
 
@@ -128,9 +128,9 @@ La barrière technique à l'entrée pour utiliser le Web3 est actuellement trop 
 
 ### Éducation {#education}
 
-Le Web3 introduit de nouveaux paradigmes qui nécessitent l'apprentissage de modèles mentaux différents de ceux utilisés dans le Web2. Une campagne d'éducation similaire a eu lieu lorsque le Web 1.0 gagnait en popularité à la fin des années 1990 ; les partisans du World Wide Web ont utilisé une multitude de techniques éducatives pour éduquer le public, allant de simples métaphores (l'autoroute de l'information, les navigateurs, surfer sur le web) aux [émissions de télévision](https://www.youtube.com/watch?v=SzQLI7BxfYI). Le Web3 n'est pas difficile, mais il est différent. Les initiatives éducatives informant les utilisateurs du Web2 de ces paradigmes du Web3 sont vitales pour son succès.
+Le Web3 introduit de nouveaux paradigmes qui nécessitent d'apprendre des modèles mentaux différents de ceux utilisés dans le Web 2.0. Une campagne d'éducation similaire a eu lieu lorsque le Web 1.0 a gagné en popularité à la fin des années 1990 ; les partisans du World Wide Web ont utilisé une multitude de techniques éducatives pour sensibiliser le public, allant de simples métaphores (l'autoroute de l'information, les navigateurs, surfer sur le Web) à des [émissions de télévision](https://www.youtube.com/watch?v=SzQLI7BxfYI). Le Web3 n'est pas difficile, mais il est différent. Les initiatives éducatives informant les utilisateurs du Web2 de ces paradigmes du Web3 sont vitales pour son succès.
 
-Ethereum.org contribue à l'éducation au Web3 par le biais de notre [Programme de traduction](/contributing/translation-program/), visant à traduire le contenu important d'Ethereum dans autant de langues que possible.
+Ethereum.org a contribué à l'éducation au Web3 grâce à son [programme de traduction](/contributing/translation-program/), qui a rendu d'importants contenus sur Ethereum disponibles dans des dizaines de langues.
 
 ### Infrastructure centralisée {#centralized-infrastructure}
 

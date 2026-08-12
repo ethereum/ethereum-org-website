@@ -31,10 +31,11 @@ import { Emphasis, Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
 import { StandaloneQuizWidget as QuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
-import { Button, ButtonLink } from "@/components/ui/buttons/Button"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
 import {
   Card,
+  CardButtonFake,
   CardContent,
   CardEmoji,
   CardFooter,
@@ -209,7 +210,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
             <Section
               id="who"
-              className="mx-auto max-w-4xl rounded-2xl bg-linear-to-br from-blue-500/20 from-10% to-pink-600/20 to-90% p-page **:[p]:max-w-3xl"
+              className="mx-auto max-w-4xl rounded-2xl bg-fade-primary p-page gradient-reverse **:[p]:max-w-3xl"
             >
               <div className="mb-space flex items-center justify-between gap-8 border-b pb-space max-md:flex-col md:gap-12">
                 <Image
@@ -268,7 +269,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   "*:flex *:items-center *:gap-page *:rounded-2xl *:p-page max-md:*:flex-col!"
                 )}
               >
-                <div className="bg-accent-a/10 md:flex-row-reverse dark:bg-accent-a/20">
+                <div className="bg-tint-accent-a gradient-reverse md:flex-row-reverse">
                   <div data-label="decoration">
                     <Terminal aria-hidden focusable="false" />
                   </div>
@@ -290,7 +291,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   </div>
                 </div>
 
-                <div className="bg-accent-b/10 dark:bg-accent-b/20">
+                <div className="bg-tint-accent-b gradient-reverse">
                   <div data-label="decoration">
                     <Dappnode aria-hidden focusable="false" />
                   </div>
@@ -302,7 +303,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   </p>
                 </div>
 
-                <div className="bg-accent-c/10 md:flex-row-reverse dark:bg-accent-c/20">
+                <div className="bg-tint-accent-c gradient-reverse md:flex-row-reverse">
                   <div data-label="decoration">
                     <Dapptap aria-hidden focusable="false" />
                   </div>
@@ -323,7 +324,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <p>{t("page-run-a-node-choose-your-adventure-1")}</p>
               <p>{t("page-run-a-node-choose-your-adventure-2")}</p>
               <Grid balanced={2}>
-                <Card>
+                <Card hoverLift>
                   <CardHeader>
                     <CardEmoji text=":shopping_cart:" />
                   </CardHeader>
@@ -356,7 +357,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   </CardFooter>
                 </Card>
 
-                <Card>
+                <Card href="#build-your-own">
                   <CardHeader>
                     <CardEmoji text=":building_construction:" />
                   </CardHeader>
@@ -386,9 +387,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     </UnorderedList>
                   </CardContent>
                   <CardFooter>
-                    <Button variant="outline" toId="build-your-own">
-                      {t("page-run-a-node-shop-dappnode")}
-                    </Button>
+                    <CardButtonFake variant="outline">
+                      {t("page-run-a-node-hero-cta-1")}
+                    </CardButtonFake>
                   </CardFooter>
                 </Card>
               </Grid>
@@ -483,7 +484,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </div>
 
               <Grid balanced={2}>
-                <Card>
+                <Card href="https://docs.dappnode.io">
                   <CardContent>
                     <CardTitle asChild>
                       <h4>
@@ -499,15 +500,15 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     </CardParagraph>
                   </CardContent>
                   <CardFooter>
-                    <ButtonLink href="https://docs.dappnode.io">
+                    <CardButtonFake>
                       {t(
                         "page-run-a-node-build-your-own-software-option-1-button"
                       )}
-                    </ButtonLink>
+                    </CardButtonFake>
                   </CardFooter>
                 </Card>
 
-                <Card>
+                <Card href="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node">
                   <CardContent>
                     <CardTitle asChild>
                       <h4>
@@ -528,15 +529,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     </CardParagraph>
                   </CardContent>
                   <CardFooter>
-                    <ButtonLink
-                      href="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node"
-                      variant="outline"
-                      className="font-mono"
-                    >
+                    <CardButtonFake variant="outline" className="font-mono">
                       {t(
                         "page-run-a-node-build-your-own-software-option-2-button"
                       )}
-                    </ButtonLink>
+                    </CardButtonFake>
                   </CardFooter>
                 </Card>
               </Grid>
@@ -673,6 +670,8 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-run-a-node")
 

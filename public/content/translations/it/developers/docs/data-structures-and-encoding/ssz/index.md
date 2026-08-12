@@ -82,12 +82,7 @@ Quindi i valori effettivi per i tipi a lunghezza variabile sono memorizzati in u
 
 Ci sono anche alcuni casi speciali che richiedono un trattamento specifico, come il tipo `BitList` che richiede l'aggiunta di un limite di lunghezza durante la serializzazione e la sua rimozione durante la deserializzazione. I dettagli completi sono disponibili nelle [specifiche SSZ](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md).
 
-### Deserializzazione {#deserialization}
-
-Per deserializzare questo oggetto è necessario lo <b>schema</b>. Lo schema definisce il layout preciso dei dati serializzati in modo che ogni elemento specifico possa essere deserializzato da un blob di byte in un oggetto significativo con gli elementi che hanno il tipo, il valore, la dimensione e la posizione corretti. È lo schema che dice al deserializzatore quali valori sono valori effettivi e quali sono offset. Tutti i nomi dei campi scompaiono quando un oggetto viene serializzato, ma vengono reistanziati durante la deserializzazione in base allo schema.
-
-Consulta [ssz.dev](https://www.ssz.dev/overview) per una spiegazione interattiva al riguardo.
-
+La deserializzazione di questo oggetto richiede lo <b>schema</b>. Lo schema definisce la disposizione precisa dei dati serializzati in modo che ogni elemento specifico possa essere deserializzato da un blob di byte in un oggetto significativo con gli elementi che hanno il tipo, il valore, la dimensione e la posizione corretti. È lo schema che indica al deserializzatore quali valori sono valori effettivi e quali sono offset. Tutti i nomi dei campi scompaiono quando un oggetto viene serializzato, ma vengono ripristinati durante la deserializzazione in base allo schema.
 ## Merkleizzazione {#merkleization}
 
 Questo oggetto serializzato SSZ può quindi essere merkleizzato, ovvero trasformato in una rappresentazione ad albero di Merkle degli stessi dati. Innanzitutto, viene determinato il numero di blocchi da 32 byte nell'oggetto serializzato. Queste sono le "foglie" dell'albero. Il numero totale di foglie deve essere una potenza di 2 in modo che l'hashing congiunto delle foglie produca infine una singola radice dell'albero di hash (hash-tree-root). Se questo non è naturalmente il caso, vengono aggiunte foglie aggiuntive contenenti 32 byte di zeri. Sotto forma di diagramma:
@@ -138,10 +133,7 @@ L'hash di (8,9) dovrebbe essere uguale all'hash (4), che viene sottoposto a hash
 8*     9*   10    11   12    13    14    15
 ```
 
-## Letture consigliate {#further-reading}
-
 - [Aggiornare Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
 - [Aggiornare Ethereum: Merkleizzazione](https://eth2book.info/altair/part2/building_blocks/merkleization)
 - [Implementazioni SSZ](https://github.com/ethereum/consensus-specs/issues/2138)
 - [Calcolatore SSZ](https://simpleserialize.com/)
-- [SSZ.dev](https://www.ssz.dev/)

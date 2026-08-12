@@ -3,7 +3,6 @@ import { getTranslations } from "next-intl/server"
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, TopicFrontmatter } from "@/lib/interfaces"
 
-import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Emoji from "@/components/Emoji"
 import PageHero from "@/components/Hero/PageHero"
 import PageActions from "@/components/PageActions"
@@ -12,6 +11,7 @@ import InlineLink from "@/components/ui/Link"
 import { List, ListItem } from "@/components/ui/list"
 
 import { getEditPath } from "@/lib/utils/editPath"
+import { buildTopicDropdown } from "@/lib/utils/topicDropdown"
 
 import type { TopicConfig } from "@/data/topics"
 
@@ -52,25 +52,10 @@ export const TopicLayout = async ({
   }
 
   const t = await getTranslations(config.translationNs)
-  const tCommon = config.showLastUpdatedInHero
-    ? await getTranslations("common")
-    : null
 
-  const dropdownLinks: ButtonDropdownList = {
-    text: t(config.dropdown.textKey),
-    ariaLabel: t(config.dropdown.ariaLabelKey),
-    items: config.dropdown.items.map((item) => ({
-      text: t(item.textKey),
-      href: item.href,
-      matomo: {
-        eventCategory: config.dropdown.matomoCategory,
-        eventAction: "click",
-        eventName: item.matomoEvent,
-      },
-    })),
-  }
+  const dropdownLinks = buildTopicDropdown(config.dropdown, t)
 
-  const baseDescription = frontmatter.summary ? (
+  const heroDescription = frontmatter.summary ? (
     <p className="text-lg">{frontmatter.summary}</p>
   ) : frontmatter.summaryPoints && frontmatter.summaryPoints.length > 0 ? (
     <List>
@@ -81,18 +66,6 @@ export const TopicLayout = async ({
   ) : frontmatter.description ? (
     <p className="text-lg">{frontmatter.description}</p>
   ) : undefined
-
-  const heroDescription =
-    tCommon && lastEditLocaleTimestamp ? (
-      <>
-        {baseDescription}
-        <p className="border-t pt-4 italic">
-          {tCommon("page-last-updated")}: {lastEditLocaleTimestamp}
-        </p>
-      </>
-    ) : (
-      baseDescription
-    )
 
   const editBanner =
     config.editBanner && frontmatter.hideEditBanner !== true ? (
@@ -112,11 +85,15 @@ export const TopicLayout = async ({
       {editBanner}
       <PageHero
         breadcrumbs={{ slug, startDepth: 1 }}
-        heroImg={{
-          src: frontmatter.image,
-          width: frontmatter.imageWidth ?? 760,
-          height: frontmatter.imageHeight ?? 450,
-        }}
+        heroImg={
+          frontmatter.image
+            ? {
+                src: frontmatter.image,
+                width: frontmatter.imageWidth ?? 760,
+                height: frontmatter.imageHeight ?? 450,
+              }
+            : undefined
+        }
         blurDataURL={frontmatter.blurDataURL}
         title={frontmatter.title}
         description={heroDescription}

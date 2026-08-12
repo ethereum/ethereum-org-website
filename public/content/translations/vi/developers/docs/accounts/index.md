@@ -105,7 +105,9 @@ Ví dụ:
 
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
-Địa chỉ hợp đồng thường được cấp khi một hợp đồng được triển khai lên Chuỗi khối Ethereum. Địa chỉ này bắt nguồn từ địa chỉ của người tạo và số lượng giao dịch được gửi từ địa chỉ đó ("nonce").
+Địa chỉ hợp đồng thường được cấp khi một hợp đồng được triển khai lên Chuỗi khối Ethereum. Địa chỉ này bắt nguồn từ địa chỉ của người tạo và số lượng giao dịch được gửi từ địa chỉ đó ("nonce"). Đây là cách hoạt động `CREATE` suy ra một địa chỉ.
+
+Các hợp đồng cũng có thể được triển khai bằng [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), hoạt động này suy ra địa chỉ từ địa chỉ của người tạo, một giá trị do người tạo chọn ("salt") và mã băm của mã tạo hợp đồng. Không có nonce nào tham gia vào quá trình này, do đó địa chỉ có thể được tính toán trước khi hợp đồng tồn tại và giữ nguyên bất kể người tạo có gửi bao nhiêu giao dịch khác trong thời gian đó. Điều này cho phép tham chiếu đến một hợp đồng chưa được triển khai.
 
 ## Các khóa trình xác thực {#validators-keys}
 

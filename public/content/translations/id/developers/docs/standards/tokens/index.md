@@ -29,10 +29,13 @@ Berikut adalah beberapa standar token paling populer di Ethereum:
 
 Daftar lengkap proposal [ERC](https://eips.ethereum.org/erc).
 
-## Bacaan lebih lanjut {#further-reading}
+## Bacaan lebih lanjut
 
 _Tahu sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
 
+- [Daftar Periksa Integrasi Token](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md) - _Trail of Bits_
+- [Dokumentasi OpenZeppelin: Token](https://docs.openzeppelin.com/contracts/5.x/tokens) - _OpenZeppelin_
+- [Bahaya Integrasi Token (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _OpenZeppelin_
 ## Tutorial terkait {#related-tutorials}
 
 - [Daftar periksa integrasi token](/developers/tutorials/token-integration-checklist/) _– Daftar periksa hal-hal yang perlu dipertimbangkan saat berinteraksi dengan token._

@@ -1,7 +1,7 @@
 ---
 title: Utangulizi wa Web3
 metaTitle: Web3 ni nini na kwa nini ni muhimu?
-description: Utangulizi wa Web3—mabadiliko yanayofuata ya Wavuti ya Ulimwenguni Pote (World Wide Web)—na kwa nini ni muhimu.
+description: "Utangulizi wa Web3—mabadiliko yanayofuata ya Wavuti ya Ulimwenguni Pote (World Wide Web)—na kwa nini ni muhimu."
 lang: sw
 ---
 
@@ -128,9 +128,9 @@ Kizuizi cha kiufundi cha kuingia ili kutumia Web3 kwa sasa kiko juu sana. Watumi
 
 ### Elimu {#education}
 
-Web3 inaleta dhana mpya zinazohitaji kujifunza miundo tofauti ya kiakili kuliko ile inayotumika katika Web 2.0. Msukumo sawa wa elimu ulitokea wakati Wavuti 1.0 ilipokuwa ikipata umaarufu mwishoni mwa miaka ya 1990; watetezi wa wavuti ya ulimwenguni pote walitumia mbinu nyingi za kuelimisha umma kuanzia mafumbo rahisi (barabara kuu ya habari, vivinjari, kuvinjari wavuti) hadi [matangazo ya televisheni](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 si ngumu, lakini ni tofauti. Mipango ya elimu inayowajulisha watumiaji wa Web2 kuhusu dhana hizi za Web3 ni muhimu kwa mafanikio yake.
+Web3 inaleta dhana mpya zinazohitaji kujifunza mifumo tofauti ya kifikra ikilinganishwa na ile inayotumika katika Web 2.0. Kampeni sawa ya kuelimisha ilifanyika wakati Web 1.0 ilipokuwa ikipata umaarufu mwishoni mwa miaka ya 1990; watetezi wa Wavuti ya Ulimwenguni Pote walitumia mbinu nyingi za kuelimisha umma kuanzia sitiari rahisi (barabara kuu ya habari, vivinjari, kuvinjari wavuti) hadi [matangazo ya televisheni](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 si ngumu, lakini ni tofauti. Mipango ya kuelimisha inayowajulisha watumiaji wa Web2 kuhusu dhana hizi za Web3 ni muhimu kwa mafanikio yake.
 
-Ethereum.org inachangia katika elimu ya Web3 kupitia [Mpango wetu wa Kutafsiri](/contributing/translation-program/), ikilenga kutafsiri maudhui muhimu ya Ethereum kwa lugha nyingi iwezekanavyo.
+Ethereum.org imechangia katika elimu ya Web3 kupitia [Programu yake ya Kutafsiri](/contributing/translation-program/), ambayo ilifanya maudhui muhimu ya Ethereum yapatikane katika makumi ya lugha.
 
 ### Miundombinu iliyowekwa kati {#centralized-infrastructure}
 

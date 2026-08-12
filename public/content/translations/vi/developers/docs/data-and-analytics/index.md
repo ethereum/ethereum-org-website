@@ -60,10 +60,18 @@ Làm theo hướng dẫn [bắt đầu nhanh](https://thegraph.com/docs/en/quick
 
 Để bắt đầu, hãy truy cập [tài liệu](https://docs.codex.io), dùng thử [Trình khám phá](https://docs.codex.io/explore) hoặc đăng ký tại [bảng điều khiển](https://dashboard.codex.io/signup).
 
+
+[Mobula](https://mobula.io/) là một API dữ liệu tiền mã hóa hiệu suất cao cung cấp dữ liệu thị trường theo thời gian thực và lịch sử, siêu dữ liệu token, danh mục đầu tư ví và phân tích trên chuỗi trên hơn 90 chuỗi khối. Các nhà phát triển có thể truy cập các điểm cuối REST và GraphQL để biết giá token, vốn hóa thị trường, khối lượng giao dịch, dữ liệu thanh khoản và số dư ví đa chuỗi mà không cần chạy cơ sở hạ tầng của riêng họ. Mobula cung cấp cả gói miễn phí (100 nghìn yêu cầu/tháng) và gói trả phí cho các ứng dụng sản xuất.
+
+Để bắt đầu, hãy truy cập [tài liệu](https://docs.mobula.io), khám phá [tài liệu tham khảo API](https://docs.mobula.io/reference/) hoặc đăng ký tại [bảng điều khiển](https://mobula.io/).
 ## Ngôn ngữ truy vấn EVM {#evm-query-language}
 
 Ngôn ngữ truy vấn EVM (EQL) là một ngôn ngữ giống SQL được thiết kế để truy vấn các chuỗi EVM (Máy ảo Ethereum). Mục tiêu cuối cùng của EQL là hỗ trợ các truy vấn quan hệ phức tạp trên các thành phần hạng nhất của chuỗi EVM (khối, tài khoản và giao dịch) đồng thời cung cấp cho các nhà phát triển và nhà nghiên cứu một cú pháp tiện dụng để sử dụng hàng ngày. Với EQL, các nhà phát triển có thể tìm nạp dữ liệu chuỗi khối bằng cú pháp giống SQL quen thuộc và loại bỏ nhu cầu về mã soạn sẵn phức tạp. EQL hỗ trợ các yêu cầu dữ liệu chuỗi khối tiêu chuẩn (ví dụ: truy xuất nonce và số dư của một tài khoản trên Ethereum hoặc tìm nạp kích thước khối và dấu thời gian hiện tại) và liên tục bổ sung hỗ trợ cho các yêu cầu và bộ tính năng phức tạp hơn.
 
+
+[Envio](https://envio.dev/) là một framework lập chỉ số biến các sự kiện trên chuỗi thành một API GraphQL có thể truy vấn. Nó hỗ trợ Ethereum và bất kỳ chuỗi nào tương thích với EVM. Các nhà phát triển viết các trình xử lý sự kiện bằng TypeScript, JavaScript hoặc ReScript để phục vụ dữ liệu theo thời gian thực và lịch sử, với hỗ trợ tổ chức lại chuỗi, lập chỉ số đa chuỗi và lưu trữ được quản lý trên Envio Cloud hoặc tự lưu trữ.
+
+Để bắt đầu, hãy làm theo [hướng dẫn bắt đầu nhanh HyperIndex](https://docs.envio.dev/docs/HyperIndex/quickstart) để tạo, triển khai và truy vấn một trình lập chỉ số.
 ## Đọc thêm {#further-reading}
 
 - [Khám phá dữ liệu tiền mã hóa I: Kiến trúc luồng dữ liệu](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
@@ -75,7 +83,7 @@ Ngôn ngữ truy vấn EVM (EQL) là một ngôn ngữ giống SQL được thi�
 - [Cơ bản về Dune](https://docs.dune.com/#dune-basics)
 - [Hướng dẫn bắt đầu nhanh SubQuery Ethereum](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [Tổng quan về Mạng lưới SQD](https://docs.sqd.dev/)
-- [Ngôn ngữ truy vấn EVM](https://eql.sh/blog/alpha-release-notes)
+- [Ngôn ngữ truy vấn EVM](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 
 ## Hướng dẫn: Dữ liệu & phân tích / SQL trên Ethereum {#tutorials}
 

@@ -79,3 +79,7 @@ Kiedy wszystkie aplikacje są zbudowane na Ethereum, są ze sobą kompatybilne. 
 <ExpandableCard title="Jaki jest najlepszy portfel krypto?" visible>
   <p>Portfel krypto pozwala na przechowywanie tokenów i zarządzanie kontem Ethereum. Istnieje wiele świetnych portfeli, z których każdy służy innemu celowi. Aby dowiedzieć się, który portfel jest dla Ciebie najlepszy, odwiedź naszą [listę portfeli](/wallets/find-wallet).</p>
 </ExpandableCard>
+
+<Divider />
+
+<QuizWidget quizKey="what-are-apps" />

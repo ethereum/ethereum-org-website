@@ -27,7 +27,7 @@ Si vous êtes bilingue et souhaitez nous aider à toucher plus de personnes, vou
 **Actualités**
 
 - [BeInCrypto](http://www.beincrypto.com.br) - actualités et articles sur les cryptomonnaies, y compris une liste de plateformes d'échange, disponibles au Brésil
-- [Cointelegraph](http://cointelegraph.com.br/category/analysis) - version brésilienne de Cointelegraph, un important média d'actualités sur les cryptomonnaies
+- [Cointelegraph](https://cointelegraph.com.br/) - version brésilienne de Cointelegraph, un important média d'actualités sur les cryptomonnaies
 - [Livecoins](http://www.livecoins.com.br/ethereum) - actualités et outils sur les cryptomonnaies
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - actualités et rapports sur les cryptomonnaies
 - [Modular Crypto](https://modularcrypto.xyz/) - actualités sur les cryptomonnaies et articles éducatifs
@@ -37,7 +37,7 @@ Si vous êtes bilingue et souhaitez nous aider à toucher plus de personnes, vou
 - [web3dev](https://www.web3dev.com.br/) - Centre de contenu et communauté Discord pour les développeurs Web3.
 - [Web3Brasil](https://github.com/web3brasil/web3brasil) - ressources pour apprendre le Web3 et la finance décentralisée (DeFi)
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) - actualités et éducation sur les cryptomonnaies, y compris « Ethereum pour les débutants » et « DeFi pour les débutants »
-- [CriptoAtivos](http://www.criptoativos.wiki.br/) - analyses de l'espace des cryptomonnaies, éducation et blog
+- [CriptoAtivos](https://web.archive.org/web/20220916210708/https://www.criptoativos.wiki.br/) - analyses de l'espace des cryptomonnaies, éducation et blog
 - [Cointimes](http://www.cointimes.com.br/) - actualités et éducation sur les cryptomonnaies
 - [Web3 starter pack](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - un guide répondant aux questions fondamentales et les plus fréquemment posées sur la crypto
 

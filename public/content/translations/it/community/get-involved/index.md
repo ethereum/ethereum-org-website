@@ -11,7 +11,7 @@ Inizia leggendo la missione e i valori di ethereum.org nel nostro [codice di con
 ## Sviluppatori <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Scopri e prova Ethereum su [ethereum.org/developers/](/developers/)
-- Partecipa a un hackathon di [ETHGlobal](https://ethglobal.co/) vicino a te!
+- Partecipa a un hackathon di [ETHGlobal](https://ethglobal.com/) vicino a te!
 - Dai un'occhiata ai [progetti relativi alla tua area di competenza o al tuo linguaggio di programmazione preferito](/developers/docs/programming-languages/)
 - Guarda o partecipa alle [chiamate del livello di consenso e del livello di esecuzione](https://www.youtube.com/@EthereumProtocol/streams)
 - [Lista dei desideri dell'Ecosystem Support Program](https://esp.ethereum.foundation/wishlist/): aree relative a strumenti, documentazione e infrastruttura in cui l'Ecosystem Support Program di Ethereum è attivamente alla ricerca di candidature per sovvenzioni
@@ -59,10 +59,10 @@ Se non sei uno sviluppatore, può essere difficile sapere da dove iniziare in Et
 
 - Ci sono molte chiamate open source della community e avere chi prende appunti è di grande aiuto. Se sei interessato, unisciti al [Discord degli Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) e presentati!
 
-### Traduci i contenuti di Ethereum nella tua lingua madre {#translate-ethereum}
+### Aiuta a migliorare i contenuti tradotti di Ethereum {#translate-ethereum}
 
-- ethereum.org mantiene un Programma di Traduzione che traduce il sito web e altre risorse in molte lingue diverse
-- Scopri come partecipare [qui](/contributing/translation-program)
+- Il Programma di Traduzione di ethereum.org è in fase di chiusura e non sta più inserendo nuovi traduttori: consulta la [pagina del programma](/contributing/translation-program/) per conoscerne lo stato e la storia
+- Puoi ancora aiutare [segnalando errori nelle traduzioni esistenti](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 
 ### Esegui un nodo {#run-a-node}
 
@@ -80,7 +80,7 @@ Mettendo in staking i tuoi ETH puoi guadagnare ricompense aiutando al contempo a
 
 L'ecosistema di Ethereum ha la missione di finanziare beni pubblici e progetti di grande impatto. Con donazioni molto piccole puoi mostrare il tuo supporto e consentire la realizzazione di lavori importanti.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Professionisti finanziari e contabili <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

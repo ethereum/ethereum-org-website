@@ -44,7 +44,7 @@ incomplete: true
 - [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS API குறிப்பு_
 - [Solaris](https://github.com/paritytech/sol-rs) - _நேட்டிவ் Parity கிளையண்ட் EVM-ஐப் பயன்படுத்தும் Solidity திறன் ஒப்பந்தங்களின் யூனிட் சோதனை கட்டமைப்பு._
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust எத்திரியம் மெய்நிகர் இயந்திர செயலாக்கம்_
-- [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust-இல் Wavelet திறன் ஒப்பந்தம்_
+- [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Rust-இல் Wavelet திறன் ஒப்பந்தம்_
 - [Foundry](https://github.com/foundry-rs/foundry) - _எத்திரியம் செயலி உருவாக்கத்திற்கான கருவித்தொகுப்பு_
 - [Alloy](https://alloy.rs) - _எத்திரியம் மற்றும் பிற EVM அடிப்படையிலான சங்கிலிகளுடன் தொடர்புகொள்வதற்கான உயர் செயல்திறன் கொண்ட, நன்கு சோதிக்கப்பட்ட மற்றும் ஆவணப்படுத்தப்பட்ட நிரலகங்கள்._
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _எத்திரியம் நிரலகம் மற்றும் பணப்பை செயலாக்கம்_

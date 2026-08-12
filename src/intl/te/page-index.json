@@ -1,6 +1,6 @@
 {
-  "page-index-meta-title": "ఎథీరియం - Ethereum.org నుండి పూర్తి గైడ్",
-  "page-index-meta-description": "ఎథీరియం అనేది డబ్బు మరియు కొత్త రకాల అప్లికేషన్‌ల కోసం ఒక గ్లోబల్, వికేంద్రీకృత ప్లాట్‌ఫారమ్. ఎథీరియంపై, మీ స్వంత డబ్బు, డేటా మరియు గుర్తింపును మీరే నియంత్రిస్తారు. ఏ బ్యాంకు, ఏ మధ్యవర్తి, ఏ అనుమతి అవసరం లేదు.",
+  "page-index-meta-title": "ఎథీరియం - ethereum.org నుండి పూర్తి గైడ్",
+  "page-index-meta-description": "ఎథీరియం అనేది పటిష్టమైన యాప్‌లు మరియు మౌలిక సదుపాయాల కోసం ఒక వికేంద్రీకృత ప్లాట్‌ఫారమ్. బ్యాంక్ లేదా మధ్యవర్తి అవసరం లేకుండా మీ డబ్బు, డేటా మరియు గుర్తింపును మీరే నియంత్రించండి.",
   "page-index-description": "వినూత్న యాప్‌లు మరియు బ్లాక్‌చైన్ నెట్‌వర్క్‌ల కోసం ప్రముఖ ప్లాట్‌ఫారమ్",
   "page-index-title": "ఎథీరియంకు స్వాగతం",
   "page-index-hero-image-alt": "ఎథీరియం పర్యావరణ వ్యవస్థను సూచించే భవిష్యత్ నగరానికి సంబంధించిన ఒక దృష్టాంతం.",
@@ -41,14 +41,14 @@
   "page-index-carousel-privacy-ethereum-label": "ఎథీరియం యాప్‌లు",
   "page-index-carousel-privacy-ethereum-value": "అప్రమేయంగా గోప్యత",
   "page-index-carousel-remittances-tag": "సరిహద్దు చెల్లింపులు",
-  "page-index-carousel-remittances-title": "ఇంటికి {minutes} నిమిషాల్లో డబ్బు పంపండి",
+  "page-index-carousel-remittances-title": "{seconds} సెకన్లలో ఇంటికి డబ్బు పంపండి",
   "page-index-carousel-remittances-subtitle": "{wireFee} వైర్ ఫీజు మరియు {days}+ రోజుల నిరీక్షణను దాటవేయండి.",
   "page-index-carousel-remittances-description": "ప్రపంచంలో ఎక్కడైనా, ఎవరికైనా కేవలం {txFee}తో <stablecoinsLink>స్టేబుల్‌కాయిన్‌లను</stablecoinsLink> పంపండి. వారు దాదాపు తక్షణమే నిధులను అందుకుంటారు.",
   "page-index-carousel-remittances-cta": "మీరే ప్రయత్నించండి",
   "page-index-carousel-remittances-traditional-label": "వైర్ బదిలీ",
   "page-index-carousel-remittances-traditional-value": "{min}-{max} రోజులు",
   "page-index-carousel-remittances-ethereum-label": "ఎథీరియం",
-  "page-index-carousel-remittances-ethereum-value": "{minutes} నిమిషాలు",
+  "page-index-carousel-remittances-ethereum-value": "{seconds} సెకన్లు",
   "page-index-carousel-borrowing-tag": "ఆర్థిక ప్రాప్యత",
   "page-index-carousel-borrowing-title": "క్రెడిట్ చరిత్ర లేకుండా రుణం తీసుకోవడం",
   "page-index-carousel-borrowing-subtitle": "ప్రారంభించడానికి మీకు క్రెడిట్ స్కోర్ అవసరం లేదు.",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "ప్రైవేట్ & అనుమతిగల నెట్‌వర్క్‌లు",
   "page-index-get-started-enterprise-bullet-3": "సంస్థాగత వనరులు",
   "page-index-get-started-enterprise-cta": "ఎంటర్‌ప్రైజ్‌ను అన్వేషించండి",
-  "page-index-simulator-cta": "మరిన్ని గైడ్‌లను ప్రయత్నించండి"
+  "page-index-simulator-cta": "మరిన్ని గైడ్‌లను ప్రయత్నించండి",
+  "page-index-latest-updates-title": "తాజా ఎథీరియం అప్‌డేట్‌లు",
+  "page-index-latest-updates-cta": "మరిన్ని చూడండి"
 }

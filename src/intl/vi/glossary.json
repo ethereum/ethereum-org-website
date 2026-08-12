@@ -388,7 +388,7 @@
   "validium-term": "Validium",
   "validium-definition": "Một giải pháp ngoài chuỗi sử dụng các <a href=\"/glossary/#validity-proof\">bằng chứng tính hợp lệ</a> để cải thiện thông lượng giao dịch. Không giống như <a href=\"/glossary/#zk-rollup\">Rollup không tri thức</a>, dữ liệu Validium không được lưu trữ trên Mạng chính lớp 1. <a href=\"/developers/docs/scaling/validium/\">Thêm về Validium</a>.",
   "vyper-term": "Vyper",
-  "vyper-definition": "Một ngôn ngữ lập trình bậc cao với cú pháp giống Python. Được dự định để tiến gần hơn đến một ngôn ngữ hàm thuần túy. Được tạo ra bởi Vitalik Buterin. <a href=\"/developers/docs/smart-contracts/languages/#vyper\">Thêm về Vyper</a>.",
+  "vyper-definition": "Một ngôn ngữ lập trình bậc cao với cú pháp giống Python. Được tạo ra bởi Vitalik Buterin. <a href=\"/developers/docs/smart-contracts/languages/#vyper\">Thêm về Vyper</a>.",
   "wallet-term": "Ví",
   "wallet-definition": "Ví là một công cụ kỹ thuật số để lưu trữ, gửi và nhận tiền kỹ thuật số, giống như một chiếc ví ảo cho tiền trực tuyến của bạn. <a href=\"/wallets/\">Thêm về ví Ethereum</a>.",
   "web2-term": "Web2",

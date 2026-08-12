@@ -1,6 +1,6 @@
 ---
-title: ஆன்லைன் சமூகங்கள்
-description: எத்திரியம் ஆர்வலர்கள் கூடி விவாதிக்கவும் ஒத்துழைக்கவும் பயன்படுத்தும் ஆன்லைன் மன்றங்கள், அரட்டை அறைகள் மற்றும் சமூக ஊடக சமூகங்களைக் கண்டறியவும்.
+title: "ஆன்லைன் சமூகங்கள்"
+description: "எத்திரியம் ஆர்வலர்கள் கூடி விவாதிக்கவும் ஒத்துழைக்கவும் பயன்படுத்தும் ஆன்லைன் மன்றங்கள், அரட்டை அறைகள் மற்றும் சமூக ஊடக சமூகங்களைக் கண்டறியவும்."
 lang: ta
 ---
 
@@ -52,7 +52,7 @@ lang: ta
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - உருவாக்குநர்கள், தொழில்துறைத் தலைவர்கள் மற்றும் எத்திரியம் ஆர்வலர்கள் கூடும் Web3 படைப்பாளிகள் சமூகம். Web3 மேம்பாடு, வடிவமைப்பு மற்றும் கலாச்சாரத்தில் நாங்கள் ஆர்வமாக உள்ளோம். எங்களுடன் இணைந்து உருவாக்குங்கள்.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity மேம்பாட்டிற்கான அரட்டை (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- கேள்வி மற்றும் பதில் மன்றம்</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- பரவலாக்கப்பட்ட கேள்வி மற்றும் பதில் மன்றம்</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://www.peera.ai/community-forum">Peera Community Forum</Link> <i>- பரவலாக்கப்பட்ட கேள்வி மற்றும் பதில் மன்றம்</i></SocialListItem>
 
 ## யூடியூப் மற்றும் X (முன்னர் ட்விட்டர்) {#youtube-and-twitter}
 

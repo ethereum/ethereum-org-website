@@ -237,45 +237,55 @@ ethers.utils.formatEther(balance)
 - [Funciones de utilidad de Web3js](https://docs.web3js.org/api/web3-utils)
 - [Funciones de utilidad de Ethers](https://docs.ethers.org/v6/api/utils/)
 
-## Bibliotecas disponibles {#available-libraries}
+## Bibliotecas disponibles
 
-**Web3.js -** **_API de JavaScript de Ethereum._**
+**Web3.js -** **_API de JavaScript para Ethereum._**
 
 - [Documentación](https://docs.web3js.org)
 - [GitHub](https://github.com/ethereum/web3.js)
 
 **Ethers.js -** **_Implementación completa de billetera de Ethereum y utilidades en JavaScript y TypeScript._**
 
-- [Inicio de Ethers.js](https://ethers.org/)
+- [Página principal de Ethers.js](https://ethers.org/)
 - [Documentación](https://docs.ethers.io)
 - [GitHub](https://github.com/ethers-io/ethers.js)
 
 **The Graph -** **_Un protocolo para indexar datos de Ethereum e IPFS y consultarlos usando GraphQL._**
 
 - [The Graph](https://thegraph.com)
-- [Explorador de Graph](https://thegraph.com/explorer)
+- [Graph Explorer](https://thegraph.com/explorer)
 - [Documentación](https://thegraph.com/docs)
 - [GitHub](https://github.com/graphprotocol)
 - [Discord](https://thegraph.com/discord)
 
-**Alchemy SDK -** **_Envoltorio (wrapper) alrededor de Ethers.js con API mejoradas._**
+**Alchemy SDK -** **_Envoltorio para Ethers.js con API mejoradas._**
 
 - [Documentación](https://www.alchemy.com/docs)
 - [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
 
-**viem -** **_Interfaz de TypeScript para Ethereum._**
+**Viem -** **_Interfaz de TypeScript para Ethereum._**
 
 - [Documentación](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-**Codex -** **_API de datos de cadena de bloques enriquecidos en tiempo real en docenas de cadenas._**
+**Wagmi -** **_Biblioteca de hooks de React para Ethereum, construida sobre Viem._**
+
+- [Documentación](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_Biblioteca de React para agregar conexión de billetera a aplicaciones descentralizadas (dapps), construida sobre Wagmi y Viem._**
+
+- [Documentación](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
+
+**Codex -** **_API de datos de cadena de bloques enriquecidos y en tiempo real en docenas de cadenas._**
 
 - [Documentación](https://docs.codex.io)
 - [Explorador](https://docs.codex.io/explore)
 - [GitHub](https://github.com/Codex-Data)
 - [Discord](https://discord.com/invite/mFpUhT3vAq)
 
-**Drift -** **_Metabiblioteca de TypeScript con almacenamiento en caché integrado, hooks y simulaciones (mocks) de prueba._**
+**Drift -** **_Metabiblioteca de TypeScript con almacenamiento en caché, hooks y simulaciones de prueba integrados._**
 
 - [Documentación](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)

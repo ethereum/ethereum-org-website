@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-founders.json",
-  "generatedAt": "2026-05-26T16:37:48.866Z",
-  "rootHash": "d82653514c55",
+  "generatedAt": "2026-07-22T22:38:45.909Z",
+  "rootHash": "56ecdb704281",
   "tree": {
-    "contentHash": "9678ac131555",
-    "anchorHash": "036960a608a4",
+    "contentHash": "d740529ac9a0",
+    "anchorHash": "0e86922e73d2",
     "children": {
       "page-founders-accelerators-alliance-description": {
         "contentHash": "5c40027db5f4",
@@ -155,18 +155,6 @@
         "contentHash": "2f4bfa4f543f",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-partnerships-ef-founder-support-cta": {
-        "contentHash": "9081cb02ea1c",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-founders-partnerships-ef-founder-support-description": {
-        "contentHash": "ecc30cff78a7",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-founders-partnerships-ef-founder-support-subtitle": {
-        "contentHash": "6c18f25f4b90",
-        "anchorHash": "e3b0c44298fc"
-      },
       "page-founders-partnerships-ens-description": {
         "contentHash": "7cc6f21aa574",
         "anchorHash": "e3b0c44298fc"
@@ -287,9 +275,6 @@
       "page-founders-metadata-description",
       "page-founders-metadata-title",
       "page-founders-partnerships-devconnect-description",
-      "page-founders-partnerships-ef-founder-support-cta",
-      "page-founders-partnerships-ef-founder-support-description",
-      "page-founders-partnerships-ef-founder-support-subtitle",
       "page-founders-partnerships-ens-description",
       "page-founders-partnerships-ens-highlight-1",
       "page-founders-partnerships-ens-highlight-2",
@@ -314,5 +299,5 @@
       "page-founders-title"
     ]
   },
-  "sourceCommitSha": "a8478a15398e05bbd134fb0d64575a708b5b3efd"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

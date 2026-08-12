@@ -7,14 +7,19 @@ The site supports 25 languages, including **Arabic** and **Urdu** (RTL). Transla
 ### Server Components (preferred)
 
 ```tsx
-import { getLocale, getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
-export default async function Page() {
+export default async function Page({ params }) {
+  const { locale } = await params
+
+  setRequestLocale(locale) // MUST run before any next-intl API (see note below)
+
   const t = await getTranslations("page-namespace")
-  const locale = await getLocale()
   return <h1>{t("page-title")}</h1>
 }
 ```
+
+`setRequestLocale(locale)` **must** be the first statement in every page and `generateMetadata` under `app/[locale]/`, before any next-intl API -- including the `getMetadata`/`getMdMetadata` helpers, which call `getTranslations("common")` internally. Skipping it forces dynamic rendering and throws `Page changed from static to dynamic at runtime, reason: headers` for on-demand params. Descendant server components (no `params`) read the locale with `getLocale()`, which resolves statically once the page has primed the cache. Full root cause and prevention: `docs/solutions/architecture/setrequestlocale-static-to-dynamic-rendering.md`.
 
 ### Client Components
 
@@ -24,15 +29,48 @@ import { useTranslations } from "next-intl"
 
 export function Widget() {
   const t = useTranslations("widget-namespace")
-  return <p>{t("widget-description")}</button>
+  const tCommon = useTranslations("common")
+  return (
+    <p>
+      {t("widget-description")} {tCommon("learn-more")}
+    </p>
+  )
 }
 ```
+
+One namespace-bound function per namespace -- to access another namespace, bind a second function (`tCommon` above) rather than reaching across namespaces from one `t`.
+
+Do not use the legacy `@/hooks/useTranslation` wrapper (`const { t } = useTranslation("ns")` with `namespace:key` syntax) in new code -- it returns raw messages by default and silently skips ICU interpolation in its plain-key form. Existing call sites are being migrated.
+
+Caveat for both APIs: strings with embedded HTML (`<b>`, `<a href>`) predate next-intl and break plain `t()` ICU parsing -- use `t.raw("key")` (rendered downstream via htmr/`Translation`) or `t.rich(...)` for those.
 
 ### Never hard-code English
 
 If a string is rendered to a user, it must come from a translation key. The exception is dev-only debug UI (e.g., `AB/TestDebugPanel`) and developer-facing internal copy.
 
 If you find yourself wanting to hard-code, add the key to `src/intl/en/[namespace].json` and use `t()`.
+
+### Interpolate a translated value, never a hard-coded literal
+
+A shared skeleton with an interpolated value -- `t("visit-brand", { brand: t("dune-brand") })` -- is the pattern to reach for: one `"Visit {brand}"` string instead of the `"Visit "` prefix repeated across N labels, and each brand is its own key the pipeline can transliterate or case-adjust per locale. The anti-pattern is passing a hard-coded English literal as the variable (`t("visit-brand", { brand: "Dune" })`): the `"Dune"` literal never enters an intl file, so it stays untranslated English no matter the locale. If a proper noun/brand is enumerable, give it a key and inject the translated value; reserve raw literals for genuinely dynamic runtime values (counts, dates, user input) that can't be keys. `ProductList` CTAs follow this -- see `AiAgentProductLists` and the stablecoins tools list.
+
+### Never split one sentence across two keys
+
+One sentence = one key. Put inline markup **inside** the message and render it with `t.rich`, using the helpers from `@/components/IntlStringElements`:
+
+```tsx
+// GOOD -- one key, translator controls the whole sentence
+// en.json: "list-security": "<strong>Security</strong> you cannot inspect is just trust in disguise."
+{t.rich("list-security", { strong: Strong })}
+
+// BAD -- a bolded head plus a dangling fragment, joined in JSX
+<strong>{t("list-security-strong")}</strong>{" "}
+{t("list-security")}
+```
+
+The bad form forces every locale to reproduce **English word order** across a join the translator cannot see or change. Real damage from this on `/values` (PR #18938): German needs a comma before the relative clause and could not insert one, because the space was hard-coded in the component; Turkish had to repeat the head noun to stay grammatical, rendering "**Güvenlik** güvenlik ..." ("Security security you cannot inspect"). Splitting on punctuation is worse still -- a continuation key beginning `". It's the result of ..."` strands the sentence boundary in the wrong file.
+
+Same rule for a bolded lead-in, a trailing link, or a parenthetical: keep the sentence whole and tag it inline. `Emphasis` and `Strong` exist precisely so the markup can travel inside the message.
 
 ## RTL: Logical CSS Properties
 
@@ -94,7 +132,7 @@ export function NextLink() {
 }
 ```
 
-`twFlipForRtl` returns the static `"rtl:-scale-x-100"` variant class (it no longer branches on locale -- the variant itself is a no-op in LTR), so it's safe to drop into any `className` unconditionally. The deprecated `flipForRtl` (a `scaleX(-1)` transform string) should not be used in new code.
+`twFlipForRtl` returns the static `"rtl:-scale-x-100"` variant class (it no longer branches on locale -- the variant itself is a no-op in LTR), so it's safe to drop into any `className` unconditionally. The older `flipForRtl` transform-string API (`scaleX(-1)`) has been removed -- use the `twFlipForRtl` class instead.
 
 ### Pattern: pre-flipped icons
 
@@ -102,9 +140,10 @@ For the most common directional icons, the project provides RTL-aware wrappers:
 
 ```tsx
 import { ChevronNext, ChevronPrev } from "@/components/Chevron"
+import { ArrowNext, ArrowPrev } from "@/components/ui/arrow"
 ```
 
-These automatically flip in RTL. Prefer them over the raw Lucide chevrons.
+These automatically flip in RTL (they bake in `rtl:-scale-x-100`). Prefer them over the raw Lucide `ChevronRight`/`ChevronLeft` and `ArrowRight`/`ArrowLeft`.
 
 ### Icons that should NOT flip
 
@@ -234,6 +273,7 @@ H1-H4 headings in markdown require a custom `{#lower-kebab-id}`. Enforced by mar
 
 ## Common Mistakes
 
+- Calling a next-intl API (`getTranslations`, `getLocale`, or the `getMetadata`/`getMdMetadata` helpers) before `setRequestLocale(locale)` in a page or `generateMetadata` -- opts the route into dynamic rendering and throws `Page changed from static to dynamic at runtime, reason: headers` for on-demand params
 - Using `left-`/`right-`/`ml-`/`mr-`/`pl-`/`pr-` for layout (use logical equivalents)
 - Hard-coding English in JSX
 - `value.toLocaleString()` -- use `numberFormat()`

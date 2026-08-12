@@ -1,6 +1,6 @@
 ---
-title: どのように参加できますか？
-description: イーサリアムコミュニティへの参加方法。
+title: "どのように参加できますか？"
+description: "イーサリアムコミュニティへの参加方法。"
 lang: ja
 ---
 
@@ -11,7 +11,7 @@ lang: ja
 ## 開発者 <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - [ethereum.org/developers/](/developers/)でイーサリアムについて学び、試してみる
-- お近くの[ETHGlobal](https://ethglobal.co/)ハッカソンに参加する！
+- お近くの[ETHGlobal](https://ethglobal.com/)ハッカソンに参加する！
 - [自分の専門分野や好みのプログラミング言語に関連するプロジェクト](/developers/docs/programming-languages/)をチェックする
 - [コンセンサスおよび実行レイヤーのコール](https://www.youtube.com/@EthereumProtocol/streams)を視聴または参加する
 - [エコシステムサポートプログラムのウィッシュリスト](https://esp.ethereum.foundation/wishlist/) - イーサリアムエコシステムサポートプログラムが助成金の申請を積極的に募集しているツール、ドキュメント、インフラストラクチャの分野
@@ -59,10 +59,10 @@ lang: ja
 
 - 多くのオープンソースのコミュニティコールがあり、議事録作成者がいると非常に助かります。興味がある場合は、[Ethereum Cat Herdersディスコード](https://discord.com/invite/Nz6rtfJ8Cu)に参加して、自己紹介をしてください！
 
-### イーサリアムのコンテンツを母国語に翻訳する {#translate-ethereum}
+### イーサリアムの翻訳コンテンツの改善に協力する {#translate-ethereum}
 
-- ethereum.orgは、ウェブサイトやその他のリソースをさまざまな言語に翻訳する翻訳プログラムを運営しています。
-- 参加方法については[こちら](/contributing/translation-program)をご覧ください。
+- ethereum.orgの翻訳プログラムは段階的に終了しており、新規翻訳者のオンボーディングは行っていません。ステータスと履歴については、[プログラムページ](/contributing/translation-program/)をご覧ください。
+- [既存の翻訳のエラーを報告する](https://github.com/ethereum/ethereum-org-website/issues/new/choose)ことで、引き続き貢献することができます。
 
 ### ノードを実行する {#run-a-node}
 
@@ -80,7 +80,7 @@ ETHをステーキングすることで、イーサリアムネットワーク�
 
 イーサリアムエコシステムは、公共財や影響力のあるプロジェクトに資金を提供することを使命としています。ごく少額の寄付でも支援を示すことができ、重要な取り組みの実現に貢献できます。
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## 金融専門家および会計士 <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

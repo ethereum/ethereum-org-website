@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/docs/smart-contracts/languages/index.md",
-  "generatedAt": "2026-06-17T22:54:30.066Z",
-  "rootHash": "2c9b43649443",
+  "generatedAt": "2026-07-22T23:26:04.480Z",
+  "rootHash": "3540927d09e3",
   "tree": {
-    "contentHash": "21aff4df4579",
-    "anchorHash": "337e5db35db4",
+    "contentHash": "cbfb94df8a8e",
+    "anchorHash": "e32755a13b94",
     "children": {
       "frontmatter:title": {
         "contentHash": "db9fcb06dc66",
@@ -299,23 +299,31 @@
         ]
       },
       "vyper": {
-        "contentHash": "e294c69ff450",
-        "anchorHash": "47c18e8d14dd",
+        "contentHash": "b5a682230be4",
+        "anchorHash": "9d3c3e2350ea",
         "labelHash": "f33ac7f36711",
         "children": {
           "_label": {
             "contentHash": "f33ac7f36711",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:1": {
-            "contentHash": "8f3ac7d72836",
+          "prose:2": {
+            "contentHash": "1702d5c9d546",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
+            "contentHash": "18e0057245bc",
+            "anchorHash": "f2baa5e33ce4"
+          },
+          "prose:3": {
+            "contentHash": "bf89ce96e88d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
             "contentHash": "c1257cb1d268",
             "anchorHash": "aebe07426837"
           },
-          "prose:2": {
+          "prose:4": {
             "contentHash": "cdb4ee2aea69",
             "anchorHash": "e3b0c44298fc"
           },
@@ -445,7 +453,7 @@
           },
           "example": {
             "contentHash": "225f294785ff",
-            "anchorHash": "cbb1586ad357",
+            "anchorHash": "28a6ceec38c0",
             "labelHash": "d029f87e3d80",
             "children": {
               "_label": {
@@ -614,7 +622,7 @@
               },
               "code-fence:41": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "066871cf4926"
+                "anchorHash": "e91eea2d6d29"
               },
               "prose:1": {
                 "contentHash": "aca15320493b",
@@ -680,9 +688,11 @@
         },
         "childrenOrder": [
           "_label",
-          "prose:1",
-          "link:0",
           "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4",
           "important-links-1",
           "example"
         ]
@@ -1103,5 +1113,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

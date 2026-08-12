@@ -143,10 +143,8 @@ Existem várias ferramentas disponíveis para gerenciar consolidações. A ferra
 
 ## FAQ {#faq}
 
-### Aderir à mudança altera minha sorte de proposta ou recompensas? {#change-luck-or-rewards}
-
-Não. Aderir não diminui sua chance de proposta - suas funções e a seleção de propostas permanecem as mesmas. Por exemplo, se você tiver dois validadores de 32 ETH em vez de um validador de 64 ETH, terá as mesmas chances totais de ser selecionado para propor um bloco e ganhar recompensas.
-
+### Aderir altera minha sorte nas propostas ou recompensas?
+Não. Aderir não diminui sua chance de propor - seus deveres e a seleção de propostas permanecem os mesmos. Por exemplo, se você tem dois validadores de 32 ETH versus um validador de 64 ETH, você terá as mesmas chances totais de ser selecionado para propor um bloco e ganhar recompensas.
 ### Aderir altera meu risco de penalização? {#change-slashing-risk}
 
 Para operadores menores ou não profissionais, a resposta curta é não. A resposta mais longa é que, para operadores profissionais que executam muitos validadores por nó com alertas rápidos, a consolidação em menos validadores pode reduzir sua capacidade de reagir a uma penalização e evitar eventos em cascata. A *multa* inicial de penalização para todos os validadores foi drasticamente reduzida de 1 ETH (por 32 ETH) para 0,0078125 ETH (por 32 ETH) para compensar esse risco.

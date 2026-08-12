@@ -44,7 +44,7 @@ incomplete: true
 - [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) — _Довідник з API OASIS_
 - [Solaris](https://github.com/paritytech/sol-rs) — _Середовище модульного тестування смарт-контрактів Solidity з використанням нативної EVM клієнта Parity._
 - [SputnikVM](https://github.com/rust-blockchain/evm) — _Реалізація віртуальної машини Етеріуму на Rust_
-- [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) — _Смарт-контракт Wavelet на Rust_
+- [Wavelet](https://github.com/perlin-network/smart-contract-rs) — _Смарт-контракт Wavelet на Rust_
 - [Foundry](https://github.com/foundry-rs/foundry) — _Набір інструментів для розробки застосунків для Етеріуму_
 - [Alloy](https://alloy.rs) — _Високопродуктивні, добре протестовані та задокументовані бібліотеки для взаємодії з Етеріумом та іншими мережами на базі EVM._
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) — _Бібліотека Етеріуму та реалізація гаманця_

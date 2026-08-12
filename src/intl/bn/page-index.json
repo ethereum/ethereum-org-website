@@ -1,6 +1,6 @@
 {
-  "page-index-meta-title": "ইথেরিয়াম - Ethereum.org থেকে সম্পূর্ণ গাইড",
-  "page-index-meta-description": "ইথেরিয়াম হলো অর্থ এবং নতুন ধরনের অ্যাপ্লিকেশনের জন্য একটি বৈশ্বিক, বিকেন্দ্রীকৃত প্ল্যাটফর্ম। ইথেরিয়ামে, আপনি আপনার নিজের অর্থ, ডেটা এবং পরিচয়ের নিয়ন্ত্রণ রাখেন। কোনো ব্যাংক, কোনো মধ্যস্থতাকারী বা কোনো অনুমতির প্রয়োজন নেই।",
+  "page-index-meta-title": "ইথেরিয়াম - ethereum.org থেকে সম্পূর্ণ গাইড",
+  "page-index-meta-description": "ইথেরিয়াম হলো টেকসই অ্যাপ এবং অবকাঠামোর জন্য একটি বিকেন্দ্রীকৃত প্ল্যাটফর্ম। কোনো ব্যাংক বা মধ্যস্থতাকারীর প্রয়োজন ছাড়াই আপনার অর্থ, ডেটা এবং পরিচয়ের নিয়ন্ত্রণ রাখুন।",
   "page-index-description": "উদ্ভাবনী অ্যাপ এবং ব্লকচেইন নেটওয়ার্কের জন্য শীর্ষস্থানীয় প্ল্যাটফর্ম",
   "page-index-title": "ইথেরিয়ামে স্বাগতম",
   "page-index-hero-image-alt": "ইথেরিয়াম ইকোসিস্টেমের প্রতিনিধিত্বকারী একটি ভবিষ্যৎ শহরের চিত্র।",
@@ -41,14 +41,14 @@
   "page-index-carousel-privacy-ethereum-label": "ইথেরিয়াম অ্যাপ",
   "page-index-carousel-privacy-ethereum-value": "ডিফল্টভাবেই ব্যক্তিগত",
   "page-index-carousel-remittances-tag": "সীমান্ত পারের পেমেন্ট",
-  "page-index-carousel-remittances-title": "{minutes} মিনিটে দেশে টাকা পাঠান",
+  "page-index-carousel-remittances-title": "{seconds} সেকেন্ডের মধ্যে দেশে টাকা পাঠান",
   "page-index-carousel-remittances-subtitle": "{wireFee} ওয়্যার ফি এবং {days}+ দিনের অপেক্ষাকে এড়িয়ে যান।",
   "page-index-carousel-remittances-description": "বিশ্বের যেকোনো স্থানে, যেকোনো কাউকে মাত্র {txFee} খরচে <stablecoinsLink>stablecoins</stablecoinsLink> পাঠান। তারা প্রায় সাথে সাথেই ফান্ড পেয়ে যাবে।",
   "page-index-carousel-remittances-cta": "নিজেই চেষ্টা করে দেখুন",
   "page-index-carousel-remittances-traditional-label": "ওয়্যার ট্রান্সফার",
   "page-index-carousel-remittances-traditional-value": "{min}-{max} দিন",
   "page-index-carousel-remittances-ethereum-label": "ইথেরিয়াম",
-  "page-index-carousel-remittances-ethereum-value": "{minutes} মিনিট",
+  "page-index-carousel-remittances-ethereum-value": "{seconds} সেকেন্ড",
   "page-index-carousel-borrowing-tag": "আর্থিক অ্যাক্সেস",
   "page-index-carousel-borrowing-title": "ক্রেডিট হিস্ট্রি ছাড়াই ঋণ গ্রহণ করুন",
   "page-index-carousel-borrowing-subtitle": "শুরু করার জন্য আপনার কোনো ক্রেডিট স্কোরের প্রয়োজন নেই।",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "প্রাইভেট এবং অনুমতিসাপেক্ষ নেটওয়ার্ক",
   "page-index-get-started-enterprise-bullet-3": "প্রাতিষ্ঠানিক রিসোর্স",
   "page-index-get-started-enterprise-cta": "এন্টারপ্রাইজ অন্বেষণ করুন",
-  "page-index-simulator-cta": "আরও গাইড ব্যবহার করে দেখুন"
+  "page-index-simulator-cta": "আরও গাইড ব্যবহার করে দেখুন",
+  "page-index-latest-updates-title": "ইথেরিয়ামের সর্বশেষ আপডেট",
+  "page-index-latest-updates-cta": "আরও দেখুন"
 }

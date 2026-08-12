@@ -240,3 +240,7 @@ _Know of a community resource that helped you? Edit this page and add it!_
 - [Accounts](/developers/docs/accounts/)
 - [Ethereum virtual machine (EVM)](/developers/docs/evm/)
 - [Gas](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

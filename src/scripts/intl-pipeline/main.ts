@@ -13,13 +13,6 @@ import { execFileSync } from "child_process"
 import * as fs from "fs"
 import * as path from "path"
 
-import {
-  diff,
-  extractChanges,
-  parseJson,
-  parseMarkdown,
-} from "intl-content-tree"
-
 import i18nConfig from "../../../i18n.config.json"
 
 import {
@@ -67,7 +60,11 @@ import {
 } from "./config"
 import { LLM, MANIFESTS_DIR } from "./constants"
 import type { LlmTranslator } from "./pipeline"
-import { pipeline, PIPELINE_CONFIG } from "./pipeline"
+import {
+  findStructuralRegressions,
+  getLlmSectionIds,
+  pipeline,
+} from "./pipeline"
 
 // ---------------------------------------------------------------------------
 // Types
@@ -374,40 +371,6 @@ async function buildGeminiTranslator(
   }
 }
 
-/**
- * Identify which sections need LLM translation.
- */
-function getLlmSectionIds(
-  englishA: string,
-  englishB: string,
-  fileType: "markdown" | "json"
-): string[] {
-  const parse = fileType === "markdown" ? parseMarkdown : parseJson
-  const treeA = parse(englishA, PIPELINE_CONFIG)
-  const treeB = parse(englishB, PIPELINE_CONFIG)
-  const dr = diff(treeA, treeB)
-  const cs = extractChanges(treeA, treeB)
-
-  const tdPaths = dr.translatableDrift.map((e: { path: string }) => e.path)
-  const leafTdPaths = tdPaths.filter(
-    (p: string) =>
-      !tdPaths.some((o: string) => o !== p && o.startsWith(p + "/"))
-  )
-  const leafTdIds = dr.translatableDrift
-    .filter((e: { path: string }) => leafTdPaths.includes(e.path))
-    .map((e: { id: string }) => e.id)
-    .filter((id: string) => !id.startsWith("frontmatter:"))
-
-  const renamedNewIds = new Set(
-    cs.sectionRenames.map((r: { newId: string }) => r.newId)
-  )
-  const addedIds = dr.added
-    .filter((e: { id: string }) => !renamedNewIds.has(e.id))
-    .map((e: { id: string }) => e.id)
-
-  return [...leafTdIds, ...addedIds]
-}
-
 // ---------------------------------------------------------------------------
 // Full Translation
 // ---------------------------------------------------------------------------
@@ -469,20 +432,16 @@ async function runFullTranslation(
     }
   }
 
-  await committer.commitFile(destPath, finalContent, locale)
-  committedFiles.push({ path: destPath, content: finalContent })
-
-  // Build and commit source manifest
+  // Build the manifests BEFORE recording any blob. Manifest construction is
+  // pure and can throw (parse/serialize); doing it first means a builder error
+  // aborts the task without leaving content recorded sans its manifest -- the
+  // same content-without-manifest desync the ref-race fix already closed.
   const sourceManifest =
     file.type === "markdown"
       ? buildMarkdownManifest(file.content, file.path, baseBranchSha)
       : buildJsonManifest(file.content, file.path, baseBranchSha)
-
-  // Commit source manifest
   const smDest = getManifestPath(destPath, "source")
-  await committer.commitFile(smDest, sourceManifest, locale)
 
-  // Commit translation manifest
   const placeholderData =
     result.placeholderOrder && result.placeholderMap
       ? {
@@ -493,9 +452,11 @@ async function runFullTranslation(
         ? extractPlaceholderData(parseEnglishJson(file.content))
         : null
 
+  let translationManifest: string | null = null
+  let tmDest: string | null = null
   if (placeholderData) {
     const parsed = JSON.parse(sourceManifest)
-    const tm = buildLocaleTranslationManifest({
+    translationManifest = buildLocaleTranslationManifest({
       locale,
       englishManifestHash: parsed.rootHash,
       placeholderOrder: placeholderData.placeholderOrder,
@@ -504,8 +465,15 @@ async function runFullTranslation(
         _all: { translatedAt: new Date().toISOString(), status: "success" },
       },
     })
-    const tmDest = getManifestPath(destPath, "translation")
-    await committer.commitFile(tmDest, tm, locale)
+    tmDest = getManifestPath(destPath, "translation")
+  }
+
+  // Record content and its manifest(s) together, manifests last.
+  await committer.commitFile(destPath, finalContent, locale)
+  committedFiles.push({ path: destPath, content: finalContent })
+  await committer.commitFile(smDest, sourceManifest, locale)
+  if (translationManifest && tmDest) {
+    await committer.commitFile(tmDest, translationManifest, locale)
   }
 
   log(`[${locale}] ${destPath}: committed`)
@@ -587,6 +555,29 @@ async function runIncremental(
     translator
   )
 
+  // Post-assembly invariants: if the merge lost or duplicated structure relative
+  // to English, discard it and retranslate the file rather than commit it.
+  const regressions = findStructuralRegressions(
+    englishA,
+    localeContent,
+    englishB,
+    result,
+    file.type
+  )
+  if (regressions.length > 0) {
+    log(
+      `[${locale}] ${file.path}: structural regression (${regressions.map((r) => r.detail).join("; ")}), falling back to full translation`
+    )
+    return runFullTranslation(
+      file,
+      locale,
+      destPath,
+      committer,
+      baseBranchSha,
+      committedFiles
+    )
+  }
+
   // Phase 4b: JSX attribute translation pass (markdown only)
   let finalContent = result
   if (file.type === "markdown") {
@@ -614,15 +605,16 @@ async function runIncremental(
     }
   }
 
-  await committer.commitFile(destPath, finalContent, locale)
-  committedFiles.push({ path: destPath, content: finalContent })
-
+  // Build the source manifest before recording any blob (see runFullTranslation):
+  // a builder throw must not leave content recorded without its manifest.
   const sourceManifest =
     file.type === "markdown"
       ? buildMarkdownManifest(englishB, file.path, baseBranchSha)
       : buildJsonManifest(englishB, file.path, baseBranchSha)
-
   const smDest = getManifestPath(destPath, "source")
+
+  await committer.commitFile(destPath, finalContent, locale)
+  committedFiles.push({ path: destPath, content: finalContent })
   await committer.commitFile(smDest, sourceManifest, locale)
 
   log(`[${locale}] ${destPath}: committed (incremental)`)
@@ -907,9 +899,12 @@ async function main() {
 
   // Log task failures but don't abort -- partial successes ship. Failures are
   // recorded with file context (via submitWithContext) and surfaced in the PR
-  // body with rerun commands. Per-file manifests are only stamped on success,
-  // so a rerun of just the failed combinations naturally retries them without
-  // touching the work that landed this run.
+  // body with rerun commands. A failed task records NEITHER its content nor its
+  // manifest (content+manifests are built then recorded together per task, and
+  // commitFile no longer touches the branch ref mid-run -- see SharedCommitter),
+  // so a failed file simply doesn't appear this run and a rerun re-detects it.
+  // This invariant is what keeps manifest tracking in sync; before it, a
+  // ref-race could ship content without its manifest and desync every rerun.
   if (failures.length > 0) {
     log(
       `${failures.length} task(s) failed (continuing with successes):`,

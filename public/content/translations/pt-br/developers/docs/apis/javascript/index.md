@@ -237,7 +237,7 @@ ethers.utils.formatEther(balance)
 - [Funções utilitárias do Web3js](https://docs.web3js.org/api/web3-utils)
 - [Funções utilitárias do Ethers](https://docs.ethers.org/v6/api/utils/)
 
-## Bibliotecas disponíveis {#available-libraries}
+## Bibliotecas disponíveis
 
 **Web3.js -** **_API JavaScript do Ethereum._**
 
@@ -268,10 +268,20 @@ ethers.utils.formatEther(balance)
 - [Documentação](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-**Codex -** **_API de dados de blockchain enriquecidos em tempo real em dezenas de redes._**
+**wagmi -** **_Biblioteca de hooks React para Ethereum, construída sobre o viem._**
+
+- [Documentação](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_Biblioteca React para adicionar conexão de carteira a aplicativos descentralizados (dapps), construída sobre o wagmi e o viem._**
+
+- [Documentação](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
+
+**Codex -** **_API de dados de blockchain enriquecidos e em tempo real em dezenas de redes._**
 
 - [Documentação](https://docs.codex.io)
-- [Explorer](https://docs.codex.io/explore)
+- [Explorador](https://docs.codex.io/explore)
 - [GitHub](https://github.com/Codex-Data)
 - [Discord](https://discord.com/invite/mFpUhT3vAq)
 
@@ -279,7 +289,6 @@ ethers.utils.formatEther(balance)
 
 - [Documentação](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
-
 ## Leitura adicional {#further-reading}
 
 _Conhece algum recurso da comunidade que o ajudou? Edite esta página e adicione-o!_

@@ -49,14 +49,14 @@ const PathwayCard = ({
     <Card
       href={href}
       variant="nested"
-      className={cn("border @lg/pathway:flex-row", className)}
+      className={cn("@lg/pathway:flex-row", className)}
+      border
     >
       {banner && (
         <CardBanner
           background="none"
           fit="contain"
           size="full"
-          zoom={false}
           className="flex h-32 w-full shrink-0 items-center justify-center p-2 pt-4 @lg/pathway:h-36 @lg/pathway:w-40 @lg/pathway:self-center @lg/pathway:p-2"
         >
           {banner}
@@ -64,10 +64,10 @@ const PathwayCard = ({
       )}
       <CardContent spacing="none" className="flex items-center gap-4">
         <div className="flex-1">
-          <div className="mb-1 flex flex-wrap items-center gap-x-3 gap-y-1">
+          <div className="mb-1 flex flex-wrap-reverse items-center gap-x-3 gap-y-1">
             <CardTitle>{title}</CardTitle>
             {badge && (
-              <Tag status={badge.status ?? "success"} size="small">
+              <Tag status={badge.status ?? "tag-green"} size="small">
                 {badge.label}
               </Tag>
             )}

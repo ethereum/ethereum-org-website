@@ -3,6 +3,7 @@ title: "Cancún-Deneb (Dencun)"
 metaTitle: "Preguntas frecuentes sobre Cancún-Deneb (Dencun)"
 description: "Preguntas frecuentes sobre la actualización de la red Cancún-Deneb (Dencun)"
 lang: es
+template: upgrade
 ---
 
 Cancún-Deneb (Dencun) es una actualización de la red Ethereum, que activa **Proto-Danksharding (EIP-4844)**, introduciendo **blobs** de datos temporales para un almacenamiento más económico de los rollup de [capa 2 (L2)](/glossary/#layer-2).

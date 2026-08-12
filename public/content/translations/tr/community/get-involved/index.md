@@ -1,6 +1,6 @@
 ---
-title: Nasıl dahil olabilirim?
-description: Ethereum topluluğuna nasıl dahil olabilirsiniz.
+title: "Nasıl dahil olabilirim?"
+description: "Ethereum topluluğuna nasıl dahil olabilirsiniz."
 lang: tr
 ---
 
@@ -11,7 +11,7 @@ Ethereum topluluğu, birçok farklı geçmişe ve beceri setine sahip insanları
 ## Geliştiriciler <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - [ethereum.org/developers/](/developers/) adresinde Ethereum hakkında bilgi edinin ve onu deneyin
-- Yakınınızdaki bir [ETHGlobal](https://ethglobal.co/) hackathon'una katılın!
+- Yakınınızdaki bir [ETHGlobal](https://ethglobal.com/) hackathon'una katılın!
 - [Uzmanlık alanınızla veya tercih ettiğiniz programlama diliyle ilgili projelere](/developers/docs/programming-languages/) göz atın
 - [Mutabakat ve Yürütme Katmanı çağrılarını](https://www.youtube.com/@EthereumProtocol/streams) izleyin veya bunlara katılın
 - [Ekosistem Destek Programı'nın istek listesi](https://esp.ethereum.foundation/wishlist/) - Ethereum Ekosistem Destek Programı'nın aktif olarak hibe başvuruları aradığı araç, belgelendirme ve altyapı alanları
@@ -59,10 +59,10 @@ Eğer bir geliştirici değilseniz, Ethereum'da nereden başlayacağınızı bil
 
 - Birçok açık kaynaklı topluluk çağrısı vardır ve not alan kişilerin olması büyük bir yardımdır. İlgileniyorsanız, [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu) sunucusuna katılın ve kendinizi tanıtın!
 
-### Ethereum içeriğini ana dilinize çevirin {#translate-ethereum}
+### Çevrilmiş Ethereum içeriğini iyileştirmeye yardımcı olun {#translate-ethereum}
 
-- ethereum.org, web sitesini ve diğer kaynakları birçok farklı dile çeviren bir Çeviri Programı yürütmektedir
-- Nasıl dahil olabileceğinizi [buradan](/contributing/translation-program) öğrenin
+- ethereum.org Çeviri Programı kademeli olarak sonlandırılıyor ve artık yeni çevirmenlerin sisteme katılımını sağlamıyor—durumu ve geçmişi için [program sayfasına](/contributing/translation-program/) göz atın
+- Yine de [mevcut çevirilerdeki hataları bildirerek](https://github.com/ethereum/ethereum-org-website/issues/new/choose) yardımcı olabilirsiniz
 
 ### Bir düğüm çalıştırın {#run-a-node}
 
@@ -80,7 +80,7 @@ ETH'nizi stake ederek Ethereum ağının güvenliğini sağlamaya yardımcı olu
 
 Ethereum ekosistemi, kamusal malları ve etkili projeleri finanse etme misyonundadır. Çok küçük bağışlarla desteğinizi gösterebilir ve önemli çalışmaların gerçekleştirilmesine olanak tanıyabilirsiniz.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Finans profesyonelleri ve Muhasebeciler <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

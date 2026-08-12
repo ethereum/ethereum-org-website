@@ -1,7 +1,7 @@
 ---
-title: 영지식 증명이란 무엇인가요?
-metaTitle: 영지식 증명
-description: 초보자를 위한 영지식 증명 비기술적 소개입니다.
+title: "영지식 증명이란 무엇인가요?"
+metaTitle: "영지식 증명"
+description: "초보자를 위한 영지식 증명 비기술적 소개입니다."
 lang: ko
 ---
 
@@ -21,7 +21,7 @@ lang: ko
 
 하지만 이 접근 방식에는 주로 프라이버시 부족이라는 문제가 있습니다. 제3자 서비스와 공유되는 개인 식별 정보(PII)는 해킹에 취약한 중앙 데이터베이스에 저장됩니다. 신원 도용이 심각한 문제가 되면서 민감한 정보를 공유할 때 프라이버시를 더 잘 보호할 수 있는 수단에 대한 요구가 커지고 있습니다.
 
-영지식 증명은 **청구의 유효성을 증명하기 위해 정보를 공개할 필요성을 제거**함으로써 이 문제를 해결합니다. 영지식 프로토콜은 진술('증거'라고 함)을 입력으로 사용하여 유효성에 대한 간결한 증명을 생성합니다. 이 증명은 생성에 사용된 정보를 노출하지 않고도 진술이 참이라는 강력한 보장을 제공합니다.
+영지식 증명은 <strong>청구의 유효성을 증명하기 위해 정보를 공개할 필요성을 제거</strong>함으로써 이 문제를 해결합니다. 영지식 프로토콜은 진술('증거'라고 함)을 입력으로 사용하여 유효성에 대한 간결한 증명을 생성합니다. 이 증명은 생성에 사용된 정보를 노출하지 않고도 진술이 참이라는 강력한 보장을 제공합니다.
 
 앞의 예로 돌아가서, 시민권 청구를 증명하는 데 필요한 유일한 증거는 영지식 증명입니다. 검증자는 기본 진술도 참이라고 확신하기 위해 증명의 특정 속성이 참인지 확인하기만 하면 됩니다.
 
@@ -58,8 +58,10 @@ lang: ko
       <p>
         <a href="/decentralized-identity/#national-and-government-id">탈중앙화 신원증명 (DID) 사례 연구</a>에서 부탄 NDI에 대해 자세히 알아보세요.
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### 인류 증명 (Proof of Humanity) {#proof-of-humanity}
@@ -78,7 +80,7 @@ World ID는 이더리움 재단의 [PSE 팀](https://pse.dev/)이 개발한 [Sem
 
 검증 가능한 연산은 블록체인 설계를 개선하기 위한 영지식 기술의 또 다른 응용 분야입니다. 검증 가능한 컴퓨팅을 사용하면 검증 가능한 결과를 유지하면서 연산을 다른 엔티티에 아웃소싱할 수 있습니다. 엔티티는 프로그램이 올바르게 실행되었음을 검증하는 증명과 함께 결과를 제출합니다.
 
-검증 가능한 연산은 보안을 저하시키지 않으면서 **블록체인의 처리 속도를 향상시키는 데 매우 중요**합니다. 이를 이해하려면 이더리움 확장을 위해 제안된 솔루션의 차이점을 알아야 합니다.
+검증 가능한 연산은 보안을 저하시키지 않으면서 <strong>블록체인의 처리 속도를 향상시키는 데 매우 중요</strong>합니다. 이를 이해하려면 이더리움 확장을 위해 제안된 솔루션의 차이점을 알아야 합니다.
 
 샤딩과 같은 [온체인 확장 솔루션](/developers/docs/scaling/#onchain-scaling)은 블록체인의 기본 레이어에 대한 광범위한 수정이 필요합니다. 그러나 이 접근 방식은 매우 복잡하며 구현 오류로 인해 이더리움의 보안 모델이 훼손될 수 있습니다.
 
@@ -148,7 +150,7 @@ MACI를 사용하려면 코디네이터가 뇌물 공여자와 담합하거나 �
 
 3. **영지식(Zero-knowledge)**: 검증자는 진술의 유효성 또는 허위성 외에는 진술에 대해 아무것도 알지 못합니다(진술에 대해 "영지식"을 가짐). 이 요구 사항은 또한 검증자가 증명에서 원래 입력(진술의 내용)을 도출하는 것을 방지합니다.
 
-기본 형태로 영지식 증명은 **증거(witness)**, **도전(challenge)**, **응답(response)**의 세 가지 요소로 구성됩니다.
+기본 형태로 영지식 증명은 **증거(witness)**, **도전(challenge)**, <strong>응답(response)</strong>의 세 가지 요소로 구성됩니다.
 
 - **증거**: 영지식 증명을 통해 증명자는 숨겨진 정보에 대한 지식을 증명하고자 합니다. 비밀 정보는 증명에 대한 "증거"이며, 증명자가 증거에 대해 알고 있다고 가정하면 해당 정보에 대한 지식이 있는 당사자만 대답할 수 있는 일련의 질문이 설정됩니다. 따라서 증명자는 무작위로 질문을 선택하고 답을 계산하여 검증자에게 전송함으로써 증명 프로세스를 시작합니다.
 
@@ -176,7 +178,7 @@ MACI를 사용하려면 코디네이터가 뇌물 공여자와 담합하거나 �
 
 #### 영지식 스나크 (ZK-SNARKs) {#zk-snarks}
 
-영지식 스나크(ZK-SNARK)는 **Zero-Knowledge Succinct Non-Interactive Argument of Knowledge(영지식 간결한 비대화형 지식 인수)**의 약자입니다. 영지식 스나크 프로토콜은 다음과 같은 특성을 갖습니다.
+영지식 스나크(ZK-SNARK)는 <strong>Zero-Knowledge Succinct Non-Interactive Argument of Knowledge(영지식 간결한 비대화형 지식 인수)</strong>의 약자입니다. 영지식 스나크 프로토콜은 다음과 같은 특성을 갖습니다.
 
 - **영지식(Zero-knowledge)**: 검증자는 진술에 대해 다른 것을 알지 못해도 진술의 무결성을 검증할 수 있습니다. 검증자가 진술에 대해 아는 유일한 지식은 그것이 참인지 거짓인지 여부입니다.
 
@@ -196,7 +198,7 @@ MACI를 사용하려면 코디네이터가 뇌물 공여자와 담합하거나 �
 
 #### ZK-스탁 (ZK-STARKs) {#zk-starks}
 
-ZK-스탁(ZK-STARK)은 **Zero-Knowledge Scalable Transparent Argument of Knowledge(영지식 확장 가능하고 투명한 지식 인수)**의 약자입니다. ZK-스탁은 다음과 같은 점을 제외하고 영지식 스나크와 유사합니다.
+ZK-스탁(ZK-STARK)은 <strong>Zero-Knowledge Scalable Transparent Argument of Knowledge(영지식 확장 가능하고 투명한 지식 인수)</strong>의 약자입니다. ZK-스탁은 다음과 같은 점을 제외하고 영지식 스나크와 유사합니다.
 
 - **확장성(Scalable)**: ZK-스탁은 증거의 크기가 더 클 때 증명을 생성하고 검증하는 데 영지식 스나크보다 빠릅니다. STARK 증명의 경우 증거가 커짐에 따라 증명자 및 검증 시간이 약간만 증가합니다(SNARK 증명자 및 검증자 시간은 증거 크기에 비례하여 선형적으로 증가함).
 
@@ -235,5 +237,9 @@ ZK-스탁은 보안을 위해 충돌 저항성 해시 함수에만 의존하기 
 - [ZK-STARKs — 양자 컴퓨터에 대해서도 검증 가능한 신뢰 생성](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [zk-SNARKs가 어떻게 가능한지에 대한 대략적인 소개](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [영지식 증명(ZKP)이 자기 주권 신원의 판도를 바꾸는 이유](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
-- [EIP-7503 설명: ZK 증명으로 이더리움에서 프라이빗 전송 활성화](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Emmanuel Awosika_
+- [EIP-7503 설명: ZK 증명으로 이더리움에서 프라이빗 전송 활성화](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [ZK 카드 게임: ZK 기초 및 실제 사용 사례를 배우는 게임](https://github.com/ZK-card/zk-cards) - _ZK-Cards_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

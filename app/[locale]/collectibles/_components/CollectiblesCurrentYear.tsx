@@ -1,5 +1,4 @@
 "use client"
-
 import React from "react"
 import {
   CircleCheckIcon,
@@ -8,6 +7,7 @@ import {
   PencilRulerIcon,
   Zap,
 } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import { ChildOnlyProp } from "@/lib/types"
 
@@ -32,8 +32,6 @@ import {
 import { cn } from "@/lib/utils/cn"
 
 import { BadgeWithOwned } from "./CollectiblesContent"
-
-import useTranslation from "@/hooks/useTranslation"
 
 const HighlightCardGrid = ({
   className,
@@ -80,7 +78,7 @@ const HighlightCardBody = ({
         height={500}
         alt={alt}
         sizes="(min-width: 768px) 160px, 128px"
-        className="w-32 transition-transform group-hover:scale-105 group-hover:transition-transform md:w-40"
+        className="w-32 transition-transform group-hover:scale-105 md:w-40"
       />
     </Link>
     <div className="w-full">{children}</div>
@@ -142,7 +140,7 @@ const CollectiblesCurrentYear = ({
   badges,
   address,
 }: CollectiblesCurrentYearProps) => {
-  const { t } = useTranslation("page-collectibles")
+  const t = useTranslations("page-collectibles")
 
   const socialBadges = React.useMemo(
     () => badges.filter((b) => b.category === "Events/Calls"),
@@ -408,30 +406,6 @@ const CollectiblesCurrentYear = ({
 
           <p className="mt-2">{t("page-collectibles-translations-desc")}</p>
 
-          <Accordion type="single" collapsible>
-            <AccordionItem value="item-1" className="mt-4">
-              <AccordionTrigger className="w-full justify-start !border-none !px-0 py-2 font-bold hover:bg-transparent [&[data-state=open]]:bg-transparent">
-                {t("page-collectibles-instructions-label")}
-              </AccordionTrigger>
-              <AccordionContent className="text-base">
-                <OrderedList className="ms-3 mb-0">
-                  <ListItem>
-                    <Translation
-                      id="page-collectibles-translations-instructions-1"
-                      ns="page-collectibles"
-                    />
-                  </ListItem>
-                  <ListItem>
-                    {t("page-collectibles-translations-instructions-2")}
-                  </ListItem>
-                  <ListItem className="mb-0">
-                    {t("page-collectibles-translations-instructions-3")}
-                  </ListItem>
-                </OrderedList>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-
           <HighlightCardGrid className="mt-4">
             <HighlightCard>
               <HighlightCardBody
@@ -468,7 +442,7 @@ const CollectiblesCurrentYear = ({
                 </CheckList>
               </HighlightCardBody>
               <HighlightCardFooter href="/contributing/translation-program/">
-                {t("page-collectibles-get-started")}
+                {t("common:learn-more")}
               </HighlightCardFooter>
             </HighlightCard>
           </HighlightCardGrid>
@@ -524,7 +498,7 @@ const CollectiblesCurrentYear = ({
                   alt={badge.name}
                   sizes="(min-width: 768px) 128px, 96px"
                   className={cn(
-                    "size-24 transition-transform group-hover:scale-105 group-hover:transition-transform md:size-32",
+                    "size-24 transition-transform group-hover:scale-105 md:size-32",
                     address && !badge.owned && "grayscale"
                   )}
                 />

@@ -47,9 +47,9 @@ Mkataba mahiri ni msimbo unaoishi kwenye mnyororo wa vitalu wa Ethereum na unaen
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## Zana za kuunda dapps {#dapp-tools}
+## Zana za kuunda programu tumizi zilizogatuliwa (dapps)
 
-**Scaffold-ETH _- Fanya majaribio haraka na Solidity ukitumia msimbo wa mbele unaoendana na mkataba mahiri wako._**
+**Scaffold-ETH 2 _- Fanya majaribio haraka ukitumia Solidity kwa kutumia kiolesura cha mbele kinachoendana na mkataba mahiri wako._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Mfano wa dapp](https://punkwallet.io/)
@@ -58,28 +58,27 @@ Mkataba mahiri ni msimbo unaoishi kwenye mnyororo wa vitalu wa Ethereum na unaen
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**One Click Dapp _- Zana ya FOSS ya kuzalisha misimbo ya mbele ya dapp kutoka kwenye [ABI](/glossary/#abi)._**
+**One Click Dapp _- Zana ya FOSS ya kuzalisha violesura vya mbele vya dapp kutoka kwenye [ABI](/glossary/#abi)._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
-**Etherflow _- Zana ya FOSS kwa wasanidi programu wa Ethereum kujaribu nodi yao, na kutunga & kutatua simu za RPC kutoka kwenye kivinjari._**
+**Etherflow _- Zana ya FOSS kwa wasanidi programu wa Ethereum kujaribu nodi yao, na kutunga na kutatua simu za RPC kutoka kwenye kivinjari._**
 
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
-**thirdweb _- SDK katika kila lugha, mikataba mahiri, zana, na miundombinu kwa ajili ya uundaji wa Web3._**
+**thirdweb _- SDKs katika kila lugha, mikataba mahiri, zana, na miundombinu kwa ajili ya uundaji wa Web3._**
 
 - [Ukurasa wa nyumbani](https://thirdweb.com/)
 - [Nyaraka](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Crossmint _- Jukwaa la uundaji wa Web3 la kiwango cha biashara ili kusambaza mikataba mahiri, kuwezesha malipo ya kadi ya mkopo na mnyororo mtambuka, na kutumia API kuunda, kusambaza, kuuza, kuhifadhi, na kuhariri NFT._**
+**Crossmint _- Jukwaa la uundaji wa Web3 la kiwango cha biashara ili kusambaza mikataba mahiri, kuwezesha malipo ya kadi ya mkopo na minyororo mtambuka, na kutumia API kuunda, kusambaza, kuuza, kuhifadhi, na kuhariri NFTs._**
 
 - [crossmint.com](https://www.crossmint.com)
 - [Nyaraka](https://docs.crossmint.com)
 - [Discord](https://discord.com/invite/crossmint)
-
 ## Usomaji zaidi {#further-reading}
 
 - [Gundua dapps](/apps)

@@ -60,10 +60,18 @@ lang: zh-tw
 
 若要開始使用，請造訪[文件](https://docs.codex.io)、嘗試使用 [Explorer](https://docs.codex.io/explore)，或在[儀表板](https://dashboard.codex.io/signup)註冊。
 
+
+[Mobula](https://mobula.io/) 是一個高效能的加密貨幣資料 API，提供超過 90 個區塊鏈的即時與歷史市場資料、代幣中繼資料、錢包投資組合以及鏈上分析。開發人員可以存取 REST 和 GraphQL 端點，以取得代幣價格、市值、交易量、流動性資料和多鏈錢包餘額，而無需執行自己的基礎設施。Mobula 為生產環境的應用程式提供免費（每月 10 萬次請求）和付費方案。
+
+若要開始使用，請造訪[文件](https://docs.mobula.io)、探索 [API 參考資料](https://docs.mobula.io/reference/)，或在[儀表板](https://mobula.io/)註冊。
 ## EVM 查詢語言 {#evm-query-language}
 
 EVM 查詢語言 (EQL) 是一種類似 SQL 的語言，專為查詢 EVM（以太坊虛擬機）鏈而設計。EQL 的最終目標是支援對 EVM 鏈一等公民（區塊、帳戶和交易）進行複雜的關聯式查詢，同時為開發人員和研究人員提供符合人體工學的語法以供日常使用。透過 EQL，開發人員可以使用熟悉的類 SQL 語法來擷取區塊鏈資料，並消除對複雜樣板程式碼的需求。EQL 支援標準的區塊鏈資料請求（例如，檢索以太坊上帳戶的隨機數和餘額，或擷取目前的區塊大小和時間戳記），並持續增加對更複雜請求和功能集的支援。
 
+
+[Envio](https://envio.dev/) 是一個索引框架，可將鏈上事件轉換為可查詢的 GraphQL API。它支援以太坊和任何與 EVM 相容的鏈。開發人員可以使用 TypeScript、JavaScript 或 ReScript 撰寫事件處理常式，以提供即時和歷史資料，並具備區塊鏈重組支援、多鏈索引，以及 Envio Cloud 託管服務或自行託管功能。
+
+若要開始使用，請遵循 [HyperIndex 快速入門](https://docs.envio.dev/docs/HyperIndex/quickstart)來建立、部署和查詢索引器。
 ## 進一步閱讀 {#further-reading}
 
 - [探索加密貨幣資料 I：資料流架構](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
@@ -75,7 +83,7 @@ EVM 查詢語言 (EQL) 是一種類似 SQL 的語言，專為查詢 EVM（以太
 - [Dune 基礎知識](https://docs.dune.com/#dune-basics)
 - [SubQuery 以太坊快速入門指南](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [SQD 網路概覽](https://docs.sqd.dev/)
-- [EVM 查詢語言](https://eql.sh/blog/alpha-release-notes)
+- [EVM 查詢語言](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 
 ## 教學：以太坊上的資料與分析 / SQL {#tutorials}
 

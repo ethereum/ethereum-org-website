@@ -29,10 +29,13 @@ incomplete: true
 
 [ERC](https://eips.ethereum.org/erc) প্রস্তাবনাগুলোর সম্পূর্ণ তালিকা।
 
-## আরও পড়ুন {#further-reading}
+## আরও পড়ুন
 
 _এমন কোনো কমিউনিটি রিসোর্স সম্পর্কে জানেন যা আপনাকে সাহায্য করেছে? এই পেজটি এডিট করুন এবং সেটি যোগ করুন!_
 
+- [টোকেন ইন্টিগ্রেশন চেকলিস্ট](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md) - _Trail of Bits_
+- [ওপেনজেপেলিন ডকুমেন্টেশন: টোকেন](https://docs.openzeppelin.com/contracts/5.x/tokens) - _ওপেনজেপেলিন_
+- [টোকেন ইন্টিগ্রেশনের বিপদ (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _ওপেনজেপেলিন_
 ## সম্পর্কিত টিউটোরিয়াল {#related-tutorials}
 
 - [টোকেন ইন্টিগ্রেশন চেকলিস্ট](/developers/tutorials/token-integration-checklist/) _– টোকেনগুলোর সাথে ইন্টারঅ্যাক্ট করার সময় যে বিষয়গুলো বিবেচনা করতে হবে তার একটি চেকলিস্ট।_

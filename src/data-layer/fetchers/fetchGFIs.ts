@@ -44,7 +44,12 @@ export async function fetchGFIs(): Promise<GHIssue[]> {
     )
   }
 
-  const issues = (await response.json()) as GHIssue[]
+  // Drop issues authored by deleted ("ghost") accounts, for which GitHub
+  // returns `user: null`. Filtering here keeps malformed entries out of the
+  // cache so every consumer can rely on `user` being present.
+  const issues = ((await response.json()) as GHIssue[]).filter(
+    (issue) => issue.user
+  )
 
   console.log(
     `Successfully fetched ${issues.length} good first issues from GitHub`

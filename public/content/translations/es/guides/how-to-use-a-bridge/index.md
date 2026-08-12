@@ -1,6 +1,6 @@
 ---
-title: Cómo transferir tokens a la capa 2 mediante un puente
-description: Una guía que explica cómo mover tokens de Ethereum a la capa 2 usando un puente.
+title: "Cómo transferir tokens a la capa 2 mediante un puente"
+description: "Una guía que explica cómo mover tokens de Ethereum a la capa 2 usando un puente."
 lang: es
 ---
 

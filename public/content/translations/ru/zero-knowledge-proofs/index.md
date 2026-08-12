@@ -1,7 +1,7 @@
 ---
-title: Что такое доказательства с нулевым разглашением?
-metaTitle: Доказательства с нулевым разглашением
-description: Нетехническое введение в доказательства с нулевым разглашением для начинающих.
+title: "Что такое доказательства с нулевым разглашением?"
+metaTitle: "Доказательства с нулевым разглашением"
+description: "Нетехническое введение в доказательства с нулевым разглашением для начинающих."
 lang: ru
 ---
 
@@ -58,8 +58,10 @@ lang: ru
       <p>
         Узнайте больше о NDI Бутана в <a href="/decentralized-identity/#national-and-government-id">тематическом исследовании децентрализованной идентичности</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### Доказательство человечности (Proof of Humanity) {#proof-of-humanity}
@@ -233,5 +235,9 @@ ZK-STARK считается невосприимчивым к угрозе кв�
 - [ZK-STARK — создание проверяемого доверия даже против квантовых компьютеров](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Адам Лучано_
 - [Приблизительное введение в то, как возможны zk-SNARK](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Виталик Бутерин_
 - [Почему доказательства с нулевым разглашением (ZKP) меняют правила игры для самосуверенной идентичности](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Франклин Охаэгбулам_
-- [Объяснение EIP-7503: обеспечение приватных переводов в Эфириуме с помощью ZK-доказательств](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Эммануэль Авосика_
+- [Объяснение EIP-7503: обеспечение приватных переводов в Эфириуме с помощью ZK-доказательств](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Эммануэль Авосика_
 - [Карточная игра ZK: игра для изучения основ ZK и реальных вариантов использования](https://github.com/ZK-card/zk-cards) - _ZK-Cards_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

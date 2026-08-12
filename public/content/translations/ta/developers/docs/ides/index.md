@@ -59,6 +59,6 @@ lang: ta
 
 ## மேலும் படிக்க {#further-reading}
 
-- [எத்திரியம் IDEகள்](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Alchemy-இன் எத்திரியம் IDEகளின் பட்டியல்_
+- [எத்திரியம் IDEகள்](https://www.alchemy.com/dapps/list-of/solidity-developer-tools-on-ethereum) _- Alchemy-இன் எத்திரியம் IDEகளின் பட்டியல்_
 
 _உங்களுக்கு உதவிய சமூக வளம் பற்றித் தெரியுமா? இந்தப் பக்கத்தைத் திருத்தி அதைச் சேர்க்கவும்!_

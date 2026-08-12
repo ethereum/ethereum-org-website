@@ -1,6 +1,6 @@
 ---
 title: Comment puis-je m'impliquer ?
-description: Comment s'impliquer dans la communauté Ethereum.
+description: "Comment s'impliquer dans la communauté Ethereum."
 lang: fr
 ---
 
@@ -11,7 +11,7 @@ Commencez par vous renseigner sur la mission et les valeurs d'ethereum.org dans 
 ## Développeurs <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Découvrez et essayez Ethereum sur [ethereum.org/developers/](/developers/)
-- Participez à un hackathon [ETHGlobal](https://ethglobal.co/) près de chez vous !
+- Participez à un hackathon [ETHGlobal](https://ethglobal.com/) près de chez vous !
 - Consultez les [projets liés à votre domaine d'expertise ou à votre langage de programmation préféré](/developers/docs/programming-languages/)
 - Regardez ou participez aux [appels des couches de consensus et d'exécution](https://www.youtube.com/@EthereumProtocol/streams)
 - [Liste de souhaits de l'Ecosystem Support Program](https://esp.ethereum.foundation/wishlist/) - domaines de l'outillage, de la documentation et de l'infrastructure pour lesquels l'Ecosystem Support Program d'Ethereum recherche activement des demandes de subvention
@@ -59,10 +59,10 @@ Si vous n'êtes pas développeur, il peut être difficile de savoir par où comm
 
 - Il existe de nombreux appels communautaires open source, et avoir des preneurs de notes est d'une aide précieuse. Si vous êtes intéressé, rejoignez le [Discord des Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) et présentez-vous !
 
-### Traduire le contenu d'Ethereum dans votre langue maternelle {#translate-ethereum}
+### Aidez à améliorer le contenu traduit d'Ethereum {#translate-ethereum}
 
-- ethereum.org gère un programme de traduction qui traduit le site Web, ainsi que d'autres ressources, dans de nombreuses langues différentes
-- Découvrez comment vous impliquer [ici](/contributing/translation-program)
+- Le programme de traduction d'ethereum.org touche à sa fin et n'intègre plus de nouveaux traducteurs — consultez la [page du programme](/contributing/translation-program/) pour connaître son statut et son historique
+- Vous pouvez toujours aider en [signalant les erreurs dans les traductions existantes](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 
 ### Exécuter un nœud {#run-a-node}
 
@@ -80,7 +80,7 @@ En stakant vos ETH, vous pouvez gagner des récompenses tout en contribuant à s
 
 L'écosystème Ethereum a pour mission de financer des biens publics et des projets à fort impact. Avec de très petits dons, vous pouvez montrer votre soutien et permettre la réalisation de travaux importants.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Professionnels de la finance et comptables <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

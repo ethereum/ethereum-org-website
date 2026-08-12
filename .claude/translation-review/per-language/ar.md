@@ -91,3 +91,38 @@ Key terms to verify in future reviews:
 
 - 21 UI-string JSONs reviewed. 1 critical fixed: `glossary-tooltip.json` `wei-definition` leaked a sanitizer placeholder `<HTML-PLACEHOLDER-HTMLTAG-063f8a>` -> restored to `<a href="/glossary/#wei">` (pattern 22; pipeline fixed to prevent recurrence).
 - Prior ar failure modes (Igbo/Farsi contamination, GitHub garble, "state"=nation-state, transliterated domains, semantic inversions) did NOT recur. MSA register consistent. Note: current ETHGlossary table now gives staking=التخزين and validator=مُدَقِّق -- translations follow the API (authoritative) over this file's older entries.
+
+## PR #18772 (community-stories.json, 2026-07-10) -- 9.6/10
+- CRIT fixed: story-dorgo-eth bidi-isolated untranslated "March 2020" -> مارس 2020. Same artifact existed in ur -- grep English month names in RTL files on every import.
+- Ethereum/Bitcoin transliteration consistency was PERFECT across 26 entries (major improvement over PR #17105's 5-variant drift).
+- Open judgment call: MoneyGram/Western Union kept Latin vs PayPal transliterated باي بال (both non-glossary; fleet-wide inconsistency, not fixed).
+
+## PR #18937 (intl/pending-content-translation-program-remove-recruitment-pages) -- 2026-07-29 -- Score 8/10 pre-fix
+- The `mode=full` regeneration of `translators-guide/index.md` **stripped the English Crowdin UI labels** from five instruction lines (`'إخفاء' (Hide)` -> `'إخفاء'`). Crowdin's interface is English-only, so the reader could no longer match the instruction to the button. Restored, wrapped in `<span dir="ltr">` per this file's own pattern rather than bare as dev had them.
+- The terms-without-established-translations line invented `(PoW)`/`(PoS)` abbreviations not in the source and dropped the English glosses, leaving `التخزين` ("storage", a weak rendering of *staking*) with nothing to disambiguate it. Restored to full English glosses.
+- Not patched: tashkeel dropped from ~6 passive verbs while others kept theirs (internally inconsistent but not wrong), and موضع -> وضع for "placement" (vaguer, not incorrect).
+- Wins from the same run: `الأسماء الصحيحة` -> `أسماء الأعلام` (correct term for proper nouns), `نص الكتابة` -> `نظام الكتابة`, and three new LTR spans on the date-format examples.
+
+## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 9.6/10
+Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
+
+**Fixed in this branch:**
+
+- #42 `{#contract-accounts}` heading restored from the pre-PR blob
+- #43 blank line before `{#validators-keys}` restored
+- #44 `Arbitrum One` de-hybridised in `app-session-description`
+
+**Open (native call needed):**
+
+- `app-session-description` was the only brand issue and it is fixed; nothing else substantive.
+
+**Notes:**
+
+- `salt` is LTR-wrapped consistently with the 11 existing `<span dir="ltr">` spans in the same file.
+- `بسك` for game-sense mint is the established ar crypto verb (5 prior uses), not the coin-minting failure mode.
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 7.2/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- `common.json` zero-knowledge-proofs root `براهين` -> `إثباتات` (ETHGlossary uses إثبات; learn-quizzes already had it right 9x). Brand transliterations still owed in `learn-quizzes.json`/`page-what-is-ethereum.json` (Optimism/Arbitrum/Aave/MakerDAO/ZK-STARK, `فاليديم`->`فاليديوم`) -- left for a native pass.
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).

@@ -5,7 +5,7 @@ description: An overview of AI agents on Ethereum
 lang: en
 template: use-cases
 sidebarDepth: 2
-image: /images/ai-agents/hero-image.png
+image: /images/community-campfire-people-robot-cut-out.png
 alt: People gathered at terminal table
 summaryPoints:
   - "AI that interacts with blockchain and trades independently"

@@ -2,14 +2,13 @@
 title: Glamsterdam
 description: "Découvrez la mise à jour du protocole Glamsterdam"
 lang: fr
+template: upgrade
 ---
-
-# Glamsterdam {#glamsterdam}
 
 <Alert variant="update">
 <AlertContent>
 <AlertTitle>
-Glamsterdam est une prochaine mise à jour d'Ethereum prévue pour le second semestre 2026
+Glamsterdam est une prochaine mise à jour d'Ethereum prévue pour le quatrième trimestre 2026
 </AlertTitle>
 <AlertDescription>
 La mise à jour Glamsterdam n'est qu'une étape dans les objectifs de développement à long terme d'Ethereum. Apprenez-en plus sur [la feuille de route du protocole](/roadmap/) et [les mises à jour précédentes](/ethereum-forks/).
@@ -27,12 +26,12 @@ Ces améliorations garantissent qu'Ethereum reste rapide, abordable et décentra
 
 <VideoWatch slug="ethereum-evolution-glamsterdam" />
 
-## Améliorations envisagées pour Glamsterdam {#improvements-in-glamsterdam}
+## Améliorations dans Glamsterdam {#improvements-in-glamsterdam}
 
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Remarque : Cet article met actuellement en évidence une sélection d'EIP envisagées pour être incluses dans Glamsterdam. D'autres propositions activement testées sur les réseaux de développement (devnets) incluent EIP-7778, EIP-7843, EIP-7976, EIP-7981 et EIP-8024. Pour les dernières mises à jour de statut, consultez la [mise à jour Glamsterdam sur Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Remarque : Cet article met en évidence une sélection d'EIP dont l'inclusion est prévue dans Glamsterdam. D'autres propositions programmées en cours de test sur les devnets incluent EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 et EIP-8282. Pour les dernières mises à jour de statut, consultez la [mise à jour Glamsterdam sur Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
 Si vous souhaitez ajouter une EIP en cours d'examen pour Glamsterdam, mais qui n'a pas encore été ajoutée à cette page, [découvrez comment contribuer à ethereum.org ici](/contributing/).
 </AlertDescription>
@@ -42,11 +41,10 @@ Si vous souhaitez ajouter une EIP en cours d'examen pour Glamsterdam, mais qui n
 La mise à jour Glamsterdam se concentre sur trois objectifs principaux :
 
 - Accélérer le traitement (parallélisation) : Réorganiser la façon dont le réseau enregistre les dépendances de données, afin qu'il puisse traiter en toute sécurité de nombreuses transactions en même temps au lieu d'une séquence lente, une par une.
-- Augmenter la capacité : Répartir le gros du travail de création et de vérification de blocs, donnant au réseau plus de temps pour propager de plus grandes quantités de données sans ralentir.
+- Augmenter la capacité : Séparer la lourde tâche de création et de vérification des blocs, donnant au réseau plus de temps pour propager de plus grandes quantités de données sans ralentir.
 - Prévenir l'encombrement de la base de données (durabilité) : Ajuster les frais du réseau pour refléter avec précision le coût matériel à long terme du stockage de nouvelles données, débloquant les futures augmentations de la limite de gaz tout en empêchant la dégradation des performances matérielles.
 
-En bref, Glamsterdam introduira des changements structurels pour s'assurer qu'à mesure que le réseau augmente sa capacité, il reste durable et que les performances restent élevées.
-
+En bref, Glamsterdam introduira des changements structurels pour garantir qu'à mesure que le réseau augmente sa capacité, il reste durable et que les performances restent élevées.
 
 ## Mise à l'échelle de la couche 1 (l1) et traitement parallèle {#scale-l1}
 
@@ -149,7 +147,7 @@ En tarifiant plus précisément les actions d'accès à l'état, Ethereum peut �
 
 ## Résilience du réseau {#network-resilience}
 
-Les améliorations apportées aux tâches des validateurs et aux processus de sortie garantissent la stabilité du réseau lors d'événements de réduction (slashing) massifs et démocratisent la liquidité. Ces améliorations rendent le réseau plus stable et garantissent que tous les participants, grands et petits, sont traités équitablement.
+Les améliorations apportées aux tâches des validateurs et aux processus de sortie garantissent la stabilité du réseau lors d'événements de réduction massifs et accélèrent la vitesse à laquelle les stakers peuvent déplacer leur mise. Ces améliorations rendent le réseau plus stable et garantissent que tous les participants, grands et petits, sont traités équitablement.
 
 ### Exclure les validateurs sanctionnés de la proposition {#exclude-slashed-validators}
 
@@ -164,28 +162,25 @@ Parce que les blocs des proposants sanctionnés sont automatiquement rejetés co
 
 **Ressources** : [Spécification technique de l'EIP-8045](https://eips.ethereum.org/EIPS/eip-8045)
 
-### Permettre aux sorties d'utiliser la file d'attente de consolidation {#let-exits-use-the-consolidation-queue}
+### Augmenter le churn des sorties et des consolidations {#increase-exit-and-consolidation-churn}
 
-- Comble une faille qui permet aux validateurs à solde élevé de quitter le réseau plus rapidement que les petits validateurs via la file d'attente de consolidation
-- Permet aux sorties régulières de déborder dans cette deuxième file d'attente lorsqu'elle a de la capacité de réserve, réduisant les temps de retrait de staking pendant les périodes de fort volume
-- Maintient une sécurité stricte pour éviter de modifier les limites de sécurité de base d'Ethereum ou d'affaiblir le réseau
+- Réduit considérablement les temps de retrait du staking en permettant à la capacité de sortie d'évoluer avec la quantité totale d'ETH stakés, au lieu d'être plafonnée à un taux fixe
+- Donne aux consolidations de validateurs leur propre capacité de file d'attente dédiée, accélérant la transition vers des validateurs plus grands et plus efficaces
+- Maintient la sécurité du réseau grâce à des paramètres de sécurité soigneusement analysés
 
-Depuis que la [mise à jour Pectra](/roadmap/pectra) a augmenté le solde effectif maximum pour les validateurs Ethereum de 32 ETH à 2 048 ETH, une faille technique permet aux validateurs à solde élevé de quitter le réseau plus rapidement que les petits validateurs via la file d'attente de consolidation.
+La limite de churn d'Ethereum est une limite de sécurité sur la vitesse à laquelle les validateurs peuvent entrer, sortir ou fusionner (consolider) leurs ETH stakés, afin de s'assurer que la sécurité du réseau n'est jamais déstabilisée. Aujourd'hui, les sorties et les activations partagent une seule limite plafonnée, de sorte que pendant les périodes de forte demande, les stakers peuvent faire face à de longues attentes pour retirer leurs ETH. Les consolidations, où les validateurs fusionnent en de plus grands avec jusqu'à 2 048 ETH (activées par la [mise à jour Pectra](/roadmap/pectra)), sont également en concurrence pour cette capacité limitée, ce qui signifie que la consolidation de l'ensemble complet des validateurs prendrait des années au rythme actuel.
 
-**Permettre aux sorties d'utiliser la file d'attente de consolidation (ou EIP-8080)** démocratise la file d'attente de consolidation pour toutes les sorties de staking, créant une ligne unique et équitable pour tous.
+**L'augmentation du churn des sorties et des consolidations (ou EIP-8061)** réorganise ces limites en voies séparées :
 
-Pour détailler comment cela fonctionne aujourd'hui :
+- Les activations de validateurs conservent leur limite plafonnée existante, inchangée
+- Les sorties ne sont plus plafonnées et évoluent plutôt avec la quantité totale d'ETH stakés
+- Les consolidations obtiennent leur propre capacité dédiée, d'environ la moitié de la taille de la limite combinée d'activation et de sortie
 
-- La limite de churn d'Ethereum est une limite de sécurité sur la vitesse à laquelle les validateurs peuvent entrer, sortir ou fusionner (consolider) leurs ETH stakés, pour s'assurer que la sécurité du réseau n'est jamais déstabilisée
-- Parce qu'une consolidation de validateur est une action plus lourde avec plus de pièces mobiles qu'une sortie de validateur standard, elle consomme une plus grande partie de ce budget de sécurité (limite de churn)
-- Plus précisément, le protocole dicte que le coût de sécurité exact d'une sortie standard est de deux tiers (2/3) du coût d'une consolidation
+Aux niveaux de staking actuels, cela augmente la capacité de sortie d'environ 4 fois et la capacité de consolidation d'environ 2 fois, ce qui signifie que les stakers peuvent retirer leurs ETH beaucoup plus rapidement pendant les périodes de forte demande et que le réseau passe plus rapidement à un ensemble de validateurs plus petit et plus efficace.
 
-Des files d'attente de sortie plus équitables permettront aux sorties standards d'emprunter de l'espace inutilisé à la file d'attente de consolidation pendant les périodes de forte demande de sortie, en appliquant un taux de change de « 3 pour 2 » (pour chaque 2 places de consolidation inutilisées, le réseau peut traiter en toute sécurité 3 sorties standards). Ce facteur de churn de 3/2 équilibre la demande entre les files d'attente de consolidation et de sortie.
+Parce que la mise peut entrer et sortir du réseau plus rapidement, le changement réduit de moitié environ le temps pendant lequel un nœud peut rester hors ligne avant d'avoir besoin d'un point de contrôle de confiance récent pour rejoindre le réseau en toute sécurité (la période de subjectivité faible, passant d'environ 15,7 jours à environ 7 jours). Ce compromis a été soigneusement analysé pour s'assurer que la sécurité du réseau est maintenue.
 
-La démocratisation de l'accès à la file d'attente de consolidation augmentera la vitesse à laquelle les utilisateurs peuvent retirer leur mise pendant les périodes de forte demande jusqu'à 2,5 fois, sans compromettre la sécurité du réseau.
-
-**Ressources** : [Spécification technique de l'EIP-8080](https://eips.ethereum.org/EIPS/eip-8080)
-
+**Ressources** : [Spécification technique de l'EIP-8061](https://eips.ethereum.org/EIPS/eip-8061)
 
 ## Améliorer l'expérience utilisateur et développeur {#improve-user-developer-experience}
 
@@ -245,12 +240,6 @@ Ce changement empêcherait les échecs de synchronisation du réseau pendant les
 
 **Ressources** : [Spécification technique de l'EIP-7975](https://eips.ethereum.org/EIPS/eip-7975)
 
-
-- [Feuille de route d'Ethereum](/roadmap/)
-- [Forkcast : Glamsterdam](https://forkcast.org/upgrade/glamsterdam)
-- [Méta-EIP Glamsterdam](https://eips.ethereum.org/EIPS/eip-7773)
-- [Annonce sur le blog de la mise à jour des priorités du protocole pour 2026](https://blog.ethereum.org/2026/02/18/protocol-priorities-update-2026)
-- [Podcast The Daily Gwei Refuel - L'Ethereum post-quantique, Glamsterdam arrive](https://www.youtube.com/watch?v=qx9sd50uQjQ)
 ## Lectures complémentaires {#further-reading}
 
 - [Feuille de route d'Ethereum](/roadmap/)
@@ -295,14 +284,14 @@ Oui, Glamsterdam réduira très probablement les frais pour les utilisateurs quo
 
 De plus, pour une durabilité à long terme, Glamsterdam introduit les listes d'accès au niveau du bloc (BAL). Cela permet un traitement parallèle et prépare la couche 1 (l1) à gérer en toute sécurité des limites de gaz globales plus élevées à l'avenir, ce qui réduira probablement les coûts en gaz par transaction à mesure que la capacité augmentera.
 
-### Y aura-t-il des changements à mes contrats intelligents existants après Glamsterdam ? {#will-my-smart-contracts-change}
+### Y aura-t-il des changements pour mes contrats intelligents existants après Glamsterdam ? {#will-my-smart-contracts-change}
 
 Les contrats existants continueront de fonctionner normalement après Glamsterdam. Les développeurs obtiendront probablement plusieurs nouveaux outils et devraient revoir leur utilisation de gaz :
 
-- L'augmentation de la taille maximale du contrat (ou EIP-7954) permet aux développeurs de déployer des applications plus grandes, augmentant la limite de taille maximale du contrat d'environ 24 Kio à 32 Kio.
+- L'augmentation de la taille maximale des contrats (ou EIP-7954) permet aux développeurs de déployer des applications plus volumineuses, faisant passer la limite de taille maximale des contrats d'environ 24 Kio à 64 Kio.
 - Le pré-déploiement d'usine déterministe (ou EIP-7997) introduit un contrat d'usine universel et intégré. Il permet aux développeurs de déployer leurs applications et leurs portefeuilles de contrats intelligents à la même adresse exacte sur toutes les chaînes EVM participantes.
 - Si votre application s'appuie sur un traçage complexe pour trouver les transferts d'ETH, les transferts et les destructions d'ETH émettent un journal (ou EIP-7708) vous permettra de passer à l'utilisation de journaux pour une comptabilité plus simple et plus fiable.
-- L'augmentation du coût en gaz de la création d'état (ou EIP-8037) et la mise à jour du coût en gaz de l'accès à l'état (ou EIP-8038) introduisent de nouveaux modèles de durabilité qui modifieront certains coûts de déploiement de contrat, car la création de nouveaux comptes ou d'un stockage permanent aura de nouveaux frais fixes standardisés basés sur la taille des données créées.
+- L'augmentation du coût en gaz de la création d'état (ou EIP-8037) et la mise à jour du coût en gaz de l'accès à l'état (ou EIP-8038) introduisent de nouveaux modèles de durabilité qui modifieront certains coûts de déploiement de contrats, car la création de nouveaux comptes ou d'un stockage permanent aura de nouveaux frais fixes standardisés basés sur la taille des données créées.
 
 ### Comment Glamsterdam affectera-t-elle le stockage des nœuds et les exigences matérielles ? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 

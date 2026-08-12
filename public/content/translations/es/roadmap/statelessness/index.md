@@ -1,7 +1,8 @@
 ---
-title: Ausencia de estado, caducidad del estado y expiración del historial
-description: Explicación de la expiración del historial y el Ethereum sin estado
+title: "Ausencia de estado, caducidad del estado y expiración del historial"
+description: "Explicación de la expiración del historial y el Ethereum sin estado"
 lang: es
+template: roadmap
 ---
 
 La capacidad de ejecutar nodos de [Ethereum](/) en hardware modesto es fundamental para una verdadera descentralización. Esto se debe a que ejecutar un nodo brinda a los usuarios la capacidad de verificar información realizando comprobaciones criptográficas de forma independiente en lugar de confiar en que un tercero les proporcione los datos. Ejecutar un nodo permite a los usuarios enviar transacciones directamente a la red entre pares de Ethereum en lugar de tener que confiar en un intermediario. La descentralización no es posible si estos beneficios solo están disponibles para usuarios con hardware costoso. En cambio, los nodos deberían poder ejecutarse con requisitos de procesamiento y memoria extremadamente modestos para que puedan funcionar en teléfonos móviles, microcomputadoras o de manera imperceptible en una computadora doméstica.

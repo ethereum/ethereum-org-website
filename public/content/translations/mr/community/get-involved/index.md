@@ -1,6 +1,6 @@
 ---
-title: मी कसा सहभागी होऊ शकतो?
-description: इथेरियम समुदायात कसे सहभागी व्हावे.
+title: "मी कसा सहभागी होऊ शकतो?"
+description: "इथेरियम समुदायात कसे सहभागी व्हावे."
 lang: mr
 ---
 
@@ -11,7 +11,7 @@ lang: mr
 ## डेव्हलपर्स <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - [ethereum.org/developers/](/developers/) वर इथेरियमबद्दल जाणून घ्या आणि वापरून पहा
-- तुमच्या जवळील [ETHGlobal](https://ethglobal.co/) हॅकाथॉनमध्ये सहभागी व्हा!
+- तुमच्या जवळील [ETHGlobal](https://ethglobal.com/) हॅकाथॉनमध्ये सहभागी व्हा!
 - [तुमच्या कौशल्याच्या क्षेत्राशी किंवा तुमच्या आवडीच्या प्रोग्रामिंग भाषेशी संबंधित प्रकल्प](/developers/docs/programming-languages/) तपासा
 - [एकमत आणि अंमलबजावणी स्तर कॉल्समध्ये](https://www.youtube.com/@EthereumProtocol/streams) पहा किंवा सहभागी व्हा
 - [Ecosystem Support Program ची विशलिस्ट](https://esp.ethereum.foundation/wishlist/) - टूलिंग, दस्तऐवजीकरण आणि पायाभूत सुविधांची क्षेत्रे जिथे इथेरियम इकोसिस्टम सपोर्ट प्रोग्राम सक्रियपणे अनुदान अर्ज शोधत आहे
@@ -59,10 +59,10 @@ lang: mr
 
 - अनेक ओपन-सोर्स समुदाय कॉल्स असतात आणि नोट्स घेणारे असणे ही मोठी मदत असते. तुम्हाला स्वारस्य असल्यास, [Ethereum Cat Herders डिस्कॉर्ड्](https://discord.com/invite/Nz6rtfJ8Cu) मध्ये सामील व्हा आणि स्वतःची ओळख करून द्या!
 
-### इथेरियम आशयाचे तुमच्या मातृभाषेत भाषांतर करा {#translate-ethereum}
+### अनुवादित इथेरियम आशय सुधारण्यात मदत करा {#translate-ethereum}
 
-- ethereum.org एक भाषांतर कार्यक्रम चालवते जो वेबसाइट आणि इतर संसाधनांचे अनेक भिन्न भाषांमध्ये भाषांतर करतो
-- [येथे](/contributing/translation-program) कसे सहभागी व्हावे ते शोधा
+- ethereum.org भाषांतर कार्यक्रम संपुष्टात येत आहे आणि आता नवीन अनुवादकांना ऑनबोर्डिंग करत नाही—त्याची स्थिती आणि इतिहासासाठी [कार्यक्रम पृष्ठ](/contributing/translation-program/) पहा
+- तुम्ही तरीही [विद्यमान अनुवादांमधील त्रुटी नोंदवून](https://github.com/ethereum/ethereum-org-website/issues/new/choose) मदत करू शकता
 
 ### नोड चालवा {#run-a-node}
 
@@ -80,7 +80,7 @@ lang: mr
 
 इथेरियम इकोसिस्टम सार्वजनिक वस्तू आणि प्रभावी प्रकल्पांना निधी देण्याच्या मोहिमेवर आहे. अगदी लहान देणग्या देऊन तुम्ही तुमचे समर्थन दर्शवू शकता आणि महत्त्वाचे काम पूर्ण होण्यास मदत करू शकता.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## आर्थिक व्यावसायिक आणि अकाउंटंट्स <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

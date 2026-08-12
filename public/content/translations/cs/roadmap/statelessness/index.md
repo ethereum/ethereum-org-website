@@ -1,7 +1,8 @@
 ---
 title: Bezstavovost, exspirace stavu a exspirace historie
-description: Vysvětlení exspirace historie a bezstavového Etherea
+description: "Vysvětlení exspirace historie a bezstavového Etherea"
 lang: cs
+template: roadmap
 ---
 
 Schopnost provozovat [Ethereum](/) uzly na skromném hardwaru je kritická pro skutečnou decentralizaci. Je to proto, že provozování uzlu dává uživatelům možnost ověřovat informace nezávislým prováděním kryptografických kontrol, místo aby důvěřovali třetí straně, že jim bude dodávat data. Provozování uzlu umožňuje uživatelům odesílat transakce přímo do peer-to-peer sítě Etherea, místo aby museli důvěřovat zprostředkovateli. Decentralizace není možná, pokud jsou tyto výhody dostupné pouze uživatelům s drahým hardwarem. Místo toho by uzly měly být schopny běžet s extrémně skromnými požadavky na zpracování a paměť, aby mohly běžet na mobilních telefonech, mikropočítačích nebo nepozorovaně na domácím počítači.

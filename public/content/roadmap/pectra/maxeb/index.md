@@ -145,7 +145,7 @@ There are several tools available to manage consolidations. The official tool, c
 
 ### Does opting-in change my proposal luck or rewards? {#change-luck-or-rewards}
 
-No. Opting in does not decrease your change of proposal - your duties and proposal selection remain the same. For example, if you have two 32 ETH validators vs one 64 ETH validator, you will have the same total chances of being selected to propose a block and earn rewards.
+No. Opting in does not decrease your chance of proposal - your duties and proposal selection remain the same. For example, if you have two 32 ETH validators vs one 64 ETH validator, you will have the same total chances of being selected to propose a block and earn rewards.
 
 ### Does opting in change my slashing risk? {#change-slashing-risk}
 

@@ -1,5 +1,7 @@
 "use client"
 
+import { useTranslations } from "next-intl"
+
 import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
 import Translation from "@/components/Translation"
 import { ListItem, UnorderedList } from "@/components/ui/list"
@@ -11,10 +13,8 @@ import { Strong } from "../IntlStringElements"
 import { ButtonLink } from "../ui/buttons/Button"
 import InlineLink from "../ui/Link"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 const WithdrawalsTabComparison = () => {
-  const { t } = useTranslation("page-staking")
+  const t = useTranslations("page-staking")
   const handleMatomoEvent = (name: string): void => {
     trackCustomEvent({
       eventCategory: `Staker tabs`,
@@ -54,7 +54,7 @@ const WithdrawalsTabComparison = () => {
           </ListItem>
         </UnorderedList>
         <p>
-          {t.rich("page-staking.comp-withdrawal-comparison-current-p", {
+          {t.rich("comp-withdrawal-comparison-current-p", {
             strong: Strong,
             // Intentionally kept in English to match Beaconcha.in destination
             depositsTab: '"Deposits"',

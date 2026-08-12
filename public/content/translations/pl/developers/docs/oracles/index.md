@@ -403,7 +403,7 @@ Istnieje wiele aplikacji wyroczni, które możesz zintegrować ze swoim dappem E
 
 **[Pyth Network](https://pyth.network/)** - _Sieć Pyth to sieć finansowych wyroczni pierwszej strony zaprojektowana do ciągłego publikowania danych ze świata rzeczywistego onchain w odpornym na manipulacje, zdecentralizowanym i samowystarczalnym środowisku._
 
-**[API3 DAO](https://www.api3.org/)** - _API3 DAO dostarcza rozwiązania wyroczni pierwszej strony, które zapewniają większą przejrzystość źródła, bezpieczeństwo i skalowalność w zdecentralizowanym rozwiązaniu dla inteligentnych kontraktów_
+**[API3 DAO](https://api3.org/)** - _API3 DAO dostarcza rozwiązania wyroczni pierwszej strony, które zapewniają większą przejrzystość źródła, bezpieczeństwo i skalowalność w zdecentralizowanym rozwiązaniu dla inteligentnych kontraktów_
 
 **[Supra](https://supra.com/)** - Pionowo zintegrowany zestaw narzędzi rozwiązań międzyłańcuchowych, które łączą wszystkie blockchainy, publiczne (L1 i L2) lub prywatne (przedsiębiorstwa), zapewniając zdecentralizowane strumienie cen wyroczni, które mogą być używane w przypadkach użycia onchain i pozałańcuchowych. 
 

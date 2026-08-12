@@ -41,7 +41,6 @@ lang: mr
 **ॲप्लिकेशन डेव्हलपमेंटसाठी Sepolia हे शिफारस केलेले डीफॉल्ट टेस्टनेट आहे**. Sepolia नेटवर्क क्लायंट आणि चाचणी संघांद्वारे नियंत्रित परवानगीयुक्त प्रमाणक संच वापरते.
 
 ##### संसाधने
-
 - [वेबसाईट](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
@@ -49,7 +48,6 @@ lang: mr
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### फॉसेट्स
-
 - [Alchemy Sepolia फॉसेट](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [चेन प्लॅटफॉर्म Sepolia फॉसेट](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [Chainstack Sepolia फॉसेट](https://faucet.chainstack.com/sepolia-testnet-faucet)

@@ -49,7 +49,7 @@ storedData: int128
 
 మరింత వివరణ కోసం, డాక్యుమెంట్లను చూడండి:
 
-- [Vyper రకాలను చూడండి](https://docs.vyperlang.org/en/v0.1.0-beta.6/types.html#value-types)
+- [Vyper రకాలను చూడండి](https://docs.vyperlang.org/en/stable/types.html#value-types)
 - [Solidity రకాలను చూడండి](https://docs.soliditylang.org/en/latest/types.html#value-types)
 
 ### మెమరీ {#memory}

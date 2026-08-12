@@ -1,7 +1,7 @@
 ---
-title: صفر علم ثبوت کیا ہیں؟
-metaTitle: صفر علم ثبوت
-description: مبتدیوں کے لیے صفر علم ثبوت کا ایک غیر تکنیکی تعارف۔
+title: "صفر علم ثبوت کیا ہیں؟"
+metaTitle: "صفر علم ثبوت"
+description: "مبتدیوں کے لیے صفر علم ثبوت کا ایک غیر تکنیکی تعارف۔"
 lang: ur
 ---
 
@@ -58,8 +58,10 @@ lang: ur
       <p>
         <a href="/decentralized-identity/#national-and-government-id">غیر مرکزی شناخت کے کیس اسٹڈی</a> میں بھوٹان <span dir="ltr">NDI</span> کے بارے میں مزید جانیں۔
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### انسانیت کا ثبوت {#proof-of-humanity}
@@ -104,7 +106,7 @@ lang: ur
 
 بلاک چین ووٹنگ اسکیموں میں بہت سی سازگار خصوصیات ہیں: وہ مکمل طور پر قابل آڈٹ ہیں، حملوں کے خلاف محفوظ ہیں، سنسرشپ کے خلاف مزاحم ہیں، اور جغرافیائی رکاوٹوں سے آزاد ہیں۔ لیکن آن چین ووٹنگ اسکیمیں بھی **ملی بھگت** کے مسئلے سے محفوظ نہیں ہیں۔
 
-"دوسروں کو دھوکہ دے کر، فریب دے کر، اور گمراہ کر کے کھلے مقابلے کو محدود کرنے کے لیے ہم آہنگی" کے طور پر بیان کی گئی، ملی بھگت کسی بدنیتی پر مبنی اداکار کی طرف سے رشوت کی پیشکش کر کے ووٹنگ پر اثر انداز ہونے کی شکل اختیار کر سکتی ہے۔ مثال کے طور پر، ایلس کو باب سے بیلٹ پر `option B` کے لیے ووٹ دینے کے لیے رشوت مل سکتی ہے، یہاں تک کہ اگر وہ `option A` کو ترجیح دیتی ہو۔
+"دوسروں کو دھوکہ دے کر، فریب دے کر، اور گمراہ کر کے کھلے مقابلے کو محدود کرنے کے لیے ہم آہنگی" کے طور پر بیان کی گئی، ملی بھگت کسی بدنیتی پر مبنی فریق کی طرف سے رشوت کی پیشکش کر کے ووٹنگ پر اثر انداز ہونے کی شکل اختیار کر سکتی ہے۔ مثال کے طور پر، ایلس کو باب سے بیلٹ پر `option B` کے لیے ووٹ دینے کے لیے رشوت مل سکتی ہے، یہاں تک کہ اگر وہ `option A` کو ترجیح دیتی ہو۔
 
 رشوت ستانی اور ملی بھگت کسی بھی ایسے عمل کی تاثیر کو محدود کرتی ہے جو ووٹنگ کو سگنلنگ میکانزم کے طور پر استعمال کرتا ہے (خاص طور پر جہاں صارفین یہ ثابت کر سکتے ہیں کہ انہوں نے کیسے ووٹ دیا)۔ اس کے اہم نتائج ہو سکتے ہیں، خاص طور پر جہاں ووٹ قلیل وسائل کی تقسیم کے ذمہ دار ہوں۔
 
@@ -235,5 +237,9 @@ lang: ur
 - [زیڈ کے-سٹارکس — قابل تصدیق اعتماد پیدا کریں، یہاں تک کہ کوانٹم کمپیوٹرز کے خلاف بھی](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _ایڈم لوسیانو_
 - [زیڈ کے اسنارکس کیسے ممکن ہیں اس کا ایک تخمینی تعارف](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _وٹالک بوٹیرن_
 - [صفر علم ثبوت (<span dir="ltr">ZKPs</span>) خود مختار شناخت کے لیے گیم چینجر کیوں ہیں](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _فرینکلن اوہیگبلم_
-- [<span dir="ltr">EIP-7503</span> کی وضاحت: <span dir="ltr">ZK</span> ثبوتوں کے ساتھ ایتھیریم پر نجی منتقلی کو فعال کرنا](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _عمانوئل اووسیکا_
+- [<span dir="ltr">EIP-7503</span> کی وضاحت: <span dir="ltr">ZK</span> ثبوتوں کے ساتھ ایتھیریم پر نجی منتقلی کو فعال کرنا](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _عمانوئل اووسیکا_
 - [<span dir="ltr">ZK</span> کارڈ گیم: <span dir="ltr">ZK</span> کے بنیادی اصولوں اور حقیقی زندگی کے استعمال کے معاملات سیکھنے کے لیے گیم](https://github.com/ZK-card/zk-cards) - _<span dir="ltr">ZK-Cards</span>_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

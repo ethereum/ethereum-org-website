@@ -60,10 +60,18 @@ lang: zh
 
 要开始使用，请访问[文档](https://docs.codex.io)，尝试使用[浏览器](https://docs.codex.io/explore)，或在[仪表板](https://dashboard.codex.io/signup)注册。
 
+
+[Mobula](https://mobula.io/) 是一个高性能的加密货币数据 API，提供跨 90 多条区块链的实时和历史市场数据、代币元数据、钱包投资组合以及链上分析。开发者可以访问 REST 和 GraphQL 端点，获取代币价格、市值、交易量、流动性数据和多链钱包余额，而无需运行自己的基础设施。Mobula 为生产应用提供免费（每月 10 万次请求）和付费计划。
+
+要开始使用，请访问[文档](https://docs.mobula.io)，探索 [API 参考](https://docs.mobula.io/reference/)，或在[仪表板](https://mobula.io/)注册。
 ## EVM 查询语言 {#evm-query-language}
 
 EVM 查询语言 (EQL) 是一种类似 SQL 的语言，旨在查询 EVM（以太坊虚拟机）链。EQL 的最终目标是支持对 EVM 链一等公民（区块、账户和交易）进行复杂的关系查询，同时为开发者和研究人员提供符合人体工程学的日常使用语法。借助 EQL，开发者可以使用熟悉的类似 SQL 的语法获取区块链数据，并消除对复杂样板代码的需求。EQL 支持标准的区块链数据请求（例如，检索以太坊上账户的随机数和余额，或获取当前区块大小和时间戳），并不断增加对更复杂请求和功能集的支持。
 
+
+[Envio](https://envio.dev/) 是一个索引框架，可将链上事件转换为可查询的 GraphQL API。它支持以太坊和任何兼容 EVM 的链。开发者可以使用 TypeScript、JavaScript 或 ReScript 编写事件处理程序，以提供实时和历史数据，并支持重组、多链索引以及在 Envio Cloud 上托管或自托管。
+
+要开始使用，请按照 [HyperIndex 快速入门](https://docs.envio.dev/docs/HyperIndex/quickstart)创建、部署和查询索引器。
 ## 延伸阅读 {#further-reading}
 
 - [探索加密货币数据 I：数据流架构](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
@@ -75,7 +83,7 @@ EVM 查询语言 (EQL) 是一种类似 SQL 的语言，旨在查询 EVM（以太
 - [Dune 基础知识](https://docs.dune.com/#dune-basics)
 - [SubQuery 以太坊快速入门指南](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [SQD 网络概述](https://docs.sqd.dev/)
-- [EVM 查询语言](https://eql.sh/blog/alpha-release-notes)
+- [EVM 查询语言](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 
 ## 教程：数据与分析 / 以太坊上的 SQL {#tutorials}
 

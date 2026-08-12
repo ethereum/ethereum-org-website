@@ -1,6 +1,6 @@
 ---
-title: Làm thế nào để tôi có thể tham gia?
-description: Cách tham gia vào cộng đồng Ethereum.
+title: "Làm thế nào để tôi có thể tham gia?"
+description: "Cách tham gia vào cộng đồng Ethereum."
 lang: vi
 ---
 
@@ -11,7 +11,7 @@ Hãy bắt đầu bằng cách đọc về sứ mệnh và giá trị của ethe
 ## Nhà phát triển <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Tìm hiểu và dùng thử Ethereum tại [ethereum.org/developers/](/developers/)
-- Tham dự một cuộc thi hackathon của [ETHGlobal](https://ethglobal.co/) gần bạn!
+- Tham dự một cuộc thi hackathon của [ETHGlobal](https://ethglobal.com/) gần bạn!
 - Xem qua [các dự án liên quan đến lĩnh vực chuyên môn hoặc ngôn ngữ lập trình mà bạn chọn](/developers/docs/programming-languages/)
 - Xem hoặc tham gia vào [các cuộc gọi của Lớp đồng thuận và Lớp thực thi](https://www.youtube.com/@EthereumProtocol/streams)
 - [Danh sách mong muốn của Chương trình Hỗ trợ Hệ sinh thái](https://esp.ethereum.foundation/wishlist/) - các lĩnh vực công cụ, tài liệu và cơ sở hạ tầng mà Chương trình Hỗ trợ Hệ sinh thái Ethereum đang tích cực tìm kiếm các đơn xin tài trợ
@@ -59,10 +59,10 @@ Nếu bạn không phải là nhà phát triển, có thể khó biết bắt đ
 
 - Có rất nhiều cuộc gọi cộng đồng nguồn mở và việc có người ghi chú là một sự trợ giúp rất lớn. Nếu bạn quan tâm, hãy tham gia [Discord của Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) và giới thiệu bản thân!
 
-### Dịch nội dung Ethereum sang ngôn ngữ mẹ đẻ của bạn {#translate-ethereum}
+### Giúp cải thiện các bản dịch nội dung Ethereum {#translate-ethereum}
 
-- ethereum.org duy trì một Chương trình Dịch thuật để dịch trang web và các tài nguyên khác sang nhiều ngôn ngữ khác nhau
-- Tìm hiểu cách tham gia [tại đây](/contributing/translation-program)
+- Chương trình Dịch thuật ethereum.org đang dần khép lại và không còn tiếp nhận người dịch mới—hãy xem [trang chương trình](/contributing/translation-program/) để biết trạng thái và lịch sử của chương trình
+- Bạn vẫn có thể giúp đỡ bằng cách [báo cáo lỗi trong các bản dịch hiện có](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 
 ### Chạy một nút {#run-a-node}
 
@@ -80,7 +80,7 @@ Bằng việc đặt cọc ETH của mình, bạn có thể kiếm được ph�
 
 Hệ sinh thái Ethereum đang thực hiện sứ mệnh tài trợ cho các hàng hóa công cộng và các dự án có tác động lớn. Với những khoản quyên góp rất nhỏ, bạn có thể thể hiện sự ủng hộ của mình và cho phép các công việc quan trọng được hiện thực hóa.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Chuyên gia tài chính & Kế toán <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

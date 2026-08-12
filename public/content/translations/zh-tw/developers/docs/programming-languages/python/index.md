@@ -55,21 +55,20 @@ incomplete: true
 
 ## Python 專案與工具 {#python-projects-and-tools}
 
-### 活躍中： {#active}
-
 - [Web3.py](https://github.com/ethereum/web3.py) - _用於與以太坊互動的 Python 函式庫_
 - [Vyper](https://github.com/ethereum/vyper/) - _適用於 EVM 的 Python 風格智能合約語言_
-- [Ape](https://github.com/ApeWorX/ape) - _為 Python 開發者、資料科學家與安全專業人員打造的智能合約開發工具_
+- [Titanoboa](https://github.com/vyperlang/titanoboa/) - _Vyper 的原生測試工具；一個具備主網分叉、除錯與美觀追蹤回溯 (tracebacks) 功能的直譯器_
+- [Moccasin](https://github.com/Cyfrin/moccasin) - _基於 Titanoboa 建構，適用於 Vyper 與 Python 的智能合約開發與測試框架_
+- [Ape](https://github.com/ApeWorX/ape) - _專為 Python 開發者、資料科學家與安全專家打造的智能合約開發工具_
 - [py-evm](https://github.com/ethereum/py-evm) - _以太坊虛擬機的實作_
-- [eth-tester](https://github.com/ethereum/eth-tester) - _用於測試基於以太坊應用程式的工具_
-- [eth-utils](https://github.com/ethereum/eth-utils/) - _用於處理以太坊相關程式碼庫的公用程式函式_
+- [eth-tester](https://github.com/ethereum/eth-tester) - _用於測試基於以太坊之應用程式的工具_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _用於處理以太坊相關程式碼庫的公用函式_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _支援 0.5.x 版本的 solc Solidity 編譯器 Python 包裝器_
 - [pymaker](https://github.com/makerdao/pymaker) - _用於 Maker 合約的 Python API_
 - [siwe](https://github.com/signinwithethereum/siwe-py) - _適用於 Python 的以太坊登入 (SIWE)_
-- [用於以太坊整合的 Web3 去中心化金融 (DeFi)](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _一個為 ERC-20、尤尼斯瓦普與其他熱門專案提供現成整合的 Python 套件_
-- [Wake](https://getwake.io) - _用於合約測試、模糊測試、部署、漏洞掃描與程式碼導覽的多合一 Python 框架 (語言伺服器 - [Solidity 工具](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
-- [DeFiPy](https://github.com/defipy-devs/defipy) - _用於跨尤尼斯瓦普 V2/V3、Balancer 與 Curve 進行去中心化金融 (DeFi) 分析與自動做市商 (AMM) 模擬的 Python SDK_
-
+- [Web3 DeFi for Ethereum integrations](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _一個包含 ERC-20、尤尼斯瓦普與其他熱門專案現成整合的 Python 套件_
+- [Wake](https://getwake.io) - _用於合約測試、模糊測試、部署、漏洞掃描與程式碼導覽的多合一 Python 框架 (語言伺服器 - [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
+- [DeFiPy](https://github.com/defipy-devs/defipy) - _用於去中心化金融 (DeFi) 分析以及跨尤尼斯瓦普 V2/V3、Balancer 與 Curve 進行自動做市商 (AMM) 模擬的 Python SDK_
 ### 封存 / 不再維護： {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _以太坊 Python 客戶端_

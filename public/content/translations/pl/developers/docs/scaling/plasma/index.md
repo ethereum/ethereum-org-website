@@ -56,20 +56,19 @@ Aby wejść do łańcucha Plasma, Alice (użytkownik) będzie musiała zdeponowa
 
 #### Wyjście z łańcucha Plasma {#exiting-the-plasma-chain}
 
-Wyjście z łańcucha Plasma jest bardziej złożone niż wejście do niego z kilku powodów. Największym z nich jest to, że chociaż Ethereum ma informacje o stanie łańcucha Plasma, nie może zweryfikować, czy te informacje są prawdziwe, czy nie. Złośliwy użytkownik mógłby złożyć nieprawdziwe oświadczenie („Mam 1000 ETH”) i uniknąć kary, dostarczając fałszywe dowody na poparcie tego roszczenia.
+Wyjście z łańcucha Plasma jest bardziej skomplikowane niż wejście do niego z kilku powodów. Najważniejszym z nich jest to, że chociaż Ethereum posiada informacje o stanie łańcucha Plasma, nie może zweryfikować, czy są one prawdziwe. Złośliwy użytkownik mógłby złożyć nieprawdziwe oświadczenie („Mam 1000 ETH”) i uniknąć konsekwencji, dostarczając fałszywe dowody na poparcie swojego roszczenia.
 
-Aby zapobiec złośliwym wypłatom, wprowadzono „okres wyzwania” (challenge period). W okresie wyzwania (zazwyczaj tydzień) każdy może zakwestionować żądanie wypłaty za pomocą dowodu oszustwa. Jeśli wyzwanie się powiedzie, żądanie wypłaty zostaje odrzucone.
+Aby zapobiec złośliwym wypłatom, wprowadzono „okres wyzwania”. W trakcie okresu wyzwania (zazwyczaj tydzień) każdy może zakwestionować żądanie wypłaty, używając dowodu oszustwa. Jeśli wyzwanie się powiedzie, żądanie wypłaty zostaje odrzucone.
 
-Zazwyczaj jednak użytkownicy są uczciwi i zgłaszają poprawne roszczenia dotyczące posiadanych środków. W tym scenariuszu Alice zainicjuje żądanie wypłaty w łańcuchu głównym (Ethereum), przesyłając transakcję do kontraktu Plasma.
+Zazwyczaj jednak użytkownicy są uczciwi i zgłaszają poprawne roszczenia dotyczące posiadanych przez siebie środków. W takim scenariuszu Alice zainicjuje żądanie wypłaty w łańcuchu głównym (Ethereum), wysyłając transakcję do kontraktu Plasma.
 
-Musi również dostarczyć dowód Merkle'a weryfikujący, że transakcja tworząca jej środki w łańcuchu Plasma została włączona do bloku. Jest to konieczne w przypadku iteracji Plasmy, takich jak [Plasma MVP](https://www.learnplasma.org/en/learn/mvp.html), które używają modelu [UTXO](https://en.wikipedia.org/wiki/Unspent_transaction_output).
+Musi również dostarczyć dowód Merkle'a weryfikujący, że transakcja tworząca jej środki w łańcuchu Plasma została włączona do bloku. Jest to konieczne w przypadku iteracji Plasmy, takich jak Plasma MVP, które używają modelu [Unspent Transaction Output (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
 
-Inne, takie jak [Plasma Cash](https://www.learnplasma.org/en/learn/cash.html), reprezentują środki jako [niewymienialne tokeny](/developers/docs/standards/tokens/erc-721/) zamiast UTXO. Wypłata w tym przypadku wymaga dowodu własności tokenów w łańcuchu Plasma. Odbywa się to poprzez przesłanie dwóch najnowszych transakcji obejmujących token i dostarczenie dowodu Merkle'a weryfikującego włączenie tych transakcji do bloku.
+Inne, takie jak Plasma Cash, reprezentują środki jako [niewymienialne tokeny](/developers/docs/standards/tokens/erc-721/) zamiast UTXO. Wypłata w tym przypadku wymaga dowodu własności tokenów w łańcuchu Plasma. Odbywa się to poprzez przesłanie dwóch ostatnich transakcji obejmujących token i dostarczenie dowodu Merkle'a weryfikującego włączenie tych transakcji do bloku.
 
 Użytkownik musi również dodać kaucję do żądania wypłaty jako gwarancję uczciwego zachowania. Jeśli rzucający wyzwanie udowodni, że żądanie wypłaty Alice jest nieważne, jej kaucja podlega cięciu, a jej część trafia do rzucającego wyzwanie jako nagroda.
 
-Jeśli okres wyzwania upłynie bez dostarczenia przez kogokolwiek dowodu oszustwa, żądanie wypłaty Alice jest uważane za ważne, co pozwala jej na odzyskanie depozytów z kontraktu Plasma w Ethereum.
-
+Jeśli okres wyzwania upłynie bez dostarczenia przez kogokolwiek dowodu oszustwa, żądanie wypłaty Alice jest uważane za ważne, co pozwala jej na odebranie depozytów z kontraktu Plasma na Ethereum.
 ### Rozstrzyganie sporów {#dispute-arbitration}
 
 Podobnie jak każdy blockchain, łańcuchy Plasma potrzebują mechanizmu egzekwowania integralności transakcji w przypadku złośliwego działania uczestników (np. podwójne wydatkowanie środków). W tym celu łańcuchy Plasma używają dowodów oszustwa do rozstrzygania sporów dotyczących ważności przejść stanu i karania złego zachowania. Dowody oszustwa są używane jako mechanizm, za pomocą którego łańcuch potomny Plasma składa skargę do swojego łańcucha nadrzędnego lub do łańcucha głównego.
@@ -167,14 +166,12 @@ Wiele projektów dostarcza implementacje Plasmy, które możesz zintegrować ze 
 
 ## Dalsza lektura {#further-reading}
 
-- [Poznaj Plasmę](https://www.learnplasma.org/en/)
 - [Szybkie przypomnienie, co oznacza „współdzielone bezpieczeństwo” i dlaczego jest tak ważne](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
-- [Łańcuchy poboczne a Plasma a Sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
+- [Łańcuchy poboczne a Plasma a sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
 - [Zrozumieć Plasmę, część 1: Podstawy](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
 - [Życie i śmierć Plasmy](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 
-_Znasz zasób społeczności, który Ci pomógł? Edytuj tę stronę i dodaj go!_
-
+_Znasz zasób społecznościowy, który Ci pomógł? Edytuj tę stronę i dodaj go!_
 ## Samouczki: Łańcuchy Plasma na Ethereum {#tutorials}
 
 - [Napisz specyficzną dla aplikacji Plasmę, która zachowuje prywatność](/developers/tutorials/app-plasma/) _– Zbuduj aplikację Plasma chroniącą prywatność, używając dowodów z wiedzą zerową i komponentów pozałańcuchowych._

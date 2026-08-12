@@ -1,7 +1,7 @@
 ---
-title: 什么是零知识证明？
-metaTitle: 零知识证明
-description: 面向初学者的零知识证明非技术性介绍。
+title: "什么是零知识证明？"
+metaTitle: "零知识证明"
+description: "面向初学者的零知识证明非技术性介绍。"
 lang: zh
 ---
 
@@ -58,8 +58,10 @@ lang: zh
       <p>
         在<a href="/decentralized-identity/#national-and-government-id">去中心化身份案例研究</a>中了解有关不丹 NDI 的更多信息。
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### 人类证明 {#proof-of-humanity}
@@ -130,7 +132,7 @@ World ID 依赖于以太坊基金会 [PSE 团队](https://pse.dev/)开发的 [Se
 - Alice 向 Bob 展示了一笔交易，表明她投票给了 `option B`（这是无效的，因为该公钥不再与系统中 Alice 的身份关联）。
 - 在处理消息时，协调员跳过 Alice 对 `option B` 的投票，只计算对 `option A` 的投票。因此，Bob 试图与 Alice 串谋并操纵链上投票的企图失败了。
 
-使用 MACI _确实_需要信任协调员不会与行贿者串谋或试图亲自贿赂选民。协调员可以解密用户消息（创建证明所必需的），因此他们可以准确验证每个人的投票情况。
+使用 MACI <em>确实</em>需要信任协调员不会与行贿者串谋或试图亲自贿赂选民。协调员可以解密用户消息（创建证明所必需的），因此他们可以准确验证每个人的投票情况。
 
 但在协调员保持诚实的情况下，MACI 是保证链上投票神圣性的强大工具。这解释了它在严重依赖每个人投票选择完整性的二次方融资应用程序（例如 [clr.fund](https://clr.fund/#/about/maci)）中受欢迎的原因。
 
@@ -235,5 +237,9 @@ ZK-STARK 被认为不受量子计算威胁的影响，因为它仅依赖抗碰�
 - [ZK-STARK — 建立可验证的信任，甚至抵御量子计算机](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [关于 zk-SNARK 如何成为可能的近似介绍](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [为什么零知识证明 (ZKP) 是自我主权身份的游戏规则改变者](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
-- [EIP-7503 解释：使用零知识证明在以太坊上实现私密转账](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Emmanuel Awosika_
+- [EIP-7503 解释：使用零知识证明在以太坊上实现私密转账](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [ZK 纸牌游戏：学习零知识基础知识和现实生活用例的游戏](https://github.com/ZK-card/zk-cards) - _ZK-Cards_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

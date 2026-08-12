@@ -1,6 +1,6 @@
 ---
-title: 我该如何参与？
-description: 如何参与以太坊社区。
+title: "我该如何参与？"
+description: "如何参与以太坊社区。"
 lang: zh
 ---
 
@@ -11,7 +11,7 @@ lang: zh
 ## 开发者 <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - 在 [ethereum.org/developers/](/developers/) 了解并尝试以太坊
-- 参加你附近的 [ETHGlobal](https://ethglobal.co/) 黑客松！
+- 参加你附近的 [ETHGlobal](https://ethglobal.com/) 黑客松！
 - 查看[与你的专业领域或首选编程语言相关的项目](/developers/docs/programming-languages/)
 - 观看或参与[共识层和执行层电话会议](https://www.youtube.com/@EthereumProtocol/streams)
 - [生态系统支持计划愿望清单](https://esp.ethereum.foundation/wishlist/) - 以太坊生态系统支持计划正在积极寻求资助申请的工具、文档和基础设施领域
@@ -59,10 +59,10 @@ lang: zh
 
 - 有许多开源社区电话会议，有记录员会帮上大忙。如果你感兴趣，请加入 [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)，并做个自我介绍！
 
-### 将以太坊内容翻译成你的母语 {#translate-ethereum}
+### 帮助改进以太坊翻译内容 {#translate-ethereum}
 
-- ethereum.org 维护着一个翻译计划，将网站和其他资源翻译成许多不同的语言
-- 在[这里](/contributing/translation-program)了解如何参与
+- ethereum.org 翻译项目正在逐步结束，不再招募新译者——请查看[项目页面](/contributing/translation-program/)了解其状态和历史
+- 你仍然可以通过[报告现有翻译中的错误](https://github.com/ethereum/ethereum-org-website/issues/new/choose)来提供帮助
 
 ### 运行节点 {#run-a-node}
 
@@ -80,7 +80,7 @@ lang: zh
 
 以太坊生态系统的使命是资助公共物品和有影响力的项目。只需极少的捐款，你就可以表达你的支持，并让重要的工作得以实现。
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## 金融专业人士与会计师 <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}
