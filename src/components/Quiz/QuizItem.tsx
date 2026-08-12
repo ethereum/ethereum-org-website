@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import type { QuizLevel, QuizzesSection } from "@/lib/types"
 
@@ -6,11 +6,15 @@ import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import { cn } from "@/lib/utils/cn"
 
+import type { QuizStatsEntry } from "@/data-layer/fetchers/fetchQuizStats"
+
 import { GreenTickIcon } from "../icons/quiz"
 import { Button } from "../ui/buttons/Button"
 import { Flex, Stack } from "../ui/flex"
 import { ListItem } from "../ui/list"
-import { Tag, type TagProps } from "../ui/tag"
+import { Tag, type TagProps, TagsInlineText } from "../ui/tag"
+
+import { getQuizStatValues } from "./utils"
 
 const LEVEL_STATUS: Record<QuizLevel, NonNullable<TagProps["status"]>> = {
   beginner: "tag-green",
@@ -27,6 +31,9 @@ export type QuizzesListItemProps = Omit<QuizzesSection, "id"> & {
   numberOfQuestions: number
   titleId: string
   handleStart: () => void
+  /** Undefined until the daily Matomo fetch has figures for this quiz */
+  stats?: QuizStatsEntry
+  isPopular?: boolean
 }
 
 const QuizItem = ({
@@ -35,13 +42,18 @@ const QuizItem = ({
   titleId,
   numberOfQuestions,
   handleStart,
+  stats,
+  isPopular = false,
 }: QuizzesListItemProps) => {
+  const locale = useLocale()
   const t = useTranslations("learn-quizzes")
   const tCommon = useTranslations("common")
 
   const title = titleId.startsWith(LEARN_QUIZZES_PREFIX)
     ? t(titleId.slice(LEARN_QUIZZES_PREFIX.length))
     : tCommon(titleId)
+
+  const statValues = stats && getQuizStatValues(locale, stats)
 
   return (
     // The whole row is clickable via LinkOverlay's ::before, the same pattern
@@ -67,13 +79,28 @@ const QuizItem = ({
           </Flex>
 
           {/* Labels */}
-          <Flex className="gap-3 font-normal">
+          <Flex className="flex-wrap gap-3 font-normal">
             {/* number of questions - label */}
             <Tag>{`${numberOfQuestions} ${t("questions")}`}</Tag>
 
             {/* difficulty - label */}
             <Tag status={LEVEL_STATUS[level]}>{level.toUpperCase()}</Tag>
+
+            {/* Top five by answers per question; see getPopularQuizIds */}
+            {isPopular && <Tag status="tag">{t("popular")}</Tag>}
           </Flex>
+
+          {/* Community figures, omitted until Matomo has data for this quiz */}
+          {statValues && (
+            <TagsInlineText
+              variant="light"
+              className="font-normal"
+              list={[
+                `${t("average-score")} ${statValues.averageScore}`,
+                `${t("questions-answered")} ${statValues.questionsAnswered}`,
+              ]}
+            />
+          )}
         </Stack>
 
         <LinkOverlay asChild>

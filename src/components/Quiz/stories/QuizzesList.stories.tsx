@@ -5,8 +5,10 @@ import type { Meta, StoryObj } from "@storybook/nextjs"
 import type { CompletedQuizzes } from "@/lib/types"
 
 import { quizzesSections } from "@/data/quizzes"
+import quizStatsMock from "@/data-layer/mocks/fetch-quiz-stats.json"
 
 import QuizzesListComponent from "../QuizzesList"
+import { getPopularQuizIds } from "../utils"
 
 /**
  * This story also renders the `QuizItem` component.
@@ -29,6 +31,8 @@ const meta = {
     },
     quizHandler: fn(),
     modalHandler: fn(),
+    quizStats: quizStatsMock.byQuiz,
+    popularQuizIds: getPopularQuizIds(quizStatsMock.byQuiz),
   },
 } satisfies Meta<typeof QuizzesListComponent>
 
