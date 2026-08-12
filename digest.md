@@ -1,38 +1,36 @@
-**Intake decisions — 2026-08-11**
-4 decisions · 1 batch · 74 open PRs / 87 open issues
+**Intake decisions — 2026-08-12**
+3 decisions · 2 batches · 82 open PRs / 90 open issues
 
 **🧭 Decide today**
-**1. [#18993](https://github.com/ethereum/ethereum-org-website/pull/18993) — Upgrade-status block on roadmap pages** · code · impact med
-Went CLEAN overnight; blocked on one call — nloureiro assessed layout-rendered works across all 24 translated pages vs embedding in MDX. PR1 [#18991](https://github.com/ethereum/ethereum-org-website/pull/18991) (data layer) is green underneath; answering unblocks the stack.
-→ **Confirm layout-rendered over MDX, then review #18991 + #18993 together** (0.72)
+**1. [#19026](https://github.com/ethereum/ethereum-org-website/pull/19026) — Drop duplicate "last updated" in upgrade hero** · code
+A rival fix for the same bug landed overnight — [#19046](https://github.com/ethereum/ethereum-org-website/pull/19046) (byt61), which its own review flags a duplicate. Both green; konopkja filed the issue and #19026 first.
+→ **Merge #19026, close #19046 as duplicate** (0.75)
 
 **✅ Verify, then merge**
-**2. [#19027](https://github.com/ethereum/ethereum-org-website/pull/19027) — ethereum-vs-bitcoin quiz** · content
-Team-authored and the only CLEAN PR in the queue — merge button is green.
-→ **Verify the quiz answers read correctly, then merge** (0.85)
+**2. [#19040](https://github.com/ethereum/ethereum-org-website/pull/19040) — Correct slashing penalty figure** · content
+Team, one-file PoS docs fix, green, review-only. Electra raised MIN_SLASHING_PENALTY_QUOTIENT 32→4096; the old "~1%" figure is now wrong, PR swaps it for a bound.
+→ **Verify the <0.1% bound reads right, then merge** (0.82)
 
-**3. [#19029](https://github.com/ethereum/ethereum-org-website/pull/19029) — Accurate sitemap lastmod dates** · code · impact high
-Green, review-only; fixes #18982 — sitemap ships zero lastmod across ~17.5k URLs.
-→ **Verify lastmod resolves per-URL on the preview, then merge** (0.8)
-
-**4. [#19026](https://github.com/ethereum/ethereum-org-website/pull/19026) — Drop duplicate "last updated" in upgrade hero** · code
-Green, review-only; fixes #19025 — date + stray rule render twice in the hero on all upgrade pages.
-→ **Verify on an upgrade-page preview, then merge** (0.78)
+**3. [#19048](https://github.com/ethereum/ethereum-org-website/pull/19048) — UTC seed for CategoryAppsGrid shuffle** · code
+Self-reported [#19047](https://github.com/ethereum/ethereum-org-website/issues/19047): the daily shuffle seeded off local time, so order flipped around UTC midnight. Two files, green.
+→ **Verify server/client order matches, then merge** (0.75)
 
 **🧩 Review batches**
-- **SEO JSON-LD** — [#19022](https://github.com/ethereum/ethereum-org-website/pull/19022) (raw i18n keys served as JSON-LD on /wallets/ + /quizzes/, high) and [#19017](https://github.com/ethereum/ethereum-org-website/pull/19017) (VideoObject transcript) are green + e2e-tested and share the generator; [#19001](https://github.com/ethereum/ethereum-org-website/pull/19001) still red. Review the two green together.
+- **SEO audit fixes (konopkja)** — [#19022](https://github.com/ethereum/ethereum-org-website/pull/19022), [#19017](https://github.com/ethereum/ethereum-org-website/pull/19017), [#19029](https://github.com/ethereum/ethereum-org-website/pull/19029), [#19044](https://github.com/ethereum/ethereum-org-website/pull/19044), [#19043](https://github.com/ethereum/ethereum-org-website/pull/19043): five green, e2e-tested, review-only fixes on the JSON-LD/sitemap/SSR generators. #19022 (raw i18n keys shipped as JSON-LD) and #19029 (no lastmod on ~17.5k URLs) are live prod bugs. One pass; #19001 still red.
+- **Merge-ready quizzes** — [#19041](https://github.com/ethereum/ethereum-org-website/pull/19041) (proof-of-stake, new) + [#19027](https://github.com/ethereum/ethereum-org-website/pull/19027) (eth-vs-bitcoin): both team, CLEAN. Verify keys.
 
 **⏳ Waiting on others**
-- [#18876](https://github.com/ethereum/ethereum-org-website/pull/18876) — contributor: still owes a reason for deleting rather than adding DeFi quiz questions
+- [#18896](https://github.com/ethereum/ethereum-org-website/pull/18896) — contributor: rebase the CONFLICTING intl frontmatter fix (day 6; sibling #19031 widening it)
+- [#18876](https://github.com/ethereum/ethereum-org-website/pull/18876) — contributor: still owes a reason for deleting vs adding DeFi quiz questions
 
 **🔁 Carried over**
-- [#19016](https://github.com/ethereum/ethereum-org-website/pull/19016) — day 2: i18n locale sweep is one review from retiring the recovery bug class; green, high-impact — assign a reviewer.
-- [#18966](https://github.com/ethereum/ethereum-org-website/pull/18966) — **day 5, still nothing**: /layer-2 "$0.00" fix, 1 file, green, unowned. An unassigned review, not a decision — self-merge or name an owner.
-- [#18918](https://github.com/ethereum/ethereum-org-website/pull/18918) — **day 6, still nothing**: walletless tutorial, 4 red checks, zero replies ever. The trivial frontmatter ask never reached the author — post it or close.
-- [#18896](https://github.com/ethereum/ethereum-org-website/pull/18896) — day 5: intl frontmatter fix for #18891, still CONFLICTING; new sibling bug #19031 says the gap is widening — ask for the rebase.
+- [#18918](https://github.com/ethereum/ethereum-org-website/pull/18918) — **day 7, nothing**: walletless tutorial, 4 red checks, zero replies ever. Post the fixes or close.
+- [#18966](https://github.com/ethereum/ethereum-org-website/pull/18966) — **day 6, nothing**: /layer-2 "$0.00" fix, 1 file, green, unowned. Self-merge or name a reviewer.
+- [#19016](https://github.com/ethereum/ethereum-org-website/pull/19016) — **day 3**: green i18n sweep retires the recovery-agent bug class in one review; unowned.
 
 **🗑️ Suggested closures**
-- [#19019](https://github.com/ethereum/ethereum-org-website/issues/19019) — placeholder "[Content] <short summary>" issue, already labelled invalid (0.85)
-- [#17263](https://github.com/ethereum/ethereum-org-website/pull/17263) — day 3: stale draft, 134d idle, conflicting (0.7)
+- [#19019](https://github.com/ethereum/ethereum-org-website/issues/19019) — invalid: placeholder "[Content] <short summary>" title (0.85)
+- [#19020](https://github.com/ethereum/ethereum-org-website/pull/19020) — recommend-close label: low-value README edit (0.7)
 
-**📊 Queue** — 74 open PRs (16 conflicting, 4 failing) · 87 open issues (57 external, no team reply) · [full queue](https://github.com/ethereum/ethereum-org-website/pulls)
+**🔄 Since last digest** — nothing merged; +8 PRs/+3 issues.
+**📊 Queue** — 82 open PRs (17 conflicting, 4 failing) · 90 issues (59 external, no reply) · [full queue](https://github.com/ethereum/ethereum-org-website/pulls)
