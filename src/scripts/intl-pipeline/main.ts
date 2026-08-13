@@ -631,6 +631,18 @@ async function main() {
   const startTime = Date.now()
   logSection("Incremental Translation Pipeline")
 
+  // MODE=estimate belongs to estimate.ts. Reaching main.ts with it means the
+  // caller's routing is broken (as the workflow's was on run 31743585214), and
+  // every non-"full" value otherwise falls through to a real translating run --
+  // so refuse rather than spend money under a mode that promises not to.
+  if (config.mode === "estimate") {
+    throw new Error(
+      `MODE=estimate must run estimate.ts, not main.ts. ` +
+        `Use "pnpm intl:estimate" locally, or dispatch intl-pipeline.yml with mode=estimate ` +
+        `from a ref whose run step routes estimate mode. Refusing to translate.`
+    )
+  }
+
   // Blank TARGET_PATH means "translate everything": seed with the JSON and
   // markdown source roots, which the directory-expansion pass below resolves to
   // every source file (excluding the translation output tree and the

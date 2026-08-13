@@ -95,7 +95,14 @@ jobs:
         run: pnpm install
 
       - name: Run translation pipeline
-        run: pnpm exec tsx ./src/scripts/intl-pipeline/main.ts
+        # estimate mode is a different entry point: it assembles every prompt,
+        # sends none, and never writes to GitHub.
+        run: |
+          if [ "${{ inputs.mode }}" = "estimate" ]; then
+            pnpm exec tsx ./src/scripts/intl-pipeline/estimate.ts
+          else
+            pnpm exec tsx ./src/scripts/intl-pipeline/main.ts
+          fi
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
