@@ -59,6 +59,8 @@ function apiKey(): string {
 export async function openRouterKeyStatus(): Promise<{
   limit: number | null
   limitRemaining: number | null
+  /** e.g. "daily" when the limit resets at midnight UTC; null when it never does */
+  limitReset: string | null
   usage: number
 }> {
   const res = await fetch(`${OPENROUTER_BASE}/key`, {
@@ -71,12 +73,14 @@ export async function openRouterKeyStatus(): Promise<{
     data?: {
       limit?: number | null
       limit_remaining?: number | null
+      limit_reset?: string | null
       usage?: number
     }
   }
   return {
     limit: body.data?.limit ?? null,
     limitRemaining: body.data?.limit_remaining ?? null,
+    limitReset: body.data?.limit_reset ?? null,
     usage: body.data?.usage ?? 0,
   }
 }

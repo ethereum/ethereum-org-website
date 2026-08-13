@@ -673,10 +673,13 @@ async function main() {
   if (LLM_PROVIDER === "openrouter") {
     try {
       const key = await openRouterKeyStatus()
+      // Print the reset window: a $100 daily limit and a $100 lifetime limit
+      // read identically on limit/limit_remaining alone.
+      const window = key.limitReset ? `per ${key.limitReset}` : "total"
       log(
         key.limit === null
           ? `[WARN] OpenRouter key has NO credit limit set -- only this run's own guards apply`
-          : `OpenRouter key limit: $${key.limit.toFixed(2)}, $${(key.limitRemaining ?? 0).toFixed(2)} remaining`
+          : `OpenRouter key limit: $${key.limit.toFixed(2)} ${window}, $${(key.limitRemaining ?? 0).toFixed(2)} remaining`
       )
     } catch (err) {
       log(

@@ -158,6 +158,11 @@ function planFull(
   }
 }
 
+// Belt to the braces: nothing in this file's import graph reaches an LLM call
+// site, and a zero fuse means that if one is ever added, the first request
+// throws instead of spending. Set before ./constants is read.
+process.env.INTL_MAX_COST_USD = "0"
+
 async function main() {
   const rows: Row[] = []
   const files = expandTargets()
