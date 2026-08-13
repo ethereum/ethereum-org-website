@@ -124,16 +124,18 @@ const AppCard = React.forwardRef<HTMLDivElement, AppCardProps>(
     },
     ref
   ) => {
+    // Frame travels with the icon so a failed thumbnail looks like a missing one
+    const fallbackNode = fallbackIcon ? (
+      <div className="grid size-full place-items-center rounded-xl border">
+        {fallbackIcon}
+      </div>
+    ) : null
+
     const innerContent = (
       <div className={cn(layoutVariants({ layout }))}>
         {/* Image or fallback */}
         {(thumbnail || fallbackIcon) && (
-          <div
-            className={cn(
-              imageSizeVariants({ size: imageSize }),
-              !thumbnail && fallbackIcon && "grid place-items-center border"
-            )}
-          >
+          <div className={cn(imageSizeVariants({ size: imageSize }))}>
             {thumbnail ? (
               <ImageWithFallback
                 src={thumbnail}
@@ -141,10 +143,10 @@ const AppCard = React.forwardRef<HTMLDivElement, AppCardProps>(
                 className="size-full object-contain"
                 width={imageSize ? imageSizePixels[imageSize] : 64}
                 height={imageSize ? imageSizePixels[imageSize] : 64}
-                fallback={fallbackIcon}
+                fallback={fallbackNode}
               />
             ) : (
-              fallbackIcon
+              fallbackNode
             )}
           </div>
         )}
