@@ -1,14 +1,14 @@
 [
   {
     "item": "Issue #18891",
-    "intent": "intl-pipeline drops newly added frontmatter keys and stamps manifests current",
+    "intent": "intl-pipeline drops newly added frontmatter keys; stamps manifests current",
     "state": "decision-needed",
     "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Still live post pipeline merges; route/rebase PR #18896",
+    "next_human_decision": "Triage #18891+#19031 as one propagation gap; unblock PR #18896",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Confirm bug live; route/rebase #18896"
+        "action": "Route/rebase #18896; scope with #19031"
       }
     ],
     "impact": "high",
@@ -23,22 +23,22 @@
     "evidence": [
       "team bug, no team reply",
       "PR #18896 CONFLICTING",
-      "sibling #19031 filed"
+      "sibling #19031"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-05",
-    "runs_seen": 6
+    "runs_seen": 7
   },
   {
     "item": "Issue #18967",
-    "intent": "Reorganize Storybook into repo-mirrored taxonomy; land the stacked phase PRs",
+    "intent": "Reorganize Storybook into repo-mirrored taxonomy; land stacked phase PRs",
     "state": "decision-needed",
     "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Approve taxonomy once, land phases in order",
+    "next_human_decision": "Make the taxonomy call once and land phases in order, or close the stack",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Approve reorg; land stacked PRs"
+        "action": "Approve reorg; land or close stacked PRs"
       }
     ],
     "impact": "medium",
@@ -57,7 +57,8 @@
     "confidence": 0.8,
     "evidence": [
       "team tracking issue, answered+assigned",
-      "7-PR stack: phase0 green, middle red"
+      "7-PR stack unlanded 6 runs",
+      "middle phases red"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-05",
@@ -65,7 +66,7 @@
   },
   {
     "item": "Issue #18995 (SEO JSON-LD/SSR cluster)",
-    "intent": "konopkja SEO audit; now 5 green review-only fix PRs plus 1 red",
+    "intent": "konopkja SEO audit; 5 green review-only fix PRs plus 1 red",
     "state": "verify-then-merge",
     "recommended_disposition": "verify_then_merge",
     "next_human_decision": "Run one SEO review pass on the 5 green fixes now vs drip",
@@ -95,7 +96,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-10",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "Issue #19019",
@@ -122,7 +123,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-11",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "Issue #19031",
@@ -152,7 +153,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-11",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "Issue #19039",
@@ -180,7 +181,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "Issue #19042",
@@ -206,7 +207,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "Issue #19047",
@@ -234,6 +235,63 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
+    "runs_seen": 2
+  },
+  {
+    "item": "Issue #19051",
+    "intent": "isDateReached is inverted (future dates report reached)",
+    "state": "waiting-on-contributor",
+    "recommended_disposition": "verify_then_merge",
+    "next_human_decision": "Land fix PR #19052 once review notes addressed",
+    "waiting_on": [
+      {
+        "actor": "contributor",
+        "action": "Address wackerow's JS review on #19052"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "PR #19052"
+    ],
+    "owner_lane": "code",
+    "confidence": 0.75,
+    "evidence": [
+      "self-reported bug w/ repro",
+      "fix PR #19052 open",
+      "wackerow requested changes 08-13"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-08-13",
+    "runs_seen": 1
+  },
+  {
+    "item": "Issue #19056",
+    "intent": "OpenChainBench dev-tool suggestion, filed twice",
+    "state": "suggest-close",
+    "recommended_disposition": "close",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Close as duplicate of #19055"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "Issue #19055"
+    ],
+    "owner_lane": "product",
+    "confidence": 0.75,
+    "evidence": [
+      "labelled duplicate",
+      "same tool as #19055 by same author"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-08-13",
     "runs_seen": 1
   },
   {
@@ -253,21 +311,21 @@
     "risk": "low",
     "related_items": [],
     "owner_lane": "design",
-    "confidence": 0.7,
+    "confidence": 0.72,
     "evidence": [
-      "draft, 135d idle, CONFLICTING",
+      "draft, 136d idle, CONFLICTING",
       "Status: Stale + Blocked labels"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-07",
-    "runs_seen": 4
+    "runs_seen": 5
   },
   {
     "item": "PR #18876",
     "intent": "Replace (not add) DeFi quiz questions (issue #17280)",
     "state": "waiting-on-contributor",
-    "recommended_disposition": "request_changes",
-    "next_human_decision": "If author never justifies deletion, close rather than merge a swap",
+    "recommended_disposition": "close",
+    "next_human_decision": "8 runs silent — close rather than keep waiting on a swap nobody justified",
     "waiting_on": [
       {
         "actor": "contributor",
@@ -284,12 +342,12 @@
     "owner_lane": "content",
     "confidence": 0.72,
     "evidence": [
-      "lastHumanComment isTeam wackerow, unanswered",
+      "wackerow question unanswered since 07-23",
       "replaces existing questions"
     ],
     "analyzed_sha": "470e609",
     "first_seen": "2026-08-04",
-    "runs_seen": 7
+    "runs_seen": 8
   },
   {
     "item": "PR #18896",
@@ -315,22 +373,22 @@
     "evidence": [
       "closes #18891",
       "CONFLICTING/DIRTY",
-      "idle 14d"
+      "idle 15d"
     ],
     "analyzed_sha": "3948c50",
     "first_seen": "2026-08-05",
-    "runs_seen": 6
+    "runs_seen": 7
   },
   {
     "item": "PR #18918",
     "intent": "Add walletless-dapps tutorial (implements #18052)",
     "state": "waiting-on-contributor",
-    "recommended_disposition": "request_changes",
-    "next_human_decision": "Post the trivial fixes or close — 7 runs of silence is worst",
+    "recommended_disposition": "close",
+    "next_human_decision": "8 runs, zero replies ever, 4 red checks — close or a maintainer adopts it",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Comment fixes or close"
+        "action": "Close or comment fixes"
       }
     ],
     "impact": "medium",
@@ -344,18 +402,18 @@
     "evidence": [
       "4 netlify checks failing",
       "humanCommentCount 0 ever",
-      "external, idle 14d"
+      "external, idle 15d"
     ],
     "analyzed_sha": "ba23523",
     "first_seen": "2026-08-04",
-    "runs_seen": 7
+    "runs_seen": 8
   },
   {
     "item": "PR #18966",
     "intent": "Fix /layer-2 avg tx cost showing $0.00 via sig-fig formatting",
     "state": "blocked",
     "recommended_disposition": "merge",
-    "next_human_decision": "None — 1-file prod-bug fix blocked on a missing review",
+    "next_human_decision": "7 runs unowned — assign a reviewer or self-merge; tiny fixes have no queue owner",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -371,22 +429,50 @@
     "evidence": [
       "visible prod bug $0.00",
       "1 file, CI SUCCESS, team",
-      "BLOCKED, 0 reviews, unmoved"
+      "BLOCKED, 0 reviews, unmoved 7 runs"
     ],
     "analyzed_sha": "f55eb85",
+    "first_seen": "2026-08-05",
+    "runs_seen": 7
+  },
+  {
+    "item": "PR #18969",
+    "intent": "Storybook phase 0 — delete dead components",
+    "state": "blocked",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Advance/close in stack"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "Issue #18967"
+    ],
+    "owner_lane": "tooling",
+    "confidence": 0.75,
+    "evidence": [
+      "part of 7-PR Storybook stack",
+      "unlanded 6 runs"
+    ],
+    "analyzed_sha": "a41a81f",
     "first_seen": "2026-08-05",
     "runs_seen": 6
   },
   {
-    "item": "PR #18969",
-    "intent": "Storybook reorg phase 0 — delete 8 zero-consumer components",
+    "item": "PR #18970",
+    "intent": "Storybook phase 1 — retitle stories",
     "state": "blocked",
     "recommended_disposition": "needs_domain_review",
     "next_human_decision": "",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Advance in stack"
+        "action": "Advance/close in stack"
       }
     ],
     "impact": "low",
@@ -398,51 +484,23 @@
     "owner_lane": "tooling",
     "confidence": 0.75,
     "evidence": [
-      "8 dead components",
-      "CI SUCCESS, 1 approval, BLOCKED"
-    ],
-    "analyzed_sha": "a41a81f",
-    "first_seen": "2026-08-05",
-    "runs_seen": 5
-  },
-  {
-    "item": "PR #18970",
-    "intent": "Storybook reorg phase 1 — retitle stories to path-mirrored taxonomy",
-    "state": "waiting-on-ci",
-    "recommended_disposition": "hold",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "contributor",
-        "action": "Advance in stack"
-      }
-    ],
-    "impact": "low",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "Issue #18967"
-    ],
-    "owner_lane": "tooling",
-    "confidence": 0.75,
-    "evidence": [
-      "CI FAILURE",
-      "BLOCKED, 1 approval"
+      "part of 7-PR Storybook stack",
+      "unlanded 6 runs"
     ],
     "analyzed_sha": "40c5767",
     "first_seen": "2026-08-06",
-    "runs_seen": 5
+    "runs_seen": 6
   },
   {
     "item": "PR #18971",
-    "intent": "Storybook reorg phase 2 — test enforcing story-title taxonomy",
-    "state": "waiting-on-ci",
-    "recommended_disposition": "hold",
+    "intent": "Storybook phase 2 — enforce title taxonomy test",
+    "state": "blocked",
+    "recommended_disposition": "needs_domain_review",
     "next_human_decision": "",
     "waiting_on": [
       {
-        "actor": "contributor",
-        "action": "Advance in stack"
+        "actor": "maintainer",
+        "action": "Advance/close in stack"
       }
     ],
     "impact": "low",
@@ -454,23 +512,23 @@
     "owner_lane": "tooling",
     "confidence": 0.75,
     "evidence": [
-      "CI FAILURE",
-      "BLOCKED, 1 approval"
+      "part of 7-PR Storybook stack",
+      "unlanded 6 runs"
     ],
     "analyzed_sha": "f2422df",
     "first_seen": "2026-08-06",
-    "runs_seen": 5
+    "runs_seen": 6
   },
   {
     "item": "PR #18985",
-    "intent": "Storybook reorg phase 3 — stories for ui/ primitive gaps",
-    "state": "waiting-on-ci",
-    "recommended_disposition": "request_changes",
+    "intent": "Storybook phase 3 — ui/ primitive stories",
+    "state": "blocked",
+    "recommended_disposition": "needs_domain_review",
     "next_human_decision": "",
     "waiting_on": [
       {
-        "actor": "contributor",
-        "action": "Advance in stack"
+        "actor": "maintainer",
+        "action": "Advance/close in stack"
       }
     ],
     "impact": "low",
@@ -482,23 +540,23 @@
     "owner_lane": "tooling",
     "confidence": 0.75,
     "evidence": [
-      "ci failing",
-      "UNSTABLE"
+      "part of 7-PR Storybook stack",
+      "unlanded 6 runs"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-06",
-    "runs_seen": 5
+    "runs_seen": 6
   },
   {
     "item": "PR #18987",
-    "intent": "Storybook reorg phase 4 — shared-component and layout stories",
+    "intent": "Storybook phase 4 — shared/layout stories",
     "state": "blocked",
     "recommended_disposition": "needs_domain_review",
     "next_human_decision": "",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Advance in stack"
+        "action": "Advance/close in stack"
       }
     ],
     "impact": "low",
@@ -510,23 +568,23 @@
     "owner_lane": "tooling",
     "confidence": 0.75,
     "evidence": [
-      "ai needs-work/stale",
-      "stacked on unmerged phases"
+      "part of 7-PR Storybook stack",
+      "unlanded 6 runs"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-06",
-    "runs_seen": 5
+    "runs_seen": 6
   },
   {
     "item": "PR #18988",
-    "intent": "Storybook reorg phase 5 — standardize autodocs",
+    "intent": "Storybook phase 5 — standardize autodocs",
     "state": "blocked",
     "recommended_disposition": "needs_domain_review",
     "next_human_decision": "",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Advance in stack"
+        "action": "Advance/close in stack"
       }
     ],
     "impact": "low",
@@ -538,23 +596,23 @@
     "owner_lane": "tooling",
     "confidence": 0.75,
     "evidence": [
-      "CLEAN, CI SUCCESS",
-      "124 files, stacked"
+      "part of 7-PR Storybook stack",
+      "unlanded 6 runs"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-06",
-    "runs_seen": 5
+    "runs_seen": 6
   },
   {
     "item": "PR #18989",
-    "intent": "Storybook reorg phase 6 — rename story files to kebab-case",
+    "intent": "Storybook phase 6 — kebab-case story files",
     "state": "blocked",
     "recommended_disposition": "needs_domain_review",
     "next_human_decision": "",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Advance in stack"
+        "action": "Advance/close in stack"
       }
     ],
     "impact": "low",
@@ -566,12 +624,12 @@
     "owner_lane": "tooling",
     "confidence": 0.75,
     "evidence": [
-      "CLEAN, CI SUCCESS",
-      "123 files, stacked"
+      "part of 7-PR Storybook stack",
+      "unlanded 6 runs"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-06",
-    "runs_seen": 5
+    "runs_seen": 6
   },
   {
     "item": "PR #18991",
@@ -599,7 +657,7 @@
     ],
     "analyzed_sha": "3d8663b",
     "first_seen": "2026-08-07",
-    "runs_seen": 4
+    "runs_seen": 5
   },
   {
     "item": "PR #18993",
@@ -627,7 +685,7 @@
     ],
     "analyzed_sha": "1a59814",
     "first_seen": "2026-08-07",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "PR #18999",
@@ -656,7 +714,7 @@
     ],
     "analyzed_sha": "74b1f47",
     "first_seen": "2026-08-10",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "PR #19001",
@@ -685,14 +743,14 @@
     ],
     "analyzed_sha": "9a02958",
     "first_seen": "2026-08-07",
-    "runs_seen": 4
+    "runs_seen": 5
   },
   {
     "item": "PR #19016",
     "intent": "One AST-verified sweep setting request locale in all [locale] pages",
     "state": "blocked",
     "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "Adopt sweep and close straggler #18999?",
+    "next_human_decision": "Day 4 unowned — adopt the sweep (retires recovery-agent 500 class) and close #18999",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -711,12 +769,12 @@
     "confidence": 0.78,
     "evidence": [
       "team, CI SUCCESS, BLOCKED review-only",
-      "replaces 11 recovery PRs + eslint rule",
-      "idle 4d, day 3 unowned"
+      "replaces 11 recovery PRs",
+      "idle 5d, unowned"
     ],
     "analyzed_sha": "399e55c",
     "first_seen": "2026-08-10",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "PR #19017",
@@ -727,7 +785,7 @@
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Review; block is missing review"
+        "action": "Review; part of SEO batch"
       }
     ],
     "impact": "medium",
@@ -745,33 +803,7 @@
     ],
     "analyzed_sha": "19699bd",
     "first_seen": "2026-08-10",
-    "runs_seen": 3
-  },
-  {
-    "item": "PR #19020",
-    "intent": "Update README.md (low-value edit)",
-    "state": "suggest-close",
-    "recommended_disposition": "close",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Close per recommend-close label"
-      }
-    ],
-    "impact": "low",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [],
-    "owner_lane": "tooling",
-    "confidence": 0.7,
-    "evidence": [
-      "labelled recommend close",
-      "ai likely-close, single-file README"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-08-10",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "PR #19022",
@@ -782,7 +814,7 @@
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Review; block is missing review"
+        "action": "Review; part of SEO batch"
       }
     ],
     "impact": "high",
@@ -801,37 +833,7 @@
     ],
     "analyzed_sha": "1a86a97",
     "first_seen": "2026-08-10",
-    "runs_seen": 3
-  },
-  {
-    "item": "PR #19026",
-    "intent": "Remove duplicate 'page last updated' from upgrade hero (fixes #19025)",
-    "state": "decision-needed",
-    "recommended_disposition": "merge",
-    "next_human_decision": "Rival duplicate #19046 appeared; keep #19026 and close #19046",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Merge #19026, close #19046"
-      }
-    ],
-    "impact": "medium",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "Issue #19025",
-      "PR #19046"
-    ],
-    "owner_lane": "code",
-    "confidence": 0.75,
-    "evidence": [
-      "both green, same 3 files",
-      "konopkja filed issue + #19026 first",
-      "#19046 ai=likely-close duplicate"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-08-11",
-    "runs_seen": 1
+    "runs_seen": 4
   },
   {
     "item": "PR #19027",
@@ -859,7 +861,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-11",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "PR #19029",
@@ -883,13 +885,13 @@
     "owner_lane": "code",
     "confidence": 0.8,
     "evidence": [
-      "fixes #18982: zero lastmod across ~17.5k URLs",
+      "fixes zero lastmod across ~17.5k URLs",
       "CI SUCCESS, BLOCKED",
       "external author"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-11",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "PR #19032",
@@ -915,7 +917,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-11",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "PR #19035",
@@ -942,7 +944,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-11",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "PR #19040",
@@ -966,12 +968,12 @@
     "confidence": 0.82,
     "evidence": [
       "team, 1 file, green review-only",
-      "Electra raised MIN_SLASHING_PENALTY_QUOTIENT 32→4096",
+      "Electra raised MIN_SLASHING_PENALTY_QUOTIENT",
       "old ~1% figure wrong"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #19041",
@@ -1000,7 +1002,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #19043",
@@ -1025,12 +1027,12 @@
     "confidence": 0.8,
     "evidence": [
       "green review-only",
-      "ships e2e test tabs-server-html",
+      "ships e2e tabs-server-html",
       "forceMount default true"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #19044",
@@ -1055,26 +1057,26 @@
     "confidence": 0.8,
     "evidence": [
       "green, ships e2e test",
-      "tutorials hub had zero crawlable tutorial links",
+      "tutorials hub had zero crawlable links",
       "drops ssr:false"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #19046",
-    "intent": "Duplicate fix for #19025 hero bug (rival of #19026)",
-    "state": "suggest-close",
-    "recommended_disposition": "close",
-    "next_human_decision": "Close as duplicate of #19026",
+    "intent": "Remove dead showLastUpdatedInHero config (fixes #19025)",
+    "state": "decision-needed",
+    "recommended_disposition": "verify_then_merge",
+    "next_human_decision": "Did merged #19026 already fix #19025, or is this showLastUpdatedInHero removal still needed?",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Close as duplicate"
+        "action": "Verify vs merged #19026; merge or close"
       }
     ],
-    "impact": "low",
+    "impact": "medium",
     "effort_to_unblock": "small",
     "risk": "low",
     "related_items": [
@@ -1082,14 +1084,14 @@
       "PR #19026"
     ],
     "owner_lane": "code",
-    "confidence": 0.7,
+    "confidence": 0.6,
     "evidence": [
-      "ai verdict likely-close duplicate",
-      "same 3 files as #19026",
-      "byt61"
+      "rival #19026 merged",
+      "byt61 grep-refuted the duplicate flag",
+      "green, 3 files"
     ],
-    "analyzed_sha": null,
-    "first_seen": "2026-08-12",
+    "analyzed_sha": "080df80",
+    "first_seen": "2026-08-13",
     "runs_seen": 1
   },
   {
@@ -1114,11 +1116,121 @@
     "confidence": 0.75,
     "evidence": [
       "green review-only, 2 files",
-      "seed off local time flipped order at UTC midnight",
+      "seed off local time flipped at UTC midnight",
       "self-reported #19047"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
+    "runs_seen": 2
+  },
+  {
+    "item": "PR #19050",
+    "intent": "Add /open-source page and link it from /values",
+    "state": "decision-needed",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "Does /open-source belong as a standalone page, and who runs content+product review?",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Product/content review of new page"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "medium",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "content",
+    "confidence": 0.55,
+    "evidence": [
+      "new App Router page mirrors /privacy shape",
+      "16 files, needs product review label",
+      "CI pending, external"
+    ],
+    "analyzed_sha": "807291a",
+    "first_seen": "2026-08-13",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19052",
+    "intent": "Correct inverted isDateReached logic (fixes #19051)",
+    "state": "waiting-on-contributor",
+    "recommended_disposition": "request_changes",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "contributor",
+        "action": "Apply wackerow's JS simplifications, green the check"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "Issue #19051"
+    ],
+    "owner_lane": "code",
+    "confidence": 0.78,
+    "evidence": [
+      "wackerow CHANGES_REQUESTED 08-13",
+      "CI pending",
+      "real inverted-logic bug w/ repro"
+    ],
+    "analyzed_sha": "9b99532",
+    "first_seen": "2026-08-13",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19053",
+    "intent": "Full-width Alert in NFTMintCard footer (1-line UI patch)",
+    "state": "blocked",
+    "recommended_disposition": "merge",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Approve 1-line patch; block is missing review"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "code",
+    "confidence": 0.8,
+    "evidence": [
+      "team, 1 file green",
+      "Tailwind-only w-full add",
+      "BLOCKED review-only"
+    ],
+    "analyzed_sha": "6895ceb",
+    "first_seen": "2026-08-13",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19057",
+    "intent": "Remove defunct Crowdin/gitpoap README badges",
+    "state": "blocked",
+    "recommended_disposition": "merge",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Approve; block is missing review"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "tooling",
+    "confidence": 0.78,
+    "evidence": [
+      "team, README-only 2-line delete",
+      "Crowdin/gitpoap both defunct",
+      "green"
+    ],
+    "analyzed_sha": "ee6b214",
+    "first_seen": "2026-08-13",
     "runs_seen": 1
   }
 ]
