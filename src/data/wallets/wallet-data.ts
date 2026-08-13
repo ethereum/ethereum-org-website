@@ -60,6 +60,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-10-30",
     name: "Keystone",
+    usage_tracking: { value: "crash-only", evidence: "iOS App Store: Diagnostics only" },
     fees: [{ type: "device", usd: 149 }],
     image: KeystoneImage,
     twBackgroundColor: "bg-[#FFFFFF]",
@@ -109,6 +110,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-10-30",
     name: "Loopring wallet",
+    usage_tracking: { value: "undisclosed" },
     fees: [{ type: "swap", percent: 0.3 }],
     image: LoopringImage,
     twBackgroundColor: "bg-[#446EFF]",
@@ -158,6 +160,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-10-01",
     name: "Railway Wallet",
+    usage_tracking: { value: "none", evidence: "Source scan: no analytics SDK" },
     fees: [{ type: "shield-unshield", percent: 0.25 }],
     image: RailwayImage,
     twBackgroundColor: "bg-[#000000]",
@@ -205,6 +208,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-07-15",
     name: "Ready Wallet",
+    usage_tracking: { value: "analytics", evidence: "iOS App Store: Usage Data" },
     fees: [{ type: "swap", percent: 0.5 }],
     image: ReadyImage,
     twBackgroundColor: "bg-[#FFFFFF]",
@@ -253,6 +257,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2022-11-15",
     name: "Coinbase Wallet",
+    usage_tracking: { value: "analytics", evidence: "iOS App Store: Usage Data" },
     fees: [{ type: "swap", percent: 1 }],
     image: CoinbaseImage,
     twBackgroundColor: "bg-[#0052FF]",
@@ -316,6 +321,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-01-25",
     name: "Frame",
+    usage_tracking: { value: "undisclosed" },
     image: FrameImage,
     twBackgroundColor: "bg-[#222021]",
     twGradiantBrandColor: "from-[#222021]",
@@ -366,6 +372,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-03-17",
     name: "MetaMask",
+    usage_tracking: { value: "analytics", evidence: "iOS App Store: Usage Data" },
     fees: [
       { type: "swap-bridge", percent: 0.875 },
       { type: "buy-sell", percent: 1 },
@@ -471,6 +478,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-11-06",
     name: "Safe",
+    usage_tracking: { value: "analytics", evidence: "Source scan: analytics SDK found" },
     fees: [
       { type: "swap", percent: [0.05, 0.7] },
       { type: "staking", percent: 20, qualifier: "of-rewards" },
@@ -531,6 +539,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-01-31",
     name: "Coin Wallet",
+    usage_tracking: { value: "undisclosed" },
     fees: [{ type: "swap", percent: 0 }],
     image: CoinWalletImage,
     twBackgroundColor: "bg-[#68c481]",
@@ -612,6 +621,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-12-04",
     name: "Ambire",
+    usage_tracking: { value: "undisclosed" },
     fees: [{ type: "swap-bridge", percent: 0.5 }],
     image: AmbireImage,
     twBackgroundColor: "bg-[#aa6aff]",
@@ -668,6 +678,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-08-31",
     name: "imToken",
+    usage_tracking: { value: "analytics", evidence: "iOS App Store: Usage Data" },
     fees: [
       {
         type: "swap",
@@ -742,6 +753,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-12-04",
     name: "io.finnet MPC wallet for Business",
+    usage_tracking: { value: "undisclosed" },
     fees: [{ type: "free-tier-plans", usd: 399.99 }],
     image: IoFinnetImage,
     twBackgroundColor: "bg-[#FFFFFF]",
@@ -791,6 +803,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-08-30",
     name: "1inch Wallet",
+    usage_tracking: { value: "analytics", evidence: "iOS App Store: Usage Data" },
     fees: [{ type: "swap", text: "variable" }],
     image: OneInchWalletImage,
     twBackgroundColor: "bg-[#2F8AF5]",
@@ -859,6 +872,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-10-30",
     name: "FoxWallet",
+    usage_tracking: { value: "none", evidence: "iOS App Store: Data Not Collected" },
     fees: [{ type: "swap", percent: 0 }],
     image: FoxWalletImage,
     twBackgroundColor: "bg-[#000000]",
@@ -926,6 +940,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-01-12",
     name: "PillarX",
+    usage_tracking: { value: "undisclosed" },
     fees: [{ type: "swap", percent: 1 }],
     image: PillarXImage,
     twBackgroundColor: "bg-[#000000]",
@@ -980,6 +995,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-03-19",
     name: "MEW wallet",
+    usage_tracking: { value: "analytics", evidence: "iOS App Store: Usage Data" },
     fees: [{ type: "swap", text: "variable" }],
     image: MewImage,
     twBackgroundColor: "bg-[#05C0A5]",
@@ -1032,6 +1048,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-01-25",
     name: "Unstoppable wallet",
+    usage_tracking: { value: "undisclosed" },
     fees: [{ type: "swap", percent: 0 }],
     image: UnstoppableWalletImage,
     twBackgroundColor: "bg-[#ffbe43]",
@@ -1079,6 +1096,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2022-06-24",
     name: "AlphaWallet",
+    usage_tracking: { value: "analytics", evidence: "Source scan: analytics SDK found" },
     fees: [{ type: "swap", percent: 0 }],
     image: AlphaWalletImage,
     twBackgroundColor: "bg-[#ffffff]",
@@ -1125,6 +1143,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-07-24",
     name: "Bridge wallet",
+    usage_tracking: { value: "analytics", evidence: "iOS App Store: Usage Data" },
     fees: [
       { type: "swap", percent: 0.5 },
       { type: "buy-sell", percent: [0.6, 3.8] },
@@ -1180,6 +1199,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-11-06",
     name: "TokenPocket",
+    usage_tracking: { value: "none", evidence: "iOS App Store: Data Not Collected" },
     fees: [
       { type: "swap", text: "undisclosed", qualifier: "tpt-holder-discounts" },
     ],
@@ -1261,6 +1281,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2022-06-30",
     name: "Rainbow",
+    usage_tracking: { value: "analytics", evidence: "Source + iOS App Store: Usage Data" },
     fees: [{ type: "swap", percent: 0.85 }],
     image: RainbowImage,
     twBackgroundColor: "bg-[#001A4D]",
@@ -1329,6 +1350,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2026-06-16",
     name: "Trezor",
+    usage_tracking: { value: "analytics", evidence: "iOS App Store: Usage Data" },
     fees: [
       { type: "device", usd: [59, 129] },
       { type: "swap", text: "variable" },
@@ -1403,6 +1425,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-10-23",
     name: "Ledger",
+    usage_tracking: { value: "analytics", evidence: "iOS App Store: Usage Data" },
     fees: [
       { type: "device", usd: [79, 399] },
       { type: "swap", text: "variable" },
@@ -1469,6 +1492,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2022-08-19",
     name: "Exodus",
+    usage_tracking: { value: "analytics", evidence: "iOS App Store: Usage Data" },
     fees: [{ type: "swap", percent: 0.5, from: true }],
     image: ExodusImage,
     twBackgroundColor: "bg-[#1F2033]",
@@ -1526,6 +1550,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-07-24",
     name: "Rabby Wallet",
+    usage_tracking: { value: "analytics", evidence: "Source + iOS App Store: Usage Data" },
     fees: [{ type: "swap", percent: 0.25 }],
     image: RabbyWalletImage,
     twBackgroundColor: "bg-[#FFFFFF]",
@@ -1586,6 +1611,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-09-26",
     name: "Zerion Wallet",
+    usage_tracking: { value: "analytics", evidence: "Source + iOS App Store: Usage Data" },
     fees: [
       { type: "swap-bridge", percent: 0.67, qualifier: "lower-with-premium" },
       { type: "buy", text: "set-by-provider" },
@@ -1662,6 +1688,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-09-26",
     name: "Enkrypt",
+    usage_tracking: { value: "undisclosed" },
     fees: [{ type: "swap", text: "variable" }],
     image: EnkryptImage,
     twBackgroundColor: "bg-[#ffffff]",
@@ -1715,6 +1742,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2022-10-31",
     name: "GridPlus Lattice1",
+    usage_tracking: { value: "undisclosed" },
     fees: [{ type: "device", usd: 397 }],
     image: GridPlusImage,
     twBackgroundColor: "bg-[#ffffff]",
@@ -1761,6 +1789,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-11-20",
     name: "Bitget wallet",
+    usage_tracking: { value: "none", evidence: "iOS App Store: Data Not Collected" },
     fees: [{ type: "swap", text: "variable" }],
     image: BitgetImage,
     twBackgroundColor: "bg-[#00F0FF]",
@@ -1831,6 +1860,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-10-31",
     name: "BlockWallet",
+    usage_tracking: { value: "none", evidence: "Source scan: no analytics SDK" },
     fees: [{ type: "swap-bridge", percent: 0.5 }],
     image: BlockWalletImage,
     twBackgroundColor: "bg-[#52C200]",
@@ -1888,6 +1918,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-10-30",
     name: "OneKey",
+    usage_tracking: { value: "analytics", evidence: "iOS App Store: Usage Data" },
     fees: [{ type: "swap-bridge", percent: 0.85 }],
     image: OneKeyImage,
     twBackgroundColor: "bg-[#00B812]",
@@ -1961,6 +1992,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2023-04-21",
     name: "Taho",
+    usage_tracking: { value: "undisclosed" },
     fees: [{ type: "swap", percent: 0.5 }],
     image: TahoImage,
     twBackgroundColor: "bg-[#FDAE49]",
@@ -2012,6 +2044,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-10-30",
     name: "Phantom",
+    usage_tracking: { value: "analytics", evidence: "iOS App Store: Usage Data" },
     fees: [{ type: "swap", percent: 0.85 }],
     image: PhantomImage,
     twBackgroundColor: "bg-[#AB9FF2]",
@@ -2085,6 +2118,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2023-11-02",
     name: "Trust Wallet",
+    usage_tracking: { value: "crash-only", evidence: "iOS App Store: Diagnostics only" },
     fees: [{ type: "buy", text: "set-by-provider" }],
     image: TrustWalletImage,
     twBackgroundColor: "bg-[#0500FF]",
@@ -2160,6 +2194,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-10-20",
     name: "ShapeShift",
+    usage_tracking: { value: "analytics", evidence: "Source + iOS App Store: Usage Data" },
     fees: [
       {
         type: "swap-bridge",
@@ -2232,6 +2267,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2026-07-08",
     name: "Gem Wallet",
+    usage_tracking: { value: "none", evidence: "Source + iOS App Store: Data Not Collected" },
     fees: [
       { type: "swap", percent: 0 },
       { type: "buy", text: "set-by-provider" },
@@ -2324,6 +2360,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-08-24",
     name: "Cypherock X1",
+    usage_tracking: { value: "none", evidence: "iOS App Store: Data Not Collected" },
     fees: [{ type: "device", usd: [99, 179] }],
     image: CypherockX1Image,
     twBackgroundColor: "bg-[#e9b873]",
@@ -2370,6 +2407,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-05-16",
     name: "Cake Wallet",
+    usage_tracking: { value: "none", evidence: "Source + iOS App Store: Data Not Collected" },
     fees: [{ type: "swap", text: "variable" }],
     image: CakeWalletImage,
     twBackgroundColor: "bg-[#61C5FF]",
@@ -2440,6 +2478,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-10-31",
     name: "Clear Wallet",
+    usage_tracking: { value: "none", evidence: "Source + Chrome Web Store: no data declared" },
     image: ClearWallet,
     twBackgroundColor: "bg-[#0500FF]",
     twGradiantBrandColor: "from-[#0500FF]",
@@ -2485,6 +2524,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-12-26",
     name: "Braavos",
+    usage_tracking: { value: "none", evidence: "iOS App Store: Data Not Collected" },
     fees: [{ type: "swap", percent: 0 }],
     image: BraavosImage,
     twBackgroundColor: "bg-[#FFFFFF]",
@@ -2532,6 +2572,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-11-03",
     name: "Coin98 Super Wallet",
+    usage_tracking: { value: "analytics", evidence: "iOS App Store: Usage Data" },
     fees: [
       {
         type: "swap",
@@ -2607,6 +2648,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-05-19",
     name: "Burner",
+    usage_tracking: { value: "undisclosed" },
     fees: [
       { type: "device", usd: 19, qualifier: "per-card" },
       { type: "swap", text: "undisclosed" },
@@ -2657,6 +2699,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-09-09",
     name: "Edge Wallet",
+    usage_tracking: { value: "analytics", evidence: "Source + iOS App Store: Usage Data" },
     fees: [{ type: "swap", percent: [0.5, 2] }],
     image: EdgeImage,
     twBackgroundColor: "bg-[#1a1a1a]",
@@ -2709,6 +2752,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-02-05",
     name: "NuFi",
+    usage_tracking: { value: "analytics", evidence: "Chrome Web Store: User activity" },
     fees: [{ type: "swap", percent: 0.75 }],
     image: NuFiImage,
     twBackgroundColor: "bg-[#bae440]",
@@ -2762,6 +2806,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-09-24",
     name: "Clave",
+    usage_tracking: { value: "analytics", evidence: "iOS App Store: Usage Data" },
     fees: [{ type: "swap", percent: 0.5 }],
     image: ClaveWallet,
     twBackgroundColor: "bg-[#000000]",
@@ -2807,6 +2852,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-02-12",
     name: "Uniswap Wallet",
+    usage_tracking: { value: "analytics", evidence: "Source + iOS App Store: Usage Data" },
     fees: [{ type: "swap", percent: 0 }],
     image: UniswapWalletImage,
     twBackgroundColor: "bg-[#EF03AC]",
@@ -2871,6 +2917,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-12-17",
     name: "imKey Pro Hardware Wallet",
+    usage_tracking: { value: "undisclosed" },
     fees: [
       { type: "device", usd: 110 },
       { type: "swap", percent: 0 },
@@ -2940,6 +2987,7 @@ export const walletsData: WalletData[] = [
     // https://github.com/ethereum/ethereum-org-website/issues/17586
     last_updated: "2026-02-17",
     name: "Infinex Wallet & Crypto Superapp",
+    usage_tracking: { value: "undisclosed" },
     fees: [{ type: "swap-bridge", percent: [0.03, 0.3] }],
     image: InfinexImage,
     twBackgroundColor: "bg-[#FE6F39]",

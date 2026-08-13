@@ -306,7 +306,12 @@ export const filterFn = (data: WalletRow[], filters: FilterOption[]) => {
       selectedLayer2.every((chain) => wallet.supported_chains.includes(chain))
 
     // Check active filter keys
-    const matchesActiveFilters = activeFilterKeys.every((key) => wallet[key])
+    const matchesActiveFilters = activeFilterKeys.every((key) => {
+      if (key === "no_usage_tracking") {
+        return wallet.usage_tracking?.value === "none"
+      }
+      return wallet[key]
+    })
 
     return matchesLanguage && matchesLayer2 && matchesActiveFilters
   })
