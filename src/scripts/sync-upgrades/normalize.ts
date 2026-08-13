@@ -1,0 +1,317 @@
+/**
+ * Maps Forkcast's shapes onto our contract.
+ *
+ * The mapping is intentionally 1:1 and boring — it is the artifact reviewers
+ * check. The single deliberate collapse is Forkcast's "Networking", which is a
+ * category rather than a confidence level and so becomes `scheduled` plus a
+ * flag. Status expresses confidence; kind gets its own field.
+ */
+import type {
+  EipStatus,
+  Milestone,
+  MilestoneKind,
+  PartialDate,
+  Quarter,
+  UpgradeData,
+  UpgradeEip,
+  UpgradeStatus,
+  UpgradeStore,
+} from "@/data/upgrades/types"
+
+import type { ForkcastSource, ForkcastUpgrade } from "./forkcast"
+import { ForkcastSyncError } from "./forkcast"
+
+const UPGRADE_STATUS: Record<string, UpgradeStatus> = {
+  Live: "live",
+  Upcoming: "upcoming",
+  Planning: "planning",
+  Research: "research",
+}
+
+const EIP_STATUS: Record<string, EipStatus> = {
+  Proposed: "proposed",
+  Considered: "considered",
+  Scheduled: "scheduled",
+  Declined: "declined",
+  Included: "included",
+  Withdrawn: "withdrawn",
+  Informational: "informational",
+  Networking: "scheduled",
+}
+
+const NETWORKING_STATUS = "Networking"
+
+const MONTHS = [
+  "jan",
+  "feb",
+  "mar",
+  "apr",
+  "may",
+  "jun",
+  "jul",
+  "aug",
+  "sep",
+  "oct",
+  "nov",
+  "dec",
+]
+
+/**
+ * Parses every date shape Forkcast writes across `upgrades.ts` and
+ * `timeline-phases.ts`: `2026`, `Mon D, YYYY`, `Mon YYYY`, `QN YYYY`, and
+ * quarter ranges like `Q3-Q4 2026`.
+ *
+ * A range degrades to the year on purpose — picking either bound would assert
+ * precision the source does not have.
+ */
+export const parsePartialDate = (value: string | null): PartialDate | null => {
+  if (!value) return null
+  const text = value.trim()
+
+  const year = text.match(/^(\d{4})$/)
+  if (year) return { year: Number(year[1]) }
+
+  if (/^Q[1-4]\s*-\s*Q[1-4]\s+\d{4}$/i.test(text)) {
+    return { year: Number(text.match(/(\d{4})$/)![1]) }
+  }
+
+  const quarter = text.match(/^Q([1-4])\s+(\d{4})$/i)
+  if (quarter) {
+    return {
+      year: Number(quarter[2]),
+      quarter: Number(quarter[1]) as Quarter,
+    }
+  }
+
+  const full = text.match(/^([A-Za-z]{3})\w* (\d{1,2}),\s*(\d{4})$/)
+  if (full) {
+    const month = MONTHS.indexOf(full[1].toLowerCase()) + 1
+    if (month > 0) {
+      return { year: Number(full[3]), month, day: Number(full[2]) }
+    }
+  }
+
+  const monthYear = text.match(/^([A-Za-z]{3})\w*\s+(\d{4})$/)
+  if (monthYear) {
+    const month = MONTHS.indexOf(monthYear[1].toLowerCase()) + 1
+    if (month > 0) return { year: Number(monthYear[2]), month }
+  }
+
+  return null
+}
+
+/** Ranked so a more specific upstream value wins. */
+const precision = (d: PartialDate): number =>
+  d.day ? 3 : d.month ? 2 : d.quarter ? 1 : 0
+
+const KIND_ORDER: Record<MilestoneKind, number> = {
+  devnet: 0,
+  testnet: 1,
+  mainnet: 2,
+}
+
+/**
+ * Missing precision sorts late, not early: "sometime in 2026" belongs after
+ * every dated milestone in 2026. A quarter sorts at its closing month.
+ */
+const dateKey = (d: PartialDate): number =>
+  (d.quarter ? d.quarter * 3 : (d.month ?? 12)) * 100 + (d.day ?? 31)
+
+/**
+ * Year, then release stage, then date. Stage outranks the date because dates
+ * degrade: Hegotá's testnet forks are known only to the year while its mainnet
+ * target has a quarter, and sorting on dates alone would put activation first.
+ */
+const byMilestoneOrder = (a: Milestone, b: Milestone) =>
+  a.when.year - b.when.year ||
+  KIND_ORDER[a.kind] - KIND_ORDER[b.kind] ||
+  dateKey(a.when) - dateKey(b.when)
+
+const parseIsoDate = (iso: string): PartialDate | null => {
+  const m = iso.match(/^(\d{4})-(\d{2})-(\d{2})$/)
+  return m
+    ? { year: Number(m[1]), month: Number(m[2]), day: Number(m[3]) }
+    : null
+}
+
+const MAINNET_PHASE = "mainnet-deployment"
+const TESTNET_PHASE = "public-testnets"
+
+/**
+ * The mainnet target, taking whichever source states it most precisely.
+ * `upgrades.ts` flattens it to a year; the phase timeline usually has the
+ * quarter, and an exact date once the phase completes.
+ */
+const resolveMainnetTarget = (
+  source: ForkcastSource,
+  upgrade: ForkcastUpgrade
+): PartialDate | null => {
+  const headline = parsePartialDate(upgrade.activationDate)
+  const phase = source.phases[upgrade.id]?.find(
+    (p) => p.phaseId === MAINNET_PHASE
+  )
+  const fromPhase = parsePartialDate(
+    phase?.actualEndDate ?? phase?.projectedDate ?? null
+  )
+
+  if (!headline) return fromPhase
+  if (!fromPhase) return headline
+  if (fromPhase.year !== headline.year) return headline
+
+  return precision(fromPhase) > precision(headline) ? fromPhase : headline
+}
+
+/**
+ * Public testnet forks, from the phase timeline. Deprecated networks are
+ * skipped — Holešky was shut down after Fusaka and is listed only as history.
+ */
+const normalizeTestnets = (
+  source: ForkcastSource,
+  upgradeId: string
+): Milestone[] => {
+  const phase = source.phases[upgradeId]?.find(
+    (p) => p.phaseId === TESTNET_PHASE
+  )
+  if (!phase) return []
+
+  return phase.testnets.flatMap((testnet) => {
+    if (testnet.status === "deprecated") return []
+    const when = parsePartialDate(testnet.projectedDate)
+    if (!when) return []
+    return [
+      {
+        name: `${testnet.name} fork`,
+        kind: "testnet",
+        when,
+        status: testnet.status === "completed" ? "complete" : "projected",
+      } satisfies Milestone,
+    ]
+  })
+}
+
+/**
+ * Only EIPs expected to ship are stored. The rest of Forkcast's vocabulary is
+ * still mapped below so an unknown value fails loudly, but proposed, considered,
+ * declined, withdrawn and informational entries are dropped:
+ *
+ * - nothing consumes them — a declined EIP should be removed from a page, not
+ *   labelled, and listing proposals would make this an EIP directory
+ * - they churn every ACD call during EIP selection (Hegotá alone has 55
+ *   proposals), which would produce weekly diffs against data nobody reads
+ *
+ * Descoping stays visible: a declined EIP leaves the store, and a deletion in
+ * the diff reads more clearly than a status field flipping.
+ */
+const STORED_STATUSES: ReadonlySet<EipStatus> = new Set([
+  "scheduled",
+  "included",
+])
+
+const normalizeEips = (
+  source: ForkcastSource,
+  forkName: string
+): UpgradeEip[] =>
+  source.relationships
+    .filter((r) => r.forkName.toLowerCase() === forkName)
+    .map((r) => {
+      const latest = r.statusHistory[r.statusHistory.length - 1]
+      const status = EIP_STATUS[latest.status]
+      if (!status) {
+        throw new ForkcastSyncError(
+          `Unmapped Forkcast EIP status "${latest.status}" on EIP-${r.eipId} (${r.forkName})`
+        )
+      }
+      return {
+        id: r.eipId,
+        status,
+        networking: latest.status === NETWORKING_STATUS,
+        decidedAt:
+          latest.call || latest.date
+            ? { call: latest.call ?? null, date: latest.date ?? null }
+            : null,
+      }
+    })
+    .filter((eip) => STORED_STATUSES.has(eip.status))
+    .sort((a, b) => a.id - b.id)
+
+const normalizeMilestones = (
+  source: ForkcastSource,
+  upgrade: ForkcastUpgrade,
+  status: UpgradeStatus,
+  target: PartialDate | null,
+  confirmed: boolean
+): Milestone[] => {
+  const launches = [...(source.devnetLaunches[upgrade.id] ?? [])].sort(
+    (a, b) => a.version - b.version
+  )
+
+  const milestones: Milestone[] = launches.flatMap((launch, i) => {
+    const when = parseIsoDate(launch.dateISO)
+    if (!when) return []
+    const isLatest = i === launches.length - 1
+    return [
+      {
+        name: `Devnet-${launch.version}`,
+        kind: "devnet",
+        when,
+        // Once the fork has shipped, every devnet is history.
+        status: isLatest && status !== "live" ? "live" : "complete",
+      },
+    ]
+  })
+
+  milestones.push(...normalizeTestnets(source, upgrade.id))
+
+  if (target) {
+    milestones.push({
+      name: "Mainnet activation",
+      kind: "mainnet",
+      when: target,
+      status:
+        status === "live" ? "complete" : confirmed ? "confirmed" : "projected",
+    })
+  }
+
+  return milestones.sort(byMilestoneOrder)
+}
+
+export const normalize = (source: ForkcastSource): UpgradeStore => {
+  const store: UpgradeStore = {}
+
+  for (const upgrade of source.upgrades) {
+    // A signpost row pointing at ethereum.org/history, not a real upgrade.
+    if (!upgrade.activationDate && !upgrade.path?.startsWith("/upgrade/"))
+      continue
+    if (upgrade.id === "previous-upgrades") continue
+
+    const status = UPGRADE_STATUS[upgrade.status]
+    if (!status) {
+      throw new ForkcastSyncError(
+        `Unmapped Forkcast upgrade status "${upgrade.status}" on ${upgrade.id}`
+      )
+    }
+
+    const when = resolveMainnetTarget(source, upgrade)
+    if (upgrade.activationDate && !when) {
+      throw new ForkcastSyncError(
+        `Unparseable activationDate "${upgrade.activationDate}" on ${upgrade.id}`
+      )
+    }
+    const confirmed = upgrade.activationDetails !== null
+
+    store[upgrade.id] = {
+      slug: upgrade.id,
+      name: upgrade.name.replace(/ Upgrade$/, ""),
+      status,
+      mainnetTarget: { when, confirmed },
+      milestones: normalizeMilestones(source, upgrade, status, when, confirmed),
+      eips: normalizeEips(source, upgrade.id),
+      sourceUrl: `https://forkcast.org${upgrade.path ?? `/upgrade/${upgrade.id}`}`,
+    } satisfies UpgradeData
+  }
+
+  if (!Object.keys(store).length) {
+    throw new ForkcastSyncError("Normalized store is empty")
+  }
+  return store
+}
