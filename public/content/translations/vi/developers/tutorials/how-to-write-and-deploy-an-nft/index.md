@@ -227,7 +227,7 @@ Sau đó, tạo một tệp `.env` trong thư mục gốc của dự án của c
 
 - Xem bên dưới để lấy URL API Alchemy HTTP và sao chép nó vào khay nhớ tạm của bạn
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.mp4#842x480)
 
 Tệp `.env` của bạn bây giờ sẽ trông như thế này:
 

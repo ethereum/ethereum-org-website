@@ -157,6 +157,10 @@ Die umfangreiche [Dokumentation](https://besu.hyperledger.org/en/stable/) von Be
 
 Erigon, früher bekannt als Turbo-Geth, begann als Fork von Go Ethereum, der auf Geschwindigkeit und Speicherplatzeffizienz ausgerichtet war. Erigon ist eine komplett neu gestaltete Implementierung von Ethereum, die derzeit in Go geschrieben ist, aber Implementierungen in anderen Sprachen befinden sich in der Entwicklung. Das Ziel von Erigon ist es, eine schnellere, modularere und optimiertere Implementierung von Ethereum bereitzustellen. Er kann eine vollständige Archivknoten-Synchronisierung mit etwa 2 TB Speicherplatz in weniger als 3 Tagen durchführen.
 
+
+ethrex ist ein minimalistischer, modularer Ethereum-Ausführungsclient, der in Rust geschrieben und von LambdaClass entwickelt wurde. Er wurde mit Blick auf Zero-Knowledge-Beweise entwickelt, und dieselbe Codebasis kann sowohl als L1-Ausführungsclient als auch als Multi-Beweiser-ZK-Rollup (L2) ausgeführt werden. Er ist unter den Lizenzen Apache-2.0 und MIT doppelt lizenziert.
+
+Erfahren Sie mehr, indem Sie die [ethrex-Dokumentation](https://docs.ethrex.xyz/) lesen oder sich das [ethrex-GitHub-Repo](https://github.com/lambdaclass/ethrex) ansehen.
 ### Go Ethereum {#geth}
 
 Go Ethereum (kurz Geth) ist eine der ursprünglichen Implementierungen des Ethereum-Protokolls. Derzeit ist es der am weitesten verbreitete Client mit der größten Benutzerbasis und einer Vielzahl von Tools für Benutzer und Entwickler. Er ist in Go geschrieben, vollständig Open Source und unter der GNU LGPL v3 lizenziert.

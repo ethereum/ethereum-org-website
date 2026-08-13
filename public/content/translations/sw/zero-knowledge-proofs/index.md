@@ -239,3 +239,7 @@ ZK-STARK inachukuliwa kuwa na kinga dhidi ya tishio la ukokotoaji wa kwanta, kwa
 - [Kwa nini Uthibitisho wa Maarifa-Sifuri (ZKPs) ni Mabadiliko Makubwa kwa Utambulisho wa Kujitawala](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
 - [EIP-7503 Imefafanuliwa: Kuwezesha Uhamishaji wa Faragha Kwenye Ethereum Kwa Uthibitisho wa ZK](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [Mchezo wa Kadi wa ZK: mchezo wa kujifunza misingi ya ZK na matumizi ya maisha halisi](https://github.com/ZK-card/zk-cards) - _Kadi za ZK_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

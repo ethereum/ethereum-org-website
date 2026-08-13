@@ -3,6 +3,7 @@ title: Pectra
 metaTitle: Prague-Electra (Pectra)
 description: "Tìm hiểu về bản nâng cấp giao thức Pectra"
 lang: vi
+template: upgrade
 authors: ["Nixo", "Mario Havel"]
 ---
 

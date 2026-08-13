@@ -3,6 +3,7 @@ title: "पेक्ट्रा"
 metaTitle: "प्राग-इलेक्ट्रा (पेक्ट्रा)"
 description: "पेक्ट्रा प्रोटोकॉल अपग्रेडबद्दल जाणून घ्या"
 lang: mr
+template: upgrade
 authors: ["Nixo", "मारिओ हॅवेल"]
 ---
 

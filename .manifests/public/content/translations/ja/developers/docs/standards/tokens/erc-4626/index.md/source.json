@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/docs/standards/tokens/erc-4626/index.md",
-  "generatedAt": "2026-06-17T23:15:26.689Z",
-  "rootHash": "1ce2895966f6",
+  "generatedAt": "2026-07-22T23:28:12.534Z",
+  "rootHash": "777f95d039a6",
   "tree": {
-    "contentHash": "2cccf026520e",
-    "anchorHash": "805390a103ad",
+    "contentHash": "c4500796c70b",
+    "anchorHash": "c42c5bd34472",
     "children": {
       "frontmatter:title": {
         "contentHash": "12e932047dc2",
@@ -20,8 +20,8 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "introduction": {
-        "contentHash": "399abc13d088",
-        "anchorHash": "bce678a6ee75",
+        "contentHash": "25d9d7702b1d",
+        "anchorHash": "a7e255f779d8",
         "labelHash": "b605350bc002",
         "children": {
           "_label": {
@@ -69,12 +69,12 @@
             "anchorHash": "2e5106cc0168"
           },
           "prose:12": {
-            "contentHash": "c831b574bc1f",
+            "contentHash": "30fd3545a651",
             "anchorHash": "e3b0c44298fc"
           },
           "link:5": {
-            "contentHash": "6062b25906c0",
-            "anchorHash": "f0653fb9bb7c"
+            "contentHash": "2c448d6c9ced",
+            "anchorHash": "29c286831aa2"
           },
           "prose:13": {
             "contentHash": "1654d72a32ab",
@@ -1186,5 +1186,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

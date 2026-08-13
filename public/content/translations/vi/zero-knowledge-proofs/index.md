@@ -239,3 +239,7 @@ ZK-STARK được coi là miễn nhiễm với mối đe dọa của điện to�
 - [Tại sao Bằng chứng không kiến thức (ZKP) là yếu tố thay đổi cuộc chơi đối với Danh tính tự chủ](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
 - [Giải thích EIP-7503: Kích hoạt chuyển khoản riêng tư trên Ethereum với Bằng chứng ZK](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [Trò chơi thẻ bài ZK: trò chơi để tìm hiểu các nguyên tắc cơ bản của ZK và các trường hợp sử dụng trong đời thực](https://github.com/ZK-card/zk-cards) - _ZK-Cards_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

@@ -1,0 +1,445 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/ethereum-privacy-stack-andy-guzman/index.md",
+  "generatedAt": "2026-07-27T19:26:14.233Z",
+  "rootHash": "4d842f8138f2",
+  "tree": {
+    "contentHash": "67ab038cbb8b",
+    "anchorHash": "f52fc6594c80",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "1aca2e77312e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "7d761cc6b2e3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "c256d238300d"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "9981ee3e6eae"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "9408a72a3a12"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "94e6f02a5aca"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bfac314fefdc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "0038b8b17ecb"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "81bab8d53a95"
+      },
+      "prose:1": {
+        "contentHash": "bc2eadaadad1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "d3588089b465"
+      },
+      "prose:2": {
+        "contentHash": "644f0bb7c4fa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "the-fictional-rpc-provider-letter-012": {
+        "contentHash": "f2155d418554",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "d843f7210d8d",
+        "children": {
+          "_label": {
+            "contentHash": "d843f7210d8d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "def5f2d9667a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "how-you-leak-data-without-signing-transactions-134": {
+        "contentHash": "8ab4bef9ad88",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "c9e269dce673",
+        "children": {
+          "_label": {
+            "contentHash": "c9e269dce673",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "88b61ee08270",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "private-writes-vs-private-reads-207": {
+        "contentHash": "82b41c905749",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "901580673a6f",
+        "children": {
+          "_label": {
+            "contentHash": "901580673a6f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "cbf3ac9fa568",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "why-more-activity-increases-profiling-risk-320": {
+        "contentHash": "5f7c2f43c079",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "19f88699c2d2",
+        "children": {
+          "_label": {
+            "contentHash": "19f88699c2d2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "738ade0c43a2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "introducing-the-ethereum-privacy-stack-443": {
+        "contentHash": "6dc4634c4291",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "3297fdd874bd",
+        "children": {
+          "_label": {
+            "contentHash": "3297fdd874bd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "921a0cb7a422",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "layer-by-layer-where-you-leak-541": {
+        "contentHash": "d6abc3bd5a0c",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "16e3f9b64509",
+        "children": {
+          "_label": {
+            "contentHash": "16e3f9b64509",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "2e62cd3ef67f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "private-reads-and-private-networking-824": {
+        "contentHash": "2ae2397ba9f1",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "5462b911a04f",
+        "children": {
+          "_label": {
+            "contentHash": "5462b911a04f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "2acb3b78cb6a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "three-pillars-data-traffic-performance-905": {
+        "contentHash": "9a1b5ecc1644",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "060f85fd839d",
+        "children": {
+          "_label": {
+            "contentHash": "060f85fd839d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "dc166287f089",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "hiding-data-from-proxies-to-pir-939": {
+        "contentHash": "1e7cfe5604a2",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "66245367eefb",
+        "children": {
+          "_label": {
+            "contentHash": "66245367eefb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "bc063286d939",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "private-information-retrieval-explained-1203": {
+        "contentHash": "a991d5bc9089",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "bca80fbaf552",
+        "children": {
+          "_label": {
+            "contentHash": "bca80fbaf552",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4aa48f026b4e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "a-multi-agent-pir-architecture-1248": {
+        "contentHash": "259b10fe994f",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "68a3943f7cce",
+        "children": {
+          "_label": {
+            "contentHash": "68a3943f7cce",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "2eb21eed34a7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "hiding-traffic-onion-routing-and-tor-1522": {
+        "contentHash": "35948b9cad79",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "2a154bb0fa6c",
+        "children": {
+          "_label": {
+            "contentHash": "2a154bb0fa6c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "fdbac938bee2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "mixnets-for-ethereum-1816": {
+        "contentHash": "da14863479a1",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "5218fcd88645",
+        "children": {
+          "_label": {
+            "contentHash": "5218fcd88645",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "45c041197d6d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "performance-unified-binary-trees-and-gpu-acceleration-1928": {
+        "contentHash": "09188c715e8a",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "738c726ff599",
+        "children": {
+          "_label": {
+            "contentHash": "738c726ff599",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c6452130db94",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "measuring-success-2215": {
+        "contentHash": "32ff838c5883",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "f5b7488cfb5d",
+        "children": {
+          "_label": {
+            "contentHash": "f5b7488cfb5d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c70dc8462077",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "bitcoins-onion-node-comparison-2339": {
+        "contentHash": "bfe84f248ccc",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "b079ea7b3970",
+        "children": {
+          "_label": {
+            "contentHash": "b079ea7b3970",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "f9baae339271",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "comparing-ethereum-to-monero-and-zcash-2455": {
+        "contentHash": "10efe4e849d5",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "ed26f3a8323d",
+        "children": {
+          "_label": {
+            "contentHash": "ed26f3a8323d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "25e28e4e5d79",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-challenge-the-most-private-programmable-ecosystem-2550": {
+        "contentHash": "8a18712d9c57",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "bb6a894c693e",
+        "children": {
+          "_label": {
+            "contentHash": "bb6a894c693e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "32c3a3baf30d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "the-fictional-rpc-provider-letter-012",
+      "how-you-leak-data-without-signing-transactions-134",
+      "private-writes-vs-private-reads-207",
+      "why-more-activity-increases-profiling-risk-320",
+      "introducing-the-ethereum-privacy-stack-443",
+      "layer-by-layer-where-you-leak-541",
+      "private-reads-and-private-networking-824",
+      "three-pillars-data-traffic-performance-905",
+      "hiding-data-from-proxies-to-pir-939",
+      "private-information-retrieval-explained-1203",
+      "a-multi-agent-pir-architecture-1248",
+      "hiding-traffic-onion-routing-and-tor-1522",
+      "mixnets-for-ethereum-1816",
+      "performance-unified-binary-trees-and-gpu-acceleration-1928",
+      "measuring-success-2215",
+      "bitcoins-onion-node-comparison-2339",
+      "comparing-ethereum-to-monero-and-zcash-2455",
+      "the-challenge-the-most-private-programmable-ecosystem-2550"
+    ]
+  },
+  "sourceCommitSha": "4a7c0fa2a3ee82737bedc324112b0f3d16f22030"
+}

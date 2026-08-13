@@ -156,6 +156,7 @@
   "sim-cw-connect-disclaimer": "ওয়েবসাইটের সাথে কানেক্ট করলে সাইটের মালিকদের সাথে কোনো ব্যক্তিগত বা সুরক্ষিত তথ্য শেয়ার করা হবে না।",
   "sim-cw-your-collection": "আপনার কালেকশন ({count})",
   "sim-cw-nft-title": "চমৎকার আর্ট",
+  "sim-cw-nft-alt": "NFT ছবি",
   "sim-cw-nft-actions-tooltip": "আপনার NFT-এর মালিক হিসেবে আপনি এই কাজগুলো করতে পারেন",
   "sim-cw-set-price": "দাম নির্ধারণ করুন",
   "sim-cw-auction-item": "আইটেম নিলাম করুন",

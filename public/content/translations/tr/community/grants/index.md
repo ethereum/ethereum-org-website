@@ -4,8 +4,6 @@ description: "Ethereum ekosistemindeki hibe programlarının bir listesi."
 lang: tr
 ---
 
-# Ethereum hibeleri {#ethereum-grants}
-
 Aşağıda listelenen programlar, [Ethereum](/) ekosisteminin başarısını ve büyümesini teşvik etmek için çalışan projelere çeşitli fon hibeleri sunmaktadır. Bir sonraki Ethereum projenizi başarılı kılmaya yardımcı olacak fonları bulmak ve bunlara başvurmak için bunu bir rehber olarak kullanın.
 
 Bu liste topluluğumuz tarafından derlenmiştir. Eksik veya yanlış bir şey varsa, lütfen bu sayfayı düzenleyin!

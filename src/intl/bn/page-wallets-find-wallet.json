@@ -39,6 +39,7 @@
   "page-find-wallet-buy-crypto-desc": "সরাসরি ওয়ালেটে ফিয়াট মুদ্রা দিয়ে ক্রিপ্টো কিনুন \n *দ্রষ্টব্য: ক্রিপ্টো কেনা অঞ্চলভিত্তিক হতে পারে",
   "page-find-wallet-sell-for-fiat": "নগদের বিনিময়ে বিক্রি করুন",
   "page-find-wallet-sell-for-fiat-desc": "সরাসরি ওয়ালেটে ফিয়াট মুদ্রার বিনিময়ে ক্রিপ্টো বিক্রি করুন \n *দ্রষ্টব্য: ক্রিপ্টো উত্তোলন অঞ্চলভিত্তিক হতে পারে",
+  "page-find-wallet-network-support": "নেটওয়ার্ক সাপোর্ট",
   "page-find-wallet-multisig": "মাল্টিসিগ",
   "page-find-wallet-multisig-desc": "যেসব ওয়ালেটে কোনো ট্রানজ্যাকশন অনুমোদন করার জন্য একাধিক স্বাক্ষরের প্রয়োজন হয়",
   "page-find-wallet-social-recovery": "সোশ্যাল রিকভারি",

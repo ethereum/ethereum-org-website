@@ -60,10 +60,22 @@ Aby rozpocząć, odwiedź [przewodnik szybkiego startu dla Ethereum](https://aca
 
 Aby rozpocząć, odwiedź [dokumentację](https://docs.codex.io), wypróbuj [Eksplorator](https://docs.codex.io/explore) lub zarejestruj się w [panelu nawigacyjnym](https://dashboard.codex.io/signup).
 
+
+## Mobula
+
+[Mobula](https://mobula.io/) to wysokowydajne API danych krypto, dostarczające w czasie rzeczywistym i historyczne dane rynkowe, metadane tokenów, zawartość portfeli oraz analitykę onchain w ponad 90 blockchainach. Deweloperzy mogą uzyskać dostęp do punktów końcowych REST i GraphQL dla cen tokenów, kapitalizacji rynkowych, wolumenów obrotu, danych o płynności i sald portfeli w wielu łańcuchach bez konieczności uruchamiania własnej infrastruktury. Mobula oferuje zarówno darmowe (100 tys. żądań/miesiąc), jak i płatne plany dla aplikacji produkcyjnych.
+
+Aby rozpocząć, odwiedź [dokumentację](https://docs.mobula.io), zapoznaj się z [dokumentacją API](https://docs.mobula.io/reference/) lub zarejestruj się w [panelu nawigacyjnym](https://mobula.io/).
 ## EVM Query Language {#evm-query-language}
 
 EVM Query Language (EQL) to język podobny do SQL, zaprojektowany do odpytywania łańcuchów EVM (Ethereum Virtual Machine). Ostatecznym celem EQL jest obsługa złożonych zapytań relacyjnych na obywatelach pierwszej kategorii łańcucha EVM (blokach, kontach i transakcjach), zapewniając jednocześnie deweloperom i badaczom ergonomiczną składnię do codziennego użytku. Dzięki EQL deweloperzy mogą pobierać dane z blockchaina przy użyciu znanej składni podobnej do SQL i wyeliminować potrzebę stosowania złożonego, powtarzalnego kodu. EQL obsługuje standardowe żądania danych z blockchaina (np. pobieranie nonce i salda konta w Ethereum lub pobieranie bieżącego rozmiaru bloku i znacznika czasu) i stale dodaje obsługę bardziej złożonych żądań i zestawów funkcji.
 
+
+## Envio
+
+[Envio](https://envio.dev/) to framework indeksujący, który przekształca zdarzenia onchain w API GraphQL z możliwością odpytywania. Obsługuje Ethereum i każdy łańcuch kompatybilny z EVM. Deweloperzy piszą procedury obsługi zdarzeń w języku TypeScript, JavaScript lub ReScript, aby serwować dane w czasie rzeczywistym i historyczne, z obsługą reorganizacji łańcucha, indeksowaniem w wielu łańcuchach oraz zarządzanym hostingiem w Envio Cloud lub samodzielnym hostingiem.
+
+Aby rozpocząć, postępuj zgodnie z [przewodnikiem szybkiego startu HyperIndex](https://docs.envio.dev/docs/HyperIndex/quickstart), aby utworzyć, wdrożyć i odpytać indeksator.
 ## Dalsza lektura {#further-reading}
 
 - [Eksploracja danych krypto I: Architektury przepływu danych](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)

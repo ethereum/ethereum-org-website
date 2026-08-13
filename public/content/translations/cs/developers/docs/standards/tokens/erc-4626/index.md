@@ -4,34 +4,33 @@ description: "Standard pro trezory nesoucí výnos."
 lang: cs
 ---
 
-## Úvod {#introduction}
+## Úvod
 
-ERC-4626 je standard pro optimalizaci a sjednocení technických parametrů trezorů nesoucích výnos. Poskytuje standardní API pro tokenizované trezory nesoucí výnos, které představují podíly jediného podkladového tokenu ERC-20. ERC-4626 také nastiňuje volitelné rozšíření pro tokenizované trezory využívající ERC-20, které nabízí základní funkce pro vkládání, výběr tokenů a čtení zůstatků.
+ERC-4626 je standard pro optimalizaci a sjednocení technických parametrů výnosových trezorů. Poskytuje standardní API pro tokenizované výnosové trezory, které představují podíly jediného podkladového ERC-20 tokenu. ERC-4626 také nastiňuje volitelné rozšíření pro tokenizované trezory využívající ERC-20, které nabízí základní funkce pro vkládání, výběr tokenů a čtení zůstatků.
 
-**Role ERC-4626 v trezorech nesoucích výnos**
+**Role ERC-4626 ve výnosových trezorech**
 
-Trhy pro půjčování, agregátory a tokeny, které ze své podstaty nesou úrok, pomáhají uživatelům najít nejlepší výnos z jejich krypto tokenů prováděním různých strategií. Tyto strategie se provádějí s drobnými odchylkami, což může být náchylné k chybám nebo plýtvat vývojářskými zdroji.
+Trhy pro půjčování, agregátory a tokeny, které samy o sobě nesou úrok, pomáhají uživatelům najít nejlepší výnos z jejich krypto tokenů prováděním různých strategií. Tyto strategie se provádějí s mírnými odchylkami, což může být náchylné k chybám nebo to může plýtvat vývojářskými zdroji.
 
-ERC-4626 v trezorech nesoucích výnos sníží úsilí při integraci a odemkne přístup k výnosům v různých aplikacích s minimálním specializovaným úsilím vývojářů tím, že vytvoří konzistentnější a robustnější vzorce implementace.
+ERC-4626 ve výnosových trezorech sníží úsilí při integraci a odemkne přístup k výnosům v různých aplikacích s malým specializovaným úsilím ze strany vývojářů tím, že vytvoří konzistentnější a robustnější implementační vzory.
 
 Token ERC-4626 je plně popsán v [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
 
-**Asynchronní rozšíření trezoru (ERC-7540)**
+**Rozšíření pro asynchronní trezory (ERC-7540)**
 
-ERC-4626 je optimalizován pro atomické vklady a odkupy až do určitého limitu. Pokud je limit dosažen, nelze zadávat žádné nové vklady ani odkupy. Toto omezení nefunguje dobře pro žádný systém chytrých kontraktů s asynchronními akcemi nebo zpožděními jako předpokladem pro propojení s trezorem (např. protokoly reálných aktiv, protokoly pro půjčování s nedostatečným zajištěním, meziřetězcové protokoly pro půjčování, tokeny likvidního stakingu (LST) nebo bezpečnostní moduly pojištění).
+ERC-4626 je optimalizován pro atomické vklady a odkupy až do určitého limitu. Pokud je limit dosažen, nelze odeslat žádné nové vklady ani odkupy. Toto omezení nefunguje dobře pro žádný systém chytrých kontraktů s asynchronními akcemi nebo zpožděními jako předpokladem pro interakci s trezorem (např. protokoly reálných aktiv, protokoly pro půjčování s nedostatečným zajištěním, meziřetězcové protokoly pro půjčování, tokeny likvidního stakingu (LST) nebo moduly pojistné bezpečnosti).
 
 ERC-7540 rozšiřuje užitečnost trezorů ERC-4626 pro asynchronní případy použití. Stávající rozhraní trezoru (`deposit`/`withdraw`/`mint`/`redeem`) je plně využito k nárokování asynchronních požadavků.
 
-Rozšíření ERC-7540 je plně popsáno v [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
+Zjistěte více o [asynchronních tokenizovaných trezorech ERC-7540](/developers/docs/standards/tokens/erc-7540/).
 
-**Rozšíření trezoru pro více aktiv (ERC-7575)**
+**Rozšíření pro trezory s více aktivy (ERC-7575)**
 
 Jedním chybějícím případem použití, který ERC-4626 nepodporuje, jsou trezory, které mají více aktiv nebo vstupních bodů, jako jsou tokeny poskytovatele likvidity (LP). Ty jsou obecně nepraktické nebo nevyhovující kvůli požadavku, aby samotný ERC-4626 byl ERC-20.
 
-ERC-7575 přidává podporu pro trezory s více aktivy tím, že externalizuje implementaci tokenu ERC-20 z implementace ERC-4626.
+ERC-7575 přidává podporu pro trezory s více aktivy tím, že externalizuje implementaci ERC-20 tokenu z implementace ERC-4626.
 
 Rozšíření ERC-7575 je plně popsáno v [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575).
-
 ## Předpoklady {#prerequisites}
 
 Pro lepší pochopení této stránky doporučujeme nejprve si přečíst o [standardech tokenů](/developers/docs/standards/tokens/) a [ERC-20](/developers/docs/standards/tokens/erc-20/).

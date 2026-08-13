@@ -47,9 +47,9 @@ dappを紹介するには、適切な言葉が見つかりませんが、dappの
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## dapp作成ツール {#dapp-tools}
+## dappを作成するためのツール
 
-**Scaffold-ETH _- スマート・コントラクトに適応するフロントエンドを使用して、Solidityをすばやく試すことができます。_**
+**Scaffold-ETH 2 _- スマート・コントラクトに適応するフロントエンドを使用して、Solidityをすばやく試すことができます。_**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [dappの例](https://punkwallet.io/)
@@ -74,12 +74,11 @@ dappを紹介するには、適切な言葉が見つかりませんが、dappの
 - [ドキュメント](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Crossmint _- スマート・コントラクトのデプロイ、クレジットカードおよびクロスチェーン決済の有効化、APIを使用したNFTの作成、配布、販売、保存、編集を行うためのエンタープライズグレードのWeb3開発プラットフォーム。_**
+**Crossmint _- スマート・コントラクトをデプロイし、クレジットカードおよびクロスチェーン決済を可能にし、APIを使用してNFTを作成、配布、販売、保存、および編集するためのエンタープライズグレードのWeb3開発プラットフォーム。_**
 
 - [crossmint.com](https://www.crossmint.com)
 - [ドキュメント](https://docs.crossmint.com)
 - [ディスコード](https://discord.com/invite/crossmint)
-
 ## 参考文献 {#further-reading}
 
 - [dappを探す](/apps)

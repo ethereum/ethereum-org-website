@@ -47,14 +47,13 @@ Một hợp đồng thông minh là mã tồn tại trên Chuỗi khối Ethereu
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## Các công cụ để tạo dapp {#dapp-tools}
-
-**Scaffold-ETH _- Nhanh chóng thử nghiệm với Solidity bằng cách sử dụng một frontend thích ứng với hợp đồng thông minh của bạn._**
+## Các công cụ để tạo ứng dụng phi tập trung (dapp)
+**Scaffold-ETH 2 _- Nhanh chóng thử nghiệm với Solidity bằng cách sử dụng một frontend thích ứng với hợp đồng thông minh của bạn._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Dapp ví dụ](https://punkwallet.io/)
 
-**Create Eth App _- Tạo các ứng dụng được hỗ trợ bởi Ethereum chỉ với một lệnh._**
+**Create Eth App _- Tạo các ứng dụng được hỗ trợ bởi Ethereum chỉ bằng một lệnh._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
@@ -63,23 +62,22 @@ Một hợp đồng thông minh là mã tồn tại trên Chuỗi khối Ethereu
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
-**Etherflow _- Công cụ FOSS dành cho các nhà phát triển Ethereum để kiểm tra nút của họ, cũng như soạn thảo & gỡ lỗi các lệnh gọi RPC từ trình duyệt._**
+**Etherflow _- Công cụ FOSS dành cho các nhà phát triển Ethereum để kiểm tra nút của họ, cũng như soạn thảo và gỡ lỗi các lệnh gọi RPC từ trình duyệt._**
 
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
-**thirdweb _- SDK bằng mọi ngôn ngữ, hợp đồng thông minh, công cụ và cơ sở hạ tầng cho phát triển Web3._**
+**thirdweb _- Các SDK bằng mọi ngôn ngữ, hợp đồng thông minh, công cụ và cơ sở hạ tầng cho việc phát triển Web3._**
 
 - [Trang chủ](https://thirdweb.com/)
 - [Tài liệu](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Crossmint _- Nền tảng phát triển Web3 cấp doanh nghiệp để triển khai hợp đồng thông minh, cho phép thanh toán bằng thẻ tín dụng và xuyên Chuỗi, đồng thời sử dụng API để tạo, phân phối, bán, lưu trữ và chỉnh sửa NFT._**
+**Crossmint _- Nền tảng phát triển Web3 cấp doanh nghiệp để triển khai hợp đồng thông minh, cho phép thanh toán bằng thẻ tín dụng và thanh toán xuyên Chuỗi, đồng thời sử dụng các API để tạo, phân phối, bán, lưu trữ và chỉnh sửa NFT._**
 
 - [crossmint.com](https://www.crossmint.com)
 - [Tài liệu](https://docs.crossmint.com)
 - [Discord](https://discord.com/invite/crossmint)
-
 ## Đọc thêm {#further-reading}
 
 - [Khám phá các dapp](/apps)

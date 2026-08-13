@@ -175,13 +175,12 @@ print("Addr Balance:", addr_balance)
 - [ओपनझेपलिन - ERC-20 अंमलबजावणी](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Solidity ERC20 टोकन्ससाठी मार्गदर्शक](https://www.alchemy.com/overviews/erc20-solidity)
 
-## इतर विनिमयक्षम टोकन मानके {#fungible-token-standards}
-
+## इतर विनिमयक्षम टोकन मानके
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - टोकनाइज्ड व्हॉल्ट्स](/developers/docs/standards/tokens/erc-4626)
-
+- [ERC-7540 - असिंक्रोनस टोकनाइज्ड व्हॉल्ट्स](/developers/docs/standards/tokens/erc-7540)
 ## ट्युटोरियल्स: इथेरियमवर ERC-20 सह तयार करा {#tutorials}
 
 - [ERC-20 कॉन्ट्रॅक्ट वॉक-थ्रू](/developers/tutorials/erc20-annotated-code/) _– ओपनझेपलिन ERC-20 कॉन्ट्रॅक्ट अंमलबजावणीचे ओळीनुसार स्पष्टीकरणात्मक वॉकथ्रू._

@@ -227,7 +227,7 @@ Hardhat என்பது உங்கள் எத்திரியம் ம
 
 - HTTP Alchemy API URL-ஐப் பெற்று அதை உங்கள் கிளிப்போர்டுக்கு நகலெடுக்கக் கீழே பார்க்கவும்
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.mp4#842x480)
 
 உங்கள் `.env` இப்போது இதுபோன்று இருக்க வேண்டும்:
 

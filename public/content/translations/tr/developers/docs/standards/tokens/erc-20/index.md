@@ -175,13 +175,12 @@ Bu sorundan dolayı [ERC-223](/developers/docs/standards/tokens/erc-223) veya [E
 - [OpenZeppelin - ERC-20 Uygulaması](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Solidity ERC20 Token'ları Rehberi](https://www.alchemy.com/overviews/erc20-solidity)
 
-## Diğer misli token standartları {#fungible-token-standards}
-
+## Diğer misli token standartları
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - Tokenlaştırılmış kasalar](/developers/docs/standards/tokens/erc-4626)
-
+- [ERC-7540 - Asenkron tokenlaştırılmış kasalar](/developers/docs/standards/tokens/erc-7540)
 ## Eğitimler: Ethereum üzerinde ERC-20 ile Geliştirme {#tutorials}
 
 - [ERC-20 Sözleşmesi İncelemesi](/developers/tutorials/erc20-annotated-code/) _– OpenZeppelin ERC-20 sözleşme uygulamasının satır satır açıklamalı bir incelemesi._

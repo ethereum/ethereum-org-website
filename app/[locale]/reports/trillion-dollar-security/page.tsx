@@ -4,8 +4,13 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 import type { Lang, PageParams } from "@/lib/types"
 
 import MainArticle from "@/components/MainArticle"
-import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Card, CardBanner, CardContent, CardHeader } from "@/components/ui/card"
+import {
+  Card,
+  CardBanner,
+  CardButtonFake,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card"
 import InlineLink, { BaseLink as Link } from "@/components/ui/Link"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -17,9 +22,9 @@ import TdsHero from "@/public/images/trillion-dollar-security/hero.png"
 import TdsReport from "@/public/images/trillion-dollar-security/report.png"
 
 const ReportCard = ({ cta, altText }: { cta: string; altText: string }) => (
-  <Card size="lg">
+  <Card href="/reports/trillion-dollar-security.pdf" size="lg">
     <CardHeader>
-      <CardBanner fit="contain" size="full">
+      <CardBanner fit="contain" size="full" zoom>
         <Image
           src={TdsReport}
           alt={altText}
@@ -27,15 +32,9 @@ const ReportCard = ({ cta, altText }: { cta: string; altText: string }) => (
         />
       </CardBanner>
     </CardHeader>
-    <CardContent>
-      <ButtonLink
-        size="lg"
-        href="/reports/trillion-dollar-security.pdf"
-        className="block text-center"
-      >
-        {cta}
-      </ButtonLink>
-    </CardContent>
+    <CardFooter className="mt-(--card-pad)">
+      <CardButtonFake size="lg">{cta}</CardButtonFake>
+    </CardFooter>
   </Card>
 )
 

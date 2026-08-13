@@ -47,9 +47,9 @@ dapps ची ओळख करून देण्यासाठी, आपल्
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## dapps तयार करण्यासाठी टूल्स {#dapp-tools}
+## dapps तयार करण्यासाठी टूल्स
 
-**Scaffold-ETH _- तुमच्या स्मार्ट कॉन्ट्रॅक्टशी जुळवून घेणारा फ्रंटएंड वापरून Solidity सह त्वरित प्रयोग करा._**
+**Scaffold-ETH 2 _- तुमच्या स्मार्ट कॉन्ट्रॅक्टशी जुळवून घेणारा फ्रंटएंड वापरून Solidity सह त्वरित प्रयोग करा._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [उदाहरण dapp](https://punkwallet.io/)
@@ -63,12 +63,12 @@ dapps ची ओळख करून देण्यासाठी, आपल्
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
-**Etherflow _- इथेरियम डेव्हलपर्ससाठी त्यांचा नोड तपासण्यासाठी आणि ब्राउझरमधून RPC कॉल्स तयार करण्यासाठी आणि डीबग करण्यासाठी FOSS टूल._**
+**Etherflow _- इथेरियम डेव्हलपर्ससाठी त्यांच्या नोडची चाचणी करण्यासाठी आणि ब्राउझरमधून RPC कॉल्स तयार करण्यासाठी आणि डीबग करण्यासाठी FOSS टूल._**
 
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
-**thirdweb _- Web3 डेव्हलपमेंटसाठी प्रत्येक भाषेतील SDKs, स्मार्ट कॉन्ट्रॅक्ट्स, टूल्स आणि पायाभूत सुविधा._**
+**thirdweb _- Web3 डेव्हलपमेंटसाठी प्रत्येक भाषेतील SDKs, स्मार्ट कॉन्ट्रॅक्ट्स, टूल्स आणि इन्फ्रास्ट्रक्चर._**
 
 - [होमपेज](https://thirdweb.com/)
 - [डॉक्युमेंटेशन](https://portal.thirdweb.com/)
@@ -79,7 +79,6 @@ dapps ची ओळख करून देण्यासाठी, आपल्
 - [crossmint.com](https://www.crossmint.com)
 - [डॉक्युमेंटेशन](https://docs.crossmint.com)
 - [डिस्कॉर्ड्](https://discord.com/invite/crossmint)
-
 ## पुढील वाचन {#further-reading}
 
 - [dapps एक्सप्लोर करा](/apps)

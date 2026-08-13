@@ -3,6 +3,7 @@ title: "ফুসাকা 🦓"
 metaTitle: "ফুলু-ওসাকা (ফুসাকা)"
 description: "ফুসাকা প্রোটোকল আপগ্রেড সম্পর্কে জানুন"
 lang: bn
+template: upgrade
 authors: ["নিক্সো", "মারিও হ্যাভেল"]
 ---
 

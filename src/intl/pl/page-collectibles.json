@@ -59,9 +59,6 @@
   "page-collectibles-translations-250": "Odznaka za 250 słów",
   "page-collectibles-translations-50000": "Odznaka za 50 000 słów",
   "page-collectibles-translations-badge-desc": "Na dowolny język.",
-  "page-collectibles-translations-desc": "Większość użytkowników nie mówi po angielsku, dlatego pomoc w tłumaczeniu naszych artykułów na inne języki jest kluczowa. Doświadczenie w tłumaczeniu nie jest wymagane.",
-  "page-collectibles-translations-instructions-1": "Zarejestruj się na <a href=\"https://crowdin.com/project/ethereum-org\">Crowdin</a>",
-  "page-collectibles-translations-instructions-2": "Wybierz język",
-  "page-collectibles-translations-instructions-3": "Zacznij tłumaczyć",
+  "page-collectibles-translations-desc": "Te odznaki stanowią wyraz uznania dla wcześniejszego wkładu w Program Tłumaczeń ethereum.org, który jest wygaszany i nie prowadzi już onboardingu nowych tłumaczy.",
   "page-collectibles-translations-title": "Tłumaczenia"
 }

@@ -19,7 +19,7 @@ published: 2021-04-22
 
 在应用程序的顶部，按“钱包”按钮，之后系统会提示你选择一个网络。由于我们的 NFT 是在 Sepolia 网络上铸造的，你需要选择 Sepolia 作为你的网络。
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
 
 ## 第 2 步：将你的收藏品添加到梅塔马斯克 {#add-nft-to-metamask}
 
@@ -29,6 +29,6 @@ published: 2021-04-22
 
 你可能需要刷新几次才能查看你的 NFT——但它一定会在那里 <Emoji text="😄" size={1} />！
 
-![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
 
 恭喜！你已经成功铸造了一个 NFT，现在你可以查看它了！我们迫不及待地想看到你将如何在 NFT 世界中掀起风暴！

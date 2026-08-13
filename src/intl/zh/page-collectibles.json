@@ -59,9 +59,6 @@
   "page-collectibles-translations-250": "250 字徽章",
   "page-collectibles-translations-50000": "50,000 字徽章",
   "page-collectibles-translations-badge-desc": "翻译成任何语言。",
-  "page-collectibles-translations-desc": "大多数用户不说英语，因此帮助将我们的文章翻译成其他语言至关重要，无需翻译经验。",
-  "page-collectibles-translations-instructions-1": "在 <a href=\"https://crowdin.com/project/ethereum-org\">Crowdin</a> 上注册",
-  "page-collectibles-translations-instructions-2": "选择语言",
-  "page-collectibles-translations-instructions-3": "开始翻译",
+  "page-collectibles-translations-desc": "这些徽章旨在认可过去对 ethereum.org 翻译计划的贡献，该计划正在逐步结束，不再招募新译者。",
   "page-collectibles-translations-title": "翻译"
 }

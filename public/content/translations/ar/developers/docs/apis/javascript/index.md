@@ -237,49 +237,56 @@ ethers.utils.formatEther(balance)
 - [الوظائف المساعدة لـ <span dir="ltr">Web3js</span>](https://docs.web3js.org/api/web3-utils)
 - [الوظائف المساعدة لـ <span dir="ltr">Ethers</span>](https://docs.ethers.org/v6/api/utils/)
 
-## المكتبات المتاحة {#available-libraries}
-
 **<span dir="ltr">Web3.js</span> -** **_واجهة برمجة تطبيقات <span dir="ltr">JavaScript</span> لإيثيريوم._**
 
-- [المستندات](https://docs.web3js.org)
+- [الوثائق](https://docs.web3js.org)
 - [<span dir="ltr">GitHub</span>](https://github.com/ethereum/web3.js)
 
 **<span dir="ltr">Ethers.js</span> -** **_تنفيذ كامل لمحفظة إيثيريوم وأدوات مساعدة في <span dir="ltr">JavaScript</span> و<span dir="ltr">TypeScript</span>._**
 
 - [الصفحة الرئيسية لـ <span dir="ltr">Ethers.js</span>](https://ethers.org/)
-- [المستندات](https://docs.ethers.io)
+- [الوثائق](https://docs.ethers.io)
 - [<span dir="ltr">GitHub</span>](https://github.com/ethers-io/ethers.js)
 
 **<span dir="ltr">The Graph</span> -** **_بروتوكول لفهرسة بيانات إيثيريوم و<span dir="ltr">IPFS</span> والاستعلام عنها باستخدام <span dir="ltr">GraphQL</span>._**
 
 - [<span dir="ltr">The Graph</span>](https://thegraph.com)
 - [مستكشف <span dir="ltr">Graph</span>](https://thegraph.com/explorer)
-- [المستندات](https://thegraph.com/docs)
+- [الوثائق](https://thegraph.com/docs)
 - [<span dir="ltr">GitHub</span>](https://github.com/graphprotocol)
 - [ديسكورد](https://thegraph.com/discord)
 
-**<span dir="ltr">Alchemy SDK</span> -** **_غلاف حول <span dir="ltr">Ethers.js</span> مع واجهات برمجة تطبيقات محسنة._**
+**<span dir="ltr">Alchemy SDK</span> -** **_غلاف حول <span dir="ltr">Ethers.js</span> مع واجهات برمجة تطبيقات (<span dir="ltr">APIs</span>) محسنة._**
 
-- [المستندات](https://www.alchemy.com/docs)
+- [الوثائق](https://www.alchemy.com/docs)
 - [<span dir="ltr">GitHub</span>](https://github.com/alchemyplatform/alchemy-sdk-js)
 
-**<span dir="ltr">Viem</span> -** **_واجهة <span dir="ltr">TypeScript</span> لإيثيريوم._**
+**<span dir="ltr">viem</span> -** **_واجهة <span dir="ltr">TypeScript</span> لإيثيريوم._**
 
-- [المستندات](https://viem.sh)
+- [الوثائق](https://viem.sh)
 - [<span dir="ltr">GitHub</span>](https://github.com/wagmi-dev/viem)
 
-**<span dir="ltr">Codex</span> -** **_واجهة برمجة تطبيقات لبيانات سلسلة الكتل المثرية في الوقت الفعلي عبر عشرات السلاسل._**
+**<span dir="ltr">wagmi</span> -** **_مكتبة خطافات (hooks) لـ <span dir="ltr">React</span> لإيثيريوم، مبنية على <span dir="ltr">viem</span>._**
 
-- [المستندات](https://docs.codex.io)
+- [الوثائق](https://wagmi.sh)
+- [<span dir="ltr">GitHub</span>](https://github.com/wevm/wagmi)
+
+**<span dir="ltr">RainbowKit</span> -** **_مكتبة <span dir="ltr">React</span> لإضافة اتصال المحفظة إلى التطبيقات اللامركزية (dapps)، مبنية على <span dir="ltr">wagmi</span> و<span dir="ltr">viem</span>._**
+
+- [الوثائق](https://www.rainbowkit.com)
+- [<span dir="ltr">GitHub</span>](https://github.com/rainbow-me/rainbowkit)
+
+**<span dir="ltr">Codex</span> -** **_واجهة برمجة تطبيقات (<span dir="ltr">API</span>) لبيانات سلسلة الكتل المثرية في الوقت الفعلي عبر عشرات السلاسل._**
+
+- [الوثائق](https://docs.codex.io)
 - [المستكشف](https://docs.codex.io/explore)
 - [<span dir="ltr">GitHub</span>](https://github.com/Codex-Data)
 - [ديسكورد](https://discord.com/invite/mFpUhT3vAq)
 
-**<span dir="ltr">Drift</span> -** **_مكتبة وصفية لـ <span dir="ltr">TypeScript</span> مع تخزين مؤقت مدمج، وخطافات، ونماذج اختبار وهمية._**
+**<span dir="ltr">Drift</span> -** **_مكتبة وصفية (meta-library) لـ <span dir="ltr">TypeScript</span> مع تخزين مؤقت مدمج، وخطافات (hooks)، ونماذج اختبار وهمية (test mocks)._**
 
-- [المستندات](https://ryangoree.github.io/drift/)
+- [الوثائق](https://ryangoree.github.io/drift/)
 - [<span dir="ltr">GitHub</span>](https://github.com/ryangoree/drift/)
-
 ## قراءة إضافية {#further-reading}
 
 _هل تعرف موردًا مجتمعيًا ساعدك؟ قم بتعديل هذه الصفحة وأضفه!_

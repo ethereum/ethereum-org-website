@@ -1,11 +1,11 @@
 ---
-title: Zużycie energii przez Ethereum
-metaTitle: Zużycie energii przez Ethereum
-description: Podstawowe informacje, których potrzebujesz, aby zrozumieć zużycie energii przez Ethereum.
+title: "Zużycie energii przez Ethereum"
+metaTitle: "Zużycie energii przez Ethereum"
+description: "Podstawowe informacje, których potrzebujesz, aby zrozumieć zużycie energii przez Ethereum."
 lang: pl
 ---
 
-[Ethereum](/) to ekologiczny blockchain. [Dowód stawki (PoS)](/developers/docs/consensus-mechanisms/pos) jako mechanizm konsensusu Ethereum wykorzystuje ETH zamiast [energii do zabezpieczania sieci](/developers/docs/consensus-mechanisms/pow). Zużycie energii przez Ethereum wynosi około [~0,0026 TWh/rok](https://carbon-ratings.com/eth-report-2022) w całej globalnej sieci.
+[Ethereum](/) to ekologiczny blockchain. [Dowód stawki (PoS)](/developers/docs/consensus-mechanisms/pos) jako mechanizm konsensusu Ethereum wykorzystuje ETH zamiast [energii do zabezpieczania sieci](/developers/docs/consensus-mechanisms/pow). Zużycie energii przez Ethereum wynosi około [\~0,0026 TWh/rok](https://carbon-ratings.com/eth-report-2022) w całej globalnej sieci.
 
 Szacunki dotyczące zużycia energii przez Ethereum pochodzą z badania [CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com). Wygenerowali oni oddolne szacunki zużycia energii elektrycznej i śladu węglowego sieci Ethereum ([zobacz raport](https://carbon-ratings.com/eth-report-2022)). Zmierzyli zużycie energii elektrycznej przez różne węzły o różnych konfiguracjach sprzętowych i oprogramowania klienckiego. Szacowane **2601 MWh** (0,0026 TWh) rocznego zużycia energii elektrycznej przez sieć odpowiada rocznej emisji dwutlenku węgla na poziomie **870 ton CO2e** przy zastosowaniu specyficznych dla danego regionu wskaźników intensywności emisji. Wartość ta zmienia się w miarę jak węzły dołączają do sieci i ją opuszczają – można to śledzić za pomocą 7-dniowej średniej kroczącej szacowanej przez [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum) (należy pamiętać, że używają oni nieco innej metody do swoich szacunków – szczegóły dostępne na ich stronie).
 
@@ -83,3 +83,5 @@ Natywne dla Web3 platformy finansowania dóbr publicznych, takie jak [Gitcoin](h
 
 - [Beacon Chain](/roadmap/beacon-chain)
 - [The Merge](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />

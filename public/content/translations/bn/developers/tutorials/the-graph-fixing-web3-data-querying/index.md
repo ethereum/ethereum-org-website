@@ -84,7 +84,7 @@ GameContract.events.BetPlaced({
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 
-![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.gif)
+![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.mp4#910x692)
 
 ছবি দুটি মূলত GraphQL-এর মূল বিষয়বস্তু তুলে ধরে। ডানদিকের কোয়েরি দিয়ে আমরা ঠিক কী ডেটা চাই তা নির্ধারণ করতে পারি, তাই সেখানে আমরা একটি রিকোয়েস্টেই সবকিছু পেয়ে যাই এবং আমাদের যা প্রয়োজন তার চেয়ে বেশি কিছু পাই না। একটি GraphQL সার্ভার প্রয়োজনীয় সমস্ত ডেটা ফেচ করার কাজ পরিচালনা করে, তাই ফ্রন্টএন্ড ব্যবহারকারীদের জন্য এটি ব্যবহার করা অবিশ্বাস্যভাবে সহজ। আপনি যদি আগ্রহী হন, তবে সার্ভার কীভাবে একটি কোয়েরি পরিচালনা করে তার [একটি চমৎকার ব্যাখ্যা এখানে রয়েছে](https://www.apollographql.com/blog/graphql-explained)।
 

@@ -47,9 +47,9 @@ Kontrak pintar adalah kode yang hidup di rantai blok Ethereum dan berjalan persi
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## Alat untuk membuat dapp {#dapp-tools}
+## Alat untuk membuat dapp
 
-**Scaffold-ETH _- Bereksperimen dengan cepat menggunakan Solidity dengan frontend yang beradaptasi dengan kontrak pintar Anda._**
+**Scaffold-ETH 2 _- Bereksperimen dengan cepat menggunakan Solidity melalui frontend yang beradaptasi dengan kontrak pintar Anda._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Contoh dapp](https://punkwallet.io/)
@@ -58,7 +58,7 @@ Kontrak pintar adalah kode yang hidup di rantai blok Ethereum dan berjalan persi
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**One Click Dapp _- Alat FOSS untuk menghasilkan frontend dapp dari [ABI](/glossary/#abi)._**
+**One Click Dapp _- Alat FOSS untuk menghasilkan frontend dapp dari sebuah [ABI](/glossary/#abi)._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
@@ -79,7 +79,6 @@ Kontrak pintar adalah kode yang hidup di rantai blok Ethereum dan berjalan persi
 - [crossmint.com](https://www.crossmint.com)
 - [Dokumentasi](https://docs.crossmint.com)
 - [Discord](https://discord.com/invite/crossmint)
-
 ## Bacaan lebih lanjut {#further-reading}
 
 - [Jelajahi dapp](/apps)

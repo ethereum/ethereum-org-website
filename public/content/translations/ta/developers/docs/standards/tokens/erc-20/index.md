@@ -175,13 +175,12 @@ ERC-20 மூலம் இந்தச் சிக்கலை முழும�
 - [ஓப்பன்செப்பெலின் - ERC-20 செயலாக்கம்](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Solidity ERC20 வில்லைகளுக்கான வழிகாட்டி](https://www.alchemy.com/overviews/erc20-solidity)
 
-## பிற பரிமாற்றத்தக்க வில்லை தரநிலைகள் {#fungible-token-standards}
-
+## பிற பரிமாற்றத்தக்க வில்லை தரநிலைகள்
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
-- [ERC-4626 - வில்லைகளாக்கப்பட்ட பெட்டகங்கள் (Tokenized vaults)](/developers/docs/standards/tokens/erc-4626)
-
+- [ERC-4626 - வில்லைகளாக்கப்பட்ட பெட்டகங்கள்](/developers/docs/standards/tokens/erc-4626)
+- [ERC-7540 - ஒத்திசைவற்ற வில்லைகளாக்கப்பட்ட பெட்டகங்கள்](/developers/docs/standards/tokens/erc-7540)
 ## பயிற்சிகள்: எத்திரியத்தில் ERC-20 உடன் உருவாக்குதல் {#tutorials}
 
 - [ERC-20 ஒப்பந்த வழிகாட்டி](/developers/tutorials/erc20-annotated-code/) _– ஓப்பன்செப்பெலின் ERC-20 ஒப்பந்தச் செயலாக்கத்தின் வரிக்கு வரி விளக்கமளிக்கப்பட்ட வழிகாட்டி._

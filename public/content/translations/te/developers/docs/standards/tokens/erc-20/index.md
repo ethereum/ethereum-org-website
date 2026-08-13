@@ -175,13 +175,12 @@ ERC-20తో ఈ సమస్యను పూర్తిగా నివార�
 - [ఓపెన్‌జెప్పెలిన్ - ERC-20 అమలు](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Solidity ERC20 టోకెన్‌లకు గైడ్](https://www.alchemy.com/overviews/erc20-solidity)
 
-## ఇతర ఫంజిబుల్ టోకెన్ ప్రమాణాలు {#fungible-token-standards}
-
+## ఇతర ఫంజిబుల్ టోకెన్ ప్రమాణాలు
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - టోకనైజ్డ్ వాల్ట్‌లు](/developers/docs/standards/tokens/erc-4626)
-
+- [ERC-7540 - అసమకాలిక టోకనైజ్డ్ వాల్ట్‌లు](/developers/docs/standards/tokens/erc-7540)
 ## ట్యుటోరియల్స్: ఎథీరియంలో ERC-20తో నిర్మించండి {#tutorials}
 
 - [ERC-20 కాంట్రాక్ట్ వాక్‌త్రూ](/developers/tutorials/erc20-annotated-code/) _– ఓపెన్‌జెప్పెలిన్ ERC-20 కాంట్రాక్ట్ అమలు యొక్క లైన్-బై-లైన్ ఉల్లేఖన వాక్‌త్రూ._
