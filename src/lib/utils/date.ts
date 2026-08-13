@@ -124,20 +124,15 @@ export const getWeekNumber = (date: Date): number => {
  * Get day of year for a given date (1-365/366)
  * Used as seed for deterministic daily rotation
  *
+ * Computed in UTC so every user gets the same value for the same instant.
+ * A local-time reading would roll over at each viewer's own midnight, which
+ * splits a "stable for everyone today" rotation across timezones.
+ *
  * @param date - The date to get the day of year for
  * @returns Day of year (1-365 or 1-366 for leap years)
  */
 export const getDayOfYear = (date: Date): number => {
-  const start = new Date(date.getFullYear(), 0, 0)
-  const diff = date.getTime() - start.getTime()
-  return Math.floor(diff / 86400000)
-}
-
-/**
- * UTC variant — deterministic across timezones. Use for seeded shuffles
- * that must be "stable for all users on a given day".
- */
-export const getDayOfYearUTC = (date: Date): number => {
   const start = Date.UTC(date.getUTCFullYear(), 0, 0)
-  return Math.floor((date.getTime() - start) / 86400000)
+  const diff = date.getTime() - start
+  return Math.floor(diff / 86400000)
 }
