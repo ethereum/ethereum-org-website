@@ -8,7 +8,10 @@ import { useTranslations } from "next-intl"
 import { MatomoEventOptions } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
-import { trackCustomEvent } from "@/lib/utils/matomo"
+import {
+  trackCustomEvent,
+  trackCustomEventImmediate,
+} from "@/lib/utils/matomo"
 import { getRelativePath } from "@/lib/utils/relativePath"
 import * as url from "@/lib/utils/url"
 
@@ -102,9 +105,18 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   }
 
   // Create click handler that tracks events and calls any passed onClick
+  // External links use immediate tracking (see #18928) — requestIdleCallback
+  // is throttled when the tab is backgrounded after target="_blank".
   const createClickHandler =
-    (eventName: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
-      trackCustomEvent(
+    (
+      eventName: string,
+      immediate: boolean = false
+    ) =>
+    (e: React.MouseEvent<HTMLAnchorElement>) => {
+      const track = immediate
+        ? trackCustomEventImmediate
+        : trackCustomEvent
+      track(
         customEventOptions ?? {
           eventCategory: "Link",
           eventAction: "Clicked",
@@ -122,7 +134,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         target="_blank"
         rel="noopener noreferrer"
         {...rest}
-        onClick={createClickHandler("Clicked on external link")}
+        onClick={createClickHandler("Clicked on external link", true)}
         className={cn("relative", className)}
       >
         {isMailto ? (
@@ -152,7 +164,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         target="_blank"
         rel="noopener noreferrer"
         {...commonProps}
-        onClick={createClickHandler("Clicked on internal PDF")}
+        onClick={createClickHandler("Clicked on internal PDF", true)}
       >
         {children}
       </NextLink>
