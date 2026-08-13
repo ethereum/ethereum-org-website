@@ -24,6 +24,7 @@ import {
   mergeBranchInto,
 } from "./lib/github/branches"
 import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
+import { createFileBudget, runFuseUsd, usageTotals } from "./lib/llm/cost-meter"
 import { callGeminiRaw, isLlmAvailable, translateFile } from "./lib/llm/gemini"
 import {
   batchSections,
@@ -32,6 +33,7 @@ import {
   extractJsonSections,
   extractSections,
   parseIncrementalResponse,
+  sectionWireBytes,
 } from "./lib/llm/incremental-translate"
 import {
   extractAttributeLeaves,
@@ -45,6 +47,7 @@ import {
   hasEnglishChanged,
   parseEnglishJson,
 } from "./lib/llm/manifest-adapter"
+import { openRouterKeyStatus } from "./lib/llm/openrouter"
 import { generateTempBranchName } from "./lib/utils/branch-naming"
 import type { TaskResult } from "./lib/utils/task-pool"
 import { createTaskPool } from "./lib/utils/task-pool"
@@ -58,7 +61,15 @@ import {
   normalizeTargetPath,
   validateTargetPath,
 } from "./config"
-import { LLM, MANIFESTS_DIR } from "./constants"
+import {
+  INPUT_RATE_USD_PER_1M,
+  LLM,
+  LLM_PROVIDER,
+  MANIFESTS_DIR,
+  MAX_BATCHES_PER_FILE,
+  MAX_PROMPT_BYTES,
+  OUTPUT_RATE_USD_PER_1M,
+} from "./constants"
 import type { LlmTranslator } from "./pipeline"
 import {
   findStructuralRegressions,
@@ -230,17 +241,19 @@ function printTokenSummary(
     `${"TOTAL".padEnd(10)}| ${pad(String(grandCalls), 5)} | ${pad(fmt(grandInput), 10)} | ${pad(fmt(grandOutput), 10)} | ${pad(fmt(grandTotal), 10)}`
   )
 
-  // Approximate cost (standard tier, <=200k prompts)
-  // https://ai.google.dev/gemini-api/docs/pricing (as of 11-April-2026)
-  const INPUT_RATE = 2.0
-  const OUTPUT_RATE = 12.0
   const estCost =
-    (grandInput / 1_000_000) * INPUT_RATE +
-    (grandOutput / 1_000_000) * OUTPUT_RATE
+    (grandInput / 1_000_000) * INPUT_RATE_USD_PER_1M +
+    (grandOutput / 1_000_000) * OUTPUT_RATE_USD_PER_1M
 
   const pipelineSecs = (pipelineDurationMs / 1000).toFixed(1)
   console.log(
-    `\n  Estimated cost: ~$${estCost.toFixed(4)} (${LLM.models[0]}: $${INPUT_RATE}/1M input, $${OUTPUT_RATE}/1M output)`
+    `\n  Estimated cost: ~$${estCost.toFixed(4)} (${LLM.models[0]}: $${INPUT_RATE_USD_PER_1M}/1M input, $${OUTPUT_RATE_USD_PER_1M}/1M output)`
+  )
+  // The meter counts every billed call, including retries and blocked
+  // responses the per-language stats above never see.
+  const metered = usageTotals()
+  console.log(
+    `  Metered: ${metered.calls} call(s), $${metered.costUsd.toFixed(4)} against the $${runFuseUsd().toFixed(2)} run fuse`
   )
   console.log(`  Wall time: ${pipelineSecs}s`)
 }
@@ -312,29 +325,68 @@ async function buildGeminiTranslator(
     }))
   )
 
-  const allTranslations: Record<string, string> = {}
-  let totalInput = 0
-  let totalOutput = 0
-
-  for (const batch of batches) {
-    const batchSectionList = sectionList.filter((s) =>
-      batch.some((b) => b.id === s.id)
+  // A sane incremental update is a handful of batches. Hundreds means the
+  // batching collapsed (see MAX_BATCHES_PER_FILE) and every batch would resend
+  // the file's context -- fail the file instead of billing for it.
+  if (batches.length > MAX_BATCHES_PER_FILE) {
+    throw new Error(
+      `[cost-guard] ${filePath} (${locale}): incremental batching produced ` +
+        `${batches.length} batches for ${translateCount} changed section(s), over the ` +
+        `${MAX_BATCHES_PER_FILE} cap. Refusing to send; rerun this file with MODE=full.`
     )
+  }
 
+  // Assemble every prompt before sending any of them. The full cost of this
+  // file+locale is knowable with zero network calls, so it is checked against
+  // the file's byte budget up front rather than discovered in the invoice.
+  const plan = batches.map((batch) => {
+    const sections = sectionList.filter((s) => batch.some((b) => b.id === s.id))
     const prompt = buildIncrementalPrompt({
       filePath,
       fileType,
       targetLanguage: locale,
       languageName,
-      sections: batchSectionList,
+      sections,
       glossaryTerms,
     })
+    return {
+      prompt,
+      bytes: Buffer.byteLength(prompt, "utf-8"),
+      translateCount: sections.filter((s) => s.action === "TRANSLATE").length,
+    }
+  })
+
+  // Budget is set by the translatable content, not the file: the same wire
+  // metric the batcher splits on.
+  const translatableBytes = sectionList
+    .filter((s) => s.action === "TRANSLATE")
+    .reduce(
+      (sum, s) =>
+        sum + sectionWireBytes({ id: s.id, content: s.content || "" }),
+      0
+    )
+  const budget = createFileBudget(`${filePath} (${locale})`, translatableBytes)
+  const projectedBytes = plan.reduce((sum, p) => sum + p.bytes, 0)
+  budget.assertProjected(
+    projectedBytes,
+    `${plan.length} incremental batch(es) for ${translateCount} changed section(s)`
+  )
+  log(
+    `  Incremental plan: ${plan.length} batch(es), ${projectedBytes} of ${budget.limitBytes} budgeted prompt bytes`
+  )
+
+  const allTranslations: Record<string, string> = {}
+  let totalInput = 0
+  let totalOutput = 0
+
+  for (const [index, batch] of plan.entries()) {
+    budget.spend(batch.bytes, `batch ${index + 1}/${plan.length}`)
 
     log(
-      `  Calling LLM: ${batchSectionList.filter((s) => s.action === "TRANSLATE").length} sections, ${prompt.length} chars`
+      `  Calling LLM: ${batch.translateCount} sections, ${batch.prompt.length} chars`
     )
 
-    const result = await callGeminiRaw(prompt, {
+    const result = await callGeminiRaw(batch.prompt, {
       filePath,
       targetLanguage: locale,
       label: "incremental",
@@ -649,6 +701,31 @@ async function main() {
   log(`Languages: ${targetLanguages.join(", ")}`)
   log(`Mode: ${config.mode}`)
   log(`Concurrency: ${config.concurrency}`)
+  log(
+    `Bounds: ${MAX_PROMPT_BYTES} bytes per call x chunks of changed content per file+locale, $${runFuseUsd().toFixed(2)} run fuse (INTL_MAX_COST_USD)`
+  )
+  log(`Provider: ${LLM.name} (${LLM_PROVIDER})`)
+
+  // The provider-side ceiling is the one guard that survives a bug in the ones
+  // above it, so state it -- or say plainly that there isn't one.
+  if (LLM_PROVIDER === "openrouter") {
+    try {
+      const key = await openRouterKeyStatus()
+      log(
+        key.limit === null
+          ? `[WARN] OpenRouter key has NO credit limit set -- only this run's own guards apply`
+          : `OpenRouter key limit: $${key.limit.toFixed(2)}, $${(key.limitRemaining ?? 0).toFixed(2)} remaining`
+      )
+    } catch (err) {
+      log(
+        `[WARN] OpenRouter key lookup failed: ${err instanceof Error ? err.message : String(err)}`
+      )
+    }
+  } else {
+    log(
+      `[WARN] Gemini direct: no provider-side spend ceiling exists on this key`
+    )
+  }
 
   // If the pending branch already exists (prior run against the same base),
   // use it as the baseline: merge current base into it first (fail-fast on

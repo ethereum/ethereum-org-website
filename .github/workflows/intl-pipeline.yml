@@ -44,6 +44,19 @@ on:
         required: false
         default: "false"
         type: boolean
+      llm_provider:
+        description: "LLM transport: openrouter (hard per-key spend limit) or gemini (no spend ceiling)"
+        required: false
+        default: "openrouter"
+        type: choice
+        options:
+          - openrouter
+          - gemini
+      max_cost_usd:
+        description: "Run fuse: abort once estimated spend reaches this many USD"
+        required: false
+        default: "100"
+        type: string
       mode:
         description: "Translation mode: 'auto' (full for new files, incremental for existing) or 'full' (retranslate everything)"
         required: false
@@ -84,6 +97,9 @@ jobs:
         run: pnpm exec tsx ./src/scripts/intl-pipeline/main.ts
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          LLM_PROVIDER: ${{ github.event.inputs.llm_provider || 'openrouter' }}
+          INTL_MAX_COST_USD: ${{ github.event.inputs.max_cost_usd || '100' }}
           GITHUB_API_TOKEN: ${{ secrets.I18N_GITHUB_TOKEN }}
           TARGET_PATH: ${{ github.event.inputs.target_path }}
           EXCLUDE_PATH: ${{ github.event.inputs.exclude_path }}

@@ -8,7 +8,13 @@
 import { GoogleGenAI, HarmBlockThreshold, HarmCategory } from "@google/genai"
 
 import i18nConfig from "../../../../../i18n.config.json"
-import { GEMINI_TIMEOUT_MS, LLM, MAX_SPLIT_DEPTH } from "../../constants"
+import {
+  GEMINI_TIMEOUT_MS,
+  LLM,
+  LLM_PROVIDER,
+  MAX_PROMPT_BYTES,
+  MAX_SPLIT_DEPTH,
+} from "../../constants"
 import { delay } from "../workflows/utils"
 
 import {
@@ -23,12 +29,14 @@ import {
   restoreComments,
 } from "./code-block-extractor"
 import { type ContentNode, normalizeContent } from "./content-normalizer"
+import { assertRunFuse, recordUsage } from "./cost-meter"
 import {
   chunkJson,
   mergeJsonBatches,
   prepareJsonBatches,
   restoreJsonBatch,
 } from "./json-batcher"
+import { generateViaOpenRouter, type ProviderResponse } from "./openrouter"
 import {
   validateTranslatedJson,
   validateTranslatedMarkdown,
@@ -1295,7 +1303,7 @@ export async function callGeminiRaw(
   prompt: string,
   metadata?: GeminiCallMetadata
 ): Promise<{ text: string; tokensUsed: { input: number; output: number } }> {
-  const client = getGeminiClient()
+  const client = LLM_PROVIDER === "openrouter" ? null : getGeminiClient()
   const verbose = process.env.VERBOSE === "true"
   const ts = () => new Date().toISOString()
 
@@ -1329,6 +1337,16 @@ export async function callGeminiRaw(
       // recitation match (e.g. on our own open-licensed whitepaper content).
       const temperature = attempt === 1 ? 0 : Math.min(0.5 * (attempt - 1), 1)
 
+      // Spend and prompt-size guards run before the request, so a runaway call
+      // pattern stops at the cap instead of at the end of the run.
+      assertRunFuse(`${ctx} (${prompt.length} chars)`)
+      if (Buffer.byteLength(prompt, "utf-8") > MAX_PROMPT_BYTES) {
+        throw new Error(
+          `[cost-guard] prompt for ${ctx} is ${Buffer.byteLength(prompt, "utf-8")} bytes, ` +
+            `over the ${MAX_PROMPT_BYTES}-byte ceiling -- refusing to send`
+        )
+      }
+
       console.log(
         `[${ts()}] [gemini] REQUEST model=${modelId} ${ctx}${attempt > 1 ? ` attempt=${attempt} temp=${temperature}` : ""}`
       )
@@ -1358,19 +1376,35 @@ export async function callGeminiRaw(
       try {
         const controller = new AbortController()
         const timeout = setTimeout(() => controller.abort(), GEMINI_TIMEOUT_MS)
-        const response = await client.models
-          .generateContent({
-            model: modelId,
-            contents: prompt,
-            config: {
-              temperature,
-              safetySettings: SAFETY_SETTINGS,
-              abortSignal: controller.signal,
-            },
-          })
-          .finally(() => clearTimeout(timeout))
+        const request: Promise<ProviderResponse> =
+          LLM_PROVIDER === "openrouter"
+            ? generateViaOpenRouter({
+                modelId,
+                prompt,
+                temperature,
+                signal: controller.signal,
+              })
+            : (client!.models.generateContent({
+                model: modelId,
+                contents: prompt,
+                config: {
+                  temperature,
+                  safetySettings: SAFETY_SETTINGS,
+                  abortSignal: controller.signal,
+                },
+              }) as unknown as Promise<ProviderResponse>)
+        const response = await request.finally(() => clearTimeout(timeout))
         const usage = response.usageMetadata
         const duration = ((Date.now() - startTime) / 1000).toFixed(1)
+
+        // Meter every billed call, including ones that come back blocked or
+        // empty below -- those still charge for the prompt. costUsd is the
+        // provider's own figure when it reports one.
+        recordUsage(
+          usage?.promptTokenCount || 0,
+          usage?.candidatesTokenCount || 0,
+          response.costUsd
+        )
 
         // Inspect response for non-obvious failure modes before accessing .text
         const candidate = (
