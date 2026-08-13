@@ -1,9 +1,6 @@
 name: Intl Pipeline
 
 on:
-  schedule:
-    # Daily 04:20 UTC; empty inputs fall through to pipeline defaults (dev, auto, all locales)
-    - cron: "20 4 * * *"
   workflow_dispatch:
     inputs:
       target_path:
@@ -84,7 +81,7 @@ jobs:
         run: pnpm install
 
       - name: Run translation pipeline
-        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/intl-pipeline/main.ts
+        run: pnpm exec tsx ./src/scripts/intl-pipeline/main.ts
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GITHUB_API_TOKEN: ${{ secrets.I18N_GITHUB_TOKEN }}
