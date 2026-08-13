@@ -4,16 +4,16 @@ The pipeline tracks state via two manifest files per translated file. This refer
 
 ## File layout
 
-For each translated file at `public/content/translations/{lang}/path/to/file.md`, two sibling manifests:
+Manifests are centralized under `.manifests/`, mirroring the destination path as a directory. For a translated file at `public/content/translations/{lang}/path/to/file.md`:
 
-- `public/content/translations/{lang}/path/to/file.md.manifest-source.json`
-- `public/content/translations/{lang}/path/to/file.md.manifest-translation.json`
+- `.manifests/public/content/translations/{lang}/path/to/file.md/source.json`
+- `.manifests/public/content/translations/{lang}/path/to/file.md/translation.json`
 
-Same pattern for JSON locale files in `src/intl/{lang}/`.
+Same pattern for JSON locale files: `.manifests/src/intl/{lang}/common.json/source.json`. Path construction is `getManifestPath(destPath, "source" | "translation")` in `main.ts`, rooted at `MANIFESTS_DIR` (`constants.ts`).
 
-Manifests are co-located with the locale file (not centralized). Moving a locale file means moving both manifests.
+Moving or renaming a locale file means moving its manifest directory for every locale. Coverage is partial: a file+locale with no manifest routes to full translation rather than failing, which is also the recovery path when a manifest is deleted.
 
-## Source manifest (`.manifest-source.json`)
+## Source manifest (`source.json`)
 
 Content tree of the English file at the time of last pipeline run. Stores **hashes** (not content) per section/element/attribute, plus the git SHA the snapshot was taken at.
 
@@ -30,7 +30,7 @@ Shape:
 
 `sourceCommitSha` is the load-bearing field: it tells the pipeline "if you want to know what English looked like when I stamped this, run `git show {sha}:{path}`."
 
-## Translation manifest (`.manifest-translation.json`)
+## Translation manifest (`translation.json`)
 
 Mirrors the source manifest's structure, but with per-section hashes of the **locale** content plus a structural map between English and locale elements. Used to:
 
@@ -73,14 +73,14 @@ Common diagnostics:
 
 ```bash
 # What commit was this manifest stamped at?
-jq -r '.sourceCommitSha' public/content/translations/ja/some-page/index.md.manifest-source.json
+jq -r '.sourceCommitSha' .manifests/public/content/translations/ja/some-page/index.md/source.json
 
 # Has English moved since the stamp?
-STAMPED_SHA=$(jq -r '.sourceCommitSha' .../.manifest-source.json)
+STAMPED_SHA=$(jq -r '.sourceCommitSha' .manifests/.../source.json)
 git log "$STAMPED_SHA..HEAD" -- public/content/some-page/index.md
 
 # Compare current English hash vs stamped hash
-STAMPED_HASH=$(jq -r '.rootHash' .../.manifest-source.json)
+STAMPED_HASH=$(jq -r '.rootHash' .manifests/.../source.json)
 node -e "
 const { parseMarkdown } = require('intl-content-tree');
 const { readFileSync } = require('fs');
@@ -89,7 +89,7 @@ console.log(tree.rootHash);
 "
 
 # Pretty-print the manifest's structure
-jq '.tree' .../.manifest-translation.json
+jq '.tree' .manifests/.../translation.json
 ```
 
 ## Common manifest issues

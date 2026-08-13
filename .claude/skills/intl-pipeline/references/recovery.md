@@ -115,8 +115,7 @@ Either manifest file is malformed, missing, or out-of-sync with the locale conte
 **Fix:** delete the manifest files for the affected file+locale. The pipeline auto-detects "no manifest" and runs full translation, regenerating both manifests.
 
 ```bash
-rm public/content/translations/ja/some-page/index.md.manifest-source.json
-rm public/content/translations/ja/some-page/index.md.manifest-translation.json
+rm -r .manifests/public/content/translations/ja/some-page/index.md/
 gh workflow run intl-pipeline.yml -f target_path=public/content/some-page/index.md -f target_languages=ja
 ```
 
