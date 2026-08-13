@@ -15,7 +15,7 @@ export const generated = {
         month: 9,
         day: 15,
       },
-      confirmed: false,
+      confirmed: true,
     },
     milestones: [
       {
@@ -42,7 +42,7 @@ export const generated = {
         month: 4,
         day: 12,
       },
-      confirmed: false,
+      confirmed: true,
     },
     milestones: [
       {
@@ -69,7 +69,7 @@ export const generated = {
         month: 3,
         day: 13,
       },
-      confirmed: false,
+      confirmed: true,
     },
     milestones: [
       {

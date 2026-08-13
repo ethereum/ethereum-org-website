@@ -11,6 +11,10 @@ import { expect, test } from "@playwright/test"
 
 import type { ForkcastSource } from "../../../src/scripts/sync-upgrades/forkcast"
 import {
+  parsePhases,
+  parseUpgrades,
+} from "../../../src/scripts/sync-upgrades/forkcast"
+import {
   normalize,
   parsePartialDate,
 } from "../../../src/scripts/sync-upgrades/normalize"
@@ -151,10 +155,66 @@ test("drops the signpost record and keeps real upgrades", () => {
   expect(store.glamsterdam.name).toBe("Glamsterdam")
 })
 
-test("confirmed is driven by activation details, not by status", () => {
+test("confirmed means the date is settled, by epoch or by having shipped", () => {
   const store = normalize(source)
   expect(store.fusaka.mainnetTarget.confirmed).toBe(true)
   expect(store.glamsterdam.mainnetTarget.confirmed).toBe(false)
+
+  // Forkcast records no activation epoch for the pre-Pectra forks, but their
+  // dates are years in the past and must not read as tentative.
+  const historical: ForkcastSource = {
+    ...source,
+    upgrades: [
+      {
+        id: "dencun",
+        name: "Dencun Upgrade",
+        status: "Live",
+        activationDate: "Mar 13, 2024",
+        activationDetails: null,
+        disabled: true,
+        path: "/upgrade/dencun",
+      },
+    ],
+    devnetLaunches: {},
+    phases: {},
+  }
+  expect(normalize(historical).dencun.mainnetTarget.confirmed).toBe(true)
+})
+
+test("a completed phase date outranks a headline year that lags behind it", () => {
+  // The two upstream files are edited separately, so the headline can still say
+  // '2026' after the mainnet phase has recorded an actual end date in 2027.
+  const lagging: ForkcastSource = {
+    ...source,
+    upgrades: [
+      {
+        id: "glamsterdam",
+        name: "Glamsterdam Upgrade",
+        status: "Live",
+        activationDate: "2026",
+        activationDetails: null,
+        disabled: false,
+        path: "/upgrade/glamsterdam",
+      },
+    ],
+    devnetLaunches: {},
+    phases: {
+      glamsterdam: [
+        {
+          phaseId: "mainnet-deployment",
+          status: "completed",
+          projectedDate: "Q4 2026",
+          actualEndDate: "Jan 15, 2027",
+          testnets: [],
+        },
+      ],
+    },
+  }
+  expect(normalize(lagging).glamsterdam.mainnetTarget.when).toEqual({
+    year: 2027,
+    month: 1,
+    day: 15,
+  })
 })
 
 test("a projected quarter is never marked confirmed", () => {
@@ -272,5 +332,120 @@ test("release stage outranks the date when precision degrades", () => {
   expect(milestones.map((m) => [m.kind, m.when])).toEqual([
     ["testnet", { year: 2027 }],
     ["mainnet", { year: 2027, quarter: 2 }],
+  ])
+})
+
+test("an unreadable date fails loudly rather than dropping a milestone", () => {
+  const badDevnet: ForkcastSource = {
+    ...source,
+    devnetLaunches: { glamsterdam: [{ version: 6, dateISO: "sometime" }] },
+  }
+  expect(() => normalize(badDevnet)).toThrow(/Unparseable devnet dateISO/)
+
+  const badTestnet: ForkcastSource = {
+    ...source,
+    phases: {
+      ...source.phases,
+      glamsterdam: source.phases.glamsterdam.map((p) =>
+        p.phaseId === "public-testnets"
+          ? {
+              ...p,
+              testnets: [
+                { name: "Sepolia", status: "upcoming", projectedDate: "soon" },
+              ],
+            }
+          : p
+      ),
+    },
+  }
+  expect(() => normalize(badTestnet)).toThrow(/Unparseable testnet date/)
+
+  const badPhase: ForkcastSource = {
+    ...source,
+    phases: {
+      ...source.phases,
+      glamsterdam: source.phases.glamsterdam.map((p) =>
+        p.phaseId === "mainnet-deployment"
+          ? { ...p, projectedDate: "late 2026" }
+          : p
+      ),
+    },
+  }
+  expect(() => normalize(badPhase)).toThrow(/Unparseable mainnet phase date/)
+})
+
+const upgradesLiteral = `
+export const networkUpgrades: NetworkUpgrade[] = [
+  {
+    id: 'fusaka',
+    name: 'Fusaka Upgrade',
+    status: 'Live',
+    activationDate: 'Dec 3, 2025',
+    activationDetails: {
+      blockNumber: 23935694,
+      epochNumber: 411392,
+      slotNumber: 411392 * 32,
+    },
+    path: '/upgrade/fusaka',
+  },
+  {
+    id: 'genesis',
+    name: 'Genesis',
+    status: 'Live',
+    activationDate: 'Jul 30, 2015',
+    activationDetails: {
+      blockNumber: 0,
+      epochNumber: 0,
+      slotNumber: 0,
+    },
+    path: '/upgrade/genesis',
+  },
+]
+`
+
+test("activation details survive a legitimate zero", () => {
+  const [fusaka, genesis] = parseUpgrades(upgradesLiteral)
+  expect(fusaka.activationDetails).toEqual({
+    blockNumber: 23935694,
+    epochNumber: 411392,
+    // Written upstream as an expression, so it has to be evaluated, not read.
+    slotNumber: 13164544,
+  })
+  // Truthiness checks collapse this whole object to null.
+  expect(genesis.activationDetails).toEqual({
+    blockNumber: 0,
+    epochNumber: 0,
+    slotNumber: 0,
+  })
+})
+
+test("a partial activation details block is drift, not absence", () => {
+  const partial = upgradesLiteral.replace(/\n\s*epochNumber: 411392,/, "")
+  expect(() => parseUpgrades(partial)).toThrow(/Incomplete activationDetails/)
+})
+
+test("a phase reads its own fields even when testnets come first", () => {
+  const reordered = `
+export const forkProgress = [
+  {
+    forkName: 'Glamsterdam',
+    phases: [
+      {
+        phaseId: 'public-testnets',
+        testnets: [
+          { name: 'Sepolia', status: 'completed', projectedDate: 'Q1 2026' },
+        ],
+        status: 'upcoming',
+        projectedDate: 'Q3 2026',
+      },
+    ],
+  },
+]
+`
+  const [phase] = parsePhases(reordered).glamsterdam
+  expect(phase.status).toBe("upcoming")
+  expect(phase.projectedDate).toBe("Q3 2026")
+  expect(phase.testnets).toEqual([
+    { name: "Sepolia", status: "completed", projectedDate: "Q1 2026" },
   ])
 })

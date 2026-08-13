@@ -150,9 +150,19 @@ const resolveMainnetTarget = (
   const phase = source.phases[upgrade.id]?.find(
     (p) => p.phaseId === MAINNET_PHASE
   )
-  const fromPhase = parsePartialDate(
-    phase?.actualEndDate ?? phase?.projectedDate ?? null
-  )
+
+  const stated = phase?.actualEndDate ?? phase?.projectedDate ?? null
+  const fromPhase = parsePartialDate(stated)
+  if (stated && !fromPhase) {
+    throw new ForkcastSyncError(
+      `Unparseable mainnet phase date "${stated}" on ${upgrade.id}`
+    )
+  }
+
+  // An actualEndDate is a fact rather than a projection, so it outranks the
+  // headline even in a different year: upstream edits the two files separately
+  // and the headline can lag a cycle behind the date the phase actually ended.
+  if (fromPhase && phase?.actualEndDate) return fromPhase
 
   if (!headline) return fromPhase
   if (!fromPhase) return headline
@@ -177,7 +187,15 @@ const normalizeTestnets = (
   return phase.testnets.flatMap((testnet) => {
     if (testnet.status === "deprecated") return []
     const when = parsePartialDate(testnet.projectedDate)
-    if (!when) return []
+    if (!when) {
+      // No date upstream is legitimate; a date we cannot read is drift.
+      if (testnet.projectedDate) {
+        throw new ForkcastSyncError(
+          `Unparseable testnet date "${testnet.projectedDate}" on ${upgradeId} (${testnet.name})`
+        )
+      }
+      return []
+    }
     return [
       {
         name: `${testnet.name} fork`,
@@ -245,19 +263,22 @@ const normalizeMilestones = (
     (a, b) => a.version - b.version
   )
 
-  const milestones: Milestone[] = launches.flatMap((launch, i) => {
+  const milestones: Milestone[] = launches.map((launch, i) => {
     const when = parseIsoDate(launch.dateISO)
-    if (!when) return []
+    if (!when) {
+      // Dropping this would silently move `live` onto the previous devnet.
+      throw new ForkcastSyncError(
+        `Unparseable devnet dateISO "${launch.dateISO}" on ${upgrade.id} (Devnet-${launch.version})`
+      )
+    }
     const isLatest = i === launches.length - 1
-    return [
-      {
-        name: `Devnet-${launch.version}`,
-        kind: "devnet",
-        when,
-        // Once the fork has shipped, every devnet is history.
-        status: isLatest && status !== "live" ? "live" : "complete",
-      },
-    ]
+    return {
+      name: `Devnet-${launch.version}`,
+      kind: "devnet",
+      when,
+      // Once the fork has shipped, every devnet is history.
+      status: isLatest && status !== "live" ? "live" : "complete",
+    }
   })
 
   milestones.push(...normalizeTestnets(source, upgrade.id))
@@ -297,7 +318,10 @@ export const normalize = (source: ForkcastSource): UpgradeStore => {
         `Unparseable activationDate "${upgrade.activationDate}" on ${upgrade.id}`
       )
     }
-    const confirmed = upgrade.activationDetails !== null
+    // A shipped fork's date cannot move, so it counts as confirmed whether or
+    // not upstream kept its activation epoch — Forkcast records none for the
+    // pre-Pectra forks, which would otherwise read as tentative.
+    const confirmed = status === "live" || upgrade.activationDetails !== null
 
     store[upgrade.id] = {
       slug: upgrade.id,

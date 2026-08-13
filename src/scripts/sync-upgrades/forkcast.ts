@@ -88,34 +88,39 @@ const download = async (): Promise<{ root: string; cleanup: () => void }> => {
   const dir = mkdtempSync(join(tmpdir(), "forkcast-"))
   const cleanup = () => rmSync(dir, { recursive: true, force: true })
 
-  const token = process.env.GITHUB_TOKEN_READ_ONLY ?? process.env.GITHUB_TOKEN
-  const res = await fetch(TARBALL_URL, {
-    headers: {
-      "User-Agent": "ethereum-org-website-upgrade-sync",
-      ...(token ? { Authorization: `Bearer ${token}` } : {}),
-    },
-  })
-  if (!res.ok) {
-    cleanup()
-    throw new ForkcastSyncError(
-      `Tarball fetch failed: ${res.status} ${res.statusText}`
-    )
-  }
+  // The caller can only run cleanup once this resolves, so anything that throws
+  // before that has to remove the temp dir itself or CI leaks one per failure.
+  try {
+    const token = process.env.GITHUB_TOKEN_READ_ONLY ?? process.env.GITHUB_TOKEN
+    const res = await fetch(TARBALL_URL, {
+      headers: {
+        "User-Agent": "ethereum-org-website-upgrade-sync",
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      },
+    })
+    if (!res.ok) {
+      throw new ForkcastSyncError(
+        `Tarball fetch failed: ${res.status} ${res.statusText}`
+      )
+    }
 
-  const archive = join(dir, "forkcast.tar.gz")
-  writeFileSync(archive, Buffer.from(await res.arrayBuffer()))
-  execFileSync("tar", ["xzf", archive, "-C", dir])
+    const archive = join(dir, "forkcast.tar.gz")
+    writeFileSync(archive, Buffer.from(await res.arrayBuffer()))
+    execFileSync("tar", ["xzf", archive, "-C", dir])
 
-  const extracted = readdirSync(dir).find((n) =>
-    n.startsWith("ethereum-forkcast-")
-  )
-  if (!extracted) {
-    cleanup()
-    throw new ForkcastSyncError(
-      "Tarball did not contain an expected root directory"
+    const extracted = readdirSync(dir).find((n) =>
+      n.startsWith("ethereum-forkcast-")
     )
+    if (!extracted) {
+      throw new ForkcastSyncError(
+        "Tarball did not contain an expected root directory"
+      )
+    }
+    return { root: join(dir, extracted), cleanup }
+  } catch (error) {
+    cleanup()
+    throw error
   }
-  return { root: join(dir, extracted), cleanup }
 }
 
 /**
@@ -123,7 +128,7 @@ const download = async (): Promise<{ root: string; cleanup: () => void }> => {
  * boundaries and read field by field. Deliberately strict: a record missing
  * `name` or `status` throws rather than being silently skipped.
  */
-const parseUpgrades = (source: string): ForkcastUpgrade[] => {
+export const parseUpgrades = (source: string): ForkcastUpgrade[] => {
   const start = source.indexOf("export const networkUpgrades")
   if (start === -1) {
     throw new ForkcastSyncError(
@@ -159,15 +164,32 @@ const parseUpgrades = (source: string): ForkcastUpgrade[] => {
       const m = detailsBlock.match(new RegExp(`${key}: ([\\d\\s*]+)`))
       if (!m) return null
       // slotNumber is written as an expression, e.g. `411392 * 32`
-      return m[1]
+      const value = m[1]
         .split("*")
         .map((p) => Number(p.trim()))
         .reduce((a, b) => a * b, 1)
+      if (!Number.isFinite(value)) {
+        throw new ForkcastSyncError(
+          `Unparseable activationDetails.${key} "${m[1].trim()}" on ${id}`
+        )
+      }
+      return value
     }
 
     const blockNumber = detail("blockNumber")
     const epochNumber = detail("epochNumber")
     const slotNumber = detail("slotNumber")
+
+    // Compared against null rather than truthiness so a legitimate 0 survives.
+    // A block carrying only some of the three is drift, not "no details yet".
+    const found = [blockNumber, epochNumber, slotNumber].filter(
+      (v) => v !== null
+    )
+    if (found.length && found.length !== 3) {
+      throw new ForkcastSyncError(
+        `Incomplete activationDetails on ${id}: ${detailsBlock.trim()}`
+      )
+    }
 
     return {
       id,
@@ -175,7 +197,7 @@ const parseUpgrades = (source: string): ForkcastUpgrade[] => {
       status,
       activationDate: str("activationDate"),
       activationDetails:
-        blockNumber && epochNumber && slotNumber
+        blockNumber !== null && epochNumber !== null && slotNumber !== null
           ? { blockNumber, epochNumber, slotNumber }
           : null,
       disabled: /\bdisabled: true/.test(block),
@@ -193,7 +215,9 @@ const parseUpgrades = (source: string): ForkcastUpgrade[] => {
  * still marked `upcoming` weeks after launching). `devnet-launches.json` is
  * generated and stays authoritative for devnets.
  */
-const parsePhases = (source: string): Record<string, ForkcastPhase[]> => {
+export const parsePhases = (
+  source: string
+): Record<string, ForkcastPhase[]> => {
   const result: Record<string, ForkcastPhase[]> = {}
 
   const forkBlocks = [...source.matchAll(/forkName:\s*'([^']+)'/g)]
@@ -216,11 +240,18 @@ const parsePhases = (source: string): Record<string, ForkcastPhase[]> => {
       const pEnd = phaseMatches[j + 1]?.index ?? block.length
       const phaseBlock = block.slice(pStart, pEnd)
 
-      const field = (key: string) =>
-        phaseBlock.match(new RegExp(`\\b${key}:\\s*'([^']*)'`))?.[1] ?? null
-
       const testnets: ForkcastTestnet[] = []
       const testnetsBlock = phaseBlock.match(/testnets:\s*\[([\s\S]*?)\]/)?.[1]
+
+      // `status`, `projectedDate` and `actualEndDate` appear on nested testnets
+      // too, so they are read from the phase with that array removed rather
+      // than trusting it to come last in the upstream literal.
+      const ownFields = testnetsBlock
+        ? phaseBlock.replace(testnetsBlock, "")
+        : phaseBlock
+      const field = (key: string) =>
+        ownFields.match(new RegExp(`\\b${key}:\\s*'([^']*)'`))?.[1] ?? null
+
       if (testnetsBlock) {
         for (const entry of testnetsBlock.split("},")) {
           const name = entry.match(/name:\s*'([^']+)'/)?.[1]
@@ -236,7 +267,6 @@ const parsePhases = (source: string): Record<string, ForkcastPhase[]> => {
 
       phases.push({
         phaseId: phaseMatch[1],
-        // `status` appears on nested milestones too; the phase's own is first.
         status: field("status") ?? "unknown",
         projectedDate: field("projectedDate"),
         actualEndDate: field("actualEndDate"),
@@ -262,13 +292,25 @@ const parseRelationships = (root: string): ForkcastEipRelationship[] => {
     const relationships = Array.isArray(eip.forkRelationships)
       ? eip.forkRelationships
       : []
-    return relationships
-      .filter((r: { statusHistory?: unknown[] }) => r.statusHistory?.length)
-      .map((r: { forkName: string; statusHistory: ForkcastStatusEntry[] }) => ({
-        eipId: Number(eip.id),
+    const withHistory = relationships.filter(
+      (r: { statusHistory?: unknown[] }) => r.statusHistory?.length
+    )
+    if (!withHistory.length) return []
+
+    // Left unchecked this reaches the store as NaN, which JSON.stringify emits
+    // as `null` and only surfaces as a type error on the generated file.
+    const eipId = Number(eip.id)
+    if (!Number.isInteger(eipId)) {
+      throw new ForkcastSyncError(`Non-numeric EIP id "${eip.id}" in ${file}`)
+    }
+
+    return withHistory.map(
+      (r: { forkName: string; statusHistory: ForkcastStatusEntry[] }) => ({
+        eipId,
         forkName: r.forkName,
         statusHistory: r.statusHistory,
-      }))
+      })
+    )
   })
 }
 
