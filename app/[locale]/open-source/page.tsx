@@ -15,6 +15,7 @@ import AppCard from "@/components/AppCard"
 import PageHero from "@/components/Hero/PageHero"
 import { Strong } from "@/components/IntlStringElements"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
 import {
   Card,
   CardContent,
@@ -46,6 +47,7 @@ import PageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
 import heroImg from "@/public/images/doge-computer.png"
+import alternativeToImg from "@/public/images/open-source/alternativeto-telescope.png"
 
 const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const params = await props.params
@@ -469,6 +471,19 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               />
             ))}
           </Grid>
+
+          <Callout
+            id="alternativeto"
+            title={t("page-open-source-alternativeto-title")}
+            description={t("page-open-source-alternativeto-description")}
+            image={alternativeToImg}
+            variant="sm"
+            as="h3"
+          >
+            <ButtonLink href="https://alternativeto.net">
+              {t("page-open-source-alternativeto-cta")}
+            </ButtonLink>
+          </Callout>
         </Section>
 
         <Section id={getIdFromHash(tocItems[5].url)}>
