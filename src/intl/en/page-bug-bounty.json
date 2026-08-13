@@ -105,7 +105,7 @@
   "bug-bounty-faq-q1-content-5": "<strong>Reproduction:</strong> Send a block to a Go node that contains many txs but no valid PoW.",
   "bug-bounty-faq-q1-content-6": "<strong>Details:</strong> Blocks are validated in the method <code>Process(Block, dontReact)</code>. This method performs expensive CPU-intensive tasks, such as executing transactions (<code>sm.ApplyDiff</code>) and afterward it verifies the proof-of-work (<code>sm.ValidateBlock()</code>). This allows an attacker to send blocks that may require a high amount of computation (the maximum <code>gasLimit</code>) but has no proof-of-work. If the attacker sends blocks continuously, the attacker may force the victim node to 100% CPU utilization.",
   "bug-bounty-faq-q1-content-7": "<strong>Fix:</strong> Invert the order of the checks.",
-  "bug-bounty-faq-q2-title": "Is the bug bounty program is time limited?",
+  "bug-bounty-faq-q2-title": "Is the bug bounty program time limited?",
   "bug-bounty-faq-q2-contentPreview": "No.",
   "bug-bounty-faq-q2-content-1": "No end date is currently set. See <a>the Ethereum Foundation blog</a> for the latest news.",
   "bug-bounty-faq-q3-title": "How are bounties paid out?",
