@@ -71,13 +71,6 @@ export const formatDate = (
   }).format(new Date(date))
 }
 
-export const isDateReached = (date: string) => {
-  if (!isValidDate(date)) return false
-  const today = new Date()
-  const threshold = new Date(date)
-  return today.getTime() >= threshold.getTime()
-}
-
 export const formatDateRange = (
   start: string,
   end: string | null,
