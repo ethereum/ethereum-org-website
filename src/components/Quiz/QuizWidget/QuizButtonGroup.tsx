@@ -64,7 +64,7 @@ export const QuizButtonGroup = ({
       eventName: "Twitter_share_quiz",
     })
 
-    const url = `https://ethereum.org${window.location.pathname}%23quiz`
+    const url = `https://ethereum.org${window.location.pathname}`
     const hashtags = ["ethereumquiz", "ethereum", "quiz"]
     const tweet = `${encodeURI(
       `I just took the "${title}" quiz on ethereum.org and scored ${numberOfCorrectAnswers} out of ${questions.length}! Try it yourself at ${url}`
