@@ -58,13 +58,14 @@ on:
         default: "100"
         type: string
       mode:
-        description: "Translation mode: 'auto' (full for new files, incremental for existing) or 'full' (retranslate everything)"
+        description: "Translation mode: 'auto' (full for new files, incremental for existing), 'full' (retranslate everything), or 'estimate' (project cost, send nothing)"
         required: false
         default: "auto"
         type: choice
         options:
           - auto
           - full
+          - estimate
 
 concurrency:
   group: i18n-translation

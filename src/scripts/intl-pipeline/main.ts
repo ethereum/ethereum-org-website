@@ -24,17 +24,9 @@ import {
   mergeBranchInto,
 } from "./lib/github/branches"
 import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
-import { createFileBudget, runFuseUsd, usageTotals } from "./lib/llm/cost-meter"
+import { runFuseUsd, usageTotals } from "./lib/llm/cost-meter"
 import { callGeminiRaw, isLlmAvailable, translateFile } from "./lib/llm/gemini"
-import {
-  batchSections,
-  buildIncrementalPrompt,
-  buildSectionList,
-  extractJsonSections,
-  extractSections,
-  parseIncrementalResponse,
-  sectionWireBytes,
-} from "./lib/llm/incremental-translate"
+import { parseIncrementalResponse } from "./lib/llm/incremental-translate"
 import {
   extractAttributeLeaves,
   translateJsxAttributes,
@@ -48,6 +40,7 @@ import {
   parseEnglishJson,
 } from "./lib/llm/manifest-adapter"
 import { openRouterKeyStatus } from "./lib/llm/openrouter"
+import { planIncrementalBatches } from "./lib/llm/plan"
 import { generateTempBranchName } from "./lib/utils/branch-naming"
 import type { TaskResult } from "./lib/utils/task-pool"
 import { createTaskPool } from "./lib/utils/task-pool"
@@ -280,32 +273,6 @@ async function buildGeminiTranslator(
     }
   }
 
-  const englishSections =
-    fileType === "json"
-      ? extractJsonSections(englishContent)
-      : extractSections(englishContent)
-  const localeSections =
-    fileType === "json"
-      ? extractJsonSections(localeContent)
-      : extractSections(localeContent)
-
-  const sectionList = buildSectionList(
-    englishSections,
-    localeSections,
-    sectionIds
-  )
-  const translateCount = sectionList.filter(
-    (s) => s.action === "TRANSLATE"
-  ).length
-
-  if (translateCount === 0) {
-    log(`  No sections matched for translation`)
-    return {
-      translator: (_, content) => content,
-      tokens: { input: 0, output: 0 },
-    }
-  }
-
   const langEntry = i18nConfig.find((l: { code: string }) => l.code === locale)
   const languageName = langEntry
     ? (langEntry as { code: string; name: string }).name
@@ -316,57 +283,40 @@ async function buildGeminiTranslator(
     log(`  Glossary: ${glossaryTerms.size} terms for ${locale}`)
   }
 
-  // Split into batches if needed (byte-size-aware)
-  const batches = batchSections(
-    sectionList.map((s) => ({
-      id: s.id,
-      content: s.content || "",
-      action: s.action,
-    }))
-  )
+  // Same planner MODE=estimate uses, so the projection and the run agree.
+  const planned = planIncrementalBatches({
+    filePath,
+    fileType,
+    locale,
+    languageName,
+    englishContent,
+    localeContent,
+    sectionIds,
+    glossaryTerms,
+  })
+
+  if (!planned) {
+    log(`  No sections matched for translation`)
+    return {
+      translator: (_, content) => content,
+      tokens: { input: 0, output: 0 },
+    }
+  }
+
+  const { batches: plan, budget, projectedBytes, translateCount } = planned
 
   // A sane incremental update is a handful of batches. Hundreds means the
   // batching collapsed (see MAX_BATCHES_PER_FILE) and every batch would resend
   // the file's context -- fail the file instead of billing for it.
-  if (batches.length > MAX_BATCHES_PER_FILE) {
+  if (planned.tooManyBatches) {
     throw new Error(
       `[cost-guard] ${filePath} (${locale}): incremental batching produced ` +
-        `${batches.length} batches for ${translateCount} changed section(s), over the ` +
+        `${plan.length} batches for ${translateCount} changed section(s), over the ` +
         `${MAX_BATCHES_PER_FILE} cap. Refusing to send; rerun this file with MODE=full.`
     )
   }
 
-  // Assemble every prompt before sending any of them. The full cost of this
-  // file+locale is knowable with zero network calls, so it is checked against
-  // the file's byte budget up front rather than discovered in the invoice.
-  const plan = batches.map((batch) => {
-    const sections = sectionList.filter((s) => batch.some((b) => b.id === s.id))
-    const prompt = buildIncrementalPrompt({
-      filePath,
-      fileType,
-      targetLanguage: locale,
-      languageName,
-      sections,
-      glossaryTerms,
-    })
-    return {
-      prompt,
-      bytes: Buffer.byteLength(prompt, "utf-8"),
-      translateCount: sections.filter((s) => s.action === "TRANSLATE").length,
-    }
-  })
-
-  // Budget is set by the translatable content, not the file: the same wire
-  // metric the batcher splits on.
-  const translatableBytes = sectionList
-    .filter((s) => s.action === "TRANSLATE")
-    .reduce(
-      (sum, s) =>
-        sum + sectionWireBytes({ id: s.id, content: s.content || "" }),
-      0
-    )
-  const budget = createFileBudget(`${filePath} (${locale})`, translatableBytes)
-  const projectedBytes = plan.reduce((sum, p) => sum + p.bytes, 0)
+  // Refuse the whole plan before the first request when it exceeds the budget.
   budget.assertProjected(
     projectedBytes,
     `${plan.length} incremental batch(es) for ${translateCount} changed section(s)`
