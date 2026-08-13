@@ -809,7 +809,9 @@ The shortcode registry for markdown content. To add a markdown shortcode, add th
 
 ### `MarkdownVideo` (markdown clips)
 
-Renders `![](./x.mp4)` in markdown content (reached via `MarkdownImage`; not imported in app code) — the modern GIF replacement: silent, looping, plays only while on-screen, controls instead of autoplay under `prefers-reduced-motion`.
+Renders `![](./x.mp4)` in markdown content (reached via `MarkdownImage`; not imported in app code) — the modern GIF replacement: silent, looping, plays only while on-screen, no autoplay under `prefers-reduced-motion`.
+
+**Playback controls are always visible** so any user can stop the looping motion (WCAG 2.2.2) — a clip that loops past 5s needs a pause affordance, not one gated on `prefers-reduced-motion`. A user pause is latched in a ref and suppresses the in-view autoplay branch, otherwise scrolling away and back restarts the clip they just stopped. PiP/cast/download are turned off (`controlsList`, `disablePictureInPicture`, `disableRemotePlayback`) to keep the control surface minimal on decorative clips. Keep `preload="metadata"`: these clips are offscreen-gated by design, and `auto` downloads every clip on the page in full at load.
 
 **Sizing convention**: an optional `#WxH` fragment on the markdown src declares the clip's intrinsic dimensions — `![](./demo.mp4#800x400)` — and sizes the box to the clip's own aspect ratio (landscape fills the content width; taller-than-wide is height-capped). Without it, a fixed 16:9 box (9:16 via the `-portrait` filename suffix) letterboxes the clip with `object-contain`.
 

@@ -285,6 +285,7 @@ export default function ToolsCatalog({
         resultsLabel: labels.resultsLabel,
         noResults: labels.noResults,
       }}
+      mobileVariant="collapsible"
       mobileFilterSummary={{
         label: currentCategoryId
           ? getCategoryLabel(currentCategoryId, categoryLabels)
