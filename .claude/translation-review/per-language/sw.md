@@ -29,3 +29,9 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 
 - `"salt"` staying English beside `nonsi` is justified — ETHGlossary has `nonce -> nonsi` and no salt entry, and English scare-quotes both as coinages. No Swahilised-vs-untranslated collision found.
 - The collateral reword of the 42-character sentence and the `page-values` rewrites are neutral-to-better, not regressions.
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 6.2/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- Lowest score of the fleet. **`client` (software) rendered `mteja` (customer) in 31 sites across 8 files**, where ETHGlossary mandates `kiteja`/`viteja`; two files got it right in one line and wrong in the next. All fixed with noun-class concord. Four dropped fork links (Berlin/London/Dencun/Pectra) restored. Open: `trade-off` conflated with `swap` (`mabadilishano`) in 3 sites -- native call.
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).

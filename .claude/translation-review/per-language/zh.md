@@ -48,3 +48,9 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - `隐形地址` for stealth address matches the dominant repo term (39 vs 6 for `隐身地址`).
 - `《Asphodel: Prologue》` in 《》 follows Chinese title convention with the Latin name untouched — correct, not a brand modification.
 - The `page-values` reword improves on the prior version, which over-translated "only a promise" as `一纸空头支票`.
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 9.4/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- Second-highest of the fleet. Zero `智慧合约` regressions; `智能合约` correct throughout. No per-locale fixes needed beyond the fleet-wide items.
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).

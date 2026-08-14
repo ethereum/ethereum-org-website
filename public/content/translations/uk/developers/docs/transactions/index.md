@@ -238,3 +238,7 @@ _Знаєте ресурс спільноти, який вам допоміг? �
 - [Акаунти](/developers/docs/accounts/)
 - [Віртуальна машина Етеріуму (EVM)](/developers/docs/evm/)
 - [Газ](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

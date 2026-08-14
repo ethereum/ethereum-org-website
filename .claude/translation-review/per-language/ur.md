@@ -49,3 +49,9 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 
 - The accounts markdown follows the file's existing convention of leaving backticked identifiers unwrapped while `<span dir="ltr">` handles bare Latin runs — RTL handling is internally consistent.
 - The `page-values` reword improved intra-file consistency (`بھروسہ`/`ٹول` now align with the FAQ strings).
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 7.5/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- `actor` -> `فریق` (was اداکار, film performer). Open: the glossary-AVOID form `لین دین` for "transaction fee" in 4 sites across 2 files (`ٹرانزیکشن فیس` is correct and used elsewhere in the same doc); `وٹالک بوٹیرن` vs the corpus-standard `وٹالک بوٹرین` in 4 sites; brand transliterations (Optimism/Arbitrum/ZKsync/Coinbase/PayPal) left Latin in the two JSON files. **No truncation, untranslated chunks or Eastern-Arabic numerals this run** -- ur's historical failure modes were all absent.
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).

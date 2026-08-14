@@ -238,3 +238,7 @@ _도움이 된 커뮤니티 리소스를 알고 계신가요? 이 페이지를 �
 - [계정](/developers/docs/accounts/)
 - [이더리움 가상 머신(EVM)](/developers/docs/evm/)
 - [가스](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

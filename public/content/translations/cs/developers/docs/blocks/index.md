@@ -140,7 +140,7 @@ Tato implementace se liší od systémů založených na důkazu prací (PoW), k
 
 ## Velikost bloku {#block-size}
 
-Poslední důležitou poznámkou je, že samotné bloky jsou omezeny svou velikostí. Každý blok má cílovou velikost 30 milionů gasu, ale velikost bloků se bude zvyšovat nebo snižovat v souladu s požadavky sítě, a to až do limitu bloku 60 milionů gasu (dvojnásobek cílovové velikosti bloku). Limit plynu bloku lze upravit nahoru nebo dolů o faktor 1/1024 oproti limitu plynu předchozího bloku. V důsledku toho mohou validátoři změnit limit plynu bloku prostřednictvím konsensu. Celkové množství gasu spotřebovaného všemi transakcemi v bloku musí být menší než limit plynu bloku. To je důležité, protože to zajišťuje, že bloky nemohou být libovolně velké. Kdyby mohly být bloky libovolně velké, pak by méně výkonné plné uzly postupně přestaly být schopny držet krok se sítí kvůli požadavkům na prostor a rychlost. Čím větší je blok, tím větší výpočetní výkon je potřeba k jeho včasnému zpracování pro další slot. To je centralizační síla, které se čelí omezením velikosti bloků.
+Poslední důležitou poznámkou je, že samotné bloky jsou omezeny svou velikostí. Každý blok má cílovou velikost 30 milionů gasu, ale velikost bloků se bude zvyšovat nebo snižovat v souladu s požadavky sítě, a to až do limitu bloku 60 milionů gasu (dvojnásobek cílové velikosti bloku). Limit gasu bloku lze upravit nahoru nebo dolů o faktor 1/1024 oproti limitu gasu předchozího bloku. V důsledku toho mohou validátoři změnit limit gasu bloku prostřednictvím konsensu. Celkové množství gasu spotřebovaného všemi transakcemi v bloku musí být menší než limit gasu bloku. To je důležité, protože to zajišťuje, že bloky nemohou být libovolně velké. Kdyby mohly být bloky libovolně velké, pak by méně výkonné plné uzly postupně přestaly být schopny držet krok se sítí kvůli požadavkům na prostor a rychlost. Čím větší je blok, tím větší výpočetní výkon je potřeba k jeho včasnému zpracování pro další slot. To je centralizační síla, které se čelí omezením velikosti bloků.
 
 ## Další čtení {#further-reading}
 
@@ -151,3 +151,5 @@ _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidej
 - [Transakce](/developers/docs/transactions/)
 - [Gas](/developers/docs/gas/)
 - [Důkaz podílem (PoS)](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

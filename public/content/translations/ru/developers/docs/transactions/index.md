@@ -238,3 +238,7 @@ _Знаете ресурс сообщества, который помог ва�
 - [Аккаунты](/developers/docs/accounts/)
 - [Виртуальная машина Эфириума (EVM)](/developers/docs/evm/)
 - [Газ](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

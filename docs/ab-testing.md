@@ -7,11 +7,13 @@ GDPR-compliant, cookie-less A/B testing built on the [Flags SDK](https://flags-s
 One public URL, several static pages behind it:
 
 1. A request hits `proxy.ts`. If the path is registered in `abTestRoutes`, the proxy fingerprints the request headers (client IP, user agent, accept headers — nothing stored on the device), evaluates the route's flags against the Matomo experiment config, and packs the result into a **signed code** (HMAC, `FLAGS_SECRET`).
-2. The proxy **rewrites** (not redirects) to an internal path: `/en/ab-code/<code>/<path>`. The visitor's address bar never changes.
+2. The proxy **rewrites** (not redirects) to an internal path: the tested path with `ab-code/<code>/` appended — `/wallets/find-wallet/` becomes `/en/wallets/find-wallet/ab-code/<code>/`. The visitor's address bar never changes. The coded segment sits _below_ the tested path rather than at the app root so the route keeps its own layouts; hoisting it would drop parallel slots (e.g. find-wallet's `@modal`) and break route interception inside the variant.
 3. That internal page was **prerendered at build time** — `generateStaticParams` emits one page per flag permutation — so the response is an edge cache hit, not a server render.
 4. In the browser, `ABTestTracker` pushes `AbTesting::enter` to Matomo with the experiment name and variant, and sets custom dimension 1 for segment queries. Opted-out visitors are skipped.
 
-The same fingerprint always hashes to the same bucket, so returning visitors get a consistent variant without cookies. On any failure (Matomo down, no experiment running, invalid code) everything falls through to the original page — a test can never break the site.
+The same fingerprint always hashes to the same bucket, so returning visitors get a consistent variant without cookies. On any failure (Matomo down, invalid code) everything falls through to the deployed page — a test can never break the site.
+
+**The proxy only rewrites while an experiment is actually running.** Registering a route doesn't change what visitors see until the Matomo experiment is active, and pausing or stopping it returns everyone to the deployed page immediately. This matters when the _variant_ is the shipped design and index 0 is code being tested against it (an old-vs-new rebuild, say): rewriting unconditionally would pin every visitor to index 0 and quietly serve the design you just replaced. Debug-override cookies still force a rewrite on dev and preview deploys so variants stay previewable before launch.
 
 ### Config propagation and latency
 
@@ -48,10 +50,10 @@ Route keys are locale-less canonical paths — the homepage is `/`, everything e
 
 ### 2. Create the coded page
 
-Mirror the page's path under `ab-code/[code]/`. It's a thin shell: verify the code, extract the variant index, render the real page.
+Add `ab-code/[code]/page.tsx` **inside** the tested route's directory. It's a thin shell: verify the code, extract the variant index, render the real page.
 
 ```tsx
-// app/[locale]/ab-code/[code]/wallets/page.tsx
+// app/[locale]/wallets/ab-code/[code]/page.tsx
 import { generatePermutations, getPrecomputed } from "flags/next"
 import { notFound } from "next/navigation"
 import { setRequestLocale } from "next-intl/server"
@@ -60,12 +62,12 @@ import type { Lang } from "@/lib/types"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
-import OriginalWalletsPage from "../../../wallets/page"
+import OriginalWalletsPage from "../../page"
 
 import { decodeABCode, encodeABCode } from "@/lib/ab-testing/constants"
 import { walletsFlags, walletsHeroFlag } from "@/lib/ab-testing/flags"
 
-export { generateMetadata } from "../../../wallets/page"
+export { generateMetadata } from "../../page"
 
 export async function generateStaticParams() {
   try {
@@ -119,18 +121,20 @@ const Page = async (props: {
   heroVariant?: number
 }) => {
   // ...
-  {heroVariant !== undefined ? (
-    <ABTest
-      testKey="WalletsHero"
-      variantIndex={heroVariant}
-      variants={[
-        <CurrentHero key="original" />,    // index 0 = Original
-        <RedesignedHero key="variant-a" />, // index 1 = first Matomo variation
-      ]}
-    />
-  ) : (
-    <CurrentHero />
-  )}
+  {
+    heroVariant !== undefined ? (
+      <ABTest
+        testKey="WalletsHero"
+        variantIndex={heroVariant}
+        variants={[
+          <CurrentHero key="original" />, // index 0 = Original
+          <RedesignedHero key="variant-a" />, // index 1 = first Matomo variation
+        ]}
+      />
+    ) : (
+      <CurrentHero />
+    )
+  }
 }
 ```
 
@@ -150,31 +154,32 @@ In the Matomo dashboard, create an A/B experiment named exactly like the `testKe
 
 An experiment buckets users only while it's **running** (and inside its date window, if set). A merely **created** experiment stays inactive unless it has an explicit `start_date` — so you can safely prepare experiments in the dashboard ahead of launch.
 
-To remove a finished test: delete the flag, the `abTestRoutes` entry, the coded page, and the `ABTest` wrapper.
+To remove a finished test: delete the flag, the `abTestRoutes` entry, the coded page, the `ABTest` wrapper, and any code kept alive only to serve the losing arm.
 
-## The two rules that silently break tests
+## The three rules that silently break tests
 
 1. **Names match exactly.** `testKey`, the flag's `key`, and the Matomo experiment name are the same string. A mismatch doesn't error — everyone quietly gets the original.
 2. **Order is the contract.** Variants pair with Matomo variations by array index, not by name. Don't insert a variation in the middle of a running experiment.
+3. **Element keys become variation names.** `ABTest` derives the name it reports to Matomo from each variant element's `key`, replacing hyphens with spaces and title-casing. So `key="new-catalog"` reports `"New Catalog"` — if the dashboard variation is `NewCatalog`, the enter events land under a name that doesn't exist. Write the key exactly as the Matomo variation is spelled.
 
 ## Environment variables
 
-| Variable | Purpose |
-| --- | --- |
-| `FLAGS_SECRET` | Signs/verifies precomputed codes. Required at build time to prerender variant pages (missing → pages render on demand) and at runtime in the proxy. Generate with `openssl rand -base64 32`. |
-| `MATOMO_API_TOKEN` | Fetches experiment config (`AbTesting.getAllExperiments`). Needs the "experiments" permission. |
-| `NEXT_PUBLIC_MATOMO_URL` / `NEXT_PUBLIC_MATOMO_SITE_ID` | Matomo instance and site. |
-| `USE_MOCK_EXPERIMENTS` | `true` = use `MOCK_EXPERIMENTS` instead of calling Matomo (local dev). |
+| Variable                                                | Purpose                                                                                                                                                                                      |
+| ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `FLAGS_SECRET`                                          | Signs/verifies precomputed codes. Required at build time to prerender variant pages (missing → pages render on demand) and at runtime in the proxy. Generate with `openssl rand -base64 32`. |
+| `MATOMO_API_TOKEN`                                      | Fetches experiment config (`AbTesting.getAllExperiments`). Needs the "experiments" permission.                                                                                               |
+| `NEXT_PUBLIC_MATOMO_URL` / `NEXT_PUBLIC_MATOMO_SITE_ID` | Matomo instance and site.                                                                                                                                                                    |
+| `USE_MOCK_EXPERIMENTS`                                  | `true` = use `MOCK_EXPERIMENTS` instead of calling Matomo (local dev).                                                                                                                       |
 
 ## Architecture map
 
-| File | Role |
-| --- | --- |
-| `proxy.ts` | Matches `abTestRoutes`, precomputes flags, rewrites to the coded path |
-| `src/lib/ab-testing/flags.ts` | `defineABFlag`, header fingerprinting (`identify`), the `abTestRoutes` map |
-| `src/lib/ab-testing/matomo-adapter.ts` | Fetches Matomo experiments, deterministic weighted assignment (FNV-1a), mocks |
-| `src/lib/ab-testing/constants.ts` | `encodeABCode`/`decodeABCode`, override-cookie prefix, `ab-code` segment |
-| `app/[locale]/ab-code/[code]/…` | One thin coded page per tested route |
-| `src/components/AB/ABTest.tsx` | Renders the chosen variant + tracker + debug panel |
-| `src/components/AB/TestTracker.tsx` | Pushes `AbTesting::enter` + custom dimension 1 to Matomo |
-| `src/components/AB/TestDebugPanel.tsx` | Dev/preview variant switcher via override cookies |
+| File                                   | Role                                                                              |
+| -------------------------------------- | --------------------------------------------------------------------------------- |
+| `proxy.ts`                             | Matches `abTestRoutes`, precomputes flags, appends `ab-code/<code>/` and rewrites |
+| `src/lib/ab-testing/flags.ts`          | `defineABFlag`, header fingerprinting (`identify`), the `abTestRoutes` map        |
+| `src/lib/ab-testing/matomo-adapter.ts` | Fetches Matomo experiments, deterministic weighted assignment (FNV-1a), mocks     |
+| `src/lib/ab-testing/constants.ts`      | `encodeABCode`/`decodeABCode`, override-cookie prefix, `ab-code` segment          |
+| `<tested route>/ab-code/[code]/`       | One thin coded page per tested route, nested so parent layouts stay active        |
+| `src/components/AB/ABTest.tsx`         | Renders the chosen variant + tracker + debug panel                                |
+| `src/components/AB/TestTracker.tsx`    | Pushes `AbTesting::enter` + custom dimension 1 to Matomo                          |
+| `src/components/AB/TestDebugPanel.tsx` | Dev/preview variant switcher via override cookies                                 |

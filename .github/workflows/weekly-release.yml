@@ -1,9 +1,9 @@
-name: Weekly Release
+name: Release
 
 on:
   schedule:
-    # Thursday 14:00 UTC year-round (11:00 ART; US/EU offsets shift with DST).
-    - cron: "0 14 * * 4"
+    # Tue + Thu 14:00 UTC year-round (11:00 ART; US/EU offsets shift with DST).
+    - cron: "0 14 * * 2,4"
   workflow_dispatch:
 
 permissions:
@@ -58,7 +58,7 @@ jobs:
         uses: ./.github/actions/discord-notify
         with:
           webhook: ${{ secrets.DISCORD_RELEASE_WEBHOOK_URL }}
-          message: ":pause_button: Weekly release skipped — ${{ steps.skip_check.outputs.reason }}  •  <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}>"
+          message: ":pause_button: Release skipped — ${{ steps.skip_check.outputs.reason }}  •  <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}>"
 
       - name: Setup pnpm + node
         if: steps.skip_check.outputs.skip == 'false'
@@ -81,9 +81,11 @@ jobs:
             - No version flag is provided — analyze the draft release and
               pick a version type yourself (the skill's Step 2 "If no flag
               provided" path). DO NOT prompt; just decide and log your
-              reasoning. Bias toward --minor for substantive weeks and
-              --patch for low-activity weeks; never pick --major without a
-              clear stack/framework change.
+              reasoning. Judge the cycle since the last published release,
+              which is now half a week — bias toward --minor for a
+              substantive cycle and --patch for a light one; expect --patch
+              to be the common case. Never pick --major without a clear
+              stack/framework change.
             - On any error, print the error and exit non-zero so the workflow
               fails and the team is notified.
 
@@ -123,7 +125,7 @@ jobs:
         with:
           webhook: ${{ secrets.DISCORD_RELEASE_WEBHOOK_URL }}
           message: |
-            :rocket: **Weekly release prepared: ${{ steps.capture_pr.outputs.version }}**  •  ${{ steps.capture_pr.outputs.url }}
+            :rocket: **Release prepared: ${{ steps.capture_pr.outputs.version }}**  •  ${{ steps.capture_pr.outputs.url }}
             Waiting for preview deploy + CI before review…
 
       - name: Announce prepare failure
@@ -132,7 +134,7 @@ jobs:
         with:
           webhook: ${{ secrets.DISCORD_RELEASE_WEBHOOK_URL }}
           message: |
-            :rotating_light: **Weekly release failed during `prepare`**  •  <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}>
+            :rotating_light: **Release failed during `prepare`**  •  <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}>
             No deploy PR was created. Needs a human to look.
 
   wait_and_review:
@@ -308,6 +310,6 @@ jobs:
           webhook: ${{ secrets.DISCORD_RELEASE_WEBHOOK_URL }}
           message_id: ${{ needs.prepare.outputs.discord_message_id }}
           message: |
-            :rotating_light: **Weekly release failed during `wait_and_review`**  •  ${{ needs.prepare.outputs.pr_url }}
+            :rotating_light: **Release failed during `wait_and_review`**  •  ${{ needs.prepare.outputs.pr_url }}
             Run: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}>
             PR is open but automation couldn't finish reviewing it. Needs a human.

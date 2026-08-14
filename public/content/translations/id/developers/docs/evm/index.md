@@ -91,3 +91,5 @@ Selama sepuluh tahun sejarah Ethereum, EVM telah mengalami beberapa revisi, dan 
 
 - [Memahami Spesifikasi EVM di Kertas Kuning](/developers/tutorials/yellow-paper-evm/) _– Panduan terarah tentang spesifikasi EVM formal dari Kertas Kuning Ethereum._
 - [Rekayasa Balik Kontrak](/developers/tutorials/reverse-engineering-a-contract/) _– Cara merekayasa balik kontrak pintar yang dikompilasi menggunakan opcode EVM._
+
+<QuizWidget quizKey="evm" />
