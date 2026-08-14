@@ -30,8 +30,10 @@ export interface IncrementalPlan {
   batches: PlannedBatch[]
   /** Total prompt bytes this file+locale will send if the plan runs */
   projectedBytes: number
-  /** Wire bytes of content actually being translated (drives the budget) */
+  /** Wire bytes of content being translated (drives the budget) */
   translatableBytes: number
+  /** Content bytes only, no envelope -- what the model actually renders */
+  translatableContentBytes: number
   translateCount: number
   budget: FileBudget
   overBudget: boolean
@@ -109,6 +111,10 @@ export function planIncrementalBatches(
     (sum, s) => sum + sectionWireBytes({ id: s.id, content: s.content || "" }),
     0
   )
+  const translatableContentBytes = translateSections.reduce(
+    (sum, s) => sum + Buffer.byteLength(s.content || "", "utf-8"),
+    0
+  )
   const budget = createFileBudget(`${filePath} (${locale})`, translatableBytes)
   const projectedBytes = planned.reduce((sum, p) => sum + p.bytes, 0)
 
@@ -116,6 +122,7 @@ export function planIncrementalBatches(
     batches: planned,
     projectedBytes,
     translatableBytes,
+    translatableContentBytes,
     translateCount: translateSections.length,
     budget,
     overBudget: projectedBytes > budget.limitBytes,

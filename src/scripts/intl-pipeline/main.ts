@@ -246,7 +246,12 @@ function printTokenSummary(
   // responses the per-language stats above never see.
   const metered = usageTotals()
   console.log(
-    `  Metered: ${metered.calls} call(s), $${metered.costUsd.toFixed(4)} against the $${runFuseUsd().toFixed(2)} run fuse`
+    `  Metered: ${metered.calls} call(s), $${metered.costUsd.toFixed(4)} against the $${runFuseUsd().toFixed(2)} run fuse` +
+      // Thinking tokens are billed as output. On the OpenRouter path they are
+      // inside the output column above; the Gemini SDK omits them entirely.
+      (metered.reasoningTokens
+        ? `, of which ${metered.reasoningTokens.toLocaleString("en-US")} reasoning token(s) (~$${((metered.reasoningTokens / 1_000_000) * OUTPUT_RATE_USD_PER_1M).toFixed(2)})`
+        : "")
   )
   console.log(`  Wall time: ${pipelineSecs}s`)
 }

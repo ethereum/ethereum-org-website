@@ -11,6 +11,12 @@
  *
  * Responses are shaped like the Gemini SDK's so the shared retry, validation,
  * and guard path in gemini.ts stays provider-agnostic.
+ *
+ * One accounting difference is NOT cosmetic: OpenRouter folds thinking tokens
+ * into completion_tokens (and bills them as output), while the Gemini SDK
+ * reports candidatesTokenCount excluding them. Run 31745* translated 2KB of
+ * English and was billed for 149K output tokens, nearly all reasoning -- so
+ * reasoning_tokens is captured and surfaced rather than left invisible.
  */
 
 import { INPUT_RATE_USD_PER_1M, OUTPUT_RATE_USD_PER_1M } from "../../constants"
@@ -30,6 +36,8 @@ export interface ProviderResponse {
   }>
   /** Provider-reported spend for this call, when available. */
   costUsd?: number
+  /** Thinking tokens, billed as output. Gemini's own SDK reports these separately. */
+  reasoningTokens?: number
 }
 
 interface OpenRouterCompletion {
@@ -42,6 +50,8 @@ interface OpenRouterCompletion {
     prompt_tokens?: number
     completion_tokens?: number
     cost?: number
+    cost_details?: { upstream_inference_cost?: number }
+    completion_tokens_details?: { reasoning_tokens?: number }
   }
   error?: { message?: string; code?: number }
 }
@@ -110,7 +120,8 @@ export async function generateViaOpenRouter(options: {
       model: modelId,
       messages: [{ role: "user", content: prompt }],
       temperature,
-      usage: { include: true },
+      // Usage accounting is always on; the old usage:{include:true} flag is
+      // deprecated and ignored. Cost and reasoning_tokens come back regardless.
       provider: {
         max_price: {
           prompt: INPUT_RATE_USD_PER_1M,
@@ -151,6 +162,10 @@ export async function generateViaOpenRouter(options: {
             : (choice?.finish_reason ?? "UNKNOWN").toUpperCase(),
       },
     ],
-    costUsd: body.usage?.cost,
+    // usage.cost is OpenRouter's own charge; cost_details.upstream_inference_cost
+    // is what the provider charged them. Prefer the former -- it is our bill.
+    costUsd:
+      body.usage?.cost ?? body.usage?.cost_details?.upstream_inference_cost,
+    reasoningTokens: body.usage?.completion_tokens_details?.reasoning_tokens,
   }
 }

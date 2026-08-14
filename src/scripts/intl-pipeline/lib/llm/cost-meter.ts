@@ -21,6 +21,7 @@ import {
 
 let inputTokens = 0
 let outputTokens = 0
+let reasoningTokens = 0
 let providerCostUsd = 0
 let calls = 0
 let fuseUsd = RUN_FUSE_USD
@@ -48,10 +49,12 @@ export class FileBudgetExceededError extends Error {
 export function recordUsage(
   input: number,
   output: number,
-  costUsd?: number
+  costUsd?: number,
+  reasoning?: number
 ): void {
   inputTokens += input
   outputTokens += output
+  reasoningTokens += reasoning ?? 0
   providerCostUsd +=
     costUsd ??
     (input / 1_000_000) * INPUT_RATE_USD_PER_1M +
@@ -67,9 +70,16 @@ export function usageTotals(): {
   calls: number
   inputTokens: number
   outputTokens: number
+  reasoningTokens: number
   costUsd: number
 } {
-  return { calls, inputTokens, outputTokens, costUsd: providerCostUsd }
+  return {
+    calls,
+    inputTokens,
+    outputTokens,
+    reasoningTokens,
+    costUsd: providerCostUsd,
+  }
 }
 
 export function runFuseUsd(): number {
@@ -148,6 +158,7 @@ export function createFileBudget(
 export function resetMeter(fuse: number = RUN_FUSE_USD): void {
   inputTokens = 0
   outputTokens = 0
+  reasoningTokens = 0
   providerCostUsd = 0
   calls = 0
   fuseUsd = fuse

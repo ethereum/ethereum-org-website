@@ -1403,7 +1403,8 @@ export async function callGeminiRaw(
         recordUsage(
           usage?.promptTokenCount || 0,
           usage?.candidatesTokenCount || 0,
-          response.costUsd
+          response.costUsd,
+          response.reasoningTokens
         )
 
         // Inspect response for non-obvious failure modes before accessing .text
@@ -1447,6 +1448,14 @@ export async function callGeminiRaw(
             `duration=${duration}s ` +
             `tokens_in=${usage?.promptTokenCount || 0} ` +
             `tokens_out=${usage?.candidatesTokenCount || 0}` +
+            // Thinking tokens are billed as output but are not translation;
+            // without this they are invisible in the per-call log.
+            (response.reasoningTokens
+              ? ` reasoning=${response.reasoningTokens}`
+              : "") +
+            (response.costUsd != null
+              ? ` cost=$${response.costUsd.toFixed(6)}`
+              : "") +
             (finishReason && finishReason !== "STOP"
               ? ` finishReason=${finishReason}`
               : "")

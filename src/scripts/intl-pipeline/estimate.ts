@@ -64,6 +64,22 @@ const LATIN_LOCALES = new Set([
 const bytesPerToken = (locale: string) =>
   LATIN_LOCALES.has(locale) ? 4.0 : 2.65
 
+// Translated output runs longer than its English source in tokens, badly so in
+// non-Latin scripts: the tokenizer is less efficient there. Ratio of output
+// tokens to English source bytes, measured across all 24 locales on run
+// 31745 (page-wallets-find-wallet.json).
+const outputTokensPerSourceByte = (locale: string) =>
+  LATIN_LOCALES.has(locale) ? 0.35 : 0.45
+
+// Gemini 3.1 Pro thinks before answering, and OpenRouter bills thinking as
+// output. That cost is per call and barely varies with how much text is being
+// translated: the run above averaged ~5,200 reasoning tokens per call while
+// translating 2KB of English. It dominates the output bill for small
+// incremental updates, so it is modelled per call rather than per byte.
+// Gemini-direct runs report output excluding thinking, so this over-estimates
+// there -- deliberately, since the tokens are generated either way.
+const REASONING_TOKENS_PER_CALL = 5_200
+
 interface Row {
   file: string
   locale: string
@@ -138,9 +154,11 @@ function planFull(
   // boilerplate for the full-translation prompt.
   const plannedBytes = Buffer.byteLength(file.content, "utf-8") + chunks * 4096
   const inputTokens = Math.round(plannedBytes / bytesPerToken(locale))
-  // Full translation returns the whole file, so output ~= input content size.
+  // Full translation renders the whole file, plus thinking per chunk.
   const outputTokens = Math.round(
-    Buffer.byteLength(file.content, "utf-8") / bytesPerToken(locale)
+    Buffer.byteLength(file.content, "utf-8") *
+      outputTokensPerSourceByte(locale) +
+      REASONING_TOKENS_PER_CALL * chunks
   )
   return {
     file: file.path,
@@ -242,9 +260,9 @@ async function main() {
       const inputTokens = Math.round(
         planned.projectedBytes / bytesPerToken(locale)
       )
-      // Output is the translated changed content only.
       const outputTokens = Math.round(
-        planned.translatableBytes / bytesPerToken(locale)
+        planned.translatableContentBytes * outputTokensPerSourceByte(locale) +
+          REASONING_TOKENS_PER_CALL * planned.batches.length
       )
       rows.push({
         file: file.path,
@@ -314,7 +332,7 @@ async function main() {
     `\n  ${fmt(rows.length)} file+locale plan(s), ${fmt(totalCalls)} LLM request(s), ${fmt(totalInput)} est. input tokens, ${fmt(Math.round(totalInput / Math.max(totalCalls, 1)))} per request`
   )
   console.log(
-    `  Rates: $${INPUT_RATE_USD_PER_1M}/1M input, $${OUTPUT_RATE_USD_PER_1M}/1M output. Token counts are byte-derived estimates; glossary bytes not modelled.`
+    `  Rates: $${INPUT_RATE_USD_PER_1M}/1M input, $${OUTPUT_RATE_USD_PER_1M}/1M output. Token counts are byte-derived estimates including ~${REASONING_TOKENS_PER_CALL.toLocaleString("en-US")} reasoning tokens per call; glossary bytes not modelled.`
   )
 
   if (refused.length > 0) {
