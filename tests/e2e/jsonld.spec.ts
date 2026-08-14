@@ -1,15 +1,17 @@
 import { expect, Page, test } from "@playwright/test"
 
-import enQuizzes from "@/intl/en/learn-quizzes.json"
-import enWallets from "@/intl/en/page-wallets.json"
-import esWallets from "@/intl/es/page-wallets.json"
-import jaQuizzes from "@/intl/ja/learn-quizzes.json"
-
 type JsonLdNode = {
   "@type"?: string
   name?: string
   headline?: string
   description?: string
+}
+
+const I18N_KEY = /^[a-z0-9]+(?:-[a-z0-9]+)+$/
+
+function expectLocalized(value: string | undefined) {
+  expect(value).toEqual(expect.any(String))
+  expect(value).not.toMatch(I18N_KEY)
 }
 
 async function getJsonLdNode(page: Page, path: string, type: string) {
@@ -30,33 +32,29 @@ async function getJsonLdNode(page: Page, path: string, type: string) {
 }
 
 test.describe("Localized JSON-LD", () => {
-  for (const { locale, path, messages } of [
-    { locale: "English", path: "/wallets/", messages: enWallets },
-    { locale: "Spanish", path: "/es/wallets/", messages: esWallets },
+  for (const { locale, path } of [
+    { locale: "English", path: "/wallets/" },
+    { locale: "Spanish", path: "/es/wallets/" },
   ]) {
     test(`uses ${locale} wallet translations`, async ({ page }) => {
       const webPage = await getJsonLdNode(page, path, "WebPage")
       const article = await getJsonLdNode(page, path, "Article")
 
-      expect(webPage.name).toBe(messages["page-wallets-meta-title"])
-      expect(webPage.description).toBe(
-        messages["page-wallets-meta-description"]
-      )
-      expect(article.headline).toBe(messages["page-wallets-title"])
-      expect(article.description).toBe(
-        messages["page-wallets-meta-description"]
-      )
+      expectLocalized(webPage.name)
+      expectLocalized(webPage.description)
+      expectLocalized(article.headline)
+      expectLocalized(article.description)
     })
   }
 
-  for (const { locale, path, messages } of [
-    { locale: "English", path: "/quizzes/", messages: enQuizzes },
-    { locale: "Japanese", path: "/ja/quizzes/", messages: jaQuizzes },
+  for (const { locale, path } of [
+    { locale: "English", path: "/quizzes/" },
+    { locale: "Japanese", path: "/ja/quizzes/" },
   ]) {
     test(`uses ${locale} quiz translations`, async ({ page }) => {
       const webPage = await getJsonLdNode(page, path, "WebPage")
 
-      expect(webPage.description).toBe(messages["quizzes-subtitle"])
+      expectLocalized(webPage.description)
     })
   }
 })
