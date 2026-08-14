@@ -1,0 +1,65 @@
+name: JSON-LD validation
+
+on:
+  pull_request:
+    branches: [dev, master, staging, "test/**"]
+    types: [opened, synchronize, ready_for_review]
+    paths:
+      - "app/**/page-jsonld.tsx"
+      - "src/components/PageJsonLD.tsx"
+      - "src/lib/jsonld/**"
+      - "src/lib/utils/url.ts"
+      - "tests/e2e/jsonld.spec.ts"
+      - "tests/unit/jsonld.spec.ts"
+      - ".github/workflows/jsonld-validation.yml"
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  unit:
+    name: JSON-LD invariant unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/setup-pnpm-node
+      - run: pnpm exec playwright test --project=unit tests/unit/jsonld.spec.ts
+        env:
+          USE_MOCK_DATA: "true"
+
+  preview:
+    name: JSON-LD preview scan (informational)
+    needs: unit
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    env:
+      DEPLOY_PREVIEW_URL: https://deploy-preview-${{ github.event.pull_request.number }}--ethereumorg.netlify.app
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/setup-pnpm-node
+      - name: Install Playwright with browser deps
+        run: npx playwright install --with-deps chromium
+      - name: Wait for Netlify deploy preview
+        id: netlify_wait
+        uses: ./.github/actions/wait-for-pr-checks
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          pr_number: ${{ github.event.pull_request.number }}
+          check_name: netlify/ethereumorg/deploy-preview
+      - name: Scan representative pages
+        if: steps.netlify_wait.outputs.outcome == 'success'
+        run: pnpm exec playwright test --project=e2e tests/e2e/jsonld.spec.ts
+        env:
+          PLAYWRIGHT_TEST_BASE_URL: ${{ env.DEPLOY_PREVIEW_URL }}
+      - name: Report missing preview
+        if: steps.netlify_wait.outputs.outcome != 'success'
+        run: |
+          echo "::warning::Netlify preview was not ready: ${{ steps.netlify_wait.outputs.outcome }}"
+          exit 1
+      - name: Upload scan results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jsonld-playwright-results
+          path: tests/__results__
+          retention-days: 7
