@@ -129,7 +129,7 @@
   "page-find-wallet-methodology-criterion-ethereum-focused": "Está enfocada en Ethereum, con Ethereum o una capa 2 configurada como la red predeterminada.",
   "page-find-wallet-methodology-verification": "Los listados no son estáticos. Se requiere que los proveedores de billeteras vuelvan a enviar la información cada seis meses. Si un equipo no responde, eliminamos la billetera. Esto mantiene el directorio preciso a medida que los productos evolucionan.",
   "page-find-wallet-methodology-filters": "Los interruptores de filtro en esta página (código abierto, autocustodia, soporte para billetera de hardware y otros) reflejan los atributos rastreados por billetera. Cada listado también muestra la fecha en que se verificó su información por última vez.",
-  "page-find-wallet-fee-row-label": "Por qué pagas",
+  "page-find-wallet-fee-row-label": "Por lo que pagas",
   "page-find-wallet-fee-row-tooltip": "Tarifas que el proveedor de la billetera cobra por sus propios servicios, como intercambios o el dispositivo en sí. Las tarifas de transacción de la red son establecidas por Ethereum, no por la billetera.",
   "page-find-wallet-fee-item": "{label}: {value}",
   "page-find-wallet-fee-label-buy": "Tarifa de compra",

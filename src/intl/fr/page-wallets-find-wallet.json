@@ -129,7 +129,7 @@
   "page-find-wallet-methodology-criterion-ethereum-focused": "Être axé sur Ethereum, avec Ethereum ou une couche 2 défini comme réseau par défaut.",
   "page-find-wallet-methodology-verification": "Les référencements ne sont pas statiques. Les fournisseurs de portefeuilles sont tenus de soumettre à nouveau leurs informations tous les six mois. Si une équipe ne répond pas, nous retirons le portefeuille. Cela permet de garder l'annuaire précis à mesure que les produits évoluent.",
   "page-find-wallet-methodology-filters": "Les boutons de filtrage sur cette page (open source, auto-garde, prise en charge des portefeuilles matériels, et autres) reflètent les attributs suivis pour chaque portefeuille. Chaque référencement indique également la date à laquelle ses informations ont été vérifiées pour la dernière fois.",
-  "page-find-wallet-fee-row-label": "Ce que vous payez",
+  "page-find-wallet-fee-row-label": "Ce pour quoi vous payez",
   "page-find-wallet-fee-row-tooltip": "Frais facturés par le fournisseur du portefeuille pour ses propres services, tels que les échanges ou l'appareil lui-même. Les frais de transaction du réseau sont fixés par Ethereum, et non par le portefeuille.",
   "page-find-wallet-fee-item": "{label} : {value}",
   "page-find-wallet-fee-label-buy": "Frais d'achat",
