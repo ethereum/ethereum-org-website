@@ -44,3 +44,21 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
 - `Geth` -> `గెత్` in `transactions` (the only Latin instance in the whole te tree). `common.json` zero-knowledge-proofs `రుజువులు` -> `నిరూపణలు`, matching the glossary, the page title and the zkp quiz keys. **Its worst historical failure mode -- reported-speech negation flipping via `-మని` -- did NOT recur** despite targeted stress-testing.
 - Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.4/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:** none -- no critical issues.
+
+**Open (native call needed):**
+
+- `new-to-crypto-hero-description` -> `ఎథీరియంకు కొత్తా?` is a bare colloquial predicate with no honorific while the rest of the string continues in formal మీరు/-ండి.
+- `meta-description-fallback` places the dative suffix OUTSIDE the plural block, so the singular branch composes to `నెట్‌వర్క్కు`, missing the ZWNJ the locale uses everywhere else (`నెట్‌వర్క్‌కు`). Plural branch is correct.
+- `crops-secure` -> `సురక్షితమైనది` (sg `-ది`) beside `crops-private` = `ప్రైవేట్` (bare) and `advanced` = `అధునాతనమైనవి` (pl `-వి`): three shapes for one label class.
+- `fee-qualifier-of-rewards` -> `రివార్డ్` vs the tree-dominant `ప్రతిఫలాలు` (#56).
+
+**Notes:**
+
+- te's documented `-మని` reported-speech negation flip does not appear anywhere in this file.
+- The `ఫీజు`/`రుసుము` fee-word split predates this PR.

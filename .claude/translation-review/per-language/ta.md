@@ -71,3 +71,24 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
 - Cross-script contamination fixed: a Bengali word `বিপুল` inside Tamil prose in `zero-knowledge-proofs` -> `பெரும்`. Open: `shared key` -> `விசை` where the glossary bare entry is `திறவுகோல்` (3 sites); `trade-offs` -> the swap sense `பரிமாற்றம்` (2 sites); `Twitter` left Latin against the glossary; `exposure` flattened to "obtain".
 - Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 8.1/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:**
+
+- `fee-qualifier-stablecoins` -> `ஸ்டேபிள்காயின்களுக்கு` and `-stablecoins-lower-l2` -> `ஸ்டேபிள்காயின்கள்` (critical: ETHGlossary ta is `ஸ்டேபிள்காயின்`, and the ta tree carries 155 occurrences of it vs 7 of the descriptive `நிலையான நாணய-` form used here, with no gloss).
+
+**Open (native call needed):**
+
+- `fee-label-shield-unshield` -> `பாதுகாக்கும்/பாதுகாப்பை நீக்கும் கட்டணம்` collides with this page's own `security` = `பாதுகாப்பு` and `crops-secure` = `பாதுகாப்பானவை`, so the row reads "protection fee / protection-removal fee". **Deliberately NOT fixed** -- see notes.
+- Three imperative registers across sibling controls: `காட்டு` (bare familiar), `காண்க`/`உலாவுக` (literary), `தேடுங்கள்`/`பெறுங்கள்` (polite). The file's pre-existing buttons use bare stems.
+- `fee-free-tier-plans` -> `இலவச அடுக்கு` for "free tier" collides with glossary-mandated `அடுக்கு 2` for layer 2. Change the tier word, never the layer one.
+- `fee-qualifier-lower-with-premium` leaves Latin `Premium` -- the only Latin word in its bloc's new keys; house policy says transliterate, but no glossary entry exists.
+
+**Notes:**
+
+- **The shield/unshield finding was downgraded from critical to warning on evidence (#55).** The ta tree renders "shielded" as `பாதுகாக்கப்பட்ட` in 29 places -- including its own translation of `next-great-wallet-private/index.md`, the Railgun privacy article -- and `ஷீல்ட்` has ZERO precedent. Coining a transliteration against 29 established occurrences would be an unfounded fix. The real fix is a glossary entry (#57).
+- Glossary-mandated native forms are all honored and must NOT be "fixed": wallet = பணப்பை, token = வில்லை, node = கணு, network = பிணையம், staking = பங்குவைத்தல்.
+- `node` split: the new key uses glossary `கணு`; pre-existing `rpc-importing-desc` uses `முனை`. The drift is on the OLD line.

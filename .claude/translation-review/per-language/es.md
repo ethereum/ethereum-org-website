@@ -23,3 +23,21 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
 - Untranslated English `banks` -> `bancos`, and `Merge` -> `Fusión` (ETHGlossary: The Merge => La Fusión) in `common.json`. `gatekeeper` -> `guardián`, un-collapsing it from `intermediario` (middleman) per #47. Open: tú/usted split across the file set; decimal period-vs-comma mixing on the same statistic in 3 files.
 - Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.2/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:**
+
+- `fee-row-label` `Por qué pagas` -> `Por lo que pagas` (critical-adjacent: `por qué` is the interrogative "why", so the fee header read "Why do you pay"). All four sibling Romance locales produced the "for what" form.
+
+**Open (native call needed):**
+
+- `nfts-hero-description` -> `Ve, colecciona y gestiona` -- `Ve` is ambiguous between *ver* and the imperative of *ir*; prefer `Visualiza`.
+- `hardware-hero-description` -> `¿Mantienes a largo plazo?` is object-less *mantener*.
+- `monedas estables` vs the site-dominant `stablecoins` (144 vs 51 in `page-stablecoins.json`); not a glossary term, both permissible.
+
+**Notes:**
+
+- Full glossary compliance on all load-bearing terms; `blindaje/desblindaje` is the correct privacy-pool reading of shield/unshield and the model the pt-br fix was based on.
