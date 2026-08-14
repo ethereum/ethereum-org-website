@@ -15,7 +15,7 @@ permissions:
   issues: read
 engine:
   id: claude
-  model: claude-sonnet-5
+  model: claude-sonnet-5?effort=medium
 network: defaults
 strict: true
 timeout-minutes: 5
