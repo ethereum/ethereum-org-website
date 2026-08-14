@@ -1397,14 +1397,27 @@ export async function callGeminiRaw(
         const usage = response.usageMetadata
         const duration = ((Date.now() - startTime) / 1000).toFixed(1)
 
+        // Thinking tokens are billed as output by both providers but reported
+        // differently: OpenRouter folds them into completion_tokens, while the
+        // Gemini SDK keeps them out of candidatesTokenCount and reports them as
+        // thoughtsTokenCount. Normalize to billable output so the meter, the
+        // fuse, and the per-language summary all reflect the invoice.
+        const reasoningTokens =
+          response.reasoningTokens ?? usage?.thoughtsTokenCount ?? 0
+        const visibleOutput = usage?.candidatesTokenCount || 0
+        const billableOutput =
+          LLM_PROVIDER === "openrouter"
+            ? visibleOutput
+            : visibleOutput + reasoningTokens
+
         // Meter every billed call, including ones that come back blocked or
         // empty below -- those still charge for the prompt. costUsd is the
         // provider's own figure when it reports one.
         recordUsage(
           usage?.promptTokenCount || 0,
-          usage?.candidatesTokenCount || 0,
+          billableOutput,
           response.costUsd,
-          response.reasoningTokens
+          reasoningTokens
         )
 
         // Inspect response for non-obvious failure modes before accessing .text
@@ -1447,12 +1460,10 @@ export async function callGeminiRaw(
           `[${ts()}] [gemini] RESPONSE model=${modelId} ${ctx} ` +
             `duration=${duration}s ` +
             `tokens_in=${usage?.promptTokenCount || 0} ` +
-            `tokens_out=${usage?.candidatesTokenCount || 0}` +
+            `tokens_out=${visibleOutput}` +
             // Thinking tokens are billed as output but are not translation;
             // without this they are invisible in the per-call log.
-            (response.reasoningTokens
-              ? ` reasoning=${response.reasoningTokens}`
-              : "") +
+            (reasoningTokens ? ` reasoning=${reasoningTokens}` : "") +
             (response.costUsd != null
               ? ` cost=$${response.costUsd.toFixed(6)}`
               : "") +
@@ -1474,7 +1485,7 @@ export async function callGeminiRaw(
           text,
           tokensUsed: {
             input: usage?.promptTokenCount || 0,
-            output: usage?.candidatesTokenCount || 0,
+            output: billableOutput,
           },
         }
       } catch (error) {

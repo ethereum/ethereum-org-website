@@ -76,8 +76,8 @@ const outputTokensPerSourceByte = (locale: string) =>
 // translated: the run above averaged ~5,200 reasoning tokens per call while
 // translating 2KB of English. It dominates the output bill for small
 // incremental updates, so it is modelled per call rather than per byte.
-// Gemini-direct runs report output excluding thinking, so this over-estimates
-// there -- deliberately, since the tokens are generated either way.
+// Both transports now report thinking: OpenRouter inside completion_tokens,
+// Gemini via thoughtsTokenCount, so this applies to either.
 const REASONING_TOKENS_PER_CALL = 5_200
 
 interface Row {

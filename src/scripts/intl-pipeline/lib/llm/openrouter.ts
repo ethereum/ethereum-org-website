@@ -29,6 +29,8 @@ export interface ProviderResponse {
   usageMetadata?: {
     promptTokenCount?: number
     candidatesTokenCount?: number
+    /** Gemini SDK: thinking tokens, excluded from candidatesTokenCount but billed */
+    thoughtsTokenCount?: number
   }
   candidates?: Array<{
     finishReason?: string
