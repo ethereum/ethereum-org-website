@@ -2247,7 +2247,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/thenameisdevair"><img src="https://avatars.githubusercontent.com/u/172976243?v=4?s=100" width="100px;" alt="Devair"/><br /><sub><b>Devair</b></sub></a><br /><a href="#maintenance-thenameisdevair" title="Maintenance">🚧</a></td>
     </tr>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/byt61"><img src="https://avatars.githubusercontent.com/u/271805600?v=4?s=100" width="100px;" alt="byt61"/><br /><sub><b>byt61</b></sub></a><br /><a href="#maintenance-byt61" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/byt61"><img src="https://avatars.githubusercontent.com/u/271805600?v=4?s=100" width="100px;" alt="byt61"/><br /><sub><b>byt61</b></sub></a><br /><a href="#maintenance-byt61" title="Maintenance">🚧</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Abyt61" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
