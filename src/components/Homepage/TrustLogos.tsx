@@ -66,7 +66,7 @@ const TrustLogos = async ({
     >
       <div className="relative shrink-0 md:w-96 lg:w-128">
         <div className="relative min-h-[400px] md:min-h-[500px] lg:min-h-[700px]">
-          <div className="absolute inset-0 w-full overflow-hidden rounded-4xl">
+          <div className="absolute inset-0 w-full overflow-hidden rounded-4xl" aria-hidden="true">
             <picture>
               <source
                 media={`(min-width: ${breakpointAsNumber["md"]}px)`}
