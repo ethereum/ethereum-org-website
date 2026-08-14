@@ -27,7 +27,36 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-05",
-    "runs_seen": 7
+    "runs_seen": 8
+  },
+  {
+    "item": "Issue #18928",
+    "intent": "External-link Matomo events fire unreliably (requestIdleCallback throttled)",
+    "state": "waiting-on-contributor",
+    "recommended_disposition": "verify_then_merge",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Merge fix PR #19063"
+      }
+    ],
+    "impact": "high",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "PR #19063"
+    ],
+    "owner_lane": "code",
+    "confidence": 0.8,
+    "evidence": [
+      "konopkja bug, no team reply",
+      "fix PR #19063 open + green",
+      "349 vs 14,629 events measured"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-08-14",
+    "runs_seen": 1
   },
   {
     "item": "Issue #18967",
@@ -62,14 +91,14 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-05",
-    "runs_seen": 6
+    "runs_seen": 7
   },
   {
     "item": "Issue #18995 (SEO JSON-LD/SSR cluster)",
     "intent": "konopkja SEO audit; 5 green review-only fix PRs plus 1 red",
     "state": "verify-then-merge",
     "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "Run one SEO review pass on the 5 green fixes now vs drip",
+    "next_human_decision": "Clear the 5 green SEO fixes in one pass; #19022 needs one wackerow change, #19001 red",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -80,23 +109,24 @@
     "effort_to_unblock": "small",
     "risk": "low",
     "related_items": [
-      "PR #19022",
-      "PR #19017",
-      "PR #19029",
       "PR #19044",
+      "PR #19029",
       "PR #19043",
+      "PR #19017",
+      "PR #19058",
+      "PR #19022",
       "PR #19001"
     ],
     "owner_lane": "code",
     "confidence": 0.85,
     "evidence": [
-      "5 green e2e-tested fixes",
-      "#19022 raw i18n keys + #19029 no lastmod = live prod bugs",
+      "5 green e2e-tested fixes incl new #19058",
+      "#19022 got CHANGES_REQUESTED 08-14",
       "#19001 still red"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-10",
-    "runs_seen": 2
+    "runs_seen": 1
   },
   {
     "item": "Issue #19019",
@@ -123,7 +153,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-11",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "Issue #19031",
@@ -153,7 +183,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-11",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "Issue #19039",
@@ -181,7 +211,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "Issue #19042",
@@ -207,7 +237,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "Issue #19047",
@@ -235,63 +265,36 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
-    "item": "Issue #19051",
-    "intent": "isDateReached is inverted (future dates report reached)",
-    "state": "waiting-on-contributor",
-    "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "Land fix PR #19052 once review notes addressed",
-    "waiting_on": [
-      {
-        "actor": "contributor",
-        "action": "Address wackerow's JS review on #19052"
-      }
-    ],
-    "impact": "medium",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "PR #19052"
-    ],
-    "owner_lane": "code",
-    "confidence": 0.75,
-    "evidence": [
-      "self-reported bug w/ repro",
-      "fix PR #19052 open",
-      "wackerow requested changes 08-13"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-08-13",
-    "runs_seen": 1
-  },
-  {
-    "item": "Issue #19056",
-    "intent": "OpenChainBench dev-tool suggestion, filed twice",
-    "state": "suggest-close",
-    "recommended_disposition": "close",
-    "next_human_decision": "",
+    "item": "Issue #19060",
+    "intent": "find-wallet: rename Privacy filter + add graded usage_tracking for 48 wallets",
+    "state": "decision-needed",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "Accept rename + graded No-usage-tracking filter, or fold into #19042 taxonomy pass",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Close as duplicate of #19055"
+        "action": "Product/design call on taxonomy"
       }
     ],
-    "impact": "low",
-    "effort_to_unblock": "small",
+    "impact": "medium",
+    "effort_to_unblock": "medium",
     "risk": "low",
     "related_items": [
-      "Issue #19055"
+      "PR #19062",
+      "Issue #19042"
     ],
     "owner_lane": "product",
-    "confidence": 0.75,
+    "confidence": 0.6,
     "evidence": [
-      "labelled duplicate",
-      "same tool as #19055 by same author"
+      "konopkja proposal w/ 48-wallet data",
+      "impl PR #19062 open + green",
+      "overlaps #19042"
     ],
     "analyzed_sha": null,
-    "first_seen": "2026-08-13",
+    "first_seen": "2026-08-14",
     "runs_seen": 1
   },
   {
@@ -318,7 +321,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-07",
-    "runs_seen": 5
+    "runs_seen": 6
   },
   {
     "item": "PR #18876",
@@ -347,7 +350,7 @@
     ],
     "analyzed_sha": "470e609",
     "first_seen": "2026-08-04",
-    "runs_seen": 8
+    "runs_seen": 9
   },
   {
     "item": "PR #18896",
@@ -377,7 +380,7 @@
     ],
     "analyzed_sha": "3948c50",
     "first_seen": "2026-08-05",
-    "runs_seen": 7
+    "runs_seen": 8
   },
   {
     "item": "PR #18918",
@@ -406,7 +409,7 @@
     ],
     "analyzed_sha": "ba23523",
     "first_seen": "2026-08-04",
-    "runs_seen": 8
+    "runs_seen": 9
   },
   {
     "item": "PR #18966",
@@ -433,7 +436,7 @@
     ],
     "analyzed_sha": "f55eb85",
     "first_seen": "2026-08-05",
-    "runs_seen": 7
+    "runs_seen": 8
   },
   {
     "item": "PR #18969",
@@ -461,7 +464,7 @@
     ],
     "analyzed_sha": "a41a81f",
     "first_seen": "2026-08-05",
-    "runs_seen": 6
+    "runs_seen": 7
   },
   {
     "item": "PR #18970",
@@ -489,7 +492,7 @@
     ],
     "analyzed_sha": "40c5767",
     "first_seen": "2026-08-06",
-    "runs_seen": 6
+    "runs_seen": 7
   },
   {
     "item": "PR #18971",
@@ -517,7 +520,7 @@
     ],
     "analyzed_sha": "f2422df",
     "first_seen": "2026-08-06",
-    "runs_seen": 6
+    "runs_seen": 7
   },
   {
     "item": "PR #18985",
@@ -545,7 +548,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-06",
-    "runs_seen": 6
+    "runs_seen": 7
   },
   {
     "item": "PR #18987",
@@ -573,7 +576,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-06",
-    "runs_seen": 6
+    "runs_seen": 7
   },
   {
     "item": "PR #18988",
@@ -601,7 +604,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-06",
-    "runs_seen": 6
+    "runs_seen": 7
   },
   {
     "item": "PR #18989",
@@ -629,7 +632,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-06",
-    "runs_seen": 6
+    "runs_seen": 7
   },
   {
     "item": "PR #18991",
@@ -657,7 +660,7 @@
     ],
     "analyzed_sha": "3d8663b",
     "first_seen": "2026-08-07",
-    "runs_seen": 5
+    "runs_seen": 6
   },
   {
     "item": "PR #18993",
@@ -685,7 +688,7 @@
     ],
     "analyzed_sha": "1a59814",
     "first_seen": "2026-08-07",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "PR #18999",
@@ -714,7 +717,7 @@
     ],
     "analyzed_sha": "74b1f47",
     "first_seen": "2026-08-10",
-    "runs_seen": 4
+    "runs_seen": 5
   },
   {
     "item": "PR #19001",
@@ -743,7 +746,7 @@
     ],
     "analyzed_sha": "9a02958",
     "first_seen": "2026-08-07",
-    "runs_seen": 5
+    "runs_seen": 6
   },
   {
     "item": "PR #19016",
@@ -774,7 +777,7 @@
     ],
     "analyzed_sha": "399e55c",
     "first_seen": "2026-08-10",
-    "runs_seen": 4
+    "runs_seen": 5
   },
   {
     "item": "PR #19017",
@@ -803,18 +806,18 @@
     ],
     "analyzed_sha": "19699bd",
     "first_seen": "2026-08-10",
-    "runs_seen": 4
+    "runs_seen": 5
   },
   {
     "item": "PR #19022",
     "intent": "Localize wallets/quizzes JSON-LD (fixes #18979)",
-    "state": "blocked",
-    "recommended_disposition": "verify_then_merge",
+    "state": "waiting-on-contributor",
+    "recommended_disposition": "request_changes",
     "next_human_decision": "",
     "waiting_on": [
       {
-        "actor": "maintainer",
-        "action": "Review; part of SEO batch"
+        "actor": "contributor",
+        "action": "Address wackerow's one inline request"
       }
     ],
     "impact": "high",
@@ -827,13 +830,13 @@
     "owner_lane": "code",
     "confidence": 0.82,
     "evidence": [
-      "fixes live prod bug: raw i18n keys as JSON-LD",
-      "CI SUCCESS, BLOCKED",
-      "ships e2e"
+      "wackerow CHANGES_REQUESTED 08-14 w/ 1 inline",
+      "CI SUCCESS",
+      "SEO cluster"
     ],
     "analyzed_sha": "1a86a97",
     "first_seen": "2026-08-10",
-    "runs_seen": 4
+    "runs_seen": 1
   },
   {
     "item": "PR #19027",
@@ -861,7 +864,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-11",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "PR #19029",
@@ -891,7 +894,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-11",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "PR #19032",
@@ -917,7 +920,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-11",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "PR #19035",
@@ -944,7 +947,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-11",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "PR #19040",
@@ -973,7 +976,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "PR #19041",
@@ -1002,7 +1005,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "PR #19043",
@@ -1032,7 +1035,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "PR #19044",
@@ -1062,37 +1065,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 2
-  },
-  {
-    "item": "PR #19046",
-    "intent": "Remove dead showLastUpdatedInHero config (fixes #19025)",
-    "state": "decision-needed",
-    "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "Did merged #19026 already fix #19025, or is this showLastUpdatedInHero removal still needed?",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Verify vs merged #19026; merge or close"
-      }
-    ],
-    "impact": "medium",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "Issue #19025",
-      "PR #19026"
-    ],
-    "owner_lane": "code",
-    "confidence": 0.6,
-    "evidence": [
-      "rival #19026 merged",
-      "byt61 grep-refuted the duplicate flag",
-      "green, 3 files"
-    ],
-    "analyzed_sha": "080df80",
-    "first_seen": "2026-08-13",
-    "runs_seen": 1
+    "runs_seen": 3
   },
   {
     "item": "PR #19048",
@@ -1121,7 +1094,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "PR #19050",
@@ -1148,36 +1121,7 @@
     ],
     "analyzed_sha": "807291a",
     "first_seen": "2026-08-13",
-    "runs_seen": 1
-  },
-  {
-    "item": "PR #19052",
-    "intent": "Correct inverted isDateReached logic (fixes #19051)",
-    "state": "waiting-on-contributor",
-    "recommended_disposition": "request_changes",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "contributor",
-        "action": "Apply wackerow's JS simplifications, green the check"
-      }
-    ],
-    "impact": "medium",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "Issue #19051"
-    ],
-    "owner_lane": "code",
-    "confidence": 0.78,
-    "evidence": [
-      "wackerow CHANGES_REQUESTED 08-13",
-      "CI pending",
-      "real inverted-logic bug w/ repro"
-    ],
-    "analyzed_sha": "9b99532",
-    "first_seen": "2026-08-13",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #19053",
@@ -1204,7 +1148,7 @@
     ],
     "analyzed_sha": "6895ceb",
     "first_seen": "2026-08-13",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #19057",
@@ -1231,6 +1175,231 @@
     ],
     "analyzed_sha": "ee6b214",
     "first_seen": "2026-08-13",
+    "runs_seen": 2
+  },
+  {
+    "item": "PR #19058",
+    "intent": "Remove fabricated FAQPage JSON-LD from /what-is-ethereum (fixes #18980)",
+    "state": "blocked",
+    "recommended_disposition": "verify_then_merge",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Review; part of SEO batch"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "Issue #18980",
+      "Issue #18995 (SEO JSON-LD/SSR cluster)"
+    ],
+    "owner_lane": "code",
+    "confidence": 0.8,
+    "evidence": [
+      "4 hardcoded English answers not on page",
+      "1 file, CI SUCCESS, BLOCKED",
+      "Google retired FAQ rich results 2023"
+    ],
+    "analyzed_sha": "9dcf47d",
+    "first_seen": "2026-08-14",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19059",
+    "intent": "Derive network-upgrade facts from Forkcast (data layer + sync script)",
+    "state": "blocked",
+    "recommended_disposition": "verify_then_merge",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Review schema/normalizer; assign reviewer"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "tooling",
+    "confidence": 0.75,
+    "evidence": [
+      "team, 14 unit tests, CI SUCCESS",
+      "nothing imports it yet = no runtime surface",
+      "fixes recurring roadmap drift"
+    ],
+    "analyzed_sha": "3ef0e71",
+    "first_seen": "2026-08-14",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19062",
+    "intent": "Rename Privacy filter + add graded usage_tracking (fixes #19060)",
+    "state": "blocked",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "Accept rename + graded filter, or fold into #19042",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Product review of taxonomy change"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "medium",
+    "risk": "low",
+    "related_items": [
+      "Issue #19060",
+      "Issue #19042"
+    ],
+    "owner_lane": "product",
+    "confidence": 0.6,
+    "evidence": [
+      "green, looks-mergeable, 6 files",
+      "touches ~50 wallets data + new filter",
+      "BLOCKED review-only"
+    ],
+    "analyzed_sha": "d8552fe",
+    "first_seen": "2026-08-14",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19063",
+    "intent": "Fire external-link custom events synchronously (fixes #18928)",
+    "state": "blocked",
+    "recommended_disposition": "verify_then_merge",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Verify no double-fire, then merge"
+      }
+    ],
+    "impact": "high",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "Issue #18928"
+    ],
+    "owner_lane": "code",
+    "confidence": 0.82,
+    "evidence": [
+      "confirmed prod undercount 349 vs 14,629",
+      "green, 2 files, BLOCKED review-only",
+      "shared pushMatomoEvent helper"
+    ],
+    "analyzed_sha": "ee2b831",
+    "first_seen": "2026-08-14",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19067",
+    "intent": "Fix duplicate-word typo in bug-bounty FAQ (en source string)",
+    "state": "blocked",
+    "recommended_disposition": "merge",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Approve; block is missing review"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "content",
+    "confidence": 0.8,
+    "evidence": [
+      "1 en JSON string, green",
+      "pipeline propagates locales",
+      "BLOCKED review-only"
+    ],
+    "analyzed_sha": "7b347f1",
+    "first_seen": "2026-08-14",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19068",
+    "intent": "Routine intl-pipeline output (find-wallet, 24 locales)",
+    "state": "verify-then-merge",
+    "recommended_disposition": "merge",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Merge (CLEAN)"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "translation",
+    "confidence": 0.85,
+    "evidence": [
+      "wackerow team, mergeState CLEAN",
+      "48 files, no hand-edits leaked",
+      "CI SUCCESS"
+    ],
+    "analyzed_sha": "7b939b4",
+    "first_seen": "2026-08-14",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19069",
+    "intent": "Remove dead GitPOAP references (gitpoap.io down 08-05)",
+    "state": "blocked",
+    "recommended_disposition": "request_changes",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "contributor",
+        "action": "Re-apply to source files, fix dangling t() calls"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "medium",
+    "related_items": [
+      "PR #19057"
+    ],
+    "owner_lane": "content",
+    "confidence": 0.7,
+    "evidence": [
+      "ai needs-work: edits hit translated files not sources",
+      "dangling t() calls",
+      "51 files"
+    ],
+    "analyzed_sha": "a3232d8",
+    "first_seen": "2026-08-14",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19070",
+    "intent": "Fix broken X share-results link (404 on %23quiz) on /quizzes",
+    "state": "blocked",
+    "recommended_disposition": "merge",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Approve; block is missing review"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "code",
+    "confidence": 0.8,
+    "evidence": [
+      "1 file, green, BLOCKED review-only",
+      "double-encoded #quiz produced 404"
+    ],
+    "analyzed_sha": "7e20472",
+    "first_seen": "2026-08-14",
     "runs_seen": 1
   }
 ]
