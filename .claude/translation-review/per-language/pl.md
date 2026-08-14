@@ -50,3 +50,20 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
 - `receipt` -> `pokwitowanie` in both `receipts_root` table rows (was `paragon`, a till receipt) -- glamsterdam and learn-quizzes already had it right. Dropped `[aktualizacji London](/ethereum-forks/#london)` restored.
 - Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.6/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:** none -- no critical issues.
+
+**Open (native call needed):**
+
+- `hardware-hero-description` -> `Inwestujesz długoterminowo?` reframes holding as investing (#58); prefer `Trzymasz długoterminowo?`.
+- `new-to-crypto-hero-description` -> `abyś mógł` addresses a male reader; only 2 occurrences in all of `src/intl/pl`, so not a house pattern.
+- `fee-qualifier-per-card` -> `{value}/kartę` puts accusative after a slash; unit-price convention is nominative or `za kartę`.
+
+**Notes:**
+
+- Plural branches verified correct: `Obsługuje` + one `1 sieć` (acc sg) / few `2 sieci` (acc pl) / many `5 sieci` (gen pl). Glossary-perfect including `wymiana` for swap.
+- One of only 5 locales whose ETHGlossary L2 entry is correctly capitalized (#53).

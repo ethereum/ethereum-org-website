@@ -56,3 +56,19 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
 - No fixes applied. Open and well-evidenced: ETHGlossary-covered brands left in Latin in `learn-quizzes.json`/`page-what-is-ethereum.json` (Optimism, Arbitrum, Facebook, Twitter, Aave, MakerDAO, Geth) while the SAME files transliterate フェイスブック/ツイッター/ユニスワップ correctly elsewhere -- mechanical, but wants a native pass.
 - Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.4/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:** none -- no critical issues.
+
+**Open (native call needed):**
+
+- `see-all-wallets` is byte-identical to the pre-existing `-table-title` (EN distinguishes "See all wallets" from "Browse all wallets"); ko/zh/zh-tw all distinguish them.
+- `nfts-hero-description` -> `NFTの表示、収集、管理を行います。` is an impersonal declarative; the sibling `finance-hero-description` correctly uses `活用しましょう`.
+- `persona-legend` -> `探す` is "search for", not browse, and blurs against `search-wallets` (`検索`). The *filter* sense is correctly gone.
+
+**Notes:**
+
+- All 13 matched glossary terms exact. `シールド/アンシールド` is the katakana term of art -- correct, not the 保護 trap.
