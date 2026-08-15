@@ -27,9 +27,6 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-// No component in this file's subtree declares a responsive class, so width
-// isn't a variable here -- one story still checks direction (RTL list
-// markers/indent) rather than dropping it entirely.
 export const FoundationalTopics: Story = {
   parameters: {
     chromatic: { modes: staticModes },

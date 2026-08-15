@@ -57,21 +57,12 @@ export const langViewportModes = Object.entries(
   }
 }, {})
 
-// The responsive + RTL contract (langViewportModes) belongs on ONE
-// representative story per component -- on `meta` it multiplies by every
-// content variant in the file for no added signal. Content variants use
-// variantMode instead, which proves the variant renders at all.
-//
-// The key must stay "en-lg": Chromatic stacks modes across project/meta/story
-// level rather than replacing them, de-duping by key. On the representative
-// story this set unions with langViewportModes down to langViewportModes'
-// own 8 -- renaming the key would silently add a 9th.
+// Key must stay "en-lg": Chromatic stacks modes rather than replacing them,
+// de-duping by key, so this unions with langViewportModes down to its own 8.
 export const variantMode: LangViewModeObj = {
   "en-lg": { viewport: "lg", locale: "en" },
 }
 
-// For components with no responsive classes anywhere in their subtree --
-// width isn't a variable for them, but direction still is.
 export const staticModes: LangViewModeObj = {
   "en-lg": { viewport: "lg", locale: "en" },
   "ar-lg": { viewport: "lg", locale: "ar" },

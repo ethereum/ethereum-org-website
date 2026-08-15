@@ -123,14 +123,8 @@ const storyFiles = SEARCH_ROOTS.flatMap(findStoryFiles).sort()
 const sectionFor = (relPath: string): string | null =>
   TAXONOMY.find(({ prefix }) => relPath.startsWith(prefix))?.section ?? null
 
-/**
- * `langViewportModes` referenced anywhere inside `meta` (the usual spread is
- * `chromatic: { modes: { ...langViewportModes } }`) multiplies every story
- * in the file by its full width x locale matrix. With a single story that's
- * no different from putting it on the story directly, so it's only a
- * problem once a file has more than one -- put it on ONE representative
- * story instead. See `.storybook/modes.ts`.
- */
+/** `langViewportModes` on `meta` multiplies every story in the file -- fine
+ * with one story, a problem with more than one. See `.storybook/modes.ts`. */
 const metaSpreadsLangViewportModesAcrossMultipleStories = (
   relPath: string
 ): boolean => {
@@ -233,10 +227,7 @@ test.describe("Storybook title taxonomy", () => {
     expect(
       offenders,
       "put langViewportModes on ONE representative story instead of `meta` -- " +
-        "on meta it multiplies by every story in the file. Use variantMode " +
-        "(or staticModes, for components with no responsive classes at all) " +
-        "on meta, and langViewportModes on the story that should carry the " +
-        "full responsive + RTL contract. See .storybook/modes.ts"
+        "use variantMode (or staticModes) on meta. See .storybook/modes.ts"
     ).toEqual([])
   })
 

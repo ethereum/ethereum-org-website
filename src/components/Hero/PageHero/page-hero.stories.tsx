@@ -61,9 +61,6 @@ const useBaseProps = () => {
 /**
  * The workhorse: breadcrumbs + image + two buttons, with the default bottom
  * divider. `title` is the page `<h1>`.
- *
- * Carries the full responsive + RTL contract for every PageHero variant --
- * the other stories below only need to prove their variant renders.
  */
 export const PageHeroWithImage: Story = {
   parameters: {

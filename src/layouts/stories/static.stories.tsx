@@ -53,8 +53,6 @@ const baseArgs = {
   children: <ArticleBody />,
 }
 
-// Carries the full responsive + RTL contract for the layout -- the other
-// stories below only need to prove their variant renders.
 export const Default: Story = {
   parameters: { chromatic: { modes: langViewportModes } },
   args: baseArgs,
