@@ -97,7 +97,7 @@ const QuizItem = ({
               className="font-normal"
               list={[
                 `${t("average-score")} ${statValues.averageScore}`,
-                `${t("questions-answered")} ${statValues.questionsAnswered}`,
+                `${t("times-taken")} ${statValues.timesTaken}`,
               ]}
             />
           )}

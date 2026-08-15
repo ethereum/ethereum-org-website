@@ -1,112 +1,112 @@
 {
-  "averageScore": 69.9816,
-  "questionsAnswered": 1098539,
-  "retryRate": 24.682237043928346,
+  "averageScore": 69.97565025808545,
+  "questionsAnswered": 1100217,
+  "retryRate": 24.691583569423123,
   "byQuiz": {
     "what-is-ethereum": {
-      "averageScore": 69.2001,
-      "questionsAnswered": 136134
+      "averageScore": 72.5007,
+      "timesTaken": 13438
     },
     "what-is-ether": {
-      "averageScore": 64.8807,
-      "questionsAnswered": 90403
+      "averageScore": 78.1314,
+      "timesTaken": 7363
     },
     "wallets": {
-      "averageScore": 74.3677,
-      "questionsAnswered": 69568
+      "averageScore": 72.7651,
+      "timesTaken": 10416
     },
     "what-are-apps": {
-      "averageScore": 63.1781,
-      "questionsAnswered": 73896
+      "averageScore": 61.3432,
+      "timesTaken": 165
     },
     "web3": {
-      "averageScore": 79.9752,
-      "questionsAnswered": 65453
+      "averageScore": 74.833,
+      "timesTaken": 8722
     },
     "energy-consumption": {
-      "averageScore": 78.6255,
-      "questionsAnswered": 52794
+      "averageScore": 76.189,
+      "timesTaken": 724
     },
     "security": {
-      "averageScore": 78.762,
-      "questionsAnswered": 49372
+      "averageScore": 77.5672,
+      "timesTaken": 3704
     },
     "privacy": {
-      "averageScore": 75.1037,
-      "questionsAnswered": 44853
+      "averageScore": 71.7565,
+      "timesTaken": 607
     },
     "zero-knowledge-proofs": {
-      "averageScore": 59.1287,
-      "questionsAnswered": 51593
+      "averageScore": 56.928,
+      "timesTaken": 590
     },
     "nfts": {
-      "averageScore": 76.9216,
-      "questionsAnswered": 86052
+      "averageScore": 82.4503,
+      "timesTaken": 2956
     },
     "stablecoins": {
-      "averageScore": 72.1451,
-      "questionsAnswered": 23995
+      "averageScore": 69.2597,
+      "timesTaken": 4194
     },
     "defi": {
-      "averageScore": 67.5842,
-      "questionsAnswered": 25269
+      "averageScore": 81.6257,
+      "timesTaken": 1715
     },
     "daos": {
-      "averageScore": 66.0893,
-      "questionsAnswered": 26682
+      "averageScore": 70.3081,
+      "timesTaken": 1633
     },
     "payments": {
-      "averageScore": 71.1046,
-      "questionsAnswered": 26948
+      "averageScore": 72.2009,
+      "timesTaken": 979
     },
     "accounts": {
-      "averageScore": 80.3002,
-      "questionsAnswered": 70452
+      "averageScore": 69.8797,
+      "timesTaken": 651
     },
     "smart-contracts": {
-      "averageScore": 61.3047,
-      "questionsAnswered": 19850
+      "averageScore": 61.2702,
+      "timesTaken": 2034
     },
     "transactions": {
-      "averageScore": 70.7822,
-      "questionsAnswered": 21804
+      "averageScore": 64.5463,
+      "timesTaken": 962
     },
     "blocks": {
-      "averageScore": 68.6035,
-      "questionsAnswered": 25674
+      "averageScore": 78.5873,
+      "timesTaken": 428
     },
     "gas": {
-      "averageScore": 58.2663,
-      "questionsAnswered": 17527
+      "averageScore": 58.8501,
+      "timesTaken": 939
     },
     "evm": {
-      "averageScore": 59.4045,
-      "questionsAnswered": 18892
+      "averageScore": 55.7895,
+      "timesTaken": 985
     },
     "bridges": {
-      "averageScore": 73.8317,
-      "questionsAnswered": 21840
+      "averageScore": 64.8568,
+      "timesTaken": 165
     },
     "layer-2": {
-      "averageScore": 46.1459,
-      "questionsAnswered": 14229
+      "averageScore": 61.8046,
+      "timesTaken": 1715
     },
     "run-a-node": {
-      "averageScore": 55.6299,
-      "questionsAnswered": 20078
+      "averageScore": 68.3845,
+      "timesTaken": 3144
     },
     "merge": {
-      "averageScore": 55.7248,
-      "questionsAnswered": 13027
+      "averageScore": 70.6717,
+      "timesTaken": 608
     },
     "staking-solo": {
-      "averageScore": 58.1638,
-      "questionsAnswered": 21970
+      "averageScore": 65.0356,
+      "timesTaken": 628
     },
     "scaling": {
-      "averageScore": 59.5088,
-      "questionsAnswered": 10184
+      "averageScore": 65.9098,
+      "timesTaken": 356
     }
   },
-  "timestamp": 1786057850729
+  "timestamp": 1786496764331
 }

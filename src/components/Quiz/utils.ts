@@ -63,33 +63,23 @@ const POPULAR_QUIZ_COUNT = 5
 
 export type QuizStatsByQuiz = QuizStatsData["byQuiz"]
 
-/**
- * Ids of the most-answered quizzes, normalised by question count: a six-question
- * quiz logs 50% more answers than a four-question one for the same audience, so
- * raw event totals would just rank by length.
- */
+/** Ids of the most-taken quizzes. */
 export const getPopularQuizIds = (byQuiz?: QuizStatsByQuiz | null): QuizKey[] =>
   // Keys are quiz ids, but a stale blob can name a quiz that has since been
   // removed, so filter before treating them as QuizKeys.
   (Object.entries(byQuiz || {}) as [QuizKey, QuizStatsEntry][])
     .filter(([id]) => id in allQuizzesData)
-    .map(([id, { questionsAnswered }]) => ({
-      id,
-      perQuestion: questionsAnswered / allQuizzesData[id].questions.length,
-    }))
-    .sort((a, b) => b.perQuestion - a.perQuestion)
+    .sort(([, a], [, b]) => b.timesTaken - a.timesTaken)
     .slice(0, POPULAR_QUIZ_COUNT)
-    .map(({ id }) => id)
+    .map(([id]) => id)
 
 /** Formatted per-quiz figures for a single row on the hub. */
 export const getQuizStatValues = (
   locale: string,
-  { averageScore, questionsAnswered }: QuizStatsEntry
+  { averageScore, timesTaken }: QuizStatsEntry
 ) => ({
   averageScore: asPercent(averageScore, locale),
-  questionsAnswered: numberFormat(locale, { style: "decimal" }).format(
-    questionsAnswered
-  ),
+  timesTaken: numberFormat(locale, { style: "decimal" }).format(timesTaken),
 })
 
 /** Label/value rows for the community stats panel, in display order. */

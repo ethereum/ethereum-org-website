@@ -5,14 +5,18 @@ import { fetchRetry } from "./fetchRetry"
 export interface QuizStatsEntry {
   /** Mean of the correct/incorrect event values, as a percentage */
   averageScore: number
-  /** Total "Question answered" events */
-  questionsAnswered: number
+  /** Estimated runs over the trailing year; see PER_QUIZ_WINDOW_DAYS */
+  timesTaken: number
 }
 
-export interface QuizStatsData extends QuizStatsEntry {
+export interface QuizStatsData {
+  /** Mean of the correct/incorrect event values, as a percentage */
+  averageScore: number
+  /** Total "Question answered" events */
+  questionsAnswered: number
   /** Retries as a percentage of questions answered */
   retryRate: number
-  /** Per-quiz totals keyed by quiz id. A quiz nobody has answered is omitted. */
+  /** Per-quiz figures keyed by quiz id. A quiz nobody has taken is omitted. */
   byQuiz: Record<string, QuizStatsEntry>
   timestamp: number
 }
@@ -34,10 +38,26 @@ const ANSWERED_ACTION = "Question answered"
 const RETRY_NAME = "Retry question"
 
 // Each "Question answered" event names the question it belongs to, not the quiz
-// (QuizButtonGroup sends `QID: <question id>`), so per-quiz totals are summed
-// over each quiz's question list. Questions shared by two quizzes -- currently
+// (QuizButtonGroup sends `QID: <question id>`), so per-quiz figures are derived
+// from each quiz's question list. Questions shared by two quizzes -- currently
 // only wallets-3 -- count toward both.
 const QID_PREFIX = "QID: "
+
+// Matomo truncates the Event Names report to the top N names at archive time,
+// and the longer the window the harder it bites: over a lifetime range only the
+// busiest handful of QID rows survive, the rest fold into "Others". A trailing
+// year keeps every quiz. The site-wide figures above are unaffected -- they come
+// from Events.getAction, a small report that survives any range.
+const PER_QUIZ_WINDOW_DAYS = 365
+
+const median = (values: number[]): number => {
+  const sorted = [...values].sort((a, b) => a - b)
+  const mid = Math.floor(sorted.length / 2)
+
+  return sorted.length % 2
+    ? sorted[mid]
+    : Math.round((sorted[mid - 1] + sorted[mid]) / 2)
+}
 
 export async function fetchQuizStats(): Promise<QuizStatsData> {
   const matomoUrl = process.env.MATOMO_URL
@@ -52,14 +72,25 @@ export async function fetchQuizStats(): Promise<QuizStatsData> {
 
   console.log("Starting quiz stats fetch")
 
-  const report = async (method: string): Promise<MatomoEventRow[]> => {
-    // Lifetime totals, so the figures read as "since the quizzes launched"
+  // Lifetime, so the site-wide figures read as "since the quizzes launched"
+  const LIFETIME = "2019-01-01,today"
+
+  const trailingYear = new Date(
+    Date.now() - PER_QUIZ_WINDOW_DAYS * 24 * 60 * 60 * 1000
+  )
+    .toISOString()
+    .slice(0, 10)
+
+  const report = async (
+    method: string,
+    date: string
+  ): Promise<MatomoEventRow[]> => {
     const params = new URLSearchParams({
       module: "API",
       method,
       idSite: siteId,
       period: "range",
-      date: "2019-01-01,today",
+      date,
       filter_limit: "-1",
       format: "JSON",
       token_auth: apiToken,
@@ -82,9 +113,10 @@ export async function fetchQuizStats(): Promise<QuizStatsData> {
     return rows
   }
 
-  const [actionRows, nameRows] = await Promise.all([
-    report("Events.getAction"),
-    report("Events.getName"),
+  const [actionRows, nameRows, recentNameRows] = await Promise.all([
+    report("Events.getAction", LIFETIME),
+    report("Events.getName", LIFETIME),
+    report("Events.getName", `${trailingYear},today`),
   ])
 
   const answered = actionRows.find((row) => row.label === ANSWERED_ACTION)
@@ -106,7 +138,7 @@ export async function fetchQuizStats(): Promise<QuizStatsData> {
   const retryRate = (retried.nb_events / questionsAnswered) * 100
 
   const questionRows = new Map(
-    nameRows
+    recentNameRows
       .filter((row) => row.label.startsWith(QID_PREFIX))
       .map((row) => [row.label.slice(QID_PREFIX.length), row])
   )
@@ -131,7 +163,13 @@ export async function fetchQuizStats(): Promise<QuizStatsData> {
 
     byQuiz[quizId] = {
       averageScore: (quizCorrect / quizAnswered) * 100,
-      questionsAnswered: quizAnswered,
+      // Questions are shuffled per run, so each is answered about once per run
+      // and any single question's count approximates the number of runs.
+      // Median rather than sum (which just scales with question count), max (a
+      // question borrowed by another quiz carries its traffic too -- security
+      // borrows wallets-3) or mean (dragged down by questions added part-way
+      // through the window).
+      timesTaken: median(rows.map((row) => row.nb_events)),
     }
   }
 
