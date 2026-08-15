@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs"
 
-import { langViewportModes } from "@/storybook/modes"
+import { langViewportModes, variantMode } from "@/storybook/modes"
 
 import { DocsLayout } from "../Docs"
 
@@ -24,7 +24,7 @@ const meta = {
       appDirectory: true,
       navigation: { pathname: "/developers/docs/" },
     },
-    chromatic: { modes: { ...langViewportModes } },
+    chromatic: { modes: variantMode },
     docs: {
       description: {
         component:
@@ -59,7 +59,12 @@ const baseArgs = {
   children: <ArticleBody />,
 }
 
-export const Default: Story = { args: baseArgs }
+// Carries the full responsive + RTL contract for the layout -- the other
+// stories below only need to prove their variant renders.
+export const Default: Story = {
+  parameters: { chromatic: { modes: langViewportModes } },
+  args: baseArgs,
+}
 
 export const Incomplete: Story = {
   parameters: {

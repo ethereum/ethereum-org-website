@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/nextjs"
 
-import { langViewportModes } from "../../../.storybook/modes"
+import { staticModes, variantMode } from "../../../.storybook/modes"
 
 import DeveloperDocsLinksComponent from "."
 
@@ -11,9 +11,7 @@ const meta = {
   parameters: {
     layout: "fullscreen",
     chromatic: {
-      modes: {
-        ...langViewportModes,
-      },
+      modes: variantMode,
     },
   },
   decorators: [
@@ -29,7 +27,13 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
+// No component in this file's subtree declares a responsive class, so width
+// isn't a variable here -- one story still checks direction (RTL list
+// markers/indent) rather than dropping it entirely.
 export const FoundationalTopics: Story = {
+  parameters: {
+    chromatic: { modes: staticModes },
+  },
   args: {
     headerId: "foundational-topics",
   },
