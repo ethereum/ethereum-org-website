@@ -738,7 +738,7 @@ const chains = [
   },
   {
     name: "Pivotal Mainnet",
-    infoURL: "http://thepivotal.xyz/",
+    infoURL: "https://thepivotal.xyz/",
     chainId: 1648,
     nativeCurrency: {
       name: "Pivotal ETH",
