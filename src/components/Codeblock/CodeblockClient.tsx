@@ -68,7 +68,7 @@ const CodeblockClient = ({
               type="button"
               onClick={() => setIsCollapsed(true)}
               aria-label={t("show-less")}
-              className="pointer-events-auto inline-flex h-6 items-center gap-1 rounded px-1.5 opacity-0 transition-opacity group-focus-within/codeblock:opacity-100 group-hover/codeblock:opacity-100 hover:text-primary focus-visible:opacity-100 focus-visible:outline-2 focus-visible:outline-primary"
+              className="pointer-events-auto inline-flex h-6 items-center gap-1 rounded px-1.5 opacity-0 transition-opacity group-focus-within/codeblock:opacity-100 group-hover/codeblock:opacity-100 hover:text-primary focus-visible:opacity-100 focus-visible:outline-2 focus-visible:outline-primary max-[768px]:opacity-100"
             >
               <ChevronUp className="size-3" aria-hidden="true" />
             </button>
@@ -76,7 +76,7 @@ const CodeblockClient = ({
           {showCopy && (
             <CopyToClipboard
               text={codeText}
-              className="pointer-events-auto inline-flex h-6 items-center gap-1 rounded px-1.5 text-disabled opacity-0 transition-opacity group-focus-within/codeblock:opacity-100 group-hover/codeblock:opacity-100 hover:text-primary focus-visible:opacity-100 focus-visible:outline-2 focus-visible:outline-primary"
+              className="pointer-events-auto inline-flex h-6 items-center gap-1 rounded px-1.5 text-disabled opacity-0 transition-opacity group-focus-within/codeblock:opacity-100 group-hover/codeblock:opacity-100 hover:text-primary focus-visible:opacity-100 focus-visible:outline-2 focus-visible:outline-primary max-[768px]:opacity-100"
             >
               {(isCopied) => (
                 <>
