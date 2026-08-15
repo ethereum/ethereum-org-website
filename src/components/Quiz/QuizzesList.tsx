@@ -11,6 +11,7 @@ import { OrderedList } from "../ui/list"
 import { Section } from "../ui/section"
 
 import QuizItem from "./QuizItem"
+import type { QuizStatsByQuiz } from "./utils"
 
 type QuizzesListProps = {
   sectionId: string
@@ -20,6 +21,8 @@ type QuizzesListProps = {
   descriptionId: string
   quizHandler: (id: QuizKey) => void
   modalHandler: (isModalOpen: boolean) => void
+  quizStats?: QuizStatsByQuiz | null
+  popularQuizIds?: QuizKey[]
 }
 
 const QuizzesList = ({
@@ -30,6 +33,8 @@ const QuizzesList = ({
   descriptionId,
   quizHandler,
   modalHandler,
+  quizStats,
+  popularQuizIds = [],
 }: QuizzesListProps) => (
   // data-flow="skip" so the flow rhythm doesn't add margins between columns.
   // Grid, not the responsiveFlex variant: `flex-basis: 0` is floored by an
@@ -69,6 +74,8 @@ const QuizzesList = ({
             numberOfQuestions={allQuizzesData[listItem.id].questions.length}
             titleId={allQuizzesData[listItem.id].title}
             handleStart={handleStart}
+            stats={quizStats?.[listItem.id]}
+            isPopular={popularQuizIds.includes(listItem.id)}
           />
         )
       })}

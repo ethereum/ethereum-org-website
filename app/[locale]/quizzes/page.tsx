@@ -120,7 +120,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               )}
             </Grid>
 
-            <QuizSections />
+            <QuizSections quizStats={communityStats?.byQuiz ?? null} />
 
             {/* Same grid as the sections above, so the callout lines up with the
                 quiz lists: it starts in track 2, leaving the header track empty. */}
