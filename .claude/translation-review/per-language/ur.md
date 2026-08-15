@@ -28,3 +28,48 @@
 - Heading/body split on وین vs واوین resolved toward واوین (the standard plural).
 - Not patched, logged as judgment calls: the Capitalization sub-heading coinage (dev's term was better but broke the section's Urdu-term-first pattern), and `dir="ltr"` spans dropped from `(dd/mm/yyyy)` / `(dapps)` / `(PoW)` / `(PoS)` -- strong-LTR tokens that render fine unisolated, and the file's net span coverage rose 63->67.
 - Genuine wins from the same run: 7 legacy U+2066/U+2069 isolate characters replaced with proper `<span dir="ltr">` markup, and a dropped "of Ethereum" restored to match the source.
+
+## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 8.8/10
+Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
+
+**Fixed in this branch:**
+
+- #43 blank line before `{#validators-keys}` restored
+- #44 `Arbitrum One` de-hybridised in `app-session-description`
+- `app-tornado-cash-description` `لین دین` -> `ٹرانزیکشنز` (ETHGlossary reserves the transliteration for signed transactions and names `لین دین` as the form to avoid)
+- Arabic kaf U+0643 -> Urdu keheh U+06A9 in the 4 PR-introduced strings that inherited the file's misspelling of `لامرکزی`
+
+**Open (native call needed):**
+
+- `تخلیقی کوڈ` for "creation code" reads as *creative* code — the same phrase this locale uses in `app-art-blocks-description`. The sense is initcode/constructor bytecode; prefer `کریئیشن کوڈ`.
+- 36 pre-existing Arabic-kaf `لامركزی` instances remain in out-of-scope strings; only the 4 PR-introduced ones were corrected. Needs a locale-wide character sweep.
+- `سکرین شاٹ`/`سکرین شاٹس` in `page-apps.json` vs this locale's `اسکرین` elsewhere.
+
+**Notes:**
+
+- The accounts markdown follows the file's existing convention of leaving backticked identifiers unwrapped while `<span dir="ltr">` handles bare Latin runs — RTL handling is internally consistent.
+- The `page-values` reword improved intra-file consistency (`بھروسہ`/`ٹول` now align with the FAQ strings).
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 7.5/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- `actor` -> `فریق` (was اداکار, film performer). Open: the glossary-AVOID form `لین دین` for "transaction fee" in 4 sites across 2 files (`ٹرانزیکشن فیس` is correct and used elsewhere in the same doc); `وٹالک بوٹیرن` vs the corpus-standard `وٹالک بوٹرین` in 4 sites; brand transliterations (Optimism/Arbitrum/ZKsync/Coinbase/PayPal) left Latin in the two JSON files. **No truncation, untranslated chunks or Eastern-Arabic numerals this run** -- ur's historical failure modes were all absent.
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.5/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:** none -- no critical issues.
+
+**Open (native call needed):**
+
+- `fee-qualifier-free-under-fox-discounts` -> `کے تحت` is the abstract "pursuant to" sense (`قانون کے تحت`), not a numeric threshold; prefer `{usd} سے کم پر مفت`. Warning not critical because `مفت` + an amount still steers the reader correctly.
+- `results-label` -> `دریافت شدہ والیٹس` reads as "discovered wallets"; for a results counter, `ملنے والے والیٹس`.
+- `fee-free-tier-plans` -> `ادا شدہ پلانز` reads as "plans that have been paid" rather than paid tiers.
+
+**Notes:**
+
+- Isolates verified: 47 U+2066 / 47 U+2069, zero unbalanced. Applied inconsistently WITHIN single strings -- `{usd}`/`{percent}` isolated while the adjacent `{value}` is bare. No rendering break; pick one convention.
+- `L2s` correctly Latin here while the file elsewhere says `لیئر ۲` -- the Latin form is right per the always-Latin rule, so the PRE-EXISTING keys are the outlier.
+- All 14 glossary terms exact including the hard ones (`ٹرانزیکشن` not `لین دین`, `پل` for bridge, `تبادلہ` for swap).

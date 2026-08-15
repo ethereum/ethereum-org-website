@@ -285,7 +285,16 @@ export default function ToolsCatalog({
         resultsLabel: labels.resultsLabel,
         noResults: labels.noResults,
       }}
-      renderSidebar={({ state, setFilter }) => {
+      mobileVariant="collapsible"
+      mobileFilterSummary={{
+        label: currentCategoryId
+          ? getCategoryLabel(currentCategoryId, categoryLabels)
+          : labels.allCategories,
+        count: currentCategoryId
+          ? countByCategory[currentCategoryId] || 0
+          : totalCount,
+      }}
+      renderSidebar={({ state, setFilter, variant }) => {
         const raw = state[SUBCATEGORY_FILTER_KEY]
         return (
           <CatalogNavGroup
@@ -295,6 +304,8 @@ export default function ToolsCatalog({
             onSelectChild={(childId) =>
               setFilter(SUBCATEGORY_FILTER_KEY, childId)
             }
+            // Collapsed mobile trigger already names the all-resources view
+            showAllItem={variant === "desktop" || !!currentCategoryId}
           />
         )
       }}

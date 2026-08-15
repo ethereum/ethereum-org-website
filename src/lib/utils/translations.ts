@@ -50,6 +50,7 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
   ["/developers/tutorials/", "page-developers-tutorials"],
   ["/developers/tools/", "page-developers-tools"],
   ["/developers/", "page-developers-index"],
+  ["/wallets/find-wallet/", "page-wallets-find-wallet"],
   ["/community/events/", "page-community-events"],
   ["/community/support/", "page-community-support"],
   ["/community/", "page-community"],
