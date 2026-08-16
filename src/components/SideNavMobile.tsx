@@ -83,21 +83,26 @@ const NavLink = ({ item, path, toggle }: NavLinkProps) => {
             </SideNavLink>
           )}
           {!item.href && (
-            <div
-              className="w-full cursor-pointer"
+            <button
+              type="button"
+              aria-expanded={isOpen}
+              className="w-full cursor-pointer bg-transparent p-0 text-start"
               onClick={() => setIsOpen(!isOpen)}
             >
               {t(item.id)}
-            </div>
+            </button>
           )}
-          <motion.div
-            className="flex cursor-pointer"
+          <motion.button
+            type="button"
+            aria-expanded={isOpen}
+            aria-label={isOpen ? "Collapse section" : "Expand section"}
+            className="flex cursor-pointer bg-transparent p-0"
             onClick={() => setIsOpen(!isOpen)}
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
             <ChevronRight className="h-6 w-6 text-body-medium" />
-          </motion.div>
+          </motion.button>
         </LinkContainer>
         <motion.div
           className="ps-4 text-sm leading-relaxed font-normal"
@@ -114,13 +119,15 @@ const NavLink = ({ item, path, toggle }: NavLinkProps) => {
     )
   }
   return (
-    <div onClick={toggle}>
-      <LinkContainer>
-        <SideNavLink href={item.href} isPartiallyActive={false}>
-          {t(item.id)}
-        </SideNavLink>
-      </LinkContainer>
-    </div>
+    <LinkContainer>
+      <SideNavLink
+        href={item.href}
+        isPartiallyActive={false}
+        onClick={toggle}
+      >
+        {t(item.id)}
+      </SideNavLink>
+    </LinkContainer>
   )
 }
 
@@ -141,23 +148,29 @@ const SideNavMobile = ({ path }: SideNavMobileProps) => {
   return (
     <div className="sticky top-[75px] z-sticky h-auto w-full bg-background-highlight lg:hidden">
       <motion.div>
-        <Center
-          className="box-border cursor-pointer border-b bg-background-highlight px-8 py-4 font-medium text-primary"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <div>{t(pageTitleId)}</div>
-          <motion.div
-            className="flex cursor-pointer"
-            variants={dropdownIconContainerVariant}
-            animate={isOpen ? "open" : "closed"}
+        <Center asChild>
+          <button
+            type="button"
+            aria-expanded={isOpen}
+            aria-controls="mobile-docs-nav"
+            className="box-border flex w-full cursor-pointer items-center justify-center gap-2 border-b bg-background-highlight px-8 py-4 font-medium text-primary"
+            onClick={() => setIsOpen(!isOpen)}
           >
-            <ChevronRight className="h-6 w-6 text-body-medium" />
-          </motion.div>
+            <div>{t(pageTitleId)}</div>
+            <motion.div
+              className="flex"
+              variants={dropdownIconContainerVariant}
+              animate={isOpen ? "open" : "closed"}
+            >
+              <ChevronRight className="h-6 w-6 text-body-medium" />
+            </motion.div>
+          </button>
         </Center>
       </motion.div>
       <AnimatePresence>
         {isOpen && (
           <motion.nav
+            id="mobile-docs-nav"
             className="max-h-[calc(100vh - 139px)] h-auto overflow-x-hidden overflow-y-scroll border-b p-2"
             key="nav"
             initial={{ opacity: 0 }}
