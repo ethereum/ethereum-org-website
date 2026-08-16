@@ -14,7 +14,8 @@ export function dateTimeFormat(
   let numberingSystem = options?.numberingSystem
 
   if (!numberingSystem) {
-    if (locale === "ur") {
+    const baseLocale = locale.split("-")[0]
+    if (baseLocale === "ur") {
       numberingSystem = "arabext" // Native Urdu numerals
     } else {
       numberingSystem = "latn" // Western numerals for Arabic, Indic, etc.
@@ -22,9 +23,9 @@ export function dateTimeFormat(
   }
 
   const finalOptions: Intl.DateTimeFormatOptions = {
+    ...options,
     // ALWAYS force Gregorian for tech/Web3 consistency
     calendar: "gregory",
-    ...options,
     ...(numberingSystem && { numberingSystem }),
   }
 

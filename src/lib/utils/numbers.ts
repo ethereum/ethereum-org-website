@@ -13,7 +13,8 @@ export function numberFormat(
   let numberingSystem = options?.numberingSystem
 
   if (!numberingSystem) {
-    if (locale === "ur") {
+    const baseLocale = locale.split("-")[0]
+    if (baseLocale === "ur") {
       // Force Extended Arabic numerals for Urdu
       numberingSystem = "arabext"
     } else {
