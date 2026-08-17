@@ -3,9 +3,7 @@ title: Delegated staking (staking as a service)
 description: An overview of how to get started with delegated staking
 lang: en
 template: staking
-emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: Leslie the rhino floating in the clouds.
 sidebarDepth: 2
 summaryPoints:
   - Third-party node operators handle the operation of your validator client
@@ -68,7 +66,7 @@ It also requires the most trust. The provider controls both the signing keys and
 Delegated staking always means trusting someone else with part of your staking setup. Answer these questions before handing anything over:
 
 - **Who holds the withdrawal keys?** A validator's withdrawal credentials (type 0x01 or 0x02) point to an execution layer address that ultimately controls the stake. If that address is yours, the arrangement is non-custodial; the operator can run (or mismanage) the validator, but the ETH can only ever be withdrawn to you. If the credentials point to the provider's address, you hold a promise, not a stake.
-- **Can you exit without the operator?** Since the [Pectra upgrade](/roadmap/pectra/), [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) allows the withdrawal address to trigger a validator exit (or, for compounding 0x02 validators, a partial withdrawal of balance above 32 ETH) directly from the execution layer, without the signing keys. It requires a transaction and costs gas, but it means an unresponsive or defunct operator can no longer hold your validator hostage, provided the withdrawal credentials are yours.
+- **Can you exit without the operator?** Since the [Pectra upgrade](/roadmap/pectra/), [execution layer triggered withdrawals (EIP-7002)](https://eips.ethereum.org/EIPS/eip-7002) allow the withdrawal address to trigger a validator exit (or, for compounding 0x02 validators, a partial withdrawal of balance above 32 ETH) directly from the execution layer, without the signing keys. It requires a transaction and costs gas, but it means an unresponsive or defunct operator can no longer hold your validator hostage, provided the withdrawal credentials are yours.
 - **What is the fee structure?** Services charge a flat monthly fee or a percentage of rewards. Check how fees interact with downtime and penalties: who bears the cost if the operator underperforms, and whether any guarantees or insurance are offered.
 - **Which clients does the operator run?** An operator running majority [execution or consensus clients](/developers/docs/nodes-and-clients/client-diversity/) exposes both your stake and the network to correlated failure if that client has a bug. Prefer providers that document minority client usage.
 - **Is the service open and audited?** Providers may run additional software around the standard Ethereum clients that is not open source or auditable. Look for public audits, an established operating history, and a clean slashing record.
@@ -114,41 +112,43 @@ Have a suggestion for a staking-as-a-service provider we missed? Check out our [
 ## Frequently asked questions {#faq}
 
 <ExpandableCard title="Who holds my keys?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
-Arrangements will differ from provider-to-provider, but commonly you will be guided through setting up any signing keys you need (one per 32 ETH), and uploading these to your provider to allow them to validate on your behalf. The signing keys alone do not give any ability to withdraw, transfer, or spend your funds. However, they do provide the ability to cast votes towards consensus, which if not done properly can result in offline penalties or slashing.
+Arrangements differ from provider to provider. With non-custodial services, you will be guided through generating the signing keys for your validator (each validator holds 32 ETH, or up to 2048 ETH with compounding (0x02) credentials since the Pectra upgrade), and uploading these to your provider to allow them to validate on your behalf. The signing keys alone do not give any ability to withdraw, transfer, or spend your funds. However, they do provide the ability to cast votes towards consensus, which if not done properly can result in offline penalties or slashing.
+
+With custodial services, such as staking through a centralized exchange, the provider holds all keys: the signing keys and the withdrawal credentials. In that case you are trusting the provider with the funds themselves, not just with validator operation.
 </ExpandableCard>
 
 <ExpandableCard title="So there are two sets of keys?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
-Yes. Each account is comprised of both BLS <em>signing</em> keys, and BLS <em>withdrawal</em> keys. In order for a validator to attest to the state of the chain, participate in sync committees and propose blocks, the signing keys must be readily accessible by a validator client. These must be connected to the internet in some form, and are thus inherently considered to be "hot" keys. This is a requirement for your validator to be able to attest, and thus the keys used to transfer or withdraw funds are separated for security reasons.
+Yes. Each validator has _signing_ keys and separate _withdrawal_ credentials. In order for a validator to attest to the state of the chain, participate in sync committees and propose blocks, the signing keys must be readily accessible by a validator client. These must be connected to the internet in some form, and are thus inherently considered to be "hot" keys. The keys that control withdrawn funds are kept separate for security reasons.
 
-The BLS withdrawal keys are used to sign a one-time message that declares which execution layer account staking rewards and exited funds should go to. Once this message is broadcast, the <em>BLS withdrawal</em> keys are no longer needed. Instead, control over withdrawn funds is permanently delegated to the address you provided. This allows you to set a withdrawal address secured via your own cold storage, minimizing risk to your validator funds, even if someone else controls your validator signing keys.
+The withdrawal credentials designate the execution layer address that staking rewards and exited funds go to. Modern deposit tooling lets you set this address at the time of deposit, as either a regular (0x01) or compounding (0x02) credential, and it should be an address you control, ideally secured in cold storage. This protects your funds even if someone else controls your validator signing keys, and since the Pectra upgrade it also lets you exit the validator directly from that address.
 
-Updating withdrawal credentials is a required step to enable withdrawals\*. This process involves generating the withdrawal keys using your mnemonic seed phrase.
+Validators set up in the network's early days without an execution withdrawal address use legacy BLS withdrawal keys, and must sign a one-time message declaring a withdrawal address before withdrawals can begin. This involves regenerating the withdrawal keys from the mnemonic seed phrase created at setup.
 
-<strong>Make certain you back this seed phrase up safely or you will be unable to generate your withdraw keys when the time comes.</strong>
+**Make certain you back this seed phrase up safely or you will be unable to generate your withdrawal keys when the time comes.**
 
-\*Stakers who provided a withdrawal address with initial deposit do not need to set this. Check with your SaaS provider for support regarding how to prepare your validator.
+Check with your provider for support regarding how to prepare your validator.
 </ExpandableCard>
 
 <ExpandableCard title="When can I withdraw?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-Stakers need to provide a withdrawal address (if not provided on initial deposit), and reward payments will begin being distributed automatically on a periodic basis every few days.
+How withdrawals work depends on your validator's withdrawal credential type. For regular (0x01) validators, any balance over 32 ETH is automatically swept to the withdrawal address on a periodic basis every few days. For compounding (0x02) validators, rewards compound into the validator's balance up to 2048 ETH, and withdrawing below that requires triggering a partial withdrawal from your withdrawal address, which costs gas.
 
-Validators can also fully exit as a validator, which will unlock their remaining ETH balance for withdrawal. Accounts that have provided an execution withdrawal address and completed the exiting process will receive their entire balance to the withdrawal address provided during the next validator sweep.
+Validators can also fully exit, which unlocks the entire remaining ETH balance. After completing the exit process, the full balance is transferred to the withdrawal address during a subsequent validator sweep.
 
 <ButtonLink href="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="What if my provider disappears or won't exit my validator?" eventCategory="SaasStaking" eventName="clicked what if my provider disappears">
-If your validator's withdrawal credentials point to an address you control, an unresponsive operator can no longer hold your stake hostage. Since the Pectra upgrade, <a href="https://eips.ethereum.org/EIPS/eip-7002">EIP-7002</a> allows the withdrawal address to trigger a validator exit directly from the execution layer, without needing the signing keys. It requires sending a transaction and costs gas, but once the exit completes, your remaining balance is swept to your withdrawal address.
+If your withdrawal credentials point to an address you control, you can exit the validator yourself and recover your stake; see [Trust model: what to evaluate](#trust-model-what-to-evaluate).
 
-If the provider holds the withdrawal credentials (a custodial arrangement), you have no independent way to exit or recover funds, and you depend entirely on the provider. This is the key question to answer before choosing a service.
+If the provider holds the withdrawal credentials (as with custodial and exchange staking), there is no protocol-level way for you to recover the funds independently; your recourse is limited to the provider's own processes.
 </ExpandableCard>
 
 <ExpandableCard title="What happens if I get slashed?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
-By using an SaaS provider, you are entrusting the operation of your node to someone else. This comes with the risk of poor node performance, which is not in your control. In the event your validator is slashed, your validator balance will be penalized and forcibly removed from the validator pool.
+By using a delegated staking provider, you are entrusting the operation of your node to someone else. This comes with the risk of poor node performance, which is not in your control. In the event your validator is slashed, an initial penalty proportional to your validator's balance is applied (made significantly smaller in the Pectra upgrade), and your validator is forcibly exited from the validator set.
 
-Upon completion of the slashing/exiting process, these funds will be transferred to the withdrawal address assigned to the validator. This requires providing a withdrawal address to enable. This may have been provided on initial deposit. If not, the validator withdrawal keys will need to be used to sign a message declaring a withdrawal address. If no withdrawal address has been provided, funds will remain locked until provided.
+Upon completion of the slashing/exiting process, the remaining funds are transferred to the withdrawal address assigned to the validator.
 
-Contact individual SaaS provider for more details on any guarantees or insurance options, and for instructions on how to provide a withdrawal address. If you'd prefer to be in full control of your validator setup, [learn more about how to solo stake your ETH](/staking/solo/).
+Contact individual providers for more details on any guarantees or insurance options. If you'd prefer to be in full control of your validator setup, [learn more about how to solo stake your ETH](/staking/solo/).
 </ExpandableCard>
 
 ## Further reading {#further-reading}

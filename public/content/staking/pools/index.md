@@ -3,9 +3,7 @@ title: Liquid & pooled staking
 description: An overview of liquid and pooled staking on Ethereum
 lang: en
 template: staking
-emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: Leslie the rhino swimming in the pool.
 sidebarDepth: 2
 summaryPoints:
   - Stake and earn rewards with any amount of ETH by joining forces with others
@@ -15,7 +13,7 @@ summaryPoints:
 
 ## What are staking pools? {#what-are-staking-pools}
 
-Staking pools are a collaborative approach to allow many people with smaller amounts of ETH to obtain the 32 ETH minimum required to activate a validator on Ethereum. Pooling functionality is not natively supported within the protocol, so solutions were built out separately to address the need for participating with smaller amounts.
+Staking pools are a collaborative approach to allow many people with smaller amounts of ETH to obtain the 32 ETH minimum required to activate a validator on [Ethereum](/). Pooling functionality is not natively supported within the protocol, so solutions were built out separately to address the need for participating with smaller amounts.
 
 Some staking pools operate using smart contracts, where funds are deposited to a contract that manages and tracks your stake, and issues you a receipt token (liquid staking token) that represents this value. Other pools may not involve smart contracts and are instead mediated offchain.
 
@@ -57,7 +55,7 @@ There are two ways to exit an LST position:
 - **Redeem through the protocol** for the underlying ETH. Redemption depends on the protocol having liquidity available, either a buffer of unstaked ETH or validators exiting through the consensus layer exit queue, which can take time.
 - **Sell on secondary markets** at any time. Because the token trades freely, its market price can deviate from the value of the ETH backing it, particularly during periods of market stress.
 
-Since the Pectra upgrade, [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) allows validator exits to be triggered directly from the execution layer by the withdrawal address holder. Staking protocols can use this feature to ensure their validators can be exited without relying on node operators to cooperate, so redemptions rely less on trusting node operators than they used to.
+Since the Pectra upgrade, [execution layer triggered withdrawals (EIP-7002)](https://eips.ethereum.org/EIPS/eip-7002) allow validator exits to be triggered directly from the execution layer by the withdrawal address holder. Staking protocols can use this feature to ensure their validators can be exited without relying on node operators to cooperate, so redemptions rely less on trusting node operators than they used to.
 
 ### Holding an LST is not the same as staking {#holding-an-lst-is-not-the-same-as-staking}
 
@@ -117,7 +115,7 @@ For example, Rocket Pool megapool validators require a 4 ETH bond per validator,
 
 ## What to consider {#what-to-consider}
 
-Each pool and the tools or smart contracts they use have been built out by different teams, and each comes with benefits and risks. Pooled or delegated staking is not natively supported by the [Ethereum](/) protocol, and the gold standard for staking should always be individuals running validators on their own hardware whenever possible.
+Each pool and the tools or smart contracts they use have been built out by different teams, and each comes with benefits and risks. Pooled or delegated staking is not natively supported by the Ethereum protocol, and the gold standard for staking should always be individuals running validators on their own hardware whenever possible.
 
 Attribute indicators are used below to signal notable strengths or weaknesses a listed staking pool may have. Use this section as a reference for how we define these attributes while you're choosing a pool to join.
 
@@ -140,13 +138,15 @@ Have a suggestion for a staking tool we missed? Check out our [product listing p
 ## Frequently asked questions {#faq}
 
 <ExpandableCard title="How do I earn rewards?">
-Typically ERC-20 staking tokens are issued to stakers and represent the value of their staked ETH plus rewards. Keep in mind that different pools will distribute staking rewards to their users via slightly different methods, but this is the common theme.
+Typically ERC-20 liquid staking tokens are issued to stakers and represent the value of their staked ETH plus rewards. Rewards reach you in one of two ways depending on the token design: rebasing tokens increase your token balance as rewards accrue, while exchange-rate tokens keep your balance fixed and become redeemable for more ETH over time. Either way, rewards are distributed net of the pool's fee.
 </ExpandableCard>
 
 <ExpandableCard title="When can I withdraw my stake?">
-Right now! The Shanghai/Capella network upgrade occurred in April 2023, and introduced staking withdrawals. Validator accounts that back staking pools now have the ability to exit and withdraw ETH to their designated withdrawal address. This enables the ability to redeem your portion of stake for the underlying ETH. Check with your provider to see how they support this functionality.
+Staking withdrawals have been enabled since the Shanghai/Capella upgrade in April 2023. Validator accounts that back staking pools can exit and withdraw ETH to their designated withdrawal address, which lets you redeem your portion of stake for the underlying ETH. Redemption speed depends on your pool's available liquidity and the consensus layer exit queue. Check with your provider to see how they support this functionality.
 
-Alternatively, pools that utilize an ERC-20 staking token allow users to trade this token in the open market, allowing you to sell your staking position, effectively "withdrawing" without actually removing ETH from the staking contract.
+Since the Pectra upgrade, pools can also use execution layer triggered withdrawals (EIP-7002) to exit validators directly from the withdrawal address, without relying on node operators' signing keys, reducing the trust required for redemptions to be honored.
+
+Alternatively, pools that utilize an ERC-20 liquid staking token allow users to trade this token in the open market, allowing you to sell your staking position, effectively "withdrawing" without actually removing ETH from the staking contract. Note that the market price can differ from the token's redemption value.
 
 <ButtonLink href="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
 </ExpandableCard>
@@ -154,7 +154,9 @@ Alternatively, pools that utilize an ERC-20 staking token allow users to trade t
 <ExpandableCard title="Is this different from staking with my exchange?">
 There are many similarities between these pooled staking options and centralized exchanges, such as the ability to stake small amounts of ETH and have them bundled together to activate validators.
 
-Unlike centralized exchanges, many other pooled staking options utilize smart contracts and/or staking tokens, which are usually ERC-20 tokens that can be held in your own wallet, and bought or sold just like any other token. This offers a layer of sovereignty and security by giving you control over your tokens, but still does not give you direct control over the validator client attesting on your behalf in the background.
+Unlike centralized exchanges, many other pooled staking options utilize smart contracts and/or liquid staking tokens, which are usually ERC-20 tokens that can be held in your own wallet, and bought or sold just like any other token. This offers a layer of sovereignty and security by giving you control over your tokens, but still does not give you direct control over the validator client attesting on your behalf in the background.
+
+Exchange "earn" programs are also custodial and governed by company terms rather than onchain rules, and their yield may not come from protocol staking at all. See [opaque pooled products](#opaque-pooled-products) for how to tell the difference.
 
 Some pooling options are more decentralized than others when it comes to the nodes that back them. To promote the health and decentralization of the network, stakers are always encouraged to select a pooling service that enables a permissionless decentralized set of node operators.
 </ExpandableCard>
