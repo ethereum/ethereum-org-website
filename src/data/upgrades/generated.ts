@@ -19,7 +19,6 @@ export const generated = {
     },
     milestones: [
       {
-        name: "Mainnet activation",
         kind: "mainnet",
         when: {
           year: 2022,
@@ -46,7 +45,6 @@ export const generated = {
     },
     milestones: [
       {
-        name: "Mainnet activation",
         kind: "mainnet",
         when: {
           year: 2023,
@@ -73,7 +71,6 @@ export const generated = {
     },
     milestones: [
       {
-        name: "Mainnet activation",
         kind: "mainnet",
         when: {
           year: 2024,
@@ -107,7 +104,6 @@ export const generated = {
     },
     milestones: [
       {
-        name: "Mainnet activation",
         kind: "mainnet",
         when: {
           year: 2025,
@@ -207,7 +203,6 @@ export const generated = {
     },
     milestones: [
       {
-        name: "Mainnet activation",
         kind: "mainnet",
         when: {
           year: 2025,
@@ -312,8 +307,8 @@ export const generated = {
     },
     milestones: [
       {
-        name: "Devnet-0",
         kind: "devnet",
+        version: 0,
         when: {
           year: 2026,
           month: 4,
@@ -322,8 +317,8 @@ export const generated = {
         status: "complete",
       },
       {
-        name: "Devnet-1",
         kind: "devnet",
+        version: 1,
         when: {
           year: 2026,
           month: 4,
@@ -332,8 +327,8 @@ export const generated = {
         status: "complete",
       },
       {
-        name: "Devnet-2",
         kind: "devnet",
+        version: 2,
         when: {
           year: 2026,
           month: 4,
@@ -342,8 +337,8 @@ export const generated = {
         status: "complete",
       },
       {
-        name: "Devnet-3",
         kind: "devnet",
+        version: 3,
         when: {
           year: 2026,
           month: 5,
@@ -352,8 +347,8 @@ export const generated = {
         status: "complete",
       },
       {
-        name: "Devnet-4",
         kind: "devnet",
+        version: 4,
         when: {
           year: 2026,
           month: 5,
@@ -362,8 +357,8 @@ export const generated = {
         status: "complete",
       },
       {
-        name: "Devnet-5",
         kind: "devnet",
+        version: 5,
         when: {
           year: 2026,
           month: 6,
@@ -372,8 +367,8 @@ export const generated = {
         status: "complete",
       },
       {
-        name: "Devnet-6",
         kind: "devnet",
+        version: 6,
         when: {
           year: 2026,
           month: 6,
@@ -382,8 +377,8 @@ export const generated = {
         status: "complete",
       },
       {
-        name: "Devnet-7",
         kind: "devnet",
+        version: 7,
         when: {
           year: 2026,
           month: 7,
@@ -392,8 +387,8 @@ export const generated = {
         status: "complete",
       },
       {
-        name: "Devnet-8",
         kind: "devnet",
+        version: 8,
         when: {
           year: 2026,
           month: 8,
@@ -402,8 +397,8 @@ export const generated = {
         status: "live",
       },
       {
-        name: "Sepolia fork",
         kind: "testnet",
+        network: "Sepolia",
         when: {
           year: 2026,
           quarter: 3,
@@ -411,8 +406,8 @@ export const generated = {
         status: "projected",
       },
       {
-        name: "Hoodi fork",
         kind: "testnet",
+        network: "Hoodi",
         when: {
           year: 2026,
           quarter: 3,
@@ -420,7 +415,6 @@ export const generated = {
         status: "projected",
       },
       {
-        name: "Mainnet activation",
         kind: "mainnet",
         when: {
           year: 2026,
@@ -635,23 +629,22 @@ export const generated = {
     },
     milestones: [
       {
-        name: "Sepolia fork",
         kind: "testnet",
+        network: "Sepolia",
         when: {
           year: 2027,
         },
         status: "projected",
       },
       {
-        name: "Hoodi fork",
         kind: "testnet",
+        network: "Hoodi",
         when: {
           year: 2027,
         },
         status: "projected",
       },
       {
-        name: "Mainnet activation",
         kind: "mainnet",
         when: {
           year: 2027,

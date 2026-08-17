@@ -76,25 +76,36 @@ export interface UpgradeEip {
 }
 
 /**
- * Which stage of the release process a milestone belongs to. Stored rather than
- * inferred from the name, because ordering has to survive imprecise dates: a
- * year-only testnet fork still precedes a quarter-precise mainnet activation.
+ * Which stage of the release process a milestone belongs to. Ordering has to
+ * survive imprecise dates: a year-only testnet fork still precedes a
+ * quarter-precise mainnet activation.
  */
 export type MilestoneKind = "devnet" | "testnet" | "mainnet"
 
-export interface Milestone {
-  name: string
-  kind: MilestoneKind
-  when: PartialDate
-  status: MilestoneStatus
-}
+/** No `name`: a UI translates through `kind`, not a hardcoded English string. */
+export type Milestone =
+  | {
+      kind: "devnet"
+      version: number
+      when: PartialDate
+      status: MilestoneStatus
+    }
+  | {
+      kind: "testnet"
+      network: string
+      when: PartialDate
+      status: MilestoneStatus
+    }
+  | { kind: "mainnet"; when: PartialDate; status: MilestoneStatus }
 
-export interface MainnetTarget {
-  when: PartialDate | null
-  /** True once the date can no longer move: the fork is live, or upstream has
-   * published its activation epoch. */
-  confirmed: boolean
-}
+export type MainnetTarget =
+  | {
+      when: PartialDate
+      /** True once the date can no longer move: the fork is live, or upstream
+       * has published its activation epoch. */
+      confirmed: boolean
+    }
+  | { when: null; confirmed: false }
 
 export interface UpgradeData {
   slug: string

@@ -28,7 +28,6 @@ const source: ForkcastSource = {
       status: "Live",
       activationDate: null,
       activationDetails: null,
-      disabled: true,
       path: "/upgrade/previous-upgrades",
     },
     {
@@ -41,7 +40,6 @@ const source: ForkcastSource = {
         epochNumber: 411392,
         slotNumber: 13164544,
       },
-      disabled: false,
       path: "/upgrade/fusaka",
     },
     {
@@ -50,7 +48,6 @@ const source: ForkcastSource = {
       status: "Upcoming",
       activationDate: "2026",
       activationDetails: null,
-      disabled: false,
       path: "/upgrade/glamsterdam",
     },
   ],
@@ -144,9 +141,9 @@ test("the phase timeline wins when it states the target more precisely", () => {
 test("public testnet forks become milestones, skipping deprecated networks", () => {
   const { milestones } = normalize(source).glamsterdam
   const testnets = milestones.filter((m) => m.kind === "testnet")
-  expect(testnets.map((m) => m.name)).toEqual(["Sepolia fork", "Hoodi fork"])
+  expect(testnets.map((m) => m.network)).toEqual(["Sepolia", "Hoodi"])
   expect(testnets[0].when).toEqual({ year: 2026, quarter: 3 })
-  expect(milestones.some((m) => m.name.includes("Holešky"))).toBe(false)
+  expect(testnets.some((m) => m.network === "Holešky")).toBe(false)
 })
 
 test("drops the signpost record and keeps real upgrades", () => {
@@ -171,10 +168,10 @@ test("confirmed means the date is settled, by epoch or by having shipped", () =>
         status: "Live",
         activationDate: "Mar 13, 2024",
         activationDetails: null,
-        disabled: true,
         path: "/upgrade/dencun",
       },
     ],
+    relationships: [],
     devnetLaunches: {},
     phases: {},
   }
@@ -193,7 +190,6 @@ test("a completed phase date outranks a headline year that lags behind it", () =
         status: "Live",
         activationDate: "2026",
         activationDetails: null,
-        disabled: false,
         path: "/upgrade/glamsterdam",
       },
     ],
@@ -215,6 +211,38 @@ test("a completed phase date outranks a headline year that lags behind it", () =
     month: 1,
     day: 15,
   })
+})
+
+test("two projections disagreeing on the year is drift, not a tiebreak", () => {
+  // Unlike actualEndDate, a projectedDate carries no more authority than the headline.
+  const conflicting: ForkcastSource = {
+    ...source,
+    upgrades: [
+      {
+        id: "glamsterdam",
+        name: "Glamsterdam Upgrade",
+        status: "Upcoming",
+        activationDate: "2026",
+        activationDetails: null,
+        path: "/upgrade/glamsterdam",
+      },
+    ],
+    devnetLaunches: {},
+    phases: {
+      glamsterdam: [
+        {
+          phaseId: "mainnet-deployment",
+          status: "upcoming",
+          projectedDate: "Q1 2027",
+          actualEndDate: null,
+          testnets: [],
+        },
+      ],
+    },
+  }
+  expect(() => normalize(conflicting)).toThrow(
+    /Mainnet target year disagreement/
+  )
 })
 
 test("a projected quarter is never marked confirmed", () => {
@@ -244,10 +272,12 @@ test("stores only EIPs expected to ship", () => {
 test("latest devnet is live while the fork is unshipped", () => {
   const { milestones } = normalize(source).glamsterdam
   expect(
-    milestones.filter((m) => m.kind === "devnet").map((m) => [m.name, m.status])
+    milestones
+      .filter((m) => m.kind === "devnet")
+      .map((m) => [m.version, m.status])
   ).toEqual([
-    ["Devnet-6", "complete"],
-    ["Devnet-7", "live"],
+    [6, "complete"],
+    [7, "live"],
   ])
 })
 
@@ -255,7 +285,6 @@ test("a shipped fork has a complete mainnet milestone", () => {
   const { milestones } = normalize(source).fusaka
   expect(milestones).toEqual([
     {
-      name: "Mainnet activation",
       kind: "mainnet",
       when: { year: 2025, month: 12, day: 3 },
       status: "complete",
@@ -275,6 +304,43 @@ test("unmapped upstream values fail loudly rather than emitting a gap", () => {
     ],
   }
   expect(() => normalize(broken)).toThrow(/Unmapped Forkcast EIP status/)
+})
+
+test("a fork name with no matching upgrade id fails loudly rather than dropping EIPs", () => {
+  const orphaned: ForkcastSource = {
+    ...source,
+    relationships: [
+      {
+        eipId: 1,
+        // The accent Forkcast's display name already carries.
+        forkName: "Hegotá",
+        statusHistory: [{ status: "Scheduled", call: null, date: null }],
+      },
+    ],
+  }
+  expect(() => normalize(orphaned)).toThrow(
+    /EIP relationships reference fork name\(s\) with no matching upgrade: hegotá/
+  )
+})
+
+test("a phase timeline key with no matching upgrade id fails loudly", () => {
+  const orphaned: ForkcastSource = {
+    ...source,
+    phases: { ...source.phases, unknownfork: [] },
+  }
+  expect(() => normalize(orphaned)).toThrow(
+    /Phase timeline references fork key\(s\) with no matching upgrade: unknownfork/
+  )
+})
+
+test("a devnet launches key with no matching upgrade id fails loudly", () => {
+  const orphaned: ForkcastSource = {
+    ...source,
+    devnetLaunches: { ...source.devnetLaunches, unknownfork: [] },
+  }
+  expect(() => normalize(orphaned)).toThrow(
+    /Devnet launches reference fork key\(s\) with no matching upgrade: unknownfork/
+  )
 })
 
 test("milestones are emitted in release order", () => {
@@ -301,10 +367,10 @@ test("release stage outranks the date when precision degrades", () => {
         status: "Planning",
         activationDate: "2027",
         activationDetails: null,
-        disabled: false,
         path: "/upgrade/hegota",
       },
     ],
+    relationships: [],
     devnetLaunches: {},
     phases: {
       hegota: [
@@ -422,6 +488,31 @@ test("activation details survive a legitimate zero", () => {
 test("a partial activation details block is drift, not absence", () => {
   const partial = upgradesLiteral.replace(/\n\s*epochNumber: 411392,/, "")
   expect(() => parseUpgrades(partial)).toThrow(/Incomplete activationDetails/)
+})
+
+test("underscore-separated number literals parse in full, not just their first digits", () => {
+  const literal = `
+export const networkUpgrades: NetworkUpgrade[] = [
+  {
+    id: 'fusaka',
+    name: 'Fusaka Upgrade',
+    status: 'Live',
+    activationDate: 'Dec 3, 2025',
+    activationDetails: {
+      blockNumber: 23_935_694,
+      epochNumber: 411_392,
+      slotNumber: 411_392 * 32,
+    },
+    path: '/upgrade/fusaka',
+  },
+]
+`
+  const [fusaka] = parseUpgrades(literal)
+  expect(fusaka.activationDetails).toEqual({
+    blockNumber: 23935694,
+    epochNumber: 411392,
+    slotNumber: 13164544,
+  })
 })
 
 test("a phase reads its own fields even when testnets come first", () => {

@@ -166,7 +166,12 @@ const resolveMainnetTarget = (
 
   if (!headline) return fromPhase
   if (!fromPhase) return headline
-  if (fromPhase.year !== headline.year) return headline
+  // A year mismatch between two projections is drift, not a tiebreak.
+  if (fromPhase.year !== headline.year) {
+    throw new ForkcastSyncError(
+      `Mainnet target year disagreement on ${upgrade.id}: headline projects ${headline.year}, phase timeline projects ${fromPhase.year}`
+    )
+  }
 
   return precision(fromPhase) > precision(headline) ? fromPhase : headline
 }
@@ -198,8 +203,8 @@ const normalizeTestnets = (
     }
     return [
       {
-        name: `${testnet.name} fork`,
         kind: "testnet",
+        network: testnet.name,
         when,
         status: testnet.status === "completed" ? "complete" : "projected",
       } satisfies Milestone,
@@ -273,8 +278,8 @@ const normalizeMilestones = (
     }
     const isLatest = i === launches.length - 1
     return {
-      name: `Devnet-${launch.version}`,
       kind: "devnet",
+      version: launch.version,
       when,
       // Once the fork has shipped, every devnet is history.
       status: isLatest && status !== "live" ? "live" : "complete",
@@ -285,7 +290,6 @@ const normalizeMilestones = (
 
   if (target) {
     milestones.push({
-      name: "Mainnet activation",
       kind: "mainnet",
       when: target,
       status:
@@ -296,7 +300,48 @@ const normalizeMilestones = (
   return milestones.sort(byMilestoneOrder)
 }
 
+/**
+ * forkName/phase/devnet keys join to an upgrade id by lowercased match, and a
+ * miss is silent (an empty filter, not a throw) — validate up front instead.
+ */
+const validateForeignKeys = (source: ForkcastSource): void => {
+  const upgradeIds = new Set(source.upgrades.map((u) => u.id))
+
+  const unknownForkNames = [
+    ...new Set(
+      source.relationships
+        .map((r) => r.forkName.toLowerCase())
+        .filter((id) => !upgradeIds.has(id))
+    ),
+  ]
+  if (unknownForkNames.length) {
+    throw new ForkcastSyncError(
+      `EIP relationships reference fork name(s) with no matching upgrade: ${unknownForkNames.join(", ")}`
+    )
+  }
+
+  const unknownPhaseKeys = Object.keys(source.phases).filter(
+    (id) => !upgradeIds.has(id)
+  )
+  if (unknownPhaseKeys.length) {
+    throw new ForkcastSyncError(
+      `Phase timeline references fork key(s) with no matching upgrade: ${unknownPhaseKeys.join(", ")}`
+    )
+  }
+
+  const unknownDevnetKeys = Object.keys(source.devnetLaunches).filter(
+    (id) => !upgradeIds.has(id)
+  )
+  if (unknownDevnetKeys.length) {
+    throw new ForkcastSyncError(
+      `Devnet launches reference fork key(s) with no matching upgrade: ${unknownDevnetKeys.join(", ")}`
+    )
+  }
+}
+
 export const normalize = (source: ForkcastSource): UpgradeStore => {
+  validateForeignKeys(source)
+
   const store: UpgradeStore = {}
 
   for (const upgrade of source.upgrades) {
@@ -321,13 +366,16 @@ export const normalize = (source: ForkcastSource): UpgradeStore => {
     // A shipped fork's date cannot move, so it counts as confirmed whether or
     // not upstream kept its activation epoch — Forkcast records none for the
     // pre-Pectra forks, which would otherwise read as tentative.
-    const confirmed = status === "live" || upgrade.activationDetails !== null
+    const confirmed =
+      when !== null && (status === "live" || upgrade.activationDetails !== null)
 
     store[upgrade.id] = {
       slug: upgrade.id,
       name: upgrade.name.replace(/ Upgrade$/, ""),
       status,
-      mainnetTarget: { when, confirmed },
+      mainnetTarget: when
+        ? { when, confirmed }
+        : { when: null, confirmed: false },
       milestones: normalizeMilestones(source, upgrade, status, when, confirmed),
       eips: normalizeEips(source, upgrade.id),
       sourceUrl: `https://forkcast.org${upgrade.path ?? `/upgrade/${upgrade.id}`}`,

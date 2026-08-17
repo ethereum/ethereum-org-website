@@ -34,7 +34,6 @@ export interface ForkcastUpgrade {
   status: string
   activationDate: string | null
   activationDetails: ForkcastActivationDetails | null
-  disabled: boolean
   path: string | null
 }
 
@@ -161,12 +160,12 @@ export const parseUpgrades = (source: string): ForkcastUpgrade[] => {
     const detailsBlock =
       block.match(/activationDetails: \{([^}]*)\}/)?.[1] ?? ""
     const detail = (key: string) => {
-      const m = detailsBlock.match(new RegExp(`${key}: ([\\d\\s*]+)`))
+      const m = detailsBlock.match(new RegExp(`${key}: ([\\d\\s*_]+)`))
       if (!m) return null
-      // slotNumber is written as an expression, e.g. `411392 * 32`
+      // slotNumber is an expression (`411392 * 32`); literals may use `_` separators.
       const value = m[1]
         .split("*")
-        .map((p) => Number(p.trim()))
+        .map((p) => Number(p.trim().replace(/_/g, "")))
         .reduce((a, b) => a * b, 1)
       if (!Number.isFinite(value)) {
         throw new ForkcastSyncError(
@@ -200,7 +199,6 @@ export const parseUpgrades = (source: string): ForkcastUpgrade[] => {
         blockNumber !== null && epochNumber !== null && slotNumber !== null
           ? { blockNumber, epochNumber, slotNumber }
           : null,
-      disabled: /\bdisabled: true/.test(block),
       path: str("path"),
     } satisfies ForkcastUpgrade
   })
