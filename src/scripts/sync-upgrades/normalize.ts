@@ -339,16 +339,23 @@ const validateForeignKeys = (source: ForkcastSource): void => {
   }
 }
 
+/** Non-upgrade signpost rows, e.g. `previous-upgrades` links to /history. */
+const NON_UPGRADE_IDS: ReadonlySet<string> = new Set(["previous-upgrades"])
+
 export const normalize = (source: ForkcastSource): UpgradeStore => {
   validateForeignKeys(source)
 
   const store: UpgradeStore = {}
 
   for (const upgrade of source.upgrades) {
-    // A signpost row pointing at ethereum.org/history, not a real upgrade.
-    if (!upgrade.activationDate && !upgrade.path?.startsWith("/upgrade/"))
-      continue
-    if (upgrade.id === "previous-upgrades") continue
+    if (NON_UPGRADE_IDS.has(upgrade.id)) continue
+
+    // No date and no canonical page: a new signpost row or upstream drift.
+    if (!upgrade.activationDate && !upgrade.path?.startsWith("/upgrade/")) {
+      throw new ForkcastSyncError(
+        `Upgrade "${upgrade.id}" has neither an activationDate nor an /upgrade/ path — add it to NON_UPGRADE_IDS if it's a signpost row`
+      )
+    }
 
     const status = UPGRADE_STATUS[upgrade.status]
     if (!status) {

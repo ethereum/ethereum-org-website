@@ -1,5 +1,5 @@
-import { execFileSync } from "node:child_process"
 import { writeFileSync } from "node:fs"
+import { format, resolveConfig } from "prettier"
 
 import type { UpgradeStore } from "@/data/upgrades/types"
 
@@ -24,10 +24,9 @@ import type { UpgradeStore } from "./types"
 export const generated = ${JSON.stringify(store, null, 2)} satisfies UpgradeStore
 `
 
-/** Prettier runs here so a fresh render is byte-comparable with the commit. */
-export const write = (path: string, next: string): void => {
-  writeFileSync(path, next)
-  execFileSync("pnpm", ["exec", "prettier", "--write", path], {
-    stdio: "ignore",
-  })
+/** Formats in memory and writes once, so a prettier failure never touches disk. */
+export const write = async (path: string, next: string): Promise<void> => {
+  const config = await resolveConfig(path)
+  const formatted = await format(next, { ...config, filepath: path })
+  writeFileSync(path, formatted)
 }

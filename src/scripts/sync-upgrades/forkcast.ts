@@ -252,11 +252,23 @@ export const parsePhases = (
 
       if (testnetsBlock) {
         for (const entry of testnetsBlock.split("},")) {
+          // Empty fragment = empty `testnets: []`, not a malformed record.
+          if (!entry.trim()) continue
           const name = entry.match(/name:\s*'([^']+)'/)?.[1]
-          if (!name) continue
+          if (!name) {
+            throw new ForkcastSyncError(
+              `Testnet entry missing name in phase ${phaseMatch[1]}: ${entry.trim().slice(0, 80)}`
+            )
+          }
+          const status = entry.match(/status:\s*'([^']+)'/)?.[1]
+          if (!status) {
+            throw new ForkcastSyncError(
+              `Testnet "${name}" missing status in phase ${phaseMatch[1]}`
+            )
+          }
           testnets.push({
             name,
-            status: entry.match(/status:\s*'([^']+)'/)?.[1] ?? "unknown",
+            status,
             projectedDate:
               entry.match(/projectedDate:\s*'([^']+)'/)?.[1] ?? null,
           })

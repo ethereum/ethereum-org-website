@@ -36,7 +36,7 @@ const main = async () => {
   )
   summarize(next)
 
-  write(GENERATED_PATH, render(next, FORKCAST_REPO))
+  await write(GENERATED_PATH, render(next, FORKCAST_REPO))
   console.log(`\nWrote ${GENERATED_PATH}`)
 }
 
