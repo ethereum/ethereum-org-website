@@ -7,7 +7,6 @@ import {
   GreenCheckProductGlyph,
   WarningProductGlyph,
 } from "@/components/icons/staking"
-import Translation from "@/components/Translation"
 import { Flex } from "@/components/ui/flex"
 import TabNav from "@/components/ui/TabNav"
 
@@ -38,9 +37,8 @@ const IndicatorGroup = ({
   return (
     <Flex className="items-center gap-2">
       <IndicatorIcon style={styleObj} />
-      <p>
-        <Translation id={label} />
-      </p>
+      {/* `label` arrives already translated from the hook */}
+      <p>{label}</p>
     </Flex>
   )
 }
