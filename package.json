@@ -22,6 +22,7 @@
     "lint:md": "markdownlint-cli2 \"public/content/**/*.md\" \"!public/content/translations/**\"",
     "lint:md:fix": "markdownlint-cli2 --fix \"public/content/**/*.md\" \"!public/content/translations/**\"",
     "update-tutorials": "tsx src/scripts/update-tutorials-list.ts",
+    "sync-upgrades": "tsx src/scripts/sync-upgrades/main.ts",
     "prepare": "husky",
     "test": "pnpm test:unit && pnpm test:e2e",
     "test:unit": "USE_MOCK_DATA=true playwright test --project=unit",

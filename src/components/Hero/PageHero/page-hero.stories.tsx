@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl"
 import type { Meta, StoryObj } from "@storybook/nextjs"
 
-import { langViewportModes } from "@/storybook/modes"
+import { langViewportModes, variantMode } from "@/storybook/modes"
 
 import PageHeroComponent, { type PageHeroProps } from "."
 
@@ -16,9 +16,7 @@ const meta = {
     // asPath lets the Breadcrumbs component resolve the "home" crumb label
     nextjs: { router: { asPath: "/en" } },
     chromatic: {
-      modes: {
-        ...langViewportModes,
-      },
+      modes: variantMode,
     },
   },
 } satisfies Meta<typeof PageHeroComponent>
@@ -65,6 +63,9 @@ const useBaseProps = () => {
  * divider. `title` is the page `<h1>`.
  */
 export const PageHeroWithImage: Story = {
+  parameters: {
+    chromatic: { modes: langViewportModes },
+  },
   render: () => (
     <PageHeroComponent
       breadcrumbs={{ slug: "/run-a-node/" }}

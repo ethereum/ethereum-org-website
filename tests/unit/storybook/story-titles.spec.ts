@@ -123,6 +123,43 @@ const storyFiles = SEARCH_ROOTS.flatMap(findStoryFiles).sort()
 const sectionFor = (relPath: string): string | null =>
   TAXONOMY.find(({ prefix }) => relPath.startsWith(prefix))?.section ?? null
 
+/** `langViewportModes` on `meta` multiplies every story in the file -- fine
+ * with one story, a problem with more than one. See `.storybook/modes.ts`. */
+const metaSpreadsLangViewportModesAcrossMultipleStories = (
+  relPath: string
+): boolean => {
+  const source = ts.createSourceFile(
+    relPath,
+    readFileSync(path.join(REPO_ROOT, relPath), "utf8"),
+    ts.ScriptTarget.Latest,
+    /* setParentNodes */ false,
+    ts.ScriptKind.TSX
+  )
+  const meta = findMetaObject(source)
+  if (!meta) return false
+
+  let found = false
+  const walk = (node: ts.Node) => {
+    if (ts.isIdentifier(node) && node.text === "langViewportModes") {
+      found = true
+      return
+    }
+    ts.forEachChild(node, walk)
+  }
+  walk(meta)
+  if (!found) return false
+
+  const storyCount = source.statements.filter(
+    (stmt) =>
+      ts.isVariableStatement(stmt) &&
+      stmt.modifiers?.some((m) => m.kind === ts.SyntaxKind.ExportKeyword) &&
+      stmt.declarationList.declarations.some(
+        (d) => ts.isIdentifier(d.name) && d.name.text !== "meta"
+      )
+  ).length
+  return storyCount > 1
+}
+
 test.describe("Storybook title taxonomy", () => {
   test("story files are discovered", () => {
     // Guards against a silently broken walker turning the rest into no-ops.
@@ -181,6 +218,17 @@ test.describe("Storybook title taxonomy", () => {
         : [`${f}: "${actual}" should be "${expected}" (title: ${title})`]
     })
     expect(mismatched).toEqual([])
+  })
+
+  test("langViewportModes is never spread onto meta in a multi-story file", () => {
+    const offenders = storyFiles.filter(
+      metaSpreadsLangViewportModesAcrossMultipleStories
+    )
+    expect(
+      offenders,
+      "put langViewportModes on ONE representative story instead of `meta` -- " +
+        "use variantMode (or staticModes) on meta. See .storybook/modes.ts"
+    ).toEqual([])
   })
 
   test("no two story files share a title", () => {

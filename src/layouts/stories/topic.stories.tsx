@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import { staking } from "@/data/topics/staking"
 
-import { langViewportModes } from "@/storybook/modes"
+import { langViewportModes, variantMode } from "@/storybook/modes"
 
 import { TopicLayout } from "../Topic"
 
@@ -20,7 +20,7 @@ const meta = {
   tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
-    chromatic: { modes: { ...langViewportModes } },
+    chromatic: { modes: variantMode },
     docs: {
       description: {
         component:
@@ -64,7 +64,10 @@ const baseArgs = {
   children: <ArticleBody />,
 }
 
-export const Default: Story = { args: baseArgs }
+export const Default: Story = {
+  parameters: { chromatic: { modes: langViewportModes } },
+  args: baseArgs,
+}
 
 export const WithSummaryProse: Story = {
   parameters: {
