@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/nextjs"
 
-import { langViewportModes } from "../../../.storybook/modes"
+import { staticModes, variantMode } from "../../../.storybook/modes"
 
 import DeveloperDocsLinksComponent from "."
 
@@ -11,9 +11,7 @@ const meta = {
   parameters: {
     layout: "fullscreen",
     chromatic: {
-      modes: {
-        ...langViewportModes,
-      },
+      modes: variantMode,
     },
   },
   decorators: [
@@ -30,6 +28,9 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const FoundationalTopics: Story = {
+  parameters: {
+    chromatic: { modes: staticModes },
+  },
   args: {
     headerId: "foundational-topics",
   },

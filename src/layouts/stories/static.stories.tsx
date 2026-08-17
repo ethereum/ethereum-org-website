@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs"
 
-import { langViewportModes } from "@/storybook/modes"
+import { langViewportModes, variantMode } from "@/storybook/modes"
 
 import { StaticLayout } from "../Static"
 
@@ -18,7 +18,7 @@ const meta = {
   tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
-    chromatic: { modes: { ...langViewportModes } },
+    chromatic: { modes: variantMode },
     docs: {
       description: {
         component:
@@ -53,7 +53,10 @@ const baseArgs = {
   children: <ArticleBody />,
 }
 
-export const Default: Story = { args: baseArgs }
+export const Default: Story = {
+  parameters: { chromatic: { modes: langViewportModes } },
+  args: baseArgs,
+}
 
 export const EditButtonHidden: Story = {
   parameters: {
