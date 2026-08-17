@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/common.json",
-  "generatedAt": "2026-07-28T21:56:39.565Z",
-  "rootHash": "7dd84a54ecd1",
+  "generatedAt": "2026-08-07T05:05:07.865Z",
+  "rootHash": "d36b8e554add",
   "tree": {
-    "contentHash": "221d9c05dfe4",
-    "anchorHash": "f5888b41b282",
+    "contentHash": "abbd8fb8f882",
+    "anchorHash": "3cb14658cc92",
     "children": {
       "about-ethereum-org": {
         "contentHash": "9aafb3686977",
@@ -515,6 +515,10 @@
       },
       "events": {
         "contentHash": "8d14f6e72de8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm": {
+        "contentHash": "6676f17ddccb",
         "anchorHash": "e3b0c44298fc"
       },
       "feedback-card-prompt-article": {
@@ -1980,6 +1984,10 @@
         "contentHash": "ea93d6a262ec",
         "anchorHash": "e3b0c44298fc"
       },
+      "transactions": {
+        "contentHash": "3e5136fd4b11",
+        "anchorHash": "e3b0c44298fc"
+      },
       "translation-banner-no-bugs-content": {
         "contentHash": "bf9e66642ca6",
         "anchorHash": "e3b0c44298fc"
@@ -2236,6 +2244,7 @@
       "ethereum-wallets",
       "ethereum-whitepaper",
       "events",
+      "evm",
       "feedback-card-prompt-article",
       "feedback-card-prompt-page",
       "feedback-card-prompt-tutorial",
@@ -2594,6 +2603,7 @@
       "terms-and-conditions",
       "terms-of-use",
       "tools",
+      "transactions",
       "translation-banner-no-bugs-content",
       "translation-banner-no-bugs-dont-show-again",
       "translation-banner-no-bugs-title",
@@ -2630,5 +2640,5 @@
       "region-sint-eustatius-netherlands"
     ]
   },
-  "sourceCommitSha": "f99d74bf2ad4ecaa64f42bc984735fecc8fe83af"
+  "sourceCommitSha": "3c76f545357f4d2d02a6f906d4b647d531be7088"
 }

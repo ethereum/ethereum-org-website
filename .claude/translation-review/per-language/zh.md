@@ -48,3 +48,26 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - `隐形地址` for stealth address matches the dominant repo term (39 vs 6 for `隐身地址`).
 - `《Asphodel: Prologue》` in 《》 follows Chinese title convention with the Latin name untouched — correct, not a brand modification.
 - The `page-values` reword improves on the prior version, which over-translated "only a promise" as `一纸空头支票`.
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 9.4/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- Second-highest of the fleet. Zero `智慧合约` regressions; `智能合约` correct throughout. No per-locale fixes needed beyond the fleet-wide items.
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.3/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:** none -- no critical issues.
+
+**Open (native call needed):**
+
+- `nfts-hero-description` -> `数字藏品` is the ONLY occurrence of that term in `src/intl/zh/`; the repo uses `数字收藏品` in 5 other files. Worse, `数字藏品` is the term mainland platforms adopted for regulated, non-transferable domestic NFT substitutes, deliberately distanced from crypto NFTs -- a poor fit for an Ethereum NFT wallet page. Suggest `数字收藏品`. zh-tw correctly used the repo term.
+- `fee-label-shield-unshield` -> `屏蔽` is the established Zcash-Chinese rendering, but in mainland usage it overwhelmingly reads "block/mute/censor", and this same file uses `阻止` for "block your access". Flagging the ambiguity, not calling it wrong.
+- `fee-qualifier-per-card` -> `{value}/张卡` stacks the measure word oddly; `{value}/张` or `每张卡 {value}`.
+- `crops-secure` -> `安全` is byte-identical to `page-find-wallet-security`, losing the EN Security/Secure split; zh-tw distinguishes them.
+
+**Notes:**
+
+- All 13 glossary terms exact including the noun/verb bridge split (`跨链费` per the verb form, not the noun `跨链桥`). `你` consistent 21x with zero `您` leakage.

@@ -32,3 +32,25 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 
 - `bertujuan`-style tense-neutrality (#33) did not recur: `sebelum kontrak ada` and `belum diterapkan` both carry their temporal force.
 - The adjectival/nominal zero-knowledge split (`bukti tanpa pengetahuan` nominal, `zero-knowledge` as modifier) is coherent and matches 6 pre-existing uses in the same file.
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 8.7/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- No per-locale fixes needed beyond the fleet-wide items. Open: `common.json` `zero-knowledge-proofs` uses the hybrid `Bukti zero-knowledge` where the glossary compound is `Bukti tanpa pengetahuan`, which `learn-quizzes.json` already uses 8+ times.
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.7/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:** none -- no critical issues.
+
+**Open (native call needed):**
+
+- `fee-row-label` -> `Apa yang Anda bayar` leans to "what you pay"; `Untuk apa Anda membayar` is unambiguous.
+- `fee-qualifier-of-rewards` -> `hadiah` (gift/prize); staking rewards is `imbalan` (#56).
+- `hardware-hero-description` -> `luring` for offline is KBBI-sanctioned but rare in tech copy.
+
+**Notes:**
+
+- Cleanest of its bloc. The only locale in the whole fleet that kept `shield/unshield` as a term of art rather than calquing it -- the model for the #57 glossary request.

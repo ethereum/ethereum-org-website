@@ -61,3 +61,27 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - The collateral `同樣具有` -> `也有一個` reword is meaning-neutral and safe to leave, though `一個 42 個字元` stacks 個 twice.
 - Taiwan-vs-mainland choices are correct throughout (程式碼/實作/最佳化/生物辨識/螢幕截圖/網路, 雜湊 not 哈希); no Simplified leakage and no recurrence of the `智慧合約` regression logged for this locale.
 - `處理常式` for "handler" is the correct MS zh-tw term.
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 9.0/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- **Zero `智慧合約` regressions** -- the error that recurred in PRs #18344 and #18772 did not recur; keep checking it every import regardless. Fixed: `fee_recipient` described as the payer instead of the recipient in 2 table rows (`支付` -> `接收`), contradicted by its own `learn-quizzes.json`. Open: `free` rendered as 免費 (zero-cost) in `what-are-apps` frontmatter where the page itself later says ETH is required -- the liberty sense was meant.
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.6/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:** none -- no critical issues.
+
+**Open (native call needed):**
+
+- `fee-label-shield-unshield` -> `屏蔽` reads as physical/EM shielding in Taiwan (`屏蔽線`); Taiwan uses `封鎖` for content-blocking, as this very file does in `crops-censorship-resistant-desc`. The privacy-pool sense does not come through (#57).
+- `fee-qualifier-per-card` -> `{value}/張卡`; `{value}/張` or `每張卡 {value}` reads better.
+
+**Notes:**
+
+- Best of its bloc. Glossary-exact including `網路` (zero `網絡`), `去中心化應用程式 (dapp)` per the Taiwan note, `橋接` for the verb, and uppercase `(L2)`.
+- The recurring `智慧合約` regression (PRs #18344, #18772) did NOT recur -- zero occurrences.
+- Only locale in the fleet that preserves the EN Security/Secure split (`安全性` / `安全`).
+- Taiwan vocabulary correct throughout: 取得/匯入/自訂/裝置/金鑰/儲存/介面/檢視/存取/浮動/方案/新增, zero `添加`, zero `您`.

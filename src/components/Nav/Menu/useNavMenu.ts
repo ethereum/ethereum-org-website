@@ -1,7 +1,9 @@
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import type { MotionProps } from "motion/react"
+import { useLocale } from "next-intl"
 
 import { isModified } from "@/lib/utils/keyboard"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { MAIN_NAV_ID, SECTION_LABELS } from "@/lib/constants"
 
@@ -10,9 +12,23 @@ import type { NavSectionKey, NavSections } from "../types"
 import { useEventListener } from "@/hooks/useEventListener"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
+// How long the pointer must rest on a section before the open is reported.
+// The menu opens on hover, so a sweep across the bar would otherwise report
+// every section it passed over.
+const OPEN_DWELL_MS = 300
+
 export const useNavMenu = (sections: NavSections) => {
   const { direction } = useRtlFlip()
+  const locale = useLocale()
   const [activeSection, setActiveSection] = useState<NavSectionKey | null>(null)
+  const dwellTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  useEffect(
+    () => () => {
+      if (dwellTimer.current) clearTimeout(dwellTimer.current)
+    },
+    []
+  )
 
   // Focus corresponding nav section when number keys pressed
   useEventListener("keydown", (event) => {
@@ -44,7 +60,21 @@ export const useNavMenu = (sections: NavSections) => {
   }
 
   const handleSectionChange = (activeSection: string) => {
-    setActiveSection(getEnglishSectionName(activeSection))
+    const sectionKey = getEnglishSectionName(activeSection)
+    setActiveSection(sectionKey)
+
+    // Moving on cancels the pending open, so only the section the pointer
+    // settles on is reported. Radix clears the value on close.
+    if (dwellTimer.current) clearTimeout(dwellTimer.current)
+    if (!sectionKey) return
+
+    dwellTimer.current = setTimeout(() => {
+      trackCustomEvent({
+        eventCategory: "Desktop navigation menu",
+        eventAction: "Section changed",
+        eventName: `Open section: ${locale} - ${sectionKey}`,
+      })
+    }, OPEN_DWELL_MS)
   }
 
   const isOpen = activeSection !== null

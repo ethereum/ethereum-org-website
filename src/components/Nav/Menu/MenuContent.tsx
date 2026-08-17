@@ -1,13 +1,12 @@
-import { motion } from "motion/react"
+import { motion, type MotionProps } from "motion/react"
 import { tv } from "tailwind-variants"
 import { Content } from "@radix-ui/react-navigation-menu"
 
 import { cn } from "@/lib/utils/cn"
 
-import { NavItem, NavSections } from "../types"
+import { NavItem, NavSectionKey } from "../types"
 
 import SubMenu from "./SubMenu"
-import { useNavMenu } from "./useNavMenu"
 
 export const navMenuVariants = tv({
   slots: {
@@ -50,12 +49,21 @@ export const navMenuVariants = tv({
 type MenuContentProps = {
   items: NavItem[]
   isOpen: boolean
-  sections: NavSections
+  activeSection: NavSectionKey | null
+  containerVariants: MotionProps["variants"]
+  onClose: () => void
 }
 
 // Desktop Menu content
-const MenuContent = ({ items, isOpen, sections }: MenuContentProps) => {
-  const { activeSection, containerVariants, onClose } = useNavMenu(sections)
+// State comes from the single useNavMenu instance in the parent; calling the
+// hook here would fork it and leave activeSection permanently null
+const MenuContent = ({
+  items,
+  isOpen,
+  activeSection,
+  containerVariants,
+  onClose,
+}: MenuContentProps) => {
   const { base } = navMenuVariants()
 
   return (
