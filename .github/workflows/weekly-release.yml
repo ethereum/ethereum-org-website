@@ -131,7 +131,12 @@ jobs:
     needs: prepare
     if: needs.prepare.outputs.skipped == 'false'
     runs-on: ubuntu-latest
-    timeout-minutes: 75
+    # Budget: up to 60min in wait-for-pr-checks + ~2min discovering the dispatched
+    # run + the full release-reviewer run (its own 20min agent timeout plus
+    # container/setup/safe-outputs overhead). A timeout here cancels the job
+    # (conclusion: cancelled), which skips the failure()-guarded Discord step below
+    # — keep this comfortably above the worst case so that never happens silently.
+    timeout-minutes: 100
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
@@ -221,12 +226,15 @@ jobs:
           before=$(date -u +%Y-%m-%dT%H:%M:%SZ)
           gh workflow run release-reviewer.lock.yml --repo "$REPO" -f pr_number="$PR_NUMBER"
 
+          # release-reviewer.md sets run-name to "Release Reviewer — PR #<pr_number>",
+          # so match on that instead of just the dispatch time window — a concurrent
+          # manual dispatch (or retry) for a different PR must never be picked up here.
           run_id=""
           for _ in $(seq 1 24); do
             sleep 5
             run_id=$(gh run list --repo "$REPO" --workflow release-reviewer.lock.yml \
-              --event workflow_dispatch --limit 5 --json databaseId,createdAt \
-              -q "[.[] | select(.createdAt >= \"$before\")] | sort_by(.createdAt) | last | .databaseId // empty")
+              --event workflow_dispatch --limit 10 --json databaseId,createdAt,displayTitle \
+              -q "[.[] | select(.createdAt >= \"$before\" and .displayTitle == \"Release Reviewer — PR #$PR_NUMBER\")] | sort_by(.createdAt) | last | .databaseId // empty")
             [[ -n "$run_id" ]] && break
           done
 
