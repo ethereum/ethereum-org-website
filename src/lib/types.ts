@@ -830,6 +830,10 @@ export type WalletFee = (
   qualifierUsd?: number
 }
 
+export type WalletUsageTracking =
+  | { value: "none" | "crash-only" | "analytics"; evidence: string }
+  | { value: "undisclosed" }
+
 export type WalletData = {
   last_updated: string
   name: string
@@ -883,6 +887,7 @@ export type WalletData = {
   mpc?: boolean
   new_to_crypto?: boolean
   privacy?: boolean
+  usage_tracking?: WalletUsageTracking
   /**
    * Fees shown on the wallet card, e.g. "Swap fee: 0.85%" or "Device: $149".
    * Rendered by formatWalletFees; omitted when the wallet has no fee to surface.
