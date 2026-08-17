@@ -28,6 +28,7 @@ import {
   chunkProse,
   PROSE_SIZE_THRESHOLD,
 } from "./lib/llm/code-block-extractor"
+import { resetMeter } from "./lib/llm/cost-meter"
 import { chunkJson } from "./lib/llm/json-batcher"
 import { hasEnglishChanged } from "./lib/llm/manifest-adapter"
 import { chunksNeeded, planIncrementalBatches } from "./lib/llm/plan"
@@ -176,12 +177,14 @@ function planFull(
   }
 }
 
-// Belt to the braces: nothing in this file's import graph reaches an LLM call
-// site, and a zero fuse means that if one is ever added, the first request
-// throws instead of spending. Set before ./constants is read.
-process.env.INTL_MAX_COST_USD = "0"
-
 async function main() {
+  // Belt to the braces: nothing in this file's import graph reaches an LLM call
+  // site, and a zero fuse means that if one is ever added, the first request
+  // throws instead of spending. Set at runtime -- assigning
+  // process.env.INTL_MAX_COST_USD here would be too late, since ./constants
+  // reads it when the hoisted imports evaluate.
+  resetMeter(0)
+
   const rows: Row[] = []
   const files = expandTargets()
   const locales = config.allInternalCodes

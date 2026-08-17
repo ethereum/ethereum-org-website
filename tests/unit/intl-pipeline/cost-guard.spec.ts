@@ -17,6 +17,7 @@ import {
   estimatedCostUsd,
   FileBudgetExceededError,
   recordUsage,
+  reserveForCall,
   resetMeter,
   RunFuseExceededError,
   usageTotals,
@@ -127,6 +128,31 @@ test.describe("Run fuse", () => {
     expect(() => assertRunFuse("learn-quizzes.json lang=ta")).toThrow(
       RunFuseExceededError
     )
+  })
+
+  test("concurrent in-flight calls cannot all clear a fuse one of them blows", () => {
+    // Spend is recorded when a call resolves, so without reservations every
+    // concurrent request sees $0 spent and passes. 16 is the default
+    // GEMINI_CONCURRENCY.
+    resetMeter(1)
+    let admitted = 0
+    for (let i = 0; i < 16; i++) {
+      try {
+        reserveForCall(`call ${i}`)
+        admitted += 1
+      } catch {
+        break
+      }
+    }
+    expect(admitted).toBeLessThan(16)
+  })
+
+  test("settling a call releases its reservation", () => {
+    resetMeter(1)
+    const settle = reserveForCall("call 1")
+    settle(0)
+    // With the reservation released and nothing recorded, the fuse is clear again
+    expect(() => assertRunFuse("call 2")).not.toThrow()
   })
 
   test("the 2026-08-07 call pattern trips the fuse in the first minutes", () => {

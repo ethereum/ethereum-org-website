@@ -23,10 +23,15 @@ The failure mode gets _worse_ as translation coverage improves, which is why it 
 | Per call         | `MAX_PROMPT_BYTES` (64KB)                                          | `callGeminiRaw`, before the request                    |
 | Per file+locale  | `ceil(translatableWireBytes / MAX_CHUNK_BYTES) x MAX_PROMPT_BYTES` | `createFileBudget`, checked against the assembled plan |
 | Batches per file | `MAX_BATCHES_PER_FILE` (32)                                        | `buildGeminiTranslator`                                |
-| Whole run        | `RUN_FUSE_USD` ($100, `INTL_MAX_COST_USD`)                         | `assertRunFuse`, before each request                   |
+| Whole run        | `RUN_FUSE_USD` ($100, `INTL_MAX_COST_USD`)                         | `reserveForCall`, before each request                  |
 | Provider account | OpenRouter key credit limit                                        | server-side, 402                                       |
 
 All input-side, because prompt bytes are assembled locally and knowable before sending; output is a translation of what we sent and is capped by `GEMINI_TIMEOUT_MS`.
+
+Two accounting notes that matter when reading a log:
+
+- **Thinking tokens are billed as output on both transports**, and they dominate the output bill for small incremental updates (~5,200 per call). `tokens_out` in the per-call log is the billable total on either provider, with `reasoning=` reported as a subset of it, not an addition.
+- **The run fuse reserves worst-case cost for in-flight calls** (`reserveForCall`), because up to `GEMINI_CONCURRENCY` requests are outstanding at once and spend is only recorded when each resolves. Without the reservation every in-flight call could clear a fuse that one of them goes on to blow.
 
 ## Triage
 
@@ -68,7 +73,7 @@ Assembles every prompt, sends none, prints projected prompt bytes / requests / t
 
 `LLM_PROVIDER=gemini` (direct) or `openrouter`. The workflow defaults to `openrouter`.
 
-- **OpenRouter** — same models at list price, no inference markup, 5.5% on credit purchases. The key carries a server-side credit limit (set `limit` and `limit_reset: "daily"` when provisioning) and rejects with 402 once exhausted; credits are prepaid, so the account cannot exceed what is loaded. Each request sends `max_price` at our expected `$2/$12` so a routing change cannot raise the rate, and `usage: {include: true}` returns authoritative per-call cost. Startup logs `limit` / `limit_remaining`, and warns if the key has no limit.
+- **OpenRouter** — same models at list price, no inference markup, 5.5% on credit purchases. The key carries a server-side credit limit (set `limit` and `limit_reset: "daily"` when provisioning) and rejects with 402 once exhausted; credits are prepaid, so the account cannot exceed what is loaded. Each request sends `max_price` at our expected `$2/$12` so a routing change cannot raise the rate. Usage accounting is always on (the old `usage: {include: true}` flag is deprecated and ignored), so `usage.cost` and `completion_tokens_details.reasoning_tokens` come back on every call. Startup logs `limit` / `limit_remaining` and the reset window, and warns if the key has no limit.
 - **Gemini direct** — no USD cap of any kind. GCP billing budgets alert, they do not stop. The only brake is a rolling 10-minute spend-rate limit by tier (Tier 1 $10, Tier 2/3 $200); the incident averaged ~$77 per 10 minutes and never came close. Startup warns about this explicitly.
 - Safety settings (`BLOCK_NONE` for all four categories) are **not** sent through OpenRouter — there is no documented passthrough. Gemini 3 defaults the block threshold to Off, so it works, but it is an undocumented dependency. If empty responses or `finishReason=SAFETY` appear only on the OpenRouter path, that is the first thing to check.
 

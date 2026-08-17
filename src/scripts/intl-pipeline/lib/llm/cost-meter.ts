@@ -23,6 +23,8 @@ let inputTokens = 0
 let outputTokens = 0
 let reasoningTokens = 0
 let providerCostUsd = 0
+/** Worst-case cost held for calls that have been sent but have not resolved */
+let reservedUsd = 0
 let calls = 0
 let fuseUsd = RUN_FUSE_USD
 
@@ -87,15 +89,51 @@ export function runFuseUsd(): number {
 }
 
 /**
- * Throw if the run has already spent its fuse. Called before each request, so
- * the guard trips one call late at worst.
+ * Worst-case cost of one in-flight call, used to reserve against the fuse while
+ * a request is outstanding: a full prompt at MAX_PROMPT_BYTES plus an output of
+ * the same order. Deliberately pessimistic -- reserving too little is what lets
+ * the fuse overshoot, reserving too much only trips it marginally early.
+ */
+const WORST_CASE_CALL_USD =
+  (MAX_PROMPT_BYTES / 3 / 1_000_000) * INPUT_RATE_USD_PER_1M +
+  (MAX_PROMPT_BYTES / 3 / 1_000_000) * OUTPUT_RATE_USD_PER_1M
+
+/**
+ * Reserve worst-case cost for a call that is about to be sent, throwing if the
+ * fuse cannot cover it. Spend is only recorded once a call resolves, and the
+ * pipeline runs up to GEMINI_CONCURRENCY calls at once, so checking recorded
+ * spend alone lets every in-flight call clear a fuse that one of them will
+ * blow. Reservations close that window.
+ *
+ * Returns a settle function: call it with the actual cost once the request
+ * resolves (or with 0 if it never billed) to release the reservation.
+ */
+export function reserveForCall(context: string): (actualUsd: number) => void {
+  assertRunFuse(context)
+  reservedUsd += WORST_CASE_CALL_USD
+  let settled = false
+  return () => {
+    if (settled) return
+    settled = true
+    reservedUsd = Math.max(0, reservedUsd - WORST_CASE_CALL_USD)
+  }
+}
+
+/**
+ * Throw if committed spend plus outstanding reservations have reached the fuse.
+ * Called before each request, so the guard trips one call late at worst.
  */
 export function assertRunFuse(context: string): void {
-  if (providerCostUsd < fuseUsd) return
+  const committed = providerCostUsd + reservedUsd
+  if (committed < fuseUsd) return
 
   throw new RunFuseExceededError(
     `[cost-guard] aborting run: $${providerCostUsd.toFixed(2)} spent across ` +
-      `${calls} call(s) reached the $${fuseUsd.toFixed(2)} fuse. Blocked: ${context}. ` +
+      `${calls} call(s)` +
+      (reservedUsd > 0
+        ? ` plus $${reservedUsd.toFixed(2)} reserved for calls in flight`
+        : "") +
+      ` reached the $${fuseUsd.toFixed(2)} fuse. Blocked: ${context}. ` +
       `Raise INTL_MAX_COST_USD only after confirming the call pattern is sane.`
   )
 }
@@ -160,6 +198,7 @@ export function resetMeter(fuse: number = RUN_FUSE_USD): void {
   outputTokens = 0
   reasoningTokens = 0
   providerCostUsd = 0
+  reservedUsd = 0
   calls = 0
   fuseUsd = fuse
 }

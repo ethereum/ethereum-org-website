@@ -87,6 +87,7 @@ export function planIncrementalBatches(
       id: s.id,
       content: s.content || "",
       action: s.action,
+      headingText: s.headingText,
     }))
   )
 
@@ -108,7 +109,13 @@ export function planIncrementalBatches(
   })
 
   const translatableBytes = translateSections.reduce(
-    (sum, s) => sum + sectionWireBytes({ id: s.id, content: s.content || "" }),
+    (sum, s) =>
+      sum +
+      sectionWireBytes({
+        id: s.id,
+        content: s.content || "",
+        headingText: s.headingText,
+      }),
     0
   )
   const translatableContentBytes = translateSections.reduce(

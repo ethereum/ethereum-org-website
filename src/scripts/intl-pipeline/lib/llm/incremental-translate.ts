@@ -52,6 +52,24 @@ interface IncrementalTranslateResult {
 // ---------------------------------------------------------------------------
 
 /**
+ * One section as it appears in the prompt. The single source of truth for the
+ * envelope: sectionWireBytes measures this, so batching splits on what is
+ * actually sent rather than on an estimate of it.
+ */
+export function renderSectionBlock(s: {
+  id: string
+  action: "TRANSLATE" | "CONTEXT"
+  content: string
+  headingText?: string
+  level?: number
+}): string {
+  const headingAttr = s.headingText
+    ? ` heading="${(s.level ? "#".repeat(s.level) + " " : "") + s.headingText.replace(/"/g, "&quot;")}"`
+    : ""
+  return `<SECTION id="${s.id}" action="${s.action}"${headingAttr}>\n${s.content}\n</SECTION>`
+}
+
+/**
  * Build a batched section-level translation prompt.
  *
  * All sections are included in document order. Changed sections are
@@ -81,14 +99,7 @@ export function buildIncrementalPrompt(
     .filter((s) => s.action === "TRANSLATE")
     .map((s) => s.id)
 
-  const sectionBlocks = sections
-    .map((s) => {
-      const headingAttr = s.headingText
-        ? ` heading="${(s.level ? "#".repeat(s.level) + " " : "") + s.headingText.replace(/"/g, "&quot;")}"`
-        : ""
-      return `<SECTION id="${s.id}" action="${s.action}"${headingAttr}>\n${s.content}\n</SECTION>`
-    })
-    .join("\n\n")
+  const sectionBlocks = sections.map(renderSectionBlock).join("\n\n")
 
   return `You are updating an existing translation. Some sections of this file changed in English and need retranslation. Other sections are provided as CONTEXT ONLY -- they show the existing translation voice and terminology.
 
@@ -557,6 +568,9 @@ type BatchSection = {
   id: string
   content: string
   action: "TRANSLATE" | "CONTEXT"
+  /** Markdown only; feeds the heading="..." attribute and its wire cost */
+  headingText?: string
+  level?: number
 }
 
 /**
@@ -569,11 +583,24 @@ type BatchSection = {
 export function sectionWireBytes(section: {
   id: string
   content: string
+  action?: "TRANSLATE" | "CONTEXT"
+  headingText?: string
+  level?: number
 }): number {
+  // Measures the rendered block rather than approximating it, so the batcher
+  // and the prompt builder cannot disagree about what a section costs. Both
+  // call renderSectionBlock; +2 covers the "\n\n" join between blocks.
   return (
-    Buffer.byteLength(section.content, "utf-8") +
-    Buffer.byteLength(section.id, "utf-8") * 2 +
-    64
+    Buffer.byteLength(
+      renderSectionBlock({
+        id: section.id,
+        content: section.content,
+        action: section.action ?? "TRANSLATE",
+        headingText: section.headingText,
+        level: section.level,
+      }),
+      "utf-8"
+    ) + 2
   )
 }
 
@@ -609,7 +636,12 @@ function selectContext(
 
   return selected
     .sort((a, b) => a.index - b.index)
-    .map(({ id, content, action }) => ({ id, content, action }))
+    .map(({ id, content, action, headingText }) => ({
+      id,
+      content,
+      action,
+      headingText,
+    }))
 }
 
 /**
@@ -653,10 +685,11 @@ export function batchSections(
     )
     batches.push([
       ...context,
-      ...currentTranslate.map(({ id, content, action }) => ({
+      ...currentTranslate.map(({ id, content, action, headingText }) => ({
         id,
         content,
         action,
+        headingText,
       })),
     ])
     currentTranslate = []

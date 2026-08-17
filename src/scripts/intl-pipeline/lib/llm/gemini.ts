@@ -29,7 +29,7 @@ import {
   restoreComments,
 } from "./code-block-extractor"
 import { type ContentNode, normalizeContent } from "./content-normalizer"
-import { assertRunFuse, recordUsage } from "./cost-meter"
+import { recordUsage, reserveForCall } from "./cost-meter"
 import {
   chunkJson,
   mergeJsonBatches,
@@ -1338,8 +1338,11 @@ export async function callGeminiRaw(
       const temperature = attempt === 1 ? 0 : Math.min(0.5 * (attempt - 1), 1)
 
       // Spend and prompt-size guards run before the request, so a runaway call
-      // pattern stops at the cap instead of at the end of the run.
-      assertRunFuse(`${ctx} (${prompt.length} chars)`)
+      // pattern stops at the cap instead of at the end of the run. The
+      // reservation covers this call while it is in flight -- see reserveForCall.
+      const settleReservation = reserveForCall(
+        `${ctx} (${prompt.length} chars)`
+      )
       if (Buffer.byteLength(prompt, "utf-8") > MAX_PROMPT_BYTES) {
         throw new Error(
           `[cost-guard] prompt for ${ctx} is ${Buffer.byteLength(prompt, "utf-8")} bytes, ` +
@@ -1412,13 +1415,15 @@ export async function callGeminiRaw(
 
         // Meter every billed call, including ones that come back blocked or
         // empty below -- those still charge for the prompt. costUsd is the
-        // provider's own figure when it reports one.
+        // provider's own figure when it reports one. Recording replaces this
+        // call's reservation with its real cost.
         recordUsage(
           usage?.promptTokenCount || 0,
           billableOutput,
           response.costUsd,
           reasoningTokens
         )
+        settleReservation(0)
 
         // Inspect response for non-obvious failure modes before accessing .text
         const candidate = (
@@ -1460,10 +1465,15 @@ export async function callGeminiRaw(
           `[${ts()}] [gemini] RESPONSE model=${modelId} ${ctx} ` +
             `duration=${duration}s ` +
             `tokens_in=${usage?.promptTokenCount || 0} ` +
-            `tokens_out=${visibleOutput}` +
-            // Thinking tokens are billed as output but are not translation;
-            // without this they are invisible in the per-call log.
-            (reasoningTokens ? ` reasoning=${reasoningTokens}` : "") +
+            // tokens_out is the BILLABLE output on both transports, so the
+            // number means the same thing whichever provider served the call.
+            // reasoning is a subset of it, not an addition: OpenRouter folds
+            // thinking into completion_tokens, and the Gemini branch above adds
+            // thoughtsTokenCount in. Cost triage can read tokens_out alone.
+            `tokens_out=${billableOutput}` +
+            (reasoningTokens
+              ? ` (of which reasoning=${reasoningTokens}, visible=${visibleOutput})`
+              : "") +
             (response.costUsd != null
               ? ` cost=$${response.costUsd.toFixed(6)}`
               : "") +
@@ -1489,6 +1499,7 @@ export async function callGeminiRaw(
           },
         }
       } catch (error) {
+        settleReservation(0)
         const duration = ((Date.now() - startTime) / 1000).toFixed(1)
         lastError = error instanceof Error ? error : new Error(String(error))
 
