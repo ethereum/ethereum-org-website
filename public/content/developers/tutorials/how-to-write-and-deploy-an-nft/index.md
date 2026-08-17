@@ -312,7 +312,7 @@ main()
   })
 ```
 
-Hardhat does an amazing job of explaining what each of these lines of code does in their [Contracts tutorial](https://hardhat.org/tutorial/testing-contracts.html#writing-tests), we’ve adopted their explanations here.
+Hardhat does an amazing job of explaining what each of these lines of code does in their [Contracts tutorial](https://hardhat.org/tutorial/testing-contracts#writing-tests), we’ve adopted their explanations here.
 
     const MyNFT = await ethers.getContractFactory("MyNFT");
 
