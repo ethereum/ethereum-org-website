@@ -348,7 +348,7 @@ export const useCentralizedExchanges = () => {
     trackCustomEvent({
       eventCategory: `Country input`,
       eventAction: `Selected`,
-      eventName: selectedOption.value,
+      eventName: selectedOption.countryCode,
     })
     setSelectedCountry(selectedOption)
   }
