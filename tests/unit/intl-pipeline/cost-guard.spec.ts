@@ -22,6 +22,10 @@ import {
   RunFuseExceededError,
   usageTotals,
 } from "../../../src/scripts/intl-pipeline/lib/llm/cost-meter"
+import {
+  isIrreducibleChunk,
+  planIncrementalBatches,
+} from "../../../src/scripts/intl-pipeline/lib/llm/plan"
 
 test.describe("Per-file spend budget", () => {
   // learn-quizzes.json at the incident: 135,509 bytes of English, of which
@@ -93,6 +97,118 @@ test.describe("Per-file spend budget", () => {
     expect(createFileBudget("tiny.json (de)", 0).limitBytes).toBe(
       MAX_PROMPT_BYTES
     )
+  })
+})
+
+test.describe("Irreducible content", () => {
+  test("a chunk past the chunk budget is irreducible", () => {
+    expect(isIrreducibleChunk(MAX_CHUNK_BYTES + 1)).toBe(true)
+    expect(isIrreducibleChunk(MAX_CHUNK_BYTES)).toBe(false)
+  })
+
+  test("a single oversized section plans as irreducible and is not refused", () => {
+    // public/content/developers/docs/evm/opcodes/index.md has one 67,968-byte
+    // section (the opcode table) that no chunker can split. Before the ceiling
+    // honoured irreducibility it was untranslatable in every mode.
+    const oversized = "x".repeat(70_000)
+    const plan = planIncrementalBatches({
+      filePath: "big.md",
+      fileType: "markdown",
+      locale: "de",
+      languageName: "German",
+      englishContent: `## Big {#big}\n\n${oversized}`,
+      localeContent: `## Big {#big}\n\nalt`,
+      sectionIds: ["big"],
+      glossaryTerms: new Map(),
+    })
+    expect(plan).not.toBeNull()
+    expect(plan!.batches).toHaveLength(1)
+    expect(plan!.batches[0].bytes).toBeGreaterThan(MAX_PROMPT_BYTES)
+    expect(plan!.batches[0].irreducible).toBe(true)
+    expect(plan!.batches[0].overCeiling).toBe(false)
+  })
+
+  test("splittable content never plans over the per-call ceiling", () => {
+    // 60 sections of 4KB: the batcher must split them rather than emit a batch
+    // the choke point would refuse.
+    const sections = Array.from(
+      { length: 60 },
+      (_, i) => `## Section ${i} {#s-${i}}\n\n${"y".repeat(4_000)}`
+    ).join("\n\n")
+    const plan = planIncrementalBatches({
+      filePath: "many.md",
+      fileType: "markdown",
+      locale: "de",
+      languageName: "German",
+      englishContent: sections,
+      localeContent: sections,
+      sectionIds: Array.from({ length: 60 }, (_, i) => `s-${i}`),
+      glossaryTerms: new Map(),
+    })!
+    expect(plan.batches.length).toBeGreaterThan(1)
+    for (const b of plan.batches) {
+      expect(b.overCeiling).toBe(false)
+      if (!b.irreducible) expect(b.bytes).toBeLessThanOrEqual(MAX_PROMPT_BYTES)
+    }
+  })
+
+  test("a realistic glossary is absorbed by tightening, not refused", () => {
+    // 184 terms is the heaviest real case measured (learn-quizzes.json / ar,
+    // 16.4KB of prompt). The planner must fit it by making batches smaller.
+    const glossary = new Map<string, string>()
+    for (let i = 0; i < 184; i++) {
+      glossary.set(
+        `term-number-${i}-english-phrase`,
+        `translation ${i} with an explanatory note for translators`
+      )
+    }
+    const body = Array.from(
+      { length: 20 },
+      (_, i) => `## S${i} {#s-${i}}\n\n${"z".repeat(2_000)}`
+    ).join("\n\n")
+    const plan = planIncrementalBatches({
+      filePath: "normal.md",
+      fileType: "markdown",
+      locale: "ar",
+      languageName: "Arabic",
+      englishContent: body,
+      localeContent: body,
+      sectionIds: Array.from({ length: 20 }, (_, i) => `s-${i}`),
+      glossaryTerms: glossary,
+    })!
+    for (const b of plan.batches) {
+      expect(b.overCeiling).toBe(false)
+      expect(b.bytes).toBeLessThanOrEqual(MAX_PROMPT_BYTES)
+    }
+  })
+
+  test("overhead leaving no room for content fails loudly", () => {
+    // Overhead past (ceiling - context cap - MIN_CONTENT_BUDGET_BYTES) cannot be
+    // absorbed by tightening. Refusing is correct; fanning out into tiny calls
+    // is the incident's shape.
+    const glossary = new Map<string, string>()
+    for (let i = 0; i < 500; i++) {
+      glossary.set(
+        `term-number-${i}-english-phrase-with-extra-length`,
+        `a deliberately long translation ${i} with an explanatory note that pads the glossary block substantially`
+      )
+    }
+    const body = Array.from(
+      { length: 20 },
+      (_, i) => `## S${i} {#s-${i}}\n\n${"z".repeat(2_000)}`
+    ).join("\n\n")
+    expect(() =>
+      planIncrementalBatches({
+        filePath: "crowded.md",
+        fileType: "markdown",
+        locale: "ar",
+        languageName: "Arabic",
+        englishContent: body,
+        localeContent: body,
+        sectionIds: Array.from({ length: 20 }, (_, i) => `s-${i}`),
+        glossaryTerms: glossary,
+      })
+    ).toThrow(/per-call ceiling/)
   })
 })
 

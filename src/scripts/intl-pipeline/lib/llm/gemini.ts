@@ -42,6 +42,7 @@ import {
   validateTranslatedMarkdown,
   type ValidationResult,
 } from "./output-validation"
+import { isIrreducibleChunk } from "./plan"
 import { buildTranslationPrompt } from "./prompt-builder"
 
 /**
@@ -130,6 +131,12 @@ interface GeminiCallMetadata {
   chunkIndex?: number
   totalChunks?: number
   label?: string
+  /**
+   * This prompt carries one indivisible unit already over the chunk budget, so
+   * the per-call ceiling does not apply -- there is no smaller call to make.
+   * Set from a computed fact, never to silence the guard.
+   */
+  irreducible?: boolean
 }
 
 /**
@@ -1257,7 +1264,15 @@ async function callGemini(
 
   // Retry loop for validation failures (API call retries are in callGeminiRaw)
   for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
-    const result = await callGeminiRaw(prompt, metadata)
+    // chunkProse / chunkJson only exceed MAX_CHUNK_BYTES for a unit they cannot
+    // split (one paragraph, one JSON key). Such a chunk is irreducible: there is
+    // no smaller call to make, so the per-call ceiling does not apply to it.
+    const result = await callGeminiRaw(prompt, {
+      ...metadata,
+      irreducible:
+        metadata?.irreducible ??
+        isIrreducibleChunk(Buffer.byteLength(fileContent, "utf-8")),
+    })
 
     let text = result.text
     text = stripCodeBlockWrapping(text, fileType)
@@ -1337,18 +1352,29 @@ export async function callGeminiRaw(
       // recitation match (e.g. on our own open-licensed whitepaper content).
       const temperature = attempt === 1 ? 0 : Math.min(0.5 * (attempt - 1), 1)
 
-      // Spend and prompt-size guards run before the request, so a runaway call
-      // pattern stops at the cap instead of at the end of the run. The
-      // reservation covers this call while it is in flight -- see reserveForCall.
-      const settleReservation = reserveForCall(
-        `${ctx} (${prompt.length} chars)`
-      )
-      if (Buffer.byteLength(prompt, "utf-8") > MAX_PROMPT_BYTES) {
+      // Prompt-size guard first, so a refusal cannot leak a reservation: this
+      // throw leaves the try/catch that would settle it.
+      //
+      // The ceiling refuses prompts we could have made smaller. It does not
+      // refuse content that cannot be split: a single section or chunk already
+      // past the chunk budget is as small as this call gets, and the chunkers
+      // only exceed the budget for such indivisible units. Those are sent at
+      // whatever size they are (metadata.irreducible), while the overhead we
+      // chose to add around them stays bounded by the batching budget.
+      const promptBytes = Buffer.byteLength(prompt, "utf-8")
+      if (!metadata?.irreducible && promptBytes > MAX_PROMPT_BYTES) {
         throw new Error(
-          `[cost-guard] prompt for ${ctx} is ${Buffer.byteLength(prompt, "utf-8")} bytes, ` +
+          `[cost-guard] prompt for ${ctx} is ${promptBytes} bytes, ` +
             `over the ${MAX_PROMPT_BYTES}-byte ceiling -- refusing to send`
         )
       }
+
+      // Spend guard runs before the request, so a runaway call pattern stops at
+      // the cap instead of at the end of the run. The reservation covers this
+      // call while it is in flight -- see reserveForCall.
+      const settleReservation = reserveForCall(
+        `${ctx} (${prompt.length} chars)`
+      )
 
       console.log(
         `[${ts()}] [gemini] REQUEST model=${modelId} ${ctx}${attempt > 1 ? ` attempt=${attempt} temp=${temperature}` : ""}`

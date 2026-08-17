@@ -31,7 +31,11 @@ import {
 import { resetMeter } from "./lib/llm/cost-meter"
 import { chunkJson } from "./lib/llm/json-batcher"
 import { hasEnglishChanged } from "./lib/llm/manifest-adapter"
-import { chunksNeeded, planIncrementalBatches } from "./lib/llm/plan"
+import {
+  chunksNeeded,
+  isIrreducibleChunk,
+  planIncrementalBatches,
+} from "./lib/llm/plan"
 import {
   config,
   getExcludedReason,
@@ -93,6 +97,8 @@ interface Row {
   inputTokens: number
   costUsd: number
   verdict: "ok" | "REFUSED"
+  /** Why a plan was refused, when it was */
+  note?: string
 }
 
 function walkForExt(dir: string, ext: string): string[] {
@@ -154,6 +160,21 @@ function planFull(
   // Each chunk carries its content plus rules/glossary; 4KB is the observed
   // boilerplate for the full-translation prompt.
   const plannedBytes = Buffer.byteLength(file.content, "utf-8") + chunks * 4096
+  // A chunk the chunkers could not split is sent irreducible; anything else over
+  // the per-call ceiling would be refused at the choke point.
+  const largestChunkBytes =
+    file.type === "json"
+      ? Math.max(
+          ...chunkJson(file.content).map((c) => Buffer.byteLength(c, "utf-8"))
+        )
+      : Math.max(
+          ...chunkProse(file.content, PROSE_SIZE_THRESHOLD).map((c) =>
+            Buffer.byteLength(c, "utf-8")
+          )
+        )
+  // Same predicate the pipeline applies per chunk -- irreducibility is a
+  // property of the chunk, not of how many chunks the file produced.
+  const chunkIrreducible = isIrreducibleChunk(largestChunkBytes)
   const inputTokens = Math.round(plannedBytes / bytesPerToken(locale))
   // Full translation renders the whole file, plus thinking per chunk.
   const outputTokens = Math.round(
@@ -173,7 +194,10 @@ function planFull(
     costUsd:
       (inputTokens / 1_000_000) * INPUT_RATE_USD_PER_1M +
       (outputTokens / 1_000_000) * OUTPUT_RATE_USD_PER_1M,
-    verdict: "ok",
+    verdict:
+      !chunkIrreducible && largestChunkBytes + 4096 > MAX_PROMPT_BYTES
+        ? "REFUSED"
+        : "ok",
   }
 }
 
@@ -246,18 +270,39 @@ async function main() {
       const langEntry = i18nConfig.find(
         (l: { code: string }) => l.code === locale
       )
-      const planned = planIncrementalBatches({
-        filePath: file.path,
-        fileType: file.type,
-        locale,
-        languageName: langEntry?.name ?? locale,
-        englishContent: file.content,
-        localeContent: fs.readFileSync(localePath, "utf-8"),
-        sectionIds,
-        // Glossary omitted: it adds a few KB per prompt and thousands of API
-        // calls to an estimate. Noted in the footer as unmodelled.
-        glossaryTerms: new Map(),
-      })
+      let planned
+      try {
+        planned = planIncrementalBatches({
+          filePath: file.path,
+          fileType: file.type,
+          locale,
+          languageName: langEntry?.name ?? locale,
+          englishContent: file.content,
+          localeContent: fs.readFileSync(localePath, "utf-8"),
+          sectionIds,
+          // Glossary omitted: it adds a few KB per prompt and thousands of API
+          // calls to an estimate. Noted in the footer as unmodelled, and it
+          // means batch sizes here are lower bounds.
+          glossaryTerms: new Map(),
+        })
+      } catch (err) {
+        // The planner refuses plans the pipeline would refuse (over budget,
+        // unfittable under the per-call ceiling). Report, don't crash.
+        rows.push({
+          file: file.path,
+          locale,
+          mode: "incremental",
+          calls: 0,
+          chunks: 0,
+          plannedBytes: 0,
+          budgetBytes: null,
+          inputTokens: 0,
+          costUsd: 0,
+          verdict: "REFUSED",
+          note: err instanceof Error ? err.message : String(err),
+        })
+        continue
+      }
       if (!planned) continue
 
       const inputTokens = Math.round(
@@ -344,7 +389,9 @@ async function main() {
     )
     for (const r of refused.slice(0, 20)) {
       console.log(
-        `  ${r.file} (${r.locale}): ${fmt(r.plannedBytes)} planned vs ${fmt(r.budgetBytes ?? 0)} budget, ${r.chunks} chunk(s)`
+        r.note
+          ? `  ${r.file} (${r.locale}): ${r.note}`
+          : `  ${r.file} (${r.locale}): ${fmt(r.plannedBytes)} planned vs ${fmt(r.budgetBytes ?? 0)} budget, ${r.chunks} chunk(s)`
       )
     }
     if (refused.length > 20) {

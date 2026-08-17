@@ -321,6 +321,18 @@ async function buildGeminiTranslator(
     )
   }
 
+  // A splittable batch over the per-call ceiling means the batching budget and
+  // the ceiling disagree -- fail the file rather than have callGeminiRaw refuse
+  // mid-run, which would waste the calls already made for it.
+  const oversized = plan.filter((b) => b.overCeiling)
+  if (oversized.length > 0) {
+    throw new Error(
+      `[cost-guard] ${filePath} (${locale}): ${oversized.length} batch(es) exceed the ` +
+        `${MAX_PROMPT_BYTES}-byte per-call ceiling (largest ${Math.max(...oversized.map((b) => b.bytes))} bytes) ` +
+        `despite being splittable. Refusing to send.`
+    )
+  }
+
   // Refuse the whole plan before the first request when it exceeds the budget.
   budget.assertProjected(
     projectedBytes,
@@ -345,16 +357,17 @@ async function buildGeminiTranslator(
       filePath,
       targetLanguage: locale,
       label: "incremental",
+      irreducible: batch.irreducible,
     })
 
-    try {
-      const translations = parseIncrementalResponse(result.text)
-      Object.assign(allTranslations, translations)
-    } catch (err) {
-      console.warn(
-        `[pipeline] Failed to parse batch response for ${locale} (${err instanceof Error ? err.message : String(err)}). Continuing with partial translations.`
-      )
-    }
+    // A batch that cannot be parsed must fail the task. Continuing would leave
+    // its sections untranslated, fall them back to English in assembly, commit
+    // that, and stamp the manifest -- after which no drift is detected and the
+    // English text is permanent in the locale file. Failing here costs this
+    // file+locale's calls; every other locale's completed work is already
+    // committed to the temp branch and still merges.
+    const translations = parseIncrementalResponse(result.text)
+    Object.assign(allTranslations, translations)
     totalInput += result.tokensUsed.input
     totalOutput += result.tokensUsed.output
   }

@@ -21,6 +21,8 @@
 
 import { INPUT_RATE_USD_PER_1M, OUTPUT_RATE_USD_PER_1M } from "../../constants"
 
+import { recordUsage } from "./cost-meter"
+
 const OPENROUTER_BASE = "https://openrouter.ai/api/v1"
 
 /** The subset of the Gemini response shape the pipeline reads. */
@@ -143,7 +145,21 @@ export async function generateViaOpenRouter(options: {
   }
 
   const body = (await res.json()) as OpenRouterCompletion
+
+  // A 200 can still carry an error payload (upstream provider failure). The
+  // prompt was processed, so meter whatever usage it reports before throwing --
+  // callGeminiRaw only meters responses it receives, and this one never gets
+  // there. A 200 with no usage block cannot be metered at all: the byte guards
+  // still bound it, but the fuse is blind to that case.
   if (body.error) {
+    if (body.usage) {
+      recordUsage(
+        body.usage.prompt_tokens ?? 0,
+        body.usage.completion_tokens ?? 0,
+        body.usage.cost ?? body.usage.cost_details?.upstream_inference_cost,
+        body.usage.completion_tokens_details?.reasoning_tokens
+      )
+    }
     throw new Error(`OpenRouter error: ${body.error.message ?? "unknown"}`)
   }
 

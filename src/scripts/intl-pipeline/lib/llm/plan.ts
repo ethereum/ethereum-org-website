@@ -8,7 +8,13 @@
  * point: an estimator that reimplements planning eventually lies about it.
  */
 
-import { MAX_BATCHES_PER_FILE, MAX_CHUNK_BYTES } from "../../constants"
+import {
+  MAX_BATCHES_PER_FILE,
+  MAX_CHUNK_BYTES,
+  MAX_CONTEXT_BYTES,
+  MAX_PROMPT_BYTES,
+  MIN_CONTENT_BUDGET_BYTES,
+} from "../../constants"
 
 import { createFileBudget, type FileBudget } from "./cost-meter"
 import {
@@ -24,6 +30,13 @@ export interface PlannedBatch {
   prompt: string
   bytes: number
   translateCount: number
+  /**
+   * Carries one section already past the content budget, so no smaller call
+   * exists and the per-call ceiling does not apply.
+   */
+  irreducible: boolean
+  /** Over the per-call ceiling despite being splittable -- must not be sent */
+  overCeiling: boolean
 }
 
 export interface IncrementalPlan {
@@ -34,6 +47,8 @@ export interface IncrementalPlan {
   translatableBytes: number
   /** Content bytes only, no envelope -- what the model actually renders */
   translatableContentBytes: number
+  /** Rules + glossary bytes carried by every call for this file+locale */
+  overheadBytes: number
   translateCount: number
   budget: FileBudget
   overBudget: boolean
@@ -82,31 +97,99 @@ export function planIncrementalBatches(
   const translateSections = sectionList.filter((s) => s.action === "TRANSLATE")
   if (translateSections.length === 0) return null
 
-  const batches = batchSections(
-    sectionList.map((s) => ({
-      id: s.id,
-      content: s.content || "",
-      action: s.action,
-      headingText: s.headingText,
-    }))
-  )
+  // Build, measure, tighten. Predicting a prompt's size from a budget means
+  // every future prompt change can silently break the arithmetic -- the first
+  // attempt at this missed the "Sections to translate:" id list and ran 307
+  // bytes over. Instead the planner renders the real prompts and shrinks the
+  // content budget until no splittable batch exceeds the per-call ceiling.
+  const buildPlan = (budget: number): PlannedBatch[] => {
+    const batches = batchSections(
+      sectionList.map((s) => ({
+        id: s.id,
+        content: s.content || "",
+        action: s.action,
+        headingText: s.headingText,
+      })),
+      budget
+    )
+    return batches.map((batch) => {
+      const sections = sectionList.filter((s) =>
+        batch.some((b) => b.id === s.id)
+      )
+      const prompt = buildIncrementalPrompt({
+        filePath,
+        fileType,
+        targetLanguage: locale,
+        languageName,
+        sections,
+        glossaryTerms,
+      })
+      const translate = sections.filter((s) => s.action === "TRANSLATE")
+      const bytes = Buffer.byteLength(prompt, "utf-8")
+      // One section that alone exceeds the content budget is as small as this
+      // call gets; anything else over the ceiling is a batching error.
+      const irreducible =
+        translate.length === 1 &&
+        sectionWireBytes({
+          id: translate[0].id,
+          content: translate[0].content || "",
+          action: "TRANSLATE",
+          headingText: translate[0].headingText,
+          level: translate[0].level,
+        }) > budget
+      return {
+        prompt,
+        bytes,
+        translateCount: translate.length,
+        irreducible,
+        overCeiling: !irreducible && bytes > MAX_PROMPT_BYTES,
+      }
+    })
+  }
 
-  const planned: PlannedBatch[] = batches.map((batch) => {
-    const sections = sectionList.filter((s) => batch.some((b) => b.id === s.id))
-    const prompt = buildIncrementalPrompt({
+  let contentBudget = MAX_CHUNK_BYTES
+  let planned = buildPlan(contentBudget)
+  for (
+    let attempt = 0;
+    attempt < 8 && planned.some((b) => b.overCeiling);
+    attempt++
+  ) {
+    // Shrink by the worst overshoot plus a margin, so this converges in one or
+    // two passes rather than crawling.
+    const worst = Math.max(
+      ...planned.filter((b) => b.overCeiling).map((b) => b.bytes)
+    )
+    contentBudget = Math.max(
+      MIN_CONTENT_BUDGET_BYTES,
+      contentBudget - (worst - MAX_PROMPT_BYTES) - 1024
+    )
+    planned = buildPlan(contentBudget)
+    if (contentBudget <= MIN_CONTENT_BUDGET_BYTES) break
+  }
+
+  // Overhead is what every call carries regardless of content: rules, the
+  // glossary, and the prompt scaffolding. Reported so a run can see why its
+  // content budget shrank.
+  const overheadBytes = Buffer.byteLength(
+    buildIncrementalPrompt({
       filePath,
       fileType,
       targetLanguage: locale,
       languageName,
-      sections,
+      sections: [],
       glossaryTerms,
-    })
-    return {
-      prompt,
-      bytes: Buffer.byteLength(prompt, "utf-8"),
-      translateCount: sections.filter((s) => s.action === "TRANSLATE").length,
-    }
-  })
+    }),
+    "utf-8"
+  )
+
+  if (planned.some((b) => b.overCeiling)) {
+    throw new Error(
+      `[cost-guard] ${filePath} (${locale}): cannot fit batches under the ` +
+        `${MAX_PROMPT_BYTES.toLocaleString("en-US")}-byte per-call ceiling. Prompt overhead is ` +
+        `${overheadBytes.toLocaleString("en-US")} bytes (rules + ${glossaryTerms.size} glossary terms) ` +
+        `and context is capped at ${MAX_CONTEXT_BYTES.toLocaleString("en-US")}. Refusing to send.`
+    )
+  }
 
   const translatableBytes = translateSections.reduce(
     (sum, s) =>
@@ -114,7 +197,9 @@ export function planIncrementalBatches(
       sectionWireBytes({
         id: s.id,
         content: s.content || "",
+        action: "TRANSLATE",
         headingText: s.headingText,
+        level: s.level,
       }),
     0
   )
@@ -130,11 +215,22 @@ export function planIncrementalBatches(
     projectedBytes,
     translatableBytes,
     translatableContentBytes,
+    overheadBytes,
     translateCount: translateSections.length,
     budget,
     overBudget: projectedBytes > budget.limitBytes,
     tooManyBatches: planned.length > MAX_BATCHES_PER_FILE,
   }
+}
+
+/**
+ * A chunk past the chunk budget is one the chunkers could not split -- one
+ * paragraph, one JSON key, one section. There is no smaller call to make, so
+ * the per-call ceiling does not apply to it. Shared by the full-translation
+ * path and the estimator so they cannot disagree about what gets sent.
+ */
+export function isIrreducibleChunk(chunkBytes: number): boolean {
+  return chunkBytes > MAX_CHUNK_BYTES
 }
 
 /** Chunks the translatable content genuinely needs, for reporting. */

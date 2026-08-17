@@ -20,13 +20,17 @@ The failure mode gets _worse_ as translation coverage improves, which is why it 
 
 | Bound            | Value                                                              | Where                                                  |
 | ---------------- | ------------------------------------------------------------------ | ------------------------------------------------------ |
-| Per call         | `MAX_PROMPT_BYTES` (64KB)                                          | `callGeminiRaw`, before the request                    |
+| Per call         | `MAX_PROMPT_BYTES` (64KB), unless the content is irreducible       | `callGeminiRaw`, before the request                    |
 | Per file+locale  | `ceil(translatableWireBytes / MAX_CHUNK_BYTES) x MAX_PROMPT_BYTES` | `createFileBudget`, checked against the assembled plan |
 | Batches per file | `MAX_BATCHES_PER_FILE` (32)                                        | `buildGeminiTranslator`                                |
 | Whole run        | `RUN_FUSE_USD` ($100, `INTL_MAX_COST_USD`)                         | `reserveForCall`, before each request                  |
 | Provider account | OpenRouter key credit limit                                        | server-side, 402                                       |
 
 All input-side, because prompt bytes are assembled locally and knowable before sending; output is a translation of what we sent and is capped by `GEMINI_TIMEOUT_MS`.
+
+**The ceiling refuses prompts we could have made smaller, not content that cannot be split.** A single section or chunk already past `MAX_CHUNK_BYTES` is as small as that call gets -- `public/content/developers/docs/evm/opcodes/index.md` has one 68KB section (the opcode table) that no chunker can divide without breaking it. Such calls are sent at whatever size they are (`isIrreducibleChunk`, `PlannedBatch.irreducible`). Everything else must fit, and the planner enforces that by building the real prompts, measuring them, and shrinking the content budget until they do -- rather than predicting a size from a budget, which is how the first version of this missed the prompt's `Sections to translate:` id list by 307 bytes.
+
+Prompt overhead (rules + glossary + capped context) is absorbed by that tightening. Today's heaviest real glossary is 184 terms / 16.4KB (`learn-quizzes.json` / ar), which fits with room to spare; overhead past roughly 53KB leaves less than `MIN_CONTENT_BUDGET_BYTES` for content and the file is refused with the glossary size named. Nothing trims or reorders glossary terms -- `/filter` already returns only terms present in the content.
 
 Two accounting notes that matter when reading a log:
 
@@ -56,7 +60,15 @@ Healthy is 4k–9k per call. Anything above ~50k means context is being resent p
 
 ### `[cost-guard] prompt for … is N bytes, over the … ceiling`
 
-A single prompt exceeded 64KB. Legitimate prompts are one chunk (32KB) plus capped context (8KB) plus envelopes, rules and glossary. Something is assembling more than one chunk's worth of content into one call, or the context cap is not being applied.
+A splittable prompt exceeded 64KB and reached the choke point anyway, which means the planner and the ceiling disagree -- the planner should have caught it (`overCeiling`) and refused the file first. Treat it as a bug in the planning path rather than a budget to raise.
+
+### `[cost-guard] … cannot fit batches under the … per-call ceiling`
+
+Prompt overhead has grown enough that tightening batches cannot make room: check the glossary term count in the message. Not a budget to raise.
+
+### A task fails with a parse error
+
+`parseIncrementalResponse` throwing fails that file+locale on purpose. Continuing would leave those sections untranslated, fall them back to English during assembly, commit that, and stamp the manifest -- after which no drift is detected and the English text is permanent. Every other locale's completed work is already committed to the temp branch and still merges; only this file+locale's calls are lost. A truncated response (`finish_reason: length`) is the usual cause.
 
 ## Estimating before running
 

@@ -590,18 +590,24 @@ export function sectionWireBytes(section: {
   // Measures the rendered block rather than approximating it, so the batcher
   // and the prompt builder cannot disagree about what a section costs. Both
   // call renderSectionBlock; +2 covers the "\n\n" join between blocks.
-  return (
+  const action = section.action ?? "TRANSLATE"
+  const block =
     Buffer.byteLength(
       renderSectionBlock({
         id: section.id,
         content: section.content,
-        action: section.action ?? "TRANSLATE",
+        action,
         headingText: section.headingText,
         level: section.level,
       }),
       "utf-8"
     ) + 2
-  )
+  // A TRANSLATE section is also named in the prompt's "Sections to translate:"
+  // list, which scales with the batch and is invisible to a zero-section
+  // overhead measurement -- 4KB unaccounted at ~120 JSON keys per batch.
+  const idListEntry =
+    action === "TRANSLATE" ? Buffer.byteLength(section.id, "utf-8") + 2 : 0
+  return block + idListEntry
 }
 
 /**

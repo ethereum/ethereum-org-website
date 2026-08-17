@@ -48,6 +48,12 @@ export const OUTPUT_RATE_USD_PER_1M = 12.0
 // wrong". Override with INTL_MAX_COST_USD.
 export const RUN_FUSE_USD = Number(process.env.INTL_MAX_COST_USD || 100)
 
+// Least content a batch may carry after prompt overhead (rules + glossary +
+// replicated context) is accounted for. Hitting this means overhead has grown
+// enough to crowd out the work; fail loudly rather than fan out into many tiny
+// calls, which is how run 31149083965 became expensive.
+export const MIN_CONTENT_BUDGET_BYTES = 4_096
+
 // Maximum bytes in a single LLM prompt, and the unit the per-file budget is
 // built from: one chunk of content (MAX_CHUNK_BYTES) plus context
 // (MAX_CONTEXT_BYTES) plus <SECTION> envelopes, rules and glossary. Measured
