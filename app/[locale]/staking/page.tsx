@@ -27,10 +27,10 @@ import {
   BenefitMoreSustainableIcon,
 } from "@/components/icons/staking"
 import { Image, type ImageProps } from "@/components/Image"
-import { Emphasis } from "@/components/IntlStringElements"
+import { Emphasis, Strong } from "@/components/IntlStringElements"
 import StakingCommunityCallout from "@/components/Staking/StakingCommunityCallout"
 import StakingStatsBox from "@/components/Staking/StakingStatsBox"
-import Translation from "@/components/Translation"
+import TooltipLink from "@/components/TooltipLink"
 import { AccordionContainer } from "@/components/ui/accordion"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
@@ -119,9 +119,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     {
       title: t("page-staking-benefits-1-title"),
       Icon: BenefitEarnRewardsIcon,
-      description: (
-        <Translation id="page-staking:page-staking-benefits-1-description" />
-      ),
+      description: t.rich("page-staking-benefits-1-description", {
+        a: (chunks) => (
+          <TooltipLink href="/glossary/#consensus">{chunks}</TooltipLink>
+        ),
+      }),
     },
     {
       title: t("page-staking-benefits-2-title"),
@@ -165,10 +167,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       paragraphs: [
         t("page-staking-hierarchy-solo-p1"),
         t("page-staking-hierarchy-solo-p2"),
-        <Translation
-          key="solo-p3"
-          id="page-staking:page-staking-hierarchy-solo-p3"
-        />,
+        t.rich("page-staking-hierarchy-solo-p3", {
+          a: (chunks) => <InlineLink href="/staking/dvt/">{chunks}</InlineLink>,
+        }),
       ],
       image: soloImg,
       imageAlt: "",
@@ -208,14 +209,16 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       ],
       paragraphs: [
         t("page-staking-hierarchy-pools-p1"),
-        <Translation
-          key="pools-p2"
-          id="page-staking:page-staking-hierarchy-pools-p2"
-        />,
-        <Translation
-          key="pools-p3"
-          id="page-staking:page-staking-hierarchy-pools-p3"
-        />,
+        t.rich("page-staking-hierarchy-pools-p2", {
+          a: (chunks) => (
+            <TooltipLink href="/glossary/#erc-20">{chunks}</TooltipLink>
+          ),
+        }),
+        t.rich("page-staking-hierarchy-pools-p3", {
+          a: (chunks) => (
+            <TooltipLink href="/glossary/#wallet">{chunks}</TooltipLink>
+          ),
+        }),
         t("page-staking-hierarchy-pools-p4"),
       ],
       image: poolsImg,
@@ -235,10 +238,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       paragraphs: [
         t("page-staking-hierarchy-cex-p1"),
         t("page-staking-hierarchy-cex-p2"),
-        <Translation
-          key="cex-p3"
-          id="page-staking:page-staking-hierarchy-cex-p3"
-        />,
+        t.rich("page-staking-hierarchy-cex-p3", {
+          link1: (chunks) => (
+            <TooltipLink href="/glossary/#key">{chunks}</TooltipLink>
+          ),
+          link2: (chunks) => <InlineLink href="/wallets/">{chunks}</InlineLink>,
+        }),
       ],
       image: cexImg,
       imageAlt: "",
@@ -276,14 +281,25 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         t("page-staking-section-comparison-solo-risks-li4"),
       ],
       requirements: [
-        <Translation
-          key="solo-req-1"
-          id="page-staking:page-staking-section-comparison-solo-requirements-li2"
-        />,
-        <Translation
-          key="solo-req-2"
-          id="page-staking:page-staking-section-comparison-solo-requirements-li3"
-        />,
+        t.rich("page-staking-section-comparison-solo-requirements-li2", {
+          link1: (chunks) => (
+            <TooltipLink href="/glossary/#execution-client">
+              {chunks}
+            </TooltipLink>
+          ),
+          link2: (chunks) => (
+            <TooltipLink href="/glossary/#consensus-client">
+              {chunks}
+            </TooltipLink>
+          ),
+        }),
+        t.rich("page-staking-section-comparison-solo-requirements-li3", {
+          a: (chunks) => (
+            <InlineLink href="https://hoodi.launchpad.ethereum.org">
+              {chunks}
+            </InlineLink>
+          ),
+        }),
       ],
       href: "/staking/solo/",
       buttonLabel: t("page-staking-more-on-solo"),
@@ -316,20 +332,25 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       glyphClasses: "bg-staking-blue/20 text-staking-blue",
       rewards: [
         t("page-staking-section-comparison-pools-rewards-li1"),
-        <Translation
-          key="pools-reward-2"
-          id="page-staking:page-staking-section-comparison-pools-rewards-li2"
-        />,
-        <Translation
-          key="pools-reward-3"
-          id="page-staking:page-staking-section-comparison-pools-rewards-li3"
-        />,
+        t.rich("page-staking-section-comparison-pools-rewards-li2", {
+          a: (chunks) => (
+            <TooltipLink href="/glossary/#liquidity-tokens">
+              {chunks}
+            </TooltipLink>
+          ),
+        }),
+        t.rich("page-staking-section-comparison-pools-rewards-li3", {
+          a: (chunks) => (
+            <TooltipLink href="/glossary/#defi">{chunks}</TooltipLink>
+          ),
+        }),
       ],
       risks: [
-        <Translation
-          key="pools-risk-1"
-          id="page-staking:page-staking-section-comparison-pools-risks-li2"
-        />,
+        t.rich("page-staking-section-comparison-pools-risks-li2", {
+          a: (chunks) => (
+            <TooltipLink href="/glossary/#smart-contract">{chunks}</TooltipLink>
+          ),
+        }),
       ],
       requirements: [
         t("page-staking-section-comparison-pools-requirements-li1"),
@@ -483,7 +504,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <h2>{tocItems.whatIsStaking.title}</h2>
             <p>{t("page-staking-section-what-p1")}</p>
             <p>
-              <Translation id="page-staking:page-staking-section-what-p2" />
+              {t.rich("page-staking-section-what-p2", {
+                a: (chunks) => <InlineLink href="/">{chunks}</InlineLink>,
+              })}
             </p>
             <p>{t("page-staking-section-what-p3")}</p>
           </Section>
@@ -703,7 +726,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </table>
             </div>
             <p>
-              <Translation id="page-staking:page-staking-glance-restaking" />
+              {t.rich("page-staking-glance-restaking", {
+                a: (chunks) => (
+                  <InlineLink href="/restaking/">{chunks}</InlineLink>
+                ),
+                strong: Strong,
+              })}
             </p>
           </Section>
 
@@ -730,10 +758,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </ButtonLink>
               </ExpandableCard>
               <ExpandableCard title={t("page-staking-faq-6-question")}>
-                {t("page-staking-faq-6-answer")}
+                <p>{t("page-staking-faq-6-answer-p1")}</p>
+                <p>{t("page-staking-faq-6-answer-p2")}</p>
               </ExpandableCard>
               <ExpandableCard title={t("page-staking-faq-7-question")}>
-                {t("page-staking-faq-7-answer")}
+                <p>{t("page-staking-faq-7-answer-p1")}</p>
+                <p>{t("page-staking-faq-7-answer-p2")}</p>
               </ExpandableCard>
               <ExpandableCard title={t("page-staking-faq-1-question")}>
                 {t.rich("page-staking-faq-1-answer", { em: Emphasis })}
@@ -744,11 +774,15 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <ExpandableCard title={t("page-staking-faq-3-question")}>
                 <p>{t("page-staking-faq-3-answer-p1")}</p>
                 <p>
-                  <Translation id="page-staking:page-staking-faq-3-answer-p2" />
+                  {t.rich("page-staking-faq-3-answer-p2", {
+                    a: (chunks) => (
+                      <InlineLink href="/staking/pools/">{chunks}</InlineLink>
+                    ),
+                  })}
                 </p>
               </ExpandableCard>
               <ExpandableCard title={t("page-staking-faq-8-question")}>
-                <p>{t("page-staking-faq-8-answer")}</p>
+                <p>{t("page-staking-faq-8-answer-p1")}</p>
                 <ButtonLink className="self-start" href="/restaking/">
                   {t("page-staking-faq-8-answer-link")}
                 </ButtonLink>
