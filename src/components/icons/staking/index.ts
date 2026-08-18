@@ -13,6 +13,7 @@ import ConsensysStakingGlyphIcon from "./consensys-staking-glyph.svg"
 import DefaultOpenSourceGlyphIcon from "./default-open-source-glyph.svg"
 import DockerGlyphIcon from "./docker-glyph.svg"
 import EconomicalIcon from "./economical.svg"
+import EtherFiGlyphIcon from "./ether-fi-glyph.svg"
 import EthpoolGlyphIcon from "./ethpool-glyph.svg"
 import EverstakeGlyphIcon from "./everstake-glyph.svg"
 import FigmentGlyphIcon from "./figment-glyph.svg"
@@ -63,6 +64,7 @@ export {
   DefaultOpenSourceGlyphIcon,
   DockerGlyphIcon,
   EconomicalIcon,
+  EtherFiGlyphIcon,
   EthpoolGlyphIcon,
   EverstakeGlyphIcon,
   FigmentGlyphIcon,

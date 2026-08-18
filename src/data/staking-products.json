@@ -1311,6 +1311,71 @@
         "eventAction": "Clicked",
         "eventName": "Clicked Everstake (pool) go to link"
       }
+    },
+    {
+      "name": "ether.fi",
+      "imageName": "EtherFi",
+      "hue": 265,
+      "launchDate": "2023-11-15",
+      "url": "https://ether.fi/",
+      "audits": [
+        {
+          "name": "Nethermind - July 2023",
+          "url": "https://github.com/etherfi-protocol/smart-contracts/blob/master/audits/2023.07.05%20-%20Nethermind.pdf"
+        },
+        {
+          "name": "Solidified - October 2023",
+          "url": "https://github.com/etherfi-protocol/smart-contracts/blob/master/audits/2023.10.26%20-%20Solidified.pdf"
+        },
+        {
+          "name": "Hats Finance (competitive audit) - December 2023",
+          "url": "https://github.com/etherfi-protocol/smart-contracts/blob/master/audits/2023.12.20%20-%20Hats%20Finance.md"
+        },
+        {
+          "name": "Zellic - March 2024",
+          "url": "https://github.com/etherfi-protocol/smart-contracts/blob/master/audits/2024.03.13%20-%20Zellic.pdf"
+        },
+        {
+          "name": "Certora - core contracts re-audit, January 2026",
+          "url": "https://github.com/etherfi-protocol/smart-contracts/blob/master/audits/2026.01.29%20-%20Certora%20-%20Reaudit%20Core%20Contracts.pdf"
+        },
+        {
+          "name": "Certora - Q2 2026 security upgrade, June 2026",
+          "url": "https://github.com/etherfi-protocol/smart-contracts/blob/master/audits/2026.06.28%20-%20Certora%20-%2026Q2%20Security%20Upgrade.pdf"
+        }
+      ],
+      "minEth": 0.01,
+      "feePercentage": 10,
+      "tokens": [
+        {
+          "name": "ether.fi Staked ETH",
+          "symbol": "eETH",
+          "address": "0x35fA164735182de50811E8e2E824cFb9B6118ac2"
+        },
+        {
+          "name": "Wrapped eETH",
+          "symbol": "weETH",
+          "address": "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee"
+        }
+      ],
+      "isFoss": true,
+      "hasBugBounty": true,
+      "isTrustless": true,
+      "hasPermissionlessNodes": false,
+      "pctMajorityExecutionClient": 51.9,
+      "pctMajorityConsensusClient": 18.2,
+      "platforms": ["Browser", "Wallet"],
+      "ui": ["GUI"],
+      "socials": {
+        "discord": "https://discord.com/invite/etherfi",
+        "twitter": "https://x.com/ether_fi",
+        "github": "https://github.com/etherfi-protocol"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked ether.fi go to link"
+      }
     }
   ]
 }
