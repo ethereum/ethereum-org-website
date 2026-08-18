@@ -14,11 +14,13 @@ import type { Lang, ToCItem } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
 import PageHero from "@/components/Hero/PageHero"
+import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
 import {
   Card,
+  CardBanner,
   CardContent,
   CardHeader,
   CardIconContainer,
@@ -48,6 +50,12 @@ import { GITHUB_REPO_URL } from "@/lib/constants"
 import PageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
+import effBannerImg from "@/public/assets/open-source/electronic-frontier-foundation-banner.png"
+import fightForTheFutureBannerImg from "@/public/assets/open-source/fight-for-the-future-banner.png"
+import fsfBannerImg from "@/public/assets/open-source/free-software-foundation-banner.png"
+import internetArchiveBannerImg from "@/public/assets/open-source/internet-archive-banner.png"
+import osiBannerImg from "@/public/assets/open-source/open-source-initiative-banner.png"
+import torBannerImg from "@/public/assets/open-source/tor-project-banner.png"
 import heroImg from "@/public/images/future_transparent.png"
 import alternativeToImg from "@/public/images/open-source/alternativeto-logo.png"
 import bitwardenImg from "@/public/images/open-source/bitwarden.png"
@@ -230,6 +238,81 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     streaming: t("page-open-source-category-streaming"),
     creative: t("page-open-source-category-creative"),
   }
+
+  // TODO: swap org-placeholder.png for each organization's own artwork.
+  const organizations = [
+    {
+      id: "fsf",
+      href: "https://www.fsf.org",
+      banner: fsfBannerImg,
+      name: t("page-open-source-org-fsf-name"),
+      description: t("page-open-source-org-fsf-description"),
+    },
+    {
+      id: "eff",
+      href: "https://www.eff.org",
+      banner: effBannerImg,
+      name: t("page-open-source-org-eff-name"),
+      description: t("page-open-source-org-eff-description"),
+    },
+    {
+      id: "osi",
+      href: "https://opensource.org",
+      banner: osiBannerImg,
+      name: t("page-open-source-org-osi-name"),
+      description: t("page-open-source-org-osi-description"),
+    },
+    {
+      id: "tor",
+      href: "https://www.torproject.org",
+      banner: torBannerImg,
+      name: t("page-open-source-org-tor-name"),
+      description: t("page-open-source-org-tor-description"),
+    },
+    {
+      id: "fight-for-the-future",
+      href: "https://www.fightforthefuture.org",
+      banner: fightForTheFutureBannerImg,
+      name: t("page-open-source-org-fight-for-the-future-name"),
+      description: t("page-open-source-org-fight-for-the-future-description"),
+    },
+    {
+      id: "internet-archive",
+      href: "https://archive.org",
+      banner: internetArchiveBannerImg,
+      name: t("page-open-source-org-internet-archive-name"),
+      description: t("page-open-source-org-internet-archive-description"),
+    },
+  ]
+
+  // Listed as plain links rather than cards -- the grid is capped at six.
+  const moreOrganizations = [
+    {
+      id: "linux-foundation",
+      href: "https://www.linuxfoundation.org",
+      name: t("page-open-source-org-linux-foundation-name"),
+    },
+    {
+      id: "ludlow",
+      href: "https://www.ludlowinstitute.org",
+      name: t("page-open-source-org-ludlow-name"),
+    },
+    {
+      id: "mozilla",
+      href: "https://foundation.mozilla.org",
+      name: t("page-open-source-org-mozilla-name"),
+    },
+    {
+      id: "sfc",
+      href: "https://sfconservancy.org",
+      name: t("page-open-source-org-sfc-name"),
+    },
+    {
+      id: "wedf",
+      href: "https://worldethicaldata.org",
+      name: t("page-open-source-org-wedf-name"),
+    },
+  ]
 
   // Hard-coded rather than read from the apps dataset: these are mainstream
   // FLOSS consumer tools, not Ethereum apps, so they get no /apps/<slug> page.
@@ -751,42 +834,34 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <h2>{tocItems[9].title}</h2>
 
           <h3>{t("page-open-source-resources-defending-title")}</h3>
+          <Grid columns={3} size="narrow">
+            {organizations.map(({ id, href, name, description, banner }) => (
+              <Card key={id} href={href} variant="ghost" size="sm">
+                <CardHeader>
+                  <CardBanner size="sm">
+                    <Image
+                      src={banner}
+                      alt=""
+                      sizes="(max-width: 480px) calc(100vw - 2rem), 300px"
+                    />
+                  </CardBanner>
+                </CardHeader>
+                <CardContent>
+                  <CardTitle size="sm" asChild>
+                    <h4>{name}</h4>
+                  </CardTitle>
+                  <CardParagraph size="sm">{description}</CardParagraph>
+                </CardContent>
+              </Card>
+            ))}
+          </Grid>
+          <p>{t("page-open-source-resources-more-orgs")}</p>
           <UnorderedList>
-            <ListItem>
-              {t.rich("page-open-source-resources-fsf", {
-                link: (chunks) => (
-                  <Link href="https://www.fsf.org">{chunks}</Link>
-                ),
-              })}
-            </ListItem>
-            <ListItem>
-              {t.rich("page-open-source-resources-eff", {
-                link: (chunks) => (
-                  <Link href="https://www.eff.org">{chunks}</Link>
-                ),
-              })}
-            </ListItem>
-            <ListItem>
-              {t.rich("page-open-source-resources-osi", {
-                link: (chunks) => (
-                  <Link href="https://opensource.org">{chunks}</Link>
-                ),
-              })}
-            </ListItem>
-            <ListItem>
-              {t.rich("page-open-source-resources-sfc", {
-                link: (chunks) => (
-                  <Link href="https://sfconservancy.org">{chunks}</Link>
-                ),
-              })}
-            </ListItem>
-            <ListItem>
-              {t.rich("page-open-source-resources-tor", {
-                link: (chunks) => (
-                  <Link href="https://www.torproject.org">{chunks}</Link>
-                ),
-              })}
-            </ListItem>
+            {moreOrganizations.map(({ id, href, name }) => (
+              <ListItem key={id}>
+                <Link href={href}>{name}</Link>
+              </ListItem>
+            ))}
           </UnorderedList>
 
           <h3>{t("page-open-source-resources-alternatives-title")}</h3>
