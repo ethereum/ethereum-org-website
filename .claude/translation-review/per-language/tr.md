@@ -69,3 +69,25 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
 - `stablecoin` had three competing forms in one PR; `common.json`'s spaced `Sabit coin'ler` -> fused `Sabitcoin'ler` (locale convention, ~130 occurrences elsewhere). Open: the stale form `sabit para` still in 6 sites of `payments/index.md`. **None of the historical tr failure modes recurred** -- no katillik, MeFi, Markette, Müşteriler, no PoS/PoW inversion.
 - Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.3/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:**
+
+- `fee-qualifier-stablecoins` and `-stablecoins-lower-l2`: spaced `sabit coin'ler` -> `sabitcoin'ler` (critical: **third recurrence** of this exact form after PR #18772 and PR #19015. Corpus 162 fused vs 9 spaced; `page-stablecoins.json` uses `Sabitcoinler` throughout; `sabitcoin'ler` is attested 12x. ETHGlossary has no tr stablecoin entry, so locale convention governs).
+
+**Open (native call needed):**
+
+- `fee-value-from` -> `{value}'den başlayan` glues a FIXED vowel-harmony suffix to a runtime placeholder. Newly introduced -- the only `{placeholder}'suffix` in all of `src/intl/tr`. The one live value (%0,5) actually needs `-ten`; other values would need `-dan`. Suffix-free fix: `{value} ve üzeri`. See #54.
+- `fee-free-tier-plans` -> `{value}/ay'dan` puts a TDK-reserved apostrophe on a native common noun; `aydan` is correct.
+- `crops-censorship-resistant-desc` -> `tekil` is the grammatical "singular"; should be `tek bir sağlayıcı`.
+- `nfts-hero-description` -> `koleksiyonlarınızı` ("collections") narrows "collectibles".
+- `fee-label-buy` (`Satın alma ücreti`) vs `-buy-sell` (`Alım/satım ücreti`) use two words for "buy" in adjacent labels in the same row.
+
+**Notes:**
+
+- None of the historical tr failure modes recurred: no `katılık`/`MeFi` brand mistranslation, no ETH/BLS transposition, no `Müşteri`/`Markette`, no cross-script contamination.
+- `katman 2'lerde` spells L2 out rather than using the acronym -- legitimate, and the only locale to sidestep the #53 casing artifact entirely.
+- Collapsing the ICU plural to one/other with identical text is correct for Turkish.
