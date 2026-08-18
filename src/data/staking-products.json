@@ -1345,7 +1345,7 @@
         }
       ],
       "minEth": 0.01,
-      "feePercentage": 10,
+      "feePercentage": 3,
       "tokens": [
         {
           "name": "ether.fi Staked ETH",
