@@ -511,13 +511,129 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
           id: "organizations/enterprise",
           label: t("enterprise"),
           description: t("nav-organizations-enterprise-description"),
-          href: "/enterprise/",
+          items: [
+            {
+              label: t("nav-organizations-enterprise-overview-label"),
+              description: t(
+                "nav-organizations-enterprise-overview-description"
+              ),
+              href: "/enterprise/",
+            },
+            {
+              label: t("nav-organizations-why-ethereum-label"),
+              description: t("nav-organizations-why-ethereum-description"),
+              href: "/enterprise/why-ethereum/",
+            },
+            {
+              label: t("nav-organizations-coordination-patterns-label"),
+              description: t(
+                "nav-organizations-coordination-patterns-description"
+              ),
+              items: [
+                {
+                  label: t("nav-organizations-digital-assets-label"),
+                  description: t(
+                    "nav-organizations-digital-assets-description"
+                  ),
+                  href: "/enterprise/digital-assets/",
+                },
+                {
+                  label: t("nav-organizations-onchain-markets-label"),
+                  description: t(
+                    "nav-organizations-onchain-markets-description"
+                  ),
+                  href: "/enterprise/onchain-markets/",
+                },
+                {
+                  label: t("nav-organizations-credentials-label"),
+                  description: t("nav-organizations-credentials-description"),
+                  href: "/enterprise/verifiable-credentials/",
+                },
+              ],
+            },
+            {
+              label: t("nav-organizations-architecture-label"),
+              description: t("nav-organizations-architecture-description"),
+              items: [
+                {
+                  label: t("nav-organizations-architecture-options-label"),
+                  description: t(
+                    "nav-organizations-architecture-options-description"
+                  ),
+                  href: "/enterprise/architecture/",
+                },
+                {
+                  label: t("nav-organizations-confidential-systems-label"),
+                  description: t(
+                    "nav-organizations-confidential-systems-description"
+                  ),
+                  href: "/enterprise/confidential-systems/",
+                },
+              ],
+            },
+            {
+              label: t("nav-organizations-resilience-label"),
+              description: t("nav-organizations-resilience-description"),
+              href: "/enterprise/operational-resilience/",
+            },
+            {
+              label: t("nav-organizations-evaluation-label"),
+              description: t("nav-organizations-evaluation-description"),
+              items: [
+                {
+                  label: t("nav-organizations-due-diligence-label"),
+                  description: t("nav-organizations-due-diligence-description"),
+                  href: "/enterprise/due-diligence/",
+                },
+                {
+                  label: t("nav-organizations-get-started-label"),
+                  description: t("nav-organizations-get-started-description"),
+                  href: "/enterprise/get-started/",
+                },
+                {
+                  label: t("nav-organizations-evidence-label"),
+                  description: t("nav-organizations-evidence-description"),
+                  href: "/enterprise/evidence-and-data/",
+                },
+              ],
+            },
+          ],
         },
         {
           id: "organizations/institutions",
           label: t("institutions"),
           description: t("nav-organizations-institutions-description"),
-          href: "/institutions/",
+          items: [
+            {
+              label: t("nav-organizations-institutions-overview-label"),
+              description: t(
+                "nav-organizations-institutions-overview-description"
+              ),
+              href: "/institutions/",
+            },
+            {
+              label: t("nav-organizations-public-infrastructure-label"),
+              description: t(
+                "nav-organizations-public-infrastructure-description"
+              ),
+              href: "/institutions/public-infrastructure/",
+            },
+            {
+              label: t("nav-organizations-civil-society-label"),
+              description: t("nav-organizations-civil-society-description"),
+              href: "/institutions/civil-society-and-development/",
+            },
+            {
+              label: t("nav-organizations-procurement-label"),
+              description: t("nav-organizations-procurement-description"),
+              href: "/institutions/policy-and-procurement/",
+            },
+            {
+              label: t("nav-organizations-case-studies-label"),
+              description: t("nav-organizations-case-studies-description"),
+              href: "/institutions/evidence-and-case-studies/",
+            },
+          ],
         },
         {
           id: "organizations/founders",
