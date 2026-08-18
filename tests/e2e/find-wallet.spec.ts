@@ -1,5 +1,6 @@
 import { expect, test } from "@playwright/test"
 
+import { testData } from "./fixtures/testData"
 import { FindWalletPage } from "./pages/FindWalletPage"
 
 test.describe("Find Wallet Page", () => {
@@ -78,7 +79,9 @@ test.describe("Find Wallet Page", () => {
   test("standalone page lists related wallets", async ({ page }) => {
     await page.goto("/wallets/find-wallet/metamask/")
     const related = page.locator("section").filter({
-      has: page.getByRole("heading", { name: "Related resources" }),
+      has: page.getByRole("heading", {
+        name: testData.content.headings.findWalletRelated,
+      }),
     })
     await expect(related).toBeVisible()
     await expect(
