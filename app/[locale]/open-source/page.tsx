@@ -920,6 +920,13 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             </ListItem>
             <ListItem>{t("page-open-source-resources-data")}</ListItem>
             <ListItem>
+              {t.rich("page-open-source-resources-commons", {
+                p2p: (chunks) => (
+                  <Link href="https://p2pfoundation.net">{chunks}</Link>
+                ),
+              })}
+            </ListItem>
+            <ListItem>
               {t.rich("page-open-source-resources-culture", {
                 cc: (chunks) => (
                   <Link href="https://creativecommons.org">{chunks}</Link>
