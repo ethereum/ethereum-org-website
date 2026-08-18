@@ -46,8 +46,8 @@ import { GITHUB_REPO_URL } from "@/lib/constants"
 import PageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
-import heroImg from "@/public/images/doge-computer.png"
-import alternativeToImg from "@/public/images/open-source/alternativeto-telescope.png"
+import heroImg from "@/public/images/future_transparent.png"
+import alternativeToImg from "@/public/images/open-source/alternativeto-logo.png"
 
 const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const params = await props.params
@@ -163,7 +163,12 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       id: "source-available",
       approach: t("page-open-source-comparison-source-available-approach"),
       rights: t("page-open-source-comparison-source-available-rights"),
-      licenses: t("page-open-source-comparison-source-available-licenses"),
+      licenses: t.rich(
+        "page-open-source-comparison-source-available-licenses",
+        {
+          a: (chunks) => <Link href="https://opensource.org/">{chunks}</Link>,
+        }
+      ),
       examples: t("page-open-source-comparison-source-available-examples"),
     },
     {
@@ -297,7 +302,6 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
         tocItems={tocItems}
         contributors={contributors}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-        variant="narrow"
       >
         <Card size="lg">
           <CardContent>
@@ -323,22 +327,46 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
 
         <Section id={getIdFromHash(tocItems[0].url)}>
           <h2>{tocItems[0].title}</h2>
-          <p>{t("page-open-source-ownership-description-1")}</p>
+          <p>
+            {t.rich("page-open-source-ownership-description-1", {
+              strong: Strong,
+            })}
+          </p>
           <p>{t("page-open-source-ownership-description-2")}</p>
-          <p>{t("page-open-source-ownership-description-3")}</p>
-          <p>{t("page-open-source-ownership-description-4")}</p>
+          <p>
+            {t.rich("page-open-source-ownership-description-3", {
+              strong: Strong,
+            })}
+          </p>
+          <p>
+            {t.rich("page-open-source-ownership-description-4", {
+              strong: Strong,
+            })}
+          </p>
+          <p>
+            {t.rich("page-open-source-ownership-description-5", {
+              strong: Strong,
+            })}
+          </p>
         </Section>
 
         <Section id={getIdFromHash(tocItems[1].url)}>
           <h2>{tocItems[1].title}</h2>
-          <p>{t("page-open-source-definition-description-1")}</p>
-          <p>{t("page-open-source-definition-description-2")}</p>
+          <p>
+            {t.rich("page-open-source-definition-description-1", {
+              strong: Strong,
+            })}
+          </p>
+          <p>
+            {t.rich("page-open-source-definition-description-2", {
+              strong: Strong,
+            })}
+          </p>
           <p>
             {t.rich("page-open-source-definition-description-3", {
               strong: Strong,
             })}
           </p>
-          <p>{t("page-open-source-definition-description-4")}</p>
           <UnorderedList>
             <ListItem>
               {t.rich("page-open-source-freedom-item-run", { strong: Strong })}
@@ -375,9 +403,6 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               </Card>
             ))}
           </Grid>
-
-          <p>{t("page-open-source-definition-description-5")}</p>
-          <p>{t("page-open-source-definition-description-6")}</p>
         </Section>
 
         <Section id={getIdFromHash(tocItems[2].url)}>
@@ -493,6 +518,13 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <UnorderedList>
             <ListItem>
               {t.rich("page-open-source-local-ai-item-lm-studio", {
+                a: (chunks) => (
+                  <Link
+                    href={`https://www.gnu.org/philosophy/free-sw.html.${gnuOrgLocaleMap[locale] ?? "en"}`}
+                  >
+                    {chunks}
+                  </Link>
+                ),
                 strong: Strong,
               })}
             </ListItem>
@@ -520,7 +552,16 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <p>{t("page-open-source-ethereum-description-2")}</p>
           <p>{t("page-open-source-ethereum-description-3")}</p>
         </Section>
-
+        <p>
+          {t.rich("page-open-source-definition-description-4", {
+            strong: Strong,
+          })}
+        </p>
+        <p>
+          {t.rich("page-open-source-definition-description-5", {
+            strong: Strong,
+          })}
+        </p>
         <Section id={getIdFromHash(tocItems[7].url)}>
           <h2>{tocItems[7].title}</h2>
           <p>{t("page-open-source-copyleft-description-1")}</p>
