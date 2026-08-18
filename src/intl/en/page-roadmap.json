@@ -120,6 +120,9 @@
   "page-roadmap-upgrade-status-target": "Expected on mainnet",
   "page-roadmap-upgrade-status-not-confirmed": "Date not yet confirmed",
   "page-roadmap-upgrade-status-next": "Next milestone",
-  "page-roadmap-upgrade-status-verified": "Status checked",
-  "page-roadmap-upgrade-status-track": "Track live progress on Forkcast"
+  "page-roadmap-upgrade-status-track": "Track live progress on Forkcast",
+  "page-roadmap-upgrade-quarter": "Q{quarter} {year}",
+  "page-roadmap-upgrade-milestone-devnet": "Devnet-{version}",
+  "page-roadmap-upgrade-milestone-testnet": "{network} fork",
+  "page-roadmap-upgrade-milestone-mainnet": "Mainnet activation"
 }

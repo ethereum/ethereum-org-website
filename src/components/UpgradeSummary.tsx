@@ -4,8 +4,9 @@ import InlineLink from "@/components/ui/Link"
 import { Tag } from "@/components/ui/tag"
 
 import { formatPartialDate } from "@/lib/utils/date"
+import { numberFormat } from "@/lib/utils/numbers"
 
-import { type UpgradePhase, upgrades } from "@/data/upgrades"
+import { type Milestone, type MilestoneKind, upgrades } from "@/data/upgrades"
 
 export type UpgradeSummaryProps = {
   /** Key into `src/data/upgrades`, e.g. "glamsterdam". */
@@ -13,22 +14,32 @@ export type UpgradeSummaryProps = {
 }
 
 /**
- * Only phases an upgrade has actually reached get a label, because every label
- * is a translation task across all locales. A phase missing from this map
- * renders no tag rather than a raw key — add the key when an upgrade needs it.
+ * The stage an upgrade has reached, read from whichever milestone is running
+ * rather than from a field: `status` only distinguishes live from upcoming, and
+ * "testing on devnets" is the more useful thing to tell a reader.
+ *
+ * A kind missing from this map renders no tag rather than a raw key — every
+ * label is a translation task across all locales, so add one when an upgrade
+ * actually reaches that stage.
  */
-const PHASE_LABEL_KEYS: Partial<Record<UpgradePhase, string>> = {
+const STAGE_LABEL_KEYS: Partial<Record<MilestoneKind, string>> = {
   devnet: "page-roadmap-upgrade-status-phase-devnet",
 }
 
+const MILESTONE_LABEL_KEYS: Record<MilestoneKind, string> = {
+  devnet: "page-roadmap-upgrade-milestone-devnet",
+  testnet: "page-roadmap-upgrade-milestone-testnet",
+  mainnet: "page-roadmap-upgrade-milestone-mainnet",
+}
+
 /**
- * The volatile-fact block at the top of an upgrade page: phase, mainnet target,
- * next milestone, and when the facts were last checked.
+ * The volatile-fact block at the top of an upgrade page: stage, mainnet target
+ * and next milestone.
  *
  * Every value comes from `src/data/upgrades` — nothing here is hardcoded, so
  * refreshing the page's facts never means editing prose. Confidence is carried
- * by the data and rendered explicitly: an unconfirmed target is a different
- * sentence from a confirmed one, never the same sentence with a softer word.
+ * by the data and rendered explicitly: an unconfirmed target gets its own
+ * qualifying clause rather than a softer word.
  *
  * Not to be confused with `UpgradeStatus`, the "when shipping" aside used on
  * the Beacon Chain and Merge pages.
@@ -40,10 +51,32 @@ const UpgradeSummary = async ({ slug }: UpgradeSummaryProps) => {
   const t = await getTranslations("page-roadmap")
   const locale = await getLocale()
 
-  const phaseLabelKey = PHASE_LABEL_KEYS[upgrade.phase]
-  const target = upgrade["mainnet-target"]
-  // `complete` milestones are behind us; `live` and everything weaker is not.
-  const next = upgrade.milestones.find((m) => m.status !== "complete")
+  // A year is a label, not a quantity — grouping would render it "2,026".
+  const number = numberFormat(locale, { useGrouping: false })
+  const formatQuarter = (quarter: number, year: number) =>
+    t("page-roadmap-upgrade-quarter", {
+      quarter: number.format(quarter),
+      year: number.format(year),
+    })
+
+  /** Milestones carry no English name, so the label is built from `kind`. */
+  const milestoneLabel = (milestone: Milestone) =>
+    t(MILESTONE_LABEL_KEYS[milestone.kind], {
+      version: milestone.kind === "devnet" ? milestone.version : "",
+      network: milestone.kind === "testnet" ? milestone.network : "",
+    })
+
+  const target = upgrade.mainnetTarget
+  const running = upgrade.milestones.find((m) => m.status === "live")
+  const stageLabelKey = running && STAGE_LABEL_KEYS[running.kind]
+
+  // `live` is happening now rather than next, so a running devnet is not the
+  // answer to "what comes next". The mainnet row already states the target, so
+  // repeating it here as the next milestone would be noise.
+  const next = upgrade.milestones.find(
+    (m) =>
+      m.status !== "complete" && m.status !== "live" && m.kind !== "mainnet"
+  )
 
   return (
     <aside className="flow w-full rounded-base bg-tint-accent-a p-6">
@@ -51,27 +84,27 @@ const UpgradeSummary = async ({ slug }: UpgradeSummaryProps) => {
         {t("page-roadmap-upgrade-status-heading")}
       </h2>
 
-      {phaseLabelKey && (
-        <Tag status={upgrade.phase === "activated" ? "success" : "tag"}>
-          {t(phaseLabelKey)}
-        </Tag>
-      )}
+      {stageLabelKey && <Tag status="tag">{t(stageLabelKey)}</Tag>}
 
       <dl className="grid gap-x-6 gap-y-2 sm:grid-cols-[auto_1fr]">
-        <dt className="text-body-medium">
-          {t("page-roadmap-upgrade-status-target")}
-        </dt>
-        <dd>
-          {formatPartialDate(target.when, locale)}
-          {/* The qualifier is its own clause, not an adjective, so it cannot
-              be lost to word order in translation or read as settled. */}
-          {!target.confirmed && (
-            <span className="text-body-medium">
-              {" · "}
-              {t("page-roadmap-upgrade-status-not-confirmed")}
-            </span>
-          )}
-        </dd>
+        {target.when && (
+          <>
+            <dt className="text-body-medium">
+              {t("page-roadmap-upgrade-status-target")}
+            </dt>
+            <dd>
+              {formatPartialDate(target.when, locale, formatQuarter)}
+              {/* The qualifier is its own clause, not an adjective, so it cannot
+                  be lost to word order in translation or read as settled. */}
+              {!target.confirmed && (
+                <span className="text-body-medium">
+                  {" · "}
+                  {t("page-roadmap-upgrade-status-not-confirmed")}
+                </span>
+              )}
+            </dd>
+          </>
+        )}
 
         {next && (
           <>
@@ -79,40 +112,21 @@ const UpgradeSummary = async ({ slug }: UpgradeSummaryProps) => {
               {t("page-roadmap-upgrade-status-next")}
             </dt>
             <dd>
-              {/* Milestone names are proper nouns, rendered untranslated. */}
-              {next.name}
+              {milestoneLabel(next)}
               {", "}
-              {formatPartialDate(next.when, locale)}
+              {formatPartialDate(next.when, locale, formatQuarter)}
             </dd>
           </>
         )}
-
-        <dt className="text-body-medium">
-          {t("page-roadmap-upgrade-status-verified")}
-        </dt>
-        <dd>
-          <time dateTime={upgrade["facts-verified"]}>
-            {formatPartialDate(
-              toPartialDate(upgrade["facts-verified"]),
-              locale
-            )}
-          </time>
-        </dd>
       </dl>
 
       <p>
-        <InlineLink href={upgrade["source-url"]}>
+        <InlineLink href={upgrade.sourceUrl}>
           {t("page-roadmap-upgrade-status-track")}
         </InlineLink>
       </p>
     </aside>
   )
-}
-
-/** Split an ISO `YYYY-MM-DD` stamp into the shape `formatPartialDate` takes. */
-const toPartialDate = (iso: string) => {
-  const [year, month, day] = iso.split("-").map(Number)
-  return { year, month, day }
 }
 
 export default UpgradeSummary
