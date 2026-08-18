@@ -126,5 +126,6 @@
   "page-roadmap-upgrade-milestone-testnet": "{network} fork",
   "page-roadmap-upgrade-milestone-mainnet": "Mainnet activation",
   "page-roadmap-eip-status-scheduled": "Scheduled for inclusion",
-  "page-roadmap-eip-status-included": "Included"
+  "page-roadmap-eip-status-included": "Included",
+  "page-roadmap-eip-status-considered": "Considered for inclusion"
 }

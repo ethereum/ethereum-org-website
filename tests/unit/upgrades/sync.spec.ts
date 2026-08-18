@@ -269,6 +269,33 @@ test("stores only EIPs expected to ship", () => {
   expect(eips.map((e) => e.id)).toEqual([7732, 8159])
 })
 
+test("considered survives the filter but proposed does not", () => {
+  // `considered` means ACD formally weighed the EIP, which a planning-phase page
+  // wants to show. `proposed` is the churn bucket and stays out.
+  const withBoth: ForkcastSource = {
+    ...source,
+    relationships: [
+      ...source.relationships,
+      {
+        eipId: 8141,
+        forkName: "Glamsterdam",
+        statusHistory: [
+          { status: "Considered", call: "acde/233", date: "2026-03-26" },
+        ],
+      },
+      {
+        eipId: 8888,
+        forkName: "Glamsterdam",
+        statusHistory: [{ status: "Proposed", call: null, date: null }],
+      },
+    ],
+  }
+
+  const { eips } = normalize(withBoth).glamsterdam
+  expect(eips.find((e) => e.id === 8141)?.status).toBe("considered")
+  expect(eips.find((e) => e.id === 8888)).toBeUndefined()
+})
+
 test("latest devnet is live while the fork is unshipped", () => {
   const { milestones } = normalize(source).glamsterdam
   expect(
