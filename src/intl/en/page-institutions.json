@@ -1,0 +1,23 @@
+{
+  "metadata-title": "Ethereum for public-interest institutions | ethereum.org",
+  "metadata-description": "A practical starting point for public agencies, civil-society organizations, and NGOs exploring Ethereum as open public infrastructure.",
+  "hero-title": "Ethereum for public-interest institutions",
+  "hero-description": "Explore whether an open, shared public layer can give people and institutions more independence, verifiability, and control than a single operator can.",
+  "intro": "Public agencies, multilateral organizations, civil-society groups, and NGOs can use Ethereum to explore durable infrastructure for coordination, records, payments, and credentials.",
+  "mission-title": "Start with your mission",
+  "mission-description": "The question is not whether to put a service onchain. Start with the public problem, the people affected, and the degree of independence, verifiability, and control it needs.",
+  "infrastructure-card-title": "Public infrastructure",
+  "infrastructure-card-description": "Identity, records, payments, data exchange, and long-lived civic systems.",
+  "infrastructure-card-cta": "Explore public infrastructure",
+  "civil-society-card-title": "Civil society and development",
+  "civil-society-card-description": "Public goods, transparent funding, humanitarian work, connectivity, and local coordination.",
+  "civil-society-card-cta": "Explore open coordination",
+  "policy-card-title": "Policy and procurement",
+  "policy-card-description": "Sovereignty, inclusion, privacy, accountability, vendor dependence, and exit paths.",
+  "policy-card-cta": "Explore procurement questions",
+  "evidence-card-title": "Evidence and case studies",
+  "evidence-card-description": "Primary-source case studies and research to assess in context.",
+  "evidence-card-cta": "Browse the evidence library",
+  "standard-title": "A public-interest standard",
+  "standard-description": "Technology does not make a service legitimate by itself. Public-interest deployment should protect privacy, accessibility, agency, and recourse; be understandable enough to govern; and remain usable if an integrator, provider, or funder changes course."
+}

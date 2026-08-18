@@ -26,6 +26,7 @@ export const EXACT_PATH_NAMESPACE_MAP: Record<string, string> = {
   "/ethereum-vs-bitcoin/": "page-ethereum-vs-bitcoin",
   "/founders/": "page-founders",
   "/get-eth/": "page-get-eth",
+  "/institutions/": "page-institutions",
   "/bug-bounty/": "page-bug-bounty",
   "/quizzes/": "learn-quizzes",
   "/reports/": "page-reports",

@@ -3,7 +3,6 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import DocLink from "@/components/DocLink"
 import { PageHero } from "@/components/Hero"
 import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -24,13 +23,13 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
-import architectureImage from "@/public/images/enterprise/enterprise-architecture.png"
-import foundationsImage from "@/public/images/enterprise/enterprise-foundations.png"
-import heroImage from "@/public/images/enterprise/enterprise-hub-hero.png"
-import patternsImage from "@/public/images/enterprise/enterprise-patterns.png"
-import resilienceImage from "@/public/images/enterprise/enterprise-resilience.png"
+import civilSocietyImage from "@/public/images/institutions/institutions-civil-society.png"
+import evidenceImage from "@/public/images/institutions/institutions-evidence.png"
+import heroImage from "@/public/images/institutions/institutions-hero.png"
+import policyImage from "@/public/images/institutions/institutions-policy-procurement.png"
+import publicInfrastructureImage from "@/public/images/institutions/institutions-public-infrastructure.png"
 
-type EnterpriseCardProps = {
+type InstitutionCardProps = {
   href: string
   image: StaticImageData
   title: string
@@ -38,13 +37,13 @@ type EnterpriseCardProps = {
   ctaLabel: string
 }
 
-const EnterpriseCard = ({
+const InstitutionCard = ({
   href,
   image,
   title,
   description,
   ctaLabel,
-}: EnterpriseCardProps) => (
+}: InstitutionCardProps) => (
   <Card>
     <CardHeader>
       <CardBanner background="none" fit="contain">
@@ -65,49 +64,48 @@ const EnterpriseCard = ({
   </Card>
 )
 
-const EnterprisePage = async (props: { params: Promise<PageParams> }) => {
+const InstitutionsPage = async (props: { params: Promise<PageParams> }) => {
   const { locale } = await props.params
   setRequestLocale(locale)
 
-  const t = await getTranslations("page-enterprise")
+  const t = await getTranslations("page-institutions")
   const tCommon = await getTranslations("common")
   const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo("enterprise", locale as Lang)
+    await getAppPageContributorInfo("institutions", locale as Lang)
 
   const tocItems = [
-    { id: "start-with-your-question", title: t("questions-title") },
-    { id: "foundation-not-product", title: t("foundation-title") },
-    { id: "continue-evaluation", title: t("continue-title") },
+    { id: "start-with-your-mission", title: t("mission-title") },
+    { id: "public-interest-standard", title: t("standard-title") },
   ]
 
-  const cards: EnterpriseCardProps[] = [
+  const cards: InstitutionCardProps[] = [
     {
-      href: "/enterprise/why-ethereum/",
-      image: foundationsImage,
-      title: t("foundation-card-title"),
-      description: t("foundation-card-description"),
-      ctaLabel: t("foundation-card-cta"),
+      href: "/institutions/public-infrastructure/",
+      image: publicInfrastructureImage,
+      title: t("infrastructure-card-title"),
+      description: t("infrastructure-card-description"),
+      ctaLabel: t("infrastructure-card-cta"),
     },
     {
-      href: "/enterprise/use-cases/",
-      image: patternsImage,
-      title: t("patterns-card-title"),
-      description: t("patterns-card-description"),
-      ctaLabel: t("patterns-card-cta"),
+      href: "/institutions/civil-society-and-development/",
+      image: civilSocietyImage,
+      title: t("civil-society-card-title"),
+      description: t("civil-society-card-description"),
+      ctaLabel: t("civil-society-card-cta"),
     },
     {
-      href: "/enterprise/architecture/",
-      image: architectureImage,
-      title: t("architecture-card-title"),
-      description: t("architecture-card-description"),
-      ctaLabel: t("architecture-card-cta"),
+      href: "/institutions/policy-and-procurement/",
+      image: policyImage,
+      title: t("policy-card-title"),
+      description: t("policy-card-description"),
+      ctaLabel: t("policy-card-cta"),
     },
     {
-      href: "/enterprise/operational-resilience/",
-      image: resilienceImage,
-      title: t("resilience-card-title"),
-      description: t("resilience-card-description"),
-      ctaLabel: t("resilience-card-cta"),
+      href: "/institutions/evidence-and-case-studies/",
+      image: evidenceImage,
+      title: t("evidence-card-title"),
+      description: t("evidence-card-description"),
+      ctaLabel: t("evidence-card-cta"),
     },
   ]
 
@@ -118,7 +116,7 @@ const EnterprisePage = async (props: { params: Promise<PageParams> }) => {
       lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       heroSection={
         <PageHero
-          header={tCommon("enterprise")}
+          header={tCommon("institutions")}
           heroImg={heroImage}
           title={t("hero-title")}
           description={t("hero-description")}
@@ -130,10 +128,10 @@ const EnterprisePage = async (props: { params: Promise<PageParams> }) => {
 
       <Section id={tocItems[0].id}>
         <h2>{tocItems[0].title}</h2>
-        <p>{t("questions-description")}</p>
+        <p>{t("mission-description")}</p>
         <Grid columns={2}>
           {cards.map((card) => (
-            <EnterpriseCard key={card.href} {...card} />
+            <InstitutionCard key={card.href} {...card} />
           ))}
         </Grid>
       </Section>
@@ -141,27 +139,8 @@ const EnterprisePage = async (props: { params: Promise<PageParams> }) => {
       <Section id={tocItems[1].id}>
         <Callout
           title={tocItems[1].title}
-          description={t("foundation-description")}
+          description={t("standard-description")}
         />
-      </Section>
-
-      <Section id={tocItems[2].id}>
-        <h2>{tocItems[2].title}</h2>
-        <p>{t("continue-description")}</p>
-        <div className="flex flex-col gap-4">
-          <DocLink href="/enterprise/why-ethereum/">
-            {t("continue-foundation")}
-          </DocLink>
-          <DocLink href="/enterprise/use-cases/">
-            {t("continue-patterns")}
-          </DocLink>
-          <DocLink href="/enterprise/due-diligence/">
-            {t("continue-evaluation")}
-          </DocLink>
-          <DocLink href="/enterprise/get-started/">
-            {t("continue-deployment")}
-          </DocLink>
-        </div>
       </Section>
     </ContentLayout>
   )
@@ -171,14 +150,14 @@ export async function generateMetadata(props: {
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await props.params
-  const t = await getTranslations("page-enterprise")
+  const t = await getTranslations("page-institutions")
 
   return await getMetadata({
     locale,
-    slug: ["enterprise"],
+    slug: ["institutions"],
     title: t("metadata-title"),
     description: t("metadata-description"),
   })
 }
 
-export default EnterprisePage
+export default InstitutionsPage
