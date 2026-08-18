@@ -672,6 +672,8 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
                   key={id}
                   name={name}
                   description={description}
+                  // 21 cards is ~8 phone screens with descriptions shown
+                  descriptionClassName="hidden md:block"
                   thumbnail={logo.src}
                   tags={[category]}
                   href={href}
