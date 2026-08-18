@@ -12,17 +12,20 @@ export type EipTagProps = {
 }
 
 /**
- * How firm an EIP's inclusion is, using the reader-facing wording rather than
- * the All Core Devs acronyms. `pfi` and `cfi` collapse to one label because the
- * distinction between "proposed" and "considered" is process detail a general
- * reader can't act on — Forkcast has it if they want it.
+ * How firm an EIP's inclusion is, in reader-facing wording rather than the All
+ * Core Devs acronyms.
+ *
+ * Only the two statuses the data layer stores appear here. Everything else —
+ * proposed, considered, declined, withdrawn — is filtered out upstream of us, so
+ * an EIP that is not expected to ship has no entry at all rather than a chip
+ * saying so. A missing entry renders nothing, which is also the right answer for
+ * a descoped EIP: it should be removed from the page, not labelled.
  */
 const STATUS_LABELS: Partial<
   Record<EipStatus, { key: string; status: "success" | "normal" }>
 > = {
-  sfi: { key: "page-roadmap-eip-status-scheduled", status: "success" },
-  cfi: { key: "page-roadmap-eip-status-considered", status: "normal" },
-  pfi: { key: "page-roadmap-eip-status-considered", status: "normal" },
+  scheduled: { key: "page-roadmap-eip-status-scheduled", status: "success" },
+  included: { key: "page-roadmap-eip-status-included", status: "success" },
 }
 
 /**
