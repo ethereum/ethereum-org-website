@@ -2,7 +2,10 @@ import {
   BookOpenCheck,
   DoorOpen,
   HeartPulse,
+  Lightbulb,
   Recycle,
+  Scale,
+  ScanSearch,
   Share,
   SquarePen,
   SquarePlay,
@@ -13,9 +16,17 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 import type { Lang, ToCItem } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
+import { CopyButton } from "@/components/CopyToClipboard"
 import PageHero from "@/components/Hero/PageHero"
 import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
+import {
+  Alert,
+  AlertContent,
+  AlertDescription,
+  AlertIcon,
+  AlertTitle,
+} from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
 import {
@@ -112,8 +123,8 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       url: "#how-to-switch-to-open-source-apps",
     },
     {
-      title: t("page-open-source-local-ai-title"),
-      url: "#running-ai-locally",
+      title: t("page-open-source-ai-title"),
+      url: "#open-source-and-ai",
     },
     {
       title: t("page-open-source-ethereum-title"),
@@ -219,6 +230,21 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       }),
     },
   ]
+
+  // Prompt text is copied to the clipboard verbatim -- no markup in these.
+  // Pragmatic first (find it, install it, unstick it), scrutiny last.
+  const prompts = [
+    "alternatives",
+    "install",
+    "error",
+    "reputation",
+    "policy",
+    "permissions",
+  ].map((id) => ({
+    id,
+    prompt: t(`page-open-source-ai-prompt-${id}-text`),
+    description: t(`page-open-source-ai-prompt-${id}-description`),
+  }))
 
   // Shared across apps -- one string per category, not per app.
   const categories = {
@@ -782,24 +808,131 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
 
         <Section id={getIdFromHash(tocItems[5].url)}>
           <h2>{tocItems[5].title}</h2>
+          <p>{t("page-open-source-ai-intro")}</p>
+
+          <h3>{t("page-open-source-ai-assist-title")}</h3>
+          <p>{t("page-open-source-ai-assist-description-1")}</p>
+          <p>{t("page-open-source-ai-assist-description-2")}</p>
+
+          <Alert variant="update">
+            <AlertIcon className="[&>svg]:size-10">
+              <ScanSearch />
+            </AlertIcon>
+            <AlertContent>
+              <AlertTitle>
+                {t("page-open-source-ai-superpower-title")}
+              </AlertTitle>
+              <AlertDescription>
+                <p>
+                  {t.rich("page-open-source-ai-superpower-description", {
+                    strong: Strong,
+                  })}
+                </p>
+              </AlertDescription>
+            </AlertContent>
+          </Alert>
+
+          <p>{t("page-open-source-ai-prompts-lead")}</p>
+          <Grid columns={2} size="wide">
+            {prompts.map(({ id, prompt, description }) => (
+              <Card key={id} size="md">
+                <CardContent spacing="sm">
+                  <div className="flex items-start justify-between gap-2">
+                    <p className="text-balance">
+                      <strong>{prompt}</strong>
+                    </p>
+                    <CopyButton
+                      message={prompt}
+                      size="sm"
+                      aria-label={t("page-open-source-ai-copy-prompt")}
+                      className="-me-2 -mt-1 shrink-0 text-body-medium hover:text-primary"
+                    />
+                  </div>
+                  <CardParagraph size="sm">{description}</CardParagraph>
+                </CardContent>
+              </Card>
+            ))}
+          </Grid>
+
+          <Alert variant="warning">
+            <AlertIcon className="[&>svg]:size-10 [&>svg]:text-body!">
+              <Lightbulb />
+            </AlertIcon>
+            <AlertContent>
+              <AlertTitle>{t("page-open-source-ai-tip-title")}</AlertTitle>
+              <AlertDescription>
+                <p>
+                  {t.rich("page-open-source-ai-tip-description", {
+                    strong: Strong,
+                  })}
+                </p>
+              </AlertDescription>
+            </AlertContent>
+          </Alert>
+
+          <p>{t("page-open-source-ai-assist-caveats")}</p>
+
+          <h3>{t("page-open-source-local-ai-title")}</h3>
           <p>{t("page-open-source-local-ai-description-1")}</p>
-          <p>{t("page-open-source-local-ai-description-2")}</p>
+          <p>
+            {t.rich("page-open-source-local-ai-description-2", {
+              strong: Strong,
+            })}
+          </p>
+          <p>{t("page-open-source-local-ai-description-3")}</p>
           <UnorderedList>
             <ListItem>
-              {t.rich("page-open-source-local-ai-item-lm-studio", {
-                strong: Strong,
+              {t.rich("page-open-source-local-ai-item-jan", {
+                strong: (chunks) => (
+                  <Link href="https://jan.ai">
+                    <strong>{chunks}</strong>
+                  </Link>
+                ),
               })}
             </ListItem>
             <ListItem>
               {t.rich("page-open-source-local-ai-item-ollama", {
-                strong: Strong,
+                strong: (chunks) => (
+                  <Link href="https://ollama.com">
+                    <strong>{chunks}</strong>
+                  </Link>
+                ),
               })}
             </ListItem>
             <ListItem>
-              {t.rich("page-open-source-local-ai-item-jan", { strong: Strong })}
+              {t.rich("page-open-source-local-ai-item-lm-studio", {
+                strong: (chunks) => (
+                  <Link href="https://lmstudio.ai">
+                    <strong>{chunks}</strong>
+                  </Link>
+                ),
+              })}
             </ListItem>
           </UnorderedList>
-          <p>{t("page-open-source-local-ai-description-3")}</p>
+          <p>{t("page-open-source-local-ai-description-4")}</p>
+
+          <Alert>
+            <AlertIcon className="[&>svg]:size-10">
+              <Scale />
+            </AlertIcon>
+            <AlertContent>
+              <AlertTitle>
+                {t("page-open-source-local-ai-note-title")}
+              </AlertTitle>
+              <AlertDescription>
+                <p>{t("page-open-source-local-ai-note-description-1")}</p>
+                <p>
+                  {t.rich("page-open-source-local-ai-note-description-2", {
+                    a: (chunks) => (
+                      <Link href="https://opensource.org/ai/open-source-ai-definition">
+                        {chunks}
+                      </Link>
+                    ),
+                  })}
+                </p>
+              </AlertDescription>
+            </AlertContent>
+          </Alert>
         </Section>
 
         <Section id={getIdFromHash(tocItems[6].url)}>
