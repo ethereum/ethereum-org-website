@@ -1,3 +1,5 @@
+import type { StaticImageData } from "next/image"
+
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 
@@ -27,6 +29,115 @@ import { cn } from "@/lib/utils/cn"
 import { getEditPath } from "@/lib/utils/editPath"
 
 import guideHeroImg from "@/public/images/heroes/guides-hub-hero.jpg"
+import civicInfrastructureImg from "@/public/images/organizations/detail-pages/civic-infrastructure.png"
+import credentialsAndConfidentialityImg from "@/public/images/organizations/detail-pages/credentials-and-confidentiality.png"
+import marketSystemsImg from "@/public/images/organizations/detail-pages/market-systems.png"
+import resilientOperationsImg from "@/public/images/organizations/detail-pages/resilient-operations.png"
+import sharedInfrastructureImg from "@/public/images/organizations/detail-pages/shared-infrastructure.png"
+
+type OrganizationPageDesign = {
+  heroClassName: string
+  mainClassName: string
+  articleClassName: string
+  heroImage: StaticImageData
+}
+
+const organizationPageDesigns: Record<string, OrganizationPageDesign> = {
+  "enterprise/why-ethereum": {
+    heroClassName:
+      "border-y bg-linear-to-br from-accent-a/15 via-background to-background",
+    mainClassName: "bg-background",
+    articleClassName: "max-w-4xl",
+    heroImage: sharedInfrastructureImg,
+  },
+  "enterprise/use-cases": {
+    heroClassName: "border-y bg-background-highlight",
+    mainClassName: "bg-background-low/40",
+    articleClassName: "max-w-4xl",
+    heroImage: marketSystemsImg,
+  },
+  "enterprise/digital-assets": {
+    heroClassName:
+      "border-y bg-linear-to-br from-accent-b/10 via-background to-background",
+    mainClassName: "bg-background",
+    articleClassName: "max-w-3xl border-s-2 border-accent-b ps-space-2x",
+    heroImage: marketSystemsImg,
+  },
+  "enterprise/onchain-markets": {
+    heroClassName: "border-y bg-background-highlight",
+    mainClassName: "bg-background-low/40",
+    articleClassName: "max-w-4xl",
+    heroImage: marketSystemsImg,
+  },
+  "enterprise/verifiable-credentials": {
+    heroClassName: "border-y bg-card-gradient-secondary",
+    mainClassName: "bg-background",
+    articleClassName: "max-w-3xl border-s-2 border-primary ps-space-2x",
+    heroImage: credentialsAndConfidentialityImg,
+  },
+  "enterprise/architecture": {
+    heroClassName:
+      "border-y bg-linear-to-br from-accent-a/15 via-background to-background",
+    mainClassName: "bg-background-low/40",
+    articleClassName: "max-w-4xl",
+    heroImage: sharedInfrastructureImg,
+  },
+  "enterprise/confidential-systems": {
+    heroClassName: "border-y bg-card-gradient-secondary",
+    mainClassName: "bg-background",
+    articleClassName: "max-w-3xl border-s-2 border-primary ps-space-2x",
+    heroImage: credentialsAndConfidentialityImg,
+  },
+  "enterprise/operational-resilience": {
+    heroClassName:
+      "border-y bg-linear-to-br from-primary/10 via-background to-background",
+    mainClassName: "bg-background-low/40",
+    articleClassName: "max-w-4xl",
+    heroImage: resilientOperationsImg,
+  },
+  "enterprise/due-diligence": {
+    heroClassName:
+      "border-y bg-linear-to-br from-primary/10 via-background to-background",
+    mainClassName: "bg-background",
+    articleClassName: "max-w-3xl border-s-2 border-primary ps-space-2x",
+    heroImage: resilientOperationsImg,
+  },
+  "enterprise/get-started": {
+    heroClassName:
+      "border-y bg-linear-to-br from-primary/10 via-background to-background",
+    mainClassName: "bg-background-low/40",
+    articleClassName: "max-w-4xl",
+    heroImage: resilientOperationsImg,
+  },
+  "enterprise/evidence-and-data": {
+    heroClassName:
+      "border-y bg-linear-to-br from-accent-a/15 via-background to-background",
+    mainClassName: "bg-background",
+    articleClassName: "max-w-3xl border-s-2 border-accent-a ps-space-2x",
+    heroImage: sharedInfrastructureImg,
+  },
+  "institutions/civil-society-and-development": {
+    heroClassName:
+      "border-y bg-linear-to-br from-accent-c/15 via-background to-background",
+    mainClassName: "bg-background-low/40",
+    articleClassName: "max-w-4xl",
+    heroImage: civicInfrastructureImg,
+  },
+  "institutions/policy-and-procurement": {
+    heroClassName:
+      "border-y bg-linear-to-br from-accent-c/15 via-background to-background",
+    mainClassName: "bg-background",
+    articleClassName: "max-w-3xl border-s-2 border-accent-c ps-space-2x",
+    heroImage: civicInfrastructureImg,
+  },
+  "institutions/evidence-and-case-studies": {
+    heroClassName:
+      "border-y bg-linear-to-br from-accent-c/15 via-background to-background",
+    mainClassName: "bg-background-low/40",
+    articleClassName: "max-w-4xl",
+    heroImage: civicInfrastructureImg,
+  },
+}
 
 // Static layout components
 export const staticComponents = {
@@ -69,6 +180,7 @@ export const StaticLayout = ({
   const absoluteEditPath = getEditPath(slug)
 
   const isGuidesHub = slug === "/guides/" || slug === "guides"
+  const organizationPageDesign = organizationPageDesigns[slug]
   const heroImg = frontmatter.heroImage
     ? {
         src: frontmatter.heroImage,
@@ -76,6 +188,7 @@ export const StaticLayout = ({
         height: frontmatter.heroImageHeight ?? 450,
       }
     : undefined
+  const organizationHeroImage = organizationPageDesign?.heroImage || heroImg
 
   return (
     <div dir={contentNotTranslated ? "ltr" : "unset"}>
@@ -88,14 +201,24 @@ export const StaticLayout = ({
       ) : (
         <PageHero
           breadcrumbs={{ slug }}
-          heroImg={heroImg}
+          heroImg={organizationHeroImage}
           blurDataURL={frontmatter.heroBlurDataURL}
           title={frontmatter.title}
+          description={
+            organizationPageDesign ? frontmatter.description : undefined
+          }
           variant="no-divider"
+          className={organizationPageDesign?.heroClassName}
         />
       )}
 
-      <main className={cn("px-page pb-page", isGuidesHub && "pt-page")}>
+      <main
+        className={cn(
+          "px-page pb-page",
+          isGuidesHub && "pt-page",
+          organizationPageDesign?.mainClassName
+        )}
+      >
         <Flex className="w-full justify-between gap-x-space-3x max-lg:flex-col">
           <TableOfContents
             items={tocItems}
@@ -106,6 +229,7 @@ export const StaticLayout = ({
           <MainArticle
             className={cn(
               "flow max-w-3xl",
+              organizationPageDesign?.articleClassName,
               "**:[h1]:hidden" // TODO: Remove when non-English Static markdown update to remove `#` h1 line
             )}
           >
