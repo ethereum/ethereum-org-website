@@ -16,25 +16,13 @@ Procurement should assess more than a provider’s present capabilities. For lon
 
 ## Questions for a procurement process {#questions-for-a-procurement-process}
 
-### Sovereignty and dependency {#sovereignty-and-dependency}
-
-Who operates the critical components? What happens if a supplier, integrator, or cloud provider changes terms, fails, or leaves the jurisdiction?
-
-### Privacy and rights {#privacy-and-rights}
-
-What information is collected, exposed, retained, or shared? Can people make proportionate disclosures rather than exposing a full record by default?
-
-### Inclusion and accessibility {#inclusion-and-accessibility}
-
-Can people participate without a smartphone, continuous connectivity, high technical literacy, or expensive hardware? What is the recovery path?
-
-### Governance and accountability {#governance-and-accountability}
-
-Who can change rules? Who is accountable for application-level decisions? Which parts are enforced technically, and which depend on policy or contracts?
-
-### Exit and continuity {#exit-and-continuity}
-
-Can the institution retrieve records, verify claims, and migrate systems without the supplier’s cooperation? Test the path, rather than relying on a promise.
+<Grid>
+  <Card title="Sovereignty" description="Who operates critical components, and what happens if a supplier, integrator, or cloud provider changes terms, fails, or leaves the jurisdiction?" emoji="01" />
+  <Card title="Privacy and rights" description="What information is collected, exposed, retained, or shared? Can people make proportionate disclosures by default?" emoji="02" />
+  <Card title="Inclusion" description="Can people participate without a smartphone, continuous connectivity, high technical literacy, or expensive hardware?" emoji="03" />
+  <Card title="Accountability" description="Who changes rules, answers for application decisions, and distinguishes technical enforcement from policy or contracts?" emoji="04" />
+  <Card title="Exit and continuity" description="Can the institution retrieve records, verify claims, and migrate systems without a supplier’s cooperation? Test the path." emoji="05" />
+</Grid>
 
 ## The capability requirement {#the-capability-requirement}
 

@@ -16,21 +16,12 @@ Most infrastructure decisions are decisions about control: who can change the te
 
 ## What changes when the base layer is shared {#what-changes-when-the-base-layer-is-shared}
 
-### Censorship resistance {#censorship-resistance}
-
-No actor should be able to selectively exclude valid use or break core functionality. Your application may still depend on providers and operators; those dependencies should have credible alternatives and exit paths.
-
-### Open source and free access {#open-source-and-free-access}
-
-The software and standards can be inspected, implemented, and replaced. This does not make every application open source, but it gives organizations a way to avoid treating a single vendor as the permanent source of truth.
-
-### Privacy {#privacy}
-
-Ethereum’s base layer is public, so privacy needs deliberate design. The goal is not secrecy for its own sake, but meaningful control over what a person or organization discloses and to whom.
-
-### Security {#security}
-
-Security is the ability to verify that a system does what it claims and no more. It depends on the protocol and also on contracts, keys, data sources, providers, operations, and governance.
+<Grid>
+  <Card title="Censorship resistance" description="No actor should be able to selectively exclude valid use or break core functionality. Map provider and operator dependencies, then preserve credible alternatives and exit paths." emoji="↗" />
+  <Card title="Open standards" description="Software and standards can be inspected, implemented, and replaced. This does not make every application open source; it avoids making a single vendor the permanent source of truth." emoji="⌘" />
+  <Card title="Deliberate privacy" description="Ethereum’s base layer is public, so privacy needs intentional architecture. Aim for meaningful control over what a person or organization discloses, and to whom." emoji="◐" />
+  <Card title="Verifiable security" description="Security means being able to verify that a system does what it claims and no more. Contracts, keys, data sources, providers, operations, and governance all matter." emoji="✓" />
+</Grid>
 
 ## Choose the smallest trust boundary that fits {#choose-the-smallest-trust-boundary-that-fits}
 
@@ -40,6 +31,8 @@ Security is the ability to verify that a system does what it claims and no more.
 | Lower-cost execution | Existing L2 | Better execution characteristics; assess governance, data availability, and exits. |
 | Tailored workflow | Custom L2 or application layer | More control, but more operational and interoperability responsibility. |
 | One trusted operator | Conventional system | Simpler, but the operator remains the trust boundary. |
+
+<Callout title="A useful test" description="The technology choice is not the point. Choose the smallest trust boundary that lets the people who need assurance independently verify the rules and recover from a failure." />
 
 ## What this does not solve {#what-this-does-not-solve}
 

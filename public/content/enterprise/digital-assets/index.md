@@ -16,21 +16,12 @@ Digital assets can represent a unit of value, a claim, a membership right, or a 
 
 ## What to design {#what-to-design}
 
-### The claim {#the-claim}
-
-State exactly what the token represents, who owes what to whom, and which offchain record prevails if the two diverge.
-
-### The lifecycle {#the-lifecycle}
-
-Design issuance, eligibility, transfer restrictions, corporate actions, redemption, and winding down before launch. A token contract is part of a larger operating system.
-
-### Control and custody {#control-and-custody}
-
-Make administrative powers explicit. Who can issue, freeze, upgrade, pause, or recover assets? How do users hold keys or delegate custody? What happens if a key, wallet, issuer, custodian, or L2 fails?
-
-### Privacy and interoperability {#privacy-and-interoperability}
-
-Decide which information should be public and what needs selective disclosure. Open standards can increase compatibility, but also expand the risk surface.
+<Grid>
+  <Card title="1. The claim" description="State exactly what the token represents, who owes what to whom, and which offchain record prevails if the two diverge." emoji="1" />
+  <Card title="2. The lifecycle" description="Design issuance, eligibility, transfer restrictions, corporate actions, redemption, and winding down before launch. A token contract is part of a larger operating system." emoji="2" />
+  <Card title="3. Control and custody" description="Make powers explicit: issue, freeze, upgrade, pause, recover. Decide how users hold keys or delegate custody, and what happens when a key, wallet, issuer, custodian, or L2 fails." emoji="3" />
+  <Card title="4. Privacy and interoperability" description="Decide which information is public and what needs selective disclosure. Open standards can increase compatibility, but also expand the risk surface." emoji="4" />
+</Grid>
 
 ## A simple system map {#a-simple-system-map}
 
@@ -45,6 +36,8 @@ Network and settlement choice
         ↓
 Wallet, custody, recovery, and disclosure experience
 ```
+
+<Callout title="Design the whole system" description="The token contract, legal claim, keys, attestations, bridges, and offchain servicing form one system. Assess its rights and failure modes together." />
 
 ## What to weigh {#what-to-weigh}
 

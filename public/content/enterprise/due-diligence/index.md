@@ -16,17 +16,25 @@ Ethereum is a foundation, not a turnkey solution. Use this guide when you need t
 
 ## Questions for every component {#questions-for-every-component}
 
-1. If its operator disappeared tomorrow, what would still work?
-2. Can we retrieve our assets and records without its cooperation?
-3. Who can change, pause, censor, or upgrade it?
-4. Can our auditors inspect relevant code and rules?
-5. What data becomes visible, and to whom?
-6. What does migration away look like in practice?
-7. Are we using open standards or a proprietary interpretation of them?
+| Question | What it reveals |
+| --- | --- |
+| If its operator disappeared tomorrow, what would still work? | The real dependency boundary. |
+| Can we retrieve assets and records without its cooperation? | Recovery and exit capability. |
+| Who can change, pause, censor, or upgrade it? | Authority and governance. |
+| Can auditors inspect relevant code and rules? | Verifiability. |
+| What data becomes visible, and to whom? | Privacy exposure. |
+| What does migration away look like in practice? | Switching cost and continuity. |
+| Are we using open standards or a proprietary interpretation? | Interoperability risk. |
 
 ## A phased approach {#a-phased-approach}
 
 Scope one use case with an owner and bounded blast radius. Choose the architecture deliberately. Design confidentiality and controls early. Audit the code and the operating assumptions. Launch with limits, run alongside existing systems, then expand only with operational confidence.
+
+<Grid>
+  <Card title="1. Scope" description="Choose one use case, one owner, and a bounded blast radius." emoji="01" />
+  <Card title="2. Test" description="Choose architecture deliberately, design controls early, and audit code plus operating assumptions." emoji="02" />
+  <Card title="3. Learn" description="Launch with limits, run alongside existing systems, and expand only with operational confidence." emoji="03" />
+</Grid>
 
 ## When Ethereum is not the answer {#when-ethereum-is-not-the-answer}
 

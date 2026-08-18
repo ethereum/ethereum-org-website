@@ -16,15 +16,22 @@ Use primary sources, dated technical material, and transparent methodologies to 
 
 ## What this page indexes {#what-this-page-indexes}
 
-- Ethereum Foundation mandate and protocol documentation
-- Ethereum.org technical guides and standards
-- Dated case studies with a primary source
-- Independent technical assessments and their methodology
-- Network data with a maintained source and visible timestamp
+<Grid>
+  <Card title="Foundations" description="Ethereum Foundation mandate and protocol documentation." emoji="01" />
+  <Card title="Technical material" description="Ethereum.org guides, standards, and independently reviewable assessments." emoji="02" />
+  <Card title="Documented cases" description="Dated case studies that link to a primary source." emoji="03" />
+  <Card title="Network data" description="Maintained source material with a visible timestamp and methodology." emoji="04" />
+</Grid>
 
 ## Metadata on every resource {#metadata-on-every-resource}
 
 Show publisher, publication date, last review date, resource type, topic, source URL, and a one-sentence neutral description. Remove stale resources rather than retaining them to make a list appear complete.
+
+| Required metadata | Why it matters |
+| --- | --- |
+| Publisher, publication, and review date | Lets readers judge authority and freshness. |
+| Resource type and topic | Makes the scope of a source legible. |
+| Primary URL and neutral description | Lets readers inspect the evidence directly. |
 
 ## Data methodology {#data-methodology}
 

@@ -18,6 +18,12 @@ This is a starting library for people assessing public-interest uses of Ethereum
 
 Start with the problem being addressed, the people affected, and the operating context. Then examine a case study for its governance model, information flows, maintenance responsibilities, and evidence of outcomes—not merely its choice of technology.
 
+<Grid>
+  <Card title="Documented implementation" description="A primary source that explains what was built, who operates it, and its system boundaries." emoji="01" />
+  <Card title="Technical reference" description="A reusable protocol, standard, privacy, or security resource that explains the tools." emoji="02" />
+  <Card title="Open question" description="A stated constraint, uncertainty, or unanswered issue that needs investigation." emoji="03" />
+</Grid>
+
 ## Documented implementations {#documented-implementations}
 
 Curate primary-source case studies in four groups:
@@ -28,6 +34,12 @@ Curate primary-source case studies in four groups:
 - coordination tools used by civil-society networks.
 
 Each entry should identify the operator, jurisdiction or community, maturity, what data is onchain or offchain, the privacy model, dependencies, and the source date. Do not feature an initiative solely because it uses Ethereum.
+
+| Entry field | Purpose |
+| --- | --- |
+| Operator and community or jurisdiction | Makes responsibility and context explicit. |
+| Onchain/offchain data and privacy model | Makes information flows inspectable. |
+| Dependencies, maturity, and source date | Makes maintenance and evidence quality visible. |
 
 ## Technical references {#technical-references}
 

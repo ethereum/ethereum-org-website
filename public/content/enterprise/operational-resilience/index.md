@@ -18,13 +18,17 @@ Security is a system property, not a checkbox. An Ethereum application depends o
 
 Map each component, who controls it, how it can fail, and the capabilities that remain available after a failure. Reduce opaque dependency and preserve credible recovery and exit paths.
 
+<Callout title="Map the whole operating system" description="An application depends on people, keys, contracts, data sources, wallets, bridges, providers, governance, processes, and communication—not on code alone." />
+
 ## Operating areas {#operating-areas}
 
-- **Smart contracts:** minimize complexity, test thoroughly, review independently, and make upgrade authority legible.
-- **Keys and custody:** decide who controls assets and permissions, and how recovery, rotation, and compromise are handled.
-- **Third-party dependencies:** map providers, oracles, bridges, relayers, and sequencers; plan for replacement or failure.
-- **Operations and incidents:** establish monitoring, runbooks, disclosures, and narrow, time-bounded emergency authority before launch.
-- **Governance and upgrades:** minimize power over core user rights and explain who can change what.
+<Grid>
+  <Card title="Contracts" description="Minimize complexity, test thoroughly, review independently, and make upgrade authority legible." emoji="01" />
+  <Card title="Keys and custody" description="Decide who controls assets and permissions, and how recovery, rotation, and compromise are handled." emoji="02" />
+  <Card title="Dependencies" description="Map providers, oracles, bridges, relayers, and sequencers; plan for replacement or failure." emoji="03" />
+  <Card title="Operations" description="Establish monitoring, runbooks, disclosures, and narrow, time-bounded emergency authority before launch." emoji="04" />
+  <Card title="Governance" description="Minimize power over core user rights and explain who can change what." emoji="05" />
+</Grid>
 
 ## Prepare for failure, not just launch {#prepare-for-failure-not-just-launch}
 

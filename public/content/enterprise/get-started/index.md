@@ -18,6 +18,12 @@ Ethereum is open infrastructure. There is no sales process or partner portal req
 
 Start with Ethereum developer documentation, smart-contract fundamentals, layer 2 learning material, and the Ethereum roadmap. Use test networks and small, reversible experiments before a production commitment.
 
+<Grid>
+  <Card title="Learn" description="Understand the stack, standards, and the decision that needs to be made." emoji="01" />
+  <Card title="Prototype" description="Use test networks and make a small, reversible experiment." emoji="02" />
+  <Card title="Operate" description="Set limits, document ownership, and retain the ability to change providers." emoji="03" />
+</Grid>
+
 ## Standards you may meet {#standards-you-may-meet}
 
 Use established standards where they fit, and check a standard’s status before relying on it. A draft standard may change. Publish interfaces and assumptions that a counterparty needs to verify or replace your system.
@@ -32,3 +38,5 @@ ethereum.org does not rank providers. When assessing a custodian, node provider,
 - [Founders support](/founders/)
 - [Ecosystem Support Program](https://esp.ethereum.foundation/)
 - [Community hub](/community/)
+
+<Callout title="Start without a sales process" description="Ethereum is open infrastructure. Public documentation and public standards are the starting point; assessing external support should not remove your ability to inspect, move, or exit." />

@@ -16,21 +16,12 @@ Onchain markets use smart contracts to coordinate functions such as exchange, le
 
 ## What is different {#what-is-different}
 
-### Shared components {#shared-components}
-
-Assets and applications can interact through common interfaces rather than a new bilateral integration for every participant.
-
-### Programmable rules {#programmable-rules}
-
-Contract logic can automate actions, but the authority model, upgrade path, and available remedies remain design choices.
-
-### Continuous operation {#continuous-operation}
-
-Systems can operate beyond local business hours. That does not remove the need for monitoring, incident response, or responsible user support.
-
-### Verifiable state {#verifiable-state}
-
-Participants can inspect relevant onchain state, which can aid auditability but also creates privacy and strategic-information concerns.
+<Grid>
+  <Card title="Shared components" description="Assets and applications can interact through common interfaces rather than a new bilateral integration for every participant." emoji="↔" />
+  <Card title="Programmable rules" description="Contract logic can automate actions, but authority, upgrade paths, and available remedies remain design choices." emoji="{}" />
+  <Card title="Continuous operation" description="Systems can operate beyond local business hours. Monitoring, incident response, and responsible user support still matter." emoji="24" />
+  <Card title="Verifiable state" description="Participants can inspect relevant onchain state, aiding auditability while introducing privacy and strategic-information concerns." emoji="◌" />
+</Grid>
 
 ## A responsible evaluation checklist {#a-responsible-evaluation-checklist}
 
@@ -39,6 +30,8 @@ Participants can inspect relevant onchain state, which can aid auditability but 
 - **Counterparty and custody risk:** Who holds keys and controls permissions? What is the exit route?
 - **Operational risk:** What must be monitored, reconciled, and communicated in an incident?
 - **Legal and policy context:** Which obligations apply to the organization and its users?
+
+<Callout title="Composability needs boundaries" description="Map dependencies before connecting to them. Define authority boundaries and a way to disengage from a component without trapping users or assets." />
 
 ## Composability needs boundaries {#composability-needs-boundaries}
 

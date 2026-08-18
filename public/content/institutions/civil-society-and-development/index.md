@@ -16,21 +16,14 @@ Civil-society and development work often spans organizations, borders, funding s
 
 ## Areas to explore {#areas-to-explore}
 
-### Public goods and transparent funding {#public-goods-and-transparent-funding}
+<Grid>
+  <Card title="Public goods and funding" description="Make funding rules, allocations, and attestations easier to inspect while preserving appropriate privacy for recipients and communities." emoji="✦" />
+  <Card title="Disbursement" description="Explore payment systems across borders that connect to local delivery, accessibility, safety, and recipient rights." emoji="→" />
+  <Card title="Shared measurement" description="Use verifiable records where donors, communities, and implementers need to compare claims without trusting one reporting system." emoji="◫" />
+  <Card title="Local coordination" description="Support membership, governance, shared resources, or community-owned systems with transparent rules and meaningful ways to participate or exit." emoji="◌" />
+</Grid>
 
-Make funding rules, allocations, and attestations easier to inspect while preserving appropriate privacy for recipients and communities.
-
-### Humanitarian and community disbursement {#humanitarian-and-community-disbursement}
-
-Explore payment systems that work across borders and connect to local delivery methods. Design for accessibility, safety, local context, and recipient rights.
-
-### Connectivity and shared measurement {#connectivity-and-shared-measurement}
-
-Use verifiable records where donors, communities, and implementers need to compare claims without trusting a single reporting system.
-
-### Local coordination {#local-coordination}
-
-Support membership, governance, shared resources, or community-owned systems with transparent rules and meaningful ways to participate or exit.
+<Callout title="Technology is not evidence of impact" description="Evaluate who benefits, who is excluded, what data is exposed, who can change the system, and whether communities can use it without new dependencies." />
 
 ## What to weigh {#what-to-weigh}
 

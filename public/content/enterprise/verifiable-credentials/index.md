@@ -18,23 +18,19 @@ Organizations often need to verify a claim: eligibility, membership, a licence, 
 
 The goal is not to put identity on a blockchain. It is to give people portable, verifiable claims while minimizing data collection and dependence on one provider.
 
+<Callout title="The holder is not a data source" description="Design for the person whose information is at stake: they should be able to present an appropriate proof without being required to expose a full record or depend on a single vendor." />
+
 ## Core choices {#core-choices}
 
-### Issuance and authority {#issuance-and-authority}
+<Grid>
+  <Card title="Issuer" description="Who can issue a claim, and why should a verifier trust that issuer? Document the credential schema and authority model." emoji="01" />
+  <Card title="Holder" description="Can the person or organization hold and present a credential independently, and choose what to disclose?" emoji="02" />
+  <Card title="Verifier" description="Can a verifier check a claim without querying the issuer’s database or receiving more personal information than necessary?" emoji="03" />
+</Grid>
 
-Who is allowed to issue a claim, and why should a verifier trust that issuer? Document the credential schema and authority model.
+### Revocation, privacy, and access {#revocation-privacy-and-access}
 
-### Holder control {#holder-control}
-
-Can the person or organization hold and present a credential independently? Can they choose what to disclose?
-
-### Revocation and updates {#revocation-and-updates}
-
-Credentials need a legible way to expire, be corrected, or be revoked without creating unnecessary tracking.
-
-### Privacy and accessibility {#privacy-and-accessibility}
-
-Use selective disclosure where possible. Do not assume that every holder has a smartphone, persistent internet connection, or the ability to manage keys.
+Credentials need a legible way to expire, be corrected, or be revoked without creating unnecessary tracking. Use selective disclosure where possible. Do not assume that every holder has a smartphone, persistent internet connection, or the ability to manage keys.
 
 ## What to weigh {#what-to-weigh}
 

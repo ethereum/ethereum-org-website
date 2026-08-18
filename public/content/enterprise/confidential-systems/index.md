@@ -18,16 +18,24 @@ Organizations need to protect commercial information, personal data, and sensiti
 
 Identify people affected, facts that must be proven, confidential information, who may request disclosure, consequences of provider failure, and a person’s ability to exit without publishing unnecessary data.
 
+<Grid>
+  <Card title="What must be proven?" description="Separate the fact a counterparty needs to verify from the data they do not need to receive." emoji="01" />
+  <Card title="Who controls disclosure?" description="Make the disclosure decision and the circumstances in which it can change explicit." emoji="02" />
+  <Card title="What survives failure?" description="Test whether people can recover records and exercise their rights without publishing unnecessary data." emoji="03" />
+</Grid>
+
 ## Privacy is not the opposite of accountability {#privacy-is-not-the-opposite-of-accountability}
 
 Selective disclosure can prove eligibility, authorization, or a policy check without exposing an entire identity, transaction history, or business relationship.
 
 ## Architectural approaches {#architectural-approaches}
 
-- **Offchain data and onchain proofs** can reduce public exposure but create data-availability, integrity, and operator-trust questions.
-- **Selective disclosure and zero-knowledge proofs** prove a condition without revealing data; issuers, revocation, and user experience still matter.
-- **Confidential execution or encrypted data** limit who reads information, but key management and recovery assumptions must be explicit.
-- **Privacy-preserving transactions** protect amounts, participants, or links; assess the detailed threat model, not only a label.
+<Grid>
+  <Card title="Offchain data + onchain proofs" description="Can reduce public exposure, while introducing data-availability, integrity, and operator-trust questions." emoji="A" />
+  <Card title="Selective disclosure + proofs" description="Can prove a condition without revealing data; issuers, revocation, and user experience still matter." emoji="B" />
+  <Card title="Confidential execution" description="Can limit who reads information, while making key management and recovery assumptions critical." emoji="C" />
+  <Card title="Privacy-preserving transactions" description="Can protect amounts, participants, or links; assess a detailed threat model, not a label." emoji="D" />
+</Grid>
 
 ## What to weigh {#what-to-weigh}
 

@@ -16,21 +16,12 @@ alt: Ethereum logo
 
 ## The options {#the-options}
 
-### Ethereum Mainnet {#ethereum-mainnet}
-
-Use the shared base layer directly when neutral settlement, durable ownership, and broad interoperability matter most. Plan for public data and variable fees.
-
-### An existing L2 {#an-existing-l2}
-
-Use a live execution environment that settles to Ethereum. Review data availability, governance, sequencer, upgrade powers, and user exit paths.
-
-### A tailored environment {#a-tailored-environment}
-
-Customize execution, fees, identity, privacy, governance, or access only when a clear requirement cannot be met elsewhere. Document what users can verify, move, and recover.
-
-### A conventional system {#a-conventional-system}
-
-If one trusted operator controls the process and no independent party needs to verify state, a conventional database may be simpler, cheaper, and safer.
+| Starting condition | Architecture to evaluate | What to test |
+| --- | --- | --- |
+| Neutral settlement, durable ownership, broad interoperability | Ethereum Mainnet | Public data and variable fees. |
+| Lower-cost execution that settles to Ethereum | An existing L2 | Data availability, governance, sequencer, upgrade powers, and user exits. |
+| Requirement that cannot be met elsewhere | A tailored environment | What users can verify, move, and recover. |
+| One trusted operator and no need for independent verification | A conventional system | Whether a database is simpler, cheaper, and safer. |
 
 ## Access policy is not network trust {#access-policy-is-not-network-trust}
 
@@ -39,3 +30,5 @@ Distinguish application rules from network rules; execution from settlement; dat
 ## The escape-hatch question {#the-escape-hatch-question}
 
 If a provider or operator disappears or censors users, can people retrieve assets and verify the necessary state without that party’s cooperation? Test the answer before relying on it.
+
+<Callout title="Access policy is not network trust" description="Distinguish application rules from network rules; execution from settlement; data availability from confidentiality; and an operator’s promise from a user’s enforceable exit path." />
