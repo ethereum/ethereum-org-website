@@ -69,6 +69,13 @@ export const StaticLayout = ({
   const absoluteEditPath = getEditPath(slug)
 
   const isGuidesHub = slug === "/guides/" || slug === "guides"
+  const heroImg = frontmatter.heroImage
+    ? {
+        src: frontmatter.heroImage,
+        width: frontmatter.heroImageWidth ?? 760,
+        height: frontmatter.heroImageHeight ?? 450,
+      }
+    : undefined
 
   return (
     <div dir={contentNotTranslated ? "ltr" : "unset"}>
@@ -81,6 +88,8 @@ export const StaticLayout = ({
       ) : (
         <PageHero
           breadcrumbs={{ slug }}
+          heroImg={heroImg}
+          blurDataURL={frontmatter.heroBlurDataURL}
           title={frontmatter.title}
           variant="no-divider"
         />

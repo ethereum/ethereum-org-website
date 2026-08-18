@@ -32,6 +32,10 @@ export interface SharedFrontmatter {
 }
 
 export interface StaticFrontmatter extends SharedFrontmatter {
+  heroImage?: string
+  heroImageWidth?: number
+  heroImageHeight?: number
+  heroBlurDataURL?: string
   hideEditButton?: boolean
 }
 

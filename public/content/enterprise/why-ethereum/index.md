@@ -6,6 +6,9 @@ lang: en
 template: static
 sidebarDepth: 2
 image: /images/eth.png
+heroImage: /images/infrastructure_transparent.png
+heroImageWidth: 1687
+heroImageHeight: 1365
 alt: Ethereum logo
 ---
 
