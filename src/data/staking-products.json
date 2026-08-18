@@ -1344,7 +1344,7 @@
           "url": "https://github.com/etherfi-protocol/smart-contracts/blob/master/audits/2026.06.28%20-%20Certora%20-%2026Q2%20Security%20Upgrade.pdf"
         }
       ],
-      "minEth": 0.01,
+      "minEth": 0.001,
       "feePercentage": 3,
       "tokens": [
         {
