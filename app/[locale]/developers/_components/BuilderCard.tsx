@@ -20,6 +20,8 @@ type BuildCardProps = {
 const BuilderCard = ({ path }: BuildCardProps) => (
   <Card
     href={path.href}
+    // Preserve referrer for partner attribution (#19101)
+    rel="noopener"
     variant="ghost"
     className="border"
     customEventOptions={{

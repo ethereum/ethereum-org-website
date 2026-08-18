@@ -76,7 +76,7 @@ const cardVariants = cva(
 )
 
 export type CardProps = React.HTMLAttributes<HTMLElement> &
-  Pick<LinkProps, "href" | "customEventOptions"> &
+  Pick<LinkProps, "href" | "customEventOptions" | "rel"> &
   Omit<VariantProps<typeof cardVariants>, "interactive">
 
 const Card = React.forwardRef<HTMLDivElement | HTMLAnchorElement, CardProps>(
