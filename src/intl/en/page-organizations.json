@@ -1,0 +1,23 @@
+{
+  "metadata-title": "Ethereum for organizations | ethereum.org",
+  "metadata-description": "Learn how Ethereum can support organizations that need open, verifiable ways to coordinate, while understanding the trade-offs.",
+  "hero-title": "Ethereum for organizations",
+  "hero-description": "Ethereum is open infrastructure for people and organizations that need to coordinate without giving one operator permanent control over the system.",
+  "paths-title": "Choose your path",
+  "paths-description": "Whether you are evaluating a product, a public service, or a new venture, start with the problem, understand the trade-offs, and choose the path that fits.",
+  "enterprise-title": "Enterprise",
+  "enterprise-description": "For companies evaluating Ethereum for products, operations, digital assets, or shared infrastructure.",
+  "enterprise-cta": "Explore Enterprise",
+  "institutions-title": "Institutions",
+  "institutions-description": "For public agencies, public-interest organizations, and civil society exploring durable digital infrastructure.",
+  "institutions-cta": "Explore Institutions",
+  "founders-title": "Founders",
+  "founders-description": "For teams building new Ethereum products and looking for programs, funding, and community support.",
+  "founders-cta": "Explore founder support",
+  "question-title": "Start with a real question",
+  "question-description": "Ethereum can be useful when several parties need to share a record, settle value, verify a claim, or coordinate without agreeing on one party to own the infrastructure.",
+  "question-card-title": "When a conventional system may be simpler",
+  "question-card-description": "If one trusted organization can run the process alone, a conventional system may be the better fit. The right starting point is the coordination problem—not the technology.",
+  "purpose-title": "What this hub is for",
+  "purpose-description": "These paths are educational starting points, not a vendor directory or an endorsement of a particular product, provider, or deployment. They explain the choices that determine whether a system remains open, secure, private, and workable for the people who rely on it."
+}
