@@ -1,7 +1,5 @@
 import type { NavSections } from "@/components/Nav/types"
 
-import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
-
 type TranslateFn = (key: string) => string
 
 export const buildNavigation = (t: TranslateFn): NavSections => {
@@ -294,33 +292,6 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
             },
           ],
         },
-        {
-          id: "build/business",
-          label: t("business"),
-          description: t("nav-business-description"),
-          items: [
-            {
-              label: t("nav-overview-label"),
-              description: t("nav-business-description"),
-              href: "/organizations/",
-            },
-            {
-              label: t("founders"),
-              description: t("nav-founders-description"),
-              href: "/founders/",
-            },
-            {
-              label: t("nav-institution-enterprise-label"),
-              description: t("nav-institution-enterprise-description"),
-              href: ENTERPRISE_ETHEREUM_URL,
-            },
-            {
-              label: t("nav-iptf-label"),
-              description: t("nav-iptf-description"),
-              href: "/enterprise/confidential-systems/",
-            },
-          ],
-        },
       ],
     },
     participate: {
@@ -523,6 +494,36 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/foundation/",
             },
           ],
+        },
+      ],
+    },
+    organizations: {
+      label: t("organizations"),
+      ariaLabel: t("organizations-menu"),
+      items: [
+        {
+          id: "organizations/overview",
+          label: t("nav-overview-label"),
+          description: t("nav-organizations-overview-description"),
+          href: "/organizations/",
+        },
+        {
+          id: "organizations/enterprise",
+          label: t("enterprise"),
+          description: t("nav-organizations-enterprise-description"),
+          href: "/enterprise/",
+        },
+        {
+          id: "organizations/institutions",
+          label: t("institutions"),
+          description: t("nav-organizations-institutions-description"),
+          href: "/institutions/",
+        },
+        {
+          id: "organizations/founders",
+          label: t("founders"),
+          description: t("nav-organizations-founders-description"),
+          href: "/founders/",
         },
       ],
     },
