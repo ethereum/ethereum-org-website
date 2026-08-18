@@ -35,3 +35,21 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
 - Lowest score of the fleet. **`client` (software) rendered `mteja` (customer) in 31 sites across 8 files**, where ETHGlossary mandates `kiteja`/`viteja`; two files got it right in one line and wrong in the next. All fixed with noun-class concord. Four dropped fork links (Berlin/London/Dencun/Pectra) restored. Open: `trade-off` conflated with `swap` (`mabadilishano`) in 3 sites -- native call.
 - Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.4/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:** none -- no critical issues.
+
+**Open (native call needed):**
+
+- `meta-description-fallback` -> `Mkoba wa Ethereum ... **Inasaidia**`; `mkoba` is class 3 and takes `u-`, so `Unasaidia`. Same slip exists in pre-existing `methodology-criterion-*` strings, so it is a locale habit -- but this key is new. Meta-description only, no on-page impact.
+- `fee-label-shield-unshield` -> `kukinga` is to ward off physically; this is the terminology-invention risk the KB predicts for sw. Recommend keeping `shield/unshield` as id did (#57).
+- `fee-free-tier-plans` -> `{value}/kwa mwezi` renders "$399.99/per month"; should be `{value}/mwezi` (the sibling `-per-card` already uses bare `{value}/kadi`).
+- `crops-private` -> `Ya faragha` is a headless genitive used as a row label; prefer the file's own noun `Faragha`. `Inayostahimili udhibiti` has the same shape but is the exact glossary form -- leave it.
+
+**Notes:**
+
+- Zero glossary deviations across all 14 terms, notable given sw's thin precedent. None of the `mteja`/`kiteja` errors from PR #19015 recur. The ICU plural class change (`mtandao`/`mitandao`) is handled correctly.
+- Latent #54 risk: `imewekwa`/`haijawekwa wazi`/`inabadilika` carry class-9 concord for `Ada`; a future `device` (class 7 `Kifaa`) + text value would need `hakijawekwa wazi`.

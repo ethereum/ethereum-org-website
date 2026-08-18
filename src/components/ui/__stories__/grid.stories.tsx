@@ -4,8 +4,9 @@ import { Meta, StoryObj } from "@storybook/nextjs"
 import { Grid } from "@/components/ui/grid"
 
 const meta = {
-  title: "UI / Primitives / Grid",
+  title: "UI / Layout / Grid",
   component: Grid,
+  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
     // Variant-axis reference stories; opt out of Chromatic by default.

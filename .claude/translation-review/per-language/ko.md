@@ -41,3 +41,19 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
 - `exposure` -> `노출` in `bridges/index.md` (was `투자`/invest, which the next sentence contradicts); ko `learn-quizzes.json` already used 노출 for the identical English. Open: L2/wallet brand names Latin-vs-Hangul split in `page-what-is-ethereum.json`.
 - Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.2/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:** none -- no critical issues.
+
+**Open (native call needed):**
+
+- `hardware-hero-description` -> `장기 투자` adds investment framing absent from "Holding for the long run?", and contradicts its own sibling `장기 보관`. See #58.
+- `finance-hero-title` -> `탈중앙화 금융(DeFi) 및 금융용 지갑` reads "decentralized finance (DeFi) and finance wallets"; glossary-legal but ja/zh/zh-tw keep the bare acronym in titles.
+- `crops-secure` -> `보안` is a noun and byte-identical to `page-find-wallet-security`, losing the EN Security/Secure split; `안전` carries the adjective sense.
+
+**Notes:**
+
+- Strongest `fee-row-label` in its bloc (`수수료 부과 항목`). `쉴드/언쉴드` correctly transliterates the privacy-pool term.

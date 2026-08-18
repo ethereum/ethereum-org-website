@@ -25,3 +25,19 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
 - `actor` -> `घटक` (was अभिनेते). **`miners` -> `खनिक`** (was `खनिज` = mineral, producing "minerals must use computing hardware"). `common.json`: zero-knowledge-proofs -> `शून्य-ज्ञान पुरावे` (matches the page title) and `enterprise-mainnet` -> `मेननेट`.
 - Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.4/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:** none -- no critical issues.
+
+**Open (native call needed):**
+
+- `developer-hero-description` -> `बिल्डिंग` reads as a physical edifice; prefer `निर्मितीसाठी`. Moderate confidence -- the file code-mixes heavily.
+- `fee-free-tier-plans` -> `{value}/महिना पासून` is a clumsy postposition after a slash-compound.
+
+**Notes:**
+
+- `fee-qualifier-stablecoins-lower-l2` carries Devanagari `स्तर २` while the SAME file's `page-find-wallet-layer-2` reads `स्तर 2`. ETHGlossary's mr entry is `स्तर २ (l2)`; locale is split 96/67. Follows the glossary, CONTRADICTS the house Western-numeral rule -- bn resolved the identical conflict the opposite way. See #53; needs a locale-wide sweep plus glossary normalization, NOT a one-string fix.
+- Glossary compliance exact including the two native-word mandates (swap = अदलाबदल, bridge = सेतू).
