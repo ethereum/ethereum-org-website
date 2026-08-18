@@ -804,14 +804,26 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
 
         <Section id={getIdFromHash(tocItems[6].url)}>
           <h2>{tocItems[6].title}</h2>
-          <p>{t("page-open-source-ethereum-description-1")}</p>
+          <p>
+            {t.rich("page-open-source-ethereum-description-1", {
+              strong: Strong,
+            })}
+          </p>
           <UnorderedList>
-            <ListItem>{t("page-open-source-ethereum-item-1")}</ListItem>
+            <ListItem>
+              {t.rich("page-open-source-ethereum-item-1", {
+                strong: Strong,
+              })}
+            </ListItem>
             <ListItem>{t("page-open-source-ethereum-item-2")}</ListItem>
             <ListItem>{t("page-open-source-ethereum-item-3")}</ListItem>
             <ListItem>{t("page-open-source-ethereum-item-4")}</ListItem>
           </UnorderedList>
-          <p>{t("page-open-source-ethereum-description-2")}</p>
+          <p>
+            {t.rich("page-open-source-ethereum-description-2", {
+              strong: Strong,
+            })}
+          </p>
           <p>{t("page-open-source-ethereum-description-3")}</p>
         </Section>
 
@@ -824,7 +836,20 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
 
         <Section id={getIdFromHash(tocItems[8].url)}>
           <h2>{tocItems[8].title}</h2>
-          <p>{t("page-open-source-contribute-description")}</p>
+          <p>
+            {t.rich("page-open-source-contribute-description", {
+              link1: (chunks) => (
+                <Link href="https://github.com/ethereum/ethereum-org-website/issues">
+                  {chunks}
+                </Link>
+              ),
+              link2: (chunks) => (
+                <Link href="https://github.com/ethereum/ethereum-org-website">
+                  {chunks}
+                </Link>
+              ),
+            })}
+          </p>
           <ButtonLink href={GITHUB_REPO_URL} data-flow="cta">
             {t("page-open-source-contribute-cta")}
           </ButtonLink>
