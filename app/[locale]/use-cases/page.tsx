@@ -25,6 +25,8 @@ import { Section } from "@/components/ui/section"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
+import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
+
 import UseCasesPageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
@@ -182,7 +184,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               ctaLabel={t("prediction-markets-cta")}
             />
             <UseCaseCard
-              href="https://institutions.ethereum.org/"
+              href={ENTERPRISE_ETHEREUM_URL}
               image={restaking}
               title={t("institutions-title")}
               description={t("institutions-description")}

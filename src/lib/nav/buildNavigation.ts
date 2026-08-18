@@ -300,6 +300,11 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
           description: t("nav-business-description"),
           items: [
             {
+              label: t("nav-overview-label"),
+              description: t("nav-business-description"),
+              href: "/organizations/",
+            },
+            {
               label: t("founders"),
               description: t("nav-founders-description"),
               href: "/founders/",
@@ -312,7 +317,7 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
             {
               label: t("nav-iptf-label"),
               description: t("nav-iptf-description"),
-              href: "https://iptf.ethereum.org/",
+              href: "/enterprise/confidential-systems/",
             },
           ],
         },
