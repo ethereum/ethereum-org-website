@@ -26,14 +26,11 @@ const appCardVariants = cva("group/appcard rounded-xl p-2 text-body", {
   },
 })
 
+// Horizontal is the base; `vertical` stacks the image above the content.
 const layoutVariants = cva("flex gap-3", {
   variants: {
     layout: {
-      horizontal: "",
       vertical: "flex-col",
-    },
-    defaultVariant: {
-      layout: "vertical",
     },
   },
 })
