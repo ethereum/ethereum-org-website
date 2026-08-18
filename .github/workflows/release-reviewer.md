@@ -22,6 +22,7 @@ network:
     - defaults
     - playwright
     - "*.netlify.app"
+    - "*.ethereum.it"
     - "ethereum.org"
     - "*.ethereum.org"
     - "s3-dcl1.ethquokkaops.io"
@@ -64,6 +65,20 @@ pre-agent-steps:
       preview=$(jq -r '[.statusCheckRollup[] | select(.context=="netlify/ethereumorg/deploy-preview") | .targetUrl] | first // empty' "$meta")
       components=$(jq -r '[.statusCheckRollup[] | select(.context=="UI Tests: ethereum-org-website") | .targetUrl] | first // empty' "$meta")
       pages=$(jq -r '[.statusCheckRollup[] | select(.context=="UI Tests: ethereum-org-website-pages") | .targetUrl] | first // empty' "$meta")
+
+      # targetUrl is free text set by whoever created the status check, not something
+      # this workflow controls — never hand an unrecognized host to the browsing agent.
+      # ethereumorg's Netlify site reports deploy previews under a custom short domain
+      # (ethereum.it) rather than the default *.netlify.app host; accept both.
+      if [[ -n "$preview" ]]; then
+        case "$preview" in
+          "https://deploy-preview-${PR_NUMBER}--ethereumorg.netlify.app"*|"https://deploy-preview-${PR_NUMBER}.ethereum.it"*) ;;
+          *)
+            echo "::error::deploy-preview targetUrl has an unexpected host, refusing to browse it: $preview"
+            exit 1
+            ;;
+        esac
+      fi
 
       # Informational only: staging.ethereum.org lags the PR by a full Netlify
       # branch-deploy build — never treat "not ready yet" as a release defect.
