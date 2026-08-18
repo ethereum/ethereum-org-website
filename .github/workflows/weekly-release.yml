@@ -217,10 +217,15 @@ jobs:
           node "$(npm root -g)/@playwright/cli/node_modules/playwright-core/cli.js" \
             install --with-deps chromium
 
+      # Sized off observed runtimes, not a guess: v11.19.1 finished in 11m52s,
+      # but v11.20.0 (find-wallet revamp + A/B infrastructure) blew past 20m and
+      # was killed mid-run, so no summary was ever posted. The review's cost
+      # scales with how much of the site the release touches, and a slow runner
+      # adds to it, so keep real headroom above the typical run.
       - name: Run /review-release
         if: steps.wait.outputs.outcome == 'success'
         uses: anthropics/claude-code-action@v1
-        timeout-minutes: 20
+        timeout-minutes: 35
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           claude_args: |
@@ -264,6 +269,30 @@ jobs:
             ${{ steps.links.outputs.components && format(':art: Chromatic (components): <{0}>', steps.links.outputs.components) || '' }}
             ${{ steps.links.outputs.pages && format(':framed_picture: Chromatic (pages): <{0}>', steps.links.outputs.pages) || '' }}
             Remaining manual steps: approve Chromatic, approve PR, merge.
+
+      # A killed review is otherwise invisible on the PR itself: the Discord
+      # notice below EDITS the existing release message, so the earlier
+      # "prepared" text is overwritten and easy to miss entirely.
+      - name: Note review gap on the PR
+        if: failure() && steps.wait.outputs.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ needs.prepare.outputs.pr_number }}
+          REPO: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          gh pr comment "$PR" --repo "$REPO" --body "$(cat <<EOF
+          ## Automated release review did not complete
+
+          The **wait_and_review** job failed before it could post a /review-release
+          summary — see the [run log]($RUN_URL).
+
+          This release has **not** been automatically reviewed. Re-run the failed
+          job, or run **/review-release $PR --post-comment** locally.
+
+          _Posted automatically so this gap is visible on the PR, not only in Discord._
+          EOF
+          )"
 
       - name: Announce wait-and-review failure
         if: failure()
