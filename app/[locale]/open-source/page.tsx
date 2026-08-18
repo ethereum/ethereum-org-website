@@ -7,6 +7,7 @@ import {
   SquarePen,
   SquarePlay,
 } from "lucide-react"
+import type { StaticImageData } from "next/image"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, ToCItem } from "@/lib/types"
@@ -37,6 +38,7 @@ import {
   TableRow,
 } from "@/components/ui/table"
 
+import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getIdFromHash } from "@/lib/utils/url"
@@ -48,6 +50,27 @@ import PageJsonLD from "./page-jsonld"
 import { ContentLayout } from "@/layouts/ContentLayout"
 import heroImg from "@/public/images/future_transparent.png"
 import alternativeToImg from "@/public/images/open-source/alternativeto-logo.png"
+import bitwardenImg from "@/public/images/open-source/bitwarden.png"
+import blenderImg from "@/public/images/open-source/blender.png"
+import braveImg from "@/public/images/open-source/brave.png"
+import cryptomatorImg from "@/public/images/open-source/cryptomator.png"
+import debianImg from "@/public/images/open-source/debian.png"
+import entePhotosImg from "@/public/images/open-source/ente-photos.png"
+import firefoxImg from "@/public/images/open-source/firefox.png"
+import gimpImg from "@/public/images/open-source/gimp.png"
+import grapheneosImg from "@/public/images/open-source/grapheneos.png"
+import homeAssistantImg from "@/public/images/open-source/home-assistant.png"
+import immichImg from "@/public/images/open-source/immich.png"
+import inkscapeImg from "@/public/images/open-source/inkscape.png"
+import libreOfficeImg from "@/public/images/open-source/libreoffice.png"
+import localSendImg from "@/public/images/open-source/localsend.png"
+import logseqImg from "@/public/images/open-source/logseq.png"
+import obsImg from "@/public/images/open-source/obs.png"
+import organicMapsImg from "@/public/images/open-source/organic-maps.png"
+import signalImg from "@/public/images/open-source/signal.png"
+import thunderbirdImg from "@/public/images/open-source/thunderbird.png"
+import ubuntuImg from "@/public/images/open-source/ubuntu.png"
+import vlcImg from "@/public/images/open-source/vlc.png"
 
 const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const params = await props.params
@@ -189,93 +212,227 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     },
   ]
 
-  // The nine apps shown in the design, rendered with `AppCard` -- the same
-  // component `CategoryAppsGrid` renders on /privacy/ethereum/, and the one the
-  // Figma cards were drawn from (64px logo + name + expandable description +
-  // tag). These are mainstream FLOSS tools rather than Ethereum apps, so they
-  // aren't in the apps dataset and the list is local; `AppCard` falls back to a
-  // placeholder glyph if a logo is missing.
-  //
-  // TODO: once the apps data layer carries these, this block and the `<Grid>`
-  // below collapse to `<CategoryAppsGrid category="open-source" hideFilter />`.
-  // That needs, in order:
-  //   1. an "Open source" tab in the apps sheet (GOOGLE_SHEET_ID_DAPPS), rows
-  //      with `ready=true` and `discover`/`highlight` false -- the Discover and
-  //      Highlighted rows on /apps/ flatten every data key (lib/utils/apps.ts);
-  //   2. `fetchApps.ts` to allow that tab through (it currently drops any sheet
-  //      whose name isn't an AppCategoryEnum value);
-  //   3. `translationRegistry.ts` to skip that key when building /apps/<slug>/
-  //      paths, or every entry gets an Ethereum-app detail page and a sitemap
-  //      entry.
-  // Deliberately NOT adding an AppCategoryEnum value: `AppCategories` is an
-  // exhaustive Record, so a new member forces an `appsCategories` entry, which
-  // publishes a catalog tile and an /apps/categories/<slug>/ page for a list
-  // that is meant to live only on this page.
-  const apps = [
+  // Shared across apps -- one string per category, not per app.
+  const categories = {
+    passwords: t("page-open-source-category-passwords"),
+    browser: t("page-open-source-category-browser"),
+    messaging: t("page-open-source-category-messaging"),
+    fileStorage: t("page-open-source-category-file-storage"),
+    email: t("page-open-source-category-email"),
+    photos: t("page-open-source-category-photos"),
+    maps: t("page-open-source-category-maps"),
+    media: t("page-open-source-category-media"),
+    mobileOs: t("page-open-source-category-mobile-os"),
+    desktopOs: t("page-open-source-category-desktop-os"),
+    home: t("page-open-source-category-home"),
+    productivity: t("page-open-source-category-productivity"),
+    fileSharing: t("page-open-source-category-file-sharing"),
+    streaming: t("page-open-source-category-streaming"),
+    creative: t("page-open-source-category-creative"),
+  }
+
+  // Hard-coded rather than read from the apps dataset: these are mainstream
+  // FLOSS consumer tools, not Ethereum apps, so they get no /apps/<slug> page.
+  // `CategoryAppsGrid` can't render them for the same reason -- it is keyed by
+  // `AppCategoryEnum` and links every card into /apps/.
+  const apps: {
+    id: string
+    href: string
+    logo: StaticImageData
+    name: string
+    description: string
+    category: string
+    /** Monochrome marks are drawn in black and disappear on the dark background. */
+    invertOnDark?: boolean
+  }[] = [
     {
       id: "bitwarden",
       href: "https://bitwarden.com",
+      logo: bitwardenImg,
       name: t("page-open-source-app-bitwarden-name"),
       description: t("page-open-source-app-bitwarden-description"),
-      category: t("page-open-source-app-bitwarden-category"),
+      category: categories.passwords,
     },
     {
       id: "brave",
       href: "https://brave.com",
+      logo: braveImg,
       name: t("page-open-source-app-brave-name"),
       description: t("page-open-source-app-brave-description"),
-      category: t("page-open-source-app-brave-category"),
+      category: categories.browser,
+    },
+    {
+      id: "firefox",
+      href: "https://www.mozilla.org/firefox",
+      logo: firefoxImg,
+      name: t("page-open-source-app-firefox-name"),
+      description: t("page-open-source-app-firefox-description"),
+      category: categories.browser,
     },
     {
       id: "signal",
       href: "https://signal.org",
+      logo: signalImg,
       name: t("page-open-source-app-signal-name"),
       description: t("page-open-source-app-signal-description"),
-      category: t("page-open-source-app-signal-category"),
-    },
-    {
-      id: "duckduckgo",
-      href: "https://duckduckgo.com",
-      name: t("page-open-source-app-duckduckgo-name"),
-      description: t("page-open-source-app-duckduckgo-description"),
-      category: t("page-open-source-app-duckduckgo-category"),
+      category: categories.messaging,
     },
     {
       id: "cryptomator",
       href: "https://cryptomator.org",
+      logo: cryptomatorImg,
       name: t("page-open-source-app-cryptomator-name"),
       description: t("page-open-source-app-cryptomator-description"),
-      category: t("page-open-source-app-cryptomator-category"),
+      category: categories.fileStorage,
     },
     {
       id: "thunderbird",
       href: "https://www.thunderbird.net",
+      logo: thunderbirdImg,
       name: t("page-open-source-app-thunderbird-name"),
       description: t("page-open-source-app-thunderbird-description"),
-      category: t("page-open-source-app-thunderbird-category"),
+      category: categories.email,
     },
     {
       id: "ente-photos",
-      href: "https://ente.io",
+      href: "https://ente.com/",
+      logo: entePhotosImg,
       name: t("page-open-source-app-ente-photos-name"),
       description: t("page-open-source-app-ente-photos-description"),
-      category: t("page-open-source-app-ente-photos-category"),
+      category: categories.photos,
     },
     {
       id: "organic-maps",
       href: "https://organicmaps.app",
+      logo: organicMapsImg,
       name: t("page-open-source-app-organic-maps-name"),
       description: t("page-open-source-app-organic-maps-description"),
-      category: t("page-open-source-app-organic-maps-category"),
+      category: categories.maps,
     },
     {
       id: "vlc",
-      href: "https://www.videolan.org/vlc/",
+      href: "https://www.videolan.org/vlc",
+      logo: vlcImg,
       name: t("page-open-source-app-vlc-name"),
       description: t("page-open-source-app-vlc-description"),
-      category: t("page-open-source-app-vlc-category"),
+      category: categories.media,
     },
-  ].map((app) => ({ ...app, logo: `/images/open-source/${app.id}.png` }))
+    {
+      id: "grapheneos",
+      href: "https://grapheneos.org",
+      logo: grapheneosImg,
+      invertOnDark: true,
+      name: t("page-open-source-app-grapheneos-name"),
+      description: t("page-open-source-app-grapheneos-description"),
+      category: categories.mobileOs,
+    },
+    {
+      id: "debian",
+      href: "https://www.debian.org",
+      logo: debianImg,
+      name: t("page-open-source-app-debian-name"),
+      description: t("page-open-source-app-debian-description"),
+      category: categories.desktopOs,
+    },
+    {
+      id: "ubuntu",
+      href: "https://ubuntu.com/download",
+      logo: ubuntuImg,
+      name: t("page-open-source-app-ubuntu-name"),
+      description: t("page-open-source-app-ubuntu-description"),
+      category: categories.desktopOs,
+    },
+    {
+      id: "home-assistant",
+      href: "https://www.home-assistant.io",
+      logo: homeAssistantImg,
+      name: t("page-open-source-app-home-assistant-name"),
+      description: t("page-open-source-app-home-assistant-description"),
+      category: categories.home,
+    },
+    {
+      id: "immich",
+      href: "https://immich.app",
+      logo: immichImg,
+      name: t("page-open-source-app-immich-name"),
+      description: t("page-open-source-app-immich-description"),
+      category: categories.photos,
+    },
+    {
+      id: "logseq",
+      href: "https://logseq.com",
+      logo: logseqImg,
+      name: t("page-open-source-app-logseq-name"),
+      description: t("page-open-source-app-logseq-description"),
+      category: categories.productivity,
+    },
+    {
+      id: "libreoffice",
+      href: "https://www.libreoffice.org",
+      logo: libreOfficeImg,
+      name: t("page-open-source-app-libreoffice-name"),
+      description: t("page-open-source-app-libreoffice-description"),
+      category: categories.productivity,
+    },
+    {
+      id: "localsend",
+      href: "https://localsend.org",
+      logo: localSendImg,
+      name: t("page-open-source-app-localsend-name"),
+      description: t("page-open-source-app-localsend-description"),
+      category: categories.fileSharing,
+    },
+    {
+      id: "obs",
+      href: "https://obsproject.com",
+      logo: obsImg,
+      name: t("page-open-source-app-obs-name"),
+      description: t("page-open-source-app-obs-description"),
+      category: categories.streaming,
+    },
+    {
+      id: "blender",
+      href: "https://www.blender.org",
+      logo: blenderImg,
+      name: t("page-open-source-app-blender-name"),
+      description: t("page-open-source-app-blender-description"),
+      category: categories.creative,
+    },
+    {
+      id: "inkscape",
+      href: "https://inkscape.org",
+      logo: inkscapeImg,
+      invertOnDark: true,
+      name: t("page-open-source-app-inkscape-name"),
+      description: t("page-open-source-app-inkscape-description"),
+      category: categories.creative,
+    },
+    {
+      id: "gimp",
+      href: "https://www.gimp.org",
+      logo: gimpImg,
+      name: t("page-open-source-app-gimp-name"),
+      description: t("page-open-source-app-gimp-description"),
+      category: categories.creative,
+    },
+  ]
+
+  // Only locales gnu.org publishes a translation for; the rest fall back to "en"
+  const gnuOrgLocaleMap: Partial<Record<Lang, string>> = {
+    en: "en",
+    de: "de",
+    ar: "fa",
+    fr: "fr",
+    it: "it",
+    ja: "ja",
+    ko: "ko",
+    "pt-br": "pt-br",
+    ru: "ru",
+    tr: "tr",
+    uk: "uk",
+    zh: "zh-cn",
+    "zh-tw": "zh-cn",
+  }
 
   return (
     <>
@@ -365,6 +522,13 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <p>
             {t.rich("page-open-source-definition-description-3", {
               strong: Strong,
+              a: (chunks) => (
+                <Link
+                  href={`https://www.gnu.org/philosophy/free-sw.html.${gnuOrgLocaleMap[locale] ?? "en"}`}
+                >
+                  {chunks}
+                </Link>
+              ),
             })}
           </p>
           <UnorderedList>
@@ -387,7 +551,16 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               })}
             </ListItem>
           </UnorderedList>
-
+          <p>
+            {t.rich("page-open-source-definition-description-4", {
+              strong: Strong,
+            })}
+          </p>
+          <p>
+            {t.rich("page-open-source-definition-description-5", {
+              strong: Strong,
+            })}
+          </p>
           <Grid balanced={2}>
             {freedoms.map(({ id, icon, title, description }) => (
               <Card key={id}>
@@ -485,16 +658,27 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
 
           <h3>{t("page-open-source-apps-title")}</h3>
           <Grid columns={3} size="narrow">
-            {apps.map(({ id, href, name, description, category, logo }) => (
-              <AppCard
-                key={id}
-                name={name}
-                description={description}
-                thumbnail={logo}
-                tags={[category]}
-                href={href}
-              />
-            ))}
+            {apps.map(
+              ({
+                id,
+                href,
+                name,
+                description,
+                category,
+                logo,
+                invertOnDark,
+              }) => (
+                <AppCard
+                  key={id}
+                  name={name}
+                  description={description}
+                  thumbnail={logo.src}
+                  tags={[category]}
+                  href={href}
+                  className={cn(invertOnDark && "dark:[&_img]:invert")}
+                />
+              )
+            )}
           </Grid>
 
           <Callout
@@ -518,13 +702,6 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <UnorderedList>
             <ListItem>
               {t.rich("page-open-source-local-ai-item-lm-studio", {
-                a: (chunks) => (
-                  <Link
-                    href={`https://www.gnu.org/philosophy/free-sw.html.${gnuOrgLocaleMap[locale] ?? "en"}`}
-                  >
-                    {chunks}
-                  </Link>
-                ),
                 strong: Strong,
               })}
             </ListItem>
@@ -552,16 +729,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <p>{t("page-open-source-ethereum-description-2")}</p>
           <p>{t("page-open-source-ethereum-description-3")}</p>
         </Section>
-        <p>
-          {t.rich("page-open-source-definition-description-4", {
-            strong: Strong,
-          })}
-        </p>
-        <p>
-          {t.rich("page-open-source-definition-description-5", {
-            strong: Strong,
-          })}
-        </p>
+
         <Section id={getIdFromHash(tocItems[7].url)}>
           <h2>{tocItems[7].title}</h2>
           <p>{t("page-open-source-copyleft-description-1")}</p>
