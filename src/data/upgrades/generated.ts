@@ -663,6 +663,15 @@ export const generated = {
           date: "2026-02-19",
         },
       },
+      {
+        id: 8141,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acde/233",
+          date: "2026-03-26",
+        },
+      },
     ],
     sourceUrl: "https://forkcast.org/upgrade/hegota",
   },

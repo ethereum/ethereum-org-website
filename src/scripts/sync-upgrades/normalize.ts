@@ -213,19 +213,26 @@ const normalizeTestnets = (
 }
 
 /**
- * Only EIPs expected to ship are stored. The rest of Forkcast's vocabulary is
- * still mapped below so an unknown value fails loudly, but proposed, considered,
- * declined, withdrawn and informational entries are dropped:
+ * EIPs an upgrade has formally weighed are stored; the rest of Forkcast's
+ * vocabulary is still mapped below so an unknown value fails loudly, but
+ * `proposed`, `declined`, `withdrawn` and `informational` entries are dropped.
  *
- * - nothing consumes them — a declined EIP should be removed from a page, not
- *   labelled, and listing proposals would make this an EIP directory
- * - they churn every ACD call during EIP selection (Hegotá alone has 55
- *   proposals), which would produce weekly diffs against data nobody reads
+ * `proposed` is the noisy bucket — Hegotá alone carries 64 proposals and they
+ * churn at every ACD call during EIP selection, which would mean weekly diffs
+ * against data no page reads. Listing them would also make this an EIP
+ * directory, which Forkcast already is.
  *
- * Descoping stays visible: a declined EIP leaves the store, and a deletion in
- * the diff reads more clearly than a status field flipping.
+ * `considered` is kept despite looking similar. It means ACD has formally
+ * considered the EIP, which is exactly the signal a planning-phase page wants
+ * before scope freezes, and it costs one row today. An earlier version excluded
+ * it on the grounds that nothing consumed it — circular, since the consumer
+ * (`EipTag`) was only dropped because the data lacked it.
+ *
+ * Descoping stays visible either way: a declined EIP leaves the store, and a
+ * deletion in the diff reads more clearly than a status field flipping.
  */
 const STORED_STATUSES: ReadonlySet<EipStatus> = new Set([
+  "considered",
   "scheduled",
   "included",
 ])

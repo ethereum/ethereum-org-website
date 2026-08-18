@@ -15,17 +15,20 @@ export type EipTagProps = {
  * How firm an EIP's inclusion is, in reader-facing wording rather than the All
  * Core Devs acronyms.
  *
- * Only the two statuses the data layer stores appear here. Everything else —
- * proposed, considered, declined, withdrawn — is filtered out upstream of us, so
- * an EIP that is not expected to ship has no entry at all rather than a chip
- * saying so. A missing entry renders nothing, which is also the right answer for
- * a descoped EIP: it should be removed from the page, not labelled.
+ * `considered` is the weaker claim and reads as neutral rather than a success:
+ * an upgrade whose scope has not frozen may still drop it. Only statuses the
+ * data layer stores appear here — proposed, declined and withdrawn entries are
+ * filtered out upstream, so an EIP that is not in the running has no entry at
+ * all rather than a chip saying so. A missing entry renders nothing, which is
+ * also the right answer for a descoped EIP: it should be removed from the page,
+ * not labelled.
  */
 const STATUS_LABELS: Partial<
   Record<EipStatus, { key: string; status: "success" | "normal" }>
 > = {
   scheduled: { key: "page-roadmap-eip-status-scheduled", status: "success" },
   included: { key: "page-roadmap-eip-status-included", status: "success" },
+  considered: { key: "page-roadmap-eip-status-considered", status: "normal" },
 }
 
 /**
