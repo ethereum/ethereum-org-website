@@ -2,6 +2,7 @@ import {
   BookOpenCheck,
   DoorOpen,
   HeartPulse,
+  Lightbulb,
   Recycle,
   Share,
   SquarePen,
@@ -9,13 +10,23 @@ import {
 } from "lucide-react"
 import type { StaticImageData } from "next/image"
 import { getTranslations, setRequestLocale } from "next-intl/server"
+import type { ReactNode } from "react"
 
-import type { Lang, ToCItem } from "@/lib/types"
+import type { Lang, MatomoEventOptions, ToCItem } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
+import ExpandableCard from "@/components/ExpandableCard"
 import PageHero from "@/components/Hero/PageHero"
 import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
+import { AccordionContainer } from "@/components/ui/accordion"
+import {
+  Alert,
+  AlertContent,
+  AlertDescription,
+  AlertIcon,
+  AlertTitle,
+} from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
 import {
@@ -29,24 +40,17 @@ import {
 } from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
 import Link from "@/components/ui/Link"
-import { ListItem, UnorderedList } from "@/components/ui/list"
+import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { getDayOfYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
-import { getIdFromHash } from "@/lib/utils/url"
+import { seededShuffle } from "@/lib/utils/random"
 
-import { GITHUB_REPO_URL } from "@/lib/constants"
-
+import AppsExpander from "./_components/AppsExpander"
+import PromptCard from "./_components/PromptCard"
 import PageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
@@ -70,15 +74,51 @@ import grapheneosImg from "@/public/images/open-source/grapheneos.png"
 import homeAssistantImg from "@/public/images/open-source/home-assistant.png"
 import immichImg from "@/public/images/open-source/immich.png"
 import inkscapeImg from "@/public/images/open-source/inkscape.png"
+import janImg from "@/public/images/open-source/jan.png"
 import libreOfficeImg from "@/public/images/open-source/libreoffice.png"
+import lmStudioImg from "@/public/images/open-source/lm-studio.png"
 import localSendImg from "@/public/images/open-source/localsend.png"
 import logseqImg from "@/public/images/open-source/logseq.png"
 import obsImg from "@/public/images/open-source/obs.png"
+import ollamaImg from "@/public/images/open-source/ollama.png"
 import organicMapsImg from "@/public/images/open-source/organic-maps.png"
 import signalImg from "@/public/images/open-source/signal.png"
 import thunderbirdImg from "@/public/images/open-source/thunderbird.png"
 import ubuntuImg from "@/public/images/open-source/ubuntu.png"
 import vlcImg from "@/public/images/open-source/vlc.png"
+
+// Initial run of app cards; the rest sit behind "show more".
+const VISIBLE_APP_COUNT = 12
+
+/**
+ * Order the app grid for a daily rotation. Whole category groups are shuffled so
+ * like apps stay adjacent, then the visible run is filled with complete groups,
+ * so a category is never split across the "show more" line. The seed is the
+ * date, so the order is identical for every visitor on a given day.
+ */
+const getDailyAppOrder = <T extends { category: string }>(apps: T[]) => {
+  const today = new Date()
+  const seed = today.getFullYear() * 1000 + getDayOfYear(today)
+
+  const byCategory = new Map<string, T[]>()
+  for (const app of apps) {
+    byCategory.set(app.category, [...(byCategory.get(app.category) ?? []), app])
+  }
+
+  const visible: T[] = []
+  const overflow: T[] = []
+  for (const group of seededShuffle([...byCategory.values()], seed)) {
+    // A group that would overrun the visible run goes over the line whole;
+    // smaller groups after it can still fill the remaining slots.
+    const target =
+      visible.length + group.length <= VISIBLE_APP_COUNT ? visible : overflow
+    target.push(...group)
+  }
+  return {
+    orderedApps: [...visible, ...overflow],
+    visibleCount: visible.length,
+  }
+}
 
 const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const params = await props.params
@@ -90,48 +130,82 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const { contributors, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("open-source", locale)
 
-  const tocItems: ToCItem[] = [
-    {
+  // Keyed rather than positional: sections get reordered, and an <h2> rendering
+  // under another section's anchor is invisible in review.
+  const sections = {
+    ownership: {
+      id: "when-the-things-you-buy-stop-being-yours",
       title: t("page-open-source-ownership-title"),
-      url: "#when-the-things-you-buy-stop-being-yours",
     },
-    {
+    definition: {
+      id: "what-does-free-and-open-source-mean",
       title: t("page-open-source-definition-title"),
-      url: "#what-does-free-and-open-source-mean",
     },
-    {
-      title: t("page-open-source-comparison-title"),
-      url: "#proprietary-open-source-and-free-software",
-    },
-    {
+    possible: {
+      id: "what-does-open-source-make-possible",
       title: t("page-open-source-possible-title"),
-      url: "#what-does-open-source-make-possible",
     },
-    {
+    switching: {
+      id: "how-to-switch-to-open-source-apps",
       title: t("page-open-source-switch-title"),
-      url: "#how-to-switch-to-open-source-apps",
     },
-    {
-      title: t("page-open-source-local-ai-title"),
-      url: "#running-ai-locally",
+    ai: {
+      id: "open-source-and-ai",
+      title: t("page-open-source-ai-title"),
     },
-    {
+    movement: {
+      id: "open-beyond-code",
+      title: t("page-open-source-movement-title"),
+    },
+    ethereum: {
+      id: "why-is-ethereum-open-source",
       title: t("page-open-source-ethereum-title"),
-      url: "#why-is-ethereum-open-source",
     },
-    {
-      title: t("page-open-source-copyleft-title"),
-      url: "#ethereum-runs-on-copyleft",
+    faq: {
+      id: "frequently-asked-questions",
+      title: t("page-open-source-faq-title"),
     },
-    {
-      title: t("page-open-source-contribute-title"),
-      url: "#help-improve-this-page",
+    resources: {
+      id: "further-reading",
+      title: t("page-open-source-resources-reading-title"),
     },
-    {
-      title: t("page-open-source-resources-title"),
-      url: "#resources",
-    },
-  ]
+  }
+
+  const tocItems: ToCItem[] = Object.values(sections).map(({ id, title }) => ({
+    title,
+    url: `#${id}`,
+  }))
+
+  // Matomo: one category for the page, the section id as the action, and a
+  // stable English name for the element. Section titles and most element titles
+  // are translated -- ids and slugs keep a locale from splitting its own row.
+  const track = (section: string, name: string): MatomoEventOptions => ({
+    eventCategory: "open-source",
+    eventAction: section,
+    eventName: name,
+  })
+
+  // Footnote marker for the numbered citations under Further reading. Rendered
+  // outside the strings so translators never carry the numbering.
+  const footnote = (n: number, section: string) => (
+    <sup>
+      <Link
+        href="#further-reading"
+        customEventOptions={track(section, `Footnote ${n}`)}
+      >{`[${n}]`}</Link>
+    </sup>
+  )
+
+  // `t.rich` link placeholder, pre-wired to Matomo.
+  const linkTo = (href: string, section: string, name: string) => {
+    const TrackedLink = (chunks: ReactNode) => (
+      <Link href={href} customEventOptions={track(section, name)}>
+        {chunks}
+      </Link>
+    )
+    TrackedLink.displayName = "TrackedLink"
+    return TrackedLink
+  }
 
   // The four freedoms, in the order the design lists them.
   const freedoms = [
@@ -197,7 +271,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       licenses: t.rich(
         "page-open-source-comparison-source-available-licenses",
         {
-          a: (chunks) => <Link href="https://opensource.org/">{chunks}</Link>,
+          a: linkTo("https://opensource.org/", sections.ethereum.id, "OSI"),
         }
       ),
       examples: t("page-open-source-comparison-source-available-examples"),
@@ -217,6 +291,51 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       examples: t.rich("page-open-source-comparison-copyleft-examples", {
         strong: Strong,
       }),
+    },
+  ]
+
+  // Prompt text is copied to the clipboard verbatim -- no markup in these.
+  // Pragmatic first (find it, install it, unstick it), scrutiny last.
+  const prompts = [
+    "alternatives",
+    "install",
+    "error",
+    "reputation",
+    "policy",
+    "permissions",
+  ].map((id) => ({
+    id,
+    prompt: t(`page-open-source-ai-prompt-${id}-text`),
+    tag: t(`page-open-source-ai-prompt-${id}-tag`),
+  }))
+
+  // Runners for local models. Tagged by license status rather than category:
+  // on this page that is the distinction worth surfacing.
+  const localAiApps = [
+    {
+      id: "jan",
+      href: "https://jan.ai",
+      logo: janImg,
+      name: t("page-open-source-local-ai-app-jan-name"),
+      description: t("page-open-source-local-ai-app-jan-description"),
+      tag: t("page-open-source-local-ai-tag-open-source"),
+    },
+    {
+      id: "ollama",
+      href: "https://ollama.com",
+      logo: ollamaImg,
+      invertOnDark: true,
+      name: t("page-open-source-local-ai-app-ollama-name"),
+      description: t("page-open-source-local-ai-app-ollama-description"),
+      tag: t("page-open-source-local-ai-tag-open-source"),
+    },
+    {
+      id: "lm-studio",
+      href: "https://lmstudio.ai",
+      logo: lmStudioImg,
+      name: t("page-open-source-local-ai-app-lm-studio-name"),
+      description: t("page-open-source-local-ai-app-lm-studio-description"),
+      tag: t("page-open-source-local-ai-tag-closed-source"),
     },
   ]
 
@@ -500,6 +619,8 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     },
   ]
 
+  const { orderedApps, visibleCount } = getDailyAppOrder(apps)
+
   // Only locales gnu.org publishes a translation for; the rest fall back to "en"
   const gnuOrgLocaleMap: Partial<Record<Lang, string>> = {
     en: "en",
@@ -565,18 +686,25 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </CardContent>
         </Card>
 
-        <Section id={getIdFromHash(tocItems[0].url)}>
-          <h2>{tocItems[0].title}</h2>
+        <Section id={sections.ownership.id}>
+          <h2>{sections.ownership.title}</h2>
           <p>
             {t.rich("page-open-source-ownership-description-1", {
               strong: Strong,
             })}
           </p>
           <p>{t("page-open-source-ownership-description-2")}</p>
+          {/* Markers sit outside the strings so translators never carry the
+              numbering; both sources are cited under Further reading. */}
           <p>
-            {t.rich("page-open-source-ownership-description-3", {
+            {t.rich("page-open-source-ownership-description-3a", {
               strong: Strong,
             })}
+            {footnote(1, sections.ownership.id)}{" "}
+            {t.rich("page-open-source-ownership-description-3b", {
+              strong: Strong,
+            })}
+            {footnote(2, sections.ownership.id)}
           </p>
           <p>
             {t.rich("page-open-source-ownership-description-4", {
@@ -590,13 +718,45 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </p>
         </Section>
 
-        <Section id={getIdFromHash(tocItems[1].url)}>
-          <h2>{tocItems[1].title}</h2>
+        <Section id={sections.definition.id}>
+          <h2>{sections.definition.title}</h2>
           <p>
             {t.rich("page-open-source-definition-description-1", {
               strong: Strong,
             })}
           </p>
+
+          {/* Recognizable examples land second, as a list: the opening of this
+              section is where a newcomer is most likely to bounce off prose. */}
+          <p>{t("page-open-source-definition-examples-lead")}</p>
+          <UnorderedList>
+            <ListItem>
+              {t.rich("page-open-source-definition-example-linux", {
+                strong: Strong,
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-open-source-definition-example-firefox", {
+                strong: Strong,
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-open-source-definition-example-signal", {
+                strong: Strong,
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-open-source-definition-example-vlc", {
+                strong: Strong,
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-open-source-definition-example-libreoffice", {
+                strong: Strong,
+              })}
+            </ListItem>
+          </UnorderedList>
+
           <p>
             {t.rich("page-open-source-definition-description-2", {
               strong: Strong,
@@ -605,46 +765,10 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <p>
             {t.rich("page-open-source-definition-description-3", {
               strong: Strong,
-              a: (chunks) => (
-                <Link
-                  href={`https://www.gnu.org/philosophy/free-sw.html.${gnuOrgLocaleMap[locale] ?? "en"}`}
-                >
-                  {chunks}
-                </Link>
-              ),
             })}
+            {footnote(3, sections.definition.id)}
           </p>
-          <UnorderedList>
-            <ListItem>
-              {t.rich("page-open-source-freedom-item-run", { strong: Strong })}
-            </ListItem>
-            <ListItem>
-              {t.rich("page-open-source-freedom-item-study", {
-                strong: Strong,
-              })}
-            </ListItem>
-            <ListItem>
-              {t.rich("page-open-source-freedom-item-share", {
-                strong: Strong,
-              })}
-            </ListItem>
-            <ListItem>
-              {t.rich("page-open-source-freedom-item-improvements", {
-                strong: Strong,
-              })}
-            </ListItem>
-          </UnorderedList>
-          <p>
-            {t.rich("page-open-source-definition-description-4", {
-              strong: Strong,
-            })}
-          </p>
-          <p>
-            {t.rich("page-open-source-definition-description-5", {
-              strong: Strong,
-            })}
-          </p>
-          <Grid balanced={2}>
+          <Grid balanced={2} className="my-space-2x">
             {freedoms.map(({ id, icon, title, description }) => (
               <Card key={id}>
                 <CardHeader>
@@ -661,52 +785,15 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </Grid>
         </Section>
 
-        <Section id={getIdFromHash(tocItems[2].url)}>
-          <h2>{tocItems[2].title}</h2>
-          <p>{t("page-open-source-comparison-description")}</p>
-          <Table variant="minimal">
-            <TableHeader>
-              <TableRow>
-                <TableHead scope="col">
-                  {t("page-open-source-comparison-header-approach")}
-                </TableHead>
-                <TableHead scope="col">
-                  {t("page-open-source-comparison-header-rights")}
-                </TableHead>
-                <TableHead scope="col">
-                  {t("page-open-source-comparison-header-licenses")}
-                </TableHead>
-                <TableHead scope="col">
-                  {t("page-open-source-comparison-header-examples")}
-                </TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {comparisonRows.map(
-                ({ id, approach, rights, licenses, examples }) => (
-                  <TableRow key={id}>
-                    <TableCell>
-                      <strong>{approach}</strong>
-                    </TableCell>
-                    <TableCell>{rights}</TableCell>
-                    <TableCell>{licenses}</TableCell>
-                    <TableCell>{examples}</TableCell>
-                  </TableRow>
-                )
-              )}
-            </TableBody>
-          </Table>
-        </Section>
-
-        <Section id={getIdFromHash(tocItems[3].url)}>
-          <h2>{tocItems[3].title}</h2>
+        <Section id={sections.possible.id}>
+          <h2>{sections.possible.title}</h2>
           <p>
             {t.rich("page-open-source-possible-description", {
               strong: Strong,
             })}
           </p>
 
-          <Grid columns={3} size="narrow">
+          <Grid columns={3} className="my-space-2x">
             {benefits.map(({ id, icon, title, description }) => (
               <Card key={id}>
                 <CardHeader>
@@ -725,8 +812,15 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <h3>{t("page-open-source-collaboration-title")}</h3>
           <p>{t("page-open-source-collaboration-description")}</p>
 
-          <h3>{t("page-open-source-repairable-title")}</h3>
-          <p>{t("page-open-source-repairable-description")}</p>
+          <h3>{t("page-open-source-repair-title")}</h3>
+          <p>
+            {t.rich("page-open-source-repair-description", { strong: Strong })}
+          </p>
+
+          <h3>{t("page-open-source-speech-title")}</h3>
+          <p>
+            {t.rich("page-open-source-speech-description", { strong: Strong })}
+          </p>
 
           <h3>{t("page-open-source-fork-title")}</h3>
           <p>
@@ -734,37 +828,42 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </p>
         </Section>
 
-        <Section id={getIdFromHash(tocItems[4].url)}>
-          <h2>{tocItems[4].title}</h2>
+        <Section id={sections.switching.id}>
+          <h2>{sections.switching.title}</h2>
           <p>{t("page-open-source-switch-description-1")}</p>
           <p>{t("page-open-source-switch-description-2")}</p>
 
           <h3>{t("page-open-source-apps-title")}</h3>
-          <Grid columns={3} size="narrow">
-            {apps.map(
-              ({
-                id,
-                href,
-                name,
-                description,
-                category,
-                logo,
-                invertOnDark,
-              }) => (
-                <AppCard
-                  key={id}
-                  name={name}
-                  description={description}
-                  // 21 cards is ~8 phone screens with descriptions shown
-                  descriptionClassName="hidden md:block"
-                  thumbnail={logo.src}
-                  tags={[category]}
-                  href={href}
-                  className={cn(invertOnDark && "dark:[&_img]:invert")}
-                />
-              )
-            )}
-          </Grid>
+          <AppsExpander
+            matomoEvent={track(sections.switching.id, "Show more apps")}
+          >
+            <Grid columns={3} size="narrow" className="my-space-2x">
+              {orderedApps.map(
+                (
+                  { id, href, name, description, category, logo, invertOnDark },
+                  index
+                ) => (
+                  <AppCard
+                    key={id}
+                    name={name}
+                    description={description}
+                    // 21 cards is ~8 phone screens with descriptions shown
+                    descriptionClassName="hidden md:block"
+                    nameClassName="line-clamp-2 text-base leading-tight sm:text-lg"
+                    thumbnail={logo.src}
+                    tags={[category]}
+                    href={href}
+                    customEventOptions={track(sections.switching.id, id)}
+                    className={cn(
+                      invertOnDark && "dark:[&_img]:invert",
+                      index >= visibleCount &&
+                        "group-data-[expanded=false]/apps:hidden"
+                    )}
+                  />
+                )
+              )}
+            </Grid>
+          </AppsExpander>
 
           <Callout
             id="alternativeto"
@@ -774,94 +873,106 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             variant="sm"
             as="h3"
           >
-            <ButtonLink href="https://alternativeto.net">
+            <ButtonLink
+              href="https://alternativeto.net"
+              customEventOptions={track(sections.switching.id, "AlternativeTo")}
+            >
               {t("page-open-source-alternativeto-cta")}
             </ButtonLink>
           </Callout>
         </Section>
 
-        <Section id={getIdFromHash(tocItems[5].url)}>
-          <h2>{tocItems[5].title}</h2>
+        <Section id={sections.ai.id}>
+          <h2>{sections.ai.title}</h2>
+          <p>{t("page-open-source-ai-intro")}</p>
+
+          <h3>{t("page-open-source-ai-assist-title")}</h3>
+          <p>
+            {t.rich("page-open-source-ai-assist-description-1", {
+              strong: Strong,
+            })}
+          </p>
+
+          <p>{t("page-open-source-ai-prompts-lead")}</p>
+          {/* The whole card copies -- a card-sized target beats an icon-sized
+              one, and the icon alone reads as the only thing that is clickable. */}
+          <Grid columns={2} size="narrow" className="my-space-2x">
+            {prompts.map(({ id, prompt, tag }) => (
+              <PromptCard
+                key={id}
+                prompt={prompt}
+                tag={tag}
+                copyLabel={t("page-open-source-ai-copy-prompt")}
+                matomoEvent={track(sections.ai.id, id)}
+              />
+            ))}
+          </Grid>
+
+          <Alert variant="warning">
+            <AlertIcon className="[&>svg]:size-10 [&>svg]:text-body!">
+              <Lightbulb />
+            </AlertIcon>
+            <AlertContent>
+              <AlertTitle size="lg">
+                {t("page-open-source-ai-tip-title")}
+              </AlertTitle>
+              <AlertDescription>
+                <p>
+                  {t.rich("page-open-source-ai-tip-description", {
+                    strong: Strong,
+                  })}
+                </p>
+              </AlertDescription>
+            </AlertContent>
+          </Alert>
+
+          <h3>{t("page-open-source-local-ai-title")}</h3>
           <p>{t("page-open-source-local-ai-description-1")}</p>
-          <p>{t("page-open-source-local-ai-description-2")}</p>
-          <UnorderedList>
-            <ListItem>
-              {t.rich("page-open-source-local-ai-item-lm-studio", {
-                strong: Strong,
-              })}
-            </ListItem>
-            <ListItem>
-              {t.rich("page-open-source-local-ai-item-ollama", {
-                strong: Strong,
-              })}
-            </ListItem>
-            <ListItem>
-              {t.rich("page-open-source-local-ai-item-jan", { strong: Strong })}
-            </ListItem>
-          </UnorderedList>
+          <p>
+            {t.rich("page-open-source-local-ai-description-2", {
+              strong: Strong,
+            })}
+          </p>
           <p>{t("page-open-source-local-ai-description-3")}</p>
+          <Grid columns={3} className="my-space-2x">
+            {localAiApps.map(
+              ({ id, href, name, description, tag, logo, invertOnDark }) => (
+                <AppCard
+                  key={id}
+                  name={name}
+                  description={description}
+                  nameClassName="line-clamp-2 text-base leading-tight sm:text-lg"
+                  thumbnail={logo.src}
+                  tags={[tag]}
+                  href={href}
+                  customEventOptions={track(sections.ai.id, id)}
+                  className={cn(invertOnDark && "dark:[&_img]:invert")}
+                />
+              )
+            )}
+          </Grid>
         </Section>
 
-        <Section id={getIdFromHash(tocItems[6].url)}>
-          <h2>{tocItems[6].title}</h2>
+        {/* Sits immediately before the Ethereum section so the widening lens
+            reads as the movement Ethereum joins, not a closing reading list. */}
+        <Section id={sections.movement.id}>
+          <h2>{sections.movement.title}</h2>
           <p>
-            {t.rich("page-open-source-ethereum-description-1", {
+            {t.rich("page-open-source-movement-description", {
               strong: Strong,
             })}
           </p>
-          <UnorderedList>
-            <ListItem>
-              {t.rich("page-open-source-ethereum-item-1", {
-                strong: Strong,
-              })}
-            </ListItem>
-            <ListItem>{t("page-open-source-ethereum-item-2")}</ListItem>
-            <ListItem>{t("page-open-source-ethereum-item-3")}</ListItem>
-            <ListItem>{t("page-open-source-ethereum-item-4")}</ListItem>
-          </UnorderedList>
-          <p>
-            {t.rich("page-open-source-ethereum-description-2", {
-              strong: Strong,
-            })}
-          </p>
-          <p>{t("page-open-source-ethereum-description-3")}</p>
-        </Section>
-
-        <Section id={getIdFromHash(tocItems[7].url)}>
-          <h2>{tocItems[7].title}</h2>
-          <p>{t("page-open-source-copyleft-description-1")}</p>
-          <p>{t("page-open-source-copyleft-description-2")}</p>
-          <p>{t("page-open-source-copyleft-description-3")}</p>
-        </Section>
-
-        <Section id={getIdFromHash(tocItems[8].url)}>
-          <h2>{tocItems[8].title}</h2>
-          <p>
-            {t.rich("page-open-source-contribute-description", {
-              link1: (chunks) => (
-                <Link href="https://github.com/ethereum/ethereum-org-website/issues">
-                  {chunks}
-                </Link>
-              ),
-              link2: (chunks) => (
-                <Link href="https://github.com/ethereum/ethereum-org-website">
-                  {chunks}
-                </Link>
-              ),
-            })}
-          </p>
-          <ButtonLink href={GITHUB_REPO_URL} data-flow="cta">
-            {t("page-open-source-contribute-cta")}
-          </ButtonLink>
-        </Section>
-
-        <Section id={getIdFromHash(tocItems[9].url)}>
-          <h2>{tocItems[9].title}</h2>
 
           <h3>{t("page-open-source-resources-defending-title")}</h3>
-          <Grid columns={3} size="narrow">
+          <Grid columns={3} size="narrow" className="my-space-2x">
             {organizations.map(({ id, href, name, description, banner }) => (
-              <Card key={id} href={href} variant="ghost" size="sm">
+              <Card
+                key={id}
+                href={href}
+                variant="ghost"
+                size="sm"
+                customEventOptions={track(sections.movement.id, id)}
+              >
                 <CardHeader>
                   <CardBanner size="sm">
                     <Image
@@ -884,112 +995,337 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <UnorderedList>
             {moreOrganizations.map(({ id, href, name }) => (
               <ListItem key={id}>
-                <Link href={href}>{name}</Link>
+                <Link
+                  href={href}
+                  customEventOptions={track(sections.movement.id, id)}
+                >
+                  {name}
+                </Link>
               </ListItem>
             ))}
+          </UnorderedList>
+
+          <h3>{t("page-open-source-resources-wider-title")}</h3>
+          <p>
+            {t.rich("page-open-source-movement-wider-description", {
+              strong: Strong,
+            })}
+          </p>
+          <UnorderedList>
+            <ListItem>
+              {t.rich("page-open-source-resources-education", {
+                openstax: linkTo(
+                  "https://openstax.org",
+                  sections.movement.id,
+                  "OpenStax"
+                ),
+                mit: linkTo(
+                  "https://ocw.mit.edu",
+                  sections.movement.id,
+                  "MIT OpenCourseWare"
+                ),
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-open-source-resources-data", {
+                doaj: linkTo("https://doaj.org", sections.movement.id, "DOAJ"),
+                arxiv: linkTo(
+                  "https://arxiv.org",
+                  sections.movement.id,
+                  "arXiv"
+                ),
+                zenodo: linkTo(
+                  "https://zenodo.org",
+                  sections.movement.id,
+                  "Zenodo"
+                ),
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-open-source-resources-commons", {
+                p2p: linkTo(
+                  "https://p2pfoundation.net",
+                  sections.movement.id,
+                  "P2P Foundation"
+                ),
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-open-source-resources-culture", {
+                cc: linkTo(
+                  "https://creativecommons.org",
+                  sections.movement.id,
+                  "Creative Commons"
+                ),
+                wikipedia: linkTo(
+                  "https://www.wikipedia.org",
+                  sections.movement.id,
+                  "Wikipedia"
+                ),
+                osm: linkTo(
+                  "https://www.openstreetmap.org",
+                  sections.movement.id,
+                  "OpenStreetMap"
+                ),
+              })}
+            </ListItem>
+          </UnorderedList>
+        </Section>
+
+        <Section id={sections.ethereum.id}>
+          <h2>{sections.ethereum.title}</h2>
+          <p>
+            {t.rich("page-open-source-ethereum-description-1", {
+              strong: Strong,
+            })}
+          </p>
+          <UnorderedList>
+            <ListItem>
+              {t.rich("page-open-source-ethereum-item-1", {
+                strong: Strong,
+              })}
+            </ListItem>
+            <ListItem>{t("page-open-source-ethereum-item-2")}</ListItem>
+            <ListItem>{t("page-open-source-ethereum-item-3")}</ListItem>
+            <ListItem>{t("page-open-source-ethereum-item-4")}</ListItem>
+          </UnorderedList>
+          <p>
+            {t.rich("page-open-source-ethereum-description-2", {
+              strong: Strong,
+            })}
+          </p>
+          <p>{t("page-open-source-ethereum-description-3")}</p>
+
+          {/* The license taxonomy lands here rather than a third of the way up
+              the page: it is the decoder for the client licenses listed below. */}
+          <h3>{t("page-open-source-comparison-title")}</h3>
+          <p>{t("page-open-source-comparison-description")}</p>
+          <AccordionContainer>
+            {comparisonRows.map(
+              ({ id, approach, rights, licenses, examples }) => (
+                <ExpandableCard
+                  key={id}
+                  title={approach}
+                  contentPreview={rights}
+                  matomoEvent={track(sections.ethereum.id, id)}
+                >
+                  <p>
+                    <strong>
+                      {t("page-open-source-comparison-label-licenses")}
+                    </strong>{" "}
+                    {licenses}
+                  </p>
+                  <p>
+                    <strong>
+                      {t("page-open-source-comparison-label-examples")}
+                    </strong>{" "}
+                    {examples}
+                  </p>
+                </ExpandableCard>
+              )
+            )}
+          </AccordionContainer>
+
+          <h3>{t("page-open-source-copyleft-title")}</h3>
+          <p>{t("page-open-source-copyleft-description-1")}</p>
+          <p>{t("page-open-source-copyleft-description-2")}</p>
+          <p>
+            {t.rich("page-open-source-copyleft-contribute", {
+              source: linkTo(
+                "https://github.com/ethereum/ethereum-org-website/",
+                sections.ethereum.id,
+                "Source code"
+              ),
+              issues: linkTo(
+                "https://github.com/ethereum/ethereum-org-website/issues",
+                sections.ethereum.id,
+                "Suggest changes"
+              ),
+            })}
+          </p>
+          <p>{t("page-open-source-copyleft-description-3")}</p>
+        </Section>
+
+        <Section id={sections.faq.id}>
+          <h2>{sections.faq.title}</h2>
+          <AccordionContainer>
+            <ExpandableCard
+              title={t("page-open-source-traditions-question")}
+              matomoEvent={track(
+                sections.faq.id,
+                "free-software-vs-open-source"
+              )}
+            >
+              <p>
+                {t.rich("page-open-source-traditions-answer-1", {
+                  strong: Strong,
+                })}
+              </p>
+              <p>{t("page-open-source-traditions-answer-2")}</p>
+            </ExpandableCard>
+            <ExpandableCard
+              title={t("page-open-source-security-question")}
+              matomoEvent={track(sections.faq.id, "open-source-security")}
+            >
+              <p>{t("page-open-source-security-answer-1")}</p>
+              <p>
+                {t.rich("page-open-source-security-answer-2", {
+                  strong: Strong,
+                })}
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              title={t("page-open-source-local-ai-note-title")}
+              matomoEvent={track(sections.faq.id, "open-weight-models")}
+            >
+              <p>
+                {t.rich("page-open-source-local-ai-note-description-1", {
+                  strong: Strong,
+                })}
+              </p>
+              <p>
+                {t.rich("page-open-source-local-ai-note-description-2", {
+                  strong: Strong,
+                  a: linkTo(
+                    "https://opensource.org/ai/open-source-ai-definition",
+                    sections.faq.id,
+                    "Open Source AI Definition"
+                  ),
+                })}
+              </p>
+            </ExpandableCard>
+          </AccordionContainer>
+        </Section>
+
+        <Section id={sections.resources.id}>
+          <h2>{sections.resources.title}</h2>
+
+          {/* Numbered: the targets of the [1]-[4] markers in the body.
+              Uncited reading stays bulleted below. */}
+          <OrderedList>
+            <ListItem>
+              {t.rich("page-open-source-reference-kindle", {
+                link: linkTo(
+                  "https://web.archive.org/web/20090726115923/http://bits.blogs.nytimes.com/2009/07/23/amazon-chief-says-erasing-orwell-books-was-stupid/",
+                  sections.resources.id,
+                  "Kindle deletion (NYT)"
+                ),
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-open-source-reference-car-thing", {
+                link: linkTo(
+                  "https://9to5google.com/2024/12/09/spotify-officially-kills-car-thing-remaining-units-no-longer-work/",
+                  sections.resources.id,
+                  "Car Thing shutdown"
+                ),
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-open-source-reference-gnu-definition", {
+                link: linkTo(
+                  `https://www.gnu.org/philosophy/free-sw.html.${gnuOrgLocaleMap[locale] ?? "en"}`,
+                  sections.resources.id,
+                  "The Free Software Definition"
+                ),
+              })}
+            </ListItem>
+          </OrderedList>
+
+          <UnorderedList>
+            <ListItem>
+              {t.rich("page-open-source-reference-osi-definition", {
+                link: linkTo(
+                  "https://opensource.org/osd",
+                  sections.resources.id,
+                  "The Open Source Definition"
+                ),
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-open-source-resources-roads", {
+                link: linkTo(
+                  "https://www.fordfoundation.org/work/learning/research-reports/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/",
+                  sections.resources.id,
+                  "Roads and Bridges"
+                ),
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-open-source-resources-critique-surveillance", {
+                link: linkTo(
+                  "https://www.eff.org/wp/behind-the-one-way-mirror",
+                  sections.resources.id,
+                  "Behind the One-Way Mirror"
+                ),
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-open-source-resources-critique-lockin", {
+                link: linkTo(
+                  "https://www.eff.org/deeplinks/2019/10/adversarial-interoperability",
+                  sections.resources.id,
+                  "Adversarial Interoperability"
+                ),
+              })}
+            </ListItem>
           </UnorderedList>
 
           <h3>{t("page-open-source-resources-alternatives-title")}</h3>
           <UnorderedList>
             <ListItem>
               {t.rich("page-open-source-resources-catalogs", {
-                alternativeto: (chunks) => (
-                  <Link href="https://alternativeto.net">{chunks}</Link>
+                switching: linkTo(
+                  "https://switching.software",
+                  sections.resources.id,
+                  "Switching.software"
                 ),
-                switching: (chunks) => (
-                  <Link href="https://switching.software">{chunks}</Link>
-                ),
-                privacyguides: (chunks) => (
-                  <Link href="https://www.privacyguides.org">{chunks}</Link>
+                privacyguides: linkTo(
+                  "https://www.privacyguides.org",
+                  sections.resources.id,
+                  "Privacy Guides"
                 ),
               })}
             </ListItem>
             <ListItem>
               {t.rich("page-open-source-resources-degoogled", {
-                grapheneos: (chunks) => (
-                  <Link href="https://grapheneos.org">{chunks}</Link>
+                grapheneos: linkTo(
+                  "https://grapheneos.org",
+                  sections.resources.id,
+                  "GrapheneOS"
                 ),
-                eos: (chunks) => (
-                  <Link href="https://e.foundation">{chunks}</Link>
+                eos: linkTo(
+                  "https://e.foundation",
+                  sections.resources.id,
+                  "/e/OS"
                 ),
-                lineageos: (chunks) => (
-                  <Link href="https://lineageos.org">{chunks}</Link>
+                lineageos: linkTo(
+                  "https://lineageos.org",
+                  sections.resources.id,
+                  "LineageOS"
                 ),
-                fdroid: (chunks) => (
-                  <Link href="https://f-droid.org">{chunks}</Link>
+                fdroid: linkTo(
+                  "https://f-droid.org",
+                  sections.resources.id,
+                  "F-Droid"
                 ),
-                framework: (chunks) => (
-                  <Link href="https://frame.work">{chunks}</Link>
+                framework: linkTo(
+                  "https://frame.work",
+                  sections.resources.id,
+                  "Framework"
                 ),
-                pine64: (chunks) => (
-                  <Link href="https://pine64.org">{chunks}</Link>
+                pine64: linkTo(
+                  "https://pine64.org",
+                  sections.resources.id,
+                  "Pine64"
                 ),
-                mnt: (chunks) => (
-                  <Link href="https://mntre.com/reform.html">{chunks}</Link>
-                ),
-              })}
-            </ListItem>
-          </UnorderedList>
-
-          <h3>{t("page-open-source-resources-wider-title")}</h3>
-          <UnorderedList>
-            <ListItem>
-              {t.rich("page-open-source-resources-education", {
-                openstax: (chunks) => (
-                  <Link href="https://openstax.org">{chunks}</Link>
-                ),
-                mit: (chunks) => (
-                  <Link href="https://ocw.mit.edu">{chunks}</Link>
-                ),
-              })}
-            </ListItem>
-            <ListItem>{t("page-open-source-resources-data")}</ListItem>
-            <ListItem>
-              {t.rich("page-open-source-resources-commons", {
-                p2p: (chunks) => (
-                  <Link href="https://p2pfoundation.net">{chunks}</Link>
+                mnt: linkTo(
+                  "https://mntre.com/reform.html",
+                  sections.resources.id,
+                  "MNT Reform"
                 ),
               })}
             </ListItem>
-            <ListItem>
-              {t.rich("page-open-source-resources-culture", {
-                cc: (chunks) => (
-                  <Link href="https://creativecommons.org">{chunks}</Link>
-                ),
-                wikipedia: (chunks) => (
-                  <Link href="https://www.wikipedia.org">{chunks}</Link>
-                ),
-                osm: (chunks) => (
-                  <Link href="https://www.openstreetmap.org">{chunks}</Link>
-                ),
-              })}
-            </ListItem>
-          </UnorderedList>
-
-          <h3>{t("page-open-source-resources-reading-title")}</h3>
-          <UnorderedList>
-            <ListItem>
-              {t.rich("page-open-source-resources-definitions", {
-                gnu: (chunks) => (
-                  <Link href="https://www.gnu.org/philosophy/free-sw.html">
-                    {chunks}
-                  </Link>
-                ),
-                osd: (chunks) => (
-                  <Link href="https://opensource.org/osd">{chunks}</Link>
-                ),
-              })}
-            </ListItem>
-            <ListItem>
-              {t.rich("page-open-source-resources-roads", {
-                link: (chunks) => (
-                  <Link href="https://www.fordfoundation.org/work/learning/research-reports/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/">
-                    {chunks}
-                  </Link>
-                ),
-              })}
-            </ListItem>
-            <ListItem>{t("page-open-source-resources-critiques")}</ListItem>
           </UnorderedList>
         </Section>
       </ContentLayout>
