@@ -156,6 +156,30 @@ An experiment buckets users only while it's **running** (and inside its date win
 
 To remove a finished test: delete the flag, the `abTestRoutes` entry, the coded page, the `ABTest` wrapper, and any code kept alive only to serve the losing arm.
 
+## Layout-level experiments (nav, footer, other shared chrome)
+
+Everything above keys on a **page path**. Chrome that every page shares has no path to register, so it cannot use the precompute pattern: `abTestRoutes` would need an entry and a coded page for every route in the site, and reading the assignment from a proxy header in the root layout would make the whole site dynamic and give up edge caching. Setting a variant cookie from the proxy is not a way out either — a `Set-Cookie` on a CDN-cacheable HTML response either defeats the cache or risks handing one visitor's assignment to the next.
+
+Those experiments are assigned **in the browser** instead, in `src/lib/ab-testing/client-experiment.ts`:
+
+```tsx
+const { variant } = useClientExperiment("NavLabels2026", {
+  enabled: locale === DEFAULT_LOCALE,
+})
+
+if (variant === "CommunityRoadmap") {
+  // apply the variant
+}
+```
+
+- **The bucket comes from Matomo's visitor id**, hashed with the same FNV-1a assignment as the proxy adapter (`src/lib/ab-testing/assignment.ts`). Matomo generates it on init and keeps it in its own first-party cookie, so a visitor stays in one arm across pages and sessions and no new cookie is introduced.
+- **Only visitors Matomo tracks are enrolled.** Opted out, Do Not Track, or a blocked tracker means no assignment and no variant. Those visits never reach Matomo reports, so enrolling them would only dilute the arms.
+- **Running state still comes from the dashboard**, via `/api/ab-config` (active experiments only, CDN-cached for an hour to match the proxy adapter's TTL). Pausing in Matomo returns everyone to the original within that window, with no deploy.
+- **Server-rendered markup is never varied**, so no cache entry can hold the wrong variant. `CrawlableNav` and `llms.txt` keep the original labels, which also keeps the variant out of what crawlers index.
+- Override cookies (`flag_override_<experiment>=<index>`) work here too, in dev and preview deploys.
+
+**The tradeoff, and when this is the wrong mechanism.** The variant applies once the visitor id is known rather than at first paint. For the nav that window is mostly hidden — the interactive nav is inside `ClientOnly`, so it is absent from the server HTML and already has a loading state — but on a first-ever pageview the tracker can resolve after the nav has rendered, so a new visitor may briefly see the original labels. If a hypothesis is specifically about a first impression, weigh that before choosing this path. The flicker-free alternative is to extend precompute to layouts (for example by rewriting to a variant pseudo-locale, so the existing per-locale prerender covers both arms), which costs build time and output size instead.
+
 ## The three rules that silently break tests
 
 1. **Names match exactly.** `testKey`, the flag's `key`, and the Matomo experiment name are the same string. A mismatch doesn't error — everyone quietly gets the original.
@@ -173,13 +197,17 @@ To remove a finished test: delete the flag, the `abTestRoutes` entry, the coded 
 
 ## Architecture map
 
-| File                                   | Role                                                                              |
-| -------------------------------------- | --------------------------------------------------------------------------------- |
-| `proxy.ts`                             | Matches `abTestRoutes`, precomputes flags, appends `ab-code/<code>/` and rewrites |
-| `src/lib/ab-testing/flags.ts`          | `defineABFlag`, header fingerprinting (`identify`), the `abTestRoutes` map        |
-| `src/lib/ab-testing/matomo-adapter.ts` | Fetches Matomo experiments, deterministic weighted assignment (FNV-1a), mocks     |
-| `src/lib/ab-testing/constants.ts`      | `encodeABCode`/`decodeABCode`, override-cookie prefix, `ab-code` segment          |
-| `<tested route>/ab-code/[code]/`       | One thin coded page per tested route, nested so parent layouts stay active        |
-| `src/components/AB/ABTest.tsx`         | Renders the chosen variant + tracker + debug panel                                |
-| `src/components/AB/TestTracker.tsx`    | Pushes `AbTesting::enter` + custom dimension 1 to Matomo                          |
-| `src/components/AB/TestDebugPanel.tsx` | Dev/preview variant switcher via override cookies                                 |
+| File                                      | Role                                                                              |
+| ----------------------------------------- | --------------------------------------------------------------------------------- |
+| `proxy.ts`                                | Matches `abTestRoutes`, precomputes flags, appends `ab-code/<code>/` and rewrites |
+| `src/lib/ab-testing/flags.ts`             | `defineABFlag`, header fingerprinting (`identify`), the `abTestRoutes` map        |
+| `src/lib/ab-testing/matomo-adapter.ts`    | Fetches Matomo experiments, deterministic weighted assignment (FNV-1a), mocks     |
+| `src/lib/ab-testing/constants.ts`         | `encodeABCode`/`decodeABCode`, override-cookie prefix, `ab-code` segment          |
+| `src/lib/ab-testing/assignment.ts`        | FNV-1a hash + weighted variant pick, shared by the proxy and the browser          |
+| `src/lib/ab-testing/client-experiment.ts` | Layout-level experiments: visitor-id bucketing, enrollment, shared state          |
+| `src/hooks/useClientExperiment.ts`        | Hook reading that state (`{ variant }`, null = render the original)               |
+| `app/api/ab-config/route.ts`              | Active experiment config for browser-assigned experiments                         |
+| `<tested route>/ab-code/[code]/`          | One thin coded page per tested route, nested so parent layouts stay active        |
+| `src/components/AB/ABTest.tsx`            | Renders the chosen variant + tracker + debug panel                                |
+| `src/components/AB/TestTracker.tsx`       | Pushes `AbTesting::enter` + custom dimension 1 to Matomo                          |
+| `src/components/AB/TestDebugPanel.tsx`    | Dev/preview variant switcher via override cookies                                 |

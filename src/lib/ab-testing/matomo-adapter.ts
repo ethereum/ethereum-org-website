@@ -1,5 +1,6 @@
 import type { Adapter } from "flags"
 
+import { assignVariantIndex } from "./assignment"
 import type { ABTestConfig, MatomoExperiment } from "./types"
 
 const USE_MOCK_EXPERIMENTS = process.env.USE_MOCK_EXPERIMENTS === "true"
@@ -20,6 +21,15 @@ const USE_MOCK_EXPERIMENTS = process.env.USE_MOCK_EXPERIMENTS === "true"
  *   },
  */
 const MOCK_EXPERIMENTS: Record<string, ABTestConfig> = {
+  NavLabels2026: {
+    name: "NavLabels2026",
+    id: "dev-19",
+    enabled: true,
+    variants: [
+      { name: "Original", weight: 50 },
+      { name: "CommunityRoadmap", weight: 50 },
+    ],
+  },
   FindWalletCatalog2026: {
     name: "FindWalletCatalog2026",
     id: "dev-15",
@@ -170,30 +180,15 @@ export async function getActiveExperimentNames(): Promise<Set<string>> {
   return active
 }
 
-// FNV-1a hash for deterministic assignment (matching legacy implementation)
-function fnv1aHash(str: string): number {
-  let hash = 2166136261
-  for (let i = 0; i < str.length; i++) {
-    hash ^= str.charCodeAt(i)
-    hash = (hash * 16777619) >>> 0
-  }
-  return hash
-}
-
-function assignVariantIndex(config: ABTestConfig, fingerprint: string): number {
-  const totalWeight = config.variants.reduce((sum, v) => sum + v.weight, 0)
-  if (totalWeight === 0) return 0
-
-  const hash = fnv1aHash(fingerprint)
-  const normalized = hash / 0x100000000
-  const weighted = normalized * totalWeight
-
-  let cumulative = 0
-  for (let i = 0; i < config.variants.length; i++) {
-    cumulative += config.variants[i].weight
-    if (weighted <= cumulative) return i
-  }
-  return 0
+/**
+ * Active experiments with their variant weights, for experiments assigned in
+ * the browser rather than by the proxy (see docs/ab-testing.md, "Layout-level
+ * experiments"). Served by /api/ab-config - it carries no Matomo credentials
+ * and nothing the dashboard doesn't already make public.
+ */
+export async function getActiveExperimentConfigs(): Promise<ABTestConfig[]> {
+  const config = await getExperimentConfig()
+  return Object.values(config).filter((experiment) => experiment.enabled)
 }
 
 export interface MatomoEntities {
