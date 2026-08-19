@@ -73,7 +73,7 @@ const alertTitleVariants = tv({
   variants: {
     size: {
       base: "font-bold",
-      lg: "text-2xl font-black",
+      lg: "mb-2 text-2xl font-black",
     },
   },
   defaultVariants: {
