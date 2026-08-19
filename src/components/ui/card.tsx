@@ -76,7 +76,7 @@ const cardVariants = cva(
 )
 
 export type CardProps = React.HTMLAttributes<HTMLElement> &
-  Pick<LinkProps, "href" | "customEventOptions" | "rel"> &
+  Pick<LinkProps, "href" | "customEventOptions" | "sendReferrer"> &
   Omit<VariantProps<typeof cardVariants>, "interactive">
 
 const Card = React.forwardRef<HTMLDivElement | HTMLAnchorElement, CardProps>(
@@ -85,6 +85,7 @@ const Card = React.forwardRef<HTMLDivElement | HTMLAnchorElement, CardProps>(
       className,
       href,
       customEventOptions,
+      sendReferrer,
       variant,
       size,
       hoverLift,
@@ -111,6 +112,7 @@ const Card = React.forwardRef<HTMLDivElement | HTMLAnchorElement, CardProps>(
           href={href}
           className={classes}
           customEventOptions={customEventOptions}
+          sendReferrer={sendReferrer}
           hideArrow
           // Fake CTA components surface the external arrow (via data-external), not BaseLink.
           data-external={isExternal(href) || undefined}

@@ -25,8 +25,7 @@ const SpeedRunCard = ({
 }: SpeedRunCardProps) => (
   <Card
     href="https://speedrunethereum.com/"
-    // Preserve referrer for partner attribution (#19101)
-    rel="noopener"
+    sendReferrer
     variant="ghost"
     className={cn(
       "relative min-h-112 overflow-hidden rounded-b-none hover:bg-inherit hover:shadow-none",
