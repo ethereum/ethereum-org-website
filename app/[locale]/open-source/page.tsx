@@ -49,8 +49,8 @@ import { getDayOfYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { seededShuffle } from "@/lib/utils/random"
 
-import AppsExpander from "./_components/AppsExpander"
-import PromptCard from "./_components/PromptCard"
+import AppsExpander from "./_components/apps-expander"
+import PromptCard from "./_components/prompt-card"
 import PageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
