@@ -146,7 +146,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       title: t("page-open-source-definition-title"),
     },
     possible: {
-      id: "what-does-open-source-make-possible",
+      id: "benefits-of-open-source",
       title: t("page-open-source-possible-title"),
     },
     switching: {
