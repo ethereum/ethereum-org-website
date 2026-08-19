@@ -1,10 +1,9 @@
 ---
 title: Retraits de staking
-description: "Page résumant ce que sont les retraits de staking, comment ils fonctionnent et ce que les stakers doivent faire pour obtenir leurs récompenses"
+description: Page résumant ce que sont les retraits de staking, comment ils fonctionnent et ce que les stakers doivent faire pour obtenir leurs récompenses
 lang: fr
 template: staking
 image: /images/staking/leslie-withdrawal.png
-alt: "Leslie le rhinocéros avec ses récompenses de staking"
 sidebarDepth: 2
 summaryPoints:
   - Les opérateurs de validateurs doivent fournir une adresse de retrait pour activer les retraits
@@ -13,7 +12,7 @@ summaryPoints:
   - Les validateurs qui effectuent une sortie complète du staking recevront leur solde restant
 ---
 
-Les **retraits de staking** font référence aux transferts d'ETH depuis un compte de validateur sur la couche de consensus d'Ethereum (la chaîne balise), vers la couche d'exécution où ils peuvent faire l'objet de transactions.
+Les **retraits de staking** désignent les transferts d'ETH depuis un compte de validateur sur la couche de consensus d'[Ethereum](/) (la chaîne balise), vers la couche d'exécution où ils peuvent faire l'objet de transactions.
 
 > Si vous faites partie d'un [pool de staking](/staking/pools/) ou si vous détenez des jetons de staking, vous devriez vérifier auprès de votre fournisseur pour plus de détails sur la façon dont les retraits de staking sont gérés, car chaque service fonctionne différemment.
 
@@ -28,17 +27,17 @@ Les utilisateurs peuvent également **effectuer une sortie complète du staking*
 
 La gestion des récompenses dépend du type d'identifiants du validateur :
 
-Les **validateurs historiques (Type 1)** ont un solde effectif plafonné à 32 ETH. Tout solde supérieur à 32 ETH reçu sous forme de récompenses du réseau ne contribue pas au solde effectif ni n'augmente le poids de ce validateur sur le réseau, et ces récompenses sont automatiquement retirées vers l'adresse de retrait dédiée du validateur tous les quelques jours. Mis à part fournir une adresse de retrait une seule fois, réclamer ces récompenses ne nécessite aucune action de la part de l'opérateur du validateur. Tout cela est initié sur la couche de consensus, donc aucun gaz (frais de transaction) n'est requis à aucune étape.
+Les **validateurs historiques (Type 1)** ont un solde effectif plafonné à 32 ETH. Tout solde supérieur à 32 ETH reçu sous forme de récompenses du réseau ne contribue pas au solde effectif ni n'augmente le poids de ce validateur sur le réseau, et ces récompenses sont automatiquement retirées vers l'adresse de retrait dédiée du validateur tous les quelques jours. Mis à part la fourniture d'une adresse de retrait une seule fois, la réclamation de ces récompenses ne nécessite aucune action de la part de l'opérateur du validateur. Tout cela est initié sur la couche de consensus, par conséquent aucun gaz (frais de transaction) n'est requis à aucune étape.
 
 Les **validateurs à composition (Type 2)** peuvent avoir un solde effectif compris entre 32 et 2048 ETH. Les récompenses du réseau reçues par ces validateurs s'ajoutent à leur solde effectif, augmentant le poids du validateur et son potentiel à recevoir de futures récompenses. Les balayages automatiques ne se produisent que pour les soldes dépassant 2048 ETH. Pour retirer des récompenses en dessous du seuil de 2048 ETH, les validateurs à composition doivent déclencher un retrait partiel manuellement depuis la couche d'exécution, ce qui nécessite du gaz.
 
 ### Comment en sommes-nous arrivés là ? {#how-did-we-get-here}
 
-Au cours des dernières années, [Ethereum](/) a subi plusieurs mises à jour du réseau pour passer à un réseau sécurisé par l'ETH lui-même, au lieu du minage très gourmand en énergie comme c'était le cas auparavant. La participation au consensus sur Ethereum est désormais connue sous le nom de « staking », car les participants ont volontairement verrouillé des ETH, les mettant « en jeu » (at stake) pour avoir la possibilité de participer au réseau. Les utilisateurs qui respectent les règles seront récompensés, tandis que les tentatives de triche peuvent être pénalisées.
+Au cours des dernières années, Ethereum a subi plusieurs mises à niveau du réseau pour passer à un réseau sécurisé par l'ETH lui-même, au lieu du minage énergivore comme c'était le cas auparavant. La participation au consensus sur Ethereum est désormais connue sous le nom de « staking », car les participants ont volontairement verrouillé des ETH, les mettant « en jeu » pour avoir la possibilité de participer au réseau. Les utilisateurs qui respectent les règles seront récompensés, tandis que les tentatives de triche peuvent être pénalisées.
 
 Depuis le lancement du contrat de dépôt de staking en novembre 2020, de courageux pionniers d'Ethereum ont volontairement verrouillé des fonds pour activer des « validateurs », des comptes spéciaux qui ont le droit d'attester formellement et de proposer des blocs, en suivant les règles du réseau.
 
-Avant la mise à jour Shanghai/Capella, vous ne pouviez ni utiliser ni accéder à vos ETH stakés. Mais maintenant, vous pouvez choisir de recevoir automatiquement vos récompenses sur un compte choisi, et vous pouvez également retirer vos ETH stakés quand vous le souhaitez.
+Avant la mise à jour Shanghai/Capella, vous ne pouviez ni utiliser ni accéder à vos ETH stakés. Mais désormais, vous pouvez choisir de recevoir automatiquement vos récompenses sur un compte choisi, et vous pouvez également retirer vos ETH stakés quand vous le souhaitez.
 
 ### Comment me préparer ? {#how-do-i-prepare}
 
@@ -46,10 +45,10 @@ Avant la mise à jour Shanghai/Capella, vous ne pouviez ni utiliser ni accéder 
 
 ### Avis importants {#important-notices}
 
-Les comptes de validateurs sont tenus de fournir une adresse de retrait avant de pouvoir accéder et retirer les récompenses du réseau accumulées, ou traiter un retrait complet lors d'une sortie du staking.
+Les comptes de validateurs sont tenus de fournir une adresse de retrait avant de pouvoir accéder et retirer les récompenses du réseau accumulées, ou traiter un retrait complet lors de la sortie du staking.
 
 <Alert variant="warning">
-<AlertEmoji text="⚠️"/>
+<AlertIcon size="lg"><TriangleAlert /></AlertIcon>
 <AlertContent>
 <AlertDescription>
 **Chaque compte de validateur ne peut se voir attribuer qu'une seule adresse de retrait, une seule fois.** Une fois qu'une adresse est choisie et soumise à la couche de consensus, cela ne peut pas être annulé ou modifié à nouveau. Vérifiez bien la propriété et l'exactitude de l'adresse fournie avant de la soumettre.
@@ -57,7 +56,7 @@ Les comptes de validateurs sont tenus de fournir une adresse de retrait avant de
 </AlertContent>
 </Alert>
 
-Si vous n'avez pas encore fourni d'adresse de retrait pour votre compte de validateur, il n'y a **aucune menace pour vos fonds entre-temps**, en supposant que votre phrase secrète (mnémonique) est restée en sécurité hors ligne et n'a été compromise d'aucune façon. Le fait de ne pas ajouter d'identifiants de retrait laissera simplement les ETH verrouillés dans le compte du validateur jusqu'à ce qu'une adresse de retrait soit fournie.
+Si vous n'avez pas encore fourni d'adresse de retrait pour votre compte de validateur, il n'y a **aucune menace pour vos fonds entre-temps**, en supposant que votre phrase mnémonique/phrase secrète est restée en sécurité hors ligne et n'a été compromise d'aucune façon. Le fait de ne pas ajouter d'identifiants de retrait laissera simplement les ETH verrouillés dans le compte du validateur jusqu'à ce qu'une adresse de retrait soit fournie.
 
 ## Validateurs à composition {#compounding-validators}
 
@@ -68,13 +67,13 @@ Avec la composition activée :
 - Les récompenses augmentent le solde effectif du validateur par incréments de 1 ETH (sous réserve d'un petit [tampon d'hystérésis](https://www.attestant.io/posts/understanding-validator-effective-balance/)), générant plus de récompenses au fil du temps
 - Les balayages automatiques ne se produisent que pour les soldes dépassant 2048 ETH
 - Les retraits partiels en dessous du seuil de 2048 ETH doivent être déclenchés manuellement depuis la couche d'exécution (cela coûte du gaz)
-- Plusieurs validateurs peuvent être **consolidés** en un seul validateur à composition, réduisant ainsi la charge opérationnelle
+- Plusieurs validateurs peuvent être **consolidés** en un seul validateur à composition, réduisant ainsi les frais généraux opérationnels
 
 <Alert variant="warning">
-<AlertEmoji text="⚠️"/>
+<AlertIcon size="lg"><TriangleAlert /></AlertIcon>
 <AlertContent>
 <AlertDescription>
-**La conversion des identifiants de retrait de Type 1 à Type 2 est irréversible.** Utilisez le [Staking Launchpad](https://launchpad.ethereum.org/validator-actions) comme outil officiel pour cette conversion. Pour plus de détails sur le processus de conversion, les risques et la consolidation, consultez [l'exploration détaillée de MaxEB](/roadmap/pectra/maxeb/).
+**La conversion des identifiants de retrait de Type 1 à Type 2 est irréversible.** Utilisez le [Staking Launchpad](https://launchpad.ethereum.org/validator-actions) comme outil officiel pour cette conversion. Pour plus de détails sur le processus de conversion, les risques et la consolidation, consultez l'[exploration détaillée de MaxEB](/roadmap/pectra/maxeb/).
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -83,20 +82,20 @@ Avec la composition activée :
 
 Fournir une adresse de retrait est requis avant que _tout_ fonds ne puisse être transféré hors du solde d'un compte de validateur.
 
-Les utilisateurs cherchant à effectuer une sortie complète du staking et à récupérer l'intégralité de leur solde doivent initier une « sortie volontaire ». Cela peut se faire de deux manières :
+Les utilisateurs cherchant à effectuer une sortie complète du staking et à retirer l'intégralité de leur solde doivent initier une « sortie volontaire ». Cela peut se faire de deux manières :
 
 - **En utilisant les clés du validateur** : Signez et diffusez un message de sortie volontaire avec votre client validateur, soumis à votre nœud de consensus. Cela ne nécessite pas de gaz.
 - **En utilisant les identifiants de retrait** : Déclenchez une sortie depuis la couche d'exécution en utilisant votre adresse de retrait, sans avoir besoin d'accéder à la clé de signature du validateur. Cela nécessite une transaction et coûte du gaz.
 
-Le processus de sortie d'un validateur du staking prend un temps variable, en fonction du nombre d'autres validateurs qui sortent en même temps. Une fois terminé, ce compte ne sera plus responsable de l'exécution des tâches du réseau de validateurs, ne sera plus éligible aux récompenses et n'aura plus ses ETH « en jeu ». À ce moment-là, le compte sera marqué comme entièrement « retirable » (withdrawable).
+Le processus de sortie d'un validateur du staking prend un temps variable, en fonction du nombre d'autres validateurs qui sortent en même temps. Une fois terminé, ce compte ne sera plus responsable de l'exécution des tâches du réseau de validateurs, ne sera plus éligible aux récompenses et n'aura plus ses ETH « en jeu ». À ce moment-là, le compte sera marqué comme entièrement « retirable ».
 
-Une fois qu'un compte est signalé comme « retirable » et que les identifiants de retrait ont été fournis, l'utilisateur n'a plus rien à faire à part attendre. Les comptes sont automatiquement et continuellement balayés par les proposants de blocs pour les fonds sortis éligibles, et le solde de votre compte sera transféré en totalité (également appelé « retrait complet ») lors du prochain <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>balayage</a>.
+Une fois qu'un compte est signalé comme « retirable » et que les identifiants de retrait ont été fournis, l'utilisateur n'a plus rien à faire à part attendre. Les comptes sont automatiquement et continuellement balayés par les proposants de blocs pour les fonds sortis éligibles, et le solde de votre compte sera transféré en totalité (également connu sous le nom de « retrait complet ») lors du prochain <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>balayage</a>.
 
 ## Comment fonctionnent les récompenses automatiques (validateur de Type 1) ? {#how-do-withdrawals-work}
 
-L'éligibilité d'un validateur donné à un retrait est déterminée par l'état du compte du validateur lui-même. Aucune intervention de l'utilisateur n'est nécessaire à un moment donné pour déterminer si un compte doit voir un retrait initié ou non — l'ensemble du processus est effectué automatiquement par la couche de consensus en boucle continue.
+L'éligibilité d'un validateur donné à un retrait est déterminée par l'état du compte du validateur lui-même. Aucune intervention de l'utilisateur n'est nécessaire à un moment donné pour déterminer si un compte doit initier un retrait ou non — l'ensemble du processus est effectué automatiquement par la couche de consensus en boucle continue.
 
-### Vous avez une mémoire plutôt visuelle ? {#visual-learner}
+### Vous préférez un support visuel ? {#visual-learner}
 
 Découvrez cette explication des retraits de staking Ethereum par Finematics :
 
@@ -104,10 +103,10 @@ Découvrez cette explication des retraits de staking Ethereum par Finematics :
 
 ### « Balayage » des validateurs {#validator-sweeping}
 
-Lorsqu'un validateur est programmé pour proposer le bloc suivant, il est tenu de construire une file d'attente de retrait, pouvant aller jusqu'à 16 retraits éligibles. Cela se fait en commençant initialement par l'indice de validateur 0, en déterminant s'il y a un retrait éligible pour ce compte selon les règles du protocole, et en l'ajoutant à la file d'attente si c'est le cas. Le validateur défini pour proposer le bloc suivant reprendra là où le dernier s'est arrêté, progressant dans l'ordre indéfiniment.
+Lorsqu'un validateur est programmé pour proposer le prochain bloc, il est tenu de construire une file d'attente de retrait, pouvant aller jusqu'à 16 retraits éligibles. Cela se fait en commençant initialement par l'indice de validateur 0, en déterminant s'il y a un retrait éligible pour ce compte selon les règles du protocole, et en l'ajoutant à la file d'attente si c'est le cas. Le validateur défini pour proposer le bloc suivant reprendra là où le dernier s'est arrêté, progressant dans l'ordre indéfiniment.
 
 <Alert variant="update">
-<AlertEmoji text="🕛"/>
+<AlertIcon size="xl"><Clock /></AlertIcon>
 <AlertContent>
 <AlertDescription>
 Pensez à une horloge analogique. L'aiguille de l'horloge pointe vers l'heure, progresse dans une direction, ne saute aucune heure et finit par revenir au début une fois le dernier chiffre atteint.
@@ -123,9 +122,9 @@ L'aiguille de l'horloge pointe vers le prochain validateur qui doit être vérif
 
 Pendant qu'un proposant balaie les validateurs pour d'éventuels retraits, chaque validateur vérifié est évalué par rapport à une courte série de questions pour déterminer si un retrait doit être déclenché, et si oui, combien d'ETH doivent être retirés.
 
-1. **Une adresse de retrait a-t-elle été fournie ?** Si aucune adresse de retrait n'a été fournie, le compte est ignoré et aucun retrait n'est initié.
+1. **Une adresse de retrait a-elle été fournie ?** Si aucune adresse de retrait n'a été fournie, le compte est ignoré et aucun retrait n'est initié.
 2. **Le validateur est-il sorti et retirable ?** Si le validateur a effectué une sortie complète, et que nous avons atteint l'époque où son compte est considéré comme « retirable », alors un retrait complet sera traité. Cela transférera l'intégralité du solde restant à l'adresse de retrait.
-3. **Le solde dépasse-il son solde effectif maximum ?** Pour les validateurs historiques (Type 1), ce seuil est de 32 ETH. Pour les validateurs à composition (Type 2), ce seuil est de 2048 ETH. Si le compte a des identifiants de retrait, n'est pas complètement sorti, a un solde effectif au maximum et a un solde supérieur à ce seuil, alors un retrait partiel sera traité qui ne transférera que l'excédent à l'adresse de retrait de l'utilisateur.
+3. **Le solde dépasse-t-il son solde effectif maximum ?** Pour les validateurs historiques (Type 1), ce seuil est de 32 ETH. Pour les validateurs à composition (Type 2), ce seuil est de 2048 ETH. Si le compte possède des identifiants de retrait, n'est pas complètement sorti, a un solde effectif au maximum et a un solde supérieur à ce seuil, alors un retrait partiel sera traité qui ne transférera que l'excédent à l'adresse de retrait de l'utilisateur.
 
 Il n'y a que deux actions entreprises par les opérateurs de validateurs au cours du cycle de vie d'un validateur qui influencent directement ce flux :
 
@@ -156,12 +155,12 @@ En développant ce calcul, nous pouvons estimer le temps qu'il faudra pour trait
 
 </TableContainer>
 
-Comme vous pouvez le voir, cela ralentit à mesure qu'il y a plus de validateurs sur le réseau. Une augmentation des créneaux manqués pourrait ralentir cela proportionnellement, mais cela représentera généralement le côté le plus lent des résultats possibles.
+Comme vous le voyez, cela ralentit à mesure qu'il y a plus de validateurs sur le réseau. Une augmentation des créneaux manqués pourrait ralentir cela proportionnellement, mais cela représentera généralement le côté le plus lent des résultats possibles.
 
 ## Foire aux questions {#faq}
 
 <ExpandableCard
-title="Une fois que j'ai fourni une adresse de retrait, puis-je en changer pour une autre ?"
+title="Une fois que j'ai fourni une adresse de retrait, puis-je la modifier pour une autre adresse de retrait ?"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
@@ -173,21 +172,21 @@ title="Pourquoi l'adresse de retrait d'un validateur ne peut-elle être définie
 eventCategory="FAQ"
 eventAction="Why can a validator's withdrawal address only be set once?"
 eventName="read more">
-La configuration de l'adresse de retrait de la couche d'exécution d'un validateur est une modification permanente des identifiants du validateur sur la couche de consensus. Il n'y a aucun moyen de mettre à jour les identifiants de la couche de consensus une fois qu'ils sont enregistrés.
+La définition de l'adresse de retrait de la couche d'exécution d'un validateur est une modification permanente des identifiants du validateur sur la couche de consensus. Il n'y a aucun moyen de mettre à jour les identifiants de la couche de consensus une fois qu'ils sont enregistrés.
 
-Les identifiants de l'adresse de retrait d'un validateur peuvent être configurés pour pointer soit vers un contrat intelligent (contrôlé par son code), soit vers un compte détenu par un tiers (EOA, contrôlé par sa clé privée). Actuellement, ces comptes n'ont aucun moyen de communiquer un message en retour à la couche de consensus qui signalerait un changement des identifiants du validateur, et l'ajout de cette fonctionnalité ajouterait une complexité inutile au protocole.
+Les identifiants de l'adresse de retrait d'un validateur peuvent être configurés pour pointer soit vers un contrat intelligent (contrôlé par son code), soit vers un compte détenu par un tiers (EOA, contrôlé par sa clé privée). Bien que les retraits déclenchés par la couche d'exécution ([EIP-7002](https://eips.ethereum.org/EIPS/eip-7002)) permettent désormais à l'adresse de retrait de déclencher des sorties et des retraits partiels, il n'y a aucune opération de protocole pour modifier une adresse de retrait une fois qu'elle a été enregistrée, et l'ajout de cette fonctionnalité ajouterait une complexité inutile au protocole.
 
-Les utilisateurs recherchant une gestion flexible des retraits peuvent configurer un portefeuille de contrat intelligent capable de rotation de clés (comme un [Safe](https://safe.global/)) comme adresse de retrait du validateur, permettant ainsi de mettre à jour l'EOA destinataire final. Si un utilisateur a déjà défini un EOA comme identifiant de retrait, il doit initier une sortie complète pour récupérer ses ETH stakés, puis utiliser ces fonds pour activer un nouveau validateur avec des identifiants différents.
+Les utilisateurs recherchant une gestion flexible des retraits peuvent définir un portefeuille de contrat intelligent capable de rotation de clés (comme un [Safe](https://safe.global/)) comme adresse de retrait du validateur, permettant ainsi de mettre à jour l'EOA destinataire final. Si un utilisateur a déjà défini un EOA comme identifiant de retrait, il doit initier une sortie complète pour récupérer ses ETH stakés, puis utiliser ces fonds pour activer un nouveau validateur avec des identifiants différents.
 </ExpandableCard>
 
 <ExpandableCard
-title="Comment retirer mes fonds du staking si je stake via un fournisseur, un pool de staking ou si je participe avec des jetons de staking liquide ?"
+title="Comment effectuer un retrait du staking si je stake via un fournisseur, un pool de staking ou si je participe avec des jetons de staking liquide ?"
 eventCategory="FAQ"
 eventAction="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
 eventName="read more">
-Si vous utilisez un pool de staking ou détenez des jetons de staking, contactez votre fournisseur pour savoir comment il gère les retraits, car les processus varient selon le service. 
+Si vous utilisez un [pool de staking](/staking/pools/) ou détenez des jetons de staking liquide (LST), vous n'interagissez pas directement avec le mécanisme de retrait du protocole ; les contrats intelligents du pool et les opérateurs de nœuds contrôlent les validateurs, et les identifiants de retrait pointent généralement vers les contrats du pool, pas vers vous. Au lieu de cela, vous échangez généralement vos jetons via le fournisseur (sous réserve de sa file d'attente de rachat et de la liquidité disponible) ou vous les vendez sur le marché libre. Contactez votre fournisseur pour savoir comment il gère les retraits, car les processus varient selon le service.
 
-En général, lorsque vous stakez via un fournisseur ou un pool, vous devriez être libre de récupérer vos ETH stakés sous-jacents, ou de retirer et de changer de fournisseur de staking. Si un pool particulier devient trop grand, les ETH stakés peuvent être sortis, rachetés et stakés à nouveau avec un [fournisseur plus petit](https://rated.network/). Ou, si vous avez accumulé suffisamment d'ETH, vous pourriez [staker depuis chez vous](/staking/solo/).
+En général, lorsque vous stakez via un fournisseur ou un pool, vous devriez être libre de récupérer vos ETH stakés sous-jacents, ou de vous retirer et de changer de fournisseur de staking. Si un pool particulier devient trop grand, les ETH stakés peuvent être sortis, rachetés et stakés à nouveau avec un [fournisseur plus petit](https://rated.network/). Ou, si vous avez accumulé suffisamment d'ETH, vous pourriez [staker depuis chez vous](/staking/solo/).
 
 </ExpandableCard>
 
@@ -211,7 +210,7 @@ Les **validateurs à composition (Type 2)** peuvent déclencher des retraits par
 </ExpandableCard>
 
 <ExpandableCard
-title="J'exploite un validateur. Où puis-je trouver plus d'informations sur la gestion du processus de retrait ?"
+title="Je gère un validateur. Où puis-je trouver plus d'informations sur la gestion du processus de retrait ?"
 eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information about managing the withdrawal process?"
 eventName="read more">
@@ -231,7 +230,7 @@ Non. Une fois qu'un validateur est sorti et que l'intégralité de son solde a �
 </ExpandableCard>
 
 <ExpandableCard
-title="Quelle est la différence entre les validateurs historiques et les validateurs à composition ?"
+title="Quelle est la différence entre les validateurs classiques et les validateurs à composition ?"
 eventCategory="FAQ"
 eventAction="What is the difference between legacy and compounding validators?"
 eventName="read more">
@@ -239,7 +238,7 @@ Les validateurs historiques utilisent des identifiants de retrait de **Type 1** 
 
 Les validateurs à composition utilisent des identifiants de retrait de **Type 2** (l'adresse des identifiants de retrait commence par 0x02) et peuvent avoir un solde effectif allant jusqu'à 2048 ETH. Les récompenses s'ajoutent au solde effectif du validateur, augmentant le poids du validateur sur le réseau et son potentiel à recevoir de futures récompenses. Les balayages automatiques ne se produisent que pour les soldes dépassant 2048 ETH. Pour retirer des ETH en dessous de ce seuil, un retrait partiel manuel doit être déclenché depuis la couche d'exécution.
 
-Pour plus de détails, consultez [l'exploration détaillée de MaxEB](/roadmap/pectra/maxeb/).
+Pour plus de détails, consultez l'[exploration détaillée de MaxEB](/roadmap/pectra/maxeb/).
 </ExpandableCard>
 
 <ExpandableCard
@@ -249,28 +248,30 @@ eventAction="How do I convert to a compounding validator?"
 eventName="read more">
 Vous pouvez convertir les identifiants de retrait de Type 1 en Type 2 en utilisant le [Staking Launchpad](https://launchpad.ethereum.org/validator-actions). Cette opération est **irréversible** — une fois que vous avez converti, vous ne pouvez pas revenir aux identifiants de Type 1.
 
-Après la conversion, vous pouvez également **consolider** plusieurs validateurs en un seul, en combinant leurs soldes en un seul validateur à composition. Pour une présentation complète du processus de conversion, des risques et des outils de consolidation, consultez [l'exploration détaillée de MaxEB](/roadmap/pectra/maxeb/).
+Après la conversion, vous pouvez également **consolider** plusieurs validateurs en un seul, en combinant leurs soldes en un seul validateur à composition. Pour une présentation complète du processus de conversion, des risques et des outils de consolidation, consultez l'[exploration détaillée de MaxEB](/roadmap/pectra/maxeb/).
 </ExpandableCard>
 
 <ExpandableCard
-title="Quand les retraits du staking ont-ils été activés ?"
+title="Quand les retraits de staking ont-ils été activés ?"
 eventCategory="FAQ"
 eventAction="When were staking withdrawals enabled?"
 eventName="read more">
 La fonctionnalité de retrait a été initialement activée dans le cadre de la mise à jour Shanghai/Capella le **12 avril 2023**. La [mise à jour Pectra](/roadmap/pectra/) (mai 2025) a ensuite introduit les validateurs à composition avec un solde effectif maximum plus élevé de 2048 ETH, ainsi que les sorties et les retraits partiels déclenchés par la couche d'exécution.
 
-La mise à jour Shanghai/Capella a permis de récupérer les ETH précédemment stakés sur des comptes Ethereum classiques. Cela a bouclé la boucle de la liquidité du staking et a rapproché Ethereum d'une étape supplémentaire dans son parcours vers la construction d'un écosystème décentralisé durable, évolutif et sécurisé.
+La mise à jour Shanghai/Capella a permis de récupérer les ETH précédemment stakés sur des comptes Ethereum classiques. Cela a bouclé la boucle sur la liquidité du staking et a rapproché Ethereum d'une étape supplémentaire dans son parcours vers la construction d'un écosystème décentralisé durable, évolutif et sécurisé.
 
 - [En savoir plus sur l'histoire d'Ethereum](/ethereum-forks/)
 - [En savoir plus sur la feuille de route d'Ethereum](/roadmap/)
 </ExpandableCard>
 
-## Complément d'information {#further-reading}
+## Lectures complémentaires {#further-reading}
 
 - [Retraits du Staking Launchpad](https://launchpad.ethereum.org/withdrawals)
-- [Actions des validateurs du Staking Launchpad](https://launchpad.ethereum.org/validator-actions)
+- [Actions de validateur du Staking Launchpad](https://launchpad.ethereum.org/validator-actions)
 - [Exploration détaillée de MaxEB : composition et consolidation](/roadmap/pectra/maxeb/)
 - [EIP-4895 : Retraits poussés de la chaîne balise en tant qu'opérations](https://eips.ethereum.org/EIPS/eip-4895)
 - [PEEPanEIP #94 : Retrait d'ETH stakés (Tests) avec Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68 : EIP-4895 : Retraits poussés de la chaîne balise en tant qu'opérations avec Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Comprendre le solde effectif du validateur](https://www.attestant.io/posts/understanding-validator-effective-balance/)
+
+<StakingCommunityCallout className="my-16" />
