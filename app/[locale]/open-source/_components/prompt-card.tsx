@@ -3,13 +3,15 @@
 import type { MatomoEventOptions } from "@/lib/types"
 
 import CopyToClipboard, { CopyIcon } from "@/components/CopyToClipboard"
-import { Tag } from "@/components/ui/tag"
+import { Tag, type TagProps } from "@/components/ui/tag"
 
 type PromptCardProps = {
   /** Copied to the clipboard verbatim, and the card's visible label. */
   prompt: string
   /** One-word purpose, e.g. "Discover". */
   tag: string
+  /** Distinct colour per purpose, so the six are told apart at a glance. */
+  tagStatus: TagProps["status"]
   /** Screen-reader-only hint; the card itself carries no other affordance. */
   copyLabel: string
   matomoEvent: MatomoEventOptions
@@ -22,6 +24,7 @@ type PromptCardProps = {
 const PromptCard = ({
   prompt,
   tag,
+  tagStatus,
   copyLabel,
   matomoEvent,
 }: PromptCardProps) => (
@@ -36,7 +39,7 @@ const PromptCard = ({
         <span className="flex items-center justify-between gap-3">
           {/* asChild: Tag renders a <div>, and a <button> only admits
               phrasing content. */}
-          <Tag asChild status="tag">
+          <Tag asChild status={tagStatus}>
             <span>{tag}</span>
           </Tag>
           <CopyIcon

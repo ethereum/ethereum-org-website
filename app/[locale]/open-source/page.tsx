@@ -300,15 +300,18 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
 
   // Prompt text is copied to the clipboard verbatim -- no markup in these.
   // Pragmatic first (find it, install it, unstick it), scrutiny last.
-  const prompts = [
-    "alternatives",
-    "install",
-    "error",
-    "reputation",
-    "policy",
-    "permissions",
-  ].map((id) => ({
+  const prompts = (
+    [
+      ["alternatives", "primary"],
+      ["install", "accent-a"],
+      ["error", "tag-yellow"],
+      ["reputation", "tag-green"],
+      ["policy", "accent-b"],
+      ["permissions", "accent-c"],
+    ] as const
+  ).map(([id, tagStatus]) => ({
     id,
+    tagStatus,
     prompt: t(`page-open-source-ai-prompt-${id}-text`),
     tag: t(`page-open-source-ai-prompt-${id}-tag`),
   }))
@@ -901,11 +904,12 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           {/* The whole card copies -- a card-sized target beats an icon-sized
               one, and the icon alone reads as the only thing that is clickable. */}
           <Grid columns={2} size="narrow" className="my-space-2x">
-            {prompts.map(({ id, prompt, tag }) => (
+            {prompts.map(({ id, prompt, tag, tagStatus }) => (
               <PromptCard
                 key={id}
                 prompt={prompt}
                 tag={tag}
+                tagStatus={tagStatus}
                 copyLabel={t("page-open-source-ai-copy-prompt")}
                 matomoEvent={track(sections.ai.id, id)}
               />
