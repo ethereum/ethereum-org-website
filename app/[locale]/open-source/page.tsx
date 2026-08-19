@@ -87,6 +87,10 @@ import thunderbirdImg from "@/public/images/open-source/thunderbird.png"
 import ubuntuImg from "@/public/images/open-source/ubuntu.png"
 import vlcImg from "@/public/images/open-source/vlc.png"
 
+// `ExpandableCard` hard-prefixes its category with "ExpandableCard", so the
+// leading underscore is what keeps the reported value readable.
+const TRACK_CATEGORY_SUFFIX = "_open_source"
+
 // Initial run of app cards; the rest sit behind "show more".
 const VISIBLE_APP_COUNT = 12
 
@@ -1107,7 +1111,9 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
                   key={id}
                   title={approach}
                   contentPreview={rights}
-                  matomoEvent={track(sections.ethereum.id, id)}
+                  eventCategory={TRACK_CATEGORY_SUFFIX}
+                  eventAction={sections.ethereum.id}
+                  eventName={id}
                 >
                   <p>
                     <strong>
@@ -1151,10 +1157,9 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <AccordionContainer>
             <ExpandableCard
               title={t("page-open-source-traditions-question")}
-              matomoEvent={track(
-                sections.faq.id,
-                "free-software-vs-open-source"
-              )}
+              eventCategory={TRACK_CATEGORY_SUFFIX}
+              eventAction={sections.faq.id}
+              eventName="free-software-vs-open-source"
             >
               <p>
                 {t.rich("page-open-source-traditions-answer-1", {
@@ -1165,7 +1170,9 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             </ExpandableCard>
             <ExpandableCard
               title={t("page-open-source-security-question")}
-              matomoEvent={track(sections.faq.id, "open-source-security")}
+              eventCategory={TRACK_CATEGORY_SUFFIX}
+              eventAction={sections.faq.id}
+              eventName="open-source-security"
             >
               <p>{t("page-open-source-security-answer-1")}</p>
               <p>
@@ -1176,7 +1183,9 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             </ExpandableCard>
             <ExpandableCard
               title={t("page-open-source-local-ai-note-title")}
-              matomoEvent={track(sections.faq.id, "open-weight-models")}
+              eventCategory={TRACK_CATEGORY_SUFFIX}
+              eventAction={sections.faq.id}
+              eventName="open-weight-models"
             >
               <p>
                 {t.rich("page-open-source-local-ai-note-description-1", {

@@ -3,8 +3,6 @@ import React, { type ReactNode, useState } from "react"
 import { useTranslations } from "next-intl"
 import type { AccordionContentProps } from "@radix-ui/react-accordion"
 
-import type { MatomoEventOptions } from "@/lib/types"
-
 import { HStack } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
@@ -25,8 +23,6 @@ export type ExpandableCardProps = {
   eventAction?: string
   eventCategory?: string
   eventName?: string
-  /** Reported verbatim, bypassing the `ExpandableCard`-prefixed category above. */
-  matomoEvent?: MatomoEventOptions
   visible?: boolean
   className?: string
 } & Pick<AccordionContentProps, "forceMount">
@@ -39,14 +35,13 @@ const ExpandableCard = ({
   eventAction = "Clicked",
   eventCategory = "",
   eventName = "",
-  matomoEvent,
   visible = false,
   className,
   forceMount = true,
 }: ExpandableCardProps) => {
   const [isVisible, setIsVisible] = useState(visible)
   const t = useTranslations("common")
-  const matomo = matomoEvent ?? {
+  const matomo = {
     eventAction,
     eventCategory: `ExpandableCard${eventCategory}`,
     eventName,
