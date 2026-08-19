@@ -1,27 +1,38 @@
 {
   "version": 1,
   "locale": "ur",
-  "translatedAt": "2026-06-17T01:18:11.778Z",
-  "englishManifestHash": "85b7a2955ed8",
+  "translatedAt": "2026-08-19T20:53:36.352Z",
+  "englishManifestHash": "66903cbe9f4c",
   "placeholderOrder": [
     "LINK-a21a82",
-    "COMPONENT-2189a9",
-    "COMPONENT-670e55",
-    "COMPONENT-f84c2e",
+    "LINK-2d5d7a",
+    "LINK-c903ea",
+    "LINK-2d5d7a",
+    "COMPONENT-4aa97c",
+    "COMPONENT-a6e992",
+    "COMPONENT-c9406c",
+    "LINK-42e833",
+    "LINK-8510c1",
+    "LINK-8f2eeb",
+    "LINK-9edc37",
     "LINK-1ed7a5",
     "HTMLTAG-359785",
     "HTMLTAG-648984",
     "LINK-8bde19",
-    "COMPONENT-1c25b4",
-    "COMPONENT-2b2db5",
-    "COMPONENT-8d95c1",
-    "COMPONENT-666f58",
+    "COMPONENT-1e2158",
+    "COMPONENT-cac2a6",
+    "COMPONENT-c4f5c7",
+    "COMPONENT-fa0495",
+    "LINK-7c069c",
+    "COMPONENT-0ae664",
     "LINK-2601c6",
+    "LINK-c2cd87",
     "LINK-11109b",
-    "LINK-1cb83b"
+    "LINK-1cb83b",
+    "LINK-f4d082"
   ],
   "placeholderMap": {
-    "COMPONENT-1c25b4": {
+    "COMPONENT-1e2158": {
       "type": "component",
       "values": {
         "componentName": "ExpandableCard",
@@ -29,7 +40,7 @@
         "eventName": "clicked who holds my keys"
       }
     },
-    "COMPONENT-2b2db5": {
+    "COMPONENT-cac2a6": {
       "type": "component",
       "values": {
         "componentName": "ExpandableCard",
@@ -37,7 +48,7 @@
         "eventName": "clicked so there are two sets of keys"
       }
     },
-    "COMPONENT-8d95c1": {
+    "COMPONENT-c4f5c7": {
       "type": "component",
       "values": {
         "componentName": "ExpandableCard",
@@ -45,7 +56,21 @@
         "eventName": "clicked when can I withdraw"
       }
     },
-    "COMPONENT-666f58": {
+    "COMPONENT-fa0495": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "SaasStaking",
+        "eventName": "clicked what if my provider disappears"
+      }
+    },
+    "LINK-7c069c": {
+      "type": "link",
+      "values": {
+        "url": "#trust-model-what-to-evaluate"
+      }
+    },
+    "COMPONENT-0ae664": {
       "type": "component",
       "values": {
         "componentName": "ExpandableCard",
@@ -59,25 +84,22 @@
         "url": "/staking/solo/"
       }
     },
-    "COMPONENT-2189a9": {
+    "COMPONENT-4aa97c": {
       "type": "component",
       "values": {
-        "componentName": "Card",
-        "emoji": ":desktop_computer:"
+        "componentName": "Card"
       }
     },
-    "COMPONENT-670e55": {
+    "COMPONENT-a6e992": {
       "type": "component",
       "values": {
-        "componentName": "Card",
-        "emoji": "🏁"
+        "componentName": "Card"
       }
     },
-    "COMPONENT-f84c2e": {
+    "COMPONENT-c9406c": {
       "type": "component",
       "values": {
-        "componentName": "Card",
-        "emoji": ":shield:"
+        "componentName": "Card"
       }
     },
     "HTMLTAG-359785": {
@@ -98,6 +120,42 @@
         "url": "/"
       }
     },
+    "LINK-2d5d7a": {
+      "type": "link",
+      "values": {
+        "url": "/staking/solo/"
+      }
+    },
+    "LINK-c903ea": {
+      "type": "link",
+      "values": {
+        "url": "/staking/pools/"
+      }
+    },
+    "LINK-42e833": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/pectra/"
+      }
+    },
+    "LINK-8510c1": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7002"
+      }
+    },
+    "LINK-8f2eeb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/client-diversity/"
+      }
+    },
+    "LINK-9edc37": {
+      "type": "link",
+      "values": {
+        "url": "/staking/dvt/"
+      }
+    },
     "LINK-1ed7a5": {
       "type": "link",
       "values": {
@@ -108,6 +166,12 @@
       "type": "link",
       "values": {
         "url": "/contributing/adding-staking-products/"
+      }
+    },
+    "LINK-c2cd87": {
+      "type": "link",
+      "values": {
+        "url": "https://figment.io/insights/what-is-staking-as-a-service/"
       }
     },
     "LINK-11109b": {
@@ -121,11 +185,17 @@
       "values": {
         "url": "https://www.attestant.io/posts/evaluating-staking-services/"
       }
+    },
+    "LINK-f4d082": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7002"
+      }
     }
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-17T01:18:11.778Z",
+      "translatedAt": "2026-08-19T20:53:36.352Z",
       "status": "success"
     }
   }
