@@ -1,0 +1,20 @@
+{
+  "metadata-title": "Digital public infrastructure with credible neutrality | ethereum.org",
+  "metadata-description": "Explore Ethereum as a public base layer for durable digital infrastructure, including records, credentials, payments, and data exchange.",
+  "hero-title": "Digital public infrastructure with credible neutrality",
+  "hero-description": "Explore Ethereum as a public base layer for durable digital infrastructure, including records, credentials, payments, and data exchange.",
+  "intro": "Identity, payments, records, and data exchange can become foundational public infrastructure. When these systems rely on one operator, that operator can be a single point of failure and control. Ethereum offers a public base layer whose core rules are not owned by a vendor, agency, or company.",
+  "neutrality-title": "What credible neutrality means",
+  "neutrality-description": "No organization, including the Ethereum Foundation, can unilaterally change the core network rules to favor one participant. A public deployment still relies on applications, integrators, and operators; assess them separately and design alternatives and exit paths.",
+  "patterns-title": "Public infrastructure patterns",
+  "credentials-title": "Credentials and identity",
+  "credentials-description": "Allow people to hold and present verifiable claims while minimizing disclosure.",
+  "records-title": "Records and registries",
+  "records-description": "Create tamper-evident shared history where several parties need to verify data.",
+  "payments-title": "Payments and disbursements",
+  "payments-description": "Coordinate value transfers with clear rules and proportionate privacy.",
+  "exchange-title": "Data exchange",
+  "exchange-description": "Publish or prove information without requiring every verifier to depend on one database.",
+  "weigh-title": "What to weigh before committing",
+  "weigh-description": "Plan for inclusion, accessibility, privacy, legal duties, key recovery, cost, provider failure, and long-term in-house capability. If a public authority legitimately controls a process end to end and no external party needs to verify it independently, a well-governed conventional system may be better."
+}

@@ -30,7 +30,7 @@ export const SITE_URL =
 export const IS_PRODUCTION_DEPLOY =
   process.env.NEXT_PUBLIC_CONTEXT === "production"
 export const DISCORD_PATH = "https://discord.gg/ethereum-org/"
-export const ENTERPRISE_ETHEREUM_URL = "https://institutions.ethereum.org/"
+export const ENTERPRISE_ETHEREUM_URL = "/enterprise/"
 export const GITHUB_REPO_URL =
   "https://github.com/ethereum/ethereum-org-website/"
 export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-website/tree/dev/`
@@ -162,6 +162,7 @@ export const SECTION_LABELS: NavSectionKey[] = [
   "build",
   "participate",
   "research",
+  "organizations",
 ]
 
 // Glossary Definition Component
