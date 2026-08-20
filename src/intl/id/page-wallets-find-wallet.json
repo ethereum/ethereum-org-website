@@ -6,7 +6,7 @@
   "page-find-wallet-last-updated": "Terakhir diperbarui",
   "page-find-wallet-meta-description": "Bandingkan dompet Ethereum secara berdampingan. Saring berdasarkan fitur seperti dukungan dompet perangkat keras, sumber terbuka, kustodian mandiri, multi-rantai, staking, dukungan NFT, dan lainnya untuk menemukan dompet yang tepat untuk Anda.",
   "page-find-wallet-meta-title": "Cari dan bandingkan dompet Ethereum",
-  "page-find-wallet-meta-description-fallback": "{wallet} — Dompet Ethereum untuk {devices}. Mendukung {networkCount, plural, one {{networkCountFormatted} jaringan} other {{networkCountFormatted} jaringan}} dan {languageCount, plural, one {{languageCountFormatted} bahasa} other {{languageCountFormatted} bahasa}}.",
+  "page-find-wallet-meta-description-fallback": "{wallet} — Dompet Ethereum untuk {devices}. Mendukung {networkCount, plural, other {{networkCountFormatted} jaringan}} dan {languageCount, plural, other {{languageCountFormatted} bahasa}}.",
   "page-find-wallet-title": "Pilih dompet Anda",
   "page-find-wallet-table-title": "Telusuri semua dompet",
   "page-find-wallet-results-label": "Dompet ditemukan",

@@ -6,7 +6,7 @@
   "page-find-wallet-last-updated": "最後更新",
   "page-find-wallet-meta-description": "並排比較以太坊錢包。透過支援硬體錢包、開源、自行託管、多鏈、質押、支援 NFT 等功能進行篩選，找到最適合你的錢包。",
   "page-find-wallet-meta-title": "尋找並比較以太坊錢包",
-  "page-find-wallet-meta-description-fallback": "{wallet} — 適用於 {devices} 的以太坊錢包。支援 {networkCount, plural, one {{networkCountFormatted} 個網路} other {{networkCountFormatted} 個網路}}與 {languageCount, plural, one {{languageCountFormatted} 種語言} other {{languageCountFormatted} 種語言}}。",
+  "page-find-wallet-meta-description-fallback": "{wallet} — 適用於 {devices} 的以太坊錢包。支援 {networkCount, plural, other {{networkCountFormatted} 個網路}}與 {languageCount, plural, other {{languageCountFormatted} 種語言}}。",
   "page-find-wallet-title": "選擇你的錢包",
   "page-find-wallet-table-title": "瀏覽所有錢包",
   "page-find-wallet-results-label": "找到的錢包",

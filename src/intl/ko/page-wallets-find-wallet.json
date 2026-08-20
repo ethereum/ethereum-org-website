@@ -6,7 +6,7 @@
   "page-find-wallet-last-updated": "최근 업데이트",
   "page-find-wallet-meta-description": "이더리움 지갑을 한눈에 비교해 보세요. 하드웨어 월렛 지원, 오픈 소스, 셀프 커스터디, 멀티체인, 스테이킹, NFT 지원 등의 기능으로 필터링하여 나에게 딱 맞는 지갑을 찾아보세요.",
   "page-find-wallet-meta-title": "이더리움 지갑 찾기 및 비교",
-  "page-find-wallet-meta-description-fallback": "{wallet} — {devices}용 이더리움 지갑입니다. {networkCount, plural, one {{networkCountFormatted}개 네트워크} other {{networkCountFormatted}개 네트워크}} 및 {languageCount, plural, one {{languageCountFormatted}개 언어} other {{languageCountFormatted}개 언어}}를 지원합니다.",
+  "page-find-wallet-meta-description-fallback": "{wallet} — {devices}용 이더리움 지갑입니다. {networkCount, plural, other {{networkCountFormatted}개 네트워크}} 및 {languageCount, plural, other {{languageCountFormatted}개 언어}}를 지원합니다.",
   "page-find-wallet-title": "지갑 선택하기",
   "page-find-wallet-table-title": "모든 지갑 둘러보기",
   "page-find-wallet-results-label": "검색된 지갑",

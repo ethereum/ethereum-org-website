@@ -6,7 +6,7 @@
   "page-find-wallet-last-updated": "最后更新",
   "page-find-wallet-meta-description": "横向比较以太坊钱包。通过硬件钱包支持、开源、自托管、多链、质押、NFT 支持等功能进行筛选，找到适合你的钱包。",
   "page-find-wallet-meta-title": "查找并比较以太坊钱包",
-  "page-find-wallet-meta-description-fallback": "{wallet} — 适用于 {devices} 的以太坊钱包。支持 {networkCount, plural, one {{networkCountFormatted} 个网络} other {{networkCountFormatted} 个网络}}和 {languageCount, plural, one {{languageCountFormatted} 种语言} other {{languageCountFormatted} 种语言}}。",
+  "page-find-wallet-meta-description-fallback": "{wallet} — 适用于 {devices} 的以太坊钱包。支持 {networkCount, plural, other {{networkCountFormatted} 个网络}}和 {languageCount, plural, other {{languageCountFormatted} 种语言}}。",
   "page-find-wallet-title": "选择你的钱包",
   "page-find-wallet-table-title": "浏览所有钱包",
   "page-find-wallet-results-label": "找到的钱包",
