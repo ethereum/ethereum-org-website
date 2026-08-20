@@ -30,9 +30,9 @@ Evden stake eden biri, doğrulayıcısını düzgün çalışır durumda ve çev
 Evden staking daha fazla sorumluluk getirir ancak fonlarınız ve staking kurulumunuz üzerinde size maksimum kontrol sağlar.
 
 <Grid>
-  <Card title="Keep all rewards" icon={<HandCoins />} description="Evden stake edenler, doğrulayıcıları çevrimiçi olduğu sürece doğrudan protokol tarafından ödenen protokol ödüllerinin %100'ünü alırlar." />
+  <Card title="Tüm ödülleri siz alın" icon={<HandCoins />} description="Evden stake edenler, doğrulayıcıları çevrimiçi olduğu sürece doğrudan protokol tarafından ödenen protokol ödüllerinin %100'ünü alırlar." />
   <Card title="Bireysel egemenlik" icon={<KeyRound />} description="Kendi anahtarlarınızı ve fonlarınızın tam velayetini her zaman elinizde tutun. Riskinizi en aza indirmenizi sağlayan istemci ve donanım kombinasyonunu seçin. Hiçbir üçüncü taraf sizin için bu kararları veremez veya çekim işlemlerinizi kısıtlayamaz." />
-  <Card title="Client and geographic diversity" icon={<GlobeLock />} description="Birçok konuma yayılmış donanımlarda azınlık istemcileri çalıştıran evden stake edenler, ağın merkeziyetsizliğini ve güvenliğini güçlendirir." />
+  <Card title="İstemci ve coğrafi çeşitlilik" icon={<GlobeLock />} description="Birçok konuma yayılmış donanımlarda azınlık istemcileri çalıştıran evden stake edenler, ağın merkeziyetsizliğini ve güvenliğini güçlendirir." />
 </Grid>
 
 ## Evden stake etmeden önce dikkat edilmesi gerekenler {#considerations-before-staking-solo}

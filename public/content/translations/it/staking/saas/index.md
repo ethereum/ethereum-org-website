@@ -24,7 +24,7 @@ Rispetto al [solo staking](/staking/solo/), ogni forma di delega pone un middlew
 
 ### Cosa non è lo staking delegato {#what-delegated-staking-is-not}
 
-- **Staking in pool e token di liquid staking (LST)**: con le pool combini qualsiasi importo di ETH con altri staker, ricevendo di solito un token che rappresenta la tua quota dello stake della pool. Non stai delegando il tuo validatore; i contratti intelligenti della pool e gli operatori dei nodi controllano i validatori. [Maggiori informazioni sullo staking in pool](/staking/pools/)
+- **Staking in pool e token di liquid staking (LST)**: con le pool combini qualsiasi importo di ETH con altri staker, ricevendo di solito un token che rappresenta la tua quota dello stake della pool. Non stai delegando il tuo validatore; gli smart contract della pool e gli operatori dei nodi controllano i validatori. [Maggiori informazioni sullo staking in pool](/staking/pools/)
 - **Funzionamento del nodo vincolato (bonded)**: alcuni protocolli di staking ti consentono di eseguire un validatore sul tuo hardware con meno di 32 ETH depositando una cauzione. Questo è il funzionamento del nodo, l'opposto della delega, ed è trattato insieme al [solo staking](/staking/solo/).
 
 ## Perché delegare il tuo staking? {#why-stake-with-a-service}
@@ -32,9 +32,9 @@ Rispetto al [solo staking](/staking/solo/), ogni forma di delega pone un middlew
 Se hai 32 ETH da mettere in staking, ma non ti senti a tuo agio nel gestire l'hardware, i servizi di staking delegato ti consentono di delegare l'aspetto tecnico mentre guadagni le ricompense dei blocchi native di Ethereum.
 
 <Grid>
-  <Card title="Your own validator" icon={<MonitorCheck />} description="Deposita i tuoi 32 ETH per attivare il tuo set di chiavi di firma che parteciperanno al consenso di Ethereum. Monitora i tuoi progressi con le dashboard per guardare accumularsi quelle ricompense in ETH." />
-  <Card title="Easy to start" icon={<Flag />} description="Dimentica le specifiche hardware, la configurazione, la manutenzione del nodo e gli aggiornamenti. I fornitori ti consentono di esternalizzare la parte difficile caricando le tue credenziali di firma, permettendo loro di eseguire un validatore per tuo conto, a un piccolo costo." />
-  <Card title="Limit your risk" icon={<ShieldHalf />} description="Con i servizi non-custodial mantieni il controllo delle chiavi che consentono di prelevare o trasferire i fondi messi in staking. Queste sono diverse dalle chiavi di firma e possono essere archiviate separatamente per limitare (ma non eliminare) il tuo rischio come staker." />
+  <Card title="Il tuo validatore personale" icon={<MonitorCheck />} description="Deposita i tuoi 32 ETH per attivare il tuo set di chiavi di firma che parteciperanno al consenso di Ethereum. Monitora i tuoi progressi con le dashboard per guardare accumularsi quelle ricompense in ETH." />
+  <Card title="Facile da iniziare" icon={<Flag />} description="Dimentica le specifiche hardware, la configurazione, la manutenzione del nodo e gli aggiornamenti. I fornitori ti consentono di esternalizzare la parte difficile caricando le tue credenziali di firma, permettendo loro di eseguire un validatore per tuo conto, a un piccolo costo." />
+  <Card title="Limita il tuo rischio" icon={<ShieldHalf />} description="Con i servizi non-custodial mantieni il controllo delle chiavi che consentono di prelevare o trasferire i fondi messi in staking. Queste sono diverse dalle chiavi di firma e possono essere archiviate separatamente per limitare (ma non eliminare) il tuo rischio come staker." />
 </Grid>
 
 ## Confronto delle opzioni di staking {#comparison-of-staking-options}

@@ -26,9 +26,9 @@ Cada opción conjunta resuelve el problema real de acceso de hacer staking con m
 Además de los beneficios de [participar en el staking](/staking/), hacer staking con un pool conlleva una serie de beneficios únicos.
 
 <Grid>
-  <Card title="Low barrier to entry" icon={<Fish />} description="¿No eres una ballena? No hay problema. La mayoría de los pools de staking te permiten hacer staking de prácticamente cualquier cantidad de ETH uniendo fuerzas con otros participantes, a diferencia del staking en solitario que requiere 32 ETH." />
-  <Card title="Stake today" icon={<Clock />} description="Hacer staking con un pool es tan fácil como un intercambio de tokens. No hay necesidad de preocuparse por la configuración del hardware y el mantenimiento del nodo. Los pools te permiten depositar tu ETH, lo que permite a los operadores de nodos ejecutar validadores. Luego, las recompensas se distribuyen a los contribuyentes menos una tarifa por las operaciones del nodo." />
-  <Card title="Liquid staking tokens" icon={<Droplets />} description="Muchos pools de staking proporcionan un token que representa un reclamo sobre tu ETH en staking y las recompensas que genera. Esto te permite hacer uso de tu ETH en staking, por ejemplo, como colateral en aplicaciones DeFi." />
+  <Card title="Baja barrera de entrada" icon={<Fish />} description="¿No eres una ballena? No hay problema. La mayoría de los pools de staking te permiten hacer staking de prácticamente cualquier cantidad de ETH uniendo fuerzas con otros participantes, a diferencia del staking en solitario que requiere 32 ETH." />
+  <Card title="Haz staking hoy" icon={<Clock />} description="Hacer staking con un pool es tan fácil como un intercambio de tokens. No hay necesidad de preocuparse por la configuración del hardware y el mantenimiento del nodo. Los pools te permiten depositar tu ETH, lo que permite a los operadores de nodos ejecutar validadores. Luego, las recompensas se distribuyen a los contribuyentes menos una tarifa por las operaciones del nodo." />
+  <Card title="Tokens de staking líquido" icon={<Droplets />} description="Muchos pools de staking proporcionan un token que representa un reclamo sobre tu ETH en staking y las recompensas que genera. Esto te permite hacer uso de tu ETH en staking, por ejemplo, como colateral en aplicaciones DeFi." />
 </Grid>
 
 ## Comparación de opciones de staking {#comparison-of-staking-options}

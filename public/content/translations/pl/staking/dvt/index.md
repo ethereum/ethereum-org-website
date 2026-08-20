@@ -7,7 +7,7 @@ sidebarDepth: 2
 summaryPoints:
   - Dzieli klucz do podpisywania walidatora na wiele maszyn i operatorów, eliminując pojedyncze punkty awarii
   - Utrzymuje walidatory online w przypadku awarii pojedynczego sprzętu, oprogramowania lub operatora
-  - Infrastruktura produkcyjna używana obecnie przez osoby uprawiające staking solo, usługi stakingowe i pule stakingu grupowego
+  - Infrastruktura produkcyjna używana obecnie przez osoby uprawiające staking solo, usługi stakingowe i pule stakingowe
 ---
 
 ## Czym jest technologia rozproszonych walidatorów? {#what-is-dvt}
@@ -16,11 +16,11 @@ Technologia rozproszonych walidatorów (DVT) to podejście do bezpieczeństwa wa
 
 DVT rozprasza zarządzanie kluczami i podpisywanie poprzez **podział klucza prywatnego** używanego do zabezpieczenia walidatora **pomiędzy wiele komputerów** zorganizowanych w „klaster”. Pozwala to niektórym węzłom w klastrze na przejście w tryb offline przy jednoczesnym utrzymaniu aktywności węzła walidatora, ponieważ niezbędna praca walidacyjna może być wykonana przez podzbiór maszyn w każdym klastrze. Taka dystrybucja redukuje pojedyncze punkty awarii, czyniąc walidator bardziej solidnym. Dodatkową korzyścią z rozproszonego podpisywania w DVT jest to, że bardzo utrudnia atakującym uzyskanie dostępu do klucza, ponieważ nie jest on w całości przechowywany na żadnej pojedynczej maszynie.
 
-![A Diagram showing how a single validator key is split into key shares and distributed to multiple nodes with varying components.](./dvt-cluster.png)
+![Diagram pokazujący, jak pojedynczy klucz walidatora jest dzielony na udziały w kluczu i rozdzielany pomiędzy wiele węzłów o różnych komponentach.](./dvt-cluster.png)
 
 DVT nie jest osobnym sposobem na staking. Jest to warstwa oprogramowania, z której może korzystać każda konfiguracja stakingowa:
 - [Osoby uprawiające staking solo](/staking/solo/) mogą połączyć siły, aby wspólnie prowadzić walidator, lub pojedyncza osoba uprawiająca staking solo może użyć DVT, aby zwiększyć odporność swojej konfiguracji stakingu solo.
-- [Usługi stakingowe](/staking/saas/) i [pule stakingu grupowego](/staking/pools/) mogą używać DVT, aby zwiększyć odporność i wzmocnić swoją infrastrukturę stakingową lub rozdzielić operacje walidatora pomiędzy wielu niezależnych operatorów.
+- [Usługi stakingowe](/staking/saas/) i [pule stakingowe](/staking/pools/) mogą używać DVT, aby zwiększyć odporność i wzmocnić swoją infrastrukturę stakingową lub rozdzielić operacje walidatora pomiędzy wielu niezależnych operatorów.
 
 ## Dlaczego potrzebujemy DVT? {#why-do-we-need-dvt}
 
@@ -87,19 +87,19 @@ DVT umożliwia również niepowierniczy staking, pozwalając na dystrybucję klu
 
 ### Staking jako usługa (SaaS) {#saas}
 
-Operatorzy (tacy jak pule stakingu grupowego i stakujący instytucjonalni) zarządzający wieloma walidatorami mogą używać DVT w celu zmniejszenia ryzyka. Rozpraszając swoją infrastrukturę, mogą dodać redundancję do swoich operacji i zdywersyfikować rodzaje używananego sprzętu.
+Operatorzy (tacy jak pule stakingowe i stakujący instytucjonalni) zarządzający wieloma walidatorami mogą używać DVT w celu zmniejszenia ryzyka. Rozpraszając swoją infrastrukturę, mogą dodać redundancję do swoich operacji i zdywersyfikować rodzaje używanego sprzętu.
 
 DVT dzieli odpowiedzialność za zarządzanie kluczami na wiele węzłów, co oznacza, że niektóre koszty operacyjne mogą być również dzielone. DVT może również zmniejszyć ryzyko operacyjne i koszty ubezpieczenia dla dostawców usług stakingowych.
 
-### Pule stakingu grupowego {#staking-pools}
+### Pule stakingowe {#staking-pools}
 
-Ze względu na standardowe konfiguracje walidatorów, pule stakingu grupowego i dostawcy płynnego stakingu historycznie musieli pokładać znaczne zaufanie w każdym pojedynczym operatorze, ponieważ zyski i straty są uspołeczniane w całej puli. Byli również zdani na operatorów w kwestii zabezpieczenia kluczy do podpisywania, ponieważ do czasu pojawienia się DVT nie było dla nich innej opcji.
+Ze względu na standardowe konfiguracje walidatorów, pule stakingowe i dostawcy płynnego stakingu historycznie musieli pokładać znaczne zaufanie w każdym pojedynczym operatorze, ponieważ zyski i straty są uspołeczniane w całej puli. Byli również zdani na operatorów w kwestii zabezpieczenia kluczy do podpisywania, ponieważ do czasu pojawienia się DVT nie było dla nich innej opcji.
 
 Mimo że tradycyjnie podejmuje się wysiłki w celu rozłożenia ryzyka poprzez dystrybucję stawek pomiędzy wielu operatorów, każdy operator nadal niezależnie zarządza znaczną stawką. Poleganie na jednym operatorze stwarza ogromne ryzyko, jeśli osiąga on słabe wyniki, napotyka przestoje, zostaje skompromitowany lub działa złośliwie.
 
 Wykorzystując DVT, można zmniejszyć zaufanie wymagane od każdego pojedynczego operatora. **Pule mogą umożliwić operatorom utrzymywanie stawek bez konieczności sprawowania pieczy nad kluczami walidatora** (ponieważ wykorzystywane są tylko udziały w kluczu). Pozwala to również na dystrybucję zarządzanych stawek pomiędzy większą liczbę operatorów (np. zamiast jednego operatora zarządzającego 1000 walidatorów, DVT umożliwia wspólne prowadzenie tych walidatorów przez wielu operatorów). Zróżnicowane konfiguracje operatorów pomagają zapewnić, że jeśli jeden operator ulegnie awarii, pozostali nadal będą w stanie poświadczać. Wynikająca z tego redundancja i dywersyfikacja mogą prowadzić do lepszej wydajności i odporności, przy jednoczesnej maksymalizacji nagród.
 
-Kolejną korzyścią z minimalizacji zaufania do pojedynczego operatora jest to, że pule stakingu grupowego mogą pozwolić na bardziej otwarty i niewymagający pozwoleń udział operatorów. Niektóre pule stakingu grupowego robią to dziś w produkcji. Wielooperatorskie klastry DVT pozwalają protokołom łączyć domowych stakujących i mniejszych operatorów z większymi profesjonalistami, łącząc wyselekcjonowane i niewymagające pozwoleń zestawy operatorów.
+Kolejną korzyścią z minimalizacji zaufania do pojedynczego operatora jest to, że pule stakingowe mogą pozwolić na bardziej otwarty i niewymagający pozwoleń udział operatorów. Niektóre pule stakingowe robią to dziś w produkcji. Wielooperatorskie klastry DVT pozwalają protokołom łączyć domowych stakujących i mniejszych operatorów z większymi profesjonalistami, łącząc wyselekcjonowane i niewymagające pozwoleń zestawy operatorów.
 
 ## Potencjalne wady korzystania z DVT {#potential-drawbacks-of-using-dvt}
 

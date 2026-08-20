@@ -29,7 +29,7 @@ sidebarDepth: 2
 
 当节点正在运行并同步时，你就可以[使用它](#using-the-node)了，但请务必留意其[维护](#operating-the-node)。
 
-![Client setup](./diagram.png)
+![客户端设置](./diagram.png)
 
 ### 环境和硬件 {#environment-and-hardware}
 
@@ -71,18 +71,18 @@ sidebarDepth: 2
 
 还要确保你的互联网连接不受[带宽上限](https://wikipedia.org/wiki/Data_cap)的限制。建议使用不计量的连接，因为初始同步和广播到网络的数据可能会超出你的限制。
 
-##### 操作系统 {#plug-and-play}
+##### 操作系统
 
 所有客户端都支持主流操作系统——Linux、macOS、Windows。这意味着你可以在具有最适合你的操作系统 (OS) 的常规桌面或服务器机器上运行节点。确保你的操作系统是最新的，以避免潜在的问题和安全漏洞。
 
-##### 最低要求 {#ethereum-on-a-single-board-computer}
+##### 最低要求
 
 - 2 核以上的 CPU
 - 16 GB RAM（为了稳定性推荐 32 GB）
 - 2 TB NVMe SSD（到 2027 年可能会超出，阅读更多关于[适合以太坊节点的优秀和一般 SSD](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038) 的信息）
 - 25+ MBit/s 带宽
 
-##### 推荐规格 {#spinning-up-node}
+##### 推荐规格
 
 节点运营商当前的硬件指南在 [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870) 中有说明。对于全节点，它推荐：
 
@@ -105,26 +105,26 @@ sidebarDepth: 2
 
 对于共识客户端，空间要求还取决于客户端实现和启用的功能（例如，验证者罚没者），但通常信标数据还需要额外的 200GB。随着验证者数量的增加，带宽负载也会增加。你可以在[此分析中找到有关共识客户端要求的详细信息](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc)。
 
-#### 即插即用解决方案 {#automatized-setup}
+#### 即插即用解决方案 {#plug-and-play}
 
 使用自有硬件运行节点的最简单选项是使用即插即用设备。来自供应商的预配置机器提供了最直接的体验：订购、连接、运行。一切都已预先配置并自动运行，带有直观的指南和用于监控和控制软件的仪表板。
 
 - [DAppNode](https://dappnode.io/)
 - [Avado](https://ava.do/)
 
-#### 单板计算机上的以太坊 {#manual-setup}
+#### 单板计算机上的以太坊 {#ethereum-on-a-single-board-computer}
 
 运行以太坊节点的一种简单且廉价的方法是使用单板计算机，即使是像 Raspberry Pi 这样具有 ARM 架构的计算机。[ARM 上的以太坊](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)为 Raspberry Pi 和其他 ARM 板提供了易于运行的多个执行和共识客户端镜像。
 
 像这样小巧、实惠且高效的设备非常适合在家中运行节点，但请记住它们的性能有限。
 
-## 启动节点 {#getting-the-client}
+## 启动节点 {#spinning-up-node}
 
 实际的客户端设置可以通过自动启动器完成，也可以手动直接设置客户端软件。
 
 对于不太高级的用户，推荐的方法是使用启动器，这是一种指导你完成安装并自动执行客户端设置过程的软件。但是，如果你有一些使用终端的经验，手动设置的步骤应该很容易遵循。
 
-### 引导式设置 {#client-setup}
+### 引导式设置 {#automatized-setup}
 
 多个用户友好的项目旨在改善设置客户端的体验。这些启动器提供自动的客户端安装和配置，有些甚至提供图形界面用于引导式设置和监控客户端。
 
@@ -137,13 +137,13 @@ sidebarDepth: 2
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) - 节点设置工具，使用 CLI 向导自动生成 Docker 配置。由奈瑟曼德用 Go 编写。
 - [Chainstack Self-Hosted](https://docs.chainstack.com/docs/self-hosted/introduction) - 用于在 Kubernetes 上部署执行和共识客户端的 Web UI 和 CLI。包含快照引导和内置监控。免费。无需 Chainstack 帐户。由 Chainstack 构建。
 
-### 手动客户端设置 {#starting-the-execution-client}
+### 手动客户端设置 {#manual-setup}
 
 另一种选择是手动下载、验证和配置客户端软件。即使某些客户端提供图形界面，手动设置仍然需要基本的终端技能，但提供了更多的多功能性。
 
 如前所述，设置你自己的以太坊节点将需要运行一对共识和执行客户端。某些客户端可能包含另一种类型的轻客户端，并且无需任何其他软件即可同步。然而，完全的无须信任验证需要这两种实现。
 
-#### 获取客户端软件 {#running-an-execution-client}
+#### 获取客户端软件 {#getting-the-client}
 
 首先，你需要获取你首选的[执行客户端](/developers/docs/nodes-and-clients/#execution-clients)和[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)软件。
 
@@ -153,7 +153,7 @@ sidebarDepth: 2
 
 以下是客户端的发布页面，你可以在其中找到它们预构建的二进制文件或安装说明：
 
-##### 执行客户端 {#starting-the-consensus-client}
+##### 执行客户端
 
 - [贝苏](https://github.com/hyperledger/besu/releases)
 - [埃里贡](https://github.com/ledgerwatch/erigon/releases)
@@ -163,7 +163,7 @@ sidebarDepth: 2
 
 值得注意的是，客户端多样性是[执行层上的一个问题](/developers/docs/nodes-and-clients/client-diversity/#execution-layer)。建议读者考虑运行少数派执行客户端。
 
-##### 共识客户端 {#running-a-consensus-client}
+##### 共识客户端
 
 - [莱特豪斯](https://github.com/sigp/lighthouse/releases/latest)
 - [洛德斯塔](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/)（不提供预构建的二进制文件，仅提供 Docker 镜像或从源代码构建）
@@ -175,7 +175,7 @@ sidebarDepth: 2
 
 [查看最新的网络客户端使用情况](https://clientdiversity.org/)并了解有关[客户端多样性](/developers/docs/nodes-and-clients/client-diversity)的更多信息。
 
-##### 验证软件 {#adding-validators}
+##### 验证软件
 
 从互联网下载软件时，建议验证其完整性。此步骤是可选的，但特别是对于像以太坊客户端这样的关键基础设施，了解潜在的攻击媒介并避免它们非常重要。如果你下载了预构建的二进制文件，你需要信任它，并承担攻击者可能将可执行文件替换为恶意文件的风险。
 
@@ -189,7 +189,7 @@ sha256sum teku-22.6.1.tar.gz
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
 ```
 
-#### 客户端设置 {#using-the-node}
+#### 客户端设置 {#client-setup}
 
 安装、下载或编译客户端软件后，你就可以运行它了。这仅意味着必须使用正确的配置来执行它。客户端提供丰富的配置选项，可以启用各种功能。
 
@@ -201,7 +201,7 @@ sha256sum teku-22.6.1.tar.gz
 
 在下一节中可以找到使用基本配置运行执行客户端的示例。
 
-#### 启动执行客户端 {#reaching-rpc}
+#### 启动执行客户端 {#starting-the-execution-client}
 
 在启动以太坊客户端软件之前，执行最后一次检查以确保你的环境已准备就绪。例如，确保：
 
@@ -217,13 +217,13 @@ sha256sum teku-22.6.1.tar.gz
 
 执行客户端和共识客户端通过 [Engine API](https://github.com/ethereum/execution-apis/tree/main/src/engine) 中指定的经过身份验证的端点进行通信。为了连接到共识客户端，执行客户端必须在已知路径生成一个 [`jwtsecret`](https://jwt.io/)。出于安全和稳定性的原因，客户端应在同一台机器上运行，并且两个客户端都必须知道此路径，因为它用于验证它们之间的本地 RPC 连接。执行客户端还必须为经过身份验证的 API 定义一个监听端口。
 
-此代币由客户端软件自动生成，但在某些情况下，你可能需要自己生成。你可以使用 [OpenSSL](https://www.openssl.org/) 生成它：
+此令牌由客户端软件自动生成，但在某些情况下，你可能需要自己生成。你可以使用 [OpenSSL](https://www.openssl.org/) 生成它：
 
 ```sh
 openssl rand -hex 32 > jwtsecret
 ```
 
-#### 运行执行客户端 {#operating-the-node}
+#### 运行执行客户端 {#running-an-execution-client}
 
 本节将指导你启动执行客户端。它仅作为基本配置的示例，将使用以下设置启动客户端：
 
@@ -240,9 +240,9 @@ openssl rand -hex 32 > jwtsecret
 
 > 请注意，示例中的反斜杠 `\` 仅用于格式化目的；配置标志可以在单行中定义。
 
-##### 运行贝苏 {#keeping-node-online}
+##### 运行贝苏
 
-此示例在主网上启动贝苏，将区块链数据以默认格式存储在 `/data/ethereum`，启用 JSON-RPC 和 Engine RPC 以连接共识客户端。Engine API 使用代币 `jwtsecret` 进行身份验证，并且仅允许来自 `localhost` 的调用。
+此示例在主网上启动贝苏，将区块链数据以默认格式存储在 `/data/ethereum`，启用 JSON-RPC 和 Engine RPC 以连接共识客户端。Engine API 使用令牌 `jwtsecret` 进行身份验证，并且仅允许来自 `localhost` 的调用。
 
 ```sh
 besu --network=mainnet \
@@ -262,7 +262,7 @@ besu --Xlauncher
 
 [贝苏的文档](https://besu.hyperledger.org/public-networks/get-started/start-node/)包含其他选项和配置详细信息。
 
-##### 运行埃里贡 {#creating-client-services}
+##### 运行埃里贡
 
 此示例在主网上启动埃里贡，将区块链数据存储在 `/data/ethereum`，启用 JSON-RPC，定义允许哪些命名空间，并启用用于连接共识客户端的身份验证（由 `jwtsecret` 路径定义）。
 
@@ -275,7 +275,7 @@ erigon --chain mainnet \
 
 埃里贡默认使用 8GB HDD 执行完全同步，这将产生超过 2TB 的归档数据。确保 `datadir` 指向具有足够可用空间的磁盘，或者查看可以修剪不同类型数据的 `--prune` 标志。查看埃里贡的 `--help` 以了解更多信息。
 
-##### 运行 Go以太坊 (Geth) {#updating-clients}
+##### 运行 Go以太坊 (Geth)
 
 此示例在主网上启动 Go以太坊 (Geth)，将区块链数据存储在 `/data/ethereum`，启用 JSON-RPC 并定义允许哪些命名空间。它还启用了用于连接共识客户端的身份验证，这需要 `jwtsecret` 的路径以及定义允许哪些连接的选项，在我们的示例中仅允许来自 `localhost` 的连接。
 
@@ -290,7 +290,7 @@ geth --mainnet \
 
 查看[所有配置选项的文档](https://geth.ethereum.org/docs/fundamentals/command-line-options)，并了解有关[与共识客户端一起运行 Go以太坊 (Geth)](https://geth.ethereum.org/docs/getting-started/consensus-clients) 的更多信息。
 
-##### 运行奈瑟曼德 {#running-additional-services}
+##### 运行奈瑟曼德
 
 奈瑟曼德提供各种[安装选项](https://docs.nethermind.io/get-started/installing-nethermind)。该软件包带有各种二进制文件，包括带有引导式设置的启动器，这将帮助你交互式地创建配置。或者，你可以找到 Runner，它是可执行文件本身，你可以直接使用配置标志运行它。默认情况下启用 JSON-RPC。
 
@@ -304,7 +304,7 @@ Nethermind.Runner --config mainnet \
 
 执行客户端将启动其核心功能、选定的端点，并开始寻找对等节点。成功发现对等节点后，客户端开始同步。执行客户端将等待来自共识客户端的连接。一旦客户端成功同步到当前状态，当前的区块链数据将可用。
 
-##### 运行瑞斯 {#monitoring-the-node}
+##### 运行瑞斯
 
 此示例在主网上启动瑞斯，使用默认数据位置。启用 JSON-RPC 和 Engine RPC 身份验证以连接共识客户端（由 `jwtsecret` 路径定义），并且仅允许来自 `localhost` 的调用。
 
@@ -317,17 +317,17 @@ reth node \
 
 请参阅[配置瑞斯](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth)以了解有关默认数据目录的更多信息。[瑞斯的文档](https://reth.rs/run/mainnet.html)包含其他选项和配置详细信息。
 
-#### 启动共识客户端 {#further-reading}
+#### 启动共识客户端 {#starting-the-consensus-client}
 
 必须使用正确的端口配置启动共识客户端，以建立与执行客户端的本地 RPC 连接。共识客户端必须使用暴露的执行客户端端口作为配置参数来运行。
 
-共识客户端还需要执行客户端的 `jwt-secret` 路径，以便验证它们之间的 RPC 连接。与上面的执行示例类似，每个共识客户端都有一个配置标志，该标志将 jwt 代币文件路径作为参数。这必须与提供给执行客户端的 `jwtsecret` 路径一致。
+共识客户端还需要执行客户端的 `jwt-secret` 路径，以便验证它们之间的 RPC 连接。与上面的执行示例类似，每个共识客户端都有一个配置标志，该标志将 jwt 令牌文件路径作为参数。这必须与提供给执行客户端的 `jwtsecret` 路径一致。
 
 如果你计划运行验证者，请确保添加一个配置标志，指定费用接收者的以太坊地址。这是你的验证者的以太币奖励累积的地方。每个共识客户端都有一个选项，例如 `--suggested-fee-recipient=0xabcd1`，它将以太坊地址作为参数。
 
 在测试网上启动信标节点时，你可以通过使用公共端点进行[检查点同步](https://notes.ethereum.org/@launchpad/checkpoint-sync)来节省大量的同步时间。
 
-#### 运行共识客户端 {#related-topics}
+#### 运行共识客户端 {#running-a-consensus-client}
 
 ##### 运行莱特豪斯
 
@@ -389,9 +389,9 @@ teku --network mainnet \
     --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
-当共识客户端连接到执行客户端以读取存款合约并识别验证者时，它还会连接到其他信标节点对等节点，并开始从创世区块同步共识时段。一旦信标节点达到当前时段，信标 API 就可以供你的验证者使用了。了解有关[信标节点 API](https://ethereum.github.io/beacon-APIs) 的更多信息。
+当共识客户端连接到执行客户端以读取存款合约并识别验证者时，它还会连接到其他信标节点对等节点，并开始从创世区块同步共识时隙。一旦信标节点达到当前时段，信标 API 就可以供你的验证者使用了。了解有关[信标节点 API](https://ethereum.github.io/beacon-APIs) 的更多信息。
 
-### 添加验证者
+### 添加验证者 {#adding-validators}
 
 共识客户端充当供验证者连接的信标节点。每个共识客户端都有自己的验证者软件，在其各自的文档中有详细描述。
 
@@ -401,7 +401,7 @@ teku --network mainnet \
 
 查看[质押页面](/staking)以获取有关质押选项的概述。
 
-### 使用节点
+### 使用节点 {#using-the-node}
 
 执行客户端提供 [RPC API 端点](/developers/docs/apis/json-rpc/)，你可以使用它们以各种方式在以太坊网络上提交交易、交互或部署智能合约：
 
@@ -413,7 +413,7 @@ teku --network mainnet \
 
 共识客户端都公开了一个 [信标 API](https://ethereum.github.io/beacon-APIs)，可用于检查共识客户端的状态，或通过使用 [Curl](https://curl.se) 等工具发送请求来下载区块和共识数据。有关此内容的更多信息，请参阅每个共识客户端的文档。
 
-#### 访问 RPC
+#### 访问 RPC {#reaching-rpc}
 
 执行客户端 JSON-RPC 的默认端口是 `8545`，但你可以在配置中修改本地端点的端口。默认情况下，RPC 接口只能在你的计算机的本地主机上访问。要使其可远程访问，你可能希望通过将地址更改为 `0.0.0.0` 来将其公开。这将使其可以通过本地网络和公共 IP 地址访问。在大多数情况下，你还需要在路由器上设置端口转发。
 
@@ -429,11 +429,11 @@ teku --network mainnet \
 
 最后，提供对内部网络访问的最流行方法之一是通过 VPN 连接。根据你的用例和需要访问你的节点的用户数量，安全的 VPN 连接可能是一个选项。[OpenVPN](https://openvpn.net/) 是一个功能齐全的 SSL VPN，它使用行业标准的 SSL/TLS 协议实现 OSI 第 2 层或第 3 层安全网络扩展，支持基于证书、智能卡和/或用户名/密码凭据的灵活客户端身份验证方法，并允许使用应用于 VPN 虚拟接口的防火墙规则来实现特定于用户或组的访问控制策略。
 
-### 运行节点
+### 运行节点 {#operating-the-node}
 
 你应该定期监控你的节点以确保其正常运行。你可能需要进行偶尔的维护。
 
-#### 保持节点在线
+#### 保持节点在线 {#keeping-node-online}
 
 你的节点不必一直在线，但你应该尽可能保持其在线，以使其与网络保持同步。你可以将其关闭以重新启动，但请记住：
 
@@ -443,11 +443,11 @@ teku --network mainnet \
 
 _这不适用于共识层验证者节点。_ 使你的节点离线将影响所有依赖它的服务。如果你出于_质押_目的运行节点，你应该尽量减少停机时间。
 
-#### 创建客户端服务
+#### 创建客户端服务 {#creating-client-services}
 
 考虑创建一个服务以在启动时自动运行你的客户端。例如，在 Linux 服务器上，良好的做法是创建一个服务（例如，使用 `systemd`），该服务在具有有限权限的用户下使用正确的配置执行客户端，并自动重新启动。
 
-#### 更新客户端
+#### 更新客户端 {#updating-clients}
 
 你需要使用最新的安全补丁、功能和 [EIP](/eips/) 保持你的客户端软件是最新的。特别是在[硬分叉](/ethereum-forks/)之前，请确保你运行的是正确的客户端版本。
 
@@ -457,17 +457,17 @@ _这不适用于共识层验证者节点。_ 使你的节点离线将影响所�
 
 每个客户端实现都有一个人类可读的版本字符串，用于点对点协议，但也可以从命令行访问。此版本字符串让用户检查他们是否运行了正确的版本，并允许有兴趣量化特定客户端在网络上分布的区块浏览器和其他分析工具使用。请参阅各个客户端文档以获取有关版本字符串的更多信息。
 
-#### 运行其他服务
+#### 运行其他服务 {#running-additional-services}
 
 运行你自己的节点让你能够使用需要直接访问以太坊客户端 RPC 的服务。这些是构建在以太坊之上的服务，例如[二层网络 (l2) 解决方案](/developers/docs/scaling/#layer-2-scaling)、钱包后端、区块浏览器、开发人员工具和其他以太坊基础设施。
 
-#### 监控节点
+#### 监控节点 {#monitoring-the-node}
 
 为了正确监控你的节点，请考虑收集指标。客户端提供指标端点，因此你可以获取有关节点的全面数据。使用 [InfluxDB](https://www.influxdata.com/get-influxdb/) 或 [Prometheus](https://prometheus.io/) 等工具创建数据库，你可以在 [Grafana](https://grafana.com/) 等软件中将其转换为可视化和图表。有许多使用此软件的设置和不同的 Grafana 仪表板供你可视化你的节点和整个网络。例如，查看[关于监控 Go以太坊 (Geth) 的教程](/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/)。
 
 作为监控的一部分，请务必留意机器的性能。在节点的初始同步期间，客户端软件可能会大量占用 CPU 和 RAM。除了 Grafana 之外，你还可以使用操作系统提供的工具（如 `htop` 或 `uptime`）来执行此操作。
 
-## 延伸阅读
+## 延伸阅读 {#further-reading}
 
 - [以太坊质押指南](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat，经常更新_
 - [指南 | 如何在主网上设置以太坊质押的验证者](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew，经常更新_
@@ -479,7 +479,7 @@ _这不适用于共识层验证者节点。_ 使你的节点离线将影响所�
 - [在以太坊主网上运行 Hyperledger 贝苏节点：优势、要求和设置](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi，2020 年 5 月 7 日_
 - [使用监控堆栈部署奈瑟曼德以太坊客户端](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth，2020 年 7 月 8 日_
 
-## 相关主题
+## 相关主题 {#related-topics}
 
 - [节点和客户端](/developers/docs/nodes-and-clients/)
 - [区块](/developers/docs/blocks/)

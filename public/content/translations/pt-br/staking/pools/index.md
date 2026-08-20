@@ -26,9 +26,9 @@ Toda opção em pool resolve o problema real de acesso ao staking com menos de 3
 Além dos benefícios de [participar do staking](/staking/), fazer stake com um pool traz uma série de benefícios exclusivos.
 
 <Grid>
-  <Card title="Low barrier to entry" icon={<Fish />} description="Não é uma baleia? Sem problemas. A maioria dos pools de staking permite que você faça stake de praticamente qualquer quantia de ETH unindo forças com outros stakers, ao contrário do staking solo, que exige 32 ETH." />
-  <Card title="Stake today" icon={<Clock />} description="Fazer stake com um pool é tão fácil quanto uma troca de tokens. Não há necessidade de se preocupar com a configuração de hardware e manutenção de nós. Os pools permitem que você deposite seu ETH, o que possibilita que os operadores de nó executem validadores. As recompensas são então distribuídas aos contribuidores, menos uma taxa para as operações do nó." />
-  <Card title="Liquid staking tokens" icon={<Droplets />} description="Muitos pools de staking fornecem um token que representa uma reivindicação sobre o seu ETH em stake e as recompensas que ele gera. Isso permite que você faça uso do seu ETH em stake, por exemplo, como colateral em aplicativos DeFi." />
+  <Card title="Baixa barreira de entrada" icon={<Fish />} description="Não é uma baleia? Sem problemas. A maioria dos pools de staking permite que você faça stake de praticamente qualquer quantia de ETH unindo forças com outros stakers, ao contrário do staking solo, que exige 32 ETH." />
+  <Card title="Faça stake hoje" icon={<Clock />} description="Fazer stake com um pool é tão fácil quanto uma troca de tokens. Não há necessidade de se preocupar com a configuração de hardware e manutenção de nós. Os pools permitem que você deposite seu ETH, o que possibilita que os operadores de nó executem validadores. As recompensas são então distribuídas aos contribuidores, menos uma taxa para as operações do nó." />
+  <Card title="Tokens de staking líquido" icon={<Droplets />} description="Muitos pools de staking fornecem um token que representa uma reivindicação sobre o seu ETH em stake e as recompensas que ele gera. Isso permite que você faça uso do seu ETH em stake, por exemplo, como colateral em aplicativos DeFi." />
 </Grid>
 
 ## Comparação das opções de staking {#comparison-of-staking-options}

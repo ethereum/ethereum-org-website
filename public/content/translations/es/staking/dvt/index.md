@@ -16,7 +16,7 @@ La tecnología de validador distribuido (DVT) es un enfoque para la seguridad de
 
 La DVT distribuye la gestión de claves y la firma al **dividir la clave privada** utilizada para asegurar un validador **entre muchas computadoras** organizadas en un "clúster". Hacer esto permite que algunos nodos del clúster se desconecten mientras se mantiene activo el nodo validador, ya que el trabajo de validación necesario puede ser realizado por un subconjunto de las máquinas en cada clúster. Esta distribución reduce los puntos únicos de falla, haciendo que el validador sea más robusto. Un beneficio adicional de la distribución de firmas de la DVT es que hace que sea muy difícil para los atacantes obtener acceso a la clave, porque no se almacena completa en ninguna máquina individual.
 
-![A Diagram showing how a single validator key is split into key shares and distributed to multiple nodes with varying components.](./dvt-cluster.png)
+![Un diagrama que muestra cómo una única clave de validador se divide en partes de clave y se distribuye entre múltiples nodos con distintos componentes.](./dvt-cluster.png)
 
 La DVT no es una forma separada de hacer staking. Es una capa de software que cualquier configuración de staking puede utilizar:
 - [Quienes hacen staking en solitario](/staking/solo/) pueden unirse para ejecutar un validador juntos, o un individuo que hace staking en solitario puede usar la DVT para agregar resiliencia a su configuración de staking en solitario.
@@ -81,25 +81,25 @@ La DVT tiene implicaciones significativas para la industria del staking en gener
 
 ### Quienes hacen staking en solitario {#solo-stakers}
 
-La DVT permite el **staking en escuadrón**: un pequeño grupo de personas, como amigos, miembros de la comunidad o extraños coordinados a través de un launchpad, que ejecutan colectivamente un solo validador en sus propias máquinas. Un umbral del grupo (por ejemplo, 3 de 4) debe estar en línea para que el validador realice sus tareas, por lo que el tiempo de inactividad, la falla de hardware o el error de ningún miembro individual desconecta al validador. Cuando la clave se crea con la generación de claves distribuidas, ningún miembro posee la clave de firma completa.
+La DVT permite el **staking en escuadrón**: un pequeño grupo de personas, como amigos, miembros de la comunidad o extraños coordinados a través de un launchpad, que ejecutan colectivamente un solo validador en sus propias máquinas. Un umbral del grupo (por ejemplo, 3 de 4) debe estar en línea para que el validador realice sus tareas, por lo que ni el tiempo de inactividad, ni la falla de hardware, ni el error de un miembro individual desconectan al validador. Cuando la clave se crea con la generación de claves distribuidas, ningún miembro posee la clave de firma completa.
 
 La DVT también permite el staking sin custodia al permitirle distribuir su clave de validador en nodos remotos mientras mantiene la clave completa completamente fuera de línea. Esto significa que quienes hacen staking no necesariamente necesitan ejecutar su propio hardware, y la distribución de las partes de la clave ayuda a proteger contra posibles hackeos.
 
 ### Staking como servicio (SaaS) {#saas}
 
-Los operadores (como los pools de staking conjunto y quienes hacen staking institucional) que gestionan muchos validadores pueden usar la DVT para reducir su riesgo. Al distribuir su infraestructura, pueden agregar redundancia a sus operaciones y diversificar los tipos de hardware que utilizan.
+Los operadores (como los pools de staking y quienes hacen staking institucional) que gestionan muchos validadores pueden usar la DVT para reducir su riesgo. Al distribuir su infraestructura, pueden agregar redundancia a sus operaciones y diversificar los tipos de hardware que utilizan.
 
 La DVT comparte la responsabilidad de la gestión de claves entre múltiples nodos, lo que significa que algunos costos operativos también se pueden compartir. La DVT también puede reducir el riesgo operativo y los costos de seguro para los proveedores de staking.
 
-### Pools de staking conjunto {#staking-pools}
+### Pools de staking {#staking-pools}
 
-Debido a las configuraciones estándar de los validadores, los pools de staking conjunto y los proveedores de staking líquido históricamente tuvieron que depositar una confianza significativa en cada operador individual, ya que las ganancias y pérdidas se socializan en todo el pool. También dependían de los operadores para salvaguardar las claves de firma porque, hasta la DVT, no había otra opción para ellos.
+Debido a las configuraciones estándar de los validadores, los pools de staking y los proveedores de staking líquido históricamente tuvieron que depositar una confianza significativa en cada operador individual, ya que las ganancias y pérdidas se socializan en todo el pool. También dependían de los operadores para salvaguardar las claves de firma porque, hasta la DVT, no había otra opción para ellos.
 
 Aunque tradicionalmente se hacen esfuerzos para distribuir el riesgo distribuyendo las participaciones entre múltiples operadores, cada operador aún gestiona una participación significativa de forma independiente. Depender de un solo operador plantea riesgos inmensos si tienen un rendimiento inferior, experimentan tiempo de inactividad, se ven comprometidos o actúan de forma maliciosa.
 
 Al aprovechar la DVT, se puede reducir la confianza requerida de cada operador individual. **Los pools pueden permitir que los operadores mantengan participaciones sin necesitar la custodia de las claves del validador** (ya que solo se utilizan partes de la clave). También permite que las participaciones gestionadas se distribuyan entre más operadores (por ejemplo, en lugar de tener un solo operador gestionando 1000 validadores, la DVT permite que esos validadores sean ejecutados colectivamente por múltiples operadores). Las diversas configuraciones de operadores ayudan a garantizar que si un operador se cae, los demás aún podrán atestar. La redundancia y diversificación resultantes pueden conducir a un mejor rendimiento y resiliencia, al tiempo que maximizan las recompensas.
 
-Otro beneficio de minimizar la confianza en un solo operador es que los pools de staking conjunto pueden permitir una participación de operadores más abierta y sin permisos. Algunos pools de staking conjunto hacen esto en producción hoy en día. Los clústeres DVT multioperador permiten que los protocolos emparejen a quienes hacen staking desde casa y a operadores más pequeños con profesionales más grandes, combinando conjuntos de operadores seleccionados y sin permisos.
+Otro beneficio de minimizar la confianza en un solo operador es que los pools de staking pueden permitir una participación de operadores más abierta y sin permisos. Algunos pools de staking hacen esto en producción hoy en día. Los clústeres DVT multioperador permiten que los protocolos emparejen a quienes hacen staking desde casa y a operadores más pequeños con profesionales más grandes, combinando conjuntos de operadores seleccionados y sin permisos.
 
 ## Posibles inconvenientes de usar la DVT {#potential-drawbacks-of-using-dvt}
 

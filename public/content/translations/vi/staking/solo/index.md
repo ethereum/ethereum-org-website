@@ -30,9 +30,9 @@ Người đặt cọc tại nhà nhận được phần thưởng trực tiếp 
 Đặt cọc tại nhà đi kèm với nhiều trách nhiệm hơn nhưng cung cấp cho bạn quyền kiểm soát tối đa đối với tiền và thiết lập đặt cọc của mình.
 
 <Grid>
-  <Card title="Keep all rewards" icon={<HandCoins />} description="Những người đặt cọc tại nhà nhận được 100% phần thưởng giao thức, được trả trực tiếp bởi giao thức trong khi trình xác thực của bạn trực tuyến." />
+  <Card title="Giữ toàn bộ phần thưởng" icon={<HandCoins />} description="Những người đặt cọc tại nhà nhận được 100% phần thưởng giao thức, được trả trực tiếp bởi giao thức trong khi trình xác thực của bạn trực tuyến." />
   <Card title="Tự chủ" icon={<KeyRound />} description="Luôn giữ các khóa của riêng bạn và toàn quyền lưu giữ tiền của bạn. Chọn sự kết hợp giữa máy khách và phần cứng cho phép bạn giảm thiểu rủi ro. Không có bên thứ ba nào có thể đưa ra những quyết định này thay bạn hoặc hạn chế việc rút tiền của bạn." />
-  <Card title="Client and geographic diversity" icon={<GlobeLock />} description="Những người đặt cọc tại nhà chạy các máy khách thiểu số trên phần cứng trải rộng ở nhiều địa điểm giúp củng cố sự phi tập trung và bảo mật của mạng lưới." />
+  <Card title="Sự đa dạng máy khách và địa lý" icon={<GlobeLock />} description="Những người đặt cọc tại nhà chạy các máy khách thiểu số trên phần cứng trải rộng ở nhiều địa điểm giúp củng cố sự phi tập trung và bảo mật của mạng lưới." />
 </Grid>
 
 ## Những điều cần cân nhắc trước khi đặt cọc tại nhà {#considerations-before-staking-solo}

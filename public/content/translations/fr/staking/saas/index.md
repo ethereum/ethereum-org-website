@@ -32,9 +32,9 @@ Comparée au [staking en solo](/staking/solo/), chaque forme de délégation pla
 Si vous avez 32 ETH à staker, mais que vous ne vous sentez pas à l'aise avec la gestion du matériel, les services de staking délégué vous permettent de déléguer l'aspect technique tout en gagnant des récompenses de bloc Ethereum natives.
 
 <Grid>
-  <Card title="Your own validator" icon={<MonitorCheck />} description="Déposez vos propres 32 ETH pour activer votre propre ensemble de clés de signature qui participeront au consensus Ethereum. Suivez vos progrès avec des tableaux de bord pour voir ces récompenses en ETH s'accumuler." />
-  <Card title="Easy to start" icon={<Flag />} description="Oubliez les spécifications matérielles, la configuration, la maintenance des nœuds et les mises à jour. Les fournisseurs vous permettent d'externaliser la partie difficile en téléchargeant vos propres identifiants de signature, ce qui leur permet d'exécuter un validateur en votre nom, pour un coût modique." />
-  <Card title="Limit your risk" icon={<ShieldHalf />} description="Avec les services non dépositaires, vous gardez le contrôle des clés qui permettent de retirer ou de transférer les fonds stakés. Celles-ci sont différentes des clés de signature et peuvent être stockées séparément pour limiter (mais pas éliminer) votre risque en tant que staker." />
+  <Card title="Votre propre validateur" icon={<MonitorCheck />} description="Déposez vos propres 32 ETH pour activer votre propre ensemble de clés de signature qui participeront au consensus Ethereum. Suivez vos progrès avec des tableaux de bord pour voir ces récompenses en ETH s'accumuler." />
+  <Card title="Facile à démarrer" icon={<Flag />} description="Oubliez les spécifications matérielles, la configuration, la maintenance des nœuds et les mises à jour. Les fournisseurs vous permettent d'externaliser la partie difficile en téléchargeant vos propres identifiants de signature, ce qui leur permet d'exécuter un validateur en votre nom, pour un coût modique." />
+  <Card title="Limitez votre risque" icon={<ShieldHalf />} description="Avec les services non dépositaires, vous gardez le contrôle des clés qui permettent de retirer ou de transférer les fonds stakés. Celles-ci sont différentes des clés de signature et peuvent être stockées séparément pour limiter (mais pas éliminer) votre risque en tant que staker." />
 </Grid>
 
 ## Comparaison des options de staking {#comparison-of-staking-options}

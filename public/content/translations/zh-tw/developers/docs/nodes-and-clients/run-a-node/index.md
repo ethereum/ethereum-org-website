@@ -29,7 +29,7 @@ sidebarDepth: 2
 
 當節點正在執行並同步時，你就可以準備[使用它](#using-the-node)了，但請務必留意其[維護](#operating-the-node)。
 
-![Client setup](./diagram.png)
+![客戶端設定](./diagram.png)
 
 ### 環境與硬體 {#environment-and-hardware}
 
@@ -71,18 +71,18 @@ sidebarDepth: 2
 
 此外，請確保你的網際網路連線不受[頻寬上限](https://wikipedia.org/wiki/Data_cap)的限制。建議使用不限流量的連線，因為初始同步和廣播到網路的資料可能會超過你的限制。
 
-##### 作業系統 {#plug-and-play}
+##### 作業系統
 
 所有客戶端都支援主要的作業系統 - Linux、macOS、Windows。這意味著你可以在一般桌上型電腦或伺服器機器上，使用最適合你的作業系統 (OS) 來執行節點。請確保你的作業系統保持在最新狀態，以避免潛在的問題和安全漏洞。
 
-##### 最低要求 {#ethereum-on-a-single-board-computer}
+##### 最低要求
 
 - 2 核心以上的 CPU
 - 16 GB RAM（為了穩定性建議使用 32 GB）
 - 2 TB NVMe SSD（到 2027 年可能會超過此需求，閱讀更多關於[適合與不適合以太坊節點的 SSD](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038)）
 - 25+ MBit/s 頻寬
 
-##### 建議規格 {#spinning-up-node}
+##### 建議規格
 
 目前針對節點營運者的硬體指南已在 [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870) 中確立。對於全節點，建議如下：
 
@@ -105,26 +105,26 @@ sidebarDepth: 2
 
 對於共識客戶端，空間要求也取決於客戶端實作和啟用的功能（例如驗證者罰沒者），但通常信標資料還需要額外 200GB。隨著驗證者數量的增加，頻寬負載也會隨之增長。你可以在[這份分析中找到有關共識客戶端要求的詳細資訊](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc)。
 
-#### 隨插即用解決方案 {#automatized-setup}
+#### 隨插即用解決方案 {#plug-and-play}
 
 使用自有硬體執行節點最簡單的選項是使用隨插即用設備。來自供應商的預先設定機器提供了最直接的體驗：訂購、連接、執行。所有內容都已預先設定並自動執行，並配有直觀的指南和儀表板，用於監控和控制軟體。
 
 - [DAppNode](https://dappnode.io/)
 - [Avado](https://ava.do/)
 
-#### 單板電腦上的以太坊 {#manual-setup}
+#### 單板電腦上的以太坊 {#ethereum-on-a-single-board-computer}
 
 執行以太坊節點一種簡單且便宜的方法是使用單板電腦，即使是像 Raspberry Pi 這樣具有 ARM 架構的電腦也可以。[Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) 為 Raspberry Pi 和其他 ARM 開發板提供了多個執行和共識客戶端易於執行的映像檔。
 
 像這樣小巧、實惠且高效的裝置非常適合在家中執行節點，但請記住它們的效能有限。
 
-## 啟動節點 {#getting-the-client}
+## 啟動節點 {#spinning-up-node}
 
 實際的客戶端設定可以透過自動化啟動器完成，也可以手動直接設定客戶端軟體。
 
 對於較不進階的使用者，建議的方法是使用啟動器，這是一種引導你完成安裝並自動化客戶端設定過程的軟體。然而，如果你有一些使用終端機的經驗，手動設定的步驟應該很容易遵循。
 
-### 引導式設定 {#client-setup}
+### 引導式設定 {#automatized-setup}
 
 許多使用者友善的專案旨在改善設定客戶端的體驗。這些啟動器提供自動化的客戶端安裝和設定，有些甚至提供圖形介面，用於引導設定和監控客戶端。
 
@@ -137,13 +137,13 @@ sidebarDepth: 2
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) - 節點設定工具，使用 CLI 精靈自動產生 Docker 設定。由奈瑟邁 (Nethermind) 使用 Go 語言編寫。
 - [Chainstack Self-Hosted](https://docs.chainstack.com/docs/self-hosted/introduction) - 用於在 Kubernetes 上部署執行和共識客戶端的 Web UI 和 CLI。包含快照引導和內建監控。免費。不需要 Chainstack 帳戶。由 Chainstack 構建。
 
-### 手動客戶端設定 {#starting-the-execution-client}
+### 手動客戶端設定 {#manual-setup}
 
 另一個選項是手動下載、驗證和設定客戶端軟體。即使某些客戶端提供圖形介面，手動設定仍然需要基本的終端機技能，但提供了更多的多功能性。
 
 如前所述，設定你自己的以太坊節點將需要執行一對共識和執行客戶端。某些客戶端可能包含另一種類型的輕客戶端，並且無需任何其他軟體即可同步。然而，完全無須信任的驗證需要這兩種實作。
 
-#### 取得客戶端軟體 {#running-an-execution-client}
+#### 取得客戶端軟體 {#getting-the-client}
 
 首先，你需要取得你偏好的[執行客戶端](/developers/docs/nodes-and-clients/#execution-clients)和[共識客戶端](/developers/docs/nodes-and-clients/#consensus-clients)軟體。
 
@@ -153,7 +153,7 @@ sidebarDepth: 2
 
 以下是客戶端的發布頁面，你可以在其中找到它們預先編譯的二進位檔案或安裝說明：
 
-##### 執行客戶端 {#starting-the-consensus-client}
+##### 執行客戶端
 
 - [貝蘇 (Besu)](https://github.com/hyperledger/besu/releases)
 - [艾瑞貢 (Erigon)](https://github.com/ledgerwatch/erigon/releases)
@@ -163,7 +163,7 @@ sidebarDepth: 2
 
 值得注意的是，客戶端多樣性是[執行層上的一個問題](/developers/docs/nodes-and-clients/client-diversity/#execution-layer)。建議讀者考慮執行少數派的執行客戶端。
 
-##### 共識客戶端 {#running-a-consensus-client}
+##### 共識客戶端
 
 - [萊特豪斯 (Lighthouse)](https://github.com/sigp/lighthouse/releases/latest)
 - [洛德斯塔 (Lodestar)](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/)（不提供預先編譯的二進位檔案，僅提供 Docker 映像檔或需從原始碼編譯）
@@ -175,7 +175,7 @@ sidebarDepth: 2
 
 [查看最新的網路客戶端使用情況](https://clientdiversity.org/)，並了解更多關於[客戶端多樣性](/developers/docs/nodes-and-clients/client-diversity)的資訊。
 
-##### 驗證軟體 {#adding-validators}
+##### 驗證軟體
 
 從網際網路下載軟體時，建議驗證其完整性。此步驟是可選的，但特別是對於像以太坊客戶端這樣關鍵的基礎設施，了解潛在的攻擊媒介並避免它們非常重要。如果你下載了預先編譯的二進位檔案，你需要信任它，並承擔攻擊者可能將執行檔替換為惡意檔案的風險。
 
@@ -189,7 +189,7 @@ sha256sum teku-22.6.1.tar.gz
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
 ```
 
-#### 客戶端設定 {#using-the-node}
+#### 客戶端設定 {#client-setup}
 
 在安裝、下載或編譯客戶端軟體後，你就可以準備執行它了。這僅意味著必須使用正確的設定來執行它。客戶端提供豐富的設定選項，可以啟用各種功能。
 
@@ -201,7 +201,7 @@ sha256sum teku-22.6.1.tar.gz
 
 在下一節中可以找到使用基本設定執行執行客戶端的範例。
 
-#### 啟動執行客戶端 {#reaching-rpc}
+#### 啟動執行客戶端 {#starting-the-execution-client}
 
 在啟動以太坊客戶端軟體之前，請進行最後一次檢查，確保你的環境已準備就緒。例如，請確保：
 
@@ -217,13 +217,13 @@ sha256sum teku-22.6.1.tar.gz
 
 執行和共識客戶端透過 [Engine API](https://github.com/ethereum/execution-apis/tree/main/src/engine) 中指定的經過驗證的端點進行通訊。為了連接到共識客戶端，執行客戶端必須在已知路徑產生一個 [`jwtsecret`](https://jwt.io/)。基於安全和穩定性考量，客戶端應在同一台機器上執行，並且兩個客戶端都必須知道此路徑，因為它用於驗證它們之間的本機 RPC 連線。執行客戶端還必須為經過驗證的 API 定義一個監聽連接埠。
 
-此代幣由客戶端軟體自動產生，但在某些情況下，你可能需要自己產生。你可以使用 [OpenSSL](https://www.openssl.org/) 來產生它：
+此權杖由客戶端軟體自動產生，但在某些情況下，你可能需要自己產生。你可以使用 [OpenSSL](https://www.openssl.org/) 來產生它：
 
 ```sh
 openssl rand -hex 32 > jwtsecret
 ```
 
-#### 執行執行客戶端 {#operating-the-node}
+#### 執行執行客戶端 {#running-an-execution-client}
 
 本節將引導你啟動執行客戶端。它僅作為基本設定的範例，將使用以下設定啟動客戶端：
 
@@ -240,9 +240,9 @@ openssl rand -hex 32 > jwtsecret
 
 > 請注意，範例中的反斜線 `\` 僅用於格式化目的；設定標記可以在單行中定義。
 
-##### 執行貝蘇 (Besu) {#keeping-node-online}
+##### 執行貝蘇 (Besu)
 
-此範例在主網上啟動貝蘇 (Besu)，將區塊鏈資料以預設格式儲存在 `/data/ethereum`，啟用 JSON-RPC 和 Engine RPC 以連接共識客戶端。Engine API 使用代幣 `jwtsecret` 進行驗證，並且僅允許來自 `localhost` 的呼叫。
+此範例在主網上啟動貝蘇 (Besu)，將區塊鏈資料以預設格式儲存在 `/data/ethereum`，啟用 JSON-RPC 和 Engine RPC 以連接共識客戶端。Engine API 使用權杖 `jwtsecret` 進行驗證，並且僅允許來自 `localhost` 的呼叫。
 
 ```sh
 besu --network=mainnet \
@@ -262,7 +262,7 @@ besu --Xlauncher
 
 [貝蘇 (Besu) 的文件](https://besu.hyperledger.org/public-networks/get-started/start-node/)包含其他選項和設定詳細資訊。
 
-##### 執行艾瑞貢 (Erigon) {#creating-client-services}
+##### 執行艾瑞貢 (Erigon)
 
 此範例在主網上啟動艾瑞貢 (Erigon)，將區塊鏈資料儲存在 `/data/ethereum`，啟用 JSON-RPC，定義允許的命名空間，並啟用由 `jwtsecret` 路徑定義的連接共識客戶端的驗證。
 
@@ -275,7 +275,7 @@ erigon --chain mainnet \
 
 艾瑞貢 (Erigon) 預設使用 8GB HDD 執行完整同步，這將產生超過 2TB 的歸檔資料。請確保 `datadir` 指向有足夠可用空間的磁碟，或者查看可以修剪不同種類資料的 `--prune` 標記。查看艾瑞貢 (Erigon) 的 `--help` 以了解更多資訊。
 
-##### 執行 Go 以太坊 (Geth) {#updating-clients}
+##### 執行 Go 以太坊 (Geth)
 
 此範例在主網上啟動 Go 以太坊 (Geth)，將區塊鏈資料儲存在 `/data/ethereum`，啟用 JSON-RPC 並定義允許的命名空間。它還啟用了連接共識客戶端的驗證，這需要 `jwtsecret` 的路徑，以及定義允許哪些連線的選項，在我們的範例中僅允許來自 `localhost` 的連線。
 
@@ -290,7 +290,7 @@ geth --mainnet \
 
 查看[所有設定選項的文件](https://geth.ethereum.org/docs/fundamentals/command-line-options)，並了解更多關於[與共識客戶端一起執行 Go 以太坊 (Geth)](https://geth.ethereum.org/docs/getting-started/consensus-clients) 的資訊。
 
-##### 執行奈瑟邁 (Nethermind) {#running-additional-services}
+##### 執行奈瑟邁 (Nethermind)
 
 奈瑟邁 (Nethermind) 提供各種[安裝選項](https://docs.nethermind.io/get-started/installing-nethermind)。該套件附帶各種二進位檔案，包括帶有引導設定的啟動器，這將幫助你互動式地建立設定。或者，你可以找到 Runner，它是執行檔本身，你可以直接使用設定標記執行它。JSON-RPC 預設為啟用。
 
@@ -304,7 +304,7 @@ Nethermind.Runner --config mainnet \
 
 執行客戶端將啟動其核心功能、選擇的端點，並開始尋找對等節點。成功發現對等節點後，客戶端開始同步。執行客戶端將等待來自共識客戶端的連線。一旦客戶端成功同步到當前狀態，當前的區塊鏈資料將可用。
 
-##### 執行瑞斯 (Reth) {#monitoring-the-node}
+##### 執行瑞斯 (Reth)
 
 此範例在主網上啟動瑞斯 (Reth)，使用預設資料位置。啟用 JSON-RPC 和 Engine RPC 驗證以連接共識客戶端，該客戶端由 `jwtsecret` 路徑定義，並且僅允許來自 `localhost` 的呼叫。
 
@@ -317,17 +317,17 @@ reth node \
 
 請參閱[設定瑞斯 (Reth)](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) 以了解更多關於預設資料目錄的資訊。[瑞斯 (Reth) 的文件](https://reth.rs/run/mainnet.html)包含其他選項和設定詳細資訊。
 
-#### 啟動共識客戶端 {#further-reading}
+#### 啟動共識客戶端 {#starting-the-consensus-client}
 
 共識客戶端必須使用正確的連接埠設定啟動，以建立與執行客戶端的本機 RPC 連線。共識客戶端必須使用暴露的執行客戶端連接埠作為設定參數來執行。
 
-共識客戶端還需要執行客戶端的 `jwt-secret` 路徑，以便驗證它們之間的 RPC 連線。與上述執行範例類似，每個共識客戶端都有一個設定標記，該標記將 jwt 代幣檔案路徑作為參數。這必須與提供給執行客戶端的 `jwtsecret` 路徑一致。
+共識客戶端還需要執行客戶端的 `jwt-secret` 路徑，以便驗證它們之間的 RPC 連線。與上述執行範例類似，每個共識客戶端都有一個設定標記，該標記將 jwt 權杖檔案路徑作為參數。這必須與提供給執行客戶端的 `jwtsecret` 路徑一致。
 
 如果你計劃執行驗證者，請確保新增一個設定標記，指定費用接收者的以太坊地址。這是你的驗證者累積以太幣獎勵的地方。每個共識客戶端都有一個選項（例如 `--suggested-fee-recipient=0xabcd1`），該選項將以太坊地址作為參數。
 
 在測試網上啟動信標節點時，你可以透過使用公共端點進行[檢查點同步](https://notes.ethereum.org/@launchpad/checkpoint-sync)來節省大量的同步時間。
 
-#### 執行共識客戶端 {#related-topics}
+#### 執行共識客戶端 {#running-a-consensus-client}
 
 ##### 執行萊特豪斯 (Lighthouse)
 
@@ -391,19 +391,19 @@ teku --network mainnet \
 
 當共識客戶端連接到執行客戶端以讀取存款合約並識別驗證者時，它也會連接到其他信標節點對等節點，並開始從創世區塊同步共識時隙。一旦信標節點達到當前紀元，Beacon API 就可以供你的驗證者使用。了解更多關於 [Beacon Node API](https://ethereum.github.io/beacon-APIs) 的資訊。
 
-### 新增驗證者
+### 新增驗證者 {#adding-validators}
 
 共識客戶端作為信標節點供驗證者連接。每個共識客戶端都有自己的驗證者軟體，在其各自的文件中有詳細描述。
 
-執行你自己的驗證者允許進行[獨立質押](/staking/solo/)，這是支持以太坊網路最具影響力且無須信任的方法。然而，這需要存入 32 ETH。如果想以較小的金額在你自己的節點上執行驗證者，具有無需許可節點營運者的去中心化礦池（例如 [Rocket Pool](https://rocketpool.net/node-operators)）可能會引起你的興趣。
+執行你自己的驗證者允許進行[獨立質押](/staking/solo/)，這是支持以太坊網路最具影響力且無須信任的方法。然而，這需要存入 32 ETH。如果想以較小的金額在你自己的節點上執行驗證者，具有無需許可節點營運者的去中心化質押池（例如 [Rocket Pool](https://rocketpool.net/node-operators)）可能會引起你的興趣。
 
 開始質押和產生驗證者金鑰最簡單的方法是使用 [Hoodi 測試網質押啟動平台](https://hoodi.launchpad.ethereum.org/)，它允許你透過[在 Hoodi 上執行節點](https://notes.ethereum.org/@launchpad/hoodi)來測試你的設定。當你準備好進入主網時，你可以使用[主網質押啟動平台](https://launchpad.ethereum.org/)重複這些步驟。
 
 查看[質押頁面](/staking)以了解質押選項的概覽。
 
-### 使用節點
+### 使用節點 {#using-the-node}
 
-執行客戶端提供 [RPC API 端點](/developers/docs/apis/json-rpc/)，你可以使用它們以各種方式在以太坊網路上提交交易、互動或部署智慧合約：
+執行客戶端提供 [RPC API 端點](/developers/docs/apis/json-rpc/)，你可以使用它們以各種方式在以太坊網路上提交交易、互動或部署智能合約：
 
 - 使用合適的協定手動呼叫它們（例如，使用 `curl`）
 - 附加提供的控制台（例如，`geth attach`）
@@ -413,7 +413,7 @@ teku --network mainnet \
 
 共識客戶端都暴露了一個 [Beacon API](https://ethereum.github.io/beacon-APIs)，可用於檢查共識客戶端的狀態，或透過使用 [Curl](https://curl.se) 等工具發送請求來下載區塊和共識資料。有關此內容的更多資訊，可以在每個共識客戶端的文件中找到。
 
-#### 存取 RPC
+#### 存取 RPC {#reaching-rpc}
 
 執行客戶端 JSON-RPC 的預設連接埠是 `8545`，但你可以在設定中修改本機端點的連接埠。預設情況下，RPC 介面只能在你的電腦的 localhost 上存取。為了使其可遠端存取，你可能希望透過將地址變更為 `0.0.0.0` 來將其暴露給公眾。這將使其可透過區域網路和公共 IP 地址存取。在大多數情況下，你還需要在路由器上設定通訊埠轉發。
 
@@ -429,11 +429,11 @@ teku --network mainnet \
 
 最後，提供內部網路存取最受歡迎的方法之一是透過 VPN 連線。根據你的使用案例和需要存取你節點的使用者數量，安全的 VPN 連線可能是一個選項。[OpenVPN](https://openvpn.net/) 是一個功能齊全的 SSL VPN，它使用業界標準的 SSL/TLS 協定實作 OSI 第 2 層或第 3 層安全網路擴展，支援基於憑證、智慧卡和/或使用者名稱/密碼憑證的靈活客戶端驗證方法，並允許使用套用於 VPN 虛擬介面的防火牆規則來實施特定於使用者或群組的存取控制策略。
 
-### 營運節點
+### 營運節點 {#operating-the-node}
 
 你應該定期監控你的節點，以確保其正常執行。你可能需要偶爾進行維護。
 
-#### 保持節點在線
+#### 保持節點在線 {#keeping-node-online}
 
 你的節點不必一直保持在線，但你應該盡可能保持其在線，以使其與網路保持同步。你可以將其關閉以重新啟動，但請記住：
 
@@ -443,11 +443,11 @@ teku --network mainnet \
 
 _這不適用於共識層驗證者節點。_ 將你的節點離線將影響所有依賴它的服務。如果你是為了_質押_目的而執行節點，你應該盡量將停機時間降至最低。
 
-#### 建立客戶端服務
+#### 建立客戶端服務 {#creating-client-services}
 
 考慮建立一個服務，以便在啟動時自動執行你的客戶端。例如，在 Linux 伺服器上，良好的做法是建立一個服務（例如使用 `systemd`），該服務在權限受限的使用者下使用正確的設定執行客戶端，並自動重新啟動。
 
-#### 更新客戶端
+#### 更新客戶端 {#updating-clients}
 
 你需要使用最新的安全修補程式、功能和 [EIP](/eips/) 保持你的客戶端軟體處於最新狀態。特別是在[硬分叉](/ethereum-forks/)之前，請確保你執行的是正確的客戶端版本。
 
@@ -457,17 +457,17 @@ _這不適用於共識層驗證者節點。_ 將你的節點離線將影響所�
 
 每個客戶端實作都有一個人類可讀的版本字串，用於點對點協定中，但也可以從命令列存取。此版本字串讓使用者可以檢查他們是否執行正確的版本，並允許有興趣量化特定客戶端在網路上分佈情況的區塊瀏覽器和其他分析工具使用。請參閱個別客戶端文件以了解有關版本字串的更多資訊。
 
-#### 執行其他服務
+#### 執行其他服務 {#running-additional-services}
 
 執行你自己的節點讓你可以使用需要直接存取以太坊客戶端 RPC 的服務。這些是建立在以太坊之上的服務，例如[第二層 (L2) 解決方案](/developers/docs/scaling/#layer-2-scaling)、錢包後端、區塊瀏覽器、開發人員工具和其他以太坊基礎設施。
 
-#### 監控節點
+#### 監控節點 {#monitoring-the-node}
 
 為了正確監控你的節點，請考慮收集指標。客戶端提供指標端點，因此你可以獲得有關節點的全面資料。使用 [InfluxDB](https://www.influxdata.com/get-influxdb/) 或 [Prometheus](https://prometheus.io/) 等工具建立資料庫，你可以將其轉換為 [Grafana](https://grafana.com/) 等軟體中的視覺化和圖表。有許多使用此軟體的設定和不同的 Grafana 儀表板，供你視覺化你的節點和整個網路。例如，查看[監控 Go 以太坊 (Geth) 的教學](/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/)。
 
 作為監控的一部分，請務必留意機器的效能。在節點的初始同步期間，客戶端軟體可能會大量佔用 CPU 和 RAM。除了 Grafana 之外，你還可以使用作業系統提供的工具（如 `htop` 或 `uptime`）來執行此操作。
 
-## 延伸閱讀
+## 延伸閱讀 {#further-reading}
 
 - [以太坊質押指南](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat，經常更新_
 - [指南 | 如何在主網上設定以太坊質押的驗證者](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew，經常更新_
@@ -479,7 +479,7 @@ _這不適用於共識層驗證者節點。_ 將你的節點離線將影響所�
 - [在以太坊主網上執行 Hyperledger Besu 節點：優勢、要求和設定](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi，2020 年 5 月 7 日_
 - [部署帶有監控堆疊的奈瑟邁 (Nethermind) 以太坊客戶端](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth，2020 年 7 月 8 日_
 
-## 相關主題
+## 相關主題 {#related-topics}
 
 - [節點與客戶端](/developers/docs/nodes-and-clients/)
 - [區塊](/developers/docs/blocks/)

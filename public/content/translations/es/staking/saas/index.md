@@ -32,9 +32,9 @@ En comparación con el [staking en solitario](/staking/solo/), cada forma de del
 Si tiene 32 ETH para hacer staking, pero no se siente cómodo lidiando con el hardware, los servicios de staking delegado le permiten delegar la parte técnica mientras gana recompensas de bloque nativas de Ethereum.
 
 <Grid>
-  <Card title="Your own validator" icon={<MonitorCheck />} description="Deposite sus propios 32 ETH para activar su propio conjunto de claves de firma que participarán en el consenso de Ethereum. Supervise su progreso con paneles de control para ver cómo se acumulan esas recompensas de ETH." />
-  <Card title="Easy to start" icon={<Flag />} description="Olvídese de las especificaciones de hardware, la configuración, el mantenimiento del nodo y las actualizaciones. Los proveedores le permiten subcontratar la parte difícil al cargar sus propias credenciales de firma, lo que les permite ejecutar un validador en su nombre por un pequeño costo." />
-  <Card title="Limit your risk" icon={<ShieldHalf />} description="Con los servicios sin custodia, mantiene el control de las claves que permiten retirar o transferir los fondos en staking. Estas son diferentes de las claves de firma y se pueden almacenar por separado para limitar (pero no eliminar) su riesgo al hacer staking." />
+  <Card title="Tu propio validador" icon={<MonitorCheck />} description="Deposite sus propios 32 ETH para activar su propio conjunto de claves de firma que participarán en el consenso de Ethereum. Supervise su progreso con paneles de control para ver cómo se acumulan esas recompensas de ETH." />
+  <Card title="Fácil de empezar" icon={<Flag />} description="Olvídese de las especificaciones de hardware, la configuración, el mantenimiento del nodo y las actualizaciones. Los proveedores le permiten subcontratar la parte difícil al cargar sus propias credenciales de firma, lo que les permite ejecutar un validador en su nombre por un pequeño costo." />
+  <Card title="Limita tu riesgo" icon={<ShieldHalf />} description="Con los servicios sin custodia, mantiene el control de las claves que permiten retirar o transferir los fondos en staking. Estas son diferentes de las claves de firma y se pueden almacenar por separado para limitar (pero no eliminar) su riesgo al hacer staking." />
 </Grid>
 
 ## Comparación de opciones de staking {#comparison-of-staking-options}

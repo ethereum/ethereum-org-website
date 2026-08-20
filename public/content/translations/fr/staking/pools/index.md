@@ -26,9 +26,9 @@ Chaque option mutualisée résout le véritable problème d'accès au staking av
 En plus des avantages de [participer au staking](/staking/), le staking avec un pool s'accompagne d'un certain nombre d'avantages uniques.
 
 <Grid>
-  <Card title="Low barrier to entry" icon={<Fish />} description="Vous n'êtes pas une baleine ? Aucun problème. La plupart des pools de staking vous permettent de staker pratiquement n'importe quel montant d'ETH en unissant vos forces avec d'autres stakers, contrairement au staking en solo qui nécessite 32 ETH." />
-  <Card title="Stake today" icon={<Clock />} description="Le staking avec un pool est aussi simple qu'un échange de jetons. Pas besoin de vous soucier de la configuration du matériel et de la maintenance des nœuds. Les pools vous permettent de déposer vos ETH, ce qui permet aux opérateurs de nœuds d'exécuter des validateurs. Les récompenses sont ensuite distribuées aux contributeurs, moins des frais pour les opérations des nœuds." />
-  <Card title="Liquid staking tokens" icon={<Droplets />} description="De nombreux pools de staking fournissent un jeton qui représente une réclamation sur vos ETH stakés et les récompenses qu'ils génèrent. Cela vous permet d'utiliser vos ETH stakés, par exemple, comme collatéral dans des applications de finance décentralisée (DeFi)." />
+  <Card title="Faible barrière à l'entrée" icon={<Fish />} description="Vous n'êtes pas une baleine ? Aucun problème. La plupart des pools de staking vous permettent de staker pratiquement n'importe quel montant d'ETH en unissant vos forces avec d'autres stakers, contrairement au staking en solo qui nécessite 32 ETH." />
+  <Card title="Stakez dès aujourd'hui" icon={<Clock />} description="Le staking avec un pool est aussi simple qu'un échange de jetons. Pas besoin de vous soucier de la configuration du matériel et de la maintenance des nœuds. Les pools vous permettent de déposer vos ETH, ce qui permet aux opérateurs de nœuds d'exécuter des validateurs. Les récompenses sont ensuite distribuées aux contributeurs, moins des frais pour les opérations des nœuds." />
+  <Card title="Jetons de staking liquide" icon={<Droplets />} description="De nombreux pools de staking fournissent un jeton qui représente une réclamation sur vos ETH stakés et les récompenses qu'ils génèrent. Cela vous permet d'utiliser vos ETH stakés, par exemple, comme collatéral dans des applications de finance décentralisée (DeFi)." />
 </Grid>
 
 ## Comparaison des options de staking {#comparison-of-staking-options}

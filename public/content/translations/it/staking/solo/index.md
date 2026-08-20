@@ -15,7 +15,7 @@ summaryPoints:
 
 Lo staking da casa è l'atto di [eseguire un nodo Ethereum](/run-a-node/) connesso a Internet e depositare almeno 32 ETH per attivare un [validatore](#faq), dandoti la possibilità di partecipare direttamente al consenso della rete.
 
-Lo staking da casa è il modo più diretto per fare staking. Nessun contratto intelligente (smart contract), operatore o custode si frappone tra te e il protocollo. Detieni le tue chiavi, partecipi attivamente alla convalida della rete [Ethereum](/) e ricevi direttamente le ricompense della rete. Ogni altro metodo di staking aggiunge livelli di tecnologia, middleware o servizi al di sopra di questa attività di rete principale.
+Lo staking da casa è il modo più diretto per fare staking. Nessuno smart contract, operatore o custode si frappone tra te e il protocollo. Detieni le tue chiavi, partecipi attivamente alla convalida della rete [Ethereum](/) e ricevi direttamente le ricompense della rete. Ogni altro metodo di staking aggiunge livelli di tecnologia, middleware o servizi al di sopra di questa attività di rete principale.
 
 **Lo staking da casa aumenta la decentralizzazione della rete Ethereum**, rendendo Ethereum più resistente alla censura e robusto contro gli attacchi. Altri metodi di staking potrebbero non aiutare la rete allo stesso modo. Lo staking da casa è la migliore opzione di staking per proteggere Ethereum.
 
@@ -30,9 +30,9 @@ Uno staker da casa riceve ricompense direttamente dal protocollo per mantenere i
 Lo staking da casa comporta maggiori responsabilità, ma ti offre il massimo controllo sui tuoi fondi e sulla configurazione dello staking.
 
 <Grid>
-  <Card title="Keep all rewards" icon={<HandCoins />} description="Gli staker da casa ricevono il 100% delle ricompense del protocollo, pagate direttamente dal protocollo mentre il validatore è online." />
+  <Card title="Mantieni tutte le ricompense" icon={<HandCoins />} description="Gli staker da casa ricevono il 100% delle ricompense del protocollo, pagate direttamente dal protocollo mentre il validatore è online." />
   <Card title="Auto-sovranità" icon={<KeyRound />} description="Mantieni le tue chiavi e la piena custodia dei tuoi fondi in ogni momento. Scegli la combinazione di client e hardware che ti consente di ridurre al minimo i rischi. Nessuna terza parte può prendere queste decisioni per te o limitare i tuoi prelievi." />
-  <Card title="Client and geographic diversity" icon={<GlobeLock />} description="Gli staker da casa che eseguono client di minoranza su hardware distribuito in molte posizioni rafforzano la decentralizzazione e la sicurezza della rete." />
+  <Card title="Diversità dei client e geografica" icon={<GlobeLock />} description="Gli staker da casa che eseguono client di minoranza su hardware distribuito in molte posizioni rafforzano la decentralizzazione e la sicurezza della rete." />
 </Grid>
 
 ## Considerazioni prima di fare staking da casa {#considerations-before-staking-solo}
@@ -152,7 +152,7 @@ Per gli staker da casa questo abilita lo "squad staking": fare squadra con amici
 
 Se hai l'hardware e le competenze per eseguire un nodo ma meno di 32 ETH, alcuni protocolli di staking abbineranno il tuo validatore con gli ETH dei loro staker in pool. Depositi una cauzione più piccola come collaterale ed esegui il validatore sulla tua macchina; il protocollo fornisce il resto dello stake e tu guadagni una quota delle ricompense.
 
-Questo è un approccio ibrido: mantieni le responsabilità (e la soddisfazione) di gestire il tuo hardware, ma il tuo validatore opera in base ai contratti intelligenti, alla governance e alle regole di prestazione del protocollo, il che rappresenta un profilo di fiducia diverso rispetto allo staking diretto dei tuoi ETH.
+Questo è un approccio ibrido: mantieni le responsabilità (e la soddisfazione) di gestire il tuo hardware, ma il tuo validatore opera in base agli smart contract, alla governance e alle regole di prestazione del protocollo, il che rappresenta un profilo di fiducia diverso rispetto allo staking diretto dei tuoi ETH.
 
 Scopri di più su come funzionano questi protocolli, incluse le loro assunzioni di fiducia e le meccaniche dei token, sulla [pagina dello staking in pool](/staking/pools/).
 

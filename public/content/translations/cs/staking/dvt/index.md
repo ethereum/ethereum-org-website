@@ -7,7 +7,7 @@ sidebarDepth: 2
 summaryPoints:
   - Rozděluje podepisovací klíč validátoru mezi více strojů a operátorů, čímž odstraňuje jediný bod selhání.
   - Udržuje validátory online i při selhání jednotlivého hardwaru, softwaru nebo operátora.
-  - Produkční infrastruktura, kterou dnes využívají sólo stakeři, služby pro staking a společný staking.
+  - Produkční infrastruktura, kterou dnes využívají sólo stakeři, služby pro staking a stakingové pooly.
 ---
 
 ## Co je technologie distribuovaných validátorů? {#what-is-dvt}
@@ -16,11 +16,11 @@ Technologie distribuovaných validátorů (DVT) je přístup k zabezpečení val
 
 DVT distribuuje správu klíčů a podepisování tím, že **rozdělí soukromý klíč** používaný k zabezpečení validátoru **mezi mnoho počítačů** uspořádaných do „klastru“. To umožňuje, aby některé uzly v klastru přešly do režimu offline, zatímco uzel validátoru zůstane aktivní, protože nezbytnou validační práci může provést podmnožina strojů v každém klastru. Tato distribuce snižuje počet jediných bodů selhání, díky čemuž je validátor robustnější. Další výhodou distribuce podepisování pomocí DVT je, že pro útočníky je velmi obtížné získat přístup ke klíči, protože není uložen v plném znění na žádném jednotlivém stroji.
 
-![A Diagram showing how a single validator key is split into key shares and distributed to multiple nodes with varying components.](./dvt-cluster.png)
+![Diagram znázorňující, jak je jediný klíč validátoru rozdělen na části klíče a distribuován do více uzlů s různými komponentami.](./dvt-cluster.png)
 
 DVT není samostatný způsob stakingu. Je to softwarová vrstva, kterou může využít jakékoli nastavení stakingu:
 - [Sólo stakeři](/staking/solo/) se mohou spojit a provozovat validátor společně, nebo může jednotlivec využít DVT ke zvýšení odolnosti svého nastavení pro sólo staking.
-- [Služby pro staking](/staking/saas/) a [skupiny pro společný staking](/staking/pools/) mohou využít DVT ke zvýšení odolnosti a posílení své infrastruktury pro staking, nebo k distribuci operací validátoru mezi mnoho nezávislých operátorů.
+- [Služby pro staking](/staking/saas/) a [stakingové pooly](/staking/pools/) mohou využít DVT ke zvýšení odolnosti a posílení své infrastruktury pro staking, nebo k distribuci operací validátoru mezi mnoho nezávislých operátorů.
 
 ## Proč potřebujeme DVT? {#why-do-we-need-dvt}
 
@@ -73,7 +73,7 @@ Distribuované validátory dnes běží na síti Mainnet napříč sólo staking
 <ProductDisclaimer />
 
 - **Obol** vyvíjí Charon, open-source middlewarového klienta DVT, který umožňuje klastru strojů společně provozovat validátor („squad staking“). Skupiny provádějí distribuované generování klíčů a konfigurují svůj klastr prostřednictvím [DV Launchpadu](https://docs.obol.org/learn/readme/launchpad) od Obolu. Klastry Obol jsou v produkci využívány [protokoly pro staking](/staking/pools/) a [službami pro staking](/staking/saas/), včetně modulu Simple DVT od Lido a programu Operation Solo Staker od EtherFi, který zapojuje domácí operátory do klastrů odolných proti chybám.
-- **SSV Network** je síť nezávislých operátorů uzlů nevyžadující povolení. Klíč validátoru je rozdělen na části a distribuován vybrané sadě operátorů, kteří plní úkoly validátoru kolektivně; žádný jednotlivý operátor nikdy nedrží úplný klíč. Služby pro staking a skupiny pro společný staking provozují na SSV velké sady validátorů a stejně jako Obol jej využívá modul Simple DVT od Lido.
+- **SSV Network** je síť nezávislých operátorů uzlů nevyžadující povolení. Klíč validátoru je rozdělen na části a distribuován vybrané sadě operátorů, kteří plní úkoly validátoru kolektivně; žádný jednotlivý operátor nikdy nedrží úplný klíč. Služby pro staking a stakingové pooly provozují na SSV velké sady validátorů a stejně jako Obol jej využívá modul Simple DVT od Lido.
 
 ## Případy užití DVT {#dvt-use-cases}
 
@@ -87,19 +87,19 @@ DVT také umožňuje nekustodiální staking tím, že vám dovoluje distribuova
 
 ### Staking jako služba (SaaS) {#saas}
 
-Operátoři (jako jsou skupiny pro společný staking a institucionální stakeři) spravující mnoho validátorů mohou využít DVT ke snížení svého rizika. Distribucí své infrastruktury mohou do svých operací přidat redundanci a diverzifikovat typy hardwaru, které používají.
+Operátoři (jako jsou stakingové pooly a institucionální stakeři) spravující mnoho validátorů mohou využít DVT ke snížení svého rizika. Distribucí své infrastruktury mohou do svých operací přidat redundanci a diverzifikovat typy hardwaru, které používají.
 
 DVT sdílí odpovědnost za správu klíčů mezi více uzly, což znamená, že lze sdílet i některé provozní náklady. DVT může také snížit provozní riziko a náklady na pojištění pro poskytovatele stakingu.
 
-### Společný staking {#staking-pools}
+### Stakingové pooly {#staking-pools}
 
-Kvůli standardním nastavením validátoru musely skupiny pro společný staking a poskytovatelé likvidního stakingu historicky vkládat značnou důvěru do každého jednotlivého operátora, protože zisky a ztráty jsou socializovány v rámci celé skupiny. Byli také závislí na operátorech, že zabezpečí podepisovací klíče, protože do příchodu DVT pro ně neexistovala jiná možnost.
+Kvůli standardním nastavením validátoru musely stakingové pooly a poskytovatelé likvidního stakingu historicky vkládat značnou důvěru do každého jednotlivého operátora, protože zisky a ztráty jsou socializovány v rámci celého poolu. Byli také závislí na operátorech, že zabezpečí podepisovací klíče, protože do příchodu DVT pro ně neexistovala jiná možnost.
 
 Přestože se tradičně vyvíjí úsilí o rozložení rizika distribucí staků mezi více operátorů, každý operátor stále spravuje významný stake nezávisle. Spoléhání se na jediného operátora představuje obrovská rizika, pokud podává nedostatečný výkon, zaznamená výpadek, je kompromitován nebo jedná škodlivě.
 
-Využitím DVT lze snížit důvěru vyžadovanou od každého jednotlivého operátora. **Skupiny mohou operátorům umožnit držet stake bez nutnosti úschovy klíčů validátoru** (protože se využívají pouze části klíče). Umožňuje také distribuovat spravované staky mezi více operátorů (např. místo toho, aby jeden operátor spravoval 1000 validátorů, DVT umožňuje, aby tyto validátory byly kolektivně provozovány více operátory). Různorodé konfigurace operátorů pomáhají zajistit, že pokud jeden operátor vypadne, ostatní budou stále schopni atestovat. Výsledná redundance a diverzifikace může vést k lepšímu výkonu a odolnosti při současné maximalizaci odměn.
+Využitím DVT lze snížit důvěru vyžadovanou od každého jednotlivého operátora. **Pooly mohou operátorům umožnit držet stake bez nutnosti úschovy klíčů validátoru** (protože se využívají pouze části klíče). Umožňuje také distribuovat spravované staky mezi více operátorů (např. místo toho, aby jeden operátor spravoval 1000 validátorů, DVT umožňuje, aby tyto validátory byly kolektivně provozovány více operátory). Různorodé konfigurace operátorů pomáhají zajistit, že pokud jeden operátor vypadne, ostatní budou stále schopni atestovat. Výsledná redundance a diverzifikace může vést k lepšímu výkonu a odolnosti při současné maximalizaci odměn.
 
-Další výhodou minimalizace důvěry v jediného operátora je, že skupiny pro společný staking mohou umožnit otevřenější účast operátorů nevyžadující povolení. Některé skupiny pro společný staking to dnes dělají v produkci. Klastry DVT s více operátory umožňují protokolům spárovat domácí stakery a menší operátory s většími profesionálními, čímž se kombinují kurátorované sady operátorů se sadami nevyžadujícími povolení.
+Další výhodou minimalizace důvěry v jediného operátora je, že stakingové pooly mohou umožnit otevřenější účast operátorů nevyžadující povolení. Některé stakingové pooly to dnes dělají v produkci. Klastry DVT s více operátory umožňují protokolům spárovat domácí stakery a menší operátory s většími profesionálními, čímž se kombinují kurátorované sady operátorů se sadami nevyžadujícími povolení.
 
 ## Potenciální nevýhody používání DVT {#potential-drawbacks-of-using-dvt}
 
@@ -130,7 +130,7 @@ Klastry jsou obvykle dimenzovány tak, aby prahovou hodnotou byla dvoutřetinov�
 </ExpandableCard>
 
 <ExpandableCard title="Je DVT to samé jako společný staking?" eventCategory="DVT" eventName="clicked is DVT the same as pooled staking">
-Ne. Společný staking kombinuje ETH od mnoha lidí k financování validátorů a je jedním z několika [způsobů stakingu](/staking/). DVT je infrastruktura pro _provoz_ validátoru. Distribuuje podepisování jednoho validátoru mezi více strojů a operátorů. Tyto dvě věci se doplňují; mnoho skupin používá DVT k distribuci svých sad operátorů, ale samotné DVT nesdružuje ničí ETH.
+Ne. Společný staking kombinuje ETH od mnoha lidí k financování validátorů a je jedním z několika [způsobů stakingu](/staking/). DVT je infrastruktura pro _provoz_ validátoru. Distribuuje podepisování jednoho validátoru mezi více strojů a operátorů. Tyto dvě věci se doplňují; mnoho poolů používá DVT k distribuci svých sad operátorů, ale samotné DVT nesdružuje ničí ETH.
 </ExpandableCard>
 
 ## Další čtení {#further-reading}

@@ -30,9 +30,9 @@ summaryPoints:
 在家質押伴隨著更多責任，但為你提供了對資金和質押設定的最大控制權。
 
 <Grid>
-  <Card title="Keep all rewards" icon={<HandCoins />} description="在家質押者獲得 100% 的協定獎勵，當你的驗證者在線時，由協定直接支付。" />
+  <Card title="保留全部獎勵" icon={<HandCoins />} description="在家質押者獲得 100% 的協定獎勵，當你的驗證者在線時，由協定直接支付。" />
   <Card title="自我主權" icon={<KeyRound />} description="始終保留你自己的金鑰和對資金的完全託管權。選擇能讓你將風險降至最低的客戶端和硬體組合。沒有第三方可以為你做出這些決定或限制你的提款。" />
-  <Card title="Client and geographic diversity" icon={<GlobeLock />} description="在家質押者在分佈於多個地點的硬體上運行少數客戶端，增強了網路的去中心化和安全性。" />
+  <Card title="客戶端與地理多樣性" icon={<GlobeLock />} description="在家質押者在分佈於多個地點的硬體上運行少數客戶端，增強了網路的去中心化和安全性。" />
 </Grid>
 
 ## 在家質押前的注意事項 {#considerations-before-staking-solo}
@@ -63,7 +63,7 @@ summaryPoints:
 [以太坊安全與防騙](/security/)
 </ExpandableCard>
 
-<ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
+<ExpandableCard title="維護" eventCategory="SoloStaking" eventName="clicked maintenance">
 硬體偶爾會發生故障，網路連線會出錯，客戶端軟體偶爾也需要升級。節點維護是不可避免的，偶爾需要你的關注。你要確保自己隨時了解任何預期的網路升級或其他關鍵的客戶端升級。
 </ExpandableCard>
 

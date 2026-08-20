@@ -7,7 +7,7 @@ sidebarDepth: 2
 summaryPoints:
   - Membagi kunci penandatanganan validator ke beberapa mesin dan operator, menghilangkan titik kegagalan tunggal
   - Menjaga validator tetap online meskipun terjadi kegagalan perangkat keras, perangkat lunak, atau operator secara individu
-  - Infrastruktur produksi yang digunakan saat ini oleh pelaku staking mandiri, layanan staking, dan staking gabungan
+  - Infrastruktur produksi yang digunakan saat ini oleh pelaku staking mandiri, layanan staking, dan pool staking
 ---
 
 ## Apa itu teknologi validator terdistribusi? {#what-is-dvt}
@@ -16,11 +16,11 @@ Teknologi validator terdistribusi (DVT) adalah pendekatan terhadap keamanan vali
 
 DVT mendistribusikan manajemen kunci dan penandatanganan dengan **membagi kunci privat** yang digunakan untuk mengamankan validator **ke banyak komputer** yang diatur dalam sebuah "klaster". Melakukan hal ini memungkinkan beberapa node di dalam klaster untuk offline sambil tetap menjaga node validator aktif, karena pekerjaan validasi yang diperlukan dapat dilakukan oleh sebagian mesin di setiap klaster. Distribusi ini mengurangi titik kegagalan tunggal, membuat validator menjadi lebih tangguh. Manfaat tambahan dari distribusi penandatanganan DVT adalah membuatnya sangat sulit bagi penyerang untuk mendapatkan akses ke kunci, karena kunci tersebut tidak disimpan secara utuh di satu mesin mana pun.
 
-![A Diagram showing how a single validator key is split into key shares and distributed to multiple nodes with varying components.](./dvt-cluster.png)
+![Diagram yang menunjukkan bagaimana satu kunci validator dibagi menjadi bagian-bagian kunci dan didistribusikan ke beberapa node dengan komponen yang beragam.](./dvt-cluster.png)
 
 DVT bukanlah cara terpisah untuk melakukan staking. Ini adalah lapisan perangkat lunak yang dapat digunakan oleh pengaturan staking apa pun:
 - [Pelaku staking mandiri](/staking/solo/) dapat bekerja sama untuk menjalankan validator bersama-sama, atau seorang pelaku staking mandiri dapat menggunakan DVT untuk menambah ketahanan pada pengaturan staking mandiri mereka.
-- [Layanan staking](/staking/saas/) dan [staking gabungan](/staking/pools/) dapat menggunakan DVT untuk menambah ketahanan dan memperkuat infrastruktur staking mereka, atau untuk mendistribusikan operasi validator ke banyak operator independen.
+- [Layanan staking](/staking/saas/) dan [pool staking](/staking/pools/) dapat menggunakan DVT untuk menambah ketahanan dan memperkuat infrastruktur staking mereka, atau untuk mendistribusikan operasi validator ke banyak operator independen.
 
 ## Mengapa kita membutuhkan DVT? {#why-do-we-need-dvt}
 
@@ -73,7 +73,7 @@ Validator terdistribusi berjalan di Mainnet saat ini di seluruh staking mandiri,
 <ProductDisclaimer />
 
 - **Obol** mengembangkan Charon, klien middleware DVT sumber terbuka yang memungkinkan sebuah klaster mesin mengoperasikan validator bersama-sama ("squad staking"). Grup melakukan pembuatan kunci terdistribusi dan mengonfigurasi klaster mereka melalui [DV Launchpad](https://docs.obol.org/learn/readme/launchpad) milik Obol. Klaster Obol digunakan dalam produksi oleh [protokol staking](/staking/pools/) dan [layanan staking](/staking/saas/), termasuk modul Simple DVT milik Lido dan program Operation Solo Staker milik EtherFi, yang mengikutsertakan operator rumahan ke dalam klaster yang toleran terhadap kesalahan.
-- **SSV Network** adalah jaringan tanpa izin dari operator node independen. Kunci validator dibagi menjadi bagian-bagian kunci dan didistribusikan ke sekumpulan operator yang dipilih, yang melakukan tugas validator secara kolektif; tidak ada satu operator pun yang pernah memegang kunci secara utuh. Layanan staking dan staking gabungan menjalankan set validator besar di SSV, dan seperti Obol, ini digunakan oleh modul Simple DVT milik Lido.
+- **SSV Network** adalah jaringan tanpa izin dari operator node independen. Kunci validator dibagi menjadi bagian-bagian kunci dan didistribusikan ke sekumpulan operator yang dipilih, yang melakukan tugas validator secara kolektif; tidak ada satu operator pun yang pernah memegang kunci secara utuh. Layanan staking dan pool staking menjalankan set validator besar di SSV, dan seperti Obol, ini digunakan oleh modul Simple DVT milik Lido.
 
 ## Kasus penggunaan DVT {#dvt-use-cases}
 
@@ -87,19 +87,19 @@ DVT juga memungkinkan staking non-kustodial dengan memungkinkan Anda mendistribu
 
 ### Staking sebagai layanan (SaaS) {#saas}
 
-Operator (seperti staking gabungan dan pelaku staking institusional) yang mengelola banyak validator dapat menggunakan DVT untuk mengurangi risiko mereka. Dengan mendistribusikan infrastruktur mereka, mereka dapat menambahkan redundansi pada operasi mereka dan mendiversifikasi jenis perangkat keras yang mereka gunakan.
+Operator (seperti pool staking dan pelaku staking institusional) yang mengelola banyak validator dapat menggunakan DVT untuk mengurangi risiko mereka. Dengan mendistribusikan infrastruktur mereka, mereka dapat menambahkan redundansi pada operasi mereka dan mendiversifikasi jenis perangkat keras yang mereka gunakan.
 
 DVT membagi tanggung jawab untuk manajemen kunci ke beberapa node, yang berarti beberapa biaya operasional juga dapat dibagi. DVT juga dapat mengurangi risiko operasional dan biaya asuransi untuk penyedia staking.
 
-### Staking gabungan {#staking-pools}
+### Pool staking {#staking-pools}
 
-Karena pengaturan validator standar, staking gabungan dan penyedia staking likuid secara historis harus menaruh kepercayaan yang signifikan pada setiap operator individu, karena keuntungan dan kerugian disosialisasikan ke seluruh gabungan (pool). Mereka juga bergantung pada operator untuk menjaga kunci penandatanganan karena, hingga adanya DVT, tidak ada pilihan lain bagi mereka.
+Karena pengaturan validator standar, pool staking dan penyedia staking likuid secara historis harus menaruh kepercayaan yang signifikan pada setiap operator individu, karena keuntungan dan kerugian disosialisasikan ke seluruh gabungan (pool). Mereka juga bergantung pada operator untuk menjaga kunci penandatanganan karena, hingga adanya DVT, tidak ada pilihan lain bagi mereka.
 
 Meskipun secara tradisional upaya dilakukan untuk menyebarkan risiko dengan mendistribusikan stake ke beberapa operator, setiap operator masih mengelola stake yang signifikan secara independen. Mengandalkan satu operator menimbulkan risiko yang sangat besar jika mereka berkinerja buruk, mengalami waktu henti, disusupi, atau bertindak jahat.
 
-Dengan memanfaatkan DVT, kepercayaan yang dibutuhkan dari setiap operator individu dapat dikurangi. **Staking gabungan dapat memungkinkan operator untuk memegang stake tanpa perlu hak asuh (custody) atas kunci validator** (karena hanya bagian kunci yang digunakan). Ini juga memungkinkan stake yang dikelola untuk didistribusikan di antara lebih banyak operator (mis., alih-alih memiliki satu operator yang mengelola 1000 validator, DVT memungkinkan validator tersebut dijalankan secara kolektif oleh beberapa operator). Konfigurasi operator yang beragam membantu memastikan bahwa jika satu operator mati, yang lain masih dapat melakukan atestasi. Redundansi dan diversifikasi yang dihasilkan dapat mengarah pada kinerja dan ketahanan yang lebih baik, sekaligus memaksimalkan imbalan.
+Dengan memanfaatkan DVT, kepercayaan yang dibutuhkan dari setiap operator individu dapat dikurangi. **Pool staking dapat memungkinkan operator untuk memegang stake tanpa perlu hak asuh (custody) atas kunci validator** (karena hanya bagian kunci yang digunakan). Ini juga memungkinkan stake yang dikelola untuk didistribusikan di antara lebih banyak operator (mis., alih-alih memiliki satu operator yang mengelola 1000 validator, DVT memungkinkan validator tersebut dijalankan secara kolektif oleh beberapa operator). Konfigurasi operator yang beragam membantu memastikan bahwa jika satu operator mati, yang lain masih dapat melakukan atestasi. Redundansi dan diversifikasi yang dihasilkan dapat mengarah pada kinerja dan ketahanan yang lebih baik, sekaligus memaksimalkan imbalan.
 
-Manfaat lain dari meminimalkan kepercayaan pada operator tunggal adalah bahwa staking gabungan dapat memungkinkan partisipasi operator yang lebih terbuka dan tanpa izin. Beberapa staking gabungan melakukan ini dalam produksi saat ini. Klaster DVT multi-operator memungkinkan protokol memasangkan pelaku staking rumahan dan operator yang lebih kecil dengan operator profesional yang lebih besar, menggabungkan set operator yang dikurasi dan tanpa izin.
+Manfaat lain dari meminimalkan kepercayaan pada operator tunggal adalah bahwa pool staking dapat memungkinkan partisipasi operator yang lebih terbuka dan tanpa izin. Beberapa pool staking melakukan ini dalam produksi saat ini. Klaster DVT multi-operator memungkinkan protokol memasangkan pelaku staking rumahan dan operator yang lebih kecil dengan operator profesional yang lebih besar, menggabungkan set operator yang dikurasi dan tanpa izin.
 
 ## Potensi kelemahan menggunakan DVT {#potential-drawbacks-of-using-dvt}
 

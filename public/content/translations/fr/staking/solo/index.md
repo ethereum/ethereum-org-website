@@ -30,9 +30,9 @@ Un staker à domicile reçoit des récompenses directement du protocole pour mai
 Le staking à domicile implique plus de responsabilités mais vous offre un contrôle maximal sur vos fonds et votre configuration de staking.
 
 <Grid>
-  <Card title="Keep all rewards" icon={<HandCoins />} description="Les stakers à domicile reçoivent 100 % des récompenses du protocole, payées directement par le protocole tant que votre validateur est en ligne." />
+  <Card title="Conservez toutes les récompenses" icon={<HandCoins />} description="Les stakers à domicile reçoivent 100 % des récompenses du protocole, payées directement par le protocole tant que votre validateur est en ligne." />
   <Card title="Souveraineté personnelle" icon={<KeyRound />} description="Conservez vos propres clés et la garde totale de vos fonds à tout moment. Choisissez la combinaison de clients et de matériel qui vous permet de minimiser vos risques. Aucun tiers ne peut prendre ces décisions à votre place ou restreindre vos retraits." />
-  <Card title="Client and geographic diversity" icon={<GlobeLock />} description="Les stakers à domicile exécutant des clients minoritaires sur du matériel réparti dans de nombreux endroits renforcent la décentralisation et la sécurité du réseau." />
+  <Card title="Diversité des clients et diversité géographique" icon={<GlobeLock />} description="Les stakers à domicile exécutant des clients minoritaires sur du matériel réparti dans de nombreux endroits renforcent la décentralisation et la sécurité du réseau." />
 </Grid>
 
 ## Considérations avant de faire du staking à domicile {#considerations-before-staking-solo}
@@ -58,7 +58,7 @@ Depuis que la mise à jour Fusaka a introduit PeerDAS, un nœud de staking n'a b
 </ExpandableCard>
 
 <ExpandableCard title="Gestion sécurisée des clés" eventCategory="SoloStaking" eventName="clicked secure key management">
-Tout comme les clés privées sécurisent votre adresse Ethereum, vous devrez générer des clés spécifiquement pour votre validateur. Vous devez comprendre comment conserver en toute sécurité toute phrase de récupération ou clé privée.{' '}
+Tout comme les clés privées sécurisent votre adresse Ethereum, vous devrez générer des clés spécifiquement pour votre validateur. Vous devez comprendre comment conserver en toute sécurité toute phrase secrète ou clé privée.{' '}
 
 [Sécurité d'Ethereum et prévention des arnaques](/security/)
 </ExpandableCard>

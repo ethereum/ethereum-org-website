@@ -30,9 +30,9 @@ Osoba stakująca w domu otrzymuje nagrody bezpośrednio z protokołu za utrzymyw
 Staking w domu wiąże się z większą odpowiedzialnością, ale zapewnia maksymalną kontrolę nad środkami i konfiguracją stakingu.
 
 <Grid>
-  <Card title="Keep all rewards" icon={<HandCoins />} description="Osoby stakujące w domu otrzymują 100% nagród z protokołu, wypłacanych bezpośrednio przez protokół, gdy walidator jest online." />
+  <Card title="Zatrzymaj wszystkie nagrody" icon={<HandCoins />} description="Osoby stakujące w domu otrzymują 100% nagród z protokołu, wypłacanych bezpośrednio przez protokół, gdy walidator jest online." />
   <Card title="Samostanowienie" icon={<KeyRound />} description="Zachowaj własne klucze i pełną kontrolę nad swoimi środkami przez cały czas. Wybierz kombinację klientów i sprzętu, która pozwoli Ci zminimalizować ryzyko. Żadna strona trzecia nie może podejmować tych decyzji za Ciebie ani ograniczać Twoich wypłat." />
-  <Card title="Client and geographic diversity" icon={<GlobeLock />} description="Osoby stakujące w domu, uruchamiające klientów mniejszościowych na sprzęcie rozmieszczonym w wielu lokalizacjach, wzmacniają decentralizację i bezpieczeństwo sieci." />
+  <Card title="Różnorodność klientów i lokalizacji geograficznych" icon={<GlobeLock />} description="Osoby stakujące w domu, uruchamiające klientów mniejszościowych na sprzęcie rozmieszczonym w wielu lokalizacjach, wzmacniają decentralizację i bezpieczeństwo sieci." />
 </Grid>
 
 ## Kwestie do rozważenia przed rozpoczęciem stakingu w domu {#considerations-before-staking-solo}
@@ -58,7 +58,7 @@ Odkąd aktualizacja Fusaka wprowadziła PeerDAS, węzeł stakingowy musi przecho
 </ExpandableCard>
 
 <ExpandableCard title="Bezpieczne zarządzanie kluczami" eventCategory="SoloStaking" eventName="clicked secure key management">
-Podobnie jak klucze prywatne zabezpieczają Twój adres Ethereum, będziesz musiał wygenerować klucze specjalnie dla swojego walidatora. Musisz zrozumieć, jak bezpiecznie przechowywać wszelkie frazy seed lub klucze prywatne.{' '}
+Podobnie jak klucze prywatne zabezpieczają Twój adres Ethereum, będziesz musiał wygenerować klucze specjalnie dla swojego walidatora. Musisz zrozumieć, jak bezpiecznie przechowywać wszelkie frazy odzyskiwania lub klucze prywatne.{' '}
 
 [Bezpieczeństwo Ethereum i zapobieganie oszustwom](/security/)
 </ExpandableCard>

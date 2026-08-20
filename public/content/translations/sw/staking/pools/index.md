@@ -26,9 +26,9 @@ Kila chaguo la pamoja hutatua tatizo halisi la ufikiaji la uwekaji dhamana kwa c
 Mbali na faida za [kushiriki katika uwekaji dhamana](/staking/), kuweka dhamana na bwawa kunakuja na faida kadhaa za kipekee.
 
 <Grid>
-  <Card title="Low barrier to entry" icon={<Fish />} description="Wewe si nyangumi? Hakuna shida. Mabwawa mengi ya uwekaji dhamana hukuruhusu kuweka dhamana kiasi chochote cha ETH kwa kuungana na waweka dhamana wengine, tofauti na uwekaji dhamana wa kujitegemea ambao unahitaji 32 ETH." />
-  <Card title="Stake today" icon={<Clock />} description="Kuweka dhamana na bwawa ni rahisi kama badilishano la tokeni. Hakuna haja ya kuwa na wasiwasi kuhusu usanidi wa maunzi na matengenezo ya nodi. Mabwawa yanakuruhusu kuweka ETH yako ambayo inawezesha waendeshaji wa nodi kuendesha wathibitishaji. Tuzo kisha husambazwa kwa wachangiaji ukiondoa ada ya uendeshaji wa nodi." />
-  <Card title="Liquid staking tokens" icon={<Droplets />} description="Mabwawa mengi ya uwekaji dhamana hutoa tokeni inayowakilisha dai kwenye ETH yako iliyowekwa dhamana na tuzo inazozalisha. Hii inakuruhusu kutumia ETH yako iliyowekwa dhamana, k.m., kama dhamana katika programu za fedha zilizogatuliwa (DeFi)." />
+  <Card title="Kikwazo cha chini cha kujiunga" icon={<Fish />} description="Wewe si nyangumi? Hakuna shida. Mabwawa mengi ya uwekaji dhamana hukuruhusu kuweka dhamana kiasi chochote cha ETH kwa kuungana na waweka dhamana wengine, tofauti na uwekaji dhamana wa kujitegemea ambao unahitaji 32 ETH." />
+  <Card title="Weka dhamana leo" icon={<Clock />} description="Kuweka dhamana na bwawa ni rahisi kama badilishano la tokeni. Hakuna haja ya kuwa na wasiwasi kuhusu usanidi wa maunzi na matengenezo ya nodi. Mabwawa yanakuruhusu kuweka ETH yako ambayo inawezesha waendeshaji wa nodi kuendesha wathibitishaji. Tuzo kisha husambazwa kwa wachangiaji ukiondoa ada ya uendeshaji wa nodi." />
+  <Card title="Tokani za uwekaji amana wenye ukwasi" icon={<Droplets />} description="Mabwawa mengi ya uwekaji dhamana hutoa tokeni inayowakilisha dai kwenye ETH yako iliyowekwa dhamana na tuzo inazozalisha. Hii inakuruhusu kutumia ETH yako iliyowekwa dhamana, k.m., kama dhamana katika programu za fedha zilizogatuliwa (DeFi)." />
 </Grid>
 
 ## Ulinganisho wa chaguzi za uwekaji dhamana {#comparison-of-staking-options}
@@ -129,7 +129,7 @@ Kuna chaguzi mbalimbali zinazopatikana ili kukusaidia na usanidi wako. Tumia via
 
 <StakingProductsCardGrid category="pools" />
 
-Tafadhali kumbuka umuhimu wa kuchagua huduma inayochukulia [anuwai ya wateja](/developers/docs/nodes-and-clients/client-diversity/) kwa uzito, kwani inaboresha usalama wa mtandao, na kupunguza hatari yako. Huduma ambazo zina ushahidi wa kupunguza matumizi ya wateja walio wengi zinaonyeshwa na <em style={{ textTransform: "uppercase" }}>"anuwai ya kiteja cha utekelezaji"</em> na <em style={{ textTransform: "uppercase" }}>"anuwai ya mteja wa mwafaka."</em>
+Tafadhali kumbuka umuhimu wa kuchagua huduma inayochukulia [anuwai ya wateja](/developers/docs/nodes-and-clients/client-diversity/) kwa uzito, kwani inaboresha usalama wa mtandao, na kupunguza hatari yako. Huduma ambazo zina ushahidi wa kupunguza matumizi ya viteja vya wengi zinaonyeshwa na <em style={{ textTransform: "uppercase" }}>"anuwai ya viteja vya utekelezaji"</em> na <em style={{ textTransform: "uppercase" }}>"anuwai ya wateja wa mwafaka."</em>
 
 Una pendekezo la zana ya uwekaji dhamana tuliyokosa? Angalia [sera yetu ya uorodheshaji wa bidhaa](/contributing/adding-staking-products/) ili kuona kama itafaa, na kuiwasilisha kwa ukaguzi.
 
@@ -137,7 +137,7 @@ Una pendekezo la zana ya uwekaji dhamana tuliyokosa? Angalia [sera yetu ya uorod
 
 ## Maswali yanayoulizwa mara kwa mara {#faq}
 
-<ExpandableCard title="Ninawezaje kupata zawadi?">
+<ExpandableCard title="Ninawezaje kupata tuzo?">
 Kwa kawaida tokani za uwekaji amana wenye ukwasi (LST) za ERC-20 hutolewa kwa waweka dhamana na kuwakilisha thamani ya ETH yao iliyowekwa dhamana pamoja na tuzo. Tuzo zinakufikia kwa mojawapo ya njia mbili kulingana na muundo wa tokeni: tokeni za kubadilisha msingi huongeza salio lako la tokeni kadiri tuzo zinavyokusanywa, huku tokeni za kiwango cha ubadilishaji huweka salio lako likiwa thabiti na kuwa zinazoweza kukombolewa kwa ETH zaidi kadiri muda unavyopita. Vyovyote vile, tuzo husambazwa ukiondoa ada ya bwawa.
 </ExpandableCard>
 
@@ -154,7 +154,7 @@ Vinginevyo, mabwawa yanayotumia tokani ya uwekaji amana wenye ukwasi ya ERC-20 h
 <ExpandableCard title="Je, hii ni tofauti na uwekaji dhamana kwenye soko langu la ubadilishanaji?">
 Kuna mfanano mwingi kati ya chaguzi hizi za uwekaji dhamana wa pamoja na mabadilishano yaliyowekwa kati, kama vile uwezo wa kuweka dhamana kiasi kidogo cha ETH na kuziunganisha pamoja ili kuwezesha wathibitishaji.
 
-Tofauti na mabadilishano yaliyowekwa kati, chaguzi nyingine nyingi za uwekaji dhamana wa pamoja hutumia mikataba mahiri na/au tokani za uwekaji amana wenye ukwasi, ambazo kwa kawaida ni tokeni za ERC-20 zinazoweza kushikiliwa kwenye mkoba wako mwenyewe, na kununuliwa au kuuzwa kama tokeni nyingine yoyote. Hii inatoa tabaka la uhuru na usalama kwa kukupa udhibiti wa tokeni zako, lakini bado haikupi udhibiti wa moja kwa moja juu ya mteja wa mthibitishaji anayethibitisha kwa niaba yako chinichini.
+Tofauti na mabadilishano yaliyowekwa kati, chaguzi nyingine nyingi za uwekaji dhamana wa pamoja hutumia mikataba mahiri na/au tokani za uwekaji amana wenye ukwasi, ambazo kwa kawaida ni tokeni za ERC-20 zinazoweza kushikiliwa kwenye mkoba wako mwenyewe, na kununuliwa au kuuzwa kama tokeni nyingine yoyote. Hii inatoa tabaka la uhuru na usalama kwa kukupa udhibiti wa tokeni zako, lakini bado haikupi udhibiti wa moja kwa moja juu ya kiteja cha mthibitishaji kinachothibitisha kwa niaba yako chinichini.
 
 Programu za "mapato" za mabadilishano pia ni za ulinzi na zinatawaliwa na masharti ya kampuni badala ya sheria za mnyororoni, na mapato yao yanaweza yasitokane na uwekaji dhamana wa itifaki kabisa. Tazama [bidhaa za pamoja zisizo wazi](#opaque-pooled-products) kwa jinsi ya kutambua tofauti.
 

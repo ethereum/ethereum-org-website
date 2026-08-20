@@ -90,13 +90,13 @@
   "page-staking-comparison-pools-saas": "Tyto možnosti jsou si podobné v tom, že stakeři sami neprovozují software validátora, ale na rozdíl od možností společného stakingu vyžaduje SaaS k aktivaci validátora plný vklad 32 ETH. Odměny se hromadí stakerovi a obvykle zahrnují měsíční poplatek nebo jiný podíl za používání služby. Pokud dáváte přednost vlastním klíčům validátora a chcete stakovat alespoň 32 ETH, může pro vás být použití poskytovatele SaaS dobrou volbou.",
   "page-staking-considerations-dropdown-text": "Úvahy o stakingu",
   "page-staking-considerations-dropdown-aria-label": "Rozbalovací nabídka pro úvahy o stakingu",
-  "page-staking-considerations-solo-1-title": "Open source",
+  "page-staking-considerations-solo-1-title": "Otevřený kód",
   "page-staking-considerations-solo-1-description": "Základní kód je 100% open source a je veřejnosti k dispozici k forkování a použití",
   "page-staking-considerations-solo-1-warning": "Uzavřený kód",
   "page-staking-considerations-solo-2-title": "Auditováno",
   "page-staking-considerations-solo-2-description": "Základní kód prošel formálním auditem, jehož výsledky byly zveřejněny a jsou veřejně dostupné",
   "page-staking-considerations-solo-2-warning": "Žádný",
-  "page-staking-considerations-solo-3-title": "Bug bounty",
+  "page-staking-considerations-solo-3-title": "Odměny za chyby",
   "page-staking-considerations-solo-3-description": "Na veškerý základní kód byl vypsán veřejný program bug bounty, který odměňuje uživatele za bezpečné nahlášení a/nebo opravu zranitelností",
   "page-staking-considerations-solo-3-valid": "Aktuálně aktivní",
   "page-staking-considerations-solo-3-caution": "Dokončeno",
@@ -202,7 +202,7 @@
   "page-staking-glance-col-your-hardware": "Váš hardware?",
   "page-staking-glance-col-middleware": "Zavedený middleware",
   "page-staking-glance-col-who-pays": "Kdo vám platí?",
-  "page-staking-glance-col-minimum-eth": "Minimum ETH",
+  "page-staking-glance-col-minimum-eth": "Minimální množství ETH",
   "page-staking-glance-bonded-title": "Provoz vázaného uzlu",
   "page-staking-glance-home-keys": "Ano. Držíte klíče pro podepisování i pro výběr.",
   "page-staking-glance-home-hardware": "Ano. Provozujete svůj vlastní uzel.",
@@ -277,5 +277,5 @@
   "page-upgrades-merge-btn": "Více o Merge",
   "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Přihlaste se k odběru blogu EF</a>, abyste dostávali e-mailová upozornění na nejnovější oznámení o protokolu.",
   "page-staking-any-amount": "Jakákoliv částka",
-  "page-staking-network-testnet": "{network} testnet"
+  "page-staking-network-testnet": "testnet {network}"
 }

@@ -16,7 +16,7 @@ Công nghệ trình xác thực phân tán (DVT) là một phương pháp bảo 
 
 DVT phân tán việc quản lý khóa và việc ký bằng cách **chia nhỏ khóa riêng tư** được sử dụng để bảo mật một trình xác thực **trên nhiều máy tính** được tổ chức thành một "cụm". Việc này cho phép một số nút trong cụm ngoại tuyến trong khi vẫn giữ cho nút trình xác thực hoạt động, vì công việc xác thực cần thiết có thể được thực hiện bởi một nhóm nhỏ các máy trong mỗi cụm. Sự phân tán này làm giảm các điểm lỗi đơn lẻ, giúp trình xác thực trở nên mạnh mẽ hơn. Một lợi ích bổ sung của việc phân tán việc ký của DVT là nó khiến những kẻ tấn công rất khó giành được quyền truy cập vào khóa, vì nó không được lưu trữ toàn bộ trên bất kỳ máy đơn lẻ nào.
 
-![A Diagram showing how a single validator key is split into key shares and distributed to multiple nodes with varying components.](./dvt-cluster.png)
+![Sơ đồ minh họa cách một khóa trình xác thực duy nhất được chia thành các phần chia sẻ khóa và phân phối đến nhiều nút với các thành phần khác nhau.](./dvt-cluster.png)
 
 DVT không phải là một cách đặt cọc riêng biệt. Nó là một lớp phần mềm mà bất kỳ thiết lập đặt cọc nào cũng có thể sử dụng:
 - [Người đặt cọc độc lập](/staking/solo/) có thể hợp tác để cùng nhau chạy một trình xác thực, hoặc một cá nhân đặt cọc độc lập có thể sử dụng DVT để tăng cường khả năng phục hồi cho thiết lập đặt cọc độc lập của họ.

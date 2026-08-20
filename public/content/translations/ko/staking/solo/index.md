@@ -30,9 +30,9 @@ summaryPoints:
 홈 스테이킹은 더 많은 책임이 따르지만, 자금과 스테이킹 설정에 대한 최대한의 통제권을 제공합니다.
 
 <Grid>
-  <Card title="Keep all rewards" icon={<HandCoins />} description="홈 스테이커는 검증자가 온라인 상태인 동안 프로토콜에서 직접 지급하는 프로토콜 보상의 100%를 받습니다." />
+  <Card title="보상 전액 수령" icon={<HandCoins />} description="홈 스테이커는 검증자가 온라인 상태인 동안 프로토콜에서 직접 지급하는 프로토콜 보상의 100%를 받습니다." />
   <Card title="자기 주권" icon={<KeyRound />} description="항상 자신의 키를 보관하고 자금에 대한 완전한 커스터디를 유지하세요. 위험을 최소화할 수 있는 클라이언트와 하드웨어 조합을 선택하세요. 제3자가 대신 이러한 결정을 내리거나 인출을 제한할 수 없습니다." />
-  <Card title="Client and geographic diversity" icon={<GlobeLock />} description="여러 위치에 분산된 하드웨어에서 소수 클라이언트를 실행하는 홈 스테이커는 네트워크의 탈중앙화와 보안을 강화합니다." />
+  <Card title="클라이언트 및 지역 다양성" icon={<GlobeLock />} description="여러 위치에 분산된 하드웨어에서 소수 클라이언트를 실행하는 홈 스테이커는 네트워크의 탈중앙화와 보안을 강화합니다." />
 </Grid>
 
 ## 홈 스테이킹 전 고려 사항 {#considerations-before-staking-solo}

@@ -30,9 +30,9 @@ Seorang staker dari rumah menerima imbalan langsung dari protokol karena menjaga
 Staking dari rumah datang dengan tanggung jawab yang lebih besar tetapi memberi Anda kendali maksimum atas dana dan pengaturan staking Anda.
 
 <Grid>
-  <Card title="Keep all rewards" icon={<HandCoins />} description="Staker dari rumah menerima 100% imbalan protokol, dibayarkan langsung oleh protokol selama validator Anda online." />
+  <Card title="Pertahankan semua imbalan" icon={<HandCoins />} description="Staker dari rumah menerima 100% imbalan protokol, dibayarkan langsung oleh protokol selama validator Anda online." />
   <Card title="Kedaulatan mandiri" icon={<KeyRound />} description="Simpan kunci Anda sendiri dan pegang hak asuh penuh atas dana Anda setiap saat. Pilih kombinasi klien dan perangkat keras yang memungkinkan Anda meminimalkan risiko. Tidak ada pihak ketiga yang dapat membuat keputusan ini untuk Anda atau membatasi penarikan Anda." />
-  <Card title="Client and geographic diversity" icon={<GlobeLock />} description="Staker dari rumah yang menjalankan klien minoritas pada perangkat keras yang tersebar di banyak lokasi memperkuat desentralisasi dan keamanan jaringan." />
+  <Card title="Keragaman klien dan geografis" icon={<GlobeLock />} description="Staker dari rumah yang menjalankan klien minoritas pada perangkat keras yang tersebar di banyak lokasi memperkuat desentralisasi dan keamanan jaringan." />
 </Grid>
 
 ## Pertimbangan sebelum melakukan staking dari rumah {#considerations-before-staking-solo}
@@ -150,7 +150,7 @@ Bagi staker dari rumah, ini memungkinkan "staking regu": bekerja sama dengan tem
 
 ## Jalankan validator untuk protokol staking {#run-validators-for-a-staking-protocol}
 
-Jika Anda memiliki perangkat keras dan keterampilan untuk menjalankan node tetapi kurang dari 32 ETH, beberapa protokol staking akan mencocokkan validator Anda dengan ETH dari staker gabungan mereka. Anda memposting obligasi yang lebih kecil sebagai kolateral dan menjalankan validator di mesin Anda sendiri; protokol menyediakan sisa stake, dan Anda mendapatkan bagian dari imbalan.
+Jika Anda memiliki perangkat keras dan keterampilan untuk menjalankan node tetapi kurang dari 32 ETH, beberapa protokol staking akan mencocokkan validator Anda dengan ETH dari staker gabungan mereka. Anda memposting jaminan (bond) yang lebih kecil sebagai kolateral dan menjalankan validator di mesin Anda sendiri; protokol menyediakan sisa stake, dan Anda mendapatkan bagian dari imbalan.
 
 Ini adalah pendekatan hibrida: Anda mempertahankan tanggung jawab (dan kepuasan) mengoperasikan perangkat keras Anda sendiri, tetapi validator Anda beroperasi di bawah kontrak pintar, tata kelola, dan aturan kinerja protokol, yang merupakan profil kepercayaan yang berbeda dari melakukan staking ETH Anda sendiri secara langsung.
 

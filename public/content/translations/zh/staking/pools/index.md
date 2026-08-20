@@ -26,9 +26,9 @@ summaryPoints:
 除了[参与质押](/staking/)的好处之外，通过质押池进行质押还具有许多独特的优势。
 
 <Grid>
-  <Card title="Low barrier to entry" icon={<Fish />} description="不是巨鲸？没问题。与需要 32 个 ETH 的独立质押不同，大多数质押池允许你与其他质押者联合，质押几乎任意数量的 ETH。" />
-  <Card title="Stake today" icon={<Clock />} description="通过质押池进行质押就像代币兑换一样简单。无需担心硬件设置和节点维护。质押池允许你存入 ETH，从而使节点运营商能够运行验证者。然后，奖励在扣除节点运营费用后分配给贡献者。" />
-  <Card title="Liquid staking tokens" icon={<Droplets />} description="许多质押池提供一种代币，代表对你质押的 ETH 及其产生的奖励的申领权。这使你能够利用你质押的 ETH，例如，作为去中心化金融 (DeFi) 应用程序中的抵押品。" />
+  <Card title="准入门槛低" icon={<Fish />} description="不是巨鲸？没问题。与需要 32 个 ETH 的独立质押不同，大多数质押池允许你与其他质押者联合，质押几乎任意数量的 ETH。" />
+  <Card title="立即质押" icon={<Clock />} description="通过质押池进行质押就像代币兑换一样简单。无需担心硬件设置和节点维护。质押池允许你存入 ETH，从而使节点运营商能够运行验证者。然后，奖励在扣除节点运营费用后分配给贡献者。" />
+  <Card title="流动性质押代币" icon={<Droplets />} description="许多质押池提供一种代币，代表对你质押的 ETH 及其产生的奖励的申领权。这使你能够利用你质押的 ETH，例如，作为去中心化金融 (DeFi) 应用程序中的抵押品。" />
 </Grid>
 
 ## 质押选项比较 {#comparison-of-staking-options}
@@ -75,7 +75,7 @@ LST 继承了质押的潜在风险（例如对质押池验证者的罚没和停�
 <AlertIcon size="xl"><Split /></AlertIcon>
 <AlertContent>
 <AlertDescription>
-许多质押池使用**分布式验证者技术 (DVT)** 来降低运营商风险，这是一种将验证者的密钥拆分到多台机器和运营商的中间件，因此没有任何单一的故障或妥协能导致验证者宕机。[了解有关分布式验证者技术的更多信息](/staking/dvt/)
+许多质押池使用**分布式验证者技术 (DVT)** 来降低运营商风险，这是一种将验证者的密钥拆分到多台机器和运营商的中间件，因此没有任何单一的故障或入侵能导致验证者宕机。[了解有关分布式验证者技术的更多信息](/staking/dvt/)
 </AlertDescription>
 </AlertContent>
 </Alert>

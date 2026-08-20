@@ -16,7 +16,7 @@ A tecnologia de validador distribuído (DVT) é uma abordagem para a segurança 
 
 A DVT distribui o gerenciamento de chaves e a assinatura ao **dividir a chave privada** usada para proteger um validador **entre muitos computadores** organizados em um "cluster". Fazer isso permite que alguns nós no cluster fiquem offline enquanto mantém o nó do validador ativo, pois o trabalho de validação necessário pode ser feito por um subconjunto das máquinas em cada cluster. Essa distribuição reduz os pontos únicos de falha, tornando o validador mais robusto. Um benefício adicional da distribuição de assinatura da DVT é que ela torna muito difícil para os invasores obterem acesso à chave, porque ela não é armazenada na íntegra em nenhuma máquina única.
 
-![A Diagram showing how a single validator key is split into key shares and distributed to multiple nodes with varying components.](./dvt-cluster.png)
+![Um diagrama mostrando como uma única chave de validador é dividida em partes da chave e distribuída para vários nós com componentes variados.](./dvt-cluster.png)
 
 A DVT não é uma maneira separada de fazer staking. É uma camada de software que qualquer configuração de staking pode usar:
 - [Stakers solo](/staking/solo/) podem se unir para executar um validador juntos, ou um staker solo individual pode usar a DVT para adicionar resiliência à sua configuração de staking solo.

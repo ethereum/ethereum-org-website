@@ -26,9 +26,9 @@ Każda opcja grupowa rozwiązuje rzeczywisty problem dostępu do stakingu z mnie
 Oprócz korzyści płynących z [uczestnictwa w stakingu](/staking/), stakowanie w puli wiąże się z wieloma unikalnymi korzyściami.
 
 <Grid>
-  <Card title="Low barrier to entry" icon={<Fish />} description="Nie jesteś wielorybem? Żaden problem. Większość pul stakingowych pozwala na stakowanie praktycznie dowolnej ilości ETH poprzez połączenie sił z innymi stakującymi, w przeciwieństwie do stakingu solo, który wymaga 32 ETH." />
-  <Card title="Stake today" icon={<Clock />} description="Stakowanie w puli jest tak proste, jak wymiana tokenów. Nie musisz martwić się o konfigurację sprzętu i utrzymanie węzła. Pule pozwalają na zdeponowanie ETH, co umożliwia operatorom węzłów uruchamianie walidatorów. Nagrody są następnie rozdzielane między współtwórców po odliczeniu opłaty za operacje węzła." />
-  <Card title="Liquid staking tokens" icon={<Droplets />} description="Wiele pul stakingowych zapewnia token, który reprezentuje roszczenie do Twojego stakowanego ETH i generowanych przez nie nagród. Pozwala to na wykorzystanie stakowanego ETH, np. jako zabezpieczenie w aplikacjach DeFi." />
+  <Card title="Niska bariera wejścia" icon={<Fish />} description="Nie jesteś wielorybem? Żaden problem. Większość pul stakingowych pozwala na stakowanie praktycznie dowolnej ilości ETH poprzez połączenie sił z innymi stakującymi, w przeciwieństwie do stakingu solo, który wymaga 32 ETH." />
+  <Card title="Stakuj już dziś" icon={<Clock />} description="Stakowanie w puli jest tak proste, jak wymiana tokenów. Nie musisz martwić się o konfigurację sprzętu i utrzymanie węzła. Pule pozwalają na zdeponowanie ETH, co umożliwia operatorom węzłów uruchamianie walidatorów. Nagrody są następnie rozdzielane między współtwórców po odliczeniu opłaty za operacje węzła." />
+  <Card title="Tokeny płynnego stakingu" icon={<Droplets />} description="Wiele pul stakingowych zapewnia token, który reprezentuje roszczenie do Twojego stakowanego ETH i generowanych przez nie nagród. Pozwala to na wykorzystanie stakowanego ETH, np. jako zabezpieczenie w aplikacjach DeFi." />
 </Grid>
 
 ## Porównanie opcji stakingu {#comparison-of-staking-options}

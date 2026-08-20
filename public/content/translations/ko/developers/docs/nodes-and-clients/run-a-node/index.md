@@ -29,7 +29,7 @@ sidebarDepth: 2
 
 노드가 실행되고 동기화되면 [사용할](#using-the-node) 준비가 된 것이지만, [유지보수](#operating-the-node)에 주의를 기울여야 합니다.
 
-![Client setup](./diagram.png)
+![클라이언트 설정](./diagram.png)
 
 ### 환경 및 하드웨어 {#environment-and-hardware}
 
@@ -71,18 +71,18 @@ sidebarDepth: 2
 
 또한 인터넷 연결이 [대역폭 제한](https://wikipedia.org/wiki/Data_cap)에 걸리지 않는지 확인하세요. 초기 동기화 및 네트워크로 브로드캐스트되는 데이터가 제한을 초과할 수 있으므로 종량제가 아닌 연결을 사용하는 것이 좋습니다.
 
-##### 운영 체제 {#plug-and-play}
+##### 운영 체제
 
 모든 클라이언트는 주요 운영 체제인 Linux, macOS, Windows를 지원합니다. 즉, 자신에게 가장 적합한 운영 체제(OS)가 설치된 일반 데스크톱이나 서버 머신에서 노드를 실행할 수 있습니다. 잠재적인 문제와 보안 취약점을 방지하려면 OS를 최신 상태로 유지하세요.
 
-##### 최소 요구 사항 {#ethereum-on-a-single-board-computer}
+##### 최소 요구 사항
 
 - 2개 이상의 코어가 있는 CPU
 - 16GB RAM (안정성을 위해 32GB 권장)
 - 2TB NVMe SSD (2027년경 초과 예상, [이더리움 노드에 적합한 SSD와 그렇지 않은 SSD](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038)에 대해 자세히 알아보기)
 - 25MBit/s 이상의 대역폭
 
-##### 권장 사양 {#spinning-up-node}
+##### 권장 사양
 
 노드 운영자를 위한 현재 하드웨어 지침은 [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870)에 명시되어 있습니다. 풀 노드의 경우 다음을 권장합니다.
 
@@ -105,26 +105,26 @@ sidebarDepth: 2
 
 합의 클라이언트의 경우, 공간 요구 사항은 클라이언트 구현 및 활성화된 기능(예: 검증자 슬래셔)에 따라 다르지만 일반적으로 비콘 데이터에 200GB가 추가로 필요하다고 예상해야 합니다. 검증자 수가 많을수록 대역폭 부하도 커집니다. [이 분석에서 합의 클라이언트 요구 사항에 대한 세부 정보](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc)를 확인할 수 있습니다.
 
-#### 플러그 앤 플레이 솔루션 {#automatized-setup}
+#### 플러그 앤 플레이 솔루션 {#plug-and-play}
 
 자체 하드웨어로 노드를 실행하는 가장 쉬운 옵션은 플러그 앤 플레이 박스를 사용하는 것입니다. 공급업체의 사전 구성된 머신은 주문, 연결, 실행이라는 가장 간단한 경험을 제공합니다. 모든 것이 사전 구성되어 있으며 소프트웨어를 모니터링하고 제어하기 위한 직관적인 가이드 및 대시보드와 함께 자동으로 실행됩니다.
 
 - [DAppNode](https://dappnode.io/)
 - [Avado](https://ava.do/)
 
-#### 싱글 보드 컴퓨터에서의 이더리움 {#manual-setup}
+#### 싱글 보드 컴퓨터에서의 이더리움 {#ethereum-on-a-single-board-computer}
 
 이더리움 노드를 실행하는 쉽고 저렴한 방법은 Raspberry Pi와 같은 ARM 아키텍처가 있는 싱글 보드 컴퓨터를 사용하는 것입니다. [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)은 Raspberry Pi 및 기타 ARM 보드를 위한 여러 실행 및 합의 클라이언트의 실행하기 쉬운 이미지를 제공합니다.
 
 이와 같이 작고 저렴하며 효율적인 장치는 집에서 노드를 실행하는 데 이상적이지만 성능이 제한적이라는 점을 명심하세요.
 
-## 노드 구축하기 {#getting-the-client}
+## 노드 구축하기 {#spinning-up-node}
 
 실제 클라이언트 설정은 자동화된 런처를 사용하거나 클라이언트 소프트웨어를 직접 설정하여 수동으로 수행할 수 있습니다.
 
 초보 사용자의 경우 설치 과정을 안내하고 클라이언트 설정 프로세스를 자동화하는 소프트웨어인 런처를 사용하는 것이 좋습니다. 그러나 터미널 사용 경험이 있다면 수동 설정 단계를 쉽게 따라 할 수 있을 것입니다.
 
-### 가이드 설정 {#client-setup}
+### 가이드 설정 {#automatized-setup}
 
 여러 사용자 친화적인 프로젝트가 클라이언트 설정 경험을 개선하는 것을 목표로 합니다. 이러한 런처는 자동 클라이언트 설치 및 구성을 제공하며, 일부는 클라이언트의 가이드 설정 및 모니터링을 위한 그래픽 인터페이스를 제공하기도 합니다.
 
@@ -137,13 +137,13 @@ sidebarDepth: 2
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) - CLI 마법사를 사용하여 Docker 구성을 자동으로 생성하는 노드 설정 도구입니다. 네더마인드에서 Go로 작성했습니다.
 - [Chainstack Self-Hosted](https://docs.chainstack.com/docs/self-hosted/introduction) - Kubernetes에 실행 및 합의 클라이언트를 배포하기 위한 웹 UI 및 CLI입니다. 스냅샷 부트스트랩 및 내장 모니터링이 포함되어 있습니다. 무료이며 Chainstack 계정이 필요하지 않습니다. Chainstack에서 구축했습니다.
 
-### 수동 클라이언트 설정 {#starting-the-execution-client}
+### 수동 클라이언트 설정 {#manual-setup}
 
 다른 옵션은 클라이언트 소프트웨어를 수동으로 다운로드, 검증 및 구성하는 것입니다. 일부 클라이언트가 그래픽 인터페이스를 제공하더라도 수동 설정에는 여전히 터미널에 대한 기본 기술이 필요하지만 훨씬 더 많은 다용성을 제공합니다.
 
 앞서 설명했듯이 자체 이더리움 노드를 설정하려면 합의 및 실행 클라이언트 쌍을 실행해야 합니다. 일부 클라이언트에는 다른 종류의 경량 클라이언트가 포함되어 있어 다른 소프트웨어 없이도 동기화될 수 있습니다. 그러나 완전한 무신뢰 검증을 위해서는 두 구현이 모두 필요합니다.
 
-#### 클라이언트 소프트웨어 얻기 {#running-an-execution-client}
+#### 클라이언트 소프트웨어 얻기 {#getting-the-client}
 
 먼저 선호하는 [실행 클라이언트](/developers/docs/nodes-and-clients/#execution-clients) 및 [합의 클라이언트](/developers/docs/nodes-and-clients/#consensus-clients) 소프트웨어를 구해야 합니다.
 
@@ -153,7 +153,7 @@ sidebarDepth: 2
 
 다음은 사전 빌드된 바이너리나 설치 지침을 찾을 수 있는 클라이언트의 릴리스 페이지입니다.
 
-##### 실행 클라이언트 {#starting-the-consensus-client}
+##### 실행 클라이언트
 
 - [베수](https://github.com/hyperledger/besu/releases)
 - [에리곤](https://github.com/ledgerwatch/erigon/releases)
@@ -163,7 +163,7 @@ sidebarDepth: 2
 
 클라이언트 다양성이 [실행 계층의 문제](/developers/docs/nodes-and-clients/client-diversity/#execution-layer)라는 점도 주목할 가치가 있습니다. 독자들은 소수 실행 클라이언트를 실행하는 것을 고려하는 것이 좋습니다.
 
-##### 합의 클라이언트 {#running-a-consensus-client}
+##### 합의 클라이언트
 
 - [라이트하우스](https://github.com/sigp/lighthouse/releases/latest)
 - [로드스타](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (사전 빌드된 바이너리를 제공하지 않으며 Docker 이미지만 제공하거나 소스에서 빌드해야 함)
@@ -175,7 +175,7 @@ sidebarDepth: 2
 
 [최신 네트워크 클라이언트 사용량 보기](https://clientdiversity.org/) 및 [클라이언트 다양성](/developers/docs/nodes-and-clients/client-diversity)에 대해 자세히 알아보세요.
 
-##### 소프트웨어 검증 {#adding-validators}
+##### 소프트웨어 검증
 
 인터넷에서 소프트웨어를 다운로드할 때는 무결성을 검증하는 것이 좋습니다. 이 단계는 선택 사항이지만 이더리움 클라이언트와 같은 중요한 인프라 요소의 경우 잠재적인 공격 벡터를 인식하고 이를 피하는 것이 중요합니다. 사전 빌드된 바이너리를 다운로드한 경우 이를 신뢰해야 하며 공격자가 실행 파일을 악성 파일로 교체할 수 있는 위험을 감수해야 합니다.
 
@@ -189,7 +189,7 @@ sha256sum teku-22.6.1.tar.gz
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
 ```
 
-#### 클라이언트 설정 {#using-the-node}
+#### 클라이언트 설정 {#client-setup}
 
 클라이언트 소프트웨어를 설치, 다운로드 또는 컴파일한 후 실행할 준비가 된 것입니다. 이는 적절한 구성으로 실행해야 함을 의미할 뿐입니다. 클라이언트는 다양한 기능을 활성화할 수 있는 풍부한 구성 옵션을 제공합니다.
 
@@ -201,7 +201,7 @@ sha256sum teku-22.6.1.tar.gz
 
 기본 구성으로 실행 클라이언트를 실행하는 예는 다음 섹션에서 확인할 수 있습니다.
 
-#### 실행 클라이언트 시작 {#reaching-rpc}
+#### 실행 클라이언트 시작 {#starting-the-execution-client}
 
 이더리움 클라이언트 소프트웨어를 시작하기 전에 환경이 준비되었는지 마지막으로 확인하세요. 예를 들어 다음 사항을 확인하세요.
 
@@ -223,7 +223,7 @@ sha256sum teku-22.6.1.tar.gz
 openssl rand -hex 32 > jwtsecret
 ```
 
-#### 실행 클라이언트 실행 {#operating-the-node}
+#### 실행 클라이언트 실행 {#running-an-execution-client}
 
 이 섹션에서는 실행 클라이언트를 시작하는 과정을 안내합니다. 이는 기본 구성의 예일 뿐이며 다음 설정으로 클라이언트를 시작합니다.
 
@@ -240,7 +240,7 @@ openssl rand -hex 32 > jwtsecret
 
 > 예제의 백슬래시 `\`는 서식 지정 목적으로만 사용되며 구성 플래그는 한 줄로 정의할 수 있습니다.
 
-##### 베수 실행 {#keeping-node-online}
+##### 베수 실행
 
 이 예제는 메인넷에서 베수를 시작하고, 블록체인 데이터를 기본 형식으로 `/data/ethereum`에 저장하며, 합의 클라이언트 연결을 위해 JSON-RPC 및 Engine RPC를 활성화합니다. Engine API는 `jwtsecret` 토큰으로 인증되며 `localhost`에서의 호출만 허용됩니다.
 
@@ -262,7 +262,7 @@ besu --Xlauncher
 
 [베수 문서](https://besu.hyperledger.org/public-networks/get-started/start-node/)에는 추가 옵션 및 구성 세부 정보가 포함되어 있습니다.
 
-##### 에리곤 실행 {#creating-client-services}
+##### 에리곤 실행
 
 이 예제는 메인넷에서 에리곤을 시작하고, 블록체인 데이터를 `/data/ethereum`에 저장하며, JSON-RPC를 활성화하고, 허용되는 네임스페이스를 정의하며, `jwtsecret` 경로로 정의된 합의 클라이언트 연결을 위한 인증을 활성화합니다.
 
@@ -275,7 +275,7 @@ erigon --chain mainnet \
 
 에리곤은 기본적으로 8GB HDD로 전체 동기화를 수행하므로 2TB 이상의 아카이브 데이터가 생성됩니다. `datadir`가 여유 공간이 충분한 디스크를 가리키는지 확인하거나 다양한 종류의 데이터를 다듬을 수 있는 `--prune` 플래그를 살펴보세요. 자세한 내용은 에리곤의 `--help`를 확인하세요.
 
-##### 고 이더리움 (geth) 실행 {#updating-clients}
+##### 고 이더리움 (geth) 실행
 
 이 예제는 메인넷에서 고 이더리움 (geth)을 시작하고, 블록체인 데이터를 `/data/ethereum`에 저장하며, JSON-RPC를 활성화하고 허용되는 네임스페이스를 정의합니다. 또한 합의 클라이언트 연결을 위한 인증을 활성화하는데, 이를 위해서는 `jwtsecret` 경로와 허용되는 연결을 정의하는 옵션(예제에서는 `localhost`에서만 허용)이 필요합니다.
 
@@ -290,7 +290,7 @@ geth --mainnet \
 
 [모든 구성 옵션에 대한 문서](https://geth.ethereum.org/docs/fundamentals/command-line-options)를 확인하고 [합의 클라이언트와 함께 고 이더리움 (geth)을 실행하는 방법](https://geth.ethereum.org/docs/getting-started/consensus-clients)에 대해 자세히 알아보세요.
 
-##### 네더마인드 실행 {#running-additional-services}
+##### 네더마인드 실행
 
 네더마인드는 다양한 [설치 옵션](https://docs.nethermind.io/get-started/installing-nethermind)을 제공합니다. 패키지에는 대화형으로 구성을 생성하는 데 도움이 되는 가이드 설정이 포함된 런처를 비롯한 다양한 바이너리가 함께 제공됩니다. 또는 실행 파일 자체인 러너(Runner)를 찾아 구성 플래그와 함께 실행할 수도 있습니다. JSON-RPC는 기본적으로 활성화되어 있습니다.
 
@@ -304,7 +304,7 @@ Nethermind.Runner --config mainnet \
 
 실행 클라이언트는 핵심 기능, 선택한 엔드포인트를 시작하고 피어를 찾기 시작합니다. 피어를 성공적으로 발견한 후 클라이언트는 동기화를 시작합니다. 실행 클라이언트는 합의 클라이언트의 연결을 기다립니다. 클라이언트가 현재 상태로 성공적으로 동기화되면 현재 블록체인 데이터를 사용할 수 있습니다.
 
-##### 레스 실행 {#monitoring-the-node}
+##### 레스 실행
 
 이 예제는 기본 데이터 위치를 사용하여 메인넷에서 레스를 시작합니다. `jwtsecret` 경로로 정의된 합의 클라이언트 연결을 위해 JSON-RPC 및 Engine RPC 인증을 활성화하며 `localhost`에서의 호출만 허용됩니다.
 
@@ -317,7 +317,7 @@ reth node \
 
 기본 데이터 디렉터리에 대해 자세히 알아보려면 [레스 구성하기](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth)를 참조하세요. [레스 문서](https://reth.rs/run/mainnet.html)에는 추가 옵션 및 구성 세부 정보가 포함되어 있습니다.
 
-#### 합의 클라이언트 시작 {#further-reading}
+#### 합의 클라이언트 시작 {#starting-the-consensus-client}
 
 실행 클라이언트에 대한 로컬 RPC 연결을 설정하려면 올바른 포트 구성으로 합의 클라이언트를 시작해야 합니다. 합의 클라이언트는 노출된 실행 클라이언트 포트를 구성 인수로 사용하여 실행해야 합니다.
 
@@ -327,7 +327,7 @@ reth node \
 
 테스트넷에서 비콘 노드를 시작할 때 [체크포인트 동기화](https://notes.ethereum.org/@launchpad/checkpoint-sync)를 위한 퍼블릭 엔드포인트를 사용하면 동기화 시간을 크게 절약할 수 있습니다.
 
-#### 합의 클라이언트 실행 {#related-topics}
+#### 합의 클라이언트 실행 {#running-a-consensus-client}
 
 ##### 라이트하우스 실행
 
@@ -391,7 +391,7 @@ teku --network mainnet \
 
 합의 클라이언트가 예치 컨트랙트를 읽고 검증자를 식별하기 위해 실행 클라이언트에 연결할 때, 다른 비콘 노드 피어에도 연결하여 제네시스부터 합의 슬롯 동기화를 시작합니다. 비콘 노드가 현재 에포크에 도달하면 검증자가 비콘 API를 사용할 수 있게 됩니다. [비콘 노드 API](https://ethereum.github.io/beacon-APIs)에 대해 자세히 알아보세요.
 
-### 검증자 추가
+### 검증자 추가 {#adding-validators}
 
 합의 클라이언트는 검증자가 연결할 수 있는 비콘 노드 역할을 합니다. 각 합의 클라이언트에는 해당 문서에 자세히 설명된 자체 검증자 소프트웨어가 있습니다.
 
@@ -401,7 +401,7 @@ teku --network mainnet \
 
 스테이킹 옵션에 대한 개요는 [스테이킹 페이지](/staking)를 살펴보세요.
 
-### 노드 사용하기
+### 노드 사용하기 {#using-the-node}
 
 실행 클라이언트는 트랜잭션을 제출하거나 이더리움 네트워크에서 스마트 컨트랙트와 상호 작용하거나 배포하는 데 사용할 수 있는 [RPC API 엔드포인트](/developers/docs/apis/json-rpc/)를 다양한 방식으로 제공합니다.
 
@@ -413,7 +413,7 @@ teku --network mainnet \
 
 모든 합의 클라이언트는 [Curl](https://curl.se)과 같은 도구를 사용하여 요청을 전송함으로써 합의 클라이언트의 상태를 확인하거나 블록 및 합의 데이터를 다운로드하는 데 사용할 수 있는 [비콘 API](https://ethereum.github.io/beacon-APIs)를 노출합니다. 이에 대한 자세한 내용은 각 합의 클라이언트의 문서에서 확인할 수 있습니다.
 
-#### RPC 도달
+#### RPC 도달 {#reaching-rpc}
 
 실행 클라이언트 JSON-RPC의 기본 포트는 `8545`이지만 구성에서 로컬 엔드포인트의 포트를 수정할 수 있습니다. 기본적으로 RPC 인터페이스는 컴퓨터의 로컬 호스트에서만 도달할 수 있습니다. 원격으로 액세스할 수 있도록 하려면 주소를 `0.0.0.0`로 변경하여 퍼블릭에 노출할 수 있습니다. 이렇게 하면 로컬 네트워크 및 퍼블릭 IP 주소를 통해 도달할 수 있습니다. 대부분의 경우 라우터에서 포트 포워딩도 설정해야 합니다.
 
@@ -429,11 +429,11 @@ teku --network mainnet \
 
 마지막으로, 내부 네트워크에 대한 액세스를 제공하는 가장 인기 있는 방법 중 하나는 VPN 연결을 통한 것입니다. 사용 사례와 노드에 액세스해야 하는 사용자 수에 따라 안전한 VPN 연결이 옵션이 될 수 있습니다. [OpenVPN](https://openvpn.net/)은 업계 표준 SSL/TLS 프로토콜을 사용하여 OSI 레이어 2 또는 3 보안 네트워크 확장을 구현하는 모든 기능을 갖춘 SSL VPN으로, 인증서, 스마트 카드 및/또는 사용자 이름/비밀번호 자격 증명을 기반으로 하는 유연한 클라이언트 인증 방법을 지원하며, VPN 가상 인터페이스에 적용된 방화벽 규칙을 사용하여 사용자 또는 그룹별 액세스 제어 정책을 허용합니다.
 
-### 노드 운영하기
+### 노드 운영하기 {#operating-the-node}
 
 노드가 제대로 실행되고 있는지 정기적으로 모니터링해야 합니다. 가끔 유지보수를 해야 할 수도 있습니다.
 
-#### 노드 온라인 상태 유지
+#### 노드 온라인 상태 유지 {#keeping-node-online}
 
 노드가 항상 온라인 상태일 필요는 없지만 네트워크와 동기화 상태를 유지하려면 가능한 한 온라인 상태를 유지해야 합니다. 다시 시작하기 위해 종료할 수 있지만 다음 사항을 명심하세요.
 
@@ -443,11 +443,11 @@ teku --network mainnet \
 
 _이는 합의 레이어 검증자 노드에는 적용되지 않습니다._ 노드를 오프라인으로 전환하면 노드에 의존하는 모든 서비스에 영향을 미칩니다. _스테이킹_ 목적으로 노드를 실행하는 경우 다운타임을 최대한 최소화해야 합니다.
 
-#### 클라이언트 서비스 생성
+#### 클라이언트 서비스 생성 {#creating-client-services}
 
 시작 시 클라이언트를 자동으로 실행하는 서비스를 생성하는 것을 고려해 보세요. 예를 들어 Linux 서버의 경우 `systemd` 등을 사용하여 제한된 권한을 가진 사용자 계정으로 적절한 구성과 함께 클라이언트를 실행하고 자동으로 다시 시작하는 서비스를 생성하는 것이 좋은 방법입니다.
 
-#### 클라이언트 업데이트
+#### 클라이언트 업데이트 {#updating-clients}
 
 클라이언트 소프트웨어를 최신 보안 패치, 기능 및 [EIP](/eips/)로 최신 상태로 유지해야 합니다. 특히 [하드 포크](/ethereum-forks/) 전에는 올바른 클라이언트 버전을 실행하고 있는지 확인하세요.
 
@@ -457,17 +457,17 @@ _이는 합의 레이어 검증자 노드에는 적용되지 않습니다._ 노�
 
 각 클라이언트 구현에는 피어 투 피어 프로토콜에서 사용되지만 명령줄에서도 액세스할 수 있는 사람이 읽을 수 있는 버전 문자열이 있습니다. 이 버전 문자열을 통해 사용자는 올바른 버전을 실행하고 있는지 확인할 수 있으며, 네트워크에서 특정 클라이언트의 분포를 정량화하는 데 관심이 있는 블록 탐색기 및 기타 분석 도구를 허용합니다. 버전 문자열에 대한 자세한 내용은 개별 클라이언트 문서를 참조하세요.
 
-#### 추가 서비스 실행
+#### 추가 서비스 실행 {#running-additional-services}
 
 자체 노드를 실행하면 이더리움 클라이언트 RPC에 직접 액세스해야 하는 서비스를 사용할 수 있습니다. 이는 [레이어 2 (l2) 솔루션](/developers/docs/scaling/#layer-2-scaling), 지갑용 백엔드, 블록 탐색기, 개발자 도구 및 기타 이더리움 인프라와 같이 이더리움 위에 구축된 서비스입니다.
 
-#### 노드 모니터링
+#### 노드 모니터링 {#monitoring-the-node}
 
 노드를 제대로 모니터링하려면 메트릭 수집을 고려해 보세요. 클라이언트는 노드에 대한 포괄적인 데이터를 얻을 수 있도록 메트릭 엔드포인트를 제공합니다. [InfluxDB](https://www.influxdata.com/get-influxdb/) 또는 [Prometheus](https://prometheus.io/)와 같은 도구를 사용하여 데이터베이스를 생성하고 [Grafana](https://grafana.com/)와 같은 소프트웨어에서 시각화 및 차트로 변환할 수 있습니다. 이 소프트웨어를 사용하기 위한 많은 설정과 노드 및 네트워크 전체를 시각화하기 위한 다양한 Grafana 대시보드가 있습니다. 예를 들어 [고 이더리움 (geth) 모니터링에 대한 튜토리얼](/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/)을 확인해 보세요.
 
 모니터링의 일환으로 머신의 성능을 주시해야 합니다. 노드의 초기 동기화 중에 클라이언트 소프트웨어는 CPU 및 RAM에 매우 큰 부하를 줄 수 있습니다. Grafana 외에도 `htop` 또는 `uptime`와 같이 OS에서 제공하는 도구를 사용하여 이를 수행할 수 있습니다.
 
-## 추가 자료
+## 추가 자료 {#further-reading}
 
 - [이더리움 스테이킹 가이드](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, 자주 업데이트됨_
 - [가이드 | 메인넷에서 이더리움 스테이킹을 위한 검증자 설정 방법](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, 자주 업데이트됨_
@@ -479,7 +479,7 @@ _이는 합의 레이어 검증자 노드에는 적용되지 않습니다._ 노�
 - [이더리움 메인넷에서 Hyperledger 베수 노드 실행: 이점, 요구 사항 및 설정](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 2020년 5월 7일_
 - [모니터링 스택과 함께 네더마인드 이더리움 클라이언트 배포](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 2020년 7월 8일_
 
-## 관련 주제
+## 관련 주제 {#related-topics}
 
 - [노드 및 클라이언트](/developers/docs/nodes-and-clients/)
 - [블록](/developers/docs/blocks/)

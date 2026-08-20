@@ -32,9 +32,9 @@ summaryPoints:
 如果你有 32 个 ETH 用于质押，但不想处理硬件问题，委托质押服务允许你将技术方面的工作交出去，同时赚取原生的以太坊区块奖励。
 
 <Grid>
-  <Card title="Your own validator" icon={<MonitorCheck />} description="存入你自己的 32 个 ETH，以激活你自己的签名密钥集，该密钥集将参与以太坊共识。通过仪表板监控你的进度，看着这些 ETH 奖励不断累积。" />
-  <Card title="Easy to start" icon={<Flag />} description="忘记硬件规格、设置、节点维护和升级吧。提供商允许你通过上传自己的签名凭证来外包困难的部分，让他们代表你运行验证者，只需支付少量费用。" />
-  <Card title="Limit your risk" icon={<ShieldHalf />} description="通过非托管服务，你可以保留对允许提款或转账质押资金的密钥的控制权。这些密钥不同于签名密钥，可以单独存储，以限制（但不能消除）你作为质押者的风险。" />
+  <Card title="你自己的验证者" icon={<MonitorCheck />} description="存入你自己的 32 个 ETH，以激活你自己的签名密钥集，该密钥集将参与以太坊共识。通过仪表板监控你的进度，看着这些 ETH 奖励不断累积。" />
+  <Card title="易于上手" icon={<Flag />} description="忘记硬件规格、设置、节点维护和升级吧。提供商允许你通过上传自己的签名凭证来外包困难的部分，让他们代表你运行验证者，只需支付少量费用。" />
+  <Card title="降低你的风险" icon={<ShieldHalf />} description="通过非托管服务，你可以保留对允许提款或转账质押资金的密钥的控制权。这些密钥不同于签名密钥，可以单独存储，以限制（但不能消除）你作为质押者的风险。" />
 </Grid>
 
 ## 质押选项比较 {#comparison-of-staking-options}

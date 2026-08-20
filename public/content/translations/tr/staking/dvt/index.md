@@ -16,7 +16,7 @@ Dağıtık doğrulayıcı teknolojisi (DVT), tek hata noktalarını azaltmak ve 
 
 DVT, bir doğrulayıcıyı güvence altına almak için kullanılan **özel anahtarı**, bir "küme" halinde organize edilmiş **birçok bilgisayar arasında bölerek** anahtar yönetimini ve imzalamayı dağıtır. Bunu yapmak, gerekli doğrulama işi her kümedeki makinelerin bir alt kümesi tarafından yapılabileceğinden, doğrulayıcı düğümünü aktif tutarken kümedeki bazı düğümlerin çevrimdışı olmasına izin verir. Bu dağıtım, tek hata noktalarını azaltarak doğrulayıcıyı daha sağlam hale getirir. DVT'nin imzalama dağıtımının ek bir faydası da, anahtarın tamamı tek bir makinede saklanmadığı için saldırganların anahtara erişmesini çok zorlaştırmasıdır.
 
-![A Diagram showing how a single validator key is split into key shares and distributed to multiple nodes with varying components.](./dvt-cluster.png)
+![Tek bir doğrulayıcı anahtarının anahtar paylarına bölünüp farklı bileşenlere sahip birden fazla düğüme dağıtılmasını gösteren bir diyagram.](./dvt-cluster.png)
 
 DVT, stake etmenin ayrı bir yolu değildir. Herhangi bir staking kurulumunun kullanabileceği bir yazılım katmanıdır:
 - [Bireysel staker'lar](/staking/solo/) birlikte bir doğrulayıcı çalıştırmak için ekip kurabilir veya bireysel bir staker, bireysel staking kurulumuna dayanıklılık katmak için DVT'yi kullanabilir.

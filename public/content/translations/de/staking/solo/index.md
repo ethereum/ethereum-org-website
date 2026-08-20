@@ -30,9 +30,9 @@ Ein Home-Staker erhält Belohnungen direkt vom Protokoll dafür, dass er seinen 
 Home-Staking geht mit mehr Verantwortung einher, bietet Ihnen jedoch maximale Kontrolle über Ihre Gelder und Ihr Staking-Setup.
 
 <Grid>
-  <Card title="Keep all rewards" icon={<HandCoins />} description="Home-Staker erhalten 100 % der Protokoll-Belohnungen, die direkt vom Protokoll ausgezahlt werden, während Ihr Validator online ist." />
+  <Card title="Alle Belohnungen behalten" icon={<HandCoins />} description="Home-Staker erhalten 100 % der Protokoll-Belohnungen, die direkt vom Protokoll ausgezahlt werden, während Ihr Validator online ist." />
   <Card title="Selbstsouveränität" icon={<KeyRound />} description="Behalten Sie jederzeit Ihre eigenen Schlüssel und die volle Verwahrung Ihrer Gelder. Wählen Sie die Kombination aus Clients und Hardware, mit der Sie Ihr Risiko minimieren können. Kein Dritter kann diese Entscheidungen für Sie treffen oder Ihre Abhebungen einschränken." />
-  <Card title="Client and geographic diversity" icon={<GlobeLock />} description="Home-Staker, die Minderheits-Clients auf Hardware ausführen, die über viele Standorte verteilt ist, stärken die Dezentralisierung und Sicherheit des Netzwerks." />
+  <Card title="Client- und geografische Diversität" icon={<GlobeLock />} description="Home-Staker, die Minderheits-Clients auf Hardware ausführen, die über viele Standorte verteilt ist, stärken die Dezentralisierung und Sicherheit des Netzwerks." />
 </Grid>
 
 ## Überlegungen vor dem Home-Staking {#considerations-before-staking-solo}
@@ -195,7 +195,7 @@ Kurz gesagt, dies kann nie vollständig garantiert werden, aber wenn Sie in gute
 
 Es gibt nur wenige spezifische Wege, die dazu führen können, dass ein Validator geslasht und aus dem Netzwerk ausgeworfen wird. Zum Zeitpunkt des Schreibens waren die aufgetretenen Slashings ausschließlich das Produkt redundanter Hardware-Setups, bei denen Schlüssel zum Signieren auf zwei separaten Rechnern gleichzeitig gespeichert wurden. Dies kann versehentlich zu einer <em>doppelten Stimme</em> von Ihren Schlüsseln führen, was ein Vergehen ist, das mit Slashing bestraft wird.
 
-Die Ausführung eines Supermehrheits-Clients (jeder Client, der von über 2/3 des Netzwerks verwendet wird) birgt ebenfalls das Risiko eines potenziellen Slashings, falls dieser Client einen Fehler aufweist, der zu einem Chain-Fork führt. Dies kann zu einem fehlerhaften Fork, der endgültig wird. Um zur beabsichtigten Chain zurückzukehren, müsste eine <em>Surround-Stimme</em> abgegeben werden, indem versucht wird, einen endgültigen Block rückgängig zu machen. Dies ist ebenfalls ein Vergehen, das mit Slashing bestraft wird, und kann einfach vermieden werden, indem stattdessen ein Minderheits-Client ausgeführt wird.
+Die Ausführung eines Supermehrheits-Clients (jeder Client, der von über 2/3 des Netzwerks verwendet wird) birgt ebenfalls das Risiko eines potenziellen Slashings, falls dieser Client einen Fehler aufweist, der zu einem Chain-Fork führt. Dies kann zu einem fehlerhaften Fork führen, der endgültig wird. Um zur beabsichtigten Chain zurückzukehren, müsste eine <em>Surround-Stimme</em> abgegeben werden, indem versucht wird, einen endgültigen Block rückgängig zu machen. Dies ist ebenfalls ein Vergehen, das mit Slashing bestraft wird, und kann einfach vermieden werden, indem stattdessen ein Minderheits-Client ausgeführt wird.
 
 Äquivalente Fehler in einem <em>Minderheits-Client würden niemals endgültig werden</em> und somit niemals zu einer Surround-Stimme führen, sondern lediglich zu Inaktivitätsstrafen, <em>nicht zu Slashing</em>.
 

@@ -32,9 +32,9 @@ Dibandingkan dengan [staking mandiri](/staking/solo/), setiap bentuk pendelegasi
 Jika Anda memiliki 32 ETH untuk di-stake, tetapi tidak merasa nyaman berurusan dengan perangkat keras, layanan staking yang didelegasikan memungkinkan Anda menyerahkan sisi teknis sambil mendapatkan imbalan blok Ethereum asli.
 
 <Grid>
-  <Card title="Your own validator" icon={<MonitorCheck />} description="Setorkan 32 ETH Anda sendiri untuk mengaktifkan set kunci penandatanganan Anda sendiri yang akan berpartisipasi dalam konsensus Ethereum. Pantau kemajuan Anda dengan dasbor untuk melihat imbalan ETH tersebut terakumulasi." />
-  <Card title="Easy to start" icon={<Flag />} description="Lupakan tentang spesifikasi perangkat keras, pengaturan, pemeliharaan node, dan peningkatan. Penyedia memungkinkan Anda mengalihdayakan bagian yang sulit dengan mengunggah kredensial penandatanganan Anda sendiri, memungkinkan mereka menjalankan validator atas nama Anda, dengan biaya kecil." />
-  <Card title="Limit your risk" icon={<ShieldHalf />} description="Dengan layanan non-kustodial, Anda memegang kendali atas kunci yang memungkinkan penarikan atau transfer dana yang di-stake. Kunci ini berbeda dari kunci penandatanganan, dan dapat disimpan secara terpisah untuk membatasi (tetapi tidak menghilangkan) risiko Anda sebagai staker." />
+  <Card title="Validator Anda sendiri" icon={<MonitorCheck />} description="Setorkan 32 ETH Anda sendiri untuk mengaktifkan set kunci penandatanganan Anda sendiri yang akan berpartisipasi dalam konsensus Ethereum. Pantau kemajuan Anda dengan dasbor untuk melihat imbalan ETH tersebut terakumulasi." />
+  <Card title="Mudah untuk memulai" icon={<Flag />} description="Lupakan tentang spesifikasi perangkat keras, pengaturan, pemeliharaan node, dan peningkatan. Penyedia memungkinkan Anda mengalihdayakan bagian yang sulit dengan mengunggah kredensial penandatanganan Anda sendiri, memungkinkan mereka menjalankan validator atas nama Anda, dengan biaya kecil." />
+  <Card title="Batasi risiko Anda" icon={<ShieldHalf />} description="Dengan layanan non-kustodial, Anda memegang kendali atas kunci yang memungkinkan penarikan atau transfer dana yang di-stake. Kunci ini berbeda dari kunci penandatanganan, dan dapat disimpan secara terpisah untuk membatasi (tetapi tidak menghilangkan) risiko Anda sebagai staker." />
 </Grid>
 
 ## Perbandingan opsi staking {#comparison-of-staking-options}

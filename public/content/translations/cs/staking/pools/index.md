@@ -26,9 +26,9 @@ Každá možnost společného stakingu řeší skutečný problém s přístupem
 Kromě výhod [účasti na stakingu](/staking/) přináší staking s poolem řadu jedinečných výhod.
 
 <Grid>
-  <Card title="Low barrier to entry" icon={<Fish />} description="Nejste velryba? Žádný problém. Většina stakingových poolů vám umožňuje stakovat prakticky jakékoli množství ETH tím, že spojíte síly s ostatními stakery, na rozdíl od sólo stakingu, který vyžaduje 32 ETH." />
-  <Card title="Stake today" icon={<Clock />} description="Staking s poolem je stejně snadný jako swap tokenů. Nemusíte se starat o nastavení hardwaru a údržbu uzlu. Pooly vám umožňují vložit vaše ETH, což provozovatelům uzlů umožňuje provozovat validátory. Odměny jsou pak rozděleny přispěvatelům po odečtení poplatku za provoz uzlu." />
-  <Card title="Liquid staking tokens" icon={<Droplets />} description="Mnoho stakingových poolů poskytuje token, který představuje nárok na vaše stakované ETH a odměny, které generuje. To vám umožňuje využít vaše stakované ETH, např. jako zajištění v DeFi aplikacích." />
+  <Card title="Nízká bariéra vstupu" icon={<Fish />} description="Nejste velryba? Žádný problém. Většina stakingových poolů vám umožňuje stakovat prakticky jakékoli množství ETH tím, že spojíte síly s ostatními stakery, na rozdíl od sólo stakingu, který vyžaduje 32 ETH." />
+  <Card title="Stakujte ještě dnes" icon={<Clock />} description="Staking s poolem je stejně snadný jako swap tokenů. Nemusíte se starat o nastavení hardwaru a údržbu uzlu. Pooly vám umožňují vložit vaše ETH, což provozovatelům uzlů umožňuje provozovat validátory. Odměny jsou pak rozděleny přispěvatelům po odečtení poplatku za provoz uzlu." />
+  <Card title="Tokeny likvidního stakingu" icon={<Droplets />} description="Mnoho stakingových poolů poskytuje token, který představuje nárok na vaše stakované ETH a odměny, které generuje. To vám umožňuje využít vaše stakované ETH, např. jako zajištění v DeFi aplikacích." />
 </Grid>
 
 ## Srovnání možností stakingu {#comparison-of-staking-options}

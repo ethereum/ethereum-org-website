@@ -26,9 +26,9 @@ Mọi tùy chọn đặt cọc chung đều giải quyết vấn đề tiếp c�
 Ngoài những lợi ích của việc [tham gia đặt cọc](/staking/), việc đặt cọc với một nhóm còn mang lại một số lợi ích độc đáo.
 
 <Grid>
-  <Card title="Low barrier to entry" icon={<Fish />} description="Không phải là cá voi? Không thành vấn đề. Hầu hết các nhóm đặt cọc cho phép bạn đặt cọc hầu như bất kỳ số lượng ETH nào bằng cách hợp lực với những người đặt cọc khác, không giống như đặt cọc độc lập yêu cầu 32 ETH." />
-  <Card title="Stake today" icon={<Clock />} description="Đặt cọc với một nhóm dễ dàng như một giao dịch hoán đổi token. Không cần lo lắng về việc thiết lập phần cứng và bảo trì nút. Các nhóm cho phép bạn gửi ETH của mình, điều này cho phép những người vận hành nút chạy các trình xác thực. Phần thưởng sau đó được phân phối cho những người đóng góp trừ đi một khoản phí cho các hoạt động của nút." />
-  <Card title="Liquid staking tokens" icon={<Droplets />} description="Nhiều nhóm đặt cọc cung cấp một token đại diện cho yêu cầu nhận đối với số ETH đã đặt cọc của bạn và phần thưởng mà nó tạo ra. Điều này cho phép bạn sử dụng số ETH đã đặt cọc của mình, ví dụ: làm tài sản thế chấp trong các ứng dụng tài chính phi tập trung (DeFi)." />
+  <Card title="Rào cản gia nhập thấp" icon={<Fish />} description="Không phải là cá voi? Không thành vấn đề. Hầu hết các nhóm đặt cọc cho phép bạn đặt cọc hầu như bất kỳ số lượng ETH nào bằng cách hợp lực với những người đặt cọc khác, không giống như đặt cọc độc lập yêu cầu 32 ETH." />
+  <Card title="Đặt cọc ngay hôm nay" icon={<Clock />} description="Đặt cọc với một nhóm dễ dàng như một giao dịch hoán đổi token. Không cần lo lắng về việc thiết lập phần cứng và bảo trì nút. Các nhóm cho phép bạn gửi ETH của mình, điều này cho phép những người vận hành nút chạy các trình xác thực. Phần thưởng sau đó được phân phối cho những người đóng góp trừ đi một khoản phí cho các hoạt động của nút." />
+  <Card title="Token staking thanh khoản" icon={<Droplets />} description="Nhiều nhóm đặt cọc cung cấp một token đại diện cho yêu cầu nhận đối với số ETH đã đặt cọc của bạn và phần thưởng mà nó tạo ra. Điều này cho phép bạn sử dụng số ETH đã đặt cọc của mình, ví dụ: làm tài sản thế chấp trong các ứng dụng tài chính phi tập trung (DeFi)." />
 </Grid>
 
 ## So sánh các tùy chọn đặt cọc {#comparison-of-staking-options}

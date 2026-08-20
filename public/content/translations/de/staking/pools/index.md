@@ -26,9 +26,9 @@ Jede Pooled-Option löst das reale Zugangsproblem des Stakings mit weniger als 3
 Zusätzlich zu den Vorteilen der [Teilnahme am Staking](/staking/) bietet das Staking mit einem Pool eine Reihe einzigartiger Vorteile.
 
 <Grid>
-  <Card title="Low barrier to entry" icon={<Fish />} description="Kein Wal? Kein Problem. Die meisten Staking-Pools ermöglichen es Ihnen, praktisch jeden beliebigen ETH-Betrag zu staken, indem Sie sich mit anderen Stakern zusammenschließen, im Gegensatz zum Solo Staking, das 32 ETH erfordert." />
-  <Card title="Stake today" icon={<Clock />} description="Das Staking mit einem Pool ist so einfach wie ein Token-Tausch. Sie müssen sich keine Gedanken über die Hardware-Einrichtung und die Wartung von Knoten machen. Pools ermöglichen es Ihnen, Ihre ETH einzuzahlen, was es Knotenbetreibern ermöglicht, Validatoren auszuführen. Die Belohnungen werden dann abzüglich einer Gebühr für den Knotenbetrieb an die Mitwirkenden verteilt." />
-  <Card title="Liquid staking tokens" icon={<Droplets />} description="Viele Staking-Pools stellen einen Token zur Verfügung, der einen Anspruch auf Ihre gestakten ETH und die dadurch generierten Belohnungen darstellt. Dies ermöglicht es Ihnen, Ihre gestakten ETH zu nutzen, z. B. als Sicherheit in DeFi-Anwendungen." />
+  <Card title="Niedrige Einstiegshürde" icon={<Fish />} description="Kein Wal? Kein Problem. Die meisten Staking-Pools ermöglichen es Ihnen, praktisch jeden beliebigen ETH-Betrag zu staken, indem Sie sich mit anderen Stakern zusammenschließen, im Gegensatz zum Solo Staking, das 32 ETH erfordert." />
+  <Card title="Stake noch heute" icon={<Clock />} description="Das Staking mit einem Pool ist so einfach wie ein Token-Tausch. Sie müssen sich keine Gedanken über die Hardware-Einrichtung und die Wartung von Knoten machen. Pools ermöglichen es Ihnen, Ihre ETH einzuzahlen, was es Knotenbetreibern ermöglicht, Validatoren auszuführen. Die Belohnungen werden dann abzüglich einer Gebühr für den Knotenbetrieb an die Mitwirkenden verteilt." />
+  <Card title="Liquid-Staking-Token" icon={<Droplets />} description="Viele Staking-Pools stellen einen Token zur Verfügung, der einen Anspruch auf Ihre gestakten ETH und die dadurch generierten Belohnungen darstellt. Dies ermöglicht es Ihnen, Ihre gestakten ETH zu nutzen, z. B. als Sicherheit in DeFi-Anwendungen." />
 </Grid>
 
 ## Vergleich der Staking-Optionen {#comparison-of-staking-options}

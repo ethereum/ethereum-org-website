@@ -29,7 +29,7 @@ Setelah menyiapkan lingkungan, instal klien yang dipilih baik dengan [antarmuka 
 
 Saat node berjalan dan melakukan sinkronisasi, Anda siap untuk [menggunakannya](#using-the-node), tetapi pastikan untuk terus memantau [pemeliharaannya](#operating-the-node).
 
-![Client setup](./diagram.png)
+![Pengaturan klien](./diagram.png)
 
 ### Lingkungan dan perangkat keras {#environment-and-hardware}
 
@@ -71,18 +71,18 @@ Ukuran basis data dan kecepatan sinkronisasi awal bergantung pada klien yang dip
 
 Pastikan juga koneksi internet Anda tidak dibatasi oleh [batas bandwidth](https://wikipedia.org/wiki/Data_cap). Disarankan untuk menggunakan koneksi tanpa batas karena sinkronisasi awal dan data yang disiarkan ke jaringan dapat melebihi batas Anda.
 
-##### Sistem operasi {#plug-and-play}
+##### Sistem operasi
 
 Semua klien mendukung sistem operasi utama - Linux, macOS, Windows. Ini berarti Anda dapat menjalankan node pada mesin desktop atau server biasa dengan sistem operasi (OS) yang paling sesuai untuk Anda. Pastikan OS Anda mutakhir untuk menghindari potensi masalah dan kerentanan keamanan.
 
-##### Persyaratan minimum {#ethereum-on-a-single-board-computer}
+##### Persyaratan minimum
 
 - CPU dengan 2+ inti
 - RAM 16 GB (disarankan 32 GB untuk stabilitas)
 - SSD NVMe 2 TB (kemungkinan akan terlampaui pada tahun 2027, baca lebih lanjut tentang [SSD yang bagus dan kurang bagus untuk node Ethereum](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
 - Bandwidth 25+ MBit/dtk
 
-##### Spesifikasi yang disarankan {#spinning-up-node}
+##### Spesifikasi yang disarankan
 
 Panduan perangkat keras saat ini untuk operator node diidentifikasi dalam [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). Untuk full node, disarankan:
 
@@ -105,26 +105,26 @@ Mode sinkronisasi dan klien yang Anda pilih akan memengaruhi persyaratan ruang, 
 
 Untuk klien konsensus, persyaratan ruang juga bergantung pada implementasi klien dan fitur yang diaktifkan (misalnya, pemotong validator) tetapi umumnya perhitungkan tambahan 200GB yang diperlukan untuk data suar. Dengan sejumlah besar validator, beban bandwidth juga bertambah. Anda dapat menemukan [detail tentang persyaratan klien konsensus dalam analisis ini](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
-#### Solusi plug-and-play {#automatized-setup}
+#### Solusi plug-and-play {#plug-and-play}
 
 Opsi termudah untuk menjalankan node dengan perangkat keras Anda sendiri adalah menggunakan kotak plug-and-play. Mesin yang telah dikonfigurasi sebelumnya dari vendor menawarkan pengalaman yang paling mudah: pesan, sambungkan, jalankan. Semuanya telah dikonfigurasi sebelumnya dan berjalan secara otomatis dengan panduan intuitif dan dasbor untuk memantau dan mengontrol perangkat lunak.
 
 - [DAppNode](https://dappnode.io/)
 - [Avado](https://ava.do/)
 
-#### Ethereum pada komputer papan tunggal {#manual-setup}
+#### Ethereum pada komputer papan tunggal {#ethereum-on-a-single-board-computer}
 
 Cara mudah dan murah untuk menjalankan node Ethereum adalah dengan menggunakan komputer papan tunggal, bahkan dengan arsitektur ARM seperti Raspberry Pi. [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) menyediakan citra (image) yang mudah dijalankan dari beberapa klien eksekusi dan konsensus untuk Raspberry Pi dan papan ARM lainnya.
 
 Perangkat kecil, terjangkau, dan efisien seperti ini ideal untuk menjalankan node di rumah tetapi ingatlah kinerjanya yang terbatas.
 
-## Menjalankan node {#getting-the-client}
+## Menjalankan node {#spinning-up-node}
 
 Pengaturan klien yang sebenarnya dapat dilakukan baik dengan peluncur otomatis atau secara manual, mengatur perangkat lunak klien secara langsung.
 
 Untuk pengguna yang kurang mahir, pendekatan yang disarankan adalah menggunakan peluncur, perangkat lunak yang memandu Anda melalui instalasi dan mengotomatiskan proses pengaturan klien. Namun, jika Anda memiliki pengalaman menggunakan terminal, langkah-langkah untuk pengaturan manual seharusnya mudah diikuti.
 
-### Pengaturan terpandu {#client-setup}
+### Pengaturan terpandu {#automatized-setup}
 
 Beberapa proyek yang ramah pengguna bertujuan untuk meningkatkan pengalaman mengatur klien. Peluncur ini menyediakan instalasi dan konfigurasi klien otomatis, dengan beberapa bahkan menawarkan antarmuka grafis untuk pengaturan terpandu dan pemantauan klien.
 
@@ -137,13 +137,13 @@ Di bawah ini adalah beberapa proyek yang dapat membantu Anda menginstal dan meng
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) - Alat pengaturan node yang secara otomatis menghasilkan konfigurasi Docker menggunakan panduan CLI. Ditulis dalam Go oleh Nethermind.
 - [Chainstack Self-Hosted](https://docs.chainstack.com/docs/self-hosted/introduction) - UI Web dan CLI untuk menyebarkan klien eksekusi dan konsensus di Kubernetes. Termasuk bootstrap Snapshot dan pemantauan bawaan. Gratis. Tidak memerlukan akun Chainstack. Dibangun oleh Chainstack.
 
-### Pengaturan klien manual {#starting-the-execution-client}
+### Pengaturan klien manual {#manual-setup}
 
 Opsi lainnya adalah mengunduh, memverifikasi, dan mengonfigurasi perangkat lunak klien secara manual. Meskipun beberapa klien menawarkan antarmuka grafis, pengaturan manual masih memerlukan keterampilan dasar dengan terminal tetapi menawarkan lebih banyak fleksibilitas.
 
 Seperti yang dijelaskan sebelumnya, mengatur node Ethereum Anda sendiri akan memerlukan menjalankan sepasang klien konsensus dan eksekusi. Beberapa klien mungkin menyertakan klien ringan dari jenis lain dan melakukan sinkronisasi tanpa memerlukan perangkat lunak lain. Namun, verifikasi tanpa kepercayaan penuh memerlukan kedua implementasi tersebut.
 
-#### Mendapatkan perangkat lunak klien {#running-an-execution-client}
+#### Mendapatkan perangkat lunak klien {#getting-the-client}
 
 Pertama, Anda perlu mendapatkan perangkat lunak [klien eksekusi](/developers/docs/nodes-and-clients/#execution-clients) dan [klien konsensus](/developers/docs/nodes-and-clients/#consensus-clients) pilihan Anda.
 
@@ -153,7 +153,7 @@ Instruksi untuk menginstal setiap klien disediakan dalam dokumentasi yang ditaut
 
 Berikut adalah halaman rilis klien tempat Anda dapat menemukan biner yang telah dibuat sebelumnya atau instruksi tentang instalasi:
 
-##### Klien eksekusi {#starting-the-consensus-client}
+##### Klien eksekusi
 
 - [Besu](https://github.com/hyperledger/besu/releases)
 - [Erigon](https://github.com/ledgerwatch/erigon/releases)
@@ -163,7 +163,7 @@ Berikut adalah halaman rilis klien tempat Anda dapat menemukan biner yang telah 
 
 Perlu juga dicatat bahwa keragaman klien adalah [masalah pada lapisan eksekusi](/developers/docs/nodes-and-clients/client-diversity/#execution-layer). Disarankan agar pembaca mempertimbangkan untuk menjalankan klien eksekusi minoritas.
 
-##### Klien konsensus {#running-a-consensus-client}
+##### Klien konsensus
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
 - [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (Tidak menyediakan biner yang telah dibuat sebelumnya, hanya citra Docker atau untuk dibangun dari sumber)
@@ -175,7 +175,7 @@ Perlu juga dicatat bahwa keragaman klien adalah [masalah pada lapisan eksekusi](
 
 [Lihat penggunaan klien jaringan terbaru](https://clientdiversity.org/) dan pelajari lebih lanjut tentang [keragaman klien](/developers/docs/nodes-and-clients/client-diversity).
 
-##### Memverifikasi perangkat lunak {#adding-validators}
+##### Memverifikasi perangkat lunak
 
 Saat mengunduh perangkat lunak dari internet, disarankan untuk memverifikasi integritasnya. Langkah ini opsional tetapi terutama dengan bagian infrastruktur penting seperti klien Ethereum, penting untuk menyadari potensi vektor serangan dan menghindarinya. Jika Anda mengunduh biner yang telah dibuat sebelumnya, Anda harus memercayainya dan mengambil risiko bahwa penyerang dapat menukar file yang dapat dieksekusi dengan yang berbahaya.
 
@@ -189,7 +189,7 @@ sha256sum teku-22.6.1.tar.gz
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
 ```
 
-#### Pengaturan klien {#using-the-node}
+#### Pengaturan klien {#client-setup}
 
 Setelah menginstal, mengunduh, atau mengkompilasi perangkat lunak klien, Anda siap untuk menjalankannya. Ini hanya berarti perangkat lunak tersebut harus dieksekusi dengan konfigurasi yang tepat. Klien menawarkan opsi konfigurasi yang kaya, yang dapat mengaktifkan berbagai fitur.
 
@@ -201,7 +201,7 @@ Untuk tujuan pengujian, Anda mungkin lebih suka menjalankan klien di salah satu 
 
 Contoh menjalankan klien eksekusi dengan konfigurasi dasar dapat ditemukan di bagian selanjutnya.
 
-#### Memulai klien eksekusi {#reaching-rpc}
+#### Memulai klien eksekusi {#starting-the-execution-client}
 
 Sebelum memulai perangkat lunak klien Ethereum, lakukan pemeriksaan terakhir bahwa lingkungan Anda sudah siap. Misalnya, pastikan:
 
@@ -223,7 +223,7 @@ Token ini dihasilkan secara otomatis oleh perangkat lunak klien, tetapi dalam be
 openssl rand -hex 32 > jwtsecret
 ```
 
-#### Menjalankan klien eksekusi {#operating-the-node}
+#### Menjalankan klien eksekusi {#running-an-execution-client}
 
 Bagian ini akan memandu Anda dalam memulai klien eksekusi. Ini hanya berfungsi sebagai contoh konfigurasi dasar, yang akan memulai klien dengan pengaturan ini:
 
@@ -240,7 +240,7 @@ Harap diingat bahwa ini hanyalah contoh dasar, semua pengaturan lainnya akan dia
 
 > Perhatikan bahwa garis miring terbalik `\` dalam contoh hanya untuk tujuan pemformatan; tanda (flag) konfigurasi dapat ditentukan dalam satu baris.
 
-##### Menjalankan Besu {#keeping-node-online}
+##### Menjalankan Besu
 
 Contoh ini memulai Besu di Mainnet, menyimpan data rantai blok dalam format default di `/data/ethereum`, mengaktifkan JSON-RPC dan Engine RPC untuk menghubungkan klien konsensus. Engine API diautentikasi dengan token `jwtsecret` dan hanya panggilan dari `localhost` yang diizinkan.
 
@@ -262,7 +262,7 @@ besu --Xlauncher
 
 [Dokumentasi Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/) berisi opsi tambahan dan detail konfigurasi.
 
-##### Menjalankan Erigon {#creating-client-services}
+##### Menjalankan Erigon
 
 Contoh ini memulai Erigon di Mainnet, menyimpan data rantai blok di `/data/ethereum`, mengaktifkan JSON-RPC, menentukan namespace mana yang diizinkan dan mengaktifkan autentikasi untuk menghubungkan klien konsensus yang ditentukan oleh jalur `jwtsecret`.
 
@@ -275,7 +275,7 @@ erigon --chain mainnet \
 
 Erigon secara default melakukan sinkronisasi penuh dengan HDD 8GB yang akan menghasilkan lebih dari 2TB data arsip. Pastikan `datadir` menunjuk ke disk dengan ruang kosong yang cukup atau lihat tanda `--prune` yang dapat memangkas berbagai jenis data. Periksa `--help` Erigon untuk mempelajari lebih lanjut.
 
-##### Menjalankan Geth {#updating-clients}
+##### Menjalankan Geth
 
 Contoh ini memulai Geth di Mainnet, menyimpan data rantai blok di `/data/ethereum`, mengaktifkan JSON-RPC dan menentukan namespace mana yang diizinkan. Ini juga mengaktifkan autentikasi untuk menghubungkan klien konsensus yang memerlukan jalur ke `jwtsecret` dan juga opsi yang menentukan koneksi mana yang diizinkan, dalam contoh kami hanya dari `localhost`.
 
@@ -290,7 +290,7 @@ geth --mainnet \
 
 Periksa [dokumen untuk semua opsi konfigurasi](https://geth.ethereum.org/docs/fundamentals/command-line-options) dan pelajari lebih lanjut tentang [menjalankan Geth dengan klien konsensus](https://geth.ethereum.org/docs/getting-started/consensus-clients).
 
-##### Menjalankan Nethermind {#running-additional-services}
+##### Menjalankan Nethermind
 
 Nethermind menawarkan berbagai [opsi instalasi](https://docs.nethermind.io/get-started/installing-nethermind). Paket ini dilengkapi dengan berbagai biner, termasuk Peluncur dengan pengaturan terpandu, yang akan membantu Anda membuat konfigurasi secara interaktif. Sebagai alternatif, Anda menemukan Runner yang merupakan file yang dapat dieksekusi itu sendiri dan Anda dapat menjalankannya dengan tanda konfigurasi. JSON-RPC diaktifkan secara default.
 
@@ -304,7 +304,7 @@ Dokumen Nethermind menawarkan [panduan lengkap](https://docs.nethermind.io/get-s
 
 Klien eksekusi akan memulai fungsi intinya, titik akhir yang dipilih, dan mulai mencari rekan (peer). Setelah berhasil menemukan rekan, klien memulai sinkronisasi. Klien eksekusi akan menunggu koneksi dari klien konsensus. Data rantai blok saat ini akan tersedia setelah klien berhasil disinkronkan ke state saat ini.
 
-##### Menjalankan Reth {#monitoring-the-node}
+##### Menjalankan Reth
 
 Contoh ini memulai Reth di Mainnet, menggunakan lokasi data default. Mengaktifkan autentikasi JSON-RPC dan Engine RPC untuk menghubungkan klien konsensus yang ditentukan oleh jalur `jwtsecret`, dengan hanya panggilan dari `localhost` yang diizinkan.
 
@@ -317,17 +317,17 @@ reth node \
 
 Lihat [Mengonfigurasi Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) untuk mempelajari lebih lanjut tentang direktori data default. [Dokumentasi Reth](https://reth.rs/run/mainnet.html) berisi opsi tambahan dan detail konfigurasi.
 
-#### Memulai klien konsensus {#further-reading}
+#### Memulai klien konsensus {#starting-the-consensus-client}
 
 Klien konsensus harus dimulai dengan konfigurasi port yang tepat untuk membuat koneksi RPC lokal ke klien eksekusi. Klien konsensus harus dijalankan dengan port klien eksekusi yang diekspos sebagai argumen konfigurasi.
 
 Klien konsensus juga memerlukan jalur ke `jwt-secret` klien eksekusi untuk mengautentikasi koneksi RPC di antara mereka. Mirip dengan contoh eksekusi di atas, setiap klien konsensus memiliki tanda konfigurasi yang mengambil jalur file token jwt sebagai argumen. Ini harus konsisten dengan jalur `jwtsecret` yang diberikan kepada klien eksekusi.
 
-Jika Anda berencana untuk menjalankan validator, pastikan untuk menambahkan tanda konfigurasi yang menentukan alamat Ethereum penerima biaya. Di sinilah hadiah Ether untuk validator Anda terakumulasi. Setiap klien konsensus memiliki opsi, mis., `--suggested-fee-recipient=0xabcd1`, yang mengambil alamat Ethereum sebagai argumen.
+Jika Anda berencana untuk menjalankan validator, pastikan untuk menambahkan tanda konfigurasi yang menentukan alamat Ethereum penerima biaya. Di sinilah imbalan Ether untuk validator Anda terakumulasi. Setiap klien konsensus memiliki opsi, mis., `--suggested-fee-recipient=0xabcd1`, yang mengambil alamat Ethereum sebagai argumen.
 
 Saat memulai Simpul Suar di testnet, Anda dapat menghemat waktu sinkronisasi yang signifikan dengan menggunakan titik akhir publik untuk [Sinkronisasi titik periksa](https://notes.ethereum.org/@launchpad/checkpoint-sync).
 
-#### Menjalankan klien konsensus {#related-topics}
+#### Menjalankan klien konsensus {#running-a-consensus-client}
 
 ##### Menjalankan Lighthouse
 
@@ -391,7 +391,7 @@ teku --network mainnet \
 
 Saat klien konsensus terhubung ke klien eksekusi untuk membaca kontrak deposit dan mengidentifikasi validator, klien tersebut juga terhubung ke rekan Simpul Suar lainnya dan mulai menyinkronkan slot konsensus dari genesis. Setelah Simpul Suar mencapai Epok saat ini, API Suar menjadi dapat digunakan untuk validator Anda. Pelajari lebih lanjut tentang [API Simpul Suar](https://ethereum.github.io/beacon-APIs).
 
-### Menambahkan Validator
+### Menambahkan Validator {#adding-validators}
 
 Klien konsensus berfungsi sebagai Simpul Suar agar validator dapat terhubung. Setiap klien konsensus memiliki perangkat lunak validatornya sendiri yang dijelaskan secara rinci dalam dokumentasinya masing-masing.
 
@@ -401,7 +401,7 @@ Cara termudah untuk memulai staking dan pembuatan kunci validator adalah dengan 
 
 Lihat [halaman staking](/staking) untuk ikhtisar tentang opsi staking.
 
-### Menggunakan node
+### Menggunakan node {#using-the-node}
 
 Klien eksekusi menawarkan [titik akhir RPC API](/developers/docs/apis/json-rpc/) yang dapat Anda gunakan untuk mengirimkan transaksi, berinteraksi dengan, atau menyebarkan kontrak pintar di jaringan Ethereum dengan berbagai cara:
 
@@ -413,7 +413,7 @@ Klien yang berbeda memiliki implementasi titik akhir RPC yang berbeda. Namun ada
 
 Semua klien konsensus mengekspos [API Suar](https://ethereum.github.io/beacon-APIs) yang dapat digunakan untuk memeriksa status klien konsensus atau mengunduh blok dan data konsensus dengan mengirimkan permintaan menggunakan alat seperti [Curl](https://curl.se). Informasi lebih lanjut tentang ini dapat ditemukan dalam dokumentasi untuk setiap klien konsensus.
 
-#### Menjangkau RPC
+#### Menjangkau RPC {#reaching-rpc}
 
 Port default untuk JSON-RPC klien eksekusi adalah `8545` tetapi Anda dapat memodifikasi port titik akhir lokal dalam konfigurasi. Secara default, antarmuka RPC hanya dapat dijangkau di localhost komputer Anda. Untuk membuatnya dapat diakses dari jarak jauh, Anda mungkin ingin mengeksposnya ke publik dengan mengubah alamat menjadi `0.0.0.0`. Ini akan membuatnya dapat dijangkau melalui jaringan lokal dan alamat IP publik. Dalam kebanyakan kasus, Anda juga perlu mengatur penerusan port (port forwarding) di router Anda.
 
@@ -429,11 +429,11 @@ Untuk melakukan ini, Anda harus membuat [layanan onion](https://community.torpro
 
 Terakhir, dan salah satu cara paling populer untuk menyediakan akses ke jaringan internal adalah melalui koneksi VPN. Bergantung pada kasus penggunaan Anda dan jumlah pengguna yang membutuhkan akses ke node Anda, koneksi VPN yang aman mungkin menjadi pilihan. [OpenVPN](https://openvpn.net/) adalah VPN SSL berfitur lengkap yang mengimplementasikan ekstensi jaringan aman OSI lapisan 2 atau 3 menggunakan protokol SSL/TLS standar industri, mendukung metode autentikasi klien yang fleksibel berdasarkan sertifikat, kartu pintar, dan/atau kredensial nama pengguna/kata sandi, dan memungkinkan kebijakan kontrol akses khusus pengguna atau grup menggunakan aturan firewall yang diterapkan ke antarmuka virtual VPN.
 
-### Mengoperasikan node
+### Mengoperasikan node {#operating-the-node}
 
 Anda harus memantau node Anda secara teratur untuk memastikan node tersebut berjalan dengan baik. Anda mungkin perlu melakukan pemeliharaan sesekali.
 
-#### Menjaga node tetap online
+#### Menjaga node tetap online {#keeping-node-online}
 
 Node Anda tidak harus online sepanjang waktu, tetapi Anda harus menjaganya tetap online sebanyak mungkin agar tetap sinkron dengan jaringan. Anda dapat mematikannya untuk memulai ulang, tetapi ingatlah bahwa:
 
@@ -443,11 +443,11 @@ Node Anda tidak harus online sepanjang waktu, tetapi Anda harus menjaganya tetap
 
 _Ini tidak berlaku pada node validator lapisan konsensus._ Membuat node Anda offline akan memengaruhi semua layanan yang bergantung padanya. Jika Anda menjalankan node untuk tujuan _staking_, Anda harus mencoba meminimalkan waktu henti (downtime) sebanyak mungkin.
 
-#### Membuat layanan klien
+#### Membuat layanan klien {#creating-client-services}
 
 Pertimbangkan untuk membuat layanan untuk menjalankan klien Anda secara otomatis saat startup. Misalnya, di server Linux, praktik yang baik adalah membuat layanan, mis., dengan `systemd`, yang mengeksekusi klien dengan konfigurasi yang tepat, di bawah pengguna dengan hak istimewa terbatas dan secara otomatis memulai ulang.
 
-#### Memperbarui klien
+#### Memperbarui klien {#updating-clients}
 
 Anda perlu menjaga perangkat lunak klien Anda tetap mutakhir dengan patch keamanan, fitur, dan [EIP](/eips/) terbaru. Terutama sebelum [hard fork](/ethereum-forks/), pastikan Anda menjalankan versi klien yang benar.
 
@@ -457,17 +457,17 @@ Memperbarui klien sangat sederhana. Setiap klien memiliki instruksi khusus dalam
 
 Setiap implementasi klien memiliki string versi yang dapat dibaca manusia yang digunakan dalam protokol peer-to-peer tetapi juga dapat diakses dari baris perintah. String versi ini memungkinkan pengguna memeriksa bahwa mereka menjalankan versi yang benar dan memungkinkan penjelajah blok dan alat analitik lainnya yang tertarik untuk mengukur distribusi klien tertentu di seluruh jaringan. Silakan merujuk ke dokumentasi klien individual untuk informasi lebih lanjut tentang string versi.
 
-#### Menjalankan layanan tambahan
+#### Menjalankan layanan tambahan {#running-additional-services}
 
 Menjalankan node Anda sendiri memungkinkan Anda menggunakan layanan yang memerlukan akses langsung ke RPC klien Ethereum. Ini adalah layanan yang dibangun di atas Ethereum seperti [solusi lapisan 2 (l2)](/developers/docs/scaling/#layer-2-scaling), backend untuk dompet, penjelajah blok, alat pengembang, dan infrastruktur Ethereum lainnya.
 
-#### Memantau node
+#### Memantau node {#monitoring-the-node}
 
 Untuk memantau node Anda dengan benar, pertimbangkan untuk mengumpulkan metrik. Klien menyediakan titik akhir metrik sehingga Anda bisa mendapatkan data komprehensif tentang node Anda. Gunakan alat seperti [InfluxDB](https://www.influxdata.com/get-influxdb/) atau [Prometheus](https://prometheus.io/) untuk membuat basis data yang dapat Anda ubah menjadi visualisasi dan bagan dalam perangkat lunak seperti [Grafana](https://grafana.com/). Ada banyak pengaturan untuk menggunakan perangkat lunak ini dan dasbor Grafana yang berbeda bagi Anda untuk memvisualisasikan node Anda dan jaringan secara keseluruhan. Misalnya, lihat [tutorial tentang memantau Geth](/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/).
 
 Sebagai bagian dari pemantauan Anda, pastikan untuk terus memantau kinerja mesin Anda. Selama sinkronisasi awal node Anda, perangkat lunak klien mungkin sangat berat pada CPU dan RAM. Selain Grafana, Anda dapat menggunakan alat yang ditawarkan OS Anda seperti `htop` atau `uptime` untuk melakukan ini.
 
-## Bacaan lebih lanjut
+## Bacaan lebih lanjut {#further-reading}
 
 - [Panduan Staking Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, sering diperbarui_
 - [Panduan | Cara mengatur validator untuk staking Ethereum di mainnet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, sering diperbarui_
@@ -479,7 +479,7 @@ Sebagai bagian dari pemantauan Anda, pastikan untuk terus memantau kinerja mesin
 - [Menjalankan Node Hyperledger Besu di Mainnet Ethereum: Manfaat, Persyaratan, dan Pengaturan](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 Mei 2020_
 - [Menyebarkan Klien Ethereum Nethermind dengan Tumpukan Pemantauan](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 Juli 2020_
 
-## Topik terkait
+## Topik terkait {#related-topics}
 
 - [Node dan klien](/developers/docs/nodes-and-clients/)
 - [Blok](/developers/docs/blocks/)

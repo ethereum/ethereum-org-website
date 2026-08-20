@@ -32,9 +32,9 @@ Yetki devredilmiş staking, bir doğrulayıcı için kendi 32 ETH'nizi yatırdı
 Stake etmek için 32 ETH'niz varsa ancak donanımla uğraşırken kendinizi rahat hissetmiyorsanız, yetki devredilmiş staking hizmetleri, yerel Ethereum blok ödülleri kazanırken teknik tarafı devretmenize olanak tanır.
 
 <Grid>
-  <Card title="Your own validator" icon={<MonitorCheck />} description="Ethereum mutabakatına katılacak kendi imzalama anahtarı setinizi etkinleştirmek için kendi 32 ETH'nizi yatırın. Bu ETH ödüllerinin birikmesini izlemek için gösterge panelleriyle ilerlemenizi takip edin." />
-  <Card title="Easy to start" icon={<Flag />} description="Donanım özelliklerini, kurulumu, düğüm bakımını ve yükseltmelerini unutun. Sağlayıcılar, kendi imzalama kimlik bilgilerinizi yükleyerek zor kısmı dışarıdan temin etmenize olanak tanır ve küçük bir maliyet karşılığında sizin adınıza bir doğrulayıcı çalıştırmalarına izin verir." />
-  <Card title="Limit your risk" icon={<ShieldHalf />} description="Gözetimsiz hizmetlerle, stake edilen fonların çekilmesini veya transfer edilmesini sağlayan anahtarların kontrolünü elinizde tutarsınız. Bunlar imzalama anahtarlarından farklıdır ve bir staker olarak riskinizi sınırlamak (ancak ortadan kaldırmamak) için ayrı olarak saklanabilir." />
+  <Card title="Kendi doğrulayıcınız" icon={<MonitorCheck />} description="Ethereum mutabakatına katılacak kendi imzalama anahtarı setinizi etkinleştirmek için kendi 32 ETH'nizi yatırın. Bu ETH ödüllerinin birikmesini izlemek için gösterge panelleriyle ilerlemenizi takip edin." />
+  <Card title="Başlaması kolay" icon={<Flag />} description="Donanım özelliklerini, kurulumu, düğüm bakımını ve yükseltmelerini unutun. Sağlayıcılar, kendi imzalama kimlik bilgilerinizi yükleyerek zor kısmı dışarıdan temin etmenize olanak tanır ve küçük bir maliyet karşılığında sizin adınıza bir doğrulayıcı çalıştırmalarına izin verir." />
+  <Card title="Riskinizi sınırlayın" icon={<ShieldHalf />} description="Gözetimsiz hizmetlerle, stake edilen fonların çekilmesini veya transfer edilmesini sağlayan anahtarların kontrolünü elinizde tutarsınız. Bunlar imzalama anahtarlarından farklıdır ve bir staker olarak riskinizi sınırlamak (ancak ortadan kaldırmamak) için ayrı olarak saklanabilir." />
 </Grid>
 
 ## Staking seçeneklerinin karşılaştırması {#comparison-of-staking-options}

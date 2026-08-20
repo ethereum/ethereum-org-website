@@ -30,9 +30,9 @@ Domácí staker dostává odměny přímo z protokolu za to, že udržuje svůj 
 Domácí staking s sebou přináší větší zodpovědnost, ale poskytuje vám maximální kontrolu nad vašimi prostředky a nastavením stakingu.
 
 <Grid>
-  <Card title="Keep all rewards" icon={<HandCoins />} description="Domácí stakeři dostávají 100 % odměn protokolu, které jsou vypláceny přímo protokolem, zatímco je váš validátor online." />
+  <Card title="Ponechte si všechny odměny" icon={<HandCoins />} description="Domácí stakeři dostávají 100 % odměn protokolu, které jsou vypláceny přímo protokolem, zatímco je váš validátor online." />
   <Card title="Svrchovanost" icon={<KeyRound />} description="Mějte své vlastní klíče a plnou správu nad svými prostředky za všech okolností. Vyberte si kombinaci klientů a hardwaru, která vám umožní minimalizovat riziko. Žádná třetí strana za vás nemůže tato rozhodnutí učinit ani omezit vaše výběry." />
-  <Card title="Client and geographic diversity" icon={<GlobeLock />} description="Domácí stakeři provozující menšinové klienty na hardwaru rozmístěném na mnoha místech posilují decentralizaci a bezpečnost sítě." />
+  <Card title="Klientská a geografická diverzita" icon={<GlobeLock />} description="Domácí stakeři provozující menšinové klienty na hardwaru rozmístěném na mnoha místech posilují decentralizaci a bezpečnost sítě." />
 </Grid>
 
 ## Co zvážit před domácím stakingem {#considerations-before-staking-solo}

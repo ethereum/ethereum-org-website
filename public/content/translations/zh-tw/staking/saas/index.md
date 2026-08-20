@@ -32,9 +32,9 @@ summaryPoints:
 如果你有 32 ETH 可以質押，但對處理硬體感到不自在，委託質押服務允許你將技術方面交給他人，同時賺取原生的以太坊區塊獎勵。
 
 <Grid>
-  <Card title="Your own validator" icon={<MonitorCheck />} description="存入你自己的 32 ETH 以啟動你自己的簽署金鑰集，這些金鑰將參與以太坊共識。透過儀表板監控你的進度，看著那些 ETH 獎勵累積。" />
-  <Card title="Easy to start" icon={<Flag />} description="忘掉硬體規格、設定、節點維護和升級。提供商讓你透過上傳自己的簽署憑證來外包困難的部分，允許他們以較低的成本代表你運行驗證者。" />
-  <Card title="Limit your risk" icon={<ShieldHalf />} description="透過非託管服務，你保留對能夠提款或轉帳質押資金的金鑰的控制權。這些金鑰與簽署金鑰不同，可以分開儲存以限制（但不能消除）你作為質押者的風險。" />
+  <Card title="你自己的驗證者" icon={<MonitorCheck />} description="存入你自己的 32 ETH 以啟動你自己的簽署金鑰集，這些金鑰將參與以太坊共識。透過儀表板監控你的進度，看著那些 ETH 獎勵累積。" />
+  <Card title="輕鬆上手" icon={<Flag />} description="忘掉硬體規格、設定、節點維護和升級。提供商讓你透過上傳自己的簽署憑證來外包困難的部分，允許他們以較低的成本代表你運行驗證者。" />
+  <Card title="限制你的風險" icon={<ShieldHalf />} description="透過非託管服務，你保留對能夠提款或轉帳質押資金的金鑰的控制權。這些金鑰與簽署金鑰不同，可以分開儲存以限制（但不能消除）你作為質押者的風險。" />
 </Grid>
 
 ## 質押選項比較 {#comparison-of-staking-options}
@@ -130,9 +130,9 @@ summaryPoints:
 </ExpandableCard>
 
 <ExpandableCard title="我什麼時候可以提款？" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-提款的運作方式取決於你驗證者的提款憑證類型。對於常規 (0x01) 驗證者，任何超過 32 ETH 的餘額都會每隔幾天定期自動掃描到提款地址。對於複利 (0x02) 驗證者，獎勵會複利計入驗證者的餘額，最高可達 2048 ETH，若要提取低於該數值的金額，需要從你的提款地址觸發部分提款，這會消耗燃料。
+提款的運作方式取決於你驗證者的提款憑證類型。對於常規 (0x01) 驗證者，任何超過 32 ETH 的餘額都會每隔幾天定期自動清掃到提款地址。對於複利 (0x02) 驗證者，獎勵會複利計入驗證者的餘額，最高可達 2048 ETH，若要提取低於該數值的金額，需要從你的提款地址觸發部分提款，這會消耗燃料。
 
-驗證者也可以完全退出，這將解鎖剩餘的全部 ETH 餘額。完成退出流程後，全部餘額將在隨後的驗證者掃描期間轉帳到提款地址。
+驗證者也可以完全退出，這將解鎖剩餘的全部 ETH 餘額。完成退出流程後，全部餘額將在隨後的驗證者清掃期間轉帳到提款地址。
 
 <ButtonLink href="/staking/withdrawals/">更多關於質押提款的資訊</ButtonLink>
 </ExpandableCard>

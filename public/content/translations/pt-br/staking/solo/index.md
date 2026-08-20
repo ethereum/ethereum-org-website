@@ -30,9 +30,9 @@ Um staker em casa recebe recompensas diretamente do protocolo por manter seu val
 O staking em casa traz mais responsabilidade, mas fornece a você o controle máximo sobre seus fundos e configuração de staking.
 
 <Grid>
-  <Card title="Keep all rewards" icon={<HandCoins />} description="Os stakers em casa recebem 100% das recompensas do protocolo, pagas diretamente pelo protocolo enquanto o seu validador estiver online." />
+  <Card title="Fique com todas as recompensas" icon={<HandCoins />} description="Os stakers em casa recebem 100% das recompensas do protocolo, pagas diretamente pelo protocolo enquanto o seu validador estiver online." />
   <Card title="Soberania própria" icon={<KeyRound />} description="Mantenha suas próprias chaves e a custódia total de seus fundos em todos os momentos. Escolha a combinação de clientes e hardware que permite minimizar seu risco. Nenhum terceiro pode tomar essas decisões por você ou restringir seus saques." />
-  <Card title="Client and geographic diversity" icon={<GlobeLock />} description="Stakers em casa executando clientes minoritários em hardware espalhado por muitos locais fortalecem a descentralização e a segurança da rede." />
+  <Card title="Diversidade de clientes e geográfica" icon={<GlobeLock />} description="Stakers em casa executando clientes minoritários em hardware espalhado por muitos locais fortalecem a descentralização e a segurança da rede." />
 </Grid>
 
 ## Considerações antes de fazer staking em casa {#considerations-before-staking-solo}

@@ -26,9 +26,9 @@ Her havuzlu seçenek, 32 ETH'den daha azıyla veya donanım çalıştırmadan st
 [Staking'e katılmanın](/staking/) faydalarına ek olarak, bir havuzla stake etmek bir dizi benzersiz avantajla birlikte gelir.
 
 <Grid>
-  <Card title="Low barrier to entry" icon={<Fish />} description="Balina değil misiniz? Sorun değil. Çoğu staking havuzu, 32 ETH gerektiren bireysel staking'in aksine, diğer staker'larla güçlerinizi birleştirerek neredeyse her miktarda ETH'yi stake etmenize olanak tanır." />
-  <Card title="Stake today" icon={<Clock />} description="Bir havuzla stake etmek, bir token takası kadar kolaydır. Donanım kurulumu ve düğüm bakımı konusunda endişelenmenize gerek yoktur. Havuzlar, düğüm operatörlerinin doğrulayıcıları çalıştırmasını sağlayan ETH'nizi yatırmanıza olanak tanır. Ödüller daha sonra düğüm operasyonları için bir ücret düşüldükten sonra katkıda bulunanlara dağıtılır." />
-  <Card title="Liquid staking tokens" icon={<Droplets />} description="Birçok staking havuzu, stake ettiğiniz ETH ve ürettiği ödüller üzerinde bir talebi temsil eden bir token sağlar. Bu, stake ettiğiniz ETH'yi örneğin merkeziyetsiz finans (DeFi) uygulamalarında teminat olarak kullanmanıza olanak tanır." />
+  <Card title="Düşük giriş engeli" icon={<Fish />} description="Balina değil misiniz? Sorun değil. Çoğu staking havuzu, 32 ETH gerektiren bireysel staking'in aksine, diğer staker'larla güçlerinizi birleştirerek neredeyse her miktarda ETH'yi stake etmenize olanak tanır." />
+  <Card title="Bugün stake edin" icon={<Clock />} description="Bir havuzla stake etmek, bir token takası kadar kolaydır. Donanım kurulumu ve düğüm bakımı konusunda endişelenmenize gerek yoktur. Havuzlar, düğüm operatörlerinin doğrulayıcıları çalıştırmasını sağlayan ETH'nizi yatırmanıza olanak tanır. Ödüller daha sonra düğüm operasyonları için bir ücret düşüldükten sonra katkıda bulunanlara dağıtılır." />
+  <Card title="Likit staking tokenleri" icon={<Droplets />} description="Birçok staking havuzu, stake ettiğiniz ETH ve ürettiği ödüller üzerinde bir talebi temsil eden bir token sağlar. Bu, stake ettiğiniz ETH'yi örneğin merkeziyetsiz finans (DeFi) uygulamalarında teminat olarak kullanmanıza olanak tanır." />
 </Grid>
 
 ## Staking seçeneklerinin karşılaştırması {#comparison-of-staking-options}
@@ -75,7 +75,7 @@ LST'ler, staking'in temel risklerini (havuzun doğrulayıcılarındaki ceza kesi
 <AlertIcon size="xl"><Split /></AlertIcon>
 <AlertContent>
 <AlertDescription>
-Birçok havuz, bir doğrulayıcının anahtarını birden fazla makine ve operatör arasında bölen ve böylece hiçbir tekil arıza veya uzlaşmanın doğrulayıcıyı çökertmemesini sağlayan bir ara yazılım olan **dağıtık doğrulayıcı teknolojisi (DVT)** kullanarak operatör riskini azaltır. [Dağıtık doğrulayıcı teknolojisi hakkında daha fazlası](/staking/dvt/)
+Birçok havuz, bir doğrulayıcının anahtarını birden fazla makine ve operatör arasında bölen ve böylece hiçbir tekil arıza veya ele geçirilmenin doğrulayıcıyı çökertmemesini sağlayan bir ara yazılım olan **dağıtık doğrulayıcı teknolojisi (DVT)** kullanarak operatör riskini azaltır. [Dağıtık doğrulayıcı teknolojisi hakkında daha fazlası](/staking/dvt/)
 </AlertDescription>
 </AlertContent>
 </Alert>

@@ -30,9 +30,9 @@ Quien hace staking desde casa recibe recompensas directamente del protocolo por 
 El staking desde casa conlleva más responsabilidad, pero te proporciona el máximo control sobre tus fondos y tu configuración de staking.
 
 <Grid>
-  <Card title="Keep all rewards" icon={<HandCoins />} description="Quienes hacen staking desde casa reciben el 100 % de las recompensas del protocolo, pagadas directamente por el protocolo mientras su validador está en línea." />
+  <Card title="Conserva todas las recompensas" icon={<HandCoins />} description="Quienes hacen staking desde casa reciben el 100 % de las recompensas del protocolo, pagadas directamente por el protocolo mientras su validador está en línea." />
   <Card title="Autosoberanía" icon={<KeyRound />} description="Mantén tus propias claves y la custodia total de tus fondos en todo momento. Elige la combinación de clientes y hardware que te permita minimizar tu riesgo. Ningún tercero puede tomar estas decisiones por ti ni restringir tus retiros." />
-  <Card title="Client and geographic diversity" icon={<GlobeLock />} description="Quienes hacen staking desde casa ejecutando clientes minoritarios en hardware distribuido en muchas ubicaciones fortalecen la descentralización y la seguridad de la red." />
+  <Card title="Diversidad de clientes y geográfica" icon={<GlobeLock />} description="Quienes hacen staking desde casa ejecutando clientes minoritarios en hardware distribuido en muchas ubicaciones fortalecen la descentralización y la seguridad de la red." />
 </Grid>
 
 ## Consideraciones antes de hacer staking desde casa {#considerations-before-staking-solo}

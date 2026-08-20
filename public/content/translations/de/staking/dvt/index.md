@@ -16,7 +16,7 @@ Die verteilte Validator-Technologie (DVT) ist ein Ansatz zur Validator-Sicherhei
 
 DVT verteilt die Schlüsselverwaltung und das Signieren, indem der **private Schlüssel**, der zur Sicherung eines Validators verwendet wird, **auf viele Computer aufgeteilt wird**, die in einem „Cluster“ organisiert sind. Dies ermöglicht es einigen Knoten im Cluster, offline zu gehen, während der Validator-Knoten aktiv bleibt, da die notwendige Validierungsarbeit von einer Teilmenge der Maschinen in jedem Cluster erledigt werden kann. Diese Verteilung reduziert Single Points of Failure und macht den Validator robuster. Ein zusätzlicher Vorteil der Signaturverteilung von DVT ist, dass es für Angreifer sehr schwierig wird, Zugriff auf den Schlüssel zu erlangen, da er auf keiner einzelnen Maschine vollständig gespeichert ist.
 
-![A Diagram showing how a single validator key is split into key shares and distributed to multiple nodes with varying components.](./dvt-cluster.png)
+![Ein Diagramm, das zeigt, wie ein einzelner Validator-Schlüssel in Schlüsselanteile aufgeteilt und auf mehrere Knoten mit unterschiedlichen Komponenten verteilt wird.](./dvt-cluster.png)
 
 DVT ist keine separate Art des Stakings. Es ist eine Softwareschicht, die jedes Staking-Setup nutzen kann:
 - [Solo-Staker](/staking/solo/) können sich zusammenschließen, um gemeinsam einen Validator zu betreiben, oder ein einzelner Solo-Staker kann DVT nutzen, um seinem Solo-Staking-Setup mehr Ausfallsicherheit zu verleihen.

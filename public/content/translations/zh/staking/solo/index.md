@@ -30,9 +30,9 @@ summaryPoints:
 在家质押伴随着更多的责任，但为你提供了对资金和质押设置的最大控制权。
 
 <Grid>
-  <Card title="Keep all rewards" icon={<HandCoins />} description="在家质押者获得 100% 的协议奖励，当你的验证者在线时，由协议直接支付。" />
+  <Card title="保留全部奖励" icon={<HandCoins />} description="在家质押者获得 100% 的协议奖励，当你的验证者在线时，由协议直接支付。" />
   <Card title="自我主权" icon={<KeyRound />} description="始终保留你自己的密钥并完全托管你的资金。选择能让你将风险降至最低的客户端和硬件组合。没有任何第三方可以为你做这些决定或限制你的提款。" />
-  <Card title="Client and geographic diversity" icon={<GlobeLock />} description="在家质押者在分布于多个地点的硬件上运行少数派客户端，从而增强了网络的去中心化和安全性。" />
+  <Card title="客户端和地理多样性" icon={<GlobeLock />} description="在家质押者在分布于多个地点的硬件上运行少数派客户端，从而增强了网络的去中心化和安全性。" />
 </Grid>
 
 ## 在家质押前的注意事项 {#considerations-before-staking-solo}

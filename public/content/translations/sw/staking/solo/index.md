@@ -19,9 +19,9 @@ Kuweka dhamana ukiwa nyumbani ndiyo njia ya moja kwa moja ya kuweka dhamana. Hak
 
 **Kuweka dhamana ukiwa nyumbani huongeza ugatuzi wa mtandao wa Ethereum**, na kuifanya Ethereum kuwa sugu zaidi dhidi ya udhibiti na imara dhidi ya mashambulizi. Mbinu zingine za uwekaji dhamana huenda zisisaidie mtandao kwa njia sawa. Kuweka dhamana ukiwa nyumbani ndilo chaguo bora zaidi la uwekaji dhamana kwa ajili ya kulinda Ethereum.
 
-Nodi ya Ethereum inajumuisha mteja wa tabaka la utekelezaji (EL), pamoja na mteja wa tabaka la mwafaka (CL). Wateja hawa ni programu zinazofanya kazi pamoja, zikiwa na seti halali ya funguo za kusaini, ili kuthibitisha miamala na vitalu, kuthibitisha kichwa sahihi cha mnyororo, kujumuisha uthibitisho, na kupendekeza vitalu.
+Nodi ya Ethereum inajumuisha kiteja cha tabaka la utekelezaji (EL), pamoja na kiteja cha tabaka la mwafaka (CL). Viteja hivi ni programu zinazofanya kazi pamoja, zikiwa na seti halali ya funguo za kusaini, ili kuthibitisha miamala na vitalu, kuthibitisha kichwa sahihi cha mnyororo, kujumuisha uthibitisho, na kupendekeza vitalu.
 
-Waweka dhamana wa nyumbani wanawajibika kuendesha maunzi yanayohitajika ili kuendesha wateja hawa. Inapendekezwa sana kutumia mashine maalum kwa ajili ya hili ambayo unaiendesha ukiwa nyumbani–hii ina faida kubwa sana kwa afya ya mtandao.
+Waweka dhamana wa nyumbani wanawajibika kuendesha maunzi yanayohitajika ili kuendesha viteja hivi. Inapendekezwa sana kutumia mashine maalum kwa ajili ya hili ambayo unaiendesha ukiwa nyumbani–hii ina faida kubwa sana kwa afya ya mtandao.
 
 Mweka dhamana wa nyumbani hupokea tuzo moja kwa moja kutoka kwenye itifaki kwa kuweka mthibitishaji wao akifanya kazi vizuri na akiwa mtandaoni.
 
@@ -30,9 +30,9 @@ Mweka dhamana wa nyumbani hupokea tuzo moja kwa moja kutoka kwenye itifaki kwa k
 Kuweka dhamana ukiwa nyumbani kunakuja na majukumu zaidi lakini kunakupa udhibiti wa juu zaidi wa fedha zako na usanidi wako wa uwekaji dhamana.
 
 <Grid>
-  <Card title="Keep all rewards" icon={<HandCoins />} description="Waweka dhamana wa nyumbani hupokea 100% ya tuzo za itifaki, zinazolipwa moja kwa moja na itifaki wakati mthibitishaji wako yuko mtandaoni." />
-  <Card title="Kujitegemea" icon={<KeyRound />} description="Weka funguo zako mwenyewe na uwe na ulinzi kamili wa fedha zako wakati wote. Chagua mchanganyiko wa wateja na maunzi unaokuruhusu kupunguza hatari yako. Hakuna mtu mwingine anayeweza kukufanyia maamuzi haya au kuzuia utoaji wako." />
-  <Card title="Client and geographic diversity" icon={<GlobeLock />} description="Waweka dhamana wa nyumbani wanaoendesha wateja wachache kwenye maunzi yaliyoenea katika maeneo mengi huimarisha ugatuzi na usalama wa mtandao." />
+  <Card title="Hifadhi tuzo zote" icon={<HandCoins />} description="Waweka dhamana wa nyumbani hupokea 100% ya tuzo za itifaki, zinazolipwa moja kwa moja na itifaki wakati mthibitishaji wako yuko mtandaoni." />
+  <Card title="Kujitegemea" icon={<KeyRound />} description="Weka funguo zako mwenyewe na uwe na ulinzi kamili wa fedha zako wakati wote. Chagua mchanganyiko wa viteja na maunzi unaokuruhusu kupunguza hatari yako. Hakuna mtu mwingine anayeweza kukufanyia maamuzi haya au kuzuia utoaji wako." />
+  <Card title="Anuwai ya wateja na ya kijiografia" icon={<GlobeLock />} description="Waweka dhamana wa nyumbani wanaoendesha viteja vya wachache kwenye maunzi yaliyoenea katika maeneo mengi huimarisha ugatuzi na usalama wa mtandao." />
 </Grid>
 
 ## Mambo ya kuzingatia kabla ya kuweka dhamana ukiwa nyumbani {#considerations-before-staking-solo}
@@ -64,7 +64,7 @@ Kama vile jinsi funguo za siri zinavyolinda anwani yako ya Ethereum, utahitaji k
 </ExpandableCard>
 
 <ExpandableCard title="Matengenezo" eventCategory="SoloStaking" eventName="clicked maintenance">
-Maunzi mara kwa mara hushindwa kufanya kazi, miunganisho ya mtandao hupata hitilafu, na programu ya mteja mara kwa mara inahitaji kuboreshwa. Matengenezo ya nodi hayawezi kuepukika na mara kwa mara yatahitaji uangalizi wako. Utataka kuhakikisha kuwa unafahamu kuhusu uboreshaji wowote wa mtandao unaotarajiwa, au uboreshaji mwingine muhimu wa mteja.
+Maunzi mara kwa mara hushindwa kufanya kazi, miunganisho ya mtandao hupata hitilafu, na programu ya kiteja mara kwa mara inahitaji kuboreshwa. Matengenezo ya nodi hayawezi kuepukika na mara kwa mara yatahitaji uangalizi wako. Utataka kuhakikisha kuwa unafahamu kuhusu uboreshaji wowote wa mtandao unaotarajiwa, au uboreshaji mwingine muhimu wa kiteja.
 </ExpandableCard>
 
 <ExpandableCard title="Upatikanaji wa kutegemewa" eventCategory="SoloStaking" eventName="clicked reliable uptime">
@@ -72,7 +72,7 @@ Tuzo zako zinalingana na muda ambao mthibitishaji wako yuko mtandaoni na anathib
 </ExpandableCard>
 
 <ExpandableCard title="Hatari ya ukataji" eventCategory="SoloStaking" eventName="clicked slashing risk">
-Tofauti na adhabu za kutotenda kwa kutokuwa mtandaoni, <em>ukataji</em> ni adhabu nzito zaidi iliyotengwa kwa makosa ya kudhuru. Kwa kuendesha mteja mchache huku funguo zako zikiwa zimepakiwa kwenye mashine moja tu kwa wakati mmoja, hatari yako ya kukatwa inapunguzwa. Hata hivyo, waweka dhamana wote lazima wafahamu hatari za ukataji.
+Tofauti na adhabu za kutotenda kwa kutokuwa mtandaoni, <em>ukataji</em> ni adhabu nzito zaidi iliyotengwa kwa makosa ya kudhuru. Kwa kuendesha kiteja cha wachache huku funguo zako zikiwa zimepakiwa kwenye mashine moja tu kwa wakati mmoja, hatari yako ya kukatwa inapunguzwa. Hata hivyo, waweka dhamana wote lazima wafahamu hatari za ukataji.
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Zaidi kuhusu ukataji na mzunguko wa maisha wa mthibitishaji</a>
 </ExpandableCard>
@@ -104,11 +104,11 @@ Ikiwa unaendesha wathibitishaji wengi, unaweza kuwaunganisha kuwa mthibitishaji 
 
 ## Anza kwenye Jukwaa la Uwekaji Dhamana {#get-started-on-the-staking-launchpad}
 
-Jukwaa la Uwekaji Dhamana ni programu huria itakayokusaidia kuwa mweka dhamana. Itakuongoza katika kuchagua wateja wako, kuzalisha funguo zako na kuweka amana ya ETH yako kwenye mkataba wa amana ya uwekaji dhamana. Orodha ya ukaguzi imetolewa ili kuhakikisha umeshughulikia kila kitu ili kusanidi mthibitishaji wako kwa usalama.
+Jukwaa la Uwekaji Dhamana ni programu huria itakayokusaidia kuwa mweka dhamana. Itakuongoza katika kuchagua viteja vyako, kuzalisha funguo zako na kuweka amana ya ETH yako kwenye mkataba wa amana ya uwekaji dhamana. Orodha ya ukaguzi imetolewa ili kuhakikisha umeshughulikia kila kitu ili kusanidi mthibitishaji wako kwa usalama.
 
 <StakingLaunchpadWidget />
 
-## Mambo ya kuzingatia kuhusu zana za usanidi wa nodi na mteja {#node-tool-considerations}
+## Mambo ya kuzingatia kuhusu zana za usanidi wa nodi na kiteja {#node-tool-considerations}
 
 Kuna idadi inayokua ya zana na huduma za kukusaidia kuweka dhamana ya ETH yako ukiwa nyumbani, lakini kila moja inakuja na hatari na faida tofauti.
 
@@ -116,7 +116,7 @@ Viashiria vya sifa vinatumika hapa chini kuashiria uwezo au udhaifu unaoonekana 
 
 <StakingConsiderations page="solo" />
 
-## Gundua zana za usanidi wa nodi na mteja {#node-and-client-tools}
+## Gundua zana za usanidi wa nodi na kiteja {#node-and-client-tools}
 
 Kuna chaguo mbalimbali zinazopatikana za kukusaidia na usanidi wako. Tumia viashiria vilivyo hapo juu kukuongoza kupitia zana zilizo hapa chini.
 
@@ -126,7 +126,7 @@ Kuna chaguo mbalimbali zinazopatikana za kukusaidia na usanidi wako. Tumia viash
 
 <StakingProductsCardGrid category="nodeTools" />
 
-Tafadhali kumbuka umuhimu wa kuchagua [mteja mchache](/developers/docs/nodes-and-clients/client-diversity/) kwani inaboresha usalama wa mtandao, na kupunguza hatari yako. Zana zinazokuruhusu kusanidi mteja mchache zinaonyeshwa kama <em style={{ textTransform: "uppercase" }}>"wateja wengi."</em>
+Tafadhali kumbuka umuhimu wa kuchagua [kiteja cha wachache](/developers/docs/nodes-and-clients/client-diversity/) kwani inaboresha usalama wa mtandao, na kupunguza hatari yako. Zana zinazokuruhusu kusanidi kiteja cha wachache zinaonyeshwa kama <em style={{ textTransform: "uppercase" }}>"viteja vingi."</em>
 
 ### Vizalishaji vya Funguo {#key-generators}
 
@@ -168,7 +168,7 @@ Haya ni baadhi ya maswali ya kawaida kuhusu uwekaji dhamana ambayo yanafaa kujul
 
 <ExpandableCard title="Mthibitishaji ni nini?">
 
-<em>Mthibitishaji</em> ni huluki pepe inayoishi kwenye Ethereum na kushiriki katika mwafaka wa itifaki ya Ethereum. Wathibitishaji wanawakilishwa na salio, ufunguo wa umma, na sifa zingine. <em>Mteja wa mthibitishaji</em> ni programu inayofanya kazi kwa niaba ya mthibitishaji kwa kushikilia na kutumia ufunguo wake wa siri. Mteja mmoja wa mthibitishaji anaweza kushikilia jozi nyingi za funguo, na kudhibiti wathibitishaji wengi.
+<em>Mthibitishaji</em> ni huluki pepe inayoishi kwenye Ethereum na kushiriki katika mwafaka wa itifaki ya Ethereum. Wathibitishaji wanawakilishwa na salio, ufunguo wa umma, na sifa zingine. <em>Kiteja cha mthibitishaji</em> ni programu inayofanya kazi kwa niaba ya mthibitishaji kwa kushikilia na kutumia ufunguo wake wa siri. Kiteja kimoja cha mthibitishaji kinaweza kushikilia jozi nyingi za funguo, na kudhibiti wathibitishaji wengi.
 
 </ExpandableCard>
 
@@ -191,32 +191,32 @@ Katika hali mbaya zaidi ikiwa mtandao utaacha kukamilisha kutokana na zaidi ya t
 </ExpandableCard>
 
 <ExpandableCard title="Ninawezaje kuhakikisha sikatwi?">
-Kwa ufupi, hili haliwezi kuhakikishwa kikamilifu, lakini ikiwa utatenda kwa nia njema, kuendesha mteja mchache na kuweka funguo zako za kusaini kwenye mashine moja tu kwa wakati mmoja, hatari ya kukatwa inakaribia sifuri.
+Kwa ufupi, hili haliwezi kuhakikishwa kikamilifu, lakini ikiwa utatenda kwa nia njema, kuendesha kiteja cha wachache na kuweka funguo zako za kusaini kwenye mashine moja tu kwa wakati mmoja, hatari ya kukatwa inakaribia sifuri.
 
 Kuna njia chache tu mahususi zinazoweza kusababisha mthibitishaji kukatwa na kutolewa kwenye mtandao. Wakati wa kuandika haya, ukataji uliotokea umekuwa pekee matokeo ya usanidi wa maunzi usio wa lazima ambapo funguo za kusaini huhifadhiwa kwenye mashine mbili tofauti kwa wakati mmoja. Hili linaweza kusababisha <em>kura mbili</em> bila kukusudia kutoka kwa funguo zako, ambalo ni kosa linaloweza kukatwa.
 
-Kuendesha mteja wa wingi mkuu (mteja yeyote anayetumiwa na zaidi ya 2/3 ya mtandao) pia kuna hatari ya uwezekano wa ukataji endapo mteja huyu ana hitilafu inayosababisha mchepuo wa mnyororo. Hili linaweza kusababisha mchepuo wenye hitilafu ambao unakamilishwa. Ili kurekebisha kurudi kwenye mnyororo uliokusudiwa itahitaji kuwasilisha <em>kura ya kuzunguka</em> kwa kujaribu kutendua kitalu kilichokamilishwa. Hili pia ni kosa linaloweza kukatwa na linaweza kuepukwa kwa urahisi kwa kuendesha mteja mchache badala yake.
+Kuendesha kiteja cha wingi mkuu (kiteja chochote kinachotumiwa na zaidi ya 2/3 ya mtandao) pia kuna hatari ya uwezekano wa ukataji endapo kiteja hiki kina hitilafu inayosababisha mchepuo wa mnyororo. Hili linaweza kusababisha mchepuo wenye hitilafu ambao unakamilishwa. Ili kurekebisha kurudi kwenye mnyororo uliokusudiwa itahitaji kuwasilisha <em>kura ya kuzunguka</em> kwa kujaribu kutendua kitalu kilichokamilishwa. Hili pia ni kosa linaloweza kukatwa na linaweza kuepukwa kwa urahisi kwa kuendesha kiteja cha wachache badala yake.
 
-Hitilafu sawa katika <em>mteja mchache hazingeweza kukamilisha</em> na hivyo hazingesababisha kura ya kuzunguka, na zingesababisha tu adhabu za kutotenda, <em>sio ukataji</em>.
+Hitilafu sawa katika <em>kiteja cha wachache hazingeweza kukamilisha</em> na hivyo hazingesababisha kura ya kuzunguka, na zingesababisha tu adhabu za kutotenda, <em>sio ukataji</em>.
 
 <ul>
-  <li><a href="https://clientdiversity.org/">Jifunze zaidi kuhusu umuhimu wa kuendesha mteja mchache.</a></li>
+  <li><a href="https://clientdiversity.org/">Jifunze zaidi kuhusu umuhimu wa kuendesha kiteja cha wachache.</a></li>
   <li><a href="/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/">Jifunze zaidi kuhusu tuzo, adhabu, na ukataji</a></li>
 </ul>
 </ExpandableCard>
 
-<ExpandableCard title="Mteja yupi ni bora?">
-Wateja binafsi wanaweza kutofautiana kidogo katika suala la utendaji na kiolesura cha mtumiaji, kwani kila mmoja hutengenezwa na timu tofauti kwa kutumia lugha mbalimbali za programu. Hata hivyo, hakuna hata mmoja wao aliye "bora." Wateja wote wa uzalishaji ni programu bora, ambazo zote hufanya kazi kuu sawa za kusawazisha na kuingiliana na mnyororo wa vitalu.
+<ExpandableCard title="Kiteja kipi ni bora?">
+Viteja binafsi vinaweza kutofautiana kidogo katika suala la utendaji na kiolesura cha mtumiaji, kwani kila kimoja hutengenezwa na timu tofauti kwa kutumia lugha mbalimbali za programu. Hata hivyo, hakuna hata kimoja kilicho "bora." Viteja vyote vya uzalishaji ni programu bora, ambazo zote hufanya kazi kuu sawa za kusawazisha na kuingiliana na mnyororo wa vitalu.
 
-Kwa kuwa wateja wote wa uzalishaji hutoa utendaji sawa wa kimsingi, kwa kweli ni muhimu sana uchague <strong>mteja mchache</strong>, ikimaanisha mteja yeyote ambaye HATUMIWI kwa sasa na wengi wa wathibitishaji kwenye mtandao. Hili linaweza kuonekana kuwa kinyume na matarajio, lakini kuendesha mteja wa wengi au wingi mkuu kunakuweka katika hatari kubwa ya ukataji endapo kutatokea hitilafu katika mteja huyo. Kuendesha mteja mchache kunapunguza sana hatari hizi.
+Kwa kuwa viteja vyote vya uzalishaji hutoa utendaji sawa wa kimsingi, kwa kweli ni muhimu sana uchague <strong>kiteja cha wachache</strong>, ikimaanisha kiteja chochote ambacho HAKITUMIWI kwa sasa na wengi wa wathibitishaji kwenye mtandao. Hili linaweza kuonekana kuwa kinyume na matarajio, lakini kuendesha kiteja cha wengi au cha wingi mkuu kunakuweka katika hatari kubwa ya ukataji endapo kutatokea hitilafu katika kiteja hicho. Kuendesha kiteja cha wachache kunapunguza sana hatari hizi.
 
 <a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Jifunze zaidi kuhusu kwa nini anuwai ya wateja ni muhimu</a>
 </ExpandableCard>
 
 <ExpandableCard title="Je, ninaweza kutumia tu VPS (seva pepe ya kibinafsi)?">
-Ingawa seva ya siri ya mtandaoni (VPS) inaweza kutumika kama mbadala wa maunzi ya nyumbani, ufikiaji wa kimwili na eneo la mteja wako wa mthibitishaji <em>ni muhimu</em>. Suluhu za wingu zilizowekwa kati kama vile Amazon Web Services au Digital Ocean zinaruhusu urahisi wa kutolazimika kupata na kuendesha maunzi, kwa gharama ya kuweka mtandao kati.
+Ingawa seva ya siri ya mtandaoni (VPS) inaweza kutumika kama mbadala wa maunzi ya nyumbani, ufikiaji wa kimwili na eneo la kiteja chako cha mthibitishaji <em>ni muhimu</em>. Suluhu za wingu zilizowekwa kati kama vile Amazon Web Services au Digital Ocean zinaruhusu urahisi wa kutolazimika kupata na kuendesha maunzi, kwa gharama ya kuweka mtandao kati.
 
-Kadiri wateja wengi wa mthibitishaji wanavyoendeshwa kwenye suluhu moja ya hifadhi ya wingu iliyowekwa kati, ndivyo inavyokuwa hatari zaidi kwa watumiaji hawa. Tukio lolote linalowatoa watoa huduma hawa nje ya mtandao, iwe kwa shambulio, matakwa ya udhibiti, au kukatika tu kwa umeme/intaneti, litasababisha kila mteja wa mthibitishaji anayetegemea seva hii kwenda nje ya mtandao kwa wakati mmoja.
+Kadiri viteja vingi vya mthibitishaji vinavyoendeshwa kwenye suluhu moja ya hifadhi ya wingu iliyowekwa kati, ndivyo inavyokuwa hatari zaidi kwa watumiaji hawa. Tukio lolote linalowatoa watoa huduma hawa nje ya mtandao, iwe kwa shambulio, matakwa ya udhibiti, au kukatika tu kwa umeme/intaneti, litasababisha kila kiteja cha mthibitishaji kinachotegemea seva hii kwenda nje ya mtandao kwa wakati mmoja.
 
 Adhabu za nje ya mtandao zinalingana na idadi ya wengine ambao hawako mtandaoni kwa wakati mmoja. Kutumia VPS huongeza sana hatari kwamba adhabu za nje ya mtandao zitakuwa kali zaidi, na huongeza hatari yako ya uvujaji wa kipeo cha pili au ukataji endapo kukatika ni kukubwa vya kutosha. Ili kupunguza hatari yako mwenyewe, na hatari kwa mtandao, watumiaji wanahimizwa sana kupata na kuendesha maunzi yao wenyewe.
 </ExpandableCard>

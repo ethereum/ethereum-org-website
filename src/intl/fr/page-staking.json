@@ -90,7 +90,7 @@
   "page-staking-comparison-pools-saas": "Elles sont similaires dans la mesure où les stakers n'exécutent pas eux-mêmes le logiciel de validateur, mais contrairement aux options de mutualisation, le SaaS nécessite un dépôt complet de 32 ETH pour activer un validateur. Les récompenses s'accumulent pour le staker et impliquent généralement des frais mensuels ou une autre mise pour utiliser le service. Si vous préférez vos propres clés de validateur et que vous cherchez à staker au moins 32 ETH, l'utilisation d'un fournisseur de SaaS peut être une bonne option pour vous.",
   "page-staking-considerations-dropdown-text": "Considérations relatives au staking",
   "page-staking-considerations-dropdown-aria-label": "Menu déroulant pour les considérations relatives au staking",
-  "page-staking-considerations-solo-1-title": "Open source",
+  "page-staking-considerations-solo-1-title": "Code source ouvert",
   "page-staking-considerations-solo-1-description": "Le code essentiel est 100 % open source et disponible pour le public afin d'être forké et utilisé",
   "page-staking-considerations-solo-1-warning": "Code source fermé",
   "page-staking-considerations-solo-2-title": "Audité",

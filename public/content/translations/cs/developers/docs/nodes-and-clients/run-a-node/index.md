@@ -29,7 +29,7 @@ Po přípravě prostředí nainstalujte vybrané klienty buď pomocí [rozhraní
 
 Když uzel běží a probíhá synchronizace, jste připraveni jej [používat](#using-the-node), ale nezapomeňte dohlížet na jeho [údržbu](#operating-the-node).
 
-![Client setup](./diagram.png)
+![Nastavení klienta](./diagram.png)
 
 ### Prostředí a hardware {#environment-and-hardware}
 
@@ -71,18 +71,18 @@ Velikost databáze a rychlost počáteční synchronizace závisí na zvoleném 
 
 Také se ujistěte, že vaše internetové připojení není omezeno [datovým limitem](https://wikipedia.org/wiki/Data_cap). Doporučuje se používat neomezené připojení, protože počáteční synchronizace a data vysílaná do sítě by mohla váš limit překročit.
 
-##### Operační systém {#plug-and-play}
+##### Operační systém
 
 Všichni klienti podporují hlavní operační systémy – Linux, macOS, Windows. To znamená, že můžete provozovat uzly na běžných stolních počítačích nebo serverech s operačním systémem (OS), který vám nejlépe vyhovuje. Ujistěte se, že je váš OS aktuální, abyste předešli potenciálním problémům a bezpečnostním zranitelnostem.
 
-##### Minimální požadavky {#ethereum-on-a-single-board-computer}
+##### Minimální požadavky
 
 - CPU se 2 a více jádry
 - 16 GB RAM (pro stabilitu se doporučuje 32 GB)
 - 2 TB NVMe SSD (pravděpodobně bude překročeno do roku 2027, přečtěte si více o [skvělých a méně skvělých SSD pro uzly Etherea](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
 - Šířka pásma 25+ MBit/s
 
-##### Doporučené specifikace {#spinning-up-node}
+##### Doporučené specifikace
 
 Aktuální hardwarové pokyny pro provozovatele uzlů jsou uvedeny v [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). Pro plný uzel se doporučuje:
 
@@ -105,26 +105,26 @@ Režim synchronizace a klient, kterého si vyberete, ovlivní požadavky na pros
 
 U konsensuálních klientů závisí požadavek na prostor také na implementaci klienta a povolených funkcích (např. slasher validátoru), ale obecně počítejte s dalšími 200 GB potřebnými pro data uzlu Beacon. S velkým počtem validátorů roste také zatížení šířky pásma. [Podrobnosti o požadavcích na konsensuálního klienta najdete v této analýze](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
-#### Řešení Plug-and-play {#automatized-setup}
+#### Řešení Plug-and-play {#plug-and-play}
 
 Nejsnazší možností pro provozování uzlu s vlastním hardwarem je použití plug-and-play boxů. Předkonfigurované stroje od prodejců nabízejí nejpřímočařejší zkušenost: objednat, připojit, spustit. Vše je předkonfigurováno a běží automaticky s intuitivním průvodcem a řídicím panelem pro monitorování a ovládání softwaru.
 
 - [DappNode](https://dappnode.io/)
 - [Avado](https://ava.do/)
 
-#### Ethereum na jednodeskovém počítači {#manual-setup}
+#### Ethereum na jednodeskovém počítači {#ethereum-on-a-single-board-computer}
 
 Snadným a levným způsobem, jak provozovat uzel Etherea, je použít jednodeskový počítač, a to i s architekturou ARM, jako je Raspberry Pi. [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) poskytuje snadno spustitelné obrazy několika exekučních a konsensuálních klientů pro Raspberry Pi a další desky ARM.
 
 Malá, cenově dostupná a efektivní zařízení, jako jsou tato, jsou ideální pro provozování uzlu doma, ale mějte na paměti jejich omezený výkon.
 
-## Spuštění uzlu {#getting-the-client}
+## Spuštění uzlu {#spinning-up-node}
 
 Samotné nastavení klienta lze provést buď pomocí automatizovaných spouštěčů (launcherů), nebo manuálně přímým nastavením klientského softwaru.
 
 Pro méně pokročilé uživatele se doporučuje použít spouštěč, software, který vás provede instalací a automatizuje proces nastavení klienta. Pokud však máte nějaké zkušenosti s používáním terminálu, kroky pro manuální nastavení by měly být snadno sledovatelné.
 
-### Asistované nastavení {#client-setup}
+### Asistované nastavení {#automatized-setup}
 
 Několik uživatelsky přívětivých projektů si klade za cíl zlepšit zkušenost s nastavením klienta. Tyto spouštěče poskytují automatickou instalaci a konfiguraci klienta, přičemž některé dokonce nabízejí grafické rozhraní pro asistované nastavení a monitorování klientů.
 
@@ -137,13 +137,13 @@ Níže je uvedeno několik projektů, které vám mohou pomoci nainstalovat a ov
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) - Nástroj pro nastavení uzlu, který automaticky generuje konfiguraci Dockeru pomocí průvodce v CLI. Napsáno v Go od Nethermind.
 - [Chainstack Self-Hosted](https://docs.chainstack.com/docs/self-hosted/introduction) - Webové uživatelské rozhraní a CLI pro nasazení exekučních a konsensuálních klientů na Kubernetes. Zahrnuje bootstrap ze snapshotu a vestavěné monitorování. Zdarma. Není vyžadován účet Chainstack. Vytvořeno společností Chainstack.
 
-### Manuální nastavení klientů {#starting-the-execution-client}
+### Manuální nastavení klientů {#manual-setup}
 
 Další možností je stáhnout, ověřit a nakonfigurovat klientský software manuálně. I když někteří klienti nabízejí grafické rozhraní, manuální nastavení stále vyžaduje základní dovednosti s terminálem, ale nabízí mnohem větší všestrannost.
 
 Jak bylo vysvětleno dříve, nastavení vlastního uzlu Etherea bude vyžadovat spuštění dvojice konsensuálního a exekučního klienta. Někteří klienti mohou obsahovat lehkého klienta druhého typu a synchronizovat se bez potřeby jakéhokoli dalšího softwaru. Plná verifikace nevyžadující důvěru však vyžaduje obě implementace.
 
-#### Získání klientského softwaru {#running-an-execution-client}
+#### Získání klientského softwaru {#getting-the-client}
 
 Nejprve musíte získat software vámi preferovaného [exekučního klienta](/developers/docs/nodes-and-clients/#execution-clients) a [konsensuálního klienta](/developers/docs/nodes-and-clients/#consensus-clients).
 
@@ -153,7 +153,7 @@ Pokyny k instalaci každého klienta jsou uvedeny v dokumentaci, na kterou odkaz
 
 Zde jsou stránky s vydáními klientů, kde najdete jejich předkompilované binární soubory nebo pokyny k instalaci:
 
-##### Exekuční klienti {#starting-the-consensus-client}
+##### Exekuční klienti
 
 - [Besu](https://github.com/hyperledger/besu/releases)
 - [Erigon](https://github.com/ledgerwatch/erigon/releases)
@@ -163,7 +163,7 @@ Zde jsou stránky s vydáními klientů, kde najdete jejich předkompilované bi
 
 Stojí také za zmínku, že klientská diverzita je [problémem na exekuční vrstvě](/developers/docs/nodes-and-clients/client-diversity/#execution-layer). Doporučuje se, aby čtenáři zvážili provozování menšinového exekučního klienta.
 
-##### Konsensuální klienti {#running-a-consensus-client}
+##### Konsensuální klienti
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
 - [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (Neposkytuje předkompilovaný binární soubor, pouze obraz Dockeru nebo je nutné jej sestavit ze zdrojového kódu)
@@ -175,7 +175,7 @@ Stojí také za zmínku, že klientská diverzita je [problémem na exekuční v
 
 [Podívejte se na nejnovější využití klientů v síti](https://clientdiversity.org/) a zjistěte více o [klientské diverzitě](/developers/docs/nodes-and-clients/client-diversity).
 
-##### Ověření softwaru {#adding-validators}
+##### Ověření softwaru
 
 Při stahování softwaru z internetu se doporučuje ověřit jeho integritu. Tento krok je volitelný, ale zejména u klíčové součásti infrastruktury, jako je klient Etherea, je důležité si být vědom potenciálních vektorů útoku a vyhnout se jim. Pokud jste si stáhli předkompilovaný binární soubor, musíte mu důvěřovat a riskovat, že by útočník mohl vyměnit spustitelný soubor za škodlivý.
 
@@ -189,7 +189,7 @@ sha256sum teku-22.6.1.tar.gz
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
 ```
 
-#### Nastavení klienta {#using-the-node}
+#### Nastavení klienta {#client-setup}
 
 Po instalaci, stažení nebo kompilaci klientského softwaru jste připraveni jej spustit. To pouze znamená, že musí být spuštěn se správnou konfigurací. Klienti nabízejí bohaté možnosti konfigurace, které mohou povolit různé funkce.
 
@@ -201,7 +201,7 @@ Pro účely testování možná upřednostníte spuštění klienta na jedné z 
 
 Příklady spuštění exekučních klientů se základní konfigurací naleznete v další části.
 
-#### Spuštění exekučního klienta {#reaching-rpc}
+#### Spuštění exekučního klienta {#starting-the-execution-client}
 
 Před spuštěním klientského softwaru Etherea proveďte poslední kontrolu, zda je vaše prostředí připraveno. Například se ujistěte, že:
 
@@ -223,7 +223,7 @@ Tento token je generován automaticky klientským softwarem, ale v některých p
 openssl rand -hex 32 > jwtsecret
 ```
 
-#### Provozování exekučního klienta {#operating-the-node}
+#### Provozování exekučního klienta {#running-an-execution-client}
 
 Tato část vás provede spuštěním exekučních klientů. Slouží pouze jako příklad základní konfigurace, která spustí klienta s těmito nastaveními:
 
@@ -240,7 +240,7 @@ Mějte prosím na paměti, že se jedná pouze o základní příklad, všechna 
 
 > Vezměte na vědomí, že zpětná lomítka `\` v příkladech slouží pouze pro účely formátování; konfigurační příznaky lze definovat na jednom řádku.
 
-##### Provozování Besu {#keeping-node-online}
+##### Provozování Besu
 
 Tento příklad spustí Besu na Mainnetu, uloží data blockchainu ve výchozím formátu do `/data/ethereum`, povolí JSON-RPC a Engine RPC pro připojení konsensuálního klienta. Engine API je ověřeno tokenem `jwtsecret` a jsou povolena pouze volání z `localhost`.
 
@@ -262,7 +262,7 @@ besu --Xlauncher
 
 [Dokumentace Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/) obsahuje další možnosti a podrobnosti o konfiguraci.
 
-##### Provozování Erigon {#creating-client-services}
+##### Provozování Erigon
 
 Tento příklad spustí Erigon na Mainnetu, uloží data blockchainu do `/data/ethereum`, povolí JSON-RPC, definuje, které jmenné prostory jsou povoleny, a povolí ověřování pro připojení konsensuálního klienta, které je definováno cestou `jwtsecret`.
 
@@ -275,7 +275,7 @@ erigon --chain mainnet \
 
 Erigon ve výchozím nastavení provádí plnou synchronizaci s 8GB HDD, což povede k více než 2 TB archivních dat. Ujistěte se, že `datadir` ukazuje na disk s dostatkem volného místa, nebo se podívejte na příznak `--prune`, který může oříznout různé druhy dat. Zkontrolujte `--help` Erigonu, abyste se dozvěděli více.
 
-##### Provozování Geth {#updating-clients}
+##### Provozování Geth
 
 Tento příklad spustí Geth na Mainnetu, uloží data blockchainu do `/data/ethereum`, povolí JSON-RPC a definuje, které jmenné prostory jsou povoleny. Povoluje také ověřování pro připojení konsensuálního klienta, které vyžaduje cestu k `jwtsecret` a také možnost definující, která připojení jsou povolena, v našem příkladu pouze z `localhost`.
 
@@ -290,7 +290,7 @@ geth --mainnet \
 
 Zkontrolujte [dokumentaci pro všechny možnosti konfigurace](https://geth.ethereum.org/docs/fundamentals/command-line-options) a zjistěte více o [provozování Geth s konsensuálním klientem](https://geth.ethereum.org/docs/getting-started/consensus-clients).
 
-##### Provozování Nethermind {#running-additional-services}
+##### Provozování Nethermind
 
 Nethermind nabízí různé [možnosti instalace](https://docs.nethermind.io/get-started/installing-nethermind). Balíček je dodáván s různými binárními soubory, včetně spouštěče (Launcher) s asistovaným nastavením, který vám pomůže interaktivně vytvořit konfiguraci. Alternativně najdete Runner, což je samotný spustitelný soubor a můžete jej jednoduše spustit s konfiguračními příznaky. JSON-RPC je ve výchozím nastavení povoleno.
 
@@ -304,7 +304,7 @@ Dokumentace Nethermind nabízí [kompletního průvodce](https://docs.nethermind
 
 Exekuční klient zahájí své základní funkce, vybrané koncové body a začne hledat peery. Po úspěšném objevení peerů klient zahájí synchronizaci. Exekuční klient bude čekat na připojení od konsensuálního klienta. Aktuální data blockchainu budou k dispozici, jakmile bude klient úspěšně synchronizován do aktuálního stavu.
 
-##### Provozování Reth {#monitoring-the-node}
+##### Provozování Reth
 
 Tento příklad spustí Reth na Mainnetu s použitím výchozího umístění dat. Povoluje ověřování JSON-RPC a Engine RPC pro připojení konsensuálního klienta, které je definováno cestou `jwtsecret`, přičemž jsou povolena pouze volání z `localhost`.
 
@@ -317,7 +317,7 @@ reth node \
 
 Podívejte se na [Konfigurace Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth), abyste se dozvěděli více o výchozích datových adresářích. [Dokumentace Reth](https://reth.rs/run/mainnet.html) obsahuje další možnosti a podrobnosti o konfiguraci.
 
-#### Spuštění konsensuálního klienta {#further-reading}
+#### Spuštění konsensuálního klienta {#starting-the-consensus-client}
 
 Konsensuální klient musí být spuštěn se správnou konfigurací portu, aby navázal lokální RPC připojení k exekučnímu klientovi. Konsensuální klienti musí být spuštěni s vystaveným portem exekučního klienta jako argumentem konfigurace.
 
@@ -327,7 +327,7 @@ Pokud plánujete provozovat validátor, nezapomeňte přidat konfigurační př�
 
 Při spouštění uzlu Beacon na testnetu můžete ušetřit značný čas synchronizace použitím veřejného koncového bodu pro [synchronizaci z kontrolního bodu (Checkpoint sync)](https://notes.ethereum.org/@launchpad/checkpoint-sync).
 
-#### Provozování konsensuálního klienta {#related-topics}
+#### Provozování konsensuálního klienta {#running-a-consensus-client}
 
 ##### Provozování Lighthouse
 
@@ -391,7 +391,7 @@ teku --network mainnet \
 
 Když se konsensuální klient připojí k exekučnímu klientovi, aby přečetl depozitní kontrakt a identifikoval validátory, připojí se také k dalším peerům uzlu Beacon a začne synchronizovat sloty konsensu od genesis. Jakmile uzel Beacon dosáhne aktuální epochy, Beacon API se stane použitelným pro vaše validátory. Zjistěte více o [API uzlu Beacon](https://ethereum.github.io/beacon-APIs).
 
-### Přidání validátorů
+### Přidání validátorů {#adding-validators}
 
 Konsensuální klient slouží jako uzel Beacon pro připojení validátorů. Každý konsensuální klient má svůj vlastní software validátoru podrobně popsaný v příslušné dokumentaci.
 
@@ -401,7 +401,7 @@ Nejjednodušší způsob, jak začít se stakingem a generováním klíčů vali
 
 Podívejte se na [stránku o stakingu](/staking) pro přehled možností stakingu.
 
-### Používání uzlu
+### Používání uzlu {#using-the-node}
 
 Exekuční klienti nabízejí [koncové body RPC API](/developers/docs/apis/json-rpc/), které můžete použít k odesílání transakcí, interakci s chytrými kontrakty nebo k jejich nasazení v síti Ethereum různými způsoby:
 
@@ -413,7 +413,7 @@ Různí klienti mají různé implementace koncových bodů RPC. Existuje však 
 
 Všichni konsensuální klienti vystavují [Beacon API](https://ethereum.github.io/beacon-APIs), které lze použít ke kontrole stavu konsensuálního klienta nebo ke stahování bloků a dat konsensu odesíláním požadavků pomocí nástrojů, jako je [Curl](https://curl.se). Více informací o tom naleznete v dokumentaci ke každému konsensuálnímu klientovi.
 
-#### Přístup k RPC
+#### Přístup k RPC {#reaching-rpc}
 
 Výchozí port pro JSON-RPC exekučního klienta je `8545`, ale porty lokálních koncových bodů můžete v konfiguraci upravit. Ve výchozím nastavení je rozhraní RPC dostupné pouze na localhostu vašeho počítače. Chcete-li jej zpřístupnit vzdáleně, možná jej budete chtít vystavit veřejnosti změnou adresy na `0.0.0.0`. Tím bude dostupné přes lokální síť a veřejné IP adresy. Ve většině případů budete také muset nastavit přesměrování portů na vašem routeru.
 
@@ -429,11 +429,11 @@ K tomu si musíte vytvořit vlastní [onion službu](https://community.torprojec
 
 A konečně, jedním z nejpopulárnějších způsobů, jak poskytnout přístup k interním sítím, je prostřednictvím připojení VPN. V závislosti na vašem případu použití a množství uživatelů, kteří potřebují přístup k vašemu uzlu, může být možností bezpečné připojení VPN. [OpenVPN](https://openvpn.net/) je plně vybavená SSL VPN, která implementuje bezpečné rozšíření sítě na vrstvě 2 nebo 3 modelu OSI pomocí průmyslového standardu protokolu SSL/TLS, podporuje flexibilní metody ověřování klientů založené na certifikátech, čipových kartách a/nebo přihlašovacích údajích (uživatelské jméno/heslo) a umožňuje zásady řízení přístupu specifické pro uživatele nebo skupiny pomocí pravidel brány firewall aplikovaných na virtuální rozhraní VPN.
 
-### Provozování uzlu
+### Provozování uzlu {#operating-the-node}
 
 Měli byste svůj uzel pravidelně monitorovat, abyste se ujistili, že běží správně. Možná budete muset provádět občasnou údržbu.
 
-#### Udržování uzlu online
+#### Udržování uzlu online {#keeping-node-online}
 
 Váš uzel nemusí být online neustále, ale měli byste jej udržovat online co nejvíce, aby zůstal synchronizovaný se sítí. Můžete jej vypnout a restartovat, ale mějte na paměti, že:
 
@@ -443,11 +443,11 @@ Váš uzel nemusí být online neustále, ale měli byste jej udržovat online c
 
 _To neplatí pro uzly validátorů na vrstvě konsensu._ Odpojení vašeho uzlu ovlivní všechny služby, které jsou na něm závislé. Pokud provozujete uzel pro účely _stakingu_, měli byste se snažit minimalizovat prostoje na co nejmenší míru.
 
-#### Vytváření klientských služeb
+#### Vytváření klientských služeb {#creating-client-services}
 
 Zvažte vytvoření služby pro automatické spouštění vašich klientů při startu systému. Například na serverech s Linuxem by bylo dobrou praxí vytvořit službu, např. pomocí `systemd`, která spustí klienta se správnou konfigurací pod uživatelem s omezenými oprávněními a automaticky se restartuje.
 
-#### Aktualizace klientů
+#### Aktualizace klientů {#updating-clients}
 
 Klientský software musíte udržovat aktuální s nejnovějšími bezpečnostními záplatami, funkcemi a [EIP](/eips/). Zejména před [hard forky](/ethereum-forks/) se ujistěte, že používáte správné verze klientů.
 
@@ -457,17 +457,17 @@ Aktualizace klientů je velmi jednoduchá. Každý klient má ve své dokumentac
 
 Každá implementace klienta má lidsky čitelný řetězec verze používaný v peer-to-peer protokolu, ale je přístupný i z příkazového řádku. Tento řetězec verze umožňuje uživatelům zkontrolovat, zda používají správnou verzi, a umožňuje průzkumníkům bloků a dalším analytickým nástrojům kvantifikovat distribuci konkrétních klientů v síti. Další informace o řetězcích verzí naleznete v dokumentaci k jednotlivým klientům.
 
-#### Provozování dalších služeb
+#### Provozování dalších služeb {#running-additional-services}
 
 Provozování vlastního uzlu vám umožňuje využívat služby, které vyžadují přímý přístup k RPC klienta Etherea. Jedná se o služby postavené na Ethereu, jako jsou [řešení vrstvy 2 (l2)](/developers/docs/scaling/#layer-2-scaling), backend pro peněženky, průzkumníky bloků, vývojářské nástroje a další infrastruktura Etherea.
 
-#### Monitorování uzlu
+#### Monitorování uzlu {#monitoring-the-node}
 
 Chcete-li svůj uzel správně monitorovat, zvažte shromažďování metrik. Klienti poskytují koncové body metrik, takže můžete získat komplexní data o svém uzlu. Použijte nástroje jako [InfluxDB](https://www.influxdata.com/get-influxdb/) nebo [Prometheus](https://prometheus.io/) k vytvoření databází, které můžete přeměnit na vizualizace a grafy v softwaru, jako je [Grafana](https://grafana.com/). Existuje mnoho nastavení pro použití tohoto softwaru a různé řídicí panely Grafana, abyste si mohli vizualizovat svůj uzel a síť jako celek. Podívejte se například na [návod na monitorování Geth](/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/).
 
 V rámci monitorování nezapomeňte sledovat výkon vašeho stroje. Během počáteční synchronizace vašeho uzlu může být klientský software velmi náročný na CPU a RAM. Kromě Grafany k tomu můžete použít nástroje, které nabízí váš OS, jako je `htop` nebo `uptime`.
 
-## Další čtení
+## Další čtení {#further-reading}
 
 - [Průvodci stakingem na Ethereu](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, často aktualizováno_
 - [Průvodce | Jak nastavit validátor pro staking Etherea na Mainnetu](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, často aktualizováno_
@@ -479,7 +479,7 @@ V rámci monitorování nezapomeňte sledovat výkon vašeho stroje. Během poč
 - [Provozování uzlu Hyperledger Besu na Ethereum Mainnetu: Výhody, požadavky a nastavení](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7. května 2020_
 - [Nasazení klienta Nethermind Ethereum s monitorovacím stackem](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8. července 2020_
 
-## Související témata
+## Související témata {#related-topics}
 
 - [Uzly a klienti](/developers/docs/nodes-and-clients/)
 - [Bloky](/developers/docs/blocks/)

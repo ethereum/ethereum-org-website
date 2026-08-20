@@ -16,7 +16,7 @@ summaryPoints:
 
 DVT 透過將用於保護驗證者的**私鑰分割到多台電腦**（組織成一個「叢集」）來分散金鑰管理和簽署。這樣做允許叢集中的某些節點離線，同時保持驗證者節點活躍，因為必要的驗證工作可以由每個叢集中的一部分機器完成。這種分散減少了單點故障，使驗證者更加穩健。DVT 簽署分散的另一個好處是，它使攻擊者很難獲取金鑰，因為完整的金鑰不會儲存在任何單一機器上。
 
-![A Diagram showing how a single validator key is split into key shares and distributed to multiple nodes with varying components.](./dvt-cluster.png)
+![一張圖表，顯示單一驗證者金鑰如何被分割成金鑰份額，並分配給具有不同元件的多個節點。](./dvt-cluster.png)
 
 DVT 不是一種獨立的質押方式。它是任何質押設定都可以使用的軟體層：
 - [獨立質押者](/staking/solo/)可以組隊共同營運一個驗證者，或者單個獨立質押者可以使用 DVT 為其獨立質押設定增加韌性。

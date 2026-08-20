@@ -89,7 +89,7 @@ Os usuários que desejam sair totalmente do staking e sacar todo o seu saldo de 
 
 O processo de saída de um validador do staking leva quantidades variáveis de tempo, dependendo de quantos outros estão saindo ao mesmo tempo. Uma vez concluído, esta conta não será mais responsável por realizar as funções de rede do validador, não será mais elegível para recompensas e não terá mais seu ETH "em stake". Neste momento, a conta será marcada como totalmente "sacável".
 
-Uma vez que uma conta é sinalizada como "sacável" e as credenciais de saque foram fornecidas, não há mais nada que o usuário precise fazer além de esperar. As contas são varridas automática e continuamente pelos proponentes de blocos em busca de fundos de saída elegíveis, e o saldo da sua conta será transferido integralmente (também conhecido como "saque total") durante a próxima <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>varredura</a>.
+Uma vez que uma conta é sinalizada como "sacável" e as credenciais de saque foram fornecidas, não há mais nada que o usuário precise fazer além de esperar. As contas são varridas automática e continuamente pelos propositores de blocos em busca de fundos de saída elegíveis, e o saldo da sua conta será transferido integralmente (também conhecido como "saque total") durante a próxima <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>varredura</a>.
 
 ## Como funcionam as recompensas automáticas (validador Tipo 1)? {#how-do-withdrawals-work}
 
@@ -191,7 +191,7 @@ Em geral, ao fazer staking por meio de um provedor ou pool, você deve estar liv
 </ExpandableCard>
 
 <ExpandableCard
-title="O resgate das recompensas da rede (saques parciais) acontece automaticamente?"
+title="A reivindicação das recompensas da rede (saques parciais) acontece automaticamente?"
 eventCategory="FAQ"
 eventAction="Does claiming network rewards (partial withdrawals) happen automatically?"
 eventName="read more">

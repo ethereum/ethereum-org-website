@@ -29,7 +29,7 @@ Sau khi chuẩn bị môi trường, hãy cài đặt các máy khách đã ch�
 
 Khi nút đang chạy và đồng bộ hóa, bạn đã sẵn sàng để [sử dụng nó](#using-the-node), nhưng hãy đảm bảo để mắt đến việc [bảo trì](#operating-the-node) nó.
 
-![Client setup](./diagram.png)
+![Thiết lập máy khách](./diagram.png)
 
 ### Môi trường và phần cứng {#environment-and-hardware}
 
@@ -71,18 +71,18 @@ Kích thước của cơ sở dữ liệu và tốc độ đồng bộ hóa ban 
 
 Ngoài ra, hãy đảm bảo kết nối internet của bạn không bị giới hạn bởi [giới hạn băng thông](https://wikipedia.org/wiki/Data_cap). Bạn nên sử dụng kết nối không giới hạn dung lượng vì quá trình đồng bộ hóa ban đầu và dữ liệu được phát sóng lên mạng lưới có thể vượt quá giới hạn của bạn.
 
-##### Hệ điều hành {#plug-and-play}
+##### Hệ điều hành
 
 Tất cả các máy khách đều hỗ trợ các hệ điều hành chính - Linux, macOS, Windows. Điều này có nghĩa là bạn có thể chạy các nút trên máy tính để bàn hoặc máy chủ thông thường với hệ điều hành (OS) phù hợp với bạn nhất. Đảm bảo hệ điều hành của bạn được cập nhật để tránh các sự cố tiềm ẩn và lỗ hổng bảo mật.
 
-##### Yêu cầu tối thiểu {#ethereum-on-a-single-board-computer}
+##### Yêu cầu tối thiểu
 
 - CPU có 2 lõi trở lên
 - 16 GB RAM (khuyến nghị 32 GB để đảm bảo tính ổn định)
 - 2 TB NVMe SSD (có khả năng bị vượt quá vào năm 2027, đọc thêm về [Các ổ SSD tốt và kém tốt hơn cho các nút Ethereum](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
 - Băng thông 25+ MBit/s
 
-##### Thông số kỹ thuật được khuyến nghị {#spinning-up-node}
+##### Thông số kỹ thuật được khuyến nghị
 
 Hướng dẫn phần cứng hiện tại cho các nhà điều hành nút được xác định trong [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). Đối với một nút đầy đủ, nó khuyến nghị:
 
@@ -105,26 +105,26 @@ Chế độ đồng bộ hóa và máy khách bạn chọn sẽ ảnh hưởng �
 
 Đối với các ứng dụng khách đồng thuận, yêu cầu về dung lượng cũng phụ thuộc vào việc triển khai máy khách và các tính năng được bật (ví dụ: người cắt giảm trình xác thực) nhưng nhìn chung cần thêm 200GB cho dữ liệu beacon. Với số lượng lớn các trình xác thực, tải băng thông cũng tăng lên. Bạn có thể tìm thấy [chi tiết về các yêu cầu của ứng dụng khách đồng thuận trong phân tích này](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
-#### Các giải pháp cắm và chạy (Plug-and-play) {#automatized-setup}
+#### Các giải pháp cắm và chạy (Plug-and-play) {#plug-and-play}
 
 Tùy chọn dễ dàng nhất để chạy một nút với phần cứng của riêng bạn là sử dụng các hộp cắm và chạy. Các máy được cấu hình sẵn từ các nhà cung cấp mang lại trải nghiệm đơn giản nhất: đặt hàng, kết nối, chạy. Mọi thứ đều được cấu hình sẵn và chạy tự động với hướng dẫn trực quan và bảng điều khiển để theo dõi và kiểm soát phần mềm.
 
 - [DAppNode](https://dappnode.io/)
 - [Avado](https://ava.do/)
 
-#### Ethereum trên máy tính bo mạch đơn {#manual-setup}
+#### Ethereum trên máy tính bo mạch đơn {#ethereum-on-a-single-board-computer}
 
 Một cách dễ dàng và rẻ tiền để chạy một nút Ethereum là sử dụng máy tính bo mạch đơn, ngay cả với kiến trúc ARM như Raspberry Pi. [Ethereum trên ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) cung cấp các image dễ chạy của nhiều máy khách thực thi và ứng dụng khách đồng thuận cho Raspberry Pi và các bo mạch ARM khác.
 
 Các thiết bị nhỏ, giá cả phải chăng và hiệu quả như thế này rất lý tưởng để chạy một nút tại nhà nhưng hãy ghi nhớ hiệu suất hạn chế của chúng.
 
-## Khởi chạy nút {#getting-the-client}
+## Khởi chạy nút {#spinning-up-node}
 
 Việc thiết lập máy khách thực tế có thể được thực hiện bằng các trình khởi chạy tự động hoặc thủ công, thiết lập phần mềm máy khách trực tiếp.
 
 Đối với những người dùng ít kinh nghiệm hơn, phương pháp được khuyến nghị là sử dụng trình khởi chạy, phần mềm hướng dẫn bạn qua quá trình cài đặt và tự động hóa quá trình thiết lập máy khách. Tuy nhiên, nếu bạn có một số kinh nghiệm sử dụng terminal, các bước thiết lập thủ công sẽ rất dễ làm theo.
 
-### Thiết lập có hướng dẫn {#client-setup}
+### Thiết lập có hướng dẫn {#automatized-setup}
 
 Nhiều dự án thân thiện với người dùng nhằm mục đích cải thiện trải nghiệm thiết lập máy khách. Các trình khởi chạy này cung cấp cài đặt và cấu hình máy khách tự động, một số thậm chí còn cung cấp giao diện đồ họa để thiết lập có hướng dẫn và theo dõi các máy khách.
 
@@ -137,13 +137,13 @@ Dưới đây là một vài dự án có thể giúp bạn cài đặt và ki�
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) - Công cụ thiết lập nút tự động tạo cấu hình Docker bằng trình hướng dẫn CLI. Được viết bằng Go bởi Nethermind.
 - [Chainstack Self-Hosted](https://docs.chainstack.com/docs/self-hosted/introduction) - Web UI và CLI để triển khai các máy khách thực thi và ứng dụng khách đồng thuận trên Kubernetes. Bao gồm khởi động Snapshot và giám sát tích hợp. Miễn phí. Không yêu cầu tài khoản Chainstack. Được xây dựng bởi Chainstack.
 
-### Thiết lập máy khách thủ công {#starting-the-execution-client}
+### Thiết lập máy khách thủ công {#manual-setup}
 
 Tùy chọn khác là tải xuống, xác minh và cấu hình phần mềm máy khách theo cách thủ công. Ngay cả khi một số máy khách cung cấp giao diện đồ họa, việc thiết lập thủ công vẫn yêu cầu các kỹ năng cơ bản với terminal nhưng mang lại tính linh hoạt cao hơn nhiều.
 
 Như đã giải thích trước đó, việc thiết lập nút Ethereum của riêng bạn sẽ yêu cầu chạy một cặp ứng dụng khách đồng thuận và máy khách thực thi. Một số máy khách có thể bao gồm một máy khách nhẹ của loại kia và đồng bộ hóa mà không cần bất kỳ phần mềm nào khác. Tuy nhiên, việc xác minh không cần tin cậy đầy đủ yêu cầu cả hai triển khai.
 
-#### Lấy phần mềm máy khách {#running-an-execution-client}
+#### Lấy phần mềm máy khách {#getting-the-client}
 
 Đầu tiên, bạn cần lấy phần mềm [máy khách thực thi](/developers/docs/nodes-and-clients/#execution-clients) và [ứng dụng khách đồng thuận](/developers/docs/nodes-and-clients/#consensus-clients) ưa thích của mình.
 
@@ -153,7 +153,7 @@ Hướng dẫn cài đặt từng máy khách được cung cấp trong tài li�
 
 Dưới đây là các trang phát hành của các máy khách nơi bạn có thể tìm thấy các tệp nhị phân được tạo sẵn của chúng hoặc hướng dẫn cài đặt:
 
-##### Máy khách thực thi {#starting-the-consensus-client}
+##### Máy khách thực thi
 
 - [Besu](https://github.com/hyperledger/besu/releases)
 - [Erigon](https://github.com/ledgerwatch/erigon/releases)
@@ -163,7 +163,7 @@ Dưới đây là các trang phát hành của các máy khách nơi bạn có t
 
 Cũng cần lưu ý rằng sự đa dạng máy khách là một [vấn đề trên lớp thực thi](/developers/docs/nodes-and-clients/client-diversity/#execution-layer). Khuyến nghị người đọc nên xem xét việc chạy một máy khách thực thi thiểu số.
 
-##### Ứng dụng khách đồng thuận {#running-a-consensus-client}
+##### Ứng dụng khách đồng thuận
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
 - [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (Không cung cấp tệp nhị phân được tạo sẵn, chỉ có Docker image hoặc phải được xây dựng từ mã nguồn)
@@ -175,7 +175,7 @@ Cũng cần lưu ý rằng sự đa dạng máy khách là một [vấn đề tr
 
 [Xem mức sử dụng máy khách mạng lưới mới nhất](https://clientdiversity.org/) và tìm hiểu thêm về [sự đa dạng máy khách](/developers/docs/nodes-and-clients/client-diversity).
 
-##### Xác minh phần mềm {#adding-validators}
+##### Xác minh phần mềm
 
 Khi tải xuống phần mềm từ internet, bạn nên xác minh tính toàn vẹn của nó. Bước này là tùy chọn nhưng đặc biệt với phần cơ sở hạ tầng quan trọng như máy khách Ethereum, điều quan trọng là phải nhận thức được các vectơ tấn công tiềm ẩn và tránh chúng. Nếu bạn đã tải xuống một tệp nhị phân được tạo sẵn, bạn cần phải tin tưởng nó và có nguy cơ kẻ tấn công có thể hoán đổi tệp thực thi bằng một tệp độc hại.
 
@@ -189,7 +189,7 @@ sha256sum teku-22.6.1.tar.gz
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
 ```
 
-#### Thiết lập máy khách {#using-the-node}
+#### Thiết lập máy khách {#client-setup}
 
 Sau khi cài đặt, tải xuống hoặc biên dịch phần mềm máy khách, bạn đã sẵn sàng để chạy nó. Điều này chỉ có nghĩa là nó phải được thực thi với cấu hình phù hợp. Các máy khách cung cấp các tùy chọn cấu hình phong phú, có thể kích hoạt nhiều tính năng khác nhau.
 
@@ -201,7 +201,7 @@ Các tùy chọn cấu hình cơ bản khác là, ví dụ: chọn mạng lướ
 
 Các ví dụ về việc chạy các máy khách thực thi với cấu hình cơ bản có thể được tìm thấy trong phần tiếp theo.
 
-#### Khởi động máy khách thực thi {#reaching-rpc}
+#### Khởi động máy khách thực thi {#starting-the-execution-client}
 
 Trước khi khởi động phần mềm máy khách Ethereum, hãy thực hiện kiểm tra lần cuối xem môi trường của bạn đã sẵn sàng chưa. Ví dụ: đảm bảo:
 
@@ -223,7 +223,7 @@ Token này được tạo tự động bởi phần mềm máy khách, nhưng tr
 openssl rand -hex 32 > jwtsecret
 ```
 
-#### Chạy một máy khách thực thi {#operating-the-node}
+#### Chạy một máy khách thực thi {#running-an-execution-client}
 
 Phần này sẽ hướng dẫn bạn cách khởi động các máy khách thực thi. Nó chỉ đóng vai trò như một ví dụ về cấu hình cơ bản, sẽ khởi động máy khách với các cài đặt này:
 
@@ -240,7 +240,7 @@ Xin lưu ý rằng đây chỉ là một ví dụ cơ bản, tất cả các cà
 
 > Lưu ý rằng dấu gạch chéo ngược `\` trong các ví dụ chỉ nhằm mục đích định dạng; các cờ cấu hình có thể được xác định trên một dòng duy nhất.
 
-##### Chạy Besu {#keeping-node-online}
+##### Chạy Besu
 
 Ví dụ này khởi động Besu trên Mạng chính, lưu trữ dữ liệu chuỗi khối ở định dạng mặc định tại `/data/ethereum`, bật JSON-RPC và Engine RPC để kết nối ứng dụng khách đồng thuận. Engine API được xác thực bằng token `jwtsecret` và chỉ cho phép các lệnh gọi từ `localhost`.
 
@@ -262,7 +262,7 @@ besu --Xlauncher
 
 [Tài liệu của Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/) chứa các tùy chọn bổ sung và chi tiết cấu hình.
 
-##### Chạy Erigon {#creating-client-services}
+##### Chạy Erigon
 
 Ví dụ này khởi động Erigon trên Mạng chính, lưu trữ dữ liệu chuỗi khối tại `/data/ethereum`, bật JSON-RPC, xác định các không gian tên nào được phép và bật xác thực để kết nối ứng dụng khách đồng thuận được xác định bởi đường dẫn `jwtsecret`.
 
@@ -275,7 +275,7 @@ erigon --chain mainnet \
 
 Theo mặc định, Erigon thực hiện đồng bộ hóa đầy đủ với ổ cứng 8GB, điều này sẽ dẫn đến hơn 2TB dữ liệu lưu trữ. Đảm bảo `datadir` đang trỏ đến ổ đĩa có đủ dung lượng trống hoặc xem xét cờ `--prune` có thể cắt bớt các loại dữ liệu khác nhau. Kiểm tra `--help` của Erigon để tìm hiểu thêm.
 
-##### Chạy Geth {#updating-clients}
+##### Chạy Geth
 
 Ví dụ này khởi động Geth trên Mạng chính, lưu trữ dữ liệu chuỗi khối tại `/data/ethereum`, bật JSON-RPC và xác định các không gian tên nào được phép. Nó cũng bật xác thực để kết nối ứng dụng khách đồng thuận yêu cầu đường dẫn đến `jwtsecret` và cũng có tùy chọn xác định các kết nối nào được phép, trong ví dụ của chúng tôi chỉ từ `localhost`.
 
@@ -290,7 +290,7 @@ geth --mainnet \
 
 Kiểm tra [tài liệu cho tất cả các tùy chọn cấu hình](https://geth.ethereum.org/docs/fundamentals/command-line-options) và tìm hiểu thêm về [việc chạy Geth với một ứng dụng khách đồng thuận](https://geth.ethereum.org/docs/getting-started/consensus-clients).
 
-##### Chạy Nethermind {#running-additional-services}
+##### Chạy Nethermind
 
 Nethermind cung cấp nhiều [tùy chọn cài đặt](https://docs.nethermind.io/get-started/installing-nethermind) khác nhau. Gói này đi kèm với nhiều tệp nhị phân khác nhau, bao gồm một Trình khởi chạy với thiết lập có hướng dẫn, sẽ giúp bạn tạo cấu hình một cách tương tác. Ngoài ra, bạn có thể tìm thấy Runner là chính tệp thực thi và bạn chỉ cần chạy nó với các cờ cấu hình. JSON-RPC được bật theo mặc định.
 
@@ -304,7 +304,7 @@ Tài liệu của Nethermind cung cấp một [hướng dẫn đầy đủ](http
 
 Một máy khách thực thi sẽ khởi tạo các chức năng cốt lõi của nó, các điểm cuối đã chọn và bắt đầu tìm kiếm các nút ngang hàng. Sau khi khám phá thành công các nút ngang hàng, máy khách bắt đầu đồng bộ hóa. Máy khách thực thi sẽ chờ kết nối từ ứng dụng khách đồng thuận. Dữ liệu chuỗi khối hiện tại sẽ có sẵn sau khi máy khách được đồng bộ hóa thành công với trạng thái hiện tại.
 
-##### Chạy Reth {#monitoring-the-node}
+##### Chạy Reth
 
 Ví dụ này khởi động Reth trên Mạng chính, sử dụng vị trí dữ liệu mặc định. Bật xác thực JSON-RPC và Engine RPC để kết nối ứng dụng khách đồng thuận được xác định bởi đường dẫn `jwtsecret`, với chỉ các lệnh gọi từ `localhost` được phép.
 
@@ -317,7 +317,7 @@ reth node \
 
 Xem [Cấu hình Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) để tìm hiểu thêm về các thư mục dữ liệu mặc định. [Tài liệu của Reth](https://reth.rs/run/mainnet.html) chứa các tùy chọn bổ sung và chi tiết cấu hình.
 
-#### Khởi động ứng dụng khách đồng thuận {#further-reading}
+#### Khởi động ứng dụng khách đồng thuận {#starting-the-consensus-client}
 
 Ứng dụng khách đồng thuận phải được khởi động với cấu hình cổng phù hợp để thiết lập kết nối RPC cục bộ với máy khách thực thi. Các ứng dụng khách đồng thuận phải được chạy với cổng máy khách thực thi được hiển thị dưới dạng đối số cấu hình.
 
@@ -327,7 +327,7 @@ Nếu bạn định chạy một trình xác thực, hãy đảm bảo thêm m�
 
 Khi khởi động một nút Beacon trên một mạng thử nghiệm, bạn có thể tiết kiệm đáng kể thời gian đồng bộ hóa bằng cách sử dụng một điểm cuối công khai cho [Đồng bộ hóa điểm kiểm tra](https://notes.ethereum.org/@launchpad/checkpoint-sync).
 
-#### Chạy một ứng dụng khách đồng thuận {#related-topics}
+#### Chạy một ứng dụng khách đồng thuận {#running-a-consensus-client}
 
 ##### Chạy Lighthouse
 
@@ -392,17 +392,17 @@ teku --network mainnet \
 
 Khi một ứng dụng khách đồng thuận kết nối với máy khách thực thi để đọc hợp đồng tiền gửi và xác định các trình xác thực, nó cũng kết nối với các nút ngang hàng nút Beacon khác và bắt đầu đồng bộ hóa các slot đồng thuận từ khối nguyên thủy (genesis). Khi nút Beacon đạt đến kỷ nguyên hiện tại, Beacon API sẽ trở nên khả dụng cho các trình xác thực của bạn. Tìm hiểu thêm về [Các API của nút Beacon](https://ethereum.github.io/beacon-APIs).
 
-### Thêm các trình xác thực
+### Thêm các trình xác thực {#adding-validators}
 
 Một ứng dụng khách đồng thuận đóng vai trò như một nút Beacon để các trình xác thực kết nối. Mỗi ứng dụng khách đồng thuận có phần mềm trình xác thực riêng được mô tả chi tiết trong tài liệu tương ứng của nó.
 
 Việc chạy trình xác thực của riêng bạn cho phép [đặt cọc độc lập](/staking/solo/), phương pháp có tác động lớn nhất và không cần tin cậy để hỗ trợ mạng lưới Ethereum. Tuy nhiên, điều này yêu cầu khoản tiền gửi là 32 ETH. Để chạy một trình xác thực trên nút của riêng bạn với số tiền nhỏ hơn, một nhóm phi tập trung với các nhà điều hành nút không cần cấp phép, chẳng hạn như [Rocket Pool](https://rocketpool.net/node-operators), có thể khiến bạn quan tâm.
 
-Cách dễ nhất để bắt đầu với việc đặt cọc và tạo khóa trình xác thực là sử dụng [Launchpad Đặt cọc Mạng thử nghiệm Hoodi](https://hoodi.launchpad.ethereum.org/), cho phép bạn kiểm tra thiết lập của mình bằng cách [chạy các nút trên Hoodi](https://notes.ethereum.org/@launchpad/hoodi). Khi bạn đã sẵn sàng cho Mạng chính, bạn có thể lặp lại các bước này bằng cách sử dụng [Launchpad Đặt cọc Mạng chính](https://launchpad.ethereum.org/).
+Cách dễ nhất để bắt đầu với việc đặt cọc và tạo khóa trình xác thực là sử dụng [Staking Launchpad trên mạng thử nghiệm Hoodi](https://hoodi.launchpad.ethereum.org/), cho phép bạn kiểm tra thiết lập của mình bằng cách [chạy các nút trên Hoodi](https://notes.ethereum.org/@launchpad/hoodi). Khi bạn đã sẵn sàng cho Mạng chính, bạn có thể lặp lại các bước này bằng cách sử dụng [Staking Launchpad trên Mạng chính](https://launchpad.ethereum.org/).
 
 Hãy xem [trang đặt cọc](/staking) để biết tổng quan về các tùy chọn đặt cọc.
 
-### Sử dụng nút
+### Sử dụng nút {#using-the-node}
 
 Các máy khách thực thi cung cấp [các điểm cuối RPC API](/developers/docs/apis/json-rpc/) mà bạn có thể sử dụng để gửi giao dịch, tương tác với hoặc triển khai các hợp đồng thông minh trên mạng lưới Ethereum theo nhiều cách khác nhau:
 
@@ -414,7 +414,7 @@ Các máy khách khác nhau có các triển khai khác nhau của các điểm 
 
 Tất cả các ứng dụng khách đồng thuận đều hiển thị một [Beacon API](https://ethereum.github.io/beacon-APIs) có thể được sử dụng để kiểm tra trạng thái của ứng dụng khách đồng thuận hoặc tải xuống các khối và dữ liệu đồng thuận bằng cách gửi các yêu cầu sử dụng các công cụ như [Curl](https://curl.se). Thông tin thêm về điều này có thể được tìm thấy trong tài liệu cho từng ứng dụng khách đồng thuận.
 
-#### Tiếp cận RPC
+#### Tiếp cận RPC {#reaching-rpc}
 
 Cổng mặc định cho JSON-RPC của máy khách thực thi là `8545` nhưng bạn có thể sửa đổi các cổng của các điểm cuối cục bộ trong cấu hình. Theo mặc định, giao diện RPC chỉ có thể truy cập được trên localhost của máy tính của bạn. Để làm cho nó có thể truy cập từ xa, bạn có thể muốn hiển thị nó ra công chúng bằng cách thay đổi địa chỉ thành `0.0.0.0`. Điều này sẽ làm cho nó có thể truy cập được qua mạng cục bộ và các địa chỉ IP công cộng. Trong hầu hết các trường hợp, bạn cũng sẽ cần thiết lập chuyển tiếp cổng trên bộ định tuyến của mình.
 
@@ -430,11 +430,11 @@ Việc thiết lập một máy chủ web, một proxy hoặc Rest API hướng 
 
 Cuối cùng, và một trong những cách phổ biến nhất để cung cấp quyền truy cập vào các mạng nội bộ là thông qua kết nối VPN. Tùy thuộc vào trường hợp sử dụng của bạn và số lượng người dùng cần truy cập vào nút của bạn, một kết nối VPN an toàn có thể là một tùy chọn. [OpenVPN](https://openvpn.net/) là một SSL VPN đầy đủ tính năng triển khai tiện ích mở rộng mạng lưới an toàn lớp 2 hoặc 3 của OSI bằng cách sử dụng giao thức SSL/TLS tiêu chuẩn ngành, hỗ trợ các phương pháp xác thực máy khách linh hoạt dựa trên chứng chỉ, thẻ thông minh và/hoặc thông tin đăng nhập tên người dùng/mật khẩu, và cho phép các chính sách kiểm soát truy cập dành riêng cho người dùng hoặc nhóm bằng cách sử dụng các quy tắc tường lửa được áp dụng cho giao diện ảo VPN.
 
-### Vận hành nút
+### Vận hành nút {#operating-the-node}
 
 Bạn nên thường xuyên theo dõi nút của mình để đảm bảo nó đang chạy bình thường. Bạn có thể cần phải bảo trì thỉnh thoảng.
 
-#### Giữ cho một nút trực tuyến
+#### Giữ cho một nút trực tuyến {#keeping-node-online}
 
 Nút của bạn không nhất thiết phải trực tuyến mọi lúc, nhưng bạn nên giữ nó trực tuyến càng nhiều càng tốt để giữ cho nó đồng bộ hóa với mạng lưới. Bạn có thể tắt nó đi để khởi động lại, nhưng hãy ghi nhớ rằng:
 
@@ -444,11 +444,11 @@ Nút của bạn không nhất thiết phải trực tuyến mọi lúc, nhưng 
 
 _Điều này không áp dụng cho các nút trình xác thực lớp đồng thuận._ Việc đưa nút của bạn ngoại tuyến sẽ ảnh hưởng đến tất cả các dịch vụ phụ thuộc vào nó. Nếu bạn đang chạy một nút cho mục đích _đặt cọc_, bạn nên cố gắng giảm thiểu thời gian ngừng hoạt động càng nhiều càng tốt.
 
-#### Tạo các dịch vụ máy khách
+#### Tạo các dịch vụ máy khách {#creating-client-services}
 
 Cân nhắc việc tạo một dịch vụ để chạy các máy khách của bạn tự động khi khởi động. Ví dụ: trên các máy chủ Linux, một thực tiễn tốt sẽ là tạo một dịch vụ, ví dụ: với `systemd`, thực thi máy khách với cấu hình phù hợp, dưới một người dùng có các đặc quyền hạn chế và tự động khởi động lại.
 
-#### Cập nhật các máy khách
+#### Cập nhật các máy khách {#updating-clients}
 
 Bạn cần giữ cho phần mềm máy khách của mình được cập nhật với các bản vá bảo mật, tính năng và [EIP](/eips/) mới nhất. Đặc biệt là trước các [hard fork](/ethereum-forks/), hãy đảm bảo bạn đang chạy các phiên bản máy khách chính xác.
 
@@ -458,17 +458,17 @@ Việc cập nhật các máy khách rất đơn giản. Mỗi máy khách có c
 
 Mỗi triển khai máy khách có một chuỗi phiên bản mà con người có thể đọc được sử dụng trong giao thức ngang hàng nhưng cũng có thể truy cập được từ dòng lệnh. Chuỗi phiên bản này cho phép người dùng kiểm tra xem họ đang chạy đúng phiên bản hay không và cho phép các trình khám phá khối và các công cụ phân tích khác quan tâm đến việc định lượng sự phân phối của các máy khách cụ thể trên mạng lưới. Vui lòng tham khảo tài liệu của từng máy khách để biết thêm thông tin về các chuỗi phiên bản.
 
-#### Chạy các dịch vụ bổ sung
+#### Chạy các dịch vụ bổ sung {#running-additional-services}
 
 Việc chạy nút của riêng bạn cho phép bạn sử dụng các dịch vụ yêu cầu quyền truy cập trực tiếp vào RPC của máy khách Ethereum. Đây là các dịch vụ được xây dựng trên Ethereum như [các giải pháp lớp 2 (l2)](/developers/docs/scaling/#layer-2-scaling), backend cho ví, trình khám phá khối, công cụ dành cho nhà phát triển và cơ sở hạ tầng Ethereum khác.
 
-#### Giám sát nút
+#### Giám sát nút {#monitoring-the-node}
 
 Để giám sát nút của bạn một cách hợp lý, hãy cân nhắc việc thu thập các số liệu. Các máy khách cung cấp các điểm cuối số liệu để bạn có thể nhận được dữ liệu toàn diện về nút của mình. Sử dụng các công cụ như [InfluxDB](https://www.influxdata.com/get-influxdb/) hoặc [Prometheus](https://prometheus.io/) để tạo cơ sở dữ liệu mà bạn có thể biến thành các hình ảnh trực quan và biểu đồ trong phần mềm như [Grafana](https://grafana.com/). Có nhiều thiết lập để sử dụng phần mềm này và các bảng điều khiển Grafana khác nhau để bạn hình dung nút của mình và toàn bộ mạng lưới. Ví dụ: hãy xem [hướng dẫn về việc giám sát Geth](/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/).
 
 Là một phần của việc giám sát, hãy đảm bảo để mắt đến hiệu suất máy của bạn. Trong quá trình đồng bộ hóa ban đầu của nút, phần mềm máy khách có thể rất nặng về CPU và RAM. Ngoài Grafana, bạn có thể sử dụng các công cụ mà hệ điều hành của bạn cung cấp như `htop` hoặc `uptime` để làm điều này.
 
-## Đọc thêm
+## Đọc thêm {#further-reading}
 
 - [Hướng dẫn Đặt cọc Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, thường xuyên cập nhật_
 - [Hướng dẫn | Cách thiết lập một trình xác thực để đặt cọc Ethereum trên mạng chính](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, thường xuyên cập nhật_
@@ -480,7 +480,7 @@ Là một phần của việc giám sát, hãy đảm bảo để mắt đến h
 - [Chạy một Nút Hyperledger Besu trên Mạng chính Ethereum: Lợi ích, Yêu cầu và Thiết lập](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 tháng 5 năm 2020_
 - [Triển khai Máy khách Ethereum Nethermind với Ngăn xếp Giám sát](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 tháng 7 năm 2020_
 
-## Các chủ đề liên quan
+## Các chủ đề liên quan {#related-topics}
 
 - [Nút và máy khách](/developers/docs/nodes-and-clients/)
 - [Khối](/developers/docs/blocks/)

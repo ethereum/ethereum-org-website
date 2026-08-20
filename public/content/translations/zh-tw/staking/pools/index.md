@@ -26,9 +26,9 @@ summaryPoints:
 除了[參與質押](/staking/)的好處之外，透過質押池進行質押還具有許多獨特的優勢。
 
 <Grid>
-  <Card title="Low barrier to entry" icon={<Fish />} description="不是巨鯨？沒問題。與需要 32 ETH 的獨立質押不同，大多數質押池讓您可以透過與其他質押者合作，質押幾乎任意數量的 ETH。" />
-  <Card title="Stake today" icon={<Clock />} description="透過質押池進行質押就像代幣兌換一樣簡單。無需擔心硬體設定和節點維護。質押池允許您存入 ETH，這使得節點營運者能夠運行驗證者。然後，扣除節點營運費用後，獎勵將分配給貢獻者。" />
-  <Card title="Liquid staking tokens" icon={<Droplets />} description="許多質押池提供一種代幣，代表對您質押的 ETH 及其產生的獎勵的申領權。這讓您可以利用您質押的 ETH，例如作為 DeFi 應用程式中的抵押品。" />
+  <Card title="進入門檻低" icon={<Fish />} description="不是巨鯨？沒問題。與需要 32 ETH 的獨立質押不同，大多數質押池讓您可以透過與其他質押者合作，質押幾乎任意數量的 ETH。" />
+  <Card title="立即質押" icon={<Clock />} description="透過質押池進行質押就像代幣兌換一樣簡單。無需擔心硬體設定和節點維護。質押池允許您存入 ETH，這使得節點營運者能夠運行驗證者。然後，扣除節點營運費用後，獎勵將分配給貢獻者。" />
+  <Card title="流動性質押代幣" icon={<Droplets />} description="許多質押池提供一種代幣，代表對您質押的 ETH 及其產生的獎勵的申領權。這讓您可以利用您質押的 ETH，例如作為 DeFi 應用程式中的抵押品。" />
 </Grid>
 
 ## 質押選項比較 {#comparison-of-staking-options}
@@ -75,7 +75,7 @@ LST 繼承了質押的潛在風險（例如質押池驗證者的罰沒和停機�
 <AlertIcon size="xl"><Split /></AlertIcon>
 <AlertContent>
 <AlertDescription>
-許多質押池使用**分散式驗證者技術 (DVT)** 來降低營運者風險，這是一種中介軟體，可將驗證者的金鑰拆分到多台機器和營運者中，因此單一故障或妥協不會導致驗證者停機。[了解更多關於分散式驗證者技術的資訊](/staking/dvt/)
+許多質押池使用**分散式驗證者技術 (DVT)** 來降低營運者風險，這是一種中介軟體，可將驗證者的金鑰拆分到多台機器和營運者中，因此單一故障或遭到入侵都不會導致驗證者停機。[了解更多關於分散式驗證者技術的資訊](/staking/dvt/)
 </AlertDescription>
 </AlertContent>
 </Alert>

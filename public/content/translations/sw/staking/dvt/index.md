@@ -16,7 +16,7 @@ Teknolojia ya kithibitishaji kilichosambazwa (DVT) ni mbinu ya usalama wa mthibi
 
 DVT inasambaza usimamizi wa ufunguo na kusaini kwa **kugawanya ufunguo wa siri** unaotumiwa kulinda mthibitishaji **kwenye kompyuta nyingi** zilizopangwa katika "kikundi". Kufanya hivyo kunaruhusu baadhi ya nodi katika kikundi kwenda nje ya mtandao huku zikiweka nodi ya mthibitishaji ikiwa inafanya kazi, kwani kazi muhimu ya uthibitishaji inaweza kufanywa na kikundi kidogo cha mashine katika kila kikundi. Usambazaji huu unapunguza sehemu moja ya kushindwa, na kumfanya mthibitishaji kuwa imara zaidi. Faida ya ziada ya usambazaji wa kusaini wa DVT ni kwamba inafanya iwe vigumu sana kwa washambuliaji kupata ufikiaji wa ufunguo, kwa sababu hauhifadhiwi kikamilifu kwenye mashine yoyote moja.
 
-![A Diagram showing how a single validator key is split into key shares and distributed to multiple nodes with varying components.](./dvt-cluster.png)
+![Mchoro unaoonyesha jinsi ufunguo mmoja wa mthibitishaji unavyogawanywa katika hisa za ufunguo na kusambazwa kwa nodi nyingi zenye vijenzi tofauti.](./dvt-cluster.png)
 
 DVT si njia tofauti ya kuweka dhamana. Ni tabaka la programu ambalo usanidi wowote wa uwekaji dhamana unaweza kutumia:
 - [Waweka dhamana wa kujitegemea](/staking/solo/) wanaweza kushirikiana kuendesha mthibitishaji pamoja, au mweka dhamana wa kujitegemea binafsi anaweza kutumia DVT kuongeza uthabiti kwenye usanidi wao wa uwekaji dhamana wa kujitegemea.
@@ -34,13 +34,13 @@ Ikiwa ufunguo wa siri wa mthibitishaji umeingiliwa, mshambuliaji anaweza kudhibi
 
 Wakati mthibitishaji amegawanywa kwa waendeshaji wengi na mashine nyingi, anaweza kuhimili hitilafu za maunzi na programu binafsi bila kwenda nje ya mtandao. Hatari ya kushindwa inaweza pia kupunguzwa kwa kutumia usanidi tofauti wa maunzi na programu kwenye nodi katika kikundi. Usambazaji wa waendeshaji wengi haupatikani kiasili kwa usanidi wa mthibitishaji wa nodi moja; unatokana na tabaka la programu ya kati la DVT.
 
-Ikiwa moja ya vipengele vya mashine katika kikundi itashindwa (kwa mfano, ikiwa kuna waendeshaji wanne katika kikundi cha mthibitishaji na mmoja anatumia mteja maalum ambaye ana hitilafu), wengine wanaweza kuhakikisha kuwa mthibitishaji anaendelea kufanya kazi.
+Ikiwa moja ya vipengele vya mashine katika kikundi itashindwa (kwa mfano, ikiwa kuna waendeshaji wanne katika kikundi cha mthibitishaji na mmoja anatumia kiteja maalum ambacho kina hitilafu), wengine wanaweza kuhakikisha kuwa mthibitishaji anaendelea kufanya kazi.
 
 ### Ugatuzi {#decentralization}
 
 Hali bora kwa Ethereum ni kuwa na wathibitishaji wengi wanaojitegemea iwezekanavyo. Hata hivyo, watoa huduma wachache wa kuweka dhamana wamekuwa maarufu sana na wanachukua sehemu kubwa ya jumla ya ETH iliyowekwa dhamana kwenye mtandao. DVT inaweza kuruhusu waendeshaji hawa kuwepo huku ikihifadhi ugatuzi wa dhamana. Hii ni kwa sababu funguo za kila mthibitishaji zinasambazwa kwenye mashine nyingi na itachukua njama kubwa zaidi kwa mthibitishaji kuwa mbaya.
 
-Bila DVT, ni rahisi kwa watoa huduma wa kuweka dhamana kusaidia usanidi mmoja au miwili tu ya mteja kwa wathibitishaji wao wote, na kuongeza athari za hitilafu ya mteja. DVT inaweza kutumika kusambaza hatari kwenye usanidi mwingi wa mteja na maunzi tofauti, na kuunda uthabiti kupitia utofauti.
+Bila DVT, ni rahisi kwa watoa huduma wa kuweka dhamana kusaidia usanidi mmoja au miwili tu wa kiteja kwa wathibitishaji wao wote, na kuongeza athari za hitilafu ya kiteja. DVT inaweza kutumika kusambaza hatari kwenye usanidi mwingi wa kiteja na maunzi tofauti, na kuunda uthabiti kupitia utofauti.
 
 **DVT inatoa faida zifuatazo kwa Ethereum:**
 
@@ -49,12 +49,12 @@ Bila DVT, ni rahisi kwa watoa huduma wa kuweka dhamana kusaidia usanidi mmoja au
 3. Inaunda **uvumilivu wa makosa** wa mthibitishaji
 4. Uendeshaji wa mthibitishaji **uliopunguza uaminifu**
 5. **Kupunguza ukataji** na hatari za muda wa kutofanya kazi
-6. **Inaboresha utofauti** (mteja, kituo cha data, eneo, udhibiti, n.k.)
+6. **Inaboresha utofauti** (kiteja, kituo cha data, eneo, udhibiti, n.k.)
 7. **Usalama ulioimarishwa** wa usimamizi wa ufunguo wa mthibitishaji
 
 ## DVT inafanyaje kazi? {#how-does-dvt-work}
 
-Utekelezaji wa DVT kwa kawaida huendeshwa kama programu ya ziada kwenye kila mashine katika kikundi. Programu hii hufanya kazi kama programu ya kati, ikikaa kati ya mteja wa mthibitishaji wa nodi na mteja wa mwafaka wake, ambapo inaratibu na nodi zingine kwenye kikundi ili majukumu ya mthibitishaji yasainiwe kwa pamoja.
+Utekelezaji wa DVT kwa kawaida huendeshwa kama programu ya ziada kwenye kila mashine katika kikundi. Programu hii hufanya kazi kama programu ya kati, ikikaa kati ya kiteja cha mthibitishaji cha nodi na mteja wa mwafaka wake, ambapo inaratibu na nodi zingine kwenye kikundi ili majukumu ya mthibitishaji yasainiwe kwa pamoja.
 
 Suluhisho la DVT lina vipengele vifuatavyo:
 
@@ -72,7 +72,7 @@ Wathibitishaji waliosambazwa wanaendeshwa kwenye Mtandao Mkuu leo katika uwekaji
 
 <ProductDisclaimer />
 
-- **Obol** inatengeneza Charon, mteja wa programu ya kati wa DVT wa chanzo wazi unaoruhusu kikundi cha mashine kuendesha mthibitishaji pamoja ("uwekaji dhamana wa kikosi"). Vikundi hufanya uzalishaji wa ufunguo uliosambazwa na kusanidi kikundi chao kupitia [DV Launchpad](https://docs.obol.org/learn/readme/launchpad) ya Obol. Vikundi vya Obol vinatumiwa katika uzalishaji na [itifaki za kuweka dhamana](/staking/pools/) na [huduma za kuweka dhamana](/staking/saas/), ikiwa ni pamoja na moduli ya Simple DVT ya Lido na programu ya Operation Solo Staker ya EtherFi, ambayo inawaingiza waendeshaji wa nyumbani kwenye vikundi vinavyovumilia makosa.
+- **Obol** inatengeneza Charon, kiteja cha programu ya kati cha DVT cha chanzo wazi kinachoruhusu kikundi cha mashine kuendesha mthibitishaji pamoja ("uwekaji dhamana wa kikosi"). Vikundi hufanya uzalishaji wa ufunguo uliosambazwa na kusanidi kikundi chao kupitia [DV Launchpad](https://docs.obol.org/learn/readme/launchpad) ya Obol. Vikundi vya Obol vinatumiwa katika uzalishaji na [itifaki za kuweka dhamana](/staking/pools/) na [huduma za kuweka dhamana](/staking/saas/), ikiwa ni pamoja na moduli ya Simple DVT ya Lido na programu ya Operation Solo Staker ya EtherFi, ambayo inawaingiza waendeshaji wa nyumbani kwenye vikundi vinavyovumilia makosa.
 - **SSV Network** ni mtandao bila ruhusa wa waendeshaji wa nodi wanaojitegemea. Ufunguo wa mthibitishaji unagawanywa katika hisa za ufunguo na kusambazwa kwa seti iliyochaguliwa ya waendeshaji, ambao hufanya majukumu ya mthibitishaji kwa pamoja; hakuna mwendeshaji mmoja anayeshikilia ufunguo kamili. Huduma za kuweka dhamana na uwekaji dhamana wa pamoja huendesha seti kubwa za wathibitishaji kwenye SSV, na kama Obol, inatumiwa na moduli ya Simple DVT ya Lido.
 
 ## Matumizi ya DVT {#dvt-use-cases}
@@ -101,14 +101,14 @@ Kwa kutumia DVT, uaminifu unaohitajika kutoka kwa kila mwendeshaji binafsi unawe
 
 ## Hasara zinazowezekana za kutumia DVT {#potential-drawbacks-of-using-dvt}
 
-- **Kipengele cha ziada** - kuanzisha nodi ya DVT kunaongeza sehemu nyingine ambayo inaweza kuwa na hitilafu au hatari. Hili linapunguzwa kwa kuwa na utekelezaji mwingi wa programu ya DVT, kama vile kuna wateja wengi kwa tabaka la mwafaka na tabaka la utekelezaji.
+- **Kipengele cha ziada** - kuanzisha nodi ya DVT kunaongeza sehemu nyingine ambayo inaweza kuwa na hitilafu au hatari. Hili linapunguzwa kwa kuwa na utekelezaji mwingi wa programu ya DVT, kama vile kuna viteja vingi kwa tabaka la mwafaka na tabaka la utekelezaji.
 - **Gharama za uendeshaji** - kwa kuwa DVT inasambaza mthibitishaji kati ya pande nyingi, kuna nodi zaidi zinazohitajika kwa uendeshaji badala ya nodi moja tu, ambayo inaleta ongezeko la gharama za uendeshaji.
 - **Uwezekano wa kuongezeka kwa ucheleweshaji** - kwa kuwa DVT inatumia itifaki ya mwafaka kufikia mwafaka kati ya nodi nyingi zinazoendesha mthibitishaji, inaweza kuleta ongezeko la ucheleweshaji.
 
 ## Maswali yanayoulizwa mara kwa mara {#faq}
 
 <ExpandableCard title="Je, ninahitaji DVT ili kuweka dhamana?" eventCategory="DVT" eventName="clicked do I need DVT to stake">
-Hapana. Mashine moja inayoendesha mteja wa mthibitishaji inafanya kazi bila programu yoyote ya DVT, na hii inasalia kuwa usanidi wa kawaida wa uwekaji dhamana wa nyumbani. DVT ni tabaka la hiari ambalo linaongeza uvumilivu wa makosa na kuondoa sehemu moja ya kushindwa. Hii ni muhimu ikiwa unataka mthibitishaji wako anusurike hitilafu za mashine binafsi, au ikiwa unataka kushiriki jukumu la kuendesha mthibitishaji na wengine.
+Hapana. Mashine moja inayoendesha kiteja cha mthibitishaji inafanya kazi bila programu yoyote ya DVT, na hii inasalia kuwa usanidi wa kawaida wa uwekaji dhamana wa nyumbani. DVT ni tabaka la hiari ambalo linaongeza uvumilivu wa makosa na kuondoa sehemu moja ya kushindwa. Hii ni muhimu ikiwa unataka mthibitishaji wako anusurike hitilafu za mashine binafsi, au ikiwa unataka kushiriki jukumu la kuendesha mthibitishaji na wengine.
 </ExpandableCard>
 
 <ExpandableCard title="Je, DVT inagawanya ETH yangu au funguo zangu za utoaji?" eventCategory="DVT" eventName="clicked does DVT split my ETH">

@@ -32,9 +32,9 @@ Ve srovnání se [sólo stakingem](/staking/solo/) vkládá každá forma delega
 Pokud máte 32 ETH ke stakování, ale necítíte se na práci s hardwarem, služby delegovaného stakingu vám umožní předat technickou stránku věci, zatímco budete získávat nativní odměny za bloky Etherea.
 
 <Grid>
-  <Card title="Your own validator" icon={<MonitorCheck />} description="Vložte vlastních 32 ETH a aktivujte si vlastní sadu podpisových klíčů, které se budou účastnit konsensu Etherea. Sledujte svůj pokrok pomocí řídicích panelů a pozorujte, jak se tyto odměny v ETH hromadí." />
-  <Card title="Easy to start" icon={<Flag />} description="Zapomeňte na specifikace hardwaru, nastavení, údržbu uzlu a upgrady. Poskytovatelé vám umožní outsourcovat tu těžkou část nahráním vašich vlastních podpisových pověření, což jim umožní provozovat validátor vaším jménem za malý poplatek." />
-  <Card title="Limit your risk" icon={<ShieldHalf />} description="U nekustodiálních služeb si ponecháváte kontrolu nad klíči, které umožňují výběr nebo převod stakovaných prostředků. Ty se liší od podpisových klíčů a lze je uložit odděleně, abyste omezili (ale ne zcela eliminovali) své riziko jako staker." />
+  <Card title="Váš vlastní validátor" icon={<MonitorCheck />} description="Vložte vlastních 32 ETH a aktivujte si vlastní sadu podpisových klíčů, které se budou účastnit konsensu Etherea. Sledujte svůj pokrok pomocí řídicích panelů a pozorujte, jak se tyto odměny v ETH hromadí." />
+  <Card title="Snadný začátek" icon={<Flag />} description="Zapomeňte na specifikace hardwaru, nastavení, údržbu uzlu a upgrady. Poskytovatelé vám umožní outsourcovat tu těžkou část nahráním vašich vlastních podpisových pověření, což jim umožní provozovat validátor vaším jménem za malý poplatek." />
+  <Card title="Omezte své riziko" icon={<ShieldHalf />} description="U nekustodiálních služeb si ponecháváte kontrolu nad klíči, které umožňují výběr nebo převod stakovaných prostředků. Ty se liší od podpisových klíčů a lze je uložit odděleně, abyste omezili (ale ne zcela eliminovali) své riziko jako staker." />
 </Grid>
 
 ## Srovnání možností stakingu {#comparison-of-staking-options}

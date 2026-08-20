@@ -32,9 +32,9 @@ W porównaniu do [stakingu solo](/staking/solo/), każda forma delegowania umies
 Jeśli masz 32 ETH do stakowania, ale nie czujesz się komfortowo w pracy ze sprzętem, usługi delegowanego stakingu pozwalają Ci przekazać stronę techniczną, podczas gdy Ty zdobywasz natywne nagrody za bloki Ethereum.
 
 <Grid>
-  <Card title="Your own validator" icon={<MonitorCheck />} description="Zdeponuj własne 32 ETH, aby aktywować własny zestaw kluczy podpisywania, które będą uczestniczyć w konsensusie Ethereum. Monitoruj swoje postępy za pomocą pulpitów nawigacyjnych, aby obserwować, jak gromadzą się nagrody w ETH." />
-  <Card title="Easy to start" icon={<Flag />} description="Zapomnij o specyfikacjach sprzętowych, konfiguracji, konserwacji węzła i aktualizacjach. Dostawcy pozwalają na zlecenie trudnej części na zewnątrz poprzez przesłanie własnych danych uwierzytelniających podpisywania, co pozwala im na uruchomienie walidatora w Twoim imieniu za niewielką opłatą." />
-  <Card title="Limit your risk" icon={<ShieldHalf />} description="Dzięki usługom niepowierniczym zachowujesz kontrolę nad kluczami, które umożliwiają wypłatę lub transfer stakowanych środków. Różnią się one od kluczy podpisywania i mogą być przechowywane oddzielnie, aby ograniczyć (ale nie wyeliminować) Twoje ryzyko jako stakującego." />
+  <Card title="Twój własny walidator" icon={<MonitorCheck />} description="Zdeponuj własne 32 ETH, aby aktywować własny zestaw kluczy podpisywania, które będą uczestniczyć w konsensusie Ethereum. Monitoruj swoje postępy za pomocą pulpitów nawigacyjnych, aby obserwować, jak gromadzą się nagrody w ETH." />
+  <Card title="Łatwy start" icon={<Flag />} description="Zapomnij o specyfikacjach sprzętowych, konfiguracji, konserwacji węzła i aktualizacjach. Dostawcy pozwalają na zlecenie trudnej części na zewnątrz poprzez przesłanie własnych danych uwierzytelniających podpisywania, co pozwala im na uruchomienie walidatora w Twoim imieniu za niewielką opłatą." />
+  <Card title="Ogranicz swoje ryzyko" icon={<ShieldHalf />} description="Dzięki usługom niepowierniczym zachowujesz kontrolę nad kluczami, które umożliwiają wypłatę lub transfer stakowanych środków. Różnią się one od kluczy podpisywania i mogą być przechowywane oddzielnie, aby ograniczyć (ale nie wyeliminować) Twoje ryzyko jako stakującego." />
 </Grid>
 
 ## Porównanie opcji stakingu {#comparison-of-staking-options}

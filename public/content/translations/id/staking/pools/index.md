@@ -26,9 +26,9 @@ Setiap opsi gabungan memecahkan masalah akses nyata dari staking dengan kurang d
 Selain manfaat dari [berpartisipasi dalam staking](/staking/), melakukan stake dengan pool memberikan sejumlah manfaat unik.
 
 <Grid>
-  <Card title="Low barrier to entry" icon={<Fish />} description="Bukan paus (whale)? Tidak masalah. Sebagian besar pool staking memungkinkan Anda melakukan stake dengan jumlah ETH berapa pun dengan bergabung bersama pelaku staking lainnya, tidak seperti staking mandiri yang mewajibkan 32 ETH." />
-  <Card title="Stake today" icon={<Clock />} description="Melakukan stake dengan pool semudah melakukan tukar token. Tidak perlu khawatir tentang penyiapan perangkat keras dan pemeliharaan node. Pool memungkinkan Anda menyetorkan ETH Anda yang memungkinkan operator node untuk menjalankan validator. Imbalan kemudian didistribusikan kepada kontributor dikurangi biaya untuk operasi node." />
-  <Card title="Liquid staking tokens" icon={<Droplets />} description="Banyak pool staking menyediakan token yang mewakili klaim atas ETH yang Anda stake dan imbalan yang dihasilkannya. Ini memungkinkan Anda untuk memanfaatkan ETH yang Anda stake, misalnya, sebagai kolateral dalam aplikasi DeFi." />
+  <Card title="Hambatan masuk yang rendah" icon={<Fish />} description="Bukan paus (whale)? Tidak masalah. Sebagian besar pool staking memungkinkan Anda melakukan stake dengan jumlah ETH berapa pun dengan bergabung bersama pelaku staking lainnya, tidak seperti staking mandiri yang mewajibkan 32 ETH." />
+  <Card title="Stake hari ini" icon={<Clock />} description="Melakukan stake dengan pool semudah melakukan tukar token. Tidak perlu khawatir tentang penyiapan perangkat keras dan pemeliharaan node. Pool memungkinkan Anda menyetorkan ETH Anda yang memungkinkan operator node untuk menjalankan validator. Imbalan kemudian didistribusikan kepada kontributor dikurangi biaya untuk operasi node." />
+  <Card title="Token staking likuid" icon={<Droplets />} description="Banyak pool staking menyediakan token yang mewakili klaim atas ETH yang Anda stake dan imbalan yang dihasilkannya. Ini memungkinkan Anda untuk memanfaatkan ETH yang Anda stake, misalnya, sebagai kolateral dalam aplikasi DeFi." />
 </Grid>
 
 ## Perbandingan opsi staking {#comparison-of-staking-options}
