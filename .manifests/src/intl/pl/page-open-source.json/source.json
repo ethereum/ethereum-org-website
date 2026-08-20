@@ -1,0 +1,1449 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-open-source.json",
+  "generatedAt": "2026-08-20T22:02:29.829Z",
+  "rootHash": "5c5dc303aa07",
+  "tree": {
+    "contentHash": "1e5348ab837d",
+    "anchorHash": "cfd12c9824cf",
+    "children": {
+      "page-open-source-meta-title": {
+        "contentHash": "70eb72081c62",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-meta-description": {
+        "contentHash": "9349d947a46a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-title": {
+        "contentHash": "70eb72081c62",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-hero-description-1": {
+        "contentHash": "409cd2a1b32f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-hero-description-2": {
+        "contentHash": "374e5d51becc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-summary-title": {
+        "contentHash": "8e76a94ac832",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-summary-item-1": {
+        "contentHash": "86d67d97fc5f",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "daeb8add4e8c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-summary-item-2": {
+        "contentHash": "3e56a6d07603",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "b43c93cfd162",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-summary-item-3": {
+        "contentHash": "1c421f214e1a",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "ca1c0b7d4fe1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-summary-item-4": {
+        "contentHash": "34cb785008c2",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "5147bea6e361",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-ownership-title": {
+        "contentHash": "7d8cdf719d4e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ownership-description-1": {
+        "contentHash": "6011f9a62f5e",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "b7f0c3b1fad9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-ownership-description-2": {
+        "contentHash": "1b4ac07411ee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ownership-description-3a": {
+        "contentHash": "9bc7fa91da70",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "6468371cacdb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-ownership-description-3b": {
+        "contentHash": "4dad771a8bb7",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "e953b98ab8c9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-ownership-description-4": {
+        "contentHash": "fdb19f2cf584",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "b71030a26fd6",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-ownership-description-5": {
+        "contentHash": "fbe839c42280",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "b8ef76bb73e1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-definition-title": {
+        "contentHash": "f66b3927b6c7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-definition-description-1": {
+        "contentHash": "38c084e8d4a5",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "114464f65ecf",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-definition-examples-lead": {
+        "contentHash": "bf9dee445c4f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-definition-example-linux": {
+        "contentHash": "53ad5bd1cf16",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "2a5d022f954a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-definition-example-firefox": {
+        "contentHash": "e768cb57c638",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "bb0d99139388",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-definition-example-signal": {
+        "contentHash": "01323eab10c4",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "13fe7a521215",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-definition-example-vlc": {
+        "contentHash": "fa2a99ce029a",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "28b240190d1a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-definition-example-libreoffice": {
+        "contentHash": "532bf9e24095",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "1d37dfc0f743",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-definition-description-2": {
+        "contentHash": "c6d862da4384",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "34606ba25b79",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-definition-description-3": {
+        "contentHash": "3a937534e729",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "e890d3c17815",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-freedom-run-title": {
+        "contentHash": "e4e0a4909d76",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-freedom-run-description": {
+        "contentHash": "3ff34bcb7be0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-freedom-study-title": {
+        "contentHash": "32f7b50b28eb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-freedom-study-description": {
+        "contentHash": "c108ee16546f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-freedom-share-title": {
+        "contentHash": "692991f8b622",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-freedom-share-description": {
+        "contentHash": "456af1796c4f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-freedom-distribute-title": {
+        "contentHash": "4e5a5d207b65",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-freedom-distribute-description": {
+        "contentHash": "2049d545dce8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-possible-title": {
+        "contentHash": "5250b007c0b8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-possible-description": {
+        "contentHash": "1d29a76bbae9",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "1b4fe6c9a749",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-benefit-trust-title": {
+        "contentHash": "dcfc1ec1f3c0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-benefit-trust-description": {
+        "contentHash": "ca669f013799",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-benefit-leave-title": {
+        "contentHash": "dff10f909936",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-benefit-leave-description": {
+        "contentHash": "e03a0183575f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-benefit-outlives-title": {
+        "contentHash": "b63500164360",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-benefit-outlives-description": {
+        "contentHash": "69d6c00a423e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-collaboration-title": {
+        "contentHash": "aac653bb409b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-collaboration-description": {
+        "contentHash": "2ce75c205417",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-repair-title": {
+        "contentHash": "9dd07d0683b5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-repair-description": {
+        "contentHash": "c9b224e91601",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "f90bf93f8677",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-speech-title": {
+        "contentHash": "12faabf50309",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-speech-description": {
+        "contentHash": "5f232321c82c",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "72be8ba544ec",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-fork-title": {
+        "contentHash": "8fbc5261a267",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-fork-description": {
+        "contentHash": "b91b9515d2c7",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "052a45916c5c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-switch-title": {
+        "contentHash": "cd1040bad4b8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-switch-description-1": {
+        "contentHash": "d7d998328fa3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-switch-description-2": {
+        "contentHash": "2d831ed78981",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-apps-title": {
+        "contentHash": "48d421f5d6bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-category-passwords": {
+        "contentHash": "be146b37a009",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-category-browser": {
+        "contentHash": "d31de1a5c5c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-category-messaging": {
+        "contentHash": "eebdbb25cbbc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-category-file-storage": {
+        "contentHash": "879ebfba113e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-category-email": {
+        "contentHash": "969ccbd3cf63",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-category-photos": {
+        "contentHash": "5e3147ab51e0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-category-maps": {
+        "contentHash": "119e66d117ae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-category-media": {
+        "contentHash": "d357175cfe89",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-category-mobile-os": {
+        "contentHash": "b6b7de8639ad",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-category-desktop-os": {
+        "contentHash": "99d82d0b8847",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-category-home": {
+        "contentHash": "3a78695388b3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-category-productivity": {
+        "contentHash": "f42bca637cb3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-category-file-sharing": {
+        "contentHash": "8a3d08abc9e5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-category-streaming": {
+        "contentHash": "a951c5945635",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-category-creative": {
+        "contentHash": "2c7e63313045",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-bitwarden-name": {
+        "contentHash": "fb54e0f95e21",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-bitwarden-description": {
+        "contentHash": "7a04e9cbedf0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-brave-name": {
+        "contentHash": "e7d91391c151",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-brave-description": {
+        "contentHash": "5b657dd95c42",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-firefox-name": {
+        "contentHash": "2f26233595d1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-firefox-description": {
+        "contentHash": "3ef74d266cf0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-signal-name": {
+        "contentHash": "1e9806e4227b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-signal-description": {
+        "contentHash": "8c13b380020e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-cryptomator-name": {
+        "contentHash": "accd43753f4f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-cryptomator-description": {
+        "contentHash": "c63406db1d6c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-thunderbird-name": {
+        "contentHash": "08348a9b632d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-thunderbird-description": {
+        "contentHash": "2c2569061a70",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-ente-photos-name": {
+        "contentHash": "a8a9a432ef73",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-ente-photos-description": {
+        "contentHash": "679b4ec47015",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-organic-maps-name": {
+        "contentHash": "f014fb917298",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-organic-maps-description": {
+        "contentHash": "d4b3e48388f4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-vlc-name": {
+        "contentHash": "ade73385e103",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-vlc-description": {
+        "contentHash": "2d6c16dfe9f1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-grapheneos-name": {
+        "contentHash": "bbd193338f1b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-grapheneos-description": {
+        "contentHash": "5d84310ab3c4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-debian-name": {
+        "contentHash": "183d3b3c03fb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-debian-description": {
+        "contentHash": "4784cc0b5388",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-ubuntu-name": {
+        "contentHash": "710eb4f4d7f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-ubuntu-description": {
+        "contentHash": "d9eed9715181",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-home-assistant-name": {
+        "contentHash": "2a366abb0cd4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-home-assistant-description": {
+        "contentHash": "182762501b35",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-immich-name": {
+        "contentHash": "9412e72e0be9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-immich-description": {
+        "contentHash": "4a5980f85492",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-logseq-name": {
+        "contentHash": "56b4324ff7d9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-logseq-description": {
+        "contentHash": "76f47cd1bbc2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-libreoffice-name": {
+        "contentHash": "4aa3f3b30550",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-libreoffice-description": {
+        "contentHash": "847872b5e3e9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-localsend-name": {
+        "contentHash": "f3b9fbd9d4f4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-localsend-description": {
+        "contentHash": "f1d950f8a7cc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-obs-name": {
+        "contentHash": "5b50b7708faf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-obs-description": {
+        "contentHash": "9170b2680e78",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-blender-name": {
+        "contentHash": "f333db1a7e31",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-blender-description": {
+        "contentHash": "ee552ad7a880",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-inkscape-name": {
+        "contentHash": "8c27d11d5fba",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-inkscape-description": {
+        "contentHash": "1a47e14343d6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-gimp-name": {
+        "contentHash": "bd300cc05788",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-app-gimp-description": {
+        "contentHash": "9d4b822a2342",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-alternativeto-title": {
+        "contentHash": "3890ff29af77",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-alternativeto-description": {
+        "contentHash": "23bbfe278823",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-alternativeto-cta": {
+        "contentHash": "dc0d5e879aad",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ai-title": {
+        "contentHash": "42e00705a322",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ai-intro": {
+        "contentHash": "2e45158052b4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ai-assist-title": {
+        "contentHash": "706601d7e2f5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ai-assist-description-1": {
+        "contentHash": "09ba1cf4e067",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "92c1fb06af20",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-ai-prompts-lead": {
+        "contentHash": "9a03dd1abc8c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ai-copy-prompt": {
+        "contentHash": "ffc64b8bb8c4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ai-prompt-alternatives-tag": {
+        "contentHash": "d4a33d5b78bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ai-prompt-alternatives-text": {
+        "contentHash": "986f905e1e61",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ai-prompt-install-tag": {
+        "contentHash": "569ca49f4aaf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ai-prompt-install-text": {
+        "contentHash": "8823b8dbfc51",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ai-prompt-error-tag": {
+        "contentHash": "29f172d0035e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ai-prompt-error-text": {
+        "contentHash": "08e864538ecc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ai-prompt-reputation-tag": {
+        "contentHash": "eea2745e2867",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ai-prompt-reputation-text": {
+        "contentHash": "699a92e497d1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ai-prompt-policy-tag": {
+        "contentHash": "54a57c3147c4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ai-prompt-policy-text": {
+        "contentHash": "88e5a40fff16",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ai-prompt-permissions-tag": {
+        "contentHash": "abccc78cc93c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ai-prompt-permissions-text": {
+        "contentHash": "996730308acc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ai-tip-title": {
+        "contentHash": "7623fb2dbfa9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ai-tip-description": {
+        "contentHash": "2c7a00a9ff20",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "59a790f7583c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-local-ai-title": {
+        "contentHash": "0f6341580a2d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-local-ai-description-1": {
+        "contentHash": "de9d62ae1f17",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-local-ai-description-2": {
+        "contentHash": "21162f5a86c2",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "05916aa808b2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-local-ai-description-3": {
+        "contentHash": "250286279b58",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-local-ai-tag-open-source": {
+        "contentHash": "67a0d2e0dab4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-local-ai-tag-closed-source": {
+        "contentHash": "bf6b7ec91461",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-local-ai-app-jan-name": {
+        "contentHash": "5c5db120cb11",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-local-ai-app-jan-description": {
+        "contentHash": "f4f901cbead8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-local-ai-app-ollama-name": {
+        "contentHash": "eb82ef897693",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-local-ai-app-ollama-description": {
+        "contentHash": "1bcd89ef94f9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-local-ai-app-lm-studio-name": {
+        "contentHash": "6b9727908e37",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-local-ai-app-lm-studio-description": {
+        "contentHash": "cac24cb37f1c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-local-ai-note-title": {
+        "contentHash": "dded3b165892",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-local-ai-note-description-1": {
+        "contentHash": "20e6db2b3414",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "0c6749100919",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-local-ai-note-description-2": {
+        "contentHash": "873277d1aee3",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "646c2c350ead",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-movement-title": {
+        "contentHash": "4eb70f5cfc5f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-movement-description": {
+        "contentHash": "14e7c688fe35",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "15eba4368929",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-resources-defending-title": {
+        "contentHash": "e2d19793fd51",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-org-fsf-name": {
+        "contentHash": "95c5acb3b257",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-org-fsf-description": {
+        "contentHash": "de17a9d0b90f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-org-eff-name": {
+        "contentHash": "14230cceef99",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-org-eff-description": {
+        "contentHash": "bea60ecdcb9c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-org-osi-name": {
+        "contentHash": "5441b93ae1b0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-org-osi-description": {
+        "contentHash": "5e4d7fb100e0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-org-sfc-name": {
+        "contentHash": "60020f528e30",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-org-tor-name": {
+        "contentHash": "2eac66e63718",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-org-tor-description": {
+        "contentHash": "18e04a1d440b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-org-linux-foundation-name": {
+        "contentHash": "fb004059b837",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-org-fight-for-the-future-name": {
+        "contentHash": "9e9961e5ad70",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-org-fight-for-the-future-description": {
+        "contentHash": "6440f8e69b8c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-org-ludlow-name": {
+        "contentHash": "f2fbd08b5e69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-org-internet-archive-name": {
+        "contentHash": "e06773bac158",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-org-internet-archive-description": {
+        "contentHash": "ce26deede801",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-org-mozilla-name": {
+        "contentHash": "f8f510fe4809",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-org-wedf-name": {
+        "contentHash": "a57517f12664",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-resources-more-orgs": {
+        "contentHash": "2bb033005e38",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-resources-wider-title": {
+        "contentHash": "5de1e63ec429",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-movement-wider-description": {
+        "contentHash": "0c643003c082",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "5b0412962d73",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-resources-education": {
+        "contentHash": "a5d14d4229b2",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "d81c6de138a0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-resources-data": {
+        "contentHash": "8af2db37c92d",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "db714810679f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-resources-commons": {
+        "contentHash": "2e70686c5194",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "5393b5c87608",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-resources-culture": {
+        "contentHash": "c5b1a2b188a5",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "3ed6f8c4722f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-ethereum-title": {
+        "contentHash": "dae38ff733eb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ethereum-description-1": {
+        "contentHash": "da3454e41618",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "a828165ed3bc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-ethereum-item-1": {
+        "contentHash": "e696d7528027",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "d3c902c87050",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-ethereum-item-2": {
+        "contentHash": "c38ad3a5a927",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ethereum-item-3": {
+        "contentHash": "0ca64a86c740",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ethereum-item-4": {
+        "contentHash": "3f0c8c40c5aa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-ethereum-description-2": {
+        "contentHash": "783616bfd857",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "94d9962e000d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-ethereum-description-3": {
+        "contentHash": "f59339df4d29",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-comparison-title": {
+        "contentHash": "5528a86145a3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-comparison-description": {
+        "contentHash": "52c7dc5e5153",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-comparison-label-licenses": {
+        "contentHash": "26b283a19e6a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-comparison-label-examples": {
+        "contentHash": "22e5caf5a5b7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-comparison-proprietary-approach": {
+        "contentHash": "7fa3535e83a3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-comparison-proprietary-rights": {
+        "contentHash": "dab15c915103",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-comparison-proprietary-licenses": {
+        "contentHash": "b901fe3bb71d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-comparison-proprietary-examples": {
+        "contentHash": "b68d26320f94",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-comparison-source-available-approach": {
+        "contentHash": "bde391b2735a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-comparison-source-available-rights": {
+        "contentHash": "523482a743ec",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-comparison-source-available-licenses": {
+        "contentHash": "e5aae08f4e17",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "01bd8bcb94c1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-comparison-source-available-examples": {
+        "contentHash": "9b0a6831328a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-comparison-permissive-approach": {
+        "contentHash": "4a8ddd764b16",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-comparison-permissive-rights": {
+        "contentHash": "b78ab6f813ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-comparison-permissive-licenses": {
+        "contentHash": "8162cf9404af",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-comparison-permissive-examples": {
+        "contentHash": "a25a38215f6b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-comparison-copyleft-approach": {
+        "contentHash": "60713cad92fb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-comparison-copyleft-rights": {
+        "contentHash": "4ca98078b00c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-comparison-copyleft-licenses": {
+        "contentHash": "4e245640cb0d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-comparison-copyleft-examples": {
+        "contentHash": "d0b14cec17eb",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "62f69ed8e18b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-copyleft-title": {
+        "contentHash": "04d4fb681fa3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-copyleft-description-1": {
+        "contentHash": "7c48ecf38d82",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-copyleft-description-2": {
+        "contentHash": "64bff5beb6bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-copyleft-contribute": {
+        "contentHash": "3985a007590d",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "88747c29476d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-copyleft-description-3": {
+        "contentHash": "916f364cd6a3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-faq-title": {
+        "contentHash": "e956a9404b46",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-traditions-question": {
+        "contentHash": "96ea78688772",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-traditions-answer-1": {
+        "contentHash": "e92fbccb2e5e",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "4f296f8f2173",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-traditions-answer-2": {
+        "contentHash": "7d50b30750b0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-security-question": {
+        "contentHash": "6c937ffc1c29",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-security-answer-1": {
+        "contentHash": "293d4c2cf8a4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-security-answer-2": {
+        "contentHash": "43292f94c497",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "8804cc88d662",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-resources-reading-title": {
+        "contentHash": "4082f515b2f4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-reference-kindle": {
+        "contentHash": "7a4fe914909d",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "4fa33bf22736",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-reference-car-thing": {
+        "contentHash": "94789bcc96b1",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "9afcd7caf7f4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-reference-gnu-definition": {
+        "contentHash": "6ac4c483b8d4",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "f0f0312157c7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-reference-osi-definition": {
+        "contentHash": "f788d790d0c8",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "4aee712d1d72",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-resources-roads": {
+        "contentHash": "0d28de22f685",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "cd234bb5df85",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-resources-alternatives-title": {
+        "contentHash": "3fb6e4639128",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-open-source-resources-catalogs": {
+        "contentHash": "0b48db97d91e",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "f64866792adb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-resources-degoogled": {
+        "contentHash": "b36b9f698885",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "8d9bf5798452",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-resources-critique-surveillance": {
+        "contentHash": "b539cd36791d",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "9722617ef930",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-open-source-resources-critique-lockin": {
+        "contentHash": "56a1056b81d6",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "2191ddc4ca1f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      }
+    },
+    "childrenOrder": [
+      "page-open-source-meta-title",
+      "page-open-source-meta-description",
+      "page-open-source-title",
+      "page-open-source-hero-description-1",
+      "page-open-source-hero-description-2",
+      "page-open-source-summary-title",
+      "page-open-source-summary-item-1",
+      "page-open-source-summary-item-2",
+      "page-open-source-summary-item-3",
+      "page-open-source-summary-item-4",
+      "page-open-source-ownership-title",
+      "page-open-source-ownership-description-1",
+      "page-open-source-ownership-description-2",
+      "page-open-source-ownership-description-3a",
+      "page-open-source-ownership-description-3b",
+      "page-open-source-ownership-description-4",
+      "page-open-source-ownership-description-5",
+      "page-open-source-definition-title",
+      "page-open-source-definition-description-1",
+      "page-open-source-definition-examples-lead",
+      "page-open-source-definition-example-linux",
+      "page-open-source-definition-example-firefox",
+      "page-open-source-definition-example-signal",
+      "page-open-source-definition-example-vlc",
+      "page-open-source-definition-example-libreoffice",
+      "page-open-source-definition-description-2",
+      "page-open-source-definition-description-3",
+      "page-open-source-freedom-run-title",
+      "page-open-source-freedom-run-description",
+      "page-open-source-freedom-study-title",
+      "page-open-source-freedom-study-description",
+      "page-open-source-freedom-share-title",
+      "page-open-source-freedom-share-description",
+      "page-open-source-freedom-distribute-title",
+      "page-open-source-freedom-distribute-description",
+      "page-open-source-possible-title",
+      "page-open-source-possible-description",
+      "page-open-source-benefit-trust-title",
+      "page-open-source-benefit-trust-description",
+      "page-open-source-benefit-leave-title",
+      "page-open-source-benefit-leave-description",
+      "page-open-source-benefit-outlives-title",
+      "page-open-source-benefit-outlives-description",
+      "page-open-source-collaboration-title",
+      "page-open-source-collaboration-description",
+      "page-open-source-repair-title",
+      "page-open-source-repair-description",
+      "page-open-source-speech-title",
+      "page-open-source-speech-description",
+      "page-open-source-fork-title",
+      "page-open-source-fork-description",
+      "page-open-source-switch-title",
+      "page-open-source-switch-description-1",
+      "page-open-source-switch-description-2",
+      "page-open-source-apps-title",
+      "page-open-source-category-passwords",
+      "page-open-source-category-browser",
+      "page-open-source-category-messaging",
+      "page-open-source-category-file-storage",
+      "page-open-source-category-email",
+      "page-open-source-category-photos",
+      "page-open-source-category-maps",
+      "page-open-source-category-media",
+      "page-open-source-category-mobile-os",
+      "page-open-source-category-desktop-os",
+      "page-open-source-category-home",
+      "page-open-source-category-productivity",
+      "page-open-source-category-file-sharing",
+      "page-open-source-category-streaming",
+      "page-open-source-category-creative",
+      "page-open-source-app-bitwarden-name",
+      "page-open-source-app-bitwarden-description",
+      "page-open-source-app-brave-name",
+      "page-open-source-app-brave-description",
+      "page-open-source-app-firefox-name",
+      "page-open-source-app-firefox-description",
+      "page-open-source-app-signal-name",
+      "page-open-source-app-signal-description",
+      "page-open-source-app-cryptomator-name",
+      "page-open-source-app-cryptomator-description",
+      "page-open-source-app-thunderbird-name",
+      "page-open-source-app-thunderbird-description",
+      "page-open-source-app-ente-photos-name",
+      "page-open-source-app-ente-photos-description",
+      "page-open-source-app-organic-maps-name",
+      "page-open-source-app-organic-maps-description",
+      "page-open-source-app-vlc-name",
+      "page-open-source-app-vlc-description",
+      "page-open-source-app-grapheneos-name",
+      "page-open-source-app-grapheneos-description",
+      "page-open-source-app-debian-name",
+      "page-open-source-app-debian-description",
+      "page-open-source-app-ubuntu-name",
+      "page-open-source-app-ubuntu-description",
+      "page-open-source-app-home-assistant-name",
+      "page-open-source-app-home-assistant-description",
+      "page-open-source-app-immich-name",
+      "page-open-source-app-immich-description",
+      "page-open-source-app-logseq-name",
+      "page-open-source-app-logseq-description",
+      "page-open-source-app-libreoffice-name",
+      "page-open-source-app-libreoffice-description",
+      "page-open-source-app-localsend-name",
+      "page-open-source-app-localsend-description",
+      "page-open-source-app-obs-name",
+      "page-open-source-app-obs-description",
+      "page-open-source-app-blender-name",
+      "page-open-source-app-blender-description",
+      "page-open-source-app-inkscape-name",
+      "page-open-source-app-inkscape-description",
+      "page-open-source-app-gimp-name",
+      "page-open-source-app-gimp-description",
+      "page-open-source-alternativeto-title",
+      "page-open-source-alternativeto-description",
+      "page-open-source-alternativeto-cta",
+      "page-open-source-ai-title",
+      "page-open-source-ai-intro",
+      "page-open-source-ai-assist-title",
+      "page-open-source-ai-assist-description-1",
+      "page-open-source-ai-prompts-lead",
+      "page-open-source-ai-copy-prompt",
+      "page-open-source-ai-prompt-alternatives-tag",
+      "page-open-source-ai-prompt-alternatives-text",
+      "page-open-source-ai-prompt-install-tag",
+      "page-open-source-ai-prompt-install-text",
+      "page-open-source-ai-prompt-error-tag",
+      "page-open-source-ai-prompt-error-text",
+      "page-open-source-ai-prompt-reputation-tag",
+      "page-open-source-ai-prompt-reputation-text",
+      "page-open-source-ai-prompt-policy-tag",
+      "page-open-source-ai-prompt-policy-text",
+      "page-open-source-ai-prompt-permissions-tag",
+      "page-open-source-ai-prompt-permissions-text",
+      "page-open-source-ai-tip-title",
+      "page-open-source-ai-tip-description",
+      "page-open-source-local-ai-title",
+      "page-open-source-local-ai-description-1",
+      "page-open-source-local-ai-description-2",
+      "page-open-source-local-ai-description-3",
+      "page-open-source-local-ai-tag-open-source",
+      "page-open-source-local-ai-tag-closed-source",
+      "page-open-source-local-ai-app-jan-name",
+      "page-open-source-local-ai-app-jan-description",
+      "page-open-source-local-ai-app-ollama-name",
+      "page-open-source-local-ai-app-ollama-description",
+      "page-open-source-local-ai-app-lm-studio-name",
+      "page-open-source-local-ai-app-lm-studio-description",
+      "page-open-source-local-ai-note-title",
+      "page-open-source-local-ai-note-description-1",
+      "page-open-source-local-ai-note-description-2",
+      "page-open-source-movement-title",
+      "page-open-source-movement-description",
+      "page-open-source-resources-defending-title",
+      "page-open-source-org-fsf-name",
+      "page-open-source-org-fsf-description",
+      "page-open-source-org-eff-name",
+      "page-open-source-org-eff-description",
+      "page-open-source-org-osi-name",
+      "page-open-source-org-osi-description",
+      "page-open-source-org-sfc-name",
+      "page-open-source-org-tor-name",
+      "page-open-source-org-tor-description",
+      "page-open-source-org-linux-foundation-name",
+      "page-open-source-org-fight-for-the-future-name",
+      "page-open-source-org-fight-for-the-future-description",
+      "page-open-source-org-ludlow-name",
+      "page-open-source-org-internet-archive-name",
+      "page-open-source-org-internet-archive-description",
+      "page-open-source-org-mozilla-name",
+      "page-open-source-org-wedf-name",
+      "page-open-source-resources-more-orgs",
+      "page-open-source-resources-wider-title",
+      "page-open-source-movement-wider-description",
+      "page-open-source-resources-education",
+      "page-open-source-resources-data",
+      "page-open-source-resources-commons",
+      "page-open-source-resources-culture",
+      "page-open-source-ethereum-title",
+      "page-open-source-ethereum-description-1",
+      "page-open-source-ethereum-item-1",
+      "page-open-source-ethereum-item-2",
+      "page-open-source-ethereum-item-3",
+      "page-open-source-ethereum-item-4",
+      "page-open-source-ethereum-description-2",
+      "page-open-source-ethereum-description-3",
+      "page-open-source-comparison-title",
+      "page-open-source-comparison-description",
+      "page-open-source-comparison-label-licenses",
+      "page-open-source-comparison-label-examples",
+      "page-open-source-comparison-proprietary-approach",
+      "page-open-source-comparison-proprietary-rights",
+      "page-open-source-comparison-proprietary-licenses",
+      "page-open-source-comparison-proprietary-examples",
+      "page-open-source-comparison-source-available-approach",
+      "page-open-source-comparison-source-available-rights",
+      "page-open-source-comparison-source-available-licenses",
+      "page-open-source-comparison-source-available-examples",
+      "page-open-source-comparison-permissive-approach",
+      "page-open-source-comparison-permissive-rights",
+      "page-open-source-comparison-permissive-licenses",
+      "page-open-source-comparison-permissive-examples",
+      "page-open-source-comparison-copyleft-approach",
+      "page-open-source-comparison-copyleft-rights",
+      "page-open-source-comparison-copyleft-licenses",
+      "page-open-source-comparison-copyleft-examples",
+      "page-open-source-copyleft-title",
+      "page-open-source-copyleft-description-1",
+      "page-open-source-copyleft-description-2",
+      "page-open-source-copyleft-contribute",
+      "page-open-source-copyleft-description-3",
+      "page-open-source-faq-title",
+      "page-open-source-traditions-question",
+      "page-open-source-traditions-answer-1",
+      "page-open-source-traditions-answer-2",
+      "page-open-source-security-question",
+      "page-open-source-security-answer-1",
+      "page-open-source-security-answer-2",
+      "page-open-source-resources-reading-title",
+      "page-open-source-reference-kindle",
+      "page-open-source-reference-car-thing",
+      "page-open-source-reference-gnu-definition",
+      "page-open-source-reference-osi-definition",
+      "page-open-source-resources-roads",
+      "page-open-source-resources-alternatives-title",
+      "page-open-source-resources-catalogs",
+      "page-open-source-resources-degoogled",
+      "page-open-source-resources-critique-surveillance",
+      "page-open-source-resources-critique-lockin"
+    ]
+  },
+  "sourceCommitSha": "1988a451065e8d91e60a09d73935256ab102a52c"
+}
