@@ -54,3 +54,11 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 **Notes:**
 
 - Cleanest of its bloc. The only locale in the whole fleet that kept `shield/unshield` as a term of art rather than calquing it -- the model for the #57 glossary request.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 7.8/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+dvt used `staking gabungan` (the pooled-staking form) for the pool entity at 9 sites. `hadiah` (gift) for reward -- recurrence of #19076. `simbol saham` (stock ticker) for crypto ticker. `obligasi` (debt security) for bond. Glossary-hygiene leakage recurrence (#18925): capitalized `Likuiditas`, lowercase `(lst)`/`(l2)`.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.

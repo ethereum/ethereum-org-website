@@ -53,3 +53,11 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 **Notes:**
 
 - All 12 matched glossary terms exact; fee cluster composes correctly under SOV with formal आप throughout.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 7.0/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Worst structural damage in the fleet and hi-only: 18 markdown links and JSX spans wrapped in backticks in staking/saas, killing every link on the page (0 on dev). Also a run-a-node table header reverted to English (only locale affected). Negation inversion at solo:220; must->should modal in a JSON risk disclosure; saas swung wholesale from glossary `पुरस्कार` to `इनाम` and from `कंपाउंडिंग` to the semantically wrong `संयोजित`. `अभिनेता` recurrence.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.

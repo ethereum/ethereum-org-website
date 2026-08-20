@@ -73,3 +73,11 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 - Isolates verified: 47 U+2066 / 47 U+2069, zero unbalanced. Applied inconsistently WITHIN single strings -- `{usd}`/`{percent}` isolated while the adjacent `{value}` is bare. No rendering break; pick one convention.
 - `L2s` correctly Latin here while the file elsewhere says `لیئر ۲` -- the Latin form is right per the always-Latin rule, so the PRE-EXISTING keys are the outlier.
 - All 14 glossary terms exact including the hard ones (`ٹرانزیکشن` not `لین دین`, `پل` for bridge, `تبادلہ` for swap).
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 7.6/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Ungrammatical `نہیں گی۔` opening 4 of 5 dvt FAQ answers. `سمجھوتہ` doing double duty for trade-off (correct) and security compromise (wrong) across 4 sentences, one inverting agency. Eastern-Arabic digits inside 2 JSX title attributes. English dates bidi-isolated (#18772 recurrence) and `اداکار` (#19015 recurrence). U+2066 LRI wrapping pure-Urdu frontmatter. `پتہ`+postposition oblique-case error at ~50 sites.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.

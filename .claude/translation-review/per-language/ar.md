@@ -143,3 +143,11 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 
 - Isolates verified: 42 U+2066 / 42 U+2069, zero unbalanced, no legacy embedding controls. Applied inconsistently though -- Latin literals are isolated, every fee-cluster placeholder is bare. Bidi ordering resolved by hand for `{value}/بطاقة`, `{value}/شهر` and the nested-paren L2 string: all correct under RTL base direction, so consistency item only.
 - Zero glossary deviations across all 14 matched terms.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 7.9/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Solvency slip `ملاءمة`->`ملاءة` in a saas risk bullet; `fork` as `الشوكات` (cutlery) vs glossary `تفرع`; English dates bidi-isolated in page-staking.json (recurrence of #18772); frontmatter LRI wrapping pure Arabic in dvt. Historic modes CLEAR: no `الدولة` for computational state, no GitHub garble, no MEV-as-vehicles, single consistent `إيثيريوم`.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.

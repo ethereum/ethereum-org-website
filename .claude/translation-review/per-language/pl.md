@@ -67,3 +67,11 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 
 - Plural branches verified correct: `Obsługuje` + one `1 sieć` (acc sg) / few `2 sieci` (acc pl) / many `5 sieci` (gen pl). Glossary-perfect including `wymiana` for swap.
 - One of only 5 locales whose ETHGlossary L2 entry is correctly capitalized (#53).
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 8.8/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Highest score in the fleet. Only real criticals: `frazy seed`->`frazy odzyskiwania` (security-critical glossary term, correct 3x elsewhere in the same PR) and the dvt staking-pool conflation. `pokwitowanie` for receipt token held correctly. Animacy wobble now shows as `klienty`/`klienci` for software clients.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.

@@ -43,3 +43,11 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 **Notes:**
 
 - `{label} : {value}` correctly uses French colon spacing.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 8.2/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+EOA custody inversion at withdrawals:177 (`compte détenu par un tiers` = held by a third party). Same defect is ALREADY LIVE on dev in developers/docs/accounts/index.md -- needs a follow-up. `phrase de récupération`->`phrase secrète` (glossary). tu/vous perfectly consistent (347 vous, 0 informal).
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
