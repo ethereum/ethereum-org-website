@@ -92,3 +92,11 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 - **The shield/unshield finding was downgraded from critical to warning on evidence (#55).** The ta tree renders "shielded" as `பாதுகாக்கப்பட்ட` in 29 places -- including its own translation of `next-great-wallet-private/index.md`, the Railgun privacy article -- and `ஷீல்ட்` has ZERO precedent. Coining a transliteration against 29 established occurrences would be an unfounded fix. The real fix is a glossary entry (#57).
 - Glossary-mandated native forms are all honored and must NOT be "fixed": wallet = பணப்பை, token = வில்லை, node = கணு, network = பிணையம், staking = பங்குவைத்தல்.
 - `node` split: the new key uses glossary `கணு`; pre-existing `rpc-importing-desc` uses `முனை`. The drift is on the OLD line.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 7.2/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Custody inversion cluster in page-staking-cex-*: "custodial"/"has custody of" collapsed into `பாதுகாப்பு` (safekeeping), turning the exchange RISK column into a safety claim. Garbled brand `மெகாகூல்பூல்` for megapool. `குளம்` (water pond) for staking pool. JWT auth token given the crypto-token glossary word `வில்லை`. trade-offs handled correctly, but the INVERSE error appeared: `சமரசம்` used for security "compromised".
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.

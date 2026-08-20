@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "11.20.0",
+  "version": "11.21.0",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -21,6 +21,7 @@
     "chromatic:pages": "chromatic --playwright --zip --exit-zero-on-changes --project-token=${CHROMATIC_PAGES_TOKEN:?}",
     "lint:md": "markdownlint-cli2 \"public/content/**/*.md\" \"!public/content/translations/**\"",
     "lint:md:fix": "markdownlint-cli2 --fix \"public/content/**/*.md\" \"!public/content/translations/**\"",
+    "intl:estimate": "MODE=estimate tsx ./src/scripts/intl-pipeline/estimate.ts",
     "update-tutorials": "tsx src/scripts/update-tutorials-list.ts",
     "sync-upgrades": "tsx src/scripts/sync-upgrades/main.ts",
     "prepare": "husky",

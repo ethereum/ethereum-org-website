@@ -49,7 +49,6 @@ export const LayoutVertical: Story = {
 export const LayoutHorizontal: Story = {
   args: {
     ...sampleApp,
-    layout: "horizontal",
     href: "/apps/uniswap",
   },
 }
@@ -58,12 +57,12 @@ export const LayoutComparison = {
   render: () => (
     <VStack className="items-stretch gap-8">
       <div>
-        <p className="mb-2 text-sm text-body-medium">Vertical (default)</p>
-        <AppCard {...sampleApp} layout="vertical" href="/apps/uniswap" />
+        <p className="mb-2 text-sm text-body-medium">Horizontal (default)</p>
+        <AppCard {...sampleApp} href="/apps/uniswap" />
       </div>
       <div>
-        <p className="mb-2 text-sm text-body-medium">Horizontal</p>
-        <AppCard {...sampleApp} layout="horizontal" href="/apps/uniswap" />
+        <p className="mb-2 text-sm text-body-medium">Vertical</p>
+        <AppCard {...sampleApp} layout="vertical" href="/apps/uniswap" />
       </div>
     </VStack>
   ),
@@ -77,12 +76,7 @@ export const ImageSizes = {
         (size) => (
           <div key={size}>
             <p className="mb-2 text-sm text-body-medium">Size: {size}</p>
-            <AppCard
-              {...sampleApp}
-              layout="horizontal"
-              imageSize={size}
-              href="/apps/uniswap"
-            />
+            <AppCard {...sampleApp} imageSize={size} href="/apps/uniswap" />
           </div>
         )
       )}
@@ -128,7 +122,6 @@ export const WithoutCategoryTag: Story = {
     thumbnail: sampleApp.thumbnail,
     // No category prop = no tag shown
     tags: sampleApp.tags,
-    layout: "horizontal",
     href: "/apps/uniswap",
   },
 }
@@ -139,7 +132,6 @@ export const WithFallbackIcon: Story = {
     name: "Unknown App",
     description: "An app without a thumbnail image",
     tags: ["Development", "Tools"],
-    layout: "horizontal",
     imageSize: "thumbnail",
     fallbackIcon: <AppWindowMac className="size-10" />,
     href: "/apps/unknown",
@@ -150,7 +142,6 @@ export const WithFallbackIcon: Story = {
 export const AsLink: Story = {
   args: {
     ...sampleApp,
-    layout: "horizontal",
     href: "/apps/uniswap",
   },
   parameters: {
@@ -166,7 +157,6 @@ export const AsLink: Story = {
 export const AsStatic: Story = {
   args: {
     ...sampleApp,
-    layout: "horizontal",
   },
   parameters: {
     docs: {
@@ -198,7 +188,6 @@ export const CategoryTagStatuses = {
           category={category}
           categoryTagStatus={status}
           tags={["Tag 1", "Tag 2"]}
-          layout="horizontal"
           href="/apps/example"
         />
       ))}
@@ -243,14 +232,12 @@ export const DeveloperAppsPageStyle = {
         name="Hardhat"
         thumbnail="/images/dapps/uni.png"
         tags={["Testing", "Debugging", "Solidity"]}
-        layout="horizontal"
         imageSize="thumbnail"
         href="?appId=hardhat"
       />
       <AppCard
         name="Foundry"
         tags={["Testing", "Fuzzing", "Solidity"]}
-        layout="horizontal"
         imageSize="thumbnail"
         fallbackIcon={<AppWindowMac className="size-10" />}
         href="?appId=foundry"
@@ -281,7 +268,6 @@ export const CategoryListStyle = {
                 name={app.name}
                 thumbnail="/images/dapps/uni.png"
                 tags={app.tags}
-                layout="horizontal"
                 imageSize="medium"
                 hover="none"
                 href={`/apps/${app.name.toLowerCase()}`}
@@ -332,7 +318,6 @@ export const HighlightCardCover = {
             category="DeFi"
             categoryTagStatus="tag"
             tags={["Exchange", "AMM"]}
-            layout="horizontal"
             imageSize="medium"
           />
         </LinkOverlay>
@@ -374,7 +359,6 @@ export const HighlightCardContain = {
             category="DeFi"
             categoryTagStatus="tag"
             tags={["Exchange", "AMM"]}
-            layout="horizontal"
             imageSize="medium"
           />
         </LinkOverlay>

@@ -80,3 +80,11 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 
 - Plural branches verified correct in wording and case: `Podporuje` + one `1 síť` / few `2 sítě` / other `5 sítí`, and `1 jazyk` / `2 jazyky` / `5 jazyků`.
 - `L2` (vs the file's older `Vrstva 2`) matches the English source's own abbreviation, 31 sites in `src/intl/cs`. Not a defect.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 8.0/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+`gas`->`plyn` did NOT recur (all 12 sites use the loanword). Main issue: dvt conflated `staking pool` with `pooled staking` as `skupiny pro společný staking` at 10 sites, colliding with `skupina` used for actual groups in the same file. Compounding rendered 4 ways across the set.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.

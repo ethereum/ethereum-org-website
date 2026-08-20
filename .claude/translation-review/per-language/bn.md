@@ -52,3 +52,11 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 
 - `fee-qualifier-stablecoins-lower-l2` uses Western `লেয়ার 2` -- follows house numeral policy and CONTRADICTS ETHGlossary's `লেয়ার ২`. mr resolved the same conflict the opposite way. See #53; do not hand-fix either side until the glossary is normalized.
 - Devanagari-range hits in this file are the shared danda U+0964 -- the known false positive.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 7.8/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Meaning inversion at withdrawals:209 (`যতক্ষণ না` = until, English says as-long-as); `অভিনেতা` (film actor) for "actors" -- recurrence of #19015; `রিওয়ার্ড`->`পুরস্কার` in pools only; `লেনদেন`->`ট্রানজ্যাকশন` regression in run-a-node; `চুক্তি` (legal doc) for contract in 2 JSON keys. No untranslated prose, no cross-script contamination.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.

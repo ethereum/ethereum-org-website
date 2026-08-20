@@ -91,3 +91,11 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 - None of the historical tr failure modes recurred: no `katılık`/`MeFi` brand mistranslation, no ETH/BLS transposition, no `Müşteri`/`Markette`, no cross-script contamination.
 - `katman 2'lerde` spells L2 out rather than using the acronym -- legitimate, and the only locale to sidestep the #53 casing artifact entirely.
 - Collapsing the ICU plural to one/other with identical text is correct for Turkish.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 8.6/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+NONE of the historic tr failure modes recurred: client is `istemci` throughout (zero müşteri misuse), mainnet is `Ana Ağ`, no katillik/MeFi brand corruption, no EHT/BSL transposition, no PoS/PoW inversion, state is `durum`. Remaining: `uzlaşma` for security compromise, `kurtarma kuyruğu` (rescue queue) for redemption queue -- which collides with `kurtarma ifadesi` = seed phrase.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.

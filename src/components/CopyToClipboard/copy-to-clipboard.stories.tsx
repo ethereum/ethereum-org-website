@@ -1,4 +1,4 @@
-import { Check, Clipboard } from "lucide-react"
+import { Check, Copy } from "lucide-react"
 import { Meta, StoryObj } from "@storybook/nextjs"
 
 import { VStack } from "@/components/ui/flex"
@@ -41,7 +41,7 @@ export const Default: Story = {
         </span>
       ) : (
         <span className="inline-flex items-center gap-2 text-primary">
-          <Clipboard className="size-4" /> Copy address
+          <Copy className="size-4" /> Copy address
         </span>
       ),
   },

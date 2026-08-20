@@ -11,9 +11,10 @@ export const GLOSSARY_API_URL =
   process.env.GLOSSARY_API_URL ||
   "https://ethglossary.visual-20-hoists.workers.dev/api/v1"
 
-// GitHub API configuration
+// GitHub API configuration. MODE=estimate never writes to GitHub (it assembles
+// prompts from the working tree and sends nothing), so it runs without a token.
 const githubApiToken = process.env.GITHUB_API_TOKEN || ""
-if (!githubApiToken) {
+if (!githubApiToken && process.env.MODE !== "estimate") {
   console.error("[ERROR] Missing GITHUB_API_TOKEN environment variable")
   throw new Error("No GitHub API token found (GITHUB_API_TOKEN)")
 }
@@ -67,7 +68,7 @@ const stampOnly = ["1", "true", "yes", "on"].includes(
 const dryRun = ["1", "true", "yes", "on"].includes(
   (process.env.DRY_RUN || "").toLowerCase()
 )
-const mode = (process.env.MODE || "auto") as "auto" | "full"
+const mode = (process.env.MODE || "auto") as "auto" | "full" | "estimate"
 const concurrency = parseInt(process.env.GEMINI_CONCURRENCY || "16", 10)
 
 // Parse GitHub repository from env (format: "owner/repo")
