@@ -1,10 +1,6 @@
 import { pick } from "lodash"
 import { notFound } from "next/navigation"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { ChainName, Lang, PageParams } from "@/lib/types"
 
@@ -55,7 +51,6 @@ const Page = async (props: {
 }) => {
   const params = await props.params
   const { locale, application } = params
-  setRequestLocale(locale)
 
   // Get translations
   const t = await getTranslations("page-apps")
@@ -434,8 +429,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale, application } = params
-
-  setRequestLocale(locale)
 
   try {
     // Fetch apps data using the new data-layer function (already cached)

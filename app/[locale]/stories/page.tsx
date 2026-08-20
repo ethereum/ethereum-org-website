@@ -1,11 +1,7 @@
 import { pick } from "lodash"
 import { Timer } from "lucide-react"
 import type { Metadata } from "next"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Story } from "@/lib/types"
 
@@ -44,8 +40,6 @@ const SHARE_STORY_URL = "https://ethereumstory.paperform.co/"
 
 const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
   const { locale } = await props.params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-stories")
 
@@ -216,8 +210,6 @@ export async function generateMetadata(props: {
   params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const { locale } = await props.params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-stories")
 

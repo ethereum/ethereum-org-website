@@ -1,10 +1,6 @@
 import { pick } from "lodash"
 import type { Metadata } from "next"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
@@ -25,8 +21,6 @@ const VideoGalleryPage = async (props: {
   params: Promise<{ locale: string }>
 }) => {
   const { locale } = await props.params
-
-  setRequestLocale(locale)
 
   const videos = await getVideos(locale)
   const t = await getTranslations("page-videos")
@@ -66,8 +60,6 @@ export async function generateMetadata(props: {
   params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const { locale } = await props.params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-videos")
 
