@@ -994,6 +994,66 @@
           "url": "https://docs.lido.fi/security/audits/"
         },
         {
+          "name": "Cyfrin Lido CircuitBreaker Security Audit",
+          "date": "2026-04-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/Cyfrin%20CircuitBreaker%20Audit%20Report%2004-2026.pdf"
+        },
+        {
+          "name": "MixBytes Lido CircuitBreaker Security Audit",
+          "date": "2026-04-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/MixBytes%20CircuitBreaker%20Audit%20Report%2004-2026.pdf"
+        },
+        {
+          "name": "Composable Security Lido Oracle v7.1 Security Audit",
+          "date": "2026-03-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/Composable%20Security%20Lido%20Oracle%20V7_1%20Audit%20Report.pdf"
+        },
+        {
+          "name": "MixBytes Lido DeFi Wrapper MellowStrategyAdapter Security Audit",
+          "date": "2026-03-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/MixBytes%20Lido%20DeFi%20Wrapper%20MellowStrategyAdapter%20Security%20Audit%20Report%2003-2026.pdf"
+        },
+        {
+          "name": "MixBytes Triggerable Withdrawals Easy Track Security Audit",
+          "date": "2026-03-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/MixBytes%20Lido%20Easy%20Track%20Security%20Audit%20Report%2003-26.pdf"
+        },
+        {
+          "name": "Certora Lido V3 Security Assessment Fix Review",
+          "date": "2026-03-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/Certora%20Lido%20V3%20Smart%20Contracts%20Security%20Assessment%20Report%20fix%20review%2003-26.pdf"
+        },
+        {
+          "name": "MixBytes Lido V3 Security Audit (fix review)",
+          "date": "2026-03-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/MixBytes%20Lido%20v3%20Security%20Audit%20Report%2003-26.pdf"
+        },
+        {
+          "name": "MixBytes Lido EasyTrack stVaults Security Audit",
+          "date": "2026-03-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/MixBytes%20Lido%20Easy%20Track%20stVaults%20Security%20Audit%20Report%2003-26.pdf"
+        },
+        {
+          "name": "Sigma Prime Lido BLS Library Security Audit",
+          "date": "2026-01-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/Sigma%20Prime%20-%20Lido%20BLS%20Library%20Security%20Assessment%20Report%20v2.0%20-%2001-2026.pdf"
+        },
+        {
+          "name": "MixBytes CSM Performance Oracle Security Audit",
+          "date": "2026-01-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/MixBytes%20CSM%20Performance%20Oracle%20Security%20Audit%20Report%2001-26.pdf"
+        },
+        {
+          "name": "MixBytes Lido DeFi Wrapper Security Audit",
+          "date": "2026-01-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/MixBytes%20Lido%20DeFi%20Wrapper%20Security%20Audit%20Report%2001-2026.pdf"
+        },
+        {
+          "name": "Ackee Blockchain Vault Wrapper Audit",
+          "date": "2026-01-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/Ackee%20Blockchain%20Vault%20Wrapper%20Report%2001-2026.pdf"
+        },
+        {
           "name": "Certora Lido V3 Audit",
           "date": "2025-12-01",
           "url": "https://github.com/lidofinance/audits/blob/main/Certora%20Lido%20V3%20Audit%20Report%20-%2012-2025.pdf"
