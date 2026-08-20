@@ -6,6 +6,7 @@ const createNextIntlPlugin = require("next-intl/plugin")
 const { withSentryConfig } = require("@sentry/nextjs")
 
 const redirects = require("./redirects.config")
+const rewrites = require("./rewrites.config")
 
 const i18nConfigJson = require("./i18n.config.json")
 
@@ -175,6 +176,12 @@ module.exports = (phase) => {
           ],
         },
       ]
+    },
+    async rewrites() {
+      // Returned bare (not under beforeFiles) so these stay afterFiles rewrites:
+      // real files under /content resolve first, which is what stops the
+      // unprefixed rule from re-wrapping an already-rewritten path.
+      return rewrites
     },
     async redirects() {
       // Build a strict locale matcher from configured locales
