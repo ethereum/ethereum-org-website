@@ -43,3 +43,11 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 - Cleanest fee-value fragments in the fleet -- `варьируется`/`не разглашается`/`устанавливается провайдером` compose as VERBS and sidestep the gender-agreement problem every other inflected locale has (#54). Recommend this as the pattern.
 - Plural branches verified correct: `Поддерживает` + one `1 сеть` (acc) / few `2 сети` (gen sg) / many `5 сетей` (gen pl).
 - `уровень 2 (l2)` matches the pre-existing key in the same file; the lowercase is the #53 glossary artifact.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 8.5/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+seed phrase as `seed-фразы` vs glossary `сид-фразы`. `производство` (manufacturing) for production/deployed at 4 dvt sites incl. a heading. Decimal points instead of commas in 5 JSON figures while markdown was correct. "state" polysemy CLEAR (состояние everywhere, zero государство).
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.

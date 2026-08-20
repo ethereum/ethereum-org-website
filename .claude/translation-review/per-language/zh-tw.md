@@ -85,3 +85,11 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 - The recurring `智慧合約` regression (PRs #18344, #18772) did NOT recur -- zero occurrences.
 - Only locale in the fleet that preserves the EN Security/Secure split (`安全性` / `安全`).
 - Taiwan vocabulary correct throughout: 取得/匯入/自訂/裝置/金鑰/儲存/介面/檢視/存取/浮動/方案/新增, zero `添加`, zero `您`.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 8.0/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+`智慧合約` DID recur -- one site, run-a-node:406, now the third recurrence after #18344 and #18772. More serious: `去中心化礦池` described Rocket Pool as a MINING pool, a PoW/PoS inversion. `掃描` (scan) for the withdrawal sweep, contradicting withdrawals' own `清掃`. Zero Simplified-character leakage (verified against the repo's own zh/zh-tw corpora).
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.

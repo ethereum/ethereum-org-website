@@ -166,7 +166,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             })}
           </p>
           <Alert variant="warning">
-            <AlertIcon className="[&>svg]:size-10 [&>svg]:text-body!">
+            <AlertIcon size="lg" className="[&>svg]:text-body!">
               <Lightbulb />
             </AlertIcon>
             <AlertContent>
@@ -315,7 +315,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             })}
           </p>
           <Alert variant="warning">
-            <AlertIcon className="[&>svg]:size-10 [&>svg]:text-body!">
+            <AlertIcon size="lg" className="[&>svg]:text-body!">
               <Lightbulb />
             </AlertIcon>
             <AlertContent>
@@ -350,7 +350,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             })}
           </p>
           <Alert variant="update">
-            <AlertIcon className="[&>svg]:size-12">
+            <AlertIcon size="xl">
               <Handshake />
             </AlertIcon>
             <AlertContent>

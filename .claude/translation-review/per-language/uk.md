@@ -62,3 +62,11 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 **Notes:**
 
 - Best plural morphology of the four Slavic locales -- correct ACCUSATIVE in the `one` branch (`1 мережу`, `1 мову`), the branch most commonly botched. `Підтримує` + one/few/many all verified.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 8.0/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+JSON inversion: "correct head of the chain" rendered as the chain's `початку` (beginning) -- the opposite end; solo:22 had the correct `вершини`. `виробництво` (manufacturing) for production at 4 dvt sites. "state" polysemy CLEAR (стан, zero держава). Compounding rendered 3 ways across cross-linking pages.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
