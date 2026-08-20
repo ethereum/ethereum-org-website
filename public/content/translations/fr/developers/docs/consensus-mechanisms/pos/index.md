@@ -1,6 +1,6 @@
 ---
 title: Preuve d'enjeu (PoS)
-description: Une explication du protocole de consensus de preuve d'enjeu et de son rôle dans Ethereum.
+description: "Une explication du protocole de consensus de preuve d'enjeu et de son rôle dans Ethereum."
 lang: fr
 ---
 
@@ -43,7 +43,7 @@ Pour annuler un bloc finalisé, un attaquant s'engagerait à perdre au moins un 
 
 Gérer un validateur est un engagement. Le validateur est censé maintenir un matériel et une connectivité suffisants pour participer à la validation de bloc et à la proposition. En retour, le validateur est payé en ETH (son solde staké augmente). D'un autre côté, participer en tant que validateur ouvre également de nouvelles voies aux utilisateurs pour attaquer le réseau à des fins de gain personnel ou de sabotage. Pour éviter cela, les validateurs manquent des récompenses en ETH s'ils ne participent pas lorsqu'ils sont sollicités, et leur mise existante peut être détruite s'ils se comportent de manière malhonnête. Deux comportements principaux peuvent être considérés comme malhonnêtes : proposer plusieurs blocs dans un seul créneau (équivoque) et soumettre des attestations contradictoires.
 
-La quantité d'ETH réduite dépend du nombre de validateurs qui subissent également une réduction à peu près au même moment. C'est ce qu'on appelle la [« pénalité de corrélation »](https://eth2book.info/bellatrix/part2/incentives/slashing#the-correlation-penalty), et elle peut être mineure (~1 % de la mise pour un seul validateur sanctionné isolément) ou peut entraîner la destruction de 100 % de la mise du validateur (événement de réduction massive). Elle est imposée à mi-chemin d'une période de sortie forcée qui commence par une pénalité immédiate (jusqu'à 1 ETH) le jour 1, la pénalité de corrélation le jour 18, et enfin, l'éjection du réseau le jour 36. Ils reçoivent des pénalités d'attestation mineures chaque jour car ils sont présents sur le réseau mais ne soumettent pas de votes. Tout cela signifie qu'une attaque coordonnée serait très coûteuse pour l'attaquant.
+La quantité d'ETH réduite dépend du nombre de validateurs qui subissent également une réduction à peu près au même moment. C'est ce qu'on appelle la [« pénalité de corrélation »](https://eth2book.info/bellatrix/part2/incentives/slashing#the-correlation-penalty), et elle peut être mineure (\~1 % de la mise pour un seul validateur sanctionné isolément) ou peut entraîner la destruction de 100 % de la mise du validateur (événement de réduction massive). Elle est imposée à mi-chemin d'une période de sortie forcée qui commence par une pénalité immédiate (jusqu'à 1 ETH) le jour 1, la pénalité de corrélation le jour 18, et enfin, l'éjection du réseau le jour 36. Ils reçoivent des pénalités d'attestation mineures chaque jour car ils sont présents sur le réseau mais ne soumettent pas de votes. Tout cela signifie qu'une attaque coordonnée serait très coûteuse pour l'attaquant.
 
 ## Choix de fork {#fork-choice}
 

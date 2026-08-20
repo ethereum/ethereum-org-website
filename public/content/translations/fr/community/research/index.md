@@ -1,6 +1,6 @@
 ---
 title: Domaines actifs de la recherche sur Ethereum
-description: Explorez différents domaines de recherche ouverte et découvrez comment vous impliquer.
+description: "Explorez différents domaines de recherche ouverte et découvrez comment vous impliquer."
 lang: fr
 ---
 

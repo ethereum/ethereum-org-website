@@ -1,6 +1,6 @@
 ---
-title: Các lĩnh vực nghiên cứu đang hoạt động của Ethereum
-description: Khám phá các lĩnh vực nghiên cứu mở khác nhau và tìm hiểu cách tham gia.
+title: "Các lĩnh vực nghiên cứu đang hoạt động của Ethereum"
+description: "Khám phá các lĩnh vực nghiên cứu mở khác nhau và tìm hiểu cách tham gia."
 lang: vi
 ---
 

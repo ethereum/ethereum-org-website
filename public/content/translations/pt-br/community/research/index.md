@@ -1,6 +1,6 @@
 ---
-title: Áreas ativas de pesquisa da Ethereum
-description: Explore diferentes áreas de pesquisa aberta e saiba como se envolver.
+title: "Áreas ativas de pesquisa da Ethereum"
+description: "Explore diferentes áreas de pesquisa aberta e saiba como se envolver."
 lang: pt-br
 ---
 

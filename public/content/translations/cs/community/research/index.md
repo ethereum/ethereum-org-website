@@ -1,6 +1,6 @@
 ---
-title: Aktivní oblasti výzkumu Etherea
-description: Prozkoumejte různé oblasti otevřeného výzkumu a zjistěte, jak se zapojit.
+title: "Aktivní oblasti výzkumu Etherea"
+description: "Prozkoumejte různé oblasti otevřeného výzkumu a zjistěte, jak se zapojit."
 lang: cs
 ---
 

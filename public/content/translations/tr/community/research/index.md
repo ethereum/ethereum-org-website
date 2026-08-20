@@ -1,6 +1,6 @@
 ---
-title: Ethereum araştırmalarının aktif alanları
-description: Açık araştırmaların farklı alanlarını keşfedin ve nasıl dahil olabileceğinizi öğrenin.
+title: "Ethereum araştırmalarının aktif alanları"
+description: "Açık araştırmaların farklı alanlarını keşfedin ve nasıl dahil olabileceğinizi öğrenin."
 lang: tr
 ---
 
