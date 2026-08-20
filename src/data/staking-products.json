@@ -991,37 +991,36 @@
       "audits": [
         {
           "name": "All Audits",
-          "date": "07-2026",
           "url": "https://docs.lido.fi/security/audits/"
         },
         {
           "name": "Certora Lido V3 Audit",
-          "date": "12-2025",
+          "date": "2025-12-01",
           "url": "https://github.com/lidofinance/audits/blob/main/Certora%20Lido%20V3%20Audit%20Report%20-%2012-2025.pdf"
         },
         {
           "name": "MixBytes Lido V3 Security Audit",
-          "date": "12-2025",
+          "date": "2025-12-01",
           "url": "https://github.com/lidofinance/audits/blob/main/MixBytes%20Lido%20V3%20Security%20Audit%20Report%20-%2012-2025.pdf"
         },
         {
           "name": "Consensys Diligence Lido V3 Security Audit",
-          "date": "11-2025",
+          "date": "2025-11-01",
           "url": "https://github.com/lidofinance/audits/blob/main/Consensys%20Diligence%20Lido%20V3%20Security%20Audit%20-%2011-2025.pdf"
         },
         {
           "name": "Ackee Blockchain Community Staking Module v2 Audit",
-          "date": "09-2025",
+          "date": "2025-09-01",
           "url": "https://github.com/lidofinance/audits/blob/main/Ackee%20Blockchain%20Community%20Staking%20Module%20v2%20Audit%20Report%2009-2025.pdf"
         },
         {
           "name": "Code4rena Community Staking Module v2 Audit",
-          "date": "08-2025",
+          "date": "2025-08-01",
           "url": "https://github.com/lidofinance/audits/blob/main/Code4rena%20CSM%20V2%20Audit%20Report%2008-2025.pdf"
         },
         {
           "name": "OpenZeppelin Dual Governance Audit",
-          "date": "11-2024",
+          "date": "2024-11-01",
           "url": "https://github.com/lidofinance/audits/blob/main/OpenZeppelin%20Dual%20Governance%20Audit%20Report%2011-2024.pdf"
         }
       ],
