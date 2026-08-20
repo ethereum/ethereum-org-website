@@ -21,6 +21,8 @@ import { execFileSync } from "child_process"
 import fs from "fs"
 import path from "path"
 
+import matter from "gray-matter"
+
 /**
  * `error` -- a structural invariant that can never legitimately differ between
  * a source file and its translation. Always a defect; fails the gate.
@@ -192,6 +194,66 @@ export function verifyMarkdown(
         `${same.length}/${th.length} headings identical to English`,
         "warn"
       )
+  }
+
+  // Frontmatter must parse, and every field must keep the SHAPE English gave it.
+  // An unquoted YAML scalar containing ": " silently becomes a mapping, so a
+  // summaryPoints entry turns into an object and React throws at render --
+  // after a clean MDX compile, which is why compiling is not sufficient.
+  let enFm: Record<string, unknown> | null = null
+  let trFm: Record<string, unknown> | null = null
+  try {
+    enFm = matter(enSrc).data
+  } catch {
+    enFm = null // English broken: not this file's problem
+  }
+  try {
+    trFm = matter(trSrc).data
+  } catch (e) {
+    add(
+      "frontmatter-parse",
+      e instanceof Error ? e.message.split("\n")[0] : String(e)
+    )
+  }
+  if (enFm && trFm) {
+    const shape = (v: unknown): string =>
+      Array.isArray(v)
+        ? "array"
+        : v === null
+          ? "null"
+          : v instanceof Date
+            ? "date"
+            : typeof v
+    for (const [k, ev] of Object.entries(enFm)) {
+      if (!(k in trFm)) {
+        add("frontmatter-missing-key", k)
+        continue
+      }
+      const tv = trFm[k]
+      if (shape(ev) !== shape(tv)) {
+        add("frontmatter-shape", `${k}: en=${shape(ev)} tr=${shape(tv)}`)
+        continue
+      }
+      // A translated string that parsed as an object is the colon-in-scalar bug.
+      if (Array.isArray(ev) && Array.isArray(tv)) {
+        if (ev.length !== tv.length)
+          add(
+            "frontmatter-array-length",
+            `${k}: en=${ev.length} tr=${tv.length}`
+          )
+        tv.forEach((x, i) => {
+          if (shape(x) !== shape(ev[i] ?? x))
+            add(
+              "frontmatter-shape",
+              `${k}[${i}]: en=${shape(ev[i])} tr=${shape(x)}${
+                shape(x) === "object"
+                  ? ` -- unquoted YAML scalar containing ": "?`
+                  : ""
+              }`
+            )
+        })
+      }
+    }
   }
 
   // Placeholder residue must never reach shipped output.

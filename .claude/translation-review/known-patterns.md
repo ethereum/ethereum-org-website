@@ -867,3 +867,22 @@ That is why "every run causes regressions no matter how small": each generation 
 - **Recurring glossary-side defects (fix upstream, not per-file):** lowercase Latin parentheticals `(dvt)`/`(geth)`/`(lst)`/`(l2)` in hi/id/bn/tr/ur/mr (pattern 53 again); capitalized common nouns leaking mid-sentence in id (`Likuiditas`, `Epok`), ru (`Адрес`) and vi (`Địa chỉ`, `Giao thức`); the te `స్టాకింగ్` typo; ur `لامركزی` carrying Arabic kaf U+0643 instead of keheh U+06A9. Missing entries that caused real errors: `cold storage` (it invented "celle frigorifere" = refrigerated rooms), `externally owned account (EOA)`, `delegated staking`, `auth token`, `slot` (zh).
 - **Pre-existing defects surfaced but out of scope:** `mr/smart-contracts/index.md` carries 3 leaked `<HTML-PLACEHOLDER-COMPONENT-00000N />` tokens **on `dev`** -- reader-visible junk live on the site, and a new signature (sequential ids, not content hashes) versus pattern 22. `fr/developers/docs/accounts/index.md` has the same EOA custody inversion (`compte détenu par un tiers`) that this PR introduced in `withdrawals`.
 - **Review scale:** 24 review agents (one per locale, 7 files each) then 24 fix agents. Deterministic sweeps ran first and were injected as "already verified, do not re-report" -- but note that the anchor rotation was found by the *agents*, not the sweeps, because no sweep existed for it. Every fleet-wide finding was then re-verified deterministically before being acted on; two agent claims (a stale MDX read, and "anchor stripping looks unintended") were false and would have wasted a fix cycle if taken at face value.
+
+### 66. Unquoted YAML scalar containing ": " becomes a mapping (CRITICAL — build-breaker that compiles clean)
+
+Recurrence of the YAML colon defect first logged in PR #18868, in a new field. English wrote `Delegation spans a spectrum, from services where...` with a comma; ru and uk both translated the comma as a colon:
+
+```yaml
+summaryPoints:
+  - Делегування охоплює широкий спектр: від сервісів, де ви зберігаєте...
+```
+
+YAML reads `key: value` inside an unquoted scalar as a **mapping**, so `summaryPoints[2]` becomes an object instead of a string. Next.js then fails prerendering with `Objects are not valid as a React child (found: object with keys {Делегування охоплює широкий спектр})`.
+
+**Why compiling is not enough.** The MDX parses fine and `@mdx-js/mdx` reports zero failures — the defect is in the frontmatter, and it only surfaces when React renders the value. Any check that stops at "does it compile" will pass this file. PR #19115's first fix round did exactly that and the Netlify build failed on `/uk/staking/saas` afterwards.
+
+**Detect:** parse frontmatter with the same parser the site uses (`gray-matter`) and compare the *shape* of every field against English — string vs array vs object, and element-wise for arrays. `verify-structure.ts` check `frontmatter-shape`, error severity.
+
+**Fix:** quote the scalar (`- "text: more text"`). Preserves the translator's punctuation; changing the colon to a comma also works but overrides a legitimate stylistic choice. Neither value here contained a `"`, so plain double-quoting was safe.
+
+**Prompt-side prevention:** the format rules already warn against `<span dir="ltr">` inside frontmatter because the inner quote breaks YAML. The same rule should say that any frontmatter value containing `: ` must be quoted. Languages that punctuate with a colon where English uses a comma will keep hitting this otherwise.
