@@ -87,6 +87,13 @@ Sentry.init({
     if (hasNoStacktrace) {
       const message = values[0]?.value ?? ""
       if (/Internal JSON-RPC error/i.test(message)) return null
+      // Extension-injected recursion (see #17146: wrappers around
+      // HTMLMediaElement.canPlayType) overflows the stack inside the injected
+      // frame, so the event arrives with no frames at all and the
+      // `preload/document.js` filter below never sees it. Real recursion bugs
+      // in our own bundle always carry frames, so they still get reported.
+      // (ETHORG-9Q)
+      if (/Maximum call stack size exceeded/i.test(message)) return null
     }
 
     // Filter extension injection script errors not caught by denyUrls
