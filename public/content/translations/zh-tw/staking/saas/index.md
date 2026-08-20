@@ -135,7 +135,7 @@ summaryPoints:
 驗證者也可以完全退出，這將解鎖剩餘的全部 ETH 餘額。完成退出流程後，全部餘額將在隨後的驗證者掃描期間轉帳到提款地址。
 
 <ButtonLink href="/staking/withdrawals/">更多關於質押提款的資訊</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="如果我的提供者消失或不退出我的驗證者怎麼辦？" eventCategory="SaasStaking" eventName="clicked what if my provider disappears">
 如果你的提款憑證指向你控制的地址，你可以自行退出驗證者並收回你的質押；請參閱[信任模型：要評估什麼](#trust-model-what-to-evaluate)。

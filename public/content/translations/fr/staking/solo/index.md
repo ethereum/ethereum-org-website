@@ -230,7 +230,7 @@ Pour les validateurs avec des identifiants de retraits réguliers (0x01), les pa
 Pour débloquer et récupérer l'intégralité de votre solde, vous devez sortir votre validateur. Vous pouvez le faire en utilisant vos clés de signature de validateur, ou le déclencher directement depuis votre adresse de retrait avec une transaction de la couche d'exécution, ce qui signifie que vos fonds restent récupérables même si vos clés de signature sont perdues.
 
 <ButtonLink href="/staking/withdrawals/">En savoir plus sur les retraits de staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## Lectures complémentaires {#further-reading}
 

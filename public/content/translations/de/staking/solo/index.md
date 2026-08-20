@@ -230,7 +230,7 @@ Bei Validatoren mit Berechtigungen für reguläre Abhebungen (0x01) werden Beloh
 Um Ihr gesamtes Guthaben freizuschalten und zurückzuerhalten, müssen Sie einen Austritt Ihres Validators vollziehen. Sie können dies mit Ihren Schlüsseln zum Signieren des Validators tun oder es direkt von Ihrer Adresse für Abhebungen mit einer Transaktion auf der Ausführungsschicht auslösen, was bedeutet, dass Ihre Gelder auch dann wiederherstellbar bleiben, wenn Ihre Schlüssel zum Signieren verloren gehen.
 
 <ButtonLink href="/staking/withdrawals/">Mehr über Staking-Abhebungen</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## Weiterführende Literatur {#further-reading}
 

@@ -135,7 +135,7 @@ summaryPoints:
 توثیق کار مکمل طور پر خروج بھی کر سکتے ہیں، جو بقیہ تمام <span dir="ltr">ETH</span> بیلنس کو غیر مقفل کر دیتا ہے۔ خروج کا عمل مکمل کرنے کے بعد، بعد میں توثیق کار کے سویپ کے دوران پورا بیلنس انخلا کے پتہ پر منتقل کر دیا جاتا ہے۔
 
 <ButtonLink href="/staking/withdrawals/">اسٹیکنگ کے انخلا کے بارے میں مزید</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="کیا ہوگا اگر میرا فراہم کنندہ غائب ہو جائے یا میرے توثیق کار سے خروج نہ کرے؟" eventCategory="SaasStaking" eventName="clicked what if my provider disappears">
 اگر آپ کی انخلا کی اسناد آپ کے زیر کنٹرول پتہ کی طرف اشارہ کرتی ہیں، تو آپ خود توثیق کار سے خروج کر سکتے ہیں اور اپنا اسٹیک بازیافت کر سکتے ہیں؛ دیکھیں [اعتماد کا ماڈل: کن چیزوں کا جائزہ لیا جائے](#trust-model-what-to-evaluate)۔

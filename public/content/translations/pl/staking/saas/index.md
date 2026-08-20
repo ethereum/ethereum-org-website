@@ -135,7 +135,7 @@ Sposób działania wypłat zależy od typu danych uwierzytelniających wypłaty 
 Walidatory mogą również całkowicie wyjść, co odblokowuje całe pozostałe saldo ETH. Po zakończeniu procesu wyjścia pełne saldo jest transferowane na adres wypłaty podczas kolejnego cyklu wypłat walidatora (validator sweep).
 
 <ButtonLink href="/staking/withdrawals/">Więcej o wypłatach ze stakingu</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Co, jeśli mój dostawca zniknie lub nie zainicjuje wyjścia mojego walidatora?" eventCategory="SaasStaking" eventName="clicked what if my provider disappears">
 Jeśli Twoje dane uwierzytelniające wypłaty wskazują na adres, który kontrolujesz, możesz samodzielnie wyjść z walidatora i odzyskać swoją stawkę; zobacz [Model zaufania: co oceniać](#trust-model-what-to-evaluate).

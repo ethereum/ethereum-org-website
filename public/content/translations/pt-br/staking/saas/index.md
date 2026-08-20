@@ -135,7 +135,7 @@ Como os saques funcionam depende do tipo de credencial de saque do seu validador
 Os validadores também podem sair totalmente, o que desbloqueia todo o saldo de ETH restante. Após concluir o processo de saída, o saldo total é transferido para o endereço de saque durante uma varredura subsequente do validador.
 
 <ButtonLink href="/staking/withdrawals/">Mais sobre saques de staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="E se meu provedor desaparecer ou não sair do meu validador?" eventCategory="SaasStaking" eventName="clicked what if my provider disappears">
 Se suas credenciais de saque apontarem para um endereço que você controla, você mesmo pode sair do validador e recuperar seu stake; veja [Modelo de confiança: o que avaliar](#trust-model-what-to-evaluate).

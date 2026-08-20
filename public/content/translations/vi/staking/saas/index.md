@@ -135,7 +135,7 @@ Cách thức hoạt động của việc rút tiền phụ thuộc vào loại t
 Các trình xác thực cũng có thể thoát hoàn toàn, điều này mở khóa toàn bộ số dư ETH còn lại. Sau khi hoàn tất quá trình thoát, toàn bộ số dư sẽ được chuyển đến Địa chỉ rút tiền trong lần quét trình xác thực tiếp theo.
 
 <ButtonLink href="/staking/withdrawals/">Tìm hiểu thêm về rút tiền đặt cọc</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Điều gì xảy ra nếu nhà cung cấp của tôi biến mất hoặc không thoát trình xác thực của tôi?" eventCategory="SaasStaking" eventName="clicked what if my provider disappears">
 Nếu thông tin xác thực rút tiền của bạn trỏ đến một Địa chỉ mà bạn kiểm soát, bạn có thể tự thoát trình xác thực và thu hồi khoản đặt cọc của mình; xem [Mô hình tin cậy: những gì cần đánh giá](#trust-model-what-to-evaluate).

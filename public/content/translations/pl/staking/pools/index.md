@@ -149,7 +149,7 @@ Od czasu aktualizacji Pectra, pule mogą również korzystać z wypłat wyzwalan
 Alternatywnie, pule wykorzystujące token płynnego stakingu ERC-20 pozwalają użytkownikom na handel tym tokenem na otwartym rynku, umożliwiając sprzedaż pozycji stakingowej, skutecznie „wypłacając” bez faktycznego usuwania ETH z kontraktu stakingowego. Należy pamiętać, że cena rynkowa może różnić się od wartości wymiany tokena.
 
 <ButtonLink href="/staking/withdrawals/">Więcej o wypłatach ze stakingu</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Czy to różni się od stakingu na mojej giełdzie?">
 Istnieje wiele podobieństw między tymi opcjami stakingu grupowego a scentralizowanymi giełdami, takimi jak możliwość stakowania małych ilości ETH i łączenia ich w pule w celu aktywacji walidatorów.

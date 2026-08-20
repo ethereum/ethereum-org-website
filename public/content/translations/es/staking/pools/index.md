@@ -149,7 +149,7 @@ Desde la actualización Pectra, los pools también pueden usar retiros activados
 Alternativamente, los pools que utilizan un token de staking líquido ERC-20 permiten a los usuarios intercambiar este token en el mercado abierto, lo que te permite vender tu posición de staking, "retirando" efectivamente sin eliminar realmente el ETH del contrato de staking. Ten en cuenta que el precio de mercado puede diferir del valor de canje del token.
 
 <ButtonLink href="/staking/withdrawals/">Más sobre los retiros de staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="¿Es esto diferente de hacer staking con mi exchange?">
 Existen muchas similitudes entre estas opciones de staking conjunto y los intercambios centralizados, como la capacidad de hacer staking de pequeñas cantidades de ETH y agruparlas para activar validadores.

@@ -230,7 +230,7 @@ summaryPoints:
 要解锁并收回你的全部余额，你必须退出你的验证者。你可以使用你的验证者签名密钥执行此操作，或者直接从你的提款地址通过执行层交易触发，这意味着即使你的签名密钥丢失，你的资金仍然可以恢复。
 
 <ButtonLink href="/staking/withdrawals/">更多关于质押提款的信息</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## 进一步阅读 {#further-reading}
 

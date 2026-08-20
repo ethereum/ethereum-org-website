@@ -135,7 +135,7 @@ Wie Abhebungen funktionieren, hängt vom Typ der Auszahlungsberechtigung deines 
 Validatoren können auch vollständig austreten, wodurch das gesamte verbleibende ETH-Guthaben freigeschaltet wird. Nach Abschluss des Austrittsprozesses wird das gesamte Guthaben während eines nachfolgenden Validator-Sweeps an die Abhebungsadresse transferiert.
 
 <ButtonLink href="/staking/withdrawals/">Mehr über Staking-Abhebungen</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Was ist, wenn mein Anbieter verschwindet oder keinen Exit für meinen Validator durchführt?" eventCategory="SaasStaking" eventName="clicked what if my provider disappears">
 Wenn deine Auszahlungsberechtigungen auf eine Adresse verweisen, die du kontrollierst, kannst du den Validator selbst verlassen (Austritt) und deinen Stake zurückerhalten; siehe [Vertrauensmodell: Was zu bewerten ist](#trust-model-what-to-evaluate).

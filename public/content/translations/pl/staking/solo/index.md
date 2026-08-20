@@ -230,7 +230,7 @@ W przypadku walidatorów z danymi uwierzytelniającymi dla regularnych wypłat (
 Aby odblokować i odzyskać całe swoje saldo, musisz dokonać wyjścia ze swojego walidatora. Możesz to zrobić za pomocą kluczy do podpisywania walidatora lub wyzwolić to bezpośrednio z adresu wypłaty za pomocą transakcji w warstwie wykonawczej, co oznacza, że Twoje środki pozostają możliwe do odzyskania, nawet jeśli zgubisz klucze do podpisywania.
 
 <ButtonLink href="/staking/withdrawals/">Więcej o wypłatach ze stakingu</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## Dalsza lektura {#further-reading}
 

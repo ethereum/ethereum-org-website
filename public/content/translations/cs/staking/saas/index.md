@@ -135,7 +135,7 @@ Jak fungují výběry, závisí na typu pověření k výběru vašeho validáto
 Validátory mohou také provést úplný výstup, což odemkne celý zbývající zůstatek ETH. Po dokončení procesu výstupu je celý zůstatek převeden na adresu pro výběr během následného přesunu validátoru.
 
 <ButtonLink href="/staking/withdrawals/">Více o výběrech ze stakingu</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Co když můj poskytovatel zmizí nebo neprovede výstup mého validátoru?" eventCategory="SaasStaking" eventName="clicked what if my provider disappears">
 Pokud vaše pověření k výběru ukazují na adresu, kterou ovládáte, můžete provést výstup z validátoru sami a získat zpět svůj stake; viz [Model důvěry: co hodnotit](#trust-model-what-to-evaluate).

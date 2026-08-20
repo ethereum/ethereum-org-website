@@ -230,7 +230,7 @@ Mỗi lần rút tiền đều yêu cầu trình xác thực của bạn phải 
 Để mở khóa và nhận lại toàn bộ số dư của mình, bạn phải thoát khỏi trình xác thực của mình. Bạn có thể làm điều này bằng cách sử dụng các khóa ký trình xác thực của mình hoặc kích hoạt nó trực tiếp từ địa chỉ rút tiền của bạn bằng một giao dịch lớp thực thi, nghĩa là tiền của bạn vẫn có thể phục hồi ngay cả khi các khóa ký của bạn bị mất.
 
 <ButtonLink href="/staking/withdrawals/">Thêm về rút tiền đặt cọc</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## Đọc thêm {#further-reading}
 

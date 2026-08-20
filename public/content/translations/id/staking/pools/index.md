@@ -149,7 +149,7 @@ Sejak peningkatan Pectra, pool juga dapat menggunakan penarikan yang dipicu lapi
 Sebagai alternatif, pool yang memanfaatkan token staking likuid ERC-20 memungkinkan pengguna untuk memperdagangkan token ini di pasar terbuka, memungkinkan Anda untuk menjual posisi staking Anda, yang secara efektif "menarik" tanpa benar-benar mengeluarkan ETH dari kontrak staking. Perhatikan bahwa harga pasar dapat berbeda dari nilai penebusan token.
 
 <ButtonLink href="/staking/withdrawals/">Lebih lanjut tentang penarikan staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Apakah ini berbeda dengan staking di bursa saya?">
 Ada banyak kesamaan antara opsi staking gabungan ini dan bursa terpusat, seperti kemampuan untuk melakukan stake sejumlah kecil ETH dan menggabungkannya untuk mengaktifkan validator.

@@ -230,7 +230,7 @@ Normal çekim (0x01) kimlik bilgilerine sahip doğrulayıcılar için ödül öd
 Tüm bakiyenizin kilidini açmak ve geri almak için doğrulayıcınızdan çıkış yapmalısınız. Bunu doğrulayıcı imzalama anahtarlarınızı kullanarak yapabilir veya doğrudan çekim adresinizden bir yürütme katmanı işlemiyle tetikleyebilirsiniz; bu, imzalama anahtarlarınız kaybolsa bile fonlarınızın kurtarılabilir kalacağı anlamına gelir.
 
 <ButtonLink href="/staking/withdrawals/">Staking çekim işlemleri hakkında daha fazlası</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## Daha fazla okuma {#further-reading}
 

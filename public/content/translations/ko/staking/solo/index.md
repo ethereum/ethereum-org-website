@@ -230,7 +230,7 @@ _일반 인출_(0x01) 자격 증명을 가진 검증자는 유효 잔고가 32 E
 전체 잔고를 잠금 해제하고 돌려받으려면 검증자를 종료해야 합니다. 검증자 서명 키를 사용하거나 실행 계층 트랜잭션을 통해 인출 주소에서 직접 트리거할 수 있으므로, 서명 키를 분실하더라도 자금을 복구할 수 있습니다.
 
 <ButtonLink href="/staking/withdrawals/">스테이킹 인출에 대해 자세히 알아보기</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## 추가 자료 {#further-reading}
 

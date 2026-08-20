@@ -135,7 +135,7 @@ Il funzionamento dei prelievi dipende dal tipo di credenziale di prelievo del tu
 I validatori possono anche uscire completamente, il che sblocca l'intero saldo ETH rimanente. Dopo aver completato il processo di uscita, l'intero saldo viene trasferito all'indirizzo di prelievo durante un successivo sweep del validatore.
 
 <ButtonLink href="/staking/withdrawals/">Maggiori informazioni sui prelievi di staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Cosa succede se il mio provider scompare o non fa uscire il mio validatore?" eventCategory="SaasStaking" eventName="clicked what if my provider disappears">
 Se le tue credenziali di prelievo puntano a un indirizzo che controlli, puoi uscire dal validatore tu stesso e recuperare il tuo stake; vedi [Modello di fiducia: cosa valutare](#trust-model-what-to-evaluate).

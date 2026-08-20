@@ -135,7 +135,7 @@ Doğrulayıcınızı nasıl hazırlayacağınızla ilgili destek için sağlayı
 Doğrulayıcılar ayrıca tamamen çıkış yapabilir, bu da kalan tüm ETH bakiyesinin kilidini açar. Çıkış işlemini tamamladıktan sonra, tam bakiye sonraki bir doğrulayıcı taraması sırasında çekim adresine transfer edilir.
 
 <ButtonLink href="/staking/withdrawals/">Staking çekim işlemleri hakkında daha fazlası</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Sağlayıcım ortadan kaybolursa veya doğrulayıcımdan çıkış yapmazsa ne olur?" eventCategory="SaasStaking" eventName="clicked what if my provider disappears">
 Çekim kimlik bilgileriniz kontrol ettiğiniz bir adresi işaret ediyorsa, doğrulayıcıdan kendiniz çıkış yapabilir ve stake'inizi kurtarabilirsiniz; bkz. [Güven modeli: nelerin değerlendirileceği](#trust-model-what-to-evaluate).

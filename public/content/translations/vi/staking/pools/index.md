@@ -149,7 +149,7 @@ Kể từ bản nâng cấp Pectra, các nhóm cũng có thể sử dụng các 
 Ngoài ra, các nhóm sử dụng token staking thanh khoản ERC-20 cho phép người dùng giao dịch token này trên thị trường mở, cho phép bạn bán vị thế đặt cọc của mình, thực chất là "rút tiền" mà không thực sự loại bỏ ETH khỏi hợp đồng đặt cọc. Lưu ý rằng giá thị trường có thể khác với giá trị quy đổi của token.
 
 <ButtonLink href="/staking/withdrawals/">Tìm hiểu thêm về việc rút tiền đặt cọc</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Điều này có khác với việc đặt cọc trên sàn giao dịch của tôi không?">
 Có nhiều điểm tương đồng giữa các tùy chọn đặt cọc chung này và các sàn giao dịch tập trung, chẳng hạn như khả năng đặt cọc số lượng nhỏ ETH và gộp chúng lại với nhau để kích hoạt các trình xác thực.

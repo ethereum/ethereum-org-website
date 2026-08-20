@@ -135,7 +135,7 @@ El funcionamiento de los retiros depende del tipo de credencial de retiro de su 
 Los validadores también pueden salir por completo, lo que desbloquea todo el saldo de ETH restante. Después de completar el proceso de salida, el saldo total se transfiere a la dirección de retiro durante un barrido posterior del validador.
 
 <ButtonLink href="/staking/withdrawals/">Más sobre los retiros de staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="¿Qué pasa si mi proveedor desaparece o no ejecuta la salida de mi validador?" eventCategory="SaasStaking" eventName="clicked what if my provider disappears">
 Si sus credenciales de retiro apuntan a una dirección que usted controla, puede salir del validador usted mismo y recuperar su participación; consulte [Modelo de confianza: qué evaluar](#trust-model-what-to-evaluate).

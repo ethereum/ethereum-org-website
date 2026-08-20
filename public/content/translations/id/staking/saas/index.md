@@ -135,7 +135,7 @@ Cara kerja penarikan bergantung pada jenis kredensial penarikan validator Anda. 
 Validator juga dapat keluar sepenuhnya, yang membuka kunci seluruh sisa saldo ETH. Setelah menyelesaikan proses keluar, saldo penuh ditransfer ke alamat penarikan selama penyapuan validator berikutnya.
 
 <ButtonLink href="/staking/withdrawals/">Lebih lanjut tentang penarikan staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Bagaimana jika penyedia saya menghilang atau tidak mau keluar dari validator saya?" eventCategory="SaasStaking" eventName="clicked what if my provider disappears">
 Jika kredensial penarikan Anda menunjuk ke alamat yang Anda kendalikan, Anda dapat keluar dari validator sendiri dan memulihkan stake Anda; lihat [Model kepercayaan: apa yang harus dievaluasi](#trust-model-what-to-evaluate).

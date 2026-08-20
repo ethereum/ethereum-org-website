@@ -230,7 +230,7 @@ U validátorů s pověřením k běžným výběrům (0x01) jsou platby odměn (
 Chcete-li odemknout a získat zpět celý svůj zůstatek, musíte vystoupit ze svého validátora. Můžete to provést pomocí svých podepisovacích klíčů validátora nebo to spustit přímo z vaší adresy pro výběr pomocí transakce na exekuční vrstvě, což znamená, že vaše prostředky zůstávají obnovitelné, i když se vaše podepisovací klíče ztratí.
 
 <ButtonLink href="/staking/withdrawals/">Více o výběrech ze stakingu</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## Další čtení {#further-reading}
 

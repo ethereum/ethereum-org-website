@@ -230,7 +230,7 @@ Kwa wathibitishaji walio na vitambulisho vya utoaji wa kawaida (0x01), malipo ya
 Ili kufungua na kupokea salio lako lote nyuma lazima ujitoe kwenye mthibitishaji wako. Unaweza kufanya hivi kwa kutumia funguo zako za kusaini za mthibitishaji, au kuanzisha moja kwa moja kutoka kwenye anwani yako ya utoaji kwa muamala wa tabaka la utekelezaji, ikimaanisha fedha zako zinasalia kuweza kurejeshwa hata kama funguo zako za kusaini zimepotea.
 
 <ButtonLink href="/staking/withdrawals/">Zaidi kuhusu utoaji wa uwekaji dhamana</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## Usomaji zaidi {#further-reading}
 

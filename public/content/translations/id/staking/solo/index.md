@@ -230,7 +230,7 @@ Untuk validator dengan kredensial penarikan reguler (0x01), pembayaran imbalan (
 Untuk membuka kunci dan menerima seluruh saldo Anda kembali, Anda harus keluar dari validator Anda. Anda dapat melakukan ini menggunakan kunci penandatanganan validator Anda, atau memicunya langsung dari alamat penarikan Anda dengan transaksi lapisan eksekusi, yang berarti dana Anda tetap dapat dipulihkan bahkan jika kunci penandatanganan Anda hilang.
 
 <ButtonLink href="/staking/withdrawals/">Lebih lanjut tentang penarikan staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## Bacaan lebih lanjut {#further-reading}
 

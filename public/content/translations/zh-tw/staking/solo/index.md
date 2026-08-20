@@ -230,7 +230,7 @@ summaryPoints:
 要解鎖並收回你的全部餘額，你必須退出你的驗證者。你可以使用你的驗證者簽署金鑰來執行此操作，或者透過執行層交易直接從你的提款地址觸發它，這意味著即使你的簽署金鑰遺失，你的資金仍然可以恢復。
 
 <ButtonLink href="/staking/withdrawals/">更多關於質押提款的資訊</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## 進一步閱讀 {#further-reading}
 

@@ -230,7 +230,7 @@ Per i validatori con credenziali di prelievi regolari (0x01), i pagamenti delle 
 Per sbloccare e ricevere indietro l'intero saldo devi uscire dal tuo validatore. Puoi farlo utilizzando le chiavi di firma del tuo validatore o attivarlo direttamente dal tuo indirizzo di prelievo con una transazione del livello di esecuzione, il che significa che i tuoi fondi rimangono recuperabili anche se le tue chiavi di firma vengono perse.
 
 <ButtonLink href="/staking/withdrawals/">Maggiori informazioni sui prelievi di staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## Letture consigliate {#further-reading}
 

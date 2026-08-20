@@ -135,7 +135,7 @@ summaryPoints:
 验证者也可以完全退出，这将解锁剩余的全部 ETH 余额。完成退出过程后，全部余额将在随后的验证者扫描期间转移到提款地址。
 
 <ButtonLink href="/staking/withdrawals/">了解有关质押提款的更多信息</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="如果我的提供商消失或不退出我的验证者怎么办？" eventCategory="SaasStaking" eventName="clicked what if my provider disappears">
 如果你的提款凭证指向你控制的地址，你可以自行退出验证者并收回你的质押；请参阅[信任模型：评估什么](#trust-model-what-to-evaluate)。

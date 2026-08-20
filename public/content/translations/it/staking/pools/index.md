@@ -149,7 +149,7 @@ Dall'aggiornamento Pectra, le pool possono anche utilizzare i prelievi attivati 
 In alternativa, le pool che utilizzano un token di liquid staking ERC-20 consentono agli utenti di scambiare questo token nel mercato aperto, permettendoti di vendere la tua posizione di staking, di fatto "prelevando" senza rimuovere effettivamente gli ETH dal contratto di staking. Nota che il prezzo di mercato può differire dal valore di riscatto del token.
 
 <ButtonLink href="/staking/withdrawals/">Maggiori informazioni sui prelievi di staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="È diverso dallo staking con il mio exchange?">
 Ci sono molte somiglianze tra queste opzioni di staking in pool e gli exchange centralizzati, come la possibilità di mettere in staking piccole quantità di ETH e farle raggruppare per attivare i validatori.

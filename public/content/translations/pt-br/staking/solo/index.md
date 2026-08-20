@@ -230,7 +230,7 @@ Para validadores com credenciais de saques regulares (0x01), os pagamentos de re
 Para desbloquear e receber todo o seu saldo de volta, você deve solicitar a saída do seu validador. Você pode fazer isso usando as chaves de assinatura do seu validador ou acioná-lo diretamente do seu endereço de saque com uma transação da camada de execução, o que significa que seus fundos permanecem recuperáveis mesmo se suas chaves de assinatura forem perdidas.
 
 <ButtonLink href="/staking/withdrawals/">Mais sobre saques de staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## Leitura adicional {#further-reading}
 

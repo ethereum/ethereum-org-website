@@ -135,7 +135,7 @@ Jinsi utoaji unavyofanya kazi inategemea aina ya kitambulisho cha uondoaji cha m
 Wathibitishaji wanaweza pia kujitoa kikamilifu, ambayo hufungua salio lote la ETH lililosalia. Baada ya kukamilisha mchakato wa kujitoa, salio kamili huhamishiwa kwenye anwani ya utoaji wakati wa ufagiaji unaofuata wa mthibitishaji.
 
 <ButtonLink href="/staking/withdrawals/">Zaidi kuhusu utoaji wa uwekaji dhamana</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Vipi ikiwa mtoa huduma wangu atatoweka au hatamtoa mthibitishaji wangu?" eventCategory="SaasStaking" eventName="clicked what if my provider disappears">
 Ikiwa vitambulisho vyako vya uondoaji vinaelekeza kwenye anwani unayoidhibiti, unaweza kujitoa kwenye mthibitishaji wewe mwenyewe na kurejesha dhamana yako; tazama [Muundo wa uaminifu: nini cha kutathmini](#trust-model-what-to-evaluate).

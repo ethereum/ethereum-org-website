@@ -149,7 +149,7 @@ Depuis la mise à jour Pectra, les pools peuvent également utiliser les retrait
 Alternativement, les pools qui utilisent un jeton de staking liquide ERC-20 permettent aux utilisateurs de négocier ce jeton sur le marché libre, vous permettant de vendre votre position de staking, « retirant » ainsi efficacement sans réellement retirer d'ETH du contrat de staking. Notez que le prix du marché peut différer de la valeur d'échange du jeton.
 
 <ButtonLink href="/staking/withdrawals/">En savoir plus sur les retraits de staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Est-ce différent du staking avec ma plateforme d'échange ?">
 Il existe de nombreuses similitudes entre ces options de staking mutualisé et les échanges centralisés, telles que la possibilité de staker de petites quantités d'ETH et de les regrouper pour activer des validateurs.

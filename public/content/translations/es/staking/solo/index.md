@@ -230,7 +230,7 @@ Para los validadores con credenciales de retiros regulares (0x01), los pagos de 
 Para desbloquear y recibir todo tu saldo de vuelta, debes salir de tu validador. Puedes hacer esto usando las claves de firma de tu validador, o activarlo directamente desde tu dirección de retiro con una transacción de la capa de ejecución, lo que significa que tus fondos siguen siendo recuperables incluso si pierdes tus claves de firma.
 
 <ButtonLink href="/staking/withdrawals/">Más sobre los retiros de staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## Lecturas adicionales {#further-reading}
 

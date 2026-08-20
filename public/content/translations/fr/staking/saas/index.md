@@ -135,7 +135,7 @@ Le fonctionnement des retraits dépend du type d'identifiant de retrait de votre
 Les validateurs peuvent également sortir complètement, ce qui débloque la totalité du solde d'ETH restant. Après avoir terminé le processus de sortie, le solde complet est transféré vers l'adresse de retrait lors d'un balayage ultérieur du validateur.
 
 <ButtonLink href="/staking/withdrawals/">En savoir plus sur les retraits de staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Que se passe-t-il si mon fournisseur disparaît ou refuse de faire sortir mon validateur ?" eventCategory="SaasStaking" eventName="clicked what if my provider disappears">
 Si vos identifiants de retrait pointent vers une adresse que vous contrôlez, vous pouvez sortir le validateur vous-même et récupérer votre mise ; voir [Modèle de confiance : ce qu'il faut évaluer](#trust-model-what-to-evaluate).

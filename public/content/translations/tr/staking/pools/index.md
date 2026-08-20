@@ -149,7 +149,7 @@ Pectra yükseltmesinden bu yana havuzlar, düğüm operatörlerinin imzalama ana
 Alternatif olarak, bir ERC-20 likit staking tokeni kullanan havuzlar, kullanıcıların bu tokeni açık piyasada alıp satmasına olanak tanıyarak, staking pozisyonunuzu satmanıza ve ETH'yi staking sözleşmesinden fiilen çıkarmadan etkili bir şekilde "çekim yapmanıza" olanak tanır. Piyasa fiyatının tokenin itfa değerinden farklı olabileceğini unutmayın.
 
 <ButtonLink href="/staking/withdrawals/">Staking çekim işlemleri hakkında daha fazlası</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Bu, borsamda staking yapmaktan farklı mı?">
 Bu havuzlu staking seçenekleri ile merkezi borsalar arasında, küçük miktarlarda ETH'yi stake etme ve doğrulayıcıları etkinleştirmek için bunların bir araya getirilmesi gibi birçok benzerlik vardır.

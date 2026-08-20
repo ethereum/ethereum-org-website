@@ -149,7 +149,7 @@ Seit dem Pectra-Upgrade können Pools auch von der Ausführungsschicht ausgelös
 Alternativ ermöglichen Pools, die einen ERC-20-Liquid-Staking-Token verwenden, den Benutzern, diesen Token auf dem freien Markt zu handeln, sodass Sie Ihre Staking-Position verkaufen können, was effektiv einer „Abhebung“ entspricht, ohne tatsächlich ETH aus dem Staking-Vertrag zu entfernen. Beachten Sie, dass der Marktpreis vom Einlösungswert des Tokens abweichen kann.
 
 <ButtonLink href="/staking/withdrawals/">Mehr zu Staking-Abhebungen</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Unterscheidet sich das vom Staking bei meiner Börse?">
 Es gibt viele Ähnlichkeiten zwischen diesen Pooled-Staking-Optionen und zentralisierten Börsen, wie z. B. die Möglichkeit, kleine ETH-Beträge zu staken und diese bündeln zu lassen, um Validatoren zu aktivieren.

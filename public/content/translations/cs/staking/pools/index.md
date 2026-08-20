@@ -149,7 +149,7 @@ Od aktualizace Pectra mohou pooly také využívat výběry spouštěné z exeku
 Alternativně pooly, které využívají ERC-20 token likvidního stakingu, umožňují uživatelům obchodovat s tímto tokenem na otevřeném trhu, což vám umožňuje prodat vaši stakingovou pozici a efektivně „vybrat“ bez skutečného odstranění ETH ze stakingového kontraktu. Upozorňujeme, že tržní cena se může lišit od hodnoty směny tokenu.
 
 <ButtonLink href="/staking/withdrawals/">Více o výběrech ze stakingu</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Liší se to od stakingu na mé burze?">
 Mezi těmito možnostmi společného stakingu a centralizovanými burzami existuje mnoho podobností, jako je schopnost stakovat malá množství ETH a nechat je spojit dohromady k aktivaci validátorů.

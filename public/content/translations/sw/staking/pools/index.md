@@ -149,7 +149,7 @@ Tangu uboreshaji wa Pectra, mabwawa yanaweza pia kutumia utoaji unaochochewa na 
 Vinginevyo, mabwawa yanayotumia tokani ya uwekaji amana wenye ukwasi ya ERC-20 huruhusu watumiaji kufanya biashara ya tokeni hii katika soko la wazi, na kukuruhusu kuuza nafasi yako ya uwekaji dhamana, kwa ufanisi "kutoa" bila kuondoa ETH kutoka kwa mkataba wa uwekaji dhamana. Kumbuka kwamba bei ya soko inaweza kutofautiana na thamani ya ukombozi ya tokeni.
 
 <ButtonLink href="/staking/withdrawals/">Zaidi kuhusu utoaji wa uwekaji dhamana</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Je, hii ni tofauti na uwekaji dhamana kwenye soko langu la ubadilishanaji?">
 Kuna mfanano mwingi kati ya chaguzi hizi za uwekaji dhamana wa pamoja na mabadilishano yaliyowekwa kati, kama vile uwezo wa kuweka dhamana kiasi kidogo cha ETH na kuziunganisha pamoja ili kuwezesha wathibitishaji.

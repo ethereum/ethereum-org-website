@@ -149,7 +149,7 @@ Desde a atualização Pectra, os pools também podem usar saques acionados pela 
 Alternativamente, os pools que utilizam um token de staking líquido ERC-20 permitem que os usuários negociem esse token no mercado aberto, permitindo que você venda sua posição de staking, efetivamente "sacando" sem realmente remover o ETH do contrato de staking. Observe que o preço de mercado pode diferir do valor de resgate do token.
 
 <ButtonLink href="/staking/withdrawals/">Mais sobre saques de staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Isso é diferente de fazer staking na minha exchange?">
 Existem muitas semelhanças entre essas opções de staking em pool e as corretoras centralizadas, como a capacidade de fazer stake de pequenas quantias de ETH e tê-las agrupadas para ativar validadores.

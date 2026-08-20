@@ -135,7 +135,7 @@ summaryPoints:
 검증자는 완전히 종료할 수도 있으며, 이 경우 남은 전체 ETH 잔액이 잠금 해제됩니다. 종료 프로세스를 완료한 후, 후속 검증자 스윕 중에 전체 잔액이 인출 주소로 전송됩니다.
 
 <ButtonLink href="/staking/withdrawals/">스테이킹 인출에 대해 더 알아보기</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="제공자가 사라지거나 내 검증자를 종료하지 않으면 어떻게 되나요?" eventCategory="SaasStaking" eventName="clicked what if my provider disappears">
 인출 자격 증명이 사용자가 통제하는 주소를 가리키는 경우, 직접 검증자를 종료하고 스테이크를 회수할 수 있습니다. [신뢰 모델: 평가해야 할 사항](#trust-model-what-to-evaluate)을 참조하세요.

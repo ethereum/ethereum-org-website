@@ -135,7 +135,7 @@ summaryPoints:
 يمكن للمُدَقِّقين أيضًا الخروج بالكامل، مما يفتح رصيد <span dir="ltr">ETH</span> المتبقي بالكامل. بعد إكمال عملية الخروج، يتم تحويل الرصيد بالكامل إلى عنوان السحب أثناء عملية مسح لاحقة للمُدَقِّق.
 
 <ButtonLink href="/staking/withdrawals/">المزيد حول عمليات سحب التخزين</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="ماذا لو اختفى مزودي أو رفض إخراج المُدَقِّق الخاص بي؟" eventCategory="SaasStaking" eventName="clicked what if my provider disappears">
 إذا كانت بيانات اعتماد السحب الخاصة بك تشير إلى عنوان تتحكم فيه، فيمكنك الخروج من المُدَقِّق بنفسك واسترداد حصة التخزين الخاصة بك؛ انظر [نموذج الثقة: ما يجب تقييمه](#trust-model-what-to-evaluate).

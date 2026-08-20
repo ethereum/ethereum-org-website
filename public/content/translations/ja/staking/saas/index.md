@@ -135,7 +135,7 @@ summaryPoints:
 バリデータは完全にエグジットすることもでき、これにより残りのETH残高全体がロック解除されます。エグジットプロセスを完了した後、その後のバリデータスイープ中に全残高が引き出しアドレスに送金されます。
 
 <ButtonLink href="/staking/withdrawals/">ステーキングの引き出しの詳細</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="プロバイダーが消滅したり、バリデータをエグジットしてくれない場合はどうなりますか？" eventCategory="SaasStaking" eventName="clicked what if my provider disappears">
 出金クレデンシャルがあなたがコントロールするアドレスを指している場合、自分でバリデータをエグジットしてステークを回収できます。[トラストモデル：評価すべきこと](#trust-model-what-to-evaluate)を参照してください。
