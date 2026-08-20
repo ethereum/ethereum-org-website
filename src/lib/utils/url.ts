@@ -141,3 +141,11 @@ export const normalizeUrlForJsonLd = (
   const url = new URL(path, SITE_URL)
   return url.toString()
 }
+
+/**
+ * Devcon publishes its ticket page in English, Hindi, and Marathi only --
+ * every other locale falls back to `en` rather than 404ing on devcon.org.
+ * Can remove when Devcon VIII India banner completed
+ */
+export const getDevconTicketLink = (locale: Lang) =>
+  `https://devcon.org/${["hi", "mr"].includes(locale) ? locale : "en"}/tickets/`

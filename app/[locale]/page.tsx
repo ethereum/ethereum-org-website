@@ -1,4 +1,5 @@
 import { pick } from "lodash"
+import Image from "next/image"
 import { notFound } from "next/navigation"
 import {
   getMessages,
@@ -15,13 +16,22 @@ import LatestUpdates from "@/components/Homepage/LatestUpdates"
 import TrustLogos from "@/components/Homepage/TrustLogos"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
+import { Alert } from "@/components/ui/alert"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import { LinkWithArrow } from "@/components/ui/Link"
 import { SectionHeader, SectionTag } from "@/components/ui/section"
 
+import { formatDateRangeToParts } from "@/lib/utils/date"
 import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
+import { getDevconTicketLink } from "@/lib/utils/url"
 
-import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
+import {
+  DEFAULT_LOCALE,
+  DEVCON_INDIA_END_DATE,
+  DEVCON_INDIA_START_DATE,
+  LOCALES_CODES,
+} from "@/lib/constants"
 
 import {
   KPISection,
@@ -60,6 +70,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const { direction: dir } = getDirection(locale)
   const t = await getTranslations("page-index")
+  const tDevcon = await getTranslations("component-devcon-banner")
   const allMessages = await getMessages()
   const glossary = allMessages["glossary-tooltip"] as Record<string, string>
   const messages = {
@@ -83,6 +94,68 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     <>
       <IndexPageJsonLD locale={locale} />
       <I18nProvider locale={locale} messages={messages}>
+        <Alert
+          variant="banner"
+          className="relative bg-linear-to-b from-[#1A0D33] to-[#45326C]"
+        >
+          <Image
+            src="/images/assets/svgs/devcon-india-glyph.svg"
+            alt=""
+            width="93"
+            height="157"
+            className="absolute object-center opacity-10"
+          />
+
+          <div className="flex flex-1 items-center gap-x-8">
+            <Image
+              src="/images/assets/svgs/devcon-india-logo.svg"
+              alt={tDevcon("logo-alt")}
+              width="139"
+              height="60"
+              className="h-9.5 w-auto"
+            />
+            <div className="flex flex-col text-start text-nowrap max-lg:hidden">
+              <div>
+                {formatDateRangeToParts(
+                  DEVCON_INDIA_START_DATE,
+                  DEVCON_INDIA_END_DATE,
+                  locale,
+                  {
+                    day: "2-digit",
+                    month: "long",
+                    year: "numeric",
+                    timeZone: "UTC",
+                  }
+                ).map(({ type, value }, idx) => (
+                  <span
+                    key={idx}
+                    className={type === "year" ? undefined : "font-semibold"}
+                  >
+                    {value}
+                  </span>
+                ))}
+              </div>
+              <div className="font-bold">{tDevcon("location")}</div>
+            </div>
+          </div>
+          <div className="flex flex-3 justify-center text-center text-xl font-black">
+            {tDevcon("headline")}
+          </div>
+          <div className="flex flex-1 justify-end">
+            <ButtonLink
+              href={getDevconTicketLink(locale)}
+              customEventOptions={{
+                eventCategory: "devcon",
+                eventAction: `get_tickets`,
+                eventName: "visit",
+              }}
+              hideArrow
+              className="rounded-full text-lg font-bold text-nowrap"
+            >
+              {tDevcon("cta-get-tickets")}
+            </ButtonLink>
+          </div>
+        </Alert>
         <MainArticle className="flex w-full flex-col items-center" dir={dir}>
           <HomeHero eventCategory={eventCategory} />
 

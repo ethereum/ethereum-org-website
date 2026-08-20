@@ -253,3 +253,6 @@ export const LINE_CLAMP_CLASS_MAPPING = {
   3: "line-clamp-3",
   4: "line-clamp-4",
 } as const
+
+export const DEVCON_INDIA_START_DATE = new Date(Date.UTC(2026, 10, 3, 6, 0, 0))
+export const DEVCON_INDIA_END_DATE = new Date(Date.UTC(2026, 10, 6, 18, 0, 0))

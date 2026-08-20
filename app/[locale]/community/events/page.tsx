@@ -32,11 +32,14 @@ import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { getLocaleYear } from "@/lib/utils/date"
+import { formatDateRangeToParts, getLocaleYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import { getDevconTicketLink } from "@/lib/utils/url"
 
 import communityHubs from "@/data/community-hubs"
+
+import { DEVCON_INDIA_END_DATE, DEVCON_INDIA_START_DATE } from "@/lib/constants"
 
 import ContinentTabs from "./_components/continent-tabs"
 import EventCard from "./_components/event-card"
@@ -46,6 +49,7 @@ import PageJsonLD from "./page-jsonld"
 import { getMeetupGroups, mapEventTranslations } from "./utils"
 
 import { getEventsData } from "@/lib/data"
+import devconIndiaBanner from "@/public/images/assets/devcon-india-banner.webp"
 import geodeLabsLogo from "@/public/images/community/geode-labs-logo.png"
 import heroImage from "@/public/images/enterprise-eth.png"
 import organizerImage from "@/public/images/people-learning.png"
@@ -57,6 +61,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const _events = (await getEventsData()) ?? []
 
   const t = await getTranslations("page-community-events")
+  const tDevcon = await getTranslations("component-devcon-banner")
 
   const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/community/events")
@@ -137,6 +142,70 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         title={t("page-events-hero-title", { year: getLocaleYear(locale) })}
         description={t("page-events-hero-subtitle")}
       />
+
+      {/* Devcon VIII India Banner */}
+      <aside className="relative isolate mx-page my-space-3x flex flex-col items-center gap-y-8 overflow-hidden rounded-4xl px-8 pt-8 pb-24 text-white sm:px-12">
+        <Image
+          src={devconIndiaBanner}
+          alt=""
+          fill
+          preload
+          sizes="100vw"
+          quality={90}
+          className="-z-20 object-cover object-bottom"
+        />
+        <div className="absolute inset-0 -z-10 bg-radial from-black/14 to-black/70" />
+        <div className="flex h-15 w-full items-center justify-between">
+          <Image
+            src="/images/assets/svgs/devcon-india-logo.svg"
+            alt={tDevcon("logo-alt")}
+            width="139"
+            height="60"
+          />
+          <div className="flex flex-col text-end text-nowrap">
+            <div>
+              {(["short", "long"] as const).map((month) => (
+                <span
+                  key={month}
+                  className={month === "short" ? "md:hidden" : "max-md:hidden"}
+                >
+                  {formatDateRangeToParts(
+                    DEVCON_INDIA_START_DATE,
+                    DEVCON_INDIA_END_DATE,
+                    locale,
+                    { day: "2-digit", month, year: "numeric", timeZone: "UTC" }
+                  ).map(({ type, value }, idx) => (
+                    <span
+                      key={idx}
+                      className={type === "year" ? undefined : "font-semibold"}
+                    >
+                      {value}
+                    </span>
+                  ))}
+                </span>
+              ))}
+            </div>
+            <div className="font-semibold">{tDevcon("location")}</div>
+          </div>
+        </div>
+        <p className="text-center text-5xl font-black text-balance text-shadow-[0_1px_2px_rgb(0_0_0/0.7),0_3px_8px_rgb(0_0_0/0.6),0_6px_28px_rgb(0_0_0/0.55)]">
+          {tDevcon("title")}
+        </p>
+        <p className="text-center text-2xl font-medium text-shadow-[0_1px_2px_rgb(0_0_0/0.7),0_3px_8px_rgb(0_0_0/0.6),0_6px_28px_rgb(0_0_0/0.55)]">
+          {tDevcon("subtitle")}
+        </p>
+        <ButtonLink
+          href={getDevconTicketLink(locale)}
+          customEventOptions={{
+            eventCategory: "devcon",
+            eventAction: `get_tickets`,
+            eventName: "visit",
+          }}
+          size="lg"
+        >
+          {tDevcon("cta-get-tickets")}
+        </ButtonLink>
+      </aside>
 
       {/* What's on this page? + TabNav */}
       <StickyContainer className="top-6 space-y-4 p-4 md:top-2 md:p-8">
