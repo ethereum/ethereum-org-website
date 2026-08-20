@@ -72,3 +72,11 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 **Notes:**
 
 - All 13 matched glossary terms exact. `シールド/アンシールド` is the katakana term of art -- correct, not the 保護 trap.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 7.7/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+ALL 14 section headings left in English in staking/pools AND staking/saas -- saas was a regression (dev had them in Japanese), pools was already broken on dev. Only locale with this defect. Interpunct drops on glossary compounds (スマートコントラクト, シードフレーズ, ステーキングプール). Polite register uniform across all 6 files.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.

@@ -41,3 +41,11 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 **Notes:**
 
 - Full glossary compliance on all load-bearing terms; `blindaje/desblindaje` is the correct privacy-pool reading of shield/unshield and the model the pt-br fix was based on.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 7.3/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Negation inversion at dvt:84 (postverbal `ningún` without preverbal `no` reversed a fault-tolerance claim). dvt conflated staking pool/pooled staking. Register REGRESSED: this run flipped pools and solo from usted to tú while siblings stayed usted, so the section now switches register between linked pages.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.

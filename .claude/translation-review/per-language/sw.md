@@ -53,3 +53,11 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 
 - Zero glossary deviations across all 14 terms, notable given sw's thin precedent. None of the `mteja`/`kiteja` errors from PR #19015 recur. The ICU plural class change (`mtandao`/`mitandao`) is handled correctly.
 - Latent #54 risk: `imewekwa`/`haijawekwa wazi`/`inabadilika` carry class-9 concord for `Ada`; a future `device` (class 7 `Kifaa`) + text value would need `hakijawekwa wazi`.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 5.6/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Lowest in the fleet. Software `client` rendered `mteja` (animate = customer) at ~85 sites across 5 files -- 2.7x the 31 sites fixed in #19015. CRITICAL NUANCE: ETHGlossary itself mandates `mteja wa mwafaka` for consensus client and `anuwai ya wateja` for client diversity, so 27 hits were correct and a blind sweep would corrupt them. Also `zawadi` (free gift) for reward, `Inayoaminika` inverting a Trustless warning, `Badilishano` (the swap) as subject of custody sentences, a self-sovereign/solo tautology, and a malformed `Pedi ya Kuzindulia Uwekezaji Dhamana` for Staking Launchpad.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
