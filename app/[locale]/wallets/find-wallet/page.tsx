@@ -1,4 +1,4 @@
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 import type { ReactNode } from "react"
 
 import type { FileContributor, Lang, PageParams } from "@/lib/types"
@@ -37,7 +37,6 @@ const Page = async (props: {
 }) => {
   const { locale } = await props.params
   const { catalogVariant, legacyBody } = props
-  setRequestLocale(locale)
 
   const t = await getTranslations({
     locale,
@@ -110,7 +109,6 @@ export async function generateMetadata(props: {
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await props.params
-  setRequestLocale(locale)
 
   const t = await getTranslations({
     locale,

@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { VideoData } from "@/lib/types"
 
@@ -30,7 +30,6 @@ const VideoLandingPage = async (props: {
   const { locale, slug } = await props.params
 
   // Set locale before next-intl APIs so on-demand renders stay static
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-videos")
 
@@ -113,7 +112,6 @@ export async function generateMetadata(props: {
   const { locale, slug } = await props.params
 
   // Set locale before next-intl APIs so on-demand renders stay static
-  setRequestLocale(locale)
 
   let data
   try {

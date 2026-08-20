@@ -1,6 +1,5 @@
 import { generatePermutations, getPrecomputed } from "flags/next"
 import { notFound } from "next/navigation"
-import { setRequestLocale } from "next-intl/server"
 
 import type { Lang } from "@/lib/types"
 
@@ -61,8 +60,6 @@ export default async function PrecomputedFindWalletPage(props: {
   const { locale, code } = await props.params
 
   if (locale !== DEFAULT_LOCALE) notFound()
-
-  setRequestLocale(locale)
 
   let catalogVariant: number
   try {

@@ -1,7 +1,7 @@
 import { Suspense } from "react"
 import { pick } from "lodash"
 import { notFound } from "next/navigation"
-import { getMessages, setRequestLocale } from "next-intl/server"
+import { getMessages } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
@@ -41,7 +41,6 @@ export default async function LocaleLayout(props: {
   }
 
   // Enable static rendering
-  setRequestLocale(locale)
 
   const allMessages = await getMessages()
   const messages = pick(allMessages, "common")

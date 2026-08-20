@@ -12,11 +12,11 @@ import { ibmPlexMono, inter } from "./fonts"
 
 import "@/styles/global.css"
 
-// This root not-found boundary must stay self-contained and use only
-// explicit-locale next-intl APIs. In dev, Next.js renders it alongside every
-// page request within the same request-scoped cache, so calling
-// `setRequestLocale` (directly or by reusing `LocaleLayout`) or any implicit
-// API (`getTranslations()`, `getLocale()`, ...) here poisons the locale of the
+// This boundary renders outside the `[locale]` segment, so there is no root
+// param to read: it must stay self-contained and use only explicit-locale
+// next-intl APIs. In dev, Next.js renders it alongside every page request
+// within the same request-scoped cache, so any implicit API
+// (`getTranslations()`, `getLocale()`, ...) here poisons the locale of the
 // actual page being rendered. It is only reached for locale-less paths the
 // proxy matcher excludes; localized 404s render via app/[locale]/not-found.tsx
 // with the full site chrome.

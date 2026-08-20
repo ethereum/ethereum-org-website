@@ -1,10 +1,6 @@
 import { Suspense } from "react"
 import { pick } from "lodash"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -43,7 +39,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const { locale } = params
 
   // Set locale before next-intl APIs so on-demand renders stay static
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-wallets")
 
@@ -389,7 +384,6 @@ export async function generateMetadata(props: {
   const { locale } = params
 
   // Set locale before next-intl APIs so on-demand renders stay static
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-wallets")
 

@@ -1,4 +1,4 @@
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, ToCItem } from "@/lib/types"
 
@@ -22,8 +22,6 @@ import heroImg from "@/public/images/ethereum-history-founder-and-ownership/ethe
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-ethereum-history-founder-and-ownership")
 
@@ -524,8 +522,6 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-ethereum-history-founder-and-ownership")
 

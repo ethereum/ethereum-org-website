@@ -221,6 +221,9 @@ module.exports = (phase) => {
       ...experimental,
       // Restore client-side Router Cache durations to Next 14 defaults
       staleTimes: { dynamic: 30, static: 300 },
+      // Serves app/global-not-found.tsx for locale-less 404s, which replaces
+      // the pass-through root layout that app/not-found.tsx used to need.
+      globalNotFound: true,
     },
   }
 

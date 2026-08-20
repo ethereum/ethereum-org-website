@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { PageParams } from "@/lib/types"
 
@@ -33,7 +33,6 @@ const getPersona = (id: string) =>
 
 const Page = async (props: { params: Promise<PersonaPageParams> }) => {
   const { locale, persona: personaId } = await props.params
-  setRequestLocale(locale)
 
   if (!isWalletPersonaId(personaId)) notFound()
   const persona = getPersona(personaId)!
@@ -85,7 +84,6 @@ export async function generateMetadata(props: {
   params: Promise<PersonaPageParams>
 }) {
   const { locale, persona: personaId } = await props.params
-  setRequestLocale(locale)
 
   if (!isWalletPersonaId(personaId)) return {}
   const persona = getPersona(personaId)!
