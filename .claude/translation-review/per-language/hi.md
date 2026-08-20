@@ -37,3 +37,27 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
 - `actor` -> `पक्ष` (was अभिनेता, film performer) -- hi `learn-quizzes.json` already rendered the same English phrase correctly, which is what confirmed it. Open: `non-trusted setup` twice rendered with the *untrustworthy* reading, which ETHGlossary's `trustless` note explicitly warns against -- native call.
 - Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.5/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:** none -- no critical issues.
+
+**Open (native call needed):**
+
+- `fee-qualifier-free-under-fox-discounts` -> `के तहत` is the abstract "under/pursuant to" sense, not a numeric threshold; prefer `{usd} से कम पर मुफ़्त`. All four sibling Indic locales used a spatial word.
+- `fee-qualifier-of-rewards` -> `इनाम` (prize) vs the tree-dominant `पुरस्कार` for staking rewards (#56).
+- `nfts-hero-description` -> `आपके ... वस्तुओं` needs feminine `आपकी`; `पता लगाना` is weak for "explore".
+
+**Notes:**
+
+- All 12 matched glossary terms exact; fee cluster composes correctly under SOV with formal आप throughout.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 7.0/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Worst structural damage in the fleet and hi-only: 18 markdown links and JSX spans wrapped in backticks in staking/saas, killing every link on the page (0 on dev). Also a run-a-node table header reverted to English (only locale affected). Negation inversion at solo:220; must->should modal in a JSON risk disclosure; saas swung wholesale from glossary `पुरस्कार` to `इनाम` and from `कंपाउंडिंग` to the semantically wrong `संयोजित`. `अभिनेता` recurrence.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.

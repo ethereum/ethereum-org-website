@@ -49,5 +49,4 @@ export const upgrade: TopicConfig = {
       },
     ],
   },
-  showLastUpdatedInHero: true,
 }

@@ -54,3 +54,28 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
 - Second-highest of the fleet. Zero `智慧合约` regressions; `智能合约` correct throughout. No per-locale fixes needed beyond the fleet-wide items.
 - Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.3/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:** none -- no critical issues.
+
+**Open (native call needed):**
+
+- `nfts-hero-description` -> `数字藏品` is the ONLY occurrence of that term in `src/intl/zh/`; the repo uses `数字收藏品` in 5 other files. Worse, `数字藏品` is the term mainland platforms adopted for regulated, non-transferable domestic NFT substitutes, deliberately distanced from crypto NFTs -- a poor fit for an Ethereum NFT wallet page. Suggest `数字收藏品`. zh-tw correctly used the repo term.
+- `fee-label-shield-unshield` -> `屏蔽` is the established Zcash-Chinese rendering, but in mainland usage it overwhelmingly reads "block/mute/censor", and this same file uses `阻止` for "block your access". Flagging the ambiguity, not calling it wrong.
+- `fee-qualifier-per-card` -> `{value}/张卡` stacks the measure word oddly; `{value}/张` or `每张卡 {value}`.
+- `crops-secure` -> `安全` is byte-identical to `page-find-wallet-security`, losing the EN Security/Secure split; zh-tw distinguishes them.
+
+**Notes:**
+
+- All 13 glossary terms exact including the noun/verb bridge split (`跨链费` per the verb form, not the noun `跨链桥`). `你` consistent 21x with zero `您` leakage.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 8.0/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+`智慧合约` did NOT recur (all 23 sites correct); state is `状态`, zero `国家`; client is `客户端`. Remaining: `妥协` (concession) for security compromise, `验证者指数` (numerical index) for validator index -- a regression, dev had `索引`; JWT token as `代币`; and `slot` collapsed into `时段` (the epoch word) because zh has no slot entry. dvt flipped register 你->您 against its own prior state and 5 siblings.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.

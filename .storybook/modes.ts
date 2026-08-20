@@ -56,3 +56,14 @@ export const langViewportModes = Object.entries(
     ...currLangViewObj,
   }
 }, {})
+
+// Key must stay "en-lg": Chromatic stacks modes rather than replacing them,
+// de-duping by key, so this unions with langViewportModes down to its own 8.
+export const variantMode: LangViewModeObj = {
+  "en-lg": { viewport: "lg", locale: "en" },
+}
+
+export const staticModes: LangViewModeObj = {
+  "en-lg": { viewport: "lg", locale: "en" },
+  "ar-lg": { viewport: "lg", locale: "ar" },
+}

@@ -126,3 +126,28 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
 - `common.json` zero-knowledge-proofs root `براهين` -> `إثباتات` (ETHGlossary uses إثبات; learn-quizzes already had it right 9x). Brand transliterations still owed in `learn-quizzes.json`/`page-what-is-ethereum.json` (Optimism/Arbitrum/Aave/MakerDAO/ZK-STARK, `فاليديم`->`فاليديوم`) -- left for a native pass.
 - Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.6/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:** none -- no critical issues.
+
+**Open (native call needed):**
+
+- `hardware-hero-title` "long-term storage" -> `التخزين`, which ETHGlossary mandates for **staking** and this file uses for staking in 4 keys -- the hero now reads "wallets for long-term staking". Suggest `محافظ لحفظ الأصول على المدى الطويل`. Not a glossary deviation; the collision is induced by the glossary's own staking choice.
+- `fee-qualifier-free-under-fox-discounts` -> `مجانية أقل من {usd}` is telegraphic ("free less-than $1,000"); prefer `مجانية لما يقل عن {usd}`.
+- `see-all-wallets` is byte-identical to the pre-existing `-showing-all-wallets`. The CTA is right; the fix belongs on the status key (`يتم عرض جميع المحافظ`).
+
+**Notes:**
+
+- Isolates verified: 42 U+2066 / 42 U+2069, zero unbalanced, no legacy embedding controls. Applied inconsistently though -- Latin literals are isolated, every fee-cluster placeholder is bare. Bidi ordering resolved by hand for `{value}/بطاقة`, `{value}/شهر` and the nested-paren L2 string: all correct under RTL base direction, so consistency item only.
+- Zero glossary deviations across all 14 matched terms.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 7.9/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Solvency slip `ملاءمة`->`ملاءة` in a saas risk bullet; `fork` as `الشوكات` (cutlery) vs glossary `تفرع`; English dates bidi-isolated in page-staking.json (recurrence of #18772); frontmatter LRI wrapping pure Arabic in dvt. Historic modes CLEAR: no `الدولة` for computational state, no GitHub garble, no MEV-as-vehicles, single consistent `إيثيريوم`.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.

@@ -10,9 +10,12 @@ import type { StorybookConfig } from "@storybook/nextjs"
  */
 const config: StorybookConfig = {
   stories: [
+    "./Overview.mdx",
+    // Recursive everywhere: a story nested a directory deeper than expected
+    // would otherwise never load, with no error to say so.
     "../src/components/**/*.stories.{ts,tsx}",
-    "../src/layouts/stories/*.stories.tsx",
-    "../src/styles/__stories__/*.stories.tsx",
+    "../src/layouts/**/*.stories.{ts,tsx}",
+    "../src/styles/**/*.stories.{ts,tsx}",
     "../app/**/*.stories.{ts,tsx}",
   ],
 
@@ -46,6 +49,13 @@ const config: StorybookConfig = {
       config.resolve.alias = {
         ...config.resolve.alias,
         "@/storybook/*": path.resolve(process.cwd(), ".storybook"),
+        // Async server components render in the browser here, where the real
+        // helpers throw. See the shim's header for why this is a swap, not a
+        // fake. `$` keeps it an exact-request match.
+        "next-intl/server$": path.resolve(
+          process.cwd(),
+          ".storybook/next-intl-server.tsx"
+        ),
       }
     }
 

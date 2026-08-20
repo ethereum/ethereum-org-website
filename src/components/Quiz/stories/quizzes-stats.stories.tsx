@@ -1,0 +1,69 @@
+import type { Meta, StoryObj } from "@storybook/nextjs"
+
+import QuizzesStats from "../QuizzesStats"
+
+const meta = {
+  title: "Components / Features / Quiz / QuizzesStats",
+  component: QuizzesStats,
+  tags: ["autodocs"],
+  args: {
+    averageScoresArray: [],
+    completedQuizzes: {
+      "layer-2": [false, 0],
+      "run-a-node": [false, 0],
+      merge: [false, 0],
+      "staking-solo": [false, 0],
+      "what-is-ether": [false, 0],
+      "what-is-ethereum": [false, 0],
+      nfts: [false, 0],
+      scaling: [false, 0],
+      security: [false, 0],
+      wallets: [false, 0],
+      web3: [false, 0],
+      daos: [false, 0],
+      stablecoins: [false, 0],
+      "smart-contracts": [false, 0],
+      defi: [false, 0],
+      gas: [false, 0],
+      privacy: [false, 0],
+      "zero-knowledge-proofs": [false, 0],
+      "what-are-apps": [false, 0],
+      bridges: [false, 0],
+      payments: [false, 0],
+      blocks: [false, 0],
+      accounts: [false, 0],
+      "energy-consumption": [false, 0],
+      evm: [false, 0],
+      transactions: [false, 0],
+    },
+    totalCorrectAnswers: 0,
+  },
+} satisfies Meta<typeof QuizzesStats>
+
+export default meta
+
+type Story = StoryObj<typeof meta>
+
+export const StartingStats: Story = {}
+
+export const OneCompletedQuiz = {
+  args: {
+    averageScoresArray: [100],
+    completedQuizzes: {
+      ...meta.args.completedQuizzes,
+      "layer-2": [true, 4],
+    },
+    totalCorrectAnswers: 4,
+  },
+} satisfies Story
+
+export const HasIncompleteQuiz: Story = {
+  args: {
+    averageScoresArray: [...OneCompletedQuiz.args.averageScoresArray, 50],
+    completedQuizzes: {
+      ...OneCompletedQuiz.args.completedQuizzes,
+      "what-is-ether": [false, 2],
+    },
+    totalCorrectAnswers: OneCompletedQuiz.args.totalCorrectAnswers + 2,
+  },
+}

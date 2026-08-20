@@ -384,13 +384,7 @@ import { Input } from "@/components/ui/input"
 
 **Props**: `size: md | sm`, `hasError: boolean`. (Default omits `size` from `InputHTMLAttributes` to free the prop.)
 
-### `Textarea`
-
-```tsx
-import { Textarea } from "@/components/ui/textarea"
-```
-
-Same shape as `Input`.
+> `Textarea` was removed in August 2026 (zero consumers after the enterprise-page deprecation). It was the stock shadcn primitive -- re-add from shadcn if a multi-line input is ever needed.
 
 ### `Checkbox` / `Switch`
 
@@ -492,8 +486,8 @@ Notice/callout primitive. Covers both inline article callouts and the full-bleed
 - `AlertContent` -- wraps the body (flex column, takes remaining width)
 - `AlertTitle` -- bold standard-font-size lead-in line for an alert. Renders `<p>` (not a heading -- changed from `<h6>` to avoid jumping heading levels in flow content); `asChild` available for `Slot`. **Use this whenever an alert needs a bold opening line** -- don't roll your own `<p><strong>...</strong></p>`.
 - `AlertDescription` -- prose container for the alert body. Handles paragraph spacing internally (first `<p>` has `mt-0`, last has `mb-0`, others have `mb-4`). **Wrap body paragraphs in this** -- don't apply your own `mt-`/`mb-` classes to paragraphs inside an Alert.
-- `AlertEmoji` -- emoji glyph aligned to start
-- `AlertIcon` -- Lucide-style SVG slot (inherits variant's text color)
+- `AlertEmoji` -- **deprecated**: emoji glyph aligned to start. Alert glyphs are moving to Lucide icons; use `AlertIcon` for new content
+- `AlertIcon` -- Lucide-style SVG slot (inherits variant's text color). Child SVG is 24px; `size="lg"` (40px) and `size="xl"` (48px) scale it up -- use the variant, not a `[&>svg]:size-*` override
 - `AlertCloseButton` -- dismiss button (`<X />`)
 
 **Anti-pattern**: don't manually compose a bold-lead-in-plus-body shape with inline `<strong>` and margin classes:
@@ -790,13 +784,7 @@ The remaining `*Banner*`-named files at the root of `src/components/` are:
 - `TranslationBanner` -- floating Arabic/Urdu translation feedback CTA; still a raw `<aside>` (deprecation candidate -- could be migrated to `<Alert variant="banner">` next time it's touched)
 - (The legacy `Callout` / `CalloutBanner` / `CalloutSSR` / `CalloutBannerSSR` files at the root of `src/components/` were unified into `@/components/ui/callout` — see `canonical-imports.md` and `callout-walkthrough.md`. Unrelated to the top-of-page ribbon.)
 
-### `Faq`
-
-```tsx
-import { Faq, FaqContent, FaqItem, FaqTrigger } from "@/components/Faq"
-```
-
-Compositional FAQ primitive. Stories exist; ready for use in pages that need an expandable Q&A list.
+> `Faq` (a compositional Q&A wrapper over the Accordion primitives) was removed in August 2026 -- its last consumers were the enterprise pages. For an expandable Q&A list today, reach for `ExpandableCard` (`@/components/ExpandableCard`), which is where recent designs land. If a centralized topic-tagged FAQ dataset ever arrives, the old component is restorable from git history (`src/components/Faq/`) but is unlikely to be the right basis.
 
 ### `MdComponents`
 
@@ -809,7 +797,9 @@ The shortcode registry for markdown content. To add a markdown shortcode, add th
 
 ### `MarkdownVideo` (markdown clips)
 
-Renders `![](./x.mp4)` in markdown content (reached via `MarkdownImage`; not imported in app code) — the modern GIF replacement: silent, looping, plays only while on-screen, controls instead of autoplay under `prefers-reduced-motion`.
+Renders `![](./x.mp4)` in markdown content (reached via `MarkdownImage`; not imported in app code) — the modern GIF replacement: silent, looping, plays only while on-screen, no autoplay under `prefers-reduced-motion`.
+
+**Playback controls are always visible** so any user can stop the looping motion (WCAG 2.2.2) — a clip that loops past 5s needs a pause affordance, not one gated on `prefers-reduced-motion`. A user pause is latched in a ref and suppresses the in-view autoplay branch, otherwise scrolling away and back restarts the clip they just stopped. PiP/cast/download are turned off (`controlsList`, `disablePictureInPicture`, `disableRemotePlayback`) to keep the control surface minimal on decorative clips. Keep `preload="metadata"`: these clips are offscreen-gated by design, and `auto` downloads every clip on the page in full at load.
 
 **Sizing convention**: an optional `#WxH` fragment on the markdown src declares the clip's intrinsic dimensions — `![](./demo.mp4#800x400)` — and sizes the box to the clip's own aspect ratio (landscape fills the content width; taller-than-wide is height-capped). Without it, a fixed 16:9 box (9:16 via the `-portrait` filename suffix) letterboxes the clip with `object-contain`.
 
@@ -821,6 +811,21 @@ Use the fragment for any off-ratio clip — screen captures usually are. It's pr
 
 - `@/components/PageHero` (old default export) -- the canonical `PageHero` is a named export from `@/components/Hero`.
 - `@/hooks/useColorModeValue` -- Chakra leftover; use Tailwind `dark:` variant
+
+### Removed August 2026 (restorable from git history)
+
+Deleted as part of the Storybook reorg (issue #18967, Phase 0) after verifying zero consumers -- alias imports, relative imports, the MDX registry, and markdown tags across all locales. Listed so a future search finds the removal rather than assuming the component never existed:
+
+- `Faq/` -- see the note in the Content section above; prefer `ExpandableCard`
+- `ui/textarea.tsx` -- stock shadcn primitive, re-addable from shadcn
+- `CodeModal.tsx`
+- `GitStars.tsx`
+- `IntersectionObserverReveal.tsx` -- its `ValuesMarquee` integration was removed
+- `StatErrorMessage.tsx`
+- `UpgradeTableOfContents.tsx`
+- `ScrollDepthTracker.tsx` -- built for the Feb 2026 homepage A/B test
+
+`src/components/AB/` looks equally orphaned but is **kept deliberately** -- zero consumers is the normal state between experiments. See `docs/ab-testing.md`.
 
 ### Markdown shortcode wrapper
 

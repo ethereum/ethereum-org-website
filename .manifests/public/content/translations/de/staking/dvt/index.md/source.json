@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/staking/dvt/index.md",
-  "generatedAt": "2026-06-08T10:58:59.221Z",
-  "rootHash": "eea73d61bda6",
+  "generatedAt": "2026-08-19T20:24:58.030Z",
+  "rootHash": "5d92f8d85fb9",
   "tree": {
-    "contentHash": "69e23a2a5b01",
-    "anchorHash": "f1b4b101dc0d",
+    "contentHash": "2304b4d81e49",
+    "anchorHash": "9097080b0697",
     "children": {
       "frontmatter:title": {
         "contentHash": "0585efee2b31",
@@ -19,16 +19,79 @@
         "contentHash": "e3b0c44298fc",
         "anchorHash": "dbd3a49d0d90"
       },
-      "prose:1": {
-        "contentHash": "3975331d4b50",
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d9a998cac660"
+      },
+      "frontmatter:sidebarDepth": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d4735e3a265e"
+      },
+      "frontmatter:summaryPoints": {
+        "contentHash": "e3b0c44298fc",
         "anchorHash": "e3b0c44298fc"
       },
-      "image:0": {
-        "contentHash": "8c524fe832da",
-        "anchorHash": "b18e3622ecc8"
+      "what-is-dvt": {
+        "contentHash": "26fa97d45822",
+        "anchorHash": "2671510935b1",
+        "labelHash": "f77f3bb42b6a",
+        "children": {
+          "_label": {
+            "contentHash": "f77f3bb42b6a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "ccc589bfc44f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "8c524fe832da",
+            "anchorHash": "b18e3622ecc8"
+          },
+          "prose:5": {
+            "contentHash": "7b33577f3320",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "99b82be383a1",
+            "anchorHash": "5dd929c34d64"
+          },
+          "prose:6": {
+            "contentHash": "d61b8598e76a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "437284f002eb",
+            "anchorHash": "75d6b80b6fee"
+          },
+          "prose:7": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "29c6853bdc3a",
+            "anchorHash": "6b3c01636366"
+          },
+          "prose:8": {
+            "contentHash": "ef8c4b52870c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "image:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3",
+          "prose:8"
+        ]
       },
       "why-do-we-need-dvt": {
-        "contentHash": "e3806bc158e2",
+        "contentHash": "034b7abb14e4",
         "anchorHash": "e479a394cede",
         "labelHash": "8f39d3660dd9",
         "children": {
@@ -37,7 +100,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "security": {
-            "contentHash": "51f515b84bc9",
+            "contentHash": "65017d10cbd2",
             "anchorHash": "5eb493ceb97f",
             "labelHash": "8f6fb4eb7f42",
             "children": {
@@ -46,7 +109,7 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "prose:1": {
-                "contentHash": "62a23c82a6e2",
+                "contentHash": "dde11cead106",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:0": {
@@ -54,7 +117,7 @@
                 "anchorHash": "8a5edab28263"
               },
               "prose:2": {
-                "contentHash": "3fad2e3ce611",
+                "contentHash": "460ee4097366",
                 "anchorHash": "e3b0c44298fc"
               }
             },
@@ -66,7 +129,7 @@
             ]
           },
           "no-single-point-of-failure": {
-            "contentHash": "5b1e7c42f1c0",
+            "contentHash": "666676c8e59c",
             "anchorHash": "4b9f7d802648",
             "labelHash": "fcb2a077949f",
             "children": {
@@ -75,7 +138,7 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "prose:0": {
-                "contentHash": "aee9a2b477fb",
+                "contentHash": "024e79f120ae",
                 "anchorHash": "e3b0c44298fc"
               }
             },
@@ -112,7 +175,7 @@
         ]
       },
       "how-does-dvt-work": {
-        "contentHash": "364b430854df",
+        "contentHash": "4c2e6708909b",
         "anchorHash": "f30400e17e1d",
         "labelHash": "d9a1fca5e97e",
         "children": {
@@ -121,7 +184,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:5": {
-            "contentHash": "e4f7bfc17913",
+            "contentHash": "66f16e6bcaaa",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
@@ -137,7 +200,7 @@
             "anchorHash": "80f8ca9c6c61"
           },
           "prose:7": {
-            "contentHash": "c2edd54c602b",
+            "contentHash": "3bab54f5791d",
             "anchorHash": "e3b0c44298fc"
           },
           "link:2": {
@@ -161,7 +224,7 @@
             "anchorHash": "55935c2515b4"
           },
           "prose:10": {
-            "contentHash": "31788937084c",
+            "contentHash": "4e4daab7832a",
             "anchorHash": "e3b0c44298fc"
           }
         },
@@ -180,8 +243,67 @@
           "prose:10"
         ]
       },
+      "dvt-in-production": {
+        "contentHash": "ebd5aaef8843",
+        "anchorHash": "2a5bbb763e75",
+        "labelHash": "3b91ad184d0a",
+        "children": {
+          "_label": {
+            "contentHash": "3b91ad184d0a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "fef6bf3318f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "00ff0f9e8970",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "1c89c45b825a",
+            "anchorHash": "8975de99a995"
+          },
+          "prose:4": {
+            "contentHash": "2e9eabd02f6b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "986545704ab0",
+            "anchorHash": "6b3c01636366"
+          },
+          "prose:5": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "4f709e85c64d",
+            "anchorHash": "75d6b80b6fee"
+          },
+          "prose:6": {
+            "contentHash": "a3f2c9ef4d92",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6"
+        ]
+      },
       "dvt-use-cases": {
-        "contentHash": "90643538850c",
+        "contentHash": "2ad3c97d05a3",
         "anchorHash": "002e489a313f",
         "labelHash": "06dada86a590",
         "children": {
@@ -194,7 +316,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "solo-stakers": {
-            "contentHash": "5d140cd5b866",
+            "contentHash": "d4fdd1c7104a",
             "anchorHash": "4b9f7d802648",
             "labelHash": "99b82be383a1",
             "children": {
@@ -203,7 +325,7 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "prose:0": {
-                "contentHash": "10d3473a8423",
+                "contentHash": "a537748de50b",
                 "anchorHash": "e3b0c44298fc"
               }
             },
@@ -232,7 +354,7 @@
             ]
           },
           "staking-pools": {
-            "contentHash": "b74b6f45f67a",
+            "contentHash": "cd411a0d5b01",
             "anchorHash": "4b9f7d802648",
             "labelHash": "d2c3c6c36c0d",
             "children": {
@@ -241,7 +363,7 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "prose:0": {
-                "contentHash": "574865c0fafe",
+                "contentHash": "658790ef7c95",
                 "anchorHash": "e3b0c44298fc"
               }
             },
@@ -260,7 +382,7 @@
         ]
       },
       "potential-drawbacks-of-using-dvt": {
-        "contentHash": "4764348caef5",
+        "contentHash": "feea07c060e2",
         "anchorHash": "4b9f7d802648",
         "labelHash": "ab398c1ff440",
         "children": {
@@ -269,7 +391,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:0": {
-            "contentHash": "841298e1bd56",
+            "contentHash": "a81aab43d229",
             "anchorHash": "e3b0c44298fc"
           }
         },
@@ -278,48 +400,272 @@
           "prose:0"
         ]
       },
-      "further-reading": {
-        "contentHash": "4a82a9bd017a",
-        "anchorHash": "096c9ad71aa4",
-        "labelHash": "bd2e42f237b3",
+      "faq": {
+        "contentHash": "a961198387f0",
+        "anchorHash": "6a696f6ae1fc",
+        "labelHash": "e956a9404b46",
         "children": {
           "_label": {
-            "contentHash": "bd2e42f237b3",
+            "contentHash": "e956a9404b46",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:3": {
+          "component:1": {
+            "contentHash": "31b5db40e8a5",
+            "anchorHash": "8557c26070c6",
+            "children": {
+              "attr:title": {
+                "contentHash": "712abe010be7",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:eventCategory": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "3e5b486ca3a4"
+              },
+              "attr:eventName": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "648308f6866d"
+              },
+              "prose:0": {
+                "contentHash": "45d1b2eddbb2",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "attr:eventCategory",
+              "attr:eventName",
+              "prose:0"
+            ]
+          },
+          "component:2": {
+            "contentHash": "6953b28f04d9",
+            "anchorHash": "f0e242ad4194",
+            "children": {
+              "attr:title": {
+                "contentHash": "f8cdc809c80f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:eventCategory": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "3e5b486ca3a4"
+              },
+              "attr:eventName": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "c8e87767a8c8"
+              },
+              "prose:0": {
+                "contentHash": "5e3bfe4112e3",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "attr:eventCategory",
+              "attr:eventName",
+              "prose:0"
+            ]
+          },
+          "component:3": {
+            "contentHash": "8c1295955442",
+            "anchorHash": "c6ac332c4609",
+            "children": {
+              "attr:title": {
+                "contentHash": "73908ddcafd0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:eventCategory": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "3e5b486ca3a4"
+              },
+              "attr:eventName": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "555c57d1347e"
+              },
+              "prose:0": {
+                "contentHash": "49dc32f9100e",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "attr:eventCategory",
+              "attr:eventName",
+              "prose:0"
+            ]
+          },
+          "component:4": {
+            "contentHash": "d042a776c2a4",
+            "anchorHash": "cce819b62b5c",
+            "children": {
+              "attr:title": {
+                "contentHash": "a1a46dc3ae38",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:eventCategory": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "3e5b486ca3a4"
+              },
+              "attr:eventName": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "87f42d314715"
+              },
+              "prose:1": {
+                "contentHash": "fd79aaa2d39f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "c064eafcd742",
+                "anchorHash": "705befd78f37"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "attr:eventCategory",
+              "attr:eventName",
+              "prose:1",
+              "link:0"
+            ]
+          },
+          "component:5": {
+            "contentHash": "5ca5b2c613d0",
+            "anchorHash": "6025a9e44be6",
+            "children": {
+              "attr:title": {
+                "contentHash": "1bb0566b6d55",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:eventCategory": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "3e5b486ca3a4"
+              },
+              "attr:eventName": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "d1b47cb28abf"
+              },
+              "prose:1": {
+                "contentHash": "69bb0afa64ed",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "1439338b427a",
+                "anchorHash": "28704a15211d"
+              },
+              "prose:2": {
+                "contentHash": "8795485dc4f8",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "attr:eventCategory",
+              "attr:eventName",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "component:1",
+          "component:2",
+          "component:3",
+          "component:4",
+          "component:5"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "34a11bf76fa2",
+        "anchorHash": "e5c7e0c95f6c",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:8": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
-            "contentHash": "1309a0b92c13",
-            "anchorHash": "164f452ba69f"
+            "contentHash": "b10564737484",
+            "anchorHash": "8ffcdf73b7ba"
           },
-          "prose:4": {
-            "contentHash": "3973e022e932",
+          "prose:9": {
+            "contentHash": "2979fb6c210a",
             "anchorHash": "e3b0c44298fc"
           },
           "link:1": {
-            "contentHash": "ed5c85702f93",
-            "anchorHash": "d245482cf8f3"
+            "contentHash": "050f8b70f5c0",
+            "anchorHash": "9b5103f23364"
           },
-          "prose:5": {
-            "contentHash": "3973e022e932",
+          "prose:10": {
+            "contentHash": "7347ba5d4365",
             "anchorHash": "e3b0c44298fc"
           },
           "link:2": {
+            "contentHash": "1309a0b92c13",
+            "anchorHash": "164f452ba69f"
+          },
+          "prose:11": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "ed5c85702f93",
+            "anchorHash": "d245482cf8f3"
+          },
+          "prose:12": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "d8048d98333d",
+            "anchorHash": "dbb6af467c74"
+          },
+          "prose:13": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "fa759def24d8",
+            "anchorHash": "6013e165dd77"
+          },
+          "prose:14": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "e17766b440bb",
+            "anchorHash": "799c8e9b51c8"
+          },
+          "prose:15": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
             "contentHash": "886d2add1a7f",
             "anchorHash": "be8e0b952520"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:3",
+          "prose:8",
           "link:0",
-          "prose:4",
+          "prose:9",
           "link:1",
-          "prose:5",
-          "link:2"
+          "prose:10",
+          "link:2",
+          "prose:11",
+          "link:3",
+          "prose:12",
+          "link:4",
+          "prose:13",
+          "link:5",
+          "prose:14",
+          "link:6",
+          "prose:15",
+          "link:7"
         ]
       }
     },
@@ -327,14 +673,18 @@
       "frontmatter:title",
       "frontmatter:description",
       "frontmatter:lang",
-      "prose:1",
-      "image:0",
+      "frontmatter:template",
+      "frontmatter:sidebarDepth",
+      "frontmatter:summaryPoints",
+      "what-is-dvt",
       "why-do-we-need-dvt",
       "how-does-dvt-work",
+      "dvt-in-production",
       "dvt-use-cases",
       "potential-drawbacks-of-using-dvt",
+      "faq",
       "further-reading"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "9638e1f9f88c9e74ab4d15a11f3f6d1e782ff7f5"
 }
