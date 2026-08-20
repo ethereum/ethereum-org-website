@@ -153,6 +153,21 @@ cmd_reset() {
   log_info "✓ Worktree reset and updated"
 }
 
+# Fast-forward a release branch onto its origin counterpart before merging into
+# it. The worktree checks out the *local* ref, which on a dev machine is usually
+# stale; merging into it rewinds the branch and the push is rejected.
+sync_branch_to_origin() {
+  local branch="$1"
+  local ahead
+  ahead=$(run_in_workdir git rev-list --count "origin/$branch..$branch")
+  if [[ "$ahead" -gt 0 ]]; then
+    log_error "Local $branch has $ahead commit(s) not on origin/$branch."
+    log_error "Release branches must mirror origin. Resolve manually."
+    exit 1
+  fi
+  run_in_workdir_or_dry git reset --hard "origin/$branch"
+}
+
 cmd_preflight() {
   log_info "Running pre-flight checks..."
 
@@ -176,6 +191,7 @@ cmd_preflight() {
   # Fetch latest from origin
   log_info "Fetching latest from origin..."
   run_in_workdir git fetch origin
+  sync_branch_to_origin dev
 
   # Back-merge: master -> staging (if needed)
   log_info "Checking if master needs to be merged into staging..."
@@ -183,6 +199,7 @@ cmd_preflight() {
   if [[ "$MASTER_AHEAD" -gt 0 ]]; then
     log_info "Merging origin/master into staging ($MASTER_AHEAD commits)..."
     run_in_workdir_or_dry git checkout staging
+    sync_branch_to_origin staging
     run_in_workdir_or_dry git merge origin/master -m "Merge master into staging"
     run_in_workdir_or_dry git push origin staging
     run_in_workdir_or_dry git checkout dev
@@ -263,7 +280,9 @@ cmd_merge_staging() {
 
   log_info "Merging dev into staging..."
 
+  run_in_workdir git fetch origin
   run_in_workdir_or_dry git checkout staging
+  sync_branch_to_origin staging
   run_in_workdir_or_dry git merge dev -m "Merge dev into staging for release"
   run_in_workdir_or_dry git push origin staging
   run_in_workdir_or_dry git checkout dev
