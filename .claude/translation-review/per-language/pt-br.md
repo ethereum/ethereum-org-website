@@ -41,3 +41,11 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 **Notes:**
 
 - `fee-row-tooltip` still says `trocas (swaps)` -- a deliberate hybrid gloss, left in place.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 8.5/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+saas:71 turned "majority execution or consensus clients" into "the majority OF clients" while keeping English's singular `esse cliente` -- self-evidently wrong. `proponentes`->`propositores` (glossary compound). `resgate` used for claim, colliding with LST redemption. Ethereum and pool gender drifted feminine in JSON vs masculine in markdown.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.

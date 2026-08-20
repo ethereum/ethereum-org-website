@@ -71,3 +71,11 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 **Notes:**
 
 - All 13 glossary terms exact including the noun/verb bridge split (`跨链费` per the verb form, not the noun `跨链桥`). `你` consistent 21x with zero `您` leakage.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 8.0/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+`智慧合约` did NOT recur (all 23 sites correct); state is `状态`, zero `国家`; client is `客户端`. Remaining: `妥协` (concession) for security compromise, `验证者指数` (numerical index) for validator index -- a regression, dev had `索引`; JWT token as `代币`; and `slot` collapsed into `时段` (the epoch word) because zh has no slot entry. dvt flipped register 你->您 against its own prior state and 5 siblings.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.

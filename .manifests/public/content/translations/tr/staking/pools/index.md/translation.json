@@ -1,64 +1,76 @@
 {
   "version": 1,
   "locale": "tr",
-  "translatedAt": "2026-06-18T00:51:25.426Z",
-  "englishManifestHash": "979bb6321cee",
+  "translatedAt": "2026-08-19T20:41:55.756Z",
+  "englishManifestHash": "6c5b9e9f1a08",
   "placeholderOrder": [
-    "LINK-2698d7",
-    "COMPONENT-000e09",
-    "COMPONENT-8dcb6f",
-    "COMPONENT-eb0fd5",
     "LINK-a21a82",
-    "LINK-ea5158",
+    "LINK-4376df",
+    "LINK-2d5d7a",
+    "LINK-7e5c53",
+    "COMPONENT-fc6ad6",
+    "COMPONENT-ee8a9b",
+    "COMPONENT-1bdda8",
+    "LINK-7b68bc",
+    "LINK-8510c1",
+    "LINK-9edc37",
+    "LINK-aaff1a",
     "LINK-1ed7a5",
     "HTMLTAG-359785",
     "HTMLTAG-648984",
     "LINK-8bde19",
-    "COMPONENT-0a0748",
-    "COMPONENT-23d626",
-    "COMPONENT-990c74",
+    "COMPONENT-ec4aaf",
+    "COMPONENT-fa56d2",
+    "COMPONENT-4b5bf5",
+    "LINK-4376df",
     "LINK-11109b",
-    "LINK-20746f",
-    "LINK-b83f3e"
+    "LINK-eb0c0c",
+    "LINK-9aaab1",
+    "LINK-f4d082",
+    "LINK-513b14",
+    "LINK-edadb1"
   ],
   "placeholderMap": {
-    "COMPONENT-0a0748": {
+    "COMPONENT-ec4aaf": {
       "type": "component",
       "values": {
         "componentName": "ExpandableCard"
       }
     },
-    "COMPONENT-23d626": {
+    "COMPONENT-fa56d2": {
       "type": "component",
       "values": {
         "componentName": "ExpandableCard"
       }
     },
-    "COMPONENT-990c74": {
+    "COMPONENT-4b5bf5": {
       "type": "component",
       "values": {
         "componentName": "ExpandableCard"
       }
     },
-    "COMPONENT-000e09": {
-      "type": "component",
+    "LINK-4376df": {
+      "type": "link",
       "values": {
-        "componentName": "Card",
-        "emoji": "🐟"
+        "url": "#opaque-pooled-products"
       }
     },
-    "COMPONENT-8dcb6f": {
+    "COMPONENT-fc6ad6": {
       "type": "component",
       "values": {
-        "componentName": "Card",
-        "emoji": ":stopwatch:"
+        "componentName": "Card"
       }
     },
-    "COMPONENT-eb0fd5": {
+    "COMPONENT-ee8a9b": {
       "type": "component",
       "values": {
-        "componentName": "Card",
-        "emoji": ":droplet:"
+        "componentName": "Card"
+      }
+    },
+    "COMPONENT-1bdda8": {
+      "type": "component",
+      "values": {
+        "componentName": "Card"
       }
     },
     "HTMLTAG-359785": {
@@ -73,22 +85,46 @@
         "tagName": "em"
       }
     },
-    "LINK-2698d7": {
-      "type": "link",
-      "values": {
-        "url": "/staking/"
-      }
-    },
     "LINK-a21a82": {
       "type": "link",
       "values": {
         "url": "/"
       }
     },
-    "LINK-ea5158": {
+    "LINK-2d5d7a": {
       "type": "link",
       "values": {
-        "url": "https://notes.ethereum.org/@djrtwo/risks-of-lsd"
+        "url": "/staking/solo/"
+      }
+    },
+    "LINK-7e5c53": {
+      "type": "link",
+      "values": {
+        "url": "/staking/"
+      }
+    },
+    "LINK-7b68bc": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#defi"
+      }
+    },
+    "LINK-8510c1": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7002"
+      }
+    },
+    "LINK-9edc37": {
+      "type": "link",
+      "values": {
+        "url": "/staking/dvt/"
+      }
+    },
+    "LINK-aaff1a": {
+      "type": "link",
+      "values": {
+        "url": "/restaking/"
       }
     },
     "LINK-1ed7a5": {
@@ -109,22 +145,40 @@
         "url": "https://www.staking.directory/"
       }
     },
-    "LINK-20746f": {
+    "LINK-eb0c0c": {
       "type": "link",
       "values": {
-        "url": "https://docs.rocketpool.net/guides/staking/overview.html"
+        "url": "https://notes.ethereum.org/@djrtwo/risks-of-lsd"
       }
     },
-    "LINK-b83f3e": {
+    "LINK-9aaab1": {
       "type": "link",
       "values": {
-        "url": "https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido"
+        "url": "https://chain.link/education-hub/liquid-staking"
+      }
+    },
+    "LINK-f4d082": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7002"
+      }
+    },
+    "LINK-513b14": {
+      "type": "link",
+      "values": {
+        "url": "https://explorer.rated.network/"
+      }
+    },
+    "LINK-edadb1": {
+      "type": "link",
+      "values": {
+        "url": "https://liquidcollective.io/lst-vs-lrt/"
       }
     }
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-18T00:51:25.426Z",
+      "translatedAt": "2026-08-19T20:41:55.756Z",
       "status": "success"
     }
   }

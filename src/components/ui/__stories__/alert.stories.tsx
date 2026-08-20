@@ -20,7 +20,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "Inline alert/callout. Six `variant` colors (`info | error | success | warning | update | banner`); `banner` renders edge-to-edge with no border-radius for top-of-page use. Sub-components: `AlertContent`, `AlertTitle`, `AlertDescription`, `AlertIcon` (lucide or other SVG), `AlertEmoji`, `AlertCloseButton`.",
+          "Inline alert/callout. Six `variant` colors (`info | error | success | warning | update | banner`); `banner` renders edge-to-edge with no border-radius for top-of-page use. Sub-components: `AlertContent`, `AlertTitle`, `AlertDescription`, `AlertIcon` (lucide or other SVG), `AlertEmoji` (deprecated), `AlertCloseButton`.",
       },
     },
     layout: "none",
@@ -98,7 +98,7 @@ export const WithIcon: Story = {
     docs: {
       description: {
         story:
-          "`AlertIcon` wraps an SVG icon with `[&>svg]:size-6` to constrain size. Icon color inherits from the variant via the alert's `**:[svg]:text-*` class.",
+          '`AlertIcon` wraps an SVG icon, constraining it to 24px; `size="lg"` (40px) and `size="xl"` (48px) scale it up. Icon color inherits from the variant via the alert\'s `**:[svg]:text-*` class.',
       },
     },
   },
@@ -152,7 +152,7 @@ export const WithEmoji: Story = {
     docs: {
       description: {
         story:
-          "`AlertEmoji` renders the project's `Emoji` component at `text-4xl` aligned to the start of the alert.",
+          "**Deprecated** -- use `AlertIcon` with a Lucide icon for new content. `AlertEmoji` renders the project's `Emoji` component at `text-4xl` aligned to the start of the alert.",
       },
     },
   },
