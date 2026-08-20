@@ -19,7 +19,7 @@
   "page-open-source-definition-title": "What does \"free and open source\" mean?",
   "page-open-source-definition-description-1": "<strong>Free/libre and open source software (FLOSS, also written FOSS)</strong> is software whose source code is public for anyone to <strong>run, study, share, and improve.</strong> Think of a dish that comes with its full recipe: you can check the ingredients, cook it yourself, pass it on, or make it better. Closed software keeps the recipe and ingredients secret, so one company decides what goes in, who may eat, and whether you ever find out.",
   "page-open-source-definition-examples-lead": "You have almost certainly used open source software today without noticing:",
-  "page-open-source-definition-example-linux": "<strong>Linux</strong>, the kernel inside every Android phone and most of the servers behind the websites you visit.",
+  "page-open-source-definition-example-linux": "<strong>Linux</strong>, the base of every Android phone and most of the servers behind the websites you visit.",
   "page-open-source-definition-example-firefox": "<strong>Firefox</strong>, one of the few major browsers with an independent engine of its own.",
   "page-open-source-definition-example-signal": "<strong>Signal</strong>, a messaging app whose encryption protocol also secures every WhatsApp message.",
   "page-open-source-definition-example-vlc": "<strong>VLC</strong>, the media player that opens the file nothing else will.",
