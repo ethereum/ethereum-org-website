@@ -794,3 +794,76 @@ EN `Holding for the long run?` came back as pl `Inwestujesz długoterminowo?`, r
 - **zh vs zh-tw are genuinely regionally differentiated, not a character conversion** — ~30 lexical divergences in the 47 new keys (網路/网络, 取得/获取, 匯入/导入, 自訂/自定义, 金鑰/密钥, 方案/套餐, 浮動/可变, 封鎖你的存取/阻止你的访问), plus zh-tw restructuring 4 of 5 persona titles rather than translating word-for-word. Character-set sweep: 417/418 unique CJK chars, all divergences pure S↔T counterparts, zero leakage either way. zh-tw's recurring `智慧合約` regression (#18344, #18772) did NOT recur.
 - **Review scale note:** 5 language-bloc agents (Latin-Romance/Germanic, Slavic+Turkic, Indic, East Asian, RTL+SEA/African) at ~5 locales each, not 3 role-agents per locale. For a single-file 47-key JSON payload this was the right calibration — 24x3 agents on ~9KB packets would have been waste. Deterministic sweeps (ICU parse, arg parity, isolate pairing, protected-token, numeral-system, identical-to-English) ran FIRST and were injected into every agent prompt as "already verified, do not re-report", which kept the reports free of placeholder noise.
 - **One agent finding was downgraded on verification** (#55): ta shield/unshield, where the proposed transliteration fix would have contradicted 29 established occurrences in the ta tree. Worth restating as method — the agent's reasoning was sound and its conclusion still wrong, because it never checked the tree.
+
+### 60. Positional anchor assignment desyncs when English gains an unanchored heading (CRITICAL — silent navigation break)
+
+The pipeline asks the model to carry `{#anchor}` ids through translation (`prompt-builder.ts`: "Preserve heading anchor IDs exactly as in English"). Given a file where some headings have anchors and some do not, the model zips the *sequence* of anchors onto the *sequence* of headings and skips the gaps — so every anchor lands on the wrong heading and the tail loses its anchors entirely.
+
+**Root cause is structural, not stochastic:** `extractSections()` in `incremental-translate.ts` indexes sections by `{#id}` and drops unanchored headings outright (`if (customId)`). Only h1–h4 require ids, so any `#####` heading is invisible to the section model.
+
+**Signature:** heading count and level sequence match English exactly, but the anchor sequence is offset by *n*, where *n* is the number of unanchored headings before the first anchored one. Fires identically in all 24 locales, because it is a deterministic reasoning error on a fixed input shape — not per-locale noise.
+
+**Why every existing sweep missed it:** the multiset of anchor values is unchanged, so href-parity passes; the anchors are non-empty, so the `{#}` check (pattern 23) passes; the file compiles, so MDX validation passes. Only heading↔anchor *correspondence* reveals it.
+
+**Detect:** compare `(level, anchor)` pairs positionally against the English source. `verify-structure.ts` check `heading-anchor`.
+
+**Fix:** reassign each translated heading the anchor of the English heading at the same index; strip anchors where English has none. Deterministic and language-independent — never ask a model to redo it.
+
+**Observed:** PR #19115, all 24 locales × `developers/docs/nodes-and-clients/run-a-node/index.md`, 33 of 44 headings wrong per locale, breaking 4 in-page links and the sidebar TOC in every language. The redesign added exactly three unanchored `#####` headings, and the offset was exactly three.
+
+### 61. Translatable JSX attributes revert to English when the surrounding block is retranslated (CRITICAL)
+
+`<Card title="...">` came back in English in all 24 locales while the `description` on the same tag was translated correctly. `origin/dev` had the titles translated, so the retranslation *lost* shipped work.
+
+**Signature:** within one JSX tag, one translatable attribute is translated and a sibling is not. A partially-translated `<Grid>` is the tell — in this case `Self-sovereignty` was translated in every locale while the two cards beside it were not, which proves the attribute is reachable and the miss is stochastic.
+
+**Cause:** attributes are not extracted as discrete translation units. `prompt-builder.ts` tells the model "TRANSLATE the values of: title, description" and "Preserve all JSX/HTML components and their attributes exactly" in the same rule block, then nothing verifies coverage.
+
+**Detect:** for each translatable attribute, compare the translated value against the English value positionally; flag matches. `verify-structure.ts` checks `attr-untranslated:*`. Note this check can legitimately fire (`Maintenance` is a French word), so it is warn-level, not error-level.
+
+**Recovery without a new MT run:** if the English attribute value is unchanged from the previous release, `git show origin/dev:<path>` already holds the correct translation — restore it verbatim. In PR #19115 this recovered 120 of 192 strings; another 23 came from the same page's own translated `h2`. Always exhaust these before generating anything.
+
+### 62. Whole heading-block translation miss (CRITICAL)
+
+`ja/staking/pools` and `ja/staking/saas` shipped with **all 14 section headings** byte-identical to English while their body prose was fully translated. Locale-specific: the other 23 locales were clean at 0/14. `dev` had the saas headings in Japanese, so it was a regression; pools was already broken on `dev` and had never been caught.
+
+**Detect:** count headings identical to English per file. A handful can be legitimate (`Hardware`); a majority means the block was never translated. `verify-structure.ts` check `headings-untranslated`.
+
+### 63. Model wraps links and inline JSX in backticks (CRITICAL — kills every link on the page)
+
+`hi/staking/saas/index.md` shipped 18 spans of the form `` `[text](/path)` `` and `` `<em style={{...}}>text</em>` ``. Inside a code span the markdown never becomes a link and the JSX renders as literal source, so every link on the page was dead. hi-only; the English control has zero backticked links.
+
+**Detect:** grep translated markdown for `` `\[[^\]]*\]\([^)]*\)` `` and `` `<[a-zA-Z][^`]*>` ``, with the English source as control.
+
+**Fix:** strip the wrapping backticks. Deterministic.
+
+### 64. Bidi isolates wrapping pure-RTL text in frontmatter (HIGH — RTL rendering)
+
+`ar` and `ur` `staking/dvt/index.md` wrapped whole Arabic/Urdu frontmatter values (`title`, `description`, all `summaryPoints`) in U+2066 LEFT-TO-RIGHT ISOLATE. The prompt correctly instructs the model to use U+2066/U+2069 for *Latin* fragments inside frontmatter (a `<span dir="ltr">` would break the YAML), and the model over-applied it to the entire value. An LRI forces LTR base direction over RTL text, so sentence-final punctuation renders on the wrong visual edge.
+
+**Detect:** find U+2066…U+2069 pairs whose contents contain no Latin letters or digits.
+
+**Fix:** strip the isolate pair, keep the text. Deterministic. Do **not** remove isolates that genuinely wrap Latin/numeric runs — those are correct.
+
+### 65. Methodology: the pipeline validates translation quality but not structural fidelity
+
+Patterns 60–64, plus 3 (duplicated wrapper closer), 22 (placeholder leak) and 23 (empty `{#}`), are all the same failure: **a mechanically-derivable invariant was delegated to the LLM and never checked afterward.** `output-validation.ts` checks refusals, truncation, frontmatter translation and code-fence placeholders — it does not check heading/anchor correspondence, JSX tag balance, component-name preservation, attribute coverage, internal-href parity, or whether the file compiles.
+
+That is why "every run causes regressions no matter how small": each generation rolls the dice on hundreds of structural details per file, and a green run only means the dice landed well. Prompt tuning is whack-a-mole; the invariants have to be *asserted*.
+
+`src/scripts/intl-pipeline/verify-structure.ts` is that assertion. Run against the pre-fix state of PR #19115 it reproduced every shipped defect class from the English source alone, in under a second, with no model involved. Two design rules keep it usable:
+
+- **Split severity.** Structural invariants that can never legitimately differ (anchors, tag multisets, hrefs, code fences, placeholder residue, JSON key/ICU parity) are `error` and fail the gate. Coverage heuristics that *can* legitimately match English are `warn`. A gate that false-fails gets switched off — which is how a pipeline runs a year without one.
+- **Run it before the commit step, not in review.** Everything it catches is cheaper to prevent than to triage across 24 locales.
+
+### All 24 languages -- staking redesign (6 MD + 1 JSON each), Reviewed PR #19115 (intl/pending-staking-redesign)
+- Feature-branch PR against `staking-redesign` (base PR #19030), 168 content files + 312 manifests. Fleet avg **7.8** -- the lowest recorded in this series, and the gap is almost entirely structural rather than linguistic.
+- Scores: pl 8.8, tr 8.6, pt-br/ru 8.5, de/fr/vi 8.2, te 8.1, cs/uk/zh/zh-tw 8.0, ar 7.9, bn/id 7.8, ja 7.7, it/mr/ur 7.6, es 7.3, ko/ta 7.2, hi 7.0, **sw 5.6**.
+- **The prose was good and the scaffolding failed.** Every locale had digit-exact numerals (32/2048/16 ETH, 115,200/day, 6.4-min epochs, the 400k-800k sweep table); slashing vs inactivity leak, custodial vs non-custodial, rebasing vs exchange-rate LSTs, and partial-withdrawal vs full-exit were kept distinct in all 24. What broke was patterns 60-64: 72 MDX build-breakers (pattern 3 recurrence), the fleet-wide anchor rotation, 192 reverted Card titles, 28 untranslated ja headings, 48 untranslated image alts, 18 backticked hi links, and ar/ur frontmatter isolates.
+- **Image `alt` text is untranslated in all 24 locales** on both files that have one. The pipeline does not extract markdown image alt text at all -- this is a coverage gap, not a generation miss, and it is presumably tree-wide beyond this PR.
+- **Recovery without new MT spend:** 143 of 192 Card titles came back from `origin/dev` (120) and from the same page's own translated `h2` (23); 6 ja headings from `dev`. Only 49 titles, 48 alts and 22 ja headings needed to be written. Establish this order -- prior release, then in-file equivalent, then glossary -- before spending on generation.
+- **Genuine per-locale criticals worth remembering:** sw rendered software `client` as `mteja` (animate = customer) at ~85 sites while ETHGlossary itself mandates `mteja wa mwafaka` for *consensus client*, so 27 of the hits were correct and a blind sweep would have broken them. te propagated a `స్టాకింగ్` ("stacking") misspelling out of a faulty ETHGlossary compound row into a page title and nav label. ta collapsed "custodial"/"has custody of" into `பாதுகாப்பு` ("safekeeping"), turning the centralized-exchange **risk** column into a safety claim. zh-tw called Rocket Pool a `礦池` (mining pool) -- a PoW/PoS inversion. Four locales misparsed "majority client" as "many clients", inverting a client-diversity risk bullet.
+- **JWT-token polysemy is a new glossary gap:** ta/zh/zh-tw all rendered the `jwtsecret` auth token with the crypto-`token` glossary entry (`வில்லை`/`代币`/`代幣`). ETHGlossary has no auth-token sense, so the correct forms (`டோக்கன்`/`令牌`/`權杖`) had to be supplied per locale. Same shape for `slot` in zh, which had no entry and got absorbed into `epoch` (`时段`).
+- **Recurring glossary-side defects (fix upstream, not per-file):** lowercase Latin parentheticals `(dvt)`/`(geth)`/`(lst)`/`(l2)` in hi/id/bn/tr/ur/mr (pattern 53 again); capitalized common nouns leaking mid-sentence in id (`Likuiditas`, `Epok`), ru (`Адрес`) and vi (`Địa chỉ`, `Giao thức`); the te `స్టాకింగ్` typo; ur `لامركزی` carrying Arabic kaf U+0643 instead of keheh U+06A9. Missing entries that caused real errors: `cold storage` (it invented "celle frigorifere" = refrigerated rooms), `externally owned account (EOA)`, `delegated staking`, `auth token`, `slot` (zh).
+- **Pre-existing defects surfaced but out of scope:** `mr/smart-contracts/index.md` carries 3 leaked `<HTML-PLACEHOLDER-COMPONENT-00000N />` tokens **on `dev`** -- reader-visible junk live on the site, and a new signature (sequential ids, not content hashes) versus pattern 22. `fr/developers/docs/accounts/index.md` has the same EOA custody inversion (`compte détenu par un tiers`) that this PR introduced in `withdrawals`.
+- **Review scale:** 24 review agents (one per locale, 7 files each) then 24 fix agents. Deterministic sweeps ran first and were injected as "already verified, do not re-report" -- but note that the anchor rotation was found by the *agents*, not the sweeps, because no sweep existed for it. Every fleet-wide finding was then re-verified deterministically before being acted on; two agent claims (a stale MDX read, and "anchor stripping looks unintended") were false and would have wasted a fix cycle if taken at face value.

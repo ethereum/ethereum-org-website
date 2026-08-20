@@ -41,3 +41,11 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 
 - `fee-qualifier-stablecoins-lower-l2` carries Devanagari `स्तर २` while the SAME file's `page-find-wallet-layer-2` reads `स्तर 2`. ETHGlossary's mr entry is `स्तर २ (l2)`; locale is split 96/67. Follows the glossary, CONTRADICTS the house Western-numeral rule -- bn resolved the identical conflict the opposite way. See #53; needs a locale-wide sweep plus glossary normalization, NOT a one-string fix.
 - Glossary compliance exact including the two native-word mandates (swap = अदलाबदल, bridge = सेतू).
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 7.6/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Indic loaded-polyseme bloc failure recurs at 4 sites: `कलाकार`/`अभिनेते` (performers) for actors (#19015 recurrence), `युक्तिवाद` (debating argument) for a CLI argument, `तडजोड` (concession) for security compromise, `प्रमुख` (chief) for chain head. `रिवॉर्ड्स`->`बक्षिसे`. JSON `विश्वसनीय` read as praise in a warning slot.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.

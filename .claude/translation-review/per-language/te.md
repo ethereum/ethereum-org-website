@@ -62,3 +62,11 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 
 - te's documented `-మని` reported-speech negation flip does not appear anywhere in this file.
 - The `ఫీజు`/`రుసుము` fee-word split predates this PR.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 8.1/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Signature `-మని` reported-directive inversion did NOT recur across ~25 negation-bearing sentences -- a real improvement. But saas propagated a `స్టాకింగ్` ("stacking") misspelling out of a faulty ETHGlossary row into its page title AND the site nav label; solo used `వ్యాలిడేటర్` 63x where 5 sibling pages use glossary `ధృవీకర్త`; and the glossary's verbal-noun `signing` form was pasted into 14 attributive slots needing a relative participle.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.

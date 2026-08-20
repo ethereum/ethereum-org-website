@@ -57,3 +57,11 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 **Notes:**
 
 - Strongest `fee-row-label` in its bloc (`수수료 부과 항목`). `쉴드/언쉴드` correctly transliterates the privacy-pool term.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 7.2/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Truncated word `스마트 컨트랙` (not a word). saas:71 rendered majority-client as `다수의` (many clients), inverting the risk. `Mainnet` left Latin against glossary. JSON risk bullet flattened "Your ETH is at stake" into "your ETH gets staked", removing the risk framing. Launchpad rendered 3 ways.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
