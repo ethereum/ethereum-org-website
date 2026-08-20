@@ -102,17 +102,11 @@
   "page-roadmap-fusaka-gas-title": "ガス・リミットとDoS耐性強化",
   "page-roadmap-fusaka-gas-item-1": "1トランザクションあたりのガス・リミットの上限を1,670万ガスに設定します",
   "page-roadmap-fusaka-gas-item-2": "デフォルトのガス・リミットを約6,000万に引き上げます（現在の4,500万から）",
-  "page-roadmap-fusaka-additional-title": "追加される可能性のある機能",
-  "page-roadmap-fusaka-additional-item-1": "UXを向上させるためのモバイルデバイス上のセキュアエンクレーブのサポート",
-  "page-roadmap-fusaka-additional-item-2": "ブロブ手数料市場の改善",
-  "page-roadmap-fusaka-additional-item-3": "バリデータの効率とネットワークパフォーマンスのさらなる改善",
   "page-roadmap-glamsterdam-epbs-title": "プロトコルに組み込まれたプロポーザー・ビルダー分離 (PBS)",
   "page-roadmap-glamsterdam-epbs-item-1": "ブロックの合意と処理を分離し、バリデータがより多くのデータを処理できるようにすることで、レイヤー1 (L1) のスケーリングを支援します",
   "page-roadmap-glamsterdam-epbs-item-2": "ビルダーをネイティブに統合することで、バリデータは外部ソフトウェアを信頼することなく、ブロックの組み立てを安全に外部委託できるようになります",
   "page-roadmap-glamsterdam-bal-title": "ブロックレベルのアクセスリスト",
   "page-roadmap-glamsterdam-bal-item-1": "個々のトランザクションではなく、ブロックレベルで必須のアクセスリストを導入します",
   "page-roadmap-glamsterdam-bal-item-2": "より高速な同期、並列実行、および並列ディスク読み取りのために、依存関係を事前にマッピングします",
-  "page-roadmap-glamsterdam-bal-item-3": "状態（ステート）を多用するアプリのガスを削減し、ガス費用の予測可能性を向上させます",
-  "page-roadmap-hegota-discussed-title": "Hegotáで計画中",
-  "page-roadmap-hegota-discussed-item-1": "提案は現在議論中です"
+  "page-roadmap-glamsterdam-bal-item-3": "状態（ステート）を多用するアプリのガスを削減し、ガス費用の予測可能性を向上させます"
 }

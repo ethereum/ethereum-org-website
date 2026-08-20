@@ -102,17 +102,11 @@
   "page-roadmap-fusaka-gas-title": "Límite de gas y fortalecimiento contra DoS",
   "page-roadmap-fusaka-gas-item-1": "Tope del límite de gas de 16.7M de gas por transacción",
   "page-roadmap-fusaka-gas-item-2": "Aumento del límite de gas predeterminado a ~60M (desde los 45M actuales)",
-  "page-roadmap-fusaka-additional-title": "Posibles características adicionales",
-  "page-roadmap-fusaka-additional-item-1": "Soporte para enclaves seguros en dispositivos móviles para mejorar la experiencia de usuario",
-  "page-roadmap-fusaka-additional-item-2": "Mejoras en el mercado de tarifas de blob",
-  "page-roadmap-fusaka-additional-item-3": "Más mejoras en la eficiencia del validador y el rendimiento de la red",
   "page-roadmap-glamsterdam-epbs-title": "Separación proponente-constructor (PBS) consagrada",
   "page-roadmap-glamsterdam-epbs-item-1": "Separa el acuerdo de bloques del procesamiento, lo que ayuda a escalar la capa 1 (l1) al permitir que los validadores procesen más datos",
   "page-roadmap-glamsterdam-epbs-item-2": "Integra de forma nativa a los constructores para que los validadores puedan subcontratar de forma segura el ensamblaje de bloques sin confiar en software externo",
   "page-roadmap-glamsterdam-bal-title": "Listas de acceso a nivel de bloque",
   "page-roadmap-glamsterdam-bal-item-1": "Introduce listas de acceso obligatorias a nivel de bloque, en lugar de para transacciones individuales",
   "page-roadmap-glamsterdam-bal-item-2": "Mapea las dependencias por adelantado para sincronizaciones más rápidas, ejecución paralela y lecturas de disco paralelas",
-  "page-roadmap-glamsterdam-bal-item-3": "Reduce el gas para aplicaciones con gran cantidad de estado y mejora la previsibilidad del costo del gas",
-  "page-roadmap-hegota-discussed-title": "Planeado para Hegotá",
-  "page-roadmap-hegota-discussed-item-1": "Las propuestas se encuentran actualmente en discusión"
+  "page-roadmap-glamsterdam-bal-item-3": "Reduce el gas para aplicaciones con gran cantidad de estado y mejora la previsibilidad del costo del gas"
 }

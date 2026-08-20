@@ -102,17 +102,11 @@
   "page-roadmap-fusaka-gas-title": "گیس کی حد اور DoS ہارڈننگ",
   "page-roadmap-fusaka-gas-item-1": "ٹرانزیکشن گیس کی زیادہ سے زیادہ حد فی ٹرانزیکشن ⁦16.7M⁩ گیس",
   "page-roadmap-fusaka-gas-item-2": "ڈیفالٹ گیس کی حد میں ⁦~60M⁩ تک اضافہ (موجودہ ⁦45M⁩ سے)",
-  "page-roadmap-fusaka-additional-title": "ممکنہ اضافی خصوصیات",
-  "page-roadmap-fusaka-additional-item-1": "صارف کے تجربے (UX) کو بہتر بنانے کے لیے موبائل آلات پر محفوظ انکلیوز کے لیے تعاون",
-  "page-roadmap-fusaka-additional-item-2": "بلاب فیس مارکیٹ میں بہتری",
-  "page-roadmap-fusaka-additional-item-3": "توثیق کار کی کارکردگی اور نیٹ ورک کی کارکردگی میں مزید بہتری",
   "page-roadmap-glamsterdam-epbs-title": "تجویز کنندہ-تعمیر کنندہ علیحدگی (پی بی ایس) کو شامل کرنا",
   "page-roadmap-glamsterdam-epbs-item-1": "بلاک کے معاہدے کو پروسیسنگ سے الگ کرتا ہے، جس سے توثیق کاروں کو زیادہ ڈیٹا پروسیس کرنے کی اجازت دے کر لیئر ۱ (l1) کو اسکیل کرنے میں مدد ملتی ہے",
   "page-roadmap-glamsterdam-epbs-item-2": "مقامی طور پر بلڈرز کو مربوط کرتا ہے تاکہ توثیق کار بیرونی سافٹ ویئر پر بھروسہ کیے بغیر بلاک اسمبلی کو محفوظ طریقے سے آؤٹ سورس کر سکیں",
   "page-roadmap-glamsterdam-bal-title": "بلاک لیول تک رسائی کی فہرستیں",
   "page-roadmap-glamsterdam-bal-item-1": "انفرادی ٹرانزیکشنز کے بجائے بلاک کی سطح پر لازمی رسائی کی فہرستیں متعارف کراتا ہے",
   "page-roadmap-glamsterdam-bal-item-2": "تیز تر مطابقت پذیری، متوازی نفاذ، اور متوازی ڈسک ریڈز کے لیے انحصار کو پہلے سے میپ کرتا ہے",
-  "page-roadmap-glamsterdam-bal-item-3": "بھاری حالت والی ایپس کے لیے گیس کو کم کرتا ہے اور گیس کی لاگت کی پیشین گوئی کو بہتر بناتا ہے",
-  "page-roadmap-hegota-discussed-title": "ہیگوٹا کے لیے منصوبہ بندی",
-  "page-roadmap-hegota-discussed-item-1": "تجاویز فی الحال زیر بحث ہیں"
+  "page-roadmap-glamsterdam-bal-item-3": "بھاری حالت والی ایپس کے لیے گیس کو کم کرتا ہے اور گیس کی لاگت کی پیشین گوئی کو بہتر بناتا ہے"
 }

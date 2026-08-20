@@ -102,17 +102,11 @@
   "page-roadmap-fusaka-gas-title": "Gas 限制與 DoS 防護強化",
   "page-roadmap-fusaka-gas-item-1": "每筆交易的 Gas 限制上限為 1,670 萬燃料",
   "page-roadmap-fusaka-gas-item-2": "預設 Gas 限制增加至約 6,000 萬（目前為 4,500 萬）",
-  "page-roadmap-fusaka-additional-title": "潛在的附加功能",
-  "page-roadmap-fusaka-additional-item-1": "支援行動裝置上的安全飛地 (secure enclaves) 以改善使用者體驗",
-  "page-roadmap-fusaka-additional-item-2": "blob 費用市場改進",
-  "page-roadmap-fusaka-additional-item-3": "進一步提升驗證者效率和網路效能",
   "page-roadmap-glamsterdam-epbs-title": "內建提案者與建構者分離",
   "page-roadmap-glamsterdam-epbs-item-1": "將區塊協議與處理分開，透過允許驗證者處理更多資料來幫助第一層 (L1) 擴展",
   "page-roadmap-glamsterdam-epbs-item-2": "原生整合建構者，讓驗證者可以安全地將區塊組裝外包，而無需信任外部軟體",
   "page-roadmap-glamsterdam-bal-title": "區塊級存取清單",
   "page-roadmap-glamsterdam-bal-item-1": "在區塊級別引入強制性存取清單，而不是針對個別交易",
   "page-roadmap-glamsterdam-bal-item-2": "預先映射依賴關係，以實現更快的同步、平行執行和平行磁碟讀取",
-  "page-roadmap-glamsterdam-bal-item-3": "降低狀態繁重應用程式的燃料，並提高燃料成本的可預測性",
-  "page-roadmap-hegota-discussed-title": "計畫於 Hegotá 升級",
-  "page-roadmap-hegota-discussed-item-1": "提案目前正在討論中"
+  "page-roadmap-glamsterdam-bal-item-3": "降低狀態繁重應用程式的燃料，並提高燃料成本的可預測性"
 }

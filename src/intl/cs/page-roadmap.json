@@ -102,17 +102,11 @@
   "page-roadmap-fusaka-gas-title": "Limit plynu a ochrana proti DoS",
   "page-roadmap-fusaka-gas-item-1": "Zastropování limitu plynu na 16,7 milionu gasu na transakci",
   "page-roadmap-fusaka-gas-item-2": "Zvýšení výchozího limitu plynu na ~60 milionů (ze současných 45 milionů)",
-  "page-roadmap-fusaka-additional-title": "Potenciální další funkce",
-  "page-roadmap-fusaka-additional-item-1": "Podpora bezpečných enkláv na mobilních zařízeních pro zlepšení uživatelské zkušenosti (UX)",
-  "page-roadmap-fusaka-additional-item-2": "Vylepšení trhu s poplatky za bloby",
-  "page-roadmap-fusaka-additional-item-3": "Další vylepšení efektivity validátorů a výkonu sítě",
   "page-roadmap-glamsterdam-epbs-title": "Zabudované oddělení navrhovatele a tvůrce (PBS)",
   "page-roadmap-glamsterdam-epbs-item-1": "Odděluje schvalování bloků od jejich zpracování, což pomáhá škálovat vrstvu 1 (l1) tím, že umožňuje validátorům zpracovávat více dat",
   "page-roadmap-glamsterdam-epbs-item-2": "Nativně integruje tvůrce, takže validátoři mohou bezpečně outsourcovat sestavování bloků, aniž by museli důvěřovat externímu softwaru",
   "page-roadmap-glamsterdam-bal-title": "Seznamy přístupů na úrovni bloku",
   "page-roadmap-glamsterdam-bal-item-1": "Zavádí povinné seznamy přístupů na úrovni bloku namísto pro jednotlivé transakce",
   "page-roadmap-glamsterdam-bal-item-2": "Mapuje závislosti předem pro rychlejší synchronizaci, paralelní provádění a paralelní čtení z disku",
-  "page-roadmap-glamsterdam-bal-item-3": "Snižuje gas pro aplikace náročné na stav a zlepšuje předvídatelnost nákladů na gas",
-  "page-roadmap-hegota-discussed-title": "Plánováno pro Hegotá",
-  "page-roadmap-hegota-discussed-item-1": "Návrhy se v současné době diskutují"
+  "page-roadmap-glamsterdam-bal-item-3": "Snižuje gas pro aplikace náročné na stav a zlepšuje předvídatelnost nákladů na gas"
 }
