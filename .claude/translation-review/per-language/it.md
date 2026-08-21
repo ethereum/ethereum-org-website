@@ -51,3 +51,14 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 Security-critical: `celle frigorifere` (refrigerated cold rooms) for "cold storage" in a key-custody sentence -- same class as #18925's Omoforma, and ETHGlossary has no `cold storage` entry for it. `contratti intelligenti` for smart contract at 3 sites. Historic stacked `per...per` and person/number breaks both recur.
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 9.5/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:** none needed -- zero criticals.
+
+
+**Open (native call needed):**
+
+- `programma del gas del testimone` -- "schedule" mis-resolved as timetable; it is a gas cost table.
+- `viene eseguito senza permesso` reads "run without authorisation" rather than "needs no permission".
+- `lego del denaro` breaks it-tree precedent (`mattoncini Lego`); this same line previously read `mattoncini Lego del denaro`.

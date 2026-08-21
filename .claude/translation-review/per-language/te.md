@@ -70,3 +70,21 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 Signature `-మని` reported-directive inversion did NOT recur across ~25 negation-bearing sentences -- a real improvement. But saas propagated a `స్టాకింగ్` ("stacking") misspelling out of a faulty ETHGlossary row into its page title AND the site nav label; solo used `వ్యాలిడేటర్` 63x where 5 sibling pages use glossary `ధృవీకర్త`; and the glossary's verbal-noun `signing` form was pasted into 14 attributive slots needing a relative participle.
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 8.2/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+- AI prompt-card fill-in blanks (`[app]`, `[my device]`, `[my system]`, `[this]`, `[this error]`, `[App]`) translated -- they were shipped as verbatim English.
+
+- `వ్యతిరేకంగా` (opposing) for "designing against standards" -- inverted the Design/UX guidance -> `ఆధారంగా`.
+- Agency inversion in `movement-description`: the organizations became the protected object instead of the defenders.
+- Dropped counterfactual "would otherwise" in `movement-wider-description`, listing paywalled research as free knowledge.
+
+**Open (native call needed):**
+
+- Three more non-inverting `against` sites from the same root cause.
+- `పంపిణీ`/`రవాణా` (freight) for "ship/ships".
+- `ఉత్పత్తి` (manufacturing) for "production infrastructure".
+- `ఆదిమాలు` for "primitives" against 6 prior `ప్రిమిటివ్‌ల*` uses.
+- `చెల్లించని వ్యక్తులచే` flips agency: "people who do not pay" for "unpaid people".
+- No ETHGlossary deviations at all, and the `స్టాకింగ్` glossary-data defect from #19115 did not recur.

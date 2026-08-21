@@ -60,3 +60,16 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 Meaning inversion at withdrawals:209 (`যতক্ষণ না` = until, English says as-long-as); `অভিনেতা` (film actor) for "actors" -- recurrence of #19015; `রিওয়ার্ড`->`পুরস্কার` in pools only; `লেনদেন`->`ট্রানজ্যাকশন` regression in run-a-node; `চুক্তি` (legal doc) for contract in 2 JSON keys. No untranslated prose, no cross-script contamination.
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 8.6/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+- AI prompt-card fill-in blanks (`[app]`, `[my device]`, `[my system]`, `[this]`, `[this error]`, `[App]`) translated -- they were shipped as verbatim English.
+
+- `হয়বিধা নেই` junk-syllable corruption destroying the negation in `page-open-source-local-ai-description-2` (3rd recurrence of this bn artifact family).
+- `চুক্তি` -> `কন্ট্রাক্ট` for smart contracts, against the glossary note that reserves `চুক্তি` for legal documents.
+
+**Open (native call needed):**
+
+- `কমিউনিটি` -> `সম্প্রদায়` regression at 4 sites (tree is 208:14 for `কমিউনিটি`).
+- bn files use precomposed U+09DF (NFC-excluded) -- pre-existing tree-wide, not a PR defect.

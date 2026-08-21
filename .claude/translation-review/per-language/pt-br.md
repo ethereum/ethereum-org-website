@@ -49,3 +49,17 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 saas:71 turned "majority execution or consensus clients" into "the majority OF clients" while keeping English's singular `esse cliente` -- self-evidently wrong. `proponentes`->`propositores` (glossary compound). `resgate` used for claim, colliding with LST redemption. Ethereum and pool gender drifted feminine in JSON vs masculine in markdown.
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 8.2/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Plus the locale-only extra file in this PR. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+
+- Dropped `anti-` prefix inverting "Ethereum's anti-denial-of-service model" (whitepaper L171). The pre-PR text was correct.
+- `aplicativo` -> `aplicação` for an invocation of `APPLY` (whitepaper L243); the identical clause at L86 was already correct.
+
+**Open (native call needed):**
+
+- `Robust Incentives Group` translated at 5 sites against pt-br's own 5:1 English precedent.
+- ETHGlossary *context* forms (`o Nethermind`, `a linguagem Solidity`) leaked into a bare product-name enumeration.
+- `(dapps)` acronym injected into the 2013 whitepaper where the source has none.
+- Namecoin gender flips masculine/feminine within the file.

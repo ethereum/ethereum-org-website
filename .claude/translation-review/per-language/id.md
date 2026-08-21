@@ -62,3 +62,16 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 dvt used `staking gabungan` (the pooled-staking form) for the pool entity at 9 sites. `hadiah` (gift) for reward -- recurrence of #19076. `simbol saham` (stock ticker) for crypto ticker. `obligasi` (debt security) for bond. Glossary-hygiene leakage recurrence (#18925): capitalized `Likuiditas`, lowercase `(lst)`/`(l2)`.
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 8.4/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+
+- `Rekt News` -> `Berita Rekt`. The pre-PR line was correct; regression.
+
+**Open (native call needed):**
+
+- Three-way `open source` split: `common.json` breadcrumb and the new page title use `open source`, but the new `page-values` CTA uses `sumber terbuka`. The CTA and the page it links to disagree. Tree favours `sumber terbuka` ~20:1 -- needs one locale-level decision.
+- `soundness` -> `keandalan` (reliability) at 3 sites; no established id form exists.
+- `telah tidak disadari` is ungrammatical (perfective + negation).
+- `salah satu` narrows a universal to an existential in `copyleft-description-3`.
