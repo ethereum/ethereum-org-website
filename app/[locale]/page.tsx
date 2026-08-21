@@ -19,6 +19,7 @@ import MainArticle from "@/components/MainArticle"
 import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { LinkWithArrow } from "@/components/ui/Link"
+import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { SectionHeader, SectionTag } from "@/components/ui/section"
 
 import { formatDateRangeToParts } from "@/lib/utils/date"
@@ -94,68 +95,75 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     <>
       <IndexPageJsonLD locale={locale} />
       <I18nProvider locale={locale} messages={messages}>
-        <Alert
-          variant="banner"
-          className="relative bg-linear-to-b from-[#1A0D33] to-[#45326C]"
-        >
-          <Image
-            src="/images/assets/svgs/devcon-india-glyph.svg"
-            alt=""
-            width="93"
-            height="157"
-            className="absolute object-center opacity-10"
-          />
-
-          <div className="flex flex-1 items-center gap-x-8">
+        {/* Devon VIII India alert banner */}
+        <LinkBox asChild>
+          <Alert
+            variant="banner"
+            className="relative bg-linear-to-b from-[#1A0D33] to-[#45326C]"
+          >
             <Image
-              src="/images/assets/svgs/devcon-india-logo.svg"
-              alt={tDevcon("logo-alt")}
-              width="139"
-              height="60"
-              className="h-9.5 w-auto"
+              src="/images/assets/svgs/devcon-india-glyph.svg"
+              alt=""
+              width="93"
+              height="157"
+              className="absolute object-center opacity-10"
             />
-            <div className="flex flex-col text-start text-nowrap max-lg:hidden">
-              <div>
-                {formatDateRangeToParts(
-                  DEVCON_INDIA_START_DATE,
-                  DEVCON_INDIA_END_DATE,
-                  locale,
-                  {
-                    day: "2-digit",
-                    month: "long",
-                    year: "numeric",
-                    timeZone: "UTC",
-                  }
-                ).map(({ type, value }, idx) => (
-                  <span
-                    key={idx}
-                    className={type === "year" ? undefined : "font-semibold"}
-                  >
-                    {value}
-                  </span>
-                ))}
+
+            <div className="flex flex-1 items-center gap-x-8">
+              <Image
+                src="/images/assets/svgs/devcon-india-logo.svg"
+                alt={tDevcon("logo-alt")}
+                width="139"
+                height="60"
+                className="h-9.5 w-auto"
+              />
+              <div className="flex flex-col text-start text-nowrap max-lg:hidden">
+                <div>
+                  {formatDateRangeToParts(
+                    DEVCON_INDIA_START_DATE,
+                    DEVCON_INDIA_END_DATE,
+                    locale,
+                    {
+                      day: "2-digit",
+                      month: "long",
+                      year: "numeric",
+                      timeZone: "UTC",
+                    }
+                  ).map(({ type, value }, idx) => (
+                    <span
+                      key={idx}
+                      className={type === "year" ? undefined : "font-semibold"}
+                    >
+                      {value}
+                    </span>
+                  ))}
+                </div>
+                <div className="font-bold">{tDevcon("location")}</div>
               </div>
-              <div className="font-bold">{tDevcon("location")}</div>
             </div>
-          </div>
-          <div className="flex flex-3 justify-center text-center text-xl font-black">
-            {tDevcon("headline")}
-          </div>
-          <div className="flex flex-1 justify-end">
-            <ButtonLink
-              href={DEVCON_INDIA_TICKET_URL}
-              customEventOptions={{
-                eventCategory: "devcon",
-                eventAction: `get_tickets`,
-                eventName: "visit",
-              }}
-              hideArrow
-              className="rounded-full text-lg font-bold text-nowrap"
-            >
-              {tDevcon("cta-get-tickets")}
-            </ButtonLink>
-          </div>
-        </Alert>
+            <div className="flex flex-3 justify-center text-center text-xl font-black">
+              {tDevcon("headline")}
+            </div>
+            <div className="flex flex-1 justify-end">
+              {/* Overlay stretches the CTA's hit area across the whole banner */}
+              <LinkOverlay asChild>
+                <ButtonLink
+                  href={DEVCON_INDIA_TICKET_URL}
+                  customEventOptions={{
+                    eventCategory: "devcon",
+                    eventAction: `get_tickets`,
+                    eventName: "visit",
+                  }}
+                  hideArrow
+                  className="rounded-full text-lg font-bold text-nowrap"
+                >
+                  {tDevcon("cta-get-tickets")}
+                </ButtonLink>
+              </LinkOverlay>
+            </div>
+          </Alert>
+        </LinkBox>
+
         <MainArticle className="flex w-full flex-col items-center" dir={dir}>
           <HomeHero eventCategory={eventCategory} />
 

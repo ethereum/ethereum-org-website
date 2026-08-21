@@ -19,7 +19,13 @@ import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
+import {
+  Card,
+  CardButtonFake,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card"
 import {
   EdgeScrollContainer,
   EdgeScrollItem,
@@ -146,8 +152,17 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         description={t("page-events-hero-subtitle")}
       />
 
-      {/* Devcon VIII India Banner */}
-      <aside className="relative isolate mx-page my-space-3x flex flex-col items-center gap-y-8 overflow-hidden rounded-4xl px-8 pt-8 pb-24 text-white sm:px-12">
+      {/* Devcon VIII India callout banner */}
+      <Card
+        href={DEVCON_INDIA_TICKET_URL}
+        customEventOptions={{
+          eventCategory: "devcon",
+          eventAction: `get_tickets`,
+          eventName: "visit",
+        }}
+        variant="ghost"
+        className="relative isolate mx-page my-space-3x flex flex-col items-center gap-y-8 overflow-hidden rounded-4xl px-8 pt-8 pb-24 text-white hover:bg-transparent hover:text-white sm:px-12"
+      >
         <Image
           src={devconIndiaBanner}
           alt=""
@@ -197,18 +212,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         <p className="text-center text-2xl font-medium text-shadow-[0_1px_2px_rgb(0_0_0/0.7),0_3px_8px_rgb(0_0_0/0.6),0_6px_28px_rgb(0_0_0/0.55)]">
           {tDevcon("subtitle")}
         </p>
-        <ButtonLink
-          href={DEVCON_INDIA_TICKET_URL}
-          customEventOptions={{
-            eventCategory: "devcon",
-            eventAction: `get_tickets`,
-            eventName: "visit",
-          }}
-          size="lg"
-        >
-          {tDevcon("cta-get-tickets")}
-        </ButtonLink>
-      </aside>
+        <CardButtonFake size="lg">{tDevcon("cta-get-tickets")}</CardButtonFake>
+      </Card>
 
       {/* What's on this page? + TabNav */}
       <StickyContainer className="top-6 space-y-4 p-4 md:top-2 md:p-8">
