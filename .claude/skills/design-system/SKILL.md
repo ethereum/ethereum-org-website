@@ -26,7 +26,7 @@ When the existing primitive doesn't quite fit, the answer is usually "add a vari
 2. **No raw color values.** Use semantic tokens (`text-body`, `bg-background`, `border-border`, `text-primary`). Hex literals and `rgb()` calls bypass dark mode.
 3. **Prefer adding a variant** to an existing primitive over creating a new component. Card, Button, Alert, Tag are the most common targets.
 4. **Server Components by default.** Only `"use client"` when you need state, effects, browser APIs, or inline event handlers.
-5. **All text is translatable.** `getTranslations` from `next-intl/server` (server) or `useTranslations` from `next-intl` (client). One namespace-bound `t` per namespace -- bind a second function (e.g. `const tCommon = useTranslations("common")`) to access another namespace. The legacy `@/hooks/useTranslation` wrapper is deprecated for new code. Never hard-code user-facing English. **In an `app/[locale]/` page or `generateMetadata`, call `setRequestLocale(locale)` before any next-intl API** or on-demand renders throw `static to dynamic ... reason: headers` -- see `references/i18n-rtl.md`.
+5. **All text is translatable.** `getTranslations` from `next-intl/server` (server) or `useTranslations` from `next-intl` (client). One namespace-bound `t` per namespace -- bind a second function (e.g. `const tCommon = useTranslations("common")`) to access another namespace. The legacy `@/hooks/useTranslation` wrapper is deprecated for new code. Never hard-code user-facing English. In Route Handlers and Server Actions, pass the locale explicitly (`getTranslations({ locale, namespace })`) -- `next/root-params` doesn't reach them yet. Everywhere else it resolves on its own -- see `references/i18n-rtl.md`.
 6. **Logical CSS for direction.** Use `ms-`/`me-`/`ps-`/`pe-`/`inset-s-`/`inset-e-`/`border-s`/`border-e`/`text-start`/`text-end`. The site supports Arabic and Urdu (RTL). Hard-coded `left-`/`right-`/`ml-`/`mr-`/`pl-`/`pr-` breaks RTL.
 7. **Locale-aware formatters.** `numberFormat()` from `@/lib/utils/numbers`, `dateTimeFormat()` from `@/lib/utils/date`. Never `toLocaleString` / `Intl.NumberFormat` directly.
 8. **`useRtlFlip()` for directional icons** (right-pointing arrows/chevrons). Or use `ChevronNext`/`ChevronPrev` from `@/components/Chevron`.
@@ -89,7 +89,7 @@ Pull these in only when the trigger applies. Don't read them all upfront.
 - **`references/gotchas.md`** -- unexpected primitive behavior; the long-tail confusion patterns.
 - **`references/variant-vs-new.md`** -- before creating any new component file.
 - **`references/cleanup-playbook.md`** -- refactoring existing anti-patterns; the "old pattern -> new pattern" map.
-- **`references/i18n-rtl.md`** -- user-facing text, number/date formatting, RTL, translation keys, `setRequestLocale`.
+- **`references/i18n-rtl.md`** -- user-facing text, number/date formatting, RTL, translation keys.
 - **`references/server-vs-client.md`** -- `"use client"` decisions and SSR-boundary structure.
 - **`references/a11y.md`** -- interactive elements, forms, images, heading hierarchy.
 - **`references/card-walkthrough.md`** -- any card-shaped UI work.
