@@ -48,3 +48,14 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 Zero ETHGlossary deviations -- the cleanest terminology in the fleet. Verbless sentence at solo:198; `Bindung`->`Kaution` for bond in JSON; majority-client misparse at saas:71. du/Sie split persists (saas is du, six files are Sie) but is pre-existing, not a regression.
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 9.4/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+
+- `Verfügbarkeits-/Finalitäts-Dilemma` -> `Endgültigkeits-Dilemma`. A regression: the pre-PR line on `origin/dev` already had the glossary form. Swept all 24 -- de was the ONLY locale to regress off its glossary `finality` term on this line.
+- `soundness` -> `Zuverlässigkeit` (reliability) at 3 sites -> `Stichhaltigkeit`, matching de's own canonical ZKP article (3 prior uses).
+
+**Open (native call needed):**
+
+- `Kein Open Source.` should be `Nicht Open Source.` (predicate-noun negation).

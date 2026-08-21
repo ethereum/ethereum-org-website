@@ -51,3 +51,16 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 EOA custody inversion at withdrawals:177 (`compte détenu par un tiers` = held by a third party). Same defect is ALREADY LIVE on dev in developers/docs/accounts/index.md -- needs a follow-up. `phrase de récupération`->`phrase secrète` (glossary). tu/vous perfectly consistent (347 vous, 0 informal).
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 9.2/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Plus the locale-only extra file in this PR. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:** none needed -- zero criticals.
+
+
+**Open (native call needed):**
+
+- `harnais de test` for "test harness" (strap sense) -- the fr agent missed this; found by a central sweep. `environnement de test` fits.
+- French guillemets `« »` replaced with ASCII quotes at 3 sites in `research/index.md`.
+- `réseau de potins` (tabloid gossip) for "gossip network"; house form is `réseau de diffusion`.
+- `ponts de garde` for "custodial bridges" reads "on-duty bridges".
+- `proposeur`/`proposant` split introduced within one file.

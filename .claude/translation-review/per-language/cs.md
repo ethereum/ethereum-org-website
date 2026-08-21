@@ -88,3 +88,16 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 `gas`->`plyn` did NOT recur (all 12 sites use the loanword). Main issue: dvt conflated `staking pool` with `pooled staking` as `skupiny pro společný staking` at 10 sites, colliding with `skupina` used for actual groups in the same file. Compounding rendered 4 ways across the set.
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 8.8/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+- AI prompt-card fill-in blanks (`[app]`, `[my device]`, `[my system]`, `[this]`, `[this error]`, `[App]`) translated -- they were shipped as verbatim English.
+
+- `page-open-source-comparison-source-available-examples` shipped as verbatim untranslated English -- swept all 24, cs was the only locale affected.
+
+**Open (native call needed):**
+
+- `konsenzu`/`konsensus` stem mix introduced by this PR, incl. a direct hit on the `consensus layer => vrstva konsensu` glossary compound.
+- Validator animacy flipped to inanimate in human-operator contexts.
+- `Robust Incentives Group` translated against 7 English occurrences elsewhere in the cs tree.

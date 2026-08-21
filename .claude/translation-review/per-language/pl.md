@@ -75,3 +75,17 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 Highest score in the fleet. Only real criticals: `frazy seed`->`frazy odzyskiwania` (security-critical glossary term, correct 3x elsewhere in the same PR) and the dvt staking-pool conflation. `pokwitowanie` for receipt token held correctly. Animacy wobble now shows as `klienty`/`klienci` for software clients.
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 9.0/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+
+- `events` -> `zdarzenia` (the Solidity/log-event word) in the community/outreach paragraph -> `wydarzenia`. Glossary over-application; regresses the pre-PR text and contradicts `common.json`.
+
+**Open (native call needed):**
+
+- `podążają dwoma podejściami:` dropped the preposition and left the list in the nominative.
+- `z Erigon` missing instrumental declension.
+- `klienty` (md) vs `klienci` (JSON) for the same referent.
+- `solidność` for cryptographic soundness is a loose calque.
+- Masculine-gendered past/conditional forms address a male reader at 3 sites.

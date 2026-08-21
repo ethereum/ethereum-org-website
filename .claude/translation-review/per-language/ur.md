@@ -81,3 +81,17 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 Ungrammatical `نہیں گی۔` opening 4 of 5 dvt FAQ answers. `سمجھوتہ` doing double duty for trade-off (correct) and security compromise (wrong) across 4 sentences, one inverting agency. Eastern-Arabic digits inside 2 JSX title attributes. English dates bidi-isolated (#18772 recurrence) and `اداکار` (#19015 recurrence). U+2066 LRI wrapping pure-Urdu frontmatter. `پتہ`+postposition oblique-case error at ~50 sites.
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 7.8/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+
+- Untranslated English month: `⁦August 2023⁩` -> `اگست ⁦2023⁩`. Recurrence of the class fixed in #18772 and #19115.
+
+**Open (native call needed):**
+
+- **Arabic kaf U+0643 in `لامركزی`, 7 PR-added sites + 1 in `common.json`: verified but deliberately NOT fixed here.** Orthographically Urdu wants keheh U+06A9, but tree-wide counts are 646 kaf vs 186 keheh -- the defective form is dominant 3.5:1. Patching 8 sites moves 646->638 and increases intra-tree inconsistency. Correct action is upstream: normalize the ETHGlossary `decentralized` ur entry, then one tree-wide codepoint sweep.
+- MEV expansion regression: `میکسیمل ایکسٹریکٹ ایبل ویلیو` (1 site) replaced `زیادہ سے زیادہ قابلِ اخراج قدر` (11 sites).
+- `روبسٹ انسیٹوز گروپ` -- garbled transliteration dropping the ن of *-cen-*.
+- U+2066 LRI wrapping pure-Urdu frontmatter title/description (KB #64).
+- Numeral system split within one new file: `۲۰۰۹` vs `1990`.
