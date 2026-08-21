@@ -1,30 +1,28 @@
-// These rewrites are the only guard that agent-facing markdown URLs resolve to
+// These redirects are the only guard that agent-facing markdown URLs resolve to
 // the same file importMd() reads. Suffix matching on a greedy `:path*` is the
 // subtle part -- it relies on backtracking to leave `.md` for the literal, so
-// assert the near-misses alongside the matches.
+// assert the near-misses alongside the matches. Redirects also run before
+// public files in Next, so the loop guard on /content is load-bearing.
 
 import { createRequire } from "module"
 
 import { PHASE_PRODUCTION_BUILD } from "next/constants"
-import { match } from "next/dist/compiled/path-to-regexp"
+import { compile, match } from "next/dist/compiled/path-to-regexp"
 import loadCustomRoutes from "next/dist/lib/load-custom-routes"
 import type { NextConfigComplete } from "next/dist/server/config-shared"
 import { expect, test } from "@playwright/test"
 
 import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
-import rewrites from "../../../rewrites.config.js"
+import mdRedirects from "../../../md-redirects.config.js"
 
-// First match wins, mirroring Next's own resolution order.
+// First match wins and the destination compiles through path-to-regexp,
+// mirroring Next's own resolution (an empty :path* drops its segment).
 const resolve = (pathname: string) => {
-  for (const rule of rewrites) {
+  for (const rule of mdRedirects) {
     const result = match(rule.source, { decode: decodeURIComponent })(pathname)
     if (!result) continue
-    const params = result.params as Record<string, string | string[]>
-    return rule.destination.replace(/:(\w+)\*?/g, (_, name: string) => {
-      const value = params[name]
-      return Array.isArray(value) ? value.join("/") : value
-    })
+    return compile(rule.destination, { validate: false })(result.params)
   }
   return null
 }
@@ -56,6 +54,16 @@ test("every non-default locale resolves into translations", () => {
   }
 })
 
+test("real files under /content never match (redirect loop guard)", () => {
+  // Redirects apply before public files, so a match here would loop forever.
+  expect(resolve("/content/smart-contracts/index.md")).toBeNull()
+  expect(
+    resolve("/content/translations/es/smart-contracts/index.md")
+  ).toBeNull()
+  // Only the exact /content prefix is guarded -- a page named content-ish isn't.
+  expect(resolve("/contents/foo.md")).toBe("/content/contents/foo/index.md")
+})
+
 test("non-markdown and unconfigured-locale paths are left alone", () => {
   expect(resolve("/smart-contracts.mdx")).toBeNull()
   expect(resolve("/smart-contracts/")).toBeNull()
@@ -66,9 +74,7 @@ test("non-markdown and unconfigured-locale paths are left alone", () => {
   )
 })
 
-test("the rules register as afterFiles rewrites", async () => {
-  // afterFiles is load-bearing: real files under /content must resolve before
-  // the unprefixed rule gets a chance to re-wrap an already-rewritten path.
+test("the rules register as 307 redirects and no rewrites remain", async () => {
   // next.config.js is CJS and phase-taking, so require it the way Next does.
   const config = createRequire(__filename)("../../../next.config.js") as (
     phase: string
@@ -77,6 +83,15 @@ test("the rules register as afterFiles rewrites", async () => {
   const routes = await loadCustomRoutes(await config(PHASE_PRODUCTION_BUILD))
 
   expect(routes.rewrites.beforeFiles).toHaveLength(0)
+  expect(routes.rewrites.afterFiles).toHaveLength(0)
   expect(routes.rewrites.fallback).toHaveLength(0)
-  expect(routes.rewrites.afterFiles).toHaveLength(rewrites.length)
+
+  for (const rule of mdRedirects) {
+    const registered = routes.redirects.find((r) => r.source === rule.source)
+    expect(registered, rule.source).toBeDefined()
+    expect(registered, rule.source).toMatchObject({
+      destination: rule.destination,
+      permanent: false,
+    })
+  }
 })

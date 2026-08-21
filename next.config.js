@@ -5,8 +5,8 @@ const createNextIntlPlugin = require("next-intl/plugin")
 
 const { withSentryConfig } = require("@sentry/nextjs")
 
+const mdRedirects = require("./md-redirects.config")
 const redirects = require("./redirects.config")
-const rewrites = require("./rewrites.config")
 
 const i18nConfigJson = require("./i18n.config.json")
 
@@ -183,12 +183,6 @@ module.exports = (phase) => {
         },
       ]
     },
-    async rewrites() {
-      // Returned bare (not under beforeFiles) so these stay afterFiles rewrites:
-      // real files under /content resolve first, which is what stops the
-      // unprefixed rule from re-wrapping an already-rewritten path.
-      return rewrites
-    },
     async redirects() {
       // Build a strict locale matcher from configured locales
       const LOCALE_ALTS = i18nConfigJson.map(({ code }) => code).join("|") // e.g. "en|es|fr|..."
@@ -224,6 +218,8 @@ module.exports = (phase) => {
         ...redirects.flatMap(([source, destination, permanent]) =>
           createRedirect(source, destination, permanent)
         ),
+        // Agent-facing markdown source redirects (see md-redirects.config.js)
+        ...mdRedirects,
       ]
     },
   }
