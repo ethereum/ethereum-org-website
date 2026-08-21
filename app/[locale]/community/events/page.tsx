@@ -35,11 +35,14 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { formatDateRangeToParts, getLocaleYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-import { getDevconTicketLink } from "@/lib/utils/url"
 
 import communityHubs from "@/data/community-hubs"
 
-import { DEVCON_INDIA_END_DATE, DEVCON_INDIA_START_DATE } from "@/lib/constants"
+import {
+  DEVCON_INDIA_END_DATE,
+  DEVCON_INDIA_START_DATE,
+  DEVCON_INDIA_TICKET_URL,
+} from "@/lib/constants"
 
 import ContinentTabs from "./_components/continent-tabs"
 import EventCard from "./_components/event-card"
@@ -195,7 +198,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           {tDevcon("subtitle")}
         </p>
         <ButtonLink
-          href={getDevconTicketLink(locale)}
+          href={DEVCON_INDIA_TICKET_URL}
           customEventOptions={{
             eventCategory: "devcon",
             eventAction: `get_tickets`,

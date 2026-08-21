@@ -24,12 +24,12 @@ import { SectionHeader, SectionTag } from "@/components/ui/section"
 import { formatDateRangeToParts } from "@/lib/utils/date"
 import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
-import { getDevconTicketLink } from "@/lib/utils/url"
 
 import {
   DEFAULT_LOCALE,
   DEVCON_INDIA_END_DATE,
   DEVCON_INDIA_START_DATE,
+  DEVCON_INDIA_TICKET_URL,
   LOCALES_CODES,
 } from "@/lib/constants"
 
@@ -143,7 +143,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </div>
           <div className="flex flex-1 justify-end">
             <ButtonLink
-              href={getDevconTicketLink(locale)}
+              href={DEVCON_INDIA_TICKET_URL}
               customEventOptions={{
                 eventCategory: "devcon",
                 eventAction: `get_tickets`,
