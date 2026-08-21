@@ -31,8 +31,6 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
 
   if (!isValidPath) notFound()
 
-  // Enable static rendering
-
   const slug = slugArray.join("/")
 
   const {
@@ -140,8 +138,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale, slug } = params
-
-  // Set locale before next-intl APIs so on-demand renders stay static
 
   try {
     return await getMdMetadata({

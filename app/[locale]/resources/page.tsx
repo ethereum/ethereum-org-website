@@ -237,8 +237,6 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  // Set locale before next-intl APIs so on-demand renders stay static
-
   const t = await getTranslations("page-resources")
 
   return await getMetadata({

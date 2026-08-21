@@ -40,8 +40,6 @@ export default async function LocaleLayout(props: {
     notFound()
   }
 
-  // Enable static rendering
-
   const allMessages = await getMessages()
   const messages = pick(allMessages, "common")
 

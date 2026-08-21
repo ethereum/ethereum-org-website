@@ -1,26 +1,24 @@
 import { merge } from "lodash"
+import { notFound } from "next/navigation"
 import * as rootParams from "next/root-params"
+import { hasLocale } from "next-intl"
 import { getRequestConfig } from "next-intl/server"
-
-import { Lang } from "@/lib/types"
 
 import { routing } from "./routing"
 
 import { loadMessages } from "@/lib/i18n/loadMessages"
 
-export default getRequestConfig(async ({ locale: localeOverride }) => {
-  // `next/root-params` reads the `[locale]` segment without opting the request
-  // into dynamic rendering, so pages stay static without `setRequestLocale`.
-  // It isn't available in Route Handlers and Server Actions yet, so an explicit
-  // locale passed by the caller still takes precedence.
-  const paramValue = localeOverride ?? (await rootParams.locale())
-
-  // The `[locale]` segment also catches unknown routes (e.g. `/unknown.txt`),
-  // and pages outside of it have no segment at all.
-  const locale =
-    paramValue && routing.locales.includes(paramValue as Lang)
-      ? paramValue
-      : routing.defaultLocale
+export default getRequestConfig(async ({ locale }) => {
+  // Only read from `next/root-params` if no explicit
+  // override is provided by the caller
+  if (!locale) {
+    const paramValue = await rootParams.locale()
+    if (hasLocale(routing.locales, paramValue)) {
+      locale = paramValue
+    } else {
+      notFound()
+    }
+  }
 
   const allLocaleMessages = await loadMessages(locale)
   const allDefaultMessages = await loadMessages(routing.defaultLocale)
