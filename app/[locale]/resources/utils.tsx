@@ -329,7 +329,7 @@ export const getResources = async ({
         },
         {
           title: "Strategic Ethereum Reserve",
-          description: t("page-resources-reserves-cryptowerk-description"),
+          description: t("page-resources-adoption-reserves-description"),
           href: "https://www.strategicethreserve.xyz",
           imgSrc: IconReserves,
         },
