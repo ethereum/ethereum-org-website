@@ -173,6 +173,12 @@ module.exports = (phase) => {
               key: "X-Frame-Options",
               value: "DENY",
             },
+            {
+              // RFC 8288 discovery pointer for agents; static, so no Vary
+              // fragmentation of the CDN cache.
+              key: "Link",
+              value: '</llms.txt>; rel="describedby"; type="text/plain"',
+            },
           ],
         },
       ]
