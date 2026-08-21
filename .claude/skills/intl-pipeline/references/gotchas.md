@@ -2,22 +2,6 @@
 
 Patterns that aren't in the SKILL.md's inline gotchas section but come up when you dig in. Load this when something feels off and the obvious places didn't surface the answer.
 
-## Input, not output, is where the money goes
-
-Output is priced 6x input ($12 vs $2 per 1M), but volume runs the other way by orders of magnitude: incremental translation resends context, rules and glossary on every call and asks back only the changed strings. Run 31149083965 was $1,099 of input against $9 of output.
-
-Consequences when reading a run's logs:
-
-- **The input:output ratio is not a signal.** Healthy runs range from 1:1 to 180:1 depending on how much context each call carries.
-- **Input tokens per call is the signal.** Healthy is 4k-9k. Every pathological run in July-August 2026 stood out on that column alone: 184k (08-05), 260k (07-29), 1.76M (08-07).
-- Quick check on a job log: `grep -o 'tokens_in=[0-9]*' <log> | cut -d= -f2 | sort -n | tail -5`
-
-## A file with an existing translation always takes the incremental path
-
-Even when the change is hundreds of brand-new strings. Path selection is "does a locale file and a manifest exist", not "how much of this is new" (`main.ts`, the `hasLocale` / `hasManifest` branch). So a new quiz added to `learn-quizzes.json` — a namespace that already exists in all 24 locales — is an incremental update with 488 TRANSLATE sections, not a full translation.
-
-This is the shape that caused the $1,108 run, and it is the normal shape for every future quiz, glossary batch, or app-listing addition. When reviewing changes to batching, use "many new keys in an already-translated file" as the test case, not "new file".
-
 ## Output token budget
 
 Gemini's output token limit is ~65K. Per-section calls keep this manageable. Bulk calls (rare in current pipeline; JSON batching exists) can hit it.
@@ -25,20 +9,6 @@ Gemini's output token limit is ~65K. Per-section calls keep this manageable. Bul
 - Markdown is translated section-by-section in Phase 4 — output budget is per-section, not per-file
 - JSON files use chunked translation via `src/scripts/intl-pipeline/lib/llm/json-batcher.ts` — chunks are size-limited (64KB by default), preferring more smaller calls over fewer larger ones
 - If a section's output is truncated, the manifest does NOT stamp (Phase 6 only stamps on success). Next run retries.
-
-## `finishReason` non-STOP values explain silent failures
-
-The Gemini adapter at `src/scripts/intl-pipeline/lib/llm/gemini.ts` checks `response.candidates[0].finishReason` after every call. Values to know:
-
-- `STOP` — normal completion
-- `MAX_TOKENS` — output truncated; section probably too large
-- `SAFETY` — content filter blocked it. Safety settings are `BLOCK_NONE` in the adapter, but blocks can still trigger on some edge content (mining/attack descriptions in certain non-Latin languages). If `BLOCK_NONE` doesn't help, the prompt or content needs rework, not the safety settings.
-- `RECITATION` — model declined to reproduce training data. **Deterministic per file+language**, NOT transient: the adapter retries the byte-identical prompt up to 3x and gets the identical `RECITATION` every time (`tokens_out=0`), then gives up. The file+lang is then skipped — it ships untranslated (keeps its prior/English state), is recorded as a failed task, and listed in the PR body's failure block. Restarting the whole run will hit the exact same combos. Recurring victims are long reference docs (consensus-mechanisms `pos`/`poa`, `defi`, `ethash`, whitepaper) in fr/es/pt-br. The real fix is upstream of a plain retry: mutate before retrying (smaller chunks, secondary model, reworded prompt) or accept the skip and handle those files out-of-band. Don't burn time expecting a re-run to clear them.
-- `OTHER` — bucket catchall. Log shows full response; debug case-by-case.
-
-Non-STOP finish reasons are logged at WARNING level. Search workflow logs for `FINISH_REASON` if a section seems to be missing translation output.
-
-**Beware: a "success" workflow conclusion does not mean a clean run.** Per-file+lang tasks that fail (RECITATION, blob/build errors) are emitted as `[WARN]`, listed in the PR body's "N task(s) failed" block, and the run still goes green. Always read the PR body's failure block and grep the log before trusting a green run. See `recovery.md` -> "Diagnosing a completed run."
 
 ## `intl-content-tree` is a separate npm package
 
@@ -54,7 +24,7 @@ If a `ChangeSet` or `DiffResult` looks wrong, the bug may be in the package, not
 
 JSX attribute values with embedded characters that need escaping (`&` → `&amp;`, `<` inside quoted strings) require care. The Phase 4b prompt explicitly tells the model to escape; the regex-based replacement in `pipeline.ts` does NOT entity-escape (it preserves what the LLM returned).
 
-Known past failures: PR #18041 review caught cases where Gemini left raw `"` inside `title="..."` attributes, breaking MDX. The sanitizer added a fix for this (`fixInnerQuotesInJsxAttributes` or similar). When adding new attribute patterns, write a test that includes embedded special characters first.
+Known past failures: Gemini leaving raw `"` inside `title="..."` attributes, breaking MDX. The sanitizer covers this (`fixInnerQuotesInJsxAttributes`, `fixEscapedQuotesInJsxAttributes`). When adding new attribute patterns, write a test that includes embedded special characters first.
 
 ## Locale file naming mirrors English
 
@@ -106,10 +76,3 @@ There is no `TARGET_FILES` env var — the sanitizer only reads `TARGET_LANGUAGE
 
 ETHGlossary entries have `id` (slug, e.g., `"vitalik-buterin"`) and `term` (display form, e.g., `"Vitalik Buterin"`). Per-term lookups use the ID; the API also matches aliases intelligently. When searching, prefer the slug ID; for display, use the term.
 
-## See also
-
-- `references/architecture.md` for phase-by-phase mechanics
-- `references/orchestration.md` for the pending-branch model
-- `references/recovery.md` for what to do when things break
-- `references/sanitizer.md` for sanitizer-specific gotchas
-- `references/runbooks/cost-guard-tripped.md` for the spend bounds and what to do when one trips
