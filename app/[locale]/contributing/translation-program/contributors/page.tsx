@@ -15,15 +15,15 @@ import allTimeData from "@/data/translation-reports/alltime/alltime-data.json"
 
 import ContributorsJsonLD from "./page-jsonld"
 
-const NAMESPACE = "page-contributing-translation-program-contributors"
-
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
 
   setRequestLocale(locale)
 
-  const t = await getTranslations(NAMESPACE)
+  const t = await getTranslations(
+    "page-contributing-translation-program-contributors"
+  )
   const tCommon = await getTranslations("common")
 
   const { contributors } = await getAppPageContributorInfo(
@@ -115,7 +115,9 @@ export async function generateMetadata(props: {
 
   setRequestLocale(locale)
 
-  const t = await getTranslations(NAMESPACE)
+  const t = await getTranslations(
+    "page-contributing-translation-program-contributors"
+  )
 
   return await getMetadata({
     locale,
