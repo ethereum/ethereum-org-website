@@ -33,7 +33,7 @@ La investigación del consenso se ocupa del [mecanismo de prueba de participaci�
 - reducir el tiempo que tarda un bloque en alcanzar la finalidad;
 - y mejorar la eficiencia, la seguridad y el monitoreo de la red entre pares entre los clientes de consenso.
 
-Gran parte de este trabajo ha pasado del papel a la especificación. El muestreo de disponibilidad de datos (DAS) se envió en la actualización [Fusaka](/roadmap/fusaka/), los cambios en cómo se construyen los bloques y cómo se garantiza la inclusión de las transacciones se especifican para las próximas actualizaciones, y un rediseño a más largo plazo conocido como consenso ligero (lean consensus) está explorando una finalidad más rápida junto con firmas poscuánticas.
+Gran parte de este trabajo ha pasado del papel a la especificación. El muestreo de disponibilidad de datos (DAS) se implementó en la actualización [Fusaka](/roadmap/fusaka/), los cambios en cómo se construyen los bloques y cómo se garantiza la inclusión de las transacciones se especifican para las próximas actualizaciones, y un rediseño a más largo plazo conocido como consenso ligero (lean consensus) está explorando una finalidad más rápida junto con firmas poscuánticas.
 
 #### Lecturas complementarias {#background-reading}
 
@@ -72,7 +72,7 @@ La capa de ejecución se ocupa de ejecutar transacciones, ejecutar la [Máquina 
 - [EIP-8037: Aumento del costo de gas para la creación de estado](https://eips.ethereum.org/EIPS/eip-8037)
 - [EIP-7999: Mercado de tarifas multidimensional unificado](https://eips.ethereum.org/EIPS/eip-7999)
 - [EIP-7642: eth/69, expiración del historial y recibos más simples](https://eips.ethereum.org/EIPS/eip-7642)
-- [Envío de una zkEVM de l1: pruebas en tiempo real](https://blog.ethereum.org/2025/07/10/realtime-proving)
+- [Lanzamiento de una zkEVM de l1: pruebas en tiempo real](https://blog.ethereum.org/2025/07/10/realtime-proving)
 
 ### Resistencia a la censura y construcción de bloques {#censorship-resistance-and-block-building}
 
@@ -146,21 +146,21 @@ Consulte la [página de nodos y clientes](/developers/docs/nodes-and-clients/) p
 
 - [zkEVM](/roadmap/zkevm/)
 - [Ethproofs](https://ethproofs.org/)
-- [Envío de una zkEVM de l1: los fundamentos de seguridad](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
+- [Lanzamiento de una zkEVM de l1: los fundamentos de seguridad](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
 ## Escalabilidad y rendimiento {#scaling-and-performance}
 
-Escalar Ethereum es una gran área de enfoque para los investigadores de Ethereum, y se ejecuta en dos vías al mismo tiempo: aumentar la capacidad de procesamiento de la capa 1 (l1) en sí y trasladar la ejecución a los rollup que publican sus datos en Ethereum. El trabajo actual incluye aumentar el límite de gas del bloque, revaluar el crecimiento del estado, expandir la capacidad de blob para los datos de los rollup y reducir lo que un nodo tiene que almacenar y verificar. La información introductoria sobre el escalado de Ethereum está disponible en nuestra [página de escalabilidad](/developers/docs/scaling/) y en la [hoja de ruta de escalabilidad](/roadmap/scaling/).
+Escalar Ethereum es una gran área de enfoque para los investigadores de Ethereum, y se ejecuta en dos vías al mismo tiempo: aumentar la capacidad de procesamiento de la capa 1 (l1) en sí y trasladar la ejecución a los rollups que publican sus datos en Ethereum. El trabajo actual incluye aumentar el límite de gas del bloque, revaluar el crecimiento del estado, expandir la capacidad de blob para los datos de los rollups y reducir lo que un nodo tiene que almacenar y verificar. La información introductoria sobre el escalado de Ethereum está disponible en nuestra [página de escalabilidad](/developers/docs/scaling/) y en la [hoja de ruta de escalabilidad](/roadmap/scaling/).
 
 ### Capa 2 {#layer-2}
 
-Ahora hay varios protocolos de capa 2 (l2) que escalan Ethereum utilizando diferentes técnicas para el procesamiento por lotes de transacciones y asegurándolas en la capa 1 de Ethereum. La investigación abierta incluye reducir la latencia y el costo de las pruebas, acortar el tiempo que tarda una transacción en alcanzar una finalidad sin necesidad de confianza y brindar a los usuarios una experiencia única y coherente en muchos rollup.
+Ahora hay varios protocolos de capa 2 (l2) que escalan Ethereum utilizando diferentes técnicas para el procesamiento por lotes de transacciones y asegurándolas en la capa 1 de Ethereum. La investigación abierta incluye reducir la latencia y el costo de las pruebas, acortar el tiempo que tarda una transacción en alcanzar una finalidad sin necesidad de confianza y brindar a los usuarios una experiencia única y coherente en muchos rollups.
 
 #### Lecturas complementarias {#background-reading-2}
 
 - [Introducción a la capa 2](/layer-2/)
 - [L2BEAT: resumen de escalabilidad](https://l2beat.com/scaling/summary)
-- [Una hoja de ruta de Ethereum centrada en los rollup](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
+- [Una hoja de ruta de Ethereum centrada en los rollups](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
 #### Investigación reciente {#recent-research-2}
 
@@ -239,7 +239,7 @@ Las pruebas de conocimiento cero (ZKP) y la criptografía son fundamentales para
 - [ZK en Ethresear.ch](https://ethresear.ch/c/zk-s-nt-arks/13)
 - [Criptografía en Ethresear.ch](https://ethresear.ch/c/cryptography/28)
 - [Calculadora de solidez para sistemas de prueba zkEVM basados en hash](https://github.com/ethereum/soundcalc)
-- [Envío de una zkEVM de l1: los fundamentos de seguridad](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
+- [Lanzamiento de una zkEVM de l1: los fundamentos de seguridad](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
 ### Billeteras {#wallets}
 
@@ -287,7 +287,7 @@ La investigación económica en Ethereum sigue en general dos enfoques: validar 
 
 #### Lecturas complementarias {#background-reading-9}
 
-- [Grupo de incentivos robustos](https://rig.ethereum.org/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [Clase magistral de economía de Ethereum y modelo económico](https://github.com/CADLabs/ethereum-economic-model)
 
 #### Investigación reciente {#recent-research-9}
@@ -303,8 +303,8 @@ Los mercados de espacio de bloque rigen la inclusión de transacciones de usuari
 #### Lecturas complementarias {#background-reading-10}
 
 - [Diseño del mecanismo de tarifas de transacción para la cadena de bloques de Ethereum: un análisis económico de EIP-1559 (Tim Roughgarden, 2020)](https://timroughgarden.org/papers/eip1559.pdf)
-- [Simulaciones de EIP-1559 (Grupo de incentivos robustos)](https://ethereum.github.io/abm1559)
-- [Economía de los rollup desde los primeros principios](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
+- [Simulaciones de EIP-1559 (Robust Incentives Group)](https://ethereum.github.io/abm1559)
+- [Economía de los rollups desde los primeros principios](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
 - [Flash Boys 2.0: Frontrunning, reordenamiento de transacciones e inestabilidad del consenso en intercambios descentralizados](https://arxiv.org/abs/1904.05234)
 
 #### Investigación reciente {#recent-research-10}
@@ -321,11 +321,11 @@ Los validadores utilizan el activo nativo de Ethereum (ether) como colateral con
 
 - [Saldo efectivo máximo](/roadmap/pectra/maxeb/)
 - [Clase magistral de economía de Ethereum y modelo económico](https://github.com/CADLabs/ethereum-economic-model)
-- [Simulaciones de incentivos de PoS (Grupo de incentivos robustos)](https://ethereum.github.io/beaconrunner/)
+- [Simulaciones de incentivos de PoS (Robust Incentives Group)](https://ethereum.github.io/beaconrunner/)
 
 #### Investigación reciente {#recent-research-11}
 
-- [Grupo de incentivos robustos](https://rig.ethereum.org/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [Tres ataques a Ethereum PoS](https://arxiv.org/abs/2110.10086)
 
 ### Staking líquido y derivados {#liquid-staking-and-derivatives}
@@ -385,13 +385,13 @@ Existe la necesidad de más herramientas de análisis de datos y paneles que bri
 
 #### Investigación reciente {#recent-research-14}
 
-- [Análisis de datos del Grupo de incentivos robustos](https://rig.ethereum.org/)
+- [Análisis de datos del Robust Incentives Group](https://rig.ethereum.org/)
 - [Datos abiertos de ethPandaOps](https://ethpandaops.io/data/)
 - [L2BEAT: resumen de escalabilidad](https://l2beat.com/scaling/summary)
 
 ## Aplicaciones y herramientas {#apps-and-tooling}
 
-La capa de aplicación admite un ecosistema diverso de programas que liquidan transacciones en la capa base de Ethereum. Los equipos de desarrollo encuentran constantemente nuevas formas de aprovechar Ethereum para crear versiones componibles, sin permisos y resistentes a la censura de aplicaciones importantes de Web2 o crear conceptos nativos de Web3 completamente nuevos. Al mismo tiempo, se están desarrollando nuevas herramientas que hacen que la construcción de aplicaciones descentralizadas (dapp) en Ethereum sea menos compleja.
+La capa de aplicación admite un ecosistema diverso de programas que liquidan transacciones en la capa base de Ethereum. Los equipos de desarrollo encuentran constantemente nuevas formas de aprovechar Ethereum para crear versiones componibles, sin permisos y resistentes a la censura de aplicaciones importantes de Web2 o crear conceptos nativos de Web3 completamente nuevos. Al mismo tiempo, se están desarrollando nuevas herramientas que hacen que la construcción de aplicaciones descentralizadas (dapps) en Ethereum sea menos compleja.
 
 ### DeFi {#defi}
 
@@ -427,7 +427,7 @@ Las herramientas para los desarrolladores de Ethereum están mejorando rápidame
 
 - [Herramientas por lenguaje de programación](/developers/docs/programming-languages/)
 - [Marcos de desarrollo](/developers/docs/frameworks/)
-- [Introducción a las dapp](/developers/docs/dapps/)
+- [Introducción a las dapps](/developers/docs/dapps/)
 - [Estándares de tokens](/developers/docs/standards/tokens/)
 
 #### Investigación reciente {#recent-research-17}
@@ -437,7 +437,7 @@ Las herramientas para los desarrolladores de Ethereum están mejorando rápidame
 
 ### Oráculos {#oracles}
 
-Los oráculos importan datos fuera de la cadena a la cadena de bloques de una manera descentralizada y sin permisos. Obtener estos datos en cadena permite que las dapp sean reactivas a fenómenos del mundo real, como fluctuaciones de precios en activos del mundo real, eventos en aplicaciones fuera de la cadena o incluso cambios en el clima.
+Los oráculos importan datos fuera de la cadena a la cadena de bloques de una manera descentralizada y sin permisos. Obtener estos datos en cadena permite que las dapps sean reactivas a fenómenos del mundo real, como fluctuaciones de precios en activos del mundo real, eventos en aplicaciones fuera de la cadena o incluso cambios en el clima.
 
 #### Lecturas complementarias {#background-reading-18}
 
@@ -464,7 +464,7 @@ Los hackeos en Ethereum generalmente explotan vulnerabilidades en aplicaciones i
 
 ### Pila tecnológica {#technology-stack}
 
-Descentralizar toda la pila tecnológica de Ethereum es un área de investigación importante. Actualmente, las dapp en Ethereum comúnmente tienen algunos puntos de centralización porque dependen de herramientas o infraestructura centralizadas. Reducir esa dependencia significa hacer que sea práctico para las aplicaciones leer Ethereum sin confiar en un solo proveedor, que es donde entran en juego los clientes ligeros y el acceso sin necesidad de confianza a los datos del nodo.
+Descentralizar toda la pila tecnológica de Ethereum es un área de investigación importante. Actualmente, las dapps en Ethereum comúnmente tienen algunos puntos de centralización porque dependen de herramientas o infraestructura centralizadas. Reducir esa dependencia significa hacer que sea práctico para las aplicaciones leer Ethereum sin confiar en un solo proveedor, que es donde entran en juego los clientes ligeros y el acceso sin necesidad de confianza a los datos del nodo.
 
 #### Lecturas complementarias {#background-reading-20}
 

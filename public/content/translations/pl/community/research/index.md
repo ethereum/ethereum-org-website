@@ -262,7 +262,7 @@ Portfele Ethereum mogą być rozszerzeniami przeglądarki, aplikacjami na komput
 
 ## Społeczność, edukacja i działania informacyjne {#community-education-and-outreach}
 
-Onboarding nowych użytkowników do Ethereum wymaga nowych zasobów edukacyjnych i podejść do działań informacyjnych. Może to obejmować posty na blogach i artykuły, książki, podcasty, memy, materiały dydaktyczne, zdarzenia i wszystko inne, co buduje społeczności, wita nowych początkujących i edukuje ludzi na temat Ethereum.
+Onboarding nowych użytkowników do Ethereum wymaga nowych zasobów edukacyjnych i podejść do działań informacyjnych. Może to obejmować posty na blogach i artykuły, książki, podcasty, memy, materiały dydaktyczne, wydarzenia i wszystko inne, co buduje społeczności, wita nowych początkujących i edukuje ludzi na temat Ethereum.
 
 ### Projektowanie i UX {#design-and-ux}
 

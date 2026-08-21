@@ -132,7 +132,7 @@ Madaraja mapya ya wateja yanatengenezwa kama mifano pamoja na hayo mawili, ikiwa
 
 Tazama [ukurasa wa nodi na wateja](/developers/docs/nodes-and-clients/) kwa maelezo zaidi kuhusu nodi na wateja na kwa orodha ya utekelezaji wote wa sasa wa mteja. Unaweza pia kupata historia ya maboresho yote ya Ethereum kwenye [ukurasa wa historia](/ethereum-forks/).
 
-### Wateja wa Utekelezaji {#execution-clients}
+### Viteja vya Utekelezaji {#execution-clients}
 
 - [Vipimo vya kiteja cha utekelezaji](https://github.com/ethereum/execution-specs)
 - [Vipimo vya API ya utekelezaji](https://github.com/ethereum/execution-apis)
@@ -287,7 +287,7 @@ Utafiti wa uchumi katika Ethereum kwa upana unafuata mbinu mbili: kuthibitisha u
 
 #### Usomaji wa usuli {#background-reading-9}
 
-- [Kikundi cha Motisha Imara](https://rig.ethereum.org/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [Darasa kuu la uchumi wa Ethereum na muundo wa kiuchumi](https://github.com/CADLabs/ethereum-economic-model)
 
 #### Utafiti wa hivi karibuni {#recent-research-9}
@@ -303,7 +303,7 @@ Masoko ya nafasi ya kitalu hudhibiti ujumuishaji wa miamala ya mtumiaji wa mwish
 #### Usomaji wa usuli {#background-reading-10}
 
 - [Usanifu wa Utaratibu wa Ada ya Muamala kwa Mnyororo wa Vitalu wa Ethereum: Uchambuzi wa Kiuchumi wa EIP-1559 (Tim Roughgarden, 2020)](https://timroughgarden.org/papers/eip1559.pdf)
-- [Uigaji wa EIP-1559 (Kikundi cha Motisha Imara)](https://ethereum.github.io/abm1559)
+- [Uigaji wa EIP-1559 (Robust Incentives Group)](https://ethereum.github.io/abm1559)
 - [Uchumi wa rollup kutoka kwa kanuni za kwanza](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
 - [Flash Boys 2.0: Kukimbia Mbele, Kupanga Upya Miamala, na Ukosefu wa Utulivu wa Mwafaka katika Mabadilishano Yaliyogatuliwa](https://arxiv.org/abs/1904.05234)
 
@@ -321,11 +321,11 @@ Wathibitishaji hutumia mali asili ya Ethereum (Etha) kama dhamana dhidi ya tabia
 
 - [Salio tendaji la juu zaidi](/roadmap/pectra/maxeb/)
 - [Darasa kuu la uchumi wa Ethereum na muundo wa kiuchumi](https://github.com/CADLabs/ethereum-economic-model)
-- [Uigaji wa motisha za PoS (Kikundi cha Motisha Imara)](https://ethereum.github.io/beaconrunner/)
+- [Uigaji wa motisha za PoS (Robust Incentives Group)](https://ethereum.github.io/beaconrunner/)
 
 #### Utafiti wa hivi karibuni {#recent-research-11}
 
-- [Kikundi cha Motisha Imara](https://rig.ethereum.org/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [Mashambulizi Matatu kwenye PoS Ethereum](https://arxiv.org/abs/2110.10086)
 
 ### Uwekaji dhamana wenye ukwasi na viingilio {#liquid-staking-and-derivatives}
@@ -385,7 +385,7 @@ Kuna haja ya zana zaidi za uchambuzi wa data na dashibodi zinazotoa taarifa za k
 
 #### Utafiti wa hivi karibuni {#recent-research-14}
 
-- [Uchambuzi wa Data wa Kikundi cha Motisha Imara](https://rig.ethereum.org/)
+- [Uchambuzi wa Data wa Robust Incentives Group](https://rig.ethereum.org/)
 - [Data wazi ya ethPandaOps](https://ethpandaops.io/data/)
 - [L2BEAT: muhtasari wa kukuza](https://l2beat.com/scaling/summary)
 

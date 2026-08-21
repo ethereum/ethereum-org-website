@@ -346,7 +346,7 @@ Likit staking, 32 ETH'den daha azına sahip kullanıcıların, Ether'i merkeziye
 
 ### İstemci ve ağ testi {#client-and-network-testing}
 
-Ethereum'un spesifikasyonları çalıştırılabilirdir ve bunlardan üretilen test fikstürleri, istemci ekiplerinin uygulamalarını kontrol ettikleri şeylerdir. Bunların yanı sıra, paylaşılan test donanımları istemcileri birbirlerine ve kasıtlı olarak düşmanca ağ koşullarına karşı çalıştırır ve halka açık test ağları (testnet), yükseltmeleri Ana Ağ'a (mainnet) ulaşmadan önce dener. Bu altyapıyı geliştirmek, mevcut en yüksek kaldıraçlı çalışmalardan bazılarıdır, çünkü hatalar kullanıcılara ulaşmadan önce bu şekilde yakalanır.
+Ethereum'un spesifikasyonları çalıştırılabilirdir ve bunlardan üretilen test fikstürleri, istemci ekiplerinin uygulamalarını kontrol ettikleri şeylerdir. Bunların yanı sıra, paylaşılan test koşum ortamları istemcileri birbirlerine ve kasıtlı olarak düşmanca ağ koşullarına karşı çalıştırır ve halka açık test ağları (testnet), yükseltmeleri Ana Ağ'a (mainnet) ulaşmadan önce dener. Bu altyapıyı geliştirmek, mevcut en yüksek kaldıraçlı çalışmalardan bazılarıdır, çünkü hatalar kullanıcılara ulaşmadan önce bu şekilde yakalanır.
 
 #### Arka plan okuması {#background-reading-24}
 
@@ -355,7 +355,7 @@ Ethereum'un spesifikasyonları çalıştırılabilirdir ve bunlardan üretilen t
 
 #### Son araştırmalar {#recent-research-24}
 
-- [hive, uçtan uca bir istemci test donanımı](https://github.com/ethereum/hive)
+- [hive, uçtan uca bir istemci test koşum ortamı](https://github.com/ethereum/hive)
 - [Assertoor, bir test ağı test aracı](https://github.com/ethpandaops/assertoor)
 
 ### Biçimsel doğrulama {#formal-verification}

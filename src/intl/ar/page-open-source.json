@@ -206,7 +206,7 @@
   "page-open-source-comparison-copyleft-examples": "Linux (⁦GPL-2.0⁩)؛ <strong>عملاء إيثيريوم:</strong> go-ethereum (⁦GPL-3.0⁩ للملف الثنائي، ⁦LGPL-3.0⁩ لمكتباته)؛ برايزم، نيذرميند، Grandine، Solidity (⁦GPL-3.0⁩)",
   "page-open-source-copyleft-title": "تعمل إيثيريوم على الحقوق المتروكة، وليس فقط على كلمة \"مفتوح\"",
   "page-open-source-copyleft-description-1": "تطلق الكثير من المشاريع على نفسها اسم مفتوحة. ما يهم هو ملف الترخيص، لذا إليك ملفنا.",
-  "page-open-source-copyleft-description-2": "يتم شحن البنية التحتية الأكثر أهمية لإيثيريوم بموجب تراخيص الحقوق المتروكة الخاصة بـ Free Software Foundation: إن go-ethereum هو ⁦GPL-3.0⁩ مع مكتبات ⁦LGPL-3.0⁩، ومترجمات برايزم ونيذرميند وGrandine وSolidity هي ⁦GPL-3.0⁩، مع إريغون تحت ⁦LGPL-3.0⁩. يتخذ عملاء آخرون المسار المتساهل: لايتهاوس وريث وبيسو وتيكو هي ⁦Apache 2.0⁩.",
+  "page-open-source-copyleft-description-2": "يتم شحن البنية التحتية الأكثر أهمية لإيثيريوم بموجب تراخيص الحقوق المتروكة الخاصة بـ Free Software Foundation: إن go-ethereum هو ⁦GPL-3.0⁩ مع مكتبات ⁦LGPL-3.0⁩، وبرايزم ونيذرميند وGrandine ومترجم Solidity هي ⁦GPL-3.0⁩، مع إريغون تحت ⁦LGPL-3.0⁩. يتخذ عملاء آخرون المسار المتساهل: لايتهاوس وريث وبيسو وتيكو هي ⁦Apache 2.0⁩.",
   "page-open-source-copyleft-contribute": "هذا الموقع الإلكتروني هو MIT، وكل تغيير في هذه الصفحة مرئي للجمهور. لأي شخص الحرية في <source>فحص الشفرة المصدرية</source> أو <issues>اقتراح تغييرات</issues>.",
   "page-open-source-copyleft-description-3": "تنوع العملاء هو في حد ذاته تطبيق للحق في التفرع. لا يوجد تنفيذ واحد يتحكم في الشبكة، ويمكن استبدال أي منها بشيء أفضل دون طلب إذن.",
   "page-open-source-faq-title": "الأسئلة الشائعة",

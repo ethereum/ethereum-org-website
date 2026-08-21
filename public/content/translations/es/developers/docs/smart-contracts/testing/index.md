@@ -204,7 +204,7 @@ Las pruebas manuales de contratos inteligentes a menudo se realizan más adelant
 
 ### Pruebas de contratos en una cadena de bloques local {#testing-on-local-blockchain}
 
-Si bien las pruebas automatizadas realizadas en un entorno de desarrollo local pueden proporcionar información de depuración útil, querrá saber cómo se comporta su contrato inteligente en un entorno de producción. Sin embargo, el despliegue en la cadena principal de Ethereum incurre en tarifas de gas, sin mencionar que usted o sus usuarios pueden perder dinero real si su contrato inteligente aún tiene errores.
+Si bien las pruebas automatizadas realizadas en un entorno de desarrollo local pueden proporcionar información de depuración útil, querrá saber cómo se comporta su contrato inteligente en un entorno de producción. Sin embargo, el despliegue en la Red principal de Ethereum incurre en tarifas de gas, sin mencionar que usted o sus usuarios pueden perder dinero real si su contrato inteligente aún tiene errores.
 
 Probar su contrato en una cadena de bloques local (también conocida como [red de desarrollo](/developers/docs/development-networks/)) es una alternativa recomendada a las pruebas en la Red principal. Una cadena de bloques local es una copia de la cadena de bloques de Ethereum que se ejecuta localmente en su computadora y que simula el comportamiento de la capa de ejecución de Ethereum. Como tal, puede programar transacciones para interactuar con un contrato sin incurrir en gastos generales significativos.
 

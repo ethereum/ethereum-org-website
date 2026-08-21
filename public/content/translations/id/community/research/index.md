@@ -456,7 +456,7 @@ Peretasan di Ethereum umumnya mengeksploitasi kerentanan dalam aplikasi individu
 - [Keamanan kontrak pintar](/developers/docs/smart-contracts/security/)
 - [Laporan eksploitasi Wormhole](https://www.chainalysis.com/blog/wormhole-hack-february-2022/)
 - [Daftar post-mortem peretasan kontrak Ethereum](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Berita Rekt](https://rekt.news/)
+- [Rekt News](https://rekt.news/)
 
 #### Penelitian terbaru {#recent-research-19}
 

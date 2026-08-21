@@ -437,7 +437,7 @@ Các công cụ dành cho nhà phát triển Ethereum đang cải thiện nhanh 
 
 ### Oracle {#oracles}
 
-Các Oracle nhập dữ liệu ngoài chuỗi vào Chuỗi khối theo cách không cần cấp phép và phi tập trung. Việc đưa dữ liệu này lên trên chuỗi cho phép các dapp phản ứng với các hiện tượng trong thế giới thực như biến động giá của các tài sản trong thế giới thực, các sự kiện trong các ứng dụng ngoài chuỗi, hoặc thậm chí là những thay đổi về thời tiết.
+Các nguồn cấp dữ liệu nhập dữ liệu ngoài chuỗi vào Chuỗi khối theo cách không cần cấp phép và phi tập trung. Việc đưa dữ liệu này lên trên chuỗi cho phép các dapp phản ứng với các hiện tượng trong thế giới thực như biến động giá của các tài sản trong thế giới thực, các sự kiện trong các ứng dụng ngoài chuỗi, hoặc thậm chí là những thay đổi về thời tiết.
 
 #### Tài liệu đọc thêm {#background-reading-18}
 
@@ -445,7 +445,7 @@ Các Oracle nhập dữ liệu ngoài chuỗi vào Chuỗi khối theo cách kh�
 
 #### Nghiên cứu gần đây {#recent-research-18}
 
-- [Khảo sát về các Oracle Chuỗi khối](https://arxiv.org/pdf/2004.07140.pdf)
+- [Khảo sát về các nguồn cấp dữ liệu Chuỗi khối](https://arxiv.org/pdf/2004.07140.pdf)
 
 ### Bảo mật ứng dụng {#app-security}
 

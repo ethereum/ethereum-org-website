@@ -46,7 +46,7 @@ Ein Großteil dieser Arbeit hat sich vom Papier zur Spezifikation verlagert. Dat
 #### Aktuelle Forschung {#recent-research}
 
 - [Ethresear.ch Konsens](https://ethresear.ch/c/consensus/29)
-- [Verfügbarkeits-/Finalitäts-Dilemma](https://arxiv.org/abs/2009.04987)
+- [Verfügbarkeits-/Endgültigkeits-Dilemma](https://arxiv.org/abs/2009.04987)
 - [3-Slot-Finalität: Bei SSF geht es nicht um einen "einzelnen" Slot](https://ethresear.ch/t/3-slot-finality-ssf-is-not-about-single-slot/20927)
 
 ### Ausführung {#execution}
@@ -226,7 +226,7 @@ Sicherheit ist ein weites Feld, das Spam- und Betrugsprävention, Wallet-Sicherh
 
 ### Kryptographie & ZKP {#cryptography--zkp}
 
-Zero-Knowledge-Beweise (ZKP) und Kryptographie sind entscheidend, um Privatsphäre und Sicherheit in Ethereum und seine Anwendungen zu integrieren. Das Erstellen von Zero-Knowledge-Beweisen hat sich von der Forschung in die Produktionsinfrastruktur verlagert: Prover, die echte Ethereum-Blöcke beweisen, werden nun öffentlich auf Latenz, Kosten und Zuverlässigkeit (Soundness) getestet. Die offenen Probleme haben sich entsprechend verschoben, hin zum Beweisen von L1-Blöcken, das schnell genug ist, um in Echtzeit stattzufinden, zur strengen Berücksichtigung der Sicherheit der verwendeten Beweissysteme und zur Vorbereitung auf die Post-Quanten-Kryptographie.
+Zero-Knowledge-Beweise (ZKP) und Kryptographie sind entscheidend, um Privatsphäre und Sicherheit in Ethereum und seine Anwendungen zu integrieren. Das Erstellen von Zero-Knowledge-Beweisen hat sich von der Forschung in die Produktionsinfrastruktur verlagert: Prover, die echte Ethereum-Blöcke beweisen, werden nun öffentlich auf Latenz, Kosten und Stichhaltigkeit (Soundness) getestet. Die offenen Probleme haben sich entsprechend verschoben, hin zum Beweisen von L1-Blöcken, das schnell genug ist, um in Echtzeit stattzufinden, zur strengen Berücksichtigung der Sicherheit der verwendeten Beweissysteme und zur Vorbereitung auf die Post-Quanten-Kryptographie.
 
 #### Hintergrundlektüre {#background-reading-6}
 
@@ -238,7 +238,7 @@ Zero-Knowledge-Beweise (ZKP) und Kryptographie sind entscheidend, um Privatsphä
 
 - [Ethresear.ch ZK](https://ethresear.ch/c/zk-s-nt-arks/13)
 - [Ethresear.ch Kryptographie](https://ethresear.ch/c/cryptography/28)
-- [Zuverlässigkeitsrechner (Soundness Calculator) für Hash-basierte zkEVM-Beweissysteme](https://github.com/ethereum/soundcalc)
+- [Stichhaltigkeits-Rechner (Soundness Calculator) für Hash-basierte zkEVM-Beweissysteme](https://github.com/ethereum/soundcalc)
 - [Auslieferung einer L1-zkEVM: die Sicherheitsgrundlagen](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
 ### Wallets {#wallets}
@@ -360,7 +360,7 @@ Ethereums Spezifikationen sind ausführbar, und die daraus generierten Test-Fixt
 
 ### Formale Verifikation {#formal-verification}
 
-Formale Verifikation verwendet maschinell geprüfte mathematische Beweise, um festzustellen, dass sich eine Spezifikation oder eine Implementierung wie beabsichtigt verhält. Bei Ethereum umfasst dies den Beweis, dass EVM-Implementierungen einer formalen Semantik entsprechen, den Beweis der Zuverlässigkeit der Schaltkreise und Beweissysteme, auf die sich Zero-Knowledge-Prover stützen, und die Verifizierung der zugrunde liegenden kryptographischen Primitive. Weitere Forschung kann diese Beweise stärken und sie auf weitere Teile des Stacks ausdehnen.
+Formale Verifikation verwendet maschinell geprüfte mathematische Beweise, um festzustellen, dass sich eine Spezifikation oder eine Implementierung wie beabsichtigt verhält. Bei Ethereum umfasst dies den Beweis, dass EVM-Implementierungen einer formalen Semantik entsprechen, den Beweis der Stichhaltigkeit der Schaltkreise und Beweissysteme, auf die sich Zero-Knowledge-Prover stützen, und die Verifizierung der zugrunde liegenden kryptographischen Primitive. Weitere Forschung kann diese Beweise stärken und sie auf weitere Teile des Stacks ausdehnen.
 
 #### Hintergrundlektüre {#background-reading-13}
 

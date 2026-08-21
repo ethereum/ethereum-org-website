@@ -287,7 +287,7 @@ lang: ar
 
 #### قراءة في الخلفية {#background-reading-9}
 
-- [مجموعة الحوافز القوية](https://rig.ethereum.org/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [دورة متقدمة في اقتصاديات إيثيريوم والنموذج الاقتصادي](https://github.com/CADLabs/ethereum-economic-model)
 
 #### الأبحاث الحديثة {#recent-research-9}
@@ -303,7 +303,7 @@ lang: ar
 #### قراءة في الخلفية {#background-reading-10}
 
 - [تصميم آلية رسوم المعاملة لسلسلة كتل إيثيريوم: تحليل اقتصادي لـ <span dir="ltr">EIP-1559</span> (تيم روفجاردن، <span dir="ltr">2020</span>)](https://timroughgarden.org/papers/eip1559.pdf)
-- [محاكاة <span dir="ltr">EIP-1559</span> (مجموعة الحوافز القوية)](https://ethereum.github.io/abm1559)
+- [محاكاة <span dir="ltr">EIP-1559</span> (Robust Incentives Group)](https://ethereum.github.io/abm1559)
 - [اقتصاديات التجميع من المبادئ الأولى](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
 - [Flash Boys 2.0: التشغيل الأمامي، وإعادة ترتيب المعاملات، وعدم استقرار الإجماع في البورصات اللامركزية](https://arxiv.org/abs/1904.05234)
 
@@ -321,11 +321,11 @@ lang: ar
 
 - [الحد الأقصى للرصيد الفعال](/roadmap/pectra/maxeb/)
 - [دورة متقدمة في اقتصاديات إيثيريوم والنموذج الاقتصادي](https://github.com/CADLabs/ethereum-economic-model)
-- [محاكاة حوافز إثبات الحصة (PoS) (مجموعة الحوافز القوية)](https://ethereum.github.io/beaconrunner/)
+- [محاكاة حوافز إثبات الحصة (PoS) (Robust Incentives Group)](https://ethereum.github.io/beaconrunner/)
 
 #### الأبحاث الحديثة {#recent-research-11}
 
-- [مجموعة الحوافز القوية](https://rig.ethereum.org/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [ثلاث هجمات على إثبات الحصة (PoS) في إيثيريوم](https://arxiv.org/abs/2110.10086)
 
 ### التخزين السائل والمشتقات {#liquid-staking-and-derivatives}
@@ -385,7 +385,7 @@ lang: ar
 
 #### الأبحاث الحديثة {#recent-research-14}
 
-- [تحليل بيانات مجموعة الحوافز القوية](https://rig.ethereum.org/)
+- [تحليل بيانات Robust Incentives Group](https://rig.ethereum.org/)
 - [البيانات المفتوحة لـ ethPandaOps](https://ethpandaops.io/data/)
 - [L2BEAT: ملخص التوسع](https://l2beat.com/scaling/summary)
 
