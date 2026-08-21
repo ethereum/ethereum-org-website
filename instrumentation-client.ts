@@ -49,7 +49,7 @@ Sentry.init({
     // Browser extension protocols
     /chrome-extension:\/\//,
     /moz-extension:\/\//,
-    /safari-extension:\/\//,
+    /safari(-web)?-extension:\/\//,
     // Netlify RUM analytics (blocked by ad blockers, not actionable)
     /\.netlify\/scripts\/rum/,
   ],
@@ -66,7 +66,7 @@ Sentry.init({
     /Invalid call to runtime\.sendMessage\(\)/,
     // Netlify RUM fetch blocked by ad blockers - the host is only in the
     // message, so denyUrls cannot match it (ETHORG-76)
-    /Failed to fetch \(ingesteer\.services-prod\.nsvcs\.net\)/,
+    /\(ingesteer\.services-prod\.nsvcs\.net\)/,
     // WebView circular reference serialization failures - wallet app injections (ETHORG-72)
     /JSON\.stringify cannot serialize cyclic structures/,
     // Extension IPC / DApp bridge errors (ETHORG-FN, ETHORG-AT)

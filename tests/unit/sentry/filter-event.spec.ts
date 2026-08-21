@@ -6,7 +6,9 @@ import type { ErrorEvent } from "@sentry/nextjs"
 
 import { type DropReason, getDropReason } from "@/lib/sentry/filter-event"
 
-const OURS = "https://ethereum.org/_next/static/chunks/app.js"
+// @sentry/nextjs rewrites our origin to app:/// before beforeSend runs, so
+// this is what a first-party frame actually looks like at filter time.
+const OURS = "app:///_next/static/chunks/app.js"
 
 const event = (
   values: Array<{ value: string; frames?: string[] }>,
@@ -110,6 +112,16 @@ const cases: Array<[name: string, event: ErrorEvent, expected: DropReason]> = [
     event([
       { value: "Maximum call stack size exceeded", frames: [OURS, OURS] },
     ]),
+    null,
+  ],
+  [
+    "about:blank throw site",
+    event([{ value: "x is not a function", frames: [OURS, "about:blank"] }]),
+    "extension-throw",
+  ],
+  [
+    "frameless overflow, no third-party evidence",
+    event([{ value: "Maximum call stack size exceeded" }]),
     null,
   ],
   [

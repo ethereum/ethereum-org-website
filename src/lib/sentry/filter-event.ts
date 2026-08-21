@@ -8,7 +8,8 @@ export type DropReason =
   | "wallet-provider"
   | null
 
-const EXTENSION_PROTOCOL = /(?:chrome|moz|safari|ms-browser)-extension:\/\//
+const EXTENSION_PROTOCOL =
+  /(?:chrome|moz|ms-browser|safari(?:-web)?)-extension:\/\//
 
 // Injected third-party scripts whose frames carry no extension protocol.
 const INJECTED_SCRIPT = [
@@ -35,11 +36,13 @@ const NO_LOCATION = new Set(["", "undefined", "null", "<anonymous>"])
 const hasUsableLocation = (filename?: string, absPath?: string): boolean =>
   [filename, absPath].some((v) => v !== undefined && !NO_LOCATION.has(v))
 
+// Not app:/// -- nextjsClientStackFrameNormalization rewrites our own frames to
+// that scheme before beforeSend runs, so it marks first-party code too.
 const isThirdPartyLocation = (filename = "", absPath = ""): boolean =>
   [filename, absPath].some(
     (v) =>
       EXTENSION_PROTOCOL.test(v) ||
-      v.startsWith("app:///") ||
+      v === "about:blank" ||
       INJECTED_SCRIPT.some((re) => re.test(v))
   )
 
@@ -91,7 +94,7 @@ export function getDropReason(event: ErrorEvent): DropReason {
     const attributable = frames.some((f) =>
       hasUsableLocation(f.filename, f.abs_path)
     )
-    if (!attributable) return "unattributable-overflow"
+    if (frames.length > 0 && !attributable) return "unattributable-overflow"
   }
 
   return null
