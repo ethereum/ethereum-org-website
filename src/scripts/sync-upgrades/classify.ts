@@ -8,8 +8,8 @@
  * data. The gate is which key moved, not how big the diff is: a devnet date
  * has no prose to contradict, a mainnet target has 25 files' worth.
  *
- * Compares the committed store against the working tree, so it runs after the
- * sync and before the commit.
+ * Compares a committed store against the working tree, so it runs after the
+ * sync and before the commit. `SYNC_BASE_REF` picks which commit that is.
  */
 import { execFileSync } from "node:child_process"
 import { mkdtempSync, rmSync, writeFileSync } from "node:fs"
@@ -26,6 +26,9 @@ import type {
 } from "@/data/upgrades/types"
 
 const STORE_PATH = "src/data/upgrades/generated.ts"
+
+/** The sync branch while a data PR is unmerged, so a change is reported once. */
+const BASE_REF = process.env.SYNC_BASE_REF || "HEAD"
 
 /** Compact and unambiguous — this is read in a diff, not in a UI. */
 const formatDate = (when: PartialDate): string => {
@@ -87,7 +90,7 @@ export const classify = (prev: UpgradeStore, next: UpgradeStore): string[] => {
   })
 }
 
-/** The committed store, loaded as a module rather than parsed as text. */
+/** The baseline store, loaded as a module rather than parsed as text. */
 const loadCommitted = async (): Promise<UpgradeStore> => {
   const dir = mkdtempSync(join(tmpdir(), "upgrade-store-"))
   try {
@@ -95,7 +98,7 @@ const loadCommitted = async (): Promise<UpgradeStore> => {
     // The store's only import is type-only, so it needs no siblings here.
     writeFileSync(
       path,
-      execFileSync("git", ["show", `HEAD:${STORE_PATH}`], {
+      execFileSync("git", ["show", `${BASE_REF}:${STORE_PATH}`], {
         encoding: "utf8",
       }).replace(/\s*satisfies UpgradeStore\s*$/, "")
     )

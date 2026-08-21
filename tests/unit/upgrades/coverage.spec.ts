@@ -44,6 +44,14 @@ test("a three-digit number is not an EIP reference", () => {
   expect(mentionedEips("EIP-158 was withdrawn").size).toBe(0)
 })
 
+test("the plural, a bare link and a non-breaking hyphen all count", () => {
+  const found = mentionedEips(
+    "EIPs 7702 and 2537 ship, see https://eips.ethereum.org/EIPS/eip-7928, " +
+      "plus EIP\u20112780."
+  )
+  expect([...found].sort()).toEqual([2780, 7702, 7928])
+})
+
 test("live upgrades are out of scope — their EIP set is frozen", () => {
   const gaps = findGaps(
     store(upgrade({ slug: "no-such-page-live", status: "live" }))
@@ -66,6 +74,13 @@ test("an upgrade with no English page is one gap, not one per EIP", () => {
   expect(gap.pageMissing).toBe(true)
   expect(gap.path).toBe("public/content/roadmap/no-such-page/index.md")
   expect(renderReport([gap])).toContain("2 EIPs")
+})
+
+test("an unscheduled upgrade is not chased for a page it does not owe", () => {
+  const gaps = findGaps(
+    store(upgrade({ slug: "no-such-page-planned", status: "planning" }))
+  )
+  expect(gaps).toEqual([])
 })
 
 test("the report says so when there is nothing to write", () => {

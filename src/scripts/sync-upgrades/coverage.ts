@@ -39,7 +39,11 @@ const readPage = (path: string): string | null => {
  * check is for an unwritten section, not for how well it is written.
  */
 export const mentionedEips = (markdown: string): Set<number> =>
-  new Set([...markdown.matchAll(/EIP[-–\s]?(\d{4})/g)].map((m) => Number(m[1])))
+  new Set(
+    [...markdown.matchAll(/EIPs?[-–\u2011\s]?(\d{4})/gi)].map((m) =>
+      Number(m[1])
+    )
+  )
 
 export interface CoverageGap {
   upgrade: UpgradeData
@@ -48,6 +52,12 @@ export interface CoverageGap {
   pageMissing: boolean
   uncovered: UpgradeEip[]
 }
+
+/**
+ * `planning` and `research` forks can sit page-less for months, so chasing one
+ * is a row that repeats every week. Their EIPs are checked once a page exists.
+ */
+const owesAPage = (upgrade: UpgradeData) => upgrade.status === "upcoming"
 
 export const findGaps = (store = upgrades): CoverageGap[] =>
   Object.values(store)
@@ -63,7 +73,9 @@ export const findGaps = (store = upgrades): CoverageGap[] =>
         uncovered: upgrade.eips.filter((eip) => !mentioned.has(eip.id)),
       }
     })
-    .filter((gap) => gap.pageMissing || gap.uncovered.length > 0)
+    .filter((gap) =>
+      gap.pageMissing ? owesAPage(gap.upgrade) : gap.uncovered.length > 0
+    )
 
 export const renderReport = (gaps: CoverageGap[]): string => {
   if (gaps.length === 0) {

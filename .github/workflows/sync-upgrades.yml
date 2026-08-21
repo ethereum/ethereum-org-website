@@ -12,9 +12,14 @@ permissions:
   pull-requests: write
   issues: write
 
+concurrency:
+  group: sync-upgrades
+  cancel-in-progress: false
+
 env:
   BRANCH: automated/sync-upgrades
   ISSUE_TITLE: "Upgrade data: changes needing content review"
+  DIFF_LIMIT: 30000
 
 jobs:
   sync:
@@ -49,10 +54,31 @@ jobs:
           pnpm type-check
           pnpm test:unit
 
-      # Empty output means nothing changed that any page can contradict.
+      # While a data PR is unmerged, the sync branch is what the issue last
+      # reported; classifying against dev would restate it every Friday.
+      - name: Resolve the classify baseline
+        id: base
+        if: steps.diff.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR=$(gh pr list --head "$BRANCH" --base dev --state open --json number --jq '.[0].number')
+          REF=HEAD
+          if [ -n "$PR" ] && git fetch --depth=1 origin "$BRANCH"; then
+            REF=FETCH_HEAD
+          fi
+          echo "pr=$PR" >> "$GITHUB_OUTPUT"
+          echo "ref=$REF" >> "$GITHUB_OUTPUT"
+          echo "Classifying against $REF."
+
+      # Empty output means nothing changed that any page can contradict, and a
+      # failure here costs a notification rather than the week's sync.
       - name: Classify the change
         id: classify
         if: steps.diff.outputs.changed == 'true'
+        continue-on-error: true
+        env:
+          SYNC_BASE_REF: ${{ steps.base.outputs.ref }}
         run: |
           pnpm exec tsx src/scripts/sync-upgrades/classify.ts > notable.txt
           if [ -s notable.txt ]; then
@@ -79,23 +105,23 @@ jobs:
         if: steps.diff.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUM: ${{ steps.base.outputs.pr }}
         run: |
           printf '%s\n\n%s\n' \
             "Source: [ethereum/forkcast](https://github.com/ethereum/forkcast)" \
             "<sub>Fridays 09:00 UTC · re-run via \`workflow_dispatch\`</sub>" > pr_body.md
           TITLE="Sync upgrade data from Forkcast - $(date -u +'%B %-d')"
-          NUM=$(gh pr list --head "$BRANCH" --base dev --state open --json number --jq '.[0].number')
           if [ -n "$NUM" ]; then
             gh pr edit "$NUM" --title "$TITLE" --body-file pr_body.md
           else
-            gh pr create --base dev --head "$BRANCH" \
-              --title "$TITLE" --body-file pr_body.md --label "update 🔄"
-            NUM=$(gh pr list --head "$BRANCH" --base dev --state open --json number --jq '.[0].number')
+            URL=$(gh pr create --base dev --head "$BRANCH" \
+              --title "$TITLE" --body-file pr_body.md --label "update 🔄")
+            NUM="${URL##*/}"
           fi
           echo "number=$NUM" >> "$GITHUB_OUTPUT"
 
-      # Appended as a comment, not a body edit: comments notify subscribers,
-      # cannot outgrow the body size limit, and keep the history in order.
+      # Appended as a comment, not a body edit: comments notify subscribers and
+      # keep the history in order. Comments share the body's 65,536-char limit.
       - name: Open or append the content-review issue
         if: steps.classify.outputs.notable == 'true'
         env:
@@ -108,15 +134,16 @@ jobs:
             echo '```'
             cat notable.txt
             echo '```'
-            if grep -q 'EIP-' notable.txt; then
-              echo
-              pnpm exec tsx src/scripts/sync-upgrades/coverage.ts
-            fi
+            echo
+            pnpm exec tsx src/scripts/sync-upgrades/coverage.ts
             echo
             echo "<details><summary>Store diff</summary>"
             echo
             echo '```diff'
-            cat store.diff
+            head -c "$DIFF_LIMIT" store.diff
+            if [ "$(wc -c < store.diff)" -gt "$DIFF_LIMIT" ]; then
+              printf '\n… truncated — the PR has the full diff\n'
+            fi
             echo '```'
             echo
             echo "</details>"
