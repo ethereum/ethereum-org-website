@@ -1,5 +1,7 @@
 import * as Sentry from "@sentry/nextjs"
 
+import { getDropReason } from "@/lib/sentry/filter-event"
+
 const environment = process.env.NEXT_PUBLIC_CONTEXT || "development"
 
 /**
@@ -50,7 +52,6 @@ Sentry.init({
     /safari-extension:\/\//,
     // Netlify RUM analytics (blocked by ad blockers, not actionable)
     /\.netlify\/scripts\/rum/,
-    /ingesteer\.services-prod\.nsvcs\.net/,
   ],
 
   // Filter common extension error messages and non-actionable errors
@@ -63,9 +64,9 @@ Sentry.init({
     /Could not establish connection\. Receiving end does not exist/,
     /Attempting to use a disconnected port object/,
     /Invalid call to runtime\.sendMessage\(\)/,
-    // Resource loading errors - network/ad blocker issues, not actionable (ETHORG-A8, ETHORG-8N)
-    /Event `Event` \(type=error\) captured as promise rejection/,
-    /NetworkError when attempting to fetch resource/,
+    // Netlify RUM fetch blocked by ad blockers - the host is only in the
+    // message, so denyUrls cannot match it (ETHORG-76)
+    /Failed to fetch \(ingesteer\.services-prod\.nsvcs\.net\)/,
     // WebView circular reference serialization failures - wallet app injections (ETHORG-72)
     /JSON\.stringify cannot serialize cyclic structures/,
     // Extension IPC / DApp bridge errors (ETHORG-FN, ETHORG-AT)
@@ -73,8 +74,7 @@ Sentry.init({
     /DApp request timeout/,
     // Cross-origin postMessage from extensions/embedded frames (ETHORG-87)
     /^Error: invalid origin$/,
-    // Injected scripts from WebViews, adware, and OEM bloatware (ETHORG-14R, ETHORG-13N, ETHORG-JK, ETHORG-14B)
-    // Matches every global the LIDNotify injection references, e.g. `LIDNotifyId` (ETHORG-15N)
+    // Injected scripts from WebViews, adware, and OEM bloatware (ETHORG-14R, ETHORG-13N, ETHORG-JK, ETHORG-14B, ETHORG-15N)
     /LIDNotify\w* is not defined/,
     /tgetT is not defined/,
     /zaloJSV2 is not defined/,
@@ -82,38 +82,9 @@ Sentry.init({
   ],
 
   beforeSend(event) {
-    // Filter wallet extension JSON-RPC errors that have no stacktrace (ETHORG-7Q)
-    const values = event.exception?.values ?? []
-    const hasNoStacktrace = values.every((v) => !v.stacktrace?.frames?.length)
-    if (hasNoStacktrace) {
-      const message = values[0]?.value ?? ""
-      if (/Internal JSON-RPC error/i.test(message)) return null
-    }
-
-    // Filter extension injection script errors not caught by denyUrls
-    const frames = values.flatMap((v) => v.stacktrace?.frames ?? [])
-    const isExtensionScript = frames.some((f) => {
-      const filename = f.filename || ""
-      const absPath = f.abs_path || ""
-      return (
-        // Extension preload scripts
-        filename.includes("preload/document.js") ||
-        absPath.includes("preload/document.js") ||
-        // Wallet extension injection scripts (ETHORG-Z1: TronLink, ETHORG-115: wallet bridges)
-        /injected\/injected\.js/.test(filename) ||
-        /bridge\/inject\.js/.test(filename) ||
-        /content[-_]?script\.js/i.test(filename) ||
-        /inpage\.js/.test(filename) ||
-        // Generic app:// protocol used by extension injected scripts (ETHORG-117: BitVisionWeb wallet)
-        filename.startsWith("app:///") ||
-        absPath.startsWith("app:///") ||
-        // Extension code injected via about:blank contexts (ETHORG-96)
-        filename === "about:blank" ||
-        absPath === "about:blank"
-      )
-    })
-    return isExtensionScript ? null : event
+    return getDropReason(event) ? null : event
   },
+
   // Normalize transaction names to strip locale prefixes so all locales
   // group under one page (e.g., "/en/staking/", "/ko/staking/" → "/staking/")
   beforeSendTransaction(event) {
