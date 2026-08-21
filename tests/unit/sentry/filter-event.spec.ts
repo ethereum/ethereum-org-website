@@ -57,6 +57,49 @@ test.describe("extension payloads in serialized extra (ETHORG-73)", () => {
   })
 })
 
+test.describe("wallet provider errors (ETHORG-7Q, ETHORG-73)", () => {
+  test("drops an EIP-1193 rejection identified only by its code", () => {
+    const event = errorEvent(
+      [
+        {
+          value:
+            "Object captured as promise rejection with keys: code, message",
+        },
+      ],
+      {
+        __serialized__: {
+          code: 4001,
+          message: "wallet must has at least one account",
+        },
+      }
+    )
+
+    expect(getDropReason(event)).toBe("wallet-provider")
+  })
+
+  test("drops a reserved JSON-RPC provider code", () => {
+    const event = errorEvent(
+      [{ value: "Object captured as promise rejection" }],
+      {
+        __serialized__: { code: -32603, message: "Internal JSON-RPC error" },
+      }
+    )
+
+    expect(getDropReason(event)).toBe("wallet-provider")
+  })
+
+  test("keeps an unrelated numeric code", () => {
+    const event = errorEvent(
+      [{ value: "Object captured as promise rejection" }],
+      {
+        __serialized__: { code: 500, message: "upstream failure" },
+      }
+    )
+
+    expect(getDropReason(event)).toBeNull()
+  })
+})
+
 test.describe("third-party throwing frame", () => {
   test("drops when the last frame is an injected wallet script", () => {
     const event = errorEvent([

@@ -5,6 +5,7 @@ export type DropReason =
   | "extension-payload"
   | "extension-throw"
   | "unattributable-overflow"
+  | "wallet-provider"
   | null
 
 const EXTENSION_PROTOCOL = /(?:chrome|moz|safari|ms-browser)-extension:\/\//
@@ -17,6 +18,13 @@ const INJECTED_SCRIPT = [
   /content[-_]?script\.js/i,
   /inpage\.js/,
 ]
+
+// EIP-1193 provider errors, plus the -32768..-32000 block JSON-RPC reserves
+// for pre-defined errors. Our code never mints either, so the code alone
+// identifies a wallet.
+const EIP_1193_CODES = new Set([4001, 4100, 4200, 4900, 4901])
+const isProviderErrorCode = (code: number): boolean =>
+  EIP_1193_CODES.has(code) || (code >= -32768 && code <= -32000)
 
 const OVERFLOW_MESSAGE = /Maximum call stack size exceeded|too much recursion/i
 
@@ -48,6 +56,17 @@ export function getDropReason(event: ErrorEvent): DropReason {
   // frameless event and stashes the real stack in extra (ETHORG-73).
   if (EXTENSION_PROTOCOL.test(JSON.stringify(event.extra ?? {}))) {
     return "extension-payload"
+  }
+
+  // Wallet providers reject with an EIP-1193 object rather than an Error, so
+  // the message varies per wallet but the code does not (ETHORG-7Q, ETHORG-73).
+  const serialized = (event.extra as { __serialized__?: { code?: unknown } })
+    ?.__serialized__
+  if (
+    typeof serialized?.code === "number" &&
+    isProviderErrorCode(serialized.code)
+  ) {
+    return "wallet-provider"
   }
 
   // Sentry orders frames oldest-first, so the throwing frame is the last one.
