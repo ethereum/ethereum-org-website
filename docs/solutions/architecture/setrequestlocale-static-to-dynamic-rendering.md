@@ -19,10 +19,21 @@ tags:
   - i18n
   - netlify
 discovered_in: "PRs #18785, #18797, #18798, #18800 (recovery); #18811 (systemic)"
-status: resolved
+status: superseded
+superseded_by: "next/root-params (Next.js 16.3); see src/i18n/request.ts"
 ---
 
 # `setRequestLocale` must run before any next-intl API
+
+> **Superseded.** `src/i18n/request.ts` now reads the `[locale]` segment via
+> [`next/root-params`](https://nextjs.org/blog/next-16-3#root-params) instead of
+> `requestLocale`. That never touches request headers, so the static-to-dynamic
+> failure below cannot occur and `setRequestLocale` has been removed from the
+> codebase. Kept for the history of the incident.
+>
+> The one case that still needs an explicit locale is Route Handlers and Server
+> Actions, which `next/root-params` doesn't reach yet: pass it at the call site,
+> e.g. `getTranslations({ locale, namespace })`.
 
 ## Problem
 
