@@ -61,3 +61,21 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 Lowest in the fleet. Software `client` rendered `mteja` (animate = customer) at ~85 sites across 5 files -- 2.7x the 31 sites fixed in #19015. CRITICAL NUANCE: ETHGlossary itself mandates `mteja wa mwafaka` for consensus client and `anuwai ya wateja` for client diversity, so 27 hits were correct and a blind sweep would corrupt them. Also `zawadi` (free gift) for reward, `Inayoaminika` inverting a Trustless warning, `Badilishano` (the swap) as subject of custody sentences, a self-sovereign/solo tautology, and a malformed `Pedi ya Kuzindulia Uwekezaji Dhamana` for Staking Launchpad.
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 7.8/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+- AI prompt-card fill-in blanks (`[app]`, `[my device]`, `[my system]`, `[this]`, `[this error]`, `[App]`) translated -- they were shipped as verbatim English.
+- `Robust Incentives Group` restored to English at 5 sites -- the name had been semantically translated with no English retained, making the EF team unsearchable.
+
+- `ilishindwa mahakamani` ("was defeated in court") -> `ilipatikana`. Swept all 24 -- sw was the ONLY locale to invert "the right to publish encryption software was won in court".
+- `kudharau` (despise) for "deprecate" -> `kuuondoa katika matumizi`.
+- `kuuza nje` (sell abroad) for data "export" -> `kuhamisha data nje`.
+- `### Wateja wa Utekelezaji` -> `Viteja vya Utekelezaji`: the animate/customer form for software clients, against the glossary note. Recurrence of sw's #1 defect class (PRs #19015, #19115).
+
+**Open (native call needed):**
+
+- `kifaa cha majaribio` for "test harness" (device/apparatus).
+- `madaraja` for "classes" collides with `madaraja` = bridges in the same file.
+- `au kuendelea` ("or continues") for "or moves on" -- near-opposite.
+- Glossary entries wanted for `custodial`/`locally`/`derivatives` (`viingilio` = "entrance fees" is tree-established but semantically wrong).

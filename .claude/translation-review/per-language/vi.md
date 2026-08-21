@@ -63,3 +63,18 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 Signature untranslated-English-chunk failure is ABSENT -- verified paragraph-by-paragraph across all 6 files and 279 JSON keys. No duplication from the two pipeline passes. Remaining: `số dư hiệu quả` vs glossary `hiệu dụng`, Staking Launchpad translated in 3 of 14 places, and an ETHGlossary casing leak confined to one file (15 mid-sentence capitals from entries that ship capitalized).
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 8.8/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+- AI prompt-card fill-in blanks (`[app]`, `[my device]`, `[my system]`, `[this]`, `[this error]`, `[App]`) translated -- they were shipped as verbatim English.
+
+- `oracle` kept Latin and newly capitalized at 2 changed lines, against the glossary (`nguồn cấp dữ liệu`) and 255 tree occurrences.
+
+**Open (native call needed):**
+
+- Two pre-existing lines in the same section carry the same wrong form (L436 heading, L440 link) -- out of scope here.
+- `tính hợp lệ` (validity) for "soundness" -- a distinct proof-system property.
+- `Mã nguồn mở dễ dãi` injects a mildly pejorative "lax" valence into the neutral "permissive" license label.
+- `Kiểm tra AlternativeTo` ("inspect/test") for the "Check out" button.
+- `Giao thức`/`giao thức` split 10:9 within one file (the locale-wide glossary casing leak).

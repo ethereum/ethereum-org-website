@@ -49,3 +49,18 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 Negation inversion at dvt:84 (postverbal `ningún` without preverbal `no` reversed a fault-tolerance claim). dvt conflated staking pool/pooled staking. Register REGRESSED: this run flipped pools and solo from usted to tú while siblings stayed usted, so the section now switches register between linked pages.
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 7.9/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Plus the locale-only extra file in this PR. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+- `Robust Incentives Group` restored to English at 5 sites -- the name had been semantically translated with no English retained, making the EF team unsearchable.
+- `rollup`/`dapp` plurals restored at 9 sites (tree favours `rollups` 243:36, `dapps` 29:9).
+
+- `shipped`/`Shipping` -> `envío` (shipment) at 4 sites -> `implementó`/`Lanzamiento`.
+- `cadena principal` -> `Red principal` for Mainnet in `testing/index.md` L207 (same file uses the correct form 4x).
+
+**Open (native call needed):**
+
+- `arnés de prueba` for "test harness" (horse-harness sense).
+- `lean` -> `ligero` collides with es's established term for a *light* client.
+- `page-open-source.json` is usted throughout while the `page-values` card that links to it is tú.

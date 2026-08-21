@@ -65,3 +65,16 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 Truncated word `스마트 컨트랙` (not a word). saas:71 rendered majority-client as `다수의` (many clients), inverting the risk. `Mainnet` left Latin against glossary. JSON risk bullet flattened "Your ETH is at stake" into "your ETH gets staked", removing the risk framing. Launchpad rendered 3 ways.
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 8.8/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+
+- `계약` -> `컨트랙트` for smart contracts, against a glossary note that explicitly forbids `계약`.
+- `오픈소스` -> `오픈 소스` at 41 sites, aligning the page with `common.json`/`page-values.json` and tree precedent (194:16 spaced). Before the fix the /values CTA and the page title it links to disagreed.
+
+**Open (native call needed):**
+
+- `capture` -> `독점` (market monopoly); corporate capture is `장악`/`사유화`.
+- `Survey of blockchain oracles` -> `설문조사` (questionnaire); the pre-PR line had the correct `조사`.
+- `Zero Knowledge podcast` proper name translated.

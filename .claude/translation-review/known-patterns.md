@@ -1,7 +1,8 @@
 # Known Translation Patterns & Issues
 
 > This is a living document. Updated after each language review.
-> Last updated: 2026-08-14 (PR #19076 find-wallet JSON, 24 langs: **ETHGlossary's own term data is the defect source** for lowercased acronym parentheticals and non-Western numerals, runtime-composed fragment keys forcing per-locale agreement guesses, the check-the-tree-before-fixing-a-term-of-art hygiene rule, and three glossary coverage gaps; fleet avg 9.35)
+> Last updated: 2026-08-20 (PR #19034 full pipeline, 24 langs: **bracket-placeholder blanks are a coverage gap `verify-structure` cannot see** (11 locales), character-level generation corruption in 3 locales, the semantic-translation-of-an-org-name split, `soundness`/`test harness` as glossary gaps, the ar `validator` glossary entry breaking NFC, and the rule that a dominant-but-wrong tree form must be fixed globally or not at all; fleet avg 8.67)
+> Previous: 2026-08-14 (PR #19076 find-wallet JSON, 24 langs: **ETHGlossary's own term data is the defect source** for lowercased acronym parentheticals and non-Western numerals, runtime-composed fragment keys forcing per-locale agreement guesses, the check-the-tree-before-fixing-a-term-of-art hygiene rule, and three glossary coverage gaps; fleet avg 9.35)
 > Previous: 2026-07-29 (PR #18938 full pipeline, 24 langs: Indic loaded-polyseme bloc failure, sanitizer frontmatter-guard newline bug corrupting `uploadDate`, `/videos` frontmatter bypassing ETHGlossary, split-sentence `-strong` keys, partial-update manifest drift; fleet avg 8.9 -- lowest in months)
 > Previous: 2026-07-22 (PR #18868 full pipeline, 22 langs: YAML colon-in-description build-breaker, raw-`<`-in-prose MDX break, and the `ExpandableCard title= "` attribute-extraction gap; fleet avg 9.7)
 > Previous: 2026-06-30 (PR #18629 full-tree: empty `{#}` h5 build-breaker, code-fence corruption cluster, the source-language decision rule, and the "deterministic sweeps beat agent triage" methodology note)
@@ -886,3 +887,93 @@ YAML reads `key: value` inside an unquoted scalar as a **mapping**, so `summaryP
 **Fix:** quote the scalar (`- "text: more text"`). Preserves the translator's punctuation; changing the colon to a comma also works but overrides a legitimate stylistic choice. Neither value here contained a `"`, so plain double-quoting was safe.
 
 **Prompt-side prevention:** the format rules already warn against `<span dir="ltr">` inside frontmatter because the inner quote breaks YAML. The same rule should say that any frontmatter value containing `: ` must be quoted. Languages that punctuate with a colon where English uses a comma will keep hitting this otherwise.
+
+### 67. Bracket fill-in blanks are user-facing prose, and 9 of 24 locales left them in English (HIGH -- coverage gap)
+
+`page-open-source.json` has six `page-open-source-ai-prompt-*-text` keys: copy-paste prompt templates whose lead-in tells the reader to fill in the blanks. The blanks are written as `[app]`, `[my device]`, `[my system]`, `[this]`, `[this error]`, `[App]`.
+
+Fully English: **bn cs hi ja mr sw ta te vi**. Localized: the other 15.
+
+**Watch the false positive.** A first pass counted 11 locales by flagging any bracket token byte-identical to English. **de** `[App]` and **it** `[app]` are the correct native words in German and Italian, and both locales had localized every other blank. Byte-identity with English is not evidence of an untranslated string whenever the English word is also the target-language word -- check the locale's other blanks before counting it.
+
+**Why nothing caught it.** These are not ICU placeholders. `verify-structure.ts`'s `json-placeholder` check tracks `{name}` and `<tag>`; `[...]` is free text, so both the pipeline and the gate treat it as translatable prose that happens not to have been translated. And because a `[...]` token *looks* like a placeholder, the model plausibly protected it on purpose.
+
+**Detect:** compare the multiset of `\[[^\]]+\]` tokens in each locale value against English. Equality across a whole file is the signal -- a locale that translated the surrounding sentence but kept every bracket token verbatim did not make 6 independent decisions. Add as a `bracket-placeholder-parity` **warn** check (warn, not error: `[app]` is a legitimate rendering in some locales).
+
+**Resolved in PR #19034.** All 9 locales were translated, taking each locale's own vocabulary from its tree rather than inventing it: the site's `Apps` nav word for `[app]`, and the "my device" form each locale had *already written* in its own `policy-text` string in the same file. Frequency counting alone would have picked the wrong word for "error" in 4 of 6 locales -- `ভুল`/`चूक`/`తప్పు`/`kosa` outrank the technical term in raw counts but mean "mistake", and substring matching inflates them; the computing sense (`ত্রুটি`/`त्रुटि`/`त्रुटी`/`hitilafu`/`பிழை`/`ఎర్రర్`) is the right pick. Two edits needed grammar beyond substitution: **hi** required the verb to change (`मिला` -> `मिली`, because `त्रुटि` is feminine), and **cs** required absorbing the noun that sat *outside* the bracket (`k aplikaci [app]` -> `k [aplikaci]`) so the case marking landed inside the slot.
+
+**Prevention:** stop overloading square brackets. Either use real ICU placeholders so the invariant is machine-checkable, or write the blanks as underscored prose so nothing looks protected.
+
+### 68. Character-level generation corruption reappears, and it is invisible to every structural check (CRITICAL)
+
+Three locales shipped junk at the character level in the same PR:
+
+| Locale | Key/line | Shipped | Effect |
+|---|---|---|---|
+| bn | `page-open-source-local-ai-description-2` | `কোথাও কিছু পাঠানো হয়বিধা নেই` | junk syllable `বিধা` destroys the negation of "Nothing sent anywhere" |
+| ru | `page-open-source-movement-description` | `побеждами с ними` | non-word; visible gibberish |
+| zh | `community/research/index.md` L54 | `这里的研分为两条主线` | `研` alone is not a word ("Research here divides...") |
+
+All three parse, compile, keep every tag balanced, and pass all 20 `verify-structure` invariants. bn's is the third recurrence of that locale's junk-syllable family (see #19015).
+
+**There is no cheap deterministic detector for this.** Attempts that do NOT work: intra-word script-mixing (fires on `<strong>` glued to text -- 100% false positives on this PR), and length-ratio-vs-English truncation (CJK is naturally ~40% of English character length, so every zh/zh-tw string looks truncated). Both were run on this PR and discarded. Per-language spell/dictionary checking is the only real answer; until then this class is found by reading, which is an argument for keeping a native-language agent per locale rather than trusting the gate.
+
+### 69. Semantically translating an org's proper name deletes it (HIGH -- brand, fleet split)
+
+`Robust Incentives Group` (an EF team with its own site, rig.ethereum.org) appears at 5 sites in `community/research/index.md`. The fleet split four ways:
+
+- Kept English bare: **de it pl**
+- Translated **with** an English gloss in parens: **cs fr id ko pt-br ru tr uk vi zh zh-tw** -- acceptable, the name stays searchable
+- Transliterated: **bn ja mr te ur** -- policy-correct for non-Latin scripts (#1)
+- **Semantically translated with no English retained: ar es hi sw ta** -- defect. `Grupo de incentivos robustos` / `मजबूत प्रोत्साहन समूह` / `Kikundi cha Motisha Imara` cannot be searched for, and a reader cannot connect the label to the org.
+
+The rule that resolves all four: **an org's proper name must remain recoverable.** Keep it, transliterate it, or gloss it -- never replace it with a description of what the words mean. ur additionally shows the failure mode of transliterating badly (`روبسٹ انسیٹوز گروپ` drops the ن of *-cen-*), which is why a gloss is the safest default.
+
+### 70. Check whether a wrong form is DOMINANT before fixing its PR-introduced instances (REVIEW HYGIENE -- the inverse of #55)
+
+The ur agent correctly identified 7 PR-added instances of `لامركزی` carrying Arabic kaf U+0643 where Urdu orthography wants keheh U+06A9, and proposed fixing them, citing PR #18942's precedent.
+
+Verified codepoint counts across the ur tree: **646 kaf vs 186 keheh.** The defective form is dominant 3.5:1 -- a long-standing systematic defect, not a convention. Patching 8 sites moves it to 638/194: it fixes nothing a reader experiences and it *increases* intra-tree inconsistency, which then makes the next reviewer's precedent check ambiguous.
+
+**Rule.** #55 says check the tree before "fixing" a term. This is its inverse: when the tree says the wrong form is the majority, the fix is global or it is nothing. Normalize the upstream ETHGlossary entry, then run one tree-wide sweep, in its own commit. Do not spend a PR's fix budget moving a ratio by 1%.
+
+### 71. ETHGlossary term data can be non-NFC, and one entry denormalizes every file that uses it (MEDIUM -- glossary data)
+
+`ar/community/research/index.md` was NFC-normalized on `origin/dev` and is **not** after this PR. Length delta is 0, so nothing was added or lost -- it is a canonical-ordering change: `مُدَقِّق` ("validator") carries SHADDA U+0651 *before* KASRA U+0650, where canonical order (ccc 32 before 33) puts kasra first.
+
+Source: ETHGlossary's own ar `validator` entry, 1 of 165 ar translations, and the only non-NFC one. It occurs 8x in this PR's ar file. It renders identically, so no reviewer sees it; it breaks byte-level search, diffing and dedup.
+
+**Detect:** `text == unicodedata.normalize("NFC", text)` per file, plus the same assertion on glossary responses. A **warn**-level `nfc` check, with one caveat that stops it false-failing: bn legitimately uses precomposed U+09DF (BENGALI LETTER YYA), which is in the Unicode composition-exclusion table, so NFC *decomposes* it. bn files are therefore permanently "non-NFC" and that is correct. Compare against the pre-PR file, not against an absolute NFC ideal.
+
+### 72. English-source defects that split the fleet on one page (ENGLISH SOURCE)
+
+Fix these in `public/content/community/research/index.md` and `src/intl/en/page-open-source.json` rather than in 24 locales:
+
+| English | Problem | Fleet damage |
+|---|---|---|
+| "designing **against** standards that already exist" (L269) | jargon for "designing *to*"; the bare preposition reads adversarially | hard inversion in **hi** and **te**, ambiguous in **ja**. Reword: "designing to standards that already exist" |
+| "report progress **against** it" (L17) | same | inverted in hi and te |
+| "**accounting** rigorously for the security of the proof systems" (L229) | reads as bookkeeping | wrong sense in **hi ar pt-br ja**. Reword: "rigorously assessing" |
+| "witness gas **schedule**" (L94) | a gas *cost table*, not a timetable | timetable sense in **it ru es id** |
+| "**soundness**" (L229/241/363) | no ETHGlossary entry | "reliability"/"validity" in **de id pl ta vi** |
+| "test **harness**" (L349/L358) | no glossary entry; the physical sense dominates in most languages | **tr** hardware, **ta** saddle, **es**/**fr** horse-harness, **sw** apparatus |
+| "Publishing code **is speech**" | terse US First-Amendment idiom | 14 locales rendered the *right* ("is freedom of speech") rather than the *act*. Majority behaviour -- reword the English, do not fix 14 locales |
+| "have no **recourse**" | redress sense | "no way out" in **ru id pl uk** |
+| "safeguard against **capture**" | corporate/regulatory capture | flattened to "monopoly" in **ko ja mr it** |
+| "Four **families**" | taxonomic sense | household sense in **bn mr ur** |
+| "The most polished first install of the three" | modifier stacking | word-order garble in **es pt-br tr** |
+
+Glossary entries to file: `soundness`, `test harness`, `custodial`/`custody`, `recourse`, `capture` (the takeover sense), `locally`, `derivatives`.
+
+### 73. Methodology -- central sweeps and per-locale agents catch disjoint defect sets
+
+This review ran 24 locale agents (one each, 5-6 files) *after* a deterministic `verify-structure` pass that came back **0 errors / 6 warnings** on all 123 files. That result was injected into every agent prompt as "already verified, do not re-report", which moved the entire fleet's effort onto terminology and semantics. No agent wasted a cycle on MDX, anchors, hrefs, tags or key parity.
+
+The 13 central sweeps run alongside the agents earned their keep in both directions:
+
+- **Sweeps found what agents missed.** fr shipped `harnais de test` and its own agent did not flag it; a cross-locale sweep of one sentence surfaced it immediately. The bracket-blank gap (#67) and the org-name split (#69) are only visible as fleet counts.
+- **Sweeps proved isolated criticals really were isolated.** The cs untranslated string, the ar compiler-scope error, the de finality regression and the sw won/lost inversion were each swept across all 24 locales and each was the only instance. That converts "one agent's claim" into a bounded, safely auto-fixable finding.
+- **Sweeps overruled an agent.** #70 (ur kaf) -- the finding was right and the proposed fix was wrong.
+- **Two sweeps were themselves invalid** and were discarded rather than reported: intra-word script mixing and length-ratio truncation (see #68). Design the sweep against a known-true instance first; if it does not fire cleanly on that, it is not ready to run on 24 locales.
+
+Fleet avg **8.67**, median 8.80, range it 9.5 to ta 7.6. Zero criticals in **it fr ja mr uk zh-tw**. The prose quality was high across the board; nearly every critical was a single wrong word with a tree-backed correct form already available, which is why 47 of them were mechanically fixable in one verified pass.
