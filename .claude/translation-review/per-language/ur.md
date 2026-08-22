@@ -95,3 +95,14 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - `روبسٹ انسیٹوز گروپ` -- garbled transliteration dropping the ن of *-cen-*.
 - U+2066 LRI wrapping pure-Urdu frontmatter title/description (KB #64).
 - Numeral system split within one new file: `۲۰۰۹` vs `1990`.
+
+## PR #19142 (intl/pending-devcon-banner) -- 2026-08-21 -- Score 9.9/10
+Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
+
+**Fixed in this branch:**
+
+- `Devcon` -> `ڈیوکان` in `title` and `subtitle`, with the bidi isolates re-wrapped (pair around the name removed, pairs around `8` and `10%` kept). Verified balanced 4/4, NFC-clean. Derived form (Gemini 3.1 Pro): retroflex ڈ, و for English "v" per standard Urdu tech transliteration (cf. `ویڈیو`). Consistent with 6.3's instruction to transliterate aggressively in Nastaliq. `logo-alt` stays Latin.
+
+**Notes:**
+
+- Western numerals retained. 6.3 mandates native Eastern Arabic-Indic numerals for ur *prose*, but does not carve out UI the way the bn rule does, and 7.5 says default conservative when the surface is ambiguous. The tree is overwhelmingly Western anyway (`src/intl/ur` 4547 Western vs 423 native), so this is a pre-existing tree-wide gap, not a defect introduced here.

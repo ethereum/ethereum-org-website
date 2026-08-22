@@ -73,3 +73,16 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 
 - `কমিউনিটি` -> `সম্প্রদায়` regression at 4 sites (tree is 208:14 for `কমিউনিটি`).
 - bn files use precomposed U+09DF (NFC-excluded) -- pre-existing tree-wide, not a PR defect.
+
+## PR #19142 (intl/pending-devcon-banner) -- 2026-08-21 -- Score 9.9/10
+Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
+
+**Fixed in this branch:**
+
+- `Devcon` -> `ডেভকন` in `title` and `subtitle`. `logo-alt` stays Latin.
+
+Form is **derived, not established**: Gemini 3.1 Pro asserted "Established. Tech media uses ডেভকন" at confidence High, and a search turned up no Bengali crypto-press usage to support that. The form itself is sound against the 6.1 bn rule (correct vowel modifier for the English "a", no a-to-o calque), so it shipped -- but log it as derived, pending native review.
+
+**Notes:**
+
+- Western numerals are correct here: 6.1 explicitly carves out UI elements from the native-Bengali-numerals-in-prose rule, and 7.5 says default conservative when the surface is ambiguous. The tree agrees (`src/intl/bn` is 4654 Western vs 225 native).
