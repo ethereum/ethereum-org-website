@@ -9,6 +9,7 @@ import {
 
 import type { PageParams } from "@/lib/types"
 
+import DevconDateLocation from "@/components/devcon-date-location"
 import HomeHero from "@/components/Hero/HomeHero"
 import FeatureCards from "@/components/Homepage/FeatureCards"
 import GetStartedGrid from "@/components/Homepage/GetStartedGrid"
@@ -22,14 +23,11 @@ import { LinkWithArrow } from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { SectionHeader, SectionTag } from "@/components/ui/section"
 
-import { formatDateRangeToParts } from "@/lib/utils/date"
 import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import {
   DEFAULT_LOCALE,
-  DEVCON_INDIA_END_DATE,
-  DEVCON_INDIA_START_DATE,
   DEVCON_INDIA_TICKET_URL,
   LOCALES_CODES,
 } from "@/lib/constants"
@@ -99,52 +97,38 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         <LinkBox asChild>
           <Alert
             variant="banner"
-            className="relative bg-linear-to-b from-[#1A0D33] to-[#45326C]"
+            // Devcon colors: keep hex colors
+            className="relative grid grid-cols-[1fr_auto_1fr] gap-x-8 overflow-hidden bg-linear-to-b from-[#1A0D33] to-[#45326C] py-3 max-md:px-4! max-sm:px-8 **:[img]:transition-transform **:[img]:duration-500 hover:**:[img]:scale-105"
           >
-            <Image
-              src="/images/assets/svgs/devcon-india-glyph.svg"
-              alt=""
-              width="93"
-              height="157"
-              className="absolute object-center opacity-10"
-            />
+            <div className="absolute inset-x-0 grid place-items-center">
+              <Image
+                src="/images/assets/svgs/devcon-india-glyph.svg"
+                alt=""
+                width="93"
+                height="157"
+                className="pointer-events-none opacity-10"
+              />
+            </div>
 
-            <div className="flex flex-1 items-center gap-x-8">
+            <div className="flex items-center justify-start gap-x-8">
               <Image
                 src="/images/assets/svgs/devcon-india-logo.svg"
                 alt={tDevcon("logo-alt")}
                 width="139"
                 height="60"
-                className="h-9.5 w-auto"
+                className="h-9.5 w-22 shrink-0"
               />
-              <div className="flex flex-col text-start text-nowrap max-lg:hidden">
-                <div>
-                  {formatDateRangeToParts(
-                    DEVCON_INDIA_START_DATE,
-                    DEVCON_INDIA_END_DATE,
-                    locale,
-                    {
-                      day: "2-digit",
-                      month: "long",
-                      year: "numeric",
-                      timeZone: "UTC",
-                    }
-                  ).map(({ type, value }, idx) => (
-                    <span
-                      key={idx}
-                      className={type === "year" ? undefined : "font-semibold"}
-                    >
-                      {value}
-                    </span>
-                  ))}
-                </div>
-                <div className="font-bold">{tDevcon("location")}</div>
-              </div>
+              <DevconDateLocation
+                longMonthBreakpoint="xl"
+                className="text-sm max-md:hidden"
+              />
             </div>
-            <div className="flex flex-3 justify-center text-center text-xl font-black">
+
+            <div className="grid place-items-center text-xs font-black sm:text-sm md:text-md lg:text-xl">
               {tDevcon("headline")}
             </div>
-            <div className="flex flex-1 justify-end">
+
+            <div className="flex justify-end">
               {/* Overlay stretches the CTA's hit area across the whole banner */}
               <LinkOverlay asChild>
                 <ButtonLink
@@ -155,7 +139,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     eventName: "visit",
                   }}
                   hideArrow
-                  className="rounded-full text-lg font-bold text-nowrap"
+                  className="min-h-0 rounded-full py-1 font-bold text-nowrap max-md:text-xs lg:text-lg"
                 >
                   {tDevcon("cta-get-tickets")}
                 </ButtonLink>

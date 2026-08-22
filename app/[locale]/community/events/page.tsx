@@ -14,6 +14,7 @@ import {
 
 import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
+import DevconDateLocation from "@/components/devcon-date-location"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
@@ -38,17 +39,13 @@ import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { formatDateRangeToParts, getLocaleYear } from "@/lib/utils/date"
+import { getLocaleYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import communityHubs from "@/data/community-hubs"
 
-import {
-  DEVCON_INDIA_END_DATE,
-  DEVCON_INDIA_START_DATE,
-  DEVCON_INDIA_TICKET_URL,
-} from "@/lib/constants"
+import { DEVCON_INDIA_TICKET_URL } from "@/lib/constants"
 
 import ContinentTabs from "./_components/continent-tabs"
 import EventCard from "./_components/event-card"
@@ -161,7 +158,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           eventName: "visit",
         }}
         variant="ghost"
-        className="relative isolate mx-page my-space-3x flex flex-col items-center gap-y-8 overflow-hidden rounded-4xl px-8 pt-8 pb-24 text-white hover:bg-transparent hover:text-white sm:px-12"
+        hoverLift={false}
+        className="relative isolate mx-page my-space-3x flex flex-col items-center gap-y-8 overflow-hidden px-8 pt-8 pb-24 text-white hover:text-white sm:px-12 **:[img]:transition-transform **:[img]:duration-500 hover:**:[img]:scale-105"
       >
         <Image
           src={devconIndiaBanner}
@@ -180,31 +178,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             width="139"
             height="60"
           />
-          <div className="flex flex-col text-end text-nowrap">
-            <div>
-              {(["short", "long"] as const).map((month) => (
-                <span
-                  key={month}
-                  className={month === "short" ? "md:hidden" : "max-md:hidden"}
-                >
-                  {formatDateRangeToParts(
-                    DEVCON_INDIA_START_DATE,
-                    DEVCON_INDIA_END_DATE,
-                    locale,
-                    { day: "2-digit", month, year: "numeric", timeZone: "UTC" }
-                  ).map(({ type, value }, idx) => (
-                    <span
-                      key={idx}
-                      className={type === "year" ? undefined : "font-semibold"}
-                    >
-                      {value}
-                    </span>
-                  ))}
-                </span>
-              ))}
-            </div>
-            <div className="font-semibold">{tDevcon("location")}</div>
-          </div>
+          <DevconDateLocation className="text-end" />
         </div>
         <p className="text-center text-5xl font-black text-balance text-shadow-[0_1px_2px_rgb(0_0_0/0.7),0_3px_8px_rgb(0_0_0/0.6),0_6px_28px_rgb(0_0_0/0.55)]">
           {tDevcon("title")}
