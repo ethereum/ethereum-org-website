@@ -99,3 +99,17 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 NONE of the historic tr failure modes recurred: client is `istemci` throughout (zero müşteri misuse), mainnet is `Ana Ağ`, no katillik/MeFi brand corruption, no EHT/BSL transposition, no PoS/PoW inversion, state is `durum`. Remaining: `uzlaşma` for security compromise, `kurtarma kuyruğu` (rescue queue) for redemption queue -- which collides with `kurtarma ifadesi` = seed phrase.
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 8.6/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+
+- `test donanımı` = test **hardware** for "test harness" at 2 sites (150+ tree uses of `donanım` = hardware).
+- `ücretsiz kişi` ("free-of-charge people") for "unpaid people" -- the exact free-as-in-price/freedom confusion this page warns about.
+- `Amazon Şefi` (Amazon's **chef**) for "Amazon Chief".
+
+**Open (native call needed):**
+
+- Full-file retranslation re-termed two settled locale words: `Kâhinler` -> `Oracle'lar` (the link target page is still titled `Kâhinler` in tr), and `borç ver/al` -> `ödünç ver/al`.
+- `gizlilik` used for both "secrecy" (negative) and "privacy" (positive) on the same page.
+- None of tr's historical brand failure modes recurred -- no `katillik`, no `MeFi`, no `Müşteri`-for-client.

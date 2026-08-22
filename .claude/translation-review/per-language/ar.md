@@ -151,3 +151,15 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 Solvency slip `ملاءمة`->`ملاءة` in a saas risk bullet; `fork` as `الشوكات` (cutlery) vs glossary `تفرع`; English dates bidi-isolated in page-staking.json (recurrence of #18772); frontmatter LRI wrapping pure Arabic in dvt. Historic modes CLEAR: no `الدولة` for computational state, no GitHub garble, no MEV-as-vehicles, single consistent `إيثيريوم`.
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 8.8/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+- `Robust Incentives Group` restored to English at 5 sites -- the name had been semantically translated with no English retained, making the EF team unsearchable.
+
+- `page-open-source-copyleft-description-2` distributed "the Solidity compiler" across all four names, making Prysm/Nethermind/Grandine read as compilers. Swept all 24 locales -- ar was the only one that got this wrong.
+
+**Open (native call needed):**
+
+- `hexary` -> `السداسية` ("six-fold") against 30+ tree uses of `سداسية عشرية`.
+- ETHGlossary's ar `validator` entry `مُدَقِّق` has SHADDA U+0651 before KASRA U+0650 -- non-canonical order. It appears 8x here and flipped this file from NFC to non-NFC. Upstream glossary fix, not a per-file one.

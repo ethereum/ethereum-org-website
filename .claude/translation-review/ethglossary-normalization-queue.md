@@ -77,8 +77,47 @@ No entry means the model invents one, and it invented badly in these cases.
 | sw | `liquid staking token (LST)` -> `tokani ya uwekaji amana wenye ukwasi (lst)` | `tokani` conflicts with `token` -> `tokeni`; `amana` conflicts with `stake` -> `dhamana`; acronym lowercased. |
 | sw | `staking as a service` -> `kuweka hisa kama huduma` | `hisa` (shares) conflicts with `stake` -> `dhamana` used everywhere else. |
 
+## 6. Non-NFC term data (added from PR #19034)
+
+| Locale | Entry | Defect |
+| --- | --- | --- |
+| ar | `validator` -> `مُدَقِّق` | SHADDA U+0651 stored **before** KASRA U+0650. Canonical order is kasra (ccc 32) then shadda (ccc 33). Renders identically, but it is the only non-NFC entry of the 165 ar terms and it denormalized `ar/community/research/index.md` (NFC on `origin/dev`, not NFC after the run). Breaks byte-level search, diff and dedup. |
+| ur | `decentralized` -> `لامركزی` | Arabic kaf U+0643 where Urdu keheh U+06A9 belongs. **Do not sweep the tree from this entry alone** -- the defective form is already dominant 646:186 in the ur tree, so the fix must be: normalize the entry, then one tree-wide codepoint sweep in its own commit. See known-patterns #70. |
+
+Assert `text == NFC(text)` on glossary responses as part of the fetch, so an entry like this cannot enter the pipeline silently.
+
+## 7. Bare-vs-compound rows that contradict their own note (added from PR #19034)
+
+| Locale | Entry | Defect |
+| --- | --- | --- |
+| de | `contract` -> `Vertrag` | The row's own note reads "Smart contract -- code deployed on the blockchain. NOT a legal agreement." `Vertrag` **is** the German legal-contract word. The `smart contract` row is correctly `Smart Contract`. The bare row contradicts its note. |
+| it | `contract` -> `contratto` | Same shape (note says NOT a legal agreement; `contratto` is the legal word). |
+| ta | `contract` -> `ஒப்பந்தம்` | Same shape. |
+| tr | `contract` -> `Sözleşme` | Same shape, plus a capitalized common noun. |
+
+Locales whose `contract` row *does* carry the code sense (`কন্ট্রাক্ট`, `컨트랙트`, `کنٹریکٹ`) have notes explicitly forbidding the legal word -- and **bn, ko and ur all deviated to the legal word anyway** on the same key in PR #19034. So the entries that are right are being ignored and the entries that are wrong are being followed. Recommend making every `contract` row the code sense and adding the legal sense as a separate `legal contract` term. This is known-patterns #30 (compound wins, bare loses) in a new place.
+
+## 8. Missing entries that caused real errors in PR #19034
+
+| Term | Evidence |
+| --- | --- |
+| `soundness` (proof-system property) | Rendered as "reliability"/"validity" in de, id, pl, ta, vi. Distinct from validity; needs its own row. |
+| `test harness` | tr "hardware", ta "saddle", es/fr "horse harness", sw "apparatus". The physical sense dominates in most target languages. |
+| `custodial` / `custody` | ta rendered custodial bridges as *archive* bridges, turning a risk into a safety claim -- the second ta custody inversion in two PRs (#19115). fr `ponts de garde` = "on-duty bridges". |
+| `recourse` | "no way out" instead of redress in ru, id, pl, uk. |
+| `capture` (takeover sense) | Flattened to "monopoly" in ko, ja, mr, it. |
+| `locally` (on your own machine) | sw `ndani ya nchi` = "domestically, within the country". |
+| `derivatives` (financial) | sw `viingilio` = "entrance fees" -- tree-established but semantically wrong. |
+| `gatekeeper`, `lock-in` | Held valence in every locale this time, but only because the surrounding prose carried it. Worth entries before the next values-register page. |
+
 ## Priority
 
 Sections 1 and 2 are mechanical and affect the most shipped text. Section 4's `compromise` and
 `auth token` entries would each prevent errors in five or more locales. Section 3's te `స్టాకింగ్`
 typo is the most visible single defect — it reached a page title.
+
+Section 6 is a correctness bug in the data itself and should go first: it is two entries and it
+silently denormalizes every file that uses them. Section 7 is the highest-leverage linguistic fix --
+one row per locale removes a recurring critical on every page that says "contracts". Section 8's
+`soundness` and `test harness` each broke five locales in a single PR.
+
