@@ -1,11 +1,9 @@
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 
 import { cn } from "@/lib/utils/cn"
 import { formatDateRangeToParts } from "@/lib/utils/date"
 
 import { DEVCON_INDIA_END_DATE, DEVCON_INDIA_START_DATE } from "@/lib/constants"
-
-import { getLocale } from "@/storybook/next-intl-server"
 
 type Breakpoint = "md" | "xl"
 
