@@ -8,12 +8,14 @@ export const dynamic = "force-static"
 // The sitemap is sharded per locale via generateSitemaps() (app/sitemaps/sitemap.ts)
 // and indexed by a <sitemapindex> at /sitemap.xml (app/sitemap.xml/route.ts). Point
 // crawlers at that single index; it enumerates every per-locale shard.
-const PRODUCTION = `User-Agent: *
-Allow: /
-
-# Content Signals (https://contentsignals.org). Site content is MIT-licensed,
+// No blank line inside the User-Agent group: record-based parsers (e.g.
+// urllib.robotparser) reset group state on blank lines and would drop the
+// Content-Signal directive. Comment-only lines are safe.
+const PRODUCTION = `# Content Signals (https://contentsignals.org). Site content is MIT-licensed,
 # so every declared use is permitted.
+User-Agent: *
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Allow: /
 
 Host: ${SITE_URL}
 Sitemap: ${SITE_URL}/sitemap.xml
