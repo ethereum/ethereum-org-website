@@ -1,0 +1,555 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/eip-7805-focil-explained/index.md",
+  "generatedAt": "2026-07-27T19:19:27.704Z",
+  "rootHash": "7640b090fa85",
+  "tree": {
+    "contentHash": "52be0586c537",
+    "anchorHash": "63b23a49e137",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "6b4ee48c047c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "311cc5c35c1c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "4c930e40dfc2"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "c7a9fbaab486"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e4546da5a345"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d21f85ea3816"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bfac314fefdc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "ce7e2ab7c48c"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "7541a220ebdf"
+      },
+      "prose:2": {
+        "contentHash": "fa7482ba4846",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "c04d4fe48599",
+        "anchorHash": "0845a5fb969e"
+      },
+      "prose:3": {
+        "contentHash": "051c52a9d1ab",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "fd77b044e2d2"
+      },
+      "prose:4": {
+        "contentHash": "c50b7f1106f3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "introduction-035": {
+        "contentHash": "d9855384cec3",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "751f1a724a97",
+        "children": {
+          "_label": {
+            "contentHash": "751f1a724a97",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "6ddaffa505c9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "guest-introductions-214": {
+        "contentHash": "ce3e79c4d495",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "a6e1548f809c",
+        "children": {
+          "_label": {
+            "contentHash": "a6e1548f809c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "3b95e4c49ca6",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "presentation-goals-of-focil-516": {
+        "contentHash": "2c68455946d0",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "fd4adc99bf94",
+        "children": {
+          "_label": {
+            "contentHash": "fd4adc99bf94",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "60765f9f117d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "why-do-we-need-focil-and-why-now-609": {
+        "contentHash": "d869c06f5769",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "602f196a8944",
+        "children": {
+          "_label": {
+            "contentHash": "602f196a8944",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "e3dcb9de5ef3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "how-focil-works-810": {
+        "contentHash": "6649539d4204",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "69f7d1b4efb3",
+        "children": {
+          "_label": {
+            "contentHash": "69f7d1b4efb3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "a14a7360b9fc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "il-boost-and-uncrowdability-1107": {
+        "contentHash": "dbc57adc45b3",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "12b494a85bb0",
+        "children": {
+          "_label": {
+            "contentHash": "12b494a85bb0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "5317932b7d65",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "summary-of-the-presentation-1309": {
+        "contentHash": "7787ea74bffd",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "93dfeaa1dee6",
+        "children": {
+          "_label": {
+            "contentHash": "93dfeaa1dee6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "1142700cb47a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "qa-how-does-eip-7805-differ-from-eip-7547-1417": {
+        "contentHash": "d85945153dc3",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "16ce95e662d8",
+        "children": {
+          "_label": {
+            "contentHash": "16ce95e662d8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "8d974940ee3f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "does-the-proposer-have-to-include-all-16-lists-1905": {
+        "contentHash": "35ceae365469",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "5a88d683bcaf",
+        "children": {
+          "_label": {
+            "contentHash": "5a88d683bcaf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "83e4bb58f8d5",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "private-mempool-transactions-in-inclusion-lists-1955": {
+        "contentHash": "55fa8f4281e8",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "1365f3bbe956",
+        "children": {
+          "_label": {
+            "contentHash": "1365f3bbe956",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "dcbdd9db564f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "focil-and-scaling-2141": {
+        "contentHash": "bcac27f70b9f",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "f6e4a949474b",
+        "children": {
+          "_label": {
+            "contentHash": "f6e4a949474b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "1b48ebb293ac",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "criteria-for-selecting-transactions-2646": {
+        "contentHash": "9594c5049589",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "90b0e735b057",
+        "children": {
+          "_label": {
+            "contentHash": "90b0e735b057",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "69b48ec1a5c6",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "compatibility-with-eip-7702-epbs-and-peerdas-3043": {
+        "contentHash": "c489c1b5728c",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "c1f543307049",
+        "children": {
+          "_label": {
+            "contentHash": "c1f543307049",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "d984fe50d2fb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "focil-and-multi-slot-mev-3304": {
+        "contentHash": "6ca4525818c3",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "aad7db255ad4",
+        "children": {
+          "_label": {
+            "contentHash": "aad7db255ad4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ca96193c6b5b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "trade-offs-and-challenges-3644": {
+        "contentHash": "6aac502e33b9",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "3b361641a27d",
+        "children": {
+          "_label": {
+            "contentHash": "3b361641a27d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "b312a43e9e14",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "transaction-fee-mechanisms-for-inclusion-lists-3950": {
+        "contentHash": "7ad5431ba416",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "3da2eef9bd8d",
+        "children": {
+          "_label": {
+            "contentHash": "3da2eef9bd8d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "43869d7baa1d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "inclusion-list-size-4416": {
+        "contentHash": "168febf30e3e",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "7979a70c876c",
+        "children": {
+          "_label": {
+            "contentHash": "7979a70c876c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "8ee65f8425c6",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "metrics-to-track-adoption-4639": {
+        "contentHash": "c2955447b1a6",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "d0fb796899ea",
+        "children": {
+          "_label": {
+            "contentHash": "d0fb796899ea",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "1d523fa7a17a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "client-implementation-status-4911": {
+        "contentHash": "6bcad79f08ad",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "89ac5102624b",
+        "children": {
+          "_label": {
+            "contentHash": "89ac5102624b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ecb59867c33a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "focil-in-fusaka-or-glamsterdam-5207": {
+        "contentHash": "b2116ba21c96",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "b2ee327044d5",
+        "children": {
+          "_label": {
+            "contentHash": "b2ee327044d5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "a0d583146e70",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "rapid-fire-5518": {
+        "contentHash": "1250fb298ab7",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "6c75ed8874dd",
+        "children": {
+          "_label": {
+            "contentHash": "6c75ed8874dd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c2eb3eb0803f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "messages-to-the-community-5808": {
+        "contentHash": "ef4a4c88bdc8",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "6c923211b458",
+        "children": {
+          "_label": {
+            "contentHash": "6c923211b458",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "db49cfd2f504",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "closing-words-5952": {
+        "contentHash": "cbe1daba2a10",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "0da84b026de2",
+        "children": {
+          "_label": {
+            "contentHash": "0da84b026de2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "7edbd9d14302",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:2",
+      "link:0",
+      "prose:3",
+      "link:1",
+      "prose:4",
+      "introduction-035",
+      "guest-introductions-214",
+      "presentation-goals-of-focil-516",
+      "why-do-we-need-focil-and-why-now-609",
+      "how-focil-works-810",
+      "il-boost-and-uncrowdability-1107",
+      "summary-of-the-presentation-1309",
+      "qa-how-does-eip-7805-differ-from-eip-7547-1417",
+      "does-the-proposer-have-to-include-all-16-lists-1905",
+      "private-mempool-transactions-in-inclusion-lists-1955",
+      "focil-and-scaling-2141",
+      "criteria-for-selecting-transactions-2646",
+      "compatibility-with-eip-7702-epbs-and-peerdas-3043",
+      "focil-and-multi-slot-mev-3304",
+      "trade-offs-and-challenges-3644",
+      "transaction-fee-mechanisms-for-inclusion-lists-3950",
+      "inclusion-list-size-4416",
+      "metrics-to-track-adoption-4639",
+      "client-implementation-status-4911",
+      "focil-in-fusaka-or-glamsterdam-5207",
+      "rapid-fire-5518",
+      "messages-to-the-community-5808",
+      "closing-words-5952"
+    ]
+  },
+  "sourceCommitSha": "4a7c0fa2a3ee82737bedc324112b0f3d16f22030"
+}

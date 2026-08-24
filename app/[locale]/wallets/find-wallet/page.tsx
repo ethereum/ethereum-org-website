@@ -1,133 +1,107 @@
-import { pick } from "lodash"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
+import type { ReactNode } from "react"
 
-import type { Lang, PageParams, WalletData } from "@/lib/types"
+import type { FileContributor, Lang, PageParams } from "@/lib/types"
 
-import FindWalletProductTable from "@/components/FindWalletProductTable"
+import { ABTest } from "@/components/AB"
 import PageHero from "@/components/Hero/PageHero"
-import I18nProvider from "@/components/I18nProvider"
-import ListingMethodology from "@/components/ListingMethodology"
 import MainArticle from "@/components/MainArticle"
-import { UnorderedList } from "@/components/ui/list"
-import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { formatDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import {
-  getNonSupportedLocaleWallets,
-  getSupportedLanguages,
-  getSupportedLocaleWallets,
-} from "@/lib/utils/wallets"
+  getCatalogWallets,
+  getLastUpdatedDisplay,
+  getPersonaCounts,
+  getWalletLanguageOptions,
+  getWalletNetworks,
+} from "@/lib/utils/walletData"
 
+import WalletsPageBody from "./_components/WalletsPageBody"
 import FindWalletPageJsonLD from "./page-jsonld"
 
-const Page = async (props: { params: Promise<PageParams> }) => {
-  const params = await props.params
-  const { locale } = params
-  const t = await getTranslations("page-wallets-find-wallet")
+// Wallet data is repo-checked-in, so it only changes at deploy time.
+export const revalidate = false
 
+const Page = async (props: {
+  params: Promise<PageParams>
+  /** Precomputed A/B variant index, passed only by the ab-code route */
+  catalogVariant?: number
+  /**
+   * The A/B test's Original arm, injected by the ab-code route rather than
+   * imported here: a static import would pull the legacy table's client
+   * components into this route's bundle, shipping them to every visitor of the
+   * design that replaced it.
+   */
+  legacyBody?: ReactNode
+}) => {
+  const { locale } = await props.params
+  const { catalogVariant, legacyBody } = props
   setRequestLocale(locale)
 
-  const supportedLocaleWallets = getSupportedLocaleWallets(locale!)
-  const noSupportedLocaleWallets = getNonSupportedLocaleWallets(locale!)
-  const walletsData = supportedLocaleWallets.concat(noSupportedLocaleWallets)
+  const t = await getTranslations({
+    locale,
+    namespace: "page-wallets-find-wallet",
+  })
 
-  const wallets = walletsData.map((wallet) => ({
-    ...wallet,
-    id: wallet.name,
-    supportedLanguages: getSupportedLanguages(
-      wallet.languages_supported,
-      locale!
-    ),
-  }))
+  const wallets = getCatalogWallets(locale)
+  const networks = getWalletNetworks(wallets)
+  const languages = getWalletLanguageOptions(wallets, locale)
+  const personaCounts = getPersonaCounts(wallets)
 
-  const mostRecentWalletUpdate = walletsData
-    .map((wallet: WalletData) => wallet.last_updated)
-    .filter((d) => d.length > 0)
-    .sort()
-    .at(-1)
+  const lastUpdatedDisplay = getLastUpdatedDisplay(wallets, locale)
 
-  const lastUpdatedDisplay = mostRecentWalletUpdate
-    ? formatDate(mostRecentWalletUpdate, locale)
-    : ""
+  // Only feeds a supplementary JSON-LD field, so a data-layer outage must not
+  // 500 the page.
+  let contributors: FileContributor[] = []
+  try {
+    contributors = (
+      await getAppPageContributorInfo("wallets/find-wallet", locale as Lang)
+    ).contributors
+  } catch {
+    // Non-fatal: JSON-LD omits the contributor list.
+  }
 
-  // Get i18n messages
-  const allMessages = await getMessages({ locale })
-  const requiredNamespaces = getRequiredNamespacesForPage(
-    "/wallets/find-wallet"
-  )
-  const messages = pick(allMessages, requiredNamespaces)
-
-  const { contributors } = await getAppPageContributorInfo(
-    "wallets/find-wallet",
-    locale as Lang
+  const catalogBody = (
+    <WalletsPageBody
+      key="NewCatalog"
+      locale={locale}
+      wallets={wallets}
+      networks={networks}
+      languages={languages}
+      personaCounts={personaCounts}
+      lastUpdatedDisplay={lastUpdatedDisplay}
+    />
   )
 
   return (
     <>
+      {/* Outside the variant swap: both arms are the same URL, so search
+          engines must see one consistent set of structured data. */}
       <FindWalletPageJsonLD
         locale={locale}
         contributors={contributors}
-        wallets={walletsData}
+        wallets={wallets}
       />
-
-      <I18nProvider locale={locale} messages={messages}>
-        <MainArticle className="relative flex flex-col">
-          <PageHero
-            breadcrumbs={{ slug: "/wallets/find-wallet" }}
-            title={t("page-find-wallet-title")}
-            description={t("page-find-wallet-description")}
-            variant="no-divider"
+      <MainArticle className="relative flex flex-col">
+        <PageHero
+          breadcrumbs={{ slug: "/wallets/find-wallet" }}
+          title={t("page-find-wallet-title")}
+          description={t("page-find-wallet-description")}
+          variant="no-divider"
+        />
+        {catalogVariant !== undefined && legacyBody ? (
+          <ABTest
+            testKey="FindWalletCatalog2026"
+            variantIndex={catalogVariant}
+            // Element keys become the Matomo variation names verbatim - they
+            // must match the dashboard exactly (see ABTest label derivation).
+            variants={[legacyBody, catalogBody]}
           />
-
-          <Section id="wallets">
-            <h2 className="sr-only select-none">
-              {t("page-find-wallet-table-title")}
-            </h2>
-            <FindWalletProductTable wallets={wallets} />
-          </Section>
-
-          <ListingMethodology
-            heading={t("page-find-wallet-methodology-title")}
-            description={t("page-find-wallet-methodology-intro")}
-            lastUpdated={lastUpdatedDisplay}
-            href="/contributing/adding-wallets/"
-            footers={[
-              t("page-find-wallet-footnote-1"),
-              t("page-find-wallet-footnote-2"),
-            ]}
-          >
-            <p>{t("page-find-wallet-methodology-must-haves-label")}</p>
-
-            <UnorderedList className="space-y-2">
-              {[
-                "security",
-                "track-record",
-                "maintenance",
-                "honest-info",
-                "contact",
-                "eip1559",
-                "ux",
-                "ethereum-focused",
-              ].map((key) => (
-                <li key={key}>
-                  {t(`page-find-wallet-methodology-criterion-${key}`)}
-                </li>
-              ))}
-            </UnorderedList>
-
-            <p>{t("page-find-wallet-methodology-verification")}</p>
-
-            <p>{t("page-find-wallet-methodology-filters")}</p>
-          </ListingMethodology>
-        </MainArticle>
-      </I18nProvider>
+        ) : (
+          catalogBody
+        )}
+      </MainArticle>
     </>
   )
 }
@@ -135,10 +109,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 export async function generateMetadata(props: {
   params: Promise<{ locale: string }>
 }) {
-  const params = await props.params
-  const { locale } = params
+  const { locale } = await props.params
+  setRequestLocale(locale)
 
-  const t = await getTranslations("page-wallets-find-wallet")
+  const t = await getTranslations({
+    locale,
+    namespace: "page-wallets-find-wallet",
+  })
 
   return await getMetadata({
     locale,

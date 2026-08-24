@@ -13,6 +13,16 @@ const pages: Array<{ name: string; path: string }> = [
   { name: "History", path: "/history/" },
   { name: "Get ETH", path: "/get-eth/" },
   { name: "Find Wallet", path: "/wallets/find-wallet/" },
+  {
+    name: "Find Wallet - Persona",
+    path: "/wallets/find-wallet/personas/nfts/",
+  },
+  { name: "Find Wallet - Detail", path: "/wallets/find-wallet/metamask/" },
+  { name: "Developer Tools", path: "/developers/tools/" },
+  {
+    name: "Developer Tools - Category",
+    path: "/developers/tools/categories/contract-tooling/",
+  },
 
   // One representative per src/layouts/ layout — keeps coverage without per-page duplication.
   { name: "Bridges", path: "/bridges/" }, // StaticLayout

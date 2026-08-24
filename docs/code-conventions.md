@@ -18,11 +18,11 @@ Global constants should be defined inside `src/lib/constants.ts` file.
 
 ### Types
 
-TypeScript types should be defined inside `src/lib/types.ts` file. Note that some pre-existent types could be defined in other files and will be temporarily kept there during the migration, to facilitate synchronization. These types should be moved to `src/lib/types.ts` later.
+TypeScript types should be defined inside `src/lib/types.ts` file. Some types still live in other files for historical reasons; move them to `src/lib/types.ts` when you're already touching them.
 
 ### Interfaces
 
-TypeScript types should be defined inside `src/lib/interfaces.ts` file. Note that some pre-existent interfaces could be defined in other files and will be temporarily kept there during the migration, to facilitate synchronization. These interfaces should be moved to `src/lib/interfaces.ts` later.
+TypeScript interfaces should be defined inside `src/lib/interfaces.ts` file. Some interfaces still live in other files for historical reasons; move them to `src/lib/interfaces.ts` when you're already touching them.
 
 ### Component Props
 
@@ -39,20 +39,23 @@ const Component = ({ title, label, ...props }: ComponentProps) => {
 }
 
 /**
- * Components using `forwardRef` from React
+ * Components accepting a `ref`
  *
- * Use React.forwardRef when you need to forward refs to DOM elements or child components.
+ * With React 19, `ref` is a regular prop — new components should accept it
+ * directly instead of using `React.forwardRef` (now legacy).
  * The ref type should match the element being rendered (HTMLDivElement, HTMLButtonElement, etc.)
  */
-const Component = React.forwardRef<HTMLDivElement, ComponentProps>(
-  ({ title, label, ...props }, ref) => {
-    return (
-      <div ref={ref} {...props}>
-        {/* Component code */}
-      </div>
-    )
-  }
-)
+const Component = ({ title, label, ref, ...props }: ComponentProps) => {
+  return (
+    <div ref={ref} {...props}>
+      {/* Component code */}
+    </div>
+  )
+}
+
+// Many existing components still use `React.forwardRef`; they work fine and
+// don't need bulk migration — update them opportunistically when already
+// touching the component.
 ```
 
 #### Prop Type Naming Convention
@@ -67,6 +70,6 @@ A positive side-effect to directly annotating the props object is for IDE intell
 
 i.e., `const Component: ({ label, title, ...props }: ComponentProps) => React.JSX.Element`
 
-#### Use the type alias for props type
+#### Choosing between `type` and `interface`
 
-Use `type` and not `interface` to have the most constraint on the signature. We should also not be modifying the signature such as using [declaration merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces).
+Use `interface` for object shapes, and `type` for unions and intersections. We should also not be modifying signatures such as using [declaration merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces).

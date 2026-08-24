@@ -22,7 +22,7 @@ Kama sharti, unapaswa kuwa tayari umesakinisha MetaMask kwenye simu ya mkononi, 
 
 Juu ya programu, bonyeza kitufe cha “Mkoba”, baada ya hapo utaombwa kuchagua mtandao. Kwa kuwa NFT yetu ilifufuliwa kwenye mtandao wa Sepolia, utahitaji kuchagua Sepolia kama mtandao wako.
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
 
 ## Hatua ya 2: Ongeza mkusanyiko wako kwenye MetaMask {#add-nft-to-metamask}
 
@@ -32,6 +32,6 @@ Ukiwa kwenye mtandao wa Sepolia, chagua kichupo cha “Mikusanyiko” upande wa 
 
 Huenda ukahitaji kuonyesha upya mara kadhaa ili kutazama NFT yako — lakini itakuwepo hapo <Emoji text="😄" size={1} />!
 
-![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
 
 Hongera! Umefanikiwa kufua NFT, na sasa unaweza kuitazama! Tunatarajia kwa hamu kuona jinsi utakavyotikisa ulimwengu wa NFT!

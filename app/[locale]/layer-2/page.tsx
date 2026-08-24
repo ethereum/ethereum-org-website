@@ -1,15 +1,10 @@
-import { pick } from "lodash"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
+import BigNumber from "@/components/BigNumber"
 import ExpandableCard from "@/components/ExpandableCard"
 import HubHero, { type HubHeroProps } from "@/components/Hero/HubHero"
-import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
@@ -19,23 +14,24 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
 import { Grid } from "@/components/ui/grid"
 import InlineLink from "@/components/ui/Link"
+import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { networkMaturity } from "@/lib/utils/networkMaturity"
-import { numberFormat } from "@/lib/utils/numbers"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import { formatSmallUSD } from "@/lib/utils/numbers"
 
 import { layer2Data } from "@/data/networks/networks"
 
-import Layer2PageJsonLD from "./page-jsonld"
+import PageJsonLD from "./page-jsonld"
 
 import { getGrowThePieData, getL2beatData } from "@/lib/data"
-import HeroImage from "@/public/images/heroes/layer-2-hub-hero.png"
-import EthereumLogo from "@/public/images/layer-2/ethereum.png"
-import WalkingImage from "@/public/images/layer-2/layer-2-walking.png"
-import ExploreImage from "@/public/images/layer-2/learn-hero.png"
-import ManDogCardImage from "@/public/images/man-and-dog-playing.png"
+import layer2NetworksCalloutImage from "@/public/images/counter-screen-network-towers-rings-collage-cut-out.png"
+import heroImg from "@/public/images/heroes/layer-2-hub-hero.png"
+import ethereumLogo from "@/public/images/layer-2/ethereum.png"
+import mainnetImage from "@/public/images/mainnet.png"
+import manDogCardImage from "@/public/images/man-and-dog-playing.png"
+import layer2LearnCalloutImage from "@/public/images/network-column-rooftop-piping-construction.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -75,10 +71,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const randomL2s = layer2Data.sort(() => 0.5 - Math.random()).slice(0, 9)
   const userRandomL2s = getRandomL2s()
 
-  const allMessages = await getMessages({ locale })
-  const requiredNamespaces = getRequiredNamespacesForPage("/layer-2")
-  const messages = pick(allMessages, requiredNamespaces)
-
   const { contributors } = await getAppPageContributorInfo(
     "layer-2",
     locale as Lang
@@ -87,16 +79,19 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const t = await getTranslations("page-layer-2")
   const tCommon = await getTranslations("common")
 
+  // Both fees are formatted by significant digits, not fixed decimals: median
+  // costs are routinely sub-cent and 2-decimal rounding flattens them to $0.00
+  const ethereumTxCost = growThePieData.dailyTxCosts["ethereum"]
   const medianTxCost =
     "error" in growThePieData.txCostsMedianUsd
-      ? { error: growThePieData.txCostsMedianUsd.error }
+      ? null
       : growThePieData.txCostsMedianUsd.value
 
   const heroContent: HubHeroProps = {
     title: t("page-layer-2-hero-title"),
     header: t("page-layer-2-hero-header"),
     description: t("page-layer-2-hero-description"),
-    heroImg: HeroImage,
+    heroImg: heroImg,
     buttons: [
       {
         content: tCommon("nav-networks-explore-networks-label"),
@@ -138,244 +133,212 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   ]
 
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <Layer2PageJsonLD locale={locale} contributors={contributors} />
-      <MainArticle className="relative flex flex-col">
-        <HubHero {...heroContent} />
+    <>
+      <PageJsonLD locale={locale} contributors={contributors} />
 
-        <div
-          id="layer-2-powered-by-ethereum"
-          className="flex w-full flex-col gap-8 px-8 py-9"
+      <HubHero {...heroContent} />
+
+      <MainArticle className="flow px-page pt-page-2x pb-page">
+        <Section
+          id="powered-by-ethereum"
+          data-flow="skip"
+          className="flex gap-space-2x *:flex-1 max-lg:flex-col"
         >
-          <div className="flex flex-col gap-16 md:flex-row">
-            <div className="flex flex-1 flex-col gap-8">
-              <h2>{t("page-layer-2-powered-by-ethereum-title")}</h2>
-              <p>
-                <strong>
-                  <Translation id="page-layer-2:page-layer-2-powered-by-ethereum-description-1" />{" "}
-                </strong>
-                {t("page-layer-2-powered-by-ethereum-description-2")}
-              </p>
-              <p>{t("page-layer-2-powered-by-ethereum-description-3")}</p>
-            </div>
-            <div className="flex flex-1">
-              <Image
-                src={ManDogCardImage}
-                alt={t("page-layer-2-man-and-dog-alt")}
-                style={{
-                  width: "100%",
-                  maxHeight: "240px",
-                  objectFit: "contain",
-                }}
-              />
-            </div>
-          </div>
-        </div>
-
-        <div id="layer-2-stats-box" className="w-full px-8 py-9">
-          <div className="m-auto max-w-[992px] py-9">
-            <div className="flex flex-col gap-8 border border-body-light p-8 md:flex-row md:gap-14">
-              <div className="flex-1">
-                <div className="max-w-[224px]">
-                  <p className="text-5xl">
-                    $
-                    {numberFormat(locale, {
-                      minimumFractionDigits: 2,
-                      maximumFractionDigits: 2,
-                    }).format(growThePieData.dailyTxCosts["ethereum"] || 0)}
-                  </p>
-                  <p className="text-body-medium">
-                    {t("page-layer-2-blockchain-transaction-cost")}
-                  </p>
-                </div>
-              </div>
-              <div className="h-auto w-auto self-stretch border-b border-body-light md:border-r" />
-              <div className="flex-1">
-                <div className="max-w-[224px]">
-                  <p className="text-5xl">
-                    $
-                    {numberFormat(locale, {
-                      minimumFractionDigits: 2,
-                      maximumFractionDigits: 3,
-                    }).format(
-                      typeof medianTxCost === "number" ? medianTxCost : 0
-                    )}
-                  </p>
-                  <p className="text-body-medium">
-                    {t("page-layer-2-networks-transaction-cost")}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          id="layer-2-the-network-of-networks"
-          className="w-full py-9 sm:px-8"
-        >
-          <div className="flex flex-col gap-8 overflow-hidden bg-[#B9B9F1]/20 px-4 py-10 text-center">
-            <h2>{t("page-layer-2-network-of-networks-title")}</h2>
-            <p className="font-md">
-              {t("page-layer-2-network-of-networks-description")}
+          <div className="flow">
+            <h2>{t("page-layer-2-powered-by-ethereum-title")}</h2>
+            <p>
+              <strong>
+                <Translation id="page-layer-2:page-layer-2-powered-by-ethereum-description-1" />{" "}
+              </strong>
+              {t("page-layer-2-powered-by-ethereum-description-2")}
             </p>
-            <div className="relative m-auto h-[275px] w-[275px] sm:h-[375px] sm:w-[375px]">
-              <div className="absolute inset-0 rounded-full border border-dashed border-body-medium"></div>
-              <div className="absolute inset-0 animate-spin-30 rounded-full">
-                <div className="absolute -top-[12px] left-1/2 h-6 w-6 animate-counter-spin-30 rounded-full bg-primary">
-                  <Image
-                    className="rounded-full"
-                    src={randomL2s[0].logo}
-                    alt={randomL2s[0].name}
-                    width={24}
-                    height={24}
-                  />
-                </div>
-                <div className="absolute right-[8%] bottom-[17%] h-6 w-6 animate-counter-spin-30 rounded-full">
-                  <Image
-                    className="rounded-full"
-                    src={randomL2s[1].logo}
-                    alt={randomL2s[1].name}
-                    width={24}
-                    height={24}
-                  />
-                </div>
-                <div className="absolute bottom-[17%] left-[8%] h-6 w-6 animate-counter-spin-30 rounded-full">
-                  <Image
-                    className="rounded-full"
-                    src={randomL2s[2].logo}
-                    alt={randomL2s[2].name}
-                    width={24}
-                    height={24}
-                  />
-                </div>
-              </div>
+            <p>{t("page-layer-2-powered-by-ethereum-description-3")}</p>
+          </div>
+          <div className="relative max-lg:min-h-64">
+            <Image
+              src={manDogCardImage}
+              alt={t("page-layer-2-man-and-dog-alt")}
+              className="absolute inset-0 size-full object-contain"
+              sizes="(max-width: 992px) 100vw, 45vw"
+            />
+          </div>
+        </Section>
 
-              <div className="absolute inset-[30px] rounded-full border border-dashed border-body-medium sm:inset-[54px]"></div>
-              <div className="absolute inset-[30px] animate-spin-21 rounded-full sm:inset-[54px]">
-                <div className="absolute -top-[12px] left-1/2 h-6 w-6 animate-counter-spin-21 rounded-full">
-                  <Image
-                    className="rounded-full"
-                    src={randomL2s[3].logo}
-                    alt={randomL2s[3].name}
-                    width={24}
-                    height={24}
-                  />
-                </div>
-                <div className="absolute right-[5%] bottom-[15%] h-6 w-6 animate-counter-spin-21 rounded-full">
-                  <Image
-                    className="rounded-full"
-                    src={randomL2s[4].logo}
-                    alt={randomL2s[4].name}
-                    width={24}
-                    height={24}
-                  />
-                </div>
-                <div className="absolute bottom-[15%] left-[5%] h-6 w-6 animate-counter-spin-21 rounded-full">
-                  <Image
-                    className="rounded-full"
-                    src={randomL2s[5].logo}
-                    alt={randomL2s[5].name}
-                    width={24}
-                    height={24}
-                  />
-                </div>
-              </div>
+        <Section id="stats">
+          <div className="mx-auto flex max-w-4xl flex-col gap-8 rounded-2xl border p-8 md:flex-row md:gap-14">
+            <BigNumber
+              center={false}
+              className="py-0"
+              value={
+                ethereumTxCost ? formatSmallUSD(ethereumTxCost, locale) : "-"
+              }
+            >
+              {t("page-layer-2-blockchain-transaction-cost")}
+            </BigNumber>
+            <div className="self-stretch border-b border-border md:border-e md:border-b-0" />
+            <BigNumber
+              center={false}
+              className="py-0"
+              value={medianTxCost ? formatSmallUSD(medianTxCost, locale) : "-"}
+            >
+              {t("page-layer-2-networks-transaction-cost")}
+            </BigNumber>
+          </div>
+        </Section>
 
-              <div className="absolute inset-[60px] rounded-full border border-dashed border-body-medium sm:inset-[108px]"></div>
-              <div className="absolute inset-[60px] animate-spin-9 rounded-full sm:inset-[108px]">
-                <div className="absolute -top-[12px] left-1/2 h-6 w-6 animate-counter-spin-9 rounded-full">
-                  <Image
-                    className="rounded-full"
-                    src={randomL2s[6].logo}
-                    alt={randomL2s[6].name}
-                    width={24}
-                    height={24}
-                  />
-                </div>
-                <div className="absolute right-[5%] bottom-[15%] h-6 w-6 animate-counter-spin-9 rounded-full">
-                  <Image
-                    className="rounded-full"
-                    src={randomL2s[7].logo}
-                    alt={randomL2s[7].name}
-                    width={24}
-                    height={24}
-                  />
-                </div>
-                <div className="absolute bottom-[15%] left-[5%] h-6 w-6 animate-counter-spin-9 rounded-full">
-                  <Image
-                    className="rounded-full"
-                    src={randomL2s[8].logo}
-                    alt={randomL2s[8].name}
-                    width={24}
-                    height={24}
-                  />
-                </div>
-              </div>
-
-              <div className="absolute top-1/2 left-1/2 h-12 w-12 -translate-x-1/2 -translate-y-1/2 transform">
+        <Section
+          id="network-of-networks"
+          className="overflow-hidden rounded-2xl bg-tint-primary p-8 text-center md:p-12"
+        >
+          <h2>{t("page-layer-2-network-of-networks-title")}</h2>
+          <p>{t("page-layer-2-network-of-networks-description")}</p>
+          <div className="relative mx-auto h-[275px] w-[275px] sm:h-[375px] sm:w-[375px]">
+            <div className="absolute inset-0 rounded-full border border-dashed border-body-medium"></div>
+            <div className="absolute inset-0 animate-spin-30 rounded-full">
+              <div className="absolute -top-[12px] left-1/2 h-6 w-6 animate-counter-spin-30 rounded-full bg-primary">
                 <Image
-                  src={EthereumLogo}
-                  alt="Ethereum"
-                  width={48}
-                  height={48}
+                  className="rounded-full"
+                  src={randomL2s[0].logo}
+                  alt={randomL2s[0].name}
+                  width={24}
+                  height={24}
+                />
+              </div>
+              <div className="absolute right-[8%] bottom-[17%] h-6 w-6 animate-counter-spin-30 rounded-full">
+                <Image
+                  className="rounded-full"
+                  src={randomL2s[1].logo}
+                  alt={randomL2s[1].name}
+                  width={24}
+                  height={24}
+                />
+              </div>
+              <div className="absolute bottom-[17%] left-[8%] h-6 w-6 animate-counter-spin-30 rounded-full">
+                <Image
+                  className="rounded-full"
+                  src={randomL2s[2].logo}
+                  alt={randomL2s[2].name}
+                  width={24}
+                  height={24}
                 />
               </div>
             </div>
-          </div>
-        </div>
 
-        <Grid id="layer-2-callout-cards" columns={3} className="p-8">
-          {calloutCards.map((card, idx) => (
-            <MarkdownCard
-              key={idx}
-              description={card.description}
-              title={card.title}
-              emoji={card.emoji}
-            />
-          ))}
-        </Grid>
+            <div className="absolute inset-[30px] rounded-full border border-dashed border-body-medium sm:inset-[54px]"></div>
+            <div className="absolute inset-[30px] animate-spin-21 rounded-full sm:inset-[54px]">
+              <div className="absolute -top-[12px] left-1/2 h-6 w-6 animate-counter-spin-21 rounded-full">
+                <Image
+                  className="rounded-full"
+                  src={randomL2s[3].logo}
+                  alt={randomL2s[3].name}
+                  width={24}
+                  height={24}
+                />
+              </div>
+              <div className="absolute right-[5%] bottom-[15%] h-6 w-6 animate-counter-spin-21 rounded-full">
+                <Image
+                  className="rounded-full"
+                  src={randomL2s[4].logo}
+                  alt={randomL2s[4].name}
+                  width={24}
+                  height={24}
+                />
+              </div>
+              <div className="absolute bottom-[15%] left-[5%] h-6 w-6 animate-counter-spin-21 rounded-full">
+                <Image
+                  className="rounded-full"
+                  src={randomL2s[5].logo}
+                  alt={randomL2s[5].name}
+                  width={24}
+                  height={24}
+                />
+              </div>
+            </div>
 
-        <div id="layer-2-ready-to-start" className="w-full px-8 py-9">
-          <div className="flex flex-col items-center gap-8">
-            <h2>{t("page-layer-2-ready-to-start-title")}</h2>
-            <p>{t("page-layer-2-ready-to-start-description")}</p>
-            <div>
-              <ButtonLink
-                href="/layer-2/networks"
-                customEventOptions={{
-                  eventCategory: "l2_hub",
-                  eventAction: "button_click",
-                  eventName: "mid_explore_networks",
-                }}
-              >
-                {t("page-layer-2-ready-to-start-button")}
-              </ButtonLink>
+            <div className="absolute inset-[60px] rounded-full border border-dashed border-body-medium sm:inset-[108px]"></div>
+            <div className="absolute inset-[60px] animate-spin-9 rounded-full sm:inset-[108px]">
+              <div className="absolute -top-[12px] left-1/2 h-6 w-6 animate-counter-spin-9 rounded-full">
+                <Image
+                  className="rounded-full"
+                  src={randomL2s[6].logo}
+                  alt={randomL2s[6].name}
+                  width={24}
+                  height={24}
+                />
+              </div>
+              <div className="absolute right-[5%] bottom-[15%] h-6 w-6 animate-counter-spin-9 rounded-full">
+                <Image
+                  className="rounded-full"
+                  src={randomL2s[7].logo}
+                  alt={randomL2s[7].name}
+                  width={24}
+                  height={24}
+                />
+              </div>
+              <div className="absolute bottom-[15%] left-[5%] h-6 w-6 animate-counter-spin-9 rounded-full">
+                <Image
+                  className="rounded-full"
+                  src={randomL2s[8].logo}
+                  alt={randomL2s[8].name}
+                  width={24}
+                  height={24}
+                />
+              </div>
+            </div>
+
+            <div className="absolute top-1/2 left-1/2 h-12 w-12 -translate-x-1/2 -translate-y-1/2 transform">
+              <Image src={ethereumLogo} alt="Ethereum" width={48} height={48} />
             </div>
           </div>
-        </div>
+        </Section>
 
-        <div id="layer-2-cta" className="w-full px-8 py-9">
-          <div className="mx-auto flex max-w-[640px] flex-col gap-6 rounded bg-linear-primary p-8">
-            <div className="flex flex-col gap-6">
+        <Section id="benefits-cards">
+          <Grid columns={3}>
+            {calloutCards.map((card, idx) => (
+              <MarkdownCard
+                key={idx}
+                description={card.description}
+                title={card.title}
+                emoji={card.emoji}
+              />
+            ))}
+          </Grid>
+        </Section>
+
+        <Section id="ready-to-start" className="text-center">
+          <h2>{t("page-layer-2-ready-to-start-title")}</h2>
+          <p>{t("page-layer-2-ready-to-start-description")}</p>
+          <ButtonLink
+            data-flow="cta"
+            href="/layer-2/networks"
+            customEventOptions={{
+              eventCategory: "l2_hub",
+              eventAction: "button_click",
+              eventName: "mid_explore_networks",
+            }}
+          >
+            {t("page-layer-2-ready-to-start-button")}
+          </ButtonLink>
+        </Section>
+
+        <Section id="featured-networks">
+          <div className="mx-auto flex max-w-[640px] flex-col gap-6 rounded-2xl bg-linear-primary p-8">
+            <div className="flex flex-col">
               {userRandomL2s.map((l2, idx) => (
                 <div
                   key={idx}
                   className={`flex flex-1 flex-col items-start gap-4 p-4 md:flex-row md:items-center ${
-                    idx < randomL2s.slice(0, 3).length - 1
+                    idx < userRandomL2s.length - 1
                       ? "border-b border-background"
                       : ""
                   }`}
                 >
                   <div className="flex flex-1 flex-col items-start gap-4 md:flex-row md:items-center">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-md bg-background shadow-lg">
+                    <div className="flex size-14 items-center justify-center rounded-md bg-background shadow-lg">
                       <Image
                         src={l2.logo}
                         alt={l2.name}
-                        style={{
-                          width: "46px",
-                          height: "46px",
-                        }}
+                        className="size-[46px] object-contain"
                       />
                     </div>
                     <div className="flex flex-1 flex-col gap-1">
@@ -383,73 +346,64 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       <p className="text-body-medium">{t(l2.description)}</p>
                     </div>
                   </div>
-                  <div className="flex w-full md:w-auto">
-                    <ButtonLink
-                      href={l2.website}
-                      variant="outline"
-                      className="w-full"
-                      customEventOptions={{
-                        eventCategory: "l2_hub",
-                        eventAction: "button_click",
-                        eventName: "mid_powered_by_ethereum",
-                      }}
-                    >
-                      {t("page-layer-2-go")}
-                    </ButtonLink>
-                  </div>
+                  <ButtonLink
+                    href={l2.website}
+                    variant="outline"
+                    className="w-full md:w-auto"
+                    customEventOptions={{
+                      eventCategory: "l2_hub",
+                      eventAction: "button_click",
+                      eventName: "mid_powered_by_ethereum",
+                    }}
+                  >
+                    {t("page-layer-2-go")}
+                  </ButtonLink>
                 </div>
               ))}
             </div>
 
-            <div className="flex justify-center">
-              <div className="mx-auto inline-flex items-center justify-center gap-2 rounded-full bg-background px-4 py-2 text-sm font-bold">
-                <Image
-                  src={EthereumLogo}
-                  alt={t("page-layer-2-ethereum-logo-alt")}
-                  style={{
-                    width: "24px",
-                    height: "24px",
-                  }}
-                />
-                <p>{t("page-layer-2-powered-by-ethereum-title")}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          id="layer-2-why-do-we-need-multiple-networks"
-          className="w-full px-8 py-9"
-        >
-          <div className="flex flex-col gap-8 bg-background-highlight px-12 py-12 md:flex-row">
-            <div className="flex flex-1 items-center justify-center">
+            <div className="mx-auto inline-flex items-center justify-center gap-2 rounded-full bg-background px-4 py-2 text-sm font-bold">
               <Image
-                src={WalkingImage}
-                alt="Walking"
-                height={345}
-                width={264}
+                src={ethereumLogo}
+                alt={t("page-layer-2-ethereum-logo-alt")}
+                className="size-6 object-contain"
               />
-            </div>
-            <div className="flex flex-1 flex-col justify-center gap-6">
-              <h2>{t("page-layer-2-why-do-we-need-multiple-networks-1")}</h2>
-              <p>{t("page-layer-2-why-do-we-need-multiple-networks-2")}</p>
-              <div>
-                <ButtonLink
-                  href="/layer-2/learn"
-                  customEventOptions={{
-                    eventCategory: "l2_hub",
-                    eventAction: "button_click",
-                    eventName: "mid_l2_learn",
-                  }}
-                >
-                  {tCommon("learn-more")}
-                </ButtonLink>
-              </div>
+              <p>{t("page-layer-2-powered-by-ethereum-title")}</p>
             </div>
           </div>
-        </div>
+        </Section>
 
-        <div id="layer-2-faq" className="space-y-8 px-8 py-9">
+        <Section
+          id="why-multiple-networks"
+          data-flow="skip"
+          className="flex gap-space-2x rounded-2xl bg-background-highlight p-8 *:flex-1 max-md:flex-col md:p-12"
+        >
+          <div className="relative max-md:min-h-64">
+            <Image
+              src={mainnetImage}
+              alt=""
+              className="absolute inset-0 size-full object-contain"
+              sizes="(max-width: 768px) 100vw, 45vw"
+            />
+          </div>
+          <div className="flow">
+            <h2>{t("page-layer-2-why-do-we-need-multiple-networks-1")}</h2>
+            <p>{t("page-layer-2-why-do-we-need-multiple-networks-2")}</p>
+            <ButtonLink
+              data-flow="cta"
+              href="/layer-2/learn"
+              customEventOptions={{
+                eventCategory: "l2_hub",
+                eventAction: "button_click",
+                eventName: "mid_l2_learn",
+              }}
+            >
+              {tCommon("learn-more")}
+            </ButtonLink>
+          </div>
+        </Section>
+
+        <Section id="faq">
           <h2>{t("page-layer-2-faq-title")}</h2>
           <AccordionContainer>
             <ExpandableCard
@@ -499,48 +453,46 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <p>{t("page-layer-2-faq-ExpandableCard-4-description")}</p>
             </ExpandableCard>
           </AccordionContainer>
-        </div>
-        <Grid
-          id="layer-2-callout-cards"
-          columns={2}
-          size="wide"
-          className="p-8"
-        >
-          <Callout
-            image={ExploreImage}
-            title={t("page-layer-2-callout-1-title")}
-            description={t("page-layer-2-callout-1-description")}
-          >
-            <ButtonLink
-              href="/layer-2/networks"
-              customEventOptions={{
-                eventCategory: "l2_hub",
-                eventAction: "button_click",
-                eventName: "bottom_explore_networks",
-              }}
+        </Section>
+
+        <Section id="callouts">
+          <Grid columns={2} size="wide">
+            <Callout
+              image={layer2NetworksCalloutImage}
+              title={t("page-layer-2-callout-1-title")}
+              description={t("page-layer-2-callout-1-description")}
             >
-              {tCommon("nav-networks-explore-networks-label")}
-            </ButtonLink>
-          </Callout>
-          <Callout
-            image={WalkingImage}
-            title={t("page-layer-2-callout-2-title")}
-            description={t("page-layer-2-callout-2-description")}
-          >
-            <ButtonLink
-              href="/layer-2/learn"
-              customEventOptions={{
-                eventCategory: "l2_hub",
-                eventAction: "button_click",
-                eventName: "bottom_l2_learn",
-              }}
+              <ButtonLink
+                href="/layer-2/networks"
+                customEventOptions={{
+                  eventCategory: "l2_hub",
+                  eventAction: "button_click",
+                  eventName: "bottom_explore_networks",
+                }}
+              >
+                {tCommon("nav-networks-explore-networks-label")}
+              </ButtonLink>
+            </Callout>
+            <Callout
+              image={layer2LearnCalloutImage}
+              title={t("page-layer-2-callout-2-title")}
+              description={t("page-layer-2-callout-2-description")}
             >
-              {tCommon("learn-more")}
-            </ButtonLink>
-          </Callout>
-        </Grid>
+              <ButtonLink
+                href="/layer-2/learn"
+                customEventOptions={{
+                  eventCategory: "l2_hub",
+                  eventAction: "button_click",
+                  eventName: "bottom_l2_learn",
+                }}
+              >
+                {tCommon("learn-more")}
+              </ButtonLink>
+            </Callout>
+          </Grid>
+        </Section>
       </MainArticle>
-    </I18nProvider>
+    </>
   )
 }
 
@@ -549,6 +501,8 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-layer-2")
 

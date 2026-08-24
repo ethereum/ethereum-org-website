@@ -1,4 +1,5 @@
 "use client"
+import { useTranslations } from "next-intl"
 
 import type { WalletRow } from "@/lib/types"
 
@@ -13,10 +14,8 @@ import FindWalletsNoResults from "./FindWalletsNoResults"
 import List from "./List"
 import WalletSubComponent from "./WalletSubComponent"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 const FindWalletProductTable = ({ wallets }: { wallets: WalletRow[] }) => {
-  const { t } = useTranslation("page-wallets-find-wallet")
+  const t = useTranslations("page-wallets-find-wallet")
   const walletPersonas = useWalletPersonaPresets()
   const walletFilterOptions = useWalletFilters()
 

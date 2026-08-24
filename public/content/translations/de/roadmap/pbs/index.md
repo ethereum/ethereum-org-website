@@ -2,6 +2,7 @@
 title: Proposer-Builder-Trennung (PBS)
 description: Erfahre, wie und warum Ethereum-Validatoren ihre Verantwortlichkeiten für die Block-Erstellung und das Block-Broadcasting aufteilen werden.
 lang: de
+template: roadmap
 ---
 
 Heutige [Ethereum](/)-Validatoren erstellen _und_ übertragen (broadcasten) Blöcke. Sie bündeln Transaktionen, von denen sie über das Gossip-Netzwerk erfahren haben, und verpacken sie in einen Block, der an Peers im Ethereum-Netzwerk gesendet wird. **Proposer-Builder-Trennung (PBS)** teilt diese Aufgaben auf mehrere Validatoren auf. Block-Builder werden dafür verantwortlich, Blöcke zu erstellen und sie dem Block-Proposer in jedem Slot anzubieten. Der Block-Proposer kann den Inhalt des Blocks nicht sehen; er wählt einfach den profitabelsten aus und erhält eine Gebühr vom Block-Builder (oder der Builder zahlt ein Gebot an den Proposer), bevor er den Block an seine Peers sendet.

@@ -29,10 +29,13 @@ incomplete: true
 
 [ERC](https://eips.ethereum.org/erc) प्रस्तावांची संपूर्ण यादी.
 
-## पुढील वाचन {#further-reading}
+## पुढील वाचन
 
-_तुम्हाला मदत करणाऱ्या एखाद्या समुदाय संसाधनाबद्दल माहिती आहे का? हे पृष्ठ संपादित करा आणि ते जोडा!_
+_तुम्हाला मदत करणाऱ्या एखाद्या कम्युनिटी रिसोर्सबद्दल माहिती आहे का? हे पृष्ठ संपादित करा आणि ते जोडा!_
 
+- [टोकन एकत्रीकरण चेकलिस्ट](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md) - _Trail of Bits_
+- [ओपनझेपलिन दस्तऐवजीकरण: टोकन्स](https://docs.openzeppelin.com/contracts/5.x/tokens) - _ओपनझेपलिन_
+- [टोकन एकत्रीकरणाचे धोके (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _ओपनझेपलिन_
 ## संबंधित ट्यूटोरियल्स {#related-tutorials}
 
 - [टोकन एकत्रीकरण चेकलिस्ट](/developers/tutorials/token-integration-checklist/) _– टोकन्सशी संवाद साधताना विचारात घेण्याच्या गोष्टींची चेकलिस्ट._

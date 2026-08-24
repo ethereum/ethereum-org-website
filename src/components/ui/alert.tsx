@@ -1,6 +1,10 @@
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { X } from "lucide-react"
+import {
+  tv,
+  type VariantProps as TailwindVariantProps,
+} from "tailwind-variants"
 import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
@@ -64,18 +68,32 @@ const AlertContent = React.forwardRef<
 ))
 AlertContent.displayName = "AlertContent"
 
+const alertTitleVariants = tv({
+  base: "text-body",
+  variants: {
+    size: {
+      base: "font-bold",
+      lg: "mb-2 text-2xl font-black",
+    },
+  },
+  defaultVariants: {
+    size: "base",
+  },
+})
+
 export interface AlertTitleProps
-  extends React.HTMLAttributes<HTMLParagraphElement> {
+  extends React.HTMLAttributes<HTMLParagraphElement>,
+    TailwindVariantProps<typeof alertTitleVariants> {
   asChild?: boolean
 }
 
 const AlertTitle = React.forwardRef<HTMLParagraphElement, AlertTitleProps>(
-  ({ className, asChild, ...props }, ref) => {
+  ({ className, asChild, size, ...props }, ref) => {
     const Comp = asChild ? Slot : "p"
     return (
       <Comp
         ref={ref}
-        className={cn("font-bold text-body", className)}
+        className={cn(alertTitleVariants({ size }), className)}
         {...props}
       />
     )
@@ -118,6 +136,11 @@ const AlertCloseButton = React.forwardRef<
 ))
 AlertCloseButton.displayName = "AlertCloseButton"
 
+/**
+ * @deprecated Use `AlertIcon` with a Lucide icon instead. Alert glyphs are
+ * moving from emoji to icons; `AlertEmoji` is retained only for content that
+ * has not been migrated yet.
+ */
 const AlertEmoji = ({ className, ...props }: EmojiProps) => (
   <Emoji
     className={cn(
@@ -128,15 +151,22 @@ const AlertEmoji = ({ className, ...props }: EmojiProps) => (
   />
 )
 
-const AlertIcon = ({
-  className,
-  children,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div
-    className={cn("mt-0.5 shrink-0 self-start [&>svg]:size-6", className)}
-    {...props}
-  >
+const alertIconVariants = tv({
+  base: "mt-0.5 shrink-0 self-start [&>svg]:size-6",
+  variants: {
+    size: {
+      lg: "[&>svg]:size-10",
+      xl: "[&>svg]:size-12",
+    },
+  },
+})
+
+export interface AlertIconProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    TailwindVariantProps<typeof alertIconVariants> {}
+
+const AlertIcon = ({ className, children, size, ...props }: AlertIconProps) => (
+  <div className={cn(alertIconVariants({ size }), className)} {...props}>
     {children}
   </div>
 )

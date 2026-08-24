@@ -24,6 +24,9 @@
     --background-medium: var(--gray-200);
     --background-high: var(--gray-300);
 
+    /* Modal/sheet backdrop dim; only token with alpha baked in */
+    --overlay: var(--black), 0.75;
+
     --border: var(--gray-200);
     --border-high-contrast: var(--gray-400);
     --border-low-contrast: var(--gray-100);
@@ -56,7 +59,7 @@
     --error-dark: var(--red-900);
     --error-border: var(--red-800);
 
-    --warning: var(--yellow-400);
+    --warning: var(--yellow-500);
     --warning-light: var(--yellow-100);
     --warning-dark: var(--yellow-900);
     --warning-border: var(--yellow-700);
@@ -95,6 +98,8 @@
     --background-low: var(--gray-700);
     --background-medium: var(--gray-600);
     --background-high: var(--gray-800);
+
+    --overlay: var(--black), 0.85;
 
     --border: var(--gray-600);
     --border-high-contrast: var(--gray-300);

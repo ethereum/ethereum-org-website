@@ -1,10 +1,10 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/docs/dapps/index.md",
-  "generatedAt": "2026-06-16T22:24:54.389Z",
-  "rootHash": "dab69e61929c",
+  "generatedAt": "2026-07-22T22:47:16.562Z",
+  "rootHash": "43307bebc6f7",
   "tree": {
-    "contentHash": "55f4d77007a7",
+    "contentHash": "44fd6c5e8506",
     "anchorHash": "b3d1f3d39099",
     "children": {
       "frontmatter:title": {
@@ -191,7 +191,7 @@
         ]
       },
       "dapp-tools": {
-        "contentHash": "1f842b3aeb4a",
+        "contentHash": "31623ff9214e",
         "anchorHash": "f11a0e1512bc",
         "labelHash": "39799ee1e303",
         "children": {
@@ -200,7 +200,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:14": {
-            "contentHash": "b82a7ded0317",
+            "contentHash": "bb56111c0057",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
@@ -537,5 +537,5 @@
       "tutorials"
     ]
   },
-  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

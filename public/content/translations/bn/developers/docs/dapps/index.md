@@ -47,12 +47,12 @@ dapp-এর সাথে পরিচয় করিয়ে দিতে, আ
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## dapp তৈরির টুলস {#dapp-tools}
+## dapp তৈরি করার টুল
 
-**Scaffold-ETH _- আপনার স্মার্ট কন্ট্রাক্টের সাথে মানানসই একটি ফ্রন্টএন্ড ব্যবহার করে দ্রুত Solidity নিয়ে পরীক্ষা-নিরীক্ষা করুন।_**
+**Scaffold-ETH 2 _- আপনার স্মার্ট কন্ট্রাক্টের সাথে মানানসই একটি ফ্রন্টএন্ড ব্যবহার করে দ্রুত Solidity নিয়ে পরীক্ষা-নিরীক্ষা করুন।_**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
-- [উদাহরণ dapp](https://punkwallet.io/)
+- [উদাহরণস্বরূপ dapp](https://punkwallet.io/)
 
 **Create Eth App _- একটি কমান্ডের মাধ্যমে ইথেরিয়াম-চালিত অ্যাপ তৈরি করুন।_**
 
@@ -63,23 +63,22 @@ dapp-এর সাথে পরিচয় করিয়ে দিতে, আ
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
-**Etherflow _- ইথেরিয়াম ডেভেলপারদের তাদের নোড পরীক্ষা করার এবং ব্রাউজার থেকে RPC কল তৈরি ও ডিবাগ করার জন্য FOSS টুল।_**
+**Etherflow _- ইথেরিয়াম ডেভেলপারদের তাদের নোড পরীক্ষা করার এবং ব্রাউজার থেকে RPC কলগুলো কম্পোজ ও ডিবাগ করার জন্য FOSS টুল।_**
 
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
-**thirdweb _- Web3 ডেভেলপমেন্টের জন্য প্রতিটি ভাষায় SDK, স্মার্ট কন্ট্রাক্ট, টুলস এবং ইনফ্রাস্ট্রাকচার।_**
+**thirdweb _- Web3 ডেভেলপমেন্টের জন্য প্রতিটি ভাষায় SDK, স্মার্ট কন্ট্রাক্ট, টুল এবং ইনফ্রাস্ট্রাকচার।_**
 
 - [হোমপেজ](https://thirdweb.com/)
 - [ডকুমেন্টেশন](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Crossmint _- স্মার্ট কন্ট্রাক্ট ডিপ্লয় করতে, ক্রেডিট-কার্ড এবং ক্রস চেইন পেমেন্ট সক্ষম করতে এবং NFT তৈরি, বিতরণ, বিক্রি, সংরক্ষণ এবং সম্পাদনা করার জন্য API ব্যবহার করতে এন্টারপ্রাইজ-গ্রেড Web3 ডেভেলপমেন্ট প্ল্যাটফর্ম।_**
+**Crossmint _- স্মার্ট কন্ট্রাক্ট ডিপ্লয় করা, ক্রেডিট-কার্ড এবং ক্রস-চেইন পেমেন্ট সক্ষম করা এবং NFT তৈরি, বিতরণ, বিক্রি, সংরক্ষণ এবং এডিট করার জন্য API ব্যবহার করার এন্টারপ্রাইজ-গ্রেড Web3 ডেভেলপমেন্ট প্ল্যাটফর্ম।_**
 
 - [crossmint.com](https://www.crossmint.com)
 - [ডকুমেন্টেশন](https://docs.crossmint.com)
 - [ডিসকর্ড](https://discord.com/invite/crossmint)
-
 ## আরও পড়ুন {#further-reading}
 
 - [dapp এক্সপ্লোর করুন](/apps)

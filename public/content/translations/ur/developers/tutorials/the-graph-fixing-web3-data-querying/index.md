@@ -84,7 +84,7 @@ GameContract.events.BetPlaced({
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 
-![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.gif)
+![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.mp4#910x692)
 
 یہ دونوں تصاویر کافی حد تک <span dir="ltr">GraphQL</span> کے جوہر کو پکڑتی ہیں۔ دائیں طرف کی کیوری کے ساتھ ہم بالکل واضح کر سکتے ہیں کہ ہمیں کون سا ڈیٹا چاہیے، لہذا وہاں ہمیں ایک ہی درخواست میں سب کچھ مل جاتا ہے اور بالکل اسی سے زیادہ کچھ نہیں جس کی ہمیں ضرورت ہے۔ ایک <span dir="ltr">GraphQL</span> سرور درکار تمام ڈیٹا کی بازیافت کو سنبھالتا ہے، لہذا فرنٹ اینڈ صارف کے لیے اسے استعمال کرنا ناقابل یقین حد تک آسان ہے۔ اگر آپ دلچسپی رکھتے ہیں تو [یہ ایک اچھی وضاحت ہے](https://www.apollographql.com/blog/graphql-explained) کہ سرور بالکل کس طرح کیوری کو سنبھالتا ہے۔
 

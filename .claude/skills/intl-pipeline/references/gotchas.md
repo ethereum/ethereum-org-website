@@ -2,6 +2,22 @@
 
 Patterns that aren't in the SKILL.md's inline gotchas section but come up when you dig in. Load this when something feels off and the obvious places didn't surface the answer.
 
+## Input, not output, is where the money goes
+
+Output is priced 6x input ($12 vs $2 per 1M), but volume runs the other way by orders of magnitude: incremental translation resends context, rules and glossary on every call and asks back only the changed strings. Run 31149083965 was $1,099 of input against $9 of output.
+
+Consequences when reading a run's logs:
+
+- **The input:output ratio is not a signal.** Healthy runs range from 1:1 to 180:1 depending on how much context each call carries.
+- **Input tokens per call is the signal.** Healthy is 4k-9k. Every pathological run in July-August 2026 stood out on that column alone: 184k (08-05), 260k (07-29), 1.76M (08-07).
+- Quick check on a job log: `grep -o 'tokens_in=[0-9]*' <log> | cut -d= -f2 | sort -n | tail -5`
+
+## A file with an existing translation always takes the incremental path
+
+Even when the change is hundreds of brand-new strings. Path selection is "does a locale file and a manifest exist", not "how much of this is new" (`main.ts`, the `hasLocale` / `hasManifest` branch). So a new quiz added to `learn-quizzes.json` — a namespace that already exists in all 24 locales — is an incremental update with 488 TRANSLATE sections, not a full translation.
+
+This is the shape that caused the $1,108 run, and it is the normal shape for every future quiz, glossary batch, or app-listing addition. When reviewing changes to batching, use "many new keys in an already-translated file" as the test case, not "new file".
+
 ## Output token budget
 
 Gemini's output token limit is ~65K. Per-section calls keep this manageable. Bulk calls (rare in current pipeline; JSON batching exists) can hit it.
@@ -82,9 +98,9 @@ Frontmatter is a distinct YAML scope. Inert frontmatter fields (`image`, `lang`,
 
 `tags` arrays have a mixed policy (brand tags English, concept tags translated) — see `intl-review/SKILL.md` for the rule. For tag-related sanitizer bugs, the fix is in the sanitizer; the pipeline itself just runs the section through Phase 4.
 
-## TARGET_FILES env var for sanitizer scoping
+## Sanitizer scoping: TARGET_LANGUAGES env var or programmatic file list
 
-The sanitizer's `processMarkdownFile` and `processJsonFile` can be scoped via `TARGET_FILES` env var (comma-separated paths). The `/fix-sanitizer-bug` slash command uses this. Don't run the sanitizer unscoped — see SKILL.md gotcha for why.
+There is no `TARGET_FILES` env var — the sanitizer only reads `TARGET_LANGUAGES` (comma-separated language codes, e.g. `TARGET_LANGUAGES=ja`) from the environment. Per-file scoping exists only programmatically: call the exported `runSanitizer(filesWithContent)` with the specific file(s). Don't run the sanitizer unscoped — see SKILL.md gotcha for why.
 
 ## Glossary ID vs term confusion
 
@@ -96,3 +112,4 @@ ETHGlossary entries have `id` (slug, e.g., `"vitalik-buterin"`) and `term` (disp
 - `references/orchestration.md` for the pending-branch model
 - `references/recovery.md` for what to do when things break
 - `references/sanitizer.md` for sanitizer-specific gotchas
+- `references/runbooks/cost-guard-tripped.md` for the spend bounds and what to do when one trips

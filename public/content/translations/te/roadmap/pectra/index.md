@@ -3,6 +3,7 @@ title: "పెక్ట్రా"
 metaTitle: "⁦Prague-Electra (Pectra)⁩"
 description: "పెక్ట్రా ప్రోటోకాల్ నవీకరణ గురించి తెలుసుకోండి"
 lang: te
+template: upgrade
 authors: ["నిక్సో", "మారియో హావెల్"]
 ---
 

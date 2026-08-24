@@ -7,27 +7,44 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardBanner,
+  CardButtonFake,
   CardContent,
   CardEmoji,
   CardFooter,
   CardHeader,
+  CardLinkFake,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
+import InlineLink from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Tag } from "@/components/ui/tag"
 
 import heroLandscape from "@/public/images/heroes/guides-hub-hero.jpg"
 
 const meta = {
-  title: "UI / Primitives / Card",
+  title: "UI / Data Display / Card",
   component: Card,
+  tags: ["autodocs"],
   parameters: {
     // Variant-axis stories are dev-facing references; opt them out of Chromatic
     // by default. Composites overrides this to keep snapshot coverage on
     // production-shape card compositions.
     chromatic: { disableSnapshot: true },
+    docs: {
+      description: {
+        component: [
+          "Composable card primitive. Build cards by composing the parts (`CardHeader`, `CardContent`, `CardFooter`, `CardBanner`, `CardTitle`, `CardParagraph`) and picking `variant`/`size` -- reach for a variant before `className`.",
+          "**Two hover signals that can stack.** An **outline ring** (or, on a `ghost` card, a **background fill**) is added automatically by an `href` `Card` and marks the *whole card* as the click target. **`hoverLift`** (the card raises on hover) means the card carries an action; an `href` `Card` applies it **automatically**, so you pass it by hand only on a non-link card that carries an action.",
+          "**Links & actions** (see the *Interaction Patterns* story):",
+          "- **One CTA** -> `href` + `CardButtonFake` (or `CardLinkFake` for a text link). The `href` makes the whole card clickable and auto-applies the outline/fill *and* lift; the fake CTA avoids nesting a real `ButtonLink`/`Button`/`LinkWithArrow` anchor inside the card's anchor.",
+          "- **Two or more CTAs** -> no `href` (the card can't be one link); real `ButtonLink`s, each its own target, + `hoverLift`.",
+          "- **No button, the action is a text link in the copy** -> no `href`; an `InlineLink` in the copy + `hoverLift`. No outline ring, which would imply the whole card is a single link.",
+          "Any `href` card needs interior padding, so wrap a `CardBanner` in a `CardHeader` rather than dropping it in bare -- the inset keeps the banner clear of the hover treatment and its corners concentric with the card.",
+        ].join("\n\n"),
+      },
+    },
   },
 } satisfies Meta<typeof Card>
 
@@ -43,6 +60,8 @@ const Label = ({ children }: { children: React.ReactNode }) => (
 // Reusable "standard" inner content for variant-axis stories where the focus
 // is the wrapper (variant, size, etc.), not the body. Includes a banner since
 // banner-plus-content is the most common card composition in production.
+// The footer uses CardButtonFake, so every consumer must set `href` on the
+// Card -- a single-CTA card is a whole-card link (see InteractionPatterns).
 const StandardBody = () => (
   <>
     <CardHeader>
@@ -66,7 +85,7 @@ const StandardBody = () => (
       </CardParagraph>
     </CardContent>
     <CardFooter>
-      <ButtonLink href="#">Call to action</ButtonLink>
+      <CardButtonFake>Call to action</CardButtonFake>
     </CardFooter>
   </>
 )
@@ -78,7 +97,7 @@ export const Variants: Story = {
     <Grid columns={3} size="wide">
       <div>
         <Label>variant=&quot;base&quot; (default)</Label>
-        <Card variant="base">
+        <Card href="#" variant="base">
           <StandardBody />
         </Card>
       </div>
@@ -87,7 +106,7 @@ export const Variants: Story = {
         <Label>
           variant=&quot;nested&quot; (shown inside a tinted container)
         </Label>
-        <Card variant="nested">
+        <Card href="#" variant="nested">
           <StandardBody />
         </Card>
       </div>
@@ -96,7 +115,7 @@ export const Variants: Story = {
         <Label>
           variant=&quot;ghost&quot; (no bg; --banner-radius widens to 16px)
         </Label>
-        <Card variant="ghost">
+        <Card href="#" variant="ghost">
           <StandardBody />
         </Card>
       </div>
@@ -106,7 +125,7 @@ export const Variants: Story = {
           variant=&quot;header-bar&quot; (header layout baked in — just drop a
           CardHeader inside)
         </Label>
-        <Card variant="header-bar">
+        <Card href="#" variant="header-bar">
           <CardHeader>
             <Shield className="text-accent-a" />
             <CardTitle size="sm">Header-bar card</CardTitle>
@@ -118,7 +137,7 @@ export const Variants: Story = {
             </CardParagraph>
           </CardContent>
           <CardFooter>
-            <ButtonLink href="#">Call to action</ButtonLink>
+            <CardButtonFake>Call to action</CardButtonFake>
           </CardFooter>
         </Card>
       </div>
@@ -171,7 +190,7 @@ export const Sizes: Story = {
               </CardContent>
             </Card>
           ) : (
-            <Card size={size}>
+            <Card href="#" size={size}>
               <StandardBody />
             </Card>
           )}
@@ -205,7 +224,7 @@ export const ContentSpacingOverride: Story = {
             Card size=&quot;lg&quot;, CardContent spacing=&quot;
             {contentSpacing}&quot; - {CONTENT_SPACING_LABELS[contentSpacing]}
           </Label>
-          <Card size="lg">
+          <Card href="#" size="lg">
             <CardHeader>
               <CardBanner>
                 <Image
@@ -227,7 +246,7 @@ export const ContentSpacingOverride: Story = {
               </CardParagraph>
             </CardContent>
             <CardFooter>
-              <ButtonLink href="#">Call to action</ButtonLink>
+              <CardButtonFake>Call to action</CardButtonFake>
             </CardFooter>
           </Card>
         </div>
@@ -310,10 +329,10 @@ export const BannerPlacement: Story = {
 
       <div>
         <Label>
-          Direct child of Card + variant=&quot;ghost&quot; (widened
-          --banner-radius)
+          Bare direct child of Card + size=&quot;xs&quot; (edge-to-edge; radii
+          match)
         </Label>
-        <Card variant="ghost">
+        <Card variant="ghost" size="xs">
           <CardBanner>
             <Image
               src={heroLandscape}
@@ -324,9 +343,10 @@ export const BannerPlacement: Story = {
           <CardContent>
             <CardTitle>Edge-to-edge banner</CardTitle>
             <CardParagraph>
-              Banner is a direct child of Card so it sits flush against the card
-              edges. variant=&quot;ghost&quot; removes the surrounding tint and
-              widens --banner-radius to match the card&apos;s outer corners.
+              Banner is a bare direct child of Card, flush to the edges.
+              size=&quot;xs&quot; zeroes --card-pad so the banner radius equals
+              the card&apos;s outer radius. On a padded size, or an href card,
+              wrap the banner in a CardHeader instead (see the banner gotcha).
             </CardParagraph>
           </CardContent>
         </Card>
@@ -460,23 +480,23 @@ export const FooterButtons: Story = {
     <Grid columns={2} size="wide">
       <div>
         <Label>CardFooter buttons=&quot;full&quot; (default)</Label>
-        <Card>
+        <Card href="#">
           <CardContent>
             <CardTitle>Full-width buttons</CardTitle>
             <CardParagraph>
-              Buttons and ButtonLinks stretch to the card width with centered
-              text.
+              CardButtonFakes (and real buttons) stretch to the card width with
+              centered text.
             </CardParagraph>
           </CardContent>
           <CardFooter>
-            <ButtonLink href="#">Primary CTA</ButtonLink>
+            <CardButtonFake>Primary CTA</CardButtonFake>
           </CardFooter>
         </Card>
       </div>
 
       <div>
         <Label>CardFooter buttons=&quot;compact&quot;</Label>
-        <Card>
+        <Card href="#">
           <CardContent>
             <CardTitle>Compact buttons</CardTitle>
             <CardParagraph>
@@ -485,7 +505,7 @@ export const FooterButtons: Story = {
             </CardParagraph>
           </CardContent>
           <CardFooter buttons="compact">
-            <ButtonLink href="#">Primary CTA</ButtonLink>
+            <CardButtonFake>Primary CTA</CardButtonFake>
           </CardFooter>
         </Card>
       </div>
@@ -497,14 +517,94 @@ export const FooterButtons: Story = {
 
 export const Linkable: Story = {
   render: () => (
+    <div className="space-y-6">
+      <p className="max-w-3xl text-sm text-body-medium">
+        On an href card the whole card is the link, so its contents must sit
+        inset from the hover edge: wrap the CardBanner in a CardHeader — the
+        --card-pad inset keeps the banner clear of the hover treatment and its
+        corners concentric with the card. Don&apos;t drop a bare CardBanner
+        straight into an href Card.
+      </p>
+      <Grid columns={3} size="wide">
+        <div>
+          <Label>Card href=&quot;...&quot; + CardBanner zoom (opt-in)</Label>
+          <Card href="#">
+            <CardHeader>
+              <CardBanner zoom>
+                <Image
+                  src={heroLandscape}
+                  alt=""
+                  sizes="(min-width: 768px) 400px, 100vw"
+                />
+              </CardBanner>
+            </CardHeader>
+            <CardContent>
+              <CardTitle>Linkable with banner zoom</CardTitle>
+              <CardParagraph>
+                Hover the card: the banner image scales via the group/link
+                propagation from the wrapping BaseLink.
+              </CardParagraph>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div>
+          <Label>
+            Card href=&quot;...&quot; + CardBanner (no zoom, default)
+          </Label>
+          <Card href="#">
+            <CardHeader>
+              <CardBanner>
+                <Image
+                  src={heroLandscape}
+                  alt=""
+                  sizes="(min-width: 768px) 400px, 100vw"
+                />
+              </CardBanner>
+            </CardHeader>
+            <CardContent>
+              <CardTitle>Linkable, banner zoom disabled</CardTitle>
+              <CardParagraph>
+                Same hover/focus behavior on the card, but the banner image
+                stays static -- the default now. Add the zoom prop to opt into
+                the scale-up.
+              </CardParagraph>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div>
+          <Label>Card href=&quot;...&quot; (no banner)</Label>
+          <Card href="#">
+            <CardContent>
+              <CardTitle>Linkable without banner</CardTitle>
+              <CardParagraph>
+                Hover the card to see the title underline propagate via the
+                group/link class.
+              </CardParagraph>
+            </CardContent>
+          </Card>
+        </div>
+      </Grid>
+    </div>
+  ),
+}
+
+// ---------- Link hover by variant ----------
+// Every Card with an href gets a hover affordance automatically, chosen by
+// variant: ghost link cards fill with bg-background-highlight (no outline)
+// while base/nested/header-bar keep the primary outline ring. Hover each cell.
+
+export const LinkHoverByVariant: Story = {
+  render: () => (
     <Grid columns={3} size="wide">
       <div>
         <Label>
-          Card href=&quot;...&quot; + CardBanner zoom=&#123;true&#125; (default)
+          href + variant=&quot;ghost&quot; (hover: highlight fill, no ring)
         </Label>
-        <Card href="#">
+        <Card href="#" variant="ghost" size="sm">
           <CardHeader>
-            <CardBanner>
+            <CardBanner size="sm">
               <Image
                 src={heroLandscape}
                 alt=""
@@ -513,10 +613,11 @@ export const Linkable: Story = {
             </CardBanner>
           </CardHeader>
           <CardContent>
-            <CardTitle>Linkable with banner zoom</CardTitle>
-            <CardParagraph>
-              Hover the card: the banner image scales via the group/link
-              propagation from the wrapping BaseLink.
+            <CardTitle size="sm">Ghost link card</CardTitle>
+            <CardParagraph size="sm">
+              Transparent at rest; hovering fills the whole card with
+              bg-background-highlight and shows no outline. This is the
+              media/link card treatment (video, hackathon, story, latest grids).
             </CardParagraph>
           </CardContent>
         </Card>
@@ -524,11 +625,11 @@ export const Linkable: Story = {
 
       <div>
         <Label>
-          Card href=&quot;...&quot; + CardBanner zoom=&#123;false&#125;
+          href + variant=&quot;base&quot; (hover: primary outline ring)
         </Label>
-        <Card href="#">
+        <Card href="#" variant="base" size="sm">
           <CardHeader>
-            <CardBanner zoom={false}>
+            <CardBanner size="sm">
               <Image
                 src={heroLandscape}
                 alt=""
@@ -537,28 +638,184 @@ export const Linkable: Story = {
             </CardBanner>
           </CardHeader>
           <CardContent>
-            <CardTitle>Linkable, banner zoom disabled</CardTitle>
-            <CardParagraph>
-              Same hover/focus behavior on the card, but the banner image stays
-              static. Useful when the banner art shouldn&apos;t move.
+            <CardTitle size="sm">Base link card</CardTitle>
+            <CardParagraph size="sm">
+              Already sits on a fill, so a hover fill would be invisible;
+              hovering shows the ring-primary-hover outline instead.
             </CardParagraph>
           </CardContent>
         </Card>
       </div>
 
-      <div>
-        <Label>Card href=&quot;...&quot; (no banner)</Label>
-        <Card href="#">
+      <div className="rounded-lg bg-background-highlight p-4">
+        <Label>
+          href + variant=&quot;nested&quot; (hover: primary outline ring)
+        </Label>
+        <Card href="#" variant="nested" size="sm">
+          <CardHeader>
+            <CardBanner size="sm">
+              <Image
+                src={heroLandscape}
+                alt=""
+                sizes="(min-width: 768px) 400px, 100vw"
+              />
+            </CardBanner>
+          </CardHeader>
           <CardContent>
-            <CardTitle>Linkable without banner</CardTitle>
-            <CardParagraph>
-              Hover the card to see the title underline propagate via the
-              group/link class.
+            <CardTitle size="sm">Nested link card</CardTitle>
+            <CardParagraph size="sm">
+              Shown inside a tinted container. Keeps the outline ring on hover;
+              the bg-highlight fill is reserved for ghost.
             </CardParagraph>
           </CardContent>
         </Card>
       </div>
     </Grid>
+  ),
+}
+
+// ---------- Interaction Patterns (single CTA / two CTAs / text link) ----------
+// The number of actions decides whether the whole card is clickable. The intro
+// paragraph below states the rule for viewers (rendered, not just a comment).
+
+export const InteractionPatterns: Story = {
+  render: () => (
+    <div className="space-y-6">
+      <p className="max-w-3xl text-sm text-body-medium">
+        Two hover signals that can stack. An <strong>outline ring</strong> (or,
+        on a ghost card, a <strong>background fill</strong>) is added
+        automatically by an href Card and marks the whole card as the click
+        target. <strong>hoverLift</strong> (the card raises on hover) means the
+        card carries an action; an href Card applies it automatically, so you
+        pass it by hand only on a non-link card. So: <strong>one CTA</strong> →
+        href + CardButtonFake (or CardLinkFake for a text-link CTA), which
+        auto-applies ring/fill and lift; <strong>two or more CTAs</strong> → no
+        href, real ButtonLinks + hoverLift (the card isn&apos;t one link);{" "}
+        <strong>no button</strong> (the action is a text link in the copy) → no
+        href, InlineLink + hoverLift.
+      </p>
+      <Grid columns={3} size="wide">
+        <div>
+          <Label>
+            Single CTA — href + CardButtonFake (auto ring/fill + lift)
+          </Label>
+          <Card href="#">
+            <CardHeader>
+              <CardBanner>
+                <Image
+                  src={heroLandscape}
+                  alt=""
+                  sizes="(min-width: 768px) 400px, 100vw"
+                />
+              </CardBanner>
+            </CardHeader>
+            <CardContent>
+              <CardTitle>Single call to action</CardTitle>
+              <CardParagraph>
+                One CTA, so the whole card is the link (href → outline ring).
+                The footer uses CardButtonFake — a presentational button that
+                inherits the card&apos;s hover, with no interactive element
+                nested inside the anchor — and the href auto-raises the card
+                (lift) to signal the action it carries.
+              </CardParagraph>
+            </CardContent>
+            <CardFooter>
+              <CardButtonFake>Call to action</CardButtonFake>
+            </CardFooter>
+          </Card>
+        </div>
+
+        <div>
+          <Label>
+            Single CTA (text link) — href + CardLinkFake (auto ring/fill + lift)
+          </Label>
+          <Card href="#">
+            <CardHeader>
+              <CardBanner>
+                <Image
+                  src={heroLandscape}
+                  alt=""
+                  sizes="(min-width: 768px) 400px, 100vw"
+                />
+              </CardBanner>
+            </CardHeader>
+            <CardContent>
+              <CardTitle>Single call to action</CardTitle>
+              <CardParagraph>
+                Same whole-card link, but the CTA reads as a text link.
+                CardLinkFake mirrors LinkWithArrow as a non-interactive div —
+                the trailing arrow and the underline both fire off the
+                card&apos;s hover, so nothing interactive nests inside the
+                anchor.
+              </CardParagraph>
+            </CardContent>
+            <CardFooter buttons="inherit">
+              <CardLinkFake withForwardArrow>Learn more</CardLinkFake>
+            </CardFooter>
+          </Card>
+        </div>
+
+        <div>
+          <Label>
+            Two CTAs — hoverLift (actions inside; card is not a link)
+          </Label>
+          <Card hoverLift>
+            <CardHeader>
+              <CardBanner>
+                <Image
+                  src={heroLandscape}
+                  alt=""
+                  sizes="(min-width: 768px) 400px, 100vw"
+                />
+              </CardBanner>
+            </CardHeader>
+            <CardContent>
+              <CardTitle>Two calls to action</CardTitle>
+              <CardParagraph>
+                Two independent actions can&apos;t both be the card link, so the
+                card itself is not clickable (no href). Use real ButtonLinks —
+                each its own target — and hoverLift so the card raises on hover
+                to signal the actions inside, without the whole-card-link
+                outline.
+              </CardParagraph>
+            </CardContent>
+            <CardFooter buttons="compact">
+              <ButtonLink href="#">Primary</ButtonLink>
+              <ButtonLink href="#" variant="outline">
+                Secondary
+              </ButtonLink>
+            </CardFooter>
+          </Card>
+        </div>
+
+        <div>
+          <Label>
+            No button — text link in body + hoverLift (no href, no outline)
+          </Label>
+          <Card hoverLift>
+            <CardHeader>
+              <CardBanner>
+                <Image
+                  src={heroLandscape}
+                  alt=""
+                  sizes="(min-width: 768px) 400px, 100vw"
+                />
+              </CardBanner>
+            </CardHeader>
+            <CardContent>
+              <CardTitle>Action lives in the text</CardTitle>
+              <CardParagraph>
+                This card has no button; the action is an{" "}
+                <InlineLink href="#">inline link</InlineLink> in the copy.
+                hoverLift raises the whole card on hover to signal it&apos;s
+                interactive — without an outline ring, which would imply the
+                entire card is a single link.
+              </CardParagraph>
+            </CardContent>
+          </Card>
+        </div>
+      </Grid>
+    </div>
   ),
 }
 
@@ -576,10 +833,10 @@ export const Composites: Story = {
 
     return (
       <Grid columns={2} size="wide">
-        {/* Image-banner card (BuilderCard shape) */}
+        {/* Image-banner card (BuilderCard shape) -- single CTA, whole card links */}
         <div>
           <Label>Image-banner card (BuilderCard shape)</Label>
-          <Card variant="ghost">
+          <Card href="#" variant="ghost" border>
             <CardHeader>
               <CardBanner fit="contain" background="none">
                 <Image
@@ -603,11 +860,35 @@ export const Composites: Story = {
                 {tDev("page-developers-learn-desc")}
               </CardParagraph>
             </CardContent>
-            <CardFooter>
-              <ButtonLink href="#" className="sm:w-fit">
+            <CardFooter buttons="compact">
+              <CardButtonFake>
                 {tDev("page-developers-read-docs")}
-              </ButtonLink>
+              </CardButtonFake>
             </CardFooter>
+          </Card>
+        </div>
+
+        {/* Media link card (video / hackathon / story / latest grid shape) */}
+        <div>
+          <Label>Media link card (video / hackathon / story shape)</Label>
+          <Card href="#" variant="ghost" size="sm">
+            <CardHeader>
+              <CardBanner className="aspect-video h-auto">
+                <Image
+                  src={heroLandscape}
+                  alt=""
+                  sizes="(min-width: 768px) 400px, 100vw"
+                />
+              </CardBanner>
+            </CardHeader>
+            <CardContent>
+              <CardTitle size="sm">
+                {tDev("page-developers-learn-tutorials")}
+              </CardTitle>
+              <CardParagraph size="sm">
+                {tDev("page-developers-learn-tutorials-desc")}
+              </CardParagraph>
+            </CardContent>
           </Card>
         </div>
 
@@ -632,10 +913,10 @@ export const Composites: Story = {
           </Card>
         </div>
 
-        {/* Header-bar card (what-is-ethereum start sections) */}
+        {/* Header-bar card (what-is-ethereum start sections) -- two CTAs, not a link */}
         <div>
-          <Label>Header-bar card (icon bar + content + footer)</Label>
-          <Card variant="header-bar" size="lg">
+          <Label>Header-bar card (two CTAs → hoverLift, not a link)</Label>
+          <Card variant="header-bar" size="lg" hoverLift>
             <CardHeader>
               <User className="size-8 text-accent-a" />
               <CardTitle>
@@ -657,9 +938,12 @@ export const Composites: Story = {
                 </ListItem>
               </UnorderedList>
             </CardContent>
-            <CardFooter>
+            <CardFooter buttons="compact">
               <ButtonLink href="#">
                 {tWie("page-what-is-ethereum-start-individuals-cta-1")}
+              </ButtonLink>
+              <ButtonLink href="#" variant="outline">
+                {tWie("page-what-is-ethereum-start-individuals-cta-2")}
               </ButtonLink>
             </CardFooter>
           </Card>

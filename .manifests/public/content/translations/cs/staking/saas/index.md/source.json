@@ -1,18 +1,18 @@
 {
   "version": 1,
   "sourceFile": "public/content/staking/saas/index.md",
-  "generatedAt": "2026-06-30T00:53:05.729Z",
-  "rootHash": "37e3d8c221d8",
+  "generatedAt": "2026-08-19T20:50:08.079Z",
+  "rootHash": "66903cbe9f4c",
   "tree": {
-    "contentHash": "87593992f909",
-    "anchorHash": "36fa63a51ac5",
+    "contentHash": "beaa35661f50",
+    "anchorHash": "059d5f1cc331",
     "children": {
       "frontmatter:title": {
-        "contentHash": "6561796cd0de",
+        "contentHash": "9c6e48c1bd4c",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "b6f8fec878fa",
+        "contentHash": "0c6a24dc0632",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -23,17 +23,9 @@
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d9a998cac660"
       },
-      "frontmatter:emoji": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "cfe6e3139bc8"
-      },
       "frontmatter:image": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "dd96e0dc4eec"
-      },
-      "frontmatter:alt": {
-        "contentHash": "563701e8903e",
-        "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:sidebarDepth": {
         "contentHash": "e3b0c44298fc",
@@ -44,126 +36,152 @@
         "anchorHash": "e3b0c44298fc"
       },
       "what-is-staking-as-a-service": {
-        "contentHash": "0118a8a927b6",
-        "anchorHash": "4b9f7d802648",
-        "labelHash": "bd1e4a0cd443",
+        "contentHash": "5ce4160efc7d",
+        "anchorHash": "5c6692373e53",
+        "labelHash": "6dc9e8c5465d",
         "children": {
           "_label": {
-            "contentHash": "bd1e4a0cd443",
+            "contentHash": "6dc9e8c5465d",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:0": {
-            "contentHash": "01ff4a682135",
-            "anchorHash": "e3b0c44298fc"
-          }
-        },
-        "childrenOrder": [
-          "_label",
-          "prose:0"
-        ]
-      },
-      "why-stake-with-a-service": {
-        "contentHash": "b35fd2818232",
-        "anchorHash": "4e91dc0e0224",
-        "labelHash": "622021a15ebc",
-        "children": {
-          "_label": {
-            "contentHash": "622021a15ebc",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "prose:1": {
-            "contentHash": "b344d80e24a3",
+          "prose:2": {
+            "contentHash": "0a26e9103696",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
             "contentHash": "a13bebeb57e1",
             "anchorHash": "8a5edab28263"
           },
-          "prose:2": {
-            "contentHash": "1c82d9f79271",
+          "prose:3": {
+            "contentHash": "334d0d8cb1f4",
             "anchorHash": "e3b0c44298fc"
           },
-          "component:4": {
-            "contentHash": "37f543163500",
-            "anchorHash": "15f6d6158249",
+          "link:1": {
+            "contentHash": "3379bc591f1e",
+            "anchorHash": "5dd929c34d64"
+          },
+          "prose:4": {
+            "contentHash": "367776962e7d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "what-delegated-staking-is-not": {
+            "contentHash": "4a40b0f73c31",
+            "anchorHash": "988ff3933082",
+            "labelHash": "aa822dcce4c1",
             "children": {
-              "component:0": {
-                "contentHash": "2c9d9cc13cdc",
-                "anchorHash": "0754d8572024",
-                "children": {
-                  "attr:title": {
-                    "contentHash": "a7256ad600a9",
-                    "anchorHash": "e3b0c44298fc"
-                  },
-                  "attr:description": {
-                    "contentHash": "464dd6a97dcf",
-                    "anchorHash": "e3b0c44298fc"
-                  },
-                  "attr:emoji": {
-                    "contentHash": "e3b0c44298fc",
-                    "anchorHash": "d378957788bb"
-                  }
-                },
-                "childrenOrder": [
-                  "attr:title",
-                  "attr:description",
-                  "attr:emoji"
-                ]
+              "_label": {
+                "contentHash": "aa822dcce4c1",
+                "anchorHash": "e3b0c44298fc"
               },
-              "component:1": {
-                "contentHash": "98047e7cf717",
-                "anchorHash": "e6e4db58b2c2",
-                "children": {
-                  "attr:title": {
-                    "contentHash": "e44603d362bf",
-                    "anchorHash": "e3b0c44298fc"
-                  },
-                  "attr:description": {
-                    "contentHash": "b1e127fceb03",
-                    "anchorHash": "e3b0c44298fc"
-                  },
-                  "attr:emoji": {
-                    "contentHash": "e3b0c44298fc",
-                    "anchorHash": "ced6d25b2ea9"
-                  }
-                },
-                "childrenOrder": [
-                  "attr:title",
-                  "attr:description",
-                  "attr:emoji"
-                ]
+              "prose:2": {
+                "contentHash": "f9a2440557d6",
+                "anchorHash": "e3b0c44298fc"
               },
-              "component:2": {
-                "contentHash": "7f56ab73c057",
-                "anchorHash": "c61d0ac7ac3f",
-                "children": {
-                  "attr:title": {
-                    "contentHash": "8fb689b20e00",
-                    "anchorHash": "e3b0c44298fc"
-                  },
-                  "attr:description": {
-                    "contentHash": "d3de10b4b90f",
-                    "anchorHash": "e3b0c44298fc"
-                  },
-                  "attr:emoji": {
-                    "contentHash": "e3b0c44298fc",
-                    "anchorHash": "fe4b570e22cc"
-                  }
-                },
-                "childrenOrder": [
-                  "attr:title",
-                  "attr:description",
-                  "attr:emoji"
-                ]
+              "link:0": {
+                "contentHash": "7de5f340d477",
+                "anchorHash": "6b3c01636366"
+              },
+              "prose:3": {
+                "contentHash": "76f0332bc220",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "3379bc591f1e",
+                "anchorHash": "5dd929c34d64"
+              },
+              "prose:4": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
               }
             },
             "childrenOrder": [
-              "component:0",
-              "component:1",
-              "component:2"
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
             ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4",
+          "what-delegated-staking-is-not"
+        ]
+      },
+      "why-stake-with-a-service": {
+        "contentHash": "5ee2353b3ada",
+        "anchorHash": "20285ae631c3",
+        "labelHash": "e8f8320902d5",
+        "children": {
+          "_label": {
+            "contentHash": "e8f8320902d5",
+            "anchorHash": "e3b0c44298fc"
           },
-          "component:5": {
+          "prose:0": {
+            "contentHash": "b34543dc7050",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "fe521a706b00",
+            "anchorHash": "fadbe909da84",
+            "children": {
+              "html-tag:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:3": {
+                "contentHash": "3a337836b047",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "html-tag:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:4": {
+                "contentHash": "a79c2a35eb18",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "html-tag:2": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:5": {
+                "contentHash": "0825ed350b1d",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "html-tag:0",
+              "prose:3",
+              "html-tag:1",
+              "prose:4",
+              "html-tag:2",
+              "prose:5"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2"
+        ]
+      },
+      "comparison-of-staking-options": {
+        "contentHash": "fb3c2f4b6ca6",
+        "anchorHash": "be31cdd31f78",
+        "labelHash": "cc5c1af5254e",
+        "children": {
+          "_label": {
+            "contentHash": "cc5c1af5254e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:1": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "c6872618fd7e",
             "children": {
@@ -176,15 +194,173 @@
         },
         "childrenOrder": [
           "_label",
-          "prose:1",
+          "component:1"
+        ]
+      },
+      "the-delegation-spectrum": {
+        "contentHash": "11f97c5d05c8",
+        "anchorHash": "e1ffd3e69e7a",
+        "labelHash": "d37c2529fd63",
+        "children": {
+          "_label": {
+            "contentHash": "d37c2529fd63",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "9c2a67bed4cf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "non-custodial-staking-as-a-service": {
+            "contentHash": "99df3bf0fe67",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "33f12a5e0305",
+            "children": {
+              "_label": {
+                "contentHash": "33f12a5e0305",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "8346c9a7c0d0",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "custodial-services-and-exchange-staking": {
+            "contentHash": "de36e9fab42d",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "a736d1163900",
+            "children": {
+              "_label": {
+                "contentHash": "a736d1163900",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "3fa5dee7626e",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "non-custodial-staking-as-a-service",
+          "custodial-services-and-exchange-staking"
+        ]
+      },
+      "trust-model-what-to-evaluate": {
+        "contentHash": "59eb5e050b23",
+        "anchorHash": "e7e66305f44b",
+        "labelHash": "c8502b12011f",
+        "children": {
+          "_label": {
+            "contentHash": "c8502b12011f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "e3d1c6968bb8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "00f384b17c1b",
+            "anchorHash": "d9d83a207b8e"
+          },
+          "prose:4": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "f077e5ddd641",
+            "anchorHash": "8de0cb72cfbc"
+          },
+          "prose:5": {
+            "contentHash": "780c9600cd0d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "67a6b1ad00d5",
+            "anchorHash": "63aedaf4407d"
+          },
+          "prose:6": {
+            "contentHash": "644ffad98acd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:8": {
+            "contentHash": "22660a1d43ea",
+            "anchorHash": "3a512e8c3ff4",
+            "children": {
+              "attr:variant": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "2937013f2181"
+              },
+              "html-tag:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "html-tag:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "89f9e3db6c01",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:3": {
+                "contentHash": "c993b7eef588",
+                "anchorHash": "901a6d409db4",
+                "children": {
+                  "component:0": {
+                    "contentHash": "5f1c50ab99f5",
+                    "anchorHash": "303717fe8103",
+                    "children": {
+                      "prose:1": {
+                        "contentHash": "583b957c8f01",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "link:0": {
+                        "contentHash": "520776660ed5",
+                        "anchorHash": "a240bf19ce0f"
+                      }
+                    },
+                    "childrenOrder": [
+                      "prose:1",
+                      "link:0"
+                    ]
+                  }
+                }
+              }
+            },
+            "childrenOrder": [
+              "attr:variant",
+              "html-tag:0",
+              "html-tag:1",
+              "prose:2",
+              "component:3"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
           "link:0",
-          "prose:2",
-          "component:4",
-          "component:5"
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6",
+          "component:8"
         ]
       },
       "what-to-consider": {
-        "contentHash": "7b074fc3273d",
+        "contentHash": "a1f75fb0c3d1",
         "anchorHash": "2d1223bfd3c9",
         "labelHash": "33595b218818",
         "children": {
@@ -193,7 +369,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:0": {
-            "contentHash": "f2d9254df3df",
+            "contentHash": "77b6521efb4b",
             "anchorHash": "e3b0c44298fc"
           },
           "component:2": {
@@ -214,8 +390,8 @@
         ]
       },
       "saas-providers": {
-        "contentHash": "965635c6961d",
-        "anchorHash": "6283809e2cc5",
+        "contentHash": "481637ef9b31",
+        "anchorHash": "4eeeeaecbddd",
         "labelHash": "f9303e336f93",
         "children": {
           "_label": {
@@ -223,7 +399,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:0": {
-            "contentHash": "4a4eeaec85c5",
+            "contentHash": "97330da5f438",
             "anchorHash": "e3b0c44298fc"
           },
           "component:2": {
@@ -286,8 +462,8 @@
             ]
           },
           "key-generators": {
-            "contentHash": "96ca551b3aa8",
-            "anchorHash": "fa33ce14650b",
+            "contentHash": "b644db83b54c",
+            "anchorHash": "41e6fede573f",
             "labelHash": "1fac9567b8f1",
             "children": {
               "_label": {
@@ -315,6 +491,16 @@
               "prose:2": {
                 "contentHash": "89a73ffd8e7a",
                 "anchorHash": "e3b0c44298fc"
+              },
+              "component:5": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "e11d40979e63",
+                "children": {
+                  "attr:className": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "534c526bc36f"
+                  }
+                }
               }
             },
             "childrenOrder": [
@@ -322,7 +508,8 @@
               "component:1",
               "prose:1",
               "link:0",
-              "prose:2"
+              "prose:2",
+              "component:5"
             ]
           }
         },
@@ -335,8 +522,8 @@
         ]
       },
       "faq": {
-        "contentHash": "089ac3171cf0",
-        "anchorHash": "01c6f6432a48",
+        "contentHash": "cc6289705907",
+        "anchorHash": "5c3920ee7e5c",
         "labelHash": "e956a9404b46",
         "children": {
           "_label": {
@@ -344,7 +531,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "component:1": {
-            "contentHash": "d19fc0760001",
+            "contentHash": "d1ff55281114",
             "anchorHash": "87e585e56fe3",
             "children": {
               "attr:title": {
@@ -360,7 +547,7 @@
                 "anchorHash": "b00e6f46376b"
               },
               "prose:0": {
-                "contentHash": "e07991068ce6",
+                "contentHash": "17c43373178a",
                 "anchorHash": "e3b0c44298fc"
               }
             },
@@ -372,7 +559,7 @@
             ]
           },
           "component:2": {
-            "contentHash": "367f5aa6eb06",
+            "contentHash": "91ab880172a8",
             "anchorHash": "3d276136efe7",
             "children": {
               "attr:title": {
@@ -388,7 +575,7 @@
                 "anchorHash": "b149ce530c51"
               },
               "prose:0": {
-                "contentHash": "8932380f7ee2",
+                "contentHash": "8953d95277f5",
                 "anchorHash": "e3b0c44298fc"
               }
             },
@@ -400,7 +587,7 @@
             ]
           },
           "component:3": {
-            "contentHash": "b3e00540e9ad",
+            "contentHash": "105ebef1abab",
             "anchorHash": "51f6070d8eb6",
             "children": {
               "attr:title": {
@@ -416,7 +603,7 @@
                 "anchorHash": "93e38c6dde3f"
               },
               "prose:1": {
-                "contentHash": "6662fe3e48ef",
+                "contentHash": "6969c785d637",
                 "anchorHash": "e3b0c44298fc"
               },
               "html-tag:0": {
@@ -433,7 +620,45 @@
             ]
           },
           "component:4": {
-            "contentHash": "b657002c0602",
+            "contentHash": "c6cab2dfbbc8",
+            "anchorHash": "e788617e2718",
+            "children": {
+              "attr:title": {
+                "contentHash": "d924b4840a5c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:eventCategory": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "05f0cb2dc6c0"
+              },
+              "attr:eventName": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "455a8f400ef7"
+              },
+              "prose:1": {
+                "contentHash": "1d3cef42d278",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "c8502b12011f",
+                "anchorHash": "dc0a824655f1"
+              },
+              "prose:2": {
+                "contentHash": "5203f9f28557",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "attr:eventCategory",
+              "attr:eventName",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "component:5": {
+            "contentHash": "e4ddda5d902d",
             "anchorHash": "8b3b684d9c21",
             "children": {
               "attr:title": {
@@ -449,7 +674,7 @@
                 "anchorHash": "9f36a286864c"
               },
               "prose:1": {
-                "contentHash": "5312615776fb",
+                "contentHash": "dc252cf6265e",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:0": {
@@ -476,46 +701,67 @@
           "component:1",
           "component:2",
           "component:3",
-          "component:4"
+          "component:4",
+          "component:5"
         ]
       },
       "further-reading": {
-        "contentHash": "95fc0f6f0b49",
-        "anchorHash": "e7968d3b4d6c",
+        "contentHash": "c45ce08ec773",
+        "anchorHash": "81e4d92d2917",
         "labelHash": "4082f515b2f4",
         "children": {
           "_label": {
             "contentHash": "4082f515b2f4",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:2": {
+          "prose:4": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
-            "contentHash": "3a1a9744e21c",
-            "anchorHash": "00a776608398"
+            "contentHash": "ddbf0bb6e19b",
+            "anchorHash": "418ee4e4ee3b"
           },
-          "prose:3": {
-            "contentHash": "b534ceaa146a",
+          "prose:5": {
+            "contentHash": "745c6e440e25",
             "anchorHash": "e3b0c44298fc"
           },
           "link:1": {
+            "contentHash": "3a1a9744e21c",
+            "anchorHash": "00a776608398"
+          },
+          "prose:6": {
+            "contentHash": "b534ceaa146a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
             "contentHash": "777355ec8c49",
             "anchorHash": "6465e226960a"
           },
-          "prose:4": {
-            "contentHash": "021c388682d1",
+          "prose:7": {
+            "contentHash": "cdbb87245702",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "64f5b7082e2e",
+            "anchorHash": "8de0cb72cfbc"
+          },
+          "prose:8": {
+            "contentHash": "34b583a18c01",
             "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:2",
+          "prose:4",
           "link:0",
-          "prose:3",
+          "prose:5",
           "link:1",
-          "prose:4"
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3",
+          "prose:8"
         ]
       }
     },
@@ -524,18 +770,19 @@
       "frontmatter:description",
       "frontmatter:lang",
       "frontmatter:template",
-      "frontmatter:emoji",
       "frontmatter:image",
-      "frontmatter:alt",
       "frontmatter:sidebarDepth",
       "frontmatter:summaryPoints",
       "what-is-staking-as-a-service",
       "why-stake-with-a-service",
+      "comparison-of-staking-options",
+      "the-delegation-spectrum",
+      "trust-model-what-to-evaluate",
       "what-to-consider",
       "saas-providers",
       "faq",
       "further-reading"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "9638e1f9f88c9e74ab4d15a11f3f6d1e782ff7f5"
 }

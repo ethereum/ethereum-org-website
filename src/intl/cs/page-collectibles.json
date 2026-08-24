@@ -59,9 +59,6 @@
   "page-collectibles-translations-250": "Odznak za 250 slov",
   "page-collectibles-translations-50000": "Odznak za 50 000 slov",
   "page-collectibles-translations-badge-desc": "Do jakéhokoli jazyka.",
-  "page-collectibles-translations-desc": "Většina uživatelů nemluví anglicky, proto je klíčové pomoci s překladem našich článků do jiných jazyků. Žádné předchozí zkušenosti s překládáním nejsou potřeba.",
-  "page-collectibles-translations-instructions-1": "Zaregistrujte se na <a href=\"https://crowdin.com/project/ethereum-org\">Crowdinu</a>",
-  "page-collectibles-translations-instructions-2": "Vyberte jazyk",
-  "page-collectibles-translations-instructions-3": "Začněte překládat",
+  "page-collectibles-translations-desc": "Tyto odznaky oceňují minulé příspěvky do Překladatelského programu ethereum.org, který se utlumuje a již neprovádí onboarding nových překladatelů.",
   "page-collectibles-translations-title": "Překlady"
 }

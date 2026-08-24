@@ -17,14 +17,12 @@ buttons:
     isSecondary: false
 ---
 
-## 以太坊上的游戏 {#gaming-on-ethereum}
+## 以太坊上的游戏
+以太坊上的游戏形式多样，从利用区块链实现特定功能的游戏，到整个游戏世界都存在于链上的游戏。以太坊区块链可以在不同层面上与游戏结合。游戏可以将其货币作为可转移的代币进行存储，或者将其他游戏内资产（角色、装备、宠物等）以[非同质化代币 (NFT)](/nft/) 的形式进行存储。游戏还可以利用智能合约将其逻辑、规则和状态托管在链上。这类游戏通常被称为“全链上游戏”。
 
-以太坊上的游戏有多种形式，从使用区块链实现特定功能的游戏，到整个游戏世界都存在于链上的游戏。以太坊区块链可以在不同层面上与游戏结合使用。游戏可以将其货币作为可转移的代币进行存储，或者将其他游戏内资产（角色、装备、宠物等）以[非同质化代币 (NFT)](/nft/)的形式存储。游戏还可以利用智能合约将其逻辑、规则和状态托管在链上。这类游戏通常被称为“全链上游戏”。
+以太坊生态系统还包括[二层网络 (l2) 区块链](/layer-2/learn/)，它们继承了以太坊主网的安全保障，同时扩展了以太坊的规模并支持专门的用例。由于确认时间更短且费用更低，L2 网络可以为链上游戏及其社区提供额外的好处，使游戏玩法更容易被大众接受。
 
-以太坊生态系统还包括[二层网络 (l2) 区块链](/layer-2/learn/)，它们继承了以太坊主网的安全保障，同时扩展了以太坊的规模并支持专门的用例。由于确认时间更短、费用更低，二层网络 (l2) 可以为链上游戏及其社区提供额外的优势，让游戏体验更加触手可及。
-
-随着[一层网络 (l1) 的扩展](/roadmap/scaling/)，游戏开始回归以太坊主网。一个例子是 [Asphodel](https://x.com/asph0d37)，这是一款目前正在以太坊一层网络 (l1) 上进行游戏测试的全链上游戏。然而，大多数游戏仍然利用二层网络 (l2) 解决方案来享受更低费用的优势。
-
+随着[一层网络 (l1) 的扩展](/roadmap/scaling/)，游戏开始回归以太坊主网。一个例子是 [Asphodel: Prologue](https://play.asphodel.io/)，这是一款于 2026 年 7 月在以太坊 L1 上发布的全链上游戏。然而，大多数游戏仍然利用 L2 解决方案来享受更低费用的优势。
 ## 以太坊游戏的崛起 {#rise-of-ethereum-gaming}
 
 像《EVE Online》、《魔兽世界》、《冒险岛》和《RuneScape》这样的传统大型多人在线游戏 (MMO) 证明了虚拟经济可以产生现实世界的价值。玩家通过“打金”获取收入，《EVE》的经济反映了真实的金融系统，而模组文化（《反恐精英》、《DotA 2》、《我的世界》服务器）表明玩家希望在现有世界的基础上进行创作。甚至 Vitalik [因《魔兽世界》削弱角色而产生的著名挫败感](https://youtu.be/Letsfuhpobw?t=140)，也成为了封闭游戏生态系统问题的早期象征。但工作室控制着一切；他们可以封禁账户、关闭服务器，或者声称拥有玩家创建内容的所有权。
@@ -33,19 +31,17 @@ buttons:
 
 以太坊区块链实现了这样一个世界：规则不能被随意更改，状态不能被删除，任何人都可以构建只要网络存在就能一直存活的扩展。这是以太坊原生提供的东西。
 
-## 以太坊游戏生态系统概览 {#ethereums-gaming-ecosystem-overview}
-
-- **二层网络 (l2)：** 凭借更便宜的费用和更短的交易时间，以太坊二层网络 (l2) 成为游戏发布的常见场所。二层网络 (l2) 的格局在不断演变，像 Ronin（最初是《Axie Infinity》的侧链）这样领先的 Web3 游戏生态系统最近过渡到了以太坊二层网络架构，继承了以太坊的安全保障，同时保留了其针对游戏优化的基础设施。目前领先的游戏二层网络 (l2) 包括：[Ronin](https://www.roninchain.com/)、[Starknet](https://www.starknet.io/)、[Abstract](https://abs.xyz/)、[Immutable](https://www.immutable.com/) 和 [Base](https://www.base.org/)。
-- **基础设施：** 为了让开发链上游戏变得更容易，出现了许多工具栈；[Cartridge](https://cartridge.gg/)（提供会话密钥、通过代付合约实现免 Gas 交易，以及通过 Cartridge Controller 实现基于 WebAuthn 的身份验证）、[Dojo](https://dojoengine.org/)（一个原生支持账户抽象的可证明游戏框架）、[MUD](https://mud.dev/)（一个基于 EVM 的链上游戏引擎）。其他工具，如 [Proof of Play](https://proofofplay.com/) 和 [Thirdweb](https://thirdweb.com/)，允许开发者构建具有类似 Web2 用户体验的游戏。
-- **游戏社区：** 以太坊的游戏生态系统得到了游戏公会的支持，包括用于玩家协作的（[YGG](https://x.com/YieldGuild)、[MANA Gaming](https://x.com/ManaGamingBR)、[WASD](https://x.com/WASD_0x)、[LegacyGG](https://x.com/Lgc_GG)、[Gaming Grid](https://x.com/GamingGridx) 和 [OLAGG](https://x.com/OLAGuildGames)），像 [GAM3S.GG](https://games.gg/) 这样的发现平台，以及像 [Gaming Daily](https://x.com/GamingDailyx) 这样用于游戏分析和生态系统报道的媒体机构。有些社区则涵盖了所有这些方面，比如 [FOCGERS](https://x.com/FOCGERS)。
-- **游戏类型：** 某些游戏类型天然契合以太坊区块链的独特属性：**持久的状态**、**可验证的逻辑**和**玩家拥有的经济**。开发者采用不同的整合方式。一些人构建全链上游戏，所有的逻辑和状态都存在于区块链上，而另一些人则极少使用区块链，仅用于 NFT 装饰品等资产所有权。开发者正在发现哪些类型的游戏玩法最能从链上架构中受益，包括：
+## 以太坊游戏生态系统概览
+- **二层网络 (l2)：** 凭借更低廉的费用和更短的交易时间，以太坊 L2 成为游戏发布的常见场所。L2 领域不断发展，像 Ronin（最初是《Axie Infinity》的侧链）这样领先的 Web3 游戏生态系统最近过渡到了以太坊二层网络 (l2) 架构，继承了以太坊的安全保障，同时保留了其针对游戏优化的基础设施。目前领先的游戏 L2 包括：[Ronin](https://www.roninchain.com/)、[Starknet](https://www.starknet.io/)、[Abstract](https://abs.xyz/) 和 [Base](https://www.base.org/)。
+- **基础设施：** 为了让开发链上游戏变得更容易，存在许多工具栈；[Cartridge](https://cartridge.gg/)（提供会话密钥、通过代付合约实现免 Gas 交易，以及通过 Cartridge Controller 实现基于 WebAuthn 的身份验证），[Dojo](https://dojoengine.org/)（一个原生支持账户抽象的可证明游戏框架），[MUD](https://mud.dev/)（一个基于 EVM 的链上游戏引擎）。其他工具，如 [Proof of Play](https://proofofplay.com/) 和 [Thirdweb](https://thirdweb.com/)，允许开发者构建具有类似 Web2 用户体验的游戏。
+- **游戏社区：** 以太坊的游戏生态系统得到了游戏公会的支持，包括用于玩家协作的（[YGG](https://x.com/YieldGuild)、[MANA Gaming](https://x.com/ManaGamingBR)、[WASD](https://x.com/WASD_0x)、[LegacyGG](https://x.com/Lgc_GG)、[Gaming Grid](https://x.com/GamingGridx) 和 [OLAGG](https://x.com/OLAGuildGames)），像 [GAM3S.GG](https://games.gg/) 这样的发现平台，以及像 [Gaming Daily](https://x.com/GamingDailyx) 这样用于游戏分析和生态系统报道的媒体机构。有些社区涵盖了所有这些方面，比如 [FOCGERS](https://x.com/FOCGERS)。
+- **游戏类型：** 某些游戏类型天然契合以太坊区块链的独特属性：**持久的状态**、**可验证的逻辑**和**玩家拥有的经济**。开发者采用不同的整合方式。一些开发者构建全链上游戏，其中所有逻辑和状态都存在于区块链上，而另一些开发者则极少使用区块链，仅用于 NFT 装饰品等资产所有权。开发者正在发现哪些类型的游戏玩法最能从链上架构中受益，包括：
    1. **地牢探索与 Roguelike 游戏：** 《Loot Survivor》具有可验证高分的全链上永久死亡地牢，《Onchain Heroes》的《Maze of Gains》及其以 Axie 为主题的换皮游戏《Axie: Den of Mysteries》，它们将迷宫探索与去中心化金融 (DeFi) 机制结合在一起。
-   2. **大型多人在线游戏 (MMO)：** 《Cambria》的《Gold Rush》是一款带有玩家对战 (PvP) 和撤离机制的赛季性风险赚取 MMO，在安全区外的每一步都伴随着真实的风险。《ForTheKingdom》是一款全链上 MMO 策略游戏，以大规模阵营战为特色。《Axie Infinity: Atia's Legacy》是 Ronin 上的一款链上 MMO，玩家在其中通过 PvE 地牢和带有真实风险的 PvP 战斗进行对决。 
-   3. **4X 策略与大战略游戏：** 《Conquest.eth》是一款无需许可的太空征服与外交游戏，玩家在星球上质押代币以生产舰队并结成联盟，这款游戏在链上永久运行。《Realms》将以太坊 4X 机制带入奇幻背景，玩家控制 Realms（土地 NFT）来开采资源、建立军队，并在完全由玩家驱动的经济中参与复杂的外交。《Dark Forest》以零知识证明的战争迷雾机制开创了这一类型，目前由 DFArchon 作为一个社区分叉进行维护。
-   4. **策略与战术游戏：** 《Realms》包含了《Blitz》基于买入的激烈 1 小时策略比赛，而即将推出的自走棋游戏《Asphodel》正在以太坊主网上进行游戏测试。
-   5. **集换式卡牌游戏：** 《Showdown》将集换式卡牌游戏的策略与扑克的激烈程度结合在一起。《Axie Infinity Classic》是国际象棋、扑克和《宝可梦》的结合体，也是第一款达到数百万玩家的 Web3 游戏。
-   6. **竞技场：** 《Cambria》的《Duel Arena》，玩家在快节奏的 1v1 生死决斗中质押 ETH。《AveForge》是一个竞技机甲战斗竞技场，玩家在其中驾驶可定制的机甲。
-
+   2. **大型多人在线游戏 (MMO)：** 《Cambria》的《Gold Rush》是一款带有玩家对战 (PvP) 和撤离机制的赛季性风险收益 MMO，在安全区外的每一步都伴随着真实的风险。《ForTheKingdom》是一款全链上 MMO 策略游戏，以大规模阵营战为特色。《Axie Infinity: Atia's Legacy》是 Ronin 上的一款链上 MMO，玩家在其中通过玩家对环境 (PvE) 地牢和带有真实风险的 PvP 战斗进行对战。 
+   3. **4X 策略与大战略游戏：** 《Conquest.eth》是一款无需许可的太空征服与外交游戏，玩家在星球上质押代币以生产舰队并结成联盟，这款游戏在链上永久运行。《Realms》将 [Eternum](/apps/eternum/) 的 4X 机制带入奇幻设定中，玩家控制 Realms（土地 NFT）来开采资源、建立军队，并在完全由玩家驱动的经济中进行复杂的外交。《Dark Forest》以零知识证明战争迷雾机制开创了这一类型，目前由 DFArchon 作为社区分叉进行维护。
+   4. **策略与战术游戏：** 《Realms》包含《Blitz》基于买入的激烈 1 小时策略比赛，以及最近在以太坊主网上发布的自走棋游戏《Asphodel: Prologue》。
+   5. **集换式卡牌游戏：** 《Showdown》将集换式卡牌游戏的策略与扑克的紧张感结合在一起。《Axie Infinity Classic》是国际象棋、扑克和《宝可梦》的结合体，也是第一款玩家达到数百万的 Web3 游戏。
+   6. **竞技场游戏：** 《Cambria》的《Duel Arena》，玩家在快节奏的 1v1 生死决斗中质押 ETH。《AveForge》，一个竞技性机甲战斗竞技场，玩家在其中驾驶可定制的机甲。
 ## 值得尝试的游戏 {#games}
 
 <CategoryAppsGrid category="gaming" />

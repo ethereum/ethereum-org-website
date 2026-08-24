@@ -27,6 +27,9 @@ export const EXACT_PATH_NAMESPACE_MAP: Record<string, string> = {
   "/founders/": "page-founders",
   "/get-eth/": "page-get-eth",
   "/bug-bounty/": "page-bug-bounty",
+  "/open-source/": "page-open-source",
+  "/privacy/": "page-privacy",
+  "/privacy/ethereum/": "page-privacy-ethereum",
   "/quizzes/": "learn-quizzes",
   "/reports/": "page-reports",
   "/reports/trillion-dollar-security/": "page-trillion-dollar-security",
@@ -48,6 +51,7 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
   ["/developers/tutorials/", "page-developers-tutorials"],
   ["/developers/tools/", "page-developers-tools"],
   ["/developers/", "page-developers-index"],
+  ["/wallets/find-wallet/", "page-wallets-find-wallet"],
   ["/community/events/", "page-community-events"],
   ["/community/support/", "page-community-support"],
   ["/community/", "page-community"],
@@ -67,11 +71,17 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
   ["/run-a-node/", "page-run-a-node"],
   ["/roadmap/", "page-roadmap"],
   ["/start/", "page-start"],
+  ["/values/", "page-values"],
 ]
 
 const EXACT_PATH_ADDITIONAL_NAMESPACES: Record<string, string[]> = {
   "/": ["page-10-year-anniversary", "page-app-descriptions"],
+  "/community/": ["component-story-card"],
+  "/developers/": ["component-swiper"],
+  "/roadmap/": ["component-swiper"],
+  "/start/": ["component-swiper"],
   "/wallets/": ["component-wallet-simulator"],
+  "/what-are-apps/": ["component-story-card"],
 }
 
 const PREFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [
@@ -81,8 +91,12 @@ const PREFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [
   ["/layer-2/networks/", ["table"]],
   ["/energy-consumption/", ["page-about"]],
   ["/glossary/", ["glossary"]],
-  ["/10years/", ["page-10-year-anniversary"]],
-  ["/apps/", ["page-app-descriptions"]],
+  [
+    "/10years/",
+    ["page-10-year-anniversary", "component-swiper", "component-story-card"],
+  ],
+  ["/stories/", ["component-story-card"]],
+  ["/apps/", ["page-app-descriptions", "component-swiper"]],
 ]
 
 const SUFFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [
@@ -104,29 +118,9 @@ const GLOSSARY_TOOLTIP_PREFIXES: string[] = [
   "/roadmap/",
 ]
 
-const QUIZZES_PREFIXES: string[] = [
-  "/layer-2/learn/",
-  "/layer-2/",
-  "/roadmap/merge/",
-  "/roadmap/scaling/",
-  "/staking/solo/",
-  "/defi/",
-  "/eth/",
-  "/gas/",
-  "/nft/",
-  "/quizzes/",
-  "/run-a-node/",
-  "/security/",
-  "/smart-contracts/",
-  "/stablecoins/",
-  "/wallets/",
-  "/web3/",
-  "/what-is-ethereum/",
-]
-
 const LAYOUT_NAMESPACES: Record<string, string[]> = {
   docs: ["page-developers-docs"],
-  "use-cases": ["template-usecase", "learn-quizzes"],
+  "use-cases": ["template-usecase"],
   upgrade: ["page-upgrades", "page-upgrades-index"],
   tutorial: ["page-developers-tutorials"],
 }
@@ -208,13 +202,6 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   for (const prefix of GLOSSARY_TOOLTIP_PREFIXES) {
     if (path.startsWith(prefix)) {
       requiredNamespaces.push("glossary-tooltip")
-      break
-    }
-  }
-
-  for (const prefix of QUIZZES_PREFIXES) {
-    if (path.startsWith(prefix)) {
-      requiredNamespaces.push("learn-quizzes")
       break
     }
   }

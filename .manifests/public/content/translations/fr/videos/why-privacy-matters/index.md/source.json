@@ -1,0 +1,265 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/why-privacy-matters/index.md",
+  "generatedAt": "2026-07-23T00:31:38.870Z",
+  "rootHash": "8d64f4150288",
+  "tree": {
+    "contentHash": "b8213a95f73a",
+    "anchorHash": "80493f92b5a4",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "a3a209728948",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "f8903e07cb66",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "fe51b6c21de5"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "0efaec587e16"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "0da9bee574aa"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bfac314fefdc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "0665fb3c9b40"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d4e11841abf2"
+      },
+      "prose:1": {
+        "contentHash": "b268c3fb3357",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "4824275bd31a"
+      },
+      "prose:2": {
+        "contentHash": "8112a0452a2e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "an-experience-everyone-has-had-012": {
+        "contentHash": "bde6d2a5415d",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "5db6ec469ab0",
+        "children": {
+          "_label": {
+            "contentHash": "5db6ec469ab0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "a9c597426b4e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-nothing-to-hide-argument-129": {
+        "contentHash": "700da3292a80",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "86c8af61efe2",
+        "children": {
+          "_label": {
+            "contentHash": "86c8af61efe2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "20324707e99d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "even-privacys-critics-dont-believe-what-they-say-249": {
+        "contentHash": "dba57e6e2d3f",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "5a08ce276b03",
+        "children": {
+          "_label": {
+            "contentHash": "5a08ce276b03",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "0b29a9ce0809",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-email-password-challenge-451": {
+        "contentHash": "c7516e2bd52e",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "8d76df1e7595",
+        "children": {
+          "_label": {
+            "contentHash": "8d76df1e7595",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "a89d9cfea7eb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "being-watched-changes-our-behavior-702": {
+        "contentHash": "d6b4df508ff3",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "15a735b8a4e6",
+        "children": {
+          "_label": {
+            "contentHash": "15a735b8a4e6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "9cecefc03ba6",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "benthams-panopticon-809": {
+        "contentHash": "522cd88c5533",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "34801e3fe36c",
+        "children": {
+          "_label": {
+            "contentHash": "34801e3fe36c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "7690dac3eb0e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "orwell-religion-and-the-prison-in-the-mind-1008": {
+        "contentHash": "63e4131e1850",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "40d6893baac8",
+        "children": {
+          "_label": {
+            "contentHash": "40d6893baac8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "224ac8005a7d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "two-destructive-lessons-1230": {
+        "contentHash": "ca8d518aedd1",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "929b32129016",
+        "children": {
+          "_label": {
+            "contentHash": "929b32129016",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "f10698f293d9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "qa-with-bruno-giussani-1525": {
+        "contentHash": "9b8800cf818e",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "24922909aec6",
+        "children": {
+          "_label": {
+            "contentHash": "24922909aec6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "72ab9c8aa503",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "an-experience-everyone-has-had-012",
+      "the-nothing-to-hide-argument-129",
+      "even-privacys-critics-dont-believe-what-they-say-249",
+      "the-email-password-challenge-451",
+      "being-watched-changes-our-behavior-702",
+      "benthams-panopticon-809",
+      "orwell-religion-and-the-prison-in-the-mind-1008",
+      "two-destructive-lessons-1230",
+      "qa-with-bruno-giussani-1525"
+    ]
+  },
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+}

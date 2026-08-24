@@ -2,6 +2,7 @@
 title: Finalidade de slot único
 description: Explicação sobre a finalidade de slot único
 lang: pt-br
+template: roadmap
 ---
 
 Leva cerca de 15 minutos para um bloco do [Ethereum](/) ser finalizado. No entanto, podemos fazer com que o mecanismo de consenso do Ethereum valide blocos de forma mais eficiente e diminua drasticamente o tempo até a finalidade. Em vez de esperar quinze minutos, os blocos poderiam ser propostos e finalizados no mesmo slot. Esse conceito é conhecido como **finalidade de slot único (SSF)**.
@@ -31,7 +32,7 @@ Com o design do mecanismo atual, para reduzir o tempo até a finalidade, é nece
 
 ## Caminhos para a SSF {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title="Por que não podemos ter a SSF hoje?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 O mecanismo de consenso atual combina atestações de vários validadores, conhecidos como comitês, para reduzir o número de mensagens que cada validador precisa processar para validar um bloco. Todo validador tem a oportunidade de atestar em cada época (32 slots), mas em cada slot, apenas um subconjunto de validadores, conhecido como 'comitê', atesta. Eles fazem isso dividindo-se em sub-redes nas quais alguns validadores são selecionados para serem 'agregadores'. Cada um desses agregadores combina todas as assinaturas que veem de outros validadores em sua sub-rede em uma única assinatura agregada. O agregador que inclui o maior número de contribuições individuais passa sua assinatura agregada para o propositor de bloco, que a inclui no bloco junto com a assinatura agregada dos outros comitês.
 

@@ -5,7 +5,7 @@ description: "Обзор ИИ-агентов в Эфириуме"
 lang: ru
 template: use-cases
 sidebarDepth: 2
-image: /images/ai-agents/hero-image.png
+image: /images/community-campfire-people-robot-cut-out.png
 alt: "Люди собрались за столом с терминалом"
 summaryPoints:
   - "ИИ, который взаимодействует с блокчейном и торгует самостоятельно"

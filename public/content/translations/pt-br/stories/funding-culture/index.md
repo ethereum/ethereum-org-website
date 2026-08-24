@@ -64,7 +64,7 @@ Nosso primeiro experimento foi uma série de anime chamada [White Rabbit](https:
 - Fizeram stake para votar nas decisões do enredo diretamente no player
 - Ganharam um ERC-20 (nosso token de atenção) 
 
-![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4)
+![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4#800x400)
 
 O ERC-20 foi emitido em uma curva de ligação (bonding curve). Quanto mais cedo e mais engajado você estivesse, mais você ganhava. Os votos (como nomear a personagem principal Mirai) aconteceram via Snapshot. 
 

@@ -24,6 +24,7 @@ import { join } from "node:path"
 import { expect, test } from "@playwright/test"
 
 import { pipeline } from "../../../src/scripts/intl-pipeline"
+import { findSection } from "../../../src/scripts/intl-pipeline/pipeline"
 
 // ---------------------------------------------------------------------------
 // Fixtures
@@ -610,18 +611,13 @@ for (const lang of LANGS) {
       EN_B_MD,
       locA(lang, "md"),
       "markdown",
-      (sectionId, _englishContent) => {
-        // Mock LLM: extract section from locale-B by heading ID
+      (sectionId, englishContent) => {
+        // Mock LLM: extract section from locale-B by heading ID, using the same
+        // fence-aware boundaries as the pipeline (a naive `\n#` search cuts at
+        // comments and headings inside code fences)
         const lb = locB(lang, "md")
-        const pattern = new RegExp(
-          `(^#{1,6}\\s+[^\\n]*\\{#${sectionId}\\}[^\\n]*$)`,
-          "m"
-        )
-        const match = lb.match(pattern)
-        if (!match) return _englishContent
-        const start = lb.indexOf(match[0])
-        const nextH = lb.indexOf("\n#", start + 1)
-        return lb.slice(start, nextH > -1 ? nextH : undefined).trim()
+        const sec = findSection(lb, sectionId)
+        return sec ? lb.slice(sec.start, sec.end).trim() : englishContent
       }
     )
     expect(result).toBe(expected)

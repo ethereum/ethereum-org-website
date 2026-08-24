@@ -28,11 +28,11 @@ jako například:
 
 Než se ponoříte do frameworků, doporučujeme vám nejprve si přečíst náš úvod do [dapp](/developers/docs/dapps/) a [technologického zásobníku Etherea](/developers/docs/ethereum-stack/).
 
-## Dostupné frameworky {#available-frameworks}
+## Dostupné frameworky
 
-**Foundry** - **_Foundry je bleskově rychlá, přenositelná a modulární sada nástrojů pro vývoj aplikací na Ethereu_**
+**Foundry** - **_Foundry je bleskově rychlá, přenositelná a modulární sada nástrojů pro vývoj aplikací na Ethereu._**
 
-- [Nainstalovat Foundry](https://book.getfoundry.sh/)
+- [Instalace Foundry](https://book.getfoundry.sh/)
 - [Kniha o Foundry](https://book.getfoundry.sh/)
 - [Komunitní chat Foundry na Telegramu](https://t.me/foundry_support)
 - [Awesome Foundry](https://github.com/crisgarner/awesome-foundry)
@@ -64,11 +64,12 @@ Než se ponoříte do frameworků, doporučujeme vám nejprve si přečíst ná�
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Šablony](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-ETH -** **_Ethers.js + Hardhat + React komponenty a hooky pro Web3: vše, co potřebujete, abyste mohli začít budovat decentralizované aplikace poháněné chytrými kontrakty._**
+**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem a RainbowKit s možností volby mezi Hardhat nebo Foundry: hot reload kontraktů, vlastní React hooky, jednorázová peněženka (burner wallet) a lokální faucet, a rozšiřující moduly pro full-stack vývoj decentralizovaných aplikací (dapp)._**
 
+- [Webová stránka](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Vývojová platforma pro Web3, která umožňuje blockchainovým vývojářům budovat, testovat, ladit, monitorovat a provozovat chytré kontrakty a zlepšovat UX dapp._**
+**Tenderly -** **_Vývojová platforma pro Web3, která umožňuje blockchainovým vývojářům vytvářet, testovat, ladit, monitorovat a provozovat chytré kontrakty a zlepšovat UX dapp._**
 
 - [Webová stránka](https://tenderly.co/)
 - [Dokumentace](https://docs.tenderly.co/)
@@ -90,7 +91,7 @@ Než se ponoříte do frameworků, doporučujeme vám nejprve si přečíst ná�
 - [GitHub](https://github.com/node-real)
 - [Discord](https://discord.gg/V5k5gsuE)
 
-**thirdweb SDK -** **_Budujte Web3 aplikace, které mohou interagovat s vašimi chytrými kontrakty pomocí našich výkonných SDK a CLI._**
+**thirdweb SDK -** **_Vytvářejte Web3 aplikace, které mohou komunikovat s vašimi chytrými kontrakty pomocí našich výkonných SDK a CLI._**
 
 - [Dokumentace](https://portal.thirdweb.com/sdk/)
 - [GitHub](https://github.com/thirdweb-dev/)
@@ -101,7 +102,7 @@ Než se ponoříte do frameworků, doporučujeme vám nejprve si přečíst ná�
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_Podniková vývojová platforma pro Web3, která vám umožňuje budovat NFT aplikace na všech hlavních řetězcích EVM (a dalších)._**
+**Crossmint -** **_Podniková vývojová platforma pro Web3, která vám umožňuje vytvářet NFT aplikace na všech hlavních řetězcích kompatibilních s EVM (a dalších)._**
 
 - [Webová stránka](https://www.crossmint.com)
 - [Dokumentace](https://docs.crossmint.com)
@@ -113,25 +114,25 @@ Než se ponoříte do frameworků, doporučujeme vám nejprve si přečíst ná�
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **Brownie je v současné době neudržovaný**
 
-**OpenZeppelin SDK -** **_Ultimátní sada nástrojů pro chytré kontrakty: Sada nástrojů, která vám pomůže vyvíjet, kompilovat, aktualizovat, nasadit a interagovat s chytrými kontrakty._**
+**OpenZeppelin SDK -** **_Ultimátní sada nástrojů pro chytré kontrakty: Sada nástrojů, která vám pomůže vyvíjet, kompilovat, aktualizovat, nasazovat a komunikovat s chytrými kontrakty._**
 
 - [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Komunitní fórum](https://forum.openzeppelin.com/c/support/17)
 - **Vývoj OpenZeppelin SDK byl ukončen**
 
-**Catapulta -** **_Nástroj pro nasazení chytrých kontraktů na více řetězcích, automatizuje ověřování v průzkumnících bloků, sleduje nasazené chytré kontrakty a sdílí zprávy o nasazení, plug-n-play pro projekty ve Foundry a Hardhat._**
+**Catapulta -** **_Nástroj pro nasazení chytrých kontraktů na více řetězcích, automatizuje ověřování v prohlížečích bloků, sleduje nasazené chytré kontrakty a sdílí zprávy o nasazení, plug-n-play pro projekty ve Foundry a Hardhat._**
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (poháněno Covalent) -** **_GoldRush nabízí nejkomplexnější sadu API pro blockchainová data pro vývojáře, analytiky a podniky. Ať už budujete DeFi dashboard, peněženku, obchodního bota, AI agenta nebo platformu pro dodržování předpisů, datová API poskytují rychlý, přesný a pro vývojáře přívětivý přístup k nezbytným onchain datům, která potřebujete_**
+**GoldRush (poháněno Covalent) -** **_GoldRush nabízí nejkomplexnější sadu API pro blockchainová data pro vývojáře, analytiky a podniky. Ať už vytváříte DeFi dashboard, peněženku, obchodního bota, AI agenta nebo platformu pro dodržování předpisů, datová API poskytují rychlý, přesný a pro vývojáře přívětivý přístup k nezbytným onchain datům, která potřebujete._**
 
 - [Webová stránka](https://goldrush.dev/)
 - [Dokumentace](https://goldrush.dev/docs/chains/ethereum)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
-**Wake -** **_Komplexní framework v Pythonu pro testování kontraktů, fuzzing, nasazení, skenování zranitelností a navigaci v kódu._**
+**Wake -** **_All-in-one framework v Pythonu pro testování kontraktů, fuzzing, nasazení, skenování zranitelností a navigaci v kódu._**
 
 - [Domovská stránka](https://getwake.io/)
 - [Dokumentace](https://ackeeblockchain.com/wake/docs/latest/)
@@ -146,6 +147,10 @@ Než se ponoříte do frameworků, doporučujeme vám nejprve si přečíst ná�
 - [Discord](https://discord.com/invite/FRRBdjemHV)
 - [NPM balíček](https://www.npmjs.com/package/@veramo/core)
 
+**Moccasin -** **_Rychlý, pythonický framework pro vývoj a testování chytrých kontraktů pro Vyper, postavený na Titanoboa._**
+
+- [Dokumentace](https://cyfrin.github.io/moccasin/)
+- [GitHub](https://github.com/Cyfrin/moccasin)
 ## Další čtení {#further-reading}
 
 _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ho!_

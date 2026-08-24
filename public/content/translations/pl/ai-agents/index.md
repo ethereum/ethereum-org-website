@@ -5,7 +5,7 @@ description: "Przegląd agentów AI w Ethereum"
 lang: pl
 template: use-cases
 sidebarDepth: 2
-image: /images/ai-agents/hero-image.png
+image: /images/community-campfire-people-robot-cut-out.png
 alt: Ludzie zgromadzeni przy stole z terminalem
 summaryPoints:
   - "Sztuczna inteligencja, która wchodzi w interakcje z blockchainem i samodzielnie handluje"

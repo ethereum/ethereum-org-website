@@ -60,6 +60,8 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
+  setRequestLocale(locale)
+
   return await getMetadata({
     locale,
     slug: ["translatathon"],

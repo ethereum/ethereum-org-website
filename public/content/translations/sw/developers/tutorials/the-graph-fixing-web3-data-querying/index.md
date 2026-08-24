@@ -84,7 +84,7 @@ Kwanza hebu tuzungumze kuhusu GraphQL, iliyoundwa na kutekelezwa awali na Facebo
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 
-![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.gif)
+![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.mp4#910x692)
 
 Picha hizo mbili zinachukua kiini cha GraphQL. Kwa swali lililo upande wa kulia tunaweza kufafanua haswa data tunayotaka, kwa hivyo hapo tunapata kila kitu katika ombi moja na hakuna zaidi ya kile tunachohitaji. Seva ya GraphQL inashughulikia uletaji wa data yote inayohitajika, kwa hivyo ni rahisi sana kwa upande wa mtumiaji wa mbele kuitumia. [Haya ni maelezo mazuri](https://www.apollographql.com/blog/graphql-explained) ya jinsi haswa seva inashughulikia swali ikiwa una nia.
 

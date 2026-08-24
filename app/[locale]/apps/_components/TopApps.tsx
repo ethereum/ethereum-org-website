@@ -1,6 +1,6 @@
 "use client"
-
 import { Folder } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import { AppCategory, AppData } from "@/lib/types"
 
@@ -22,14 +22,13 @@ import { appsCategories } from "@/data/apps/categories"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import { useIsClient } from "@/hooks/useIsClient"
-import useTranslation from "@/hooks/useTranslation"
 
 interface TopAppsProps {
   appsData: Record<AppCategory, AppData[]>
 }
 
 const TopApps = ({ appsData }: TopAppsProps) => {
-  const { t } = useTranslation("page-apps")
+  const t = useTranslations("page-apps")
   const isClient = useIsClient()
   const cardStyling = useBreakpointValue<{
     layout: AppCardProps["layout"]
@@ -48,15 +47,15 @@ const TopApps = ({ appsData }: TopAppsProps) => {
       imageSize: "small",
     },
     lg: {
-      layout: "horizontal",
+      layout: null, // horizontal
       imageSize: "medium",
     },
     xl: {
-      layout: "horizontal",
+      layout: null, // horizontal
       imageSize: "medium",
     },
     "2xl": {
-      layout: "horizontal",
+      layout: null, // horizontal
       imageSize: "medium",
     },
   })

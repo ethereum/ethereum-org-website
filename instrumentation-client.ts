@@ -74,7 +74,8 @@ Sentry.init({
     // Cross-origin postMessage from extensions/embedded frames (ETHORG-87)
     /^Error: invalid origin$/,
     // Injected scripts from WebViews, adware, and OEM bloatware (ETHORG-14R, ETHORG-13N, ETHORG-JK, ETHORG-14B)
-    /LIDNotify is not defined/,
+    // Matches every global the LIDNotify injection references, e.g. `LIDNotifyId` (ETHORG-15N)
+    /LIDNotify\w* is not defined/,
     /tgetT is not defined/,
     /zaloJSV2 is not defined/,
     /onPagePause is not defined/,

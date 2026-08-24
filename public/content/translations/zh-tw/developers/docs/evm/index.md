@@ -91,3 +91,5 @@ _圖表改編自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downlo
 
 - [了解黃皮書的 EVM 規範](/developers/tutorials/yellow-paper-evm/) _– 以太坊黃皮書中正式 EVM 規範的引導式演練。_
 - [逆向工程合約](/developers/tutorials/reverse-engineering-a-contract/) _– 如何使用 EVM 操作碼對已編譯的智能合約進行逆向工程。_
+
+<QuizWidget quizKey="evm" />

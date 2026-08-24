@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/energy-consumption/index.md",
-  "generatedAt": "2026-06-08T09:06:43.651Z",
-  "rootHash": "b6237cb11820",
+  "generatedAt": "2026-08-07T06:11:20.634Z",
+  "rootHash": "cb5663ba8983",
   "tree": {
-    "contentHash": "075c20c3285a",
-    "anchorHash": "8369a6ff0eb6",
+    "contentHash": "3aa00972e9ce",
+    "anchorHash": "ad8450e58b3d",
     "children": {
       "frontmatter:title": {
         "contentHash": "5044d91b7190",
@@ -413,8 +413,8 @@
         ]
       },
       "related-topics": {
-        "contentHash": "c93f8a85bfaf",
-        "anchorHash": "88437b26280f",
+        "contentHash": "5b7a59d79f11",
+        "anchorHash": "321811b6fe65",
         "labelHash": "5a38da0df0ab",
         "children": {
           "_label": {
@@ -436,6 +436,16 @@
           "link:1": {
             "contentHash": "c09500586c2c",
             "anchorHash": "77488c35533d"
+          },
+          "component:5": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "855b9f8fe921",
+            "children": {
+              "attr:quizKey": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "5ee6f4ddf8e9"
+              }
+            }
           }
         },
         "childrenOrder": [
@@ -443,7 +453,8 @@
           "prose:2",
           "link:0",
           "prose:3",
-          "link:1"
+          "link:1",
+          "component:5"
         ]
       }
     },
@@ -501,5 +512,5 @@
       "related-topics"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "3c76f545357f4d2d02a6f906d4b647d531be7088"
 }

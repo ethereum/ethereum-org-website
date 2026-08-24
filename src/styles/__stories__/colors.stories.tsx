@@ -18,6 +18,7 @@ import { cn } from "@/lib/utils/cn"
 
 const meta = {
   title: "Design System / Colors",
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     layout: "padded",
@@ -183,6 +184,12 @@ const semantic: { title: string; description?: string; classes: string[] }[] = [
       "bg-background-medium",
       "bg-background-high",
     ],
+  },
+  {
+    title: "Overlay",
+    description:
+      "Modal/sheet backdrop dim. Translucent -- the alpha is baked into the token, so use bg-overlay as-is (no /opacity modifier).",
+    classes: ["bg-overlay"],
   },
   {
     title: "Border",

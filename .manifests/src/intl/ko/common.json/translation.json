@@ -1,8 +1,8 @@
 {
   "version": 1,
   "locale": "ko",
-  "translatedAt": "2026-04-30T21:00:35.944Z",
-  "englishManifestHash": "fd45482206c1",
+  "translatedAt": "2026-08-07T05:02:38.595Z",
+  "englishManifestHash": "d36b8e554add",
   "placeholderOrder": [
     "HTML-TAG-0",
     "HTML-TAG-1",
@@ -35,7 +35,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-04-30T21:00:35.944Z",
+      "translatedAt": "2026-08-07T05:02:38.595Z",
       "status": "success"
     }
   }

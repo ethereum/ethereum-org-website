@@ -4,34 +4,33 @@ description: "Ein Standard für renditebringende Tresore."
 lang: de
 ---
 
-## Einführung {#introduction}
+## Einführung
 
-ERC-4626 ist ein Standard zur Optimierung und Vereinheitlichung der technischen Parameter von renditebringenden Tresoren (Vaults). Er bietet eine Standard-API für tokenisierte renditebringende Tresore, die Anteile an einem einzigen zugrunde liegenden ERC-20-Token repräsentieren. ERC-4626 skizziert auch eine optionale Erweiterung für tokenisierte Tresore, die ERC-20 nutzen, und bietet grundlegende Funktionen für die Einzahlung, Abhebung von Token und das Auslesen von Kontoständen.
+ERC-4626 ist ein Standard zur Optimierung und Vereinheitlichung der technischen Parameter von renditebringenden Tresoren. Er bietet eine Standard-API für tokenisierte renditebringende Tresore, die Anteile an einem einzigen zugrunde liegenden ERC-20-Token repräsentieren. ERC-4626 skizziert außerdem eine optionale Erweiterung für tokenisierte Tresore, die ERC-20 nutzen, und bietet grundlegende Funktionen für die Einzahlung, Abhebung von Token und das Auslesen von Kontoständen.
 
 **Die Rolle von ERC-4626 in renditebringenden Tresoren**
 
 Kreditvergabe-Märkte, Aggregatoren und intrinsisch verzinsliche Token helfen Benutzern, die beste Rendite für ihre Krypto-Token zu finden, indem sie verschiedene Strategien ausführen. Diese Strategien werden mit leichten Variationen durchgeführt, was fehleranfällig sein kann oder Entwicklungsressourcen verschwendet.
 
-ERC-4626 in renditebringenden Tresoren wird den Integrationsaufwand senken und den Zugang zu Renditen in verschiedenen Anwendungen mit geringem speziellem Aufwand für Entwickler freischalten, indem konsistentere und robustere Implementierungsmuster geschaffen werden.
+ERC-4626 in renditebringenden Tresoren wird den Integrationsaufwand verringern und den Zugang zu Renditen in verschiedenen Anwendungen mit geringem speziellem Aufwand für Entwickler freischalten, indem konsistentere und robustere Implementierungsmuster geschaffen werden.
 
-Der ERC-4626-Token wird vollständig in [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626) beschrieben.
+Der ERC-4626-Token wird in [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626) vollständig beschrieben.
 
 **Asynchrone Tresor-Erweiterung (ERC-7540)**
 
-ERC-4626 ist für atomare Einzahlungen und Rücknahmen bis zu einem bestimmten Limit optimiert. Wenn das Limit erreicht ist, können keine neuen Einzahlungen oder Rücknahmen eingereicht werden. Diese Einschränkung funktioniert nicht gut für Smart-Contract-Systeme mit asynchronen Aktionen oder Verzögerungen als Voraussetzung für die Interaktion mit dem Tresor (z. B. Protokolle für reale Vermögenswerte, unterbesicherte Kreditvergabe-Protokolle, kettenübergreifende Kreditvergabe-Protokolle, Liquid-Staking-Token oder Versicherungs-Sicherheitsmodule).
+ERC-4626 ist für atomare Einzahlungen und Einlösungen bis zu einem bestimmten Limit optimiert. Wenn das Limit erreicht ist, können keine neuen Einzahlungen oder Einlösungen eingereicht werden. Diese Einschränkung funktioniert nicht gut für Smart-Contract-Systeme mit asynchronen Aktionen oder Verzögerungen als Voraussetzung für die Interaktion mit dem Tresor (z. B. Protokolle für reale Vermögenswerte, unterbesicherte Kreditvergabe-Protokolle, kettenübergreifende Kreditvergabe-Protokolle, Liquid-Staking-Token oder Versicherungs-Sicherheitsmodule).
 
 ERC-7540 erweitert den Nutzen von ERC-4626-Tresoren für asynchrone Anwendungsfälle. Die bestehende Tresor-Schnittstelle (`deposit`/`withdraw`/`mint`/`redeem`) wird vollständig genutzt, um asynchrone Anfragen zu beanspruchen.
 
-Die ERC-7540-Erweiterung wird vollständig in [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540) beschrieben.
+Erfahren Sie mehr über [asynchrone tokenisierte Tresore nach ERC-7540](/developers/docs/standards/tokens/erc-7540/).
 
 **Multi-Asset-Tresor-Erweiterung (ERC-7575)**
 
-Ein fehlender Anwendungsfall, der von ERC-4626 nicht unterstützt wird, sind Tresore, die über mehrere Vermögenswerte oder Einstiegspunkte verfügen, wie z. B. Liquiditätsanbieter-Token (LP-Token). Diese sind im Allgemeinen unhandlich oder nicht konform, da ERC-4626 vorschreibt, selbst ein ERC-20 zu sein.
+Ein fehlender Anwendungsfall, der von ERC-4626 nicht unterstützt wird, sind Tresore, die über mehrere Vermögenswerte oder Einstiegspunkte verfügen, wie z. B. Token von Liquiditätsanbietern (LP). Diese sind im Allgemeinen unhandlich oder nicht konform, da ERC-4626 vorschreibt, selbst ein ERC-20 zu sein.
 
-ERC-7575 fügt Unterstützung für Tresore mit mehreren Vermögenswerten hinzu, indem die ERC-20-Token-Implementierung aus der ERC-4626-Implementierung ausgelagert wird.
+ERC-7575 fügt Unterstützung für Tresore mit mehreren Vermögenswerten hinzu, indem die ERC-20-Token-Implementierung von der ERC-4626-Implementierung ausgelagert wird.
 
-Die ERC-7575-Erweiterung wird vollständig in [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575) beschrieben.
-
+Die ERC-7575-Erweiterung wird in [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575) vollständig beschrieben.
 ## Voraussetzungen {#prerequisites}
 
 Um diese Seite besser zu verstehen, empfehlen wir Ihnen, sich zunächst über [Token-Standards](/developers/docs/standards/tokens/) und [ERC-20](/developers/docs/standards/tokens/erc-20/) zu informieren.

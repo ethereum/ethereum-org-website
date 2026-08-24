@@ -51,6 +51,14 @@ ALL anchor tags. Auto-detects external (new tab + sr-only "(opens in new tab)"),
 
 `"use client"` because of `usePathname` and tracking.
 
+### `ArrowNext` / `ArrowPrev` (`ui/arrow`)
+
+```tsx
+import { ArrowNext, ArrowPrev } from "@/components/ui/arrow"
+```
+
+RTL-aware Lucide `ArrowRight`/`ArrowLeft` wrappers (bake in `rtl:-scale-x-100`). Use for directional "forward/back" arrows -- `LinkWithArrow` and `CardLinkFake`'s `withForwardArrow` both render `ArrowNext`. Chevron equivalents: `ChevronNext`/`ChevronPrev` from `@/components/Chevron`.
+
 ## Cards & Containers
 
 ### `Card` (+ parts)
@@ -59,11 +67,13 @@ ALL anchor tags. Auto-detects external (new tab + sr-only "(opens in new tab)"),
 import {
   Card,
   CardBanner,
+  CardButtonFake,
   CardContent,
   CardEmoji,
   CardFooter,
   CardHeader,
   CardIconContainer,
+  CardLinkFake,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
@@ -85,16 +95,19 @@ The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card
     <CardParagraph>Description</CardParagraph>
   </CardContent>
   <CardFooter>
-    <ButtonLink href="...">CTA</ButtonLink>
+    <CardButtonFake>CTA</CardButtonFake>
   </CardFooter>
 </Card>
 ```
 
 **`Card` variants**:
 
-- `variant`: `base` (default, `bg-background-highlight` grey) | `nested` (`bg-background`, use when inside a colored section) | `ghost` (no bg; auto-widens `--banner-radius` for edge-to-edge banners) | `header-bar` (highlight only on the header, bordered card, header laid out as an icon+text row with bottom border — all baked in, just drop a `CardHeader` inside).
+- `variant`: `base` (default, `bg-background-highlight` grey) | `nested` (`bg-background`, use when inside a colored section) | `ghost` (no bg; auto-widens `--banner-radius`; as a link, fills with `bg-background-highlight` on hover instead of an outline ring) | `header-bar` (highlight only on the header, bordered card, header laid out as an icon+text row with bottom border — all baked in, just drop a `CardHeader` inside).
+- **Link hover is variant-aware** (auto, from `href`): `ghost` link cards fill with `bg-background-highlight` and drop the outline; `base`/`nested`/`header-bar` link cards keep the `ring-primary-hover` outline. Driven by an internal `interactive` compound variant, not a prop.
 - `size`: `lg | base (default) | md | sm | xs`. Controls `--card-pad` (between/around parts) and `--content-space` (within `CardContent`). `xs` = zero padding for edge-to-edge banner imagery.
-- `href`: pass to wrap in `BaseLink` and get whole-card-clickable behavior with `group/link` propagation.
+- `href`: wraps in `BaseLink` for whole-card-clickable behavior with `group/link` propagation. An `href` card **auto-applies `hoverLift`** and the outline/fill -- don't pass `hoverLift` on a link card.
+- `hoverLift` (pass by hand only on **non-link** action cards): raises the card on hover (+1% scale + shadow, 300ms; the scale is `motion-safe`-gated). `border`: static `ring-border` edge.
+- **Single-CTA `href` cards render the CTA as `CardButtonFake` (button-shaped) or `CardLinkFake` (text link), never a real `ButtonLink`/`Button`/`LinkWithArrow`** -- a real interactive element nested in the card's anchor is invalid HTML. `CardButtonFake` mirrors `Button` (`variant`/`size`/`isSecondary`, `withChevron`, `hideArrow`); `CardLinkFake` mirrors a text link (`withForwardArrow`, `hideArrow`; external NE arrow automatic). See `card-walkthrough.md`.
 - Card is always vertical (`flex flex-col`); there is no `orientation` variant.
 
 **`CardHeader`**: no own variants. The parent `Card variant="header-bar"` applies the row layout / bottom border to descendant headers automatically.
@@ -107,20 +120,21 @@ The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card
 
 **`CardFooter` variants**:
 
-- `buttons`: `full (default)` stretches buttons/ButtonLinks to full width with centered text | `compact` sizes them to fit | `inherit` opts out so children render at intrinsic width.
+- `buttons`: `responsive (default)` full-width on a narrow card, shrink-to-fit once wide (`@container`) | `full` always full-width centered | `compact` always shrink-to-fit | `inherit` opts out (used by `CardLinkFake`).
 
 **`CardBanner` variants**:
 
 - `background`: `body (default)` | `accent-a` | `accent-b` | `accent-c` | `primary` | `none`. `none` only when the image won't cover the full rectangle.
 - `size`: `full | lg | base (default) | sm | thumbnail-lg | thumbnail`. Use these instead of `className="h-..."` to stay on-rhythm. `thumbnail-lg` is a 128px square; `thumbnail` is 64px — both `shrink-0` for small logo/icon placements.
 - `fit`: `cover (default) | contain`. With `fit="contain"` and a single `<Image>` child, the banner auto-clones the image as a blurred backdrop. Two children breaks the magic.
-- `zoom`: `true (default) | false`. Controls hover zoom propagation from a parent `group/link`.
-- Placement: inside `CardHeader` for padded; as a direct child of `Card` (pair with `Card size="xs"` or `variant="ghost"`) for edge-to-edge.
+- `zoom`: opt-in boolean, **off by default**. Pass `zoom` to propagate a parent `group/link` hover into an image scale-up (media/thumbnail tiles). No `zoom={false}` -- omit to keep the image static.
+- Placement: inside `CardHeader` (default; keeps banner radius concentric and gives link-hover room). Bare direct child of `Card` only for a true edge-to-edge image, paired with `size="xs"` so radii match (a bare banner on a padded size / link card mismatches corner radius — see gotchas).
 
 **`CardTitle` variants**:
 
-- `variant`: `semibold | bold (default) | black`.
+- `size`: `sm` (text-lg) | omit (text-2xl) | `lg` (text-3xl). Weight is always `font-black` -- there is no per-weight variant.
 - `spacing` (gap before a following `CardParagraph` only): `quarter (default) | none | inherit`. Uses `:has(+...)` selector.
+- Does not underline on card hover (the card's outline/fill + lift carry the click signal).
 - **`asChild`**: required when `<h3>` would break the document's heading outline. Pass your own semantic tag inside.
 
 **`CardParagraph` variants**:
@@ -159,7 +173,7 @@ Responsive grid for laying out a collection of items (cards, tiles, badges). Ren
 - `size`: `small (7rem) | narrow (12rem) | base (18rem, default) | wide (22rem) | wider (26rem)`. The **min item width** (`--grid-item-min`) — the floor an item shrinks to before a column drops, and so the fold-aggressiveness lever. Pick by item shape: `small` for badges, `base` for standard content cards, `wide`/`wider` for horizontal items like callouts. Larger sizes wrap sooner; keep `columns` small enough that N items of the chosen width fit (min ≤ container/N).
 - `fit`: `boolean` (auto-fill mode only). Default keeps empty tracks (`auto-fill`); `fit` collapses them (`auto-fit`) so a partially-filled row stretches to fill the width.
 - `balanced`: `2 | 4`. A fixed, deterministic **breakpoint** reflow (overrides `columns` via `!important`; `size`/`fit` inert). `balanced={4}` → `4 → 2×2 → 1`, never an orphan 3-up row (which auto-fill produces); `balanced={2}` → `2 → 1` at `md`, a breakpoint-driven alternative to `columns={2}` (which folds by content width). Both fold `1 → 2` at `md`. Use with a **fixed set** of that many items (or a multiple).
-- Applies `gap-4`. `className` is spread last, so override the gap (or `--grid-item-min` / `--grid-repeat`) per call site only when genuinely needed.
+- Applies `gap-4`. `className` is spread last, so override the gap (or `--grid-item-min` / `--grid-repeat`) per call site only when genuinely needed. **If you override the gap, mirror it in `--grid-gap`** (e.g. `gap-x-8 [--grid-gap:--spacing(8)]`): the `grid-cols-auto-*` fold math assumes the gutter via `var(--grid-gap, 1rem)`, and with a wider real gap the even-share term is computed against the wrong gutter -- a second column may **never** form.
 
 ### `Section`
 
@@ -370,13 +384,7 @@ import { Input } from "@/components/ui/input"
 
 **Props**: `size: md | sm`, `hasError: boolean`. (Default omits `size` from `InputHTMLAttributes` to free the prop.)
 
-### `Textarea`
-
-```tsx
-import { Textarea } from "@/components/ui/textarea"
-```
-
-Same shape as `Input`.
+> `Textarea` was removed in August 2026 (zero consumers after the enterprise-page deprecation). It was the stock shadcn primitive -- re-add from shadcn if a multi-line input is ever needed.
 
 ### `Checkbox` / `Switch`
 
@@ -478,8 +486,8 @@ Notice/callout primitive. Covers both inline article callouts and the full-bleed
 - `AlertContent` -- wraps the body (flex column, takes remaining width)
 - `AlertTitle` -- bold standard-font-size lead-in line for an alert. Renders `<p>` (not a heading -- changed from `<h6>` to avoid jumping heading levels in flow content); `asChild` available for `Slot`. **Use this whenever an alert needs a bold opening line** -- don't roll your own `<p><strong>...</strong></p>`.
 - `AlertDescription` -- prose container for the alert body. Handles paragraph spacing internally (first `<p>` has `mt-0`, last has `mb-0`, others have `mb-4`). **Wrap body paragraphs in this** -- don't apply your own `mt-`/`mb-` classes to paragraphs inside an Alert.
-- `AlertEmoji` -- emoji glyph aligned to start
-- `AlertIcon` -- Lucide-style SVG slot (inherits variant's text color)
+- `AlertEmoji` -- **deprecated**: emoji glyph aligned to start. Alert glyphs are moving to Lucide icons; use `AlertIcon` for new content
+- `AlertIcon` -- Lucide-style SVG slot (inherits variant's text color). Child SVG is 24px; `size="lg"` (40px) and `size="xl"` (48px) scale it up -- use the variant, not a `[&>svg]:size-*` override
 - `AlertCloseButton` -- dismiss button (`<X />`)
 
 **Anti-pattern**: don't manually compose a bold-lead-in-plus-body shape with inline `<strong>` and margin classes:
@@ -661,6 +669,8 @@ import {
 
 CSS-var driven (`--edge-spacing`, `--edge-mask-size`, `--edge-overflow-y-pad`). Mask fade only at `2xl+`.
 
+`--edge-spacing` defaults to `1rem` (`md:2rem`) so it tracks `px-page`. On the standard model — `px-page` on `<main>`, page content sitting in that padded column — the negative-margin breakout lands flush with the page padding and needs **no override**. Don't reach for a flat `[--edge-spacing:Nrem]`: if it exceeds the surrounding horizontal padding at any breakpoint (e.g. `2rem` while mobile `px-page` is `1rem`), the breakout overshoots and the page scrolls horizontally. Override it only for a genuine exception where the surrounding padding really differs from `px-page`.
+
 ### `Swiper` (deprecation track)
 
 ```tsx
@@ -669,6 +679,8 @@ import { Swiper, ... } from "@/components/ui/swiper"
 ```
 
 `"use client"`, wraps swiper.js. On the deprecation track. Migrate existing consumers to `EdgeScrollContainer`.
+
+**i18n requirement:** `Swiper` binds `useTranslations("component-swiper")` for its a11y slide announcements. Every page that renders one must ship that namespace to the client — register the route in `src/lib/utils/translations.ts` (`EXACT_PATH_ADDITIONAL_NAMESPACES` / `PREFIX_PATH_ADDITIONAL_NAMESPACES`) or add `"component-swiper"` to the page's `pick()` for its `I18nProvider`. Missing it means screen readers announce raw key tails (`swiper-next-slide`). Currently registered: `/` (hand-pick), `/developers/` (scoped providers), `/start/`, `/10years/`, `/apps/`.
 
 ### `List` / `OrderedList` / `UnorderedList` / `ListItem`
 
@@ -772,13 +784,7 @@ The remaining `*Banner*`-named files at the root of `src/components/` are:
 - `TranslationBanner` -- floating Arabic/Urdu translation feedback CTA; still a raw `<aside>` (deprecation candidate -- could be migrated to `<Alert variant="banner">` next time it's touched)
 - (The legacy `Callout` / `CalloutBanner` / `CalloutSSR` / `CalloutBannerSSR` files at the root of `src/components/` were unified into `@/components/ui/callout` — see `canonical-imports.md` and `callout-walkthrough.md`. Unrelated to the top-of-page ribbon.)
 
-### `Faq`
-
-```tsx
-import { Faq, FaqContent, FaqItem, FaqTrigger } from "@/components/Faq"
-```
-
-Compositional FAQ primitive. Stories exist; ready for use in pages that need an expandable Q&A list.
+> `Faq` (a compositional Q&A wrapper over the Accordion primitives) was removed in August 2026 -- its last consumers were the enterprise pages. For an expandable Q&A list today, reach for `ExpandableCard` (`@/components/ExpandableCard`), which is where recent designs land. If a centralized topic-tagged FAQ dataset ever arrives, the old component is restorable from git history (`src/components/Faq/`) but is unlikely to be the right basis.
 
 ### `MdComponents`
 
@@ -789,12 +795,37 @@ import { MdComponents } from "@/components/MdComponents"
 
 The shortcode registry for markdown content. To add a markdown shortcode, add the component to `MdComponents`.
 
+### `MarkdownVideo` (markdown clips)
+
+Renders `![](./x.mp4)` in markdown content (reached via `MarkdownImage`; not imported in app code) — the modern GIF replacement: silent, looping, plays only while on-screen, no autoplay under `prefers-reduced-motion`.
+
+**Playback controls are always visible** so any user can stop the looping motion (WCAG 2.2.2) — a clip that loops past 5s needs a pause affordance, not one gated on `prefers-reduced-motion`. A user pause is latched in a ref and suppresses the in-view autoplay branch, otherwise scrolling away and back restarts the clip they just stopped. PiP/cast/download are turned off (`controlsList`, `disablePictureInPicture`, `disableRemotePlayback`) to keep the control surface minimal on decorative clips. Keep `preload="metadata"`: these clips are offscreen-gated by design, and `auto` downloads every clip on the page in full at load.
+
+**Sizing convention**: an optional `#WxH` fragment on the markdown src declares the clip's intrinsic dimensions — `![](./demo.mp4#800x400)` — and sizes the box to the clip's own aspect ratio (landscape fills the content width; taller-than-wide is height-capped). Without it, a fixed 16:9 box (9:16 via the `-portrait` filename suffix) letterboxes the clip with `object-contain`.
+
+Use the fragment for any off-ratio clip — screen captures usually are. It's presentation metadata only: browsers strip fragments before requesting, so the asset URL stays canonical (one CDN/browser cache entry, no file renames) and references without it — e.g. not-yet-repropagated translations — still play in the default box. **Never rename a video asset to encode metadata.** Implementation notes: `rehypeImg` and `MarkdownImage` strip the fragment before extension checks (an mp4 falling into the image path makes `image-size` throw at build); `MarkdownVideo` sets `width`/`height` attributes plus explicit CSS `aspect-ratio` because the attribute→ratio mapping is unreliable on `<video>` and `h-auto` overrides the height attribute — together they reserve the box before video metadata loads (no CLS).
+
 ## Components NOT to Use
 
 ### Legacy / deprecated
 
 - `@/components/PageHero` (old default export) -- the canonical `PageHero` is a named export from `@/components/Hero`.
 - `@/hooks/useColorModeValue` -- Chakra leftover; use Tailwind `dark:` variant
+
+### Removed August 2026 (restorable from git history)
+
+Deleted as part of the Storybook reorg (issue #18967, Phase 0) after verifying zero consumers -- alias imports, relative imports, the MDX registry, and markdown tags across all locales. Listed so a future search finds the removal rather than assuming the component never existed:
+
+- `Faq/` -- see the note in the Content section above; prefer `ExpandableCard`
+- `ui/textarea.tsx` -- stock shadcn primitive, re-addable from shadcn
+- `CodeModal.tsx`
+- `GitStars.tsx`
+- `IntersectionObserverReveal.tsx` -- its `ValuesMarquee` integration was removed
+- `StatErrorMessage.tsx`
+- `UpgradeTableOfContents.tsx`
+- `ScrollDepthTracker.tsx` -- built for the Feb 2026 homepage A/B test
+
+`src/components/AB/` looks equally orphaned but is **kept deliberately** -- zero consumers is the normal state between experiments. See `docs/ab-testing.md`.
 
 ### Markdown shortcode wrapper
 

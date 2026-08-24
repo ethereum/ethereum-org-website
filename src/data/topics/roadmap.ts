@@ -33,6 +33,21 @@ export const roadmap: TopicConfig = {
             href: "/roadmap/single-slot-finality/",
             matomoEvent: "clicked roadmap single slot finality",
           },
+          {
+            textKey: "nav-roadmap-quantum-resistance",
+            href: "/roadmap/security/quantum-resistance/",
+            matomoEvent: "clicked roadmap quantum resistance",
+          },
+          {
+            textKey: "nav-roadmap-statelessness",
+            href: "/roadmap/statelessness/",
+            matomoEvent: "clicked roadmap statelessness",
+          },
+          {
+            textKey: "nav-roadmap-verkle-trees",
+            href: "/roadmap/verkle-trees/",
+            matomoEvent: "clicked roadmap verkle trees",
+          },
         ],
       },
       {
@@ -61,23 +76,6 @@ export const roadmap: TopicConfig = {
             textKey: "nav-roadmap-account-abstraction",
             href: "/roadmap/account-abstraction/",
             matomoEvent: "clicked roadmap account abstraction",
-          },
-        ],
-      },
-      {
-        textKey: "nav-roadmap-future-proofing",
-        href: "/roadmap/future-proofing",
-        matomoEvent: "clicked roadmap future-proofing home",
-        items: [
-          {
-            textKey: "nav-roadmap-statelessness",
-            href: "/roadmap/statelessness/",
-            matomoEvent: "clicked roadmap statelessness",
-          },
-          {
-            textKey: "nav-roadmap-verkle-trees",
-            href: "/roadmap/verkle-trees/",
-            matomoEvent: "clicked roadmap verkle trees",
           },
         ],
       },

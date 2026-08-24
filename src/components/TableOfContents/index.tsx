@@ -1,5 +1,6 @@
 "use client"
 
+import { useTranslations } from "next-intl"
 import { tv, type VariantProps } from "tailwind-variants"
 
 import type { ToCItem } from "@/lib/types"
@@ -11,7 +12,6 @@ import ItemsList from "@/components/TableOfContents/ItemsList"
 import Mobile from "@/components/TableOfContents/TableOfContentsMobile"
 
 import { useActiveHash } from "@/hooks/useActiveHash"
-import { useTranslation } from "@/hooks/useTranslation"
 
 const toc = tv({
   slots: {
@@ -40,10 +40,12 @@ const toc = tv({
         list: "list-none border-s border-s-body-medium ps-4 my-2 text-sm",
       },
       card: {
-        root: "top-28",
+        // `w-80` replaces a `min-w-80 max-w-72` pair on `container` whose max was
+        // dead (min wins), and sits on `root` per the width-caps note above.
+        root: "top-28 w-80",
         dropdown: "",
         container: [
-          "min-w-80 max-w-72 lg:p-8 px-3 py-2",
+          "lg:p-8 px-3 py-2",
           "shrink-0 gap-y-2.5 rounded-base bg-accent-a/10 text-body-medium",
         ],
         label: "text-lg text-body-medium",
@@ -77,7 +79,7 @@ const TableOfContents = ({
   showDropdown,
   ...rest
 }: TableOfContentsProps) => {
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
   const titleIds: Array<string> = []
   if (!isMobile) {
     const getTitleIds = (items: Array<ToCItem>, depth: number): void => {

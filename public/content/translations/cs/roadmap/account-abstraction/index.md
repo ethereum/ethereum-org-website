@@ -2,6 +2,7 @@
 title: Abstrakce účtu
 description: Přehled plánů Etherea na zjednodušení a zabezpečení uživatelských účtů
 lang: cs
+template: roadmap
 summaryPoints:
   - Abstrakce účtu výrazně usnadňuje tvorbu peněženek s chytrými kontrakty
   - Peněženky s chytrými kontrakty výrazně usnadňují správu přístupu k účtům na Ethereu

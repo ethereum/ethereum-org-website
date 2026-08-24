@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-app-descriptions.json",
-  "generatedAt": "2026-06-29T23:47:09.132Z",
-  "rootHash": "41cee2877110",
+  "generatedAt": "2026-08-20T21:59:52.819Z",
+  "rootHash": "68b2f5dc26b7",
   "tree": {
-    "contentHash": "7852d2bb203a",
-    "anchorHash": "415accab04b5",
+    "contentHash": "41c1a0b44dbc",
+    "anchorHash": "88545b6fd826",
     "children": {
       "app-0xbow-description": {
         "contentHash": "d6f1ff938878",
@@ -13,6 +13,10 @@
       },
       "app-1inch-description": {
         "contentHash": "8d13fd0db07a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-3xpl-description": {
+        "contentHash": "9b81a540f691",
         "anchorHash": "e3b0c44298fc"
       },
       "app-aavagochi-description": {
@@ -45,6 +49,10 @@
       },
       "app-art-blocks-description": {
         "contentHash": "b38581909cf2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-asphodel-prologue-description": {
+        "contentHash": "85da2ec28061",
         "anchorHash": "e3b0c44298fc"
       },
       "app-azuki-description": {
@@ -119,7 +127,7 @@
         "contentHash": "eb4de52c9a0b",
         "anchorHash": "e3b0c44298fc"
       },
-      "app-cowswap-description": {
+      "app-cow-swap-description": {
         "contentHash": "6b8eaf364465",
         "anchorHash": "e3b0c44298fc"
       },
@@ -157,6 +165,10 @@
       },
       "app-defi-saver-description": {
         "contentHash": "03d630e2a9b5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-democracy-earth-protocol-description": {
+        "contentHash": "b1930ac80be3",
         "anchorHash": "e3b0c44298fc"
       },
       "app-doodles-description": {
@@ -231,6 +243,10 @@
         "contentHash": "bd5e7d116673",
         "anchorHash": "e3b0c44298fc"
       },
+      "app-fileverse-description": {
+        "contentHash": "b0297db0f1ef",
+        "anchorHash": "e3b0c44298fc"
+      },
       "app-fileverse-dsheets-description": {
         "contentHash": "7e1d3bae710f",
         "anchorHash": "e3b0c44298fc"
@@ -244,7 +260,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "app-fluidkey-description": {
-        "contentHash": "0712354b7b8e",
+        "contentHash": "66bbdfe163a8",
         "anchorHash": "e3b0c44298fc"
       },
       "app-focus-tree-description": {
@@ -261,6 +277,10 @@
       },
       "app-frax-description": {
         "contentHash": "bb0c8ba2f691",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-freedom-tool-description": {
+        "contentHash": "a6e04185578c",
         "anchorHash": "e3b0c44298fc"
       },
       "app-gaszip-description": {
@@ -339,6 +359,10 @@
         "contentHash": "c271b47774e4",
         "anchorHash": "e3b0c44298fc"
       },
+      "app-kohaku-description": {
+        "contentHash": "1e1cd7242637",
+        "anchorHash": "e3b0c44298fc"
+      },
       "app-kyberswap-description": {
         "contentHash": "c0de60398279",
         "anchorHash": "e3b0c44298fc"
@@ -393,6 +417,10 @@
       },
       "app-morpho-description": {
         "contentHash": "9cc9ccc08035",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-nachtara-description": {
+        "contentHash": "cbae2615d97a",
         "anchorHash": "e3b0c44298fc"
       },
       "app-octant-description": {
@@ -487,6 +515,14 @@
         "contentHash": "26d70053c6c8",
         "anchorHash": "e3b0c44298fc"
       },
+      "app-proof-of-humanity-description": {
+        "contentHash": "1362a4f17505",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-publicnode-description": {
+        "contentHash": "f5c65144072a",
+        "anchorHash": "e3b0c44298fc"
+      },
       "app-pudgy-penguins-description": {
         "contentHash": "da2d647ed424",
         "anchorHash": "e3b0c44298fc"
@@ -547,16 +583,20 @@
         "contentHash": "64d53839e023",
         "anchorHash": "e3b0c44298fc"
       },
-      "app-scout-game-description": {
-        "contentHash": "50f7349b8886",
-        "anchorHash": "e3b0c44298fc"
-      },
       "app-self-description": {
         "contentHash": "1c7b5748cedd",
         "anchorHash": "e3b0c44298fc"
       },
+      "app-semaphore-description": {
+        "contentHash": "bc0f7765a8c4",
+        "anchorHash": "e3b0c44298fc"
+      },
       "app-sequence-description": {
         "contentHash": "aa6519965d83",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-session-description": {
+        "contentHash": "fdfb53455ab1",
         "anchorHash": "e3b0c44298fc"
       },
       "app-shibuya-films-description": {
@@ -597,6 +637,10 @@
       },
       "app-stargate-description": {
         "contentHash": "95ee5ada6d56",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-status-description": {
+        "contentHash": "aa588c9d67fe",
         "anchorHash": "e3b0c44298fc"
       },
       "app-superfluid-description": {
@@ -647,12 +691,16 @@
         "contentHash": "cd504ed42af1",
         "anchorHash": "e3b0c44298fc"
       },
+      "app-the-interfold-description": {
+        "contentHash": "81b7166afe17",
+        "anchorHash": "e3b0c44298fc"
+      },
       "app-the-sandbox-description": {
         "contentHash": "c9b2e0f4c14b",
         "anchorHash": "e3b0c44298fc"
       },
       "app-tornado-cash-description": {
-        "contentHash": "30706154c635",
+        "contentHash": "b940fbf8ad26",
         "anchorHash": "e3b0c44298fc"
       },
       "app-towns-description": {
@@ -665,6 +713,10 @@
       },
       "app-true-markets-description": {
         "contentHash": "f1501e812d66",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-umbra-description": {
+        "contentHash": "1f39969a353c",
         "anchorHash": "e3b0c44298fc"
       },
       "app-uniswap-description": {
@@ -708,11 +760,19 @@
         "anchorHash": "e3b0c44298fc"
       },
       "app-zk-pass-description": {
-        "contentHash": "dbc2e82cbfd3",
+        "contentHash": "d6bb10d97560",
         "anchorHash": "e3b0c44298fc"
       },
       "app-zk-passport-description": {
         "contentHash": "8024dd247244",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-zkpassport-description": {
+        "contentHash": "f6b2659c81b8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-zkpdf-description": {
+        "contentHash": "87dbef73a297",
         "anchorHash": "e3b0c44298fc"
       },
       "app-zora-description": {
@@ -727,6 +787,7 @@
     "childrenOrder": [
       "app-0xbow-description",
       "app-1inch-description",
+      "app-3xpl-description",
       "app-aavagochi-description",
       "app-aave-description",
       "app-across-description",
@@ -735,6 +796,7 @@
       "app-alchemix-description",
       "app-aragon-description",
       "app-art-blocks-description",
+      "app-asphodel-prologue-description",
       "app-azuki-description",
       "app-balancer-description",
       "app-basepaint-description",
@@ -753,7 +815,7 @@
       "app-cool-cats-description",
       "app-coordinape-description",
       "app-courtyard-description",
-      "app-cowswap-description",
+      "app-cow-swap-description",
       "app-curve-description",
       "app-daimo-pay-description",
       "app-daohaus-description",
@@ -763,6 +825,7 @@
       "app-debridge-description",
       "app-decentraland-description",
       "app-defi-saver-description",
+      "app-democracy-earth-protocol-description",
       "app-doodles-description",
       "app-dope-wars-description",
       "app-drips-description",
@@ -781,6 +844,7 @@
       "app-event-horizon-description",
       "app-farcaster-description",
       "app-fileverse-ddocs-description",
+      "app-fileverse-description",
       "app-fileverse-dsheets-description",
       "app-flaunch-description",
       "app-fluid-description",
@@ -789,6 +853,7 @@
       "app-foundation-description",
       "app-franklin-templeton-benji-description",
       "app-frax-description",
+      "app-freedom-tool-description",
       "app-gaszip-description",
       "app-gigaverse-description",
       "app-gods-unchained-description",
@@ -808,6 +873,7 @@
       "app-juiceboxeth-description",
       "app-king-of-destiny-description",
       "app-kiwi-news-description",
+      "app-kohaku-description",
       "app-kyberswap-description",
       "app-layerswap-description",
       "app-legends-of-elumia-description",
@@ -822,6 +888,7 @@
       "app-might-magic-fates-description",
       "app-moonwell-description",
       "app-morpho-description",
+      "app-nachtara-description",
       "app-octant-description",
       "app-offramp-description",
       "app-onchain-heroes-description",
@@ -845,6 +912,8 @@
       "app-prime-intellect-description",
       "app-primodium-description",
       "app-privacy-pools-description",
+      "app-proof-of-humanity-description",
+      "app-publicnode-description",
       "app-pudgy-penguins-description",
       "app-quarkid-description",
       "app-r3al-blocks-description",
@@ -860,9 +929,10 @@
       "app-sablier-description",
       "app-safe-description",
       "app-sandbox-description",
-      "app-scout-game-description",
       "app-self-description",
+      "app-semaphore-description",
       "app-sequence-description",
+      "app-session-description",
       "app-shibuya-films-description",
       "app-skymaker-usds-description",
       "app-snapshot-description",
@@ -873,6 +943,7 @@
       "app-splitsorg-description",
       "app-staking-launchpad-description",
       "app-stargate-description",
+      "app-status-description",
       "app-superfluid-description",
       "app-superform-description",
       "app-superrare-description",
@@ -885,11 +956,13 @@
       "app-tether-usdt-description",
       "app-the-beacon-description",
       "app-the-gauntlet-app-description",
+      "app-the-interfold-description",
       "app-the-sandbox-description",
       "app-tornado-cash-description",
       "app-towns-description",
       "app-treeverse-description",
       "app-true-markets-description",
+      "app-umbra-description",
       "app-uniswap-description",
       "app-unlock-description",
       "app-upland-description",
@@ -902,9 +975,11 @@
       "app-zerolend-description",
       "app-zk-pass-description",
       "app-zk-passport-description",
+      "app-zkpassport-description",
+      "app-zkpdf-description",
       "app-zora-description",
       "app-zupass-description"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "1988a451065e8d91e60a09d73935256ab102a52c"
 }

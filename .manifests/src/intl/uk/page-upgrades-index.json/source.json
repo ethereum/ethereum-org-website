@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-upgrades-index.json",
-  "generatedAt": "2026-06-16T16:15:58.147Z",
-  "rootHash": "ac5c36e7cf3b",
+  "generatedAt": "2026-07-22T22:43:08.376Z",
+  "rootHash": "f17dc9ca64bf",
   "tree": {
-    "contentHash": "b841290a18f9",
-    "anchorHash": "576fa95fa626",
+    "contentHash": "3be05475620e",
+    "anchorHash": "80ae6e2a33c6",
     "children": {
       "consensus-client-besu-logo-alt": {
         "contentHash": "21ea71975913",
@@ -687,6 +687,26 @@
         "contentHash": "c09500586c2c",
         "anchorHash": "e3b0c44298fc"
       },
+      "page-upgrades-upgrades-dencun": {
+        "contentHash": "94c27cae4154",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-upgrades-pectra": {
+        "contentHash": "e84deb0fe6a2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-upgrades-fusaka": {
+        "contentHash": "8547dcd6bf46",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-upgrades-glamsterdam": {
+        "contentHash": "e2c1912b24c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-upgrades-forks": {
+        "contentHash": "22fec12df98f",
+        "anchorHash": "e3b0c44298fc"
+      },
       "page-upgrades-energy-consumption": {
         "contentHash": "a5496aeb8a4b",
         "anchorHash": "e3b0c44298fc"
@@ -1003,6 +1023,11 @@
       "page-upgrades-upgrades-beacon-chain",
       "page-upgrades-upgrades-guide",
       "page-upgrades-upgrades-docking",
+      "page-upgrades-upgrades-dencun",
+      "page-upgrades-upgrades-pectra",
+      "page-upgrades-upgrades-fusaka",
+      "page-upgrades-upgrades-glamsterdam",
+      "page-upgrades-upgrades-forks",
       "page-upgrades-energy-consumption",
       "page-upgrades-upgrading",
       "page-roadmap-vision",
@@ -1041,5 +1066,5 @@
       "page-upgrades-get-involved-ethresearch-2"
     ]
   },
-  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }
