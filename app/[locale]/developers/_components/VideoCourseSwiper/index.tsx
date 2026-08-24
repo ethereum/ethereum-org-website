@@ -1,6 +1,6 @@
 "use client"
 
-import { Swiper, SwiperSlide } from "@/components/ui/swiper"
+import { Swiper, SwiperNavigation, SwiperSlide } from "@/components/ui/swiper"
 
 import type { VideoCourse } from "../../types"
 import VideoCourseCard from "../VideoCourseCard"
@@ -19,6 +19,7 @@ const VideoCourseSwiper = ({ courses }: VideoCourseSwiperProps) => (
         <VideoCourseCard course={course} />
       </SwiperSlide>
     ))}
+    <SwiperNavigation />
   </Swiper>
 )
 

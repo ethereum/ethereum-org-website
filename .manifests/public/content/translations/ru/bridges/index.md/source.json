@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/bridges/index.md",
-  "generatedAt": "2026-06-08T07:05:24.656Z",
-  "rootHash": "31745535146c",
+  "generatedAt": "2026-08-07T06:09:46.042Z",
+  "rootHash": "ffe835d9195b",
   "tree": {
-    "contentHash": "2ca8e6d32640",
-    "anchorHash": "d1283928dafe",
+    "contentHash": "490b286b1df5",
+    "anchorHash": "dfdfd2eb2599",
     "children": {
       "frontmatter:title": {
         "contentHash": "ed615810e7b2",
@@ -491,8 +491,8 @@
         ]
       },
       "further-reading": {
-        "contentHash": "0176b9cf88da",
-        "anchorHash": "386890e30745",
+        "contentHash": "f3f224dbc338",
+        "anchorHash": "f018d118e6a8",
         "labelHash": "4082f515b2f4",
         "children": {
           "_label": {
@@ -542,6 +542,16 @@
           "prose:10": {
             "contentHash": "aaf1af3e1600",
             "anchorHash": "e3b0c44298fc"
+          },
+          "component:12": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "7db2e9489861",
+            "children": {
+              "attr:quizKey": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "d4257bb175e7"
+              }
+            }
           }
         },
         "childrenOrder": [
@@ -556,7 +566,8 @@
           "link:3",
           "prose:9",
           "link:4",
-          "prose:10"
+          "prose:10",
+          "component:12"
         ]
       }
     },
@@ -576,5 +587,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "3c76f545357f4d2d02a6f906d4b647d531be7088"
 }

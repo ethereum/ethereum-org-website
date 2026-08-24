@@ -16,7 +16,8 @@ export default async function QuizzesPageJsonLD({
   locale: Lang | undefined
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations("page-quizzes")
+  const t = await getTranslations("learn-quizzes")
+  const tCommon = await getTranslations("common")
 
   const url = normalizeUrlForJsonLd(locale, `/quizzes/`)
 
@@ -33,7 +34,7 @@ export default async function QuizzesPageJsonLD({
       {
         "@type": "WebPage",
         "@id": url,
-        name: t("common:quizzes-title"),
+        name: tCommon("quizzes-title"),
         description: t("quizzes-subtitle"),
         url,
         inLanguage: locale,
@@ -52,7 +53,7 @@ export default async function QuizzesPageJsonLD({
             {
               "@type": "ListItem",
               position: 2,
-              name: t("common:quizzes-title"),
+              name: tCommon("quizzes-title"),
               item: url,
             },
           ],

@@ -19,7 +19,7 @@ Als Voraussetzung sollten Sie MetaMask bereits auf Ihrem Mobilgerät installiert
 
 Drücken Sie oben in der App auf die Schaltfläche „Wallet“, woraufhin Sie aufgefordert werden, ein Netzwerk auszuwählen. Da unser NFT im Sepolia-Netzwerk geprägt wurde, sollten Sie Sepolia als Ihr Netzwerk auswählen.
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
 
 ## Schritt 2: Fügen Sie Ihr Sammlerstück zu MetaMask hinzu {#add-nft-to-metamask}
 
@@ -29,6 +29,6 @@ Sobald Sie sich im Sepolia-Netzwerk befinden, wählen Sie rechts die Registerkar
 
 Möglicherweise müssen Sie ein paar Mal aktualisieren, um Ihr NFT anzuzeigen – aber es wird da sein <Emoji text="😄" size={1} />!
 
-![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
 
 Herzlichen Glückwunsch! Sie haben erfolgreich ein NFT geprägt und können es nun anzeigen! Wir können es kaum erwarten zu sehen, wie Sie die NFT-Welt im Sturm erobern werden!

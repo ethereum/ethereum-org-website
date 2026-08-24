@@ -157,6 +157,12 @@ Hyperledger Besu ni mteja wa Ethereum wa kiwango cha biashara kwa mitandao ya um
 
 Erigon, iliyojulikana zamani kama Turbo-Geth, ilianza kama mchepuo wa Go Ethereum iliyoelekezwa kwenye kasi na ufanisi wa nafasi ya diski. Erigon ni utekelezaji uliojengwa upya kabisa wa Ethereum, kwa sasa umeandikwa katika Go lakini na utekelezaji katika lugha zingine zinazoendelezwa. Lengo la Erigon ni kutoa utekelezaji wa haraka, wa kawaida zaidi, na ulioboreshwa zaidi wa Ethereum. Inaweza kufanya usawazishaji kamili wa nodi ya kumbukumbu kwa kutumia karibu 2TB ya nafasi ya diski, chini ya siku 3.
 
+
+### ethrex
+
+ethrex ni kiteja cha utekelezaji cha Ethereum rahisi na cha moduli kilichoandikwa katika Rust na kutengenezwa na LambdaClass. Kimejengwa kwa kuzingatia uthibitishaji wa sifuri-maarifa, na msingi huo huo wa msimbo unaweza kufanya kazi kama kiteja cha utekelezaji cha tabaka la 1 (l1) na kama ZK-Rollup ya wathibitishaji wengi (tabaka la 2 (l2)). Kina leseni mbili chini ya leseni za Apache 2.0 na MIT.
+
+Jifunze zaidi kwa kusoma [nyaraka za ethrex](https://docs.ethrex.xyz/) au kuangalia [hifadhi ya GitHub ya ethrex](https://github.com/lambdaclass/ethrex).
 ### Go Ethereum {#geth}
 
 Go Ethereum (Geth kwa ufupi) ni mojawapo ya utekelezaji wa asili wa itifaki ya Ethereum. Kwa sasa, ni mteja aliyeenea zaidi na msingi mkubwa wa watumiaji na zana mbalimbali kwa watumiaji na wasanidi programu. Imeandikwa katika Go, chanzo huria kikamilifu na kupewa leseni chini ya GNU LGPL v3.

@@ -31,7 +31,7 @@ src/
 └── components/
     └── ComponentA/
         ├── index.tsx
-        ├── ComponentA.stories.tsx
+        ├── component-a.stories.tsx
         └── // Any other files as applicable (utils, child components, useHook, etc.)
 ```
 
@@ -52,15 +52,54 @@ type Story = StoryObj<typeof meta>
 export const Basic: Story = {}
 ```
 
-- With the `title` option, we write this based on the groupings set by the Design System. Groupings are declared with forward slashes. (i.e., `Atoms / Form / Input`). See the Storybook docs for details on [Naming conventions](https://storybook.js.org/docs/writing-stories/naming-components-and-hierarchy)
+- The `title` option places the story in the sidebar, and its **top-level section is derived from the file's path** -- see [Story titles](#story-titles) below. Groupings are declared with forward slashes (i.e., `UI / Forms / Input`). See the Storybook docs for details on [Naming conventions](https://storybook.js.org/docs/writing-stories/naming-components-and-hierarchy)
 - The `satisfies` TypeScript keyword is used with the `Meta` type for stricter type checking. This is particularly helpful to make sure required args are not missed. [Storybook Docs regarding `satisfies`](https://storybook.js.org/docs/writing-stories/typescript#using-satisfies-for-better-type-safety)
 - The use of `StoryObj` is to be able to typecheck the creation of a story as an object. This helps with prop inference.
 - We use `StoryObj<typeof meta>` in the event a required arg is provided in the `meta` object, to be applied to all stories in the file. This prevents type errors from being thrown at the story level for a required missing arg.
 - If the story does not need any args or any custom rendering, it should be left as an empty object. Otherwise, use the `render` option to explicitly write the rendering of the story: i.e., `render: () => <Component />`
 
-Also, please view the Figma file for the [proposed structure for the Design System](https://www.figma.com/file/Ne3iAassyfAcJ0AlgqioAP/DS-to-storybook-structure?type=design&node-id=42%3A50&mode=design&t=RGkyouvTilzF42y0-1) to provide the correct groupings.
+We maintain this structure for every story file, regardless of simplicity.
 
-We will maintain this structure for every story file, regardless of simplicity.
+Story filenames are **kebab-case** (`component-a.stories.tsx`), matching the repo's file convention, even where the component directory is still PascalCase. This is enforced by `tests/unit/storybook/story-titles.spec.ts`.
+
+## Story titles
+
+Titles read `Section / Group / Name`. The **section comes from where the file lives**, so it is never a judgment call:
+
+| Path                                  | Section         |
+| ------------------------------------- | --------------- |
+| `src/styles/**`                       | `Design System` |
+| `src/components/ui/**`                | `UI`            |
+| `src/components/**` (everything else) | `Components`    |
+| `src/layouts/**`                      | `Layouts`       |
+| `app/**`                              | `Pages`         |
+
+The second level is a light functional group for browsability -- Actions, Forms, Layout, Navigation, Overlays, Data Display under `UI /`; Cards, Heroes, Navigation, Site Chrome, Content, Data Viz, Features under `Components /`. Use one only when it already fits. **Do not invent a group for a single component**: a flat `Components / Morpher` is correct, and inventing categories is exactly how the six competing schemes this replaced accumulated.
+
+`tests/unit/storybook/story-titles.spec.ts` enforces the section prefix, requires an explicit title on every story, and rejects duplicate titles -- Storybook merges two files sharing a title into a single sidebar entry with no warning.
+
+> This taxonomy replaced the old `Atoms / Molecules / Organisms` structure (and the Figma "DS to storybook structure" file behind it) in August 2026. See issue #18967 for the rationale.
+
+### Deprecated components get no story
+
+A rendered example reads as an endorsement whatever the caption says. If a component or variant is on the way out, leave it out of Storybook and note the deprecation in prose -- `Swiper` and `HR`'s `narrow` variant are both in the codebase and both intentionally unshown. A component whose future is undecided rather than settled keeps its story plus a blurb saying it isn't for new work (`Carousel`).
+
+### Writing MDX docs pages
+
+`.storybook/Overview.mdx` is the entry-point page. Two gotchas if you add or edit one:
+
+- **No `remark-gfm`.** A markdown pipe table renders as literal pipes -- write tables as JSX.
+- **Prettier mangles MDX comments.** It rewrites `{/* … */}` to `{/_ … _/}`, which is invalid and breaks the build. Leave comments out of `.mdx`.
+
+### Verifying a story actually renders
+
+`pnpm build-storybook` compiles stories **without executing them**, and every `ui/` story sets `chromatic: { disableSnapshot: true }`. Neither CI signal catches a story that throws at render, so open new stories in `pnpm storybook` before pushing.
+
+Three things commonly break a story that compiles fine:
+
+- **Async server components** call `getTranslations`/`getLocale`, which throw in the browser. `.storybook/next-intl-server.tsx` shims `next-intl/server` against the same messages the client provider uses.
+- **`usePathname` consumers** get `null` without `parameters.nextjs.navigation.pathname`.
+- **New i18n namespaces** render as raw key tails until added to the `ns` array in `.storybook/next-intl.ts`.
 
 Should the component accept props on all or some renders, you can provide an `args` prop for each story and supply the necessary data. This can be done in place of the render if only a single instance of the given component is needed with no other components. If the `children` prop is used, it can still be used in the `args` prop.
 
@@ -74,7 +113,7 @@ import Button from "."
 type ButtonType = typeof Button
 
 const meta = {
-  title: "Atoms / Form / Button",
+  title: "UI / Actions / Button",
   component: Button,
 } satisfies Meta<ButtonType>
 
@@ -120,13 +159,13 @@ export const Variants: StoryObj = {
 
 ### Story file containing a single story
 
-If only one story is provided for a component, the name of the exported object should match the name in the `title` meta option. For example, if the title is `Atoms / Form / Button` then the story should be named `Button`. This will hoist the display name up to the parent level in the Storybook dashboard's sidebar. This will also mean you have to rename the import of the component. Call it `ButtonComponent`, say.
+If only one story is provided for a component, the name of the exported object should match the name in the `title` meta option. For example, if the title is `UI / Actions / Button` then the story should be named `Button`. This will hoist the display name up to the parent level in the Storybook dashboard's sidebar. This will also mean you have to rename the import of the component. Call it `ButtonComponent`, say.
 
 ```tsx
 import ButtonComponent from "."
 
 const meta = {
-  title: "Atoms / Form / Button",
+  title: "UI / Actions / Button",
   component: ButtonComponent,
 } satisfies Meta<typeof ButtonComponent>
 
@@ -168,6 +207,19 @@ Chromatic is a visual testing tool that scans every possible UI state across bro
 
 When creating a story, Chromatic creates a "snapshot" of it and sets it as a baseline. This baseline is also approved or denied before merging into the project. Whenever there are changes that affect the component, Chromatic will create a new snapshot to analyze. If there are changes, Chromatic will provide them for a reviewer to accept or decline, and be able to provide any further comments.
 
+### Publishing builds
+
+CI publishes on every non-draft PR, so you don't normally need to run Chromatic yourself. Snapshots are billed against a monthly quota shared by the whole team, and a local run of `pnpm chromatic` costs up to a full rebuild, so prefer letting CI do it.
+
+If you do need a local run, the repo has two Chromatic projects and each script takes its own token:
+
+| Script                 | Token                       | Project                |
+| ---------------------- | --------------------------- | ---------------------- |
+| `pnpm chromatic`       | `CHROMATIC_STORYBOOK_TOKEN` | Storybook components   |
+| `pnpm chromatic:pages` | `CHROMATIC_PAGES_TOKEN`     | Full-page visual tests |
+
+Both must be exported in your shell — `.env.local` won't work, since the scripts expand them before Chromatic starts. Each script fails immediately if its token is missing, which is deliberate: a single shared token would let a page-test token publish a Storybook build into the wrong project.
+
 ### Story Modes
 
 Depending on the component, we might look for more than just one snapshot per story. In some cases, we might want multiple snapshots showing the story rendered at various viewport widths or in different languages, a combination of both, etc. These are referred to as [Story Modes](https://www.chromatic.com/docs/modes/). Examples of applicable components include the `Footer` and the `HubHero`.
@@ -186,7 +238,7 @@ import { langViewportModes } from "../../../../.storybook/modes"
 import ContentHeroComponent, { ContentHeroProps } from "."
 
 const meta = {
-  title: "Organisms / Layouts / Hero",
+  title: "Components / Heroes / PageHero",
   component: ContentHeroComponent,
   parameters: {
     chromatic: {

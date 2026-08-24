@@ -37,7 +37,7 @@ Alchemy-তে একটি অ্যাকাউন্ট তৈরি কর�
 
 আপনি “Apps”-এর ওপর হোভার করে এবং একটি নির্বাচন করেও বিদ্যমান API কীগুলো সংগ্রহ করতে পারেন। আপনি এখানে “View Key” করতে পারেন, পাশাপাশি নির্দিষ্ট ডোমেইনগুলো হোয়াইটলিস্ট করতে, বিভিন্ন ডেভেলপার টুল দেখতে এবং অ্যানালিটিক্স দেখতে “Edit App” ব্যবহার করতে পারেন।
 
-![Gif showing a user how to pull API keys](./pull-api-keys.gif)
+![Gif showing a user how to pull API keys](./pull-api-keys.mp4#600x340)
 
 ## 3. কমান্ড লাইন থেকে একটি রিকোয়েস্ট করুন {#make-a-request-from-the-command-line}
 

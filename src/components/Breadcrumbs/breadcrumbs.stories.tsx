@@ -1,0 +1,23 @@
+import { Meta, type StoryObj } from "@storybook/nextjs"
+
+import { Stack } from "../ui/flex"
+
+import BreadcrumbsComponent from "."
+
+const meta = {
+  title: "Components / Navigation / Breadcrumbs",
+  component: BreadcrumbsComponent,
+  tags: ["autodocs"],
+} satisfies Meta<typeof BreadcrumbsComponent>
+
+export default meta
+
+export const Breadcrumbs: StoryObj = {
+  render: () => (
+    <Stack className="gap-8">
+      <BreadcrumbsComponent slug="/staking/" />
+      <BreadcrumbsComponent slug="/staking/solo/" />
+      <BreadcrumbsComponent slug="/roadmap/merge/issuance/" />
+    </Stack>
+  ),
+}

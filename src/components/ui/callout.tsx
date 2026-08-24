@@ -54,7 +54,7 @@ const CalloutBanner = React.forwardRef<
     ref={ref}
     data-label="callout-banner"
     className={cn(
-      "grid place-items-center @max-3xl/callout:px-(--callout-padding) @3xl/callout:flex-2",
+      "grid place-items-center @max-3xl/callout:px-(--callout-padding) @3xl/callout:flex-2 @3xl/callout:pe-[calc(var(--callout-padding)/4)]",
       "@max-3xl/callout:-mt-24 @max-3xl/callout:md:[aside:not(:only-child)_&]:min-h-64",
       "*:[img]:max-h-64 *:[img]:object-contain",
       className

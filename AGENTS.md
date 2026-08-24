@@ -109,7 +109,7 @@ pnpm test:visual           # Playwright + Chromatic full-page visual tests
 # Storybook
 pnpm storybook             # Start Storybook dev server
 pnpm build-storybook       # Build Storybook
-pnpm chromatic             # Run Chromatic visual tests
+pnpm chromatic             # Storybook Chromatic (needs CHROMATIC_STORYBOOK_TOKEN)
 
 # Content Management
 pnpm lint:md               # Lint English markdown content
@@ -166,7 +166,7 @@ For pipeline mechanics, recovery, manifests, ETHGlossary integration, and the `i
 3. **Follow import order** - ESLint will enforce, but be proactive
 4. **Use TypeScript strictly** - No `any` types, prefer `unknown`
 5. **Test in Storybook** - Create stories for new components (filename pattern: `.stories.tsx`)
-6. **Consider i18n** - All user-facing text should be translatable. Server components: `getTranslations` and `getLocale` from `next-intl/server`. Client components: `useTranslations` from `next-intl`, one namespace-bound function per namespace - to access a second namespace, bind another function (e.g. `const tCommon = useTranslations("common")`) rather than reaching across namespaces. The legacy `@/hooks/useTranslation` wrapper (`namespace:key` syntax) is deprecated for new code
+6. **Consider i18n** - All user-facing text should be translatable. Server components: `getTranslations` and `getLocale` from `next-intl/server`. Client components: `useTranslations` from `next-intl`, one namespace-bound function per namespace - to access a second namespace, bind another function (e.g. `const tCommon = useTranslations("common")`) rather than reaching across namespaces
 7. **Mobile-first** - Design for mobile, enhance for desktop
 8. **Accessibility** - Use Radix primitives, semantic HTML
 9. **Use locale-aware formatting wrappers** - Use `numberFormat()` from `src/lib/utils/numbers.ts` instead of `new Intl.NumberFormat()`, and `dateTimeFormat()` from `src/lib/utils/date.ts` instead of `new Intl.DateTimeFormat()` / `.toLocaleDateString()` / `.toLocaleTimeString()`. Both enforce correct numbering systems and calendar for Urdu and Arabic locales.
@@ -177,9 +177,33 @@ For pipeline mechanics, recovery, manifests, ETHGlossary integration, and the `i
    - Use `src/components/ui` for shadcn components or pure UI components
 2. Add TypeScript types and proper props interface
 3. Accept `ref` as a regular prop when needed (React 19); `forwardRef` only survives in legacy components
-4. Add Storybook story in same directory
+4. Add a Storybook story (see below)
 5. Export from appropriate index file
 6. Update documentation if adding new patterns
+
+### Storybook stories
+
+**Location**: `__stories__/` for flat directories (`ui/`, `styles/`), co-located for foldered components. Story globs are recursive, so nesting works. **Filenames are kebab-case** (`app-card.stories.tsx`) even inside a PascalCase component directory -- enforced by the test below.
+
+**Title**: `Section / Group / Name`. The section is derived from the file path -- not a judgment call:
+
+| Path                                  | Section         |
+| ------------------------------------- | --------------- |
+| `src/styles/**`                       | `Design System` |
+| `src/components/ui/**`                | `UI`            |
+| `src/components/**` (everything else) | `Components`    |
+| `src/layouts/**`                      | `Layouts`       |
+| `app/**`                              | `Pages`         |
+
+Use a second-level group only when an established one fits (Actions, Forms, Layout, Navigation, Overlays, Data Display, Cards, Heroes, Site Chrome, Content, Data Viz, Features). **Don't invent a group for a single component** -- a flat `Components / Morpher` is correct and preferred. `tests/unit/storybook/story-titles.spec.ts` enforces the section prefix, explicit titles, and title uniqueness (Storybook silently merges duplicate titles into one sidebar entry).
+
+**Don't add a story for a deprecated component or variant.** A rendered example reads as an endorsement whatever the caption says, so the showcase should only contain things that are available to use -- note the deprecation in prose instead (see `HR`). A component whose future is merely undecided can keep its story with a status blurb (see `Carousel`).
+
+Add `tags: ["autodocs"]`. Write the `parameters.docs.description.component` blurb for someone deciding whether to use the thing -- constraints and gotchas, not a restatement of the props table.
+
+**A green build does not mean a story renders.** `pnpm build-storybook` compiles stories without executing them, and every `UI /` story sets `chromatic: { disableSnapshot: true }`, so neither CI signal catches a story that throws. Open new stories in `pnpm storybook` before pushing.
+
+Async server components render via a `next-intl/server` shim (`.storybook/next-intl-server.tsx`). Components calling `usePathname` need `parameters.nextjs.navigation.pathname`. New i18n namespaces must be added to the `ns` array in `.storybook/next-intl.ts`, or strings render as raw key tails.
 
 ### Content Updates
 
@@ -234,11 +258,11 @@ This project enforces type-safe chain names via TypeScript. When working with la
 
 ## A/B Testing
 
-The site uses a GDPR-compliant, cookie-less A/B testing system integrated with Matomo. Experiments are configured in the Matomo dashboard (no code changes or deployments needed); components opt in via `ABTestWrapper` from `@/components/AB/TestWrapper`, rendered server-side with graceful fallback to the original variant.
+The site uses a GDPR-compliant, cookie-less A/B testing system built on the Flags SDK precompute pattern, integrated with Matomo. The proxy assigns variants at the edge (header fingerprinting) and rewrites to signed, statically prerendered variant pages under `ab-code/[code]/` — experiments never force dynamic rendering. Experiment status, weights, and scheduling live in the Matomo dashboard (no deploys needed). Only the default locale is tested; other locales always get the original.
 
 Key gotcha: **variants are matched by array index, not names** — the `variants` array order must match the Matomo experiment order exactly, and the `testKey` must match the Matomo experiment name exactly.
 
-Full guide (setup, example, architecture, env vars): `docs/ab-testing.md`. Code: `app/api/ab-config/`, `src/lib/ab-testing/`, `src/components/AB/`.
+Full guide (architecture, step-by-step recipe, env vars): `docs/ab-testing.md`. Code: `proxy.ts`, `src/lib/ab-testing/`, `src/components/AB/`, `app/[locale]/ab-code/`.
 
 ## Deployment
 

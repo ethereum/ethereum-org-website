@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/component-restaking-products.json",
+  "generatedAt": "2026-07-22T22:32:47.004Z",
+  "rootHash": "7b08e6ede171",
+  "tree": {
+    "contentHash": "cbb5fe83446c",
+    "anchorHash": "c7732ea707c5",
+    "children": {
+      "eigenlayer-brand": {
+        "contentHash": "f194b4caa186",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "eigenlayer-description": {
+        "contentHash": "001a9e9e6049",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "eigenlayer-title": {
+        "contentHash": "ff309e76ac4a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "symbiotic-brand": {
+        "contentHash": "3830bf3f1481",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "symbiotic-description": {
+        "contentHash": "07ddcb983228",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "symbiotic-title": {
+        "contentHash": "bf50d573227e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "visit-brand": {
+        "contentHash": "fdd97f785936",
+        "anchorHash": "f4f47dcecf20",
+        "children": {
+          "prose:1": {
+            "contentHash": "1c8ac867f052",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "dfb6b562fc50"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "eigenlayer-brand",
+      "eigenlayer-description",
+      "eigenlayer-title",
+      "symbiotic-brand",
+      "symbiotic-description",
+      "symbiotic-title",
+      "visit-brand"
+    ]
+  },
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+}

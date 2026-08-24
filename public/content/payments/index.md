@@ -206,3 +206,7 @@ From facilitating rapid disaster relief to empowering global workers, Ethereum p
   </ButtonLink>
 </AlertContent>
 </Alert>
+
+<Divider />
+
+<QuizWidget quizKey="payments" />

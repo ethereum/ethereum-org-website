@@ -52,6 +52,8 @@
     "node_modules",
     "./public",
     "./src/intl",
-    "./.storybook"
+    "./.storybook",
+    "./netlify/edge-functions",
+    "./tests/unit/matomo-ai-tracker"
   ]
 }

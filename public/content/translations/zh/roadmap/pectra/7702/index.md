@@ -1,15 +1,15 @@
 ---
 title: 佩克特拉 7702
-metaTitle: 佩克特拉 7702 指南
+metaTitle: Pectra EIP-7702 guidelines
 description: 了解有关佩克特拉版本中 7702 的更多信息
 lang: zh
 ---
 
-## 摘要 {#abstract}
+## 摘要
 
-EIP-7702 定义了一种向外部拥有账户（EOA）添加代码的机制。该提案允许 EOA（传统的以太坊账户）获得短期的功能改进，从而提高应用程序的可用性。这是通过使用一种新的交易类型（类型 4）设置一个指向已部署代码的指针来实现的。
+EIP-7702 定义了一种向外部拥有账户（EOA）添加代码的机制。该提案允许 EOA（传统的以太坊账户）获得短期的功能改进，从而提高应用的可用性。这是通过使用一种新的交易类型（类型 4）设置一个指向已部署代码的指针来实现的。
 
-这种新的交易类型引入了一个授权列表。列表中的每个授权元组定义为
+这种新的交易类型引入了一个授权列表。列表中的每个授权元组定义为：
 
 ```
 [ chain_id, address, nonce, y_parity, r, s ]
@@ -18,17 +18,16 @@ EIP-7702 定义了一种向外部拥有账户（EOA）添加代码的机制。�
 **address** 是委托（EOA 将使用的已部署字节码）
 **chain_id** 将授权锁定到特定链（或 0 表示所有链）
 **nonce** 将授权锁定到特定账户随机数
-(**y_parity, r, s**) 是授权元组的签名，定义为适用该授权的 EOA（也称为授权方）的私钥对 keccak(0x05 || rlp ([chain_id ,address, nonce])) 的签名
+(**y_parity, r, s**) 是授权元组的签名，定义为由适用该授权的 EOA（也称为授权方）的私钥对 keccak(0x05 || rlp ([chain_id ,address, nonce])) 进行签名。
 
 可以通过委托给空地址来重置委托。
 
-委托后，EOA 的私钥保留对账户的完全控制权。例如，委托给 Safe 并不会使账户变成多重签名，因为仍然存在一个可以绕过任何签名策略的单一密钥。展望未来，开发者在设计时应假设系统中的任何参与者都可能是智能合约。对于智能合约开发者来说，假设 `tx.origin` 指代 EOA 已经不再安全。
+在委托之后，EOA 的私钥保留对账户的完全控制权。例如，委托给 Safe 并不会使账户变成多重签名，因为仍然存在一个可以绕过任何签名策略的单一密钥。展望未来，开发者在设计时应假设系统中的任何参与者都可能是智能合约。对于智能合约开发者来说，假设 `tx.origin` 指代 EOA 已经不再安全。
+## 最佳实践
 
-## 最佳实践 {#best-practices}
+**账户抽象**：委托合约应与以太坊更广泛的账户抽象（AA）标准保持一致，以最大化兼容性。特别是，它最好符合或兼容 ERC-4337。
 
-**账户抽象**：委托合约应与以太坊更广泛的账户抽象（AA）标准保持一致，以最大限度地提高兼容性。特别是，它最好符合或兼容 ERC-4337。
-
-**无需许可和抗审查设计**：以太坊重视无需许可的参与。委托合约绝不能硬编码或依赖任何单一的“受信任”中继器或服务。如果中继器离线，这将导致账户变砖（无法使用）。像批量处理（例如 approve+transferFrom）这样的功能可以由 EOA 本身使用，而无需中继器。对于希望使用 7702 启用的高级功能（Gas 抽象、保护隐私的提款）的应用程序开发者，您将需要一个中继器。虽然存在不同的中继器架构，但我们的建议是使用指向至少 [入口点 0.8](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0) 的 [4337 捆绑器](https://www.erc4337.io/bundlers)，因为：
+**无需许可和抗审查设计**：以太坊重视无需许可的参与。委托合约绝不能硬编码或依赖任何单一的“受信任”中继者或服务。如果中继者离线，这将导致账户变砖。像批量处理（例如 approve+transferFrom）这样的功能可以由 EOA 本身使用，而无需中继者。对于希望使用 EIP-7702 启用的高级功能（Gas 抽象、保护隐私的提款）的应用开发者，你需要一个中继者。虽然存在不同的中继者架构，但我们建议使用指向至少 [entry point 0.8](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0) 的 [ERC-4337 捆绑器](https://www.erc4337.io/bundlers)，因为：
 
 - 它们为中继提供了标准化接口
 - 包含内置的代付合约系统
@@ -36,28 +35,28 @@ EIP-7702 定义了一种向外部拥有账户（EOA）添加代码的机制。�
 - 可以通过[公共内存池](https://notes.ethereum.org/@yoav/unified-erc-4337-mempool)支持抗审查性
 - 可以要求 init 函数只能从 [EntryPoint](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0) 调用
 
-换句话说，任何人只要提供来自账户所需的有效签名或用户操作（UserOperation），就应该能够充当交易赞助者/中继器。这确保了抗审查性：如果不需要自定义基础设施，用户的交易就不会被充当看门人的中继器任意阻止。例如，[梅塔马斯克的委托工具包](https://github.com/MetaMask/delegation-framework/releases/tag/v1.3.0)明确支持任何链上的任何 ERC-4337 捆绑器或代付合约，而不是要求使用梅塔马斯克特定的服务器。
+换句话说，只要提供来自账户的所需有效签名或用户操作（UserOperation），任何人都可以充当交易赞助者/中继者。这确保了抗审查性：如果不需要自定义基础设施，用户的交易就不会被充当看门人的中继任意阻止。例如，[梅塔马斯克的委托工具包](https://github.com/MetaMask/delegation-framework/releases/tag/v1.3.0)明确支持任何链上的任何 ERC-4337 捆绑器或代付合约，而不是要求使用梅塔马斯克特定的服务器。
 
 **通过钱包接口集成去中心化应用 (dapp)**：
 
-鉴于钱包会将特定的 EIP-7702 委托合约列入白名单，dapp 不应期望直接请求 7702 授权。相反，集成应通过标准化的钱包接口进行：
+鉴于钱包会将特定的 EIP-7702 委托合约列入白名单，dapp 不应期望直接请求 EIP-7702 授权。相反，集成应通过标准化的钱包接口进行：
 
 - **ERC-5792 (`wallet_sendCalls`)**：允许 dapp 请求钱包执行批量调用，从而促进交易批量处理和 Gas 抽象等功能。
 
 - **ERC-6900**：允许 dapp 通过钱包管理的模块利用模块化智能账户功能，例如会话密钥和账户恢复。
 
-通过利用这些接口，dapp 可以访问 EIP-7702 提供的智能账户功能，而无需直接管理委托，从而确保跨不同钱包实现的兼容性和安全性。
+通过利用这些接口，dapp 可以访问由 EIP-7702 提供的智能账户功能，而无需直接管理委托，从而确保跨不同钱包实现的兼容性和安全性。
 
-> 注意：目前没有标准化的方法供 dapp 直接请求 7702 授权签名。dapp 必须依赖特定的钱包接口（如 ERC-6900）来利用 EIP-7702 的功能。
+> 注意：目前没有标准化的方法供 dapp 直接请求 EIP-7702 授权签名。dapp 必须依赖特定的钱包接口（如 ERC-6900）来利用 EIP-7702 的功能。
 
-了解更多信息：
+更多信息：
 
 - [ERC-5792 规范](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-5792.md)
 - [ERC-6900 规范](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6900.md)
 
-**避免供应商锁定**：与上述内容一致，一个好的实现应该是供应商中立且可互操作的。这通常意味着要遵守新兴的智能账户标准。例如，[Alchemy 的模块化账户](https://github.com/alchemyplatform/modular-account)使用 ERC-6900 标准来实现模块化智能账户，并在设计时考虑了“无需许可的可互操作使用”。
+**避免供应商锁定**：与上述内容一致，一个好的实现应是供应商中立且可互操作的。这通常意味着要遵守新兴的智能账户标准。例如，[Alchemy 的模块化账户](https://github.com/alchemyplatform/modular-account)使用 ERC-6900 标准来实现模块化智能账户，并在设计时考虑了“无需许可的可互操作使用”。
 
-**隐私保护**：虽然链上隐私有限，但委托合约应努力将数据暴露和可链接性降至最低。这可以通过支持使用 ERC-20 代币支付 Gas（这样用户就不需要维持公开的 ETH 余额，从而改善隐私和用户体验）以及一次性会话密钥（减少对单一长期密钥的依赖）等功能来实现。例如，EIP-7702 允许通过赞助交易使用代币支付 Gas，一个好的实现将使集成此类代付合约变得容易，而不会泄露不必要的信息。此外，某些授权的链下委托（使用在链上验证的签名）意味着使用用户主密钥进行的链上交易更少，这有助于保护隐私。需要使用中继器的账户会迫使用户暴露其 IP 地址。公共内存池（PublicMempools）改善了这一点，当交易/用户操作（UserOp）在内存池中传播时，你无法分辨它是源自发送它的 IP，还是仅仅通过 p2p 协议通过它进行中继。
+**隐私保护**：虽然链上隐私有限，但委托合约应努力最小化数据暴露和可链接性。这可以通过支持使用 ERC-20 代币支付 Gas（这样用户就不需要维持公开的 ETH 余额，从而改善隐私和用户体验）以及一次性会话密钥（减少对单一长期密钥的依赖）等功能来实现。例如，EIP-7702 允许通过赞助交易使用代币支付 Gas，一个好的实现将使集成此类代付合约变得容易，而不会泄露不必要的信息。此外，某些授权的链下委托（使用在链上验证的签名）意味着使用用户主密钥的链上交易更少，这有助于保护隐私。要求使用中继者的账户会迫使人们暴露其 IP 地址。公共内存池（PublicMempools）改善了这一点，当交易/用户操作在内存池中传播时，你无法分辨它是源自发送它的 IP，还是仅仅通过 p2p 协议通过它进行中继。
 
 **可扩展性和模块化安全**：账户实现应该是可扩展的，以便它们能够随着新功能和安全改进而发展。EIP-7702 本身就支持可升级性（因为 EOA 始终可以在未来委托给新合约以升级其逻辑）。除了可升级性之外，一个好的设计还允许模块化——例如，用于不同签名方案或支出策略的插件模块——而无需完全重新部署。Alchemy 的 Account Kit 就是一个很好的例子，它允许开发者安装验证模块（用于 ECDSA、BLS 等不同签名类型）和用于自定义逻辑的执行模块。为了在启用 EIP-7702 的账户中实现更大的灵活性和安全性，鼓励开发者委托给代理合约，而不是直接委托给特定的实现。这种方法允许无缝升级和模块化，而无需为每次更改进行额外的 EIP-7702 授权。
 
@@ -72,7 +71,6 @@ EIP-7702 定义了一种向外部拥有账户（EOA）添加代码的机制。�
 代理模式的缺点：
 
 - **依赖外部参与者**：你必须依赖外部团队不升级到不安全的合约。
-
 ## 安全注意事项 {#security-considerations}
 
 **重入保护**：随着 EIP-7702 委托的引入，用户的账户可以在外部拥有账户（EOA）和智能合约（SC）之间动态切换。这种灵活性使账户既能发起交易，又能成为调用的目标。因此，在账户调用自身并进行外部调用的场景中，`msg.sender` 将等于 `tx.origin`，这破坏了以前依赖于 `tx.origin` 始终是 EOA 的某些安全假设。
@@ -106,19 +104,17 @@ EIP-7702 定义了一种向外部拥有账户（EOA）添加代码的机制。�
 
 **最小化受信任面与安全性**：在提供灵活性的同时，委托合约应保持其核心逻辑最小化且可审计。该合约实际上是用户 EOA 的扩展，因此任何缺陷都可能是灾难性的。实现应遵循智能合约安全社区的最佳实践。例如，构造函数或初始化函数必须得到仔细保护——正如 Alchemy 所强调的，如果在 7702 下使用代理模式，不受保护的初始化器可能会让攻击者接管账户。团队应致力于保持链上代码简单：Ambire 的 7702 合约只有大约 200 行 Solidity 代码，刻意将复杂性降至最低以减少错误。必须在功能丰富的逻辑和易于审计的简单性之间取得平衡。
 
-### 已知实现 {#known-implementations}
+### 已知实现
+由于 EIP-7702 的性质，建议钱包在帮助用户委托给第三方合约时保持谨慎。下面列出了一些经过审计的已知实现：
 
-由于 EIP-7702 的性质，建议钱包在帮助用户委托给第三方合约时要谨慎。下面列出了一些经过审计的已知实现：
-
-| 合约地址                                   | 来源                                                                                                                                       | 审计                                                                                                                                                          |
+| 合约地址                                   | 源代码                                                                                                                                     | 审计                                                                                                                                                          |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0x000000009B1D0aF20D8C6d0A44e162d11F9b8f00 | [尤尼斯瓦普/calibur](https://github.com/Uniswap/calibur)                                                                                      | [审计](https://github.com/Uniswap/calibur/tree/main/audits)                                                                                                 |
 | 0x69007702764179f14F51cdce752f4f775d74E139 | [alchemyplatform/modular-account](https://github.com/alchemyplatform/modular-account)                                                      | [审计](https://github.com/alchemyplatform/modular-account/tree/develop/audits)                                                                              |
 | 0x5A7FC11397E9a8AD41BF10bf13F22B0a63f96f6d | [AmbireTech/ambire-common](https://github.com/AmbireTech/ambire-common/blob/feature/eip-7702/contracts/AmbireAccount7702.sol)              | [审计](https://github.com/AmbireTech/ambire-common/tree/feature/eip-7702/audits)                                                                            |
-| 0x63c0c19a282a1b52b07dd5a65b58948a07dae32b | [MetaMask/delegation-framework](https://github.com/MetaMask/delegation-framework)                                                          | [审计](https://github.com/MetaMask/delegation-framework/tree/main/audits)                                                                                   |
+| 0x63c0c19a282a1b52b07dd5a65b58948a07dae32b | [梅塔马斯克/delegation-framework](https://github.com/MetaMask/delegation-framework)                                                          | [审计](https://github.com/MetaMask/delegation-framework/tree/main/audits)                                                                                   |
 | 0x4Cd241E8d1510e30b2076397afc7508Ae59C66c9 | [以太坊基金会 AA 团队](https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/accounts/Simple7702Account.sol) | [审计](https://github.com/eth-infinitism/account-abstraction/blob/develop/audits/SpearBit%20Account%20Abstraction%20Security%20Review%20-%20Mar%202025.pdf) |
-| 0x17c11FDdADac2b341F2455aFe988fec4c3ba26e3 | [Luganodes/Pectra-Batch-Contract](https://github.com/Luganodes/Pectra-Batch-Contract)                                                      | [审计](https://certificate.quantstamp.com/full/luganodes-pectra-batch-contract/23f0765f-969a-4798-9edd-188d276c4a2b/index.html)                             |
-
+| 0x17c11FDdADac2b341F2455aFe988fec4c3ba26e3 | [Luganodes/佩克特拉-Batch-Contract](https://github.com/Luganodes/Pectra-Batch-Contract)                                                      | [审计](https://certificate.quantstamp.com/full/luganodes-pectra-batch-contract/23f0765f-969a-4798-9edd-188d276c4a2b/index.html)                             |
 ## 硬件钱包指南 {#hardware-wallet-guidelines}
 
 硬件钱包不应暴露任意委托。硬件钱包领域的共识是使用受信任的委托人合约列表。我们建议允许上面列出的已知实现，并根据具体情况考虑其他实现。由于将你的 EOA 委托给合约会赋予其对所有资产的控制权，因此硬件钱包在实现 7702 的方式上应保持谨慎。
@@ -135,14 +131,11 @@ EIP-7702 定义了一种向外部拥有账户（EOA）添加代码的机制。�
 
 通过检查 EOA 的代码来通知用户该 EOA 已存在委托，并可选择提供移除委托的功能。
 
-#### 通用委托 {#common-delegation}
-
-硬件提供商将已知的委托合约列入白名单，并在软件配套应用中实现对它们的支持。建议选择完全支持 ERC-4337 的合约。
+#### 常见委托
+硬件提供商将已知的委托合约列入白名单，并在配套软件中实现对它们的支持。建议选择完全支持 ERC-4337 的合约。
 
 委托给其他合约的 EOA 将作为标准 EOA 处理。
-
-#### 自定义委托 {#custom-delegation}
-
-硬件提供商实现自己的委托合约，将其添加到列表中，并在软件配套应用中实现对其的支持。建议构建一个完全支持 ERC-4337 的合约。
+#### 自定义委托
+硬件提供商实现自己的委托合约，将其添加到列表中，并在配套软件中实现对其的支持。建议构建一个完全支持 ERC-4337 的合约。
 
 委托给其他合约的 EOA 将作为标准 EOA 处理。

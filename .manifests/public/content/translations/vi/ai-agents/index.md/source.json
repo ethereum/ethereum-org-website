@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/ai-agents/index.md",
-  "generatedAt": "2026-06-18T20:28:43.739Z",
-  "rootHash": "8713cc758b67",
+  "generatedAt": "2026-07-22T22:43:37.112Z",
+  "rootHash": "57c137e4cefc",
   "tree": {
     "contentHash": "be1e99973b31",
-    "anchorHash": "09eab399c0a9",
+    "anchorHash": "8417fa89bab7",
     "children": {
       "frontmatter:title": {
         "contentHash": "3d9e43485a12",
@@ -33,7 +33,7 @@
       },
       "frontmatter:image": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "5570ea2c51c2"
+        "anchorHash": "80e47116cd48"
       },
       "frontmatter:alt": {
         "contentHash": "708fa328b6d0",
@@ -578,5 +578,5 @@
       "you-can-build-your-own-ai-agent"
     ]
   },
-  "sourceCommitSha": "aaeb4f67fd616782cfcbaceb7a776b26c0578df4"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

@@ -3,6 +3,7 @@ title: "弗萨卡 🦓"
 metaTitle: Fulu-Osaka (弗萨卡)
 description: 了解弗萨卡协议升级
 lang: zh
+template: upgrade
 authors: ["Nixo", "Mario Havel"]
 ---
 

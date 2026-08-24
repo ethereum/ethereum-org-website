@@ -83,3 +83,5 @@ Web3 native public goods funding platforms such as [Gitcoin](https://gitcoin.co)
 
 - [The Beacon Chain](/roadmap/beacon-chain)
 - [The Merge](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />

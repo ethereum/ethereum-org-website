@@ -143,10 +143,7 @@ Ada beberapa alat yang tersedia untuk mengelola konsolidasi. Alat resmi, yang di
 
 ## FAQ {#faq}
 
-### Apakah memilih untuk ikut serta mengubah keberuntungan proposal atau hadiah saya? {#change-luck-or-rewards}
-
-Tidak. Memilih untuk ikut serta tidak mengurangi peluang proposal Anda - tugas dan pemilihan proposal Anda tetap sama. Misalnya, jika Anda memiliki dua validator 32 ETH vs satu validator 64 ETH, Anda akan memiliki total peluang yang sama untuk dipilih mengusulkan sebuah blok dan mendapatkan hadiah.
-
+Tidak. Memilih untuk ikut serta tidak mengurangi peluang proposal Anda - tugas dan pemilihan proposal Anda tetap sama. Misalnya, jika Anda memiliki dua validator 32 ETH dibandingkan dengan satu validator 64 ETH, Anda akan memiliki total peluang yang sama untuk dipilih mengusulkan sebuah blok dan mendapatkan hadiah.
 ### Apakah memilih untuk ikut serta mengubah risiko pemotongan saya? {#change-slashing-risk}
 
 Untuk operator yang lebih kecil atau tidak profesional, jawaban singkatnya adalah tidak. Jawaban yang lebih panjang adalah bahwa, untuk operator profesional yang menjalankan banyak validator per node dengan peringatan cepat, mengonsolidasikan menjadi lebih sedikit validator dapat mengurangi kemampuan mereka untuk bereaksi terhadap pemotongan dan mencegah peristiwa beruntun (cascade events). *Hukuman* pemotongan awal untuk semua validator telah dikurangi secara dramatis dari 1 ETH (per 32 ETH) menjadi 0,0078125 ETH (per 32 ETH) untuk mengimbangi risiko ini.

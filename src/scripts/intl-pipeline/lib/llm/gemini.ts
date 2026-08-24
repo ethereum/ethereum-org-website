@@ -8,7 +8,13 @@
 import { GoogleGenAI, HarmBlockThreshold, HarmCategory } from "@google/genai"
 
 import i18nConfig from "../../../../../i18n.config.json"
-import { GEMINI_TIMEOUT_MS, LLM, MAX_SPLIT_DEPTH } from "../../constants"
+import {
+  GEMINI_TIMEOUT_MS,
+  LLM,
+  LLM_PROVIDER,
+  MAX_PROMPT_BYTES,
+  MAX_SPLIT_DEPTH,
+} from "../../constants"
 import { delay } from "../workflows/utils"
 
 import {
@@ -23,17 +29,20 @@ import {
   restoreComments,
 } from "./code-block-extractor"
 import { type ContentNode, normalizeContent } from "./content-normalizer"
+import { recordUsage, reserveForCall } from "./cost-meter"
 import {
   chunkJson,
   mergeJsonBatches,
   prepareJsonBatches,
   restoreJsonBatch,
 } from "./json-batcher"
+import { generateViaOpenRouter, type ProviderResponse } from "./openrouter"
 import {
   validateTranslatedJson,
   validateTranslatedMarkdown,
   type ValidationResult,
 } from "./output-validation"
+import { isIrreducibleChunk } from "./plan"
 import { buildTranslationPrompt } from "./prompt-builder"
 
 /**
@@ -122,6 +131,12 @@ interface GeminiCallMetadata {
   chunkIndex?: number
   totalChunks?: number
   label?: string
+  /**
+   * This prompt carries one indivisible unit already over the chunk budget, so
+   * the per-call ceiling does not apply -- there is no smaller call to make.
+   * Set from a computed fact, never to silence the guard.
+   */
+  irreducible?: boolean
 }
 
 /**
@@ -1249,7 +1264,15 @@ async function callGemini(
 
   // Retry loop for validation failures (API call retries are in callGeminiRaw)
   for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
-    const result = await callGeminiRaw(prompt, metadata)
+    // chunkProse / chunkJson only exceed MAX_CHUNK_BYTES for a unit they cannot
+    // split (one paragraph, one JSON key). Such a chunk is irreducible: there is
+    // no smaller call to make, so the per-call ceiling does not apply to it.
+    const result = await callGeminiRaw(prompt, {
+      ...metadata,
+      irreducible:
+        metadata?.irreducible ??
+        isIrreducibleChunk(Buffer.byteLength(fileContent, "utf-8")),
+    })
 
     let text = result.text
     text = stripCodeBlockWrapping(text, fileType)
@@ -1295,7 +1318,7 @@ export async function callGeminiRaw(
   prompt: string,
   metadata?: GeminiCallMetadata
 ): Promise<{ text: string; tokensUsed: { input: number; output: number } }> {
-  const client = getGeminiClient()
+  const client = LLM_PROVIDER === "openrouter" ? null : getGeminiClient()
   const verbose = process.env.VERBOSE === "true"
   const ts = () => new Date().toISOString()
 
@@ -1329,6 +1352,30 @@ export async function callGeminiRaw(
       // recitation match (e.g. on our own open-licensed whitepaper content).
       const temperature = attempt === 1 ? 0 : Math.min(0.5 * (attempt - 1), 1)
 
+      // Prompt-size guard first, so a refusal cannot leak a reservation: this
+      // throw leaves the try/catch that would settle it.
+      //
+      // The ceiling refuses prompts we could have made smaller. It does not
+      // refuse content that cannot be split: a single section or chunk already
+      // past the chunk budget is as small as this call gets, and the chunkers
+      // only exceed the budget for such indivisible units. Those are sent at
+      // whatever size they are (metadata.irreducible), while the overhead we
+      // chose to add around them stays bounded by the batching budget.
+      const promptBytes = Buffer.byteLength(prompt, "utf-8")
+      if (!metadata?.irreducible && promptBytes > MAX_PROMPT_BYTES) {
+        throw new Error(
+          `[cost-guard] prompt for ${ctx} is ${promptBytes} bytes, ` +
+            `over the ${MAX_PROMPT_BYTES}-byte ceiling -- refusing to send`
+        )
+      }
+
+      // Spend guard runs before the request, so a runaway call pattern stops at
+      // the cap instead of at the end of the run. The reservation covers this
+      // call while it is in flight -- see reserveForCall.
+      const settleReservation = reserveForCall(
+        `${ctx} (${prompt.length} chars)`
+      )
+
       console.log(
         `[${ts()}] [gemini] REQUEST model=${modelId} ${ctx}${attempt > 1 ? ` attempt=${attempt} temp=${temperature}` : ""}`
       )
@@ -1358,19 +1405,51 @@ export async function callGeminiRaw(
       try {
         const controller = new AbortController()
         const timeout = setTimeout(() => controller.abort(), GEMINI_TIMEOUT_MS)
-        const response = await client.models
-          .generateContent({
-            model: modelId,
-            contents: prompt,
-            config: {
-              temperature,
-              safetySettings: SAFETY_SETTINGS,
-              abortSignal: controller.signal,
-            },
-          })
-          .finally(() => clearTimeout(timeout))
+        const request: Promise<ProviderResponse> =
+          LLM_PROVIDER === "openrouter"
+            ? generateViaOpenRouter({
+                modelId,
+                prompt,
+                temperature,
+                signal: controller.signal,
+              })
+            : (client!.models.generateContent({
+                model: modelId,
+                contents: prompt,
+                config: {
+                  temperature,
+                  safetySettings: SAFETY_SETTINGS,
+                  abortSignal: controller.signal,
+                },
+              }) as unknown as Promise<ProviderResponse>)
+        const response = await request.finally(() => clearTimeout(timeout))
         const usage = response.usageMetadata
         const duration = ((Date.now() - startTime) / 1000).toFixed(1)
+
+        // Thinking tokens are billed as output by both providers but reported
+        // differently: OpenRouter folds them into completion_tokens, while the
+        // Gemini SDK keeps them out of candidatesTokenCount and reports them as
+        // thoughtsTokenCount. Normalize to billable output so the meter, the
+        // fuse, and the per-language summary all reflect the invoice.
+        const reasoningTokens =
+          response.reasoningTokens ?? usage?.thoughtsTokenCount ?? 0
+        const visibleOutput = usage?.candidatesTokenCount || 0
+        const billableOutput =
+          LLM_PROVIDER === "openrouter"
+            ? visibleOutput
+            : visibleOutput + reasoningTokens
+
+        // Meter every billed call, including ones that come back blocked or
+        // empty below -- those still charge for the prompt. costUsd is the
+        // provider's own figure when it reports one. Recording replaces this
+        // call's reservation with its real cost.
+        recordUsage(
+          usage?.promptTokenCount || 0,
+          billableOutput,
+          response.costUsd,
+          reasoningTokens
+        )
+        settleReservation(0)
 
         // Inspect response for non-obvious failure modes before accessing .text
         const candidate = (
@@ -1412,7 +1491,18 @@ export async function callGeminiRaw(
           `[${ts()}] [gemini] RESPONSE model=${modelId} ${ctx} ` +
             `duration=${duration}s ` +
             `tokens_in=${usage?.promptTokenCount || 0} ` +
-            `tokens_out=${usage?.candidatesTokenCount || 0}` +
+            // tokens_out is the BILLABLE output on both transports, so the
+            // number means the same thing whichever provider served the call.
+            // reasoning is a subset of it, not an addition: OpenRouter folds
+            // thinking into completion_tokens, and the Gemini branch above adds
+            // thoughtsTokenCount in. Cost triage can read tokens_out alone.
+            `tokens_out=${billableOutput}` +
+            (reasoningTokens
+              ? ` (of which reasoning=${reasoningTokens}, visible=${visibleOutput})`
+              : "") +
+            (response.costUsd != null
+              ? ` cost=$${response.costUsd.toFixed(6)}`
+              : "") +
             (finishReason && finishReason !== "STOP"
               ? ` finishReason=${finishReason}`
               : "")
@@ -1431,10 +1521,11 @@ export async function callGeminiRaw(
           text,
           tokensUsed: {
             input: usage?.promptTokenCount || 0,
-            output: usage?.candidatesTokenCount || 0,
+            output: billableOutput,
           },
         }
       } catch (error) {
+        settleReservation(0)
         const duration = ((Date.now() - startTime) / 1000).toFixed(1)
         lastError = error instanceof Error ? error : new Error(String(error))
 

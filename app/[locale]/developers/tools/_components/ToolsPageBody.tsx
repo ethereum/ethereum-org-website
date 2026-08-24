@@ -11,9 +11,6 @@ import type {
 
 import ToolsCatalog from "./ToolsCatalog"
 
-const SUGGEST_RESOURCE_ISSUE_URL =
-  "https://github.com/ethereum/builder-resources/issues/new?template=add-resource.yml"
-
 type ToolsPageBodyProps = {
   locale: string
   tools: DeveloperToolWithCategory[]
@@ -66,7 +63,6 @@ const ToolsPageBody = async ({
             noResults: t("page-developers-tools-no-results"),
             suggestButton: t("page-developers-tools-suggest-resource-button"),
           }}
-          suggestUrl={SUGGEST_RESOURCE_ISSUE_URL}
         />
       </MainArticle>
 

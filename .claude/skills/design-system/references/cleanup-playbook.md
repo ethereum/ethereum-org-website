@@ -524,3 +524,17 @@ import { Page, ContentContainer } from "@/components/MdComponents"
 import MainArticle from "@/components/MainArticle"
 <main className="p-page"><MainArticle className="flow">{children}</MainArticle></main>
 ```
+
+## Per-item style + `last:`-reset -> `not-last:`
+
+Don't declare a style on every item and then cancel it on the last one -- express it as "all but the last" with `not-last:`.
+
+```tsx
+// Before -- declare then undo:
+className="border-b last:border-b-0"          // or last-of-type:border-0
+
+// After:
+className="not-last:border-b"
+```
+
+Applies to any per-item divider/spacing that shouldn't hit the final item (`not-last:border-b`, `not-last:me-*`, `not-last:pb-*`). One rule instead of two, and it reads as the intent.

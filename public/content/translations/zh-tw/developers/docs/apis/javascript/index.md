@@ -237,14 +237,14 @@ ethers.utils.formatEther(balance)
 - [Web3js 公用程式函式](https://docs.web3js.org/api/web3-utils)
 - [Ethers 公用程式函式](https://docs.ethers.org/v6/api/utils/)
 
-## 可用的函式庫 {#available-libraries}
+## 可用的函式庫
 
 **Web3.js -** **_以太坊 JavaScript API。_**
 
 - [文件](https://docs.web3js.org)
 - [GitHub](https://github.com/ethereum/web3.js)
 
-**Ethers.js -** **_在 JavaScript 和 TypeScript 中完整的以太坊錢包實作和公用程式。_**
+**Ethers.js -** **_在 JavaScript 和 TypeScript 中完整的以太坊錢包實作與公用程式。_**
 
 - [Ethers.js 首頁](https://ethers.org/)
 - [文件](https://docs.ethers.io)
@@ -268,18 +268,27 @@ ethers.utils.formatEther(balance)
 - [文件](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-**Codex -** **_跨數十個鏈的即時、豐富的區塊鏈資料 API。_**
+**wagmi -** **_以太坊的 React hooks 函式庫，建構於 viem 之上。_**
+
+- [文件](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_用於將錢包連線新增至去中心化應用程式 (dapp) 的 React 函式庫，建構於 wagmi 和 viem 之上。_**
+
+- [文件](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
+
+**Codex -** **_跨數十條鏈的即時、豐富的區塊鏈資料 API。_**
 
 - [文件](https://docs.codex.io)
 - [瀏覽器](https://docs.codex.io/explore)
 - [GitHub](https://github.com/Codex-Data)
 - [Discord](https://discord.com/invite/mFpUhT3vAq)
 
-**Drift -** **_內建快取、掛鉤 (hooks) 和測試模擬的 TypeScript 中介函式庫。_**
+**Drift -** **_內建快取、hooks 和測試模擬的 TypeScript 元函式庫。_**
 
 - [文件](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
-
 ## 延伸閱讀 {#further-reading}
 
 _知道有幫助過您的社群資源嗎？編輯此頁面並加入它！_

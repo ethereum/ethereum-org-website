@@ -77,7 +77,7 @@ Po utworzeniu konta:
 
 Dla wzrokowców powyższe kroki zostały podsumowane tutaj:
 
-![How to upload your image to Pinata](./instructionsPinata.gif)
+![How to upload your image to Pinata](./instructionsPinata.mp4#712x376)
 
 Teraz będziemy chcieli przesłać jeszcze jeden dokument do Pinata. Ale zanim to zrobimy, musimy go utworzyć!
 
@@ -105,7 +105,7 @@ Możesz dowolnie zmieniać dane w pliku json. Możesz usuwać lub dodawać eleme
 
 Po zakończeniu edycji pliku JSON zapisz go i prześlij do Pinata, wykonując te same kroki, co w przypadku przesyłania obrazu.
 
-![How to upload your nft-metadata.json to Pinata](./uploadPinata.gif)
+![How to upload your nft-metadata.json to Pinata](./uploadPinata.mp4#1280x676)
 
 ## Krok 5: Utworzenie instancji kontraktu {#instance-contract}
 

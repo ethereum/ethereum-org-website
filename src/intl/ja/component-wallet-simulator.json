@@ -156,6 +156,7 @@
   "sim-cw-connect-disclaimer": "ウェブサイトに接続しても、個人情報や機密情報がサイトの所有者と共有されることはありません。",
   "sim-cw-your-collection": "あなたのコレクション ({count})",
   "sim-cw-nft-title": "クールなアート",
+  "sim-cw-nft-alt": "NFT画像",
   "sim-cw-nft-actions-tooltip": "これらは、NFTの所有者として実行できるいくつかのアクションです",
   "sim-cw-set-price": "価格を設定",
   "sim-cw-auction-item": "アイテムをオークションに出品",

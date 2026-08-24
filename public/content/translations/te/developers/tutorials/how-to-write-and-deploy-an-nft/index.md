@@ -227,7 +227,7 @@ Hardhat అనేది మీ ఎథీరియం సాఫ్ట్‌వే
 
 - HTTP Alchemy API URLని పొందడానికి మరియు దానిని మీ క్లిప్‌బోర్డ్‌కు కాపీ చేయడానికి దిగువ చూడండి
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.mp4#842x480)
 
 మీ `.env` ఇప్పుడు ఇలా ఉండాలి:
 

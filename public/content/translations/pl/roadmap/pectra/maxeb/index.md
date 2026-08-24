@@ -143,10 +143,8 @@ Dostępnych jest kilka narzędzi do zarządzania konsolidacjami. Oficjalnym narz
 
 ## Często zadawane pytania (FAQ) {#faq}
 
-### Czy dołączenie zmienia moje szczęście w propozycjach lub nagrody? {#change-luck-or-rewards}
-
-Nie. Dołączenie nie zmniejsza Twoich szans na propozycję – Twoje obowiązki i wybór propozycji pozostają takie same. Na przykład, jeśli masz dwa walidatory po 32 ETH w porównaniu do jednego walidatora z 64 ETH, będziesz miał takie same łączne szanse na to, że zostaniesz wybrany do zaproponowania bloku i zdobycia nagród.
-
+### Czy dołączenie zmienia moje szczęście do propozycji lub nagrody?
+Nie. Dołączenie nie zmniejsza Twoich szans na propozycję – Twoje obowiązki i wybór do propozycji pozostają takie same. Na przykład, jeśli masz dwa walidatory po 32 ETH w porównaniu do jednego walidatora z 64 ETH, będziesz miał takie same łączne szanse na to, że zostaniesz wybrany do zaproponowania bloku i zdobycia nagród.
 ### Czy dołączenie zmienia moje ryzyko cięcia? {#change-slashing-risk}
 
 Dla mniejszych lub nieprofesjonalnych operatorów krótka odpowiedź brzmi: nie. Dłuższa odpowiedź jest taka, że dla profesjonalnych operatorów uruchamiających wiele walidatorów na węzeł z szybkim systemem powiadomień, konsolidacja w mniejszą liczbę walidatorów może zmniejszyć ich zdolność do reagowania na cięcie i zapobiegania zdarzeniom kaskadowym. Początkowa *kara* za cięcie dla wszystkich walidatorów została drastycznie zmniejszona z 1 ETH (na 32 ETH) do 0,0078125 ETH (na 32 ETH), aby zrekompensować to ryzyko.

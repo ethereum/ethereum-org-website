@@ -5,9 +5,9 @@ description: Maelezo ya msingi unayohitaji ili kuelewa matumizi ya nishati ya Et
 lang: sw
 ---
 
-[Ethereum](/) ni mnyororo wa vitalu wa kijani. Utaratibu wa makubaliano wa [Uthibitisho wa Dau (PoS)](/developers/docs/consensus-mechanisms/pos) wa Ethereum unatumia ETH badala ya [nishati kulinda mtandao](/developers/docs/consensus-mechanisms/pow). Matumizi ya nishati ya Ethereum ni takriban [~0.0026 TWh/kwa mwaka](https://carbon-ratings.com/eth-report-2022) katika mtandao mzima wa kimataifa.
+[Ethereum](/) ni mnyororo wa vitalu wa kijani. Utaratibu wa makubaliano wa [Uthibitisho wa Dau (PoS)](/developers/docs/consensus-mechanisms/pos) wa Ethereum unatumia ETH badala ya [nishati kulinda mtandao](/developers/docs/consensus-mechanisms/pow). Matumizi ya nishati ya Ethereum ni takriban [\~0.0026 TWh/kwa mwaka](https://carbon-ratings.com/eth-report-2022) katika mtandao mzima wa kimataifa.
 
-Kadirio la matumizi ya nishati kwa Ethereum linatoka kwenye utafiti wa [CCRI (Taasisi ya Ukadiriaji wa Kaboni ya Kripto)](https://carbon-ratings.com). Walizalisha makadirio ya kuanzia chini kwenda juu ya matumizi ya umeme na kiwango cha kaboni cha mtandao wa Ethereum ([tazama ripoti](https://carbon-ratings.com/eth-report-2022)). Walipima matumizi ya umeme ya nodi tofauti zenye maunzi mbalimbali na usanidi wa programu za mteja. Kadirio la **2,601 MWh** (0.0026 TWh) kwa matumizi ya umeme ya kila mwaka ya mtandao linalingana na uzalishaji wa kaboni wa kila mwaka wa **tani 870 za CO2e** kwa kutumia vipengele vya ukubwa wa kaboni vya kikanda. Thamani hii inabadilika kadiri nodi zinavyoingia na kutoka kwenye mtandao - unaweza kufuatilia ukitumia kadirio la wastani wa siku 7 linaloendelea na [Faharisi ya Uendelevu wa Mtandao wa Mnyororo wa Vitalu wa Cambridge](https://ccaf.io/cbnsi/ethereum) (kumbuka kuwa wanatumia mbinu tofauti kidogo kwa makadirio yao - maelezo yanapatikana kwenye tovuti yao).
+Kadirio la matumizi ya nishati kwa Ethereum linatoka kwenye utafiti wa [CCRI (Taasisi ya Ukadiriaji wa Kaboni ya Kripto)](https://carbon-ratings.com). Walizalisha makadirio ya kuanzia chini kwenda juu ya matumizi ya umeme na kiwango cha kaboni cha mtandao wa Ethereum ([tazama ripoti](https://carbon-ratings.com/eth-report-2022)). Walipima matumizi ya umeme ya nodi tofauti zenye maunzi mbalimbali na usanidi wa programu za kiteja. Kadirio la **2,601 MWh** (0.0026 TWh) kwa matumizi ya umeme ya kila mwaka ya mtandao linalingana na uzalishaji wa kaboni wa kila mwaka wa **tani 870 za CO2e** kwa kutumia vipengele vya ukubwa wa kaboni vya kikanda. Thamani hii inabadilika kadiri nodi zinavyoingia na kutoka kwenye mtandao - unaweza kufuatilia ukitumia kadirio la wastani wa siku 7 linaloendelea na [Faharisi ya Uendelevu wa Mtandao wa Mnyororo wa Vitalu wa Cambridge](https://ccaf.io/cbnsi/ethereum) (kumbuka kuwa wanatumia mbinu tofauti kidogo kwa makadirio yao - maelezo yanapatikana kwenye tovuti yao).
 
 Ili kuweka matumizi ya nishati ya Ethereum katika muktadha, tunaweza kulinganisha makadirio ya kila mwaka kwa baadhi ya bidhaa na viwanda vingine. Hii inatusaidia kuelewa vyema ikiwa kadirio la Ethereum ni kubwa au dogo.
 
@@ -83,3 +83,5 @@ Majukwaa asilia ya Web3 ya kufadhili bidhaa za umma kama vile [Gitcoin](https://
 
 - [Mnyororo wa Beacon](/roadmap/beacon-chain)
 - [Unganisho](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />

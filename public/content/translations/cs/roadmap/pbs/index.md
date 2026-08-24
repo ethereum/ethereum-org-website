@@ -2,6 +2,7 @@
 title: Oddělení navrhovatele a tvůrce
 description: Zjistěte, jak a proč validátoři Etherea rozdělí své povinnosti týkající se tvorby a vysílání bloků.
 lang: cs
+template: roadmap
 ---
 
 Současní validátoři [Etherea](/) vytvářejí _a_ vysílají bloky. Sdružují transakce, o kterých se dozvěděli prostřednictvím sítě typu gossip, a balí je do bloku, který je odeslán uzlům (peers) v síti Ethereum. **Oddělení navrhovatele a tvůrce (PBS)** rozděluje tyto úkoly mezi více validátorů. Tvůrci bloků se stávají zodpovědnými za vytváření bloků a jejich nabízení navrhovateli bloku v každém slotu. Navrhovatel bloku nevidí obsah bloku, jednoduše si vybere ten nejvýnosnější, přičemž obdrží poplatek od tvůrce bloku (nebo tvůrce zaplatí navrhovateli nabídkovou cenu), než blok odešle svým uzlům (peers).

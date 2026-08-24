@@ -31,6 +31,11 @@ type LangViewModeObj = {
   [key: string]: { viewport: string; locale: string }
 }
 
+// RTL locales only get a representative subset of widths. Direction bugs
+// surface at mobile + desktop, so snapshotting Arabic at all 6 breakpoints
+// doubled the per-story count for little added signal.
+const rtlViewports = new Set(["base", "lg"])
+
 export const langViewportModes = Object.entries(
   viewportModes
 ).reduce<LangViewModeObj>((arr, curr) => {
@@ -39,6 +44,7 @@ export const langViewportModes = Object.entries(
   const currLangViewObj = {} as LangViewModeObj
 
   Object.entries(langModes).forEach(([langKey, langVal]) => {
+    if (langKey !== "en" && !rtlViewports.has(viewKey)) return
     currLangViewObj[`${langKey}-${viewKey}`] = {
       viewport: viewVal.viewport,
       locale: langVal.locale,
@@ -50,3 +56,14 @@ export const langViewportModes = Object.entries(
     ...currLangViewObj,
   }
 }, {})
+
+// Key must stay "en-lg": Chromatic stacks modes rather than replacing them,
+// de-duping by key, so this unions with langViewportModes down to its own 8.
+export const variantMode: LangViewModeObj = {
+  "en-lg": { viewport: "lg", locale: "en" },
+}
+
+export const staticModes: LangViewModeObj = {
+  "en-lg": { viewport: "lg", locale: "en" },
+  "ar-lg": { viewport: "lg", locale: "ar" },
+}

@@ -2,6 +2,7 @@
 title: 账户抽象
 description: 概述以太坊让用户账户变得更简单、更安全的计划
 lang: zh
+template: roadmap
 summaryPoints:
   - 账户抽象使构建智能合约钱包变得更加容易
   - 智能合约钱包使管理以太坊账户的访问权限变得更加容易

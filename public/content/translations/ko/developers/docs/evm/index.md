@@ -91,3 +91,5 @@ EVM의 모든 구현은 이더리움 황서에 설명된 사양을 준수해야 
 
 - [황서의 EVM 사양 이해하기](/developers/tutorials/yellow-paper-evm/) _– 이더리움 황서의 공식 EVM 사양에 대한 가이드._
 - [컨트랙트 리버스 엔지니어링](/developers/tutorials/reverse-engineering-a-contract/) _– EVM 연산 코드를 사용하여 컴파일된 스마트 컨트랙트를 리버스 엔지니어링하는 방법._
+
+<QuizWidget quizKey="evm" />
