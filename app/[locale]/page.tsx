@@ -98,7 +98,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <Alert
             variant="banner"
             // Devcon colors: keep hex colors
-            className="relative grid grid-cols-[1fr_auto_1fr] gap-x-8 overflow-hidden bg-linear-to-b from-[#1A0D33] to-[#45326C] py-3 max-md:px-4! max-sm:px-8 **:[img]:transition-transform **:[img]:duration-500 hover:**:[img]:scale-105"
+            className="relative grid grid-cols-[1fr_auto_1fr] gap-x-8 overflow-hidden bg-linear-to-b from-[#1A0D33] to-[#45326C] py-3 transition-[--tw-gradient-to-position] duration-300 hover:to-80% max-md:px-4! max-sm:px-8 **:[img]:transition-transform **:[img]:duration-500 hover:**:[img]:scale-105"
           >
             <div className="absolute inset-x-0 grid place-items-center">
               <Image
