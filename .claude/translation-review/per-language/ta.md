@@ -65,3 +65,57 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 
 - `அச்சிட்டு` for mint matches this file's 7 pre-existing mint strings — internally consistent, so not flagged despite reading closer to "stamp/print".
 - `key` did **not** regress to `திறவுகோல்` this run (the #18935 failure), and "salt" was resolved as the cryptographic term with an English gloss rather than culinary `உப்பு`.
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 7.4/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- Cross-script contamination fixed: a Bengali word `বিপুল` inside Tamil prose in `zero-knowledge-proofs` -> `பெரும்`. Open: `shared key` -> `விசை` where the glossary bare entry is `திறவுகோல்` (3 sites); `trade-offs` -> the swap sense `பரிமாற்றம்` (2 sites); `Twitter` left Latin against the glossary; `exposure` flattened to "obtain".
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 8.1/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:**
+
+- `fee-qualifier-stablecoins` -> `ஸ்டேபிள்காயின்களுக்கு` and `-stablecoins-lower-l2` -> `ஸ்டேபிள்காயின்கள்` (critical: ETHGlossary ta is `ஸ்டேபிள்காயின்`, and the ta tree carries 155 occurrences of it vs 7 of the descriptive `நிலையான நாணய-` form used here, with no gloss).
+
+**Open (native call needed):**
+
+- `fee-label-shield-unshield` -> `பாதுகாக்கும்/பாதுகாப்பை நீக்கும் கட்டணம்` collides with this page's own `security` = `பாதுகாப்பு` and `crops-secure` = `பாதுகாப்பானவை`, so the row reads "protection fee / protection-removal fee". **Deliberately NOT fixed** -- see notes.
+- Three imperative registers across sibling controls: `காட்டு` (bare familiar), `காண்க`/`உலாவுக` (literary), `தேடுங்கள்`/`பெறுங்கள்` (polite). The file's pre-existing buttons use bare stems.
+- `fee-free-tier-plans` -> `இலவச அடுக்கு` for "free tier" collides with glossary-mandated `அடுக்கு 2` for layer 2. Change the tier word, never the layer one.
+- `fee-qualifier-lower-with-premium` leaves Latin `Premium` -- the only Latin word in its bloc's new keys; house policy says transliterate, but no glossary entry exists.
+
+**Notes:**
+
+- **The shield/unshield finding was downgraded from critical to warning on evidence (#55).** The ta tree renders "shielded" as `பாதுகாக்கப்பட்ட` in 29 places -- including its own translation of `next-great-wallet-private/index.md`, the Railgun privacy article -- and `ஷீல்ட்` has ZERO precedent. Coining a transliteration against 29 established occurrences would be an unfounded fix. The real fix is a glossary entry (#57).
+- Glossary-mandated native forms are all honored and must NOT be "fixed": wallet = பணப்பை, token = வில்லை, node = கணு, network = பிணையம், staking = பங்குவைத்தல்.
+- `node` split: the new key uses glossary `கணு`; pre-existing `rpc-importing-desc` uses `முனை`. The drift is on the OLD line.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 7.2/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Custody inversion cluster in page-staking-cex-*: "custodial"/"has custody of" collapsed into `பாதுகாப்பு` (safekeeping), turning the exchange RISK column into a safety claim. Garbled brand `மெகாகூல்பூல்` for megapool. `குளம்` (water pond) for staking pool. JWT auth token given the crypto-token glossary word `வில்லை`. trade-offs handled correctly, but the INVERSE error appeared: `சமரசம்` used for security "compromised".
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 7.6/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+- AI prompt-card fill-in blanks (`[app]`, `[my device]`, `[my system]`, `[this]`, `[this error]`, `[App]`) translated -- they were shipped as verbatim English.
+- `Robust Incentives Group` restored to English at 5 sites -- the name had been semantically translated with no English retained, making the EF team unsearchable.
+
+- `சேணம்` (**saddle**) for "test harness" at 2 sites -> `கட்டமைப்பு` (2 prior tree uses).
+- `லட்டு` (the **laddu sweet**) for "lattice-based" -> `லேட்டிஸ்` (2 prior uses in post-quantum files).
+- `அந்நியச் செலாவணி` (**foreign exchange**) for "highest-leverage".
+- `பழமையான` (**ancient**) for "cryptographic primitives".
+- `காப்பகப் பாலங்கள்` (**archive** bridges) for "custodial bridges" -- turned a custody risk into an archive claim.
+- `பரிமாற்றங்கள்` (transfers) for "tradeoffs" -> `சமரசங்கள்` (3rd recurrence for ta; tree 118 occurrences).
+
+**Open (native call needed):**
+
+- `வெளிப்புறங்கள்` (exteriors) for economic "externalities".
+- `தணிக்கை` carries both "censorship" and "audit" in one file.
+- Lowest score in the fleet (7.6) -- but every critical had a tree-backed correct form available, so all six were mechanically fixable.

@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import { ErrorBoundary } from "@/components/ui/error-boundary"
 import { PersistentPanel } from "@/components/ui/persistent-panel"
@@ -9,6 +9,7 @@ import { Sheet, SheetTrigger } from "@/components/ui/sheet"
 import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { SITE_TITLE } from "@/lib/constants"
 
@@ -66,6 +67,7 @@ type MobileMenuClientProps = {
 
 const MobileMenuClient = ({ className, side }: MobileMenuClientProps) => {
   const t = useTranslations("common")
+  const locale = useLocale()
   const [open, setOpen] = useCloseOnNavigate()
   const triggerRef = React.useRef<HTMLButtonElement>(null)
   // Track if menu has ever been opened to keep content loaded after first open
@@ -86,6 +88,12 @@ const MobileMenuClient = ({ className, side }: MobileMenuClientProps) => {
       setHasBeenOpened(true)
     }
     setOpen(nextOpen)
+
+    trackCustomEvent({
+      eventCategory: "Mobile navigation menu",
+      eventAction: "Menu toggled",
+      eventName: `${nextOpen ? "Open" : "Close"} menu: ${locale}`,
+    })
   }
 
   return (

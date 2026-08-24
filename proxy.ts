@@ -3,8 +3,13 @@ import { NextRequest, NextResponse } from "next/server"
 import createMiddleware from "next-intl/middleware"
 
 import { routing } from "./src/i18n/routing"
-import { AB_CODE_SEGMENT, encodeABCode } from "./src/lib/ab-testing/constants"
-import { abTestRoutes } from "./src/lib/ab-testing/flags"
+import {
+  AB_CODE_SEGMENT,
+  encodeABCode,
+  FLAG_OVERRIDE_COOKIE_PREFIX,
+} from "./src/lib/ab-testing/constants"
+import { abTestRoutes, ALLOW_DEBUG_OVERRIDES } from "./src/lib/ab-testing/flags"
+import { getActiveExperimentNames } from "./src/lib/ab-testing/matomo-adapter"
 import { DEFAULT_LOCALE } from "./src/lib/constants"
 import { getFirstSegment } from "./src/lib/utils/url"
 
@@ -91,15 +96,35 @@ export default async function proxy(request: NextRequest) {
   // Only exact canonical paths match (non-canonical forms fall through and
   // get slash-normalized first). Only the default locale is A/B tested:
   // English URLs are unprefixed, so locale-prefixed paths never match.
-  // On failure, fall through to normal i18n handling (original variant).
+  // On failure, or with no experiment running, fall through to the real page.
   const routeFlags = abTestRoutes[pathname]
   if (routeFlags?.length) {
     try {
-      const code = await precompute(routeFlags)
-      const url = request.nextUrl.clone()
-      const suffix = pathname === "/" ? "" : pathname
-      url.pathname = `/${DEFAULT_LOCALE}/${AB_CODE_SEGMENT}/${encodeABCode(code)}${suffix}`
-      return NextResponse.rewrite(url)
+      // Only rewrite while a test is actually running, so the deployed page
+      // stays authoritative before launch and after a pause. Debug overrides
+      // force a rewrite so variants stay previewable on non-prod deploys.
+      const forced =
+        ALLOW_DEBUG_OVERRIDES &&
+        routeFlags.some((flag) =>
+          request.cookies.has(`${FLAG_OVERRIDE_COOKIE_PREFIX}${flag.key}`)
+        )
+
+      const running =
+        forced ||
+        (await getActiveExperimentNames().then((active) =>
+          routeFlags.some((flag) => active.has(flag.key))
+        ))
+
+      if (running) {
+        const code = await precompute(routeFlags)
+        const url = request.nextUrl.clone()
+        // The coded segment goes *below* the tested path, not above it, so the
+        // route's own layouts stay active - a coded page hoisted to the app
+        // root loses parallel slots like find-wallet's @modal, which breaks
+        // route interception for the variant being tested.
+        url.pathname = `/${DEFAULT_LOCALE}${pathname}${AB_CODE_SEGMENT}/${encodeABCode(code)}/`
+        return NextResponse.rewrite(url)
+      }
     } catch (error) {
       console.error("[proxy] A/B precompute failed:", error)
     }

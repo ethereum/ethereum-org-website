@@ -1,11 +1,11 @@
 ---
-title: Ethereum'un enerji harcaması
-metaTitle: Ethereum Enerji Tüketimi
-description: Ethereum'un enerji tüketimini anlamak için ihtiyacınız olan temel bilgiler.
+title: "Ethereum'un enerji harcaması"
+metaTitle: "Ethereum Enerji Tüketimi"
+description: "Ethereum'un enerji tüketimini anlamak için ihtiyacınız olan temel bilgiler."
 lang: tr
 ---
 
-[Ethereum](/) yeşil bir Blokzincirdir. Ethereum'un [Hisse Kanıtı (PoS)](/developers/docs/consensus-mechanisms/pos) mutabakat mekanizması, [ağı güvence altına almak için enerji](/developers/docs/consensus-mechanisms/pow) yerine ETH kullanır. Ethereum'un enerji tüketimi, tüm küresel ağ genelinde yaklaşık [~0,0026 TWh/yıl](https://carbon-ratings.com/eth-report-2022)'dır.
+[Ethereum](/) yeşil bir Blokzincirdir. Ethereum'un [Hisse Kanıtı (PoS)](/developers/docs/consensus-mechanisms/pos) mutabakat mekanizması, [ağı güvence altına almak için enerji](/developers/docs/consensus-mechanisms/pow) yerine ETH kullanır. Ethereum'un enerji tüketimi, tüm küresel ağ genelinde yaklaşık [\~0,0026 TWh/yıl](https://carbon-ratings.com/eth-report-2022)'dır.
 
 Ethereum için enerji tüketimi tahmini, bir [CCRI (Kripto Karbon Derecelendirme Enstitüsü)](https://carbon-ratings.com) çalışmasından gelmektedir. Ethereum ağının elektrik tüketimi ve karbon ayak izi hakkında aşağıdan yukarıya tahminler ürettiler ([rapora bakın](https://carbon-ratings.com/eth-report-2022)). Çeşitli donanım ve istemci yazılımı yapılandırmalarına sahip farklı düğümlerin elektrik tüketimini ölçtüler. Ağın yıllık elektrik tüketimi için tahmin edilen **2.601 MWh** (0,0026 TWh), bölgeye özgü karbon yoğunluğu faktörleri uygulandığında yıllık **870 ton CO2e** karbon emisyonuna karşılık gelmektedir. Bu değer, düğümler ağa girip çıktıkça değişir; [Cambridge Blokzincir Ağı Sürdürülebilirlik Endeksi](https://ccaf.io/cbnsi/ethereum) tarafından sağlanan 7 günlük hareketli ortalama tahminini kullanarak bunu takip edebilirsiniz (tahminleri için biraz farklı bir yöntem kullandıklarını unutmayın - ayrıntılar sitelerinde mevcuttur).
 
@@ -83,3 +83,5 @@ Ethereum'un enerji tüketimi çok düşük olmakla birlikte, Ethereum üzerinde 
 
 - [İşaret zinciri](/roadmap/beacon-chain)
 - [Birleşme](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />
