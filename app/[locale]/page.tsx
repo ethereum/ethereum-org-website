@@ -9,7 +9,8 @@ import {
 
 import type { PageParams } from "@/lib/types"
 
-import DevconDateLocation from "@/components/devcon-date-location"
+import DevconDateLocation from "@/components/DevconIndia/date-location"
+import DevconIndiaLargeCallout from "@/components/DevconIndia/large-callout"
 import HomeHero from "@/components/Hero/HomeHero"
 import FeatureCards from "@/components/Homepage/FeatureCards"
 import GetStartedGrid from "@/components/Homepage/GetStartedGrid"
@@ -192,6 +193,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             />
 
             <FeatureCards eventCategory={eventCategory} />
+
+            {/* Devcon VIII India callout banner */}
+            <DevconIndiaLargeCallout />
 
             <LatestUpdates eventCategory={eventCategory} />
 
