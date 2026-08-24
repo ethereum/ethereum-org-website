@@ -14478,6 +14478,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "jayproof",
+      "name": "jayproof",
+      "avatar_url": "https://avatars.githubusercontent.com/u/229312301?v=4",
+      "profile": "https://github.com/jayproof",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
