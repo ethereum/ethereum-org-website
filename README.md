@@ -2249,6 +2249,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/byt61"><img src="https://avatars.githubusercontent.com/u/271805600?v=4?s=100" width="100px;" alt="byt61"/><br /><sub><b>byt61</b></sub></a><br /><a href="#maintenance-byt61" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Sven-NOM"><img src="https://avatars.githubusercontent.com/u/122675156?v=4?s=100" width="100px;" alt="Sven-NOM"/><br /><sub><b>Sven-NOM</b></sub></a><br /><a href="#maintenance-Sven-NOM" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/jayproof"><img src="https://avatars.githubusercontent.com/u/229312301?v=4?s=100" width="100px;" alt="jayproof"/><br /><sub><b>jayproof</b></sub></a><br /><a href="#tool-jayproof" title="Tools">🔧</a></td>
     </tr>
   </tbody>
 </table>
