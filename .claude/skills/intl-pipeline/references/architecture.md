@@ -7,8 +7,8 @@ The per-file pipeline is a deterministic pure function from English changes to a
 - **english-A**: previous English content, retrieved via `git show {sourceCommitSha}:{path}` from the stored source manifest
 - **english-B**: current English content on disk
 - **locale-A**: existing translation on disk, corresponding to english-A
-- **source manifest** (`.manifest-source.json`): Merkle tree of english-A's content, including `sourceCommitSha`
-- **translation manifest** (`.manifest-translation.json`): Merkle tree mirroring the English tree structure but with per-section locale hashes + structural element mapping
+- **source manifest** (`.manifests/{destPath}/source.json`): Merkle tree of english-A's content, including `sourceCommitSha`
+- **translation manifest** (`.manifests/{destPath}/translation.json`): Merkle tree mirroring the English tree structure but with per-section locale hashes + structural element mapping
 
 ## Output
 
@@ -93,6 +93,15 @@ What it does:
 
 Manifest impact: source manifest unchanged (source didn't change); translation manifest updated to reflect translated values.
 
+### Phase 4 batching and its bounds
+
+Changed sections are packed into as few calls as fit, not one per section:
+
+- `batchSections` fills each batch with TRANSLATE sections up to `MAX_CHUNK_BYTES` (32KB) of **wire bytes** — content plus the `<SECTION id=".." action=".." heading="..">` envelope, which repeats the id twice and costs ~134 bytes for a JSON leaf. Content-only accounting understates a batch of small JSON keys by more than the content itself.
+- Each batch carries up to `MAX_CONTEXT_BYTES` (8KB) of CONTEXT sections, chosen as those nearest in document order to that batch's TRANSLATE sections. Context is replicated per batch, so it is a per-call tax; its size must never be subtracted from the per-batch budget (see `references/runbooks/cost-guard-tripped.md`).
+- `planIncrementalBatches` (`lib/llm/plan.ts`) assembles every prompt for a file+locale before any is sent, so the whole cost is known up front and checked against `createFileBudget`. `MODE=estimate` calls the same planner and sends nothing.
+- `callGeminiRaw` is the single LLM choke point: per-call prompt ceiling, run fuse, retries, model fallback, temperature escalation, and usage metering all live there. Transport is selected by `LLM_PROVIDER` (Gemini SDK, or OpenRouter's OpenAI-compatible endpoint shaped to the same response).
+
 ## Phase 5: Assembly
 
 Splices LLM-translated sections (Phase 4) into the deterministically-updated locale file (Phase 3 output):
@@ -138,6 +147,6 @@ Surfaced in `tests/specs/PIPELINE-SPEC.md`; load that doc when you hit one:
 
 - Gemini API integration details (see `references/ethglossary.md` for term lookups; `gemini.ts` for the adapter)
 - GitHub Actions workflow shape (see `references/orchestration.md`)
-- Multi-file batching, chunking for large files (see `tests/specs/CONCURRENCY-SPEC.md`)
+- Multi-file batching, chunking for large files (see `tests/specs/CONCURRENCY-SPEC.md`, Parts 2 and 4)
 - Post-import sanitizer (see `references/sanitizer.md`)
 - Image alt text translation (known gap; alt text in markdown images is not classified as translatable by the current parser)

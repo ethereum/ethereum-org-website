@@ -8,7 +8,7 @@ Decision tree for: "Can I edit this translated file by hand?" The answer is some
 Are you editing a translated file?
 │
 ├── Has the English source changed since the manifest was stamped?
-│   (Check: is .manifest-source.json's sourceCommitSha older than the most recent commit
+│   (Check: is .manifests/{destPath}/source.json's sourceCommitSha older than the most recent commit
 │    that touched the English file?)
 │   │
 │   ├── NO (English unchanged since stamp)
@@ -29,7 +29,7 @@ Are you editing a translated file?
 
 ## Why this rule exists
 
-The pipeline tracks state with two manifests per file+locale: `.manifest-source.json` (Merkle tree of English at stamp time, plus `sourceCommitSha`) and `.manifest-translation.json` (Merkle tree of the locale, mirroring the English structure).
+The pipeline tracks state with two manifests per file+locale, centralized under `.manifests/{destPath}/`: `source.json` (Merkle tree of English at stamp time, plus `sourceCommitSha`) and `translation.json` (Merkle tree of the locale, mirroring the English structure).
 
 When the pipeline runs incrementally, it compares:
 
@@ -89,7 +89,7 @@ To check whether a hand-edit would cause drift:
 
 ```bash
 # Get the stamped source commit for a locale file
-jq -r '.sourceCommitSha' public/content/translations/ja/some-page/index.md.manifest-source.json
+jq -r '.sourceCommitSha' .manifests/public/content/translations/ja/some-page/index.md/source.json
 
 # Check if English has commits after that SHA
 git log <stamped-sha>..HEAD -- public/content/some-page/index.md

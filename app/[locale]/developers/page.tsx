@@ -291,7 +291,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                         eventAction: "click",
                         eventName: "scaffold-docs",
                       }}
-                      rel="noopener"
+                      sendReferrer
                     >
                       {t("page-developers-quickstart-scaffold-docs")}
                     </InlineLink>

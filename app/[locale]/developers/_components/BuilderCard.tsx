@@ -20,6 +20,7 @@ type BuildCardProps = {
 const BuilderCard = ({ path }: BuildCardProps) => (
   <Card
     href={path.href}
+    sendReferrer
     variant="ghost"
     className="border"
     customEventOptions={{
