@@ -93,3 +93,16 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 `智慧合約` DID recur -- one site, run-a-node:406, now the third recurrence after #18344 and #18772. More serious: `去中心化礦池` described Rocket Pool as a MINING pool, a PoW/PoS inversion. `掃描` (scan) for the withdrawal sweep, contradicting withdrawals' own `清掃`. Zero Simplified-character leakage (verified against the repo's own zh/zh-tw corpora).
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 9.2/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:** none needed -- zero criticals.
+
+
+**Open (native call needed):**
+
+- `十六進制` (mainland form) for hexary -- the only occurrence in the zh-tw corpus vs 64x `十六進位`.
+- Register flipped 你 -> 您 at 3 new sites in the md; the JSON and `page-values` use 你 exclusively.
+- `測試設備` (equipment) for "test fixtures"; these are JSON test vectors.
+- `適度的硬體` parses as "an appropriate amount of hardware" rather than "low-end hardware".
+- Zero Simplified leakage; neither `智慧合約` nor the #19115 `礦池` PoW/PoS inversion recurred.

@@ -100,3 +100,38 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 Custody inversion cluster in page-staking-cex-*: "custodial"/"has custody of" collapsed into `பாதுகாப்பு` (safekeeping), turning the exchange RISK column into a safety claim. Garbled brand `மெகாகூல்பூல்` for megapool. `குளம்` (water pond) for staking pool. JWT auth token given the crypto-token glossary word `வில்லை`. trade-offs handled correctly, but the INVERSE error appeared: `சமரசம்` used for security "compromised".
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 7.6/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+- AI prompt-card fill-in blanks (`[app]`, `[my device]`, `[my system]`, `[this]`, `[this error]`, `[App]`) translated -- they were shipped as verbatim English.
+- `Robust Incentives Group` restored to English at 5 sites -- the name had been semantically translated with no English retained, making the EF team unsearchable.
+
+- `சேணம்` (**saddle**) for "test harness" at 2 sites -> `கட்டமைப்பு` (2 prior tree uses).
+- `லட்டு` (the **laddu sweet**) for "lattice-based" -> `லேட்டிஸ்` (2 prior uses in post-quantum files).
+- `அந்நியச் செலாவணி` (**foreign exchange**) for "highest-leverage".
+- `பழமையான` (**ancient**) for "cryptographic primitives".
+- `காப்பகப் பாலங்கள்` (**archive** bridges) for "custodial bridges" -- turned a custody risk into an archive claim.
+- `பரிமாற்றங்கள்` (transfers) for "tradeoffs" -> `சமரசங்கள்` (3rd recurrence for ta; tree 118 occurrences).
+
+**Open (native call needed):**
+
+- `வெளிப்புறங்கள்` (exteriors) for economic "externalities".
+- `தணிக்கை` carries both "censorship" and "audit" in one file.
+- Lowest score in the fleet (7.6) -- but every critical had a tree-backed correct form available, so all six were mechanically fixable.
+
+## PR #19142 (intl/pending-devcon-banner) -- 2026-08-21 -- Score 9.6/10
+Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
+
+**Fixed in this branch:**
+
+- `Devcon` -> `டெவ்கான்` in `title` and `subtitle`. Derived form (Gemini 3.1 Pro), consistent with 6.1's rule that ta transliterates brands and proper nouns while calquing concepts. `logo-alt` stays Latin.
+
+**Open (native call needed):**
+
+- Register splits inside one 6-key file: `headline` and `subtitle` use the bare imperative `உரிமைக்கோர்`, while `title` (`ஒன்றுகூடுங்கள்`) and `cta-get-tickets` (`பெறுங்கள்`) use the polite `-ungal` form. Tamil UI convention is polite throughout; `உரிமைக்கோருங்கள்` aligns it. Left for native review -- auto-fix cannot reliably pick a register.
+
+**Notes:**
+
+- `உரிமைக்கோர்` is the correct stem of the ETHGlossary `claim` term (`உரிமைக்கோரல்`) -- the finding is register, not terminology.
+

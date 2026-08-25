@@ -49,3 +49,27 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 Indic loaded-polyseme bloc failure recurs at 4 sites: `कलाकार`/`अभिनेते` (performers) for actors (#19015 recurrence), `युक्तिवाद` (debating argument) for a CLI argument, `तडजोड` (concession) for security compromise, `प्रमुख` (chief) for chain head. `रिवॉर्ड्स`->`बक्षिसे`. JSON `विश्वसनीय` read as praise in a warning slot.
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 8.7/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+
+- AI prompt-card fill-in blanks (`[app]`, `[my device]`, `[my system]`, `[this]`, `[this error]`, `[App]`) translated -- they were shipped as verbatim English.
+
+
+**Open (native call needed):**
+
+- Five mild Indic polyseme misses: `जागा` (space->place, a regression), `कुटुंबे` (families->households), `नाकारू` (deprecate->refuse), `नियंत्रण` (capture->control), `मर्यादा` (floor->cap).
+- `Amazon`/`ॲमेझॉन` split within one file.
+
+## PR #19142 (intl/pending-devcon-banner) -- 2026-08-21 -- Score 9.8/10
+Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
+
+**Fixed in this branch:**
+
+- `Devcon` -> `डेवकॉन` in `title` and `subtitle`, matching devcon.org's own Marathi site. `logo-alt` stays Latin.
+
+**Open (native call needed):**
+
+- `title` renders "the curious" as `उत्सुक` (eager, keen) where `जिज्ञासू` (inquisitive) is the precise match; hi used `जिज्ञासु` correctly on the same string.
+

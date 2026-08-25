@@ -77,8 +77,76 @@ No entry means the model invents one, and it invented badly in these cases.
 | sw | `liquid staking token (LST)` -> `tokani ya uwekaji amana wenye ukwasi (lst)` | `tokani` conflicts with `token` -> `tokeni`; `amana` conflicts with `stake` -> `dhamana`; acronym lowercased. |
 | sw | `staking as a service` -> `kuweka hisa kama huduma` | `hisa` (shares) conflicts with `stake` -> `dhamana` used everywhere else. |
 
+## 6. Non-NFC term data (added from PR #19034)
+
+| Locale | Entry | Defect |
+| --- | --- | --- |
+| ar | `validator` -> `مُدَقِّق` | SHADDA U+0651 stored **before** KASRA U+0650. Canonical order is kasra (ccc 32) then shadda (ccc 33). Renders identically, but it is the only non-NFC entry of the 165 ar terms and it denormalized `ar/community/research/index.md` (NFC on `origin/dev`, not NFC after the run). Breaks byte-level search, diff and dedup. |
+| ur | `decentralized` -> `لامركزی` | Arabic kaf U+0643 where Urdu keheh U+06A9 belongs. **Do not sweep the tree from this entry alone** -- the defective form is already dominant 646:186 in the ur tree, so the fix must be: normalize the entry, then one tree-wide codepoint sweep in its own commit. See known-patterns #70. |
+
+Assert `text == NFC(text)` on glossary responses as part of the fetch, so an entry like this cannot enter the pipeline silently.
+
+## 7. Bare-vs-compound rows that contradict their own note (added from PR #19034)
+
+| Locale | Entry | Defect |
+| --- | --- | --- |
+| de | `contract` -> `Vertrag` | The row's own note reads "Smart contract -- code deployed on the blockchain. NOT a legal agreement." `Vertrag` **is** the German legal-contract word. The `smart contract` row is correctly `Smart Contract`. The bare row contradicts its note. |
+| it | `contract` -> `contratto` | Same shape (note says NOT a legal agreement; `contratto` is the legal word). |
+| ta | `contract` -> `ஒப்பந்தம்` | Same shape. |
+| tr | `contract` -> `Sözleşme` | Same shape, plus a capitalized common noun. |
+
+Locales whose `contract` row *does* carry the code sense (`কন্ট্রাক্ট`, `컨트랙트`, `کنٹریکٹ`) have notes explicitly forbidding the legal word -- and **bn, ko and ur all deviated to the legal word anyway** on the same key in PR #19034. So the entries that are right are being ignored and the entries that are wrong are being followed. Recommend making every `contract` row the code sense and adding the legal sense as a separate `legal contract` term. This is known-patterns #30 (compound wins, bare loses) in a new place.
+
+## 8. Missing entries that caused real errors in PR #19034
+
+| Term | Evidence |
+| --- | --- |
+| `soundness` (proof-system property) | Rendered as "reliability"/"validity" in de, id, pl, ta, vi. Distinct from validity; needs its own row. |
+| `test harness` | tr "hardware", ta "saddle", es/fr "horse harness", sw "apparatus". The physical sense dominates in most target languages. |
+| `custodial` / `custody` | ta rendered custodial bridges as *archive* bridges, turning a risk into a safety claim -- the second ta custody inversion in two PRs (#19115). fr `ponts de garde` = "on-duty bridges". |
+| `recourse` | "no way out" instead of redress in ru, id, pl, uk. |
+| `capture` (takeover sense) | Flattened to "monopoly" in ko, ja, mr, it. |
+| `locally` (on your own machine) | sw `ndani ya nchi` = "domestically, within the country". |
+| `derivatives` (financial) | sw `viingilio` = "entrance fees" -- tree-established but semantically wrong. |
+| `gatekeeper`, `lock-in` | Held valence in every locale this time, but only because the surrounding prose carried it. Worth entries before the next values-register page. |
+
 ## Priority
 
 Sections 1 and 2 are mechanical and affect the most shipped text. Section 4's `compromise` and
 `auth token` entries would each prevent errors in five or more locales. Section 3's te `స్టాకింగ్`
 typo is the most visible single defect — it reached a page title.
+
+Section 6 is a correctness bug in the data itself and should go first: it is two entries and it
+silently denormalizes every file that uses them. Section 7 is the highest-leverage linguistic fix --
+one row per locale removes a recurring critical on every page that says "contracts". Section 8's
+`soundness` and `test harness` each broke five locales in a single PR.
+
+
+## 9. Missing entries: `Devcon` and `Devconnect` (PR #19142)
+
+Neither name is in ETHGlossary (`/filter` matched only `claim` against the banner source), and neither is in `PROTECTED_BRAND_NAMES` in `intl-sanitizer.ts`. With no entry and no sanitizer rule, every run re-decides an event name that now ships in UI strings. On PR #19142 the fleet split 12-1 and nine locales were hand-corrected -- which holds only until the English source moves.
+
+**Requested entry -- `Devcon`** (sibling entry for `Devconnect`):
+
+| Field | Value |
+| --- | --- |
+| `term_role` | `brand-or-project` |
+| `script_rule` | `transliterate` (group rules), with Latin-pinned `contexts` for the title lockup and image `alt` text |
+
+| Locale | Requested `translation.term` | Confidence | Basis |
+| --- | --- | --- | --- |
+| hi, mr | `डेवकॉन` | high | devcon.org's own hi/mr sites. Note `blog.ethereum.org/hi` disagrees (`देवकॉन`); prefer devcon.org, and see known-patterns #76 for why the blog does not count |
+| ko | `데브콘` | high | tree precedent, human-authored |
+| ja | `Devcon` (`keep_latin` override) | high | independent JP crypto press is uniformly Latin; no katakana usage found |
+| ar | `ديفكون` **or** `ديڤكون` | **low -- needs native decision** | 6.3 allows either ف or ڤ for "v" and demands consistency. Shipped ف, but the evidence that decided it was pipeline output, so the tie is open |
+| bn | `ডেভকন` | low -- derived | LLM-derived; no Bengali press usage found |
+| ta | `டெவ்கான்` | low -- derived | LLM-derived |
+| te | `డెవ్కాన్` | low -- derived | LLM-derived, halant per 6.1 te rule |
+| ur | `ڈیوکان` | low -- derived | LLM-derived |
+| ru | `Девкон` + case guidance | **blocked** | Qualifies for a 6.2 consumer-tier override, but the usage `на Devcon 8` needs prepositional case (`на Девконе 8`) or 7.3 apposition (`на конференции Девкон 8`). Needs a native call on which |
+| uk | none | **blocked** | No EF uk localization exists, and 6.2 forbids deriving Ukrainian from Russian |
+| zh, zh-tw | `Devcon` (`keep_latin`) | high | 6.5 default; do not auto-generate phonetic Hanzi |
+
+This is a clean section-9.3-shaped addition rather than a conflict -- `Devcon` is not an existing entry, so there is no `keep_latin` flag to reconcile.
+
+Two pre-existing items the new entry will eventually correct, both out of scope for #19142: `src/intl/*/common.json` ships `"devcon": "Devcon"` and `"nav-devcon-label": "Devcon"` in **24/24** locales, and `public/content/translations/` has zero native-script renderings outside ko (hi 66 Latin, zh 74, ja 71, zh-tw 71, ru 70, uk 70, ta 69, ur 66, ar 64, te 62, mr 55, bn 48).

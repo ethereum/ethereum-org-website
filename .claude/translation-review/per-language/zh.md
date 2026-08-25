@@ -79,3 +79,16 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 `智慧合约` did NOT recur (all 23 sites correct); state is `状态`, zero `国家`; client is `客户端`. Remaining: `妥协` (concession) for security compromise, `验证者指数` (numerical index) for validator index -- a regression, dev had `索引`; JWT token as `代币`; and `slot` collapsed into `时段` (the epoch word) because zh has no slot entry. dvt flipped register 你->您 against its own prior state and 5 siblings.
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 9.3/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+
+- Dropped character garbling a clause: `这里的研分为两条主线` -> `这里的研究分为两条主线` (`研` alone is not a word).
+
+**Open (native call needed):**
+
+- `Open Source AI Definition` is the only untranslated article title in the file, while the sibling key renders "The Open Source Definition" as `开源定义`.
+- `Gas 上限计划` casing vs glossary `gas 上限`.
+- ASCII/full-width comma mixing inside single strings.
+- Zero Traditional-character leakage; the prior `slot`->`时段` collapse did not recur.

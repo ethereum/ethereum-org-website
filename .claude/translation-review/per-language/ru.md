@@ -51,3 +51,30 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 seed phrase as `seed-фразы` vs glossary `сид-фразы`. `производство` (manufacturing) for production/deployed at 4 dvt sites incl. a heading. Decimal points instead of commas in 5 JSON figures while markdown was correct. "state" polysemy CLEAR (состояние everywhere, zero государство).
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 8.8/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+
+- Non-word `побеждами с ними` -> `побеждали в них` (visible gibberish).
+- `head of the blockchain` -> `начало` (beginning) -> `вершины`. The pre-PR translation was correct.
+
+**Open (native call needed):**
+
+- `Сложные валидаторы` (complex) for "sophisticated validators"; pre-PR had `Опытные`.
+- `график газа` -- "schedule" as timetable; it is a cost table.
+- `альтернативы популярному ПО с открытым исходным кодом` reverses the sense by attachment.
+- `commons` and `the public domain` both collapse to `общественное достояние` in one file.
+- `Я попробовал` hard-codes a male speaker.
+
+## PR #19142 (intl/pending-devcon-banner) -- 2026-08-21 -- Score 9.8/10
+Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
+
+**Open (upstream -- authoritative-ish form exists, deliberately not applied):**
+
+- `Devcon` kept Latin. Policy 6.2 defaults the Cyrillic group to `always_latin` for brands, with `transliterate` overrides only for consumer-tier brands that have a universally established Cyrillic form. `blog.ethereum.org/ru` does ship `Девкон` (~25-30 occurrences, title "Встречайте Девкон 7!"), which is the kind of evidence that would qualify for the override -- but that blog is this same pipeline against this same glossary gap, so it is not independent. Not applied for a second reason: the string is `на Devcon 8`, which needs prepositional case (`на Девконе 8`) or, per 7.3's preference, apposition (`на конференции Девкон 8`). Guessing Russian morphology on a marketing banner is not worth it. Needs native input; filed in `ethglossary-normalization-queue.md` section 9.
+
+**Open (upstream, do not fix in locale):**
+
+- `Получите скидку 10%` deviates from ETHGlossary `claim` = `востребование`. `claim` has `script_rule: null`, so per the severity matrix this is High, not critical, and not auto-fixable. `востребуйте скидку` would be markedly worse Russian. See known-patterns #75.
+

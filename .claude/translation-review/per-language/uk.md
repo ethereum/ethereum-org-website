@@ -70,3 +70,23 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 JSON inversion: "correct head of the chain" rendered as the chain's `початку` (beginning) -- the opposite end; solo:22 had the correct `вершини`. `виробництво` (manufacturing) for production at 4 dvt sites. "state" polysemy CLEAR (стан, zero держава). Compounding rendered 3 ways across cross-linking pages.
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 9.4/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:** none needed -- zero criticals.
+
+
+**Open (native call needed):**
+
+- `незалежність` (independence) for "sovereignty"; the uk tree uses `суверенітет`/`самосуверенність` at 50+ sites.
+- `у нагоді стають` should be `у пригоді` (only occurrence of the error in the uk tree).
+- `не маєте жодного впливу` loses the redress sense of "no recourse".
+- Highest-scoring locale with zero criticals, alongside it/de.
+
+## PR #19142 (intl/pending-devcon-banner) -- 2026-08-21 -- Score 9.9/10
+Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
+
+**Open (upstream):**
+
+- `Devcon` kept Latin. No EF Ukrainian localization exists for the reference post (404), and policy 6.2 explicitly forbids deriving Ukrainian transliterations from Russian ("Vitalik is Віталік, not Виталик"). So unlike ru there is not even a weak candidate form. Needs native input; filed in `ethglossary-normalization-queue.md` section 9.
+- `Затребуйте` follows the ETHGlossary `claim` entry (`затребування`); reads bureaucratic on a discount banner, same class as ru/pl. See known-patterns #75.

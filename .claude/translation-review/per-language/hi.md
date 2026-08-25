@@ -61,3 +61,29 @@ Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy 
 Worst structural damage in the fleet and hi-only: 18 markdown links and JSX spans wrapped in backticks in staking/saas, killing every link on the page (0 on dev). Also a run-a-node table header reverted to English (only locale affected). Negation inversion at solo:220; must->should modal in a JSON risk disclosure; saas swung wholesale from glossary `पुरस्कार` to `इनाम` and from `कंपाउंडिंग` to the semantically wrong `संयोजित`. `अभिनेता` recurrence.
 
 Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 8.4/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+- AI prompt-card fill-in blanks (`[app]`, `[my device]`, `[my system]`, `[this]`, `[this error]`, `[App]`) translated -- they were shipped as verbatim English.
+- `Robust Incentives Group` restored to English at 5 sites -- the name had been semantically translated with no English retained, making the EF team unsearchable.
+
+- `auditable` -> `श्रव्य` (**audible**). Exactly 1 occurrence tree-wide (this one) vs 6 for the correct `ऑडिट करने योग्य`.
+- Two inversions of relational "against": `के खिलाफ` (opposing) for "designing against standards" and "report progress against it".
+- `accounting rigorously for` -> `लेखांकन` (financial bookkeeping).
+- `priced` -> `मूल्यवान बनाया` ("made valuable") -- flipped a listed harm into a benefit.
+
+**Open (native call needed):**
+
+- `attestations` -> `सत्यापन`, colliding with `सत्यापक` (validator) in the same sentence; tree form is `अनुप्रमाणन` (279).
+- `peer review` rendered two ways within one PR.
+
+## PR #19142 (intl/pending-devcon-banner) -- 2026-08-21 -- Score 9.8/10
+Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
+
+**Fixed in this branch:**
+
+- `Devcon` -> `डेवकॉन` in `title` and `subtitle`, matching devcon.org's own Hindi site. `logo-alt` stays Latin (title lockup / alt text).
+
+**Note:** devcon.org ships `डेवकॉन` (retroflex ड, the standard IT-loanword form -- cf. `डेवलपर`) while `blog.ethereum.org/hi` ships `देवकॉन` (dental द). devcon.org wins: it is the event's own India-facing site and more recent, and the blog is pipeline output rather than independent authority. Record `डेवकॉन` in the glossary entry so the two stop disagreeing.
+
