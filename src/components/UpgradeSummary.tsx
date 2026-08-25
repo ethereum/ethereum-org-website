@@ -93,6 +93,10 @@ const UpgradeSummary = async ({ slug }: UpgradeSummaryProps) => {
     mainnet?.status === "complete"
       ? "page-roadmap-upgrade-status-activated"
       : "page-roadmap-upgrade-status-target"
+  const trackLabelKey =
+    mainnet?.status === "complete"
+      ? "page-roadmap-upgrade-status-details"
+      : "page-roadmap-upgrade-status-track"
   const running = upgrade.milestones.find((m) => m.status === "live")
   const stageLabelKey = running
     ? STAGE_LABEL_KEYS[running.kind]
@@ -156,9 +160,7 @@ const UpgradeSummary = async ({ slug }: UpgradeSummaryProps) => {
           </dl>
 
           <p className="m-0">
-            <InlineLink href={upgrade.sourceUrl}>
-              {t("page-roadmap-upgrade-status-track")}
-            </InlineLink>
+            <InlineLink href={upgrade.sourceUrl}>{t(trackLabelKey)}</InlineLink>
           </p>
         </AlertDescription>
       </AlertContent>
