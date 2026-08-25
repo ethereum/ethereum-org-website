@@ -1,0 +1,240 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-upgrades-get-involved.json",
+  "generatedAt": "2026-06-16T16:09:46.696Z",
+  "rootHash": "f0167eed15df",
+  "tree": {
+    "contentHash": "e722eb548190",
+    "anchorHash": "1336b0436f65",
+    "children": {
+      "page-upgrades-get-involved-btn-1": {
+        "contentHash": "fc12204e6a14",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-btn-2": {
+        "contentHash": "69d6e676fc84",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-btn-3": {
+        "contentHash": "9dae486d0ddf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-bug": {
+        "contentHash": "c936bfa17811",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-bug-hunting": {
+        "contentHash": "3e9043f9d462",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-bug-hunting-desc": {
+        "contentHash": "76e9fff7d9fe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-bug-li": {
+        "contentHash": "24078a0faadc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-bug-li-2": {
+        "contentHash": "34c76f586027",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-bug-li-3": {
+        "contentHash": "06d331344bb2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-bug-li-4": {
+        "contentHash": "5dad1c3c6320",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-desc-1": {
+        "contentHash": "d92fca25ce84",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-desc-2": {
+        "contentHash": "f81cb7543b5e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-desc-3": {
+        "contentHash": "c88bf78431e7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-ethresearch-1": {
+        "contentHash": "18d5c3346922",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-ethresearch-2": {
+        "contentHash": "c09500586c2c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-ethresearch-3": {
+        "contentHash": "a5ee0ddb3090",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-ethresearch-4": {
+        "contentHash": "157463f4e039",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-how": {
+        "contentHash": "84ebea00e513",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-how-desc": {
+        "contentHash": "22203756cec6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-join": {
+        "contentHash": "6efb14190f1e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-join-desc": {
+        "contentHash": "63853c0103ac",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-meta-description": {
+        "contentHash": "8bda81ad2166",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-run-clients": {
+        "contentHash": "b2717c60b1ce",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-run-clients-desc": {
+        "contentHash": "388bfd02dadb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-run-clients-desc-link": {
+        "contentHash": "bc787a5eb692",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-run-clients-execution": {
+        "contentHash": "b77365cd987a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-run-clients-execution-desc": {
+        "contentHash": "8daa22068d08",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-run-clients-consensus": {
+        "contentHash": "548375db6020",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-run-clients-consensus-desc": {
+        "contentHash": "fe71f073a6cd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-stake": {
+        "contentHash": "406ac3dd5da0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-stake-desc": {
+        "contentHash": "c6091663a974",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-stake-eth": {
+        "contentHash": "e53a7b6de046",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-subtitle": {
+        "contentHash": "73315e85187c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-title-1": {
+        "contentHash": "91cde2982fca",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-title-2": {
+        "contentHash": "406ac3dd5da0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-title-3": {
+        "contentHash": "9dae486d0ddf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-written-c-sharp": {
+        "contentHash": "928e456d93bd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-written-go": {
+        "contentHash": "8e5256a1b75b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-written-java": {
+        "contentHash": "cdb52ce29a8a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-written-javascript": {
+        "contentHash": "6276618f0d85",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-written-nim": {
+        "contentHash": "e51b9a3857a9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-written-rust": {
+        "contentHash": "03781e7a2449",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved": {
+        "contentHash": "aeccedf389f0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-2": {
+        "contentHash": "2cba40c2541b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-leaderboard-points": {
+        "contentHash": "c54a061dfcc1",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-upgrades-get-involved-btn-1",
+      "page-upgrades-get-involved-btn-2",
+      "page-upgrades-get-involved-btn-3",
+      "page-upgrades-get-involved-bug",
+      "page-upgrades-get-involved-bug-hunting",
+      "page-upgrades-get-involved-bug-hunting-desc",
+      "page-upgrades-get-involved-bug-li",
+      "page-upgrades-get-involved-bug-li-2",
+      "page-upgrades-get-involved-bug-li-3",
+      "page-upgrades-get-involved-bug-li-4",
+      "page-upgrades-get-involved-desc-1",
+      "page-upgrades-get-involved-desc-2",
+      "page-upgrades-get-involved-desc-3",
+      "page-upgrades-get-involved-ethresearch-1",
+      "page-upgrades-get-involved-ethresearch-2",
+      "page-upgrades-get-involved-ethresearch-3",
+      "page-upgrades-get-involved-ethresearch-4",
+      "page-upgrades-get-involved-how",
+      "page-upgrades-get-involved-how-desc",
+      "page-upgrades-get-involved-join",
+      "page-upgrades-get-involved-join-desc",
+      "page-upgrades-get-involved-meta-description",
+      "page-upgrades-get-involved-run-clients",
+      "page-upgrades-get-involved-run-clients-desc",
+      "page-upgrades-get-involved-run-clients-desc-link",
+      "page-upgrades-get-involved-run-clients-execution",
+      "page-upgrades-get-involved-run-clients-execution-desc",
+      "page-upgrades-get-involved-run-clients-consensus",
+      "page-upgrades-get-involved-run-clients-consensus-desc",
+      "page-upgrades-get-involved-stake",
+      "page-upgrades-get-involved-stake-desc",
+      "page-upgrades-get-involved-stake-eth",
+      "page-upgrades-get-involved-subtitle",
+      "page-upgrades-get-involved-title-1",
+      "page-upgrades-get-involved-title-2",
+      "page-upgrades-get-involved-title-3",
+      "page-upgrades-get-involved-written-c-sharp",
+      "page-upgrades-get-involved-written-go",
+      "page-upgrades-get-involved-written-java",
+      "page-upgrades-get-involved-written-javascript",
+      "page-upgrades-get-involved-written-nim",
+      "page-upgrades-get-involved-written-rust",
+      "page-upgrades-get-involved",
+      "page-upgrades-get-involved-2",
+      "page-upgrades-bug-bounty-leaderboard-points"
+    ]
+  },
+  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+}

@@ -17,6 +17,8 @@ For operations with dynamic gas costs, see [gas.md](https://github.com/wolflo/ev
 
 💡 Quick tip: To view entire lines, use `[shift] + scroll` to scroll horizontally on desktop.
 
+<WideTable>
+
 | Stack | Name           |                                               Gas                                               | Initial Stack                                                                             | Resulting Stack                 | Mem / Storage                                                                 | Notes                                                                                                                            |
 | :---: | :------------- | :---------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------- | :------------------------------ | :---------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------- |
 |  00   | STOP           |                                                0                                                |                                                                                           |                                 |                                                                               | halt execution                                                                                                                   |
@@ -175,3 +177,5 @@ For operations with dynamic gas costs, see [gas.md](https://github.com/wolflo/ev
 |  FD   | REVERT         |       0[\*](https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a0-1-memory-expansion)       | `ost, len`                                                                                | `.`                             |                                                                               | revert(mem[ost:ost+len-1])                                                                                                       |
 |  FE   | INVALID        |             [AF](https://github.com/wolflo/evm-opcodes/blob/main/gas.md#af-invalid)             |                                                                                           |                                 | designated invalid opcode - [EIP-141](https://eips.ethereum.org/EIPS/eip-141) |
 |  FF   | SELFDESTRUCT   |          [AB](https://github.com/wolflo/evm-opcodes/blob/main/gas.md#ab-selfdestruct)           | `addr`                                                                                    | `.`                             |                                                                               | sends all ETH to `addr`; if executed in the same transaction as a contract was created it destroys the contract                  |
+
+</WideTable>

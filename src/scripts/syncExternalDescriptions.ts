@@ -84,7 +84,7 @@ interface ToolItem {
 }
 
 interface ToolsEnvelope {
-  toolsById: Record<string, ToolItem>
+  resources: ToolItem[]
 }
 
 // ── Extraction ──────────────────────────────────────────────────────────────
@@ -110,7 +110,7 @@ function extractToolDescriptions(
 ): Record<string, string> {
   const namespace: Record<string, string> = {}
 
-  for (const tool of Object.values(toolsData.toolsById)) {
+  for (const tool of toolsData.resources) {
     if (!tool.name || !tool.description) continue
     const key = `tool-${slugify(tool.name)}-description`
     namespace[key] = tool.description
@@ -138,9 +138,7 @@ function writeNamespace(filename: string, data: Record<string, string>): void {
 // ── Main ────────────────────────────────────────────────────────────────────
 
 async function main() {
-  console.log(
-    `Reading from ${USE_MOCK ? "mock data" : "Netlify Blobs"}...`
-  )
+  console.log(`Reading from ${USE_MOCK ? "mock data" : "Netlify Blobs"}...`)
 
   const [appsData, toolsData] = await Promise.all([
     readBlob<Record<string, AppItem[]>>("fetch-apps"),
@@ -160,7 +158,9 @@ async function main() {
   const appDescriptions = extractAppDescriptions(appsData)
   const toolDescriptions = extractToolDescriptions(toolsData)
 
-  console.log(`Extracted ${Object.keys(appDescriptions).length} app descriptions`)
+  console.log(
+    `Extracted ${Object.keys(appDescriptions).length} app descriptions`
+  )
   console.log(
     `Extracted ${Object.keys(toolDescriptions).length} tool descriptions`
   )

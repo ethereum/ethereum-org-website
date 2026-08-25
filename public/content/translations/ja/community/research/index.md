@@ -1,399 +1,479 @@
 ---
-title: "イーサリアムのアクティブな研究分野"
-description: "さまざまなオープンリサーチの分野を探求し、参加方法を学ぶ。"
+title: "イーサリアム研究の活発な分野"
+description: "オープンな研究のさまざまな分野を探索し、参加する方法を学びましょう。"
 lang: ja
 ---
 
-# イーサリアムのアクティブな研究分野 {#active-areas-of-ethereum-research}
+イーサリアムの主な強みの1つは、活発な研究およびエンジニアリングコミュニティが常にそれを改善していることです。世界中の多くの熱心で熟練した人々がイーサリアムの未解決の問題に取り組みたいと考えていますが、それらの問題が何であるかを見つけるのは必ずしも容易ではありません。このページでは、イーサリアムの最先端への大まかなガイドとして、主要な活発な研究分野の概要を説明します。
 
-イーサリアムの主な強みの一つは、活発な研究とエンジニアリングのコミュニティが常にそれを改善していることです。 世界中の多くの情熱的で熟練した人々がイーサリアムに関連する課題に取り組みたいと考えていますが、その課題が何であるかを見つけるのは必ずしも簡単ではありません。 このページでは、イーサリアムの最前線を知るためのガイドとして、アクティブに研究されている主要分野を概説します。
+## イーサリアムの研究はどのように行われるか {#how-ethereum-research-works}
 
-## イーサリアムの研究の仕組み {#how-ethereum-research-works}
-
-イーサリアムの研究はオープンかつ透明であり、[分散型科学 (DeSci)](https://hackernoon.com/desci-decentralized-science-as-our-chance-to-recover-the-real-science)の原則を体現しています。 研究ツールや成果物を、たとえば実行可能なノートブックといった形で、できるだけオープンかつインタラクティブにする文化があります。 イーサリアムの研究は迅速に進んでおり、新しい発見は従来の査読を経た後の出版物ではなく、[ethresear.ch](https://ethresear.ch/) のようなフォーラムでオープンに投稿され、議論されています。
+イーサリアムの研究はオープンで透明性があります。その文化は、例えば実行可能なノートブックなどを通じて、研究ツールや成果物を可能な限りオープンでインタラクティブなものにすることです。イーサリアムの研究は急速に進んでおり、新しい発見は、査読を重ねた後に伝統的な出版物を通じてコミュニティに届くのではなく、[ethresear.ch](https://ethresear.ch/)のようなフォーラムで公開され、議論されます。イーサリアム財団はまた、何を優先しているか、そしてその理由を公開しているため、現在どの問題が緊急であると考えられているかを誰でも確認できます。
 
 ## 一般的な研究リソース {#general-research-resources}
 
-特定のトピックに関係なく、[ethresear.ch](https://ethresear.ch) や[Eth R&D Discordチャンネル](https://discord.gg/qGpsxSA) には、イーサリアムの研究に関する豊富な情報があります。 これらは、イーサリアムの研究者たちが最新のアイデアや開発の機会について議論する主な場所です。
+特定のトピックに関係なく、イーサリアムの研究に関する豊富な情報は、[ethresear.ch](https://ethresear.ch)および[Eth R&Dディスコード・チャンネル](https://discord.gg/qGpsxSA)で見つけることができます。これらは、イーサリアムの研究者が最新のアイデアや開発の機会について議論する主要な場所です。
 
-2022年5月に[DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) が発行したこのレポートは、イーサリアムのロードマップの良い概要を提供しています。
+プロトコルがどこに向かっているかの概要については、まず[イーサリアムのロードマップ](/roadmap/)から始め、次にイーサリアム財団の[2026年に向けたプロトコルの優先事項の更新](https://blog.ethereum.org/2026/02/18/protocol-priorities-update-2026)と、それに対する進捗を報告する[プロトコル・クラスターの更新](https://blog.ethereum.org/2026/05/11/protocol-update-may-26)を読んでください。[Ethereum Protocol Studies](https://blog.ethereum.org/2026/02/17/ethereum-protocol-studies-26)は、プロトコル自体に取り組みたい人向けの構造化されたエントリーポイントです。
 
-## 資金提供の源 {#sources-of-funding}
+## 資金源 {#sources-of-funding}
 
-イーサリアムの研究に参加して報酬を得ることができます！ たとえば、[イーサリアム・ファウンデーション](/foundation/) は最近、[学術助成金の資金調達ラウンド](https://esp.ethereum.foundation/academic-grants) を実施しました。 現在の資金提供機会や今後の機会については、[イーサリアムの助成金ページ](/community/grants/) で情報を見つけることができます。
+イーサリアムの研究に参加し、その対価を得ることができます。[イーサリアム財団](/foundation/)は、[エコシステム・サポート・プログラム](https://esp.ethereum.foundation/applicants)を通じて研究や公共財に資金を提供しており、解決してほしい問題を説明するウィッシュリストの項目や提案の募集を掲載しています。現在および今後の資金提供の機会に関する情報は、[イーサリアムの助成金ページ](/community/grants/)で見つけることができます。
 
 ## プロトコル研究 {#protocol-research}
 
-プロトコル研究は、ノードが接続し、通信し、イーサリアムのデータを交換・保存し、ブロックチェーンの状態についてコンセンサスに至る方法を定義する一連の規則であるイーサリアムのベースレイヤーに関するものです。 プロトコル研究は、コンセンサスと実行の2つの主要なカテゴリに分けられます。
+プロトコル研究は、イーサリアムのベースレイヤーに関係しています。これは、ノードがどのように接続し、通信し、イーサリアムのデータを交換および保存し、ブロックチェーンの状態についてコンセンサスに達するかを定義する一連のルールです。その長年にわたる2つのカテゴリーはコンセンサスと実行であり、現在ではいくつかの研究トピックが両方にまたがっています。
 
 ### コンセンサス {#consensus}
 
-コンセンサスの研究は、[イーサリアムのプルーフ・オブ・ステーク（PoS）メカニズム](/developers/docs/consensus-mechanisms/pos/) に関するものです。 コンセンサスの研究トピックの例として、以下が挙げられます。
+コンセンサス研究は、[イーサリアムのプルーフ・オブ・ステーク (PoS) メカニズム](/developers/docs/consensus-mechanisms/pos/)に関係しています。フォーク選択ルールとファイナリティ・ガジェットのセキュリティ、ステーキングのクリプトエコノミクス、ブロック、アテステーション、ブロブ・データを運ぶピア・ツー・ピア・ネットワーク、そしてバリデータが署名する暗号技術などです。コンセンサス研究のトピックの例は以下の通りです。
 
-- 脆弱性の特定と修正
-- クリプトエコノミックセキュリティの定量化
-- クライアント実装のセキュリティやパフォーマンスの向上
-- ライトクライアントの開発
+- 脆弱性の特定とパッチ適用
+- クリプトエコノミクスのセキュリティの定量化
+- ブロックがファイナリティに達するまでの時間の短縮
+- コンセンサス・クライアント間のピア・ツー・ピア・ネットワーキングの効率、安全性、監視の改善
 
-先進的な研究に加えて、イーサリアムの大幅な改善を可能にするために、シングルスロット・ファイナリティなど、プロトコルの基本的な再設計も研究されています。 さらに、コンセンサスクライアント間のピアツーピアネットワーキングの効率、安全性、モニタリングも重要な研究テーマとなっています。
+この作業の多くは、論文から仕様へと移行しています。データ可用性サンプリングは[フサカ](/roadmap/fusaka/)アップグレードで導入され、ブロックの構築方法やトランザクションの包含が保証される方法の変更は今後のアップグレードのために仕様化されており、リーン・コンセンサスとして知られる長期的な再設計では、ポスト量子署名とともに、より高速なファイナリティが探求されています。
 
-#### バックグラウンドリーディング {#background-reading}
+#### 背景知識のリーディング {#background-reading}
 
-- [プルーフ・オブ・ステーク入門](/developers/docs/consensus-mechanisms/pos/)
-- [Casper-FFG ペーパー](https://arxiv.org/abs/1710.09437)
-- [Casper-FFG の解説](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
-- [Gasper ペーパー](https://arxiv.org/abs/2003.03052)
+- [プルーフ・オブ・ステークの紹介](/developers/docs/consensus-mechanisms/pos/)
+- [シングル・スロット・ファイナリティ](/roadmap/single-slot-finality/)
+- [キャスパー・FFGの論文](https://arxiv.org/abs/1710.09437)
+- [Gasperの論文](https://arxiv.org/abs/2003.03052)
+- [リーン・イーサリアム](https://blog.ethereum.org/2025/07/31/lean-ethereum)
 
 #### 最近の研究 {#recent-research}
 
 - [Ethresear.ch コンセンサス](https://ethresear.ch/c/consensus/29)
-- [可用性とファイナリティのジレンマ](https://arxiv.org/abs/2009.04987)
-- [シングルスロット・ファイナリティ](https://ethresear.ch/t/a-model-for-cumulative-committee-based-finality/10259)
-- [提案者と作成者の分離](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
+- [可用性/ファイナリティのジレンマ](https://arxiv.org/abs/2009.04987)
+- [3スロット・ファイナリティ: SSFは「シングル」スロットに関するものではない](https://ethresear.ch/t/3-slot-finality-ssf-is-not-about-single-slot/20927)
 
 ### 実行 {#execution}
 
-実行レイヤーは、トランザクションの実行、[イーサリアム仮想マシン (EVM)](/developers/docs/evm/) の運用、そしてコンセンサスレイヤーに渡す実行ペイロードの生成に関するものです。 活発な研究分野として、以下が挙げられます。
+実行レイヤーは、トランザクションの実行、[イーサリアム仮想マシン (EVM)](/developers/docs/evm/)の実行、およびコンセンサス・レイヤーに渡す実行ペイロードの生成に関係しています。ここでの研究は2つの流れに分かれています。状態の保持と証明を安価にすること、そしてノードを実行する人々により多くのコストを押し付けることなくスループットを向上させることです。以下を含む多くの活発な研究分野があります。
 
-- ライトクライアントサポートの構築
-- ガスリミットの研究
-- 新しいデータ構造の組み込み(例：Verkleトライ)。
+- 状態を作成する操作のガス・コストの再価格設定
+- ノードが提供する必要がなくなった履歴の失効
+- トランザクションを並行して検証できるようにするブロックレベルのアクセスリスト
+- 状態、データ、計算を個別に価格設定する多次元手数料市場
+- zkEVMを使用したL1ブロックの実行の証明
 
-#### バックグラウンドリーディング {#background-reading-1}
+#### 背景知識のリーディング {#background-reading-1}
 
-- [EVM入門](/developers/docs/evm)
+- [EVMの紹介](/developers/docs/evm/)
 - [Ethresear.ch 実行レイヤー](https://ethresear.ch/c/execution-layer-research/37)
+- [イーサリアム実行レイヤー仕様](https://github.com/ethereum/execution-specs)
+- [データベースの最適化](https://github.com/erigontech/erigon/blob/main/docs/programmers_guide/db_faq.md)
 
 #### 最近の研究 {#recent-research-1}
 
-- [データベースの最適化](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md)
-- [ステートの有効期限](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
-- [ステートの有効期限への道筋](https://hackmd.io/@vbuterin/state_expiry_paths)
-- [バークルとステートの有効期限の提案](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
-- [履歴管理](https://eips.ethereum.org/EIPS/eip-4444)
-- [バークルツリー](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
-- [データの可用性サンプリング](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
+- [EIP-7928: ブロックレベルのアクセスリスト](https://eips.ethereum.org/EIPS/eip-7928)
+- [EIP-8037: 状態作成のガス・コスト増加](https://eips.ethereum.org/EIPS/eip-8037)
+- [EIP-7999: 統合された多次元手数料市場](https://eips.ethereum.org/EIPS/eip-7999)
+- [EIP-7642: eth/69、履歴の失効、およびよりシンプルなレシート](https://eips.ethereum.org/EIPS/eip-7642)
+- [L1 zkEVMの出荷: リアルタイム証明](https://blog.ethereum.org/2025/07/10/realtime-proving)
+
+### 検閲耐性とブロック構築 {#censorship-resistance-and-block-building}
+
+現在、ほとんどのイーサリアムのブロックは少数の専門的なビルダーによって組み立てられており、どのトランザクションを含めるかを決定する権限が集中しています。この分野の研究は、ビルダー市場をプロトコル自体に組み込むことをカバーしています。これにより、ブロックを提案する役割と構築する役割が、プロトコル外のソフトウェアではなくコンセンサス・ルールによって分離され、ビルダーが除外したトランザクションの包含をバリデータが強制する方法を提供します。
+
+#### 背景知識のリーディング {#background-reading-21}
+
+- [プロポーザー・ビルダー分離 (PBS)](/roadmap/pbs/)
+- [単一の秘密リーダー選出 (SSLE)](/roadmap/secret-leader-election/)
+
+#### 最近の研究 {#recent-research-21}
+
+- [EIP-7732: プロトコルに組み込まれたプロポーザー・ビルダー分離](https://eips.ethereum.org/EIPS/eip-7732)
+- [EIP-7805: フォーク選択によって強制されるインクルージョン・リスト](https://eips.ethereum.org/EIPS/eip-7805)
+- [プロポーザー・ビルダー分離下でのトランザクションの検閲耐性の向上](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
+
+### 状態の増大とステートレス性 {#state-growth-and-statelessness}
+
+すべてのフル・ノードはイーサリアムの状態を保存するため、その状態が増大する速度が、ノードを実行するコストの下限を設定します。短期的には、研究は状態を作成する操作の再価格設定と、ノードが保持する必要がなくなった履歴の失効に焦点を当てています。長期的には、イーサリアムの16進マークル・パトリシア・トライを、はるかに小さな証明を生成するバイナリ・ツリーに置き換え、ステートレス性に向けて移行する計画です。これにより、ノードは状態全体を保持することなくブロックを検証できるようになります。この分野の初期の作業ではヴァークル・ツリーが想定されていましたが、現在の提案は統合されたバイナリ・ツリーであり、初期の作業で指定されたウィットネスのガス・スケジュールを引き継いでいます。
+
+#### 背景知識のリーディング {#background-reading-22}
+
+- [ステートレス性とステート失効](/roadmap/statelessness/)
+- [イーサリアム・ステートレス・ブック](https://stateless.fyi/)
+
+#### 最近の研究 {#recent-research-22}
+
+- [EIP-7864: 統合されたバイナリ・ツリーを使用したイーサリアムの状態](https://eips.ethereum.org/EIPS/eip-7864)
+- [EIP-4762: ステートレス性のガス・コスト変更](https://eips.ethereum.org/EIPS/eip-4762)
+- [分散型の状態がイーサリアムにとって重要である理由](https://ethresear.ch/t/why-decentralized-state-is-important-for-ethereum/25622)
+
+### ポスト量子暗号 {#post-quantum-cryptography}
+
+イーサリアムのバリデータの署名とアプリケーション・レイヤーの多くは楕円曲線暗号に依存しており、十分な能力を持つ量子コンピュータであればこれを破ることができます。イーサリアムを量子耐性にするということは、それらの署名をハッシュベースまたは格子ベースの代替手段に置き換え、大規模なバリデータ・セットに対して署名集約を十分に効率的に保ち、既存のアカウントに移行パスを提供することを意味します。イーサリアム財団は専用のポスト量子チームを運営しており、これはロードマップ上で最も長期的なプログラムの1つです。
+
+#### 背景知識のリーディング {#background-reading-23}
+
+- [量子耐性](/roadmap/security/quantum-resistance/)
+- [ポスト量子イーサリアム](https://pq.ethereum.org/)
+
+#### 最近の研究 {#recent-research-23}
+
+- [リーン・イーサリアム](https://blog.ethereum.org/2025/07/31/lean-ethereum)
+- [Ethresear.ch 暗号技術](https://ethresear.ch/c/cryptography/28)
+- [リーン・イーサリアムの実装](https://github.com/leanEthereum)
 
 ## クライアント開発 {#client-development}
 
-イーサリアムクライアントは、イーサリアムプロトコルの実装に関するものです。 クライアントの開発は、プロトコルの研究成果をクライアントに組み込んで現実のものにする役割を担います。 クライアント開発には、クライアントの仕様を更新することや、具体的な実装を構築することが含まれます。
+イーサリアム・クライアントは、イーサリアム・プロトコルの実装です。クライアント開発は、プロトコル研究の成果をこれらのクライアントに組み込むことで現実のものにします。クライアント開発には、クライアント仕様の更新と特定の実装の構築が含まれます。
 
-イーサリアムノードを運用するためには、以下の2つのソフトウェアが必要です。
+イーサリアム・ノードは、2つのソフトウェアを実行する必要があります。
 
-1. コンセンサスクライアント：ブロックチェーンのヘッドを追跡し、ブロックを伝播し、コンセンサスロジックを処理します。
-2. 実行クライアント：イーサリアム仮想マシンをサポートし、トランザクションやスマートコントラクトを実行します。
+1. ブロックチェーンの先頭を追跡し、ブロックをゴシップし、コンセンサス・ロジックを処理するコンセンサス・クライアント
+2. イーサリアム仮想マシンをサポートし、トランザクションとスマート・コントラクトを実行する実行クライアント
 
-ノードとクライアント、および現在のすべてのクライアント実装のリストについて詳しくは、[ノードとクライアントページ](/developers/docs/nodes-and-clients/)をご覧ください。 また、イーサリアムの全てのアップグレード履歴は[履歴ページ](/ethereum-forks/) で確認可能です。
+これら2つに加えて、L1ブロックの実行を証明するクライアントや、ポスト量子署名を中心に構築されたリーン・コンセンサス・クライアントなど、新しいクラスのクライアントのプロトタイプが作成されています。
+
+ノードとクライアントの詳細、および現在のすべてのクライアント実装のリストについては、[ノードとクライアントのページ](/developers/docs/nodes-and-clients/)を参照してください。また、[歴史のページ](/ethereum-forks/)でイーサリアムのすべてのアップグレードの歴史を見つけることもできます。
 
 ### 実行クライアント {#execution-clients}
 
-- [実行クライアントの仕様](https://github.com/ethereum/execution-specs)
-- [実行APIの仕様](https://github.com/ethereum/execution-apis)
+- [実行クライアント仕様](https://github.com/ethereum/execution-specs)
+- [実行API仕様](https://github.com/ethereum/execution-apis)
 
-### コンセンサスクライアント {#consensus-clients}
+### コンセンサス・クライアント {#consensus-clients}
 
-- [コンセンサスクライアントの仕様](https://github.com/ethereum/consensus-specs)
-- [ビーコンAPIの仕様](https://ethereum.github.io/beacon-APIs/#/Beacon/getStateRoot)
+- [コンセンサス・クライアント仕様](https://github.com/ethereum/consensus-specs)
+- [ビーコンAPI仕様](https://ethereum.github.io/beacon-APIs/)
+
+### zkEVMクライアント {#zkevm-clients}
+
+- [zkEVM](/roadmap/zkevm/)
+- [Ethproofs](https://ethproofs.org/)
+- [L1 zkEVMの出荷: セキュリティの基盤](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
 ## スケーリングとパフォーマンス {#scaling-and-performance}
 
-イーサリアムのスケーリングは、イーサリアム研究者にとって大きな注目分野です。 現在のアプローチには、トランザクションをロールアップにオフロードし、データブロブを使用して可能な限り安価にすることが含まれます。 イーサリアムのスケーリングに関する入門情報は、[スケーリングページ](/developers/docs/scaling) でご確認いただけます。
+イーサリアムのスケーリングは、イーサリアムの研究者にとって大きな焦点となる分野であり、レイヤー1自体のスループットを向上させることと、データをイーサリアムに投稿するロールアップに実行を移行することの2つの軌道で同時に進行しています。現在の作業には、ブロックのガス・リミットの引き上げ、状態の増大の再価格設定、ロールアップ・データのためのブロブ容量の拡大、およびノードが保存および検証しなければならないものの削減が含まれます。イーサリアムのスケーリングに関する入門情報は、[スケーリングのページ](/developers/docs/scaling/)および[スケーリングのロードマップ](/roadmap/scaling/)で入手できます。
 
-### レイヤー2 {#layer-2}
+### レイヤー2 (L2) {#layer-2}
 
-現在、イーサリアムをスケールするためのレイヤー2プロトコルがいくつか存在しており、これらはトランザクションをバッチ処理し、イーサリアムレイヤー1上でのセキュリティを確保するためのさまざまな手法を使用しています。 この分野は非常に急速に成長しており、多くの研究と開発の可能性があります。
+現在、トランザクションをバッチ処理し、イーサリアムのレイヤー1でそれらを保護するためのさまざまな技術を使用してイーサリアムをスケーリングする、いくつかのレイヤー2 (L2) プロトコルがあります。オープンな研究には、証明のレイテンシとコストの削減、トランザクションがトラストレスなファイナリティに達するまでの時間の短縮、および多くのロールアップにわたってユーザーに単一の一貫した体験を提供することが含まれます。
 
-#### バックグラウンドリーディング {#background-reading-2}
+#### 背景知識のリーディング {#background-reading-2}
 
-- [レイヤー2入門](/layer-2/)
-- [Polynya: ロールアップ、DA、モジュラーチェーン](https://polynya.medium.com/rollups-data-availability-layers-modular-blockchains-introductory-meta-post-5a1e7a60119d)
+- [レイヤー2 (L2) の紹介](/layer-2/)
+- [L2BEAT: スケーリングの概要](https://l2beat.com/scaling/summary)
+- [ロールアップ中心のイーサリアム・ロードマップ](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
 #### 最近の研究 {#recent-research-2}
 
-- [シーケンサーに対するArbitrumのフェアオーダリング](https://eprint.iacr.org/2021/1465)
-- [Ethresear.chレイヤー2](https://ethresear.ch/c/layer-2/32)
-- [ロールアップ中心のロードマップ](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
-- [L2Beat](https://l2beat.com/)
+- [Ethresear.ch レイヤー2 (L2)](https://ethresear.ch/c/layer-2/32)
+- [L2BEAT: オンチェーン・コスト](https://l2beat.com/scaling/costs)
+- [2026年のイーサリアムでの構築: 何が変わったか](/latest/building-on-ethereum-in-2026/)
 
-### ブリッジ {#bridges}
+### インターオペラビリティ {#interoperability}
 
-レイヤー2の中でも、さらなる研究と開発が求められる分野の一つが、安全で高性能なブリッジです。 これは、さまざまなレイヤー2間のブリッジや、レイヤー1とレイヤー2間のブリッジを含みます。 ブリッジはハッカーに狙われやすい部分であるため、この分野の研究は特に重要です。
+ユーザーと資産はイーサリアムのレイヤー1と多くのレイヤー2 (L2) に分散しており、研究の課題は、仲介者を信頼することなく、それらのチェーン間で移動および行動できるようにすることです。ここでの作業は、インテントベースの送金、標準化されたクロスチェーンのアドレス指定とネーミング、一般的なメッセージ・パッシング、およびウォレット・レベルでのチェーン抽象化をカバーしています。これは、カストディアル・ブリッジが資産を保持していたモデルに代わるものであり、ブリッジは歴史的にエコシステムにおける最大の損失源の1つであったため、クロスチェーン・メカニズムのセキュリティは依然として中心的な懸念事項です。
 
-#### バックグラウンドリーディング {#background-reading-3}
+#### 背景知識のリーディング {#background-reading-3}
 
-- [ブロックチェーンブリッジ入門](/bridges/)
-- [ブリッジに関するヴィタリックの見解](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
-- [ブロックチェーンブリッジに関する記事](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
-- [ブリッジにロックされたバリュー](https://dune.com/eliasimos/Bridge-Away-\(from-Ethereum\))
+- [ブロックチェーン・ブリッジの紹介](/bridges/)
+- [イーサリアムを再び1つのチェーンのように感じさせる](https://blog.ethereum.org/2025/11/18/eil)
+- [オープン・インテント・フレームワーク](https://openintents.xyz/)
+- [ブリッジの検証](https://stonecoldpat.github.io/images/validatingbridges.pdf)
 
 #### 最近の研究 {#recent-research-3}
 
-- [ブリッジの検証](https://stonecoldpat.github.io/images/validatingbridges.pdf)
+- [ERC-7683: クロスチェーン・インテント](https://eips.ethereum.org/EIPS/eip-7683)
+- [ERC-7930: 相互運用可能なアドレス](https://eips.ethereum.org/EIPS/eip-7930)
+- [ERC-7828: 相互運用可能な名前](https://eips.ethereum.org/EIPS/eip-7828)
 
-### シャーディング {#sharding}
+### データ可用性とブロブのスケーリング {#data-availability-and-blob-scaling}
 
-イーサリアムのブロックチェーンにおけるシャーディングは、長い間開発ロードマップの一部でした。 しかし、「ダンクシャーディング」などの新しいスケーリングソリューションが現在注目を集めています。
+ロールアップはデータをブロブとしてイーサリアムに投稿し、そのデータ・レイヤーのスケーリングは、実行のスケーリングとは別の、それ自体が研究課題です。イーサリアムは現在、データ可用性サンプリングを使用しているため、バリデータはブロブ・データをすべてダウンロードするのではなく、その一部をサンプリングすることで公開されたことを検証でき、ブロブ容量は専用のブロブ・パラメータのみのフォークを通じて段階的に引き上げられます。未解決の疑問には、サンプリングをどこまで推し進めることができるか、自宅でステーキングしている人々のために帯域幅の要件をどのように管理可能な状態に保つか、そしてブロブの価格設定が需要にどのように対応すべきかなどが含まれます。
 
-完全なダンクシャーディングの前段階であるプロト・ダンクシャーディングは、カンクン - デネブ (「デンクン」)ネットワークアップグレードで実装されました。
+#### 背景知識のリーディング {#background-reading-4}
 
-[デンクンアップグレードについての詳細](/roadmap/dencun/)
-
-#### バックグラウンドリーディング {#background-reading-4}
-
-- [プロトダンクシャーディングに関するノート](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
-- [Banklessのダンクシャーディングに関する動画](https://www.youtube.com/watch?v=N5p0TB77flM)
-- [イーサリアムのシャーディング研究の概要](https://notes.ethereum.org/@serenity/H1PGqDhpm?type=view)
-- [ダンクシャーディング (Polynya)](https://polynya.medium.com/danksharding-36dc0c8067fe)
+- [PeerDAS](/roadmap/fusaka/peerdas/)
+- [フサカ・アップグレード](/roadmap/fusaka/)
+- [ダンクシャーディング](/roadmap/danksharding/)
+- [データ可用性](/developers/docs/data-availability/)
+- [EIP-4844: シャード・ブロブ・トランザクション](https://eips.ethereum.org/EIPS/eip-4844)
+- [プロト・ダンクシャーディングのノート](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
 
 #### 最近の研究 {#recent-research-4}
 
-- [EIP-4844: プロトダンクシャーディング](https://eips.ethereum.org/EIPS/eip-4844)
-- [ヴィタリックによるシャーディングとデータ可用性サンプリングについて](https://hackmd.io/@vbuterin/sharding_proposal)
+- [EIP-7594: PeerDAS](https://eips.ethereum.org/EIPS/eip-7594)
+- [EIP-7892: ブロブ・パラメータのみのハードフォーク](https://eips.ethereum.org/EIPS/eip-7892)
+- [Ethresear.ch シャーディング](https://ethresear.ch/c/sharding/6)
 
 ### ハードウェア {#hardware}
 
-[ノードの運用](/developers/docs/nodes-and-clients/run-a-node/)を比較的低スペックなハードウェアで行うことは、イーサリアムを分散化した状態で維持するために重要です。 そのため、ノードを運用する際のハードウェア要件の最小化を積極的に研究することが、重要な研究分野となっています。
+適度なハードウェアで[ノードを実行する](/developers/docs/nodes-and-clients/run-a-node/)ことは、イーサリアムを分散型に保つための基本であるため、スループットの向上はすべて、ノード・オペレーターにかかるコストと比較検討する必要があります。ブロックのガス・リミットが上昇し、さらなる増加が計画されている中、活発な研究は、状態の増大とその価格設定方法、より大きな状態での同期とデータベースのパフォーマンス、履歴の失効から得られるディスクの節約、そして最終的にはステートレス性をカバーしています。
 
-#### バックグラウンドリーディング {#background-reading-5}
+#### 背景知識のリーディング {#background-reading-5}
 
-- [ARM上でのイーサリアム](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)
+- [独自のイーサリアム・ノードを立ち上げる](/developers/docs/nodes-and-clients/run-a-node/)
+- [ステートレス性とステート失効](/roadmap/statelessness/)
+- [ARM上のイーサリアム](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)
 
 #### 最近の研究 {#recent-research-5}
 
-- [FPGA上でのECDSA](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
+- [イーサリアムのスケーリング: より高いガス・リミットとその先への道](https://ethpandaops.io/posts/gaslimit-scaling/)
+- [EIP-8261: ガス・リミットのスケジュール](https://eips.ethereum.org/EIPS/eip-8261)
+- [EIP-8037: 状態作成のガス・コスト増加](https://eips.ethereum.org/EIPS/eip-8037)
 
 ## セキュリティ {#security}
 
-セキュリティは広範なトピックであり、スパムや詐欺の防止、ウォレットのセキュリティ、ハードウェアのセキュリティ、暗号経済のセキュリティ、バグハンティング、アプリケーションやクライアントソフトウェアのテスト、キー管理などが含まれます。 これらの分野の知識で貢献することは、主流の普及を促進するのに役立ちます。
+セキュリティは幅広いトピックであり、スパムや詐欺の防止、ウォレットのセキュリティ、ハードウェアのセキュリティ、クリプトエコノミクスのセキュリティ、検閲耐性、ポスト量子への準備、バグ・ハンティング、アプリケーションやクライアント・ソフトウェアのテストと検証などが含まれる場合があります。イーサリアムの[セキュリティ・ロードマップ](/roadmap/security/)は、プロトコル・レベルの作業をカバーしています。
 
-### 暗号技術 & ZKP {#cryptography--zkp}
+### 暗号技術とZKP {#cryptography--zkp}
 
-ゼロ知識証明 (ZKP) や暗号技術は、イーサリアムおよびそのアプリケーションにプライバシーとセキュリティを組み込むために重要です。 ゼロ知識は比較的新しい分野ですが、急速に進展しており、研究と開発の機会が多くあります。 例えば、[Keccakハッシュアルゴリズム](https://hackmd.io/sK7v0lr8Txi1bgION1rRpw?view#Overview)のより効率的な実装の開発、現在存在するものよりも優れた多項式コミットメントの発見、ecdsa公開鍵生成と署名検証回路のコスト削減などが考えられます。
+ゼロ知識証明 (ZKP) と暗号技術は、イーサリアムとそのアプリケーションにプライバシーとセキュリティを組み込むために不可欠です。ゼロ知識証明は研究から本番インフラへと移行しました。実際のイーサリアムのブロックを証明するプルーバーは、現在、レイテンシ、コスト、健全性について公開でベンチマークされています。未解決の問題もそれに応じて変化しており、L1ブロックをリアルタイムで実行できるほど高速に証明すること、使用中の証明システムのセキュリティを厳密に説明すること、そしてポスト量子暗号に備えることへと向かっています。
 
-#### バックグラウンドリーディング {#background-reading-6}
+#### 背景知識のリーディング {#background-reading-6}
 
-- [0xparcブログ](https://0xparc.org/blog)
-- [zkp.science](https://zkp.science/)
-- [Zero Knowledgeポッドキャスト](https://zeroknowledge.fm/)
+- [zkEVM](/roadmap/zkevm/)
+- [プライバシー](/roadmap/privacy/)
+- [Zero Knowledge ポッドキャスト](https://zeroknowledge.fm/)
 
 #### 最近の研究 {#recent-research-6}
 
-- [楕円曲線暗号技術の最近の進展](https://ethresear.ch/t/the-ec-fft-algorithm-without-elliptic-curve-and-isogenies/11346)
 - [Ethresear.ch ZK](https://ethresear.ch/c/zk-s-nt-arks/13)
+- [Ethresear.ch 暗号技術](https://ethresear.ch/c/cryptography/28)
+- [ハッシュベースのzkEVM証明システムのための健全性計算機](https://github.com/ethereum/soundcalc)
+- [L1 zkEVMの出荷: セキュリティの基盤](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
 ### ウォレット {#wallets}
 
-イーサリアムのウォレットは、ブラウザ拡張機能、デスクトップやモバイルアプリ、またはイーサリアム上のスマートコントラクトとして存在します。 個別ユーザーのキー管理に関連するリスクを軽減するソーシャルリカバリウォレットに関する研究が活発に行われています。 ウォレットの開発に関連して、アカウント抽象化の代替形式に関する研究も進行中で、これは新興の重要な研究分野です。
+イーサリアムのウォレットは、ブラウザ拡張機能、デスクトップおよびモバイル・アプリ、またはイーサリアム上のスマート・コントラクトにすることができます。アカウント抽象化はもはや実験的なものではありません。ERC-4337はプロトコルの変更なしにスマート・アカウントを提供し、EIP-7702は通常のアカウントにコードを設定できるようにすることで、トランザクションのバッチ処理、ガスのスポンサーシップ、ソーシャル・リカバリーが、ユーザーがすでに持っているアドレスで機能するようにします。現在のオープンな研究は、プロトコル自体におけるネイティブなアカウント抽象化、モジュール式で監査可能なアカウント・アーキテクチャ、そして一般の人々が安全に操作できる鍵管理とリカバリーに集中しています。
 
-#### バックグラウンドリーディング {#background-reading-7}
+#### 背景知識のリーディング {#background-reading-7}
 
-- [ウォレットの概要](/wallets/)
-- [ウォレットセキュリティの概要](/security/)
-- [Ethresear.chセキュリティ](https://ethresear.ch/tag/security)
-- [EIP-2938 アカウント抽象化](https://eips.ethereum.org/EIPS/eip-2938)
-- [EIP-4337 アカウント抽象化](https://eips.ethereum.org/EIPS/eip-4337)
+- [ウォレットの紹介](/wallets/)
+- [ウォレット・セキュリティの紹介](/security/)
+- [アカウント抽象化](/roadmap/account-abstraction/)
+- [EIP-7702](/roadmap/pectra/7702/)
+- [Ethresear.ch セキュリティ](https://ethresear.ch/c/security/25)
 
 #### 最近の研究 {#recent-research-7}
 
-- [検証に焦点を当てたスマートコントラクトウォレット](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
-- [アカウントの未来](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
-- [EIP-3074 AUTH および AUTHCALL オペコード](https://eips.ethereum.org/EIPS/eip-3074)
-- [EOA アドレスでのコード公開](https://eips.ethereum.org/EIPS/eip-5003)
+- [EIP-8141: フレーム・トランザクション](https://eips.ethereum.org/EIPS/eip-8141)
+- [ERC-5792: ウォレット呼び出しAPI](https://eips.ethereum.org/EIPS/eip-5792)
+- [ERC-6963: 複数のインジェクトされたプロバイダーのディスカバリー](https://eips.ethereum.org/EIPS/eip-6963)
+- [検証に焦点を当てたスマート・コントラクト・ウォレット](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
 
 ## コミュニティ、教育、アウトリーチ {#community-education-and-outreach}
 
-新しいユーザーをイーサリアムにオンボーディングするためには、新しい教育リソースやアウトリーチのアプローチが必要です。 これには、ブログや記事、書籍、ポッドキャスト、ミーム、教育リソース、イベント、そしてコミュニティを構築し、新規参入者を歓迎し、イーサリアムについて人々を教育するその他のものが含まれるかもしれません。
+新しいユーザーをイーサリアムにオンボーディングするには、新しい教育リソースとアウトリーチへのアプローチが必要です。これには、ブログ記事や記事、書籍、ポッドキャスト、ミーム、教育リソース、イベントなど、コミュニティを構築し、初心者を歓迎し、イーサリアムについて人々を教育するあらゆるものが含まれる可能性があります。
 
-### UX/UI {#uxui}
+### デザインとUX {#design-and-ux}
 
-イーサリアムにより多くの人々を受け入れるために、エコシステムはUX/UIを改善する必要があります。 これには、デザイナーや製品の専門家がウォレットやアプリのデザインを再検討することが必要になります。
+より多くの人々をイーサリアムにオンボーディングするために、エコシステムはそのデザインとユーザー・エクスペリエンスを改善しなければなりません。これには、デザイナーや製品の専門家がウォレットやアプリの仕組みを再検討する必要があり、バッチ化されたウォレット呼び出し、ガスのスポンサーシップ、リカバリー可能なアカウント、属するチェーンを伝える人間が読めるアドレスなど、すでに存在する標準に対してデザインすることを意味することが増えています。Web3のUX研究のための標準的な場所は比較的少ないため、公開された研究やデザインのガイダンスは散在する傾向があります。
 
-#### バックグラウンドリーディング {#background-reading-8}
+#### 背景知識のリーディング {#background-reading-8}
 
-- [Ethresear.ch UX/UI](https://ethresear.ch/c/ui-ux/24)
+- [Web3におけるデザインとUX](/developers/docs/design-and-ux/)
+- [イーサリアムのユーザー・エクスペリエンス・ロードマップ](/roadmap/user-experience/)
+- [Web3デザイン・プレイブック](https://learnweb3.design/)
+- [Web3 UXデザイン・ハンドブック](https://web3ux.design/)
 
 #### 最近の研究 {#recent-research-8}
 
-- [Web3デザイン Discord](https://discord.gg/FsCFPMTSm9)
-- [Web3デザイン原則](https://www.web3designprinciples.com/)
-- [イーサリアムマジシャンズ UXディスカッション](https://ethereum-magicians.org/t/og-council-ux-follow-up/9032/3)
+- [Ethresear.ch UX/UI](https://ethresear.ch/c/ui-ux/24)
+- [ERC-5792: ウォレット呼び出しAPI](https://eips.ethereum.org/EIPS/eip-5792)
+- [ERC-7828: 相互運用可能な名前](https://eips.ethereum.org/EIPS/eip-7828)
 
 ### 経済学 {#economics}
 
-イーサリアムにおける経済学研究は、主に2つのアプローチに分かれます：経済的インセンティブに依存するメカニズムのセキュリティを検証する(ミクロ経済学) ことと、プロトコル、アプリケーション、ユーザー間の価値の流れを分析する (マクロ経済学) ことです。 イーサリアムのネイティブアセット (Ether) や、その上に構築されたトークン (例えばNFTやERC20トークン) に関連する複雑な暗号経済学的要因が存在します。
+イーサリアムにおける経済学の研究は、大きく2つのアプローチに従います。経済的インセンティブに依存するメカニズムのセキュリティを検証すること（「ミクロ経済学」）と、プロトコル、アプリケーション、ユーザー間の価値の流れを分析すること（「マクロ経済学」）です。イーサリアムのネイティブ資産（イーサ）と、その上に構築されたトークン（例えばNFTやERC-20トークン）に関連する複雑なクリプトエコノミクスの要因があります。
 
-#### バックグラウンドリーディング {#background-reading-9}
+#### 背景知識のリーディング {#background-reading-9}
 
-- [ロバストインセンティブグループ](https://rig.ethereum.org/)
-- [DevconnectでのETHconomicsワークショップ at Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
+- [ロバスト・インセンティブ・グループ](https://rig.ethereum.org/)
+- [イーサリアム経済学マスタークラスと経済モデル](https://github.com/CADLabs/ethereum-economic-model)
 
 #### 最近の研究 {#recent-research-9}
 
-- [EIP1559の実証分析](https://arxiv.org/abs/2201.05574)
-- [流通供給の均衡](https://ethresear.ch/t/circulating-supply-equilibrium-for-ethereum-and-minimum-viable-issuance-during-the-proof-of-stake-era/10954)
-- [MEVの定量化：森はどれくらい暗いのか？](https://arxiv.org/abs/2101.05511)
+- [Ethresear.ch 経済学](https://ethresear.ch/c/economics/16)
+- [循環供給の均衡](https://ethresear.ch/t/circulating-supply-equilibrium-for-ethereum-and-minimum-viable-issuance-during-the-proof-of-stake-era/10954)
+- [MEVの定量化: 森はどれほど暗いのか？](https://arxiv.org/abs/2101.05511)
 
 ### ブロックスペースと手数料市場 {#blockspace-fee-markets}
 
-ブロックスペース市場は、イーサリアム (レイヤー1) 上で直接、あるいはブリッジされたネットワーク、たとえばロールアップ(レイヤー2) 上で、エンドユーザーのトランザクションの取り込みを管理します。 イーサリアムでは、トランザクションはEIP-1559としてプロトコル内にデプロイされた手数料市場に提出され、チェーンをスパムから保護し、混雑時の価格設定を行います。 両レイヤーにおいて、トランザクションは最大抽出可能価値 (MEV) として知られる外部性を生み出す可能性があり、これらの外部性を捕捉または管理するための新しい市場構造を誘発します。
+ブロックスペース市場は、イーサリアム（レイヤー1）上で直接、またはロールアップ（レイヤー2 (L2)）などのブリッジされたネットワーク上で、エンドユーザーのトランザクションの包含を管理します。イーサリアムでは、トランザクションはEIP-1559としてプロトコル内にデプロイされた手数料市場に送信され、チェーンをスパムから保護し、混雑を価格設定します。両方のレイヤーで、トランザクションは最大抽出可能価値 (MEV) として知られる外部性を生み出す可能性があり、これがこれらの外部性を捕捉または管理するための新しい市場構造を誘発します。現在の作業は、状態、データ、計算が独立して混雑するため、複数のリソースを一度に価格設定すること、そして誰がどのような条件でブロックを組み立てるかを変更することにまで及んでいます。
 
-#### バックグラウンドリーディング {#background-reading-10}
+#### 背景知識のリーディング {#background-reading-10}
 
-- [イーサリアムブロックチェーンのトランザクション手数料メカニズム設計：EIP-1559の経済分析 (Tim Roughgarden, 2020)](https://timroughgarden.org/papers/eip1559.pdf)
-- [EIP-1559のシミュレーション(ロバストインセンティブグループ)](https://ethereum.github.io/abm1559)
-- [ファーストプリンシプルからのロールアップ経済学](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
-- [フラッシュボーイズ2.0：分散型取引所におけるフロントランニング、トランザクションの並べ替え、およびコンセンサスの不安定性](https://arxiv.org/abs/1904.05234)
+- [イーサリアム・ブロックチェーンのトランザクション手数料メカニズムの設計: EIP-1559の経済分析 (Tim Roughgarden, 2020)](https://timroughgarden.org/papers/eip1559.pdf)
+- [EIP-1559のシミュレーション (ロバスト・インセンティブ・グループ)](https://ethereum.github.io/abm1559)
+- [第一原理からのロールアップ経済学](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
+- [Flash Boys 2.0: 分散型取引所におけるフロントランニング、トランザクションの並べ替え、およびコンセンサスの不安定性](https://arxiv.org/abs/1904.05234)
 
 #### 最近の研究 {#recent-research-10}
 
-- [多次元EIP-1559のビデオプレゼンテーション](https://youtu.be/QbR4MTgnCko)
-- [クロスドメインMEV](http://arxiv.org/abs/2112.01472)
-- [MEVオークション](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
+- [EIP-7999: 統合された多次元手数料市場](https://eips.ethereum.org/EIPS/eip-7999)
+- [EIP-7928: ブロックレベルのアクセスリスト](https://eips.ethereum.org/EIPS/eip-7928)
+- [クロスドメインMEV](https://arxiv.org/abs/2112.01472)
 
 ### プルーフ・オブ・ステークのインセンティブ {#proof-of-stake-incentives}
 
-バリデータはイーサリアムのネイティブ資産 (Ether) を担保として、不正行為を防ぎます。 これのクリプトエコノミクスがネットワークのセキュリティを決定します。 巧妙なバリデータは、インセンティブレイヤーのニュアンスを活用して、明示的な攻撃を仕掛ける可能性があります。
+バリデータは、不正行為に対する担保としてイーサリアムのネイティブ資産（イーサ）を使用します。このクリプトエコノミクスがネットワークのセキュリティを決定します。洗練されたバリデータは、インセンティブ・レイヤーのニュアンスを悪用して明示的な攻撃を仕掛けることができるかもしれません。ペクトラ・アップグレード以降、バリデータははるかに大きなエフェクティブ・バランスを保持して収益を得ることができ、複数のバリデータを1つに統合することもできるため、バリデータを実行する経済性が変化します。
 
-#### バックグラウンドリーディング {#background-reading-11}
+#### 背景知識のリーディング {#background-reading-11}
 
-- [イーサリアム経済学のマスタークラスと経済モデル](https://github.com/CADLabs/ethereum-economic-model)
-- [PoSインセンティブのシミュレーション(ロバストインセンティブグループ)](https://ethereum.github.io/beaconrunner/)
+- [最大エフェクティブ・バランス](/roadmap/pectra/maxeb/)
+- [イーサリアム経済学マスタークラスと経済モデル](https://github.com/CADLabs/ethereum-economic-model)
+- [PoSインセンティブのシミュレーション (ロバスト・インセンティブ・グループ)](https://ethereum.github.io/beaconrunner/)
 
 #### 最近の研究 {#recent-research-11}
 
-- [プロポーザー/ビルダー分離（PBS）下でのトランザクションの検閲耐性の向上(PBS)](https://notes.ethereum.org/s3JToeApTx6CKLJt8AbhFQ)
+- [ロバスト・インセンティブ・グループ](https://rig.ethereum.org/)
 - [PoSイーサリアムに対する3つの攻撃](https://arxiv.org/abs/2110.10086)
 
-### リキッドステーキングとデリバティブ {#liquid-staking-and-derivatives}
+### リキッド・ステーキングとデリバティブ {#liquid-staking-and-derivatives}
 
-リキッドステーキングにより、32 ETH未満のユーザーでも、ステーキングされたEtherを表すDeFiとして使用可能なトークンとEtherを交換することで、ステーキング収益を受け取ることができます。 しかし、リキッドステーキングに関連するインセンティブと市場力学はまだ解明されておらず、イーサリアムのセキュリティへの影響 (例：中央集権化のリスク) も同様です。
+リキッド・ステーキングにより、32 ETH未満のユーザーは、イーサをDeFiで使用できるステークされたイーサを表すトークンと交換することで、ステーキング利回りを受け取ることができます。しかし、リキッド・ステーキングに関連するインセンティブと市場のダイナミクス、およびイーサリアムのセキュリティへの影響（例えば、中央集権化のリスク）は、まだ解明されつつある段階です。
 
-#### バックグラウンドリーディング {#background-reading-12}
+#### 背景知識のリーディング {#background-reading-12}
 
-- [Ethresear.chのリキッドステーキング](https://ethresear.ch/search?q=liquid%20staking)
-- [Lido：トラストレスなイーサリアムステーキングへの道](https://blog.lido.fi/the-road-to-trustless-ethereum-staking/)
-- [Rocket Pool：ステーキングプロトコル入門](https://medium.com/rocket-pool/rocket-pool-staking-protocol-part-1-8be4859e5fbd)
+- [Ethresear.ch リキッド・ステーキング](https://ethresear.ch/search?q=liquid%20staking)
+- [リド: トラストレスなイーサリアム・ステーキングへの道](https://blog.lido.fi/the-road-to-trustless-ethereum-staking/)
 
 #### 最近の研究 {#recent-research-12}
 
-- [Lidoからの引き出し処理](https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
-- [引き出しのための資格情報](https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722)
-- [リキッドステーキング・デリバティブのリスク](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
+- [リキッド・ステーキング・デリバティブのリスク](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
+- [リドからの引き出しの処理](https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
 
 ## テスト {#testing}
 
+### クライアントとネットワークのテスト {#client-and-network-testing}
+
+イーサリアムの仕様は実行可能であり、そこから生成されたテスト・フィクスチャは、クライアント・チームが実装をチェックするためのものです。これらと並行して、共有テスト・ハーネスはクライアント同士を対抗させたり、意図的に敵対的なネットワーク条件に対して実行したりし、パブリック・テストネットはメインネットに到達する前にアップグレードをテストします。このインフラストラクチャを改善することは、バグがユーザーに届く前に発見される方法であるため、利用可能な最もレバレッジの高い作業の1つです。
+
+#### 背景知識のリーディング {#background-reading-24}
+
+- [イーサリアム実行レイヤー仕様](https://github.com/ethereum/execution-specs)
+- [コンセンサス・クライアント仕様](https://github.com/ethereum/consensus-specs)
+
+#### 最近の研究 {#recent-research-24}
+
+- [hive、エンドツーエンドのクライアント・テスト・ハーネス](https://github.com/ethereum/hive)
+- [Assertoor、テストネット・テスト・ツール](https://github.com/ethpandaops/assertoor)
+
 ### 形式的検証 {#formal-verification}
 
-形式的検証とは、イーサリアムのコンセンサス仕様が正しく、バグがないことを確認するためのコードを書くことです。 仕様をPythonコードとして実装したものがあり、これを保守し、発展させていく必要があります。 さらに研究を進めることで、仕様のPython実装を改善し、正確性をより堅牢に検証し、問題を特定するためのツールを追加することが可能になるでしょう。
+形式的検証は、機械でチェックされた数学的証明を使用して、仕様または実装が意図したとおりに動作することを確立します。イーサリアムでは、これはEVMの実装が形式的意味論と一致することの証明、ゼロ知識プルーバーが依存する回路と証明システムの健全性の証明、およびそれらの下にある暗号プリミティブの検証をカバーしています。さらなる研究により、これらの証明を強化し、スタックのより多くの部分に拡張することができます。
 
-#### バックグラウンドリーディング {#background-reading-13}
+#### 背景知識のリーディング {#background-reading-13}
 
-- [形式的検証入門](https://ptolemy.berkeley.edu/projects/embedded/research/vis/doc/VisUser/vis_user/node4.html)
+- [検証済みのzkEVM](https://verified-zkevm.org/)
 - [形式的検証 (Intel)](https://www.cl.cam.ac.uk/~jrh13/papers/mark10.pdf)
 
 #### 最近の研究 {#recent-research-13}
 
-- [デポジットコントラクトの形式的検証](https://github.com/runtimeverification/deposit-contract-verification)
-- [ビーコンチェーン仕様の形式的検証](https://github.com/runtimeverification/deposit-contract-verification)的
+- [検証済みzkEVMプロジェクトの概要](https://github.com/Verified-zkEVM/Overview)
+- [KEVM: KにおけるEVMの意味論](https://github.com/runtimeverification/evm-semantics)
+- [デポジット・コントラクトの形式的検証](https://github.com/runtimeverification/deposit-contract-verification)
 
-## データサイエンスとアナリティクス {#data-science-and-analytics}
+## データサイエンスと分析 {#data-science-and-analytics}
 
-イーサリアム上のアクティビティやネットワークの健全性について詳細な情報を提供するデータ分析ツールやダッシュボードが、さらに必要とされています。
+イーサリアム上のアクティビティやネットワークの健全性に関する詳細な情報を提供する、より多くのデータ分析ツールやダッシュボードが必要です。基礎となるデータの多くは公開されておりクエリ可能であるため、ギャップは通常、アクセスではなく分析とプレゼンテーションにあります。
 
-### バックグラウンドリーディング {#background-reading-14}
+### 背景知識のリーディング {#background-reading-14}
 
 - [Dune Analytics](https://dune.com/browse/dashboards)
-- [クライアント多様性ダッシュボード](https://clientdiversity.org/)
+- [クライアント・ダイバーシティ・ダッシュボード](https://clientdiversity.org/)
+- [イーサリアムJSON-RPC実行API仕様](https://ethereum.github.io/execution-apis/)
 
 #### 最近の研究 {#recent-research-14}
 
-- [ロバストインセンティブグループのデータ分析](https://rig.ethereum.org/)
+- [ロバスト・インセンティブ・グループのデータ分析](https://rig.ethereum.org/)
+- [ethPandaOpsのオープンデータ](https://ethpandaops.io/data/)
+- [L2BEAT: スケーリングの概要](https://l2beat.com/scaling/summary)
 
-## アプリケーションとツール {#apps-and-tooling}
+## アプリとツール {#apps-and-tooling}
 
-アプリケーションレイヤーは、イーサリアムのベースレイヤー上でトランザクションを決済する多様なプログラムのエコシステムをサポートしています。 開発チームは、重要なWeb2アプリケーションについて、組み合わせ可能で、パーミッションレスで、検閲耐性のあるバージョンをイーサリアムを活用して作成したり、完全に新しいWeb3ネイティブのコンセプトを生み出したりするための新しい方法を常に見出しています。 それと同時に、イーサリアム上でdappsを構築する際の複雑さを軽減する新しいツールも開発されています。
+アプリケーション・レイヤーは、イーサリアムのベースレイヤーでトランザクションを決済するプログラムの多様なエコシステムをサポートしています。開発チームは、イーサリアムを活用して、重要なWeb2アプリのコンポーザブルでパーミッションレス、かつ検閲耐性のあるバージョンを作成したり、完全に新しいWeb3ネイティブの概念を作成したりする新しい方法を常に見つけています。同時に、イーサリアム上でのdappの構築をより複雑でなくする新しいツールが開発されています。
 
 ### DeFi {#defi}
 
-分散型金融 (DeFi) は、イーサリアム上に構築された主要なアプリケーションクラスの1つです。 DeFiは、ユーザーがスマートコントラクトを利用して暗号資産を保管、送金、貸付、借入、投資できるようにする、構成可能な「マネーレゴ」を作成することを目指しています。 DeFiは急速に進化する領域であり、常に更新が行われています。 安全で効率的かつアクセスしやすいプロトコルに関する研究が継続的に求められています。
+分散型金融 (DeFi) は、イーサリアムの上に構築されたアプリケーションの主要なクラスの1つです。DeFiは、ユーザーがスマート・コントラクトを使用して暗号資産を保存、送金、貸出、借入、投資できるようにする、コンポーザブルな「マネー・レゴ」を作成することを目指しています。DeFiは動きが速く、常に更新されている分野です。安全で効率的、かつアクセス可能なプロトコルに関する研究が継続的に必要とされています。
 
-#### バックグラウンドリーディング {#background-reading-15}
+#### 背景知識のリーディング {#background-reading-15}
 
 - [DeFi](/defi/)
-- [Coinbase: What is DeFi?](https://www.coinbase.com/learn/crypto-basics/what-is-defi)
+- [コインベース: DeFiとは何か？](https://www.coinbase.com/learn/crypto-basics/what-is-defi)
 
 #### 最近の研究 {#recent-research-15}
 
 - [分散型金融、中央集権的な所有権？](https://arxiv.org/pdf/2012.09306.pdf)
-- [Optimism: 1ドル未満の取引への道](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92)
+- [Ethresear.ch アプリケーション](https://ethresear.ch/c/applications/18)
 
 ### DAO {#daos}
 
-イーサリアムの影響力のあるユースケースの1つとして、DAO（分散型自律組織）を利用して、分散型で組織を運営できる点が挙げられます。 現在、より優れたガバナンス形態の実現に向けて、信頼の必要性を最小限に抑えた調整ツールとしてのイーサリアム上のDAOを、いかに開発して活用できるかという点について、多くの活発な研究が行われています。これにより、従来の企業や組織を超えた幅広い選択肢が提供されることになります。
+イーサリアムのインパクトのあるユースケースは、DAOを使用して分散型の方法で組織化できることです。イーサリアム上のDAOをどのように開発し、トラスト最小化された調整ツールとして改善された形態のガバナンスを実行するために活用できるかについて、多くの活発な研究が行われており、人々の選択肢を従来の企業や組織を超えて大きく広げています。
 
-#### バックグラウンドリーディング {#background-reading-16}
+#### 背景知識のリーディング {#background-reading-16}
 
 - [DAOの紹介](/dao/)
-- [Dao Collective](https://daocollective.xyz/)
 
 #### 最近の研究 {#recent-research-16}
 
 - [DAOエコシステムのマッピング](https://www.researchgate.net/publication/358694594_Mapping_out_the_DAO_Ecosystem_and_Assessing_DAO_Autonomy)
 
-### デベロッパー向けツール {#developer-tools}
+### 開発者ツール {#developer-tools}
 
-イーサリアムデベロッパー向けのツールは急速に改善されています。 この分野全般において、多くの活発な研究開発が行われています。
+イーサリアム開発者向けのツールは急速に改善されています。この一般的な分野では、行うべき活発な研究開発がたくさんあります。
 
-#### バックグラウンドリーディング {#background-reading-17}
+#### 背景知識のリーディング {#background-reading-17}
 
-- [プログラミング言語別ツール](/developers/docs/programming-languages/)
-- [開発者向けフレームワーク](/developers/docs/frameworks/)
-- [コンセンサスデベロッパー向けツールリスト](https://github.com/ConsenSys/ethereum-developer-tools-list)
-- [トークン規格](/developers/docs/standards/tokens/)
-- [CryptoDevHub: EVMツール](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
+- [プログラミング言語別のツール](/developers/docs/programming-languages/)
+- [開発者フレームワーク](/developers/docs/frameworks/)
+- [dappの紹介](/developers/docs/dapps/)
+- [トークン標準](/developers/docs/standards/tokens/)
 
 #### 最近の研究 {#recent-research-17}
 
-- [Eth R&D Discord Consensus Toolingチャンネル](https://discordapp.com/channels/595666850260713488/746343380900118528)
+- [Eth R&D ディスコード](https://discord.gg/qGpsxSA)
+- [イーサリアム実行API仕様](https://github.com/ethereum/execution-apis)
 
 ### オラクル {#oracles}
 
-オラクルは、オフチェーンデータをパーミッションレスかつ分散型の方法でブロックチェーンにインポートします。 このデータをオンチェーンに取得することで、dAppsが現実世界の資産の価格変動、オフチェーンアプリのイベント、さらには天候の変化など、現実世界の現象に反応できるようになります。
+オラクルは、パーミッションレスで分散型の方法でオフチェーンのデータをブロックチェーンにインポートします。このデータをオンチェーンに取得することで、dappは現実世界の資産の価格変動、オフチェーン・アプリでのイベント、さらには天候の変化など、現実世界の現象に反応できるようになります。
 
-#### バックグラウンドリーディング {#background-reading-18}
+#### 背景知識のリーディング {#background-reading-18}
 
-- [オラクル入門](/developers/docs/oracles/)
+- [オラクルの紹介](/developers/docs/oracles/)
 
 #### 最近の研究 {#recent-research-18}
 
-- [ブロックチェーンオラクルの調査](https://arxiv.org/pdf/2004.07140.pdf)
-- [Chainlinkホワイトペーパー](https://chain.link/whitepaper)
+- [ブロックチェーン・オラクルの調査](https://arxiv.org/pdf/2004.07140.pdf)
 
 ### アプリのセキュリティ {#app-security}
 
-イーサリアムでのハッキングは、通常プロトコル自体ではなく個々のアプリケーションの脆弱性を悪用します。 ハッカーとアプリデベロッパーは、新たな攻撃と防御を開発するために絶え間ない競争を繰り広げています。 このため、アプリケーションをハッキングから守るためには、常に重要な研究と開発が求められます。
+イーサリアムでのハッキングは、一般的にプロトコル自体ではなく、個々のアプリケーションの脆弱性を悪用します。ハッカーとアプリ開発者は、新しい攻撃と防御を開発するための軍拡競争に陥っています。これは、アプリをハッキングから安全に保つために、常に重要な研究開発が必要であることを意味します。
 
-#### バックグラウンドリーディング {#background-reading-19}
+#### 背景知識のリーディング {#background-reading-19}
 
-- [Wormholeの脆弱性報告書](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
-- [イーサリアムコントラクトのハッキング事後分析リスト](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt News](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [スマート・コントラクトのセキュリティ](/developers/docs/smart-contracts/security/)
+- [Wormholeエクスプロイト・レポート](https://www.chainalysis.com/blog/wormhole-hack-february-2022/)
+- [イーサリアム・コントラクトのハッキングの事後分析リスト](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
+- [Rekt News](https://rekt.news/)
 
 #### 最近の研究 {#recent-research-19}
 
-- [Ethresear.chアプリケーション](https://ethresear.ch/c/applications/18)
+- [Ethresear.ch アプリケーション](https://ethresear.ch/c/applications/18)
 
-### テクノロジースタック {#technology-stack}
+### テクノロジー・スタック {#technology-stack}
 
-イーサリアムの技術スタック全体を分散化することは、重要な研究分野です。 現在、イーサリアム上のdappsは、中央集権的なツールやインフラに依存しているため、一部の中央集権的な点を持っていることがよくあります。
+イーサリアムのテクノロジー・スタック全体を分散化することは、重要な研究分野です。現在、イーサリアム上のdappは、中央集権的なツールやインフラストラクチャに依存しているため、一般的にいくつかの中央集権化のポイントを持っています。その依存を減らすということは、単一のプロバイダーを信頼することなくアプリケーションがイーサリアムを読み取ることを実用的にすることを意味し、そこでライト・クライアントとノード・データへのトラストレスなアクセスが登場します。
 
-#### バックグラウンドリーディング {#background-reading-20}
+#### 背景知識のリーディング {#background-reading-20}
 
-- [イーサリアムスタック](/developers/docs/ethereum-stack/)
-- [Coinbase: Web3スタック入門](https://blog.coinbase.com/a-simple-guide-to-the-web3-stack-785240e557f0)
-- [スマートコントラクト入門](/developers/docs/smart-contracts/)
-- [分散型ストレージ入門](/developers/docs/storage/)
+- [イーサリアム・スタック](/developers/docs/ethereum-stack/)
+- [ライト・クライアント](/developers/docs/nodes-and-clients/light-clients/)
+- [スマート・コントラクトの紹介](/developers/docs/smart-contracts/)
+- [分散型ストレージの紹介](/developers/docs/storage/)
 
 #### 最近の研究 {#recent-research-20}
 
-- [スマートコントラクトの構成可能性](/developers/docs/smart-contracts/composability/)
+- [スマート・コントラクトのコンポーザビリティ](/developers/docs/smart-contracts/composability/)
+- [コインベース: Web3スタック入門](https://www.coinbase.com/blog/a-simple-guide-to-the-web3-stack)

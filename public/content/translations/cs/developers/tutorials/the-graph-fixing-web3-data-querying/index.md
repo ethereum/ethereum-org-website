@@ -1,28 +1,21 @@
 ---
-title: "The Graph: Oprava dotazování dat ve Web3"
-description: "Blockchain je jako databáze, ale bez SQL. Všechna data tam jsou, ale neexistuje způsob, jak se k nim dostat. Ukážu vám, jak to opravit pomocí The Graph a GraphQL."
+title: "The Graph: Oprava dotazování na data ve Web3"
+description: "Blockchain je jako databáze, ale bez SQL. Všechna data tam jsou, ale není k nim přístup. Ukážu vám, jak to vyřešit pomocí The Graph a GraphQL."
 author: Markus Waas
 lang: cs
-tags:
-  [
-    "solidity",
-    "smart kontrakt účty",
-    "dotazování",
-    "the graph",
-    "react"
-  ]
+tags: ["Solidity", "chytré kontrakty", "dotazování", "the graph", "React"]
 skill: intermediate
-breadcrumb: "The Graph"
+breadcrumb: The Graph
 published: 2020-09-06
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/thegraph
 ---
 
-Tentokrát se podíváme blíže na The Graph, který se v podstatě stal součástí standardní sady nástrojů pro vývoj dapps v posledním roce. Nejprve se podívejme, jak bychom to dělali tradičním způsobem...
+Tentokrát se podíváme blíže na The Graph, který se v posledním roce v podstatě stal součástí standardního stacku pro vývoj decentralizovaných aplikací (dapp). Pojďme se nejprve podívat, jak bychom to dělali tradičním způsobem...
 
 ## Bez The Graph... {#without-the-graph}
 
-Pro názornost si tedy uveďme jednoduchý příklad. Všichni máme rádi hry, takže si představte jednoduchou hru, ve které uživatelé sázejí:
+Pro ilustraci si tedy vezměme jednoduchý příklad. Všichni máme rádi hry, takže si představte jednoduchou hru, kde uživatelé uzavírají sázky:
 
 ```solidity
 pragma solidity 0.7.1;
@@ -48,66 +41,66 @@ contract Game {
 }
 ```
 
-Řekněme, že v naší dapp chceme zobrazit celkový počet sázek, celkový počet prohraných/vyhraných her a také jej aktualizovat, kdykoli někdo hraje znovu. Přístup by byl následující:
+Řekněme, že v naší decentralizované aplikaci (dapp) chceme zobrazit celkové sázky, celkový počet prohraných/vyhraných her a také to aktualizovat, kdykoli někdo hraje znovu. Postup by byl následující:
 
 1. Načíst `totalGamesPlayerWon`.
 2. Načíst `totalGamesPlayerLost`.
 3. Přihlásit se k odběru událostí `BetPlaced`.
 
-Můžeme naslouchat [události ve Web3](https://docs.web3js.org/api/web3/class/Contract#events), jak je znázorněno vpravo, ale vyžaduje to řešení několika případů.
+Můžeme naslouchat [události ve Web3](https://docs.web3js.org/api/web3/class/Contract#events), jak je znázorněno vpravo, ale vyžaduje to ošetření poměrně velkého množství případů.
 
 ```solidity
 GameContract.events.BetPlaced({
     fromBlock: 0
 }, function(error, event) { console.log(event); })
 .on('data', function(event) {
-    // událost spuštěna
+    // událost vyvolána
 })
 .on('changed', function(event) {
     // událost byla znovu odstraněna
 })
 .on('error', function(error, receipt) {
-    // tx zamítnuta
+    // transakce zamítnuta
 });
 ```
 
-Pro náš jednoduchý příklad je to stále jakž takž v pořádku. Ale řekněme, že nyní chceme zobrazit výši prohraných/vyhraných sázek pouze pro aktuálního hráče. No, máme smůlu, raději nasaďte nový kontrakt, který tyto hodnoty uloží a načte. A teď si představte mnohem složitější chytrý kontrakt a dapp, věci se mohou rychle zkomplikovat.
+Pro náš jednoduchý příklad je to stále ještě docela v pořádku. Ale řekněme, že nyní chceme zobrazit částky prohraných/vyhraných sázek pouze pro aktuálního hráče. Máme smůlu, raději byste měli nasadit nový kontrakt, který tyto hodnoty ukládá, a načítat je z něj. A teď si představte mnohem složitější chytrý kontrakt a dapp, věci se mohou rychle zkomplikovat.
 
-![Jen tak se prostě nedotazuje](./one-does-not-simply-query.jpg)
+![One Does Not Simply Query](./one-does-not-simply-query.jpg)
 
-Vidíte, že to není optimální:
+Sami vidíte, že to není optimální:
 
 - Nefunguje pro již nasazené kontrakty.
-- Dodatečné náklady na palivo pro uložení těchto hodnot.
-- Vyžaduje další volání k načtení dat pro uzel Etherea.
+- Dodatečné náklady na gas za ukládání těchto hodnot.
+- Vyžaduje další volání pro načtení dat z uzlu Etherea.
 
-![To není dost dobré](./not-good-enough.jpg)
+![Thats not good enough](./not-good-enough.jpg)
 
 Nyní se podívejme na lepší řešení.
 
-## Dovolte mi, abych vám představil GraphQL {#let-me-introduce-to-you-graphql}
+## Dovolte mi představit vám GraphQL {#let-me-introduce-to-you-graphql}
 
-Nejprve si povíme něco o GraphQL, původně navrženém a implementovaném společností Facebook. Možná jste obeznámeni s tradičním modelem REST API. Nyní si představte, že byste místo toho mohli napsat dotaz na přesně ta data, která jste chtěli:
+Nejprve si promluvme o GraphQL, které původně navrhl a implementoval Facebook. Možná znáte tradiční model REST API. Nyní si místo toho představte, že byste mohli napsat dotaz přesně na ta data, která chcete:
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 
-![Animovaná ukázka dotazu GraphQL na hřišti The Graph](./graphql-query.gif)
+![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.mp4#910x692)
 
-Tyto dva obrázky v podstatě vystihují podstatu GraphQL. S dotazem vpravo můžeme definovat přesně, jaká data chceme, takže získáme vše v jednom požadavku a nic víc, než přesně to, co potřebujeme. GraphQL server se stará o načítání všech požadovaných dat, takže je pro spotřebitelskou stranu frontendu neuvěřitelně snadno použitelný. [Zde je pěkné vysvětlení](https://www.apollographql.com/blog/graphql-explained), jak přesně server zpracovává dotaz, pokud vás to zajímá.
+Tyto dva obrázky v podstatě vystihují podstatu GraphQL. Pomocí dotazu vpravo můžeme přesně definovat, jaká data chceme, takže získáme vše v jednom požadavku a nic víc než to, co přesně potřebujeme. Server GraphQL se stará o načtení všech požadovaných dat, takže je pro frontendového konzumenta neuvěřitelně snadné jej používat. Pokud vás to zajímá, [zde je pěkné vysvětlení](https://www.apollographql.com/blog/graphql-explained) toho, jak přesně server zpracovává dotaz.
 
-S těmito znalostmi se konečně vrhněme do světa blockchainu a The Graph.
+S těmito znalostmi se konečně vrhněme do prostoru blockchainu a The Graph.
 
 ## Co je The Graph? {#what-is-the-graph}
 
-Blockchain je decentralizovaná databáze, ale na rozdíl od toho, co je obvyklé, pro tuto databázi nemáme dotazovací jazyk. Řešení pro získávání dat jsou bolestivá nebo zcela nemožná. The Graph je decentralizovaný protokol pro indexování a dotazování dat na blockchainu. A možná jste to uhodli, jako dotazovací jazyk používá GraphQL.
+Blockchain je decentralizovaná databáze, ale na rozdíl od toho, co je obvyklé, pro tuto databázi nemáme dotazovací jazyk. Řešení pro získávání dat jsou bolestivá nebo zcela nemožná. The Graph je decentralizovaný protokol pro indexování a dotazování na data z blockchainu. A jak jste už asi uhodli, jako dotazovací jazyk používá GraphQL.
 
 ![The Graph](./thegraph.png)
 
-Příklady jsou vždy nejlepší pro pochopení, takže použijme The Graph pro náš příklad GameContract.
+Příklady jsou vždy nejlepší pro pochopení čehokoli, takže použijme The Graph pro náš příklad s GameContract.
 
-## Jak vytvořit Subgraph {#how-to-create-a-subgraph}
+## Jak vytvořit podgraf {#how-to-create-a-subgraph}
 
-Definice způsobu indexování dat se nazývá subgraph. Vyžaduje tři komponenty:
+Definice toho, jak indexovat data, se nazývá podgraf. Vyžaduje tři komponenty:
 
 1. Manifest (`subgraph.yaml`)
 2. Schéma (`schema.graphql`)
@@ -117,21 +110,21 @@ Definice způsobu indexování dat se nazývá subgraph. Vyžaduje tři komponen
 
 Manifest je náš konfigurační soubor a definuje:
 
-- které chytré kontrakty indexovat (adresa, síť, ABI...)
-- kterým událostem naslouchat
-- další věci, kterým naslouchat, jako jsou volání funkcí nebo bloky
+- které chytré kontrakty se mají indexovat (adresa, síť, ABI...)
+- kterým událostem se má naslouchat
+- další věci k naslouchání, jako jsou volání funkcí nebo bloky
 - volané mapovací funkce (viz `mapping.ts` níže)
 
-Zde můžete definovat více kontraktů a handlerů. Typické nastavení by mělo složku subgraph uvnitř projektu Hardhat s vlastním repozitářem. Potom můžete snadno odkazovat na ABI.
+Zde můžete definovat více kontraktů a handlerů. Typické nastavení by mělo složku podgrafu uvnitř projektu Hardhat s vlastním repozitářem. Pak můžete snadno odkazovat na ABI.
 
-Z důvodu pohodlí můžete také chtít použít nástroj pro šablony, jako je mustache. Potom vytvoříte `subgraph.template.yaml` a vložíte adresy na základě nejnovějších nasazení. Pro pokročilejší příklad nastavení se podívejte například na [repozitář subgraphu Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
+Z důvodu pohodlí možná budete chtít použít také šablonovací nástroj, jako je mustache. Pak vytvoříte `subgraph.template.yaml` a vložíte adresy na základě nejnovějších nasazení. Pro pokročilejší příklad nastavení se podívejte například na [repozitář podgrafu Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
 
-A kompletní dokumentaci si můžete prohlédnout [zde](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest).
+A celou dokumentaci si můžete prohlédnout [zde](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest).
 
 ```yaml
 specVersion: 0.0.1
-description: Sázení na Ethereu
-repository: - odkaz na GitHub -
+description: Placing Bets on Ethereum
+repository: - GitHub link -
 schema:
   file: ./schema.graphql
 dataSources:
@@ -161,7 +154,7 @@ dataSources:
 
 Schéma je definice dat GraphQL. Umožní vám definovat, které entity existují a jaké jsou jejich typy. Podporované typy z The Graph jsou
 
-- Bajty
+- Bytes
 - ID
 - String
 - Boolean
@@ -169,7 +162,7 @@ Schéma je definice dat GraphQL. Umožní vám definovat, které entity existuj�
 - BigInt
 - BigDecimal
 
-Můžete také použít entity jako typ k definování vztahů. V našem příkladu definujeme vztah 1 ku mnoha od hráče k sázkám. Znak ! znamená, že hodnota nemůže být prázdná. Kompletní dokumentaci si můžete prohlédnout [zde](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest).
+Entity můžete také použít jako typ k definování vztahů. V našem příkladu definujeme vztah 1:N (jeden k mnoha) od hráče k sázkám. Znak ! znamená, že hodnota nesmí být prázdná. Celou dokumentaci si můžete prohlédnout [zde](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest).
 
 ```graphql
 type Bet @entity {
@@ -190,15 +183,15 @@ type Player @entity {
 
 ### Mapování (`mapping.ts`) {#mapping}
 
-Mapovací soubor v The Graph definuje naše funkce, které transformují příchozí události na entity. Je napsán v AssemblyScript, což je podmnožina Typescriptu. To znamená, že jej lze zkompilovat do WASM (WebAssembly) pro efektivnější a přenositelnější provádění mapování.
+Soubor mapování v The Graph definuje naše funkce, které transformují příchozí události na entity. Je napsán v AssemblyScriptu, což je podmnožina TypeScriptu. To znamená, že jej lze zkompilovat do WASM (WebAssembly) pro efektivnější a přenositelnější provádění mapování.
 
 Budete muset definovat každou funkci pojmenovanou v souboru `subgraph.yaml`, takže v našem případě potřebujeme pouze jednu: `handleNewBet`. Nejprve se pokusíme načíst entitu Player z adresy odesílatele jako id. Pokud neexistuje, vytvoříme novou entitu a naplníme ji počátečními hodnotami.
 
-Potom vytvoříme novou entitu Bet. ID pro ni bude `event.transaction.hash.toHex() + "-" + event.logIndex.toString()`, což zajišťuje vždy jedinečnou hodnotu. Použití pouze haše nestačí, protože by někdo mohl volat funkci placeBet několikrát v jedné transakci prostřednictvím chytrého kontraktu.
+Poté vytvoříme novou entitu Bet. Její id bude `event.transaction.hash.toHex() + "-" + event.logIndex.toString()`, což zajistí vždy jedinečnou hodnotu. Použití pouze hashe nestačí, protože někdo může volat funkci placeBet několikrát v jedné transakci prostřednictvím chytrého kontraktu.
 
-Nakonec můžeme aktualizovat entitu Player se všemi daty. Pole nelze přímo doplňovat (push), ale je třeba je aktualizovat, jak je zde ukázáno. Používáme id k odkazování na sázku. A `.save()` je na konci vyžadováno k uložení entity.
+Nakonec můžeme aktualizovat entitu Player všemi daty. Do polí nelze přidávat prvky přímo (push), ale musí se aktualizovat tak, jak je ukázáno zde. K odkazování na sázku používáme id. A na konci je vyžadováno `.save()` pro uložení entity.
 
-Kompletní dokumentaci si můžete prohlédnout zde: https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. Můžete také přidat výstup protokolování do mapovacího souboru, viz [zde](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference).
+Celou dokumentaci si můžete prohlédnout zde: https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. Do souboru mapování můžete také přidat výstup protokolování (logging), viz [zde](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference).
 
 ```typescript
 import { Bet, Player } from "../generated/schema"
@@ -231,7 +224,7 @@ export function handleNewBet(event: PlacedBet): void {
     player.hasLostCount++
   }
 
-  // aktualizovat pole tímto způsobem
+  // aktualizovat pole takto
   let bets = player.bets
   bets.push(bet.id)
   player.bets = bets
@@ -242,10 +235,10 @@ export function handleNewBet(event: PlacedBet): void {
 
 ## Použití ve frontendu {#using-it-in-the-frontend}
 
-Pomocí něčeho jako Apollo Boost můžete snadno integrovat The Graph do své React dapp (nebo Apollo-Vue). Zejména při použití React hooks a Apollo je načítání dat tak jednoduché jako napsání jediného GraphQL dotazu ve vaší komponentě. Typické nastavení může vypadat takto:
+Pomocí něčeho jako Apollo Boost můžete The Graph snadno integrovat do své decentralizované aplikace (dapp) v Reactu (nebo Apollo-Vue). Zejména při použití React hooks a Apolla je načítání dat tak jednoduché jako napsání jediného dotazu GraphQL ve vaší komponentě. Typické nastavení může vypadat takto:
 
 ```javascript
-// Zobrazit všechny subgraphy: https://thegraph.com/explorer/
+// Zobrazit všechny podgrafy: https://thegraph.com/explorer/
 const client = new ApolloClient({
   uri: "{{ subgraphUrl }}",
 })
@@ -258,13 +251,13 @@ ReactDOM.render(
 )
 ```
 
-A nyní můžeme napsat například takovýto dotaz. Tímto se nám načte
+A nyní můžeme napsat například takovýto dotaz. Ten nám načte
 
 - kolikrát aktuální uživatel vyhrál
 - kolikrát aktuální uživatel prohrál
 - seznam časových razítek se všemi jeho předchozími sázkami
 
-Vše v jediném požadavku na server GraphQL.
+Vše v jednom jediném požadavku na server GraphQL.
 
 ```javascript
 const myGraphQlQuery = gql`
@@ -287,27 +280,27 @@ React.useEffect(() => {
 }, [loading, error, data])
 ```
 
-![Kouzlo](./magic.jpg)
+![Magic](./magic.jpg)
 
-Ale chybí nám poslední dílek skládačky, a to je server. Můžete si ho buď spustit sami, nebo použít hostovanou službu.
+Chybí nám ale poslední kousek skládačky, a tím je server. Můžete jej buď provozovat sami, nebo využít hostovanou službu.
 
 ## Server The Graph {#the-graph-server}
 
 ### Graph Explorer: Hostovaná služba {#graph-explorer-the-hosted-service}
 
-Nejjednodušší způsob je použít hostovanou službu. Postupujte podle pokynů [zde](https://thegraph.com/docs/en/deploying/deploying-a-subgraph-to-hosted/) a nasaďte subgraph. Pro mnoho projektů můžete skutečně najít existující subgraphy v [průzkumníkovi](https://thegraph.com/explorer/).
+Nejjednodušší způsob je použít hostovanou službu. Pro nasazení podgrafu postupujte podle pokynů [zde](https://thegraph.com/docs/en/deploying/deploying-a-subgraph-to-hosted/). Pro mnoho projektů můžete ve skutečnosti najít existující podgrafy v [exploreru](https://thegraph.com/explorer/).
 
 ![The Graph-Explorer](./thegraph-explorer.png)
 
 ### Provozování vlastního uzlu {#running-your-own-node}
 
-Alternativně si můžete spustit vlastní uzel. Dokumentace [zde](https://github.com/graphprotocol/graph-node#quick-start). Jedním z důvodů může být použití sítě, která není podporována hostovanou službou. Aktuálně podporované sítě [naleznete zde](https://thegraph.com/docs/en/developing/supported-networks/).
+Případně můžete provozovat svůj vlastní uzel. Dokumentace je [zde](https://github.com/graphprotocol/graph-node#quick-start). Jedním z důvodů, proč to udělat, může být použití sítě, která není podporována hostovanou službou. Aktuálně podporované sítě [najdete zde](https://thegraph.com/docs/en/developing/supported-networks/).
 
 ## Decentralizovaná budoucnost {#the-decentralized-future}
 
-GraphQL podporuje také streamy pro nově příchozí události. Ty jsou na grafu podporovány prostřednictvím [Substreams](https://thegraph.com/docs/en/substreams/), které jsou v současné době v otevřené beta verzi.
+GraphQL podporuje také streamy pro nově příchozí události. Ty jsou na The Graph podporovány prostřednictvím [Substreams](https://thegraph.com/docs/en/substreams/), které jsou v současné době v otevřené beta verzi.
 
-V [roce 2021](https://thegraph.com/blog/mainnet-migration/) začal The Graph přecházet na decentralizovanou indexovací síť. Více o architektuře této decentralizované indexovací sítě si můžete přečíst [zde](https://thegraph.com/docs/en/network/explorer/).
+V roce [2021](https://thegraph.com/blog/mainnet-migration/) zahájil The Graph přechod na decentralizovanou indexovací síť. Více o architektuře této decentralizované indexovací sítě si můžete přečíst [zde](https://thegraph.com/docs/en/network/explorer/).
 
 Dva klíčové aspekty jsou:
 

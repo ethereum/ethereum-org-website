@@ -1,184 +1,185 @@
 ---
-title: "Ethereum Yönetişimi"
-description: "Ethereum ile ilgili kararların nasıl alındığına giriş."
+title: Ethereum yönetişimine giriş
+metaTitle: Ethereum Yönetişimi
+description: Ethereum hakkındaki kararların nasıl alındığına dair bir giriş.
 lang: tr
 ---
 
-# Ethereum yönetişimine giriş {#introduction}
-
-_Hiç kimse Ethereum'un sahibi değilse, Ethereum'a dair geçmişteki ve gelecekteki değişikliklere nasıl karar veriliyor? Ethereum yönetişimi, bu tür kararların alınmasını sağlayan süreci ifade eder._
+_Hiç kimse [Ethereum](/)'un sahibi değilse, Ethereum'daki geçmiş ve gelecekteki değişiklikler hakkındaki kararlar nasıl alınıyor? Ethereum yönetişimi, bu tür kararların alınmasını sağlayan süreci ifade eder._
 
 <Divider />
 
 ## Yönetişim nedir? {#what-is-governance}
 
-Yönetişim, kararların alınmasına izin veren mevcut sistemlerdir. Tipik bir organizasyon yapısında, yönetim ekibi veya yönetim kurulu karar vermede son söze sahip olabilir. Ya da hissedarlar değişikliği yürürlüğe koymak için tekliflere oy verebilirler. Siyasi bir sistemde, seçilmiş yetkililer seçmenlerinin arzularını temsil etmeye çalışan yasalar çıkarabilir.
+Yönetişim, kararların alınmasına olanak tanıyan mevcut sistemlerdir. Tipik bir organizasyon yapısında, karar alma sürecinde son sözü yönetim ekibi veya yönetim kurulu söyleyebilir. Veya belki de hissedarlar, değişikliği yürürlüğe koymak için teklifleri oylarlar. Siyasi bir sistemde, seçilmiş yetkililer seçmenlerinin arzularını temsil etmeye çalışan yasalar çıkarabilirler.
 
 ## Merkeziyetsiz yönetişim {#decentralized-governance}
 
-Ethereum protokolünün sahibi veya protokolü yöneten hiç kimse yoktur, ancak ağın uzun ömürlülüğünü ve refahını en iyi şekilde sağlamak için değişikliklerin uygulanması konusunda kararların alınması gerekir. Herhangi bir sahibin bulunmadığı bu durum, geleneksel kurumsal yönetişimi uyumsuz bir çözüm hâline getirir.
+Hiç kimse Ethereum protokolünün sahibi değildir veya onu kontrol etmez, ancak ağın uzun ömürlülüğünü ve refahını en iyi şekilde sağlamak için değişikliklerin uygulanması hakkında yine de kararlar alınması gerekir. Bu sahiplik eksikliği, geleneksel organizasyonel yönetişimi uyumsuz bir çözüm haline getirir.
 
 ## Ethereum Yönetişimi {#ethereum-governance}
 
-Ethereum yönetişimi, protokol değişikliklerinin yapıldığı süreçtir. Bu sürecin, insanların ve uygulamaların protokolü nasıl kullandığıyla ilgili olmadığını belirtmek önemlidir: Ethereum izinsizdir. Dünyanın herhangi bir yerinden herkes zincir üstü etkinliklere katılabilir. Kimin uygulama oluşturup oluşturmayacağı veya işlem gönderip gönderemeyeceği konusunda belirlenmiş bir kural yoktur. Ancak, bu merkeziyetsiz uygulamaların üzerinde çalıştığı çekirdek protokolde değişiklik önermek için bir süreç vardır. Pek çok insan Ethereum'un istikrarına güvendiğinden, Ethereum'daki herhangi bir değişikliğin güvenli olmasını ve topluluk tarafından geniş çapta desteklenmesini sağlamak için sosyal ve teknik süreçler de dahil olmak üzere temel değişiklikler için çok yüksek bir koordinasyon eşiği vardır.
+Ethereum yönetişimi, protokol değişikliklerinin yapıldığı süreçtir. Bu sürecin, insanların ve uygulamaların protokolü nasıl kullandığıyla ilgili olmadığını belirtmek önemlidir - Ethereum izinsizdir. Dünyanın herhangi bir yerinden herkes zincir içi etkinliklere katılabilir. Kimin bir uygulama geliştirebileceği veya bir işlem gönderip gönderemeyeceği konusunda belirlenmiş hiçbir kural yoktur. Ancak, merkeziyetsiz uygulamaların (dapp) üzerinde çalıştığı çekirdek protokole değişiklikler önermek için bir süreç vardır. Çok sayıda insan Ethereum'un istikrarına bağlı olduğundan, Ethereum'daki herhangi bir değişikliğin güvenli olmasını ve topluluk tarafından geniş çapta desteklenmesini sağlamak için sosyal ve teknik süreçler de dahil olmak üzere çekirdek değişiklikler için çok yüksek bir koordinasyon eşiği vardır.
 
-### Zincir üstü ve zincir dışı yönetişim {#onchain-vs-offchain}
+<VideoWatch slug="ethereum-core-governance-explained" />
 
-Blokzincir teknolojisi, zincir üstü yönetişim olarak bilinen yeni yönetişim yeteneklerine olanak tanır. Zincir üstü yönetişim, önerilen protokol değişikliklerine, genellikle bir yönetişim jetonu sahipleri tarafından yapılan paydaş oylamasıyla karar verilmesi ve oylamanın blokzincirde gerçekleşmesidir. Zincir üstü yönetişimin bazı biçimlerinde, önerilen protokol değişiklikleri zaten koda yazılmıştır ve paydaşlar değişiklikleri bir işlem imzalayarak onaylarsa otomatik olarak uygulanır.
+### Zincir içi ve zincir dışı yönetişim {#onchain-vs-offchain}
 
-Tersi bir yaklaşım olan zincir dışı yönetişim ise protokol değişikliği kararlarının gayriresmi bir sosyal tartışma süreciyle verildiği ve onaylandığı takdirde koda uygulandığı bir yöntemdir.
+Blokzincir teknolojisi, zincir içi yönetişim olarak bilinen yeni yönetişim yeteneklerine olanak tanır. Zincir içi yönetişim, önerilen protokol değişikliklerinin genellikle bir yönetişim token'ı sahipleri tarafından bir paydaş oylamasıyla kararlaştırıldığı ve oylamanın blokzincir üzerinde gerçekleştiği durumdur. Bazı zincir içi yönetişim biçimlerinde, önerilen protokol değişiklikleri zaten kodla yazılmıştır ve paydaşlar bir işlemi imzalayarak değişiklikleri onaylarsa otomatik olarak uygulanır.
 
-**Ethereum yönetişimi zincir dışında gerçekleşir** ve sürece çok çeşitli paydaşlar dahil olur.
+Bunun zıttı olan yaklaşım, yani zincir dışı yönetişim, herhangi bir protokol değişikliği kararının, onaylandığı takdirde kodda uygulanacak olan gayriresmi bir sosyal tartışma süreci aracılığıyla gerçekleştiği durumdur.
 
-_Protokol düzeyinde Ethereum yönetişimi zincir dışı olsa da, DAO'lar gibi Ethereum'un üzerine inşa edilmiş birçok kullanım durumu zincir üstü yönetişim kullanır._
+**Ethereum yönetişimi**, sürece dahil olan çok çeşitli paydaşlarla **zincir dışı gerçekleşir**.
+
+_Protokol düzeyinde Ethereum yönetişimi zincir dışı olsa da, DAO'lar gibi Ethereum üzerine inşa edilen birçok kullanım durumu zincir içi yönetişimi kullanır._
 
 <ButtonLink href="/dao/">
-  DAO'lar hakkında daha fazla bilgi
+  DAO'lar hakkında daha fazlası
 </ButtonLink>
 
 <Divider />
 
-## Projeye kimler dahil? {#who-is-involved}
+## Kimler dahil? {#who-is-involved}
 
-[Ethereum topluluğunda](/community/) her biri yönetişim sürecinde rol oynayan çeşitli paydaşlar bulunur. Protokolden en uzaktaki hissedarlardan başlayarak ve yakınlaşarak şunları görebiliriz:
+[Ethereum topluluğunda](/community/), her biri yönetişim sürecinde rol oynayan çeşitli paydaşlar vardır. Protokole en uzak paydaşlardan başlayıp yakından bakacak olursak, şunlar bulunur:
 
-- **Ether sahipleri**: Bu kişiler herhangi bir miktarda ETH'ye sahiptir. [ETH hakkında daha fazla bilgi](/what-is-ether/).
-- **Uygulama Kullanıcıları**: Bu kişiler Ethereum blokzincirindeki uygulamalarla etkileşime girer.
-- **Uygulama/Araç Geliştiricileri**: Bu kişiler, Ethereum blokzincirinde çalışan uygulamalar (ör. DeFi, NFT'ler vb.) yazar veya Ethereum ile etkileşim kurmak için araçlar oluşturur (örn. cüzdanlar, test takımları vb.). [Merkeziyetsiz uygulamalar hakkında daha fazla bilgi](/apps/).
-- **Düğüm Operatörleri**: Bu kişiler, blokları ve işlemleri yayan ve karşılaştıkları geçersiz işlemleri veya blokları reddeden düğümleri çalıştırır. [Düğümler hakkında daha fazla bilgi](/developers/docs/nodes-and-clients/).
-- **EIP Yazarları**: Bu kişiler, Ethereum İyileştirme Önerileri (EIP'ler) şeklinde Ethereum protokolüne değişiklikler önerir. [EIP'ler hakkında daha fazla bilgi](/eips/).
-- **Doğrulayıcılar**: Bu kişiler, Ethereum blokzincirine yeni bloklar ekleyebilen düğümler çalıştırır.
-- **Protokol Geliştiricileri** (diğer adıyla "Çekirdek Geliştiriciler"): Bu kişiler, çeşitli Ethereum uygulamalarını (örneğin yürütme katmanında go-ethereum, Nethermind, Besu, Erigon, Reth veya mutabakat katmanında Prysm, Lighthouse, Nimbus, Teku, Lodestar, Grandine) sürdürür. [Ethereum istemcileri hakkında daha fazla bilgi](/developers/docs/nodes-and-clients/).
+- **Ether sahipleri**: bu kişiler rastgele miktarda ETH tutarlar. [ETH hakkında daha fazlası](/what-is-ether/).
+- **Uygulama Kullanıcıları**: bu kişiler Ethereum blokzinciri üzerindeki uygulamalarla etkileşime girerler.
+- **Uygulama/Araç Geliştiricileri**: bu kişiler Ethereum blokzinciri üzerinde çalışan uygulamalar (ör. merkeziyetsiz finans (DeFi), NFT'ler vb.) yazarlar veya Ethereum ile etkileşime girmek için araçlar (ör. cüzdanlar, test paketleri vb.) oluştururlar. [Dapp'ler hakkında daha fazlası](/apps/).
+- **Düğüm Operatörleri**: bu kişiler, blokları ve işlemleri yayan, karşılaştıkları geçersiz işlemleri veya blokları reddeden düğümleri çalıştırırlar. [Düğümler hakkında daha fazlası](/developers/docs/nodes-and-clients/).
+- **EIP Yazarları**: bu kişiler, Ethereum İyileştirme Teklifleri (EIP'ler) biçiminde Ethereum protokolünde değişiklikler önerirler. [EIP'ler hakkında daha fazlası](/eips/).
+- **Doğrulayıcılar**: bu kişiler, Ethereum blokzincirine yeni bloklar ekleyebilen düğümleri çalıştırırlar.
+- **Protokol Geliştiricileri** (diğer adıyla "Çekirdek Geliştiriciler"): bu kişiler çeşitli Ethereum uygulamalarını (ör. yürütme katmanında go-ethereum, Nethermind, Besu, Erigon, Reth veya mutabakat katmanında Prysm, Lighthouse, Nimbus, Teku, Lodestar, Grandine) sürdürürler. [Ethereum istemcileri hakkında daha fazlası](/developers/docs/nodes-and-clients/).
 
-_Not: Herhangi bir kişi bu grupların birden fazlasının parçası olabilir (örneğin, bir protokol geliştiricisi bir EIP'ye öncülük edebilir, bir işaret zinciri doğrulayıcısı çalıştırabilir ve DeFi uygulamalarını kullanabilir). Kavramsal netlik için, aralarında ayrım yapmak en iyisidir._
+_Not: herhangi bir birey bu grupların birden fazlasının parçası olabilir (örneğin, bir protokol geliştiricisi bir EIP'ye öncülük edebilir, bir İşaret zinciri doğrulayıcısı çalıştırabilir ve DeFi uygulamalarını kullanabilir). Yine de kavramsal netlik açısından, bunları birbirinden ayırmak en kolayıdır._
 
 <Divider />
 
 ## EIP nedir? {#what-is-an-eip}
 
-Ethereum yönetişiminde kullanılan önemli süreçlerden biri, **Ethereum İyileştirme Önerilerinin (EIP'ler)** teklif edilmesidir. EIP'ler, Ethereum için potansiyel yeni özellikleri veya süreçleri belirleyen standartlardır. Ethereum topluluğu içindeki herkes bir EIP oluşturabilir. Eğer bir EIP yazmaya veya yönetişim ve/veya bağımsız değerlendirmeye katılım sağlamaya meraklıysanız şuna bakın:
+Ethereum yönetişiminde kullanılan önemli bir süreç, **Ethereum İyileştirme Tekliflerinin (EIP'ler)** sunulmasıdır. EIP'ler, Ethereum için potansiyel yeni özellikleri veya süreçleri belirleyen standartlardır. Ethereum topluluğundaki herkes bir EIP oluşturabilir. Bir EIP yazmakla veya akran değerlendirmesine ve/veya yönetişime katılmakla ilgileniyorsanız, şuraya bakın:
 
 <ButtonLink href="/eips/">
-  EIP'ler hakkında daha fazla bilgi
+  EIP'ler hakkında daha fazlası
 </ButtonLink>
 
 <Divider />
 
 ## Resmi süreç {#formal-process}
 
-Ethereum protokolünde değişiklik yapmak için resmi süreç aşağıdaki gibidir:
+Ethereum protokolünde değişiklikler yapmak için resmi süreç aşağıdaki gibidir:
 
-1. **Bir Çekirdek EIP Önerin**: [EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips) belgesinde açıklandığı gibi, Ethereum'da resmî olarak bir değişiklik önermenin ilk adımı, bunu bir Çekirdek EIP'de ayrıntılandırmaktır. Bu, kabul edildiği takdirde Protokol Geliştiricilerinin uygulayacağı bir EIP için resmi şartname görevi görecektir.
+1. **Bir Çekirdek EIP Önerin**: [EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips)'de açıklandığı gibi, Ethereum'da resmi olarak bir değişiklik önermenin ilk adımı, bunu bir Çekirdek EIP'de detaylandırmaktır. Bu, kabul edildiği takdirde Protokol Geliştiricilerinin uygulayacağı bir EIP için resmi spesifikasyon görevi görecektir.
 
-2. **EIP'nizi Protokol Geliştiricilerine sunun**: Topluluktan geri bildirim topladığınız bir Çekirdek EIP'niz olduğunda, bunu Protokol Geliştiricilerine sunmalısınız. Bunu bir [AllCoreDevs toplantısında](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status) tartışmaya açarak yapabilirsiniz. Büyük olasılıkla [Ethereum Magician's forumunda](https://ethereum-magicians.org/) veya [Ethereum R&D Discord](https://discord.gg/mncqtgVSVw) kanalında bazı tartışmalar eşzamansız olarak zaten gerçekleşmiştir.
+2. **EIP'nizi Protokol Geliştiricilerine Sunun**: topluluktan geri bildirim topladığınız bir Çekirdek EIP'niz olduğunda, bunu Protokol Geliştiricilerine sunmalısınız. Bunu, bir [AllCoreDevs çağrısında](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status) tartışmaya sunarak yapabilirsiniz. Muhtemelen bazı tartışmalar [Ethereum Magicians forumunda](https://ethereum-magicians.org/) veya [Ethereum Ar-Ge Discord'unda](https://discord.gg/mncqtgVSVw) eşzamansız olarak zaten gerçekleşmiş olacaktır.
 
 > Bu aşamanın olası sonuçları şunlardır:
 
-> - Gelecekteki bir ağ yükseltmesi için EIP dikkate alınacaktır
-> - Teknik değişiklikler istenecektir
-> - Öncelikli bir konu değilse veya geliştirme, geliştirme çalışmalarına kıyasla yeterince büyük değilse reddedilebilir
+> - EIP, gelecekteki bir ağ yükseltmesi için değerlendirilecektir
+> - Teknik değişiklikler talep edilecektir
+> - Bir öncelik değilse veya iyileştirme, geliştirme çabasına kıyasla yeterince büyük değilse reddedilebilir
 
-3. **Nihai teklife doğru ilerleyin:** ilgili tüm paydaşlardan geri bildirim aldıktan sonra, güvenliğini artırmak veya çeşitli kullanıcıların ihtiyaçlarını daha iyi karşılamak için ilk teklifinizde muhtemelen değişiklikler yapmanız gerekecektir. Gerekli olduğuna inandığınız tüm değişiklikler EIP'nize eklendikten sonra, bunu tekrar Protokol Geliştiricilerine sunmanız gerekecektir. Daha sonra, bu sürecin bir sonraki adımına geçersiniz veya teklifinizi yinelemenizi gerektirecek yeni endişeler ortaya çıkar.
+3. **Nihai bir teklife doğru yineleyin:** ilgili tüm paydaşlardan geri bildirim aldıktan sonra, güvenliğini artırmak veya çeşitli kullanıcıların ihtiyaçlarını daha iyi karşılamak için muhtemelen ilk teklifinizde değişiklikler yapmanız gerekecektir. EIP'niz gerekli olduğuna inandığınız tüm değişiklikleri içerdiğinde, onu Protokol Geliştiricilerine tekrar sunmanız gerekecektir. Daha sonra bu sürecin bir sonraki adımına geçeceksiniz veya teklifiniz üzerinde başka bir yineleme turu gerektiren yeni endişeler ortaya çıkacaktır.
 
-4. **Ağ Yükseltmesine Dahil Edilen EIP**: EIP'nin onaylandığı, test edildiği ve uygulandığı varsayıldığında, bir ağ yükseltmesinin parçası olarak planlanır. Ağ yükseltmelerinin yüksek koordinasyon maliyetleri göz önüne alındığında (herkesin aynı anda yükseltme yapması gerekir), EIP'ler genellikle yükseltmelerde birlikte paketlenir.
+4. **EIP'nin Ağ Yükseltmesine Dahil Edilmesi**: EIP'nin onaylandığı, test edildiği ve uygulandığı varsayıldığında, bir ağ yükseltmesinin parçası olarak planlanır. Ağ yükseltmelerinin yüksek koordinasyon maliyetleri göz önüne alındığında (herkesin aynı anda yükseltme yapması gerekir), EIP'ler genellikle yükseltmelerde bir araya getirilir.
 
-5. **Ağ Yükseltmesi Etkinleştirildi**: Ağ yükseltmesi etkinleştirildikten sonra, EIP Ethereum ağında canlıya alınır. _Not: Ağ yükseltmeleri genellikle Ethereum Mainnet'te etkinleştirilmeden önce test ağlarında etkinleştirilir._
+5. **Ağ Yükseltmesinin Etkinleştirilmesi**: ağ yükseltmesi etkinleştirildikten sonra, EIP Ethereum ağında yayına girecektir. _Not: ağ yükseltmeleri genellikle Ethereum Ana Ağı'nda etkinleştirilmeden önce test ağlarında etkinleştirilir._
 
-Bu akış, çok basitleştirilmiş olsa da, Ethereum'da bir protokol değişikliğinin etkinleştirilmesi için gereken önemli aşamalara genel bir bakış sunar. Şimdi bu süreçte rol oynayan resmi gayriresmî faktörlere bakalım.
+Bu akış, çok basitleştirilmiş olsa da, Ethereum'da bir protokol değişikliğinin etkinleştirilmesi için önemli aşamalara genel bir bakış sunar. Şimdi, bu süreçte rol oynayan gayriresmi faktörlere bakalım.
 
 ## Gayriresmi süreç {#informal-process}
 
-### Önceki çalışmaları anlama {#prior-work}
+### Önceki çalışmaları anlamak {#prior-work}
 
-EIP Öncüleri, Ethereum Mainnet'te dağıtım için ciddi olarak düşünülebilecek bir EIP oluşturmadan önce önceki çalışmalara ve tekliflere aşina olmalıdır. Bu şekilde, EIP'nin daha önce reddedilmemiş yeni bir şey sunması umulur. Bunu araştırmak için üç ana yer şunlardır: [EIP deposu](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) ve [ethresear.ch](https://ethresear.ch/).
+EIP Öncüleri, Ethereum Ana Ağı'nda dağıtım için ciddi şekilde değerlendirilebilecek bir EIP oluşturmadan önce önceki çalışmalara ve tekliflere aşina olmalıdır. Bu şekilde, EIP umarız daha önce reddedilmemiş yeni bir şey getirir. Bunu araştırmak için üç ana yer [EIP deposu](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) ve [ethresear.ch](https://ethresear.ch/)'dir.
 
 ### Çalışma grupları {#working-groups}
 
-Bir EIP'nin ilk taslağının, düzenleme veya değişiklik yapılmadan Ethereum Mainnet'te uygulanması pek olası değildir. Genel olarak EIP Öncüleri, tekliflerini belirlemek, uygulamak, test etmek, yinelemek ve sonuçlandırmak için Protokol Geliştiricilerinin bir alt kümesiyle birlikte çalışır. Tarihsel olarak bu çalışma gruplarının birkaç ay (ve bazen yıllarca!) çalışması gerekmiştir. Benzer şekilde, bu tür değişiklikler için EIP Öncüleri, ilgili Uygulama/Araç Geliştiricilerini son kullanıcı geri bildirimi toplama ve herhangi bir dağıtım riskini azaltma çabalarına erken dahil etmelidir.
+Bir EIP'nin ilk taslağının, düzenlemeler veya değişiklikler olmadan Ethereum Ana Ağı'nda uygulanması pek olası değildir. Genellikle, EIP Öncüleri tekliflerini belirlemek, uygulamak, test etmek, yinelemek ve son haline getirmek için Protokol Geliştiricilerinin bir alt kümesiyle birlikte çalışırlar. Tarihsel olarak, bu çalışma grupları birkaç ay (ve bazen yıllar!) çalışma gerektirmiştir. Benzer şekilde, bu tür değişiklikler için EIP Öncüleri, son kullanıcı geri bildirimlerini toplamak ve herhangi bir dağıtım riskini azaltmak için çabalarının erken aşamalarında ilgili Uygulama/Araç Geliştiricilerini dahil etmelidir.
 
 ### Topluluk mutabakatı {#community-consensus}
 
-Bazı EIP'ler minimum ayrıntılara sahip basit teknik iyileştirmeler olsa da, bazıları daha karmaşıktır ve farklı hissedarları farklı yollarla etkileyecek bazı feragatlarla birlikte gelirler. Bu, bazı EIP'lerin topluluk içinde diğerlerinden daha tartışmalı olduğu anlamına gelir.
+Bazı EIP'ler minimum nüansa sahip basit teknik iyileştirmeler olsa da, bazıları daha karmaşıktır ve farklı paydaşları farklı şekillerde etkileyecek ödünleşimlerle birlikte gelir. Bu, bazı EIP'lerin topluluk içinde diğerlerinden daha tartışmalı olduğu anlamına gelir.
 
-Tartışmalı tekliflerin nasıl ele alınacağına dair net bir kural kitabı yok. Bu hiçbir tekil hissedar grubunun bir diğerini kaba kuvvet yoluyla zorlayamayacağı Ethereum'un merkeziyetsiz tasarımının bir sonucudur: Protokol geliştiricileri kod değişiklikleri uygulamamayı seçebilir; düğüm operatörleri en güncel Ethereum istemcisini çalıştırmamayı seçebilir; uygulama takımları ve kullanıcıları zincirde işlem yapmamayı seçebilir. Protokol Geliştiricileri, insanları ağ yükseltmelerini benimsemeye zorlayamayacakları için genellikle tartışmaların topluluğun çoğunluğuna olacak faydadan daha ağır bastığı EIP'leri uygulamaktan kaçınırlar.
+Tartışmalı tekliflerin nasıl ele alınacağına dair net bir kural kitabı yoktur. Bu, hiçbir paydaş grubunun diğerini kaba kuvvet yoluyla zorlayamayacağı Ethereum'un merkeziyetsiz tasarımının bir sonucudur: protokol geliştiricileri kod değişikliklerini uygulamamayı seçebilir; düğüm operatörleri en son Ethereum istemcisini çalıştırmamayı seçebilir; uygulama ekipleri ve kullanıcılar zincir üzerinde işlem yapmamayı seçebilir. Protokol Geliştiricilerinin insanları ağ yükseltmelerini benimsemeye zorlamanın bir yolu olmadığından, genellikle tartışmaların daha geniş topluluğa sağlanan faydalardan daha ağır bastığı EIP'leri uygulamaktan kaçınacaklardır.
 
-EIP Öncülerinin ilgili tüm hissedarlardan geri bildirim talep etmesi beklenir. Tartışmalı bir EIP'nin öncüsüyseniz, EIP'niz hakkında mutabakat oluşturmak için itirazları ele almaya çalışmalısınız. Ethereum topluluğunun büyüklüğü ve çeşitliliği göz önüne alındığında, topluluk mutabakatını ölçmek için kullanılabilecek tek bir metrik (örneğin bir jeton oylaması) yoktur ve EIP Şampiyonlarının tekliflerinin koşullarına uyum sağlaması beklenir.
+EIP Öncülerinin ilgili tüm paydaşlardan geri bildirim istemesi beklenir. Kendinizi tartışmalı bir EIP'nin öncüsü olarak bulursanız, EIP'niz etrafında mutabakat oluşturmak için itirazları ele almaya çalışmalısınız. Ethereum topluluğunun büyüklüğü ve çeşitliliği göz önüne alındığında, topluluk mutabakatını ölçmek için kullanılabilecek tek bir metrik (örneğin, bir coin oylaması) yoktur ve EIP Öncülerinin tekliflerinin koşullarına uyum sağlaması beklenir.
 
-Ethereum ağının güvenliğinin ötesinde, Ekosistemi diğer hissedarlar için çekici kılan şeyin Ethereum üzerinde kullanımları ve geliştirmeleri olduğu göz önüne alındığında, Protokol Geliştiricileri tarafından Uygulama/Araç Geliştiricilerinin ve Uygulama Kullanıcılarının tarihsel olarak neye değer verdiğine önemli bir ağırlık verilmiştir. Ek olarak, farklı ekipler tarafından yönetilen tüm istemci uygulamalarında EIP'lerin uygulanması gerekir. Bu sürecin bir kısmı genellikle, birden fazla Protokol Geliştirici ekibini belirli bir değişikliğin değerli olduğuna ve son kullanıcılara yardımcı olduğuna veya bir güvenlik sorununu çözdüğüne ikna etmek anlamına gelir.
+Ethereum ağının güvenliğinin ötesinde, Ethereum'u kullanmaları ve üzerinde geliştirme yapmaları ekosistemi diğer paydaşlar için cazip kılan şey olduğundan, Protokol Geliştiricileri tarafından tarihsel olarak Uygulama/Araç Geliştiricilerinin ve Uygulama Kullanıcılarının değer verdiği şeylere önemli bir ağırlık verilmiştir. Ek olarak, EIP'lerin farklı ekipler tarafından yönetilen tüm istemci uygulamalarında uygulanması gerekir. Bu sürecin bir kısmı genellikle birden fazla Protokol Geliştiricisi ekibini belirli bir değişikliğin değerli olduğuna ve son kullanıcılara yardımcı olduğuna veya bir güvenlik sorununu çözdüğüne ikna etmek anlamına gelir.
 
 <Divider />
 
 ## Anlaşmazlıkların ele alınması {#disagreements}
 
-Farklı motivasyon ve inançlara sahip birçok hissedar bulunduğu için sık sık anlaşmazlıklarla karşılaşılabilir.
+Farklı motivasyonlara ve inançlara sahip birçok paydaşın olması, anlaşmazlıkların nadir olmadığı anlamına gelir.
 
-Genel olarak anlaşmazlıklar, sorunun kökenini anlamak ve herkesin durumu ölçmesine izin vermek için halka açık forumlarda uzun süreli tartışmalarla ele alınır. Tipik olarak, bir grup durumu kabul eder veya uygun bir ortak çözüme ulaşılır. Bir grup yeterince güçlü hissediyorsa, belirli bir değişikliği zorlamak zincirin bölünmesine neden olabilir. Zincir bölünmesi, bazı hissedarların, iki farklı blok zincirinin ortaya çıktığı, protokolün farklı, uyumsuz sürümleriyle sonuçlanan bir protokol değişikliğini uygulamayı protesto etmesidir.
+Genellikle anlaşmazlıklar, sorunun kökenini anlamak ve herkesin fikrini belirtmesine olanak tanımak için halka açık forumlarda uzun biçimli tartışmalarla ele alınır. Tipik olarak, bir grup taviz verir veya mutlu bir orta yol bulunur. Bir grup yeterince güçlü hissediyorsa, belirli bir değişikliği zorlamak bir zincir bölünmesiyle sonuçlanabilir. Zincir bölünmesi, bazı paydaşların bir protokol değişikliğinin uygulanmasını protesto etmesi ve bunun sonucunda protokolün farklı, uyumsuz sürümlerinin çalışması ve bunlardan iki farklı blokzincirin ortaya çıkmasıdır.
 
-### DAO çatalı {#dao-fork}
+### DAO çatallanması {#dao-fork}
 
-Çatallar, ağda büyük teknik yükseltmeler veya değişiklikler yapılması ve protokolün "kurallarının" değiştirilmesi gerekmesidir. [Ethereum istemcileri](/developers/docs/nodes-and-clients/) yeni çatal kurallarını uygulamak için yazılımlarını güncellemelidir.
+Çatallanmalar, ağda büyük teknik yükseltmelerin veya değişikliklerin yapılması gerektiği ve protokolün "kurallarını" değiştirdiği durumlardır. [Ethereum istemcileri](/developers/docs/nodes-and-clients/), yeni çatallanma kurallarını uygulamak için yazılımlarını güncellemelidir.
 
-DAO çatalı, güvensiz bir [DAO](/glossary/#dao) sözleşmesinden bir siber saldırı ile 3,6 milyonun üzerinde ETH'nin boşaltıldığı [2016 DAO saldırısına](https://www.coindesk.com/learn/understanding-the-dao-attack) bir yanıttı. Çatal, fonları hatalı sözleşmeden yeni bir sözleşmeye taşıdı ve hack sırasında fon kaybeden herkesin fonlarını geri almasını sağladı.
+DAO çatallanması, güvensiz bir [DAO](/glossary/#dao) sözleşmesinin bir bilgisayar korsanlığı olayında 3,6 milyondan fazla ETH'sinin boşaltıldığı [2016 DAO saldırısına](https://www.coindesk.com/learn/understanding-the-dao-attack) bir yanıttı. Çatallanma, fonları hatalı sözleşmeden yeni bir sözleşmeye taşıyarak, bilgisayar korsanlığında fon kaybeden herkesin bunları kurtarmasına olanak tanıdı.
 
-Bu eylem planı, Ethereum topluluğu tarafından oylandı. Her ETH sahibi, [bir oylama platformu](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/) üzerinde bir işlem aracılığıyla oy kullanabildi. Çatallanma kararı, oyların %85'inden fazlasına ulaştı.
+Bu hareket tarzı Ethereum topluluğu tarafından oylandı. Herhangi bir ETH sahibi, [bir oylama platformundaki](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/) bir işlem aracılığıyla oy kullanabildi. Çatallanma kararı oyların %85'inden fazlasına ulaştı.
 
-Protokol, hack'in etkilerini geri almak için çatallama yapmış olsa da çatallamaya karar veren oyların ağırlığı birkaç nedenden dolayı tartışmaya açıktır:
+Protokolün bilgisayar korsanlığını geri almak için çatallanmasına rağmen, oylamanın çatallanma kararında taşıdığı ağırlığın birkaç nedenden dolayı tartışmaya açık olduğunu belirtmek önemlidir:
 
 - Oylamaya katılım inanılmaz derecede düşüktü
-- Çoğu insan oylamanın yapıldığını bilmiyordu
-- Oy, sistemdeki diğer katılımcılar olmadan yalnızca ETH sahiplerini temsil etti
+- Çoğu insan oylamanın gerçekleştiğini bilmiyordu
+- Oylama, sistemdeki diğer katılımcıları değil, yalnızca ETH sahiplerini temsil ediyordu
 
-Topluluğun bir alt kümesi, büyük ölçüde DAO olayının protokolde bir kusur olmadığını düşündükleri için çatallanmayı reddetti. Onlar da yollarına [Ethereum Classic](https://ethereumclassic.org/) olarak devam ettiler.
+Topluluğun bir alt kümesi, büyük ölçüde DAO olayının protokolde bir kusur olmadığını düşündükleri için çatallanmayı reddetti. Daha sonra [Ethereum Classic](https://ethereumclassic.org/)'i kurdular.
 
-Günümüzde Ethereum topluluğu, sistemin güvenilir tarafsızlığını korumak için sözleşme hataları veya kayıp fon durumlarında müdahale etmeme politikası benimsemiştir.
+Bugün Ethereum topluluğu, sistemin güvenilir tarafsızlığını korumak için sözleşme hataları veya kaybedilen fonlar durumunda müdahale etmeme politikasını benimsemiştir.
 
 DAO saldırısı hakkında daha fazlasını izleyin:
 
-<YouTube id="rNeLuBOVe8A" />
+<VideoWatch slug="dao-hack-ethereum-classic" />
 
 <Divider />
 
 ### Çatallanmanın faydası {#forking-utility}
 
-Ethereum/Ethereum Classic çatalı, sağlıklı bir çatalın mükemmel bir örneğidir. Kendi spesifik eylem planlarını sürdürmenin içerdiği risklere değdiğini hissedecek kadar bazı temel değerler konusunda birbirleriyle yeterince anlaşamayan iki grubumuz vardı.
+Ethereum/Ethereum Classic çatallanması, sağlıklı bir çatallanmanın mükemmel bir örneğidir. Bazı temel değerler konusunda birbirleriyle, kendi özel hareket tarzlarını sürdürmenin içerdiği risklere değeceğini hissedecek kadar güçlü bir şekilde anlaşamayan iki grubumuz vardı.
 
-Önemli politik, felsefi veya ekonomik farklılıklar karşısında çatallanma kabiliyeti, Ethereum yönetişiminin başarısında büyük rol oynar. Çatallanma kabiliyetinin olmamasının alternatifi: Sürekli devam eden iç tartışmalar, sonunda Ethereum Classic'i oluşturanlar için isteksiz katılım ve Ethereum için başarının ne demek olduğuna dair giderek farklılaşan bir vizyondu.
+Önemli siyasi, felsefi veya ekonomik farklılıklar karşısında çatallanma yeteneği, Ethereum yönetişiminin başarısında büyük rol oynar. Çatallanma yeteneği olmasaydı, alternatif, devam eden iç çatışmalar, sonunda Ethereum Classic'i kuranlar için zoraki isteksiz katılım ve Ethereum için başarının nasıl göründüğüne dair giderek farklılaşan bir vizyon olurdu.
 
 <Divider />
 
-## İşaret Zinciri yönetişimi {#beacon-chain}
+## İşaret zinciri yönetişimi {#beacon-chain}
 
-Ethereum yönetişim süreci, genellikle açıklık ve kapsayıcılık için hız ve verimlilikten ödün verir. İşaret Zincirinin gelişimini hızlandırmak için, İşaret Zinciri Ethereum'unun iş ispatı ağından ayrı olarak kullanıma sokuldu ve İşaret Zincirine has yönetişim yöntemleri izlendi.
+Ethereum yönetişim süreci genellikle açıklık ve kapsayıcılık uğruna hız ve verimlilikten ödün verir. İşaret zincirinin gelişimini hızlandırmak için, İş Kanıtı (PoW) Ethereum ağından ayrı olarak başlatıldı ve kendi yönetişim uygulamalarını izledi.
 
-Tanım ve geliştirme uygulamaları her zaman tamamen açık kaynak olsa da, yukarıda açıklanan güncellemeleri önermek için kullanılan resmi süreçler kullanılmadı. Bu, değişikliklerin araştırmacılar ve uygulayıcılar tarafından daha hızlı belirlenmesine ve üzerinde anlaşmaya varılmasına izin verdi.
+Spesifikasyon ve geliştirme uygulamaları her zaman tamamen açık kaynaklı olsa da, yukarıda açıklanan güncellemeleri önermek için kullanılan resmi süreçler kullanılmadı. Bu, değişikliklerin araştırmacılar ve uygulayıcılar tarafından daha hızlı belirlenmesine ve üzerinde anlaşmaya varılmasına olanak tanıdı.
 
-15 Eylül 2022'de İşaret Zinciri, Ethereum yürütme katmanı ile birleştiğinde, Birleşim [Paris ağ yükseltmesinin](/ethereum-forks/#paris) bir parçası olarak tamamlanmış oldu. [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) teklifi 'Son Çağrı' durumundan 'Nihai' durumuna değiştirilerek hisse ispatına geçiş tamamlandı.
+İşaret zinciri 15 Eylül 2022'de Ethereum yürütme katmanıyla birleştiğinde, Birleşme [Paris ağ yükseltmesinin](/ethereum-forks/#paris) bir parçası olarak tamamlandı. [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) teklifi 'Son Çağrı'dan 'Nihai'ye değiştirilerek Hisse Kanıtı'na (PoS) geçiş tamamlandı.
 
 <ButtonLink href="/roadmap/merge/">
-  Birleşim hakkında daha fazla bilgi
+  Birleşme hakkında daha fazlası
 </ButtonLink>
 
 <Divider />
 
-## Nasıl dahil olabilirim? Dahil olun {#get-involved}
+## Nasıl dahil olabilirim? {#get-involved}
 
 - [Bir EIP önerin](/eips/#participate)
 - [Mevcut teklifleri tartışın](https://ethereum-magicians.org/)
 - [Ar-Ge tartışmalarına katılın](https://ethresear.ch/)
-- [Ethereum Ar-Ge discord'una katılın](https://discord.gg/mncqtgVSVw)
+- [Ethereum Ar-Ge Discord'una katılın](https://discord.gg/mncqtgVSVw)
 - [Bir düğüm çalıştırın](/developers/docs/nodes-and-clients/run-a-node/)
 - [İstemci geliştirmeye katkıda bulunun](/developers/docs/nodes-and-clients/#execution-clients)
 - [Çekirdek Geliştirici Çıraklık Programı](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
-## Daha fazla kaynak {#further-reading}
+## Daha fazla okuma {#further-reading}
 
-Ethereum'daki yönetişimin katı kuralları yoktur. Çeşitli topluluk katılımcıları bu konuda farklı bakış açılarına sahiptir. İşte bunlardan birkaçı:
+Ethereum'da yönetişim katı bir şekilde tanımlanmamıştır. Çeşitli topluluk katılımcılarının bu konuda farklı bakış açıları vardır. İşte bunlardan birkaçı:
 
 - [Blokzincir Yönetişimi Üzerine Notlar](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
-- [Ethereum Yönetişimi nasıl işler?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
-- [Ethereum yönetişimi nasıl işler](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
+- [Ethereum Yönetişimi nasıl çalışır?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
+- [Ethereum yönetişimi nasıl çalışır](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [Ethereum çekirdek geliştiricisi nedir?](https://hudsonjameson.com/posts/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
-- [Yönetişim, Bölüm 2: Plütokrasi Hâlâ Kötüdür](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
-- [Jeton oylamalı yönetişimin ötesine geçmek](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
+- [Yönetişim, Bölüm 2: Plütokrasi Hala Kötüdür](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
+- [Coin oylaması yönetişiminin ötesine geçmek](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
 - [Blokzincir Yönetişimini Anlamak](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_
 - [Ethereum Hükümeti](https://www.galaxy.com/insights/research/ethereum-governance/) - _Christine Kim_

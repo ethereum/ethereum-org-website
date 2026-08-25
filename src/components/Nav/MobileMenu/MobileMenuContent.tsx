@@ -1,7 +1,7 @@
 "use client"
 
 import { Languages, Menu } from "lucide-react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import * as TabsPrimitive from "@radix-ui/react-tabs"
 
 import type { Lang } from "@/lib/types"
@@ -18,6 +18,7 @@ import {
 import { SheetFooter, SheetHeader } from "@/components/ui/sheet"
 
 import { cn } from "@/lib/utils/cn"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import { slugify } from "@/lib/utils/url"
 
@@ -29,14 +30,13 @@ import MenuHeader from "./MenuHeader"
 import ThemeToggleFooterButton from "./ThemeToggleFooterButton"
 
 import { useLanguagesDisplayInfo } from "@/hooks/useLanguagesDisplayInfo"
-import useTranslation from "@/hooks/useTranslation"
 
 /**
  * Client-side mobile menu content
  * Fetches navigation and language data on the client to avoid RSC payload bloat
  */
 export default function MobileMenuContent() {
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
   const locale = useLocale()
   const isRtl = isLangRightToLeft(locale as Lang)
   const dir = isRtl ? "rtl" : "ltr"
@@ -102,6 +102,13 @@ function NavigationContent({ className }: { className?: string }) {
   const locale = useLocale()
   const { linkSections } = useNavigation()
 
+  const trackSectionToggle = (key: string, open: boolean) =>
+    trackCustomEvent({
+      eventCategory: "Mobile navigation menu",
+      eventAction: "Section changed",
+      eventName: `${open ? "Open" : "Close"} section: ${locale} - ${key}`,
+    })
+
   return (
     <nav className={cn("p-0", className)}>
       {SECTION_LABELS.map((key) => {
@@ -111,16 +118,17 @@ function NavigationContent({ className }: { className?: string }) {
           <Collapsible
             key={key}
             className="border-b border-body-light first:border-t"
+            onOpenChange={(open) => trackSectionToggle(key, open)}
           >
             <CollapsibleTrigger
               data-testid={`mobile-menu-collapsible-${slugify(label)}`}
               className={cn(
-                "group/menu flex w-full flex-1 items-center justify-between gap-2 px-4 py-4 font-medium transition-all hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover group-data-[state=open]/menu:bg-background-highlight group-data-[state=open]/menu:text-primary-high-contrast md:px-4 [&[data-state=open]:dir(rtl)_[data-label=icon-container]>svg]:rotate-90 [&[data-state=open]_[data-label=icon-container]>svg]:-rotate-90",
+                "group/menu flex w-full flex-1 items-center justify-between gap-2 px-4 py-4 font-medium transition-all group-data-[state=open]/menu:bg-background-highlight group-data-[state=open]/menu:text-primary-high-contrast hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover md:px-4 [&[data-state=open]_[data-label=icon-container]>svg]:-rotate-90 [&[data-state=open]:dir(rtl)_[data-label=icon-container]>svg]:rotate-90",
                 "text-body"
               )}
             >
               <ExpandIcon />
-              <span className="flex-1 text-start text-lg font-bold leading-none">
+              <span className="flex-1 text-start text-lg leading-none font-bold">
                 {label}
               </span>
             </CollapsibleTrigger>

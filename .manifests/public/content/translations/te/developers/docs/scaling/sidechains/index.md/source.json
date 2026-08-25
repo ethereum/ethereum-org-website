@@ -1,0 +1,425 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/scaling/sidechains/index.md",
+  "generatedAt": "2026-06-19T18:58:37.447Z",
+  "rootHash": "b7084533fdef",
+  "tree": {
+    "contentHash": "bbae455747dd",
+    "anchorHash": "33be66882238",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "d244ee9995f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "1315d6c83c33",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:sidebarDepth": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "4e07408562be"
+      },
+      "prose:4": {
+        "contentHash": "3f63d3e1db33",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "8a5edab28263"
+      },
+      "prose:5": {
+        "contentHash": "7d9322d62b84",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "037a6f2aab06",
+        "anchorHash": "ab199f905ffa"
+      },
+      "prose:6": {
+        "contentHash": "8b586a5f8c96",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:2": {
+        "contentHash": "ca5697982882",
+        "anchorHash": "3b52f2e35fd0"
+      },
+      "prose:7": {
+        "contentHash": "ed89c4df7026",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:3": {
+        "contentHash": "1bf77a9cf7c3",
+        "anchorHash": "b3e9cc81e0c2"
+      },
+      "prose:8": {
+        "contentHash": "14d12a69cd3a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "how-do-sidechains-work": {
+        "contentHash": "867af22f22bb",
+        "anchorHash": "21bfacd9e234",
+        "labelHash": "437385cc81fc",
+        "children": {
+          "_label": {
+            "contentHash": "437385cc81fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "a3fa2d343df3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "consensus-algorithms": {
+            "contentHash": "2837899b473c",
+            "anchorHash": "30139795a990",
+            "labelHash": "b56af7334f93",
+            "children": {
+              "_label": {
+                "contentHash": "b56af7334f93",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:3": {
+                "contentHash": "a8cc84a9dba7",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "e98666fe5aaf",
+                "anchorHash": "6051eacd0386"
+              },
+              "prose:4": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "e8983599b74f",
+                "anchorHash": "b63707d17bc7"
+              },
+              "prose:5": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "ab96941ab53e",
+                "anchorHash": "2ce605dfb8da"
+              },
+              "prose:6": {
+                "contentHash": "1195a4ac39a0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "block-parameters": {
+                "contentHash": "4203ade8df83",
+                "anchorHash": "8c4566d8e3fb",
+                "labelHash": "6d547bef6492",
+                "children": {
+                  "_label": {
+                    "contentHash": "6d547bef6492",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:3": {
+                    "contentHash": "34cdcd9eea03",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "09cc978abd85",
+                    "anchorHash": "94745e44c230"
+                  },
+                  "prose:4": {
+                    "contentHash": "4c5d7295a468",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:1": {
+                    "contentHash": "3e4474e168c6",
+                    "anchorHash": "7de092b00b2b"
+                  },
+                  "prose:5": {
+                    "contentHash": "46e3d2b12417",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:2": {
+                    "contentHash": "b205cfe18d02",
+                    "anchorHash": "8fe863285a0b"
+                  },
+                  "prose:6": {
+                    "contentHash": "e913f06adedf",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:3",
+                  "link:0",
+                  "prose:4",
+                  "link:1",
+                  "prose:5",
+                  "link:2",
+                  "prose:6"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:3",
+              "link:0",
+              "prose:4",
+              "link:1",
+              "prose:5",
+              "link:2",
+              "prose:6",
+              "block-parameters"
+            ]
+          },
+          "evm-compatibility": {
+            "contentHash": "4ff36640ab8d",
+            "anchorHash": "5131a586bdd8",
+            "labelHash": "816380e4981c",
+            "children": {
+              "_label": {
+                "contentHash": "816380e4981c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:5": {
+                "contentHash": "e54c6ad01606",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "6676f17ddccb",
+                "anchorHash": "f68a48502f68"
+              },
+              "prose:6": {
+                "contentHash": "6fb069f467b8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "8f5a7cc6dcce",
+                "anchorHash": "fcadb84ff2dc"
+              },
+              "prose:7": {
+                "contentHash": "e96a587987ae",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "c7e7d9f7ef45",
+                "anchorHash": "585d8438b20c"
+              },
+              "prose:8": {
+                "contentHash": "8decd4fed108",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "d0665bba31dc",
+                "anchorHash": "c7308a37e8aa"
+              },
+              "prose:9": {
+                "contentHash": "f383ec0b784a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "adfd43fbecf3",
+                "anchorHash": "0e11617f9023"
+              },
+              "prose:10": {
+                "contentHash": "2979bde2a196",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:5",
+              "link:0",
+              "prose:6",
+              "link:1",
+              "prose:7",
+              "link:2",
+              "prose:8",
+              "link:3",
+              "prose:9",
+              "link:4",
+              "prose:10"
+            ]
+          },
+          "asset-movement": {
+            "contentHash": "54ee6bd2a783",
+            "anchorHash": "2c293a4f4542",
+            "labelHash": "3ac82041fcae",
+            "children": {
+              "_label": {
+                "contentHash": "3ac82041fcae",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "e210cb7bf6c1",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "d982f029f5c8",
+                "anchorHash": "530595435fc3"
+              },
+              "prose:3": {
+                "contentHash": "3c3364925b50",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "a11a4e74433c",
+                "anchorHash": "291d6233ebc9"
+              },
+              "prose:4": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "consensus-algorithms",
+          "evm-compatibility",
+          "asset-movement"
+        ]
+      },
+      "pros-and-cons-of-sidechains": {
+        "contentHash": "f68da4f7f58f",
+        "anchorHash": "674813d66d33",
+        "labelHash": "21ef0bae625e",
+        "children": {
+          "_label": {
+            "contentHash": "21ef0bae625e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "1acd40e03cc5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "use-sidechains": {
+            "contentHash": "1d197f942898",
+            "anchorHash": "5b8f8b4feaa0",
+            "labelHash": "554f2f47e29d",
+            "children": {
+              "_label": {
+                "contentHash": "554f2f47e29d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:5": {
+                "contentHash": "e5d5bdd7001e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "e930e59b405c",
+                "anchorHash": "ccb66b7e3ef4"
+              },
+              "prose:6": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "8deef74bb586",
+                "anchorHash": "45ebd5b920e7"
+              },
+              "prose:7": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "5601b1712cd3",
+                "anchorHash": "522351c5a94a"
+              },
+              "prose:8": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "39b6e442b355",
+                "anchorHash": "a8adfcaa6a99"
+              },
+              "prose:9": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "30f094e26191",
+                "anchorHash": "f5ced17f52f1"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:5",
+              "link:0",
+              "prose:6",
+              "link:1",
+              "prose:7",
+              "link:2",
+              "prose:8",
+              "link:3",
+              "prose:9",
+              "link:4"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "use-sidechains"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "f2fb63d49cdd",
+        "anchorHash": "9f456ebf0cf6",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "18370dd5ff4b",
+            "anchorHash": "97a53ebcb25e"
+          },
+          "prose:2": {
+            "contentHash": "cbeb79247148",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:sidebarDepth",
+      "prose:4",
+      "link:0",
+      "prose:5",
+      "link:1",
+      "prose:6",
+      "link:2",
+      "prose:7",
+      "link:3",
+      "prose:8",
+      "how-do-sidechains-work",
+      "pros-and-cons-of-sidechains",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "f81744420359dc1f7c24ec7290b16ff6591fd2e0"
+}

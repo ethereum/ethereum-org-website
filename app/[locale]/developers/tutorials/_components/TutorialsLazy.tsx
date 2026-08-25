@@ -8,7 +8,7 @@ const TutorialsList = dynamic(() => import("./tutorials"), {
   ssr: false,
   loading: () => (
     <div className="mt-8 w-full max-w-screen-lg">
-      <div className="border-b border-border px-8 pb-6 pt-8">
+      <div className="border-b border-border px-8 pt-8 pb-6">
         {/* Skill tabs + search skeleton */}
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex gap-2">

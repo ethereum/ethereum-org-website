@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "locale": "id",
+  "translatedAt": "2026-08-19T20:36:46.063Z",
+  "englishManifestHash": "6c5b9e9f1a08",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-4376df",
+    "LINK-2d5d7a",
+    "LINK-7e5c53",
+    "COMPONENT-fc6ad6",
+    "COMPONENT-ee8a9b",
+    "COMPONENT-1bdda8",
+    "LINK-7b68bc",
+    "LINK-8510c1",
+    "LINK-9edc37",
+    "LINK-aaff1a",
+    "LINK-1ed7a5",
+    "HTMLTAG-359785",
+    "HTMLTAG-648984",
+    "LINK-8bde19",
+    "COMPONENT-ec4aaf",
+    "COMPONENT-fa56d2",
+    "COMPONENT-4b5bf5",
+    "LINK-4376df",
+    "LINK-11109b",
+    "LINK-eb0c0c",
+    "LINK-9aaab1",
+    "LINK-f4d082",
+    "LINK-513b14",
+    "LINK-edadb1"
+  ],
+  "placeholderMap": {
+    "COMPONENT-ec4aaf": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "COMPONENT-fa56d2": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "COMPONENT-4b5bf5": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "LINK-4376df": {
+      "type": "link",
+      "values": {
+        "url": "#opaque-pooled-products"
+      }
+    },
+    "COMPONENT-fc6ad6": {
+      "type": "component",
+      "values": {
+        "componentName": "Card"
+      }
+    },
+    "COMPONENT-ee8a9b": {
+      "type": "component",
+      "values": {
+        "componentName": "Card"
+      }
+    },
+    "COMPONENT-1bdda8": {
+      "type": "component",
+      "values": {
+        "componentName": "Card"
+      }
+    },
+    "HTMLTAG-359785": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "em"
+      }
+    },
+    "HTMLTAG-648984": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "em"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-2d5d7a": {
+      "type": "link",
+      "values": {
+        "url": "/staking/solo/"
+      }
+    },
+    "LINK-7e5c53": {
+      "type": "link",
+      "values": {
+        "url": "/staking/"
+      }
+    },
+    "LINK-7b68bc": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#defi"
+      }
+    },
+    "LINK-8510c1": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7002"
+      }
+    },
+    "LINK-9edc37": {
+      "type": "link",
+      "values": {
+        "url": "/staking/dvt/"
+      }
+    },
+    "LINK-aaff1a": {
+      "type": "link",
+      "values": {
+        "url": "/restaking/"
+      }
+    },
+    "LINK-1ed7a5": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/client-diversity/"
+      }
+    },
+    "LINK-8bde19": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/adding-staking-products/"
+      }
+    },
+    "LINK-11109b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.staking.directory/"
+      }
+    },
+    "LINK-eb0c0c": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@djrtwo/risks-of-lsd"
+      }
+    },
+    "LINK-9aaab1": {
+      "type": "link",
+      "values": {
+        "url": "https://chain.link/education-hub/liquid-staking"
+      }
+    },
+    "LINK-f4d082": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7002"
+      }
+    },
+    "LINK-513b14": {
+      "type": "link",
+      "values": {
+        "url": "https://explorer.rated.network/"
+      }
+    },
+    "LINK-edadb1": {
+      "type": "link",
+      "values": {
+        "url": "https://liquidcollective.io/lst-vs-lrt/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-08-19T20:36:46.063Z",
+      "status": "success"
+    }
+  }
+}

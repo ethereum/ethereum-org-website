@@ -1,5 +1,5 @@
 import { Globe, Info } from "lucide-react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import { FilterOption, Lang, WalletData } from "@/lib/types"
 
@@ -15,9 +15,6 @@ import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 import { getLocaleFormattedDate } from "@/lib/utils/date"
-import { trackCustomEvent } from "@/lib/utils/matomo"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 const SocialLink = (props) => (
   <InlineLink
@@ -39,7 +36,7 @@ const WalletSubComponent = ({
 }: WalletSubComponentProps) => {
   const locale = useLocale()
 
-  const { t } = useTranslation("page-wallets-find-wallet")
+  const t = useTranslations("page-wallets-find-wallet")
   const walletFiltersOptions: FilterOption[] = useWalletFilters()
 
   const walletFilterDisplayOrder = [
@@ -55,18 +52,12 @@ const WalletSubComponent = ({
     wallet.last_updated
   )
 
-  trackCustomEvent({
-    eventCategory: "WalletMoreInfo",
-    eventAction: "More info wallet",
-    eventName: `More info ${wallet.name}`,
-  })
-
   return (
     <div className="flex flex-row gap-2">
       <div className="w-1 md:w-14">
         <div
           className={cn(
-            "to-97% m-auto h-full w-1 bg-gradient-to-b",
+            "m-auto h-full w-1 bg-linear-to-b to-97%",
             wallet.twGradiantBrandColor
           )}
         />
@@ -79,7 +70,7 @@ const WalletSubComponent = ({
             )!
             return (
               <div key={idx} className="mx-2">
-                <h4 className="mb-2 text-md font-bold">{filterItem.title}</h4>
+                <h4 className="mb-2 text-md">{filterItem.title}</h4>
                 <ul className="m-0 list-none">
                   {filterItem.items
                     .sort((a, b) =>
@@ -107,11 +98,12 @@ const WalletSubComponent = ({
                               <WarningProductGlyph className="size-4" />
                             )}
                           </span>
-                          <p className={cn("leading-1", featureColor)}>
+                          <p className={featureColor}>
                             {filterLabelRoot && `${filterLabelRoot} `}
                             <span className="whitespace-nowrap">
                               {filterLabelLastWord}
                               <Tooltip
+                                nested
                                 content={
                                   <p className="text-body">
                                     {item.description}
@@ -131,9 +123,7 @@ const WalletSubComponent = ({
           })}
         </div>
         <div className="ml-3">
-          <h4 className="mb-2 text-md font-bold">
-            {t("page-find-wallet-social-links")}
-          </h4>
+          <h4 className="mb-2 text-md">{t("page-find-wallet-social-links")}</h4>
           <div className="flex flex-row gap-4">
             <SocialLink
               href={wallet.url}

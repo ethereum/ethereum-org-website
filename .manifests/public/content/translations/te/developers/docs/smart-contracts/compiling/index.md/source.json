@@ -1,0 +1,227 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/smart-contracts/compiling/index.md",
+  "generatedAt": "2026-06-19T19:10:17.801Z",
+  "rootHash": "49c9e77d7e68",
+  "tree": {
+    "contentHash": "79d504ff1fbc",
+    "anchorHash": "277180600121",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "b3dd950744a1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "8007078bdf3d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:incomplete": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b5bea41b6c62"
+      },
+      "prose:0": {
+        "contentHash": "fea7f64353a1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prerequisites": {
+        "contentHash": "f384f7de0e40",
+        "anchorHash": "7b78dc97df1a",
+        "labelHash": "865514682d01",
+        "children": {
+          "_label": {
+            "contentHash": "865514682d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "d72a62af1200",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "c7308a37e8aa"
+          },
+          "prose:3": {
+            "contentHash": "44359e21492d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "d089e4678e15",
+            "anchorHash": "f68a48502f68"
+          },
+          "prose:4": {
+            "contentHash": "9947d296f097",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "the-evm": {
+        "contentHash": "71204b3acb58",
+        "anchorHash": "052dd78115b2",
+        "labelHash": "fa0ca2ac6d4e",
+        "children": {
+          "_label": {
+            "contentHash": "fa0ca2ac6d4e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "154111e2e847",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "a137679280ae",
+            "anchorHash": "9a342c1422a2"
+          },
+          "prose:2": {
+            "contentHash": "a7e2c0fada95",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:4": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "5c78e51e56be"
+          },
+          "prose:0": {
+            "contentHash": "8ed4dec16bfe",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:6": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "0fdbe776a818"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2",
+          "code-fence:4",
+          "prose:0",
+          "code-fence:6",
+          "prose:1",
+          "link:0"
+        ]
+      },
+      "web-applications": {
+        "contentHash": "7654962dace6",
+        "anchorHash": "118ed63bc861",
+        "labelHash": "e78782c9032f",
+        "children": {
+          "_label": {
+            "contentHash": "e78782c9032f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "71e7c249f03c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "83c33b787098",
+            "anchorHash": "93ad88bd412d"
+          },
+          "prose:2": {
+            "contentHash": "ccea92257eb1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:4": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "4b83c6645aed"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2",
+          "code-fence:4"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "073eb936544c",
+        "anchorHash": "071e3e982dac",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "bf059402c39e",
+            "anchorHash": "8e40453753c0"
+          },
+          "prose:2": {
+            "contentHash": "e42e903ea475",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "related-topics": {
+        "contentHash": "e85812ec1298",
+        "anchorHash": "d26650179680",
+        "labelHash": "5a38da0df0ab",
+        "children": {
+          "_label": {
+            "contentHash": "5a38da0df0ab",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f050e4a13cae",
+            "anchorHash": "93ad88bd412d"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "d089e4678e15",
+            "anchorHash": "f68a48502f68"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:incomplete",
+      "prose:0",
+      "prerequisites",
+      "the-evm",
+      "web-applications",
+      "further-reading",
+      "related-topics"
+    ]
+  },
+  "sourceCommitSha": "f81744420359dc1f7c24ec7290b16ff6591fd2e0"
+}

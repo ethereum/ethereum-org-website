@@ -1,81 +1,81 @@
 ---
 title: "Regenerativní finance (ReFi)"
-description: "Přehled ReFi a aktuálních případů použití."
+description: "Přehled ReFi a jeho současných případů užití."
 lang: cs
 template: use-cases
-emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: "Alternativní ekonomický systém postavený na regenerativních principech"
-summaryPoint2: "Snaha využít Ethereum k řešení koordinačních krizí na globální úrovni, jako je změna klimatu"
-summaryPoint3: "Nástroj pro drastické škálování ekologických aktiv, jako jsou ověřené uhlíkové kredity."
+summaryPoints:
+  - Alternativní ekonomický systém postavený na regenerativních principech
+  - Pokus o využití Etherea k řešení krizí koordinace na globální úrovni, jako je změna klimatu
+  - Nástroj k radikálnímu škálování aktiv s ekologickým přínosem, jako jsou ověřené uhlíkové kredity
 ---
 
-## Co je to ReFi? {#what-is-refi}
+## Co je ReFi? {#what-is-refi}
 
-**Regenerativní finance (ReFi)** je soubor nástrojů a myšlenek postavených na [blockchainech](/glossary/#blockchain), které mají za cíl vytvářet regenerativní ekonomiky, nikoli extraktivní nebo vykořisťovatelské. Systémy zaměřené na vytěžení surovin časem spotřebují dostupné zdroje a zhroutí se; bez regenerativních mechanismů jim chybí odolnost. ReFi předpokládá, že vytváření monetární hodnoty je třeba oddělit od neudržitelného vytěžování zdrojů z naší planety a komunit.
+**Regenerativní finance (ReFi)** jsou souborem nástrojů a myšlenek postavených na [blockchainech](/glossary/#blockchain), které mají za cíl vytvářet ekonomiky, jež jsou spíše regenerativní než extraktivní nebo vykořisťovatelské. Extraktivní systémy nakonec vyčerpají dostupné zdroje a zhroutí se; bez regenerativních mechanismů postrádají odolnost. ReFi funguje na předpokladu, že vytváření peněžní hodnoty musí být odděleno od neudržitelného čerpání zdrojů z naší planety a komunit.
 
-Namísto toho se ReFi snaží řešit environmentální, komunitní nebo sociální problémy vytvářením regenerativních cyklů. Tyto systémy vytvářejí hodnotu pro účastníky a současně jsou prospěšné pro ekosystémy a komunity.
+Místo toho se ReFi zaměřuje na řešení environmentálních, komunitních nebo sociálních problémů vytvářením regenerativních cyklů. Tyto systémy vytvářejí hodnotu pro účastníky a zároveň přinášejí prospěch ekosystémům a komunitám.
 
 Jedním ze základů ReFi je koncept regenerativní ekonomie, jehož průkopníkem je John Fullerton z Capital Institute. Navrhl [osm vzájemně propojených principů](https://capitalinstitute.org/8-principles-regenerative-economy/), které jsou základem systémového zdraví:
 
-![Osm vzájemně propojených principů](refi-regenerative-economy-diagram.png)
+![Eight interconnected principles](refi-regenerative-economy-diagram.png)
 
-Projekty ReFi tyto principy realizují pomocí [chytrých kontraktů](/glossary/#smart-contract) a aplikací [decentralizovaných financí (DeFi)](/glossary/#defi), které motivují k regenerativnímu chování, např. k obnově degradovaných ekosystémů, a usnadňují rozsáhlou spolupráci při řešení globálních problémů, jako je změna klimatu a ztráta biologické rozmanitosti.
+Projekty ReFi realizují tyto principy pomocí [chytrých kontraktů](/glossary/#smart-contract) a aplikací [decentralizovaných financí (DeFi)](/glossary/#defi) k motivaci regenerativního chování, např. obnovy degradovaných ekosystémů, a k usnadnění rozsáhlé spolupráce na globálních problémech, jako je změna klimatu a ztráta biologické rozmanitosti.
 
-ReFi se také překrývá s hnutím [decentralizované vědy (DeSci)](/desci/), které využívá Ethereum jako platformu k financování, tvorbě, recenzování, oceňování, ukládání a šíření vědeckých poznatků. Nástroje DeSci by mohly být užitečné pro vývoj ověřitelných standardů a postupů pro implementaci a monitorování regenerativních aktivit, jako je výsadba stromů, odstraňování plastů z oceánu nebo obnova degradovaného ekosystému.
+ReFi se také překrývá s hnutím [decentralizované vědy (DeSci)](/desci/), které využívá Ethereum jako platformu k financování, vytváření, recenzování, uznávání, uchovávání a šíření vědeckých poznatků. Nástroje DeSci by se mohly stát užitečnými pro vývoj ověřitelných standardů a postupů pro implementaci a monitorování regenerativních aktivit, jako je sázení stromů, odstraňování plastů z oceánu nebo obnova degradovaného ekosystému.
 
-<YouTube id="La52dDzBt2k" />
+<VideoWatch slug="regenerative-finance-refi" />
 
 ## Tokenizace uhlíkových kreditů {#tokenization-of-carbon-credits}
 
-**[Dobrovolný trh s uhlíkem (VCM)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** je mechanismus pro financování projektů, které mají ověřený pozitivní dopad na emise uhlíku, a to buď snižováním probíhajících emisí, nebo odstraňováním skleníkových plynů již vypuštěných do atmosféry. Tyto projekty po ověření obdrží aktivum nazvané "uhlíkové kredity". Tyto kredity mohou prodávat jednotlivcům a organizacím, které chtějí podpořit opatření na ochranu klimatu.
+**[Dobrovolný trh s uhlíkem (VCM)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** je mechanismus pro financování projektů, které mají ověřený pozitivní dopad na emise uhlíku, ať už snižováním probíhajících emisí, nebo odstraňováním skleníkových plynů, které již byly vypuštěny do atmosféry. Tyto projekty po svém ověření obdrží aktivum zvané „uhlíkové kredity“, které mohou prodat jednotlivcům a organizacím, jež chtějí podpořit opatření v oblasti klimatu.
 
-Kromě VCM existuje také několik vládou nařízených trhů s uhlíkem („povinné trhy“), jejichž cílem je stanovit cenu uhlíku prostřednictvím zákonů nebo nařízení v rámci určité jurisdikce (např. země nebo regionu) a kontrolovat tak nabídku distribuovaných povolenek. Povinné trhy motivovují znečišťovatele v rámci své jurisdikce ke snižování emisí, ale nejsou schopné redukovat skleníkové plyny, které již byly emitovány.
+Kromě VCM existuje také několik vládou nařízených trhů s uhlíkem („regulační trhy“), jejichž cílem je stanovit cenu uhlíku prostřednictvím zákonů nebo předpisů v rámci konkrétní jurisdikce (např. země nebo regionu) a kontrolovat nabídku povolenek, které se mají rozdělovat. Regulační trhy motivují znečišťovatele v rámci své jurisdikce ke snižování emisí, ale nejsou schopny odstranit skleníkové plyny, které již byly vypuštěny.
 
-Navzdory svému vývoji v posledních desetiletích má VCM řadu nedostatků:
+Navzdory svému vývoji v posledních desetiletích VCM nadále trpí řadou problémů:
 
-1. Silně fragmentovaná likvidita
-2. Netransparentní mechanismy transakcí
+1. Vysoce fragmentovaná likvidita
+2. Neprůhledné transakční mechanismy
 3. Vysoké poplatky
-4. Příliš malá rychlost obchodování
-5. Nedostatek škálovatelnosti
+4. Velmi pomalá rychlost obchodování
+5. Nedostatečná škálovatelnost
 
-Přechod VCM na nový **digitální trh s uhlíkem (DCM)** založený na blockchainu může být příležitostí k vylepšení stávající technologie pro ověřování, obchodování a spotřebu uhlíkových kreditů. Blockchainové technologie umožňují veřejně ověřitelná data, přístup pro širokou škálu uživatelů a vyšší likviditu.
+Přechod VCM na nový **digitální trh s uhlíkem (DCM)** založený na blockchainu by mohl být příležitostí k vylepšení stávající technologie pro ověřování, provádění transakcí a spotřebu uhlíkových kreditů. Blockchainy umožňují veřejně ověřitelná data, přístup pro širokou škálu uživatelů a větší likviditu.
 
-Projekty ReFi využívají technologii blockchainu k řešení množství problémů tradičního trhu:
+Projekty ReFi využívají technologii blockchainu ke zmírnění mnoha problémů tradičního trhu:
 
-- **Likvidita je soustředěna v malém počtu poolů likvidity**, se kterými může kdokoli volně obchodovat. Velké organizace, stejně jako jednotliví uživatelé, mohou tyto pooly využívat bez manuálního vyhledávání prodejců/kupců, bez účastnických poplatků nebo registrace.
-- **Všechny transakce se zaznamenávají na veřejné blockchainy**. Od okamžiku, kdy je kredit k dispozici v DCM, je cesta, kterou každá emisní povolenka absolvuje v důsledku obchodní aktivity, navždy sledovatelná.
-- **Transakce jsou zpracovány téměř okamžitě**. Obstarání velkého množství emisních povolenek prostřednictvím tradičních trhů může trvat dny nebo týdny, ale na DCM toho lze dosáhnout během několika sekund.
-- **Obchodování probíhá bez zprostředkovatelů**, kteří si účtují vysoké poplatky. Digitální emisní povolenky představují významný pokles nákladů ve srovnání s tradičními povolenkami.
-- **DCM je škálovatelný** a dokáže uspokojit poptávku jak jednotlivců, tak nadnárodních korporací.
+- **Likvidita je koncentrována v malém počtu fondů likvidity**, se kterými může kdokoli volně obchodovat. Velké organizace i jednotliví uživatelé mohou tyto fondy využívat bez manuálního hledání prodejců/kupujících, účastnických poplatků nebo předchozí registrace.
+- **Všechny transakce jsou zaznamenávány na veřejných blockchainech**. Cesta, kterou každý uhlíkový kredit urazí v důsledku obchodní aktivity, je navždy sledovatelná, jakmile je zpřístupněn v DCM.
+- **Rychlost transakcí je téměř okamžitá**. Zajištění velkého množství uhlíkových kreditů prostřednictvím tradičních trhů může trvat dny nebo týdny, ale v DCM toho lze dosáhnout za několik sekund.
+- **Obchodní aktivita probíhá bez zprostředkovatelů**, kteří si účtují vysoké poplatky. Digitální uhlíkové kredity představují významné snížení nákladů ve srovnání s tradičními kredity.
+- **DCM je škálovatelný** a dokáže uspokojit požadavky jednotlivců i nadnárodních korporací.
 
-### Klíčové součásti DCM {#key-components-dcm}
+### Klíčové komponenty DCM {#key-components-dcm}
 
-Současný ekosystém DCM se skládá ze čtyř hlavních složek:
+Současné prostředí DCM tvoří čtyři hlavní komponenty:
 
-1. Registry jako [Verra](https://verra.org/project/vcs-program/registry-system/) a [Gold Standard](https://www.goldstandard.org/) zajišťují spolehlivost projektů, které vytvářejí uhlíkové kredity. Také provozují databáze, ve kterých digitální emisní povolenky vznikají a mohou být převáděny nebo spotřebovány (zrušeny).
+1. Registry, jako jsou [Verra](https://verra.org/project/vcs-program/registry-system/) a [Gold Standard](https://www.goldstandard.org/), zajišťují, že projekty vytvářející uhlíkové kredity jsou spolehlivé. Provozují také databáze, ve kterých digitální uhlíkové kredity vznikají a mohou být převedeny nebo spotřebovány (vyřazeny).
 
-Nová vlna inovativních projektů budovaných na blockchainech se snaží konkurovat tradičním hráčům v tomto odvětví.
+Existuje nová vlna inovativních projektů budovaných na blockchainech, které se snaží narušit pozici zavedených hráčů v tomto sektoru.
 
-2. Emisní bridge, a.k.a. tokenizery poskytují technologii pro reprezentaci nebo přenos emisních povolenek z tradičních registrů do DCM. Mezi významné příklady patří [Toucan Protocol](https://toucan.earth/), [C3](https://c3.app/) a [Moss.Earth](https://moss.earth/).
-3. Integrované služby nabízejí koncovým uživatelům kredity za zamezení a/nebo odstranění uhlíkových emisí. Takto mohou získat reputaci v oblasti životního prostředí a sdílet se světem, že podporují kroky vedoucí ke zlepšení životního prostředí.
+2. Uhlíkové mosty, neboli tokenizéry, poskytují technologii pro reprezentaci nebo převod uhlíkových kreditů z tradičních registrů do DCM. Mezi významné příklady patří [Toucan Protocol](https://toucan.earth/), [C3](https://c3.app/) a [Moss.Earth](https://moss.earth/).
+3. Integrované služby nabízejí koncovým uživatelům kredity za zamezení vzniku a/nebo odstranění uhlíku, aby si mohli nárokovat environmentální přínos kreditu a sdílet svou podporu opatření v oblasti klimatu se světem.
 
-Některé, jako například [Klima Infinity](https://www.klimadao.finance/infinity) a [Senken](https://senken.io/), nabízejí širokou škálu projektů vyvinutých třetími stranami a vydaných podle zavedených standardů, jako je Verra; jiné, jako například [Nori](https://nori.com/), nabízejí pouze specifické projekty vyvinuté v rámci jejich vlastního standardu pro uhlíkové kredity, které vydávají a pro které mají vlastní vyhrazené tržiště.
+Některé, jako [Klima Infinity](https://www.klimadao.finance/infinity) a [Senken](https://senken.io/), nabízejí širokou škálu projektů vyvinutých třetími stranami a vydaných podle zavedených standardů, jako je Verra; jiné, jako [Nori](https://nori.com/), nabízejí pouze specifické projekty vyvinuté podle jejich vlastního standardu uhlíkových kreditů, které vydávají a pro které mají své vlastní specializované tržiště.
 
-4. Základní infrastruktura, která usnadňuje zvýšení dopadu a účinnosti celého dodavatelského řetězce na trhu s emisními povolenkami. [KlimaDAO](http://klimadao.finance/) dodává likviditu jako veřejný statek (umožňuje komukoli nakupovat nebo prodávat uhlíkové kredity za transparentní cenu), motivuje odměnami ke zvýšení propustnosti trhů s uhlíkem a k vyřazování kreditů a poskytuje uživatelsky přívětivé interoperabilní nástroje pro přístup k datům, jakož i pro získávání a vyřazování široké škály tokenizovaných uhlíkových kreditů.
+4. Základní systémy a infrastruktura, které usnadňují škálování dopadu a efektivity celého dodavatelského řetězce trhu s uhlíkem. [KlimaDAO](https://klimadao.finance/) dodává likviditu jako veřejný statek (což umožňuje komukoli kupovat nebo prodávat uhlíkové kredity za transparentní cenu), motivuje ke zvýšené propustnosti trhů s uhlíkem a vyřazování pomocí odměn a poskytuje uživatelsky přívětivé interoperabilní nástroje pro přístup k datům o široké škále tokenizovaných uhlíkových kreditů, stejně jako k jejich získávání a vyřazování.
 
 ## ReFi mimo trhy s uhlíkem {#refi-beyond}
 
-Ačkoliv je v současnosti kladen silný důraz na trhy s emisními povolenkami obecně a zejména na přechod z VCM na DCM, termín „ReFi“ není striktně omezen na tento problém. Další environmentální aktiva mimo emisní povolenky mohou být vyvinuta a tokenizována, což znamená, že další negativní externality mohou být také zahrnuty do základních vrstev budoucích ekonomických systémů. Regenerativní aspekt tohoto ekonomického modelu lze navíc uplatnit i v jiných oblastech, například při financování veřejných statků prostřednictvím platforem pro kvadratické financování, jako je [Gitcoin](https://gitcoin.co/). Organizace postavené na myšlence otevřené účasti a spravedlivé distribuce zdrojů umožňují komukoliv směrovat peníze do open-source software projektů, stejně jako do projektů zaměřených na vzdělávání, životní prostředí a komunity.
+Ačkoli je v současné době v tomto prostoru kladen silný důraz na trhy s uhlíkem obecně a zejména na přechod VCM na DCM, termín „ReFi“ není striktně omezen na uhlík. Lze vyvíjet a tokenizovat i jiná environmentální aktiva nad rámec uhlíkových kreditů, což bude znamenat, že i další negativní externality mohou být oceněny v základních vrstvách budoucích ekonomických systémů. Navíc lze regenerativní aspekt tohoto ekonomického modelu aplikovat i na další oblasti, jako je financování veřejných statků prostřednictvím platforem pro kvadratické financování, jako je [Gitcoin](https://gitcoin.co/). Organizace, které jsou postaveny na myšlence otevřené účasti a spravedlivého rozdělování zdrojů, umožňují komukoli směřovat peníze do open-source softwarových projektů, stejně jako do vzdělávacích, environmentálních a komunitně řízených projektů.
 
-Přesunem směřování kapitálu z projektů vytěžujících zdroje k regenerativně zaměřeným akcím mohou projekty a společnosti, které poskytují sociální, environmentální nebo komunitní výhody – a které by nemusely získat financování v tradičním finančním sektoru – rychleji a snadněji získat základní kapitál a generovat pozitivní externality pro společnost. Přechod na tento model financování také otevírá dveře mnohem inkluzivnějším ekonomickým systémům, ve kterých se lidé všech demografických skupin mohou stát aktivními účastníky místo pouhých pasivních pozorovatelů. ReFi nabízí vizi Etherea jako mechanismu pro koordinaci akcí souvisejících s existenčními výzvami, kterým čelí naše druhy a veškerý život na naší planetě – jako základní vrstvu nového ekonomického paradigmatu, který umožňuje inkluzivnější a udržitelnou budoucnost na budoucí staletí.
+Přesměrováním toku kapitálu od extraktivních praktik k regenerativnímu toku se mohou projekty a společnosti, které poskytují sociální, environmentální nebo komunitní výhody – a které by v tradičních financích nemusely získat financování – rozjet a vytvářet pozitivní externality pro společnost mnohem rychleji a snadněji. Přechod na tento model financování také otevírá dveře k mnohem inkluzivnějším ekonomickým systémům, kde se lidé všech demografických skupin mohou stát aktivními účastníky, a ne pouze pasivními pozorovateli. ReFi nabízí vizi Etherea jako mechanismu pro koordinaci akcí v oblasti existenčních výzev, kterým čelí náš druh a veškerý život na naší planetě – jako základní vrstvy nového ekonomického paradigmatu, které umožní inkluzivnější a udržitelnější budoucnost pro nadcházející staletí.
 
-## Další zdroje informací o ReFi
+## Další čtení o ReFi {#additional-reading-on-refi}
 
-- [Celkový přehled měn krytých uhlíkem a jejich místo v ekonomice](https://www.klimadao.finance/resources/the-vision-of-a-carbon-currency)
-- [The Ministry for the Future, román popisující roli měny kryté uhlíkem v boji proti změně klimatu](https://en.wikipedia.org/wiki/The_Ministry_for_the_Future)
-- [Podrobná zpráva pracovní skupiny pro škálování dobrovolných trhů s uhlíkem](https://www.iif.com/Portals/1/Files/TSVCM_Report.pdf)
-- [Příspěvek o ReFi od Kevina Owockiho a Evana Miyazona ve slovníku CoinMarketCap](https://coinmarketcap.com/academy/glossary/regenerative-finance-refi)
+- [Obecný přehled uhlíkových měn a jejich místa v ekonomice](https://www.klimadao.finance/resources/the-vision-of-a-carbon-currency)
+- [Ministerstvo budoucnosti, román zachycující roli měny kryté uhlíkem v boji proti změně klimatu](https://en.wikipedia.org/wiki/The_Ministry_for_the_Future)
+- [Podrobná zpráva pracovní skupiny pro škálování dobrovolných trhů s uhlíkem (Taskforce for Scaling Voluntary Carbon Markets)](https://www.iif.com/Portals/1/Files/TSVCM_Report.pdf)
+- [Záznam o ReFi ve slovníku CoinMarketCap od Kevina Owockiho a Evana Miyazona](https://coinmarketcap.com/academy/glossary/regenerative-finance-refi)

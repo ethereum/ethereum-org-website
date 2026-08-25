@@ -58,18 +58,17 @@ export const formatDate = (
   if (/^\d{4}$/.test(date)) {
     return date
   }
+  // Guard malformed input (e.g. RSS pubDate / frontmatter) so callers can
+  // render the result directly without their own NaN check.
+  if (!isValidDate(date)) {
+    return ""
+  }
   return dateTimeFormat(locale, {
     month: "long",
     day: "numeric",
     year: "numeric",
     ...options,
   }).format(new Date(date))
-}
-
-export const isDateReached = (date: string) => {
-  const today = new Date()
-  const threshold = new Date(date)
-  return threshold >= today
 }
 
 export const formatDateRange = (
@@ -82,7 +81,33 @@ export const formatDateRange = (
     month: "short",
     day: "numeric",
     ...options,
-  }).formatRange(new Date(start), new Date(end || start))
+  })
+    .formatRange(new Date(start), new Date(end || start))
+    // Normalize whitespace to avoid SSR/client hydration mismatches: Node's ICU
+    // and the browser's ICU can emit different space characters (e.g. U+202F
+    // narrow no-break space vs a regular U+0020) around the range en-dash. The
+    // two render identically but differ byte-for-byte, tripping React's
+    // hydration check. Collapsing whitespace makes the output deterministic.
+    .replace(/\s+/g, " ")
+
+/**
+ * Date range split into parts so callers can style them individually (e.g. a
+ * lighter year), instead of hand-assembling the string -- which would hard-code
+ * English part order. Whitespace is normalized as in `formatDateRange`.
+ */
+export const formatDateRangeToParts = (
+  start: Date | string,
+  end: Date | string,
+  locale: string = DEFAULT_LOCALE,
+  options?: Intl.DateTimeFormatOptions
+) =>
+  dateTimeFormat(locale, {
+    month: "short",
+    day: "numeric",
+    ...options,
+  })
+    .formatRangeToParts(new Date(start), new Date(end))
+    .map(({ type, value }) => ({ type, value: value.replace(/\s+/g, " ") }))
 
 export const getLocaleYear = (
   locale: string = "en-US",

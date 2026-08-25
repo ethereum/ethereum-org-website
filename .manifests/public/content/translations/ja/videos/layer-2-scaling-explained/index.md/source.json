@@ -1,0 +1,285 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/layer-2-scaling-explained/index.md",
+  "generatedAt": "2026-04-28T23:47:02.154Z",
+  "rootHash": "96df6836e348",
+  "tree": {
+    "contentHash": "7f6c721c6f4a",
+    "anchorHash": "9ee00b34c95a",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "444735caebf1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "81fc7271f55d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "7920f76644e9"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "aa6c953e311d"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "1efeb9be6fcc"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "94e6f02a5aca"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "0cb1dd1d18fd"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "4198f4149a33"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "ab0fcf60cf86"
+      },
+      "prose:1": {
+        "contentHash": "237e81722940",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "15a46265a291"
+      },
+      "prose:2": {
+        "contentHash": "1ceb1c096756",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-scaling-031": {
+        "contentHash": "00a7b5f59a21",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "c06c44845be2",
+        "children": {
+          "_label": {
+            "contentHash": "c06c44845be2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "cc3b004a288d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "scaling-blockchains-120": {
+        "contentHash": "080133265f70",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "2ba1ef28c4ca",
+        "children": {
+          "_label": {
+            "contentHash": "2ba1ef28c4ca",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "1215c07222bb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "ethereum-20-239": {
+        "contentHash": "f4b248d61ab1",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "fad83324348f",
+        "children": {
+          "_label": {
+            "contentHash": "fad83324348f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "82da9a4b1529",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "scalability-trilemma-315": {
+        "contentHash": "4dcb3a74d18e",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "0dcf2d7767fc",
+        "children": {
+          "_label": {
+            "contentHash": "0dcf2d7767fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "b6263752eadc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "layer-2-scaling-352": {
+        "contentHash": "5864ab8d569c",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "f3414e133685",
+        "children": {
+          "_label": {
+            "contentHash": "f3414e133685",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ea6a37740f3d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "channels-503": {
+        "contentHash": "1ac30993d472",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "66ee1ff2969e",
+        "children": {
+          "_label": {
+            "contentHash": "66ee1ff2969e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "9dbdfc5888f8",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "plasma-604": {
+        "contentHash": "9a61da8eec9c",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "386343a56da1",
+        "children": {
+          "_label": {
+            "contentHash": "386343a56da1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "d354d04e9262",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "sidechains-708": {
+        "contentHash": "ef6874bbac15",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "2f2cf52e0ea1",
+        "children": {
+          "_label": {
+            "contentHash": "2f2cf52e0ea1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c7875cf2395f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "zk-rollups-811": {
+        "contentHash": "f43d1ee9eec4",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "b92121ef2844",
+        "children": {
+          "_label": {
+            "contentHash": "b92121ef2844",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "501f982b7827",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "a-rollup-centric-roadmap-918": {
+        "contentHash": "2a92728c6bd9",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "87dd11ca2cc4",
+        "children": {
+          "_label": {
+            "contentHash": "87dd11ca2cc4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4f1cf3d84320",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "ethereum-scaling-031",
+      "scaling-blockchains-120",
+      "ethereum-20-239",
+      "scalability-trilemma-315",
+      "layer-2-scaling-352",
+      "channels-503",
+      "plasma-604",
+      "sidechains-708",
+      "zk-rollups-811",
+      "a-rollup-centric-roadmap-918"
+    ]
+  },
+  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+}

@@ -1,48 +1,48 @@
 ---
-title: "Yerel, çok istemcili bir test ağında bir merkeziyetsiz uygulama nasıl geliştirilir ve test edilir"
-description: "Bu kılavuz, test ağını bir merkeziyetsiz uygulamayı dağıtmak ve test etmek için kullanmadan önce, size çok istemcili bir yerel Ethereum test ağını nasıl somutlaştıracağınız ve yapılandıracağınız konusunda yol gösterecektir."
+title: "Yerel, çok istemcili bir test ağında bir dapp nasıl geliştirilir ve test edilir"
+description: "Bu rehber, bir dapp'i dağıtmak ve test etmek için test ağını kullanmadan önce çok istemcili yerel bir Ethereum test ağının nasıl başlatılacağı ve yapılandırılacağı konusunda size yol gösterecektir."
 author: "Tedi Mitiku"
 tags:
   [
     "istemciler",
     "düğümler",
-    "akıllı kontratlar",
+    "akıllı sözleşmeler",
     "birleştirilebilirlik",
     "mutabakat katmanı",
     "yürütme katmanı",
-    "test etmek"
+    "test etme",
   ]
 skill: intermediate
-breadcrumb: "Çoklu istemci testnet"
+breadcrumb: "Çok istemcili test ağı"
 lang: tr
 published: 2023-04-11
 ---
 
 ## Giriş {#introduction}
 
-Bu kılavuz, yapılandırılabilir bir yerel Ethereum test ağını somutlaştırma, ona bir akıllı sözleşme dağıtma ve merkeziyetsiz uygulamanıza karşı testler yürütmek için test ağını kullanma sürecinde size yol gösterir. Bu kılavuz, canlı bir test ağına veya ana ağa dağıtım yapmadan önce merkeziyetsiz uygulamalarını farklı ağ yapılandırmalarına karşı yerel olarak geliştirmek ve test etmek isteyen merkeziyetsiz uygulama geliştiricileri için tasarlanmıştır.
+Bu rehber, yapılandırılabilir yerel bir Ethereum test ağını başlatma, ona bir akıllı sözleşme dağıtma ve merkeziyetsiz uygulamanıza (dapp) karşı testler çalıştırmak için test ağını kullanma sürecinde size yol gösterir. Bu rehber, dapp'lerini canlı bir test ağına veya Ana Ağ'a dağıtmadan önce farklı ağ yapılandırmalarına karşı yerel olarak geliştirmek ve test etmek isteyen dapp geliştiricileri için tasarlanmıştır.
 
-Bu kılavuzda şunları yapacaksınız:
+Bu rehberde şunları yapacaksınız:
 
-- [Kurtosis](https://www.kurtosis.com/) kullanarak [`eth-network-package`](https://github.com/kurtosis-tech/eth-network-package) ile yerel bir Ethereum test ağı oluşturun,
-- Bir merkeziyetsiz uygulamayı derlemek, dağıtmak ve test etmek için Hardhat merkeziyetsiz uygulama geliştirme ortamınızı yerel test ağına bağlayın ve
-- Çeşitli ağ yapılandırmalarına karşı geliştirme ve test iş akışlarını etkinleştirmek için düğüm sayısı ve belirli YK/MK istemci eşleşmeleri gibi parametreler de dahil olmak üzere yerel test ağını yapılandırın.
+- [Kurtosis](https://www.kurtosis.com/) kullanarak [`eth-network-package`](https://github.com/kurtosis-tech/eth-network-package) ile yerel bir Ethereum test ağı başlatmak,
+- Bir dapp'i derlemek, dağıtmak ve test etmek için Hardhat dapp geliştirme ortamınızı yerel test ağına bağlamak ve
+- Çeşitli ağ yapılandırmalarına karşı geliştirme ve test iş akışlarını etkinleştirmek için düğüm sayısı ve belirli EL/CL istemci eşleşmeleri gibi parametreler dahil olmak üzere yerel test ağını yapılandırmak.
 
 ### Kurtosis nedir? {#what-is-kurtosis}
 
-[Kurtosis](https://www.kurtosis.com/), çok kapsayıcılı test ortamlarını yapılandırmak için tasarlanmış birleştirilebilir bir yapı sistemidir. Geliştiricilerin, blokzincir test ağları gibi dinamik kurulum mantığı gerektiren yeniden üretilebilir ortamlar oluşturmasını özellikle sağlar.
+[Kurtosis](https://www.kurtosis.com/), çok kapsayıcılı test ortamlarını yapılandırmak için tasarlanmış birleştirilebilir bir derleme sistemidir. Özellikle geliştiricilerin, blokzincir test ağları gibi dinamik kurulum mantığı gerektiren tekrarlanabilir ortamlar oluşturmasına olanak tanır.
 
-Bu kılavuzda, Kurtosis eth-network-package, [`geth`](https://geth.ethereum.org/) Yürütme Katmanı (YK) istemcisinin yanı sıra [`teku`](https://consensys.io/teku), [`lighthouse`](https://lighthouse.sigmaprime.io/) ve [`lodestar`](https://lodestar.chainsafe.io/) Mutabakat Katmanı (MK) istemcileri desteğiyle yerel bir Ethereum test ağı oluşturur. Bu paket, Hardhat Network, Ganache ve Anvil gibi çerçevelerdeki ağlara yapılandırılabilir ve birleştirilebilir bir alternatif olarak hizmet eder. Kurtosis, geliştiricilere kullandıkları test ağları üzerinde daha fazla kontrol ve esneklik sunar; bu da [Ethereum Vakfı'nın Birleşim'i test etmek için Kurtosis'i kullanmasının](https://www.kurtosis.com/blog/testing-the-ethereum-merge) ve ağ yükseltmelerini test etmek için kullanmaya devam etmesinin önemli bir nedenidir.
+Bu rehberde, Kurtosis eth-network-package, [`geth`](https://geth.ethereum.org/) yürütme katmanı (EL) istemcisinin yanı sıra [`teku`](https://consensys.io/teku), [`lighthouse`](https://lighthouse.sigmaprime.io/) ve [`lodestar`](https://lodestar.chainsafe.io/) mutabakat katmanı (CL) istemcilerini destekleyen yerel bir Ethereum test ağı başlatır. Bu paket, Hardhat Network, Ganache ve Anvil gibi çerçevelerdeki ağlara yapılandırılabilir ve birleştirilebilir bir alternatif olarak hizmet eder. Kurtosis, geliştiricilere kullandıkları test ağları üzerinde daha fazla kontrol ve esneklik sunar; bu da [Ethereum Vakfı'nın Birleşme'yi test etmek için Kurtosis'i kullanmasının](https://www.kurtosis.com/blog/testing-the-ethereum-merge) ve ağ yükseltmelerini test etmek için kullanmaya devam etmesinin önemli bir nedenidir.
 
 ## Kurtosis'i kurma {#setting-up-kurtosis}
 
-Devam etmeden önce, şunlara sahip olduğunuzdan emin olun:
+Devam etmeden önce şunlara sahip olduğunuzdan emin olun:
 
-- Yerel makinenizde [Docker motorunu kurun ve başlatın](https://docs.kurtosis.com/install/#i-install--start-docker)
-- [Kurtosis CLI'yi yükleyin](https://docs.kurtosis.com/install#ii-install-the-cli) (veya CLI zaten yüklüyse en son sürüme yükseltin)
-- [Node.js](https://nodejs.org/en), [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) ve [npx](https://www.npmjs.com/package/npx) (merkeziyetsiz uygulama ortamınız için) yükleyin
+- Yerel makinenizde [Docker motorunu kurmuş ve başlatmış olmak](https://docs.kurtosis.com/install/#i-install--start-docker)
+- [Kurtosis CLI'yi kurmuş olmak](https://docs.kurtosis.com/install#ii-install-the-cli) (veya zaten CLI kuruluysa en son sürüme yükseltmiş olmak)
+- [Node.js](https://nodejs.org/en), [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) ve [npx](https://www.npmjs.com/package/npx) kurmuş olmak (dapp ortamınız için)
 
-## Yerel bir Ethereum test ağı oluşturma {#instantiate-testnet}
+## Yerel bir Ethereum test ağı başlatma {#instantiate-testnet}
 
 Yerel bir Ethereum test ağı başlatmak için şunu çalıştırın:
 
@@ -50,20 +50,20 @@ Yerel bir Ethereum test ağı başlatmak için şunu çalıştırın:
 kurtosis --enclave local-eth-testnet run github.com/kurtosis-tech/eth-network-package
 ```
 
-Not: Bu komut, `--enclave` bayrağını kullanarak ağınızı "local-eth-testnet" olarak adlandırır.
+Not: Bu komut, `--enclave` bayrağını kullanarak ağınızı "local-eth-testnet” olarak adlandırır.
 
-Kurtosis, talimatları yorumlamak, doğrulamak ve ardından yürütmek için çalışırken perde arkasında attığı adımları yazdıracaktır. Sonunda, aşağıdakine benzer bir çıktı görmelisiniz:
+Kurtosis, talimatları yorumlamak, doğrulamak ve ardından yürütmek için çalışırken arka planda attığı adımları yazdıracaktır. Sonunda, aşağıdakine benzer bir çıktı görmelisiniz:
 
 ```python
 INFO[2023-04-04T18:09:44-04:00] ======================================================
-INFO[2023-04-04T18:09:44-04:00] ||          Enclave oluşturuldu: local-eth-testnet      ||
+INFO[2023-04-04T18:09:44-04:00] ||          Created enclave: local-eth-testnet      ||
 INFO[2023-04-04T18:09:44-04:00] ======================================================
 Name:            local-eth-testnet
 UUID:            39372d756ae8
 Status:          RUNNING
 Creation Time:   Tue, 04 Apr 2023 18:09:03 EDT
 
-========================================= Dosya Yapıtları =========================================
+========================================= Files Artifacts =========================================
 UUID           Name
 d4085a064230   cl-genesis-data
 1c62cb792e4c   el-genesis-data
@@ -73,7 +73,7 @@ d552a54acf78   geth-prefunded-keys
 5f7e661eb838   prysm-password
 054e7338bb59   validator-keystore-0
 
-========================================== Kullanıcı Hizmetleri ==========================================
+========================================== User Services ==========================================
 UUID           Name                                           Ports                                         Status
 e20f129ee0c5   cl-client-0-beacon                             http: 4000/tcp -> <http://127.0.0.1:54261>    RUNNING
                                                               metrics: 5054/tcp -> <http://127.0.0.1:54262>
@@ -92,46 +92,46 @@ d7b802f623e8   el-client-0                                    engine-rpc: 8551/t
 
 ```
 
-Tebrikler! Docker üzerinde bir MK (`lighthouse`) ve YK istemcisi (`geth`) ile yerel bir Ethereum test ağı oluşturmak için Kurtosis'i kullandınız.
+Tebrikler! Docker üzerinden bir CL (`lighthouse`) ve EL istemcisi (`geth`) ile yerel bir Ethereum test ağı başlatmak için Kurtosis'i kullandınız.
 
-### Gözden Geçirme {#review-instantiate-testnet}
+### İnceleme {#review-instantiate-testnet}
 
-Bu bölümde, bir Kurtosis [Enclave](https://docs.kurtosis.com/advanced-concepts/enclaves/) içinde yerel bir Ethereum test ağı başlatmak için Kurtosis'i GitHub'da uzaktan barındırılan [`eth-network-package`](https://github.com/kurtosis-tech/eth-network-package) kullanmaya yönlendiren bir komut yürüttünüz. Enclave'inizin içinde hem "dosya yapıtları" hem de "kullanıcı hizmetleri" bulacaksınız.
+Bu bölümde, Kurtosis'i bir Kurtosis [Enclave](https://docs.kurtosis.com/advanced-concepts/enclaves/)'i içinde yerel bir Ethereum test ağı başlatmak üzere [GitHub'da uzaktan barındırılan `eth-network-package`](https://github.com/kurtosis-tech/eth-network-package) paketini kullanmaya yönlendiren bir komut çalıştırdınız. Enclave'inizin içinde hem "dosya yapıları" (file artifacts) hem de "kullanıcı hizmetleri" (user services) bulacaksınız.
 
-Enclave'inizdeki [Dosya Yapıtları](https://docs.kurtosis.com/advanced-concepts/files-artifacts/), YK ve MK istemcilerini önyüklemek için oluşturulan ve kullanılan tüm verileri içerir. Veriler, bu [Docker görüntüsünden](https://github.com/ethpandaops/ethereum-genesis-generator) oluşturulan `prelaunch-data-generator` hizmeti kullanılarak oluşturuldu.
+Enclave'inizdeki [Dosya Yapıları](https://docs.kurtosis.com/advanced-concepts/files-artifacts/), EL ve CL istemcilerini başlatmak için oluşturulan ve kullanılan tüm verileri içerir. Veriler, bu [Docker imajından](https://github.com/ethpandaops/ethereum-genesis-generator) oluşturulan `prelaunch-data-generator` hizmeti kullanılarak oluşturulmuştur.
 
-Kullanıcı hizmetleri, enclave'inizde çalışan tüm kapsayıcılı hizmetleri görüntüler. Hem bir YK istemcisi hem de bir MK istemcisi içeren tek bir düğümün oluşturulduğunu fark edeceksiniz.
+Kullanıcı hizmetleri, enclave'inizde çalışan tüm kapsayıcılı hizmetleri görüntüler. Hem bir EL istemcisi hem de bir CL istemcisi içeren tek bir düğümün oluşturulduğunu fark edeceksiniz.
 
-## Merkeziyetsiz uygulama geliştirme ortamınızı yerel Ethereum test ağına bağlama {#connect-your-dapp}
+## Dapp geliştirme ortamınızı yerel Ethereum test ağına bağlayın {#connect-your-dapp}
 
-### Merkeziyetsiz uygulama geliştirme ortamını kurma {#set-up-dapp-env}
+### Dapp geliştirme ortamını kurun {#set-up-dapp-env}
 
-Artık çalışan bir yerel test ağınız olduğuna göre, yerel test ağınızı kullanmak için merkeziyetsiz uygulama geliştirme ortamınızı bağlayabilirsiniz. Bu kılavuzda, yerel test ağınıza bir blackjack merkeziyetsiz uygulaması dağıtmak için Hardhat çerçevesi kullanılacaktır.
+Artık çalışan bir yerel test ağınız olduğuna göre, dapp geliştirme ortamınızı yerel test ağınızı kullanacak şekilde bağlayabilirsiniz. Bu rehberde, yerel test ağınıza bir blackjack dapp'i dağıtmak için Hardhat çerçevesi kullanılacaktır.
 
-Merkeziyetsiz uygulama geliştirme ortamınızı kurmak için, örnek merkeziyetsiz uygulamamızı içeren depoyu klonlayın ve bağımlılıklarını yükleyin, şunu çalıştırın:
+Dapp geliştirme ortamınızı kurmak için örnek dapp'imizi içeren depoyu klonlayın ve bağımlılıklarını yükleyin, şunu çalıştırın:
 
 ```python
 git clone https://github.com/kurtosis-tech/awesome-kurtosis.git && cd awesome-kurtosis/smart-contract-example && yarn
 ```
 
-Burada kullanılan [smart-contract-example](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example) klasörü, [Hardhat](https://hardhat.org/) çerçevesini kullanan bir merkeziyetsiz uygulama geliştiricisi için tipik kurulumu içerir:
+Burada kullanılan [smart-contract-example](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example) klasörü, [Hardhat](https://hardhat.org/) çerçevesini kullanan bir dapp geliştiricisi için tipik kurulumu içerir:
 
-- [`contracts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/contracts) bir Blackjack merkeziyetsiz uygulaması için birkaç basit akıllı sözleşme içerir
-- [`scripts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/scripts) yerel Ethereum ağınıza bir jeton sözleşmesi dağıtmak için bir betik içerir
-- [`test/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test) Blackjack merkeziyetsiz uygulamamızdaki her oyuncu için 1000 jetonun basıldığını doğrulamak amacıyla jeton sözleşmeniz için basit bir .js testi içerir
-- [`hardhat.config.ts`](https://github.com/kurtosis-tech/awesome-kurtosis/blob/main/smart-contract-example/hardhat.config.ts) Hardhat kurulumunuzu yapılandırır
+- [`contracts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/contracts), bir Blackjack dapp'i için birkaç basit akıllı sözleşme içerir
+- [`scripts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/scripts), yerel Ethereum ağınıza bir token sözleşmesi dağıtmak için bir betik içerir
+- [`test/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test), Blackjack dapp'imizdeki her oyuncu için 1000 token basıldığını doğrulamak üzere token sözleşmeniz için basit bir .js testi içerir
+- [`hardhat.config.ts`](https://github.com/kurtosis-tech/awesome-kurtosis/blob/main/smart-contract-example/hardhat.config.ts), Hardhat kurulumunuzu yapılandırır
 
-### Hardhat'i yerel test ağını kullanacak şekilde yapılandırma {#configure-hardhat}
+### Hardhat'i yerel test ağını kullanacak şekilde yapılandırın {#configure-hardhat}
 
-Merkeziyetsiz uygulama geliştirme ortamınız kurulduktan sonra, Kurtosis kullanılarak oluşturulan yerel Ethereum test ağını kullanmak için Hardhat'i bağlayacaksınız. Bunu başarmak için, `hardhat.config.ts` yapılandırma dosyanızdaki `localnet` yapısındaki `<$YOUR_PORT>` öğesini herhangi bir `el-client-<num>` hizmetinden gelen rpc uri çıktısının bağlantı noktasıyla değiştirin. Bu örnek durumda, bağlantı noktası `64248` olacaktır. Sizin bağlantı noktanız farklı olacaktır.
+Dapp geliştirme ortamınız kurulduğuna göre, şimdi Hardhat'i Kurtosis kullanılarak oluşturulan yerel Ethereum test ağını kullanacak şekilde bağlayacaksınız. Bunu başarmak için, `hardhat.config.ts` yapılandırma dosyanızdaki `localnet` yapısında bulunan `<$YOUR_PORT>` değerini, herhangi bir `el-client-<num>` hizmetinden alınan rpc uri çıktısının bağlantı noktasıyla (port) değiştirin. Bu örnek durumda, bağlantı noktası `64248` olacaktır. Sizin bağlantı noktanız farklı olacaktır.
 
-`hardhat.config.ts` içinde örnek:
+`hardhat.config.ts` içindeki örnek:
 
 ```js
 localnet: {
-url: 'http://127.0.0.1:<$YOUR_PORT>',// TODO: $YOUR_PORT'U ETH AĞI KURTOSIS PAKETİNİN ÜRETTİĞİ BİR DÜĞÜM URI'SİNİN BAĞLANTI NOKTASIYLA DEĞİŞTİRİN
+url: 'http://127.0.0.1:<$YOUR_PORT>',// TODO: $YOUR_PORT İFADESİNİ ETH AĞI KURTOSIS PAKETİ TARAFINDAN ÜRETİLEN BİR DÜĞÜM URI'SİNİN PORTU İLE DEĞİŞTİRİN
 
-// Bunlar, eth-network-package tarafından oluşturulan önceden finanse edilmiş test hesaplarıyla ilişkili özel anahtarlardır
+// Bunlar, eth-network-package tarafından oluşturulan önceden fonlanmış test hesaplarıyla ilişkili özel anahtarlardır
 // <https://github.com/kurtosis-tech/eth-network-package/blob/main/src/prelaunch_data_generator/genesis_constants/genesis_constants.star>
 accounts: [
     "ef5177cd0b6b21c87db5a0bf35d4084a8a57a9d6a064f86d51ac85f2b873a4e2",
@@ -144,7 +144,7 @@ accounts: [
 },
 ```
 
-Dosyanızı kaydettiğinizde, Hardhat merkeziyetsiz uygulama geliştirme ortamınız artık yerel Ethereum test ağınıza bağlanmış olur! Test ağınızın çalıştığını şu komutu çalıştırarak doğrulayabilirsiniz:
+Dosyanızı kaydettiğinizde, Hardhat dapp geliştirme ortamınız artık yerel Ethereum test ağınıza bağlanmış olur! Test ağınızın çalıştığını şunu çalıştırarak doğrulayabilirsiniz:
 
 ```python
 npx hardhat balances --network localnet
@@ -161,13 +161,13 @@ npx hardhat balances --network localnet
 0x1F6298457C5d76270325B724Da5d1953923a6B88 has balance 10000000000000000000000000
 ```
 
-Bu, Hardhat'in yerel test ağınızı kullandığını ve `eth-network-package` tarafından oluşturulan önceden finanse edilmiş hesapları algıladığını doğrular.
+Bu, Hardhat'in yerel test ağınızı kullandığını doğrular ve `eth-network-package` tarafından oluşturulan önceden fonlanmış hesapları algılar.
 
-### Merkeziyetsiz uygulamanızı yerel olarak dağıtın ve test edin {#deploy-and-test-dapp}
+### Dapp'inizi yerel olarak dağıtın ve test edin {#deploy-and-test-dapp}
 
-Merkeziyetsiz uygulama geliştirme ortamı yerel Ethereum test ağına tamamen bağlandığında, artık yerel test ağını kullanarak merkeziyetsiz uygulamanıza karşı geliştirme ve test iş akışlarını çalıştırabilirsiniz.
+Dapp geliştirme ortamı yerel Ethereum test ağına tamamen bağlandığında, artık yerel test ağını kullanarak dapp'inize karşı geliştirme ve test iş akışlarını çalıştırabilirsiniz.
 
-Yerel prototipleme ve geliştirme için `ChipToken.sol` akıllı sözleşmesini derlemek ve dağıtmak için şunu çalıştırın:
+Yerel prototipleme ve geliştirme için `ChipToken.sol` akıllı sözleşmesini derlemek ve dağıtmak üzere şunu çalıştırın:
 
 ```python
 npx hardhat compile
@@ -177,10 +177,10 @@ npx hardhat run scripts/deploy.ts --network localnet
 Çıktı şuna benzer görünmelidir:
 
 ```python
-ChipToken şuraya dağıtıldı: 0xAb2A01BC351770D09611Ac80f1DE076D56E0487d
+ChipToken deployed to: 0xAb2A01BC351770D09611Ac80f1DE076D56E0487d
 ```
 
-Şimdi, Blackjack merkeziyetsiz uygulamamızdaki her oyuncu için 1000 jeton basıldığını doğrulamak için yerel merkeziyetsiz uygulamanıza karşı `simple.js` testini çalıştırmayı deneyin:
+Şimdi, Blackjack dapp'imizdeki her oyuncu için 1000 token basıldığını doğrulamak üzere yerel dapp'inize karşı `simple.js` testini çalıştırmayı deneyin:
 
 Çıktı şuna benzer görünmelidir:
 
@@ -193,32 +193,32 @@ npx hardhat test --network localnet
 ```python
 ChipToken
     mint
-      ✔ PLAYER ONE için 1000 fiş basmalı
+      ✔ should mint 1000 chips for PLAYER ONE
 
-  1 başarılı (654ms)
+  1 passing (654ms)
 ```
 
-### Gözden Geçirme {#review-dapp-workflows}
+### İnceleme {#review-dapp-workflows}
 
-Bu noktada, bir merkeziyetsiz uygulama geliştirme ortamı kurdunuz, onu Kurtosis tarafından oluşturulan yerel bir Ethereum ağına bağladınız ve merkeziyetsiz uygulamanıza karşı basit bir test derlediniz, dağıttınız ve çalıştırdınız.
+Bu noktada, artık bir dapp geliştirme ortamı kurdunuz, onu Kurtosis tarafından oluşturulan yerel bir Ethereum ağına bağladınız ve dapp'inize karşı basit bir test derlediniz, dağıttınız ve çalıştırdınız.
 
-Şimdi de, merkeziyetsiz uygulamalarımızı değişken ağ yapılandırmaları altında test etmek için temel ağı nasıl yapılandırabileceğinizi keşfedelim.
+Şimdi, dapp'lerimizi farklı ağ yapılandırmaları altında test etmek için temel ağı nasıl yapılandırabileceğinizi keşfedelim.
 
 ## Yerel Ethereum test ağını yapılandırma {#configure-testnet}
 
 ### İstemci yapılandırmalarını ve düğüm sayısını değiştirme {#configure-client-config-and-num-nodes}
 
-Yerel Ethereum test ağınız, geliştirmek veya test etmek istediğiniz senaryoya ve belirli ağ yapılandırmasına bağlı olarak, farklı YK ve MK istemci çiftlerinin yanı sıra değişen sayıda düğüm kullanacak şekilde yapılandırılabilir. Bu, kurulduktan sonra özelleştirilmiş bir yerel test ağı oluşturabileceğiniz ve aynı iş akışlarını (dağıtım, testler vb.) çalıştırmak için kullanabileceğiniz anlamına gelir. her şeyin beklendiği gibi çalıştığından emin olmak için çeşitli ağ yapılandırmaları altında. Değiştirebileceğiniz diğer parametreler hakkında daha fazla bilgi edinmek için bu bağlantıyı ziyaret edin.
+Yerel Ethereum test ağınız, geliştirmek veya test etmek istediğiniz senaryoya ve belirli ağ yapılandırmasına bağlı olarak farklı EL ve CL istemci çiftlerinin yanı sıra değişen sayıda düğüm kullanacak şekilde yapılandırılabilir. Bu, bir kez kurulduktan sonra, özelleştirilmiş bir yerel test ağı başlatabileceğiniz ve her şeyin beklendiği gibi çalıştığından emin olmak için çeşitli ağ yapılandırmaları altında aynı iş akışlarını (dağıtım, testler vb.) çalıştırmak için kullanabileceğiniz anlamına gelir. Değiştirebileceğiniz diğer parametreler hakkında daha fazla bilgi edinmek için bu bağlantıyı ziyaret edin.
 
-Deneyin! Bir JSON dosyası aracılığıyla `eth-network-package`'a çeşitli yapılandırma seçenekleri iletebilirsiniz. Bu ağ parametreleri JSON dosyası, Kurtosis'in yerel Ethereum ağını kurmak için kullanacağı belirli yapılandırmaları sağlar.
+Bir deneyin! Bir JSON dosyası aracılığıyla `eth-network-package` paketine çeşitli yapılandırma seçenekleri aktarabilirsiniz. Bu ağ parametreleri JSON dosyası, Kurtosis'in yerel Ethereum ağını kurmak için kullanacağı belirli yapılandırmaları sağlar.
 
-Varsayılan yapılandırma dosyasını alın ve farklı YK/MK çiftlerine sahip üç düğüm başlatmak için düzenleyin:
+Varsayılan yapılandırma dosyasını alın ve farklı EL/CL çiftlerine sahip iki düğüm başlatmak için düzenleyin:
 
-- Düğüm 1, `geth`/`lighthouse` ile
-- Düğüm 2, `geth`/`lodestar` ile
-- Düğüm 3, `geth`/`teku` ile
+- `geth`/`lighthouse` ile Düğüm 1
+- `geth`/`lodestar` ile Düğüm 2
+- `geth`/`teku` ile Düğüm 3
 
-Bu yapılandırma, merkeziyetsiz uygulamanızı test etmek için heterojen bir Ethereum düğüm uygulamaları ağı oluşturur. Yapılandırma dosyanız şimdi şöyle görünmelidir:
+Bu yapılandırma, dapp'inizi test etmek için Ethereum düğüm uygulamalarından oluşan heterojen bir ağ oluşturur. Yapılandırma dosyanız artık şuna benzemelidir:
 
 ```yaml
 {
@@ -274,31 +274,31 @@ Bu yapılandırma, merkeziyetsiz uygulamanızı test etmek için heterojen bir E
 }
 ```
 
-Her `participants` yapısı ağdaki bir düğüme karşılık gelir, bu nedenle 3 `participants` yapısı Kurtosis'e ağınızda 3 düğüm başlatmasını söyleyecektir. Her `participants` yapısı, o belirli düğüm için kullanılan YK ve MK çiftini belirtmenize olanak tanır.
+Her `participants` yapısı ağdaki bir düğümle eşleşir, bu nedenle 3 `participants` yapısı Kurtosis'e ağınızda 3 düğüm başlatmasını söyleyecektir. Her `participants` yapısı, o belirli düğüm için kullanılan EL ve CL çiftini belirlemenize olanak tanır.
 
-`network_params` yapısı, her düğüm için başlangıç dosyalarını oluşturmak için kullanılan ağ ayarlarını ve ağın yuva başına saniyesi gibi diğer ayarları yapılandırır.
+`network_params` yapısı, her düğüm için genesis dosyalarını oluşturmak üzere kullanılan ağ ayarlarının yanı sıra ağın slot başına saniye sayısı gibi diğer ayarları yapılandırır.
 
-Düzenlenen parametreler dosyanızı istediğiniz herhangi bir dizine kaydedin (aşağıdaki örnekte masaüstüne kaydedilmiştir) ve ardından Kurtosis paketinizi çalıştırmak için şunu çalıştırın:
+Düzenlediğiniz parametreler dosyasını dilediğiniz bir dizine kaydedin (aşağıdaki örnekte masaüstüne kaydedilmiştir) ve ardından şunu çalıştırarak Kurtosis paketinizi çalıştırmak için kullanın:
 
 ```python
 kurtosis clean -a && kurtosis run --enclave local-eth-testnet github.com/kurtosis-tech/eth-network-package "$(cat ~/eth-network-params.json)"
 ```
 
-Not: `kurtosis clean -a` komutu, Kurtosis'e yeni bir tane başlatmadan önce eski test ağını ve içeriğini yok etmesi talimatını vermek için burada kullanılır.
+Not: `kurtosis clean -a` komutu burada Kurtosis'e yeni bir tane başlatmadan önce eski test ağını ve içeriğini yok etmesi talimatını vermek için kullanılır.
 
-Yine Kurtosis bir süre çalışacak ve gerçekleşen adımları tek tek yazdıracaktır. Sonunda, çıktı şuna benzer görünmelidir:
+Yine, Kurtosis bir süre çalışacak ve gerçekleşen bireysel adımları yazdıracaktır. Sonunda, çıktı şuna benzer görünmelidir:
 
 ```python
-Starlark kodu başarıyla çalıştırıldı. Çıktı döndürülmedi.
+Starlark code successfully run. No output was returned.
 INFO[2023-04-07T11:43:16-04:00] ==========================================================
-INFO[2023-04-07T11:43:16-04:00] ||          Enclave oluşturuldu: local-eth-testnet          ||
+INFO[2023-04-07T11:43:16-04:00] ||          Created enclave: local-eth-testnet          ||
 INFO[2023-04-07T11:43:16-04:00] ==========================================================
 Name:            local-eth-testnet
 UUID:            bef8c192008e
 Status:          RUNNING
 Creation Time:   Fri, 07 Apr 2023 11:41:58 EDT
 
-========================================= Dosya Yapıtları =========================================
+========================================= Files Artifacts =========================================
 UUID           Name
 cc495a8e364a   cl-genesis-data
 7033fcdb5471   el-genesis-data
@@ -310,7 +310,7 @@ d9e6e8d44d99   validator-keystore-0
 23f5ba517394   validator-keystore-1
 4d28dea40b5c   validator-keystore-2
 
-========================================== Kullanıcı Hizmetleri ==========================================
+========================================== User Services ==========================================
 UUID           Name                                           Ports                                            Status
 485e6fde55ae   cl-client-0-beacon                             http: 4000/tcp -> http://127.0.0.1:65010         RUNNING
                                                               metrics: 5054/tcp -> http://127.0.0.1:65011
@@ -352,22 +352,22 @@ ad6f401126fa   el-client-2                                    engine-rpc: 8551/t
 3d4aaa75e218   prelaunch-data-generator-1680882122201668972   <none>                                           STOPPED
 ```
 
-Tebrikler! Yerel test ağınızı 1 yerine 3 düğüme sahip olacak şekilde başarıyla yapılandırdınız. Merkeziyetsiz uygulamanıza karşı daha önce yaptığınız iş akışlarını (dağıtma ve test etme) çalıştırmak için, `hardhat.config.ts` yapılandırma dosyanızdaki `localnet` yapısındaki `<$YOUR_PORT>` öğesini yeni, 3 düğümlü yerel test ağınızdaki herhangi bir `el-client-<num>` hizmetinden gelen rpc uri çıktısının bağlantı noktasıyla değiştirerek daha önce yaptığımız işlemlerin aynısını gerçekleştirin.
+Tebrikler! Yerel test ağınızı 1 yerine 3 düğüme sahip olacak şekilde başarıyla yapılandırdınız. Dapp'inize karşı daha önce yaptığınız aynı iş akışlarını (dağıtma ve test etme) çalıştırmak için, `hardhat.config.ts` yapılandırma dosyanızdaki `localnet` yapısında bulunan `<$YOUR_PORT>` değerini, yeni 3 düğümlü yerel test ağınızdaki herhangi bir `el-client-<num>` hizmetinden alınan rpc uri çıktısının bağlantı noktasıyla değiştirerek daha önce yaptığımız aynı işlemleri gerçekleştirin.
 
 ## Sonuç {#conclusion}
 
-İşte bu kadar! Bu kısa kılavuzu özetlemek gerekirse, şunları yaptınız:
+İşte bu kadar! Bu kısa rehberi özetlemek gerekirse, şunları yaptınız:
 
-- Kurtosis kullanarak Docker üzerinde yerel bir Ethereum test ağı oluşturdunuz
-- Yerel merkeziyetsiz uygulama geliştirme ortamınızı yerel Ethereum ağına bağladınız
-- Yerel Ethereum ağında bir merkeziyetsiz uygulama dağıttınız ve ona karşı basit bir test çalıştırdınız
+- Kurtosis kullanarak Docker üzerinden yerel bir Ethereum test ağı oluşturdunuz
+- Yerel dapp geliştirme ortamınızı yerel Ethereum ağına bağladınız
+- Yerel Ethereum ağında bir dapp dağıttınız ve ona karşı basit bir test çalıştırdınız
 - Temel Ethereum ağını 3 düğüme sahip olacak şekilde yapılandırdınız
 
-Sizin için neyin iyi gittiğini, neyin iyileştirilebileceğini veya sorularınızı yanıtlamak için sizden haber bekliyoruz. [GitHub](https://github.com/kurtosis-tech/kurtosis/issues/new/choose) üzerinden ulaşmaktan veya [bize e-posta göndermekten](mailto:feedback@kurtosistech.com) çekinmeyin!
+Sizin için nelerin iyi gittiğini, nelerin iyileştirilebileceğini duymak veya sorularınızı yanıtlamak isteriz. [GitHub](https://github.com/kurtosis-tech/kurtosis/issues/new/choose) üzerinden ulaşmaktan veya [bize e-posta göndermekten](mailto:feedback@kurtosistech.com) çekinmeyin!
 
-### Diğer örnekler ve kılavuzlar {#other-examples-guides}
+### Diğer örnekler ve rehberler {#other-examples-guides}
 
-Postgres veritabanı ve üzerine bir API oluşturacağınız [hızlı başlangıcımıza](https://docs.kurtosis.com/quickstart) ve harika örnekler bulacağınız [awesome-kurtosis depomuzdaki](https://github.com/kurtosis-tech/awesome-kurtosis) diğer örneklerimize göz atmanızı öneririz, bunlar arasında şunlar için paketler bulunur:
+Sizi [hızlı başlangıç](https://docs.kurtosis.com/quickstart) rehberimize (üzerine bir Postgres veritabanı ve API inşa edeceğiniz) ve aşağıdakiler için paketler de dahil olmak üzere bazı harika örnekler bulabileceğiniz [awesome-kurtosis depomuzdaki](https://github.com/kurtosis-tech/awesome-kurtosis) diğer örneklerimize göz atmaya teşvik ediyoruz:
 
-- İşlemleri simüle etmek için bir işlem spam göndericisi, bir çatal izleyicisi ve bağlı bir Grafana ve Prometheus örneği gibi ek hizmetlerle bağlı olan [aynı yerel Ethereum test ağını başlatma](https://github.com/kurtosis-tech/eth2-package)
-- Aynı yerel Ethereum ağına karşı bir [alt ağ testi](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/ethereum-network-partition-test) gerçekleştirme
+- [Aynı yerel Ethereum test ağını başlatmak](https://github.com/kurtosis-tech/eth2-package), ancak bir işlem spamlayıcı (işlemleri simüle etmek için), bir çatallanma monitörü ve bağlı bir Grafana ile Prometheus örneği gibi ek hizmetler bağlı olarak
+- Aynı yerel Ethereum ağına karşı bir [alt ağ testi](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/ethereum-network-partition-test) gerçekleştirmek

@@ -1,0 +1,1635 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-staking.json",
+  "generatedAt": "2026-08-19T23:02:30.683Z",
+  "rootHash": "d092bb36f0ca",
+  "tree": {
+    "contentHash": "c18b7468e19a",
+    "anchorHash": "55170f63140b",
+    "children": {
+      "comp-withdrawal-comparison-current-title": {
+        "contentHash": "defd0a79e6f8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "comp-withdrawal-comparison-current-li-1": {
+        "contentHash": "0cecfe4848a8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "comp-withdrawal-comparison-current-li-2": {
+        "contentHash": "5c6bbb888298",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "8ed376504094",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "comp-withdrawal-comparison-current-p": {
+        "contentHash": "8af3b0477ca5",
+        "anchorHash": "9950acb88b7d",
+        "children": {
+          "prose:2": {
+            "contentHash": "867247baa07c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "700016af9230"
+          },
+          "prose:3": {
+            "contentHash": "a22469309740",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "c78770aecb85"
+          },
+          "prose:4": {
+            "contentHash": "2e43cff20099",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:2",
+          "icu:0",
+          "prose:3",
+          "icu:1",
+          "prose:4"
+        ]
+      },
+      "comp-withdrawal-comparison-new-title": {
+        "contentHash": "d51e0d32f4be",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "comp-withdrawal-comparison-new-li-1": {
+        "contentHash": "1793058e135f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "comp-withdrawal-comparison-new-li-2": {
+        "contentHash": "497e29169d13",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "comp-withdrawal-comparison-new-p": {
+        "contentHash": "d420c83129bb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "comp-withdrawal-comparison-new-link": {
+        "contentHash": "98612abd4cea",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "comp-withdrawal-credentials-placeholder": {
+        "contentHash": "b9e2cade6f35",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "comp-withdrawal-credentials-verify": {
+        "contentHash": "3f739449c43c",
+        "anchorHash": "13ef50cf0f4f",
+        "children": {
+          "prose:1": {
+            "contentHash": "65ab6811b18d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "20d60a940d71"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      },
+      "page-staking-withdrawals-when": {
+        "contentHash": "26ecbf4452f0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-image-alt": {
+        "contentHash": "97147e9859e6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-benefits-1-title": {
+        "contentHash": "09e9e432beae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-benefits-1-description": {
+        "contentHash": "513a6e2b0333",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "b74cdb610996",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-staking-benefits-2-title": {
+        "contentHash": "b775475bebc4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-benefits-2-description": {
+        "contentHash": "db7c78684674",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-benefits-3-title": {
+        "contentHash": "1f7f5dcbf927",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-benefits-3-description": {
+        "contentHash": "b901d5214461",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-benefits-3-link": {
+        "contentHash": "1819218171ea",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hero-title": {
+        "contentHash": "94f52fd42adc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hero-header": {
+        "contentHash": "dfbf03559d6c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hero-subtitle": {
+        "contentHash": "5aa35ff85a1b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-dropdown-home": {
+        "contentHash": "25406e75840d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-dropdown-solo": {
+        "contentHash": "326821cf0e4a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-more-on-solo": {
+        "contentHash": "bd40c5f86a14",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-learn-more-solo": {
+        "contentHash": "8c62be53dbb2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-dropdown-saas": {
+        "contentHash": "6561796cd0de",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-saas-with-abbrev": {
+        "contentHash": "1da027cc5558",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-more-on-saas": {
+        "contentHash": "917e4b554e9e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-learn-more-saas": {
+        "contentHash": "83d9b20cbfcd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-dropdown-pools": {
+        "contentHash": "f72b4371e7b0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-dropdown-withdrawals": {
+        "contentHash": "f371ad0e5498",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-dropdown-dvt": {
+        "contentHash": "21854a638457",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-more-on-pools": {
+        "contentHash": "b521591c788f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-more-on-cex": {
+        "contentHash": "708a4837a344",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-learn-more-pools": {
+        "contentHash": "6a3cfe773397",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-what-title": {
+        "contentHash": "1720ed743669",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-what-p1": {
+        "contentHash": "b9a9c97dd9d3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-what-p2": {
+        "contentHash": "a0b60f946463",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "38b6367519cd",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-staking-section-what-p3": {
+        "contentHash": "acf1f521e6eb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-why-title": {
+        "contentHash": "317ba456e43a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-how-to-p1": {
+        "contentHash": "011fc4b8800a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-how-to-p2": {
+        "contentHash": "68f884fafabb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-guide-title-coincashew-ethereum": {
+        "contentHash": "28fa7d66b274",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-guide-title-somer-esat": {
+        "contentHash": "e376efab9103",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-guide-title-rocket-pool": {
+        "contentHash": "6e5314ee88c4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-guide-title-stakewise": {
+        "contentHash": "6807b6a4c67b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-guide-title-lido-csm": {
+        "contentHash": "4f6604764c55",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-guide-description-linux": {
+        "contentHash": "c8eba1f35010",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-guide-description-mac-linux": {
+        "contentHash": "bf3c1aad0b93",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-guide-description-mac-linux-windows": {
+        "contentHash": "fc591f136581",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-solo-h2": {
+        "contentHash": "326821cf0e4a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-solo-pill-1": {
+        "contentHash": "91a6050347ad",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-solo-pill-2": {
+        "contentHash": "ba819ccda692",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-solo-pill-3": {
+        "contentHash": "43ef510a045e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-solo-pill-4": {
+        "contentHash": "62b1e3a23920",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-solo-p1": {
+        "contentHash": "9b5539b1347f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-solo-p2": {
+        "contentHash": "96d8bff0fab2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-solo-p3": {
+        "contentHash": "e3a6a29934a4",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "4ef3b8418a7f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-staking-hierarchy-saas-h2": {
+        "contentHash": "fbbaa20b9c06",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-saas-pill-1": {
+        "contentHash": "a92f2bbcd377",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-saas-pill-2": {
+        "contentHash": "8cd2c1e6f735",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-saas-pill-3": {
+        "contentHash": "631b8688f62a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-saas-p1": {
+        "contentHash": "3854b0f80b0d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-saas-p2": {
+        "contentHash": "e83c118f89b9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-saas-p3": {
+        "contentHash": "ae11b9e2ca0d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-pools-h2": {
+        "contentHash": "e520102d3cd3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-pools-pill-1": {
+        "contentHash": "c5f64eac5a77",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-pools-pill-2": {
+        "contentHash": "09e9e432beae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-pools-pill-3": {
+        "contentHash": "18c9486cdd9e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-pools-pill-4": {
+        "contentHash": "76327dec9ae3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-pools-p1": {
+        "contentHash": "dc034d03f126",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-pools-p2": {
+        "contentHash": "348bb3efe6aa",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "3d7e4f9ae086",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-staking-hierarchy-pools-p3": {
+        "contentHash": "d2e00935af17",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "2b9067e8e74d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-staking-hierarchy-pools-p4": {
+        "contentHash": "31f280a694bf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-cex-h2": {
+        "contentHash": "df77428663f3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-cex-pill-1": {
+        "contentHash": "c3b81123201e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-cex-pill-2": {
+        "contentHash": "3d6307790743",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-cex-p1": {
+        "contentHash": "1b2143488db1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-cex-p2": {
+        "contentHash": "9572e90c2483",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-hierarchy-cex-p3": {
+        "contentHash": "ea46b853d564",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "25b94832dadb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-staking-hierarchy-subtext": {
+        "contentHash": "2520f956628f",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "5976d3a79740",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-staking-comparison-solo-saas": {
+        "contentHash": "62d454d96ae6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-comparison-solo-pools": {
+        "contentHash": "ab57d80da371",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-comparison-saas-solo": {
+        "contentHash": "92a1b2775898",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-comparison-saas-pools": {
+        "contentHash": "39488ed6be44",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-comparison-pools-solo": {
+        "contentHash": "80b1b573fc2e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-comparison-pools-saas": {
+        "contentHash": "d04fbe7d4e83",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-dropdown-text": {
+        "contentHash": "557cd15bdd55",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-dropdown-aria-label": {
+        "contentHash": "07dc73483611",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-1-title": {
+        "contentHash": "67a0d2e0dab4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-1-description": {
+        "contentHash": "b68784ed6672",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-1-warning": {
+        "contentHash": "bf6b7ec91461",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-2-title": {
+        "contentHash": "295f5bbed1e0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-2-description": {
+        "contentHash": "c495c7f03aaa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-2-warning": {
+        "contentHash": "dc937b598926",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-3-title": {
+        "contentHash": "a1e0e1c4c290",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-3-description": {
+        "contentHash": "3902f9fd99d3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-3-valid": {
+        "contentHash": "01e3fecd5bfb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-3-caution": {
+        "contentHash": "22a970d2e5b1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-4-title": {
+        "contentHash": "32e4d9eecd42",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-4-description": {
+        "contentHash": "27543bf901ee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-4-valid": {
+        "contentHash": "e43d45e748f4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-4-caution": {
+        "contentHash": "067e4f1aa7d3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-4-warning": {
+        "contentHash": "88789d6e8545",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-5-title": {
+        "contentHash": "62b1e3a23920",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-5-description": {
+        "contentHash": "1ed92852d60c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-5-warning": {
+        "contentHash": "639538c63bb5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-6-title": {
+        "contentHash": "cbc68abde686",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-6-description": {
+        "contentHash": "7c5d5a2cedfb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-6-valid": {
+        "contentHash": "201c89b2999b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-6-warning": {
+        "contentHash": "dbb6cf817820",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-7-title": {
+        "contentHash": "2347789eda41",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-7-description": {
+        "contentHash": "fc16fff1b4a1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-7-valid": {
+        "contentHash": "afc25470f2ef",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-7-warning": {
+        "contentHash": "b2c216aa7326",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-8-title": {
+        "contentHash": "c74f60ca7f64",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-8-description": {
+        "contentHash": "bf9ddf14cd4d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-8-warning": {
+        "contentHash": "256251036b8f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-9-title": {
+        "contentHash": "9bdb2a16884b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-9-description": {
+        "contentHash": "c988d6f0481b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-9-valid": {
+        "contentHash": "fa17656dc633",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-solo-9-warning": {
+        "contentHash": "9be9cdc116c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-saas-4-description": {
+        "contentHash": "8a60b6b6a30f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-saas-6-description": {
+        "contentHash": "4fdfb1ce9669",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-saas-6-valid": {
+        "contentHash": "ba602423695a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-saas-6-warning": {
+        "contentHash": "dbb6cf817820",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-saas-7-title": {
+        "contentHash": "187b1ffaf6a7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-saas-7-description": {
+        "contentHash": "fca00566ecdb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-saas-7-valid": {
+        "contentHash": "ebef845a5484",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-saas-7-caution": {
+        "contentHash": "97c505a3eeb1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-saas-7-warning": {
+        "contentHash": "33a2aac9354b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-saas-8-title": {
+        "contentHash": "af6ae9c02565",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-saas-8-description": {
+        "contentHash": "4470151c421c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-saas-8-valid": {
+        "contentHash": "ebef845a5484",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-saas-8-caution": {
+        "contentHash": "97c505a3eeb1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-saas-8-warning": {
+        "contentHash": "33a2aac9354b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-pools-5-description": {
+        "contentHash": "377db9305fea",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-pools-6-title": {
+        "contentHash": "7993b95a3a5d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-pools-6-description": {
+        "contentHash": "ce342d058cf6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-pools-7-description": {
+        "contentHash": "fca00566ecdb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-pools-8-title": {
+        "contentHash": "aaf6b3c96f0b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-pools-8-description": {
+        "contentHash": "191f445af7d9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-pools-8-valid": {
+        "contentHash": "7e8260818a00",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-pools-8-warning": {
+        "contentHash": "7d7daa9c33ee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-considerations-pools-9-description": {
+        "contentHash": "4470151c421c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-how-solo-works-item-1": {
+        "contentHash": "bd18a3265af3",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "3ed3440a511f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-staking-how-solo-works-item-2": {
+        "contentHash": "505f1b8a615e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-how-solo-works-item-3": {
+        "contentHash": "1813fca6b7cb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-how-solo-works-item-4": {
+        "contentHash": "746805d94737",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-how-solo-works-item-5": {
+        "contentHash": "b6d322608b30",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-how-solo-works-item-6": {
+        "contentHash": "91cd9784a2a7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-launchpad-widget-mainnet-label": {
+        "contentHash": "23b4803f3d70",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-launchpad-widget-start": {
+        "contentHash": "c29d07198185",
+        "anchorHash": "13ef50cf0f4f",
+        "children": {
+          "prose:1": {
+            "contentHash": "ecab04607d08",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "20d60a940d71"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      },
+      "page-staking-launchpad-widget-span": {
+        "contentHash": "0a4a2fdf9be7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-launchpad-widget-p1": {
+        "contentHash": "edcb31000b64",
+        "anchorHash": "7c99629937df",
+        "children": {
+          "prose:1": {
+            "contentHash": "8c69cb41f8d7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "20d60a940d71"
+          },
+          "prose:2": {
+            "contentHash": "5fa6d1b630ab",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0",
+          "prose:2"
+        ]
+      },
+      "page-staking-launchpad-widget-p2": {
+        "contentHash": "306773fc6cbc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-launchpad-widget-p3": {
+        "contentHash": "c2e1c745e673",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-launchpad-widget-link": {
+        "contentHash": "50dbc177faa5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-products-get-started": {
+        "contentHash": "61e8d44ad423",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-products-follow": {
+        "contentHash": "ca887533cd3a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-dropdown-staking-options": {
+        "contentHash": "cd9efeff5b00",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-dropdown-staking-options-alt": {
+        "contentHash": "f3faf253852b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-stats-box-metric-1": {
+        "contentHash": "bd0646386278",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-stats-box-metric-2": {
+        "contentHash": "69e0c740b01b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-stats-box-metric-3": {
+        "contentHash": "8d8ad05db6ea",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-stats-box-metric-1-tooltip": {
+        "contentHash": "eb665c5ab395",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-stats-box-metric-2-tooltip": {
+        "contentHash": "506cc3ab31a0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-stats-box-metric-3-tooltip": {
+        "contentHash": "7bfb3fda8b81",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-comparison-subtitle": {
+        "contentHash": "d3a40c55a62e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-comparison-rewards-title": {
+        "contentHash": "59afe47d9d37",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-comparison-solo-rewards-li1": {
+        "contentHash": "08afdfc216fd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-comparison-solo-rewards-li2": {
+        "contentHash": "3d4c5a7de80c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-comparison-solo-rewards-li3": {
+        "contentHash": "6d992a5d34fe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-comparison-saas-rewards-li1": {
+        "contentHash": "e9c4a2d08687",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-comparison-saas-rewards-li2": {
+        "contentHash": "2dc8699a311b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-comparison-pools-rewards-li1": {
+        "contentHash": "7319b39e68ae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-comparison-pools-rewards-li2": {
+        "contentHash": "14c7d4c2cdaf",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "153ca08d916c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-staking-section-comparison-pools-rewards-li3": {
+        "contentHash": "efa1c8c36198",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "dcf086d9c4bb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-staking-section-comparison-risks-title": {
+        "contentHash": "bb685708eae6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-comparison-solo-risks-li1": {
+        "contentHash": "85a273fd3b01",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-comparison-solo-risks-li2": {
+        "contentHash": "bf08d5e8e66f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-comparison-solo-risks-li3": {
+        "contentHash": "85a348212688",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-comparison-solo-risks-li4": {
+        "contentHash": "44f87188b3fe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-comparison-saas-risks-li1": {
+        "contentHash": "761b55ba8e75",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-comparison-saas-risks-li2": {
+        "contentHash": "97475aedef38",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-comparison-pools-risks-li2": {
+        "contentHash": "e00806a58da3",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "e90642503f28",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-staking-section-comparison-requirements-title": {
+        "contentHash": "e0cdd07f6a27",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-comparison-solo-requirements-li2": {
+        "contentHash": "21ec96a051cf",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "cc79eed85ca5",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-staking-section-comparison-solo-requirements-li3": {
+        "contentHash": "d0e2e73462bb",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "717111cd4cdc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-staking-section-comparison-saas-requirements-li1": {
+        "contentHash": "ab2872f51965",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-comparison-saas-requirements-li2": {
+        "contentHash": "0cb3f6990281",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-comparison-saas-requirements-li3": {
+        "contentHash": "53488df24c4c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-comparison-pools-requirements-li1": {
+        "contentHash": "c8a8a0f89806",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-section-comparison-pools-requirements-li2": {
+        "contentHash": "aad3d21f20c0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-title": {
+        "contentHash": "8abd047cc0db",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-description": {
+        "contentHash": "87d262fe7dac",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-col-approach": {
+        "contentHash": "b6b243caef1e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-col-your-keys": {
+        "contentHash": "51d5b3dd97dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-col-your-hardware": {
+        "contentHash": "1f29a9ca2b69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-col-middleware": {
+        "contentHash": "a6d5dfd8bea1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-col-who-pays": {
+        "contentHash": "b2440d5c1dfb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-col-minimum-eth": {
+        "contentHash": "e4296e4b585a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-bonded-title": {
+        "contentHash": "7ab7827d768c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-home-keys": {
+        "contentHash": "a14128e61f4a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-home-hardware": {
+        "contentHash": "007b5c1674f8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-home-middleware": {
+        "contentHash": "bcb6d06fe3a7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-home-who-pays": {
+        "contentHash": "374b1ab21a31",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-home-minimum-eth": {
+        "contentHash": "3ece9be733bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-bonded-keys": {
+        "contentHash": "c8c96ad0ad1f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-bonded-hardware": {
+        "contentHash": "007b5c1674f8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-bonded-middleware": {
+        "contentHash": "6bbe0f6a86dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-bonded-who-pays": {
+        "contentHash": "b84b09213ade",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-bonded-minimum-eth": {
+        "contentHash": "de34fd744c6f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-delegated-keys": {
+        "contentHash": "79f70cf1f482",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-delegated-hardware": {
+        "contentHash": "60d19206843a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-delegated-middleware": {
+        "contentHash": "12ac60d628f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-delegated-who-pays": {
+        "contentHash": "28534a3dfd5b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-delegated-minimum-eth": {
+        "contentHash": "9be9cdc116c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-pools-keys": {
+        "contentHash": "eb36821d6c73",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-pools-hardware": {
+        "contentHash": "6aa9bb8ec598",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-pools-middleware": {
+        "contentHash": "2f27201c63ec",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-pools-who-pays": {
+        "contentHash": "bcbb260f3029",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-pools-minimum-eth": {
+        "contentHash": "77e4f5b69520",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-cex-keys": {
+        "contentHash": "fb62d908111b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-cex-hardware": {
+        "contentHash": "c53c07e24485",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-cex-middleware": {
+        "contentHash": "d48524121078",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-cex-who-pays": {
+        "contentHash": "02ea042e02b7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-cex-minimum-eth": {
+        "contentHash": "07fb570daac3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-glance-restaking": {
+        "contentHash": "542b2db6ff7d",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "14afb3e19d65",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-staking-faq-title": {
+        "contentHash": "e956a9404b46",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-faq-1-question": {
+        "contentHash": "b645b90006ce",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-faq-1-answer": {
+        "contentHash": "e1eef7756293",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "e06b9eb62ddd",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-staking-faq-2-question": {
+        "contentHash": "0ecf0ddd993b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-faq-2-answer": {
+        "contentHash": "db37e8ac50aa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-faq-3-question": {
+        "contentHash": "4ca8ddc44346",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-faq-3-answer-p1": {
+        "contentHash": "5cbc19352308",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-faq-3-answer-p2": {
+        "contentHash": "f21695f8fc62",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "75f6b7413b3c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-staking-faq-4-question": {
+        "contentHash": "c9a14db6167d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-faq-4-answer-p1": {
+        "contentHash": "76251217dbe9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-faq-4-answer-p2": {
+        "contentHash": "43f1dc17beb3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-faq-4-answer-p3": {
+        "contentHash": "27739b15bbd7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-faq-5-question": {
+        "contentHash": "0d1d5bb4db9c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-faq-5-answer-p1": {
+        "contentHash": "aa45f3b01457",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-faq-5-answer-p2": {
+        "contentHash": "66b2e6bb41e0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-faq-5-answer-link": {
+        "contentHash": "3a1fb0864f52",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-faq-6-question": {
+        "contentHash": "9491864083d0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-faq-6-answer-p1": {
+        "contentHash": "e18a828660f5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-faq-6-answer-p2": {
+        "contentHash": "ea4d029e8f94",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-faq-7-question": {
+        "contentHash": "33e10f2ec946",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-faq-7-answer-p1": {
+        "contentHash": "a174facbdccf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-faq-7-answer-p2": {
+        "contentHash": "98043b64720b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-faq-8-question": {
+        "contentHash": "4f3615c40052",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-faq-8-answer-p1": {
+        "contentHash": "814eaf4693eb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-faq-8-answer-link": {
+        "contentHash": "99ec36e9c497",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-further-reading-author-vitalik-buterin": {
+        "contentHash": "48b4f92b82f3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-further-reading-1-link": {
+        "contentHash": "de2b034fe93a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-further-reading-2-link": {
+        "contentHash": "a6f218c62764",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-further-reading-4-link": {
+        "contentHash": "72327c09754c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-further-reading-4-author": {
+        "contentHash": "a60e9bafb74d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-further-reading-6-link": {
+        "contentHash": "515984c99703",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-further-reading-8-link": {
+        "contentHash": "96c59f2e7f65",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-further-reading-9-link": {
+        "contentHash": "84628ee9c1ed",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-further-reading-10-link": {
+        "contentHash": "d75abfd33f0c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-toc-how-to-stake-your-eth": {
+        "contentHash": "94f52fd42adc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-toc-comparison-of-options": {
+        "contentHash": "cc5c1af5254e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-toc-further": {
+        "contentHash": "4082f515b2f4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-dom-info-title": {
+        "contentHash": "90fda4b2daa6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-join-community": {
+        "contentHash": "bd809bf0015a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-join-community-desc": {
+        "contentHash": "bdb6a43927e5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-meta-description": {
+        "contentHash": "1c241b5e77f1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-meta-title": {
+        "contentHash": "d3f3fd19ffe9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-withdrawals-important-notices": {
+        "contentHash": "e49d84cc75e8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-withdrawals-important-notices-desc": {
+        "contentHash": "b872052c228b",
+        "anchorHash": "6a54041958d7",
+        "children": {
+          "prose:1": {
+            "contentHash": "f9150ac22faa",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "13f07b7bc547",
+            "anchorHash": "60d1a40eaf98"
+          },
+          "prose:2": {
+            "contentHash": "0895e3ea3d20",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0",
+          "prose:2"
+        ]
+      },
+      "page-upgrades-merge-btn": {
+        "contentHash": "45d5bc5b7135",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subscribe-to-ef-blog": {
+        "contentHash": "714b6e10f02f",
+        "anchorHash": "d122ecf66343",
+        "children": {
+          "html-tag:0": {
+            "contentHash": "1eedcbae84fd",
+            "anchorHash": "6c7846f0337f"
+          },
+          "prose:1": {
+            "contentHash": "dd79fd7dd2c8",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "html-tag:0",
+          "prose:1"
+        ]
+      },
+      "page-staking-any-amount": {
+        "contentHash": "2f897a0163c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-network-testnet": {
+        "contentHash": "070aacf5692f",
+        "anchorHash": "b186776e3894",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "20d60a940d71"
+          },
+          "prose:1": {
+            "contentHash": "9afbce9f2416",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:1"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "comp-withdrawal-comparison-current-title",
+      "comp-withdrawal-comparison-current-li-1",
+      "comp-withdrawal-comparison-current-li-2",
+      "comp-withdrawal-comparison-current-p",
+      "comp-withdrawal-comparison-new-title",
+      "comp-withdrawal-comparison-new-li-1",
+      "comp-withdrawal-comparison-new-li-2",
+      "comp-withdrawal-comparison-new-p",
+      "comp-withdrawal-comparison-new-link",
+      "comp-withdrawal-credentials-placeholder",
+      "comp-withdrawal-credentials-verify",
+      "page-staking-withdrawals-when",
+      "page-staking-image-alt",
+      "page-staking-benefits-1-title",
+      "page-staking-benefits-1-description",
+      "page-staking-benefits-2-title",
+      "page-staking-benefits-2-description",
+      "page-staking-benefits-3-title",
+      "page-staking-benefits-3-description",
+      "page-staking-benefits-3-link",
+      "page-staking-hero-title",
+      "page-staking-hero-header",
+      "page-staking-hero-subtitle",
+      "page-staking-dropdown-home",
+      "page-staking-dropdown-solo",
+      "page-staking-more-on-solo",
+      "page-staking-learn-more-solo",
+      "page-staking-dropdown-saas",
+      "page-staking-saas-with-abbrev",
+      "page-staking-more-on-saas",
+      "page-staking-learn-more-saas",
+      "page-staking-dropdown-pools",
+      "page-staking-dropdown-withdrawals",
+      "page-staking-dropdown-dvt",
+      "page-staking-more-on-pools",
+      "page-staking-more-on-cex",
+      "page-staking-learn-more-pools",
+      "page-staking-section-what-title",
+      "page-staking-section-what-p1",
+      "page-staking-section-what-p2",
+      "page-staking-section-what-p3",
+      "page-staking-section-why-title",
+      "page-staking-section-how-to-p1",
+      "page-staking-section-how-to-p2",
+      "page-staking-guide-title-coincashew-ethereum",
+      "page-staking-guide-title-somer-esat",
+      "page-staking-guide-title-rocket-pool",
+      "page-staking-guide-title-stakewise",
+      "page-staking-guide-title-lido-csm",
+      "page-staking-guide-description-linux",
+      "page-staking-guide-description-mac-linux",
+      "page-staking-guide-description-mac-linux-windows",
+      "page-staking-hierarchy-solo-h2",
+      "page-staking-hierarchy-solo-pill-1",
+      "page-staking-hierarchy-solo-pill-2",
+      "page-staking-hierarchy-solo-pill-3",
+      "page-staking-hierarchy-solo-pill-4",
+      "page-staking-hierarchy-solo-p1",
+      "page-staking-hierarchy-solo-p2",
+      "page-staking-hierarchy-solo-p3",
+      "page-staking-hierarchy-saas-h2",
+      "page-staking-hierarchy-saas-pill-1",
+      "page-staking-hierarchy-saas-pill-2",
+      "page-staking-hierarchy-saas-pill-3",
+      "page-staking-hierarchy-saas-p1",
+      "page-staking-hierarchy-saas-p2",
+      "page-staking-hierarchy-saas-p3",
+      "page-staking-hierarchy-pools-h2",
+      "page-staking-hierarchy-pools-pill-1",
+      "page-staking-hierarchy-pools-pill-2",
+      "page-staking-hierarchy-pools-pill-3",
+      "page-staking-hierarchy-pools-pill-4",
+      "page-staking-hierarchy-pools-p1",
+      "page-staking-hierarchy-pools-p2",
+      "page-staking-hierarchy-pools-p3",
+      "page-staking-hierarchy-pools-p4",
+      "page-staking-hierarchy-cex-h2",
+      "page-staking-hierarchy-cex-pill-1",
+      "page-staking-hierarchy-cex-pill-2",
+      "page-staking-hierarchy-cex-p1",
+      "page-staking-hierarchy-cex-p2",
+      "page-staking-hierarchy-cex-p3",
+      "page-staking-hierarchy-subtext",
+      "page-staking-comparison-solo-saas",
+      "page-staking-comparison-solo-pools",
+      "page-staking-comparison-saas-solo",
+      "page-staking-comparison-saas-pools",
+      "page-staking-comparison-pools-solo",
+      "page-staking-comparison-pools-saas",
+      "page-staking-considerations-dropdown-text",
+      "page-staking-considerations-dropdown-aria-label",
+      "page-staking-considerations-solo-1-title",
+      "page-staking-considerations-solo-1-description",
+      "page-staking-considerations-solo-1-warning",
+      "page-staking-considerations-solo-2-title",
+      "page-staking-considerations-solo-2-description",
+      "page-staking-considerations-solo-2-warning",
+      "page-staking-considerations-solo-3-title",
+      "page-staking-considerations-solo-3-description",
+      "page-staking-considerations-solo-3-valid",
+      "page-staking-considerations-solo-3-caution",
+      "page-staking-considerations-solo-4-title",
+      "page-staking-considerations-solo-4-description",
+      "page-staking-considerations-solo-4-valid",
+      "page-staking-considerations-solo-4-caution",
+      "page-staking-considerations-solo-4-warning",
+      "page-staking-considerations-solo-5-title",
+      "page-staking-considerations-solo-5-description",
+      "page-staking-considerations-solo-5-warning",
+      "page-staking-considerations-solo-6-title",
+      "page-staking-considerations-solo-6-description",
+      "page-staking-considerations-solo-6-valid",
+      "page-staking-considerations-solo-6-warning",
+      "page-staking-considerations-solo-7-title",
+      "page-staking-considerations-solo-7-description",
+      "page-staking-considerations-solo-7-valid",
+      "page-staking-considerations-solo-7-warning",
+      "page-staking-considerations-solo-8-title",
+      "page-staking-considerations-solo-8-description",
+      "page-staking-considerations-solo-8-warning",
+      "page-staking-considerations-solo-9-title",
+      "page-staking-considerations-solo-9-description",
+      "page-staking-considerations-solo-9-valid",
+      "page-staking-considerations-solo-9-warning",
+      "page-staking-considerations-saas-4-description",
+      "page-staking-considerations-saas-6-description",
+      "page-staking-considerations-saas-6-valid",
+      "page-staking-considerations-saas-6-warning",
+      "page-staking-considerations-saas-7-title",
+      "page-staking-considerations-saas-7-description",
+      "page-staking-considerations-saas-7-valid",
+      "page-staking-considerations-saas-7-caution",
+      "page-staking-considerations-saas-7-warning",
+      "page-staking-considerations-saas-8-title",
+      "page-staking-considerations-saas-8-description",
+      "page-staking-considerations-saas-8-valid",
+      "page-staking-considerations-saas-8-caution",
+      "page-staking-considerations-saas-8-warning",
+      "page-staking-considerations-pools-5-description",
+      "page-staking-considerations-pools-6-title",
+      "page-staking-considerations-pools-6-description",
+      "page-staking-considerations-pools-7-description",
+      "page-staking-considerations-pools-8-title",
+      "page-staking-considerations-pools-8-description",
+      "page-staking-considerations-pools-8-valid",
+      "page-staking-considerations-pools-8-warning",
+      "page-staking-considerations-pools-9-description",
+      "page-staking-how-solo-works-item-1",
+      "page-staking-how-solo-works-item-2",
+      "page-staking-how-solo-works-item-3",
+      "page-staking-how-solo-works-item-4",
+      "page-staking-how-solo-works-item-5",
+      "page-staking-how-solo-works-item-6",
+      "page-staking-launchpad-widget-mainnet-label",
+      "page-staking-launchpad-widget-start",
+      "page-staking-launchpad-widget-span",
+      "page-staking-launchpad-widget-p1",
+      "page-staking-launchpad-widget-p2",
+      "page-staking-launchpad-widget-p3",
+      "page-staking-launchpad-widget-link",
+      "page-staking-products-get-started",
+      "page-staking-products-follow",
+      "page-staking-dropdown-staking-options",
+      "page-staking-dropdown-staking-options-alt",
+      "page-staking-stats-box-metric-1",
+      "page-staking-stats-box-metric-2",
+      "page-staking-stats-box-metric-3",
+      "page-staking-stats-box-metric-1-tooltip",
+      "page-staking-stats-box-metric-2-tooltip",
+      "page-staking-stats-box-metric-3-tooltip",
+      "page-staking-section-comparison-subtitle",
+      "page-staking-section-comparison-rewards-title",
+      "page-staking-section-comparison-solo-rewards-li1",
+      "page-staking-section-comparison-solo-rewards-li2",
+      "page-staking-section-comparison-solo-rewards-li3",
+      "page-staking-section-comparison-saas-rewards-li1",
+      "page-staking-section-comparison-saas-rewards-li2",
+      "page-staking-section-comparison-pools-rewards-li1",
+      "page-staking-section-comparison-pools-rewards-li2",
+      "page-staking-section-comparison-pools-rewards-li3",
+      "page-staking-section-comparison-risks-title",
+      "page-staking-section-comparison-solo-risks-li1",
+      "page-staking-section-comparison-solo-risks-li2",
+      "page-staking-section-comparison-solo-risks-li3",
+      "page-staking-section-comparison-solo-risks-li4",
+      "page-staking-section-comparison-saas-risks-li1",
+      "page-staking-section-comparison-saas-risks-li2",
+      "page-staking-section-comparison-pools-risks-li2",
+      "page-staking-section-comparison-requirements-title",
+      "page-staking-section-comparison-solo-requirements-li2",
+      "page-staking-section-comparison-solo-requirements-li3",
+      "page-staking-section-comparison-saas-requirements-li1",
+      "page-staking-section-comparison-saas-requirements-li2",
+      "page-staking-section-comparison-saas-requirements-li3",
+      "page-staking-section-comparison-pools-requirements-li1",
+      "page-staking-section-comparison-pools-requirements-li2",
+      "page-staking-glance-title",
+      "page-staking-glance-description",
+      "page-staking-glance-col-approach",
+      "page-staking-glance-col-your-keys",
+      "page-staking-glance-col-your-hardware",
+      "page-staking-glance-col-middleware",
+      "page-staking-glance-col-who-pays",
+      "page-staking-glance-col-minimum-eth",
+      "page-staking-glance-bonded-title",
+      "page-staking-glance-home-keys",
+      "page-staking-glance-home-hardware",
+      "page-staking-glance-home-middleware",
+      "page-staking-glance-home-who-pays",
+      "page-staking-glance-home-minimum-eth",
+      "page-staking-glance-bonded-keys",
+      "page-staking-glance-bonded-hardware",
+      "page-staking-glance-bonded-middleware",
+      "page-staking-glance-bonded-who-pays",
+      "page-staking-glance-bonded-minimum-eth",
+      "page-staking-glance-delegated-keys",
+      "page-staking-glance-delegated-hardware",
+      "page-staking-glance-delegated-middleware",
+      "page-staking-glance-delegated-who-pays",
+      "page-staking-glance-delegated-minimum-eth",
+      "page-staking-glance-pools-keys",
+      "page-staking-glance-pools-hardware",
+      "page-staking-glance-pools-middleware",
+      "page-staking-glance-pools-who-pays",
+      "page-staking-glance-pools-minimum-eth",
+      "page-staking-glance-cex-keys",
+      "page-staking-glance-cex-hardware",
+      "page-staking-glance-cex-middleware",
+      "page-staking-glance-cex-who-pays",
+      "page-staking-glance-cex-minimum-eth",
+      "page-staking-glance-restaking",
+      "page-staking-faq-title",
+      "page-staking-faq-1-question",
+      "page-staking-faq-1-answer",
+      "page-staking-faq-2-question",
+      "page-staking-faq-2-answer",
+      "page-staking-faq-3-question",
+      "page-staking-faq-3-answer-p1",
+      "page-staking-faq-3-answer-p2",
+      "page-staking-faq-4-question",
+      "page-staking-faq-4-answer-p1",
+      "page-staking-faq-4-answer-p2",
+      "page-staking-faq-4-answer-p3",
+      "page-staking-faq-5-question",
+      "page-staking-faq-5-answer-p1",
+      "page-staking-faq-5-answer-p2",
+      "page-staking-faq-5-answer-link",
+      "page-staking-faq-6-question",
+      "page-staking-faq-6-answer-p1",
+      "page-staking-faq-6-answer-p2",
+      "page-staking-faq-7-question",
+      "page-staking-faq-7-answer-p1",
+      "page-staking-faq-7-answer-p2",
+      "page-staking-faq-8-question",
+      "page-staking-faq-8-answer-p1",
+      "page-staking-faq-8-answer-link",
+      "page-staking-further-reading-author-vitalik-buterin",
+      "page-staking-further-reading-1-link",
+      "page-staking-further-reading-2-link",
+      "page-staking-further-reading-4-link",
+      "page-staking-further-reading-4-author",
+      "page-staking-further-reading-6-link",
+      "page-staking-further-reading-8-link",
+      "page-staking-further-reading-9-link",
+      "page-staking-further-reading-10-link",
+      "page-staking-toc-how-to-stake-your-eth",
+      "page-staking-toc-comparison-of-options",
+      "page-staking-toc-further",
+      "page-staking-dom-info-title",
+      "page-staking-join-community",
+      "page-staking-join-community-desc",
+      "page-staking-meta-description",
+      "page-staking-meta-title",
+      "page-staking-withdrawals-important-notices",
+      "page-staking-withdrawals-important-notices-desc",
+      "page-upgrades-merge-btn",
+      "subscribe-to-ef-blog",
+      "page-staking-any-amount",
+      "page-staking-network-testnet"
+    ]
+  },
+  "sourceCommitSha": "2641eb7bbb8dcc9aad93a92fe6aaaf7639e40152"
+}

@@ -4,7 +4,7 @@ description: Pelajari cara mengimplementasikan standar token ERC-20 dengan conto
 author: "jdourlens"
 tags: ["kontrak pintar", "token", "Solidity", "erc-20"]
 skill: beginner
-breadcrumb: "Dasar token ERC-20"
+breadcrumb: Dasar-dasar token ERC-20
 lang: id
 published: 2020-04-05
 source: EthereumDev
@@ -12,11 +12,11 @@ sourceUrl: https://ethereumdev.io/understand-the-erc20-token-smart-contract/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Salah satu [standar kontrak pintar](/developers/docs/standards/) paling signifikan di Ethereum dikenal sebagai [ERC-20](/developers/docs/standards/tokens/erc-20/), yang telah muncul sebagai standar teknis yang digunakan untuk semua kontrak pintar di blockchain Ethereum untuk implementasi token yang sepadan (fungible).
+Salah satu [standar kontrak pintar](/developers/docs/standards/) paling signifikan di Ethereum dikenal sebagai [ERC-20](/developers/docs/standards/tokens/erc-20/), yang telah muncul sebagai standar teknis yang digunakan untuk semua kontrak pintar di rantai blok Ethereum untuk implementasi token sepadan.
 
-ERC-20 mendefinisikan daftar aturan umum yang harus dipatuhi oleh semua token Ethereum yang sepadan. Akibatnya, standar token ini memberdayakan semua jenis pengembang untuk memprediksi secara akurat bagaimana token baru akan berfungsi di dalam sistem Ethereum yang lebih besar. Hal ini menyederhanakan dan memudahkan tugas pengembang, karena mereka dapat melanjutkan pekerjaan mereka, dengan mengetahui bahwa setiap proyek baru tidak perlu dikerjakan ulang setiap kali token baru dirilis, selama token tersebut mengikuti aturan.
+ERC-20 mendefinisikan daftar aturan umum yang harus dipatuhi oleh semua token sepadan Ethereum. Akibatnya, standar token ini memberdayakan semua jenis pengembang untuk memprediksi secara akurat bagaimana token baru akan berfungsi di dalam sistem Ethereum yang lebih besar. Hal ini menyederhanakan dan memudahkan tugas pengembang, karena mereka dapat melanjutkan pekerjaan mereka, dengan mengetahui bahwa setiap proyek baru tidak perlu dikerjakan ulang setiap kali token baru dirilis, selama token tersebut mengikuti aturan.
 
-Berikut ini, disajikan sebagai antarmuka (interface), fungsi-fungsi yang harus diimplementasikan oleh ERC-20. Jika Anda tidak yakin tentang apa itu antarmuka: periksa artikel kami tentang [pemrograman OOP di Solidity](https://ethereumdev.io/inheritance-in-solidity-contracts-are-classes/).
+Berikut ini, disajikan sebagai antarmuka, fungsi-fungsi yang harus diimplementasikan oleh ERC-20. Jika Anda tidak yakin tentang apa itu antarmuka: periksa artikel kami tentang [pemrograman OOP di Solidity](https://ethereumdev.io/inheritance-in-solidity-contracts-are-classes/).
 
 ```solidity
 pragma solidity ^0.6.0;
@@ -37,7 +37,7 @@ interface IERC20 {
 }
 ```
 
-Berikut adalah penjelasan baris demi baris tentang fungsi dari setiap fungsi tersebut. Setelah ini kami akan menyajikan implementasi sederhana dari token ERC-20.
+Berikut adalah penjelasan baris demi baris tentang kegunaan setiap fungsi. Setelah ini kami akan menyajikan implementasi sederhana dari token ERC-20.
 
 ## Getter {#getters}
 
@@ -45,19 +45,19 @@ Berikut adalah penjelasan baris demi baris tentang fungsi dari setiap fungsi ter
 function totalSupply() external view returns (uint256);
 ```
 
-Mengembalikan jumlah token yang ada. Fungsi ini adalah sebuah getter dan tidak memodifikasi status kontrak. Perlu diingat bahwa tidak ada tipe data float di Solidity. Oleh karena itu, sebagian besar token mengadopsi 18 desimal dan akan mengembalikan total pasokan dan hasil lainnya sebagai berikut 1000000000000000000 untuk 1 token. Tidak setiap token memiliki 18 desimal dan ini adalah sesuatu yang benar-benar perlu Anda perhatikan ketika berurusan dengan token.
+Mengembalikan jumlah token yang ada. Fungsi ini adalah sebuah getter dan tidak memodifikasi state dari kontrak. Perlu diingat bahwa tidak ada float di Solidity. Oleh karena itu sebagian besar token mengadopsi 18 desimal dan akan mengembalikan total pasokan dan hasil lainnya sebagai berikut 1000000000000000000 untuk 1 token. Tidak setiap token memiliki 18 desimal dan ini adalah sesuatu yang benar-benar perlu Anda perhatikan saat berurusan dengan token.
 
 ```solidity
 function balanceOf(address account) external view returns (uint256);
 ```
 
-Mengembalikan jumlah token yang dimiliki oleh sebuah alamat (`account`). Fungsi ini adalah sebuah getter dan tidak memodifikasi status kontrak.
+Mengembalikan jumlah token yang dimiliki oleh sebuah alamat (`account`). Fungsi ini adalah sebuah getter dan tidak memodifikasi state dari kontrak.
 
 ```solidity
 function allowance(address owner, address spender) external view returns (uint256);
 ```
 
-Standar ERC-20 memungkinkan sebuah alamat untuk memberikan jatah (allowance) kepada alamat lain agar dapat mengambil token darinya. Getter ini mengembalikan sisa jumlah token yang diizinkan untuk dihabiskan oleh `spender` atas nama `owner`. Fungsi ini adalah sebuah getter dan tidak memodifikasi status kontrak dan seharusnya mengembalikan nilai 0 secara bawaan.
+Standar ERC-20 memungkinkan sebuah alamat untuk memberikan jatah kepada alamat lain agar dapat mengambil token darinya. Getter ini mengembalikan sisa jumlah token yang diizinkan untuk dihabiskan oleh `spender` atas nama `owner`. Fungsi ini adalah sebuah getter dan tidak memodifikasi state dari kontrak dan seharusnya mengembalikan 0 secara bawaan.
 
 ## Fungsi {#functions}
 
@@ -65,35 +65,35 @@ Standar ERC-20 memungkinkan sebuah alamat untuk memberikan jatah (allowance) kep
 function transfer(address recipient, uint256 amount) external returns (bool);
 ```
 
-Memindahkan sejumlah `amount` token dari alamat pemanggil fungsi (`msg.sender`) ke alamat penerima. Fungsi ini memancarkan (emit) event `Transfer` yang didefinisikan nanti. Fungsi ini mengembalikan nilai true jika transfer memungkinkan.
+Memindahkan `amount` token dari alamat pemanggil fungsi (`msg.sender`) ke alamat penerima. Fungsi ini memancarkan peristiwa `Transfer` yang didefinisikan nanti. Ini mengembalikan nilai true jika transfer memungkinkan.
 
 ```solidity
 function approve(address spender, uint256 amount) external returns (bool);
 ```
 
-Menetapkan jumlah `allowance` yang diizinkan untuk ditransfer oleh `spender` dari saldo pemanggil fungsi (`msg.sender`). Fungsi ini memancarkan event Approval. Fungsi ini mengembalikan nilai apakah jatah tersebut berhasil ditetapkan.
+Menetapkan jumlah `allowance` yang diizinkan untuk ditransfer oleh `spender` dari saldo pemanggil fungsi (`msg.sender`). Fungsi ini memancarkan peristiwa Approval. Fungsi ini mengembalikan apakah jatah berhasil ditetapkan.
 
 ```solidity
 function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 ```
 
-Memindahkan sejumlah `amount` token dari `sender` ke `recipient` menggunakan mekanisme jatah (allowance). Jumlah tersebut kemudian dikurangi dari jatah pemanggil. Fungsi ini memancarkan event `Transfer`.
+Memindahkan `amount` token dari `sender` ke `recipient` menggunakan mekanisme jatah. amount kemudian dikurangi dari jatah pemanggil. Fungsi ini memancarkan peristiwa `Transfer`.
 
-## Event {#events}
+## Peristiwa {#events}
 
 ```solidity
 event Transfer(address indexed from, address indexed to, uint256 value);
 ```
 
-Event ini dipancarkan ketika sejumlah token (value) dikirim dari alamat `from` ke alamat `to`.
+Peristiwa ini dipancarkan ketika jumlah token (value) dikirim dari alamat `from` ke alamat `to`.
 
-Dalam kasus melakukan mint token baru, transfer biasanya `from` (dari) alamat 0x00..0000 sedangkan dalam kasus membakar token, transfernya adalah `to` (ke) 0x00..0000.
+Dalam kasus pencetakan token baru, transfer biasanya `from` alamat 0x00..0000 sedangkan dalam kasus membakar token, transfernya adalah `to` 0x00..0000.
 
 ```solidity
 event Approval(address indexed owner, address indexed spender, uint256 value);
 ```
 
-Event ini dipancarkan ketika sejumlah token (`value`) disetujui oleh `owner` untuk digunakan oleh `spender`.
+Peristiwa ini dipancarkan ketika jumlah token (`value`) disetujui oleh `owner` untuk digunakan oleh `spender`.
 
 ## Implementasi dasar token ERC-20 {#a-basic-implementation-of-erc-20-tokens}
 
@@ -175,4 +175,4 @@ contract ERC20Basic is IERC20 {
 }
 ```
 
-Implementasi standar token ERC-20 lain yang sangat baik adalah [implementasi ERC-20 OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20).
+Implementasi luar biasa lainnya dari standar token ERC-20 adalah [implementasi ERC-20 OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20).

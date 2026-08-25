@@ -6,13 +6,12 @@ import type { ReactElement, ReactNode } from "react"
 import type { ColumnDef } from "@tanstack/react-table"
 
 import type {
+  BlogFrontmatter,
   DocsFrontmatter,
-  RoadmapFrontmatter,
-  StakingFrontmatter,
   StaticFrontmatter,
+  TopicFrontmatter,
   TutorialFrontmatter,
-  UpgradeFrontmatter,
-  UseCasesFrontmatter,
+  VideoFrontmatter,
 } from "@/lib/interfaces"
 
 import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
@@ -23,11 +22,6 @@ import chains from "@/data/chains"
 import { Rollup, Rollups } from "@/data/networks/networks"
 import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
-
-import {
-  DeveloperToolCategory,
-  DeveloperToolTag,
-} from "../../app/[locale]/developers/tools/types"
 
 import { screens } from "./utils/screen"
 import { WALLETS_FILTERS_DEFAULT } from "./constants"
@@ -63,13 +57,12 @@ export type Params = {
   locale: string
 }
 
-export type Frontmatter = RoadmapFrontmatter &
-  UpgradeFrontmatter &
+export type Frontmatter = TopicFrontmatter &
   StaticFrontmatter &
-  UseCasesFrontmatter &
-  StakingFrontmatter &
   DocsFrontmatter &
-  TutorialFrontmatter
+  TutorialFrontmatter &
+  BlogFrontmatter &
+  VideoFrontmatter
 
 export type LayoutMappingType = typeof layoutMapping
 export type Layout = keyof LayoutMappingType | "docs" | "tutorial"
@@ -305,7 +298,7 @@ export type LocaleContributions = {
 }
 
 export type LocaleDisplayInfo = {
-  localeOption: string
+  localeOption: Lang
   sourceName: string
   targetName: string
   englishName: string
@@ -497,7 +490,7 @@ export type CommonHeroProps<
   /**
    * The primary title of the page
    */
-  title?: string
+  title?: ReactNode
   /**
    * A tag name for the page
    */
@@ -505,7 +498,7 @@ export type CommonHeroProps<
   /**
    * Preface text about the content in the given page
    */
-  description: ReactNode
+  description?: ReactNode
   /**
    * Optional CSS class name(s) to apply to the hero component root for styling and layout customization.
    */
@@ -513,37 +506,15 @@ export type CommonHeroProps<
 }
 
 // Staking stats data fetching
-type Data<T> = {
-  data: T
-}
-
-export type EthStoreResponse = Data<{
-  apr: number
-  day: number
-  effective_balances_sum_wei: number
-}>
-
-export type EthStakedResponse = {
+export type DuneResultResponse = {
   result: {
-    rows?: {
-      cum_deposited_eth: number
-      time: string
-    }[]
+    rows?: Record<string, number | string | null>[]
   }
 }
 
-export type EpochResponse = Data<
-  Record<"eligibleether" | "validatorscount", number>
->
-
-export type BeaconchainEpochData = Record<
-  "totalEthStaked" | "validatorscount",
-  MetricReturnData
->
-
 export type StakingStatsData = {
   totalEthStaked: number
-  validatorscount: number
+  stakedPercentage: number
   apr: number
 }
 
@@ -576,9 +547,67 @@ export type DefiLlamaTVLResponse = {
 
 export type MetricReturnData = ValueOrError<number>
 
-export type StatsBoxState = ValueOrError<string>
+export type EthPriceData =
+  | { value: number; timestamp?: number; percentChange24h?: number }
+  | { error: string }
 
 export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
+
+/**
+ * Full video data parsed from a video's index.md file.
+ * Includes frontmatter metadata and the markdown body (transcript).
+ */
+export type VideoData = {
+  slug: string
+  content: string
+  frontmatter: VideoFrontmatter
+}
+
+export type VideoFormat =
+  | "presentation"
+  | "explainer"
+  | "interview"
+  | "tutorial"
+  | "panel"
+/**
+ * Flat, serializable video data for client components (e.g. VideoGalleryFilter).
+ * thumbnailUrl is pre-resolved server-side from customThumbnailUrl or youtubeId.
+ */
+export type VideoCardData = {
+  slug: string
+  title: string
+  description: string
+  uploadDate: string
+  duration: string
+  topic: string[]
+  thumbnailUrl: string
+}
+
+/**
+ * Blog post data for listing pages and carousels.
+ * Parsed from frontmatter of blog post markdown files.
+ */
+export type BlogPost = {
+  href: string
+  title: string
+  description: string
+  author: string
+  team?: string
+  tags?: string[]
+  timeToRead: number
+  published: string
+  lang: string
+  image?: string
+}
+
+/** Card preview for a long-form story, sourced from its markdown frontmatter. */
+export type StoryPreview = {
+  slug: string
+  title: string
+  description: string
+  image: string
+  published: string
+}
 
 export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
   dailyTxCosts: Record<string, number | undefined>
@@ -618,17 +647,6 @@ export type L2beatData = {
   }
 }
 
-export type HomepageActivityMetric =
-  | "ethPrice" // Use with `totalEthStaked` to convert ETH to USD
-  | "totalEthStaked"
-  | "totalValueLocked"
-  | GrowThePieMetricKey
-
-export type AllHomepageActivityData = Record<
-  HomepageActivityMetric,
-  MetricReturnData
->
-
 export type EnterpriseActivityMetric =
   | "txCount"
   | "txCostsMedianUsd"
@@ -640,14 +658,6 @@ export type AllEnterpriseActivityData = Record<
   EnterpriseActivityMetric,
   MetricReturnData
 >
-
-export type StatsBoxMetric = {
-  label: string
-  description?: string
-  state: StatsBoxState
-  apiUrl?: string
-  apiProvider?: string
-}
 
 export type SimulatorNavProps = {
   nav: SimulatorNav
@@ -743,6 +753,8 @@ export type ChainName = (typeof chains)[number]["name"]
 
 export type NonEVMChainName = "Starknet"
 
+export type AppOnlyChainName = "Immutable zkEVM" | "Ronin"
+
 export type ExtendedRollup = Rollup & {
   networkMaturity: MaturityLevel
   txCosts: number | undefined
@@ -750,7 +762,7 @@ export type ExtendedRollup = Rollup & {
   walletsSupported: string[]
   activeAddresses: number | undefined
   launchDate: string | null
-  walletsSupportedCount: number
+  walletsSupportedCount: string
   blockspaceData: {
     nft: number
     defi: number
@@ -761,9 +773,70 @@ export type ExtendedRollup = Rollup & {
 }
 
 // Wallets
+/** Fee category; maps to the `page-find-wallet-fee-label-*` intl strings */
+export type WalletFeeType =
+  | "swap"
+  | "swap-bridge"
+  | "buy"
+  | "buy-sell"
+  | "staking"
+  | "shield-unshield"
+  | "device"
+  /** One-off: renders the whole "Free tier, paid plans from {usd}/month" template */
+  | "free-tier-plans"
+
+/** Non-numeric fee values; maps to the `page-find-wallet-fee-value-*` intl strings */
+export type WalletFeeText = "variable" | "undisclosed" | "set-by-provider"
+
+/** Wraps the formatted value; maps to the `page-find-wallet-fee-qualifier-*` intl strings */
+export type WalletFeeQualifier =
+  | "of-rewards"
+  | "per-card"
+  | "lower-with-premium"
+  | "tpt-holder-discounts"
+  /** Requires `qualifierPercent` */
+  | "stablecoins"
+  /** Requires `qualifierPercent` */
+  | "stablecoins-lower-l2"
+  /** Requires `qualifierUsd` */
+  | "free-under-fox-discounts"
+
+/** Exact amount, or [min, max] range */
+export type WalletFeeAmount = number | [min: number, max: number]
+
+export type WalletFee = (
+  | {
+      /** Human-readable percent: 0.875 renders as "0.875%" */
+      percent: WalletFeeAmount
+      /** Renders as "from {value}" */
+      from?: boolean
+      usd?: never
+      text?: never
+    }
+  | {
+      usd: WalletFeeAmount
+      /** Renders as "from {value}" */
+      from?: boolean
+      percent?: never
+      text?: never
+    }
+  | { text: WalletFeeText; percent?: never; usd?: never; from?: never }
+) & {
+  type: WalletFeeType
+  qualifier?: WalletFeeQualifier
+  /** Human-readable percent interpolated into the qualifier string */
+  qualifierPercent?: number
+  /** USD amount interpolated into the qualifier string */
+  qualifierUsd?: number
+}
+
 export type WalletData = {
   last_updated: string
   name: string
+  /** Set only to keep a URL stable across a rename; defaults to slugified name. */
+  slug?: string
+  /** Optional forever — cards and search degrade gracefully without it. */
+  description?: string
   image: StaticImageData
   twBackgroundColor: string
   twGradiantBrandColor: string
@@ -803,11 +876,18 @@ export type WalletData = {
   withdraw_crypto: boolean
   multisig: boolean
   social_recovery: boolean
+  eip_4337_support?: boolean
+  eip_7702_support?: boolean
   onboard_documentation: string
   documentation: string
   mpc?: boolean
   new_to_crypto?: boolean
   privacy?: boolean
+  /**
+   * Fees shown on the wallet card, e.g. "Swap fee: 0.85%" or "Device: $149".
+   * Rendered by formatWalletFees; omitted when the wallet has no fee to surface.
+   */
+  fees?: WalletFee[]
 }
 
 export type Wallet = WalletData & {
@@ -840,6 +920,7 @@ type FilterItem = {
   ignoreFilterReset?: boolean
   input: FilterInput
   options: Array<FilterOptionItem>
+  optionsLegend?: string // sr-only legend for the nested fieldset wrapping `options` (when present)
 }
 
 type FilterInput = (
@@ -969,11 +1050,15 @@ export type GHIssue = {
   title: string
   html_url: string
   created_at: string
+  /**
+   * The issue author. GitHub's REST API returns `null` for issues authored by
+   * deleted ("ghost") accounts, so consumers must guard against it.
+   */
   user: {
     login: string
     html_url: string
     avatar_url: string
-  }
+  } | null
   labels: GHLabel[]
 }
 
@@ -994,6 +1079,89 @@ export type RSSItem = {
   sourceFeedUrl: string
   sourceUrl: string
   imgSrc?: string
+  /** Plain-text excerpt extracted from the feed item, truncated for cards. */
+  description?: string
+  /** Publication-wide category assigned via the source config. */
+  category?: string
+}
+
+/**
+ * A single content source for the /latest page. Drives both RSS ingestion
+ * (every entry has a `feed`) and the "Read more on these websites" directory.
+ */
+export type LatestSource = {
+  /** Display name, also used as the per-item `source` label. */
+  name: string
+  /** Public website URL (directory link). */
+  link: string
+  /** RSS/Atom feed URL. Required — feedless sources are not listed. */
+  feed: string
+  /** Publication-wide category applied to every item from this feed. */
+  category: string
+  /**
+   * Path into /public for the directory icon. Optional for now — the
+   * directory falls back to a generic icon when absent (icons are mocked).
+   */
+  icon?: string
+  /**
+   * Optional RSS `<category>` allow-list for sources whose feed mixes unrelated
+   * posts (e.g. Besu inside the wider LF Decentralized Trust feed) — only items
+   * tagged with one of these categories are kept.
+   */
+  categoryFilter?: string[]
+  /**
+   * Optional item-link host rewrite. Some feeds publish links to a dead/old
+   * domain while the live articles sit elsewhere (e.g. Vitalik's feed, served
+   * via the eth.limo ENS gateway, still links to the now-defunct vitalik.ca).
+   * Item links beginning with `from` have that prefix swapped for `to`.
+   */
+  linkReplace?: { from: string; to: string }
+}
+
+/** A hardcoded editorial highlight card. `href` may be internal or external. */
+export type LatestHighlight = {
+  /**
+   * Article href. When it matches an article in the merged /latest stream, the
+   * card's metadata (title, image, date, etc.) is resolved from that article —
+   * so an internal builder highlight needs nothing but its href.
+   */
+  href: string
+  /**
+   * Optional overrides applied on top of the resolved article. They also act as
+   * a standalone fallback for an href that isn't in the stream (e.g. an external
+   * post that has aged out of the RSS window) — a `title` is the minimum needed
+   * to render in that case.
+   */
+  title?: string
+  description?: string
+  image?: string
+  source?: string
+  /** Publication date (ISO `YYYY-MM-DD`), shown in the card footer. */
+  date?: string
+}
+
+/**
+ * Unified article shape for the /latest grid, merged from first-party builder
+ * posts and external RSS items. Optional fields degrade gracefully for RSS.
+ */
+export type LatestArticle = {
+  title: string
+  href: string
+  /** ISO-ish date string used for chronological sorting. */
+  date: string
+  /** "Ethereum.org" for builder posts; the feed name for RSS items. */
+  source: string
+  /** Curated category facet (drives the filter chips). */
+  category: string
+  /** All filterable tags: `[category, ...topicTags]`. */
+  tags: string[]
+  isExternal: boolean
+  image?: string
+  author?: string
+  /** Authoring team/org behind a builder post; paired with `author` in the byline. */
+  team?: string
+  description?: string
+  timeToRead?: number
 }
 
 export type RSSChannel = {
@@ -1014,16 +1182,17 @@ export type RSSChannel = {
     link: string[]
     guid: string[]
     pubDate: string[]
-    description: string[]
-    category: string[]
-    enclosure: {
+    description?: string[]
+    category?: string[]
+    "content:encoded"?: string[]
+    enclosure?: {
       $: {
-        url: string[]
-        length: string[]
-        type: string[]
+        url: string
+        length: string
+        type: string
       }
     }[]
-    "media:content": { $: { url: string } }[]
+    "media:content"?: { $: { url: string } }[]
   }[]
 }
 
@@ -1172,7 +1341,7 @@ export type App = {
   image: string
   category: AppCategoryEnum
   subCategory: string[]
-  networks: (ChainName | NonEVMChainName)[]
+  networks: (ChainName | NonEVMChainName | AppOnlyChainName)[]
   screenshots: string[]
   bannerImage: string
   platforms: string[]
@@ -1301,13 +1470,34 @@ export type TimeLeftLabels = Record<
   TimeLeftLabel
 >
 
-export type Story = {
+/** Community story as authored in src/data/tenYearStories.ts */
+export type StoryData = {
+  /** Key in the "community-stories" namespace holding the translatable story copy */
+  storyKey: string
+  /** Story text verbatim as submitted (English for English submissions) */
+  storyOriginal: string
+  /** BCP-47 language code of the original submission (not necessarily a site locale) */
+  originalLocale: string
+  category: string
   name: string
-  storyEnglish: string
+  date: string
+  country: string
+  twitter: string
+  region: string
+}
+
+/** Community story resolved for rendering; see getCommunityStories */
+export type Story = {
+  storyKey: string
+  name: string
+  /** Story copy resolved to the viewer's locale (falls back to English) */
+  story: string
   storyOriginal: string | null
   twitter: string | null
   country: string | null
   date: string
+  /** Comma-separated category labels used by the /stories community filter. */
+  category?: string
 }
 
 export type SectionNavDetails = {
@@ -1324,15 +1514,80 @@ export interface MatomoEventOptions {
   eventValue?: string
 }
 
-export type DeveloperToolsResponse = {
+export type DeveloperToolsRepoLink = {
+  href: string
+  stargazers?: number
+  forks?: number
+  watchers?: number
+  subscribers?: number
+  openIssues?: number
+  isArchived?: boolean
+  isFork?: boolean
+  daysSincePush?: number
+  officialScore?: number
+  inferredScore?: number
+  finalScore?: number
+  scoreSource?: "official-weight" | "github-inferred" | "unscored"
+  lastUpdated?: string | null
+}
+
+export type DeveloperToolsPackageLink = {
+  href: string
+  downloads?: number
+}
+
+export type BuilderResourcesCatalogResource = {
+  name: string
+  description: string
+  thumbnail_url?: string | null
+  banner_url?: string | null
+  twitter?: string | null
+  repos: Array<string | DeveloperToolsRepoLink>
+  packages?: Array<string | DeveloperToolsPackageLink>
+  tags: string[]
+  website?: string | null
+  llmstext?: string | null
+  subcategory_id: string
+  resource_raw_score?: number
+  resource_score?: number
+  resource_rank?: number
+  resource_score_source?: "official-weight" | "github-inferred" | "unscored"
+}
+
+export type DeveloperToolsRankingCoverage = {
+  totalResources: number
+  scoredResources: number
+  usedMedianFallbackCount: number
+  matchedOfficialRepoCount: number
+  inferredRepoCount: number
+  unscoredRepoCount: number
+  trainingSampleCount: number
+}
+
+export type DeveloperToolsRankingMetadata = {
+  rankingAlgorithmVersion: string
+  damping: number
+  maxIterations: number
+  rules: Record<string, number>
+  coverage: DeveloperToolsRankingCoverage
+}
+
+export interface BuilderResourcesTaxonomySubcategory {
   id: string
   name: string
   description: string
-  thumbnail_url?: string
-  banner_url?: string
-  twitter?: string
-  repos: string[]
-  tags: DeveloperToolTag[]
-  website?: string
-  category: DeveloperToolCategory
+}
+
+export interface BuilderResourcesTaxonomyCategory {
+  id: string
+  name: string
+  description: string
+  subcategories: BuilderResourcesTaxonomySubcategory[]
+}
+
+export interface BuilderResourcesTaxonomy {
+  categories: {
+    definitions: BuilderResourcesTaxonomyCategory[]
+  }
+  tags: string[]
 }

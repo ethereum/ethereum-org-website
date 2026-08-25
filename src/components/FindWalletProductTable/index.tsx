@@ -1,4 +1,5 @@
 "use client"
+import { useTranslations } from "next-intl"
 
 import type { WalletRow } from "@/lib/types"
 
@@ -9,21 +10,14 @@ import ProductTable from "@/components/ProductTable"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { filterFn } from "@/lib/utils/wallets"
 
-import List from "../ProductTable/List"
-
 import FindWalletsNoResults from "./FindWalletsNoResults"
+import List from "./List"
 import WalletSubComponent from "./WalletSubComponent"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 const FindWalletProductTable = ({ wallets }: { wallets: WalletRow[] }) => {
-  const { t } = useTranslation("page-wallets-find-wallet")
+  const t = useTranslations("page-wallets-find-wallet")
   const walletPersonas = useWalletPersonaPresets()
   const walletFilterOptions = useWalletFilters()
-
-  if (!Array.isArray(wallets)) {
-    return <div>Error loading wallets</div>
-  }
 
   return (
     <ProductTable<WalletRow>
@@ -33,18 +27,18 @@ const FindWalletProductTable = ({ wallets }: { wallets: WalletRow[] }) => {
       presetFilters={walletPersonas}
       mobileFiltersLabel={t("page-find-wallet-see-wallets")}
     >
-      {({ filteredData, filters, resetFilters }) => (
+      {({ data, matchedIds, filters, resetFilters }) => (
         <>
           <div className="sticky top-[76px] z-10 w-full border-b-background-highlight bg-background lg:border-b">
             <div className="flex w-full flex-row items-center justify-between border-none px-4 py-2">
               <p className="text-body-medium">
                 {t("page-find-wallet-showing-all-wallets")}{" "}
-                <span className="text-body">({filteredData.length})</span>
+                <span className="text-body">({matchedIds.size})</span>
               </p>
             </div>
           </div>
 
-          {filteredData.length === 0 && (
+          {matchedIds.size === 0 && (
             <FindWalletsNoResults
               resetFilters={() => {
                 resetFilters()
@@ -58,15 +52,15 @@ const FindWalletProductTable = ({ wallets }: { wallets: WalletRow[] }) => {
           )}
 
           <List
-            data={filteredData}
-            subComponent={(wallet, filters, listIdx) => (
+            data={data}
+            matchedIds={matchedIds}
+            renderSubComponent={(wallet, listIdx) => (
               <WalletSubComponent
                 wallet={wallet}
                 filters={filters}
                 listIdx={listIdx}
               />
             )}
-            filters={filters}
             matomoEventCategory="find-wallet"
             data-testid="wallet-list"
           />

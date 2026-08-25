@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: "Ethash algoritmasına ayrıntılı bir bakış."
+description: "Ethash algoritmasına detaylı bir bakış."
 lang: tr
 ---
 
@@ -8,40 +8,40 @@ lang: tr
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash, Ethereum'un iş ispatı madencilik algoritmasıydı. İş ispatı artık **tamamen devre dışı bırakıldı** ve Ethereum artık bunun yerine [hisse ispatı](/developers/docs/consensus-mechanisms/pos/) kullanılarak güvence altına alınıyor. [Birleşim](/roadmap/merge/), [hisse ispatı](/developers/docs/consensus-mechanisms/pos/) ve [hisseleme](/staking/) hakkında daha fazlasını okuyun. Bu sayfa sadece tarihsel ilgi içindir!
+   Ethash, Ethereum'un İş Kanıtı (PoW) madencilik algoritmasıydı. İş Kanıtı (PoW) artık **tamamen kapatıldı** ve Ethereum artık bunun yerine [Hisse Kanıtı (PoS)](/developers/docs/consensus-mechanisms/pos/) kullanılarak güvence altına alınıyor. [Birleşme](/roadmap/merge/), [Hisse Kanıtı (PoS)](/developers/docs/consensus-mechanisms/pos/) ve [staking](/staking/) hakkında daha fazla bilgi edinin. Bu sayfa tarihi ilgi amaçlıdır!  
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Ethash, [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto) algoritmasının değiştirilmiş bir versiyonudur. Ethash iş ispatı [bellek ağırlıklıdır](https://wikipedia.org/wiki/Memory-hard_function), bunun algoritmayı ASIC'e dayanıklı yaptığı düşünülüyordu. Sonunda Ethash ASICleri geliştirildi fakat GPU madenciliği iş ispatı durdurulana kadar hâlâ geçerli bir seçenekti. Ethash, Ethereum olmayan iş ispatı ağlarında hâlâ diğer paraların madenciliğini yapmak için kullanılmaktadır.
+Ethash, [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto) algoritmasının değiştirilmiş bir versiyonudur. Ethash İş Kanıtı (PoW) [bellek zorludur (memory hard)](https://wikipedia.org/wiki/Memory-hard_function), bu da algoritmayı ASIC'e dirençli hale getirdiği düşünülen bir özellikti. Ethash ASIC'leri sonunda geliştirildi ancak GPU madenciliği, İş Kanıtı (PoW) kapatılana kadar hala geçerli bir seçenekti. Ethash, Ethereum dışındaki diğer İş Kanıtı (PoW) ağlarında diğer coin'lerin madenciliğini yapmak için hala kullanılmaktadır.
 
 ## Ethash nasıl çalışır? {#how-does-ethash-work}
 
-Bellek sertliği, nonce ve blok başlığına bağlı olarak sabit bir kaynağın alt kümelerinin seçilmesini gerektiren bir iş kanıtı algoritması ile elde edilir. Bu kaynağa (birkaç gigabayt boyutunda) DAG adı verilir. DAG, her 30000 blokta bir değiştirilir, bu devir olarak adlandırılan 125 saatlik bir penceredir (kabaca 5,2 gün) ve oluşturulması biraz zaman alır. DAG yalnızca blok yüksekliğine bağlı olduğundan, önceden oluşturulabilir, ancak böyle değilse, müşterinin bir blok oluşturmak için bu sürecin sonuna kadar beklemesi gerekir. İstemciler DAG'leri önceden oluşturup önbelleğe almazsa, ağ her bir dönem geçişinde büyük blok gecikmesi yaşayabilir. DAG'nin, hem düşük CPU hem de küçük bellek ile doğrulamaya izin veren iş kanıtının doğrulanması için oluşturulması gerekmediğini unutmayın.
+Bellek zorluğu, nonce ve blok başlığına bağlı sabit bir kaynağın alt kümelerinin seçilmesini gerektiren bir İş Kanıtı (PoW) algoritması ile elde edilir. Bu kaynağa (birkaç gigabayt boyutunda) DAG denir. DAG her 30000 blokta bir değiştirilir, bu ~125 saatlik pencereye bir dönem (yaklaşık 5,2 gün) denir ve oluşturulması biraz zaman alır. DAG yalnızca blok yüksekliğine bağlı olduğundan önceden oluşturulabilir, ancak oluşturulmamışsa istemcinin bir blok üretmek için bu sürecin sonuna kadar beklemesi gerekir. İstemciler DAG'leri önceden oluşturup önbelleğe almazlarsa, ağ her dönem geçişinde büyük bir blok gecikmesi yaşayabilir. İş Kanıtı'nı (PoW) doğrulamak için DAG'nin oluşturulmasına gerek olmadığını, bunun da esasen hem düşük CPU hem de küçük bellek ile doğrulamaya izin verdiğini unutmayın.
 
-Algoritmanın izlediği genel rota aşağıdaki gibidir:
+Algoritmanın izlediği genel yol aşağıdaki gibidir:
 
-1. O noktaya kadar blok başlıklarının taranmasıyla her blok için hesaplanabilen bir **tohum** mevcuttur.
-2. Tohumdan **16 MB'lık bir sözde rastgele önbellek** hesaplanabilir. Hafif istemciler önbelleği depolar.
-3. Önbellekten, her bir öğenin önbellekteki az sayıda öğeye bağlı olduğu **1 GB'lık bir veri kümesi** oluşturabiliriz. Tam istemciler ve madenciler veri kümesini depolar. Veri kümesi, zamanla doğrusal olarak büyür.
-4. Madencilik, veri setinin rastgele dilimlerini alıp bunları bir araya getirmeyi içerir. Doğrulama, ihtiyacınız olan veri kümesinin belirli parçalarını yeniden oluşturmak için önbelleği kullanarak düşük bellekle yapılabilir, böylece yalnızca önbelleği saklamanız gerekir.
+1. O noktaya kadar olan blok başlıkları taranarak her blok için hesaplanabilen bir **tohum (seed)** vardır.
+2. Tohumdan, **16 MB'lık sözde rastgele bir önbellek** hesaplanabilir. Hafif istemciler önbelleği depolar.
+3. Önbellekten, veri kümesindeki her bir öğenin önbellekteki yalnızca az sayıda öğeye bağlı olması özelliğiyle **1 GB'lık bir veri kümesi** oluşturabiliriz. Tam istemciler ve madenciler veri kümesini depolar. Veri kümesi zamanla doğrusal olarak büyür.
+4. Madencilik, veri kümesinden rastgele dilimler almayı ve bunları birlikte hashlemeyi içerir. Doğrulama, ihtiyacınız olan veri kümesinin belirli parçalarını yeniden oluşturmak için önbelleği kullanarak düşük bellekle yapılabilir, bu nedenle yalnızca önbelleği depolamanız gerekir.
 
-Büyük veri kümesi her 30000 blokta bir güncellenir, bu nedenle bir madencinin çabasının büyük çoğunluğu veri kümesini okumak olacak, değişiklik yapmak değil.
+Büyük veri kümesi her 30000 blokta bir güncellenir, bu nedenle bir madencinin çabasının büyük çoğunluğu veri kümesinde değişiklik yapmak değil, onu okumak olacaktır.
 
 ## Tanımlar {#definitions}
 
 Aşağıdaki tanımları kullanıyoruz:
 
 ```
-WORD_BYTES = 4                    # kelimedeki bayt sayısı
-DATASET_BYTES_INIT = 2**30        # başlangıçtaki veri kümesindeki bayt sayısı
+WORD_BYTES = 4                    # kelimedeki baytlar
+DATASET_BYTES_INIT = 2**30        # başlangıçtaki veri kümesindeki baytlar
 DATASET_BYTES_GROWTH = 2**23      # dönem başına veri kümesi büyümesi
-CACHE_BYTES_INIT = 2**24          # başlangıçtaki önbellekteki bayt sayısı
+CACHE_BYTES_INIT = 2**24          # başlangıçtaki önbellekteki baytlar
 CACHE_BYTES_GROWTH = 2**17        # dönem başına önbellek büyümesi
-CACHE_MULTIPLIER=1024             # DAG'nin önbelleğe göre boyutu
-EPOCH_LENGTH = 30000              # dönem başına blok sayısı
+CACHE_MULTIPLIER=1024             # Önbelleğe göre DAG'nin boyutu
+EPOCH_LENGTH = 30000              # dönem başına bloklar
 MIX_BYTES = 128                   # karışımın genişliği
-HASH_BYTES = 64                   # bayt cinsinden karma uzunluğu
+HASH_BYTES = 64                   # bayt cinsinden hash uzunluğu
 DATASET_PARENTS = 256             # her veri kümesi öğesinin ebeveyn sayısı
 CACHE_ROUNDS = 3                  # önbellek üretimindeki tur sayısı
 ACCESSES = 64                     # hashimoto döngüsündeki erişim sayısı
@@ -49,13 +49,13 @@ ACCESSES = 64                     # hashimoto döngüsündeki erişim sayısı
 
 ### 'SHA3' kullanımı {#sha3}
 
-Ethereum'un gelişimi, SHA3 standardının geliştirilmesiyle çakıştı ve standartlar süreci, sonlandırılmış karma algoritmanın dolgusunda geç bir değişiklik yaptı, böylece Ethereum'un "sha3_256" ve "sha3_512" karmaları standart sha3 karmaları değil, diğer bağlamlarda "Keccak-256" ve "Keccak-512" olarak genellikle atıfta bulunulan bir değişkendir. Tartışma için bkz. ör. [burada](https://eips.ethereum.org/EIPS/eip-1803), [burada](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use) veya [burada](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
+Ethereum'un gelişimi SHA3 standardının gelişimiyle aynı zamana denk geldi ve standartlar süreci, kesinleşmiş hash algoritmasının dolgusunda (padding) geç bir değişiklik yaptı, bu nedenle Ethereum'un "sha3_256" ve "sha3_512" hash'leri standart sha3 hash'leri değil, diğer bağlamlarda genellikle "Keccak-256" ve "Keccak-512" olarak adlandırılan bir varyanttır. Tartışmalara bakın, örn. [burada](https://eips.ethereum.org/EIPS/eip-1803), [burada](https://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use) veya [burada](https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
 
-Lütfen aşağıdaki algoritmanın açıklamasında "sha3" karmalarına atıfta bulunulduğunu unutmayın.
+Aşağıdaki algoritmanın açıklamasında "sha3" hash'lerine atıfta bulunulduğundan lütfen bunu aklınızda bulundurun.
 
 ## Parametreler {#parameters}
 
-Ethash'in önbelleği ve veri kümesi parametreleri, blok numarasına bağlıdır. Önbellek boyutu ve veri kümesi boyutu doğrusal olarak büyür; bununla birlikte, döngüsel davranışa yol açan tesadüfi düzenlilik riskini azaltmak için her zaman doğrusal olarak büyüyen eşiğin altındaki en yüksek asal değeri alırız.
+Ethash'in önbelleği ve veri kümesi için parametreler blok numarasına bağlıdır. Önbellek boyutu ve veri kümesi boyutu doğrusal olarak büyür; ancak, döngüsel davranışa yol açan tesadüfi düzenlilik riskini azaltmak için her zaman doğrusal olarak büyüyen eşiğin altındaki en yüksek asal sayıyı alırız.
 
 ```python
 def get_cache_size(block_number):
@@ -73,17 +73,17 @@ def get_full_size(block_number):
     return sz
 ```
 
-Veri kümesi ve önbellek boyutu değerleri tabloları ekte verilmiştir.
+Veri kümesi ve önbellek boyutu değerlerinin tabloları ekte verilmiştir.
 
 ## Önbellek oluşturma {#cache-generation}
 
-Şimdi, bir önbellek üretme fonksiyonunu belirtiyoruz:
+Şimdi, bir önbellek üretmek için işlevi belirtiyoruz:
 
 ```python
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # Başlangıç veri kümesini sıralı olarak üret
+    # Başlangıç veri kümesini sırayla üret
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
@@ -97,11 +97,11 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-Önbellek üretim süreci, önce 32 MB belleğin sıralı olarak doldurulmasını ve ardından Sergio Demian Lerner'in [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf) çalışmasındaki _RandMemoHash_ algoritmasının iki geçişte çalıştırılmasını içerir. Çıktı, 524288 64 baytlık bir değer kümesidir.
+Önbellek üretim süreci, önce 32 MB belleğin sırayla doldurulmasını, ardından Sergio Demian Lerner'ın [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf) adlı eserindeki _RandMemoHash_ algoritmasının iki geçişinin gerçekleştirilmesini içerir. Çıktı, 524288 adet 64 baytlık değerden oluşan bir kümedir.
 
-## Veri birleştirme işlevi {#date-aggregation-function}
+## Veri toplama işlevi {#date-aggregation-function}
 
-Bazı durumlarda, XOR'un birleşmeli olmayan bir alternatifi olarak [FNV karmasından](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) esinlenen bir algoritma kullanırız. Asal değeri sırayla bir bayt (sekizli) ile çarpan FNV-1 spesifikasyonunun aksine, asal değeri tam 32 bit girişle çarptığımızı unutmayın.
+Bazı durumlarda XOR'un birleşmeli olmayan (non-associative) bir alternatifi olarak [FNV hash](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function)'ten esinlenen bir algoritma kullanıyoruz. Asal sayıyı sırayla bir bayt (sekizli) ile çarpan FNV-1 spesifikasyonunun aksine, asal sayıyı tam 32 bitlik girdiyle çarptığımıza dikkat edin.
 
 ```python
 FNV_PRIME = 0x01000193
@@ -110,11 +110,11 @@ def fnv(v1, v2):
     return ((v1 * FNV_PRIME) ^ v2) % 2**32
 ```
 
-Lütfen sarı kağıdın fnv'yi v1\*(FNV_PRIME ^ v2) olarak belirttiğine dikkat edin, tüm mevcut uygulamalar tutarlı bir şekilde yukarıdaki tanımı kullanır.
+Lütfen unutmayın, Sarı Bülten bile fnv'yi v1\*(FNV_PRIME ^ v2) olarak belirtse de, mevcut tüm uygulamalar tutarlı bir şekilde yukarıdaki tanımı kullanır.
 
 ## Tam veri kümesi hesaplaması {#full-dataset-calculation}
 
-Tam 1 GB veri kümesindeki her 64 baytlık öğe aşağıdaki gibi hesaplanır:
+Tam 1 GB'lık veri kümesindeki her 64 baytlık öğe aşağıdaki gibi hesaplanır:
 
 ```python
 def calc_dataset_item(cache, i):
@@ -124,14 +124,14 @@ def calc_dataset_item(cache, i):
     mix = copy.copy(cache[i % n])
     mix[0] ^= i
     mix = sha3_512(mix)
-    # i'ye dayalı olarak birçok rastgele önbellek düğümüyle fnv'le
+    # i'ye dayalı çok sayıda rastgele önbellek düğümü ile fnv işleminden geçir
     for j in range(DATASET_PARENTS):
         cache_index = fnv(i ^ j, mix[j % r])
         mix = map(fnv, mix, cache[cache_index % n])
     return sha3_512(mix)
 ```
 
-Esasen, sözde rasgele seçilmiş 256 önbellek düğümünden gelen verileri birleştirir ve veri kümesi düğümünü hesaplamak için bunu kararız. Tüm veri kümesi daha sonra şu şekilde oluşturulur:
+Esasen, sözde rastgele seçilmiş 256 önbellek düğümünden gelen verileri birleştiriyoruz ve veri kümesi düğümünü hesaplamak için bunu hashliyoruz. Tüm veri kümesi daha sonra şu şekilde oluşturulur:
 
 ```python
 def calc_dataset(full_size, cache):
@@ -140,20 +140,20 @@ def calc_dataset(full_size, cache):
 
 ## Ana döngü {#main-loop}
 
-Şimdi, belirli bir başlık ve nonce için nihai değerimizi üretmek için tüm veri kümesinden verileri topladığımız ana "hashimoto" benzeri döngüyü belirtiyoruz. Aşağıdaki kodda `header`, **mixHash** ve **nonce** alanları hariç bir başlığın, yani _kısaltılmış_ bir blok başlığının RLP gösteriminin SHA3-256 _karmasını_ temsil eder. `nonce`, büyük endian düzenindeki 64 bitlik işaretsiz bir tam sayının sekiz baytıdır. Yani `nonce[::-1]` bu değerin sekiz baytlık küçük endian gösterimidir:
+Şimdi, belirli bir başlık ve nonce için nihai değerimizi üretmek amacıyla tam veri kümesinden verileri topladığımız ana "hashimoto" benzeri döngüyü belirtiyoruz. Aşağıdaki kodda, `header`, _kesilmiş_ bir blok başlığının, yani **mixHash** ve **nonce** alanları hariç tutulmuş bir başlığın RLP temsilinin SHA3-256 _hash_'ini temsil eder. `nonce`, büyük uçlu (big-endian) sırasındaki 64 bitlik işaretsiz bir tamsayının sekiz baytıdır. Yani `nonce[::-1]`, bu değerin sekiz baytlık küçük uçlu (little-endian) temsilidir:
 
 ```python
 def hashimoto(header, nonce, full_size, dataset_lookup):
     n = full_size / HASH_BYTES
     w = MIX_BYTES // WORD_BYTES
     mixhashes = MIX_BYTES / HASH_BYTES
-    # header+nonce'ı 64 baytlık bir tohumda birleştir
+    # başlık+nonce'u 64 baytlık bir tohuma birleştir
     s = sha3_512(header + nonce[::-1])
     # karışımı çoğaltılmış s ile başlat
     mix = []
     for _ in range(MIX_BYTES / HASH_BYTES):
         mix.extend(s)
-    # rastgele veri kümesi düğümlerini karıştır
+    # rastgele veri kümesi düğümlerini karışıma ekle
     for i in range(ACCESSES):
         p = fnv(i ^ s[0], mix[i % w]) % (n // mixhashes) * mixhashes
         newdata = []
@@ -176,17 +176,17 @@ def hashimoto_full(full_size, dataset, header, nonce):
     return hashimoto(header, nonce, full_size, lambda x: dataset[x])
 ```
 
-Esasen, 128 bayt genişliğinde bir "mix" tutarız ve tam veri kümesinden tekrar tekrar sıralı olarak 128 bayt alırız ve `fnv` işlevini kullanarak mix ile birleştiririz. 128 bayt sıralı erişim kullanılır, böylece algoritmanın her turu, her zaman RAM'den tam bir sayfa alır ve ASIC'lerin teorik olarak kaçınabileceği çeviriye bakılan arabellek kayıplarını en aza indirir.
+Esasen, 128 bayt genişliğinde bir "karışım" (mix) tutuyoruz ve tam veri kümesinden art arda sırayla 128 bayt alıp bunu karışımla birleştirmek için `fnv` işlevini kullanıyoruz. Algoritmanın her turunun her zaman RAM'den tam bir sayfa getirmesi ve böylece ASIC'lerin teorik olarak kaçınabileceği çeviri arabelleği (TLB) isabet kayıplarını en aza indirmesi için 128 baytlık sıralı erişim kullanılır.
 
-Bu algoritmanın çıktısı istenen hedefin altındaysa nonce geçerlidir. Sondaki fazladan `sha3_256` uygulamasının, en azından az miktarda iş yapıldığını kanıtlamak için sağlanabilecek bir ara nonce'nin var olmasını sağladığını unutmayın; bu hızlı dış PoW doğrulaması, DDoS karşıtı amaçlar için kullanılabilir. Ayrıca sonucun tarafsız, 256 bitlik bir sayı olduğuna dair istatistiksel güvence sağlamaya da hizmet eder.
+Bu algoritmanın çıktısı istenen hedefin altındaysa, nonce geçerlidir. Sonundaki ekstra `sha3_256` uygulamasının, en azından küçük bir miktar iş yapıldığını kanıtlamak için sağlanabilecek bir ara nonce olmasını sağladığına dikkat edin; bu hızlı dış İş Kanıtı (PoW) doğrulaması, anti-DDoS amaçları için kullanılabilir. Ayrıca sonucun tarafsız, 256 bitlik bir sayı olduğuna dair istatistiksel güvence sağlamaya da hizmet eder.
 
 ## Madencilik {#mining}
 
-Madencilik algoritması şu şekilde tanımlanır:
+Madencilik algoritması aşağıdaki gibi tanımlanır:
 
 ```python
 def mine(full_size, dataset, header, difficulty):
-    # hedefi, aynı basamakta karma ile karşılaştırmak için sıfırla doldurun
+    # aynı basamaktaki hash ile karşılaştırmak için hedefi sıfırla doldur
     target = zpad(encode_int(2**256 // difficulty), 64)[::-1]
     from random import randint
     nonce = randint(0, 2**64)
@@ -195,9 +195,9 @@ def mine(full_size, dataset, header, difficulty):
     return nonce
 ```
 
-## Tohum karmasını tanımlama {#seed-hash}
+## Tohum hash'ini tanımlama {#seed-hash}
 
-Belirli bir bloğun üzerinde madencilik yapmak için kullanılacak tohum karmasını hesaplamak için aşağıdaki algoritmayı kullanırız:
+Belirli bir bloğun üzerinde madencilik yapmak için kullanılacak tohum hash'ini hesaplamak amacıyla aşağıdaki algoritmayı kullanıyoruz:
 
 ```python
  def get_seedhash(block):
@@ -207,20 +207,20 @@ Belirli bir bloğun üzerinde madencilik yapmak için kullanılacak tohum karmas
      return s
 ```
 
-Sorunsuz madencilik ve doğrulama için, gelecekteki tohum karmalarını ve veri kümelerini ayrı bir iş parçacığında önceden hesaplamanızı öneririz.
+Sorunsuz madencilik ve doğrulama için, gelecekteki tohum hash'lerini ve veri kümelerini ayrı bir iş parçacığında (thread) önceden hesaplamanızı önerdiğimizi unutmayın.
 
-## Daha fazla kaynak {#further-reading}
+## Daha fazla okuma {#further-reading}
 
-_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
+_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
 ## Ek {#appendix}
 
-Yukarıdaki python spesifikasyonunu kod olarak çalıştırmakla ilgileniyorsanız, aşağıdaki kod, başa eklenmelidir.
+Yukarıdaki Python spesifikasyonunu kod olarak çalıştırmakla ilgileniyorsanız, aşağıdaki kod başa eklenmelidir.
 
 ```python
 import sha3, copy
 
-# Küçük endian bit sıralamasını varsayar (Intel mimarileriyle aynı)
+# Küçük uçlu bit sıralamasını varsayar (Intel mimarileriyle aynı)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -248,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# sha3 karma işlevi, 64 bayt çıktı verir
+# sha3 hash işlevi, 64 bayt çıktı verir
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -267,7 +267,7 @@ def isprime(x):
 
 ### Veri Boyutları {#data-sizes}
 
-Aşağıdaki arama tabloları, yaklaşık 2048 veri ve önbellek boyutlu dönemleri sunar.
+Aşağıdaki arama tabloları, veri boyutları ve önbellek boyutlarının yaklaşık 2048 tablo haline getirilmiş dönemini sağlar.
 
 ```python
 def get_datasize(block_number):
@@ -881,139 +881,139 @@ cache_sizes = [
 177209152, 177340096, 177470528, 177600704, 177731648, 177864256,
 177994816, 178126528, 178257472, 178387648, 178518464, 178650176,
 178781888, 178912064, 179044288, 179174848, 179305024, 179436736,
-179568448, 179698496, 179830208, 180092608, 180223808, 180354752,
-180485696, 180617152, 180748096, 180877504, 181009984, 181139264,
-181272512, 181402688, 181532608, 181663168, 181795136, 181926592,
-182057536, 182190016, 182320192, 182451904, 182582336, 182713792,
-182843072, 182976064, 183107264, 183237056, 183368384, 183494848,
-183631424, 183762752, 183893824, 184024768, 184154816, 184286656,
-184417984, 184548928, 184680128, 184810816, 184941248, 185072704,
-185203904, 185335616, 185465408, 185596352, 185727296, 185859904,
-185989696, 186121664, 186252992, 186383552, 186514112, 186645952,
-186777152, 186907328, 187037504, 187170112, 187301824, 187429184,
-187562048, 187693504, 187825472, 187957184, 188087104, 188218304,
-188349376, 188481344, 188609728, 188743616, 188874304, 189005248,
-189136448, 189265088, 189396544, 189528128, 189660992, 189791936,
-189923264, 190054208, 190182848, 190315072, 190447424, 190577984,
-190709312, 190840768, 190971328, 191102656, 191233472, 191364032,
-191495872, 191626816, 191758016, 191888192, 192020288, 192148928,
-192282176, 192413504, 192542528, 192674752, 192805952, 192937792,
-193068608, 193198912, 193330496, 193462208, 193592384, 193723456,
-193854272, 193985984, 194116672, 194247232, 194379712, 194508352,
-194641856, 194772544, 194900672, 195035072, 195166016, 195296704,
-195428032, 195558592, 195690304, 195818176, 195952576, 196083392,
-196214336, 196345792, 196476736, 196607552, 196739008, 196869952,
-196999616, 197130688, 197262784, 197394368, 197523904, 197656384,
-197787584, 197916608, 198049472, 198180544, 198310208, 198442432,
-198573632, 198705088, 198834368, 198967232, 199097792, 199228352,
-199360192, 199491392, 199621696, 199751744, 199883968, 200014016,
-200146624, 200276672, 200408128, 200540096, 200671168, 200801984,
-200933312, 201062464, 201194944, 201326144, 201457472, 201588544,
-201719744, 201850816, 201981632, 202111552, 202244032, 202374464,
-202505152, 202636352, 202767808, 202898368, 203030336, 203159872,
-203292608, 203423296, 203553472, 203685824, 203816896, 203947712,
-204078272, 204208192, 204341056, 204472256, 204603328, 204733888,
-204864448, 204996544, 205125568, 205258304, 205388864, 205517632,
-205650112, 205782208, 205913536, 206044736, 206176192, 206307008,
-206434496, 206569024, 206700224, 206831168, 206961856, 207093056,
-207223616, 207355328, 207486784, 207616832, 207749056, 207879104,
-208010048, 208141888, 208273216, 208404032, 208534336, 208666048,
-208796864, 208927424, 209059264, 209189824, 209321792, 209451584,
-209582656, 209715136, 209845568, 209976896, 210106432, 210239296,
-210370112, 210501568, 210630976, 210763712, 210894272, 211024832,
-211156672, 211287616, 211418176, 211549376, 211679296, 211812032,
-211942592, 212074432, 212204864, 212334016, 212467648, 212597824,
-212727616, 212860352, 212991424, 213120832, 213253952, 213385024,
-213515584, 213645632, 213777728, 213909184, 214040128, 214170688,
-214302656, 214433728, 214564544, 214695232, 214826048, 214956992,
-215089088, 215219776, 215350592, 215482304, 215613248, 215743552,
-215874752, 216005312, 216137024, 216267328, 216399296, 216530752,
-216661696, 216790592, 216923968, 217054528, 217183168, 217316672,
-217448128, 217579072, 217709504, 217838912, 217972672, 218102848,
-218233024, 218364736, 218496832, 218627776, 218759104, 218888896,
-219021248, 219151936, 219281728, 219413056, 219545024, 219675968,
-219807296, 219938624, 220069312, 220200128, 220331456, 220461632,
-220592704, 220725184, 220855744, 220987072, 221117888, 221249216,
-221378368, 221510336, 221642048, 221772736, 221904832, 222031808,
-222166976, 222297536, 222428992, 222559936, 222690368, 222820672,
-222953152, 223083968, 223213376, 223345984, 223476928, 223608512,
-223738688, 223869376, 224001472, 224132672, 224262848, 224394944,
-224524864, 224657344, 224788288, 224919488, 225050432, 225181504,
-225312704, 225443776, 225574592, 225704768, 225834176, 225966784,
-226097216, 226229824, 226360384, 226491712, 226623424, 226754368,
-226885312, 227015104, 227147456, 227278528, 227409472, 227539904,
-227669696, 227802944, 227932352, 228065216, 228196288, 228326464,
-228457792, 228588736, 228720064, 228850112, 228981056, 229113152,
-229243328, 229375936, 229505344, 229636928, 229769152, 229894976,
-230030272, 230162368, 230292416, 230424512, 230553152, 230684864,
-230816704, 230948416, 231079616, 231210944, 231342016, 231472448,
-231603776, 231733952, 231866176, 231996736, 232127296, 232259392,
-232388672, 232521664, 232652608, 232782272, 232914496, 233043904,
-233175616, 233306816, 233438528, 233569984, 233699776, 233830592,
-233962688, 234092224, 234221888, 234353984, 234485312, 234618304,
-234749888, 234880832, 235011776, 235142464, 235274048, 235403456,
-235535936, 235667392, 235797568, 235928768, 236057152, 236190272,
-236322752, 236453312, 236583616, 236715712, 236846528, 236976448,
-237108544, 237239104, 237371072, 237501632, 237630784, 237764416,
-237895232, 238026688, 238157632, 238286912, 238419392, 238548032,
-238681024, 238812608, 238941632, 239075008, 239206336, 239335232,
-239466944, 239599168, 239730496, 239861312, 239992384, 240122816,
-240254656, 240385856, 240516928, 240647872, 240779072, 240909632,
-241040704, 241171904, 241302848, 241433408, 241565248, 241696192,
-241825984, 241958848, 242088256, 242220224, 242352064, 242481856,
-242611648, 242744896, 242876224, 243005632, 243138496, 243268672,
-243400384, 243531712, 243662656, 243793856, 243924544, 244054592,
-244187072, 244316608, 244448704, 244580032, 244710976, 244841536,
-244972864, 245104448, 245233984, 245365312, 245497792, 245628736,
-245759936, 245889856, 246021056, 246152512, 246284224, 246415168,
-246545344, 246675904, 246808384, 246939584, 247070144, 247199552,
-247331648, 247463872, 247593536, 247726016, 247857088, 247987648,
-248116928, 248249536, 248380736, 248512064, 248643008, 248773312,
-248901056, 249036608, 249167552, 249298624, 249429184, 249560512,
-249692096, 249822784, 249954112, 250085312, 250215488, 250345792,
-250478528, 250608704, 250739264, 250870976, 251002816, 251133632,
-251263552, 251395136, 251523904, 251657792, 251789248, 251919424,
-252051392, 252182464, 252313408, 252444224, 252575552, 252706624,
-252836032, 252968512, 253099712, 253227584, 253361728, 253493056,
-253623488, 253754432, 253885504, 254017216, 254148032, 254279488,
-254410432, 254541376, 254672576, 254803264, 254933824, 255065792,
-255196736, 255326528, 255458752, 255589952, 255721408, 255851072,
-255983296, 256114624, 256244416, 256374208, 256507712, 256636096,
-256768832, 256900544, 257031616, 257162176, 257294272, 257424448,
-257555776, 257686976, 257818432, 257949632, 258079552, 258211136,
-258342464, 258473408, 258603712, 258734656, 258867008, 258996544,
-259127744, 259260224, 259391296, 259522112, 259651904, 259784384,
-259915328, 260045888, 260175424, 260308544, 260438336, 260570944,
-260700992, 260832448, 260963776, 261092672, 261226304, 261356864,
-261487936, 261619648, 261750592, 261879872, 262011968, 262143424,
-262274752, 262404416, 262537024, 262667968, 262799296, 262928704,
-263061184, 263191744, 263322944, 263454656, 263585216, 263716672,
-263847872, 263978944, 264108608, 264241088, 264371648, 264501184,
-264632768, 264764096, 264895936, 265024576, 265158464, 265287488,
-265418432, 265550528, 265681216, 265813312, 265943488, 266075968,
-266206144, 266337728, 266468032, 266600384, 266731072, 266862272,
-266993344, 267124288, 267255616, 267386432, 267516992, 267648704,
-267777728, 267910592, 268040512, 268172096, 268302784, 268435264,
-268566208, 268696256, 268828096, 268959296, 269090368, 269221312,
-269352256, 269482688, 269614784, 269745856, 269876416, 270007616,
-270139328, 270270272, 270401216, 270531904, 270663616, 270791744,
-270924736, 271056832, 271186112, 271317184, 271449536, 271580992,
-271711936, 271843136, 271973056, 272105408, 272236352, 272367296,
-272498368, 272629568, 272759488, 272891456, 273022784, 273153856,
-273284672, 273415616, 273547072, 273677632, 273808448, 273937088,
-274071488, 274200896, 274332992, 274463296, 274595392, 274726208,
-274857536, 274988992, 275118656, 275250496, 275382208, 275513024,
-275643968, 275775296, 275906368, 276037184, 276167872, 276297664,
-276429376, 276560576, 276692672, 276822976, 276955072, 277085632,
-277216832, 277347008, 277478848, 277609664, 277740992, 277868608,
-278002624, 278134336, 278265536, 278395328, 278526784, 278657728,
-278789824, 278921152, 279052096, 279182912, 279313088, 279443776,
-279576256, 279706048, 279838528, 279969728, 280099648, 280230976,
-280361408, 280493632, 280622528, 280755392, 280887104, 281018176,
-281147968, 281278912, 281411392, 281542592, 281673152, 281803712,
-281935552, 282066496, 282197312, 282329024, 282458816, 282590272,
-282720832, 282853184, 282983744, 283115072, 283246144, 283377344,
-283508416, 283639744, 283770304, 283901504, 284032576, 284163136,
-284294848, 284426176, 284556992, 284687296, 284819264, 284950208,
-285081536]
+179568448, 179698496, 179830208, 179960512, 180092608, 180223808,
+180354752, 180485696, 180617152, 180748096, 180877504, 181009984,
+181139264, 181272512, 181402688, 181532608, 181663168, 181795136,
+181926592, 182057536, 182190016, 182320192, 182451904, 182582336,
+182713792, 182843072, 182976064, 183107264, 183237056, 183368384,
+183494848, 183631424, 183762752, 183893824, 184024768, 184154816,
+184286656, 184417984, 184548928, 184680128, 184810816, 184941248,
+185072704, 185203904, 185335616, 185465408, 185596352, 185727296,
+185859904, 185989696, 186121664, 186252992, 186383552, 186514112,
+186645952, 186777152, 186907328, 187037504, 187170112, 187301824,
+187429184, 187562048, 187693504, 187825472, 187957184, 188087104,
+188218304, 188349376, 188481344, 188609728, 188743616, 188874304,
+189005248, 189136448, 189265088, 189396544, 189528128, 189660992,
+189791936, 189923264, 190054208, 190182848, 190315072, 190447424,
+190577984, 190709312, 190840768, 190971328, 191102656, 191233472,
+191364032, 191495872, 191626816, 191758016, 191888192, 192020288,
+192148928, 192282176, 192413504, 192542528, 192674752, 192805952,
+192937792, 193068608, 193198912, 193330496, 193462208, 193592384,
+193723456, 193854272, 193985984, 194116672, 194247232, 194379712,
+194508352, 194641856, 194772544, 194900672, 195035072, 195166016,
+195296704, 195428032, 195558592, 195690304, 195818176, 195952576,
+196083392, 196214336, 196345792, 196476736, 196607552, 196739008,
+196869952, 197000768, 197130688, 197262784, 197394368, 197523904,
+197656384, 197787584, 197916608, 198049472, 198180544, 198310208,
+198442432, 198573632, 198705088, 198834368, 198967232, 199097792,
+199228352, 199360192, 199491392, 199621696, 199751744, 199883968,
+200014016, 200146624, 200276672, 200408128, 200540096, 200671168,
+200801984, 200933312, 201062464, 201194944, 201326144, 201457472,
+201588544, 201719744, 201850816, 201981632, 202111552, 202244032,
+202374464, 202505152, 202636352, 202767808, 202898368, 203030336,
+203159872, 203292608, 203423296, 203553472, 203685824, 203816896,
+203947712, 204078272, 204208192, 204341056, 204472256, 204603328,
+204733888, 204864448, 204996544, 205125568, 205258304, 205388864,
+205517632, 205650112, 205782208, 205913536, 206044736, 206176192,
+206307008, 206434496, 206569024, 206700224, 206831168, 206961856,
+207093056, 207223616, 207355328, 207486784, 207616832, 207749056,
+207879104, 208010048, 208141888, 208273216, 208404032, 208534336,
+208666048, 208796864, 208927424, 209059264, 209189824, 209321792,
+209451584, 209582656, 209715136, 209845568, 209976896, 210106432,
+210239296, 210370112, 210501568, 210630976, 210763712, 210894272,
+211024832, 211156672, 211287616, 211418176, 211549376, 211679296,
+211812032, 211942592, 212074432, 212204864, 212334016, 212467648,
+212597824, 212727616, 212860352, 212991424, 213120832, 213253952,
+213385024, 213515584, 213645632, 213777728, 213909184, 214040128,
+214170688, 214302656, 214433728, 214564544, 214695232, 214826048,
+214956992, 215089088, 215219776, 215350592, 215482304, 215613248,
+215743552, 215874752, 216005312, 216137024, 216267328, 216399296,
+216530752, 216661696, 216790592, 216923968, 217054528, 217183168,
+217316672, 217448128, 217579072, 217709504, 217838912, 217972672,
+218102848, 218233024, 218364736, 218496832, 218627776, 218759104,
+218888896, 219021248, 219151936, 219281728, 219413056, 219545024,
+219675968, 219807296, 219938624, 220069312, 220200128, 220331456,
+220461632, 220592704, 220725184, 220855744, 220987072, 221117888,
+221249216, 221378368, 221510336, 221642048, 221772736, 221904832,
+222031808, 222166976, 222297536, 222428992, 222559936, 222690368,
+222820672, 222953152, 223083968, 223213376, 223345984, 223476928,
+223608512, 223738688, 223869376, 224001472, 224132672, 224262848,
+224394944, 224524864, 224657344, 224788288, 224919488, 225050432,
+225181504, 225312704, 225443776, 225574592, 225704768, 225834176,
+225966784, 226097216, 226229824, 226360384, 226491712, 226623424,
+226754368, 226885312, 227015104, 227147456, 227278528, 227409472,
+227539904, 227669696, 227802944, 227932352, 228065216, 228196288,
+228326464, 228457792, 228588736, 228720064, 228850112, 228981056,
+229113152, 229243328, 229375936, 229505344, 229636928, 229769152,
+229894976, 230030272, 230162368, 230292416, 230424512, 230553152,
+230684864, 230816704, 230948416, 231079616, 231210944, 231342016,
+231472448, 231603776, 231733952, 231866176, 231996736, 232127296,
+232259392, 232388672, 232521664, 232652608, 232782272, 232914496,
+233043904, 233175616, 233306816, 233438528, 233569984, 233699776,
+233830592, 233962688, 234092224, 234221888, 234353984, 234485312,
+234618304, 234749888, 234880832, 235011776, 235142464, 235274048,
+235403456, 235535936, 235667392, 235797568, 235928768, 236057152,
+236190272, 236322752, 236453312, 236583616, 236715712, 236846528,
+236976448, 237108544, 237239104, 237371072, 237501632, 237630784,
+237764416, 237895232, 238026688, 238157632, 238286912, 238419392,
+238548032, 238681024, 238812608, 238941632, 239075008, 239206336,
+239335232, 239466944, 239599168, 239730496, 239861312, 239992384,
+240122816, 240254656, 240385856, 240516928, 240647872, 240779072,
+240909632, 241040704, 241171904, 241302848, 241433408, 241565248,
+241696192, 241825984, 241958848, 242088256, 242220224, 242352064,
+242481856, 242611648, 242744896, 242876224, 243005632, 243138496,
+243268672, 243400384, 243531712, 243662656, 243793856, 243924544,
+244054592, 244187072, 244316608, 244448704, 244580032, 244710976,
+244841536, 244972864, 245104448, 245233984, 245365312, 245497792,
+245628736, 245759936, 245889856, 246021056, 246152512, 246284224,
+246415168, 246545344, 246675904, 246808384, 246939584, 247070144,
+247199552, 247331648, 247463872, 247593536, 247726016, 247857088,
+247987648, 248116928, 248249536, 248380736, 248512064, 248643008,
+248773312, 248901056, 249036608, 249167552, 249298624, 249429184,
+249560512, 249692096, 249822784, 249954112, 250085312, 250215488,
+250345792, 250478528, 250608704, 250739264, 250870976, 251002816,
+251133632, 251263552, 251395136, 251523904, 251657792, 251789248,
+251919424, 252051392, 252182464, 252313408, 252444224, 252575552,
+252706624, 252836032, 252968512, 253099712, 253227584, 253361728,
+253493056, 253623488, 253754432, 253885504, 254017216, 254148032,
+254279488, 254410432, 254541376, 254672576, 254803264, 254933824,
+255065792, 255196736, 255326528, 255458752, 255589952, 255721408,
+255851072, 255983296, 256114624, 256244416, 256374208, 256507712,
+256636096, 256768832, 256900544, 257031616, 257162176, 257294272,
+257424448, 257555776, 257686976, 257818432, 257949632, 258079552,
+258211136, 258342464, 258473408, 258603712, 258734656, 258867008,
+258996544, 259127744, 259260224, 259391296, 259522112, 259651904,
+259784384, 259915328, 260045888, 260175424, 260308544, 260438336,
+260570944, 260700992, 260832448, 260963776, 261092672, 261226304,
+261356864, 261487936, 261619648, 261750592, 261879872, 262011968,
+262143424, 262274752, 262404416, 262537024, 262667968, 262799296,
+262928704, 263061184, 263191744, 263322944, 263454656, 263585216,
+263716672, 263847872, 263978944, 264108608, 264241088, 264371648,
+264501184, 264632768, 264764096, 264895936, 265024576, 265158464,
+265287488, 265418432, 265550528, 265681216, 265813312, 265943488,
+266075968, 266206144, 266337728, 266468032, 266600384, 266731072,
+266862272, 266993344, 267124288, 267255616, 267386432, 267516992,
+267648704, 267777728, 267910592, 268040512, 268172096, 268302784,
+268435264, 268566208, 268696256, 268828096, 268959296, 269090368,
+269221312, 269352256, 269482688, 269614784, 269745856, 269876416,
+270007616, 270139328, 270270272, 270401216, 270531904, 270663616,
+270791744, 270924736, 271056832, 271186112, 271317184, 271449536,
+271580992, 271711936, 271843136, 271973056, 272105408, 272236352,
+272367296, 272498368, 272629568, 272759488, 272891456, 273022784,
+273153856, 273284672, 273415616, 273547072, 273677632, 273808448,
+273937088, 274071488, 274200896, 274332992, 274463296, 274595392,
+274726208, 274857536, 274988992, 275118656, 275250496, 275382208,
+275513024, 275643968, 275775296, 275906368, 276037184, 276167872,
+276297664, 276429376, 276560576, 276692672, 276822976, 276955072,
+277085632, 277216832, 277347008, 277478848, 277609664, 277740992,
+277868608, 278002624, 278134336, 278265536, 278395328, 278526784,
+278657728, 278789824, 278921152, 279052096, 279182912, 279313088,
+279443776, 279576256, 279706048, 279838528, 279969728, 280099648,
+280230976, 280361408, 280493632, 280622528, 280755392, 280887104,
+281018176, 281147968, 281278912, 281411392, 281542592, 281673152,
+281803712, 281935552, 282066496, 282197312, 282329024, 282458816,
+282590272, 282720832, 282853184, 282983744, 283115072, 283246144,
+283377344, 283508416, 283639744, 283770304, 283901504, 284032576,
+284163136, 284294848, 284426176, 284556992, 284687296, 284819264,
+284950208, 285081536]
 ```

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "locale": "ja",
+  "translatedAt": "2026-04-28T23:24:45.539Z",
+  "englishManifestHash": "07e1d66236ed",
+  "placeholderOrder": [
+    "LINK-ba21d7"
+  ],
+  "placeholderMap": {
+    "LINK-ba21d7": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=GgKveVMLnoo"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-04-28T23:24:45.539Z",
+      "status": "success"
+    }
+  }
+}

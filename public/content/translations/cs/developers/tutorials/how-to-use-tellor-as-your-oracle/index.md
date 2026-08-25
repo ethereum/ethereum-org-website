@@ -1,55 +1,55 @@
 ---
 title: "Jak nastavit Tellor jako vaše orákulum"
-description: "Průvodce, jak začít s integrací orákula Tellor do vašeho protokolu"
+description: "Průvodce pro začátek s integrací orákula Tellor do vašeho protokolu"
 author: "Tellor"
 lang: cs
-tags: [ "solidity", "smart kontrakt účty", "orákula" ]
+tags: ["Solidity", "chytré kontrakty", "orákula"]
 skill: beginner
-breadcrumb: "Tellor oracle"
+breadcrumb: "Orákulum Tellor"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/
 ---
 
-Rychlý kvíz: Váš protokol je téměř hotový, ale potřebuje orákulum, aby získal přístup k offchainovým datům... Co uděláte?
+Bleskový kvíz: Váš protokol je téměř hotový, ale potřebuje orákulum pro přístup k offchain datům... Co uděláte?
 
-## Doporučené předpoklady {#soft-prerequisites}
+## (Mírné) Předpoklady {#soft-prerequisites}
 
-Cílem tohoto příspěvku je, aby byl přístup ke zdroji dat z orákula co nejjednodušší a nejsrozumitelnější. Nicméně předpokládáme následující úroveň vašich programátorských dovedností, abychom se mohli soustředit na aspekt orákula.
+Tento článek si klade za cíl učinit přístup k datům z orákula co nejjednodušším a nejpřímočařejším. Přesto předpokládáme následující úroveň vašich programátorských dovedností, abychom se mohli soustředit na samotné orákulum.
 
 Předpoklady:
 
-- umíte se orientovat v terminálu
-- máte nainstalovaný npm
+- umíte se pohybovat v terminálu
+- máte nainstalované npm
 - víte, jak používat npm ke správě závislostí
 
-Tellor je funkční open-source orákulum připravené k implementaci. Tento průvodce pro začátečníky je zde, aby ukázal, jak snadno lze Tellor zprovoznit a poskytnout tak vašemu projektu plně decentralizované orákulum odolné vůči cenzuře.
+Tellor je živé a open-source orákulum připravené k implementaci. Tento průvodce pro začátečníky je tu proto, aby ukázal, jak snadno lze Tellor zprovoznit a poskytnout tak vašemu projektu plně decentralizované orákulum odolné vůči cenzuře.
 
 ## Přehled {#overview}
 
-Tellor je systém orákul, kde strany mohou požadovat hodnotu offchainového datového bodu (např. BTC/USD) a reportéři soutěží o přidání této hodnoty do onchainové datové banky, která je přístupná všem chytrým kontraktům na Ethereu. Vstupy do této datové banky jsou zabezpečeny sítí reportérů, kteří stakují. Tellor využívá kryptoekonomické motivační mechanismy, odměňuje poctivé reportéry za předkládání dat a trestá podvodníky prostřednictvím vydávání tokenu Telloru, Tributes (TRB), a mechanismu pro řešení sporů.
+Tellor je systém orákula, kde mohou strany požadovat hodnotu offchain datového bodu (např. BTC/USD) a reportéři soutěží o přidání této hodnoty do onchain databanky, která je přístupná všem chytrým kontraktům na Ethereu. Vstupy do této databanky jsou zabezpečeny sítí reportérů, kteří poskytli stake. Tellor využívá kryptoekonomické motivační mechanismy, které odměňují poctivé odesílání dat reportéry a trestají špatné aktéry prostřednictvím emise tokenu Telloru, Tributes (TRB), a mechanismu řešení sporů.
 
 V tomto tutoriálu si projdeme:
 
-- Nastavení počáteční sady nástrojů, kterou budete potřebovat pro zprovoznění.
-- Projdeme si jednoduchý příklad.
-- Vypíšeme si adresy testnetů, na kterých můžete v současné době Tellor testovat.
+- Nastavení počáteční sady nástrojů, kterou budete potřebovat k zprovoznění.
+- Projití jednoduchého příkladu.
+- Vypsání testnet adres sítí, na kterých můžete Tellor aktuálně testovat.
 
 ## UsingTellor {#usingtellor}
 
-První věc, kterou budete chtít udělat, je nainstalovat základní nástroje potřebné k použití Telloru jako vašeho orákula. Použijte [tento balíček](https://github.com/tellor-io/usingtellor) k instalaci uživatelských kontraktů Tellor:
+První věc, kterou budete chtít udělat, je nainstalovat základní nástroje nezbytné pro používání Telloru jako vašeho orákula. Použijte [tento balíček](https://github.com/tellor-io/usingtellor) k instalaci uživatelských kontraktů Telloru:
 
 `npm install usingtellor`
 
-Po instalaci to umožní vašim kontraktům dědit funkce z kontraktu ‚UsingTellor‘.
+Po instalaci to umožní vašim kontraktům dědit funkce z kontraktu 'UsingTellor'.
 
-Skvělé! Nyní, když máte připravené nástroje, projděme si jednoduché cvičení, ve kterém získáme cenu bitcoinu:
+Skvělé! Nyní, když máte nástroje připravené, pojďme si projít jednoduché cvičení, kde získáme cenu bitcoinu:
 
 ### Příklad BTC/USD {#btcusd-example}
 
-Děděte kontrakt UsingTellor a předejte adresu Telloru jako argument konstruktoru:
+Zděďte kontrakt UsingTellor a předejte adresu Telloru jako argument konstruktoru:
 
-Toto je příklad:
+Zde je příklad:
 
 ```solidity
 import "usingtellor/contracts/UsingTellor.sol";
@@ -75,8 +75,8 @@ function setBtcPrice() public {
 }
 ```
 
-Úplný seznam adres kontraktů naleznete [zde](https://docs.tellor.io/tellor/the-basics/contracts-reference).
+Pro kompletní seznam adres kontraktů se podívejte [sem](https://docs.tellor.io/tellor/the-basics/contracts-reference).
 
-Pro usnadnění použití je repozitář UsingTellor dodáván s verzí kontraktu [Tellor Playground](https://github.com/tellor-io/TellorPlayground) pro snazší integraci. Seznam užitečných funkcí naleznete [zde](https://github.com/tellor-io/sampleUsingTellor#tellor-playground).
+Pro snadnější použití obsahuje repozitář UsingTellor verzi kontraktu [Tellor Playground](https://github.com/tellor-io/TellorPlayground) pro jednodušší integraci. Seznam užitečných funkcí najdete [zde](https://github.com/tellor-io/sampleUsingTellor#tellor-playground).
 
 Pro robustnější implementaci orákula Tellor se podívejte na úplný seznam dostupných funkcí [zde](https://github.com/tellor-io/usingtellor/blob/master/README.md).

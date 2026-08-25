@@ -5,10 +5,11 @@ lang: en
 template: upgrade
 image: /images/upgrades/merge.png
 alt: 
-summaryPoint1: Ethereum Mainnet uses proof-of-stake, but this wasn't always the case.
-summaryPoint2: The upgrade from the original proof-of-work mechanism to proof-of-stake was called The Merge.
-summaryPoint3: The Merge refers to the original Ethereum Mainnet merging with a separate proof-of-stake blockchain called the Beacon Chain, now existing as one chain.
-summaryPoint4: The Merge reduced Ethereum's energy consumption by ~99.95%.
+summaryPoints:
+  - "Ethereum Mainnet uses proof-of-stake, but this wasn't always the case."
+  - "The upgrade from the original proof-of-work mechanism to proof-of-stake was called The Merge."
+  - "The Merge refers to the original Ethereum Mainnet merging with a separate proof-of-stake blockchain called the Beacon Chain, now existing as one chain."
+  - "The Merge reduced Ethereum's energy consumption by ~99.95%."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

@@ -1,0 +1,481 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/consensus-mechanisms/index.md",
+  "generatedAt": "2026-06-17T21:37:01.317Z",
+  "rootHash": "2453c5ec5ba3",
+  "tree": {
+    "contentHash": "e74d69b30e59",
+    "anchorHash": "d1f6e5a94f10",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "7d27c29b3bf9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "784a6cfaaa5a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:authors": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d79ec386b8c3"
+      },
+      "prose:1": {
+        "contentHash": "0ee146d787d8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "e325db80df49",
+        "anchorHash": "fe2d61c6f91a"
+      },
+      "prose:2": {
+        "contentHash": "89ef4785658c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prerequisites": {
+        "contentHash": "44c7fd1fdb03",
+        "anchorHash": "a9d9cc796044",
+        "labelHash": "865514682d01",
+        "children": {
+          "_label": {
+            "contentHash": "865514682d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "f2f01be8cf9f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "27fbd21ab779",
+            "anchorHash": "12c27408c3cf"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "what-is-consensus": {
+        "contentHash": "a581b65e5cc0",
+        "anchorHash": "5eb493ceb97f",
+        "labelHash": "01cce6581644",
+        "children": {
+          "_label": {
+            "contentHash": "01cce6581644",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "8e6320550c5c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "a13bebeb57e1",
+            "anchorHash": "8a5edab28263"
+          },
+          "prose:2": {
+            "contentHash": "2c0c68994a51",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "what-is-a-consensus-mechanism": {
+        "contentHash": "66060ed63b11",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "57565c63d327",
+        "children": {
+          "_label": {
+            "contentHash": "57565c63d327",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ede9419d6319",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "types-of-consensus-mechanisms": {
+        "contentHash": "5d7b483c6fca",
+        "anchorHash": "7f85ac28e449",
+        "labelHash": "440b4880382a",
+        "children": {
+          "_label": {
+            "contentHash": "440b4880382a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "proof-of-work": {
+            "contentHash": "8bb3a7fabdec",
+            "anchorHash": "d55f9c70c155",
+            "labelHash": "34acfe123632",
+            "children": {
+              "_label": {
+                "contentHash": "34acfe123632",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "cc10d9b6b522",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "pow-block-creation": {
+                "contentHash": "1362744afffc",
+                "anchorHash": "4b9f7d802648",
+                "labelHash": "56b8a54bfe04",
+                "children": {
+                  "_label": {
+                    "contentHash": "56b8a54bfe04",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:0": {
+                    "contentHash": "d1c917d1096f",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:0"
+                ]
+              },
+              "pow-security": {
+                "contentHash": "92cec8f63007",
+                "anchorHash": "c111376ad378",
+                "labelHash": "8f6fb4eb7f42",
+                "children": {
+                  "_label": {
+                    "contentHash": "8f6fb4eb7f42",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:1": {
+                    "contentHash": "0340de240d30",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "673993a95ab9",
+                    "anchorHash": "d61a7ea1fcd6"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:1",
+                  "link:0"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "pow-block-creation",
+              "pow-security"
+            ]
+          },
+          "proof-of-stake": {
+            "contentHash": "5860e86d9463",
+            "anchorHash": "257d1f607241",
+            "labelHash": "a6515d8a55f7",
+            "children": {
+              "_label": {
+                "contentHash": "a6515d8a55f7",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "d3d4fdd44397",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "pos-block-creation": {
+                "contentHash": "b14a9baf6289",
+                "anchorHash": "4b9f7d802648",
+                "labelHash": "56b8a54bfe04",
+                "children": {
+                  "_label": {
+                    "contentHash": "56b8a54bfe04",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:0": {
+                    "contentHash": "eaca0132241e",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:0"
+                ]
+              },
+              "pos-security": {
+                "contentHash": "42ee98962fa8",
+                "anchorHash": "4c033d890475",
+                "labelHash": "8f6fb4eb7f42",
+                "children": {
+                  "_label": {
+                    "contentHash": "8f6fb4eb7f42",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:1": {
+                    "contentHash": "18693a07265e",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "769e0b8515e3",
+                    "anchorHash": "0e500613f6a4"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:1",
+                  "link:0"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "pos-block-creation",
+              "pos-security"
+            ]
+          },
+          "types-of-consensus-video": {
+            "contentHash": "b5e3ba43219d",
+            "anchorHash": "bcde833beff8",
+            "labelHash": "b569a22f60b5",
+            "children": {
+              "_label": {
+                "contentHash": "b569a22f60b5",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "31a9b7304063",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:2": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "1ac2634b51a1",
+                "children": {
+                  "attr:slug": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "b01183b6330c"
+                  }
+                }
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "component:2"
+            ]
+          },
+          "sybil-chain": {
+            "contentHash": "05d84ec069bb",
+            "anchorHash": "466060f0e554",
+            "labelHash": "d539ff59c34f",
+            "children": {
+              "_label": {
+                "contentHash": "d539ff59c34f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:3": {
+                "contentHash": "0d02298981c8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "d143a4908b25",
+                "anchorHash": "84bfd2f18351"
+              },
+              "prose:4": {
+                "contentHash": "f3d5bc282c06",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "2181e171d67d",
+                "anchorHash": "42c57df8a3f5"
+              },
+              "prose:5": {
+                "contentHash": "0f549f8b37f5",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "b166abb2b371",
+                "anchorHash": "fa28e105e9d8"
+              },
+              "prose:6": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:3",
+              "link:0",
+              "prose:4",
+              "link:1",
+              "prose:5",
+              "link:2",
+              "prose:6"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "proof-of-work",
+          "proof-of-stake",
+          "types-of-consensus-video",
+          "sybil-chain"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "ba0f0c2b240e",
+        "anchorHash": "846134cbe233",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "dc45d40f8146",
+            "anchorHash": "90f959a8fa65"
+          },
+          "prose:6": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "07ada6e69b51",
+            "anchorHash": "3e313435a157"
+          },
+          "prose:7": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "86f45cb5b91e",
+            "anchorHash": "ed350422c042"
+          },
+          "prose:8": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "b5ff87d9c4ea",
+            "anchorHash": "bf72ca41d5b2"
+          },
+          "prose:9": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "d4da9b809bff",
+            "anchorHash": "28f25e150b18"
+          },
+          "prose:10": {
+            "contentHash": "123ee5ac559d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      },
+      "related-topics": {
+        "contentHash": "135fef007c72",
+        "anchorHash": "57a786f26b04",
+        "labelHash": "5a38da0df0ab",
+        "children": {
+          "_label": {
+            "contentHash": "5a38da0df0ab",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "735f891366e9",
+            "anchorHash": "d61a7ea1fcd6"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "bf94ba9e2d86",
+            "anchorHash": "1a9721cb05be"
+          },
+          "prose:6": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "c7a6db281618",
+            "anchorHash": "0e500613f6a4"
+          },
+          "prose:7": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "e98666fe5aaf",
+            "anchorHash": "6051eacd0386"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:authors",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "prerequisites",
+      "what-is-consensus",
+      "what-is-a-consensus-mechanism",
+      "types-of-consensus-mechanisms",
+      "further-reading",
+      "related-topics"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}

@@ -1,13 +1,11 @@
 "use client"
-
+import { useTranslations } from "next-intl"
 import { ConnectButton } from "@rainbow-me/rainbowkit"
 
 import { Button } from "@/components/ui/buttons/Button"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 const CollectiblesConnectButton = () => {
-  const { t } = useTranslation("page-collectibles")
+  const t = useTranslations("page-collectibles")
   return (
     <ConnectButton.Custom>
       {({ account, chain, openConnectModal, mounted }) => {

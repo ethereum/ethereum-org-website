@@ -1,0 +1,341 @@
+{
+  "version": 1,
+  "locale": "tr",
+  "translatedAt": "2026-08-10T23:39:55.906Z",
+  "englishManifestHash": "15e6f3a5a87e",
+  "placeholderOrder": [
+    "LINK-1ebcc5",
+    "CODE-a48746",
+    "CODEBLOCK-b1208f",
+    "CODE-8a8629",
+    "CODE-a48746",
+    "CODEBLOCK-90c5bf",
+    "CODE-aaf232",
+    "CODE-c9046f",
+    "CODE-5cf7d7",
+    "CODE-dbd3a4",
+    "CODE-9c2aa1",
+    "CODE-b2ff60",
+    "CODE-be158a",
+    "CODE-6c4858",
+    "CODE-caa79a",
+    "CODE-89455d",
+    "CODE-6024b6",
+    "CODE-665581",
+    "CODE-d0c2eb",
+    "CODE-94e6f0",
+    "CODE-d21f85",
+    "CODE-23d611",
+    "CODE-e904c9",
+    "CODE-0cb1dd",
+    "CODE-bfac31",
+    "CODE-025409",
+    "CODE-fe3003",
+    "CODE-320e00",
+    "CODE-636485",
+    "CODE-d6dc6b",
+    "CODE-8ff084",
+    "CODE-cb3f91",
+    "CODEBLOCK-dbca55",
+    "CODE-56dc6d",
+    "CODE-3ddeb5",
+    "CODE-dd2026",
+    "CODE-6a4444",
+    "CODE-3b3e1a",
+    "CODE-2290d7",
+    "CODE-a4cc6b",
+    "CODE-5d2d3c",
+    "CODE-9af299",
+    "CODE-862417",
+    "CODE-9af299",
+    "LINK-5ff73e",
+    "CODE-ef260e",
+    "LINK-f21d55",
+    "LINK-c2821f",
+    "LINK-0da87f"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-b1208f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-90c5bf": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-dbca55": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-a48746": {
+      "type": "inline-code",
+      "values": {
+        "content": "index.md"
+      }
+    },
+    "CODE-8a8629": {
+      "type": "inline-code",
+      "values": {
+        "content": "blockchain-101-visual-demo"
+      }
+    },
+    "CODE-aaf232": {
+      "type": "inline-code",
+      "values": {
+        "content": "title"
+      }
+    },
+    "CODE-c9046f": {
+      "type": "inline-code",
+      "values": {
+        "content": "description"
+      }
+    },
+    "CODE-5cf7d7": {
+      "type": "inline-code",
+      "values": {
+        "content": "lang"
+      }
+    },
+    "CODE-dbd3a4": {
+      "type": "inline-code",
+      "values": {
+        "content": "en"
+      }
+    },
+    "CODE-9c2aa1": {
+      "type": "inline-code",
+      "values": {
+        "content": "youtubeId"
+      }
+    },
+    "CODE-b2ff60": {
+      "type": "inline-code",
+      "values": {
+        "content": "v="
+      }
+    },
+    "CODE-be158a": {
+      "type": "inline-code",
+      "values": {
+        "content": "uploadDate"
+      }
+    },
+    "CODE-6c4858": {
+      "type": "inline-code",
+      "values": {
+        "content": "YYYY-MM-DD"
+      }
+    },
+    "CODE-caa79a": {
+      "type": "inline-code",
+      "values": {
+        "content": "duration"
+      }
+    },
+    "CODE-89455d": {
+      "type": "inline-code",
+      "values": {
+        "content": "H:MM:SS"
+      }
+    },
+    "CODE-6024b6": {
+      "type": "inline-code",
+      "values": {
+        "content": "M:SS"
+      }
+    },
+    "CODE-665581": {
+      "type": "inline-code",
+      "values": {
+        "content": "educationLevel"
+      }
+    },
+    "CODE-d0c2eb": {
+      "type": "inline-code",
+      "values": {
+        "content": "beginner"
+      }
+    },
+    "CODE-94e6f0": {
+      "type": "inline-code",
+      "values": {
+        "content": "intermediate"
+      }
+    },
+    "CODE-d21f85": {
+      "type": "inline-code",
+      "values": {
+        "content": "advanced"
+      }
+    },
+    "CODE-23d611": {
+      "type": "inline-code",
+      "values": {
+        "content": "topic"
+      }
+    },
+    "CODE-e904c9": {
+      "type": "inline-code",
+      "values": {
+        "content": "format"
+      }
+    },
+    "CODE-0cb1dd": {
+      "type": "inline-code",
+      "values": {
+        "content": "explainer"
+      }
+    },
+    "CODE-bfac31": {
+      "type": "inline-code",
+      "values": {
+        "content": "presentation"
+      }
+    },
+    "CODE-025409": {
+      "type": "inline-code",
+      "values": {
+        "content": "interview"
+      }
+    },
+    "CODE-fe3003": {
+      "type": "inline-code",
+      "values": {
+        "content": "tutorial"
+      }
+    },
+    "CODE-320e00": {
+      "type": "inline-code",
+      "values": {
+        "content": "panel"
+      }
+    },
+    "CODE-636485": {
+      "type": "inline-code",
+      "values": {
+        "content": "author"
+      }
+    },
+    "CODE-d6dc6b": {
+      "type": "inline-code",
+      "values": {
+        "content": "breadcrumb"
+      }
+    },
+    "CODE-8ff084": {
+      "type": "inline-code",
+      "values": {
+        "content": "customThumbnailUrl"
+      }
+    },
+    "CODE-cb3f91": {
+      "type": "inline-code",
+      "values": {
+        "content": "---"
+      }
+    },
+    "CODE-56dc6d": {
+      "type": "inline-code",
+      "values": {
+        "content": "###"
+      }
+    },
+    "CODE-3ddeb5": {
+      "type": "inline-code",
+      "values": {
+        "content": "how-ethereum-works"
+      }
+    },
+    "CODE-dd2026": {
+      "type": "inline-code",
+      "values": {
+        "content": "network-upgrades"
+      }
+    },
+    "CODE-6a4444": {
+      "type": "inline-code",
+      "values": {
+        "content": "roadmap-and-priorities"
+      }
+    },
+    "CODE-3b3e1a": {
+      "type": "inline-code",
+      "values": {
+        "content": "scaling-and-layer-2"
+      }
+    },
+    "CODE-2290d7": {
+      "type": "inline-code",
+      "values": {
+        "content": "use-cases"
+      }
+    },
+    "CODE-a4cc6b": {
+      "type": "inline-code",
+      "values": {
+        "content": "privacy"
+      }
+    },
+    "CODE-5d2d3c": {
+      "type": "inline-code",
+      "values": {
+        "content": "security"
+      }
+    },
+    "CODE-9af299": {
+      "type": "inline-code",
+      "values": {
+        "content": "community-stories"
+      }
+    },
+    "CODE-862417": {
+      "type": "inline-code",
+      "values": {
+        "content": "events"
+      }
+    },
+    "CODE-ef260e": {
+      "type": "inline-code",
+      "values": {
+        "content": "dev"
+      }
+    },
+    "LINK-1ebcc5": {
+      "type": "link",
+      "values": {
+        "url": "/videos/"
+      }
+    },
+    "LINK-5ff73e": {
+      "type": "link",
+      "values": {
+        "url": "/stories/"
+      }
+    },
+    "LINK-f21d55": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml"
+      }
+    },
+    "LINK-c2821f": {
+      "type": "link",
+      "values": {
+        "url": "mailto:website@ethereum.org"
+      }
+    },
+    "LINK-0da87f": {
+      "type": "link",
+      "values": {
+        "url": "/terms-of-use/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-08-10T23:39:55.906Z",
+      "status": "success"
+    }
+  }
+}

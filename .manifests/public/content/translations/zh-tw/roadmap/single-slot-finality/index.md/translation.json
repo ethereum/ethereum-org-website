@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "locale": "zh-tw",
+  "translatedAt": "2026-06-08T10:43:33.287Z",
+  "englishManifestHash": "6829f7237d78",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "COMPONENT-82e81d",
+    "CODE-fa30eb",
+    "CODE-61c336",
+    "LINK-1a18df",
+    "LINK-b1ab2c",
+    "LINK-6aface",
+    "LINK-496e06",
+    "LINK-ab04aa"
+  ],
+  "placeholderMap": {
+    "COMPONENT-82e81d": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "/roadmap/single-slot-finality",
+        "eventName": "clicked Why can't we hear SSF today?"
+      }
+    },
+    "CODE-fa30eb": {
+      "type": "inline-code",
+      "values": {
+        "content": "32 slots * 64 committees * 256 validators per committee = 524,288 validators per epoch"
+      }
+    },
+    "CODE-61c336": {
+      "type": "inline-code",
+      "values": {
+        "content": "2/3 * 125,000 * 32 = ~2.6 million ETH"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-1a18df": {
+      "type": "link",
+      "values": {
+        "url": "https://youtu.be/ojBgyFl6-v4?t=755"
+      }
+    },
+    "LINK-b1ab2c": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/verkle-trees/"
+      }
+    },
+    "LINK-6aface": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/danksharding/"
+      }
+    },
+    "LINK-496e06": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=nPgUKNPWXNI"
+      }
+    },
+    "LINK-ab04aa": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@vbuterin/single_slot_finality"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T10:43:33.287Z",
+      "status": "success"
+    }
+  }
+}

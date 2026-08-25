@@ -1,31 +1,31 @@
 ---
-title: "WebSocketを利用する"
-description: "WebSocketsとAlchemyを使って、JSON-RPCリクエストを作成し、イベントを講読するためのガイド"
-author: "Elan Halpern"
+title: "WebSocketの使用"
+description: "WebSocketとAlchemyを使用してJSON-RPCリクエストを行い、イベントをサブスクライブするためのガイド。"
+author: "エラン・ハルパーン"
 lang: ja
-tags: [ "Alchemy", "WebSockets", "クエリ", "JavaScript" ]
+tags: ["Alchemy", "WebSocket", "クエリ", "JavaScript"]
 skill: beginner
-breadcrumb: "WebSockets"
+breadcrumb: WebSocket
 source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
 ---
 
-このガイドでは、初級者向けに、WebSocketとAlchemyを使ってイーサリアムブロックチェーンにリクエストを送信する方法を学びます。
+これは、WebSocketとAlchemyを使用してイーサリアムブロックチェーンにリクエストを行うための入門ガイドです。
 
 ## WebSocketとHTTPの比較 {#websockets-vs-http}
 
-HTTPとは異なり、WebSocketでは特定の情報が必要な場合にリクエストを継続的に実行する必要はありません。 WebSocketでは、正しく設定されていれば、ネットワーク接続が継続され、変更をリッスンすることができます。
+HTTPとは異なり、WebSocketを使用すると、特定の情報が必要なときに継続的にリクエストを行う必要はありません。WebSocketは（正しく行われれば）ネットワーク接続を維持し、変更をリッスンします。
 
-どのネットワーク接続でも同様ですが、WebSocketが中断なしに永続的にオープンであると想定すべきではありませんが、手動で切断された接続に適切に対処し、再接続するのは手間がかかる場合があります。 WebSocketのもう一つの欠点は、応答にはエラーメッセージのみが含まれ、HTTPステータスコードを取得できないという点です。
+他のネットワーク接続と同様に、WebSocketが中断されることなく永久に開いたままであると想定すべきではありませんが、切断された接続の処理と再接続を手動で正しく行うことは難しい場合があります。WebSocketのもう1つの欠点は、レスポンスでHTTPステータスコードを取得できず、エラーメッセージのみを取得することです。
 
-[Alchemy Web3](https://docs.alchemy.com/reference/api-overview)は、WebSocketの障害と再試行の処理を、設定不要で自動的に追加します。
+[Alchemy Web3](https://docs.alchemy.com/reference/api-overview)は、設定不要でWebSocketの失敗と再試行の処理を自動的に追加します。
 
 ## 試してみる {#try-it-out}
 
-WebSocketをテストする最も簡単な方法は、[wscat](https://github.com/websockets/wscat)のようなWebSocketリクエストを行うためのコマンドラインツールをインストールすることです。 wscatを使って、次のようにリクエストを送ります：
+WebSocketをテストする最も簡単な方法は、[wscat](https://github.com/websockets/wscat)などのWebSocketリクエストを行うためのコマンドラインツールをインストールすることです。wscatを使用すると、次のようにリクエストを送信できます。
 
-_注：Alchemyアカウントをお持ちの場合は、`demo`をご自身のAPIキーに置き換えることができます。 [こちらで無料のAlchemyアカウントにサインアップしてください！](https://auth.alchemy.com/signup)_
+_注：Alchemyアカウントをお持ちの場合は、`demo`をご自身のAPIキーに置き換えることができます。[無料のAlchemyアカウントの登録はこちらから！](https://auth.alchemy.com/signup)_
 
 ```
 wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
@@ -33,20 +33,19 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 >  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
 
 <  {"jsonrpc":  "2.0", "result":  "0xb2d05e00", "id": 0}
-
 ```
 
 ## WebSocketの使用方法 {#how-to-use-websockets}
 
-まず、アプリにWebSocketのURLを入力してWebSocketを開きます。 アプリのWebSocket URLは、[ダッシュボード](https://dashboard.alchemy.com/)でアプリのページを開き、「View Key」をクリックして確認できます。 アプリのWebSocket用URLはHTTPリクエスト用のURLとは異なっており、両方とも「View Key」で確認できる点に注意してください。
+まず、アプリのWebSocket URLを使用してWebSocketを開きます。アプリのWebSocket URLは、[ダッシュボード](https://dashboard.alchemy.com/)でアプリのページを開き、「View Key」をクリックすることで確認できます。アプリのWebSocket用URLはHTTPリクエスト用URLとは異なりますが、どちらも「View Key」をクリックすることで確認できます。
 
-![AlchemyダッシュボードでWebSocket URLを見つける場所](./use-websockets.gif)
+![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.mp4#602x280)
 
-[Alchemy APIリファレンス](https://www.alchemy.com/docs/reference/api-overview)に記載されているAPIはすべて、WebSocket経由で使用できます。 これには、HTTP POSTリクエストの本文として送信する場合と同じペイロードを使用しますが、このペイロードをWebSocket経由で送信します。
+[Alchemy APIリファレンス](https://www.alchemy.com/docs/reference/api-overview)に記載されているAPIはすべて、WebSocket経由で使用できます。これを行うには、HTTP POSTリクエストの本文として送信されるのと同じペイロードを使用しますが、代わりにそのペイロードをWebSocket経由で送信します。
 
-## Web3を使用 {#with-web3}
+## Web3を使用する場合 {#with-web3}
 
-Web3のようなクライアント向けライブラリを使用する場合、WebSocketへの移行は簡単です。 Web3クライアントのインスタンスを作成する際に、HTTP URLではなくWebSocket URLを渡すだけでよいです。 以下の例をご覧ください：
+Web3のようなクライアントライブラリを使用しながらWebSocketに移行するのは簡単です。Web3クライアントをインスタンス化する際に、HTTPのURLの代わりにWebSocketのURLを渡すだけです。例：
 
 ```js
 const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
@@ -56,38 +55,38 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893
 
 ## サブスクリプションAPI {#subscription-api}
 
-WebSocket経由で接続する場合、`eth_subscribe`と`eth_unsubscribe`の2つの追加メソッドを使用できます。 これらのメソッドを使用することで、特定のイベントをリッスンし、すぐに通知を受け取ることができるようになります。
+WebSocket経由で接続している場合、`eth_subscribe`と`eth_unsubscribe`の2つの追加メソッドを使用できます。これらのメソッドを使用すると、特定のイベントをリッスンし、すぐに通知を受け取ることができます。
 
 ### `eth_subscribe` {#eth-subscribe}
 
-特定のイベントを対象とする新規のサブスクリプションを作成しましょう。 [`eth_subscribe`の詳細はこちら](https://docs.alchemy.com/reference/eth-subscribe)。
+指定されたイベントの新しいサブスクリプションを作成します。[`eth_subscribe`の詳細はこちら](https://docs.alchemy.com/reference/eth-subscribe)。
 
 #### パラメータ {#parameters}
 
-1. サブスクリプションのタイプ
+1. サブスクリプションタイプ
 2. オプションのパラメータ
 
-最初の引数では、リッスンするイベントのタイプを指定します。 2番目の引数では、最初の引数に依存したオプションを追加します。 以下では、説明タイプ、タイプ別のオプション、およびイベントのペイロードについて説明します。
+最初の引数は、リッスンするイベントのタイプを指定します。2番目の引数には、最初の引数に依存する追加のオプションが含まれます。さまざまなサブスクリプションタイプ、そのオプション、およびイベントペイロードについて以下で説明します。
 
 #### 戻り値 {#returns}
 
-サブスクリプションID：このIDは、受信したすべてのイベントに添付され、`eth_unsubscribe`を使用してサブスクリプションをキャンセルするためにも使用できます。
+サブスクリプションID：このIDは受信したすべてのイベントに添付され、`eth_unsubscribe`を使用してサブスクリプションをキャンセルするためにも使用できます。
 
 #### サブスクリプションイベント {#subscription-events}
 
-サブスクリプションが有効である場合、以下のフィールドを含むオブジェクトであるイベントが送信されます：
+サブスクリプションがアクティブな間、以下のフィールドを持つオブジェクトであるイベントを受信します。
 
-- `jsonrpc`: 常に「2.0」
-- `method`: 常に「eth_subscription」
+- `jsonrpc`: 常に "2.0"
+- `method`: 常に "eth_subscription"
 - `params`: 以下のフィールドを持つオブジェクト：
-  - `subscription`: このサブスクリプションを作成した`eth_subscribe`呼び出しによって返されるサブスクリプションID。
-  - `result`: サブスクリプションの種類によって内容が異なるオブジェクト。
+  - `subscription`: このサブスクリプションを作成した`eth_subscribe`呼び出しによって返されたサブスクリプションID。
+  - `result`: サブスクリプションのタイプによって内容が異なるオブジェクト。
 
-#### サブスクリプションの種類 {#subscription-types}
+#### サブスクリプションタイプ {#subscription-types}
 
 1. `alchemy_newFullPendingTransactions`
 
-保留状態に追加されたすべてのトランザクションにつき、トランザクション情報を返します。 このサブスクリプションタイプは、標準のWeb3呼び出し`web3.eth.subscribe(\"pendingTransactions\")`と同様に保留中のトランザクションをサブスクライブしますが、トランザクションハッシュだけでなく_完全なトランザクション情報_を発行する点で異なります。
+保留中の状態に追加されたすべてのトランザクションのトランザクション情報を返します。このサブスクリプションタイプは、標準のWeb3呼び出しである`web3.eth.subscribe("pendingTransactions")`と同様に保留中のトランザクションをサブスクライブしますが、トランザクションハッシュだけでなく_完全なトランザクション情報_を出力する点が異なります。
 
 例：
 
@@ -122,9 +121,9 @@ WebSocket経由で接続する場合、`eth_subscribe`と`eth_unsubscribe`の2�
 
 2. `newHeads`
 
-ブロックチェーンの再編成時も含む、ブロックチェーンに新たなヘッダーが追加された際に常にイベントを発行します。
+チェーンの再編成（リオーグ）中を含め、新しいヘッダーがチェーンに追加されるたびにイベントを出力します。
 
-このサブスクリプションでは、ブロックチェーンの再編成が実行された場合に、新たなチェーンに対するすべてのヘッダーを含むイベントが発行されます。 特に、同じ高さを持つ複数のヘッダーが発行される場合があるため、このような状況が発生した場合は、より後ろのヘッダーを再編成後の適切なヘッダーと見なす必要があります。
+チェーンのリオーグが発生した場合、このサブスクリプションは新しいチェーンのすべての新しいヘッダーを含むイベントを出力します。具体的には、同じ高さで複数のヘッダーが出力される場合があり、これが発生した場合は、後のヘッダーをリオーグ後の正しいヘッダーとして扱う必要があります。
 
 例：
 
@@ -159,26 +158,26 @@ WebSocket経由で接続する場合、`eth_subscribe`と`eth_unsubscribe`の2�
 
 3. `logs`
 
-新たに追加されたブロックのうち、指定したフィルター条件に合致した部分のログを発行します。
+指定されたフィルター条件に一致する、新しく追加されたブロックの一部であるログを出力します。
 
-チェーンの再編成が発生した場合、古いチェーンのブロックの一部であるログは、`removed`プロパティが`true`に設定されて再度発行されます。 さらに新しいチェーン上のブロックに含まれるログも発行されるため、再編成時には、同一のトランザクションのログが複数回表示される場合があります。
+チェーンのリオーグが発生した場合、古いチェーンのブロックの一部であるログは、プロパティ`removed`が`true`に設定されて再度出力されます。さらに、新しいチェーンのブロックの一部であるログが出力されるため、リオーグの場合には同じトランザクションのログが複数回表示される可能性があります。
 
 パラメータ
 
-1. 以下のフィールドを持つオブジェクトです：
-   - `address` (オプション)：アドレスを表す文字列、またはそのような文字列の配列のいずれか。
-     - これらのアドレスのいずれかで作成したログのみが発行されます。
+1. 以下のフィールドを持つオブジェクト：
+   - `address` (オプション): アドレスを表す文字列、またはそのような文字列の配列。
+     - これらのアドレスのいずれかから作成されたログのみが出力されます。
    - `topics`: トピック指定子の配列。
      - 各トピック指定子は、`null`、トピックを表す文字列、または文字列の配列のいずれかです。
-     - `null`でない配列内の各位置は、発行されるログを、その位置に指定されたトピックのいずれかを持つもののみに制限します。
+     - 配列内の`null`ではない各位置は、出力されるログを、その位置に指定されたトピックのいずれかを持つもののみに制限します。
 
-トピック仕様の例：
+トピック指定の例：
 
-- `[]`: すべてのトピックが許可されます。
-- `[A]`: 最初の位置にA (以降は任意)。
-- `[null, B]`: 最初の位置は任意、2番目の位置にB (以降は任意)。
-- `[A, B]`: 最初の位置にA、2番目の位置にB (以降は任意)。
-- `[[A, B], [A, B]]`: 最初の位置に(AまたはB)、2番目の位置に(AまたはB) (以降は任意)。
+- `[]`: 任意のトピックを許可。
+- `[A]`: 最初の位置にA（およびそれ以降は任意）。
+- `[null, B]`: 最初の位置は任意で、2番目の位置にB（およびそれ以降は任意）。
+- `[A, B]`: 最初の位置にA、2番目の位置にB（およびそれ以降は任意）。
+- `[[A, B], [A, B]]`: 最初の位置に（AまたはB）、2番目の位置に（AまたはB）（およびそれ以降は任意）。
 
 例：
 
@@ -208,7 +207,7 @@ WebSocket経由で接続する場合、`eth_subscribe`と`eth_unsubscribe`の2�
 
 ### `eth_unsubscribe` {#eth-unsubscribe}
 
-新たにイベントが送信されないように、既存のサブスクリプションを取り消します。
+既存のサブスクリプションをキャンセルし、それ以降のイベントが送信されないようにします。
 
 パラメータ
 
@@ -216,7 +215,7 @@ WebSocket経由で接続する場合、`eth_subscribe`と`eth_unsubscribe`の2�
 
 戻り値
 
-サブスクリプションのキャンセルに成功した場合は`true`、指定されたIDを持つサブスクリプションが存在しなかった場合は`false`。
+サブスクリプションが正常にキャンセルされた場合は`true`、指定されたIDのサブスクリプションが存在しなかった場合は`false`。
 
 例：
 
@@ -227,8 +226,6 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 -X POST
 -H "Content-Type: application/json"
 -d '{"id": 1, "method": "eth_unsubscribe", "params": ["0x9cef478923ff08bf67fde6c64013158d"]}'
-
-
 ```
 
 **結果**
@@ -243,4 +240,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[Alchemyに無料でサインアップ](https://auth.alchemy.com)し、[ドキュメント](https://www.alchemy.com/docs/)をご覧ください。最新のニュースについては、[Twitter](https://x.com/AlchemyPlatform)でフォローしてください。
+無料で[Alchemyに登録](https://auth.alchemy.com)し、[ドキュメント](https://www.alchemy.com/docs/)を確認してください。最新ニュースについては、[ツイッター](https://x.com/AlchemyPlatform)でフォローしてください。

@@ -1,7 +1,10 @@
 {
-  "table-active": "hoạt động",
+  "table-active": "đang hoạt động",
+  "table-browser-engines": "Công cụ trình duyệt",
+  "table-desktop-platforms": "Nền tảng máy tính để bàn",
   "table-filters": "Bộ lọc",
+  "table-mobile-platforms": "Nền tảng di động",
+  "table-reset-filters": "Đặt lại",
   "table-showing": "Đang hiển thị",
-  "table-reset-filters": "Cài lại",
-  "table-what-are-you-looking-for": "Bạn đang tìm kiếm gì?"
+  "table-what-are-you-looking-for": "Bạn đang tìm kiếm gì?"
 }

@@ -2,7 +2,7 @@
 
 > **Source:** Gemini (2026-03-18), confirmed by project maintainer
 > **Applies to:** All 13 non-Latin-script locales in the transliteration pipeline
-> **Used by:** sanitizer (post_import_sanitize.ts), transliteration script (transliterate.ts), review agents
+> **Used by:** sanitizer (`src/scripts/intl-pipeline/intl-sanitizer.ts`), ETHGlossary integration, review agents
 
 ## Quick Reference Table
 
@@ -141,7 +141,7 @@ acts as a strong RTL character that anchors the directionality:
 
 ## Impact on Sanitizer and Transliteration Scripts
 
-### Sanitizer (post_import_sanitize.ts)
+### Sanitizer (`src/scripts/intl-pipeline/intl-sanitizer.ts`)
 
 Current behavior and needed changes:
 

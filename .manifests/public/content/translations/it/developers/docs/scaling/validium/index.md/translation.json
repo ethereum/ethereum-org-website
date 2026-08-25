@@ -1,0 +1,219 @@
+{
+  "version": 1,
+  "locale": "it",
+  "translatedAt": "2026-06-17T22:49:19.544Z",
+  "englishManifestHash": "5262df1ee632",
+  "placeholderOrder": [
+    "LINK-bb4ba0",
+    "LINK-e52381",
+    "LINK-a21a82",
+    "LINK-60c6c9",
+    "LINK-061e30",
+    "LINK-18bff2",
+    "LINK-d7ae75",
+    "LINK-6100a0",
+    "LINK-9ed885",
+    "LINK-307aaa",
+    "LINK-3dc3d4",
+    "CODE-6ba9f2",
+    "LINK-db24f2",
+    "LINK-be79e6",
+    "LINK-7970b8",
+    "LINK-6c4cfe",
+    "LINK-b82be0",
+    "LINK-ddb2fa",
+    "LINK-cd3e6d",
+    "LINK-76de4c",
+    "LINK-fc9a23",
+    "LINK-4bb1b8",
+    "LINK-fc49dc",
+    "LINK-04cf3d",
+    "LINK-8aedeb",
+    "LINK-aae8af",
+    "LINK-0ca712",
+    "LINK-98ec81",
+    "LINK-05f33e"
+  ],
+  "placeholderMap": {
+    "CODE-6ba9f2": {
+      "type": "inline-code",
+      "values": {
+        "content": "calldata"
+      }
+    },
+    "LINK-bb4ba0": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/"
+      }
+    },
+    "LINK-e52381": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/zk-rollups/"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-60c6c9": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263"
+      }
+    },
+    "LINK-061e30": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/"
+      }
+    },
+    "LINK-18bff2": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2"
+      }
+    },
+    "LINK-d7ae75": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#zk-proof"
+      }
+    },
+    "LINK-6100a0": {
+      "type": "link",
+      "values": {
+        "url": "https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/"
+      }
+    },
+    "LINK-9ed885": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/merkle-proofs-for-offline-data-integrity/"
+      }
+    },
+    "LINK-307aaa": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-3dc3d4": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2/"
+      }
+    },
+    "LINK-db24f2": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/DD7GyItYQ02d0ax_X-UbWg?view"
+      }
+    },
+    "LINK-be79e6": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/starkware/data-availability-e5564c416424"
+      }
+    },
+    "LINK-7970b8": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf"
+      }
+    },
+    "LINK-6c4cfe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-b82be0": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/overviews/zkevm"
+      }
+    },
+    "LINK-ddb2fa": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/plasma/"
+      }
+    },
+    "LINK-cd3e6d": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/danksharding/"
+      }
+    },
+    "LINK-76de4c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/sidechains/"
+      }
+    },
+    "LINK-fc9a23": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.starkware.co/starkex-v4/starkex-deep-dive/data-availability-modes#validium"
+      }
+    },
+    "LINK-4bb1b8": {
+      "type": "link",
+      "values": {
+        "url": "https://starkware.co/starkex/"
+      }
+    },
+    "LINK-fc49dc": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf"
+      }
+    },
+    "LINK-04cf3d": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.zksync.io/zksync-protocol/rollup/data-availability"
+      }
+    },
+    "LINK-8aedeb": {
+      "type": "link",
+      "values": {
+        "url": "https://zksync.io/"
+      }
+    },
+    "LINK-aae8af": {
+      "type": "link",
+      "values": {
+        "url": "https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two"
+      }
+    },
+    "LINK-0ca712": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263"
+      }
+    },
+    "LINK-98ec81": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/starkware/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb"
+      }
+    },
+    "LINK-05f33e": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T22:49:19.544Z",
+      "status": "success"
+    }
+  }
+}

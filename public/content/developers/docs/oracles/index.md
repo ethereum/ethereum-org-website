@@ -2,6 +2,7 @@
 title: Oracles
 description: Oracles provide Ethereum smart contracts with access to real-world data, unlocking more use-cases and greater value for users.
 lang: en
+authors: ["Patrick Collins"]
 ---
 
 Oracles are applications that produce data feeds that make offchain data sources available to the blockchain for smart contracts. This is necessary because Ethereum-based smart contracts cannot, by default, access information stored outside the blockchain network.
@@ -402,7 +403,7 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 
 **[Pyth Network](https://pyth.network/)** - _The Pyth network is a first-party financial oracle network designed to publish continuous real-world data onchain in a tamper-resistant, decentralized, and self-sustainable environment._
 
-**[API3 DAO](https://www.api3.org/)** - _API3 DAO is delivering first-party oracle solutions that deliver greater source transparency, security and scalability in a decentralized solution for smart contracts_
+**[API3 DAO](https://api3.org/)** - _API3 DAO is delivering first-party oracle solutions that deliver greater source transparency, security and scalability in a decentralized solution for smart contracts_
 
 **[Supra](https://supra.com/)** - A vertically integrated toolkit of cross-chain solutions that interlink all blockchains, public (L1s and L2s) or private (enterprises), providing decentralized oracle price feeds that can be used for onchain and offchain use-cases. 
 
@@ -430,7 +431,8 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 **Tutorials**
 
 - [How to Fetch the Current Price of Ethereum in Solidity](https://blog.chain.link/fetch-current-crypto-price-data-solidity/) — _Chainlink_
-- [Consuming Oracle Data](https://docs.chroniclelabs.org/Developers/tutorials/Remix) — _Chronicle_ 
+- [Consuming Oracle Data](https://docs.chroniclelabs.org/Developers/tutorials/Remix) — _Chronicle_
+- [Oracles Challenge](https://speedrunethereum.com/challenge/oracles) - _Speedrun Ethereum_
 
 **Example projects**
 

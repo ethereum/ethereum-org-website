@@ -43,6 +43,8 @@ import {
 import { slugify } from "@/lib/utils/url"
 import { formatStringList } from "@/lib/utils/wallets"
 
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
 import ScreenshotSwiper from "./_components/ScreenshotSwiper"
 import AppsAppJsonLD from "./page-jsonld"
 
@@ -137,6 +139,13 @@ const Page = async (props: {
     locale as Lang
   )
 
+  const hasChainInfo = (app.networks as ChainName[]).length > 0
+
+  const allImages = [
+    ...(app.bannerImage ? [app.bannerImage] : []),
+    ...app.screenshots,
+  ]
+
   return (
     <>
       <AppsAppJsonLD locale={locale} app={app} contributors={contributors} />
@@ -148,13 +157,13 @@ const Page = async (props: {
                 <BreadcrumbItem>
                   <BreadcrumbLink href="/">Ethereum.org</BreadcrumbLink>
                 </BreadcrumbItem>
-                <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
                   /
                 </BreadcrumbSeparator>
                 <BreadcrumbItem>
                   <BreadcrumbLink href="/apps">ALL APPS</BreadcrumbLink>
                 </BreadcrumbItem>
-                <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
                   /
                 </BreadcrumbSeparator>
                 <BreadcrumbItem>
@@ -182,29 +191,36 @@ const Page = async (props: {
                     </div>
                     <h1 className="mt-0 text-xl lg:text-5xl">{app.name}</h1>
                     <div className="flex flex-col items-start gap-2 lg:flex-row lg:items-center">
-                      <div className="flex flex-row items-center gap-2">
-                        <ChainImages
-                          chains={app.networks as ChainName[]}
-                          className="mt-2"
-                        />
-                        <p className="text-sm text-body-medium">
-                          by {app.parentCompany}
-                        </p>
-                      </div>
-                      <div className="flex flex-row items-center">
-                        <LanguagesIcon className="size-6" />
-                        <p className="text-sm text-body-medium">
-                          {formatStringList(
-                            formatLanguageNames(app.languages),
-                            5
-                          )}{" "}
-                          <SupportedLanguagesTooltip
-                            supportedLanguages={formatLanguageNames(
-                              app.languages
-                            )}
-                          />
-                        </p>
-                      </div>
+                      {(hasChainInfo || app.parentCompany) && (
+                        <div className="flex flex-row items-center gap-2">
+                          {hasChainInfo && (
+                            <ChainImages chains={app.networks as ChainName[]} />
+                          )}
+                          {app.parentCompany && (
+                            <p className="text-sm text-body-medium">
+                              {t("page-apps-by-company", {
+                                company: app.parentCompany,
+                              })}
+                            </p>
+                          )}
+                        </div>
+                      )}
+                      {app.languages.length > 0 && (
+                        <div className="flex flex-row items-center">
+                          <LanguagesIcon className="size-6" />
+                          <p className="text-sm text-body-medium">
+                            {formatStringList(
+                              formatLanguageNames(app.languages),
+                              5
+                            )}{" "}
+                            <SupportedLanguagesTooltip
+                              supportedLanguages={formatLanguageNames(
+                                app.languages
+                              )}
+                            />
+                          </p>
+                        </div>
+                      )}
                     </div>
                   </div>
                   <div className="flex flex-col gap-4 lg:flex-row">
@@ -302,7 +318,7 @@ const Page = async (props: {
               {nextApp && (
                 <LinkBox className="group hidden flex-row items-center rounded-lg p-3 hover:bg-background-highlight sm:flex">
                   <div className="mr-2 flex flex-col text-right">
-                    <p className="text-nowrap text-sm text-gray-500">
+                    <p className="text-sm text-nowrap text-gray-500">
                       {t("page-apps-see-next")}
                     </p>
                     <p className="text-primary group-hover:text-primary-hover">
@@ -334,7 +350,7 @@ const Page = async (props: {
                 app.description
               )}
             </p>
-            <div className="flex h-fit w-full flex-col gap-4 rounded-2xl border bg-background p-8 md:row-span-2 md:w-44">
+            <div className="flex h-fit w-full flex-col gap-4 rounded-base border bg-background p-8 md:row-span-2 md:w-44">
               <h3 className="text-lg">{t("page-apps-info-title")}</h3>
               <div>
                 <p className="text-sm text-body-medium">
@@ -355,20 +371,17 @@ const Page = async (props: {
                 <p className="text-sm">{getTimeAgo(app.lastUpdated)}</p>
               </div>
             </div>
-            {app.screenshots.length > 0 && (
+            {allImages.length > 0 && (
               <div className="flex flex-col gap-4">
                 <h3 className="text-2xl">{t("page-apps-gallery-title")}</h3>
-                <ScreenshotSwiper
-                  screenshots={app.screenshots}
-                  appName={app.name}
-                />
+                <ScreenshotSwiper screenshots={allImages} appName={app.name} />
               </div>
             )}
           </div>
 
           {relatedApps.length > 0 && (
             <div className="flex flex-col px-4 py-10 md:px-8">
-              <div className="flex w-full flex-col items-center gap-8 rounded-2xl bg-gradient-to-t from-blue-500/20 from-10% to-blue-500/5 to-90% p-12 px-4 md:px-8">
+              <div className="flex w-full flex-col items-center gap-8 rounded-base bg-tint-accent-a p-12 px-4 md:px-8">
                 <h2>{t("page-apps-more-apps-like-this")}</h2>
                 <div className="flex w-full flex-col gap-4 lg:flex-row">
                   {relatedApps.map((relatedApp) => (
@@ -422,38 +435,53 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale, application } = params
 
-  // Fetch apps data using the new data-layer function (already cached)
-  const appsData = await getAppsData()
+  setRequestLocale(locale)
 
-  // Handle null case - throw error if required data is missing
-  if (!appsData) {
-    throw new Error("Failed to fetch apps data")
+  try {
+    // Fetch apps data using the new data-layer function (already cached)
+    const appsData = await getAppsData()
+
+    // Handle null case - throw error if required data is missing
+    if (!appsData) {
+      throw new Error("Failed to fetch apps data")
+    }
+
+    const app = Object.values(appsData)
+      .flat()
+      .find((app) => slugify(app.name) === application)
+
+    if (!app) {
+      throw new Error(`App not found: ${application}`)
+    }
+
+    const appDescriptions = await getTranslations("page-app-descriptions")
+
+    const title = `Ethereum Apps - ${app.name}` // TODO (i18n): Extract "Ethereum Apps" to namespace
+    const description = getLocalizedDescription(
+      appDescriptions,
+      "app",
+      app.name,
+      app.description
+    )
+
+    return await getMetadata({
+      locale,
+      slug: ["apps", application],
+      title,
+      description,
+    })
+  } catch (error) {
+    const t = await getTranslations({
+      locale: DEFAULT_LOCALE,
+      namespace: "common",
+    })
+
+    // Return basic metadata for invalid paths
+    return {
+      title: t("page-not-found"),
+      description: t("page-not-found-description"),
+    }
   }
-
-  const app = Object.values(appsData)
-    .flat()
-    .find((app) => slugify(app.name) === application)!
-
-  if (!app) {
-    notFound()
-  }
-
-  const appDescriptions = await getTranslations("page-app-descriptions")
-
-  const title = `Ethereum Apps - ${app.name}` // TODO (i18n): Extract "Ethereum Apps" to namespace
-  const description = getLocalizedDescription(
-    appDescriptions,
-    "app",
-    app.name,
-    app.description
-  )
-
-  return await getMetadata({
-    locale,
-    slug: ["apps", application],
-    title,
-    description,
-  })
 }
 
 export default Page

@@ -1,30 +1,29 @@
 ---
-title: Pendekezo la Uboreshaji wa Ethereum(EIPs)
-description: Taarifa za msingi unazohitaji kuelewa pendekezo la uendelezaji wa Ethereum.
+title: Utangulizi wa Mapendekezo ya Kuboresha Ethereum (EIPs)
+metaTitle: Mapendekezo ya Kuboresha Ethereum (EIPs)
+description: Taarifa za msingi unazohitaji ili kuelewa EIPs
 lang: sw
 ---
 
-# Utangulizi wa Mapendekezo ya Kuboresha Ethereum (EIPs) {#introduction-to-ethereum-improvement-proposals}
-
 ## EIPs ni nini? {#what-are-eips}
 
-[Mapendekezo ya Kuboresha Ethereum (EIPs)](https://eips.ethereum.org/) ni viwango vinavyobainisha vipengele vipya vinavyowezekana au michakato ya Ethereum. EIPs zina maelezo ya kiufundi ya mabadiliko yanayopendekezwa na hufanya kama "chanzo cha ukweli" kwa jumuiya. Visasisho vya mtandao na viwango vya matumizi ya Ethereum vinajadiliwa na kuendelezwa kupitia mchakato wa EIP.
+[Mapendekezo ya Kuboresha Ethereum (EIPs)](https://eips.ethereum.org/) ni viwango vinavyobainisha vipengele vipya au michakato inayowezekana kwa Ethereum. EIPs zina vipimo vya kiufundi vya mabadiliko yaliyopendekezwa na hufanya kama "chanzo cha ukweli" kwa jamii. Maboresho ya mtandao na viwango vya programu kwa ajili ya [Ethereum](/) hujadiliwa na kuendelezwa kupitia mchakato wa EIP.
 
-Mtu yeyote ndani ya jumuiya ya Ethereum ana uwezo wa kuunda EIP. Miongozo ya kuandika EIP imejumuishwa katika [EIP-1](https://eips.ethereum.org/EIPS/eip-1). Pendekezo la uendelezaji wa Ethereum inapaswa kwanza kutoa maelezo ya kiufundi kwa ufupi pamoja na kiasi kidogo cha sababu ya msingi.  Mwandishi wa pendekezo la uendelezaji wa Ethereum ana jukumu la kufanikisha makubaliano ndani ya jumuiya na kuandika maoni mbadala. Kutokana na kizuizi kubwa kiufundi cha kuwasilisha pendekezo la uendeleshaji wa Ethereum iliyoandikwa vizuri, waandishi wengi wa pendekezo la uendelezaji wa Ethereum kwa kawaida ni waendelezaji wa maombi rasmi au watengenezaji wa itifaki.
+Mtu yeyote ndani ya jamii ya Ethereum ana uwezo wa kuunda EIP. Miongozo ya kuandika EIPs imejumuishwa katika [EIP-1](https://eips.ethereum.org/EIPS/eip-1). EIP inapaswa kimsingi kutoa vipimo fupi vya kiufundi na kiasi kidogo cha motisha. Mwandishi wa EIP anawajibika kufikia mwafaka ndani ya jamii na kuweka kumbukumbu za maoni mbadala. Kwa kuzingatia kizuizi kikubwa cha kiufundi cha kuwasilisha EIP iliyoundwa vizuri, kihistoria, waandishi wengi wa EIP kwa kawaida ni waendelezaji wa programu au itifaki.
 
 ## Kwa nini EIPs ni muhimu? {#why-do-eips-matter}
 
-EIPs huchukua jukumu kuu katika mabadiliko yanavyotokea na kurekodiwa kwenye Ethereum. Ni njia ya watu kupendekeza, kujadili, na kupitisha mabadiliko. Kuna [aina tofauti za EIP](https://eips.ethereum.org/EIPS/eip-1#eip-types), ikiwa ni pamoja na EIP za msingi za mabadiliko ya itifaki ya kiwango cha chini ambayo huathiri makubaliano na kuhitaji uboreshaji wa mtandao kama vile [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), na ERC za viwango vya programu kama vile [EIP-20](https://eips.ethereum.org/EIPS/eip-20) na [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
+EIPs zina jukumu kuu katika jinsi mabadiliko yanavyotokea na kurekodiwa kwenye Ethereum. Ndiyo njia ya watu kupendekeza, kujadili, na kupitisha mabadiliko. Kuna [aina tofauti za EIPs](https://eips.ethereum.org/EIPS/eip-1#eip-types), ikiwa ni pamoja na EIPs za msingi kwa mabadiliko ya itifaki ya kiwango cha chini yanayoathiri mwafaka na kuhitaji uboreshaji wa mtandao kama [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), na ERCs kwa viwango vya programu kama [EIP-20](https://eips.ethereum.org/EIPS/eip-20) na [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
 
-Kila uboreshaji wa mtandao unajumuisha seti ya EIP ambazo zinahitaji kutekelezwa na kila [mteja wa Ethereum](/learn/#clients-and-nodes) kwenye mtandao. Hii inamaanisha kuwa ili ubaki kwenye makubaliano na wateja wengine kwenye mtandao mkuu wa Ethereum, watengenezaji wa wateja wanahitaji kuhakikisha kuwa wote wameutekeleza pendekezo la uendelezaji wa Ethereum zinazohitajika.
+Kila uboreshaji wa mtandao unajumuisha seti ya EIPs ambazo zinahitaji kutekelezwa na kila [mteja wa Ethereum](/learn/#clients-and-nodes) kwenye mtandao. Hii inamaanisha kuwa ili kubaki katika mwafaka na wateja wengine kwenye Mtandao Mkuu wa Ethereum, waendelezaji wa wateja wanahitaji kuhakikisha wametekeleza EIPs zote zinazohitajika.
 
-Pamaoja na kutoa maelezo ya kiufundi kwa ajili ya mabadiliko, EIPs ni kitengo amabacho usimamizi wake hufanyika ndani ya Ethereum: mtu yeyote yuko huru kutoa pendekezo, na kisha wadau mbalimbali katika jamii watajadiliana ili kubaini kama inafaa kupitishwa kama kiwango au kujumuishwa katika uboreshaji wa mtandao. Kwa kuwa pendekezo la uendelezaji wa Ethereum zisizo za msingi hazihitzjiki kuzuiliwa maombi rasmi wowote ( mfano, inawezekana kuunda tokeni inayoweza kubadilishwa ambayo haitekelezi pendekezo la uendelezaji wa Ethereum-20) lakini pendekezo la uendelezaji wa Ethereum za msingi lazima zikubalike kwa wingi (kwa kuwa vituo zote lazima zipate masasisho ili kubaki sehemu ya wavu mmoja) Pendekezo la uendelezaji wa Ethereum za msingi zinahitaji makubaliano pana zaidi ndani ya jumuiya kuliko pendekezo la uendelezaji wa Ethereum zisizo za msingi.
+Pamoja na kutoa vipimo vya kiufundi kwa mabadiliko, EIPs ni kitengo ambacho utawala hufanyika katika Ethereum: mtu yeyote yuko huru kupendekeza moja, na kisha wadau mbalimbali katika jamii watajadili ili kuamua ikiwa inapaswa kupitishwa kama kiwango au kujumuishwa katika uboreshaji wa mtandao. Kwa sababu EIPs zisizo za msingi hazilazimiki kupitishwa na programu zote (kwa mfano, inawezekana kuunda tokheni mbadala ambayo haitekelezi EIP-20), lakini EIPs za msingi lazima zipitishwe kwa upana (kwa sababu nodi zote lazima ziboreshwe ili kubaki sehemu ya mtandao huo huo), EIPs za msingi zinahitaji mwafaka mpana zaidi ndani ya jamii kuliko EIPs zisizo za msingi.
 
-## Historia ya EIP {#history-of-eips}
+## Historia ya EIPs {#history-of-eips}
 
-[Hazina ya GitHub ya Mapendekezo ya Kuboresha Ethereum (EIPs)](https://github.com/ethereum/EIPs) iliundwa mnamo Oktoba 2015. Mchakato wa EIP unatokana na mchakato wa [Mapendekezo ya Kuboresha Bitcoin (BIPs)](https://github.com/bitcoin/bips), ambao nao unatokana na mchakato wa [Mapendekezo ya Kuboresha Python (PEPs)](https://www.python.org/dev/peps/).
+Hifadhi ya GitHub ya [Mapendekezo ya Kuboresha Ethereum (EIPs)](https://github.com/ethereum/EIPs) iliundwa mnamo Oktoba 2015. Mchakato wa EIP unategemea mchakato wa [Mapendekezo ya Kuboresha Bitcoin (BIPs)](https://github.com/bitcoin/bips), ambao wenyewe unategemea mchakato wa [Mapendekezo ya Kuboresha Python (PEPs)](https://www.python.org/dev/peps/).
 
-Wahariri wa pendekezo la uendelezaji wa Ethereum wanapewa jukumu la kuchunguza pendekezo la uendelezaji wa Ethereum kwa usahihi wa kiufundi, masuala ya muundo, na kusahihisha tahajia, sarufi, na mtindo wa maandiko ya programu. Martin Becze, Vitalik Buterin, Gavin Wood na wengine wachache ndio wahariri waanzilishi wa EIP kutoka mwaka 2015 kwenda mwishoni mwa mwaka 2016.
+Wahariri wa EIP wanapewa jukumu la mchakato wa kukagua EIPs kwa usahihi wa kiufundi, masuala ya uumbizaji, na kusahihisha tahajia, sarufi, na mtindo wa msimbo. Martin Becze, Vitalik Buterin, Gavin Wood, na wengine wachache walikuwa wahariri wa asili wa EIP kuanzia 2015 hadi mwishoni mwa 2016.
 
 Wahariri wa sasa wa EIP ni
 
@@ -34,7 +33,7 @@ Wahariri wa sasa wa EIP ni
 - Matt Garnett (@lightclient)
 - Sam Wilson (@SamWilsn)
 
-Wahariri wa pendekezo la uendelezaji wa Ethereum wa heshima ni.
+Wahariri wastaafu wa EIP ni
 
 - Casey Detrio (@cdetrio)
 - Hudson Jameson (@Souptacular)
@@ -46,33 +45,33 @@ Wahariri wa pendekezo la uendelezaji wa Ethereum wa heshima ni.
 
 Ikiwa ungependa kuwa mhariri wa EIP, tafadhali angalia [EIP-5069](https://eips.ethereum.org/EIPS/eip-5069).
 
-Wahariri wa pendekezo la uendelezaji wa Ethereum wanaamua ni lini pendekezo liko tayari kuwa pendekezo la uendelezaji wa Ethereum, na kuwasaidia waandishi wa pendekezo la uendelezaji wa Ethereum kusogeza pendekezo lao mbele. [Ethereum Cat Herders](https://www.ethereumcatherders.com/) husaidia kuandaa mikutano kati ya wahariri wa EIP na jumuiya (tazama [EIPIP](https://github.com/ethereum-cat-herders/EIPIP)).
+Wahariri wa EIP huamua wakati pendekezo liko tayari kuwa EIP, na kusaidia waandishi wa EIP kusogeza mapendekezo yao mbele. [Ethereum Cat Herders](https://www.ethereumcatherders.com/) husaidia kuandaa mikutano kati ya wahariri wa EIP na jamii (tazama [EIPIP](https://github.com/ethereum-cat-herders/EIPIP)).
 
 Mchakato kamili wa usanifishaji pamoja na chati umeelezwa katika [EIP-1](https://eips.ethereum.org/EIPS/eip-1)
 
 ## Jifunze zaidi {#learn-more}
 
-Ikiwa ungependa kusoma zaidi kuhusu EIP, angalia [tovuti ya EIP](https://eips.ethereum.org/) na [EIP-1](https://eips.ethereum.org/EIPS/eip-1). Hapa kuna viungo vya muhimu.:
+Ikiwa una nia ya kusoma zaidi kuhusu EIPs, angalia [tovuti ya EIPs](https://eips.ethereum.org/) na [EIP-1](https://eips.ethereum.org/EIPS/eip-1). Hapa kuna viungo muhimu:
 
 - [Orodha ya kila Pendekezo la Kuboresha Ethereum](https://eips.ethereum.org/all)
 - [Maelezo ya aina zote za EIP](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 - [Maelezo ya hali zote za EIP](https://eips.ethereum.org/EIPS/eip-1#eip-process)
 
-### Miradi ya elimu ya jumuiya {#community-projects}
+### Miradi ya elimu kwa jamii {#community-projects}
 
-- [PEEPanEIP](https://www.youtube.com/playlist?list=PL4cwHXAawZxqu0PKKyMzG_3BJV_xZTi1F) — _PEEPanEIP ni mfululizo wa video za elimu unaojadili Mapendekezo ya Kuboresha Ethereum (EIPs) na sifa muhimu za maboresho yajayo._
-- [EIPs.wtf](https://www.eips.wtf/) — _EIPs.wtf hutoa maelezo ya ziada kwa ajili ya Mapendekezo ya Kuboresha Ethereum (EIPs), ikiwa ni pamoja na hali zake, maelezo ya utekelezaji, pull requests zinazohusiana, na maoni ya jumuiya._
-- [EIP.Fun](https://eipfun.substack.com/) — _EIP.Fun hutoa habari za hivi punde kuhusu Mapendekezo ya Kuboresha Ethereum (EIPs), masasisho kuhusu mikutano ya EIP, na zaidi._
-- [EIPs Insight](https://eipsinsight.com/) — _EIPs Insight ni uwakilishi wa hali ya mchakato wa Mapendekezo ya Kuboresha Ethereum (EIPs) na takwimu kulingana na taarifa zilizokusanywa kutoka vyanzo tofauti._
+- [PEEPanEIP](https://www.youtube.com/playlist?list=PL4cwHXAawZxqu0PKKyMzG_3BJV_xZTi1F) — *PEEPanEIP ni mfululizo wa video za elimu zinazojadili Mapendekezo ya Kuboresha Ethereum (EIPs) na vipengele muhimu vya maboresho yajayo.*
+- [EIPs.wtf](https://www.eips.wtf/) — *EIPs.wtf hutoa taarifa za ziada kwa Mapendekezo ya Kuboresha Ethereum (EIPs), ikiwa ni pamoja na hali zao, maelezo ya utekelezaji, maombi yanayohusiana ya kuvuta (pull requests), na maoni ya jamii.* 
+- [EIP.Fun](https://eipfun.substack.com/) — *EIP.Fun hutoa habari za hivi punde kuhusu Mapendekezo ya Kuboresha Ethereum (EIPs), sasisho kuhusu mikutano ya EIP, na zaidi.*
+- [EIPs Insight](https://eipsinsight.com/) — *EIPs Insight ni uwakilishi wa hali ya mchakato wa Mapendekezo ya Kuboresha Ethereum (EIPs) na takwimu kulingana na taarifa zilizokusanywa kutoka vyanzo tofauti.*
 
 ## Shiriki {#participate}
 
-Kila mtu anaweza kuunda pendekezo la uendelezaji wa Ethereum. Kabla ya kuwasilisha pendekezo, ni lazima mtu asome [EIP-1](https://eips.ethereum.org/EIPS/eip-1) ambayo inaelezea mchakato wa EIP na jinsi ya kuandika EIP, na kutafuta maoni kwenye [Ethereum Magicians](https://ethereum-magicians.org/), ambapo mapendekezo hujadiliwa kwanza na jumuiya kabla ya rasimu kuwasilishwa.
+Mtu yeyote anaweza kuunda EIP. Kabla ya kuwasilisha pendekezo, mtu lazima asome [EIP-1](https://eips.ethereum.org/EIPS/eip-1) ambayo inaelezea mchakato wa EIP na jinsi ya kuandika EIP, na kuomba maoni kwenye [Ethereum Magicians](https://ethereum-magicians.org/), ambapo mapendekezo hujadiliwa kwanza na jamii kabla ya rasimu kuwasilishwa.
 
 ## Marejeleo {#references}
 
 <cite class="citation">
 
-Maudhui ya ukurasa yaliyotolewa kwa sehemu kutoka [Utawala wa Maendeleo ya Itifaki ya Ethereum na Uratibu wa Uboreshaji wa Mtandao](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) ulioandikwa na Hudson Jameson
+Maudhui ya ukurasa yametolewa kwa kiasi kutoka [Utawala wa Maendeleo ya Itifaki ya Ethereum na Uratibu wa Uboreshaji wa Mtandao](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) na Hudson Jameson
 
 </cite>

@@ -1,4 +1,6 @@
 "use client"
+import { Cloud, Cpu, Droplets } from "lucide-react"
+import { useTranslations } from "next-intl"
 import type { JSX } from "react"
 
 import type {
@@ -7,26 +9,16 @@ import type {
   TranslationKey,
 } from "@/lib/types"
 
-import {
-  StakingGlyphCloudIcon,
-  StakingGlyphCPUIcon,
-  StakingGlyphTokenWalletIcon,
-} from "@/components/icons/staking"
-
 import { cn } from "@/lib/utils/cn"
-import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { Flex } from "../ui/flex"
-import InlineLink from "../ui/Link"
-
-import { useTranslation } from "@/hooks/useTranslation"
+import { ButtonLink } from "../ui/buttons/Button"
 
 interface DataType {
   title: TranslationKey
   linkText: TranslationKey
   href: string
   matomo: MatomoEventOptions
-  colorClassName: string
+  glyphBgClassName: string
   glyph: JSX.Element
 }
 
@@ -36,7 +28,7 @@ export type StakingComparisonProps = {
 }
 
 const StakingComparison = ({ page, className }: StakingComparisonProps) => {
-  const { t } = useTranslation("page-staking")
+  const t = useTranslations("page-staking")
 
   const solo: DataType = {
     title: "page-staking-dropdown-solo",
@@ -47,10 +39,8 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
       eventAction: `Clicked`,
       eventName: "clicked solo staking",
     },
-    colorClassName: "text-staking-gold",
-    glyph: (
-      <StakingGlyphCPUIcon className="h-[50px] w-[50px] text-staking-gold" />
-    ),
+    glyphBgClassName: "bg-staking-gold/20",
+    glyph: <Cpu className="size-12 shrink-0 text-staking-gold" />,
   }
   const saas: DataType = {
     title: "page-staking-saas-with-abbrev",
@@ -61,13 +51,11 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
       eventAction: `Clicked`,
       eventName: "clicked staking as a service",
     },
-    colorClassName: "text-staking-green",
-    glyph: (
-      <StakingGlyphCloudIcon className="h-[28px] w-[50px] text-staking-green" />
-    ),
+    glyphBgClassName: "bg-staking-green/20",
+    glyph: <Cloud className="size-12 shrink-0 text-staking-green" />,
   }
   const pools: DataType = {
-    title: "page-staking-dropdown-pools",
+    title: "page-staking-hierarchy-pools-h2",
     linkText: "page-staking-learn-more-pools",
     href: "/staking/pools/",
     matomo: {
@@ -75,10 +63,8 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
       eventAction: `Clicked`,
       eventName: "clicked pooled staking",
     },
-    colorClassName: "text-staking-blue",
-    glyph: (
-      <StakingGlyphTokenWalletIcon className="h-[39px] w-[50px] text-staking-blue" />
-    ),
+    glyphBgClassName: "bg-staking-blue/20",
+    glyph: <Droplets className="size-12 shrink-0 text-staking-blue" />,
   }
   const data: {
     [key in StakingPage]: (DataType & {
@@ -120,45 +106,42 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
   const selectedData = data[page]
 
   return (
-    <Flex
+    <div
       className={cn(
-        "mt-16 flex-col gap-8 px-6 py-8 md:px-8",
-        "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20",
+        "mt-16 flex flex-col gap-10 rounded-base bg-background-highlight p-6 md:p-8",
         className
       )}
     >
-      <h2 className="mb-4 text-3xl">
-        {t("page-staking-comparison-with-other-options")}
-      </h2>
+      {/* The section heading lives in the markdown page, not here */}
       {selectedData.map(
         (
-          { title, linkText, href, colorClassName, content, glyph, matomo },
+          { title, linkText, href, glyphBgClassName, content, glyph, matomo },
           idx
         ) => (
-          <Flex className="flex-col gap-6 md:flex-row" key={idx}>
-            {!!glyph && (
-              <Flex className="max-h-12 w-12 flex-col items-center justify-start">
-                {glyph}
-              </Flex>
-            )}
-            <div>
-              <h3 className={cn("mb-2 text-2xl", colorClassName)}>
-                {t(title)}
-              </h3>
-              <p>{t(content)}</p>
-              <InlineLink
-                onClick={() => {
-                  trackCustomEvent(matomo)
-                }}
-                href={href}
+          <div className="flex flex-col gap-4" key={idx}>
+            <div className="flex items-center gap-4">
+              <div
+                className={cn(
+                  "flex size-20 shrink-0 items-center justify-center rounded-full",
+                  glyphBgClassName
+                )}
               >
-                {t(linkText)}
-              </InlineLink>
+                {glyph}
+              </div>
+              <h3>{t(title)}</h3>
             </div>
-          </Flex>
+            <p>{t(content)}</p>
+            <ButtonLink
+              href={href}
+              className="w-fit"
+              customEventOptions={matomo}
+            >
+              {t(linkText)}
+            </ButtonLink>
+          </div>
         )
       )}
-    </Flex>
+    </div>
   )
 }
 

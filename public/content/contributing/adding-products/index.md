@@ -1,10 +1,9 @@
 ---
-title: Adding Products
+title: Adding Ethereum products
+metaTitle: Adding Products
 description: The policy we use when adding dapps to ethereum.org
 lang: en
 ---
-
-# Adding Ethereum products {#adding-products}
 
 Anyone is free to suggest new dapps to the content on ethereum.org, where it's appropriate to do so. **No, we won't list your dapp on our homepage** 😜
 

@@ -1,0 +1,222 @@
+{
+  "version": 1,
+  "locale": "tr",
+  "translatedAt": "2026-08-19T20:31:48.336Z",
+  "englishManifestHash": "5d92f8d85fb9",
+  "placeholderOrder": [
+    "IMAGE-04a541",
+    "LINK-95c136",
+    "LINK-bc846c",
+    "LINK-13e7fd",
+    "LINK-a21a82",
+    "LINK-c37b45",
+    "LINK-08db1a",
+    "LINK-b8f21f",
+    "LINK-ce42cb",
+    "LINK-7f87f4",
+    "LINK-c7fd0b",
+    "LINK-0f0e8e",
+    "LINK-47d675",
+    "COMPONENT-0fa5ce",
+    "COMPONENT-ccc3d0",
+    "COMPONENT-3d608b",
+    "COMPONENT-841714",
+    "LINK-c6b137",
+    "COMPONENT-db135c",
+    "LINK-087d3c",
+    "LINK-e432e8",
+    "LINK-aec9d7",
+    "LINK-29734c",
+    "LINK-c1c765",
+    "LINK-2d9095",
+    "LINK-39d2b4",
+    "LINK-f14287",
+    "LINK-10e939"
+  ],
+  "placeholderMap": {
+    "COMPONENT-0fa5ce": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "DVT",
+        "eventName": "clicked do I need DVT to stake"
+      }
+    },
+    "COMPONENT-ccc3d0": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "DVT",
+        "eventName": "clicked does DVT split my ETH"
+      }
+    },
+    "COMPONENT-3d608b": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "DVT",
+        "eventName": "clicked what happens if nodes go offline"
+      }
+    },
+    "COMPONENT-841714": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "DVT",
+        "eventName": "clicked does a cluster have to be 3 of 4"
+      }
+    },
+    "LINK-c6b137": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.obol.org/next/learn/charon/cluster-configuration#cluster-size-and-resilience"
+      }
+    },
+    "COMPONENT-db135c": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "DVT",
+        "eventName": "clicked is DVT the same as pooled staking"
+      }
+    },
+    "LINK-087d3c": {
+      "type": "link",
+      "values": {
+        "url": "/staking/"
+      }
+    },
+    "IMAGE-04a541": {
+      "type": "image",
+      "values": {
+        "path": "./dvt-cluster.png"
+      }
+    },
+    "LINK-95c136": {
+      "type": "link",
+      "values": {
+        "url": "/staking/solo/"
+      }
+    },
+    "LINK-bc846c": {
+      "type": "link",
+      "values": {
+        "url": "/staking/saas/"
+      }
+    },
+    "LINK-13e7fd": {
+      "type": "link",
+      "values": {
+        "url": "/staking/pools/"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-c37b45": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/@keylesstech/a-beginners-guide-to-shamir-s-secret-sharing-e864efbf3648"
+      }
+    },
+    "LINK-08db1a": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/BLS_digital_signature"
+      }
+    },
+    "LINK-b8f21f": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/nethermind-eth/threshold-signature-schemes-36f40bc42aca"
+      }
+    },
+    "LINK-ce42cb": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/toruslabs/what-distributed-key-generation-is-866adc79620"
+      }
+    },
+    "LINK-7f87f4": {
+      "type": "link",
+      "values": {
+        "url": "https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains"
+      }
+    },
+    "LINK-c7fd0b": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.obol.org/learn/readme/launchpad"
+      }
+    },
+    "LINK-0f0e8e": {
+      "type": "link",
+      "values": {
+        "url": "/staking/pools/"
+      }
+    },
+    "LINK-47d675": {
+      "type": "link",
+      "values": {
+        "url": "/staking/saas/"
+      }
+    },
+    "LINK-e432e8": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cyfrin.io/blog/full-introduction-to-ethereum-distributed-validator-technology-dvt"
+      }
+    },
+    "LINK-aec9d7": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.obol.org/what-is-dvt-and-how-does-it-improve-staking-on-ethereum/"
+      }
+    },
+    "LINK-29734c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/distributed-validator-specs"
+      }
+    },
+    "LINK-c1c765": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec"
+      }
+    },
+    "LINK-2d9095": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.obol.org/"
+      }
+    },
+    "LINK-39d2b4": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ssv.network/"
+      }
+    },
+    "LINK-f14287": {
+      "type": "link",
+      "values": {
+        "url": "https://operatorportal.lido.fi/modules/simple-dvt-module"
+      }
+    },
+    "LINK-10e939": {
+      "type": "link",
+      "values": {
+        "url": "https://iancoleman.io/shamir/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-08-19T20:31:48.336Z",
+      "status": "success"
+    }
+  }
+}

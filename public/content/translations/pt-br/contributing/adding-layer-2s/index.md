@@ -1,97 +1,95 @@
 ---
-title: Adicionando Camada 2S
-description: "A política que usamos ao adicionar uma camada 2 ao ethereum.org"
+title: Adicionando camadas 2
+description: A política que usamos ao adicionar uma camada 2 ao ethereum.org
 lang: pt-br
 ---
 
-# Adicionando camadas 2 {#adding-layer-2}
+Queremos garantir que listamos os melhores recursos possíveis para que os usuários possam navegar no espaço da camada 2 (l2) de maneira segura e confiante.
 
-Queremos garantir que listamos os melhores recursos possíveis para que os usuários possam navegar no espaço da camada 2 de maneira segura e confiante.
+Qualquer pessoa é livre para sugerir a adição de uma camada 2 no ethereum.org. Se houver uma camada 2 que deixamos passar, **[por favor, sugira-a](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
 
-Qualquer pessoa pode sugerir a adição de uma camada 2 no ethereum.org. Se houver uma camada 2 que não incluímos, **[por favor, sugira](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
+Atualmente, listamos l2s nas seguintes páginas:
 
-Atualmente, listamos as 2LS nas seguintes páginas:
-
-- [Optimistic rollups](/developers/docs/scaling/optimistic-rollups/)
+- [Rollups otimistas](/developers/docs/scaling/optimistic-rollups/)
 - [Rollups de conhecimento zero](/developers/docs/scaling/zk-rollups/)
 - [Camada 2](/layer-2/)
 
-Camada 2 é um paradigma relativamente novo e empolgante para o Ethereum. Tentamos criar uma estrutura justa a ser considerada no ethereum.org, mas os critérios listados mudarão e evoluirão com o tempo.
+A camada 2 é um paradigma relativamente novo e empolgante para o Ethereum. Tentamos criar uma estrutura justa para consideração no ethereum.org, mas os critérios de listagem mudarão e evoluirão com o tempo.
 
-## O framework de decisão {#decision-framework}
+## A estrutura de decisão {#decision-framework}
 
-### Critérios de inclusão: os obrigatórios {#criteria-for-inclusion-the-must-haves}
+### Critérios de inclusão: os requisitos obrigatórios {#criteria-for-inclusion-the-must-haves}
 
-**Listando na L2BEAT**
+**Listagem no L2BEAT**
 
-- Para ser considerado, este projeto deve estar listado no [L2BEAT](https://l2beat.com). A L2BEAT fornece uma avaliação de riscos sólida de projetos da camada 2 que apoiamos para avaliar projetos de L2. **Se o projeto não for apresentado na L2BEAT, não o listaremos como L2 no ethereum.org.**
-- [Saiba como adicionar seu projeto L2 ao L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
+- Para ser considerado, este projeto deve estar listado no [L2BEAT](https://l2beat.com). O L2BEAT fornece uma avaliação de risco robusta de projetos de camada 2 na qual nos baseamos para avaliar projetos de l2. **Se o projeto não estiver em destaque no L2BEAT, não o listaremos como uma l2 no ethereum.org.**
+- [Aprenda como adicionar seu projeto de l2 ao L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
 **Código aberto**
 
-- Seu código deve estar acessível e você deve aceitar PRs (solicitações de pull) da comunidade em geral.
+- Seu código deve ser acessível e você deve aceitar PRs da comunidade em geral.
 
-**Categoria da Camada 2**
+**Categoria de camada 2**
 
-Atualmente, consideramos as seguintes soluções para camada 2:
+Atualmente, consideramos as seguintes como soluções de camada 2:
 
-- Acúmulo otimista
-- Acúmulo de conhecimento zero
+- Rollup otimista
+- Rollup de conhecimento zero
 
-_Não consideramos outras soluções de escalabilidade que não usam o Ethereum para disponibilidade de dados ou segurança como sendo camada 2._
+_Não consideramos outras soluções de escalabilidade que não usam o Ethereum para disponibilidade de dados ou segurança como camada 2._
 
 **Ethereum para disponibilidade de dados**
 
-- A disponibilidade de dados é um importante fator de diferenciação entre outras soluções de dimensionamento e a camada 2. Um projeto **deve** usar a Rede Principal do Ethereum para que a disponibilidade de dados seja considerada para listagem.
+- A disponibilidade de dados é um importante fator de diferenciação entre outras soluções de escalabilidade e a camada 2. Um projeto **deve** usar a Rede Principal do Ethereum para disponibilidade de dados para ser considerado para listagem.
 
 **Pontes**
 
-- Como os usuários podem integrar a camada 2?
+- Como os usuários conseguem ingressar na camada 2?
 
 **Data em que o projeto foi lançado**
 
-- Uma camada 2 que está "ativa" na Rede principal há mais de 6 meses
+- Uma camada 2 que está "ativa" na Mainnet há mais de 6 meses
 
-- Novos projetos que não foram testados em batalha pelos usuários são menos propensos a serem listados.
+- Projetos mais recentes que não foram testados na prática pelos usuários têm menos probabilidade de serem listados.
 
 **Auditoria de segurança externa**
 
 - Seja por meio de auditoria, uma equipe de segurança interna ou algum outro método, a segurança do seu produto deve ser testada de forma confiável. Isso reduz o risco para nossos usuários e nos mostra que você leva a segurança a sério.
 
-**Base de usuários sustentável**
+**Base de usuários sustentada**
 
-- Consideramos métricas como histórico TVL, estatísticas de transações e utilização por empresas ou projetos conhecidos.
+- Consideraremos métricas como histórico de valor total bloqueado (TVL), estatísticas de transação e se é usado por empresas ou projetos conhecidos
 
 **Equipe de desenvolvimento ativa**
 
 - Não listaremos uma camada 2 que não tenha uma equipe ativa trabalhando no projeto.
 
-**Explorador de bloco**
+**Explorador de blocos**
 
-- Os projetos listados exigem um explorador de blocos de trabalho para permitir aos usuários navegar facilmente pela cadeia.
+- Projetos listados exigem um explorador de blocos funcional para permitir que os usuários naveguem facilmente pela cadeia.
 
-### Outros critérios: os desejáveis {#nice-to-haves}
+### Outros critérios: os diferenciais desejáveis {#nice-to-haves}
 
-**Suporte ao câmbio para o projeto**
+**Suporte de corretoras para o projeto**
 
-- Os usuários podem depositar e/ou sacar diretamente de uma corretora?
+- Os usuários conseguem depositar e/ou sacar diretamente de uma corretora?
 
-**Links para dapps no ecossistema da camada 2**
+**Links para aplicativos descentralizados (dapps) no ecossistema da camada 2**
 
-- Queremos ser capazes de fornecer informações sobre o que os usuários podem esperar fazer nessa camada 2. (p. ex., https://portal.arbitrum.io/, https://www.optimism.io/apps)
+- Queremos ser capazes de fornecer informações sobre o que os usuários podem esperar fazer nesta camada 2. (ex.: https://portal.arbitrum.io/, https://www.optimism.io/apps)
 
 **Listas de contratos de token**
 
-- Como os ativos terão um novo endereço na camada 2, se houver um recurso da lista de tokens disponível, compartilhe.
+- Como os ativos terão um novo endereço na camada 2, se houver um recurso de lista de tokens disponível, por favor, compartilhe.
 
-**Suporte de carteira nativo**
+**Suporte nativo de carteira**
 
-- Alguma carteira oferece suporte L2 nativamente?
+- Alguma carteira suporta a l2 nativamente?
 
 ## Adicione sua camada 2 {#add-exchange}
 
-Se você quiser adicionar uma camada 2 ao ethereum.org, abra um tíquete no GitHub.
+Se você quiser adicionar uma camada 2 ao ethereum.org, crie uma issue no GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
-Abrir chamado
+  Criar uma issue
 </ButtonLink>

@@ -14,7 +14,7 @@ import {
   type SectionNavDetails,
 } from "@/lib/types"
 
-import { SimpleHero } from "@/components/Hero"
+import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import {
@@ -142,34 +142,33 @@ const Page = async (props: {
       />
       <I18nProvider locale={locale} messages={messages}>
         <div className="flex flex-col gap-12">
-          <SimpleHero
+          <PageHero
             breadcrumbs={
               <Breadcrumb>
                 <BreadcrumbList>
                   <BreadcrumbItem>
                     <BreadcrumbLink href="/">Ethereum.org</BreadcrumbLink>
                   </BreadcrumbItem>
-                  <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                  <BreadcrumbSeparator className="mx-2.5 text-body-medium">
                     /
                   </BreadcrumbSeparator>
                   <BreadcrumbItem>
-                    <BreadcrumbLink href="/apps" className="uppercase">
+                    <BreadcrumbLink href="/apps">
                       {t("page-apps-all-apps")}
                     </BreadcrumbLink>
                   </BreadcrumbItem>
-                  <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                  <BreadcrumbSeparator className="mx-2.5 text-body-medium">
                     /
                   </BreadcrumbSeparator>
                   <BreadcrumbItem>
-                    <BreadcrumbPage>
-                      {t(category.name).toUpperCase()}
-                    </BreadcrumbPage>
+                    <BreadcrumbPage>{t(category.name)}</BreadcrumbPage>
                   </BreadcrumbItem>
                 </BreadcrumbList>
               </Breadcrumb>
             }
             title={t(category.name)}
-            subtitle={t(category.description)}
+            description={t(category.description)}
+            variant="no-divider"
           />
           <TabNav
             sections={navSections}
@@ -189,9 +188,7 @@ const Page = async (props: {
                     ...app,
                     subCategory: app.subCategory.map((tag: string) => {
                       const key = `subcategory-${slugify(tag)}`
-                      return tSubcategory.has(key)
-                        ? tSubcategory(key)
-                        : tag
+                      return tSubcategory.has(key) ? tSubcategory(key) : tag
                     }),
                   })) as AppData[]
                 )}
@@ -225,35 +222,47 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale, catetgoryName } = params
-  const t = await getTranslations("page-apps")
 
-  // Normalize slug to lowercase
-  const normalizedSlug = catetgoryName.toLowerCase()
+  setRequestLocale(locale)
 
-  // Find category by matching the slug
-  const categoryEntry = Object.entries(appsCategories).find(
-    ([, categoryData]) => categoryData.slug === normalizedSlug
-  )
+  try {
+    const t = await getTranslations("page-apps")
 
-  if (!categoryEntry) {
-    notFound()
+    // Normalize slug to lowercase
+    const normalizedSlug = catetgoryName.toLowerCase()
+
+    // Find category by matching the slug
+    const categoryEntry = Object.entries(appsCategories).find(
+      ([, categoryData]) => categoryData.slug === normalizedSlug
+    )
+
+    if (!categoryEntry) {
+      throw new Error(`App category not found: ${catetgoryName}`)
+    }
+
+    const [categoryEnum, category] = categoryEntry
+
+    if (!isValidCategory(categoryEnum)) {
+      throw new Error(`Invalid app category enum: ${categoryEnum}`)
+    }
+
+    const title = t(category.metaTitle)
+    const description = t(category.metaDescription)
+
+    return await getMetadata({
+      locale,
+      slug: ["apps", "categories", normalizedSlug],
+      title,
+      description,
+    })
+  } catch {
+    const t = await getTranslations("common")
+
+    return {
+      title: t("page-not-found"),
+      description: t("page-not-found-description"),
+    }
   }
-
-  const [categoryEnum, category] = categoryEntry
-
-  if (!isValidCategory(categoryEnum)) {
-    notFound()
-  }
-
-  const title = t(category.metaTitle)
-  const description = t(category.metaDescription)
-
-  return await getMetadata({
-    locale,
-    slug: ["apps", "categories", normalizedSlug],
-    title,
-    description,
-  })
 }
 
 export default Page

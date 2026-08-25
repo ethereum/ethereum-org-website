@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "locale": "ta",
+  "translatedAt": "2026-04-29T04:45:09.204Z",
+  "englishManifestHash": "9ce8935c8149",
+  "placeholderOrder": [
+    "LINK-ca6955",
+    "LINK-400c58"
+  ],
+  "placeholderMap": {
+    "LINK-ca6955": {
+      "type": "link",
+      "values": {
+        "url": "https://www.eip4844.com/"
+      }
+    },
+    "LINK-400c58": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=dFjyUY3e53Q"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-04-29T04:45:09.204Z",
+      "status": "success"
+    }
+  }
+}

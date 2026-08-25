@@ -60,9 +60,21 @@ To start, visit the [Ethereum quick start guide](https://academy.subquery.networ
 
 To get started, visit the [documentation](https://docs.codex.io), try the [Explorer](https://docs.codex.io/explore), or sign up at the [dashboard](https://dashboard.codex.io/signup).
 
+## Mobula {#mobula}
+
+[Mobula](https://mobula.io/) is a high-performance crypto data API providing real-time and historical market data, token metadata, wallet portfolios, and on-chain analytics across 90+ blockchains. Developers can access REST and GraphQL endpoints for token prices, market caps, trading volumes, liquidity data, and multi-chain wallet balances without running their own infrastructure. Mobula offers both free (100K requests/month) and paid plans for production applications.
+
+To get started, visit the [documentation](https://docs.mobula.io), explore the [API reference](https://docs.mobula.io/reference/), or sign up at the [dashboard](https://mobula.io/).
+
 ## EVM Query Language {#evm-query-language}
 
 EVM Query Language (EQL) is an SQL-like language designed to query EVM (Ethereum Virtual Machine) chains. EQL's ultimate goal is to support complex relational queries on EVM chain first-class citizens (blocks, accounts, and transactions) while providing developers and researchers with an ergonomic syntax for everyday use. With EQL, developers can fetch blockchain data using familiar SQL-like syntax and eliminate the need for complex boilerplate code. EQL supports standard blockchain data requests (e.g., retrieving an account's nonce and balance on Ethereum or fetching the current block size and timestamp) and is continually adding support for more complex requests and featuresets.
+
+## Envio {#envio}
+
+[Envio](https://envio.dev/) is an indexing framework that turns onchain events into a queryable GraphQL API. It supports Ethereum and any EVM-compatible chain. Developers write event handlers in TypeScript, JavaScript, or ReScript to serve real-time and historical data, with reorg support, multichain indexing, and managed hosting on Envio Cloud or self-hosting.
+
+To get started, follow the [HyperIndex quickstart](https://docs.envio.dev/docs/HyperIndex/quickstart) to create, deploy, and query an indexer.
 
 ## Further Reading {#further-reading}
 
@@ -75,7 +87,7 @@ EVM Query Language (EQL) is an SQL-like language designed to query EVM (Ethereum
 - [Dune Basics](https://docs.dune.com/#dune-basics)
 - [SubQuery Ethereum Quick Start Guide](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [SQD Network Overview](https://docs.sqd.dev/)
-- [EVM Query Language](https://eql.sh/blog/alpha-release-notes)
+- [EVM Query Language](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 
 ## Tutorials: Data & analytics / SQL on Ethereum {#tutorials}
 

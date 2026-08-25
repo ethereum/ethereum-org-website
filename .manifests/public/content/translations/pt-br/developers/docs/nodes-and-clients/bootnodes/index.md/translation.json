@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "locale": "pt-br",
+  "translatedAt": "2026-06-17T22:02:48.619Z",
+  "englishManifestHash": "caa6eb7cc3dc",
+  "placeholderOrder": [
+    "CODEBLOCK-15a133",
+    "LINK-fc30ee",
+    "LINK-fa36e3",
+    "LINK-f8de02"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-15a133": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "LINK-fc30ee": {
+      "type": "link",
+      "values": {
+        "url": "https://www.geeksforgeeks.org/network-address-translation-nat/"
+      }
+    },
+    "LINK-fa36e3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networking-layer/network-addresses/#enode"
+      }
+    },
+    "LINK-f8de02": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go#L23"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T22:02:48.619Z",
+      "status": "success"
+    }
+  }
+}

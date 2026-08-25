@@ -1,15 +1,16 @@
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import BannerNotification from "@/components/Banners/BannerNotification"
 import { HubHero } from "@/components/Hero"
 import Github from "@/components/icons/github.svg"
 import StackIcon from "@/components/icons/stack.svg"
 import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
+import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Stack, VStack } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import TabNav, { StickyContainer } from "@/components/ui/TabNav"
@@ -22,10 +23,10 @@ import { numberFormat } from "@/lib/utils/numbers"
 import { GITHUB_REPO_URL } from "@/lib/constants"
 
 import { ResourceItem, ResourcesContainer } from "./_components/ResourcesUI"
-import ResourcesPageJsonLD from "./page-jsonld"
+import PageJsonLD from "./page-jsonld"
 import { getResources } from "./utils"
 
-import { getBlobscanStats, getGrowThePieData } from "@/lib/data"
+import { getBlobStats, getGrowThePieData } from "@/lib/data"
 import heroImg from "@/public/images/heroes/guides-hub-hero.jpg"
 
 const EVENT_CATEGORY = "dashboard"
@@ -34,33 +35,35 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
 
+  setRequestLocale(locale)
+
   const t = await getTranslations("page-resources")
 
   // Fetch data using the new data-layer functions (already cached)
-  const [growThePieData, blobscanOverallStats] = await Promise.all([
+  const [growThePieData, blobOverallStats] = await Promise.all([
     getGrowThePieData(),
-    getBlobscanStats(),
+    getBlobStats(),
   ])
 
   // Handle null cases - throw error if required data is missing
   if (!growThePieData) {
     throw new Error("Failed to fetch GrowThePie data")
   }
-  if (!blobscanOverallStats) {
-    throw new Error("Failed to fetch Blobscan stats data")
+  if (!blobOverallStats) {
+    throw new Error("Failed to fetch blob stats data")
   }
 
   const txCostsMedianUsd = growThePieData?.txCostsMedianUsd ?? {
     error: "No data available",
   }
 
-  // Extract blob stats directly (getBlobscanStats returns BlobscanStats, not wrapped in MetricReturnData)
+  // Extract blob stats directly (getBlobStats returns BlobStats, not wrapped in MetricReturnData)
   const blobStats = {
-    avgBlobFee: blobscanOverallStats.avgBlobFee,
+    avgBlobFee: blobOverallStats.avgBlobFee,
     totalBlobs: numberFormat(locale, {
       notation: "compact",
       maximumFractionDigits: 1,
-    }).format(blobscanOverallStats.totalBlobs),
+    }).format(blobOverallStats.totalBlobs),
   }
 
   const resourceSections = await getResources({
@@ -75,36 +78,36 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   return (
     <>
-      <ResourcesPageJsonLD locale={locale} contributors={contributors} />
+      <PageJsonLD locale={locale} contributors={contributors} />
 
-      <MainArticle className="relative flex flex-col">
-        <BannerNotification shouldShow className="text-center max-md:flex-col">
-          {t("page-resources-banner-notification-message")}{" "}
-          <Link
-            href={new URL(
-              "issues/new?title=Resource%20dashboard%20feedback",
-              GITHUB_REPO_URL
-            ).toString()}
-            className="visited:text-white"
-            customEventOptions={{
-              eventCategory: EVENT_CATEGORY,
-              eventAction: "links",
-              eventName: "Ethereum.org Github Page Feedback",
-            }}
-          >
-            {t("page-resources-share-feedback")}
-          </Link>
-        </BannerNotification>
+      <Alert variant="banner" className="max-md:flex-col">
+        {t("page-resources-banner-notification-message")}{" "}
+        <Link
+          href={new URL(
+            "issues/new?title=Resource%20dashboard%20feedback",
+            GITHUB_REPO_URL
+          ).toString()}
+          className="visited:text-white"
+          customEventOptions={{
+            eventCategory: EVENT_CATEGORY,
+            eventAction: "links",
+            eventName: "Ethereum.org Github Page Feedback",
+          }}
+        >
+          {t("page-resources-share-feedback")}
+        </Link>
+      </Alert>
 
-        <HubHero
-          title={t("page-resources-hero-title")}
-          header={t("page-resources-hero-header")}
-          description={t("page-resources-hero-description")}
-          heroImg={heroImg}
-        />
+      <HubHero
+        title={t("page-resources-hero-title")}
+        header={t("page-resources-hero-header")}
+        description={t("page-resources-hero-description")}
+        heroImg={heroImg}
+      />
 
+      <MainArticle>
         <Stack className="gap-4 px-2 py-6 md:gap-8 md:px-4 lg:px-8 xl:gap-11">
-          <StickyContainer className="top-[26px] space-y-5">
+          <StickyContainer className="top-10 space-y-5">
             <div className="my-2 text-center text-body-medium">
               {t("page-resources-whats-on-this-page")}
             </div>
@@ -127,19 +130,19 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     </div>
                     <h2 className="flex-1 text-start font-black">{label}</h2>
                   </div>
-                  <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-y-6">
+                  <Grid columns={2} size="wider" className="lg:gap-y-6">
                     {boxes.map(({ title, metric, items, className }) => (
                       <div
                         className={cn(
-                          "overflow-hidden rounded-2xl border shadow-lg",
+                          "overflow-hidden rounded-base border shadow-lg",
                           className
                         )}
                         key={title}
                       >
-                        <div className="border-b bg-[#ffffff] px-6 py-4 font-bold dark:bg-[#171717]">
+                        <div className="border-b bg-background px-6 py-4 font-bold">
                           {title}
                         </div>
-                        <div className="h-full bg-background bg-gradient-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">
+                        <div className="h-full bg-background bg-linear-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">
                           {metric && metric}
                           <ResourcesContainer>
                             {items.map(({ className, ...item }) => (
@@ -153,7 +156,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         </div>
                       </div>
                     ))}
-                  </div>
+                  </Grid>
                 </section>
               </Stack>
             ))}
@@ -180,7 +183,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             id="contribute"
             className="relative rounded-4xl border border-body/5 bg-background"
           >
-            <VStack className="rounded-4xl bg-radial-a px-4 py-6 md:py-12">
+            <VStack className="rounded-4xl bg-radial-primary px-4 py-6 md:py-12">
               <Stack className="max-w-xl gap-y-10 py-6 lg:max-w-[700px]">
                 <div className="flex flex-col gap-y-4 text-center">
                   <h2>{t("page-resources-contribute-title")}</h2>
@@ -235,6 +238,9 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  // Set locale before next-intl APIs so on-demand renders stay static
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-resources")
 

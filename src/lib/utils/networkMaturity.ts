@@ -1,3 +1,5 @@
+import type { MaturityLevel } from "@/lib/types"
+
 const getMaturityPoints = (l2beatData) => {
   if (!l2beatData?.risks) return 0
 
@@ -49,7 +51,7 @@ const getMaturityPoints = (l2beatData) => {
   return maturityPoints
 }
 
-export const networkMaturity = (l2beatData) => {
+export const networkMaturity = (l2beatData): MaturityLevel => {
   if (!l2beatData) return "emerging"
 
   const maturityPoints = getMaturityPoints(l2beatData)

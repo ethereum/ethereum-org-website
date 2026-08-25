@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "locale": "es",
+  "translatedAt": "2026-06-16T22:02:36.394Z",
+  "englishManifestHash": "72c015a16f12",
+  "placeholderOrder": [
+    "LINK-f832bc",
+    "CODE-41cf67",
+    "CODE-34a040",
+    "CODE-6aa5b5",
+    "CODE-3a6eb0",
+    "CODE-3a6eb0",
+    "CODE-1a2fc2",
+    "CODE-3a6eb0",
+    "CODE-3a6eb0",
+    "CODE-655883",
+    "CODE-1bc04b",
+    "CODE-d8b9f4",
+    "CODE-41cf67",
+    "CODE-34a040",
+    "CODE-3a6eb0",
+    "CODE-6aa5b5",
+    "CODE-3a6eb0",
+    "CODE-3a6eb0",
+    "CODE-6aa5b5",
+    "CODE-3a6eb0",
+    "CODE-0da1c1",
+    "CODE-3a6eb0",
+    "CODE-6aa5b5",
+    "IMAGE-94cd9d",
+    "CODE-e7fa7b",
+    "CODE-891d48",
+    "CODE-c1fe50",
+    "CODE-82d0a8",
+    "CODE-c1fe50",
+    "CODE-82d0a8",
+    "LINK-783e50",
+    "LINK-996d0c"
+  ],
+  "placeholderMap": {
+    "CODE-41cf67": {
+      "type": "inline-code",
+      "values": {
+        "content": "source"
+      }
+    },
+    "CODE-34a040": {
+      "type": "inline-code",
+      "values": {
+        "content": "target"
+      }
+    },
+    "CODE-6aa5b5": {
+      "type": "inline-code",
+      "values": {
+        "content": "aggregation_bits"
+      }
+    },
+    "CODE-3a6eb0": {
+      "type": "inline-code",
+      "values": {
+        "content": "data"
+      }
+    },
+    "CODE-1a2fc2": {
+      "type": "inline-code",
+      "values": {
+        "content": "signature"
+      }
+    },
+    "CODE-655883": {
+      "type": "inline-code",
+      "values": {
+        "content": "slot"
+      }
+    },
+    "CODE-1bc04b": {
+      "type": "inline-code",
+      "values": {
+        "content": "index"
+      }
+    },
+    "CODE-d8b9f4": {
+      "type": "inline-code",
+      "values": {
+        "content": "beacon_block_root"
+      }
+    },
+    "CODE-0da1c1": {
+      "type": "inline-code",
+      "values": {
+        "content": "aggregators"
+      }
+    },
+    "CODE-e7fa7b": {
+      "type": "inline-code",
+      "values": {
+        "content": "reward += base reward * flag weight * flag attesting rate / 64"
+      }
+    },
+    "CODE-891d48": {
+      "type": "inline-code",
+      "values": {
+        "content": "base reward = validator effective balance x 2^6 / SQRT(Effective balance of all active validators)"
+      }
+    },
+    "CODE-c1fe50": {
+      "type": "inline-code",
+      "values": {
+        "content": "block n"
+      }
+    },
+    "CODE-82d0a8": {
+      "type": "inline-code",
+      "values": {
+        "content": "block n+1"
+      }
+    },
+    "IMAGE-94cd9d": {
+      "type": "image",
+      "values": {
+        "path": "./attestation_schematic.png"
+      }
+    },
+    "LINK-f832bc": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#epoch"
+      }
+    },
+    "LINK-783e50": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata"
+      }
+    },
+    "LINK-996d0c": {
+      "type": "link",
+      "values": {
+        "url": "https://eth2book.info/capella/part3/containers/dependencies/#attestationdata"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T22:02:36.394Z",
+      "status": "success"
+    }
+  }
+}

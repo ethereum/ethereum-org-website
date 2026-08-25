@@ -2,6 +2,7 @@
 title: Decentralized Storage
 description: Overview of what decentralized storage is and the available tools to integrate it into a dapp.
 lang: en
+authors: ["Patrick Collins"]
 ---
 
 Unlike a centralized server operated by a single company or organization, decentralized storage systems consist of a peer-to-peer network of user-operators who hold a portion of the overall data, creating a resilient file storage sharing system. These can be in a blockchain-based application or any peer-to-peer-based network.
@@ -203,6 +204,15 @@ Proof-of-stake based:
 - [spheron.network](https://spheron.network/)
 - [Documentation](https://docs.spheron.network/)
 - [GitHub](https://github.com/spheronFdn)
+
+**dweb3 - _Resolver for decentralized webpages, similar to eth.limo, supporting all types and not limited to ENS and IPFS._**
+
+- [dweb3.wtf](https://dweb3.wtf)
+
+**web3compass - _Search engine for IPFS + ENS backed decentralized websites._**
+
+- [web3compass.net](https://www.web3compass.net/)
+- [Documentation](https://www.web3compass.net/statistics)
 
 ## Further reading {#further-reading}
 

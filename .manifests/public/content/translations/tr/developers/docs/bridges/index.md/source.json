@@ -1,0 +1,590 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/bridges/index.md",
+  "generatedAt": "2026-06-16T21:54:46.315Z",
+  "rootHash": "a1dd3e8b4f3e",
+  "tree": {
+    "contentHash": "045f039d7e21",
+    "anchorHash": "6f58b67f36ad",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "d982f029f5c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "7549b8a117f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:1": {
+        "contentHash": "5958e4b0b130",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "567cf013bf70",
+        "anchorHash": "0e11617f9023"
+      },
+      "prose:2": {
+        "contentHash": "40bba123f1f9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "need-for-bridges": {
+        "contentHash": "4bc44a0d05ea",
+        "anchorHash": "e3bf24aee659",
+        "labelHash": "645cbcb42cae",
+        "children": {
+          "_label": {
+            "contentHash": "645cbcb42cae",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "ac2a101d6fd0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "d0665bba31dc",
+            "anchorHash": "c7308a37e8aa"
+          },
+          "prose:2": {
+            "contentHash": "94d00fec2255",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "benefits-of-bridges": {
+        "contentHash": "e9a1156e1035",
+        "anchorHash": "5eb493ceb97f",
+        "labelHash": "95b246f07d33",
+        "children": {
+          "_label": {
+            "contentHash": "95b246f07d33",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "401bedaf6095",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "a13bebeb57e1",
+            "anchorHash": "8a5edab28263"
+          },
+          "prose:2": {
+            "contentHash": "ce9e5eaf80c1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "how-do-bridges-work": {
+        "contentHash": "d759797a6195",
+        "anchorHash": "d7645783fd02",
+        "labelHash": "3b45c5fe2a0e",
+        "children": {
+          "_label": {
+            "contentHash": "3b45c5fe2a0e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "6e7421361cc5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "e3e34f0c2330",
+            "anchorHash": "c7015b834557"
+          },
+          "prose:2": {
+            "contentHash": "50b4f4e5dab3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "bridge-types": {
+        "contentHash": "6a4f9eb8f44d",
+        "anchorHash": "af4f0c530bc7",
+        "labelHash": "b1142d5ff88f",
+        "children": {
+          "_label": {
+            "contentHash": "b1142d5ff88f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "4dcc485e1c40",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "82ad08a7111a",
+            "anchorHash": "4ea38e6867ff"
+          },
+          "prose:3": {
+            "contentHash": "3743975dbfd6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "c58a7eca491d",
+            "anchorHash": "99d0f0bba019"
+          },
+          "prose:4": {
+            "contentHash": "053a8ed3fb55",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "trade-offs": {
+        "contentHash": "39ec2e18cc38",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "e480359ae1b2",
+        "children": {
+          "_label": {
+            "contentHash": "e480359ae1b2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c9edbafd2489",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "risk-with-bridges": {
+        "contentHash": "7c28a334370a",
+        "anchorHash": "b6caa768e792",
+        "labelHash": "28deef06db5f",
+        "children": {
+          "_label": {
+            "contentHash": "28deef06db5f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "7e8fb8465f55",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f02b7f3250c5",
+            "anchorHash": "48b920d5a843"
+          },
+          "prose:3": {
+            "contentHash": "982ba1844da1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "f01b94de59f2",
+            "anchorHash": "5c6efeef444f"
+          },
+          "prose:4": {
+            "contentHash": "1089c3e55846",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "how-can-dapps-use-bridges": {
+        "contentHash": "98fa0bd38657",
+        "anchorHash": "d3255197fa94",
+        "labelHash": "f239604af6b5",
+        "children": {
+          "_label": {
+            "contentHash": "f239604af6b5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "1c91d0e28b0e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "integrating-bridges": {
+            "contentHash": "851c453aeea4",
+            "anchorHash": "bd5f801903cb",
+            "labelHash": "ac119b900704",
+            "children": {
+              "_label": {
+                "contentHash": "ac119b900704",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "7a8bfa77d778",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "c40cc25b38bd",
+                "anchorHash": "585d8438b20c"
+              },
+              "prose:2": {
+                "contentHash": "4314112a2d00",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "deploying-a-dapp-on-multiple-chains": {
+            "contentHash": "221d9fbdf8a0",
+            "anchorHash": "8a169e1da6be",
+            "labelHash": "cce8cc9b38ea",
+            "children": {
+              "_label": {
+                "contentHash": "cce8cc9b38ea",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:4": {
+                "contentHash": "5ceca95893f3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "2805fc43d2b5",
+                "anchorHash": "aabdbc65cea9"
+              },
+              "prose:5": {
+                "contentHash": "d03502c43d74",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "ea35b396b10f",
+                "anchorHash": "52bbb2b45c8b"
+              },
+              "prose:6": {
+                "contentHash": "d03502c43d74",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "f39bdbd0a3c5",
+                "anchorHash": "2975320b725f"
+              },
+              "prose:7": {
+                "contentHash": "ed327ac2a405",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "6e55d4f45a73",
+                "anchorHash": "1e5010acff44"
+              },
+              "prose:8": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "examples": {
+                "contentHash": "4674abc19547",
+                "anchorHash": "b87cdd62d603",
+                "labelHash": "1889f03338b7",
+                "children": {
+                  "_label": {
+                    "contentHash": "1889f03338b7",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:3": {
+                    "contentHash": "3973e022e932",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "6cb9ee883170",
+                    "anchorHash": "c0e6dadbbe74"
+                  },
+                  "prose:4": {
+                    "contentHash": "3973e022e932",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:1": {
+                    "contentHash": "a9790cc8e7a0",
+                    "anchorHash": "8a57c715584c"
+                  },
+                  "prose:5": {
+                    "contentHash": "3973e022e932",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:2": {
+                    "contentHash": "23b56439a8e1",
+                    "anchorHash": "fd78193305cc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:3",
+                  "link:0",
+                  "prose:4",
+                  "link:1",
+                  "prose:5",
+                  "link:2"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:4",
+              "link:0",
+              "prose:5",
+              "link:1",
+              "prose:6",
+              "link:2",
+              "prose:7",
+              "link:3",
+              "prose:8",
+              "examples"
+            ]
+          },
+          "monitoring-contract-activity-across-chains": {
+            "contentHash": "3c8f54075a87",
+            "anchorHash": "158d81ba6468",
+            "labelHash": "67278a72b2ab",
+            "children": {
+              "_label": {
+                "contentHash": "67278a72b2ab",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "fd06dc40fc10",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "dfcf87eacbe3",
+                "anchorHash": "3c12c1bf9bd6"
+              },
+              "prose:2": {
+                "contentHash": "3a1706477c8f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "tools": {
+                "contentHash": "936a4a5d4f3e",
+                "anchorHash": "f1ba3b62b28a",
+                "labelHash": "ea93d6a262ec",
+                "children": {
+                  "_label": {
+                    "contentHash": "ea93d6a262ec",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:2": {
+                    "contentHash": "3973e022e932",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "74b6ee67bee2",
+                    "anchorHash": "8fb026477e32"
+                  },
+                  "prose:3": {
+                    "contentHash": "3973e022e932",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:1": {
+                    "contentHash": "0aad75275f54",
+                    "anchorHash": "b5c165e80241"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:2",
+                  "link:0",
+                  "prose:3",
+                  "link:1"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2",
+              "tools"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "integrating-bridges",
+          "deploying-a-dapp-on-multiple-chains",
+          "monitoring-contract-activity-across-chains"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "c50d8aff266a",
+        "anchorHash": "984f623fac6f",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:12": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "9c60b6ad8947",
+            "anchorHash": "530595435fc3"
+          },
+          "prose:13": {
+            "contentHash": "be0ab07e244f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "02fb065d034f",
+            "anchorHash": "956c61cfb445"
+          },
+          "prose:14": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "d880813365cc",
+            "anchorHash": "e1aafbc5d67a"
+          },
+          "prose:15": {
+            "contentHash": "0fa31f8c0bc7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "eaf7772d8178",
+            "anchorHash": "433e7f6a7285"
+          },
+          "prose:16": {
+            "contentHash": "5afd7551c2d3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "4fc410496233",
+            "anchorHash": "3e039a65ecda"
+          },
+          "prose:17": {
+            "contentHash": "16f6cbb20ca3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "befa35600cdf",
+            "anchorHash": "1dedb4797078"
+          },
+          "prose:18": {
+            "contentHash": "7f14bfcbfaf0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "db2239a66bab",
+            "anchorHash": "794afc9e4b5d"
+          },
+          "prose:19": {
+            "contentHash": "f295ec7e1faf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "816a52e76ea7",
+            "anchorHash": "0a638f7a8164"
+          },
+          "prose:20": {
+            "contentHash": "2fdb445a417a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:8": {
+            "contentHash": "a796b980dddf",
+            "anchorHash": "935cd38e2130"
+          },
+          "prose:21": {
+            "contentHash": "a0525215ee5c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:9": {
+            "contentHash": "6f7af02d86a3",
+            "anchorHash": "c51b34c1da83"
+          },
+          "prose:22": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:10": {
+            "contentHash": "1b73ef5c32af",
+            "anchorHash": "c7677f8af759"
+          },
+          "prose:23": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:11": {
+            "contentHash": "fe8d1a12a1f4",
+            "anchorHash": "bf346886068e"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:12",
+          "link:0",
+          "prose:13",
+          "link:1",
+          "prose:14",
+          "link:2",
+          "prose:15",
+          "link:3",
+          "prose:16",
+          "link:4",
+          "prose:17",
+          "link:5",
+          "prose:18",
+          "link:6",
+          "prose:19",
+          "link:7",
+          "prose:20",
+          "link:8",
+          "prose:21",
+          "link:9",
+          "prose:22",
+          "link:10",
+          "prose:23",
+          "link:11"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "need-for-bridges",
+      "benefits-of-bridges",
+      "how-do-bridges-work",
+      "bridge-types",
+      "trade-offs",
+      "risk-with-bridges",
+      "how-can-dapps-use-bridges",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+}

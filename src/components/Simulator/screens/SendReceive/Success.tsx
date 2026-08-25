@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react"
 import { Check } from "lucide-react"
 import { AnimatePresence, motion } from "motion/react"
+import { useLocale, useTranslations } from "next-intl"
 
 import { Flex, VStack } from "@/components/ui/flex"
 import { Spinner } from "@/components/ui/spinner"
 
 import { cn } from "@/lib/utils/cn"
-import { numberFormat } from "@/lib/utils/numbers"
 
-import { getMaxFractionDigitsUsd } from "../../utils"
+import { formatWalletToken, formatWalletUsd } from "../../utils"
 import { WalletHome } from "../../WalletHome"
 import type { TokenBalance } from "../../WalletHome/interfaces"
 
@@ -26,22 +26,15 @@ export const Success = ({
   ethPrice,
   recipient,
 }: SuccessProps) => {
+  const t = useTranslations("component-wallet-simulator")
+  const locale = useLocale()
   const [txPending, setTxPending] = useState(true)
   const [showWallet, setShowWallet] = useState(false)
   const [categoryIndex, setCategoryIndex] = useState(0)
 
   const usdAmount = sentEthAmount * ethPrice
-
-  const usdValue = numberFormat("en", {
-    style: "currency",
-    currency: "USD",
-    notation: "compact",
-    maximumFractionDigits: getMaxFractionDigitsUsd(usdAmount),
-  }).format(usdAmount)
-
-  const sentEthValue = numberFormat("en", {
-    maximumFractionDigits: 5,
-  }).format(sentEthAmount)
+  const usdValue = formatWalletUsd(usdAmount)
+  const sentEthValue = formatWalletToken(sentEthAmount, locale)
 
   // Show spinner for defined number of milliseconds, switching "loading" state to false when complete
   const SPINNER_DURATION = 1000
@@ -113,14 +106,15 @@ export const Success = ({
               )}
               <p className="px-4 text-center md:px-8">
                 {txPending ? (
-                  "Sending transaction"
+                  t("sim-success-sending")
                 ) : (
                   <span>
-                    You sent{" "}
-                    <strong>
-                      <>{sentEthValue} ETH</>
-                    </strong>{" "}
-                    ({usdValue}) to <strong>{recipient}</strong>
+                    {t.rich("sim-success-sent", {
+                      ethAmount: sentEthValue,
+                      usdAmount: usdValue,
+                      recipient,
+                      strong: (chunks) => <strong>{chunks}</strong>,
+                    })}
                   </span>
                 )}
               </p>

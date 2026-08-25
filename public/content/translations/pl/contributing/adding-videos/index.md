@@ -1,0 +1,160 @@
+---
+title: "Dodawanie filmów"
+description: "Zasady dodawania filmów na ethereum.org"
+lang: pl
+---
+
+[Galeria wideo ethereum.org](/videos/) zawiera filmy o Ethereum i ekosystemie Ethereum od twórców ze społeczności oraz zaufanych źródeł. Każdy może zasugerować film do dodania.
+
+## Zasady umieszczania {#listing-policy}
+
+Ethereum.org to neutralne, edukacyjne źródło informacji. Galeria wideo jest nadzorowana, aby:
+
+- **Edukować** użytkowników na temat technologii, ekosystemu i społeczności Ethereum
+- **Zachować dokładność** w treściach technicznych
+- **Pozostać istotną** dla społeczności Ethereum
+
+Strona nie umieszcza filmów, które głównie promują konkretny produkt, token lub usługę komercyjną.
+
+## Kryteria włączenia {#criteria-for-inclusion}
+
+### Wymagania obowiązkowe {#must-haves}
+
+- **Skupienie na Ethereum** – Film musi dotyczyć głównie Ethereum, jego technologii, ekosystemu lub społeczności. Filmy na ogólne tematy związane z technologią blockchain są akceptowalne tylko wtedy, gdy w znacznym stopniu wspierają lub odnoszą się do strony edukacyjnej w witrynie, lub nawiązują do Ethereum.
+- **Wartość edukacyjna** – Film powinien uczyć widzów czegoś o Ethereum lub celebrować globalną społeczność Ethereum. Treści promocyjne lub marketingowe nie będą akceptowane.
+- **Dokładne informacje** – Treść techniczna musi być poprawna merytorycznie i aktualna. Przestarzałe filmy o wycofanych funkcjach mogą zostać usunięte.
+- **Jakość produkcji** – Film powinien mieć w miarę wyraźną jakość dźwięku i obrazu.
+- **Publiczna dostępność** – Film musi być hostowany w otwartym zasobie lub na dostępnej platformie, takiej jak YouTube, i być swobodnie dostępny bez paywalla lub wymogu rejestracji.
+
+### Mile widziane {#nice-to-haves}
+
+- **Posiada transkrypcję** – Filmy z transkrypcjami poprawiają dostępność i SEO. Jeśli jej nie masz, zespół ethereum.org może pomóc w jej wygenerowaniu.
+- **Z wiarygodnego źródła** – Treści od uznanych edukatorów, badaczy i źródeł mają priorytet.
+- **Ponadczasowość** – Treści, które pozostają aktualne z upływem czasu, są preferowane w stosunku do materiałów wrażliwych na upływ czasu.
+
+## Jak dodać film {#how-to-add-a-video}
+
+### Opcja 1: Otwórz zgłoszenie (issue) {#open-an-issue}
+
+Jeśli chcesz zasugerować film, ale nie chcesz samodzielnie tworzyć plików, otwórz zgłoszenie (issue) na GitHubie ze szczegółami filmu, a współtwórca pomoże Ci go dodać.
+
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?template=suggest_video.yaml">
+  Zasugeruj film
+</ButtonLink>
+
+### Opcja 2: Otwórz pull request {#open-a-pull-request}
+
+Jeśli chcesz samodzielnie dodać film, wykonaj następujące kroki:
+
+#### Krok 1: Utwórz plik wideo {#step-1}
+
+Utwórz nowy katalog i plik `index.md` w:
+
+```
+public/content/videos/{twoj-slug-wideo}/index.md
+```
+
+Slug powinien być bezpieczny dla adresów URL, pisany małymi literami i używać myślników (np. `blockchain-101-visual-demo`).
+
+#### Krok 2: Dodaj frontmatter {#step-2}
+
+Dodaj następujący frontmatter YAML do swojego pliku `index.md`:
+
+```yaml
+---
+title: "Your Video Title"
+description: "A brief 1–3 sentence summary of the video."
+lang: en
+youtubeId: "dQw4w9WgXcQ"
+uploadDate: 2025-01-15
+duration: "12:30"
+educationLevel: beginner
+topic:
+  - "your-topic"
+  - "another-topic"
+format: explainer
+author: Channel Name
+---
+```
+
+**Odniesienie do pól:**
+
+| Pole | Wymagane | Opis |
+|---|---|---|
+| `title` | Tak | Tytuł filmu |
+| `description` | Tak | Podsumowanie na 1–3 zdania |
+| `lang` | Tak | Na razie zawsze `en` |
+| `youtubeId` | Tak | ID filmu na YouTube (z adresu URL po `v=`) |
+| `uploadDate` | Tak | Oryginalna data przesłania w formacie `YYYY-MM-DD` |
+| `duration` | Tak | Długość filmu jako `H:MM:SS` lub `M:SS` |
+| `educationLevel` | Tak | `beginner`, `intermediate` lub `advanced` |
+| `topic` | Tak | Tablica tagów tematycznych do filtrowania galerii |
+| `format` | Tak | `explainer`, `presentation`, `interview`, `tutorial` lub `panel` |
+| `author` | Tak | Nazwa twórcy lub kanału |
+| `breadcrumb` | Nie | Niestandardowa krótka etykieta do nawigacji okruszkowej (breadcrumb) |
+| `customThumbnailUrl` | Nie | Niestandardowy adres URL miniatury (domyślnie miniatura z YouTube) |
+
+#### Krok 3: Dodaj transkrypcję (zalecane) {#step-3}
+
+Poniżej frontmattera `---` dodaj transkrypcję filmu w formacie markdown:
+
+```markdown
+---
+title: "..."
+# ... reszta frontmattera
+---
+
+Krótkie wprowadzenie do treści filmu.
+
+### Tytuł sekcji (0:00)
+
+Tekst transkrypcji dla tej sekcji...
+
+### Następna sekcja (5:30)
+
+Więcej tekstu transkrypcji...
+```
+
+Użyj nagłówków `###` ze znacznikami czasu, aby oznaczyć główne sekcje. Dzięki temu transkrypcja jest łatwa do skanowania wzrokiem i poprawia SEO.
+
+Jeśli nie masz transkrypcji, możesz zostawić treść pustą, a zespół ją wygeneruje.
+
+#### Krok 4: Wybierz tagi tematyczne {#step-4}
+
+Wybierz tagi tematyczne z poniższej listy. Każdy tag mapuje się bezpośrednio na kategorię filtru w galerii wideo — użyj nazwy tagu dokładnie tak, jak pokazano.
+
+Film może mieć wiele tagów, aby pojawiać się w wielu filtrach galerii:
+
+| Tag | Filtr galerii |
+|---|---|
+| `how-ethereum-works` | Jak działa Ethereum |
+| `network-upgrades` | Aktualizacje sieci |
+| `roadmap-and-priorities` | Mapa drogowa i priorytety |
+| `scaling-and-layer-2` | Skalowanie i warstwa 2 (L2) |
+| `use-cases` | Przypadki użycia |
+| `privacy` | Prywatność |
+| `security` | Bezpieczeństwo |
+| `community-stories` | Historie społeczności |
+| `events` | Wydarzenia |
+
+Każdy film powinien mieć co najmniej jeden tag z tej listy. Filmy bez rozpoznanego tagu pojawią się tylko w widoku „Wszystkie” i wynikach wyszukiwania.
+
+Tag `community-stories` sprawia również, że film pojawia się na [stronie Historie](/stories/).
+
+#### Krok 5: Prześlij swój PR {#step-5}
+
+Otwórz pull request ze swoimi zmianami do gałęzi `dev`. Zespół przejrzy Twoje zgłoszenie i przekaże opinię.
+
+## Utrzymanie {#maintenance}
+
+Umieszczone filmy są rutynowo sprawdzane, aby upewnić się, że:
+
+- Nadal spełniają kryteria umieszczania
+- Zawierają dokładne, aktualne informacje
+- Mają działające linki do hostingu/YouTube
+
+Jeśli zauważysz problem z umieszczonym filmem, [utwórz zgłoszenie (issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) lub wyślij e-mail na adres [website@ethereum.org](mailto:website@ethereum.org).
+
+## Warunki korzystania {#terms-of-use}
+
+Zapoznaj się z [warunkami korzystania](/terms-of-use/) z ethereum.org. Informacje na ethereum.org są udostępniane wyłącznie w ogólnych celach informacyjnych.

@@ -1,0 +1,208 @@
+{
+  "version": 1,
+  "locale": "bn",
+  "translatedAt": "2026-06-08T09:46:47.544Z",
+  "englishManifestHash": "28099802c780",
+  "placeholderOrder": [
+    "LINK-fb2e62",
+    "LINK-a5026e",
+    "CODE-4eb550",
+    "LINK-a177c9",
+    "CODE-9445ff",
+    "COMPONENT-24f18d",
+    "LINK-0dd731",
+    "LINK-db70e0",
+    "COMPONENT-edf450",
+    "HTMLTAG-23fd1b",
+    "COMPONENT-3f9795",
+    "LINK-efc0b7",
+    "CODE-9445ff",
+    "CODE-4eb550",
+    "LINK-d8a651",
+    "LINK-a45d6c",
+    "LINK-c83c18",
+    "CODE-dde8be",
+    "LINK-c57cd8",
+    "CODE-9445ff",
+    "LINK-73e639",
+    "CODE-9445ff",
+    "CODE-f4a376",
+    "LINK-e9a627",
+    "IMAGE-6e384e",
+    "CODE-4eb550",
+    "IMAGE-57dbec",
+    "CODE-4eb550",
+    "LINK-529721",
+    "IMAGE-2de8e5",
+    "LINK-b9b0fb",
+    "LINK-8a4f66"
+  ],
+  "placeholderMap": {
+    "COMPONENT-24f18d": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "contentPreview": ""
+      }
+    },
+    "LINK-0dd731": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/optimistic-rollups/"
+      }
+    },
+    "LINK-db70e0": {
+      "type": "link",
+      "values": {
+        "url": "/dao/#token-based-membership"
+      }
+    },
+    "COMPONENT-edf450": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "contentPreview": ""
+      }
+    },
+    "HTMLTAG-23fd1b": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work"
+      }
+    },
+    "COMPONENT-3f9795": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "contentPreview": ""
+      }
+    },
+    "LINK-efc0b7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "CODE-4eb550": {
+      "type": "inline-code",
+      "values": {
+        "content": "wARB"
+      }
+    },
+    "CODE-9445ff": {
+      "type": "inline-code",
+      "values": {
+        "content": "ARB"
+      }
+    },
+    "CODE-dde8be": {
+      "type": "inline-code",
+      "values": {
+        "content": "Transfer"
+      }
+    },
+    "CODE-f4a376": {
+      "type": "inline-code",
+      "values": {
+        "content": "ETH"
+      }
+    },
+    "IMAGE-6e384e": {
+      "type": "image",
+      "values": {
+        "path": "./uniswap-real.png"
+      }
+    },
+    "IMAGE-57dbec": {
+      "type": "image",
+      "values": {
+        "path": "./uniswap-scam.png"
+      }
+    },
+    "IMAGE-2de8e5": {
+      "type": "image",
+      "values": {
+        "path": "./etherscan-scam.png"
+      }
+    },
+    "LINK-fb2e62": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-20/"
+      }
+    },
+    "LINK-a5026e": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82"
+      }
+    },
+    "LINK-a177c9": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1"
+      }
+    },
+    "LINK-d8a651": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?tab=holders"
+      }
+    },
+    "LINK-a45d6c": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/address/0x1C8db745ABe3C8162119b9Ef2c13864Cd1FDD72F"
+      }
+    },
+    "LINK-c83c18": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670"
+      }
+    },
+    "LINK-c57cd8": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.arbitrum.foundation/deployment-addresses#token"
+      }
+    },
+    "LINK-73e639": {
+      "type": "link",
+      "values": {
+        "url": "https://uniswap.org/"
+      }
+    },
+    "LINK-e9a627": {
+      "type": "link",
+      "values": {
+        "url": "https://app.uniswap.org/explore#/pools/0x755e5a186f0469583bd2e80d1216e02ab88ec6ca"
+      }
+    },
+    "LINK-529721": {
+      "type": "link",
+      "values": {
+        "url": "https://info.etherscan.com/etherscan-token-reputation/"
+      }
+    },
+    "LINK-b9b0fb": {
+      "type": "link",
+      "values": {
+        "url": "https://app.uniswap.org/#/swap"
+      }
+    },
+    "LINK-8a4f66": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T09:46:47.544Z",
+      "status": "success"
+    }
+  }
+}

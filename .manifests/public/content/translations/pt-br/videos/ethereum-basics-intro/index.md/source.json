@@ -1,0 +1,165 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/ethereum-basics-intro/index.md",
+  "generatedAt": "2026-04-29T05:21:31.723Z",
+  "rootHash": "67bbe78725fb",
+  "tree": {
+    "contentHash": "69779682f0f3",
+    "anchorHash": "9699ba805c84",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "e64c96a67073",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "f48c03190396",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "19af6ca7b2fc"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "7ce733790055"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "12290d258fda"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bfac314fefdc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "8f6f74eb2c71"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e10c6697b924"
+      },
+      "prose:1": {
+        "contentHash": "8267e94b8f6e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "f77636c3d6db"
+      },
+      "prose:2": {
+        "contentHash": "29393bed9275",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "welcome-and-series-overview-003": {
+        "contentHash": "48cdb151c389",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "0720dc7fb4ad",
+        "children": {
+          "_label": {
+            "contentHash": "0720dc7fb4ad",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "77c78a1e6073",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "goals-and-prerequisites-040": {
+        "contentHash": "df8a4cf4065e",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "61335bd0b53f",
+        "children": {
+          "_label": {
+            "contentHash": "61335bd0b53f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "88f14e407d08",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "what-well-cover-141": {
+        "contentHash": "285be61f875b",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "c02150524cb1",
+        "children": {
+          "_label": {
+            "contentHash": "c02150524cb1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "d0dccd71e955",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "tools-and-approach-230": {
+        "contentHash": "2cb96df33165",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "5dd9c4af011d",
+        "children": {
+          "_label": {
+            "contentHash": "5dd9c4af011d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "1ad7023aaad2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "welcome-and-series-overview-003",
+      "goals-and-prerequisites-040",
+      "what-well-cover-141",
+      "tools-and-approach-230"
+    ]
+  },
+  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+}

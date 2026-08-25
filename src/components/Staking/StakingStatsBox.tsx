@@ -1,35 +1,31 @@
 import { Info } from "lucide-react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import type { ChildOnlyProp, StakingStatsData } from "@/lib/types"
 
 import Tooltip from "@/components/Tooltip"
-import { Flex, VStack } from "@/components/ui/flex"
+import { Flex } from "@/components/ui/flex"
 
 import { numberFormat } from "@/lib/utils/numbers"
 
 import InlineLink from "../ui/Link"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 const Cell = ({ children }: ChildOnlyProp) => (
-  <VStack className="gap-2 px-8 py-4">{children}</VStack>
+  <Flex className="flex-col gap-2 border-s p-4 pe-12">{children}</Flex>
 )
 
 const Value = ({ children }: ChildOnlyProp) => (
-  <code className="inline-block bg-none p-0 pe-1 font-monospace text-3xl font-bold text-primary">
+  <div className="inline-block bg-none font-monospace text-3xl font-bold text-primary">
     {children}
-  </code>
+  </div>
 )
 
 const Label = ({ children }: ChildOnlyProp) => (
-  <Flex className="items-center justify-center gap-2 text-sm uppercase">
-    {children}
-  </Flex>
+  <Flex className="gap-2 text-sm uppercase">{children}</Flex>
 )
 
-// BeaconchainTooltip component
-const BeaconchainTooltip = ({ children }: ChildOnlyProp) => (
+// DataSourceTooltip component
+const DataSourceTooltip = ({ children }: ChildOnlyProp) => (
   <Tooltip content={children}>
     <Info className="active:primary focus:primary size-[1em] text-md hover:text-primary" />
   </Tooltip>
@@ -41,11 +37,14 @@ type StakingStatsBoxProps = {
 }
 const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
   const locale = useLocale()
-  const { t } = useTranslation("page-staking")
+  const t = useTranslations("page-staking")
+  const tCommon = useTranslations("common")
 
   // Helper functions
   const formatInteger = (amount: number): string =>
-    amount ? numberFormat(locale).format(amount) : "—"
+    amount
+      ? numberFormat(locale, { maximumFractionDigits: 0 }).format(amount)
+      : "—"
 
   const formatPercentage = (amount: number): string =>
     numberFormat(locale, {
@@ -55,7 +54,7 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
     }).format(amount)
 
   const totalEth = formatInteger(data.totalEthStaked)
-  const totalValidators = formatInteger(data.validatorscount)
+  const percentStaked = formatPercentage(data.stakedPercentage)
   const currentApr = formatPercentage(data.apr)
 
   return (
@@ -64,41 +63,39 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
         <Value>{totalEth}</Value>
         <Label>
           {t("page-staking-stats-box-metric-1")}
-          <BeaconchainTooltip>
+          <DataSourceTooltip>
             <div className="normal-case">
               <p>{t("page-staking-stats-box-metric-1-tooltip")}</p>
-              {t("common:data-provided-by")}{" "}
-              <InlineLink href="https://beaconcha.in/">Beaconcha.in</InlineLink>
+              {tCommon("data-provided-by")}{" "}
+              <InlineLink href="https://dune.com/">Dune Analytics</InlineLink>
             </div>
-          </BeaconchainTooltip>
+          </DataSourceTooltip>
         </Label>
       </Cell>
       <Cell>
-        <Value>{totalValidators}</Value>
+        <Value>{percentStaked}</Value>
         <Label>
           {t("page-staking-stats-box-metric-2")}
-          <BeaconchainTooltip>
+          <DataSourceTooltip>
             <div className="normal-case">
               <p>{t("page-staking-stats-box-metric-2-tooltip")}</p>
-              {t("common:data-provided-by")}{" "}
-              <InlineLink href="https://beaconcha.in/">Beaconcha.in</InlineLink>
+              {tCommon("data-provided-by")}{" "}
+              <InlineLink href="https://dune.com/">Dune Analytics</InlineLink>
             </div>
-          </BeaconchainTooltip>
+          </DataSourceTooltip>
         </Label>
       </Cell>
       <Cell>
         <Value>{currentApr}</Value>
         <Label>
           {t("page-staking-stats-box-metric-3")}
-          <BeaconchainTooltip>
+          <DataSourceTooltip>
             <div className="normal-case">
               <p>{t("page-staking-stats-box-metric-3-tooltip")}</p>
-              {t("common:data-provided-by")}{" "}
-              <InlineLink href="https://beaconcha.in/ethstore">
-                Beaconcha.in
-              </InlineLink>
+              {tCommon("data-provided-by")}{" "}
+              <InlineLink href="https://dune.com/">Dune Analytics</InlineLink>
             </div>
-          </BeaconchainTooltip>
+          </DataSourceTooltip>
         </Label>
       </Cell>
     </Flex>

@@ -1,78 +1,83 @@
 ---
-title: "Uzamykejte své ETH z domova"
-description: "Přehled toho, jak začít uzamykat své ETH z domova"
+title: Domácí staking vašeho ETH
+description: Přehled toho, jak začít se stakingem ETH z domova
 lang: cs
 template: staking
-emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: "Nosorožec Leslie na svém vlastním počítačovém čipu."
 sidebarDepth: 2
 summaryPoints:
-  - Získejte maximální odměny přímo z protokolu za to, že váš validátor bude správně fungovat a bude online
-  - Spusťte domácí hardware a osobně přidejte k zabezpečení a decentralizaci sítě Ethereum
-  - Odstraňte důvěru a nikdy se nevzdávejte kontroly nad klíči ke svým prostředkům
+  - Získejte maximální odměny přímo z protokolu za to, že udržujete svůj validátor správně fungující a online
+  - Provozujte domácí hardware a osobně přispějte k bezpečnosti a decentralizaci sítě Ethereum
+  - Odstraňte nutnost důvěry a nikdy se nevzdávejte kontroly nad klíči ke svým prostředkům
 ---
 
-## Co je uzamčení z domova? {#what-is-solo-staking}
+## Co je domácí staking? {#what-is-solo-staking}
 
-Uzamčení z domova je akt [spuštění ethereového uzlu](/run-a-node/) připojeného k internetu a vložení 32 ETH k aktivaci [validátora](#faq), což vám dává možnost přímo se podílet na konsensu sítě.
+Domácí staking je proces [provozování uzlu sítě Ethereum](/run-a-node/) připojeného k internetu a vložení alespoň 32 ETH k aktivaci [validátora](#faq), což vám dává možnost přímo se podílet na konsensu sítě.
 
-**Uzamčení z domova zvyšuje decentralizaci sítě Ethereum, díky čemuž je Ethereum odolnější vůči cenzuře a robustnější proti útokům.** Jiné metody uzamčení nemusí síti pomoci stejným způsobem. Uzamčení z domova je nejlepší možností uzamčení pro zabezpečení Etherea.
+Domácí staking je nejpřímější způsob stakingu. Mezi vámi a protokolem nestojí žádné chytré kontrakty, operátoři ani správci. Držíte své vlastní klíče, aktivně se podílíte na validaci sítě [Ethereum](/) a dostáváte odměny sítě přímo. Každá jiná metoda stakingu přidává k této základní síťové aktivitě další vrstvy technologie, middlewaru nebo služeb.
 
-Uzel Etherea se skládá jak z klienta exekuční vrstvy (EL), tak z klienta konsensuální vrstvy (CL). Tito klienti jsou software, který spolupracuje s platnou sadou podpisových klíčů na ověřování transakcí a bloků, potvrzování správné hlavy řetězce, agregaci atestací a navrhování bloků.
+**Domácí staking zvyšuje decentralizaci sítě Ethereum**, čímž se Ethereum stává odolnějším vůči cenzuře a robustnějším proti útokům. Jiné metody stakingu nemusí síti pomáhat stejným způsobem. Domácí staking je nejlepší možností stakingu pro zabezpečení Etherea.
 
-Domácí stakeři jsou zodpovědní za provoz hardwaru potřebného ke spuštění těchto klientů. Důrazně se doporučuje používat k tomu vyhrazený počítač, který provozujete z domova – je to nesmírně prospěšné pro zdraví sítě.
+Uzel sítě Ethereum se skládá z klienta exekuční vrstvy (EL) a klienta vrstvy konsensu (CL). Tito klienti jsou software, který spolupracuje s platnou sadou podepisovacích klíčů na ověřování transakcí a bloků, potvrzování správné hlavy řetězce, agregaci atestací a navrhování bloků.
 
-Uzamykatel z domova dostává odměny přímo z protokolu za to, že jejich validátor řádně funguje a je online.
+Domácí stakeři jsou zodpovědní za provoz hardwaru potřebného k běhu těchto klientů. Důrazně se doporučuje použít k tomu vyhrazený počítač, který provozujete z domova – to je pro zdraví sítě nesmírně prospěšné.
 
-## Proč provádět uzamčení z domova? {#why-stake-solo}
+Domácí staker dostává odměny přímo z protokolu za to, že udržuje svůj validátor správně fungující a online.
 
-Uzamčení z domova přináší větší odpovědnost, ale poskytuje vám maximální kontrolu nad vašimi prostředky a nastavením uzamčení.
+## Proč stakovat z domova? {#why-stake-solo}
 
-<CardGrid>
-  <Card title="Získejte nové ETH" emoji="💸" description="Získejte odměny v ETH přímo z protokolu, když je váš validátor online, aniž by si zprostředkovatelé brali svůj podíl." />
-  <Card title="Plná kontrola" emoji="🎛️" description="Ponechte si své vlastní klíče. Vyberte si kombinaci klientů a hardwaru, která vám umožní minimalizovat riziko a co nejlépe přispět ke zdraví a bezpečnosti sítě. Stakingové služby třetích stran tato rozhodnutí dělají za vás a ne vždy volí ta nejbezpečnější řešení." />
-  <Card title="Zabezpečení sítě" emoji="🔐" description="Domácí staking je nejúčinnější způsob stakingu. Provozováním validátoru na vlastním hardwaru doma posilujete odolnost, decentralizaci a bezpečnost protokolu Ethereum." />
-</CardGrid>
+Domácí staking s sebou přináší větší zodpovědnost, ale poskytuje vám maximální kontrolu nad vašimi prostředky a nastavením stakingu.
 
-## Co zvážit před uzamčením z domova {#considerations-before-staking-solo}
+<Grid>
+  <Card title="Ponechte si všechny odměny" icon={<HandCoins />} description="Domácí stakeři dostávají 100 % odměn protokolu, které jsou vypláceny přímo protokolem, zatímco je váš validátor online." />
+  <Card title="Svrchovanost" icon={<KeyRound />} description="Mějte své vlastní klíče a plnou správu nad svými prostředky za všech okolností. Vyberte si kombinaci klientů a hardwaru, která vám umožní minimalizovat riziko. Žádná třetí strana za vás nemůže tato rozhodnutí učinit ani omezit vaše výběry." />
+  <Card title="Klientská a geografická diverzita" icon={<GlobeLock />} description="Domácí stakeři provozující menšinové klienty na hardwaru rozmístěném na mnoha místech posilují decentralizaci a bezpečnost sítě." />
+</Grid>
 
-I když bychom si přáli, aby bylo uzamčení z domova dostupné a bez rizika pro každého, není to realita. Než se rozhodnete uzamknout své ETH z domova, je třeba mít na paměti několik praktických a závažných aspektů.
+## Co zvážit před domácím stakingem {#considerations-before-staking-solo}
 
-<InfoGrid>
+Jakkoli bychom si přáli, aby byl domácí staking přístupný a bez rizika pro každého, není to realita. Než se rozhodnete pro domácí staking svého ETH, je třeba mít na paměti některé praktické a vážné ohledy.
+
 <ExpandableCard title="Povinná četba" eventCategory="SoloStaking" eventName="clicked required reading">
-Při provozu vlastního uzlu byste měli strávit nějaký čas tím, že se naučíte používat software, který jste si vybrali. To zahrnuje čtení příslušné dokumentace a sledování komunikačních kanálů těchto vývojářských týmů.
+Při provozování vlastního uzlu byste měli strávit nějaký čas tím, že se naučíte používat software, který jste si vybrali. To zahrnuje čtení příslušné dokumentace a sledování komunikačních kanálů těchto vývojářských týmů.
 
-Čím více budete rozumět softwaru, který používáte, a tomu, jak funguje proof-of-stake, tím méně riskantní to bude jako pro stakera a tím snazší bude opravit jakékoli problémy, které se mohou vyskytnout v průběhu provozu uzlu.
+Čím více rozumíte softwaru, který provozujete, a tomu, jak funguje důkaz podílem (PoS), tím méně riskantní to pro vás jako stakera bude a tím snazší bude vyřešit jakékoli problémy, které se mohou během provozu uzlu vyskytnout.
 </ExpandableCard>
 
-<ExpandableCard title="Pohodlná práce s počítačem" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
-Nastavení uzlů vyžaduje přiměřenou úroveň pohodlí při práci s počítači, i když nové nástroje to postupem času usnadňují. Pochopení rozhraní příkazového řádku je užitečné, ale již není striktně vyžadováno.
+<ExpandableCard title="Znalost práce s počítačem" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
+Nastavení uzlu vyžaduje přiměřenou úroveň dovedností při práci s počítači, ačkoli nové nástroje to postupem času usnadňují. Porozumění rozhraní příkazového řádku je užitečné, ale již není striktně vyžadováno.
 
-Vyžaduje také velmi základní nastavení hardwaru a určité porozumění minimálním doporučeným specifikacím.
+Vyžaduje to také velmi základní nastavení hardwaru a určité pochopení minimálních doporučených specifikací.
+</ExpandableCard>
+
+<ExpandableCard title="Hardwarové požadavky" eventCategory="SoloStaking" eventName="clicked hardware requirements">
+Aktuální pokyny komunity pro hardware a šířku pásma validátora jsou udržovány v [doporučeních pro hardware a šířku pásma (EIP-7870)](https://eips.ethereum.org/EIPS/eip-7870). Jako hrubé vodítko počítejte se 4 TB NVMe SSD, 64 GB RAM (může fungovat i méně, ale toto je doporučená rezerva), solidním moderním vícejádrovým procesorem a internetovým připojením s rychlostí stahování přibližně 50 Mbps a odesílání 25 Mbps.
+
+Vzhledem k tomu, že upgrade Fusaka zavedl PeerDAS, stakingový uzel potřebuje ukládat a stahovat pouze zlomek dat blobů sítě, což výrazně snižuje požadavky na disk a šířku pásma pro domácí stakery.
 </ExpandableCard>
 
 <ExpandableCard title="Bezpečná správa klíčů" eventCategory="SoloStaking" eventName="clicked secure key management">
-Stejně jako privátní klíče zajišťují vaši adresu Ethereum, budete muset vygenerovat klíče speciálně pro váš validátor. Musíte rozumět tomu, jak uchovat bezpečnostní fráze nebo soukromé klíče v bezpečí.{' '}
+Stejně jako soukromé klíče zabezpečují vaši adresu na Ethereu, budete muset vygenerovat klíče speciálně pro váš validátor. Musíte rozumět tomu, jak udržet jakékoli seed fráze nebo soukromé klíče v bezpečí.{' '}
 
-[Zabezpečení Etherea a prevence podvodů](/security/)
+[Bezpečnost Etherea a prevence podvodů](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Údržba" eventCategory="SoloStaking" eventName="clicked maintenance">
-Hardware občas selže, dojde k chybě síťových připojení a klientský software občas potřebuje upgrade. Údržba uzlů je nevyhnutelná a občas bude vyžadovat vaši pozornost. Budete si chtít být jisti, že budete informováni o všech očekávaných upgradech sítě nebo jiných důležitých upgradech klientů.
+Hardware občas selže, síťová připojení vykazují chyby a klientský software občas potřebuje aktualizaci. Údržba uzlu je nevyhnutelná a občas bude vyžadovat vaši pozornost. Budete se chtít ujistit, že máte přehled o všech očekávaných upgradech sítě nebo jiných kritických aktualizacích klientů.
 </ExpandableCard>
 
 <ExpandableCard title="Spolehlivá dostupnost" eventCategory="SoloStaking" eventName="clicked reliable uptime">
-Vaše odměny jsou úměrné době, kdy je váš validátor online a řádně provádí atestace. Za prostoje jsou penalizovány úměrně tomu, kolik dalších validátorů je současně offline, ale <a href="#faq">nevede to k trestu</a>. Záleží také na šířce pásma, protože odměny se snižují za atestace, které nejsou obdrženy včas. Požadavky se budou lišit, ale doporučuje se minimálně 10 Mb/s pro odesílání i stahování.
+Vaše odměny jsou úměrné době, po kterou je váš validátor online a správně atestuje. Výpadky znamenají penalizace úměrné tomu, kolik dalších validátorů je ve stejnou dobu offline, ale [nevedou k penalizaci (slashingu)](#faq). Na šířce pásma také záleží, protože odměny se snižují za atestace, které nejsou přijaty včas. Požadavky se budou lišit, ale aktuální [doporučení pro hardware a šířku pásma (EIP-7870)](https://eips.ethereum.org/EIPS/eip-7870) navrhují přibližně 50 Mbps pro stahování a 25 Mbps pro odesílání.
 </ExpandableCard>
 
-<ExpandableCard title="Riziko potrestání" eventCategory="SoloStaking" eventName="clicked slashing risk">
-Na rozdíl od penalizace za nečinnost za to, že jste offline, je <em>trestání</em> mnohem závažnějším trestem vyhrazeným za škodlivé přestupky. Spuštěním menšinového klienta s vašimi klíči načtenými pouze na jednom počítači je riziko potrestání minimalizováno. Jak již bylo řečeno, všichni stakeři si musí být vědomi rizik trestání.
+<ExpandableCard title="Riziko penalizace" eventCategory="SoloStaking" eventName="clicked slashing risk">
+Na rozdíl od penalizací za neaktivitu z důvodu offline stavu je <em>slashing</em> (penalizace) mnohem vážnější trest vyhrazený pro škodlivé prohřešky. Provozováním menšinového klienta s klíči načtenými pouze na jednom počítači současně se vaše riziko penalizace minimalizuje. Přesto si všichni stakeři musí být vědomi rizik penalizace.
 
-<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Více o trestání a životním cyklu validátoru</a>
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Více o penalizaci a životním cyklu validátora</a>
 </ExpandableCard>
 
-</InfoGrid>
+## Porovnání možností stakingu {#comparison-of-staking-options}
 
 <StakingComparison page="solo" />
 
@@ -80,130 +85,160 @@ Na rozdíl od penalizace za nečinnost za to, že jste offline, je <em>trestán�
 
 <StakingHowSoloWorks />
 
-Když budete aktivní, budete získávat odměny ETH, které budou pravidelně ukládány na vaši adresu pro výběr.
+Jakmile je váš uzel synchronizován a vaše klíče jsou vygenerovány, vložíte svůj stake k aktivaci vašeho validátora. Jeden validátor vyžaduje minimálně 32 ETH a může držet až 2048 ETH. Síť rozpozná vklady přibližně za 13 minut, ale noví validátoři procházejí frontou pro aktivaci, než začnou atestovat; její délka se liší podle poptávky.
 
-Pokud budete chtít, můžete odejít jako validátor, což eliminuje požadavek být online a zastaví jakékoli další odměny. Váš zbývající zůstatek bude poté vybrán na adresu pro výběr, kterou určíte při nastavení.
+Během aktivity budete získávat odměny v ETH. S pověřením k výběru se složeným úročením (0x02) se odměny automaticky přidávají k vašemu staku; s pověřením k běžným výběrům (0x01) jsou odměny nad počátečních 32 ETH pravidelně převáděny na vaši adresu pro výběr.
 
-[Více o výběrech uzamčených prostředků](/staking/withdrawals/)
+Pokud si to budete někdy přát, můžete jako validátor vystoupit, což eliminuje požadavek být online a zastaví jakékoli další odměny. Váš zbývající zůstatek bude poté vybrán na adresu pro výběr, kterou určíte během nastavení. Výstupy lze iniciovat pomocí vašich podepisovacích klíčů validátora nebo spustit přímo z vaší adresy pro výběr pomocí transakce na exekuční vrstvě, takže konečná kontrola nad vašimi prostředky vždy zůstává na vaší adrese pro výběr.
 
-## Začněte se Staking Launchpad {#get-started-on-the-staking-launchpad}
+### Složené úročení a maximum 2048 ETH {#compounding}
 
-Staking Launchpad je open source aplikace, která vám pomůže stát se stakerem. Provede vás výběrem vašich klientů, vygenerováním vašich klíčů a uložením vašeho ETH do smlouvy o vkladu. K dispozici je kontrolní seznam, abyste se ujistili, že jste probrali vše, abyste mohli svůj validátor bezpečně nastavit.
+Validátoři mají jeden ze dvou typů pověření k výběru:
+
+- **Běžné výběry (0x01)**: efektivní zůstatek validátora je omezen na 32 ETH a jakýkoli zůstatek nad tuto hodnotu je každých několik dní automaticky převeden na vaši adresu pro výběr.
+- **Složené úročení (0x02)**: efektivní zůstatek validátora může růst až do 2048 ETH. Odměny se automaticky úročí a získáváte odměny z každého celého ETH nad minimum 32 ETH, takže můžete stakovat flexibilní částky, jako je 40 ETH, nejen násobky 32. Pouze zůstatek nad 2048 ETH je automaticky převeden; výběr čehokoli jiného znamená ruční spuštění částečného výběru z vaší adresy pro výběr, což stojí gas.
+
+Pokud provozujete více validátorů, můžete je konsolidovat do jednoho validátora se složeným úročením, aniž byste museli vystoupit a znovu vstoupit do sítě, čímž snížíte režii na údržbu. O konsolidaci se žádá z vaší adresy pro výběr a podléhá frontám na zpracování. Přepnutí validátora z pověření 0x01 na 0x02 využívá stejný mechanismus a **nelze jej zvrátit** bez úplného výstupu a opětovného vložení.
+
+[Více o výběrech ze stakingu](/staking/withdrawals/)
+
+## Začněte na Staking Launchpadu {#get-started-on-the-staking-launchpad}
+
+Staking Launchpad je open source aplikace, která vám pomůže stát se stakerem. Provede vás výběrem vašich klientů, vygenerováním vašich klíčů a vložením vašeho ETH do stakingového vkladového kontraktu. K dispozici je kontrolní seznam, abyste se ujistili, že jste pokryli vše pro bezpečné nastavení vašeho validátora.
 
 <StakingLaunchpadWidget />
 
-## Co je třeba zvážit u nástrojů pro nastavení uzlů a klientů {#node-tool-considerations}
+## Co zvážit u nástrojů pro nastavení uzlu a klienta {#node-tool-considerations}
 
-Existuje rostoucí počet nástrojů a služeb, které vám pomohou uzamčít vaše ETH z domova, ale každý přichází s jinými riziky a výhodami.
+Existuje rostoucí počet nástrojů a služeb, které vám pomohou s domácím stakingem vašeho ETH, ale každý z nich přináší jiná rizika a výhody.
 
-Atributové indikátory se používají níže k signalizaci pozoruhodných silných nebo slabých stránek, které může mít uvedený nástroj pro uzamčení. Použijte tuto část jako referenci, jak definujeme tyto atributy, když vybíráte nástroje, které vám pomohou s vaší cestou uzamčení.
+Níže jsou použity indikátory atributů k signalizaci významných silných nebo slabých stránek, které může uvedený nástroj pro staking mít. Tuto sekci použijte jako referenci pro to, jak tyto atributy definujeme, zatímco si vybíráte, jaké nástroje vám pomohou na vaší cestě stakingem.
 
 <StakingConsiderations page="solo" />
 
-## Prozkoumejte nástroje pro nastavení uzlů a klientů {#node-and-client-tools}
+## Prozkoumejte nástroje pro nastavení uzlu a klienta {#node-and-client-tools}
 
-K dispozici jsou různé možnosti, které vám pomohou s nastavením. Pomocí výše uvedených indikátorů vás provedou níže uvedenými nástroji.
+K dispozici je celá řada možností, které vám pomohou s nastavením. Použijte výše uvedené indikátory, které vás provedou níže uvedenými nástroji.
 
 <ProductDisclaimer />
 
-### Nástroje uzlu
+### Nástroje pro uzly {#node-tools}
 
 <StakingProductsCardGrid category="nodeTools" />
 
-Vezměte prosím na vědomí, že je důležité vybrat [menšinového klienta](/developers/docs/nodes-and-clients/client-diversity/), protože zlepšuje zabezpečení sítě a omezuje vaše riziko. Nástroje, které umožňují nastavení menšinového klienta, jsou označeny jako <em style={{ textTransform: "uppercase" }}>„multi-klientské“</em>.
+Vezměte prosím na vědomí důležitost výběru [menšinového klienta](/developers/docs/nodes-and-clients/client-diversity/), protože to zlepšuje bezpečnost sítě a omezuje vaše riziko. Nástroje, které vám umožňují nastavit menšinového klienta, jsou označeny jako <em style={{ textTransform: "uppercase" }}>„multi-client“.</em>
 
-### Generátory klíčů
+### Generátory klíčů {#key-generators}
 
-Tyto nástroje lze použít jako alternativu k [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/), které vám pomohou s generováním klíčů.
+Tyto nástroje lze použít jako alternativu k [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/) pro pomoc s generováním klíčů.
 
 <StakingProductsCardGrid category="keyGen" />
 
-Máte návrh na vkladový nástroj, který nám chyběl? Podívejte se na naše [zásady pro uvádění produktů](/contributing/adding-staking-products/), abyste zjistili, zda je váš produkt vhodný, a mohli ho odeslat ke kontrole.
+Máte návrh na nástroj pro staking, který jsme vynechali? Podívejte se na naše [zásady pro zařazení produktů](/contributing/adding-staking-products/), abyste zjistili, zda by se hodil, a odešlete jej ke kontrole.
 
-## Prozkoumejte návody na uzamčení z domova {#staking-guides}
+## Prozkoumejte průvodce domácím stakingem {#staking-guides}
 
 <StakingGuides />
 
-## Často kladené dotazy {#faq}
+## Skupinový staking: domácí staking s odolností proti chybám {#squad-staking}
 
-Toto je několik nejčastějších otázek týkajících se vkládání, které stojí za to vědět.
+**Technologie distribuovaných validátorů (DVT)** umožňuje, aby jeden validátor běžel napříč clusterem počítačů namísto pouze jednoho. Klíč validátora je rozdělen na podíly pomocí distribuovaného generování klíčů a prahová hodnota clusteru (například jakékoli 3 ze 4 uzlů) musí podepisovat společně; úplný klíč nikdy neexistuje na žádném jednotlivém počítači. Pokud jeden počítač selže, přejde do režimu offline nebo je špatně nakonfigurován, zbytek clusteru udržuje validátor v atestaci.
+
+Pro domácí stakery to umožňuje „skupinový staking“ (squad staking): spojení s přáteli nebo jinými členy komunity za účelem společného provozování validátorů, čímž se odstraní jednotlivé body selhání sólového nastavení a sníží se riziko penalizace z jednoho špatně se chovajícího počítače. Obol a SSV Network poskytují produkční implementace DVT, které se dnes používají napříč domácím stakingem, stakingem jako službou a stakingovými pooly.
+
+[Více o technologii distribuovaných validátorů](/staking/dvt/)
+
+## Provozujte validátory pro stakingový protokol {#run-validators-for-a-staking-protocol}
+
+Pokud máte hardware a dovednosti k provozování uzlu, ale méně než 32 ETH, některé stakingové protokoly spárují váš validátor s ETH od svých stakerů ve společném stakingu. Složíte menší kauci jako zajištění a provozujete validátor na svém vlastním počítači; protokol dodá zbytek staku a vy získáte podíl na odměnách.
+
+Jedná se o hybridní přístup: ponecháváte si odpovědnost (a uspokojení) z provozování vlastního hardwaru, ale váš validátor funguje podle chytrých kontraktů, správy a pravidel výkonu protokolu, což je jiný profil důvěry než přímý staking vašeho vlastního ETH.
+
+Zjistěte více o tom, jak tyto protokoly fungují, včetně jejich předpokladů důvěry a mechaniky tokenů, na [stránce o společném stakingu](/staking/pools/).
+
+## Další způsoby, jak využít váš uzel {#more-ways-to-use-your-node}
+
+K tomu, abyste uplatnili dovednosti v provozování uzlu, nemusíte vůbec stakovat. Kdokoli může [provozovat uzel sítě Ethereum](/run-a-node/) bez vložení jakéhokoli ETH. Získáte tak vlastní ověřený pohled na řetězec, svůj vlastní soukromý koncový bod pro odesílání transakcí a interakci s aplikacemi a přispějete ke zdraví a odolnosti sítě. Provozování uzlu je také dobrý způsob, jak získat zkušenosti před aktivací validátora, aniž byste riskovali jakékoli ETH.
+
+<StakingCommunityCallout className="my-16" />
+
+## Často kladené otázky {#faq}
+
+Zde je několik nejčastějších otázek o stakingu, o kterých stojí za to vědět.
 
 <ExpandableCard title="Co je to validátor?">
 
-<em>Validátor</em> je virtuální entita, která žije na Ethereu a účastní se konsensu protokolu Ethereum. Validátory jsou reprezentovány zůstatkem, veřejným klíčem a dalšími vlastnostmi. <em>Klient validátoru</em> je software, který jedná jménem validátoru tím, že drží a používá jeho privátní klíč. Jeden klient validátoru může pojmout mnoho párů klíčů a ovládat mnoho validátorů.
+<em>Validátor</em> je virtuální entita, která žije na Ethereu a podílí se na konsensu protokolu Ethereum. Validátoři jsou reprezentováni zůstatkem, veřejným klíčem a dalšími vlastnostmi. <em>Klient validátora</em> je software, který jedná jménem validátora tím, že drží a používá jeho soukromý klíč. Jeden klient validátora může držet mnoho párů klíčů a ovládat tak mnoho validátorů.
+
 </ExpandableCard>
 
 <ExpandableCard title="Mohu vložit více než 32 ETH?">
-Ano, moderní účty validátorů mohou pojmout až 2048 ETH. Další ETH nad 32 se budou sčítat postupně, přičemž se budou zvyšovat v celočíselných přírůstcích, jak se bude zvyšovat váš skutečný zůstatek. Toto je známé jako váš <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">efektivní zůstatek</a>.
+Ano. Validátor s pověřením k výběru se _složeným úročením_ (0x02) může držet efektivní zůstatek až 2048 ETH, zatímco minimum pro aktivaci zůstává 32 ETH. Odměny na validátoru se složeným úročením se automaticky přidávají k jeho staku a získává odměny z každého celého ETH nad minimum 32 ETH, takže můžete stakovat částky, které nejsou násobky 32. Viz [Složené úročení a maximum 2048 ETH](#compounding).
 
-Pro zvýšení efektivního zůstatku účtu a tím i zvýšení odměn musí být překročena rezerva 0,25 ETH nad jakoukoli plnou prahovou hodnotou ETH. Například účet se skutečným zůstatkem 32,9 a efektivním zůstatkem 32 by musel vydělat dalších 0,35 ETH, aby se jeho skutečný zůstatek dostal nad 33,25, než by se spustilo zvýšení efektivního zůstatku.
+Validátoři s pověřením k _běžným výběrům_ (0x01) zůstávají omezeni na efektivní zůstatek 32 ETH, přičemž jakýkoli zůstatek nad tuto hodnotu je každých několik dní automaticky převeden na adresu pro výběr.
 
-Tato rezerva také zabraňuje poklesu efektivního zůstatku, dokud neklesne o 0,25 ETH pod svůj aktuální efektivní zůstatek.
+U validátora se složeným úročením se automaticky převádí pouze zůstatek nad maximum 2048 ETH. Chcete-li vybrat cokoli pod touto hodnotou, spustíte částečný výběr ze své adresy pro výběr (transakce, která stojí gas), což může odčerpat jakýkoli zůstatek nad minimum 32 ETH. Pokud provozujete více validátorů, můžete je také konsolidovat do jednoho validátora se složeným úročením, aniž byste museli vystoupit ze sítě.
 
-Každý pár klíčů spojený s validátorem vyžaduje k aktivaci alespoň 32 ETH. Jakýkoli zůstatek nad touto částkou může být kdykoli vybrán na přidruženou adresu pro výběr prostřednictvím transakce podepsané touto adresou. Jakékoli prostředky nad maximálním efektivním zůstatkem budou automaticky periodicky vybírány.
-
-Pokud se vám zdá uzamčení z domova příliš náročné, zvažte použití poskytovatele [uzamčení jako služby](/staking/saas/), nebo pokud pracujete s méně než 32 ETH, podívejte se na [fondy uzamčení](/staking/pools/).
+[Více o výběrech ze stakingu](/staking/withdrawals/)
 </ExpandableCard>
 
-<ExpandableCard title="Budu potrestán, když budu offline? (tl;dr: Ne.)">
-Přechod do režimu offline v době, kdy se síť správně finalizuje, NEBUDE mít za následek trestání. Malé <em>pokuty za nečinnost</em> jsou uvaleny, pokud váš validátor není k dispozici k atestaci pro danou epochu (každá o délce 6,4 minuty), ale to je velmi odlišné od <em>trestání</em>. Tyto sankce jsou o něco nižší než odměna, kterou byste získali, pokud by byl validátor k dispozici pro atestaci, a ztráty lze získat zpět s přibližně stejným množstvím času, kdy budete znovu online.
+<ExpandableCard title="Budu penalizován, když budu offline? (ve zkratce: Ne.)">
+Přechod do režimu offline, když síť správně finalizuje, NEPOVEDE k penalizaci (slashingu). Pokud váš validátor není k dispozici pro atestaci v dané epoše (každá trvá 6,4 minuty), vznikají malé <em>penalizace za neaktivitu</em>, ale to je velmi odlišné od <em>slashingu</em>. Tyto penalizace jsou o něco menší než odměna, kterou byste získali, kdyby byl validátor k dispozici pro atestaci, a ztráty lze získat zpět přibližně za stejnou dobu, po kterou budete opět online.
 
-Všimněte si, že sankce za nečinnost jsou úměrné tomu, kolik validátorů je současně offline. V případech, kdy je velká část sítě offline najednou, budou postihy pro každý z těchto validátorů vyšší, než když je jeden validátor nedostupný.
+Vezměte na vědomí, že penalizace za neaktivitu jsou úměrné tomu, kolik validátorů je ve stejnou dobu offline. V případech, kdy je velká část sítě offline najednou, budou penalizace pro každého z těchto validátorů vyšší, než když je nedostupný pouze jeden validátor.
 
-V extrémních případech, pokud se síť přestane finalizovat v důsledku toho, že více než třetina validátorů je offline, tito uživatelé utrpí takzvaný <em>kvadratický únik nečinnosti</em>, což je exponenciální odliv ETH z účtů offline validátoru. To umožňuje, aby se síť časem samoopravila spálením ETH neaktivních validátorů, dokud jejich zůstatek nedosáhne 16 ETH, přičemž budou automaticky vyřazeni z fondu validátorů. Zbývající online validátoři budou nakonec opět tvořit více než 2/3 sítě, čímž uspokojí nadpoloviční většinu potřebnou k opětovné finalizaci řetězce.
+V extrémních případech, pokud síť přestane finalizovat v důsledku toho, že je více než třetina validátorů offline, utrpí tito uživatelé to, co je známé jako <em>kvadratický únik za neaktivitu</em>, což je exponenciální odčerpávání ETH z účtů offline validátorů. To umožňuje síti se nakonec sama uzdravit tím, že spálí ETH neaktivních validátorů, dokud jejich zůstatek nedosáhne 16 ETH, v kterémžto okamžiku budou automaticky vyřazeni z poolu validátorů. Zbývající online validátoři budou nakonec opět tvořit více než 2/3 sítě, čímž uspokojí supervětšinu potřebnou k opětovné finalizaci řetězce.
 </ExpandableCard>
 
-<ExpandableCard title="Jak se vyhnout potrestání?">
-Stručně řečeno, toto nelze nikdy plně zaručit, ale pokud jednáte v dobré víře, provozujete menšinového klienta a své podpisové klíče máte vždy jen na jednom počítači, riziko potrestání je téměř nulové.
+<ExpandableCard title="Jak zajistím, že nebudu penalizován?">
+Stručně řečeno, to nelze nikdy plně zaručit, ale pokud jednáte v dobré víře, provozujete menšinového klienta a své podepisovací klíče uchováváte vždy pouze na jednom počítači, riziko penalizace je téměř nulové.
 
-Existuje jen několik konkrétních způsobů, které mohou vést k tomu, že validátor bude potrestán a vyřazen ze sítě. V době psaní tohoto dokumentu byly tresty, ke kterým došlo, výhradně produktem redundantních hardwarových nastavení, kde jsou podpisové klíče uloženy na dvou samostatných počítačích najednou. To může neúmyslně vést k <em>dvojitému hlasování</em> z vašich klíčů, za což můžete být potrestáni.
+Existuje jen několik specifických způsobů, které mohou vést k tomu, že bude validátor penalizován a vyřazen ze sítě. V době psaní tohoto textu byly penalizace, ke kterým došlo, výhradně produktem redundantních hardwarových nastavení, kde jsou podepisovací klíče uloženy na dvou samostatných počítačích najednou. To může neúmyslně vést k <em>dvojitému hlasování</em> z vašich klíčů, což je přestupek trestaný penalizací.
 
-Provozování supervětšinového klienta (jakéhokoli klienta používaného více než 2/3 sítě) také nese riziko potenciálního trestání v případě, že tento klient má chybu, která vede k větvi řetězce. To může mít za následek vadnou větev, která se finalizuje. Oprava zpět na zamýšlený řetězec by vyžadovala odeslání <em>prostorového hlasování</em> pokusem o vrácení finalizovaného bloku. Za to můžete být také potrestáni. Lze se tomu vyhnout tím, že místo toho spustíte menšinového klienta.
+Provozování klienta se supervětšinou (jakýkoli klient používaný více než 2/3 sítě) s sebou také nese riziko potenciální penalizace v případě, že má tento klient chybu, která vede k forku řetězce. To může vést k chybnému forku, který je finalizován. K nápravě zpět na zamýšlený řetězec by bylo nutné odeslat <em>obklopující hlas</em> (surround vote) pokusem o zrušení finalizovaného bloku. To je také přestupek trestaný penalizací a lze se mu vyhnout jednoduše tím, že místo toho budete provozovat menšinového klienta.
 
-Ekvivalentní chyby v <em>menšinovém klientu by se nikdy nedokončily</em>, a proto by nikdy nevedly k prostorovému hlasování a jednoduše by vedly k penalizaci za nečinnost, <em>nikoli trestu</em>.
+Ekvivalentní chyby v <em>menšinovém klientovi by se nikdy nefinalizovaly</em>, a proto by nikdy nevedly k obklopujícímu hlasu a jednoduše by vedly k penalizacím za neaktivitu, <em>nikoli k penalizaci (slashingu)</em>.
 
 <ul>
-  <li><a href="https://hackernoon.com/ethereums-client-diversity-problem">Zjistěte více o důležitosti provozování menšinového klienta.</a></li>
-  <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Přečtěte si více o prevenci trestání</a></li>
+  <li><a href="https://clientdiversity.org/">Zjistěte více o důležitosti provozování menšinového klienta.</a></li>
+  <li><a href="/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/">Zjistěte více o odměnách, penalizacích a slashingu</a></li>
 </ul>
 </ExpandableCard>
 
 <ExpandableCard title="Který klient je nejlepší?">
-Jednotliví klienti se mohou mírně lišit, pokud jde o výkon a uživatelské rozhraní, protože každý je vyvíjen různými týmy pomocí různých programovacích jazyků. Jak již bylo řečeno, žádný z nich není „nejlepší“. Všechny produkční klienty jsou vynikající softwary, které všechny provádějí stejné základní funkce pro synchronizaci a interakci s blockchainem.
+Jednotliví klienti se mohou mírně lišit z hlediska výkonu a uživatelského rozhraní, protože každý z nich je vyvíjen jinými týmy pomocí různých programovacích jazyků. Přesto žádný z nich není „nejlepší“. Všichni produkční klienti jsou vynikající kusy softwaru, které všechny plní stejné základní funkce pro synchronizaci a interakci s blockchainem.
 
-Protože všechny produkční klienty poskytují stejnou základní funkcionalitu, je ve skutečnosti velmi důležité, abyste si vybrali <strong>menšinového klienta</strong>, což znamená jakéhokoli klienta, kterého momentálně NEPOUŽÍVÁ většina validátorů v síti. Může to znít neintuitivně, ale provozování většinového nebo supervětšinového klienta vás vystavuje zvýšenému riziku trestání v případě chyby v tomto klientu. Provozování menšinového klienta tato rizika drasticky omezuje.
+Vzhledem k tomu, že všichni produkční klienti poskytují stejnou základní funkcionalitu, je ve skutečnosti velmi důležité, abyste si vybrali <strong>menšinového klienta</strong>, což znamená jakéhokoli klienta, který NENÍ v současné době používán většinou validátorů v síti. Může to znít neintuitivně, ale provozování většinového klienta nebo klienta se supervětšinou vás vystavuje zvýšenému riziku penalizace v případě chyby v tomto klientovi. Provozování menšinového klienta tato rizika drasticky omezuje.
 
-<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Další informace o tom, proč je rozmanitost klientů kritická</a>
+<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Zjistěte více o tom, proč je klientská diverzita kritická</a>
 </ExpandableCard>
 
-<ExpandableCard title="Můžu prostě použít VPS (virtuální privátní server)?">
-Ačkoli lze jako náhradu domácího hardwaru použít virtuální privátní server (VPS), na fyzickém přístupu a umístění vašeho klienta validátoru <em>záleží</em>. Centralizovaná cloudová řešení, jako jsou Amazon Web Services nebo Digital Ocean, umožňují pohodlí, kdy nemusíte získávat a provozovat hardware na úkor centralizace sítě.
+<ExpandableCard title="Mohu použít jen VPS (virtuální privátní server)?">
+Ačkoli lze virtuální privátní server (VPS) použít jako náhradu za domácí hardware, na fyzickém přístupu a umístění vašeho klienta validátora <em>záleží</em>. Centralizovaná cloudová řešení, jako jsou Amazon Web Services nebo Digital Ocean, umožňují pohodlí v tom, že nemusíte pořizovat a provozovat hardware, na úkor centralizace sítě.
 
-Čím více klientů validátoru běží na jediném centralizovaném řešení cloudového úložiště, tím nebezpečnější se to pro tyto uživatele stává. Jakákoli událost, která odpojí tyto poskytovatele, ať už útokem, regulačními požadavky nebo jen výpadky napájení/internetu, bude mít za následek, že každý validační klient, který spoléhá na tento server, bude zároveň offline.
+Čím více klientů validátora běží na jediném centralizovaném řešení cloudového úložiště, tím nebezpečnější to pro tyto uživatele je. Jakákoli událost, která tyto poskytovatele odpojí, ať už útokem, regulačními požadavky nebo jen výpadky napájení/internetu, povede k tomu, že každý klient validátora, který na tento server spoléhá, přejde do režimu offline ve stejnou dobu.
 
-Offline sankce jsou úměrné tomu, kolik ostatních je současně offline. Používání VPS výrazně zvyšuje riziko, že offline sankce budou přísnější, a zvyšuje vaše riziko kvadratického úniku nebo trestání v případě, že je výpadek dostatečně velký. Pro minimalizaci vlastního rizika a rizika pro síť se uživatelům důrazně doporučuje, aby si pořídili a provozovali svůj vlastní hardware.
+Penalizace za offline stav jsou úměrné tomu, kolik dalších je ve stejnou dobu offline. Použití VPS výrazně zvyšuje riziko, že penalizace za offline stav budou přísnější, a zvyšuje vaše riziko kvadratického úniku nebo penalizace (slashingu) v případě, že je výpadek dostatečně velký. K minimalizaci vlastního rizika a rizika pro síť se uživatelům důrazně doporučuje pořídit si a provozovat vlastní hardware.
 </ExpandableCard>
 
-<ExpandableCard title="Jak si odemknu odměny nebo dostanu zpět svá ETH?">
+<ExpandableCard title="Jak odemknu své odměny nebo získám své ETH zpět?">
 
-Výběry jakéhokoli druhu z Beacon Chain vyžadují nastavení přihlašovacích údajů k výběru.
+Každý výběr vyžaduje, aby měl váš validátor nastavenou adresu pro výběr. Noví stakeři to nastavují v době generování klíčů a vkladu. Stakeři z raných dnů sítě, kteří si ještě nenastavili adresu pro výběr, budou muset před výběrem aktualizovat svá pověření k výběru.
 
-Noví stakeři toto nastavují v době generování klíče a vkladu. Stávající stakeři, kteří ještě nastavení neprovedli, mohou upgradovat své klíče na podporu této funkce.
+U validátorů s pověřením k běžným výběrům (0x01) jsou platby odměn (nashromážděné ETH nad počátečních 32) pravidelně automaticky distribuovány na adresu pro výběr. U validátorů se složeným úročením (0x02) zůstávají odměny stakovány a automaticky se úročí. Jakýkoli zůstatek nad 32 ETH můžete vybrat spuštěním částečného výběru z vaší adresy pro výběr.
 
-Jakmile jsou přihlašovací údaje pro výběr nastaveny, platby odměn (nashromážděné ETH za prvních 32) budou pravidelně automaticky distribuovány na adresu výběru.
+Chcete-li odemknout a získat zpět celý svůj zůstatek, musíte vystoupit ze svého validátora. Můžete to provést pomocí svých podepisovacích klíčů validátora nebo to spustit přímo z vaší adresy pro výběr pomocí transakce na exekuční vrstvě, což znamená, že vaše prostředky zůstávají obnovitelné, i když se vaše podepisovací klíče ztratí.
 
-Chcete-li odemknout a získat zpět celý zůstatek, musíte také dokončit proces opuštění validátoru.
-
-<ButtonLink href="/staking/withdrawals/">Více o výběrech ze stakování</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Více o výběrech ze stakingu</ButtonLink>
 </ExpandableCard>
 
 ## Další čtení {#further-reading}
 
-- [Adresář stakování Etherea](https://www.staking.directory/) - _Eridian and Spacesider_
-- [Problém diverzity klientů Etherea](https://hackernoon.com/ethereums-client-diversity-problem) – _@emmanuelawosika 2022_
-- [Jak pomoci diverzitě klientů](https://www.attestant.io/posts/helping-client-diversity/) – _Jim McDonald 2022_
-- [Diverzita klientů na konsensuální vrstvě Etherea](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) – _jmcook.eth 2022_
-- [Jak na to: Nákup hardwaru pro validátor Etherea](https://www.youtube.com/watch?v=C2wwu1IlhDc) – _EthStaker 2022_
-- [Tipy pro prevenci trestání na Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) – _Raul Jordan 2020_
+- [Statistiky klientské diverzity a průvodci migrací](https://clientdiversity.org/)
+- [Pomoc klientské diverzitě](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
+- [Klientská diverzita na vrstvě konsensu Etherea](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
+- [Jak na to: Nákup hardwaru pro validátor Etherea](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
+- [EIP-7870: Doporučení pro hardware a šířku pásma](https://eips.ethereum.org/EIPS/eip-7870)
+- [Upgrade Pectra: maximální efektivní zůstatek a další](/roadmap/pectra/maxeb/)
 
 <QuizWidget quizKey="staking-solo" />

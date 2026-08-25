@@ -1,0 +1,1070 @@
+/**
+ * Incremental Translation Pipeline -- Entry Point
+ *
+ * Modes:
+ *   "full"  -- Translate entire files from scratch via LLM
+ *   "auto"  -- Detect drift since last run; propagate inert changes by script,
+ *              send only changed prose to LLM (default)
+ *
+ * Environment variables: see config.ts
+ */
+
+import { execFileSync } from "child_process"
+import * as fs from "fs"
+import * as path from "path"
+
+import i18nConfig from "../../../i18n.config.json"
+
+import {
+  branchExists,
+  createBranchFromSha,
+  deleteBranch,
+  ensurePendingBranch,
+  getBranchObject,
+  mergeBranchInto,
+} from "./lib/github/branches"
+import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
+import { runFuseUsd, usageTotals } from "./lib/llm/cost-meter"
+import { callGeminiRaw, isLlmAvailable, translateFile } from "./lib/llm/gemini"
+import { parseIncrementalResponse } from "./lib/llm/incremental-translate"
+import {
+  extractAttributeLeaves,
+  translateJsxAttributes,
+} from "./lib/llm/jsx-attribute-translator"
+import {
+  buildJsonManifest,
+  buildLocaleTranslationManifest,
+  buildMarkdownManifest,
+  extractPlaceholderData,
+  hasEnglishChanged,
+  parseEnglishJson,
+} from "./lib/llm/manifest-adapter"
+import { openRouterKeyStatus } from "./lib/llm/openrouter"
+import { planIncrementalBatches } from "./lib/llm/plan"
+import { generateTempBranchName } from "./lib/utils/branch-naming"
+import type { TaskResult } from "./lib/utils/task-pool"
+import { createTaskPool } from "./lib/utils/task-pool"
+import { createOrUpdateTranslationPR } from "./lib/workflows/pr-creation"
+import { sanitizeTranslations } from "./lib/workflows/sanitization"
+import { logSection } from "./lib/workflows/utils"
+import {
+  config,
+  getExcludedReason,
+  GLOSSARY_API_URL,
+  normalizeTargetPath,
+  validateTargetPath,
+} from "./config"
+import {
+  INPUT_RATE_USD_PER_1M,
+  LLM,
+  LLM_PROVIDER,
+  MANIFESTS_DIR,
+  MAX_BATCHES_PER_FILE,
+  MAX_PROMPT_BYTES,
+  OUTPUT_RATE_USD_PER_1M,
+} from "./constants"
+import type { LlmTranslator } from "./pipeline"
+import {
+  findStructuralRegressions,
+  getLlmSectionIds,
+  pipeline,
+} from "./pipeline"
+
+// ---------------------------------------------------------------------------
+// Types
+// ---------------------------------------------------------------------------
+
+interface FileContext {
+  path: string
+  content: string
+  type: "markdown" | "json"
+}
+
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
+
+function log(msg: string, level: "log" | "warn" | "error" = "log") {
+  const prefix =
+    level === "log" ? "[pipeline]" : `[pipeline] [${level.toUpperCase()}]`
+  console[level](`${prefix} ${msg}`)
+}
+
+/**
+ * Get manifest path (relative to repo root) for a given destination file.
+ * Structure: .manifests/{destPath}/source.json or translation.json
+ * Example: .manifests/public/content/translations/ar/about/index.md/source.json
+ */
+function getManifestPath(
+  destPath: string,
+  type: "source" | "translation"
+): string {
+  return path.join(MANIFESTS_DIR, destPath, `${type}.json`)
+}
+
+/**
+ * Fetch glossary terms from ETHGlossary API, filtered to terms
+ * that appear in the source content for a given language.
+ * Returns Map<english, translation> for prompt injection.
+ * Includes term notes as parenthetical context when available.
+ */
+async function loadGlossary(
+  fileContent: string,
+  locale: string
+): Promise<Map<string, string>> {
+  try {
+    const res = await fetch(`${GLOSSARY_API_URL}/filter`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ content: fileContent, language: locale }),
+    })
+    if (!res.ok) {
+      console.warn(
+        `[glossary] API returned ${res.status} for ${locale}, continuing without glossary`
+      )
+      return new Map()
+    }
+    const data = (await res.json()) as {
+      terms: Array<{
+        english: string
+        translation: string
+        note?: string
+      }>
+    }
+    // Sanitize all glossary fields to prevent prompt injection
+    // eslint-disable-next-line no-control-regex
+    const controlCharRe = new RegExp("[\\u0000-\\u001f]", "g")
+    const sanitize = (s: string, maxLen: number) =>
+      s.replace(controlCharRe, "").replace(/\n/g, " ").slice(0, maxLen)
+
+    const map = new Map<string, string>()
+    for (const term of data.terms) {
+      const safeEnglish = sanitize(term.english, 200)
+      const safeTranslation = sanitize(term.translation, 500)
+      const safeNote = term.note ? sanitize(term.note, 200) : ""
+      const value = safeNote
+        ? `${safeTranslation} (${safeNote})`
+        : safeTranslation
+      map.set(safeEnglish, value)
+    }
+    return map
+  } catch (err) {
+    console.warn(
+      `[glossary] Failed to fetch for ${locale}: ${err instanceof Error ? err.message : String(err)}`
+    )
+    return new Map()
+  }
+}
+
+/**
+ * Recursively collect files under `dir` whose name ends with `ext`.
+ * Used to expand directory entries in TARGET_PATH (e.g. "public/content/videos/")
+ * into their constituent files, restoring the pipeline's historical behavior
+ * where directories were valid target paths.
+ */
+function walkForExt(dir: string, ext: string): string[] {
+  const out: string[] = []
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    // Never descend into the translation output tree -- those are translated
+    // files, not source files (validateTargetPath rejects them). Matters when
+    // expanding the markdown root (public/content) for a full-tree run.
+    if (entry.isDirectory() && entry.name === "translations") continue
+    const full = path.join(dir, entry.name)
+    if (entry.isDirectory()) {
+      out.push(...walkForExt(full, ext))
+    } else if (entry.isFile() && full.endsWith(ext)) {
+      out.push(full)
+    }
+  }
+  return out
+}
+
+function readLocalePath(
+  destPath: string,
+  fileType: string,
+  locale: string,
+  fileName: string
+): string {
+  if (fileType === "markdown") {
+    return path.join(process.cwd(), destPath)
+  }
+  return path.join(process.cwd(), `src/intl/${locale}/${fileName}`)
+}
+
+function printTokenSummary(
+  stats: Record<
+    string,
+    {
+      totalInputTokens: number
+      totalOutputTokens: number
+      tasksCompleted: number
+    }
+  >,
+  pipelineDurationMs: number
+) {
+  logSection("Token Usage Summary")
+
+  const fmt = (n: number) => n.toLocaleString("en-US")
+  const pad = (s: string, w: number) => s.padStart(w)
+
+  console.log(
+    `${"Language".padEnd(10)}| ${"Calls".padStart(5)} | ${"Input".padStart(10)} | ${"Output".padStart(10)} | ${"Total".padStart(10)}`
+  )
+  const sep = `${"-".repeat(10)}|${"-".repeat(7)}|${"-".repeat(12)}|${"-".repeat(12)}|${"-".repeat(12)}`
+  console.log(sep)
+
+  let grandInput = 0
+  let grandOutput = 0
+  let grandCalls = 0
+
+  for (const [lang, s] of Object.entries(stats)) {
+    const total = s.totalInputTokens + s.totalOutputTokens
+    grandInput += s.totalInputTokens
+    grandOutput += s.totalOutputTokens
+    grandCalls += s.tasksCompleted
+
+    console.log(
+      `${lang.padEnd(10)}| ${pad(String(s.tasksCompleted), 5)} | ${pad(fmt(s.totalInputTokens), 10)} | ${pad(fmt(s.totalOutputTokens), 10)} | ${pad(fmt(total), 10)}`
+    )
+  }
+
+  console.log(sep)
+  const grandTotal = grandInput + grandOutput
+  console.log(
+    `${"TOTAL".padEnd(10)}| ${pad(String(grandCalls), 5)} | ${pad(fmt(grandInput), 10)} | ${pad(fmt(grandOutput), 10)} | ${pad(fmt(grandTotal), 10)}`
+  )
+
+  const estCost =
+    (grandInput / 1_000_000) * INPUT_RATE_USD_PER_1M +
+    (grandOutput / 1_000_000) * OUTPUT_RATE_USD_PER_1M
+
+  const pipelineSecs = (pipelineDurationMs / 1000).toFixed(1)
+  console.log(
+    `\n  Estimated cost: ~$${estCost.toFixed(4)} (${LLM.models[0]}: $${INPUT_RATE_USD_PER_1M}/1M input, $${OUTPUT_RATE_USD_PER_1M}/1M output)`
+  )
+  // The meter counts every billed call, including retries and blocked
+  // responses the per-language stats above never see.
+  const metered = usageTotals()
+  console.log(
+    `  Metered: ${metered.calls} call(s), $${metered.costUsd.toFixed(4)} against the $${runFuseUsd().toFixed(2)} run fuse` +
+      // Thinking tokens are billed as output. On the OpenRouter path they are
+      // inside the output column above; the Gemini SDK omits them entirely.
+      (metered.reasoningTokens
+        ? `, of which ${metered.reasoningTokens.toLocaleString("en-US")} reasoning token(s) (~$${((metered.reasoningTokens / 1_000_000) * OUTPUT_RATE_USD_PER_1M).toFixed(2)})`
+        : "")
+  )
+  console.log(`  Wall time: ${pipelineSecs}s`)
+}
+
+/**
+ * Build an LLM translator that batches section translations.
+ * Uses batchSections for byte-size-aware splitting of large section lists.
+ */
+async function buildGeminiTranslator(
+  englishContent: string,
+  localeContent: string,
+  fileType: "markdown" | "json",
+  filePath: string,
+  locale: string,
+  sectionIds: string[]
+): Promise<{
+  translator: LlmTranslator
+  tokens: { input: number; output: number }
+}> {
+  if (sectionIds.length === 0) {
+    return {
+      translator: (_, content) => content,
+      tokens: { input: 0, output: 0 },
+    }
+  }
+
+  const langEntry = i18nConfig.find((l: { code: string }) => l.code === locale)
+  const languageName = langEntry
+    ? (langEntry as { code: string; name: string }).name
+    : locale
+
+  const glossaryTerms = await loadGlossary(englishContent, locale)
+  if (config.verbose && glossaryTerms.size > 0) {
+    log(`  Glossary: ${glossaryTerms.size} terms for ${locale}`)
+  }
+
+  // Same planner MODE=estimate uses, so the projection and the run agree.
+  const planned = planIncrementalBatches({
+    filePath,
+    fileType,
+    locale,
+    languageName,
+    englishContent,
+    localeContent,
+    sectionIds,
+    glossaryTerms,
+  })
+
+  if (!planned) {
+    log(`  No sections matched for translation`)
+    return {
+      translator: (_, content) => content,
+      tokens: { input: 0, output: 0 },
+    }
+  }
+
+  const { batches: plan, budget, projectedBytes, translateCount } = planned
+
+  // A sane incremental update is a handful of batches. Hundreds means the
+  // batching collapsed (see MAX_BATCHES_PER_FILE) and every batch would resend
+  // the file's context -- fail the file instead of billing for it.
+  if (planned.tooManyBatches) {
+    throw new Error(
+      `[cost-guard] ${filePath} (${locale}): incremental batching produced ` +
+        `${plan.length} batches for ${translateCount} changed section(s), over the ` +
+        `${MAX_BATCHES_PER_FILE} cap. Refusing to send; rerun this file with MODE=full.`
+    )
+  }
+
+  // A splittable batch over the per-call ceiling means the batching budget and
+  // the ceiling disagree -- fail the file rather than have callGeminiRaw refuse
+  // mid-run, which would waste the calls already made for it.
+  const oversized = plan.filter((b) => b.overCeiling)
+  if (oversized.length > 0) {
+    throw new Error(
+      `[cost-guard] ${filePath} (${locale}): ${oversized.length} batch(es) exceed the ` +
+        `${MAX_PROMPT_BYTES}-byte per-call ceiling (largest ${Math.max(...oversized.map((b) => b.bytes))} bytes) ` +
+        `despite being splittable. Refusing to send.`
+    )
+  }
+
+  // Refuse the whole plan before the first request when it exceeds the budget.
+  budget.assertProjected(
+    projectedBytes,
+    `${plan.length} incremental batch(es) for ${translateCount} changed section(s)`
+  )
+  log(
+    `  Incremental plan: ${plan.length} batch(es), ${projectedBytes} of ${budget.limitBytes} budgeted prompt bytes`
+  )
+
+  const allTranslations: Record<string, string> = {}
+  let totalInput = 0
+  let totalOutput = 0
+
+  for (const [index, batch] of plan.entries()) {
+    budget.spend(batch.bytes, `batch ${index + 1}/${plan.length}`)
+
+    log(
+      `  Calling LLM: ${batch.translateCount} sections, ${batch.prompt.length} chars`
+    )
+
+    const result = await callGeminiRaw(batch.prompt, {
+      filePath,
+      targetLanguage: locale,
+      label: "incremental",
+      irreducible: batch.irreducible,
+    })
+
+    // A batch that cannot be parsed must fail the task. Continuing would leave
+    // its sections untranslated, fall them back to English in assembly, commit
+    // that, and stamp the manifest -- after which no drift is detected and the
+    // English text is permanent in the locale file. Failing here costs this
+    // file+locale's calls; every other locale's completed work is already
+    // committed to the temp branch and still merges.
+    const translations = parseIncrementalResponse(result.text)
+    Object.assign(allTranslations, translations)
+    totalInput += result.tokensUsed.input
+    totalOutput += result.tokensUsed.output
+  }
+
+  const translatedIds = Object.keys(allTranslations)
+  log(
+    `  LLM returned ${translatedIds.length} sections (${totalInput} in, ${totalOutput} out)`
+  )
+
+  for (const id of sectionIds) {
+    if (!allTranslations[id]) {
+      console.warn(`  Section "${id}" not returned by LLM`)
+    }
+  }
+
+  return {
+    translator: (sectionId: string, englishFallback: string) => {
+      return allTranslations[sectionId] || englishFallback
+    },
+    tokens: { input: totalInput, output: totalOutput },
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Full Translation
+// ---------------------------------------------------------------------------
+
+async function runFullTranslation(
+  file: FileContext,
+  locale: string,
+  destPath: string,
+  committer: SharedCommitter,
+  baseBranchSha: string,
+  committedFiles: Array<{ path: string; content: string }>
+): Promise<TaskResult> {
+  log(`[${locale}] ${file.path}: full translation...`)
+
+  const glossaryTerms = await loadGlossary(file.content, locale)
+  if (config.verbose && glossaryTerms.size > 0) {
+    log(`[${locale}] Glossary: ${glossaryTerms.size} terms`)
+  }
+
+  const result = await translateFile({
+    filePath: file.path,
+    fileContent: file.content,
+    fileType: file.type,
+    targetLanguage: locale,
+    glossaryTerms,
+    useNormalizer: file.type === "markdown",
+  })
+
+  log(
+    `[${locale}] ${file.path}: translated (${result.tokensUsed.input} in, ${result.tokensUsed.output} out)`
+  )
+
+  // Phase 4b: JSX attribute translation pass (markdown only)
+  let finalContent = result.translatedContent
+  if (file.type === "markdown") {
+    const leaves = extractAttributeLeaves(file.content)
+    if (leaves.length > 0) {
+      const attrResult = await translateJsxAttributes({
+        leaves,
+        localeContent: finalContent,
+        targetLanguage: locale,
+        glossary: glossaryTerms,
+        filePath: file.path,
+      })
+      finalContent = attrResult.content
+      if (attrResult.appliedCount > 0 || attrResult.failedCount > 0) {
+        log(
+          `[${locale}] ${file.path}: jsx-attrs translated=${attrResult.appliedCount} skipped=${attrResult.skippedCount} failed=${attrResult.failedCount}`
+        )
+      }
+      // Per PIPELINE-SPEC.md "On partial failure": skip manifest stamping if
+      // any attr leaf failed to translate. Throwing here forces the pool to
+      // mark this task failed; the next run will re-detect and retry.
+      if (attrResult.failedCount > 0) {
+        throw new Error(
+          `[${locale}] ${file.path}: ${attrResult.failedCount} jsx-attr leaf(s) failed to translate; aborting before manifest stamp`
+        )
+      }
+    }
+  }
+
+  // Build the manifests BEFORE recording any blob. Manifest construction is
+  // pure and can throw (parse/serialize); doing it first means a builder error
+  // aborts the task without leaving content recorded sans its manifest -- the
+  // same content-without-manifest desync the ref-race fix already closed.
+  const sourceManifest =
+    file.type === "markdown"
+      ? buildMarkdownManifest(file.content, file.path, baseBranchSha)
+      : buildJsonManifest(file.content, file.path, baseBranchSha)
+  const smDest = getManifestPath(destPath, "source")
+
+  const placeholderData =
+    result.placeholderOrder && result.placeholderMap
+      ? {
+          placeholderOrder: result.placeholderOrder,
+          placeholderMap: result.placeholderMap,
+        }
+      : file.type === "json"
+        ? extractPlaceholderData(parseEnglishJson(file.content))
+        : null
+
+  let translationManifest: string | null = null
+  let tmDest: string | null = null
+  if (placeholderData) {
+    const parsed = JSON.parse(sourceManifest)
+    translationManifest = buildLocaleTranslationManifest({
+      locale,
+      englishManifestHash: parsed.rootHash,
+      placeholderOrder: placeholderData.placeholderOrder,
+      placeholderMap: placeholderData.placeholderMap,
+      sections: {
+        _all: { translatedAt: new Date().toISOString(), status: "success" },
+      },
+    })
+    tmDest = getManifestPath(destPath, "translation")
+  }
+
+  // Record content and its manifest(s) together, manifests last.
+  await committer.commitFile(destPath, finalContent, locale)
+  committedFiles.push({ path: destPath, content: finalContent })
+  await committer.commitFile(smDest, sourceManifest, locale)
+  if (translationManifest && tmDest) {
+    await committer.commitFile(tmDest, translationManifest, locale)
+  }
+
+  log(`[${locale}] ${destPath}: committed`)
+  return {
+    tokens: {
+      input: result.tokensUsed.input,
+      output: result.tokensUsed.output,
+    },
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Incremental Translation
+// ---------------------------------------------------------------------------
+
+async function runIncremental(
+  file: FileContext,
+  locale: string,
+  destPath: string,
+  sourceManifestJson: string,
+  localeContent: string,
+  committer: SharedCommitter,
+  baseBranchSha: string,
+  committedFiles: Array<{ path: string; content: string }>
+): Promise<TaskResult> {
+  const manifest = JSON.parse(sourceManifestJson)
+  let englishA: string
+
+  try {
+    if (!manifest.sourceCommitSha)
+      throw new Error("no sourceCommitSha in manifest")
+    if (!/^[0-9a-f]{40}$/i.test(manifest.sourceCommitSha))
+      throw new Error(`invalid SHA: ${manifest.sourceCommitSha}`)
+    validateTargetPath(file.path)
+    englishA = execFileSync(
+      "git",
+      ["show", `${manifest.sourceCommitSha}:${file.path}`],
+      { encoding: "utf-8" }
+    )
+  } catch (err) {
+    log(
+      `[${locale}] ${file.path}: cannot retrieve old English (${err instanceof Error ? err.message : String(err)}), falling back to full translation`
+    )
+    return runFullTranslation(
+      file,
+      locale,
+      destPath,
+      committer,
+      baseBranchSha,
+      committedFiles
+    )
+  }
+
+  const englishB = file.content
+
+  const llmSectionIds = getLlmSectionIds(englishA, englishB, file.type)
+  log(`[${locale}] ${file.path}: ${llmSectionIds.length} section(s) need LLM`)
+
+  let translator: LlmTranslator | undefined
+  let tokens = { input: 0, output: 0 }
+  if (llmSectionIds.length > 0 && isLlmAvailable()) {
+    const geminiResult = await buildGeminiTranslator(
+      englishB,
+      localeContent,
+      file.type,
+      file.path,
+      locale,
+      llmSectionIds
+    )
+    translator = geminiResult.translator
+    tokens = geminiResult.tokens
+  }
+
+  const result = pipeline(
+    englishA,
+    englishB,
+    localeContent,
+    file.type,
+    translator
+  )
+
+  // Post-assembly invariants: if the merge lost or duplicated structure relative
+  // to English, discard it and retranslate the file rather than commit it.
+  const regressions = findStructuralRegressions(
+    englishA,
+    localeContent,
+    englishB,
+    result,
+    file.type
+  )
+  if (regressions.length > 0) {
+    log(
+      `[${locale}] ${file.path}: structural regression (${regressions.map((r) => r.detail).join("; ")}), falling back to full translation`
+    )
+    return runFullTranslation(
+      file,
+      locale,
+      destPath,
+      committer,
+      baseBranchSha,
+      committedFiles
+    )
+  }
+
+  // Phase 4b: JSX attribute translation pass (markdown only)
+  let finalContent = result
+  if (file.type === "markdown") {
+    const leaves = extractAttributeLeaves(file.content)
+    if (leaves.length > 0) {
+      const glossaryTerms = await loadGlossary(file.content, locale)
+      const attrResult = await translateJsxAttributes({
+        leaves,
+        localeContent: finalContent,
+        targetLanguage: locale,
+        glossary: glossaryTerms,
+        filePath: file.path,
+      })
+      finalContent = attrResult.content
+      if (attrResult.appliedCount > 0 || attrResult.failedCount > 0) {
+        log(
+          `[${locale}] ${file.path}: jsx-attrs translated=${attrResult.appliedCount} skipped=${attrResult.skippedCount} failed=${attrResult.failedCount}`
+        )
+      }
+      if (attrResult.failedCount > 0) {
+        throw new Error(
+          `[${locale}] ${file.path}: ${attrResult.failedCount} jsx-attr leaf(s) failed to translate; aborting before manifest stamp`
+        )
+      }
+    }
+  }
+
+  // Build the source manifest before recording any blob (see runFullTranslation):
+  // a builder throw must not leave content recorded without its manifest.
+  const sourceManifest =
+    file.type === "markdown"
+      ? buildMarkdownManifest(englishB, file.path, baseBranchSha)
+      : buildJsonManifest(englishB, file.path, baseBranchSha)
+  const smDest = getManifestPath(destPath, "source")
+
+  await committer.commitFile(destPath, finalContent, locale)
+  committedFiles.push({ path: destPath, content: finalContent })
+  await committer.commitFile(smDest, sourceManifest, locale)
+
+  log(`[${locale}] ${destPath}: committed (incremental)`)
+  return { tokens }
+}
+
+// ---------------------------------------------------------------------------
+// Main
+// ---------------------------------------------------------------------------
+
+async function main() {
+  const startTime = Date.now()
+  logSection("Incremental Translation Pipeline")
+
+  // MODE=estimate belongs to estimate.ts. Reaching main.ts with it means the
+  // caller's routing is broken (as the workflow's was on run 31743585214), and
+  // every non-"full" value otherwise falls through to a real translating run --
+  // so refuse rather than spend money under a mode that promises not to.
+  if (config.mode === "estimate") {
+    throw new Error(
+      `MODE=estimate must run estimate.ts, not main.ts. ` +
+        `Use "pnpm intl:estimate" locally, or dispatch intl-pipeline.yml with mode=estimate ` +
+        `from a ref whose run step routes estimate mode. Refusing to translate.`
+    )
+  }
+
+  // Blank TARGET_PATH means "translate everything": seed with the JSON and
+  // markdown source roots, which the directory-expansion pass below resolves to
+  // every source file (excluding the translation output tree and the
+  // do-not-translate list).
+  const targetPaths = config.targetPaths.length
+    ? config.targetPaths
+    : [config.jsonRoot, config.mdRoot]
+  if (!config.targetPaths.length) {
+    log("TARGET_PATH is blank -- translating all source files (full tree)")
+  }
+
+  const targetLanguages = config.allInternalCodes
+  const baseBranch = config.baseBranch
+  const targetBranch = config.targetBranch
+
+  log(`Target: ${targetBranch} (base: ${baseBranch})`)
+  log(`Files: ${targetPaths.join(", ")}`)
+  log(`Languages: ${targetLanguages.join(", ")}`)
+  log(`Mode: ${config.mode}`)
+  log(`Concurrency: ${config.concurrency}`)
+  log(
+    `Bounds: ${MAX_PROMPT_BYTES} bytes per call x chunks of changed content per file+locale, $${runFuseUsd().toFixed(2)} run fuse (INTL_MAX_COST_USD)`
+  )
+  log(`Provider: ${LLM.name} (${LLM_PROVIDER})`)
+
+  // The provider-side ceiling is the one guard that survives a bug in the ones
+  // above it, so state it -- or say plainly that there isn't one.
+  if (LLM_PROVIDER === "openrouter") {
+    try {
+      const key = await openRouterKeyStatus()
+      // Print the reset window: a $100 daily limit and a $100 lifetime limit
+      // read identically on limit/limit_remaining alone.
+      const window = key.limitReset ? `per ${key.limitReset}` : "total"
+      log(
+        key.limit === null
+          ? `[WARN] OpenRouter key has NO credit limit set -- only this run's own guards apply`
+          : `OpenRouter key limit: $${key.limit.toFixed(2)} ${window}, $${(key.limitRemaining ?? 0).toFixed(2)} remaining`
+      )
+    } catch (err) {
+      log(
+        `[WARN] OpenRouter key lookup failed: ${err instanceof Error ? err.message : String(err)}`
+      )
+    }
+  } else {
+    log(
+      `[WARN] Gemini direct: no provider-side spend ceiling exists on this key`
+    )
+  }
+
+  // If the pending branch already exists (prior run against the same base),
+  // use it as the baseline: merge current base into it first (fail-fast on
+  // conflict), sync local working tree from it so drift detection reads the
+  // latest stamped manifests, and branch the temp branch off of it.
+  const pendingExists = await branchExists(targetBranch)
+  let tempBranchSourceSha: string
+
+  if (pendingExists) {
+    log(`Pending branch exists: ${targetBranch}`)
+    log(`Merging ${baseBranch} into ${targetBranch}...`)
+    const merged = await mergeBranchInto(baseBranch, targetBranch)
+    if (!merged) {
+      throw new Error(
+        `Cannot merge ${baseBranch} into ${targetBranch}. ` +
+          `Either resolve conflicts on ${targetBranch} manually, or delete the branch and retry. ` +
+          `Aborting before any translation work.`
+      )
+    }
+    tempBranchSourceSha = (await getBranchObject(targetBranch)).sha
+
+    // Force-update the local ref and check out pending's versions of the
+    // manifest and content paths. This is destructive to any local edits in
+    // those paths and is intended to run in CI (GitHub Actions) only, where
+    // the working tree is ephemeral. The pipeline requires GEMINI_API_KEY
+    // which is loaded from GH Secrets, so accidental local invocation is
+    // unlikely, but edits in the listed paths will be clobbered if it happens.
+    log(`Syncing local working tree from ${targetBranch}...`)
+    execFileSync(
+      "git",
+      ["fetch", "origin", `+${targetBranch}:${targetBranch}`],
+      { stdio: "inherit" }
+    )
+    execFileSync(
+      "git",
+      [
+        "checkout",
+        targetBranch,
+        "--",
+        ".manifests",
+        "public/content",
+        "src/intl",
+      ],
+      { stdio: "inherit" }
+    )
+  } else {
+    tempBranchSourceSha = (await getBranchObject(baseBranch)).sha
+  }
+
+  // Create temp working branch for crash safety (from pending if it exists, otherwise base)
+  const tempBranch = generateTempBranchName()
+  log(`Temp branch: ${tempBranch}`)
+  await createBranchFromSha(tempBranch, tempBranchSourceSha)
+  const baseBranchSha = (await getBranchObject(baseBranch)).sha
+  const committer = new SharedCommitter(tempBranch)
+  await committer.init()
+
+  const committedFiles: Array<{ path: string; content: string }> = []
+  let hasCommits = false
+  // Per-task failures captured with file context. Populated by submitWithContext
+  // wrapper so we can report rich failure info in the PR body and surface
+  // copy-pasteable rerun commands. Pool's own error tracking still runs in
+  // parallel for the orchestration-level "did anything fail" check.
+  const failures: Array<{ locale: string; file: string; message: string }> = []
+
+  // Resolve target paths in five passes:
+  //   1. Normalize  (log-level: auto-prefix and strip accidental locale paths)
+  //   2. Exist?     (error-level: fail early if any path is missing on disk)
+  //   3. Expand     (directory entries -> their constituent files)
+  //   4. Validate   (hard errors still throw)
+  //   5. Excluded?  (warn-level: skip and continue; throw only if all excluded)
+  const normalizedPaths = targetPaths.map((fp) =>
+    normalizeTargetPath(fp, (from, to) =>
+      log(`Normalizing "${from}" -> "${to}"`)
+    )
+  )
+
+  const missing = normalizedPaths.filter(
+    (fp) => !fs.existsSync(path.resolve(fp))
+  )
+  if (missing.length > 0) {
+    log(`${missing.length} target path(s) do not exist on disk:`, "error")
+    for (const m of missing) log(`  - ${m}`, "error")
+    throw new Error(`Target path(s) not found on disk: ${missing.join(", ")}`)
+  }
+
+  // Expand directories to their constituent files. Markdown roots get every
+  // .md file under the dir; JSON roots get every .json file under the dir.
+  const expandedPaths: string[] = []
+  for (const fp of normalizedPaths) {
+    const abs = path.resolve(fp)
+    if (fs.statSync(abs).isDirectory()) {
+      const ext = fp.startsWith("src/intl/en") ? ".json" : ".md"
+      const files = walkForExt(abs, ext).map((f) =>
+        path.relative(process.cwd(), f)
+      )
+      log(`Expanded "${fp}" -> ${files.length} ${ext} file(s)`)
+      expandedPaths.push(...files)
+    } else {
+      expandedPaths.push(fp)
+    }
+  }
+
+  for (const fp of expandedPaths) {
+    validateTargetPath(fp)
+  }
+
+  const activeTargetPaths: string[] = []
+  for (const fp of expandedPaths) {
+    const excludedBy = getExcludedReason(fp)
+    if (excludedBy) {
+      log(`Skipping "${fp}" -- in excluded list (${excludedBy})`, "warn")
+      continue
+    }
+    activeTargetPaths.push(fp)
+  }
+
+  if (activeTargetPaths.length === 0) {
+    const msg =
+      "All target paths are in the excluded list; nothing to translate."
+    log(msg, "error")
+    throw new Error(msg)
+  }
+
+  // Load English files from disk
+  const englishFiles: FileContext[] = activeTargetPaths.map((fp) => ({
+    path: fp,
+    content: fs.readFileSync(path.resolve(fp), "utf-8"),
+    type: fp.endsWith(".json") ? ("json" as const) : ("markdown" as const),
+  }))
+
+  // Build task pool with per-language completion logging
+  const pool = createTaskPool({
+    concurrency: config.concurrency,
+    onLanguageComplete: (lang, stats) => {
+      log(
+        `[${lang}] Complete: ${stats.tasksCompleted} tasks, ${stats.totalInputTokens} input, ${stats.totalOutputTokens} output tokens`
+      )
+    },
+  })
+
+  // Wraps pool.submit to attach file context to any thrown error -- the pool
+  // only knows the locale; we want (locale, file, reason) for PR reporting.
+  const submitWithContext = (
+    locale: string,
+    filePath: string,
+    fn: () => Promise<TaskResult | void>
+  ) => {
+    pool.submit(locale, async () => {
+      try {
+        return await fn()
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err)
+        failures.push({ locale, file: filePath, message })
+        throw err
+      }
+    })
+  }
+
+  // Submit all file x language tasks to the pool
+  for (const file of englishFiles) {
+    for (const locale of targetLanguages) {
+      const destPath = getDestinationFromPath(file.path, locale)
+      const smPath = path.join(
+        process.cwd(),
+        getManifestPath(destPath, "source")
+      )
+      const localePath = readLocalePath(
+        destPath,
+        file.type,
+        locale,
+        path.basename(file.path)
+      )
+
+      const hasLocale = fs.existsSync(localePath)
+      const hasManifest = fs.existsSync(smPath)
+
+      if (config.mode === "full" || !hasLocale || !hasManifest) {
+        const reason =
+          config.mode === "full"
+            ? "forced full"
+            : !hasLocale
+              ? "no locale file"
+              : "no manifest"
+        log(`[${locale}] ${file.path}: ${reason} -> full translation`)
+
+        if (!isLlmAvailable()) {
+          console.warn(`[${locale}] Skipping: LLM API key not set`)
+          continue
+        }
+
+        submitWithContext(locale, file.path, () =>
+          runFullTranslation(
+            file,
+            locale,
+            destPath,
+            committer,
+            baseBranchSha,
+            committedFiles
+          )
+        )
+        continue
+      }
+
+      // Incremental: check if English changed
+      const sourceManifestJson = fs.readFileSync(smPath, "utf-8")
+      if (!hasEnglishChanged(file.content, sourceManifestJson, file.type)) {
+        if (config.verbose) log(`[${locale}] ${file.path}: no changes`)
+        continue
+      }
+
+      const localeContent = fs.readFileSync(localePath, "utf-8")
+
+      if (config.stampOnly) {
+        log(`[${locale}] ${file.path}: stamp only`)
+        submitWithContext(locale, file.path, async () => {
+          const sourceManifest =
+            file.type === "markdown"
+              ? buildMarkdownManifest(file.content, file.path, baseBranchSha)
+              : buildJsonManifest(file.content, file.path, baseBranchSha)
+          await committer.commitFile(
+            getManifestPath(destPath, "source"),
+            sourceManifest,
+            locale
+          )
+          hasCommits = true
+        })
+        continue
+      }
+
+      submitWithContext(locale, file.path, () =>
+        runIncremental(
+          file,
+          locale,
+          destPath,
+          sourceManifestJson,
+          localeContent,
+          committer,
+          baseBranchSha,
+          committedFiles
+        )
+      )
+    }
+  }
+
+  // Wait for all tasks to complete
+  await pool.drain()
+
+  // Log task failures but don't abort -- partial successes ship. Failures are
+  // recorded with file context (via submitWithContext) and surfaced in the PR
+  // body with rerun commands. A failed task records NEITHER its content nor its
+  // manifest (content+manifests are built then recorded together per task, and
+  // commitFile no longer touches the branch ref mid-run -- see SharedCommitter),
+  // so a failed file simply doesn't appear this run and a rerun re-detects it.
+  // This invariant is what keeps manifest tracking in sync; before it, a
+  // ref-race could ship content without its manifest and desync every rerun.
+  if (failures.length > 0) {
+    log(
+      `${failures.length} task(s) failed (continuing with successes):`,
+      "warn"
+    )
+    for (const f of failures) {
+      log(`  [${f.locale}] ${f.file}: ${f.message}`, "warn")
+    }
+  }
+
+  // Hard abort only if literally nothing succeeded -- a fully-failed run
+  // shouldn't produce an empty PR. (committedFiles excludes manifest-only stamp
+  // commits, so we also check hasCommits for the stamp-only path.)
+  if (failures.length > 0 && committedFiles.length === 0 && !hasCommits) {
+    throw new Error(
+      `Pipeline aborted: all ${failures.length} translation task(s) failed. Temp branch ${tempBranch} preserved.`
+    )
+  }
+
+  // Squash interleaved commits into one per language
+  if (committedFiles.length > 0 || hasCommits) {
+    await committer.squashByLanguage()
+  }
+
+  // Post-processing: sanitize LLM output
+  if (committedFiles.length > 0 && !config.stampOnly) {
+    const englishContentMap = new Map<string, string>(
+      englishFiles.map((f) => [f.path, f.content])
+    )
+    try {
+      await sanitizeTranslations(committedFiles, tempBranch, englishContentMap)
+    } catch (error) {
+      console.warn(
+        `[pipeline] Sanitization failed (non-fatal): ${error instanceof Error ? error.message : String(error)}`
+      )
+    }
+  }
+
+  // Merge temp branch into pending, then clean up the temp.
+  // If pending didn't exist at the start, create it from base now.
+  if (committedFiles.length > 0 || hasCommits) {
+    log(`Merging ${tempBranch} -> ${targetBranch}`)
+    if (!pendingExists) {
+      await ensurePendingBranch(targetBranch, baseBranch)
+    }
+    const merged = await mergeBranchInto(tempBranch, targetBranch)
+    if (!merged) {
+      throw new Error(
+        `Failed to merge ${tempBranch} into ${targetBranch}. Temp branch preserved for manual resolution.`
+      )
+    }
+    log(`Merged successfully`)
+
+    // Clean up temp branch -- its work is now on pending
+    await deleteBranch(tempBranch)
+  } else {
+    log(`No changes to merge`)
+    // Nothing landed on the temp branch -- clean it up
+    await deleteBranch(tempBranch)
+  }
+
+  // Create or update PR unless skipped
+  if ((committedFiles.length > 0 || hasCommits) && !config.skipPr) {
+    const languagePairs = targetLanguages.map((code) => {
+      const entry = i18nConfig.find((l: { code: string }) => l.code === code)
+      return {
+        internalLanguageCode: code,
+        languageName: entry
+          ? (entry as { code: string; name: string }).name
+          : code,
+      }
+    })
+    try {
+      await createOrUpdateTranslationPR(
+        targetBranch,
+        committedFiles,
+        languagePairs,
+        config.mode,
+        failures
+      )
+    } catch (error) {
+      console.warn(
+        `[pipeline] PR creation failed (non-fatal): ${error instanceof Error ? error.message : String(error)}`
+      )
+    }
+  }
+
+  // Print token summary from pool stats
+  const poolStats = pool.getStats()
+  if (Object.keys(poolStats).length > 0) {
+    printTokenSummary(poolStats, Date.now() - startTime)
+  }
+
+  logSection("Complete")
+  log(`Finished in ${((Date.now() - startTime) / 1000).toFixed(1)}s`)
+}
+
+main().catch((error) => {
+  console.error("\n========== ERROR ==========")
+  console.error(error instanceof Error ? error.message : String(error))
+  if (error instanceof Error && error.stack) console.error(error.stack)
+  process.exit(1)
+})

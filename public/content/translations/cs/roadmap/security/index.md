@@ -1,48 +1,108 @@
 ---
 title: "Bezpečnější Ethereum"
-description: "Ethereum je nejbezpečnější a nejvíce decentralizovaná platforma pro chytré kontrakty, která existuje. Nicméně stále je možné ho vylepšit, aby zůstalo odolné vůči jakékoliv úrovni útoků i v daleké budoucnosti."
+description: "Plán vývoje Etherea dnes posiluje tvorbu bloků a odolnost vůči cenzuře, zatímco připravuje protokol na kvantovou éru a desetiletí spolehlivého provozu."
 lang: cs
 image: /images/roadmap/roadmap-security.png
-alt: "Plán Etherea"
+alt: "Plán vývoje Etherea"
 template: roadmap
+summaryPoints:
+  - Krátkodobá vylepšení zabezpečení, jako je zakotvené oddělení navrhovatele a tvůrce a seznamy pro zahrnutí, jsou v aktivním vývoji
+  - Postkvantová příprava probíhá roky před jakoukoli reálnou kvantovou hrozbou
+  - Zjednodušení protokolu odstraňuje složitost a zmenšuje prostor pro útoky na Ethereum
 ---
 
-**Ethereum je již velmi bezpečná**, decentralizovaná platforma pro [chytré kontrakty](/glossary/#smart-contract). Nicméně stále je možné ho vylepšit, aby zůstalo odolné vůči jakémukoliv druhu útoků i v daleké budoucnosti. Mezi ně patří jemné změny ve způsobu, jakým se [klienti Etherea](/glossary/#consensus-client) vypořádávají s konkurenčními [bloky](/glossary/#block), a také zrychlení, s jakým síť považuje bloky za ["finalizované"](/developers/docs/consensus-mechanisms/pos/#finality) (což znamená, že je nelze změnit bez extrémních ekonomických ztrát pro útočníka).
+Ethereum je již nyní velmi bezpečná, decentralizovaná platforma pro [chytré kontrakty](/glossary/#smart-contract). Plán vývoje má za cíl udržet tento stav po celá desetiletí tím, že **posiluje síť již dnes a zároveň se připravuje na hrozby, které se mohou objevit až za několik let**. Krátkodobé aktualizace lze sledovat na [forkcast.org](https://forkcast.org) a dlouhodobý návrh plánu vývoje je zveřejněn na [strawmap.org](https://strawmap.org).
 
-Existují také vylepšení, která ztíží cenzuru transakcí tím, že navrhovatelé bloků nebudou mít přístup k aktuálnímu obsahu svých bloků, a další nové způsoby, jak identifikovat, kdy se klient snaží blockchain cenzorovat. Tato vylepšení společně vylepší protokol [důkazu podílem](/glossary/#pos) tak, aby uživatelé – od jednotlivců až po korporace – měli okamžitou důvěru ve své aplikace, data a aktiva na Ethereu.
+<ExpandableCard title="Je dnes Ethereum bezpečné?" eventCategory="/roadmap/security" eventName="clicked is ethereum secure today?">
 
-## Výběry ze stakování {#staking-withdrawals}
+Ano. Ethereum běží nepřetržitě od roku 2015 bez výpadků. Vylepšení na této stránce činí již tak bezpečnou síť odolnější vůči útokům, cenzuře nebo narušení.
 
-Přechod z [důkazu prací](/glossary/#pow) na důkaz podílem začal tím, že průkopníci Etherea „stakovali“ své ETH do depozitního kontraktu. Tyto ETH jsou používány k ochraně sítě. Dne 12. dubna 2023 proběhla druhá aktualizace, která validátorům umožnila vybrat stakované ETH. Od té doby mohou validátoři uzamykat nebo vybírat ETH bez dřívějších omezení.
+</ExpandableCard>
 
-<ButtonLink variant="outline-color" href="/staking/withdrawals/">Přečtěte si o výběrech</ButtonLink>
+## Tvorba bloků nevyžadující důvěru {#trustless-block-building}
 
-## Obrana proti útokům {#defending-against-attacks}
+Většina bloků Etherea je dnes sestavována prostřednictvím dělby práce: specializovaní tvůrci sestaví co nejhodnotnější blok a [validátor](/glossary/#validator), který je na řadě, navrhne nejlepší nabídku. To brání tomu, aby profesionální tvorba bloků koncentrovala [stake](/glossary/#staking) mezi největší operátory, ale od roku 2022 se spoléhá na software mimo protokol, který síť nemůže ověřit.
 
-Protokol důkaz podílem na Ethereu je stále možné vylepšovat. Jedním z nich je tzv. [view-merge](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739) – bezpečnější algoritmus pro výběr [větve](/glossary/#fork), který ztěžuje určité sofistikované typy útoků.
+**Zakotvené oddělení navrhovatele a tvůrce (ePBS, neboli EIP-7732)** přesouvá toto rozdělení do protokolu, čímž odstraňuje nutnost důvěřovat zprostředkovatelům (relays), tedy třetím stranám, které v současnosti předávají bloky mezi tvůrci a validátory. ePBS je hlavním bodem nadcházejícího upgradu [Glamsterdam](/roadmap/glamsterdam/), který je plánován na rok 2026. Pro Mainnet zatím nebylo stanoveno žádné datum; klientské týmy jej testují na devnetech (dočasných testovacích sítích).
 
-Snížení času, který Ethereum potřebuje k [finalizaci](/glossary/#finality) bloků, by poskytlo lepší uživatelskou zkušenost a zabránilo sofistikovaným útokům typu „reorg“, při kterých se útočníci snaží přeskupit velmi nedávné bloky, aby z nich vytěžili zisk nebo cenzurovali určité transakce. [**Finalizace v jednom slotu (SSF)**](/roadmap/single-slot-finality/) je **způsob, jak minimalizovat zpoždění finalizace**. V současnosti je časové okno bloků 15 minut, během kterých by teoreticky útočník mohl přesvědčit další validátory, aby bloky přeorganizovali. V případě SSF je to 0 minut. Uživatelé, od jednotlivců po aplikace a burzy, benefitují z rychlého ujištění, že jejich transakce nebudou zrušeny, a síť benefituje z toho, že zamezí celé řadě útoků.
+<ButtonLink variant="outline" href="/roadmap/pbs/">Více o oddělení navrhovatele a tvůrce</ButtonLink>
 
-<ButtonLink variant="outline-color" href="/roadmap/single-slot-finality/">Přečtěte si o finalizaci v jednom slotu</ButtonLink>
+## Odolnost vůči cenzuře {#censorship-resistance}
 
-## Obrana proti cenzuře {#defending-against-censorship}
+Síť odolná vůči cenzuře znamená, že nikdo nemůže zabránit tomu, aby se platná transakce dostala do řetězce. **Seznamy pro zahrnutí vynucené volbou forku (FOCIL, neboli EIP-7805)** dávají mnoha validátorům možnost mluvit do toho, co musí blok obsahovat: zveřejňují seznamy čekajících transakcí, které je tvůrce bloku povinen zahrnout. Žádný jednotlivý aktér tak nemůže vaši transakci potichu vynechat.
 
-Decentralizace zabraňuje tomu, aby jednotlivci nebo malé skupiny [validátorů](/glossary/#validator) získali příliš velký vliv. Nové technologie uzamčení mohou pomoci zajistit, že validátoři Etherea zůstanou co nejvíce decentralizovaní, a zároveň je chrání proti hardwarovým, softwarovým a síťovým poruchám. To zahrnuje software, který sdílí odpovědnosti validátorů mezi více [uzly](/glossary/#node). Tomu se říká **technologie distribuovaných validátorů (DVT)**. [Staking pooly](/glossary/#staking-pool) jsou motivovány k používání DVT, protože to umožňuje více počítačům kolektivně se podílet na validaci, což přidává redundanci a odolnost proti chybám. Také rozděluje klíče validátorů mezi několik systémů, místo aby jeden operátor provozoval několik validátorů. To ztěžuje nepoctivým operátorům koordinaci útoků na Ethereum. Celkově je cílem dosáhnout bezpečnostních výhod tím, že jsou validátoři provozováni jako _komunity_, nikoliv jako jednotlivci.
+FOCIL je hlavním bodem vrstvy konsensu v upgradu Hegotá, který následuje po Glamsterdamu a je plánován na rok 2027. Byl záměrně naplánován až po Glamsterdamu, aby ePBS a FOCIL nikdy nebyly nasazeny jako jedna neotestovaná kombinace. Výzkum šifrovaných mempoolů, které by skryly obsah čekajících transakcí, dokud nebudou bezpečně zahrnuty do bloku, nadále pokračuje.
 
-<ButtonLink variant="outline-color" href="/staking/dvt/">Přečtěte si o technologii distribuovaných validátorů</ButtonLink>
+## Rychlejší finalita {#faster-finality}
 
-Implementace **oddělení navrhovatele a stavitele (PBS)** výrazně zlepší vestavěné obranné mechanismy Etherea proti cenzuře. PBS umožňuje jednomu validátorovi vytvořit blok a jinému ho šířit po síti Ethereum. To zajišťuje, že zisky z profesionálních algoritmů na tvorbu bloků maximalizujících zisk jsou spravedlivěji sdíleny napříč sítí, **což zabraňuje koncentraci staků** u nejvýkonnějších institucionálních stakerů v průběhu času. Navrhovatel bloku si vybere nejziskovější blok, který mu nabídnul trh stavitelů bloků. Aby mohl cenzurovat, navrhovatel bloku by si často musel vybrat méně ziskový blok, což by bylo **ekonomicky iracionální a také zřejmé zbytku validátorů** v síti.
+Pro uživatele je [finalita](/glossary/#finality) okamžikem, kdy se transakce stává trvalou, a kdy by její zvrácení stálo útočníka obrovské množství stakovaných ETH. Dnes finalita trvá přibližně 15 minut a **výzkumníci to chtějí dramaticky zkrátit**. Práce začaly jako finalita v jednom slotu, vyvinuly se ve finalitu ve třech slotech a nyní pokračují jako Minimmit, jednokolový protokol konsensu v programu Lean Ethereum představeném v červenci 2025. Finalita v řádu sekund je dlouhodobým cílem v návrhu plánu vývoje, který směřuje zhruba k roku 2029. Toto zůstává předmětem aktivního výzkumu a žádný upgrade týkající se finality zatím nebyl přiřazen k žádnému forku.
 
-Existují potenciální doplňky k PBS, jako jsou šifrované transakce a inkluzní seznamy, které by mohly dále zlepšit odolnost Etherea proti cenzuře. Tyto funkce činí stavitele i navrhovatele bloků slepými k aktuálním transakcím zahrnutým v jejich blocích.
+<ButtonLink variant="outline" href="/roadmap/single-slot-finality/">Více o výzkumu rychlejší finality</ButtonLink>
 
-<ButtonLink variant="outline-color" href="/roadmap/pbs/">Přečtěte si o oddělení navrhovatele a stavitele bloků</ButtonLink>
+## Odolní validátoři {#resilient-validators}
 
-## Ochrana validátorů {#protecting-validators}
+Validátor je obvykle jeden stroj, který drží jeden podpisový klíč. **Technologie distribuovaných validátorů (DVT)** nahrazuje tento jediný stroj výborem strojů, které sdílejí klíč a podepisují společně, takže selhání jednoho počítače nebo krádež jednoho klíče nevyřadí validátor z provozu. DVT je v produkčním provozu a je ve velkém měřítku využívána operátory stakingu. V lednu 2026 navrhl Vitalik Buterin zjednodušenou variantu na úrovni protokolu zvanou DVT-lite; jedná se o raný návrh bez naplánovaného forku.
 
-Je možné, že by sofistikovaný útočník mohl identifikovat nadcházející validátory a spamovat je, aby jim zabránil v navrhování bloků; toto je známé jako útok **odepření služby (DoS)**. Implementace [**tajného výběru lídrů (SLE)**](/roadmap/secret-leader-election) bude chránit proti tomuto typu útoku tím, že zabrání tomu, aby byli navrhovatelé bloků předem známi. Toho je možné dosáhnout tak, že se konstantně promíchává sada kryptografických závazků reprezentujících kandidáty na navrhovatele bloků a implementuje jejich pořadí za účelem určení výběru validátora takovým způsobem, že pouze validátoři sami znají své pořadí předem.
+Síť se také chrání prostřednictvím [klientské diverzity](/developers/docs/nodes-and-clients/client-diversity/): Ethereum běží na několika nezávisle vytvořených softwarových implementacích, takže chyba v jednom klientovi neohrozí zbytek sítě.
 
-<ButtonLink variant="outline-color" href="/roadmap/secret-leader-election">Přečtěte si o tajném výběru lídrů</ButtonLink>
+Dva dřívější výzkumné nápady, view-merge a tajná volba lídra, již nejsou aktivními položkami plánu vývoje.
 
-## Aktuální postup {#current-progress}
+<ButtonLink variant="outline" href="/staking/dvt/">Více o technologii distribuovaných validátorů</ButtonLink>
 
-**Bezpečnostní vylepšení zahrnutá v plánu jsou v pokročilých stádiích výzkumu**, ale nečeká se, že budou implementována v nejbližší době. Další kroky pro view-merge, PBS, SSF a SLE jsou dokončení jejich specifikace a zahájení vývoje prototypů.
+## Kvantová odolnost {#quantum-resistance}
+
+Ethereum využívá [kryptografii](/glossary/#cryptography) k udržení bezpečnosti sítě a ochraně prostředků uživatelů. Časem budou některé z těchto kryptografických metod **zranitelné vůči kvantovým počítačům**, které dokážou řešit specifické matematické problémy exponenciálně rychleji než klasické stroje.
+
+**Žádný kvantový počítač dnes nedokáže prolomit kryptografii Etherea.** Potřebný hardware zatím v dostatečném měřítku neexistuje. Nedávný výzkum však naznačuje, že se tato propast zmenšuje rychleji, než se dříve očekávalo. V březnu 2026 publikovala společnost Google Quantum AI článek, ve kterém odhaduje, že prolomení 256bitové kryptografie eliptických křivek (typ, který Ethereum používá pro podpisy účtů) by mohlo vyžadovat zhruba 1 200 logických qubitů, což je asi 20krát méně než dřívější odhady.
+
+Kryptografické přechody trvají roky, než se bezpečně naplánují a provedou, takže přípravy probíhají již nyní, dlouho předtím, než bude existovat samotný hardware. Byly identifikovány čtyři oblasti, které vyžadují postkvantové upgrady: podpisy konsensu validátorů (BLS), závazková schémata používaná pro dostupnost dat (KZG), podpisy účtů (ECDSA) a systémy důkazů s nulovou znalostí používané [rollupy](/glossary/#rollups).
+
+Nadace Ethereum vytvořila v lednu 2026 specializovaný **tým pro postkvantovou bezpečnost** a jeho práce je veřejně sledována na [pq.ethereum.org](https://pq.ethereum.org). Aktivní práce zahrnuje podpisy validátorů založené na hashi (leanXMSS) spárované s minimálním zkVM (leanVM), které efektivně agreguje větší kvantově bezpečné podpisy, a týdenní interop devnety s více než 10 klientskými týmy.
+
+Klíčovou součástí strategie přechodu je **EIP-8141**, který zavádí nativní [abstrakci účtu](/roadmap/account-abstraction/). To umožňuje jednotlivým účtům zvolit si vlastní ověřování podpisů, což znamená, že by uživatelé mohli přejít na kvantově bezpečné podpisy, aniž by museli čekat na jedinou migraci v rámci celého protokolu. O EIP-8141 se uvažuje pro upgrade Hegotá. Milníky hlavní postkvantové infrastruktury mají za cíl dokončení přibližně do roku 2029. Jedná se o plánované cíle, které se mohou změnit.
+
+<ExpandableCard title="Mohou dnes kvantové počítače ukrást moje ETH?" eventCategory="/roadmap/security" eventName="clicked can quantum computers steal my ETH today?">
+
+Ne. Žádný kvantový počítač dnes nedokáže prolomit kryptografii Etherea. Práce popsaná na této stránce je včasnou přípravou na hrozbu, která je ještě roky vzdálená. Až budou k dispozici postkvantové peněženky, software peněženky vás provede migrací. Prozatím nemusíte dělat vůbec nic.
+
+</ExpandableCard>
+
+<ButtonLink variant="outline" href="/roadmap/security/quantum-resistance/">Více o kvantové odolnosti</ButtonLink>
+
+## Jednodušší a efektivnější protokol {#simpler-and-more-efficient-protocol}
+
+Složitost vytváří příležitosti pro chyby a zranitelnosti. Část plánu vývoje se zaměřuje na **zjednodušení Etherea a odstranění technického dluhu**, aby se protokol snáze udržoval, auditoval a dalo se o něm lépe uvažovat. Jednodušší protokol také poskytuje útočníkům menší prostor pro zkoumání.
+
+Dosud dodáno:
+
+- **[Pectra (květen 2025)](/roadmap/pectra/)**: Zavedla EIP-7702, který umožňuje externě vlastněným účtům dočasně delegovat na kód chytrého kontraktu, což je odrazový můstek k plné abstrakci účtu.
+- **[Fusaka (prosinec 2025)](/roadmap/fusaka/)**: Nasadila PeerDAS (EIP-7594), který distribuuje zátěž dostupnosti dat napříč sítí. Také zvýšila parametry blobů, čímž rozšířila datovou propustnost pro rollupy.
+- **[Dencun (březen 2024)](/roadmap/dencun/)**: Zavedl blob transakce (EIP-4844) pro levnější data rollupů a omezil `SELFDESTRUCT` (EIP-6780), aby odstranil dlouhodobý zdroj složitosti.
+- **[Shapella (duben 2023)](/staking/withdrawals/)**: Umožnila validátorům vybírat stakované ETH (EIP-4895), čímž odstranila dřívější omezení stakingu typu [důkaz podílem (PoS)](/glossary/#pos).
+- **London (srpen 2021)**: Přepracoval oceňování gasu pomocí EIP-1559, zavedl základní poplatek a mechanismus pro spálení pro předvídatelnější transakční náklady.
+
+Probíhá:
+
+- **Glamsterdam (plánováno na rok 2026)**: Hlavními body jsou ePBS (EIP-7732) a seznamy přístupů na úrovni bloků (EIP-7928), přičemž se zvažuje také přecenění gasu.
+- **Hegotá (plánováno na rok 2027)**: FOCIL (EIP-7805) je hlavním bodem vrstvy konsensu. Zvažuje se zahrnutí: EIP-8141 (nativní abstrakce účtu).
+- **Průběžně**: Snahy o zjednodušení [EVM](/developers/docs/evm/), harmonizaci klientských implementací a postupné vyřazování zastaralých funkcí pokračují napříč klientskými týmy. Práce na bezstavovosti (umožňující účastníkům ověřovat řetězec bez ukládání všech jeho dat) se přepracovává s využitím kvantově bezpečných binárních hashovacích stromů, přičemž konečný přístup ještě nebyl potvrzen.
+
+## Současný pokrok {#current-progress}
+
+K polovině roku 2026:
+
+- **Tvorba bloků a odolnost vůči cenzuře**: ePBS a seznamy přístupů na úrovni bloků běží na devnetech Glamsterdamu. FOCIL je plánován pro Hegotá s cílem v roce 2027.
+- **Finalita**: Minimmit a širší práce na konsensu Lean Ethereum zůstávají v aktivním výzkumu, zatím bez přiřazení k forku.
+- **Kvantová odolnost**: Běží týdenní postkvantové interop devnety a milníky hlavní infrastruktury směřují přibližně k roku 2029.
+- **Zjednodušení**: Pectra a Fusaka byly nasazeny; Glamsterdam a Hegotá přinášejí další kolo úklidu.
+
+Žádná část této práce není dokončena a všechny časové osy jsou odhady, které se mohou změnit.
+
+## Další čtení {#further-reading}
+
+- [Forkcast: Sledování upgradů sítě Ethereum](https://forkcast.org)
+- [Strawmap: návrh plánu vývoje Etherea na vrstvě 1 (l1)](https://strawmap.org) - _EF Architecture_
+- [Postkvantové Ethereum](https://pq.ethereum.org) - _Nadace Ethereum_
+- [Sledování plánu vývoje Lean Ethereum](https://leanroadmap.org) - _ReamLabs_
+- [Důkaz podílem (PoS) a finalita](/developers/docs/consensus-mechanisms/pos/#finality)
+- [EVM](/developers/docs/evm/)

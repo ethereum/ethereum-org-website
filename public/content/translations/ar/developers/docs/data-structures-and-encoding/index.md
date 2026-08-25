@@ -1,32 +1,32 @@
 ---
 title: "هياكل البيانات والترميز"
-description: "نظرة عامة على هياكل البيانات الأساسية لإيثريوم."
+description: "نظرة عامة على هياكل البيانات الأساسية في إيثيريوم."
 lang: ar
 sidebarDepth: 2
 ---
 
-يقوم الإيثريوم بإنشاء وتخزين ونقل كميات كبيرة من البيانات. يجب تنسيق هذه البيانات بطرق موحدة وفعالة في استخدام الذاكرة للسماح لأي شخص [بتشغيل عقدة](/run-a-node/) على أجهزة متواضعة نسبيًا مخصصة للمستهلكين. لتحقيق ذلك، يتم استخدام العديد من هياكل البيانات المحددة على مجموعة إيثريوم.
+تقوم إيثيريوم بإنشاء وتخزين ونقل كميات كبيرة من البيانات. يجب تنسيق هذه البيانات بطرق موحدة وفعالة من حيث الذاكرة للسماح لأي شخص بـ [تشغيل عقدة](/run-a-node/) على أجهزة استهلاكية متواضعة نسبيًا. لتحقيق ذلك، يتم استخدام العديد من هياكل البيانات المحددة في حزمة إيثيريوم.
 
 ## المتطلبات الأساسية {#prerequisites}
 
-يجب أن تفهم أساسيات إيثريوم و[برنامج العميل](/developers/docs/nodes-and-clients/). يوصى بالإلمام بطبقة الشبكات و[الورقة البيضاء لإيثريوم](/whitepaper/).
+يجب أن تفهم أساسيات إيثيريوم و[برامج العميل](/developers/docs/nodes-and-clients/). يوصى بالإلمام بطبقة الشبكات و[الورقة البيضاء لإيثيريوم](/whitepaper/).
 
 ## هياكل البيانات {#data-structures}
 
-### Patricia merkle tries {#patricia-merkle-tries}
+### أشجار باتريشيا ميركل {#patricia-merkle-tries}
 
-المحاولات هي هياكل تقوم بتشفير أزواج القيمة الرئيسية في محاولة حتمية وموثوقة تشفيريًا. يتم استخدامها على نطاق واسع في طبقة تنفيذ إيثريوم.
+أشجار باتريشيا ميركل (<span dir="ltr">Patricia Merkle Tries</span>) هي هياكل تقوم بترميز أزواج المفتاح والقيمة في شجرة حتمية وموثقة تشفيريًا. تُستخدم هذه الأشجار على نطاق واسع عبر طبقة التنفيذ في إيثيريوم.
 
-[المزيد عن Patricia Merkle Tries](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)
+[المزيد عن أشجار باتريشيا ميركل](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)
 
-### Recursive Length Prefix {#recursive-length-prefix}
+### بادئة الطول العودية {#recursive-length-prefix}
 
-Recursive Length Prefix (RLP) هي طريقة تسلسل تستخدم على نطاق واسع عبر طبقة تنفيذ إيثريوم.
+بادئة الطول العودية (<span dir="ltr">RLP</span>) هي طريقة للتسلسل تُستخدم على نطاق واسع عبر طبقة التنفيذ في إيثيريوم.
 
-[المزيد عن RLP](/developers/docs/data-structures-and-encoding/rlp)
+[المزيد عن <span dir="ltr">RLP</span>](/developers/docs/data-structures-and-encoding/rlp)
 
-### Simple Serialize {#simple-serialize}
+### التسلسل البسيط {#simple-serialize}
 
-التسلسل البسيط (SSZ) هو تنسيق التسلسل السائد على طبقة إجماع إيثريوم بسبب توافقه مع Merklelization.
+التسلسل البسيط (<span dir="ltr">SSZ</span>) هو تنسيق التسلسل السائد في طبقة الإجماع في إيثيريوم بسبب توافقه مع عملية الميركلة (<span dir="ltr">merklelization</span>).
 
-[المزيد عن SSZ](/developers/docs/data-structures-and-encoding/ssz)
+[المزيد عن <span dir="ltr">SSZ</span>](/developers/docs/data-structures-and-encoding/ssz)

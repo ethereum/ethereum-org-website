@@ -3,9 +3,8 @@ title: Timeline of all Ethereum forks (2014 to present)
 description: A history of the Ethereum blockchain including major milestones, releases, and forks.
 lang: en
 sidebarDepth: 1
+authors: ["Nixo"]
 ---
-
-# Timeline of all Ethereum forks (2014 to present) {#the-history-of-ethereum}
 
 A timeline of all the major milestones, forks, and updates to the [Ethereum](/) blockchain.
 
@@ -127,7 +126,6 @@ Protocol efficiency and security improvements:
 
 </ExpandableCard>
 
-- [Pectra.wtf](https://pectra.wtf)
 - [How Pectra will enhance the staking experience](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [Read the Electra upgrade specifications](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [Prague-Electra ("Pectra") FAQ](/roadmap/pectra/)

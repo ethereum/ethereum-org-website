@@ -127,21 +127,41 @@ function buildS3Url(bucket: string, key: string): string {
 }
 
 /**
+ * True when the URL already points at our own S3 host. Sources are often
+ * hand-uploaded to the bucket and pasted back into a sheet, so re-uploading
+ * would re-key the object under a content hash and orphan the original.
+ */
+function isAlreadyOnS3(url: string): boolean {
+  const endpoint = process.env.S3_ENDPOINT
+  if (!endpoint) return false
+  try {
+    return new URL(url).hostname === new URL(endpoint).hostname
+  } catch {
+    return false
+  }
+}
+
+/**
  * Upload an image from an external URL to S3.
  *
  * @param sourceUrl - The external image URL to fetch and upload
  * @param prefix - S3 key prefix (e.g., 'apps/logos', 'events')
+ * @param customFilename - Optional full filename (with extension) to use instead of the URL-derived hash.
  * @returns S3 URL if successful, null on failure
  */
 export async function uploadToS3(
   sourceUrl: string,
-  prefix: string
+  prefix: string,
+  customFilename?: string
 ): Promise<string | null> {
   // Skip empty or invalid URLs
   if (!sourceUrl || !isValidImageUrl(sourceUrl)) {
     console.warn(`[S3] Invalid or empty URL: ${sourceUrl || "(empty)"}`)
     return null
   }
+
+  // Already hosted by us: pass through untouched
+  if (isAlreadyOnS3(sourceUrl)) return sourceUrl
 
   const bucket = getBucket()
   const s3 = getS3Client()
@@ -191,7 +211,9 @@ export async function uploadToS3(
       return null
     }
 
-    const key = generateKey(prefix, sourceUrl, ext)
+    const key = customFilename
+      ? `${prefix}/${customFilename}`
+      : generateKey(prefix, sourceUrl, ext)
 
     // Check if already exists in S3
     try {
@@ -231,15 +253,25 @@ export async function uploadToS3(
 }
 
 /**
- * Batch upload multiple images in parallel.
+ * Batch upload multiple images, in chunks to bound peak memory: every upload
+ * buffers the whole image before the size check, so unbounded fan-out can OOM
+ * the task machine.
  *
  * @param urls - Array of external image URLs
  * @param prefix - S3 key prefix
- * @returns Array of S3 URLs (null for failed uploads)
+ * @returns Array of S3 URLs (null for failed uploads), in input order
  */
 export async function uploadManyToS3(
   urls: string[],
-  prefix: string
+  prefix: string,
+  concurrency = 5
 ): Promise<(string | null)[]> {
-  return Promise.all(urls.map((url) => uploadToS3(url, prefix)))
+  const results: (string | null)[] = []
+  for (let i = 0; i < urls.length; i += concurrency) {
+    const chunk = urls.slice(i, i + concurrency)
+    results.push(
+      ...(await Promise.all(chunk.map((u) => uploadToS3(u, prefix))))
+    )
+  }
+  return results
 }

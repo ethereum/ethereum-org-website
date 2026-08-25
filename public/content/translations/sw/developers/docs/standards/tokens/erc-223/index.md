@@ -1,6 +1,6 @@
 ---
-title: ERC-223 ishara kiwango
-description: Maelezo ya jumla ya ERC-223 badilishwa ishara ya kiwango, jinsi kufanya kazi, na linganisha na ERC-20.
+title: Kiwango cha Tokeni cha ERC-223
+description: Muhtasari wa kiwango cha tokeni zinazoweza kubadilishwa cha ERC-223, jinsi kinavyofanya kazi, na ulinganisho na ERC-20.
 lang: sw
 ---
 
@@ -8,37 +8,36 @@ lang: sw
 
 ### ERC-223 ni nini? {#what-is-erc223}
 
-ERC-223 ni kiwango kwa ishara badilisha, sawa na kiwango ERC-20. Tofauti kuu ni kwamba ERC-223 hufafanua si tu ishara API lakini pia hoja kwa ajili ya kuhamisha ishara kutoka wa tuma kwa mpokeaji. Anzisha mfano wa mawasiliano ambayo kuruhusu uhamisho wa ishara shughulika kwa upande wa mpokeaji.
+ERC-223 ni kiwango cha tokeni zinazoweza kubadilishwa, sawa na kiwango cha ERC-20. Tofauti kuu ni kwamba ERC-223 haifafanui tu API ya tokeni bali pia mantiki ya kuhamisha tokeni kutoka kwa mtumaji kwenda kwa mpokeaji. Inaleta muundo wa mawasiliano unaoruhusu mahamisho ya tokeni kushughulikiwa upande wa mpokeaji.
 
-### Tofauti kutoka ERC-20 {#erc20-differences}
+### Tofauti na ERC-20 {#erc20-differences}
 
-ERC-223 shughulika baadhi ya mapungufu ya ERC-20 na kuanzisha njia mpya ya mwingiliano kati ya mkataba ishara na mkataba ambayo inaweza kupokea ishara. Kuna jambo machache ambayo inawezekana na ERC-223 lakini si na ERC-20:
+ERC-223 inashughulikia baadhi ya mapungufu ya ERC-20 na inaleta mbinu mpya ya mwingiliano kati ya mkataba wa tokeni na mkataba unaoweza kupokea tokeni. Kuna mambo machache yanayowezekana kwa ERC-223 lakini si kwa ERC-20:
 
-- Usimamizi wa uhamisho wa ishara kwa upande wa mpokeaji: Wapokeaji wanaweza kugundua kuwa ishara ya ERC-223 imewekwa.
-- Kukataliwa kwa ishara vibaya walio tuma: Ikiwa mtumiaji tuma ishara za ERC-223 kwa mkataba ambao hakuna kupokea ishara, mkataba unaweza kukataa shughuli hiyo, kuzuia kupoteza wa ishara.
-- Metadata katika uhamisho: ERC-223 ishara inaweza ni pamoja na metadata, kuruhusu taarifa arbitrary kuwa masharti ya ishara shughuli.
+- Ushughulikiaji wa hamisho la tokeni upande wa mpokeaji: Wapokeaji wanaweza kutambua kwamba tokeni ya ERC-223 inawekwa.
+- Kukataliwa kwa tokeni zilizotumwa isivyo sahihi: Ikiwa mtumiaji atatuma tokeni za ERC-223 kwenye mkataba ambao haupaswi kupokea tokeni, mkataba unaweza kukataa muamala, na kuzuia upotevu wa tokeni.
+- Data fafanuzi katika mahamisho: Tokeni za ERC-223 zinaweza kujumuisha data fafanuzi, na kuruhusu taarifa yoyote kuambatishwa kwenye miamala ya tokeni.
 
-## Mahitaji ya awali {#prerequisites}
+## Masharti ya Awali {#prerequisites}
 
-- Hifadhi ya fedha (/developers/docs/accounts)
-- [Mkataba erevu](/developers/docs/smart-contracts/)
+- [Akaunti](/developers/docs/accounts)
+- [Mikataba Mahiri](/developers/docs/smart-contracts/)
 - [Viwango vya tokeni](/developers/docs/standards/tokens/)
 - [ERC-20](/developers/docs/standards/tokens/erc-20/)
 
-## Mwili {#body}
+## Kiini {#body}
 
-ERC-223 ni ishara ya kiwango ambacho kutekeleza API kwa ishara ndani ya mikataba erevu. Pia kutangaza API kwa ajili ya mikataba ambayo kuhitaji kupokea ERC-223 ishara. Mikataba ambayo haina msaada ERC-223 mpokeaji API haiwezi kupokea ERC-223 ishara, kuzuia makosa ya mtumiaji.
+ERC-223 ni kiwango cha tokeni kinachotekeleza API kwa ajili ya tokeni ndani ya mikataba mahiri. Pia inatangaza API kwa ajili ya mikataba inayopaswa kupokea tokeni za ERC-223. Mikataba isiyoauni API ya Mpokeaji wa ERC-223 haiwezi kupokea tokeni za ERC-223, hivyo kuzuia makosa ya mtumiaji.
 
-Kama mkataba erevu kutekeleza mbinu kufuatia na matukio inaweza kuitwa ERC-223 sambamba ishara mkataba. Mara kupelekwa, ni
-itakuwa na jukumu la kufuatilia ishara iliyoundwa kwenye Ethereum.
+Ikiwa mkataba mahiri unatekeleza mbinu na matukio yafuatayo unaweza kuitwa mkataba wa tokeni unaotangamana na ERC-223. Baada ya kusambazwa, utawajibika kufuatilia tokeni zilizoundwa kwenye Ethereum.
 
-Mkataba si wajibu wa kuwa na kazi hizi tu na muumba unaweza kuongeza kipengele kingine chochote kutoka viwango vya ishara tofauti na mkataba huu. Kwa mfano, `kubali ` na `kuhamisha Kutoka ` kazi si sehemu ya kiwango ERC-223 lakini kazi hizi inaweza kutekelezwa kama ni lazima.
+Mkataba haulazimiki kuwa na vipengele hivi pekee na msanidi anaweza kuongeza kipengele kingine chochote kutoka kwenye viwango tofauti vya tokeni kwenye mkataba huu. Kwa mfano, vipengele vya `approve` na `transferFrom` si sehemu ya kiwango cha ERC-223 lakini vipengele hivi vinaweza kutekelezwa ikiwa itahitajika.
 
-Kutoka [EIP-223](https://eips.ethereum.org/EIPS/eip-223):
+Kutoka kwenye [EIP-223](https://eips.ethereum.org/EIPS/eip-223):
 
 ### Mbinu {#methods}
 
-ERC-223 ishara lazima kutekeleza mbinu kufuatia:
+Tokeni ya ERC-223 lazima itekeleze mbinu zifuatazo:
 
 ```solidity
 function name() public view returns (string)
@@ -50,13 +49,13 @@ function transfer(address _to, uint256 _value) public returns (bool success)
 function transfer(address _to, uint256 _value, bytes calldata _data) public returns (bool success)
 ```
 
-Mkataba ambayo inadhaniwa kupokea ERC-223 ishara lazima kutekeleza mbinu kufuatia:
+Mkataba unaopaswa kupokea tokeni za ERC-223 lazima utekeleze mbinu ifuatayo:
 
 ```solidity
 function tokenReceived(address _from, uint _value, bytes calldata _data)
 ```
 
-Kama ERC-223 ishara ni alimtuma kwa mkataba kwamba haina kutekeleza `ishara pokewa(..) ` kazi basi uhamisho lazima kushindwa na ishara lazima si kuhamisha kutoka usawa wa alio tuma.
+Ikiwa tokeni za ERC-223 zitatumwa kwenye mkataba ambao hautekelezi kipengele cha `tokenReceived(..)` basi hamisho lazima lifeli na tokeni hazipaswi kuhamishwa kutoka kwenye salio la mtumaji.
 
 ### Matukio {#events}
 
@@ -64,13 +63,13 @@ Kama ERC-223 ishara ni alimtuma kwa mkataba kwamba haina kutekeleza `ishara poke
 event Transfer(address indexed _from, address indexed _to, uint256 _value, bytes calldata _data)
 ```
 
-### Mfano {#examples}
+### Mifano {#examples}
 
-API ya ERC-223 ishara ni sawa na ile ya ERC-20, hivyo kutoka UI maendeleo mtazamo hakuna tofauti. Tofauti pekee hapa ni kwamba ERC-223 ishara haiwezi kuwa na 'kubali' + 'uhamisho kutoka' kazi kama haya ni hiari kwa ajili ya kiwango hiki.
+API ya tokeni ya ERC-223 inafanana na ile ya ERC-20, kwa hivyo kwa mtazamo wa uundaji wa UI hakuna tofauti. Kitu pekee kilicho tofauti hapa ni kwamba tokeni za ERC-223 huenda zisiwe na vipengele vya `approve` + `transferFrom` kwa kuwa hivi ni vya hiari kwa kiwango hiki.
 
 #### Mifano ya Solidity {#solidity-example}
 
-Mfano ufuatao unaonyesha jinsi ya msingi ERC-223 ishara mkataba kazi:
+Mfano ufuatao unaonyesha jinsi mkataba wa msingi wa tokeni ya ERC-223 unavyofanya kazi:
 
 ```solidity
 pragma solidity ^0.8.19;
@@ -116,22 +115,22 @@ contract VeryBasicERC223Token {
 }
 ```
 
-Sasa tunataka mkataba mwingine kukubali amana ya ishara ya A kwa kudhani kwamba ishara ya A ni ishara ya ERC-223. Mkataba lazima kukubali tu ishara A na kukataa ishara nyingine yoyote. Wakati mkataba anapata ishara A ni lazima kutoa tukio la 'amana()' na kuongeza thamani ya ndani 'amana' kutofautiana.
+Sasa tunataka mkataba mwingine ukubali amana za `tokenA` tukichukulia kwamba tokenA ni tokeni ya ERC-223. Mkataba lazima ukubali tokenA pekee na kukataa tokeni nyingine zozote. Mkataba unapopokea tokenA lazima utoe tukio la `Deposit()` na kuongeza thamani ya kigezo cha ndani cha `deposits`.
 
-Hapa ni nambari:
+Hapa kuna msimbo:
 
 ```solidity
 contract RecipientContract is IERC223Recipient {
     event Deposit(address whoSentTheTokens);
     uint256 deposits = 0;
-    address tokenA; // Tokeni pekee tunayotaka kukubali.
+    address tokenA; // Tokeni pekee ambayo tunataka kukubali.
     function tokenReceived(address _from, uint _value, bytes memory _data) public override
     {
-        // Ni muhimu kuelewa kwamba ndani ya utendakazi huu
-        // msg.sender ni anwani ya tokeni inayopokewa,
-        // msg.value daima ni 0 kwa vile mkataba wa tokeni haumiliki wala kutuma ether katika hali nyingi,
-        // _from ni mtumaji wa uhamishaji wa tokeni,
-        // _value ni kiasi cha tokeni kilichowekwa.
+        // Ni muhimu kuelewa kwamba ndani ya kazi hii
+        // msg.sender ni anwani ya tokeni inayopokelewa,
+        // msg.value  kila wakati ni 0 kwa kuwa mkataba wa tokeni haumiliki au kutuma Etha katika hali nyingi,
+        // _from      ni mtumaji wa hamisho la tokeni,
+        // _value     ni kiasi cha tokeni zilizowekwa.
         require(msg.sender == tokenA);
         deposits += _value;
         emit Deposit(_from);
@@ -141,31 +140,31 @@ contract RecipientContract is IERC223Recipient {
 
 ## Maswali yanayoulizwa mara kwa mara {#faq}
 
-### Nini kutokea kama sisi tuma baadhi ya ishara B kwa mkataba? {#sending-tokens}
+### Nini kitatokea ikiwa tutatuma baadhi ya tokenB kwenye mkataba? {#sending-tokens}
 
-Mkataba utashindwa, na uhamisho wa ishara hakuna kutokea. Ishara kurudi kwenye anwani ya aliye tuma.
+Muamala utafeli, na hamisho la tokeni halitafanyika. Tokeni zitarudishwa kwenye anwani ya mtumaji.
 
-### Tunaweza aje kuweka amana kwa mkataba huu? {#contract-deposits}
+### Tunawezaje kuweka amana kwenye mkataba huu? {#contract-deposits}
 
-Wito `uhamisho (anwani,uint256) ` au `uhamisho (anwani,uint256,bytes) ` kazi ya ERC-223 ishara, kutaja anwani ya `Mpokeaji Mkataba`.
+Ita kipengele cha `transfer(address,uint256)` au `transfer(address,uint256,bytes)` cha tokeni ya ERC-223, ukibainisha anwani ya `RecipientContract`.
 
-### Nini kutokea kama sisi kuhamisha ERC-20 ishara ya mkataba huu? {#erc-20-transfers}
+### Nini kitatokea ikiwa tutahamisha tokeni ya ERC-20 kwenye mkataba huu? {#erc-20-transfers}
 
-Kama ishara ERC-20 ni alimtuma kwa `Mpokeaji mkataba`, ishara itakuwa na uhamisho, lakini uhamisho itakuwa si kujulikana (hakuna `amana() ` tukio itakuwa ya kutolewa, na amana thamani hakuna badiliko). Hakuna kwenye ERC-20 amana haiwezi kuchuja au kuzuia.
+Ikiwa tokeni ya ERC-20 itatumwa kwenye `RecipientContract`, tokeni zitahamishwa, lakini hamisho halitatambuliwa (hakuna tukio la `Deposit()` litakalotolewa, na thamani ya amana haitabadilika). Amana za ERC-20 zisizohitajika haziwezi kuchujwa au kuzuiwa.
 
-### Nini kama tunataka kutekeleza baadhi ya kazi baada ya amana ishara ni kukamilika? {#function-execution}
+### Vipi ikiwa tunataka kutekeleza kipengele fulani baada ya amana ya tokeni kukamilika? {#function-execution}
 
-Kuna njia nyingi za kufanya hivyo. Katika mfano huu kufuata njia ambayo kufanya ERC-223 uhamisho sawa na uhamisho Ether:
+Kuna njia nyingi za kufanya hivyo. Katika mfano huu tutafuata mbinu inayofanya mahamisho ya ERC-223 yafanane na mahamisho ya Etha:
 
 ```solidity
 contract RecipientContract is IERC223Recipient {
     event Foo();
     event Bar(uint256 someNumber);
-    address tokenA; // Tokeni pekee tunayotaka kukubali.
+    address tokenA; // Tokeni pekee ambayo tunataka kukubali.
     function tokenReceived(address _from, uint _value, bytes memory _data) public override
     {
         require(msg.sender == tokenA);
-        address(this).call(_data); // Shikilia muamala unaoingia na ufanye wito wa utendakazi unaofuata.
+        address(this).call(_data); // Shughulikia muamala unaoingia na kutekeleza wito wa kazi unaofuata.
     }
     function foo() public
     {
@@ -178,22 +177,21 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-Wakati `Mpokeaji Mkataba` atapokea ERC-223 ishara ya mkataba elekez kazi mwandiko wa fumbo kama `_takwimu`kigezo ya shughuli ishara, sawa na jinsi shughuli Ether kanuni wito kazi kama shughuli `takwimu`. Soma [sehemu ya data](/developers/docs/transactions/#the-data-field) kwa habari zaidi.
+Wakati `RecipientContract` itakapopokea tokeni ya ERC-223 mkataba utatekeleza kipengele kilichosimbwa kama kigezo cha `_data` cha muamala wa tokeni, sawa na jinsi miamala ya Etha inavyosimba miito ya vipengele kama `data` ya muamala. Soma [sehemu ya data](/developers/docs/transactions/#the-data-field) kwa taarifa zaidi.
 
-Katika mfano hapo juu ERC-223 ishara lazima uhamisho kwa anwani ya `Mpokeaji Mkataba` na `uhamisho(anwani,uin256,bytes wito takwimu _takwimu) ` kazi. Kama takwimu kigezo itakuwa `0xc2985578` (saini ya `foo() ` kazi) basi kazi foo() itaitwa baada ya amana ishara ni kupokea na tukio Foo() itakuwa kuacha.
+Katika mfano ulio hapo juu tokeni ya ERC-223 lazima ihamishwe kwenye anwani ya `RecipientContract` kwa kutumia kipengele cha `transfer(address,uin256,bytes calldata _data)`. Ikiwa kigezo cha data kitakuwa `0xc2985578` (sahihi ya kipengele cha `foo()`) basi kipengele cha foo() kitaanzishwa baada ya amana ya tokeni kupokelewa na tukio la Foo() litatolewa.
 
-Vigezo inaweza mwandiko wa fumbo katika `takwimu ` ya uhamisho ishara kama, kwa mfano tunaweza wito bar () kazi na 12345 thamani kwa `_baadhi Idadi `. Katika kesi hii `takwimu` lazima
-`0x0423a13200000000000000000000000000000000000000000000000000000000000004d2' ambapo '0x0423a132` ni saini ya kazi ya `bar(uint256) ` na `00000000000000000000000000000000000000000000000000000000000004d2` ni 12345 kama uint256.
+Vigezo vinaweza kusimbwa katika `data` ya hamisho la tokeni pia, kwa mfano tunaweza kuita kipengele cha bar() kikiwa na thamani ya 12345 kwa ajili ya `_someNumber`. Katika hali hii `data` lazima iwe `0x0423a13200000000000000000000000000000000000000000000000000000000000004d2` ambapo `0x0423a132` ni sahihi ya kipengele cha `bar(uint256)` na `00000000000000000000000000000000000000000000000000000000000004d2` ni 12345 kama uint256.
 
-## Vizuizi {#limitations}
+## Mapungufu {#limitations}
 
-Wakati ERC-223 kushughulikia suala kadhaa kupatikana katika kiwango ERC-20, ni si bila mapungufu yake mwenyewe:
+Ingawa ERC-223 inashughulikia masuala kadhaa yanayopatikana katika kiwango cha ERC-20, haina budi kuwa na mapungufu yake yenyewe:
 
-- Kupitishwa na tangamano: ERC-223 bado haijatumiwa sana, ambayo inaweza kupunguza tangamano wao na zana na majukwaa yaliyomo.
-- Nyuma tangamano: ERC-223 si nyuma sambamba na ERC-20, maana yake ni kwamba kuwa ERC-20 mikataba na zana si kazi na ERC-223 ishara bila marekebisho.
-- Gharama za gesi: ukaguzi wa ziada na utendaji katika uhamisho wa ERC-223 unaweza kusababisha gharama za juu za gesi ikilinganishwa na shughuli za ERC-20.
+- Uidhinishaji na Utangamano: ERC-223 bado haijaidhinishwa kwa upana, jambo ambalo linaweza kuzuia utangamano wake na zana na majukwaa yaliyopo.
+- Utangamano wa Nyuma: ERC-223 haitangamani nyuma na ERC-20, ikimaanisha kwamba mikataba na zana zilizopo za ERC-20 hazitafanya kazi na tokeni za ERC-223 bila marekebisho.
+- Gharama za Gesi: Ukaguzi na utendaji wa ziada katika mahamisho ya ERC-223 unaweza kusababisha gharama kubwa zaidi za gesi ikilinganishwa na miamala ya ERC-20.
 
-## Masomo zaidi {#further-reading}
+## Usomaji zaidi {#further-reading}
 
-- [EIP-223: ERC-223 ishara kiwango](https://eips.ethereum.org/EIPS/eip-223)
-- [Pendekezo la awali ERC-223](https://github.com/ethereum/eips/issues/223)
+- [EIP-223: Kiwango cha Tokeni cha ERC-223](https://eips.ethereum.org/EIPS/eip-223)
+- [Pendekezo la awali la ERC-223](https://github.com/ethereum/eips/issues/223)

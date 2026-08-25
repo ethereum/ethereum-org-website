@@ -1,28 +1,30 @@
 ---
 title: "ethers.js ব্যবহার করে টোকেন পাঠানো"
 description: "ethers.js ব্যবহার করে টোকেন পাঠানোর জন্য নতুনদের উপযোগী গাইড।"
-author: "কিম ইয়ংজুন"
-tags: ["ETHERS.JS", "ERC-20", "টোকেন"]
+author: "কিম ইয়ংজুন"
+tags:
+  - ETHERS.JS
+  - ERC-20
+  - টোকেন
 skill: beginner
-breadcrumb: "টোকেন পাঠান"
+breadcrumb: "টোকেন পাঠানো"
 lang: bn
 published: 2021-04-06
 ---
 
-## ethers.js(5.0) ব্যবহার করে টোকেন পাঠান {#send-token}
+## ethers.js(5.0) ব্যবহার করে টোকেন পাঠানো {#send-token}
 
-### এই টিউটোরিয়ালে আপনি যা শিখবেন {#you-learn-about}
+### এই টিউটোরিয়ালে আপনি যা শিখবেন {#you-learn-about}
 
 - ethers.js ইমপোর্ট করা
-- টোকেন ট্রান্সফার করা
-- নেটওয়ার্ক ট্রাফিকের অবস্থা অনুযায়ী গ্যাস প্রাইস সেট করা
+- টোকেন হস্তান্তর করা
+- নেটওয়ার্ক ট্রাফিকের অবস্থা অনুযায়ী গ্যাস প্রাইস সেট করা
 
-### শুরু করার জন্য {#to-get-started}
+### শুরু করতে {#to-get-started}
 
-শুরু করার জন্য, আমাদের প্রথমে আমাদের জাভাস্ক্রিপ্টে ethers.js লাইব্রেরি ইমপোর্ট করতে হবে
-ethers.js(5.0) অন্তর্ভুক্ত করুন
-
-### ইনস্টল করা {#install-ethersjs}
+শুরু করতে, আমাদের প্রথমে আমাদের JavaScript-এ ethers.js লাইব্রেরি ইমপোর্ট করতে হবে।
+ethers.js v5 অন্তর্ভুক্ত করুন
+### ইনস্টলেশন {#install-ethersjs}
 
 ```shell
 /home/ricmoo> npm install --save ethers
@@ -48,19 +50,19 @@ ethers.js(5.0) অন্তর্ভুক্ত করুন
 
 ### প্যারামিটার {#param}
 
-1. **`contract_address`**: টোকেন কন্ট্রাক্ট এডড্রেস (আপনি যে টোকেনটি ট্রান্সফার করতে চান তা ইথার না হলে কন্ট্রাক্ট এডড্রেস প্রয়োজন হয়)
-2. **`send_token_amount`**: আপনি রিসিভারকে যে পরিমাণ পাঠাতে চান
-3. **`to_address`**: রিসিভারের এডড্রেস
-4. **`send_account`**: প্রেরকের এডড্রেস
-5. **`private_key`**: লেনদেন সাইন করতে এবং প্রকৃতপক্ষে টোকেন ট্রান্সফার করার জন্য প্রেরকের প্রাইভেট কি
+1. **`contract_address`**: টোকেন কন্ট্রাক্ট ঠিকানা (আপনি যে টোকেনটি হস্তান্তর করতে চান তা ইথার না হলে কন্ট্রাক্ট ঠিকানা প্রয়োজন)
+2. **`send_token_amount`**: আপনি প্রাপককে যে পরিমাণ পাঠাতে চান
+3. **`to_address`**: প্রাপকের ঠিকানা
+4. **`send_account`**: প্রেরকের ঠিকানা
+5. **`private_key`**: ট্রানজ্যাকশন সাইন করতে এবং প্রকৃতপক্ষে টোকেন হস্তান্তর করতে প্রেরকের প্রাইভেট কী
 
 ## লক্ষ্য করুন {#notice}
 
-`signTransaction(tx)` সরিয়ে দেওয়া হয়েছে কারণ `sendTransaction()` এটি অভ্যন্তরীণভাবে করে।
+`signTransaction(tx)` সরিয়ে দেওয়া হয়েছে কারণ `sendTransaction()` এটি অভ্যন্তরীণভাবে করে।
 
-## পাঠানোর প্রক্রিয়া {#procedure}
+## পাঠানোর প্রক্রিয়া {#procedure}
 
-### 1. নেটওয়ার্ক (টেস্টনেট)-এর সাথে কানেক্ট করুন {#connect-to-network}
+### 1. নেটওয়ার্ক (টেস্টনেট)-এর সাথে কানেক্ট করুন {#connect-to-network}
 
 #### প্রোভাইডার সেট করুন (Infura) {#set-provider}
 
@@ -70,13 +72,13 @@ Ropsten টেস্টনেট-এর সাথে কানেক্ট ক�
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
 ```
 
-### 2. ওয়ালেট তৈরি করুন {#create-wallet}
+### 2. ওয়ালেট তৈরি করুন {#create-wallet}
 
 ```javascript
 let wallet = new ethers.Wallet(private_key)
 ```
 
-### 3. ওয়ালেটকে নেটের সাথে কানেক্ট করুন {#connect-wallet-to-net}
+### 3. ওয়ালেটকে নেটওয়ার্ক-এর সাথে কানেক্ট করুন {#connect-wallet-to-net}
 
 ```javascript
 let walletSigner = wallet.connect(window.ethersProvider)
@@ -88,14 +90,14 @@ let walletSigner = wallet.connect(window.ethersProvider)
 window.ethersProvider.getGasPrice() // গ্যাস প্রাইস
 ```
 
-### 5. লেনদেন সংজ্ঞায়িত করুন {#define-transaction}
+### 5. ট্রানজ্যাকশন সংজ্ঞায়িত করুন {#define-transaction}
 
-নিচে সংজ্ঞায়িত এই ভেরিয়েবলগুলো `send_token()` এর উপর নির্ভরশীল
+নিচে সংজ্ঞায়িত এই ভেরিয়েবলগুলো `send_token()`-এর উপর নির্ভরশীল
 
-### লেনদেন প্যারামিটার {#transaction-params}
+### ট্রানজ্যাকশন প্যারামিটার {#transaction-params}
 
-1. **`send_account`**: টোকেন প্রেরকের এডড্রেস
-2. **`to_address`**: টোকেন রিসিভারের এডড্রেস
+1. **`send_account`**: টোকেন প্রেরকের ঠিকানা
+2. **`to_address`**: টোকেন প্রাপকের ঠিকানা
 3. **`send_token_amount`**: পাঠানোর জন্য টোকেনের পরিমাণ
 4. **`gas_limit`**: গ্যাস লিমিট
 5. **`gas_price`**: গ্যাস প্রাইস
@@ -113,7 +115,7 @@ const tx = {
 }
 ```
 
-### 6. ট্রান্সফার {#transfer}
+### 6. হস্তান্তর {#transfer}
 
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
@@ -147,7 +149,7 @@ send_token(
 
 ### সফল! {#success}
 
-![সফলভাবে সম্পন্ন হওয়া লেনদেনের ছবি](./successful-transaction.png)
+![image of transaction done successfully](./successful-transaction.png)
 
 ## send_token() {#send-token-method}
 

@@ -2,11 +2,10 @@ import { FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  ethereumCommunityOrganization,
-  ethereumFoundationOrganization,
-} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function TranslatathonLeaderboardJsonLD({
   locale,
@@ -29,22 +28,18 @@ export default async function TranslatathonLeaderboardJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
         "@id": url,
         name: "2025 Ethereum.org Translatathon Leaderboard",
         description:
           "Leaderboard for the 2025 Ethereum.org Translatathon showing translation progress and participant rankings",
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityOrganization],
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -72,22 +67,13 @@ export default async function TranslatathonLeaderboardJsonLD({
             {
               "@type": "ListItem",
               position: 4,
-              name: "Translatathon",
-              item: normalizeUrlForJsonLd(
-                locale,
-                "/contributing/translation-program/translatathon/"
-              ),
-            },
-            {
-              "@type": "ListItem",
-              position: 5,
               name: "Leaderboard",
               item: url,
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
       },
     ],
   }

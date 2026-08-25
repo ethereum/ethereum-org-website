@@ -1,77 +1,76 @@
 ---
-title: "Sıkça sorulan sorular"
-description: Common Ethereum questions about wallets, transactions, staking, and more.
+title: Sıkça sorulan sorular
+description: Cüzdanlar, işlemler, staking ve daha fazlası hakkında yaygın Ethereum soruları.
 lang: tr
 ---
 
-# Sıkça sorulan sorular {#faq}
+## Yanlış adrese kripto gönderdim {#wrong-wallet}
 
-## I sent crypto to the wrong address {#wrong-wallet}
+Ethereum üzerinde gönderilen bir işlem geri alınamaz. Ne yazık ki, yanlış cüzdana ETH veya token gönderdiyseniz, işlemi geri almanın bir yolu yoktur.
 
-Ethereum'da gönderilen bir işlem geri alınamaz. Unfortunately, if you sent ETH or tokens to the wrong wallet, there is no way to reverse the transaction.
+**Ne yapabilirsiniz:**
 
-**What you can do:**
+- **Adresin sahibini tanıyorsanız**, doğrudan onlarla iletişime geçin ve fonları iade etmelerini isteyin
+- **Adres bir borsaya veya bilinen bir hizmete aitse**, yardımcı olabilecekleri için destek ekipleriyle iletişime geçin
+- **Bir sözleşme adresine token gönderdiyseniz**, sözleşmenin bir çekim veya kurtarma işlevi olup olmadığını kontrol edin (bu nadir bir durumdur)
 
-- **If you know the owner of the address**, contact them directly and ask them to return the funds
-- **If the address belongs to an exchange or known service**, contact their support team, as they may be able to help
-- **If you sent tokens to a contract address**, check whether the contract has a withdrawal or recovery function (this is rare)
+Çoğu durumda, fonları kurtarmanın bir yolu yoktur. Hiçbir merkezi kuruluş, kurum veya kişi Ethereum'un sahibi değildir, bu da kimsenin işlemleri geri alamayacağı anlamına gelir. Onaylamadan önce her zaman alıcı adresini iki kez kontrol edin.
 
-In most cases, there is no way to recover the funds. No central organization, entity, or person owns Ethereum, which means no one can reverse transactions. Always double-check the recipient address before confirming.
+## Cüzdanıma erişimimi kaybettim {#lost-wallet-access}
 
-## I lost access to my wallet {#lost-wallet-access}
+Kurtarma seçenekleriniz kullandığınız cüzdan türüne bağlıdır.
 
-Your recovery options depend on the type of wallet you use.
+### Kurtarma ifadeniz varsa {#if-you-have-your-seed-phrase-recovery-phrase}
 
-### If you have your seed phrase (recovery phrase)
+Kurtarma ifadenizi kullanarak cüzdanınızı uyumlu herhangi bir cüzdan uygulamasında geri yükleyebilirsiniz. Bu nedenle kurtarma ifadenizi çevrimdışı olarak güvenli bir şekilde saklamanız çok önemlidir. Geri yükleme talimatları için cüzdan sağlayıcınızın belgelerini kontrol edin.
 
-You can restore your wallet in any compatible wallet app using your seed phrase. This is why it is critical to keep your seed phrase stored safely offline. Check your wallet provider's documentation for restore instructions.
+### Kurtarma ifadenizi kaybettiyseniz {#if-you-have-lost-your-seed-phrase}
 
-### If you have lost your seed phrase
+Kurtarma ifadeniz veya özel anahtarlarınız olmadan fonlarınız kurtarılamaz. ethereum.org dahil hiç kimse parolanızı sıfırlayamaz veya bir öz saklama cüzdanına erişimi geri yükleyemez.
 
-Without your seed phrase or private keys, your funds cannot be recovered. No one, including ethereum.org, can reset your password or restore access to a self-custody wallet.
+### Hesabınız bir borsadaysa {#if-your-account-is-on-an-exchange}
 
-### If your account is on an exchange
-
-If your account is on a centralized exchange like Coinbase, Binance, or Kraken, contact the exchange's support team directly. They control accounts on their platform and may be able to help with password resets or account recovery.
+Hesabınız Coinbase, Binance veya Kraken gibi merkezi bir borsadaysa, doğrudan borsanın destek ekibiyle iletişime geçin. Platformlarındaki hesapları onlar kontrol eder ve parola sıfırlama veya hesap kurtarma konusunda yardımcı olabilirler.
 
 <Alert variant="warning">
 <AlertEmoji text=":shield:"/>
 <AlertContent>
 <AlertDescription>
 
-**Never share your seed phrase with anyone** claiming to help you recover your wallet. This is one of the most common scam tactics. No legitimate service will ever ask for your seed phrase.
+Cüzdanınızı kurtarmanıza yardım edeceğini iddia eden **hiç kimseyle kurtarma ifadenizi asla paylaşmayın**. Bu, en yaygın dolandırıcılık taktiklerinden biridir. Hiçbir meşru hizmet sizden asla kurtarma ifadenizi istemez.
+
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 <DocLink href="/guides/how-to-use-a-wallet/">
-  How to use a wallet
+  Bir cüzdan nasıl kullanılır
 </DocLink>
 
-## My transaction is stuck or pending {#stuck-transaction}
+## İşlemim takıldı veya bekliyor {#stuck-transaction}
 
-Transactions on Ethereum can get stuck when the gas fee you set was lower than what the network currently requires. Most wallets let you fix this:
+Ethereum üzerindeki işlemler, belirlediğiniz gaz ücreti ağın o anda gerektirdiğinden daha düşük olduğunda takılabilir. Çoğu cüzdan bunu düzeltmenize olanak tanır:
 
-- **Speed up:** Resubmit the same transaction with a higher gas fee
-- **Cancel:** Send a 0 ETH transaction to your own address using the same nonce as the pending transaction
+- **Hızlandırma:** Aynı işlemi daha yüksek bir gaz ücreti ile yeniden gönderin
+- **İptal etme:** Bekleyen işlem ile aynı nonce değerini kullanarak kendi adresinize 0 ETH'lik bir işlem gönderin
 
-### Helpful guides
+### Faydalı rehberler {#helpful-guides}
 
-- [How to speed up or cancel a pending transaction on MetaMask](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
-- [Bekleyen Ethereum işlemlerini iptal etme](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
+- [MetaMask'te bekleyen bir işlem nasıl hızlandırılır veya iptal edilir](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
+- [Bekleyen Ethereum işlemleri nasıl iptal edilir](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-## Ethereum hediyemi nasıl talep edebilirim? {#giveaway-scam}
+## Ethereum çekilişimi nasıl talep edebilirim? {#giveaway-scam}
 
-Ethereum çekilişleri, ETH'nizi çalmak için tasarlanmış dolandırıcılıklardır. Do not be tempted by offers that seem too good to be true. If you send ETH to a giveaway address, you will not receive a giveaway, and you will not be able to recover your funds.
+Ethereum çekilişleri, ETH'nizi çalmak için tasarlanmış dolandırıcılıklardır. Gerçek olamayacak kadar iyi görünen tekliflere aldanmayın. Bir çekiliş adresine ETH gönderirseniz, herhangi bir hediye alamazsınız ve fonlarınızı kurtaramazsınız.
 
 [Dolandırıcılığı önleme hakkında daha fazlası](/security/#common-scams)
 
-## How do I stake ETH? {#how-to-stake}
+## Nasıl ETH stake edebilirim? {#how-to-stake}
 
-Doğrulayıcı olmak için Ethereum para yatırma sözleşmesine 32 ETH yatırmanız ve bir doğrulayıcı düğümü kurmanız gerekir. You can also participate with less ETH through staking pools.
+Bir doğrulayıcı olmak için, Ethereum yatırma sözleşmesine 32 ETH stake etmeli ve bir doğrulayıcı düğüm kurmalısınız. Ayrıca staking havuzları aracılığıyla daha az ETH ile de katılabilirsiniz.
 
-More information is available on our [staking pages](/staking/) and at [the staking launchpad](https://launchpad.ethereum.org/).
+Daha fazla bilgi [staking sayfalarımızda](/staking/) ve [staking launchpad'inde](https://launchpad.ethereum.org/) mevcuttur.
 
-## Ethereum madenciliği nasıl yapılır? {#mining-ethereum}
+## Nasıl Ethereum madenciliği yapabilirim? {#mining-ethereum}
 
-Ethereum madenciliği artık mümkün değildir. Mining was switched off when Ethereum moved from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glossary/#pos) during [The Merge](/roadmap/merge/) in September 2022. Artık madenciler yerine Ethereum'un doğrulayıcıları var. Herkes, ağı güvence altına almak için doğrulayıcı yazılımı çalıştırarak ETH [hisseleyebilir](/glossary/#staking) ve hisseleme ödülleri alabilir.
+Ethereum madenciliği artık mümkün değildir. Eylül 2022'deki [Birleşme](/roadmap/merge/) sırasında Ethereum [İş Kanıtı (PoW)](/glossary/#pow) sisteminden [Hisse Kanıtı (PoS)](/glossary/#pos) sistemine geçtiğinde madencilik kapatıldı. Artık madenciler yerine Ethereum'un doğrulayıcıları var. İsteyen herkes ETH [stake edebilir](/glossary/#staking) ve ağı güvence altına almak için doğrulayıcı yazılımı çalıştırarak staking ödülleri alabilir.

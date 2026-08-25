@@ -1,0 +1,753 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/staking/pools/index.md",
+  "generatedAt": "2026-08-19T20:38:34.882Z",
+  "rootHash": "6c5b9e9f1a08",
+  "tree": {
+    "contentHash": "49b82ad53941",
+    "anchorHash": "baa8c92a676d",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "e520102d3cd3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "d8d7beadccdb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d9a998cac660"
+      },
+      "frontmatter:image": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "787db491bbdb"
+      },
+      "frontmatter:sidebarDepth": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d4735e3a265e"
+      },
+      "frontmatter:summaryPoints": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-staking-pools": {
+        "contentHash": "24bf717f3e7e",
+        "anchorHash": "0d2ec5a2bd6e",
+        "labelHash": "05f0125ceec3",
+        "children": {
+          "_label": {
+            "contentHash": "05f0125ceec3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "1bb3b37f4cbb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "a13bebeb57e1",
+            "anchorHash": "8a5edab28263"
+          },
+          "prose:4": {
+            "contentHash": "dabb1aeefeae",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "3280256a93b5",
+            "anchorHash": "51c52a2eeb63"
+          },
+          "prose:5": {
+            "contentHash": "7fc3029fe50d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "3379bc591f1e",
+            "anchorHash": "5dd929c34d64"
+          },
+          "prose:6": {
+            "contentHash": "a6d8cff3a0f3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6"
+        ]
+      },
+      "why-stake-with-a-pool": {
+        "contentHash": "c2ff2ddcc29f",
+        "anchorHash": "cf7d405d94ad",
+        "labelHash": "25ca22ffcb65",
+        "children": {
+          "_label": {
+            "contentHash": "25ca22ffcb65",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "dc46f888a35d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f68976dcb080",
+            "anchorHash": "28704a15211d"
+          },
+          "prose:2": {
+            "contentHash": "8dd20f09aefe",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:4": {
+            "contentHash": "f8039ba6f554",
+            "anchorHash": "fadbe909da84",
+            "children": {
+              "html-tag:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:3": {
+                "contentHash": "7a2541c0f280",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "html-tag:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:4": {
+                "contentHash": "b73adbd03258",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "html-tag:2": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:5": {
+                "contentHash": "2bed33516a2e",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "html-tag:0",
+              "prose:3",
+              "html-tag:1",
+              "prose:4",
+              "html-tag:2",
+              "prose:5"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2",
+          "component:4"
+        ]
+      },
+      "comparison-of-staking-options": {
+        "contentHash": "fb3c2f4b6ca6",
+        "anchorHash": "f100d908fc19",
+        "labelHash": "cc5c1af5254e",
+        "children": {
+          "_label": {
+            "contentHash": "cc5c1af5254e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:1": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "3b28779835e3",
+            "children": {
+              "attr:page": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "ab92f3d518a5"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "component:1"
+        ]
+      },
+      "liquid-staking-tokens": {
+        "contentHash": "ede766092fa4",
+        "anchorHash": "8bfb2d4eddb7",
+        "labelHash": "0138286ac1a1",
+        "children": {
+          "_label": {
+            "contentHash": "0138286ac1a1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "5952d9cc1517",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "how-rewards-show-up-in-the-token": {
+            "contentHash": "d41357ad64dd",
+            "anchorHash": "92f5811344eb",
+            "labelHash": "6235c465ce09",
+            "children": {
+              "_label": {
+                "contentHash": "6235c465ce09",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "d8417fcad225",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "3871f97fc9a1",
+                "anchorHash": "19902d6694f7"
+              },
+              "prose:2": {
+                "contentHash": "9c5a37581d2c",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "redeeming-and-trading": {
+            "contentHash": "aa86a488c80b",
+            "anchorHash": "0c8f34eef5bf",
+            "labelHash": "25133bc88f53",
+            "children": {
+              "_label": {
+                "contentHash": "25133bc88f53",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "f460f37dc99e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "f077e5ddd641",
+                "anchorHash": "8de0cb72cfbc"
+              },
+              "prose:2": {
+                "contentHash": "33f0849d49a5",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "holding-an-lst-is-not-the-same-as-staking": {
+            "contentHash": "7889d3000b01",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "ea866e666b51",
+            "children": {
+              "_label": {
+                "contentHash": "ea866e666b51",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "b8f25e6d8c64",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "how-rewards-show-up-in-the-token",
+          "redeeming-and-trading",
+          "holding-an-lst-is-not-the-same-as-staking"
+        ]
+      },
+      "risks-of-liquid-staking-tokens": {
+        "contentHash": "f9fe190dfd4c",
+        "anchorHash": "f970ef9df5a0",
+        "labelHash": "1e76b8dd58e1",
+        "children": {
+          "_label": {
+            "contentHash": "1e76b8dd58e1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "fa11e5469762",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "739cc0ff42e4",
+            "anchorHash": "3a512e8c3ff4",
+            "children": {
+              "attr:variant": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "2937013f2181"
+              },
+              "html-tag:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "html-tag:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "89f9e3db6c01",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:3": {
+                "contentHash": "a3420353b8f7",
+                "anchorHash": "901a6d409db4",
+                "children": {
+                  "component:0": {
+                    "contentHash": "bb0c0d0a83ac",
+                    "anchorHash": "303717fe8103",
+                    "children": {
+                      "prose:1": {
+                        "contentHash": "ffdd870cf45f",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "link:0": {
+                        "contentHash": "520776660ed5",
+                        "anchorHash": "a240bf19ce0f"
+                      }
+                    },
+                    "childrenOrder": [
+                      "prose:1",
+                      "link:0"
+                    ]
+                  }
+                }
+              }
+            },
+            "childrenOrder": [
+              "attr:variant",
+              "html-tag:0",
+              "html-tag:1",
+              "prose:2",
+              "component:3"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2"
+        ]
+      },
+      "opaque-pooled-products": {
+        "contentHash": "d32a99b289fc",
+        "anchorHash": "07182ee814e5",
+        "labelHash": "5b9db8921692",
+        "children": {
+          "_label": {
+            "contentHash": "5b9db8921692",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "1b96c890b6cf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "3b2423ac1054",
+            "anchorHash": "d17daa31c2d4",
+            "children": {
+              "attr:variant": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "4bd9354bb652"
+              },
+              "html-tag:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "html-tag:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "89f9e3db6c01",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:3": {
+                "contentHash": "8450c74f536d",
+                "anchorHash": "125873a75ee6",
+                "children": {
+                  "component:0": {
+                    "contentHash": "c7438772ad7e",
+                    "anchorHash": "ac692010a722",
+                    "children": {
+                      "prose:1": {
+                        "contentHash": "af749556db66",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "link:0": {
+                        "contentHash": "04a4ca992676",
+                        "anchorHash": "5f3ada93ef47"
+                      }
+                    },
+                    "childrenOrder": [
+                      "prose:1",
+                      "link:0"
+                    ]
+                  }
+                }
+              }
+            },
+            "childrenOrder": [
+              "attr:variant",
+              "html-tag:0",
+              "html-tag:1",
+              "prose:2",
+              "component:3"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2"
+        ]
+      },
+      "run-a-node-for-a-pool": {
+        "contentHash": "af2634232b47",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "bcf2d3db701d",
+        "children": {
+          "_label": {
+            "contentHash": "bcf2d3db701d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "714d6e7d1a7b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "what-to-consider": {
+        "contentHash": "88124d495fd4",
+        "anchorHash": "6518152d0617",
+        "labelHash": "33595b218818",
+        "children": {
+          "_label": {
+            "contentHash": "33595b218818",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "cd77c2349031",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "3b28779835e3",
+            "children": {
+              "attr:page": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "ab92f3d518a5"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2"
+        ]
+      },
+      "explore-staking-pools": {
+        "contentHash": "1dd4e4c1da5a",
+        "anchorHash": "53c89fcab082",
+        "labelHash": "c40c74a7684f",
+        "children": {
+          "_label": {
+            "contentHash": "c40c74a7684f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "905c803735d4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:3": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "3b28779835e3",
+            "children": {
+              "attr:category": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "ab92f3d518a5"
+              }
+            }
+          },
+          "prose:4": {
+            "contentHash": "9f14dde7a758",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "8ce04ec9d1a0",
+            "anchorHash": "63aedaf4407d"
+          },
+          "prose:5": {
+            "contentHash": "c8d01838981e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:1": {
+            "contentHash": "08cc36794621",
+            "anchorHash": "eaa33fb6a698"
+          },
+          "prose:6": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:2": {
+            "contentHash": "c60f13d769b9",
+            "anchorHash": "eaa33fb6a698"
+          },
+          "prose:7": {
+            "contentHash": "729d02636dc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "6c4943d4d337",
+            "anchorHash": "abba9ba57319"
+          },
+          "prose:8": {
+            "contentHash": "89a73ffd8e7a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:13": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "e11d40979e63",
+            "children": {
+              "attr:className": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "534c526bc36f"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2",
+          "component:3",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "html-tag:1",
+          "prose:6",
+          "html-tag:2",
+          "prose:7",
+          "link:3",
+          "prose:8",
+          "component:13"
+        ]
+      },
+      "faq": {
+        "contentHash": "66abe7a88629",
+        "anchorHash": "8a8cd4144704",
+        "labelHash": "e956a9404b46",
+        "children": {
+          "_label": {
+            "contentHash": "e956a9404b46",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:1": {
+            "contentHash": "769ed1ba9b20",
+            "anchorHash": "f5818652a990",
+            "children": {
+              "attr:title": {
+                "contentHash": "5d1140270c99",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "b618936b8e4b",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "prose:0"
+            ]
+          },
+          "component:2": {
+            "contentHash": "23d5565c379a",
+            "anchorHash": "6b4ef9b88538",
+            "children": {
+              "attr:title": {
+                "contentHash": "839a486eb5ec",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "6045678ed5a4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "html-tag:0": {
+                "contentHash": "3a1fb0864f52",
+                "anchorHash": "119224e9c252"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "prose:1",
+              "html-tag:0"
+            ]
+          },
+          "component:3": {
+            "contentHash": "4568d3bc907f",
+            "anchorHash": "7e5c9eb59e35",
+            "children": {
+              "attr:title": {
+                "contentHash": "a12e6304f87b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "0ab3f6d4ecf4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "3280256a93b5",
+                "anchorHash": "51c52a2eeb63"
+              },
+              "prose:2": {
+                "contentHash": "4118567310d8",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "component:1",
+          "component:2",
+          "component:3"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "3be65dddaa01",
+        "anchorHash": "af6e89beba48",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:6": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "3a1a9744e21c",
+            "anchorHash": "00a776608398"
+          },
+          "prose:7": {
+            "contentHash": "b534ceaa146a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "19ffc3db60b8",
+            "anchorHash": "ab7a165c0027"
+          },
+          "prose:8": {
+            "contentHash": "2285af5c0322",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "f0d782a9040a",
+            "anchorHash": "c11894ef79e4"
+          },
+          "prose:9": {
+            "contentHash": "ce19e9bf9454",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "64f5b7082e2e",
+            "anchorHash": "8de0cb72cfbc"
+          },
+          "prose:10": {
+            "contentHash": "4e66ffa18cf2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "89171f39f70d",
+            "anchorHash": "acbb724ef7df"
+          },
+          "prose:11": {
+            "contentHash": "d11342e85284",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "714b4d8f3391",
+            "anchorHash": "6a805a783f82"
+          },
+          "prose:12": {
+            "contentHash": "7b99781610dc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:6",
+          "link:0",
+          "prose:7",
+          "link:1",
+          "prose:8",
+          "link:2",
+          "prose:9",
+          "link:3",
+          "prose:10",
+          "link:4",
+          "prose:11",
+          "link:5",
+          "prose:12"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:template",
+      "frontmatter:image",
+      "frontmatter:sidebarDepth",
+      "frontmatter:summaryPoints",
+      "what-are-staking-pools",
+      "why-stake-with-a-pool",
+      "comparison-of-staking-options",
+      "liquid-staking-tokens",
+      "risks-of-liquid-staking-tokens",
+      "opaque-pooled-products",
+      "run-a-node-for-a-pool",
+      "what-to-consider",
+      "explore-staking-pools",
+      "faq",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "9638e1f9f88c9e74ab4d15a11f3f6d1e782ff7f5"
+}

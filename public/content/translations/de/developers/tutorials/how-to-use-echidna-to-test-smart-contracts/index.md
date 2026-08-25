@@ -18,15 +18,17 @@ Echidna kann über Docker oder mithilfe der vorkompilierten Binärdatei installi
 ### Echidna über Docker {#echidna-through-docker}
 
 ```bash
-docker run -it --rm -v $PWD:/src trailofbits/eth-security-toolbox
+docker pull trailofbits/eth-security-toolbox
+docker run -it -v "$PWD":/home/training trailofbits/eth-security-toolbox
 ```
 
-_Der letzte Befehl führt die eth-security-toolbox in einem Docker-Container aus, der Zugriff auf Ihr aktuelles Verzeichnis hat. Sie können die Dateien von Ihrem Host aus ändern und die Tools für die Dateien aus dem Docker-Container heraus ausführen._
+_Der letzte Befehl führt die eth-security-toolbox in einem Docker aus, der Zugriff auf Ihr aktuelles Verzeichnis hat. Sie können die Dateien von Ihrem Host aus ändern und die Tools auf den Dateien aus dem Docker heraus ausführen._
 
-Führen Sie im Docker-Container Folgendes aus:
+Führen Sie innerhalb von Docker Folgendes aus:
 
 ```bash
-echidna-test /src/contract.sol
+solc-select 0.5.11
+cd /home/training
 ```
 
 ### Binärdatei {#binary}
@@ -43,19 +45,19 @@ Echidna ist ein eigenschaftsbasierter Fuzzer, den wir in unseren vorherigen Blog
 
 Über die rein zufällige Generierung von Eingaben hinaus gibt es viele Techniken und Strategien, um gute Eingaben zu generieren, darunter:
 
-- Feedback aus jeder Ausführung einholen und die Generierung damit steuern. Wenn beispielsweise eine neu generierte Eingabe zur Entdeckung eines neuen Pfads führt, kann es sinnvoll sein, neue Eingaben in dessen Nähe zu generieren.
-- Generierung der Eingabe unter Einhaltung einer strukturellen Einschränkung. Wenn Ihre Eingabe beispielsweise einen Header mit einer Prüfsumme enthält, ist es sinnvoll, den Fuzzer Eingaben generieren zu lassen, die die Prüfsumme validieren.
-- Verwendung bekannter Eingaben zur Generierung neuer Eingaben: Wenn Sie Zugriff auf einen großen Datensatz gültiger Eingaben haben, kann Ihr Fuzzer daraus neue Eingaben generieren, anstatt bei der Generierung ganz von vorn zu beginnen. Diese werden normalerweise als _Seeds_ bezeichnet.
+- Feedback aus jeder Ausführung erhalten und die Generierung damit steuern. Wenn beispielsweise eine neu generierte Eingabe zur Erkennung eines neuen Pfads führt, kann es sinnvoll sein, neue Eingaben in dessen Nähe zu generieren.
+- Generierung der Eingabe unter Berücksichtigung einer strukturellen Einschränkung. Wenn Ihre Eingabe beispielsweise einen Header mit einer Prüfsumme enthält, ist es sinnvoll, den Fuzzer Eingaben generieren zu lassen, die die Prüfsumme validieren.
+- Verwendung bekannter Eingaben zur Generierung neuer Eingaben: Wenn Sie Zugriff auf einen großen Datensatz gültiger Eingaben haben, kann Ihr Fuzzer daraus neue Eingaben generieren, anstatt bei null anzufangen. Diese werden normalerweise als _Seeds_ bezeichnet.
 
 ### Eigenschaftsbasiertes Fuzzing {#property-based-fuzzing}
 
 Echidna gehört zu einer bestimmten Familie von Fuzzern: dem eigenschaftsbasierten Fuzzing, das stark von [QuickCheck](https://wikipedia.org/wiki/QuickCheck) inspiriert ist. Im Gegensatz zu klassischen Fuzzern, die versuchen, Abstürze zu finden, versucht Echidna, benutzerdefinierte Invarianten zu brechen.
 
-In Smart Contracts sind Invarianten Solidity-Funktionen, die jeden falschen oder ungültigen Zustand darstellen können, den der Vertrag erreichen kann, einschließlich:
+In Smart Contracts sind Invarianten Solidity-Funktionen, die jeden inkorrekten oder ungültigen Zustand darstellen können, den der Vertrag erreichen kann, einschließlich:
 
-- Falsche Zugriffskontrolle: Der Angreifer wurde zum Eigentümer des Vertrags.
-- Falsche Zustandsmaschine: Die Token können übertragen werden, während der Vertrag pausiert ist.
-- Falsche Arithmetik: Der Benutzer kann sein Guthaben unterschreiten (Underflow) und unbegrenzt kostenlose Token erhalten.
+- Fehlerhafte Zugriffskontrolle: Der Angreifer wurde zum Eigentümer des Vertrags.
+- Fehlerhafter Zustandsautomat: Die Token können übertragen werden, während der Vertrag pausiert ist.
+- Fehlerhafte Arithmetik: Der Benutzer kann einen Underflow seines Guthabens verursachen und unbegrenzt kostenlose Token erhalten.
 
 ### Testen einer Eigenschaft mit Echidna {#testing-a-property-with-echidna}
 
@@ -94,9 +96,9 @@ Echidna wird:
 
 - Automatisch beliebige Transaktionen generieren, um die Eigenschaft zu testen.
 - Alle Transaktionen melden, die dazu führen, dass eine Eigenschaft `false` zurückgibt oder einen Fehler auslöst.
-- Nebeneffekte beim Aufruf einer Eigenschaft verwerfen (d. h. wenn die Eigenschaft eine Zustandsvariable ändert, wird diese nach dem Test verworfen)
+- Nebenwirkungen beim Aufruf einer Eigenschaft verwerfen (d. h., wenn die Eigenschaft eine Zustandsvariable ändert, wird diese nach dem Test verworfen)
 
-Die folgende Eigenschaft überprüft, ob der Aufrufer nicht mehr als 1000 Token hat:
+Die folgende Eigenschaft prüft, ob der Aufrufer nicht mehr als 1000 Token hat:
 
 ```solidity
 function echidna_balance_under_1000() public view returns(bool){
@@ -118,14 +120,14 @@ contract TestToken is Token{
 
 ### Einen Vertrag initiieren {#initiate-a-contract}
 
-Echidna benötigt einen [Konstruktor](/developers/docs/smart-contracts/anatomy/#constructor-functions) ohne Argumente. Wenn Ihr Vertrag eine spezifische Initialisierung benötigt, müssen Sie diese im Konstruktor vornehmen.
+Echidna benötigt einen [Konstruktor](/developers/docs/smart-contracts/anatomy/#constructor-functions) ohne Argument. Wenn Ihr Vertrag eine spezifische Initialisierung benötigt, müssen Sie diese im Konstruktor vornehmen.
 
 Es gibt einige spezifische Adressen in Echidna:
 
-- `0x00a329c0648769A73afAc7F9381E08FB43dBEA72`, welche den Konstruktor aufruft.
-- `0x10000`, `0x20000` und `0x00a329C0648769a73afAC7F9381e08fb43DBEA70`, welche zufällig die anderen Funktionen aufrufen.
+- `0x00a329c0648769A73afAc7F9381E08FB43dBEA72`, die den Konstruktor aufruft.
+- `0x10000`, `0x20000` und `0x00a329C0648769a73afAC7F9381e08fb43DBEA70`, die zufällig die anderen Funktionen aufrufen.
 
-In unserem aktuellen Beispiel benötigen wir keine besondere Initialisierung, daher ist unser Konstruktor leer.
+In unserem aktuellen Beispiel benötigen wir keine besondere Initialisierung, weshalb unser Konstruktor leer ist.
 
 ### Echidna ausführen {#run-echidna}
 
@@ -145,14 +147,21 @@ echidna-test contract.sol --contract MyContract
 
 Das Folgende fasst den Lauf von Echidna in unserem Beispiel zusammen:
 
-```bash
-echidna-test token.sol
+```solidity
+contract TestToken is Token{
+    constructor() public {}
+        function echidna_balance_under_1000() public view returns(bool){
+          return balances[msg.sender] <= 1000;
+        }
+  }
 ```
 
-```text
+```bash
+echidna-test testtoken.sol --contract TestToken
 ...
+
 echidna_balance_under_1000: failed!💥
-  Call sequence, shrinking (2596/5000):
+  Call sequence, shrinking (1205/5000):
     airdrop()
     backdoor()
 
@@ -190,7 +199,7 @@ contract C {
     state3 = true;
   }
 
-  function i() public {
+ function i() public {
     require(state3);
     state4 = true;
   }
@@ -223,7 +232,7 @@ Wir können Echidna ausführen, um dies zu überprüfen:
 echidna-test multi.sol
 ...
 echidna_state4: passed! 🎉
-...
+Seed: -3684648582249875403
 ```
 
 ### Funktionen filtern {#filtering-functions}
@@ -275,16 +284,16 @@ filterBlacklist: true
 filterFunctions: ["f1", "f2", "f3"]
 ```
 
-```yaml
-filterBlacklist: false
-filterFunctions: ["f1", "f2", "f3"]
+```bash
+echidna-test contract.sol --config config.yaml
+...
 ```
 
 Echidna startet eine Fuzzing-Kampagne, bei der entweder `f1`, `f2` und `f3` auf die Blacklist gesetzt werden oder nur diese aufgerufen werden, abhängig vom Wert des booleschen Werts `filterBlacklist`.
 
-## Wie man Soliditys assert mit Echidna testet {#how-to-test-soliditys-assert-with-echidna}
+## Wie man Soliditys Zusicherung (assert) mit Echidna testet {#how-to-test-soliditys-assert-with-echidna}
 
-In diesem kurzen Tutorial werden wir zeigen, wie man Echidna verwendet, um die Überprüfung von Zusicherungen (Assertions) in Verträgen zu testen. Nehmen wir an, wir haben einen Vertrag wie diesen:
+In diesem kurzen Tutorial werden wir zeigen, wie man Echidna verwendet, um die Überprüfung von Zusicherungen in Verträgen zu testen. Nehmen wir an, wir haben einen Vertrag wie diesen:
 
 ```solidity
 contract Incrementor {
@@ -299,7 +308,7 @@ contract Incrementor {
 }
 ```
 
-### Eine Zusicherung (Assertion) schreiben {#write-an-assertion}
+### Eine Zusicherung schreiben {#write-an-assertion}
 
 Wir möchten sicherstellen, dass `tmp` kleiner oder gleich `counter` ist, nachdem die Differenz zurückgegeben wurde. Wir könnten eine Echidna-Eigenschaft schreiben, aber wir müssten den Wert von `tmp` irgendwo speichern. Stattdessen könnten wir eine Zusicherung wie diese verwenden:
 
@@ -326,17 +335,19 @@ checkAsserts: true
 
 Wenn wir diesen Vertrag in Echidna ausführen, erhalten wir die erwarteten Ergebnisse:
 
-```text
+```bash
 echidna-test assert.sol --config config.yaml
-Analyzing contract: /tmp/assert.sol:Incrementor
+Analyzing contract: assert.sol:Incrementor
 assertion in inc: failed!💥
   Call sequence, shrinking (2596/5000):
-    inc(2161168256842006112444943630224269744548897151224254110005047115547016653207)
+    inc(21711016731996786641919559689128982722488122124807605757398297001483711807488)
     inc(7237005577332262213973186563042994240829374041602535252466099000494570602496)
     inc(86844066927987146567678238756515930889952488499230423029593188005934847229952)
+
+Seed: 1806480648350826486
 ```
 
-Wie Sie sehen können, meldet Echidna einige fehlgeschlagene Zusicherungen in der Funktion `inc`. Es ist möglich, mehr als eine Zusicherung pro Funktion hinzuzufügen, aber Echidna kann nicht sagen, welche Zusicherung fehlgeschlagen ist.
+Wie Sie sehen können, meldet Echidna einige fehlgeschlagene Zusicherungen in der Funktion `inc`. Das Hinzufügen von mehr als einer Zusicherung pro Funktion ist möglich, aber Echidna kann nicht sagen, welche Zusicherung fehlgeschlagen ist.
 
 ### Wann und wie man Zusicherungen verwendet {#when-and-how-use-assertions}
 
@@ -344,14 +355,15 @@ Zusicherungen können als Alternativen zu expliziten Eigenschaften verwendet wer
 
 ```solidity
 function f(..) public {
-    // some complex code
+    // etwas komplexer Code
     ...
     assert (condition);
     ...
 }
+
 ```
 
-Im Gegensatz dazu führt die Verwendung einer expliziten Echidna-Eigenschaft Transaktionen zufällig aus, und es gibt keine einfache Möglichkeit, genau zu erzwingen, wann sie überprüft wird. Es ist jedoch möglich, diesen Workaround anzuwenden:
+Im Gegensatz dazu führt die Verwendung einer expliziten Echidna-Eigenschaft Transaktionen zufällig aus, und es gibt keine einfache Möglichkeit, genau zu erzwingen, wann sie überprüft wird. Es ist dennoch möglich, diesen Workaround anzuwenden:
 
 ```solidity
 function echidna_assert_after_f() public returns (bool) {
@@ -363,15 +375,15 @@ function echidna_assert_after_f() public returns (bool) {
 Es gibt jedoch einige Probleme:
 
 - Es schlägt fehl, wenn `f` als `internal` oder `external` deklariert ist.
-- Es ist unklar, welche Argumente zum Aufrufen von `f` verwendet werden sollen.
-- Wenn `f` rückgängig gemacht wird (reverts), schlägt die Eigenschaft fehl.
+- Es ist unklar, welche Argumente verwendet werden sollten, um `f` aufzurufen.
+- Wenn `f` rückgängig gemacht wird, schlägt die Eigenschaft fehl.
 
 Im Allgemeinen empfehlen wir, [John Regehrs Empfehlung](https://blog.regehr.org/archives/1091) zur Verwendung von Zusicherungen zu folgen:
 
-- Erzwingen Sie keine Nebeneffekte während der Überprüfung der Zusicherung. Zum Beispiel: `assert(ChangeStateAndReturn() == 1)`
+- Erzwingen Sie während der Überprüfung der Zusicherung keine Nebenwirkungen. Zum Beispiel: `assert(ChangeStateAndReturn() == 1)`
 - Sichern Sie keine offensichtlichen Aussagen zu. Zum Beispiel `assert(var >= 0)`, wobei `var` als `uint` deklariert ist.
 
-Schließlich verwenden Sie bitte **nicht** `require` anstelle von `assert`, da Echidna dies nicht erkennen kann (der Vertrag wird jedoch trotzdem rückgängig gemacht).
+Schließlich **verwenden Sie bitte nicht** `require` anstelle von `assert`, da Echidna dies nicht erkennen kann (aber der Vertrag wird ohnehin rückgängig gemacht).
 
 ### Zusammenfassung: Überprüfung von Zusicherungen {#summary-assertion-checking}
 
@@ -392,6 +404,14 @@ contract Incrementor {
 
 ```bash
 echidna-test assert.sol --config config.yaml
+Analyzing contract: assert.sol:Incrementor
+assertion in inc: failed!💥
+  Call sequence, shrinking (2596/5000):
+    inc(21711016731996786641919559689128982722488122124807605757398297001483711807488)
+    inc(7237005577332262213973186563042994240829374041602535252466099000494570602496)
+    inc(86844066927987146567678238756515930889952488499230423029593188005934847229952)
+
+Seed: 1806480648350826486
 ```
 
 Echidna hat herausgefunden, dass die Zusicherung in `inc` fehlschlagen kann, wenn diese Funktion mehrmals mit großen Argumenten aufgerufen wird.
@@ -406,8 +426,7 @@ contract C {
   function magic(uint magic_1, uint magic_2, uint magic_3, uint magic_4) public {
     require(magic_1 == 42);
     require(magic_2 == 129);
-    require(magic_3 == 333);
-    require(magic_4 == 0);
+    require(magic_3 == magic_4+333);
     value_found = true;
     return;
   }
@@ -426,8 +445,10 @@ Wir können Echidna ausführen, um dies zu überprüfen:
 ```bash
 echidna-test magic.sol
 ...
+
 echidna_magic_values: passed! 🎉
-...
+
+Seed: 2221503356319272685
 ```
 
 Wir können Echidna jedoch weiterhin verwenden, um während dieser Fuzzing-Kampagne einen Korpus zu sammeln.
@@ -454,7 +475,7 @@ echidna-test magic.sol --config config.yaml
 ```
 
 Echidna kann die richtigen magischen Werte immer noch nicht finden, aber wir können uns den gesammelten Korpus ansehen.
-Eine dieser Dateien war beispielsweise:
+Zum Beispiel war eine dieser Dateien:
 
 ```json
 [
@@ -472,30 +493,24 @@ Eine dieser Dateien war beispielsweise:
           {
             "contents": [
               256,
-              "9372398522078111428822382693894038718080310667565819743730492509016942339959"
+              "93723985220345906694500679277863898678726808528711107336895287282192244575836"
             ],
+            "tag": "AbiUInt"
+          },
+          {
+            "contents": [256, "334"],
             "tag": "AbiUInt"
           },
           {
             "contents": [
               256,
-              "11237882436254505637692894012452665611739945802153465936579363300050342613311"
+              "68093943901352437066264791224433559271778087297543421781073458233697135179558"
             ],
             "tag": "AbiUInt"
           },
           {
-            "contents": [
-              256,
-              "61286718360753647151574642685169272761912591497013628221301130206320371476503"
-            ],
-            "tag": "AbiUInt"
-          },
-          {
-            "contents": [
-              256,
-              "10604007310812769281948987101818773906025658755185924380939314050119356472974"
-            ],
-            "tag": "AbiUInt"
+            "tag": "AbiUInt",
+            "contents": [256, "332"]
           }
         ]
       ]
@@ -509,13 +524,13 @@ Offensichtlich wird diese Eingabe den Fehler in unserer Eigenschaft nicht auslö
 
 ### Einen Korpus mit Seeds versehen {#seeding-a-corpus}
 
-Echidna braucht etwas Hilfe, um mit der Funktion `magic` umzugehen. Wir werden die Eingabe kopieren und modifizieren, um geeignete Parameter dafür zu verwenden:
+Echidna benötigt etwas Hilfe, um mit der Funktion `magic` umzugehen. Wir werden die Eingabe kopieren und modifizieren, um geeignete Parameter dafür zu verwenden:
 
 ```bash
-cp corpus-magic/coverage/2712688662897926208.txt corpus-magic/coverage/new.txt
+cp corpus/2712688662897926208.txt corpus/new.txt
 ```
 
-Wir werden `new.txt` so modifizieren, dass `magic(42,129,333,0)` aufgerufen wird. Jetzt können wir Echidna erneut ausführen:
+Wir werden `new.txt` modifizieren, um `magic(42,129,333,0)` aufzurufen. Jetzt können wir Echidna erneut ausführen:
 
 ```bash
 echidna-test magic.sol --config config.yaml
@@ -523,21 +538,34 @@ echidna-test magic.sol --config config.yaml
 echidna_magic_values: failed!💥
   Call sequence:
     magic(42,129,333,0)
+
+
+Unique instructions: 142
+Unique codehashes: 1
+Seed: -7293830866560616537
+
 ```
 
-Dieses Mal wurde sofort festgestellt, dass die Eigenschaft verletzt ist.
+Dieses Mal wurde sofort festgestellt, dass die Eigenschaft verletzt wird.
 
 ## Finden von Transaktionen mit hohem Gasverbrauch {#finding-transactions-with-high-gas-consumption}
 
-Wir werden sehen, wie man mit Echidna die Transaktionen mit hohem Gasverbrauch findet. Das Ziel ist der folgende Smart Contract:
+Wir werden sehen, wie man mit Echidna Transaktionen mit hohem Gasverbrauch findet. Das Ziel ist der folgende Smart Contract:
 
 ```solidity
 contract C {
   uint state;
 
-  function expensive(uint8 times) public {
+  function expensive(uint8 times) internal {
     for(uint8 i=0; i < times; i++)
       state = state + i;
+  }
+
+  function f(uint x, uint y, uint8 times) public {
+    if (x == 42 && y == 123)
+      expensive(times);
+    else
+      state = 0;
   }
 
   function echidna_test() public returns (bool) {
@@ -552,11 +580,12 @@ Hier kann `expensive` einen großen Gasverbrauch haben.
 Derzeit benötigt Echidna immer eine Eigenschaft zum Testen: Hier gibt `echidna_test` immer `true` zurück.
 Wir können Echidna ausführen, um dies zu überprüfen:
 
-```bash
+```
 echidna-test gas.sol
 ...
-echidna_test: passed! 🎉
-...
+echidna_test: bestanden! 🎉
+
+Seed: 2320549945714142710
 ```
 
 ### Messung des Gasverbrauchs {#measuring-gas-consumption}
@@ -583,11 +612,14 @@ echidna-test gas.sol --config config.yaml
 ...
 echidna_test: passed! 🎉
 
-fuzzing time: 2.73s
+f used a maximum of 1333608 gas
+  Call sequence:
+    f(42,123,249) Gas price: 0x10d5733f0a Time delay: 0x495e5 Block delay: 0x88b2
 
-C.expensive(uint8) with gas 5463708:
-  expensive(255)
-  expensive(255)
+Unique instructions: 157
+Unique codehashes: 1
+Seed: -325611019680165325
+
 ```
 
 - Das angezeigte Gas ist eine Schätzung, die von [HEVM](https://github.com/dapphub/dapptools/tree/master/src/hevm#hevm-) bereitgestellt wird.
@@ -600,27 +632,22 @@ Betrachten Sie das folgende Beispiel:
 
 ```solidity
 contract C {
-  address[] addrs;
-
+  address [] addrs;
   function push(address a) public {
     addrs.push(a);
   }
-
   function pop() public {
     addrs.pop();
   }
-
   function clear() public{
     addrs.length = 0;
   }
-
   function check() public{
     for(uint256 i = 0; i < addrs.length; i++)
       for(uint256 j = i+1; j < addrs.length; j++)
         if (addrs[i] == addrs[j])
           addrs[j] = address(0x0);
   }
-
   function echidna_test() public returns (bool) {
       return true;
   }
@@ -629,10 +656,16 @@ contract C {
 
 Wenn Echidna alle Funktionen aufrufen kann, wird es nicht leicht Transaktionen mit hohen Gaskosten finden:
 
-```text
-C.check() with gas 8001:
-  push(0x0)
-  check()
+```
+echidna-test pushpop.sol --config config.yaml
+...
+pop verbrauchte maximal 10746 Gas
+...
+check verbrauchte maximal 23730 Gas
+...
+clear verbrauchte maximal 35916 Gas
+...
+push verbrauchte maximal 40839 Gas
 ```
 
 Das liegt daran, dass die Kosten von der Größe von `addrs` abhängen und zufällige Aufrufe dazu neigen, das Array fast leer zu lassen.
@@ -643,19 +676,12 @@ filterBlacklist: true
 filterFunctions: ["pop", "clear"]
 ```
 
-```text
-C.check() with gas 1490968:
-  push(0x0)
-  push(0x0)
-  push(0x0)
-  push(0x0)
-  push(0x0)
-  push(0x0)
-  push(0x0)
-  push(0x0)
-  push(0x0)
-  push(0x0)
-  check()
+```
+echidna-test pushpop.sol --config config.yaml
+...
+push verbrauchte maximal 40839 Gas
+...
+check verbrauchte maximal 1484472 Gas
 ```
 
 ### Zusammenfassung: Finden von Transaktionen mit hohem Gasverbrauch {#summary-finding-transactions-with-high-gas-consumption}
@@ -668,6 +694,7 @@ estimateGas: true
 
 ```bash
 echidna-test contract.sol --config config.yaml
+...
 ```
 
 Echidna meldet nach Abschluss der Fuzzing-Kampagne für jede Funktion eine Sequenz mit dem maximalen Gasverbrauch.

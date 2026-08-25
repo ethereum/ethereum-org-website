@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/template-usecase.json",
+  "generatedAt": "2026-05-25T10:48:40.713Z",
+  "rootHash": "758f4827a81f",
+  "tree": {
+    "contentHash": "ee1f5d2a4a4b",
+    "anchorHash": "5738c578adbf",
+    "children": {
+      "template-usecase-dropdown-ai-agents": {
+        "contentHash": "3d9e43485a12",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "template-usecase-dropdown-defi": {
+        "contentHash": "6143770ec287",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "template-usecase-dropdown-nft": {
+        "contentHash": "132d548bd673",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "template-usecase-dropdown-dao": {
+        "contentHash": "96b9b0c7e7d7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "template-usecase-dropdown-apps": {
+        "contentHash": "0d502367792d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "template-usecase-dropdown-payments": {
+        "contentHash": "e731b2c33eaf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "template-usecase-dropdown-prediction-markets": {
+        "contentHash": "a75694b62811",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "template-usecase-dropdown-social-networks": {
+        "contentHash": "4f2cedac6570",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "template-usecase-dropdown-restaking": {
+        "contentHash": "fee35e745a2c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "template-usecase-dropdown-identity": {
+        "contentHash": "a71bc8e61322",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "template-usecase-dropdown-desci": {
+        "contentHash": "6cd406da7370",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "template-usecase-dropdown-refi": {
+        "contentHash": "8d2010348010",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "template-usecase-dropdown-all-use-cases": {
+        "contentHash": "a6a0a46ebeee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "template-usecase-dropdown": {
+        "contentHash": "8e73b55b136b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "template-usecase-banner": {
+        "contentHash": "4c11cb94d465",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "template-usecase-edit-link": {
+        "contentHash": "5d2c6743b87c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "template-usecase-dropdown-aria": {
+        "contentHash": "5169c112e01e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "template-usecase-dropdown-onchain-gaming": {
+        "contentHash": "0710f93457e6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "template-usecase-dropdown-rwa": {
+        "contentHash": "5951c737e488",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "template-usecase-dropdown-ai-agents",
+      "template-usecase-dropdown-defi",
+      "template-usecase-dropdown-nft",
+      "template-usecase-dropdown-dao",
+      "template-usecase-dropdown-apps",
+      "template-usecase-dropdown-payments",
+      "template-usecase-dropdown-prediction-markets",
+      "template-usecase-dropdown-social-networks",
+      "template-usecase-dropdown-restaking",
+      "template-usecase-dropdown-identity",
+      "template-usecase-dropdown-desci",
+      "template-usecase-dropdown-refi",
+      "template-usecase-dropdown-all-use-cases",
+      "template-usecase-dropdown",
+      "template-usecase-banner",
+      "template-usecase-edit-link",
+      "template-usecase-dropdown-aria",
+      "template-usecase-dropdown-onchain-gaming",
+      "template-usecase-dropdown-rwa"
+    ]
+  },
+  "sourceCommitSha": "647106d896d17d983a5bec54d4f14ca23f4039cf"
+}

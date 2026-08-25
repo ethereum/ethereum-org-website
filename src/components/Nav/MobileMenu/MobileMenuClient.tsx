@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { useLocale, useTranslations } from "next-intl"
 
 import { ErrorBoundary } from "@/components/ui/error-boundary"
 import { PersistentPanel } from "@/components/ui/persistent-panel"
@@ -8,11 +9,13 @@ import { Sheet, SheetTrigger } from "@/components/ui/sheet"
 import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import { SITE_TITLE } from "@/lib/constants"
 
 import HamburgerButton from "./HamburgerButton"
 
 import { useCloseOnNavigate } from "@/hooks/useCloseOnNavigate"
-import { useTranslation } from "@/hooks/useTranslation"
 
 // Lazy-load the menu content to avoid including it in initial RSC payload
 // This saves ~82KB by not SSR'ing navigation data that's hidden behind a click
@@ -63,7 +66,8 @@ type MobileMenuClientProps = {
 }
 
 const MobileMenuClient = ({ className, side }: MobileMenuClientProps) => {
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
+  const locale = useLocale()
   const [open, setOpen] = useCloseOnNavigate()
   const triggerRef = React.useRef<HTMLButtonElement>(null)
   // Track if menu has ever been opened to keep content loaded after first open
@@ -84,6 +88,12 @@ const MobileMenuClient = ({ className, side }: MobileMenuClientProps) => {
       setHasBeenOpened(true)
     }
     setOpen(nextOpen)
+
+    trackCustomEvent({
+      eventCategory: "Mobile navigation menu",
+      eventAction: "Menu toggled",
+      eventName: `${nextOpen ? "Open" : "Close"} menu: ${locale}`,
+    })
   }
 
   return (
@@ -102,14 +112,14 @@ const MobileMenuClient = ({ className, side }: MobileMenuClientProps) => {
         className="flex flex-col"
         onOpenChange={handleOpenChange}
         triggerRef={triggerRef}
-        aria-label={t("site-title")}
+        aria-label={SITE_TITLE}
         data-testid="mobile-menu-dialog"
       >
         {hasBeenOpened && (
           <ErrorBoundary
             fallback={() => (
               <div className="flex flex-1 flex-col items-center justify-center gap-4 p-8 text-center">
-                <p className="text-body-medium">{t("loading-error")}</p>
+                <p className="text-body-medium">{t("loading-error-refresh")}</p>
                 <div className="flex gap-3">
                   <button
                     className="rounded-md bg-primary px-4 py-2 text-sm text-white hover:bg-primary-hover"

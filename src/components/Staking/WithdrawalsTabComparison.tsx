@@ -1,7 +1,8 @@
 "use client"
 
+import { useTranslations } from "next-intl"
+
 import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
-import Translation from "@/components/Translation"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
@@ -11,10 +12,8 @@ import { Strong } from "../IntlStringElements"
 import { ButtonLink } from "../ui/buttons/Button"
 import InlineLink from "../ui/Link"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 const WithdrawalsTabComparison = () => {
-  const { t } = useTranslation("page-staking")
+  const t = useTranslations("page-staking")
   const handleMatomoEvent = (name: string): void => {
     trackCustomEvent({
       eventCategory: `Staker tabs`,
@@ -46,15 +45,19 @@ const WithdrawalsTabComparison = () => {
       >
         <h3>{t("comp-withdrawal-comparison-current-title")}</h3>
         <UnorderedList>
+          <ListItem>{t("comp-withdrawal-comparison-current-li-1")} </ListItem>
           <ListItem>
-            <Translation id="page-staking:comp-withdrawal-comparison-current-li-1" />{" "}
-          </ListItem>
-          <ListItem>
-            <Translation id="page-staking:comp-withdrawal-comparison-current-li-2" />
+            {t.rich("comp-withdrawal-comparison-current-li-2", {
+              a: (chunks) => (
+                <InlineLink href="https://launchpad.ethereum.org/withdrawals">
+                  {chunks}
+                </InlineLink>
+              ),
+            })}
           </ListItem>
         </UnorderedList>
         <p>
-          {t.rich("page-staking.comp-withdrawal-comparison-current-p", {
+          {t.rich("comp-withdrawal-comparison-current-p", {
             strong: Strong,
             // Intentionally kept in English to match Beaconcha.in destination
             depositsTab: '"Deposits"',

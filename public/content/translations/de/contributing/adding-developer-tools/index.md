@@ -1,10 +1,8 @@
 ---
-title: "Entwicklertools hinzufügen"
+title: Entwicklertools hinzufügen
 lang: de
-description: "Unsere Kriterien für die Auflistung von Entwicklertools auf ethereum.org"
+description: Unsere Kriterien für die Auflistung von Entwicklertools auf ethereum.org
 ---
-
-# Entwicklertools hinzufügen {#contributing-to-ethereumorg-}
 
 Wir möchten sicherstellen, dass wir die bestmöglichen Entwicklerressourcen auflisten, damit die Leute mit Zuversicht entwickeln können und die Unterstützung erhalten, die sie benötigen.
 
@@ -12,7 +10,7 @@ Wenn es ein hilfreiches Entwicklertool gibt, das wir übersehen haben, kannst du
 
 Wir listen derzeit Entwicklertools in unserem gesamten [Entwicklerportal](/developers/) auf.
 
-**Fühle dich frei, neue Ergänzungen für die entsprechenden Seiten vorzuschlagen.**
+**Du kannst gerne neue Ergänzungen für die entsprechenden Seiten vorschlagen.**
 
 ## Wie wir entscheiden {#ways-to-contribute}
 
@@ -26,13 +24,13 @@ Einreichungen von Entwicklertools werden nach den folgenden Kriterien bewertet:
 
 **Ist das Tool gut dokumentiert?**
 
-- Ist eine Dokumentation vorhanden?
+- Gibt es eine Dokumentation?
 - Ist sie ausreichend, um das Tool zu nutzen?
-- Wurde sie in letzter Zeit aktualisiert?
+- Wurde sie kürzlich aktualisiert?
 
-**Ist das Tool weit verbreitet?**
+**Wird das Tool weit verbreitet genutzt?**
 
-- Wir berücksichtigen Metriken wie GitHub-Sterne, Download-Statistiken und ob es von bekannten Unternehmen oder Projekten verwendet wird.
+- Wir berücksichtigen Metriken wie GitHub-Sterne, Download-Statistiken und ob es von bekannten Unternehmen oder Projekten verwendet wird
 
 **Ist das Tool von ausreichender Qualität?**
 
@@ -48,7 +46,7 @@ Viele Projekte im Ethereum-Bereich sind Open Source. Wir listen eher Open-Source
 
 ## Produktreihenfolge {#product-ordering}
 
-Sofern Produkte nicht ausdrücklich anders geordnet sind, z. B. alphabetisch, werden sie in der Reihenfolge vom ältesten zum neuesten hinzugefügten Produkt auf der Seite angezeigt. Mit anderen Worten: Die neuesten Produkte werden am Ende der Liste hinzugefügt.
+Sofern Produkte nicht ausdrücklich anders sortiert sind, z. B. alphabetisch, werden sie in der Reihenfolge angezeigt, in der sie der Seite hinzugefügt wurden (die ältesten zuerst). Mit anderen Worten: Die neuesten Produkte werden am Ende der Liste hinzugefügt.
 
 ---
 

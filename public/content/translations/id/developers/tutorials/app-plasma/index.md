@@ -1,103 +1,103 @@
 ---
-title: Tulis plasma khusus aplikasi yang menjaga privasi
-description: Dalam tutorial ini, kita membangun bank semi-rahasia untuk deposit. Bank adalah komponen terpusat; ia mengetahui saldo setiap pengguna. Namun, informasi ini tidak disimpan secara onchain. Sebaliknya, bank memposting hash dari status. Setiap kali transaksi terjadi, bank memposting hash baru, bersama dengan bukti zero-knowledge bahwa ia memiliki transaksi yang ditandatangani yang mengubah status hash ke yang baru. Setelah membaca tutorial ini, Anda tidak hanya akan memahami cara menggunakan bukti zero-knowledge, tetapi juga mengapa Anda menggunakannya dan bagaimana melakukannya dengan aman.
+title: Menulis Plasma khusus aplikasi yang menjaga privasi
+description: Dalam tutorial ini, kita membangun bank semi-rahasia untuk deposit. Bank ini adalah komponen terpusat; ia mengetahui saldo setiap pengguna. Namun, informasi ini tidak disimpan onchain. Sebaliknya, bank memposting hash dari state. Setiap kali transaksi terjadi, bank memposting hash baru, bersama dengan Bukti tanpa pengetahuan bahwa ia memiliki transaksi yang ditandatangani yang mengubah state hash ke yang baru. Setelah membaca tutorial ini, Anda tidak hanya akan memahami cara menggunakan Bukti tanpa pengetahuan, tetapi juga mengapa Anda menggunakannya dan bagaimana melakukannya dengan aman.
 author: Ori Pomerantz
 tags: ["zero-knowledge", "server", "offchain", "privasi"]
 skill: advanced
+breadcrumb: Plasma khusus aplikasi
 lang: id
 published: 2025-10-15
 ---
-
 ## Pengantar {#introduction}
 
-Berbeda dengan [rollup](/developers/docs/scaling/zk-rollups/), [plasma](/developers/docs/scaling/plasma) menggunakan mainnet Ethereum untuk integritas, tetapi tidak untuk ketersediaan. Dalam artikel ini, kita menulis aplikasi yang berperilaku seperti plasma, dengan Ethereum menjamin integritas (tidak ada perubahan yang tidak sah) tetapi tidak ketersediaan (komponen terpusat dapat mati dan melumpuhkan seluruh sistem).
+Berbeda dengan [rollup](/developers/docs/scaling/zk-rollups/), [Plasma](/developers/docs/scaling/plasma) menggunakan Mainnet Ethereum untuk integritas, tetapi tidak untuk ketersediaan. Dalam artikel ini, kita menulis aplikasi yang berperilaku seperti Plasma, dengan Ethereum menjamin integritas (tidak ada perubahan yang tidak sah) tetapi tidak ketersediaan (komponen terpusat dapat mati dan melumpuhkan seluruh sistem).
 
-Aplikasi yang kita tulis di sini adalah bank yang menjaga privasi. Alamat yang berbeda memiliki akun dengan saldo, dan mereka dapat mengirim uang (ETH) ke akun lain. Bank memposting hash dari status (akun dan saldonya) dan transaksi, tetapi menyimpan saldo sebenarnya secara offchain di mana mereka dapat tetap privat.
+Aplikasi yang kita tulis di sini adalah bank yang menjaga privasi. Berbagai alamat memiliki akun dengan saldo, dan mereka dapat mengirim uang (ETH) ke akun lain. Bank memposting hash dari state (akun dan saldonya) dan transaksi, tetapi menyimpan saldo sebenarnya secara offchain di mana saldo tersebut dapat tetap privat.
 
 ## Desain {#design}
 
-Ini bukan sistem yang siap produksi, melainkan alat pengajaran. Oleh karena itu, ini ditulis dengan beberapa asumsi penyederhanaan.
+Ini bukanlah sistem yang siap produksi, melainkan alat pengajaran. Oleh karena itu, sistem ini ditulis dengan beberapa asumsi penyederhanaan.
 
-- Kumpulan akun tetap. Ada jumlah akun tertentu, dan setiap akun milik alamat yang telah ditentukan sebelumnya. Ini membuat sistem menjadi jauh lebih sederhana karena sulit untuk menangani struktur data berukuran variabel dalam bukti zero-knowledge. Untuk sistem yang siap produksi, kita dapat menggunakan [akar Merkle](/developers/tutorials/merkle-proofs-for-offline-data-integrity/) sebagai hash status dan memberikan bukti Merkle untuk saldo yang diperlukan.
+- Kumpulan akun tetap. Terdapat jumlah akun tertentu, dan setiap akun milik alamat yang telah ditentukan sebelumnya. Hal ini membuat sistem menjadi jauh lebih sederhana karena sulit untuk menangani struktur data berukuran variabel dalam bukti tanpa pengetahuan. Untuk sistem yang siap produksi, kita dapat menggunakan [akar Merkle](/developers/tutorials/merkle-proofs-for-offline-data-integrity/) sebagai hash state dan memberikan bukti Merkle untuk saldo yang diperlukan.
 
-- Penyimpanan memori. Pada sistem produksi, kita perlu menulis semua saldo akun ke disk untuk menyimpannya jika terjadi restart. Di sini, tidak apa-apa jika informasi tersebut hilang begitu saja.
+- Penyimpanan memori. Pada sistem produksi, kita perlu menulis semua saldo akun ke disk untuk mempertahankannya jika terjadi restart. Di sini, tidak masalah jika informasi tersebut hilang begitu saja.
 
-- Hanya transfer. Sistem produksi akan memerlukan cara untuk menyetor aset ke bank dan menariknya. Tetapi tujuannya di sini hanya untuk mengilustrasikan konsep, jadi bank ini terbatas pada transfer.
+- Hanya transfer. Sistem produksi akan memerlukan cara untuk menyetorkan aset ke bank dan menariknya. Namun tujuan di sini hanyalah untuk mengilustrasikan konsepnya, sehingga bank ini terbatas pada transfer.
 
-### Bukti zero-knowledge {#zero-knowledge-proofs}
+### Bukti tanpa pengetahuan {#zero-knowledge-proofs}
 
-Pada tingkat dasar, bukti zero-knowledge menunjukkan bahwa pembukti (prover) mengetahui beberapa data, _Data<sub>private</sub>_ sedemikian rupa sehingga ada hubungan _Relationship_ antara beberapa data publik, _Data<sub>public</sub>_, dan _Data<sub>private</sub>_. Pemverifikasi (verifier) mengetahui _Relationship_ dan _Data<sub>public</sub>_.
+Pada tingkat dasar, bukti tanpa pengetahuan menunjukkan bahwa pembukti mengetahui beberapa data, _Data<sub>private</sub>_ sedemikian rupa sehingga ada hubungan _Relationship_ antara beberapa data publik, _Data<sub>public</sub>_, dan _Data<sub>private</sub>_. Pemverifikasi mengetahui _Relationship_ dan _Data<sub>public</sub>_.
 
-Untuk menjaga privasi, kita memerlukan status dan transaksi menjadi privat. Namun untuk memastikan integritas, kita memerlukan [hash kriptografi](https://en.wikipedia.org/wiki/Cryptographic_hash_function) dari status menjadi publik. Untuk membuktikan kepada orang-orang yang mengirimkan transaksi bahwa transaksi tersebut benar-benar terjadi, kita juga perlu memposting hash transaksi.
+Untuk menjaga privasi, kita perlu agar state dan transaksi bersifat privat. Namun untuk memastikan integritas, kita memerlukan [hash kriptografi](https://en.wikipedia.org/wiki/Cryptographic_hash_function) dari state agar bersifat publik. Untuk membuktikan kepada orang-orang yang mengirimkan transaksi bahwa transaksi tersebut benar-benar terjadi, kita juga perlu memposting hash transaksi.
 
-Dalam kebanyakan kasus, _Data<sub>private</sub>_ adalah input ke program bukti zero-knowledge, dan _Data<sub>public</sub>_ adalah outputnya.
+Dalam kebanyakan kasus, _Data<sub>private</sub>_ adalah input untuk program bukti tanpa pengetahuan, dan _Data<sub>public</sub>_ adalah outputnya.
 
 Bidang-bidang ini dalam _Data<sub>private</sub>_:
 
-- _State<sub>n</sub>_, status lama
-- _State<sub>n+1</sub>_, status baru
-- _Transaction_, sebuah transaksi yang mengubah dari status lama ke status baru. Transaksi ini perlu menyertakan bidang-bidang berikut:
+- _State<sub>n</sub>_, state lama
+- _State<sub>n+1</sub>_, state baru
+- _Transaction_, sebuah transaksi yang mengubah dari state lama ke state baru. Transaksi ini perlu menyertakan bidang-bidang berikut:
   - _Destination address_ (alamat tujuan) yang menerima transfer
   - _Amount_ (jumlah) yang ditransfer
-  - _Nonce_ untuk memastikan setiap transaksi hanya dapat diproses sekali.
+  - _Nonce_ untuk memastikan setiap transaksi hanya dapat diproses satu kali.
     Alamat sumber tidak perlu ada dalam transaksi, karena dapat dipulihkan dari tanda tangan.
-- _Signature_ (tanda tangan), sebuah tanda tangan yang diotorisasi untuk melakukan transaksi. Dalam kasus kita, satu-satunya alamat yang diotorisasi untuk melakukan transaksi adalah alamat sumber. Karena sistem zero-knowledge kita bekerja seperti ini, kita juga memerlukan kunci publik akun, selain tanda tangan Ethereum.
+- _Signature_ (tanda tangan), tanda tangan yang diotorisasi untuk melakukan transaksi. Dalam kasus kita, satu-satunya alamat yang diotorisasi untuk melakukan transaksi adalah alamat sumber. Karena sistem zero-knowledge kita bekerja dengan cara seperti ini, kita juga memerlukan kunci publik akun tersebut, selain tanda tangan Ethereum.
 
-Ini adalah bidang-bidang dalam _Data<sub>public</sub>_:
+Berikut adalah bidang-bidang dalam _Data<sub>public</sub>_:
 
-- _Hash(State<sub>n</sub>)_ hash dari status lama
-- _Hash(State<sub>n+1</sub>)_ hash dari status baru
-- _Hash(Transaction)_ hash dari transaksi yang mengubah status dari _State<sub>n</sub>_ ke _State<sub>n+1</sub>_.
+- _Hash(State<sub>n</sub>)_ hash dari state lama
+- _Hash(State<sub>n+1</sub>)_ hash dari state baru
+- _Hash(Transaction)_ hash dari transaksi yang mengubah state dari _State<sub>n</sub>_ menjadi _State<sub>n+1</sub>_.
 
 Hubungan tersebut memeriksa beberapa kondisi:
 
 - Hash publik memang merupakan hash yang benar untuk bidang privat.
-- Transaksi, ketika diterapkan pada status lama, menghasilkan status baru.
+- Transaksi, ketika diterapkan pada state lama, menghasilkan state baru.
 - Tanda tangan berasal dari alamat sumber transaksi.
 
-Karena sifat fungsi hash kriptografi, membuktikan kondisi-kondisi ini sudah cukup untuk memastikan integritas.
+Karena sifat-sifat fungsi hash kriptografi, membuktikan kondisi-kondisi ini sudah cukup untuk memastikan integritas.
 
 ### Struktur data {#data-structures}
 
-Struktur data utama adalah status yang disimpan oleh server. Untuk setiap akun, server melacak saldo akun dan sebuah [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce), yang digunakan untuk mencegah [serangan replay](https://en.wikipedia.org/wiki/Replay_attack).
+Struktur data utama adalah state yang disimpan oleh server. Untuk setiap akun, server melacak saldo akun dan sebuah [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce), yang digunakan untuk mencegah [serangan pemutaran ulang (replay attacks)](https://en.wikipedia.org/wiki/Replay_attack).
 
 ### Komponen {#components}
 
 Sistem ini memerlukan dua komponen:
 
-- _Server_ yang menerima transaksi, memprosesnya, dan memposting hash ke chain bersama dengan bukti zero-knowledge.
-- Sebuah _kontrak pintar_ yang menyimpan hash dan memverifikasi bukti zero-knowledge untuk memastikan transisi status sah.
+- _Server_ yang menerima transaksi, memprosesnya, dan memposting hash ke rantai bersama dengan bukti tanpa pengetahuan.
+- Sebuah _kontrak pintar_ yang menyimpan hash dan memverifikasi bukti tanpa pengetahuan untuk memastikan transisi state sah.
 
 ### Aliran data dan kontrol {#flows}
 
-Ini adalah cara berbagai komponen berkomunikasi untuk mentransfer dari satu akun ke akun lainnya.
+Berikut adalah cara berbagai komponen berkomunikasi untuk melakukan transfer dari satu akun ke akun lainnya.
 
-1. Browser web mengirimkan transaksi yang ditandatangani yang meminta transfer dari akun penandatangan ke akun yang berbeda.
+1. Peramban web mengirimkan transaksi yang ditandatangani untuk meminta transfer dari akun penandatangan ke akun yang berbeda.
 
 2. Server memverifikasi bahwa transaksi tersebut valid:
 
    - Penandatangan memiliki akun di bank dengan saldo yang cukup.
    - Penerima memiliki akun di bank.
 
-3. Server menghitung status baru dengan mengurangi jumlah yang ditransfer dari saldo penandatangan dan menambahkannya ke saldo penerima.
+3. Server menghitung state baru dengan mengurangi jumlah yang ditransfer dari saldo penandatangan dan menambahkannya ke saldo penerima.
 
-4. Server menghitung bukti zero-knowledge bahwa perubahan status tersebut valid.
+4. Server menghitung bukti tanpa pengetahuan bahwa perubahan state tersebut valid.
 
-5. Server mengirimkan ke Ethereum sebuah transaksi yang mencakup:
+5. Server mengirimkan transaksi ke Ethereum yang mencakup:
 
-   - Hash status baru
+   - Hash state baru
    - Hash transaksi (sehingga pengirim transaksi dapat mengetahui bahwa transaksinya telah diproses)
-   - Bukti zero-knowledge yang membuktikan transisi ke status baru adalah valid
+   - Bukti tanpa pengetahuan yang membuktikan bahwa transisi ke state baru adalah valid
 
-6. Kontrak pintar memverifikasi bukti zero-knowledge.
+6. Kontrak pintar memverifikasi bukti tanpa pengetahuan.
 
-7. Jika bukti zero-knowledge terverifikasi, kontrak pintar melakukan tindakan berikut:
-   - Memperbarui hash status saat ini ke hash status baru
-   - Memancarkan entri log dengan hash status baru dan hash transaksi
+7. Jika bukti tanpa pengetahuan terbukti benar, kontrak pintar melakukan tindakan berikut:
+   - Memperbarui hash state saat ini ke hash state baru
+   - Memancarkan entri Log dengan hash state baru dan hash transaksi
 
 ### Alat {#tools}
 
-Untuk kode sisi klien, kita akan menggunakan [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/), dan [Wagmi](https://wagmi.sh/). Ini adalah alat standar industri; jika Anda tidak terbiasa dengannya, Anda dapat menggunakan [tutorial ini](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
+Untuk kode sisi klien, kita akan menggunakan [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/), dan [Wagmi](https://wagmi.sh/). Ini adalah alat standar industri; jika Anda belum terbiasa dengannya, Anda dapat menggunakan [tutorial ini](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
 
 Sebagian besar server ditulis dalam JavaScript menggunakan [Node](https://nodejs.org/en). Bagian zero-knowledge ditulis dalam [Noir](https://noir-lang.org/). Kita memerlukan versi `1.0.0-beta.10`, jadi setelah Anda [menginstal Noir sesuai petunjuk](https://noir-lang.org/docs/getting_started/quick_start), jalankan:
 
@@ -105,15 +105,15 @@ Sebagian besar server ditulis dalam JavaScript menggunakan [Node](https://nodejs
 noirup -v 1.0.0-beta.10
 ```
 
-Blockchain yang kita gunakan adalah `anvil`, sebuah blockchain pengujian lokal yang merupakan bagian dari [Foundry](https://getfoundry.sh/introduction/installation).
+Rantai blok yang kita gunakan adalah `anvil`, sebuah rantai blok pengujian lokal yang merupakan bagian dari [Foundry](https://getfoundry.sh/introduction/installation).
 
 ## Implementasi {#implementation}
 
 Karena ini adalah sistem yang kompleks, kita akan mengimplementasikannya secara bertahap.
 
-### Tahap 1 - Manual zero knowledge {#stage-1}
+### Tahap 1 - Zero-knowledge manual {#stage-1}
 
-Untuk tahap pertama, kita akan menandatangani transaksi di browser dan kemudian secara manual memberikan informasi tersebut ke bukti zero-knowledge. Kode zero-knowledge mengharapkan untuk mendapatkan informasi tersebut di `server/noir/Prover.toml` (didokumentasikan [di sini](https://noir-lang.org/docs/getting_started/project_breakdown#provertoml-1)).
+Untuk tahap pertama, kita akan menandatangani transaksi di peramban dan kemudian secara manual memberikan informasi tersebut ke bukti tanpa pengetahuan. Kode zero-knowledge mengharapkan untuk mendapatkan informasi tersebut di `server/noir/Prover.toml` (didokumentasikan [di sini](https://noir-lang.org/docs/getting_started/project_breakdown#provertoml-1)).
 
 Untuk melihatnya beraksi:
 
@@ -127,42 +127,42 @@ Untuk melihatnya beraksi:
    cd client
    npm install
    npm run dev
-```
+   ```
 
-   Alasan Anda memerlukan server web di sini adalah bahwa, untuk mencegah jenis penipuan tertentu, banyak dompet (seperti MetaMask) tidak menerima file yang disajikan langsung dari disk
+   Alasan Anda memerlukan server web di sini adalah, untuk mencegah jenis penipuan tertentu, banyak dompet (seperti MetaMask) tidak menerima file yang disajikan langsung dari disk
 
-3. Buka browser dengan dompet.
+3. Buka peramban dengan dompet.
 
 4. Di dompet, masukkan frasa sandi baru. Perhatikan bahwa ini akan menghapus frasa sandi Anda yang ada, jadi _pastikan Anda memiliki cadangan_.
 
    Frasa sandinya adalah `test test test test test test test test test test test junk`, frasa sandi pengujian default untuk anvil.
 
-5. Jelajahi [kode sisi klien](http://localhost:5173/).
+5. Telusuri ke [kode sisi klien](http://localhost:5173/).
 
 6. Hubungkan ke dompet dan pilih akun tujuan serta jumlah Anda.
 
-7. Klik **Sign** (Tanda tangani) dan tanda tangani transaksi.
+7. Klik **Sign** dan tandatangani transaksi.
 
 8. Di bawah judul **Prover.toml**, Anda akan menemukan teks. Ganti `server/noir/Prover.toml` dengan teks tersebut.
 
-9. Jalankan bukti zero-knowledge.
+9. Eksekusi bukti tanpa pengetahuan.
 
    ```sh
    cd ../server/noir
    nargo execute
-```
+   ```
 
    Outputnya harus mirip dengan
 
-   ```
-   ori@CryptoDocGuy:~/noir/250911-zk-bank/server/noir$ nargo execute
+      ```
+ori@CryptoDocGuy:~/noir/250911-zk-bank/server/noir$ nargo execute
 
    [zkBank] Circuit witness successfully solved
    [zkBank] Witness saved to target/zkBank.gz
    [zkBank] Circuit output: (0x199aa62af8c1d562a6ec96e66347bf3240ab2afb5d022c895e6bf6a5e617167b, 0x0cfc0a67cb7308e4e9b254026b54204e34f6c8b041be207e64c5db77d95dd82d, 0x450cf9da6e180d6159290554ae3d8787, 0x6d8bc5a15b9037e52fb59b6b98722a85)
-```
+      ```
 
-10. Bandingkan dua nilai terakhir dengan hash yang Anda lihat di browser web untuk melihat apakah pesan di-hash dengan benar.
+10. Bandingkan dua nilai terakhir dengan hash yang Anda lihat di peramban web untuk melihat apakah pesan di-hash dengan benar.
 
 #### `server/noir/Prover.toml` {#server-noir-prover-toml}
 
@@ -174,7 +174,7 @@ message="send 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 500 finney (milliEth) 0
 
 Pesan dalam format teks, yang membuatnya mudah dipahami oleh pengguna (yang diperlukan saat menandatangani) dan untuk diurai oleh kode Noir. Jumlahnya dikutip dalam finney untuk memungkinkan transfer pecahan di satu sisi, dan mudah dibaca di sisi lain. Angka terakhir adalah [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce).
 
-String tersebut panjangnya 100 karakter. Bukti zero-knowledge tidak menangani data berukuran variabel dengan baik, sehingga sering kali perlu untuk menambahkan padding pada data.
+String tersebut panjangnya 100 karakter. Bukti tanpa pengetahuan tidak menangani data berukuran variabel dengan baik, sehingga sering kali perlu untuk menambahkan padding pada data.
 
 ```toml
 pubKeyX=["0x83",...,"0x75"]
@@ -200,7 +200,7 @@ Ini adalah cara untuk menentukan array struktur. Untuk setiap entri, kita menent
 
 #### `client/src/Transfer.tsx` {#client-src-transfer-tsx}
 
-[File ini](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/client/src/Transfer.tsx) mengimplementasikan pemrosesan sisi klien dan menghasilkan file `server/noir/Prover.toml` (yang mencakup parameter zero-knowledge).
+[File ini](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/client/src/Transfer.tsx) mengimplementasikan pemrosesan sisi klien dan menghasilkan file `server/noir/Prover.toml` (yang menyertakan parameter zero-knowledge).
 
 Berikut adalah penjelasan dari bagian-bagian yang lebih menarik.
 
@@ -229,7 +229,7 @@ Ini adalah alamat akun, alamat yang dibuat oleh frasa sandi `test ... test junk`
   })
 ```
 
-[Hook Wagmi](https://wagmi.sh/react/api/hooks) ini memungkinkan kita mengakses pustaka [viem](https://viem.sh/) dan dompet.
+[Hook Wagmi](https://wagmi.sh/react/api/hooks) ini memungkinkan kita mengakses Pustaka [Viem](https://viem.sh/) dan dompet.
 
 ```tsx
   const message = `send ${toAccount} ${ethAmount*1000} finney (milliEth) ${nonce}`.padEnd(100, " ")
@@ -273,7 +273,7 @@ Dapatkan hash pesan. Ini berguna untuk memberikannya kepada pengguna untuk debug
     setPubKey(pubKey)
 ```
 
-Tetapkan variabel status. Melakukan ini akan menggambar ulang komponen (setelah fungsi `sign` keluar) dan menunjukkan nilai yang diperbarui kepada pengguna.
+Tetapkan variabel state. Melakukan ini akan menggambar ulang komponen (setelah fungsi `sign` keluar) dan menunjukkan nilai yang diperbarui kepada pengguna.
 
 ```tsx
     let proverToml = `
@@ -290,9 +290,9 @@ pubKeyY=${hexToArray(pubKey.slice(4+2*32))}
 
 Viem memberi kita kunci publik sebagai string heksadesimal 65-byte. Byte pertama adalah `0x04`, penanda versi. Ini diikuti oleh 32 byte untuk `x` dari kunci publik dan kemudian 32 byte untuk `y` dari kunci publik.
 
-Namun, Noir mengharapkan untuk mendapatkan informasi ini sebagai array dua byte, satu untuk `x` dan satu untuk `y`. Lebih mudah untuk mengurainya di sini pada klien daripada sebagai bagian dari bukti zero-knowledge.
+Namun, Noir mengharapkan untuk mendapatkan informasi ini sebagai array dua byte, satu untuk `x` dan satu untuk `y`. Lebih mudah untuk mengurainya di sini pada klien daripada sebagai bagian dari bukti tanpa pengetahuan.
 
-Perhatikan bahwa ini adalah praktik yang baik dalam zero-knowledge secara umum. Kode di dalam bukti zero-knowledge itu mahal, jadi pemrosesan apa pun yang dapat dilakukan di luar bukti zero-knowledge _harus_ dilakukan di luar bukti zero-knowledge.
+Perhatikan bahwa ini adalah praktik yang baik dalam zero-knowledge secara umum. Kode di dalam bukti tanpa pengetahuan itu mahal, jadi pemrosesan apa pun yang dapat dilakukan di luar bukti tanpa pengetahuan _harus_ dilakukan di luar bukti tanpa pengetahuan.
 
 ```tsx
 signature=${hexToArray(signature.slice(2,-2))}
@@ -312,11 +312,11 @@ Sediakan akun.
   }
 
   return (
-    \<>
+    <>
         <h2>Transfer</h2>
 ```
 
-Ini adalah format HTML (lebih tepatnya, [JSX](https://react.dev/learn/writing-markup-with-jsx)) dari komponen.
+Ini adalah format HTML (lebih tepatnya, [JSX](https://react.dev/learn/writing-markup-with-jsx)) dari komponen tersebut.
 
 #### `server/noir/src/main.nr` {#server-noir-src-main-nr}
 
@@ -326,14 +326,14 @@ Ini adalah format HTML (lebih tepatnya, [JSX](https://react.dev/learn/writing-ma
 use std::hash::pedersen_hash;
 ```
 
-[Hash Pedersen](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) disediakan dengan [pustaka standar Noir](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash). Bukti zero-knowledge umumnya menggunakan fungsi hash ini. Jauh lebih mudah untuk dihitung di dalam [sirkuit aritmatika](https://rareskills.io/post/arithmetic-circuit) dibandingkan dengan fungsi hash standar.
+[Hash Pedersen](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) disediakan dengan [Pustaka standar Noir](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash). Bukti tanpa pengetahuan umumnya menggunakan fungsi hash ini. Jauh lebih mudah untuk dihitung di dalam [sirkuit aritmatika](https://rareskills.io/post/arithmetic-circuit) dibandingkan dengan fungsi hash standar.
 
 ```
 use keccak256::keccak256;
 use dep::ecrecover;
 ```
 
-Kedua fungsi ini adalah pustaka eksternal, yang didefinisikan dalam [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml). Mereka persis seperti namanya, sebuah fungsi yang menghitung [hash keccak256](https://emn178.github.io/online-tools/keccak_256.html) dan sebuah fungsi yang memverifikasi tanda tangan Ethereum dan memulihkan alamat Ethereum penandatangan.
+Kedua fungsi ini adalah Pustaka eksternal, yang didefinisikan dalam [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml). Keduanya persis seperti namanya, sebuah fungsi yang menghitung [hash keccak256](https://emn178.github.io/online-tools/keccak_256.html) dan sebuah fungsi yang memverifikasi tanda tangan Ethereum dan memulihkan alamat Ethereum penandatangan.
 
 ```
 global ACCOUNT_NUMBER : u32 = 5;
@@ -370,7 +370,7 @@ struct Account {
 }
 ```
 
-Informasi yang kita simpan tentang sebuah akun. [`Field`](https://noir-lang.org/docs/noir/concepts/data_types/fields) adalah angka, biasanya hingga 253 bit, yang dapat digunakan langsung dalam [sirkuit aritmatika](https://rareskills.io/post/arithmetic-circuit) yang mengimplementasikan bukti zero-knowledge. Di sini kita menggunakan `Field` untuk menyimpan alamat Ethereum 160-bit.
+Informasi yang kita simpan tentang sebuah akun. [`Field`](https://noir-lang.org/docs/noir/concepts/data_types/fields) adalah angka, biasanya hingga 253 bit, yang dapat digunakan langsung dalam [sirkuit aritmatika](https://rareskills.io/post/arithmetic-circuit) yang mengimplementasikan bukti tanpa pengetahuan. Di sini kita menggunakan `Field` untuk menyimpan alamat Ethereum 160-bit.
 
 ```
 struct TransferTxn {
@@ -390,16 +390,16 @@ fn flatten_account(account: Account) -> [Field; FLAT_ACCOUNT_FIELDS] {
 Definisi fungsi. Parameternya adalah informasi `Account`. Hasilnya adalah array variabel `Field`, yang panjangnya adalah `FLAT_ACCOUNT_FIELDS`
 
 ```
-    let flat = [
+let flat = [
         account.address,
         ((account.balance << 32) + account.nonce.into()).into(),
     ];
 ```
 
-Nilai pertama dalam array adalah alamat akun. Yang kedua mencakup saldo dan nonce. Panggilan `.into()` mengubah angka menjadi tipe data yang dibutuhkannya. `account.nonce` adalah nilai `u32`, tetapi untuk menambahkannya ke `account.balance << 32`, sebuah nilai `u128`, ia harus menjadi `u128`. Itu adalah `.into()` pertama. Yang kedua mengubah hasil `u128` menjadi `Field` sehingga pas ke dalam array.
+Nilai pertama dalam array adalah alamat akun. Yang kedua mencakup saldo dan nonce. Panggilan `.into()` mengubah angka menjadi tipe data yang dibutuhkannya. `account.nonce` adalah nilai `u32`, tetapi untuk menambahkannya ke `account.balance << 32`, sebuah nilai `u128`, ia harus menjadi `u128`. Itu adalah `.into()` pertama. Yang kedua mengonversi hasil `u128` menjadi `Field` sehingga pas ke dalam array.
 
 ```
-    flat
+flat
 }
 ```
 
@@ -412,19 +412,19 @@ fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT
 Fungsi ini mengubah array akun menjadi array `Field`, yang dapat digunakan sebagai input ke Hash Petersen.
 
 ```
-    let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
+let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
 ```
 
 Ini adalah cara Anda menentukan variabel yang dapat diubah (mutable), yaitu, _bukan_ konstanta. Variabel di Noir harus selalu memiliki nilai, jadi kita menginisialisasi variabel ini ke semua nol.
 
 ```
-    for i in 0..ACCOUNT_NUMBER {
+for i in 0..ACCOUNT_NUMBER {
 ```
 
-Ini adalah loop `for`. Perhatikan bahwa batasannya adalah konstanta. Loop Noir harus memiliki batasannya yang diketahui pada waktu kompilasi. Alasannya adalah sirkuit aritmatika tidak mendukung kontrol aliran. Saat memproses loop `for`, kompiler hanya meletakkan kode di dalamnya beberapa kali, satu untuk setiap iterasi.
+Ini adalah loop `for`. Perhatikan bahwa batasannya adalah konstanta. Loop Noir harus memiliki batasan yang diketahui pada waktu kompilasi. Alasannya adalah sirkuit aritmatika tidak mendukung kontrol aliran. Saat memproses loop `for`, kompiler hanya meletakkan kode di dalamnya beberapa kali, satu untuk setiap iterasi.
 
 ```
-        let fields = flatten_account(accounts[i]);
+let fields = flatten_account(accounts[i]);
         for j in 0..FLAT_ACCOUNT_FIELDS {
             flat[i*FLAT_ACCOUNT_FIELDS + j] = fields[j];
         }
@@ -438,7 +438,7 @@ fn hash_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> Field {
 }
 ```
 
-Akhirnya, kita sampai pada fungsi yang melakukan hash pada array akun.
+Akhirnya, kita sampai pada fungsi yang menge-hash array akun.
 
 ```
 fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
@@ -453,7 +453,7 @@ fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
 
 Fungsi ini menemukan akun dengan alamat tertentu. Fungsi ini akan sangat tidak efisien dalam kode standar karena ia mengulangi semua akun, bahkan setelah menemukan alamatnya.
 
-Namun, dalam bukti zero-knowledge, tidak ada kontrol aliran. Jika kita perlu memeriksa suatu kondisi, kita harus memeriksanya setiap saat.
+Namun, dalam bukti tanpa pengetahuan, tidak ada kontrol aliran. Jika kita perlu memeriksa suatu kondisi, kita harus memeriksanya setiap saat.
 
 Hal serupa terjadi dengan pernyataan `if`. Pernyataan `if` dalam loop di atas diterjemahkan ke dalam pernyataan matematika ini.
 
@@ -468,7 +468,7 @@ _account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result
 }
 ```
 
-Fungsi [`assert`](https://noir-lang.org/docs/dev/noir/concepts/assert) menyebabkan bukti zero-knowledge crash jika asersi salah. Dalam hal ini, jika kita tidak dapat menemukan akun dengan alamat yang relevan. Untuk melaporkan alamat, kita menggunakan [string format](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
+Fungsi [`assert`](https://noir-lang.org/docs/dev/noir/concepts/assert) menyebabkan bukti tanpa pengetahuan mogok jika asersi salah. Dalam hal ini, jika kita tidak dapat menemukan akun dengan alamat yang relevan. Untuk melaporkan alamat, kita menggunakan [string format](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
 
 ```rust
 fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> [Account; ACCOUNT_NUMBER] {
@@ -526,13 +526,13 @@ Alamat selalu sepanjang 20 byte (alias 40 digit heksadesimal), dan dimulai pada 
 
 ```rust
         result *= 0x10;
-        if messageBytes[i] >= 48 & messageBytes[i] <= 57 {    // 0-9 // 0-9
+        if messageBytes[i] >= 48 & messageBytes[i] <= 57 {    // 0-9
             result += (messageBytes[i]-48).into();
         }
-        if messageBytes[i] >= 65 & messageBytes[i] <= 70 {    // A-F // A-F
+        if messageBytes[i] >= 65 & messageBytes[i] <= 70 {    // A-F
             result += (messageBytes[i]-65+10).into()
         }
-        if messageBytes[i] >= 97 & messageBytes[i] <= 102 {   // a-f // a-f
+        if messageBytes[i] >= 97 & messageBytes[i] <= 102 {   // a-f
             result += (messageBytes[i]-97+10).into()
         }        
     }    
@@ -558,14 +558,14 @@ Dalam pesan, angka pertama setelah alamat adalah jumlah finney (alias seperserib
 
 ```rust
     for i in 48..MESSAGE_LENGTH {
-        if messageBytes[i] >= 48 & messageBytes[i] <= 57 {    // 0-9 // 0-9
+        if messageBytes[i] >= 48 & messageBytes[i] <= 57 {    // 0-9
             let digit = (messageBytes[i]-48);
 
             if stillReadingAmount {
                 amount = amount*10 + digit.into();
             }
 
-            if lookingForNonce {    // We just found it // Kami baru saja menemukannya
+            if lookingForNonce {    // Kami baru saja menemukannya
                 stillReadingNonce = true;
                 lookingForNonce = false;
             }
@@ -605,49 +605,49 @@ fn readTransferTxn(message: str<MESSAGE_LENGTH>) -> TransferTxn
 }
 ```
 
-Fungsi ini mengubah pesan menjadi byte, lalu mengubah jumlah menjadi `TransferTxn`.
+Fungsi ini mengonversi pesan menjadi byte, lalu mengonversi jumlahnya menjadi `TransferTxn`.
 
 ```rust
-// The equivalent to Viem's hashMessage // Setara dengan hashMessage milik Viem
-// https://viem.sh/docs/utilities/hashMessage#hashmessage // https://viem.sh/docs/utilities/hashMessage#hashmessage
+// Setara dengan hashMessage milik Viem
+// https://viem.sh/docs/utilities/hashMessage#hashmessage
 fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
 ```
 
-Kita dapat menggunakan Hash Pedersen untuk akun karena mereka hanya di-hash di dalam bukti zero-knowledge. Namun, dalam kode ini kita perlu memeriksa tanda tangan pesan, yang dihasilkan oleh browser. Untuk itu, kita perlu mengikuti format penandatanganan Ethereum di [EIP 191](https://eips.ethereum.org/EIPS/eip-191). Ini berarti kita perlu membuat buffer gabungan dengan awalan standar, panjang pesan dalam ASCII, dan pesan itu sendiri, dan menggunakan standar Ethereum keccak256 untuk melakukan hash.
+Kita dapat menggunakan Hash Pedersen untuk akun karena mereka hanya di-hash di dalam bukti tanpa pengetahuan. Namun, dalam kode ini kita perlu memeriksa tanda tangan pesan, yang dihasilkan oleh peramban. Untuk itu, kita perlu mengikuti format penandatanganan Ethereum di [EIP-191](https://eips.ethereum.org/EIPS/eip-191). Ini berarti kita perlu membuat buffer gabungan dengan awalan standar, panjang pesan dalam ASCII, dan pesan itu sendiri, serta menggunakan keccak256 standar Ethereum untuk menge-hash-nya.
 
 ```rust
-    // ASCII prefix // Awalan ASCII
+    // Awalan ASCII
     let prefix_bytes = [
-        0x19, // \x19 // \x19
-        0x45, // 'E' // 'E'
-        0x74, // 't' // 't'
-        0x68, // 'h' // 'h'
-        0x65, // 'e' // 'e'
-        0x72, // 'r' // 'r'
-        0x65, // 'e' // 'e'
-        0x75, // 'u' // 'u'
-        0x6D, // 'm' // 'm'
-        0x20, // ' ' // ' '
-        0x53, // 'S' // 'S'
-        0x69, // 'i' // 'i'
-        0x67, // 'g' // 'g'
-        0x6E, // 'n' // 'n'
-        0x65, // 'e' // 'e'
-        0x64, // 'd' // 'd'
-        0x20, // ' ' // ' '
-        0x4D, // 'M' // 'M'
-        0x65, // 'e' // 'e'
-        0x73, // 's' // 's'
-        0x73, // 's' // 's'
-        0x61, // 'a' // 'a'
-        0x67, // 'g' // 'g'
-        0x65, // 'e' // 'e'
-        0x3A, // ':' // ':'
-        0x0A  // '\n' // '\n'
+        0x19, // \x19
+        0x45, // 'E'
+        0x74, // 't'
+        0x68, // 'h'
+        0x65, // 'e'
+        0x72, // 'r'
+        0x65, // 'e'
+        0x75, // 'u'
+        0x6D, // 'm'
+        0x20, // ' '
+        0x53, // 'S'
+        0x69, // 'i'
+        0x67, // 'g'
+        0x6E, // 'n'
+        0x65, // 'e'
+        0x64, // 'd'
+        0x20, // ' '
+        0x4D, // 'M'
+        0x65, // 'e'
+        0x73, // 's'
+        0x73, // 's'
+        0x61, // 'a'
+        0x67, // 'g'
+        0x65, // 'e'
+        0x3A, // ':'
+        0x0A  // '\n'
     ];
 ```
 
-Untuk menghindari kasus di mana aplikasi meminta pengguna untuk menandatangani pesan yang dapat digunakan sebagai transaksi atau untuk tujuan lain, EIP 191 menetapkan bahwa semua pesan yang ditandatangani dimulai dengan karakter 0x19 (bukan karakter ASCII yang valid) diikuti oleh `Ethereum Signed Message:` dan baris baru.
+Untuk menghindari kasus di mana aplikasi meminta pengguna untuk menandatangani pesan yang dapat digunakan sebagai transaksi atau untuk tujuan lain, EIP-191 menentukan bahwa semua pesan yang ditandatangani dimulai dengan karakter 0x19 (bukan karakter ASCII yang valid) diikuti oleh `Ethereum Signed Message:` dan baris baru.
 
 ```rust
     let mut buffer: [u8; HASH_BUFFER_SIZE] = [0u8; HASH_BUFFER_SIZE];
@@ -697,7 +697,7 @@ Tangani panjang pesan hingga 999 dan gagalkan jika lebih besar. Saya menambahkan
 }
 ```
 
-Gunakan fungsi standar Ethereum `keccak256`.
+Gunakan fungsi `keccak256` standar Ethereum.
 
 ```rust
 fn signatureToAddressAndHash(
@@ -705,13 +705,13 @@ fn signatureToAddressAndHash(
         pubKeyX: [u8; 32],
         pubKeyY: [u8; 32],
         signature: [u8; 64]
-    ) -> (Field, Field, Field)   // address, first 16 bytes of hash, last 16 bytes of hash // alamat, 16 byte pertama dari hash, 16 byte terakhir dari hash
+    ) -> (Field, Field, Field)   // alamat, 16 byte pertama dari hash, 16 byte terakhir dari hash        
 {
 ```
 
 Fungsi ini memverifikasi tanda tangan, yang memerlukan hash pesan. Ini kemudian memberi kita alamat yang menandatanganinya dan hash pesan. Hash pesan disediakan dalam dua nilai `Field` karena itu lebih mudah digunakan di sisa program daripada array byte.
 
-Kita perlu menggunakan dua nilai `Field` karena perhitungan field dilakukan [modulo](https://en.wikipedia.org/wiki/Modulo) angka besar, tetapi angka tersebut biasanya kurang dari 256 bit (jika tidak, akan sulit untuk melakukan perhitungan tersebut di EVM).
+Kita perlu menggunakan dua nilai `Field` karena perhitungan bidang dilakukan [modulo](https://en.wikipedia.org/wiki/Modulo) angka besar, tetapi angka itu biasanya kurang dari 256 bit (jika tidak, akan sulit untuk melakukan perhitungan tersebut di EVM).
 
 ```rust
     let hash = hashMessage(message);
@@ -734,7 +734,7 @@ Tentukan `hash1` dan `hash2` sebagai variabel yang dapat diubah, dan tulis hash 
 Ini mirip dengan [`ecrecover` Solidity](https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions), dengan dua perbedaan penting:
 
 - Jika tanda tangan tidak valid, panggilan menggagalkan `assert` dan program dibatalkan.
-- Meskipun kunci publik dapat dipulihkan dari tanda tangan dan hash, ini adalah pemrosesan yang dapat dilakukan secara eksternal dan, oleh karena itu, tidak layak dilakukan di dalam bukti zero-knowledge. Jika seseorang mencoba menipu kita di sini, verifikasi tanda tangan akan gagal.
+- Meskipun kunci publik dapat dipulihkan dari tanda tangan dan hash, ini adalah pemrosesan yang dapat dilakukan secara eksternal dan, oleh karena itu, tidak layak dilakukan di dalam bukti tanpa pengetahuan. Jika seseorang mencoba menipu kita di sini, verifikasi tanda tangan akan gagal.
 
 ```rust
         hash1,
@@ -749,14 +749,14 @@ fn main(
         pubKeyY: [u8; 32],
         signature: [u8; 64],
     ) -> pub (
-        Field,  // Hash of old accounts array // Hash dari array akun lama
-        Field,  // Hash of new accounts array // Hash dari array akun baru
-        Field,  // First 16 bytes of message hash // 16 byte pertama dari hash pesan
-        Field,  // Last 16 bytes of message hash // 16 byte terakhir dari hash pesan
+        Field,  // Hash dari array akun lama
+        Field,  // Hash dari array akun baru
+        Field,  // 16 byte pertama dari hash pesan
+        Field,  // 16 byte terakhir dari hash pesan
     )
 ```
 
-Akhirnya, kita mencapai fungsi `main`. Kita perlu membuktikan bahwa kita memiliki transaksi yang secara valid mengubah hash akun dari nilai lama ke nilai baru. Kita juga perlu membuktikan bahwa ia memiliki hash transaksi spesifik ini sehingga orang yang mengirimnya tahu bahwa transaksinya telah diproses.
+Akhirnya, kita mencapai fungsi `main`. Kita perlu membuktikan bahwa kita memiliki transaksi yang secara valid mengubah hash akun dari nilai lama ke nilai baru. Kita juga perlu membuktikan bahwa ia memiliki hash transaksi spesifik ini sehingga orang yang mengirimkannya tahu bahwa transaksi mereka telah diproses.
 
 ```rust
 {
@@ -787,13 +787,13 @@ Kita memerlukan `txn` agar dapat diubah karena kita tidak membaca alamat pengiri
 
 ### Tahap 2 - Menambahkan server {#stage-2}
 
-Pada tahap kedua, kita menambahkan server yang menerima dan mengimplementasikan transaksi transfer dari browser.
+Pada tahap kedua, kita menambahkan server yang menerima dan mengimplementasikan transaksi transfer dari peramban.
 
 Untuk melihatnya beraksi:
 
 1. Hentikan Vite jika sedang berjalan.
 
-2. Unduh cabang yang mencakup server dan pastikan Anda memiliki semua modul yang diperlukan.
+2. Unduh cabang yang menyertakan server dan pastikan Anda memiliki semua modul yang diperlukan.
 
    ```sh
    git checkout 02-add-server
@@ -801,7 +801,7 @@ Untuk melihatnya beraksi:
    npm install
    cd ../server
    npm install
-```
+   ```
 
    Tidak perlu mengkompilasi kode Noir, ini sama dengan kode yang Anda gunakan untuk tahap 1.
 
@@ -809,29 +809,29 @@ Untuk melihatnya beraksi:
 
    ```sh
    npm run start
-```
+   ```
 
-4. Di jendela baris perintah terpisah, jalankan Vite untuk menyajikan kode browser.
+4. Di jendela baris perintah terpisah, jalankan Vite untuk menyajikan kode peramban.
 
    ```sh
    cd client
    npm run dev
-```
+   ```
 
-5. Jelajahi kode klien di [http://localhost:5173](http://localhost:5173)
+5. Telusuri ke kode klien di [http://localhost:5173](http://localhost:5173)
 
-6. Sebelum Anda dapat mengeluarkan transaksi, Anda perlu mengetahui nonce, serta jumlah yang dapat Anda kirim. Untuk mendapatkan informasi ini, klik **Update account data** (Perbarui data akun) dan tanda tangani pesan.
+6. Sebelum Anda dapat mengeluarkan transaksi, Anda perlu mengetahui nonce, serta jumlah yang dapat Anda kirim. Untuk mendapatkan informasi ini, klik **Update account data** dan tandatangani pesan.
 
-   Kita memiliki dilema di sini. Di satu sisi, kita tidak ingin menandatangani pesan yang dapat digunakan kembali (sebuah [serangan replay](https://en.wikipedia.org/wiki/Replay_attack)), itulah sebabnya kita menginginkan nonce sejak awal. Namun, kita belum memiliki nonce. Solusinya adalah memilih nonce yang hanya dapat digunakan sekali dan yang sudah kita miliki di kedua sisi, seperti waktu saat ini.
+   Kita memiliki dilema di sini. Di satu sisi, kita tidak ingin menandatangani pesan yang dapat digunakan kembali ([serangan replay](https://en.wikipedia.org/wiki/Replay_attack)), itulah sebabnya kita menginginkan nonce sejak awal. Namun, kita belum memiliki nonce. Solusinya adalah memilih nonce yang hanya dapat digunakan sekali dan yang sudah kita miliki di kedua sisi, seperti waktu saat ini.
 
-   Masalah dengan solusi ini adalah bahwa waktu mungkin tidak tersinkronisasi dengan sempurna. Jadi sebagai gantinya, kita menandatangani nilai yang berubah setiap menit. Ini berarti bahwa jendela kerentanan kita terhadap serangan replay paling lama satu menit. Mengingat bahwa dalam produksi permintaan yang ditandatangani akan dilindungi oleh TLS, dan bahwa sisi lain dari terowongan---server---sudah dapat mengungkapkan saldo dan nonce (ia harus mengetahuinya agar berfungsi), ini adalah risiko yang dapat diterima.
+   Masalah dengan solusi ini adalah bahwa waktu mungkin tidak tersinkronisasi dengan sempurna. Jadi sebagai gantinya, kita menandatangani nilai yang berubah setiap menit. Ini berarti bahwa jendela kerentanan kita terhadap serangan replay paling lama adalah satu menit. Mengingat bahwa dalam produksi permintaan yang ditandatangani akan dilindungi oleh TLS, dan bahwa sisi lain dari terowongan---server---sudah dapat mengungkapkan saldo dan nonce (ia harus mengetahuinya agar berfungsi), ini adalah risiko yang dapat diterima.
 
-7. Setelah browser mendapatkan kembali saldo dan nonce, ia menampilkan formulir transfer. Pilih alamat tujuan dan jumlahnya lalu klik **Transfer**. Tanda tangani permintaan ini.
+7. Setelah peramban mendapatkan kembali saldo dan nonce, ia menampilkan formulir transfer. Pilih alamat tujuan dan jumlahnya lalu klik **Transfer**. Tandatangani permintaan ini.
 
-8. Untuk melihat transfer, baik **Update account data** atau lihat di jendela tempat Anda menjalankan server. Server mencatat status setiap kali berubah.
+8. Untuk melihat transfer, baik **Update account data** atau lihat di jendela tempat Anda menjalankan server. Server mencatat state setiap kali berubah.
 
-    ```
-    ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
+        ```
+ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
 
     > server@1.0.0 start
     > node --experimental-json-modules index.mjs
@@ -858,7 +858,7 @@ Untuk melihatnya beraksi:
     0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC has 100000 (0)
     0x90F79bf6EB2c4f870365E785982E1f101E93b906 has 139000 (0)
     0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 has 100000 (0)
-```
+        ```
 
 #### `server/index.mjs` {#server-index-mjs-1}
 
@@ -875,10 +875,10 @@ const circuit = JSON.parse(await fs.readFile("./noir/target/zkBank.json"))
 const noir = new Noir(circuit)
 ```
 
-Muat sirkuit aritmatika---program Noir yang dikompilasi yang kita buat pada tahap sebelumnya---dan bersiaplah untuk menjalankannya.
+Muat sirkuit aritmatika---program Noir yang dikompilasi yang kita buat pada tahap sebelumnya---dan bersiaplah untuk mengeksekusinya.
 
 ```js
-// We only provide account information in return to a signed request // Kami hanya memberikan informasi akun sebagai balasan atas permintaan yang ditandatangani
+// Kami hanya memberikan informasi akun sebagai balasan atas permintaan yang ditandatangani
 const accountInformation = async signature => {
     const fromAddress = await recoverAddress({
         hash: hashMessage("Get account data " + Math.floor((new Date().getTime())/60000)),
@@ -892,10 +892,10 @@ Untuk memberikan informasi akun, kita hanya memerlukan tanda tangan. Alasannya a
 const processMessage = async (message, signature) => {
 ```
 
-Proses pesan dan jalankan transaksi yang dikodenya.
+Proses pesan dan eksekusi transaksi yang dienkodenya.
 
 ```js
-    // Get the public key // Dapatkan kunci publik
+    // Dapatkan kunci publik
     const pubKey = await recoverPublicKey({
         hash,
         signature
@@ -958,7 +958,7 @@ Struktur `Accounts` awal.
    npm install
    cd ../server
    npm install
-```
+   ```
 
 3. Jalankan `anvil` di jendela baris perintah terpisah.
 
@@ -969,54 +969,54 @@ Struktur `Accounts` awal.
    bb write_vk -b ./target/zkBank.json -o ./target --oracle_hash keccak
    bb write_solidity_verifier -k ./target/vk -o ./target/Verifier.sol
    cp target/Verifier.sol ../../smart-contracts/src
-```
+   ```
 
-5. Buka kontrak pintar dan atur variabel lingkungan untuk menggunakan blockchain `anvil`.
+5. Buka kontrak pintar dan atur variabel lingkungan untuk menggunakan rantai blok `anvil`.
 
    ```sh
    cd ../../smart-contracts
    export ETH_RPC_URL=http://localhost:8545
    ETH_PRIVATE_KEY=ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
-```
+   ```
 
-6. Terapkan `Verifier.sol` dan simpan alamatnya dalam variabel lingkungan.
+6. Sebarkan `Verifier.sol` dan simpan alamat dalam variabel lingkungan.
 
    ```sh
    VERIFIER_ADDRESS=`forge create src/Verifier.sol:HonkVerifier --private-key $ETH_PRIVATE_KEY --optimize --broadcast | awk '/Deployed to:/ {print $3}'`
    echo $VERIFIER_ADDRESS
-```
+   ```
 
-7. Terapkan kontrak `ZkBank`.
+7. Sebarkan kontrak `ZkBank`.
 
    ```sh
    ZKBANK_ADDRESS=`forge create ZkBank --private-key $ETH_PRIVATE_KEY --broadcast --constructor-args $VERIFIER_ADDRESS 0x199aa62af8c1d562a6ec96e66347bf3240ab2afb5d022c895e6bf6a5e617167b | awk '/Deployed to:/ {print $3}'`
    echo $ZKBANK_ADDRESS
-```
+   ```
 
-   Nilai `0x199..67b` adalah hash Pederson dari status awal `Accounts`. Jika Anda mengubah status awal ini di `server/index.mjs`, Anda dapat menjalankan transaksi untuk melihat hash awal yang dilaporkan oleh bukti zero-knowledge.
+   Nilai `0x199..67b` adalah hash Pederson dari state awal `Accounts`. Jika Anda memodifikasi state awal ini di `server/index.mjs`, Anda dapat menjalankan transaksi untuk melihat hash awal yang dilaporkan oleh bukti tanpa pengetahuan.
 
 8. Jalankan server.
 
    ```sh
    cd ../server
    npm run start
-```
+   ```
 
 9. Jalankan klien di jendela baris perintah yang berbeda.
 
    ```sh
    cd client
    npm run dev
-```
+   ```
 
 10. Jalankan beberapa transaksi.
 
-11. Untuk memverifikasi bahwa status berubah secara onchain, mulai ulang proses server. Lihat bahwa `ZkBank` tidak lagi menerima transaksi, karena nilai hash asli dalam transaksi berbeda dari nilai hash yang disimpan secara onchain.
+11. Untuk memverifikasi bahwa state berubah onchain, mulai ulang proses server. Lihat bahwa `ZkBank` tidak lagi menerima transaksi, karena nilai hash asli dalam transaksi berbeda dari nilai hash yang disimpan onchain.
 
     Ini adalah jenis kesalahan yang diharapkan.
 
-    ```
-    ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
+        ```
+ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
 
     > server@1.0.0 start
     > node --experimental-json-modules index.mjs
@@ -1029,11 +1029,11 @@ Struktur `Accounts` awal.
         address:   0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
         function:  processTransaction(bytes _proof, bytes32[] _publicInputs)
         args:                        (0x0000000000000000000000000000000000000000000000042ab5d6d1986846cf00000000000000000000000000000000000000000000000b75c020998797da7800000000000000000000000000000000000000000000000
-```
+        ```
 
 #### `server/index.mjs` {#server-index-mjs-2}
 
-Perubahan dalam file ini sebagian besar berkaitan dengan pembuatan bukti aktual dan mengirimkannya secara onchain.
+Perubahan dalam file ini sebagian besar berkaitan dengan pembuatan bukti aktual dan pengirimannya onchain.
 
 ```js
 import { exec } from 'child_process'
@@ -1042,7 +1042,7 @@ import util from 'util'
 const execPromise = util.promisify(exec)
 ```
 
-Kita perlu menggunakan [paket Barretenberg](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) untuk membuat bukti aktual untuk dikirim secara onchain. Kita dapat menggunakan paket ini baik dengan menjalankan antarmuka baris perintah (`bb`) atau dengan menggunakan [pustaka JavaScript, `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). Pustaka JavaScript jauh lebih lambat daripada menjalankan kode secara native, jadi kita menggunakan [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) di sini untuk menggunakan baris perintah.
+Kita perlu menggunakan [paket Barretenberg](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) untuk membuat bukti aktual yang akan dikirim onchain. Kita dapat menggunakan paket ini baik dengan menjalankan antarmuka baris perintah (`bb`) atau dengan menggunakan [Pustaka JavaScript, `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). Pustaka JavaScript jauh lebih lambat daripada menjalankan kode secara native, jadi kita menggunakan [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) di sini untuk menggunakan baris perintah.
 
 Perhatikan bahwa jika Anda memutuskan untuk menggunakan `bb.js`, Anda perlu menggunakan versi yang kompatibel dengan versi Noir yang Anda gunakan. Pada saat penulisan, versi Noir saat ini (1.0.0-beta.11) menggunakan `bb.js` versi 0.87.
 
@@ -1060,7 +1060,7 @@ const walletClient = createWalletClient({
 })
 ```
 
-Kunci pribadi ini adalah salah satu akun pra-didanai default di `anvil`. 
+Kunci privat ini adalah salah satu akun pra-dana default di `anvil`. 
 
 ```js
 const generateProof = async (witness, fileID) => {
@@ -1068,12 +1068,12 @@ const generateProof = async (witness, fileID) => {
 
 Hasilkan bukti menggunakan executable `bb`.
 
-```js
+```js 
     const fname = `witness-${fileID}.gz`    
     await fs.writeFile(fname, witness)
 ```
 
-Tulis saksi (witness) ke sebuah file.
+Tulis Saksi ke sebuah file.
 
 ```js
     await execPromise(`bb prove -b ./noir/target/zkBank.json -w ${fname} -o ${fileID} --oracle_hash keccak --output_format fields`)
@@ -1111,7 +1111,7 @@ Bidang publik harus berupa array nilai 32-byte. Namun, karena kita perlu membagi
     const proof = await generateProof(noirResult.witness, `${fromAddress}-${nonce}`)
 ```
 
-Setiap alamat hanya menggunakan setiap nonce sekali sehingga kita dapat menggunakan kombinasi `fromAddress` dan `nonce` sebagai pengidentifikasi unik untuk file saksi dan direktori output.
+Setiap alamat hanya menggunakan setiap nonce sekali sehingga kita dapat menggunakan kombinasi `fromAddress` dan `nonce` sebagai pengidentifikasi unik untuk file Saksi dan direktori output.
 
 ```js
     try {
@@ -1127,14 +1127,14 @@ Setiap alamat hanya menggunakan setiap nonce sekali sehingga kita dapat mengguna
 }
 ```
 
-Kirim transaksi ke chain.
+Kirim transaksi ke rantai.
 
 #### `smart-contracts/src/ZkBank.sol` {#smart-contracts-src-zkbank-sol}
 
 Ini adalah kode onchain yang menerima transaksi.
 
 ```solidity
-// SPDX-License-Identifier: MIT // SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MIT
 
 pragma solidity >=0.8.21;
 
@@ -1150,7 +1150,7 @@ contract ZkBank {
     }
 ```
 
-Kode onchain perlu melacak dua variabel: pemverifikasi (kontrak terpisah yang dibuat oleh `nargo`) dan hash status saat ini.
+Kode onchain perlu melacak dua variabel: pemverifikasi (kontrak terpisah yang dibuat oleh `nargo`) dan hash state saat ini.
 
 ```solidity
     event TransactionProcessed(
@@ -1160,7 +1160,7 @@ Kode onchain perlu melacak dua variabel: pemverifikasi (kontrak terpisah yang di
     );
 ```
 
-Setiap kali status berubah, kita memancarkan peristiwa `TransactionProcessed`.
+Setiap kali state berubah, kita memancarkan peristiwa `TransactionProcessed`.
 
 ```solidity
     function processTransaction(
@@ -1176,19 +1176,19 @@ Fungsi ini memproses transaksi. Ia mendapatkan bukti (sebagai `bytes`) dan input
             "Wrong old state hash");
 ```
 
-Bukti zero-knowledge harus berupa bahwa transaksi berubah dari hash kita saat ini ke hash yang baru.
+Bukti tanpa pengetahuan harus berupa bahwa transaksi berubah dari hash kita saat ini ke yang baru.
 
 ```solidity
         myVerifier.verify(_proof, _publicFields);
 ```
 
-Panggil kontrak pemverifikasi untuk memverifikasi bukti zero-knowledge. Langkah ini mengembalikan transaksi jika bukti zero-knowledge salah.
+Panggil kontrak pemverifikasi untuk memverifikasi bukti tanpa pengetahuan. Langkah ini mengembalikan transaksi jika bukti tanpa pengetahuan salah.
 
 ```solidity
         currentStateHash = _publicFields[1];
 
         emit TransactionProcessed(
-            _publicFields[2]<&lt;128 | _publicFields[3],
+            _publicFields[2]<<128 | _publicFields[3],
             _publicFields[0],
             _publicFields[1]
         );
@@ -1196,60 +1196,60 @@ Panggil kontrak pemverifikasi untuk memverifikasi bukti zero-knowledge. Langkah 
 }
 ```
 
-Jika semuanya terverifikasi, perbarui hash status ke nilai baru dan pancarkan peristiwa `TransactionProcessed`.
+Jika semuanya sesuai, perbarui hash state ke nilai baru dan pancarkan peristiwa `TransactionProcessed`.
 
 ## Penyalahgunaan oleh komponen terpusat {#abuses}
 
 Keamanan informasi terdiri dari tiga atribut:
 
-- _Kerahasiaan_, pengguna tidak dapat membaca informasi yang tidak diizinkan untuk mereka baca.
+- _Kerahasiaan_, pengguna tidak dapat membaca informasi yang tidak berhak mereka baca.
 - _Integritas_, informasi tidak dapat diubah kecuali oleh pengguna yang berwenang dengan cara yang sah.
 - _Ketersediaan_, pengguna yang berwenang dapat menggunakan sistem.
 
-Pada sistem ini, integritas disediakan melalui bukti zero-knowledge. Ketersediaan jauh lebih sulit untuk dijamin, dan kerahasiaan tidak mungkin, karena bank harus mengetahui saldo setiap akun dan semua transaksi. Tidak ada cara untuk mencegah entitas yang memiliki informasi untuk membagikan informasi tersebut.
+Pada sistem ini, integritas disediakan melalui bukti tanpa pengetahuan. Ketersediaan jauh lebih sulit untuk dijamin, dan kerahasiaan adalah hal yang mustahil, karena bank harus mengetahui saldo setiap akun dan semua transaksi. Tidak ada cara untuk mencegah entitas yang memiliki informasi untuk membagikan informasi tersebut.
 
-Mungkin saja untuk membuat bank yang benar-benar rahasia menggunakan [alamat siluman](https://vitalik.eth.limo/general/2023/01/20/stealth.html), tetapi itu di luar cakupan artikel ini.
+Mungkin saja untuk membuat bank yang benar-benar rahasia menggunakan [alamat siluman](https://vitalik.eth.limo/general/2023/01/20/stealth.html), tetapi hal itu di luar cakupan artikel ini.
 
 ### Informasi palsu {#false-info}
 
 Salah satu cara server dapat melanggar integritas adalah dengan memberikan informasi palsu saat [data diminta](https://github.com/qbzzt/250911-zk-bank/blob/03-smart-contracts/server/index.mjs#L278-L291).
 
-Untuk mengatasi ini, kita dapat menulis program Noir kedua yang menerima akun sebagai input privat dan alamat yang informasinya diminta sebagai input publik. Outputnya adalah saldo dan nonce dari alamat tersebut, dan hash dari akun.
+Untuk mengatasi hal ini, kita dapat menulis program Noir kedua yang menerima akun sebagai input privat dan alamat yang informasinya diminta sebagai input publik. Outputnya adalah saldo dan nonce dari alamat tersebut, serta hash dari akun-akun tersebut.
 
-Tentu saja, bukti ini tidak dapat diverifikasi secara onchain, karena kita tidak ingin memposting nonce dan saldo secara onchain. Namun, ini dapat diverifikasi oleh kode klien yang berjalan di browser.
+Tentu saja, bukti ini tidak dapat diverifikasi onchain, karena kita tidak ingin memposting nonce dan saldo onchain. Namun, ini dapat diverifikasi oleh kode klien yang berjalan di peramban.
 
 ### Transaksi paksa {#forced-txns}
 
-Mekanisme biasa untuk memastikan ketersediaan dan mencegah penyensoran pada L2 adalah [transaksi paksa](https://docs.optimism.io/stack/transactions/forced-transaction). Tetapi transaksi paksa tidak digabungkan dengan bukti zero-knowledge. Server adalah satu-satunya entitas yang dapat memverifikasi transaksi.
+Mekanisme yang biasa digunakan untuk memastikan ketersediaan dan mencegah penyensoran di L2 adalah [transaksi paksa](https://docs.optimism.io/stack/transactions/forced-transaction). Namun, transaksi paksa tidak dapat digabungkan dengan bukti tanpa pengetahuan. Server adalah satu-satunya entitas yang dapat memverifikasi transaksi.
 
-Kita dapat memodifikasi `smart-contracts/src/ZkBank.sol` untuk menerima transaksi paksa dan mencegah server mengubah status hingga transaksi tersebut diproses. Namun, ini membuka kita terhadap serangan penolakan layanan (denial-of-service) yang sederhana. Bagaimana jika transaksi paksa tidak valid dan karenanya tidak mungkin diproses?
+Kita dapat memodifikasi `smart-contracts/src/ZkBank.sol` untuk menerima transaksi paksa dan mencegah server mengubah state hingga transaksi tersebut diproses. Namun, hal ini membuka celah bagi kita terhadap serangan penolakan layanan (denial-of-service) yang sederhana. Bagaimana jika transaksi paksa tidak valid dan karenanya tidak mungkin diproses?
 
-Solusinya adalah memiliki bukti zero-knowledge bahwa transaksi paksa tidak valid. Ini memberi server tiga opsi:
+Solusinya adalah dengan memiliki bukti tanpa pengetahuan bahwa transaksi paksa tersebut tidak valid. Ini memberi server tiga opsi:
 
-- Memproses transaksi paksa, memberikan bukti zero-knowledge bahwa itu telah diproses dan hash status baru.
-- Menolak transaksi paksa, dan memberikan bukti zero-knowledge ke kontrak bahwa transaksi tersebut tidak valid (alamat tidak diketahui, nonce buruk, atau saldo tidak mencukupi).
-- Mengabaikan transaksi paksa. Tidak ada cara untuk memaksa server untuk benar-benar memproses transaksi, tetapi itu berarti seluruh sistem tidak tersedia.
+- Memproses transaksi paksa, memberikan bukti tanpa pengetahuan bahwa transaksi tersebut telah diproses dan hash state yang baru.
+- Menolak transaksi paksa, dan memberikan bukti tanpa pengetahuan kepada kontrak bahwa transaksi tersebut tidak valid (alamat tidak diketahui, nonce buruk, atau saldo tidak mencukupi).
+- Mengabaikan transaksi paksa. Tidak ada cara untuk memaksa server agar benar-benar memproses transaksi tersebut, tetapi ini berarti seluruh sistem menjadi tidak tersedia.
 
-#### Obligasi ketersediaan {#avail-bonds}
+#### Jaminan ketersediaan {#avail-bonds}
 
-Dalam implementasi kehidupan nyata, mungkin akan ada semacam motif keuntungan untuk menjaga server tetap berjalan. Kita dapat memperkuat insentif ini dengan meminta server memposting obligasi ketersediaan yang dapat dibakar oleh siapa saja jika transaksi paksa tidak diproses dalam periode tertentu.
+Dalam implementasi di dunia nyata, mungkin akan ada semacam motif keuntungan untuk menjaga server tetap berjalan. Kita dapat memperkuat insentif ini dengan meminta server memposting jaminan ketersediaan yang dapat dibakar oleh siapa saja jika transaksi paksa tidak diproses dalam periode tertentu.
 
 ### Kode Noir yang buruk {#bad-noir-code}
 
-Biasanya, untuk membuat orang mempercayai kontrak pintar, kita mengunggah kode sumber ke [penjelajah blok](https://eth.blockscout.com/address/0x7D16d2c4e96BCFC8f815E15b771aC847EcbDB48b?tab=contract). Namun, dalam kasus bukti zero-knowledge, itu tidak cukup.
+Biasanya, agar orang-orang mempercayai kontrak pintar, kita mengunggah kode sumber ke [penjelajah blok](https://eth.blockscout.com/address/0x7D16d2c4e96BCFC8f815E15b771aC847EcbDB48b?tab=contract). Namun, dalam kasus bukti tanpa pengetahuan, hal itu tidaklah cukup.
 
-`Verifier.sol` berisi kunci verifikasi, yang merupakan fungsi dari program Noir. Namun, kunci itu tidak memberi tahu kita apa program Noir itu. Untuk benar-benar memiliki solusi tepercaya, Anda perlu mengunggah program Noir (dan versi yang membuatnya). Jika tidak, bukti zero-knowledge mungkin mencerminkan program yang berbeda, yang memiliki pintu belakang (back door).
+`Verifier.sol` berisi kunci verifikasi, yang merupakan fungsi dari program Noir. Namun, kunci tersebut tidak memberi tahu kita apa program Noir itu. Untuk benar-benar memiliki solusi tepercaya, Anda perlu mengunggah program Noir (dan versi yang membuatnya). Jika tidak, bukti tanpa pengetahuan mungkin mencerminkan program yang berbeda, program yang memiliki pintu belakang (back door).
 
-Hingga penjelajah blok mulai mengizinkan kita untuk mengunggah dan memverifikasi program Noir, Anda harus melakukannya sendiri (sebaiknya ke [IPFS](/developers/tutorials/ipfs-decentralized-ui/)). Kemudian pengguna yang canggih akan dapat mengunduh kode sumber, mengkompilasinya sendiri, membuat `Verifier.sol`, dan memverifikasi bahwa itu identik dengan yang ada di onchain.
+Hingga penjelajah blok mulai mengizinkan kita untuk mengunggah dan memverifikasi program Noir, Anda harus melakukannya sendiri (sebaiknya ke [IPFS](/developers/tutorials/ipfs-decentralized-ui/)). Kemudian pengguna tingkat lanjut akan dapat mengunduh kode sumber, mengompilasinya sendiri, membuat `Verifier.sol`, dan memverifikasi bahwa itu identik dengan yang ada onchain.
 
 ## Kesimpulan {#conclusion}
 
-Aplikasi tipe plasma memerlukan komponen terpusat sebagai penyimpanan informasi. Ini membuka potensi kerentanan tetapi, sebagai imbalannya, memungkinkan kita untuk menjaga privasi dengan cara yang tidak tersedia di blockchain itu sendiri. Dengan bukti zero-knowledge kita dapat memastikan integritas dan mungkin membuatnya menguntungkan secara ekonomi bagi siapa pun yang menjalankan komponen terpusat untuk mempertahankan ketersediaan.
+Aplikasi tipe Plasma memerlukan komponen terpusat sebagai penyimpanan informasi. Hal ini membuka potensi kerentanan tetapi, sebagai imbalannya, memungkinkan kita untuk menjaga privasi dengan cara yang tidak tersedia di rantai blok itu sendiri. Dengan bukti tanpa pengetahuan, kita dapat memastikan integritas dan mungkin membuatnya menguntungkan secara ekonomi bagi siapa pun yang menjalankan komponen terpusat tersebut untuk mempertahankan ketersediaan.
 
-[Lihat di sini untuk lebih banyak karya saya](https://cryptodocguy.pro/).
+[Lihat di sini untuk karya saya yang lain](https://cryptodocguy.pro/).
 
 ## Ucapan Terima Kasih {#acknowledgements}
 
-- Josh Crites membaca draf artikel ini dan membantu saya dengan masalah Noir yang rumit.
+- Josh Crites membaca draf artikel ini dan membantu saya mengatasi masalah Noir yang rumit.
 
-Setiap kesalahan yang tersisa adalah tanggung jawab saya.
+Segala kesalahan yang tersisa adalah tanggung jawab saya.

@@ -1,7 +1,7 @@
 "use client"
-
 import { useContext } from "react"
 import { X } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/buttons/Button"
 
@@ -16,11 +16,10 @@ import FixedDot from "./FixedDot"
 import { useFeedbackWidget } from "./useFeedbackWidget"
 
 import { FeedbackWidgetContext } from "@/contexts/FeedbackWidgetContext"
-import { useTranslation } from "@/hooks/useTranslation"
 
 const FeedbackWidget = () => {
   const { showFeedbackWidget } = useContext(FeedbackWidgetContext)
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
   const {
     offsetBottom,
     cancelRef,
@@ -50,35 +49,41 @@ const FeedbackWidget = () => {
         </PopoverTrigger>
 
         <PopoverContent
-          className="mx-2 w-80 max-w-[calc(100vw_-_1rem)] rounded bg-background p-4 sm:p-8"
+          className="mx-2 w-80 max-w-[calc(100vw_-_1rem)] rounded-base bg-background p-4"
+          aria-labelledby="feedback-widget-title"
           data-testid="feedback-widget-modal"
         >
-          <div className="flex items-start gap-2">
-            <header className="me-0 flex-1 p-0 text-xl font-bold">
-              {feedbackSubmitted
-                ? t("feedback-widget-thank-you-title")
-                : t("feedback-widget-prompt")}
-            </header>
+          <div className="flex justify-end">
             <PopoverClose asChild>
               <Button
                 variant="ghost"
-                className="w-8 py-0 text-body"
+                className="w-8 py-0 text-body [&>svg]:size-6"
                 size="sm"
+                aria-label={t("close")}
                 ref={cancelRef}
               >
-                <X className="h-fit w-5" />
+                <X />
               </Button>
             </PopoverClose>
           </div>
 
+          <h2
+            id="feedback-widget-title"
+            className="text-center text-xl font-bold"
+          >
+            {feedbackSubmitted
+              ? t("feedback-widget-thank-you-title")
+              : t("feedback-widget-prompt")}
+          </h2>
+
           {feedbackSubmitted && (
             <>
-              <div className="text-center text-md font-normal leading-5">
+              <p className="mt-space-half text-center text-md">
                 {t("feedback-widget-thank-you-subtitle")}
-              </div>
-              <div className="text-center text-xs font-bold leading-4 tracking-wide text-body-medium">
+              </p>
+              <p className="mt-space-half text-center text-xs text-body-medium">
                 {t("feedback-widget-thank-you-timing")}
-              </div>
+              </p>
             </>
           )}
 

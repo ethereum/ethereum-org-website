@@ -1,0 +1,295 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/tutorials/how-to-mock-solidity-contracts-for-testing/index.md",
+  "generatedAt": "2026-06-18T00:00:55.460Z",
+  "rootHash": "68b2eed9a86d",
+  "tree": {
+    "contentHash": "0a2999769811",
+    "anchorHash": "e6e3d4086947",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "d7347c7196b2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "dc2b28c91eed",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "8124b9cb5d60"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:tags": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "392524de3664"
+      },
+      "frontmatter:skill": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "94e6f02a5aca"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "30df732d739c"
+      },
+      "frontmatter:published": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "051b5e301f3e"
+      },
+      "frontmatter:source": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "3253f6ed1af7"
+      },
+      "frontmatter:sourceUrl": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "1cfbca0b125d"
+      },
+      "link:0": {
+        "contentHash": "a556c6cfdfab",
+        "anchorHash": "aac6eef3da40"
+      },
+      "prose:1": {
+        "contentHash": "cd320f85c453",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "unit-testing-contracts-with-mocks": {
+        "contentHash": "2c4604b8609b",
+        "anchorHash": "a2223d3e3169",
+        "labelHash": "5f30f6e4082e",
+        "children": {
+          "_label": {
+            "contentHash": "5f30f6e4082e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "c2c34cd57a98",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "0de949ee01f5",
+            "anchorHash": "973de95ec775"
+          },
+          "prose:2": {
+            "contentHash": "834f2754688b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "example-private-erc20": {
+        "contentHash": "a139907d7e05",
+        "anchorHash": "b2ed3262fafc",
+        "labelHash": "dd7b16ca47ac",
+        "children": {
+          "_label": {
+            "contentHash": "dd7b16ca47ac",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "4cdabe5450c8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "225d4a8b7e56",
+            "anchorHash": "544740080a30"
+          },
+          "prose:2": {
+            "contentHash": "00bf3977506d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:4": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "f63e02c36b6e"
+          },
+          "prose:0": {
+            "contentHash": "c6f4f5a3f40c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:6": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "f6db24fd78e1"
+          },
+          "prose:8": {
+            "contentHash": "d61cd190f4fb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e0c24598aeb0"
+          },
+          "prose:9": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "b891486813ba"
+          },
+          "prose:10": {
+            "contentHash": "2c12080e79ec",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e2efdd7db924"
+          },
+          "prose:11": {
+            "contentHash": "d6c166fc2dfc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "8012de9e19dd"
+          },
+          "prose:12": {
+            "contentHash": "5324ca7e51a9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:4": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "973245734724"
+          },
+          "prose:13": {
+            "contentHash": "d9e38df532e2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:5": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "1551a71b1691"
+          },
+          "prose:14": {
+            "contentHash": "e9cabca92466",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:6": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "5b843b0a4044"
+          },
+          "prose:15": {
+            "contentHash": "90a6bf5f9b54",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "6d0d267b5052",
+            "anchorHash": "92ac0e60abd8"
+          },
+          "prose:16": {
+            "contentHash": "4f8880572819",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2",
+          "code-fence:4",
+          "prose:0",
+          "code-fence:6",
+          "prose:8",
+          "inline-code:0",
+          "prose:9",
+          "inline-code:1",
+          "prose:10",
+          "inline-code:2",
+          "prose:11",
+          "inline-code:3",
+          "prose:12",
+          "inline-code:4",
+          "prose:13",
+          "inline-code:5",
+          "prose:14",
+          "inline-code:6",
+          "prose:15",
+          "link:7",
+          "prose:16"
+        ]
+      },
+      "mocking-many-contracts": {
+        "contentHash": "ecb303a9d8b8",
+        "anchorHash": "b674a40a7598",
+        "labelHash": "83ed95ae9b53",
+        "children": {
+          "_label": {
+            "contentHash": "83ed95ae9b53",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "c7943d83ea3f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "2fc9a6c00101",
+            "anchorHash": "4045d041632d"
+          },
+          "prose:2": {
+            "contentHash": "c8422320dd95",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "mocking-can-be-even-more-powerful": {
+        "contentHash": "817f5b334e13",
+        "anchorHash": "e74d262d3cb8",
+        "labelHash": "d8c56482bb43",
+        "children": {
+          "_label": {
+            "contentHash": "d8c56482bb43",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "f3c3599eff18",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "dc6f17bbec82"
+          },
+          "prose:2": {
+            "contentHash": "7631e4864e48",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "inline-code:0",
+          "prose:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:author",
+      "frontmatter:lang",
+      "frontmatter:tags",
+      "frontmatter:skill",
+      "frontmatter:breadcrumb",
+      "frontmatter:published",
+      "frontmatter:source",
+      "frontmatter:sourceUrl",
+      "link:0",
+      "prose:1",
+      "unit-testing-contracts-with-mocks",
+      "example-private-erc20",
+      "mocking-many-contracts",
+      "mocking-can-be-even-more-powerful"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}

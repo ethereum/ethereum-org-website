@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "locale": "ja",
+  "translatedAt": "2026-05-26T09:51:48.935Z",
+  "englishManifestHash": "4a31d9eb5f64",
+  "placeholderOrder": [
+    "HTML-TAG-0",
+    "HTML-TAG-1",
+    "HTML-TAG-2",
+    "HTML-TAG-3",
+    "HTML-TAG-4",
+    "HTML-TAG-5",
+    "HTML-TAG-6"
+  ],
+  "placeholderMap": {
+    "HTML-TAG-0": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/"
+      }
+    },
+    "HTML-TAG-1": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://ethresear.ch"
+      }
+    },
+    "HTML-TAG-2": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://ethereum-magicians.org"
+      }
+    },
+    "HTML-TAG-3": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eips.ethereum.org"
+      }
+    },
+    "HTML-TAG-4": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#node"
+      }
+    },
+    "HTML-TAG-5": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#validator"
+      }
+    },
+    "HTML-TAG-6": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#layer-2"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-05-26T09:51:48.935Z",
+      "status": "success"
+    }
+  }
+}

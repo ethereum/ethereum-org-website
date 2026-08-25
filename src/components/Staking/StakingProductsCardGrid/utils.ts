@@ -90,21 +90,9 @@ const getDiversityOfClients = (
 const getFlagFromBoolean = (bool: boolean) =>
   bool ? FlagType.VALID : FlagType.FALSE
 
-const getBrandProperties = ({
-  hue,
-  SAT,
-  LUM,
-  ...rest
-}: Pick<
-  StakingCategoryType,
-  "name" | "imageName" | "hue" | "url" | "matomo"
-> & { SAT: string; LUM: string }): Pick<
-  Product,
-  "name" | "imageName" | "color" | "url" | "matomo"
-> => ({
-  color: `hsla(${hue}, ${SAT}, ${LUM}, 1)`,
-  ...rest,
-})
+const getBrandProperties = (
+  props: Pick<StakingCategoryType, "name" | "imageName" | "url" | "matomo">
+): Pick<Product, "name" | "imageName" | "url" | "matomo"> => props
 
 const getTagProperties = (
   props: Pick<StakingCategoryType, "platforms" | "ui">

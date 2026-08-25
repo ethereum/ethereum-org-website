@@ -4,11 +4,10 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  ethereumCommunityOrganization,
-  ethereumFoundationOrganization,
-} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function QuizzesPageJsonLD({
   locale,
@@ -17,7 +16,8 @@ export default async function QuizzesPageJsonLD({
   locale: Lang | undefined
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations("page-quizzes")
+  const t = await getTranslations("learn-quizzes")
+  const tCommon = await getTranslations("common")
 
   const url = normalizeUrlForJsonLd(locale, `/quizzes/`)
 
@@ -30,21 +30,17 @@ export default async function QuizzesPageJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
         "@id": url,
-        name: t("common:quizzes-title"),
+        name: tCommon("quizzes-title"),
         description: t("quizzes-subtitle"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityOrganization],
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -57,13 +53,13 @@ export default async function QuizzesPageJsonLD({
             {
               "@type": "ListItem",
               position: 2,
-              name: t("common:quizzes-title"),
+              name: tCommon("quizzes-title"),
               item: url,
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
       },
     ],
   }

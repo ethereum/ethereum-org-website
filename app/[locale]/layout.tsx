@@ -1,6 +1,5 @@
 import { Suspense } from "react"
 import { pick } from "lodash"
-import { IBM_Plex_Mono, Inter } from "next/font/google"
 import { notFound } from "next/navigation"
 import { getMessages, setRequestLocale } from "next-intl/server"
 
@@ -10,9 +9,13 @@ import Matomo from "@/components/Matomo"
 
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
+import { toLanguageTag } from "@/lib/utils/url"
+
+import { ibmPlexMono, inter } from "../fonts"
 
 import Providers from "./providers"
 
+import "@rainbow-me/rainbowkit/styles.css"
 import "@/styles/global.css"
 
 import { routing } from "@/i18n/routing"
@@ -22,20 +25,6 @@ import { BaseLayout } from "@/layouts/BaseLayout"
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }))
 }
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-  preload: true,
-})
-
-const ibmPlexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400"],
-  display: "swap",
-  variable: "--font-mono",
-})
 
 export default async function LocaleLayout(props: {
   children: React.ReactNode
@@ -65,8 +54,11 @@ export default async function LocaleLayout(props: {
 
   return (
     <html
-      lang={locale}
+      lang={toLanguageTag(locale)}
       className={`${inter.variable} ${ibmPlexMono.variable}`}
+      // Lets Next disable smooth scroll during route transitions so it lands
+      // at the true top instead of short (behind the sticky nav).
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
       <body>

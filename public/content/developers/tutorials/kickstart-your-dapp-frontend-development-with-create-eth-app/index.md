@@ -12,7 +12,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-Last time we looked at [the big picture of Solidity](https://soliditydeveloper.com/solidity-overview-2020) and already mentioned the [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Now you will find out how to use it, what features are integrated and additional ideas on how to expand on it. Started by Paul Razvan Berg, the founder of [Sablier](http://sablier.com/), this app will kickstart your frontend development and comes with several optional integrations to choose from.
+Last time we looked at [the big picture of Solidity](https://soliditydeveloper.com/solidity-overview-2020) and already mentioned the [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Now you will find out how to use it, what features are integrated and additional ideas on how to expand on it. Started by Paul Razvan Berg, the founder of [Sablier](https://sablier.com/), this app will kickstart your frontend development and comes with several optional integrations to choose from.
 
 ## Installation {#installation}
 

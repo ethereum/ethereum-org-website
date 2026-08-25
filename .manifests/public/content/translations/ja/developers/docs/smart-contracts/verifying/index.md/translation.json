@@ -1,0 +1,282 @@
+{
+  "version": 1,
+  "locale": "ja",
+  "translatedAt": "2026-06-17T23:08:30.421Z",
+  "englishManifestHash": "df964012ae1c",
+  "placeholderOrder": [
+    "LINK-efc0b7",
+    "LINK-444a51",
+    "LINK-71c926",
+    "LINK-c3b131",
+    "LINK-f7cb4b",
+    "LINK-651521",
+    "LINK-974120",
+    "LINK-68e15e",
+    "LINK-430500",
+    "LINK-3689a8",
+    "LINK-a286a5",
+    "LINK-924bee",
+    "LINK-92170b",
+    "IMAGE-c82a91",
+    "LINK-f10d1a",
+    "LINK-367dd1",
+    "LINK-cca115",
+    "LINK-8ac642",
+    "LINK-58b463",
+    "LINK-1eba21",
+    "LINK-37fd1e",
+    "LINK-4b07e0",
+    "LINK-febcba",
+    "LINK-5f6209",
+    "LINK-593d04",
+    "LINK-a47c37",
+    "LINK-ff3046",
+    "LINK-541dd0",
+    "LINK-0ea75a",
+    "LINK-ad7f85",
+    "LINK-232447",
+    "LINK-041e10",
+    "LINK-b04b60",
+    "LINK-f74f1d",
+    "LINK-ab661f",
+    "LINK-6a2370",
+    "LINK-dc69fc",
+    "LINK-9cc35c"
+  ],
+  "placeholderMap": {
+    "IMAGE-c82a91": {
+      "type": "image",
+      "values": {
+        "path": "./source-code-verification.png"
+      }
+    },
+    "LINK-efc0b7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-444a51": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/formal-verification/"
+      }
+    },
+    "LINK-71c926": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-f7cb4b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/compiling/"
+      }
+    },
+    "LINK-c3b131": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/languages/"
+      }
+    },
+    "LINK-651521": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.15/metadata.html"
+      }
+    },
+    "LINK-974120": {
+      "type": "link",
+      "values": {
+        "url": "https://playground.sourcify.dev"
+      }
+    },
+    "LINK-68e15e": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.sourcify.dev/docs/full-vs-partial-match/"
+      }
+    },
+    "LINK-430500": {
+      "type": "link",
+      "values": {
+        "url": "https://samczsun.com/hiding-in-plain-sight/"
+      }
+    },
+    "LINK-3689a8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/dapps/"
+      }
+    },
+    "LINK-a286a5": {
+      "type": "link",
+      "values": {
+        "url": "https://www.trustnodes.com/2018/11/10/concerns-rise-over-backdoored-smart-contracts"
+      }
+    },
+    "LINK-924bee": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/deploying/"
+      }
+    },
+    "LINK-92170b": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.14/contracts.html#constructor"
+      }
+    },
+    "LINK-f10d1a": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.sourcify.dev/docs/immutables/"
+      }
+    },
+    "LINK-367dd1": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-and-analytics/block-explorers/"
+      }
+    },
+    "LINK-cca115": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/verifyContract"
+      }
+    },
+    "LINK-8ac642": {
+      "type": "link",
+      "values": {
+        "url": "https://info.etherscan.com/types-of-contract-verification/"
+      }
+    },
+    "LINK-58b463": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/contractsVerified/"
+      }
+    },
+    "LINK-1eba21": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/etherscan-blog/verifying-contracts-on-etherscan-f995ab772327"
+      }
+    },
+    "LINK-37fd1e": {
+      "type": "link",
+      "values": {
+        "url": "https://blockscout.com/"
+      }
+    },
+    "LINK-4b07e0": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/contract-verification"
+      }
+    },
+    "LINK-febcba": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/verified-contracts"
+      }
+    },
+    "LINK-5f6209": {
+      "type": "link",
+      "values": {
+        "url": "https://sourcify.dev/#/verifier"
+      }
+    },
+    "LINK-593d04": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.sourcify.dev/docs/chains"
+      }
+    },
+    "LINK-a47c37": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/compiling/#web-applications"
+      }
+    },
+    "LINK-ff3046": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.15/natspec-format.html"
+      }
+    },
+    "LINK-ad7f85": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.sourcify.dev/docs/repository/"
+      }
+    },
+    "LINK-0ea75a": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ipfs.io/concepts/what-is-ipfs/#what-is-ipfs"
+      }
+    },
+    "LINK-541dd0": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.storacha.network/concepts/content-addressing/"
+      }
+    },
+    "LINK-232447": {
+      "type": "link",
+      "values": {
+        "url": "https://sourcify.dev/#/verifier"
+      }
+    },
+    "LINK-041e10": {
+      "type": "link",
+      "values": {
+        "url": "https://soliditylang.org/blog/2020/06/25/sourcify-faq/"
+      }
+    },
+    "LINK-b04b60": {
+      "type": "link",
+      "values": {
+        "url": "https://tenderly.co/"
+      }
+    },
+    "LINK-f74f1d": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.tenderly.co/monitoring/contract-verification"
+      }
+    },
+    "LINK-ab661f": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.tenderly.co/contract-verification"
+      }
+    },
+    "LINK-6a2370": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.tenderly.co/contract-verification/hardhat"
+      }
+    },
+    "LINK-dc69fc": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.tenderly.co/monitoring/smart-contract-verification/verifying-contracts-using-cli"
+      }
+    },
+    "LINK-9cc35c": {
+      "type": "link",
+      "values": {
+        "url": "https://programtheblockchain.com/posts/2018/01/16/verifying-contract-source-code/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T23:08:30.421Z",
+      "status": "success"
+    }
+  }
+}

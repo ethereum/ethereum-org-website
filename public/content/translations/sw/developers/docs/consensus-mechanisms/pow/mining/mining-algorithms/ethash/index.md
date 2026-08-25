@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: Muonekano wa kina wa kanuni ya Ethash.
+description: Mtazamo wa kina wa algoriti ya Ethash.
 lang: sw
 ---
 
@@ -8,25 +8,25 @@ lang: sw
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash ilikuwa algoriti ya uchimbaji wa uthibitishaji-wa-kazi ya Ethereum. Uthibitishaji-wa-kazi sasa **umezimwa kabisa** na Ethereum sasa inalindwa kwa kutumia [uthibitishaji-wa-dau](/developers/docs/consensus-mechanisms/pos/) badala yake. Soma zaidi kuhusu [Muungano](/roadmap/merge/), [uthibitishaji-wa-dau](/developers/docs/consensus-mechanisms/pos/) na [kusimamisha](/staking/). Ukurasa huu ni kwa ajili ya maslahi ya kihistoria!
+   Ethash ilikuwa algoriti ya uchimbaji ya Uthibitisho wa Kazi (PoW) wa Ethereum. Uthibitisho wa Kazi sasa **umezimwa kabisa** na Ethereum sasa inalindwa kwa kutumia [Uthibitisho wa Dau (PoS)](/developers/docs/consensus-mechanisms/pos/) badala yake. Soma zaidi kuhusu [Unganisho](/roadmap/merge/), [Uthibitisho wa Dau (PoS)](/developers/docs/consensus-mechanisms/pos/) na [uwekaji dhamana](/staking/). Ukurasa huu ni kwa ajili ya maslahi ya kihistoria!  
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Ethash ni toleo lililobadilishwa la kanuni ya [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto). Uthibitishaji-wa-kazi wa Ethash ni [ngumu kwa kumbukumbu](https://wikipedia.org/wiki/Memory-hard_function), ambayo ilidhaniwa kufanya kanuni hiyo iwe sugu kwa ASIC. ASIC za Ethash hatimaye zilitengenezwa lakini uchimbaji wa GPU ulikuwa bado chaguo linalowezekana hadi uthibitishaji-wa-kazi ulipozimwa. Ethash bado inatumika kuchimba sarafu nyingine kwenye mitandao mingine isiyo ya Ethereum ya uthibitishaji-wa-kazi.
+Ethash ni toleo lililobadilishwa la algoriti ya [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto). Uthibitisho wa Kazi (PoW) wa Ethash ni [mgumu kwa kumbukumbu](https://wikipedia.org/wiki/Memory-hard_function), jambo ambalo lilifikiriwa kuifanya algoriti hiyo kustahimili ASIC. ASIC za Ethash hatimaye zilitengenezwa lakini uchimbaji wa GPU bado ulikuwa chaguo linalofaa hadi Uthibitisho wa Kazi ulipozimwa. Ethash bado inatumika kuchimba sarafu nyingine kwenye mitandao mingine ya Uthibitisho wa Kazi isiyo ya Ethereum.
 
-## Je, Ethash hufanya kazi vipi? {#how-does-ethash-work}
+## Je, Ethash inafanyaje kazi? {#how-does-ethash-work}
 
-Ugumu wa kumbukumbu unafikiwa kwa kanuni ya uthibitisho wa kazi inayohitaji kuchagua vijisehemu vya rasilimali isiyobadilika kutegemeana na nonce na kichwa cha bloku. Rasilimali hii (ukubwa wa gigabaiti chache) inaitwa DAG. DAG hubadilishwa kila baada ya bloku 30,000, dirisha la takriban saa 125 linaloitwa epoch (takriban siku 5.2) na huchukua muda kutengenezwa. Kwa kuwa DAG inategemea tu urefu wa bloku, inaweza kutengenezwa kabla, lakini kama sivyo wateja wanahitaji kusubiri hadi mwisho wa mchakato huu ili kutoa bloku. Ikiwa wateja hawatengenezi kabla na kuhifadhi DAG kabla ya wakati, mtandao unaweza kukumbwa na ucheleweshaji mkubwa wa bloku katika kila mabadiliko ya epoch. Kumbuka kwamba DAG haihitaji kutengenezwa ili kuthibitisha uthibitishaji-wa-kazi, kimsingi kuruhusu uthibitishaji na CPU ya chini na kumbukumbu ndogo.
+Ugumu wa kumbukumbu unafikiwa kwa algoriti ya Uthibitisho wa Kazi (PoW) inayohitaji kuchagua vijisehemu vya rasilimali isiyobadilika inayotegemea nonsi na kichwa cha kizuizi. Rasilimali hii (yenye ukubwa wa gigabaiti chache) inaitwa DAG. DAG inabadilishwa kila vitalu 30000, dirisha la saa ~125 linaloitwa kipindi (takriban siku 5.2) na inachukua muda kuzalisha. Kwa kuwa DAG inategemea tu urefu wa kitalu, inaweza kuzalishwa mapema, lakini ikiwa haijazalishwa mteja anahitaji kusubiri hadi mwisho wa mchakato huu ili kuzalisha kitalu. Ikiwa wateja hawatazalisha mapema na kuhifadhi DAG kwenye kache kabla ya wakati mtandao unaweza kupata ucheleweshaji mkubwa wa kitalu kwenye kila mabadiliko ya kipindi. Kumbuka kwamba DAG haihitaji kuzalishwa kwa ajili ya kuthibitisha Uthibitisho wa Kazi kimsingi ikiruhusu uthibitishaji kwa CPU ya chini na kumbukumbu ndogo.
 
-Njia ya jumla ambayo kanuni huchukua ni kama ifuatavyo:
+Njia ya jumla ambayo algoriti inachukua ni kama ifuatavyo:
 
-1. Kuna **mbegu** ambayo inaweza kukokotolewa kwa kila bloku kwa kuchanganua vichwa vya bloku hadi kufikia hatua hiyo.
-2. Kutoka kwenye mbegu, mtu anaweza kukokotoa **kache bandia ya nasibu ya MB 16**. Wateja wepesi huhifadhi kache.
-3. Kutoka kwenye kache, tunaweza kutengeneza **seti ya data ya GB 1**, yenye sifa kwamba kila kipengee katika seti ya data kinategemea tu idadi ndogo ya vipengee kutoka kwenye kache. Wateja kamili na wachimbaji huhifadhi seti ya data. Seti ya data hukua sawasawa na wakati.
-4. Uchimbaji unahusisha kuchukua vipande vya nasibu vya seti ya data na kuviweka kwenye hashi pamoja. Uthibitishaji unaweza kufanywa na kumbukumbu ndogo kwa kutumia kache kutengeneza upya vipande maalum vya seti ya data unavyohitaji, hivyo unahitaji tu kuhifadhi kache.
+1. Kuna **mbegu** ambayo inaweza kukokotolewa kwa kila kitalu kwa kukagua vichwa vya kizuizi hadi wakati huo.
+2. Kutoka kwa mbegu, mtu anaweza kukokotoa **kache ya nasibu bandia ya MB 16**. Wateja wepesi huhifadhi kache.
+3. Kutoka kwa kache, tunaweza kuzalisha **seti ya data ya GB 1**, yenye sifa kwamba kila kipengee katika seti ya data kinategemea idadi ndogo tu ya vipengee kutoka kwenye kache. Wateja kamili na wachimbaji huhifadhi seti ya data. Seti ya data inakua kwa mstari kulingana na wakati.
+4. Uchimbaji unahusisha kuchukua vipande vya nasibu vya seti ya data na kuviheshi pamoja. Uthibitishaji unaweza kufanywa kwa kumbukumbu ndogo kwa kutumia kache kuzalisha upya vipande maalum vya seti ya data unavyohitaji, kwa hivyo unahitaji tu kuhifadhi kache.
 
-Seti kubwa ya data husasishwa mara moja kila bloku 30,000, hivyo juhudi kubwa ya mchimbaji itakuwa kusoma seti ya data, sio kuifanyia mabadiliko.
+Seti kubwa ya data inasasishwa mara moja kila vitalu 30000, kwa hivyo juhudi kubwa ya mchimbaji itakuwa kusoma seti ya data, sio kuifanyia mabadiliko.
 
 ## Ufafanuzi {#definitions}
 
@@ -34,28 +34,28 @@ Tunatumia ufafanuzi ufuatao:
 
 ```
 WORD_BYTES = 4                    # baiti katika neno
-DATASET_BYTES_INIT = 2**30        # baiti katika seti ya data kwenye genesis
-DATASET_BYTES_GROWTH = 2**23      # ukuaji wa seti ya data kwa kila epoch
-CACHE_BYTES_INIT = 2**24          # baiti katika kache kwenye genesis
-CACHE_BYTES_GROWTH = 2**17        # ukuaji wa kache kwa kila epoch
+DATASET_BYTES_INIT = 2**30        # baiti katika seti ya data kwenye mwanzo
+DATASET_BYTES_GROWTH = 2**23      # ukuaji wa seti ya data kwa kila kipindi
+CACHE_BYTES_INIT = 2**24          # baiti katika kache kwenye mwanzo
+CACHE_BYTES_GROWTH = 2**17        # ukuaji wa kache kwa kila kipindi
 CACHE_MULTIPLIER=1024             # Ukubwa wa DAG kulingana na kache
-EPOCH_LENGTH = 30000              # bloku kwa kila epoch
+EPOCH_LENGTH = 30000              # vitalu kwa kila kipindi
 MIX_BYTES = 128                   # upana wa mchanganyiko
-HASH_BYTES = 64                   # urefu wa hashi katika baiti
+HASH_BYTES = 64                   # urefu wa heshi katika baiti
 DATASET_PARENTS = 256             # idadi ya wazazi wa kila kipengele cha seti ya data
-CACHE_ROUNDS = 3                  # idadi ya mizunguko katika utengenezaji wa kache
+CACHE_ROUNDS = 3                  # idadi ya raundi katika uzalishaji wa kache
 ACCESSES = 64                     # idadi ya ufikiaji katika kitanzi cha hashimoto
 ```
 
 ### Matumizi ya 'SHA3' {#sha3}
 
-Ukuzaji wa Ethereum ulienda sambamba na ukuzaji wa kiwango cha SHA3, na mchakato wa viwango ulifanya mabadiliko ya kuchelewa katika pedi ya kanuni ya mwisho ya hashi, hivi kwamba hashi za "sha3_256" na "sha3_512" za Ethereum si hashi za kawaida za sha3, bali ni lahaja ambayo mara nyingi hujulikana kama "Keccak-256" na "Keccak-512" katika miktadha mingine. Tazama mjadala, k.m., [hapa](https://eips.ethereum.org/EIPS/eip-1803), [hapa](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), au [hapa](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
+Uendelezaji wa Ethereum uliambatana na uendelezaji wa kiwango cha SHA3, na mchakato wa viwango ulifanya mabadiliko ya kuchelewa katika ujazo wa algoriti ya heshi iliyokamilishwa, ili heshi za "sha3_256" na "sha3_512" za Ethereum zisiwe heshi za kawaida za sha3, bali ni tofauti inayojulikana mara nyingi kama "Keccak-256" na "Keccak-512" katika miktadha mingine. Tazama majadiliano, k.m., [hapa](https://eips.ethereum.org/EIPS/eip-1803), [hapa](https://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), au [hapa](https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
 
-Tafadhali zingatia hilo kwani hashi za "sha3" zinarejelewa katika maelezo ya kanuni hapa chini.
+Tafadhali kumbuka hilo kwani heshi za "sha3" zinarejelewa katika maelezo ya algoriti hapa chini.
 
 ## Vigezo {#parameters}
 
-Vigezo vya kache na seti ya data ya Ethash hutegemea nambari ya bloku. Ukubwa wa kache na ukubwa wa seti ya data vyote hukua sawasawa; hata hivyo, daima tunachukua nambari tasa ya juu zaidi chini ya kizingiti kinachokua sawasawa ili kupunguza hatari ya urudiaji wa bahati mbaya unaosababisha tabia ya mzunguko.
+Vigezo vya kache na seti ya data ya Ethash vinategemea nambari ya kitalu. Ukubwa wa kache na ukubwa wa seti ya data vyote vinakua kwa mstari; hata hivyo, kila mara tunachukua nambari tasa ya juu zaidi chini ya kizingiti kinachokua kwa mstari ili kupunguza hatari ya ukawaida wa bahati mbaya unaosababisha tabia ya mzunguko.
 
 ```python
 def get_cache_size(block_number):
@@ -75,20 +75,20 @@ def get_full_size(block_number):
 
 Majedwali ya thamani za ukubwa wa seti ya data na kache yametolewa katika kiambatisho.
 
-## Utengenezaji wa kache {#cache-generation}
+## Uzalishaji wa kache {#cache-generation}
 
-Sasa, tunabainisha chaguo la kukokotoa la kutengeneza kache:
+Sasa, tunabainisha chaguo la kukokotoa kwa ajili ya kuzalisha kache:
 
 ```python
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # Tengeneza seti ya data ya awali kwa mfuatano
+    # Zalisha seti ya data ya awali kwa mfuatano
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # Tumia toleo la mzunguko wa chini la randmemohash
+    # Tumia toleo lenye mizunguko michache ya randmemohash
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -97,11 +97,11 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-Mchakato wa utengenezaji wa kache unahusisha kwanza kujaza kumbukumbu ya MB 32 kwa mfuatano, kisha kufanya pasi mbili za kanuni ya _RandMemoHash_ ya Sergio Demian Lerner kutoka [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). Tokeo ni seti ya thamani 524,288 za baiti 64.
+Mchakato wa uzalishaji wa kache unahusisha kwanza kujaza kwa mfuatano MB 32 za kumbukumbu, kisha kufanya mapitio mawili ya algoriti ya _RandMemoHash_ ya Sergio Demian Lerner kutoka [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). Toleo ni seti ya thamani 524288 za baiti 64.
 
-## Chaguo la kukokotoa la mkusanyiko wa data {#date-aggregation-function}
+## Chaguo la kukokotoa la ujumuishaji wa data {#date-aggregation-function}
 
-Tunatumia kanuni iliyochochewa na [hashi ya FNV](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) katika baadhi ya matukio kama mbadala usio wa ushirika wa XOR. Kumbuka kwamba tunazidisha nambari tasa na ingizo kamili la biti 32, kinyume na maelezo ya FNV-1 ambayo huzidisha nambari tasa na baiti moja (okteti) kwa zamu.
+Tunatumia algoriti iliyohamasishwa na [heshi ya FNV](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) katika baadhi ya matukio kama mbadala usio wa kushirikiana wa XOR. Kumbuka kwamba tunazidisha nambari tasa na ingizo kamili la biti 32, tofauti na vipimo vya FNV-1 ambavyo vinazidisha nambari tasa na baiti moja (okteti) kwa zamu.
 
 ```python
 FNV_PRIME = 0x01000193
@@ -110,28 +110,28 @@ def fnv(v1, v2):
     return ((v1 * FNV_PRIME) ^ v2) % 2**32
 ```
 
-Tafadhali kumbuka, hata kama karatasi ya njano inabainisha fnv kama v1\*(FNV_PRIME ^ v2), utekelezaji wote wa sasa unatumia ufafanuzi ulio hapo juu mara kwa mara.
+Tafadhali kumbuka, hata waraka wa manjano unabainisha fnv kama v1\*(FNV_PRIME ^ v2), utekelezaji wote wa sasa unatumia ufafanuzi ulio hapo juu mara kwa mara.
 
-## Ukadiriaji kamili wa seti ya data {#full-dataset-calculation}
+## Ukokotoaji kamili wa seti ya data {#full-dataset-calculation}
 
-Kila kipengee cha baiti 64 katika seti kamili ya data ya GB 1 hukokotolewa kama ifuatavyo:
+Kila kipengee cha baiti 64 katika seti kamili ya data ya GB 1 kinakokotolewa kama ifuatavyo:
 
 ```python
 def calc_dataset_item(cache, i):
     n = len(cache)
     r = HASH_BYTES // WORD_BYTES
-    # anzisha mchanganyiko
+    # Anzisha mchanganyiko
     mix = copy.copy(cache[i % n])
     mix[0] ^= i
     mix = sha3_512(mix)
-    # iweke kwenye fnv na nodi nyingi za kache za nasibu kulingana na i
+    # Ifanyie fnv na nodi nyingi za kache za nasibu kulingana na i
     for j in range(DATASET_PARENTS):
         cache_index = fnv(i ^ j, mix[j % r])
         mix = map(fnv, mix, cache[cache_index % n])
     return sha3_512(mix)
 ```
 
-Kimsingi, tunachanganya data kutoka kwa nodi 256 za kache zilizochaguliwa kinasibu, na kuweka hiyo kwenye hashi ili kukokotoa nodi ya seti ya data. Seti nzima ya data kisha hutengenezwa na:
+Kimsingi, tunachanganya data kutoka kwa nodi 256 za kache zilizochaguliwa kwa nasibu bandia, na kuheshi hiyo ili kukokotoa nodi ya seti ya data. Seti nzima ya data kisha inazalishwa na:
 
 ```python
 def calc_dataset(full_size, cache):
@@ -140,27 +140,27 @@ def calc_dataset(full_size, cache):
 
 ## Kitanzi kikuu {#main-loop}
 
-Sasa, tunabainisha kitanzi kikuu kinachofanana na "hashimoto", ambapo tunakusanya data kutoka kwa seti kamili ya data ili kutoa thamani yetu ya mwisho kwa kichwa na nonce maalum. Katika msimbo ulio hapa chini, `header` inawakilisha _hashi_ ya SHA3-256 ya uwakilishi wa RLP ya kichwa cha bloku _kilichopunguzwa_, yaani, cha kichwa bila kujumuisha sehemu za **mixHash** na **nonce**. `nonce` ni baiti nane za nambari kamili isiyo na alama ya biti 64 katika mpangilio wa big-endian. Kwa hivyo `nonce[::-1]` ni uwakilishi wa baiti nane wa little-endian wa thamani hiyo:
+Sasa, tunabainisha kitanzi kikuu kinachofanana na "hashimoto", ambapo tunajumuisha data kutoka kwa seti kamili ya data ili kuzalisha thamani yetu ya mwisho kwa kichwa maalum na nonsi. Katika msimbo ulio hapa chini, `header` inawakilisha _heshi_ ya SHA3-256 ya uwakilishi wa RLP wa kichwa cha kizuizi _kilichokatwa_, yaani, cha kichwa kisichojumuisha sehemu za **mixHash** na **nonce**. `nonce` ni baiti nane za nambari kamili isiyo na saini ya biti 64 katika mpangilio wa kianzia-kikubwa. Kwa hivyo `nonce[::-1]` ni uwakilishi wa kianzia-kidogo wa baiti nane wa thamani hiyo:
 
 ```python
 def hashimoto(header, nonce, full_size, dataset_lookup):
     n = full_size / HASH_BYTES
     w = MIX_BYTES // WORD_BYTES
     mixhashes = MIX_BYTES / HASH_BYTES
-    # changanya header+nonce kuwa mbegu ya baiti 64
+    # Unganisha kichwa cha kizuizi+nonsi kuwa mbegu ya baiti 64
     s = sha3_512(header + nonce[::-1])
-    # anza mchanganyiko na s iliyorudiwa
+    # Anzisha mchanganyiko kwa s iliyonakiliwa
     mix = []
     for _ in range(MIX_BYTES / HASH_BYTES):
         mix.extend(s)
-    # changanya nodi za nasibu za seti ya data
+    # Changanya na nodi za seti ya data za nasibu
     for i in range(ACCESSES):
         p = fnv(i ^ s[0], mix[i % w]) % (n // mixhashes) * mixhashes
         newdata = []
         for j in range(MIX_BYTES / HASH_BYTES):
             newdata.extend(dataset_lookup(p + j))
         mix = map(fnv, mix, newdata)
-    # bana mchanganyiko
+    # Finya mchanganyiko
     cmix = []
     for i in range(0, len(mix), 4):
         cmix.append(fnv(fnv(fnv(mix[i], mix[i+1]), mix[i+2]), mix[i+3]))
@@ -176,17 +176,17 @@ def hashimoto_full(full_size, dataset, header, nonce):
     return hashimoto(header, nonce, full_size, lambda x: dataset[x])
 ```
 
-Kimsingi, tunadumisha "mchanganyiko" wenye upana wa baiti 128, na mara kwa mara tunachukua baiti 128 kwa mfuatano kutoka kwa seti kamili ya data na kutumia chaguo la kukokotoa la `fnv` kuiunganisha na mchanganyiko. Baiti 128 za ufikiaji wa mfuatano hutumika ili kila mzunguko wa kanuni daima uchukue ukurasa kamili kutoka kwa RAM, kupunguza makosa ya Translation Lookaside Buffer (TLB) ambayo kinadharia ASIC zingeweza kuepuka.
+Kimsingi, tunadumisha "mchanganyiko" wenye upana wa baiti 128, na kuchukua mara kwa mara kwa mfuatano baiti 128 kutoka kwa seti kamili ya data na kutumia chaguo la kukokotoa la `fnv` kuichanganya na mchanganyiko. Baiti 128 za ufikiaji wa mfuatano zinatumika ili kila raundi ya algoriti kila mara ichukue ukurasa kamili kutoka kwa RAM, ikipunguza ukosefu wa bafa ya kutazama kando ya tafsiri ambayo kinadharia ASIC zingeweza kuepuka.
 
-Ikiwa tokeo la kanuni hii liko chini ya lengo linalohitajika, basi nonce ni halali. Kumbuka kwamba matumizi ya ziada ya `sha3_256` mwishoni yanahakikisha kwamba kuna nonce ya kati inayoweza kutolewa kuthibitisha kwamba angalau kiasi kidogo cha kazi kimefanyika; uthibitishaji huu wa haraka wa PoW wa nje unaweza kutumika kwa madhumuni ya kuzuia DDoS. Pia hutumika kutoa uhakikisho wa kitakwimu kwamba matokeo ni nambari isiyo na upendeleo, ya biti 256.
+Ikiwa toleo la algoriti hii liko chini ya lengo linalohitajika, basi nonsi ni halali. Kumbuka kwamba utumiaji wa ziada wa `sha3_256` mwishoni unahakikisha kwamba kuna nonsi ya kati ambayo inaweza kutolewa ili kuthibitisha kwamba angalau kiasi kidogo cha kazi kilifanywa; uthibitishaji huu wa haraka wa nje wa Uthibitisho wa Kazi (PoW) unaweza kutumika kwa madhumuni ya kuzuia DDoS. Pia inatumika kutoa uhakikisho wa kitakwimu kwamba matokeo ni nambari isiyo na upendeleo, ya biti 256.
 
 ## Uchimbaji {#mining}
 
-Kanuni ya uchimbaji inafafanuliwa kama ifuatavyo:
+Algoriti ya uchimbaji inafafanuliwa kama ifuatavyo:
 
 ```python
 def mine(full_size, dataset, header, difficulty):
-    # weka sifuri kwenye lengo ili kulinganisha na hashi kwenye tarakimu sawa
+    # Jaza sufuri kwenye lengo ili kulinganisha na heshi kwenye tarakimu sawa
     target = zpad(encode_int(2**256 // difficulty), 64)[::-1]
     from random import randint
     nonce = randint(0, 2**64)
@@ -195,9 +195,9 @@ def mine(full_size, dataset, header, difficulty):
     return nonce
 ```
 
-## Kufafanua hashi ya mbegu {#seed-hash}
+## Kufafanua heshi ya mbegu {#seed-hash}
 
-Ili kukokotoa hashi ya mbegu ambayo itatumika kuchimba juu ya bloku fulani, tunatumia kanuni ifuatayo:
+Ili kukokotoa heshi ya mbegu ambayo ingetumika kuchimba juu ya kitalu fulani, tunatumia algoriti ifuatayo:
 
 ```python
  def get_seedhash(block):
@@ -207,20 +207,20 @@ Ili kukokotoa hashi ya mbegu ambayo itatumika kuchimba juu ya bloku fulani, tuna
      return s
 ```
 
-Kumbuka kwamba kwa uchimbaji na uthibitishaji rahisi, tunapendekeza kukokotoa kabla hashi za mbegu na seti za data za siku zijazo katika uzi tofauti.
+Kumbuka kwamba kwa uchimbaji na uthibitishaji mzuri, tunapendekeza kukokotoa mapema heshi za mbegu na seti za data za siku zijazo katika uzi tofauti.
 
-## Masomo zaidi {#further-reading}
+## Usomaji zaidi {#further-reading}
 
-_Unajua rasilimali ya jamii iliyokusaidia?_ Hariri ukurasa huu na uiongeze!_
+_Je, unajua rasilimali ya jamii iliyokusaidia? Hariri ukurasa huu na uiongeze!_
 
 ## Kiambatisho {#appendix}
 
-Msimbo ufuatao unapaswa kuongezwa mwanzoni ikiwa ungependa kutekeleza maelezo ya python yaliyo hapo juu kama msimbo.
+Msimbo ufuatao unapaswa kuongezwa mwanzoni ikiwa una nia ya kuendesha vipimo vya Python vilivyo hapo juu kama msimbo.
 
 ```python
 import sha3, copy
 
-# Inadhania mpangilio wa biti wa little-endian (sawa na usanifu wa Intel)
+# Inachukulia mpangilio wa biti wa kianzia-kidogo (sawa na usanifu wa Intel)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -248,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# chaguo la kukokotoa la hashi ya sha3, hutoa baiti 64
+# Kitendakazi cha heshi cha sha3, hutoa baiti 64
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -267,7 +267,7 @@ def isprime(x):
 
 ### Ukubwa wa Data {#data-sizes}
 
-Majedwali yafuatayo ya marejeleo yanatoa takriban epoch 2048 zilizopangwa za ukubwa wa data na ukubwa wa kache.
+Majedwali yafuatayo ya kutafuta yanatoa takriban vipindi 2048 vilivyoorodheshwa vya ukubwa wa data na ukubwa wa kache.
 
 ```python
 def get_datasize(block_number):
@@ -993,7 +993,7 @@ cache_sizes = [
 265287488, 265418432, 265550528, 265681216, 265813312, 265943488,
 266075968, 266206144, 266337728, 266468032, 266600384, 266731072,
 266862272, 266993344, 267124288, 267255616, 267386432, 267516992,
-267648704, 26777728, 267910592, 268040512, 268172096, 268302784,
+267648704, 267777728, 267910592, 268040512, 268172096, 268302784,
 268435264, 268566208, 268696256, 268828096, 268959296, 269090368,
 269221312, 269352256, 269482688, 269614784, 269745856, 269876416,
 270007616, 270139328, 270270272, 270401216, 270531904, 270663616,

@@ -26,7 +26,7 @@ const SlotCountdownChart = ({ children }: { children: string }) => {
   }, [])
 
   return (
-    <div className="pb-8 pt-4">
+    <div className="pt-4 pb-8">
       <RadialChart
         value={timeToNextBlock}
         totalValue={12}

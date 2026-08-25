@@ -2,17 +2,14 @@
 
 import type { StakingPage } from "@/lib/types"
 
-import ButtonDropdown from "@/components/ButtonDropdown"
 import {
   CautionProductGlyph,
   GreenCheckProductGlyph,
   WarningProductGlyph,
 } from "@/components/icons/staking"
-import Translation from "@/components/Translation"
-import { Flex, VStack } from "@/components/ui/flex"
-import { List, ListItem } from "@/components/ui/list"
+import { Flex } from "@/components/ui/flex"
+import TabNav from "@/components/ui/TabNav"
 
-import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { useStakingConsiderations } from "@/hooks/useStakingConsiderations"
@@ -38,12 +35,11 @@ const IndicatorGroup = ({
     return <WarningProductGlyph style={style} />
   }
   return (
-    <VStack className="flex-1 gap-2">
+    <Flex className="items-center gap-2">
       <IndicatorIcon style={styleObj} />
-      <p className="max-w-[10rem] text-center text-xs">
-        <Translation id={label} />
-      </p>
-    </VStack>
+      {/* `label` arrives already translated from the hook */}
+      <p>{label}</p>
+    </Flex>
   )
 }
 
@@ -53,10 +49,8 @@ export type StakingConsiderationsProps = {
 
 const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
   const {
-    StyledSvg,
     caution,
     description,
-    dropdownLinks,
     handleSelection,
     indicatorSvgStyle,
     title,
@@ -67,38 +61,38 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
   } = useStakingConsiderations({ page })
 
   return (
-    <Flex className="flex-col md:flex-row">
-      <ButtonDropdown list={dropdownLinks} className="mb-4 md:hidden" />
-      {/* TODO: Improve a11y */}
-      <div className="hidden flex-1 md:block">
-        {!!pageData && (
-          <List className="m-0">
-            {/* TODO: Make mobile responsive */}
-            {pageData.map(({ title, matomo }, idx) => (
-              <ListItem
-                key={idx}
-                onClick={() => {
-                  handleSelection(idx)
-                  trackCustomEvent(matomo)
-                }}
-                className={cn(
-                  "transition-background relative mb-0 table h-8 w-full cursor-pointer p-3 duration-500 hover:bg-background-highlight hover:text-body",
-                  idx === activeIndex
-                    ? "bg-background-highlight text-body"
-                    : "text-primary"
-                )}
-              >
-                {title}
-              </ListItem>
-            ))}
-          </List>
-        )}
-      </div>
-      <Flex className="min-h-[410px] flex-[2] flex-col items-center bg-background-highlight p-6">
-        <StyledSvg />
-        <h3 className="mt-10 text-2xl font-bold leading-[1.4]">{title}</h3>
-        <p>{description}</p>
-        <Flex className="mt-auto justify-center gap-8">
+    // `contain-inline-size` stops TabNav's scrollable row from leaking its full
+    // width out as an intrinsic minimum, which would otherwise stop the article
+    // shrinking and push the ToC aside off-screen just above the lg breakpoint.
+    <div className="flex flex-col gap-6 contain-inline-size">
+      <TabNav
+        className="justify-start"
+        sections={pageData.map(({ title, Svg }, idx) => ({
+          key: String(idx),
+          label: title,
+          // Attribute icons stay primary-colored whether or not the tab is active.
+          // `size-6` overrides the 1em width/height the glyphs carry, which TabNav's
+          // `[&_svg]:text-sm` would otherwise render at 14px.
+          icon: <Svg className="size-6 text-primary" />,
+        }))}
+        activeSection={String(activeIndex)}
+        onSelect={(key) => {
+          const idx = Number(key)
+          handleSelection(idx)
+          trackCustomEvent(pageData[idx].matomo)
+        }}
+      />
+      {/* min-h keeps the panel from jumping as descriptions change length between
+          tabs; taller on mobile where the text wraps more */}
+      <div className="flow flex min-h-72 flex-col rounded-4xl bg-background-highlight p-6 md:min-h-64">
+        <h3 className="text-2xl font-bold">{title}</h3>
+        <p className="text-lg">{description}</p>
+        {/* `mt-auto` pins the legend to the panel bottom so it holds position across
+            tabs; `pt-space-2x` keeps the flow gap once the text fills the panel */}
+        <Flex
+          data-flow="cta"
+          className="mt-auto flex-wrap gap-x-8 gap-y-2 pt-space-2x"
+        >
           {!!valid && (
             <IndicatorGroup
               label={valid}
@@ -117,8 +111,8 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
             <IndicatorGroup label={warning} styleObj={indicatorSvgStyle} />
           )}
         </Flex>
-      </Flex>
-    </Flex>
+      </div>
+    </div>
   )
 }
 

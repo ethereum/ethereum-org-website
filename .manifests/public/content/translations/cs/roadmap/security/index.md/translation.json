@@ -1,0 +1,209 @@
+{
+  "version": 1,
+  "locale": "cs",
+  "translatedAt": "2026-07-29T16:21:59.759Z",
+  "englishManifestHash": "dc1fdad59379",
+  "placeholderOrder": [
+    "LINK-d89cb7",
+    "LINK-5f58fd",
+    "LINK-e3026f",
+    "COMPONENT-377c1b",
+    "LINK-e4a93e",
+    "LINK-eeeb31",
+    "LINK-1c8218",
+    "LINK-13cd93",
+    "LINK-1ed7a5",
+    "LINK-bb0dfc",
+    "LINK-d7edfc",
+    "LINK-02dd94",
+    "LINK-7f43c7",
+    "COMPONENT-22096d",
+    "LINK-de4853",
+    "LINK-bf2a05",
+    "LINK-4e330f",
+    "CODE-4afb86",
+    "LINK-6b9a8a",
+    "LINK-d3a0e2",
+    "LINK-6c4cfe",
+    "LINK-951315",
+    "LINK-37cc8d",
+    "LINK-876ccc",
+    "LINK-f69cf1",
+    "LINK-4aa3df",
+    "LINK-228ee5"
+  ],
+  "placeholderMap": {
+    "COMPONENT-377c1b": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "/roadmap/security",
+        "eventName": "clicked is ethereum secure today?"
+      }
+    },
+    "COMPONENT-22096d": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "/roadmap/security",
+        "eventName": "clicked can quantum computers steal my ETH today?"
+      }
+    },
+    "CODE-4afb86": {
+      "type": "inline-code",
+      "values": {
+        "content": "SELFDESTRUCT"
+      }
+    },
+    "LINK-d89cb7": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#smart-contract"
+      }
+    },
+    "LINK-5f58fd": {
+      "type": "link",
+      "values": {
+        "url": "https://forkcast.org"
+      }
+    },
+    "LINK-e3026f": {
+      "type": "link",
+      "values": {
+        "url": "https://strawmap.org"
+      }
+    },
+    "LINK-e4a93e": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#validator"
+      }
+    },
+    "LINK-eeeb31": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#staking"
+      }
+    },
+    "LINK-1c8218": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/glamsterdam/"
+      }
+    },
+    "LINK-13cd93": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#finality"
+      }
+    },
+    "LINK-1ed7a5": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/client-diversity/"
+      }
+    },
+    "LINK-bb0dfc": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#cryptography"
+      }
+    },
+    "LINK-d7edfc": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#rollups"
+      }
+    },
+    "LINK-02dd94": {
+      "type": "link",
+      "values": {
+        "url": "https://pq.ethereum.org"
+      }
+    },
+    "LINK-7f43c7": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/account-abstraction/"
+      }
+    },
+    "LINK-de4853": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/pectra/"
+      }
+    },
+    "LINK-bf2a05": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/fusaka/"
+      }
+    },
+    "LINK-4e330f": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/dencun/"
+      }
+    },
+    "LINK-6b9a8a": {
+      "type": "link",
+      "values": {
+        "url": "/staking/withdrawals/"
+      }
+    },
+    "LINK-d3a0e2": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#pos"
+      }
+    },
+    "LINK-6c4cfe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-951315": {
+      "type": "link",
+      "values": {
+        "url": "https://forkcast.org"
+      }
+    },
+    "LINK-37cc8d": {
+      "type": "link",
+      "values": {
+        "url": "https://strawmap.org"
+      }
+    },
+    "LINK-876ccc": {
+      "type": "link",
+      "values": {
+        "url": "https://pq.ethereum.org"
+      }
+    },
+    "LINK-f69cf1": {
+      "type": "link",
+      "values": {
+        "url": "https://leanroadmap.org"
+      }
+    },
+    "LINK-4aa3df": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/#finality"
+      }
+    },
+    "LINK-228ee5": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-07-29T16:21:59.759Z",
+      "status": "success"
+    }
+  }
+}

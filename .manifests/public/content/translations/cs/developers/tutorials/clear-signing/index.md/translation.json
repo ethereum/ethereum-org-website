@@ -1,0 +1,379 @@
+{
+  "version": 1,
+  "locale": "cs",
+  "translatedAt": "2026-05-13T15:32:43.596Z",
+  "englishManifestHash": "a7a4bfce5eb4",
+  "placeholderOrder": [
+    "LINK-04ff04",
+    "LINK-3054b8",
+    "LINK-7d8a12",
+    "CODE-ea7792",
+    "CODE-45447b",
+    "CODE-dfbb88",
+    "CODE-992c44",
+    "CODE-6547ac",
+    "CODE-bacad0",
+    "CODE-1a6f94",
+    "CODEBLOCK-a8074f",
+    "CODE-ea7792",
+    "CODEBLOCK-75d6f6",
+    "CODE-be537b",
+    "CODE-6ac5db",
+    "CODE-283ed8",
+    "CODE-6da7cd",
+    "CODEBLOCK-9ba6cc",
+    "CODE-4c1029",
+    "CODE-f874b5",
+    "CODE-7b3045",
+    "CODE-8570c7",
+    "CODEBLOCK-3cba61",
+    "CODE-282bcb",
+    "CODE-ab12f3",
+    "CODE-d8bdd3",
+    "CODE-282bcb",
+    "CODE-bfe5d6",
+    "CODE-a0af9f",
+    "CODE-b7803a",
+    "CODE-acb7ed",
+    "CODE-1aca80",
+    "CODE-e904c9",
+    "CODE-8ffa13",
+    "CODE-203761",
+    "CODE-0e8763",
+    "CODE-d7439b",
+    "CODE-a20b52",
+    "CODE-8ffa13",
+    "CODE-2fa8ac",
+    "CODE-0e8763",
+    "CODE-e8424e",
+    "CODE-a20b52",
+    "CODEBLOCK-4c9b24",
+    "LINK-f0013a",
+    "LINK-3bd082",
+    "CODE-b7300d",
+    "CODE-4e5673",
+    "CODE-631b0b",
+    "CODE-bd899e",
+    "HTMLTAG-ca8a75",
+    "HTMLTAG-e19fa2",
+    "LINK-69cf6e",
+    "LINK-5b2983",
+    "LINK-1fee65",
+    "LINK-f0013a",
+    "LINK-5b2983",
+    "LINK-9e80b4",
+    "LINK-b25a0f"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-a8074f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-75d6f6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9ba6cc": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3cba61": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4c9b24": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "HTMLTAG-ca8a75": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://repo.sourcify.dev"
+      }
+    },
+    "HTMLTAG-e19fa2": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://verify.sourcify.dev/"
+      }
+    },
+    "CODE-ea7792": {
+      "type": "inline-code",
+      "values": {
+        "content": "context"
+      }
+    },
+    "CODE-45447b": {
+      "type": "inline-code",
+      "values": {
+        "content": "metadata"
+      }
+    },
+    "CODE-dfbb88": {
+      "type": "inline-code",
+      "values": {
+        "content": "display"
+      }
+    },
+    "CODE-992c44": {
+      "type": "inline-code",
+      "values": {
+        "content": "calldata-<contractname>-<descriptorversion>.json"
+      }
+    },
+    "CODE-6547ac": {
+      "type": "inline-code",
+      "values": {
+        "content": "calldata-"
+      }
+    },
+    "CODE-bacad0": {
+      "type": "inline-code",
+      "values": {
+        "content": "eip712-"
+      }
+    },
+    "CODE-1a6f94": {
+      "type": "inline-code",
+      "values": {
+        "content": "descriptorversion"
+      }
+    },
+    "CODE-be537b": {
+      "type": "inline-code",
+      "values": {
+        "content": "context.$id"
+      }
+    },
+    "CODE-6ac5db": {
+      "type": "inline-code",
+      "values": {
+        "content": "contract.deployments"
+      }
+    },
+    "CODE-283ed8": {
+      "type": "inline-code",
+      "values": {
+        "content": "deployments[].chainId"
+      }
+    },
+    "CODE-6da7cd": {
+      "type": "inline-code",
+      "values": {
+        "content": "deployments[].address"
+      }
+    },
+    "CODE-4c1029": {
+      "type": "inline-code",
+      "values": {
+        "content": "owner"
+      }
+    },
+    "CODE-f874b5": {
+      "type": "inline-code",
+      "values": {
+        "content": "info.url"
+      }
+    },
+    "CODE-7b3045": {
+      "type": "inline-code",
+      "values": {
+        "content": "contractName"
+      }
+    },
+    "CODE-8570c7": {
+      "type": "inline-code",
+      "values": {
+        "content": "display.formats"
+      }
+    },
+    "CODE-282bcb": {
+      "type": "inline-code",
+      "values": {
+        "content": "intent"
+      }
+    },
+    "CODE-ab12f3": {
+      "type": "inline-code",
+      "values": {
+        "content": "interpolatedIntent"
+      }
+    },
+    "CODE-d8bdd3": {
+      "type": "inline-code",
+      "values": {
+        "content": "\"Swap {amountIn} for at least {amountOutMin}\""
+      }
+    },
+    "CODE-bfe5d6": {
+      "type": "inline-code",
+      "values": {
+        "content": "fields"
+      }
+    },
+    "CODE-a0af9f": {
+      "type": "inline-code",
+      "values": {
+        "content": "path"
+      }
+    },
+    "CODE-b7803a": {
+      "type": "inline-code",
+      "values": {
+        "content": "#.fieldName"
+      }
+    },
+    "CODE-acb7ed": {
+      "type": "inline-code",
+      "values": {
+        "content": "@.value"
+      }
+    },
+    "CODE-1aca80": {
+      "type": "inline-code",
+      "values": {
+        "content": "label"
+      }
+    },
+    "CODE-e904c9": {
+      "type": "inline-code",
+      "values": {
+        "content": "format"
+      }
+    },
+    "CODE-8ffa13": {
+      "type": "inline-code",
+      "values": {
+        "content": "tokenAmount"
+      }
+    },
+    "CODE-203761": {
+      "type": "inline-code",
+      "values": {
+        "content": "addressName"
+      }
+    },
+    "CODE-0e8763": {
+      "type": "inline-code",
+      "values": {
+        "content": "date"
+      }
+    },
+    "CODE-d7439b": {
+      "type": "inline-code",
+      "values": {
+        "content": "raw"
+      }
+    },
+    "CODE-a20b52": {
+      "type": "inline-code",
+      "values": {
+        "content": "params"
+      }
+    },
+    "CODE-2fa8ac": {
+      "type": "inline-code",
+      "values": {
+        "content": "tokenPath"
+      }
+    },
+    "CODE-e8424e": {
+      "type": "inline-code",
+      "values": {
+        "content": "encoding"
+      }
+    },
+    "CODE-b7300d": {
+      "type": "inline-code",
+      "values": {
+        "content": "registry/<your-project-name>/"
+      }
+    },
+    "CODE-4e5673": {
+      "type": "inline-code",
+      "values": {
+        "content": "registry/myproject/calldata-mycontract-0_0.json"
+      }
+    },
+    "CODE-631b0b": {
+      "type": "inline-code",
+      "values": {
+        "content": "$schema"
+      }
+    },
+    "CODE-bd899e": {
+      "type": "inline-code",
+      "values": {
+        "content": "\"../../specs/erc7730-v2.schema.json\""
+      }
+    },
+    "LINK-04ff04": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7730"
+      }
+    },
+    "LINK-3054b8": {
+      "type": "link",
+      "values": {
+        "url": "https://clearsigning.org/"
+      }
+    },
+    "LINK-7d8a12": {
+      "type": "link",
+      "values": {
+        "url": "https://sourcify.dev"
+      }
+    },
+    "LINK-f0013a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/clear-signing-erc7730-registry"
+      }
+    },
+    "LINK-3bd082": {
+      "type": "link",
+      "values": {
+        "url": "/foundation/"
+      }
+    },
+    "LINK-69cf6e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ERCs/pull/1576"
+      }
+    },
+    "LINK-5b2983": {
+      "type": "link",
+      "values": {
+        "url": "https://clearsigning.org"
+      }
+    },
+    "LINK-1fee65": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7730"
+      }
+    },
+    "LINK-9e80b4": {
+      "type": "link",
+      "values": {
+        "url": "https://sourcify.dev"
+      }
+    },
+    "LINK-b25a0f": {
+      "type": "link",
+      "values": {
+        "url": "https://trilliondollarsecurity.org"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-05-13T15:32:43.596Z",
+      "status": "success"
+    }
+  }
+}

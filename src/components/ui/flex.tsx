@@ -2,7 +2,7 @@ import {
   type BaseHTMLAttributes,
   Children,
   cloneElement,
-  type ElementRef,
+  type ComponentRef,
   forwardRef,
   Fragment,
   isValidElement,
@@ -13,7 +13,7 @@ import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
 
-type FlexElement = ElementRef<"div">
+type FlexElement = ComponentRef<"div">
 
 type FlexProps = BaseHTMLAttributes<HTMLDivElement> & { asChild?: boolean }
 

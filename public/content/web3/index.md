@@ -1,14 +1,9 @@
 ---
-title: What is Web3 and why is it important?
+title: Introduction to Web3
+metaTitle: What is Web3 and why is it important?
 description: An introduction to Web3—the next evolution of the World Wide Web—and why it matters.
 lang: en
 ---
-
-# Introduction to Web3 {#introduction}
-
-<div className="mt-4">
-<ListenToPlayer slug="/web3/" />
-</div>
 
 Centralization has helped onboard billions of people to the World Wide Web and created the stable, robust infrastructure on which it lives. At the same time, a handful of centralized entities have a stronghold on large swathes of the World Wide Web, unilaterally deciding what should and should not be allowed.
 
@@ -115,7 +110,7 @@ Web3 solves these problems by allowing you to control your digital identity with
 Web2's payment infrastructure relies on banks and payment processors, excluding people without bank accounts or those who happen to live within the borders of the wrong country.
 Web3 uses tokens like [ETH](/glossary/#ether) to send money directly in the browser and requires no trusted third party.
 
-<ButtonLink href="/eth/">
+<ButtonLink href="/what-is-ether/">
   More on ETH
 </ButtonLink>
 
@@ -135,7 +130,7 @@ The technical barrier to entry to using Web3 is currently too high. Users must c
 
 Web3 introduces new paradigms that require learning different mental models than the ones used in Web2.0. A similar education drive happened as Web1.0 was gaining popularity in the late 1990s; proponents of the world wide web used a slew of educational techniques to educate the public from simple metaphors (the information highway, browsers, surfing the web) to [television broadcasts](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 isn't difficult, but it is different. Educational initiatives informing Web2 users of these Web3 paradigms are vital for its success.
 
-Ethereum.org contributes to Web3 education through our [Translation Program](/contributing/translation-program/), aiming to translate important Ethereum content to as many languages as possible.
+Ethereum.org has contributed to Web3 education through its [Translation Program](/contributing/translation-program/), which made important Ethereum content available in dozens of languages.
 
 ### Centralized infrastructure {#centralized-infrastructure}
 
