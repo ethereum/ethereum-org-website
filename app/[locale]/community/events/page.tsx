@@ -14,19 +14,13 @@ import {
 
 import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
-import DevconDateLocation from "@/components/devcon-date-location"
+import DevconIndiaLargeCallout from "@/components/DevconIndia/large-callout"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import {
-  Card,
-  CardButtonFake,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "@/components/ui/card"
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import {
   EdgeScrollContainer,
   EdgeScrollItem,
@@ -45,8 +39,6 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import communityHubs from "@/data/community-hubs"
 
-import { DEVCON_INDIA_TICKET_URL } from "@/lib/constants"
-
 import ContinentTabs from "./_components/continent-tabs"
 import EventCard from "./_components/event-card"
 import FilterEvents from "./_components/filter-events"
@@ -55,7 +47,6 @@ import PageJsonLD from "./page-jsonld"
 import { getMeetupGroups, mapEventTranslations } from "./utils"
 
 import { getEventsData } from "@/lib/data"
-import devconIndiaBanner from "@/public/images/assets/devcon-india-banner.webp"
 import geodeLabsLogo from "@/public/images/community/geode-labs-logo.png"
 import heroImage from "@/public/images/enterprise-eth.png"
 import organizerImage from "@/public/images/people-learning.png"
@@ -67,7 +58,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const _events = (await getEventsData()) ?? []
 
   const t = await getTranslations("page-community-events")
-  const tDevcon = await getTranslations("component-devcon-banner")
 
   const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/community/events")
@@ -150,44 +140,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       {/* Devcon VIII India callout banner */}
-      <Card
-        href={DEVCON_INDIA_TICKET_URL}
-        customEventOptions={{
-          eventCategory: "devcon",
-          eventAction: `get_tickets`,
-          eventName: "visit",
-        }}
-        variant="ghost"
-        hoverLift={false}
-        className="relative isolate mx-page my-space-3x flex flex-col items-center gap-y-8 overflow-hidden px-8 pt-8 pb-24 text-white hover:text-white sm:px-12 **:[img]:transition-transform **:[img]:duration-500 hover:**:[img]:scale-105"
-      >
-        <Image
-          src={devconIndiaBanner}
-          alt=""
-          fill
-          preload
-          sizes="100vw"
-          quality={90}
-          className="-z-20 object-cover object-bottom"
-        />
-        <div className="absolute inset-0 -z-10 bg-radial from-black/14 to-black/70" />
-        <div className="flex h-15 w-full items-center justify-between">
-          <Image
-            src="/images/assets/svgs/devcon-india-logo.svg"
-            alt={tDevcon("logo-alt")}
-            width="139"
-            height="60"
-          />
-          <DevconDateLocation className="text-end" />
-        </div>
-        <p className="text-center text-5xl font-black text-balance text-shadow-[0_1px_2px_rgb(0_0_0/0.7),0_3px_8px_rgb(0_0_0/0.6),0_6px_28px_rgb(0_0_0/0.55)]">
-          {tDevcon("title")}
-        </p>
-        <p className="text-center text-2xl font-medium text-shadow-[0_1px_2px_rgb(0_0_0/0.7),0_3px_8px_rgb(0_0_0/0.6),0_6px_28px_rgb(0_0_0/0.55)]">
-          {tDevcon("subtitle")}
-        </p>
-        <CardButtonFake size="lg">{tDevcon("cta-get-tickets")}</CardButtonFake>
-      </Card>
+      <DevconIndiaLargeCallout />
 
       {/* What's on this page? + TabNav */}
       <StickyContainer className="top-6 space-y-4 p-4 md:top-2 md:p-8">
