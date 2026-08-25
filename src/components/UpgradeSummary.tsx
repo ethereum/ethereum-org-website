@@ -113,15 +113,21 @@ const UpgradeSummary = async ({ slug }: UpgradeSummaryProps) => {
           <AlertTitle asChild className="text-2xl font-black">
             <h2>{t("page-roadmap-upgrade-status-heading")}</h2>
           </AlertTitle>
-          {stageLabelKey && <Tag status="tag">{t(stageLabelKey)}</Tag>}
+          {stageLabelKey && (
+            <Tag size="small" status="tag">
+              {t(stageLabelKey)}
+            </Tag>
+          )}
         </div>
 
         <AlertDescription className="text-base">
-          <dl className="grid gap-x-6 gap-y-2 sm:grid-cols-[auto_1fr]">
+          <dl className="grid gap-4">
             {target.when && (
-              <>
-                <dt className="text-body-medium">{t(targetLabelKey)}</dt>
-                <dd>
+              <div className="grid gap-1">
+                <dt className="text-xs font-bold text-body-medium uppercase">
+                  {t(targetLabelKey)}
+                </dt>
+                <dd className="text-base">
                   {formatPartialDate(target.when, locale, formatQuarter)}
                   {/* The qualifier is its own clause, not an adjective, so it cannot
                       be lost to word order in translation or read as settled. */}
@@ -132,20 +138,20 @@ const UpgradeSummary = async ({ slug }: UpgradeSummaryProps) => {
                     </span>
                   )}
                 </dd>
-              </>
+              </div>
             )}
 
             {next && (
-              <>
-                <dt className="text-body-medium">
+              <div className="grid gap-1">
+                <dt className="text-xs font-bold text-body-medium uppercase">
                   {t("page-roadmap-upgrade-status-next")}
                 </dt>
-                <dd>
+                <dd className="text-base">
                   {milestoneLabel(next)}
                   {", "}
                   {formatPartialDate(next.when, locale, formatQuarter)}
                 </dd>
-              </>
+              </div>
             )}
           </dl>
 
