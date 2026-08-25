@@ -121,3 +121,32 @@ silently denormalizes every file that uses them. Section 7 is the highest-levera
 one row per locale removes a recurring critical on every page that says "contracts". Section 8's
 `soundness` and `test harness` each broke five locales in a single PR.
 
+
+## 9. Missing entries: `Devcon` and `Devconnect` (PR #19142)
+
+Neither name is in ETHGlossary (`/filter` matched only `claim` against the banner source), and neither is in `PROTECTED_BRAND_NAMES` in `intl-sanitizer.ts`. With no entry and no sanitizer rule, every run re-decides an event name that now ships in UI strings. On PR #19142 the fleet split 12-1 and nine locales were hand-corrected -- which holds only until the English source moves.
+
+**Requested entry -- `Devcon`** (sibling entry for `Devconnect`):
+
+| Field | Value |
+| --- | --- |
+| `term_role` | `brand-or-project` |
+| `script_rule` | `transliterate` (group rules), with Latin-pinned `contexts` for the title lockup and image `alt` text |
+
+| Locale | Requested `translation.term` | Confidence | Basis |
+| --- | --- | --- | --- |
+| hi, mr | `डेवकॉन` | high | devcon.org's own hi/mr sites. Note `blog.ethereum.org/hi` disagrees (`देवकॉन`); prefer devcon.org, and see known-patterns #76 for why the blog does not count |
+| ko | `데브콘` | high | tree precedent, human-authored |
+| ja | `Devcon` (`keep_latin` override) | high | independent JP crypto press is uniformly Latin; no katakana usage found |
+| ar | `ديفكون` **or** `ديڤكون` | **low -- needs native decision** | 6.3 allows either ف or ڤ for "v" and demands consistency. Shipped ف, but the evidence that decided it was pipeline output, so the tie is open |
+| bn | `ডেভকন` | low -- derived | LLM-derived; no Bengali press usage found |
+| ta | `டெவ்கான்` | low -- derived | LLM-derived |
+| te | `డెవ్కాన్` | low -- derived | LLM-derived, halant per 6.1 te rule |
+| ur | `ڈیوکان` | low -- derived | LLM-derived |
+| ru | `Девкон` + case guidance | **blocked** | Qualifies for a 6.2 consumer-tier override, but the usage `на Devcon 8` needs prepositional case (`на Девконе 8`) or 7.3 apposition (`на конференции Девкон 8`). Needs a native call on which |
+| uk | none | **blocked** | No EF uk localization exists, and 6.2 forbids deriving Ukrainian from Russian |
+| zh, zh-tw | `Devcon` (`keep_latin`) | high | 6.5 default; do not auto-generate phonetic Hanzi |
+
+This is a clean section-9.3-shaped addition rather than a conflict -- `Devcon` is not an existing entry, so there is no `keep_latin` flag to reconcile.
+
+Two pre-existing items the new entry will eventually correct, both out of scope for #19142: `src/intl/*/common.json` ships `"devcon": "Devcon"` and `"nav-devcon-label": "Devcon"` in **24/24** locales, and `public/content/translations/` has zero native-script renderings outside ko (hi 66 Latin, zh 74, ja 71, zh-tw 71, ru 70, uk 70, ta 69, ur 66, ar 64, te 62, mr 55, bn 48).

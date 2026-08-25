@@ -977,3 +977,52 @@ The 13 central sweeps run alongside the agents earned their keep in both directi
 - **Two sweeps were themselves invalid** and were discarded rather than reported: intra-word script mixing and length-ratio truncation (see #68). Design the sweep against a known-true instance first; if it does not fire cleanly on that, it is not ready to run on 24 locales.
 
 Fleet avg **8.67**, median 8.80, range it 9.5 to ta 7.6. Zero criticals in **it fr ja mr uk zh-tw**. The prose quality was high across the board; nearly every critical was a single wrong word with a tree-backed correct form already available, which is why 47 of them were mechanically fixable in one verified pass.
+
+### 74. `Devcon` is missing from ETHGlossary, and the tree's Latin-everywhere habit was the defect -- not the one locale that transliterated (HIGH -- glossary gap, resolved in PR #19142)
+
+`Devcon` is not in ETHGlossary (532 ko terms scanned via `/filter`; only `claim` matched) and is not in `PROTECTED_BRAND_NAMES` in `intl-sanitizer.ts`. Term role is `brand-or-project`, whose policy default is `transliterate` per group rules -- it is not a developer tool, so the "Latin allowed for technical brands in UI tags" carve-out does not apply. On arrival the fleet split 12-1: twelve non-Latin locales kept Latin, ko alone shipped `데브콘`.
+
+**The review error this pattern exists to prevent:** the reviewer flagged ko as the outlier and "fixed" it to Latin, reasoning from (a) `src/intl/*/common.json` carrying `"devcon": "Devcon"` in 24/24 locales and (b) the CJK-phonetic UI-tag rule. Both inputs were real; the conclusion was backwards. `common.json` unanimity is 24 copies of one untested habit, not authority. And an annual conference name is ordinary prose, not a dev tool. Reverted; ko became the reference and eight locales were brought in line with it.
+
+**Resolved forms (PR #19142):**
+
+| Locale | Form | Evidence class |
+|---|---|---|
+| hi, mr | `डेवकॉन` | devcon.org's own hi/mr sites -- independent of this pipeline |
+| ko | `데브콘` | pre-existing tree precedent (`데브콘` x10 in ko content) |
+| ja | Latin `Devcon` | independent JP crypto press (fisco, neweconomy, hedge.guide, pocketcampus, Yahoo) -- all Latin, zero katakana |
+| ar | `ديفكون` | LOW confidence, tie unbroken -- see #76 |
+| bn, ta, te, ur | `ডেভকন`, `டெவ்கான்`, `డెవ్కాన్`, `ڈیوکان` | derived (Gemini 3.1 Pro), no independent precedent found |
+| ru, uk | Latin | 6.2 Cyrillic default; ru additionally blocked on case/apposition, uk has no candidate form |
+| zh, zh-tw | Latin | 6.5 `keep_latin` default -- do NOT auto-generate phonetic Hanzi |
+| `logo-alt` (all 24) | Latin | the formal title lockup and image alt text stay Latin in every locale, per devcon.org |
+
+**Rules:**
+
+1. A unanimous form in `src/intl/*/common.json` is evidence of consistency, not correctness. Never cite it to overrule the ETHGlossary fallback.
+2. Reserve "Latin allowed in UI tags" for developer tooling. Event, org and program names are prose.
+3. Separate the title lockup and asset `alt` text from running text. They take Latin even where the name transliterates.
+
+### 75. ETHGlossary `claim` is scoped to on-chain claiming and reads bureaucratic in marketing copy (INFORMATIONAL -- glossary scope)
+
+The `claim` entry defines itself as "the act of collecting tokens from an airdrop, reward, or vesting contract" and its per-language terms carry that legal-instrument weight: ru `востребование`, pl `roszczenie`, cs `nárok`, uk `затребування`, fr `réclamation`, ur `دعویٰ`, ja `請求`, ko `청구`. On "Claim your 10% discount" -- marketing, not a vesting contract -- 22 of 24 locales followed the glossary and 2 did not (ru `Получите`, pl `Odbierz`, both the more natural discount verb).
+
+`claim` has `script_rule: null` / `term_role: null`, so per the severity matrix a deviation is **High, not critical, and not auto-fixable** -- "no, flag for review". Do not auto-fix these toward the glossary: `востребуйте скидку` and a `roszczenie`-based Polish imperative are worse copy than what shipped. The fix belongs upstream (a `contexts.ui`/marketing sense on the entry, or a separate `redeem` entry), not in the locale files.
+
+**Reviewer rule:** when a glossary hit is a generic English verb rather than an Ethereum term, check the entry's own `definition` before calling a deviation. An out-of-domain glossary hit is a glossary-scope finding, not a locale defect.
+
+### 76. `blog.ethereum.org` is not independent evidence -- it is this pipeline's own output (METHODOLOGY)
+
+While resolving #74 the reviewer cited `blog.ethereum.org/{ar,ja,ko,hi,ru}` as authoritative for the `Devcon` transliteration. It is not. The EF blog is translated by **this same LLM pipeline against this same ETHGlossary**, so on any term the glossary is missing it inherits the identical gap. Citing it to settle a glossary gap is circular: it reports what the pipeline already guessed, in a more confident-looking venue.
+
+This cost real accuracy. The `ar` choice between `ديفكون` (ف) and `ديڤكون` (ڤ) -- both legal under 6.3 -- was called for ف on the blog's usage, when in truth the tie was never broken. The `hi` case is the tell: the blog ships `देवकॉन` (dental द) while devcon.org ships `डेवकॉन` (retroflex ड). Two EF-adjacent sources, two different answers, because only one of them involved a human deciding.
+
+**Evidence hierarchy for a term the glossary does not cover:**
+
+1. **The brand owner's own localized site** (devcon.org/hi, devcon.org/mr) -- a human made that call.
+2. **Independent target-language press and community usage** -- what the ja resolution actually rests on.
+3. **Pre-existing tree precedent** in this repo, if a human wrote it.
+4. **A fresh LLM-derived transliteration**, labeled as derived, pending native review.
+5. **Never:** other output of this same pipeline (blog.ethereum.org, sibling locale files from the same run) dressed up as corroboration.
+
+Also from the same episode: an LLM's "established form, confidence High" claim is checkable and is sometimes false. Gemini 3.1 Pro asserted that Japanese crypto press "consistently use デブコン, e.g. CoinPost"; every outlet found writes Latin 「Devcon」. Its supporting reasoning was internally broken too -- it cited デベロッパー as evidence for ブ, but that word uses ベ. **Verify "established" claims with one search before shipping the form.** Its bn "established" claim failed the same check; the form was kept on phonetic merit and relabeled derived.
