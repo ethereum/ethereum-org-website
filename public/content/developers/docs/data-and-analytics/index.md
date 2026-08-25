@@ -78,7 +78,7 @@ To get started, follow the [HyperIndex quickstart](https://docs.envio.dev/docs/H
 
 ## ClearTrace {#cleartrace}
 
-[ClearTrace](https://cleartracedata.com) is a free, independent benchmark of DEX aggregator execution quality measured from on-chain data. It publishes realized slippage, user-only revert rates (bot retries filtered out), MEV sandwich exposure, and cross-frontend attribution of unlabeled DEX volume across Ethereum, Base, Arbitrum, and Optimism, with a published methodology. Developers can use the REST API (no key required, CORS enabled) or the open dataset (CSV, citable DOI).
+[ClearTrace](https://cleartracedata.com) is a free, independent benchmark of DEX aggregator execution quality measured from onchain data. It publishes realized slippage, user-only revert rates (bot retries filtered out), MEV sandwich exposure, and cross-frontend attribution of unlabeled DEX volume across Ethereum, Base, Arbitrum, and Optimism, with a published methodology. Developers can use the REST API (no key required, CORS enabled) or the open dataset (CSV, citable DOI).
 
 To get started, visit the [documentation](https://cleartracedata.com/docs) or explore the [live dashboard](https://cleartracedata.com/app).
 
