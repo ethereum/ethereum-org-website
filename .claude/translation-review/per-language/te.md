@@ -88,3 +88,10 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - `ఆదిమాలు` for "primitives" against 6 prior `ప్రిమిటివ్‌ల*` uses.
 - `చెల్లించని వ్యక్తులచే` flips agency: "people who do not pay" for "unpaid people".
 - No ETHGlossary deviations at all, and the `స్టాకింగ్` glossary-data defect from #19115 did not recur.
+
+## PR #19142 (intl/pending-devcon-banner) -- 2026-08-21 -- Score 9.9/10
+Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
+
+**Fixed in this branch:**
+
+- `Devcon` -> `డెవ్కాన్` in `title` and `subtitle`. Derived form (Gemini 3.1 Pro), applying 6.1's te rule for consonant-final loanwords: standard written transliteration with the halant, not a colloquial vowel-appended form. `logo-alt` stays Latin.
