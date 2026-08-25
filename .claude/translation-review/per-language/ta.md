@@ -119,3 +119,19 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - `வெளிப்புறங்கள்` (exteriors) for economic "externalities".
 - `தணிக்கை` carries both "censorship" and "audit" in one file.
 - Lowest score in the fleet (7.6) -- but every critical had a tree-backed correct form available, so all six were mechanically fixable.
+
+## PR #19142 (intl/pending-devcon-banner) -- 2026-08-21 -- Score 9.6/10
+Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
+
+**Fixed in this branch:**
+
+- `Devcon` -> `டெவ்கான்` in `title` and `subtitle`. Derived form (Gemini 3.1 Pro), consistent with 6.1's rule that ta transliterates brands and proper nouns while calquing concepts. `logo-alt` stays Latin.
+
+**Open (native call needed):**
+
+- Register splits inside one 6-key file: `headline` and `subtitle` use the bare imperative `உரிமைக்கோர்`, while `title` (`ஒன்றுகூடுங்கள்`) and `cta-get-tickets` (`பெறுங்கள்`) use the polite `-ungal` form. Tamil UI convention is polite throughout; `உரிமைக்கோருங்கள்` aligns it. Left for native review -- auto-fix cannot reliably pick a register.
+
+**Notes:**
+
+- `உரிமைக்கோர்` is the correct stem of the ETHGlossary `claim` term (`உரிமைக்கோரல்`) -- the finding is register, not terminology.
+
