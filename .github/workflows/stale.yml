@@ -21,28 +21,25 @@ jobs:
           stale-pr-label: "Status: Stale"
           stale-issue-message: >
             This issue is stale because it has been open 30 days with no
-            activity. It will be closed in 30 days unless there is new
+            activity. It will be closed 150 days after being marked stale
+            (180 days total) unless there is new
             activity, the stale label is removed, or an exempt label
             (`pinned 📌`, `good first issue`, `help wanted`, `epic 💪`) is
             added.
           stale-pr-message: >
             This pull request is stale because it has been open 30 days with
-            no activity. It will be closed in 30 days unless there is new
-            activity, the stale label is removed, or the `pinned 📌` label is
-            added.
+            no activity. It will not be closed automatically, but a comment,
+            stale-label removal, or the `pinned 📌` label will keep it active.
           close-issue-message: >
-            This issue was closed automatically after 60 days without
+            This issue was closed automatically after 180 days without
             activity. This keeps the issue list actionable — it is not a
             judgment on the idea. If it is still relevant, please leave a
             comment and it can be reopened, or open a fresh issue with
             up-to-date details.
-          close-pr-message: >
-            This pull request was closed automatically after 60 days without
-            activity. The branch is untouched, so it can be reopened at any
-            time. If you would like to continue, please reopen and rebase
-            against `dev`, or open a fresh PR.
           days-before-stale: 30
-          days-before-close: 30
+          days-before-close: -1
+          days-before-issue-close: 150
+          days-before-pr-close: -1
           close-issue-reason: "not_planned"
           exempt-issue-labels: "pinned 📌,good first issue,help wanted,epic 💪"
           exempt-pr-labels: "pinned 📌"
