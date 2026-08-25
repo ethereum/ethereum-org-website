@@ -229,12 +229,6 @@ export const getResources = async ({
           imgSrc: IconBlocknative,
         },
         {
-          title: "GasFees.io",
-          description: t("page-resources-gas-gasfees-description"),
-          href: "https://www.gasfees.io/",
-          imgSrc: IconEthGlyphBlueCircle,
-        },
-        {
           title: "L2 Fees",
           description: t("page-resources-gas-l2fees-description"),
           href: "https://l2fees.info",
@@ -493,12 +487,6 @@ export const getResources = async ({
           description: t("page-resources-nodes-validatorqueue-description"),
           href: "https://www.validatorqueue.com",
           imgSrc: IconEthGlyphBlueCircle,
-        },
-        {
-          title: "Ethernets Node Crawler",
-          description: t("page-resources-nodes-ethernets-description"),
-          href: "https://www.ethernets.io",
-          imgSrc: IconNodewatch,
         },
       ],
     },
