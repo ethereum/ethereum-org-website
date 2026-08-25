@@ -12,6 +12,8 @@ Hegotá is in early planning. Its headliner has been chosen, but the rest of the
 
 ## Headliner: FOCIL {#focil}
 
+<EipTag upgrade="hegota" id={7805} />
+
 Fork-choice enforced inclusion lists (FOCIL, or EIP-7805) is about [censorship resistance](/roadmap/security/#censorship-resistance): making sure that a valid transaction gets into a block even if the people building blocks would rather leave it out.
 
 Today a single [validator](/glossary/#validator) builds each block and decides which transactions it contains. Anyone who can influence enough block builders can therefore delay a transaction, and a user has no way to force the issue other than waiting and hoping.
