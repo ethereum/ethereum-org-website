@@ -10,14 +10,21 @@ import DevconDateLocation from "./date-location"
 
 import devconIndiaBanner from "@/public/images/assets/devcon-india-banner.webp"
 
-const DevconIndiaLargeCallout = async () => {
+type DevconIndiaLargeCalloutProps = {
+  /** Distinct per placement so Matomo can tell the banners apart */
+  eventCategory: string
+}
+
+const DevconIndiaLargeCallout = async ({
+  eventCategory,
+}: DevconIndiaLargeCalloutProps) => {
   const tDevcon = await getTranslations("component-devcon-banner")
   return (
     <Card
       href={DEVCON_INDIA_TICKET_URL}
       customEventOptions={{
-        eventCategory: "devcon",
-        eventAction: `get_tickets`,
+        eventCategory,
+        eventAction: "get_tickets",
         eventName: "visit",
       }}
       variant="ghost"
