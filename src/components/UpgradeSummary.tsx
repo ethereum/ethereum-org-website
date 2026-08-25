@@ -1,10 +1,9 @@
-import { Info } from "lucide-react"
 import { getLocale, getTranslations } from "next-intl/server"
 
 import {
   Alert,
   AlertContent,
-  AlertIcon,
+  AlertDescription,
   AlertTitle,
 } from "@/components/ui/alert"
 import InlineLink from "@/components/ui/Link"
@@ -108,55 +107,54 @@ const UpgradeSummary = async ({ slug }: UpgradeSummaryProps) => {
   )
 
   return (
-    <Alert variant="update" className="items-start p-6 md:p-8">
-      <AlertIcon>
-        <Info aria-hidden="true" />
-      </AlertIcon>
+    <Alert variant="info" className="items-start p-6 md:p-8">
       <AlertContent className="gap-4">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-          <AlertTitle className="text-sm font-normal uppercase">
-            {t("page-roadmap-upgrade-status-heading")}
+          <AlertTitle asChild className="text-2xl font-black">
+            <h2>{t("page-roadmap-upgrade-status-heading")}</h2>
           </AlertTitle>
           {stageLabelKey && <Tag status="tag">{t(stageLabelKey)}</Tag>}
         </div>
 
-        <dl className="grid gap-x-6 gap-y-2 sm:grid-cols-[auto_1fr]">
-          {target.when && (
-            <>
-              <dt className="text-body-medium">{t(targetLabelKey)}</dt>
-              <dd>
-                {formatPartialDate(target.when, locale, formatQuarter)}
-                {/* The qualifier is its own clause, not an adjective, so it cannot
-                    be lost to word order in translation or read as settled. */}
-                {!target.confirmed && (
-                  <span className="text-body-medium">
-                    {" · "}
-                    {t("page-roadmap-upgrade-status-not-confirmed")}
-                  </span>
-                )}
-              </dd>
-            </>
-          )}
+        <AlertDescription className="text-base">
+          <dl className="grid gap-x-6 gap-y-2 sm:grid-cols-[auto_1fr]">
+            {target.when && (
+              <>
+                <dt className="text-body-medium">{t(targetLabelKey)}</dt>
+                <dd>
+                  {formatPartialDate(target.when, locale, formatQuarter)}
+                  {/* The qualifier is its own clause, not an adjective, so it cannot
+                      be lost to word order in translation or read as settled. */}
+                  {!target.confirmed && (
+                    <span className="text-body-medium">
+                      {" · "}
+                      {t("page-roadmap-upgrade-status-not-confirmed")}
+                    </span>
+                  )}
+                </dd>
+              </>
+            )}
 
-          {next && (
-            <>
-              <dt className="text-body-medium">
-                {t("page-roadmap-upgrade-status-next")}
-              </dt>
-              <dd>
-                {milestoneLabel(next)}
-                {", "}
-                {formatPartialDate(next.when, locale, formatQuarter)}
-              </dd>
-            </>
-          )}
-        </dl>
+            {next && (
+              <>
+                <dt className="text-body-medium">
+                  {t("page-roadmap-upgrade-status-next")}
+                </dt>
+                <dd>
+                  {milestoneLabel(next)}
+                  {", "}
+                  {formatPartialDate(next.when, locale, formatQuarter)}
+                </dd>
+              </>
+            )}
+          </dl>
 
-        <p className="m-0">
-          <InlineLink href={upgrade.sourceUrl}>
-            {t("page-roadmap-upgrade-status-track")}
-          </InlineLink>
-        </p>
+          <p className="m-0">
+            <InlineLink href={upgrade.sourceUrl}>
+              {t("page-roadmap-upgrade-status-track")}
+            </InlineLink>
+          </p>
+        </AlertDescription>
       </AlertContent>
     </Alert>
   )
