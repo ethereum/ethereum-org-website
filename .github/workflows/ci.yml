@@ -88,7 +88,7 @@ jobs:
       - uses: ./.github/actions/setup-pnpm-node
 
       - name: Publish to Chromatic
-        uses: chromaui/action@v16
+        uses: chromaui/action@v18
         with:
           projectToken: fee8e66c9916
           # Not named chromatic.config.json: that filename is auto-loaded by
@@ -314,7 +314,7 @@ jobs:
 
       - name: Publish to Chromatic
         if: always()
-        uses: chromaui/action@v16
+        uses: chromaui/action@v18
         with:
           projectToken: ${{ secrets.CHROMATIC_PAGES_TOKEN }}
           playwright: true
