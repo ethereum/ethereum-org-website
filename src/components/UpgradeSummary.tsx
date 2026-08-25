@@ -80,6 +80,13 @@ const UpgradeSummary = async ({ slug }: UpgradeSummaryProps) => {
     })
 
   const target = upgrade.mainnetTarget
+  const mainnet = upgrade.milestones.find(
+    (milestone) => milestone.kind === "mainnet"
+  )
+  const targetLabelKey =
+    mainnet?.status === "complete"
+      ? "page-roadmap-upgrade-status-activated"
+      : "page-roadmap-upgrade-status-target"
   const running = upgrade.milestones.find((m) => m.status === "live")
   const stageLabelKey = running
     ? STAGE_LABEL_KEYS[running.kind]
@@ -104,9 +111,7 @@ const UpgradeSummary = async ({ slug }: UpgradeSummaryProps) => {
       <dl className="grid gap-x-6 gap-y-2 sm:grid-cols-[auto_1fr]">
         {target.when && (
           <>
-            <dt className="text-body-medium">
-              {t("page-roadmap-upgrade-status-target")}
-            </dt>
+            <dt className="text-body-medium">{t(targetLabelKey)}</dt>
             <dd>
               {formatPartialDate(target.when, locale, formatQuarter)}
               {/* The qualifier is its own clause, not an adjective, so it cannot
