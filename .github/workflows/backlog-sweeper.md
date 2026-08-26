@@ -11,6 +11,7 @@ permissions:
   actions: read
 engine:
   id: claude
+  model: sonnet
 network: defaults
 strict: true
 timeout-minutes: 15
