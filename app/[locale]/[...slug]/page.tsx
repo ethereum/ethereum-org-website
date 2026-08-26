@@ -1,10 +1,6 @@
 import { pick } from "lodash"
 import { notFound } from "next/navigation"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { SlugPageParams } from "@/lib/types"
 
@@ -34,9 +30,6 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
   const isValidPath = checkPathValidity(validPaths, params)
 
   if (!isValidPath) notFound()
-
-  // Enable static rendering
-  setRequestLocale(locale)
 
   const slug = slugArray.join("/")
 
@@ -145,9 +138,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale, slug } = params
-
-  // Set locale before next-intl APIs so on-demand renders stay static
-  setRequestLocale(locale)
 
   try {
     return await getMdMetadata({

@@ -9,7 +9,7 @@ import {
   SquarePlay,
 } from "lucide-react"
 import type { StaticImageData } from "next/image"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 import type { ReactNode } from "react"
 
 import type { Lang, MatomoEventOptions, ToCItem } from "@/lib/types"
@@ -127,7 +127,6 @@ const getDailyAppOrder = <T extends { category: string }>(apps: T[]) => {
 const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const params = await props.params
   const { locale } = params
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-open-source")
 
@@ -1352,8 +1351,6 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-open-source")
 

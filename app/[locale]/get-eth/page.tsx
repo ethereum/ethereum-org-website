@@ -7,11 +7,7 @@ import {
   Users,
   Wallet as WalletIcon,
 } from "lucide-react"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 import type { ComponentType, ReactNode } from "react"
 
 import type { Lang, PageParams } from "@/lib/types"
@@ -131,8 +127,6 @@ export default async function Page(props: { params: Promise<PageParams> }) {
       description: t("page-get-eth-article-keeping-crypto-safe-desc"),
     },
   ]
-
-  setRequestLocale(locale)
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -383,8 +377,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-get-eth")
 

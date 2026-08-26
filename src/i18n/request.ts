@@ -1,19 +1,23 @@
 import { merge } from "lodash"
+import { notFound } from "next/navigation"
+import * as rootParams from "next/root-params"
+import { hasLocale } from "next-intl"
 import { getRequestConfig } from "next-intl/server"
-
-import { Lang } from "@/lib/types"
 
 import { routing } from "./routing"
 
 import { loadMessages } from "@/lib/i18n/loadMessages"
 
-export default getRequestConfig(async ({ requestLocale }) => {
-  // This typically corresponds to the `[locale]` segment
-  let locale = await requestLocale
-
-  // Ensure that the incoming locale is valid
-  if (!locale || !routing.locales.includes(locale as Lang)) {
-    locale = routing.defaultLocale
+export default getRequestConfig(async ({ locale }) => {
+  // Only read from `next/root-params` if no explicit
+  // override is provided by the caller
+  if (!locale) {
+    const paramValue = await rootParams.locale()
+    if (hasLocale(routing.locales, paramValue)) {
+      locale = paramValue
+    } else {
+      notFound()
+    }
   }
 
   const allLocaleMessages = await loadMessages(locale)

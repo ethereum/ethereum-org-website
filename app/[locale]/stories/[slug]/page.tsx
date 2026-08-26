@@ -1,11 +1,7 @@
 import { pick } from "lodash"
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
@@ -29,8 +25,6 @@ const StoryPage = async (props: {
   // instead of throwing an ENOENT when the markdown file is read.
   const slugs = await getStorySlugs()
   if (!slugs.includes(slug)) notFound()
-
-  setRequestLocale(locale)
 
   // Story content lives at public/content/stories/{slug}/index.md, so it slots
   // straight into the shared markdown pipeline once we prefix the slug.
@@ -98,8 +92,6 @@ export async function generateMetadata(props: {
   params: Promise<{ locale: string; slug: string }>
 }): Promise<Metadata> {
   const { locale, slug } = await props.params
-
-  setRequestLocale(locale)
 
   try {
     return await getMdMetadata({

@@ -7,19 +7,15 @@ The site supports 25 languages, including **Arabic** and **Urdu** (RTL). Transla
 ### Server Components (preferred)
 
 ```tsx
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
-export default async function Page({ params }) {
-  const { locale } = await params
-
-  setRequestLocale(locale) // MUST run before any next-intl API (see note below)
-
+export default async function Page() {
   const t = await getTranslations("page-namespace")
   return <h1>{t("page-title")}</h1>
 }
 ```
 
-`setRequestLocale(locale)` **must** be the first statement in every page and `generateMetadata` under `app/[locale]/`, before any next-intl API -- including the `getMetadata`/`getMdMetadata` helpers, which call `getTranslations("common")` internally. Skipping it forces dynamic rendering and throws `Page changed from static to dynamic at runtime, reason: headers` for on-demand params. Descendant server components (no `params`) read the locale with `getLocale()`, which resolves statically once the page has primed the cache. Full root cause and prevention: `docs/solutions/architecture/setrequestlocale-static-to-dynamic-rendering.md`.
+`src/i18n/request.ts` resolves the locale from `next/root-params`, so next-intl APIs read the `[locale]` segment without touching request headers and pages stay static on their own -- nothing needs priming before them, in pages or in `generateMetadata`. Any server component reads the locale with `getLocale()`. The exception is Route Handlers and Server Actions, which `next/root-params` doesn't reach yet: pass the locale explicitly there, e.g. `getTranslations({ locale, namespace })`.
 
 ### Client Components
 
@@ -273,7 +269,7 @@ H1-H4 headings in markdown require a custom `{#lower-kebab-id}`. Enforced by mar
 
 ## Common Mistakes
 
-- Calling a next-intl API (`getTranslations`, `getLocale`, or the `getMetadata`/`getMdMetadata` helpers) before `setRequestLocale(locale)` in a page or `generateMetadata` -- opts the route into dynamic rendering and throws `Page changed from static to dynamic at runtime, reason: headers` for on-demand params
+- Calling a next-intl API in a Route Handler or Server Action without an explicit locale -- `next/root-params` doesn't reach them, so pass `{ locale, namespace }`
 - Using `left-`/`right-`/`ml-`/`mr-`/`pl-`/`pr-` for layout (use logical equivalents)
 - Hard-coding English in JSX
 - `value.toLocaleString()` -- use `numberFormat()`

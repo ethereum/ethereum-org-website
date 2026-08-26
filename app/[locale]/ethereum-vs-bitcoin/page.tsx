@@ -1,4 +1,4 @@
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, ToCItem } from "@/lib/types"
 
@@ -26,8 +26,6 @@ import layer2HeroImg from "@/public/images/heroes/layer-2-hub-hero.png"
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-ethereum-vs-bitcoin")
 
@@ -381,8 +379,6 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-ethereum-vs-bitcoin")
 

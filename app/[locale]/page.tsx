@@ -1,11 +1,7 @@
 import { pick } from "lodash"
 import Image from "next/image"
 import { notFound } from "next/navigation"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { PageParams } from "@/lib/types"
 
@@ -47,8 +43,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const { locale } = params
 
   if (!LOCALES_CODES.includes(locale)) return notFound()
-
-  setRequestLocale(locale)
 
   const [accountHoldersData, growThePieData] = await Promise.all([
     getAccountHolders(),
@@ -212,8 +206,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   try {
     const t = await getTranslations("page-index")
