@@ -127,8 +127,4 @@ No global rule. Per-term in glossary.
 
 When Latin terms appear adjacent to native script in CJK, pad with a single ASCII space (not concatenation, not zero-width). "使用 MetaMask" (zh) — single ASCII space.
 
-## See also
-
-- ETHGlossary `docs/translation-policy.md` for the canonical version (this is the source of truth)
-- `references/known-patterns.md` for issue patterns specific to review-time
-- `references/scoring-rubric.md` for how rule violations map to quality scores
+ETHGlossary's `docs/translation-policy.md` (wackerow/ethglossary repo) is the canonical version of these rules — this digest is downstream of it.
