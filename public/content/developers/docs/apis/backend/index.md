@@ -95,7 +95,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 - [solidrpc.io](https://solidrpc.io/)
 - [Documentation](https://solidrpc.io/docs)
-- [GitHub](https://github.com/DamianFigiel/SolidRPC)
+- [GitHub](https://github.com/SolidRPC)
 
 **Zmok -** **_Speed-oriented Ethereum nodes as JSON-RPC/WebSockets API._**
 
