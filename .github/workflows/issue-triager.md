@@ -4,7 +4,7 @@ description: Silently classifies and routes new issues with labels — never com
 on:
   issues:
     types: [opened, reopened]
-  schedule: every 6 hours
+  schedule: daily around 05:00 on weekdays
   workflow_dispatch:
   skip-bots:
     - allcontributors[bot]
@@ -15,6 +15,7 @@ permissions:
   issues: read
 engine:
   id: claude
+  model: claude-sonnet-5?effort=medium
 network: defaults
 strict: true
 timeout-minutes: 5
