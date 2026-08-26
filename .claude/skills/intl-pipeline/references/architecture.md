@@ -95,12 +95,7 @@ Manifest impact: source manifest unchanged (source didn't change); translation m
 
 ### Phase 4 batching and its bounds
 
-Changed sections are packed into as few calls as fit, not one per section:
-
-- `batchSections` fills each batch with TRANSLATE sections up to `MAX_CHUNK_BYTES` (32KB) of **wire bytes** — content plus the `<SECTION id=".." action=".." heading="..">` envelope, which repeats the id twice and costs ~134 bytes for a JSON leaf. Content-only accounting understates a batch of small JSON keys by more than the content itself.
-- Each batch carries up to `MAX_CONTEXT_BYTES` (8KB) of CONTEXT sections, chosen as those nearest in document order to that batch's TRANSLATE sections. Context is replicated per batch, so it is a per-call tax; its size must never be subtracted from the per-batch budget (see `references/runbooks/cost-guard-tripped.md`).
-- `planIncrementalBatches` (`lib/llm/plan.ts`) assembles every prompt for a file+locale before any is sent, so the whole cost is known up front and checked against `createFileBudget`. `MODE=estimate` calls the same planner and sends nothing.
-- `callGeminiRaw` is the single LLM choke point: per-call prompt ceiling, run fuse, retries, model fallback, temperature escalation, and usage metering all live there. Transport is selected by `LLM_PROVIDER` (Gemini SDK, or OpenRouter's OpenAI-compatible endpoint shaped to the same response).
+Changed sections are packed into as few calls as fit, not one per section. Packing rules, budgets, and the choke point live in `references/runbooks/cost-guard-tripped.md` ("How batching packs calls").
 
 ## Phase 5: Assembly
 
@@ -122,18 +117,6 @@ Splices LLM-translated sections (Phase 4) into the deterministically-updated loc
 
 **On partial failure**: do NOT update either manifest. The next run should re-detect those changes and retry. Stamp manifests only when all phases successfully completed.
 
-## Test assertions (per phase, high level)
-
-| Phase | What tests check                                                                                                                             |
-| ----- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1     | ChangeSet contains exactly the expected node changes; DiffResult sections classified correctly                                               |
-| 2     | Each fixture mutation lands in the correct work list; mixed sections route entirely to llm-required                                          |
-| 3     | Inert changes applied to correct elements (match by value, not position); unchanged prose byte-identical; llm-required sections not modified |
-| 4     | Mock LLM receives only the llm-required sections; receives english-B content (not english-A)                                                 |
-| 4b    | Translatable attrs translated; non-translatable preserved; idempotent on re-run; malformed batch isolated                                    |
-| 5     | All deterministic + LLM changes present; unchanged sections byte-identical; section order matches english-B                                  |
-| 6     | Source manifest rootHash matches english-B tree; sourceCommitSha populated; neither manifest written on any failure                          |
-
 ## Open questions / known gaps
 
 Surfaced in `tests/specs/PIPELINE-SPEC.md`; load that doc when you hit one:
@@ -143,10 +126,3 @@ Surfaced in `tests/specs/PIPELINE-SPEC.md`; load that doc when you hit one:
 - Code fence insertion point for added structural fences — needs implementation-level definition relative to other elements.
 - Partial-failure strategy is currently all-or-nothing on manifest stamping. Wasteful on retry; may revisit for per-section stamping later.
 
-## What this reference does NOT cover
-
-- Gemini API integration details (see `references/ethglossary.md` for term lookups; `gemini.ts` for the adapter)
-- GitHub Actions workflow shape (see `references/orchestration.md`)
-- Multi-file batching, chunking for large files (see `tests/specs/CONCURRENCY-SPEC.md`, Parts 2 and 4)
-- Post-import sanitizer (see `references/sanitizer.md`)
-- Image alt text translation (known gap; alt text in markdown images is not classified as translatable by the current parser)
