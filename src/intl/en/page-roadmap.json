@@ -122,7 +122,6 @@
   "page-roadmap-upgrade-status-not-confirmed": "Date not yet confirmed",
   "page-roadmap-upgrade-status-next": "Next milestone",
   "page-roadmap-upgrade-status-track": "Track live progress on Forkcast",
-  "page-roadmap-upgrade-status-details": "See technical details on Forkcast",
   "page-roadmap-upgrade-status-phase-planning": "In planning",
   "page-roadmap-upgrade-quarter": "Q{quarter} {year}",
   "page-roadmap-upgrade-milestone-devnet": "Devnet-{version}",

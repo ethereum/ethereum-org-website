@@ -89,14 +89,9 @@ const UpgradeSummary = async ({ slug }: UpgradeSummaryProps) => {
   const mainnet = upgrade.milestones.find(
     (milestone) => milestone.kind === "mainnet"
   )
-  const targetLabelKey =
-    mainnet?.status === "complete"
-      ? "page-roadmap-upgrade-status-activated"
-      : "page-roadmap-upgrade-status-target"
-  const trackLabelKey =
-    mainnet?.status === "complete"
-      ? "page-roadmap-upgrade-status-details"
-      : "page-roadmap-upgrade-status-track"
+  if (mainnet?.status === "complete") return null
+
+  const targetLabelKey = "page-roadmap-upgrade-status-target"
   const running = upgrade.milestones.find((m) => m.status === "live")
   const stageLabelKey = running
     ? STAGE_LABEL_KEYS[running.kind]
@@ -159,9 +154,13 @@ const UpgradeSummary = async ({ slug }: UpgradeSummaryProps) => {
             )}
           </dl>
 
-          <p className="m-0">
-            <InlineLink href={upgrade.sourceUrl}>{t(trackLabelKey)}</InlineLink>
-          </p>
+          <div className="mt-4">
+            <p className="m-0">
+              <InlineLink href={upgrade.sourceUrl} className="text-sm">
+                {t("page-roadmap-upgrade-status-track")}
+              </InlineLink>
+            </p>
+          </div>
         </AlertDescription>
       </AlertContent>
     </Alert>

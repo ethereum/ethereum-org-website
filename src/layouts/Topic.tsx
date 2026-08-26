@@ -109,6 +109,10 @@ export const TopicLayout = async ({
     </>
   )
 
+  // Rendered through ContentLayout's article-header slot so the upgrade card
+  // appears before contributors and page actions without changing other
+  // layouts.
+
   return (
     <ContentLayout
       dir={contentNotTranslated ? "ltr" : "unset"}
@@ -117,6 +121,7 @@ export const TopicLayout = async ({
       contributors={contributors}
       lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       heroSection={heroSection}
+      articleHeader={upgradeSlug ? <UpgradeSummary slug={upgradeSlug} /> : null}
       showDropdown={frontmatter.showDropdown ?? true}
     >
       {/*
@@ -131,17 +136,6 @@ export const TopicLayout = async ({
         editPath={getEditPath(slug)}
         className="-ms-2 mb-8 [&+h2]:mt-0!"
       />
-      {/*
-        Rendered here rather than as an MDX tag so that every locale gets it
-        without waiting for the intl-pipeline to propagate a tag into 24
-        translated files — the facts live in one place, so they should render
-        everywhere at once.
-
-        The switch is *data presence*, not layout type: six pages use
-        `template: upgrade` (beacon-chain, dencun, fusaka, glamsterdam, merge,
-        pectra) and only those with a file in `src/data/upgrades` get a block.
-      */}
-      {upgradeSlug && <UpgradeSummary slug={upgradeSlug} />}
       {children}
     </ContentLayout>
   )
