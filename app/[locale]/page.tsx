@@ -15,6 +15,7 @@ import HomeHero from "@/components/Hero/HomeHero"
 import FeatureCards from "@/components/Homepage/FeatureCards"
 import GetStartedGrid from "@/components/Homepage/GetStartedGrid"
 import LatestUpdates from "@/components/Homepage/LatestUpdates"
+import SavingsCarousel from "@/components/Homepage/SavingsCarousel"
 import TrustLogos from "@/components/Homepage/TrustLogos"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
@@ -33,11 +34,7 @@ import {
   LOCALES_CODES,
 } from "@/lib/constants"
 
-import {
-  KPISection,
-  SavingsCarousel,
-  SimulatorSection,
-} from "./_components/HomepageLazy"
+import { KPISection, SimulatorSection } from "./_components/HomepageLazy"
 import IndexPageJsonLD from "./page-jsonld"
 
 import { getAccountHolders, getGrowThePieData } from "@/lib/data"

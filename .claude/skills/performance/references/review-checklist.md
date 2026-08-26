@@ -23,6 +23,7 @@ Mechanical scan of changed code against ethereum.org's perf landmines — patter
 | Changes to `next.config.js` / `outputFileTracing*`               | `build.md` — function bundle size, included paths                                                                                                     |
 | New large static asset (mp3, video, large image)                 | `build.md` — should be in `/public`, excluded from function trace                                                                                     |
 | New import of a heavy lib (chart, syntax highlighter, > 20KB gz) | `bundle.md` — verify it's lazy-imported via `LazyImports.tsx`                                                                                         |
+| `dynamic()` (with or without `ssr: false`) around prose or links | `bundle.md` — editorial content must be a direct import; `dynamic()` hides it from crawlers even when `ssr` is left on                                |
 | New data fetcher / cron / blob storage                           | _see `data-layer` skill_                                                                                                                              |
 
 If the diff is small or none of the rows apply cleanly, load `anti-patterns.md` alone and scan against it.
