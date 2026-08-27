@@ -85,7 +85,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <I18nProvider locale={locale} messages={messages}>
         <main className="px-page pt-space-3x pb-page">
           <MainArticle className="flow space-y-space-3x">
-            <Grid columns={2} size="wider">
+            {/* balanced, not columns={2}: the sibling's md:col-span-2 needs the
+                fold to happen at md, not at a content-driven width. */}
+            <Grid balanced={2}>
               <QuizzesUserStats
                 className={!communityStats ? "md:col-span-2" : undefined}
               />
