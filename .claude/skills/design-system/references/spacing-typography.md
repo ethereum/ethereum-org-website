@@ -49,22 +49,11 @@ Don't go from `<h2>` to `<h4>`. Screen reader users navigate by heading level, a
 
 ### Hero "title" vs "header"
 
-**`PageHero` and `HubHero` do NOT share a prop shape -- confirm which hero you're in before assigning `title`/`header`.**
-
-`PageHero`:
-- `title` -- the large visible title, and **always** the page `<h1>`. There is **no** `header` prop (it was removed).
-- `breadcrumbs` (required) fills the slot above the title -- a `{ slug }` object or a custom `<Breadcrumb>` element; an optional `eyebrow` (`ReactNode`) renders between the breadcrumbs and the title for a status indicator/tag.
-- The hero aside is a discriminated union: `heroImg` **or** `heroComponent`, never both (`heroImg` stacks above the text on mobile; `heroComponent` folds beside it).
-
-`HubHero` (the names read *backwards* vs their apparent meaning):
-- `title` -- a small uppercase eyebrow, rendered as `<h1>` (e.g. `title="Developers"` on `/developers/`).
-- `header` -- the large heading: an `<h2>` when `title` is set, the `<h1>` when it isn't. So a hub passes the section name as `title` and the marketing line as `header`.
-
-`description` is the lead paragraph in both. See `references/page-hero-walkthrough.md`.
+**`PageHero` and `HubHero` do NOT share a prop shape.** `PageHero`: `title` is the large heading and **always** the page `<h1>`; there is no `header` prop. `HubHero` reads *backwards*: `title` is the small uppercase eyebrow (rendered `<h1>`), `header` is the large heading. Full prop shapes: `references/page-hero-walkthrough.md`.
 
 ### Markdown page titles
 
-In-article (markdown) page titles render as a plain `<h1>` from the layout (`Docs`/`Static`/`Tutorial`) -- the `text-4xl lg:text-5xl` default, no special token. (Historical note: this used to be a `text-[2.5rem]` arbitrary value in `MdComponents`; it's been removed.) `PageHero` owns hero titles separately (`text-3xl ... lg:text-6xl`) -- don't copy hero sizes into article titles or vice versa.
+In-article (markdown) page titles render as a plain `<h1>` from the layout (`Docs`/`Static`/`Tutorial`) -- the `text-4xl lg:text-5xl` default, no special token. `PageHero` owns hero titles separately (`text-3xl ... lg:text-6xl`) -- don't copy hero sizes into article titles or vice versa.
 
 ## Content Spacing: the `.flow` rhythm
 
@@ -121,7 +110,12 @@ The designers' "heading hugs the content it introduces" effect is the `1x` defau
 
 **`.flow` vs `Stack`/`gap`.** Use `.flow` for *prose* (mixed heading/paragraph/list streams). Use `Stack`/`gap-*` (below) for *composition* -- repeated like-shaped blocks (cards, grid items, control rows). Don't put both on the same container.
 
-Full design rationale and edge cases: `references/typography-spacing-flow-spec.md`.
+**Two subtleties in the shipped rules** (`base.css`):
+
+- **`h2` is matched twice.** It appears in both the `2x` heading rule and the `3x` boundary rule; source order makes `3x` win for a top-level `h2`. An `h2` *inside* a `<section>` is usually the section's first child, so it gets no own gap and the `<section>` boundary owns the `3x`. Net: top-level `h2` = `3x`, nested section heading = the section's `3x`, an `h2` mid-section (rare) = `2x`.
+- **The explicit list top-gap rule** (`* + :is(ul, ol)`) exists because the legacy global `ul`/`ol` rule sets `margin-top: 0` at higher specificity than the zero-specificity `* + *` default -- without it a list would sit flush against the block above it.
+
+**Line-height** comes from the size-token pairing in `theme.css`; don't override it per component. For an intentional one-off, use the slash form (`text-base/base`), not a separate `leading-*` class.
 
 ## Spacing Scale
 
@@ -231,24 +225,7 @@ The blanket selector is the right default, but vertical breathing room is partly
 
 ## Logical Spacing for RTL
 
-Always use logical equivalents for direction-dependent spacing:
-
-| Don't use | Use instead |
-|---|---|
-| `ml-X` | `ms-X` |
-| `mr-X` | `me-X` |
-| `pl-X` | `ps-X` |
-| `pr-X` | `pe-X` |
-| `border-l` | `border-s` |
-| `border-r` | `border-e` |
-| `text-left` | `text-start` |
-| `text-right` | `text-end` |
-| `left-X` | `inset-s-X` |
-| `right-X` | `inset-e-X` |
-
-Same for arbitrary values: `inset-s-[12px]`, `me-[2rem]`.
-
-Vertical (`top-`, `bottom-`, `mt-`, `mb-`, `pt-`, `pb-`) is fine -- it's not direction-dependent.
+Direction-dependent spacing always uses logical properties (`ms-`/`me-`/`ps-`/`pe-`/`border-s`/`text-start`/`inset-s-` ...). Vertical spacing (`mt-`, `pb-`, `top-`) is fine as-is. The full don't/do table lives in `references/i18n-rtl.md`.
 
 ## Breakpoints (Non-Default)
 

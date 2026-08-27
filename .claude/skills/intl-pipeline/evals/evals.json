@@ -33,11 +33,11 @@
     {
       "id": 3,
       "name": "manifest-corruption-recovery",
-      "prompt": "i think one of the manifest files got corrupted somehow. The build is failing on the Korean version of beginner-intro-to-ethereum/index.md and when I look at .manifest-source.json it has weird hashes that don't match the English. what's the recovery procedure? can I just delete the bad one?",
+      "prompt": "i think one of the manifest files got corrupted somehow. The build is failing on the Korean version of beginner-intro-to-ethereum/index.md and when I look at its source.json under .manifests/ it has weird hashes that don't match the English. what's the recovery procedure? can I just delete the bad one?",
       "expected_output": "Skill should explain that both manifests (source + translation) must be handled together -- delete one, must delete the other. Then re-run the pipeline (full mode) for that file+locale to regenerate. Should NOT recommend hand-editing the manifest JSON. References recovery.md.",
       "files": [],
       "assertions": [
-        {"text": "Output explains that both manifest files (.manifest-source.json AND .manifest-translation.json) must be deleted together, not just one"},
+        {"text": "Output explains that both manifest files (source.json AND translation.json in the file's .manifests/ directory) must be deleted together, not just one"},
         {"text": "Output recommends running the pipeline (mode: full or equivalent) for that file+locale to regenerate manifests"},
         {"text": "Output does NOT recommend hand-editing the manifest JSON content"},
         {"text": "Output mentions or references `references/recovery.md` material (the recovery procedures)"},

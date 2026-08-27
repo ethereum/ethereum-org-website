@@ -53,3 +53,30 @@ export const trackCustomEvent = ({
     push([`trackEvent`, eventCategory, eventAction, eventName, eventValue])
   })
 }
+
+// Dimension 1 is the A/B variant; 2 must exist in Matomo with visit scope.
+export const AUTOMATION_DIMENSION_ID = 2
+
+export type AutomationVerdict = "human" | "webdriver" | "headless-ua"
+
+type AutomationSignals = {
+  webdriver: boolean
+  userAgent: string
+}
+
+// Independent of the resolution/version heuristics the bot census uses -- don't
+// add screen-size checks, that independence is what makes agreement meaningful.
+export const classifyAutomation = ({
+  webdriver,
+  userAgent,
+}: AutomationSignals): AutomationVerdict => {
+  if (webdriver) return "webdriver"
+  if (/headless/i.test(userAgent)) return "headless-ua"
+  return "human"
+}
+
+export const detectAutomation = (): AutomationVerdict =>
+  classifyAutomation({
+    webdriver: navigator.webdriver,
+    userAgent: navigator.userAgent,
+  })

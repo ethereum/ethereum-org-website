@@ -4,17 +4,7 @@ Load when a run logs `[cost-guard]`, when a file is skipped for budget, or when 
 
 ## Background: what went wrong once
 
-Run [31149083965](https://github.com/ethereum/ethereum-org-website/actions/runs/31149083965) (2026-08-07) cost **$1,108** translating 42KB of new text, and **succeeded** — so nothing alerted, and it was found five days later during a billing review.
-
-Eight quiz PRs added 488 new keys to `src/intl/en/learn-quizzes.json`, a file that already had 744 translated strings in every locale. A file with an existing translation takes the _incremental_ path regardless of how new its content is, so the 488 new keys became TRANSLATE sections and the 744 existing ones CONTEXT. `batchSections` then computed:
-
-```js
-const translateBudget = Math.max(maxBytes - contextBytes, 1) // max(32768 - 89513, 1) = 1
-```
-
-CONTEXT is replicated into every batch, so subtracting it from a per-batch budget is a category error. With 89KB of context the subtraction went negative and the `Math.max(…, 1)` minimum-guarantee floor clamped it to 1 byte, so every section opened its own batch carrying the whole existing translation: 488 calls per locale x 24 locales = 11,712 requests, 549M input tokens, ~129KB of prompt returning ~40 output tokens each.
-
-The failure mode gets _worse_ as translation coverage improves, which is why it stayed cheap for months.
+Run [31149083965](https://github.com/ethereum/ethereum-org-website/actions/runs/31149083965) (2026-08-07) cost **$1,108** translating 42KB of new quiz keys — and **succeeded**, so nothing alerted. A file with an existing translation takes the _incremental_ path regardless of how new its content is (path selection in `main.ts` is "does a locale file and manifest exist", not "how much is new"), so "many new keys in an already-translated file" is the test-case shape for any batching change — and a batching bug that subtracted per-batch-replicated CONTEXT from the budget collapsed every batch to one section, producing 11,712 requests. The failure mode gets _worse_ as translation coverage improves; `tests/unit/intl-pipeline/cost-incident.spec.ts` is the regression test.
 
 ## The bounds now in place
 
@@ -28,9 +18,16 @@ The failure mode gets _worse_ as translation coverage improves, which is why it 
 
 All input-side, because prompt bytes are assembled locally and knowable before sending; output is a translation of what we sent and is capped by `GEMINI_TIMEOUT_MS`.
 
-**The ceiling refuses prompts we could have made smaller, not content that cannot be split.** A single section or chunk already past `MAX_CHUNK_BYTES` is as small as that call gets -- `public/content/developers/docs/evm/opcodes/index.md` has one 68KB section (the opcode table) that no chunker can divide without breaking it. Such calls are sent at whatever size they are (`isIrreducibleChunk`, `PlannedBatch.irreducible`). Everything else must fit, and the planner enforces that by building the real prompts, measuring them, and shrinking the content budget until they do -- rather than predicting a size from a budget, which is how the first version of this missed the prompt's `Sections to translate:` id list by 307 bytes.
+**The ceiling refuses prompts we could have made smaller, not content that cannot be split.** A single section or chunk already past `MAX_CHUNK_BYTES` is as small as that call gets -- `public/content/developers/docs/evm/opcodes/index.md` has one 68KB section (the opcode table) that no chunker can divide without breaking it. Such calls are sent at whatever size they are (`isIrreducibleChunk`, `PlannedBatch.irreducible`). Everything else must fit, and the planner enforces that by building the real prompts, measuring them, and shrinking the content budget until they do -- never by predicting a size from a budget.
 
 Prompt overhead (rules + glossary + capped context) is absorbed by that tightening. Today's heaviest real glossary is 184 terms / 16.4KB (`learn-quizzes.json` / ar), which fits with room to spare; overhead past roughly 53KB leaves less than `MIN_CONTENT_BUDGET_BYTES` for content and the file is refused with the glossary size named. Nothing trims or reorders glossary terms -- `/filter` already returns only terms present in the content.
+
+How batching packs calls (Phase 4):
+
+- `batchSections` fills each batch with TRANSLATE sections up to `MAX_CHUNK_BYTES` (32KB) of **wire bytes** — content plus the `<SECTION id=".." action=".." heading="..">` envelope, which repeats the id twice and costs ~134 bytes for a JSON leaf. Content-only accounting understates a batch of small JSON keys by more than the content itself.
+- Each batch carries up to `MAX_CONTEXT_BYTES` (8KB) of CONTEXT sections, chosen as those nearest in document order to that batch's TRANSLATE sections. Context is replicated per batch, so it is a per-call tax; its size must never be subtracted from the per-batch budget (that subtraction was the incident).
+- `planIncrementalBatches` (`lib/llm/plan.ts`) assembles every prompt for a file+locale before any is sent, so the whole cost is known up front and checked against `createFileBudget`. `MODE=estimate` calls the same planner and sends nothing.
+- `callGeminiRaw` is the single LLM choke point: per-call prompt ceiling, run fuse, retries, model fallback, temperature escalation, and usage metering all live there. Transport is selected by `LLM_PROVIDER` (Gemini SDK, or OpenRouter's OpenAI-compatible endpoint shaped to the same response).
 
 Two accounting notes that matter when reading a log:
 
@@ -56,7 +53,7 @@ The run stopped mid-flight; the temp branch is preserved and manifests were not 
 grep -o 'tokens_in=[0-9]*' <log> | cut -d= -f2 | sort -n | tail -5
 ```
 
-Healthy is 4k–9k per call. Anything above ~50k means context is being resent per call — a bug, not a budget problem.
+Healthy is 4k–9k per call. Anything above ~50k means context is being resent per call — a bug, not a budget problem. (The input:output *ratio* is not a signal — incremental translation legitimately runs anywhere from 1:1 to 180:1; judge input tokens per call only.)
 
 ### `[cost-guard] prompt for … is N bytes, over the … ceiling`
 

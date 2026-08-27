@@ -36,15 +36,15 @@ Name raster image imports (`.png`/`.webp` used as `src` / `StaticImageData`) in 
 
 ### `Button isSecondary` does nothing on `solid` and `link` variants
 
-In `Button.tsx` lines 67-69, there's an early-out: `["solid", "link"].includes(variant || "solid")`. So `<Button isSecondary>...</Button>` (defaulting to `solid`) silently does nothing. `isSecondary` only takes effect on `outline` and `ghost` variants.
+`Button.tsx` early-outs on `["solid", "link"].includes(variant || "solid")`, so `<Button isSecondary>` (defaulting to `solid`) silently does nothing. `isSecondary` only takes effect on `outline` and `ghost` variants.
 
 ### `CardBanner fit="contain"` auto-clones a single child as a blurred backdrop
 
-If you pass `<CardBanner fit="contain"><Image .../></CardBanner>` with **one** child, you get a blurred-bg + sharp-fg automatically (Card.tsx lines 95-119). Pass two children and you lose this magic.
+If you pass `<CardBanner fit="contain"><Image .../></CardBanner>` with **one** child, you get a blurred-bg + sharp-fg automatically. Pass two children and you lose this magic.
 
 ### A bare `CardBanner` on a link card mismatches its corner radius
 
-`Card`'s outer radius is `--card-pad + --banner-radius`, but a `CardBanner` rounds at only `--banner-radius`. Wrapping the banner in a `CardHeader` lets the `--card-pad` inset bridge the difference so the corners stay concentric. Drop the banner straight into `Card` (no header) on any padded size and the banner's squarer corners poke past the card outline; add an `href` and the variant-aware hover has no inset to breathe against. Only go bare with `size="xs"` (`--card-pad: 0`), where the two radii collapse to the same value. This bit the video / hackathon / story / latest card grids until their banners were wrapped in `CardHeader` (July 2026).
+`Card`'s outer radius is `--card-pad + --banner-radius`, but a `CardBanner` rounds at only `--banner-radius`. Wrapping the banner in a `CardHeader` lets the `--card-pad` inset bridge the difference so the corners stay concentric. Drop the banner straight into `Card` (no header) on any padded size and the banner's squarer corners poke past the card outline; add an `href` and the variant-aware hover has no inset to breathe against. Only go bare with `size="xs"` (`--card-pad: 0`), where the two radii collapse to the same value. This bit the video / hackathon / story / latest card grids until their banners were wrapped in `CardHeader`.
 
 ### `LinkBox` requires `LinkOverlay` somewhere inside
 
@@ -98,7 +98,7 @@ Static buttons get unnecessarily forced into client. Splitting would be invasive
 
 ### `Callout` consolidation is complete
 
-The legacy `Callout.tsx`/`CalloutSSR.tsx` and `CalloutBanner.tsx`/`CalloutBannerSSR.tsx` client/server pairs were unified into a single server-renderable `Callout` at `@/components/ui/callout` (see `callout-walkthrough.md`). The root-level files were removed; don't reintroduce them. `BannerNotification` was absorbed into `Alert` as `variant="banner"` in May 2026 in the same direction-of-travel.
+The legacy `Callout.tsx`/`CalloutSSR.tsx` and `CalloutBanner.tsx`/`CalloutBannerSSR.tsx` client/server pairs were unified into a single server-renderable `Callout` at `@/components/ui/callout` (see `callout-walkthrough.md`). The root-level files were removed; don't reintroduce them. `BannerNotification` was absorbed into `Alert` as `variant="banner"` in the same direction-of-travel.
 
 ### Event tracking is automatic on `Button` and `Link`
 
@@ -122,14 +122,7 @@ The `.flow` rhythm adds `margin-top` to 2nd+ children of any section it scopes -
 
 ## Tokens That Aren't Real
 
-These class names appear in `ui/select.tsx`, `ui/dialog.tsx`, `ui/dropdown-menu.tsx`, `ui/tabs.tsx` but are **NOT defined** in this project's tokens. They're stale shadcn defaults that don't resolve:
-
-- `bg-popover`, `text-popover-foreground`
-- `bg-accent`, `text-accent-foreground`
-- `bg-muted`, `text-muted-foreground`
-- `focus:ring-ring`, `ring-offset-background`
-
-If you're touching one of these files, replace these with semantic tokens (see `tokens.md` and `cleanup-playbook.md`). Don't introduce new usage of these names.
+Stale shadcn class names (`bg-popover`, `bg-muted`, `text-muted-foreground`, ...) linger in `ui/select.tsx`, `ui/dialog.tsx`, `ui/dropdown-menu.tsx` (and `ring-offset-background` in `ui/tabs.tsx`) but are **not defined** in this project's tokens. Don't introduce new uses; when touching those files, replace them -- name list in `tokens.md`, replacement mapping in `cleanup-playbook.md`.
 
 ## Internationalization Landmines
 
@@ -151,7 +144,7 @@ Use logical equivalents: `inset-s-`, `inset-e-`, `ms-`, `me-`, `ps-`, `pe-`. The
 
 Use `numberFormat()` from `@/lib/utils/numbers` and `dateTimeFormat()` from `@/lib/utils/date`. They handle Urdu/Arabic numbering systems and calendar correctly.
 
-There's currently exactly one violation: `ui/chart.tsx:241`. Don't add more.
+There's currently exactly one violation, in `ui/chart.tsx`. Don't add more.
 
 ### Directional icons: use `ChevronNext` / `ChevronPrev`
 
@@ -170,7 +163,7 @@ Use `useRtlFlip` only when you need to flip a non-chevron directional icon (a cu
 
 ### Urdu uses `list-style-type: urdu` for ordered lists
 
-Configured in `base.css` lines 97-107. Persian fallback. Triggered by `:lang(ur)`, not `dir`. Don't override.
+Configured in `base.css` (the `:lang(ur) ol` rule; Persian fallback). Triggered by `:lang(ur)`, not `dir`. Don't override.
 
 ### Bare `<ul>`/`<li>` inherit legacy global list styles
 
@@ -178,15 +171,13 @@ Configured in `base.css` lines 97-107. Persian fallback. Triggered by `:lang(ur)
 
 ## Heading Hierarchy
 
-### One `<h1>` per page
+One `<h1>` per page: heroes render it, and every markdown layout (including `Static`) renders `frontmatter.title` as the `<h1>` -- never add a `# Title` to markdown body content. Full write-up (including the `HubHero` eyebrow-as-`<h1>` case): `a11y.md`.
 
-`PageHero` and `HubHero` both render `<h1>`. Most React-page heroes do. Most markdown layouts auto-render the page `title` from frontmatter as the `<h1>`.
+## Markdown Content Authoring
 
-The `Static` layout now follows this same rule: it renders `frontmatter.title` as the `<h1>` through its hero (`PageHero` for normal pages, `HubHero` for the guides hub), so a markdown `# Title` in the body is **redundant** -- it's hidden via CSS (`**:[h1]:hidden` in `Static.tsx`) and the English content has had it removed. Do NOT add a `# Title` to Static markdown. (The CSS hide is transitional, covering non-English content that still carries the legacy `#` line until the pipeline strips it.)
+### Inline images co-locate with the markdown file
 
-### Eyebrow text in `HubHero` is rendered as `<h1>`
-
-`HubHero` uses `<h1>` for its uppercase eyebrow when `title` is set. This is content-correct (the eyebrow IS the page title for SEO).
+An inline image in `public/content/` markdown lives **next to its `index.md`** and is referenced relatively (`![alt](./diagram.png)`); a root `/images/...` path on an inline image breaks the MDX render (the classic dev-log 500 on a new page). The exception is the frontmatter `image:` hero field, which takes a `/images/...` public path (see `public/content/what-are-apps/index.md`).
 
 ## Things Not Used Anymore
 
@@ -198,15 +189,7 @@ Chakra leftover, used in 5 places. Don't introduce new uses. Replace with Tailwi
 
 ### `Tooltip` has `z-[10000]`
 
-`@/components/Tooltip/index.tsx:115` uses `z-[10000]` instead of `z-tooltip` (1800). Should use the named token. Flagged for cleanup; don't replicate.
-
-### `MdComponents` heading sizes are arbitrary
-
-`MdComponents/index.tsx:47,59,74,89` overrides h1/h2 with `text-[2.5rem]`, `text-[2rem]`. These are markdown-specific sizing rules. Don't replicate the arbitrary values in non-markdown code.
-
-### `MdComponents` uses `text-[2.5rem]` for the page title
-
-This arbitrary "page title size" suggests we need a `--text-page-title` token (or a `Heading` primitive). Until that exists, the arbitrary value is the convention in markdown rendering. Don't copy it elsewhere -- `PageHero`'s title uses the scale (`text-3xl ... lg:text-6xl`), not `text-[2.5rem]`.
+`@/components/Tooltip` uses `z-[10000]` instead of `z-tooltip` (1800). Should use the named token. Flagged for cleanup; don't replicate.
 
 ### `BigNumber` exists -- USE IT
 

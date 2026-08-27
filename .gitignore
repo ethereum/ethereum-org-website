@@ -79,3 +79,6 @@ storybook-static-pages
 
 # Playwright CLI session state
 .playwright-cli
+
+# Claude Code worktrees
+.claude/worktrees/

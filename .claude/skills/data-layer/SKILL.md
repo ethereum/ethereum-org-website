@@ -25,77 +25,15 @@ src/lib/data/
 
 ## Environment Variables
 
-The data-layer uses a **dedicated `.env.local` file** at `src/data-layer/.env.local`, separate from the main app's root `.env.local`.
-
-### Local Development Setup
-
-1. Copy the example file:
-
-   ```bash
-   cp src/data-layer/.env.example src/data-layer/.env.local
-   ```
-
-2. Fill in the required API keys (see `.env.example` for all options)
-
-3. Run Trigger.dev tasks locally:
-   ```bash
-   pnpm trigger:dev
-   ```
-
-### Variable Categories
-
-- **Shared with Main App**: `GITHUB_TOKEN_READ_ONLY`, Sentry vars (configure in both files)
-- **Data Layer Only**: API keys (CoinGecko, Beaconcha.in, Dune, Google, etc.), Netlify Blobs tokens, S3 credentials, Trigger.dev config
-
-### Production (Trigger.dev Cloud)
-
-Configure environment variables in your Trigger.dev project dashboard. The main app and data-layer run in separate environments.
+The data-layer uses a **dedicated `.env.local`** at `src/data-layer/.env.local`, separate from the root `.env.local`: `cp src/data-layer/.env.example src/data-layer/.env.local`, fill in the keys (see `.env.example` for all options), then `pnpm trigger:dev` runs tasks locally. `GITHUB_TOKEN_READ_ONLY` and Sentry vars are shared with the main app (configure in both files); everything else (API keys, Netlify Blobs tokens, S3 credentials, Trigger.dev config) is data-layer only. In production, configure vars in the Trigger.dev project dashboard — the app and data-layer run in separate environments.
 
 ## Key Files
 
-### tasks.ts - Single Source of Truth
-
-Defines all task keys and scheduled jobs:
-
-```typescript
-export const KEYS = {
-  ETH_PRICE: "fetch-eth-price",
-  L2BEAT: "fetch-l2beat",
-  // ...
-} as const
-
-const WEEKLY: TaskDef[] = [[KEYS.GITHUB_CONTRIBUTORS, fetchGitHubContributors]]
-
-const DAILY: TaskDef[] = [
-  [KEYS.APPS, fetchApps],
-  [KEYS.EVENTS, fetchEvents],
-]
-
-const HOURLY: TaskDef[] = [
-  [KEYS.ETH_PRICE, fetchEthPrice],
-  [KEYS.TOTAL_ETH_STAKED, fetchTotalEthStaked],
-]
-```
-
-### index.ts - Simple Getters
-
-One-liner passthrough functions:
-
-```typescript
-export const getEthPrice = () => get<EthPriceData>(KEYS.ETH_PRICE)
-export const getL2beatData = () => get<L2beatData>(KEYS.L2BEAT)
-```
+`tasks.ts` defines the `KEYS` constant and the `WEEKLY`/`DAILY`/`HOURLY` task tuples; `index.ts` holds the one-liner getters — snippets for both under "Adding a New Data Source" below.
 
 ### storage.ts - Storage Abstraction
 
-Simple get/set that switches between Netlify Blobs (prod) and local JSON files (dev):
-
-```typescript
-export async function get<T>(key: string): Promise<T | null>
-export async function set(key: string, data: unknown): Promise<void>
-```
-
-Uses `USE_MOCK_DATA=true` env var for local development.
+`get<T>(key)` / `set(key, data)` switch between Netlify Blobs (prod) and local mock JSON files (`USE_MOCK_DATA=true` for local development).
 
 ### s3.ts - Image Upload Utility
 
@@ -195,7 +133,7 @@ If a fetcher needs data that lives in the app — content files, frontmatter, et
    } as const
    ```
 
-3. **Add task tuple** to `WEEKLY`, `DAILY`, or `HOURLY` in `tasks.ts`:
+3. **Add task tuple** to `WEEKLY`, `DAILY`, or `HOURLY` in `tasks.ts` (getter and tuple must use the same `KEYS` entry — Rule 2):
 
    ```typescript
    const DAILY: TaskDef[] = [
@@ -210,7 +148,7 @@ If a fetcher needs data that lives in the app — content files, frontmatter, et
    export const getNewData = () => get<YourDataType>(KEYS.NEW_DATA)
    ```
 
-5. **Add mock file** at `src/data-layer/mocks/fetch-new-data.json` for local development
+5. **Add mock file** at `src/data-layer/mocks/fetch-new-data.json` (read when `USE_MOCK_DATA=true`)
 
 6. **Add cached wrapper** in `src/lib/data/index.ts`:
    ```typescript
