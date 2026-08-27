@@ -24,6 +24,9 @@ tools:
   github:
     toolsets: [default, actions]
 safe-outputs:
+  github-app:
+    client-id: ${{ vars.ETHORG_AGENT_CLIENT_ID }}
+    private-key: ${{ secrets.ETHORG_AGENT_PRIVATE_KEY }}
   add-comment:
     max: 1
     hide-older-comments: true

@@ -209,7 +209,7 @@ When creating a story, Chromatic creates a "snapshot" of it and sets it as a bas
 
 ### Publishing builds
 
-CI publishes on every non-draft PR, so you don't normally need to run Chromatic yourself. Snapshots are billed against a monthly quota shared by the whole team, and a local run of `pnpm chromatic` costs up to a full rebuild, so prefer letting CI do it.
+CI runs on every non-draft PR, so you don't normally need to run Chromatic yourself. A PR that affects no story is bypassed and publishes no build at all -- that is expected, not a broken pipeline. Snapshots are billed against a monthly quota shared by the whole team, and a local run of `pnpm chromatic` costs up to a full rebuild, so prefer letting CI do it.
 
 If you do need a local run, the repo has two Chromatic projects and each script takes its own token:
 
