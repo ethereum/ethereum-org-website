@@ -65,7 +65,7 @@ const quizzes = {
     questions: ["gas-1", "gas-2", "gas-3", "gas-4", "gas-5"],
   },
   daos: {
-    title: "learn-quizzes:page-daos",
+    title: "dao-page",
     questions: ["daos-1", "daos-2", "daos-3", "daos-4", "daos-5"],
   },
   "staking-solo": {
@@ -106,7 +106,7 @@ const quizzes = {
     ],
   },
   defi: {
-    title: "learn-quizzes:page-defi",
+    title: "defi-page",
     questions: ["defi-1", "defi-2", "defi-3", "defi-4", "defi-5"],
   },
   "smart-contracts": {
@@ -119,7 +119,7 @@ const quizzes = {
     ],
   },
   "energy-consumption": {
-    title: "learn-quizzes:page-energy-consumption",
+    title: "energy-consumption",
     questions: [
       "energy-consumption-1",
       "energy-consumption-2",
