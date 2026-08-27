@@ -11,6 +11,7 @@ set -euo pipefail
 #   ./src/scripts/prepare-release.sh [--dry-run] fetch-draft        # Fetch draft release body
 #   ./src/scripts/prepare-release.sh [--dry-run] publish <version> <draft_tag> <body_file>  # Publish release
 #   ./src/scripts/prepare-release.sh [--dry-run] create-pr <version> <body_file>            # Create deploy PR
+#   ./src/scripts/prepare-release.sh [--dry-run] verify <version>   # Assert the release was published
 #   ./src/scripts/prepare-release.sh cleanup            # Remove worktree if created
 #   ./src/scripts/prepare-release.sh reset              # Reset worktree to clean state
 #
@@ -382,6 +383,37 @@ cmd_create_pr() {
   fi
 }
 
+# A deploy PR can merge even when publishing was skipped, shipping a version
+# whose release notes never went out. Fail loudly instead.
+cmd_verify() {
+  local VERSION="${1:-}"
+
+  if [[ -z "$VERSION" ]]; then
+    log_error "Usage: prepare-release.sh verify <version>"
+    exit 1
+  fi
+
+  if [[ "$DRY_RUN" == "true" ]]; then
+    log_dry "gh release view v$VERSION --repo $REPO --json isDraft"
+    log_info "✓ Would verify release v$VERSION"
+    return 0
+  fi
+
+  local IS_DRAFT
+  if ! IS_DRAFT=$(gh release view "v$VERSION" --repo "$REPO" --json isDraft -q .isDraft 2>/dev/null); then
+    log_error "No release exists for v$VERSION — it was never published."
+    log_error "Publish it before merging the deploy PR."
+    exit 1
+  fi
+
+  if [[ "$IS_DRAFT" == "true" ]]; then
+    log_error "Release v$VERSION is still a draft — it was not published."
+    exit 1
+  fi
+
+  log_info "✓ Release v$VERSION is published"
+}
+
 # Parse --dry-run flag
 if [[ "${1:-}" == "--dry-run" ]]; then
   DRY_RUN=true
@@ -409,6 +441,9 @@ case "${1:-}" in
   create-pr)
     cmd_create_pr "${2:-}" "${3:-}"
     ;;
+  verify)
+    cmd_verify "${2:-}"
+    ;;
   cleanup)
     cmd_cleanup
     ;;
@@ -428,6 +463,7 @@ case "${1:-}" in
     echo "  fetch-draft            Fetch draft release body (JSON)"
     echo "  publish <ver> <tag> <body_file>   Publish release"
     echo "  create-pr <ver> <body_file>       Create deploy PR"
+    echo "  verify <ver>           Assert the release for <ver> was published"
     echo "  cleanup                Remove worktree if created"
     echo "  reset                  Reset worktree to clean state (recovery)"
     exit 1
