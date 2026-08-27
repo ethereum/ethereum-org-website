@@ -140,7 +140,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       {/* Devcon VIII India callout banner */}
-      <DevconIndiaLargeCallout />
+      <DevconIndiaLargeCallout preload />
 
       {/* What's on this page? + TabNav */}
       <StickyContainer className="top-6 space-y-4 p-4 md:top-2 md:p-8">
