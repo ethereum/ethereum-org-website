@@ -89,3 +89,14 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - `klienty` (md) vs `klienci` (JSON) for the same referent.
 - `solidność` for cryptographic soundness is a loose calque.
 - Masculine-gendered past/conditional forms address a male reader at 3 sites.
+
+## PR #19142 (intl/pending-devcon-banner) -- 2026-08-21 -- Score 9.6/10
+Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
+
+**Open (native call needed):**
+
+- `Spotkaj się z ciekawymi na Devcon 8` -- bare `ciekawymi` is ambiguous between "curious (people)" and "interesting (things)". `z ciekawymi świata` or `z ciekawskimi` disambiguates toward the English "the curious".
+
+**Open (upstream, do not fix in locale):**
+
+- `Odbierz 10% zniżki` deviates from ETHGlossary `claim` = `roszczenie`. Not auto-fixed for the same reason as ru -- a `roszczenie`-based imperative is worse copy on a discount banner. See known-patterns #75.

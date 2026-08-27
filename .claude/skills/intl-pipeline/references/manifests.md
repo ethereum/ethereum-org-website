@@ -101,9 +101,3 @@ jq '.tree' .manifests/.../translation.json
 | Manifest's element map mismatches the locale file | Locale was hand-edited to add/remove structural elements | Delete both manifests, re-run for that file+locale |
 | `rootHash` mismatch on supposedly-unchanged English | English file has BOM, line-ending change, or invisible whitespace change | Inspect the file with `xxd`; clean up the offending characters |
 
-## What this reference does NOT cover
-
-- The hand-edit policy (see `references/non-english-edits.md`)
-- The phase-by-phase usage of manifests (see `references/architecture.md`)
-- Recovery procedures (see `references/recovery.md`)
-- Schema migrations on manifest version bump (not currently needed; v1 is the only version)

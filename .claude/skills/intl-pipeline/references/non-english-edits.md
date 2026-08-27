@@ -112,8 +112,3 @@ Hand-edit them in the ETHGlossary repo via PR. The pipeline picks them up on the
 - You're touching pipeline source code at `src/scripts/intl-pipeline/`
 - You're working in the `.worktrees/` of another task that doesn't intersect translation content
 
-## See also
-
-- `references/architecture.md` for why the manifest is structured the way it is
-- `references/recovery.md` for what to do if a hand-edit already caused drift
-- `references/orchestration.md` for the pending-branch lifecycle that interacts with `stamp_only`

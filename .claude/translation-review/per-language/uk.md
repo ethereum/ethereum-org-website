@@ -82,3 +82,11 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - `у нагоді стають` should be `у пригоді` (only occurrence of the error in the uk tree).
 - `не маєте жодного впливу` loses the redress sense of "no recourse".
 - Highest-scoring locale with zero criticals, alongside it/de.
+
+## PR #19142 (intl/pending-devcon-banner) -- 2026-08-21 -- Score 9.9/10
+Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
+
+**Open (upstream):**
+
+- `Devcon` kept Latin. No EF Ukrainian localization exists for the reference post (404), and policy 6.2 explicitly forbids deriving Ukrainian transliterations from Russian ("Vitalik is Віталік, not Виталик"). So unlike ru there is not even a weak candidate form. Needs native input; filed in `ethglossary-normalization-queue.md` section 9.
+- `Затребуйте` follows the ETHGlossary `claim` entry (`затребування`); reads bureaucratic on a discount banner, same class as ru/pl. See known-patterns #75.

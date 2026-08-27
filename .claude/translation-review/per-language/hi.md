@@ -77,3 +77,13 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 
 - `attestations` -> `सत्यापन`, colliding with `सत्यापक` (validator) in the same sentence; tree form is `अनुप्रमाणन` (279).
 - `peer review` rendered two ways within one PR.
+
+## PR #19142 (intl/pending-devcon-banner) -- 2026-08-21 -- Score 9.8/10
+Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
+
+**Fixed in this branch:**
+
+- `Devcon` -> `डेवकॉन` in `title` and `subtitle`, matching devcon.org's own Hindi site. `logo-alt` stays Latin (title lockup / alt text).
+
+**Note:** devcon.org ships `डेवकॉन` (retroflex ड, the standard IT-loanword form -- cf. `डेवलपर`) while `blog.ethereum.org/hi` ships `देवकॉन` (dental द). devcon.org wins: it is the event's own India-facing site and more recent, and the blog is pipeline output rather than independent authority. Record `डेवकॉन` in the glossary entry so the two stop disagreeing.
+
