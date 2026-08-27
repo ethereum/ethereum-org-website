@@ -11,12 +11,16 @@ permissions:
   actions: read
 engine:
   id: claude
+  model: sonnet
 network: defaults
 strict: true
 timeout-minutes: 15
 tools:
   github:
-    toolsets: [default, actions]
+    # `default` minus `issues`: the queue and every candidate's comment thread are
+    # resolved in pre-agent-steps now, and leaving `issues` in is what let the
+    # agent re-derive the queue over MCP.
+    toolsets: [context, repos, pull_requests, actions]
 safe-outputs:
   add-comment:
     max: 5
@@ -49,29 +53,42 @@ safe-outputs:
     report-as-issue: false
   report-failure-as-issue: false
 pre-agent-steps:
-  - name: Pre-fetch open PR queue
+  - name: Collect deterministic evidence
     env:
       GH_TOKEN: ${{ github.token }}
       REPO: ${{ github.repository }}
+      OUT_DIR: /tmp/gh-aw/agent
     run: |
       set -euo pipefail
       mkdir -p /tmp/gh-aw/agent
-      gh pr list --repo "$REPO" --state open \
-        --json number,title,createdAt,updatedAt,isDraft,labels,author,reviewDecision,headRefName \
-        --limit 200 > /tmp/gh-aw/agent/open-prs.json
+      bash .github/scripts/intake-evidence.sh
+  - name: Select the sweep queue and pre-fetch its diffs
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      OUT_DIR: /tmp/gh-aw/agent
+    run: |
+      set -euo pipefail
+      bash .github/scripts/select-sweep-queue.sh
 imports:
   - shared/pr-review-core.md
 ---
 
 You are sweeping the open pull request backlog of ${{ github.repository }}.
 
-## Selection
+## Input — already selected, never re-derive it
 
-Read `/tmp/gh-aw/agent/open-prs.json`. Skip drafts and PRs authored by bots. From the rest, take the **5 oldest by createdAt** that do not already carry a comment from this workflow or the PR Reviewer workflows (check each candidate's comments for the marker `First-pass review`; skip PRs that already have one unless they were updated after it was posted). Also skip any PR where a maintainer (MEMBER/COLLABORATOR/OWNER) commented within the last 14 days — a human sweep is already in progress there, and a bot follow-up on its heels reads as nagging.
+`/tmp/gh-aw/agent/sweep-queue.json` **is** your queue: up to 5 PRs, oldest first, already filtered for drafts, bot authors, PRs carrying a first-pass review that their commits have not superseded, and PRs where a maintainer spoke in the last 14 days. The selection is deterministic and final — do not second-guess it, and do not read `open-prs.json` to look for other work.
+
+Each entry is a full evidence record: `title`, `author`, `isTeam`, `labels`, `size`, `paths`, `ci.failing`, `reviewDecision`, `reviews`, `aiReview`, `lastHumanComment`, `ageDays`, `idleDays`. Each PR's diff is pre-fetched and capped at `/tmp/gh-aw/agent/pr-<number>.patch`.
+
+Where the core instructions below refer to `pr-meta.json` and `pr-diff.patch`, read that PR's entry in `sweep-queue.json` and its `pr-<number>.patch` instead. Everything those records answer — who authored it, what it touches, which checks fail, whether a verdict already exists — is resolved. Reach for the GitHub tools only for what the records genuinely do not cover, such as base-branch history when you are testing a supersession claim.
+
+If the queue is empty, call `noop` with a one-line reason and stop.
 
 ## For each selected PR
 
-1. Fetch its diff and metadata via the GitHub tools, then produce a first-pass review comment following the core instructions below (lane classification, verdict-first format, labels).
+1. Read its record and its pre-fetched patch, then produce a first-pass review comment following the core instructions below (lane classification, verdict-first format, labels).
 2. Additionally evaluate staleness. Check exemptions FIRST — if the PR has any of the labels `pinned 📌`, `Status: Blocked 🛑`, `awaiting changes`, or `awaiting PR`, do not evaluate it for closing at all. Otherwise apply these categories in order and stop at the first match:
    - **Superseded**: at least one of the same files was meaningfully changed on the base branch by a merged PR after this PR was created, covering the same fix. → apply `recommend close`
    - **Author unresponsive**: changes were formally requested or blocking feedback given ≥30 days ago with no commit or reply from the author since. → apply `recommend close`
