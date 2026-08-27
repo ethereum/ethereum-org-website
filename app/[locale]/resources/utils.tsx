@@ -26,16 +26,18 @@ import IconDefiLlama from "@/public/images/resources/defi-llama.png"
 import IconDefiScan from "@/public/images/resources/defi-scan.png"
 import IconEas from "@/public/images/resources/eas.png"
 import IconEigenphi from "@/public/images/resources/eigenphi.png"
+import IconEipsInsight from "@/public/images/resources/eipsinsight.png"
 import IconEthGlyphBlack from "@/public/images/resources/eth-glyph-black.png"
 import IconEthGlyphBlueCircle from "@/public/images/resources/eth-glyph-blue-circle.png"
 import IconEthGlyphEOrg from "@/public/images/resources/eth-glyph-e-org.png"
-import IconEthGlyphRainbowFrame from "@/public/images/resources/eth-glyph-rainbow-frame.png"
 import IconEtherealize from "@/public/images/resources/etherealize.png"
 import IconEtherscan from "@/public/images/resources/etherscan.png"
 import IconEthproofs from "@/public/images/resources/ethproofs.png"
 import IconFarcaster from "@/public/images/resources/farcaster.png"
+import IconForkcast from "@/public/images/resources/forkcast.png"
 import IconGasTracker from "@/public/images/resources/gas.png"
 import IconGrowthepie from "@/public/images/resources/growthepie.png"
+import IconJiffyScan from "@/public/images/resources/jiffyscan.png"
 import IconL2beat from "@/public/images/resources/l2beat.png"
 import IconLuckyStaker from "@/public/images/resources/lucky-staker.png"
 import IconNftgo from "@/public/images/resources/nftgo.png"
@@ -46,13 +48,13 @@ import IconPectrified from "@/public/images/resources/pectrified.png"
 import IconRatedNetwork from "@/public/images/resources/rated-network.png"
 import IconRelayscan from "@/public/images/resources/relayscan.png"
 import IconReserves from "@/public/images/resources/reserves.png"
+import IconRollupWtf from "@/public/images/resources/rollup-wtf.png"
 import IconRwa from "@/public/images/resources/rwa.png"
 import IconStablecoinsWtf from "@/public/images/resources/stablecoins-wtf.png"
 import IconSupermajority from "@/public/images/resources/supermajority.png"
 import IconTxCity from "@/public/images/resources/txcity.png"
 import IconUltrasoundMoney from "@/public/images/resources/ultrasound-money.png"
 import IconVisaOnchainAnalytics from "@/public/images/resources/visa-onchain-analytcs.png"
-import IconWalletBeat from "@/public/images/resources/walletbeat.png"
 
 export const getResources = async ({
   txCostsMedianUsd,
@@ -117,13 +119,13 @@ export const getResources = async ({
           title: "Rollup.wtf",
           description: t("page-resources-network-layer2-rollupwtf-description"),
           href: "https://rollup.wtf",
-          imgSrc: IconL2beat,
+          imgSrc: IconRollupWtf,
         },
         {
           title: "L2Safety",
           description: t("page-resources-network-layer2-l2safety-description"),
           href: "https://l2safety.info",
-          imgSrc: IconEthGlyphBlack,
+          imgSrc: IconL2beat,
         },
       ],
     },
@@ -232,7 +234,7 @@ export const getResources = async ({
           title: "L2 Fees",
           description: t("page-resources-gas-l2fees-description"),
           href: "https://l2fees.info",
-          imgSrc: IconGasTracker,
+          imgSrc: IconEthGlyphBlack,
         },
       ],
     },
@@ -360,7 +362,7 @@ export const getResources = async ({
           title: "JiffyScan",
           description: t("page-resources-wallets-jiffyscan-description"),
           href: "https://jiffyscan.xyz",
-          imgSrc: IconWalletBeat,
+          imgSrc: IconJiffyScan,
         },
         {
           title: "BundleBear",
@@ -395,13 +397,14 @@ export const getResources = async ({
           title: "Forkcast",
           description: t("page-resources-roadmap-forkcast-description"),
           href: "https://forkcast.org",
-          imgSrc: IconEthGlyphRainbowFrame,
+          imgSrc: IconForkcast,
         },
         {
           title: "EIPsInsight",
           description: t("page-resources-roadmap-eipsinsight-description"),
           href: "https://eipsinsight.com",
-          imgSrc: IconEthGlyphBlack,
+          className: "dark:[&_img]:invert",
+          imgSrc: IconEipsInsight,
         },
       ],
     },
