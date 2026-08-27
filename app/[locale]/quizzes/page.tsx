@@ -23,12 +23,11 @@ import { formatDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { getQuizStats } from "@/data-layer"
-
 import QuizSections from "./_components/quiz-sections"
 import QuizzesUserStats from "./_components/user-stats"
 import PageJsonLD from "./page-jsonld"
 
+import { getQuizStats } from "@/lib/data"
 import heroImg from "@/public/images/heroes/quizzes-hub-hero.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
