@@ -19,7 +19,7 @@ import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { formatDate } from "@/lib/utils/date"
+import { formatDate, getValidDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -54,11 +54,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   // Null until the daily Matomo fetch lands; the community panel hides in that case
   const communityStats = await getQuizStats()
 
+  // Validate before formatting: a blob without a usable timestamp must hide the
+  // stamp, not throw RangeError and fail the prerender for all 25 locales.
   // Pinned to UTC: there is no viewer timezone to honour at render time, and the
   // page is statically rendered, so the stamp must be timezone-independent.
+  const timestamp = getValidDate(communityStats?.timestamp)
   const lastUpdated =
-    communityStats &&
-    formatDate(new Date(communityStats.timestamp).toISOString(), locale, {
+    timestamp &&
+    formatDate(timestamp.toISOString(), locale, {
       month: "short",
       hour: "numeric",
       minute: "2-digit",
