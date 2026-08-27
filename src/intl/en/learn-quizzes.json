@@ -1234,5 +1234,6 @@
   "apps-and-money": "Apps and money",
   "apps-and-money-description": "The things people actually do onchain, from collectibles and stable value to lending, trading and paying each other.",
   "scaling-staking-nodes": "Scaling, staking and nodes",
-  "scaling-staking-nodes-description": "How Ethereum grows beyond mainnet, and how validators and node operators keep the network running."
+  "scaling-staking-nodes-description": "How Ethereum grows beyond mainnet, and how validators and node operators keep the network running.",
+  "page-energy-consumption": "Ethereum: a green and efficient blockchain"
 }

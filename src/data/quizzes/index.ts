@@ -119,7 +119,7 @@ const quizzes = {
     ],
   },
   "energy-consumption": {
-    title: "energy-consumption",
+    title: "learn-quizzes:page-energy-consumption",
     questions: [
       "energy-consumption-1",
       "energy-consumption-2",
