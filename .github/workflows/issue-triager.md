@@ -23,6 +23,9 @@ tools:
   github:
     toolsets: [issues, labels]
 safe-outputs:
+  github-app:
+    client-id: ${{ vars.ETHORG_AGENT_CLIENT_ID }}
+    private-key: ${{ secrets.ETHORG_AGENT_PRIVATE_KEY }}
   add-labels:
     max: 30
     allowed:
