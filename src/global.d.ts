@@ -12,7 +12,6 @@ declare global {
   namespace NodeJS {
     interface ProcessEnv {
       GITHUB_TOKEN: string
-      ALGOLIA_ADMIN_KEY: string
       ETHERSCAN_API_KEY: string
       CROWDIN_API_KEY: string
     }
