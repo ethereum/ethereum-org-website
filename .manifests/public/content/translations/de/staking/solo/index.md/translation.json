@@ -1,21 +1,23 @@
 {
   "version": 1,
   "locale": "de",
-  "translatedAt": "2026-06-18T00:53:03.926Z",
-  "englishManifestHash": "d6f7d4806ea9",
+  "translatedAt": "2026-08-19T20:57:29.151Z",
+  "englishManifestHash": "cf81a825d683",
   "placeholderOrder": [
     "LINK-2a7890",
     "LINK-732d7c",
     "LINK-a21a82",
-    "COMPONENT-318b54",
-    "COMPONENT-2cc484",
-    "COMPONENT-1586c8",
+    "COMPONENT-e02070",
+    "COMPONENT-9d262a",
     "COMPONENT-37974a",
     "COMPONENT-2d3f82",
+    "COMPONENT-cece55",
+    "LINK-16aebb",
     "COMPONENT-c28d99",
     "LINK-7cd43f",
-    "COMPONENT-d85931",
-    "HTMLTAG-092ec9",
+    "COMPONENT-bd1032",
+    "LINK-c6e08a",
+    "LINK-16aebb",
     "COMPONENT-21a5fb",
     "HTMLTAG-91be55",
     "LINK-8ee4c0",
@@ -23,25 +25,27 @@
     "HTMLTAG-a2abfe",
     "LINK-9677ba",
     "LINK-8bde19",
+    "LINK-9edc37",
+    "LINK-b99bec",
+    "LINK-d6904f",
     "COMPONENT-a4ae03",
-    "COMPONENT-68d072",
-    "HTMLTAG-09f065",
-    "LINK-cbc0ee",
-    "LINK-13e7fd",
+    "COMPONENT-539458",
+    "LINK-9892e7",
+    "LINK-8ee4c0",
     "COMPONENT-6feef7",
-    "COMPONENT-de9c4d",
-    "HTMLTAG-87f84c",
-    "HTMLTAG-ded77f",
+    "COMPONENT-697aff",
+    "HTMLTAG-6fc5ba",
+    "HTMLTAG-63802f",
     "COMPONENT-2a7d9b",
     "HTMLTAG-36b875",
     "COMPONENT-d5079f",
-    "COMPONENT-4e8e8f",
-    "LINK-11109b",
-    "LINK-5e75de",
+    "COMPONENT-8a683a",
+    "LINK-c5946d",
     "LINK-5b6f31",
     "LINK-a043ce",
     "LINK-46b55d",
-    "LINK-2e3347"
+    "LINK-884ed3",
+    "LINK-3cf997"
   ],
   "placeholderMap": {
     "COMPONENT-37974a": {
@@ -60,6 +64,20 @@
         "eventName": "clicked comfortable with computers"
       }
     },
+    "COMPONENT-cece55": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "SoloStaking",
+        "eventName": "clicked hardware requirements"
+      }
+    },
+    "LINK-16aebb": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7870"
+      }
+    },
     "COMPONENT-c28d99": {
       "type": "component",
       "values": {
@@ -74,7 +92,7 @@
         "url": "/security/"
       }
     },
-    "COMPONENT-d85931": {
+    "COMPONENT-bd1032": {
       "type": "component",
       "values": {
         "componentName": "ExpandableCard",
@@ -82,11 +100,10 @@
         "eventName": "clicked reliable uptime"
       }
     },
-    "HTMLTAG-092ec9": {
-      "type": "html-tag",
+    "LINK-c6e08a": {
+      "type": "link",
       "values": {
-        "tagName": "a",
-        "href": "#faq"
+        "url": "#faq"
       }
     },
     "COMPONENT-21a5fb": {
@@ -110,29 +127,22 @@
         "componentName": "ExpandableCard"
       }
     },
-    "COMPONENT-68d072": {
+    "COMPONENT-539458": {
       "type": "component",
       "values": {
         "componentName": "ExpandableCard"
       }
     },
-    "HTMLTAG-09f065": {
-      "type": "html-tag",
-      "values": {
-        "tagName": "a",
-        "href": "https://www.attestant.io/posts/understanding-validator-effective-balance/"
-      }
-    },
-    "LINK-cbc0ee": {
+    "LINK-9892e7": {
       "type": "link",
       "values": {
-        "url": "/staking/saas/"
+        "url": "#compounding"
       }
     },
-    "LINK-13e7fd": {
+    "LINK-8ee4c0": {
       "type": "link",
       "values": {
-        "url": "/staking/pools/"
+        "url": "/staking/withdrawals/"
       }
     },
     "COMPONENT-6feef7": {
@@ -141,24 +151,24 @@
         "componentName": "ExpandableCard"
       }
     },
-    "COMPONENT-de9c4d": {
+    "COMPONENT-697aff": {
       "type": "component",
       "values": {
         "componentName": "ExpandableCard"
       }
     },
-    "HTMLTAG-87f84c": {
+    "HTMLTAG-6fc5ba": {
       "type": "html-tag",
       "values": {
         "tagName": "a",
-        "href": "https://hackernoon.com/ethereums-client-diversity-problem"
+        "href": "https://clientdiversity.org/"
       }
     },
-    "HTMLTAG-ded77f": {
+    "HTMLTAG-63802f": {
       "type": "html-tag",
       "values": {
         "tagName": "a",
-        "href": "https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50"
+        "href": "/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/"
       }
     },
     "COMPONENT-2a7d9b": {
@@ -180,31 +190,22 @@
         "componentName": "ExpandableCard"
       }
     },
-    "COMPONENT-4e8e8f": {
+    "COMPONENT-8a683a": {
       "type": "component",
       "values": {
         "componentName": "ExpandableCard"
       }
     },
-    "COMPONENT-318b54": {
+    "COMPONENT-e02070": {
       "type": "component",
       "values": {
-        "componentName": "Card",
-        "emoji": "💸"
+        "componentName": "Card"
       }
     },
-    "COMPONENT-2cc484": {
+    "COMPONENT-9d262a": {
       "type": "component",
       "values": {
-        "componentName": "Card",
-        "emoji": "🎛️"
-      }
-    },
-    "COMPONENT-1586c8": {
-      "type": "component",
-      "values": {
-        "componentName": "Card",
-        "emoji": "🔐"
+        "componentName": "Card"
       }
     },
     "HTMLTAG-a2abfe": {
@@ -231,12 +232,6 @@
         "url": "/"
       }
     },
-    "LINK-8ee4c0": {
-      "type": "link",
-      "values": {
-        "url": "/staking/withdrawals/"
-      }
-    },
     "LINK-775270": {
       "type": "link",
       "values": {
@@ -255,16 +250,28 @@
         "url": "/contributing/adding-staking-products/"
       }
     },
-    "LINK-11109b": {
+    "LINK-9edc37": {
       "type": "link",
       "values": {
-        "url": "https://www.staking.directory/"
+        "url": "/staking/dvt/"
       }
     },
-    "LINK-5e75de": {
+    "LINK-b99bec": {
       "type": "link",
       "values": {
-        "url": "https://hackernoon.com/ethereums-client-diversity-problem"
+        "url": "/staking/pools/"
+      }
+    },
+    "LINK-d6904f": {
+      "type": "link",
+      "values": {
+        "url": "/run-a-node/"
+      }
+    },
+    "LINK-c5946d": {
+      "type": "link",
+      "values": {
+        "url": "https://clientdiversity.org/"
       }
     },
     "LINK-5b6f31": {
@@ -285,16 +292,22 @@
         "url": "https://www.youtube.com/watch?v=C2wwu1IlhDc"
       }
     },
-    "LINK-2e3347": {
+    "LINK-884ed3": {
       "type": "link",
       "values": {
-        "url": "https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50"
+        "url": "https://eips.ethereum.org/EIPS/eip-7870"
+      }
+    },
+    "LINK-3cf997": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/pectra/maxeb/"
       }
     }
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-18T00:53:03.926Z",
+      "translatedAt": "2026-08-19T20:57:29.151Z",
       "status": "success"
     }
   }

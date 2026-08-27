@@ -253,10 +253,10 @@ Determine which files to test from the PR context (e.g., `gaming/index.md`). The
 ```bash
 # Language-level scoping (still processes every file for that language):
 TARGET_LANGUAGES={LANGUAGE} \
-  npx ts-node -O '{"module":"commonjs"}' ./src/scripts/intl-pipeline/intl-sanitizer.ts
+  pnpm exec tsx ./src/scripts/intl-pipeline/intl-sanitizer.ts
 
 # Preferred for single files — inline script calling processMarkdownFile directly:
-npx ts-node -O '{"module":"commonjs"}' -e '
+pnpm exec tsx -e '
 const { _testOnly } = require("./src/scripts/intl-pipeline/intl-sanitizer");
 const fs = require("fs");
 const file = "public/content/translations/{LANGUAGE}/{PAGE_PATH}";
@@ -302,7 +302,7 @@ Test the same page in 2-3 other languages to check for false positives. **NEVER 
 ```bash
 # Test the same page path in a few other languages
 for lang in es tr ja; do
-  npx ts-node -O '{"module":"commonjs"}' -e "
+  pnpm exec tsx -e "
     const { _testOnly } = require('./src/scripts/intl-pipeline/intl-sanitizer');
     const fs = require('fs');
     const file = 'public/content/translations/$lang/{PAGE_PATH}';
@@ -381,41 +381,3 @@ Display to user:
   - docs/solutions/integration-issues/sanitizer-test-research.md (documentation)
 ```
 
-## Quick Reference
-
-### Run all sanitizer tests
-```bash
-npx playwright test --project=unit tests/unit/intl-pipeline/sanitizer/
-```
-
-### Run sanitizer against a language
-```bash
-TARGET_LANGUAGES=ja npx ts-node -O '{"module":"commonjs"}' ./src/scripts/intl-pipeline/intl-sanitizer.ts
-```
-
-### Key files
-| File | Purpose |
-|------|---------|
-| `src/scripts/intl-pipeline/intl-sanitizer.ts` | Sanitizer source (~5900 lines) |
-| `tests/unit/intl-pipeline/sanitizer/standalone-fixes.spec.ts` | Tests for pure functions |
-| `tests/unit/intl-pipeline/sanitizer/code-block-extractor.spec.ts` | Tests for code-block extraction |
-| `tests/unit/intl-pipeline/sanitizer/english-comparison.spec.ts` | Tests needing English source |
-| `tests/unit/intl-pipeline/sanitizer/warnings.spec.ts` | Tests for warn-only functions |
-| `tests/unit/intl-pipeline/sanitizer/integration.spec.ts` | End-to-end tests |
-| `docs/solutions/integration-issues/sanitizer-test-research.md` | Pattern catalog |
-
-### Code block awareness pattern
-Every text transformation MUST use this split pattern:
-```typescript
-const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-const parts = content.split(codeBlockPattern)
-for (let i = 0; i < parts.length; i++) {
-  if (i % 2 === 1) continue // Skip code blocks
-  // Transform parts[i] only
-}
-```
-
-### Function signature conventions
-- **Fix functions:** `(content: string) => { content: string; fixCount: number }`
-- **Fix w/ English:** `(translated: string, english: string) => { content: string; fixCount: number }`
-- **Warn functions:** `(content: string, ...) => string[]`

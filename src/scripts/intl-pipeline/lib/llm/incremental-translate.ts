@@ -52,6 +52,24 @@ interface IncrementalTranslateResult {
 // ---------------------------------------------------------------------------
 
 /**
+ * One section as it appears in the prompt. The single source of truth for the
+ * envelope: sectionWireBytes measures this, so batching splits on what is
+ * actually sent rather than on an estimate of it.
+ */
+export function renderSectionBlock(s: {
+  id: string
+  action: "TRANSLATE" | "CONTEXT"
+  content: string
+  headingText?: string
+  level?: number
+}): string {
+  const headingAttr = s.headingText
+    ? ` heading="${(s.level ? "#".repeat(s.level) + " " : "") + s.headingText.replace(/"/g, "&quot;")}"`
+    : ""
+  return `<SECTION id="${s.id}" action="${s.action}"${headingAttr}>\n${s.content}\n</SECTION>`
+}
+
+/**
  * Build a batched section-level translation prompt.
  *
  * All sections are included in document order. Changed sections are
@@ -81,14 +99,7 @@ export function buildIncrementalPrompt(
     .filter((s) => s.action === "TRANSLATE")
     .map((s) => s.id)
 
-  const sectionBlocks = sections
-    .map((s) => {
-      const headingAttr = s.headingText
-        ? ` heading="${(s.level ? "#".repeat(s.level) + " " : "") + s.headingText.replace(/"/g, "&quot;")}"`
-        : ""
-      return `<SECTION id="${s.id}" action="${s.action}"${headingAttr}>\n${s.content}\n</SECTION>`
-    })
-    .join("\n\n")
+  const sectionBlocks = sections.map(renderSectionBlock).join("\n\n")
 
   return `You are updating an existing translation. Some sections of this file changed in English and need retranslation. Other sections are provided as CONTEXT ONLY -- they show the existing translation voice and terminology.
 
@@ -551,69 +562,162 @@ export type {
 // Byte-size-aware section batching (CONCURRENCY-SPEC.md Part 2C)
 // ---------------------------------------------------------------------------
 
-import { MAX_CHUNK_BYTES } from "../../constants"
+import { MAX_CHUNK_BYTES, MAX_CONTEXT_BYTES } from "../../constants"
+
+type BatchSection = {
+  id: string
+  content: string
+  action: "TRANSLATE" | "CONTEXT"
+  /** Markdown only; feeds the heading="..." attribute and its wire cost */
+  headingText?: string
+  level?: number
+}
+
+/**
+ * Bytes a section costs on the wire, not just its content: buildIncrementalPrompt
+ * wraps each one in a <SECTION id=".." action=".." heading=".."> envelope that
+ * repeats the id twice. JSON leaves are small and numerous with long key paths
+ * (~134 bytes of envelope each for quiz keys), so counting content alone
+ * understates a batch by more than the content itself.
+ */
+export function sectionWireBytes(section: {
+  id: string
+  content: string
+  action?: "TRANSLATE" | "CONTEXT"
+  headingText?: string
+  level?: number
+}): number {
+  // Measures the rendered block rather than approximating it, so the batcher
+  // and the prompt builder cannot disagree about what a section costs. Both
+  // call renderSectionBlock; +2 covers the "\n\n" join between blocks.
+  const action = section.action ?? "TRANSLATE"
+  const block =
+    Buffer.byteLength(
+      renderSectionBlock({
+        id: section.id,
+        content: section.content,
+        action,
+        headingText: section.headingText,
+        level: section.level,
+      }),
+      "utf-8"
+    ) + 2
+  // A TRANSLATE section is also named in the prompt's "Sections to translate:"
+  // list, which scales with the batch and is invisible to a zero-section
+  // overhead measurement -- 4KB unaccounted at ~120 JSON keys per batch.
+  const idListEntry =
+    action === "TRANSLATE" ? Buffer.byteLength(section.id, "utf-8") + 2 : 0
+  return block + idListEntry
+}
+
+/**
+ * Pick up to `budget` bytes of CONTEXT sections nearest (in document order) to
+ * this batch's TRANSLATE sections, returned in document order.
+ *
+ * Context is replicated into every batch, so it is a per-call tax rather than a
+ * one-off: an uncapped context payload multiplies by the batch count. Nearest
+ * neighbours are the useful ones -- surrounding voice and terminology.
+ */
+function selectContext(
+  contextSections: Array<BatchSection & { index: number }>,
+  translateIndexes: number[],
+  budget: number
+): BatchSection[] {
+  if (contextSections.length === 0 || budget <= 0) return []
+
+  const distance = (index: number) =>
+    Math.min(...translateIndexes.map((t) => Math.abs(index - t)))
+
+  const selected: Array<BatchSection & { index: number }> = []
+  let used = 0
+
+  for (const section of [...contextSections].sort(
+    (a, b) => distance(a.index) - distance(b.index) || a.index - b.index
+  )) {
+    const bytes = sectionWireBytes(section)
+    if (used + bytes > budget) continue
+    selected.push(section)
+    used += bytes
+  }
+
+  return selected
+    .sort((a, b) => a.index - b.index)
+    .map(({ id, content, action, headingText }) => ({
+      id,
+      content,
+      action,
+      headingText,
+    }))
+}
 
 /**
  * Split sections into batches that fit within the byte budget.
- * CONTEXT sections are replicated into every batch for quality.
+ * Each batch carries up to MAX_CONTEXT_BYTES of nearby CONTEXT sections.
  * Only TRANSLATE sections count toward splitting decisions.
  *
  * Returns empty array if there are no TRANSLATE sections.
  */
 export function batchSections(
-  sections: Array<{
-    id: string
-    content: string
-    action: "TRANSLATE" | "CONTEXT"
-  }>,
-  maxBytes: number = MAX_CHUNK_BYTES
-): Array<
-  Array<{ id: string; content: string; action: "TRANSLATE" | "CONTEXT" }>
-> {
-  const contextSections = sections.filter((s) => s.action === "CONTEXT")
-  const translateSections = sections.filter((s) => s.action === "TRANSLATE")
+  sections: BatchSection[],
+  maxBytes: number = MAX_CHUNK_BYTES,
+  maxContextBytes: number = MAX_CONTEXT_BYTES
+): BatchSection[][] {
+  const contextSections = sections
+    .map((s, index) => ({ ...s, index }))
+    .filter((s) => s.action === "CONTEXT")
+  const translateSections = sections
+    .map((s, index) => ({ ...s, index }))
+    .filter((s) => s.action === "TRANSLATE")
 
   if (translateSections.length === 0) return []
 
-  const contextBytes = contextSections.reduce(
-    (sum, s) => sum + Buffer.byteLength(s.content, "utf-8"),
-    0
-  )
+  // TRANSLATE content gets the whole chunk budget. Subtracting the context size
+  // here floored the budget at 1 byte for any file with >32KB of existing
+  // translation, emitting one full-context call per changed section: 488
+  // sections x 24 locales = 11,712 calls and $1,108 on 2026-08-07 (run
+  // 31149083965) for 42KB of new text.
+  const translateBudget = maxBytes
 
-  // Budget for TRANSLATE content per batch = total budget - context overhead
-  const translateBudget = Math.max(maxBytes - contextBytes, 1)
-
-  const batches: Array<
-    Array<{ id: string; content: string; action: "TRANSLATE" | "CONTEXT" }>
-  > = []
-  let currentTranslate: Array<{
-    id: string
-    content: string
-    action: "TRANSLATE" | "CONTEXT"
-  }> = []
+  const batches: BatchSection[][] = []
+  let currentTranslate: Array<BatchSection & { index: number }> = []
   let currentBytes = 0
 
+  const flush = () => {
+    if (currentTranslate.length === 0) return
+    const context = selectContext(
+      contextSections,
+      currentTranslate.map((s) => s.index),
+      maxContextBytes
+    )
+    batches.push([
+      ...context,
+      ...currentTranslate.map(({ id, content, action, headingText }) => ({
+        id,
+        content,
+        action,
+        headingText,
+      })),
+    ])
+    currentTranslate = []
+    currentBytes = 0
+  }
+
   for (const section of translateSections) {
-    const sectionBytes = Buffer.byteLength(section.content, "utf-8")
+    const sectionBytes = sectionWireBytes(section)
 
     // If adding this section exceeds budget AND we already have sections, start new batch
     if (
       currentTranslate.length > 0 &&
       currentBytes + sectionBytes > translateBudget
     ) {
-      batches.push([...contextSections, ...currentTranslate])
-      currentTranslate = []
-      currentBytes = 0
+      flush()
     }
 
     currentTranslate.push(section)
     currentBytes += sectionBytes
   }
 
-  // Push remaining
-  if (currentTranslate.length > 0) {
-    batches.push([...contextSections, ...currentTranslate])
-  }
+  flush()
 
   return batches
 }

@@ -19,7 +19,17 @@ const USE_MOCK_EXPERIMENTS = process.env.USE_MOCK_EXPERIMENTS === "true"
  *     ],
  *   },
  */
-const MOCK_EXPERIMENTS: Record<string, ABTestConfig> = {}
+const MOCK_EXPERIMENTS: Record<string, ABTestConfig> = {
+  FindWalletCatalog2026: {
+    name: "FindWalletCatalog2026",
+    id: "dev-15",
+    enabled: true,
+    variants: [
+      { name: "Original", weight: 50 },
+      { name: "NewCatalog", weight: 50 },
+    ],
+  },
+}
 
 function isExperimentActive(exp: MatomoExperiment): boolean {
   const now = new Date()
@@ -140,6 +150,24 @@ async function fetchMatomoExperiments(): Promise<Record<string, ABTestConfig>> {
   }
 
   return config
+}
+
+/**
+ * Experiments Matomo currently reports as active.
+ *
+ * The proxy checks this before rewriting. Rewriting while nothing is running
+ * would pin every visitor to variant index 0, which is only harmless when
+ * index 0 happens to be the shipped design - for a test that pits a redesign
+ * against the code it replaced, it would silently serve the old one. Falling
+ * through instead keeps the deployed page authoritative until a test starts.
+ */
+export async function getActiveExperimentNames(): Promise<Set<string>> {
+  const config = await getExperimentConfig()
+  const active = new Set<string>()
+  for (const experiment of Object.values(config)) {
+    if (experiment.enabled) active.add(experiment.name)
+  }
+  return active
 }
 
 // FNV-1a hash for deterministic assignment (matching legacy implementation)

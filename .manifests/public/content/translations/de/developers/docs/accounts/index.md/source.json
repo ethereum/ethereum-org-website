@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/docs/accounts/index.md",
-  "generatedAt": "2026-07-30T05:22:38.353Z",
-  "rootHash": "faafa24fd5c4",
+  "generatedAt": "2026-08-07T06:09:50.582Z",
+  "rootHash": "91539c921316",
   "tree": {
-    "contentHash": "862f8f067077",
-    "anchorHash": "6c6a70482b6a",
+    "contentHash": "864810c9518f",
+    "anchorHash": "5b99fa09a88b",
     "children": {
       "frontmatter:title": {
         "contentHash": "e231c2975f71",
@@ -499,8 +499,8 @@
         ]
       },
       "related-topics": {
-        "contentHash": "2324f7738c10",
-        "anchorHash": "8f604686637e",
+        "contentHash": "f6e68d8c360f",
+        "anchorHash": "27dd598613d6",
         "labelHash": "5a38da0df0ab",
         "children": {
           "_label": {
@@ -522,6 +522,20 @@
           "link:1": {
             "contentHash": "3e5136fd4b11",
             "anchorHash": "d20c9fa6d21a"
+          },
+          "component:5": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:6": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "f23d724af97f",
+            "children": {
+              "attr:quizKey": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "bc62a3c14fec"
+              }
+            }
           }
         },
         "childrenOrder": [
@@ -529,7 +543,9 @@
           "prose:2",
           "link:0",
           "prose:3",
-          "link:1"
+          "link:1",
+          "component:5",
+          "component:6"
         ]
       }
     },
@@ -553,5 +569,5 @@
       "related-topics"
     ]
   },
-  "sourceCommitSha": "813cae0fef45154817a18d95b432c551420c7054"
+  "sourceCommitSha": "3c76f545357f4d2d02a6f906d4b647d531be7088"
 }

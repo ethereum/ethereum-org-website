@@ -34,6 +34,8 @@ type BaseProps = {
   isPartiallyActive?: boolean
   activeClassName?: string
   customEventOptions?: MatomoEventOptions
+  /** Opt out of `noreferrer` on external links so the destination gets attribution */
+  sendReferrer?: boolean
 }
 
 export type LinkProps = BaseProps &
@@ -61,6 +63,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     isPartiallyActive = true,
     activeClassName = "text-primary",
     customEventOptions,
+    sendReferrer,
     onClick,
     ...props
   }: LinkProps,
@@ -120,7 +123,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     return (
       <a
         target="_blank"
-        rel="noopener noreferrer"
+        rel={sendReferrer ? "noopener" : "noopener noreferrer"}
         {...rest}
         onClick={createClickHandler("Clicked on external link")}
         className={cn("relative", className)}

@@ -24,7 +24,7 @@ import { Tag } from "@/components/ui/tag"
 import heroLandscape from "@/public/images/heroes/guides-hub-hero.jpg"
 
 const meta = {
-  title: "UI / Primitives / Card",
+  title: "UI / Data Display / Card",
   component: Card,
   tags: ["autodocs"],
   parameters: {

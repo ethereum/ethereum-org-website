@@ -52,13 +52,10 @@ export const TopicLayout = async ({
   }
 
   const t = await getTranslations(config.translationNs)
-  const tCommon = config.showLastUpdatedInHero
-    ? await getTranslations("common")
-    : null
 
   const dropdownLinks = buildTopicDropdown(config.dropdown, t)
 
-  const baseDescription = frontmatter.summary ? (
+  const heroDescription = frontmatter.summary ? (
     <p className="text-lg">{frontmatter.summary}</p>
   ) : frontmatter.summaryPoints && frontmatter.summaryPoints.length > 0 ? (
     <List>
@@ -69,18 +66,6 @@ export const TopicLayout = async ({
   ) : frontmatter.description ? (
     <p className="text-lg">{frontmatter.description}</p>
   ) : undefined
-
-  const heroDescription =
-    tCommon && lastEditLocaleTimestamp ? (
-      <>
-        {baseDescription}
-        <p className="border-t pt-4 italic">
-          {tCommon("page-last-updated")}: {lastEditLocaleTimestamp}
-        </p>
-      </>
-    ) : (
-      baseDescription
-    )
 
   const editBanner =
     config.editBanner && frontmatter.hideEditBanner !== true ? (

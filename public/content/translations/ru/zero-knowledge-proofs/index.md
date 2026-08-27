@@ -237,3 +237,7 @@ ZK-STARK считается невосприимчивым к угрозе кв�
 - [Почему доказательства с нулевым разглашением (ZKP) меняют правила игры для самосуверенной идентичности](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Франклин Охаэгбулам_
 - [Объяснение EIP-7503: обеспечение приватных переводов в Эфириуме с помощью ZK-доказательств](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Эммануэль Авосика_
 - [Карточная игра ZK: игра для изучения основ ZK и реальных вариантов использования](https://github.com/ZK-card/zk-cards) - _ZK-Cards_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

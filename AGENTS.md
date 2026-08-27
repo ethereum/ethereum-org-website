@@ -177,9 +177,33 @@ For pipeline mechanics, recovery, manifests, ETHGlossary integration, and the `i
    - Use `src/components/ui` for shadcn components or pure UI components
 2. Add TypeScript types and proper props interface
 3. Accept `ref` as a regular prop when needed (React 19); `forwardRef` only survives in legacy components
-4. Add Storybook story in same directory
+4. Add a Storybook story (see below)
 5. Export from appropriate index file
 6. Update documentation if adding new patterns
+
+### Storybook stories
+
+**Location**: `__stories__/` for flat directories (`ui/`, `styles/`), co-located for foldered components. Story globs are recursive, so nesting works. **Filenames are kebab-case** (`app-card.stories.tsx`) even inside a PascalCase component directory -- enforced by the test below.
+
+**Title**: `Section / Group / Name`. The section is derived from the file path -- not a judgment call:
+
+| Path                                  | Section         |
+| ------------------------------------- | --------------- |
+| `src/styles/**`                       | `Design System` |
+| `src/components/ui/**`                | `UI`            |
+| `src/components/**` (everything else) | `Components`    |
+| `src/layouts/**`                      | `Layouts`       |
+| `app/**`                              | `Pages`         |
+
+Use a second-level group only when an established one fits (Actions, Forms, Layout, Navigation, Overlays, Data Display, Cards, Heroes, Site Chrome, Content, Data Viz, Features). **Don't invent a group for a single component** -- a flat `Components / Morpher` is correct and preferred. `tests/unit/storybook/story-titles.spec.ts` enforces the section prefix, explicit titles, and title uniqueness (Storybook silently merges duplicate titles into one sidebar entry).
+
+**Don't add a story for a deprecated component or variant.** A rendered example reads as an endorsement whatever the caption says, so the showcase should only contain things that are available to use -- note the deprecation in prose instead (see `HR`). A component whose future is merely undecided can keep its story with a status blurb (see `Carousel`).
+
+Add `tags: ["autodocs"]`. Write the `parameters.docs.description.component` blurb for someone deciding whether to use the thing -- constraints and gotchas, not a restatement of the props table.
+
+**A green build does not mean a story renders.** `pnpm build-storybook` compiles stories without executing them, and every `UI /` story sets `chromatic: { disableSnapshot: true }`, so neither CI signal catches a story that throws. Open new stories in `pnpm storybook` before pushing.
+
+Async server components render via a `next-intl/server` shim (`.storybook/next-intl-server.tsx`). Components calling `usePathname` need `parameters.nextjs.navigation.pathname`. New i18n namespaces must be added to the `ns` array in `.storybook/next-intl.ts`, or strings render as raw key tails.
 
 ### Content Updates
 
