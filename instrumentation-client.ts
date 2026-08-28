@@ -79,6 +79,9 @@ Sentry.init({
     /tgetT is not defined/,
     /zaloJSV2 is not defined/,
     /onPagePause is not defined/,
+    // Wallet extension calling provider.request() on its own not-yet-ready
+    // injected object; the site never calls `.request()` itself (ETHORG-1A6)
+    /Cannot read properties of undefined \(reading 'request'\)/,
   ],
 
   beforeSend(event) {
