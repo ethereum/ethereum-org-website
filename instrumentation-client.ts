@@ -79,6 +79,9 @@ Sentry.init({
     /tgetT is not defined/,
     /zaloJSV2 is not defined/,
     /onPagePause is not defined/,
+    // Wallet extension auto-connect failure, thrown by the extension itself on
+    // pages with no wallet-connect code (e.g. /10years/) (ETHORG-74)
+    /Failed to connect to MetaMask/,
   ],
 
   beforeSend(event) {
