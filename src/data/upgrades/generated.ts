@@ -434,15 +434,6 @@ export const generated = {
         },
       },
       {
-        id: 7610,
-        status: "scheduled",
-        networking: false,
-        decidedAt: {
-          call: null,
-          date: "2026-08-04",
-        },
-      },
-      {
         id: 7688,
         status: "scheduled",
         networking: false,
@@ -596,6 +587,12 @@ export const generated = {
         decidedAt: null,
       },
       {
+        id: 8189,
+        status: "scheduled",
+        networking: true,
+        decidedAt: null,
+      },
+      {
         id: 8246,
         status: "scheduled",
         networking: false,
@@ -661,6 +658,15 @@ export const generated = {
         decidedAt: {
           call: "acdc/175",
           date: "2026-02-19",
+        },
+      },
+      {
+        id: 8141,
+        status: "scheduled",
+        networking: false,
+        decidedAt: {
+          call: "acde/244",
+          date: "2026-08-27",
         },
       },
     ],
