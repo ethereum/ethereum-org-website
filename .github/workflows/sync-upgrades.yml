@@ -32,33 +32,11 @@ jobs:
 
       - uses: ./.github/actions/setup-pnpm-node
 
-      - name: Run the sync
-        run: pnpm sync-upgrades
-
-      - name: Detect changes
-        id: diff
-        run: |
-          if git diff --quiet -- src/data/upgrades/; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "Store is current — nothing to do."
-          else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-            git diff -- src/data/upgrades/ > store.diff
-          fi
-
-      # PRs opened with GITHUB_TOKEN do not trigger the CI workflow, so the
-      # checks that would guard the store run here, before it opens one.
-      - name: Type-check and test the regenerated store
-        if: steps.diff.outputs.changed == 'true'
-        run: |
-          pnpm type-check
-          pnpm test:unit
-
-      # While a data PR is unmerged, the sync branch is what the issue last
-      # reported; classifying against dev would restate it every Friday.
-      - name: Resolve the classify baseline
+      # While a data PR is unmerged, the sync branch — not dev — holds what has
+      # already been pushed and reported. Diffing against dev would re-push and
+      # re-report the same change every Friday until someone merges it.
+      - name: Resolve the sync baseline
         id: base
-        if: steps.diff.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -69,7 +47,31 @@ jobs:
           fi
           echo "pr=$PR" >> "$GITHUB_OUTPUT"
           echo "ref=$REF" >> "$GITHUB_OUTPUT"
-          echo "Classifying against $REF."
+          echo "Comparing against $REF."
+
+      - name: Run the sync
+        run: pnpm sync-upgrades
+
+      - name: Detect changes
+        id: diff
+        env:
+          REF: ${{ steps.base.outputs.ref }}
+        run: |
+          if git diff --quiet "$REF" -- src/data/upgrades/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Store is current — nothing to do."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff "$REF" -- src/data/upgrades/ > store.diff
+          fi
+
+      # PRs opened with GITHUB_TOKEN do not trigger the CI workflow, so the
+      # checks that would guard the store run here, before it opens one.
+      - name: Type-check and test the regenerated store
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          pnpm type-check
+          pnpm test:unit
 
       # Empty output means nothing changed that any page can contradict, and a
       # failure here costs a notification rather than the week's sync.
