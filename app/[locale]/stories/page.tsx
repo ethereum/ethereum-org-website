@@ -35,6 +35,7 @@ import { getVideos } from "@/lib/utils/videos"
 
 import { getVideosByCategory } from "../videos/utils"
 
+import AdoptionMap from "./_components/AdoptionMap"
 import CommunityStories from "./_components/CommunityStories"
 
 import { routing } from "@/i18n/routing"
@@ -120,6 +121,10 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
             </div>
           </Section>
         )}
+
+        <Section id="adoption" className="px-4 md:px-8">
+          <AdoptionMap />
+        </Section>
 
         <Section id="more-stories" className="space-y-8 px-4 md:px-8">
           <div className="mx-auto flex max-w-2xl flex-col gap-3 text-center">
