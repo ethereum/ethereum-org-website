@@ -6,7 +6,7 @@
   "page-find-wallet-last-updated": "最終更新",
   "page-find-wallet-meta-description": "イーサリアムのウォレットを並べて比較しましょう。ハードウェア・ウォレットのサポート、オープンソース、セルフカストディ、マルチチェーン、ステーキング、NFTサポートなどの機能でフィルタリングして、あなたにぴったりのウォレットを見つけてください。",
   "page-find-wallet-meta-title": "イーサリアムのウォレットを探して比較する",
-  "page-find-wallet-meta-description-fallback": "{wallet} — {devices}向けのイーサリアム・ウォレット。{networkCount, plural, one {{networkCountFormatted}個のネットワーク} other {{networkCountFormatted}個のネットワーク}}と{languageCount, plural, one {{languageCountFormatted}言語} other {{languageCountFormatted}言語}}をサポートしています。",
+  "page-find-wallet-meta-description-fallback": "{wallet} — {devices}向けのイーサリアム・ウォレット。{networkCount, plural, other {{networkCountFormatted}個のネットワーク}}と{languageCount, plural, other {{languageCountFormatted}言語}}をサポートしています。",
   "page-find-wallet-title": "ウォレットを選ぶ",
   "page-find-wallet-table-title": "すべてのウォレットを見る",
   "page-find-wallet-results-label": "見つかったウォレット",

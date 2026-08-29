@@ -45,6 +45,9 @@ jobs:
       - name: TypeScript
         run: pnpm type-check
 
+      - name: Translation files
+        run: pnpm lint:i18n
+
       - name: Find changed English markdown
         id: changed
         run: |

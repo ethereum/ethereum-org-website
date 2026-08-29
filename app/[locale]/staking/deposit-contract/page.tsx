@@ -161,7 +161,7 @@ export async function generateMetadata(props: {
     locale,
     slug: ["staking", "deposit-contract"],
     title: t("page-staking-deposit-contract-meta-title"),
-    description: t("page-staking-deposit-contract-meta-description"),
+    description: t("page-staking-deposit-contract-meta-desc"),
   })
 }
 

@@ -135,7 +135,7 @@
   "page-upgrades-bug-bounty-severity-low-li-2": "Causare banalmente divisioni della rete che interessano lo <strong>0.01%</strong> della rete",
   "page-upgrades-bug-bounty-severity-low-li-3": "Essere in grado di abbattere lo <strong>0.01%</strong> della rete inviando un singolo pacchetto di rete o una transazione onchain",
   "page-upgrades-bug-bounty-severity-medium-title": "Media gravità",
-  "page-upgrades-bug-bounty-severity-medium-li-1": "Slashing dell'<strong>1%</strong> dei validatori",
+  "page-upgrades-bug-bounty-severity-medium-li-1": "Slashing dell''<strong>1%</strong> dei validatori",
   "page-upgrades-bug-bounty-severity-medium-li-2": "Causare banalmente divisioni della rete che interessano il <strong>5%</strong> della rete",
   "page-upgrades-bug-bounty-severity-medium-li-3": "Essere in grado di abbattere il <strong>5%</strong> della rete inviando un singolo pacchetto di rete o una transazione onchain",
   "page-upgrades-bug-bounty-severity-high-title": "Alta gravità",

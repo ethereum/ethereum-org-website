@@ -141,6 +141,7 @@ const CollectiblesCurrentYear = ({
   address,
 }: CollectiblesCurrentYearProps) => {
   const t = useTranslations("page-collectibles")
+  const tCommon = useTranslations("common")
 
   const socialBadges = React.useMemo(
     () => badges.filter((b) => b.category === "Events/Calls"),
@@ -442,7 +443,7 @@ const CollectiblesCurrentYear = ({
                 </CheckList>
               </HighlightCardBody>
               <HighlightCardFooter href="/contributing/translation-program/">
-                {t("common:learn-more")}
+                {tCommon("learn-more")}
               </HighlightCardFooter>
             </HighlightCard>
           </HighlightCardGrid>
