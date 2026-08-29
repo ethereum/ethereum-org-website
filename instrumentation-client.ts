@@ -79,6 +79,10 @@ Sentry.init({
     /tgetT is not defined/,
     /zaloJSV2 is not defined/,
     /onPagePause is not defined/,
+    // WalletConnect/RainbowKit IndexedDB storage failures - browser storage
+    // environment issue (e.g. private browsing, disk/profile corruption),
+    // not something the app can fix (ETHORG-19N)
+    /UnknownError: Unable to open database file on disk/,
   ],
 
   beforeSend(event) {
