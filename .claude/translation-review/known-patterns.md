@@ -1,7 +1,9 @@
 # Known Translation Patterns & Issues
 
 > This is a living document. Updated after each language review.
-> Last updated: 2026-07-29 (PR #18938 full pipeline, 24 langs: Indic loaded-polyseme bloc failure, sanitizer frontmatter-guard newline bug corrupting `uploadDate`, `/videos` frontmatter bypassing ETHGlossary, split-sentence `-strong` keys, partial-update manifest drift; fleet avg 8.9 -- lowest in months)
+> Last updated: 2026-08-20 (PR #19034 full pipeline, 24 langs: **bracket-placeholder blanks are a coverage gap `verify-structure` cannot see** (11 locales), character-level generation corruption in 3 locales, the semantic-translation-of-an-org-name split, `soundness`/`test harness` as glossary gaps, the ar `validator` glossary entry breaking NFC, and the rule that a dominant-but-wrong tree form must be fixed globally or not at all; fleet avg 8.67)
+> Previous: 2026-08-14 (PR #19076 find-wallet JSON, 24 langs: **ETHGlossary's own term data is the defect source** for lowercased acronym parentheticals and non-Western numerals, runtime-composed fragment keys forcing per-locale agreement guesses, the check-the-tree-before-fixing-a-term-of-art hygiene rule, and three glossary coverage gaps; fleet avg 9.35)
+> Previous: 2026-07-29 (PR #18938 full pipeline, 24 langs: Indic loaded-polyseme bloc failure, sanitizer frontmatter-guard newline bug corrupting `uploadDate`, `/videos` frontmatter bypassing ETHGlossary, split-sentence `-strong` keys, partial-update manifest drift; fleet avg 8.9 -- lowest in months)
 > Previous: 2026-07-22 (PR #18868 full pipeline, 22 langs: YAML colon-in-description build-breaker, raw-`<`-in-prose MDX break, and the `ExpandableCard title= "` attribute-extraction gap; fleet avg 9.7)
 > Previous: 2026-06-30 (PR #18629 full-tree: empty `{#}` h5 build-breaker, code-fence corruption cluster, the source-language decision rule, and the "deterministic sweeps beat agent triage" methodology note)
 > Previous: 2026-06-09 (PR #18375: MDX duplicated-closer / dropped-`>` breakers, duplicate ghost-heading artifact, ETHGlossary authority hierarchy)
@@ -609,3 +611,418 @@ PR #18938: `page-community.json` (28 of 55 keys) and `learn-quizzes.json` (49 of
 - **English-source defects, inherited by every locale:** `page-values` Open Source / Security card **descriptions swapped** (flagged independently by 14 agents; fixed by exchanging the values in all 25 files, which needs no re-translation since both strings already existed everywhere); the split-sentence `-strong` keys of #40; `Quicknode` -> `QuickNode` casing, which several locales had already corrected on their own.
 - **Hand-fix sequencing (per #34) was deliberate here:** the `mode=full` re-run of `roadmap/security` was triggered *first*, and every hand-fix — including ja `devnet` -> `デブネット` in that same regenerated file — was applied afterwards. ~90 term fixes across non-Latin locales now live in `page-privacy-ethereum.json`, `page-values.json`, `page-community.json`, `learn-quizzes.json` and the two `/videos` stubs; a future `mode=full` on any of those paths will erase them. They are derived from ETHGlossary entries and agent-stated expected values but are **not native-speaker reviewed** — the `ta`/`te` inflected forms most of all.
 - **METHODOLOGY — a sweep that silently matches nothing is worse than no sweep.** The first href/heading/ticker/domain pass in this review was a **no-op**: written in zsh, `for L in $LANGS` does not word-split, so every iteration skipped and all four checks reported clean. That masked a 23-locale anchor deletion until an agent contradicted the result. Always print a per-item count and assert a non-zero file count before trusting a sweep; and treat an agent that contradicts a deterministic "clean" as a signal to re-run the sweep, not as a false positive.
+
+### 42. A pure block INSERTION on the English side deletes the heading above it (CRITICAL — pipeline bug, narrower sibling of #32)
+
+#32 was diagnosed on blocks that were **deleted or replaced** in English. PR #18942 shows the same corruption from an English edit that only **added** blocks: `developers/docs/accounts/index.md` gained one sentence to an existing paragraph plus one new paragraph, and 10 of 24 locales (ar, fr, ko, pl, pt-br, sw, tr, vi, zh, zh-tw) silently lost `## Contract accounts {#contract-accounts}` — the h2 four blocks *above* the edit. The surviving locales got the same content correctly, so this is a mapping race, not a prompt problem. Do not assume "additive English change = safe incremental run"; #35's rule (auto mode is unsafe for ANY English edit on a page with structural markup) covers insertions too.
+
+Blast radius is smaller than #32's: the section body survives, so nothing is lost — it merges into the preceding section and drops out of the TOC. Check inbound anchor links before escalating (`grep -rn 'accounts/#contract-accounts' public/content src app`); here there were none, so the damage was TOC + section structure only.
+
+**Detect:** per locale, diff the `{#anchor}` ID **set** and the h1-h4 **count** against the English source. Heading count 11 vs 12 with an otherwise-identical ID set localizes the drop immediately. This is cheaper and more reliable than agent triage (#25).
+
+**Repair by hand is correct here, unlike #32.** The corruption is one missing line, precisely located, and the surviving prose is good — a `mode=full` re-run would retranslate 137 lines x 24 locales and invite the collateral drift #33 warns about. **Extract the heading from the pre-PR blob with `git show <base>:<path>`, never retype it** (#36: hand-typing through a text channel silently alters Unicode composition). Insert heading + blank line before the paragraph that follows it in English.
+
+### 43. An inserted block eats the blank line before the next heading (LOW — fleet-wide whitespace)
+
+Same run, all 24 locales: the new paragraph was written flush against `## ... {#validators-keys}`. CommonMark still parses an ATX heading that interrupts a paragraph, so this is not a build-breaker, but it diverges from English and from every other heading in the file. Safe to hand-repair (whitespace only, no manifest implication). Same signature as the "blank line before the next `###` eaten" row in #32's table — that row is not specific to deletions.
+
+**Detect:** `awk 'NR>1 && /^#{1,4} / && prev !~ /^$/ {print NR": "$0} {prev=$0}' <file>`.
+
+### 44. Multi-word product names come back half-transliterated in non-Latin locales (HIGH — brand)
+
+PR #18942, `app-session-description`: "Arbitrum One" shipped as `أربيتروم ⁦One⁩` (ar), `আরবিট্রাম One` (bn), `आर्बिट्रम One` (hi), `アービトラム One` (ja), `아비트럼 One` (ko), `आर्बिट्रम् One` (mr), `ஆர்பிட்ரம் One` (ta), and fully transliterated `آربٹرم ون` (ur) — 8 of 24, and **no convention supports the hybrid**. The first token gets transliterated because the bare brand has locale precedent; the second stays Latin because it does not.
+
+**The fix reference is the locale's own corpus, not your judgment.** All 8 render the same product as Latin `Arbitrum One` in `page-layer-2.json`, so aligning to that is a consistency fix rather than a policy call. For ar/ur, keep the `⁦...⁩` (U+2066/U+2069) isolate that file uses around Latin runs.
+
+**Detect:** for each Latin brand token in the English string, if an early token is absent from the translation while a later token of the same name is present, it is a hybrid.
+
+### 45. English coinages with two live senses split the fleet (HIGH — English-source defect)
+
+`app-publicnode-description` says "Fastest, **free-est**, and privacy first RPC endpoints". 20 locales read it as free-of-charge (`مجانية`, `nejbezplatnější`, `kostenlosesten`, `gratuitos`, `darmowe`, `бесплатные`, `bure`, `ücretsiz`, `miễn phí`, `最免费`, ...); 4 read it as liberty — ja `最も自由`, ko `가장 자유로우며`, uk `найвільніші`, zh-tw `最自由`. The majority reading is the correct one (PublicNode's pitch is zero-cost public RPC).
+
+**Do not hand-fix the 4 locales.** "free-est" is a superlative of a non-gradable adjective, so several target languages have no clean rendering at all (cs `nejbezplatnější`, de `kostenlosesten` and pl `najbardziej darmowe` are all grammatically odd in the same way English is). Inventing superlatives in 4 languages is worse than fixing the source. Durable fix = disambiguate the English, and the whole fleet follows on the next run.
+
+### 46. Lowercase product-component nouns get calqued fleet-wide (MEDIUM — English-source casing)
+
+`app-the-interfold-description` says "a distributed network of **ciphernodes**". Ciphernodes is Enclave/Interfold's named component, but the English lowercases it mid-sentence, so ~15 of 24 locales reasonably treated it as a common noun: cs `šifrovacích uzlů`, es `nodos de cifrado`, fr `nœuds de chiffrement`, pl `węzłów szyfrujących`, ru `шифроузлов`, sw `nodi za usimbaji`, tr `şifreleme düğümleri`, uk `шифровузлів`, vi `các nút mật mã`, zh `密码节点`, zh-tw `密碼節點` (which reads as "password node" in Taiwan usage), plus transliterations in bn/hi/ja/mr/te/ur.
+
+**Reviewer policy: this is a warning, not a critical, and it must not be fixed in one locale.** Agents will disagree on severity for exactly this reason (pl called it critical, 14 others called it defensible) — the split is a signal that the English is ambiguous, not that one locale erred. Fix by capitalizing `Ciphernodes` English-side if it is meant as a product term; a per-locale sweep otherwise just trades one inconsistency for another.
+
+### 47. "gatekeeper" collapses onto the locale's word for "middleman" (MEDIUM — same-file term collision)
+
+`page-values.json` uses **two** distinct English gatekeeping words in sibling strings: "middleman" (`page-values-card-censorship-resistance-description`) and "gatekeeper" (`page-values-internet-list-privacy`, `page-values-faq-3-p1`). Six locales mapped the new "gatekeeper" onto the word already carrying "middleman" while leaving the FAQ's gatekeeper distinct — es `intermediario` vs `guardián`, fr `intermédiaire` vs `gardien`, it `intermediario` vs `guardiano`, pt-br `intermediário` vs `guardião`, ru `посредник`, bn dropped it. So one English term now has two renderings and two English terms share one. uk got it right (`контролер`, matching its own FAQ string).
+
+Not a glossary term, so either word is defensible in isolation — the defect is intra-file. Check `page-values` gatekeeper/middleman pairs explicitly on any run that touches that namespace.
+
+### 48. A negative-valence English abstraction loses its valence across the Indic + id bloc (MEDIUM — semantic softening)
+
+`page-values-internet-list-open-code`: "turns transparency into **exposure**". English "exposure" here is the harm (laid bare to surveillance); the translations reach for a neutral or positive near-synonym of "transparency", making the warning tautological. bn `উন্মুক্ততা` (openness), hi `जोखिम` (risk), id `pengungkapan` (disclosure), mr `उघडपणा` (frankness), ta `ஆபத்து` (danger) — 5 of 24, all in the Indic + Malay-Indonesian group, same failure shape as #37 but on an abstraction rather than a polyseme. Two of them (hi, ta) *replaced* a previously-correct rendering, so this is regression-prone on re-translation.
+
+Reviewers: on any virtue-becomes-harm construction ("transparency into exposure", "openness into surveillance"), check the second noun is not a synonym of the first in the target language.
+
+### All 24 languages -- accounts CREATE2 + 4 page JSONs + ru/vi plasma, Reviewed PR #18942 (intl/pending-dev)
+- 24 langs x 5 artifacts (`developers/docs/accounts/index.md` + `page-app-descriptions` / `page-apps` / `page-developers-tools-descriptions` / `page-values`), plus a full retranslation of `developers/docs/scaling/plasma/index.md` for ru and vi. 122 content files, 644 changed JSON strings. Fleet avg **9.1**.
+- Scores: ar/te 9.6, bn/it/ko/pt-br 9.4, ja 9.3, cs/de/hi/id/uk/zh 9.2, pl 9.1, es/fr/sw/tr/zh-tw 9.0, ta 8.9, ur 8.8, mr/ru/vi 8.4.
+- **Deterministic layer found both structural defects; no agent surfaced either.** #42 (10 locales lost `{#contract-accounts}`) and #43 (24 locales lost a blank line) came from an anchor-set/heading-count sweep run before the fleet launched, and telling the agents these were already handled kept 24 reports from re-reporting the same two lines. JSON layer was clean on the first scoped pass: ICU placeholders, `<strong>` tags, key parity, empty values, cross-script leakage all byte-correct across 644 strings.
+- **Two false positives worth remembering.** (1) A `[ऀ-ॿ]` "Devanagari leak" check fires on every Bengali string, because Bengali shares the danda `।` U+0964 with the Devanagari block — exclude U+0964/U+0965. (2) Checking brand presence with `en.includes(b) && !tr.includes(b)` flags "Ethereum" in every non-Latin locale (legitimately transliterated) and in Czech (legitimately declined to `Ethereu`); scope brand sweeps to distinctive product names and to PR-changed keys only, or you get 1500 hits and no signal.
+- **Fixes applied (47 across 34 files):** #42 heading restored in 10 locales from the pre-PR blob; #43 blank line in 24; #44 `Arbitrum One` in 8; ur `app-tornado-cash-description` `لین دین` -> `ٹرانزیکشنز` (ETHGlossary reserves the transliteration for signed transactions and names `لین دین` as the term to avoid); ur Arabic kaf U+0643 -> Urdu keheh U+06A9 in the 4 PR-introduced strings that inherited the file's misspelling of `لامرکزی`; ru `Таручи` -> `Taruchi` (23 of 24 keep the game-creature name Latin); fr `frappez Taruchi` -> `frappez le NFT Taruchi`, since `frapper` + a bare proper noun parses as "you **hit** Taruchi" and every other `frapper` in that file has an explicit NFT/token object.
+- **Left unfixed on purpose:** #45 free-est (English-side), #46 ciphernodes (English-side), #47 gatekeeper (intra-file style), #48 exposure (needs native calls in 5 locales), ru plasma `Мейннет`/`основная сеть` split (6 vs 22 in one file, both glossary-sanctioned, declension-sensitive) and 2 stray `ё` in an otherwise ё-less corpus, vi plasma `kế hoạch cam kết` / `tiêu đề đối chiếu` / `yêu cầu nhận định` concept-level term errors. All are native-speaker calls, not mechanical corrections.
+- **The plasma retranslations are a net upgrade with consistency debt.** ru replaced non-glossary forms throughout (`офф-чейн`, `ролл-апы`, `обязательства по состоянию`, `вайтпейпер`) and restored 3 missing heading anchors + 1 link; vi has zero glossary deviations across 60 matched terms. Both then split load-bearing vocabulary inside the one fresh file — ru: Mainnet, contract/smart-contract, block producer; vi: funds (3 forms), malicious (2), data unavailability (2), cryptographic proof (2), rollup (3). Full-file retranslation trades old wrong terms for new inconsistent ones; budget review attention accordingly (#33's collateral-drift warning applies to terminology, not just tense).
+- **#41 recurred:** `accounts/index.md` shipped translated content in all 24 locales with `source.json` bumped to 2026-07-30 and `translation.json` still reading 2026-06-18. Record-keeping only, per #41 — the incremental gate never reads `translation.json`.
+- **`kontrat` vs `sözleşme` in tr is not a defect.** The restored heading reads `Kontrat hesapları` while the body says `Sözleşme adresi`; ETHGlossary has both `contract account => kontrat hesabı` (compound) and `contract => Sözleşme` (bare), so the mix is exactly what the glossary prescribes. Do not auto-normalize it — see #30 for the inverse failure.
+
+### 49. A JSX component added to an English page is NEVER propagated to any locale (CRITICAL — pipeline coverage gap)
+
+When a component with no translatable text is appended to an English page, the pipeline does not carry it into any locale. PR #19015: `<QuizWidget quizKey="..." />` (and the `<Divider />` above it, where present) was added to 8 English pages by the quiz-expansion effort and was missing from **all 24 locales on all 8 pages — 192 files**. The quiz *strings* were fully translated in every locale (`learn-quizzes.json`, full key parity for all 8 quizzes), so the only thing missing was the one-line component invocation: every non-English reader silently lost the end-of-page quiz.
+
+The pipeline **can** carry the component — 217 already-translated files elsewhere in the tree contain `<QuizWidget>` — so this is an incremental-propagation gap on newly added components, not a policy.
+
+**Detect deterministically:** per file, diff the count of each `<Component` between English and each locale. A component present in English and absent in 24/24 locales is a coverage gap, never per-language error (the same logic as #29's extraction gap).
+
+**Repair by hand is correct and safe:** the block requires zero translation. Copy the trailing component block verbatim from the English source and append it, preserving the blank-line separation. Verify the referenced `quizKey` has full string coverage in every locale *first* — if the strings are missing, the widget renders broken.
+
+### 50. The angle-bracket autolink corruption of #3 also appears as a MOVED `>`, not only a dropped one (CRITICAL)
+
+Pattern 3's last row covers a *dropped* `>` in `[t](<url_(qual)>)`. PR #19015 produced the sibling form: the `>` was **moved to before the file extension**, giving `[src](<https://…PayPal-(1)>).pdf>)` — a broken href plus a literal `).pdf>)` rendered as visible junk. **All 24 locales, both table rows of `energy-consumption/index.md`, 48 dead links**, and PR-introduced (zero occurrences pre-PR).
+
+**The regex matters.** A naive `\]\(<[^)]*?>\)` finds nothing, because the URL itself contains `)`. Grep for the tell instead: `>\)\.[a-z]+>\)` (or simply `>)\.pdf`). Fix is `s/>\)\.pdf>\)/.pdf>)/`. Add this to the standard deterministic sweep — the MDX compiler does **not** flag it, so it ships silently.
+
+### 51. One English commit can propagate its STRUCTURAL edits and silently drop its PROSE edits (CRITICAL)
+
+#32/#35 frame incremental-merge damage as deleted headings and spliced links. PR #19015 shows a quieter variant: of the 6 changes in English commit `0e42e1a2ee`, **4 landed in all 24 locales and 2 did not** — and the 2 that failed were both single-clause prose edits inside otherwise-updated paragraphs:
+
+| English change | Propagated? |
+|---|---|
+| section retitle, note rewrite, whole EIP-8080→8061 section body, resources link | 24/24 ✅ |
+| `H2 2026` → `Q4 2026` in the alert | 0/24 ❌ |
+| `democratize liquidity` → `speed up how quickly stakers can move their stake` | 0/24 ❌ |
+
+The same run also deleted a whole FAQ section (#32) in 24/24. So a run can be simultaneously right about the hard parts and wrong about the easy ones — **"the big restructure came through" is not evidence the small edits did.**
+
+**Detect deterministically:** enumerate the English commit's changed lines (`git show <sha> -- <path> | grep -E '^[+-][^+-]'`) and assert each one's counterpart changed in every locale. Anchor on a distinctive token from the new English (a date, an EIP number, a renamed noun) — set-based anchor/link diffs pass cleanly here because neither stale clause carried a link or an anchor.
+
+**Repair choice hinges on the line count, not the pattern.** Two stale prose lines × 24 is cheaper and lower-risk to hand-patch from per-locale agent output than a `mode=full` re-run, which would also discard hand-repairs already made to the same file (#34) and invite collateral drift (#33). Reserve `mode=full` for when whole sections are missing or the count runs past a handful of lines per locale.
+
+### 52. Balanced `<strong>` count mismatches in SOV/RTL locales are CORRECT — do not flag (REVIEW HYGIENE)
+
+English bolds a contiguous verb+object (`<strong>Distribute public funds</strong> and benefits…`). In SOV and verb-final languages the verb moves to the end, so the bolded phrase legitimately splits into two discontiguous runs and the locale ships **two** balanced `<strong>` pairs where English has one. PR #19015: 26 such mismatches across bn/hi/ja/ko/ta/tr/ur/zh/zh-tw in `page-what-is-ethereum.json`, every one correct.
+
+**The discriminator is direction, not count:** `translated > english` and balanced = legitimate redistribution; `translated < english` = a genuinely dropped emphasis (one real case in #19015: bn lost the `<strong>` around `DeFi`). Confirm the key renders through `t.rich` — next-intl accepts repeated tags, so the split is safe. Same family as the ar/ko redistributions noted under PR #18739.
+
+### All 24 languages -- glamsterdam + core docs + what-is-ethereum, Reviewed PR #19015 (intl/pending-dev)
+- 24 langs x 11-12 files (8-9 markdown + `common.json` / `learn-quizzes.json` / `page-what-is-ethereum.json`) = 200 markdown + 72 JSON. Pages: `bridges`, `developers/docs/{blocks,evm,transactions}`, `energy-consumption`, `payments`, `roadmap/glamsterdam`, `what-are-apps`, plus `zero-knowledge-proofs` in 8 locales. Fleet avg (pre-fix) **8.4**.
+- Scores: ru 9.6, zh 9.4, bn 9.1, fr/zh-tw 9.0, hi 8.9, pl/pt-br 8.8, id/it/ko 8.7, tr 8.6, mr 8.5, ja/te/uk/vi 8.4, de 8.3, es 7.7, ur 7.5, cs/ta 7.4, ar 7.2, sw 6.2.
+- **The Netlify build was RED on arrival.** Cause: `<p>` collapsed to `<p></p>` in `zero-knowledge-proofs/index.md` in 8 locales (bn hi ko mr ta te tr ur), orphaning the following `</p>` -> `Unexpected closing tag </p>, expected closing tag for <AlertDescription>`. Fixed; 200/200 compile clean and a scoped `NEXT_PUBLIC_BUILD_LOCALES` build passes.
+- **Deterministic sweeps found every structural defect; no agent surfaced any of them first** (#25 again). Five fleet-wide finds: the build-breaker (8 locales), #50 `.pdf` autolink corruption (24 locales, 48 links), #32 deleted FAQ section `{#will-my-smart-contracts-change}` (24 locales), #49 missing `<QuizWidget>` (192 files), and 13 ghost duplicate blocks (7 locales). Agents then supplied the judgment layer *and* the per-locale replacement prose the sweeps could not write.
+- **Resuming a finished per-language agent to request one exact line is the cheapest way to hand-patch a fleet-wide prose defect.** 18 agents were resumed from transcript for the #51 lines; each returned a full grammatical line in seconds with its locale context still loaded, avoiding both a `mode=full` re-run and reviewer-authored prose in 24 languages (#36).
+- **Confirmed clean fleet-wide:** JSON validity 72/72, full key parity, ICU placeholders, rich-text tag sets (modulo #52), zero `HTML-PLACEHOLDER` leaks, no untranslated English prose chunks (vi's historical failure mode absent), no ticker/domain typos, no transliterated domains. One real cross-script contamination: a Bengali word `বিপুল` inside Tamil prose in `ta/zero-knowledge-proofs`.
+- **Recurring per-locale glossary regressions, all fixed against ETHGlossary + the locale's own corpus:** cs `gas`->`plyn` (42 sites across 5 files, while cs `common.json` had it right); sw `client`->`mteja` (customer) instead of `kiteja` (31 sites, worst score of the fleet); the `actor`->film-performer polyseme (#37b) recurring in bn/hi/mr/ur; fr `créneau`->`slot` reversion and bare `L1`/`L2` nav strings; pl `receipt`->`paragon` (till receipt); es untranslated `banks` and `Merge`; it/es `gatekeeper` collapsing onto `intermediario` (#47 recurred); mr `miners`->`खनिज` (mineral); te/ar/mr `zero-knowledge proof` nav labels disagreeing with their own page titles.
+- **The stray `# <Title> {#anchor}` h1 in translated `roadmap/glamsterdam` (24/24) is PRE-EXISTING**, inherited from the h1 -> `frontmatter.title` migration (`d9f62fb787`); English has no h1 and the locales still carry one. It is corpus-wide, not this PR's regression — left alone, still owed a dedicated sweep.
+
+### 53. ETHGlossary's OWN term data carries lowercased acronym parentheticals and non-Western numerals (CRITICAL — glossary data, fleet-wide)
+
+The authority is the defect source. `GET /api/v1/translations/{lang}/L2` returns, verbatim:
+
+| correct `(L2)` | lowercased `(l2)` |
+|---|---|
+| ar `طبقة 2 (L2)`, de `Layer 2 (L2)`, ja `レイヤー2 (L2)`, pl `warstwa 2 (L2)`, zh-tw `第二層 (L2)` | the other **19 of 24** — es `capa 2 (l2)`, fr `couche 2 (l2)`, ru `уровень 2 (l2)`, cs `vrstva 2 (l2)`, zh `二层网络 (l2)`, ko `레이어 2(l2)`, id, it, hi, sw, ta, te, tr, uk, vi, pt-br, bn, mr, ur |
+
+Three locales additionally carry non-Western numerals in the term form itself: bn `লেয়ার ২ (l2)`, mr `स्तर २ (l2)`, ur `لیئر ۲ (l2)`. The English canonical is `layer 2 (L2)` with `avoid: ["Layer 2", "layer-2", "Layer-2"]` and preferred aliases `layer 2` / `L2`, so the lowercase exists only on the translation side. The same lowercasing hits `(l1)` at 1–12 sites per language file.
+
+**Blast radius:** 1,609 occurrences in `src/intl/`, 4,665 in `public/content/translations/`.
+
+**Why this matters more than the count.** The pipeline is faithfully reproducing its authority, so **every one of these is a false positive under the ETHGlossary-as-authority policy** and must NOT be hand-fixed — a local fix is reverted by the next run on that file (#34). The proof that the authority (not the content) is broken: **bn and mr resolved the identical glossary-vs-house-policy numeral conflict in OPPOSITE directions** in this very PR — bn used Western `লেয়ার 2` (house rule, contradicts glossary), mr used `स्तर २` (glossary, contradicts house rule). Neither translator erred. Two authorities disagree and the pipeline has no tiebreak.
+
+**Fix order:** normalize the ETHGlossary entries (uppercase the acronym parenthetical; Western numerals in term forms per the house numeral rule), then re-run, then sweep the residue. Do not open per-locale fix PRs first.
+
+**Reviewer rule:** a lowercase `(l2)`/`(l1)` or a non-Western numeral inside a glossary term form is an **upstream data item, not a locale finding**. Query `/translations/{lang}/{alias}` before filing it. Note `/translations/{lang}/layer-2-l2` returns `Term not found` — resolve via the `L2` alias.
+
+### 54. Runtime-composed fragment keys force a per-locale agreement guess, and are safe only by accident (HIGH — English-source/data design)
+
+The find-wallet fee cluster ships fragments assembled at render time: `page-find-wallet-fee-item` = `{label}: {value}`, plus `from {value}`, `{value}/month`, `{value}/card`, `Get {wallet}`. Every inflected locale must pick a case/gender/class for a value it cannot see, and all 24 picked differently:
+
+- **ru is the only one that solved it** — `варьируется` / `не разглашается` / `устанавливается провайдером` are finite VERBS, so no agreement is exposed. Recommend this shape to other locales.
+- **cs/es/it/pt-br/ar/sw agree with their own "fee" noun** and are correct *only because* `wallet-data.ts` never pairs a `type: "device"` label (masc./class-7) with a `text` value — device entries always carry a `usd` amount. Add one `{type: "device", text: "undisclosed"}` row and six locales break agreement simultaneously.
+- **fr already mismatches** — masculine singular fragments against plural `frais`.
+- **tr glued a FIXED vowel-harmony suffix to the placeholder**: `{value}'den başlayan`. Newly introduced in this PR and the only `{placeholder}'suffix` in all of `src/intl/tr`. The single live value (%0,5) actually requires `-ten`; other values need `-dan`. No suffix can be right for a variable number.
+- **pl/uk put accusative after a slash** (`{value}/kartę`, `{value}/картку`) where unit-price convention is nominative.
+
+**Durable fix is on the English/data side, not in 24 locales:** emit `≥ {value}` instead of `from {value}`, and prefer whole translatable sentences over `{label}: {value}` concatenation. Same family as #40 (split-sentence keys forcing English word order).
+
+**Reviewer rule:** for any fragment key, read `src/data/wallets/wallet-data.ts` (or the equivalent data source) and enumerate the label/value pairings that actually occur before judging agreement. "It agrees with the noun I assumed" is not a check.
+
+### 55. Check the locale tree's established rendering BEFORE "fixing" a term of art (REVIEW HYGIENE)
+
+An agent filed ta `fee-label-shield-unshield` = `பாதுகாக்கும்/பாதுகாப்பை நீக்கும் கட்டணம்` as critical, reasoning that "shield/unshield" is Railgun privacy-pool terminology and the protect-root reading is wrong. The recommended fix was a transliteration, `ஷீல்ட்/அன்ஷீல்ட்`.
+
+That fix would have been wrong. `ஷீல்ட்` has **zero** occurrences in the ta tree, while `பாதுகாக்கப்பட்ட` has **29** — including ta's own translation of `next-great-wallet-private/index.md`, which is the Railgun privacy article and renders EN "shielded pools"/"shielded balance" with exactly that root. The translator followed house convention; coining a transliteration against 29 established occurrences would have been the defect.
+
+The **inverse** check validated the sibling finding: pt-br's `proteção/desproteção` genuinely contradicts its own tree, which renders the same Railgun concepts as `pools blindados` / `saldo blindado` / `depósito de blindagem`. So `Taxa de blindagem/desblindagem` was applied as an evidence-backed fix, not a guess.
+
+**Rule:** before changing a term of art, grep the locale's `src/intl/` AND `public/content/translations/` for the concept — ideally in the English article that discusses it, so you compare like with like. Precedent count decides. Downgrade to a warning + a glossary request when the locale is internally consistent and only the *page* has a collision.
+
+### 56. "rewards" lands on the gift/prize word wherever ETHGlossary has no entry (MEDIUM — glossary gap)
+
+`fee-qualifier-of-rewards` = "{value} of rewards" (a staking-commission cut) drifted to the gift/prize sense in id `hadiah`, sw `zawadi`, hi `इनाम`, bn `রিওয়ার্ড`, te `రివార్డ్` — while each tree's dominant staking-rewards term is different (hi/bn `पुरस्कार`/`পুরস্কার`, te `ప్రతిఫలాలు`, id `imbalan`). No ETHGlossary entry exists for `rewards`, so none of these is a policy violation. Given how often staking rewards appear site-wide, this warrants an entry.
+
+### 57. "shield / unshield" has no glossary entry and split the fleet six ways (HIGH — glossary gap)
+
+One string, six strategies: id kept it Latin (best — matches the wallet's own UI); it kept it Latin; ur transliterated (`شیلڈ/ان شیلڈ`, preserves the term of art); ja/ko transliterated (`シールド/アンシールド`, `쉴드/언쉴드`); es reached the correct term of art (`blindaje/desblindaje`); and ar `الحماية`, sw `kukinga`, vi `che giấu`, fr `masquage`, ta `பாதுகாக்கும்`, zh/zh-tw `屏蔽` all reached for protect/conceal/block verbs. `che giấu` carries a cover-up valence; `屏蔽` reads "block/censor" in mainland usage and "physical/EM shielding" in Taiwan — both bad on a fee row.
+
+A six-way split on a single term is the signal that **the English is opaque without protocol context**, not that ten translators failed. Pin `shielded` / `shielding` / `unshield` in ETHGlossary and this resolves fleet-wide in one edit instead of ten hand-fixes (and see #55 — several of the "wrong" renderings are each locale's established form).
+
+### 58. "holding" gets reframed as "investing" in the persona/marketing register (MEDIUM — editorial)
+
+EN `Holding for the long run?` came back as pl `Inwestujesz długoterminowo?`, ru `Инвестируете на долгий срок?`, ko `장기 투자를 계획하고 계신가요?` — three locales, same clause, same drift into investment framing that ethereum.org copy deliberately avoids. ru additionally dropped the trailing `while you hold` clause. cs/uk/tr/ja/zh/zh-tw all kept holding/storing correctly.
+
+**Detect:** grep new persona/marketing keys for each locale's invest-root (`inwest`, `инвест`, `투자`, `inversión`, `investi`) and check it against an English source that never says "invest".
+
+### 59. Hard-coded punctuation in a component defeats correct locale punctuation in the string (LOW — code-side i18n)
+
+`src/components/FilterableCatalog/index.tsx:306` renders `{labels.resultsLabel}:{" "}` — an ASCII colon appended in JSX. zh/zh-tw/ja render `找到的钱包: 42` where the convention is full-width `：`, and fr wants `&nbsp;:`. Both CJK translators used `：` correctly in `page-find-wallet-fee-item`, where the punctuation is inside the string and therefore theirs to control. Fold the separator into the translatable string, or make it locale-aware.
+
+**Reviewer rule:** when a locale's punctuation looks wrong on the rendered page but right in the JSON, grep the component for the glue.
+
+### All 24 languages -- find-wallet UI strings, Reviewed PR #19076 (intl/find-wallet-translations)
+- Feature-branch PR, not `intl/pending-dev`. 24 locales x 1 file (`page-wallets-find-wallet.json`) = 24 files, plus 24 manifests. 47 added keys (5 persona hero title/description pairs + a 24-key `page-find-wallet-fee-*` disclosure cluster + `crops-*` badges), 1 changed (`persona-legend`: filter -> browse), 5 removed. Fleet avg **9.35** -- second-highest recorded, behind #18868's 9.7.
+- Scores: it 9.8, cs/id/ru 9.7, ar/pl/uk/zh-tw 9.6, hi/ur 9.5, de/ja/mr/sw/te 9.4, tr/zh 9.3, bn/es/ko/vi 9.2, fr 8.8, pt-br 8.7, ta 8.1.
+- **19 of 24 locales had zero criticals.** 10 fixes applied across 6 locales: vi `Tải`->`Nhận` (get-wallet read "Download Ledger Nano X" for a physical device), fr `fee-row-label` (dropped the "for", so the header stated an amount), es `fee-row-label` (`Por qué` = interrogative "why"), tr `sabit coin`->`sabitcoin` x2 (**third recurrence**, after #18772 and #19015), ta `நிலையான நாணய-`->`ஸ்டேபிள்காயின்` x2 (glossary, 155-vs-7 corpus margin), pt-br shield/unshield -> `blindagem/desblindagem` and swap x2 -> `troca`.
+- **Structural layer was clean on arrival and needed no repair** — the first review in this series where that held. A real `@formatjs/icu-messageformat-parser` pass over all 24 locales: exact key parity (0 missing, 0 extra), every ICU argument set matching English, all messages parsing, zero unbalanced braces. ar/ur bidi isolates balanced (42/42, 47/47) with no legacy U+202A–U+202E controls. No cross-script contamination, no `HTML-PLACEHOLDER` leaks, no untranslated strings, no dangling code references from the 5 removed keys.
+- **cs/pl/ru/uk correctly EXPANDED the ICU plural beyond what English required** — English ships `one`/`other` in `meta-description-fallback`; cs added `few`, and pl/ru/uk added `few`+`many`, i.e. full CLDR categories. Agents then verified each branch's wording AND case against the governing verb: uk's `one` branch is correctly ACCUSATIVE (`Підтримує 1 мережу`), the branch most commonly botched. **A plural-category count mismatch against English is expected and correct for Slavic locales — do not flag it** (same family as #52).
+- **The headline finding was upstream, and the deterministic layer found it, not the agents** (#25 again). My sweep flagged lowercase `(l2)` in 16 locales; querying ETHGlossary showed the glossary itself ships it in 19 of 24 (#53). Three agents independently reached the same "glossary-legal, do not fix" conclusion from their own `/filter` responses. **1,609 + 4,665 occurrences were correctly left untouched.**
+- **Three glossary coverage gaps surfaced in one 47-key cluster**: shield/unshield (#57, six-way split), rewards (#56, five locales to gift/prize), and no entry for `stablecoin` in tr (which is why the #18772/#19015 `sabit coin` regression keeps returning — nothing upstream pins it). Adding these three entries would have prevented 6 of this PR's 8 criticals.
+- **`crops-*` was understood as a data-field prefix in all 24 locales** — no locale translated "crops" agriculturally. The `persona-legend` filter->browse change propagated correctly in 23 of 24 (ja used `探す`, "search for"), and in every case matched the verb that locale already used for the pre-existing "Browse all wallets".
+- **zh vs zh-tw are genuinely regionally differentiated, not a character conversion** — ~30 lexical divergences in the 47 new keys (網路/网络, 取得/获取, 匯入/导入, 自訂/自定义, 金鑰/密钥, 方案/套餐, 浮動/可变, 封鎖你的存取/阻止你的访问), plus zh-tw restructuring 4 of 5 persona titles rather than translating word-for-word. Character-set sweep: 417/418 unique CJK chars, all divergences pure S↔T counterparts, zero leakage either way. zh-tw's recurring `智慧合約` regression (#18344, #18772) did NOT recur.
+- **Review scale note:** 5 language-bloc agents (Latin-Romance/Germanic, Slavic+Turkic, Indic, East Asian, RTL+SEA/African) at ~5 locales each, not 3 role-agents per locale. For a single-file 47-key JSON payload this was the right calibration — 24x3 agents on ~9KB packets would have been waste. Deterministic sweeps (ICU parse, arg parity, isolate pairing, protected-token, numeral-system, identical-to-English) ran FIRST and were injected into every agent prompt as "already verified, do not re-report", which kept the reports free of placeholder noise.
+- **One agent finding was downgraded on verification** (#55): ta shield/unshield, where the proposed transliteration fix would have contradicted 29 established occurrences in the ta tree. Worth restating as method — the agent's reasoning was sound and its conclusion still wrong, because it never checked the tree.
+
+### 60. Positional anchor assignment desyncs when English gains an unanchored heading (CRITICAL — silent navigation break)
+
+The pipeline asks the model to carry `{#anchor}` ids through translation (`prompt-builder.ts`: "Preserve heading anchor IDs exactly as in English"). Given a file where some headings have anchors and some do not, the model zips the *sequence* of anchors onto the *sequence* of headings and skips the gaps — so every anchor lands on the wrong heading and the tail loses its anchors entirely.
+
+**Root cause is structural, not stochastic:** `extractSections()` in `incremental-translate.ts` indexes sections by `{#id}` and drops unanchored headings outright (`if (customId)`). Only h1–h4 require ids, so any `#####` heading is invisible to the section model.
+
+**Signature:** heading count and level sequence match English exactly, but the anchor sequence is offset by *n*, where *n* is the number of unanchored headings before the first anchored one. Fires identically in all 24 locales, because it is a deterministic reasoning error on a fixed input shape — not per-locale noise.
+
+**Why every existing sweep missed it:** the multiset of anchor values is unchanged, so href-parity passes; the anchors are non-empty, so the `{#}` check (pattern 23) passes; the file compiles, so MDX validation passes. Only heading↔anchor *correspondence* reveals it.
+
+**Detect:** compare `(level, anchor)` pairs positionally against the English source. `verify-structure.ts` check `heading-anchor`.
+
+**Fix:** reassign each translated heading the anchor of the English heading at the same index; strip anchors where English has none. Deterministic and language-independent — never ask a model to redo it.
+
+**Observed:** PR #19115, all 24 locales × `developers/docs/nodes-and-clients/run-a-node/index.md`, 33 of 44 headings wrong per locale, breaking 4 in-page links and the sidebar TOC in every language. The redesign added exactly three unanchored `#####` headings, and the offset was exactly three.
+
+### 61. Translatable JSX attributes revert to English when the surrounding block is retranslated (CRITICAL)
+
+`<Card title="...">` came back in English in all 24 locales while the `description` on the same tag was translated correctly. `origin/dev` had the titles translated, so the retranslation *lost* shipped work.
+
+**Signature:** within one JSX tag, one translatable attribute is translated and a sibling is not. A partially-translated `<Grid>` is the tell — in this case `Self-sovereignty` was translated in every locale while the two cards beside it were not, which proves the attribute is reachable and the miss is stochastic.
+
+**Cause:** attributes are not extracted as discrete translation units. `prompt-builder.ts` tells the model "TRANSLATE the values of: title, description" and "Preserve all JSX/HTML components and their attributes exactly" in the same rule block, then nothing verifies coverage.
+
+**Detect:** for each translatable attribute, compare the translated value against the English value positionally; flag matches. `verify-structure.ts` checks `attr-untranslated:*`. Note this check can legitimately fire (`Maintenance` is a French word), so it is warn-level, not error-level.
+
+**Recovery without a new MT run:** if the English attribute value is unchanged from the previous release, `git show origin/dev:<path>` already holds the correct translation — restore it verbatim. In PR #19115 this recovered 120 of 192 strings; another 23 came from the same page's own translated `h2`. Always exhaust these before generating anything.
+
+### 62. Whole heading-block translation miss (CRITICAL)
+
+`ja/staking/pools` and `ja/staking/saas` shipped with **all 14 section headings** byte-identical to English while their body prose was fully translated. Locale-specific: the other 23 locales were clean at 0/14. `dev` had the saas headings in Japanese, so it was a regression; pools was already broken on `dev` and had never been caught.
+
+**Detect:** count headings identical to English per file. A handful can be legitimate (`Hardware`); a majority means the block was never translated. `verify-structure.ts` check `headings-untranslated`.
+
+### 63. Model wraps links and inline JSX in backticks (CRITICAL — kills every link on the page)
+
+`hi/staking/saas/index.md` shipped 18 spans of the form `` `[text](/path)` `` and `` `<em style={{...}}>text</em>` ``. Inside a code span the markdown never becomes a link and the JSX renders as literal source, so every link on the page was dead. hi-only; the English control has zero backticked links.
+
+**Detect:** grep translated markdown for `` `\[[^\]]*\]\([^)]*\)` `` and `` `<[a-zA-Z][^`]*>` ``, with the English source as control.
+
+**Fix:** strip the wrapping backticks. Deterministic.
+
+### 64. Bidi isolates wrapping pure-RTL text in frontmatter (HIGH — RTL rendering)
+
+`ar` and `ur` `staking/dvt/index.md` wrapped whole Arabic/Urdu frontmatter values (`title`, `description`, all `summaryPoints`) in U+2066 LEFT-TO-RIGHT ISOLATE. The prompt correctly instructs the model to use U+2066/U+2069 for *Latin* fragments inside frontmatter (a `<span dir="ltr">` would break the YAML), and the model over-applied it to the entire value. An LRI forces LTR base direction over RTL text, so sentence-final punctuation renders on the wrong visual edge.
+
+**Detect:** find U+2066…U+2069 pairs whose contents contain no Latin letters or digits.
+
+**Fix:** strip the isolate pair, keep the text. Deterministic. Do **not** remove isolates that genuinely wrap Latin/numeric runs — those are correct.
+
+### 65. Methodology: the pipeline validates translation quality but not structural fidelity
+
+Patterns 60–64, plus 3 (duplicated wrapper closer), 22 (placeholder leak) and 23 (empty `{#}`), are all the same failure: **a mechanically-derivable invariant was delegated to the LLM and never checked afterward.** `output-validation.ts` checks refusals, truncation, frontmatter translation and code-fence placeholders — it does not check heading/anchor correspondence, JSX tag balance, component-name preservation, attribute coverage, internal-href parity, or whether the file compiles.
+
+That is why "every run causes regressions no matter how small": each generation rolls the dice on hundreds of structural details per file, and a green run only means the dice landed well. Prompt tuning is whack-a-mole; the invariants have to be *asserted*.
+
+`src/scripts/intl-pipeline/verify-structure.ts` is that assertion. Run against the pre-fix state of PR #19115 it reproduced every shipped defect class from the English source alone, in under a second, with no model involved. Two design rules keep it usable:
+
+- **Split severity.** Structural invariants that can never legitimately differ (anchors, tag multisets, hrefs, code fences, placeholder residue, JSON key/ICU parity) are `error` and fail the gate. Coverage heuristics that *can* legitimately match English are `warn`. A gate that false-fails gets switched off — which is how a pipeline runs a year without one.
+- **Run it before the commit step, not in review.** Everything it catches is cheaper to prevent than to triage across 24 locales.
+
+### All 24 languages -- staking redesign (6 MD + 1 JSON each), Reviewed PR #19115 (intl/pending-staking-redesign)
+- Feature-branch PR against `staking-redesign` (base PR #19030), 168 content files + 312 manifests. Fleet avg **7.8** -- the lowest recorded in this series, and the gap is almost entirely structural rather than linguistic.
+- Scores: pl 8.8, tr 8.6, pt-br/ru 8.5, de/fr/vi 8.2, te 8.1, cs/uk/zh/zh-tw 8.0, ar 7.9, bn/id 7.8, ja 7.7, it/mr/ur 7.6, es 7.3, ko/ta 7.2, hi 7.0, **sw 5.6**.
+- **The prose was good and the scaffolding failed.** Every locale had digit-exact numerals (32/2048/16 ETH, 115,200/day, 6.4-min epochs, the 400k-800k sweep table); slashing vs inactivity leak, custodial vs non-custodial, rebasing vs exchange-rate LSTs, and partial-withdrawal vs full-exit were kept distinct in all 24. What broke was patterns 60-64: 72 MDX build-breakers (pattern 3 recurrence), the fleet-wide anchor rotation, 192 reverted Card titles, 28 untranslated ja headings, 48 untranslated image alts, 18 backticked hi links, and ar/ur frontmatter isolates.
+- **Image `alt` text is untranslated in all 24 locales** on both files that have one. The pipeline does not extract markdown image alt text at all -- this is a coverage gap, not a generation miss, and it is presumably tree-wide beyond this PR.
+- **Recovery without new MT spend:** 143 of 192 Card titles came back from `origin/dev` (120) and from the same page's own translated `h2` (23); 6 ja headings from `dev`. Only 49 titles, 48 alts and 22 ja headings needed to be written. Establish this order -- prior release, then in-file equivalent, then glossary -- before spending on generation.
+- **Genuine per-locale criticals worth remembering:** sw rendered software `client` as `mteja` (animate = customer) at ~85 sites while ETHGlossary itself mandates `mteja wa mwafaka` for *consensus client*, so 27 of the hits were correct and a blind sweep would have broken them. te propagated a `స్టాకింగ్` ("stacking") misspelling out of a faulty ETHGlossary compound row into a page title and nav label. ta collapsed "custodial"/"has custody of" into `பாதுகாப்பு` ("safekeeping"), turning the centralized-exchange **risk** column into a safety claim. zh-tw called Rocket Pool a `礦池` (mining pool) -- a PoW/PoS inversion. Four locales misparsed "majority client" as "many clients", inverting a client-diversity risk bullet.
+- **JWT-token polysemy is a new glossary gap:** ta/zh/zh-tw all rendered the `jwtsecret` auth token with the crypto-`token` glossary entry (`வில்லை`/`代币`/`代幣`). ETHGlossary has no auth-token sense, so the correct forms (`டோக்கன்`/`令牌`/`權杖`) had to be supplied per locale. Same shape for `slot` in zh, which had no entry and got absorbed into `epoch` (`时段`).
+- **Recurring glossary-side defects (fix upstream, not per-file):** lowercase Latin parentheticals `(dvt)`/`(geth)`/`(lst)`/`(l2)` in hi/id/bn/tr/ur/mr (pattern 53 again); capitalized common nouns leaking mid-sentence in id (`Likuiditas`, `Epok`), ru (`Адрес`) and vi (`Địa chỉ`, `Giao thức`); the te `స్టాకింగ్` typo; ur `لامركزی` carrying Arabic kaf U+0643 instead of keheh U+06A9. Missing entries that caused real errors: `cold storage` (it invented "celle frigorifere" = refrigerated rooms), `externally owned account (EOA)`, `delegated staking`, `auth token`, `slot` (zh).
+- **Pre-existing defects surfaced but out of scope:** `mr/smart-contracts/index.md` carries 3 leaked `<HTML-PLACEHOLDER-COMPONENT-00000N />` tokens **on `dev`** -- reader-visible junk live on the site, and a new signature (sequential ids, not content hashes) versus pattern 22. `fr/developers/docs/accounts/index.md` has the same EOA custody inversion (`compte détenu par un tiers`) that this PR introduced in `withdrawals`.
+- **Review scale:** 24 review agents (one per locale, 7 files each) then 24 fix agents. Deterministic sweeps ran first and were injected as "already verified, do not re-report" -- but note that the anchor rotation was found by the *agents*, not the sweeps, because no sweep existed for it. Every fleet-wide finding was then re-verified deterministically before being acted on; two agent claims (a stale MDX read, and "anchor stripping looks unintended") were false and would have wasted a fix cycle if taken at face value.
+
+### 66. Unquoted YAML scalar containing ": " becomes a mapping (CRITICAL — build-breaker that compiles clean)
+
+Recurrence of the YAML colon defect first logged in PR #18868, in a new field. English wrote `Delegation spans a spectrum, from services where...` with a comma; ru and uk both translated the comma as a colon:
+
+```yaml
+summaryPoints:
+  - Делегування охоплює широкий спектр: від сервісів, де ви зберігаєте...
+```
+
+YAML reads `key: value` inside an unquoted scalar as a **mapping**, so `summaryPoints[2]` becomes an object instead of a string. Next.js then fails prerendering with `Objects are not valid as a React child (found: object with keys {Делегування охоплює широкий спектр})`.
+
+**Why compiling is not enough.** The MDX parses fine and `@mdx-js/mdx` reports zero failures — the defect is in the frontmatter, and it only surfaces when React renders the value. Any check that stops at "does it compile" will pass this file. PR #19115's first fix round did exactly that and the Netlify build failed on `/uk/staking/saas` afterwards.
+
+**Detect:** parse frontmatter with the same parser the site uses (`gray-matter`) and compare the *shape* of every field against English — string vs array vs object, and element-wise for arrays. `verify-structure.ts` check `frontmatter-shape`, error severity.
+
+**Fix:** quote the scalar (`- "text: more text"`). Preserves the translator's punctuation; changing the colon to a comma also works but overrides a legitimate stylistic choice. Neither value here contained a `"`, so plain double-quoting was safe.
+
+**Prompt-side prevention:** the format rules already warn against `<span dir="ltr">` inside frontmatter because the inner quote breaks YAML. The same rule should say that any frontmatter value containing `: ` must be quoted. Languages that punctuate with a colon where English uses a comma will keep hitting this otherwise.
+
+### 67. Bracket fill-in blanks are user-facing prose, and 9 of 24 locales left them in English (HIGH -- coverage gap)
+
+`page-open-source.json` has six `page-open-source-ai-prompt-*-text` keys: copy-paste prompt templates whose lead-in tells the reader to fill in the blanks. The blanks are written as `[app]`, `[my device]`, `[my system]`, `[this]`, `[this error]`, `[App]`.
+
+Fully English: **bn cs hi ja mr sw ta te vi**. Localized: the other 15.
+
+**Watch the false positive.** A first pass counted 11 locales by flagging any bracket token byte-identical to English. **de** `[App]` and **it** `[app]` are the correct native words in German and Italian, and both locales had localized every other blank. Byte-identity with English is not evidence of an untranslated string whenever the English word is also the target-language word -- check the locale's other blanks before counting it.
+
+**Why nothing caught it.** These are not ICU placeholders. `verify-structure.ts`'s `json-placeholder` check tracks `{name}` and `<tag>`; `[...]` is free text, so both the pipeline and the gate treat it as translatable prose that happens not to have been translated. And because a `[...]` token *looks* like a placeholder, the model plausibly protected it on purpose.
+
+**Detect:** compare the multiset of `\[[^\]]+\]` tokens in each locale value against English. Equality across a whole file is the signal -- a locale that translated the surrounding sentence but kept every bracket token verbatim did not make 6 independent decisions. Add as a `bracket-placeholder-parity` **warn** check (warn, not error: `[app]` is a legitimate rendering in some locales).
+
+**Resolved in PR #19034.** All 9 locales were translated, taking each locale's own vocabulary from its tree rather than inventing it: the site's `Apps` nav word for `[app]`, and the "my device" form each locale had *already written* in its own `policy-text` string in the same file. Frequency counting alone would have picked the wrong word for "error" in 4 of 6 locales -- `ভুল`/`चूक`/`తప్పు`/`kosa` outrank the technical term in raw counts but mean "mistake", and substring matching inflates them; the computing sense (`ত্রুটি`/`त्रुटि`/`त्रुटी`/`hitilafu`/`பிழை`/`ఎర్రర్`) is the right pick. Two edits needed grammar beyond substitution: **hi** required the verb to change (`मिला` -> `मिली`, because `त्रुटि` is feminine), and **cs** required absorbing the noun that sat *outside* the bracket (`k aplikaci [app]` -> `k [aplikaci]`) so the case marking landed inside the slot.
+
+**Prevention:** stop overloading square brackets. Either use real ICU placeholders so the invariant is machine-checkable, or write the blanks as underscored prose so nothing looks protected.
+
+### 68. Character-level generation corruption reappears, and it is invisible to every structural check (CRITICAL)
+
+Three locales shipped junk at the character level in the same PR:
+
+| Locale | Key/line | Shipped | Effect |
+|---|---|---|---|
+| bn | `page-open-source-local-ai-description-2` | `কোথাও কিছু পাঠানো হয়বিধা নেই` | junk syllable `বিধা` destroys the negation of "Nothing sent anywhere" |
+| ru | `page-open-source-movement-description` | `побеждами с ними` | non-word; visible gibberish |
+| zh | `community/research/index.md` L54 | `这里的研分为两条主线` | `研` alone is not a word ("Research here divides...") |
+
+All three parse, compile, keep every tag balanced, and pass all 20 `verify-structure` invariants. bn's is the third recurrence of that locale's junk-syllable family (see #19015).
+
+**There is no cheap deterministic detector for this.** Attempts that do NOT work: intra-word script-mixing (fires on `<strong>` glued to text -- 100% false positives on this PR), and length-ratio-vs-English truncation (CJK is naturally ~40% of English character length, so every zh/zh-tw string looks truncated). Both were run on this PR and discarded. Per-language spell/dictionary checking is the only real answer; until then this class is found by reading, which is an argument for keeping a native-language agent per locale rather than trusting the gate.
+
+### 69. Semantically translating an org's proper name deletes it (HIGH -- brand, fleet split)
+
+`Robust Incentives Group` (an EF team with its own site, rig.ethereum.org) appears at 5 sites in `community/research/index.md`. The fleet split four ways:
+
+- Kept English bare: **de it pl**
+- Translated **with** an English gloss in parens: **cs fr id ko pt-br ru tr uk vi zh zh-tw** -- acceptable, the name stays searchable
+- Transliterated: **bn ja mr te ur** -- policy-correct for non-Latin scripts (#1)
+- **Semantically translated with no English retained: ar es hi sw ta** -- defect. `Grupo de incentivos robustos` / `मजबूत प्रोत्साहन समूह` / `Kikundi cha Motisha Imara` cannot be searched for, and a reader cannot connect the label to the org.
+
+The rule that resolves all four: **an org's proper name must remain recoverable.** Keep it, transliterate it, or gloss it -- never replace it with a description of what the words mean. ur additionally shows the failure mode of transliterating badly (`روبسٹ انسیٹوز گروپ` drops the ن of *-cen-*), which is why a gloss is the safest default.
+
+### 70. Check whether a wrong form is DOMINANT before fixing its PR-introduced instances (REVIEW HYGIENE -- the inverse of #55)
+
+The ur agent correctly identified 7 PR-added instances of `لامركزی` carrying Arabic kaf U+0643 where Urdu orthography wants keheh U+06A9, and proposed fixing them, citing PR #18942's precedent.
+
+Verified codepoint counts across the ur tree: **646 kaf vs 186 keheh.** The defective form is dominant 3.5:1 -- a long-standing systematic defect, not a convention. Patching 8 sites moves it to 638/194: it fixes nothing a reader experiences and it *increases* intra-tree inconsistency, which then makes the next reviewer's precedent check ambiguous.
+
+**Rule.** #55 says check the tree before "fixing" a term. This is its inverse: when the tree says the wrong form is the majority, the fix is global or it is nothing. Normalize the upstream ETHGlossary entry, then run one tree-wide sweep, in its own commit. Do not spend a PR's fix budget moving a ratio by 1%.
+
+### 71. ETHGlossary term data can be non-NFC, and one entry denormalizes every file that uses it (MEDIUM -- glossary data)
+
+`ar/community/research/index.md` was NFC-normalized on `origin/dev` and is **not** after this PR. Length delta is 0, so nothing was added or lost -- it is a canonical-ordering change: `مُدَقِّق` ("validator") carries SHADDA U+0651 *before* KASRA U+0650, where canonical order (ccc 32 before 33) puts kasra first.
+
+Source: ETHGlossary's own ar `validator` entry, 1 of 165 ar translations, and the only non-NFC one. It occurs 8x in this PR's ar file. It renders identically, so no reviewer sees it; it breaks byte-level search, diffing and dedup.
+
+**Detect:** `text == unicodedata.normalize("NFC", text)` per file, plus the same assertion on glossary responses. A **warn**-level `nfc` check, with one caveat that stops it false-failing: bn legitimately uses precomposed U+09DF (BENGALI LETTER YYA), which is in the Unicode composition-exclusion table, so NFC *decomposes* it. bn files are therefore permanently "non-NFC" and that is correct. Compare against the pre-PR file, not against an absolute NFC ideal.
+
+### 72. English-source defects that split the fleet on one page (ENGLISH SOURCE)
+
+Fix these in `public/content/community/research/index.md` and `src/intl/en/page-open-source.json` rather than in 24 locales:
+
+| English | Problem | Fleet damage |
+|---|---|---|
+| "designing **against** standards that already exist" (L269) | jargon for "designing *to*"; the bare preposition reads adversarially | hard inversion in **hi** and **te**, ambiguous in **ja**. Reword: "designing to standards that already exist" |
+| "report progress **against** it" (L17) | same | inverted in hi and te |
+| "**accounting** rigorously for the security of the proof systems" (L229) | reads as bookkeeping | wrong sense in **hi ar pt-br ja**. Reword: "rigorously assessing" |
+| "witness gas **schedule**" (L94) | a gas *cost table*, not a timetable | timetable sense in **it ru es id** |
+| "**soundness**" (L229/241/363) | no ETHGlossary entry | "reliability"/"validity" in **de id pl ta vi** |
+| "test **harness**" (L349/L358) | no glossary entry; the physical sense dominates in most languages | **tr** hardware, **ta** saddle, **es**/**fr** horse-harness, **sw** apparatus |
+| "Publishing code **is speech**" | terse US First-Amendment idiom | 14 locales rendered the *right* ("is freedom of speech") rather than the *act*. Majority behaviour -- reword the English, do not fix 14 locales |
+| "have no **recourse**" | redress sense | "no way out" in **ru id pl uk** |
+| "safeguard against **capture**" | corporate/regulatory capture | flattened to "monopoly" in **ko ja mr it** |
+| "Four **families**" | taxonomic sense | household sense in **bn mr ur** |
+| "The most polished first install of the three" | modifier stacking | word-order garble in **es pt-br tr** |
+
+Glossary entries to file: `soundness`, `test harness`, `custodial`/`custody`, `recourse`, `capture` (the takeover sense), `locally`, `derivatives`.
+
+### 73. Methodology -- central sweeps and per-locale agents catch disjoint defect sets
+
+This review ran 24 locale agents (one each, 5-6 files) *after* a deterministic `verify-structure` pass that came back **0 errors / 6 warnings** on all 123 files. That result was injected into every agent prompt as "already verified, do not re-report", which moved the entire fleet's effort onto terminology and semantics. No agent wasted a cycle on MDX, anchors, hrefs, tags or key parity.
+
+The 13 central sweeps run alongside the agents earned their keep in both directions:
+
+- **Sweeps found what agents missed.** fr shipped `harnais de test` and its own agent did not flag it; a cross-locale sweep of one sentence surfaced it immediately. The bracket-blank gap (#67) and the org-name split (#69) are only visible as fleet counts.
+- **Sweeps proved isolated criticals really were isolated.** The cs untranslated string, the ar compiler-scope error, the de finality regression and the sw won/lost inversion were each swept across all 24 locales and each was the only instance. That converts "one agent's claim" into a bounded, safely auto-fixable finding.
+- **Sweeps overruled an agent.** #70 (ur kaf) -- the finding was right and the proposed fix was wrong.
+- **Two sweeps were themselves invalid** and were discarded rather than reported: intra-word script mixing and length-ratio truncation (see #68). Design the sweep against a known-true instance first; if it does not fire cleanly on that, it is not ready to run on 24 locales.
+
+Fleet avg **8.67**, median 8.80, range it 9.5 to ta 7.6. Zero criticals in **it fr ja mr uk zh-tw**. The prose quality was high across the board; nearly every critical was a single wrong word with a tree-backed correct form already available, which is why 47 of them were mechanically fixable in one verified pass.
+
+### 74. `Devcon` is missing from ETHGlossary, and the tree's Latin-everywhere habit was the defect -- not the one locale that transliterated (HIGH -- glossary gap, resolved in PR #19142)
+
+`Devcon` is not in ETHGlossary (532 ko terms scanned via `/filter`; only `claim` matched) and is not in `PROTECTED_BRAND_NAMES` in `intl-sanitizer.ts`. Term role is `brand-or-project`, whose policy default is `transliterate` per group rules -- it is not a developer tool, so the "Latin allowed for technical brands in UI tags" carve-out does not apply. On arrival the fleet split 12-1: twelve non-Latin locales kept Latin, ko alone shipped `데브콘`.
+
+**The review error this pattern exists to prevent:** the reviewer flagged ko as the outlier and "fixed" it to Latin, reasoning from (a) `src/intl/*/common.json` carrying `"devcon": "Devcon"` in 24/24 locales and (b) the CJK-phonetic UI-tag rule. Both inputs were real; the conclusion was backwards. `common.json` unanimity is 24 copies of one untested habit, not authority. And an annual conference name is ordinary prose, not a dev tool. Reverted; ko became the reference and eight locales were brought in line with it.
+
+**Resolved forms (PR #19142):**
+
+| Locale | Form | Evidence class |
+|---|---|---|
+| hi, mr | `डेवकॉन` | devcon.org's own hi/mr sites -- independent of this pipeline |
+| ko | `데브콘` | pre-existing tree precedent (`데브콘` x10 in ko content) |
+| ja | Latin `Devcon` | independent JP crypto press (fisco, neweconomy, hedge.guide, pocketcampus, Yahoo) -- all Latin, zero katakana |
+| ar | `ديفكون` | LOW confidence, tie unbroken -- see #76 |
+| bn, ta, te, ur | `ডেভকন`, `டெவ்கான்`, `డెవ్కాన్`, `ڈیوکان` | derived (Gemini 3.1 Pro), no independent precedent found |
+| ru, uk | Latin | 6.2 Cyrillic default; ru additionally blocked on case/apposition, uk has no candidate form |
+| zh, zh-tw | Latin | 6.5 `keep_latin` default -- do NOT auto-generate phonetic Hanzi |
+| `logo-alt` (all 24) | Latin | the formal title lockup and image alt text stay Latin in every locale, per devcon.org |
+
+**Rules:**
+
+1. A unanimous form in `src/intl/*/common.json` is evidence of consistency, not correctness. Never cite it to overrule the ETHGlossary fallback.
+2. Reserve "Latin allowed in UI tags" for developer tooling. Event, org and program names are prose.
+3. Separate the title lockup and asset `alt` text from running text. They take Latin even where the name transliterates.
+
+### 75. ETHGlossary `claim` is scoped to on-chain claiming and reads bureaucratic in marketing copy (INFORMATIONAL -- glossary scope)
+
+The `claim` entry defines itself as "the act of collecting tokens from an airdrop, reward, or vesting contract" and its per-language terms carry that legal-instrument weight: ru `востребование`, pl `roszczenie`, cs `nárok`, uk `затребування`, fr `réclamation`, ur `دعویٰ`, ja `請求`, ko `청구`. On "Claim your 10% discount" -- marketing, not a vesting contract -- 22 of 24 locales followed the glossary and 2 did not (ru `Получите`, pl `Odbierz`, both the more natural discount verb).
+
+`claim` has `script_rule: null` / `term_role: null`, so per the severity matrix a deviation is **High, not critical, and not auto-fixable** -- "no, flag for review". Do not auto-fix these toward the glossary: `востребуйте скидку` and a `roszczenie`-based Polish imperative are worse copy than what shipped. The fix belongs upstream (a `contexts.ui`/marketing sense on the entry, or a separate `redeem` entry), not in the locale files.
+
+**Reviewer rule:** when a glossary hit is a generic English verb rather than an Ethereum term, check the entry's own `definition` before calling a deviation. An out-of-domain glossary hit is a glossary-scope finding, not a locale defect.
+
+### 76. `blog.ethereum.org` is not independent evidence -- it is this pipeline's own output (METHODOLOGY)
+
+While resolving #74 the reviewer cited `blog.ethereum.org/{ar,ja,ko,hi,ru}` as authoritative for the `Devcon` transliteration. It is not. The EF blog is translated by **this same LLM pipeline against this same ETHGlossary**, so on any term the glossary is missing it inherits the identical gap. Citing it to settle a glossary gap is circular: it reports what the pipeline already guessed, in a more confident-looking venue.
+
+This cost real accuracy. The `ar` choice between `ديفكون` (ف) and `ديڤكون` (ڤ) -- both legal under 6.3 -- was called for ف on the blog's usage, when in truth the tie was never broken. The `hi` case is the tell: the blog ships `देवकॉन` (dental द) while devcon.org ships `डेवकॉन` (retroflex ड). Two EF-adjacent sources, two different answers, because only one of them involved a human deciding.
+
+**Evidence hierarchy for a term the glossary does not cover:**
+
+1. **The brand owner's own localized site** (devcon.org/hi, devcon.org/mr) -- a human made that call.
+2. **Independent target-language press and community usage** -- what the ja resolution actually rests on.
+3. **Pre-existing tree precedent** in this repo, if a human wrote it.
+4. **A fresh LLM-derived transliteration**, labeled as derived, pending native review.
+5. **Never:** other output of this same pipeline (blog.ethereum.org, sibling locale files from the same run) dressed up as corroboration.
+
+Also from the same episode: an LLM's "established form, confidence High" claim is checkable and is sometimes false. Gemini 3.1 Pro asserted that Japanese crypto press "consistently use デブコン, e.g. CoinPost"; every outlet found writes Latin 「Devcon」. Its supporting reasoning was internally broken too -- it cited デベロッパー as evidence for ブ, but that word uses ベ. **Verify "established" claims with one search before shipping the form.** Its bn "established" claim failed the same check; the form was kept on phonetic merit and relabeled derived.

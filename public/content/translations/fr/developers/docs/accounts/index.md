@@ -105,7 +105,9 @@ Exemple :
 
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
-L'adresse du contrat est généralement donnée lorsqu'un contrat est déployé sur la chaîne de blocs Ethereum. L'adresse provient de l'adresse du créateur et du nombre de transactions envoyées depuis cette adresse (le « nonce »).
+L'adresse du contrat est généralement donnée lorsqu'un contrat est déployé sur la chaîne de blocs Ethereum. L'adresse provient de l'adresse du créateur et du nombre de transactions envoyées depuis cette adresse (le « nonce »). C'est ainsi que l'opération `CREATE` dérive une adresse.
+
+Les contrats peuvent également être déployés avec [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), qui dérive l'adresse à partir de l'adresse du créateur, d'une valeur choisie par le créateur (le « sel »), et d'un hash du code de création du contrat. Aucun nonce n'est impliqué, l'adresse peut donc être calculée avant que le contrat n'existe et reste la même quel que soit le nombre d'autres transactions que le créateur envoie entre-temps. Cela permet de référencer un contrat qui n'a pas encore été déployé.
 
 ## Clés de validateur {#validators-keys}
 

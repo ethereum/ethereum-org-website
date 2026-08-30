@@ -65,6 +65,8 @@
   "page-apps-info-creator": "Muundaji",
   "page-apps-info-last-updated": "Ilisasishwa mwisho",
   "page-apps-gallery-title": "Matunzio",
+  "page-apps-gallery-screenshot-alt": "Picha ya skrini {index} ya {appName} ikionyesha kiolesura cha programu tumizi",
+  "page-apps-gallery-modal-title": "Picha za skrini za {appName}",
   "page-apps-more-apps-like-this": "Programu tumizi zaidi kama hii",
   "page-apps-by-company": "na {company}",
   "page-apps-today": "Leo",

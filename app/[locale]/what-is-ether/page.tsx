@@ -11,6 +11,7 @@ import {
 } from "@/components/HighlightCard"
 import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
+import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import {
   Alert,
   AlertContent,
@@ -619,6 +620,8 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             {t("page-what-is-ether-what-is-wrapping-eth-description-7")}
           </LinkWithArrow>
         </Section>
+
+        <StandaloneQuizWidget quizKey="what-is-ether" />
       </ContentLayout>
     </>
   )

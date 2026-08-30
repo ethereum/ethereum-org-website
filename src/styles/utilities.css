@@ -102,36 +102,6 @@
   text-underline-offset: 3px;
 }
 
-/* Staking grid layouts */
-@utility staking-grid {
-  grid-template-areas:
-    "ether header glyph"
-    "decorator content content";
-}
-
-@utility area-glyph {
-  grid-area: glyph;
-}
-
-@utility staking-grid-stacked {
-  grid-template-areas:
-    "ether"
-    "header"
-    "content";
-}
-
-@utility area-ether {
-  grid-area: ether;
-}
-
-@utility area-header {
-  grid-area: header;
-}
-
-@utility area-content {
-  grid-area: content;
-}
-
 /* Animation control */
 @utility animate-pause {
   animation-play-state: paused;

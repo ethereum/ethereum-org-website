@@ -239,3 +239,7 @@ ZK-STARK, güvenliği için yalnızca çarpışmaya dayanıklı hash fonksiyonla
 - [Sıfır Bilgi İspatları (ZKP'ler) Kendi Kendine Egemen Kimlik İçin Neden Oyun Değiştiricidir?](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
 - [EIP-7503 Açıklandı: ZK İspatları ile Ethereum'da Özel Transferleri Etkinleştirmek](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [ZK Kart Oyunu: ZK temellerini ve gerçek hayattaki kullanım durumlarını öğrenmek için oyun](https://github.com/ZK-card/zk-cards) - _ZK-Cards_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

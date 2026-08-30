@@ -14,6 +14,7 @@ import {
 
 import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
+import DevconIndiaLargeCallout from "@/components/DevconIndia/large-callout"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
@@ -137,6 +138,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         title={t("page-events-hero-title", { year: getLocaleYear(locale) })}
         description={t("page-events-hero-subtitle")}
       />
+
+      {/* Devcon VIII India callout banner */}
+      <DevconIndiaLargeCallout />
 
       {/* What's on this page? + TabNav */}
       <StickyContainer className="top-6 space-y-4 p-4 md:top-2 md:p-8">

@@ -23,10 +23,12 @@ env:
 #
 # Exception: Storybook Chromatic (`visual-tests`) runs on every non-draft PR
 # whose head branch belongs to this repository. Forks and Dependabot cannot read
-# the project secret and are intentionally excluded. The merge gate for tested
-# changes is Chromatic's own "UI Tests" check (posted by the Chromatic GitHub
-# App), which updates live as a maintainer accepts/rejects -- so this job just
-# publishes and exits 0.
+# the project secret and are intentionally excluded. TurboSnap (`onlyChanged`)
+# keeps snapshot usage low: a PR with no affected stories is bypassed and billed
+# nothing, and no build is published for it.
+# The merge gate for visual changes is Chromatic's own "UI Tests" check (posted
+# by the Chromatic GitHub App), which updates live as a maintainer
+# accepts/rejects -- so this job itself always exits 0.
 #
 # `fetch-depth: 0` is set selectively: lint needs it for `git diff`, and the
 # two Chromatic jobs need it for baseline detection. Other jobs use the default
@@ -79,9 +81,10 @@ jobs:
   visual-tests:
     name: Visual regression (Chromatic)
     # Only trusted branches in this repository may read the project token and
-    # publish snapshots. Fork changes that need visual review must be moved to
-    # an internal branch by a maintainer; never synthesize a passing UI Tests
-    # status for an untested fork commit.
+    # publish snapshots. TurboSnap bypasses trusted PRs with no affected stories.
+    # Fork changes that need visual review must be moved to an internal branch by
+    # a maintainer; never synthesize a passing UI Tests status for an untested
+    # fork commit.
     if: >-
       github.event_name == 'pull_request'
       && github.repository == 'ethereum/ethereum-org-website'
@@ -98,7 +101,7 @@ jobs:
       - uses: ./.github/actions/setup-pnpm-node
 
       - name: Publish to Chromatic
-        uses: chromaui/action@v16
+        uses: chromaui/action@v18.5.0
         with:
           projectToken: ${{ secrets.CHROMATIC_STORYBOOK_TOKEN }}
           # Not named chromatic.config.json: that filename is auto-loaded by
@@ -110,6 +113,9 @@ jobs:
           skip: ${{ vars.CHROMATIC_SKIP || '__chromatic_skip_disabled__' }}
           exitZeroOnChanges: true
           onlyChanged: true
+          # Defaults to on whenever onlyChanged is set; keep it off so debug
+          # logs aren't published next to the public Storybook.
+          uploadMetadata: false
           # Release-train builds (dev/staging/master head branches) were
           # already reviewed per-PR on dev; auto-accept them as baselines.
           autoAcceptChanges: "{dev,staging,master}"
@@ -338,7 +344,7 @@ jobs:
 
       - name: Publish to Chromatic
         if: always()
-        uses: chromaui/action@v16
+        uses: chromaui/action@v18.5.0
         with:
           projectToken: ${{ secrets.CHROMATIC_PAGES_TOKEN }}
           playwright: true

@@ -71,12 +71,6 @@ export const formatDate = (
   }).format(new Date(date))
 }
 
-export const isDateReached = (date: string) => {
-  const today = new Date()
-  const threshold = new Date(date)
-  return threshold >= today
-}
-
 export const formatDateRange = (
   start: string,
   end: string | null,
@@ -95,6 +89,25 @@ export const formatDateRange = (
     // two render identically but differ byte-for-byte, tripping React's
     // hydration check. Collapsing whitespace makes the output deterministic.
     .replace(/\s+/g, " ")
+
+/**
+ * Date range split into parts so callers can style them individually (e.g. a
+ * lighter year), instead of hand-assembling the string -- which would hard-code
+ * English part order. Whitespace is normalized as in `formatDateRange`.
+ */
+export const formatDateRangeToParts = (
+  start: Date | string,
+  end: Date | string,
+  locale: string = DEFAULT_LOCALE,
+  options?: Intl.DateTimeFormatOptions
+) =>
+  dateTimeFormat(locale, {
+    month: "short",
+    day: "numeric",
+    ...options,
+  })
+    .formatRangeToParts(new Date(start), new Date(end))
+    .map(({ type, value }) => ({ type, value: value.replace(/\s+/g, " ") }))
 
 export const getLocaleYear = (
   locale: string = "en-US",

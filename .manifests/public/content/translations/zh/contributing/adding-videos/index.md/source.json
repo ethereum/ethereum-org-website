@@ -1,7 +1,7 @@
 {
   "version": 1,
   "sourceFile": "public/content/contributing/adding-videos/index.md",
-  "generatedAt": "2026-06-29T23:54:45.670Z",
+  "generatedAt": "2026-08-10T23:39:57.529Z",
   "rootHash": "15e6f3a5a87e",
   "tree": {
     "contentHash": "437f5c7b4910",
@@ -782,5 +782,5 @@
       "terms-of-use"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "e2b1a7cfe1258feb60c4671aaf33f5530ba576d5"
 }

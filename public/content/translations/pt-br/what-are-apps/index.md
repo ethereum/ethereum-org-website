@@ -79,3 +79,7 @@ Quando os aplicativos são todos construídos na Ethereum, eles são todos compa
 <ExpandableCard title="Qual é a melhor carteira cripto?" visible>
   <p>Uma carteira cripto permite que você guarde seus tokens e gerencie sua conta da Ethereum. Existem muitas carteiras excelentes, cada uma servindo a um propósito diferente. Para descobrir qual carteira é a melhor para você, visite nossa [lista de carteiras](/wallets/find-wallet).</p>
 </ExpandableCard>
+
+<Divider />
+
+<QuizWidget quizKey="what-are-apps" />
