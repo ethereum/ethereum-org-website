@@ -24,15 +24,9 @@ import {
   mergeBranchInto,
 } from "./lib/github/branches"
 import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
+import { runFuseUsd, usageTotals } from "./lib/llm/cost-meter"
 import { callGeminiRaw, isLlmAvailable, translateFile } from "./lib/llm/gemini"
-import {
-  batchSections,
-  buildIncrementalPrompt,
-  buildSectionList,
-  extractJsonSections,
-  extractSections,
-  parseIncrementalResponse,
-} from "./lib/llm/incremental-translate"
+import { parseIncrementalResponse } from "./lib/llm/incremental-translate"
 import {
   extractAttributeLeaves,
   translateJsxAttributes,
@@ -45,6 +39,8 @@ import {
   hasEnglishChanged,
   parseEnglishJson,
 } from "./lib/llm/manifest-adapter"
+import { openRouterKeyStatus } from "./lib/llm/openrouter"
+import { planIncrementalBatches } from "./lib/llm/plan"
 import { generateTempBranchName } from "./lib/utils/branch-naming"
 import type { TaskResult } from "./lib/utils/task-pool"
 import { createTaskPool } from "./lib/utils/task-pool"
@@ -58,7 +54,15 @@ import {
   normalizeTargetPath,
   validateTargetPath,
 } from "./config"
-import { LLM, MANIFESTS_DIR } from "./constants"
+import {
+  INPUT_RATE_USD_PER_1M,
+  LLM,
+  LLM_PROVIDER,
+  MANIFESTS_DIR,
+  MAX_BATCHES_PER_FILE,
+  MAX_PROMPT_BYTES,
+  OUTPUT_RATE_USD_PER_1M,
+} from "./constants"
 import type { LlmTranslator } from "./pipeline"
 import {
   findStructuralRegressions,
@@ -230,17 +234,24 @@ function printTokenSummary(
     `${"TOTAL".padEnd(10)}| ${pad(String(grandCalls), 5)} | ${pad(fmt(grandInput), 10)} | ${pad(fmt(grandOutput), 10)} | ${pad(fmt(grandTotal), 10)}`
   )
 
-  // Approximate cost (standard tier, <=200k prompts)
-  // https://ai.google.dev/gemini-api/docs/pricing (as of 11-April-2026)
-  const INPUT_RATE = 2.0
-  const OUTPUT_RATE = 12.0
   const estCost =
-    (grandInput / 1_000_000) * INPUT_RATE +
-    (grandOutput / 1_000_000) * OUTPUT_RATE
+    (grandInput / 1_000_000) * INPUT_RATE_USD_PER_1M +
+    (grandOutput / 1_000_000) * OUTPUT_RATE_USD_PER_1M
 
   const pipelineSecs = (pipelineDurationMs / 1000).toFixed(1)
   console.log(
-    `\n  Estimated cost: ~$${estCost.toFixed(4)} (${LLM.models[0]}: $${INPUT_RATE}/1M input, $${OUTPUT_RATE}/1M output)`
+    `\n  Estimated cost: ~$${estCost.toFixed(4)} (${LLM.models[0]}: $${INPUT_RATE_USD_PER_1M}/1M input, $${OUTPUT_RATE_USD_PER_1M}/1M output)`
+  )
+  // The meter counts every billed call, including retries and blocked
+  // responses the per-language stats above never see.
+  const metered = usageTotals()
+  console.log(
+    `  Metered: ${metered.calls} call(s), $${metered.costUsd.toFixed(4)} against the $${runFuseUsd().toFixed(2)} run fuse` +
+      // Thinking tokens are billed as output. On the OpenRouter path they are
+      // inside the output column above; the Gemini SDK omits them entirely.
+      (metered.reasoningTokens
+        ? `, of which ${metered.reasoningTokens.toLocaleString("en-US")} reasoning token(s) (~$${((metered.reasoningTokens / 1_000_000) * OUTPUT_RATE_USD_PER_1M).toFixed(2)})`
+        : "")
   )
   console.log(`  Wall time: ${pipelineSecs}s`)
 }
@@ -267,32 +278,6 @@ async function buildGeminiTranslator(
     }
   }
 
-  const englishSections =
-    fileType === "json"
-      ? extractJsonSections(englishContent)
-      : extractSections(englishContent)
-  const localeSections =
-    fileType === "json"
-      ? extractJsonSections(localeContent)
-      : extractSections(localeContent)
-
-  const sectionList = buildSectionList(
-    englishSections,
-    localeSections,
-    sectionIds
-  )
-  const translateCount = sectionList.filter(
-    (s) => s.action === "TRANSLATE"
-  ).length
-
-  if (translateCount === 0) {
-    log(`  No sections matched for translation`)
-    return {
-      translator: (_, content) => content,
-      tokens: { input: 0, output: 0 },
-    }
-  }
-
   const langEntry = i18nConfig.find((l: { code: string }) => l.code === locale)
   const languageName = langEntry
     ? (langEntry as { code: string; name: string }).name
@@ -303,51 +288,86 @@ async function buildGeminiTranslator(
     log(`  Glossary: ${glossaryTerms.size} terms for ${locale}`)
   }
 
-  // Split into batches if needed (byte-size-aware)
-  const batches = batchSections(
-    sectionList.map((s) => ({
-      id: s.id,
-      content: s.content || "",
-      action: s.action,
-    }))
+  // Same planner MODE=estimate uses, so the projection and the run agree.
+  const planned = planIncrementalBatches({
+    filePath,
+    fileType,
+    locale,
+    languageName,
+    englishContent,
+    localeContent,
+    sectionIds,
+    glossaryTerms,
+  })
+
+  if (!planned) {
+    log(`  No sections matched for translation`)
+    return {
+      translator: (_, content) => content,
+      tokens: { input: 0, output: 0 },
+    }
+  }
+
+  const { batches: plan, budget, projectedBytes, translateCount } = planned
+
+  // A sane incremental update is a handful of batches. Hundreds means the
+  // batching collapsed (see MAX_BATCHES_PER_FILE) and every batch would resend
+  // the file's context -- fail the file instead of billing for it.
+  if (planned.tooManyBatches) {
+    throw new Error(
+      `[cost-guard] ${filePath} (${locale}): incremental batching produced ` +
+        `${plan.length} batches for ${translateCount} changed section(s), over the ` +
+        `${MAX_BATCHES_PER_FILE} cap. Refusing to send; rerun this file with MODE=full.`
+    )
+  }
+
+  // A splittable batch over the per-call ceiling means the batching budget and
+  // the ceiling disagree -- fail the file rather than have callGeminiRaw refuse
+  // mid-run, which would waste the calls already made for it.
+  const oversized = plan.filter((b) => b.overCeiling)
+  if (oversized.length > 0) {
+    throw new Error(
+      `[cost-guard] ${filePath} (${locale}): ${oversized.length} batch(es) exceed the ` +
+        `${MAX_PROMPT_BYTES}-byte per-call ceiling (largest ${Math.max(...oversized.map((b) => b.bytes))} bytes) ` +
+        `despite being splittable. Refusing to send.`
+    )
+  }
+
+  // Refuse the whole plan before the first request when it exceeds the budget.
+  budget.assertProjected(
+    projectedBytes,
+    `${plan.length} incremental batch(es) for ${translateCount} changed section(s)`
+  )
+  log(
+    `  Incremental plan: ${plan.length} batch(es), ${projectedBytes} of ${budget.limitBytes} budgeted prompt bytes`
   )
 
   const allTranslations: Record<string, string> = {}
   let totalInput = 0
   let totalOutput = 0
 
-  for (const batch of batches) {
-    const batchSectionList = sectionList.filter((s) =>
-      batch.some((b) => b.id === s.id)
-    )
-
-    const prompt = buildIncrementalPrompt({
-      filePath,
-      fileType,
-      targetLanguage: locale,
-      languageName,
-      sections: batchSectionList,
-      glossaryTerms,
-    })
+  for (const [index, batch] of plan.entries()) {
+    budget.spend(batch.bytes, `batch ${index + 1}/${plan.length}`)
 
     log(
-      `  Calling LLM: ${batchSectionList.filter((s) => s.action === "TRANSLATE").length} sections, ${prompt.length} chars`
+      `  Calling LLM: ${batch.translateCount} sections, ${batch.prompt.length} chars`
     )
 
-    const result = await callGeminiRaw(prompt, {
+    const result = await callGeminiRaw(batch.prompt, {
       filePath,
       targetLanguage: locale,
       label: "incremental",
+      irreducible: batch.irreducible,
     })
 
-    try {
-      const translations = parseIncrementalResponse(result.text)
-      Object.assign(allTranslations, translations)
-    } catch (err) {
-      console.warn(
-        `[pipeline] Failed to parse batch response for ${locale} (${err instanceof Error ? err.message : String(err)}). Continuing with partial translations.`
-      )
-    }
+    // A batch that cannot be parsed must fail the task. Continuing would leave
+    // its sections untranslated, fall them back to English in assembly, commit
+    // that, and stamp the manifest -- after which no drift is detected and the
+    // English text is permanent in the locale file. Failing here costs this
+    // file+locale's calls; every other locale's completed work is already
+    // committed to the temp branch and still merges.
+    const translations = parseIncrementalResponse(result.text)
+    Object.assign(allTranslations, translations)
     totalInput += result.tokensUsed.input
     totalOutput += result.tokensUsed.output
   }
@@ -629,6 +649,18 @@ async function main() {
   const startTime = Date.now()
   logSection("Incremental Translation Pipeline")
 
+  // MODE=estimate belongs to estimate.ts. Reaching main.ts with it means the
+  // caller's routing is broken (as the workflow's was on run 31743585214), and
+  // every non-"full" value otherwise falls through to a real translating run --
+  // so refuse rather than spend money under a mode that promises not to.
+  if (config.mode === "estimate") {
+    throw new Error(
+      `MODE=estimate must run estimate.ts, not main.ts. ` +
+        `Use "pnpm intl:estimate" locally, or dispatch intl-pipeline.yml with mode=estimate ` +
+        `from a ref whose run step routes estimate mode. Refusing to translate.`
+    )
+  }
+
   // Blank TARGET_PATH means "translate everything": seed with the JSON and
   // markdown source roots, which the directory-expansion pass below resolves to
   // every source file (excluding the translation output tree and the
@@ -649,6 +681,34 @@ async function main() {
   log(`Languages: ${targetLanguages.join(", ")}`)
   log(`Mode: ${config.mode}`)
   log(`Concurrency: ${config.concurrency}`)
+  log(
+    `Bounds: ${MAX_PROMPT_BYTES} bytes per call x chunks of changed content per file+locale, $${runFuseUsd().toFixed(2)} run fuse (INTL_MAX_COST_USD)`
+  )
+  log(`Provider: ${LLM.name} (${LLM_PROVIDER})`)
+
+  // The provider-side ceiling is the one guard that survives a bug in the ones
+  // above it, so state it -- or say plainly that there isn't one.
+  if (LLM_PROVIDER === "openrouter") {
+    try {
+      const key = await openRouterKeyStatus()
+      // Print the reset window: a $100 daily limit and a $100 lifetime limit
+      // read identically on limit/limit_remaining alone.
+      const window = key.limitReset ? `per ${key.limitReset}` : "total"
+      log(
+        key.limit === null
+          ? `[WARN] OpenRouter key has NO credit limit set -- only this run's own guards apply`
+          : `OpenRouter key limit: $${key.limit.toFixed(2)} ${window}, $${(key.limitRemaining ?? 0).toFixed(2)} remaining`
+      )
+    } catch (err) {
+      log(
+        `[WARN] OpenRouter key lookup failed: ${err instanceof Error ? err.message : String(err)}`
+      )
+    }
+  } else {
+    log(
+      `[WARN] Gemini direct: no provider-side spend ceiling exists on this key`
+    )
+  }
 
   // If the pending branch already exists (prior run against the same base),
   // use it as the baseline: merge current base into it first (fail-fast on

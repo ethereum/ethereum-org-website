@@ -37,3 +37,44 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
 - Dropped `[bản nâng cấp London]` and `[bản nâng cấp Pectra]` links restored. **Its historical untranslated-chunk failure mode was absent** (zero English prose found). Open: `exposure` -> `tiếp xúc` (physical contact) in 2 quiz keys where the article itself correctly uses `tiếp cận`; `client` rendered 3 ways across files.
 - Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.2/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:**
+
+- `get-wallet` `Tải {wallet}` -> `Nhận {wallet}` (critical: `Tải` = *download*. The CTA is unconditional in the wallet modal and links to `wallet.url`, and the page lists 7 hardware wallets carrying `device` fees -- Ledger, Trezor, Keystone, GridPlus Lattice1, Cypherock X1, Burner, imKey Pro -- so it read "Download Ledger Nano X" for a physical device you buy. vi's own corpus already had the right verb: `page-start.json` renders "Get wallet" as `Nhận ví`).
+
+**Open (native call needed):**
+
+- `fee-row-label` -> `Những gì bạn phải trả` = "what you must pay" (the amount); prefer `Bạn trả cho những gì`.
+- `fee-label-shield-unshield` -> `che giấu` is *conceal/cover up*, used for concealing wrongdoing. The privacy sense survives but the valence is wrong (#57).
+- `fee-qualifier-stablecoins-lower-l2` -> bare lowercase `các l2` vs the file's `Lớp 2` (#53).
+
+**Notes:**
+
+- Diacritics complete and correct throughout; vi's historical untranslated-chunk failure mode is absent.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 8.2/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Signature untranslated-English-chunk failure is ABSENT -- verified paragraph-by-paragraph across all 6 files and 279 JSON keys. No duplication from the two pipeline passes. Remaining: `số dư hiệu quả` vs glossary `hiệu dụng`, Staking Launchpad translated in 3 of 14 places, and an ETHGlossary casing leak confined to one file (15 mid-sentence capitals from entries that ship capitalized).
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 8.8/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+- AI prompt-card fill-in blanks (`[app]`, `[my device]`, `[my system]`, `[this]`, `[this error]`, `[App]`) translated -- they were shipped as verbatim English.
+
+- `oracle` kept Latin and newly capitalized at 2 changed lines, against the glossary (`nguồn cấp dữ liệu`) and 255 tree occurrences.
+
+**Open (native call needed):**
+
+- Two pre-existing lines in the same section carry the same wrong form (L436 heading, L440 link) -- out of scope here.
+- `tính hợp lệ` (validity) for "soundness" -- a distinct proof-system property.
+- `Mã nguồn mở dễ dãi` injects a mildly pejorative "lax" valence into the neutral "permissive" license label.
+- `Kiểm tra AlternativeTo` ("inspect/test") for the "Check out" button.
+- `Giao thức`/`giao thức` split 10:9 within one file (the locale-wide glossary casing leak).

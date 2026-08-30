@@ -20,9 +20,9 @@ It is **not** the same as `.claude/translation-review/known-patterns.md`, which 
 .claude/translation-review/per-language/{lang}.md
 ```
 
-Where `{lang}` is the two-letter (or BCP-47 hyphenated) language code: `ar`, `bn`, `hi`, `ja`, `ko`, `mr`, `ru`, `ta`, `te`, `uk`, `ur`, `zh`, `zh-tw`, etc.
+Where `{lang}` is the two-letter (or BCP-47 hyphenated) language code: `ar`, `bn`, `hi`, `ja`, `ko`, `zh-tw`, etc.
 
-Only non-Latin-script languages need a file (Latin-script languages don't have transliteration nuances to track). Currently only `ar.md` exists; others should be created on first review.
+Every reviewed language gets a file — all 24 target languages currently have one, Latin-script included. Latin-script languages carry no transliteration nuances, but their files still accumulate score history, recurring patterns, and glossary follow-ups.
 
 ## Recommended structure
 
@@ -102,7 +102,7 @@ When reviewing a language, the first step is reading its per-language file (if i
 
 ## Bootstrapping a new language file
 
-When reviewing a language for the first time:
+If a language ever ships without a findings file:
 
 1. Create `.claude/translation-review/per-language/{lang}.md` using the template above.
 2. Fill in the first quality-score row from the current review.
@@ -112,10 +112,3 @@ When reviewing a language for the first time:
 ## Why per-language and not per-locale-pair
 
 We track findings by target language, not by source-target pair. The English source is fixed; what varies is how the language renders it. A pattern that affects `ja` is interesting regardless of which English source file it appeared in.
-
-## See also
-
-- `references/known-patterns.md` for the cross-language pattern catalog
-- `references/critical-vs-warning.md` for severity classification
-- `.claude/translation-review/known-patterns.md` for the living cross-language doc
-- `.claude/commands/review-translations.md` for the Phase 8 procedure

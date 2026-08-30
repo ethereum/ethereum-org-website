@@ -35,3 +35,47 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
 - Lowest score of the fleet. **`client` (software) rendered `mteja` (customer) in 31 sites across 8 files**, where ETHGlossary mandates `kiteja`/`viteja`; two files got it right in one line and wrong in the next. All fixed with noun-class concord. Four dropped fork links (Berlin/London/Dencun/Pectra) restored. Open: `trade-off` conflated with `swap` (`mabadilishano`) in 3 sites -- native call.
 - Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.4/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:** none -- no critical issues.
+
+**Open (native call needed):**
+
+- `meta-description-fallback` -> `Mkoba wa Ethereum ... **Inasaidia**`; `mkoba` is class 3 and takes `u-`, so `Unasaidia`. Same slip exists in pre-existing `methodology-criterion-*` strings, so it is a locale habit -- but this key is new. Meta-description only, no on-page impact.
+- `fee-label-shield-unshield` -> `kukinga` is to ward off physically; this is the terminology-invention risk the KB predicts for sw. Recommend keeping `shield/unshield` as id did (#57).
+- `fee-free-tier-plans` -> `{value}/kwa mwezi` renders "$399.99/per month"; should be `{value}/mwezi` (the sibling `-per-card` already uses bare `{value}/kadi`).
+- `crops-private` -> `Ya faragha` is a headless genitive used as a row label; prefer the file's own noun `Faragha`. `Inayostahimili udhibiti` has the same shape but is the exact glossary form -- leave it.
+
+**Notes:**
+
+- Zero glossary deviations across all 14 terms, notable given sw's thin precedent. None of the `mteja`/`kiteja` errors from PR #19015 recur. The ICU plural class change (`mtandao`/`mitandao`) is handled correctly.
+- Latent #54 risk: `imewekwa`/`haijawekwa wazi`/`inabadilika` carry class-9 concord for `Ada`; a future `device` (class 7 `Kifaa`) + text value would need `hakijawekwa wazi`.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 5.6/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Lowest in the fleet. Software `client` rendered `mteja` (animate = customer) at ~85 sites across 5 files -- 2.7x the 31 sites fixed in #19015. CRITICAL NUANCE: ETHGlossary itself mandates `mteja wa mwafaka` for consensus client and `anuwai ya wateja` for client diversity, so 27 hits were correct and a blind sweep would corrupt them. Also `zawadi` (free gift) for reward, `Inayoaminika` inverting a Trustless warning, `Badilishano` (the swap) as subject of custody sentences, a self-sovereign/solo tautology, and a malformed `Pedi ya Kuzindulia Uwekezaji Dhamana` for Staking Launchpad.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 7.8/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+- AI prompt-card fill-in blanks (`[app]`, `[my device]`, `[my system]`, `[this]`, `[this error]`, `[App]`) translated -- they were shipped as verbatim English.
+- `Robust Incentives Group` restored to English at 5 sites -- the name had been semantically translated with no English retained, making the EF team unsearchable.
+
+- `ilishindwa mahakamani` ("was defeated in court") -> `ilipatikana`. Swept all 24 -- sw was the ONLY locale to invert "the right to publish encryption software was won in court".
+- `kudharau` (despise) for "deprecate" -> `kuuondoa katika matumizi`.
+- `kuuza nje` (sell abroad) for data "export" -> `kuhamisha data nje`.
+- `### Wateja wa Utekelezaji` -> `Viteja vya Utekelezaji`: the animate/customer form for software clients, against the glossary note. Recurrence of sw's #1 defect class (PRs #19015, #19115).
+
+**Open (native call needed):**
+
+- `kifaa cha majaribio` for "test harness" (device/apparatus).
+- `madaraja` for "classes" collides with `madaraja` = bridges in the same file.
+- `au kuendelea` ("or continues") for "or moves on" -- near-opposite.
+- Glossary entries wanted for `custodial`/`locally`/`derivatives` (`viingilio` = "entrance fees" is tree-established but semantically wrong).

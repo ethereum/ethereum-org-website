@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/common.json",
-  "generatedAt": "2026-08-07T05:02:52.929Z",
-  "rootHash": "d36b8e554add",
+  "generatedAt": "2026-08-20T21:59:49.579Z",
+  "rootHash": "909c4935d2f7",
   "tree": {
-    "contentHash": "abbd8fb8f882",
-    "anchorHash": "3cb14658cc92",
+    "contentHash": "eb30db297423",
+    "anchorHash": "85546ce2e107",
     "children": {
       "about-ethereum-org": {
         "contentHash": "9aafb3686977",
@@ -1744,6 +1744,10 @@
         "contentHash": "ed077f3d8125",
         "anchorHash": "e3b0c44298fc"
       },
+      "open-source": {
+        "contentHash": "67a0d2e0dab4",
+        "anchorHash": "e3b0c44298fc"
+      },
       "page-actions": {
         "contentHash": "adc00f399f4e",
         "anchorHash": "e3b0c44298fc"
@@ -2546,6 +2550,7 @@
       "on-this-page",
       "onchain-gaming",
       "open",
+      "open-source",
       "page-actions",
       "page-languages-filter-label",
       "page-languages-filter-placeholder",
@@ -2640,5 +2645,5 @@
       "region-sint-eustatius-netherlands"
     ]
   },
-  "sourceCommitSha": "3c76f545357f4d2d02a6f906d4b647d531be7088"
+  "sourceCommitSha": "1988a451065e8d91e60a09d73935256ab102a52c"
 }
