@@ -1,6 +1,6 @@
 # ETHGlossary Integration
 
-The intl-pipeline consumes ETHGlossary at https://ethglossary.visual-20-hoists.workers.dev as the canonical source for term translations. The pipeline does not author terminology policy — it queries.
+The intl-pipeline consumes ETHGlossary at https://ethglossary.visual-20-hoists.workers.dev as the canonical source for term translations. The pipeline does not author terminology policy — it queries. This file is also the canonical home for the shared plumbing (llms.txt, configuration, endpoints); the review-side perspective (severity mapping, what reviewers flag) is `intl-review/references/ethglossary-usage.md`.
 
 ## Start with llms.txt
 
@@ -86,8 +86,4 @@ For local testing without network: there's no offline mode currently. If `GLOSSA
 - **Assuming the API URL is stable** — it's hosted on Cloudflare Workers; check `config.ts` if the default URL has moved.
 - **Ignoring `confidence: low` entries** — the API returns them anyway; for review-time decisions, low-confidence terms should be flagged for native-speaker review, not blindly trusted.
 
-## See also
-
-- `intl-review/references/ethglossary-usage.md` for the review-side perspective (how reviewers check glossary compliance, what counts as a critical deviation)
-- ETHGlossary `docs/translation-policy.md` for the policy that informs `script_rule` decisions
-- `${GLOSSARY_HOST}/llms.txt` for the canonical API contract
+The policy informing `script_rule` decisions is ETHGlossary's `docs/translation-policy.md` (wackerow/ethglossary repo).

@@ -139,8 +139,18 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
                   )}
 
                   {wallet.fees?.length ? (
-                    <p className="text-sm text-body-medium">
+                    <p className="flex items-center gap-1.5 text-sm text-body-medium">
                       {formatWalletFees(wallet.fees, locale, t)}
+                      <Tooltip
+                        nested
+                        content={
+                          <p className="text-body">
+                            {t("page-find-wallet-fee-row-tooltip")}
+                          </p>
+                        }
+                      >
+                        <Info className="size-4 shrink-0" />
+                      </Tooltip>
                     </p>
                   ) : null}
                 </div>

@@ -114,7 +114,7 @@ Two independent booleans layer edge/interaction treatment on top of `variant`/`s
 
 It's implemented with `compoundVariants` keyed on an internal `interactive` flag (set from `href`, omitted from the public `CardProps`) -- not a variant you pass, and not a class you can hand-apply to a non-link card. An `href` card gets both the outline/fill and the lift automatically; a non-link card that carries an action gets `hoverLift` alone, applied by hand.
 
-`border` composes with the ring on non-ghost link cards: the `ring-border` shows at rest and `hover:ring-primary-hover` takes over, reading as a resting border that brightens to primary. On a `ghost` link card there is no hover ring, so a `border` simply stays as the resting outline while the highlight fills behind it. These props replaced the old `hoverEffect="lift"` prop.
+`border` composes with the ring on non-ghost link cards: the `ring-border` shows at rest and `hover:ring-primary-hover` takes over, reading as a resting border that brightens to primary. On a `ghost` link card there is no hover ring, so a `border` simply stays as the resting outline while the highlight fills behind it.
 
 ## Step 4: Border Radius "Just Works"
 
@@ -194,19 +194,6 @@ When *should* you use `className`? Things that are genuinely outside the Card's 
 - Button's `hover-link` styling fires from the card's `group/link`, so hovering anywhere on the card animates the fake button identically to a real hover -- you don't (and can't) hand-wire hover styles onto it.
 - Never use it on a non-link card (there's nothing to click) and never use a real `Button`/`ButtonLink` as the sole CTA of an `href` card (invalid nested anchor). See the single-vs-multiple-CTA rule above.
 
-**On an `href` card, use `CardButtonFake` — not a real `Button`/`ButtonLink`.** When the `Card` itself carries the `href` (whole-card link), a real button in the footer nests an interactive control inside the card's anchor — invalid HTML and a focus/click trap. `CardButtonFake` is a presentational `<div>` with full Button styling (`variant`/`size`/`isSecondary`) that lights up from the card's `group/link` hover, so it reads as the card's CTA without being a second control:
-
-```tsx
-<Card href={app.url} variant="nested" border>
-  {/* ...header / content... */}
-  <CardFooter buttons="full">
-    <CardButtonFake>Learn more</CardButtonFake>
-      </CardFooter>
-</Card>
-```
-
-**This is the preferred shape for a card with a single trailing action:** lift the destination onto the `Card` `href` and render the CTA as a `CardButtonFake`. Keep real `ButtonLink`s (and no `href` on the `Card`) only when the card has **multiple** distinct actions — it can't collapse to one card-level link — or when it's a non-clickable card that just holds inline links.
-
 ### `CardLinkFake`
 
 ```tsx
@@ -282,7 +269,7 @@ import { Sparkles } from "lucide-react"
 ```
 
 - Renders as `<h3>` by default. **You MUST use `asChild` and pass your own semantic tag** when the card sits before the first `<h2>` (or anywhere h3 would break the heading outline). Heading order is an a11y requirement, not a stylistic choice.
-- `size`: `sm (text-lg) | lg (text-3xl)`; omit for the default `text-2xl`. This controls **size only** -- the weight is always `font-black`, inherited from the base heading style. There is no per-weight variant anymore (the old `variant="semibold|bold|black"` API was replaced when headings were standardized on `font-black`).
+- `size`: `sm (text-lg) | lg (text-3xl)`; omit for the default `text-2xl`. This controls **size only** -- the weight is always `font-black`, inherited from the base heading style; there is no per-weight variant.
 - `spacing` controls the gap between the title and the immediately-following `CardParagraph` (uses `:has(+...)`):
   - `quarter` (default): one-quarter of `--content-space`. Tight binding between title and lead paragraph.
   - `none`: zero gap.

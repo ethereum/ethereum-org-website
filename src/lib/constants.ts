@@ -58,9 +58,6 @@ export const PROGRESS_BAR_GAP = "4px"
 export const PASSING_QUIZ_SCORE = 65
 export const USER_STATS_KEY = "quizzes-stats"
 export const INITIAL_QUIZ = "what-is-ethereum"
-export const TOTAL_QUIZ_QUESTIONS_ANSWERED = 100000
-export const TOTAL_QUIZ_AVERAGE_SCORE = 67.4
-export const TOTAL_QUIZ_RETRY_RATE = 15.6
 
 // Crowdin
 export const CROWDIN_PROJECT_URL = "https://crowdin.com/project/ethereum-org"
@@ -253,3 +250,9 @@ export const LINE_CLAMP_CLASS_MAPPING = {
   3: "line-clamp-3",
   4: "line-clamp-4",
 } as const
+
+export const DEVCON_INDIA_START_DATE = new Date(Date.UTC(2026, 10, 3, 6, 0, 0))
+export const DEVCON_INDIA_END_DATE = new Date(Date.UTC(2026, 10, 6, 18, 0, 0))
+// Voucher redemption is English-only; mtm_* params attribute the referral in Matomo
+export const DEVCON_INDIA_TICKET_URL =
+  "https://tickets.devcon.org/redeem?voucher=ETHORG10&mtm_campaign=ethorg10&mtm_source=ethereum.org&mtm_medium=referral"

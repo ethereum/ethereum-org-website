@@ -10,7 +10,7 @@ const NoResultsCallout = ({ onClose }: NoResultsCalloutProps) => {
     <div>
       <p className="mb-2 font-bold">{t("page-languages-want-more-header")}</p>
       <p className="text-body-medium">
-        {t.rich("common.page-languages-want-more-paragraph", {
+        {t.rich("page-languages-want-more-paragraph", {
           a: (chunks) => (
             <BaseLink
               key="item-no-results"

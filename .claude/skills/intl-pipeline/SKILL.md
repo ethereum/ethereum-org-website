@@ -5,11 +5,11 @@ description: Use when working on the translation pipeline (`src/scripts/intl-pip
 
 # intl-pipeline
 
-LLM-based, manifest-driven, incremental translation pipeline for ethereum.org. Translates English content (markdown in `public/content/`, JSON UI strings in `src/intl/en/`) into 24 target languages via Gemini, with a post-import sanitizer normalizing common artifacts. ETHGlossary (https://ethglossary.visual-20-hoists.workers.dev) is the authoritative source for all Ethereum-ecosystem term translations consumed by the pipeline. Read this file fully on activation; pull from `references/` only when the listed trigger applies.
+LLM-based, manifest-driven, incremental translation pipeline for ethereum.org. Translates English content (markdown in `public/content/`, JSON UI strings in `src/intl/en/`) into 24 target languages via Gemini — reached either directly or through OpenRouter (`LLM_PROVIDER`), whose keys carry a server-side spend limit — with a post-import sanitizer normalizing common artifacts. **The workflow is manual-dispatch only**; the daily cron was removed after a run billed $1,108 unattended (`references/runbooks/cost-guard-tripped.md`). ETHGlossary is the authoritative source for all Ethereum-ecosystem term translations consumed by the pipeline. Read this file fully on activation; pull from `references/` only when the listed trigger applies.
 
 ## The Core Rule: Don't Hand-Propagate English Changes
 
-The single highest-leverage habit for keeping translations correct: **never hand-edit translated content to reflect an English change.** The pipeline tracks state via manifests (`.manifest-source.json` + `.manifest-translation.json` per file+locale); hand-edits that follow an English change desynchronize the manifest from reality, and the next pipeline run either re-translates over your edit or produces merge conflicts.
+The single highest-leverage habit for keeping translations correct: **never hand-edit translated content to reflect an English change.** The pipeline tracks state via manifests (`.manifests/{destPath}/source.json` + `translation.json` per file+locale); hand-edits that follow an English change desynchronize the manifest from reality, and the next pipeline run either re-translates over your edit or produces merge conflicts.
 
 The rule is NOT "never edit locales." It IS "don't hand-propagate English updates":
 
@@ -17,14 +17,14 @@ The rule is NOT "never edit locales." It IS "don't hand-propagate English update
 - **Not allowed:** Editing a locale to reflect a new English value (URL change, attribute change, restructured paragraph). The manifest map becomes wrong.
 - **If English-to-locale sync is genuinely urgent** (build-breaking structural change with no pending PR open): make the English edit, then trigger `intl-pipeline.yml` with `stamp_only: true` to refresh manifests without translation. Safe only when no `intl/pending-{base}` branch exists for that base.
 
-**Deletions go through English too.** The pipeline propagates only what *changes* in canonical English; it never scans for unused or orphaned strings, and there is no mechanism that auto-removes an orphaned English string — it only propagates English to the other locales. To remove a string — including a key that code has stopped referencing (an orphaned key) — delete it from the English source (`src/intl/en/` or the English content); the pipeline then propagates that removal to the locales on its next run. Do **not** hand-delete the locale copies, that is hand-propagation and the pipeline handles it. Orphaning a string is therefore a signal to clean it up: delete it from English, English-only.
+**Deletions go through English too.** To remove a string — including an orphaned key code no longer references — delete it from the English source only; the pipeline propagates the removal on its next run. Hand-deleting the locale copies is hand-propagation.
 
 ## Top Rules
 
 1. **ETHGlossary is canonical for term translations.** Brand names, people's names, programming languages, OS/platform names, concept terms — all live in ETHGlossary. Don't maintain parallel term banks. The pipeline queries the API via `GLOSSARY_API_URL` (default in `src/scripts/intl-pipeline/config.ts`).
 2. **One translation PR at a time per base branch.** The pipeline commits to `intl/pending-{base}` (e.g., `intl/pending-dev`). Subsequent runs merge `{base}` into pending first, then translate the delta. Parallel translation PRs against the same base will conflict.
 3. **The pipeline only targets `dev` in production.** Hot fixes to `staging` / `master` go out English-only and catch up via prepare-release. Don't translate against `staging` / `master` unless you have a specific reason and use a custom `target_branch`.
-4. **Manifests are inseparable from their locale file.** Each translated file has two manifests next to it: `.manifest-source.json` and `.manifest-translation.json`. Delete one, you must regenerate both — easiest via the pipeline in `full` mode for that file+locale. Never hand-edit a manifest.
+4. **Manifests are inseparable from their locale file.** Each translated file has two manifests, centralized under `.manifests/{destPath}/`: `source.json` and `translation.json`. Delete one, you must regenerate both — easiest via the pipeline in `full` mode for that file+locale. Never hand-edit a manifest.
 5. **The sanitizer runs post-translation, not pre.** Its job is to fix Gemini-introduced artifacts (BiDi mistakes, code-fence drift, brand-name mistranslations). It receives translation outputs, never English source.
 6. **Don't add transliteration data here.** All term/brand/person transliteration policy lives in ETHGlossary's `docs/translation-policy.md` and per-language entries. The intl-pipeline consumes; it does not author.
 7. **Sanitizer fixes must split on code blocks first.** Every text transformation in `intl-sanitizer.ts` MUST start with the code-block split pattern. Modifying code-fence contents breaks Solidity / Python / TypeScript examples in tutorials.
@@ -36,33 +36,21 @@ These are landmines where the obvious-looking action is wrong. The full set is i
 
 ### Naming legacy
 
-The pipeline was historically called the "Gemini translation pipeline" and the "i18n pipeline." Old docs and external references may still use those names. Canonical names today:
+Old names are dead — `src/scripts/i18n/`, `gemini-translations.yml`, `main-incremental.ts`, "i18n pipeline"; the canonical name everywhere is `intl-pipeline`. Update old names on sight.
 
-- Module path: `src/scripts/intl-pipeline/` (was `src/scripts/i18n/`)
-- Workflow file: `.github/workflows/intl-pipeline.yml` (was `gemini-translations.yml`)
-- Pipeline entry: `src/scripts/intl-pipeline/main.ts` (was `main-incremental.ts` / `main-gemini.ts`)
-- Module name in prose: `intl-pipeline`. Avoid `i18n-pipeline` and `gemini-translations` in new content.
+### Manifests are centralized under `.manifests/`, not next to the locale file
 
-If you see one of the old names in a doc or comment, update it.
+Two manifests per file+locale at `.manifests/{destPath}/source.json` + `translation.json` (e.g. `.manifests/src/intl/ja/common.json/source.json`). Structure, lifecycle, and debugging: `references/manifests.md`.
 
-### Manifests live next to the locale file, not centralized
+### Spend bounds are input-side, and the tell is input tokens per call
 
-For `public/content/translations/ja/some-page/index.md`, the manifests are:
-
-- `public/content/translations/ja/some-page/index.md.manifest-source.json`
-- `public/content/translations/ja/some-page/index.md.manifest-translation.json`
-
-Same pattern for JSON locale files in `src/intl/{locale}/`. Don't move a locale file without moving its manifests; renaming a content file means renaming six files per locale (file + 2 manifests, times the en source).
+Healthy runs average 4k–9k input tokens per call; the input:output ratio is NOT a signal. Before merging anything that touches batching, prompt assembly, or context selection, run `pnpm intl:estimate` and compare per-request input tokens against that range. Bounds, triage, and the incident that motivated them: `references/runbooks/cost-guard-tripped.md`.
 
 ### `intl/pending-{base}` branch lifecycle
 
 The pipeline creates `intl/pending-{base}` on first run, commits translations to it, opens a PR against `{base}`. Subsequent runs MERGE `{base}` into pending first, then translate the delta. After the pending PR is merged, the branch is deleted; the next run creates a fresh one.
 
 Do NOT rebase, squash, or force-push `intl/pending-{base}`. The pipeline depends on its history.
-
-### `stamp_only: true` is the override hatch
-
-If a structural change in English would break the build for translated locales (a removed component the locale still references, an MDX-incompatible change), trigger `intl-pipeline.yml` with `stamp_only: true` AFTER fixing the English side. This regenerates manifests without translation. Safe only when no pending branch exists for that base.
 
 ### SOV-language inline element reordering
 
@@ -83,6 +71,11 @@ NEVER run the sanitizer against an entire language. It processes thousands of fi
 | Pipeline entry                         | `src/scripts/intl-pipeline/main.ts`                                |
 | Sanitizer                              | `src/scripts/intl-pipeline/intl-sanitizer.ts`                      |
 | Gemini adapter                         | `src/scripts/intl-pipeline/lib/llm/gemini.ts`                      |
+| OpenRouter transport                   | `src/scripts/intl-pipeline/lib/llm/openrouter.ts`                  |
+| Adapter registry / provider selection  | `src/scripts/intl-pipeline/lib/llm/adapters.ts`, `constants.ts`    |
+| Spend bounds (budget + run fuse)       | `src/scripts/intl-pipeline/lib/llm/cost-meter.ts`                  |
+| Work planner (shared with estimate)    | `src/scripts/intl-pipeline/lib/llm/plan.ts`                        |
+| Cost estimate, no LLM calls            | `pnpm intl:estimate` (`src/scripts/intl-pipeline/estimate.ts`)     |
 | Prompt builder                         | `src/scripts/intl-pipeline/lib/llm/prompt-builder.ts`              |
 | Content normalizer                     | `src/scripts/intl-pipeline/lib/llm/content-normalizer.ts`          |
 | Shared patterns (JSX attrs allow-list) | `src/scripts/intl-pipeline/lib/shared-patterns.ts`                 |
@@ -97,22 +90,21 @@ NEVER run the sanitizer against an entire language. It processes thousands of fi
 | Language config (canonical list)       | `i18n.config.json`                                                 |
 | ETHGlossary repo                       | https://github.com/wackerow/ethglossary                            |
 | ETHGlossary API root                   | https://ethglossary.visual-20-hoists.workers.dev                   |
-| Slash command: fix sanitizer bug       | `/fix-sanitizer-bug` (`.claude/commands/fix-sanitizer-bug.md`)     |
-| Slash command: review translations     | `/review-translations` (`.claude/commands/review-translations.md`) |
 
 ## When to Load Each Reference
 
 Pull these in only when the trigger applies. Don't read them all upfront.
 
-- **`references/architecture.md`** — Load when debugging pipeline behavior or wanting the phase-by-phase walkthrough (change detection, routing, deterministic propagation, LLM translation, JSX attribute pass, assembly, manifest update).
-- **`references/manifests.md`** — Load when manifests misbehave (mismatched hashes, missing sections, drift on supposedly-unchanged files), or when changing what the pipeline tracks.
-- **`references/orchestration.md`** — Load when working with `intl/pending-{base}` branches: base-into-pending merges, temp-branch lifecycle, multi-run coordination, what happens when base moves during a run.
-- **`references/recovery.md`** — Load when translations are broken and you need to recover (bad LLM output, corrupted manifests, accidental hand-edits, build failure on a locale). The first place to go when triaging "the pipeline did something wrong."
-- **`references/sanitizer.md`** — Load when investigating sanitizer behavior, false positives / negatives, or adding fix functions. Pattern catalog lives in `docs/solutions/integration-issues/sanitizer-test-research.md`.
-- **`references/runbooks/fix-sanitizer-bug.md`** — Load when you have a confirmed sanitizer bug and need the test-first workflow (triage / write failing test / implement / verify).
-- **`references/ethglossary.md`** — Load when ETHGlossary is the question: how the pipeline queries terms, when to add to ETHGlossary, how `script_rule` and `term_role` map to pipeline behavior, what to do when a term is missing.
-- **`references/non-english-edits.md`** — Load when about to edit a translated file by hand. Tells you when it's safe (English unchanged) and when it isn't (sync after English change).
-- **`references/gotchas.md`** — Load when something feels off and you can't find it inline above. The long tail of landmines.
+- **`references/architecture.md`** — debugging pipeline behavior; the phase-by-phase walkthrough.
+- **`references/manifests.md`** — manifests misbehave, or changing what the pipeline tracks.
+- **`references/orchestration.md`** — working with `intl/pending-{base}` branches.
+- **`references/recovery.md`** — translations broken, triaging "the pipeline did something wrong."
+- **`references/sanitizer.md`** — sanitizer behavior, false positives/negatives, fix-function catalog.
+- **`references/runbooks/fix-sanitizer-bug.md`** — confirmed sanitizer bug; when (not) to run `/fix-sanitizer-bug`.
+- **`references/runbooks/cost-guard-tripped.md`** — `[cost-guard]` aborts, budget skips, cost-bound design, provider selection.
+- **`references/ethglossary.md`** — term lookups, `script_rule`/`term_role` semantics, missing terms.
+- **`references/non-english-edits.md`** — about to hand-edit a translated file.
+- **`references/gotchas.md`** — something feels off and it isn't inline above.
 
 ## Other Project Skills That May Apply
 
@@ -126,9 +118,11 @@ Before opening a PR that touches the pipeline:
 - [ ] Sanitizer test suite passes (`npx playwright test --project=unit tests/unit/intl-pipeline/sanitizer/`)
 - [ ] Pipeline test suite passes (`npx playwright test --project=unit tests/unit/intl-pipeline/`)
 - [ ] No hand-edits to `public/content/translations/` or `src/intl/{non-en}/` files
-- [ ] No manual changes to `*.manifest-*.json` files
+- [ ] No manual changes to manifest files under `.manifests/`
 - [ ] If renaming workflow / config paths, all doc references updated (search for old names)
 - [ ] If adding pipeline-affecting code, `src/scripts/intl-pipeline/FUTURE.md` updated (or item removed if completed)
 - [ ] If new sanitizer fix function, the code-block-split pattern is the first operation inside it
 - [ ] If touching term policy or transliteration, change goes in ETHGlossary first — never duplicate term data here
 - [ ] If touching the orchestration model (pending branch, temp branch, stamp_only), `references/orchestration.md` updated alongside
+- [ ] If touching batching, prompt assembly, or context selection: `pnpm intl:estimate` run and per-request input tokens sane (4k–9k), plus `tests/unit/intl-pipeline/cost-incident.spec.ts` passing
+- [ ] No new LLM call site that bypasses `callGeminiRaw` — it is the single choke point where the per-call ceiling and run fuse are enforced

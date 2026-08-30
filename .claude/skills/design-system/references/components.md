@@ -2,8 +2,6 @@
 
 Reference for the components in `src/components/ui/` and notable feature components. For the "which import wins" decision tree, see `canonical-imports.md`. For confusion landmines, see `gotchas.md`.
 
-> **STATUS**: This document is the skeleton. Sections marked TODO need their canonical-usage examples filled in during the next pass.
-
 ## Conventions
 
 Each entry has:
@@ -79,73 +77,13 @@ import {
 } from "@/components/ui/card"
 ```
 
-The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card-pad`, `--content-space`, `--banner-radius`) so children respond automatically when you change a parent variant. `Card` with `href` automatically wraps in `BaseLink` and adds a `group/link` class so descendants can react to card-level hover/focus.
+The canonical card primitive, driven by CSS variables set on `Card` (`--card-pad`, `--content-space`, `--banner-radius`). **Pick variants, don't reach for `className`** -- a padding/background/radius/text override via `className` means the variant matrix is missing a case. The full system (anatomy, interaction rules, every part's variants, checklist) lives in **`card-walkthrough.md`** -- read that for any card work. Quick facts:
 
-**Core principle**: pick variants, don't reach for `className`. If you're tempted to override padding, spacing, background, border-radius, or text color via `className`, the variant matrix is probably missing a case — add the variant in `card.tsx` instead. See `card-walkthrough.md` for the full guide.
-
-```tsx
-<Card href="/x" variant="base" size="base">
-  <CardHeader>
-    <CardBanner background="accent-a">
-      <Image src="..." alt="..." />
-    </CardBanner>
-  </CardHeader>
-  <CardContent>
-    <CardTitle>Title</CardTitle>
-    <CardParagraph>Description</CardParagraph>
-  </CardContent>
-  <CardFooter>
-    <CardButtonFake>CTA</CardButtonFake>
-  </CardFooter>
-</Card>
-```
-
-**`Card` variants**:
-
-- `variant`: `base` (default, `bg-background-highlight` grey) | `nested` (`bg-background`, use when inside a colored section) | `ghost` (no bg; auto-widens `--banner-radius`; as a link, fills with `bg-background-highlight` on hover instead of an outline ring) | `header-bar` (highlight only on the header, bordered card, header laid out as an icon+text row with bottom border — all baked in, just drop a `CardHeader` inside).
-- **Link hover is variant-aware** (auto, from `href`): `ghost` link cards fill with `bg-background-highlight` and drop the outline; `base`/`nested`/`header-bar` link cards keep the `ring-primary-hover` outline. Driven by an internal `interactive` compound variant, not a prop.
-- `size`: `lg | base (default) | md | sm | xs`. Controls `--card-pad` (between/around parts) and `--content-space` (within `CardContent`). `xs` = zero padding for edge-to-edge banner imagery.
-- `href`: wraps in `BaseLink` for whole-card-clickable behavior with `group/link` propagation. An `href` card **auto-applies `hoverLift`** and the outline/fill -- don't pass `hoverLift` on a link card.
-- `hoverLift` (pass by hand only on **non-link** action cards): raises the card on hover (+1% scale + shadow, 300ms; the scale is `motion-safe`-gated). `border`: static `ring-border` edge.
-- **Single-CTA `href` cards render the CTA as `CardButtonFake` (button-shaped) or `CardLinkFake` (text link), never a real `ButtonLink`/`Button`/`LinkWithArrow`** -- a real interactive element nested in the card's anchor is invalid HTML. `CardButtonFake` mirrors `Button` (`variant`/`size`/`isSecondary`, `withChevron`, `hideArrow`); `CardLinkFake` mirrors a text link (`withForwardArrow`, `hideArrow`; external NE arrow automatic). See `card-walkthrough.md`.
+- `variant`: `base` (default grey) | `nested` (for colored sections) | `ghost` (no bg) | `header-bar` (highlight header row, bordered card).
+- `size`: `lg | base (default) | md | sm | xs` -- controls `--card-pad` / `--content-space`; `xs` = zero padding for edge-to-edge banners.
+- `href` makes the whole card the link and auto-applies the hover affordance + lift; the footer CTA is then `CardButtonFake`/`CardLinkFake`, never a real `Button`/`ButtonLink` (nested-anchor invalid HTML).
 - Card is always vertical (`flex flex-col`); there is no `orientation` variant.
-
-**`CardHeader`**: no own variants. The parent `Card variant="header-bar"` applies the row layout / bottom border to descendant headers automatically.
-
-**`CardContent` variants**:
-
-- `spacing` (optional override): `lg | md | sm | xs`. Replaces `--content-space` locally when the body needs a different rhythm from the card-level `size`. Omit to inherit.
-- Expands to fill height (`flex-1`) so `CardFooter` pushes to the bottom and footers align across cards of varying content.
-- Default text color is `text-body-medium`; `CardTitle` and `<strong>` re-assert `text-body`. Don't set per-paragraph colors.
-
-**`CardFooter` variants**:
-
-- `buttons`: `responsive (default)` full-width on a narrow card, shrink-to-fit once wide (`@container`) | `full` always full-width centered | `compact` always shrink-to-fit | `inherit` opts out (used by `CardLinkFake`).
-
-**`CardBanner` variants**:
-
-- `background`: `body (default)` | `accent-a` | `accent-b` | `accent-c` | `primary` | `none`. `none` only when the image won't cover the full rectangle.
-- `size`: `full | lg | base (default) | sm | thumbnail-lg | thumbnail`. Use these instead of `className="h-..."` to stay on-rhythm. `thumbnail-lg` is a 128px square; `thumbnail` is 64px — both `shrink-0` for small logo/icon placements.
-- `fit`: `cover (default) | contain`. With `fit="contain"` and a single `<Image>` child, the banner auto-clones the image as a blurred backdrop. Two children breaks the magic.
-- `zoom`: opt-in boolean, **off by default**. Pass `zoom` to propagate a parent `group/link` hover into an image scale-up (media/thumbnail tiles). No `zoom={false}` -- omit to keep the image static.
-- Placement: inside `CardHeader` (default; keeps banner radius concentric and gives link-hover room). Bare direct child of `Card` only for a true edge-to-edge image, paired with `size="xs"` so radii match (a bare banner on a padded size / link card mismatches corner radius — see gotchas).
-
-**`CardTitle` variants**:
-
-- `size`: `sm` (text-lg) | omit (text-2xl) | `lg` (text-3xl). Weight is always `font-black` -- there is no per-weight variant.
-- `spacing` (gap before a following `CardParagraph` only): `quarter (default) | none | inherit`. Uses `:has(+...)` selector.
-- Does not underline on card hover (the card's outline/fill + lift carry the click signal).
-- **`asChild`**: required when `<h3>` would break the document's heading outline. Pass your own semantic tag inside.
-
-**`CardParagraph` variants**:
-
-- `size`: omit (16px / `text-body-medium`) | `sm` (14px). Avoid other sizes.
-- `variant`: `uppercase | subtitle`.
-- `textColor="body"`: re-assert base body color (rare; inherits correctly by default).
-
-**`CardEmoji`**: wraps `<Emoji text=":rocket:" />` in a fixed-size `div` to prevent layout shift on client-side hydration. Typically lives in `CardHeader`.
-
-**`CardIconContainer`**: Lucide counterpart to `CardEmoji` — wraps an icon child, forces it to `size-12` (48px), and tints it `text-primary`. **Preferred over `CardEmoji` for new/refactored cards** as part of the gradual emoji-to-Lucide migration; reach for an emoji only to match existing emoji cards or when no fitting icon exists.
+- `CardIconContainer` (Lucide icon) is preferred over `CardEmoji` for new/refactored cards.
 
 ### `Grid`
 
@@ -384,13 +322,7 @@ import { Input } from "@/components/ui/input"
 
 **Props**: `size: md | sm`, `hasError: boolean`. (Default omits `size` from `InputHTMLAttributes` to free the prop.)
 
-### `Textarea`
-
-```tsx
-import { Textarea } from "@/components/ui/textarea"
-```
-
-Same shape as `Input`.
+> There is no `Textarea` -- it was removed with zero consumers. Re-add the stock shadcn primitive if a multi-line input is ever needed.
 
 ### `Checkbox` / `Switch`
 
@@ -492,8 +424,8 @@ Notice/callout primitive. Covers both inline article callouts and the full-bleed
 - `AlertContent` -- wraps the body (flex column, takes remaining width)
 - `AlertTitle` -- bold standard-font-size lead-in line for an alert. Renders `<p>` (not a heading -- changed from `<h6>` to avoid jumping heading levels in flow content); `asChild` available for `Slot`. **Use this whenever an alert needs a bold opening line** -- don't roll your own `<p><strong>...</strong></p>`.
 - `AlertDescription` -- prose container for the alert body. Handles paragraph spacing internally (first `<p>` has `mt-0`, last has `mb-0`, others have `mb-4`). **Wrap body paragraphs in this** -- don't apply your own `mt-`/`mb-` classes to paragraphs inside an Alert.
-- `AlertEmoji` -- emoji glyph aligned to start
-- `AlertIcon` -- Lucide-style SVG slot (inherits variant's text color)
+- `AlertEmoji` -- **deprecated**: emoji glyph aligned to start. Alert glyphs are moving to Lucide icons; use `AlertIcon` for new content
+- `AlertIcon` -- Lucide-style SVG slot (inherits variant's text color). Child SVG is 24px; `size="lg"` (40px) and `size="xl"` (48px) scale it up -- use the variant, not a `[&>svg]:size-*` override
 - `AlertCloseButton` -- dismiss button (`<X />`)
 
 **Anti-pattern**: don't manually compose a bold-lead-in-plus-body shape with inline `<strong>` and margin classes:
@@ -520,7 +452,7 @@ Notice/callout primitive. Covers both inline article callouts and the full-bleed
 
 The sub-components handle font weight, color, and paragraph spacing -- callers shouldn't be adding `mt-`/`mb-`/`font-bold` to paragraphs inside an Alert.
 
-**Migration**: `BannerNotification` was absorbed in May 2026 -- replace any lingering `<BannerNotification shouldShow>...` with `<Alert variant="banner">...`. The standalone `BugBountyBanner` wrapper was removed in the same pass; inline `<Alert variant="banner">` at the call site.
+**Migration**: `BannerNotification` and `BugBountyBanner` no longer exist -- replace any lingering import with `<Alert variant="banner">` (recipe in `cleanup-playbook.md`).
 
 ### `Avatar`
 
@@ -633,7 +565,7 @@ The canonical horizontal rule, also wired as the `hr` MDX element. Always carrie
 
 **`Divider` is deprecated** -- a thin `forwardRef` wrapper that renders `<HR variant="narrow" />`, kept only for backward compatibility and exported (named) from the same file: `import { Divider } from "@/components/ui/hr"`. Don't introduce new `Divider` usage; reach for `HR` directly. For plain section separation, a border on a following element (`border-t border-border`) is still lighter than rendering a rule.
 
-> Moved during the MDX-primitive extraction: the old `@/components/ui/divider` file is gone -- both `HR` and `Divider` now live in `@/components/ui/hr`. Siblings `Blockquote` (`@/components/ui/blockquote`) and `KBD` (`@/components/ui/kbd`) were extracted the same way (both default exports, wired as the `blockquote` / `kbd` MDX elements).
+> The old `@/components/ui/divider` file is gone -- both `HR` and `Divider` live in `@/components/ui/hr`. Siblings: `Blockquote` (`@/components/ui/blockquote`) and `KBD` (`@/components/ui/kbd`), both default exports wired as the `blockquote` / `kbd` MDX elements.
 
 ### `Table`
 
@@ -725,7 +657,7 @@ import { Chart, ... } from "@/components/ui/chart"
 
 Recharts wrapper.
 
-> Has the lone remaining `value.toLocaleString()` in `src/` (line 241). Replace with `numberFormat()` when touching this file.
+> Has the lone remaining `value.toLocaleString()` in `src/` (in its tooltip formatter). Replace with `numberFormat()` when touching this file.
 
 ### `Collapsible`
 
@@ -782,21 +714,13 @@ See `canonical-imports.md` for selection. (The former `MdxHero` was removed -- u
 
 ### Banner-named components
 
-The `Banners/` subdirectory was removed in May 2026. `BannerNotification` is now `<Alert variant="banner">`; the standalone `BugBountyBanner` wrapper was deleted (inline `<Alert variant="banner">` at call sites).
-
-The remaining `*Banner*`-named files at the root of `src/components/` are:
+The `Banners/` subdirectory is gone (`BannerNotification` -> `<Alert variant="banner">`). The remaining `*Banner*`-named files at the root of `src/components/`:
 
 - `EnvWarningBanner` -- exemplary thin wrap of `<Alert variant="warning">`
-- `TranslationBanner` -- floating Arabic/Urdu translation feedback CTA; still a raw `<aside>` (deprecation candidate -- could be migrated to `<Alert variant="banner">` next time it's touched)
-- (The legacy `Callout` / `CalloutBanner` / `CalloutSSR` / `CalloutBannerSSR` files at the root of `src/components/` were unified into `@/components/ui/callout` — see `canonical-imports.md` and `callout-walkthrough.md`. Unrelated to the top-of-page ribbon.)
+- `TranslationBanner` -- floating Arabic/Urdu translation feedback CTA; still a raw `<aside>` (deprecation candidate -- migrate to `<Alert variant="banner">` next time it's touched)
+- The legacy root-level `Callout*` files were unified into `@/components/ui/callout` (see `callout-walkthrough.md`); unrelated to the top-of-page ribbon.
 
-### `Faq`
-
-```tsx
-import { Faq, FaqContent, FaqItem, FaqTrigger } from "@/components/Faq"
-```
-
-Compositional FAQ primitive. Stories exist; ready for use in pages that need an expandable Q&A list.
+> There is no `Faq` component -- for an expandable Q&A list, reach for `ExpandableCard` (`@/components/ExpandableCard`).
 
 ### `MdComponents`
 
@@ -823,6 +747,12 @@ Use the fragment for any off-ratio clip — screen captures usually are. It's pr
 
 - `@/components/PageHero` (old default export) -- the canonical `PageHero` is a named export from `@/components/Hero`.
 - `@/hooks/useColorModeValue` -- Chakra leftover; use Tailwind `dark:` variant
+
+### Removed with zero consumers (restorable from git history)
+
+Deleted after verifying zero consumers; listed so a future search finds the removal rather than assuming the component never existed: `Faq/` (prefer `ExpandableCard`), `ui/textarea.tsx`, `CodeModal.tsx`, `GitStars.tsx`, `IntersectionObserverReveal.tsx`, `StatErrorMessage.tsx`, `UpgradeTableOfContents.tsx`, `ScrollDepthTracker.tsx`.
+
+`src/components/AB/` looks equally orphaned but is **kept deliberately** -- zero consumers is the normal state between experiments. See `docs/ab-testing.md`.
 
 ### Markdown shortcode wrapper
 
