@@ -101,6 +101,17 @@ test.describe("JSON-LD invariant validator", () => {
     expect(rulesFor(document)).toContain("untranslated-key")
   })
 
+  test("accepts ordinary kebab-case terms in text fields", () => {
+    const document = {
+      ...validDocument,
+      "@graph": validDocument["@graph"].map((node, index) =>
+        index === 1 ? { ...node, description: "proof-of-stake" } : node
+      ),
+    }
+
+    expect(rulesFor(document)).not.toContain("untranslated-key")
+  })
+
   test("rejects JSON-LD URLs that disagree with the page canonical", () => {
     expect(rulesFor(validDocument, "https://example.test/learn")).toContain(
       "canonical-url"

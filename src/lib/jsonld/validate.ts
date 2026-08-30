@@ -15,19 +15,17 @@ export interface JsonLdValidationError {
 type JsonLdObject = Record<string, unknown>
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}(?:$|T)/
-const I18N_KEY = /^[a-z0-9]+(?:-[a-z0-9]+)+$/
-const NON_TEXT_PROPERTIES = new Set([
-  "@context",
-  "@id",
-  "@type",
-  "contentUrl",
-  "image",
-  "inLanguage",
-  "item",
-  "logo",
-  "position",
-  "sameAs",
-  "url",
+const I18N_KEY =
+  /^(?:[a-z0-9]+-)+(?:title|subtitle|description|headline|label|name|text|copy)$/
+const TRANSLATABLE_TEXT_PROPERTIES = new Set([
+  "abstract",
+  "alternativeHeadline",
+  "articleBody",
+  "caption",
+  "description",
+  "headline",
+  "name",
+  "text",
 ])
 
 const isObject = (value: unknown): value is JsonLdObject =>
@@ -159,9 +157,7 @@ export function validateJsonLdDocument(
       const childPath = pathFor(path, key)
       if (
         typeof child === "string" &&
-        !NON_TEXT_PROPERTIES.has(key) &&
-        !isDateProperty(key) &&
-        !ISO_DATE.test(child) &&
+        TRANSLATABLE_TEXT_PROPERTIES.has(key) &&
         I18N_KEY.test(child.trim())
       ) {
         addError(

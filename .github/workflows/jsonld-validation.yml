@@ -9,6 +9,7 @@ on:
       - "src/components/PageJsonLD.tsx"
       - "src/lib/jsonld/**"
       - "src/lib/utils/url.ts"
+      - "tests/e2e/jsonld-invariants.spec.ts"
       - "tests/e2e/jsonld.spec.ts"
       - "tests/unit/jsonld.spec.ts"
       - ".github/workflows/jsonld-validation.yml"
@@ -48,7 +49,7 @@ jobs:
           check_name: netlify/ethereumorg/deploy-preview
       - name: Scan representative pages
         if: steps.netlify_wait.outputs.outcome == 'success'
-        run: pnpm exec playwright test --project=e2e tests/e2e/jsonld.spec.ts
+        run: pnpm exec playwright test --project=e2e tests/e2e/jsonld-invariants.spec.ts
         env:
           PLAYWRIGHT_TEST_BASE_URL: ${{ env.DEPLOY_PREVIEW_URL }}
       - name: Report missing preview
