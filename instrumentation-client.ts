@@ -79,6 +79,8 @@ Sentry.init({
     /tgetT is not defined/,
     /zaloJSV2 is not defined/,
     /onPagePause is not defined/,
+    // Extension/injected script probing the DOM with an unset selector (ETHORG-1AC)
+    /The provided selector is empty/,
   ],
 
   beforeSend(event) {
