@@ -73,12 +73,11 @@ jobs:
           pnpm type-check
           pnpm test:unit
 
-      # Empty output means nothing changed that any page can contradict, and a
-      # failure here costs a notification rather than the week's sync.
+      # Empty output means nothing changed that any page can contradict.
+      # A classifier failure stops the sync so it cannot suppress human review.
       - name: Classify the change
         id: classify
         if: steps.diff.outputs.changed == 'true'
-        continue-on-error: true
         env:
           SYNC_BASE_REF: ${{ steps.base.outputs.ref }}
         run: |
@@ -88,6 +87,42 @@ jobs:
           else
             echo "notable=false" >> "$GITHUB_OUTPUT"
             echo "Data-only change — no content review needed."
+          fi
+
+      # Report before advancing the sync branch. If issue creation fails, the
+      # old branch remains the baseline and the same report is retried.
+      - name: Open or append the content-review issue
+        if: steps.classify.outputs.notable == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          {
+            echo "### $(date -u +'%Y-%m-%d') · [data sync](https://github.com/ethereum/ethereum-org-website/compare/dev...$BRANCH)"
+            echo
+            echo '```'
+            cat notable.txt
+            echo '```'
+            echo
+            pnpm exec tsx src/scripts/sync-upgrades/coverage.ts
+            echo
+            echo "<details><summary>Store diff</summary>"
+            echo
+            echo '```diff'
+            head -c "$DIFF_LIMIT" store.diff
+            if [ "$(wc -c < store.diff)" -gt "$DIFF_LIMIT" ]; then
+              printf '\n… truncated — the data sync has the full diff\n'
+            fi
+            echo '```'
+            echo
+            echo "</details>"
+          } > issue_body.md
+          NUM=$(gh issue list --state open --limit 100 --json number,title \
+            --jq ".[] | select(.title == \"$ISSUE_TITLE\") | .number" | head -1)
+          if [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --body-file issue_body.md
+          else
+            gh issue create --title "$ISSUE_TITLE" \
+              --body-file issue_body.md --label "content 🖋️"
           fi
 
       - name: Commit to the sync branch
@@ -103,7 +138,6 @@ jobs:
       # One long-lived branch and one open PR: a weekly force-push refreshes an
       # unmerged PR instead of stacking another one behind it.
       - name: Open or update the PR
-        id: pr
         if: steps.diff.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -116,45 +150,6 @@ jobs:
           if [ -n "$NUM" ]; then
             gh pr edit "$NUM" --title "$TITLE" --body-file pr_body.md
           else
-            URL=$(gh pr create --base dev --head "$BRANCH" \
-              --title "$TITLE" --body-file pr_body.md --label "update 🔄")
-            NUM="${URL##*/}"
-          fi
-          echo "number=$NUM" >> "$GITHUB_OUTPUT"
-
-      # Appended as a comment, not a body edit: comments notify subscribers and
-      # keep the history in order. Comments share the body's 65,536-char limit.
-      - name: Open or append the content-review issue
-        if: steps.classify.outputs.notable == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR: ${{ steps.pr.outputs.number }}
-        run: |
-          {
-            echo "### $(date -u +'%Y-%m-%d') · #$PR"
-            echo
-            echo '```'
-            cat notable.txt
-            echo '```'
-            echo
-            pnpm exec tsx src/scripts/sync-upgrades/coverage.ts
-            echo
-            echo "<details><summary>Store diff</summary>"
-            echo
-            echo '```diff'
-            head -c "$DIFF_LIMIT" store.diff
-            if [ "$(wc -c < store.diff)" -gt "$DIFF_LIMIT" ]; then
-              printf '\n… truncated — the PR has the full diff\n'
-            fi
-            echo '```'
-            echo
-            echo "</details>"
-          } > issue_body.md
-          NUM=$(gh issue list --state open --limit 100 --json number,title \
-            --jq ".[] | select(.title == \"$ISSUE_TITLE\") | .number" | head -1)
-          if [ -n "$NUM" ]; then
-            gh issue comment "$NUM" --body-file issue_body.md
-          else
-            gh issue create --title "$ISSUE_TITLE" \
-              --body-file issue_body.md --label "content 🖋️"
+            gh pr create --base dev --head "$BRANCH" \
+              --title "$TITLE" --body-file pr_body.md --label "update 🔄"
           fi

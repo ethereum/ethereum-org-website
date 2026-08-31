@@ -203,6 +203,36 @@ export const generated = {
     },
     milestones: [
       {
+        kind: "testnet",
+        network: "Holešky",
+        when: {
+          year: 2025,
+          month: 10,
+          day: 1,
+        },
+        status: "complete",
+      },
+      {
+        kind: "testnet",
+        network: "Sepolia",
+        when: {
+          year: 2025,
+          month: 10,
+          day: 14,
+        },
+        status: "complete",
+      },
+      {
+        kind: "testnet",
+        network: "Hoodi",
+        when: {
+          year: 2025,
+          month: 10,
+          day: 28,
+        },
+        status: "complete",
+      },
+      {
         kind: "mainnet",
         when: {
           year: 2025,
@@ -398,21 +428,33 @@ export const generated = {
       },
       {
         kind: "testnet",
+        network: "Platåberget",
+        when: {
+          year: 2026,
+          month: 8,
+          day: 13,
+        },
+        status: "complete",
+      },
+      {
+        kind: "testnet",
         network: "Sepolia",
         when: {
           year: 2026,
-          quarter: 3,
+          month: 9,
+          day: 28,
         },
-        status: "projected",
+        status: "anticipated",
       },
       {
         kind: "testnet",
         network: "Hoodi",
         when: {
           year: 2026,
-          quarter: 3,
+          month: 10,
+          day: 26,
         },
-        status: "projected",
+        status: "anticipated",
       },
       {
         kind: "mainnet",
