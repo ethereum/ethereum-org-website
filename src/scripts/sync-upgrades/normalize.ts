@@ -417,7 +417,12 @@ export const normalize = (source: ForkcastSource): UpgradeStore => {
         : { when: null, confirmed: false },
       milestones: normalizeMilestones(source, upgrade, status, when, confirmed),
       eips: normalizeEips(source, upgrade.id),
-      sourceUrl: `https://forkcast.org${upgrade.path ?? `/upgrade/${upgrade.id}`}`,
+      // Null rather than a fabricated URL: upstream populates `path` for
+      // every fork but only renders a page for the ones it has not disabled,
+      // so the pre-Pectra forks would otherwise get a link that 404s.
+      sourceUrl: upgrade.disabled
+        ? null
+        : `https://forkcast.org${upgrade.path ?? `/upgrade/${upgrade.id}`}`,
     } satisfies UpgradeData
   }
 

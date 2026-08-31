@@ -29,7 +29,7 @@ export const generated = {
       },
     ],
     eips: [],
-    sourceUrl: "https://forkcast.org/upgrade/the-merge",
+    sourceUrl: null,
   },
   shapella: {
     slug: "shapella",
@@ -55,7 +55,7 @@ export const generated = {
       },
     ],
     eips: [],
-    sourceUrl: "https://forkcast.org/upgrade/shapella",
+    sourceUrl: null,
   },
   dencun: {
     slug: "dencun",
@@ -88,7 +88,7 @@ export const generated = {
         decidedAt: null,
       },
     ],
-    sourceUrl: "https://forkcast.org/upgrade/dencun",
+    sourceUrl: null,
   },
   pectra: {
     slug: "pectra",
