@@ -203,6 +203,16 @@ const quizzes = {
     title: "evm",
     questions: ["evm-1", "evm-2", "evm-3", "evm-4", "evm-5", "evm-6"],
   },
+  "ethereum-vs-bitcoin": {
+    title: "ethereum-vs-bitcoin",
+    questions: [
+      "ethereum-vs-bitcoin-1",
+      "ethereum-vs-bitcoin-2",
+      "ethereum-vs-bitcoin-3",
+      "ethereum-vs-bitcoin-4",
+      "ethereum-vs-bitcoin-5",
+    ],
+  },
   transactions: {
     title: "transactions",
     questions: [
@@ -231,6 +241,7 @@ const quizzesSectionsRaw: QuizzesHubSection[] = [
       { id: "what-are-apps", level: "beginner" },
       { id: "web3", level: "beginner" },
       { id: "energy-consumption", level: "beginner" },
+      { id: "ethereum-vs-bitcoin", level: "beginner" },
     ],
   },
   {
