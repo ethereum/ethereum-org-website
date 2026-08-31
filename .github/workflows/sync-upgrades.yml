@@ -1,0 +1,155 @@
+name: Sync Upgrade Data
+
+on:
+  # Friday morning: after Thursday's ACD call has moved EIP statuses upstream,
+  # and early enough that a merged PR can ride the following Tuesday release.
+  schedule:
+    - cron: "0 9 * * FRI"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: sync-upgrades
+  cancel-in-progress: false
+
+env:
+  BRANCH: automated/sync-upgrades
+  ISSUE_TITLE: "Upgrade data: changes needing content review"
+  DIFF_LIMIT: 30000
+
+jobs:
+  sync:
+    name: Regenerate the upgrade store
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: dev
+
+      - uses: ./.github/actions/setup-pnpm-node
+
+      # While a data PR is unmerged, the sync branch — not dev — holds what has
+      # already been pushed and reported. Diffing against dev would re-push and
+      # re-report the same change every Friday until someone merges it.
+      - name: Resolve the sync baseline
+        id: base
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR=$(gh pr list --head "$BRANCH" --base dev --state open --json number --jq '.[0].number')
+          REF=HEAD
+          if [ -n "$PR" ] && git fetch --depth=1 origin "$BRANCH"; then
+            REF=FETCH_HEAD
+          fi
+          echo "pr=$PR" >> "$GITHUB_OUTPUT"
+          echo "ref=$REF" >> "$GITHUB_OUTPUT"
+          echo "Comparing against $REF."
+
+      - name: Run the sync
+        run: pnpm sync-upgrades
+
+      - name: Detect changes
+        id: diff
+        env:
+          REF: ${{ steps.base.outputs.ref }}
+        run: |
+          if git diff --quiet "$REF" -- src/data/upgrades/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Store is current — nothing to do."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff "$REF" -- src/data/upgrades/ > store.diff
+          fi
+
+      # PRs opened with GITHUB_TOKEN do not trigger the CI workflow, so the
+      # checks that would guard the store run here, before it opens one.
+      - name: Type-check and test the regenerated store
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          pnpm type-check
+          pnpm test:unit
+
+      # Empty output means nothing changed that any page can contradict.
+      # A classifier failure stops the sync so it cannot suppress human review.
+      - name: Classify the change
+        id: classify
+        if: steps.diff.outputs.changed == 'true'
+        env:
+          SYNC_BASE_REF: ${{ steps.base.outputs.ref }}
+        run: |
+          pnpm exec tsx src/scripts/sync-upgrades/classify.ts > notable.txt
+          if [ -s notable.txt ]; then
+            echo "notable=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "notable=false" >> "$GITHUB_OUTPUT"
+            echo "Data-only change — no content review needed."
+          fi
+
+      # Report before advancing the sync branch. If issue creation fails, the
+      # old branch remains the baseline and the same report is retried.
+      - name: Open or append the content-review issue
+        if: steps.classify.outputs.notable == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          {
+            echo "### $(date -u +'%Y-%m-%d') · [data sync](https://github.com/ethereum/ethereum-org-website/compare/dev...$BRANCH)"
+            echo
+            echo '```'
+            cat notable.txt
+            echo '```'
+            echo
+            pnpm exec tsx src/scripts/sync-upgrades/coverage.ts
+            echo
+            echo "<details><summary>Store diff</summary>"
+            echo
+            echo '```diff'
+            head -c "$DIFF_LIMIT" store.diff
+            if [ "$(wc -c < store.diff)" -gt "$DIFF_LIMIT" ]; then
+              printf '\n… truncated — the data sync has the full diff\n'
+            fi
+            echo '```'
+            echo
+            echo "</details>"
+          } > issue_body.md
+          NUM=$(gh issue list --state open --limit 100 --json number,title \
+            --jq ".[] | select(.title == \"$ISSUE_TITLE\") | .number" | head -1)
+          if [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --body-file issue_body.md
+          else
+            gh issue create --title "$ISSUE_TITLE" \
+              --body-file issue_body.md --label "content 🖋️"
+          fi
+
+      - name: Commit to the sync branch
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Action"
+          git checkout -B "$BRANCH"
+          git add src/data/upgrades/
+          git commit -m "chore(data): sync upgrade data from forkcast"
+          git push --force origin "$BRANCH"
+
+      # One long-lived branch and one open PR: a weekly force-push refreshes an
+      # unmerged PR instead of stacking another one behind it.
+      - name: Open or update the PR
+        if: steps.diff.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUM: ${{ steps.base.outputs.pr }}
+        run: |
+          printf '%s\n\n%s\n' \
+            "Source: [ethereum/forkcast](https://github.com/ethereum/forkcast)" \
+            "<sub>Fridays 09:00 UTC · re-run via \`workflow_dispatch\`</sub>" > pr_body.md
+          TITLE="Sync upgrade data from Forkcast - $(date -u +'%B %-d')"
+          if [ -n "$NUM" ]; then
+            gh pr edit "$NUM" --title "$TITLE" --body-file pr_body.md
+          else
+            gh pr create --base dev --head "$BRANCH" \
+              --title "$TITLE" --body-file pr_body.md --label "update 🔄"
+          fi

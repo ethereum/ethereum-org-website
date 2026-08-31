@@ -13,7 +13,7 @@ Load this when "the pipeline did something wrong" — bad translation in product
 | Manifest file is invalid / missing | One of the two manifests gone? | Delete both manifests for that file+locale; pipeline auto-runs full mode |
 | Build fails on a locale (MDX compile error) | Is it the sanitizer's fault or content? | Triage MDX error → fix sanitizer (test-first) OR scope-fix the affected file |
 | `intl/pending-{base}` PR has merge conflicts on base side | Was base force-pushed/rebased? | Don't rebase pending; merge base→pending again, or close pending and start fresh |
-| LLM returned garbage / refused | Check `finishReason` in logs | Retry with same content; if persistent, file/Latinize the input and retry |
+| LLM returned garbage / refused | Check `finishReason` in logs | See "LLM returned garbage / refused" below |
 | English-locale structural mismatch (locale missing inline element vs English) | Look at the manifest's element mapping | Re-run `mode: full` for that file; pipeline regenerates from scratch |
 | Hand-edit slipped through review | Was it pre- or post-English-change? | If pre-: leave it, manifest still valid. If post-: re-run pipeline; will overwrite OR conflict |
 
@@ -61,9 +61,9 @@ Error-string -> source map (where to look when a signature appears):
 
 **What it means:** content shipped without its manifest. The manifest still reflects the pre-run English state, so the NEXT run sees those files as still-needing-translation and re-translates all of them — a churn loop that also blocks running the pipeline on every merge.
 
-**Historical cause (FIXED):** the `SharedCommitter` used to advance the branch ref on every per-file commit. Under the task pool's concurrency those ref updates raced and returned `422 not a fast forward`; a content commit that threw on the 422 aborted before its manifest commit, and the end-of-run squash shipped the (already-recorded) content blob without the (never-recorded) manifest. Fix: `commitFile` now only creates+records a blob and never touches the ref; the squash force-updates once; per task, manifests are built before any blob is recorded so a builder error strands nothing. Guarded by `tests/unit/intl-pipeline/commit-ref-race.spec.ts`. If you see fresh drift on a run AFTER this fix, suspect a new throw point between a content commit and its manifest commit in `main.ts` (`runFullTranslation`/`runIncremental`), not the committer.
+**Historical cause (FIXED):** a `SharedCommitter` ref race — guarded since by `tests/unit/intl-pipeline/commit-ref-race.spec.ts`. Fresh drift therefore means a NEW throw point between a content commit and its manifest commit in `main.ts` (`runFullTranslation`/`runIncremental`), not the committer.
 
-**Recovery for a branch already in a drift state** (e.g. PR #18471): the content on the branch is correct, only the manifests are stale. Cheapest correct path is to discard and re-run clean now that the cause is fixed (the job is a few dollars and a re-run validates the fix end to end); the alternative is a `stamp_only` pass to regenerate the missing manifests against the committed content, which is fragile and only worth it to preserve an expensive run.
+**Recovery for a branch already in a drift state:** the content on the branch is correct, only the manifests are stale. Cheapest correct path is to discard and re-run clean; the alternative is a `stamp_only` pass to regenerate the missing manifests against the committed content, which is fragile and only worth it to preserve an expensive run.
 
 ## PR body too large
 
@@ -128,8 +128,7 @@ Worst case: a whole locale is corrupted, or you want a clean sweep for a languag
 **Fix:** delete all manifests for that locale and re-run full.
 
 ```bash
-find public/content/translations/ja -name "*.manifest-*.json" -delete
-find src/intl/ja -name "*.manifest-*.json" -delete
+rm -rf .manifests/public/content/translations/ja .manifests/src/intl/ja
 gh workflow run intl-pipeline.yml -f target_languages=ja -f mode=full
 ```
 
@@ -167,30 +166,18 @@ gh pr close --delete-branch <pending-pr-number>
 gh workflow run intl-pipeline.yml -f target_languages=<affected-langs>
 ```
 
-## LLM returned garbage
+## LLM returned garbage / refused (`finishReason`)
 
-Gemini occasionally refuses, returns empty, or returns malformed content. The adapter at `src/scripts/intl-pipeline/lib/llm/gemini.ts` already handles retries and finishReason inspection.
+The Gemini adapter at `src/scripts/intl-pipeline/lib/llm/gemini.ts` checks `response.candidates[0].finishReason` after every call and handles retries. Non-STOP finish reasons are logged at WARNING level — search workflow logs for `FINISH_REASON` if a section seems to be missing translation output. Values to know:
 
-If you see persistent failures for a specific file+locale combination, common culprits:
+- `STOP` — normal completion
+- `MAX_TOKENS` — output truncated; section probably too large. Chunking in `src/scripts/intl-pipeline/lib/llm/json-batcher.ts` should handle it, but adversarial cases can slip through; re-running with `mode: full` for that file forces a fresh chunking pass.
+- `SAFETY` — content filter blocked it. Safety settings are `BLOCK_NONE` in the adapter, but blocks can still trigger on some edge content (mining/attack descriptions in certain non-Latin languages). If `BLOCK_NONE` doesn't help, the prompt or content needs rework, not the safety settings.
+- `RECITATION` — model declined to reproduce training data. **Deterministic per file+language**, NOT transient: the adapter retries the byte-identical prompt up to 3x and gets the identical `RECITATION` every time (`tokens_out=0`), then gives up. The file+lang is then skipped — it ships untranslated (keeps its prior/English state), is recorded as a failed task, and listed in the PR body's failure block. Restarting the whole run will hit the exact same combos. Recurring victims are long reference docs (consensus-mechanisms `pos`/`poa`, `defi`, `ethash`, whitepaper) in fr/es/pt-br. The real fix is upstream of a plain retry: mutate before retrying (smaller chunks, secondary model, reworded prompt) or accept the skip and handle those files out-of-band. Don't burn time expecting a re-run to clear them.
+- `OTHER` — bucket catchall. Log shows full response; debug case-by-case.
 
-- **Safety filter false-positive** — mining/attack/security content in some non-Latin languages triggers it. Safety settings are at `BLOCK_NONE` in the adapter; if you see filter blocks anyway, the prompt may need rephrasing.
-- **Output token limit** — section too large; chunking in `src/scripts/intl-pipeline/lib/llm/json-batcher.ts` should handle it, but adversarial cases can slip through. Re-running with `mode: full` for that file forces a fresh chunking pass.
-- **Prompt contamination** — context from a previous section bleeds in. Re-running typically resolves; if not, isolate to one section and bisect.
-
-For one-off failures, just re-run. For systemic failures, scope down to a single file+locale, copy the LLM call from the logs, and reproduce locally.
+For one-off malformed output, just re-run. For systemic failures, scope down to a single file+locale, copy the LLM call from the logs, and reproduce locally (prompt contamination from a neighboring section usually clears on re-run; if not, isolate to one section and bisect).
 
 ## Hand-edit damage assessment
 
-Someone hand-edited a translated file. To assess damage:
-
-1. **Was the English side unchanged when the hand-edit happened?** If yes, the manifest's English→locale mapping is still valid. The next pipeline run treats the corrected locale content as canonical. No further action needed.
-2. **Was the English side changed before the hand-edit?** Then the manifest is out-of-sync with reality. The next run will either re-translate over the hand-edit or produce a merge conflict. To resolve:
-   - If the hand-edit reflects the correct translation, trigger `intl-pipeline.yml` with `stamp_only: true` to refresh manifests from current state. Safe only if no pending branch exists.
-   - If the hand-edit is incomplete or wrong, delete the manifests and let the pipeline re-translate.
-
-## What this reference does NOT cover
-
-- Test-first workflow for adding a new sanitizer fix function (see `references/runbooks/fix-sanitizer-bug.md`)
-- The orchestration model for `intl/pending-{base}` (see `references/orchestration.md`)
-- The phase-by-phase pipeline architecture (see `references/architecture.md`)
-- Managing translation review (see the `intl-review` skill)
+Someone hand-edited a translated file. The fork is "was English unchanged when the edit happened?" — pre-English-change edits are fine, post-change edits desync the manifest. Full decision tree and the `stamp_only` procedure: `references/non-english-edits.md`.

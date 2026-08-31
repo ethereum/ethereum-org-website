@@ -2,14 +2,7 @@
 
 Condensed pattern catalog for review-time triage. The living version at `.claude/translation-review/known-patterns.md` is authoritative — agents writing review findings update it after each language pass. This reference is the at-a-glance digest for spotting issues during a review.
 
-## Severity rubric (quick)
-
-- **Critical**: build-breaking (MDX errors), navigation-breaking (translated hrefs/anchors), or semantically wrong (proof-of-stake ↔ proof-of-work, mainnet → "market"). Auto-fixed by `/review-translations` unless `--no-fix`.
-- **High**: visible to readers but doesn't break the build (brand-name mistranslations the sanitizer missed, untranslated paragraphs, glossary deviations on visible terms).
-- **Medium**: cosmetic or quality (tone inconsistency, awkward phrasing, light cross-script contamination).
-- **Low**: nitpicks (spacing inside paragraphs, minor punctuation).
-
-Full severity rubric: `references/critical-vs-warning.md`.
+Severity classification for every pattern below: `references/critical-vs-warning.md`.
 
 ## Critical: build-breaking (MDX)
 
@@ -85,9 +78,4 @@ Most common mistake: reviewer reverts a concept tag thinking it should be Latin.
 2. Use this digest during review to triage at a glance.
 3. When a NEW pattern surfaces, add it to the living doc — not this reference. Update this reference only on structural shifts (new severity categories, new policy domains).
 
-## See also
-
-- `references/critical-vs-warning.md` for the severity rubric
-- `references/language-rules.md` for per-language-group rules (Indic, Cyrillic, RTL, CJK phonetic, CJK semantic)
-- `references/ethglossary-usage.md` for glossary lookups during review
-- `docs/solutions/integration-issues/sanitizer-test-research.md` for the running list of patterns the sanitizer covers vs doesn't
+Which of these patterns the sanitizer already covers vs doesn't: `docs/solutions/integration-issues/sanitizer-test-research.md`.

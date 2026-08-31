@@ -61,3 +61,15 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 
 - Five mild Indic polyseme misses: `जागा` (space->place, a regression), `कुटुंबे` (families->households), `नाकारू` (deprecate->refuse), `नियंत्रण` (capture->control), `मर्यादा` (floor->cap).
 - `Amazon`/`ॲमेझॉन` split within one file.
+
+## PR #19142 (intl/pending-devcon-banner) -- 2026-08-21 -- Score 9.8/10
+Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
+
+**Fixed in this branch:**
+
+- `Devcon` -> `डेवकॉन` in `title` and `subtitle`, matching devcon.org's own Marathi site. `logo-alt` stays Latin.
+
+**Open (native call needed):**
+
+- `title` renders "the curious" as `उत्सुक` (eager, keen) where `जिज्ञासू` (inquisitive) is the precise match; hi used `जिज्ञासु` correctly on the same string.
+

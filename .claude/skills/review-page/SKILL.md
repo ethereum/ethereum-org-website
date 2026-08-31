@@ -35,13 +35,11 @@ Read both briefs in `reviewers/` and spawn **one subagent per brief, in parallel
 - `reviewers/copy.md` — every string on the page matches the Figma/source copy.
 - `reviewers/design-system.md` — components, spacing, heading sizes, and colors are the design system's, with no custom CSS bolted onto primitives.
 
-Reviewers are **adversarial**: each defaults to *fault found* and must cite evidence to clear a region. Expect over-reporting — that is the point; you filter next.
-
 **Done when:** both subagents have returned their findings lists.
 
 ## Step 3 — Triage
 
-Adversarial reviewers over-report. **You** judge each finding before touching code — keep the real ones, drop the noise. Two calls need judgment:
+Adversarial reviewers over-report by design. **You** judge each finding before touching code — keep the real ones, drop the noise. Two calls need judgment:
 
 - **Intentional copy divergence.** A string differs because the *design is stale*, or because it's a templated/localized value — not a copy bug. Confirm against the source, not the reviewer's assumption.
 - **Justified custom CSS.** Custom CSS *chasing pixel parity* on a primitive is a finding; custom CSS the design *genuinely requires* (a one-off the system can't express) is acceptable per "match, don't mimic." Don't strip styling the design needs.

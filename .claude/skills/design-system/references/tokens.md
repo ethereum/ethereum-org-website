@@ -239,7 +239,7 @@ For responsive card/item grids, use the **`Grid` component** (`@/components/ui/g
 
 `grid-cols-auto-N` (N = max columns, any integer) is a functional utility: at most N columns, each at least `--grid-item-min` wide (default `18rem`), folding to fewer columns as the viewport narrows. Set `--grid-repeat: auto-fit` to collapse empty tracks (default is `auto-fill`). `grid-cols-bento` covers the 12-col bento layout. Plus staking-specific grid templates.
 
-The enumerated `grid-cols-fill-N` / `grid-cols-fit-4` utilities are legacy (pre-`Grid`); existing usages are being migrated to `Grid`. Don't use them for new work.
+The old enumerated `grid-cols-fill-N` / `grid-cols-fit-4` utilities are gone -- don't reintroduce them; use `Grid` / `grid-cols-auto-*`.
 
 ### Misc
 
@@ -296,17 +296,7 @@ This means `<h1>Hello</h1>` already looks correct. Writing `<div className="text
 
 ## Stale shadcn Token Names (DO NOT USE)
 
-These appear in `ui/select.tsx`, `ui/dialog.tsx`, `ui/dropdown-menu.tsx`, `ui/tabs.tsx` but are **NOT defined** in this project's tokens. They're vestigial shadcn defaults from the migration:
-
-- `bg-popover` → use `bg-background-highlight` or appropriate semantic
-- `text-popover-foreground` → `text-body`
-- `bg-accent` / `text-accent-foreground` → use semantic accent tokens
-- `text-muted-foreground` → `text-body-medium`
-- `bg-muted` → `bg-background-medium` or appropriate
-- `focus:ring-ring` → use the project's focus-visible pattern
-- `ring-offset-background` → use `bg-background`
-
-If you're touching one of these primitives, replace the stale tokens. See `cleanup-playbook.md`.
+Vestigial shadcn defaults that are **NOT defined** in this project's tokens: `bg-popover`, `text-popover-foreground`, `bg-accent`, `text-accent-foreground`, `bg-muted`, `text-muted-foreground`, `focus:ring-ring`, `ring-offset-background`. They linger in `ui/select.tsx`, `ui/dialog.tsx`, `ui/dropdown-menu.tsx` (and `ring-offset-background` in `ui/tabs.tsx`). If you're touching one of these primitives, replace them -- mapping table in `cleanup-playbook.md`.
 
 ## Where to Add a New Token
 

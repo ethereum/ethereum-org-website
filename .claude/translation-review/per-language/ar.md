@@ -163,3 +163,22 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 
 - `hexary` -> `السداسية` ("six-fold") against 30+ tree uses of `سداسية عشرية`.
 - ETHGlossary's ar `validator` entry `مُدَقِّق` has SHADDA U+0651 before KASRA U+0650 -- non-canonical order. It appears 8x here and flipped this file from NFC to non-NFC. Upstream glossary fix, not a per-file one.
+
+## PR #19142 (intl/pending-devcon-banner) -- 2026-08-21 -- Score 9.6/10
+Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
+
+**Fixed in this branch:**
+
+- `Devcon` -> `ديفكون` in `title` and `subtitle`, and the U+2066/U+2069 bidi isolates were re-wrapped: the pair around the name is gone (it is no longer an LTR run) while the pairs around `8` and `10%` are kept. Verified balanced 4/4 and NFC-clean.
+
+**Low confidence on the spelling -- flag for native review.** Policy 6.3 permits either ف or ڤ for English "v" and requires consistency. Gemini 3.1 Pro proposed `ديڤكون` (ڤ, strict phonetic accuracy); `blog.ethereum.org/ar` ships `ديفكون` (ف) in all 6 occurrences, and that is what shipped here. But the blog is produced by this same pipeline against this same glossary gap, so it is not independent evidence -- the tie is effectively unbroken. One character, on a banner; settle it in the glossary entry.
+
+**Open (native call needed):**
+
+- `اجتمع مع الفضوليين` for "Gather with the curious" -- `فضولي` carries a nosy/prying connotation in MSA, so it reads closer to "gather with the busybodies". Candidates: `الشغوفين بالمعرفة`, `أصحاب الفضول المعرفي`.
+
+**Notes:**
+
+- `طالب بخصمك` matches the ETHGlossary `claim` entry (`مطالبة`); see known-patterns #75 for why that entry reads bureaucratic here.
+- Western numerals retained per the 6.3 default for ar.
+
