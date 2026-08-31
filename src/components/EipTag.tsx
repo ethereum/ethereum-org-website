@@ -34,10 +34,8 @@ const STATUS_LABELS: Partial<
 /**
  * Inclusion-status chip for one EIP on an upgrade page.
  *
- * In July the page described already-scheduled EIPs as "being considered for
- * inclusion". Driving this from `eips[].status` means that framing can't drift
- * again: the chip is whatever the data says, and the data is checked against
- * Forkcast rather than written by hand into prose.
+ * Driving the chip from `eips[].status` keeps its framing aligned with
+ * Forkcast rather than hand-written prose.
  *
  * Declined EIPs render nothing — a declined EIP should be removed from the
  * page, not labelled.

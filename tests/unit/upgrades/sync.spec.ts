@@ -87,9 +87,17 @@ const source: ForkcastSource = {
         projectedDate: "Q3 2026",
         actualEndDate: null,
         testnets: [
-          { name: "Holešky", status: "deprecated", projectedDate: null },
-          { name: "Sepolia", status: "upcoming", projectedDate: "Q3 2026" },
-          { name: "Hoodi", status: "upcoming", projectedDate: "Q3 2026" },
+          { name: "Holešky", status: "deprecated", stated: null },
+          {
+            name: "Sepolia",
+            status: "upcoming",
+            stated: { claim: "projected", value: "Q3 2026" },
+          },
+          {
+            name: "Hoodi",
+            status: "upcoming",
+            stated: { claim: "projected", value: "Q3 2026" },
+          },
         ],
       },
       {
@@ -143,6 +151,7 @@ test("public testnet forks become milestones, skipping deprecated networks", () 
   const testnets = milestones.filter((m) => m.kind === "testnet")
   expect(testnets.map((m) => m.network)).toEqual(["Sepolia", "Hoodi"])
   expect(testnets[0].when).toEqual({ year: 2026, quarter: 3 })
+  expect(testnets[0].status).toBe("projected")
   expect(testnets.some((m) => m.network === "Holešky")).toBe(false)
 })
 
@@ -407,7 +416,11 @@ test("release stage outranks the date when precision degrades", () => {
           projectedDate: "2027",
           actualEndDate: null,
           testnets: [
-            { name: "Sepolia", status: "upcoming", projectedDate: "2027" },
+            {
+              name: "Sepolia",
+              status: "upcoming",
+              stated: { claim: "projected", value: "2027" },
+            },
           ],
         },
         {
@@ -444,7 +457,11 @@ test("an unreadable date fails loudly rather than dropping a milestone", () => {
           ? {
               ...p,
               testnets: [
-                { name: "Sepolia", status: "upcoming", projectedDate: "soon" },
+                {
+                  name: "Sepolia",
+                  status: "upcoming",
+                  stated: { claim: "projected", value: "soon" },
+                },
               ],
             }
           : p
@@ -551,7 +568,7 @@ export const forkProgress = [
       {
         phaseId: 'public-testnets',
         testnets: [
-          { name: 'Sepolia', status: 'completed', projectedDate: 'Q1 2026' },
+          { name: 'Sepolia', status: 'completed', date: 'Jan 20, 2026' },
         ],
         status: 'upcoming',
         projectedDate: 'Q3 2026',
@@ -564,6 +581,134 @@ export const forkProgress = [
   expect(phase.status).toBe("upcoming")
   expect(phase.projectedDate).toBe("Q3 2026")
   expect(phase.testnets).toEqual([
-    { name: "Sepolia", status: "completed", projectedDate: "Q1 2026" },
+    {
+      name: "Sepolia",
+      status: "completed",
+      stated: { claim: "actual", value: "Jan 20, 2026" },
+    },
   ])
+})
+
+const liveTestnetShape = `
+export const forkProgress = [
+  {
+    forkName: 'Glamsterdam',
+    phases: [
+      {
+        phaseId: 'public-testnets',
+        status: 'in-progress',
+        testnets: [
+          { name: 'Platåberget', status: 'completed', date: 'Aug 13, 2026' },
+          { name: 'Sepolia', status: 'upcoming', proposedDate: 'Sep 28, 2026' },
+          { name: 'Hoodi', status: 'upcoming', projectedDate: 'Q4 2026' },
+        ],
+      },
+    ],
+  },
+]
+`
+
+test("parses every testnet date claim Forkcast writes", () => {
+  expect(parsePhases(liveTestnetShape).glamsterdam[0].testnets).toEqual([
+    {
+      name: "Platåberget",
+      status: "completed",
+      stated: { claim: "actual", value: "Aug 13, 2026" },
+    },
+    {
+      name: "Sepolia",
+      status: "upcoming",
+      stated: { claim: "proposed", value: "Sep 28, 2026" },
+    },
+    {
+      name: "Hoodi",
+      status: "upcoming",
+      stated: { claim: "projected", value: "Q4 2026" },
+    },
+  ])
+})
+
+test("testnet date claims preserve their confidence", () => {
+  const phases = parsePhases(liveTestnetShape).glamsterdam
+  const withLiveTestnets: ForkcastSource = {
+    ...source,
+    phases: {
+      ...source.phases,
+      glamsterdam: [
+        ...phases,
+        ...source.phases.glamsterdam.filter(
+          (phase) => phase.phaseId === "mainnet-deployment"
+        ),
+      ],
+    },
+  }
+
+  const milestones = normalize(withLiveTestnets).glamsterdam.milestones.filter(
+    (milestone) => milestone.kind === "testnet"
+  )
+  expect(milestones).toEqual([
+    {
+      kind: "testnet",
+      network: "Platåberget",
+      when: { year: 2026, month: 8, day: 13 },
+      status: "complete",
+    },
+    {
+      kind: "testnet",
+      network: "Sepolia",
+      when: { year: 2026, month: 9, day: 28 },
+      status: "anticipated",
+    },
+    {
+      kind: "testnet",
+      network: "Hoodi",
+      when: { year: 2026, quarter: 4 },
+      status: "projected",
+    },
+  ])
+})
+
+test("conflicting or unknown testnet date keys fail loudly", () => {
+  const conflicting = liveTestnetShape.replace(
+    "proposedDate: 'Sep 28, 2026'",
+    "proposedDate: 'Sep 28, 2026', projectedDate: 'Q3 2026'"
+  )
+  expect(() => parsePhases(conflicting)).toThrow(
+    /Conflicting testnet date keys proposedDate\+projectedDate/
+  )
+
+  const unknown = liveTestnetShape.replace(
+    "proposedDate: 'Sep 28, 2026'",
+    "estimatedDate: 'Sep 28, 2026'"
+  )
+  expect(() => parsePhases(unknown)).toThrow(
+    /Unknown testnet date key "estimatedDate"/
+  )
+})
+
+test("completed testnets require an actual date claim", () => {
+  const badStatus: ForkcastSource = {
+    ...source,
+    phases: {
+      ...source.phases,
+      glamsterdam: source.phases.glamsterdam.map((phase) =>
+        phase.phaseId === "public-testnets"
+          ? {
+              ...phase,
+              testnets: [
+                {
+                  name: "Sepolia",
+                  status: "completed",
+                  stated: { claim: "projected", value: "Q3 2026" },
+                },
+              ],
+            }
+          : phase
+      ),
+    },
+  }
+
+  expect(() => normalize(badStatus)).toThrow(
+    /Completed testnet "Sepolia".*does not state an actual date/
+  )
 })

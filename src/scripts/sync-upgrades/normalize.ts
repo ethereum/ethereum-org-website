@@ -10,6 +10,7 @@ import type {
   EipStatus,
   Milestone,
   MilestoneKind,
+  MilestoneStatus,
   PartialDate,
   Quarter,
   UpgradeData,
@@ -18,7 +19,11 @@ import type {
   UpgradeStore,
 } from "@/data/upgrades/types"
 
-import type { ForkcastSource, ForkcastUpgrade } from "./forkcast"
+import type {
+  ForkcastDateClaim,
+  ForkcastSource,
+  ForkcastUpgrade,
+} from "./forkcast"
 import { ForkcastSyncError } from "./forkcast"
 
 const UPGRADE_STATUS: Record<string, UpgradeStatus> = {
@@ -110,6 +115,12 @@ const KIND_ORDER: Record<MilestoneKind, number> = {
   mainnet: 2,
 }
 
+const TESTNET_STATUS = {
+  actual: "complete",
+  proposed: "anticipated",
+  projected: "projected",
+} as const satisfies Record<ForkcastDateClaim, MilestoneStatus>
+
 /**
  * Missing precision sorts late, not early: "sometime in 2026" belongs after
  * every dated milestone in 2026. A quarter sorts at its closing month.
@@ -178,7 +189,8 @@ const resolveMainnetTarget = (
 
 /**
  * Public testnet forks, from the phase timeline. Deprecated networks are
- * skipped — Holešky was shut down after Fusaka and is listed only as history.
+ * skipped, and status must agree with the date claim: completed forks have
+ * actual dates while upcoming forks can only have proposed or projected dates.
  */
 const normalizeTestnets = (
   source: ForkcastSource,
@@ -190,23 +202,38 @@ const normalizeTestnets = (
   if (!phase) return []
 
   return phase.testnets.flatMap((testnet) => {
-    if (testnet.status === "deprecated") return []
-    const when = parsePartialDate(testnet.projectedDate)
-    if (!when) {
-      // No date upstream is legitimate; a date we cannot read is drift.
-      if (testnet.projectedDate) {
+    if (testnet.status === "deprecated") {
+      if (testnet.stated?.claim === "actual") {
         throw new ForkcastSyncError(
-          `Unparseable testnet date "${testnet.projectedDate}" on ${upgradeId} (${testnet.name})`
+          `Deprecated testnet "${testnet.name}" on ${upgradeId} states an actual date`
         )
       }
       return []
+    }
+    if (testnet.status === "completed" && testnet.stated?.claim !== "actual") {
+      throw new ForkcastSyncError(
+        `Completed testnet "${testnet.name}" on ${upgradeId} does not state an actual date`
+      )
+    }
+    if (testnet.status === "upcoming" && testnet.stated?.claim === "actual") {
+      throw new ForkcastSyncError(
+        `Upcoming testnet "${testnet.name}" on ${upgradeId} states an actual date`
+      )
+    }
+    if (!testnet.stated) return []
+
+    const when = parsePartialDate(testnet.stated.value)
+    if (!when) {
+      throw new ForkcastSyncError(
+        `Unparseable testnet date "${testnet.stated.value}" (${testnet.stated.claim}) on ${upgradeId} (${testnet.name})`
+      )
     }
     return [
       {
         kind: "testnet",
         network: testnet.name,
         when,
-        status: testnet.status === "completed" ? "complete" : "projected",
+        status: TESTNET_STATUS[testnet.stated.claim],
       } satisfies Milestone,
     ]
   })
@@ -224,9 +251,7 @@ const normalizeTestnets = (
  *
  * `considered` is kept despite looking similar. It means ACD has formally
  * considered the EIP, which is exactly the signal a planning-phase page wants
- * before scope freezes, and it costs one row today. An earlier version excluded
- * it on the grounds that nothing consumed it — circular, since the consumer
- * (`EipTag`) was only dropped because the data lacked it.
+ * before scope freezes, and it costs one row today.
  *
  * Descoping stays visible either way: a declined EIP leaves the store, and a
  * deletion in the diff reads more clearly than a status field flipping.
