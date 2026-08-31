@@ -4,13 +4,15 @@
  *   pnpm exec tsx src/scripts/sync-upgrades/coverage.ts
  *
  * Deterministic by design: it lists candidates for a human to judge, it never
- * decides that prose is owed. Only unshipped upgrades are checked — a live
- * fork's EIP set is frozen, so a missing explainer there is not news.
+ * decides that prose is owed. The Friday workflow runs it on every store
+ * change, including data-only weeks, and comments when this list is non-empty.
+ * Only unshipped upgrades are checked — a live fork's EIP set is frozen, so a
+ * missing explainer there is not news.
  *
  * Translated pages are out of scope: the intl pipeline owns them, and English
  * is where a gap gets closed.
  */
-import { readFileSync } from "node:fs"
+import { appendFileSync, readFileSync } from "node:fs"
 
 import { upgrades } from "@/data/upgrades"
 import type { UpgradeData, UpgradeEip } from "@/data/upgrades/types"
@@ -106,6 +108,14 @@ export const renderReport = (gaps: CoverageGap[]): string => {
   return sections.join("\n\n")
 }
 
+/** The Actions output the Friday workflow branches on. */
+export const coverageGapFlag = (gaps: CoverageGap[]): "true" | "false" =>
+  gaps.length > 0 ? "true" : "false"
+
 if (process.argv[1]?.endsWith("coverage.ts")) {
-  console.log(renderReport(findGaps()))
+  const gaps = findGaps()
+  console.log(renderReport(gaps))
+  if (process.env.GITHUB_OUTPUT) {
+    appendFileSync(process.env.GITHUB_OUTPUT, `gaps=${coverageGapFlag(gaps)}\n`)
+  }
 }
