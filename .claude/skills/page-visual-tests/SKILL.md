@@ -5,7 +5,7 @@ description: Playwright + Chromatic full-page visual tests for ethereum.org. Tri
 
 # Page Visual Tests (Playwright + Chromatic)
 
-This repo has two Chromatic projects: Storybook (the `visual-tests` job in `.github/workflows/ci.yml`, which calls `chromaui/action` directly; `pnpm chromatic` needs `CHROMATIC_STORYBOOK_TOKEN`) and **page visual tests** (the `page-visual-tests` job in ci.yml + `pnpm chromatic:pages`, which needs `CHROMATIC_PAGES_TOKEN`). This skill is the second one only.
+This skill covers the **page visual tests** Chromatic project only (the `page-visual-tests` job in ci.yml publishes via `chromaui/action`; local publish is `pnpm chromatic:pages` with `CHROMATIC_PAGES_TOKEN`) — not Storybook Chromatic.
 
 The Playwright suite captures DOM archives (not PNGs) per page × viewport; Chromatic re-renders them in the cloud to diff. A green local `pnpm test:visual` just means archives were produced — the diff happens after upload.
 
@@ -30,7 +30,7 @@ The Playwright suite captures DOM archives (not PNGs) per page × viewport; Chro
 
 **Environment.** `USE_MOCK_DATA=true` and `NEXT_PUBLIC_BUILD_LOCALES` are required at build and test time. The local `test:visual:build` script sets `NEXT_PUBLIC_BUILD_LOCALES=en`; CI's shared build in ci.yml uses `NEXT_PUBLIC_BUILD_LOCALES: "en,es,zh,ar"` because one build artifact serves the e2e, lighthouse, and visual jobs. Paths in the spec are unprefixed (`/wallets/`, not `/en/wallets/`) because `localePrefix: "as-needed"` serves English at the root — adding `/en` would just trigger a redirect.
 
-**Random ordering: `safeShuffle`.** Lodash `shuffle` and `.sort(() => Math.random() - 0.5)` flake snapshots independently of loaders. Wrap them with `safeShuffle` from `src/lib/utils/random.ts` — it returns the list unchanged when `IS_VISUAL_TEST=true`. Current call sites: `wallets.ts`, `apps.ts` (Highlights/Discover/AppOfTheWeek), `src/components/Staking/StakingProductsCardGrid/index.tsx`. The env var is exposed to the client bundle via `next.config.js`'s `env` block; without that, `process.env.IS_VISUAL_TEST` evaluates to `undefined` in client components and the shuffle still runs.
+**Random ordering: `safeShuffle`.** Lodash `shuffle` and `.sort(() => Math.random() - 0.5)` flake snapshots independently of loaders. Wrap them with `safeShuffle` from `src/lib/utils/random.ts` — it returns the list unchanged when `IS_VISUAL_TEST=true`. Current call sites: `src/lib/utils/wallets.ts`, `src/lib/utils/apps.ts` (Highlights/Discover/AppOfTheWeek), `src/components/Staking/StakingProductsCardGrid/index.tsx`. The env var is exposed to the client bundle via `next.config.js`'s `env` block; without that, `process.env.IS_VISUAL_TEST` evaluates to `undefined` in client components and the shuffle still runs.
 
 **Use `domcontentloaded`, not `networkidle`.** Analytics and background fetches keep the network perpetually busy.
 
@@ -70,8 +70,6 @@ test.describe("Page Visual Tests", () => {
 
 **Local `pnpm dev` masks a regression.** `playwright.visual.config.ts` sets `reuseExistingServer: true`, which is correct for CI but means a `pnpm dev` already running on :3000 will be used silently in place of the production build the suite assumes. If a snapshot diff doesn't reproduce in CI, kill the dev server and run `pnpm test:visual:build` to rebuild against the production output before retrying.
 
-**Pixel-limit error.** Measure the page's full-page height at 1024 px; if it exceeds ~24,400 px, the page needs shortening or removal from the suite. Cropping to viewport was considered and rejected — it defeats the below-the-fold regression coverage that justifies using Playwright over Storybook here.
+**Pixel-limit error.** Measure the page's full-page height at 1024 px; if it exceeds ~24,400 px, the page needs shortening or removal from the suite. Don't crop to viewport — below-the-fold coverage is the point of this suite.
 
 **Works locally, fails in CI.** Usually `HOME: /root` missing from the test step — GitHub Actions overrides `HOME` inside containers, and Playwright can no longer find the browsers baked into the `mcr.microsoft.com/playwright` image. Also check that the image tag matches `@playwright/test` in `package.json`.
-
-Branch: `feat/playwright-chromatic-page-visual-tests` · PR: <https://github.com/ethereum/ethereum-org-website/pull/18009>

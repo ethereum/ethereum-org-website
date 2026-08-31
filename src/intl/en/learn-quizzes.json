@@ -1236,8 +1236,6 @@
   "scaling-staking-nodes": "Scaling, staking and nodes",
   "scaling-staking-nodes-description": "How Ethereum grows beyond mainnet, and how validators and node operators keep the network running.",
   "page-energy-consumption": "Ethereum: a green and efficient blockchain",
-  "page-daos": "DAOs",
-  "page-defi": "DeFi",
   "page-ethereum-vs-bitcoin": "Ethereum vs Bitcoin",
   "ethereum-vs-bitcoin-1-prompt": "What is the main difference in purpose between Bitcoin and Ethereum?",
   "ethereum-vs-bitcoin-1-a-label": "Bitcoin is built for peer-to-peer payments; Ethereum is programmable, so it also runs applications",

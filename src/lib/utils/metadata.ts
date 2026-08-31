@@ -27,6 +27,26 @@ const imageForSlug = [
 ] as const
 
 /**
+ * Ranking hints consumed by the search crawler, mirroring the rules in the Algolia
+ * DocSearch `recordExtractor` so relevance survives the move to Typesense. The
+ * self-hosted scraper copies any `docsearch:*` meta tag onto every record it extracts.
+ */
+const isTutorialSlug = (slug: string[]) =>
+  slug[0] === "developers" && slug[1] === "tutorials" && slug.length > 2
+
+// Matches Algolia's `pathname.split("/").length === 4`, which is one slug segment.
+// The homepage (no segments) therefore scores 5, as it does today -- kept for parity.
+const pageRankForSlug = (slug: string[]): number =>
+  isTutorialSlug(slug) ? 1 : slug.length === 1 ? 10 : 5
+
+const categoryForSlug = (slug: string[]): string => {
+  if (slug[0] === "developers" && slug[1] === "docs") return "docs"
+  if (isTutorialSlug(slug)) return "tutorials"
+  if (slug[0] === "developers") return "devs"
+  return "other"
+}
+
+/**
  * Get the default OG image for a page based on the slug
  * @param slug - the slug of the page
  * @returns relative path of image
@@ -146,6 +166,11 @@ export const getMetadata = async ({
     },
     other: {
       "docsearch:description": description,
+      // The self-hosted scraper does not read `<html lang>`; the filter the app
+      // sends (`language:=<locale>`) is only populated from this tag.
+      "docsearch:language": locale,
+      "docsearch:pagerank": pageRankForSlug(slug),
+      "docsearch:category": categoryForSlug(slug),
     },
   }
 

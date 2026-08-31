@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-app-descriptions.json",
-  "generatedAt": "2026-08-05T05:28:10.579Z",
-  "rootHash": "e5df32f6dae0",
+  "generatedAt": "2026-08-20T21:59:51.289Z",
+  "rootHash": "68b2f5dc26b7",
   "tree": {
-    "contentHash": "200ccf2a448e",
-    "anchorHash": "c4abcd880a36",
+    "contentHash": "41c1a0b44dbc",
+    "anchorHash": "88545b6fd826",
     "children": {
       "app-0xbow-description": {
         "contentHash": "d6f1ff938878",
@@ -583,10 +583,6 @@
         "contentHash": "64d53839e023",
         "anchorHash": "e3b0c44298fc"
       },
-      "app-scout-game-description": {
-        "contentHash": "50f7349b8886",
-        "anchorHash": "e3b0c44298fc"
-      },
       "app-self-description": {
         "contentHash": "1c7b5748cedd",
         "anchorHash": "e3b0c44298fc"
@@ -933,7 +929,6 @@
       "app-sablier-description",
       "app-safe-description",
       "app-sandbox-description",
-      "app-scout-game-description",
       "app-self-description",
       "app-semaphore-description",
       "app-sequence-description",
@@ -986,5 +981,5 @@
       "app-zupass-description"
     ]
   },
-  "sourceCommitSha": "729918a20bdc32ba5f177eef1ff4712846b5dcbd"
+  "sourceCommitSha": "1988a451065e8d91e60a09d73935256ab102a52c"
 }

@@ -7,8 +7,8 @@ The per-file pipeline is a deterministic pure function from English changes to a
 - **english-A**: previous English content, retrieved via `git show {sourceCommitSha}:{path}` from the stored source manifest
 - **english-B**: current English content on disk
 - **locale-A**: existing translation on disk, corresponding to english-A
-- **source manifest** (`.manifest-source.json`): Merkle tree of english-A's content, including `sourceCommitSha`
-- **translation manifest** (`.manifest-translation.json`): Merkle tree mirroring the English tree structure but with per-section locale hashes + structural element mapping
+- **source manifest** (`.manifests/{destPath}/source.json`): Merkle tree of english-A's content, including `sourceCommitSha`
+- **translation manifest** (`.manifests/{destPath}/translation.json`): Merkle tree mirroring the English tree structure but with per-section locale hashes + structural element mapping
 
 ## Output
 
@@ -93,6 +93,10 @@ What it does:
 
 Manifest impact: source manifest unchanged (source didn't change); translation manifest updated to reflect translated values.
 
+### Phase 4 batching and its bounds
+
+Changed sections are packed into as few calls as fit, not one per section. Packing rules, budgets, and the choke point live in `references/runbooks/cost-guard-tripped.md` ("How batching packs calls").
+
 ## Phase 5: Assembly
 
 Splices LLM-translated sections (Phase 4) into the deterministically-updated locale file (Phase 3 output):
@@ -113,18 +117,6 @@ Splices LLM-translated sections (Phase 4) into the deterministically-updated loc
 
 **On partial failure**: do NOT update either manifest. The next run should re-detect those changes and retry. Stamp manifests only when all phases successfully completed.
 
-## Test assertions (per phase, high level)
-
-| Phase | What tests check                                                                                                                             |
-| ----- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1     | ChangeSet contains exactly the expected node changes; DiffResult sections classified correctly                                               |
-| 2     | Each fixture mutation lands in the correct work list; mixed sections route entirely to llm-required                                          |
-| 3     | Inert changes applied to correct elements (match by value, not position); unchanged prose byte-identical; llm-required sections not modified |
-| 4     | Mock LLM receives only the llm-required sections; receives english-B content (not english-A)                                                 |
-| 4b    | Translatable attrs translated; non-translatable preserved; idempotent on re-run; malformed batch isolated                                    |
-| 5     | All deterministic + LLM changes present; unchanged sections byte-identical; section order matches english-B                                  |
-| 6     | Source manifest rootHash matches english-B tree; sourceCommitSha populated; neither manifest written on any failure                          |
-
 ## Open questions / known gaps
 
 Surfaced in `tests/specs/PIPELINE-SPEC.md`; load that doc when you hit one:
@@ -134,10 +126,3 @@ Surfaced in `tests/specs/PIPELINE-SPEC.md`; load that doc when you hit one:
 - Code fence insertion point for added structural fences — needs implementation-level definition relative to other elements.
 - Partial-failure strategy is currently all-or-nothing on manifest stamping. Wasteful on retry; may revisit for per-section stamping later.
 
-## What this reference does NOT cover
-
-- Gemini API integration details (see `references/ethglossary.md` for term lookups; `gemini.ts` for the adapter)
-- GitHub Actions workflow shape (see `references/orchestration.md`)
-- Multi-file batching, chunking for large files (see `tests/specs/CONCURRENCY-SPEC.md`)
-- Post-import sanitizer (see `references/sanitizer.md`)
-- Image alt text translation (known gap; alt text in markdown images is not classified as translatable by the current parser)

@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/what-are-apps/index.md",
-  "generatedAt": "2026-06-30T01:02:57.697Z",
-  "rootHash": "41182d9f3f3a",
+  "generatedAt": "2026-08-07T06:17:24.719Z",
+  "rootHash": "96acd967f65b",
   "tree": {
-    "contentHash": "20d01754e9db",
-    "anchorHash": "282f7731c079",
+    "contentHash": "3a8ec18852b3",
+    "anchorHash": "5a0acd623be8",
     "children": {
       "frontmatter:title": {
         "contentHash": "0d502367792d",
@@ -297,8 +297,8 @@
         ]
       },
       "faq": {
-        "contentHash": "fcd746faa25e",
-        "anchorHash": "b0b6fa178baa",
+        "contentHash": "4de91a1998dd",
+        "anchorHash": "3665b35a12e0",
         "labelHash": "e956a9404b46",
         "children": {
           "_label": {
@@ -378,13 +378,29 @@
               "link:0",
               "prose:2"
             ]
+          },
+          "component:4": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:5": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "8225e5bbd00c",
+            "children": {
+              "attr:quizKey": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "5493778c6122"
+              }
+            }
           }
         },
         "childrenOrder": [
           "_label",
           "component:1",
           "component:2",
-          "component:3"
+          "component:3",
+          "component:4",
+          "component:5"
         ]
       }
     },
@@ -408,5 +424,5 @@
       "faq"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "3c76f545357f4d2d02a6f906d4b647d531be7088"
 }

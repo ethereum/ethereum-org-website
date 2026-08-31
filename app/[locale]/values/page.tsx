@@ -64,8 +64,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       title: t("page-values-card-privacy-title"),
       description: t("page-values-card-privacy-description"),
       icon: <PrivacyIcon />,
-      // Only Privacy has a live destination; the other three deep-dive pages
-      // are WIP, so their CTAs are intentionally omitted.
+      // Privacy and Open Source have live destinations; the other two
+      // deep-dive pages are WIP, so their CTAs are intentionally omitted.
       cta: { label: t("page-values-card-privacy-cta"), href: "/privacy" },
     },
     {
@@ -73,6 +73,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       title: t("page-values-card-open-source-title"),
       description: t("page-values-card-open-source-description"),
       icon: <OpenSourceStakingIcon />,
+      cta: {
+        label: t("page-values-card-open-source-cta"),
+        href: "/open-source",
+      },
     },
     {
       id: "censorship-resistance",

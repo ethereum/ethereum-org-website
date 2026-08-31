@@ -25,11 +25,7 @@ Use the `/filter` endpoint to get the subset of glossary terms that actually app
 6. **MDX syntax errors are CRITICAL (build-breaking).** Raw `<` before numbers, unclosed backticks, orphaned closing tags, JSX attributes with embedded unescaped quotes — any of these breaks the build for that locale. Flag and fix.
 7. **Reporting zero critical issues is a valid outcome.** Don't invent issues to "show your work." If a thorough review surfaces no criticals, report `0 critical, N warnings` (or `0/0`) and that's a valid result.
 8. **Auto-fix is opt-out, not opt-in.** `/review-translations` applies fixes by default. Use `--no-fix` for review-only runs (GitHub Actions context, no commit auth). The review report still lists what would have been fixed.
-9. **All review changes go on the `intl/pending-*` branch being reviewed — NEVER `dev`.** Translation fixes AND knowledge-base updates (`known-patterns.md`, `per-language/{lang}.md`) for a given review are committed to that review's own `intl/pending-{base}` branch so they ride with the PR to GitHub. See the next section.
-
-## Where Review Changes Live
-
-Both translation fixes and knowledge-base updates (`per-language/{lang}.md`, `known-patterns.md`) go on the `intl/pending-{base}` branch under review — the `/review-translations` worktree — so they ride with the PR. Never leave review artifacts on `dev`; if you catch yourself editing `.claude/translation-review/` in the `dev` checkout, move them to the review branch and restore `dev`. Sequence: commit → push → submit review (`--approve` once the fix is pushed and no criticals remain, else `--comment`).
+9. **All review changes go on the `intl/pending-*` branch being reviewed — NEVER `dev`.** Translation fixes AND knowledge-base updates (`known-patterns.md`, `per-language/{lang}.md`) are committed to that review's own `intl/pending-{base}` branch (the `/review-translations` worktree) so they ride with the PR. If you catch yourself editing `.claude/translation-review/` in the `dev` checkout, move the changes to the review branch and restore `dev`. Sequence: commit → push → submit review (`--approve` once the fix is pushed and no criticals remain, else `--comment`).
 
 ## Highest-Value Gotchas
 
@@ -37,12 +33,7 @@ These are landmines where the obvious-looking call is wrong. The full set is in 
 
 ### Frontmatter `tags` arrays mix two policies
 
-Tutorial markdown files have `tags:` in YAML frontmatter. They contain a mix of:
-
-- **Brand-name tags** (`"solidity"`, `"hardhat"`, `"alchemy"`, `"JavaScript"`, `"ERC-721"`) — MUST stay English. The sanitizer auto-fixes these; flag only if missed.
-- **Concept/category tags** (`"smart contracts"`, `"testing"`, `"security"`, `"deploying"`, `"frontend"`, `"nodes"`) — INTENTIONALLY translated into the target language. Translated forms like `"smart kontrakt účty"` (Czech) or `"bezpečnost"` (Czech security) are **correct**.
-
-Rule: proper noun / product name → English. Generic descriptive term → translated form is right.
+Tutorial frontmatter `tags:` mix brand-name tags (stay English) with concept/category tags (intentionally translated — do NOT revert). Rule of thumb: proper noun / product name → English; generic descriptive term → translated form is right. Details and examples: `references/known-patterns.md`.
 
 ### Semantic inversions on consensus terms
 
@@ -63,14 +54,6 @@ Real translation values sometimes contain "Lorem ipsum dolor sit amet" or simila
 ### Asymmetric backticks and orphaned HTML tags
 
 Single-open / double-close backticks (`` `text`` ``), missing `</em>`before`</li>`, raw `</a>` without opener — all break MDX compilation. Critical.
-
-### `/review-translations` requires a named branch, never detached HEAD
-
-The slash command's worktree setup enforces this; if you script around it, the build verification step depends on the named branch being checked out.
-
-### `gh` CLI in Claude Code sandbox
-
-`gh` requires `dangerouslyDisableSandbox: true` due to the sandbox's TLS proxy. Git commands work fine in sandbox (SSH). `pnpm install` / `pnpm build` may also need the sandbox disable on filesystem-heavy operations.
 
 ## Quick "Where Do I Look?" Cheatsheet
 

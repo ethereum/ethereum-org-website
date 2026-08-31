@@ -87,9 +87,16 @@ export async function fetchQuizStats(): Promise<QuizStatsData> {
     throw new Error(`No "${RETRY_NAME}" row returned by Matomo`)
   }
 
+  // Same reasoning, and `undefined` rather than falsy: a lifetime sum of 0 is a
+  // real (if implausible) result, an absent field is a dropped event value.
+  if (answered.sum_event_value === undefined) {
+    throw new Error(
+      `No event value on the "${ANSWERED_ACTION}" row returned by Matomo`
+    )
+  }
+
   const questionsAnswered = answered.nb_events
-  const averageScore =
-    ((answered.sum_event_value ?? 0) / questionsAnswered) * 100
+  const averageScore = (answered.sum_event_value / questionsAnswered) * 100
   const retryRate = (retried.nb_events / questionsAnswered) * 100
 
   const data: QuizStatsData = {
