@@ -237,11 +237,11 @@ const quizzesSectionsRaw: QuizzesHubSection[] = [
     quizzes: [
       { id: "what-is-ethereum", level: "beginner" },
       { id: "what-is-ether", level: "beginner" },
-      { id: "ethereum-vs-bitcoin", level: "beginner" },
       { id: "wallets", level: "beginner" },
       { id: "what-are-apps", level: "beginner" },
       { id: "web3", level: "beginner" },
       { id: "energy-consumption", level: "beginner" },
+      { id: "ethereum-vs-bitcoin", level: "beginner" },
     ],
   },
   {
