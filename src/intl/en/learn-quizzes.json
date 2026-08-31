@@ -1236,8 +1236,6 @@
   "scaling-staking-nodes": "Scaling, staking and nodes",
   "scaling-staking-nodes-description": "How Ethereum grows beyond mainnet, and how validators and node operators keep the network running.",
   "page-energy-consumption": "Ethereum: a green and efficient blockchain",
-  "page-daos": "DAOs",
-  "page-defi": "DeFi",
   "page-proof-of-stake": "Proof-of-stake",
   "proof-of-stake-1-prompt": "A validator tries to defraud the network by proposing conflicting blocks. What does the protocol do?",
   "proof-of-stake-1-a-label": "Destroys some or all of the ETH they staked",

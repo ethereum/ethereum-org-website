@@ -16,7 +16,7 @@ export default async function QuizzesPageJsonLD({
   locale: Lang | undefined
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations("page-quizzes")
+  const t = await getTranslations("learn-quizzes")
   const tCommon = await getTranslations("common")
 
   const url = normalizeUrlForJsonLd(locale, `/quizzes/`)

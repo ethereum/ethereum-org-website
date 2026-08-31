@@ -1,0 +1,249 @@
+"use client"
+
+import { useCallback, useMemo } from "react"
+import { RotateCcw } from "lucide-react"
+
+import type {
+  CatalogFilterState,
+  CatalogSetFilter,
+} from "@/components/FilterableCatalog/types"
+import { asArray, toggleId } from "@/components/FilterableCatalog/utils"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import WalletFilterGroup, { type WalletFilterOption } from "./WalletFilterGroup"
+
+// Also read by WalletsCatalog's filterFn.
+export const DEVICES_KEY = "devices"
+export const NETWORKS_KEY = "networks"
+export const PURCHASES_KEY = "purchases"
+export const LANGUAGE_KEY = "language"
+export const ADVANCED_KEY = "advanced"
+
+const ALL_FILTER_KEYS = [
+  DEVICES_KEY,
+  NETWORKS_KEY,
+  PURCHASES_KEY,
+  LANGUAGE_KEY,
+  ADVANCED_KEY,
+] as const
+
+// Category kept from the old sidebar for trend comparability.
+const trackFilterToggle = (action: string, name: string) =>
+  trackCustomEvent({
+    eventCategory: "WalletFilterSidebar",
+    eventAction: action,
+    eventName: name,
+  })
+
+type WalletFiltersLabels = {
+  device: string
+  buySell: string
+  network: string
+  language: string
+  advanced: string
+}
+
+type WalletFiltersProps = {
+  locale: string
+  state: CatalogFilterState
+  setFilter: CatalogSetFilter
+  deviceOptions: WalletFilterOption[]
+  purchaseOptions: WalletFilterOption[]
+  networkOptions: WalletFilterOption[]
+  languageOptions: WalletFilterOption[]
+  advancedOptions: WalletFilterOption[]
+  labels: WalletFiltersLabels
+}
+
+/**
+ * Each group is memoized on its own slice of `state`, so toggling one group
+ * doesn't re-render the others (notably the ~30-item network list). That
+ * isolation is what keeps INP down — don't collapse it into shared props.
+ */
+export default function WalletFilters({
+  locale,
+  state,
+  setFilter,
+  deviceOptions,
+  purchaseOptions,
+  networkOptions,
+  languageOptions,
+  advancedOptions,
+  labels,
+}: WalletFiltersProps) {
+  const devicesValue = state[DEVICES_KEY]
+  const networksValue = state[NETWORKS_KEY]
+  const purchasesValue = state[PURCHASES_KEY]
+  const languageValue = state[LANGUAGE_KEY]
+  const advancedValue = state[ADVANCED_KEY]
+
+  const selectedDevices = useMemo(() => asArray(devicesValue), [devicesValue])
+  const selectedNetworks = useMemo(
+    () => asArray(networksValue),
+    [networksValue]
+  )
+  const selectedPurchases = useMemo(
+    () => asArray(purchasesValue),
+    [purchasesValue]
+  )
+  const selectedLanguages = useMemo(
+    () => asArray(languageValue),
+    [languageValue]
+  )
+  const selectedAdvanced = useMemo(
+    () => asArray(advancedValue),
+    [advancedValue]
+  )
+
+  const onToggleDevice = useCallback(
+    (optionId: string) => {
+      setFilter(DEVICES_KEY, toggleId(selectedDevices, optionId), {
+        scroll: false,
+      })
+      trackFilterToggle(
+        optionId,
+        `${optionId} ${!selectedDevices.includes(optionId)}`
+      )
+    },
+    [setFilter, selectedDevices]
+  )
+
+  const onTogglePurchase = useCallback(
+    (optionId: string) => {
+      setFilter(PURCHASES_KEY, toggleId(selectedPurchases, optionId), {
+        scroll: false,
+      })
+      trackFilterToggle(
+        optionId,
+        `${optionId} ${!selectedPurchases.includes(optionId)}`
+      )
+    },
+    [setFilter, selectedPurchases]
+  )
+
+  const onToggleNetwork = useCallback(
+    (optionId: string) => {
+      setFilter(NETWORKS_KEY, toggleId(selectedNetworks, optionId), {
+        scroll: false,
+      })
+      trackFilterToggle("network", optionId)
+    },
+    [setFilter, selectedNetworks]
+  )
+
+  const onToggleLanguage = useCallback(
+    (optionId: string) => {
+      setFilter(LANGUAGE_KEY, toggleId(selectedLanguages, optionId), {
+        scroll: false,
+      })
+      // The old sidebar logged the language name, not its code — keep it comparable.
+      const name = languageOptions.find(({ id }) => id === optionId)?.label
+      trackFilterToggle("Language search", name ?? optionId)
+    },
+    [setFilter, selectedLanguages, languageOptions]
+  )
+
+  const onToggleAdvanced = useCallback(
+    (optionId: string) => {
+      setFilter(ADVANCED_KEY, toggleId(selectedAdvanced, optionId), {
+        scroll: false,
+      })
+      trackFilterToggle(
+        optionId,
+        `${optionId} ${!selectedAdvanced.includes(optionId)}`
+      )
+    },
+    [setFilter, selectedAdvanced]
+  )
+
+  return (
+    <div>
+      <WalletFilterGroup
+        locale={locale}
+        label={labels.device}
+        defaultOpen
+        options={deviceOptions}
+        selectedIds={selectedDevices}
+        onToggle={onToggleDevice}
+      />
+
+      <WalletFilterGroup
+        locale={locale}
+        label={labels.buySell}
+        defaultOpen
+        options={purchaseOptions}
+        selectedIds={selectedPurchases}
+        onToggle={onTogglePurchase}
+      />
+
+      <WalletFilterGroup
+        locale={locale}
+        label={labels.network}
+        defaultOpen
+        scrollable
+        options={networkOptions}
+        selectedIds={selectedNetworks}
+        onToggle={onToggleNetwork}
+      />
+
+      <WalletFilterGroup
+        locale={locale}
+        label={labels.language}
+        scrollable
+        options={languageOptions}
+        selectedIds={selectedLanguages}
+        onToggle={onToggleLanguage}
+      />
+
+      <WalletFilterGroup
+        locale={locale}
+        label={labels.advanced}
+        scrollable
+        options={advancedOptions}
+        selectedIds={selectedAdvanced}
+        onToggle={onToggleAdvanced}
+      />
+    </div>
+  )
+}
+
+/** Rendered via FilterableCatalog's `renderSidebarHeader` slot. */
+export function WalletFiltersHeader({
+  state,
+  setFilter,
+  labels,
+}: {
+  state: CatalogFilterState
+  setFilter: CatalogSetFilter
+  labels: { filters: string; reset: string }
+}) {
+  const activeCount = ALL_FILTER_KEYS.reduce(
+    (total, key) => total + asArray(state[key]).length,
+    0
+  )
+
+  const reset = useCallback(() => {
+    for (const key of ALL_FILTER_KEYS) {
+      setFilter(key, undefined, { scroll: false })
+    }
+    trackFilterToggle("Reset button", "reset_click")
+  }, [setFilter])
+
+  return (
+    <div className="flex items-center justify-between px-1">
+      <p className="text-sm font-bold">
+        {labels.filters} ({activeCount})
+      </p>
+      <button
+        type="button"
+        onClick={reset}
+        disabled={activeCount === 0}
+        className="flex items-center gap-1.5 text-sm text-primary transition-opacity hover:underline disabled:pointer-events-none disabled:opacity-40"
+      >
+        <RotateCcw className="size-4" />
+        {labels.reset}
+      </button>
+    </div>
+  )
+}

@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/component-devcon-banner.json",
+  "generatedAt": "2026-08-22T01:07:03.626Z",
+  "rootHash": "a1e7ab93b706",
+  "tree": {
+    "contentHash": "152059b2d73e",
+    "anchorHash": "fadbe909da84",
+    "children": {
+      "logo-alt": {
+        "contentHash": "1a0af956390a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "location": {
+        "contentHash": "313dfdd60bfe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "headline": {
+        "contentHash": "85c4f1183a39",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "title": {
+        "contentHash": "0b5549797451",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subtitle": {
+        "contentHash": "79cbb8f00432",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "cta-get-tickets": {
+        "contentHash": "23ba83979848",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "logo-alt",
+      "location",
+      "headline",
+      "title",
+      "subtitle",
+      "cta-get-tickets"
+    ]
+  },
+  "sourceCommitSha": "c2bc0e734087e0e399309f9ada3fdd35b5a82d51"
+}

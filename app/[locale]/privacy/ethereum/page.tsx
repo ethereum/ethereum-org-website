@@ -207,7 +207,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <p>{t("page-privacy-ethereum-data-terms-description-2")}</p>
           <p>{t("page-privacy-ethereum-data-terms-description-3")}</p>
           <Alert variant="warning">
-            <AlertIcon className="[&>svg]:size-10 [&>svg]:text-body!">
+            <AlertIcon size="lg" className="[&>svg]:text-body!">
               <Lightbulb />
             </AlertIcon>
             <AlertContent>
@@ -318,7 +318,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           {/* // TODO: QuarkID video -- transcript to be added separately */}
           <VideoWatch slug="quarkid-south-america-ssi" />
           <Alert variant="update">
-            <AlertIcon className="[&>svg]:size-12">
+            <AlertIcon size="xl">
               <Handshake />
             </AlertIcon>
             <AlertContent>
@@ -388,7 +388,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <h3>{t("page-privacy-ethereum-communication-title")}</h3>
           <p>{t("page-privacy-ethereum-communication-description-1")}</p>
           <Alert variant="warning">
-            <AlertIcon className="[&>svg]:size-10 [&>svg]:text-body!">
+            <AlertIcon size="lg" className="[&>svg]:text-body!">
               <Lightbulb />
             </AlertIcon>
             <AlertContent>

@@ -5,12 +5,10 @@ lang: id
 template: upgrade
 ---
 
-# Glamsterdam {#glamsterdam}
-
 <Alert variant="update">
 <AlertContent>
 <AlertTitle>
-Glamsterdam adalah peningkatan Ethereum mendatang yang direncanakan untuk paruh kedua tahun 2026
+Glamsterdam adalah peningkatan Ethereum mendatang yang direncanakan untuk Q4 2026
 </AlertTitle>
 <AlertDescription>
 Peningkatan Glamsterdam hanyalah satu langkah dalam tujuan pengembangan jangka panjang Ethereum. Pelajari lebih lanjut tentang [peta jalan protokol](/roadmap/) dan [peningkatan sebelumnya](/ethereum-forks/).
@@ -33,9 +31,9 @@ Peningkatan ini memastikan Ethereum tetap cepat, terjangkau, dan terdesentralisa
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Catatan: Artikel ini saat ini menyoroti pilihan EIP yang sedang dipertimbangkan untuk disertakan dalam Glamsterdam. Proposal tambahan yang secara aktif diuji di devnet meliputi EIP-7778, EIP-7843, EIP-7976, EIP-7981, dan EIP-8024. Untuk pembaruan status terbaru, lihat [peningkatan Glamsterdam di Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Catatan: Artikel ini menyoroti pilihan EIP yang dijadwalkan untuk disertakan dalam Glamsterdam. Proposal terjadwal tambahan yang sedang diuji di devnet meliputi EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246, dan EIP-8282. Untuk pembaruan status terbaru, lihat [peningkatan Glamsterdam di Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
-Jika Anda ingin menambahkan EIP yang sedang dipertimbangkan untuk Glamsterdam, tetapi belum ditambahkan ke halaman ini, [pelajari cara berkontribusi ke ethereum.org di sini](/contributing/).
+Jika Anda ingin menambahkan EIP yang sedang dipertimbangkan untuk Glamsterdam, tetapi belum ditambahkan ke halaman ini, [pelajari cara berkontribusi pada ethereum.org di sini](/contributing/).
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -47,7 +45,6 @@ Peningkatan Glamsterdam berpusat pada tiga tujuan utama:
 - Mencegah pembengkakan basis data (keberlanjutan): Menyesuaikan biaya jaringan untuk secara akurat mencerminkan biaya perangkat keras jangka panjang dari penyimpanan data baru, membuka blokir peningkatan batas gas di masa mendatang sambil mencegah penurunan kinerja perangkat keras.
 
 Singkatnya, Glamsterdam akan memperkenalkan perubahan struktural untuk memastikan bahwa seiring dengan peningkatan kapasitas jaringan, jaringan tersebut tetap berkelanjutan dan kinerjanya tetap tinggi.
-
 
 ## Skalakan lapisan 1 (l1) & pemrosesan paralel {#scale-l1}
 
@@ -150,7 +147,7 @@ Dengan menetapkan harga tindakan akses state secara lebih akurat, Ethereum dapat
 
 ## Ketahanan jaringan {#network-resilience}
 
-Penyempurnaan tugas validator dan proses keluar memastikan stabilitas jaringan selama peristiwa pemotongan massal dan mendemokratisasi likuiditas. Peningkatan ini membuat jaringan lebih stabil dan memastikan bahwa semua peserta, besar dan kecil, diperlakukan secara adil.
+Penyempurnaan tugas validator dan proses keluar memastikan stabilitas jaringan selama peristiwa pemotongan massal dan mempercepat seberapa cepat staker dapat memindahkan stake mereka. Peningkatan ini membuat jaringan lebih stabil dan memastikan bahwa semua peserta, besar dan kecil, diperlakukan secara adil.
 
 ### Mengecualikan validator yang dipotong dari pengusulan {#exclude-slashed-validators}
 
@@ -165,28 +162,25 @@ Karena blok dari pengusul yang dipotong secara otomatis ditolak sebagai tidak va
 
 **Sumber daya**: [Spesifikasi teknis EIP-8045](https://eips.ethereum.org/EIPS/eip-8045)
 
-### Biarkan proses keluar menggunakan antrean konsolidasi {#let-exits-use-the-consolidation-queue}
+### Meningkatkan churn keluar dan konsolidasi {#increase-exit-and-consolidation-churn}
 
-- Menutup celah yang memungkinkan validator bersaldo tinggi untuk keluar dari jaringan lebih cepat daripada validator yang lebih kecil melalui antrean konsolidasi
-- Memungkinkan proses keluar reguler melimpah ke antrean kedua ini ketika memiliki kapasitas luang, mengurangi waktu penarikan staking selama periode volume tinggi
-- Mempertahankan keamanan yang ketat untuk menghindari pengubahan batas keamanan inti Ethereum atau melemahkan jaringan
+- Secara signifikan mengurangi waktu penarikan staking dengan membiarkan kapasitas keluar berskala dengan jumlah total ETH yang di-stake, alih-alih dibatasi pada tingkat tetap
+- Memberi konsolidasi validator kapasitas antrean khusus mereka sendiri, mempercepat transisi ke validator yang lebih besar dan lebih efisien
+- Mempertahankan keamanan jaringan melalui parameter keamanan yang dianalisis dengan cermat
 
-Sejak [peningkatan Pectra](/roadmap/pectra) meningkatkan saldo efektif maksimum untuk validator Ethereum dari 32 ETH menjadi 2.048 ETH, celah teknis memungkinkan validator bersaldo tinggi untuk keluar dari jaringan lebih cepat daripada validator yang lebih kecil melalui antrean konsolidasi.
+Batas churn Ethereum adalah batas keamanan pada tingkat di mana validator dapat masuk, keluar, atau menggabungkan (mengkonsolidasikan) ETH yang mereka stake, untuk memastikan keamanan jaringan tidak pernah tidak stabil. Saat ini, keluar dan aktivasi berbagi satu batas yang dibatasi, sehingga selama periode permintaan tinggi, staker dapat menghadapi waktu tunggu yang lama untuk menarik ETH mereka. Konsolidasi, di mana validator bergabung menjadi validator yang lebih besar dengan hingga 2.048 ETH (diaktifkan oleh [peningkatan Pectra](/roadmap/pectra)), juga bersaing untuk kapasitas terbatas ini, yang berarti mengkonsolidasikan set validator penuh akan memakan waktu bertahun-tahun pada tingkat saat ini.
 
-**Biarkan proses keluar menggunakan antrean konsolidasi (atau EIP-8080)** mendemokratisasi antrean konsolidasi untuk semua proses keluar staking, menciptakan satu antrean yang adil untuk semua orang.
+**Meningkatkan churn keluar dan konsolidasi (atau EIP-8061)** mengatur ulang batas-batas ini ke dalam jalur terpisah:
 
-Untuk merinci cara kerjanya saat ini:
+- Aktivasi validator mempertahankan batas yang ada, tidak berubah
+- Keluar tidak lagi dibatasi dan sebaliknya berskala dengan jumlah total ETH yang di-stake
+- Konsolidasi mendapatkan kapasitas khusus mereka sendiri, kira-kira setengah dari ukuran batas aktivasi-keluar gabungan
 
-- Batas churn Ethereum adalah batas keamanan pada tingkat di mana validator dapat masuk, keluar, atau menggabungkan (mengkonsolidasikan) ETH yang di-stake mereka, untuk memastikan keamanan jaringan tidak pernah tidak stabil
-- Karena konsolidasi validator adalah tindakan yang lebih berat dengan lebih banyak bagian yang bergerak daripada proses keluar validator standar, hal ini memakan porsi yang lebih besar dari anggaran keamanan ini (batas churn)
-- Secara khusus, protokol mendikte bahwa biaya keamanan yang tepat dari satu proses keluar standar adalah dua pertiga (2/3) dari biaya satu konsolidasi
+Pada tingkat staking saat ini, ini meningkatkan kapasitas keluar sekitar 4x dan kapasitas konsolidasi sekitar 2x, yang berarti staker dapat menarik ETH mereka jauh lebih cepat selama periode permintaan tinggi dan jaringan bertransisi lebih cepat ke set validator yang lebih kecil dan lebih efisien.
 
-Antrean keluar yang lebih adil akan memungkinkan proses keluar standar untuk meminjam ruang yang tidak terpakai dari antrean konsolidasi selama periode permintaan keluar yang tinggi, menerapkan nilai tukar "3 untuk 2" (untuk setiap 2 tempat konsolidasi yang tidak terpakai, jaringan dapat dengan aman memproses 3 proses keluar standar). Faktor churn 3/2 ini menyeimbangkan permintaan di seluruh antrean konsolidasi dan keluar.
+Karena stake dapat masuk dan keluar dari jaringan lebih cepat, perubahan ini secara kasar membagi dua waktu node dapat tetap offline sebelum membutuhkan titik periksa tepercaya baru-baru ini untuk bergabung kembali dengan jaringan dengan aman (periode subjektivitas lemah, dari sekitar 15,7 hari menjadi sekitar 7 hari). Pertukaran ini dianalisis dengan cermat untuk memastikan keamanan jaringan dipertahankan.
 
-Mendemokratisasi akses ke antrean konsolidasi akan meningkatkan kecepatan pengguna untuk keluar dari stake mereka selama periode permintaan tinggi hingga 2,5x, tanpa mengorbankan keamanan jaringan.
-
-**Sumber daya**: [Spesifikasi teknis EIP-8080](https://eips.ethereum.org/EIPS/eip-8080)
-
+**Sumber daya**: [Spesifikasi teknis EIP-8061](https://eips.ethereum.org/EIPS/eip-8061)
 
 ## Meningkatkan pengalaman pengguna & pengembang {#improve-user-developer-experience}
 
@@ -289,7 +283,7 @@ Ya, Glamsterdam kemungkinan besar akan mengurangi biaya untuk pengguna sehari-ha
 
 Selain itu, untuk keberlanjutan jangka panjang, Glamsterdam memperkenalkan Daftar Akses Tingkat Blok (BAL). Hal ini memungkinkan pemrosesan paralel dan mempersiapkan lapisan 1 (l1) untuk menangani batas gas keseluruhan yang lebih tinggi dengan aman di masa mendatang, yang kemungkinan akan mengurangi biaya gas per transaksi seiring dengan pertumbuhan kapasitas.
 
-### Apakah akan ada perubahan pada kontrak pintar saya yang sudah ada pasca-Glamsterdam?
+### Apakah akan ada perubahan pada kontrak pintar saya yang sudah ada pasca-Glamsterdam? {#will-my-smart-contracts-change}
 
 Kontrak yang ada akan terus berfungsi secara normal setelah Glamsterdam. Pengembang kemungkinan akan mendapatkan beberapa alat baru dan harus meninjau penggunaan gas mereka:
 
@@ -297,6 +291,7 @@ Kontrak yang ada akan terus berfungsi secara normal setelah Glamsterdam. Pengemb
 - Penyebaran Awal Pabrik Deterministik (atau EIP-7997) memperkenalkan kontrak pabrik bawaan yang universal. Ini memungkinkan pengembang untuk menyebarkan aplikasi dan dompet kontrak pintar mereka ke alamat yang sama persis di semua rantai EVM yang berpartisipasi.
 - Jika aplikasi Anda bergantung pada pelacakan kompleks untuk menemukan transfer ETH, Transfer dan pembakaran ETH memancarkan Log (atau EIP-7708) akan memungkinkan Anda beralih menggunakan Log untuk akuntansi yang lebih sederhana dan andal.
 - Peningkatan biaya gas pembuatan state (atau EIP-8037) dan Pembaruan biaya gas akses state (atau EIP-8038) memperkenalkan model keberlanjutan baru yang akan mengubah biaya penyebaran kontrak tertentu, karena membuat akun baru atau penyimpanan permanen akan memiliki biaya tetap standar baru berdasarkan ukuran data yang dibuat.
+
 ### Bagaimana Glamsterdam akan memengaruhi penyimpanan node dan persyaratan perangkat keras? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 
 Beberapa EIP yang sedang dipertimbangkan untuk Glamsterdam mengatasi penurunan kinerja (cliff) dari pertumbuhan state:

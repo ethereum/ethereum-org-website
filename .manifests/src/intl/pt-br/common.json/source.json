@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/common.json",
-  "generatedAt": "2026-07-28T21:56:25.767Z",
-  "rootHash": "7dd84a54ecd1",
+  "generatedAt": "2026-08-20T21:59:51.386Z",
+  "rootHash": "909c4935d2f7",
   "tree": {
-    "contentHash": "221d9c05dfe4",
-    "anchorHash": "f5888b41b282",
+    "contentHash": "eb30db297423",
+    "anchorHash": "85546ce2e107",
     "children": {
       "about-ethereum-org": {
         "contentHash": "9aafb3686977",
@@ -515,6 +515,10 @@
       },
       "events": {
         "contentHash": "8d14f6e72de8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evm": {
+        "contentHash": "6676f17ddccb",
         "anchorHash": "e3b0c44298fc"
       },
       "feedback-card-prompt-article": {
@@ -1740,6 +1744,10 @@
         "contentHash": "ed077f3d8125",
         "anchorHash": "e3b0c44298fc"
       },
+      "open-source": {
+        "contentHash": "67a0d2e0dab4",
+        "anchorHash": "e3b0c44298fc"
+      },
       "page-actions": {
         "contentHash": "adc00f399f4e",
         "anchorHash": "e3b0c44298fc"
@@ -1978,6 +1986,10 @@
       },
       "tools": {
         "contentHash": "ea93d6a262ec",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "transactions": {
+        "contentHash": "3e5136fd4b11",
         "anchorHash": "e3b0c44298fc"
       },
       "translation-banner-no-bugs-content": {
@@ -2236,6 +2248,7 @@
       "ethereum-wallets",
       "ethereum-whitepaper",
       "events",
+      "evm",
       "feedback-card-prompt-article",
       "feedback-card-prompt-page",
       "feedback-card-prompt-tutorial",
@@ -2537,6 +2550,7 @@
       "on-this-page",
       "onchain-gaming",
       "open",
+      "open-source",
       "page-actions",
       "page-languages-filter-label",
       "page-languages-filter-placeholder",
@@ -2594,6 +2608,7 @@
       "terms-and-conditions",
       "terms-of-use",
       "tools",
+      "transactions",
       "translation-banner-no-bugs-content",
       "translation-banner-no-bugs-dont-show-again",
       "translation-banner-no-bugs-title",
@@ -2630,5 +2645,5 @@
       "region-sint-eustatius-netherlands"
     ]
   },
-  "sourceCommitSha": "f99d74bf2ad4ecaa64f42bc984735fecc8fe83af"
+  "sourceCommitSha": "1988a451065e8d91e60a09d73935256ab102a52c"
 }

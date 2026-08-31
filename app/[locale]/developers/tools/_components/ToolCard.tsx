@@ -32,7 +32,6 @@ const ToolCard = memo(function ToolCard({
           <AppWindowMac className="size-12 text-body-medium group-hover/appcard:text-primary-hover" />
         }
         href={`/developers/tools/${getToolKey(tool)}/`}
-        layout="horizontal"
         imageSize="thumbnail"
         className="h-fit p-4"
       />

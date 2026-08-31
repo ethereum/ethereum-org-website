@@ -151,3 +151,5 @@ _Знаете ресурс сообщества, который помог ва�
 - [Транзакции](/developers/docs/transactions/)
 - [Газ](/developers/docs/gas/)
 - [Доказательство доли владения](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />
