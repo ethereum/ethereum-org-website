@@ -58,6 +58,38 @@ const taggedEips = (markdown: string, slug: string): number[] =>
     .map(([, , id]) => Number(id))
     .sort((a, b) => a - b)
 
+/**
+ * Every `<EipTag />` anywhere in English roadmap content, not just on the pages
+ * listed in `PAGES`. The per-page checks above need a `**Resources**` block to
+ * know what a page claims to document, which the shorter pages do not use — but
+ * a chip with a typo'd id or a wrong `upgrade` renders nothing on any page, so
+ * that failure is worth catching everywhere.
+ */
+test("every EipTag in roadmap content resolves to a data entry", () => {
+  const dir = path.join(process.cwd(), "public/content/roadmap")
+  const files = fs
+    .readdirSync(dir, { recursive: true, encoding: "utf-8" })
+    .filter((f) => f.endsWith("index.md"))
+
+  const unresolved: string[] = []
+  let found = 0
+
+  for (const file of files) {
+    const markdown = fs.readFileSync(path.join(dir, file), "utf-8")
+    for (const [, upgrade, id] of markdown.matchAll(
+      /<EipTag\s+upgrade="([^"]+)"\s+id=\{(\d+)\}\s*\/>/g
+    )) {
+      found++
+      const eip = upgrades[upgrade]?.eips.find((e) => e.id === Number(id))
+      if (!eip) unresolved.push(`${file}: upgrade="${upgrade}" id={${id}}`)
+    }
+  }
+
+  // Guards against the parser matching nothing and the check passing vacuously.
+  expect(found).toBeGreaterThan(0)
+  expect(unresolved).toEqual([])
+})
+
 for (const { slug, file } of PAGES) {
   test.describe(`${slug} EIP chip coverage`, () => {
     const markdown = fs.readFileSync(path.join(process.cwd(), file), "utf-8")
