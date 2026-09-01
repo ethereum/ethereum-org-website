@@ -65,12 +65,22 @@ export const formatDate = (
   if (!isValidDate(date)) {
     return ""
   }
-  return dateTimeFormat(locale, {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-    ...options,
-  }).format(new Date(date))
+  return (
+    dateTimeFormat(locale, {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+      ...options,
+    })
+      .format(new Date(date))
+      // Normalize whitespace to avoid SSR/client hydration mismatches: Node's ICU
+      // and the browser's ICU can emit different space characters (e.g. U+202F
+      // narrow no-break space vs a regular U+0020) around date parts. The two
+      // render identically but differ byte-for-byte, tripping React's hydration
+      // check. Collapsing whitespace makes the output deterministic. See
+      // formatDateRange for the same fix.
+      .replace(/\s+/g, " ")
+  )
 }
 
 /**
