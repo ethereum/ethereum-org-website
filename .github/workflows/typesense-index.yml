@@ -1,0 +1,112 @@
+# Rebuilds the Typesense search index, one collection per locale.
+#
+# Each locale is an independent matrix job that scrapes, promotes and curates on its own,
+# so a failure in one never blocks the other 24 and never leaves search half-updated:
+# promotion is gated, and a refused promotion leaves the previous index serving.
+name: Typesense index
+
+on:
+  # Netlify's deploy-succeeded notification posts here, so we crawl content that is
+  # actually live rather than merely merged.
+  repository_dispatch:
+    types: [deploy-succeeded]
+  # Safety net: if a deploy notification is ever missed, the index still refreshes
+  # rather than quietly ageing.
+  schedule:
+    - cron: "0 3 * * 0"
+  workflow_dispatch:
+    inputs:
+      locales:
+        description: "Space-separated locales, or blank for all"
+        required: false
+
+concurrency:
+  # A full rebuild takes ~25 min per locale; overlapping runs would fight over aliases.
+  group: typesense-index
+  cancel-in-progress: false
+
+jobs:
+  locales:
+    name: Resolve locales
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.list.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      # i18n.config.json is the single source of truth for supported locales, so adding
+      # one here is the only change needed to index it.
+      - id: list
+        run: |
+          if [ -n "${{ inputs.locales }}" ]; then
+            MATRIX=$(printf '%s\n' ${{ inputs.locales }} | jq -Rsc 'split("\n") | map(select(length > 0))')
+          else
+            MATRIX=$(jq -c '[.[].code]' i18n.config.json)
+          fi
+          echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
+          echo "$MATRIX"
+
+  index:
+    name: ${{ matrix.locale }}
+    needs: locales
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      # Polite to both ethereum.org and the shared Typesense instance.
+      max-parallel: 5
+      matrix:
+        locale: ${{ fromJson(needs.locales.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the per-locale scraper config
+        env:
+          LOCALE: ${{ matrix.locale }}
+        run: |
+          # English URLs are unprefixed (next-intl localePrefix "as-needed"), so /en/
+          # 301s to / and a /en/-scoped crawl matches nothing in the sitemap.
+          if [ "$LOCALE" = "en" ]; then START="https://ethereum.org/"; else START="https://ethereum.org/$LOCALE/"; fi
+          jq --arg loc "$LOCALE" --arg start "$START" \
+            '.index_name = "ethereumorg-staging-\($loc)"
+             | .start_urls = [$start]
+             | .sitemap_urls = ["https://ethereum.org/sitemaps/sitemap/\($loc).xml"]' \
+            typesense/scraper-config.json > /tmp/config.json
+          jq -r '"index_name: \(.index_name)\nstart: \(.start_urls[0])"' /tmp/config.json
+
+      - name: Scrape
+        env:
+          TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_ADMIN_KEY }}
+          TYPESENSE_HOST: ${{ secrets.TYPESENSE_HOST }}
+        run: |
+          docker run --rm \
+            -e TYPESENSE_API_KEY \
+            -e TYPESENSE_HOST \
+            -e TYPESENSE_PORT=443 \
+            -e TYPESENSE_PROTOCOL=https \
+            -e CONFIG="$(jq -r tostring < /tmp/config.json)" \
+            typesense/docsearch-scraper:0.11.0
+
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+
+      # Gated: refuses if the new index shrank, lost `pagerank`, or has no documents for
+      # this locale. On refusal the alias is untouched and the previous index keeps serving.
+      - name: Promote
+        env:
+          TYPESENSE_URL: ${{ secrets.TYPESENSE_URL }}
+          TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_ADMIN_KEY }}
+          TYPESENSE_API_SEARCH_KEY: ${{ secrets.TYPESENSE_SEARCH_KEY }}
+        run: pnpm typesense:promote -- --locale ${{ matrix.locale }}
+
+      # Document ids change on every crawl, so pins are re-resolved against the new
+      # collection each time. Must run after promote so it targets the live alias.
+      - name: Apply curation
+        env:
+          TYPESENSE_URL: ${{ secrets.TYPESENSE_URL }}
+          TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_ADMIN_KEY }}
+          TYPESENSE_API_SEARCH_KEY: ${{ secrets.TYPESENSE_SEARCH_KEY }}
+        run: pnpm typesense:curate -- --locale ${{ matrix.locale }}
