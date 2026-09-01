@@ -5,9 +5,9 @@
  *
  * Deterministic by design: it lists candidates for a human to judge, it never
  * decides that prose is owed. The Friday workflow runs it on every store
- * change, including data-only weeks, and comments when this list is non-empty.
- * Only unshipped upgrades are checked — a live fork's EIP set is frozen, so a
- * missing explainer there is not news.
+ * change, including data-only weeks, and comments when a gap it can trust
+ * remains. Only unshipped upgrades are checked — a live fork's EIP set is
+ * frozen, so a missing explainer there is not news.
  *
  * Translated pages are out of scope: the intl pipeline owns them, and English
  * is where a gap gets closed.
@@ -108,9 +108,17 @@ export const renderReport = (gaps: CoverageGap[]): string => {
   return sections.join("\n\n")
 }
 
-/** The Actions output the Friday workflow branches on. */
+/**
+ * The Actions output the Friday workflow branches on. Networking EIPs alone
+ * never raise it: a number-only match cannot see their wire names, so they sit
+ * in the list indefinitely and would comment every week. They still print.
+ */
 export const coverageGapFlag = (gaps: CoverageGap[]): "true" | "false" =>
-  gaps.length > 0 ? "true" : "false"
+  gaps.some(
+    (gap) => gap.pageMissing || gap.uncovered.some((eip) => !eip.networking)
+  )
+    ? "true"
+    : "false"
 
 if (process.argv[1]?.endsWith("coverage.ts")) {
   const gaps = findGaps()

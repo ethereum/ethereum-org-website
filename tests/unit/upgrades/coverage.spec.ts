@@ -109,6 +109,37 @@ test("a non-empty gap list is the signal to comment on a data-only week", () => 
   ).toBe("true")
 })
 
+test("networking EIPs alone are printed but never trigger a comment", () => {
+  expect(
+    coverageGapFlag([
+      {
+        upgrade: upgrade({}),
+        path: "public/content/roadmap/example/index.md",
+        pageMissing: false,
+        uncovered: [
+          { id: 8070, status: "scheduled", networking: true, decidedAt: null },
+          { id: 8136, status: "scheduled", networking: true, decidedAt: null },
+        ],
+      },
+    ])
+  ).toBe("false")
+})
+
+test("a page that does not exist yet is a gap whatever its EIPs are", () => {
+  expect(
+    coverageGapFlag([
+      {
+        upgrade: upgrade({}),
+        path: "public/content/roadmap/example/index.md",
+        pageMissing: true,
+        uncovered: [
+          { id: 8070, status: "scheduled", networking: true, decidedAt: null },
+        ],
+      },
+    ])
+  ).toBe("true")
+})
+
 test("a networking EIP carries the wire-protocol caveat", () => {
   const gap = {
     upgrade: upgrade({}),
