@@ -18,7 +18,17 @@ export const getLocaleTimestamp = (
       day: "numeric",
     } as Intl.DateTimeFormatOptions)
   const date = new Date(timestamp)
-  return dateTimeFormat(locale, opts).format(date)
+  return (
+    dateTimeFormat(locale, opts)
+      .format(date)
+      // Normalize whitespace to avoid SSR/client hydration mismatches: Node's
+      // ICU and the browser's ICU can emit different space characters (e.g.
+      // U+202F narrow no-break space vs a regular U+0020) around date parts.
+      // The two render identically but differ byte-for-byte, tripping React's
+      // hydration check. Collapsing whitespace makes the output deterministic.
+      // Same fix as formatDateRange in ./date.ts.
+      .replace(/\s+/g, " ")
+  )
 }
 
 /**
