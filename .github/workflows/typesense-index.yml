@@ -61,6 +61,24 @@ jobs:
 
       # Fail in seconds with a clear message rather than after a Docker pull and a
       # Python traceback. Actions secrets are separate from Netlify's environment.
+      # Optional: no SENTRY_DSN means these steps no-op, so monitoring can never be the
+      # reason indexing fails. A stale index is otherwise indistinguishable from a healthy
+      # one -- nothing else notices when this workflow simply stops running.
+      - name: Sentry check-in (start)
+        env:
+          SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
+        run: |
+          # Guarded here rather than in `if:`, which is evaluated before step env exists.
+          [ -n "$SENTRY_DSN" ] || { echo "no SENTRY_DSN; monitoring disabled"; exit 0; }
+          # DSN is https://<public_key>@<host>/<project_id>
+          KEY="${SENTRY_DSN#*//}"; KEY="${KEY%%@*}"
+          REST="${SENTRY_DSN#*@}"; HOST="${REST%%/*}"; PROJECT="${REST##*/}"
+          echo "SENTRY_CRONS=https://$HOST/api/$PROJECT/cron/typesense-index/$KEY/" >> "$GITHUB_ENV"
+          curl -sS -m 10 -X POST \
+            "https://$HOST/api/$PROJECT/cron/typesense-index/$KEY/?environment=${{ matrix.locale }}" \
+            --data-raw '{"status":"in_progress","monitor_config":{"schedule":{"type":"crontab","value":"0 3 * * 0"},"checkin_margin":120,"max_runtime":60}}' \
+            || echo "check-in failed; continuing"
+
       - name: Check secrets
         env:
           TYPESENSE_URL: ${{ secrets.TYPESENSE_URL }}
@@ -128,3 +146,11 @@ jobs:
           TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_ADMIN_KEY }}
           TYPESENSE_API_SEARCH_KEY: ${{ secrets.TYPESENSE_SEARCH_KEY }}
         run: pnpm typesense:curate -- --locale ${{ matrix.locale }}
+
+      - name: Sentry check-in (result)
+        # Always, so a failed index is reported rather than looking like a missed run.
+        if: always() && env.SENTRY_CRONS != ''
+        run: |
+          STATUS=${{ job.status == 'success' && 'ok' || 'error' }}
+          curl -sS -m 10 "${SENTRY_CRONS}?environment=${{ matrix.locale }}&status=$STATUS" \
+            || echo "check-in failed; continuing"
