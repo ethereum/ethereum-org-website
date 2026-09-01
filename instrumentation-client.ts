@@ -69,6 +69,8 @@ Sentry.init({
     /\(ingesteer\.services-prod\.nsvcs\.net\)/,
     // WebView circular reference serialization failures - wallet app injections (ETHORG-72)
     /JSON\.stringify cannot serialize cyclic structures/,
+    // Same failure class as ETHORG-72, V8's wording for the identical error (ETHORG-1AV)
+    /Converting circular structure to JSON/,
     // Extension IPC / DApp bridge errors (ETHORG-FN, ETHORG-AT)
     /Object Not Found Matching Id:\d+/,
     /DApp request timeout/,
