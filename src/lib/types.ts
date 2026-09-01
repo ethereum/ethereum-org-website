@@ -235,12 +235,20 @@ export type RawQuiz = {
 
 export type QuizStatus = "neutral" | "success" | "error"
 
-type QuizLevel = "beginner" | "intermediate" | "advanced"
+export type QuizLevel = "beginner" | "intermediate" | "advanced"
 
 export type QuizzesSection = {
   id: QuizKey
   level: QuizLevel
   next?: QuizKey
+}
+
+/** A hub section. Adding one here is enough: the hub and getNextQuiz both derive from it. */
+export type QuizzesHubSection = {
+  id: string
+  titleKey: string
+  descriptionKey: string
+  quizzes: QuizzesSection[]
 }
 
 export type RawQuizzes = Record<string, RawQuiz>
@@ -298,7 +306,7 @@ export type LocaleContributions = {
 }
 
 export type LocaleDisplayInfo = {
-  localeOption: string
+  localeOption: Lang
   sourceName: string
   targetName: string
   englishName: string
@@ -773,9 +781,70 @@ export type ExtendedRollup = Rollup & {
 }
 
 // Wallets
+/** Fee category; maps to the `page-find-wallet-fee-label-*` intl strings */
+export type WalletFeeType =
+  | "swap"
+  | "swap-bridge"
+  | "buy"
+  | "buy-sell"
+  | "staking"
+  | "shield-unshield"
+  | "device"
+  /** One-off: renders the whole "Free tier, paid plans from {usd}/month" template */
+  | "free-tier-plans"
+
+/** Non-numeric fee values; maps to the `page-find-wallet-fee-value-*` intl strings */
+export type WalletFeeText = "variable" | "undisclosed" | "set-by-provider"
+
+/** Wraps the formatted value; maps to the `page-find-wallet-fee-qualifier-*` intl strings */
+export type WalletFeeQualifier =
+  | "of-rewards"
+  | "per-card"
+  | "lower-with-premium"
+  | "tpt-holder-discounts"
+  /** Requires `qualifierPercent` */
+  | "stablecoins"
+  /** Requires `qualifierPercent` */
+  | "stablecoins-lower-l2"
+  /** Requires `qualifierUsd` */
+  | "free-under-fox-discounts"
+
+/** Exact amount, or [min, max] range */
+export type WalletFeeAmount = number | [min: number, max: number]
+
+export type WalletFee = (
+  | {
+      /** Human-readable percent: 0.875 renders as "0.875%" */
+      percent: WalletFeeAmount
+      /** Renders as "from {value}" */
+      from?: boolean
+      usd?: never
+      text?: never
+    }
+  | {
+      usd: WalletFeeAmount
+      /** Renders as "from {value}" */
+      from?: boolean
+      percent?: never
+      text?: never
+    }
+  | { text: WalletFeeText; percent?: never; usd?: never; from?: never }
+) & {
+  type: WalletFeeType
+  qualifier?: WalletFeeQualifier
+  /** Human-readable percent interpolated into the qualifier string */
+  qualifierPercent?: number
+  /** USD amount interpolated into the qualifier string */
+  qualifierUsd?: number
+}
+
 export type WalletData = {
   last_updated: string
   name: string
+  /** Set only to keep a URL stable across a rename; defaults to slugified name. */
+  slug?: string
+  /** Optional forever — cards and search degrade gracefully without it. */
+  description?: string
   image: StaticImageData
   twBackgroundColor: string
   twGradiantBrandColor: string
@@ -822,6 +891,11 @@ export type WalletData = {
   mpc?: boolean
   new_to_crypto?: boolean
   privacy?: boolean
+  /**
+   * Fees shown on the wallet card, e.g. "Swap fee: 0.85%" or "Device: $149".
+   * Rendered by formatWalletFees; omitted when the wallet has no fee to surface.
+   */
+  fees?: WalletFee[]
 }
 
 export type Wallet = WalletData & {

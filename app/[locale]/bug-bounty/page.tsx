@@ -119,12 +119,12 @@ export default async function Page(props: { params: Promise<Params> }) {
   const clients: CardDetails[] = [
     {
       title: "Besu",
-      link: "https://besu.hyperledger.org/en/stable/",
+      link: "https://docs.besu-eth.org/",
       image: besu,
     },
     {
       title: "Erigon",
-      link: "https://github.com/ledgerwatch/erigon",
+      link: "https://github.com/erigontech/erigon",
       image: erigon,
     },
     {
@@ -155,7 +155,7 @@ export default async function Page(props: { params: Promise<Params> }) {
     },
     {
       title: "Prysm",
-      link: "https://prylabs.net/",
+      link: "https://prysm.offchainlabs.com/docs/",
       image: prysm,
     },
     {
@@ -165,7 +165,7 @@ export default async function Page(props: { params: Promise<Params> }) {
     },
     {
       title: "Teku",
-      link: "https://pegasys.tech/teku",
+      link: "https://consensys.io/teku",
       image: tekuLight,
       className: "[&_img]:dark:invert",
     },
@@ -465,7 +465,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                     {t("page-upgrades-bug-bounty-deposit-contract-specs")}
                   </InlineLink>
                   <br />
-                  <InlineLink href="https://github.com/ethereum/consensus-specs/blob/master/solidity_deposit_contract/deposit_contract.sol">
+                  <InlineLink href="https://github.com/ethereum/solidity-deposit-contract/blob/master/deposit_contract.sol">
                     {t("page-upgrades-bug-bounty-deposit-contract-source")}
                   </InlineLink>
                 </div>
