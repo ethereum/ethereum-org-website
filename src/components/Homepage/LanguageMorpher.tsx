@@ -23,7 +23,7 @@ const LanguageMorpher = () => {
       () =>
         (
           document.querySelector(
-            `button[name="${MOBILE_LANGUAGE_BUTTON_NAME}"`
+            `button[name="${MOBILE_LANGUAGE_BUTTON_NAME}"]`
           ) as HTMLButtonElement
         ).click(),
       1
@@ -32,7 +32,7 @@ const LanguageMorpher = () => {
   const handleDesktopClick = () => {
     ;(
       document.querySelector(
-        `button[name="${DESKTOP_LANGUAGE_BUTTON_NAME}"`
+        `button[name="${DESKTOP_LANGUAGE_BUTTON_NAME}"]`
       ) as HTMLButtonElement
     ).click()
   }
