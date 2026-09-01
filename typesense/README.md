@@ -40,6 +40,16 @@ scraper assigns ids as sequential counters that change on every crawl -- dashboa
 would silently stop matching after the next run. Storing URLs here and resolving them at
 promote time is what keeps them working.
 
+## CORS
+
+The Typesense server must run with `--enable-cors`. The browser queries it directly, and
+without an `Access-Control-Allow-Origin` header the response is discarded client-side --
+the server returns 200, so the modal shows no results and nothing errors visibly.
+
+Origin restriction buys nothing here: the search key ships in the browser bundle by
+design, so the same query works from `curl` regardless. The key's scope is the real
+control. An allowlist would also break on every new deploy-preview subdomain.
+
 ## Secrets
 
 | Secret | Used for |
