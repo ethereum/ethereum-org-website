@@ -1,0 +1,168 @@
+{
+  "_comment": "Pinned search results: query -> ordered paths, prefixed per locale at apply time. Generated from the search rules; hand edits win and are preserved. See typesense/README.md.",
+  "rules": [
+    {
+      "q": "metamask",
+      "pin": [
+        "/wallets/find-wallet/metamask/"
+      ]
+    },
+    {
+      "q": "binance",
+      "pin": [
+        "/get-eth/#country-picker"
+      ]
+    },
+    {
+      "q": "trust wallet",
+      "pin": [
+        "/wallets/find-wallet/trust-wallet/"
+      ]
+    },
+    {
+      "q": "rabby",
+      "pin": [
+        "/wallets/find-wallet/rabby-wallet/"
+      ]
+    },
+    {
+      "q": "bitget",
+      "pin": [
+        "/wallets/find-wallet/bitget-wallet/"
+      ]
+    },
+    {
+      "q": "staking",
+      "pin": [
+        "/staking/"
+      ]
+    },
+    {
+      "q": "base",
+      "pin": [
+        "/layer-2/networks/"
+      ]
+    },
+    {
+      "q": "coinbase",
+      "pin": [
+        "/wallets/find-wallet/coinbase-wallet/",
+        "/get-eth/#country-picker"
+      ]
+    },
+    {
+      "q": "meta mask",
+      "pin": [
+        "/wallets/find-wallet/metamask/"
+      ]
+    },
+    {
+      "q": "phantom",
+      "pin": [
+        "/wallets/find-wallet/phantom/"
+      ]
+    },
+    {
+      "q": "privacy",
+      "pin": [
+        "/privacy/"
+      ]
+    },
+    {
+      "q": "wallets",
+      "pin": [
+        "/wallets/"
+      ]
+    },
+    {
+      "q": "whitepaper",
+      "pin": [
+        "/whitepaper/"
+      ]
+    },
+    {
+      "q": "smart contracts",
+      "pin": [
+        "/smart-contracts/"
+      ]
+    },
+    {
+      "q": "glamsterdam",
+      "pin": [
+        "/roadmap/glamsterdam/"
+      ]
+    },
+    {
+      "q": "defi",
+      "pin": [
+        "/defi/"
+      ]
+    },
+    {
+      "q": "hong",
+      "pin": [
+        "/community/events/#community-hubs"
+      ]
+    },
+    {
+      "q": "usdc",
+      "pin": [
+        "/stablecoins/"
+      ]
+    },
+    {
+      "q": "exodus",
+      "pin": [
+        "/wallets/find-wallet/exodus/"
+      ]
+    },
+    {
+      "q": "layer 2",
+      "pin": [
+        "/layer-2/"
+      ]
+    },
+    {
+      "q": "roadmap",
+      "pin": [
+        "/roadmap/"
+      ]
+    },
+    {
+      "q": "usdt",
+      "pin": [
+        "/stablecoins/"
+      ]
+    },
+    {
+      "q": "kraken",
+      "pin": [
+        "/get-eth/#country-picker"
+      ]
+    },
+    {
+      "q": "stories",
+      "pin": [
+        "/stories/"
+      ]
+    },
+    {
+      "q": "security",
+      "pin": [
+        "/security/"
+      ]
+    },
+    {
+      "q": "crypto.com",
+      "pin": [
+        "/get-eth/#country-picker"
+      ]
+    },
+    {
+      "q": "web3",
+      "pin": [
+        "/web3/"
+      ]
+    }
+  ]
+}
