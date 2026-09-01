@@ -1,10 +1,82 @@
+# TEMPORARY -- revert to the stub before merging.
+#
+# A brand-new workflow file is invisible to `workflow_dispatch` until it reaches the
+# default branch, so `typesense-index.yml` cannot be run from this PR. This file already
+# exists on `dev`, so GitHub lists it and dispatching it against this branch runs *this*
+# copy -- which is how we exercise the indexing pipeline before merge.
+#
+# Deliberately single-locale rather than a 25-way matrix: a test harness should not be
+# able to launch 25 crawls by accident.
 name: Branch Task
 
 on:
   workflow_dispatch:
+    inputs:
+      locale:
+        description: "Locale to index"
+        required: true
+        default: en
+      steps:
+        description: "Which steps to run"
+        required: true
+        default: promote-curate
+        type: choice
+        options:
+          - promote-curate
+          - full
 
 jobs:
-  stub:
+  typesense:
+    name: typesense (${{ inputs.locale }} / ${{ inputs.steps }})
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
-      - run: echo "ok"
+      - uses: actions/checkout@v4
+
+      - name: Build the per-locale scraper config
+        if: inputs.steps == 'full'
+        env:
+          LOCALE: ${{ inputs.locale }}
+        run: |
+          # English URLs are unprefixed (next-intl localePrefix "as-needed"), so /en/
+          # 301s to / and a /en/-scoped crawl matches nothing in the sitemap.
+          if [ "$LOCALE" = "en" ]; then START="https://ethereum.org/"; else START="https://ethereum.org/$LOCALE/"; fi
+          jq --arg loc "$LOCALE" --arg start "$START" \
+            '.index_name = "ethereumorg-staging-\($loc)"
+             | .start_urls = [$start]
+             | .sitemap_urls = ["https://ethereum.org/sitemaps/sitemap/\($loc).xml"]' \
+            typesense/scraper-config.json > /tmp/config.json
+          jq -r '"index_name: \(.index_name)\nstart: \(.start_urls[0])"' /tmp/config.json
+
+      - name: Scrape
+        if: inputs.steps == 'full'
+        env:
+          TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_ADMIN_KEY }}
+          TYPESENSE_HOST: ${{ secrets.TYPESENSE_HOST }}
+        run: |
+          docker run --rm \
+            -e TYPESENSE_API_KEY -e TYPESENSE_HOST \
+            -e TYPESENSE_PORT=443 -e TYPESENSE_PROTOCOL=https \
+            -e CONFIG="$(jq -r tostring < /tmp/config.json)" \
+            typesense/docsearch-scraper:0.11.0
+
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+
+      - name: Promote
+        env:
+          TYPESENSE_URL: ${{ secrets.TYPESENSE_URL }}
+          TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_ADMIN_KEY }}
+          TYPESENSE_API_SEARCH_KEY: ${{ secrets.TYPESENSE_SEARCH_KEY }}
+        run: pnpm typesense:promote -- --locale ${{ inputs.locale }}
+
+      - name: Apply curation
+        env:
+          TYPESENSE_URL: ${{ secrets.TYPESENSE_URL }}
+          TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_ADMIN_KEY }}
+          TYPESENSE_API_SEARCH_KEY: ${{ secrets.TYPESENSE_SEARCH_KEY }}
+        run: pnpm typesense:curate -- --locale ${{ inputs.locale }}
