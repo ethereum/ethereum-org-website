@@ -69,7 +69,15 @@ export const formatCompactNumber = (
     notation: "compact",
     maximumSignificantDigits: 3,
     ...options,
-  }).format(value)
+  })
+    .format(value)
+    // Normalize whitespace to avoid SSR/client hydration mismatches: Node's
+    // ICU and the browser's ICU can emit different space characters (e.g.
+    // U+202F narrow no-break space vs a regular U+0020) between the number
+    // and its compact unit (e.g. "123 M"). The two render identically but
+    // differ byte-for-byte, tripping React's hydration check. See the same
+    // fix in `formatDateRange` (src/lib/utils/date.ts).
+    .replace(/\s+/g, " ")
 
 export const formatPriceUSD = (
   value: number,
