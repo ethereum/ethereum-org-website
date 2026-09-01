@@ -74,6 +74,10 @@ Sentry.init({
     /DApp request timeout/,
     // Cross-origin postMessage from extensions/embedded frames (ETHORG-87)
     /^Error: invalid origin$/,
+    // Wallet provider EIP-1193 rejection (code 4001) thrown as a plain Error
+    // with no code/stack, so getDropReason's wallet-provider check can't
+    // match it (ETHORG-1AD)
+    /User Rejected the Request/i,
   ],
 
   beforeSend(event) {
