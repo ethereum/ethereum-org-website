@@ -74,6 +74,9 @@ Sentry.init({
     /DApp request timeout/,
     // Cross-origin postMessage from extensions/embedded frames (ETHORG-87)
     /^Error: invalid origin$/,
+    // Android WebView JS-interface torn down mid-callback - wallet in-app
+    // browsers (MetaMask/Trust Wallet/etc.) (ETHORG-1AM)
+    /Error invoking postMessage: Java object is gone/,
   ],
 
   beforeSend(event) {
