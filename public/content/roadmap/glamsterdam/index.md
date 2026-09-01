@@ -7,9 +7,6 @@ template: upgrade
 
 <Alert variant="update">
 <AlertContent>
-<AlertTitle>
-Glamsterdam is an upcoming Ethereum upgrade planned for Q4 2026
-</AlertTitle>
 <AlertDescription>
 The Glamsterdam upgrade is only a single step in Ethereum's long-term development goals. Learn more about [the protocol roadmap](/roadmap/) and [previous upgrades](/ethereum-forks/).
 </AlertDescription>
@@ -31,7 +28,7 @@ These improvements ensure Ethereum remains fast, affordable, and decentralized a
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Note: This article highlights a selection of EIPs scheduled for inclusion in Glamsterdam. Additional scheduled proposals being tested in devnets include EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246, and EIP-8282. For the latest status updates, view the [Glamsterdam upgrade on Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Note: This article highlights a selection of EIPs scheduled for inclusion in Glamsterdam. Additional scheduled proposals being tested in devnets include EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246, and EIP-8282. Scope is frozen but can still change before mainnet, as the meta EIP remains in draft. For the latest status updates, view the [Glamsterdam upgrade on Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
 If you want to add an EIP that's under consideration for Glamsterdam, but hasn't been added to this page yet, [learn how to contribute to ethereum.org here](/contributing/).
 </AlertDescription>
@@ -50,7 +47,9 @@ In short, Glamsterdam will introduce structural changes to ensure that as the ne
 
 Meaningful L1 scaling requires moving away from off-protocol trust assumptions and serial execution constraints. Glamsterdam addresses this by enshrining separation of certain block-building duties and introducing new data structures that allow the network to prepare for parallel processing.
 
-### Headliner proposal: Enshrined Proposer-Builder Separation (ePBS) {#epbs}
+### Headliner: Enshrined Proposer-Builder Separation (ePBS) {#epbs}
+
+<EipTag upgrade="glamsterdam" id={7732} />
 
 - Removes off-protocol trust assumptions and reliance on third-party relays
 - Supports L1 scaling by allowing much larger payloads through extended propagation windows
@@ -75,7 +74,9 @@ By replacing off-protocol middleware and relays with in-protocol mechanics, ePBS
 
 **Resources**: [EIP-7732 technical specification](https://eips.ethereum.org/EIPS/eip-7732)
 
-### Headliner proposal: Block-Level Access Lists (BALs) {#bals}
+### Headliner: Block-Level Access Lists (BALs) {#bals}
+
+<EipTag upgrade="glamsterdam" id={7928} />
 
 - Eliminates sequential processing bottlenecks by providing an upfront map of all transaction dependencies, setting the stage for validators to process many transactions in parallel instead of one by one
 - Allows nodes to update their records by reading the final results without needing to replay every transaction (executionless sync), making it much faster to sync a node to the network
@@ -93,6 +94,8 @@ The parallel disk reads enabled by BALs will be a significant step toward a futu
 
 #### eth/71 Block Access List Exchange {#bale}
 
+<EipTag upgrade="glamsterdam" id={8159} />
+
 Block Access List Exchange (eth/71 or EIP-8159) is the direct networking companion to block-level access lists. While BALs unlock parallel execution, eth/71 upgrades the peer-to-peer protocol to allow nodes to actually share these lists over the network. Now required for all execution layer clients, the block access list exchange will enable faster syncing and allow nodes to perform executionless state updates.
 
 **Resources**:
@@ -105,6 +108,8 @@ Block Access List Exchange (eth/71 or EIP-8159) is the direct networking compani
 As the Ethereum network grows faster, it's important to ensure that the cost of using it matches the wear-and-tear on the hardware that runs Ethereum. The network needs to increase its overall capacity limits in order to safely scale and process more transactions.
 
 ### State creation gas cost increase {#state-creation-gas-cost-increase}
+
+<EipTag upgrade="glamsterdam" id={8037} />
 
 - Ensures that the fees to create new accounts or smart contracts accurately reflect the long-term burden they place on Ethereum's database
 - Sets a fixed **cost per state byte (CPSB)** targeting a safe and predictable growth rate of 120 GiB/year, ensuring standard physical hardware can continue running the network
@@ -128,6 +133,8 @@ Pricing data storage more accurately and predictably will help Ethereum safely i
 
 ### State-access gas cost update {#state-access-gas-cost-update}
 
+<EipTag upgrade="glamsterdam" id={8038} />
+
 - Increases the gas costs for when applications read or update information permanently stored on Ethereum (state-access opcodes) to accurately match the compute work these commands require
 - Strengthens network resilience by preventing denial-of-service attacks that exploit artificially cheap data-reading operations
 
@@ -149,6 +156,8 @@ Refinements to validator duties and exit processes ensure network stability duri
 
 ### Exclude slashed validators from proposing {#exclude-slashed-validators}
 
+<EipTag upgrade="glamsterdam" id={8045} />
+
 - Stops penalized (slashed) validators from being selected to propose future blocks, eliminating guaranteed missed slots
 - Keeps Ethereum running smoothly and dependably, preventing severe stalls in the case of a mass slashing event
 
@@ -161,6 +170,8 @@ Because blocks from slashed proposers are automatically rejected as invalid, thi
 **Resources**: [EIP-8045 technical specification](https://eips.ethereum.org/EIPS/eip-8045)
 
 ### Increase exit and consolidation churn {#increase-exit-and-consolidation-churn}
+
+<EipTag upgrade="glamsterdam" id={8061} />
 
 - Significantly reduces staking withdrawal times by letting exit capacity scale with the total amount of ETH staked, instead of being capped at a fixed rate
 - Gives validator consolidations their own dedicated queue capacity, speeding up the transition to larger, more efficient validators
@@ -186,6 +197,8 @@ Ethereum's Glamsterdam upgrade aims to improve the user experience, enhance data
 
 ### Reduce intrinsic transaction gas costs {#reduce-intrinsic-transaction-gas-costs}
 
+<EipTag upgrade="glamsterdam" id={2780} />
+
 - Lowers the base fee for transactions, reducing the overall cost of a simple native ETH payment
 - Makes smaller transfers more affordable, boosting Ethereum's viability as a routine medium of exchange
 
@@ -200,6 +213,8 @@ Together, the EIP-2780 aims to make everyday transfers between existing accounts
 **Resources**: [EIP-2780 technical specification](https://eips.ethereum.org/EIPS/eip-2780)
 
 ### Deterministic Factory Predeploy {#deterministic-factory-predeploy}
+
+<EipTag upgrade="glamsterdam" id={7997} />
 
 - Gives developers a native way to deploy applications and smart contract wallets to the exact same address across multiple chains
 - Allows users to have the same smart wallet address on multiple layer 2 (L2) networks, reducing cognitive load, reducing confusion, and reducing the risk of accidental loss of funds
@@ -217,6 +232,8 @@ This standardization simplifies building and managing cross-chain applications f
 
 ### ETH transfers and burns emit a log {#eth-transfers-and-burns-emit-a-log}
 
+<EipTag upgrade="glamsterdam" id={7708} />
+
 - Automatically generates a permanent record (log) every time ETH is transferred or burned
 - Fixes a historical blind spot that allows apps, exchanges, and bridges to dependably detect user deposits without ad-hoc tracing tools
 
@@ -229,6 +246,8 @@ This will make it much easier and more reliable for wallets, exchanges, and brid
 **Resources**: [EIP-7708 technical specification](https://eips.ethereum.org/EIPS/eip-7708)
 
 ### eth/70 partial block receipt lists {#eth-70-partial-block-receipt-lists}
+
+<EipTag upgrade="glamsterdam" id={7975} />
 
 As we increase the amount of work Ethereum can do, the lists of receipts for those actions (the data records of these transactions) are getting so large that they could potentially cause the network's nodes to fail when trying to sync data with one another.
 

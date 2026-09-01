@@ -1,0 +1,26 @@
+version: 2
+
+updates:
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+    # Zero means "no version-update PRs". Security PRs are exempt from this
+    # limit, so advisories still open PRs while minor/patch churn does not.
+    open-pull-requests-limit: 0
+    labels:
+      - "dependencies 📦"
+    commit-message:
+      prefix: chore(deps)
+      prefix-development: chore(deps-dev)
+    groups:
+      security-production:
+        applies-to: security-updates
+        dependency-type: production
+        patterns:
+          - "*"
+      security-development:
+        applies-to: security-updates
+        dependency-type: development
+        patterns:
+          - "*"

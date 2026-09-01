@@ -10,7 +10,7 @@ import DevconDateLocation from "./date-location"
 
 import devconIndiaBanner from "@/public/images/assets/devcon-india-banner.webp"
 
-const DevconIndiaLargeCallout = async () => {
+const DevconIndiaLargeCallout = async ({ preload }: { preload?: boolean }) => {
   const tDevcon = await getTranslations("component-devcon-banner")
   return (
     <Card
@@ -28,7 +28,7 @@ const DevconIndiaLargeCallout = async () => {
         src={devconIndiaBanner}
         alt=""
         fill
-        preload
+        preload={preload}
         sizes="100vw"
         quality={90}
         className="-z-20 object-cover object-bottom"

@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "11.22.1",
+  "version": "11.23.0",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -38,8 +38,8 @@
     "trigger:deploy": "trigger deploy --env-file src/data-layer/.env.local"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.1035.0",
-    "@aws-sdk/client-ses": "^3.859.0",
+    "@aws-sdk/client-s3": "^3.1115.0",
+    "@aws-sdk/client-ses": "^3.1115.0",
     "@docsearch/css": "3.9.0",
     "@docsearch/react": "^3.5.2",
     "@hookform/resolvers": "^3.8.0",
@@ -128,7 +128,6 @@
     "@storybook/addon-themes": "10.3.3",
     "@storybook/nextjs": "10.3.3",
     "@svgr/webpack": "^8.1.0",
-    "@types/decompress": "^4.2.7",
     "@types/hast": "^3.0.0",
     "@types/lodash": "^4.17.17",
     "@types/mdast": "^4.0.4",
@@ -139,7 +138,6 @@
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "chromatic": "18.5.0",
-    "decompress": "^4.2.1",
     "dotenv": "^16.5.0",
     "eslint": "^8.57.1",
     "eslint-config-next": "^15.5.12",
