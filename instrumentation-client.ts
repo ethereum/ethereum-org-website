@@ -74,6 +74,10 @@ Sentry.init({
     /DApp request timeout/,
     // Cross-origin postMessage from extensions/embedded frames (ETHORG-87)
     /^Error: invalid origin$/,
+    // DOM extensions (e.g. Google Translate, Grammarly, ad blockers) mutate
+    // nodes outside React's control, so React's own cleanup then fails to
+    // find the node it expects to remove (ETHORG-1AG)
+    /Failed to execute 'removeChild' on 'Node'/,
   ],
 
   beforeSend(event) {
