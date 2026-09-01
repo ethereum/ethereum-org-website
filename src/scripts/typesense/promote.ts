@@ -1,7 +1,7 @@
 /**
  * Promote a freshly scraped collection onto its production alias, if it passes.
  *
- *   pnpm typesense:promote -- --locale en [--dry-run] [--force] [--keep 2]
+ *   pnpm typesense:promote -- --locale en [--dry-run] [--force] [--keep 2] [--skip-relevance]
  *   pnpm typesense:promote -- --all
  *
  * The DocSearch scraper swaps its own alias the instant a crawl ends, so a half-finished
@@ -11,6 +11,9 @@
  * keeps serving the older index -- stale results beat no results.
  */
 
+import { existsSync, readFileSync } from "fs"
+import path from "path"
+
 import {
   api,
   type CollectionInfo,
@@ -19,6 +22,8 @@ import {
   LOCALES,
   requireEnv,
   resolveAlias,
+  SEARCH_KEY,
+  SITE_ORIGIN,
 } from "./client"
 
 /** A new index must retain at least this share of the live one to be promotable. */
@@ -31,12 +36,29 @@ const MIN_SIZE_RATIO = 0.9
  */
 const KEEP_PER_LOCALE = 2
 
+/**
+ * Minimum share of labelled queries whose correct page must rank first, measured against
+ * the staging collection before the alias moves. The baseline is ~42% before curation is
+ * applied, so this catches a collapse without tripping on ordinary drift.
+ *
+ * Deliberately measured pre-curation: pins are applied after promotion and would mask a
+ * regression in the underlying ranking.
+ */
+const MIN_HIT_AT_1 = 0.35
+
+const GROUNDTRUTH_PATH = path.join(
+  process.cwd(),
+  "typesense",
+  "groundtruth.json"
+)
+
 interface Args {
   locales: string[]
   dryRun: boolean
   force: boolean
   minRatio: number
   keep: number
+  skipRelevance: boolean
 }
 
 const parseArgs = (argv: string[]): Args => {
@@ -51,6 +73,7 @@ const parseArgs = (argv: string[]): Args => {
     force: argv.includes("--force"),
     minRatio: Number(get("--min-ratio") ?? MIN_SIZE_RATIO),
     keep: Number(get("--keep") ?? KEEP_PER_LOCALE),
+    skipRelevance: argv.includes("--skip-relevance"),
   }
 }
 
@@ -98,6 +121,21 @@ const promoteLocale = async (
   if ((await countByLanguage(source, locale)) === 0)
     failures.push(`no documents tagged language:=${locale}`)
 
+  // Relevance last: it is the slowest check, and there is no point scoring an index that
+  // already failed a structural one.
+  if (!failures.length && !args.skipRelevance) {
+    const score = await hitAtOne(source, locale)
+    if (score !== null) {
+      console.log(
+        `  ${locale}: hit@1 ${(score * 100).toFixed(0)}% on labelled queries`
+      )
+      if (score < MIN_HIT_AT_1 && !args.force)
+        failures.push(
+          `hit@1 ${(score * 100).toFixed(0)}% is below the ${MIN_HIT_AT_1 * 100}% floor`
+        )
+    }
+  }
+
   if (failures.length) {
     console.log(
       `  ${locale}: REFUSED (${next.toLocaleString()} docs vs ${live.toLocaleString()} live)`
@@ -119,6 +157,50 @@ const promoteLocale = async (
   )
   await prune(locale, source, collections, args.keep)
   return true
+}
+
+interface LabelledQuery {
+  q: string
+  correct: string | null
+}
+
+const normalizePath = (url: string) =>
+  "/" +
+  url
+    .replace(SITE_ORIGIN, "")
+    .split("#")[0]
+    .replace(/^\/|\/$/g, "") +
+  "/"
+
+/**
+ * Share of labelled queries whose correct page ranks first. Returns null when there is no
+ * ground truth for this locale, which is every locale but English.
+ */
+const hitAtOne = async (collection: string, locale: string) => {
+  if (locale !== "en" || !existsSync(GROUNDTRUTH_PATH)) return null
+  const queries: LabelledQuery[] = JSON.parse(
+    readFileSync(GROUNDTRUTH_PATH, "utf-8")
+  ).queries.filter((row: LabelledQuery) => row.correct)
+
+  let hits = 0
+  for (const { q, correct } of queries) {
+    const params = new URLSearchParams({
+      q,
+      query_by:
+        "hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,content",
+      group_by: "url_without_anchor",
+      group_limit: "1",
+      per_page: "1",
+    })
+    const result = await api<{
+      grouped_hits?: { hits: { document: { url_without_anchor?: string } }[] }[]
+    }>("GET", `/collections/${collection}/documents/search?${params}`, {
+      key: SEARCH_KEY,
+    })
+    const top = result.grouped_hits?.[0]?.hits?.[0]?.document.url_without_anchor
+    if (top && normalizePath(top) === normalizePath(correct!)) hits++
+  }
+  return hits / queries.length
 }
 
 /** Drop superseded collections for a locale, newest-first, never touching the live one. */
