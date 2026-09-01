@@ -137,9 +137,9 @@ The goal is to bound worst-case propagation/validation time and align with conse
 
 Prior to raising the gas limit from 30M to 36M in February 2025 (and subsequently to 45M), this value hadn’t changed since the Merge (September 2022). This EIP aims to make consistent scaling a priority.
 
-EIP-7935 coordinates EL client teams to raise the default gas-limit above today’s 45M for Fusaka. It’s an Informational EIP, but it explicitly asks clients to test higher limits on devnets, converge on a safe value, and ship that number in their Fusaka releases.
+EIP-7935 coordinated EL client teams to raise the default gas-limit above the 45M that preceded Fusaka. It’s an Informational EIP, but it explicitly asked clients to test higher limits on devnets, converge on a safe value, and ship that number in their Fusaka releases.
 
-Devnet planning targets ~60M stress (full blocks with synthetic load) and iterative bumps; research says worst-case block-size pathologies shouldn’t bind below ~150M. Rollout should be paired with the transaction gas-limit cap (EIP-7825) so no single transaction can dominate as limits rise.
+Devnet testing targeted ~60M under stress (full blocks with synthetic load) with iterative bumps; research says worst-case block-size pathologies shouldn’t bind below ~150M. The rollout was paired with the transaction gas-limit cap (EIP-7825) so no single transaction can dominate as limits rise. Clients shipped 60M as the Fusaka default.
 
 **Resources**: [EIP-7935 technical specification](https://eips.ethereum.org/EIPS/eip-7935)
 
