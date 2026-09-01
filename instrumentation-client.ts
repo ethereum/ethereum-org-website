@@ -74,6 +74,11 @@ Sentry.init({
     /DApp request timeout/,
     // Cross-origin postMessage from extensions/embedded frames (ETHORG-87)
     /^Error: invalid origin$/,
+    // Firefox/Safari phrasing of the removeChild NotFoundError (Chrome's
+    // "Failed to execute 'removeChild'..." wording is filtered separately) --
+    // DOM extensions (e.g. Google Translate, Grammarly, ad blockers) mutate
+    // nodes outside React's control (ETHORG-1AR)
+    /The object can not be found here/,
   ],
 
   beforeSend(event) {
