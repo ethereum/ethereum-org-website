@@ -55,3 +55,54 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
 - `actor` -> `فریق` (was اداکار, film performer). Open: the glossary-AVOID form `لین دین` for "transaction fee" in 4 sites across 2 files (`ٹرانزیکشن فیس` is correct and used elsewhere in the same doc); `وٹالک بوٹیرن` vs the corpus-standard `وٹالک بوٹرین` in 4 sites; brand transliterations (Optimism/Arbitrum/ZKsync/Coinbase/PayPal) left Latin in the two JSON files. **No truncation, untranslated chunks or Eastern-Arabic numerals this run** -- ur's historical failure modes were all absent.
 - Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.5/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:** none -- no critical issues.
+
+**Open (native call needed):**
+
+- `fee-qualifier-free-under-fox-discounts` -> `کے تحت` is the abstract "pursuant to" sense (`قانون کے تحت`), not a numeric threshold; prefer `{usd} سے کم پر مفت`. Warning not critical because `مفت` + an amount still steers the reader correctly.
+- `results-label` -> `دریافت شدہ والیٹس` reads as "discovered wallets"; for a results counter, `ملنے والے والیٹس`.
+- `fee-free-tier-plans` -> `ادا شدہ پلانز` reads as "plans that have been paid" rather than paid tiers.
+
+**Notes:**
+
+- Isolates verified: 47 U+2066 / 47 U+2069, zero unbalanced. Applied inconsistently WITHIN single strings -- `{usd}`/`{percent}` isolated while the adjacent `{value}` is bare. No rendering break; pick one convention.
+- `L2s` correctly Latin here while the file elsewhere says `لیئر ۲` -- the Latin form is right per the always-Latin rule, so the PRE-EXISTING keys are the outlier.
+- All 14 glossary terms exact including the hard ones (`ٹرانزیکشن` not `لین دین`, `پل` for bridge, `تبادلہ` for swap).
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 7.6/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Ungrammatical `نہیں گی۔` opening 4 of 5 dvt FAQ answers. `سمجھوتہ` doing double duty for trade-off (correct) and security compromise (wrong) across 4 sentences, one inverting agency. Eastern-Arabic digits inside 2 JSX title attributes. English dates bidi-isolated (#18772 recurrence) and `اداکار` (#19015 recurrence). U+2066 LRI wrapping pure-Urdu frontmatter. `پتہ`+postposition oblique-case error at ~50 sites.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 7.8/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+
+- Untranslated English month: `⁦August 2023⁩` -> `اگست ⁦2023⁩`. Recurrence of the class fixed in #18772 and #19115.
+
+**Open (native call needed):**
+
+- **Arabic kaf U+0643 in `لامركزی`, 7 PR-added sites + 1 in `common.json`: verified but deliberately NOT fixed here.** Orthographically Urdu wants keheh U+06A9, but tree-wide counts are 646 kaf vs 186 keheh -- the defective form is dominant 3.5:1. Patching 8 sites moves 646->638 and increases intra-tree inconsistency. Correct action is upstream: normalize the ETHGlossary `decentralized` ur entry, then one tree-wide codepoint sweep.
+- MEV expansion regression: `میکسیمل ایکسٹریکٹ ایبل ویلیو` (1 site) replaced `زیادہ سے زیادہ قابلِ اخراج قدر` (11 sites).
+- `روبسٹ انسیٹوز گروپ` -- garbled transliteration dropping the ن of *-cen-*.
+- U+2066 LRI wrapping pure-Urdu frontmatter title/description (KB #64).
+- Numeral system split within one new file: `۲۰۰۹` vs `1990`.
+
+## PR #19142 (intl/pending-devcon-banner) -- 2026-08-21 -- Score 9.9/10
+Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
+
+**Fixed in this branch:**
+
+- `Devcon` -> `ڈیوکان` in `title` and `subtitle`, with the bidi isolates re-wrapped (pair around the name removed, pairs around `8` and `10%` kept). Verified balanced 4/4, NFC-clean. Derived form (Gemini 3.1 Pro): retroflex ڈ, و for English "v" per standard Urdu tech transliteration (cf. `ویڈیو`). Consistent with 6.3's instruction to transliterate aggressively in Nastaliq. `logo-alt` stays Latin.
+
+**Notes:**
+
+- Western numerals retained. 6.3 mandates native Eastern Arabic-Indic numerals for ur *prose*, but does not carve out UI the way the bn rule does, and 7.5 says default conservative when the surface is ambiguous. The tree is overwhelmingly Western anyway (`src/intl/ur` 4547 Western vs 423 native), so this is a pre-existing tree-wide gap, not a defect introduced here.

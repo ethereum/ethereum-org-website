@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-values.json",
-  "generatedAt": "2026-07-30T05:22:20.560Z",
-  "rootHash": "16024d52e828",
+  "generatedAt": "2026-08-20T22:02:33.334Z",
+  "rootHash": "cd83ec40f588",
   "tree": {
-    "contentHash": "17bf20ac3b68",
-    "anchorHash": "45503ae9f3dc",
+    "contentHash": "dea93e5869f1",
+    "anchorHash": "9038ec85f9c6",
     "children": {
       "page-values-meta-title": {
         "contentHash": "b3bb96be5919",
@@ -59,6 +59,10 @@
       },
       "page-values-card-open-source-description": {
         "contentHash": "a529498f1c01",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-values-card-open-source-cta": {
+        "contentHash": "b752aaa7dd7f",
         "anchorHash": "e3b0c44298fc"
       },
       "page-values-card-censorship-resistance-title": {
@@ -187,6 +191,7 @@
       "page-values-card-privacy-cta",
       "page-values-card-open-source-title",
       "page-values-card-open-source-description",
+      "page-values-card-open-source-cta",
       "page-values-card-censorship-resistance-title",
       "page-values-card-censorship-resistance-description",
       "page-values-card-security-title",
@@ -211,5 +216,5 @@
       "page-values-faq-4-p1"
     ]
   },
-  "sourceCommitSha": "813cae0fef45154817a18d95b432c551420c7054"
+  "sourceCommitSha": "1988a451065e8d91e60a09d73935256ab102a52c"
 }

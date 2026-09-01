@@ -115,7 +115,7 @@ Research and development into privacy on Ethereum spans dozens of teams across t
 
 **Protocol upgrades**: EIP-8141 (Frame Transactions), EIP-7805 (FOCIL), EIP-8250 (Keyed Nonces), and EIP-8182 (Protocol-Level Shielded Pools) are in active development and being considered for the [Hegotá upgrade](https://forkcast.org/upgrade/hegota/), the next network upgrade after [Glamsterdam](/roadmap/glamsterdam/). EIP-8025 (optional execution proofs) and Verkle Trees are also targeted for Hegotá, providing the foundation for zkEVM-based private computation on Ethereum Mainnet. In parallel, research is maturing around FHE coprocessors to enable multi-party encrypted smart contracts.
 
-**Access layer**: PIR research is progressing with active implementations being tested by infrastructure teams. The Kohaku wallet SDK is under development as an open-source reference for privacy-preserving wallets.
+**Access layer**: PIR research is progressing with active implementations like [Raven](https://github.com/hisoka-io/raven) being tested by infrastructure teams. The Kohaku wallet SDK is under development as an open-source reference for privacy-preserving wallets.
 
 **Client-side proving**: Teams are actively using benchmark-driven test results to optimize how zero-knowledge proofs run on standard devices. Projects like Spartan-WHIR are advancing secure, quantum-resistant proofs that can be easily verified directly on the Ethereum network. Research initiatives like leanVM provide a lightweight zkVM designed to bundle multiple cryptographic signatures together, shrinking the data size of quantum-safe signatures by 250x to save space and reduce network costs.
 

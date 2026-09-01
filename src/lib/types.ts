@@ -235,12 +235,20 @@ export type RawQuiz = {
 
 export type QuizStatus = "neutral" | "success" | "error"
 
-type QuizLevel = "beginner" | "intermediate" | "advanced"
+export type QuizLevel = "beginner" | "intermediate" | "advanced"
 
 export type QuizzesSection = {
   id: QuizKey
   level: QuizLevel
   next?: QuizKey
+}
+
+/** A hub section. Adding one here is enough: the hub and getNextQuiz both derive from it. */
+export type QuizzesHubSection = {
+  id: string
+  titleKey: string
+  descriptionKey: string
+  quizzes: QuizzesSection[]
 }
 
 export type RawQuizzes = Record<string, RawQuiz>
@@ -298,7 +306,7 @@ export type LocaleContributions = {
 }
 
 export type LocaleDisplayInfo = {
-  localeOption: string
+  localeOption: Lang
   sourceName: string
   targetName: string
   englishName: string
@@ -833,6 +841,10 @@ export type WalletFee = (
 export type WalletData = {
   last_updated: string
   name: string
+  /** Set only to keep a URL stable across a rename; defaults to slugified name. */
+  slug?: string
+  /** Optional forever — cards and search degrade gracefully without it. */
+  description?: string
   image: StaticImageData
   twBackgroundColor: string
   twGradiantBrandColor: string

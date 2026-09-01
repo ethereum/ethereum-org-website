@@ -1,17 +1,6 @@
 # ETHGlossary Usage (Review Side)
 
-Review-specific guidance for using ETHGlossary as the authority during translation review. For the pipeline-side integration (how the pipeline produces translations using ETHGlossary), see `intl-pipeline/references/ethglossary.md`.
-
-## Start with llms.txt
-
-ETHGlossary publishes a canonical agent reference at the **domain root** `${GLOSSARY_HOST}/llms.txt` (not under `/api/v1/`). Fetch this first when you need API details — endpoint shapes, parameters, and response schemas come from llms.txt, which stays in sync with the live API:
-
-```bash
-GLOSSARY_HOST="${GLOSSARY_API_URL%/api/*}"
-curl -sf "$GLOSSARY_HOST/llms.txt"
-```
-
-This doc focuses on the review-specific patterns (severity mapping, what to flag); endpoint contract details live in llms.txt.
+Review-specific guidance for using ETHGlossary as the authority during translation review: severity mapping, what to flag, how to interpret entries. The shared plumbing — llms.txt (the canonical API contract at `${GLOSSARY_HOST}/llms.txt`), base-URL resolution from `config.ts`, and the endpoint list — lives in `intl-pipeline/references/ethglossary.md`; read that first for anything API-mechanical.
 
 ## The authority rule
 
@@ -29,40 +18,11 @@ ETHGlossary is the source of truth for **term translations AND for transliterati
 
 ## How to query
 
-**Preferred — per-file `/filter`:**
+Review-time endpoint choice (curl invocations and the full endpoint table: `intl-pipeline/references/ethglossary.md`):
 
-```bash
-curl -sf -X POST "$GLOSSARY_API_URL/filter" \
-  -H "Content-Type: application/json" \
-  -d "$(jq -n --arg content "$ENGLISH_SOURCE" --arg lang "$LANG" '{content: $content, language: $lang}')"
-```
-
-Returns only the glossary terms that appear in the English source for the file being reviewed, with translations sorted by occurrence. Avoids pulling hundreds of irrelevant terms into review context.
-
-**Fallback — full per-language glossary:**
-
-```bash
-curl -sf "$GLOSSARY_API_URL/translations/${LANG}"
-```
-
-Use when `/filter` is unreachable or when scoring requires every term. Adds 500+ terms to review context; only do it when needed.
-
-**Single-term lookup:**
-
-```bash
-curl -sf "$GLOSSARY_API_URL/translations/${LANG}/${TERM_ID}"
-```
-
-Intelligent term matching: aliases, avoid forms, variants all resolve to the canonical entry. Use for spot-checks during review.
-
-## Resolving the base URL
-
-Configured in `src/scripts/intl-pipeline/config.ts` under `GLOSSARY_API_URL`; can be overridden via env var. To extract the live value:
-
-```bash
-GLOSSARY_API_URL="${GLOSSARY_API_URL:-$(grep -oE 'https://[^"]+/api/v[0-9]+' src/scripts/intl-pipeline/config.ts | head -1)}"
-GLOSSARY_HOST="${GLOSSARY_API_URL%/api/*}"
-```
+- `POST /filter` per file — **preferred**; returns only the terms appearing in the English source, keeping review context small.
+- `GET /translations/{lang}` — fallback when `/filter` is unreachable or scoring requires every term (500+ terms; only when needed).
+- `GET /translations/{lang}/{termId}` — single-term spot-checks; aliases, avoid forms, and variants resolve to the canonical entry.
 
 ## What each term entry tells the reviewer
 
@@ -98,7 +58,7 @@ If a review surfaces a brand / person / project / tool that ETHGlossary doesn't 
 2. Flag it in the review report as "missing from ETHGlossary; using locale form as-is."
 3. Note it in `.claude/translation-review/per-language/{lang}.md` so the next review of that language picks it up.
 
-Don't patch the locale to compensate. Don't author terminology locally. Upstream coordination (whether someone files an issue or PR against ETHGlossary) is a separate maintainer task, not part of the review.
+Don't patch the locale to compensate, and don't author terminology locally — see `intl-pipeline/references/ethglossary.md` for how gaps get addressed upstream.
 
 ## What NOT to do
 
@@ -107,10 +67,4 @@ Don't patch the locale to compensate. Don't author terminology locally. Upstream
 - **Don't query ETHGlossary from memory.** Always use the API for the actual review evaluation. Memory is for understanding patterns, not for citing specific terms.
 - **Don't read endpoint shapes from this doc.** Use llms.txt for the canonical API contract.
 
-## See also
-
-- `intl-pipeline/references/ethglossary.md` for the pipeline-side integration (how translations are produced)
-- ETHGlossary `docs/translation-policy.md` for the canonical policy
-- `${GLOSSARY_HOST}/llms.txt` for the canonical API contract
-- `references/critical-vs-warning.md` for the broader severity rubric this slots into
-- `.claude/commands/review-translations.md` for the slash command's full ETHGlossary integration flow
+ETHGlossary's `docs/translation-policy.md` (in the wackerow/ethglossary repo) is the canonical policy behind all of the above.

@@ -27,7 +27,7 @@ The canonical card primitive. Composable parts. If `href` is provided, the card 
 - `background`: `"accent-a" | "accent-b" | "accent-c" | "primary" | "body" | "none"` (default `body`)
 - `size`: `"full" | "lg" | "base" | "sm" | "thumbnail-lg" | "thumbnail"` (default `base`)
 - `fit`: `"cover" | "contain"` (default `cover`)
-- `zoom`: `true` (default) | `false` — when the parent `Card` has `href`, controls whether the image scales on hover/focus via `group/link`
+- `zoom`: opt-in boolean, **off by default** — pass it to propagate the parent `group/link` hover into an image scale-up
 
 When `fit="contain"` and you pass a single `<Image>` child, the banner auto-clones it as a blurred backdrop behind a sharp foreground. Pass two children and you lose this magic.
 
@@ -45,7 +45,7 @@ These are feature components. Don't reuse them outside their domain.
 import { Grid } from "@/components/ui/grid"
 ```
 
-`<Grid columns={N}>` instead of hand-rolling `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3`. Renders at most `columns` columns and folds down responsively; tune the per-item min width with `size` and switch `auto-fill`→`auto-fit` with `fit`. See `components.md` for the variant matrix. (The raw `grid-cols-auto-*` utility backs it; the older `grid-cols-fill-*` / `grid-cols-fit-*` classes are legacy.)
+`<Grid columns={N}>` instead of hand-rolling `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3`. Renders at most `columns` columns and folds down responsively; tune the per-item min width with `size` and switch `auto-fill`→`auto-fit` with `fit`. See `components.md` for the variant matrix. (The raw `grid-cols-auto-*` utility backs it.)
 
 Exception: a _fixed_ set of **4 cards** that must reflow **symmetrically** (`4 → 2×2 → 1`, never a lone 3-up row) wants `<Grid balanced={4}>` (a fixed breakpoint ladder that overrides `columns`; `balanced={2}` exists for a fixed pair) or an explicit breakpoint grid — auto-fill would introduce an orphan intermediate row.
 
@@ -218,37 +218,15 @@ One primitive covers both shapes via `variant`:
 
 ### Do NOT import `BannerNotification`
 
-```tsx
-// DON'T -- file deleted May 2026:
-import BannerNotification from "@/components/Banners/BannerNotification"
-```
-
-The `Banners/` subdirectory is gone. Use `<Alert variant="banner">` for top-of-page ribbons.
+The `Banners/` subdirectory is gone. Use `<Alert variant="banner">` for top-of-page ribbons (migration recipe in `cleanup-playbook.md`).
 
 ### Card-shaped in-content callouts: `Callout`
 
 ```tsx
-import Callout, {
-  CalloutBanner,
-  CalloutButtons,
-  CalloutContent,
-  CalloutDescription,
-  CalloutRoot,
-  CalloutTitle,
-} from "@/components/ui/callout"
+import Callout from "@/components/ui/callout"
 ```
 
-Server-renderable, takes literal `title` / `description` strings (call site resolves intl). Optional `image` banner (overhangs the gradient card); omit for a content-only callout. `variant`: `base` (default) | `sm`. Children render as buttons via `CalloutButtons`.
-
-```tsx
-<Callout image={someImage} alt="..." title={t("...")} description={t("...")}>
-  <ButtonLink href="/...">{t("...")}</ButtonLink>
-</Callout>
-```
-
-The default export covers the common shape. The named primitives are available for custom composition (interleaving children between parts, applying classNames on individual slots). The legacy `Callout` / `CalloutSSR` / `CalloutBanner` / `CalloutBannerSSR` files at the root of `src/components/` were removed during the unification — do not reintroduce.
-
-Side-by-side equalization is automatic: when two or more `Callout`s share a parent at `md+` viewport, banners pin to a 16rem min-height and buttons bottom-align across cards. See `callout-walkthrough.md`.
+Server-renderable; takes literal `title` / `description` strings (call site resolves intl), an optional `image` banner, `variant` `base` | `sm`, and children rendered as buttons. Do NOT reach for the legacy root-level `Callout*` files (removed). Full walkthrough (parts, equalization, variants, checklist): `callout-walkthrough.md`.
 
 ## Tabs / Tab Navigation
 

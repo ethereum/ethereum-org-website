@@ -5,6 +5,9 @@ import AuditedIcon from "./audited.svg"
 import AvadoGlyphIcon from "./avado-glyph.svg"
 import BattleTestedIcon from "./battle-tested.svg"
 import BedrockGlyphIcon from "./bedrock-glyph.svg"
+import BenefitBetterSecurityIcon from "./benefit-better-security.svg"
+import BenefitEarnRewardsIcon from "./benefit-earn-rewards.svg"
+import BenefitMoreSustainableIcon from "./benefit-more-sustainable.svg"
 import BitwiseGlyphIcon from "./bitwise-glyph.svg"
 import BugBountyIcon from "./bug-bounty.svg"
 import CautionProductGlyph from "./caution-product-glyph.svg"
@@ -36,11 +39,6 @@ import StafiGlyphIcon from "./stafi-glyph.svg"
 import StakefishGlyphIcon from "./stakefish-glyph.svg"
 import StakewiseGlyphIcon from "./stakewise-glyph.svg"
 import StakingDappnodeGlyphIcon from "./staking-dappnode-glyph.svg"
-import StakingGlyphCentralizedIcon from "./staking-glyph-centralized.svg"
-import StakingGlyphCloudIcon from "./staking-glyph-cloud.svg"
-import StakingGlyphCPUIcon from "./staking-glyph-cpu.svg"
-import StakingGlyphEtherCircleIcon from "./staking-glyph-ether-circle.svg"
-import StakingGlyphTokenWalletIcon from "./staking-glyph-token-wallet.svg"
 import StereumGlyphIcon from "./stereum-glyph.svg"
 import TrustlessIcon from "./trustless.svg"
 import UnknownProductGlyph from "./unknown-product-glyph.svg"
@@ -55,6 +53,9 @@ export {
   AvadoGlyphIcon,
   BattleTestedIcon,
   BedrockGlyphIcon,
+  BenefitBetterSecurityIcon,
+  BenefitEarnRewardsIcon,
+  BenefitMoreSustainableIcon,
   BitwiseGlyphIcon,
   BugBountyIcon,
   CautionProductGlyph,
@@ -86,11 +87,6 @@ export {
   StakefishGlyphIcon,
   StakewiseGlyphIcon,
   StakingDappnodeGlyphIcon,
-  StakingGlyphCentralizedIcon,
-  StakingGlyphCloudIcon,
-  StakingGlyphCPUIcon,
-  StakingGlyphEtherCircleIcon,
-  StakingGlyphTokenWalletIcon,
   StereumGlyphIcon,
   TrustlessIcon,
   UnknownProductGlyph,
