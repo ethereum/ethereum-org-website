@@ -59,6 +59,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Fail in seconds with a clear message rather than after a Docker pull and a
+      # Python traceback. Actions secrets are separate from Netlify's environment.
+      - name: Check secrets
+        env:
+          TYPESENSE_URL: ${{ secrets.TYPESENSE_URL }}
+          TYPESENSE_ADMIN_KEY: ${{ secrets.TYPESENSE_ADMIN_KEY }}
+          TYPESENSE_SEARCH_KEY: ${{ secrets.TYPESENSE_SEARCH_KEY }}
+        run: |
+          for v in TYPESENSE_URL TYPESENSE_ADMIN_KEY TYPESENSE_SEARCH_KEY; do
+            if [ -z "${!v}" ]; then
+              echo "::error::Secret $v is empty. Add it under Settings > Secrets and variables > Actions."
+              exit 1
+            fi
+          done
+          echo "all three secrets present"
+
       - name: Build the per-locale scraper config
         env:
           LOCALE: ${{ matrix.locale }}
@@ -76,11 +92,13 @@ jobs:
       - name: Scrape
         env:
           TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_ADMIN_KEY }}
-          TYPESENSE_HOST: ${{ secrets.TYPESENSE_HOST }}
+          TYPESENSE_URL: ${{ secrets.TYPESENSE_URL }}
         run: |
+          # Derived, so the host can never disagree with the URL the scripts use.
+          TYPESENSE_HOST="${TYPESENSE_URL#*://}"; TYPESENSE_HOST="${TYPESENSE_HOST%%/*}"
           docker run --rm \
             -e TYPESENSE_API_KEY \
-            -e TYPESENSE_HOST \
+            -e TYPESENSE_HOST="$TYPESENSE_HOST" \
             -e TYPESENSE_PORT=443 \
             -e TYPESENSE_PROTOCOL=https \
             -e CONFIG="$(jq -r tostring < /tmp/config.json)" \
