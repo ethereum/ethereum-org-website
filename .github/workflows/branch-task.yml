@@ -17,13 +17,13 @@ on:
         required: true
         default: en
       steps:
-        description: "Which steps to run"
+        description: "full = crawl, promote, publish. wiring-check = skip the crawl, just prove the secrets and scripts run."
         required: true
-        default: promote-curate
+        default: full
         type: choice
         options:
-          - promote-curate
           - full
+          - wiring-check
 
 jobs:
   typesense:
