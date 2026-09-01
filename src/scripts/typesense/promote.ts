@@ -1,7 +1,7 @@
 /**
  * Promote a freshly scraped collection onto its production alias, if it passes.
  *
- *   pnpm typesense:promote -- --locale en [--dry-run] [--force]
+ *   pnpm typesense:promote -- --locale en [--dry-run] [--force] [--keep 2]
  *   pnpm typesense:promote -- --all
  *
  * The DocSearch scraper swaps its own alias the instant a crawl ends, so a half-finished
@@ -24,11 +24,19 @@ import {
 /** A new index must retain at least this share of the live one to be promotable. */
 const MIN_SIZE_RATIO = 0.9
 
+/**
+ * Collections kept per locale after promotion: the live one plus one predecessor, so a
+ * rollback is a single alias flip. Without this, 25 locales rebuilt weekly would add 25
+ * collections a week to an instance that holds its indexes in memory.
+ */
+const KEEP_PER_LOCALE = 2
+
 interface Args {
   locales: string[]
   dryRun: boolean
   force: boolean
   minRatio: number
+  keep: number
 }
 
 const parseArgs = (argv: string[]): Args => {
@@ -42,6 +50,7 @@ const parseArgs = (argv: string[]): Args => {
     dryRun: argv.includes("--dry-run"),
     force: argv.includes("--force"),
     minRatio: Number(get("--min-ratio") ?? MIN_SIZE_RATIO),
+    keep: Number(get("--keep") ?? KEEP_PER_LOCALE),
   }
 }
 
@@ -108,7 +117,34 @@ const promoteLocale = async (
   console.log(
     `  ${locale}: ${alias} -> ${source} (${next.toLocaleString()} docs)`
   )
+  await prune(locale, source, collections, args.keep)
   return true
+}
+
+/** Drop superseded collections for a locale, newest-first, never touching the live one. */
+const prune = async (
+  locale: string,
+  live: string,
+  collections: CollectionInfo[],
+  keep: number
+) => {
+  const mine = collections
+    .map((c) => c.name)
+    .filter(
+      (n) =>
+        n.startsWith(`ethereumorg-${locale}_`) ||
+        n.startsWith(`ethereumorg-staging-${locale}_`)
+    )
+    .filter((n) => n !== live)
+    .sort()
+    .reverse()
+
+  // `live` occupies one of the kept slots, so only keep-1 predecessors survive.
+  const doomed = mine.slice(Math.max(keep - 1, 0))
+  for (const name of doomed) {
+    await api("DELETE", `/collections/${name}`)
+    console.log(`      pruned ${name}`)
+  }
 }
 
 const main = async () => {
