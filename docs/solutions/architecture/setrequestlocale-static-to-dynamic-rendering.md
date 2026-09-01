@@ -1,5 +1,5 @@
 ---
-title: "setRequestLocale must run before any next-intl API in pages and generateMetadata"
+title: "setRequestLocale must run before locale-resolving next-intl APIs in route entries"
 date: 2026-07-16
 category: architecture
 module: app/[locale]/**/page.tsx, src/i18n/request.ts, src/lib/utils/metadata.ts
@@ -22,11 +22,11 @@ discovered_in: "PRs #18785, #18797, #18798, #18800 (recovery); #18811 (systemic)
 status: resolved
 ---
 
-# `setRequestLocale` must run before any next-intl API
+# `setRequestLocale` must run before locale-resolving next-intl APIs
 
 ## Problem
 
-Every async Server Component page and `generateMetadata` under `app/[locale]/` that touches a next-intl API must call `setRequestLocale(locale)` **first** -- right after resolving `locale` from `params`, before any other next-intl call. Omitting it opts the route into dynamic rendering, and for params rendered on-demand Next.js throws:
+Every route entry under `app/[locale]/` that uses a next-intl API without an explicit locale must call `setRequestLocale(locale)` first. This applies independently to the default export, exported `generateMetadata`, and exported `generateViewport`. Omitting it opts the route into dynamic rendering, and for params rendered on-demand Next.js throws:
 
 ```
 Error: Page changed from static to dynamic at runtime /..., reason: headers
@@ -53,7 +53,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
 
 `requestLocale` reads the request **headers** unless `setRequestLocale(locale)` has already primed the per-request cache. Any next-intl API (`getTranslations`, `getLocale`, `getFormatter`, ...) invoked before priming forces the header read, which opts the whole route into dynamic rendering. At build time there are no headers, so prerendered locales are unaffected; but an on-demand render (a param outside `generateStaticParams`) performs the header read at request time and Next.js aborts with the static-to-dynamic error instead of rendering statically or returning a clean 404.
 
-### Only the bare API forms are at risk
+### Only locale-resolving API forms are at risk
 
 `getConfig` short-circuits the header read when an explicit locale is passed:
 
@@ -64,7 +64,7 @@ get requestLocale() {
 }
 ```
 
-So `getTranslations({ locale, namespace })`, `getMessages({ locale })`, `getFormatter({ locale })`, `getNow({ locale })` and `getTimeZone({ locale })` never read headers. Only the bare forms do -- plus `getLocale()`, which has no override parameter and always resolves the request locale.
+So `getTranslations({ locale, namespace })`, `getMessages({ locale })`, `getFormatter({ locale })`, `getNow({ locale })` and `getTimeZone({ locale })` never read headers. Only forms without an explicit `locale` property do, plus `getLocale()`, which has no override parameter and always resolves the request locale. A spread such as `{ ...options }` does not prove that a locale is present.
 
 ### Why there is no single central fix
 
@@ -74,16 +74,16 @@ next-intl is explicit that this cannot be hoisted into a parent:
 
 Priming the locale in `app/[locale]/layout.tsx` therefore does **not** discharge the obligation for the pages beneath it -- Next.js may run a page body before the layout body. #18999 moves `setRequestLocale` above that layout's `notFound()` bail as a safety net for pages authored without their own call; it is defence-in-depth, not a substitute for the per-entry-point rule below.
 
-Within a single entry point there is no narrower fix either, because next-intl is reached through two independent paths:
+Within a single entry point, next-intl may be reached through independent paths:
 
 1. The page calls `getTranslations("page-x")` directly to build its title.
-2. The `getMetadata` / `getMdMetadata` helpers (`src/lib/utils/metadata.ts`) call `getTranslations("common")` **internally** -- so passing `locale` into them is not enough.
+2. A same-file helper can call a locale-resolving API before the entry primes the locale.
 
-Fixing only the helper leaves the direct call reading headers, and vice versa. `setRequestLocale(locale)` at the top neutralizes both at once.
+`getMetadata` now passes its `locale` to `getTranslations({ locale, namespace: "common" })`. `getMdMetadata` forwards its locale to `getMetadata`, so those helpers are safe without priming. This does not make a separate bare next-intl call in the entry safe.
 
 ## The rule (fix)
 
-Call `setRequestLocale(locale)` as the first statement, before any next-intl API, in **both** the page component and `generateMetadata`.
+Call `setRequestLocale(locale)` at the top level before any locale-resolving next-intl execution in each entry that needs implicit-locale APIs. A safe `generateMetadata` does not discharge the page component's obligation, or vice versa.
 
 ```tsx
 import { getTranslations, setRequestLocale } from "next-intl/server"
@@ -100,12 +100,14 @@ export default async function Page({ params }) {
 export async function generateMetadata({ params }): Promise<Metadata> {
   const { locale } = await params
 
-  setRequestLocale(locale) // FIRST -- covers both the direct getTranslations and getMetadata
+  setRequestLocale(locale) // FIRST -- covers the direct getTranslations call
 
   const t = await getTranslations("page-namespace")
   return await getMetadata({ locale, title: t("page-title") /* ... */ })
 }
 ```
+
+An entry that only calls explicit-locale APIs or `getMetadata({ locale, ... })` / `getMdMetadata({ locale, ... })` does not need `setRequestLocale`.
 
 Descendant server components don't receive `params`; they read the locale with `getLocale()` from `next-intl/server`, which now resolves statically because the page already primed the cache. This covers the `page-jsonld.tsx` siblings and `_components/*` trees, which call bare `getTranslations` by design.
 
@@ -115,10 +117,10 @@ Descendant server components don't receive `params`; they read the locale with `
 
 When authoring any route under `app/[locale]/`:
 
-1. **`setRequestLocale(locale)` is the first line** of every page and every `generateMetadata` that uses next-intl -- before `getTranslations`, `getLocale`, `getMetadata`, `getMdMetadata`, or any other next-intl call.
-2. **Remember the helpers count.** `getMetadata`/`getMdMetadata` call `getTranslations("common")` internally; passing them `locale` does not prime the cache.
+1. **Prime each entry independently.** Put a top-level `setRequestLocale(locale)` before any implicit-locale next-intl call in the default export, exported `generateMetadata`, and exported `generateViewport`. Conditional and no-argument calls do not count.
+2. **Prefer explicit locale where it fits.** `getMetadata` and `getMdMetadata` are safe because they forward their required locale. The direct server APIs are safe only when their options object has an explicit normal or quoted `locale` property; an arbitrary spread is not enough. `getLocale()` always needs a prior prime.
 3. **Test an on-demand URL**, not just a valid page. A bogus slug or invalid-locale path (`/api/<anything>`) is what exercises the header-read path; valid prerendered routes hide the bug. `/api/<real-page-slug>` is the sharpest probe: `proxy.ts`'s matcher excludes `api`, `_next`, `_vercel`, `.well-known` and any dotted path, so next-intl's middleware never normalizes the segment and it lands in `[locale]`.
-4. **The `local/set-request-locale-first` ESLint rule enforces this** (`.eslint-rules/`), scoped to route entry files in `.eslintrc.json`. Don't audit by grep: a file-level `grep setRequestLocale` gives false negatives, since most affected pages already call it in `generateMetadata` -- the file matches while the `Page` body is still broken.
+4. **The `local/set-request-locale-first` ESLint rule enforces this** (`.eslint-rules/`), scoped to `page`, `layout`, `template`, `default`, `loading`, `not-found`, and `opengraph-image` TSX route files. It analyzes the default export and exported metadata/viewport functions separately. It follows direct same-file helper calls and known eager callbacks/IIFEs, but it is deliberately not a cross-module call graph. Don't audit by grep: a file-level `grep setRequestLocale` gives false negatives when one entry is primed and another is not.
 
 ## Related
 

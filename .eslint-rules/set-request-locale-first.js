@@ -21,38 +21,64 @@ const OPTIONAL_LOCALE = new Set([
 // No override parameter, so it always resolves the request locale.
 const ALWAYS = new Set(["getLocale"])
 
-// Project helpers that reach next-intl internally with no way to pass a locale
-// through, so the caller must still prime the request locale. `getMetadata`
-// accepts a `locale` but never forwards it to its own `getTranslations` call.
-const RISKY_HELPERS = new Map([
-  ["@/lib/utils/metadata", new Set(["getMetadata"])],
-])
-
-const RISKY_HELPER_NAMES = new Set(
-  [...RISKY_HELPERS.values()].flatMap((names) => [...names])
-)
-
 const NAMED_ENTRIES = new Set(["generateMetadata", "generateViewport"])
+const EAGER_CALLBACK_METHODS = new Set([
+  "every",
+  "filter",
+  "find",
+  "findIndex",
+  "findLast",
+  "findLastIndex",
+  "flatMap",
+  "forEach",
+  "map",
+  "reduce",
+  "reduceRight",
+  "some",
+  "sort",
+])
 
 const isFunction = (node) =>
   node?.type === "FunctionDeclaration" ||
   node?.type === "FunctionExpression" ||
   node?.type === "ArrowFunctionExpression"
 
+const staticName = (node) => {
+  if (!node) return null
+  if (node.type === "Identifier") return node.name
+  if (node.type === "Literal" && typeof node.value === "string")
+    return node.value
+  return null
+}
+
 const hasExplicitLocale = (arg) =>
   arg?.type === "ObjectExpression" &&
-  // a spread might carry `locale`, so don't claim a violation
   arg.properties.some(
-    (p) => p.type === "SpreadElement" || p.key?.name === "locale"
+    (property) =>
+      property.type === "Property" &&
+      !property.computed &&
+      !property.method &&
+      property.kind === "init" &&
+      staticName(property.key) === "locale"
   )
 
-// Innermost-first, so index 0 is the function that literally contains the call.
-const functionChain = (node) => {
-  const chain = []
-  for (let cur = node.parent; cur; cur = cur.parent) {
-    if (isFunction(cur)) chain.push(cur)
+const unwrapExpression = (node) => {
+  let current = node
+  while (current) {
+    if (current.type === "AwaitExpression") {
+      current = current.argument
+    } else if (
+      current.type === "ChainExpression" ||
+      current.type === "TSAsExpression" ||
+      current.type === "TSNonNullExpression" ||
+      current.type === "TSSatisfiesExpression"
+    ) {
+      current = current.expression
+    } else {
+      break
+    }
   }
-  return chain
+  return current
 }
 
 module.exports = {
@@ -74,115 +100,255 @@ module.exports = {
   create(context) {
     const imported = new Map() // local name -> next-intl export name
     const namespaces = new Set() // `import * as intl from "next-intl/server"`
-    const entries = new Set() // function nodes that are route entry points
-    const byName = new Map() // declared name -> function node
-    const calls = [] // { chain, node, api }
-    let defaultExport = null
+    const bindings = new Map() // local name -> initializer/declaration, null if ambiguous
+    const namedExports = new Map() // exported name -> local name
+    let defaultExport = null // expression that resolves to the default entry
 
-    const record = (node, api) => {
-      calls.push({ chain: functionChain(node), node, api })
+    const addBinding = (name, value) => {
+      if (!bindings.has(name)) {
+        bindings.set(name, value)
+      } else if (bindings.get(name) !== value) {
+        bindings.set(name, null)
+      }
+    }
+
+    const importedApi = (call) => {
+      const callee = unwrapExpression(call.callee)
+      if (callee?.type === "Identifier") return imported.get(callee.name)
+      if (
+        callee?.type === "MemberExpression" &&
+        callee.object.type === "Identifier" &&
+        namespaces.has(callee.object.name)
+      ) {
+        return staticName(callee.property)
+      }
+      return undefined
+    }
+
+    const isRiskyCall = (node) => {
+      const api = importedApi(node)
+      return (
+        ALWAYS.has(api) ||
+        (OPTIONAL_LOCALE.has(api) && !hasExplicitLocale(node.arguments[0]))
+      )
+    }
+
+    const hasRealArgument = (call) => {
+      const arg = call.arguments[0]
+      return (
+        arg &&
+        arg.type !== "SpreadElement" &&
+        !(arg.type === "Identifier" && arg.name === "undefined") &&
+        !(arg.type === "Literal" && arg.value === null)
+      )
+    }
+
+    const primeCall = (statement) => {
+      if (statement.type !== "ExpressionStatement") return null
+      const expression = unwrapExpression(statement.expression)
+      if (
+        expression?.type !== "CallExpression" ||
+        importedApi(expression) !== "setRequestLocale" ||
+        !hasRealArgument(expression)
+      ) {
+        return null
+      }
+      return expression
+    }
+
+    const resolveFunction = (node, seen = new Set()) => {
+      const value = unwrapExpression(node)
+      if (!value || seen.has(value)) return null
+      seen.add(value)
+
+      if (isFunction(value)) return value
+      if (value.type === "Identifier") {
+        return resolveFunction(bindings.get(value.name), seen)
+      }
+      if (value.type === "CallExpression") {
+        for (const arg of [...value.arguments].reverse()) {
+          if (arg.type === "SpreadElement") continue
+          const resolved = resolveFunction(arg, seen)
+          if (resolved) return resolved
+        }
+      }
+      return null
+    }
+
+    const childNodes = (node) => {
+      if (!node) return []
+      const children = []
+      for (const [key, value] of Object.entries(node)) {
+        if (
+          key === "parent" ||
+          key === "range" ||
+          key === "loc" ||
+          key === "tokens" ||
+          key === "comments"
+        ) {
+          continue
+        }
+        if (Array.isArray(value)) {
+          children.push(
+            ...value.filter((item) => item && typeof item.type === "string")
+          )
+        } else if (value && typeof value.type === "string") {
+          children.push(value)
+        }
+      }
+      return children
+    }
+
+    const findRiskInFunction = (fn, visited) => {
+      if (visited.has(fn)) return null
+      const nextVisited = new Set(visited)
+      nextVisited.add(fn)
+      return findRisk(fn.body, nextVisited)
+    }
+
+    const findRisk = (node, visited) => {
+      if (!node || isFunction(node)) return null
+
+      if (node.type === "CallExpression") {
+        const callee = unwrapExpression(node.callee)
+
+        const calleeRisk = findRisk(callee, visited)
+        if (calleeRisk) return calleeRisk
+        for (const arg of node.arguments) {
+          if (arg.type === "SpreadElement") {
+            const risk = findRisk(arg.argument, visited)
+            if (risk) return risk
+          } else if (!isFunction(arg)) {
+            const risk = findRisk(arg, visited)
+            if (risk) return risk
+          }
+        }
+
+        if (isRiskyCall(node)) return node
+
+        const calledFunction = resolveFunction(callee)
+        if (calledFunction) {
+          const risk = findRiskInFunction(calledFunction, visited)
+          if (risk) return risk
+        }
+
+        const method =
+          callee?.type === "MemberExpression"
+            ? staticName(callee.property)
+            : null
+        if (method && EAGER_CALLBACK_METHODS.has(method)) {
+          for (const arg of node.arguments) {
+            if (arg.type === "SpreadElement") continue
+            const callback = resolveFunction(arg)
+            if (!callback) continue
+            const risk = findRiskInFunction(callback, visited)
+            if (risk) return risk
+          }
+        }
+        return null
+      }
+
+      if (node.type === "NewExpression") {
+        for (const arg of node.arguments) {
+          if (arg.type === "SpreadElement") {
+            const risk = findRisk(arg.argument, visited)
+            if (risk) return risk
+          } else if (!isFunction(arg)) {
+            const risk = findRisk(arg, visited)
+            if (risk) return risk
+          }
+        }
+        if (
+          node.callee.type === "Identifier" &&
+          node.callee.name === "Promise" &&
+          node.arguments[0]?.type !== "SpreadElement"
+        ) {
+          const executor = resolveFunction(node.arguments[0])
+          if (executor) return findRiskInFunction(executor, visited)
+        }
+        return null
+      }
+
+      for (const child of childNodes(node)) {
+        const risk = findRisk(child, visited)
+        if (risk) return risk
+      }
+      return null
     }
 
     return {
       ImportDeclaration(node) {
-        const source = node.source.value
-        const helpers = RISKY_HELPERS.get(source)
-        if (source !== "next-intl/server" && !helpers) return
+        if (node.source.value !== "next-intl/server") return
 
         for (const s of node.specifiers) {
           if (s.type === "ImportSpecifier") {
-            if (helpers && !helpers.has(s.imported.name)) continue
-            imported.set(s.local.name, s.imported.name)
-          } else if (
-            s.type === "ImportNamespaceSpecifier" &&
-            source === "next-intl/server"
-          ) {
+            imported.set(s.local.name, staticName(s.imported))
+          } else if (s.type === "ImportNamespaceSpecifier") {
             namespaces.add(s.local.name)
           }
         }
       },
 
       ExportDefaultDeclaration(node) {
-        if (isFunction(node.declaration)) entries.add(node.declaration)
-        else if (node.declaration.type === "Identifier")
-          defaultExport = node.declaration.name
+        defaultExport = node.declaration
+      },
+
+      ExportNamedDeclaration(node) {
+        if (node.declaration?.type === "FunctionDeclaration") {
+          const name = node.declaration.id?.name
+          if (name) namedExports.set(name, name)
+        } else if (node.declaration?.type === "VariableDeclaration") {
+          for (const declaration of node.declaration.declarations) {
+            if (declaration.id.type === "Identifier") {
+              namedExports.set(declaration.id.name, declaration.id.name)
+            }
+          }
+        }
+        for (const specifier of node.specifiers) {
+          const exported = staticName(specifier.exported)
+          const local = staticName(specifier.local)
+          if (exported && local) namedExports.set(exported, local)
+        }
       },
 
       FunctionDeclaration(node) {
-        if (!node.id) return
-        byName.set(node.id.name, node)
-        if (NAMED_ENTRIES.has(node.id.name)) entries.add(node)
+        if (node.id) addBinding(node.id.name, node)
       },
 
       VariableDeclarator(node) {
-        if (node.id.type !== "Identifier" || !isFunction(node.init)) return
-        byName.set(node.id.name, node.init)
-        if (NAMED_ENTRIES.has(node.id.name)) entries.add(node.init)
-      },
-
-      CallExpression(node) {
-        const callee = node.callee
-        if (callee.type === "Identifier") {
-          const api = imported.get(callee.name)
-          if (api) record(node, api)
-          return
-        }
-        if (
-          callee.type === "MemberExpression" &&
-          !callee.computed &&
-          callee.object.type === "Identifier" &&
-          namespaces.has(callee.object.name)
-        ) {
-          record(node, callee.property.name)
-        }
+        if (node.id.type === "Identifier" && node.init)
+          addBinding(node.id.name, node.init)
       },
 
       "Program:exit"() {
-        if (defaultExport && byName.has(defaultExport))
-          entries.add(byName.get(defaultExport))
+        const entries = new Set()
+        const defaultEntry = resolveFunction(defaultExport)
+        if (defaultEntry) entries.add(defaultEntry)
+        for (const name of NAMED_ENTRIES) {
+          const local = namedExports.get(name)
+          if (!local) continue
+          const entry = resolveFunction(bindings.get(local))
+          if (entry) entries.add(entry)
+        }
 
-        const isRisky = (c) =>
-          ALWAYS.has(c.api) ||
-          RISKY_HELPER_NAMES.has(c.api) ||
-          (OPTIONAL_LOCALE.has(c.api) &&
-            !hasExplicitLocale(c.node.arguments[0]))
+        for (const entry of entries) {
+          const statements =
+            entry.body.type === "BlockStatement"
+              ? entry.body.body
+              : [{ type: "ReturnStatement", argument: entry.body }]
+          const hasPrime = statements.some(primeCall)
 
-        for (const fn of entries) {
-          // Attribute each call to the entry it sits under, and remember whether
-          // it is in the entry's own body or deferred inside a nested closure.
-          const own = []
-          const nested = []
-          for (const c of calls) {
-            const idx = c.chain.indexOf(fn)
-            if (idx === -1) continue
-            // A call under a *nearer* entry belongs to that one, not this.
-            if (c.chain.slice(0, idx).some((f) => entries.has(f))) continue
-            ;(idx === 0 ? own : nested).push(c)
-          }
-          own.sort((a, b) => a.node.range[0] - b.node.range[0])
-
-          const set = own.find((c) => c.api === "setRequestLocale")
-          const risk = own.find(isRisky)
-
-          if (risk && (!set || set.node.range[0] > risk.node.range[0])) {
-            context.report({
-              node: risk.node,
-              messageId: "first",
-              data: { api: risk.api },
-            })
-            continue
-          }
-
-          // Execution order of a closure is not knowable statically, so only
-          // flag deferred calls when the entry never primes the locale at all.
-          if (set) continue
-          const deferred = nested.find(isRisky)
-          if (deferred) {
-            context.report({
-              node: deferred.node,
-              messageId: "missing",
-              data: { api: deferred.api },
-            })
+          for (const statement of statements) {
+            const risk = findRisk(statement, new Set([entry]))
+            if (risk) {
+              context.report({
+                node: risk,
+                messageId: hasPrime ? "first" : "missing",
+                data: { api: importedApi(risk) },
+              })
+              break
+            }
+            if (primeCall(statement)) break
           }
         }
       },

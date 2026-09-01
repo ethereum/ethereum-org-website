@@ -92,6 +92,8 @@
         "app/**/layout.tsx",
         "app/**/template.tsx",
         "app/**/default.tsx",
+        "app/**/loading.tsx",
+        "app/**/not-found.tsx",
         "app/**/opengraph-image.tsx"
       ],
       "rules": {

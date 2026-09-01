@@ -83,7 +83,7 @@ export const getMetadata = async ({
   translatedLocales?: string[]
 }): Promise<Metadata> => {
   const slugString = slug.join("/")
-  const t = await getTranslations("common")
+  const t = await getTranslations({ locale, namespace: "common" })
 
   const description = descriptionProp || t("site-description")
 

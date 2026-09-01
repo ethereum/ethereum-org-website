@@ -1,163 +1,170 @@
-import { RuleTester } from "eslint"
+import { Linter } from "eslint"
 import { createRequire } from "node:module"
-import { test } from "@playwright/test"
+import { expect, test } from "@playwright/test"
 
 const req = createRequire(__filename)
 const rule = req("../../../.eslint-rules/set-request-locale-first.js")
 
-const ruleTester = new RuleTester({
-  parser: req.resolve("@typescript-eslint/parser"),
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-    ecmaFeatures: { jsx: true },
-  },
+const lint = (code: string) => {
+  const linter = new Linter()
+  linter.defineParser("typescript", req("@typescript-eslint/parser"))
+  linter.defineRule("set-request-locale-first", rule)
+  return linter
+    .verify(
+      code,
+      {
+        parser: "typescript",
+        parserOptions: {
+          ecmaVersion: "latest",
+          sourceType: "module",
+          ecmaFeatures: { jsx: true },
+        },
+        rules: { "set-request-locale-first": "error" },
+      },
+      "app/[locale]/example/page.tsx"
+    )
+    .map((message) => message.messageId)
+}
+
+test("accepts a top-level prime before a direct API", () => {
+  expect(
+    lint(`
+      import { getTranslations, setRequestLocale } from "next-intl/server"
+      export default async function Page({ params }) {
+        const { locale } = await params
+        setRequestLocale(locale)
+        return <div>{(await getTranslations("common"))("x")}</div>
+      }
+    `)
+  ).toEqual([])
 })
 
-const valid = [
-  // Primed before the first locale-resolving call.
-  `import { getTranslations, setRequestLocale } from "next-intl/server"
-   export default async function Page({ params }) {
-     const { locale } = await params
-     setRequestLocale(locale)
-     const t = await getTranslations("common")
-     return <div>{t("x")}</div>
-   }`,
+test("accepts an explicit locale key, quoted or not", () => {
+  expect(
+    lint(`
+      import { getTranslations } from "next-intl/server"
+      export default async function Page({ params }) {
+        const { locale } = await params
+        return <div>{(await getTranslations({ "locale": locale, namespace: "common" }))("x")}</div>
+      }
+    `)
+  ).toEqual([])
+})
 
-  // An explicit locale short-circuits next-intl's header read.
-  `import { getTranslations } from "next-intl/server"
-   export default async function Page({ params }) {
-     const { locale } = await params
-     const t = await getTranslations({ locale, namespace: "common" })
-     return <div>{t("x")}</div>
-   }`,
+test("accepts getMetadata and getMdMetadata that already receive locale", () => {
+  expect(
+    lint(`
+      import { getMetadata } from "@/lib/utils/metadata"
+      import { getMdMetadata } from "@/lib/md/metadata"
+      export async function generateMetadata({ params }) {
+        const { locale } = await params
+        return getMetadata({ locale, slug: [], title: "t" }) ?? getMdMetadata({ locale, slug: [] })
+      }
+    `)
+  ).toEqual([])
+})
 
-  // A spread may carry `locale`, so it must not be called a violation.
-  `import { getMessages } from "next-intl/server"
-   export default async function Page({ params }) {
-     const opts = await params
-     return <div>{JSON.stringify(await getMessages({ ...opts }))}</div>
-   }`,
+test("ignores generateMetadata unless it is exported as that name", () => {
+  expect(
+    lint(`
+      import { getLocale } from "next-intl/server"
+      async function generateMetadata() {
+        return { title: await getLocale() }
+      }
+      export default function Page() {
+        return <div />
+      }
+    `)
+  ).toEqual([])
+})
 
-  // Deferred inside a closure that runs after priming: correct code that the
-  // old textual-order check reported.
-  `import { getTranslations, setRequestLocale } from "next-intl/server"
-   export default async function Page({ params }) {
-     const { locale } = await params
-     const later = async () => await getTranslations("common")
-     setRequestLocale(locale)
-     const t = await later()
-     return <div>{t("x")}</div>
-   }`,
+test("flags an unsafe Page even when generateMetadata is safe", () => {
+  expect(
+    lint(`
+      import { getTranslations } from "next-intl/server"
+      export async function generateMetadata({ params }) {
+        const { locale } = await params
+        return { title: (await getTranslations({ locale, namespace: "common" }))("title") }
+      }
+      export default async function Page() {
+        return <div>{(await getTranslations("common"))("x")}</div>
+      }
+    `)
+  ).toEqual(["missing"])
+})
 
-  // getMetadata reaches next-intl internally, but the locale is primed first.
-  `import { setRequestLocale } from "next-intl/server"
-   import { getMetadata } from "@/lib/utils/metadata"
-   export async function generateMetadata({ params }) {
-     const { locale } = await params
-     setRequestLocale(locale)
-     return await getMetadata({ locale, slug: [], title: "t" })
-   }`,
+test("rejects a spread without an explicit locale property", () => {
+  expect(
+    lint(`
+      import { getMessages } from "next-intl/server"
+      export default async function Page({ params }) {
+        return <div>{JSON.stringify(await getMessages({ ...params }))}</div>
+      }
+    `)
+  ).toEqual(["missing"])
+})
 
-  // Not a route entry point, so the rule has no opinion.
-  `import { getTranslations } from "next-intl/server"
-   export async function helper() {
-     return await getTranslations("common")
-   }`,
+test("follows a same-file helper called before the prime", () => {
+  expect(
+    lint(`
+      import { getLocale, setRequestLocale } from "next-intl/server"
+      const readLocale = () => getLocale()
+      export default async function Page({ params }) {
+        const value = await readLocale()
+        const { locale } = await params
+        setRequestLocale(locale)
+        return <div>{value}</div>
+      }
+    `)
+  ).toEqual(["first"])
+})
 
-  // Entry reached through an identifier default export.
-  `import { getLocale, setRequestLocale } from "next-intl/server"
-   const Page = async ({ params }) => {
-     const { locale } = await params
-     setRequestLocale(locale)
-     return <div>{await getLocale()}</div>
-   }
-   export default Page`,
+test("flags an IIFE and an eagerly invoked callback", () => {
+  expect(
+    lint(`
+      import { getLocale, getTranslations } from "next-intl/server"
+      export default async function Page() {
+        await (async () => getTranslations("common"))()
+        await Promise.all([1].map(() => getLocale()))
+        return <div />
+      }
+    `)
+  ).toEqual(["missing"])
+})
 
-  // A same-named import from an unrelated module must not be tracked.
-  `import { getMetadata } from "@/lib/utils/somewhere-else"
-   export async function generateMetadata() {
-     return await getMetadata({ title: "t" })
-   }`,
-]
+test("rejects a conditional or no-arg prime", () => {
+  expect(
+    lint(`
+      import { getLocale, setRequestLocale } from "next-intl/server"
+      export default async function Page({ params }) {
+        const { locale } = await params
+        if (locale) setRequestLocale(locale)
+        setRequestLocale()
+        return <div>{await getLocale()}</div>
+      }
+    `)
+  ).toEqual(["missing"])
+})
 
-const invalid = [
-  // The shape this PR fixed across 14 pages.
-  {
-    code: `import { getTranslations, setRequestLocale } from "next-intl/server"
-           export default async function Page({ params }) {
-             const { locale } = await params
-             const t = await getTranslations("common")
-             setRequestLocale(locale)
-             return <div>{t("x")}</div>
-           }`,
-    errors: [{ messageId: "first" }],
-  },
+test("resolves a wrapped default export", () => {
+  expect(
+    lint(`
+      import { getLocale } from "next-intl/server"
+      const Page = async () => <div>{await getLocale()}</div>
+      export default withAuth(Page)
+    `)
+  ).toEqual(["missing"])
+})
 
-  // getLocale has no override parameter, so it always resolves the request.
-  {
-    code: `import { getLocale } from "next-intl/server"
-           export default async function Page() {
-             return <div>{await getLocale()}</div>
-           }`,
-    errors: [{ messageId: "first" }],
-  },
-
-  // The #18800 shape: the only next-intl reach is through getMetadata.
-  {
-    code: `import { getMetadata } from "@/lib/utils/metadata"
-           export async function generateMetadata({ params }) {
-             const { locale } = await params
-             return await getMetadata({ locale, slug: [], title: "t" })
-           }`,
-    errors: [{ messageId: "first" }],
-  },
-
-  // setRequestLocale sits in a closure that is never invoked, so it primes
-  // nothing; the old textual-order check accepted this.
-  {
-    code: `import { getTranslations, setRequestLocale } from "next-intl/server"
-           export default async function Page({ params }) {
-             const { locale } = await params
-             const prime = () => setRequestLocale(locale)
-             const t = await getTranslations("common")
-             return <div>{t("x")}</div>
-           }`,
-    errors: [{ messageId: "first" }],
-  },
-
-  // Namespace import reaches the same APIs.
-  {
-    code: `import * as intl from "next-intl/server"
-           export default async function Page() {
-             return <div>{await intl.getLocale()}</div>
-           }`,
-    errors: [{ messageId: "first" }],
-  },
-
-  // Deferred call in an entry that never primes at all.
-  {
-    code: `import { getTranslations } from "next-intl/server"
-           export default async function Page() {
-             const later = async () => await getTranslations("common")
-             const t = await later()
-             return <div>{t("x")}</div>
-           }`,
-    errors: [{ messageId: "missing" }],
-  },
-
-  // generateViewport is an entry point too.
-  {
-    code: `import { getLocale } from "next-intl/server"
-           export async function generateViewport() {
-             return { themeColor: await getLocale() }
-           }`,
-    errors: [{ messageId: "first" }],
-  },
-]
-
-test("set-request-locale-first", () => {
-  RuleTester.describe = (_: string, fn: () => void) => fn()
-  RuleTester.it = (_: string, fn: () => void) => fn()
-  ruleTester.run("set-request-locale-first", rule, { valid, invalid })
+test("treats generateMetadata as an entry only via its exported name", () => {
+  expect(
+    lint(`
+      import * as intl from "next-intl/server"
+      const metadata = async () => ({ title: await intl.getLocale() })
+      export { metadata as generateMetadata }
+      export default function Page() {
+        return <div />
+      }
+    `)
+  ).toEqual(["missing"])
 })
