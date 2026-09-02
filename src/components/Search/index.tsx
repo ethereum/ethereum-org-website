@@ -30,14 +30,32 @@ type DocSearchHit = Parameters<
   NonNullable<DocSearchModalProps["transformItems"]>
 >[0][number]
 
-/** Recursively strip the site-name suffix from every `lvl0` title in a hit. */
+const TITLE_KEYS = new Set(["lvl0", "hierarchy.lvl0"])
+
+/**
+ * Strip the site-name suffix from every copy of a hit's lvl0 title.
+ *
+ * The renderer reads `_highlightResult["hierarchy.lvl0"].value`, and the group header
+ * above each result takes its label from the same place -- so the raw fields are not
+ * enough. Highlight entries nest the string under `value`, which a naive walk recurses
+ * straight past.
+ */
 const stripTitleSuffix = (node: Record<string, unknown>, depth = 0) => {
   if (depth > 6) return
   for (const [key, value] of Object.entries(node)) {
-    if (typeof value === "string") {
-      if (key === "lvl0" || key === "hierarchy.lvl0")
+    if (TITLE_KEYS.has(key)) {
+      if (typeof value === "string") {
         node[key] = sanitizeHitTitle(value)
-    } else if (value && typeof value === "object") {
+        continue
+      }
+      // Highlight/snippet entries: { value: "...", matchLevel: "none" }
+      const wrapped = value as { value?: unknown } | null
+      if (wrapped && typeof wrapped.value === "string") {
+        wrapped.value = sanitizeHitTitle(wrapped.value)
+        continue
+      }
+    }
+    if (value && typeof value === "object") {
       stripTitleSuffix(value as Record<string, unknown>, depth + 1)
     }
   }
