@@ -74,6 +74,8 @@ Sentry.init({
     /DApp request timeout/,
     // Cross-origin postMessage from extensions/embedded frames (ETHORG-87)
     /^Error: invalid origin$/,
+    // Extension content script double-injects a top-level `script` var (ETHORG-1AZ)
+    /Identifier 'script' has already been declared/,
   ],
 
   beforeSend(event) {
