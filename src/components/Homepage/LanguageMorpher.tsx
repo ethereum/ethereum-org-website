@@ -14,27 +14,42 @@ import {
 import { useIsClient } from "@/hooks/useIsClient"
 import { useMediaQuery } from "@/hooks/useMediaQuery"
 
+// The two targets need different triggers: the mobile button is a Radix Tabs
+// trigger, which activates on focus and ignores a synthetic click, while the
+// desktop one is a popover trigger, which needs the click. Doing both covers
+// each without branching.
+const activate = (button: HTMLElement) => {
+  button.focus()
+  button.click()
+}
+
+// The mobile menu's content is lazy-loaded, so its language button mounts a few
+// hundred ms after the hamburger click -- longer on a cold chunk fetch. Poll for
+// it instead of betting on a fixed delay (ETHORG-1AK).
+const MENU_MOUNT_TIMEOUT_MS = 3000
+
+const activateWhenPresent = (selector: string) => {
+  const deadline = performance.now() + MENU_MOUNT_TIMEOUT_MS
+  const attempt = () => {
+    const button = document.querySelector<HTMLElement>(selector)
+    if (button) return activate(button)
+    if (performance.now() < deadline) requestAnimationFrame(attempt)
+  }
+  requestAnimationFrame(attempt)
+}
+
 const LanguageMorpher = () => {
   const isClient = useIsClient()
 
   const handleMobileClick = () => {
-    ;(document.getElementById(HAMBURGER_BUTTON_ID) as HTMLButtonElement).click()
-    setTimeout(
-      () =>
-        (
-          document.querySelector(
-            `button[name="${MOBILE_LANGUAGE_BUTTON_NAME}"]`
-          ) as HTMLButtonElement
-        ).click(),
-      1
-    )
+    document.getElementById(HAMBURGER_BUTTON_ID)?.click()
+    activateWhenPresent(`button[name="${MOBILE_LANGUAGE_BUTTON_NAME}"]`)
   }
   const handleDesktopClick = () => {
-    ;(
-      document.querySelector(
-        `button[name="${DESKTOP_LANGUAGE_BUTTON_NAME}"]`
-      ) as HTMLButtonElement
-    ).click()
+    const button = document.querySelector<HTMLElement>(
+      `button[name="${DESKTOP_LANGUAGE_BUTTON_NAME}"]`
+    )
+    if (button) activate(button)
   }
 
   const [isLarge] = useMediaQuery([`(min-width: ${screens.md})`])
