@@ -42,13 +42,25 @@ test("accepts a top-level prime before a direct API", () => {
 test("accepts an explicit locale key, quoted or not", () => {
   expect(
     lint(`
-      import { getTranslations } from "next-intl/server"
+      import { getExtracted, getTranslations } from "next-intl/server"
       export default async function Page({ params }) {
         const { locale } = await params
+        await getExtracted({ locale })
         return <div>{(await getTranslations({ "locale": locale, namespace: "common" }))("x")}</div>
       }
     `)
   ).toEqual([])
+})
+
+test("flags a bare getExtracted call", () => {
+  expect(
+    lint(`
+      import { getExtracted } from "next-intl/server"
+      export default async function Page() {
+        return <div>{JSON.stringify(await getExtracted("common"))}</div>
+      }
+    `)
+  ).toEqual(["missing"])
 })
 
 test("accepts getMetadata and getMdMetadata that already receive locale", () => {

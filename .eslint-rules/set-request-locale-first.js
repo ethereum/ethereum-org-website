@@ -16,6 +16,7 @@ const OPTIONAL_LOCALE = new Set([
   "getFormatter",
   "getNow",
   "getTimeZone",
+  "getExtracted",
 ])
 
 // No override parameter, so it always resolves the request locale.

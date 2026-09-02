@@ -64,7 +64,7 @@ get requestLocale() {
 }
 ```
 
-So `getTranslations({ locale, namespace })`, `getMessages({ locale })`, `getFormatter({ locale })`, `getNow({ locale })` and `getTimeZone({ locale })` never read headers. Only forms without an explicit `locale` property do, plus `getLocale()`, which has no override parameter and always resolves the request locale. A spread such as `{ ...options }` does not prove that a locale is present.
+So `getTranslations({ locale, namespace })`, `getMessages({ locale })`, `getFormatter({ locale })`, `getNow({ locale })`, `getTimeZone({ locale })` and `getExtracted({ locale })` never read headers. Only forms without an explicit `locale` property do, plus `getLocale()`, which has no override parameter and always resolves the request locale. A spread such as `{ ...options }` does not prove that a locale is present.
 
 ### Why there is no single central fix
 
