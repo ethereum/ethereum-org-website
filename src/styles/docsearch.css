@@ -27,7 +27,7 @@
 }
 
 .DocSearch-Button-Key {
-  @apply m-0 size-5 border border-solid border-disabled bg-none p-0.5 text-sm lowercase text-disabled shadow-none first:pt-1 first:text-md;
+  @apply m-0 size-5 border border-solid border-disabled bg-none p-0.5 text-sm text-disabled lowercase shadow-none first:pt-1 first:text-md;
 }
 
 /**
@@ -47,6 +47,9 @@
 .dark {
   --docsearch-modal-background: hsla(var(--background));
   --docsearch-highlight-color: hsla(var(--primary-hover));
+  /* The vendor default is near-black, which fails contrast on our dark background --
+     it shows up on placeholder text and unhovered "Recent" entries. */
+  --docsearch-muted-color: hsla(var(--body-medium));
 }
 
 /* Restore library padding/margin stripped by TW preflight (* {margin:0; padding:0})
@@ -141,7 +144,7 @@
 }
 
 .DocSearch-Dropdown {
-  @apply max-h-[calc(100vh-75px-var(--docsearch-footer-height)-2*var(--inset))] overflow-y-scroll pe-2 ps-4 md:max-h-[calc(100vh-16rem)] md:overflow-y-auto md:pe-4 md:ps-8;
+  @apply max-h-[calc(100vh-75px-var(--docsearch-footer-height)-2*var(--inset))] overflow-y-scroll ps-4 pe-2 md:max-h-[calc(100vh-16rem)] md:overflow-y-auto md:ps-8 md:pe-4;
 }
 
 .DocSearch-Hit-source {
@@ -176,8 +179,9 @@
   @apply border-t-2 border-primary bg-primary-low-contrast;
 }
 
-.DocSearch-Logo a {
-  color: var(--docsearch-logo-color);
+/* The vendor attribution adds nothing for readers and takes a row of a small modal. */
+.DocSearch-Logo {
+  display: none;
 }
 
 .DocSearch-Commands {
@@ -188,7 +192,7 @@
 }
 
 .DocSearch-Label {
-  @apply lowercase text-body;
+  @apply text-body lowercase;
 }
 
 .DocSearch-Commands-Key {
@@ -197,19 +201,6 @@
 
 .DocSearch-Commands-Key svg {
   @apply bg-transparent;
-}
-
-.DocSearch-Logo .DocSearch-Label {
-  @apply uppercase text-body-medium;
-}
-
-svg[aria-label="Algolia"] {
-  margin-left: 0;
-  margin-inline-start: 8px;
-}
-
-svg[aria-label="Algolia"] * {
-  @apply fill-body-medium;
 }
 
 @media (max-width: 768px) {

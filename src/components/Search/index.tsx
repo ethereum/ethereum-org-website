@@ -88,9 +88,23 @@ const Search = ({ asChild = false, children }: SearchProps) => {
         // Use JSON clone for browser compatibility (structuredClone not available in Chrome < 98)
         const newItem: DocSearchHit = JSON.parse(JSON.stringify(item))
         newItem.url = sanitizeHitUrl(item.url)
-        newItem["hierarchy.lvl0"] = sanitizeHitTitle(
-          item["hierarchy.lvl0"] || ""
-        )
+        // lvl0 is the page's og:title, which always ends " | ethereum.org". The fork
+        // stores it three ways -- a flat dotted key, the `hierarchy` object, and a
+        // one-element `hierarchy_camel` array -- and renders from more than one, so
+        // missing any of them leaves the suffix on every result.
+        const record = newItem as unknown as Record<string, unknown>
+        if (typeof record["hierarchy.lvl0"] === "string")
+          record["hierarchy.lvl0"] = sanitizeHitTitle(record["hierarchy.lvl0"])
+        for (const container of [
+          record.hierarchy,
+          ...(Array.isArray(record.hierarchy_camel)
+            ? record.hierarchy_camel
+            : []),
+        ]) {
+          const level = container as { lvl0?: unknown } | undefined
+          if (level && typeof level.lvl0 === "string")
+            level.lvl0 = sanitizeHitTitle(level.lvl0)
+        }
         return newItem
       }),
     placeholder: t("search-ethereum-org"),

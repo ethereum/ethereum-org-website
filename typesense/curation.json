@@ -163,6 +163,30 @@
       "pin": [
         "/web3/"
       ]
+    },
+    {
+      "q": "smart contract",
+      "pin": [
+        "/smart-contracts/"
+      ]
+    },
+    {
+      "q": "tutorial",
+      "pin": [
+        "/developers/tutorials/"
+      ]
+    },
+    {
+      "q": "tutorials",
+      "pin": [
+        "/developers/tutorials/"
+      ]
+    },
+    {
+      "q": "wallet",
+      "pin": [
+        "/wallets/"
+      ]
     }
   ]
 }
