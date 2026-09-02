@@ -14,6 +14,7 @@ import type {
   UpgradeStore,
 } from "../../../src/data/upgrades/types"
 import {
+  coverageGapFlag,
   findGaps,
   mentionedEips,
   renderReport,
@@ -85,6 +86,58 @@ test("an unscheduled upgrade is not chased for a page it does not owe", () => {
 
 test("the report says so when there is nothing to write", () => {
   expect(renderReport([])).toContain("Every scheduled EIP")
+  expect(coverageGapFlag([])).toBe("false")
+})
+
+test("a non-empty gap list is the signal to comment on a data-only week", () => {
+  expect(
+    coverageGapFlag([
+      {
+        upgrade: upgrade({}),
+        path: "public/content/roadmap/example/index.md",
+        pageMissing: false,
+        uncovered: [
+          {
+            id: 8246,
+            status: "scheduled",
+            networking: false,
+            decidedAt: null,
+          },
+        ],
+      },
+    ])
+  ).toBe("true")
+})
+
+test("networking EIPs alone are printed but never trigger a comment", () => {
+  expect(
+    coverageGapFlag([
+      {
+        upgrade: upgrade({}),
+        path: "public/content/roadmap/example/index.md",
+        pageMissing: false,
+        uncovered: [
+          { id: 8070, status: "scheduled", networking: true, decidedAt: null },
+          { id: 8136, status: "scheduled", networking: true, decidedAt: null },
+        ],
+      },
+    ])
+  ).toBe("false")
+})
+
+test("a page that does not exist yet is a gap whatever its EIPs are", () => {
+  expect(
+    coverageGapFlag([
+      {
+        upgrade: upgrade({}),
+        path: "public/content/roadmap/example/index.md",
+        pageMissing: true,
+        uncovered: [
+          { id: 8070, status: "scheduled", networking: true, decidedAt: null },
+        ],
+      },
+    ])
+  ).toBe("true")
 })
 
 test("a networking EIP carries the wire-protocol caveat", () => {
