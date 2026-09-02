@@ -41,6 +41,12 @@ const NO_LOCATION = new Set(["", "undefined", "null", "<anonymous>"])
 const hasUsableLocation = (filename?: string, absPath?: string): boolean =>
   [filename, absPath].some((v) => v !== undefined && !NO_LOCATION.has(v))
 
+// For a non-Error throw the SDK synthesizes an exception and prepends its own
+// eventbuilder frame. It resolves to app:///node_modules/@sentry/..., so left
+// in it would count as a location and hide that nothing else can be placed.
+const isSdkFrame = (filename = "", absPath = ""): boolean =>
+  [filename, absPath].some((v) => v.includes("/@sentry/"))
+
 // Not app:/// -- nextjsClientStackFrameNormalization rewrites our own frames to
 // that scheme before beforeSend runs, so it marks first-party code too.
 const isThirdPartyLocation = (filename = "", absPath = ""): boolean =>
@@ -99,7 +105,9 @@ export function getDropReason(event: ErrorEvent): DropReason {
   // ETHORG-1AC's `AutoScroll` scraper). Our own frames are always rewritten to
   // app:///, so an event where *no* frame has a location cannot be ours. A
   // genuinely frameless event is kept: absence of frames is not evidence.
-  const frames = values.flatMap((v) => v.stacktrace?.frames ?? [])
+  const frames = values
+    .flatMap((v) => v.stacktrace?.frames ?? [])
+    .filter((f) => !isSdkFrame(f.filename, f.abs_path))
   if (
     frames.length > 0 &&
     !frames.some((f) => hasUsableLocation(f.filename, f.abs_path))

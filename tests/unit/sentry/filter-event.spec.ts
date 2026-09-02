@@ -10,6 +10,9 @@ import { type DropReason, getDropReason } from "@/lib/sentry/filter-event"
 // this is what a first-party frame actually looks like at filter time.
 const OURS = "app:///_next/static/chunks/app.js"
 
+// The SDK prepends this to any non-Error throw it has to synthesize.
+const SDK = "app:///node_modules/@sentry/core/src/utils/eventbuilder.ts"
+
 const event = (
   values: Array<{ value: string; frames?: string[] }>,
   extra?: Record<string, unknown>
@@ -143,6 +146,29 @@ const cases: Array<[name: string, event: ErrorEvent, expected: DropReason]> = [
   [
     "frameless event with a noisy message",
     event([{ value: "Failed to connect to MetaMask" }]),
+    null,
+  ],
+  // ETHORG-1AV: an injected script on Baidu Explorer calls a non-standard
+  // `.unLoad`. The SDK's own frame is the only locatable one, so it has to be
+  // discounted or the stack looks attributable.
+  [
+    "SDK frame is not evidence of attribution",
+    event([
+      {
+        value: "Cannot read properties of undefined (reading 'unLoad')",
+        frames: [SDK, "<anonymous>"],
+      },
+    ]),
+    "unattributable",
+  ],
+  [
+    "SDK frame alongside a real first-party frame still keeps",
+    event([
+      {
+        value: "Cannot read properties of null (reading 'click')",
+        frames: [SDK, OURS],
+      },
+    ]),
     null,
   ],
   // Pale Moon forks fail on modern baseline features -- ETHORG-1AY is Next's
