@@ -1,10 +1,10 @@
 [
   {
     "item": "Issue #18891",
-    "intent": "intl-pipeline drops newly added frontmatter keys; stamps manifests current",
+    "intent": "intl-pipeline drops newly added frontmatter keys; manifests stamped current",
     "state": "decision-needed",
     "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Triage #18891+#19031 as one propagation gap; unblock PR #18896",
+    "next_human_decision": "Assign wackerow or formally drop the dev-required framing; three restatements have not moved it",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -22,12 +22,12 @@
     "confidence": 0.6,
     "evidence": [
       "team bug, no team reply",
-      "PR #18896 CONFLICTING",
+      "PR #18896 still CONFLICTING",
       "sibling #19031"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-05",
-    "runs_seen": 8
+    "runs_seen": 9
   },
   {
     "item": "Issue #18928",
@@ -38,7 +38,7 @@
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Merge fix PR #19063"
+        "action": "Verify no double-fire on #19063, then merge"
       }
     ],
     "impact": "high",
@@ -50,117 +50,104 @@
     "owner_lane": "code",
     "confidence": 0.8,
     "evidence": [
-      "konopkja bug, no team reply",
-      "fix PR #19063 open + green",
+      "konopkja bug, fix PR #19063 open + green",
       "349 vs 14,629 events measured"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-14",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "Issue #18967",
-    "intent": "Reorganize Storybook into repo-mirrored taxonomy; land stacked phase PRs",
+    "intent": "Reorganize Storybook into repo-mirrored taxonomy via stacked phase PRs",
     "state": "decision-needed",
-    "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Make the taxonomy call once and land phases in order, or close the stack",
+    "recommended_disposition": "close",
+    "next_human_decision": "Stack merged — close the tracking issue or capture remaining follow-ups",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Approve reorg; land or close stacked PRs"
+        "action": "Close #18967; the 7-PR stack has landed"
       }
     ],
     "impact": "medium",
-    "effort_to_unblock": "medium",
+    "effort_to_unblock": "small",
     "risk": "low",
-    "related_items": [
-      "PR #18969",
-      "PR #18970",
-      "PR #18971",
-      "PR #18985",
-      "PR #18987",
-      "PR #18988",
-      "PR #18989"
-    ],
+    "related_items": [],
     "owner_lane": "tooling",
-    "confidence": 0.8,
+    "confidence": 0.7,
     "evidence": [
-      "team tracking issue, answered+assigned",
-      "7-PR stack unlanded 6 runs",
-      "middle phases red"
+      "7-PR stack #18969-#18989 no longer open (merged)",
+      "issue still open, answered+assigned"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-05",
-    "runs_seen": 7
+    "runs_seen": 1
   },
   {
     "item": "Issue #18995 (SEO JSON-LD/SSR cluster)",
-    "intent": "konopkja SEO audit; 5 green review-only fix PRs plus 1 red",
+    "intent": "konopkja SEO audit; several fix PRs merged, remainder green review-only blocked",
     "state": "verify-then-merge",
     "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "Clear the 5 green SEO fixes in one pass; #19022 needs one wackerow change, #19001 red",
+    "next_human_decision": "One reviewer clears the remaining green siblings #19017/#19029/#19043/#19044; #19001 still red",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Review #19022/#19017/#19029/#19044/#19043 as a batch"
+        "action": "Review remaining SEO fixes as a batch"
       }
     ],
     "impact": "high",
     "effort_to_unblock": "small",
     "risk": "low",
     "related_items": [
-      "PR #19044",
+      "PR #19017",
       "PR #19029",
       "PR #19043",
-      "PR #19017",
-      "PR #19058",
-      "PR #19022",
+      "PR #19044",
       "PR #19001"
     ],
     "owner_lane": "code",
-    "confidence": 0.85,
+    "confidence": 0.82,
     "evidence": [
-      "5 green e2e-tested fixes incl new #19058",
-      "#19022 got CHANGES_REQUESTED 08-14",
-      "#19001 still red"
+      "#19022/#19058 merged since last run",
+      "4 green e2e-tested fixes remain",
+      "#19001 CI FAILURE"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-10",
     "runs_seen": 1
   },
   {
-    "item": "Issue #19019",
-    "intent": "Placeholder content issue never filled in",
+    "item": "Issue #19014",
+    "intent": "Empty 'Feature request' issue, no body",
     "state": "suggest-close",
     "recommended_disposition": "close",
     "next_human_decision": "",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Close per invalid label"
+        "action": "Close as empty/invalid"
       }
     ],
     "impact": "low",
     "effort_to_unblock": "small",
     "risk": "low",
     "related_items": [],
-    "owner_lane": "content",
-    "confidence": 0.85,
+    "owner_lane": "product",
+    "confidence": 0.7,
     "evidence": [
-      "title still '[Content] <short summary>'",
-      "labelled invalid",
-      "no engagement"
+      "title 'Feature request', no body",
+      "26d idle, no engagement"
     ],
     "analyzed_sha": null,
-    "first_seen": "2026-08-11",
-    "runs_seen": 4
+    "first_seen": "2026-09-02",
+    "runs_seen": 1
   },
   {
     "item": "Issue #19031",
     "intent": "intl-pipeline never propagates components newly added to English pages",
     "state": "decision-needed",
     "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Scope alongside #18891/#18896 as one propagation gap",
+    "next_human_decision": "Scope alongside #18891/#18896 as one propagation gap; assign an owner",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -183,42 +170,14 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-11",
-    "runs_seen": 4
-  },
-  {
-    "item": "Issue #19039",
-    "intent": "Outdated slashing penalty figure on PoS docs",
-    "state": "waiting-on-contributor",
-    "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "Merge fix PR #19040",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Land #19040"
-      }
-    ],
-    "impact": "medium",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "PR #19040"
-    ],
-    "owner_lane": "content",
-    "confidence": 0.8,
-    "evidence": [
-      "team, assigned",
-      "fix PR #19040 open + green"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-08-12",
-    "runs_seen": 3
+    "runs_seen": 5
   },
   {
     "item": "Issue #19042",
     "intent": "find-wallet: adopt Walletbeat license + data-collection taxonomy",
     "state": "decision-needed",
     "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Adopt Walletbeat's taxonomy for find-wallet data?",
+    "next_human_decision": "Adopt Walletbeat's taxonomy for find-wallet data? Overlaps #19060",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -228,27 +187,29 @@
     "impact": "medium",
     "effort_to_unblock": "large",
     "risk": "low",
-    "related_items": [],
+    "related_items": [
+      "Issue #19060"
+    ],
     "owner_lane": "product",
     "confidence": 0.55,
     "evidence": [
       "konopkja proposal, dev required",
-      "1 comment, no team reply"
+      "2 comments, no team reply"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "Issue #19047",
     "intent": "CategoryAppsGrid daily shuffle uses local-timezone day-of-year",
     "state": "waiting-on-contributor",
     "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "Merge fix PR #19048",
+    "next_human_decision": "",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Land #19048"
+        "action": "Verify server/client order on #19048, then merge"
       }
     ],
     "impact": "low",
@@ -265,7 +226,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "Issue #19060",
@@ -276,22 +237,22 @@
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Product/design call on taxonomy"
+        "action": "Product/design call; then land #19092/#19093"
       }
     ],
     "impact": "medium",
     "effort_to_unblock": "medium",
     "risk": "low",
     "related_items": [
-      "PR #19062",
+      "PR #19092",
+      "PR #19093",
       "Issue #19042"
     ],
     "owner_lane": "product",
     "confidence": 0.6,
     "evidence": [
-      "konopkja proposal w/ 48-wallet data",
-      "impl PR #19062 open + green",
-      "overlaps #19042"
+      "konopkja #19062 superseded by byt61 #19092 (rename) + #19093 (usage_tracking)",
+      "#19092 green, #19093 draft"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-14",
@@ -314,43 +275,14 @@
     "risk": "low",
     "related_items": [],
     "owner_lane": "design",
-    "confidence": 0.72,
+    "confidence": 0.75,
     "evidence": [
-      "draft, 136d idle, CONFLICTING",
+      "draft, 156d idle, CONFLICTING",
       "Status: Stale + Blocked labels"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-07",
-    "runs_seen": 6
-  },
-  {
-    "item": "PR #18876",
-    "intent": "Replace (not add) DeFi quiz questions (issue #17280)",
-    "state": "waiting-on-contributor",
-    "recommended_disposition": "close",
-    "next_human_decision": "8 runs silent — close rather than keep waiting on a swap nobody justified",
-    "waiting_on": [
-      {
-        "actor": "contributor",
-        "action": "Answer wackerow re deleting existing questions"
-      }
-    ],
-    "impact": "low",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "Issue #17280",
-      "PR #18877"
-    ],
-    "owner_lane": "content",
-    "confidence": 0.72,
-    "evidence": [
-      "wackerow question unanswered since 07-23",
-      "replaces existing questions"
-    ],
-    "analyzed_sha": "470e609",
-    "first_seen": "2026-08-04",
-    "runs_seen": 9
+    "runs_seen": 7
   },
   {
     "item": "PR #18896",
@@ -376,22 +308,22 @@
     "evidence": [
       "closes #18891",
       "CONFLICTING/DIRTY",
-      "idle 15d"
+      "idle 5d"
     ],
     "analyzed_sha": "3948c50",
     "first_seen": "2026-08-05",
-    "runs_seen": 8
+    "runs_seen": 9
   },
   {
     "item": "PR #18918",
     "intent": "Add walletless-dapps tutorial (implements #18052)",
     "state": "waiting-on-contributor",
     "recommended_disposition": "close",
-    "next_human_decision": "8 runs, zero replies ever, 4 red checks — close or a maintainer adopts it",
+    "next_human_decision": "Day 10, zero replies ever, 4 red checks — close and leave #18052 open, or a maintainer adopts the branch",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Close or comment fixes"
+        "action": "Close or adopt"
       }
     ],
     "impact": "medium",
@@ -405,319 +337,11 @@
     "evidence": [
       "4 netlify checks failing",
       "humanCommentCount 0 ever",
-      "external, idle 15d"
+      "external, idle 8d"
     ],
     "analyzed_sha": "ba23523",
     "first_seen": "2026-08-04",
-    "runs_seen": 9
-  },
-  {
-    "item": "PR #18966",
-    "intent": "Fix /layer-2 avg tx cost showing $0.00 via sig-fig formatting",
-    "state": "blocked",
-    "recommended_disposition": "merge",
-    "next_human_decision": "7 runs unowned — assign a reviewer or self-merge; tiny fixes have no queue owner",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Approve; block is missing review"
-      }
-    ],
-    "impact": "high",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [],
-    "owner_lane": "code",
-    "confidence": 0.86,
-    "evidence": [
-      "visible prod bug $0.00",
-      "1 file, CI SUCCESS, team",
-      "BLOCKED, 0 reviews, unmoved 7 runs"
-    ],
-    "analyzed_sha": "f55eb85",
-    "first_seen": "2026-08-05",
-    "runs_seen": 8
-  },
-  {
-    "item": "PR #18969",
-    "intent": "Storybook phase 0 — delete dead components",
-    "state": "blocked",
-    "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Advance/close in stack"
-      }
-    ],
-    "impact": "low",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "Issue #18967"
-    ],
-    "owner_lane": "tooling",
-    "confidence": 0.75,
-    "evidence": [
-      "part of 7-PR Storybook stack",
-      "unlanded 6 runs"
-    ],
-    "analyzed_sha": "a41a81f",
-    "first_seen": "2026-08-05",
-    "runs_seen": 7
-  },
-  {
-    "item": "PR #18970",
-    "intent": "Storybook phase 1 — retitle stories",
-    "state": "blocked",
-    "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Advance/close in stack"
-      }
-    ],
-    "impact": "low",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "Issue #18967"
-    ],
-    "owner_lane": "tooling",
-    "confidence": 0.75,
-    "evidence": [
-      "part of 7-PR Storybook stack",
-      "unlanded 6 runs"
-    ],
-    "analyzed_sha": "40c5767",
-    "first_seen": "2026-08-06",
-    "runs_seen": 7
-  },
-  {
-    "item": "PR #18971",
-    "intent": "Storybook phase 2 — enforce title taxonomy test",
-    "state": "blocked",
-    "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Advance/close in stack"
-      }
-    ],
-    "impact": "low",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "Issue #18967"
-    ],
-    "owner_lane": "tooling",
-    "confidence": 0.75,
-    "evidence": [
-      "part of 7-PR Storybook stack",
-      "unlanded 6 runs"
-    ],
-    "analyzed_sha": "f2422df",
-    "first_seen": "2026-08-06",
-    "runs_seen": 7
-  },
-  {
-    "item": "PR #18985",
-    "intent": "Storybook phase 3 — ui/ primitive stories",
-    "state": "blocked",
-    "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Advance/close in stack"
-      }
-    ],
-    "impact": "low",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "Issue #18967"
-    ],
-    "owner_lane": "tooling",
-    "confidence": 0.75,
-    "evidence": [
-      "part of 7-PR Storybook stack",
-      "unlanded 6 runs"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-08-06",
-    "runs_seen": 7
-  },
-  {
-    "item": "PR #18987",
-    "intent": "Storybook phase 4 — shared/layout stories",
-    "state": "blocked",
-    "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Advance/close in stack"
-      }
-    ],
-    "impact": "low",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "Issue #18967"
-    ],
-    "owner_lane": "tooling",
-    "confidence": 0.75,
-    "evidence": [
-      "part of 7-PR Storybook stack",
-      "unlanded 6 runs"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-08-06",
-    "runs_seen": 7
-  },
-  {
-    "item": "PR #18988",
-    "intent": "Storybook phase 5 — standardize autodocs",
-    "state": "blocked",
-    "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Advance/close in stack"
-      }
-    ],
-    "impact": "low",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "Issue #18967"
-    ],
-    "owner_lane": "tooling",
-    "confidence": 0.75,
-    "evidence": [
-      "part of 7-PR Storybook stack",
-      "unlanded 6 runs"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-08-06",
-    "runs_seen": 7
-  },
-  {
-    "item": "PR #18989",
-    "intent": "Storybook phase 6 — kebab-case story files",
-    "state": "blocked",
-    "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Advance/close in stack"
-      }
-    ],
-    "impact": "low",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "Issue #18967"
-    ],
-    "owner_lane": "tooling",
-    "confidence": 0.75,
-    "evidence": [
-      "part of 7-PR Storybook stack",
-      "unlanded 6 runs"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-08-06",
-    "runs_seen": 7
-  },
-  {
-    "item": "PR #18991",
-    "intent": "Typed upgrade-status data layer for roadmap pages (PR1)",
-    "state": "blocked",
-    "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "Review PR1 alongside #18993 layout decision",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Review PR1 (data-only, green)"
-      }
-    ],
-    "impact": "medium",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "PR #18993"
-    ],
-    "owner_lane": "code",
-    "confidence": 0.75,
-    "evidence": [
-      "data-only, CI SUCCESS, BLOCKED",
-      "roadmap goes stale ~2wk"
-    ],
-    "analyzed_sha": "3d8663b",
-    "first_seen": "2026-08-07",
-    "runs_seen": 6
-  },
-  {
-    "item": "PR #18993",
-    "intent": "Render upgrade-status as UpgradeSummary block on roadmap pages (PR2)",
-    "state": "decision-needed",
-    "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Layout-rendered vs MDX-embedded — confirm layout works for 24 locales",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Answer layout question; author waiting"
-      }
-    ],
-    "impact": "medium",
-    "effort_to_unblock": "medium",
-    "risk": "low",
-    "related_items": [
-      "PR #18991"
-    ],
-    "owner_lane": "code",
-    "confidence": 0.72,
-    "evidence": [
-      "went CLEAN",
-      "author posted feasibility comment awaiting call"
-    ],
-    "analyzed_sha": "1a59814",
-    "first_seen": "2026-08-07",
-    "runs_seen": 4
-  },
-  {
-    "item": "PR #18999",
-    "intent": "[recovery] set request locale before notFound() bail",
-    "state": "blocked",
-    "recommended_disposition": "close",
-    "next_human_decision": "Prefer consolidated sweep #19016 and close this?",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Fold into #19016 or review"
-      }
-    ],
-    "impact": "low",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "PR #19016"
-    ],
-    "owner_lane": "code",
-    "confidence": 0.62,
-    "evidence": [
-      "team, BLOCKED",
-      "aiReview superseded",
-      "#19016 replaces it"
-    ],
-    "analyzed_sha": "74b1f47",
-    "first_seen": "2026-08-10",
-    "runs_seen": 5
+    "runs_seen": 10
   },
   {
     "item": "PR #19001",
@@ -746,38 +370,37 @@
     ],
     "analyzed_sha": "9a02958",
     "first_seen": "2026-08-07",
-    "runs_seen": 6
+    "runs_seen": 7
   },
   {
     "item": "PR #19016",
     "intent": "One AST-verified sweep setting request locale in all [locale] pages",
-    "state": "blocked",
+    "state": "waiting-on-contributor",
     "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "Day 4 unowned — adopt the sweep (retires recovery-agent 500 class) and close #18999",
+    "next_human_decision": "pettinarip applies wackerow's 4 inline suggestions, then wackerow merges — retires the 11-PR recovery-500 class",
     "waiting_on": [
       {
-        "actor": "maintainer",
-        "action": "Review sweep; block is missing review"
+        "actor": "pettinarip",
+        "action": "Address 4 inline nits from wackerow's 09-01 review"
       }
     ],
     "impact": "high",
     "effort_to_unblock": "small",
     "risk": "medium",
     "related_items": [
-      "PR #18999",
       "Issue #18792",
       "Issue #18013"
     ],
     "owner_lane": "code",
-    "confidence": 0.78,
+    "confidence": 0.85,
     "evidence": [
-      "team, CI SUCCESS, BLOCKED review-only",
-      "replaces 11 recovery PRs",
-      "idle 5d, unowned"
+      "wackerow CHANGES_REQUESTED 09-01 'good to pull in'",
+      "aiReview superseded",
+      "replaces 11 recovery PRs"
     ],
-    "analyzed_sha": "399e55c",
-    "first_seen": "2026-08-10",
-    "runs_seen": 5
+    "analyzed_sha": "a9927b3",
+    "first_seen": "2026-09-02",
+    "runs_seen": 1
   },
   {
     "item": "PR #19017",
@@ -795,7 +418,6 @@
     "effort_to_unblock": "small",
     "risk": "low",
     "related_items": [
-      "Issue #18996",
       "Issue #18995 (SEO JSON-LD/SSR cluster)"
     ],
     "owner_lane": "code",
@@ -804,67 +426,39 @@
       "CI SUCCESS, BLOCKED",
       "ships e2e test"
     ],
-    "analyzed_sha": "19699bd",
+    "analyzed_sha": null,
     "first_seen": "2026-08-10",
-    "runs_seen": 5
+    "runs_seen": 6
   },
   {
-    "item": "PR #19022",
-    "intent": "Localize wallets/quizzes JSON-LD (fixes #18979)",
-    "state": "waiting-on-contributor",
-    "recommended_disposition": "request_changes",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "contributor",
-        "action": "Address wackerow's one inline request"
-      }
-    ],
-    "impact": "high",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "Issue #18979",
-      "Issue #18995 (SEO JSON-LD/SSR cluster)"
-    ],
-    "owner_lane": "code",
-    "confidence": 0.82,
-    "evidence": [
-      "wackerow CHANGES_REQUESTED 08-14 w/ 1 inline",
-      "CI SUCCESS",
-      "SEO cluster"
-    ],
-    "analyzed_sha": "1a86a97",
-    "first_seen": "2026-08-10",
-    "runs_seen": 1
-  },
-  {
-    "item": "PR #19027",
-    "intent": "Add ethereum-vs-bitcoin quiz",
-    "state": "verify-then-merge",
-    "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "",
+    "item": "PR #19024",
+    "intent": "Use country code for get-eth country-selector analytics event (fixes #19023)",
+    "state": "decision-needed",
+    "recommended_disposition": "close",
+    "next_human_decision": "Duplicate of #19096 — land the non-draft one, close this",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Verify answer keys, then merge"
+        "action": "Choose between #19024 and #19096"
       }
     ],
     "impact": "medium",
     "effort_to_unblock": "small",
     "risk": "low",
     "related_items": [
-      "PR #19041"
+      "PR #19096",
+      "Issue #19023"
     ],
-    "owner_lane": "content",
-    "confidence": 0.85,
+    "owner_lane": "code",
+    "confidence": 0.7,
     "evidence": [
-      "mergeState CLEAN",
-      "team, CI SUCCESS"
+      "draft, UNKNOWN mergeState",
+      "same #19023 fix as #19096",
+      "konopkja (issue author)"
     ],
-    "analyzed_sha": null,
-    "first_seen": "2026-08-11",
-    "runs_seen": 4
+    "analyzed_sha": "efcd439",
+    "first_seen": "2026-09-02",
+    "runs_seen": 1
   },
   {
     "item": "PR #19029",
@@ -882,7 +476,6 @@
     "effort_to_unblock": "small",
     "risk": "low",
     "related_items": [
-      "Issue #18982",
       "Issue #18995 (SEO JSON-LD/SSR cluster)"
     ],
     "owner_lane": "code",
@@ -894,118 +487,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-11",
-    "runs_seen": 4
-  },
-  {
-    "item": "PR #19032",
-    "intent": "Fix contradictory ToC card width caps",
-    "state": "blocked",
-    "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Review the 1-file fix"
-      }
-    ],
-    "impact": "low",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [],
-    "owner_lane": "design",
-    "confidence": 0.72,
-    "evidence": [
-      "team, CI SUCCESS, BLOCKED",
-      "1 file, no reviews"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-08-11",
-    "runs_seen": 4
-  },
-  {
-    "item": "PR #19035",
-    "intent": "Add OnFinality as a node provider (product-review gated)",
-    "state": "decision-needed",
-    "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Does OnFinality meet the node-provider listing bar?",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Product review of listing"
-      }
-    ],
-    "impact": "low",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [],
-    "owner_lane": "product",
-    "confidence": 0.65,
-    "evidence": [
-      "external, 1 file, CI SUCCESS",
-      "needs product review label",
-      "BLOCKED, no reply"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-08-11",
-    "runs_seen": 4
-  },
-  {
-    "item": "PR #19040",
-    "intent": "Correct slashing penalty figure on PoS docs (fixes #19039)",
-    "state": "blocked",
-    "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Verify <0.1% bound, then merge"
-      }
-    ],
-    "impact": "medium",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "Issue #19039"
-    ],
-    "owner_lane": "content",
-    "confidence": 0.82,
-    "evidence": [
-      "team, 1 file, green review-only",
-      "Electra raised MIN_SLASHING_PENALTY_QUOTIENT",
-      "old ~1% figure wrong"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-08-12",
-    "runs_seen": 3
-  },
-  {
-    "item": "PR #19041",
-    "intent": "Add proof-of-stake quiz",
-    "state": "verify-then-merge",
-    "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Verify answer keys, then merge"
-      }
-    ],
-    "impact": "medium",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "PR #19027"
-    ],
-    "owner_lane": "content",
-    "confidence": 0.85,
-    "evidence": [
-      "mergeState CLEAN",
-      "team, CI SUCCESS",
-      "6-question quiz fills a gap"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-08-12",
-    "runs_seen": 3
+    "runs_seen": 5
   },
   {
     "item": "PR #19043",
@@ -1023,19 +505,17 @@
     "effort_to_unblock": "small",
     "risk": "low",
     "related_items": [
-      "Issue #18978",
       "Issue #18995 (SEO JSON-LD/SSR cluster)"
     ],
     "owner_lane": "code",
     "confidence": 0.8,
     "evidence": [
       "green review-only",
-      "ships e2e tabs-server-html",
-      "forceMount default true"
+      "ships e2e tabs-server-html"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "PR #19044",
@@ -1053,19 +533,18 @@
     "effort_to_unblock": "small",
     "risk": "low",
     "related_items": [
-      "Issue #18977",
       "Issue #18995 (SEO JSON-LD/SSR cluster)"
     ],
     "owner_lane": "code",
-    "confidence": 0.8,
+    "confidence": 0.78,
     "evidence": [
       "green, ships e2e test",
       "tutorials hub had zero crawlable links",
-      "drops ssr:false"
+      "now CONFLICTING"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "PR #19048",
@@ -1089,66 +568,11 @@
     "confidence": 0.75,
     "evidence": [
       "green review-only, 2 files",
-      "seed off local time flipped at UTC midnight",
-      "self-reported #19047"
+      "seed off local time flipped at UTC midnight"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 3
-  },
-  {
-    "item": "PR #19050",
-    "intent": "Add /open-source page and link it from /values",
-    "state": "decision-needed",
-    "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Does /open-source belong as a standalone page, and who runs content+product review?",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Product/content review of new page"
-      }
-    ],
-    "impact": "medium",
-    "effort_to_unblock": "medium",
-    "risk": "low",
-    "related_items": [],
-    "owner_lane": "content",
-    "confidence": 0.55,
-    "evidence": [
-      "new App Router page mirrors /privacy shape",
-      "16 files, needs product review label",
-      "CI pending, external"
-    ],
-    "analyzed_sha": "807291a",
-    "first_seen": "2026-08-13",
-    "runs_seen": 2
-  },
-  {
-    "item": "PR #19053",
-    "intent": "Full-width Alert in NFTMintCard footer (1-line UI patch)",
-    "state": "blocked",
-    "recommended_disposition": "merge",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Approve 1-line patch; block is missing review"
-      }
-    ],
-    "impact": "low",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [],
-    "owner_lane": "code",
-    "confidence": 0.8,
-    "evidence": [
-      "team, 1 file green",
-      "Tailwind-only w-full add",
-      "BLOCKED review-only"
-    ],
-    "analyzed_sha": "6895ceb",
-    "first_seen": "2026-08-13",
-    "runs_seen": 2
+    "runs_seen": 4
   },
   {
     "item": "PR #19057",
@@ -1175,94 +599,7 @@
     ],
     "analyzed_sha": "ee6b214",
     "first_seen": "2026-08-13",
-    "runs_seen": 2
-  },
-  {
-    "item": "PR #19058",
-    "intent": "Remove fabricated FAQPage JSON-LD from /what-is-ethereum (fixes #18980)",
-    "state": "blocked",
-    "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Review; part of SEO batch"
-      }
-    ],
-    "impact": "medium",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "Issue #18980",
-      "Issue #18995 (SEO JSON-LD/SSR cluster)"
-    ],
-    "owner_lane": "code",
-    "confidence": 0.8,
-    "evidence": [
-      "4 hardcoded English answers not on page",
-      "1 file, CI SUCCESS, BLOCKED",
-      "Google retired FAQ rich results 2023"
-    ],
-    "analyzed_sha": "9dcf47d",
-    "first_seen": "2026-08-14",
-    "runs_seen": 1
-  },
-  {
-    "item": "PR #19059",
-    "intent": "Derive network-upgrade facts from Forkcast (data layer + sync script)",
-    "state": "blocked",
-    "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Review schema/normalizer; assign reviewer"
-      }
-    ],
-    "impact": "medium",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [],
-    "owner_lane": "tooling",
-    "confidence": 0.75,
-    "evidence": [
-      "team, 14 unit tests, CI SUCCESS",
-      "nothing imports it yet = no runtime surface",
-      "fixes recurring roadmap drift"
-    ],
-    "analyzed_sha": "3ef0e71",
-    "first_seen": "2026-08-14",
-    "runs_seen": 1
-  },
-  {
-    "item": "PR #19062",
-    "intent": "Rename Privacy filter + add graded usage_tracking (fixes #19060)",
-    "state": "blocked",
-    "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Accept rename + graded filter, or fold into #19042",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Product review of taxonomy change"
-      }
-    ],
-    "impact": "medium",
-    "effort_to_unblock": "medium",
-    "risk": "low",
-    "related_items": [
-      "Issue #19060",
-      "Issue #19042"
-    ],
-    "owner_lane": "product",
-    "confidence": 0.6,
-    "evidence": [
-      "green, looks-mergeable, 6 files",
-      "touches ~50 wallets data + new filter",
-      "BLOCKED review-only"
-    ],
-    "analyzed_sha": "d8552fe",
-    "first_seen": "2026-08-14",
-    "runs_seen": 1
+    "runs_seen": 3
   },
   {
     "item": "PR #19063",
@@ -1286,66 +623,11 @@
     "confidence": 0.82,
     "evidence": [
       "confirmed prod undercount 349 vs 14,629",
-      "green, 2 files, BLOCKED review-only",
-      "shared pushMatomoEvent helper"
+      "green, 2 files, BLOCKED review-only"
     ],
     "analyzed_sha": "ee2b831",
     "first_seen": "2026-08-14",
-    "runs_seen": 1
-  },
-  {
-    "item": "PR #19067",
-    "intent": "Fix duplicate-word typo in bug-bounty FAQ (en source string)",
-    "state": "blocked",
-    "recommended_disposition": "merge",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Approve; block is missing review"
-      }
-    ],
-    "impact": "low",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [],
-    "owner_lane": "content",
-    "confidence": 0.8,
-    "evidence": [
-      "1 en JSON string, green",
-      "pipeline propagates locales",
-      "BLOCKED review-only"
-    ],
-    "analyzed_sha": "7b347f1",
-    "first_seen": "2026-08-14",
-    "runs_seen": 1
-  },
-  {
-    "item": "PR #19068",
-    "intent": "Routine intl-pipeline output (find-wallet, 24 locales)",
-    "state": "verify-then-merge",
-    "recommended_disposition": "merge",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Merge (CLEAN)"
-      }
-    ],
-    "impact": "medium",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [],
-    "owner_lane": "translation",
-    "confidence": 0.85,
-    "evidence": [
-      "wackerow team, mergeState CLEAN",
-      "48 files, no hand-edits leaked",
-      "CI SUCCESS"
-    ],
-    "analyzed_sha": "7b939b4",
-    "first_seen": "2026-08-14",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #19069",
@@ -1370,11 +652,11 @@
     "evidence": [
       "ai needs-work: edits hit translated files not sources",
       "dangling t() calls",
-      "51 files"
+      "draft"
     ],
     "analyzed_sha": "a3232d8",
     "first_seen": "2026-08-14",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #19070",
@@ -1395,11 +677,183 @@
     "owner_lane": "code",
     "confidence": 0.8,
     "evidence": [
-      "1 file, green, BLOCKED review-only",
-      "double-encoded #quiz produced 404"
+      "1 file, draft, double-encoded #quiz produced 404"
     ],
     "analyzed_sha": "7e20472",
     "first_seen": "2026-08-14",
+    "runs_seen": 2
+  },
+  {
+    "item": "PR #19096",
+    "intent": "Use countryCode for country-selector analytics event (fixes #19023)",
+    "state": "decision-needed",
+    "recommended_disposition": "verify_then_merge",
+    "next_human_decision": "Confirm it targets the same selector as draft #19024, land this, close #19024",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Pick between #19096 and #19024, then merge"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "PR #19024",
+      "Issue #19023"
+    ],
+    "owner_lane": "code",
+    "confidence": 0.8,
+    "evidence": [
+      "byt61, green, non-draft, BLOCKED",
+      "one-line countryCode change",
+      "duplicate of #19024"
+    ],
+    "analyzed_sha": "e432cef",
+    "first_seen": "2026-09-02",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19097",
+    "intent": "Add ether.fi to staking pools (closes #19098)",
+    "state": "waiting-on-contributor",
+    "recommended_disposition": "request_changes",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "pankajjagtapp",
+        "action": "Address CHANGES_REQUESTED on the listing"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "Issue #19098"
+    ],
+    "owner_lane": "product",
+    "confidence": 0.7,
+    "evidence": [
+      "CHANGES_REQUESTED, 1 review",
+      "CI PENDING",
+      "external"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-09-02",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19110",
+    "intent": "Empty 'Feature request' issue, no body",
+    "state": "suggest-close",
+    "recommended_disposition": "close",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Close as empty/invalid"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "product",
+    "confidence": 0.7,
+    "evidence": [
+      "title 'Feature request', no body",
+      "13d idle, no engagement"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-09-02",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19132",
+    "intent": "Add SwiftNodes to nodes-as-a-service list (product-review gated)",
+    "state": "decision-needed",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "Does SwiftNodes meet the node-provider listing bar? Also needs a base rebase (BEHIND)",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Product review + ask rebase"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "PR #19157",
+      "PR #19035",
+      "PR #18872"
+    ],
+    "owner_lane": "product",
+    "confidence": 0.65,
+    "evidence": [
+      "external, green, BEHIND",
+      "needs product review label",
+      "ai looks-mergeable"
+    ],
+    "analyzed_sha": "303a32c",
+    "first_seen": "2026-09-02",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19157",
+    "intent": "Add BoltRPC to nodes-as-a-service providers (product-review gated)",
+    "state": "decision-needed",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "Does BoltRPC meet the node-provider listing bar?",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Product review of listing"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "PR #19132",
+      "PR #19035",
+      "PR #18872"
+    ],
+    "owner_lane": "product",
+    "confidence": 0.65,
+    "evidence": [
+      "external, 1 file, green, BLOCKED",
+      "content label, no reply"
+    ],
+    "analyzed_sha": "48e2822",
+    "first_seen": "2026-09-02",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19184",
+    "intent": "Drive the /roadmap release carousel from Forkcast data (builds on #18993)",
+    "state": "waiting-on-contributor",
+    "recommended_disposition": "request_changes",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "nloureiro",
+        "action": "Fix Dencun EIP count + unreachable testnet stage; green the agent check"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "code",
+    "confidence": 0.75,
+    "evidence": [
+      "pettinarip CHANGES_REQUESTED 09-01, 2 real bugs",
+      "CI FAILURE (agent)",
+      "'good simplification'"
+    ],
+    "analyzed_sha": "f29f2db",
+    "first_seen": "2026-09-02",
     "runs_seen": 1
   }
 ]

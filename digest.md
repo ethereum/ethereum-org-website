@@ -1,32 +1,34 @@
-**Intake decisions — 2026-08-14**
-2 decisions · 1 batch · 83 open PRs / 89 open issues
+**Intake decisions — 2026-09-02**
+2 decisions · 2 batches · 98 open PRs / 95 open issues
 
 **🧭 Decide today**
-**1. [#19062](https://github.com/ethereum/ethereum-org-website/pull/19062) — find-wallet: rename "Privacy", add tracking grades** · product · impact med, effort med
-konopkja's proposal ([#19060](https://github.com/ethereum/ethereum-org-website/issues/19060)), shipped green by byt61: renames the filter to "Private transactions" and adds a "No usage tracking" filter with hand-graded metadata for all 48 wallets. Same surface as the open Walletbeat-taxonomy proposal [#19042](https://github.com/ethereum/ethereum-org-website/issues/19042).
-→ **Accept the rename + graded filter, or fold both into one pass on #19042** (0.6)
+**1. [#19016](https://github.com/ethereum/ethereum-org-website/pull/19016) — set request locale in all [locale] pages** · code · impact high, effort small
+wackerow approved 09-01 with 4 inline nits ("good to pull in"); merging retires the 11-PR recovery-agent 500 class.
+→ **pettinarip applies the 4 suggestions, then wackerow merges** (0.85)
 
-**✅ Verify, then merge**
-**2. [#19063](https://github.com/ethereum/ethereum-org-website/pull/19063) — analytics: fire external-link events synchronously** · code
-Confirmed prod undercount: wallet click-throughs logged 349 events vs 14,629 button taps because requestIdleCallback is throttled after a target=_blank click. Green, 2 files.
-→ **Confirm the shared helper doesn't double-fire, then merge** (0.82)
+**2. [#19096](https://github.com/ethereum/ethereum-org-website/pull/19096) vs [#19024](https://github.com/ethereum/ethereum-org-website/pull/19024) — country-selector analytics, filed twice** · code · impact med, effort small
+Both green, both close #19023 (localized country names fragment Matomo events). #19096 (byt61) is non-draft; #19024 (konopkja) is still a draft.
+→ **Confirm same selector, land #19096, close #19024** (0.8)
 
-**🧩 Review batch**
-- **SEO audit fixes (konopkja)** — [#19044](https://github.com/ethereum/ethereum-org-website/pull/19044), [#19029](https://github.com/ethereum/ethereum-org-website/pull/19029), [#19043](https://github.com/ethereum/ethereum-org-website/pull/19043), [#19017](https://github.com/ethereum/ethereum-org-website/pull/19017), [#19058](https://github.com/ethereum/ethereum-org-website/pull/19058): five green, e2e-tested review-only fixes; #19044 (uncrawlable tutorials) and #19029 (no sitemap lastmod) are live bugs. One pass clears all five. [#19022](https://github.com/ethereum/ethereum-org-website/pull/19022) now needs one change from wackerow.
+**🧩 Review batches**
+- **Node-service listings** — [#19157](https://github.com/ethereum/ethereum-org-website/pull/19157), [#19132](https://github.com/ethereum/ethereum-org-website/pull/19132), [#19035](https://github.com/ethereum/ethereum-org-website/pull/19035), #18872: all add an RPC/node provider to the same page, all green, all awaiting product review. One pass against the listing bar clears the set (#19132 needs a rebase).
+- **byt61 green fixes** — [#19086](https://github.com/ethereum/ethereum-org-website/pull/19086), [#19084](https://github.com/ethereum/ethereum-org-website/pull/19084), #19079: small green review-only fixes (numberFormat, a11y, http→https). byt61 has ~15 PRs open (mostly drafts); approve the ready ones.
 
 **⏳ Waiting on others**
-- [#19022](https://github.com/ethereum/ethereum-org-website/pull/19022) — pillowtalk-Qy: address wackerow's one inline request (today)
-- [#19069](https://github.com/ethereum/ethereum-org-website/pull/19069) — byt61: rework GitPOAP removal — edits hit translated files, dangling t() calls
-- [#18896](https://github.com/ethereum/ethereum-org-website/pull/18896) — contributor: rebase the CONFLICTING intl frontmatter fix (day 8)
+- [#19184](https://github.com/ethereum/ethereum-org-website/pull/19184) — nloureiro: fix the two bugs pettinarip flagged (Dencun EIP count, unreachable `testnet` stage) and green the `agent` check, 1d ago
+- [#19097](https://github.com/ethereum/ethereum-org-website/pull/19097) — pankajjagtapp: address CHANGES_REQUESTED on the ether.fi listing, 1d ago
 
 **🔁 Carried over**
-- [#18966](https://github.com/ethereum/ethereum-org-website/pull/18966) — **day 8, still nothing**: /layer-2 "$0.00" fix, green, ownerless. Assign a reviewer or self-merge — tiny fixes have no queue owner.
-- [#19016](https://github.com/ethereum/ethereum-org-website/pull/19016) — **day 5**: green i18n sweep retires the recovery-agent 500 class; still unowned.
-- [#18967](https://github.com/ethereum/ethereum-org-website/issues/18967) — **day 7**: 7-PR Storybook stack won't land piecemeal — make the taxonomy call once or close it.
-- [#18891](https://github.com/ethereum/ethereum-org-website/issues/18891) — **day 8**: intl frontmatter gap; triage with #19031/#18896 as one, not three.
+- [#18918](https://github.com/ethereum/ethereum-org-website/pull/18918) — **day 10, still nothing**: walletless tutorial, 4 red checks, zero human comments in 36d. Close it; leave #18052 open for a fresh author.
+- [#18891](https://github.com/ethereum/ethereum-org-website/issues/18891) + #19031 — **day 9, still nothing**: intl frontmatter-propagation gap, team-filed, no team reply, #18896 still CONFLICTING. Assign wackerow or drop dev-required framing.
+- SEO batch [#19017](https://github.com/ethereum/ethereum-org-website/pull/19017), #19029, #19043, #19044 — day 4-6: green, e2e-tested, review-only. Five siblings merged; one reviewer clears these.
 
 **🗑️ Suggested closures**
-- [#18918](https://github.com/ethereum/ethereum-org-website/pull/18918) — day 9: walletless tutorial, 4 red checks, zero replies ever (0.82)
-- [#18876](https://github.com/ethereum/ethereum-org-website/pull/18876) — day 9: DeFi quiz swap, deletion never justified (0.72)
+- [#17263](https://github.com/ethereum/ethereum-org-website/pull/17263) — stale draft, 156d idle, CONFLICTING, Blocked+Stale (0.75)
+- [#19110](https://github.com/ethereum/ethereum-org-website/issues/19110), #19014 — empty "Feature request" issues, no body (0.7)
 
-**📊 Queue** — 83 open PRs (1 conflicting, 4 failing) · 89 issues (58 external, no team reply) · [full queue](https://github.com/ethereum/ethereum-org-website/pulls)
+**🔄 Since the last digest**
+- Merged: SEO fixes #19022/#19058, both quizzes #19027/#19041, the 7-PR Storybook stack, #18966, #19040 — the green review-only backlog cleared substantially.
+- New: recovery-agent opened ~16 draft Sentry PRs (#19191–#19206); amannn's intl PRs #19135/#19136 arrived CONFLICTING.
+
+**📊 Queue** — 98 open PRs (13 conflicting, 9 failing) · 95 issues (63 external, no team reply) · [full queue](https://github.com/ethereum/ethereum-org-website/pulls)
