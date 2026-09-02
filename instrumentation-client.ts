@@ -74,6 +74,9 @@ Sentry.init({
     /DApp request timeout/,
     // Cross-origin postMessage from extensions/embedded frames (ETHORG-87)
     /^Error: invalid origin$/,
+    // DOM extensions (translate, Grammarly, ad blockers) mutate the tree
+    // outside React's control, so its own reconciler patch throws (ETHORG-1B8)
+    /Failed to execute 'insertBefore' on 'Node'/,
   ],
 
   beforeSend(event) {
