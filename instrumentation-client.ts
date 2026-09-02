@@ -74,6 +74,9 @@ Sentry.init({
     /DApp request timeout/,
     // Cross-origin postMessage from extensions/embedded frames (ETHORG-87)
     /^Error: invalid origin$/,
+    // Third-party pagination-injection script writing to a DOM node that
+    // doesn't exist on our pages (ETHORG-1B6)
+    /Cannot set properties of null \(setting 'total_page'\)/,
   ],
 
   beforeSend(event) {
