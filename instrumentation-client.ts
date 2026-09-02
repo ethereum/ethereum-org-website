@@ -74,6 +74,10 @@ Sentry.init({
     /DApp request timeout/,
     // Cross-origin postMessage from extensions/embedded frames (ETHORG-87)
     /^Error: invalid origin$/,
+    // "This is a bug in Next.js" is misleading: this invariant fires when a
+    // browser extension or injected script mutates <script> tags before Next's
+    // own inline script reads document.currentScript (ETHORG-1AY)
+    /Expected document\.currentScript to be a <script> element/,
   ],
 
   beforeSend(event) {
