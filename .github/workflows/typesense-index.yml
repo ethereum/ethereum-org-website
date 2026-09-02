@@ -11,13 +11,14 @@ on:
   repository_dispatch:
     types: [deploy-succeeded]
   # Safety net: if a deploy notification is ever missed, the index still refreshes
-  # rather than quietly ageing.
+  # rather than quietly ageing. Friday evening, a few hours after the weekly release
+  # deploy -- the same slot Algolia crawled on.
   schedule:
-    - cron: "0 3 * * 0"
+    - cron: "0 22 * * 5"
   workflow_dispatch:
     inputs:
       locales:
-        description: "Space-separated locales, or blank for all"
+        description: "Locales to index, comma- or space-separated. Blank = all."
         required: false
 
 concurrency:
@@ -34,13 +35,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       # i18n.config.json is the single source of truth for supported locales, so adding
-      # one here is the only change needed to index it.
+      # one there is the only change needed to index it.
       - id: list
+        env:
+          LOCALES: ${{ inputs.locales }}
         run: |
-          if [ -n "${{ inputs.locales }}" ]; then
-            MATRIX=$(printf '%s\n' ${{ inputs.locales }} | jq -Rsc 'split("\n") | map(select(length > 0))')
+          ALL=$(jq -c '[.[].code]' i18n.config.json)
+          if [ -z "$LOCALES" ]; then
+            MATRIX="$ALL"
           else
-            MATRIX=$(jq -c '[.[].code]' i18n.config.json)
+            # "ja,ar" and "ja ar" both work.
+            MATRIX=$(printf '%s' "$LOCALES" | tr ', ' '\n\n' | jq -Rsc 'split("\n") | map(select(length > 0))')
+            # A typo would otherwise crawl a 404 sitemap and promote nothing, silently.
+            UNKNOWN=$(jq -nc --argjson all "$ALL" --argjson want "$MATRIX" '$want - $all')
+            [ "$UNKNOWN" = "[]" ] || { echo "::error::Unknown locale(s): $UNKNOWN"; exit 1; }
           fi
           echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
           echo "$MATRIX"
@@ -76,7 +84,7 @@ jobs:
           echo "SENTRY_CRONS=https://$HOST/api/$PROJECT/cron/typesense-index/$KEY/" >> "$GITHUB_ENV"
           curl -sS -m 10 -X POST \
             "https://$HOST/api/$PROJECT/cron/typesense-index/$KEY/?environment=${{ matrix.locale }}" \
-            --data-raw '{"status":"in_progress","monitor_config":{"schedule":{"type":"crontab","value":"0 3 * * 0"},"checkin_margin":120,"max_runtime":60}}' \
+            --data-raw '{"status":"in_progress","monitor_config":{"schedule":{"type":"crontab","value":"0 22 * * 5"},"checkin_margin":120,"max_runtime":60}}' \
             || echo "check-in failed; continuing"
 
       - name: Check secrets
