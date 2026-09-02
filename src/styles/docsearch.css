@@ -45,11 +45,18 @@
 }
 
 .dark {
+  /* The vendor ships its dark palette under `html[data-theme="dark"]`, which this site
+     never sets -- it uses `.dark`. So dark mode silently inherited the light values,
+     including a near-black hit colour on a near-black background. */
   --docsearch-modal-background: hsla(var(--background));
   --docsearch-highlight-color: hsla(var(--primary-hover));
-  /* The vendor default is near-black, which fails contrast on our dark background --
-     it shows up on placeholder text and unhovered "Recent" entries. */
+  --docsearch-text-color: hsla(var(--body));
+  --docsearch-hit-color: hsla(var(--body));
   --docsearch-muted-color: hsla(var(--body-medium));
+  --docsearch-hit-background: hsla(var(--background));
+  --docsearch-footer-background: hsla(var(--background));
+  --docsearch-searchbox-background: hsla(var(--background));
+  --docsearch-searchbox-focus-background: hsla(var(--background));
 }
 
 /* Restore library padding/margin stripped by TW preflight (* {margin:0; padding:0})
@@ -172,6 +179,10 @@
 }
 
 .DocSearch-Footer {
+  /* Vendor uses row-reverse, which parks the shortcut keys at the far end now that the
+     logo is hidden. `row` keeps them at the inline start and stays correct in RTL. */
+  flex-direction: row;
+  justify-content: flex-start;
   --docsearch-logo-color: hsla(var(--body-light));
   --docsearch-footer-shadow: none;
   height: 40px;
@@ -196,7 +207,9 @@
 }
 
 .DocSearch-Commands-Key {
-  @apply me-1.5 grid h-4 w-4 place-items-center rounded border border-solid border-primary bg-background bg-none p-0 text-primary shadow-none;
+  /* Auto width so multi-character keys like `esc` get breathing room instead of being
+     squeezed into a square. */
+  @apply me-1.5 grid h-4 w-auto min-w-4 place-items-center rounded border border-solid border-primary bg-background bg-none px-0.5 py-0 text-primary shadow-none;
 }
 
 .DocSearch-Commands-Key svg {

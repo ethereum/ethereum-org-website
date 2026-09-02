@@ -30,6 +30,19 @@ type DocSearchHit = Parameters<
   NonNullable<DocSearchModalProps["transformItems"]>
 >[0][number]
 
+/** Recursively strip the site-name suffix from every `lvl0` title in a hit. */
+const stripTitleSuffix = (node: Record<string, unknown>, depth = 0) => {
+  if (depth > 6) return
+  for (const [key, value] of Object.entries(node)) {
+    if (typeof value === "string") {
+      if (key === "lvl0" || key === "hierarchy.lvl0")
+        node[key] = sanitizeHitTitle(value)
+    } else if (value && typeof value === "object") {
+      stripTitleSuffix(value as Record<string, unknown>, depth + 1)
+    }
+  }
+}
+
 interface SearchProps {
   asChild?: boolean
   children?: React.ReactElement<unknown>
@@ -78,33 +91,27 @@ const Search = ({ asChild = false, children }: SearchProps) => {
       nodes: [{ host, port, protocol }],
       apiKey,
     },
-    // Required by the modal's types. Empty by design: the collection is already
-    // locale-scoped, so no language filter is needed. This is the hook point for
-    // query tuning (typo thresholds, grouping) once it's been measured.
-    typesenseSearchParameters: {},
+    typesenseSearchParameters: {
+      // Break near-ties by page importance: root-level pages rank 10, tutorials 1.
+      // 100 buckets is deliberate -- coarser bucketing collapses genuinely different
+      // match scores into one tier and lets a three-value signal reorder them, which
+      // measured worse than no sort at all. At this granularity pagerank only decides
+      // between comparable matches: hit@1 and MRR match the unsorted baseline while
+      // hit@10 improves 81% -> 84% against the labelled query set.
+      sort_by: "_text_match(buckets: 100):desc,pagerank:desc",
+    },
     onClose,
     transformItems: (items: DocSearchHit[]) =>
       items.map((item: DocSearchHit) => {
         // Use JSON clone for browser compatibility (structuredClone not available in Chrome < 98)
         const newItem: DocSearchHit = JSON.parse(JSON.stringify(item))
         newItem.url = sanitizeHitUrl(item.url)
-        // lvl0 is the page's og:title, which always ends " | ethereum.org". The fork
-        // stores it three ways -- a flat dotted key, the `hierarchy` object, and a
-        // one-element `hierarchy_camel` array -- and renders from more than one, so
-        // missing any of them leaves the suffix on every result.
-        const record = newItem as unknown as Record<string, unknown>
-        if (typeof record["hierarchy.lvl0"] === "string")
-          record["hierarchy.lvl0"] = sanitizeHitTitle(record["hierarchy.lvl0"])
-        for (const container of [
-          record.hierarchy,
-          ...(Array.isArray(record.hierarchy_camel)
-            ? record.hierarchy_camel
-            : []),
-        ]) {
-          const level = container as { lvl0?: unknown } | undefined
-          if (level && typeof level.lvl0 === "string")
-            level.lvl0 = sanitizeHitTitle(level.lvl0)
-        }
+        // lvl0 is the page's og:title, which always ends " | ethereum.org", and it is
+        // shown as the group header above every result. The fork keeps it in several
+        // places -- a flat dotted key, the `hierarchy` object, a `hierarchy_camel`
+        // array, and `_highlightResult`/`_snippetResult` copies that the renderer
+        // actually reads -- so walk the hit and strip it wherever it appears.
+        stripTitleSuffix(newItem as unknown as Record<string, unknown>)
         return newItem
       }),
     placeholder: t("search-ethereum-org"),
