@@ -74,6 +74,9 @@ Sentry.init({
     /DApp request timeout/,
     // Cross-origin postMessage from extensions/embedded frames (ETHORG-87)
     /^Error: invalid origin$/,
+    // WalletConnect pairing proposal timeout - user didn't approve the
+    // connection in the wallet app in time (ETHORG-1B3)
+    /^Error: Proposal expired$/,
   ],
 
   beforeSend(event) {
