@@ -74,6 +74,9 @@ Sentry.init({
     /DApp request timeout/,
     // Cross-origin postMessage from extensions/embedded frames (ETHORG-87)
     /^Error: invalid origin$/,
+    // Non-standard global referenced by a browser extension's injected
+    // hit-testing script, not defined anywhere in our bundle (ETHORG-1B1)
+    /Can't find variable: GetHTMLElementsAtPoint/,
   ],
 
   beforeSend(event) {
