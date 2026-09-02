@@ -5,15 +5,17 @@
 # exists on `dev`, so GitHub lists it and dispatching it against this branch runs *this*
 # copy -- which is how we exercise the indexing pipeline before merge.
 #
-# Deliberately single-locale rather than a 25-way matrix: a test harness should not be
-# able to launch 25 crawls by accident.
+# Kept as close to `typesense-index.yml` as possible, so what we test is what ships. The
+# one deliberate difference: `locales` is required. Blank means "all 25" in the real
+# workflow; here it is an error and you type `all` instead, so a full 25-locale crawl of
+# production can't be started by leaving a field empty.
 name: Branch Task
 
 on:
   workflow_dispatch:
     inputs:
-      locale:
-        description: "Locale to index"
+      locales:
+        description: "Locales to index, comma- or space-separated (e.g. 'ja,ar'), or 'all'"
         required: true
         default: en
       steps:
@@ -25,13 +27,65 @@ on:
           - full
           - wiring-check
 
+concurrency:
+  group: typesense-index
+  cancel-in-progress: false
+
 jobs:
-  typesense:
-    name: typesense (${{ inputs.locale }} / ${{ inputs.steps }})
+  locales:
+    name: Resolve locales
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    outputs:
+      matrix: ${{ steps.list.outputs.matrix }}
     steps:
       - uses: actions/checkout@v4
+      - id: list
+        env:
+          LOCALES: ${{ inputs.locales }}
+        run: |
+          # `required: true` is a UI hint; a dispatch over the API can still send blank,
+          # which would fail later as an opaque empty-matrix error.
+          [ -n "$LOCALES" ] || { echo "::error::locales is required -- e.g. 'ja,ar', or 'all'"; exit 1; }
+          ALL=$(jq -c '[.[].code]' i18n.config.json)
+          if [ "$LOCALES" = "all" ]; then
+            MATRIX="$ALL"
+          else
+            # "ja,ar" and "ja ar" both work.
+            MATRIX=$(printf '%s' "$LOCALES" | tr ', ' '\n\n' | jq -Rsc 'split("\n") | map(select(length > 0))')
+            # A typo would otherwise crawl a 404 sitemap and promote nothing, silently.
+            UNKNOWN=$(jq -nc --argjson all "$ALL" --argjson want "$MATRIX" '$want - $all')
+            [ "$UNKNOWN" = "[]" ] || { echo "::error::Unknown locale(s): $UNKNOWN"; exit 1; }
+          fi
+          echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
+          echo "$MATRIX"
+
+  index:
+    name: ${{ matrix.locale }} (${{ inputs.steps }})
+    needs: locales
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        locale: ${{ fromJson(needs.locales.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sentry check-in (start)
+        env:
+          SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
+        run: |
+          # Guarded here rather than in `if:`, which is evaluated before step env exists.
+          [ -n "$SENTRY_DSN" ] || { echo "no SENTRY_DSN; monitoring disabled"; exit 0; }
+          # DSN is https://<public_key>@<host>/<project_id>
+          KEY="${SENTRY_DSN#*//}"; KEY="${KEY%%@*}"
+          REST="${SENTRY_DSN#*@}"; HOST="${REST%%/*}"; PROJECT="${REST##*/}"
+          echo "SENTRY_CRONS=https://$HOST/api/$PROJECT/cron/typesense-index/$KEY/" >> "$GITHUB_ENV"
+          curl -sS -m 10 -X POST \
+            "https://$HOST/api/$PROJECT/cron/typesense-index/$KEY/?environment=${{ matrix.locale }}" \
+            --data-raw '{"status":"in_progress","monitor_config":{"schedule":{"type":"crontab","value":"0 22 * * 5"},"checkin_margin":120,"max_runtime":60}}' \
+            || echo "check-in failed; continuing"
 
       # Fail in seconds with a clear message rather than after a Docker pull and a
       # Python traceback. Actions secrets are separate from Netlify's environment.
@@ -52,7 +106,7 @@ jobs:
       - name: Build the per-locale scraper config
         if: inputs.steps == 'full'
         env:
-          LOCALE: ${{ inputs.locale }}
+          LOCALE: ${{ matrix.locale }}
         run: |
           # English URLs are unprefixed (next-intl localePrefix "as-needed"), so /en/
           # 301s to / and a /en/-scoped crawl matches nothing in the sitemap.
@@ -92,11 +146,19 @@ jobs:
           TYPESENSE_URL: ${{ secrets.TYPESENSE_URL }}
           TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_ADMIN_KEY }}
           TYPESENSE_API_SEARCH_KEY: ${{ secrets.TYPESENSE_SEARCH_KEY }}
-        run: pnpm typesense:promote -- --locale ${{ inputs.locale }}
+        run: pnpm typesense:promote -- --locale ${{ matrix.locale }}
 
       - name: Apply curation
         env:
           TYPESENSE_URL: ${{ secrets.TYPESENSE_URL }}
           TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_ADMIN_KEY }}
           TYPESENSE_API_SEARCH_KEY: ${{ secrets.TYPESENSE_SEARCH_KEY }}
-        run: pnpm typesense:curate -- --locale ${{ inputs.locale }}
+        run: pnpm typesense:curate -- --locale ${{ matrix.locale }}
+
+      - name: Sentry check-in (result)
+        # Always, so a failed index is reported rather than looking like a missed run.
+        if: always() && env.SENTRY_CRONS != ''
+        run: |
+          STATUS=${{ job.status == 'success' && 'ok' || 'error' }}
+          curl -sS -m 10 "${SENTRY_CRONS}?environment=${{ matrix.locale }}&status=$STATUS" \
+            || echo "check-in failed; continuing"
