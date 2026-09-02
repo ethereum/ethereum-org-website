@@ -89,17 +89,23 @@ jobs:
             echo "Data-only change — notable keys unchanged."
           fi
 
-      # Snapshot of unnamed EIPs, not a diff. Runs on every store change so a
+      # Snapshot of the gap list, not a diff. Runs on every store change so a
       # data-only week still surfaces gaps classify ignores (testnet dates).
+      # Advisory only — a crash here must not cost the week's sync. Printed as
+      # well as saved, so a quiet week still leaves the list in the log.
       - name: Measure content coverage
         id: coverage
         if: steps.diff.outputs.changed == 'true'
-        run: pnpm exec tsx src/scripts/sync-upgrades/coverage.ts > coverage.txt
+        continue-on-error: true
+        run: |
+          pnpm exec tsx src/scripts/sync-upgrades/coverage.ts > coverage.txt
+          cat coverage.txt
 
       # Report before advancing the sync branch. If issue creation fails, the
       # old branch remains the baseline and the same report is retried.
       # Comment when classify found prose-facing keys, or when coverage still
-      # has unnamed EIPs. Stay quiet only when both are empty.
+      # has an unnamed non-networking EIP or a page-less upgrade. Stay quiet
+      # only when both are empty.
       - name: Open or append the content-review issue
         if: steps.classify.outputs.notable == 'true' || steps.coverage.outputs.gaps == 'true'
         env:
