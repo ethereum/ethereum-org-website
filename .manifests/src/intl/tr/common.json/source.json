@@ -1,10 +1,10 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/common.json",
-  "generatedAt": "2026-08-20T21:59:53.571Z",
-  "rootHash": "909c4935d2f7",
+  "generatedAt": "2026-09-03T12:37:47.603Z",
+  "rootHash": "9a40e61f8088",
   "tree": {
-    "contentHash": "eb30db297423",
+    "contentHash": "9e5b8d0f24f6",
     "anchorHash": "85546ce2e107",
     "children": {
       "about-ethereum-org": {
@@ -1791,11 +1791,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "participate": {
-        "contentHash": "38301e6935f3",
+        "contentHash": "bb501d7877eb",
         "anchorHash": "e3b0c44298fc"
       },
       "participate-menu": {
-        "contentHash": "0ff5d9fb49b4",
+        "contentHash": "a1dd20f59ab4",
         "anchorHash": "e3b0c44298fc"
       },
       "payments-page": {
@@ -1849,11 +1849,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "research": {
-        "contentHash": "979d6300fd98",
+        "contentHash": "92375f997ffe",
         "anchorHash": "e3b0c44298fc"
       },
       "research-menu": {
-        "contentHash": "b5985ec8963a",
+        "contentHash": "20cf04fc7f9f",
         "anchorHash": "e3b0c44298fc"
       },
       "resources": {
@@ -2645,5 +2645,5 @@
       "region-sint-eustatius-netherlands"
     ]
   },
-  "sourceCommitSha": "1988a451065e8d91e60a09d73935256ab102a52c"
+  "sourceCommitSha": "3de2d54f82963c5e92e7b0fd51dd7ab70bbb7e1c"
 }
