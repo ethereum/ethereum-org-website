@@ -35,6 +35,30 @@ The scraper would otherwise swap its own alias the moment a crawl ends, with no 
 all. Scraping to a staging name and promoting separately is what makes the swap
 conditional -- the equivalent of Algolia's `safetyChecks.beforeIndexPublishing`.
 
+## The scraper is a version behind
+
+Typesense v30 replaced per-collection synonyms and overrides with synonym sets and curation
+sets. Scraper 0.11.0 still calls the removed v29 endpoints in `commit_tmp_collection`, but
+only when the `ethereumorg-staging-<locale>` alias resolves to a previous collection --
+which is true from a locale's second run onward. The symptom is a full, successful crawl
+that dies with `ObjectNotFound: [Errno 404]` at commit, having indexed everything and
+published nothing.
+
+The workflow therefore deletes that alias before every crawl, which makes each run look
+like a first run. Nothing else reads it: search queries `ethereumorg-<locale>`, and promote
+finds staged collections by name. We define no synonyms, and curation is reapplied from
+`curation.json` after every promote, so there is nothing for the transfer to carry over.
+
+A side effect worth knowing: the scraper also deletes the old collection at the end of
+`commit_tmp_collection`. With the alias gone it no longer does, which leaves `prune` in
+promote as the only thing that deletes collections -- one deleter instead of two racing
+over the same names.
+
+A 0.12.x image exists and may address this properly. It is deliberately not taken here:
+every relevance number we have -- the field definitions, the `lvl0` XPath, hit@1 of 67% --
+was measured on 0.11.0, and swapping the crawler would invalidate that baseline. Upgrading
+is worth doing, against the ground truth set, as its own change.
+
 ## When promotion is refused
 
 A refusal exits non-zero, so the workflow job fails and the Sentry check-in reports

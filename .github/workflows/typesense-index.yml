@@ -101,6 +101,21 @@ jobs:
           done
           echo "all three secrets present"
 
+      # Typesense v30 replaced per-collection synonyms and overrides with synonym sets and
+      # curation sets; scraper 0.11.0 still calls the removed v29 endpoints. It only does so
+      # when this alias resolves a previous collection -- so a locale crawls fine on its
+      # first run and 404s at commit on every run after, having already done all the work.
+      # Dropping the alias first makes every crawl a first run. Nothing else reads it:
+      # search queries ethereumorg-<locale>, and promote finds staged collections by name.
+      - name: Clear the staging alias
+        env:
+          TYPESENSE_URL: ${{ secrets.TYPESENSE_URL }}
+          TYPESENSE_ADMIN_KEY: ${{ secrets.TYPESENSE_ADMIN_KEY }}
+        run: |
+          curl -sS -o /dev/null -w "staging alias delete: HTTP %{http_code}\n" \
+            -X DELETE -H "X-TYPESENSE-API-KEY: $TYPESENSE_ADMIN_KEY" \
+            "$TYPESENSE_URL/aliases/ethereumorg-staging-${{ matrix.locale }}" || true
+
       - name: Build the per-locale scraper config
         env:
           LOCALE: ${{ matrix.locale }}
