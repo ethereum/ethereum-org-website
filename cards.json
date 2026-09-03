@@ -4,11 +4,11 @@
     "intent": "intl-pipeline drops newly added frontmatter keys; manifests stamped current",
     "state": "decision-needed",
     "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Assign wackerow or formally drop the dev-required framing; three restatements have not moved it",
+    "next_human_decision": "Day 10: stop waiting on the external fix PR; assign wackerow to adopt the propagation gap or close #18891/#18896/#19031 as one thread",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Route/rebase #18896; scope with #19031"
+        "action": "Adopt/rebase #18896 or close the trio"
       }
     ],
     "impact": "high",
@@ -21,24 +21,24 @@
     "owner_lane": "tooling",
     "confidence": 0.6,
     "evidence": [
-      "team bug, no team reply",
-      "PR #18896 still CONFLICTING",
+      "team bug, no team reply, idle 10d",
+      "fix PR #18896 still CONFLICTING",
       "sibling #19031"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-05",
-    "runs_seen": 9
+    "runs_seen": 10
   },
   {
     "item": "Issue #18928",
     "intent": "External-link Matomo events fire unreliably (requestIdleCallback throttled)",
     "state": "waiting-on-contributor",
-    "recommended_disposition": "verify_then_merge",
+    "recommended_disposition": "request_changes",
     "next_human_decision": "",
     "waiting_on": [
       {
-        "actor": "maintainer",
-        "action": "Verify no double-fire on #19063, then merge"
+        "actor": "byt61",
+        "action": "Mark fix PR #19063 ready for review (still draft)"
       }
     ],
     "impact": "high",
@@ -48,19 +48,19 @@
       "PR #19063"
     ],
     "owner_lane": "code",
-    "confidence": 0.8,
+    "confidence": 0.75,
     "evidence": [
-      "konopkja bug, fix PR #19063 open + green",
+      "konopkja bug, fix PR #19063 open + green but DRAFT",
       "349 vs 14,629 events measured"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-14",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "Issue #18967",
     "intent": "Reorganize Storybook into repo-mirrored taxonomy via stacked phase PRs",
-    "state": "decision-needed",
+    "state": "suggest-close",
     "recommended_disposition": "close",
     "next_human_decision": "Stack merged — close the tracking issue or capture remaining follow-ups",
     "waiting_on": [
@@ -76,19 +76,19 @@
     "owner_lane": "tooling",
     "confidence": 0.7,
     "evidence": [
-      "7-PR stack #18969-#18989 no longer open (merged)",
+      "7-PR stack no longer open (merged)",
       "issue still open, answered+assigned"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-05",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "Issue #18995 (SEO JSON-LD/SSR cluster)",
     "intent": "konopkja SEO audit; several fix PRs merged, remainder green review-only blocked",
     "state": "verify-then-merge",
     "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "One reviewer clears the remaining green siblings #19017/#19029/#19043/#19044; #19001 still red",
+    "next_human_decision": "One reviewer clears the remaining green siblings #19017/#19029/#19043 as a batch; #19044 needs rebase, #19001 red",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -108,13 +108,13 @@
     "owner_lane": "code",
     "confidence": 0.82,
     "evidence": [
-      "#19022/#19058 merged since last run",
-      "4 green e2e-tested fixes remain",
+      "3 green e2e-tested fixes remain unreviewed 4-6d",
+      "#19044 CONFLICTING",
       "#19001 CI FAILURE"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-10",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "Issue #19014",
@@ -131,15 +131,43 @@
     "impact": "low",
     "effort_to_unblock": "small",
     "risk": "low",
-    "related_items": [],
+    "related_items": [
+      "Issue #19110"
+    ],
     "owner_lane": "product",
     "confidence": 0.7,
     "evidence": [
       "title 'Feature request', no body",
-      "26d idle, no engagement"
+      "27d idle, no engagement"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-02",
+    "runs_seen": 2
+  },
+  {
+    "item": "Issue #19019",
+    "intent": "Placeholder content issue '[Content] <short summary>', labeled invalid",
+    "state": "suggest-close",
+    "recommended_disposition": "close",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Close as invalid"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "content",
+    "confidence": 0.8,
+    "evidence": [
+      "already labeled 'invalid'",
+      "unfilled template title, 26d idle, no body"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-09-03",
     "runs_seen": 1
   },
   {
@@ -147,7 +175,7 @@
     "intent": "intl-pipeline never propagates components newly added to English pages",
     "state": "decision-needed",
     "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Scope alongside #18891/#18896 as one propagation gap; assign an owner",
+    "next_human_decision": "Fold into the #18891 propagation-gap thread; one owner, one fix",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -170,7 +198,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-11",
-    "runs_seen": 5
+    "runs_seen": 6
   },
   {
     "item": "Issue #19042",
@@ -198,7 +226,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 4
+    "runs_seen": 5
   },
   {
     "item": "Issue #19047",
@@ -226,7 +254,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 4
+    "runs_seen": 5
   },
   {
     "item": "Issue #19060",
@@ -251,19 +279,19 @@
     "owner_lane": "product",
     "confidence": 0.6,
     "evidence": [
-      "konopkja #19062 superseded by byt61 #19092 (rename) + #19093 (usage_tracking)",
-      "#19092 green, #19093 draft"
+      "#19092 (rename) green non-draft",
+      "#19093 (usage_tracking) still draft"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-14",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #17263",
     "intent": "UX/UI improvements for Use Cases Explorer (stale draft)",
     "state": "suggest-close",
     "recommended_disposition": "close",
-    "next_human_decision": "",
+    "next_human_decision": "Day 8: 157d idle, Stale+Blocked — close, no realistic path back",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -277,23 +305,23 @@
     "owner_lane": "design",
     "confidence": 0.75,
     "evidence": [
-      "draft, 156d idle, CONFLICTING",
+      "draft, 157d idle, UNKNOWN merge",
       "Status: Stale + Blocked labels"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-07",
-    "runs_seen": 7
+    "runs_seen": 8
   },
   {
     "item": "PR #18896",
     "intent": "Propagate added/removed frontmatter keys (closes #18891)",
-    "state": "waiting-on-contributor",
+    "state": "blocked",
     "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Ask rebase then domain-review; scope with #19031",
+    "next_human_decision": "Day 10: external rebase never came — a maintainer adopts/rebases or the whole #18891 thread closes",
     "waiting_on": [
       {
-        "actor": "contributor",
-        "action": "Rebase onto main (CONFLICTING)"
+        "actor": "maintainer",
+        "action": "Adopt+rebase, or close"
       }
     ],
     "impact": "high",
@@ -308,18 +336,18 @@
     "evidence": [
       "closes #18891",
       "CONFLICTING/DIRTY",
-      "idle 5d"
+      "Status: Stale, idle 6d"
     ],
     "analyzed_sha": "3948c50",
     "first_seen": "2026-08-05",
-    "runs_seen": 9
+    "runs_seen": 10
   },
   {
     "item": "PR #18918",
     "intent": "Add walletless-dapps tutorial (implements #18052)",
-    "state": "waiting-on-contributor",
+    "state": "suggest-close",
     "recommended_disposition": "close",
-    "next_human_decision": "Day 10, zero replies ever, 4 red checks — close and leave #18052 open, or a maintainer adopts the branch",
+    "next_human_decision": "Day 11, zero replies ever, 4 red checks — close and leave #18052 open, or a maintainer adopts the branch",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -337,11 +365,11 @@
     "evidence": [
       "4 netlify checks failing",
       "humanCommentCount 0 ever",
-      "external, idle 8d"
+      "external, idle 9d"
     ],
     "analyzed_sha": "ba23523",
     "first_seen": "2026-08-04",
-    "runs_seen": 10
+    "runs_seen": 11
   },
   {
     "item": "PR #19001",
@@ -351,8 +379,8 @@
     "next_human_decision": "",
     "waiting_on": [
       {
-        "actor": "contributor",
-        "action": "Green the failing required check"
+        "actor": "patrick-star-10",
+        "action": "Green the failing check"
       }
     ],
     "impact": "medium",
@@ -365,12 +393,12 @@
     "confidence": 0.75,
     "evidence": [
       "external, ships tests",
-      "CI FAILURE",
+      "CI FAILURE, idle 26d",
       "part of SEO cluster"
     ],
     "analyzed_sha": "9a02958",
     "first_seen": "2026-08-07",
-    "runs_seen": 7
+    "runs_seen": 8
   },
   {
     "item": "PR #19016",
@@ -394,13 +422,13 @@
     "owner_lane": "code",
     "confidence": 0.85,
     "evidence": [
-      "wackerow CHANGES_REQUESTED 09-01 'good to pull in'",
+      "wackerow CHANGES_REQUESTED 'good to pull in'",
       "aiReview superseded",
       "replaces 11 recovery PRs"
     ],
     "analyzed_sha": "a9927b3",
     "first_seen": "2026-09-02",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #19017",
@@ -428,7 +456,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-10",
-    "runs_seen": 6
+    "runs_seen": 7
   },
   {
     "item": "PR #19024",
@@ -458,7 +486,7 @@
     ],
     "analyzed_sha": "efcd439",
     "first_seen": "2026-09-02",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #19029",
@@ -487,7 +515,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-11",
-    "runs_seen": 5
+    "runs_seen": 6
   },
   {
     "item": "PR #19043",
@@ -515,18 +543,18 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 4
+    "runs_seen": 5
   },
   {
     "item": "PR #19044",
     "intent": "Server-render tutorials list + homepage carousel (fixes #18977)",
     "state": "blocked",
-    "recommended_disposition": "verify_then_merge",
+    "recommended_disposition": "request_changes",
     "next_human_decision": "",
     "waiting_on": [
       {
-        "actor": "maintainer",
-        "action": "Review; part of SEO batch"
+        "actor": "SayedZahur786",
+        "action": "Rebase onto main (CONFLICTING)"
       }
     ],
     "impact": "high",
@@ -538,13 +566,13 @@
     "owner_lane": "code",
     "confidence": 0.78,
     "evidence": [
-      "green, ships e2e test",
+      "ships e2e test",
       "tutorials hub had zero crawlable links",
-      "now CONFLICTING"
+      "CONFLICTING/DIRTY"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 4
+    "runs_seen": 5
   },
   {
     "item": "PR #19048",
@@ -567,12 +595,12 @@
     "owner_lane": "code",
     "confidence": 0.75,
     "evidence": [
-      "green review-only, 2 files",
+      "green, 2 files",
       "seed off local time flipped at UTC midnight"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 4
+    "runs_seen": 5
   },
   {
     "item": "PR #19057",
@@ -595,22 +623,22 @@
     "evidence": [
       "team, README-only 2-line delete",
       "Crowdin/gitpoap both defunct",
-      "green"
+      "green, idle 21d"
     ],
     "analyzed_sha": "ee6b214",
     "first_seen": "2026-08-13",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "PR #19063",
     "intent": "Fire external-link custom events synchronously (fixes #18928)",
-    "state": "blocked",
-    "recommended_disposition": "verify_then_merge",
+    "state": "waiting-on-contributor",
+    "recommended_disposition": "request_changes",
     "next_human_decision": "",
     "waiting_on": [
       {
-        "actor": "maintainer",
-        "action": "Verify no double-fire, then merge"
+        "actor": "byt61",
+        "action": "Mark ready for review (still draft)"
       }
     ],
     "impact": "high",
@@ -620,14 +648,14 @@
       "Issue #18928"
     ],
     "owner_lane": "code",
-    "confidence": 0.82,
+    "confidence": 0.8,
     "evidence": [
       "confirmed prod undercount 349 vs 14,629",
-      "green, 2 files, BLOCKED review-only"
+      "green but DRAFT, idle 10d"
     ],
     "analyzed_sha": "ee2b831",
-    "first_seen": "2026-08-14",
-    "runs_seen": 2
+    "first_seen": "2026-09-03",
+    "runs_seen": 1
   },
   {
     "item": "PR #19069",
@@ -637,7 +665,7 @@
     "next_human_decision": "",
     "waiting_on": [
       {
-        "actor": "contributor",
+        "actor": "byt61",
         "action": "Re-apply to source files, fix dangling t() calls"
       }
     ],
@@ -656,18 +684,18 @@
     ],
     "analyzed_sha": "a3232d8",
     "first_seen": "2026-08-14",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "PR #19070",
     "intent": "Fix broken X share-results link (404 on %23quiz) on /quizzes",
-    "state": "blocked",
-    "recommended_disposition": "merge",
+    "state": "waiting-on-contributor",
+    "recommended_disposition": "request_changes",
     "next_human_decision": "",
     "waiting_on": [
       {
-        "actor": "maintainer",
-        "action": "Approve; block is missing review"
+        "actor": "byt61",
+        "action": "Mark ready for review (still draft)"
       }
     ],
     "impact": "low",
@@ -675,24 +703,25 @@
     "risk": "low",
     "related_items": [],
     "owner_lane": "code",
-    "confidence": 0.8,
+    "confidence": 0.78,
     "evidence": [
-      "1 file, draft, double-encoded #quiz produced 404"
+      "1 file, DRAFT",
+      "double-encoded #quiz produced 404"
     ],
     "analyzed_sha": "7e20472",
     "first_seen": "2026-08-14",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "PR #19096",
     "intent": "Use countryCode for country-selector analytics event (fixes #19023)",
     "state": "decision-needed",
     "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "Confirm it targets the same selector as draft #19024, land this, close #19024",
+    "next_human_decision": "Land this green non-draft fix, close draft duplicate #19024",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Pick between #19096 and #19024, then merge"
+        "action": "Merge #19096, close #19024"
       }
     ],
     "impact": "medium",
@@ -707,11 +736,11 @@
     "evidence": [
       "byt61, green, non-draft, BLOCKED",
       "one-line countryCode change",
-      "duplicate of #19024"
+      "duplicate of draft #19024"
     ],
     "analyzed_sha": "e432cef",
     "first_seen": "2026-09-02",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #19097",
@@ -736,14 +765,14 @@
     "evidence": [
       "CHANGES_REQUESTED, 1 review",
       "CI PENDING",
-      "external"
+      "external, idle 1d"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-02",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
-    "item": "PR #19110",
+    "item": "Issue #19110",
     "intent": "Empty 'Feature request' issue, no body",
     "state": "suggest-close",
     "recommended_disposition": "close",
@@ -757,27 +786,29 @@
     "impact": "low",
     "effort_to_unblock": "small",
     "risk": "low",
-    "related_items": [],
+    "related_items": [
+      "Issue #19014"
+    ],
     "owner_lane": "product",
     "confidence": 0.7,
     "evidence": [
       "title 'Feature request', no body",
-      "13d idle, no engagement"
+      "14d idle, no engagement"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-02",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #19132",
     "intent": "Add SwiftNodes to nodes-as-a-service list (product-review gated)",
     "state": "decision-needed",
     "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Does SwiftNodes meet the node-provider listing bar? Also needs a base rebase (BEHIND)",
+    "next_human_decision": "Clear the node-provider listing backlog (#19132/#19157/#19035/#18872) in one product-review pass",
     "waiting_on": [
       {
         "actor": "maintainer",
-        "action": "Product review + ask rebase"
+        "action": "Product review + ask rebase (BEHIND)"
       }
     ],
     "impact": "low",
@@ -792,19 +823,18 @@
     "confidence": 0.65,
     "evidence": [
       "external, green, BEHIND",
-      "needs product review label",
-      "ai looks-mergeable"
+      "needs product review label"
     ],
     "analyzed_sha": "303a32c",
     "first_seen": "2026-09-02",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #19157",
     "intent": "Add BoltRPC to nodes-as-a-service providers (product-review gated)",
     "state": "decision-needed",
     "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Does BoltRPC meet the node-provider listing bar?",
+    "next_human_decision": "Part of node-provider listing backlog; review with #19132/#19035/#18872",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -827,11 +857,11 @@
     ],
     "analyzed_sha": "48e2822",
     "first_seen": "2026-09-02",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #19184",
-    "intent": "Drive the /roadmap release carousel from Forkcast data (builds on #18993)",
+    "intent": "Drive the /roadmap release carousel from Forkcast data",
     "state": "waiting-on-contributor",
     "recommended_disposition": "request_changes",
     "next_human_decision": "",
@@ -854,6 +884,192 @@
     ],
     "analyzed_sha": "f29f2db",
     "first_seen": "2026-09-02",
+    "runs_seen": 2
+  },
+  {
+    "item": "PR #19164",
+    "intent": "prepare-release: never leave a deploy PR without a published release",
+    "state": "waiting-on-ci",
+    "recommended_disposition": "request_changes",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "pettinarip",
+        "action": "Green the 1 failing check, then self-merge"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "tooling",
+    "confidence": 0.7,
+    "evidence": [
+      "team infra, CI FAILURE fail:1",
+      "3 files, idle 6d"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-09-03",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19167",
+    "intent": "intl: restore daily cron, fix CJK length floor",
+    "state": "waiting-on-ci",
+    "recommended_disposition": "request_changes",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "wackerow",
+        "action": "Green the 1 failing check"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "tooling",
+    "confidence": 0.7,
+    "evidence": [
+      "team infra, CI FAILURE fail:1",
+      "7 files, idle 6d"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-09-03",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19174",
+    "intent": "Remove link to non-existing file + archived translation project",
+    "state": "blocked",
+    "recommended_disposition": "merge",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Approve; block is missing review"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "content",
+    "confidence": 0.7,
+    "evidence": [
+      "external, 1 file docs, green BLOCKED"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-09-03",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19178-#19183 (bounty-hunter batch)",
+    "intent": "Five bounty-hunter JSON entries from 0xMushow",
+    "state": "verify-then-merge",
+    "recommended_disposition": "verify_then_merge",
+    "next_human_decision": "Verify the 5 names against the bug-bounty log once, then merge together",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Batch-verify + merge"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "content",
+    "confidence": 0.7,
+    "evidence": [
+      "5 green 1-file JSON adds, all BLOCKED review-only",
+      "same author 0xMushow"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-09-03",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19187",
+    "intent": "community-meetups.json: BeerFi Prague web replaces meetup.com",
+    "state": "blocked",
+    "recommended_disposition": "merge",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Approve; block is missing review"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "content",
+    "confidence": 0.7,
+    "evidence": [
+      "external, 1 file, green BLOCKED"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-09-03",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19194",
+    "intent": "Migrate site search from Algolia DocSearch to self-hosted Typesense",
+    "state": "decision-needed",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "Green-light the Algolia->Typesense cutover and fix the failing check, or keep it in draft until eval #18346 closes",
+    "waiting_on": [
+      {
+        "actor": "wackerow",
+        "action": "Resolve CI failure; team decides on cutover"
+      }
+    ],
+    "impact": "high",
+    "effort_to_unblock": "large",
+    "risk": "medium",
+    "related_items": [
+      "PR #18346",
+      "PR #19124"
+    ],
+    "owner_lane": "tooling",
+    "confidence": 0.5,
+    "evidence": [
+      "team, 18 files, CI FAILURE",
+      "supersedes still-draft eval #18346",
+      "site-wide search backend"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-09-03",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19213",
+    "intent": "Add eth.zig to backend API libraries (closes #19212)",
+    "state": "blocked",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "Content sign-off that eth.zig meets the library-listing bar, then merge",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Content review of listing"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "Issue #19212"
+    ],
+    "owner_lane": "content",
+    "confidence": 0.65,
+    "evidence": [
+      "external, 1 file, green BLOCKED",
+      "self-linked issue #19212"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-09-03",
     "runs_seen": 1
   }
 ]

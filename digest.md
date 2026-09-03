@@ -1,34 +1,31 @@
-**Intake decisions — 2026-09-02**
-2 decisions · 2 batches · 98 open PRs / 95 open issues
+**Intake decisions — 2026-09-03**
+1 decision · 1 batch · 84 open PRs / 96 open issues
 
 **🧭 Decide today**
-**1. [#19016](https://github.com/ethereum/ethereum-org-website/pull/19016) — set request locale in all [locale] pages** · code · impact high, effort small
-wackerow approved 09-01 with 4 inline nits ("good to pull in"); merging retires the 11-PR recovery-agent 500 class.
-→ **pettinarip applies the 4 suggestions, then wackerow merges** (0.85)
-
-**2. [#19096](https://github.com/ethereum/ethereum-org-website/pull/19096) vs [#19024](https://github.com/ethereum/ethereum-org-website/pull/19024) — country-selector analytics, filed twice** · code · impact med, effort small
-Both green, both close #19023 (localized country names fragment Matomo events). #19096 (byt61) is non-draft; #19024 (konopkja) is still a draft.
-→ **Confirm same selector, land #19096, close #19024** (0.8)
+**1. [#19194](https://github.com/ethereum/ethereum-org-website/pull/19194) — Migrate site search to self-hosted Typesense** · tooling · impact high, effort large
+New team PR (wackerow), 18 files, but CI is red and it supersedes the still-draft eval [#18346](https://github.com/ethereum/ethereum-org-website/pull/18346).
+→ **Green-light the Algolia→Typesense cutover and fix the failing check, or hold in draft until the eval closes?** (0.5)
 
 **🧩 Review batches**
-- **Node-service listings** — [#19157](https://github.com/ethereum/ethereum-org-website/pull/19157), [#19132](https://github.com/ethereum/ethereum-org-website/pull/19132), [#19035](https://github.com/ethereum/ethereum-org-website/pull/19035), #18872: all add an RPC/node provider to the same page, all green, all awaiting product review. One pass against the listing bar clears the set (#19132 needs a rebase).
-- **byt61 green fixes** — [#19086](https://github.com/ethereum/ethereum-org-website/pull/19086), [#19084](https://github.com/ethereum/ethereum-org-website/pull/19084), #19079: small green review-only fixes (numberFormat, a11y, http→https). byt61 has ~15 PRs open (mostly drafts); approve the ready ones.
+- **Bounty-hunter entries** — [#19178](https://github.com/ethereum/ethereum-org-website/pull/19178)…[#19183](https://github.com/ethereum/ethereum-org-website/pull/19183): five new green 1-file JSON adds from 0xMushow. Verify the names against the bug-bounty log once, then merge the set together.
 
 **⏳ Waiting on others**
-- [#19184](https://github.com/ethereum/ethereum-org-website/pull/19184) — nloureiro: fix the two bugs pettinarip flagged (Dencun EIP count, unreachable `testnet` stage) and green the `agent` check, 1d ago
-- [#19097](https://github.com/ethereum/ethereum-org-website/pull/19097) — pankajjagtapp: address CHANGES_REQUESTED on the ether.fi listing, 1d ago
+- [#19097](https://github.com/ethereum/ethereum-org-website/pull/19097) — pankajjagtapp: address CHANGES_REQUESTED on the ether.fi listing, 1d
+- [#19184](https://github.com/ethereum/ethereum-org-website/pull/19184) — nloureiro: fix Dencun EIP count + unreachable testnet stage, green the agent check, 1d
 
 **🔁 Carried over**
-- [#18918](https://github.com/ethereum/ethereum-org-website/pull/18918) — **day 10, still nothing**: walletless tutorial, 4 red checks, zero human comments in 36d. Close it; leave #18052 open for a fresh author.
-- [#18891](https://github.com/ethereum/ethereum-org-website/issues/18891) + #19031 — **day 9, still nothing**: intl frontmatter-propagation gap, team-filed, no team reply, #18896 still CONFLICTING. Assign wackerow or drop dev-required framing.
-- SEO batch [#19017](https://github.com/ethereum/ethereum-org-website/pull/19017), #19029, #19043, #19044 — day 4-6: green, e2e-tested, review-only. Five siblings merged; one reviewer clears these.
+- SEO batch [#19017](https://github.com/ethereum/ethereum-org-website/pull/19017)/[#19029](https://github.com/ethereum/ethereum-org-website/pull/19029)/[#19043](https://github.com/ethereum/ethereum-org-website/pull/19043) — **day 4–6, still no reviewer**: all green, e2e-tested, review-only; five siblings already merged. The blocker isn't the PRs, it's that no one owns SEO review — assign one person to clear all three ([#19044](https://github.com/ethereum/ethereum-org-website/pull/19044) needs a rebase, [#19001](https://github.com/ethereum/ethereum-org-website/pull/19001) is red).
+- [#18896](https://github.com/ethereum/ethereum-org-website/pull/18896) — **day 10, still nothing**: the external rebase never came. Adopt+rebase it (closes #18891/#19031) or close the trio — 10 runs of "waiting on the contributor" has failed.
+- [#18918](https://github.com/ethereum/ethereum-org-website/pull/18918) — **day 11, still nothing**: 4 red checks, zero replies ever. Close and leave #18052 open, or adopt the branch.
+- [#19016](https://github.com/ethereum/ethereum-org-website/pull/19016) — day 2: wackerow-approved, only 4 inline nits left; pettinarip applies them to retire the 11-PR recovery-500 class.
 
 **🗑️ Suggested closures**
-- [#17263](https://github.com/ethereum/ethereum-org-website/pull/17263) — stale draft, 156d idle, CONFLICTING, Blocked+Stale (0.75)
-- [#19110](https://github.com/ethereum/ethereum-org-website/issues/19110), #19014 — empty "Feature request" issues, no body (0.7)
+- [#17263](https://github.com/ethereum/ethereum-org-website/pull/17263) — stale draft, 157d idle, Blocked+Stale (0.75)
+- [#19014](https://github.com/ethereum/ethereum-org-website/issues/19014), [#19110](https://github.com/ethereum/ethereum-org-website/issues/19110) — empty "Feature request", no body (0.7)
+- [#19019](https://github.com/ethereum/ethereum-org-website/issues/19019) — unfilled template "[Content] <short summary>", already labeled invalid (0.8)
 
 **🔄 Since the last digest**
-- Merged: SEO fixes #19022/#19058, both quizzes #19027/#19041, the 7-PR Storybook stack, #18966, #19040 — the green review-only backlog cleared substantially.
-- New: recovery-agent opened ~16 draft Sentry PRs (#19191–#19206); amannn's intl PRs #19135/#19136 arrived CONFLICTING.
+- New: Typesense migration #19194 (team, red CI); five bounty-hunter PRs #19178–#19183; team infra #19164/#19167 both landed with a failing check.
+- Changed: external-link fix #19063 reverted to draft, so #18928 is now waiting on byt61, not on review.
 
-**📊 Queue** — 98 open PRs (13 conflicting, 9 failing) · 95 issues (63 external, no team reply) · [full queue](https://github.com/ethereum/ethereum-org-website/pulls)
+**📊 Queue** — 84 open PRs (6 conflicting, 9 failing checks) · 96 open issues (64 external, no team reply) · [full queue](https://github.com/ethereum/ethereum-org-website/pulls)
