@@ -295,7 +295,7 @@ Variants: `simple | minimal | minimal-striped | simple-striped | product | highl
 
 For markdown-rendered tables, `mdxTableComponents` shims the same primitive.
 
-Domain-specific tables (`DataTable`, `Layer2NetworksTable`, `FindWalletProductTable`, `StablecoinsTable`, `ProductTable`) wrap `ui/table` for specific data shapes. Use them only if the data shape matches.
+Domain-specific tables (`DataTable`, `Layer2NetworksTable`, `StablecoinsTable`, `ProductTable`) wrap `ui/table` for specific data shapes. Use them only if the data shape matches.
 
 ## i18n & Formatting Utilities
 
