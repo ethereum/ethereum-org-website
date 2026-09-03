@@ -19,17 +19,7 @@ const USE_MOCK_EXPERIMENTS = process.env.USE_MOCK_EXPERIMENTS === "true"
  *     ],
  *   },
  */
-const MOCK_EXPERIMENTS: Record<string, ABTestConfig> = {
-  FindWalletCatalog2026: {
-    name: "FindWalletCatalog2026",
-    id: "dev-15",
-    enabled: true,
-    variants: [
-      { name: "Original", weight: 50 },
-      { name: "NewCatalog", weight: 50 },
-    ],
-  },
-}
+const MOCK_EXPERIMENTS: Record<string, ABTestConfig> = {}
 
 function isExperimentActive(exp: MatomoExperiment): boolean {
   const now = new Date()

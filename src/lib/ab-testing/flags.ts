@@ -85,14 +85,6 @@ export const defineABFlag = (
     adapter: createMatomoAdapter(key),
   })
 
-/** Legacy expandable table (Original) vs the rebuilt catalog (NewCatalog) */
-export const findWalletCatalogFlag = defineABFlag(
-  "FindWalletCatalog2026",
-  "Find-wallet: legacy product table vs rebuilt catalog"
-)
-
-export const findWalletFlags = [findWalletCatalogFlag] as const
-
 /**
  * A/B-tested routes and the flags precomputed for each.
  *
@@ -104,6 +96,4 @@ export const findWalletFlags = [findWalletCatalogFlag] as const
  * pages. Every route registered here needs a matching coded page at
  * <path>/ab-code/[code]/ - see docs/ab-testing.md for the recipe.
  */
-export const abTestRoutes: Record<string, readonly ABFlag[]> = {
-  "/wallets/find-wallet/": findWalletFlags,
-}
+export const abTestRoutes: Record<string, readonly ABFlag[]> = {}

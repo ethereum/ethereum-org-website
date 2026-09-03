@@ -1,5 +1,3 @@
-import { union } from "lodash"
-
 import { getLanguageCodeName } from "@/lib/utils/intl"
 import {
   formatPriceUSD,
@@ -12,17 +10,9 @@ import { capitalize } from "@/lib/utils/string"
 import { newToCrypto } from "@/data/wallets/new-to-crypto"
 import walletsData from "@/data/wallets/wallet-data"
 
-import {
-  DEVELOPER_FEATURES,
-  FINANCE_FEATURES,
-  LONG_TERM_FEATURES,
-  NEW_TO_CRYPTO_FEATURES,
-  NFTS_FEATURES,
-} from "../constants"
 import type {
   ChainName,
   FilterOption,
-  WalletData,
   WalletFee,
   WalletFeeAmount,
   WalletLanguage,
@@ -156,112 +146,6 @@ export const formatWalletFees = (
   })
 
   return new Intl.ListFormat(locale, { style: "narrow" }).format(items)
-}
-
-/* ---------------------------------------------------------------------------
- * Legacy find-wallet helpers. Only consumed by FindWalletProductTable, kept
- * alive for the FindWalletCatalog2026 A/B test. Delete both when it concludes.
- * ------------------------------------------------------------------------- */
-
-// Get a list of a wallet supported Personas (new to crypto, nfts, long term, finance, developer)
-export const getWalletPersonas = (wallet: WalletData) => {
-  const walletPersonas: string[] = []
-
-  const isNewToCryptoPersona = NEW_TO_CRYPTO_FEATURES.every(
-    (feature) => wallet[feature]
-  )
-  const isNFTPersona = NFTS_FEATURES.every((feature) => wallet[feature])
-  const isLongTermPersona = LONG_TERM_FEATURES.every(
-    (feature) => wallet[feature]
-  )
-  const isFinancePersona = FINANCE_FEATURES.every((feature) => wallet[feature])
-  const isDeveloperPersona = DEVELOPER_FEATURES.every(
-    (feature) => wallet[feature]
-  )
-
-  if (isNewToCryptoPersona) {
-    walletPersonas.push("page-find-wallet-new-to-crypto-title")
-  }
-
-  if (isNFTPersona) {
-    walletPersonas.push("page-find-wallet-nfts-title")
-  }
-
-  if (isLongTermPersona) {
-    walletPersonas.push("page-find-wallet-hodler-title")
-  }
-
-  if (isFinancePersona) {
-    walletPersonas.push("page-find-wallet-finance-title")
-  }
-
-  if (isDeveloperPersona) {
-    walletPersonas.push("page-find-wallet-developer-title")
-  }
-
-  return walletPersonas
-}
-
-// Get total count of wallets that support a language
-const getLanguageTotalCount = (languageCode: string) => {
-  return walletsData.reduce(
-    (total, currentWallet) =>
-      currentWallet.languages_supported.includes(languageCode as WalletLanguage)
-        ? (total = total + 1)
-        : total,
-    0
-  )
-}
-
-// Get a list of all wallets languages, without duplicates
-export const getAllWalletsLanguages = (locale: string) => {
-  const compareFn = (
-    a: { langCode: string; langName: string },
-    b: { langCode: string; langName: string }
-  ) => {
-    if (a.langName > b.langName) {
-      return 1
-    }
-    if (a.langName < b.langName) {
-      return -1
-    }
-    return 0
-  }
-
-  return (
-    walletsData
-      .reduce(
-        (allLanguagesList, current) =>
-          // `union` lodash method merges all arrays removing duplicates
-          union(allLanguagesList, current.languages_supported),
-        [] as string[]
-      )
-      .map((languageCode) => {
-        // Get supported language name
-        const supportedLanguageName = getLanguageCodeName(languageCode, locale)
-        // Get a list of {langCode, langName}
-        return {
-          langCode: languageCode,
-          langName: `${capitalize(
-            supportedLanguageName!
-          )} (${getLanguageTotalCount(languageCode)})`,
-        }
-      })
-      // Sort list alphabetically by langName
-      .sort(compareFn)
-  )
-}
-
-export const getLanguageCountWalletsData = (locale: string) => {
-  const languageCountWalletsData = getAllWalletsLanguages(locale).map(
-    (language) => ({
-      langCode: language.langCode,
-      count: getLanguageTotalCount(language.langCode),
-      name: getLanguageCodeName(language.langCode, locale),
-    })
-  )
-  languageCountWalletsData.sort((a, b) => a.name.localeCompare(b.name))
-  return languageCountWalletsData
 }
 
 function getActiveFilterKeys(filters: FilterOption[]): string[] {
