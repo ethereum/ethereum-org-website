@@ -27,7 +27,7 @@
 }
 
 .DocSearch-Button-Key {
-  @apply m-0 size-5 border border-solid border-disabled bg-none p-0.5 text-sm lowercase text-disabled shadow-none first:pt-1 first:text-md;
+  @apply m-0 size-5 border border-solid border-disabled bg-none p-0.5 text-sm text-disabled lowercase shadow-none first:pt-1 first:text-md;
 }
 
 /**
@@ -45,8 +45,18 @@
 }
 
 .dark {
+  /* The vendor ships its dark palette under `html[data-theme="dark"]`, which this site
+     never sets -- it uses `.dark`. So dark mode silently inherited the light values,
+     including a near-black hit colour on a near-black background. */
   --docsearch-modal-background: hsla(var(--background));
   --docsearch-highlight-color: hsla(var(--primary-hover));
+  --docsearch-text-color: hsla(var(--body));
+  --docsearch-hit-color: hsla(var(--body));
+  --docsearch-muted-color: hsla(var(--body-medium));
+  --docsearch-hit-background: hsla(var(--background));
+  --docsearch-footer-background: hsla(var(--background));
+  --docsearch-searchbox-background: hsla(var(--background));
+  --docsearch-searchbox-focus-background: hsla(var(--background));
 }
 
 /* Restore library padding/margin stripped by TW preflight (* {margin:0; padding:0})
@@ -141,7 +151,7 @@
 }
 
 .DocSearch-Dropdown {
-  @apply max-h-[calc(100vh-75px-var(--docsearch-footer-height)-2*var(--inset))] overflow-y-scroll pe-2 ps-4 md:max-h-[calc(100vh-16rem)] md:overflow-y-auto md:pe-4 md:ps-8;
+  @apply max-h-[calc(100vh-75px-var(--docsearch-footer-height)-2*var(--inset))] overflow-y-scroll ps-4 pe-2 md:max-h-[calc(100vh-16rem)] md:overflow-y-auto md:ps-8 md:pe-4;
 }
 
 .DocSearch-Hit-source {
@@ -169,6 +179,10 @@
 }
 
 .DocSearch-Footer {
+  /* Vendor uses row-reverse, which parks the shortcut keys at the far end now that the
+     logo is hidden. `row` keeps them at the inline start and stays correct in RTL. */
+  flex-direction: row;
+  justify-content: flex-start;
   --docsearch-logo-color: hsla(var(--body-light));
   --docsearch-footer-shadow: none;
   height: 40px;
@@ -176,8 +190,9 @@
   @apply border-t-2 border-primary bg-primary-low-contrast;
 }
 
-.DocSearch-Logo a {
-  color: var(--docsearch-logo-color);
+/* The vendor attribution adds nothing for readers and takes a row of a small modal. */
+.DocSearch-Logo {
+  display: none;
 }
 
 .DocSearch-Commands {
@@ -188,28 +203,17 @@
 }
 
 .DocSearch-Label {
-  @apply lowercase text-body;
+  @apply text-body lowercase;
 }
 
 .DocSearch-Commands-Key {
-  @apply me-1.5 grid h-4 w-4 place-items-center rounded border border-solid border-primary bg-background bg-none p-0 text-primary shadow-none;
+  /* Auto width so multi-character keys like `esc` get breathing room instead of being
+     squeezed into a square. */
+  @apply me-1.5 grid h-4 w-auto min-w-4 place-items-center rounded border border-solid border-primary bg-background bg-none px-0.5 py-0 text-primary shadow-none;
 }
 
 .DocSearch-Commands-Key svg {
   @apply bg-transparent;
-}
-
-.DocSearch-Logo .DocSearch-Label {
-  @apply uppercase text-body-medium;
-}
-
-svg[aria-label="Algolia"] {
-  margin-left: 0;
-  margin-inline-start: 8px;
-}
-
-svg[aria-label="Algolia"] * {
-  @apply fill-body-medium;
 }
 
 @media (max-width: 768px) {

@@ -1,0 +1,185 @@
+{
+  "_comment": "Labelled queries from 30 days of real search logs, used as a relevance gate before an index is promoted. `correct: null` means no page on the site answers the query. English only -- other locales promote on the structural checks alone.",
+  "queries": [
+    {
+      "q": "metamask",
+      "correct": "/wallets/find-wallet/metamask/"
+    },
+    {
+      "q": "binance",
+      "correct": "/get-eth/#country-picker"
+    },
+    {
+      "q": "trust wallet",
+      "correct": "/wallets/find-wallet/trust-wallet/"
+    },
+    {
+      "q": "remix",
+      "correct": "/apps/remix/"
+    },
+    {
+      "q": "rabby",
+      "correct": "/wallets/find-wallet/rabby-wallet/"
+    },
+    {
+      "q": "bitget",
+      "correct": "/wallets/find-wallet/bitget-wallet/"
+    },
+    {
+      "q": "staking",
+      "correct": "/staking/"
+    },
+    {
+      "q": "base",
+      "correct": "/layer-2/networks/"
+    },
+    {
+      "q": "erc20",
+      "correct": "/developers/docs/standards/tokens/erc-20/"
+    },
+    {
+      "q": "coinbase",
+      "correct": "/wallets/find-wallet/coinbase-wallet/"
+    },
+    {
+      "q": "tangem",
+      "correct": null
+    },
+    {
+      "q": "meta mask",
+      "correct": "/wallets/find-wallet/metamask/"
+    },
+    {
+      "q": "safepal",
+      "correct": null
+    },
+    {
+      "q": "phantom",
+      "correct": "/wallets/find-wallet/phantom/"
+    },
+    {
+      "q": "privacy",
+      "correct": "/privacy/"
+    },
+    {
+      "q": "wallets",
+      "correct": "/wallets/"
+    },
+    {
+      "q": "logo",
+      "correct": "/assets/"
+    },
+    {
+      "q": "whitepaper",
+      "correct": "/whitepaper/"
+    },
+    {
+      "q": "smart contracts",
+      "correct": "/smart-contracts/"
+    },
+    {
+      "q": "eth_getblockbynumber",
+      "correct": "/developers/docs/apis/json-rpc/"
+    },
+    {
+      "q": "translation program frequently asked questions (faq) | ethereum.org",
+      "correct": "/contributing/translation-program/"
+    },
+    {
+      "q": "clear signing",
+      "correct": "/developers/tutorials/clear-signing/"
+    },
+    {
+      "q": "google",
+      "correct": "/open-source/"
+    },
+    {
+      "q": "glamsterdam",
+      "correct": "/roadmap/glamsterdam/"
+    },
+    {
+      "q": "defi",
+      "correct": "/defi/"
+    },
+    {
+      "q": "opay",
+      "correct": "/payments/"
+    },
+    {
+      "q": "hong",
+      "correct": "/community/events/#community-hubs"
+    },
+    {
+      "q": "usdc",
+      "correct": "/stablecoins/"
+    },
+    {
+      "q": "token",
+      "correct": "/developers/docs/standards/tokens/"
+    },
+    {
+      "q": "proof of stake",
+      "correct": "/developers/docs/consensus-mechanisms/pos/"
+    },
+    {
+      "q": "node",
+      "correct": "/run-a-node/"
+    },
+    {
+      "q": "exodus",
+      "correct": "/wallets/find-wallet/exodus/"
+    },
+    {
+      "q": "layer 2",
+      "correct": "/layer-2/"
+    },
+    {
+      "q": "merkle",
+      "correct": "/developers/docs/data-structures-and-encoding/patricia-merkle-trie/"
+    },
+    {
+      "q": "help",
+      "correct": "/community/support/"
+    },
+    {
+      "q": "roadmap",
+      "correct": "/roadmap/"
+    },
+    {
+      "q": "\u0645\u062a\u0627\u0645\u0633\u06a9",
+      "correct": "/wallets/find-wallet/metamask/"
+    },
+    {
+      "q": "nonce",
+      "correct": "/developers/docs/transactions/"
+    },
+    {
+      "q": "best wallet",
+      "correct": "/wallets/find-wallet/"
+    },
+    {
+      "q": "dapp",
+      "correct": "/apps/"
+    },
+    {
+      "q": "jobs",
+      "correct": "/community/get-involved/#ethereum-jobs"
+    },
+    {
+      "q": "mempool",
+      "correct": "/developers/docs/mev/"
+    },
+    {
+      "q": "etherscan.io",
+      "correct": "/resources/"
+    },
+    {
+      "q": "usdt",
+      "correct": "/stablecoins/"
+    },
+    {
+      "q": "multisig",
+      "correct": "/developers/docs/smart-contracts/#multisig"
+    }
+  ]
+}

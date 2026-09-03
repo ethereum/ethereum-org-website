@@ -1,0 +1,384 @@
+{
+  "_comment": "Pinned search results: query -> ordered paths, prefixed per locale at apply time. Seeded from the hand-labelled queries in groundtruth.json plus the search rules; hand edits win and are preserved. Singular and plural are listed separately because the index does not stem, so 'smart contract' and 'smart contracts' rank independently. See typesense/README.md.",
+  "rules": [
+    {
+      "q": "app",
+      "pin": [
+        "/apps/"
+      ]
+    },
+    {
+      "q": "base",
+      "pin": [
+        "/layer-2/networks/"
+      ]
+    },
+    {
+      "q": "best wallet",
+      "pin": [
+        "/wallets/find-wallet/"
+      ]
+    },
+    {
+      "q": "binance",
+      "pin": [
+        "/get-eth/#country-picker"
+      ]
+    },
+    {
+      "q": "bitget",
+      "pin": [
+        "/wallets/find-wallet/bitget-wallet/"
+      ]
+    },
+    {
+      "q": "clear signing",
+      "pin": [
+        "/developers/tutorials/clear-signing/"
+      ]
+    },
+    {
+      "q": "coinbase",
+      "pin": [
+        "/wallets/find-wallet/coinbase-wallet/",
+        "/get-eth/#country-picker"
+      ]
+    },
+    {
+      "q": "crypto.com",
+      "pin": [
+        "/get-eth/#country-picker"
+      ]
+    },
+    {
+      "q": "dapp",
+      "pin": [
+        "/apps/"
+      ]
+    },
+    {
+      "q": "defi",
+      "pin": [
+        "/defi/"
+      ]
+    },
+    {
+      "q": "eip",
+      "pin": [
+        "/eips/"
+      ]
+    },
+    {
+      "q": "erc20",
+      "pin": [
+        "/developers/docs/standards/tokens/erc-20/"
+      ]
+    },
+    {
+      "q": "eth",
+      "pin": [
+        "/what-is-ether/"
+      ]
+    },
+    {
+      "q": "eth_getblockbynumber",
+      "pin": [
+        "/developers/docs/apis/json-rpc/"
+      ]
+    },
+    {
+      "q": "etherscan.io",
+      "pin": [
+        "/resources/"
+      ]
+    },
+    {
+      "q": "evm",
+      "pin": [
+        "/developers/docs/evm/"
+      ]
+    },
+    {
+      "q": "exodus",
+      "pin": [
+        "/wallets/find-wallet/exodus/"
+      ]
+    },
+    {
+      "q": "gas",
+      "pin": [
+        "/gas/"
+      ]
+    },
+    {
+      "q": "glamsterdam",
+      "pin": [
+        "/roadmap/glamsterdam/"
+      ]
+    },
+    {
+      "q": "google",
+      "pin": [
+        "/open-source/"
+      ]
+    },
+    {
+      "q": "help",
+      "pin": [
+        "/community/support/"
+      ]
+    },
+    {
+      "q": "hong",
+      "pin": [
+        "/community/events/#community-hubs"
+      ]
+    },
+    {
+      "q": "jobs",
+      "pin": [
+        "/community/get-involved/#ethereum-jobs"
+      ]
+    },
+    {
+      "q": "kraken",
+      "pin": [
+        "/get-eth/#country-picker"
+      ]
+    },
+    {
+      "q": "layer 2",
+      "pin": [
+        "/layer-2/"
+      ]
+    },
+    {
+      "q": "logo",
+      "pin": [
+        "/assets/"
+      ]
+    },
+    {
+      "q": "mempool",
+      "pin": [
+        "/developers/docs/mev/"
+      ]
+    },
+    {
+      "q": "merkle",
+      "pin": [
+        "/developers/docs/data-structures-and-encoding/patricia-merkle-trie/"
+      ]
+    },
+    {
+      "q": "meta mask",
+      "pin": [
+        "/wallets/find-wallet/metamask/"
+      ]
+    },
+    {
+      "q": "metamask",
+      "pin": [
+        "/wallets/find-wallet/metamask/"
+      ]
+    },
+    {
+      "q": "mev",
+      "pin": [
+        "/developers/docs/mev/"
+      ]
+    },
+    {
+      "q": "multisig",
+      "pin": [
+        "/developers/docs/smart-contracts/#multisig"
+      ]
+    },
+    {
+      "q": "nft",
+      "pin": [
+        "/nft/"
+      ]
+    },
+    {
+      "q": "node",
+      "pin": [
+        "/run-a-node/"
+      ]
+    },
+    {
+      "q": "nonce",
+      "pin": [
+        "/developers/docs/transactions/"
+      ]
+    },
+    {
+      "q": "okx",
+      "pin": [
+        "/get-eth/#country-picker"
+      ]
+    },
+    {
+      "q": "opay",
+      "pin": [
+        "/payments/"
+      ]
+    },
+    {
+      "q": "phantom",
+      "pin": [
+        "/wallets/find-wallet/phantom/"
+      ]
+    },
+    {
+      "q": "pos",
+      "pin": [
+        "/developers/docs/consensus-mechanisms/pos/"
+      ]
+    },
+    {
+      "q": "privacy",
+      "pin": [
+        "/privacy/"
+      ]
+    },
+    {
+      "q": "proof of stake",
+      "pin": [
+        "/developers/docs/consensus-mechanisms/pos/"
+      ]
+    },
+    {
+      "q": "rabby",
+      "pin": [
+        "/wallets/find-wallet/rabby-wallet/"
+      ]
+    },
+    {
+      "q": "remix",
+      "pin": [
+        "/apps/remix/"
+      ]
+    },
+    {
+      "q": "roadmap",
+      "pin": [
+        "/roadmap/"
+      ]
+    },
+    {
+      "q": "rpc",
+      "pin": [
+        "/developers/docs/apis/json-rpc/"
+      ]
+    },
+    {
+      "q": "rwa",
+      "pin": [
+        "/real-world-assets/"
+      ]
+    },
+    {
+      "q": "security",
+      "pin": [
+        "/security/"
+      ]
+    },
+    {
+      "q": "smart contract",
+      "pin": [
+        "/smart-contracts/"
+      ]
+    },
+    {
+      "q": "smart contracts",
+      "pin": [
+        "/smart-contracts/"
+      ]
+    },
+    {
+      "q": "staking",
+      "pin": [
+        "/staking/"
+      ]
+    },
+    {
+      "q": "stories",
+      "pin": [
+        "/stories/"
+      ]
+    },
+    {
+      "q": "token",
+      "pin": [
+        "/developers/docs/standards/tokens/"
+      ]
+    },
+    {
+      "q": "translation program frequently asked questions (faq) | ethereum.org",
+      "pin": [
+        "/contributing/translation-program/"
+      ]
+    },
+    {
+      "q": "trust wallet",
+      "pin": [
+        "/wallets/find-wallet/trust-wallet/"
+      ]
+    },
+    {
+      "q": "tutorial",
+      "pin": [
+        "/developers/tutorials/"
+      ]
+    },
+    {
+      "q": "tutorials",
+      "pin": [
+        "/developers/tutorials/"
+      ]
+    },
+    {
+      "q": "usdc",
+      "pin": [
+        "/stablecoins/"
+      ]
+    },
+    {
+      "q": "usdt",
+      "pin": [
+        "/stablecoins/"
+      ]
+    },
+    {
+      "q": "wallet",
+      "pin": [
+        "/wallets/"
+      ]
+    },
+    {
+      "q": "wallets",
+      "pin": [
+        "/wallets/"
+      ]
+    },
+    {
+      "q": "web3",
+      "pin": [
+        "/web3/"
+      ]
+    },
+    {
+      "q": "whitepaper",
+      "pin": [
+        "/whitepaper/"
+      ]
+    },
+    {
+      "q": "\u0645\u062a\u0627\u0645\u0633\u06a9",
+      "pin": [
+        "/wallets/find-wallet/metamask/"
+      ]
+    }
+  ]
+}

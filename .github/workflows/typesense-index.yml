@@ -1,0 +1,179 @@
+# Rebuilds the Typesense search index, one collection per locale.
+#
+# Each locale is an independent matrix job that scrapes, promotes and curates on its own,
+# so a failure in one never blocks the other 24 and never leaves search half-updated:
+# promotion is gated, and a refused promotion leaves the previous index serving.
+name: Typesense index
+
+on:
+  # Netlify's deploy-succeeded notification posts here, so we crawl content that is
+  # actually live rather than merely merged.
+  repository_dispatch:
+    types: [deploy-succeeded]
+  # Safety net: if a deploy notification is ever missed, the index still refreshes
+  # rather than quietly ageing. Friday evening, a few hours after the weekly release
+  # deploy -- the same slot Algolia crawled on.
+  schedule:
+    - cron: "0 22 * * 5"
+  workflow_dispatch:
+    inputs:
+      locales:
+        description: "Locales to index, comma- or space-separated. Blank = all."
+        required: false
+
+concurrency:
+  # A full rebuild takes ~25 min per locale; overlapping runs would fight over aliases.
+  group: typesense-index
+  cancel-in-progress: false
+
+jobs:
+  locales:
+    name: Resolve locales
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.list.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      # i18n.config.json is the single source of truth for supported locales, so adding
+      # one there is the only change needed to index it.
+      - id: list
+        env:
+          LOCALES: ${{ inputs.locales }}
+        run: |
+          ALL=$(jq -c '[.[].code]' i18n.config.json)
+          if [ -z "$LOCALES" ]; then
+            MATRIX="$ALL"
+          else
+            # "ja,ar" and "ja ar" both work.
+            MATRIX=$(printf '%s' "$LOCALES" | tr ', ' '\n\n' | jq -Rsc 'split("\n") | map(select(length > 0))')
+            # A typo would otherwise crawl a 404 sitemap and promote nothing, silently.
+            UNKNOWN=$(jq -nc --argjson all "$ALL" --argjson want "$MATRIX" '$want - $all')
+            [ "$UNKNOWN" = "[]" ] || { echo "::error::Unknown locale(s): $UNKNOWN"; exit 1; }
+          fi
+          echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
+          echo "$MATRIX"
+
+  index:
+    name: ${{ matrix.locale }}
+    needs: locales
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      # Polite to both ethereum.org and the shared Typesense instance.
+      max-parallel: 5
+      matrix:
+        locale: ${{ fromJson(needs.locales.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # Fail in seconds with a clear message rather than after a Docker pull and a
+      # Python traceback. Actions secrets are separate from Netlify's environment.
+      # Optional: no SENTRY_DSN means these steps no-op, so monitoring can never be the
+      # reason indexing fails. A stale index is otherwise indistinguishable from a healthy
+      # one -- nothing else notices when this workflow simply stops running.
+      - name: Sentry check-in (start)
+        env:
+          SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
+        run: |
+          # Guarded here rather than in `if:`, which is evaluated before step env exists.
+          [ -n "$SENTRY_DSN" ] || { echo "no SENTRY_DSN; monitoring disabled"; exit 0; }
+          # DSN is https://<public_key>@<host>/<project_id>
+          KEY="${SENTRY_DSN#*//}"; KEY="${KEY%%@*}"
+          REST="${SENTRY_DSN#*@}"; HOST="${REST%%/*}"; PROJECT="${REST##*/}"
+          echo "SENTRY_CRONS=https://$HOST/api/$PROJECT/cron/typesense-index/$KEY/" >> "$GITHUB_ENV"
+          curl -sS -m 10 -X POST \
+            "https://$HOST/api/$PROJECT/cron/typesense-index/$KEY/?environment=${{ matrix.locale }}" \
+            --data-raw '{"status":"in_progress","monitor_config":{"schedule":{"type":"crontab","value":"0 22 * * 5"},"checkin_margin":120,"max_runtime":60}}' \
+            || echo "check-in failed; continuing"
+
+      - name: Check secrets
+        env:
+          TYPESENSE_URL: ${{ secrets.TYPESENSE_URL }}
+          TYPESENSE_ADMIN_KEY: ${{ secrets.TYPESENSE_ADMIN_KEY }}
+          TYPESENSE_SEARCH_KEY: ${{ secrets.TYPESENSE_SEARCH_KEY }}
+        run: |
+          for v in TYPESENSE_URL TYPESENSE_ADMIN_KEY TYPESENSE_SEARCH_KEY; do
+            if [ -z "${!v}" ]; then
+              echo "::error::Secret $v is empty. Add it under Settings > Secrets and variables > Actions."
+              exit 1
+            fi
+          done
+          echo "all three secrets present"
+
+      # Typesense v30 replaced per-collection synonyms and overrides with synonym sets and
+      # curation sets; scraper 0.11.0 still calls the removed v29 endpoints. It only does so
+      # when this alias resolves a previous collection -- so a locale crawls fine on its
+      # first run and 404s at commit on every run after, having already done all the work.
+      # Dropping the alias first makes every crawl a first run. Nothing else reads it:
+      # search queries ethereumorg-<locale>, and promote finds staged collections by name.
+      - name: Clear the staging alias
+        env:
+          TYPESENSE_URL: ${{ secrets.TYPESENSE_URL }}
+          TYPESENSE_ADMIN_KEY: ${{ secrets.TYPESENSE_ADMIN_KEY }}
+        run: |
+          curl -sS -o /dev/null -w "staging alias delete: HTTP %{http_code}\n" \
+            -X DELETE -H "X-TYPESENSE-API-KEY: $TYPESENSE_ADMIN_KEY" \
+            "$TYPESENSE_URL/aliases/ethereumorg-staging-${{ matrix.locale }}" || true
+
+      - name: Build the per-locale scraper config
+        env:
+          LOCALE: ${{ matrix.locale }}
+        run: |
+          # English URLs are unprefixed (next-intl localePrefix "as-needed"), so /en/
+          # 301s to / and a /en/-scoped crawl matches nothing in the sitemap.
+          if [ "$LOCALE" = "en" ]; then START="https://ethereum.org/"; else START="https://ethereum.org/$LOCALE/"; fi
+          jq --arg loc "$LOCALE" --arg start "$START" \
+            '.index_name = "ethereumorg-staging-\($loc)"
+             | .start_urls = [$start]
+             | .sitemap_urls = ["https://ethereum.org/sitemaps/sitemap/\($loc).xml"]' \
+            typesense/scraper-config.json > /tmp/config.json
+          jq -r '"index_name: \(.index_name)\nstart: \(.start_urls[0])"' /tmp/config.json
+
+      - name: Scrape
+        env:
+          TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_ADMIN_KEY }}
+          TYPESENSE_URL: ${{ secrets.TYPESENSE_URL }}
+        run: |
+          # Derived, so the host can never disagree with the URL the scripts use.
+          TYPESENSE_HOST="${TYPESENSE_URL#*://}"; TYPESENSE_HOST="${TYPESENSE_HOST%%/*}"
+          docker run --rm \
+            -e TYPESENSE_API_KEY \
+            -e TYPESENSE_HOST="$TYPESENSE_HOST" \
+            -e TYPESENSE_PORT=443 \
+            -e TYPESENSE_PROTOCOL=https \
+            -e CONFIG="$(jq -r tostring < /tmp/config.json)" \
+            typesense/docsearch-scraper:0.11.0
+
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+
+      # Gated: refuses if the new index shrank, lost `pagerank`, or has no documents for
+      # this locale. On refusal the alias is untouched and the previous index keeps serving.
+      - name: Promote
+        env:
+          TYPESENSE_URL: ${{ secrets.TYPESENSE_URL }}
+          TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_ADMIN_KEY }}
+          TYPESENSE_API_SEARCH_KEY: ${{ secrets.TYPESENSE_SEARCH_KEY }}
+        run: pnpm typesense:promote -- --locale ${{ matrix.locale }}
+
+      # Document ids change on every crawl, so pins are re-resolved against the new
+      # collection each time. Must run after promote so it targets the live alias.
+      - name: Apply curation
+        env:
+          TYPESENSE_URL: ${{ secrets.TYPESENSE_URL }}
+          TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_ADMIN_KEY }}
+          TYPESENSE_API_SEARCH_KEY: ${{ secrets.TYPESENSE_SEARCH_KEY }}
+        run: pnpm typesense:curate -- --locale ${{ matrix.locale }}
+
+      - name: Sentry check-in (result)
+        # Always, so a failed index is reported rather than looking like a missed run.
+        if: always() && env.SENTRY_CRONS != ''
+        run: |
+          STATUS=${{ job.status == 'success' && 'ok' || 'error' }}
+          curl -sS -m 10 "${SENTRY_CRONS}?environment=${{ matrix.locale }}&status=$STATUS" \
+            || echo "check-in failed; continuing"

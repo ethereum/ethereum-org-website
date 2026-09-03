@@ -1,9 +1,12 @@
 "use client"
 
-import { useRef } from "react"
+import { type RefObject, useRef } from "react"
 import dynamic from "next/dynamic"
 import { useLocale, useTranslations } from "next-intl"
-import { type DocSearchHit, useDocSearchKeyboardEvents } from "@docsearch/react"
+import {
+  type DocSearchModalProps,
+  useDocSearchKeyboardEvents,
+} from "typesense-docsearch-react"
 import * as Portal from "@radix-ui/react-portal"
 import { Slot } from "@radix-ui/react-slot"
 
@@ -19,6 +22,44 @@ import SearchInputButton from "./SearchInputButton"
 import { useDisclosure } from "@/hooks/useDisclosure"
 
 const SearchModal = dynamic(() => import("./SearchModal"))
+
+// `DocSearchHit` isn't re-exported from the package root, so derive it from the
+// modal's transformItems signature. Note: unlike Algolia's nested `hierarchy`
+// object, this fork exposes flattened dotted keys (e.g. `item["hierarchy.lvl0"]`).
+type DocSearchHit = Parameters<
+  NonNullable<DocSearchModalProps["transformItems"]>
+>[0][number]
+
+const TITLE_KEYS = new Set(["lvl0", "hierarchy.lvl0"])
+
+/**
+ * Strip the site-name suffix from every copy of a hit's lvl0 title.
+ *
+ * The renderer reads `_highlightResult["hierarchy.lvl0"].value`, and the group header
+ * above each result takes its label from the same place -- so the raw fields are not
+ * enough. Highlight entries nest the string under `value`, which a naive walk recurses
+ * straight past.
+ */
+const stripTitleSuffix = (node: Record<string, unknown>, depth = 0) => {
+  if (depth > 6) return
+  for (const [key, value] of Object.entries(node)) {
+    if (TITLE_KEYS.has(key)) {
+      if (typeof value === "string") {
+        node[key] = sanitizeHitTitle(value)
+        continue
+      }
+      // Highlight/snippet entries: { value: "...", matchLevel: "none" }
+      const wrapped = value as { value?: unknown } | null
+      if (wrapped && typeof wrapped.value === "string") {
+        wrapped.value = sanitizeHitTitle(wrapped.value)
+        continue
+      }
+    }
+    if (value && typeof value === "object") {
+      stripTitleSuffix(value as Record<string, unknown>, depth + 1)
+    }
+  }
+}
 
 interface SearchProps {
   asChild?: boolean
@@ -46,29 +87,49 @@ const Search = ({ asChild = false, children }: SearchProps) => {
     isOpen,
     onOpen: handleOpen,
     onClose,
-    searchButtonRef,
+    // The fork's React 18-era types want a non-null ref; React 19's useRef
+    // yields RefObject<T | null>. Safe to narrow — the hook only reads .current.
+    searchButtonRef: searchButtonRef as RefObject<HTMLButtonElement>,
   })
 
-  const appId = process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || ""
-  const apiKey = process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY || ""
-  const indexName =
-    process.env.NEXT_PUBLIC_ALGOLIA_BASE_SEARCH_INDEX_NAME || "ethereumorg"
+  const host = process.env.NEXT_PUBLIC_TYPESENSE_HOST || ""
+  const port = Number(process.env.NEXT_PUBLIC_TYPESENSE_PORT) || 443
+  const protocol = process.env.NEXT_PUBLIC_TYPESENSE_PROTOCOL || "https"
+  const apiKey = process.env.NEXT_PUBLIC_TYPESENSE_SEARCH_KEY || ""
+  // One collection per locale (`ethereumorg-en`, `ethereumorg-ja`, ...). A single
+  // combined index took ~16h to crawl -- past CI limits, and every locale waited
+  // on every other. See typesense/README.md.
+  const collectionPrefix =
+    process.env.NEXT_PUBLIC_TYPESENSE_COLLECTION_PREFIX || "ethereumorg"
+  const collectionName = `${collectionPrefix}-${locale}`
 
   const searchModalProps = {
-    apiKey,
-    appId,
-    indexName,
-    onClose,
-    searchParameters: {
-      facetFilters: [`lang:${locale}`],
+    typesenseCollectionName: collectionName,
+    typesenseServerConfig: {
+      nodes: [{ host, port, protocol }],
+      apiKey,
     },
+    typesenseSearchParameters: {
+      // Break near-ties by page importance: root-level pages rank 10, tutorials 1.
+      // 100 buckets is deliberate -- coarser bucketing collapses genuinely different
+      // match scores into one tier and lets a three-value signal reorder them, which
+      // measured worse than no sort at all. At this granularity pagerank only decides
+      // between comparable matches: hit@1 and MRR match the unsorted baseline while
+      // hit@10 improves 81% -> 84% against the labelled query set.
+      sort_by: "_text_match(buckets: 100):desc,pagerank:desc",
+    },
+    onClose,
     transformItems: (items: DocSearchHit[]) =>
       items.map((item: DocSearchHit) => {
         // Use JSON clone for browser compatibility (structuredClone not available in Chrome < 98)
         const newItem: DocSearchHit = JSON.parse(JSON.stringify(item))
         newItem.url = sanitizeHitUrl(item.url)
-        const newTitle = sanitizeHitTitle(item.hierarchy.lvl0 || "")
-        newItem.hierarchy.lvl0 = newTitle
+        // lvl0 is the page's og:title, which always ends " | ethereum.org", and it is
+        // shown as the group header above every result. The fork keeps it in several
+        // places -- a flat dotted key, the `hierarchy` object, a `hierarchy_camel`
+        // array, and `_highlightResult`/`_snippetResult` copies that the renderer
+        // actually reads -- so walk the hit and strip it wherever it appears.
+        stripTitleSuffix(newItem as unknown as Record<string, unknown>)
         return newItem
       }),
     placeholder: t("search-ethereum-org"),
