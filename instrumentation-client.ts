@@ -74,6 +74,8 @@ Sentry.init({
     /DApp request timeout/,
     // Cross-origin postMessage from extensions/embedded frames (ETHORG-87)
     /^Error: invalid origin$/,
+    // Enkrypt wallet extension's webext-bridge messaging failures (ETHORG-186)
+    /\[webext-bridge\] No handler registered in 'background' to accept messages with id 'enkrypt_window_request'/,
   ],
 
   beforeSend(event) {
