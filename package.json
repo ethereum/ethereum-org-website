@@ -142,6 +142,7 @@
     "eslint": "^8.57.1",
     "eslint-config-next": "^15.5.12",
     "eslint-config-prettier": "^9",
+    "eslint-plugin-local": "file:.eslint-rules",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-storybook": "10.3.3",
     "eslint-plugin-unused-imports": "^3.2.0",

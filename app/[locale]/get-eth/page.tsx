@@ -72,6 +72,9 @@ type WayToGetEth = {
 export default async function Page(props: { params: Promise<PageParams> }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
+
   const t = await getTranslations("page-get-eth")
 
   const waysToGetEth: WayToGetEth[] = [
@@ -131,8 +134,6 @@ export default async function Page(props: { params: Promise<PageParams> }) {
       description: t("page-get-eth-article-keeping-crypto-safe-desc"),
     },
   ]
-
-  setRequestLocale(locale)
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
