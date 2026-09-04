@@ -10,6 +10,7 @@ import {
 
 import { getTranslatedLocales } from "../i18n/translationRegistry"
 
+import { categoryForSlug, pageRankForSlug } from "./searchRanking"
 import { getFullUrl, toLanguageTag } from "./url"
 
 import { routing } from "@/i18n/routing"
@@ -25,26 +26,6 @@ const imageForSlug = [
   { section: "staking", image: "/images/upgrades/upgrade_rhino.png" },
   { section: "10years", image: "/images/10-year-anniversary/10-year-og.png" },
 ] as const
-
-/**
- * Ranking hints consumed by the search crawler, mirroring the rules in the Algolia
- * DocSearch `recordExtractor` so relevance survives the move to Typesense. The
- * self-hosted scraper copies any `docsearch:*` meta tag onto every record it extracts.
- */
-const isTutorialSlug = (slug: string[]) =>
-  slug[0] === "developers" && slug[1] === "tutorials" && slug.length > 2
-
-// Matches Algolia's `pathname.split("/").length === 4`, which is one slug segment.
-// The homepage (no segments) therefore scores 5, as it does today -- kept for parity.
-const pageRankForSlug = (slug: string[]): number =>
-  isTutorialSlug(slug) ? 1 : slug.length === 1 ? 10 : 5
-
-const categoryForSlug = (slug: string[]): string => {
-  if (slug[0] === "developers" && slug[1] === "docs") return "docs"
-  if (isTutorialSlug(slug)) return "tutorials"
-  if (slug[0] === "developers") return "devs"
-  return "other"
-}
 
 /**
  * Get the default OG image for a page based on the slug
