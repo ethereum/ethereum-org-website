@@ -10,6 +10,7 @@ permissions:
   contents: write
   pull-requests: write
   id-token: write
+  actions: write # to dispatch and watch the release-reviewer gh-aw workflow
 
 concurrency:
   group: weekly-release
@@ -130,13 +131,16 @@ jobs:
     needs: prepare
     if: needs.prepare.outputs.skipped == 'false'
     runs-on: ubuntu-latest
-    timeout-minutes: 75
+    # Budget: up to 60min in wait-for-pr-checks + ~2min discovering the dispatched
+    # run + the full release-reviewer run (its own 20min agent timeout plus
+    # container/setup/safe-outputs overhead). A timeout here cancels the job
+    # (conclusion: cancelled), which skips the failure()-guarded Discord step below
+    # — keep this comfortably above the worst case so that never happens silently.
+    timeout-minutes: 100
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      # Checkout is needed so the claude-code-action below can read
-      # .claude/commands/review-release.md and so this job can use the
-      # ./.github/actions/discord-notify composite. Don't remove.
+      # Checkout is needed for the ./.github/actions/* composites used below. Don't remove.
       - name: Checkout repository
         uses: actions/checkout@v6
         with:
@@ -210,49 +214,66 @@ jobs:
           echo "state=$state" >> "$GITHUB_OUTPUT"
           echo "Staging branch deploy for $sha: $state"
 
-      - name: Install playwright-cli
+      - name: Dispatch release-reviewer (gh-aw)
         if: steps.wait.outputs.outcome == 'success'
+        id: trigger_review
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ needs.prepare.outputs.pr_number }}
         run: |
-          npm install -g @playwright/cli
-          node "$(npm root -g)/@playwright/cli/node_modules/playwright-core/cli.js" \
-            install --with-deps chromium
+          set -euo pipefail
+          before=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          gh workflow run release-reviewer.lock.yml --repo "$REPO" -f pr_number="$PR_NUMBER"
 
-      - name: Run /review-release
-        if: steps.wait.outputs.outcome == 'success'
-        uses: anthropics/claude-code-action@v1
-        timeout-minutes: 20
-        with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          claude_args: |
-            --allowedTools "Read,Glob,Grep,Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh pr comment:*),Bash(curl:*),Bash(playwright-cli:*),Skill"
-          prompt: |
-            Execute /review-release for PR #${{ needs.prepare.outputs.pr_number }}
-            with the --post-comment flag, per .claude/commands/review-release.md.
+          # release-reviewer.md sets run-name to "Release Reviewer — PR #<pr_number>",
+          # so match on that instead of just the dispatch time window — a concurrent
+          # manual dispatch (or retry) for a different PR must never be picked up here.
+          run_id=""
+          for _ in $(seq 1 24); do
+            sleep 5
+            run_id=$(gh run list --repo "$REPO" --workflow release-reviewer.lock.yml \
+              --event workflow_dispatch --limit 10 --json databaseId,createdAt,displayTitle \
+              -q "[.[] | select(.createdAt >= \"$before\" and .displayTitle == \"Release Reviewer — PR #$PR_NUMBER\")] | sort_by(.createdAt) | last | .databaseId // empty")
+            [[ -n "$run_id" ]] && break
+          done
 
-            Arguments: ${{ needs.prepare.outputs.pr_number }} --post-comment
+          if [[ -z "$run_id" ]]; then
+            echo "outcome=timeout" >> "$GITHUB_OUTPUT"
+            echo "::warning::Could not find the dispatched release-reviewer run — skipping automated review."
+            exit 0
+          fi
 
-            Environment facts:
-            - The deploy preview for this PR is ready at:
-              ${{ steps.links.outputs.preview }}
-              Verify all changes against THIS URL — it is built from the PR's
-              head commit and is guaranteed to be current.
-            - The staging.ethereum.org branch deploy for the head commit is in
-              state: "${{ steps.staging_deploy.outputs.state }}". Unless that
-              state is "ready", staging still serves the PREVIOUS release.
-              That is expected lag, not a release defect — never report it as
-              a stale/broken deploy; at most note it as informational.
-            - playwright-cli is installed — use it for the browser checks per
-              the skill. curl is also available for raw source checks.
+          run_url=$(gh run view "$run_id" --repo "$REPO" --json url -q .url)
+          echo "run_url=$run_url" >> "$GITHUB_OUTPUT"
 
-            CI context rules:
-            - Do NOT prompt with AskUserQuestion — fully automated.
-            - NEVER call `gh pr review --approve` or `--request-changes`. The
-              skill already forbids this; do not work around it.
-            - The full summary goes in the PR comment (--post-comment). Do NOT
-              write it anywhere else — Discord only gets a pass/fail line.
+          if gh run watch "$run_id" --repo "$REPO" --exit-status; then
+            echo "outcome=success" >> "$GITHUB_OUTPUT"
+          else
+            echo "outcome=failure" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Extract release-reviewer verdict
+        if: steps.trigger_review.outputs.outcome == 'success'
+        id: verdict
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ needs.prepare.outputs.pr_number }}
+        run: |
+          set -euo pipefail
+          body=$(gh pr view "$PR_NUMBER" --repo "$REPO" --json comments \
+            -q '[.comments[] | select(.body | startswith("## 🔎 Release review"))] | last | .body // empty')
+          if [[ -z "$body" ]]; then
+            echo "verdict=missing" >> "$GITHUB_OUTPUT"
+          elif [[ "$body" == *"Release review — ✅"* ]]; then
+            echo "verdict=ready" >> "$GITHUB_OUTPUT"
+          else
+            echo "verdict=issues" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Announce ready for human
-        if: steps.wait.outputs.outcome == 'success'
+        if: steps.verdict.outputs.verdict == 'ready'
         uses: ./.github/actions/discord-notify
         with:
           webhook: ${{ secrets.DISCORD_RELEASE_WEBHOOK_URL }}
@@ -264,6 +285,27 @@ jobs:
             ${{ steps.links.outputs.components && format(':art: Chromatic (components): <{0}>', steps.links.outputs.components) || '' }}
             ${{ steps.links.outputs.pages && format(':framed_picture: Chromatic (pages): <{0}>', steps.links.outputs.pages) || '' }}
             Remaining manual steps: approve Chromatic, approve PR, merge.
+
+      - name: Announce review found issues
+        if: steps.verdict.outputs.verdict == 'issues'
+        uses: ./.github/actions/discord-notify
+        with:
+          webhook: ${{ secrets.DISCORD_RELEASE_WEBHOOK_URL }}
+          message_id: ${{ needs.prepare.outputs.discord_message_id }}
+          message: |
+            :warning: **Release ${{ needs.prepare.outputs.version }} — automated review found issues**  •  ${{ needs.prepare.outputs.pr_url }}
+            See the review comment on the PR for details. Needs a human to look before merge.
+
+      - name: Announce review inconclusive
+        if: steps.trigger_review.outputs.outcome == 'timeout' || steps.trigger_review.outputs.outcome == 'failure' || steps.verdict.outputs.verdict == 'missing'
+        uses: ./.github/actions/discord-notify
+        with:
+          webhook: ${{ secrets.DISCORD_RELEASE_WEBHOOK_URL }}
+          message_id: ${{ needs.prepare.outputs.discord_message_id }}
+          message: |
+            :hourglass: **Release ${{ needs.prepare.outputs.version }} — automated review didn't complete**  •  ${{ needs.prepare.outputs.pr_url }}
+            ${{ steps.trigger_review.outputs.run_url && format('Run: <{0}>', steps.trigger_review.outputs.run_url) || '' }}
+            Skipping automated review — needs a human to look.
 
       - name: Announce wait-and-review failure
         if: failure()
