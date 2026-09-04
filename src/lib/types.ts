@@ -1446,6 +1446,8 @@ export type CommunityPick = {
   name: string
   twitterURL: string
   twitterHandle: string
+  /** S3-hosted avatar, populated by the fetcher. Empty when the sync failed. */
+  avatarImage?: string
   app1Name: string | null
   app2Name: string | null
   app3Name: string | null

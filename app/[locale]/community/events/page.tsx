@@ -43,8 +43,9 @@ import ContinentTabs from "./_components/continent-tabs"
 import EventCard from "./_components/event-card"
 import FilterEvents from "./_components/filter-events"
 import { SECTION_IDS } from "./constants"
+import { getMeetupGroups } from "./meetup-groups"
 import PageJsonLD from "./page-jsonld"
-import { getMeetupGroups, mapEventTranslations } from "./utils"
+import { mapEventTranslations } from "./utils"
 
 import { getEventsData } from "@/lib/data"
 import geodeLabsLogo from "@/public/images/community/geode-labs-logo.png"
@@ -91,7 +92,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       !e.eventTypes?.includes("conference") &&
       !e.eventTypes?.includes("hackathon")
   )
-  const meetupGroups = getMeetupGroups(locale)
+  const meetupGroups = await getMeetupGroups(locale)
   const meetups = [...apiMeetups, ...meetupGroups]
 
   // Continent labels for tabs
