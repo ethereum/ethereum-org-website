@@ -15,9 +15,8 @@ import { fetchApps } from "./fetchers/fetchApps"
 import { fetchBlobStats } from "./fetchers/fetchBlobStats"
 import { fetchCalendarEvents } from "./fetchers/fetchCalendarEvents"
 import { fetchCommunityPicks } from "./fetchers/fetchCommunityPicks"
-import { fetchEthereumMarketcap } from "./fetchers/fetchEthereumMarketcap"
 import { fetchEthereumStablecoinsMcap } from "./fetchers/fetchEthereumStablecoinsMcap"
-import { fetchEthPrice } from "./fetchers/fetchEthPrice"
+import { fetchEthereumMetrics } from "./fetchers/fetchEthereumMetrics"
 import { fetchEvents } from "./fetchers/fetchEvents"
 import { fetchGasPrice } from "./fetchers/fetchGasPrice"
 import { fetchGFIs } from "./fetchers/fetchGFIs"
@@ -99,9 +98,7 @@ const DAILY: TaskDef[] = [
 ]
 
 const HOURLY: TaskDef[] = [
-  [KEYS.ETHEREUM_MARKETCAP, fetchEthereumMarketcap],
   [KEYS.ETHEREUM_STABLECOINS_MCAP, fetchEthereumStablecoinsMcap],
-  [KEYS.ETH_PRICE, fetchEthPrice],
   [KEYS.GAS_PRICE, fetchGasPrice],
   [KEYS.TOTAL_ETH_STAKED, fetchTotalEthStaked],
   [KEYS.TOTAL_VALUE_LOCKED, fetchTotalValueLocked],
@@ -127,9 +124,30 @@ function createDataTask([key, fetchFn]: TaskDef) {
   })
 }
 
+const ethereumMetricsFetchTask = task({
+  id: KEYS.ETH_PRICE,
+  retry: {
+    maxAttempts: 2,
+  },
+  catchError: async ({ error }) => {
+    logger.error(`[${KEYS.ETH_PRICE}] failed`, { error })
+  },
+  run: async () => {
+    const { ethPrice, ethereumMarketcap } = await fetchEthereumMetrics()
+
+    await Promise.all([
+      set(KEYS.ETH_PRICE, ethPrice),
+      set(KEYS.ETHEREUM_MARKETCAP, ethereumMarketcap),
+    ])
+
+    logger.info(`Stored ${KEYS.ETH_PRICE} + ${KEYS.ETHEREUM_MARKETCAP}`)
+    return { keys: [KEYS.ETH_PRICE, KEYS.ETHEREUM_MARKETCAP] }
+  },
+})
+
 const weeklyFetchTasks = WEEKLY.map(createDataTask)
 const dailyFetchTasks = DAILY.map(createDataTask)
-const hourlyFetchTasks = HOURLY.map(createDataTask)
+const hourlyFetchTasks = [ethereumMetricsFetchTask, ...HOURLY.map(createDataTask)]
 
 // Must export for trigger.dev to discover
 export const allFetchTasks = [
