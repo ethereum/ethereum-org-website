@@ -190,6 +190,37 @@ jobs:
           path: ./tests/__results__
           retention-days: 7
 
+  release-gate:
+    name: Release gate
+    if: ${{ always() && github.base_ref == 'master' }}
+    needs: [lint, unit-tests, build, e2e-tests]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify release checks
+        env:
+          LINT_RESULT: ${{ needs.lint.result }}
+          UNIT_TESTS_RESULT: ${{ needs['unit-tests'].result }}
+          BUILD_RESULT: ${{ needs.build.result }}
+          E2E_RESULT: ${{ needs['e2e-tests'].result }}
+        run: |
+          failed=0
+          check_result() {
+            local name="$1"
+            local result="$2"
+            if [[ "$result" == "success" ]]; then
+              echo "$name: $result"
+            else
+              echo "::error title=Release gate blocked::$name finished with $result"
+              failed=1
+            fi
+          }
+
+          check_result "Lint, type-check & markdown" "$LINT_RESULT"
+          check_result "Unit tests" "$UNIT_TESTS_RESULT"
+          check_result "Build website (mock data)" "$BUILD_RESULT"
+          check_result "E2E tests" "$E2E_RESULT"
+          exit "$failed"
+
   lighthouse:
     name: Lighthouse audit
     needs: build
