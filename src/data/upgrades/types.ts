@@ -115,7 +115,12 @@ export interface UpgradeData {
   mainnetTarget: MainnetTarget
   milestones: Milestone[]
   eips: UpgradeEip[]
-  sourceUrl: string
+  /**
+   * Forkcast's page for this fork, or `null` where it renders none — the
+   * pre-Pectra forks are `disabled` upstream, and linking their nominal path
+   * would send a reader to a 404. A UI must treat this as optional.
+   */
+  sourceUrl: string | null
 }
 
 export type UpgradeStore = Record<string, UpgradeData>
