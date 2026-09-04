@@ -77,6 +77,25 @@ function redirectTo(request: NextRequest, pathname: string, status: number) {
 export default async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
+  // Catch malformed percent-encoding (e.g. `%GG`, a bare `%`) before route
+  // params are decoded. Otherwise the framework-level decodeURIComponent in
+  // the [locale]/[...slug] catch-all throws "failed to decode param",
+  // surfacing as an unhandled 500 (#17967). Redirect to a well-formed slug
+  // that fails validation in the catch-all, which calls notFound() — so the
+  // visitor lands on the styled, localized 404 page. This must be a
+  // redirect, not a rewrite: on a rewrite Next still decodes the original
+  // request URL and throws the same 500, whereas the redirect produces a
+  // fresh request with a clean path. (A bare NextResponse with status 400
+  // would render as a browser-default dead-end page.)
+  try {
+    decodeURIComponent(pathname)
+  } catch {
+    return NextResponse.redirect(
+      new URL(`/${DEFAULT_LOCALE}/__bad-request__`, request.url),
+      302
+    )
+  }
+
   const lowerPath = pathname.toLowerCase()
   if (pathname !== lowerPath) {
     return redirectTo(request, lowerPath, 301)
