@@ -16,7 +16,7 @@ Tunashukuru sana maelfu ya watafsiri wa jamii ambao walifanya ethereum.org ipati
 
 Ukigundua kosa katika tafsiri iliyopo, tafadhali [fungua suala kwenye GitHub](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
-_Jiunge na [Discord ya ethereum.org](https://discord.gg/ethereum-org) ili kuuliza maswali au kushiriki maoni._
+_Jiunge na [Discord ya ethereum.org](/discord/) ili kuuliza maswali au kushiriki maoni._
 
 ## Kuhusu Programu ya Kutafsiri {#about-us}
 
@@ -63,7 +63,7 @@ Kwa zana zingine muhimu za kutafsiri, jamii za watafsiri na machapisho ya blogu 
 
 ## Wasiliana nasi {#get-in-touch}
 
-Je, una maswali yoyote? Au unataka kushirikiana na timu yetu na watafsiri wengine? Tafadhali chapisha katika chaneli ya #translations ya [seva yetu ya Discord ya ethereum.org](https://discord.gg/ethereum-org)
+Je, una maswali yoyote? Au unataka kushirikiana na timu yetu na watafsiri wengine? Tafadhali chapisha katika chaneli ya #translations ya [seva yetu ya Discord ya ethereum.org](/discord/)
 
 Unaweza pia kuwasiliana nasi kupitia translations@ethereum.org
 

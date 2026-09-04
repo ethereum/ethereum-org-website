@@ -43,7 +43,7 @@ Ethereum.org 是一个开源项目，拥有 <strong>12,000 多名</strong>贡献
 - [为我们的去中心化科学 (DeSci) 页面推荐项目](/contributing/adding-desci-projects/) – 添加一个建立在以太坊上、有助于去中心化科学的项目
 - [添加资源](/contributing/adding-resources/) – 将有用的资源添加到任何相关页面
 
-有任何问题？🤔 加入我们的 [Discord 服务器](https://discord.gg/ethereum-org)
+有任何问题？🤔 加入我们的 [Discord 服务器](/discord/)
 
 ## 开始贡献的优秀首选任务 {#good-first-tasks-to-start-contributing}
 
@@ -62,7 +62,7 @@ Ethereum.org 是一个开源项目，拥有 <strong>12,000 多名</strong>贡献
 你不需要获得许可即可开展任何工作，但最好让我们知道你的计划。你可以通过以下方式告知我们：
 
 - 在 [GitHub](https://github.com/ethereum/ethereum-org-website) 上的 issue 或 PR 中发表评论
-- 在我们的 [Discord 服务器](https://discord.gg/ethereum-org)上发送消息
+- 在我们的 [Discord 服务器](/discord/)上发送消息
 
 在做出贡献之前，请确保你熟悉：
 
@@ -77,7 +77,7 @@ Ethereum.org 是一个开源项目，拥有 <strong>12,000 多名</strong>贡献
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [Discord 服务器](https://discord.gg/ethereum-org)
+- [Discord 服务器](/discord/)
 
 ### 关于剽窃的注意事项 {#plagiarism}
 
@@ -95,7 +95,7 @@ Ethereum.org 是一个开源项目，拥有 <strong>12,000 多名</strong>贡献
 
 ### 如何申领 {#how-to-claim}
 
-1. 加入我们的 [Discord 服务器](https://discord.gg/ethereum-org)。
+1. 加入我们的 [Discord 服务器](/discord/)。
 2. 将你的贡献链接粘贴到 `#🥇 | proof-of-contribution` 频道中。
 3. 等待我们团队的成员向你发送 OAT 链接。
 4. 申领你的 OAT！

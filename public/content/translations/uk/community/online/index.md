@@ -48,7 +48,7 @@ lang: uk
 <SocialListItem socialIcon="discord"><Link href="https://ethglobal.com/discord">Ethereum Hackers</Link> — чат у Discord, яким керує ETHGlobal: онлайн-спільнота для хакерів Етеріуму з усього світу</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/5W5tVb3">CryptoDevs</Link> — спільнота в Discord, зосереджена на розробці в Етеріумі</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker Discord</Link> — керовані спільнотою керівництва, навчання, підтримка та ресурси для поточних і потенційних стейкерів</SocialListItem>
-<SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Команда вебсайту Ethereum.org</Link> — завітайте та поспілкуйтеся про веброзробку та дизайн ethereum.org з командою та людьми зі спільноти</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="/discord/">Команда вебсайту Ethereum.org</Link> — завітайте та поспілкуйтеся про веброзробку та дизайн ethereum.org з командою та людьми зі спільноти</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> — спільнота творців Web3, де збираються розробники, лідери індустрії та ентузіасти Етеріуму. Ми захоплені розробкою, дизайном та культурою Web3. Приєднуйтесь до нас.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> — чат для розробки на Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>— форум запитань і відповідей</i></SocialListItem>

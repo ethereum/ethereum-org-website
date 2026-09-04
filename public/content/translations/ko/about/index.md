@@ -100,7 +100,7 @@ ethereum.org는 누구나 기여할 수 있는 [이더리움](/) 커뮤니티를
 
 **어떻게 생각하시나요?** 우리는 로드맵에 대한 피드백을 항상 환영합니다. 우리가 작업해야 한다고 생각하는 부분이 있다면 알려주세요! 커뮤니티의 누구든 아이디어와 PR을 환영합니다.
 
-**참여하고 싶으신가요?** [기여에 대해 더 알아보기](/contributing/), [트위터로 연락하기](https://x.com/ethdotorg), 또는 [디스코드 서버](https://discord.gg/ethereum-org)의 커뮤니티 토론에 참여해 보세요.
+**참여하고 싶으신가요?** [기여에 대해 더 알아보기](/contributing/), [트위터로 연락하기](https://x.com/ethdotorg), 또는 [디스코드 서버](/discord/)의 커뮤니티 토론에 참여해 보세요.
 
 ## 디자인 원칙 {#design-principles}
 
@@ -110,7 +110,7 @@ ethereum.org는 누구나 기여할 수 있는 [이더리움](/) 커뮤니티를
 
 우리는 기능을 더 빠르게 출시하고 커뮤니티 회원이 ethereum.org의 오픈 디자인에 참여할 수 있도록 [디자인 시스템](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1)을 구축하고 출시했습니다.
 
-참여하고 싶으신가요? [Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)와 [GitHub 이슈](https://github.com/ethereum/ethereum-org-website/issues/6284)를 팔로우하고, [#design 디스코드 채널](https://discord.gg/ethereum-org)의 대화에 참여해 보세요.
+참여하고 싶으신가요? [Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)와 [GitHub 이슈](https://github.com/ethereum/ethereum-org-website/issues/6284)를 팔로우하고, [#design 디스코드 채널](/discord/)의 대화에 참여해 보세요.
 
 ## 스타일 가이드 {#style-guide}
 
@@ -128,6 +128,6 @@ ethereum.org 웹사이트는 오픈 소스이며, 별도로 명시되지 않는 
 
 이 웹사이트는 오픈 소스이며 누구나 작업할 수 있지만, ethereum.org 및 기타 이더리움 재단 웹 프로젝트를 전담하는 팀이 있습니다.
 
-채용 공고가 있으면 이곳에 게시할 예정입니다. 자신에게 맞는 역할이 보이지 않는다면 [디스코드 서버](https://discord.gg/ethereum-org)로 이동하여 우리와 어떻게 함께 일하고 싶은지 알려주세요!
+채용 공고가 있으면 이곳에 게시할 예정입니다. 자신에게 맞는 역할이 보이지 않는다면 [디스코드 서버](/discord/)로 이동하여 우리와 어떻게 함께 일하고 싶은지 알려주세요!
 
 ethereum.org 팀 외의 다른 기회를 찾고 계신가요? [다른 이더리움 관련 채용 정보 확인하기](/community/get-involved/#ethereum-jobs/).

@@ -15,7 +15,7 @@ lang: ar
 
 نحتاج أحيانًا إلى المساعدة في اختبار أفكارنا الأولية. هذه طريقة رائعة للمساهمة دون أي معرفة تقنية.
 
-1. سيشارك فريق التصميم نموذجًا مبدئيًا للتصميم على [ديسكورد](https://discord.com/invite/ethereum-org) وعلى [<span dir="ltr">GitHub</span>](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+1. سيشارك فريق التصميم نموذجًا مبدئيًا للتصميم على [ديسكورد](/discord/) وعلى [<span dir="ltr">GitHub</span>](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 2. سيتم إرشادك عبر التصميمات لتقديم ملاحظاتك عبر وظيفة التعليقات.
 3. ستتم مشاركة النتيجة في مشكلة (Issue) على <span dir="ltr">GitHub</span> ثم يغلقها الفريق.
 

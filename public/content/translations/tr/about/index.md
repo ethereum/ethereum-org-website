@@ -100,7 +100,7 @@ Bu, web sitesinin “belirli bir araç isteyen bir geliştirici”den “henüz 
 
 **Kulağa nasıl geliyor?** Yol haritamız hakkındaki geri bildirimleri her zaman takdir ediyoruz - üzerinde çalışmamız gerektiğini düşündüğünüz bir şey varsa, lütfen bize bildirin! Topluluktaki herkesten gelen fikirlere ve PR'lara (Çekme İstekleri) açığız.
 
-**Dahil olmak ister misiniz?** [Katkıda bulunmak hakkında daha fazla bilgi edinin](/contributing/), [Twitter'dan bize ulaşın](https://x.com/ethdotorg) veya [Discord sunucumuzdaki](https://discord.gg/ethereum-org) topluluk tartışmalarına katılın.
+**Dahil olmak ister misiniz?** [Katkıda bulunmak hakkında daha fazla bilgi edinin](/contributing/), [Twitter'dan bize ulaşın](https://x.com/ethdotorg) veya [Discord sunucumuzdaki](/discord/) topluluk tartışmalarına katılın.
 
 ## Tasarım ilkeleri {#design-principles}
 
@@ -110,7 +110,7 @@ Sitedeki içerik ve tasarım kararlarımıza rehberlik etmesi için bir dizi [ta
 
 Özellikleri daha hızlı sunmak ve topluluk üyelerinin ethereum.org'un açık tasarımına katılmasını sağlamak için bir [tasarım sistemi](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) oluşturduk ve yayınladık.
 
-Dahil olmak ister misiniz? [Figma'dan](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) ve [GitHub sorunundan (issue)](https://github.com/ethereum/ethereum-org-website/issues/6284) takip edin ve [#design Discord kanalımızdaki](https://discord.gg/ethereum-org) sohbete katılın.
+Dahil olmak ister misiniz? [Figma'dan](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) ve [GitHub sorunundan (issue)](https://github.com/ethereum/ethereum-org-website/issues/6284) takip edin ve [#design Discord kanalımızdaki](/discord/) sohbete katılın.
 
 ## Stil rehberi {#style-guide}
 
@@ -128,6 +128,6 @@ ethereum.org web sitesi açık kaynaklıdır ve aksi belirtilmedikçe [MIT Lisan
 
 Bu web sitesi açık kaynaklı olmasına ve herkesin üzerinde çalışabilmesine rağmen, ethereum.org'a ve diğer Ethereum Vakfı web projelerine adanmış bir ekibimiz var.
 
-Tüm iş ilanlarını burada yayınlayacağız. Burada size uygun bir rol görmüyorsanız, [Discord sunucumuza](https://discord.gg/ethereum-org) gidin ve bizimle nasıl çalışmak istediğinizi bize bildirin!
+Tüm iş ilanlarını burada yayınlayacağız. Burada size uygun bir rol görmüyorsanız, [Discord sunucumuza](/discord/) gidin ve bizimle nasıl çalışmak istediğinizi bize bildirin!
 
 ethereum.org ekibinin ötesine mi bakıyorsunuz? [Ethereum ile ilgili diğer işlere göz atın](/community/get-involved/#ethereum-jobs/).

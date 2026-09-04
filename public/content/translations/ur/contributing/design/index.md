@@ -15,7 +15,7 @@ lang: ur
 
 ہمیں بعض اوقات اپنے ابتدائی خیالات کو جانچنے کے لیے مدد کی ضرورت ہوتی ہے۔ بغیر کسی تکنیکی علم کے حصہ لینے کا یہ ایک بہترین طریقہ ہے۔
 
-1. ڈیزائن ٹیم [ڈسکارڈ](https://discord.com/invite/ethereum-org) اور [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8) پر ایک موک اپ (mockup) ڈیزائن شیئر کرے گی۔
+1. ڈیزائن ٹیم [ڈسکارڈ](/discord/) اور [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8) پر ایک موک اپ (mockup) ڈیزائن شیئر کرے گی۔
 2. کمنٹس کے فنکشن کے ذریعے رائے دینے کے لیے آپ کو ڈیزائنز کے حوالے سے رہنمائی فراہم کی جائے گی۔
 3. نتائج کو GitHub ایشو میں شیئر کیا جائے گا اور پھر ٹیم کی جانب سے اسے بند کر دیا جائے گا۔
 

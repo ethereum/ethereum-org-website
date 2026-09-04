@@ -100,7 +100,7 @@ ethereum.org 是一個為 [以太坊](/) 社群提供的公開、開源資源，
 
 **覺得如何呢？** 我們始終感謝對我們路線圖的回饋——如果你認為有什麼是我們應該著手進行的，請告訴我們！我們歡迎社群中任何人的想法和 PR。
 
-**想要參與其中嗎？** [了解更多關於貢獻的資訊](/contributing/)、[在推特上聯絡我們](https://x.com/ethdotorg)，或加入 [我們的 Discord 伺服器](https://discord.gg/ethereum-org) 中的社群討論。
+**想要參與其中嗎？** [了解更多關於貢獻的資訊](/contributing/)、[在推特上聯絡我們](https://x.com/ethdotorg)，或加入 [我們的 Discord 伺服器](/discord/) 中的社群討論。
 
 ## 設計原則 {#design-principles}
 
@@ -110,7 +110,7 @@ ethereum.org 是一個為 [以太坊](/) 社群提供的公開、開源資源，
 
 我們建立並發布了一個 [設計系統](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1)，以便更快速地推出功能，並讓社群成員參與 ethereum.org 的開放設計。
 
-想要參與其中嗎？ [在 Figma 上關注](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)、查看 [GitHub 議題](https://github.com/ethereum/ethereum-org-website/issues/6284)，並加入我們 [#design Discord 頻道](https://discord.gg/ethereum-org) 的對話。
+想要參與其中嗎？ [在 Figma 上關注](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)、查看 [GitHub 議題](https://github.com/ethereum/ethereum-org-website/issues/6284)，並加入我們 [#design Discord 頻道](/discord/) 的對話。
 
 ## 風格指南 {#style-guide}
 
@@ -128,6 +128,6 @@ ethereum.org 是一個為 [以太坊](/) 社群提供的公開、開源資源，
 
 雖然這個網站是開源的，任何人都可以參與開發，但我們確實有一個專門負責 ethereum.org 和其他以太坊基金會網頁專案的團隊。
 
-我們會在這裡發布任何職缺。如果你在這裡沒有看到適合你的職位，請前往 [我們的 Discord 伺服器](https://discord.gg/ethereum-org)，告訴我們你想如何與我們合作！
+我們會在這裡發布任何職缺。如果你在這裡沒有看到適合你的職位，請前往 [我們的 Discord 伺服器](/discord/)，告訴我們你想如何與我們合作！
 
 想尋找 ethereum.org 團隊以外的機會嗎？[查看其他與以太坊相關的職缺](/community/get-involved/#ethereum-jobs/)。

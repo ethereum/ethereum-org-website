@@ -48,7 +48,7 @@ lang: mr
 <SocialListItem socialIcon="discord"><Link href="https://ethglobal.com/discord">Ethereum Hackers</Link> - ETHGlobal द्वारे चालवली जाणारी डिस्कॉर्ड् चॅट: जगभरातील इथेरियम हॅकर्ससाठी एक ऑनलाइन समुदाय</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/5W5tVb3">CryptoDevs</Link> - इथेरियम विकासावर केंद्रित डिस्कॉर्ड् समुदाय</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker Discord</Link> - विद्यमान आणि संभाव्य स्टेकर्ससाठी समुदाय-चालित मार्गदर्शन, शिक्षण, समर्थन आणि संसाधने</SocialListItem>
-<SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Ethereum.org website team</Link> - इथेरियम.org वेब विकास आणि डिझाइनबद्दल टीम आणि समुदायातील लोकांशी गप्पा मारा</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="/discord/">Ethereum.org website team</Link> - इथेरियम.org वेब विकास आणि डिझाइनबद्दल टीम आणि समुदायातील लोकांशी गप्पा मारा</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - Web3 निर्मात्यांचा समुदाय जिथे बिल्डर्स, औद्योगिक नेते आणि इथेरियम उत्साही एकत्र येतात. आम्ही Web3 विकास, डिझाइन आणि संस्कृतीबद्दल उत्कट आहोत. या, आमच्यासोबत तयार करा.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity विकासासाठी चॅट (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- प्रश्न आणि उत्तरे फोरम</i></SocialListItem>

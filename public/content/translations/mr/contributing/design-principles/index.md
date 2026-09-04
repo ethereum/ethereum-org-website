@@ -89,4 +89,4 @@ ethereum.org च्या संदर्भात, ही डिझाइन �
 
 जरी ही तत्त्वे ethereum.org वेबसाइटवर केंद्रित असली तरी, आम्हाला आशा आहे की त्यापैकी अनेक तत्त्वे एकूणच इथेरियम इकोसिस्टमच्या मूल्यांचे प्रतिनिधित्व करतात. कदाचित तुम्हाला त्यापैकी काही तुमच्या स्वतःच्या प्रकल्पात समाविष्ट करायला आवडतील!
 
-[डिस्कॉर्ड् सर्व्हरवर](https://discord.gg/ethereum-org) किंवा [इश्यू तयार करून](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) आम्हाला तुमचे विचार कळवा.
+[डिस्कॉर्ड् सर्व्हरवर](/discord/) किंवा [इश्यू तयार करून](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) आम्हाला तुमचे विचार कळवा.

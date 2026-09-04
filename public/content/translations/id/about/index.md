@@ -100,7 +100,7 @@ Untuk membuat pekerjaan kami lebih mudah diakses dan untuk mendorong lebih banya
 
 **Bagaimana kedengarannya?** Kami selalu menghargai umpan balik pada peta jalan kami - jika ada sesuatu yang menurut Anda harus kami kerjakan, beri tahu kami! Kami menyambut ide dan PR dari siapa saja di komunitas.
 
-**Ingin terlibat?** [Pelajari lebih lanjut tentang berkontribusi](/contributing/), [hubungi kami di Twitter](https://x.com/ethdotorg), atau bergabunglah dengan diskusi komunitas di [server Discord kami](https://discord.gg/ethereum-org).
+**Ingin terlibat?** [Pelajari lebih lanjut tentang berkontribusi](/contributing/), [hubungi kami di Twitter](https://x.com/ethdotorg), atau bergabunglah dengan diskusi komunitas di [server Discord kami](/discord/).
 
 ## Prinsip desain {#design-principles}
 
@@ -110,7 +110,7 @@ Kami menggunakan serangkaian [prinsip desain](/contributing/design-principles/) 
 
 Kami membangun dan merilis [sistem desain](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) untuk mengirimkan fitur lebih cepat dan membiarkan anggota komunitas berpartisipasi dalam desain terbuka ethereum.org.
 
-Ingin terlibat? [Ikuti di Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), [isu GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284) dan bergabunglah dalam percakapan di [saluran Discord #design kami](https://discord.gg/ethereum-org).
+Ingin terlibat? [Ikuti di Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), [isu GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284) dan bergabunglah dalam percakapan di [saluran Discord #design kami](/discord/).
 
 ## Panduan gaya {#style-guide}
 
@@ -128,6 +128,6 @@ Situs web ethereum.org adalah sumber terbuka dan dibangun di bawah [Lisensi MIT]
 
 Meskipun situs web ini adalah sumber terbuka dan siapa saja dapat mengerjakannya, kami memiliki tim yang berdedikasi untuk ethereum.org dan proyek web Yayasan Ethereum lainnya.
 
-Kami akan memposting lowongan pekerjaan apa pun di sini. Jika Anda tidak melihat peran untuk Anda di sini, kunjungi [server Discord kami](https://discord.gg/ethereum-org) dan beri tahu kami bagaimana Anda ingin bekerja sama dengan kami!
+Kami akan memposting lowongan pekerjaan apa pun di sini. Jika Anda tidak melihat peran untuk Anda di sini, kunjungi [server Discord kami](/discord/) dan beri tahu kami bagaimana Anda ingin bekerja sama dengan kami!
 
 Mencari di luar tim ethereum.org? [Lihat pekerjaan terkait Ethereum lainnya](/community/get-involved/#ethereum-jobs/).

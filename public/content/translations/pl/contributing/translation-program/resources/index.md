@@ -23,7 +23,7 @@ Poniżej znajdziesz przydatne przewodniki i narzędzia dla tłumaczy ethereum.or
 
 ## Społeczności {#communities}
 
-- [Grupy tłumaczeniowe na Discordzie dla poszczególnych języków](https://discord.gg/ethereum-org)
+- [Grupy tłumaczeniowe na Discordzie dla poszczególnych języków](/discord/)
   _– inicjatywa mająca na celu łączenie tłumaczy ethereum.org w grupy tłumaczeniowe_
 - [Grupa tłumaczy języka chińskiego](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– strona w Notion ułatwiająca koordynację między tłumaczami języka chińskiego_
@@ -39,7 +39,7 @@ Aby być na bieżąco z najnowszymi postępami Programu Tłumaczeń, możesz śl
 
 ## Godziny konsultacji dla tłumaczy {#office-hours}
 
-Organizujemy godziny konsultacji dla tłumaczy w każdą drugą środę miesiąca. Odbywają się one na kanale głosowym #office-hours na [Discordzie ethereum.org](https://discord.gg/ethereum-org), gdzie można również znaleźć dokładne godziny i dodatkowe szczegóły.
+Organizujemy godziny konsultacji dla tłumaczy w każdą drugą środę miesiąca. Odbywają się one na kanale głosowym #office-hours na [Discordzie ethereum.org](/discord/), gdzie można również znaleźć dokładne godziny i dodatkowe szczegóły.
 
 Godziny konsultacji pozwalają naszym tłumaczom zadawać pytania dotyczące procesu tłumaczenia, przekazywać opinie na temat programu, dzielić się swoimi pomysłami lub po prostu porozmawiać z głównym zespołem ethereum.org.
 Chcemy również wykorzystać te spotkania do informowania o najnowszych wydarzeniach w Programie Tłumaczeń oraz dzielenia się kluczowymi wskazówkami i instrukcjami z naszymi współtwórcami.
