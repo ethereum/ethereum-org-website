@@ -294,13 +294,26 @@ const Search = ({ asChild = false, children }: SearchProps) => {
       apiKey,
     },
     typesenseSearchParameters: {
+      // The library groups by `url`, which is anchor-scoped, so one page can occupy
+      // several rows and its page-level record need not be among them -- results then
+      // deep-link into sections with no parent to click. Grouping by page instead caps
+      // a page at `group_limit` rows and lets the renderer nest them under the page.
+      //
+      // It also aligns the app with how relevance is actually measured: promote scores
+      // against `url_without_anchor`, so the two disagreed about what a result even is.
+      group_by: "url_without_anchor",
       // Break near-ties by page importance: root-level pages rank 10, tutorials 1.
       // 100 buckets is deliberate -- coarser bucketing collapses genuinely different
       // match scores into one tier and lets a three-value signal reorder them, which
       // measured worse than no sort at all. At this granularity pagerank only decides
       // between comparable matches: hit@1 and MRR match the unsorted baseline while
       // hit@10 improves 81% -> 84% against the labelled query set.
-      sort_by: "_text_match(buckets: 100):desc,pagerank:desc",
+      // `item_priority` is the library's own signal and encodes heading depth, so it
+      // breaks remaining ties towards the h1 -- the page itself -- over an h2 inside it.
+      // Overriding sort_by without it is what let a page's first section outrank the
+      // page, sending "issuance of eth" to a #components-of-eth-issuance anchor.
+      sort_by:
+        "_text_match(buckets: 100):desc,pagerank:desc,item_priority:desc",
     },
     onClose,
     hitComponent,
@@ -310,21 +323,26 @@ const Search = ({ asChild = false, children }: SearchProps) => {
     transformSearchClient:
       transformSearchClient as unknown as DocSearchModalProps["transformSearchClient"],
     transformItems: (items: DocSearchHit[]) =>
-      items.map((item: DocSearchHit) => {
-        // Our own hit carries an absolute explorer URL, which sanitizeHitUrl would
-        // strip to a path -- turning it into a broken internal link.
-        if (isExplorerHit(item.objectID)) return item
-        // Use JSON clone for browser compatibility (structuredClone not available in Chrome < 98)
-        const newItem: DocSearchHit = JSON.parse(JSON.stringify(item))
-        newItem.url = sanitizeHitUrl(item.url)
-        // lvl0 is the page's og:title, which always ends " | ethereum.org", and it is
-        // shown as the group header above every result. The fork keeps it in several
-        // places -- a flat dotted key, the `hierarchy` object, a `hierarchy_camel`
-        // array, and `_highlightResult`/`_snippetResult` copies that the renderer
-        // actually reads -- so walk the hit and strip it wherever it appears.
-        stripTitleSuffix(newItem as unknown as Record<string, unknown>)
-        return newItem
-      }),
+      // The page's own record leads, with its sections beneath. The renderer nests
+      // children under an `lvl1` sibling but never reorders, so a section that scored
+      // higher would otherwise render above the page it belongs to.
+      [...items]
+        .sort((a, b) => Number(b.type === "lvl1") - Number(a.type === "lvl1"))
+        .map((item: DocSearchHit) => {
+          // Our own hit carries an absolute explorer URL, which sanitizeHitUrl would
+          // strip to a path -- turning it into a broken internal link.
+          if (isExplorerHit(item.objectID)) return item
+          // Use JSON clone for browser compatibility (structuredClone not available in Chrome < 98)
+          const newItem: DocSearchHit = JSON.parse(JSON.stringify(item))
+          newItem.url = sanitizeHitUrl(item.url)
+          // lvl0 is the page's og:title, which always ends " | ethereum.org", and it is
+          // shown as the group header above every result. The fork keeps it in several
+          // places -- a flat dotted key, the `hierarchy` object, a `hierarchy_camel`
+          // array, and `_highlightResult`/`_snippetResult` copies that the renderer
+          // actually reads -- so walk the hit and strip it wherever it appears.
+          stripTitleSuffix(newItem as unknown as Record<string, unknown>)
+          return newItem
+        }),
     placeholder: t("search-ethereum-org"),
     translations: {
       searchBox: {
