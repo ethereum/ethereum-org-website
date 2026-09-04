@@ -89,5 +89,5 @@ Assembles every prompt, sends none, prints projected prompt bytes / requests / t
 ## What not to do
 
 - Do not raise `INTL_MAX_COST_USD` or the per-call ceiling to make a run pass. Both are calibrated ~30% above measured worst cases; hitting them means the call pattern changed.
-- Do not restore the cron. The workflow is manual-dispatch only until the bounds have supervised runs behind them.
+- Do not disable a bound to make a run pass, and do not treat the cron as the thing that went wrong. The cron was off from 2026-08-12 to 2026-08-27 and was restored once the bounds had supervised runs behind them; the incident was a batching bug, and it would have cost the same on a manual dispatch.
 - Do not add an LLM call site that bypasses `callGeminiRaw` — it is the single choke point where the per-call ceiling and the run fuse are enforced.
