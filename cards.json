@@ -27,7 +27,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-05",
-    "runs_seen": 10
+    "runs_seen": 11
   },
   {
     "item": "Issue #18928",
@@ -55,7 +55,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-14",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "Issue #18967",
@@ -81,14 +81,14 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-05",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "Issue #18995 (SEO JSON-LD/SSR cluster)",
     "intent": "konopkja SEO audit; several fix PRs merged, remainder green review-only blocked",
     "state": "verify-then-merge",
     "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "One reviewer clears the remaining green siblings #19017/#19029/#19043 as a batch; #19044 needs rebase, #19001 red",
+    "next_human_decision": "Assign one reviewer to clear #19017/#19029/#19043/#19044 as a batch and merge — all now green, #19044 rebased out of conflict today",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -108,13 +108,13 @@
     "owner_lane": "code",
     "confidence": 0.82,
     "evidence": [
-      "3 green e2e-tested fixes remain unreviewed 4-6d",
-      "#19044 CONFLICTING",
-      "#19001 CI FAILURE"
+      "#19044 un-conflicted today (idle 0)",
+      "#19017/#19043 fresh re-reviews 09-03",
+      "all four CI SUCCESS, review-only blocked"
     ],
     "analyzed_sha": null,
-    "first_seen": "2026-08-10",
-    "runs_seen": 2
+    "first_seen": "2026-09-04",
+    "runs_seen": 1
   },
   {
     "item": "Issue #19014",
@@ -142,7 +142,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-02",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "Issue #19019",
@@ -168,7 +168,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-03",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "Issue #19031",
@@ -198,7 +198,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-11",
-    "runs_seen": 6
+    "runs_seen": 7
   },
   {
     "item": "Issue #19042",
@@ -226,7 +226,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 5
+    "runs_seen": 6
   },
   {
     "item": "Issue #19047",
@@ -254,7 +254,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 5
+    "runs_seen": 6
   },
   {
     "item": "Issue #19060",
@@ -284,7 +284,35 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-14",
-    "runs_seen": 2
+    "runs_seen": 3
+  },
+  {
+    "item": "Issue #19110",
+    "intent": "Empty 'Feature request' issue, no body",
+    "state": "suggest-close",
+    "recommended_disposition": "close",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Close as empty/invalid"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "Issue #19014"
+    ],
+    "owner_lane": "product",
+    "confidence": 0.7,
+    "evidence": [
+      "title 'Feature request', no body",
+      "14d idle, no engagement"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-09-02",
+    "runs_seen": 3
   },
   {
     "item": "PR #17263",
@@ -310,7 +338,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-07",
-    "runs_seen": 8
+    "runs_seen": 9
   },
   {
     "item": "PR #18896",
@@ -340,7 +368,7 @@
     ],
     "analyzed_sha": "3948c50",
     "first_seen": "2026-08-05",
-    "runs_seen": 10
+    "runs_seen": 11
   },
   {
     "item": "PR #18918",
@@ -369,7 +397,7 @@
     ],
     "analyzed_sha": "ba23523",
     "first_seen": "2026-08-04",
-    "runs_seen": 11
+    "runs_seen": 12
   },
   {
     "item": "PR #19001",
@@ -398,37 +426,7 @@
     ],
     "analyzed_sha": "9a02958",
     "first_seen": "2026-08-07",
-    "runs_seen": 8
-  },
-  {
-    "item": "PR #19016",
-    "intent": "One AST-verified sweep setting request locale in all [locale] pages",
-    "state": "waiting-on-contributor",
-    "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "pettinarip applies wackerow's 4 inline suggestions, then wackerow merges — retires the 11-PR recovery-500 class",
-    "waiting_on": [
-      {
-        "actor": "pettinarip",
-        "action": "Address 4 inline nits from wackerow's 09-01 review"
-      }
-    ],
-    "impact": "high",
-    "effort_to_unblock": "small",
-    "risk": "medium",
-    "related_items": [
-      "Issue #18792",
-      "Issue #18013"
-    ],
-    "owner_lane": "code",
-    "confidence": 0.85,
-    "evidence": [
-      "wackerow CHANGES_REQUESTED 'good to pull in'",
-      "aiReview superseded",
-      "replaces 11 recovery PRs"
-    ],
-    "analyzed_sha": "a9927b3",
-    "first_seen": "2026-09-02",
-    "runs_seen": 2
+    "runs_seen": 9
   },
   {
     "item": "PR #19017",
@@ -456,7 +454,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-10",
-    "runs_seen": 7
+    "runs_seen": 8
   },
   {
     "item": "PR #19024",
@@ -486,7 +484,7 @@
     ],
     "analyzed_sha": "efcd439",
     "first_seen": "2026-09-02",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "PR #19029",
@@ -515,7 +513,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-11",
-    "runs_seen": 6
+    "runs_seen": 7
   },
   {
     "item": "PR #19043",
@@ -543,18 +541,18 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 5
+    "runs_seen": 6
   },
   {
     "item": "PR #19044",
     "intent": "Server-render tutorials list + homepage carousel (fixes #18977)",
-    "state": "blocked",
-    "recommended_disposition": "request_changes",
+    "state": "verify-then-merge",
+    "recommended_disposition": "verify_then_merge",
     "next_human_decision": "",
     "waiting_on": [
       {
-        "actor": "SayedZahur786",
-        "action": "Rebase onto main (CONFLICTING)"
+        "actor": "maintainer",
+        "action": "Verify SSR output, then merge"
       }
     ],
     "impact": "high",
@@ -566,13 +564,14 @@
     "owner_lane": "code",
     "confidence": 0.78,
     "evidence": [
-      "ships e2e test",
-      "tutorials hub had zero crawlable links",
-      "CONFLICTING/DIRTY"
+      "was CONFLICTING, rebased today (idle 0)",
+      "CI SUCCESS",
+      "author pinged for merge",
+      "tutorials hub had zero crawlable links"
     ],
-    "analyzed_sha": null,
-    "first_seen": "2026-08-12",
-    "runs_seen": 5
+    "analyzed_sha": "cebc162",
+    "first_seen": "2026-09-04",
+    "runs_seen": 1
   },
   {
     "item": "PR #19048",
@@ -600,7 +599,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-12",
-    "runs_seen": 5
+    "runs_seen": 6
   },
   {
     "item": "PR #19057",
@@ -627,7 +626,7 @@
     ],
     "analyzed_sha": "ee6b214",
     "first_seen": "2026-08-13",
-    "runs_seen": 4
+    "runs_seen": 5
   },
   {
     "item": "PR #19063",
@@ -655,7 +654,7 @@
     ],
     "analyzed_sha": "ee2b831",
     "first_seen": "2026-09-03",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #19069",
@@ -684,7 +683,7 @@
     ],
     "analyzed_sha": "a3232d8",
     "first_seen": "2026-08-14",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "PR #19070",
@@ -710,7 +709,7 @@
     ],
     "analyzed_sha": "7e20472",
     "first_seen": "2026-08-14",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "PR #19096",
@@ -740,7 +739,7 @@
     ],
     "analyzed_sha": "e432cef",
     "first_seen": "2026-09-02",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "PR #19097",
@@ -769,35 +768,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-02",
-    "runs_seen": 2
-  },
-  {
-    "item": "Issue #19110",
-    "intent": "Empty 'Feature request' issue, no body",
-    "state": "suggest-close",
-    "recommended_disposition": "close",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Close as empty/invalid"
-      }
-    ],
-    "impact": "low",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "Issue #19014"
-    ],
-    "owner_lane": "product",
-    "confidence": 0.7,
-    "evidence": [
-      "title 'Feature request', no body",
-      "14d idle, no engagement"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-09-02",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "PR #19132",
@@ -827,7 +798,7 @@
     ],
     "analyzed_sha": "303a32c",
     "first_seen": "2026-09-02",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "PR #19157",
@@ -857,6 +828,109 @@
     ],
     "analyzed_sha": "48e2822",
     "first_seen": "2026-09-02",
+    "runs_seen": 3
+  },
+  {
+    "item": "PR #19164",
+    "intent": "prepare-release: never leave a deploy PR without a published release",
+    "state": "waiting-on-ci",
+    "recommended_disposition": "request_changes",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "pettinarip",
+        "action": "Green the 1 failing check, then self-merge"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "tooling",
+    "confidence": 0.7,
+    "evidence": [
+      "team infra, CI FAILURE fail:1",
+      "3 files, idle 6d"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-09-03",
+    "runs_seen": 2
+  },
+  {
+    "item": "PR #19167",
+    "intent": "intl: restore daily cron, fix CJK length floor",
+    "state": "waiting-on-ci",
+    "recommended_disposition": "request_changes",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "wackerow",
+        "action": "Green the 1 failing check"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "tooling",
+    "confidence": 0.7,
+    "evidence": [
+      "team infra, CI FAILURE fail:1",
+      "7 files, idle 6d"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-09-03",
+    "runs_seen": 2
+  },
+  {
+    "item": "PR #19174",
+    "intent": "Remove link to non-existing file + archived translation project",
+    "state": "blocked",
+    "recommended_disposition": "merge",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Approve; block is missing review"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "content",
+    "confidence": 0.7,
+    "evidence": [
+      "external, 1 file docs, green BLOCKED"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-09-03",
+    "runs_seen": 2
+  },
+  {
+    "item": "PR #19178-#19183 (bounty-hunter batch)",
+    "intent": "Five bounty-hunter JSON entries from 0xMushow",
+    "state": "verify-then-merge",
+    "recommended_disposition": "verify_then_merge",
+    "next_human_decision": "Verify the 5 names against the bug-bounty log once, then merge together",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Batch-verify + merge"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "content",
+    "confidence": 0.7,
+    "evidence": [
+      "5 green 1-file JSON adds, all BLOCKED review-only",
+      "same author 0xMushow"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-09-03",
     "runs_seen": 2
   },
   {
@@ -884,110 +958,7 @@
     ],
     "analyzed_sha": "f29f2db",
     "first_seen": "2026-09-02",
-    "runs_seen": 2
-  },
-  {
-    "item": "PR #19164",
-    "intent": "prepare-release: never leave a deploy PR without a published release",
-    "state": "waiting-on-ci",
-    "recommended_disposition": "request_changes",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "pettinarip",
-        "action": "Green the 1 failing check, then self-merge"
-      }
-    ],
-    "impact": "medium",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [],
-    "owner_lane": "tooling",
-    "confidence": 0.7,
-    "evidence": [
-      "team infra, CI FAILURE fail:1",
-      "3 files, idle 6d"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-09-03",
-    "runs_seen": 1
-  },
-  {
-    "item": "PR #19167",
-    "intent": "intl: restore daily cron, fix CJK length floor",
-    "state": "waiting-on-ci",
-    "recommended_disposition": "request_changes",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "wackerow",
-        "action": "Green the 1 failing check"
-      }
-    ],
-    "impact": "medium",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [],
-    "owner_lane": "tooling",
-    "confidence": 0.7,
-    "evidence": [
-      "team infra, CI FAILURE fail:1",
-      "7 files, idle 6d"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-09-03",
-    "runs_seen": 1
-  },
-  {
-    "item": "PR #19174",
-    "intent": "Remove link to non-existing file + archived translation project",
-    "state": "blocked",
-    "recommended_disposition": "merge",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Approve; block is missing review"
-      }
-    ],
-    "impact": "low",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [],
-    "owner_lane": "content",
-    "confidence": 0.7,
-    "evidence": [
-      "external, 1 file docs, green BLOCKED"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-09-03",
-    "runs_seen": 1
-  },
-  {
-    "item": "PR #19178-#19183 (bounty-hunter batch)",
-    "intent": "Five bounty-hunter JSON entries from 0xMushow",
-    "state": "verify-then-merge",
-    "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "Verify the 5 names against the bug-bounty log once, then merge together",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Batch-verify + merge"
-      }
-    ],
-    "impact": "low",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [],
-    "owner_lane": "content",
-    "confidence": 0.7,
-    "evidence": [
-      "5 green 1-file JSON adds, all BLOCKED review-only",
-      "same author 0xMushow"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-09-03",
-    "runs_seen": 1
+    "runs_seen": 3
   },
   {
     "item": "PR #19187",
@@ -1012,7 +983,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-03",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #19194",
@@ -1042,6 +1013,60 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-03",
+    "runs_seen": 2
+  },
+  {
+    "item": "PR #19210",
+    "intent": "Generalize Sentry getDropReason to drop unlocatable stacks/unsupported engines",
+    "state": "blocked",
+    "recommended_disposition": "verify_then_merge",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Review the 2-file change, then merge"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "tooling",
+    "confidence": 0.75,
+    "evidence": [
+      "team, green, no review yet",
+      "BLOCKED review-only",
+      "2 files, ai looks-mergeable"
+    ],
+    "analyzed_sha": "2c7dace",
+    "first_seen": "2026-09-04",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19211",
+    "intent": "Normalize Intl whitespace through one shared helper (consolidates 3 fixes)",
+    "state": "waiting-on-ci",
+    "recommended_disposition": "verify_then_merge",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Review the 5-file helper, then merge"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "tooling",
+    "confidence": 0.75,
+    "evidence": [
+      "team, green, consolidates #19191/#19195/#19201",
+      "ICU narrow-nbsp mismatch",
+      "mergeState UNKNOWN"
+    ],
+    "analyzed_sha": "db083fe",
+    "first_seen": "2026-09-04",
     "runs_seen": 1
   },
   {
@@ -1070,6 +1095,63 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-03",
+    "runs_seen": 2
+  },
+  {
+    "item": "PR #19217",
+    "intent": "Add 5 DeFi quiz questions (implements #17280 good-first-issue)",
+    "state": "blocked",
+    "recommended_disposition": "verify_then_merge",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Content-verify the 5 questions, then merge"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "Issue #17280"
+    ],
+    "owner_lane": "content",
+    "confidence": 0.7,
+    "evidence": [
+      "external, green BLOCKED",
+      "implements #17280 (good first issue)",
+      "3 files defi-6..10"
+    ],
+    "analyzed_sha": "634f26b",
+    "first_seen": "2026-09-04",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19218",
+    "intent": "Conclude FindWalletCatalog2026 A/B test; ship winning catalog to all",
+    "state": "verify-then-merge",
+    "recommended_disposition": "verify_then_merge",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "pettinarip",
+        "action": "Clear orphaned-code notes (wallets.ts:151-202), then merge"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "tooling",
+    "confidence": 0.85,
+    "evidence": [
+      "wackerow APPROVED 09-03",
+      "CI SUCCESS, MERGEABLE",
+      "only non-blocking orphan-code notes remain",
+      "BLOCKED on branch protection"
+    ],
+    "analyzed_sha": "23d7228",
+    "first_seen": "2026-09-04",
     "runs_seen": 1
   }
 ]
