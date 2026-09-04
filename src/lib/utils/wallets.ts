@@ -96,11 +96,20 @@ export const formatWalletFees = (
   // Node and browser ICU disagree on which thin/narrow space they emit around
   // range dashes; normalize those to avoid hydration mismatches, but leave NBSP
   // alone -- it separates the value from its unit (e.g. de "0,05-0,7 %")
+  // Intl.NumberFormat.prototype.formatRange isn't available in every browser
+  // still in the wild (e.g. older Firefox/WebView), so fall back to formatting
+  // each bound separately rather than throwing.
   const formatRange = (
     fmt: Intl.NumberFormat,
     [min, max]: [min: number, max: number]
-  ) =>
-    fmt.formatRange(min, max).replace(/[\u2000-\u200a\u202f\u205f\u3000]/g, " ")
+  ) => {
+    if (typeof fmt.formatRange !== "function") {
+      return `${fmt.format(min)} - ${fmt.format(max)}`
+    }
+    return fmt
+      .formatRange(min, max)
+      .replace(/[\u2000-\u200a\u202f\u205f\u3000]/g, " ")
+  }
 
   // Data stores human-readable percents (0.875 -> "0.875%")
   const percent = (amount: WalletFeeAmount) =>
