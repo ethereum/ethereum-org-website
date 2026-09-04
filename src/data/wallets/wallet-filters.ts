@@ -141,6 +141,11 @@ const walletFilterData: { [key: string]: WalletFilterData } = {
     description: "page-find-wallet-privacy-desc",
     filterKey: "privacy",
   },
+  no_usage_tracking: {
+    title: "page-find-wallet-no-usage-tracking",
+    description: "page-find-wallet-no-usage-tracking-desc",
+    filterKey: "no_usage_tracking",
+  },
 }
 
 export default walletFilterData

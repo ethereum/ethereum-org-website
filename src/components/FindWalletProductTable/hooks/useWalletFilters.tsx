@@ -799,6 +799,33 @@ export const useWalletFilters = (): FilterOption[] => {
           },
           options: [],
         },
+        {
+          filterKey: "no_usage_tracking",
+          filterLabel: t("page-find-wallet-no-usage-tracking"),
+          description: t("page-find-wallet-no-usage-tracking-desc"),
+          inputState: false,
+          input: (filterIndex, itemIndex, inputState, updateFilterState) => {
+            return (
+              <SwitchFilterInput
+                Icon={PrivacyIcon}
+                label={t("page-find-wallet-no-usage-tracking")}
+                description={t("page-find-wallet-no-usage-tracking-desc")}
+                filterIndex={filterIndex}
+                itemIndex={itemIndex}
+                inputState={inputState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${locale} - ${t("page-find-wallet-no-usage-tracking")}`,
+                    eventName: `no_usage_tracking ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
+              />
+            )
+          },
+          options: [],
+        },
       ],
     },
     {
