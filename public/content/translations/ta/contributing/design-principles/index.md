@@ -89,4 +89,4 @@ ethereum.org ஐப் பொறுத்தவரை, இந்த வடிவ
 
 இந்தக் கொள்கைகள் ethereum.org இணையதளத்தில் கவனம் செலுத்தினாலும், அவற்றில் பல ஒட்டுமொத்த எத்திரியம் சுற்றுச்சூழல் அமைப்பின் மதிப்புகளைப் பிரதிநிதித்துவப்படுத்துகின்றன என்று நாங்கள் நம்புகிறோம். இவற்றில் சிலவற்றை உங்கள் சொந்த திட்டத்தில் இணைக்கக்கூட நீங்கள் விரும்பலாம்!
 
-[டிஸ்கார்ட் சேவையகத்தில்](https://discord.gg/ethereum-org) அல்லது [ஒரு சிக்கலை உருவாக்குவதன்](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) மூலம் உங்கள் எண்ணங்களை எங்களுக்குத் தெரியப்படுத்துங்கள்.
+[டிஸ்கார்ட் சேவையகத்தில்](/discord/) அல்லது [ஒரு சிக்கலை உருவாக்குவதன்](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) மூலம் உங்கள் எண்ணங்களை எங்களுக்குத் தெரியப்படுத்துங்கள்.

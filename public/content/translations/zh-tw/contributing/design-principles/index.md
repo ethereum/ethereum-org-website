@@ -89,4 +89,4 @@ description: ethereum.org 設計與內容決策背後的原則
 
 雖然這些原則主要針對 ethereum.org 網站，但我們希望其中許多原則能代表整個以太坊生態系統的價值觀。也許你甚至想將其中一些原則納入你自己的專案中！
 
-在 [Discord 伺服器](https://discord.gg/ethereum-org)上或透過[建立問題 (issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) 讓我們知道你的想法。
+在 [Discord 伺服器](/discord/)上或透過[建立問題 (issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) 讓我們知道你的想法。

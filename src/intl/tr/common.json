@@ -125,7 +125,7 @@
   "feedback-widget-prompt": "Bu sayfa faydalı mı?",
   "feedback-widget-thank-you-cta": "Kısa anketi aç",
   "feedback-widget-thank-you-subtitle": "Birkaç soruyu yanıtlayarak bu sayfayı daha da iyi hale getirin.",
-  "feedback-widget-thank-you-subtitle-ext": "Yardıma ihtiyacınız varsa, <a href=\"https://discord.gg/ethereum-org\" target=\"_blank\">Discord</a> üzerinden topluluğa ulaşabilirsiniz.",
+  "feedback-widget-thank-you-subtitle-ext": "Yardıma ihtiyacınız varsa, <a href=\"/discord/\" target=\"_blank\">Discord</a> üzerinden topluluğa ulaşabilirsiniz.",
   "feedback-widget-thank-you-timing": "2–3 dk",
   "feedback-widget-thank-you-title": "Geri bildiriminiz için teşekkürler!",
   "filter-bar-clear": "Filtreyi temizle",

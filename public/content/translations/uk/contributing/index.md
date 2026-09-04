@@ -43,7 +43,7 @@ Ethereum.org — це проєкт із відкритим вихідним ко
 - [Запропонувати проєкт для нашої сторінки DeSci](/contributing/adding-desci-projects/) — додайте проєкт, створений на Етеріумі, який робить внесок у децентралізовану науку (desci)
 - [Додати ресурс](/contributing/adding-resources/) — додайте корисний ресурс на будь-яку відповідну сторінку
 
-Маєте запитання? 🤔 Приєднуйтесь до нашого [сервера Discord](https://discord.gg/ethereum-org)
+Маєте запитання? 🤔 Приєднуйтесь до нашого [сервера Discord](/discord/)
 
 ## Хороші перші завдання для початку роботи {#good-first-tasks-to-start-contributing}
 
@@ -62,7 +62,7 @@ Ethereum.org — це проєкт із відкритим вихідним ко
 Вам не потрібен дозвіл, щоб працювати над чимось, але завжди краще повідомити нам, що ви плануєте робити. Ви можете зробити це так:
 
 - Залишити коментар до завдання (issue) або PR на [GitHub](https://github.com/ethereum/ethereum-org-website)
-- Написати повідомлення на нашому [сервері Discord](https://discord.gg/ethereum-org)
+- Написати повідомлення на нашому [сервері Discord](/discord/)
 
 Перш ніж робити внесок, переконайтеся, що ви ознайомлені з:
 
@@ -77,7 +77,7 @@ Ethereum.org — це проєкт із відкритим вихідним ко
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [Сервер Discord](https://discord.gg/ethereum-org)
+- [Сервер Discord](/discord/)
 
 ### Примітка щодо плагіату {#plagiarism}
 
@@ -95,7 +95,7 @@ Ethereum.org — це проєкт із відкритим вихідним ко
 
 ### Як затребувати {#how-to-claim}
 
-1. Приєднуйтесь до нашого [сервера Discord](https://discord.gg/ethereum-org).
+1. Приєднуйтесь до нашого [сервера Discord](/discord/).
 2. Вставте посилання на ваш внесок у канал `#🥇 | proof-of-contribution`.
 3. Зачекайте, поки член нашої команди надішле вам посилання на ваш OAT.
 4. Затребуйте свій OAT!

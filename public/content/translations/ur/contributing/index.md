@@ -43,7 +43,7 @@ lang: ur
 - [ہمارے ڈی سائی صفحے کے لیے ایک پروجیکٹ تجویز کریں](/contributing/adding-desci-projects/) – ایتھیریم پر بنایا گیا ایک پروجیکٹ شامل کریں جو غیر مرکزی سائنس (ڈی سائی) میں حصہ ڈالتا ہو
 - [وسیلہ شامل کریں](/contributing/adding-resources/) – کسی بھی متعلقہ صفحے پر ایک مفید وسیلہ شامل کریں
 
-کوئی سوالات ہیں؟ 🤔 ہمارے [ڈسکارڈ سرور](https://discord.gg/ethereum-org) میں شامل ہوں
+کوئی سوالات ہیں؟ 🤔 ہمارے [ڈسکارڈ سرور](/discord/) میں شامل ہوں
 
 ## حصہ ڈالنا شروع کرنے کے لیے ابتدائی بہترین کام {#good-first-tasks-to-start-contributing}
 
@@ -62,7 +62,7 @@ lang: ur
 آپ کو کسی بھی چیز پر کام کرنے کے لیے اجازت کی ضرورت نہیں ہے، لیکن یہ ہمیشہ بہتر ہوتا ہے کہ آپ ہمیں بتائیں کہ آپ کیا کرنے کا ارادہ رکھتے ہیں۔ آپ یہ درج ذیل طریقوں سے کر سکتے ہیں:
 
 - [GitHub](https://github.com/ethereum/ethereum-org-website) میں کسی مسئلے یا <span dir="ltr">PR</span> پر تبصرہ کر کے
-- ہمارے [ڈسکارڈ سرور](https://discord.gg/ethereum-org) پر پیغام بھیج کر
+- ہمارے [ڈسکارڈ سرور](/discord/) پر پیغام بھیج کر
 
 حصہ ڈالنے سے پہلے، یقینی بنائیں کہ آپ درج ذیل سے واقف ہیں:
 
@@ -77,7 +77,7 @@ lang: ur
 
 - [<span dir="ltr">website@ethereum.org</span>](mailto:website@ethereum.org)
 - [<span dir="ltr">@ethdotorg</span>](https://twitter.com/ethdotorg)
-- [ڈسکارڈ سرور](https://discord.gg/ethereum-org)
+- [ڈسکارڈ سرور](/discord/)
 
 ### سرقہ (Plagiarism) پر ایک نوٹ {#plagiarism}
 
@@ -95,7 +95,7 @@ lang: ur
 
 ### دعویٰ کیسے کریں {#how-to-claim}
 
-1. ہمارے [ڈسکارڈ سرور](https://discord.gg/ethereum-org) میں شامل ہوں۔
+1. ہمارے [ڈسکارڈ سرور](/discord/) میں شامل ہوں۔
 2. `#🥇 | proof-of-contribution` چینل میں اپنے حصے (contribution) کا لنک پیسٹ کریں۔
 3. ہماری ٹیم کے کسی رکن کی جانب سے آپ کو آپ کے <span dir="ltr">OAT</span> کا لنک بھیجنے کا انتظار کریں۔
 4. اپنے <span dir="ltr">OAT</span> کا دعویٰ کریں!

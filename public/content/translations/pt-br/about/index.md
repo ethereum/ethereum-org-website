@@ -100,7 +100,7 @@ Para tornar nosso trabalho mais acessível e promover mais colaboração da comu
 
 **O que acha disso?** Sempre agradecemos o feedback sobre nosso roteiro — se houver algo em que você acha que deveríamos trabalhar, por favor, nos avise! Aceitamos ideias e PRs de qualquer pessoa da comunidade.
 
-**Quer se envolver?** [Saiba mais sobre como contribuir](/contributing/), [fale conosco no Twitter](https://x.com/ethdotorg) ou participe das discussões da comunidade em [nosso servidor do Discord](https://discord.gg/ethereum-org).
+**Quer se envolver?** [Saiba mais sobre como contribuir](/contributing/), [fale conosco no Twitter](https://x.com/ethdotorg) ou participe das discussões da comunidade em [nosso servidor do Discord](/discord/).
 
 ## Princípios de design {#design-principles}
 
@@ -110,7 +110,7 @@ Usamos um conjunto de [princípios de design](/contributing/design-principles/) 
 
 Construímos e lançamos um [sistema de design](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) para entregar recursos mais rapidamente e permitir que os membros da comunidade participem do design aberto do ethereum.org.
 
-Quer se envolver? [Acompanhe no Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), a [issue no GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284) e participe da conversa em nosso [canal #design no Discord](https://discord.gg/ethereum-org).
+Quer se envolver? [Acompanhe no Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), a [issue no GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284) e participe da conversa em nosso [canal #design no Discord](/discord/).
 
 ## Guia de estilo {#style-guide}
 
@@ -128,6 +128,6 @@ O site ethereum.org é de código aberto e construído sob uma [Licença MIT](ht
 
 Embora este site seja de código aberto e qualquer pessoa possa trabalhar nele, temos uma equipe dedicada ao ethereum.org e a outros projetos web da Fundação Ethereum.
 
-Publicaremos quaisquer vagas de emprego aqui. Se você não encontrar uma função para você aqui, acesse [nosso servidor do Discord](https://discord.gg/ethereum-org) e nos diga como você gostaria de trabalhar conosco!
+Publicaremos quaisquer vagas de emprego aqui. Se você não encontrar uma função para você aqui, acesse [nosso servidor do Discord](/discord/) e nos diga como você gostaria de trabalhar conosco!
 
 Procurando além da equipe do ethereum.org? [Confira outras vagas relacionadas ao Ethereum](/community/get-involved/#ethereum-jobs/).

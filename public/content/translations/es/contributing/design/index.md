@@ -15,7 +15,7 @@ En última instancia, esta es una excelente manera de crear un portafolio divers
 
 A veces necesitamos ayuda para probar nuestras ideas iniciales. Esta es una excelente manera de contribuir sin ningún conocimiento técnico.
 
-1. El equipo de diseño compartirá un diseño preliminar (mockup) en [Discord](https://discord.com/invite/ethereum-org) y en [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+1. El equipo de diseño compartirá un diseño preliminar (mockup) en [Discord](/discord/) y en [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 2. Se te guiará a través de los diseños para que proporciones tus comentarios mediante la función de comentarios.
 3. El resultado se compartirá en el problema (issue) de GitHub y luego el equipo lo cerrará.
 

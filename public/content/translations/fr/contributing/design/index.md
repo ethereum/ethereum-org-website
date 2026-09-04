@@ -15,7 +15,7 @@ En fin de compte, c'est un excellent moyen de vous constituer un portfolio diver
 
 Nous avons parfois besoin d'aide pour tester nos idées brutes. C'est un excellent moyen de contribuer sans aucune connaissance technique.
 
-1. L'équipe de design partagera une maquette sur [Discord](https://discord.com/invite/ethereum-org) et sur [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+1. L'équipe de design partagera une maquette sur [Discord](/discord/) et sur [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 2. Vous serez guidé à travers les designs pour donner votre avis via la fonction de commentaires.
 3. Le résultat sera partagé dans le ticket GitHub, puis fermé par l'équipe.
 

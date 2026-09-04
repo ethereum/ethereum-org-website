@@ -89,4 +89,4 @@ Bạn có thể thấy các nguyên tắc thiết kế của chúng tôi đượ
 
 Mặc dù các nguyên tắc này tập trung vào trang web ethereum.org, chúng tôi hy vọng rằng nhiều nguyên tắc trong số đó đại diện cho các giá trị của hệ sinh thái Ethereum nói chung. Có thể bạn thậm chí muốn kết hợp một số nguyên tắc vào dự án của riêng mình!
 
-Hãy cho chúng tôi biết suy nghĩ của bạn trên [máy chủ Discord](https://discord.gg/ethereum-org) hoặc bằng cách [tạo một issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).
+Hãy cho chúng tôi biết suy nghĩ của bạn trên [máy chủ Discord](/discord/) hoặc bằng cách [tạo một issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).

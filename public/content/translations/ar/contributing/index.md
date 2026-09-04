@@ -43,7 +43,7 @@ lang: ar
 - [اقتراح مشروع لصفحة العلم اللامركزي (DeSci) الخاصة بنا](/contributing/adding-desci-projects/) – إضافة مشروع مبني على إيثيريوم يساهم في العلم اللامركزي
 - [إضافة مورد](/contributing/adding-resources/) – إضافة مورد مفيد إلى أي صفحة ذات صلة
 
-هل لديك أي أسئلة؟ 🤔 انضم إلى [خادم ديسكورد](https://discord.gg/ethereum-org) الخاص بنا
+هل لديك أي أسئلة؟ 🤔 انضم إلى [خادم ديسكورد](/discord/) الخاص بنا
 
 ## مهام أولى جيدة لبدء المساهمة {#good-first-tasks-to-start-contributing}
 
@@ -62,7 +62,7 @@ lang: ar
 لا تحتاج إلى إذن للعمل على أي شيء، ولكن من الأفضل دائمًا إعلامنا بما تخطط للقيام به. يمكنك القيام بذلك عن طريق:
 
 - التعليق على مشكلة أو طلب سحب (PR) في [GitHub](https://github.com/ethereum/ethereum-org-website)
-- المراسلة على [خادم ديسكورد](https://discord.gg/ethereum-org) الخاص بنا
+- المراسلة على [خادم ديسكورد](/discord/) الخاص بنا
 
 قبل المساهمة، تأكد من أنك على دراية بما يلي:
 
@@ -77,7 +77,7 @@ lang: ar
 
 - [<span dir="ltr">website@ethereum.org</span>](mailto:website@ethereum.org)
 - [<span dir="ltr">@ethdotorg</span>](https://twitter.com/ethdotorg)
-- [خادم ديسكورد](https://discord.gg/ethereum-org)
+- [خادم ديسكورد](/discord/)
 
 ### ملاحظة حول الانتحال {#plagiarism}
 
@@ -95,7 +95,7 @@ lang: ar
 
 ### كيفية المطالبة {#how-to-claim}
 
-1. انضم إلى [خادم ديسكورد](https://discord.gg/ethereum-org) الخاص بنا.
+1. انضم إلى [خادم ديسكورد](/discord/) الخاص بنا.
 2. الصق رابطًا لمساهمتك في قناة `#🥇 | proof-of-contribution`.
 3. انتظر حتى يرسل لك أحد أعضاء فريقنا رابطًا لرمز OAT الخاص بك.
 4. طالب برمز OAT الخاص بك!

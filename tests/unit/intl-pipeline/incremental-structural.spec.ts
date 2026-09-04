@@ -123,9 +123,7 @@ Erreichen Sie das Team auf dem [Chat-Server](https://chat.example/invite).
     expect(sectionOf(result, "get-in-touch")).toBe(
       sectionOf(localeA, "get-in-touch")
     )
-    expect(countOf(result, "https://discord.gg/ethereum-org")).toBeGreaterThan(
-      0
-    )
+    expect(countOf(result, "/discord/")).toBeGreaterThan(0)
   })
 
   test("real run 1: unrelated links are not repointed by the index cascade", () => {

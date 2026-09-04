@@ -23,7 +23,7 @@ Unaweza kupata miongozo na zana muhimu kwa watafsiri wa ethereum.org, pamoja na 
 
 ## Jamii {#communities}
 
-- [Vikundi vya tafsiri vya Discord vya lugha maalum](https://discord.gg/ethereum-org)
+- [Vikundi vya tafsiri vya Discord vya lugha maalum](/discord/)
   _– mpango wa kuunganisha watafsiri wa ethereum.org kwenye Vikundi vya Tafsiri_
 - [Kikundi cha watafsiri wa Kichina](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– Ukurasa wa Notion kwa uratibu rahisi kati ya watafsiri wa Kichina_
@@ -39,7 +39,7 @@ Ili kusasishwa na maendeleo ya hivi punde ya Programu ya Kutafsiri, unaweza kufu
 
 ## Saa za ofisi kwa watafsiri {#office-hours}
 
-Tuna saa za ofisi kwa watafsiri Jumatano ya pili ya kila mwezi. Hizi hufanyika katika chaneli ya sauti ya #office-hours kwenye [Discord ya ethereum.org](https://discord.gg/ethereum-org), ambapo unaweza pia kupata nyakati kamili na maelezo ya ziada.
+Tuna saa za ofisi kwa watafsiri Jumatano ya pili ya kila mwezi. Hizi hufanyika katika chaneli ya sauti ya #office-hours kwenye [Discord ya ethereum.org](/discord/), ambapo unaweza pia kupata nyakati kamili na maelezo ya ziada.
 
 Saa za ofisi huruhusu watafsiri wetu kuuliza maswali kuhusu mchakato wa kutafsiri, kutoa maoni kuhusu programu, kushiriki mawazo yao, au kupiga soga tu na timu kuu ya ethereum.org.
 Hatimaye, tunataka kutumia simu hizi kuwasiliana kuhusu maendeleo ya hivi karibuni ya Programu ya Kutafsiri na kushiriki vidokezo na maagizo muhimu na wachangiaji wetu.

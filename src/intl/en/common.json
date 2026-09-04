@@ -125,7 +125,7 @@
   "feedback-widget-prompt": "Is this page helpful?",
   "feedback-widget-thank-you-cta": "Open short survey",
   "feedback-widget-thank-you-subtitle": "Make this page even better by answering a few questions.",
-  "feedback-widget-thank-you-subtitle-ext": "If you need help, you can reach out to the community on our <a href=\"https://discord.gg/ethereum-org\" target=\"_blank\">Discord</a>.",
+  "feedback-widget-thank-you-subtitle-ext": "If you need help, you can reach out to the community on our <a href=\"/discord/\" target=\"_blank\">Discord</a>.",
   "feedback-widget-thank-you-timing": "2–3 min",
   "feedback-widget-thank-you-title": "Thank you for your feedback!",
   "filter-bar-clear": "Clear filter",

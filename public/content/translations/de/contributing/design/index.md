@@ -15,7 +15,7 @@ Letztendlich ist dies eine großartige Möglichkeit, ein vielfältiges und beein
 
 Manchmal brauchen wir Hilfe beim Testen unserer ersten Ideen. Dies ist eine großartige Möglichkeit, ohne technisches Wissen einen Beitrag zu leisten.
 
-1. Das Design-Team wird einen Design-Entwurf auf [Discord](https://discord.com/invite/ethereum-org) und auf [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8) teilen.
+1. Das Design-Team wird einen Design-Entwurf auf [Discord](/discord/) und auf [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8) teilen.
 2. Du wirst durch die Designs geführt, um über die Kommentarfunktion Feedback zu geben.
 3. Das Ergebnis wird im GitHub-Issue geteilt und dieses dann vom Team geschlossen.
 
