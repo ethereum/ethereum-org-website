@@ -147,6 +147,17 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Pay in crypto
     - Direct support & Technical support
 
+- [**BoltRPC**](https://boltrpc.io/)
+  - [Docs](https://boltrpc.io/docs)
+  - Features
+    - Dedicated endpoints for Ethereum Mainnet, Sepolia and Hoodi testnets plus the Beacon Chain API
+    - HTTPS and WebSocket access on every plan
+    - Globally distributed infrastructure with automatic failover
+    - Transparent request-unit pricing with fixed, published per-method weights
+    - ISO/IEC 27001:2022 certified operator
+    - Free 2-week trial, no credit card required
+    - Pay by card or in crypto
+
 - [**Chainbase**](https://www.chainbase.com/)
   - [Docs](https://docs.chainbase.com)
   - Features
