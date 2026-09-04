@@ -28,6 +28,14 @@ const scheduleIdleCallback =
     ? requestIdleCallback
     : (cb: () => void) => setTimeout(cb, 0)
 
+const pushMatomoEvent = (
+  currentUrl: string,
+  { eventCategory, eventAction, eventName, eventValue }: MatomoEventOptions
+) => {
+  push([`setCustomUrl`, currentUrl])
+  push([`trackEvent`, eventCategory, eventAction, eventName, eventValue])
+}
+
 // Use only for user-initiated actions (clicks, submits, swipes). Passive
 // visibility/scroll tracking inflates `nb_actions` and breaks bounce-rate
 // comparability with pages that don't auto-fire events.
@@ -49,8 +57,34 @@ export const trackCustomEvent = ({
   const currentUrl = window.location.href.split(/[?#]/)[0]
 
   scheduleIdleCallback(() => {
-    push([`setCustomUrl`, currentUrl])
-    push([`trackEvent`, eventCategory, eventAction, eventName, eventValue])
+    pushMatomoEvent(currentUrl, {
+      eventCategory,
+      eventAction,
+      eventName,
+      eventValue,
+    })
+  })
+}
+
+// Synchronous variant for external links (target="_blank").
+// requestIdleCallback is throttled when the tab is backgrounded after
+// opening a new tab, so the deferred push is lost (see #18928).
+// This fires immediately on click to survive backgrounding.
+export const trackCustomEventImmediate = ({
+  eventCategory,
+  eventAction,
+  eventName,
+  eventValue,
+}: MatomoEventOptions): void => {
+  if (!IS_PROD) return
+  if (navigator.doNotTrack === "1") return
+  if (isOptedOut()) return
+  const currentUrl = window.location.href.split(/[?#]/)[0]
+  pushMatomoEvent(currentUrl, {
+    eventCategory,
+    eventAction,
+    eventName,
+    eventValue,
   })
 }
 
