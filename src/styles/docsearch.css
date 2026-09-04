@@ -154,6 +154,73 @@
   @apply max-h-[calc(100vh-75px-var(--docsearch-footer-height)-2*var(--inset))] overflow-y-scroll px-4 pb-4 md:max-h-[calc(100vh-16rem)] md:overflow-y-auto md:px-8 md:pb-8;
 }
 
+/* Explorer rows keep the library's own markup so their save/remove buttons survive, and
+   are decorated from here instead. The logo arrives as --explorer-icon on the anchor. */
+.DocSearch-Hit-explorer .DocSearch-Hit-icon > svg {
+  display: none;
+}
+
+.DocSearch-Hit-explorer .DocSearch-Hit-icon {
+  background-image: var(--explorer-icon);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  @apply rounded-full;
+}
+
+/* One arrow shape, placed differently depending on the row. Mirrors lucide's
+   external-link, drawn as a mask so it takes the row's current colour. */
+.DocSearch-Hit-explorer {
+  --explorer-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 3h6v6'/%3E%3Cpath d='M10 14 21 3'/%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6'/%3E%3C/svg%3E");
+}
+
+.DocSearch-Hit-explorer .DocSearch-Hit-title::after,
+.DocSearch-Hit-explorer .DocSearch-Hit-action::after {
+  content: "";
+  display: inline-block;
+  background-color: currentColor;
+  mask-image: var(--explorer-arrow);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  @apply rtl:-scale-x-100;
+}
+
+.DocSearch-Hit-explorer .DocSearch-Hit-title::after {
+  width: 0.875em;
+  height: 0.875em;
+  margin-inline-start: 0.3em;
+  vertical-align: -0.1em;
+}
+
+.DocSearch-Hit-explorer .DocSearch-Hit-action::after {
+  @apply size-4;
+}
+
+/* What a results row leaves out. The arrow moves to the row end in place of the return
+   icon, which only ever appeared on the highlighted row; and the value is dropped
+   entirely, being identical on every row and already sitting in the input just above.
+   Recent rows are the ones carrying save/remove buttons -- that is the discriminator. */
+.DocSearch-Hit:not(:has(.DocSearch-Hit-action-button))
+  .DocSearch-Hit-explorer
+  .DocSearch-Hit-title::after,
+.DocSearch-Hit:not(:has(.DocSearch-Hit-action-button))
+  .DocSearch-Hit-explorer
+  .DocSearch-Hit-action
+  > svg,
+.DocSearch-Hit:not(:has(.DocSearch-Hit-action-button))
+  .DocSearch-Hit-explorer
+  .DocSearch-Hit-path {
+  display: none;
+}
+
+/* Recent and Favorite rows: the row end belongs to the save and remove buttons, so the
+   arrow sits beside the label instead. */
+.DocSearch-Hit:has(.DocSearch-Hit-action-button)
+  .DocSearch-Hit-explorer
+  .DocSearch-Hit-action::after {
+  display: none;
+}
+
 /* Groups otherwise read as one list: the next sticky heading sits directly on the
    previous group's last row. Only between sections, never above the first. */
 .DocSearch-Hits + .DocSearch-Hits {
@@ -161,8 +228,8 @@
 }
 
 /* Vendor spaces the last group with its own margin, which stacks with the padding above
-   and leaves the final row against the footer when a list is short -- visible on the
-   Recent list before a query, not only on results. One source of spacing instead. */
+   and leaves the final row sitting against the footer when a list is short -- visible on
+   the Recent list before a query, not just on results. One source of spacing instead. */
 .DocSearch-Hits:last-of-type {
   margin-bottom: 0;
 }

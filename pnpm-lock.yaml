@@ -11,6 +11,11 @@ overrides:
   react: ^19.2.4
   react-dom: ^19.2.4
 
+patchedDependencies:
+  typesense-docsearch-react:
+    hash: 021f568a4226d5a04763d78f227a3733d37fb40dd22216431d1913f03b1019c5
+    path: patches/typesense-docsearch-react.patch
+
 importers:
 
   .:
@@ -233,7 +238,7 @@ importers:
         version: 0.4.1
       typesense-docsearch-react:
         specifier: 3.4.1
-        version: 3.4.1(@algolia/client-search@5.25.0)(@babel/runtime@7.29.7)(@types/react@19.2.14)(algoliasearch@5.25.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        version: 3.4.1(patch_hash=021f568a4226d5a04763d78f227a3733d37fb40dd22216431d1913f03b1019c5)(@algolia/client-search@5.25.0)(@babel/runtime@7.29.7)(@types/react@19.2.14)(algoliasearch@5.25.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       usehooks-ts:
         specifier: ^3.1.0
         version: 3.1.1(react@19.2.4)
@@ -23178,7 +23183,7 @@ snapshots:
 
   typesense-docsearch-css@0.4.1: {}
 
-  typesense-docsearch-react@3.4.1(@algolia/client-search@5.25.0)(@babel/runtime@7.29.7)(@types/react@19.2.14)(algoliasearch@5.25.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
+  typesense-docsearch-react@3.4.1(patch_hash=021f568a4226d5a04763d78f227a3733d37fb40dd22216431d1913f03b1019c5)(@algolia/client-search@5.25.0)(@babel/runtime@7.29.7)(@types/react@19.2.14)(algoliasearch@5.25.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
     dependencies:
       '@algolia/autocomplete-core': 1.8.2
       '@algolia/autocomplete-preset-algolia': 1.8.2(@algolia/client-search@5.25.0)(algoliasearch@5.25.0)

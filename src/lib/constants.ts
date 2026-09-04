@@ -124,6 +124,69 @@ export const DEVELOPER_FEATURES = [
 
 // Chains
 export const CHAINID_NETWORK_ENDPOINT = "https://chainid.network/chains.json"
+export const BLOCKSCOUT_CHAINS_ENDPOINT =
+  "https://chains.blockscout.com/api/chains"
+
+/**
+ * Networks offered when a search looks like an address or hash, in the order the rows
+ * appear -- Ethereum Mainnet first, then the L2s in the same order as
+ * `/layer-2/networks`. Curated rather than derived from Blockscout's 745-chain registry:
+ * this is the set ethereum.org itself features, and the icons are assets we already ship.
+ *
+ * Absent deliberately: Zircuit is not in Blockscout's registry, and Starknet is not EVM
+ * -- its addresses collide with Ethereum transaction hashes, so it needs its own handling.
+ */
+/**
+ * Explorers for featured networks that Blockscout does not cover, each rendered as its
+ * own section so the heading never claims Blockscout for a link that isn't.
+ *
+ * Starknet is not EVM. Its addresses and hashes are field elements below 2^251, so
+ * unpadded they run to at most 63 hex digits; zero-padded to 32 bytes they reach 64 and
+ * become indistinguishable from an Ethereum transaction hash. Explorers differ on
+ * padding -- Starkscan displays padded but copies unpadded -- and leading zeros then
+ * cascade at one in sixteen: 63 digits covers 87.5% of values, 62 covers 12.5%, 60 is
+ * 1 in 2,000, and 56 is 1 in 130 million. Accepting 56 or more catches essentially every
+ * real value without reaching into lengths that mean something else.
+ *
+ * Starkscan is closed source, which we would rather avoid. The one open-source Starknet
+ * explorer, LambdaClass's Stark Compass, is archived and only supports Starknet up to
+ * 0.13.2, so it is not somewhere to send people. Voyager, Viewblock and OKLink are closed
+ * too. It also has no unified search route, and a felt gives no clue whether it is a
+ * contract or a transaction, so both are offered. Accounts are contracts on Starknet.
+ */
+export const STARKNET_MIN_HEX_DIGITS = 56
+
+export const STARKNET_EXPLORER = {
+  brand: "Starkscan",
+  icon: "starknet.png",
+  contractUrl: "https://starkscan.co/contract",
+  txUrl: "https://starkscan.co/tx",
+}
+
+/**
+ * Zircuit runs neither Blockscout nor an Etherscan-family explorer and is absent from
+ * Blockscout's registry, so it needs its own entry to appear at all. Being EVM, the
+ * value's length says which route to use, so one row is enough.
+ */
+export const ZIRCUIT_EXPLORER = {
+  brand: "Zircuit",
+  name: "Zircuit",
+  icon: "zircuit.png",
+  addressUrl: "https://explorer.zircuit.com/address",
+  txUrl: "https://explorer.zircuit.com/tx",
+}
+
+export const EXPLORER_NETWORKS = [
+  { chainId: 1, icon: "ethereum.png" },
+  { chainId: 42161, icon: "arbitrum.jpg" },
+  { chainId: 8453, icon: "base.png" },
+  { chainId: 10, icon: "optimism.png" },
+  { chainId: 324, icon: "zksyncEra.jpg" },
+  { chainId: 59144, icon: "linea.png" },
+  { chainId: 534352, icon: "scroll.png" },
+  { chainId: 130, icon: "unichain.png" },
+  { chainId: 57073, icon: "ink.png" },
+]
 
 export const CANONICAL_STAKING_TESTNET = "Hoodi"
 
