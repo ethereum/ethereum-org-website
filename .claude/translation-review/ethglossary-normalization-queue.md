@@ -150,3 +150,20 @@ Neither name is in ETHGlossary (`/filter` matched only `claim` against the banne
 This is a clean section-9.3-shaped addition rather than a conflict -- `Devcon` is not an existing entry, so there is no `keep_latin` flag to reconcile.
 
 Two pre-existing items the new entry will eventually correct, both out of scope for #19142: `src/intl/*/common.json` ships `"devcon": "Devcon"` and `"nav-devcon-label": "Devcon"` in **24/24** locales, and `public/content/translations/` has zero native-script renderings outside ko (hi 66 Latin, zh 74, ja 71, zh-tw 71, ru 70, uk 70, ta 69, ur 66, ar 64, te 62, mr 55, bn 48).
+
+## 10. Missing entry: `General Admission` (PR #19228)
+
+Same gap as section 9, one campaign later. `General Admission` is a named Devcon ticket tier that now ships in a UI string, and it is in neither ETHGlossary nor `PROTECTED_BRAND_NAMES`. PR #19228 split four ways across 24 locales (known-patterns #77). Unlike `Devcon`, no locale is the reference: the correct treatment depends on what devcon.org's checkout actually labels the tier per language.
+
+**Requested entry -- `General Admission`:**
+
+| Field | Value |
+| --- | --- |
+| `term_role` | `product-tier` (or `brand-or-project` if no tier role exists) |
+| `script_rule` | **blocked on a product answer** -- see below |
+
+The blocking question is not linguistic. If devcon.org's hi and mr ticket pages label the tier in native script, the entry should be `transliterate`/translated to match them; if every localized checkout page shows Latin `General Admission`, the entry should be `keep_latin` so the banner names what the buyer will actually click. Resolve by reading devcon.org/{hi,mr}/tickets -- the two locales this campaign routes to -- then set one rule for all 24.
+
+Until then the shipped forms stand. Two worth noting as furthest from a tier name if the answer comes back "keep Latin": ru `стандартный входной билет` and zh `普通门票` describe a generic ticket class rather than naming the tier.
+
+**Related:** this entry and section 9's `Devcon` are the same request shape and should land together -- both are Devcon-campaign proper nouns that the pipeline re-decides on every run.
