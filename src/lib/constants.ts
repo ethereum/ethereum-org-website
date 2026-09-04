@@ -253,6 +253,3 @@ export const LINE_CLAMP_CLASS_MAPPING = {
 
 export const DEVCON_INDIA_START_DATE = new Date(Date.UTC(2026, 10, 3, 6, 0, 0))
 export const DEVCON_INDIA_END_DATE = new Date(Date.UTC(2026, 10, 6, 18, 0, 0))
-// Voucher redemption is English-only; mtm_* params attribute the referral in Matomo
-export const DEVCON_INDIA_TICKET_URL =
-  "https://tickets.devcon.org/redeem?voucher=ETHORG10&mtm_campaign=ethorg10&mtm_source=ethereum.org&mtm_medium=referral"
