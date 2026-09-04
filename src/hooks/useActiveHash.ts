@@ -34,11 +34,12 @@ export const useActiveHash = (
 
     return () => {
       itemIds?.forEach((id) => {
-        const element = document.getElementById(id)
+        const element = document.getElementById(id.replace("#", ""))
         if (element !== null) {
           observer.unobserve(element)
         }
       })
+      observer.disconnect()
     }
   }, [itemIds, rootMargin])
 
