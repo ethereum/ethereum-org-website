@@ -28,10 +28,10 @@ export const shareOnTwitter = ({ score, total }: QuizShareStats): void => {
   const hashtags = ["ethereumquiz", "ethereum", "quiz"]
   const tweet =
     score > 0
-      ? `${encodeURI(
+      ? `${encodeURIComponent(
           `I took Ethereum quizzes on ethereum.org and overall scored ${score} out of ${total}! Try it yourself at ${url}`
         )}`
-      : `${encodeURI(
+      : `${encodeURIComponent(
           `How well do you know Ethereum? Check out these Ethereum quizzes on ethereum.org: ${url}`
         )}`
 
