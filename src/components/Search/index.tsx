@@ -20,6 +20,7 @@ import {
 } from "@/lib/utils/explorerQuery"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
+import { withPageRow } from "@/lib/utils/searchResults"
 import { isExternal, sanitizeHitUrl } from "@/lib/utils/url"
 
 import SearchButton from "./SearchButton"
@@ -323,26 +324,28 @@ const Search = ({ asChild = false, children }: SearchProps) => {
     transformSearchClient:
       transformSearchClient as unknown as DocSearchModalProps["transformSearchClient"],
     transformItems: (items: DocSearchHit[]) =>
-      // The page's own record leads, with its sections beneath. The renderer nests
-      // children under an `lvl1` sibling but never reorders, so a section that scored
-      // higher would otherwise render above the page it belongs to.
-      [...items]
-        .sort((a, b) => Number(b.type === "lvl1") - Number(a.type === "lvl1"))
-        .map((item: DocSearchHit) => {
-          // Our own hit carries an absolute explorer URL, which sanitizeHitUrl would
-          // strip to a path -- turning it into a broken internal link.
-          if (isExplorerHit(item.objectID)) return item
-          // Use JSON clone for browser compatibility (structuredClone not available in Chrome < 98)
-          const newItem: DocSearchHit = JSON.parse(JSON.stringify(item))
-          newItem.url = sanitizeHitUrl(item.url)
-          // lvl0 is the page's og:title, which always ends " | ethereum.org", and it is
-          // shown as the group header above every result. The fork keeps it in several
-          // places -- a flat dotted key, the `hierarchy` object, a `hierarchy_camel`
-          // array, and `_highlightResult`/`_snippetResult` copies that the renderer
-          // actually reads -- so walk the hit and strip it wherever it appears.
-          stripTitleSuffix(newItem as unknown as Record<string, unknown>)
-          return newItem
-        }),
+      // The page leads, with its sections beneath. The renderer nests children under an
+      // `lvl1` sibling but never reorders, so a section that scored higher would
+      // otherwise render above the page it belongs to.
+      withPageRow(
+        [...items].sort(
+          (a, b) => Number(b.type === "lvl1") - Number(a.type === "lvl1")
+        )
+      ).map((item: DocSearchHit) => {
+        // Our own hit carries an absolute explorer URL, which sanitizeHitUrl would
+        // strip to a path -- turning it into a broken internal link.
+        if (isExplorerHit(item.objectID)) return item
+        // Use JSON clone for browser compatibility (structuredClone not available in Chrome < 98)
+        const newItem: DocSearchHit = JSON.parse(JSON.stringify(item))
+        newItem.url = sanitizeHitUrl(item.url)
+        // lvl0 is the page's og:title, which always ends " | ethereum.org", and it is
+        // shown as the group header above every result. The fork keeps it in several
+        // places -- a flat dotted key, the `hierarchy` object, a `hierarchy_camel`
+        // array, and `_highlightResult`/`_snippetResult` copies that the renderer
+        // actually reads -- so walk the hit and strip it wherever it appears.
+        stripTitleSuffix(newItem as unknown as Record<string, unknown>)
+        return newItem
+      }),
     placeholder: t("search-ethereum-org"),
     translations: {
       searchBox: {
