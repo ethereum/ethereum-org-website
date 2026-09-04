@@ -7,7 +7,7 @@ import type { NetworkUpgradeDetails } from "@/lib/types"
 
 import { BaseLink } from "@/components/ui/Link"
 
-import { dateTimeFormat } from "@/lib/utils/date"
+import { formatDateTime } from "@/lib/utils/date"
 import { formatDuration } from "@/lib/utils/time"
 
 import networkUpgradeSummaryData from "@/data/networkUpgradeSummaryData"
@@ -99,9 +99,9 @@ const UpgradeCountdown = () => {
         ) : (
           <div className="rounded-full bg-success px-2 py-1 text-xs font-normal text-success-light uppercase">
             Live Since{" "}
-            {dateTimeFormat(locale, { timeZone: "UTC" }).format(
-              new Date(upgradeDate)
-            )}
+            {formatDateTime(locale, new Date(upgradeDate), {
+              timeZone: "UTC",
+            })}
           </div>
         )}
       </div>

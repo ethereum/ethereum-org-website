@@ -4,7 +4,7 @@ import { useLocale, useTranslations } from "next-intl"
 
 import { Flex, Stack } from "@/components/ui/flex"
 
-import { dateTimeFormat, getValidDate } from "@/lib/utils/date"
+import { formatDateTime, getValidDate } from "@/lib/utils/date"
 import { numberFormat } from "@/lib/utils/numbers"
 
 import networkUpgradeSummaryData from "@/data/networkUpgradeSummaryData"
@@ -31,7 +31,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
 
   const upgradeDate = getValidDate(dateTimeAsString)
   const formattedUTC = upgradeDate
-    ? dateTimeFormat(locale, {
+    ? formatDateTime(locale, upgradeDate, {
         timeZone: "UTC",
         month: "short",
         day: "numeric",
@@ -40,7 +40,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
         minute: "numeric",
         second: "numeric",
         timeZoneName: "short",
-      }).format(upgradeDate)
+      })
     : null
 
   const blockTypeTranslation = (translationKey, explorerUrl, number) => {
