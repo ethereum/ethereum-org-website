@@ -26,7 +26,7 @@ function getCategoryEnum(category: string): AppCategoryEnum | undefined {
  */
 function getDailySortedApps(apps: AppData[]): AppData[] {
   const today = new Date()
-  const seed = today.getFullYear() * 1000 + getDayOfYear(today)
+  const seed = today.getUTCFullYear() * 1000 + getDayOfYear(today)
   const highlighted = apps.filter((app) => app.highlight)
   const rest = apps.filter((app) => !app.highlight)
   return [...seededShuffle(highlighted, seed), ...seededShuffle(rest, seed)]
