@@ -1,8 +1,8 @@
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 
 import { Image } from "@/components/Image"
 
-import { DEVCON_INDIA_TICKET_URL } from "@/lib/constants"
+import { getDevconTicketLink } from "@/lib/utils/url"
 
 import { Card, CardButtonFake } from "../ui/card"
 
@@ -11,10 +11,11 @@ import DevconDateLocation from "./date-location"
 import devconIndiaBanner from "@/public/images/assets/devcon-india-banner.webp"
 
 const DevconIndiaLargeCallout = async ({ preload }: { preload?: boolean }) => {
+  const locale = await getLocale()
   const tDevcon = await getTranslations("component-devcon-banner")
   return (
     <Card
-      href={DEVCON_INDIA_TICKET_URL}
+      href={getDevconTicketLink(locale)}
       customEventOptions={{
         eventCategory: "devcon",
         eventAction: `get_tickets`,
@@ -47,7 +48,7 @@ const DevconIndiaLargeCallout = async ({ preload }: { preload?: boolean }) => {
         {tDevcon("title")}
       </p>
       <p className="text-center text-2xl font-medium text-shadow-[0_1px_2px_rgb(0_0_0/0.7),0_3px_8px_rgb(0_0_0/0.6),0_6px_28px_rgb(0_0_0/0.55)]">
-        {tDevcon("subtitle")}
+        {tDevcon("discount-headline")}
       </p>
       <CardButtonFake size="lg">{tDevcon("cta-get-tickets")}</CardButtonFake>
     </Card>
