@@ -1,3 +1,5 @@
+import { safeLocale } from "./date"
+
 /**
  * A wrapper for Intl.NumberFormat that enforces Web3 numeral standards.
  * - Arabic ('ar') defaults to Western Arabic numerals (1, 2, 3).
@@ -29,7 +31,7 @@ export function numberFormat(
     ...(numberingSystem && { numberingSystem }),
   }
 
-  return new Intl.NumberFormat(locale, finalOptions)
+  return new Intl.NumberFormat(safeLocale(locale), finalOptions)
 }
 
 export const formatLargeUSD = (value: number, locale: string): string => {
