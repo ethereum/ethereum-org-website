@@ -74,6 +74,9 @@ Sentry.init({
     /DApp request timeout/,
     // Cross-origin postMessage from extensions/embedded frames (ETHORG-87)
     /^Error: invalid origin$/,
+    // Ad blockers / privacy extensions freeze window._paq to silently
+    // disable Matomo, so our push() calls throw instead of no-op (ETHORG-1AP)
+    /Cannot assign to read only property 'push' of object '\[object Array\]'/,
   ],
 
   beforeSend(event) {
