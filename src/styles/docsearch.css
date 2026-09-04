@@ -151,7 +151,20 @@
 }
 
 .DocSearch-Dropdown {
-  @apply max-h-[calc(100vh-75px-var(--docsearch-footer-height)-2*var(--inset))] overflow-y-scroll ps-4 pe-2 md:max-h-[calc(100vh-16rem)] md:overflow-y-auto md:ps-8 md:pe-4;
+  @apply max-h-[calc(100vh-75px-var(--docsearch-footer-height)-2*var(--inset))] overflow-y-scroll px-4 pb-4 md:max-h-[calc(100vh-16rem)] md:overflow-y-auto md:px-8 md:pb-8;
+}
+
+/* Groups otherwise read as one list: the next sticky heading sits directly on the
+   previous group's last row. Only between sections, never above the first. */
+.DocSearch-Hits + .DocSearch-Hits {
+  @apply mt-4 md:mt-8;
+}
+
+/* Vendor spaces the last group with its own margin, which stacks with the padding above
+   and leaves the final row against the footer when a list is short -- visible on the
+   Recent list before a query, not only on results. One source of spacing instead. */
+.DocSearch-Hits:last-of-type {
+  margin-bottom: 0;
 }
 
 .DocSearch-Hit-source {
