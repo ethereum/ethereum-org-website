@@ -190,13 +190,6 @@ const CollectiblesCurrentYear = ({
       ),
     [badges]
   )
-  const gitpoapBadge = React.useMemo(
-    () =>
-      badges.find(
-        (b) => b.category === "Github" && b.name.startsWith("GitPOAP")
-      ),
-    [badges]
-  )
   const translationBadge = React.useMemo(
     () =>
       badges.find(
@@ -361,32 +354,6 @@ const CollectiblesCurrentYear = ({
                 </CheckList>
               </HighlightCardBody>
               <HighlightCardFooter href="/contributing/design/">
-                {t("page-collectibles-get-started")}
-              </HighlightCardFooter>
-            </HighlightCard>
-          )}
-          {/* GitPOAP */}
-          {gitpoapBadge && (
-            <HighlightCard>
-              <HighlightCardBody
-                className={cn(
-                  address && !gitpoapBadge.owned && "[&_img]:grayscale"
-                )}
-                src={gitpoapBadge.image}
-                alt="GitPOAP badge" // TODO: extract intl
-                href={gitpoapBadge.link}
-              >
-                <h4 className="text-lg">
-                  {t("page-collectibles-code-content-gitpoap-title")}
-                </h4>
-                <p>{t("page-collectibles-code-content-gitpoap-desc")}</p>
-                <CheckList>
-                  <CheckItem owned={gitpoapBadge.owned}>
-                    {t("page-collectibles-code-content-gitpoap-1pr")}
-                  </CheckItem>
-                </CheckList>
-              </HighlightCardBody>
-              <HighlightCardFooter href="https://github.com/ethereum/ethereum-org-website/issues">
                 {t("page-collectibles-get-started")}
               </HighlightCardFooter>
             </HighlightCard>
