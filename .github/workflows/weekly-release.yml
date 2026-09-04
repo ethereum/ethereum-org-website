@@ -107,6 +107,14 @@ jobs:
           echo "url=$url"       >> "$GITHUB_OUTPUT"
           echo "version=$version" >> "$GITHUB_OUTPUT"
 
+      # A deploy PR can merge with no published release, which ships a version
+      # whose notes never went out (v11.22.0, 2026-08-25). Fail before review.
+      - name: Verify the release was published
+        if: steps.skip_check.outputs.skip == 'false'
+        run: |
+          version="${{ steps.capture_pr.outputs.version }}"
+          ./src/scripts/prepare-release.sh verify "${version#v}"
+
       - name: Announce prepared
         id: announce_prepared
         if: steps.skip_check.outputs.skip == 'false'
