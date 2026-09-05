@@ -75,7 +75,14 @@ export const pageRankForSlug = (slug: string[]): number => {
   )
 }
 
+/**
+ * Facets, used to filter or demote whole classes of page at query time without another
+ * crawl. `home` exists so the homepage can be withheld from results: what the crawler
+ * extracts from it is hero copy and section headings, every phrase of which appears more
+ * fully on the page it links to, so it is a near-null result for someone already here.
+ */
 export const categoryForSlug = (slug: string[]): string => {
+  if (slug.filter(Boolean).length === 0) return "home"
   if (slug[0] === "videos") return "videos"
   if (isDeveloperSection(slug, "docs")) return "docs"
   if (isTutorialSlug(slug)) return "tutorials"

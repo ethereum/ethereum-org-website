@@ -97,6 +97,15 @@ test.describe("categoryForSlug", () => {
     expect(categoryForSlug(["videos", "a-talk"])).toBe("videos")
   })
 
+  test("marks the homepage so it can be withheld from results", () => {
+    // It arrives as `[""]`, and is a landing page rather than a page about anything.
+    expect(categoryForSlug([""])).toBe("home")
+    expect(categoryForSlug([])).toBe("home")
+    // Named listing pages are not the same case -- people search for them by name.
+    expect(categoryForSlug(["stories"])).toBe("other")
+    expect(categoryForSlug(["latest"])).toBe("other")
+  })
+
   test("keeps the existing developer facets", () => {
     expect(categoryForSlug(["developers", "docs", "blocks"])).toBe("docs")
     expect(categoryForSlug(["developers", "tutorials", "x"])).toBe("tutorials")
